@@ -1,0 +1,764 @@
+<Type Name="TimeZoneInfo+TransitionTime" FullName="System.TimeZoneInfo+TransitionTime">
+  <TypeSignature Language="C#" Value="public struct TimeZoneInfo.TransitionTime : IEquatable&lt;TimeZoneInfo.TransitionTime&gt;, System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class nested public sequential ansi serializable sealed beforefieldinit TimeZoneInfo/TransitionTime extends System.ValueType implements class System.IEquatable`1&lt;valuetype System.TimeZoneInfo/TransitionTime&gt;, class System.Runtime.Serialization.IDeserializationCallback, class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.TimeZoneInfo.TransitionTime" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.TimeZoneInfo+TransitionTime&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.IDeserializationCallback</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.Core, Version=3.5.0.0, Culture=Neutral, PublicKeyToken=b77a5c561934e089")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält Informationen über eine bestimmte Zeitänderung, wie z. B. die Änderung von Sommerzeit in Normalzeit oder umgekehrt, in einer bestimmten Zeitzone.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die <xref:System.TimeZoneInfo.TransitionTime> Struktur, um anzugeben, wann ein Übergang von Normalzeit zu Sommerzeit oder von der Sommerzeit zurück zur Normalzeit, tritt auf. Diese Struktur unterstützt die Regeln für feste Datumsangaben und Gleitkomma-Date-Regeln. Verwenden Sie feste Datumsangaben Regeln für Time-Übergänge, die auf einem bestimmten Tag eines bestimmten Monats (z. B. 2:00 Uhr auftreten am 3. November). Verwenden Sie die zeitänderung ein gleitendes Datum Regeln Zeit Übergänge, die auf einem bestimmten Tag einer bestimmten Woche oder eines bestimmten Monats (z. B. 2:00 Uhr auftreten auf der ersten Sonntag im November).  
+  
+ Die folgende Tabelle vergleicht die Eigenschaften, die in das feste Datum und die zeitänderung ein gleitendes Datum Übergänge verwendet:  
+  
+||Monat|Woche|Day|zeit|  
+|-|-----------|----------|---------|----------|  
+|Regel für feste Datumsangaben|<xref:System.TimeZoneInfo.TransitionTime.Month%2A>|Nicht zutreffend|<xref:System.TimeZoneInfo.TransitionTime.Day%2A>|<xref:System.TimeZoneInfo.TransitionTime.TimeOfDay%2A>|  
+|Regel für gleitende Datumsangaben|<xref:System.TimeZoneInfo.TransitionTime.Month%2A>|<xref:System.TimeZoneInfo.TransitionTime.Week%2A>|<xref:System.TimeZoneInfo.TransitionTime.DayOfWeek%2A>|<xref:System.TimeZoneInfo.TransitionTime.TimeOfDay%2A>|  
+  
+ Für feste Datumsangaben und zeitänderung ein gleitendes Datum Übergänge die <xref:System.TimeZoneInfo.TransitionTime.TimeOfDay%2A> Eigenschaft ruft die Uhrzeit, an dem die Zeit geändert wird. Übergänge aus standard zur Sommerzeit ist dies die Zeitzone Standard Time-Werten. Für den Übergang von Sommerzeit zu Normalzeit ist dies die Zeitzone Sommerzeit-Wert. Dies ist eine <xref:System.DateTime> -Wert, dessen Datumskomponente ignoriert wird; der Jahr, Monat und Tageswert müssen stets gleich 1.  
+  
+> [!NOTE]
+>  Eine Instanz von der <xref:System.TimeZoneInfo.TransitionTime> Struktur ist unveränderlich. Nachdem ein Objekt erstellt wurde, können seine Werte geändert werden.  
+  
+ Ein <xref:System.TimeZoneInfo.TransitionTime> objekterstellung kann durch Aufrufen der `static` (`Shared` in Visual Basic) <xref:System.TimeZoneInfo.TransitionTime.CreateFixedDateRule%2A> und <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A> Methoden, um eine Regel fixed "oder" Gleitkommazahl-Datum bzw. zu erstellen. Das Start- und Enddatum <xref:System.TimeZoneInfo.TransitionTime> bereitgestellten Objekte werden dann als Parameter für die <xref:System.TimeZoneInfo.AdjustmentRule.CreateAdjustmentRule%2A> Methode, um eine neue Anpassungsregel zu erstellen, die diese Zeitinformationen enthält.  
+  
+ Die <xref:System.TimeZoneInfo.AdjustmentRule.DaylightTransitionStart%2A> und <xref:System.TimeZoneInfo.AdjustmentRule.DaylightTransitionEnd%2A> Eigenschaften ein <xref:System.TimeZoneInfo.AdjustmentRule> Objekt zurückgeben einer <xref:System.TimeZoneInfo.TransitionTime> Objekt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateFixedDateRule">
+      <MemberSignature Language="C#" Value="public static TimeZoneInfo.TransitionTime CreateFixedDateRule (DateTime timeOfDay, int month, int day);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.TimeZoneInfo/TransitionTime CreateFixedDateRule(valuetype System.DateTime timeOfDay, int32 month, int32 day) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TimeZoneInfo.TransitionTime.CreateFixedDateRule(System.DateTime,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeZoneInfo+TransitionTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeOfDay" Type="System.DateTime" />
+        <Parameter Name="month" Type="System.Int32" />
+        <Parameter Name="day" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="timeOfDay">Der Zeitpunkt, zu dem die Zeit geändert wird. Dieser Parameter entspricht der <see cref="P:System.TimeZoneInfo.TransitionTime.TimeOfDay" />-Eigenschaft.</param>
+        <param name="month">Der Monat, in dem die Zeit geändert wird. Dieser Parameter entspricht der <see cref="P:System.TimeZoneInfo.TransitionTime.Month" />-Eigenschaft.</param>
+        <param name="day">Der Tag des Monats, an dem die Zeit geändert wird. Dieser Parameter entspricht der <see cref="P:System.TimeZoneInfo.TransitionTime.Day" />-Eigenschaft.</param>
+        <summary>Definiert eine Zeitänderung, die eine Regel für feste Datumsangaben verwendet (d. h. eine Zeitänderung, die an einem bestimmten Tag eines bestimmten Monats auftritt).</summary>
+        <returns>Daten über die Zeitänderung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erstellt eine Regel für feste Datumsangaben (d. h. eine zeitänderung, die an einem bestimmten Tag eines bestimmten Monats auftritt). Eine zeitänderung, die immer am 28. Oktober auftritt, wird z. B. eine Regel für feste Datumsangaben folgt.  
+  
+ Für den Übergang von Normalzeit zu Sommerzeit die `timeOfDay` Argument stellt die Erstellungszeit des Übergangs in Normalzeit der Zeitzone dar. Für den Übergang von Sommerzeit zu Normalzeit stellt es die Zeit des Übergangs in die Zeitzone Sommerzeit. Beachten Sie, dass dies eine <xref:System.DateTime> Wert, dessen Jahr, Monat und Datumswerte alle 1 gleich muss.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt die Zeitzone Übergänge für eine imaginäre Zeitzone mit einer Regel für feste Datumsangaben und eine Regel für gleitende Datumsangaben. Die Regel für feste Datumsangaben definiert, die um 02:00 Uhr beginnt Anpassung der Zeitzone am 15. März und endet um 3:00 Uhr am 15. November für den Jahren 1900 bis 1955.  
+  
+ [!code-csharp[System.TimeZone2.TransitionTime.Class#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.TransitionTime.Class/cs/System.TimeZone2.TransitionTime.Class.cs#2)]
+ [!code-vb[System.TimeZone2.TransitionTime.Class#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.TransitionTime.Class/vb/System.TimeZone2.TransitionTime.Class.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der <paramref name="timeOfDay" />-Parameter weist eine nicht standardmäßige Datumskomponente auf.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.DateTime.Kind" />-Eigenschaft des <paramref name="timeOfDay" />-Parameters ist nicht <see cref="F:System.DateTimeKind.Unspecified" />.  
+  
+ - oder -   
+  
+ Der <paramref name="timeOfDay" />-Parameter gibt Millisekunden nicht als ganze Zahl an.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der <paramref name="month" />-Parameter ist kleiner als 1 oder größer als 12.  
+  
+ - oder -   
+  
+ Der <paramref name="day" />-Parameter ist kleiner als 1 oder größer als 31.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFloatingDateRule">
+      <MemberSignature Language="C#" Value="public static TimeZoneInfo.TransitionTime CreateFloatingDateRule (DateTime timeOfDay, int month, int week, DayOfWeek dayOfWeek);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.TimeZoneInfo/TransitionTime CreateFloatingDateRule(valuetype System.DateTime timeOfDay, int32 month, int32 week, valuetype System.DayOfWeek dayOfWeek) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule(System.DateTime,System.Int32,System.Int32,System.DayOfWeek)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeZoneInfo+TransitionTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeOfDay" Type="System.DateTime" />
+        <Parameter Name="month" Type="System.Int32" />
+        <Parameter Name="week" Type="System.Int32" />
+        <Parameter Name="dayOfWeek" Type="System.DayOfWeek" />
+      </Parameters>
+      <Docs>
+        <param name="timeOfDay">Der Zeitpunkt, zu dem die Zeit geändert wird. Dieser Parameter entspricht der <see cref="P:System.TimeZoneInfo.TransitionTime.TimeOfDay" />-Eigenschaft.</param>
+        <param name="month">Der Monat, in dem die Zeit geändert wird. Dieser Parameter entspricht der <see cref="P:System.TimeZoneInfo.TransitionTime.Month" />-Eigenschaft.</param>
+        <param name="week">Die Woche des Monats, in der die Zeit geändert wird. Der Wert kann zwischen 1 und 5 liegen, wobei 5 die letzte Woche des Monats darstellt. Dieser Parameter entspricht der <see cref="P:System.TimeZoneInfo.TransitionTime.Week" />-Eigenschaft.</param>
+        <param name="dayOfWeek">Der Tag der Woche, an dem die Zeit geändert wird. Dieser Parameter entspricht der <see cref="P:System.TimeZoneInfo.TransitionTime.DayOfWeek" />-Eigenschaft.</param>
+        <summary>Definiert eine Zeitänderung, die eine Regel für gleitende Datumsangaben verwendet (d. h. eine Zeitänderung, die an einem bestimmten Tag einer bestimmten Woche oder eines bestimmten Monats auftritt).</summary>
+        <returns>Daten über die Zeitänderung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erstellt eine Regel für gleitende Datumsangaben (d. h. eine zeitänderung, die an einem bestimmten Tag einer bestimmten Woche oder eines bestimmten Monats auftritt). Eine zeitänderung, die auf die letzte Sonntag im Oktober auftritt, wird z. B. eine Regel für gleitende Datumsangaben folgt.  
+  
+ Für den Übergang von Normalzeit zu Sommerzeit die `timeOfDay` Argument stellt die Erstellungszeit des Übergangs in Normalzeit der Zeitzone dar. Für den Übergang von Sommerzeit zu Normalzeit stellt es die Zeit des Übergangs in die Zeitzone Sommerzeit. Beachten Sie, dass dies eine <xref:System.DateTime> Wert, dessen Jahr, Monat und Datumswerte alle 1 gleich muss.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt die Zeitzone Übergänge für eine imaginäre Zeitzone mit einer Regel für feste Datumsangaben und eine Regel für gleitende Datumsangaben. Die Regel für gleitende Datumsangaben definiert, die um 02:00 Uhr beginnt Anpassung der Zeitzone Klicken Sie auf die letzte Sonntag im März und endet um 3:00 Uhr auf der vierten Sonntag im Oktober ab dem Jahr 1956.  
+  
+ [!code-csharp[System.TimeZone2.TransitionTime.Class#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.TransitionTime.Class/cs/System.TimeZone2.TransitionTime.Class.cs#2)]
+ [!code-vb[System.TimeZone2.TransitionTime.Class#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.TransitionTime.Class/vb/System.TimeZone2.TransitionTime.Class.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der <paramref name="timeOfDay" />-Parameter weist eine nicht standardmäßige Datumskomponente auf.  
+  
+ - oder -   
+  
+ Der <paramref name="timeOfDay" />-Parameter gibt Millisekunden nicht als ganze Zahl an.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.DateTime.Kind" />-Eigenschaft des <paramref name="timeOfDay" />-Parameters ist nicht <see cref="F:System.DateTimeKind.Unspecified" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="month" /> ist kleiner als 1 oder größer als 12.  
+  
+ - oder -   
+  
+ <paramref name="week" /> ist kleiner als 1 oder größer als 5.  
+  
+ - oder -   
+  
+ Der <paramref name="dayOfWeek" />-Parameter ist kein Member der <see cref="T:System.DayOfWeek" />-Enumeration.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Day">
+      <MemberSignature Language="C#" Value="public int Day { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Day" />
+      <MemberSignature Language="DocId" Value="P:System.TimeZoneInfo.TransitionTime.Day" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Tag ab, an dem die Zeit geändert wird.</summary>
+        <value>Der Tag, an dem die Zeit geändert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.TimeZoneInfo.TransitionTime.Day%2A> Eigenschaft gibt einen gültigen Wert nur, wenn die <xref:System.TimeZoneInfo.TransitionTime.IsFixedDateRule%2A> Eigenschaft ist `true`.  
+  
+ Die <xref:System.TimeZoneInfo.TransitionTime.Day%2A> Eigenschaftswert entspricht dem Wert von der `day` Parameter von der <xref:System.TimeZoneInfo.TransitionTime.CreateFixedDateRule%2A> Methode. Wenn der Wert größer als die Anzahl der Tage im Monat des Übergangs ist, erfolgt die Umstellung auf den letzten Tag des Monats.  
+  
+ Die <xref:System.TimeZoneInfo.TransitionTime.Day%2A> Eigenschaft gibt den Tag des Monats (z. B. 15. April) auf die eine Regel für feste Datumsangaben angewendet wird. Im Gegensatz dazu die <xref:System.TimeZoneInfo.TransitionTime.DayOfWeek%2A> -Eigenschaft gibt den Tag der Woche auf die eine Regel für gleitende Datumsangaben angewendet wird (z. B. am zweiten Sonntag im November).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel listet die Zeitzonen auf dem lokalen Computer und zeigt Zeitinformationen für alle festen Datum Übergänge Übergang an. Die Zeitinformationen umfasst den Tag, an dem die Zeit geändert wird.  
+  
+ [!code-csharp[System.TimeZone2.TransitionTime.Class#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.TransitionTime.Class/cs/System.TimeZone2.TransitionTime.Class.cs#3)]
+ [!code-vb[System.TimeZone2.TransitionTime.Class#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.TransitionTime.Class/vb/System.TimeZone2.TransitionTime.Class.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DayOfWeek">
+      <MemberSignature Language="C#" Value="public DayOfWeek DayOfWeek { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DayOfWeek DayOfWeek" />
+      <MemberSignature Language="DocId" Value="P:System.TimeZoneInfo.TransitionTime.DayOfWeek" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DayOfWeek</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Tag der Woche ab, an dem die Zeit geändert wird.</summary>
+        <value>Der Tag der Woche, an dem die Zeit geändert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.TimeZoneInfo.TransitionTime.DayOfWeek%2A> Eigenschaft gibt einen gültigen Wert nur, wenn die <xref:System.TimeZoneInfo.TransitionTime.IsFixedDateRule%2A> Eigenschaft ist `false`.  
+  
+ Die <xref:System.TimeZoneInfo.TransitionTime.DayOfWeek%2A> -Eigenschaft gibt den Tag der Woche auf die eine Regel für gleitende Datumsangaben angewendet wird (z. B. am zweiten Sonntag im November). Im Gegensatz dazu die <xref:System.TimeZoneInfo.TransitionTime.Day%2A> Eigenschaft gibt den Tag des Monats (z. B. 15. April) auf die eine Regel für feste Datumsangaben angewendet wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel listet die Zeitzonen auf dem lokalen Computer und zeigt Zeitinformationen für alle zeitänderung ein gleitendes Datum Übergänge Übergang an. Die Zeitinformationen umfasst den Tag der Woche, an der die Zeit geändert wird.  
+  
+ [!code-csharp[System.TimeZone2.TransitionTime.Class#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.TransitionTime.Class/cs/System.TimeZone2.TransitionTime.Class.cs#4)]
+ [!code-vb[System.TimeZone2.TransitionTime.Class#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.TransitionTime.Class/vb/System.TimeZone2.TransitionTime.Class.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TimeZoneInfo.TransitionTime.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Ein Objekt, das mit dem aktuellen <see cref="T:System.TimeZoneInfo.TransitionTime" />-Objekt verglichen werden soll.</param>
+        <summary>Bestimmt, ob ein Objekt über die gleichen Werte wie das aktuelle <see cref="T:System.TimeZoneInfo.TransitionTime" />-Objekt verfügt.</summary>
+        <returns>
+          <see langword="true" />, wenn die beiden Objekte gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gleichheit wird wie folgt definiert: die `obj` Parameter muss ein <xref:System.TimeZoneInfo.TransitionTime> Objekt und muss identisch mit dem aktuellen Eigenschaftswerte <xref:System.TimeZoneInfo.TransitionTime> Objekt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht Aufrufe an die <xref:System.TimeZoneInfo.TransitionTime.Equals%2A> Methode.  
+  
+ [!code-csharp[System.TimeZone2.TransitionTime.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.TransitionTime.Class/cs/System.TimeZone2.TransitionTime.Class.cs#1)]
+ [!code-vb[System.TimeZone2.TransitionTime.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.TransitionTime.Class/vb/System.TimeZone2.TransitionTime.Class.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (TimeZoneInfo.TransitionTime other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype System.TimeZoneInfo/TransitionTime other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TimeZoneInfo.TransitionTime.Equals(System.TimeZoneInfo.TransitionTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.TimeZoneInfo+TransitionTime" />
+      </Parameters>
+      <Docs>
+        <param name="other">Ein Objekt, das mit der aktuellen Instanz verglichen werden soll.</param>
+        <summary>Bestimmt, ob das aktuelle <see cref="T:System.TimeZoneInfo.TransitionTime" />-Objekt über die gleichen Werte wie ein zweites <see cref="T:System.TimeZoneInfo.TransitionTime" />-Objekt verfügt.</summary>
+        <returns>
+          <see langword="true" />, wenn die beiden Objekte über identische Eigenschaftswerte verfügen, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um zu bestimmen, ob die beiden <xref:System.TimeZoneInfo.TransitionTime> -Objekte gleich sind, diese Methode führt einen Vergleich der Eigenschaft um Eigenschaft. Gibt die Methode `true` nur, wenn die aktuelle <xref:System.TimeZoneInfo.TransitionTime> Objekt und die `other` Objekt identische Werte für jede haben die <xref:System.TimeZoneInfo.TransitionTime> sechs Eigenschaftswerte des Objekts.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht Aufrufe an die <xref:System.TimeZoneInfo.TransitionTime.Equals%2A> Methode.  
+  
+ [!code-csharp[System.TimeZone2.TransitionTime.Class#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.TransitionTime.Class/cs/System.TimeZone2.TransitionTime.Class.cs#7)]
+ [!code-vb[System.TimeZone2.TransitionTime.Class#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.TransitionTime.Class/vb/System.TimeZone2.TransitionTime.Class.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TimeZoneInfo.TransitionTime.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird als Hashfunktion für Hashalgorithmen und Datenstrukturen wie Hashtabellen verwendet.</summary>
+        <returns>Eine 32-Bit-Ganzzahl mit Vorzeichen, die als Hash für dieses <see cref="T:System.TimeZoneInfo.TransitionTime" />-Objekt verwendet wird.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFixedDateRule">
+      <MemberSignature Language="C#" Value="public bool IsFixedDateRule { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFixedDateRule" />
+      <MemberSignature Language="DocId" Value="P:System.TimeZoneInfo.TransitionTime.IsFixedDateRule" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Zeitänderung zu einem bestimmten Zeitpunkt (z. B. 1. November) oder zu einem gleitenden Zeitpunkt (z. B. der letzte Sonntag im Oktober) auftritt.</summary>
+        <value>
+          <see langword="true" />Wenn die Regel ändern ist festes Datum. <see langword="false" /> ist die Regel für die zeitänderung ein gleitendes Datum.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Regel für feste Datumsangaben gibt an, dass der Übergang erfolgt, auf das gleiche Datum und Uhrzeit, die für jedes Jahr, dem die Anpassungsregel angewendet wird. Eine zeitänderung, die bei jedem 3. November folgt z. B. eine Regel für feste Datumsangaben. Eine Regel für gleitende Datumsangaben gibt an, dass an einem bestimmten Tag einer bestimmten Woche oder eines bestimmten Monats für jedes Jahr des Übergangs zu dem die Anpassungsregel angewendet wird. Eine zeitänderung, die auf der ersten Sonntag im November auftritt, wird z. B. eine Regel für gleitende Datumsangaben folgt.  
+  
+ Der Wert des der <xref:System.TimeZoneInfo.TransitionTime.IsFixedDateRule%2A> Eigenschaft bestimmt, welche Eigenschaften von einem <xref:System.TimeZoneInfo.TransitionTime> Objekt gültige Werte aufweisen. In der folgenden Tabelle gibt an, welche Eigenschaften nach dem Wert der betroffen sind der <xref:System.TimeZoneInfo.TransitionTime.IsFixedDateRule%2A> Eigenschaft.  
+  
+|TransitionTime-Eigenschaft|IsFixedDateRule = "true"|IsFixedDateRule = "false"|  
+|-----------------------------|-----------------------------|------------------------------|  
+|`Day`|Gültig|Nicht verwendete|  
+|`DayOfWeek`|Nicht verwendete|Gültig|  
+|`Week`|Nicht verwendete|Gültig|  
+|`Month`|Gültig|Gültig|  
+|`TimeOfDay`|Gültig|Gültig|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel listet Übergangszeiten verschiedene andere und aus der Sommerzeit für alle Zeitzonen, die auf dem lokalen System verfügbar sind. Für Zeitzonen-Date-Regeln, zeigt es Zeitinformationen in den Eigenschaften von der <xref:System.TimeZoneInfo.TransitionTime> Objekt. Für Zeitzonen ohne feste Datumsangaben Regeln, verwendet er eine <xref:System.Globalization.Calendar> Objekt, das den aktuellen Systemkalender zum Ermitteln der tatsächlichen Start- und Enddaten des Übergangs darstellt. Das Beispiel zeigt die Ergebnisse an die Konsole.  
+  
+ [!code-csharp[System.TimeZone2.TransitionTime.Class#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.TransitionTime.Class/cs/example1.cs#5)]
+ [!code-vb[System.TimeZone2.TransitionTime.Class#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.TransitionTime.Class/vb/example1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Month">
+      <MemberSignature Language="C#" Value="public int Month { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Month" />
+      <MemberSignature Language="DocId" Value="P:System.TimeZoneInfo.TransitionTime.Month" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Monat ab, in dem die Zeit geändert wird.</summary>
+        <value>Der Monat, in dem die Zeit geändert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gültige Werte für die <xref:System.TimeZoneInfo.TransitionTime.Month%2A> Eigenschaft reichen von 1 bis 12.  
+  
+ Die <xref:System.TimeZoneInfo.TransitionTime.Month%2A> Eigenschaft Regeln für feste Datumsangaben oder zeitänderung ein gleitendes Datum verwendet wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel listet die Zeitzonen auf dem lokalen Computer und zeigt Zeitinformationen für alle zeitänderung ein gleitendes Datum Übergänge Übergang an. Die Informationen enthält, den Monat, in dem die Zeit geändert wird.  
+  
+ [!code-csharp[System.TimeZone2.TransitionTime.Class#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.TransitionTime.Class/cs/System.TimeZone2.TransitionTime.Class.cs#4)]
+ [!code-vb[System.TimeZone2.TransitionTime.Class#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.TransitionTime.Class/vb/System.TimeZone2.TransitionTime.Class.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (TimeZoneInfo.TransitionTime t1, TimeZoneInfo.TransitionTime t2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.TimeZoneInfo/TransitionTime t1, valuetype System.TimeZoneInfo/TransitionTime t2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TimeZoneInfo.TransitionTime.op_Equality(System.TimeZoneInfo.TransitionTime,System.TimeZoneInfo.TransitionTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t1" Type="System.TimeZoneInfo+TransitionTime" />
+        <Parameter Name="t2" Type="System.TimeZoneInfo+TransitionTime" />
+      </Parameters>
+      <Docs>
+        <param name="t1">Das erste zu vergleichende Objekt.</param>
+        <param name="t2">Das zweite zu vergleichende Objekt.</param>
+        <summary>Bestimmt, ob zwei <see cref="T:System.TimeZoneInfo.TransitionTime" />-Objekte gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="t1" /> und <paramref name="t2" /> identische Werte haben, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zwei <xref:System.TimeZoneInfo.TransitionTime> Objekte sind gleich, wenn sie identische Werte für jede der sechs Eigenschaften verfügen. Andernfalls sind sie ungleich.  
+  
+ Die entsprechende Methode für diesen Operator ist <xref:System.TimeZoneInfo.TransitionTime.Equals%28System.TimeZoneInfo.TransitionTime%29?displayProperty=nameWithType>.]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (TimeZoneInfo.TransitionTime t1, TimeZoneInfo.TransitionTime t2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.TimeZoneInfo/TransitionTime t1, valuetype System.TimeZoneInfo/TransitionTime t2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TimeZoneInfo.TransitionTime.op_Inequality(System.TimeZoneInfo.TransitionTime,System.TimeZoneInfo.TransitionTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t1" Type="System.TimeZoneInfo+TransitionTime" />
+        <Parameter Name="t2" Type="System.TimeZoneInfo+TransitionTime" />
+      </Parameters>
+      <Docs>
+        <param name="t1">Das erste zu vergleichende Objekt.</param>
+        <param name="t2">Das zweite zu vergleichende Objekt.</param>
+        <summary>Bestimmt, ob zwei angegebene <see cref="T:System.TimeZoneInfo.TransitionTime" />-Objekte ungleich sind.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="t1" /> und <paramref name="t2" /> über unterschiedliche Memberwerte verfügen, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zwei <xref:System.TimeZoneInfo.TransitionTime> Objekte sind ungleich, wenn sie verschiedene Werte für jede der sechs Eigenschaften aufweisen. Andernfalls sind sie ungleich.  
+  
+ Die entsprechende Methode für diesen Operator ist <xref:System.TimeZoneInfo.TransitionTime.Equals%28System.TimeZoneInfo.TransitionTime%29?displayProperty=nameWithType>.]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.IDeserializationCallback.OnDeserialization">
+      <MemberSignature Language="C#" Value="void IDeserializationCallback.OnDeserialization (object sender);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.IDeserializationCallback.OnDeserialization(object sender) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TimeZoneInfo.TransitionTime.System#Runtime#Serialization#IDeserializationCallback#OnDeserialization(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Das Objekt, das den Rückruf initiiert hat. Die Funktionen für diesen Parameter sind derzeit nicht implementiert.</param>
+        <summary>Wird ausgeführt, wenn die Deserialisierung eines Objekts abgeschlossen ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TimeZoneInfo.TransitionTime.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Das mit Daten zu füllende Objekt.</param>
+        <param name="context">Das Ziel dieser Serialisierung (siehe <see cref="T:System.Runtime.Serialization.StreamingContext" />).</param>
+        <summary>Füllt ein <see cref="T:System.Runtime.Serialization.SerializationInfo" /> -Objekt mit den Daten, die zum Serialisieren dieses Objekts erforderlich sind.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeOfDay">
+      <MemberSignature Language="C#" Value="public DateTime TimeOfDay { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime TimeOfDay" />
+      <MemberSignature Language="DocId" Value="P:System.TimeZoneInfo.TransitionTime.TimeOfDay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zeitpunkt (Stunde, Minute und Sekunde) ab, zu dem die Zeit geändert wird.</summary>
+        <value>Der Tageszeitpunkt, zu dem die Zeit geändert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für den Übergang von Normalzeit zu Sommerzeit der <xref:System.TimeZoneInfo.TransitionTime.TimeOfDay%2A> Wert stellt die Erstellungszeit des Übergangs in Normalzeit der Zeitzone dar. Für den Übergang von Sommerzeit zu Normalzeit stellt es die Zeit des Übergangs in die Zeitzone Sommerzeit.  
+  
+ Die <xref:System.TimeZoneInfo.TransitionTime.TimeOfDay%2A> Eigenschaft definiert nur die Zeit der Zeit geändert, aber nicht das Datum. Das Datum richtet sich nach der <xref:System.TimeZoneInfo.TransitionTime.Month%2A> und <xref:System.TimeZoneInfo.TransitionTime.Day%2A> Eigenschaften von regeländerungen und nach der <xref:System.TimeZoneInfo.TransitionTime.Month%2A>, <xref:System.TimeZoneInfo.TransitionTime.Week%2A>, und <xref:System.TimeZoneInfo.TransitionTime.DayOfWeek%2A> Eigenschaften von Gleitkomma regeländerungen. Die Datumskomponente dieser <xref:System.DateTime> Wert wird ignoriert; der Wert der Jahr, Monat und Tag ist immer 1.  
+  
+ Die <xref:System.TimeZoneInfo.TransitionTime.TimeOfDay%2A> Eigenschaft wird für feste Datumsangaben und zeitänderung ein gleitendes Datum Übergänge verwendet.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel listet die Zeitzonen auf dem lokalen Computer und zeigt Zeitinformationen für diese Zeitzonen, die Anpassungsregeln aufweisen. Die Informationen enthält die Tageszeit, zu dem die Zeit geändert wird.  
+  
+ [!code-csharp[System.TimeZone2.TransitionTime.Class#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.TransitionTime.Class/cs/System.TimeZone2.TransitionTime.Class.cs#6)]
+ [!code-vb[System.TimeZone2.TransitionTime.Class#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.TransitionTime.Class/vb/System.TimeZone2.TransitionTime.Class.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Week">
+      <MemberSignature Language="C#" Value="public int Week { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Week" />
+      <MemberSignature Language="DocId" Value="P:System.TimeZoneInfo.TransitionTime.Week" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Woche des Monats ab, in der die Zeit geändert wird.</summary>
+        <value>Die Woche des Monats, in der die Zeit geändert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der die <xref:System.TimeZoneInfo.TransitionTime.Week%2A> Eigenschaft wird nur für zeitänderungen zeitänderung ein gleitendes Datum Regeln verwendet. Gültige Werte reichen von 1 bis 5.  
+  
+ Die <xref:System.TimeZoneInfo.TransitionTime.Month%2A> -Eigenschaft definiert den Monat, in dem die Zeit geändert wird. Die <xref:System.TimeZoneInfo.TransitionTime.Week%2A> -Eigenschaft bestimmt die Woche, an dem der Übergang auftritt. Die <xref:System.TimeZoneInfo.TransitionTime.DayOfWeek%2A> Eigenschaft definiert den Tag der Woche, an dem der Übergang auftritt. Der Wert, der die <xref:System.TimeZoneInfo.TransitionTime.Week%2A> -Eigenschaft bestimmt wird, wie in der folgenden Tabelle gezeigt.  
+  
+|Wenn der Eigenschaftswert Woche ist|Der Übergang tritt auf|  
+|-----------------------------------|------------------------------|  
+|1|Das erste Vorkommen der <xref:System.TimeZoneInfo.TransitionTime.DayOfWeek%2A> Wert in <xref:System.TimeZoneInfo.TransitionTime.Month%2A>.|  
+|2|Das zweite Vorkommen der <xref:System.TimeZoneInfo.TransitionTime.DayOfWeek%2A> Wert in <xref:System.TimeZoneInfo.TransitionTime.Month%2A>.|  
+|3|Das dritte Vorkommen der <xref:System.TimeZoneInfo.TransitionTime.DayOfWeek%2A> Wert in <xref:System.TimeZoneInfo.TransitionTime.Month%2A>.|  
+|4|Das vierte Vorkommen der <xref:System.TimeZoneInfo.TransitionTime.DayOfWeek%2A> Wert in <xref:System.TimeZoneInfo.TransitionTime.Month%2A>.|  
+|5|Das letzte Vorkommen der <xref:System.TimeZoneInfo.TransitionTime.DayOfWeek%2A> Wert in <xref:System.TimeZoneInfo.TransitionTime.Month%2A>.|  
+  
+ Wenn auf der ersten Sonntag im März, den Wert der ein Übergang erfolgt, beispielsweise die <xref:System.TimeZoneInfo.TransitionTime.Week%2A> Eigenschaft ist 1. Tritt am letzten Sonntag im März, den Wert des der <xref:System.TimeZoneInfo.TransitionTime.Week%2A> Eigenschaft ist 5.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel listet die Zeitzonen auf dem lokalen Computer und zeigt Zeitinformationen für alle zeitänderung ein gleitendes Datum Übergänge Übergang an. Die Informationen enthält die Woche des Monats, in dem die Zeit geändert wird. Im Beispiel definiert auch einen `WeekOfMonth` Enumeration anzuzeigende Zeichenfolge, die den Ordinalwert des darstellt der <xref:System.TimeZoneInfo.TransitionTime.Week%2A> Eigenschaft anstatt auf eine ganze Zahl.  
+  
+ [!code-csharp[System.TimeZone2.TransitionTime.Class#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.TransitionTime.Class/cs/System.TimeZone2.TransitionTime.Class.cs#4)]
+ [!code-vb[System.TimeZone2.TransitionTime.Class#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.TransitionTime.Class/vb/System.TimeZone2.TransitionTime.Class.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

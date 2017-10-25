@@ -1,0 +1,134 @@
+<Type Name="CodeGotoStatement" FullName="System.CodeDom.CodeGotoStatement">
+  <TypeSignature Language="C#" Value="public class CodeGotoStatement : System.CodeDom.CodeStatement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeGotoStatement extends System.CodeDom.CodeStatement" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeGotoStatement" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeStatement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine <see langword="goto" /> Anweisung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.CodeGotoStatement>Dient zur Darstellung einer `goto` -Anweisung, die in einigen Sprachen verwendet wird, um Programmablaufs an einer angegebenen Bezeichnung umzuleiten.  
+  
+ Die <xref:System.CodeDom.CodeGotoStatement.Label%2A> Eigenschaft gibt den Namen der Bezeichnung an der Ausführung des Programms fortzusetzen.  
+  
+> [!NOTE]
+>  Nicht alle Sprachen unterstützen `goto` Anweisungen. Rufen Sie die <xref:System.CodeDom.Compiler.ICodeGenerator.Supports%2A> Methode mit der <xref:System.CodeDom.Compiler.GeneratorSupport.GotoStatements> Flag, um zu bestimmen, ob ein Code-Generator unterstützt `goto` Anweisungen.  
+  
+   
+  
+## Examples  
+ Der folgende Beispielcode veranschaulicht die Verwendung von einem <xref:System.CodeDom.CodeGotoStatement> und ein <xref:System.CodeDom.CodeLabeledStatement> Programmablauf umgeleitet.  
+  
+ [!code-cpp[CodeGotoStatementExample#2](~/samples/snippets/cpp/VS_Snippets_CLR/CodeGotoStatementExample/CPP/codegotostatementexample.cpp#2)]
+ [!code-csharp[CodeGotoStatementExample#2](~/samples/snippets/csharp/VS_Snippets_CLR/CodeGotoStatementExample/CS/codegotostatementexample.cs#2)]
+ [!code-vb[CodeGotoStatementExample#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeGotoStatementExample/VB/codegotostatementexample.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeGotoStatement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeGotoStatement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.CodeDom.CodeGotoStatement" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie diesen Konstruktor verwenden, müssen Sie auch Festlegen der <xref:System.CodeDom.CodeGotoStatement.Label%2A> Eigenschaft an, dass der Name der Bezeichnung an der Ausführung des Programms fortzusetzen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeGotoStatement (string label);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string label) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeGotoStatement.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="label" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="label">Der Name der Bezeichnung an der Ausführung des Programms fortzusetzen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.CodeGotoStatement" /> -Klasse unter Verwendung des angegebenen Bezeichnung.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="Label" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="public string Label { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Label" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeGotoStatement.Label" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Bezeichnung an der Ausführung des Programms fortzusetzen.</summary>
+        <value>Eine Zeichenfolge, die den Namen der Bezeichnung an der Ausführung des Programms fortzusetzen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt den Namen der Bezeichnung an der Ausführung des Programms fortzusetzen.  
+  
+ Eine Bezeichnung dargestellt werden kann, indem Sie eine <xref:System.CodeDom.CodeLabeledStatement>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die Bezeichnung kann nicht festgelegt werden, da <paramref name="value" /> ist <see langword="null" /> oder eine leere Zeichenfolge.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

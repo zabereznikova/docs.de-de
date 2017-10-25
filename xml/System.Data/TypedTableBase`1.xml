@@ -1,0 +1,127 @@
+<Type Name="TypedTableBase&lt;T&gt;" FullName="System.Data.TypedTableBase&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public abstract class TypedTableBase&lt;T&gt; : System.Data.DataTable, System.Collections.Generic.IEnumerable&lt;T&gt; where T : DataRow" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit TypedTableBase`1&lt;(class System.Data.DataRow) T&gt; extends System.Data.DataTable implements class System.Collections.Generic.IEnumerable`1&lt;!T&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.TypedTableBase`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T">
+      <Constraints>
+        <BaseTypeName>System.Data.DataRow</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Data.DataTable</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="T">Der Typ der Objekte in der in der Regel von der Tabelle dargestellten Quellsequenz <see cref="T:System.Data.DataRow" />.</typeparam>
+    <summary>Dieser Typ dient als Basisklasse für den typisierten-<see cref="T:System.Data.DataTable" /> -objektgenerierung durch Visual Studio und das Tool XSD.exe .NET Framework und sollte nicht direkt aus Ihrem Code verwendet werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TypedTableBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.TypedTableBase`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue <see cref="T:System.Data.TypedTableBase'1" />. Diese Methode unterstützt das typisierte<see cref="T:System.Data.DataTable" /> -objektgenerierung durch [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] und XSD.exe [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Tool. Dieser Typ ist nicht vorgesehen, direkt aus Ihrem Code verwendet werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TypedTableBase (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.TypedTableBase`1.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Ein <see cref="T:System.Runtime.Serialization.SerializationInfo" /> , das Daten zum Erstellen des Objekts enthält.</param>
+        <param name="context">Der Streamingkontext für das deserialisierte Objekt.</param>
+        <summary>Initialisiert eine neue <see cref="T:System.Data.TypedTableBase'1" />. Diese Methode unterstützt das typisierte<see cref="T:System.Data.DataTable" /> -objektgenerierung durch [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] und XSD.exe [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Tool. Diese Methode ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cast&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public System.Data.EnumerableRowCollection&lt;TResult&gt; Cast&lt;TResult&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.EnumerableRowCollection`1&lt;!!TResult&gt; Cast&lt;TResult&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.TypedTableBase`1.Cast``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.EnumerableRowCollection&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="TResult">To be added.</typeparam>
+        <summary>Konvertiert die Elemente einer <see cref="T:System.Data.TypedTableBase`1" /> in den angegebenen Typ. Diese Methode unterstützt die Generierung von typisierten <see cref="T:System.Data.DataTable" />-Objekten durch [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] und das [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]-Tool „XSD.exe“. Diese Methode ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <returns>Eine <see cref="T:System.Data.EnumerableRowCollection" />, die jedes in den angegebenen Typ konvertierte Element der Quellsequenz enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerator&lt;T&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;!T&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.TypedTableBase`1.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator für die typisierte<see cref="T:System.Data.DataRow" />. Diese Methode unterstützt das typisierte<see cref="T:System.Data.DataTable" /> -objektgenerierung durch [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] und XSD.exe [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Tool. Diese Methode ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <returns>Ein Objekt, das die <see cref="T:System.Collections.Generic.IEnumerator`1" />-Schnittstelle implementiert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.TypedTableBase`1.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator für die typisierte<see cref="T:System.Data.DataRow" />. Diese Methode unterstützt das typisierte<see cref="T:System.Data.DataTable" /> -objektgenerierung durch [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] und XSD.exe [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Tool. Diese Methode ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <returns>Ein Objekt, das die <see cref="T:System.Collections.Generic.IEnumerator`1" />-Schnittstelle implementiert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

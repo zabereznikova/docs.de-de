@@ -1,0 +1,201 @@
+<Type Name="ValidationType" FullName="System.Xml.ValidationType">
+  <TypeSignature Language="C#" Value="public enum ValidationType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ValidationType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.ValidationType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Art der durchzuführenden Validierung an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.XmlReader> -Klasse kann die Validierung mithilfe von einem Schema oder einer Dokumenttypdefinition (DTD) erzwingen. Die <xref:System.Xml.ValidationType> -Enumeration gibt den Typ der Überprüfung der erstellte <xref:System.Xml.XmlReader> -Instanz ausführen soll. Die <xref:System.Xml.XmlReader> Instanz kann entweder ein validierendes <xref:System.Xml.XmlReader> Objekt erstellt, indem die <xref:System.Xml.XmlReader.Create%2A> -Methode, oder ein <xref:System.Xml.XmlValidatingReader> Objekt.  
+  
+ Die Überprüfung Modell verfügt über drei Merkmale auf: strict, informative und Status. Strict, lässt nicht zu, eine Warnung das Mischen von Überprüfungstypen informativ bereitgestellt werden, wenn das Schema oder einer Dokumenttypdefinition (DTD) nicht gefunden werden, und Status gibt Warnungen aus, wenn keine Überprüfung für Elemente und Attribute aus Schemas durchgeführt werden kann.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Auto">
+      <MemberSignature Language="C#" Value="Auto" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.ValidationType Auto = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.ValidationType.Auto" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Validation type should be specified as DTD or Schema.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.ValidationType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Überprüft, ob DTD- oder Schemainformationen vorliegen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Dieses Feld ist in Microsoft .NET Framework, Version 2.0, veraltet und gilt nur für die <xref:System.Xml.XmlValidatingReader> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DTD">
+      <MemberSignature Language="C#" Value="DTD" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.ValidationType DTD = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.ValidationType.DTD" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.ValidationType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Führt eine Überprüfung entsprechend der DTD durch.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.ValidationType None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.ValidationType.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.ValidationType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es wird keine Validierung durchgeführt. Bei dieser Einstellung wird ein mit XML 1.0 kompatibler Parser erstellt, der keine Validierung durchführt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardattribute werden gemeldet, und allgemeine Entitäten aufgelöst werden können, durch den Aufruf <xref:System.Xml.XmlReader.ResolveEntity%2A>. Die "DOCTYPE" wird nicht zu Validierungszwecken verwendet.  
+  
+ Es werden keine Validierungsfehler gemeldet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Schema">
+      <MemberSignature Language="C#" Value="Schema" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.ValidationType Schema = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.ValidationType.Schema" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.ValidationType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Validiert anhand von XSD (XML Schema Definition Language)-Schemas, einschließlich Inline-XML-Schemas. XML-Schemas Namespace-URIs zugeordnet werden entweder über die <see langword="schemaLocation" /> Attribut oder der bereitgestellte <see langword="Schemas" /> Eigenschaft.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="XDR">
+      <MemberSignature Language="C#" Value="XDR" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.ValidationType XDR = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.ValidationType.XDR" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("XDR Validation through XmlValidatingReader is obsoleted")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.ValidationType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Validiert anhand von XDR (XML-Data Reduced)-Schemas, einschließlich Inline-XDR-Schemas. XDR-Schemas werden mit erkannt. die <see langword="x-schema" /> Namespace-Präfix oder der <see cref="P:System.Xml.XmlValidatingReader.Schemas" /> Eigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Dieses Feld ist in Microsoft .NET Framework, Version 2.0, veraltet und gilt nur für die <xref:System.Xml.XmlValidatingReader> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

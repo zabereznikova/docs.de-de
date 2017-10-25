@@ -1,0 +1,176 @@
+<Type Name="CodeComment" FullName="System.CodeDom.CodeComment">
+  <TypeSignature Language="C#" Value="public class CodeComment : System.CodeDom.CodeObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeComment extends System.CodeDom.CodeObject" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeComment" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Kommentar dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.CodeComment>kann verwendet werden, um ein einzeiliger Kommentar darzustellen.  
+  
+ Ein <xref:System.CodeDom.CodeCommentStatement> darf eine <xref:System.CodeDom.CodeComment> und können als eine Anweisung behandelt und als Code in eine Auflistung von Anweisungen generiert werden. Mehrzeilige Kommentare dargestellt werden können, mit mehreren <xref:System.CodeDom.CodeCommentStatement> Objekte.  
+  
+ Um einen Kommentar in ein CodeDOM-Diagramm einzuschließen, die auf den Quellcode generiert werden können, fügen eine <xref:System.CodeDom.CodeComment> auf eine <xref:System.CodeDom.CodeCommentStatement>, und fügen Sie diese auf die Auflistung der Anweisungen von einer <xref:System.CodeDom.CodeMemberMethod> oder zur Auflistung Kommentare eine <xref:System.CodeDom.CodeNamespace> oder jedes Objekt, das von abgeleitetwird<xref:System.CodeDom.CodeTypeMember>.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel veranschaulicht die Verwendung einer <xref:System.CodeDom.CodeComment> einen Kommentar im Quellcode dargestellt.  
+  
+ [!code-cpp[CodeCommentExample#2](~/samples/snippets/cpp/VS_Snippets_CLR/CodeCommentExample/CPP/codecommentexample.cpp#2)]
+ [!code-csharp[CodeCommentExample#2](~/samples/snippets/csharp/VS_Snippets_CLR/CodeCommentExample/CS/codecommentexample.cs#2)]
+ [!code-vb[CodeCommentExample#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeCommentExample/VB/codecommentexample.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeComment ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeComment.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.CodeDom.CodeComment" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeComment (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeComment.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der Inhalt des Kommentars.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.CodeComment" /> Klasse mit dem angegebenen Text als Inhalt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeComment (string text, bool docComment);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text, bool docComment) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeComment.#ctor(System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="docComment" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der Inhalt des Kommentars.</param>
+        <param name="docComment">
+          <see langword="true" />Wenn der Kommentar kein Dokumentationskommentar ist; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.CodeComment" /> -Klasse mit dem angegebenen Text und die Flags für Dokumentationskommentare.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DocComment">
+      <MemberSignature Language="C#" Value="public bool DocComment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DocComment" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeComment.DocComment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Kommentar kein Dokumentationskommentar ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Kommentar kein Dokumentationskommentar ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einigen Sprachen unterstützt eine besondere Art von Kommentar, der automatisch aus dem Quellcode für Dokumentationszwecke extrahiert werden kann. Diese Eigenschaft kann verwendet werden, um festzulegen, ob der Kommentar kein Dokumentationskommentar ist, wodurch eine andere Syntax können. Ein Beispiel hierfür ist c#, befindlichen "/ /" für reguläre Kommentare und "/ / /" für Dokumentationskommentare.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeComment.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text des Kommentars.</summary>
+        <value>Eine Zeichenfolge mit dem Kommentartext ein.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Text dieser Eigenschaft darf keine Zeilenumbrüche enthalten. Wenn mehrere Zeilen mehrere erforderlich, <xref:System.CodeDom.CodeComment> Objekte definiert werden soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,287 @@
+<Type Name="MessageQueueEnumerator" FullName="System.Messaging.MessageQueueEnumerator">
+  <TypeSignature Language="C#" Value="public class MessageQueueEnumerator : MarshalByRefObject, IDisposable, System.Collections.IEnumerator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MessageQueueEnumerator extends System.MarshalByRefObject implements class System.Collections.IEnumerator, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.MessageQueueEnumerator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.MarshalByRefObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerator</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt einen Vorwärtscursor zum Aufzählen der Nachrichten in einer Nachrichtenwarteschlange bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendung <xref:System.Messaging.MessageQueueEnumerator> für dynamische Interaktion mit Warteschlangen im Netzwerk. Methoden zur Verfügung, über die <xref:System.Messaging.MessageQueue> Klasse kann entweder Zurückgeben einer <xref:System.Messaging.MessageQueueEnumerator> , enthält eine dynamische Liste von Warteschlangen oder ein Array mit einer Momentaufnahme der Warteschlange-Auflistung, die zum Zeitpunkt die angegebene Methode wurde aufgerufen.  
+  
+ Es gibt keine festgelegte Reihenfolge von Warteschlangen in einem Netzwerk. Sie sind nicht geordnete, z. B. durch Computer, die Bezeichnung, die öffentliche oder private Status oder andere Benutzer zugänglichen Kriterien. Ein <xref:System.Messaging.MessageQueueEnumerator> ist ein Cursor, der an den Anfang einer dynamischen Liste initialisiert. Bewegen des Cursors zur ersten Warteschlange der Enumeration durch Aufrufen von <xref:System.Messaging.MessageQueueEnumerator.MoveNext%2A>. Nachdem der Enumerator initialisiert wurde, können Sie <xref:System.Messaging.MessageQueueEnumerator.MoveNext%2A> um die verbleibenden Warteschlangen vorwärts zu durchlaufen.  
+  
+ Es ist nicht möglich, auf eine <xref:System.Messaging.MessageQueueEnumerator>. Ein Cursor kann nur vorwärtsbewegung Warteschlangen in der Enumeration. Sie können jedoch aufrufen <xref:System.Messaging.MessageQueueEnumerator.Reset%2A> zum Zurücksetzen der Enumeration und platzieren Sie den Cursor wieder an den Anfang der Liste. Da der Enumerator dynamisch ist, kann eine Warteschlange, die hinter der aktuellen Cursorposition angefügt wird vom Enumerator zugegriffen werden. Eine Warteschlange, die vor der aktuellen Cursorposition eingefügt wird, kann nicht ohne den ersten Aufruf von Reset zugegriffen werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Meldungswarteschlangen im Netzwerk durchlaufen und untersucht den Pfad für jede Warteschlange. Schließlich wird die Anzahl von öffentlichen Warteschlangen im Netzwerk angezeigt.  
+  
+ [!code-cpp[MessageQueue.GetMessageQueueEnumerator_noparms#1](~/samples/snippets/cpp/VS_Snippets_Remoting/MessageQueue.GetMessageQueueEnumerator_noparms/CPP/mqgetmessagequeueenumerator.cpp#1)]
+ [!code-csharp[MessageQueue.GetMessageQueueEnumerator_noparms#1](~/samples/snippets/csharp/VS_Snippets_Remoting/MessageQueue.GetMessageQueueEnumerator_noparms/CS/mqgetmessagequeueenumerator.cs#1)]
+ [!code-vb[MessageQueue.GetMessageQueueEnumerator_noparms#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MessageQueue.GetMessageQueueEnumerator_noparms/VB/mqgetmessagequeueenumerator.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueEnumerator.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Enumerator zugeordneten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Betriebssystem behält ein geöffnetes Handle <xref:System.Messaging.MessageQueueEnumerator.LocatorHandle%2A>, in die Warteschlange Enumerator während der Lebensdauer des Cursors. Wenn Sie die Arbeit mit dem Enumerator abgeschlossen haben, rufen <xref:System.Messaging.MessageQueueEnumerator.Close%2A> , die dem Handle zugeordneten Ressourcen freizugeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public System.Messaging.MessageQueue Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Messaging.MessageQueue Current" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueEnumerator.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuellen <see cref="T:System.Messaging.MessageQueue" /> der Enumeration.</summary>
+        <value>Die Warteschlange, an der der Cursor zurzeit positioniert ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Enumerator erstellt wird, es zeigt nicht auf, daher <xref:System.Messaging.MessageQueueEnumerator.Current%2A> ist ungültig und löst eine Ausnahme aus, wenn darauf zugegriffen wird. Rufen Sie <xref:System.Messaging.MessageQueueEnumerator.MoveNext%2A> zur Positionierung des Cursors auf die erste Warteschlange in der Enumeration.  
+  
+ Mehrere Aufrufe <xref:System.Messaging.MessageQueueEnumerator.Current%2A> ohne einen zwischenzeitlichen Aufruf von <xref:System.Messaging.MessageQueueEnumerator.MoveNext%2A> wird zurückgegeben, die gleiche <xref:System.Messaging.MessageQueue> Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Sie wird aufgerufen, <see cref="P:System.Messaging.MessageQueueEnumerator.Current" /> vor dem ersten Aufruf von <see cref="M:System.Messaging.MessageQueueEnumerator.MoveNext" />. Der Cursor befindet sich vor der ersten Warteschlange in der Enumeration.  
+  
+ - oder -   
+  
+ Sie wird aufgerufen, <see cref="P:System.Messaging.MessageQueueEnumerator.Current" /> nach einem Aufruf von <see cref="M:System.Messaging.MessageQueueEnumerator.MoveNext" /> false (gibt an, der Cursor befindet sich nach der letzten Warteschlange in der Enumeration) zurückgegeben wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueEnumerator.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle vom <see cref="T:System.Messaging.MessageQueueEnumerator" /> verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen von <xref:System.Messaging.MessageQueueEnumerator.Dispose%2A> können Ressourcen von der <xref:System.Messaging.MessageQueueEnumerator> neu für andere Zwecke reserviert werden. Weitere Informationen zu <xref:System.Messaging.MessageQueueEnumerator.Dispose%2A>, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueEnumerator.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.Messaging.MessageQueueEnumerator" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich <xref:System.Messaging.MessageQueueEnumerator.Dispose%2A> Methode und die <xref:System.Object.Finalize%2A> Methode. `Dispose`Ruft die geschützte `Dispose(Boolean)` Methode mit dem `disposing` Parametersatz auf `true`. <xref:System.Object.Finalize%2A>Ruft `Dispose` mit `disposing` festgelegt `false`.  
+  
+ Wenn der `disposing`-Parameter `true` ist, gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte reserviert sind, auf die dieser <xref:System.Messaging.MessageQueueEnumerator> verweist. Diese Methode ruft die `Dispose`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Beim Überschreiben von <see langword="Dispose(Boolean)" /> müssen Sie darauf achten, nicht auf Objekte zu verweisen, die durch einen früheren Aufruf von <see langword="Dispose" /> freigegeben wurden. Weitere Informationen zum Implementieren <see langword="Dispose" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see langword="Dispose" /> und <see langword="Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~MessageQueueEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueEnumerator.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocatorHandle">
+      <MemberSignature Language="C#" Value="public IntPtr LocatorHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int LocatorHandle" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueEnumerator.LocatorHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das systemeigene Message Queuing-Handle zum Suchen von Warteschlangen in einem Netzwerk verwendet.</summary>
+        <value>Das systemeigene Handle für die aktuelle Warteschlange.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie nicht mehr benötigen diese <xref:System.Messaging.MessageQueueEnumerator> Instanz ist, rufen Sie <xref:System.Messaging.MessageQueueEnumerator.Close%2A> dieses Handle auf die Ressource freizugeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Messaging.MessageQueueException">Das Handle ist nicht vorhanden.</exception>
+        <exception cref="T:System.Security.SecurityException">Der aufrufende Code keine Berechtigungen zum Durchsuchen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveNext">
+      <MemberSignature Language="C#" Value="public bool MoveNext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool MoveNext() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueEnumerator.MoveNext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt den Enumerator auf die nächste Warteschlange der Enumeration an, wenn eine verfügbar ist.</summary>
+        <returns>
+          <see langword="true" />Wenn der Enumerator erfolgreich auf die nächste Warteschlange; gesetzt wurde <see langword="false" /> , wenn der Enumerator das Ende der Enumeration erreicht hat.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Messaging.MessageQueueEnumerator.MoveNext%2A>Gibt `false` sofort, wenn keine Warteschlangen die Enumeration zugeordnet sind.  
+  
+ <xref:System.Messaging.MessageQueueEnumerator.MoveNext%2A>Gibt zurück, `true` bis das Ende der Auflistung erreicht ist. Klicken Sie dann zurückgegeben `false` für jeden nachfolgenden Aufruf. Jedoch einmal <xref:System.Messaging.MessageQueueEnumerator.MoveNext%2A> zurückgekehrt `false`, den Zugriff auf die <xref:System.Messaging.MessageQueueEnumerator.Current%2A> Eigenschaft wird eine Ausnahme ausgelöst.  
+  
+ Bei der Erstellung einer konzeptionell Enumerator wird vor dem ersten <xref:System.Messaging.MessageQueue> der Enumeration und der erste Aufruf von <xref:System.Messaging.MessageQueueEnumerator.MoveNext%2A> Schaltet die erste Warteschlange in der Enumeration in der Ansicht.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der aufrufende Code keine Berechtigungen zum Durchsuchen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueEnumerator.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt den Cursor auf den Anfang der Enumeration zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Enumerator wechselt in eine Richtung Vorwärtscursor. Verwenden Sie diese Methode, um auf den Anfang der Enumeration von Warteschlangen zurückzugeben.  
+  
+ <xref:System.Messaging.MessageQueueEnumerator.Reset%2A>positioniert den Cursor auf die erste Warteschlange in der Liste an. Sie müssen nicht aufrufen <xref:System.Messaging.MessageQueueEnumerator.MoveNext%2A> nach dem Aufruf <xref:System.Messaging.MessageQueueEnumerator.Reset%2A> so verschieben Sie den Cursor auf die erste Warteschlange in der Enumeration.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerator.Current">
+      <MemberSignature Language="C#" Value="object System.Collections.IEnumerator.Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IEnumerator.Current" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueEnumerator.System#Collections#IEnumerator#Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuellen <see cref="T:System.Messaging.MessageQueue" /> der Enumeration.</summary>
+        <value>Die Warteschlange, an der der Cursor zurzeit positioniert ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

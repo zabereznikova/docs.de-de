@@ -1,0 +1,104 @@
+<Type Name="PersonalizationStateInfo" FullName="System.Web.UI.WebControls.WebParts.PersonalizationStateInfo">
+  <TypeSignature Language="C#" Value="public abstract class PersonalizationStateInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit PersonalizationStateInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse implementiert eine Darstellung der Informationen zu einem Satz von Daten von Webparts für eine Seite.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Klassen <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo> Informationen entweder einen Satz von freigegebenen Zustandsdaten für eine Seite oder einen Satz von benutzerspezifische Personalisierung Statusdaten für die Seite und einen Benutzer darstellen. Diese Klasse dient zur Verwendung in Abfragen und Verwaltungsmethoden, wo ist die serialisierten Daten für die Webparts nicht erforderlich.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Beim Erben von <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo" />, es sind keine abstrakten Member, die Sie überschreiben müssen. Beachten Sie, dass die Klasse abstrakt ist jedoch keine Klassenmember abstrakt. Diese Klasse wird gegenwärtig von .NET Framework intern verwendet und der Konstruktor für diese Klasse ist eine interne, also abgeleitete Version dieser Klasse keine Möglichkeit zum Initialisieren der <paramref name="path" />, <paramref name="lastUpdatedDate" /> und <paramref name="size" /> für den Konstruktor erforderliche Parameter .</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="LastUpdatedDate">
+      <MemberSignature Language="C#" Value="public DateTime LastUpdatedDate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime LastUpdatedDate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo.LastUpdatedDate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Datum und die Uhrzeit, zu der der Personalisierung-Status zuletzt aktualisiert wurde.</summary>
+        <value>Ein <see cref="T:System.DateTime" /> , der angibt, wenn der Personalisierung-Status zuletzt aktualisiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stellt das Datum und Uhrzeit, die gemeinsame genutzten oder benutzerspezifische Personalisierung Statusinformationen zuletzt aktualisiert wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Pfad zu der Seite der Personalisierungszustandsinformationen zugeordneten ab.</summary>
+        <value>Der Pfad der Seite die Personalisierungsinformationen Zustand zugeordnet werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Pfad ist eine Anwendung relativen Pfad z. B. ~ / application/page/page.aspx.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public int Size { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Size" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe der Personalisierungszustandsinformationen in den zugrunde liegenden Datenspeicher gespeichert.</summary>
+        <value>Die Größe in Bytes, die Statusinformationen für die Personalisierung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Informationen Freigabezustand stellt die Größe der Größe der Freigabezustand in den Datenspeicher dar. Benutzerinformationen, Größe, die die Größe des benutzerspezifische Zustand für eine bestimmte Kombination von Benutzer und Seite darstellt (gemäß der <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo.Path%2A> Eigenschaft) wie im Datenspeicher gespeichert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

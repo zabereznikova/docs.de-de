@@ -1,0 +1,1145 @@
+<Type Name="CommandField" FullName="System.Web.UI.WebControls.CommandField">
+  <TypeSignature Language="C#" Value="public class CommandField : System.Web.UI.WebControls.ButtonFieldBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CommandField extends System.Web.UI.WebControls.ButtonFieldBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.CommandField" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.ButtonFieldBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein spezielles Feld dar, das Befehlsschaltflächen zum Ausführen von Auswahl-, Bearbeitungs-, Einfüge- oder Löschvorgänge in einem datengebundenen Steuerelement anzeigt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.CommandField> Klasse ist ein spezielles Feld, das von datengebundenen Steuerelementen verwendet (z. B. <xref:System.Web.UI.WebControls.GridView> und <xref:System.Web.UI.WebControls.DetailsView>) um Befehlsschaltflächen anzuzeigen, die ausführen, löschen, bearbeiten, einfügen oder Vorgänge auswählen. Das Befehlsschaltflächen zum Ausführen dieser Vorgänge kann angezeigt oder ausgeblendet wird, mithilfe der Eigenschaften in der folgenden Tabelle gezeigt.  
+  
+|Eigenschaft|Beschreibung|  
+|--------------|-----------------|  
+|<xref:System.Web.UI.WebControls.CommandField.ShowDeleteButton%2A>|Blendet eine Schaltfläche "löschen" in einem <xref:System.Web.UI.WebControls.CommandField> Feld für jeden Datensatz in das datengebundene Steuerelement. Die Schaltfläche "löschen" ermöglicht dem Benutzer, einen Datensatz aus der Datenquelle zu löschen.|  
+|<xref:System.Web.UI.WebControls.CommandField.ShowEditButton%2A>|Blendet eine Schaltfläche "Bearbeiten", in einem <xref:System.Web.UI.WebControls.CommandField> Feld für jeden Datensatz in das datengebundene Steuerelement. Die Schaltfläche "Bearbeiten" ermöglicht die Benutzer, einen Datensatz aus der Datenquelle zu bearbeiten. Wenn der Benutzer klickt auf die Schaltfläche "Bearbeiten" für einen bestimmten Datensatz, bearbeiten, die wird die Schaltfläche mit einer Schaltfläche "Aktualisieren" und eine Schaltfläche "Abbrechen" ersetzt. Alle anderen Befehlsschaltflächen werden ebenfalls ausgeblendet.|  
+|<xref:System.Web.UI.WebControls.CommandField.ShowInsertButton%2A>|Anzeigen oder Ausblenden der Schaltfläche "Neu" in einem <xref:System.Web.UI.WebControls.CommandField> Feld. Die Schaltfläche "Neu" ermöglicht den Benutzer in der Datenquelle einen neuen Datensatz einzufügen. Klickt der Benutzer auf die Schaltfläche "Neu", wird er durch eine Schaltfläche zum Einfügen und eine Schaltfläche "Abbrechen" ersetzt. Alle anderen Befehlsschaltflächen werden ebenfalls ausgeblendet. **Hinweis:** diese Eigenschaft gilt nur für datengebundene Steuerelemente, die Einfügevorgänge, z. B. unterstützen die <xref:System.Web.UI.WebControls.DetailsView> Steuerelement.|  
+|<xref:System.Web.UI.WebControls.CommandField.ShowSelectButton%2A>|Blendet eine Schaltfläche auswählen, in einem <xref:System.Web.UI.WebControls.CommandField> Feld für jeden Datensatz in das datengebundene Steuerelement. Die Schaltfläche auswählen kann der Benutzer einen Datensatz in das datengebundene Steuerelement auswählen.|  
+  
+ Darüber hinaus die "Abbrechen", Schaltfläche angezeigt, wenn ein Datensatz in Bearbeitung befindet, oder im Einfügemodus, angezeigt oder ausgeblendet, indem werden kann die <xref:System.Web.UI.WebControls.CommandField.ShowCancelButton%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Wenn ein datengebundenes Steuerelement in Kombination mit einem Datenquellen-Steuerelement verwendet wird (z. B. eine <xref:System.Web.UI.WebControls.SqlDataSource> Steuerelement), das datengebundene Steuerelement der Datenquelle des Steuerelements Funktionen nutzen kann, und geben Sie automatische löschen, aktualisieren und Masseneinfügefunktion einfügen. Bei anderen Datenquellen müssen Sie die Routinen zum Ausführen dieser Vorgänge während der entsprechenden Ereignisse für das datengebundene Steuerelement angeben.  
+  
+ Die <xref:System.Web.UI.WebControls.CommandField> Feld wird anders angezeigt, je nach dem datengebundenen Steuerelement in der er verwendet wird. Z. B. die <xref:System.Web.UI.WebControls.GridView> -Steuerelement zeigt eine <xref:System.Web.UI.WebControls.CommandField> Feld als Spalte an, während die <xref:System.Web.UI.WebControls.DetailsView> Steuerelement zeigt ihn als eine Zeile.  
+  
+ Verwenden Sie zum Angeben des Typs der Schaltfläche zum Anzeigen der <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft. Wenn die <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> -Eigenschaftensatz auf `ButtonType.Button` oder `ButtonType.Link`, können Sie den Text, der für die Schaltflächen angezeigt werden, durch Festlegen der Eigenschaften in der folgenden Tabelle gezeigt angeben.  
+  
+|Eigenschaft|Beschreibung|  
+|--------------|-----------------|  
+|<xref:System.Web.UI.WebControls.CommandField.CancelText%2A>|Die Beschriftung für die Schaltfläche "Abbrechen".|  
+|<xref:System.Web.UI.WebControls.CommandField.DeleteText%2A>|Die Beschriftung für die Schaltfläche "löschen".|  
+|<xref:System.Web.UI.WebControls.CommandField.EditText%2A>|Die Beschriftung für die Schaltfläche "Bearbeiten".|  
+|<xref:System.Web.UI.WebControls.CommandField.InsertText%2A>|Die Beschriftung für die Insert-Schaltfläche. **Hinweis:** diese Eigenschaft gilt nur für datengebundene Steuerelemente, die Unterstützung für Vorgänge, wie z. B. Einfügen der <xref:System.Web.UI.WebControls.DetailsView> Steuerelement.|  
+|<xref:System.Web.UI.WebControls.CommandField.NewText%2A>|Die Beschriftung für die Schaltfläche "Neu". **Hinweis:** diese Eigenschaft gilt nur für datengebundene Steuerelemente, die Unterstützung für Vorgänge, wie z. B. Einfügen der <xref:System.Web.UI.WebControls.DetailsView> Steuerelement.|  
+|<xref:System.Web.UI.WebControls.CommandField.SelectText%2A>|Die Beschriftung für die Schaltfläche auswählen.|  
+|<xref:System.Web.UI.WebControls.CommandField.UpdateText%2A>|Die Beschriftung für die Schaltfläche "Aktualisieren".|  
+  
+ Anstatt eine Befehlsschaltfläche oder eine Linkschaltfläche können Sie Bildschaltfläche anzeigen, indem Sie die Einstellung der <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft `ButtonType.Image` festlegen und anschließend die Eigenschaften, die in der folgenden Tabelle gezeigt.  
+  
+|Eigenschaft|Beschreibung|  
+|--------------|-----------------|  
+|<xref:System.Web.UI.WebControls.CommandField.CancelImageUrl%2A>|Das Bild für die Schaltfläche "Abbrechen" anzeigen|  
+|<xref:System.Web.UI.WebControls.CommandField.DeleteImageUrl%2A>|Das Bild, das für die Schaltfläche "löschen" angezeigt.|  
+|<xref:System.Web.UI.WebControls.CommandField.EditImageUrl%2A>|Das Bild, das für die Schaltfläche "Bearbeiten" angezeigt.|  
+|<xref:System.Web.UI.WebControls.CommandField.InsertText%2A>|Das Bild, das für die Insert-Schaltfläche angezeigt werden soll. **Hinweis:** diese Eigenschaft gilt nur für datengebundene Steuerelemente, die Unterstützung für Vorgänge, wie z. B. Einfügen der <xref:System.Web.UI.WebControls.DetailsView> Steuerelement.|  
+|<xref:System.Web.UI.WebControls.CommandField.NewImageUrl%2A>|Das Bild, das für die Schaltfläche "Neu" angezeigt. **Hinweis:** diese Eigenschaft gilt nur für datengebundene Steuerelemente, die Unterstützung für Vorgänge, wie z. B. Einfügen der <xref:System.Web.UI.WebControls.DetailsView> Steuerelement.|  
+|<xref:System.Web.UI.WebControls.CommandField.SelectImageUrl%2A>|Das Bild, das für die Schaltfläche auswählen angezeigt.|  
+|<xref:System.Web.UI.WebControls.CommandField.UpdateImageUrl%2A>|Das Bild, das für die Schaltfläche "Aktualisieren" angezeigt.|  
+  
+ Standardmäßig, klickt der Benutzer eine Schaltfläche in einem <xref:System.Web.UI.WebControls.CommandField> Feld, erfolgt die Validierung für alle Validierungssteuerelemente auf der Seite. Damit die Validierung auftritt, wenn eine Schaltfläche geklickt wird, legen die <xref:System.Web.UI.WebControls.CommandField.CausesValidation%2A> Eigenschaft `false`.  
+  
+ Können Sie Ausblenden einer <xref:System.Web.UI.WebControls.CommandField> Feld in einem datengebundenen Steuerelement durch Festlegen der <xref:System.Web.UI.WebControls.DataControlField.Visible%2A> Eigenschaft `false`.  
+  
+ Die <xref:System.Web.UI.WebControls.CommandField> Feld können Sie die Abschnitte für Kopf- und Fußzeilen anpassen. Um eine Beschriftung in der Kopf- oder Fußzeilenbereich anzuzeigen, legen die <xref:System.Web.UI.WebControls.DataControlField.HeaderText%2A> oder <xref:System.Web.UI.WebControls.DataControlField.FooterText%2A> Eigenschaft bzw.. Sie können ein Bild anstelle von Text in der Kopfzeile anzeigen, durch Festlegen der <xref:System.Web.UI.WebControls.DataControlField.HeaderImageUrl%2A> Eigenschaft. Headerabschnitts im Ausblenden einer <xref:System.Web.UI.WebControls.CommandField> Objekt, das Festlegen der <xref:System.Web.UI.WebControls.ButtonFieldBase.ShowHeader%2A> Eigenschaft `false`.  
+  
+> [!NOTE]
+>  Einige datengebundene Steuerelemente (z. B. die <xref:System.Web.UI.WebControls.GridView> Steuerelement) können ein- oder ausblenden nur den gesamten Kopfzeilenbereich des Steuerelements. Diese datengebundenen Steuerelemente unterstützen nicht die <xref:System.Web.UI.WebControls.ButtonFieldBase.ShowHeader%2A> -Eigenschaft für eine einzelne Schaltflächenfeld. Für das Anzeigen oder Ausblenden der gesamte Headerabschnitt eines datengebundenen Steuerelements (falls verfügbar), verwenden Sie das Steuerelement `ShowHeader` Eigenschaft.  
+  
+ Die Darstellung der können auch Anpassen der <xref:System.Web.UI.WebControls.CommandField> Objekt (Schriftfarbe, Hintergrundfarbe und So weiter), indem Sie die Stileigenschaften für die verschiedenen Teile des Felds festlegen. Die folgende Tabelle enthält die verschiedenen Stileigenschaften.  
+  
+|Style-Eigenschaft|Beschreibung|  
+|--------------------|-----------------|  
+|<xref:System.Web.UI.WebControls.DataControlField.ControlStyle%2A>|Die Stileigenschaften für die untergeordneten Webserversteuerelemente von der <xref:System.Web.UI.WebControls.CommandField> Objekt.|  
+|<xref:System.Web.UI.WebControls.DataControlField.FooterStyle%2A>|Die Stileigenschaften für den Fußzeilenbereich der <xref:System.Web.UI.WebControls.CommandField> Objekt.|  
+|<xref:System.Web.UI.WebControls.DataControlField.HeaderStyle%2A>|Die Stileigenschaften für den Headerabschnitt, der die <xref:System.Web.UI.WebControls.CommandField> Objekt.|  
+|<xref:System.Web.UI.WebControls.DataControlField.ItemStyle%2A>|Die stileinstellungen für die Datenelemente in der <xref:System.Web.UI.WebControls.CommandField> Objekt.|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine <xref:System.Web.UI.WebControls.CommandField> Steuerelemente zum Bearbeiten eines Datensatzes in anzuzeigende Feld einen <xref:System.Web.UI.WebControls.GridView> Steuerelement.  
+  
+ [!code-aspx-csharp[CommandField2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandField2/CS/commandfield2cs.aspx#1)]
+ [!code-aspx-vb[CommandField2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandField2/VB/commandfield2vb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.CommandField.CancelText%2A>, <xref:System.Web.UI.WebControls.CommandField.EditText%2A>, und <xref:System.Web.UI.WebControls.CommandField.UpdateText%2A> Eigenschaften zum Anpassen des Texts für die Bearbeitung der Steuerelemente.  
+  
+ [!code-aspx-csharp[CommandField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandField/CS/commandfieldcs.aspx#1)]
+ [!code-aspx-vb[CommandField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandField/VB/commandfieldvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CommandField ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CommandField.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.CommandField" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.CommandField> Klasse. Dieser Konstruktor wird normalerweise verwendet, beim Hinzufügen von Feldern zu einem dynamisch erstellten datengebundenen Steuerelement.  
+  
+ Dynamisch Hinzufügen einer <xref:System.Web.UI.WebControls.CommandField> Datumsfeld in einem datengebundenen Steuerelement, erstellen Sie ein neues <xref:System.Web.UI.WebControls.CommandField> Objekt, dessen Eigenschaften festlegen und dann zur feldauflistung für das datengebundene Steuerelement hinzufügen. Z. B. bei Verwendung der <xref:System.Web.UI.WebControls.GridView> steuern, fügen Sie der <xref:System.Web.UI.WebControls.CommandField> -Objekt an die <xref:System.Web.UI.WebControls.GridView.Columns%2A> Auflistung.  
+  
+> [!NOTE]
+>  Obwohl Sie Felder zu einem datengebundenen Steuerelement dynamisch hinzufügen können, wird dringend empfohlen, dass Felder statisch deklariert und dann angezeigt oder ausgeblendet werden, je nach Bedarf. Statisch deklarieren aller Felder reduziert die Größe des Ansichtszustands für das übergeordnete datengebundene Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mithilfe des Konstruktors dynamisch Hinzufügen einer <xref:System.Web.UI.WebControls.CommandField> Field-Spalte, um eine <xref:System.Web.UI.WebControls.GridView> Steuerelement.  
+  
+ [!code-aspx-csharp[CommandFieldCtor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandFieldCtor/CS/commandfieldctorcs.aspx#1)]
+ [!code-aspx-vb[CommandFieldCtor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandFieldCtor/VB/commandfieldctorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelImageUrl">
+      <MemberSignature Language="C#" Value="public virtual string CancelImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CancelImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.CancelImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL zu einem Bild zur Anzeige für die Schaltfläche "Abbrechen", in einem <see cref="T:System.Web.UI.WebControls.CommandField" /> Feld.</summary>
+        <value>Die URL zu einem Bild anzuzeigenden für die Schaltfläche "Abbrechen", in einem <see cref="T:System.Web.UI.WebControls.CommandField" />. Der Standardwert ist eine leere Zeichenfolge ("") und gibt an, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim der <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.CommandField> Feld `ButtonType.Image`, verwenden die <xref:System.Web.UI.WebControls.CommandField.CancelImageUrl%2A> -Eigenschaft geben Sie das Abbild, das für die Schaltfläche "Abbrechen" angezeigt. Dieses Bild kann beliebiges Dateiformat aufweisen (JPG, GIF, BMP usw.) sein, solange der Client-Browsers dieses Format unterstützt.  
+  
+> [!NOTE]
+>  Als Alternative zum Anzeigen eines Bilds für die Schaltfläche "Abbrechen", können Sie Text anzeigen, indem Sie zuerst die <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft `ButtonType.Button` oder `ButtonType.Link` festlegen und anschließend die <xref:System.Web.UI.WebControls.CommandField.CancelText%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.CommandField.CancelImageUrl%2A> -Eigenschaft an ein benutzerdefiniertes Bild für die anzuzeigenden für die Schaltfläche "Abbrechen" in eine <xref:System.Web.UI.WebControls.CommandField> Feld eine <xref:System.Web.UI.WebControls.GridView> Steuerelement. Die <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft muss festgelegt werden, um `ButtonType.Image` für eine Schaltfläche "Abbrechen", um ein Bild anzuzeigen.  
+  
+ [!code-aspx-csharp[CommandFieldEditImageUrl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandFieldEditImageUrl/CS/commandfieldeditimageurlcs.aspx#1)]
+ [!code-aspx-vb[CommandFieldEditImageUrl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandFieldEditImageUrl/VB/commandfieldeditimageurlvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelText">
+      <MemberSignature Language="C#" Value="public virtual string CancelText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CancelText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.CancelText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Beschriftung für die Schaltfläche "Abbrechen", die angezeigt wird, einem <see cref="T:System.Web.UI.WebControls.CommandField" /> Feld.</summary>
+        <value>Die Beschriftung für die Schaltfläche "Abbrechen", in einem <see cref="T:System.Web.UI.WebControls.CommandField" />. Der Standardwert ist "Abbrechen".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft des eine <xref:System.Web.UI.WebControls.CommandField> Feld `ButtonType.Button` oder `ButtonType.Link`, verwenden die <xref:System.Web.UI.WebControls.CommandField.CancelText%2A> Eigenschaft an, der für die Schaltfläche "Abbrechen" anzuzeigende Text.  
+  
+> [!NOTE]
+>  Als Alternative zum Anzeigen von Text für die Schaltfläche "Abbrechen", können Sie ein Bild anzeigen, indem Sie zuerst die <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft `ButtonType.Image` festlegen und anschließend die <xref:System.Web.UI.WebControls.CommandField.CancelImageUrl%2A> Eigenschaft.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.CommandField.CancelText%2A> -Eigenschaft an eine benutzerdefinierte Beschriftung für eine Schaltfläche "Abbrechen" im ein <xref:System.Web.UI.WebControls.CommandField> Feld eine <xref:System.Web.UI.WebControls.GridView> Steuerelement.  
+  
+ [!code-aspx-csharp[CommandField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandField/CS/commandfieldcs.aspx#1)]
+ [!code-aspx-vb[CommandField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandField/VB/commandfieldvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CausesValidation">
+      <MemberSignature Language="C#" Value="public override bool CausesValidation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CausesValidation" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.CausesValidation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Überprüfung erfolgt, klickt der Benutzer eine Schaltfläche in einem <see cref="T:System.Web.UI.WebControls.CommandField" /> Feld.</summary>
+        <value>
+          <see langword="true" />validiert, klickt der Benutzer eine Schaltfläche in einem <see cref="T:System.Web.UI.WebControls.CommandField" /> Feld ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.CommandField.CausesValidation%2A> Eigenschaft, um anzugeben, ob die Validierung ausgeführt wird, wenn eine Schaltfläche in einem <xref:System.Web.UI.WebControls.CommandField> Feld geklickt wird. Wenn diese Eigenschaft festgelegt wird, um `true`, in der Standardeinstellung werden alle Validierungssteuerelemente auf der Seite überprüft. Um die Validierung einer bestimmten Gruppe von Steuerelementen für die Validierung zu beschränken, erstellen Sie eine Validierungsgruppe, und legen Sie dann die <xref:System.Web.UI.WebControls.ButtonFieldBase.ValidationGroup%2A> Eigenschaft, um den Namen der Validierungsgruppe. Weitere Informationen zu Gruppen Überprüfung finden Sie unter <xref:System.Web.UI.WebControls.BaseValidator.ValidationGroup%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.CommandField.CausesValidation%2A> Eigenschaft, um zu verhindern, dass bei der Validierung auftritt, wenn eine Schaltfläche in einem <xref:System.Web.UI.WebControls.CommandField> Feld geklickt wird.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[CommandFieldCausesValidation#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandFieldCausesValidation/CS/commandfieldcausesvalidationcs.aspx#1)]
+ [!code-aspx-vb[CommandFieldCausesValidation#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandFieldCausesValidation/VB/commandfieldcausesvalidationvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyProperties">
+      <MemberSignature Language="C#" Value="protected override void CopyProperties (System.Web.UI.WebControls.DataControlField newField);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CopyProperties(class System.Web.UI.WebControls.DataControlField newField) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CommandField.CopyProperties(System.Web.UI.WebControls.DataControlField)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newField" Type="System.Web.UI.WebControls.DataControlField" />
+      </Parameters>
+      <Docs>
+        <param name="newField">Die <see cref="T:System.Web.UI.WebControls.DataControlField" /> So kopieren Sie die Eigenschaften des aktuellen <see cref="T:System.Web.UI.WebControls.CommandField" /> an.</param>
+        <summary>Kopiert die Eigenschaften des aktuellen <see cref="T:System.Web.UI.WebControls.CommandField" /> Objekt mit dem angegebenen <see cref="T:System.Web.UI.WebControls.DataControlField" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.CommandField.CopyProperties%2A> Methode ist eine Hilfsmethode, die von der <xref:System.Web.UI.WebControls.DataControlField.CloneField%2A?displayProperty=nameWithType> Methode, um die Eigenschaften des aktuellen kopieren <xref:System.Web.UI.WebControls.CommandField> -Objekt an die <xref:System.Web.UI.WebControls.DataControlField> Objekt von der Methode erstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateField">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.WebControls.DataControlField CreateField ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.WebControls.DataControlField CreateField() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CommandField.CreateField" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlField</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein leeres <see cref="T:System.Web.UI.WebControls.CommandField" />-Objekt.</summary>
+        <returns>Ein leerer <see cref="T:System.Web.UI.WebControls.CommandField" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.CommandField.CreateField%2A> Methode ist eine Hilfsmethode, die von der <xref:System.Web.UI.WebControls.DataControlField.CloneField%2A?displayProperty=nameWithType> Methode zum Erstellen eines leeren <xref:System.Web.UI.WebControls.CommandField> Objekt so kopieren Sie die Eigenschaften des aktuellen <xref:System.Web.UI.WebControls.CommandField> -Objekt hinzu.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteImageUrl">
+      <MemberSignature Language="C#" Value="public virtual string DeleteImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DeleteImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.DeleteImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL zu einem Bild zur Anzeige für eine Schaltfläche "löschen" in einem <see cref="T:System.Web.UI.WebControls.CommandField" /> Feld.</summary>
+        <value>Die URL zu einem Bild anzuzeigenden für eine Schaltfläche "löschen" in eine <see cref="T:System.Web.UI.WebControls.CommandField" />. Der Standardwert ist eine leere Zeichenfolge ("") und gibt an, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.CommandField> Feld `ButtonType.Image`, verwenden die <xref:System.Web.UI.WebControls.CommandField.DeleteImageUrl%2A> -Eigenschaft geben Sie das Abbild, das für eine Schaltfläche "löschen" angezeigt. Dieses Bild kann beliebiges Dateiformat aufweisen (JPG, GIF, BMP usw.) sein, solange der Client-Browsers dieses Format unterstützt.  
+  
+> [!NOTE]
+>  Als Alternative zum Anzeigen eines Bilds für eine Schaltfläche "löschen" können Sie Text anzeigen, indem Sie zuerst die <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft `ButtonType.Button` oder `ButtonType.Link` festlegen und anschließend die <xref:System.Web.UI.WebControls.CommandField.DeleteText%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.CommandField.DeleteImageUrl%2A> -Eigenschaft an ein benutzerdefiniertes Bild für die anzuzeigenden für eine Schaltfläche "löschen" in einer <xref:System.Web.UI.WebControls.CommandField> Feld eine <xref:System.Web.UI.WebControls.GridView> Steuerelement. Die <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft muss festgelegt werden, um `ButtonType.Image` für die Schaltfläche "löschen", um ein Bild anzuzeigen.  
+  
+ [!code-aspx-csharp[CommandFieldDeleteImageUrl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandFieldDeleteImageUrl/CS/commandfielddeleteimageurlcs.aspx#1)]
+ [!code-aspx-vb[CommandFieldDeleteImageUrl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandFieldDeleteImageUrl/VB/commandfielddeleteimageurlvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteText">
+      <MemberSignature Language="C#" Value="public virtual string DeleteText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DeleteText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.DeleteText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Beschriftung für eine Schaltfläche "löschen" in einem <see cref="T:System.Web.UI.WebControls.CommandField" /> Feld.</summary>
+        <value>Die Beschriftung für eine Schaltfläche "löschen" in eine <see cref="T:System.Web.UI.WebControls.CommandField" />. Der Standardwert ist "Delete".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft des eine <xref:System.Web.UI.WebControls.CommandField> Feld `ButtonType.Button` oder `ButtonType.Link`, verwenden die <xref:System.Web.UI.WebControls.CommandField.DeleteText%2A> Eigenschaft an, der für eine Schaltfläche "löschen" anzuzeigende Text.  
+  
+> [!NOTE]
+>  Als Alternative zum Anzeigen von Text für eine Schaltfläche "löschen" können Sie ein Bild anzeigen, indem Sie zuerst die <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft `ButtonType.Image` festlegen und anschließend die <xref:System.Web.UI.WebControls.CommandField.DeleteImageUrl%2A> Eigenschaft.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.CommandField.DeleteText%2A> -Eigenschaft an eine benutzerdefinierte Beschriftung für eine Schaltfläche "löschen" angezeigt, einer <xref:System.Web.UI.WebControls.CommandField> Feld eine <xref:System.Web.UI.WebControls.GridView> Steuerelement.  
+  
+ [!code-aspx-csharp[CommandFieldDeleteText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandFieldDeleteText/CS/commandfielddeletetextcs.aspx#1)]
+ [!code-aspx-vb[CommandFieldDeleteText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandFieldDeleteText/VB/commandfielddeletetextvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditImageUrl">
+      <MemberSignature Language="C#" Value="public virtual string EditImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EditImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.EditImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL zu einem Bild zur Anzeige für eine Schaltfläche "Bearbeiten", in einem <see cref="T:System.Web.UI.WebControls.CommandField" /> Feld.</summary>
+        <value>Die URL zu einem Bild anzuzeigenden für eine Schaltfläche "Bearbeiten", in einem <see cref="T:System.Web.UI.WebControls.CommandField" />. Der Standardwert ist eine leere Zeichenfolge ("") und gibt an, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.CommandField> Feld `ButtonType.Image`, verwenden die <xref:System.Web.UI.WebControls.CommandField.EditImageUrl%2A> -Eigenschaft geben Sie das Abbild, das für eine Schaltfläche "Bearbeiten" angezeigt. Dieses Bild kann beliebiges Dateiformat aufweisen (JPG, GIF, BMP usw.) sein, solange der Client-Browsers dieses Format unterstützt.  
+  
+> [!NOTE]
+>  Als Alternative zum Anzeigen eines Bilds für eine Schaltfläche "Bearbeiten" können Sie Text anzeigen, indem Sie zuerst die <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft `ButtonType.Button` oder `ButtonType.Link` festlegen und anschließend die <xref:System.Web.UI.WebControls.CommandField.EditText%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.CommandField.EditImageUrl%2A> -Eigenschaft an ein benutzerdefiniertes Bild für die anzuzeigenden für eine Schaltfläche "Bearbeiten", in eine <xref:System.Web.UI.WebControls.CommandField> Feld eine <xref:System.Web.UI.WebControls.GridView> Steuerelement. Die <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft muss festgelegt werden, um `ButtonType.Image` für eine Schaltfläche "Bearbeiten", um ein Bild anzuzeigen.  
+  
+ [!code-aspx-csharp[CommandFieldEditImageUrl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandFieldEditImageUrl/CS/commandfieldeditimageurlcs.aspx#1)]
+ [!code-aspx-vb[CommandFieldEditImageUrl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandFieldEditImageUrl/VB/commandfieldeditimageurlvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditText">
+      <MemberSignature Language="C#" Value="public virtual string EditText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EditText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.EditText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Beschriftung für eine Schaltfläche "Bearbeiten", in einem <see cref="T:System.Web.UI.WebControls.CommandField" /> Feld.</summary>
+        <value>Die Beschriftung für eine Schaltfläche "Bearbeiten", in einem <see cref="T:System.Web.UI.WebControls.CommandField" />. Der Standardwert ist "Bearbeiten".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.CommandField> -Objekts festgelegt wird, um `ButtonType.Button` oder `ButtonType.Link`, verwenden die <xref:System.Web.UI.WebControls.CommandField.EditText%2A> Eigenschaft an, dass der Text, der für eine Schaltfläche "Bearbeiten" angezeigt.  
+  
+> [!NOTE]
+>  Als Alternative zum Anzeigen von Text für eine Schaltfläche "Bearbeiten" können Sie ein Bild anzeigen, indem Sie zuerst die <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft `ButtonType.Image` festlegen und anschließend die <xref:System.Web.UI.WebControls.CommandField.EditImageUrl%2A> Eigenschaft.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.CommandField.EditText%2A> -Eigenschaft an eine benutzerdefinierte Beschriftung für eine Schaltfläche "Bearbeiten" angezeigt, einer <xref:System.Web.UI.WebControls.CommandField> Feld eine <xref:System.Web.UI.WebControls.GridView> Steuerelement.  
+  
+ [!code-aspx-csharp[CommandField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandField/CS/commandfieldcs.aspx#1)]
+ [!code-aspx-vb[CommandField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandField/VB/commandfieldvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeCell">
+      <MemberSignature Language="C#" Value="public override void InitializeCell (System.Web.UI.WebControls.DataControlFieldCell cell, System.Web.UI.WebControls.DataControlCellType cellType, System.Web.UI.WebControls.DataControlRowState rowState, int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void InitializeCell(class System.Web.UI.WebControls.DataControlFieldCell cell, valuetype System.Web.UI.WebControls.DataControlCellType cellType, valuetype System.Web.UI.WebControls.DataControlRowState rowState, int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CommandField.InitializeCell(System.Web.UI.WebControls.DataControlFieldCell,System.Web.UI.WebControls.DataControlCellType,System.Web.UI.WebControls.DataControlRowState,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cell" Type="System.Web.UI.WebControls.DataControlFieldCell" />
+        <Parameter Name="cellType" Type="System.Web.UI.WebControls.DataControlCellType" />
+        <Parameter Name="rowState" Type="System.Web.UI.WebControls.DataControlRowState" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="cell">Die zu initialisierende <see cref="T:System.Web.UI.WebControls.DataControlFieldCell" />.</param>
+        <param name="cellType">Einer der <see cref="T:System.Web.UI.WebControls.DataControlCellType" />-Werte.</param>
+        <param name="rowState">Einer der <see cref="T:System.Web.UI.WebControls.DataControlRowState" />-Werte.</param>
+        <param name="rowIndex">Der nullbasierte Index der Zeile, die die Zelle enthält.</param>
+        <summary>Initialisiert das angegebene <see cref="T:System.Web.UI.WebControls.DataControlFieldCell" /> Objekt, das dem angegebenen Zeilenstatus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.CommandField.InitializeCell%2A> Methode implementiert wird <xref:System.Web.UI.WebControls.DataControlField>-abgeleitete Typen zum Hinzufügen von Text und Steuerelementen zu einer <xref:System.Web.UI.WebControls.TableCell> Objekt eines Daten-Steuerelements, die Tabellen verwendet, um eine Benutzeroberfläche (UI) anzeigen. Diese Datensteuerelemente erstellen der vollständigen Tabelle Struktur Zeile für Zeile bei der des Steuerelements `CreateChildControls` -Methode aufgerufen wird. Die <xref:System.Web.UI.WebControls.CommandField.InitializeCell%2A> Methode wird aufgerufen, indem Sie die `InitializeRow` Methode Datenmenge wird gesteuert, wie z. B. <xref:System.Web.UI.WebControls.DetailsView> und <xref:System.Web.UI.WebControls.GridView>.  
+  
+ Rufen Sie diese Methode, wenn Sie schreiben eine benutzerdefinierte datengebundene Steuerelement, verwendet <xref:System.Web.UI.WebControls.TableCell> Objekte zum Initialisieren der Zellen der Tabellenstruktur mit Daten oder Steuerelemente. Implementieren Sie diese Methode, wenn Sie schreiben eine <xref:System.Web.UI.WebControls.CommandField>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertImageUrl">
+      <MemberSignature Language="C#" Value="public virtual string InsertImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InsertImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.InsertImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL zu einem Bild zur Anzeige für die Insert-Schaltfläche in einem <see cref="T:System.Web.UI.WebControls.CommandField" /> Feld.</summary>
+        <value>Die URL zu einem Bild anzuzeigenden für die Insert-Schaltfläche in einem <see cref="T:System.Web.UI.WebControls.CommandField" />. Der Standardwert ist eine leere Zeichenfolge ("") und gibt an, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft des eine <xref:System.Web.UI.WebControls.CommandField> Feld `ButtonType.Image`, verwenden die <xref:System.Web.UI.WebControls.CommandField.InsertImageUrl%2A> -Eigenschaft geben Sie das Abbild, die für eine Insert-Schaltfläche angezeigt. Dieses Bild kann beliebiges Dateiformat aufweisen (JPG, GIF, BMP usw.) sein, solange der Client-Browsers dieses Format unterstützt.  
+  
+> [!NOTE]
+>  Als Alternative zum Anzeigen eines Bilds für die Schaltfläche zum Einfügen, können Sie Text anzeigen, indem Sie zuerst die <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft `ButtonType.Button` oder `ButtonType.Link` festlegen und anschließend die <xref:System.Web.UI.WebControls.CommandField.InsertText%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.CommandField.InsertImageUrl%2A> -Eigenschaft an ein benutzerdefiniertes Bild für die anzuzeigenden für eine Schaltfläche zum Einfügen in eine <xref:System.Web.UI.WebControls.CommandField> Feld eine <xref:System.Web.UI.WebControls.DetailsView> Steuerelement. Die <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft muss festgelegt werden, um `ButtonType.Image` für eine Insert-Schaltfläche, um ein Bild anzuzeigen.  
+  
+ [!code-aspx-csharp[CommandFieldInsertImageUrl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandFieldInsertImageUrl/CS/commandfieldinsertimageurlcs.aspx#1)]
+ [!code-aspx-vb[CommandFieldInsertImageUrl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandFieldInsertImageUrl/VB/commandfieldinsertimageurlvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertText">
+      <MemberSignature Language="C#" Value="public virtual string InsertText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InsertText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.InsertText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Beschriftung für die Insert-Schaltfläche in einem <see cref="T:System.Web.UI.WebControls.CommandField" /> Feld.</summary>
+        <value>Die Beschriftung für die Insert-Schaltfläche in einem <see cref="T:System.Web.UI.WebControls.CommandField" />. Der Standardwert ist "Insert".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.CommandField> Feld `ButtonType.Button` oder `ButtonType.Link`, verwenden die <xref:System.Web.UI.WebControls.CommandField.InsertText%2A> Eigenschaft an, der für die Insert-Schaltfläche anzuzeigende Text.  
+  
+> [!NOTE]
+>  Als Alternative zum Anzeigen von Text für die Schaltfläche zum Einfügen, können Sie ein Bild anzeigen, indem Sie zuerst die <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft `ButtonType.Image` festlegen und anschließend die <xref:System.Web.UI.WebControls.CommandField.InsertImageUrl%2A> Eigenschaft.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.CommandField.InsertText%2A> -Eigenschaft an eine benutzerdefinierte Beschriftung für eine Insert-Schaltfläche einer <xref:System.Web.UI.WebControls.CommandField> Feld eine <xref:System.Web.UI.WebControls.DetailsView> Steuerelement.  
+  
+ [!code-aspx-csharp[CommandFieldInsertText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandFieldInsertText/CS/commandfieldinserttextcs.aspx#1)]
+ [!code-aspx-vb[CommandFieldInsertText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandFieldInsertText/VB/commandfieldinserttextvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewImageUrl">
+      <MemberSignature Language="C#" Value="public virtual string NewImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NewImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.NewImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL zu einem Bild zur Anzeige für die Schaltfläche "Neu" in einem <see cref="T:System.Web.UI.WebControls.CommandField" /> Feld.</summary>
+        <value>Die URL zu einem Bild anzuzeigenden für die Schaltfläche "Neu" in eine <see cref="T:System.Web.UI.WebControls.CommandField" />. Der Standardwert ist eine leere Zeichenfolge ("") und gibt an, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.CommandField> Feld `ButtonType.Image`, verwenden die <xref:System.Web.UI.WebControls.CommandField.NewImageUrl%2A> -Eigenschaft geben Sie das Abbild, das für die Schaltfläche "Neu" angezeigt. Dieses Bild kann beliebiges Dateiformat aufweisen (JPG, GIF, BMP usw.) sein, solange der Client-Browsers dieses Format unterstützt.  
+  
+> [!NOTE]
+>  Als Alternative zum Anzeigen eines Bilds für die Schaltfläche "Neu" können Sie Text anzeigen, indem Sie zuerst die <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft `ButtonType.Button` oder `ButtonType.Link` festlegen und anschließend die <xref:System.Web.UI.WebControls.CommandField.NewText%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.CommandField.NewImageUrl%2A> -Eigenschaft an ein benutzerdefiniertes Bild, das für die Schaltfläche "Neu", in angezeigt ein <xref:System.Web.UI.WebControls.CommandField> Spaltenfeld von einer <xref:System.Web.UI.WebControls.DetailsView> Steuerelement. Die <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft muss festgelegt werden, um `ButtonType.Image` für die Schaltfläche "Neu", um ein Bild anzuzeigen.  
+  
+ [!code-aspx-csharp[CommandFieldInsertImageUrl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandFieldInsertImageUrl/CS/commandfieldinsertimageurlcs.aspx#1)]
+ [!code-aspx-vb[CommandFieldInsertImageUrl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandFieldInsertImageUrl/VB/commandfieldinsertimageurlvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewText">
+      <MemberSignature Language="C#" Value="public virtual string NewText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NewText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.NewText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Beschriftung für die Schaltfläche "Neu" in einem <see cref="T:System.Web.UI.WebControls.CommandField" /> Feld.</summary>
+        <value>Die Beschriftung für die Schaltfläche "Neu" in einem <see cref="T:System.Web.UI.WebControls.CommandField" /> Feld. Der Standardwert ist "Neu".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.CommandField> -Objekts festgelegt wird, um `ButtonType.Button` oder `ButtonType.Link`, verwenden die <xref:System.Web.UI.WebControls.CommandField.NewText%2A> Eigenschaft an, der für die Schaltfläche "Neu" anzuzeigende Text.  
+  
+> [!NOTE]
+>  Als Alternative zum Anzeigen von Text für die Schaltfläche "Neu", können Sie ein Bild anzeigen, indem Sie zuerst die <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft `ButtonType.Image` festlegen und anschließend die <xref:System.Web.UI.WebControls.CommandField.NewImageUrl%2A> Eigenschaft.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.CommandField.NewText%2A> -Eigenschaft an eine benutzerdefinierte Beschriftung für die Schaltfläche "Neu" angezeigt, einer <xref:System.Web.UI.WebControls.CommandField> Feld eine <xref:System.Web.UI.WebControls.DetailsView> Steuerelement.  
+  
+ [!code-aspx-csharp[CommandFieldInsertText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandFieldInsertText/CS/commandfieldinserttextcs.aspx#1)]
+ [!code-aspx-vb[CommandFieldInsertText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandFieldInsertText/VB/commandfieldinserttextvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectImageUrl">
+      <MemberSignature Language="C#" Value="public virtual string SelectImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SelectImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.SelectImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL zu einem Bild zur Anzeige für eine Select-Schaltfläche in einem <see cref="T:System.Web.UI.WebControls.CommandField" /> Feld.</summary>
+        <value>Die URL zu einem Bild anzuzeigenden für eine Select-Schaltfläche in einem <see cref="T:System.Web.UI.WebControls.CommandField" />. Der Standardwert ist eine leere Zeichenfolge ("") und gibt an, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.CommandField> Feld `ButtonType.Image`, verwenden die <xref:System.Web.UI.WebControls.CommandField.SelectImageUrl%2A> -Eigenschaft geben Sie das Abbild, das für eine Schaltfläche auswählen angezeigt. Dieses Bild kann beliebiges Dateiformat aufweisen (JPG, GIF, BMP usw.) sein, solange der Client-Browsers dieses Format unterstützt.  
+  
+> [!NOTE]
+>  Als Alternative zum Anzeigen eines Bilds für eine Schaltfläche auswählen, können Sie Text anzeigen, indem Sie zuerst die <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft `ButtonType.Button` oder `ButtonType.Link` festlegen und anschließend die <xref:System.Web.UI.WebControls.CommandField.SelectText%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.CommandField.SelectImageUrl%2A> -Eigenschaft an ein benutzerdefiniertes Bild für die anzuzeigenden für eine Schaltfläche auswählen, in eine <xref:System.Web.UI.WebControls.CommandField> Feld eine <xref:System.Web.UI.WebControls.GridView> Steuerelement. Die <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft muss festgelegt werden, um `ButtonType.Image` für eine Schaltfläche auswählen, um ein Bild anzuzeigen.  
+  
+ [!code-aspx-csharp[CommandFieldSelectImageUrl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandFieldSelectImageUrl/CS/commandfieldselectimageurlcs.aspx#1)]
+ [!code-aspx-vb[CommandFieldSelectImageUrl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandFieldSelectImageUrl/VB/commandfieldselectimageurlvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectText">
+      <MemberSignature Language="C#" Value="public virtual string SelectText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SelectText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.SelectText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Beschriftung für eine Schaltfläche auswählen, in einem <see cref="T:System.Web.UI.WebControls.CommandField" /> Feld.</summary>
+        <value>Die Beschriftung für eine Schaltfläche auswählen, in einem <see cref="T:System.Web.UI.WebControls.CommandField" />. Der Standardwert ist "Select".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft des eine <xref:System.Web.UI.WebControls.CommandField> Feld `ButtonType.Button` oder `ButtonType.Link`, verwenden die <xref:System.Web.UI.WebControls.CommandField.SelectText%2A> Eigenschaft an, der für eine Select-Schaltfläche anzuzeigende Text.  
+  
+> [!NOTE]
+>  Als Alternative zum Anzeigen von Text für eine Schaltfläche auswählen, können Sie ein Bild anzeigen, indem Sie zuerst die <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft `ButtonType.Image` festlegen und anschließend die <xref:System.Web.UI.WebControls.CommandField.SelectImageUrl%2A> Eigenschaft.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.CommandField.SelectText%2A> -Eigenschaft an eine benutzerdefinierte Beschriftung für eine Schaltfläche auswählen, die angezeigt wird, eine <xref:System.Web.UI.WebControls.CommandField> Feld eine <xref:System.Web.UI.WebControls.GridView> Steuerelement.  
+  
+ [!code-aspx-csharp[CommandFieldSelectText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandFieldSelectText/CS/commandfieldselecttextcs.aspx#1)]
+ [!code-aspx-vb[CommandFieldSelectText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandFieldSelectText/VB/commandfieldselecttextvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowCancelButton">
+      <MemberSignature Language="C#" Value="public virtual bool ShowCancelButton { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowCancelButton" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.ShowCancelButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob eine Schaltfläche "Abbrechen", in angezeigt wird einem <see cref="T:System.Web.UI.WebControls.CommandField" /> Feld.</summary>
+        <value>
+          <see langword="true" />zum Anzeigen einer Schaltfläche "Abbrechen", in einem <see cref="T:System.Web.UI.WebControls.CommandField" />ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.CommandField.ShowCancelButton%2A> Eigenschaft, um anzugeben, ob die Schaltfläche "Abbrechen", in angezeigt wird einem <xref:System.Web.UI.WebControls.CommandField> Objekt. Eine Schaltfläche "Abbrechen" angezeigt werden kann, einem <xref:System.Web.UI.WebControls.CommandField> Feld, wenn der entsprechende Datensatz in einem datengebundenen Steuerelement in Bearbeitung befindet, oder im Einfügemodus. Die Schaltfläche "Abbrechen" ermöglicht dem Benutzer die Bearbeitung abgebrochen oder einer insert-Vorgang und den Eintrag in seiner normalen Anzeigemodus zurück.  
+  
+ Bei der <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft des eine <xref:System.Web.UI.WebControls.CommandField> Feld `ButtonType.Button` oder `ButtonType.Link`, verwenden die <xref:System.Web.UI.WebControls.CommandField.CancelText%2A> Eigenschaft an, der für eine Schaltfläche "Abbrechen" anzuzeigende Text. Alternativ können Sie ein Bild anzeigen, indem Sie zuerst die <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft `ButtonType.Image` festlegen und anschließend die <xref:System.Web.UI.WebControls.CommandField.CancelImageUrl%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.CommandField.ShowCancelButton%2A> Eigenschaft blenden die Schaltfläche "Abbrechen" angezeigt, wenn eine Zeile in einer <xref:System.Web.UI.WebControls.GridView> -Steuerelement befindet sich im Bearbeitungsmodus befindet.  
+  
+ [!code-aspx-csharp[CommandFieldShowCancelButton#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandFieldShowCancelButton/CS/commandfieldshowcancelbuttoncs.aspx#1)]
+ [!code-aspx-vb[CommandFieldShowCancelButton#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandFieldShowCancelButton/VB/commandfieldshowcancelbuttonvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowDeleteButton">
+      <MemberSignature Language="C#" Value="public virtual bool ShowDeleteButton { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowDeleteButton" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.ShowDeleteButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob eine Schaltfläche "löschen", in angezeigt wird einem <see cref="T:System.Web.UI.WebControls.CommandField" /> Feld.</summary>
+        <value>
+          <see langword="true" />zum Anzeigen einer Schaltfläche "löschen" in einem <see cref="T:System.Web.UI.WebControls.CommandField" />ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.CommandField.ShowDeleteButton%2A> Eigenschaft, um anzugeben, ob eine Schaltfläche "löschen", in angezeigt wird einem <xref:System.Web.UI.WebControls.CommandField> Feld für jeden Datensatz im Datenquellen-Steuerelement. Die Schaltfläche "löschen" können Sie einen Datensatz aus der Datenquelle zu entfernen.  
+  
+> [!NOTE]
+>  Wenn ein datengebundenes Steuerelement in Kombination mit einem Datenquellen-Steuerelement verwendet wird (z. B. eine <xref:System.Web.UI.WebControls.SqlDataSource> Steuerelement), das datengebundene Steuerelement Nutzen der Datenquelle des Steuerelements Funktionen und Funktionalität zum automatischen löschen kann. Bei anderen Datenquellen müssen Sie die Routinen zum Ausführen des Delete-Vorgangs während des entsprechenden Ereignisses für das datengebundene Steuerelement angeben.  
+  
+ Bei der <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft des eine <xref:System.Web.UI.WebControls.CommandField> Feld `ButtonType.Button` oder `ButtonType.Link`, verwenden die <xref:System.Web.UI.WebControls.CommandField.DeleteText%2A> Eigenschaft an, der für eine Schaltfläche "löschen" anzuzeigende Text. Alternativ können Sie ein Bild anzeigen, indem Sie zuerst die <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft `ButtonType.Image` festlegen und anschließend die <xref:System.Web.UI.WebControls.CommandField.DeleteImageUrl%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.CommandField.ShowDeleteButton%2A> Eigenschaft zum Anzeigen einer Schaltfläche "löschen" für jeden Datensatz in einem <xref:System.Web.UI.WebControls.GridView> Steuerelement.  
+  
+ [!code-aspx-csharp[CommandFieldShowDeleteButton#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandFieldShowDeleteButton/CS/commandfieldshowdeletebuttoncs.aspx#1)]
+ [!code-aspx-vb[CommandFieldShowDeleteButton#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandFieldShowDeleteButton/VB/commandfieldshowdeletebuttonvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowEditButton">
+      <MemberSignature Language="C#" Value="public virtual bool ShowEditButton { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowEditButton" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.ShowEditButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob eine Schaltfläche "Bearbeiten", in angezeigt wird einem <see cref="T:System.Web.UI.WebControls.CommandField" /> Feld.</summary>
+        <value>
+          <see langword="true" />zum Anzeigen einer Schaltfläche "Bearbeiten", in einem <see cref="T:System.Web.UI.WebControls.CommandField" />ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.CommandField.ShowEditButton%2A> Eigenschaft, um anzugeben, ob eine Schaltfläche "Bearbeiten", in angezeigt wird dem <xref:System.Web.UI.WebControls.CommandField> Feld für jeden Datensatz im Datenquellen-Steuerelement. Die Schaltfläche "Bearbeiten" können Sie die Werte eines Datensatzes zu bearbeiten.  
+  
+ Wenn der Benutzer eine Schaltfläche "Bearbeiten" klickt, werden Eingabesteuerelemente für jedes Feld im Datensatz angezeigt. Die Schaltfläche "Bearbeiten" für den Datensatz wird mit einer Schaltfläche "Aktualisieren" und eine Schaltfläche "Abbrechen" ersetzt, und alle anderen Befehlsschaltflächen für den Datensatz werden ausgeblendet. Der Datensatz mit den neuen Werten in der Datenquelle auf die Schaltfläche "Aktualisieren" aktualisiert werden, während der Abbruch einer Operation durch Klicken auf die Schaltfläche "Abbrechen".  
+  
+> [!NOTE]
+>  Wenn ein datengebundenes Steuerelement in Kombination mit einem Datenquellen-Steuerelement verwendet wird (z. B. eine <xref:System.Web.UI.WebControls.SqlDataSource> Steuerelement), das datengebundene Steuerelement der Datenquelle des Steuerelements Funktionen nutzen kann, und geben Sie Funktionen zum automatischen Aktualisieren. Bei anderen Datenquellen müssen Sie die Routinen zum Ausführen des Update-Vorgangs während des entsprechenden Ereignisses für das datengebundene Steuerelement angeben.  
+  
+ Bei der <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.CommandField> Feld `ButtonType.Button` oder `ButtonType.Link`, verwenden die <xref:System.Web.UI.WebControls.CommandField.EditText%2A> Eigenschaft an, dass der Text, der für eine Schaltfläche "Bearbeiten" angezeigt. Alternativ können Sie ein Bild anzeigen, indem Sie zuerst die <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft `ButtonType.Image` festlegen und anschließend die <xref:System.Web.UI.WebControls.CommandField.EditImageUrl%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.CommandField.ShowEditButton%2A> Eigenschaft zum Anzeigen einer Schaltfläche "Bearbeiten" für jeden Datensatz in einem <xref:System.Web.UI.WebControls.GridView> Steuerelement.  
+  
+ [!code-aspx-csharp[CommandFieldEditImageUrl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandFieldEditImageUrl/CS/commandfieldeditimageurlcs.aspx#1)]
+ [!code-aspx-vb[CommandFieldEditImageUrl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandFieldEditImageUrl/VB/commandfieldeditimageurlvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowInsertButton">
+      <MemberSignature Language="C#" Value="public virtual bool ShowInsertButton { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowInsertButton" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.ShowInsertButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob eine Schaltfläche "Neu", in angezeigt wird einem <see cref="T:System.Web.UI.WebControls.CommandField" /> Feld.</summary>
+        <value>
+          <see langword="true" />zum Anzeigen einer Schaltfläche "Neu" in einem <see cref="T:System.Web.UI.WebControls.CommandField" />ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.CommandField.ShowInsertButton%2A> Eigenschaft, um anzugeben, ob eine Schaltfläche "Neu", in angezeigt wird einem <xref:System.Web.UI.WebControls.CommandField> Feld. Die Schaltfläche "Neu" wird nur einmal angezeigt, der <xref:System.Web.UI.WebControls.CommandField> Felds und ermöglicht es dem Benutzer um einen neuen Datensatz in der Datenquelle hinzuzufügen.  
+  
+> [!NOTE]
+>  Diese Eigenschaft gilt nur für datengebundene Steuerelemente, die Unterstützung für Vorgänge, wie z. B. Einfügen der <xref:System.Web.UI.WebControls.DetailsView> Steuerelement.  
+  
+ Klickt der Benutzer auf die Schaltfläche "Neu", werden für jedes Feld im datengebundenen Steuerelement, dadurch kann der Benutzer die Werte für den neuen Eintrag eingeben angezeigte Eingabesteuerelemente angezeigt. Die Schaltfläche "Neu" wird ersetzt, mit einer Schaltfläche "Einfügen" und eine Schaltfläche "Abbrechen", und alle anderen Befehlsschaltflächen der <xref:System.Web.UI.WebControls.CommandField> Feld ausgeblendet sind. Der Datensatz mit der Datenquelle klicken auf die Schaltfläche zum Einfügen hinzugefügt werden, während der "Abbrechen" Schaltfläche bricht den Vorgang auf.  
+  
+> [!NOTE]
+>  Wenn ein datengebundenes Steuerelement in Kombination mit einem Datenquellen-Steuerelement verwendet wird (z. B. eine <xref:System.Web.UI.WebControls.SqlDataSource> Steuerelement), das datengebundene Steuerelement Nutzen der Datenquelle des Steuerelements Funktionen und Funktionalität zum automatischen einfügen kann. Bei anderen Datenquellen müssen Sie die Routinen zum Ausführen des Insert-Vorgangs während des entsprechenden Ereignisses für das datengebundene Steuerelement angeben.  
+  
+ Bei der <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft des eine <xref:System.Web.UI.WebControls.CommandField> Feld `ButtonType.Button` oder `ButtonType.Link`, verwenden die <xref:System.Web.UI.WebControls.CommandField.NewText%2A> Eigenschaft an, der für eine Schaltfläche "Neu" anzuzeigende Text. Alternativ können Sie ein Bild anzeigen, indem Sie zuerst die <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft `ButtonType.Image` festlegen und anschließend die <xref:System.Web.UI.WebControls.CommandField.NewImageUrl%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.CommandField.ShowInsertButton%2A> Eigenschaft zum Anzeigen einer Schaltfläche "Neu" in eine <xref:System.Web.UI.WebControls.DetailsView> -Steuerelement, das dem Benutzer ermöglicht, einen neuen Datensatz mit der Datenquelle hinzufügen.  
+  
+ [!code-aspx-csharp[CommandFieldShowInsertButton#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandFieldShowInsertButton/CS/commandfieldshowinsertbuttoncs.aspx#1)]
+ [!code-aspx-vb[CommandFieldShowInsertButton#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandFieldShowInsertButton/VB/commandfieldshowinsertbuttonvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowSelectButton">
+      <MemberSignature Language="C#" Value="public virtual bool ShowSelectButton { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowSelectButton" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.ShowSelectButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob eine Schaltfläche auswählen, in angezeigt wird einem <see cref="T:System.Web.UI.WebControls.CommandField" /> Feld.</summary>
+        <value>
+          <see langword="true" />zum Anzeigen des auswählen-Schaltfläche in einem <see cref="T:System.Web.UI.WebControls.CommandField" />ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.CommandField.ShowSelectButton%2A> Eigenschaft, um anzugeben, ob eine Schaltfläche auswählen, in angezeigt wird einem <xref:System.Web.UI.WebControls.CommandField> Feld für jeden Datensatz im Datenquellen-Steuerelement. Die Schaltfläche auswählen kann der Benutzer zum Auswählen einer Zeile im Datenquellen-Steuerelement. Wenn die Option für einen Datensatz geklickt wird, antwortet der Datenquellen-Steuerelement entsprechend. Z. B. eine <xref:System.Web.UI.WebControls.GridView> Updates steuern die <xref:System.Web.UI.WebControls.GridView.SelectedDataKey%2A>, <xref:System.Web.UI.WebControls.GridView.SelectedIndex%2A>, <xref:System.Web.UI.WebControls.GridView.SelectedRow%2A>, und <xref:System.Web.UI.WebControls.GridView.SelectedValue%2A> Eigenschaften zu Werten, die die ausgewählte Zeile. Die <xref:System.Web.UI.WebControls.GridView.SelectedRowStyle%2A> Stil klicken Sie dann auf die ausgewählte Zeile angewendet wird und die <xref:System.Web.UI.WebControls.GridView.SelectedIndexChanged> und <xref:System.Web.UI.WebControls.GridView.SelectedIndexChanging> Ereignisse ausgelöst werden.  
+  
+ Wenn der <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft des eine <xref:System.Web.UI.WebControls.CommandField> Feld `ButtonType.Button` oder `ButtonType.Link`, verwenden die <xref:System.Web.UI.WebControls.CommandField.SelectText%2A> Eigenschaft an, der für eine Select-Schaltfläche anzuzeigende Text. Alternativ können Sie ein Bild anzeigen, indem Sie zuerst die <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft `ButtonType.Image` festlegen und anschließend die <xref:System.Web.UI.WebControls.CommandField.SelectImageUrl%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.CommandField.ShowSelectButton%2A> Eigenschaft zum Anzeigen einer Schaltfläche auswählen für jeden Datensatz in einem <xref:System.Web.UI.WebControls.GridView> Steuerelement.  
+  
+ [!code-aspx-csharp[CommandFieldShowSelectButton#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandFieldShowSelectButton/CS/commandfieldshowselectbuttoncs.aspx#1)]
+ [!code-aspx-vb[CommandFieldShowSelectButton#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandFieldShowSelectButton/VB/commandfieldshowselectbuttonvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateImageUrl">
+      <MemberSignature Language="C#" Value="public virtual string UpdateImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UpdateImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.UpdateImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL zu einem Bild zur Anzeige für eine Schaltfläche "Aktualisieren" in einem <see cref="T:System.Web.UI.WebControls.CommandField" /> Feld.</summary>
+        <value>Die URL für ein Bild für die anzuzeigenden für eine Schaltfläche "Aktualisieren" in eine <see cref="T:System.Web.UI.WebControls.CommandField" />. Der Standardwert ist eine leere Zeichenfolge ("") und gibt an, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.CommandField> Feld `ButtonType.Image`, verwenden die <xref:System.Web.UI.WebControls.CommandField.UpdateImageUrl%2A> -Eigenschaft geben Sie das Abbild, das für eine Schaltfläche "Aktualisieren" angezeigt. Dieses Bild kann beliebiges Dateiformat aufweisen (JPG, GIF, BMP usw.) sein, solange der Client-Browsers dieses Format unterstützt.  
+  
+> [!NOTE]
+>  Als Alternative zum Anzeigen eines Bilds für eine Schaltfläche "Aktualisieren", können Sie Text anzeigen, indem Sie zuerst die <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft `ButtonType.Button` oder `ButtonType.Link` festlegen und anschließend die <xref:System.Web.UI.WebControls.CommandField.UpdateText%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.CommandField.UpdateImageUrl%2A> -Eigenschaft an ein benutzerdefiniertes Bild für die anzuzeigenden für eine Schaltfläche "Aktualisieren" in eine <xref:System.Web.UI.WebControls.CommandField> Feld eine <xref:System.Web.UI.WebControls.GridView> Steuerelement. Die <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft muss festgelegt werden, um `ButtonType.Image` für eine Schaltfläche "Aktualisieren", um ein Bild anzuzeigen.  
+  
+ [!code-aspx-csharp[CommandFieldEditImageUrl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandFieldEditImageUrl/CS/commandfieldeditimageurlcs.aspx#1)]
+ [!code-aspx-vb[CommandFieldEditImageUrl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandFieldEditImageUrl/VB/commandfieldeditimageurlvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateText">
+      <MemberSignature Language="C#" Value="public virtual string UpdateText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UpdateText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.UpdateText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Beschriftung für eine Schaltfläche "Aktualisieren" in einem <see cref="T:System.Web.UI.WebControls.CommandField" /> Feld.</summary>
+        <value>Die Beschriftung für eine Schaltfläche "Aktualisieren" in eine <see cref="T:System.Web.UI.WebControls.CommandField" />. Der Standardwert ist "Update".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.CommandField> Feld `ButtonType.Button` oder `ButtonType.Link`, verwenden die <xref:System.Web.UI.WebControls.CommandField.UpdateText%2A> Eigenschaft an, dass der Text, in eine Schaltfläche "Aktualisieren" angezeigt.  
+  
+> [!NOTE]
+>  Als Alternative zum Anzeigen von Text für eine Schaltfläche "Aktualisieren", können Sie ein Bild anzeigen, indem Sie zuerst die <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft `ButtonType.Image` festlegen und anschließend die <xref:System.Web.UI.WebControls.CommandField.UpdateImageUrl%2A> Eigenschaft.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.CommandField.UpdateText%2A> -Eigenschaft an eine benutzerdefinierte Beschriftung für eine Schaltfläche "Aktualisieren" angezeigt, einer <xref:System.Web.UI.WebControls.CommandField> Feld eine <xref:System.Web.UI.WebControls.GridView> Steuerelement.  
+  
+ [!code-aspx-csharp[CommandField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandField/CS/commandfieldcs.aspx#1)]
+ [!code-aspx-vb[CommandField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandField/VB/commandfieldvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateSupportsCallback">
+      <MemberSignature Language="C#" Value="public override void ValidateSupportsCallback ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ValidateSupportsCallback() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CommandField.ValidateSupportsCallback" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob die in Steuerelemente enthaltenen eine <see cref="T:System.Web.UI.WebControls.CommandField" /> -Objekt Rückrufe unterstützen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.CommandField.ValidateSupportsCallback%2A> Methode ist eine Hilfsmethode verwendet, um zu bestimmen, ob die in Steuerelemente enthaltenen eine <xref:System.Web.UI.WebControls.CommandField> -Objekt Rückrufe unterstützen. Die <xref:System.Web.UI.WebControls.CommandField> -Klasse unterstützt keine Rückrufe, wenn die Schaltfläche auswählen angezeigt wird. Diese Methode wurde implementiert, um das Auslösen einer <xref:System.NotSupportedException> -Ausnahme aus, wenn die Select-Schaltfläche angezeigt wird.  
+  
+> [!NOTE]
+>  Diese Methode wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die Schaltfläche auswählen wird angezeigt, der <see cref="T:System.Web.UI.WebControls.CommandField" /> Objekt. Die <see cref="T:System.Web.UI.WebControls.CommandField" /> -Klasse unterstützt Rückrufe, wenn die Schaltfläche auswählen angezeigt wird.</exception>
+        <block subset="none" type="overrides">
+          <para>Abgeleitete Klassen die <see cref="T:System.Web.UI.WebControls.CommandField" /> Klasse kann diese Methode, um anzugeben, ob die Steuerelemente im Feld Unterstützung Rückrufe enthaltenen überschreiben. Implementieren Sie diese Methode als eine leere Methode, die keine Ausnahme auslöst, um anzugeben, dass Rückrufe unterstützt werden, Andernfalls lösen Sie eine Ausnahme mit einer aussagekräftigen Meldung erläutert, warum Rückrufe nicht unterstützt werden.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,197 @@
+<Type Name="SoapEnumAttribute" FullName="System.Xml.Serialization.SoapEnumAttribute">
+  <TypeSignature Language="C#" Value="public class SoapEnumAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SoapEnumAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.SoapEnumAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Field)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Steuerelemente wie die <see cref="T:System.Xml.Serialization.XmlSerializer" /> serialisiert einen Enumerationsmember.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Serialization.SoapEnumAttribute> Klasse gehört zu einer Familie von Attributen, die steuert, wie die <xref:System.Xml.Serialization.XmlSerializer> Serialisieren oder Deserialisieren eines Objekts als codiertes SOAP-XML. Das resultierende XML entspricht Abschnitt 5 des Dokuments "Simple Object Access Protocol (SOAP) 1.1" des World Wide Web Consortium (www.w3.org). Eine vollständige Liste ähnlicher Attribute finden Sie unter [Attribute, Steuerelement codierte SOAP-Serialisierung](~/docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).  
+  
+ Um ein Objekt als codierte SOAP-Nachricht zu serialisieren, erstellen Sie die <xref:System.Xml.Serialization.XmlSerializer> verwenden ein <xref:System.Xml.Serialization.XmlTypeMapping> erstellt, mit der <xref:System.Xml.Serialization.SoapReflectionImporter.ImportTypeMapping%2A> Methode der <xref:System.Xml.Serialization.SoapReflectionImporter> Klasse.  
+  
+ Verwenden der <xref:System.Xml.Serialization.SoapEnumAttribute> so ändern Sie die Enumeration, die die <xref:System.Xml.Serialization.XmlSerializer> generiert oder (beim Serialisieren oder Deserialisieren eine Klasse bzw.) erkennt. Z. B. eine Enumeration enthält ein Element mit dem Namen `One`, aber Sie es vorziehen, die XML-Ausgabe zu benennen `Single`, gelten die <xref:System.Xml.Serialization.SoapEnumAttribute> auf den Member der Enumeration und legen die <xref:System.Xml.Serialization.SoapEnumAttribute.Name%2A> Eigenschaft auf "Single".  
+  
+ Sie überschreiben können die <xref:System.Xml.Serialization.SoapEnumAttribute.Name%2A> Eigenschaftswert, der eine <xref:System.Xml.Serialization.SoapEnumAttribute> durch Erstellen einer Instanz von der <xref:System.Xml.Serialization.SoapEnumAttribute> Klasse und die Zuweisung zu der <xref:System.Xml.Serialization.SoapAttributes.SoapEnum%2A> Eigenschaft eine <xref:System.Xml.Serialization.SoapAttributes>. Weitere Informationen finden Sie unter der <xref:System.Xml.Serialization.SoapAttributeOverrides> -Klassenübersicht.  
+  
+ Um ein Objekt als codierte SOAP-Nachricht zu serialisieren, erstellen Sie die <xref:System.Xml.Serialization.XmlSerializer> verwenden ein <xref:System.Xml.Serialization.XmlTypeMapping> erstellt, mit der <xref:System.Xml.Serialization.SoapReflectionImporter.ImportTypeMapping%2A> Methode der <xref:System.Xml.Serialization.SoapReflectionImporter> Klasse.  
+  
+> [!NOTE]
+>  Sie können das Wort `SoapEnum` im Code anstelle des längeren <xref:System.Xml.Serialization.SoapEnumAttribute>.  
+  
+ Weitere Informationen zum Verwenden von Attributen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Xml.Serialization.XmlSerializer> zur Serialisierung einer Klasse mit dem Namen `Food` enthält eine Enumeration namens `FoodType`. Die `FoodType` Enumeration überschrieben wird, durch das Erstellen einer <xref:System.Xml.Serialization.SoapEnumAttribute> für jede Enumeration und die Einstellung der <xref:System.Xml.Serialization.SoapAttributes.SoapEnum%2A> Eigenschaft des eine <xref:System.Xml.Serialization.SoapAttributes> zu der <xref:System.Xml.Serialization.SoapEnumAttribute>. Die <xref:System.Xml.Serialization.SoapAttributes> hinzugefügt wird eine <xref:System.Xml.Serialization.SoapAttributeOverrides> , dient zum Erstellen einer <xref:System.Xml.Serialization.XmlSerializer>.  
+  
+ [!code-cpp[SoapEnumOverrides#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapEnumOverrides/CPP/soapenumoverrides.cpp#1)]
+ [!code-csharp[SoapEnumOverrides#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapEnumOverrides/CS/soapenumoverrides.cs#1)]
+ [!code-vb[SoapEnumOverrides#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapEnumOverrides/VB/soapenumoverrides.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapEnumAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.SoapEnumAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.Serialization.SoapEnumAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Xml.Serialization.SoapEnumAttribute.%23ctor%2A> um eine vorhandene Enumeration zu überschreiben. Erstellen Sie ein neues <xref:System.Xml.Serialization.SoapEnumAttribute>, legen Sie die Eigenschaften, und weisen Sie das Objekt, das die <xref:System.Xml.Serialization.SoapAttributes.SoapEnum%2A> Eigenschaft eine <xref:System.Xml.Serialization.SoapAttributes>. Für jeden Member der Enumeration müssen erstellen Sie ein neues <xref:System.Xml.Serialization.SoapAttributes> und fügen Sie diese der <xref:System.Xml.Serialization.SoapAttributeOverrides>. Weitere Informationen finden Sie unter der <xref:System.Xml.Serialization.SoapAttributeOverrides> -Klassenübersicht.  
+  
+> [!NOTE]
+>  Sie können das Wort `SoapEnum` im Code anstelle des längeren <xref:System.Xml.Serialization.SoapEnumAttribute>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Xml.Serialization.XmlSerializer> zur Serialisierung einer Klasse mit dem Namen `Food` enthält eine Enumeration namens `FoodType`. Die `FoodType` Enumeration überschrieben wird, durch das Erstellen einer <xref:System.Xml.Serialization.SoapEnumAttribute> für jede Enumeration und die Einstellung der <xref:System.Xml.Serialization.SoapAttributes.SoapEnum%2A> Eigenschaft des eine <xref:System.Xml.Serialization.SoapAttributes> zu der <xref:System.Xml.Serialization.SoapEnumAttribute>. Die <xref:System.Xml.Serialization.SoapAttributes> hinzugefügt wird eine <xref:System.Xml.Serialization.SoapAttributeOverrides> , dient zum Erstellen einer <xref:System.Xml.Serialization.XmlSerializer>.  
+  
+ [!code-cpp[SoapEnumOverrides#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapEnumOverrides/CPP/soapenumoverrides.cpp#1)]
+ [!code-csharp[SoapEnumOverrides#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapEnumOverrides/CS/soapenumoverrides.cs#1)]
+ [!code-vb[SoapEnumOverrides#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapEnumOverrides/VB/soapenumoverrides.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapEnumAttribute (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.SoapEnumAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der XML-Elementname generiert, indem Sie die <see cref="T:System.Xml.Serialization.XmlSerializer" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xml.Serialization.SoapEnumAttribute" /> -Klasse unter Verwendung des angegebenen Elements.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Geben Sie die <xref:System.Xml.Serialization.SoapEnumAttribute.Name%2A> sollen die generierten XML-Enumerator aus dem Enumerator unterscheiden sich in der Aufzählung gefunden.  
+  
+> [!NOTE]
+>  Sie können das Wort `SoapEnum` im Code anstelle des längeren <xref:System.Xml.Serialization.SoapEnumAttribute>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Xml.Serialization.XmlSerializer> zur Serialisierung einer Klasse mit dem Namen `Food` enthält eine Enumeration namens `FoodType`. Die `FoodType` Enumeration überschrieben wird, durch das Erstellen einer <xref:System.Xml.Serialization.SoapEnumAttribute> für jede Enumeration und die Einstellung der <xref:System.Xml.Serialization.SoapAttributes.SoapEnum%2A> Eigenschaft des eine <xref:System.Xml.Serialization.SoapAttributes> zu der <xref:System.Xml.Serialization.SoapEnumAttribute>. Die <xref:System.Xml.Serialization.SoapAttributes> hinzugefügt wird eine <xref:System.Xml.Serialization.SoapAttributeOverrides> , dient zum Erstellen einer <xref:System.Xml.Serialization.XmlSerializer>.  
+  
+ [!code-cpp[SoapEnumOverrides#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapEnumOverrides/CPP/soapenumoverrides.cpp#1)]
+ [!code-csharp[SoapEnumOverrides#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapEnumOverrides/CS/soapenumoverrides.cs#1)]
+ [!code-vb[SoapEnumOverrides#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapEnumOverrides/VB/soapenumoverrides.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.SoapEnumAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt der Wert generiert wird, in einem XML-Dokument bei der <see cref="T:System.Xml.Serialization.XmlSerializer" /> serialisiert wird, eine Enumeration oder den Wert, der bei der Enumerationsmembers erkannt.</summary>
+        <value>Der Wert in eine XML-Datei generiert dokumentieren, wann die <see cref="T:System.Xml.Serialization.XmlSerializer" /> serialisiert, Enumeration oder den Wert, der bei der Enumerationsmembers erkannt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Geben Sie die <xref:System.Xml.Serialization.SoapEnumAttribute.Name%2A> sollen die generierten XML-Enumerator aus dem Enumerator unterscheiden sich in der Aufzählung gefunden.  
+  
+> [!NOTE]
+>  Sie können das Wort `SoapEnum` anstelle des längeren <xref:System.Xml.Serialization.SoapEnumAttribute>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Xml.Serialization.XmlSerializer> zur Serialisierung einer Klasse mit dem Namen `Food` enthält eine Enumeration namens `FoodType`. Die `FoodType` Enumeration überschrieben wird, durch das Erstellen einer <xref:System.Xml.Serialization.SoapEnumAttribute> für jede Enumeration und die Einstellung der <xref:System.Xml.Serialization.SoapAttributes.SoapEnum%2A> Eigenschaft des eine <xref:System.Xml.Serialization.SoapAttributes> zu der <xref:System.Xml.Serialization.SoapEnumAttribute>. Die <xref:System.Xml.Serialization.SoapAttributes> hinzugefügt wird eine <xref:System.Xml.Serialization.SoapAttributeOverrides> , dient zum Erstellen einer <xref:System.Xml.Serialization.XmlSerializer>.  
+  
+ [!code-cpp[SoapEnumOverrides#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapEnumOverrides/CPP/soapenumoverrides.cpp#1)]
+ [!code-csharp[SoapEnumOverrides#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapEnumOverrides/CS/soapenumoverrides.cs#1)]
+ [!code-vb[SoapEnumOverrides#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapEnumOverrides/VB/soapenumoverrides.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

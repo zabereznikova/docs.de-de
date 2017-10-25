@@ -1,0 +1,2407 @@
+<Type Name="Project" FullName="Microsoft.Build.Evaluation.Project">
+  <TypeSignature Language="C#" Value="public class Project" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Project extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Evaluation.Project" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("{FullPath} EffectiveToolsVersion={ToolsVersion} #GlobalProperties={data.globalProperties.Count} #Properties={data.Properties.Count} #ItemTypes={data.ItemTypes.Count} #ItemDefinitions={data.ItemDefinitions.Count} #Items={data.Items.Count} #Targets={data.Targets.Count}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Projekt mit Design-Time-Semantik. Diese Klasse kann Projektdateien zu laden, Elemente und Eigenschaften bearbeiten und Erstellen von Projekten.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Project ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein leeres Projekt mithilfe der globalen Auflistung globaler Projekteigenschaften und die standardmäßige Toolsversion.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Projekt wird der globalen Projektsammlung hinzugefügt, wenn sie den vollständigen Pfad zur Projektquelldatei in der Regel durch die Speicherung des Projekts, angegeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Project (Microsoft.Build.Construction.ProjectRootElement xml);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Construction.ProjectRootElement xml) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.#ctor(Microsoft.Build.Construction.ProjectRootElement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="xml" Type="Microsoft.Build.Construction.ProjectRootElement" />
+      </Parameters>
+      <Docs>
+        <param name="xml">ProjectRootElement zur Auswertung verwendet.</param>
+        <summary>Ein leeres Projekt erstellt und mit dem angegebenen Projektstamm und die globalen Projekt Auflistung globale Eigenschaften und die standardmäßige Toolsversion ausgewertet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Projekt wird der globalen Projektsammlung hinzugefügt, wenn dieses Projekt oder der angegebene Projektstamm der vollständige Pfad zur Quelldatei des Projekts angegeben ist.  
+  
+ Löst InvalidProjectFileException aus, wenn die Auswertung fehlschlägt. InvalidOperationException ausgelöst, wenn bereits ein entsprechendes Projekt vorhanden ist, die in der projektauflistung geladen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Project (Microsoft.Build.Evaluation.ProjectCollection projectCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Evaluation.ProjectCollection projectCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.#ctor(Microsoft.Build.Evaluation.ProjectCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="projectCollection" Type="Microsoft.Build.Evaluation.ProjectCollection" />
+      </Parameters>
+      <Docs>
+        <param name="projectCollection">Die projektauflistung, der das neue Projekt hinzugefügt wird.</param>
+        <summary>Erstellt ein leeres Projekt mit dem angegebenen Projekt Auflistung globalen Eigenschaften und die standardmäßige Toolsversion.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Projekt wird der angegebenen Projektsammlung hinzugefügt, wenn sie den vollständigen Pfad zur Projektquelldatei in der Regel durch die Speicherung des Projekts, angegeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Project (string projectFile);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string projectFile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="projectFile" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="projectFile">Die Quelldatei des Projekts ausgewertet werden soll.</param>
+        <summary>Erstellt ein Projekt, und wertet ihn aus der angegebenen Quelle-Projektdatei und mit der globalen Auflistung globaler Projekteigenschaften und die standardmäßige Toolsversion.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Projekt wird der globalen Projektsammlung hinzugefügt.  
+  
+ Löst InvalidOperationException aus, wenn es ist bereits ein Projekt in der projektauflistung, die dieser Quellprojektdatei ausgewertet wird. E/a-bezogenen Ausnahmen auslösen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:Microsoft.Build.Exceptions.InvalidProjectFileException">Wenn die Auswertung fehlschlägt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Project (System.Xml.XmlReader xmlReader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlReader xmlReader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.#ctor(System.Xml.XmlReader)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="xmlReader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="xmlReader">XML-Reader zum Lesen von Projektquellcode.</param>
+        <summary>Erstellt ein Projekt, und wertet den Quellcode aus dem angegebenen XML-Reader. Der Quellcode wird mit der globalen Auflistung globaler Projekteigenschaften und die standardmäßige Toolsversion ausgewertet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Projekt wird der globalen Projektsammlung hinzugefügt, wenn sie den vollständigen Pfad zur Projektquelldatei in der Regel durch die Speicherung des Projekts, angegeben wird.  
+  
+ Löst InvalidProjectFileException aus, wenn die Auswertung fehlschlägt. InvalidOperationException ausgelöst, wenn bereits ein entsprechendes Projekt vorhanden ist, die in der projektauflistung geladen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Project (Microsoft.Build.Construction.ProjectRootElement xml, System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, string toolsVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Construction.ProjectRootElement xml, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, string toolsVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.#ctor(Microsoft.Build.Construction.ProjectRootElement,System.Collections.Generic.IDictionary{System.String,System.String},System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="xml" Type="Microsoft.Build.Construction.ProjectRootElement" />
+        <Parameter Name="globalProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="toolsVersion" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xml">Der Projektstamm für die Auswertung verwendet werden soll.</param>
+        <param name="globalProperties">Globale Eigenschaften für die Auswertung. Ist möglicherweise NULL, in diesem Fall werden die globalen Eigenschaften der enthaltenden Projektauflistung verwendet.</param>
+        <param name="toolsVersion">ToolsVersion für die Auswertung. Ist möglicherweise NULL.</param>
+        <summary>Ein leeres Projekt erstellt und mit dem angegebenen Projektstamm ausgewertet und mit den angegebenen globalen Eigenschaften und der angegebenen Toolsversion.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Projekt wird der globalen Projektsammlung hinzugefügt, wenn dieses Projekt oder der angegebene Projektstamm der vollständige Pfad zur Quelldatei des Projekts angegeben ist.  
+  
+ Löst InvalidProjectFileException aus, wenn die Auswertung fehlschlägt. InvalidOperationException ausgelöst, wenn bereits ein entsprechendes Projekt vorhanden ist, die in der projektauflistung geladen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Project (System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, string toolsVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, string toolsVersion, class Microsoft.Build.Evaluation.ProjectCollection projectCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.#ctor(System.Collections.Generic.IDictionary{System.String,System.String},System.String,Microsoft.Build.Evaluation.ProjectCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="globalProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="toolsVersion" Type="System.String" />
+        <Parameter Name="projectCollection" Type="Microsoft.Build.Evaluation.ProjectCollection" />
+      </Parameters>
+      <Docs>
+        <param name="globalProperties">Globale Eigenschaften für die Auswertung. Ist möglicherweise NULL, in diesem Fall werden die globalen Eigenschaften der enthaltenden Projektauflistung verwendet.</param>
+        <param name="toolsVersion">Die ToolsVersion, die zum Auswerten des Projekts verwendet wird. Ist möglicherweise NULL.</param>
+        <param name="projectCollection">Das neue Projekt die projektauflistung hinzugefügt werden.</param>
+        <summary>Erstellt ein leeres Projekt, um ausgewertet werden, mit der angegebenen Projektsammlung und den angegebenen globalen Eigenschaften und die angegebene ToolsVersion.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Projekt wird der angegebenen Projektsammlung hinzugefügt, wenn sie den vollständigen Pfad zur Projektquelldatei in der Regel durch die Speicherung des Projekts, angegeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Project (string projectFile, System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, string toolsVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string projectFile, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, string toolsVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.#ctor(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="projectFile" Type="System.String" />
+        <Parameter Name="globalProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="toolsVersion" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="projectFile">Der Pfad zur Projektquelldatei ausgewertet werden soll.</param>
+        <param name="globalProperties">Globale Eigenschaften für die Auswertung. Ist möglicherweise NULL, in diesem Fall werden die globalen Eigenschaften der enthaltenden Projektauflistung verwendet.</param>
+        <param name="toolsVersion">ToolsVersion für die Auswertung. Ist möglicherweise NULL.</param>
+        <summary>Erstellt ein Projekt, und es aus der Quelle angegebenen Projektdatei und mit den angegebenen globalen Eigenschaften und der angegebenen Toolsversion ausgewertet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Projekt wird der globalen Projektsammlung hinzugefügt.  
+  
+ Löst InvalidProjectFileException aus, wenn die Auswertung fehlschlägt. InvalidOperationException ausgelöst, wenn bereits ein entsprechendes Projekt vorhanden ist, die in der projektauflistung geladen werden. E/a-bezogenen Ausnahmen auslösen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Project (System.Xml.XmlReader xmlReader, System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, string toolsVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlReader xmlReader, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, string toolsVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.#ctor(System.Xml.XmlReader,System.Collections.Generic.IDictionary{System.String,System.String},System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="xmlReader" Type="System.Xml.XmlReader" />
+        <Parameter Name="globalProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="toolsVersion" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xmlReader">XML-Reader zum Lesen von Projektquellcode.</param>
+        <param name="globalProperties">Globale Eigenschaften für die Auswertung. Ist möglicherweise NULL, in diesem Fall werden die globalen Eigenschaften der enthaltenden Projektauflistung verwendet.</param>
+        <param name="toolsVersion">ToolsVersion für die Auswertung. Ist möglicherweise NULL.</param>
+        <summary>Erstellt ein Projekt, und wertet den Quellcode aus dem angegebenen XML-Reader. Der Quellcode wird mit den angegebenen globalen Eigenschaften ausgewertet und angegebenen Toolsversion.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Projekt wird der globalen Projektsammlung hinzugefügt, wenn sie den vollständigen Pfad zur Projektquelldatei in der Regel durch die Speicherung des Projekts, angegeben wird.  
+  
+ Löst InvalidProjectFileException aus, wenn die Auswertung fehlschlägt. InvalidOperationException ausgelöst, wenn bereits ein entsprechendes Projekt vorhanden ist, die in der projektauflistung geladen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Project (Microsoft.Build.Construction.ProjectRootElement xml, System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, string toolsVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Construction.ProjectRootElement xml, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, string toolsVersion, class Microsoft.Build.Evaluation.ProjectCollection projectCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.#ctor(Microsoft.Build.Construction.ProjectRootElement,System.Collections.Generic.IDictionary{System.String,System.String},System.String,Microsoft.Build.Evaluation.ProjectCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="xml" Type="Microsoft.Build.Construction.ProjectRootElement" />
+        <Parameter Name="globalProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="toolsVersion" Type="System.String" />
+        <Parameter Name="projectCollection" Type="Microsoft.Build.Evaluation.ProjectCollection" />
+      </Parameters>
+      <Docs>
+        <param name="xml">Der Projektstamm für die Auswertung verwendet werden soll.</param>
+        <param name="globalProperties">Globale Eigenschaften für die Auswertung. Ist möglicherweise NULL, in diesem Fall werden die globalen Eigenschaften der enthaltenden Projektauflistung verwendet.</param>
+        <param name="toolsVersion">ToolsVersion für die Auswertung. Ist möglicherweise NULL.</param>
+        <param name="projectCollection">Die Projekt-Auflistung des Projekts wird hinzugefügt.</param>
+        <summary>Erstellt ein Projekt und wertet Sie ihn mit dem angegebenen Projektstamm und mit den angegebenen globalen Eigenschaften und der angegebenen Toolsversion.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Projekt wird der angegebenen Projektsammlung hinzugefügt, wenn dieses Projekt oder der angegebene Projektstamm der vollständige Pfad zur Quelldatei des Projekts angegeben ist.  
+  
+ Löst InvalidProjectFileException aus, wenn die Auswertung fehlschlägt. InvalidOperationException ausgelöst, wenn bereits ein entsprechendes Projekt vorhanden ist, die in der projektauflistung geladen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Project (string projectFile, System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, string toolsVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string projectFile, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, string toolsVersion, class Microsoft.Build.Evaluation.ProjectCollection projectCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.#ctor(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.String,Microsoft.Build.Evaluation.ProjectCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="projectFile" Type="System.String" />
+        <Parameter Name="globalProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="toolsVersion" Type="System.String" />
+        <Parameter Name="projectCollection" Type="Microsoft.Build.Evaluation.ProjectCollection" />
+      </Parameters>
+      <Docs>
+        <param name="projectFile">Der Pfad zur Projektquelldatei ausgewertet werden soll.</param>
+        <param name="globalProperties">Die globalen Eigenschaften. Ist möglicherweise NULL.</param>
+        <param name="toolsVersion">Die Toolsversion. Ist möglicherweise NULL.</param>
+        <param name="projectCollection">Die Projekt-Auflistung des Projekts wird hinzugefügt. Darf nicht null sein.</param>
+        <summary>Erstellt ein Projekt, und es aus der Quelle angegebenen Projektdatei und mit den angegebenen globalen Eigenschaften und der angegebenen Toolsversion ausgewertet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Projekt wird der angegebenen Projektsammlung hinzugefügt.  
+  
+ Löst InvalidProjectFileException aus, wenn die Auswertung fehlschlägt. InvalidOperationException ausgelöst, wenn bereits ein entsprechendes Projekt vorhanden ist, die in der projektauflistung geladen werden. E/a-bezogenen Ausnahmen auslösen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Project (System.Xml.XmlReader xmlReader, System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, string toolsVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlReader xmlReader, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, string toolsVersion, class Microsoft.Build.Evaluation.ProjectCollection projectCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.#ctor(System.Xml.XmlReader,System.Collections.Generic.IDictionary{System.String,System.String},System.String,Microsoft.Build.Evaluation.ProjectCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="xmlReader" Type="System.Xml.XmlReader" />
+        <Parameter Name="globalProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="toolsVersion" Type="System.String" />
+        <Parameter Name="projectCollection" Type="Microsoft.Build.Evaluation.ProjectCollection" />
+      </Parameters>
+      <Docs>
+        <param name="xmlReader">XML-Reader zum Lesen von Projektquellcode.</param>
+        <param name="globalProperties">Globale Eigenschaften für die Auswertung. Ist möglicherweise NULL, in diesem Fall werden die globalen Eigenschaften der enthaltenden Projektauflistung verwendet.</param>
+        <param name="toolsVersion">ToolsVersion für die Auswertung. Ist möglicherweise NULL.</param>
+        <param name="projectCollection">Die Projekt-Auflistung des Projekts wird hinzugefügt. Darf nicht null sein.</param>
+        <summary>Erstellt ein Projekt, und wertet den Quellcode aus dem angegebenen XML-Reader. Der Quellcode wird mit den angegebenen globalen Eigenschaften ausgewertet und angegebenen Toolsversion.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Projekt wird der angegebenen Projektsammlung hinzugefügt, wenn dieses Projekt oder der angegebene Projektstamm der vollständige Pfad zur Quelldatei des Projekts angegeben ist.  
+  
+ Löst InvalidProjectFileException aus, wenn die Auswertung fehlschlägt. InvalidOperationException ausgelöst, wenn bereits ein entsprechendes Projekt vorhanden ist, die in der projektauflistung geladen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Project (Microsoft.Build.Construction.ProjectRootElement xml, System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, string toolsVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection, Microsoft.Build.Evaluation.ProjectLoadSettings loadSettings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Construction.ProjectRootElement xml, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, string toolsVersion, class Microsoft.Build.Evaluation.ProjectCollection projectCollection, valuetype Microsoft.Build.Evaluation.ProjectLoadSettings loadSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.#ctor(Microsoft.Build.Construction.ProjectRootElement,System.Collections.Generic.IDictionary{System.String,System.String},System.String,Microsoft.Build.Evaluation.ProjectCollection,Microsoft.Build.Evaluation.ProjectLoadSettings)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="xml" Type="Microsoft.Build.Construction.ProjectRootElement" />
+        <Parameter Name="globalProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="toolsVersion" Type="System.String" />
+        <Parameter Name="projectCollection" Type="Microsoft.Build.Evaluation.ProjectCollection" />
+        <Parameter Name="loadSettings" Type="Microsoft.Build.Evaluation.ProjectLoadSettings" />
+      </Parameters>
+      <Docs>
+        <param name="xml">Der Projektstamm für die Auswertung verwendet werden soll.</param>
+        <param name="globalProperties">Globale Eigenschaften für die Auswertung. Ist möglicherweise NULL, in diesem Fall werden die globalen Eigenschaften der enthaltenden Projektauflistung verwendet.</param>
+        <param name="toolsVersion">ToolsVersion für die Auswertung. Ist möglicherweise NULL.</param>
+        <param name="projectCollection">Die Projekt-Auflistung des Projekts wird hinzugefügt. Darf nicht null sein.</param>
+        <param name="loadSettings">Die Load-Einstellungen, für die Auswertung verwendet werden soll.</param>
+        <summary>Erstellt ein Projekt und wertet Sie ihn mit dem angegebenen Projektstamm mit den angegebenen globalen Eigenschaften der angegebenen Toolsversion und ladeeinstellungen angegeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Projekt wird der angegebenen Projektsammlung hinzugefügt, wenn dieses Projekt oder der angegebene Projektstamm der vollständige Pfad zur Quelldatei des Projekts angegeben ist.  
+  
+ Löst InvalidProjectFileException aus, wenn die Auswertung fehlschlägt. InvalidOperationException ausgelöst, wenn bereits ein entsprechendes Projekt vorhanden ist, die in der projektauflistung geladen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Project (string projectFile, System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, string toolsVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection, Microsoft.Build.Evaluation.ProjectLoadSettings loadSettings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string projectFile, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, string toolsVersion, class Microsoft.Build.Evaluation.ProjectCollection projectCollection, valuetype Microsoft.Build.Evaluation.ProjectLoadSettings loadSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.#ctor(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.String,Microsoft.Build.Evaluation.ProjectCollection,Microsoft.Build.Evaluation.ProjectLoadSettings)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="projectFile" Type="System.String" />
+        <Parameter Name="globalProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="toolsVersion" Type="System.String" />
+        <Parameter Name="projectCollection" Type="Microsoft.Build.Evaluation.ProjectCollection" />
+        <Parameter Name="loadSettings" Type="Microsoft.Build.Evaluation.ProjectLoadSettings" />
+      </Parameters>
+      <Docs>
+        <param name="projectFile">Der Pfad zur Projektquelldatei ausgewertet werden soll.</param>
+        <param name="globalProperties">Globale Eigenschaften für die Auswertung. Ist möglicherweise NULL, in diesem Fall werden die globalen Eigenschaften der enthaltenden Projektauflistung verwendet.</param>
+        <param name="toolsVersion">Die Toolsversion. Ist möglicherweise NULL.</param>
+        <param name="projectCollection">Die Projekt-Auflistung des Projekts wird hinzugefügt. Darf nicht null sein.</param>
+        <param name="loadSettings">Die Load-Einstellungen, für die Auswertung verwendet werden soll.</param>
+        <summary>Erstellt ein Projekt, und wertet ihn aus der Quelle angegebenen Projektdatei und mit den angegebenen globalen Eigenschaften, angegebenen Toolsversion und ladeeinstellungen angegeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Projekt wird der angegebenen Projektsammlung hinzugefügt.  
+  
+ Löst InvalidProjectFileException aus, wenn die Auswertung fehlschlägt. InvalidOperationException ausgelöst, wenn bereits ein entsprechendes Projekt vorhanden ist, die in der projektauflistung geladen werden. E/a-bezogenen Ausnahmen auslösen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Project (System.Xml.XmlReader xmlReader, System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, string toolsVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection, Microsoft.Build.Evaluation.ProjectLoadSettings loadSettings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlReader xmlReader, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, string toolsVersion, class Microsoft.Build.Evaluation.ProjectCollection projectCollection, valuetype Microsoft.Build.Evaluation.ProjectLoadSettings loadSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.#ctor(System.Xml.XmlReader,System.Collections.Generic.IDictionary{System.String,System.String},System.String,Microsoft.Build.Evaluation.ProjectCollection,Microsoft.Build.Evaluation.ProjectLoadSettings)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="xmlReader" Type="System.Xml.XmlReader" />
+        <Parameter Name="globalProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="toolsVersion" Type="System.String" />
+        <Parameter Name="projectCollection" Type="Microsoft.Build.Evaluation.ProjectCollection" />
+        <Parameter Name="loadSettings" Type="Microsoft.Build.Evaluation.ProjectLoadSettings" />
+      </Parameters>
+      <Docs>
+        <param name="xmlReader">XML-Reader, aus dem Lesen von Projektquellcode.</param>
+        <param name="globalProperties">Globale Eigenschaften für die Auswertung. Ist möglicherweise NULL, in diesem Fall werden die globalen Eigenschaften der enthaltenden Projektauflistung verwendet.</param>
+        <param name="toolsVersion">ToolsVersion für die Auswertung. Ist möglicherweise NULL.</param>
+        <param name="projectCollection">Die Projekt-Auflistung des Projekts wird hinzugefügt. Darf nicht null sein.</param>
+        <param name="loadSettings">Die Load-Einstellungen, für die Auswertung verwendet werden soll.</param>
+        <summary>Erstellt ein Projekt, und wertet den Quellcode aus dem angegebenen XML-Reader. Der Quellcode wird mit den angegebenen globalen Eigenschaften ausgewertet und angegebenen Toolsversion.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Projekt wird der angegebenen Projektsammlung hinzugefügt, wenn dieses Projekt oder der angegebene Projektstamm der vollständige Pfad zur Quelldatei des Projekts angegeben ist.  
+  
+ Löst InvalidProjectFileException aus, wenn die Auswertung fehlschlägt. InvalidOperationException ausgelöst, wenn bereits ein entsprechendes Projekt vorhanden ist, die in der projektauflistung geladen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Project (Microsoft.Build.Construction.ProjectRootElement xml, System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, string toolsVersion, string subToolsetVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection, Microsoft.Build.Evaluation.ProjectLoadSettings loadSettings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Construction.ProjectRootElement xml, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, string toolsVersion, string subToolsetVersion, class Microsoft.Build.Evaluation.ProjectCollection projectCollection, valuetype Microsoft.Build.Evaluation.ProjectLoadSettings loadSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.#ctor(Microsoft.Build.Construction.ProjectRootElement,System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String,Microsoft.Build.Evaluation.ProjectCollection,Microsoft.Build.Evaluation.ProjectLoadSettings)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="xml" Type="Microsoft.Build.Construction.ProjectRootElement" />
+        <Parameter Name="globalProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="toolsVersion" Type="System.String" />
+        <Parameter Name="subToolsetVersion" Type="System.String" />
+        <Parameter Name="projectCollection" Type="Microsoft.Build.Evaluation.ProjectCollection" />
+        <Parameter Name="loadSettings" Type="Microsoft.Build.Evaluation.ProjectLoadSettings" />
+      </Parameters>
+      <Docs>
+        <param name="xml">Der Projektstamm für die Auswertung verwendet werden soll.</param>
+        <param name="globalProperties">Globale Eigenschaften für die Auswertung. Ist möglicherweise NULL, in diesem Fall werden die globalen Eigenschaften der enthaltenden Projektauflistung verwendet.</param>
+        <param name="toolsVersion">ToolsVersion für die Auswertung. Ist möglicherweise NULL.</param>
+        <param name="subToolsetVersion">Sub-Toolset-Version für die Auswertung. Ist möglicherweise NULL.</param>
+        <param name="projectCollection">Die Projekt-Auflistung des Projekts wird hinzugefügt. Darf nicht null sein.</param>
+        <param name="loadSettings">Die Load-Einstellungen, für die Auswertung verwendet werden soll.</param>
+        <summary>Erstellt ein Projekt ergibt das Symbol mit dem angegebenen Projektstamm und projektauflistung mit angegebenen globalen Eigenschaften, Tools und Versionen unter-Toolset, und Laden Sie die Einstellungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Projekt wird der angegebenen Projektsammlung hinzugefügt, wenn dieses Projekt oder der angegebene Projektstamm der vollständige Pfad zur Quelldatei des Projekts angegeben ist.  
+  
+ Löst InvalidProjectFileException aus, wenn die Auswertung fehlschlägt. InvalidOperationException ausgelöst, wenn bereits ein entsprechendes Projekt vorhanden ist, die in der projektauflistung geladen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Project (string projectFile, System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, string toolsVersion, string subToolsetVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection, Microsoft.Build.Evaluation.ProjectLoadSettings loadSettings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string projectFile, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, string toolsVersion, string subToolsetVersion, class Microsoft.Build.Evaluation.ProjectCollection projectCollection, valuetype Microsoft.Build.Evaluation.ProjectLoadSettings loadSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.#ctor(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String,Microsoft.Build.Evaluation.ProjectCollection,Microsoft.Build.Evaluation.ProjectLoadSettings)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="projectFile" Type="System.String" />
+        <Parameter Name="globalProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="toolsVersion" Type="System.String" />
+        <Parameter Name="subToolsetVersion" Type="System.String" />
+        <Parameter Name="projectCollection" Type="Microsoft.Build.Evaluation.ProjectCollection" />
+        <Parameter Name="loadSettings" Type="Microsoft.Build.Evaluation.ProjectLoadSettings" />
+      </Parameters>
+      <Docs>
+        <param name="projectFile">Der Pfad zur Projektquelldatei ausgewertet werden soll.</param>
+        <param name="globalProperties">Globale Eigenschaften für die Auswertung. Ist möglicherweise NULL, in diesem Fall werden die globalen Eigenschaften der enthaltenden Projektauflistung verwendet.</param>
+        <param name="toolsVersion">Die Toolsversion. Ist möglicherweise NULL.</param>
+        <param name="subToolsetVersion">Die Toolsetversion "Sub". Ist möglicherweise NULL.</param>
+        <param name="projectCollection">Die Projekt-Auflistung des Projekts wird hinzugefügt. Darf nicht null sein.</param>
+        <param name="loadSettings">Die Load-Einstellungen, für die Auswertung verwendet werden soll.</param>
+        <summary>Erstellt ein Projekt, und wertet ihn aus der Quelle angegebenen Projektdatei und mit angegebenen globalen Eigenschaften, Tools und Versionen unter-Toolsets, projektauflistung und ladeeinstellungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Projekt wird der angegebenen Projektsammlung hinzugefügt.  
+  
+ Löst InvalidProjectFileException aus, wenn die Auswertung fehlschlägt. InvalidOperationException ausgelöst, wenn bereits ein entsprechendes Projekt vorhanden ist, die in der projektauflistung geladen werden. E/a-bezogenen Ausnahmen auslösen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Project (System.Xml.XmlReader xmlReader, System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, string toolsVersion, string subToolsetVersion, Microsoft.Build.Evaluation.ProjectCollection projectCollection, Microsoft.Build.Evaluation.ProjectLoadSettings loadSettings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlReader xmlReader, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, string toolsVersion, string subToolsetVersion, class Microsoft.Build.Evaluation.ProjectCollection projectCollection, valuetype Microsoft.Build.Evaluation.ProjectLoadSettings loadSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.#ctor(System.Xml.XmlReader,System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String,Microsoft.Build.Evaluation.ProjectCollection,Microsoft.Build.Evaluation.ProjectLoadSettings)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="xmlReader" Type="System.Xml.XmlReader" />
+        <Parameter Name="globalProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="toolsVersion" Type="System.String" />
+        <Parameter Name="subToolsetVersion" Type="System.String" />
+        <Parameter Name="projectCollection" Type="Microsoft.Build.Evaluation.ProjectCollection" />
+        <Parameter Name="loadSettings" Type="Microsoft.Build.Evaluation.ProjectLoadSettings" />
+      </Parameters>
+      <Docs>
+        <param name="xmlReader">XML-Reader zum Lesen von Projektquellcode.</param>
+        <param name="globalProperties">Globale Eigenschaften für die Auswertung. Ist möglicherweise NULL, in diesem Fall werden die globalen Eigenschaften der enthaltenden Projektauflistung verwendet.</param>
+        <param name="toolsVersion">ToolsVersion für die Auswertung. Ist möglicherweise NULL.</param>
+        <param name="subToolsetVersion">Sub-Toolset-Version für die Auswertung. Ist möglicherweise NULL.</param>
+        <param name="projectCollection">Die Projekt-Auflistung des Projekts wird hinzugefügt. Darf nicht null sein.</param>
+        <param name="loadSettings">Die Load-Einstellungen, für die Auswertung verwendet werden soll.</param>
+        <summary>Erstellt ein Projekt, und wertet den Quellcode aus dem angegebenen XML-Reader. Der Quellcode wird mit den angegebenen globalen Eigenschaften, Tools und unter-Toolsets Versionen Projektsammlung und Einstellungen zum Laden von ausgewertet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Projekt wird der angegebenen Projektsammlung hinzugefügt, wenn dieses Projekt oder der angegebene Projektstamm der vollständige Pfad zur Quelldatei des Projekts angegeben ist.  
+  
+ Löst InvalidProjectFileException aus, wenn die Auswertung fehlschlägt. InvalidOperationException ausgelöst, wenn bereits ein entsprechendes Projekt vorhanden ist, die in der projektauflistung geladen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddItem">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.Build.Evaluation.ProjectItem&gt; AddItem (string itemType, string unevaluatedInclude);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IList`1&lt;class Microsoft.Build.Evaluation.ProjectItem&gt; AddItem(string itemType, string unevaluatedInclude) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.AddItem(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Build.Evaluation.ProjectItem&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemType" Type="System.String" />
+        <Parameter Name="unevaluatedInclude" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="itemType">Der Elementtyp des hinzugefügten Elements.</param>
+        <param name="unevaluatedInclude">Include-Attribut des Elements, das hinzugefügt werden.</param>
+        <summary>Fügt ein Element ohne Metadaten zum Projekt hinzu.</summary>
+        <returns>Gibt das hinzugefügte Element zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Metadaten kann später hinzugefügt werden. Die Quelldateien des Projekts werden nicht geändert werden, wenn ein Platzhalterausdruck bereits das neue Element enthält.  
+  
+ Auswertung erfolgt auf Grundlage der besten Leistung. Elemente, die in die Quelldateien des Projekts, befolgen das neue Element definiert sind, können für die Auswertung verwendet werden. Nur dieses Element wird ausgewertet. Andere Elemente, die von ihm abhängig sind möglicherweise sind nicht betroffen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddItem">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.Build.Evaluation.ProjectItem&gt; AddItem (string itemType, string unevaluatedInclude, System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;string,string&gt;&gt; metadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IList`1&lt;class Microsoft.Build.Evaluation.ProjectItem&gt; AddItem(string itemType, string unevaluatedInclude, class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;string, string&gt;&gt; metadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.AddItem(System.String,System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Build.Evaluation.ProjectItem&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemType" Type="System.String" />
+        <Parameter Name="unevaluatedInclude" Type="System.String" />
+        <Parameter Name="metadata" Type="System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.String&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="itemType">Der Elementtyp des hinzugefügten Elements.</param>
+        <param name="unevaluatedInclude">Include-Attribut des Elements, das hinzugefügt werden.</param>
+        <param name="metadata">Die Metadaten des hinzugefügten Elements.</param>
+        <summary>Ein Element mit den angegebenen Metadaten und dem Projekt hinzugefügt.</summary>
+        <returns>Gibt das hinzugefügte Element zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Metadaten kann null sein, die keine Metadaten angibt.  
+  
+ Auswertung erfolgt auf Grundlage der besten Leistung. Elemente, die in die Quelldateien des Projekts, befolgen das neue Element definiert sind, können für die Auswertung verwendet werden. Nur dieses Element wird ausgewertet. Andere Elemente, die von ihm abhängig sind möglicherweise sind nicht betroffen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddItemFast">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.Build.Evaluation.ProjectItem&gt; AddItemFast (string itemType, string unevaluatedInclude);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IList`1&lt;class Microsoft.Build.Evaluation.ProjectItem&gt; AddItemFast(string itemType, string unevaluatedInclude) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.AddItemFast(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Build.Evaluation.ProjectItem&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemType" Type="System.String" />
+        <Parameter Name="unevaluatedInclude" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="itemType">Der Elementtyp hinzugefügt werden.</param>
+        <param name="unevaluatedInclude">Der nicht ausgewertete Include-Attribut, das das Element hinzugefügt werden.</param>
+        <summary>Fügt ein Element ohne Metadaten zum Projekt hinzu.  Ermittelt nicht ermitteln, ob ein vorhandener Platzhalter bereits das neue Element übereinstimmt, sofern dies nicht das erste Element in eine Elementgruppe.  Ermittelt nicht um das neue Element in der Nähe ähnliche Elemente zu suchen.</summary>
+        <returns>Gibt eine Liste der Projektelemente hinzugefügt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fügt das Element an die erste Elementgruppe, verfügt nicht über eine Bedingung und weist keine untergeordneten Elemente oder, dessen erste untergeordnete Element ein Element des gleichen Typs ist.  
+  
+ Auf Grundlage der besten Leistung ergibt:-erweitert mit allen Elementen. Elemente, die in der XML-Code unter dem neuen Element definiert werden können verwendet werden, auch wenn in einer wirklichen Auswertung sie nicht wären.  
+  
+ Nur dieses Element wird ausgewertet. Andere Elemente, die von ihm abhängig sind möglicherweise sind nicht betroffen.  
+  
+ Dies ist eine Annehmlichkeit, dass er im Klaren sind wird nicht unbedingt lassen Sie das Projekt in eine vollkommen selbstständigen Zustand bis erneute Bewertung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddItemFast">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.Build.Evaluation.ProjectItem&gt; AddItemFast (string itemType, string unevaluatedInclude, System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;string,string&gt;&gt; metadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IList`1&lt;class Microsoft.Build.Evaluation.ProjectItem&gt; AddItemFast(string itemType, string unevaluatedInclude, class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;string, string&gt;&gt; metadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.AddItemFast(System.String,System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Build.Evaluation.ProjectItem&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemType" Type="System.String" />
+        <Parameter Name="unevaluatedInclude" Type="System.String" />
+        <Parameter Name="metadata" Type="System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.String&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="itemType">Der Elementtyp hinzugefügt werden.</param>
+        <param name="unevaluatedInclude">Der nicht ausgewertete Include-Attribut, das das Element hinzugefügt werden.</param>
+        <param name="metadata">Die Metadaten hinzugefügt werden.</param>
+        <summary>Fügt ein Element mit Metadaten zum Projekt hinzu. Metadaten kann null sein, der angibt, sind keine Metadaten. Ermittelt nicht ermitteln, ob ein vorhandener Platzhalter bereits das neue Element übereinstimmt, sofern dies nicht das erste Element in eine Elementgruppe. Ermittelt nicht um das neue Element in der Nähe ähnliche Elemente zu suchen.</summary>
+        <returns>Gibt eine Liste der Projektelemente hinzugefügt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fügt das Element an die erste Elementgruppe, verfügt nicht über eine Bedingung und weist keine untergeordneten Elemente oder, dessen erste untergeordnete Element ein Element des gleichen Typs ist.  
+  
+ Auf Grundlage der besten Leistung ergibt:-erweitert mit allen Elementen. Elemente, die in der XML-Code unter dem neuen Element definiert werden können verwendet werden, auch wenn in einer wirklichen Auswertung sie nicht wären.  
+  
+ Nur dieses Element wird ausgewertet. Andere Elemente, die von ihm abhängig sind möglicherweise ist nicht betroffen.  
+  
+ Dies ist eine Annehmlichkeit, dass er im Klaren sind wird nicht unbedingt lassen Sie das Projekt in eine vollkommen selbstständigen Zustand bis erneute Bewertung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllEvaluatedItemDefinitionMetadata">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectMetadata&gt; AllEvaluatedItemDefinitionMetadata { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Build.Evaluation.ProjectMetadata&gt; AllEvaluatedItemDefinitionMetadata" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.AllEvaluatedItemDefinitionMetadata" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectMetadata&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle Elementmetadaten für Definition bei der Auswertung ab.</summary>
+        <value>Alle Element Definition Metadaten, die bei der Auswertung zurückgegeben. Dies schließt keine Elemente, deren Bedingungen nicht auf "true" ausgewertet noch Definition-Elementmetadaten, die seit der letzten Auswertung hinzugefügt wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Elementmetadaten werden während der zweiten Auswertungsübergabe gelesen. Im Gegensatz zu den Metadaten, die von der ItemDefinitions-Eigenschaft zurückgegeben diese Metadaten sortiert ist, und enthält alle Metadaten, die anschließend mit dem gleichen Namen und den Elementtyp außer Kraft gesetzt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllEvaluatedItems">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectItem&gt; AllEvaluatedItems { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Build.Evaluation.ProjectItem&gt; AllEvaluatedItems" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.AllEvaluatedItems" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectItem&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Enumerator über alle Elemente, die bei der Auswertung ab. Diese werden beim dritten Auswertungsübergabe gelesen.</summary>
+        <value>Gibt einen Enumerator für alle Elemente, die bei der Auswertung zurück. Diese werden beim dritten Auswertungsübergabe gelesen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Gegensatz zu diese Elemente, die von der Items-Eigenschaft zurückgegeben wird werden diese in Bezug auf alle anderen Elemente, die bei der Auswertung, nicht nur in Bezug auf die Elemente des gleichen Elementtyps sortiert sortiert.  
+  
+ In einigen Anwendungen können diese vollständige gegenseitige Reihenfolge von Bedeutung ist, und solche Hosts, die diese Eigenschaft verwenden.  
+  
+ Die Enumeration enthält keine Elemente, deren Bedingungen nicht auf "true" ausgewertet, noch umfasst alle Elemente, die seit der letzten Auswertung hinzugefügt wurden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllEvaluatedProperties">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectProperty&gt; AllEvaluatedProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Build.Evaluation.ProjectProperty&gt; AllEvaluatedProperties" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.AllEvaluatedProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectProperty&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle Eigenschaften, die bei der Auswertung ab.</summary>
+        <value>Alle Eigenschaften, die bei der Auswertung zurückgegeben. Dies schließt keine Eigenschaften, deren Bedingungen nicht auf "true" ausgewertet, und alle Eigenschaften, die seit der letzten Auswertung hinzugefügt wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaften werden während der ersten Auswertungsübergabe gelesen. Im Gegensatz zu Eigenschaften, die durch die Properties-Eigenschaft zurückgegeben werden diese sind sortiert und enthält alle Eigenschaften, die anschließend mit dem gleichen Namen überschrieben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Build">
+      <MemberSignature Language="C#" Value="public bool Build ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Build() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.Build" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt dieses Projekt mit der Standardziele.</summary>
+        <returns>Gibt bei Erfolg True zurück; "false" andernfalls.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Festlegen oder virtuelle Elemente abrufen, die für erstellungszwecke, Klonen explizit eine Projektinstanz und erstellen, die. Diese Methode ändert nicht das Projektobjekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Build">
+      <MemberSignature Language="C#" Value="public bool Build (Microsoft.Build.Framework.ILogger logger);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Build(class Microsoft.Build.Framework.ILogger logger) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.Build(Microsoft.Build.Framework.ILogger)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="logger" Type="Microsoft.Build.Framework.ILogger" />
+      </Parameters>
+      <Docs>
+        <param name="logger">Die Protokollierung während des Builds verwendet werden.</param>
+        <summary>Erstellt dieses Projekt mit den Standardzielen und die angegebene Protokollierung.</summary>
+        <returns>Gibt bei Erfolg True zurück; "false" andernfalls.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Festlegen oder virtuelle Elemente abrufen, die für erstellungszwecke, Klonen explizit eine Projektinstanz und erstellen, die. Diese Methode ändert nicht das Projektobjekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Build">
+      <MemberSignature Language="C#" Value="public bool Build (System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ILogger&gt; loggers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Build(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Build.Framework.ILogger&gt; loggers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.Build(System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="loggers" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ILogger&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="loggers">Ein Enumerator für alle Protokollierungen, die während des Builds verwendet werden.</param>
+        <summary>Erstellt dieses Projekt mit den Standardzielen und die angegebenen Protokollierungen.</summary>
+        <returns>Gibt bei Erfolg True zurück; "false" andernfalls.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Festlegen oder virtuelle Elemente abrufen, die für erstellungszwecke, Klonen explizit eine Projektinstanz und erstellen, die. Diese Methode ändert nicht das Projektobjekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Build">
+      <MemberSignature Language="C#" Value="public bool Build (string target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Build(string target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.Build(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="target">Das Ziel erstellt werden sollen.</param>
+        <summary>Erstellt dieses Projekt und erstellen das angegebene Ziel.</summary>
+        <returns>Gibt bei Erfolg True zurück; "false" andernfalls.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Festlegen oder virtuelle Elemente abrufen, die für erstellungszwecke, Klonen explizit eine Projektinstanz und erstellen, die. Diese Methode ändert nicht das Projektobjekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Build">
+      <MemberSignature Language="C#" Value="public bool Build (string[] targets);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Build(string[] targets) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.Build(System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targets" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="targets">Ein Array von zu erstellenden Ziele.</param>
+        <summary>Erstellt dieses Projekt und Erstellen von bestimmten Zielen.</summary>
+        <returns>Gibt bei Erfolg True zurück; "false" andernfalls.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Festlegen oder virtuelle Elemente abrufen, die für erstellungszwecke, Klonen explizit eine Projektinstanz und erstellen, die. Diese Methode ändert nicht das Projektobjekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Build">
+      <MemberSignature Language="C#" Value="public bool Build (System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ILogger&gt; loggers, System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Logging.ForwardingLoggerRecord&gt; remoteLoggers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Build(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Build.Framework.ILogger&gt; loggers, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Build.Logging.ForwardingLoggerRecord&gt; remoteLoggers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.Build(System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger},System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="loggers" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ILogger&gt;" />
+        <Parameter Name="remoteLoggers" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Logging.ForwardingLoggerRecord&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="loggers">Die Protokollierungen, die während des Builds verwendet werden.</param>
+        <param name="remoteLoggers">Die Remoteprotokollierungen während des Builds verwendet werden.</param>
+        <summary>Erstellt dieses Projekt mit den Standardzielen und den angegebenen Protokollierungen und Remoteprotokollierungen.</summary>
+        <returns>Gibt bei Erfolg True zurück; "false" andernfalls.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Festlegen oder virtuelle Elemente abrufen, die für erstellungszwecke, Klonen explizit eine Projektinstanz und erstellen, die. Diese Methode ändert nicht das Projektobjekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Build">
+      <MemberSignature Language="C#" Value="public bool Build (string target, System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ILogger&gt; loggers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Build(string target, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Build.Framework.ILogger&gt; loggers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.Build(System.String,System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.String" />
+        <Parameter Name="loggers" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ILogger&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="target">Das Ziel erstellt werden sollen.</param>
+        <param name="loggers">Die Protokollierungen, die während des Builds verwendet werden.</param>
+        <summary>Erstellt dieses Projekt und erstellen das angegebene Ziel und mithilfe des angegebenen Protokollierungen.</summary>
+        <returns>Gibt bei Erfolg True zurück; "false" andernfalls.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Festlegen oder virtuelle Elemente abrufen, die für erstellungszwecke, Klonen explizit eine Projektinstanz und erstellen, die. Diese Methode ändert nicht das Projektobjekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Build">
+      <MemberSignature Language="C#" Value="public bool Build (string[] targets, System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ILogger&gt; loggers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Build(string[] targets, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Build.Framework.ILogger&gt; loggers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.Build(System.String[],System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targets" Type="System.String[]" />
+        <Parameter Name="loggers" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ILogger&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="targets">Die Ziele erstellt werden sollen.</param>
+        <param name="loggers">Die Protokollierungen, die während des Builds verwendet werden.</param>
+        <summary>Erstellt dieses Projekt und die angegebenen Ziele erstellen und mithilfe des angegebenen Protokollierungen.</summary>
+        <returns>Gibt bei Erfolg True zurück; "false" andernfalls.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Festlegen oder virtuelle Elemente abrufen, die für erstellungszwecke, Klonen explizit eine Projektinstanz und erstellen, die. Diese Methode ändert nicht das Projektobjekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Build">
+      <MemberSignature Language="C#" Value="public bool Build (string target, System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ILogger&gt; loggers, System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Logging.ForwardingLoggerRecord&gt; remoteLoggers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Build(string target, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Build.Framework.ILogger&gt; loggers, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Build.Logging.ForwardingLoggerRecord&gt; remoteLoggers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.Build(System.String,System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger},System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.String" />
+        <Parameter Name="loggers" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ILogger&gt;" />
+        <Parameter Name="remoteLoggers" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Logging.ForwardingLoggerRecord&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="target">Das Ziel erstellt werden sollen.</param>
+        <param name="loggers">Die Protokollierungen, die während des Builds verwendet werden.</param>
+        <param name="remoteLoggers">Die Remoteprotokollierungen während des Builds verwendet werden.</param>
+        <summary>Erstellt dieses Projekt und erstellen das angegebene Ziel und unter Verwendung des angegebenen Protokollierungen und Remoteprotokollierungen.</summary>
+        <returns>Gibt bei Erfolg True zurück; "false" andernfalls.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Festlegen oder virtuelle Elemente abrufen, die für erstellungszwecke, Klonen explizit eine Projektinstanz und erstellen, die. Diese Methode ändert nicht das Projektobjekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Build">
+      <MemberSignature Language="C#" Value="public bool Build (string[] targets, System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ILogger&gt; loggers, System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Logging.ForwardingLoggerRecord&gt; remoteLoggers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Build(string[] targets, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Build.Framework.ILogger&gt; loggers, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Build.Logging.ForwardingLoggerRecord&gt; remoteLoggers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.Build(System.String[],System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger},System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targets" Type="System.String[]" />
+        <Parameter Name="loggers" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ILogger&gt;" />
+        <Parameter Name="remoteLoggers" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Logging.ForwardingLoggerRecord&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="targets">Die Ziele erstellt werden sollen.</param>
+        <param name="loggers">Die Protokollierungen, die während des Builds verwendet werden.</param>
+        <param name="remoteLoggers">Die Remoteprotokollierungen während des Builds verwendet werden.</param>
+        <summary>Erstellt dieses Projekt und Erstellen von bestimmten Zielen und unter Verwendung des angegebenen Protokollierungen und Remoteprotokollierungen.</summary>
+        <returns>Gibt bei Erfolg True zurück; "false" andernfalls.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Festlegen oder virtuelle Elemente abrufen, die für erstellungszwecke, Klonen explizit eine Projektinstanz und erstellen, die. Diese Methode ändert nicht das Projektobjekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConditionedProperties">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,System.Collections.Generic.List&lt;string&gt;&gt; ConditionedProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, class System.Collections.Generic.List`1&lt;string&gt;&gt; ConditionedProperties" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.ConditionedProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Collections.Generic.List&lt;System.String&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von möglichen Eigenschaftswerte für Eigenschaften, die zum Auswerten von Bedingungen finden Sie auf Eigenschaften, Eigenschaftsgruppen, Importe, verwendet und wann der.</summary>
+        <value>Gibt eine Auflistung von möglichen Eigenschaftswerte für Eigenschaften, die zum Auswerten von Bedingungen finden Sie auf Eigenschaften, Eigenschaftsgruppen, Importe, verwendet und wann der. Die Auflistung liegt im kanonischen Format. Der Name des Eintrags ist der Name der Eigenschaft, die ausgewertet werden, und der Wert ist eine Liste der möglichen Eigenschaftswerte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beispielsweise würde die folgenden Bedingungen auf Eigenschaften in einem Projekt vorhanden sein: Condition="'$(Configuration)' &#124;$(Platform)" == "Debug &#124; X86" "Condition="'$(Configuration)' "=="Release"" die Tabelle würde mit {"Konfiguration", {ausgefüllt werden "Debug", "Release"}} {"Platform", {"X86"}} diese Auflistung wird von Visual Studio verwendet, um zu bestimmen, die im Projekt definierten Konfigurationen  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="CreateProjectInstance">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Erstellt eine Projektinstanz basierend auf diesem Projekt jedoch vollständig getrennt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kann verwendet werden, um unabhängig zu erstellen. Das ursprüngliche Projekt wird vor dem Erstellen der Instanz ausgewertet, wenn erforderlich, damit, dass das ursprüngliche Projekt als markiert ist unverändert bleiben sollen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="CreateProjectInstance">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.ProjectInstance CreateProjectInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Execution.ProjectInstance CreateProjectInstance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.CreateProjectInstance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Execution.ProjectInstance</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Projektinstanz basierend auf diesem Projekt jedoch vollständig getrennt.</summary>
+        <returns>Gibt die Projektinstanz zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kann verwendet werden, um unabhängig zu erstellen. Das ursprüngliche Projekt wird vor dem Erstellen der Instanz ausgewertet, wenn erforderlich, damit, dass das ursprüngliche Projekt als markiert ist unverändert bleiben sollen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateProjectInstance">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.ProjectInstance CreateProjectInstance (Microsoft.Build.Execution.ProjectInstanceSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Execution.ProjectInstance CreateProjectInstance(valuetype Microsoft.Build.Execution.ProjectInstanceSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.CreateProjectInstance(Microsoft.Build.Execution.ProjectInstanceSettings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Execution.ProjectInstance</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="settings" Type="Microsoft.Build.Execution.ProjectInstanceSettings" />
+      </Parameters>
+      <Docs>
+        <param name="settings">Bestimmt, ob der erstellte Projektinstanz unveränderlich ist und ob es sich um ein Nachschlagen Tabelle zur Verbesserung der Leistung enthält.</param>
+        <summary>Erstellt eine Projektinstanz basierend auf diesem Projekt jedoch vollständig getrennt.</summary>
+        <returns>Gibt die Projektinstanz zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kann verwendet werden, um unabhängig zu erstellen. Das ursprüngliche Projekt wird vor dem Erstellen der Instanz ausgewertet, wenn erforderlich, damit, dass das ursprüngliche Projekt als markiert ist unverändert bleiben sollen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DirectoryPath">
+      <MemberSignature Language="C#" Value="public string DirectoryPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DirectoryPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.DirectoryPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Stammverzeichnis für dieses Projekt ab.</summary>
+        <value>Gibt das Stammverzeichnis für dieses Projekt zurück. Das Stammverzeichnis ist nie null. in-Memory-Projekte verwenden das aktuelle Verzeichnis zum Zeitpunkt der Laden des Projekts.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableMarkDirty">
+      <MemberSignature Language="C#" Value="public bool DisableMarkDirty { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DisableMarkDirty" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.DisableMarkDirty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Flag fest, der bestimmt, ob <see cref="M:Microsoft.Build.Evaluation.Project.MarkDirty" /> ist vorübergehend deaktiviert. So können z. B. eine globale Eigenschaft ohne das Projekt geändert markiert für erneute Bewertung daher festgelegt werden.</summary>
+        <value>Gibt ein Flag zurück, der bestimmt, ob <see langword="MarkDirty" /> ist vorübergehend deaktiviert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluationCounter">
+      <MemberSignature Language="C#" Value="public int EvaluationCounter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EvaluationCounter" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.EvaluationCounter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zahl, die jedes Mal, wenn das Projekt erneut ausgewertet wird erhöht.</summary>
+        <value>Der inkrementierten Wert zurückgegeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert sollte mit vorherigen Werte, um festzustellen, ob das Projekt erneut bewertet wurde verglichen werden. Es sollte nicht verwendet werden, um zu bestimmen, wie oft das Projekt wurde neu ausgewertet, da er mehrere für einen bestimmten erneute Auswertung erhöht werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpandString">
+      <MemberSignature Language="C#" Value="public string ExpandString (string unexpandedValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ExpandString(string unexpandedValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.ExpandString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="unexpandedValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="unexpandedValue">Die Zeichenfolge ausgewertet werden soll.</param>
+        <summary>Wertet den angegebene Zeichenfolge durch Erweitern von Elementen und Eigenschaften. Die Zeichenfolge wird ausgewertet, als ob sie am Ende der Projektdatei gefunden wurden.</summary>
+        <returns>Die ausgewertete Zeichenfolge zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann verwendet werden, wenn Best-Effort-Auswertung ausreichend ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullPath">
+      <MemberSignature Language="C#" Value="public string FullPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FullPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.FullPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den vollständigen Pfad zur Projektquelldatei.</summary>
+        <value>Gibt den vollständigen Pfad zur Projektquelldatei zurück. Gibt eine leere Zeichenfolge zurück, wenn das Projekt nicht von der Festplatte geladen wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Festlegen dieser Eigenschaft auf ein Projekt in einer projektauflistung benennt das Projekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEvaluatedItemIncludeEscaped">
+      <MemberSignature Language="C#" Value="public static string GetEvaluatedItemIncludeEscaped (Microsoft.Build.Evaluation.ProjectItem item);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetEvaluatedItemIncludeEscaped(class Microsoft.Build.Evaluation.ProjectItem item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.GetEvaluatedItemIncludeEscaped(Microsoft.Build.Evaluation.ProjectItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="Microsoft.Build.Evaluation.ProjectItem" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das Element, das ausgewertet und mit Escapezeichen versehen werden.</param>
+        <summary>Ruft ausgewertet, die mit Escapezeichen versehenen Wert des Include-Attributs des bereitgestellten Elemente.</summary>
+        <returns>Gibt den ausgewerteten mit Escapezeichen versehen Wert des Include-Attributs des bereitgestellten Elemente.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEvaluatedItemIncludeEscaped">
+      <MemberSignature Language="C#" Value="public static string GetEvaluatedItemIncludeEscaped (Microsoft.Build.Evaluation.ProjectItemDefinition item);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetEvaluatedItemIncludeEscaped(class Microsoft.Build.Evaluation.ProjectItemDefinition item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.GetEvaluatedItemIncludeEscaped(Microsoft.Build.Evaluation.ProjectItemDefinition)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="Microsoft.Build.Evaluation.ProjectItemDefinition" />
+      </Parameters>
+      <Docs>
+        <param name="item">Die Elementdefinition ausgewertet und mit Escapezeichen versehen werden.</param>
+        <summary>Ruft den ausgewerteten, mit Escapezeichen versehenen Wert des Include-Attributs des bereitgestellten Elementdefinition.</summary>
+        <returns>Gibt den Wert des Include-Attributs.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItems">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectItem&gt; GetItems (string itemType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Build.Evaluation.ProjectItem&gt; GetItems(string itemType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.GetItems(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectItem&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="itemType">Der Elementtyp abgerufen werden sollen.</param>
+        <summary>Ruft alle Elemente im Projekt mit den angegebenen Elementtyp ab. Wenn keine vorhanden sind, wird eine leere Liste zurückgegeben. Verwenden Sie AddItem oder RemoveItem, um Elemente in diesem Projekt ändern.</summary>
+        <returns>Gibt alle Elemente im Projekt mit den angegebenen Elementtyp. Gibt eine leere Liste zurück, wenn es keine Elemente mit dem Namen des angegebenen Elements sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie AddItem oder RemoveItem, um Elemente in diesem Projekt ändern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItemsByEvaluatedInclude">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectItem&gt; GetItemsByEvaluatedInclude (string evaluatedInclude);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Build.Evaluation.ProjectItem&gt; GetItemsByEvaluatedInclude(string evaluatedInclude) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.GetItemsByEvaluatedInclude(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectItem&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="evaluatedInclude" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="evaluatedInclude">Die ausgewerteten Include-Attribut.</param>
+        <summary>Ruft alle Elemente, die mit dem angegebene ausgewertete Include-Attribut enthalten.</summary>
+        <returns>Gibt alle Elemente, die mit dem angegebene ausgewertete Include-Attribut enthalten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann z. B. alle Elemente zurück, die die ausgewertete Include-Attribut "component.cpp" aufweisen. In der Regel sind 0 (null) oder ein Element zurückgegeben. Allerdings gibt es möglicherweise mehrere Elemente mit dem gleichen Pfad und die verschiedenen Elementtypen oder sogar mit den gleichen Elementtypen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItemsIgnoringCondition">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectItem&gt; GetItemsIgnoringCondition (string itemType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Build.Evaluation.ProjectItem&gt; GetItemsIgnoringCondition(string itemType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.GetItemsIgnoringCondition(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectItem&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="itemType">Der Elementtyp abgerufen werden sollen.</param>
+        <summary>Ruft alle Elemente im Projekt des angegebenen Typs ab, unabhängig davon, ob ihre Condition-Attribut auf "true" ausgewertet wird. Dies ist eine schreibgeschützte Liste: mit AddItem oder RemoveItem können Elemente in diesem Projekt ändern.</summary>
+        <returns>Gibt alle Elemente im Projekt des angegebenen Typs zurück, unabhängig davon, ob ihre Condition-Attribut auf "true" ausgewertet wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist eine schreibgeschützte Liste. Verwenden Sie AddItem oder RemoveItem, um Elemente in diesem Projekt ändern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLogicalProject">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Construction.ProjectElement&gt; GetLogicalProject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Build.Construction.ProjectElement&gt; GetLogicalProject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.GetLogicalProject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Construction.ProjectElement&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Enumerator für alle Elemente im "logischen Projekt" ab. Das logische Projekt wird definiert, als der nicht ausgewerteten Projekt aus der einzelnen MSBuild-Datei, die das Ergebnis ist abgerufen inlining den Text aller Importe von der ursprünglichen MSBuild-Projektdatei manifest angegeben.</summary>
+        <returns>Gibt einen Enumerator für alle Elemente im "logischen Projekt" zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das logische Projekt wird definiert, das nicht ausgewertete Projekt abgerufenen aus der einzelnen MSBuild-Datei, die das Ergebnis Inline einschließlich ist den Text aller Importe von der ursprünglichen MSBuild-Projektdatei manifest angegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMetadataValueEscaped">
+      <MemberSignature Language="C#" Value="public static string GetMetadataValueEscaped (Microsoft.Build.Evaluation.ProjectMetadata metadatum);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetMetadataValueEscaped(class Microsoft.Build.Evaluation.ProjectMetadata metadatum) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.GetMetadataValueEscaped(Microsoft.Build.Evaluation.ProjectMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadatum" Type="Microsoft.Build.Evaluation.ProjectMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="metadatum">Das Metadatum, das mit Escapezeichen versehen werden.</param>
+        <summary>Ruft den Wert des bereitgestellten Metadatums mit Escapezeichen.</summary>
+        <returns>Ruft den Wert des bereitgestellten Metadatums mit Escapezeichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMetadataValueEscaped">
+      <MemberSignature Language="C#" Value="public static string GetMetadataValueEscaped (Microsoft.Build.Evaluation.ProjectItem item, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetMetadataValueEscaped(class Microsoft.Build.Evaluation.ProjectItem item, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.GetMetadataValueEscaped(Microsoft.Build.Evaluation.ProjectItem,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="Microsoft.Build.Evaluation.ProjectItem" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das Element, dessen Metadaten mit Escapezeichen versehen werden.</param>
+        <param name="name">Der Name der Metadaten, die mit Escapezeichen versehen werden.</param>
+        <summary>Ruft den Wert des Metadatums mit dem angegebenen Namen, die mit Escapezeichen für das angegebene Element ab.</summary>
+        <returns>Ruft den Wert des Metadatums mit dem angegebenen Namen, die mit Escapezeichen für das angegebene Element ab.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMetadataValueEscaped">
+      <MemberSignature Language="C#" Value="public static string GetMetadataValueEscaped (Microsoft.Build.Evaluation.ProjectItemDefinition item, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetMetadataValueEscaped(class Microsoft.Build.Evaluation.ProjectItemDefinition item, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.GetMetadataValueEscaped(Microsoft.Build.Evaluation.ProjectItemDefinition,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="Microsoft.Build.Evaluation.ProjectItemDefinition" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="item">Die Elementdefinition, deren Metadaten sind mit einem Escapezeichen versehen werden.</param>
+        <param name="name">Der Name der Metadaten, die mit Escapezeichen versehen werden.</param>
+        <summary>Ruft den Wert des Metadatums mit dem angegebenen Namen, die mit Escapezeichen in der bereitgestellten Elementdefinition ab.</summary>
+        <returns>Gibt den Wert des Metadatums mit dem angegebenen Namen, die mit Escapezeichen in der bereitgestellten Elementdefinition zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Evaluation.ProjectProperty GetProperty (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Evaluation.ProjectProperty GetProperty(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.GetProperty(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Evaluation.ProjectProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der abzurufenden Eigenschaft.</param>
+        <summary>Ruft eine Eigenschaft in das Projekt, das dem angegebenen Namen ab.</summary>
+        <returns>Gibt eine Eigenschaft im Projekt mit dem angegebenen Namen zurück. Null zurück, wenn keine Eigenschaft mit diesem Namen vorhanden ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyValue">
+      <MemberSignature Language="C#" Value="public string GetPropertyValue (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetPropertyValue(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.GetPropertyValue(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Eigenschaft, deren Wert abgerufen wird.</param>
+        <summary>Ruft den Wert der angegebenen Eigenschaft in diesem Projekt ab.</summary>
+        <returns>Gibt den Wert der angegebenen Eigenschaft in diesem Projekt zurück. Eine leere Zeichenfolge zurück, wenn keine Eigenschaft mit diesem Namen vorhanden ist. Escapesequenzen werden vor der Rückgabe der Zeichenfolge konvertiert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Eigenschaft mit einem Wert von leere Zeichenfolge und keine Eigenschaft überhaupt nicht Unterschied zwischen dieser Methode. Um festzustellen, ob eine Eigenschaft überhaupt im Projekt enthalten ist, verwenden Sie GetProperty(name).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyValueEscaped">
+      <MemberSignature Language="C#" Value="public static string GetPropertyValueEscaped (Microsoft.Build.Evaluation.ProjectProperty property);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPropertyValueEscaped(class Microsoft.Build.Evaluation.ProjectProperty property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.GetPropertyValueEscaped(Microsoft.Build.Evaluation.ProjectProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="property" Type="Microsoft.Build.Evaluation.ProjectProperty" />
+      </Parameters>
+      <Docs>
+        <param name="property">Die Eigenschaft, die mit Escapezeichen versehen werden.</param>
+        <summary>Erhalten Sie den Wert der angegebenen Eigenschaft, die mit Escapezeichen.</summary>
+        <returns>Gibt den Wert der angegebenen Eigenschaft, die mit Escapezeichen zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlobalProperties">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,string&gt; GlobalProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; GlobalProperties" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.GlobalProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Wörterbuch der globalen Eigenschaften für die Auswertung des Projekts verwendet.</summary>
+        <value>Gibt ein Wörterbuch mit den globalen Eigenschaften für die Auswertung des Projekts verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist die öffentlich verfügbar gemachten Getter, der in einer nur-Lese dead IDictionary übersetzt\<Zeichenfolge "," String ">.  
+  
+ Damit Sie leicht erkennen, wenn Fehler auftreten, festlegen und Entfernen von globalen Eigenschaften erfolgt mit <xref:Microsoft.Build.Evaluation.Project.SetGlobalProperty%2A> und <xref:Microsoft.Build.Evaluation.Project.RemoveGlobalProperty%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Imports">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.Build.Evaluation.ResolvedImport&gt; Imports { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;valuetype Microsoft.Build.Evaluation.ResolvedImport&gt; Imports" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.Imports" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Build.Evaluation.ResolvedImport&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste aller Dateien, die zur Auswertung der dieses Projekt beigetragen haben.</summary>
+        <value>Gibt eine Liste aller Dateien, die beigetragen haben zur Auswertung der dieses Projekt zurück.  
+  
+ Der Name jedes Elements ist der Import-Element, das die zu importierende Datei verursacht hat. Der Wert jedes Elements ist dem Projektstamm des importierten Projekts. Import-Elemente, deren Condition-Attribut auf "false" ausgewertet, werden nicht eingeschlossen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Projektstamm dieses Projekts ist nicht enthalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportsIncludingDuplicates">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.Build.Evaluation.ResolvedImport&gt; ImportsIncludingDuplicates { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;valuetype Microsoft.Build.Evaluation.ResolvedImport&gt; ImportsIncludingDuplicates" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.ImportsIncludingDuplicates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Build.Evaluation.ResolvedImport&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste von doppelten Importen ab, wenn ein Import mehrmals importiert wurde. Nur der erste Import wurde jedoch in der Auswertung verwendet.</summary>
+        <value>Gibt eine Liste von doppelten Importen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBuildEnabled">
+      <MemberSignature Language="C#" Value="public bool IsBuildEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBuildEnabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.IsBuildEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Eigenschaft, die auswählt, ob die Ziele und Aufgaben dieses Projekts erstellt werden können.</summary>
+        <value>Gibt "true" zurück, wenn die Ziele und Aufgaben dieses Projekts erstellt werden können; "false" andernfalls.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kann für Sicherheitszwecke verwendet werden. Standardmäßig hat ein neues Projekt dieselbe Einstellung IsBuildEnabled den Wert als die übergeordnete Projekt-Auflistung, die es enthält. Wenn IsBuildEnabled den Wert "false" ist, schlägt fehl, die Erstellungsmethode für dieses Projekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDirty">
+      <MemberSignature Language="C#" Value="public bool IsDirty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDirty" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.IsDirty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Eigenschaft, die angibt, ob dieses Projekt geändert wurde, damit es neu ausgewertet werden muss.</summary>
+        <value>Gibt eine Eigenschaft, die angibt, ob dieses Projekt geändert wurde, damit es neu ausgewertet werden muss.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Projekt geändert, und muss neu ausgewertet werden, wenn die zugrunde liegenden Projektquellcode, einschließlich Änderungen an den Dateien importiert. Ein Projekt wird ebenfalls geändert müssen neu ausgewertet werden, wenn das Projekt Tool Änderungen festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemDefinitions">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,Microsoft.Build.Evaluation.ProjectItemDefinition&gt; ItemDefinitions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, class Microsoft.Build.Evaluation.ProjectItemDefinition&gt; ItemDefinitions" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.ItemDefinitions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,Microsoft.Build.Evaluation.ProjectItemDefinition&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Wörterbuch von Elementdefinitionen in diesem Projekt an, nach Argumentnamen geordnet Elementtyp ab.</summary>
+        <value>Gibt ein Wörterbuch von Elementdefinitionen in diesem Projekt an, nach Argumentnamen geordnet Elementtyp zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Items">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectItem&gt; Items { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Build.Evaluation.ProjectItem&gt; Items" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.Items" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectItem&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Enumerator über alle Elemente in diesem Projekt geordnet in Gruppen von Elementtypen ab.</summary>
+        <value>Gibt einen Enumerator für alle Elemente in diesem Projekt innerhalb von Gruppen von Elementtypen sortiert zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemsIgnoringCondition">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectItem&gt; ItemsIgnoringCondition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Build.Evaluation.ProjectItem&gt; ItemsIgnoringCondition" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.ItemsIgnoringCondition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectItem&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Enumerator über alle Elemente in diesem Projekt geordnet in Gruppen von Elementtypen ab.</summary>
+        <value>Gibt einen Enumerator zurück, über alle Elemente in diesem Projekt, geordnet in Gruppen von Elementtypen, einschließlich der Elemente, deren Bedingungen, die innerhalb der Elementgruppen, deren Bedingung "false" ergibt, enthalten sind oder auf "false" ausgewertet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dient zum Anzeigen aller Elemente, selbst wenn sie nicht Teil des Builds in der aktuellen Konfiguration sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemTypes">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;string&gt; ItemTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;string&gt; ItemTypes" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.ItemTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Enumerator über alle Elementtypen in diesem Projekt ab.</summary>
+        <value>Gibt einen Enumerator für alle Elementtypen in diesem Projekt zurück. Dies ist eine geordnete Auflistung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarkDirty">
+      <MemberSignature Language="C#" Value="public void MarkDirty ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MarkDirty() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.MarkDirty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dieses Projekt als geändert gekennzeichnet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist nur selten notwendig, diese Methode explizit aufrufen, da alle Änderungen, die Auswirkungen auf ein Projekt automatisch als geändert markiert.  
+  
+ In manchen Fällen muss jedoch diese Methode aufgerufen werden. Ein Projekt kann z. B. ein Import-Element sein, eine Datei, deren Bedingung abhängig, das auf einem Datenträger vorhanden ist. Wenn diese Datei zum Zeitpunkt der Auswertung nicht vorhanden, und es nach Auswertung erstellt wird, muss das Projekt explizit markiert werden als geändert.  
+  
+ Die <xref:Microsoft.Build.Evaluation.Project.ReevaluateIfNecessary%2A> Methode verwendet diese Eigenschaft, um festzustellen, ob eine Auswertung notwendig ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectCollection">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Evaluation.ProjectCollection ProjectCollection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Evaluation.ProjectCollection ProjectCollection" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.ProjectCollection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Evaluation.ProjectCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die projektauflistung, die dieses Projekt enthält.</summary>
+        <value>Gibt die projektauflistung, die dieses Projekt enthält, die niemals null ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectFileLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation ProjectFileLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation ProjectFileLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.ProjectFileLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Speicherort der ursprünglichen Datei selbst, aber keine bestimmte Inhalt auf. Wenn die Datei kein Name zugewiesen wurde, ist dies ein leerer Speicherort. Dies ist ein legitimen Fall, dass kein Speicherort.</summary>
+        <value>Gibt den ursprünglichen Speicherort oder ein leerer Speicherort zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectProperty&gt; Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Build.Evaluation.ProjectProperty&gt; Properties" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectProperty&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Enumerator für alle Eigenschaften in diesem Projekt ab. Dies ist eine ungeordnete Auflistung.</summary>
+        <value>Gibt einen Enumerator für alle Eigenschaften in diesem Projekt zurück. Da Eigenschaften ausgewertet werden, wie sie angezeigt werden, ist dies eine ungeordnete Auflistung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReevaluateIfNecessary">
+      <MemberSignature Language="C#" Value="public void ReevaluateIfNecessary ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ReevaluateIfNecessary() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.ReevaluateIfNecessary" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Suchpfad des Projekts, um alle Änderungen zu übernehmen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Projekt wird erneut bewertet werden, nur dann, wenn es als geändert markiert wird. Erneute Auswertung enthält alle Änderungen, die auf den Quellcode des Projekts.  
+  
+ Löst InvalidProjectFileException aus, wenn die Auswertung fehlschlägt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveGlobalProperty">
+      <MemberSignature Language="C#" Value="public bool RemoveGlobalProperty (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool RemoveGlobalProperty(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.RemoveGlobalProperty(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der globalen Eigenschaft entfernt werden soll.</param>
+        <summary>Entfernt eine globale Eigenschaft und das Projekt als geändert gekennzeichnet.</summary>
+        <returns>Gibt True zurück, wenn der Wert der globalen Eigenschaft festgelegt wurde.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveItem">
+      <MemberSignature Language="C#" Value="public bool RemoveItem (Microsoft.Build.Evaluation.ProjectItem item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool RemoveItem(class Microsoft.Build.Evaluation.ProjectItem item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.RemoveItem(Microsoft.Build.Evaluation.ProjectItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="Microsoft.Build.Evaluation.ProjectItem" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das zu entfernende Element.</param>
+        <summary>Entfernt ein Element aus dem Projekt. Das Element entfernt werden soll, muss im Projekt vorhanden sein und darf nicht aus einer importierten Datei stammen.</summary>
+        <returns>Gibt "true" zurück, wenn das Element in diesem ausgewerteten Projekt vorhanden ist; andernfalls "false". Normalerweise gibt diese Methode "true" zurück, da die Methode eine Ausnahme, wenn das angeforderte Element nicht vorhanden ist auslöst. Wenn das Element nur in der Auflistung ItemsIgnoringCondition vorhanden ist, gibt jedoch die Methode "false".</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Elementgruppe festgelegt, enthält das Element leer ist, ist es ebenfalls entfernt.  
+  
+ Wenn das Element aus einem Platzhalter oder eine durch Semikolons getrennte Ausdruck stammt, wird der Ausdruck zuerst in mehrere Elemente erweitert.  
+  
+ Das Projekt wird aktualisiert, aber keine weiteren Auswertung erfolgt, bis die erneute Bewertung. Z. B., wenn ein Element vom Typ "i" wird entfernt, "j" der von ausgewertet wird "@(i)" wird nicht geändert werden, bis die erneute Bewertung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveItems">
+      <MemberSignature Language="C#" Value="public void RemoveItems (System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Evaluation.ProjectItem&gt; items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveItems(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Build.Evaluation.ProjectItem&gt; items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.RemoveItems(System.Collections.Generic.IEnumerable{Microsoft.Build.Evaluation.ProjectItem})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="items" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Evaluation.ProjectItem&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="items">Die Elemente entfernt werden soll.</param>
+        <summary>Die angegebenen Elemente entfernt aus dem Projekt, es sei denn, sie aus einem importierten Projekt stammen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Element aus einem importierten Projekt stammt, ist es einfach übersprungen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveProperty">
+      <MemberSignature Language="C#" Value="public bool RemoveProperty (Microsoft.Build.Evaluation.ProjectProperty property);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool RemoveProperty(class Microsoft.Build.Evaluation.ProjectProperty property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.RemoveProperty(Microsoft.Build.Evaluation.ProjectProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="property" Type="Microsoft.Build.Evaluation.ProjectProperty" />
+      </Parameters>
+      <Docs>
+        <param name="property">Die zu entfernende Eigenschaft.</param>
+        <summary>Entfernt eine Eigenschaft aus dem Projekt. Die Eigenschaft, die entfernt werden, muss im Projekt vorhanden sein und darf nicht aus einer importierten Datei stammen.</summary>
+        <returns>Gibt "true" zurück, wenn die Eigenschaft in diesem ausgewerteten Projekt vorhanden ist; andernfalls "false".</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Eigenschaftsgruppe mit der Eigenschaft leer ist, ist es ebenfalls entfernt.  
+  
+ Das Projekt wird aktualisiert, aber keine weiteren Auswertung erfolgt, bis die erneute Bewertung. Beispielsweise wird "p" entfernt wird, "Q" der von "$(p)" ausgewertet wird nicht bis zum erneuten Auswertung geändert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.Save" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert das Projekt in das Dateisystem, wenn mithilfe der standardzeichencodierung geändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (System.IO.TextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(class System.IO.TextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.Save(System.IO.TextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der TextWriter zum Speichern des Projekts an.</param>
+        <summary>Speichert das Projekt in den angegebenen TextWriter, unabhängig davon, ob das Projekt geändert wurde. Verwendet die zeichencodierung des Textwriters und das Projekt als nicht modifiziert markiert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.Save(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Pfad auf den Quellcode des Projekts.</param>
+        <summary>Speichert das Projekt in das Dateisystem, falls geändert, oder wenn sich der Pfad auf den Quellcode des Projekts ändert, verwenden die standardzeichencodierung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (System.Text.Encoding encoding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(class System.Text.Encoding encoding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.Save(System.Text.Encoding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="encoding" Type="System.Text.Encoding" />
+      </Parameters>
+      <Docs>
+        <param name="encoding">Die zeichencodierung verwendet zum Speichern des Projekts.</param>
+        <summary>Speichert das Projekt in das Dateisystem, wenn mithilfe der angegebenen zeichencodierung geändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (string path, System.Text.Encoding encoding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(string path, class System.Text.Encoding encoding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.Save(System.String,System.Text.Encoding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="encoding" Type="System.Text.Encoding" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Pfad auf den Quellcode des Projekts.</param>
+        <param name="encoding">Die zeichencodierung verwendet zum Speichern des Projekts.</param>
+        <summary>Speichert das Projekt in das Dateisystem, wenn geändert, oder wenn der Pfad auf den Quellcode des Projekts geändert wird, mithilfe der angegebenen zeichencodierung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveLogicalProject">
+      <MemberSignature Language="C#" Value="public void SaveLogicalProject (System.IO.TextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SaveLogicalProject(class System.IO.TextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.SaveLogicalProject(System.IO.TextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der Writer, in der Projektdatei gespeichert.</param>
+        <summary>Speichert eine "logischen" oder "vorverarbeitete" Projektdatei, die die importierten Dateien enthält, als ob sie eine einzelne Datei gebildet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetGlobalProperty">
+      <MemberSignature Language="C#" Value="public bool SetGlobalProperty (string name, string escapedValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool SetGlobalProperty(string name, string escapedValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.SetGlobalProperty(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="escapedValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der globalen Eigenschaft festgelegt werden soll.</param>
+        <param name="escapedValue">Der neue Wert der globalen Eigenschaft.</param>
+        <summary>Legt eine globale Eigenschaft fest, nachdem das Projekt ausgewertet wurde. Wenn der Wert ändert, ist das Projekt so gekennzeichnet, erneute Auswertung erfordern.</summary>
+        <returns>Gibt <see langword="true" /> , wenn der Wert ändert, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetProperty">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Evaluation.ProjectProperty SetProperty (string name, string unevaluatedValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Evaluation.ProjectProperty SetProperty(string name, string unevaluatedValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.SetProperty(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Evaluation.ProjectProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="unevaluatedValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der festzulegenden Eigenschaft.</param>
+        <param name="unevaluatedValue">Der neue nicht ausgewertete Wert der Eigenschaft.</param>
+        <summary>Legt fest oder fügt dem Projekt eine Eigenschaft mit dem angegebenen Namen und Wert hinzu. Überschreibt den Wert einer Eigenschaft mit dem gleichen Namen, wenn er nicht in einer importierten Datei stammt.</summary>
+        <returns>Gibt die Eigenschaft zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn keine Eigenschaft mit dem angegebenen Namen vorhanden ist, aktualisiert die letzte vorhandene Eigenschaft mit dem angegebenen Namen, die keine Bedingung auf sich selbst oder einer Eigenschaftengruppe von verfügt, es sei denn, sie in einer importierten Datei stammt.  
+  
+ Andernfalls Fügt eine neue Eigenschaft in der ersten Eigenschaftengruppe ohne Bedingung, erstellen eine Eigenschaftengruppe, die bei Bedarf nach der letzten vorhandenen Eigenschaftengruppe else zu Beginn des Projekts ein.  
+  
+ Auswertung erfolgt auf Grundlage der besten Leistung. Eigenschaften, die in die Quelldateien des Projekts, befolgen die neue Eigenschaft definiert sind, können für die Auswertung verwendet werden. Nur diese Eigenschaft wird ausgewertet. Weitere Eigenschaften, die von ihm abhängig sind möglicherweise sind nicht betroffen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SkipEvaluation">
+      <MemberSignature Language="C#" Value="public bool SkipEvaluation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SkipEvaluation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.SkipEvaluation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Flag fest, der bestimmt, ob ReevaluateIfNecessary vorübergehend deaktiviert ist. Dies ist nützlich, wenn der Host erwartet Lese- und Schreibvorgänge für das Projekt und vorübergehend Richtigkeit zugunsten von Leistung geopfert.</summary>
+        <value>Gibt ein Flag zurück, das bestimmt, ob ReevaluateIfNecessary vorübergehend deaktiviert ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubToolsetVersion">
+      <MemberSignature Language="C#" Value="public string SubToolsetVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SubToolsetVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.SubToolsetVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert des Attributs SubToolsetVersion ab, sofern vorhanden. Dieser Wert ist mit dem Wert der ToolsVersion-Attribut, um zu bestimmen, die toolseteigenschaften für dieses Projekt kombiniert.</summary>
+        <value>Gibt den Attributwert SubToolsetVersion zurück. Gibt eine leere Zeichenfolge zurück, wenn das Attribut nicht vorhanden ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Targets">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,Microsoft.Build.Execution.ProjectTargetInstance&gt; Targets { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, class Microsoft.Build.Execution.ProjectTargetInstance&gt; Targets" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.Targets" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,Microsoft.Build.Execution.ProjectTargetInstance&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Wörterbuch von allen Zielen in diesem Projekt Zielname geordnet.</summary>
+        <value>Gibt ein Wörterbuch von allen Zielen in diesem Projekt, sortiert nach Zielnamen zurück. Außer Kraft gesetzten Ziele sind nicht in dieser Auflistung enthalten. Dieses Wörterbuch ist schreibgeschützt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolsVersion">
+      <MemberSignature Language="C#" Value="public string ToolsVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolsVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.ToolsVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab die ToolsVersion, der dieses Projekt ausgewertet wurde, sofern vorhanden.</summary>
+        <value>Ruft ab die ToolsVersion, der dieses Projekt ausgewertet wurde, sofern vorhanden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch den Konstruktor festgelegt. Dies ist nicht unbedingt identisch mit der Toolsversion auf das Project-Tag, falls vorhanden; Es wurden möglicherweise extern angegeben, z. B. mit einem/TV-Schalter in der Befehlszeile angegeben. Die tatsächliche ToolsVersion für das Projekttag abgerufen werden kann, aus <xref:Microsoft.Build.Evaluation.Project.Xml%2A>. Die ToolsVersion kann nicht geändert werden, nachdem das Projekt erstellt wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Xml">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectRootElement Xml { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ProjectRootElement Xml" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.Xml" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectRootElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Stammprojekt, das diesem Projekt zugewiesen ist. Nie sein null</summary>
+        <value>Gibt das Stammprojekt zugeordnete dieses Projekt, das nie null sein kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es gibt keine Möglichkeit, diese Eigenschaft festzulegen. Wenn Sie einen neuen Projektstamm verfügen, Werten Sie ihn in ein neues Projekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,126 @@
+<Type Name="GenerateScriptTypeAttribute" FullName="System.Web.Script.Services.GenerateScriptTypeAttribute">
+  <TypeSignature Language="C#" Value="public sealed class GenerateScriptTypeAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit GenerateScriptTypeAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Script.Services.GenerateScriptTypeAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Method | System.AttributeTargets.Interface, AllowMultiple=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass es sich bei der Servertyp in der Proxy-Objekt generiert werden muss. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In AJAX-aktivierten ASP.NET-Websites können ASP.NET Proxyobjekte für Methoden einer Klasse der Web-Dienst automatisch generieren. Dies ist für die meisten Typen von der obersten Ebene für die Eingabeparameter und Rückgabewerte von Webmethoden, die mit markiert sind <xref:System.Web.Script.Services.ScriptServiceAttribute>.  
+  
+ In anderen Fällen, wenn Sie die Proxy-Objekte für die Servertypen, generiert Sie müssen anwenden <xref:System.Web.Script.Services.GenerateScriptTypeAttribute> manuell. Sie anwenden können <xref:System.Web.Script.Services.GenerateScriptTypeAttribute> im Web service selbst oder auf allen Web-service-Methode oder `static` Seitenmethode markiert mit <xref:System.Web.Services.WebMethodAttribute>.  
+  
+ In einigen Fällen auch, wenn der Typ ein Eingabeparameter oder von einer Webdienstmethode zurückgegebenen Wert entspricht wird der Proxy nicht automatisch generiert werden. In diesem Fall müssen Sie verwenden die <xref:System.Web.Script.Services.GenerateScriptTypeAttribute> Attribut, um das Proxyobjekt für den Typ zu generieren. In diesem Fall für generische Typen und Arrays, die mehr als ein Argument, z. B. verfügen `Dictionary<string,<T>>`.  
+  
+ Eine oder mehrere Instanzen des <xref:System.Web.Script.Services.GenerateScriptTypeAttribute> kann auf eine Web Service-Klasse oder Methode angewendet werden. ASP.NET generiert dann eine Proxyklasse ECMAScript (JavaScript) für jeden der obersten Ebene, die jede Deklaration verweist <xref:System.Web.Script.Services.GenerateScriptTypeAttribute>.  
+  
+> [!NOTE]
+>  Wenn Sie Proxyobjekte für geschachtelte Typen generieren möchten, müssen Sie manuell anwenden <xref:System.Web.Script.Services.GenerateScriptTypeAttribute> auf jeden geschachtelten Typ. ASP.NET generiert nur Proxys für Typen oberster Ebene, und automatisch rekursiv gilt nicht das Attribut für geschachtelte Typen.  
+  
+ Weitere Informationen zum Verwenden von Attributen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie anzuwendende <xref:System.Web.Script.Services.GenerateScriptTypeAttribute> auf eine Web-Dienstklasse und an eine Webmethode. Daher die `ColorObject` Typ und dessen geschachtelte `FavoriteColors` im Proxy-Objekt enthalten sind.  
+  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GenerateScriptTypeAttribute (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Script.Services.GenerateScriptTypeAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ der Proxyklasse einschließt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Script.Services.GenerateScriptTypeAttribute" /> Klasse für den angegebenen Typ.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Script.Services.GenerateScriptTypeAttribute.ScriptTypeId%2A> Eigenschaft ist ein optionaler benannter Parameter für diesen Konstruktor.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie <xref:System.Web.Script.Services.GenerateScriptTypeAttribute> ein Proxyobjekt für den angegebenen Typ zu generieren, einen bestimmten Typ-ID für den Metadatenmarker verwendet.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ScriptTypeId">
+      <MemberSignature Language="C#" Value="public string ScriptTypeId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ScriptTypeId" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Script.Services.GenerateScriptTypeAttribute.ScriptTypeId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Typ-ID für den Typ Metadaten-Marker.</summary>
+        <value>Der Typbezeichner für den Typ Metadaten-Marker in der serialisierten Zeichenfolge für die JavaScript Object Notation (JSON). Der Standardwert ist die Assembly qualifizierte Name des Typs.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist eine optionale Eigenschaft. Wenn angegeben, den Wert des <xref:System.Web.Script.Services.GenerateScriptTypeAttribute.ScriptTypeId%2A> wird auf die serialisierte JSON-Zeichenfolge anstelle der Assembly qualifizierte Name des Typs für den Typ Metadatenmarker ("__type") verwendet. Während der Deserialisierung wird die Typresolver, zugeordnet ist die <xref:System.Web.Script.Serialization.JavaScriptSerializer> Objekt wird der Metadaten-Marker Typwert verwenden, um den entsprechenden verwalteten Typ zuzuordnen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public Type Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Script.Services.GenerateScriptTypeAttribute.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ ab, der in der Proxy-Objekt enthalten ist.</summary>
+        <value>Die Typobjekt, das in den generierten Proxy-Objekt enthalten ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

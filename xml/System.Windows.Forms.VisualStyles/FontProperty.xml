@@ -1,0 +1,41 @@
+<Type Name="FontProperty" FullName="System.Windows.Forms.VisualStyles.FontProperty">
+  <TypeSignature Language="C#" Value="public enum FontProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FontProperty extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.FontProperty" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Identifiziert die Schriftarteigenschaften eines visuellen Stilelements an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.VisualStyles.FontProperty> Enumeration stellt eine Reihe von Schriftarteigenschaften, die Elemente der visuelle Stil zu beschreiben. Die <xref:System.Windows.Forms.VisualStyles.FontProperty> Werte dienen als Argument in der <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetFont%2A?displayProperty=nameWithType> Methode, um anzugeben, dessen Eigenschaftswert für das Element abgerufen, die die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> darstellt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GlyphFont">
+      <MemberSignature Language="C#" Value="GlyphFont" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.FontProperty GlyphFont = int32(2601)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.FontProperty.GlyphFont" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.FontProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Schriftart, der mit einem Symbol gezeichnet wird.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

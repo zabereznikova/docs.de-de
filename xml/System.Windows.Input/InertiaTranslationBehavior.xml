@@ -1,0 +1,141 @@
+<Type Name="InertiaTranslationBehavior" FullName="System.Windows.Input.InertiaTranslationBehavior">
+  <TypeSignature Language="C#" Value="public class InertiaTranslationBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InertiaTranslationBehavior extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.InertiaTranslationBehavior" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Steuert die Verlangsamung auf eine Übersetzung Bearbeitung während der Trägheit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Input.InertiaTranslationBehavior> Klasse gibt an, wie eine Manipulation der Übersetzung verhält, wenn Trägheit ist.  Verwenden der <xref:System.Windows.Input.ManipulationInertiaStartingEventArgs.TranslationBehavior%2A> Eigenschaft in der <xref:System.Windows.UIElement.ManipulationInertiaStarting> Ereignis, um die folgenden Aktionen ausführen:  
+  
+-   Angeben die ursprüngliche Geschwindigkeit der Trägheit Beginn durch Festlegen der <xref:System.Windows.Input.InertiaTranslationBehavior.InitialVelocity%2A> Eigenschaft.  
+  
+-   Geben Sie die gewünschte Position der Manipulation, wenn Trägheit, durch Festlegen endet der <xref:System.Windows.Input.InertiaTranslationBehavior.DesiredDisplacement%2A> Eigenschaft.  
+  
+-   Geben Sie die gewünschte Verlangsamung der Trägheit durch Festlegen der <xref:System.Windows.Input.InertiaTranslationBehavior.DesiredDeceleration%2A> Eigenschaft.  
+  
+ Legen Sie entweder die <xref:System.Windows.Input.InertiaTranslationBehavior.DesiredDisplacement%2A> oder <xref:System.Windows.Input.InertiaTranslationBehavior.DesiredDeceleration%2A>, aber nicht beides. Wenn Sie eine dieser Eigenschaften festlegen, wird die andere Eigenschaft geändert, um <xref:System.Double.NaN?displayProperty=nameWithType> , wenn er einen Wert aufweist.  
+  
+ Weitere Informationen zu Manipulationen, finden Sie unter der [Input Overview](~/docs/framework/wpf/advanced/input-overview.md).  Ein Beispiel für eine Anwendung, die auf Manipulationen reagiert, finden Sie unter [Exemplarische Vorgehensweise: Erstellen Ihrer ersten Touch Application](~/docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die <xref:System.Windows.UIElement.ManipulationInertiaStarting> Ereignishandler und legt die gewünschte Verlangsamung für Übersetzung, Erweiterung und Drehung, die während der Trägheit verwendet wird. In diesem Beispiel ist Teil eines umfangreicheren Beispiels in [Exemplarische Vorgehensweise: Erstellen Ihrer ersten Touch Application](~/docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md).  
+  
+ [!code-csharp[BasicManipulation#ManipulationInertiaStarting](~/samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationinertiastarting)]
+ [!code-vb[BasicManipulation#ManipulationInertiaStarting](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationinertiastarting)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InertiaTranslationBehavior ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.InertiaTranslationBehavior.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Input.InertiaTranslationBehavior" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesiredDeceleration">
+      <MemberSignature Language="C#" Value="public double DesiredDeceleration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 DesiredDeceleration" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.InertiaTranslationBehavior.DesiredDeceleration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Rate, die die lineare Bewegung verlangsamt in wird [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)] pro Millisekunde im Quadrat.</summary>
+        <value>Die Rate, die die lineare Bewegung verlangsamt in wird [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)] pro Millisekunde im Quadrat.  Die Standardeinstellung ist <see cref="F:System.Double.NaN" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Input.InertiaTranslationBehavior.DesiredDeceleration%2A> Eigenschaft, um die gewünschte Verlangsamung der Trägheit anzugeben. Legen Sie entweder die <xref:System.Windows.Input.InertiaTranslationBehavior.DesiredDisplacement%2A> oder <xref:System.Windows.Input.InertiaTranslationBehavior.DesiredDeceleration%2A>, aber nicht beides. Wenn Sie eine dieser Eigenschaften festlegen, wird die andere Eigenschaft geändert, um <xref:System.Double.NaN?displayProperty=nameWithType> , wenn er einen Wert aufweist.  
+  
+ Weitere Informationen zu Manipulationen, finden Sie unter der [Input Overview](~/docs/framework/wpf/advanced/input-overview.md).  Ein Beispiel für eine Anwendung, die auf Manipulationen reagiert, finden Sie unter [Exemplarische Vorgehensweise: Erstellen Ihrer ersten Touch Application](~/docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Eigenschaft ist auf unendlich festgelegt.  
+  
+ - oder -   
+  
+ Die Eigenschaft ist auf <see cref="F:System.Double.NaN" /> festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DesiredDisplacement">
+      <MemberSignature Language="C#" Value="public double DesiredDisplacement { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 DesiredDisplacement" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.InertiaTranslationBehavior.DesiredDisplacement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die lineare Bewegung der Manipulation am Ende der Trägheit.</summary>
+        <value>Die lineare Bewegung der Manipulation am Ende der Trägheit. Die Standardeinstellung ist <see cref="F:System.Double.NaN" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Input.InertiaTranslationBehavior.DesiredDisplacement%2A> Eigenschaft, um die gewünschte Position der Manipulation anzugeben, wenn Trägheit endet. Legen Sie entweder die <xref:System.Windows.Input.InertiaTranslationBehavior.DesiredDisplacement%2A> oder <xref:System.Windows.Input.InertiaTranslationBehavior.DesiredDeceleration%2A>, aber nicht beides. Wenn Sie eine dieser Eigenschaften festlegen, wird die andere Eigenschaft geändert, um <xref:System.Double.NaN?displayProperty=nameWithType> , wenn er einen Wert aufweist.  
+  
+ Weitere Informationen zu Manipulationen, finden Sie unter der [Input Overview](~/docs/framework/wpf/advanced/input-overview.md).  Ein Beispiel für eine Anwendung, die auf Manipulationen reagiert, finden Sie unter [Exemplarische Vorgehensweise: Erstellen Ihrer ersten Touch Application](~/docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Eigenschaft ist auf unendlich festgelegt.  
+  
+ - oder -   
+  
+ Die Eigenschaft ist auf <see cref="F:System.Double.NaN" /> festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialVelocity">
+      <MemberSignature Language="C#" Value="public System.Windows.Vector InitialVelocity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Vector InitialVelocity" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.InertiaTranslationBehavior.InitialVelocity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Vector</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert die anfänglichen Rate der linearen Bewegung zu Beginn der Trägheit-Phase.</summary>
+        <value>Die erste Rate der linearen Bewegung zu Beginn der Trägheit-Phase.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

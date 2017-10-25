@@ -1,0 +1,151 @@
+<Type Name="PageFunction&lt;T&gt;" FullName="System.Windows.Navigation.PageFunction&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public class PageFunction&lt;T&gt; : System.Windows.Navigation.PageFunctionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PageFunction`1&lt;T&gt; extends System.Windows.Navigation.PageFunctionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Navigation.PageFunction`1" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Windows.Navigation.PageFunctionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="T">Der Typ des Werts, der die <see cref="T:System.Windows.Navigation.PageFunction`1" /> an einen Aufrufer zurückgibt.</typeparam>
+    <summary>Stellt eine besondere Art von Seite, die Ihnen ermöglicht, die Navigation zu einer Seite Aufrufen einer Methode in ähnlicher Weise behandeln.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Navigation.PageFunction%601>im Wesentlichen können Sie, wie ein Funktionsaufruf, eine Seitennavigation zu behandeln, in dem eine Seite (aufrufen) einer Seitenfunktion navigiert.  
+  
+ So aktivieren Sie den Aufruf funktionssemantik, <xref:System.Windows.Navigation.PageFunction%601> bietet die folgenden Funktionen:  
+  
+-   Wenn die Seitenfunktion die Verarbeitung abgeschlossen hat, die Seite Code Funktionsaufrufe <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> , an die aufrufende Seite zurück.  
+  
+-   <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>akzeptiert eine <xref:System.Windows.Navigation.ReturnEventArgs%601> -Parameter, der einen Wert zurückgeben verwendet werden kann, durch die Einstellungen der <xref:System.Windows.Navigation.ReturnEventArgs%601.Result%2A> Eigenschaft. Andernfalls kann Null übergeben werden, auf <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> um anzugeben, wird kein Wert zurückgegeben  
+  
+-   Um zu erkennen, wenn eine Seitenfunktion zurückgegeben hat, kann die aufrufende Seite behandeln die <xref:System.Windows.Navigation.PageFunction%601.Return> Ereignis.  
+  
+-   Um einen Wert zurückgeben, die Seitenfunktion erstellt eine Instanz der <xref:System.Windows.Navigation.ReturnEventArgs%601> -Klasse und legt die <xref:System.Windows.Navigation.ReturnEventArgs%601.Result%2A> Eigenschaft mit dem Rückgabewert. Die aufrufende Seite kann diesen Wert auf Abrufen der <xref:System.Windows.Navigation.ReturnEventArgs%601> -Objekt, das an die <xref:System.Windows.Navigation.PageFunction%601.Return> -Ereignishandler.  
+  
+ Wird standardmäßig ein <xref:System.Windows.Navigation.PageFunction%601> im Navigationsverlauf beibehalten, nachdem ein Wert zurückgegeben. Um sicherzustellen, dass sie nicht im Navigationsverlauf aufbewahrt werden seine <xref:System.Windows.Navigation.PageFunctionBase.RemoveFromJournal%2A> Eigenschaft sollte festgelegt werden, um `true`.  
+  
+ Finden Sie unter [Übersicht über die strukturierte Navigation](~/docs/framework/wpf/app-development/structured-navigation-overview.md) ausführliche Informationen auf der Seitenfunktionen verwenden.  
+  
+ Finden Sie unter [Navigation Topologien Overview](~/docs/framework/wpf/app-development/navigation-topologies-overview.md) Informationen für komplexe Navigationsstrukturen, die von der Seitenfunktionen profitieren.  
+  
+ <xref:System.Windows.Navigation.PageFunction%601>ermöglicht die Entwicklung von Assistenten.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PageFunction ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.PageFunction`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Navigation.PageFunction`1" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine <xref:System.Windows.Navigation.PageFunction%601> nicht wird beibehalten (finden Sie unter <xref:System.Windows.Controls.Page.KeepAlive%2A>), es muss einen Standardkonstruktor zur zulassen implementieren [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] erstellen eine neue Instanz der beim Sichern navigiert oder Navigationsverlauf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnReturn">
+      <MemberSignature Language="C#" Value="protected virtual void OnReturn (System.Windows.Navigation.ReturnEventArgs&lt;T&gt; e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnReturn(class System.Windows.Navigation.ReturnEventArgs`1&lt;!T&gt; e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.PageFunction`1.OnReturn(System.Windows.Navigation.ReturnEventArgs{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Navigation.ReturnEventArgs&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Navigation.ReturnEventArgs`1" /> -Objekt, enthält die <see cref="T:System.Windows.Navigation.PageFunction`1" /> Rückgabewert (<see cref="P:System.Windows.Navigation.ReturnEventArgs`1.Result" />).</param>
+        <summary>Ein <see cref="T:System.Windows.Navigation.PageFunction`1" /> Aufrufe <see cref="M:System.Windows.Navigation.PageFunction`1.OnReturn(System.Windows.Navigation.ReturnEventArgs{`0})" /> zurückzugebenden an den Aufrufer übergeben einen Rückgabewert über eine <see cref="T:System.Windows.Navigation.ReturnEventArgs`1" /> Objekt</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>wird aufgerufen, indem eine <xref:System.Windows.Navigation.PageFunction%601> eine Navigation an die aufrufende Seite zu initiieren.  
+  
+ Dies bewirkt, dass die <xref:System.Windows.Navigation.PageFunction%601.Return> Ereignis ausgelöst wird, in der Reihenfolge für die aufrufende Seite:  
+  
+-   Ermitteln, wann die <xref:System.Windows.Navigation.PageFunction%601> zurückgegeben hat.  
+  
+-   Abrufen des Rückgabewerts aus den <xref:System.Windows.Navigation.PageFunction%601>.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie Aufrufen <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>.  
+  
+ [!code-csharp[PageFunctionMembersSnippets#CallOnReturnCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/PageFunctionMembersSnippets/CSharp/GetStringPageFunction.xaml.cs#callonreturncode)]
+ [!code-vb[PageFunctionMembersSnippets#CallOnReturnCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PageFunctionMembersSnippets/visualbasic/getstringpagefunction.xaml.vb#callonreturncode)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Return">
+      <MemberSignature Language="C#" Value="public event System.Windows.Navigation.ReturnEventHandler&lt;T&gt; Return;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Navigation.ReturnEventHandler`1&lt;!T&gt; Return" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Navigation.PageFunction`1.Return" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.ReturnEventHandler&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine aufgerufene <see cref="T:System.Windows.Navigation.PageFunction`1" /> zurückgibt, und können nur durch die aufrufende Seite verarbeitet werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine aufrufende Seite erkennt, wenn eine aufgerufene <xref:System.Windows.Navigation.PageFunction%601> durch Behandeln gibt <xref:System.Windows.Navigation.PageFunction%601.Return>. Außerdem kann die aufrufende Seite Abrufen der <xref:System.Windows.Navigation.PageFunction%601> Rückgabewert aus der <xref:System.Windows.Navigation.ReturnEventArgs%601.Result%2A> Eigenschaft von der <xref:System.Windows.Navigation.ReturnEventArgs%601> der an den Ereignishandler übergeben wird.  
+  
+<a name="xamlAttributeUsage_Return"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object Return="ReturnEventHandler"/>  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie behandelt die <xref:System.Windows.Navigation.PageFunction%601.Return> Ereignis.  
+  
+ [!code-csharp[PageFunctionMembersSnippets#HandlePageFunctionReturnCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/PageFunctionMembersSnippets/CSharp/GetStringPageFunctionCaller.xaml.cs#handlepagefunctionreturncode)]
+ [!code-vb[PageFunctionMembersSnippets#HandlePageFunctionReturnCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PageFunctionMembersSnippets/visualbasic/getstringpagefunctioncaller.xaml.vb#handlepagefunctionreturncode)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

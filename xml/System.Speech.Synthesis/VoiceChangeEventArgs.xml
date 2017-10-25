@@ -1,0 +1,53 @@
+<Type Name="VoiceChangeEventArgs" FullName="System.Speech.Synthesis.VoiceChangeEventArgs">
+  <TypeSignature Language="C#" Value="public class VoiceChangeEventArgs : System.Speech.Synthesis.PromptEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit VoiceChangeEventArgs extends System.Speech.Synthesis.PromptEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Synthesis.VoiceChangeEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Speech.Synthesis.PromptEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt Daten von dem <see cref="E:System.Speech.Synthesis.SpeechSynthesizer.VoiceChange" />-Ereignis zurück.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz von <xref:System.Speech.Synthesis.VoiceChangeEventArgs> wird erstellt, wenn die <xref:System.Speech.Synthesis.SpeechSynthesizer> -Objekt löst die <xref:System.Speech.Synthesis.SpeechSynthesizer.VoiceChange> Ereignis. Zum Abrufen der Identität des neuen <xref:System.Speech.Synthesis.SpeechSynthesizer.Voice%2A>, den Zugriff der <xref:System.Speech.Synthesis.VoiceChangeEventArgs.Voice%2A> Eigenschaft im Handler für das Ereignis.  
+  
+ Sie können ändern, die Stimme im Verwendung durch die <xref:System.Speech.Synthesis.SpeechSynthesizer> mit der <xref:System.Speech.Synthesis.PromptBuilder>des <xref:System.Speech.Synthesis.PromptBuilder.StartVoice%2A> Methoden oder die <xref:System.Speech.Synthesis.SpeechSynthesizer>des <xref:System.Speech.Synthesis.SpeechSynthesizer.SelectVoice%2A> oder <xref:System.Speech.Synthesis.SpeechSynthesizer.SelectVoiceByHints%2A> Methoden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Voice">
+      <MemberSignature Language="C#" Value="public System.Speech.Synthesis.VoiceInfo Voice { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Speech.Synthesis.VoiceInfo Voice" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.VoiceChangeEventArgs.Voice" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.VoiceInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Speech.Synthesis.VoiceInfo" /> Objekt der neuen Stimme.</summary>
+        <value>Gibt Informationen zurück, die beschreibt, und die neue Stimme identifiziert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.Speech.Synthesis.VoiceChangeEventArgs.Voice%2A> eigenschaftsabrufvorgängen der <xref:System.Speech.Synthesis.VoiceInfo> Objekt bei einer <xref:System.Speech.Synthesis.SpeechSynthesizer.VoiceChange> Ereignis wird ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

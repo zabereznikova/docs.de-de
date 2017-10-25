@@ -1,0 +1,219 @@
+<Type Name="DataGridBoundColumn" FullName="System.Windows.Controls.DataGridBoundColumn">
+  <TypeSignature Language="C#" Value="public abstract class DataGridBoundColumn : System.Windows.Controls.DataGridColumn" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract DataGridBoundColumn extends System.Windows.Controls.DataGridColumn" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.DataGridBoundColumn" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.DataGridColumn</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Dient als Basisklasse für Spalten, die an eine Eigenschaft in der Datenquelle binden können eine <see cref="T:System.Windows.Controls.DataGrid" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DataGridBoundColumn ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridBoundColumn.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.DataGridBoundColumn" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Binding">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Data.BindingBase Binding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Data.BindingBase Binding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridBoundColumn.Binding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.BindingBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Bindung, die die Spalte mit einer Eigenschaft in der Datenquelle verknüpft.</summary>
+        <value>Das Objekt, das die Datenbindung für die Spalte darstellt. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.DataGridBoundColumn.Binding%2A> Eigenschaft lässt eine Spalte an eine Eigenschaft des Datenrasters <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> zum Binden an. Weitere Informationen zu Bindungspfade, finden Sie im Abschnitt "Syntax für Elementpfade Bindung" in [Übersicht über die Bindung Deklarationen](~/docs/framework/wpf/data/binding-declarations-overview.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClipboardContentBinding">
+      <MemberSignature Language="C#" Value="public override System.Windows.Data.BindingBase ClipboardContentBinding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Data.BindingBase ClipboardContentBinding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridBoundColumn.ClipboardContentBinding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.BindingBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest des Binding-Objekts verwenden Sie beim Abrufen oder Festlegen der Inhalt der Zelle für die Zwischenablage.</summary>
+        <value>Ein Objekt, das die Bindung darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditingElementStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Style EditingElementStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Style EditingElementStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridBoundColumn.EditingElementStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Format, das verwendet wird, wenn das Element zu rendern, das die Spalte für eine Zelle im Bearbeitungsmodus angezeigt.</summary>
+        <value>Das Format, das verwendet wird, wenn ein Element bearbeiten zu rendern. Der registrierte Standardwert ist <see langword="null" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditingElementStyleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty EditingElementStyleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty EditingElementStyleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridBoundColumn.EditingElementStyleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DataGridBoundColumn.EditingElementStyle" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Style ElementStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Style ElementStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridBoundColumn.ElementStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Format, das verwendet wird, wenn das Element zu rendern, das die Spalte für eine Zelle angezeigt wird, die nicht im Bearbeitungsmodus befindet.</summary>
+        <value>Das Format, das verwendet wird, wenn ein Element nur zur Anzeige zu rendern. Der registrierte Standardwert ist <see langword="null" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementStyleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ElementStyleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ElementStyleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridBoundColumn.ElementStyleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.DataGridBoundColumn.ElementStyle" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBindingChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnBindingChanged (System.Windows.Data.BindingBase oldBinding, System.Windows.Data.BindingBase newBinding);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnBindingChanged(class System.Windows.Data.BindingBase oldBinding, class System.Windows.Data.BindingBase newBinding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridBoundColumn.OnBindingChanged(System.Windows.Data.BindingBase,System.Windows.Data.BindingBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldBinding" Type="System.Windows.Data.BindingBase" />
+        <Parameter Name="newBinding" Type="System.Windows.Data.BindingBase" />
+      </Parameters>
+      <Docs>
+        <param name="oldBinding">Die vorherige Bindung.</param>
+        <param name="newBinding">Die Bindung, der in die Spalte geändert wurde.</param>
+        <summary>Benachrichtigt die <see cref="T:System.Windows.Controls.DataGrid" /> Wenn der Wert des der <see cref="P:System.Windows.Controls.DataGridBoundColumn.Binding" /> -Eigenschaft ändert.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Controls.DataGridBoundColumn.OnBindingChanged(System.Windows.Data.BindingBase,System.Windows.Data.BindingBase)" /> in einer abgeleiteten Klasse sicher, dass Sie der Basisklasse aufrufen, <see cref="M:System.Windows.Controls.DataGridBoundColumn.OnBindingChanged(System.Windows.Data.BindingBase,System.Windows.Data.BindingBase)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCoerceIsReadOnly">
+      <MemberSignature Language="C#" Value="protected override bool OnCoerceIsReadOnly (bool baseValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnCoerceIsReadOnly(bool baseValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridBoundColumn.OnCoerceIsReadOnly(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseValue" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="baseValue">Der Wert, der an dem Delegaten übergeben wurde.</param>
+        <summary>Bestimmt den Wert der <see cref="P:System.Windows.Controls.DataGridColumn.IsReadOnly" /> Eigenschaft auf der Grundlage von Regeln für Eigenschaften von Datenraster, das diese Spalte enthält.</summary>
+        <returns>
+          <see langword="true" />Wenn Zellen in der Spalte anhand von Regeln aus dem Datenraster bearbeitet werden können; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RefreshCellContent">
+      <MemberSignature Language="C#" Value="protected override void RefreshCellContent (System.Windows.FrameworkElement element, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void RefreshCellContent(class System.Windows.FrameworkElement element, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridBoundColumn.RefreshCellContent(System.Windows.FrameworkElement,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.FrameworkElement" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="element">Der zu aktualisierenden Zelle.</param>
+        <param name="propertyName">Der Name der Spalteneigenschaft, die geändert wurden.</param>
+        <summary>Erstellt den Inhalt einer Zelle in der Spalte als Antwort auf eine Änderung für die Bindung neu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

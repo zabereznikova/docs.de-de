@@ -1,0 +1,80 @@
+<Type Name="TextBounds" FullName="System.Windows.Media.TextFormatting.TextBounds">
+  <TypeSignature Language="C#" Value="public sealed class TextBounds" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TextBounds extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.TextFormatting.TextBounds" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt das Begrenzungsrechteck eines Bereichs von Zeichen dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Abrufen von Informationen für das umschließende Rechteck einer <xref:System.Windows.Media.TextFormatting.TextRun>, verwenden Sie <xref:System.Windows.Media.TextFormatting.TextRunBounds>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FlowDirection">
+      <MemberSignature Language="C#" Value="public System.Windows.FlowDirection FlowDirection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FlowDirection FlowDirection" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextBounds.FlowDirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FlowDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die textflussrichtung für die <see cref="T:System.Windows.Media.TextFormatting.TextBounds" /> Objekt.</summary>
+        <value>Ein Enumerationswert von <see cref="T:System.Windows.FlowDirection" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rectangle">
+      <MemberSignature Language="C#" Value="public System.Windows.Rect Rectangle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Rect Rectangle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextBounds.Rectangle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das umschließende Rechteck für den <see cref="T:System.Windows.Media.TextFormatting.TextBounds" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.Windows.Rect" /> Wert, der das umschließende Rechteck für einen Bereich von Zeichen darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextRunBounds">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Windows.Media.TextFormatting.TextRunBounds&gt; TextRunBounds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class System.Windows.Media.TextFormatting.TextRunBounds&gt; TextRunBounds" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextBounds.TextRunBounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Windows.Media.TextFormatting.TextRunBounds&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste von <see cref="T:System.Windows.Media.TextFormatting.TextRunBounds" />-Objekten ab.</summary>
+        <value>Eine Liste von <see cref="T:System.Windows.Media.TextFormatting.TextRunBounds" />-Objekten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

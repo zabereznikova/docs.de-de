@@ -1,0 +1,125 @@
+<Type Name="ArrayEditor" FullName="System.ComponentModel.Design.ArrayEditor">
+  <TypeSignature Language="C#" Value="public class ArrayEditor : System.ComponentModel.Design.CollectionEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ArrayEditor extends System.ComponentModel.Design.CollectionEditor" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.ArrayEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Design.CollectionEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Benutzeroberfläche zum Bearbeiten von Arrays zur Entwurfszeit bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Editor kann zum Bearbeiten von Arrays in der Umgebung zur Entwurfszeit verwendet werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Anwenden der <xref:System.ComponentModel.EditorAttribute?displayProperty=nameWithType> auf eine Eigenschaft.  
+  
+ [!code-cpp[ArrayEditorExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ArrayEditorExample/CPP/class1.cpp#1)]
+ [!code-csharp[ArrayEditorExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ArrayEditorExample/CS/class1.cs#1)]
+ [!code-vb[ArrayEditorExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ArrayEditorExample/VB/class1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ArrayEditor (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ArrayEditor.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Datentyp der Elemente im Array.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Design.ArrayEditor" /> unter Verwendung des angegebenen Datentyps für das Array.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCollectionItemType">
+      <MemberSignature Language="C#" Value="protected override Type CreateCollectionItemType ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Type CreateCollectionItemType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ArrayEditor.CreateCollectionItemType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft ab, die den Datentyp an, dass dieser Auflistung enthalten soll.</summary>
+        <returns>Ein <see cref="T:System.Type" /> , der angibt, der Datentyp die Auflistung enthalten soll.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardimplementierung gibt den Elementtyp des Arrays zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItems">
+      <MemberSignature Language="C#" Value="protected override object[] GetItems (object editValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object[] GetItems(object editValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ArrayEditor.GetItems(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="editValue">Das Array, aus denen die Elemente abgerufen werden soll.</param>
+        <summary>Ruft die Elemente im Array ab.</summary>
+        <returns>Ein Array, das die Elemente innerhalb des angegebenen Arrays. Wenn das angegebene Objekt in der <paramref name="editValue" /> Parameter ist kein Array, ein neues, leeres Objekt zurückgegeben.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItems">
+      <MemberSignature Language="C#" Value="protected override object SetItems (object editValue, object[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object SetItems(object editValue, object[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ArrayEditor.SetItems(System.Object,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editValue" Type="System.Object" />
+        <Parameter Name="value" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="editValue">Das Array auf die Elemente festgelegt werden soll.</param>
+        <param name="value">Das Array von Objekten, wie die Elemente des Arrays festgelegt.</param>
+        <summary>Legt die Elemente im Array fest.</summary>
+        <returns>Eine Instanz des neuen Arrays. Wenn das angegebene Objekt von der <paramref name="editValue" /> Parameter ist kein Array, das vom angegebenen Objekt der <paramref name="editValue" /> Parameter zurückgegeben wird.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

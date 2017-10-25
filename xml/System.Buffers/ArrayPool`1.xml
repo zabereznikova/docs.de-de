@@ -1,0 +1,203 @@
+<Type Name="ArrayPool&lt;T&gt;" FullName="System.Buffers.ArrayPool&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public abstract class ArrayPool&lt;T&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ArrayPool`1&lt;T&gt; extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Buffers.ArrayPool`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Buffers</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="T">Der Typ der Objekte, die im Ressourcenpool sind.</typeparam>
+    <summary>Stellt einen Ressourcenpool, das Wiederverwenden von Instanzen eines Typs ermöglicht <see cref="T:T[]" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+ Mithilfe der <see cref="T:System.Buffers.ArrayPool{T}"/> Klasse zu vermieten und Zurückgeben von Puffern (mithilfe der <see cref="M:System.Buffers.ArrayPool`1.Rent(System.Int32)"/> und <see cref="M:System.Buffers.ArrayPool`1.Return(`0[],System.Boolean)"/> Methoden) kann die Leistung in Situationen, in denen Arrays erstellt und zerstört häufig, verbessern, was Belastung für den Arbeitsspeicher auf dem Garbage Collector.
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Diese Klasse ist threadsicher. Alle Member können von mehreren Threads gleichzeitig verwendet werden.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ArrayPool ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Buffers.ArrayPool`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Buffers</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="ArrayPool{T}" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+Beachten Sie, dass dieser Konstruktor ist geschützt. Es kann nur von von abgeleiteten Klassen aufgerufen werden der <see cref="ArrayPool{T}"/> Klasse. 
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Buffers.ArrayPool&lt;T&gt; Create ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Buffers.ArrayPool`1&lt;!T&gt; Create() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Buffers.ArrayPool`1.Create" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Buffers</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Buffers.ArrayPool&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="ArrayPool{T}" />-Klasse.</summary>
+        <returns>Eine neue Instanz der <see cref="ArrayPool{T}" />-Klasse.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Buffers.ArrayPool&lt;T&gt; Create (int maxArrayLength, int maxArraysPerBucket);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Buffers.ArrayPool`1&lt;!T&gt; Create(int32 maxArrayLength, int32 maxArraysPerBucket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Buffers.ArrayPool`1.Create(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Buffers</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Buffers.ArrayPool&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="maxArrayLength" Type="System.Int32" />
+        <Parameter Name="maxArraysPerBucket" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="maxArrayLength">Die maximale Länge einer Array-Instanz, die im Pool gespeichert werden kann.</param>
+        <param name="maxArraysPerBucket">Die maximale Anzahl der Arrayinstanzen, die in jeder Bucket im Pool gespeichert werden können. Der Pool gruppiert Arrays ähnliche Längen in Buckets für schnelleren Zugriff.</param>
+        <summary>Erstellt eine neue Instanz der dem <see cref="ArrayPool{T}" /> -Klasse unter Verwendung der angegebenen Konfigurations.</summary>
+        <returns>Eine neue Instanz der dem <see cref="ArrayPool{T}" /> Klasse mit der angegebenen Konfiguration.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+Die Instanz von der <see cref="ArrayPool{T}"/> Klasse, die von dieser Methode erstellt werden Arrays in Buckets gruppieren und ohne mehr als <paramref name="maxArraysPerBucket"/> in einem Bucket, und klicken Sie mit diesen Arrays nicht überschreiten <paramref name="maxArrayLength"/> lang.
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rent">
+      <MemberSignature Language="C#" Value="public abstract T[] Rent (int minimumLength);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !T[] Rent(int32 minimumLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Buffers.ArrayPool`1.Rent(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Buffers</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="minimumLength" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="minimumLength">Die minimale Länge des Arrays.</param>
+        <summary>Ruft einen Puffer, der mindestens der angeforderten Länge entspricht.</summary>
+        <returns>Ein Array vom Typ <see cref="T:T[]" /> mindestens <paramref name="minimumLength" /> lang.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+
+Dieser Puffer wird an den Aufrufer ausgeliehen und zurückgegeben werden soll, auf dem gleichen Pool unter Verwendung der <see cref="Return"/> Methode, sodass die It in nachfolgenden Aufrufen wiederverwendet werden kann die <see cref="Rent"/> Methode. Fehler zurückzugebenden gepachteten Puffer ist nicht schwerwiegender Fehler. Es kann jedoch für eine eine verringerte Anwendungsleistung, führen, wie der Pool möglicherweise erstellen Sie einen neuen Puffer um verlorene zu ersetzen.
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Return">
+      <MemberSignature Language="C#" Value="public abstract void Return (T[] array, bool clearArray = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Return(!T[] array, bool clearArray) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Buffers.ArrayPool`1.Return(`0[],System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Buffers</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="T[]" />
+        <Parameter Name="clearArray" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="array">Ein Puffer, an den Pool zurückzugeben, die zuvor mithilfe abgerufen wurde die <see cref="Rent" /> Methode.</param>
+        <param name="clearArray">Gibt an, ob der Inhalt des Puffers vor der Wiederverwendung gelöscht werden soll. Wenn <paramref name="bufferLength" /> auf festgelegt ist <see langword="true" />, und wenn der Pool den Puffer zur späteren Wiederverwendung zu ermöglichen gespeichert werden die <see cref="Return" /> Methode löscht die <paramref name="array" /> ihrer Inhalte, damit eine nachfolgende Aufrufer über die <see cref="Rent" /> Methode wird den Inhalt nicht angezeigt von den vorherigen Aufrufer. Wenn <paramref name="bufferLength" /> festgelegt ist, um <see langword="false" /> oder wenn der Pool den Puffer freigegeben wird, gibt den Inhalt des Arrays bleiben unverändert.</param>
+        <summary>Gibt ein Array zurück, an den Pool, die bereits abgerufen wurden, mithilfe der <see cref="Rent" /> Methode auf dem gleichen <see cref="ArrayPool{T}" /> Instanz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+
+Nachdem Sie ein Puffer an den Pool zurückgegeben wurde, kann der Aufrufer aufgibt alle den Besitz des Puffers und muss nicht verwenden. Der Verweis zurückgegeben wird, über einen Aufruf der <see cref="Rent"/> -Methode muss nur zurückgegeben werden, mithilfe der <see cref="Return"/> -Methode einmal. Die Standardeinstellung <see cref="ArrayPool{T}"/> möglicherweise daran Festhalten der zurückgegebene Puffer um vermieten erneut, oder es kann freigeben den zurückgegebenen Puffer, wenn feststellbar ist, dass der Pool bereits ausreichend Puffer gespeichert ist.
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Shared">
+      <MemberSignature Language="C#" Value="public static System.Buffers.ArrayPool&lt;T&gt; Shared { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Buffers.ArrayPool`1&lt;!T&gt; Shared" />
+      <MemberSignature Language="DocId" Value="P:System.Buffers.ArrayPool`1.Shared" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Buffers</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Buffers.ArrayPool&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine freigegebene <see cref="ArrayPool{T}" /> Instanz.</summary>
+        <value>Eine freigegebene <see cref="ArrayPool{T}" /> Instanz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+
+Der freigegebene Pool stellt eine Standardimplementierung von der <see cref="ArrayPool{T}"/> -Klasse, die für die allgemeine Anwendbarkeit vorgesehen ist. Eine gemeinsam genutzte Klasse verwaltet Arrays mit verschiedenen Größen und möglicherweise weiter wieder ein größeres Array als angefordert wurde, aber es wird nie manuell wieder eine kleinere Array als angefordert wurde. Mieten einen Puffer mit einer freigegebenen Klasse unter Verwendung der <see cref="Rent"/> Methode führt zu einem vorhandenen Puffer aus dem Pool entnommen werden, falls ein geeigneter Puffer verfügbar ist oder in ein neuer Puffer reserviert werden, wenn mindestens eine nicht verfügbar ist.
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

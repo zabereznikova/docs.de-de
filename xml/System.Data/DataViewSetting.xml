@@ -1,0 +1,221 @@
+<Type Name="DataViewSetting" FullName="System.Data.DataViewSetting">
+  <TypeSignature Language="C#" Value="public class DataViewSetting" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataViewSetting extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.DataViewSetting" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.ExpandableObjectConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Standardeinstellungen für <see cref="P:System.Data.DataView.ApplyDefaultSort" />, <see cref="P:System.Data.DataView.DataViewManager" />, <see cref="P:System.Data.DataView.RowFilter" />, <see cref="P:System.Data.DataView.RowStateFilter" />, <see cref="P:System.Data.DataView.Sort" />, und <see cref="P:System.Data.DataView.Table" /> für erstellt von "DataViews" aus der <see cref="T:System.Data.DataViewManager" />.</summary>
+    <remarks>To be added.</remarks>
+    <threadsafe>Dieser Typ ist für schreibgeschützte Vorgänge mit mehreren Threads sicher. Sie müssen alle Schreibvorgänge synchronisieren.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="ApplyDefaultSort">
+      <MemberSignature Language="C#" Value="public bool ApplyDefaultSort { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ApplyDefaultSort" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataViewSetting.ApplyDefaultSort" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die standardsortierung verwendet.</summary>
+        <value>
+          <see langword="true" />Wenn die standardsortierung verwendet wird. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataViewManager">
+      <MemberSignature Language="C#" Value="public System.Data.DataViewManager DataViewManager { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.DataViewManager DataViewManager" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataViewSetting.DataViewManager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.DataViewManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Data.DataViewManager" /> ab, die <see cref="T:System.Data.DataViewSetting" /> enthält.</summary>
+        <value>Ein <see cref="T:System.Data.DataViewManager" />-Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowFilter">
+      <MemberSignature Language="C#" Value="public string RowFilter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RowFilter" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataViewSetting.RowFilter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Filter Anwenden der <see cref="T:System.Data.DataView" />. Finden Sie unter <see cref="P:System.Data.DataView.RowFilter" /> für ein Codebeispiel RowFilter verwenden.</summary>
+        <value>Eine Zeichenfolge, die den anzuwendenden Filter enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowStateFilter">
+      <MemberSignature Language="C#" Value="public System.Data.DataViewRowState RowStateFilter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.DataViewRowState RowStateFilter" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataViewSetting.RowStateFilter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataViewRowState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die aktuelle gelöscht, aktuelle geändert, ModifiedOriginal, New, Original, Unchanged anzeigen, oder keine Zeilen in der <see cref="T:System.Data.DataView" />.</summary>
+        <value>Ein Wert, der gibt an, welche Zeilen angezeigt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert von <xref:System.Data.DataViewSetting.RowStateFilter%2A> ist `DataViewRowState.CurrentRows`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sort">
+      <MemberSignature Language="C#" Value="public string Sort { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Sort" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataViewSetting.Sort" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, der Sortierreihenfolge für die anzuwendende in der <see cref="T:System.Data.DataView" />.</summary>
+        <value>Die Sortierung in gelten die <see cref="T:System.Data.DataView" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.DataView.Sort%2A>kann zwei Standardwerte anhand des Werts der haben <xref:System.Data.DataView.RowFilter%2A> Eigenschaft. Wenn <xref:System.Data.DataView.RowFilter%2A> ist null oder leer (d. h. der Wert wird nicht explizit angegeben), die <xref:System.Data.DataRowView> in der <xref:System.Data.DataView> ist auf beiden Seiten der sortierten oder Ordnungszahl <xref:System.Data.DataRow> in der <xref:System.Data.DataTable.Rows%2A> Auflistung. Die <xref:System.Data.DataView.Sort%2A> standardmäßig eine leere Zeichenfolge und bewirkt, dass eine <xref:System.Data.DataRowView> in <xref:System.Data.DataView> sortierten auf der Position oder Ordnungszahl sein <xref:System.Data.DataRow> in der <xref:System.Data.DataTable.Rows%2A> Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Table">
+      <MemberSignature Language="C#" Value="public System.Data.DataTable Table { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.DataTable Table" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataViewSetting.Table" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Data.DataTable" /> , der die <see cref="T:System.Data.DataViewSetting" /> Eigenschaften gelten.</summary>
+        <value>Ein <see cref="T:System.Data.DataTable" />-Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

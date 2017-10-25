@@ -1,0 +1,50 @@
+<Type Name="IRootObjectProvider" FullName="System.Xaml.IRootObjectProvider">
+  <TypeSignature Language="C#" Value="public interface IRootObjectProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRootObjectProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.IRootObjectProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Beschreibt einen Dienst, der das Stammobjekt des analysierten Markups zurückgeben kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xaml.IRootObjectProvider> -Dienst ist vor allem für Anwendungsdienste, die von einem bestimmten Framework oder Funktionen einer häufig verwendeten Stammelementklasse in einem Framework verfügbar gemacht sind relevant.  
+  
+ Typkonverter und Markuperweiterungen können Abfragen für <xref:System.Xaml.IRootObjectProvider> als Dienst auf dem Dienstkontext, der durch einen XAML-Objektwriter bereitgestellt wird, wenn der XAML-Objektwriter den Wertkonvertierungsverhalten aufruft. Weitere Informationen finden Sie unter [Typkonverter und Markuperweiterungen für XAML](~/docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md) und [verfügbare Dienstkontexte Typkonverter und Markuperweiterungen](~/docs/framework/xaml-services/service-contexts-available-to-type-converters-and-markup-extensions.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="RootObject">
+      <MemberSignature Language="C#" Value="public object RootObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object RootObject" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.IRootObjectProvider.RootObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Stammobjekt ab, aus dem Markup oder in einem Objektdiagramm.</summary>
+        <value>Das Stammobjekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Stammobjekt in einem XAML-Markupszenario möglicherweise nützlich für Szenarien mit Markup-Erweiterung aufgrund von Attributen sein, die gemäß der Konvention auf der Stammebene des XAML-Markups festgelegt werden kann. Spezifische Stamm Objekt Funktionen möglicherweise durch Frameworks angegeben werden. Z. B. können bestimmte Attribute nur gültige auf der Stammebene, oder ein Framework möglicherweise unterstützt Vererbung von globalen Eigenschaften aus dem Stammverzeichnis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

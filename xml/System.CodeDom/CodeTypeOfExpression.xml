@@ -1,0 +1,158 @@
+<Type Name="CodeTypeOfExpression" FullName="System.CodeDom.CodeTypeOfExpression">
+  <TypeSignature Language="C#" Value="public class CodeTypeOfExpression : System.CodeDom.CodeExpression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeTypeOfExpression extends System.CodeDom.CodeExpression" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeTypeOfExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeExpression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine <see langword="typeof" /> Ausdruck, ein Ausdruck, der zurückgegeben eine <see cref="T:System.Type" /> für den Namen eines angegebenen Typs.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.CodeDom.CodeTypeOfExpression> stellt eine `typeof` Ausdruck zurück eine <xref:System.Type> zur Laufzeit.  
+  
+ Die <xref:System.CodeDom.CodeTypeOfExpression.Type%2A> Eigenschaft gibt den Datentyp zurückgeben einer <xref:System.Type> für Objekt.  
+  
+ Verwendung <xref:System.CodeDom.CodeTypeReferenceExpression> zum Darstellen von Quellcode, der auf einen Typ anhand des Namens, z. B. verweist beim Erstellen einer <xref:System.CodeDom.CodeCastExpression> ein Objekt, das ein Name angegeben Typ umwandeln.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung von einem <xref:System.CodeDom.CodeTypeOfExpression> zum Darstellen eines Ausdrucks für die Operatoren "typeof".  
+  
+ [!code-cpp[CodeTypeOfExample#2](~/samples/snippets/cpp/VS_Snippets_CLR/CodeTypeOfExample/CPP/codetypeofexample.cpp#2)]
+ [!code-csharp[CodeTypeOfExample#2](~/samples/snippets/csharp/VS_Snippets_CLR/CodeTypeOfExample/CS/codetypeofexample.cs#2)]
+ [!code-vb[CodeTypeOfExample#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeTypeOfExample/VB/codetypeofexample.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeTypeOfExpression ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeOfExpression.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.CodeDom.CodeTypeOfExpression" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeTypeOfExpression (System.CodeDom.CodeTypeReference type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeTypeReference type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeOfExpression.#ctor(System.CodeDom.CodeTypeReference)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.CodeDom.CodeTypeReference" />
+      </Parameters>
+      <Docs>
+        <param name="type">Ein <see cref="T:System.CodeDom.CodeTypeReference" /> , die angibt, dass des Datentyps für die <see langword="typeof" /> Ausdruck.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.CodeDom.CodeTypeOfExpression" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeTypeOfExpression (string type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeOfExpression.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Name des Datentyps für die <see langword="typeof" /> Ausdruck.</param>
+        <summary>Initialisiert mithilfe des angegebenen Typs eine neue Instanz der <see cref="T:System.CodeDom.CodeTypeOfExpression" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeTypeOfExpression (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeOfExpression.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Datentyp für den Datentyp des der <see langword="typeof" /> Ausdruck.</param>
+        <summary>Initialisiert mithilfe des angegebenen Typs eine neue Instanz der <see cref="T:System.CodeDom.CodeTypeOfExpression" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeTypeReference Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeTypeReference Type" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeTypeOfExpression.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeReference</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Datentyp verweist die <see langword="typeof" /> Ausdruck.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeTypeReference" /> aufzeigenden den Datentyp verweist die <see langword="typeof" /> Ausdruck. Diese Eigenschaft wird nie zurückgeben <see langword="null" />, und wird standardmäßig auf den <see cref="T:System.Void" /> Typ.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

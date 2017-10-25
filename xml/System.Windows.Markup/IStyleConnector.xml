@@ -1,0 +1,53 @@
+<Type Name="IStyleConnector" FullName="System.Windows.Markup.IStyleConnector">
+  <TypeSignature Language="C#" Value="public interface IStyleConnector" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IStyleConnector" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.IStyleConnector" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Methoden, die von der WPF XAML-Parser intern verwendet wird, um Ereignisse und Ereignissetter in kompilierten XAML anzufügen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Markup.IStyleConnector> Klasse ist nicht für die Verwendung von etwas anderes als der WPF XAML-Markupcompiler vorgesehen. Es wird von generierten Code verwiesen, die von Ereignissen für das Markup enthält, die Vorlagen oder ein ähnliches Factorymodell umfasst.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Connect">
+      <MemberSignature Language="C#" Value="public void Connect (int connectionId, object target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Connect(int32 connectionId, object target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.IStyleConnector.Connect(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionId" Type="System.Int32" />
+        <Parameter Name="target" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="connectionId">Die eindeutige Verbindungs-ID für das Verknüpfen von Ereignissen.</param>
+        <param name="target">Das Ziel für die ereignisverknüpfung.</param>
+        <summary>Fügt Ereignisse zu Ereignissetter und Vorlagen in kompiliertem Inhalt an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Markup.IStyleConnector> Klasse ist nicht für die Verwendung von etwas anderes als der WPF XAML-Markupcompiler vorgesehen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

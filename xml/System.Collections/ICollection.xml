@@ -1,0 +1,237 @@
+<Type Name="ICollection" FullName="System.Collections.ICollection">
+  <TypeSignature Language="C#" Value="public interface ICollection : System.Collections.IEnumerable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICollection implements class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.ICollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert Größe, Enumeratoren und Synchronisierungsmethoden für alle nicht generischen Auflistungen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Collections.ICollection> Schnittstelle ist die Basisschnittstelle für Klassen in der <xref:System.Collections> Namespace.  
+  
+ Die <xref:System.Collections.ICollection> -Schnittstelle erweitert <xref:System.Collections.IEnumerable>; <xref:System.Collections.IDictionary> und <xref:System.Collections.IList> spezialisiertere Schnittstellen, die erweitert werden <xref:System.Collections.ICollection>. Ein <xref:System.Collections.IDictionary> Implementierung ist eine Auflistung von Schlüssel-/Wertpaaren, z. B. die <xref:System.Collections.Hashtable> Klasse. Ein <xref:System.Collections.IList> Implementierung ist eine Auflistung von Werten und ihre Member können z. B. nach Index zugegriffen werden die <xref:System.Collections.ArrayList> Klasse.  
+  
+ Einige Auflistungen, die Zugriff auf ihre Elemente, wie z. B. begrenzen die <xref:System.Collections.Queue> Klasse und die <xref:System.Collections.Stack> Klasse, die direkt implementieren die <xref:System.Collections.ICollection> Schnittstelle.  
+  
+ Wenn weder die <xref:System.Collections.IDictionary> Schnittstelle noch die <xref:System.Collections.IList> Schnittstelle erfüllen die Anforderungen der erforderlichen Sammlung, leiten Sie die neue Auflistungsklasse aus der <xref:System.Collections.ICollection> stattdessen eine Schnittstelle für mehr Flexibilität.  
+  
+ Die generische Version dieser Schnittstelle finden Sie unter <xref:System.Collections.Generic.ICollection%601?displayProperty=nameWithType>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ICollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale <see cref="T:System.Array" />, das das Ziel der aus der <see cref="T:System.Collections.ICollection" /> kopierten Elemente ist. Für das <see cref="T:System.Array" /> muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="index">Der nullbasierte Index im <c>Array</c> an dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die Elemente der <see cref="T:System.Collections.ICollection" /> in ein <see cref="T:System.Array" />, beginnend bei einem bestimmten <see cref="T:System.Array" />-Index.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist kleiner als Null.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" /> ist mehrdimensional.  
+  
+ - oder -   
+  
+ Die Anzahl der Elemente in der Quell-<see cref="T:System.Collections.ICollection" /> ist größer als der verfügbare Platz vom <paramref name="index" /> bis zum Ende des Ziel-<paramref name="array" />.  
+  
+ - oder -   
+  
+ Der Typ des Quell-<see cref="T:System.Collections.ICollection" />s kann nicht automatisch in den Typ des Ziel-<paramref name="array" />s umgewandelt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.ICollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Elemente ab, die in <see cref="T:System.Collections.ICollection" /> enthalten sind.</summary>
+        <value>Die Anzahl der Elemente, die in <see cref="T:System.Collections.ICollection" /> enthalten sind.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.ICollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Zugriff auf die <see cref="T:System.Collections.ICollection" /> synchronisiert (threadsicher) ist.</summary>
+        <value>
+          <see langword="true" />, wenn der Zugriff auf das <see cref="T:System.Collections.ICollection" /> synchronisiert (threadsicher) ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.ICollection.SyncRoot%2A> gibt ein Objekt zurück, mit dem der Zugriff auf <xref:System.Collections.ICollection> synchronisiert werden kann.  
+  
+ Die meisten Auflistungsklassen im die <xref:System.Collections?displayProperty=nameWithType> Namespace implementieren darüber hinaus eine Synchronized-Methode, die einen synchronisierten Wrapper um die zugrunde liegende Auflistung bietet.  
+  
+ Die Enumeration einer Auflistung ist systemintern keine threadsichere Prozedur. Selbst wenn eine Auflistung synchronisiert wird, besteht die Möglichkeit, dass andere Threads sie ändern. Dies führt dazu, dass der Enumerator eine Ausnahme auslöst. Um während der Enumeration Threadsicherheit zu gewährleisten, können Sie entweder die Auflistung während der gesamten Enumeration sperren oder die Ausnahmen, die aus von anderen Threads stammenden Änderungen resultieren, abfangen.  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, das die Auflistung mit Sperren der <xref:System.Collections.ICollection.SyncRoot%2A> Eigenschaft während der gesamten Enumeration.  
+  
+ [!code-cpp[System.Collections.ICollection#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.collections.icollection/cpp/remarks.cpp#1)]
+ [!code-csharp[System.Collections.ICollection#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.icollection/cs/remarks.cs#1)]
+ [!code-vb[System.Collections.ICollection#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.icollection/vb/remarks.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.ICollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt ab, mit dem der Zugriff auf <see cref="T:System.Collections.ICollection" /> synchronisiert werden kann.</summary>
+        <value>Ein Objekt, mit dem der Zugriff auf die <see cref="T:System.Collections.ICollection" /> synchronisiert werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Auflistungen, die einen nicht öffentlich verfügbaren Speicher verwenden, besteht die erwartete Implementierung in der Rückgabe der aktuellen Instanz. Beachten Sie, dass der Zeiger auf die aktuelle Instanz möglicherweise nicht ausreichend für Auflistungen, die andere Auflistungen. sollte der zugrunde liegenden Auflistung zurückgegeben `SyncRoot` Eigenschaft.  
+  
+ Die meisten Auflistungsklassen im <xref:System.Collections?displayProperty=nameWithType>-Namespace implementieren darüber hinaus eine `Synchronized`-Methode, die einen synchronisierten Wrapper um die zugrunde liegende Auflistung zur Verfügung stellt. Abgeleitete Klassen können jedoch mithilfe der <xref:System.Collections.ICollection.SyncRoot%2A>-Eigenschaft eine eigene synchronisierte Version der Auflistung bereitstellen. Im Synchronisierungscode dürfen Vorgänge nicht direkt für die Auflistung ausgeführt werden. Stattdessen müssen sie für die <xref:System.Collections.ICollection.SyncRoot%2A>-Eigenschaft der Auflistung ausgeführt werden. Dies gewährleistet die einwandfreie Funktion von Auflistungen, die von anderen Objekten abgeleitet sind. Im Besonderen wird die ordnungsgemäße Synchronisierung mit anderen Threads gewährleistet, die eventuell zur gleichen Zeit Änderungen an der Auflistungsinstanz vornehmen.  
+  
+ In Ermangelung einer `Synchronized` Methode für eine Sammlung, für die erwartete Verwendung <xref:System.Collections.ICollection.SyncRoot%2A> sieht wie folgt aus:  
+  
+ [!code-cpp[System.Collections.ICollection#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.collections.icollection/cpp/remarks.cpp#2)]
+ [!code-csharp[System.Collections.ICollection#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.icollection/cs/remarks.cs#2)]
+ [!code-vb[System.Collections.ICollection#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.icollection/vb/remarks.vb#2)]  
+  
+ Die Enumeration einer Auflistung ist systemintern keine threadsichere Prozedur. Selbst wenn eine Auflistung synchronisiert wird, besteht die Möglichkeit, dass andere Threads sie ändern. Dies führt dazu, dass der Enumerator eine Ausnahme auslöst. Um während der Enumeration Threadsicherheit zu gewährleisten, können Sie entweder die Auflistung während der gesamten Enumeration sperren oder die Ausnahmen, die aus von anderen Threads stammenden Änderungen resultieren, abfangen.  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, das die Auflistung mit Sperren der <xref:System.Collections.ICollection.SyncRoot%2A> Eigenschaft während der gesamten Enumeration.  
+  
+ [!code-cpp[System.Collections.ICollection#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.collections.icollection/cpp/remarks.cpp#1)]
+ [!code-csharp[System.Collections.ICollection#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.icollection/cs/remarks.cs#1)]
+ [!code-vb[System.Collections.ICollection#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.icollection/vb/remarks.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

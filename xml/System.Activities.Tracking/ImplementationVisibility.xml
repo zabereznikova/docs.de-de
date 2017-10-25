@@ -1,0 +1,57 @@
+<Type Name="ImplementationVisibility" FullName="System.Activities.Tracking.ImplementationVisibility">
+  <TypeSignature Language="C#" Value="public enum ImplementationVisibility" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ImplementationVisibility extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Tracking.ImplementationVisibility" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Beschreibt die Sichtbarkeitsmodi innerhalb eines Nachverfolgungsprofils.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nachverfolgungsdatensätze von Aktivitäten, die innerhalb einer anderen Aktivität enthalten sind kann gefiltert werden, mithilfe der vom beschriebenen Sichtbarkeitsmodi **ImplementationVisibility**. Der Filter wird angewendet, um Nachverfolgungsdatensätze sämtlicher Aktivitäten bzw. nur der Stammaktivität und deren Implementierung für einen Workflow zu abonnieren. Weitere Informationen finden Sie unter <xref:System.Activities.Tracking.TrackingProfile.ImplementationVisibility%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="All" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Activities.Tracking.ImplementationVisibility All = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Tracking.ImplementationVisibility.All" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Tracking.ImplementationVisibility</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Alle Nachverfolgungsdatensätze werden ausgegeben.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RootScope">
+      <MemberSignature Language="C#" Value="RootScope" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Activities.Tracking.ImplementationVisibility RootScope = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Tracking.ImplementationVisibility.RootScope" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Tracking.ImplementationVisibility</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nur die Stammaktivität und ihre Implementierung für den Workflow werden ausgegeben.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

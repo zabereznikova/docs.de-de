@@ -1,0 +1,62 @@
+<Type Name="WebItemClosingTagNotFound" FullName="Microsoft.VisualBasic.Compatibility.VB6.WebItemClosingTagNotFound">
+  <TypeSignature Language="C#" Value="public class WebItemClosingTagNotFound : Exception" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi WebItemClosingTagNotFound extends System.Exception" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Compatibility.VB6.WebItemClosingTagNotFound" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Löst eine <see cref="T:System.Exception" /> aus, wenn das Endtag für eine Vorlage fehlt, die einem <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.WebItem" /> zugeordnet ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.VisualBasic.Compatibility.VB6.WebClass> Klasse wird von den Upgradetools verwendet, so aktualisieren Sie eine Visual Basic 6.0 `WebClass` Projekt eine [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] Website-Projekt.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebItemClosingTagNotFound (string TagName);" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor(string TagName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.WebItemClosingTagNotFound.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="TagName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="TagName">Ein <see cref="T:System.String" /> , enthält den Namen des Tags.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.WebItemClosingTagNotFound" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.VisualBasic.Compatibility.VB6.WebClass> Klasse wird von den Upgradetools verwendet, so aktualisieren Sie eine Visual Basic 6.0 `WebClass` Projekt eine [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] Website-Projekt.  
+  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

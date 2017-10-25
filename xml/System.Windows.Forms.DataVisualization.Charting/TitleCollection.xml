@@ -1,0 +1,60 @@
+<Type Name="TitleCollection" FullName="System.Windows.Forms.DataVisualization.Charting.TitleCollection">
+  <TypeSignature Language="C#" Value="public class TitleCollection : System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection&lt;System.Windows.Forms.DataVisualization.Charting.Title&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TitleCollection extends System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection`1&lt;class System.Windows.Forms.DataVisualization.Charting.Title&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.TitleCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection&lt;System.Windows.Forms.DataVisualization.Charting.Title&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="T">System.Windows.Forms.DataVisualization.Charting.Title</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Auflistung von<see cref="T:System.Windows.Forms.DataVisualization.Charting.Title" />-Objekten dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.TitleCollection> Klasse implementiert ist, als die <xref:System.Windows.Forms.DataVisualization.Charting.Chart.Titles%2A> Auflistungseigenschaft des Stamms <xref:System.Windows.Forms.DataVisualization.Charting.Chart> Objekt.  
+  
+ <xref:System.Windows.Forms.DataVisualization.Charting.Title>Objekte können angefügt, eingefügt oder entfernt aus der Auflistung zur Entwurfszeit und Laufzeit.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.Title Add (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.DataVisualization.Charting.Title Add(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.TitleCollection.Add(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.Title</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Titels, das der Auflistung hinzugefügt werden soll.</param>
+        <summary>Fügt eine <see cref="T:System.Windows.Forms.DataVisualization.Charting.Title" /> Objekt mit dem angegebenen Namen am Ende der Auflistung.</summary>
+        <returns>Der Index des hinzugefügten Objekts.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein `string` Wert, der den nullbasierten Index des hinzugefügten Titels darstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

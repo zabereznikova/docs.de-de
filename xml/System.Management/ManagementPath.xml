@@ -1,0 +1,586 @@
+<Type Name="ManagementPath" FullName="System.Management.ManagementPath">
+  <TypeSignature Language="C#" Value="public class ManagementPath : ICloneable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ManagementPath extends System.Object implements class System.ICloneable" />
+  <TypeSignature Language="DocId" Value="T:System.Management.ManagementPath" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Management.ManagementPathConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Wrapper für das Analysieren und Erstellen von Pfaden für WMI-Objekten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird veranschaulicht, wie die <xref:System.Management.ManagementPath> Klasse analysiert einen Pfad zu einem WMI-Objekt.  Der Pfad, der im Beispiel analysiert wird ist ein Pfad zu einer Instanz einer Klasse.  
+  
+ [!code-csharp[wminet_ManagementPath#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementPath/cs/ManagementPath.cs#1)]
+ [!code-vb[wminet_ManagementPath#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementPath/vb/ManagementPath.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagementPath ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementPath.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue, leere Instanz der <see cref="T:System.Management.ManagementPath" />-Klasse. Dies ist der Standardkonstruktor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagementPath (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementPath.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Objektpfad.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Management.ManagementPath" /> Klasse für den angegebenen Pfad.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird veranschaulicht, wie die <xref:System.Management.ManagementPath> Klasse analysiert einen Pfad zu einem WMI-Objekt.  Der Pfad, der im Beispiel analysiert wird ist ein Pfad zu einer Instanz einer Klasse.  
+  
+ [!code-csharp[wminet_ManagementPath-S#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementPath-S/cs/ManagementPath-S.cs#1)]
+ [!code-vb[wminet_ManagementPath-S#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementPath-S/vb/ManagementPath-S.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClassName">
+      <MemberSignature Language="C#" Value="public string ClassName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClassName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.ManagementPath.ClassName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Klassenteil des Pfads.</summary>
+        <value>Gibt eine <see cref="T:System.String" /> -Wert, der die Klassenteil des Pfads enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Eine Zeichenfolge, die mit dem Namen der Klasse.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird veranschaulicht, wie die <xref:System.Management.ManagementPath> Klasse analysiert einen Pfad zu einem WMI-Objekt. Der Pfad, der im Beispiel analysiert wird ist ein Pfad zu einer Instanz einer Klasse.  
+  
+ [!code-csharp[wminet_ManagementPath_ClassName#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementPath_ClassName/cs/ManagementPath_ClassName.cs#1)]
+ [!code-vb[wminet_ManagementPath_ClassName#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementPath_ClassName/vb/ManagementPath_ClassName.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Management.ManagementPath Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.ManagementPath Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementPath.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ManagementPath</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Kopie der <see cref="T:System.Management.ManagementPath" />.</summary>
+        <returns>Das geklonte Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultPath">
+      <MemberSignature Language="C#" Value="public static System.Management.ManagementPath DefaultPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Management.ManagementPath DefaultPath" />
+      <MemberSignature Language="DocId" Value="P:System.Management.ManagementPath.DefaultPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ManagementPath</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Standardpfad-Bereich verwendet, wenn kein Bereich angegeben ist. Der Standardbereich entspricht \\ \\.\root\cimv2, und kann durch Festlegen dieser Eigenschaft geändert werden.</summary>
+        <value>Gibt eine <see cref="T:System.Management.ManagementPath" /> , enthält den Bereich (Namespace)-Standardpfad verwendet, wenn kein Bereich angegeben ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Standardmäßig lautet der Bereichswert \\ \\.\root\cimv2 oder einen anderen Bereich-Pfad, falls der Standardcode geändert wurde.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsClass">
+      <MemberSignature Language="C#" Value="public bool IsClass { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsClass" />
+      <MemberSignature Language="DocId" Value="P:System.Management.ManagementPath.IsClass" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob dies ein Klassenpfad ist.</summary>
+        <value>Gibt eine <see cref="T:System.Boolean" /> Wert, der angibt, ob es sich um einen Klassenpfad handelt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ `true`ist dies ein Klassenpfad; andernfalls `false`.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird veranschaulicht, wie die <xref:System.Management.ManagementPath> Klasse analysiert einen Pfad zu einem WMI-Objekt. Der Pfad, der im Beispiel analysiert wird ist ein Pfad zu einer Instanz einer Klasse.  
+  
+ [!code-csharp[wminet_ManagementPath_IsClass#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementPath_IsClass/cs/ManagementPath_IsClass.cs#1)]
+ [!code-vb[wminet_ManagementPath_IsClass#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementPath_IsClass/vb/ManagementPath_IsClass.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInstance">
+      <MemberSignature Language="C#" Value="public bool IsInstance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInstance" />
+      <MemberSignature Language="DocId" Value="P:System.Management.ManagementPath.IsInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob es sich um einen Instanzenpfad handelt.</summary>
+        <value>Gibt eine <see cref="T:System.Boolean" /> Wert, der angibt, ob es sich um einen Instanzenpfad handelt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ `true`ist dies kein instanzpfad; andernfalls `false`.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird veranschaulicht, wie die <xref:System.Management.ManagementPath> Klasse analysiert einen Pfad zu einem WMI-Objekt. Der Pfad, der im Beispiel analysiert wird ist ein Pfad zu einer Instanz einer Klasse.  
+  
+ [!code-csharp[wminet_ManagementPath_IsInstance#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementPath_IsInstance/cs/ManagementPath_IsInstance.cs#1)]
+ [!code-vb[wminet_ManagementPath_IsInstance#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementPath_IsInstance/vb/ManagementPath_IsInstance.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSingleton">
+      <MemberSignature Language="C#" Value="public bool IsSingleton { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSingleton" />
+      <MemberSignature Language="DocId" Value="P:System.Management.ManagementPath.IsSingleton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob dies ist eine *Singleton* instanzpfad.</summary>
+        <value>Gibt eine <see cref="T:System.Boolean" /> Wert, der angibt, ob es sich um eine Singleton-Instanz-Pfad handelt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ `true`ist dies eine Singleton-Instanzenpfad; andernfalls `false`.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NamespacePath">
+      <MemberSignature Language="C#" Value="public string NamespacePath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NamespacePath" />
+      <MemberSignature Language="DocId" Value="P:System.Management.ManagementPath.NamespacePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen der Namespaceteil des Pfads. Beachten Sie, dass dies nicht der Servername beinhaltet separat abgerufen werden kann.</summary>
+        <value>Gibt eine <see cref="T:System.String" /> Wert, der der Namespaceteil des Pfads enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Eine Zeichenfolge mit dem Namespaceteil des Pfads, der in diesem Objekt dargestellt.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird veranschaulicht, wie die <xref:System.Management.ManagementPath> Klasse analysiert einen Pfad zu einem WMI-Objekt.  Der Pfad, der im Beispiel analysiert wird ist ein Pfad zu einer Instanz einer Klasse.  
+  
+ [!code-csharp[wminet_ManagementPath_NamespacePath#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementPath_NamespacePath/cs/ManagementPath_NamespacePath.cs#1)]
+ [!code-vb[wminet_ManagementPath_NamespacePath#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementPath_NamespacePath/vb/ManagementPath_NamespacePath.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Management.ManagementPath.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeichenfolgendarstellung des vollständigen Pfads im Objekt.</summary>
+        <value>Gibt eine <see cref="T:System.String" /> Wert, der den vollständigen Pfad enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Eine Zeichenfolge, die mit dem vollständigen Pfad, der in diesem Objekt dargestellt wird.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird veranschaulicht, wie die <xref:System.Management.ManagementPath> Klasse analysiert einen Pfad zu einem WMI-Objekt.  Der Pfad, der im Beispiel analysiert wird ist ein Pfad zu einer Instanz einer Klasse.  
+  
+ [!code-csharp[wminet_ManagementPath_Path#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementPath_Path/cs/ManagementPath_Path.cs#1)]
+ [!code-vb[wminet_ManagementPath_Path#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementPath_Path/vb/ManagementPath_Path.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelativePath">
+      <MemberSignature Language="C#" Value="public string RelativePath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RelativePath" />
+      <MemberSignature Language="DocId" Value="P:System.Management.ManagementPath.RelativePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den relativen Pfad: Klassenname und nur als Schlüssel.</summary>
+        <value>Gibt eine <see cref="T:System.String" /> Wert, der den relativen Pfad enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Eine Zeichenfolge, die mit dem relativen Pfad (nicht einschließlich der Server und Namespace Teile) in diesem Objekt dargestellt wird.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird veranschaulicht, wie die <xref:System.Management.ManagementPath> Klasse analysiert einen Pfad zu einem WMI-Objekt.  Der Pfad, der im Beispiel analysiert wird ist ein Pfad zu einer Instanz einer Klasse.  
+  
+ [!code-csharp[wminet_ManagementPath_RelativePath#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementPath_RelativePath/cs/ManagementPath_RelativePath.cs#1)]
+ [!code-vb[wminet_ManagementPath_RelativePath#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementPath_RelativePath/vb/ManagementPath_RelativePath.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Server">
+      <MemberSignature Language="C#" Value="public string Server { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Server" />
+      <MemberSignature Language="DocId" Value="P:System.Management.ManagementPath.Server" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt der Serverteil des Pfads.</summary>
+        <value>Gibt eine <see cref="T:System.String" /> Wert, der den Namen des Servers enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Eigenschaftswert  
+ Eine Zeichenfolge mit den Servernamen aus dem Pfad, der in diesem Objekt dargestellt.  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird veranschaulicht, wie die <xref:System.Management.ManagementPath> Klasse analysiert einen Pfad zu einem WMI-Objekt.  Der Pfad, der im Beispiel analysiert wird ist ein Pfad zu einer Instanz einer Klasse.  
+  
+ [!code-csharp[wminet_ManagementPath_Server#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementPath_Server/cs/ManagementPath_Server.cs#1)]
+ [!code-vb[wminet_ManagementPath_Server#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementPath_Server/vb/ManagementPath_Server.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAsClass">
+      <MemberSignature Language="C#" Value="public void SetAsClass ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAsClass() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementPath.SetAsClass" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt den Pfad als einen neuen Klassenpfad fest. Dies bedeutet, dass der Pfad muss ein Klassenname aber keine Werte für Schlüssel.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAsSingleton">
+      <MemberSignature Language="C#" Value="public void SetAsSingleton ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAsSingleton() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementPath.SetAsSingleton" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt den Pfad als neue *Singleton* Objektpfad. Dies bedeutet, dass es sich um einen Pfad zu einer Instanz, jedoch keine Schlüsselwerte vorhanden sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ICloneable.Clone">
+      <MemberSignature Language="C#" Value="object ICloneable.Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ICloneable.Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementPath.System#ICloneable#Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues Objekt, das eine Kopie der aktuellen Instanz darstellt.</summary>
+        <returns>Ein neues Objekt, das eine Kopie dieser Instanz ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementPath.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Pfad des vollständigen Objekts als Zeichenfolgendarstellung zurück.</summary>
+        <returns>Eine Zeichenfolge, die mit dem vollständigen Objektpfad von diesem-Objekt dargestellt wird. Dieser Wert entspricht dem Wert des der <see cref="P:System.Management.ManagementPath.Path" /> Eigenschaft.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

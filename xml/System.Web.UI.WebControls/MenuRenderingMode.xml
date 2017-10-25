@@ -1,0 +1,75 @@
+<Type Name="MenuRenderingMode" FullName="System.Web.UI.WebControls.MenuRenderingMode">
+  <TypeSignature Language="C#" Value="public enum MenuRenderingMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MenuRenderingMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.MenuRenderingMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, ob die <see cref="T:System.Web.UI.WebControls.Menu" /> Steuerelement rendert HTML <see langword="table" /> -Elemente und Inlineformate oder <see langword="listitem" /> -Elemente und cascading Stylesheet (CSS)-Formate.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.Web.UI.WebControls.MenuRenderingMode> Enumeration, die beim Festlegen der <xref:System.Web.UI.WebControls.Menu.RenderingMode%2A> Eigenschaft der <xref:System.Web.UI.WebControls.Menu> Steuerelement. Der Wert, den Sie zum Zuweisen der <xref:System.Web.UI.WebControls.Menu.RenderingMode%2A> Eigenschaft bestimmt, wie die <xref:System.Web.UI.WebControls.Menu> Steuerelement rendert Markup.  
+  
+ In ASP.NET 3.5 und frühere Versionen die <xref:System.Web.UI.WebControls.Menu> Steuerelement verwendet HTML `table` -Elemente und Inlineformate, um die Darstellung des Menüs in einem Browser steuern. In ASP.NET 4 und höheren Versionen werden standardmäßig die <xref:System.Web.UI.WebControls.Menu> -Steuerelement verwendet `listitem` -Elemente und cascading Stylesheet (CSS)-Formate. Diese Enumeration wird für Abwärtskompatibilität angeboten. In ASP.NET 4 und höheren Versionen können Sie diese Enumeration angeben, dass das Menüsteuerelement Markup generiert, die wie in früheren Versionen von ASP.NET angezeigt werden sollen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.MenuRenderingMode Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.MenuRenderingMode.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.MenuRenderingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Web.UI.WebControls.Menu" /> Steuerelement rendert Markup in die Möglichkeit, dies der Fall standardmäßig für die Version von ASP.NET erkennbar ist, die <see cref="P:System.Web.UI.Control.RenderingCompatibility" /> Eigenschaft des Steuerelements. Wenn der Wert der <see cref="P:System.Web.UI.Control.RenderingCompatibility" /> Eigenschaft ist <c>3.5</c>, diese Einstellung ist gleichbedeutend mit <see cref="F:System.Web.UI.WebControls.MenuRenderingMode.Table" />. Wenn der Wert von der <see cref="P:System.Web.UI.Control.RenderingCompatibility" /> Eigenschaft ist <c>4.0</c> oder größer ist, diese Einstellung ist gleichbedeutend mit <see cref="F:System.Web.UI.WebControls.MenuRenderingMode.List" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="List">
+      <MemberSignature Language="C#" Value="List" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.MenuRenderingMode List = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.MenuRenderingMode.List" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.MenuRenderingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Web.UI.WebControls.Menu" /> Steuerelement rendert Markup mithilfe von Listenelement (<see langword="li" />) Elemente und CSS-Formatvorlagen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Table">
+      <MemberSignature Language="C#" Value="Table" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.MenuRenderingMode Table = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.MenuRenderingMode.Table" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.MenuRenderingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Web.UI.WebControls.Menu" /> Steuerelement rendert Markup mithilfe <see langword="table" /> -Elemente und Inlineformate.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

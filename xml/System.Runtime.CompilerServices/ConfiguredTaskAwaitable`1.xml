@@ -1,0 +1,84 @@
+<Type Name="ConfiguredTaskAwaitable&lt;TResult&gt;" FullName="System.Runtime.CompilerServices.ConfiguredTaskAwaitable&lt;TResult&gt;">
+  <TypeSignature Language="C#" Value="public struct ConfiguredTaskAwaitable&lt;TResult&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit ConfiguredTaskAwaitable`1&lt;TResult&gt; extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Tasks</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TResult" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TResult">Der von diesem <see cref="T:System.Threading.Tasks.Task`1" /> erzeugte Ergebnistyp.</typeparam>
+    <summary>Stellt ein awaitable-Objekt, das ermöglicht konfiguriert auf eine Aufgabe wartet auf.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Typ dient zur Verwendung durch den Compiler; Verwenden Sie es nicht direkt im Code.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetAwaiter">
+      <MemberSignature Language="C#" Value="public System.Runtime.CompilerServices.ConfiguredTaskAwaitable&lt;TResult&gt;.ConfiguredTaskAwaiter GetAwaiter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1/ConfiguredTaskAwaiter&lt;!TResult&gt; GetAwaiter() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.GetAwaiter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.CompilerServices.ConfiguredTaskAwaitable&lt;TResult&gt;+ConfiguredTaskAwaiter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Awaiter, der für dieses awaitable-Objekt zurück.</summary>
+        <returns>Die awaiter-Element.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für die Verwendung durch den Compiler vorgesehen; Verwenden Sie es nicht direkt im Code.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

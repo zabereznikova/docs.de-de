@@ -1,0 +1,1210 @@
+<Type Name="Binding" FullName="System.Windows.Forms.Binding">
+  <TypeSignature Language="C#" Value="public class Binding" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Binding extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Binding" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.ListBindingConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die einfache Bindung zwischen dem Eigenschaftswert eines Objekts und dem Eigenschaftswert eines Steuerelements dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.Binding> Klasse erstellen und verwalten eine einfache Bindung zwischen der Eigenschaft eines Steuerelements und entweder die Eigenschaft eines Objekts oder die Eigenschaft des aktuellen Objekts in einer Liste von Objekten.  
+  
+ Als Beispiel für den ersten Fall können Sie binden die <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft eine <xref:System.Windows.Forms.TextBox> die Steuerung an die `FirstName` Eigenschaft ein `Customer` Objekt. Beispielsweise den zweiten Fall können Sie binden die <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft eine <xref:System.Windows.Forms.TextBox> die Steuerung an die `FirstName` Eigenschaft eine <xref:System.Data.DataTable> , die Kunden enthält.  
+  
+ Die <xref:System.Windows.Forms.Binding> Klasse können Sie Werte für die Anzeige durch formatieren auch die <xref:System.Windows.Forms.Binding.Format> Ereignis und formatierte Werte durch Abrufen der <xref:System.Windows.Forms.Binding.Parse> Ereignis.  
+  
+ Beim Erstellen einer <xref:System.Windows.Forms.Binding> -Instanz mit <xref:System.Windows.Forms.Binding.%23ctor%2A> -Konstruktor müssen Sie drei Elemente angeben:  
+  
+-   Der Name der Steuerelementeigenschaft zum Binden an.  
+  
+-   Die Datenquelle  
+  
+-   Der Pfad, der auf eine Liste oder Eigenschaft in der Datenquelle aufgelöst wird. Der Navigationspfad dient außerdem zum Erstellen des Objekts <xref:System.Windows.Forms.Binding.BindingMemberInfo%2A> Eigenschaft.  
+  
+ Zunächst müssen Sie Name der Steuerelementeigenschaft angeben, die zum Binden von Daten verwendet werden sollen. Z. B. zum Anzeigen von Daten in einem <xref:System.Windows.Forms.TextBox> geben die <xref:System.Windows.Forms.TextBoxBase.Text%2A> Eigenschaft.  
+  
+ Zweitens können Sie eine Instanz einer der Klassen in der folgenden Tabelle als Datenquelle angeben.  
+  
+  Im dritten müssen Sie angeben, den Pfad, der eine leere Zeichenfolge sein kann (""), eine einzelne Eigenschaftenname oder eine Hierarchie Punkte getrennten Namen. Wenn Sie den Navigationspfad auf eine leere Zeichenfolge festlegen der <xref:System.Object.ToString%2A> Methode wird für die zugrunde liegende Datenquellenobjekt aufgerufen werden.  
+  
+ Wenn die Datenquelle ist eine <xref:System.Data.DataTable>, können auch mehrere enthalten <xref:System.Data.DataColumn> Objekte aufweist, muss der Navigationspfad in einer bestimmten Spalte aufgelöst verwendet werden.  
+  
+> [!NOTE]
+>  Wenn die Datenquelle ist eine <xref:System.Data.DataSet>, <xref:System.Data.DataViewManager>, oder <xref:System.Data.DataTable>, sind die tatsächliche Bindung an eine <xref:System.Data.DataView>. Daher sind die gebundenen Zeilen tatsächlich <xref:System.Data.DataRowView> Objekte.  
+  
+ Ein durch Punkte getrennten Navigationspfad ist erforderlich, wenn die Datenquelle auf ein Objekt festgelegt ist, die mehrere enthält <xref:System.Data.DataTable> Objekte (z. B. eine <xref:System.Data.DataSet> oder <xref:System.Data.DataViewManager>). Sie können auch einen durch Punkte getrennten Navigationspfad beim Binden an ein Objekt, dessen Eigenschaften Verweise auf andere Objekte (z. B. eine Klasse mit Eigenschaften, die andere Klassenobjekte zurückgeben) zurückgeben. Alle folgenden Navigationspfade beschreiben z. B. gültige Datenfelder:  
+  
+-   "Size.Height"  
+  
+-   "Suppliers.CompanyName"  
+  
+-   "Regions.regionsToCustomers.CustomerFirstName"  
+  
+-   "Regions.regionsToCustomers.customersToOrders.ordersToDetails.Quantity"  
+  
+ Jedes Mitglied der Pfad kann entweder eine Eigenschaft, die in einen einzelnen Wert (z. B. eine ganze Zahl) aufgelöst wird, oder eine Liste von Werten (z. B. ein Array von Zeichenfolgen) zurückgeben. Obwohl jedes Element im Pfad eine Liste oder eine Eigenschaft darstellen kann, muss das letzte Element auf eine Eigenschaft verweisen. Jedes Element erstellt, auf das vorherige Element: "Size.Height" wird in wird die <xref:System.Drawing.Size.Height%2A> Eigenschaft für den aktuellen <xref:System.Drawing.Size>; "Regions.regionsToCustomers.CustomerFirstName" löst auf den ersten Namen für den aktuellen Kunden, wobei der Kunde eine Kunden für die aktuelle Region ist.  
+  
+ Ein <xref:System.Data.DataRelation> gibt eine Liste mit Werten zurück, durch das Verknüpfen einer <xref:System.Data.DataTable> mit einer zweiten <xref:System.Data.DataTable> in einem <xref:System.Data.DataSet>. Wenn die <xref:System.Data.DataSet> enthält <xref:System.Data.DataRelation> Objekte, geben Sie den Data-Member als eine <xref:System.Data.DataTable.TableName%2A> gefolgt von einer <xref:System.Data.DataRelation.RelationName%2A>, und klicken Sie dann eine <xref:System.Data.DataColumn.ColumnName%2A>. Beispielsweise, wenn die <xref:System.Data.DataTable> mit dem Namen "Suppliers" enthält einen <xref:System.Data.DataRelation> mit dem Namen "suppliers2products", konnte der Datenmember "Suppliers.suppliers2products.ProductName" sein.  
+  
+ Die Datenquelle kann eine Reihe von verwandten Klassen bestehen. Angenommen Sie, eine Reihe von Klassen, die Sonnensysteme katalogisiert. Die Klasse mit dem Namen `System` enthält eine Eigenschaft mit dem Namen `Stars` , die eine Auflistung von zurückgibt `Star` Objekte. Jede `Star` Objekt hat `Name` und `Mass` Eigenschaften als auch eine `Planets` -Eigenschaft, die eine Auflistung von zurückgibt `Planet` Objekte. In diesem System verwendet jeder Planet verfügt auch über `Mass` und `Name` Eigenschaften. Jede `Planet` -Objekt besitzt eine `Moons` -Eigenschaft, die eine Auflistung von zurückgibt `Moon` Objekte, von denen jede verfügt auch über `Name` und `Mass` Eigenschaften. Bei Angabe einer `System` Objekt als Datenquelle, können Sie eine der folgenden als Datenmember angeben:  
+  
+-   "Stars.Name"  
+  
+-   "Stars.Mass"  
+  
+-   "Stars.Planets.Name"  
+  
+-   "Stars.Planets.Mass"  
+  
+-   "Stars.Planets.Moons.Name"  
+  
+-   "Stars.Planets.Moons.Mass"  
+  
+ Steuerelemente, die einfach gebunden werden können, enthalten eine Auflistung von <xref:System.Windows.Forms.Binding> Objekte in einem <xref:System.Windows.Forms.ControlBindingsCollection>, die Sie über des Steuerelements zugreifen können <xref:System.Windows.Forms.Control.DataBindings%2A> Eigenschaft. Sie fügen eine <xref:System.Windows.Forms.Binding> auf die Auflistung durch Aufrufen der <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> -Methode, wodurch eine Eigenschaft des Steuerelements an eine Eigenschaft eines Objekts (oder an eine Eigenschaft des aktuellen Objekts in einer Liste) binden.  
+  
+ Sie können einfache binden jedes Objekt, das von abgeleitet ist die <xref:System.Windows.Forms.Control?displayProperty=nameWithType> Klasse, zum Beispiel die folgenden Windows-Steuerelemente:  
+  
+-   <xref:System.Windows.Forms.Button>  
+  
+-   <xref:System.Windows.Forms.CheckBox>  
+  
+-   <xref:System.Windows.Forms.CheckedListBox>  
+  
+-   <xref:System.Windows.Forms.ComboBox>  
+  
+-   <xref:System.Windows.Forms.DateTimePicker>  
+  
+-   <xref:System.Windows.Forms.DomainUpDown>  
+  
+-   <xref:System.Windows.Forms.GroupBox>  
+  
+-   <xref:System.Windows.Forms.HScrollBar>  
+  
+-   <xref:System.Windows.Forms.Label>  
+  
+-   <xref:System.Windows.Forms.LinkLabel>  
+  
+-   <xref:System.Windows.Forms.ListBox>  
+  
+-   <xref:System.Windows.Forms.ListView>  
+  
+-   <xref:System.Windows.Forms.MonthCalendar>  
+  
+-   <xref:System.Windows.Forms.NumericUpDown>  
+  
+-   <xref:System.Windows.Forms.PictureBox>  
+  
+-   <xref:System.Windows.Forms.ProgressBar>  
+  
+-   <xref:System.Windows.Forms.RadioButton>  
+  
+-   <xref:System.Windows.Forms.RichTextBox>  
+  
+-   <xref:System.Windows.Forms.ScrollBar>  
+  
+-   <xref:System.Windows.Forms.StatusBar>  
+  
+-   <xref:System.Windows.Forms.TextBox>  
+  
+-   <xref:System.Windows.Forms.TreeView>  
+  
+-   <xref:System.Windows.Forms.VScrollBar>  
+  
+> [!NOTE]
+>  Nur die <xref:System.Windows.Forms.ListControl.SelectedValue%2A> Eigenschaft von der <xref:System.Windows.Forms.ComboBox>, <xref:System.Windows.Forms.CheckedListBox>, und <xref:System.Windows.Forms.ListBox> -Steuerelement ist einfach gebunden.  
+  
+ Die <xref:System.Windows.Forms.BindingManagerBase> Klasse ist eine abstrakte Klasse, die alle verwaltet die <xref:System.Windows.Forms.Binding> Objekte für eine bestimmte Datenquelle und Datenmember. Abgeleitete Klassen <xref:System.Windows.Forms.BindingManagerBase> sind die <xref:System.Windows.Forms.CurrencyManager> und <xref:System.Windows.Forms.PropertyManager> Klassen. Wie eine <xref:System.Windows.Forms.Binding> wird verwaltet davon abhängig, ob die <xref:System.Windows.Forms.Binding> ist eine listenbindung oder eine eigenschaftenbindung. Beispielsweise, wenn es sich um eine listenbindung handelt, können Sie die <xref:System.Windows.Forms.BindingManagerBase> an eine <xref:System.Windows.Forms.BindingManagerBase.Position%2A> in der Liste der <xref:System.Windows.Forms.BindingManagerBase.Position%2A>, daher bestimmt, welches Element (nicht alle Elemente in der Liste) tatsächlich an ein Steuerelement gebunden ist. Zum Zurückgeben des entsprechenden <xref:System.Windows.Forms.BindingManagerBase>, verwenden Sie die <xref:System.Windows.Forms.BindingContext>.  
+  
+ Hinzufügen eine neue Zeile auf einen Satz von Steuerelementen, die auf den gleichen <xref:System.Windows.Forms.Binding.DataSource%2A>, verwenden die <xref:System.Windows.Forms.BindingManagerBase.AddNew%2A> Methode der <xref:System.Windows.Forms.BindingManagerBase> Klasse. Verwenden der <xref:System.Windows.Forms.BindingContext.Item%2A> Eigenschaft von der <xref:System.Windows.Forms.BindingContext> Klasse, um das Zurückgeben des entsprechenden <xref:System.Windows.Forms.CurrencyManager>. Um das Hinzufügen der neuen Zeile mit Escapezeichen versehen, verwenden die <xref:System.Windows.Forms.CurrencyManager.CancelCurrentEdit%2A> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt ein Windows Form mit mehrere Steuerelemente, die einfache Datenbindung veranschaulicht wird. Das Beispiel erstellt eine <xref:System.Data.DataSet> mit zwei Tabellen, die mit dem Namen `Customers` und `Orders`, und ein <xref:System.Data.DataRelation> mit dem Namen `custToOrders`. Vier Steuerelemente (eine <xref:System.Windows.Forms.DateTimePicker> und drei <xref:System.Windows.Forms.TextBox> Steuerelemente) werden Daten, die an Spalten in den Tabellen gebunden. Für jedes Steuerelement, das Beispiel erstellt und fügt eine <xref:System.Windows.Forms.Binding> an das Steuerelement über die <xref:System.Windows.Forms.Control.DataBindings%2A> Eigenschaft. Das Beispiel gibt eine <xref:System.Windows.Forms.BindingManagerBase> für jede Tabelle über des Formulars <xref:System.Windows.Forms.BindingContext>. Vier <xref:System.Windows.Forms.Button> Inkrement- oder Dekrementoperators steuert die <xref:System.Windows.Forms.BindingManagerBase.Position%2A> Eigenschaft auf die <xref:System.Windows.Forms.BindingManagerBase> Objekte.  
+  
+ [!code-cpp[Classic Binding Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Binding Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Binding Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Binding Example/CS/source.cs#1)]
+ [!code-vb[Classic Binding Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Binding Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Binding (string propertyName, object dataSource, string dataMember);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string propertyName, object dataSource, string dataMember) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Binding.#ctor(System.String,System.Object,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="dataSource" Type="System.Object" />
+        <Parameter Name="dataMember" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Der Name der Steuerelementeigenschaft für die Bindung.</param>
+        <param name="dataSource">Ein <see cref="T:System.Object" />, das die Datenquelle darstellt.</param>
+        <param name="dataMember">Die Eigenschaft oder Liste, an die die Bindung erfolgen soll.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.Binding" /> -Klasse, die einfache Bindung die angegebene Steuerelementeigenschaft an den angegebenen Datenmember der Datenquelle herstellt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können eine Instanz einer beliebigen der folgenden Klassen für die Datenquelle angeben:  
+  
+-   <xref:System.Data.DataSet>  
+  
+-   <xref:System.Data.DataTable>  
+  
+-   <xref:System.Data.DataView>  
+  
+-   <xref:System.Data.DataViewManager>  
+  
+-   <xref:System.Windows.Forms.BindingSource>  
+  
+-   Jede Klasse, implementiert die <xref:System.Collections.IList> Schnittstelle  
+  
+-   Jede Klasse  
+  
+ Finden Sie unter der <xref:System.Windows.Forms.Binding> Klasse für Weitere Informationen zum Erstellen der `dataMember` Zeichenfolge.  
+  
+ Wenn Sie eine Bindung an eine Steuerelementeigenschaft Erstellen der neuen <xref:System.Windows.Forms.Binding> untersucht das gebundene Steuerelement verfügbar gemachten Ereignisse beschrieben, und fügt zwei bestimmten Ereignissen:  
+  
+-   <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>  
+  
+-   Ein Ereignis namens *PropertyName* `Changed` (z. B. <xref:System.Windows.Forms.Control.BackColorChanged?displayProperty=nameWithType>)  
+  
+ Wenn Sie versuchen, auf eine Eigenschaft zu binden, der nicht vorhanden ist, ein <xref:System.ArgumentException> ausgelöst, wenn die <xref:System.Windows.Forms.Binding> wird hinzugefügt, um des Steuerelements <xref:System.Windows.Forms.Control.DataBindings%2A?displayProperty=nameWithType> Auflistung.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel Beispiel bindet ein <xref:System.Windows.Forms.TextBox> Steuerelement auf eine Tabelle in einer <xref:System.Data.DataSet> mit dem Namen `myDataSet`. Im Beispiel erfordert, dass Sie deklariert haben `myDataSet` im Deklarationsabschnitt des Moduls.  
+  
+ [!code-cpp[Classic Binding.Binding Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Binding.Binding Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Binding.Binding Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Binding.Binding Example/CS/source.cs#1)]
+ [!code-vb[Classic Binding.Binding Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Binding.Binding Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">
+          <paramref name="propertyName" />ist weder eine gültige Eigenschaft eines Steuerelements noch eine leere Zeichenfolge ("").</exception>
+        <exception cref="T:System.ArgumentException">Die Eigenschaft, die vom <paramref name="propertyName" /> auf das Steuerelement nicht vorhanden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Binding (string propertyName, object dataSource, string dataMember, bool formattingEnabled);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string propertyName, object dataSource, string dataMember, bool formattingEnabled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Binding.#ctor(System.String,System.Object,System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="dataSource" Type="System.Object" />
+        <Parameter Name="dataMember" Type="System.String" />
+        <Parameter Name="formattingEnabled" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Der Name der Steuerelementeigenschaft für die Bindung.</param>
+        <param name="dataSource">Ein <see cref="T:System.Object" />, das die Datenquelle darstellt.</param>
+        <param name="dataMember">Die Eigenschaft oder Liste, an die die Bindung erfolgen soll.</param>
+        <param name="formattingEnabled">
+          <see langword="true" />, um die angezeigten Daten zu formatieren, andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.Binding" /> Klasse, die die angegebene Steuerelementeigenschaft an den angegebenen Datenmember der Datenquelle bindet, und ermöglicht optional die Formatierung angewendet werden.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Die Eigenschaft, die vom <paramref name="propertyName" /> auf das Steuerelement nicht vorhanden.  
+  
+ - oder -   
+  
+ Die angegebene Eigenschaft ist eine schreibgeschützte Eigenschaft.</exception>
+        <exception cref="T:System.Exception">Formatierung ist deaktiviert und <paramref name="propertyName" /> ist weder eine gültige Eigenschaft eines Steuerelements noch eine leere Zeichenfolge ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Binding (string propertyName, object dataSource, string dataMember, bool formattingEnabled, System.Windows.Forms.DataSourceUpdateMode dataSourceUpdateMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string propertyName, object dataSource, string dataMember, bool formattingEnabled, valuetype System.Windows.Forms.DataSourceUpdateMode dataSourceUpdateMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Binding.#ctor(System.String,System.Object,System.String,System.Boolean,System.Windows.Forms.DataSourceUpdateMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="dataSource" Type="System.Object" />
+        <Parameter Name="dataMember" Type="System.String" />
+        <Parameter Name="formattingEnabled" Type="System.Boolean" />
+        <Parameter Name="dataSourceUpdateMode" Type="System.Windows.Forms.DataSourceUpdateMode" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Der Name der Steuerelementeigenschaft für die Bindung.</param>
+        <param name="dataSource">Ein <see cref="T:System.Object" />, das die Datenquelle darstellt.</param>
+        <param name="dataMember">Die Eigenschaft oder Liste, an die die Bindung erfolgen soll.</param>
+        <param name="formattingEnabled">
+          <see langword="true" />, um die angezeigten Daten zu formatieren, andernfalls <see langword="false" />.</param>
+        <param name="dataSourceUpdateMode">Einer der <see cref="T:System.Windows.Forms.DataSourceUpdateMode" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.Binding" /> -Klasse, die die angegebene Steuerelementeigenschaft an den angegebenen Datenmember der angegebenen Datenquelle bindet. Aktiviert optional die Formatierung und gibt Werte entsprechend der angegebenen Aktualisierungseinstellung an die Datenquelle weiter.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können eine Instanz einer beliebigen der folgenden Klassen für die Datenquelle angeben:  
+  
+-   <xref:System.Data.DataSet>  
+  
+-   <xref:System.Data.DataTable>  
+  
+-   <xref:System.Data.DataView>  
+  
+-   <xref:System.Data.DataViewManager>  
+  
+-   <xref:System.Windows.Forms.BindingSource>  
+  
+-   Jede Klasse, implementiert die <xref:System.Collections.IList> Schnittstelle  
+  
+-   Jede Klasse  
+  
+ Finden Sie unter der <xref:System.Windows.Forms.Binding> Klasse für Weitere Informationen zum Erstellen der `dataMember` Zeichenfolge.  
+  
+ Wenn Sie eine Bindung an eine Steuerelementeigenschaft Erstellen der neuen <xref:System.Windows.Forms.Binding> untersucht das gebundene Steuerelement verfügbar gemachten Ereignisse beschrieben, und fügt zwei bestimmten Ereignissen:  
+  
+-   <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>.  
+  
+-   Ein Ereignis namens *PropertyName* `Changed` (z. B. <xref:System.Windows.Forms.Control.BackColorChanged?displayProperty=nameWithType>)  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Eigenschaft, die vom <paramref name="propertyName" /> auf das Steuerelement nicht vorhanden.  
+  
+ - oder -   
+  
+ Die Datenquelle oder Element oder Steuerelement Dateneigenschaft angegeben sind eine andere Bindung in der Auflistung zugeordnet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Binding (string propertyName, object dataSource, string dataMember, bool formattingEnabled, System.Windows.Forms.DataSourceUpdateMode dataSourceUpdateMode, object nullValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string propertyName, object dataSource, string dataMember, bool formattingEnabled, valuetype System.Windows.Forms.DataSourceUpdateMode dataSourceUpdateMode, object nullValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Binding.#ctor(System.String,System.Object,System.String,System.Boolean,System.Windows.Forms.DataSourceUpdateMode,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="dataSource" Type="System.Object" />
+        <Parameter Name="dataMember" Type="System.String" />
+        <Parameter Name="formattingEnabled" Type="System.Boolean" />
+        <Parameter Name="dataSourceUpdateMode" Type="System.Windows.Forms.DataSourceUpdateMode" />
+        <Parameter Name="nullValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Der Name der Steuerelementeigenschaft für die Bindung.</param>
+        <param name="dataSource">Ein <see cref="T:System.Object" />, das die Datenquelle darstellt.</param>
+        <param name="dataMember">Die Eigenschaft oder Liste, an die die Bindung erfolgen soll.</param>
+        <param name="formattingEnabled">
+          <see langword="true" />, um die angezeigten Daten zu formatieren, andernfalls <see langword="false" />.</param>
+        <param name="dataSourceUpdateMode">Einer der <see cref="T:System.Windows.Forms.DataSourceUpdateMode" />-Werte.</param>
+        <param name="nullValue">Die <see cref="T:System.Object" /> , zu der gebundenen Steuerelementeigenschaft angewendet werden, wenn der Wert der Datenquelle ist <see cref="T:System.DBNull" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.Binding" /> -Klasse, die die angegebene Steuerelementeigenschaft an den angegebenen Datenmember der angegebenen Datenquelle bindet. Optional können Sie Formatierung, gibt Werte an die Datenquelle basierend auf der angegebenen aktualisierungseinstellung und legt die Eigenschaft auf den angegebenen Wert einer <see cref="T:System.DBNull" /> aus der Datenquelle zurückgegeben wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können eine Instanz einer beliebigen der folgenden Klassen für die Datenquelle angeben:  
+  
+-   <xref:System.Data.DataSet>  
+  
+-   <xref:System.Data.DataTable>  
+  
+-   <xref:System.Data.DataView>  
+  
+-   <xref:System.Data.DataViewManager>  
+  
+-   <xref:System.Windows.Forms.BindingSource>  
+  
+-   Jede Klasse, implementiert die <xref:System.Collections.IList> Schnittstelle  
+  
+-   Jede Klasse  
+  
+ Finden Sie unter der <xref:System.Windows.Forms.Binding> Klasse für Weitere Informationen zum Erstellen der `dataMember` Zeichenfolge.  
+  
+ Wenn Sie eine Bindung an eine Steuerelementeigenschaft Erstellen der neuen <xref:System.Windows.Forms.Binding> untersucht das gebundene Steuerelement verfügbar gemachten Ereignisse beschrieben, und fügt zwei bestimmten Ereignissen:  
+  
+-   <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>  
+  
+-   Ein Ereignis namens *PropertyName* `Changed` (z. B. <xref:System.Windows.Forms.Control.BackColorChanged?displayProperty=nameWithType>)  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Eigenschaft, die vom <paramref name="propertyName" /> auf das Steuerelement nicht vorhanden.  
+  
+ - oder -   
+  
+ Die Datenquelle oder Element oder Steuerelement Dateneigenschaft angegeben sind eine andere Bindung in der Auflistung zugeordnet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Binding (string propertyName, object dataSource, string dataMember, bool formattingEnabled, System.Windows.Forms.DataSourceUpdateMode dataSourceUpdateMode, object nullValue, string formatString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string propertyName, object dataSource, string dataMember, bool formattingEnabled, valuetype System.Windows.Forms.DataSourceUpdateMode dataSourceUpdateMode, object nullValue, string formatString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Binding.#ctor(System.String,System.Object,System.String,System.Boolean,System.Windows.Forms.DataSourceUpdateMode,System.Object,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="dataSource" Type="System.Object" />
+        <Parameter Name="dataMember" Type="System.String" />
+        <Parameter Name="formattingEnabled" Type="System.Boolean" />
+        <Parameter Name="dataSourceUpdateMode" Type="System.Windows.Forms.DataSourceUpdateMode" />
+        <Parameter Name="nullValue" Type="System.Object" />
+        <Parameter Name="formatString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Der Name der Steuerelementeigenschaft für die Bindung.</param>
+        <param name="dataSource">Ein <see cref="T:System.Object" />, das die Datenquelle darstellt.</param>
+        <param name="dataMember">Die Eigenschaft oder Liste, an die die Bindung erfolgen soll.</param>
+        <param name="formattingEnabled">
+          <see langword="true" />, um die angezeigten Daten zu formatieren, andernfalls <see langword="false" />.</param>
+        <param name="dataSourceUpdateMode">Einer der <see cref="T:System.Windows.Forms.DataSourceUpdateMode" />-Werte.</param>
+        <param name="nullValue">Die <see cref="T:System.Object" /> , zu der gebundenen Steuerelementeigenschaft angewendet werden, wenn der Wert der Datenquelle ist <see cref="T:System.DBNull" />.</param>
+        <param name="formatString">Ein oder mehrere Formatbezeichnerzeichen, die angeben, wie ein Wert angezeigt werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.Binding" /> -Klasse, die die angegebene Steuerelementeigenschaft an den angegebenen Datenmember der angegebenen Datenquelle bindet. Optional können mit der angegebenen Formatzeichenfolge formatiert. Gibt Werte an die Datenquelle basierend auf der angegebenen aktualisierungseinstellung an; und legt die Eigenschaft auf den angegebenen Wert einer <see cref="T:System.DBNull" /> aus der Datenquelle zurückgegeben wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können eine Instanz einer beliebigen der folgenden Klassen für die Datenquelle angeben:  
+  
+-   <xref:System.Data.DataSet>  
+  
+-   <xref:System.Data.DataTable>  
+  
+-   <xref:System.Data.DataView>  
+  
+-   <xref:System.Data.DataViewManager>  
+  
+-   <xref:System.Windows.Forms.BindingSource>  
+  
+-   Jede Klasse, implementiert die <xref:System.Collections.IList> Schnittstelle  
+  
+-   Jede Klasse  
+  
+ Finden Sie unter der <xref:System.Windows.Forms.Binding> Klasse für Weitere Informationen zum Erstellen der `dataMember` Zeichenfolge.  
+  
+ Wenn Sie eine Bindung an eine Steuerelementeigenschaft Erstellen der neuen <xref:System.Windows.Forms.Binding> untersucht das gebundene Steuerelement verfügbar gemachten Ereignisse beschrieben, und fügt zwei bestimmten Ereignissen:  
+  
+-   <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>  
+  
+-   Ein Ereignis namens *PropertyName* `Changed` (z. B. <xref:System.Windows.Forms.Control.BackColorChanged?displayProperty=nameWithType>)  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Eigenschaft, die vom <paramref name="propertyName" /> auf das Steuerelement nicht vorhanden.  
+  
+ - oder -   
+  
+ Die Datenquelle oder Element oder Steuerelement Dateneigenschaft angegeben sind eine andere Bindung in der Auflistung zugeordnet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Binding (string propertyName, object dataSource, string dataMember, bool formattingEnabled, System.Windows.Forms.DataSourceUpdateMode dataSourceUpdateMode, object nullValue, string formatString, IFormatProvider formatInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string propertyName, object dataSource, string dataMember, bool formattingEnabled, valuetype System.Windows.Forms.DataSourceUpdateMode dataSourceUpdateMode, object nullValue, string formatString, class System.IFormatProvider formatInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Binding.#ctor(System.String,System.Object,System.String,System.Boolean,System.Windows.Forms.DataSourceUpdateMode,System.Object,System.String,System.IFormatProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="dataSource" Type="System.Object" />
+        <Parameter Name="dataMember" Type="System.String" />
+        <Parameter Name="formattingEnabled" Type="System.Boolean" />
+        <Parameter Name="dataSourceUpdateMode" Type="System.Windows.Forms.DataSourceUpdateMode" />
+        <Parameter Name="nullValue" Type="System.Object" />
+        <Parameter Name="formatString" Type="System.String" />
+        <Parameter Name="formatInfo" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Der Name der Steuerelementeigenschaft für die Bindung.</param>
+        <param name="dataSource">Ein <see cref="T:System.Object" />, das die Datenquelle darstellt.</param>
+        <param name="dataMember">Die Eigenschaft oder Liste, an die die Bindung erfolgen soll.</param>
+        <param name="formattingEnabled">
+          <see langword="true" />, um die angezeigten Daten zu formatieren, andernfalls <see langword="false" />.</param>
+        <param name="dataSourceUpdateMode">Einer der <see cref="T:System.Windows.Forms.DataSourceUpdateMode" />-Werte.</param>
+        <param name="nullValue">Die <see cref="T:System.Object" /> , zu der gebundenen Steuerelementeigenschaft angewendet werden, wenn der Wert der Datenquelle ist <see cref="T:System.DBNull" />.</param>
+        <param name="formatString">Ein oder mehrere Formatbezeichnerzeichen, die angeben, wie ein Wert angezeigt werden soll.</param>
+        <param name="formatInfo">Eine Implementierung von <see cref="T:System.IFormatProvider" /> zum Überschreiben des Standardverhaltens.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.Binding" /> Klasse mit die angegebene Steuerelementeigenschaft an den angegebenen Datenmember der angegebenen Datenquelle. Optional können mit der angegebenen Formatzeichenfolge formatiert. Gibt Werte an die Datenquelle basierend auf der angegebenen aktualisierungseinstellung an; ermöglicht die Formatierung mit der angegebenen Formatzeichenfolge; Legt die Eigenschaft auf den angegebenen Wert einer <see cref="T:System.DBNull" /> aus der Datenquelle zurückgegeben wird, und legt den angegebenen Formatanbieter.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können eine Instanz einer beliebigen der folgenden Klassen für die Datenquelle angeben:  
+  
+-   <xref:System.Data.DataSet>  
+  
+-   <xref:System.Data.DataTable>  
+  
+-   <xref:System.Data.DataView>  
+  
+-   <xref:System.Data.DataViewManager>  
+  
+-   <xref:System.Windows.Forms.BindingSource>  
+  
+-   Jede Klasse, implementiert die <xref:System.Collections.IList> Schnittstelle  
+  
+-   Jede Klasse  
+  
+ Finden Sie unter der <xref:System.Windows.Forms.Binding> Klasse für Weitere Informationen zum Erstellen der `dataMember` Zeichenfolge.  
+  
+ Wenn Sie eine Bindung an eine Steuerelementeigenschaft Erstellen der neuen <xref:System.Windows.Forms.Binding> untersucht das gebundene Steuerelement verfügbar gemachten Ereignisse beschrieben, und fügt zwei bestimmten Ereignissen:  
+  
+-   <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>  
+  
+-   Ein Ereignis namens *PropertyName* `Changed` (z. B. <xref:System.Windows.Forms.Control.BackColorChanged?displayProperty=nameWithType>)  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Eigenschaft, die vom <paramref name="propertyName" /> auf das Steuerelement nicht vorhanden.  
+  
+ - oder -   
+  
+ Die Datenquelle oder Element oder Steuerelement Dateneigenschaft angegeben sind eine andere Bindung in der Auflistung zugeordnet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BindableComponent">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.IBindableComponent BindableComponent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.IBindableComponent BindableComponent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Binding.BindableComponent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.IBindableComponent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Steuerelement die <see cref="T:System.Windows.Forms.Binding" /> zugeordnet ist.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.IBindableComponent" /> der <see cref="T:System.Windows.Forms.Binding" /> zugeordnet ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingComplete">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.BindingCompleteEventHandler BindingComplete;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.BindingCompleteEventHandler BindingComplete" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Binding.BindingComplete" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.BindingCompleteEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die <see cref="P:System.Windows.Forms.Binding.FormattingEnabled" /> -Eigenschaftensatz auf <see langword="true" /> und ein Bindungsvorgang abgeschlossen ist, z. B. wenn Daten über das Steuerelement an die Datenquelle oder umgekehrt wird per Push übertragen</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn eine der folgenden Bedingungen, wenn <xref:System.Windows.Forms.Binding.FormattingEnabled%2A> ist `true`:  
+  
+-   Daten aus der Datenquelle werden auf die Steuerelementeigenschaft abgelegt.  
+  
+-   Daten aus der Eigenschaft des Steuerelements werden auf die Datenquelle verschoben.  
+  
+ Dieses Ereignis wird beim Abschluss dieser Vorgänge, die unabhängig von der Abschlussstatus angezeigt. Angenommen, eine Bindungsvorgangs einen null-Wert gebunden wird eine <xref:System.Windows.Forms.DateTimePicker.Value%2A> -Eigenschaft, eine Ausnahme wird ausgelöst, aber die <xref:System.Windows.Forms.Binding.BindingComplete> Ereignis weiterhin auftritt. Der Handler für dieses Ereignis kann die entsprechende Aktion, basierend auf den Erfolg, Fehler oder Ausnahmen des Bindungsvorgangs durch Untersuchen der <xref:System.Windows.Forms.BindingCompleteEventArgs.BindingCompleteState%2A> Eigenschaft von der <xref:System.Windows.Forms.BindingCompleteEventArgs> Parameter.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie behandelt die <xref:System.Windows.Forms.Binding.BindingComplete> Ereignis.  
+  
+ [!code-cpp[System.Windows.Forms.DataConnectorBindingComplete#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorBindingComplete/CPP/form1.cpp#3)]
+ [!code-csharp[System.Windows.Forms.DataConnectorBindingComplete#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorBindingComplete/CS/form1.cs#3)]
+ [!code-vb[System.Windows.Forms.DataConnectorBindingComplete#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorBindingComplete/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingManagerBase">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.BindingManagerBase BindingManagerBase { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.BindingManagerBase BindingManagerBase" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Binding.BindingManagerBase" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.BindingManagerBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Windows.Forms.BindingManagerBase" /> für diesen <see cref="T:System.Windows.Forms.Binding" /> ab.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.BindingManagerBase" /> , verwaltet das <see cref="T:System.Windows.Forms.Binding" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.BindingManagerBase> zum Durchlaufen der datengebundenen Liste durch erhöhen oder Verringern der <xref:System.Windows.Forms.BindingManagerBase.Position%2A> Eigenschaft. Die <xref:System.Windows.Forms.BindingManagerBase> Klasse ist abstrakt. Die <xref:System.Windows.Forms.CurrencyManager> Klasse, die datengebundene Listen verwaltet, erbt die <xref:System.Windows.Forms.BindingManagerBase> Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die <xref:System.Windows.Forms.BindingManagerBase> von jeder <xref:System.Windows.Forms.Binding> auf das Formular, und druckt die <xref:System.Windows.Forms.BindingManagerBase.Position%2A> Eigenschaft für die einzelnen <xref:System.Windows.Forms.BindingManagerBase>.  
+  
+ [!code-cpp[Classic Binding.BindingManagerBase Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Binding.BindingManagerBase Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Binding.BindingManagerBase Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Binding.BindingManagerBase Example/CS/source.cs#1)]
+ [!code-vb[Classic Binding.BindingManagerBase Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Binding.BindingManagerBase Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingMemberInfo">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.BindingMemberInfo BindingMemberInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.BindingMemberInfo BindingMemberInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Binding.BindingMemberInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.BindingMemberInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt, das Informationen zu dieser Bindung auf Grundlage der <paramref name="dataMember" /> Parameter in der <see cref="Overload:System.Windows.Forms.Binding.#ctor" /> Konstruktor.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.BindingMemberInfo" /> , enthält Informationen zu diesem <see cref="T:System.Windows.Forms.Binding" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.BindingMemberInfo> wird erstellt, aus der `dataMember` Zeichenfolge übergeben, um die <xref:System.Windows.Forms.Binding.%23ctor%2A> Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die <xref:System.Windows.Forms.BindingMemberInfo> jedes <xref:System.Windows.Forms.Binding> auf einem Formular und druckt die <xref:System.Windows.Forms.BindingMemberInfo.BindingPath%2A>, <xref:System.Windows.Forms.BindingMemberInfo.BindingField%2A>, und <xref:System.Windows.Forms.BindingMemberInfo.BindingMember%2A> Eigenschaftswerte für diesen <xref:System.Windows.Forms.Binding>.  
+  
+ [!code-cpp[Classic Binding.BindingMemberInfo Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Binding.BindingMemberInfo Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Binding.BindingMemberInfo Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Binding.BindingMemberInfo Example/CS/source.cs#1)]
+ [!code-vb[Classic Binding.BindingMemberInfo Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Binding.BindingMemberInfo Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Control">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Control Control { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Control Control" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Binding.Control" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Steuerelement ab, zu dem die Bindung gehört.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.Control" /> , zu der die Bindung gehört.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die <xref:System.Windows.Forms.BindingManagerBase> für eine bestimmte Datenquelle und druckt die Informationen zu den einzelnen <xref:System.Windows.Forms.Binding.Control%2A> -Eigenschaft, die an die Datenquelle gebunden ist. Im Beispiel wird die <xref:System.Windows.Forms.BindingManagerBase.Bindings%2A> Eigenschaft von der <xref:System.Windows.Forms.BindingManagerBase> alle Steuerelemente abgerufen.  
+  
+ [!code-cpp[Classic Binding.Control Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Binding.Control Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Binding.Control Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Binding.Control Example/CS/source.cs#1)]
+ [!code-vb[Classic Binding.Control Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Binding.Control Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlUpdateMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ControlUpdateMode ControlUpdateMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ControlUpdateMode ControlUpdateMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Binding.ControlUpdateMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ControlUpdateMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, unter welchen Bedingungen Änderungen an der Datenquelle zur gebundenen Steuerelementeigenschaft weitergegeben werden.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.ControlUpdateMode" />-Werte. Die Standardeinstellung ist <see cref="F:System.Windows.Forms.ControlUpdateMode.OnPropertyChanged" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSource">
+      <MemberSignature Language="C#" Value="public object DataSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DataSource" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Binding.DataSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Datenquelle für diese Bindung ab.</summary>
+        <value>Ein <see cref="T:System.Object" />, das die Datenquelle darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mögliche Datenquellen gehören:  
+  
+-   Eine <xref:System.Data.DataSet>  
+  
+-   Eine <xref:System.Data.DataTable>  
+  
+-   Eine <xref:System.Data.DataView>  
+  
+-   Eine <xref:System.Data.DataViewManager>  
+  
+-   Jedes Objekt, das implementiert die <xref:System.Collections.IList> Schnittstelle  
+  
+-   Jedes Objekt  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.Binding.DataSource%2A> -Eigenschaft zum Zurückgeben einer <xref:System.Data.DataSet>.  
+  
+ [!code-cpp[Classic Binding.DataSource Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Binding.DataSource Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Binding.DataSource Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Binding.DataSource Example/CS/source.cs#1)]
+ [!code-vb[Classic Binding.DataSource Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Binding.DataSource Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSourceNullValue">
+      <MemberSignature Language="C#" Value="public object DataSourceNullValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DataSourceNullValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Binding.DataSourceNullValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert in der Datenquelle gespeichert werden, wenn der Steuerelementwert ist <see langword="null" /> oder leer sein.</summary>
+        <value>Die <see cref="T:System.Object" /> in der Datenquelle gespeichert werden, wenn die Steuerelementeigenschaft leer ist oder <see langword="null" />. Die Standardeinstellung ist <see cref="T:System.DBNull" /> für Werttypen und <see langword="null" /> für nicht Werttypen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die <xref:System.Windows.Forms.Binding.NullValue%2A> Eigenschaft angeben des Werts in ein gebundenes Steuerelement angezeigt wird, wenn die Datenquelle enthält <xref:System.DBNull>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSourceUpdateMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataSourceUpdateMode DataSourceUpdateMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataSourceUpdateMode DataSourceUpdateMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Binding.DataSourceUpdateMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataSourceUpdateMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, unter welchen Bedingungen Änderungen an der gebundenen Steuerelementeigenschaft an die Datenquelle weitergegeben werden, oder legt diesen Wert fest.</summary>
+        <value>Ein Wert, der angibt, wenn Änderungen weitergegeben werden. Die Standardeinstellung ist <see cref="F:System.Windows.Forms.DataSourceUpdateMode.OnValidation" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beachten Sie, dass, selbst wenn diese Eigenschaft, um festgelegt wird <xref:System.Windows.Forms.DataSourceUpdateMode.Never>, die Bindung wird mindestens ein Mal, wenn es zuerst hergestellt aktualisiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Format">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ConvertEventHandler Format;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ConvertEventHandler Format" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Binding.Format" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ConvertEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn die Eigenschaft eines Steuerelements an einen Datenwert gebunden ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Binding.Format> Ereignis wird ausgelöst, wenn Daten aus der Datenquelle in das Steuerelement verschoben werden. Sie können behandeln die <xref:System.Windows.Forms.Binding.Format> Ereignis zum Konvertieren von unformatierten Daten aus der Datenquelle in formatierte Daten für die Anzeige. Wenn Daten über das Steuerelement, in der Datenquelle und gezogen werden die <xref:System.Windows.Forms.Binding.Parse> Ereignis wird ausgelöst, um die Wiederherstellungsinformationen des angezeigten Wertes die <xref:System.Windows.Forms.Binding.Format> Ereignis tritt auf, um die Daten für die Anzeige neu zu formatieren. Dadurch wird sichergestellt, dass das gebundene Steuerelement ordnungsgemäß formatierte Daten unabhängig davon, ob formatierte oder unformatierte Daten in das Steuerelement eingegeben werden angezeigt.  
+  
+ Die <xref:System.Windows.Forms.Binding.Format> und <xref:System.Windows.Forms.Binding.Parse> Ereignisse ermöglichen es Ihnen, benutzerdefinierte Formate für die Anzeige von Daten zu erstellen. Z. B., wenn die Daten in einer Tabelle vom Typ <xref:System.Decimal>, Sie können die Daten in die lokale Währungsformat anzeigen, durch Festlegen der <xref:System.Windows.Forms.ConvertEventArgs.Value%2A> Eigenschaft der <xref:System.Windows.Forms.ConvertEventArgs> auf den formatierten Wert in der <xref:System.Windows.Forms.Binding.Format> Ereignis. Sie müssen daher Wiederherstellungsinformationen den angezeigten Wert in der <xref:System.Windows.Forms.Binding.Parse> Ereignis.  
+  
+ Die <xref:System.Windows.Forms.Binding.Format> Ereignis tritt auf, wenn die <xref:System.Windows.Forms.BindingManagerBase.Current%2A> Wert, der die <xref:System.Windows.Forms.BindingManagerBase> Änderungen, darunter:  
+  
+-   Zum ersten Mal die Eigenschaft gebunden ist.  
+  
+-   Jedes Mal die <xref:System.Windows.Forms.BindingManagerBase.Position%2A> ändert.  
+  
+-   Sichern die datengebundenen Liste wird sortiert und gefiltert, also erreicht, wenn eine <xref:System.Data.DataView> stellt die Liste.  
+  
+ Die <xref:System.Windows.Forms.Binding.Format> -Ereignis tritt auch nach der <xref:System.Windows.Forms.Binding.Parse> Ereignis. Wenn ein Steuerelement den Fokus verliert, sind z. B. seinen Inhalt analysiert. Unmittelbar danach, wie neue Daten in das Steuerelement verschoben werden die <xref:System.Windows.Forms.Binding.Format> Ereignis tritt auf, sodass der neue Inhalt formatiert werden.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.Binding>, fügt eine <xref:System.Windows.Forms.ConvertEventHandler> Delegat, der sowohl die <xref:System.Windows.Forms.Binding.Parse> und <xref:System.Windows.Forms.Binding.Format> Ereignisse, und fügt die <xref:System.Windows.Forms.Binding> zu der <xref:System.Windows.Forms.BindingsCollection> von eine <xref:System.Windows.Forms.TextBox> steuern Sie über die <xref:System.Windows.Forms.Control.DataBindings%2A> Diese Eigenschaft. Die `DecimalToCurrencyString` Ereignisdelegaten, hinzugefügt der <xref:System.Windows.Forms.Binding.Format> Ereignis, formatiert den gebundenen Wert (eine <xref:System.Decimal> Typ) als Währung mit der <xref:System.Decimal.ToString%2A> Methode. Die `CurrencyStringToDecimal` Ereignisdelegaten, hinzugefügt der <xref:System.Windows.Forms.Binding.Parse> Ereignis konvertiert den Wert, der im Steuerelement angezeigt wird zurück an den <xref:System.Decimal> Typ.  
+  
+ In diesem Beispiel wird davon ausgegangen, das Vorhandensein einer <xref:System.Data.DataSet> mit dem Namen `ds`.  
+  
+ [!code-cpp[Classic Binding.Format Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Binding.Format Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Binding.Format Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Binding.Format Example/CS/source.cs#1)]
+ [!code-vb[Classic Binding.Format Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Binding.Format Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatInfo">
+      <MemberSignature Language="C#" Value="public IFormatProvider FormatInfo { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IFormatProvider FormatInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Binding.FormatInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IFormatProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.IFormatProvider" /> Standardformatierungsverhalten bereitstellt.</summary>
+        <value>Die <see cref="T:System.IFormatProvider" /> Implementierung, die Standardformatierungsverhalten bereitstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Festlegen dieser Eigenschaft überschreibt Standardverhaltens, verwendet der <xref:System.Windows.Forms.Application.CurrentCulture%2A?displayProperty=nameWithType> Einstellung der Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatString">
+      <MemberSignature Language="C#" Value="public string FormatString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FormatString" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Binding.FormatString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Formatbezeichnerzeichen ab, die angeben, wie ein Wert angezeigt werden soll, oder legt sie fest.</summary>
+        <value>Die Zeichenfolge von Formatbezeichnerzeichen, die angeben, wie ein Wert angezeigt werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Formatzeichenfolge zum sollte den standardmäßigen Formatspezifikationen für .NET Framework entsprechen. Weitere Informationen finden Sie unter [Formatierung von Typen in .NET Framework](~/docs/standard/base-types/formatting-types.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormattingEnabled">
+      <MemberSignature Language="C#" Value="public bool FormattingEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool FormattingEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Binding.FormattingEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt einen Wert fest, mit dem angegeben wird, ob die Typkonvertierung und Formatierung auf die Daten der Steuerelementeigenschaft angewendet wird.</summary>
+        <value>
+          <see langword="true" />Wenn typkonvertierung und Formatierung der Daten der Steuerelementeigenschaft aktiviert ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen dieser Eigenschaft auf `true` fehlerbehandlungsverhaltens ermöglicht außerdem eine bewirkt, dass die <xref:System.Windows.Forms.Binding.BindingComplete> Ereignis ausgelöst wurde. Der Handler für dieses Ereignis kann die entsprechende Aktion, basierend auf den Erfolg, Fehler oder Ausnahmen des Bindungsvorgangs durch Untersuchen der <xref:System.Windows.Forms.BindingCompleteEventArgs.BindingCompleteState%2A> Eigenschaft von der <xref:System.Windows.Forms.BindingCompleteEventArgs> Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBinding">
+      <MemberSignature Language="C#" Value="public bool IsBinding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBinding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Binding.IsBinding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Bindung aktiv ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Bindung aktiv ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Bindung ist aktiv, wenn sie die folgenden Bedingungen erfüllt:  
+  
+-   Alle seine Eigenschaften werden festgelegt.  
+  
+-   Der Benutzer nicht aufrufen <xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A> oder <xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A> auf die <xref:System.Windows.Forms.BindingManagerBase> , die die <xref:System.Windows.Forms.Binding> angehört.  
+  
+-   Das Steuerelement, das <xref:System.Windows.Forms.Binding> gehört erstellt wurde.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel Beispiel druckt die <xref:System.Windows.Forms.Binding.PropertyName%2A> und <xref:System.Windows.Forms.Binding.IsBinding%2A> Wert für die einzelnen <xref:System.Windows.Forms.Binding> in einem Formular.  
+  
+ [!code-cpp[Classic Binding.IsBinding Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Binding.IsBinding Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Binding.IsBinding Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Binding.IsBinding Example/CS/source.cs#1)]
+ [!code-vb[Classic Binding.IsBinding Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Binding.IsBinding Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NullValue">
+      <MemberSignature Language="C#" Value="public object NullValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object NullValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Binding.NullValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Object" /> als Eigenschaft für das Steuerelement festgelegt werden, wenn die Datenquelle enthält eine <see cref="T:System.DBNull" /> Wert.</summary>
+        <value>Die <see cref="T:System.Object" /> als Eigenschaft für das Steuerelement festgelegt werden, wenn die Datenquelle enthält eine <see cref="T:System.DBNull" /> Wert. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Datenquelle muss enthalten <xref:System.DBNull> für die <xref:System.Windows.Forms.Binding.NullValue%2A> Eigenschaft korrekt angewendet werden. Wenn der Datenquellentyp ist ein Typ, z. B. eine Zeichenfolge oder eine ganze Zahl der Wert des der <xref:System.Windows.Forms.Binding.NullValue%2A> Eigenschaft wird ignoriert. Darüber hinaus die <xref:System.Windows.Forms.Binding.NullValue%2A> Eigenschaft wird ignoriert, wenn sie, um festgelegt ist `null`.  
+  
+ Ein null-Wert wird an die Datenquelle hinzugefügt werden, wenn die Steuerelementeigenschaft auf das Objekt festgelegt ist <xref:System.Windows.Forms.Binding.NullValue%2A>. Wenn <xref:System.Windows.Forms.Binding.NullValue%2A> festgelegt ist in einen Zeichenfolgenwert Groß-und Kleinschreibung beachtet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBindingComplete">
+      <MemberSignature Language="C#" Value="protected virtual void OnBindingComplete (System.Windows.Forms.BindingCompleteEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnBindingComplete(class System.Windows.Forms.BindingCompleteEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Binding.OnBindingComplete(System.Windows.Forms.BindingCompleteEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.BindingCompleteEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.BindingCompleteEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Binding.BindingComplete" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.Binding.OnBindingComplete%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.Binding.OnBindingComplete(System.Windows.Forms.BindingCompleteEventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.Binding.OnBindingComplete(System.Windows.Forms.BindingCompleteEventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFormat">
+      <MemberSignature Language="C#" Value="protected virtual void OnFormat (System.Windows.Forms.ConvertEventArgs cevent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnFormat(class System.Windows.Forms.ConvertEventArgs cevent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Binding.OnFormat(System.Windows.Forms.ConvertEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cevent" Type="System.Windows.Forms.ConvertEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="cevent">Ein <see cref="T:System.Windows.Forms.ConvertEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Binding.Format" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.Binding.OnFormat%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.Binding.OnFormat(System.Windows.Forms.ConvertEventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.Binding.OnFormat(System.Windows.Forms.ConvertEventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnParse">
+      <MemberSignature Language="C#" Value="protected virtual void OnParse (System.Windows.Forms.ConvertEventArgs cevent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnParse(class System.Windows.Forms.ConvertEventArgs cevent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Binding.OnParse(System.Windows.Forms.ConvertEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cevent" Type="System.Windows.Forms.ConvertEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="cevent">Ein <see cref="T:System.Windows.Forms.ConvertEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Binding.Parse" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.Binding.OnParse%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.Binding.OnParse(System.Windows.Forms.ConvertEventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.Binding.OnParse(System.Windows.Forms.ConvertEventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ConvertEventHandler Parse;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ConvertEventHandler Parse" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Binding.Parse" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ConvertEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der Wert eines datengebundenen Steuerelements geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Binding.Format> und <xref:System.Windows.Forms.Binding.Parse> Ereignisse ermöglichen es Ihnen, benutzerdefinierte Formate für die Anzeige von Daten zu erstellen. Z. B., wenn die Daten in einer Tabelle vom Typ <xref:System.Decimal>, Sie können die Daten in die lokale Währungsformat anzeigen, durch Festlegen der <xref:System.Windows.Forms.ConvertEventArgs.Value%2A> Eigenschaft der <xref:System.Windows.Forms.ConvertEventArgs> auf den formatierten Wert in der <xref:System.Windows.Forms.Binding.Format> Ereignis. Sie müssen daher Wiederherstellungsinformationen den angezeigten Wert in der <xref:System.Windows.Forms.Binding.Parse> Ereignis.  
+  
+ Die <xref:System.Windows.Forms.Binding.Parse> Ereignis tritt auf, in den folgenden Situationen:  
+  
+-   Nach der <xref:System.Windows.Forms.Control.Validated> -Ereignis für die <xref:System.Windows.Forms.Control> auftritt.  
+  
+-   Wenn die <xref:System.Windows.Forms.BindingManagerBase.EndCurrentEdit%2A> Methode der <xref:System.Windows.Forms.BindingManagerBase> aufgerufen wird.  
+  
+-   Wenn die <xref:System.Windows.Forms.BindingManagerBase.Current%2A> von der <xref:System.Windows.Forms.BindingManagerBase> Änderungen (in anderen Worten, wenn die <xref:System.Windows.Forms.BindingManagerBase.Position%2A> Änderungen).  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.Binding>, fügt eine <xref:System.Windows.Forms.ConvertEventHandler> Delegat, der sowohl die <xref:System.Windows.Forms.Binding.Parse> und <xref:System.Windows.Forms.Binding.Format> Ereignisse, und fügt die <xref:System.Windows.Forms.Binding> zu der <xref:System.Windows.Forms.BindingsCollection> von eine <xref:System.Windows.Forms.TextBox> steuern Sie über die <xref:System.Windows.Forms.Control.DataBindings%2A> Diese Eigenschaft. Die `DecimalToCurrencyString` Ereignisdelegaten, hinzugefügt der <xref:System.Windows.Forms.Binding.Format> Ereignis, formatiert den gebundenen Wert (eine <xref:System.Decimal> Typ) als Währung mit der <xref:System.Decimal.ToString%2A> Methode. Die `CurrencyStringToDecimal` Ereignisdelegaten, hinzugefügt der <xref:System.Windows.Forms.Binding.Parse> Ereignis konvertiert den Wert, der im Steuerelement angezeigt wird zurück an den <xref:System.Decimal> Typ.  
+  
+ [!code-cpp[Classic Binding.Parse Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Binding.Parse Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Binding.Parse Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Binding.Parse Example/CS/source.cs#1)]
+ [!code-vb[Classic Binding.Parse Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Binding.Parse Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyName">
+      <MemberSignature Language="C#" Value="public string PropertyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PropertyName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Binding.PropertyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der datengebundenen Eigenschaft des Steuerelements ab oder legt diesen fest.</summary>
+        <value>Der Name einer Steuerelementeigenschaft für die Bindung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.Binding.PropertyName%2A> die Steuerelementeigenschaft an, die Sie auf eine Liste in einer Datenquelle binden möchten. In den meisten Fällen binden Sie eine Anzeigeeigenschaft wie z. B. die <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft von einem <xref:System.Windows.Forms.TextBox> Steuerelement. Jedoch, da Sie eine Eigenschaft eines Steuerelements binden können, können Sie programmgesteuert Steuerelemente zur Laufzeit mit Daten aus einer Datenbank erstellen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel Beispiel druckt die <xref:System.Windows.Forms.Binding.PropertyName%2A> Wert der einzelnen <xref:System.Windows.Forms.Binding> für jedes Steuerelement in einem Formular.  
+  
+ [!code-cpp[Classic Binding.PropertyName Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Binding.PropertyName Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Binding.PropertyName Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Binding.PropertyName Example/CS/source.cs#1)]
+ [!code-vb[Classic Binding.PropertyName Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Binding.PropertyName Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadValue">
+      <MemberSignature Language="C#" Value="public void ReadValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ReadValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Binding.ReadValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt die Steuerelementeigenschaft auf den von der Datenquelle gelesenen Wert fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteValue">
+      <MemberSignature Language="C#" Value="public void WriteValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Binding.WriteValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Liest den aktuellen Wert der Steuerelementeigenschaft und schreibt ihn in die Datenquelle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

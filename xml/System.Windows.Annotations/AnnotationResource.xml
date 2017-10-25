@@ -1,0 +1,271 @@
+<Type Name="AnnotationResource" FullName="System.Windows.Annotations.AnnotationResource">
+  <TypeSignature Language="C#" Value="public sealed class AnnotationResource : System.ComponentModel.INotifyPropertyChanged, System.Xml.Serialization.IXmlSerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AnnotationResource extends System.Object implements class System.ComponentModel.INotifyPropertyChanged, class System.Xml.Serialization.IXmlSerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Annotations.AnnotationResource" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.INotifyPropertyChanged</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Xml.Serialization.IXmlSerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Xml.Serialization.XmlRoot(ElementName="Resource", Namespace="http://schemas.microsoft.com/windows/annotations/2003/11/core")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Inhaltsanker oder eine Ladungsressource inhaltsressourcenspeicherort für eine <see cref="T:System.Windows.Annotations.Annotation" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Annotations.AnnotationResource>Elemente werden verwendet, zum Modell <xref:System.Windows.Annotations.Annotation.Anchors%2A> (die Daten, die hinzugefügt wird) und <xref:System.Windows.Annotations.Annotation.Cargos%2A> (die Daten, die vom Benutzer z. B. ein Hinweis angegebenen) in einer <xref:System.Windows.Annotations.Annotation>.  
+  
+ Durch die Verwendung der <xref:System.Windows.Annotations.AnnotationResource.ContentLocators%2A> ein <xref:System.Windows.Annotations.AnnotationResource> können, finden Sie in den Themen, direkt enthalten, die Inhalte oder beides.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AnnotationResource ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.AnnotationResource.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Dieser Konstruktor unterstützt die [!INCLUDE[TLA#tla_wpf](~/includes/tlasharptla-wpf-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung in Code vorgesehen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor ist nur für die Anmerkung Serialisierungsprogramm Verwendung gedacht.  Für Anforderungen der Anwendung verwendet die <xref:System.Windows.Annotations.AnnotationResource.%23ctor%2A> Konstruktor, der eine angegebene akzeptiert `name` Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AnnotationResource (Guid id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.AnnotationResource.#ctor(System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="id" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="id">Die [!INCLUDE[TLA#tla_guid](~/includes/tlasharptla-guid-md.md)] , die diese Ressource identifiziert.</param>
+        <summary>Dieser Konstruktor unterstützt die [!INCLUDE[TLA#tla_wpf](~/includes/tlasharptla-wpf-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung in Code vorgesehen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor ist nur für die Anmerkung Serialisierungsprogramm Verwendung gedacht.  Für Anforderungen der Anwendung verwendet die <xref:System.Windows.Annotations.AnnotationResource.%23ctor%2A> Konstruktor, der eine angegebene akzeptiert `name` Parameter.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="id" />ist gleich "GUID.Empty".</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AnnotationResource (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.AnnotationResource.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Ein Name zum Identifizieren dieser Ressource von anderen <see cref="P:System.Windows.Annotations.Annotation.Anchors" /> und <see cref="P:System.Windows.Annotations.Annotation.Cargos" /> in der gleichen Anmerkung definiert.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Annotations.AnnotationResource" />-Klasse mit einem angegebenen Namen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `name` Parameter wird nur ergänzend bereitgestellt und keine Validierung für die Zeichenfolge.  
+  
+ Die <xref:System.Windows.Annotations.AnnotationResource.%23ctor%2A> Konstruktor erstellt automatisch eine eindeutige [!INCLUDE[TLA#tla_guid](~/includes/tlasharptla-guid-md.md)] , der Zugriff erfolgt über die <xref:System.Windows.Annotations.AnnotationResource.Id%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentLocators">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Windows.Annotations.ContentLocatorBase&gt; ContentLocators { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Windows.Annotations.ContentLocatorBase&gt; ContentLocators" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Annotations.AnnotationResource.ContentLocators" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Windows.Annotations.ContentLocatorBase&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der <see cref="T:System.Windows.Annotations.ContentLocatorBase" /> Elemente in dieser Ressource.</summary>
+        <value>Die Auflistung von Inhalt-Locators in dieser Ressource.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Annotations.AnnotationResource.ContentLocators%2A> Eigenschaft wird nie zurückgeben `null`, aber die Auflistung leer sein kann, wenn die Ressource keine Inhalt-Locators enthält.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contents">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Xml.XmlElement&gt; Contents { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Xml.XmlElement&gt; Contents" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Annotations.AnnotationResource.Contents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Xml.XmlElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von der <see cref="T:System.Xml.XmlElement" /> Objekten, die den Inhalt dieser Ressource zu definieren.</summary>
+        <value>Die Auflistung der <see cref="T:System.Xml.XmlElement" /> Objekten, die den Inhalt dieser Ressource zu definieren.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>gibt nie `null`; jedoch das <xref:System.Xml.XmlElement> Auflistung kann leer sein, wenn die Ressource keinen Inhalt enthält.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSchema">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchema GetSchema ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.Schema.XmlSchema GetSchema() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.AnnotationResource.GetSchema" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchema</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt immer <see langword="null" /> zurück.  Finden Sie unter [Schema mit Anmerkungen](~/docs/framework/wpf/advanced/annotations-schema.md) Schema Details.</summary>
+        <returns>Immer <see langword="null" />.  Finden Sie unter [Schema mit Anmerkungen](~/docs/framework/wpf/advanced/annotations-schema.md) Schema Details.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public Guid Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid Id" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Annotations.AnnotationResource.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die [!INCLUDE[TLA2#tla_guid](~/includes/tla2sharptla-guid-md.md)] dieser Ressource.</summary>
+        <value>Die [!INCLUDE[TLA#tla_guid](~/includes/tlasharptla-guid-md.md)] , die diese Ressource identifiziert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Annotations.AnnotationResource.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Namen für diesen <see cref="T:System.Windows.Annotations.AnnotationResource" /> ab oder legt diesen fest.</summary>
+        <value>Der zugewiesene Name <see cref="T:System.Windows.Annotations.AnnotationResource" /> sie von anderen unterscheiden können <see cref="P:System.Windows.Annotations.Annotation.Anchors" /> oder <see cref="P:System.Windows.Annotations.Annotation.Cargos" /> in der Anmerkung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadXml">
+      <MemberSignature Language="C#" Value="public void ReadXml (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReadXml(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.AnnotationResource.ReadXml(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der XML-Reader beim Deserialisieren der <see cref="T:System.Windows.Annotations.AnnotationResource" /> aus.</param>
+        <summary>Deserialisiert die <see cref="T:System.Windows.Annotations.AnnotationResource" /> ausgehend von einem angegebenen <see cref="T:System.Xml.XmlReader" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Xml.XmlException">Die serialisierte XML für die <see cref="T:System.Windows.Annotations.AnnotationResource" /> ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteXml">
+      <MemberSignature Language="C#" Value="public void WriteXml (System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteXml(class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.AnnotationResource.WriteXml(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der XML-Writer zur Serialisierung der <see cref="T:System.Windows.Annotations.AnnotationResource" />.</param>
+        <summary>Serialisiert die <see cref="T:System.Windows.Annotations.AnnotationResource" /> mit einem angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Der <see cref="P:System.Windows.Annotations.Annotation.AnnotationType" /> ist ungültig.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,64 @@
+<Type Name="IResourceUrlGenerator" FullName="System.Web.UI.IResourceUrlGenerator">
+  <TypeSignature Language="C#" Value="public interface IResourceUrlGenerator" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IResourceUrlGenerator" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IResourceUrlGenerator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die Methode, die ein Designer-Host implementieren muss, um die Suchregeln für URL-Verweis für eingebettete Ressourcen bereitgestellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET-Version 2.0 ermöglicht den Zugriff auf eingebettete Ressourcen aus einer Assembly für Steuerelemente, z. B. Abrufen der <xref:System.Web.UI.Page> Steuerelement. Zur Laufzeit kann die URL als eingebettete Ressource mit abgerufen werden die <xref:System.Web.UI.ClientScriptManager.GetWebResourceUrl%2A> Methode der <xref:System.Web.UI.ClientScriptManager> Klasse. Um zur Entwurfszeit bedeutet, dass für das Generieren eines Ressourcen-URL aus einer Assembly zu ermöglichen, bieten Designerhosts einen Dienst, implementiert die <xref:System.Web.UI.IResourceUrlGenerator> Schnittstelle. Weitere Informationen finden Sie unter:   
+  
+-   Verwendung von Ressourcen bei der Lokalisierung finden Sie unter [Übersicht über ASP.NET Webseite-Ressourcen](http://msdn.microsoft.com/library/0936b3b2-9e6e-4abe-9c06-364efef9dbbd).  
+  
+-   Für die Verwendung von eingebetteten Ressourcen finden Sie unter [NIB: Gewusst: Verwenden von Ressourcen zu Festlegen von Eigenschaftswerten in Webserversteuerelemente](http://msdn.microsoft.com/en-us/d8e0e5c0-1958-422b-b4f5-ebe63f6c45cb) und [wie: Abrufen von Ressourcen Werte programmgesteuert](http://msdn.microsoft.com/library/7a06d512-6fc3-40ca-9cb6-7f41d1a9fa28).  
+  
+-   Steuerelement-Designern finden Sie unter [Übersicht über ASP.NET Steuerelement-Designer](http://msdn.microsoft.com/library/1d5a99d7-0a72-403e-812e-2c1ab595c810).  
+  
+ Die <xref:System.Web.UI.IResourceUrlGenerator> Schnittstelle verfügt über eine Methode, die <xref:System.Web.UI.IResourceUrlGenerator.GetResourceUrl%2A> Methode, die einen URL-Verweis auf eine Ressource mit dem angegebenen Ressourcentyp und der Name zurückgegeben.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetResourceUrl">
+      <MemberSignature Language="C#" Value="public string GetResourceUrl (Type type, string resourceName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetResourceUrl(class System.Type type, string resourceName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IResourceUrlGenerator.GetResourceUrl(System.Type,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="resourceName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ in der Assembly, die die eingebettete Ressource enthält.</param>
+        <param name="resourceName">Der Name der abzurufenden Ressource.</param>
+        <summary>Gibt einen URL-Verweis auf eine eingebettete Ressource in einer Assembly, die zur Entwurfszeit verwendet wird.</summary>
+        <returns>Der URL-Verweis auf die Ressource.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zur Laufzeit die <xref:System.Web.UI.ClientScriptManager.GetWebResourceUrl%2A> Methode gibt eine URL auf eine Ressource zurück. Die <xref:System.Web.Handlers.AssemblyResourceLoader> Klasse definiert den HTTP-Handler, der verwendet wird, um eingebettete Ressourcen geladen werden.  
+  
+ Zur Entwurfszeit die <xref:System.Web.UI.ClientScriptManager.GetWebResourceUrl%2A> Methode der <xref:System.Web.UI.ClientScriptManager> Klasse erkennt Entwurfsmodus zu wechseln und die Delegaten für die Designer-Hostdienst-Implementierung, die eine URL zurückgibt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

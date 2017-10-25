@@ -1,0 +1,119 @@
+<Type Name="IWorkflowCompilerOptionsService" FullName="System.Workflow.ComponentModel.Compiler.IWorkflowCompilerOptionsService">
+  <TypeSignature Language="C#" Value="public interface IWorkflowCompilerOptionsService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IWorkflowCompilerOptionsService" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Compiler.IWorkflowCompilerOptionsService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert die Schnittstelle, die von der Umgebung implementiert wird, die den Workflow-Designer und Compiler hostet, um während der Validierung und Kompilierung umgebungsspezifische Kompilierungsinformationen bereitzustellen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CheckTypes">
+      <MemberSignature Language="C#" Value="public bool CheckTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CheckTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Compiler.IWorkflowCompilerOptionsService.CheckTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob Typen überprüft werden.</summary>
+        <value>
+          <see langword="true" />, wenn Typen überprüft werden, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Während der Validierungsphase einer Workflowkompilierung, wird ein Workflow-Quelldokument abgelehnt, wenn die <xref:System.Workflow.ComponentModel.Compiler.IWorkflowCompilerOptionsService.CheckTypes%2A> Eigenschaft ist `true` und den Workflow oder die Begleit-Regeln Dateiverweise direkt auf .NET Framework-Typen, die nicht auf eine Liste der vorhanden sind autorisierte Typen. Die Liste der zulässigen Typen ist ein XML-Dokument gibt an, in dem jeder Eintrag eine `Assembly`, `Namespace`, `TypeName`, und ein `Authorized` {`true` oder `false`} Indikator. Diese Klasse entspricht einem Eintrag in der Liste. Beachten Sie auch, dass Platzhalterzeichenbezeichnungen vollständige Namespaces einschließen oder ausschließen können. Beispiel für die Verwendung `Type="System.*"` schließt alle Typen im <xref:System>, einschließlich Typen, die in untergeordnete Namespaces enthalten sind.  
+  
+ Die Verwendung einer Liste der zulässigen Typen wird gesteuert, indem die <xref:System.Workflow.ComponentModel.Compiler.WorkflowCompiler> Option **/checktypes** oder mithilfe der <xref:System.Workflow.ComponentModel.Compiler.IWorkflowCompilerOptionsService.CheckTypes%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Language">
+      <MemberSignature Language="C#" Value="public string Language { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Language" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Compiler.IWorkflowCompilerOptionsService.Language" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Kompilieren des Workflows die von der Umgebung verwendete Programmiersprache ab, z. B. Visual Studio.</summary>
+        <value>Der Name der von der Entwicklungsumgebung verwendeten Programmiersprache.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird eine Implementierung der `Language`-Eigenschaft veranschaulicht. Dieses Beispiel stammt aus dem Tracking Profile Designer SDK-Beispiel. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Tracking Profile Designer Beispiel](http://msdn.microsoft.com/en-us/a280199c-3000-4148-ac63-cb5aaeac07c8).  
+  
+ [!code-csharp[WF_Samples#123](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#123)]
+ [!code-vb[WF_Samples#123](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#123)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RootNamespace">
+      <MemberSignature Language="C#" Value="public string RootNamespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RootNamespace" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Compiler.IWorkflowCompilerOptionsService.RootNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Stamm-Namespacesatz für das Projekt ab.</summary>
+        <value>Der Name des Stamm-Namespace.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird in der Visual Basic-Kompilierungsumgebung verwendet, um den Stamm-Namespace des Projekts an den Compiler zu übergeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Implementierung der `RootNamespace`-Eigenschaft veranschaulicht. Dieses Beispiel stammt aus dem Tracking Profile Designer SDK-Beispiel. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Tracking Profile Designer Beispiel](http://msdn.microsoft.com/en-us/a280199c-3000-4148-ac63-cb5aaeac07c8).  
+  
+ [!code-csharp[Wf_samples#122](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#122)]
+ [!code-vb[Wf_samples#122](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#122)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

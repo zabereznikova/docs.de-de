@@ -1,0 +1,134 @@
+<Type Name="FileDialogCustomPlace" FullName="System.Windows.Forms.FileDialogCustomPlace">
+  <TypeSignature Language="C#" Value="public class FileDialogCustomPlace" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FileDialogCustomPlace extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.FileDialogCustomPlace" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Eintrag in einer <see cref="T:System.Windows.Forms.FileDialog" /> -Auflistung mit benutzerdefinierten Speicherorten für Windows Vista.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In [!INCLUDE[wiprlhext](~/includes/wiprlhext-md.md)] befindet sich in den Standarddialogfeldern zum Öffnen und Schließen auf der linken Seite ein Bereich mit der Bezeichnung **Linkfavoriten**. Dieser Bereich wird als „Benutzerdefinierte Speicherorte“ bezeichnet. Diese Klasse stellt einen benutzerdefinierten Speicherort.  
+  
+ Auf [!INCLUDE[winxp](~/includes/winxp-md.md)] oder [!INCLUDE[winxpsvr](~/includes/winxpsvr-md.md)], diese Klasse keine Auswirkung.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileDialogCustomPlace (Guid knownFolderGuid);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid knownFolderGuid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FileDialogCustomPlace.#ctor(System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="knownFolderGuid" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="knownFolderGuid">Ein <see cref="T:System.Guid" /> darstellt, die eine [!INCLUDE[wiprlhext](~/includes/wiprlhext-md.md)] Ordner bezeichnet.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.FileDialogCustomPlace" /> Klasse mit einem benutzerdefinierten Speicherort identifizierte eine [!INCLUDE[wiprlhext](~/includes/wiprlhext-md.md)] bekannte Ordner-GUID.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Liste der verfügbaren [!INCLUDE[wiprlhext](~/includes/wiprlhext-md.md)] bekannte Ordner finden Sie unter [bekannte Ordner-GUIDs für benutzerdefinierte im Dateidialogfeld](~/docs/framework/winforms/controls/known-folder-guids-for-file-dialog-custom-places.md) Datei KnownFolders.h in der [!INCLUDE[winSDK](~/includes/winsdk-md.md)].  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie die <xref:System.Windows.Forms.FileDialogCustomPlace.%23ctor%2A>-Methode verwenden. Um dieses Beispiel auszuführen, fügen Sie den folgenden Code in einem Windows Form, und rufen `InitializeDialogAndButton` aus den Konstruktor des Formulars oder <xref:System.Windows.Forms.Form.Load> Ereignisbehandlungsmethode.  
+  
+ [!code-csharp[System.Windows.Forms.FileDialogCommonPlaces#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FileDialogCommonPlaces/CS/Form1.cs#1)]
+ [!code-vb[System.Windows.Forms.FileDialogCommonPlaces#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FileDialogCommonPlaces/VB/Form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileDialogCustomPlace (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FileDialogCustomPlace.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Einen Ordnerpfad zum benutzerdefinierten Speicherort.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.FileDialogCustomPlace" />-Klasse. mit einem angegebenen Ordnerpfad zu einem benutzerdefinierten Speicherort.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KnownFolderGuid">
+      <MemberSignature Language="C#" Value="public Guid KnownFolderGuid { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid KnownFolderGuid" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.FileDialogCustomPlace.KnownFolderGuid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die [!INCLUDE[wiprlhext](~/includes/wiprlhext-md.md)] GUID für bekannte Ordner für den benutzerdefinierten Speicherort ab oder legt sie fest.</summary>
+        <value>Eine <see cref="T:System.Guid" />, die den bekannten Ordner für [!INCLUDE[wiprlhext](~/includes/wiprlhext-md.md)] für den benutzerdefinierten Speicherort angibt. Wenn der benutzerdefinierte Speicherort mit einem Ordnerpfad angegeben wurde, wird eine leere GUID zurückgegeben. Eine Liste der verfügbaren [!INCLUDE[wiprlhext](~/includes/wiprlhext-md.md)] bekannte Ordner finden Sie unter [bekannte Ordner-GUIDs für benutzerdefinierte im Dateidialogfeld](~/docs/framework/winforms/controls/known-folder-guids-for-file-dialog-custom-places.md) Datei KnownFolders.h in der [!INCLUDE[winSDK](~/includes/winsdk-md.md)].</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.FileDialogCustomPlace.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Ordnerpfad zum benutzerdefinierten Speicherort.</summary>
+        <value>Einen Ordnerpfad zum benutzerdefinierten Speicherort. Wenn der benutzerdefinierte Speicherort angegeben wurde eine [!INCLUDE[wiprlhext](~/includes/wiprlhext-md.md)] bekannte Ordner-GUID, und klicken Sie dann auf eine leere Zeichenfolge zurückgegeben.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FileDialogCustomPlace.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge zurück, die diese <see cref="T:System.Windows.Forms.FileDialogCustomPlace" />-Instanz darstellt.</summary>
+        <returns>Eine Zeichenfolge, die diese <see cref="T:System.Windows.Forms.FileDialogCustomPlace" />-Instanz darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

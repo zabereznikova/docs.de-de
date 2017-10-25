@@ -1,0 +1,662 @@
+<Type Name="PageAdapter" FullName="System.Web.UI.Adapters.PageAdapter">
+  <TypeSignature Language="C#" Value="public abstract class PageAdapter : System.Web.UI.Adapters.ControlAdapter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PageAdapter extends System.Web.UI.Adapters.ControlAdapter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Adapters.PageAdapter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Adapters.ControlAdapter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Passt eine Webseite für einen bestimmten Browser, und stellt die Basisklasse, von der alle Seitenadapter, direkt oder indirekt erben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Adapters.PageAdapter> Klasse ist eine abstrakte Klasse, die eine Webseite für eine bestimmte Objektklasse Browsern, definiert durch die Markupsprache, die der Browser verwendet (z. B. HTML oder XHTML) anpasst. Ein Großteil der Renderingverhaltens kann gekapselt werden, in die spezialisierte Textvorlagen-Writer-Klassen, die Ableitung der <xref:System.Web.UI.HtmlTextWriter> Klasse, daher ist es nicht immer notwendig, einen Seitenadapter bereitzustellen.  
+  
+ Die meisten Member der abgeleiteten Seitenadapter heißen aus der <xref:System.Web.UI.Page> Klasse oder von Steuerelementadapter. Zunächst wird die <xref:System.Web.UI.Page> Steuerelementadapter Klasse oder das Vorhandensein des Seitenadapters abgeleiteten erkennen und rufen Sie das Element ein, oder stellen die Funktionalität bereit, wenn der Seitenadapter nicht vorhanden ist.  
+  
+ Die Mitglieder der <xref:System.Web.UI.Adapters.PageAdapter> Klasse bieten die folgenden Funktionen:  
+  
+-   Die <xref:System.Web.UI.Adapters.PageAdapter.CacheVaryByHeaders%2A> und <xref:System.Web.UI.Adapters.PageAdapter.CacheVaryByParams%2A> Eigenschaften definieren Sie zusätzliche HTTP-Header und HTTP- `GET` und `POST` Parameter, die verwendet werden können, um das Zwischenspeichern variieren. Sie werden aufgerufen, während der Initialisierung des Caches aus der <xref:System.Web.UI.Page> Klasse.  
+  
+-   Die <xref:System.Web.UI.Adapters.PageAdapter.GetStatePersister%2A> Methode gibt ein Objekt, das verwendet werden kann, um die zusammengefassten Zustandsangaben anzeigen und Steuern der Seite beizubehalten. Darauf verwiesen wird, aus der <xref:System.Web.UI.Page.PageStatePersister%2A> Eigenschaft, wenn ein abgeleiteter Adapter vorhanden ist.  
+  
+-   Die <xref:System.Web.UI.Adapters.PageAdapter.GetPostBackFormReference%2A> -Methode stellt ein DHTML-Codefragment, mit denen Formulare in Skripts verwiesen werden kann.  
+  
+-   Die <xref:System.Web.UI.Adapters.PageAdapter.DeterminePostBackMode%2A> -Methode gibt eine Auflistung der postback Variablen aus, wenn die Seite im Postback befindet. Wird aufgerufen, von der .NET Framework statt der <xref:System.Web.UI.Page.DeterminePostBackMode%2A?displayProperty=nameWithType> Methode, wenn ein abgeleiteter Adapter vorhanden ist.  
+  
+-   Die <xref:System.Web.UI.Adapters.PageAdapter.RenderBeginHyperlink%2A> und <xref:System.Web.UI.Adapters.PageAdapter.RenderEndHyperlink%2A> Methoden werden von Steuerelementadapter verwendet, um Links zu rendern, wenn ein abgeleiteter Adapter vorhanden ist.  
+  
+-   Die <xref:System.Web.UI.Adapters.PageAdapter.RenderPostBackEvent%2A> -Methode rendert einen Link oder ein Postbackereignis Clienttag, die das Formular senden kann.  
+  
+-   Die <xref:System.Web.UI.Adapters.PageAdapter.RegisterRadioButton%2A> und <xref:System.Web.UI.Adapters.PageAdapter.GetRadioButtonsByGroup%2A> Methoden werden von Optionsfeld-Steuerelementadapter verwendet, um auf den anderen verweisen <xref:System.Web.UI.WebControls.RadioButton> Steuerelemente in eine Gruppe von Optionsfeldern.  
+  
+-   Die <xref:System.Web.UI.Adapters.PageAdapter.ClientState%2A> Eigenschaft ermöglicht den Zugriff auf den kombinierten Steuerelement- und Anzeigen von der <xref:System.Web.UI.Page> durch das interne Objekt `ClientState` Eigenschaft von der <xref:System.Web.UI.Page> Klasse.  
+  
+-   Die <xref:System.Web.UI.Adapters.PageAdapter.TransformText%2A> Methode wird von Steuerelementadapter gerätespezifischen TextTransformation ausführen verwendet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Klasse mit dem Namen abgeleitet `CustomPageAdapter` aus der <xref:System.Web.UI.Adapters.PageAdapter> Klasse, und überschreiben die <xref:System.Web.UI.Adapters.PageAdapter.RenderBeginHyperlink%2A> Methode. Die <xref:System.Web.UI.Adapters.PageAdapter.RenderBeginHyperlink%2A> Methode fügt ein Attribut mit dem Namen `src` in einen Link enthält einen Verweis auf die aktuelle Seite. Alle Links gerendert werden in Seiten, `CustomPageAdapter` angefügt ist müssen die `src` Attribut.  
+  
+ [!code-csharp[System.Web.UI.Adapters.PageAdapter.RenderBeginHyperlink#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Adapters.PageAdapter.RenderBeginHyperlink/CS/pageadapter.cs#1)]
+ [!code-vb[System.Web.UI.Adapters.PageAdapter.RenderBeginHyperlink#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Adapters.PageAdapter.RenderBeginHyperlink/VB/pageadapter.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PageAdapter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Adapters.PageAdapter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Adapters.PageAdapter" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ .NET Framework erstellt diesen Adapter intern beim Erstellen der entsprechenden <xref:System.Web.UI.Page> Klasse oder einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheVaryByHeaders">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Specialized.StringCollection CacheVaryByHeaders { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.StringCollection CacheVaryByHeaders" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Adapters.PageAdapter.CacheVaryByHeaders" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.StringCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste der zusätzlichen HTTP-Header mit denen Zwischenspeichern variiert wird für die Webseite, die an den dieser abgeleiteten Seitenadapter angefügt ist.</summary>
+        <value>Ein <see cref="T:System.Collections.IList" /> , die eine Liste der HTTP-Header enthält, andernfalls <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entitäten im Web, die Webseiten zwischenspeichern cache mehrere Versionen, basierend auf der HTTP-Header und anderen Faktoren. Z. B. eine Version für jede Sprache, in dem eine Seite generiert wird, für gewöhnlich zwischengespeichert wird, auf Grundlage der `Accept-Language` HTTP-Header.  
+  
+ Für bestimmte Browser möglicherweise es zum Zwischenspeichern von HTTP-Header zusätzlich zu den Headern dieser Steuerelement Ziel typunabhängig Zwischenspeichern variieren. Beispielsweise kann es verschiedene Versionen einer Seite für verschiedene Bildschirmgrößen zwischenzuspeichern erforderlich sein.  
+  
+ Die Namen von Spaltenüberschriften zurückgegebenes der <xref:System.Web.UI.Adapters.PageAdapter.CacheVaryByHeaders%2A> Eigenschaft zur Liste der Header hinzugefügt werden, auf die `Vary` HTTP-Header an den Clientbrowser gesendet.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Erben von der <see cref="T:System.Web.UI.Adapters.PageAdapter" /> -Klasse, die Sie überschreiben die <see cref="P:System.Web.UI.Adapters.PageAdapter.CacheVaryByHeaders" /> -Eigenschaft zum Zurückgeben einer Liste der zusätzliche Header zielspezifische Zwischenspeichern steuern. Die <see cref="P:System.Web.UI.Adapters.PageAdapter.CacheVaryByHeaders" /> Basis-Eigenschaft gibt <see langword="null" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheVaryByParams">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Specialized.StringCollection CacheVaryByParams { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.StringCollection CacheVaryByParams" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Adapters.PageAdapter.CacheVaryByParams" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.StringCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste zusätzlicher Parameter von HTTP GET und POST-Anforderungen, die mit denen Zwischenspeichern variiert wird für die Webseite, die an den dieser abgeleiteten Seitenadapter angefügt ist.</summary>
+        <value>Ein <see cref="T:System.Collections.IList" /> , enthält eine Liste der Get- und POST-Parameter ist, andernfalls <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entitäten im Web Webseiten mehrere Versionen Cache Grundlage, neben anderen Faktoren die Anforderungsparameter. Z. B. eine Version für jeden Speicherort innerhalb einer Retail-Kette für die eine Seite generiert werden normalerweise zwischengespeichert werden würde, basiert auf den Namen des Parameters (z. B. `StoreID`).  
+  
+ Für bestimmte Browser kann es erforderlich sein, variieren Zwischenspeichern Get oder POST-Parameter zusätzlich zu den Parametern dieses Steuerelement Ziel typunabhängig Zwischenspeichern. Beispielsweise kann es verschiedene Versionen einer Seite für unterschiedliche Mobiltelefon Dienstanbieter zwischenzuspeichern erforderlich sein.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Erben von der <see cref="T:System.Web.UI.Adapters.PageAdapter" /> -Klasse, die Sie überschreiben die <see cref="P:System.Web.UI.Adapters.PageAdapter.CacheVaryByParams" /> -Eigenschaft zum Zurückgeben einer Liste der zusätzlichen GET oder POST Parameter zielspezifische Zwischenspeichern steuern. Die <see cref="P:System.Web.UI.Adapters.PageAdapter.CacheVaryByParams" /> Basis-Methode gibt <see langword="null" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientState">
+      <MemberSignature Language="C#" Value="protected string ClientState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClientState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Adapters.PageAdapter.ClientState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine codierte Zeichenfolge, die Ansichts- und Zustände Daten der Webseite enthält, dem dieser Seitenadapter abgeleiteten zugeordnet ist.</summary>
+        <value>Einen codierten <see cref="T:System.String" /> , enthält die zusammengefassten Zustandsangaben anzeigen und Steuern der Steuerelemente auf dem zugeordneten <see cref="T:System.Web.UI.Page" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Adapters.PageAdapter.ClientState%2A> Eigenschaft ermöglicht den Zugriff auf das interne `ClientState` Eigenschaft von der <xref:System.Web.UI.Page> Klasse.  
+  
+ Anzeigen von Statusdaten, die von gespeicherten der <xref:System.Web.UI.PageStatePersister> Objekt in der internen `ClientState` Eigenschaft <xref:System.Web.UI.Page> werden immer im ausgeblendeten Feld auf der Webseite gespeichert.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Erben von der <see cref="T:System.Web.UI.Adapters.PageAdapter" /> -Klasse, die Sie überschreiben können nicht die <see cref="P:System.Web.UI.Adapters.PageAdapter.ClientState" /> Eigenschaft, da er nicht ist <see langword="virtual" />. So ändern Sie das Verhalten des <see cref="P:System.Web.UI.Adapters.PageAdapter.ClientState" /> implementieren Sie in einer abgeleiteten Klasse eine neue <see cref="P:System.Web.UI.Adapters.PageAdapter.ClientState" /> Eigenschaft, die auf die <see cref="P:System.Web.UI.Adapters.PageAdapter.ClientState" /> Eigenschaft der Basisklasse.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="DeterminePostBackMode">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Specialized.NameValueCollection DeterminePostBackMode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Specialized.NameValueCollection DeterminePostBackMode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Adapters.PageAdapter.DeterminePostBackMode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob die Webseite im Postback und gibt eine Name/Wert-Auflistung der postback Variablen zurück.</summary>
+        <returns>Ein <see cref="T:System.Collections.Specialized.NameValueCollection" /> postback Variablen, falls vorhanden; andernfalls <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Adapters.PageAdapter.DeterminePostBackMode%2A> Methodenrückgabe einer der folgenden Sammlungen:  
+  
+-   Formularvariablen, wenn die HTTP-Datenübertragungsmethode `POST`.  
+  
+-   Abfragezeichenfolgenvariablen, wenn die HTTP-Methode ist `GET`.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Erben von der <see cref="T:System.Web.UI.Adapters.PageAdapter" /> -Klasse, die Sie überschreiben die <see cref="M:System.Web.UI.Adapters.PageAdapter.DeterminePostBackMode" /> Methode zielspezifische Behandlung der postback Variables-Auflistung bereitstellen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="DeterminePostBackModeUnvalidated">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Specialized.NameValueCollection DeterminePostBackModeUnvalidated ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Specialized.NameValueCollection DeterminePostBackModeUnvalidated() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Adapters.PageAdapter.DeterminePostBackModeUnvalidated" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Name-Wert-Auflistung von Daten, die zurückgesendet wurde auf der Seite mit einer POST oder GET-Befehl ohne Ausführen von ASP.NET anforderungsüberprüfung für die Anforderung zurück.</summary>
+        <returns>Die nicht überprüfte Formulardaten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Web.UnvalidatedRequestValues>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPostBackFormReference">
+      <MemberSignature Language="C#" Value="protected virtual string GetPostBackFormReference (string formId);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance string GetPostBackFormReference(string formId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Adapters.PageAdapter.GetPostBackFormReference(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="formId">Ein <see cref="T:System.String" /> , enthält die Client-ID des Formulars, das bereitgestellt wurde.</param>
+        <summary>Gibt ein DHTML-Codefragment, die der Clientbrowser verwenden können, um das Formular auf der Seite zu verweisen, die zurückgesendet wurde.</summary>
+        <returns>Ein <see cref="T:System.String" /> mit einem Verweis auf das Formular auf der Seite, die gesendet wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Adapters.PageAdapter.GetPostBackFormReference%2A> Methode bietet eine DHTML-Referenz auf das Formular postback. Das Codefragment weist das folgende Format:  
+  
+ `document.forms['` `formID` `']`  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Erben von der <see cref="T:System.Web.UI.Adapters.PageAdapter" /> -Klasse, die Sie überschreiben die <see cref="M:System.Web.UI.Adapters.PageAdapter.GetPostBackFormReference(System.String)" /> Methode, wenn das Markup für den Browser, die vom Adapter unterstützte ein anderes Format für den Formularverweis postback erfordert. Der von Pocket PC-Browsern verwendete HTML 3.2-Standard erfordert z. B. das folgende Format:  
+  
+ <c>Dokument.</c><paramref name="formID" /></para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRadioButtonsByGroup">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.ICollection GetRadioButtonsByGroup (string groupName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.ICollection GetRadioButtonsByGroup(string groupName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Adapters.PageAdapter.GetRadioButtonsByGroup(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="groupName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="groupName">Ein <see cref="T:System.String" /> , der den Namen des der <see cref="T:System.Web.UI.WebControls.RadioButton" /> abzurufenden Gruppe.</param>
+        <summary>Ruft eine Auflistung von Optionsfeld-Steuerelementen gemäß <paramref name="groupName" />.</summary>
+        <returns>Ein <see cref="T:System.Collections.ICollection" /> von <see cref="T:System.Web.UI.WebControls.RadioButton" /> Steuerelemente, mit deren Hilfe <paramref name="groupName" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Optionsfeld Schaltfläche Steuerelement Adapter verwenden den <xref:System.Web.UI.Adapters.PageAdapter.GetRadioButtonsByGroup%2A> und <xref:System.Web.UI.Adapters.PageAdapter.RegisterRadioButton%2A> Methoden auf anderen verweisen <xref:System.Web.UI.WebControls.RadioButton> Steuerelemente in der Gruppe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStatePersister">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.PageStatePersister GetStatePersister ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.PageStatePersister GetStatePersister() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Adapters.PageAdapter.GetStatePersister" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.PageStatePersister</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein Objekt, das von der Webseite verwendet wird, behalten die Kontrolle und Ansichtszustände zurück.</summary>
+        <returns>Ein Objekt abgeleitet <see cref="T:System.Web.UI.PageStatePersister" /> , die unterstützt das Erstellen und Extrahieren der kombinierten Steuerelement- und Ansicht für die <see cref="T:System.Web.UI.Page" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Page.PageStatePersister%2A> Eigenschaft verwendet die <xref:System.Web.UI.Adapters.PageAdapter.GetStatePersister%2A> Methode, um das Objekt zurückzugeben, die von abgeleiteten der <xref:System.Web.UI.PageStatePersister> Klasse bereit, die bildet und extrahiert die zusammengefassten Zustandsangaben Steuerung und Ansicht für die Seite. Wenn kein abgeleiteter angefügt wird, auf der Seite Steuerelementadapter ein <xref:System.Web.UI.HiddenFieldPageStatePersister> Objekt wird verwendet, um den Status in einem ausgeblendeten Feld auf der Seite beibehalten.  
+  
+|Linktyp|Resultierende link|  
+|---------------|--------------------|  
+|Code-Entitätsverweis, cer|<xref:System.Char.ToString%2A>|  
+|Entität Verweis qualifiziert, Cerq Code|<xref:System.Char.ToString%2A?displayProperty=nameWithType>|  
+|Entität Verweis spezifisch sind Cers Code|<xref:System.Char.ToString%28System.Char%29>|  
+|Code Entität Verweis qualifizierten bestimmt, cerqs|<xref:System.Char.ToString%28System.Char%29?displayProperty=nameWithType>|  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Anzeigezustandsdaten gespeichert werden, indem Sie die <see cref="T:System.Web.UI.PageStatePersister" /> Objekt in der internen <see langword="ClientState" /> Eigenschaft der <see cref="T:System.Web.UI.Page" /> werden immer im ausgeblendeten Feld auf der Webseite gespeichert.</para>
+        </block>
+        <block subset="none" type="overrides">
+          <para>Beim Erben von der <see cref="T:System.Web.UI.Adapters.PageAdapter" /> -Klasse, die Sie überschreiben die <see cref="M:System.Web.UI.Adapters.PageAdapter.GetStatePersister" /> Methode, um einen anderen zurückzugeben PageStatePersister abgeleitet, wenn es nicht möglich, den kombinierten Status in ein verborgenes Feld (z. B. aufgrund der begrenzten Ressourcen) zu verwalten ist.  
+  
+ Die <see cref="M:System.Web.UI.Adapters.PageAdapter.GetStatePersister" /> Basis-Klasse gibt eine <see cref="T:System.Web.UI.HiddenFieldPageStatePersister" /> Objekt. Sie können die <see cref="T:System.Web.UI.SessionPageStatePersister" /> Klasse auf der Seite Status im Sitzungsstatus erhalten bleibt.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterRadioButton">
+      <MemberSignature Language="C#" Value="public virtual void RegisterRadioButton (System.Web.UI.WebControls.RadioButton radioButton);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterRadioButton(class System.Web.UI.WebControls.RadioButton radioButton) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Adapters.PageAdapter.RegisterRadioButton(System.Web.UI.WebControls.RadioButton)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="radioButton" Type="System.Web.UI.WebControls.RadioButton" />
+      </Parameters>
+      <Docs>
+        <param name="radioButton">Der der Auflistung hinzuzufügende <see cref="T:System.Web.UI.WebControls.RadioButton" />.</param>
+        <summary>Fügt ein Optionsfeld-Steuerelement zur Auflistung für einen angegebenen Optionsfeldgruppe hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Adapters.PageAdapter> -Klasse verwendet ein <xref:System.Collections.Specialized.ListDictionary> Objekt, das eine Liste der Optionsfeldgruppen verwalten. Jedes Element im <xref:System.Collections.Specialized.ListDictionary> ist eine Sammlung von der <xref:System.Web.UI.WebControls.RadioButton> Steuerelemente in eine Gruppe von Optionsfeldern. Die <xref:System.Web.UI.Adapters.PageAdapter.RegisterRadioButton%2A> Methode fügt eine <xref:System.Web.UI.WebControls.RadioButton> Steuerelement der entsprechenden Auflistung, die Auflistung erstellen, wenn sie nicht bereits vorhanden ist, und erstellen <xref:System.Collections.Specialized.ListDictionary> Wenn es nicht bereits registriert sind <xref:System.Web.UI.WebControls.RadioButton> Steuerelemente.  
+  
+ Optionsfeld Schaltfläche Steuerelement Adapter verwenden den <xref:System.Web.UI.Adapters.PageAdapter.RegisterRadioButton%2A> und <xref:System.Web.UI.Adapters.PageAdapter.GetRadioButtonsByGroup%2A> Methoden auf anderen verweisen <xref:System.Web.UI.WebControls.RadioButton> Steuerelemente in eine Gruppe von Optionsfeldern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderBeginHyperlink">
+      <MemberSignature Language="C#" Value="public virtual void RenderBeginHyperlink (System.Web.UI.HtmlTextWriter writer, string targetUrl, bool encodeUrl, string softkeyLabel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RenderBeginHyperlink(class System.Web.UI.HtmlTextWriter writer, string targetUrl, bool encodeUrl, string softkeyLabel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Adapters.PageAdapter.RenderBeginHyperlink(System.Web.UI.HtmlTextWriter,System.String,System.Boolean,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+        <Parameter Name="targetUrl" Type="System.String" />
+        <Parameter Name="encodeUrl" Type="System.Boolean" />
+        <Parameter Name="softkeyLabel" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.Web.UI.HtmlTextWriter" /> enthält Methoden, um die Ausgabe zielspezifische zu rendern.</param>
+        <param name="targetUrl">Die <see cref="T:System.String" /> -Wert, der Ziel-URL des Links.</param>
+        <param name="encodeUrl">
+          <see langword="true" />mit <see cref="M:System.Web.HttpUtility.HtmlAttributeEncode(System.String)" /> den Ausgabestream; codieren, andernfalls <see langword="false" />.</param>
+        <param name="softkeyLabel">Die <see cref="T:System.String" /> Wert, der als Beschriftung einer Bildschirmtaste verwendet.</param>
+        <summary>Schreibt ein öffnendes Linktag, die die Ziel-URL an den Antwortstream enthält.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Adapters.PageAdapter.RenderBeginHyperlink%2A> -Methode schreibt ein öffnendes Linktag. Wenn `writer` ist <xref:System.Web.UI.HtmlTextWriter>, dieses Tag weist das folgende Format:  
+  
+ `<a href="` `targetUrl` `">`  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Klasse mit dem Namen abgeleitet `CustomPageAdapter` aus der <xref:System.Web.UI.Adapters.PageAdapter> Klasse, und überschreiben die <xref:System.Web.UI.Adapters.PageAdapter.RenderBeginHyperlink%2A> Methode. Die <xref:System.Web.UI.Adapters.PageAdapter.RenderBeginHyperlink%2A> Methode fügt ein Attribut mit dem Namen `src` in einen Link enthält einen Verweis auf die aktuelle Seite. Alle Links gerendert werden in Seiten, `CustomPageAdapter` angefügt ist müssen die `src` Attribut.  
+  
+ [!code-csharp[System.Web.UI.Adapters.PageAdapter.RenderBeginHyperlink#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Adapters.PageAdapter.RenderBeginHyperlink/CS/pageadapter.cs#1)]
+ [!code-vb[System.Web.UI.Adapters.PageAdapter.RenderBeginHyperlink#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Adapters.PageAdapter.RenderBeginHyperlink/VB/pageadapter.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Erben von der <see cref="T:System.Web.UI.Adapters.PageAdapter" /> -Klasse, die Sie überschreiben die <see cref="M:System.Web.UI.Adapters.PageAdapter.RenderBeginHyperlink(System.Web.UI.HtmlTextWriter,System.String,System.Boolean,System.String)" /> -Methode, einem anderen Format für ein öffnendes-Tag oder zusätzliche Transponder schreiben zu schreiben. Z. B. die <see cref="M:System.Web.UI.Adapters.PageAdapter.RenderBeginHyperlink(System.Web.UI.HtmlTextWriter,System.String,System.Boolean,System.String)" /> Basismethode schreibt ein Attribut für nicht <paramref name="softkeyLabel" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderBeginHyperlink">
+      <MemberSignature Language="C#" Value="public virtual void RenderBeginHyperlink (System.Web.UI.HtmlTextWriter writer, string targetUrl, bool encodeUrl, string softkeyLabel, string accessKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RenderBeginHyperlink(class System.Web.UI.HtmlTextWriter writer, string targetUrl, bool encodeUrl, string softkeyLabel, string accessKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Adapters.PageAdapter.RenderBeginHyperlink(System.Web.UI.HtmlTextWriter,System.String,System.Boolean,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+        <Parameter Name="targetUrl" Type="System.String" />
+        <Parameter Name="encodeUrl" Type="System.Boolean" />
+        <Parameter Name="softkeyLabel" Type="System.String" />
+        <Parameter Name="accessKey" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.Web.UI.HtmlTextWriter" /> enthält Methoden, um die Ausgabe zielspezifische zu rendern.</param>
+        <param name="targetUrl">Die <see cref="T:System.String" /> -Wert, der Ziel-URL des Links.</param>
+        <param name="encodeUrl">
+          <see langword="true" />mit <see cref="M:System.Web.HttpUtility.HtmlAttributeEncode(System.String)" /> den Ausgabestream; codieren, andernfalls <see langword="false" />.</param>
+        <param name="softkeyLabel">Die <see cref="T:System.String" /> Wert, der als Beschriftung einer Bildschirmtaste verwendet.</param>
+        <param name="accessKey">Die <see cref="T:System.String" /> zuzuweisende Wert der <see langword="accessKey" /> -Attribut des Links zu erstellen.</param>
+        <summary>Schreibt ein öffnendes Linktag, die die Ziel-URL und einen Zugriffsschlüssel für den Antwortstream enthält.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Adapters.PageAdapter.RenderBeginHyperlink%2A> -Methode schreibt ein öffnendes Linktag. Wenn `writer` ist ein <xref:System.Web.UI.HtmlTextWriter> -Objekt dieses Tag weist das folgende Format:  
+  
+ `<a href="` `targetUrl` `" accessKey="` `accessKey` `">`  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Klasse mit dem Namen abgeleitet `CustomPageAdapter` aus der <xref:System.Web.UI.Adapters.PageAdapter> Klasse, und überschreiben die <xref:System.Web.UI.Adapters.PageAdapter.RenderBeginHyperlink%2A> Methode. <xref:System.Web.UI.Adapters.PageAdapter.RenderBeginHyperlink%2A>Fügt ein Attribut mit dem Namen `src` in einen Link enthält einen Verweis auf die aktuelle Seite. Alle Links gerendert werden in Seiten, `CustomPageAdapter` angefügt ist müssen die `src` Attribut.  
+  
+ [!code-csharp[System.Web.UI.Adapters.PageAdapter.RenderBeginHyperlink#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Adapters.PageAdapter.RenderBeginHyperlink/CS/pageadapter.cs#1)]
+ [!code-vb[System.Web.UI.Adapters.PageAdapter.RenderBeginHyperlink#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Adapters.PageAdapter.RenderBeginHyperlink/VB/pageadapter.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="accessKey" />ist länger als ein Zeichen.</exception>
+        <block subset="none" type="overrides">
+          <para>Beim Erben von der <see cref="T:System.Web.UI.Adapters.PageAdapter" /> -Klasse, die Sie überschreiben die <see cref="M:System.Web.UI.Adapters.PageAdapter.RenderBeginHyperlink(System.Web.UI.HtmlTextWriter,System.String,System.Boolean,System.String,System.String)" /> -Methode, einem anderen Format für ein öffnendes-Tag oder zusätzliche Transponder schreiben zu schreiben. Z. B. die <see cref="M:System.Web.UI.Adapters.PageAdapter.RenderBeginHyperlink(System.Web.UI.HtmlTextWriter,System.String,System.Boolean,System.String,System.String)" /> Basismethode schreibt ein Attribut für nicht <paramref name="softkeyLabel" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderEndHyperlink">
+      <MemberSignature Language="C#" Value="public virtual void RenderEndHyperlink (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RenderEndHyperlink(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Adapters.PageAdapter.RenderEndHyperlink(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.Web.UI.HtmlTextWriter" /> Methoden zum Rendern der zielspezifische Ausgabe enthält.</param>
+        <summary>Schreibt ein schließendes Linktag an den Antwortstream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Adapters.PageAdapter.RenderEndHyperlink%2A> -Methode schreibt ein schließendes Linktag. Wenn der TextWriter ist ein <xref:System.Web.UI.HtmlTextWriter> -Objekt dieses Tag weist das folgende Format:  
+  
+ `</a>`  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Erben von der <see cref="T:System.Web.UI.Adapters.PageAdapter" /> -Klasse, die Sie überschreiben die <see cref="M:System.Web.UI.Adapters.PageAdapter.RenderEndHyperlink(System.Web.UI.HtmlTextWriter)" /> und <see cref="Overload:System.Web.UI.Adapters.PageAdapter.RenderBeginHyperlink" /> Methoden, wenn ein anderes Format des Links gerendert werden müssen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderPostBackEvent">
+      <MemberSignature Language="C#" Value="public virtual void RenderPostBackEvent (System.Web.UI.HtmlTextWriter writer, string target, string argument, string softkeyLabel, string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RenderPostBackEvent(class System.Web.UI.HtmlTextWriter writer, string target, string argument, string softkeyLabel, string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Adapters.PageAdapter.RenderPostBackEvent(System.Web.UI.HtmlTextWriter,System.String,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+        <Parameter Name="target" Type="System.String" />
+        <Parameter Name="argument" Type="System.String" />
+        <Parameter Name="softkeyLabel" Type="System.String" />
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.Web.UI.HtmlTextWriter" /> enthält Methoden, um die Ausgabe zielspezifische zu rendern.</param>
+        <param name="target">Die <see cref="T:System.String" /> -Wert mit dem Zielnamen Postbackereignis.</param>
+        <param name="argument">Die <see cref="T:System.String" /> -Wert, der an das postback Ziel-Ereignis zu übergebende Argument.</param>
+        <param name="softkeyLabel">Die <see cref="T:System.String" /> Wert, der als Beschriftung einer Bildschirmtaste verwendet.</param>
+        <param name="text">Die <see cref="T:System.String" /> Wert des Texts als Link angezeigt.</param>
+        <summary>Rendert ein Postbackereignis, das in den Antwortstream als Hyperlink, einschließlich des codierten und ggf. verschlüsselten Ansichtszustand und Ereignisziels und -Arguments.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Adapters.PageAdapter.RenderPostBackEvent%2A> Methode schreibt ein Postbackereignis, das als scriptless Link.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Erben von der <see cref="T:System.Web.UI.Adapters.PageAdapter" /> -Klasse, die Sie überschreiben die <see cref="M:System.Web.UI.Adapters.PageAdapter.RenderPostBackEvent(System.Web.UI.HtmlTextWriter,System.String,System.String,System.String,System.String)" /> Methode, wenn ein anderes Format für den Hyperlink Postbackereignis erforderlich ist, oder der Browser andere besondere Anforderungen gelten. Von einigen Browsern erfordern z. B. den Linktext nicht leeren, wenn der Link ist gerendert werden. Sie können auch überschreiben <see cref="M:System.Web.UI.Adapters.PageAdapter.RenderPostBackEvent(System.Web.UI.HtmlTextWriter,System.String,System.String,System.String,System.String)" /> Wenn beschränkt auf Ressourcen verhindern, einschließlich des Ansichtszustands als URL-Parameter. Die <see cref="M:System.Web.UI.Adapters.PageAdapter.RenderPostBackEvent(System.Web.UI.HtmlTextWriter,System.String,System.String,System.String,System.String)" /> Basismethode schreibt ein Attribut für nicht <paramref name="softkeyLabel" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderPostBackEvent">
+      <MemberSignature Language="C#" Value="public virtual void RenderPostBackEvent (System.Web.UI.HtmlTextWriter writer, string target, string argument, string softkeyLabel, string text, string postUrl, string accessKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RenderPostBackEvent(class System.Web.UI.HtmlTextWriter writer, string target, string argument, string softkeyLabel, string text, string postUrl, string accessKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Adapters.PageAdapter.RenderPostBackEvent(System.Web.UI.HtmlTextWriter,System.String,System.String,System.String,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+        <Parameter Name="target" Type="System.String" />
+        <Parameter Name="argument" Type="System.String" />
+        <Parameter Name="softkeyLabel" Type="System.String" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="postUrl" Type="System.String" />
+        <Parameter Name="accessKey" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.Web.UI.HtmlTextWriter" /> enthält Methoden, um die Ausgabe zielspezifische zu rendern.</param>
+        <param name="target">Die <see cref="T:System.String" /> -Wert mit dem Zielnamen Postbackereignis.</param>
+        <param name="argument">Die <see cref="T:System.String" /> -Wert, der an das postback Ziel-Ereignis zu übergebende Argument.</param>
+        <param name="softkeyLabel">Die <see cref="T:System.String" /> Wert, der als Beschriftung einer Bildschirmtaste verwendet.</param>
+        <param name="text">Die <see cref="T:System.String" /> Wert des Texts als Link angezeigt.</param>
+        <param name="postUrl">Die <see cref="T:System.String" /> -Wert, der URL-Zielseite des Postbacks.</param>
+        <param name="accessKey">Die <see cref="T:System.String" /> Wert zuweisen, die <see langword="accessKey" /> Attribut des erstellten Links.</param>
+        <summary>Rendert ein Postbackereignis, das in den Antwortstream als Hyperlink, einschließlich den codierten und ggf. verschlüsselten Ansichtszustand, ein Ereignisziel Argument, ein Parameter von vorherige Seite und einer Zugriffstaste.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Adapters.PageAdapter.RenderPostBackEvent%2A> Methode schreibt ein Postbackereignis, das als scriptless Link, der möglicherweise aufgeteilte einschließlich <xref:System.Web.HttpUtility.UrlEncode%2A> den Ansichtszustand, `__EVENTTARGET=target`, `__EVENTARGUMENT=argument`, `__PREVIOUSPAGE=currentFilePath` Parameter, und ein `accessKey="accessKey"` Attribut.  
+  
+ Ansichtszustand verschlüsselt wird, wenn die `enableViewStateMac` Attribut von der [pages Element ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/4123bb66-3fe4-4d62-b70e-33758656b458) Konfigurationselement auf festgelegt ist `true`.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Erben von der <see cref="T:System.Web.UI.Adapters.PageAdapter" /> -Klasse, die Sie überschreiben die <see cref="M:System.Web.UI.Adapters.PageAdapter.RenderPostBackEvent(System.Web.UI.HtmlTextWriter,System.String,System.String,System.String,System.String,System.String,System.String)" /> Methode, wenn ein anderes Format für den Hyperlink Postbackereignis erforderlich ist, oder der Browser andere besondere Anforderungen gelten. Von einigen Browsern erfordern z. B. den Linktext nicht leeren, wenn der Link ist gerendert werden. Sie können auch überschreiben <see cref="M:System.Web.UI.Adapters.PageAdapter.RenderPostBackEvent(System.Web.UI.HtmlTextWriter,System.String,System.String,System.String,System.String,System.String,System.String)" /> Wenn beschränkt auf Ressourcen verhindern, einschließlich des Ansichtszustands als URL-Parameter. Die <see cref="M:System.Web.UI.Adapters.PageAdapter.RenderPostBackEvent(System.Web.UI.HtmlTextWriter,System.String,System.String,System.String,System.String,System.String,System.String)" /> Basismethode schreibt ein Attribut für nicht <paramref name="softkeyLabel" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderPostBackEvent">
+      <MemberSignature Language="C#" Value="protected void RenderPostBackEvent (System.Web.UI.HtmlTextWriter writer, string target, string argument, string softkeyLabel, string text, string postUrl, string accessKey, bool encode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RenderPostBackEvent(class System.Web.UI.HtmlTextWriter writer, string target, string argument, string softkeyLabel, string text, string postUrl, string accessKey, bool encode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Adapters.PageAdapter.RenderPostBackEvent(System.Web.UI.HtmlTextWriter,System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+        <Parameter Name="target" Type="System.String" />
+        <Parameter Name="argument" Type="System.String" />
+        <Parameter Name="softkeyLabel" Type="System.String" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="postUrl" Type="System.String" />
+        <Parameter Name="accessKey" Type="System.String" />
+        <Parameter Name="encode" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.Web.UI.HtmlTextWriter" /> enthält Methoden, um die Ausgabe zielspezifische zu rendern.</param>
+        <param name="target">Die <see cref="T:System.String" /> -Wert mit dem Zielnamen Postbackereignis.</param>
+        <param name="argument">Die <see cref="T:System.String" /> -Wert, der an das postback Ziel-Ereignis zu übergebende Argument.</param>
+        <param name="softkeyLabel">Die <see cref="T:System.String" /> Wert, der als Beschriftung einer Bildschirmtaste verwendet.</param>
+        <param name="text">Die <see cref="T:System.String" /> Wert des Texts als Link angezeigt.</param>
+        <param name="postUrl">Die <see cref="T:System.String" /> -Wert, der URL-Zielseite des Postbacks.</param>
+        <param name="accessKey">Die <see cref="T:System.String" /> zuzuweisende Wert der <see langword="accessKey" /> Attribut des erstellten Links.</param>
+        <param name="encode">
+          <see langword="true" />mit <c> &amp;Amp;</c> als die Trennzeichen für den URL-Parameter; <see langword="false" /> verwenden <c> &amp; </c>.</param>
+        <summary>Rendert ein Postbackereignis, das in den Antwortstream als Hyperlink, einschließlich des codierten Ansichtszustands, ein Ereignisziel Argument, ein Parameter von vorherige Seite und eine Zugriffstaste.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Adapters.PageAdapter.RenderPostBackEvent%2A> Methode schreibt ein Postbackereignis, das als scriptless Link, der möglicherweise aufgeteilte einschließlich <xref:System.Web.HttpUtility.UrlEncode%2A> den Ansichtszustand, `__EVENTTARGET=target`, `__EVENTARGUMENT=argument`, `__PREVIOUSPAGE=currentFilePath` Parameter, und ein `accessKey="accessKey"` Attribut.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Erben von der <see cref="T:System.Web.UI.Adapters.PageAdapter" /> -Klasse, die Sie überschreiben die <see cref="M:System.Web.UI.Adapters.PageAdapter.RenderPostBackEvent(System.Web.UI.HtmlTextWriter,System.String,System.String,System.String,System.String,System.String,System.String)" /> Methode, wenn ein anderes Format für den Hyperlink Postbackereignis erforderlich ist, oder der Browser andere besondere Anforderungen gelten. Von einigen Browsern erfordern z. B. den Linktext nicht leeren, wenn der Link ist gerendert werden. Sie können auch überschreiben <see cref="M:System.Web.UI.Adapters.PageAdapter.RenderPostBackEvent(System.Web.UI.HtmlTextWriter,System.String,System.String,System.String,System.String,System.String,System.String)" /> wenn aufgrund der begrenzte Ressourcen einschließlich Ansichtszustand als URL-Parameter. Die <see cref="M:System.Web.UI.Adapters.PageAdapter.RenderPostBackEvent(System.Web.UI.HtmlTextWriter,System.String,System.String,System.String,System.String,System.String,System.String)" /> Basismethode schreibt ein Attribut für nicht <paramref name="softkeyLabel" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformText">
+      <MemberSignature Language="C#" Value="public virtual string TransformText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string TransformText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Adapters.PageAdapter.TransformText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Ein <see cref="T:System.String" /> also den Text zu transformieren.</param>
+        <summary>Transformiert Text für den Zielbrowser.</summary>
+        <returns>Ein <see cref="T:System.String" /> , die den umzuwandelnden Text enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Adapters.PageAdapter.TransformText%2A> Methode kann verwendet werden, z. B. Tabstopps transformieren (`\t`) in Zeilenumbrüche (`\n`).  
+  
+ Die <xref:System.Web.UI.Adapters.PageAdapter.TransformText%2A> Basis-Methode gibt `text` unverändert.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Erben von der <see cref="T:System.Web.UI.Adapters.PageAdapter" /> -Klasse, die Sie überschreiben <see cref="M:System.Web.UI.Adapters.PageAdapter.TransformText(System.String)" /> , wenn ein bestimmtes Markup ein mit einer anderen Form von standard-HTML-Konstrukt verfügt. Angenommen, ein Browser erfordert einen anderen Bezeichner für ein Tag als in HTML verwendeten <see cref="M:System.Web.UI.Adapters.PageAdapter.TransformText(System.String)" /> Methode kann überschrieben werden, um das Tag suchen und zu ändern.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

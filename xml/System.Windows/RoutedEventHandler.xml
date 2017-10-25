@@ -1,0 +1,40 @@
+<Type Name="RoutedEventHandler" FullName="System.Windows.RoutedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void RoutedEventHandler(object sender, RoutedEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RoutedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.RoutedEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.RoutedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Das Objekt, an das der Ereignishandler angefügt ist.</param>
+    <param name="e">Die Ereignisdaten.</param>
+    <summary>Stellt die Methode dar, die verschiedene Routingereignisse verarbeitet, die keine speziellen Daten über die Daten hinaus haben, die es für alle Routingereignisse gibt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.RoutedEventHandler> Delegat wird für alle Routingereignisse, die keine ereignisspezifische Informationen in den Ereignisdaten verwendet. Es gibt viele solcher Routingereignisse; deutliche zählen <xref:System.Windows.Controls.Primitives.ButtonBase.Click> und <xref:System.Windows.FrameworkElement.Loaded>.  
+  
+ Besonders erwähnenswert unterscheiden sich schreiben einen Handler für ein Routingereignis im Gegensatz zu einer allgemeinen [!INCLUDE[TLA#tla_clr](~/includes/tlasharptla-clr-md.md)] Ereignis handelt, das die `sender` des Ereignisses (das Element, in dem der Handler angefügt und aufgerufen wird) kann nicht unbedingt der Quelle werden berücksichtigt werden des Ereignisses. Die Quelle wird als Eigenschaft in den Ereignisdaten gemeldet (<xref:System.Windows.RoutedEventArgs.Source%2A>). Ein Unterschied zwischen `sender` und <xref:System.Windows.RoutedEventArgs.Source%2A> ist das Ergebnis des Ereignisses auf verschiedene Elemente, während das Durchlaufen des Routingereignisses durch eine Elementstruktur geleitet wird.  
+  
+ Verwenden Sie entweder `sender` oder <xref:System.Windows.RoutedEventArgs.Source%2A> für ein Objekt Verweis, wenn Sie nicht absichtlich das Routingverhalten eines direkten oder bubbling Routingereignisses interessiert sind und Sie behandeln möchten weitergeleitete Ereignisse auf die Elemente, in denen sie zuerst ausgelöst. Unter diesen Umständen `sender` und <xref:System.Windows.RoutedEventArgs.Source%2A> das gleiche Objekt.  
+  
+ Wenn Sie beabsichtigen, nutzen die inhärenten Funktionen der Routingereignisse und entsprechend Ihrer Handler schreiben, sind die beiden wichtigsten Eigenschaften der Ereignisdaten, die Sie beim Schreiben von Ereignishandlern mit funktionieren <xref:System.Windows.RoutedEventArgs.Source%2A> und <xref:System.Windows.RoutedEventArgs.Handled%2A>.  
+  
+ Bei bestimmten Kombinationen von Eingabeereignissen und [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Steuerelementklassen, die das Element, das das Ereignis auslöst, ist nicht das erste Element, das die Gelegenheit hat, die er behandeln. Verfügt das Eingabeereignis eine Vorschauversion des Ereignisses, klicken Sie dann den Stamm der Elementstruktur erste Gelegenheit hat, können <xref:System.Windows.RoutedEventArgs.Handled%2A> auf `true` in den freigegebenen Ereignisdaten und können beeinflussen, wie das Eingabeereignis verbleibenden Elementen in seiner Ereignisroute gemeldet wird. Die Preview-Version, die Behandlungsverhalten den Anschein zu kann, die ein bestimmtes Routingereignis nicht wie erwartet ausgelöst. Weitere Informationen finden Sie unter [Vorschauereignisse](~/docs/framework/wpf/advanced/preview-events.md) und [Input Overview](~/docs/framework/wpf/advanced/input-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

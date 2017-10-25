@@ -1,0 +1,68 @@
+<Type Name="ToolBarAppearance" FullName="System.Windows.Forms.ToolBarAppearance">
+  <TypeSignature Language="C#" Value="public enum ToolBarAppearance" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ToolBarAppearance extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolBarAppearance" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Typ der Symbolleiste angezeigt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird von Elementen verwendet, z. B. <xref:System.Windows.Forms.ToolBar.Appearance%2A?displayProperty=nameWithType>.  
+  
+ Legen Sie die <xref:System.Windows.Forms.ToolBar.Appearance%2A> Eigenschaft von der Symbolleiste, um `ToolBarAppearance.Flat` auf der Symbolleiste und der zugehörigen Schaltflächen Flatfile Stil. Wie die Maus bewegt sich über die Schaltflächen, die ihre Darstellung Änderungen an dreidimensionalen Zeiger. Schaltfläche Trennzeichen werden als Zeilen anstelle von Leerzeichen zwischen den Schaltflächen, wenn die Symbolleiste flach dargestellt wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Forms.ToolBar> -Steuerelement, einige allgemeine Eigenschaften festlegt und fügt es einer <xref:System.Windows.Forms.Form>. Delegaten werden ebenfalls hinzugefügt, um die <xref:System.Windows.Forms.ToolBar.ButtonClick> und <xref:System.Windows.Forms.ToolBar.ButtonDropDown> Ereignisse. In diesem Beispiel geht davon aus einem <xref:System.Windows.Forms.ToolBar> mit dem Namen `toolBar1` und ein <xref:System.Windows.Forms.ImageList> mit dem Namen `imageList1` deklariert wurden.  
+  
+ [!code-cpp[ToolBar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ToolBar/CPP/mytoolbar.cpp#1)]
+ [!code-csharp[ToolBar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolBar/CS/mytoolbar.cs#1)]
+ [!code-vb[ToolBar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolBar/VB/mytoolbar.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Flat">
+      <MemberSignature Language="C#" Value="Flat" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolBarAppearance Flat = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolBarAppearance.Flat" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolBarAppearance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Symbolleiste und Schaltflächen flach dargestellt, aber die Schaltflächen zu dreidimensionalen ändern Sie der Mauszeiger darüber bewegt wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolBarAppearance Normal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolBarAppearance.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolBarAppearance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Symbolleiste und Schaltflächen, die als standard dreidimensionalen Steuerelemente angezeigt werden.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

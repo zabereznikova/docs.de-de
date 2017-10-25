@@ -1,0 +1,6 @@
+<Namespace Name="System.Text.Encodings.Web">
+  <Docs>
+    <summary>Die <see cref="N:System.Text.Encodings.Web" /> -Namespace enthält eine Basisklasse, die einen Web-Encoder darstellen; Unterklassen, die darstellen, HTML, JavaScript und Url Zeichen Codierung; und eine Klasse, die einen Filter für das Zulassen nur bestimmte Zeichen, Zeichenbereiche darstellt, oder in code verweist auf codiert werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

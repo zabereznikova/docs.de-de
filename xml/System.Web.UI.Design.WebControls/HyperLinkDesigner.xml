@@ -1,0 +1,140 @@
+<Type Name="HyperLinkDesigner" FullName="System.Web.UI.Design.WebControls.HyperLinkDesigner">
+  <TypeSignature Language="C#" Value="public class HyperLinkDesigner : System.Web.UI.Design.TextControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HyperLinkDesigner extends System.Web.UI.Design.TextControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.HyperLinkDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.TextControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.UI.Design.SupportsPreviewControl(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Entwurfszeitunterstützung in einem visuellen Designer für das <see cref="T:System.Web.UI.WebControls.HyperLink" />-Webserversteuerelement bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.HyperLink> Steuerelement erstellt einen Link für den Clientbrowser zu einer anderen Webseite navigieren.  
+  
+ In einem visuellen Designer beim Wechsel aus Quelle zur Entwurfsansicht Markup-Quellcode, beschreibt eine <xref:System.Web.UI.WebControls.HyperLink> Steuerelement wird analysiert und eine Entwurfszeitversion des Steuerelements wird erstellt, auf der Entwurfsoberfläche angezeigt. Wenn Sie zurück zur Quellansicht wechseln, wird das Steuerelement zur Entwurfszeit auf den Markupquellcode beibehalten und in das Markup für die Webseite bearbeitet. Die <xref:System.Web.UI.Design.WebControls.HyperLinkDesigner> -Klasse bietet zur Entwurfszeit Unterstützung für die <xref:System.Web.UI.WebControls.HyperLink> Steuerelement.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.HyperLinkDesigner.GetDesignTimeHtml%2A> -Methode gibt das Markup ab, das Rendering des zugeordneten <xref:System.Web.UI.WebControls.HyperLink> -Steuerelements zur Entwurfszeit. Die <xref:System.Web.UI.Design.WebControls.HyperLinkDesigner.OnComponentChanged%2A> Methode wird aufgerufen, wenn das zugeordnete Steuerelement geändert wird.  
+  
+   
+  
+## Examples  
+ Dieser Abschnitt enthält zwei Codebeispiele. Die erste Vorlage veranschaulicht das Ableiten einer Klasse von der <xref:System.Web.UI.Design.WebControls.HyperLinkDesigner> -Klasse eine Methode überschreiben und geben Sie den Eigenschaftswert. Im zweiten Beispiel wird veranschaulicht, wie zum Ableiten eines Steuerelements aus der <xref:System.Web.UI.WebControls.HyperLink> steuern, und wenden Sie ein Attribut auf das abgeleitete Steuerelement.  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Ableiten einer `CustomHyperLinkDesigner` -Klasse aus den <xref:System.Web.UI.Design.WebControls.HyperLinkDesigner> Klasse. Es überschreibt die <xref:System.Web.UI.Design.WebControls.HyperLinkDesigner.GetDesignTimeHtml%2A> aufzurufende Methode geben Sie einen Standardwert für die <xref:System.Web.UI.WebControls.HyperLink.Text%2A> Eigenschaft, wenn der ursprüngliche Wert der <xref:System.Web.UI.WebControls.HyperLink.Text%2A> ist eine leere Zeichenfolge (""). Dadurch wird sichergestellt, dass das zugeordnete Steuerelement zur Entwurfszeit angezeigt werden.  
+  
+ [!code-csharp[HyperLinkDesigner_Resubmit#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HyperLinkDesigner_Resubmit/CS/CustomHyperLinkDesigner.cs#1)]
+ [!code-vb[HyperLinkDesigner_Resubmit#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HyperLinkDesigner_Resubmit/VB/customhyperlinkdesigner.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Ableiten der `CustomHyperLink` -Steuerelement aus der <xref:System.Web.UI.WebControls.HyperLink> steuern und wenden Sie eine <xref:System.ComponentModel.DesignerAttribute> -Attribut auf die `CustomHyperLink` Steuerelement zuordnen der `CustomHyperLinkDesigner`.  
+  
+ [!code-csharp[HyperLinkDesigner_Resubmit#3](~/samples/snippets/csharp/VS_Snippets_WebNet/HyperLinkDesigner_Resubmit/CS/CustomHyperLink.cs#3)]
+ [!code-vb[HyperLinkDesigner_Resubmit#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HyperLinkDesigner_Resubmit/VB/customhyperlink.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HyperLinkDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.HyperLinkDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.WebControls.HyperLinkDesigner" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ .NET Framework erstellt intern eine neue Instanz der der <xref:System.Web.UI.Design.WebControls.HyperLinkDesigner> Klasse bei der Erstellung der zugeordneten <xref:System.Web.UI.WebControls.HyperLink> Steuerelement oder eine Kopie der <xref:System.Web.UI.WebControls.HyperLink> Steuerelement auf der Entwurfsoberfläche angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.HyperLinkDesigner.GetDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das Markup ab, das zum Rendern des zugeordneten Steuerelements zur Entwurfszeit verwendet wird.</summary>
+        <returns>Eine Zeichenfolge, enthält das Markup zum Rendern des zugeordneten Hyperlink-Steuerelements zur Entwurfszeit verwendet wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.HyperLinkDesigner.GetDesignTimeHtml%2A> Methode generiert Entwurfszeitmarkup für das zugeordnete <xref:System.Web.UI.WebControls.HyperLink> Steuerelement. Die Methode speichert zunächst lokale Kopien der <xref:System.Web.UI.WebControls.HyperLink.Text%2A>, <xref:System.Web.UI.WebControls.HyperLink.NavigateUrl%2A>, und <xref:System.Web.UI.WebControls.HyperLink.ImageUrl%2A> Eigenschaften als auch die <xref:System.Web.UI.Control.Controls%2A> untergeordnete Sammlung. Es stellt Standardwerte für diese Eigenschaften bereit, wenn die ursprünglichen Werte sind `null` oder leer sein. Die <xref:System.Web.UI.Design.WebControls.HyperLinkDesigner.GetDesignTimeHtml%2A> -Methode ruft dann die <xref:System.Web.UI.Design.TextControlDesigner.GetDesignTimeHtml%2A> Basis-Methode, um das Markup zu generieren und die Eigenschaften und die Auflistung der untergeordneten Steuerelemente auf ihre ursprünglichen Werte wiederhergestellt werden, falls erforderlich.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Ableiten der `CustomHyperLinkDesigner` -Klasse aus den <xref:System.Web.UI.Design.WebControls.HyperLinkDesigner> Klasse. Es überschreibt die <xref:System.Web.UI.Design.WebControls.HyperLinkDesigner.GetDesignTimeHtml%2A> aufzurufende Methode geben Sie einen Standardwert für die <xref:System.Web.UI.WebControls.HyperLink.Text%2A> Eigenschaft, wenn der ursprüngliche Wert <xref:System.Web.UI.WebControls.HyperLink.Text%2A> ist eine leere Zeichenfolge (""). Dadurch wird sichergestellt, dass das zugeordnete Steuerelement zur Entwurfszeit angezeigt werden.  
+  
+ Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.Design.WebControls.HyperLinkDesigner> Klasse.  
+  
+ [!code-csharp[HyperLinkDesigner_Resubmit#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HyperLinkDesigner_Resubmit/CS/CustomHyperLinkDesigner.cs#1)]
+ [!code-vb[HyperLinkDesigner_Resubmit#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HyperLinkDesigner_Resubmit/VB/customhyperlinkdesigner.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnComponentChanged">
+      <MemberSignature Language="C#" Value="public override void OnComponentChanged (object sender, System.ComponentModel.Design.ComponentChangedEventArgs ce);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnComponentChanged(object sender, class System.ComponentModel.Design.ComponentChangedEventArgs ce) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.HyperLinkDesigner.OnComponentChanged(System.Object,System.ComponentModel.Design.ComponentChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="ce" Type="System.ComponentModel.Design.ComponentChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Das Objekt, das die Quelle des Ereignisses ist.</param>
+        <param name="ce">Ein <see cref="T:System.ComponentModel.Design.ComponentChangedEventArgs" />-Objekt, das die Ereignisdaten enthält.</param>
+        <summary>Wird aufgerufen, wenn das zugeordnete Steuerelement geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.HyperLinkDesigner.OnComponentChanged%2A> Methode wird aufgerufen, wenn die <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanged> -Ereignis für die zugeordnete <xref:System.Web.UI.WebControls.HyperLink> Steuerelement ausgelöst wird. Dies ist normalerweise als Reaktion auf die Änderung einer Eigenschaft des Steuerelements (z. B. eine **Eigenschaften** Raster ändern).  
+  
+ Die <xref:System.Web.UI.Design.WebControls.HyperLinkDesigner.OnComponentChanged%2A> erstellt eine <xref:System.ComponentModel.Design.ComponentChangedEventArgs> -Objekt, und ruft dann die <xref:System.Web.UI.Design.ControlDesigner.OnComponentChanged%2A> -Basismethode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

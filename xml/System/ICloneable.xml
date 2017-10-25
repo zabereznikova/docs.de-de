@@ -1,0 +1,79 @@
+<Type Name="ICloneable" FullName="System.ICloneable">
+  <TypeSignature Language="C#" Value="public interface ICloneable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICloneable" />
+  <TypeSignature Language="DocId" Value="T:System.ICloneable" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Unterstützt das Klonen, bei dem eine neue Instanz einer Klasse mit den gleichen Wert wie eine vorhandene Instanz erstellt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ICloneable> Schnittstelle können Sie eine benutzerdefinierte Implementierung bereitstellen, die eine Kopie eines vorhandenen Objekts erstellt. Die <xref:System.ICloneable> Schnittstelle enthält ein Element, das <xref:System.ICloneable.Clone%2A> -Methode, die dient darüber hinaus vom Klonvorgang unterstützen <xref:System.Object.MemberwiseClone%2A?displayProperty=nameWithType>.  Weitere Informationen zum Klonen, Tiefen und flachen Kopien und Beispiele finden Sie unter der <xref:System.Object.MemberwiseClone%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Die <see cref="T:System.ICloneable" /> Schnittstelle erfordert lediglich, dass Ihre Implementierung von der <see cref="M:System.ICloneable.Clone" /> Methode zurückgeben, eine Kopie der aktuellen Objektinstanz. Es gibt nicht an, ob der Klonvorgang eine tiefe Kopie eine flache Kopie oder etwas dazwischen ausführt. Noch erfordert sie alle Eigenschaftswerte, die der ursprünglichen Instanz zur neuen Instanz kopiert werden soll. Z. B. die <see cref="M:System.Globalization.NumberFormatInfo.Clone" /> Methode führt eine flache Kopie aller Eigenschaften mit Ausnahme der <see cref="P:System.Globalization.NumberFormatInfo.IsReadOnly" /> Eigenschaft; es wird immer diesen Eigenschaftswert auf <see langword="false" /> in das geklonte Objekt. Da der Aufrufer <see cref="M:System.ICloneable.Clone" /> kann nicht, hängt davon ab, die Methode, die eine vorhersagbare Ausführen des klonprozesses, es wird empfohlen, die <see cref="T:System.ICloneable" /> in öffentlichen APIs nicht implementiert werden.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ICloneable.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues Objekt, das eine Kopie der aktuellen Instanz darstellt.</summary>
+        <returns>Ein neues Objekt, das eine Kopie dieser Instanz ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der resultierende Klon muss den gleichen Typ aufweisen, oder mit der ursprünglichen Instanz kompatibel sein.  
+  
+ Eine Implementierung von <xref:System.ICloneable.Clone%2A> können entweder eine tiefe Kopie oder eine flache Kopie ausführen. Bei einer tiefen Kopie werden alle Objekte dupliziert. Klicken Sie in eine flache Kopie werden nur die Objekte der obersten Ebene dupliziert, und die niedrigeren Ebenen Verweise enthalten. Da der Aufrufer <xref:System.ICloneable.Clone%2A> kann nicht, hängt davon ab, die Methode, die eine vorhersagbare Ausführen des klonprozesses, es wird empfohlen, die <xref:System.ICloneable> in öffentlichen APIs nicht implementiert werden.  
+  
+ Finden Sie unter <xref:System.Object.MemberwiseClone%2A?displayProperty=nameWithType> Weitere Informationen zum Klonen, Tiefen und flachen Kopien und Beispiele.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

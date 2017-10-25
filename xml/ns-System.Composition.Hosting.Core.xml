@@ -1,0 +1,6 @@
+<Namespace Name="System.Composition.Hosting.Core">
+  <Docs>
+    <summary>Die <see cref="N:System.Composition.Hosting.Core" /> -Namespace enthält Klassen, die Kernfunktionalität des Kompositionsmoduls, einschließlich Komposition Vorgänge, Verträge, Teil Abhängigkeiten, Export Beschreibungen und den Kontext der Lebensdauer eines gemeinsamen Teils, der steuert, wie möglich darstellen werden Sie verworfen.</summary>
+    <remarks></remarks>
+  </Docs>
+</Namespace>

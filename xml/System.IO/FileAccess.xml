@@ -1,0 +1,144 @@
+<Type Name="FileAccess" FullName="System.IO.FileAccess">
+  <TypeSignature Language="C#" Value="public enum FileAccess" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed FileAccess extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.IO.FileAccess" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.FileSystem.Primitives</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert Konstanten für den Lese-, Schreib- oder Lese-/Schreibzugriff auf eine Datei.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Beispiel für eine Datei erstellen und Schreiben von Text in eine Datei, finden Sie unter [wie: Schreiben von Text in eine Datei](~/docs/standard/io/how-to-write-text-to-a-file.md). Ein Beispiel Lesen von Text aus einer Datei finden Sie unter [wie: Lesen von Text aus einer Datei](~/docs/standard/io/how-to-read-text-from-a-file.md). Ein Beispiel für das Lesen und Schreiben in eine Binärdatei, finden Sie unter [wie: Lesen und Schreiben in einer neu erstellten Datendatei](~/docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md).  
+  
+ Ein `FileAccess` Parameter wird angegeben, in vielen der Konstruktoren für <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.FileStream>, und andere Konstruktoren, wo es wichtig ist, steuern die Art des Benutzerzugriffs, auf eine Datei.  
+  
+   
+  
+## Examples  
+ Die folgenden `FileStream` Konstruktor gewährt schreibgeschützten Zugriff auf eine vorhandene Datei (`FileAccess.Read`).  
+  
+ [!code-cpp[Classic FileAccess Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileAccess Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FileAccess Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileAccess Example/CS/source.cs#1)]
+ [!code-vb[Classic FileAccess Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileAccess Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="Read" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileAccess Read = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileAccess.Read" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Lesezugriff auf die Datei. Daten können aus der Datei gelesen werden. Kombinieren mit <see langword="Write" /> für Lese-/Schreibzugriff.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadWrite">
+      <MemberSignature Language="C#" Value="ReadWrite" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileAccess ReadWrite = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileAccess.ReadWrite" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Lese- und Schreibzugriff auf die Datei. Daten können geschrieben und aus der Datei gelesen werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="Write" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileAccess Write = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileAccess.Write" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Schreibzugriff auf die Datei. In der Datei können Daten geschrieben werden. Kombinieren mit <see langword="Read" /> für Lese-/Schreibzugriff.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

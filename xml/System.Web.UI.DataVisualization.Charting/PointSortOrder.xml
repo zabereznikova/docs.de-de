@@ -1,0 +1,57 @@
+<Type Name="PointSortOrder" FullName="System.Web.UI.DataVisualization.Charting.PointSortOrder">
+  <TypeSignature Language="C#" Value="public enum PointSortOrder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PointSortOrder extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.PointSortOrder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, ob die Sortierreihenfolge für Datenpunktwerte aufsteigend oder absteigend ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataVisualization.Charting.PointSortOrder> Enumeration stellt die Reihenfolge für die Sortierung für Datenpunktwerte ausgeführt werden soll. Er wird verwendet, mit der `Sort` Methodendefinitionen im die <xref:System.Web.UI.DataVisualization.Charting.DataManipulator> Klasse, die implizit enthalten eine `pointSortOrder` Parameter.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Ascending">
+      <MemberSignature Language="C#" Value="Ascending" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.PointSortOrder Ascending = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.PointSortOrder.Ascending" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.PointSortOrder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Aufsteigend sortieren, d. h., kleinsten zum größten Wert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Descending">
+      <MemberSignature Language="C#" Value="Descending" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.PointSortOrder Descending = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.PointSortOrder.Descending" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.PointSortOrder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Absteigende Sortierreihenfolge, d. h. größten zum kleinsten Wert.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

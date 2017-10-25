@@ -1,0 +1,13 @@
+<Namespace Name="Microsoft.VisualBasic">
+  <Docs>
+    <summary>Die <see cref="N:Microsoft.VisualBasic" /> -Namespace enthält Typen, die Visual Basic-Laufzeit in Visual Basic unterstützen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen über die Sprachelemente in der [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] -Runtime finden Sie unter [Sprachreferenz zu Visual Basic](http://msdn.microsoft.com/library/5c6bd31a-9542-4f3e-bfd5-e951af58f0f2).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

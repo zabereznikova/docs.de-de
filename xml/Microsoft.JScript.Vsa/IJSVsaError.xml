@@ -1,0 +1,192 @@
+<Type Name="IJSVsaError" FullName="Microsoft.JScript.Vsa.IJSVsaError">
+  <TypeSignature Language="C#" Value="public interface IJSVsaError" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IJSVsaError" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.Vsa.IJSVsaError" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Use of this type is not recommended because it is being deprecated in Visual Studio 2005; there will be no replacement for this feature. Please see the ICodeCompiler documentation for additional help.")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("425EA439-6417-4F3E-BCC9-1AFAC79E3F66")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bietet Zugriff auf während der Ausführung aufgetretene Kompilierungsfehler.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaError.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine kurze Beschreibung des Fehlers ab. In einigen Fällen wird ein Verweis auf das Token im Quellcode zurückgegeben, das den Fehler verursacht.</summary>
+        <value>Gibt eine Zeichenfolgenliteral-Beschreibung des Fehlers zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndColumn">
+      <MemberSignature Language="C#" Value="public int EndColumn { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EndColumn" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaError.EndColumn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Nummer der letzten Spalte im Quelltext ab, die den Fehler verursacht hat, sofern verfügbar.</summary>
+        <value>Gibt die Nummer der letzten Spalte im Quelltext zurück, die den Fehler verursacht hat, sofern verfügbar.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Line">
+      <MemberSignature Language="C#" Value="public int Line { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Line" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaError.Line" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Nummer der Zeile ab, in der ein Fehler auftritt.</summary>
+        <value>Gibt die Nummer der Zeile zurück, in der der Fehler aufgetreten ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineText">
+      <MemberSignature Language="C#" Value="public string LineText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LineText" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaError.LineText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Text in der Zeile im Quellcode ab, die den Fehler verursacht hat.</summary>
+        <value>Gibt den Quellcode aus der Zeile, die den Fehler verursacht hat, als Zeichenfolgenliteral zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Number">
+      <MemberSignature Language="C#" Value="public int Number { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Number" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaError.Number" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zahl ab, die den Fehler eindeutig identifiziert.</summary>
+        <value>Gibt die Zahl zurück, die den Fehler eindeutig identifiziert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Severity">
+      <MemberSignature Language="C#" Value="public int Severity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Severity" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaError.Severity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Legt den Schweregrad des Fehlers fest.</summary>
+        <value>Gibt eine Ganzzahl (0-4) zurück, die den Schweregrad des Fehlers darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceItem">
+      <MemberSignature Language="C#" Value="public Microsoft.JScript.Vsa.IJSVsaItem SourceItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.JScript.Vsa.IJSVsaItem SourceItem" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaError.SourceItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.IJSVsaItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf die [IVsaItem](http://msdn.microsoft.com/library/microsoft.vsa.ivsaitem.aspx) -Objekt, das den Fehler generiert hat.</summary>
+        <value>Gibt einen Verweis auf das Objekt zurück, das den Fehler verursacht hat.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceMoniker">
+      <MemberSignature Language="C#" Value="public string SourceMoniker { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SourceMoniker" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaError.SourceMoniker" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den vollqualifizierten Namen des Quellelements ab, das den Fehler enthält, in einem Format, das vom Skriptmodul verarbeitet werden kann.</summary>
+        <value>Gibt den vollqualifizierten Namen des Quellelements zurück, das den Fehler enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartColumn">
+      <MemberSignature Language="C#" Value="public int StartColumn { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StartColumn" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaError.StartColumn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Nummer der ersten Spalte im Quelltext ab, die den Fehler verursacht hat, sofern verfügbar.</summary>
+        <value>Gibt die Nummer der ersten Spalte im Quelltext zurück, die den Fehler verursacht hat, sofern verfügbar.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

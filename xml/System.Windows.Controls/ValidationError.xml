@@ -1,0 +1,178 @@
+<Type Name="ValidationError" FullName="System.Windows.Controls.ValidationError">
+  <TypeSignature Language="C#" Value="public class ValidationError" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ValidationError extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.ValidationError" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Validierungsfehler, die entweder vom Bindungsmodul erstellt wird engine bei einer <see cref="T:System.Windows.Controls.ValidationRule" /> einen Validierungsfehler meldet, oder über die <see cref="M:System.Windows.Controls.Validation.MarkInvalid(System.Windows.Data.BindingExpressionBase,System.Windows.Controls.ValidationError)" /> Methode explizit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Datenbindungsmodell ermöglicht es Ihnen, Zuordnen von Validierungsregeln, die mit Ihrem <xref:System.Windows.Data.Binding> Objekt. Die Überprüfung erfolgt beim Ziel Quellwert übertragen, bevor der Konverter aufgerufen wird. Nachfolgend wird beschrieben, den Überprüfungsprozess.  
+  
+1.  Wenn ein Wert aus der Zieleigenschaft an die Quelleigenschaft übertragen, entfernt das Datenbindungsmodul zuerst alle <xref:System.Windows.Controls.ValidationError> , möglicherweise wurde die <xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType> -Eigenschaft des gebundenen Elements. Anschließend überprüft, ob benutzerdefinierte Validierungsregeln für diese definiert sind <xref:System.Windows.Data.Binding>, in diesem Fall ruft der <xref:System.Windows.Controls.ValidationRule.Validate%2A> -Methode für jedes <xref:System.Windows.Controls.ValidationRule> bis eine von Ihnen ein Fehler auftritt oder bis sie alle zu übergeben.  
+  
+2.  Sobald es eine benutzerdefinierte Regel, die nicht erfolgreich ausgeführt wird ist, erstellt das Bindungsmodul einen <xref:System.Windows.Controls.ValidationError> -Objekt und fügt es der <xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType> Auflistung von das gebundene Element. Wenn <xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType> ist nicht leer ist, die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> auf gesetzte angehängte Eigenschaft des Elements `true`. Auch wenn die <xref:System.Windows.Data.Binding.NotifyOnValidationError%2A> Eigenschaft von der <xref:System.Windows.Data.Binding> auf festgelegt ist `true`, löst das Bindungsmodul die <xref:System.Windows.Controls.Validation.Error?displayProperty=nameWithType> angefügtes Ereignis für das Element.  
+  
+3.  Wenn alle Regeln übergeben wird, ruft das Bindungsmodul den Konverter dann ggf. eine.  
+  
+4.  Wenn der Konverter erfolgreich ist, ruft das Bindungsmodul Setter-Methode der Source-Eigenschaft.  
+  
+5.  Wenn die Bindung verfügt über eine <xref:System.Windows.Controls.ExceptionValidationRule> zugeordnet und in Schritt 3 oder 4 ist eine Ausnahme ausgelöst, das Bindungsmodul überprüft wird, um festzustellen, ob ein <xref:System.Windows.Data.Binding.UpdateSourceExceptionFilter%2A>. Sie können die <xref:System.Windows.Data.Binding.UpdateSourceExceptionFilter%2A> Rückruf an einen benutzerdefinierten Handler zum Behandeln von Ausnahmen bereitstellen. Wenn ein <xref:System.Windows.Data.Binding.UpdateSourceExceptionFilter%2A> nicht angegeben wird, auf die <xref:System.Windows.Data.Binding>, erstellt das Bindungsmodul ein <xref:System.Windows.Controls.ValidationError> mit der Ausnahme und fügt es der <xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType> Auflistung von das gebundene Element.  
+  
+ Eine gültiger Wert Übertragung in beide Richtungen (Ziel zu Quelle oder die Quelle und Ziel) werden gelöscht, die die <xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType> -Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt das Auslösen einer Formatvorlage, die erstellt eine <xref:System.Windows.Controls.ToolTip> besagt, dass eine Validierungsfehlermeldung angezeigt. Die <xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType> angefügte Eigenschaft gibt eine Auflistung von <xref:System.Windows.Controls.ValidationError> Objekte für das gebundene Element.  
+  
+ [!code-xaml[DataBindingLab#14](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#14)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidationError (System.Windows.Controls.ValidationRule ruleInError, object bindingInError);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Controls.ValidationRule ruleInError, object bindingInError) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ValidationError.#ctor(System.Windows.Controls.ValidationRule,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ruleInError" Type="System.Windows.Controls.ValidationRule" />
+        <Parameter Name="bindingInError" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="ruleInError">Die Regel, die Validierungsfehler erkannt.</param>
+        <param name="bindingInError">Die <see cref="T:System.Windows.Data.BindingExpression" /> oder <see cref="T:System.Windows.Data.MultiBindingExpression" /> Objekt mit dem Validierungsfehler.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.ValidationError" />-Klasse mit den angegebenen Parametern.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidationError (System.Windows.Controls.ValidationRule ruleInError, object bindingInError, object errorContent, Exception exception);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Controls.ValidationRule ruleInError, object bindingInError, object errorContent, class System.Exception exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ValidationError.#ctor(System.Windows.Controls.ValidationRule,System.Object,System.Object,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ruleInError" Type="System.Windows.Controls.ValidationRule" />
+        <Parameter Name="bindingInError" Type="System.Object" />
+        <Parameter Name="errorContent" Type="System.Object" />
+        <Parameter Name="exception" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="ruleInError">Die Regel, die Validierungsfehler erkannt.</param>
+        <param name="bindingInError">Die <see cref="T:System.Windows.Data.BindingExpression" /> oder <see cref="T:System.Windows.Data.MultiBindingExpression" /> Objekt mit dem Validierungsfehler.</param>
+        <param name="errorContent">Informationen zum Fehler.</param>
+        <param name="exception">Die Ausnahme, die den Validierungsfehler verursacht hat. Dieser Parameter ist optional und kann festgelegt werden, um <see langword="null" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.ValidationError" />-Klasse mit den angegebenen Parametern.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingInError">
+      <MemberSignature Language="C#" Value="public object BindingInError { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object BindingInError" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ValidationError.BindingInError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Data.BindingExpression" /> oder <see cref="T:System.Windows.Data.MultiBindingExpression" /> -Objekt dieses <see cref="T:System.Windows.Controls.ValidationError" />. Das Objekt entweder als ungültig markiert explizit oder eine fehlerhafte Validierungsregel hat.</summary>
+        <value>Die <see cref="T:System.Windows.Data.BindingExpression" /> oder <see cref="T:System.Windows.Data.MultiBindingExpression" /> -Objekt dieses <see cref="T:System.Windows.Controls.ValidationError" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorContent">
+      <MemberSignature Language="C#" Value="public object ErrorContent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ErrorContent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ValidationError.ErrorContent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt ab oder legt dieses fest, das zusätzliche Kontextinformationen für diesen <see cref="T:System.Windows.Controls.ValidationError" /> bereitstellt, z. B. eine Zeichenfolge mit einer Beschreibung des Fehlers.</summary>
+        <value>Ein Objekt, das für diesen <see cref="T:System.Windows.Controls.ValidationError" /> zusätzliche Kontextinformationen bereitstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_ErrorContent"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Finden Sie im Beispielabschnitt ein Beispiel.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt das Auslösen einer Formatvorlage, die erstellt eine <xref:System.Windows.Controls.ToolTip> besagt, dass eine Validierungsfehlermeldung angezeigt. Die <xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType> angefügte Eigenschaft gibt eine Auflistung von <xref:System.Windows.Controls.ValidationError> Objekte für das gebundene Element.  
+  
+ [!code-xaml[DataBindingLab#14](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#14)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public Exception Exception { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Exception" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ValidationError.Exception" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <see cref="T:System.Exception" /> Objekt, das die Ursache dieses wurde <see cref="T:System.Windows.Controls.ValidationError" />, wenn der Fehler das Ergebnis einer Ausnahme ist.</summary>
+        <value>Die <see cref="T:System.Exception" /> Objekt, wenn der Fehler das Ergebnis einer Ausnahme ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RuleInError">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.ValidationRule RuleInError { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.ValidationRule RuleInError" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ValidationError.RuleInError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ValidationRule</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <see cref="T:System.Windows.Controls.ValidationRule" /> Objekt, das die Ursache dieses wurde <see cref="T:System.Windows.Controls.ValidationError" />, wenn der Fehler das Ergebnis einer Validierungsregel ist.</summary>
+        <value>Die <see cref="T:System.Windows.Controls.ValidationRule" /> Objekt, wenn der Fehler das Ergebnis einer Validierungsregel ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

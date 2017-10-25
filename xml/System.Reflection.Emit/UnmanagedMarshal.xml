@@ -1,0 +1,321 @@
+<Type Name="UnmanagedMarshal" FullName="System.Reflection.Emit.UnmanagedMarshal">
+  <TypeSignature Language="C#" Value="public sealed class UnmanagedMarshal" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit UnmanagedMarshal extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.Emit.UnmanagedMarshal" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("An alternate API is available: Emit the MarshalAs custom attribute instead.")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Klasse, die ein Feld aus Marshallen verwaltetem zu nicht verwaltetem Code beschreibt. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Codebeispiel wird veranschaulicht, die problemumgehung für diesen Typ veraltet.  
+  
+ Marshalling versteht man das Packen und Entpackens Parameter Remoteprozeduraufrufe können daher auftreten. Während des Marshallens kann ein Feld Format konvertiert werden, wenn das Format des verwalteten Typs aus dem Format des entsprechenden nicht verwalteten Typs unterscheidet. Angenommen, Sie möchten möglicherweise Marshallen eine `String` Typ als nicht verwalteter BSTR. Bei einigen Konvertierungen Format werden automatisch von der Laufzeit behandelt. Um das Standardverhalten zu überschreiben, müssen Sie verwenden die `UnmanagedMarshal` Klasse, um die Konvertierung zu definieren.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, Austausch-Code für die veraltete <xref:System.Reflection.Emit.UnmanagedMarshal> Typ. Das Beispiel gibt eine Assembly mit einem Modul mit dem Namen `EmitMarshalAs.dll`, mit einem Typ mit dem Namen `Sample`. Der Typ verfügt über eine Methode namens `Test`, mit einem Parameter vom Typ <xref:System.String>. Das Codebeispiel bezieht sich die <xref:System.Runtime.InteropServices.MarshalAsAttribute> mit <xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=nameWithType> an den Parameter.  
+  
+ Sie können die [Ildasm.exe (IL-Disassembler)](~/docs/framework/tools/ildasm-exe-il-disassembler.md) , prüfen die ausgegebene Assembly und beobachten Sie, dass der Parameter markiert wird `marshal(bstr)`.  
+  
+ [!code-cpp[UnmanagedMarshalObsolete#1](~/samples/snippets/cpp/VS_Snippets_CLR/UnmanagedMarshalObsolete/cpp/source.cpp#1)]
+ [!code-csharp[UnmanagedMarshalObsolete#1](~/samples/snippets/csharp/VS_Snippets_CLR/UnmanagedMarshalObsolete/cs/source.cs#1)]
+ [!code-vb[UnmanagedMarshalObsolete#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/UnmanagedMarshalObsolete/vb/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BaseType">
+      <MemberSignature Language="C#" Value="public System.Runtime.InteropServices.UnmanagedType BaseType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.InteropServices.UnmanagedType BaseType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.UnmanagedMarshal.BaseType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen nicht verwalteten Basistyp ab. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <value>Ein <see langword="UnmanagedType" />-Objekt.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Der nicht verwalteten Typ ist kein <see langword="LPArray" /> oder ein <see langword="SafeArray" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineByValArray">
+      <MemberSignature Language="C#" Value="public static System.Reflection.Emit.UnmanagedMarshal DefineByValArray (int elemCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Reflection.Emit.UnmanagedMarshal DefineByValArray(int32 elemCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.UnmanagedMarshal.DefineByValArray(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.UnmanagedMarshal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="elemCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="elemCount">Die Anzahl der Elemente im Array fester Länge.</param>
+        <summary>Gibt ein Array fester Länge (ByValArray) an, zu nicht verwaltetem Code gemarshallt werden soll.</summary>
+        <returns>Ein <see cref="T:System.Reflection.Emit.UnmanagedMarshal" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `DefineByValArray` Methode ist nicht mit einer einfachen native marshallen.  
+  
+ Nur nicht verwaltete Marshal-Konstrukte können mithilfe dieser statischen Konstruktoren vorgenommen werden.  
+  
+ Marshalling ein Array ist ein komplexer Prozess als Marshalling einen ganzzahligen Parameter an. Array-Elemente werden in einer bestimmten Reihenfolge kopiert, damit das Array von die anderen Seite genau rekonstruieren kann.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Das Argument ist keinen einfachen einheitlichen Typ.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineByValTStr">
+      <MemberSignature Language="C#" Value="public static System.Reflection.Emit.UnmanagedMarshal DefineByValTStr (int elemCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Reflection.Emit.UnmanagedMarshal DefineByValTStr(int32 elemCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.UnmanagedMarshal.DefineByValTStr(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.UnmanagedMarshal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="elemCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="elemCount">Die Anzahl der Elemente im Array fester Größe Puffer.</param>
+        <summary>Gibt eine Zeichenfolge in einem Array fester Größe-Puffer (ByValTStr), um zu nicht verwaltetem Code gemarshallt werden soll.</summary>
+        <returns>Ein <see cref="T:System.Reflection.Emit.UnmanagedMarshal" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `DefineByValStr` Methode ist nicht mit einer einfachen native marshallen.  
+  
+ Nur nicht verwaltete Marshal-Konstrukte können mithilfe dieser statischen Konstruktoren vorgenommen werden.  
+  
+ Marshalling ein Array ist ein komplexer Prozess als Marshalling einen ganzzahligen Parameter an. Array-Elemente werden in einer bestimmten Reihenfolge kopiert, damit das Array von die anderen Seite genau rekonstruieren kann.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Das Argument ist keinen einfachen einheitlichen Typ.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineLPArray">
+      <MemberSignature Language="C#" Value="public static System.Reflection.Emit.UnmanagedMarshal DefineLPArray (System.Runtime.InteropServices.UnmanagedType elemType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Reflection.Emit.UnmanagedMarshal DefineLPArray(valuetype System.Runtime.InteropServices.UnmanagedType elemType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.UnmanagedMarshal.DefineLPArray(System.Runtime.InteropServices.UnmanagedType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.UnmanagedMarshal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="elemType" Type="System.Runtime.InteropServices.UnmanagedType" />
+      </Parameters>
+      <Docs>
+        <param name="elemType">Der nicht verwalteten Typ, der für das Array zu marshallen.</param>
+        <summary>Gibt eine <see langword="LPArray" /> zu nicht verwaltetem Code gemarshallt. Die Länge einer <see langword="LPArray" /> wird zur Laufzeit durch die Größe des tatsächlichen gemarshallten Arrays bestimmt.</summary>
+        <returns>Ein <see cref="T:System.Reflection.Emit.UnmanagedMarshal" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `DefineLPArray` Methode ist nicht mit einer einfachen native marshallen.  
+  
+ Nur nicht verwaltete Marshal-Konstrukte können mithilfe dieser statischen Konstruktoren vorgenommen werden.  
+  
+ Marshalling ein Array ist ein komplexer Prozess als Marshalling einen ganzzahligen Parameter an. Array-Elemente werden in einer bestimmten Reihenfolge kopiert, damit das Array von die anderen Seite genau rekonstruieren kann.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Das Argument ist keinen einfachen einheitlichen Typ.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineSafeArray">
+      <MemberSignature Language="C#" Value="public static System.Reflection.Emit.UnmanagedMarshal DefineSafeArray (System.Runtime.InteropServices.UnmanagedType elemType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Reflection.Emit.UnmanagedMarshal DefineSafeArray(valuetype System.Runtime.InteropServices.UnmanagedType elemType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.UnmanagedMarshal.DefineSafeArray(System.Runtime.InteropServices.UnmanagedType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.UnmanagedMarshal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="elemType" Type="System.Runtime.InteropServices.UnmanagedType" />
+      </Parameters>
+      <Docs>
+        <param name="elemType">Der Basistyp oder die <see langword="UnmanagedType" /> jedes Element des Arrays.</param>
+        <summary>Gibt eine <see langword="SafeArray" /> zu nicht verwaltetem Code gemarshallt.</summary>
+        <returns>Ein <see cref="T:System.Reflection.Emit.UnmanagedMarshal" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `DefineSafeArray` Methode ist nicht mit einer einfachen native marshallen.  
+  
+ Nur nicht verwaltete Marshal-Konstrukte können mithilfe dieser statischen Konstruktoren vorgenommen werden.  
+  
+ Marshalling ein Array ist ein komplexer Prozess als Marshalling einen ganzzahligen Parameter an. Array-Elemente werden in einer bestimmten Reihenfolge kopiert, damit das Array von die anderen Seite genau rekonstruieren kann.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Das Argument ist keinen einfachen einheitlichen Typ.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineUnmanagedMarshal">
+      <MemberSignature Language="C#" Value="public static System.Reflection.Emit.UnmanagedMarshal DefineUnmanagedMarshal (System.Runtime.InteropServices.UnmanagedType unmanagedType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Reflection.Emit.UnmanagedMarshal DefineUnmanagedMarshal(valuetype System.Runtime.InteropServices.UnmanagedType unmanagedType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.UnmanagedMarshal.DefineUnmanagedMarshal(System.Runtime.InteropServices.UnmanagedType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.UnmanagedMarshal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="unmanagedType" Type="System.Runtime.InteropServices.UnmanagedType" />
+      </Parameters>
+      <Docs>
+        <param name="unmanagedType">Die nicht verwalteten Typ, der der Typ gemarshallt werden.</param>
+        <summary>Gibt einen angegebenen Typ, der von nicht verwaltetem Code gemarshallt werden.</summary>
+        <returns>Ein <see cref="T:System.Reflection.Emit.UnmanagedMarshal" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.InteropServices.UnmanagedType> übergeben an diese Methode muss ein einfacher systemeigener Typ sein. Dürfen keines der folgenden Werte verwendet werden: <xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=nameWithType>, <xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=nameWithType>, <xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=nameWithType>, <xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=nameWithType>, oder <xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=nameWithType>.  
+  
+ Nur nicht verwaltete Marshal-Konstrukte können mit dieser Methode vorgenommen werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Das Argument ist keinen einfachen einheitlichen Typ.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementCount">
+      <MemberSignature Language="C#" Value="public int ElementCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ElementCount" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.UnmanagedMarshal.ElementCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Nummer Element ab. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <value>Eine ganze Zahl, der angibt, die Anzahl der Elemente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist ein `ElementCount` nur dann, wenn eine `NativeTypeFixedArray`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Das Argument ist eine nicht verwaltete Elementanzahl.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUnmanagedType">
+      <MemberSignature Language="C#" Value="public System.Runtime.InteropServices.UnmanagedType GetUnmanagedType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.InteropServices.UnmanagedType GetUnmanagedType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.UnmanagedMarshal.GetUnmanagedType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen nicht verwalteten Typ an. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <value>Ein <see cref="T:System.Runtime.InteropServices.UnmanagedType" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `GetUnmanagedType` Eigenschaft ist eine Accessorfunktion für den systemeigenen Typ.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IIDGuid">
+      <MemberSignature Language="C#" Value="public Guid IIDGuid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid IIDGuid" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.UnmanagedMarshal.IIDGuid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine GUID ab. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <value>Ein <see cref="T:System.Guid" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt immer "GUID.Empty" zurück. Diese Eigenschaft kann in einer zukünftigen Version entfernt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Das Argument ist keinem benutzerdefinierten Marshaller.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

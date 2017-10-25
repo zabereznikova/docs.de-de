@@ -1,0 +1,357 @@
+<Type Name="SettingsProperty" FullName="System.Configuration.SettingsProperty">
+  <TypeSignature Language="C#" Value="public class SettingsProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SettingsProperty extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.SettingsProperty" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Wird intern verwendet, wie die Klasse, die Metadaten über eine einzelne Konfigurationseigenschaft darstellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Configuration.SettingsProperty>wird verwendet, um die Eigenschaften einer Klasse abgeleitet wird beschrieben, <xref:System.Configuration.SettingsBase>. Die Einstellungen-API ermöglicht eine Auflistung von Eigenschaften in einer common Language Runtime-Klasse gruppiert werden.  
+  
+ Beim beibehalten von Einstellungen, die <xref:System.Configuration.SettingsBase> Basisklasse für eine Auflistung von fordert <xref:System.Configuration.SettingsProperty> Objekte, die in eine Auflistung vom Typ gruppiert sind <xref:System.Configuration.SettingsPropertyCollection>. Dies geschieht durch Aufrufen der eigenen Eigenschaften-Element. Geerbte Klassen sollte es sich um eine Auflistung der zu speichernden Eigenschaften zurückgeben.  
+  
+ Jede <xref:System.Configuration.SettingsProperty> Objekt enthält Metadaten über die Eigenschaft, u. a. folgende:  
+  
+-   Name.  
+  
+-   Der Standardwert.  
+  
+-   Typ der Eigenschaft.  
+  
+-   Serialisierungsmethode.  
+  
+-   Für den permanenten Speicher zu verwendenden Anbieter an.  
+  
+-   Andere beliebige Attribute, die Kontext und anbieterspezifisch sind.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SettingsProperty (System.Configuration.SettingsProperty propertyToCopy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Configuration.SettingsProperty propertyToCopy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.SettingsProperty.#ctor(System.Configuration.SettingsProperty)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="propertyToCopy" Type="System.Configuration.SettingsProperty" />
+      </Parameters>
+      <Docs>
+        <param name="propertyToCopy">Gibt eine Kopie einer vorhandenen <see cref="T:System.Configuration.SettingsProperty" /> Objekt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Configuration.SettingsProperty" /> -Klasse auf Grundlage des angegebenen Parameters.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SettingsProperty (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.SettingsProperty.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Gibt den Namen eines vorhandenen <see cref="T:System.Configuration.SettingsProperty" /> Objekt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.SettingsProperty" />-Klasse. basierend auf den angegebenen Parameter.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SettingsProperty (string name, Type propertyType, System.Configuration.SettingsProvider provider, bool isReadOnly, object defaultValue, System.Configuration.SettingsSerializeAs serializeAs, System.Configuration.SettingsAttributeDictionary attributes, bool throwOnErrorDeserializing, bool throwOnErrorSerializing);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Type propertyType, class System.Configuration.SettingsProvider provider, bool isReadOnly, object defaultValue, valuetype System.Configuration.SettingsSerializeAs serializeAs, class System.Configuration.SettingsAttributeDictionary attributes, bool throwOnErrorDeserializing, bool throwOnErrorSerializing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.SettingsProperty.#ctor(System.String,System.Type,System.Configuration.SettingsProvider,System.Boolean,System.Object,System.Configuration.SettingsSerializeAs,System.Configuration.SettingsAttributeDictionary,System.Boolean,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="propertyType" Type="System.Type" />
+        <Parameter Name="provider" Type="System.Configuration.SettingsProvider" />
+        <Parameter Name="isReadOnly" Type="System.Boolean" />
+        <Parameter Name="defaultValue" Type="System.Object" />
+        <Parameter Name="serializeAs" Type="System.Configuration.SettingsSerializeAs" />
+        <Parameter Name="attributes" Type="System.Configuration.SettingsAttributeDictionary" />
+        <Parameter Name="throwOnErrorDeserializing" Type="System.Boolean" />
+        <Parameter Name="throwOnErrorSerializing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des <see cref="T:System.Configuration.SettingsProperty" />-Objekts.</param>
+        <param name="propertyType">Der Typ des <see cref="T:System.Configuration.SettingsProperty" /> Objekt.</param>
+        <param name="provider">Ein <see cref="T:System.Configuration.SettingsProvider" /> Objekt, das für den permanenten Speicher verwendet.</param>
+        <param name="isReadOnly">Ein <see cref="T:System.Boolean" /> Wert, der angibt, ob die <see cref="T:System.Configuration.SettingsProperty" /> Objekt ist schreibgeschützt.</param>
+        <param name="defaultValue">Der Standardwert der <see cref="T:System.Configuration.SettingsProperty" /> Objekt.</param>
+        <param name="serializeAs">Ein <see cref="T:System.Configuration.SettingsSerializeAs" />-Objekt. Dieses Objekt ist eine Enumeration, mit der Serialisierungsschema zum Speichern von Anwendungseinstellungen festgelegt.</param>
+        <param name="attributes">Ein <see cref="T:System.Configuration.SettingsAttributeDictionary" />-Objekt.</param>
+        <param name="throwOnErrorDeserializing">Ein boolescher Wert, der angibt, ob ein Fehler ausgelöst wird, wenn die Eigenschaft erfolglos deserialisiert wird.</param>
+        <param name="throwOnErrorSerializing">Ein boolescher Wert, der angibt, ob ein Fehler ausgelöst wird, wenn die Eigenschaft erfolglos serialisiert wird.</param>
+        <summary>Erstellt eine neue Instanz der dem <see cref="T:System.Configuration.SettingsProperty" /> -Klasse auf Grundlage der angegebenen Parameter.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public virtual System.Configuration.SettingsAttributeDictionary Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.SettingsAttributeDictionary Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsProperty.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SettingsAttributeDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Configuration.SettingsAttributeDictionary" /> Objekt, das die Attribute des enthält die <see cref="T:System.Configuration.SettingsProperty" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.Configuration.SettingsAttributeDictionary" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt eine Auflistung von Attributen, die zum Beschreiben einer <xref:System.Configuration.SettingsProperty> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultValue">
+      <MemberSignature Language="C#" Value="public virtual object DefaultValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DefaultValue" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsProperty.DefaultValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Standardwert der <see cref="T:System.Configuration.SettingsProperty" /> Objekt.</summary>
+        <value>Ein Objekt mit dem Standardwert der <see cref="T:System.Configuration.SettingsProperty" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public virtual bool IsReadOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsProperty.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob ein <see cref="T:System.Configuration.SettingsProperty" /> Objekt ist schreibgeschützt.</summary>
+        <value>
+          <see langword="true" />, wenn das <see cref="T:System.Configuration.SettingsProperty" /> schreibgeschützt ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardeinstellung ist `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public virtual string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsProperty.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der <see cref="T:System.Configuration.SettingsProperty" /> ab oder legt diesen fest.</summary>
+        <value>Der Name des <see cref="T:System.Configuration.SettingsProperty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.SettingsProperty.Name%2A> darf keine leere Zeichenfolge sein oder `null`. Wenn die <xref:System.Configuration.SettingsProperty> existiert nicht in der Datenanbieter keine zurückgegeben werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyType">
+      <MemberSignature Language="C#" Value="public virtual Type PropertyType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type PropertyType" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsProperty.PropertyType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ für die <see cref="T:System.Configuration.SettingsProperty" />.</summary>
+        <value>Der Typ des <see cref="T:System.Configuration.SettingsProperty" />-Elements.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Provider">
+      <MemberSignature Language="C#" Value="public virtual System.Configuration.SettingsProvider Provider { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.SettingsProvider Provider" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsProperty.Provider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SettingsProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt Sie den Anbieter für die <see cref="T:System.Configuration.SettingsProperty" />.</summary>
+        <value>Ein <see cref="T:System.Configuration.SettingsProvider" />-Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializeAs">
+      <MemberSignature Language="C#" Value="public virtual System.Configuration.SettingsSerializeAs SerializeAs { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Configuration.SettingsSerializeAs SerializeAs" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsProperty.SerializeAs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SettingsSerializeAs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine <see cref="T:System.Configuration.SettingsSerializeAs" /> -Objekt für die <see cref="T:System.Configuration.SettingsProperty" />.</summary>
+        <value>Ein <see cref="T:System.Configuration.SettingsSerializeAs" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.SettingsSerializeAs> Objekt ist eine Enumeration, die als das Serialisierungsschema verwendet, um die Anwendungseinstellungen zu speichern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThrowOnErrorDeserializing">
+      <MemberSignature Language="C#" Value="public bool ThrowOnErrorDeserializing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ThrowOnErrorDeserializing" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsProperty.ThrowOnErrorDeserializing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob ein Fehler ausgelöst wird, wenn die Eigenschaft erfolglos deserialisiert wird.</summary>
+        <value>
+          <see langword="true" />Wenn der Fehler ausgelöst wird, wenn die Eigenschaft nicht erfolgreich deserialisiert wird; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThrowOnErrorSerializing">
+      <MemberSignature Language="C#" Value="public bool ThrowOnErrorSerializing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ThrowOnErrorSerializing" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsProperty.ThrowOnErrorSerializing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob ein Fehler ausgelöst wird, wenn die Eigenschaft erfolglos serialisiert wird.</summary>
+        <value>
+          <see langword="true" />Wenn der Fehler ausgelöst wird, wenn die Eigenschaft erfolglos serialisiert wird; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

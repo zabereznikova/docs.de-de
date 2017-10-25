@@ -1,0 +1,113 @@
+<Type Name="IKeyboardInputSite" FullName="System.Windows.Interop.IKeyboardInputSite">
+  <TypeSignature Language="C#" Value="public interface IKeyboardInputSite" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IKeyboardInputSite" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Interop.IKeyboardInputSite" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Verwaltet den Tastaturfokus innerhalb des Containers.  Diese Schnittstelle implementiert, Verwaltung von Nachrichten in WPF-Win32-Interoperationsszenarios.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Container sollte eine eindeutige Instanz dieser Schnittstelle für jede der darin enthaltenen Komponenten bereitstellen.  
+  
+ Die <xref:System.Windows.Interop.IKeyboardInputSite> Schnittstelle und die <xref:System.Windows.Interop.IKeyboardInputSink> werden zusammen verwendet, um Unterstützung für Tastaturaktionen interoperation hinweg bereitzustellen. Eine Website (<xref:System.Windows.Interop.IKeyboardInputSite> Implementierung) stellt ein übergeordnetes Element einer Senke (<xref:System.Windows.Interop.IKeyboardInputSink>). Die Senke (<xref:System.Windows.Interop.IKeyboardInputSink>) implementiert den Großteil des Tastaturverhaltens. Jede Site muss auch Senke, bereitstellen, da die sitespezifische Senke, über eine Eigenschaft des zurückgegeben wird der <xref:System.Windows.Interop.IKeyboardInputSite> Schnittstelle.  
+  
+ Eine Erläuterung der input-Architektur speziell für implementiert [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] interoperation, finden Sie unter [Windows Forms- und WPF-Interoperabilität Eingabearchitektur](~/docs/framework/wpf/advanced/windows-forms-and-wpf-interoperability-input-architecture.md).  
+  
+ Weitere Informationen zu [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] - [!INCLUDE[TLA2#tla_win32](~/includes/tla2sharptla-win32-md.md)] Interoperationsszenarios, finden Sie unter [WPF und Win32 Interoperation](~/docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="OnNoMoreTabStops">
+      <MemberSignature Language="C#" Value="public bool OnNoMoreTabStops (System.Windows.Input.TraversalRequest request);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool OnNoMoreTabStops(class System.Windows.Input.TraversalRequest request) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.IKeyboardInputSite.OnNoMoreTabStops(System.Windows.Input.TraversalRequest)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.Windows.Input.TraversalRequest" />
+      </Parameters>
+      <Docs>
+        <param name="request">Gibt an, ob der Fokus zum ersten oder letzten Tabstopp festgelegt werden soll.</param>
+        <summary>Wird von einer eigenständigen Komponente aufgerufen, wenn der letzte Tabstopp erreicht hat und verfügt über keine weiteren Elemente, die zur Registerkarte "".</summary>
+        <returns>Wenn diese Methode zurückgibt <see langword="true" />, der Standort verfügt über den Fokus auf einer anderen Komponente. Wenn diese Methode zurückgibt <see langword="false" />, den Fokus ist weiterhin in der aufrufenden Komponente. Die Komponente sollte "umschließen" und den Fokus auf der ersten enthaltenen Tabstopp festgelegt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Komponenten-Aufruf <xref:System.Windows.Interop.IKeyboardInputSite.OnNoMoreTabStops%2A> Wenn die Komponente versucht, eine angeforderte Fokus verschieben, aber es sind keine weiteren Registerkarte in einer Richtung innerhalb der eigenen Komponente beendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sink">
+      <MemberSignature Language="C#" Value="public System.Windows.Interop.IKeyboardInputSink Sink { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Interop.IKeyboardInputSink Sink" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.IKeyboardInputSite.Sink" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Interop.IKeyboardInputSink</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Tastatur-Ereignissenke, die diesem Standort zugeordnet.</summary>
+        <value>Der aktuelle Standort <see cref="T:System.Windows.Interop.IKeyboardInputSink" /> Schnittstelle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt keinen übergeordneten zurück <xref:System.Windows.Interop.IKeyboardInputSink> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unregister">
+      <MemberSignature Language="C#" Value="public void Unregister ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Unregister() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.IKeyboardInputSite.Unregister" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Hebt die Registrierung einer untergeordneten Tastatur Eingabe Senke von diesem Standort.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wirkt sich nicht auf die Website für den Container aus.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

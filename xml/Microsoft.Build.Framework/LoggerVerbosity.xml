@@ -1,0 +1,117 @@
+<Type Name="LoggerVerbosity" FullName="Microsoft.Build.Framework.LoggerVerbosity">
+  <TypeSignature Language="C#" Value="public enum LoggerVerbosity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LoggerVerbosity extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.LoggerVerbosity" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, die zur Verfügung Verbosity Ebenen des eine <see cref="T:Microsoft.Build.Utilities.Logger" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Beschreibungen der ausführlichkeitsebenen sind nur Richtlinien an, wie eine normale Protokollierung (einschließlich des [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] konsolenprotokollierung) Protokolle Buildereignisse. Protokollierungen können ausführlichkeitsebenen in irgendeiner Weise zu interpretieren sind, werden soll.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie eine einfache Protokollierung zu schreiben, die antwortet, um Ereignisse zu erstellen.  
+  
+ [!code-csharp[msbuild_BasicLogger#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_BasicLogger/CS/msbuild_BasicLogger.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Detailed">
+      <MemberSignature Language="C#" Value="Detailed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Framework.LoggerVerbosity Detailed = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Framework.LoggerVerbosity.Detailed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.LoggerVerbosity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Detaillierte Ausführlichkeit, die Fehler, Warnungen, zeigt Nachrichten mit <see cref="T:Microsoft.Build.Framework.MessageImportance" /> Werte <see cref="F:Microsoft.Build.Framework.MessageImportance.High" /> oder <see cref="F:Microsoft.Build.Framework.MessageImportance.Normal" />, alle Statusereignisse und eine Buildzusammenfassung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Diagnostic">
+      <MemberSignature Language="C#" Value="Diagnostic" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Framework.LoggerVerbosity Diagnostic = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Framework.LoggerVerbosity.Diagnostic" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.LoggerVerbosity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diagnose Ausführlichkeit, die alle Fehler, Warnungen, Meldungen, Statusereignisse und einer Buildzusammenfassung angezeigt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Minimal">
+      <MemberSignature Language="C#" Value="Minimal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Framework.LoggerVerbosity Minimal = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Framework.LoggerVerbosity.Minimal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.LoggerVerbosity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Minimaler Ausführlichkeit, die Fehler, Warnungen zeigt Nachrichten mit <see cref="T:Microsoft.Build.Framework.MessageImportance" /> Werte <see cref="F:Microsoft.Build.Framework.MessageImportance.High" />, sowie eine Zusammenfassung erstellen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Framework.LoggerVerbosity Normal = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Framework.LoggerVerbosity.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.LoggerVerbosity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Normale Ausführlichkeit, die Fehler, Warnungen, zeigt Nachrichten mit <see cref="T:Microsoft.Build.Framework.MessageImportance" /> Werte <see cref="F:Microsoft.Build.Framework.MessageImportance.High" />, einige Statusereignisse und eine Buildzusammenfassung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Quiet">
+      <MemberSignature Language="C#" Value="Quiet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Framework.LoggerVerbosity Quiet = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Framework.LoggerVerbosity.Quiet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.LoggerVerbosity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stille Ausführlichkeit, der eine Buildzusammenfassung angezeigt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

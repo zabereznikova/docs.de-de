@@ -1,0 +1,87 @@
+<Type Name="MenuCommandsChangedEventArgs" FullName="System.ComponentModel.Design.MenuCommandsChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class MenuCommandsChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MenuCommandsChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.MenuCommandsChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.ComponentModel.Design.MenuCommandService.MenuCommandsChanged" />-Ereignis bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MenuCommandsChangedEventArgs (System.ComponentModel.Design.MenuCommandsChangedType changeType, System.ComponentModel.Design.MenuCommand command);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ComponentModel.Design.MenuCommandsChangedType changeType, class System.ComponentModel.Design.MenuCommand command) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.MenuCommandsChangedEventArgs.#ctor(System.ComponentModel.Design.MenuCommandsChangedType,System.ComponentModel.Design.MenuCommand)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="changeType" Type="System.ComponentModel.Design.MenuCommandsChangedType" />
+        <Parameter Name="command" Type="System.ComponentModel.Design.MenuCommand" />
+      </Parameters>
+      <Docs>
+        <param name="changeType">Die Art der Änderung.</param>
+        <param name="command">Der Menübefehl.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Design.MenuCommandsChangedEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangeType">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Design.MenuCommandsChangedType ChangeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ComponentModel.Design.MenuCommandsChangedType ChangeType" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.MenuCommandsChangedEventArgs.ChangeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.MenuCommandsChangedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ der Änderung, die verursacht <see cref="E:System.ComponentModel.Design.MenuCommandService.MenuCommandsChanged" /> ausgelöst werden soll.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.Design.MenuCommandsChangedType" /> , verursacht <see cref="E:System.ComponentModel.Design.MenuCommandService.MenuCommandsChanged" /> ausgelöst werden soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Command">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Design.MenuCommand Command { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.MenuCommand Command" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.MenuCommandsChangedEventArgs.Command" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.MenuCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Befehl ab, der hinzugefügt, entfernt oder geändert wurde.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.Design.MenuCommand" /> , die hinzugefügt, entfernt oder geändert wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebenen Werte sind möglich `null` Wenn mehrere Befehle gleichzeitig geändert wurden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,50 @@
+<Type Name="BindIPEndPoint" FullName="System.Net.BindIPEndPoint">
+  <TypeSignature Language="C#" Value="public delegate System.Net.IPEndPoint BindIPEndPoint(ServicePoint servicePoint, IPEndPoint remoteEndPoint, int retryCount);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BindIPEndPoint extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Net.BindIPEndPoint" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.ServicePoint</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="servicePoint" Type="System.Net.ServicePoint" />
+    <Parameter Name="remoteEndPoint" Type="System.Net.IPEndPoint" />
+    <Parameter Name="retryCount" Type="System.Int32" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Net.IPEndPoint</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="servicePoint">Die <see cref="T:System.Net.ServicePoint" /> verknüpft sind, mit der Verbindung erstellt werden soll.</param>
+    <param name="remoteEndPoint">Die Remote <see cref="T:System.Net.IPEndPoint" /> , die den Remotehost angibt.</param>
+    <param name="retryCount">Die Anzahl der Häufigkeit, die dieser Delegat für eine angegebene Verbindung aufgerufen wurde.</param>
+    <summary>Stellt die Methode dar, der angibt, eine lokale Adresse und Anschlussnummer Zahl von Internetprotokoll für eine <see cref="T:System.Net.ServicePoint" />.</summary>
+    <returns>Die lokale <see cref="T:System.Net.IPEndPoint" /> , der die <see cref="T:System.Net.ServicePoint" /> gebunden ist.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Angeben, die die <xref:System.Net.BindIPEndPoint> Delegat wird verwendet, indem eine <xref:System.Net.ServicePoint> durch Festlegen der <xref:System.Net.ServicePoint.BindIPEndPointDelegate%2A?displayProperty=nameWithType> Eigenschaft mit dem Delegaten als Argument. Dieser Delegat sollte eine lokale IP-Adresse und Port-Nummer angeben, in der zurückgegebenen <xref:System.Net.IPEndPoint>.  
+  
+ Wenn .NET Framework die zurückgegebene gebunden werden kann <xref:System.Net.IPEndPoint> auf die <xref:System.Net.ServicePoint> nach <xref:System.Int32.MaxValue?displayProperty=nameWithType> versucht, eine <xref:System.OverflowException> ausgelöst wird.  
+  
+ Wenn Sie der Delegat, der den Dienst-Punkt von der Bindung für die Verbindung zu steuern möchten, der Rückgabetyp des Delegaten sollten `null`. Wenn Sie die Verbindung abbrechen möchten, muss der Delegaten eine Ausnahme ausgelöst.  
+  
+ ]]></format>
+    </remarks>
+    <exception cref="T:System.OverflowException">
+      <paramref name="retryCount" />ist gleich<see cref="F:System.Int32.MaxValue" /></exception>
+  </Docs>
+</Type>

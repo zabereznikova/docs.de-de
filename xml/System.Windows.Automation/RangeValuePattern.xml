@@ -1,0 +1,349 @@
+<Type Name="RangeValuePattern" FullName="System.Windows.Automation.RangeValuePattern">
+  <TypeSignature Language="C#" Value="public class RangeValuePattern : System.Windows.Automation.BasePattern" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RangeValuePattern extends System.Windows.Automation.BasePattern" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.RangeValuePattern" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.BasePattern</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Steuerelement, das auf einen Wert innerhalb eines Bereichs festgelegt werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Steuerelemente können eine erneute Kalibrierung der unterstützten Eigenschaften basierend auf Gebietsschemas oder einer benutzereinstellung. Ein Beispiel hierfür wäre ein Thermometersteuerelement, die festgelegt werden können, um die Temperatur in Fahrenheit oder Celsius anzuzeigen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cached">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.RangeValuePattern.RangeValuePatternInformation Cached { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.RangeValuePattern/RangeValuePatternInformation Cached" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.RangeValuePattern.Cached" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.RangeValuePattern+RangeValuePatternInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die zwischengespeicherten Eigenschaftswerte für <see cref="T:System.Windows.Automation.RangeValuePattern" />.</summary>
+        <value>Die zwischengespeicherten Eigenschaftswerte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zwischengespeicherte Eigenschaftswerte müssen zuvor angefordert wurden mit einer <xref:System.Windows.Automation.CacheRequest>. Um den Wert einer Eigenschaft am aktuellen Punkt in der Zeit zu erhalten, die Eigenschaft abrufen, mithilfe von <xref:System.Windows.Automation.RangeValuePattern.Current%2A>.  
+  
+ Informationen zu den verfügbaren Eigenschaften und deren Verwendung finden Sie unter <xref:System.Windows.Automation.RangeValuePattern.RangeValuePatternInformation>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die angeforderte Eigenschaft befindet sich nicht im Cache.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.RangeValuePattern.RangeValuePatternInformation Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.RangeValuePattern/RangeValuePatternInformation Current" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.RangeValuePattern.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.RangeValuePattern+RangeValuePatternInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuellen Eigenschaftswerte für <see cref="T:System.Windows.Automation.RangeValuePattern" />.</summary>
+        <value>Die aktuellen Eigenschaftswerte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Muster muss aus einer <xref:System.Windows.Automation.AutomationElement> mit einer <xref:System.Windows.Automation.AutomationElementMode.Full> Verweis, um die aktuellen Werte zu erhalten. Wenn die <xref:System.Windows.Automation.AutomationElement> abgerufen wurde, mithilfe von <xref:System.Windows.Automation.AutomationElementMode.None>, enthält es nur zwischengespeicherte Daten, und beim Versuch, den aktuellen Wert einer beliebigen Eigenschaft abzurufen, wird eine Ausnahme ausgelöst. Verwendung <xref:System.Windows.Automation.RangeValuePattern.Cached%2A> um den zwischengespeicherten Wert einer Eigenschaft abzurufen, die zuvor angegeben wurde mit einem <xref:System.Windows.Automation.CacheRequest>.  
+  
+ Informationen zu den verfügbaren Eigenschaften und deren Verwendung finden Sie unter <xref:System.Windows.Automation.RangeValuePattern.RangeValuePatternInformation>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnlyProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty IsReadOnlyProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty IsReadOnlyProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die <see cref="P:System.Windows.Automation.RangeValuePattern.RangeValuePatternInformation.IsReadOnly" />-Eigenschaft an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Bezeichner wird durch Benutzeroberflächenautomatisierungs-Clientanwendungen verwendet. Benutzeroberflächenautomatisierungs-Anbietern zu verwendende das entsprechende Feld im <xref:System.Windows.Automation.RangeValuePatternIdentifiers>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Stammelement an eine Funktion, die eine Auflistung von zurückgibt übergeben <xref:System.Windows.Automation.AutomationElement>s, die abhängigen Elemente des Stamms und einen Satz von eigenschaftsbedingungen erfüllen.  
+  
+ [!code-csharp[UIARangeValuePattern_snip#100](~/samples/snippets/csharp/VS_Snippets_Wpf/UIARangeValuePattern_snip/CSharp/UIARangeValuePattern_snippets.cs#100)]
+ [!code-vb[UIARangeValuePattern_snip#100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIARangeValuePattern_snip/VisualBasic/UIARangeValuePattern_snippets.vb#100)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LargeChangeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty LargeChangeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty LargeChangeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.RangeValuePattern.LargeChangeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die <see cref="P:System.Windows.Automation.RangeValuePattern.RangeValuePatternInformation.LargeChange" />-Eigenschaft an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Bezeichner wird durch Benutzeroberflächenautomatisierungs-Clientanwendungen verwendet. Benutzeroberflächenautomatisierungs-Anbietern zu verwendende das entsprechende Feld im <xref:System.Windows.Automation.RangeValuePatternIdentifiers>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.RangeValuePattern> -Objekt abgerufen, die von einem Zielsteuerelement wird in einer Funktion, die das aktuelle abruft übergeben <xref:System.Windows.Automation.RangeValuePattern> Eigenschaftswerte.  
+  
+ [!code-csharp[UIARangeValuePattern_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIARangeValuePattern_snip/CSharp/UIARangeValuePattern_snippets.cs#102)]
+ [!code-vb[UIARangeValuePattern_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIARangeValuePattern_snip/VisualBasic/UIARangeValuePattern_snippets.vb#102)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty MaximumProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty MaximumProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.RangeValuePattern.MaximumProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die <see cref="P:System.Windows.Automation.RangeValuePattern.RangeValuePatternInformation.Maximum" />-Eigenschaft an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Bezeichner wird durch Benutzeroberflächenautomatisierungs-Clientanwendungen verwendet. Benutzeroberflächenautomatisierungs-Anbietern zu verwendende das entsprechende Feld im <xref:System.Windows.Automation.RangeValuePatternIdentifiers>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.RangeValuePattern> -Objekt abgerufen, die von einem Zielsteuerelement wird in einer Funktion, die das aktuelle abruft übergeben <xref:System.Windows.Automation.RangeValuePattern> Eigenschaftswerte.  
+  
+ [!code-csharp[UIARangeValuePattern_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIARangeValuePattern_snip/CSharp/UIARangeValuePattern_snippets.cs#102)]
+ [!code-vb[UIARangeValuePattern_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIARangeValuePattern_snip/VisualBasic/UIARangeValuePattern_snippets.vb#102)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimumProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty MinimumProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty MinimumProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.RangeValuePattern.MinimumProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die <see cref="P:System.Windows.Automation.RangeValuePattern.RangeValuePatternInformation.Minimum" />-Eigenschaft an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Bezeichner wird durch Benutzeroberflächenautomatisierungs-Clientanwendungen verwendet. Benutzeroberflächenautomatisierungs-Anbietern zu verwendende das entsprechende Feld im <xref:System.Windows.Automation.RangeValuePatternIdentifiers>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.RangeValuePattern> -Objekt abgerufen, die von einem Zielsteuerelement wird in einer Funktion, die das aktuelle abruft übergeben <xref:System.Windows.Automation.RangeValuePattern> Eigenschaftswerte.  
+  
+ [!code-csharp[UIARangeValuePattern_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIARangeValuePattern_snip/CSharp/UIARangeValuePattern_snippets.cs#102)]
+ [!code-vb[UIARangeValuePattern_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIARangeValuePattern_snip/VisualBasic/UIARangeValuePattern_snippets.vb#102)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pattern">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationPattern Pattern;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationPattern Pattern" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.RangeValuePattern.Pattern" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationPattern</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet das <see cref="T:System.Windows.Automation.RangeValuePattern" />-Steuerelementmuster.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Bezeichner wird durch Benutzeroberflächenautomatisierungs-Clientanwendungen verwendet. Benutzeroberflächenautomatisierungs-Anbietern zu verwendende das entsprechende Feld im <xref:System.Windows.Automation.RangeValuePatternIdentifiers>.  
+  
+ Der Musterbezeichner wird an Methoden übergeben, z. B. <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> zum Abrufen der Steuerelementmuster aus dem angegebenen <xref:System.Windows.Automation.AutomationElement>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.RangeValuePattern> Steuerelementmuster abgerufenes ein <xref:System.Windows.Automation.AutomationElement>.  
+  
+ [!code-csharp[UIARangeValuePattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIARangeValuePattern_snip/CSharp/UIARangeValuePattern_snippets.cs#101)]
+ [!code-vb[UIARangeValuePattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIARangeValuePattern_snip/VisualBasic/UIARangeValuePattern_snippets.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public void SetValue (double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetValue(float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.RangeValuePattern.SetValue(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der neue Wert des Elements.</param>
+        <summary>Legt den Wert der [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der tatsächliche Wertsatz hängt von der Implementierung des Steuerelements ab. Das Steuerelement kann den angeforderten runden `value` nach oben oder unten. Ein Benutzeroberflächenautomatisierungs-Client kann untersuchen, die <xref:System.Windows.Automation.RangeValuePattern.RangeValuePatternInformation.Value%2A> Eigenschaft, um zu bestimmen, den tatsächlichen Wert aktualisiert. Der Client kann auch registrieren für ein durch geänderte Eigenschaften ausgelöste Ereignis für die Eigenschaft und untersuchen Sie die alte und neue Werte zurückgegeben, der <xref:System.Windows.Automation.AutomationPropertyChangedEventArgs>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.AutomationElement> , unterstützt die <xref:System.Windows.Automation.RangeValuePattern> Steuerelementmuster verfügt über einen Wert auf den steuerelementspezifischen Mindestwert festgelegt.  
+  
+ [!code-csharp[UIARangeValuePattern_snip#104Minimum](~/samples/snippets/csharp/VS_Snippets_Wpf/UIARangeValuePattern_snip/CSharp/UIARangeValuePattern_snippets.cs#104minimum)]
+ [!code-vb[UIARangeValuePattern_snip#104Minimum](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIARangeValuePattern_snip/VisualBasic/UIARangeValuePattern_snippets.vb#104minimum)]  
+[!code-csharp[UIARangeValuePattern_snip#104](~/samples/snippets/csharp/VS_Snippets_Wpf/UIARangeValuePattern_snip/CSharp/UIARangeValuePattern_snippets.cs#104)]
+[!code-vb[UIARangeValuePattern_snip#104](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIARangeValuePattern_snip/VisualBasic/UIARangeValuePattern_snippets.vb#104)]  
+[!code-csharp[UIARangeValuePattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIARangeValuePattern_snip/CSharp/UIARangeValuePattern_snippets.cs#101)]
+[!code-vb[UIARangeValuePattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIARangeValuePattern_snip/VisualBasic/UIARangeValuePattern_snippets.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="value" />ist kleiner als der Mindestwert oder größer als der maximale Wert des Elements.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SmallChangeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty SmallChangeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty SmallChangeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.RangeValuePattern.SmallChangeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die <see cref="P:System.Windows.Automation.RangeValuePattern.RangeValuePatternInformation.SmallChange" />-Eigenschaft an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Bezeichner wird durch Benutzeroberflächenautomatisierungs-Clientanwendungen verwendet. Benutzeroberflächenautomatisierungs-Anbietern zu verwendende das entsprechende Feld im <xref:System.Windows.Automation.RangeValuePatternIdentifiers>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.RangeValuePattern> -Objekt abgerufen, die von einem Zielsteuerelement wird in einer Funktion, die das aktuelle abruft übergeben <xref:System.Windows.Automation.RangeValuePattern> Eigenschaftswerte.  
+  
+ [!code-csharp[UIARangeValuePattern_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIARangeValuePattern_snip/CSharp/UIARangeValuePattern_snippets.cs#102)]
+ [!code-vb[UIARangeValuePattern_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIARangeValuePattern_snip/VisualBasic/UIARangeValuePattern_snippets.vb#102)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty ValueProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty ValueProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.RangeValuePattern.ValueProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die <see cref="P:System.Windows.Automation.RangeValuePattern.RangeValuePatternInformation.Value" />-Eigenschaft an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Bezeichner wird durch Benutzeroberflächenautomatisierungs-Clientanwendungen verwendet. Benutzeroberflächenautomatisierungs-Anbietern zu verwendende das entsprechende Feld im <xref:System.Windows.Automation.RangeValuePatternIdentifiers>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.RangeValuePattern> -Objekt abgerufen, die von einem Zielsteuerelement wird in einer Funktion, die das aktuelle abruft übergeben <xref:System.Windows.Automation.RangeValuePattern> Eigenschaftswerte.  
+  
+ [!code-csharp[UIARangeValuePattern_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIARangeValuePattern_snip/CSharp/UIARangeValuePattern_snippets.cs#102)]
+ [!code-vb[UIARangeValuePattern_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIARangeValuePattern_snip/VisualBasic/UIARangeValuePattern_snippets.vb#102)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

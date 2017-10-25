@@ -1,0 +1,1443 @@
+<Type Name="MenuItem" FullName="System.Web.UI.WebControls.MenuItem">
+  <TypeSignature Language="C#" Value="public sealed class MenuItem : ICloneable, System.Web.UI.IStateManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MenuItem extends System.Object implements class System.ICloneable, class System.Web.UI.IStateManager" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.MenuItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.IStateManager</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(true, "ChildItems")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Menüelement angezeigt wird, der <see cref="T:System.Web.UI.WebControls.Menu" /> Steuerelement. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Web.UI.WebControls.Menu> Steuerelement besteht aus einer Hierarchie von Menüelementen dargestellte <xref:System.Web.UI.WebControls.MenuItem> Objekte. Jedes Menüelement verfügt über eine schreibgeschützte <xref:System.Web.UI.WebControls.MenuItem.Depth%2A> Eigenschaft, die die Ebene angibt, an der das Menüelement, in angezeigt wird, der <xref:System.Web.UI.WebControls.Menu> Steuerelement. Menüelemente, die nicht über einen übergeordneten Menüelement verfügen, auf der obersten Ebene (Ebene 0) werden als Root-Menüelemente bezeichnet. Ein Menüelement, das ein übergeordnetes Menüelement besitzt, wird ein Untermenüelement aufgerufen. Alle Menüelemente werden gespeichert, der <xref:System.Web.UI.WebControls.Menu.Items%2A> Auflistung. Untermenüelemente befinden sich in einem übergeordneten Menüelement <xref:System.Web.UI.WebControls.MenuItem.ChildItems%2A> Auflistung. Sie können ein Menüelement übergeordneten Menüelement zugreifen, mithilfe der <xref:System.Web.UI.WebControls.MenuItem.Parent%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.Menu.Items%2A> und <xref:System.Web.UI.WebControls.MenuItem.ChildItems%2A> Auflistungen enthalten nur die Menüelemente für die nächste Ebene nach unten. Um Menüelemente weiter unten in der Menüstruktur im zuzugreifen, verwenden Sie die <xref:System.Web.UI.WebControls.MenuItem.ChildItems%2A> Eigenschaft eines nachfolgenden Menüelements.  
+  
+ Die Menüelemente für die Erstellung einer <xref:System.Web.UI.WebControls.Menu> steuern, verwenden Sie eine der folgenden Methoden:  
+  
+ Verwenden Sie deklarative Syntax, um statische Menüelemente erstellt werden.  
+  
+ Verwenden Sie einen Konstruktor, um neue Instanzen eines dynamisch zu erstellen. die <xref:System.Web.UI.WebControls.MenuItem> Klasse. Diese <xref:System.Web.UI.WebControls.MenuItem> Objekte können anschließend hinzugefügt werden, um die <xref:System.Web.UI.WebControls.Menu.Items%2A> oder <xref:System.Web.UI.WebControls.MenuItem.ChildItems%2A> Auflistung.  
+  
+ Binden der <xref:System.Web.UI.WebControls.Menu> Steuerelement mit einer Datenquelle. Wenn die <xref:System.Web.UI.WebControls.Menu> gebunden ist eine <xref:System.Web.UI.WebControls.SiteMapDataSource> Steuerelement <xref:System.Web.UI.WebControls.MenuItem> Objekte werden automatisch erstellt, die die Elemente in der Datenquelle entsprechen. Bei anderen Datenquellen <xref:System.Web.UI.WebControls.MenuItem> Objekte werden auch automatisch erstellt, die mit die hierarchischen Struktur der Datenquelle übereinstimmen; jedoch müssen Sie auch verwenden die <xref:System.Web.UI.WebControls.Menu.DataBindings%2A> -Auflistung, um die im Menü-Element-Bindungen zu definieren, die die Bindung Beziehung angeben zwischen einem Menüelement und des entsprechenden Datenelements.  
+  
+ In einem statischen Menü oder ein dynamisches Menü, abhängig von der Integrationsstufe, werden die Menüelemente angezeigt. Die Untermenüelemente wird immer angezeigt, einem <xref:System.Web.UI.WebControls.Menu> Steuerelement. Standardmäßig werden die Menüelemente auf oberster Ebene (Ebene 0) in einem statischen Menü angezeigt. Sie können zusätzliche Menüebenen (statische Untermenüs) in einem statischen Menü angezeigt, durch Festlegen der <xref:System.Web.UI.WebControls.Menu.StaticDisplayLevels%2A> Eigenschaft. Menüelemente, die sich (falls vorhanden) auf einer höheren Ebene als der Wert von der <xref:System.Web.UI.WebControls.Menu.StaticDisplayLevels%2A> Eigenschaft in einem dynamischen Untermenü angezeigt werden. Ein dynamisches Untermenü angezeigt wird, nur, wenn der Benutzer den Mauszeiger über dem übergeordneten Menüelement positioniert, die ein dynamisches Untermenü enthält.  
+  
+ Wenn der Benutzer ein Menüelement klickt der <xref:System.Web.UI.WebControls.Menu> Steuerelement navigieren Sie zu einer verknüpften Webseite oder einfach an den Server senden kann. Wenn die <xref:System.Web.UI.WebControls.MenuItem.NavigateUrl%2A> Eigenschaft eines Menüelements festgelegt ist, die <xref:System.Web.UI.WebControls.Menu> -Steuerelement navigiert zu der verknüpften Seite; andernfalls, sendet es die Seite zurück an den Server zur Verarbeitung. Standardmäßig wird eine verknüpfte Seite angezeigt, in das Fenster oder den Frame als die <xref:System.Web.UI.WebControls.Menu> Steuerelement. Um den verknüpften Inhalt in einem anderen Fenster oder den Frame anzuzeigen, verwenden die <xref:System.Web.UI.WebControls.Menu.Target%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.Menu> Steuerelement.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.Menu.Target%2A?displayProperty=nameWithType> Eigenschaft wirkt sich auf jede Menüelement im Steuerelement. Um ein Fenster oder den Frame für ein einzelnes Menüelement anzugeben, legen Sie die <xref:System.Web.UI.WebControls.MenuItem.Target%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.MenuItem> -Objekts direkt.  
+  
+ Jedes Menüelement verfügt über eine <xref:System.Web.UI.WebControls.MenuItem.Text%2A> und ein <xref:System.Web.UI.WebControls.MenuItem.Value%2A> Eigenschaft. Der Wert des der <xref:System.Web.UI.WebControls.MenuItem.Text%2A> Eigenschaft wird angezeigt, der <xref:System.Web.UI.WebControls.Menu> -Steuerelement, während die <xref:System.Web.UI.WebControls.MenuItem.Value%2A> Eigenschaft dient zum Speichern der zusätzlichen Daten über das Menüelement, z. B. Daten, der dem Menüelement zugeordnete Postbackereignis übergeben. Wenn Sie festlegen, die <xref:System.Web.UI.WebControls.MenuItem.Text%2A> -Eigenschaft, aber lassen Sie die <xref:System.Web.UI.WebControls.MenuItem.Value%2A> Eigenschaft nicht festgelegt ist, die <xref:System.Web.UI.WebControls.MenuItem.Value%2A> Eigenschaftensatz wird automatisch mit den gleichen Wert wie die <xref:System.Web.UI.WebControls.MenuItem.Text%2A> Eigenschaft. Das Gegenteil ist ebenfalls "true". Wenn Sie festlegen, die <xref:System.Web.UI.WebControls.MenuItem.Value%2A> -Eigenschaft, aber nicht die <xref:System.Web.UI.WebControls.MenuItem.Text%2A> -Eigenschaft, die <xref:System.Web.UI.WebControls.MenuItem.Text%2A> Eigenschaftensatz wird automatisch mit den gleichen Wert wie die <xref:System.Web.UI.WebControls.MenuItem.Value%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Menüelemente auf derselben Menüebene müssen einen eindeutigen Wert für die <xref:System.Web.UI.WebControls.MenuItem.Value%2A> Eigenschaft; das <xref:System.Web.UI.WebControls.Menu> Steuerelement kann nicht zu unterscheiden, zwischen verschiedenen Menüelemente auf derselben Ebene, die den gleichen Wert aufweisen. Wenn der Benutzer ein Menüelement klickt, das einen doppelten Wert aufweist, wird in diesem Szenario das Menüelement, das Sie im Menü an erster Stelle steht ausgewählt.  
+  
+ Legen Sie des Elements, um eine QuickInfo anzuzeigen, wenn der Benutzer den Mauszeiger über einem Menüelement positioniert, <xref:System.Web.UI.WebControls.MenuItem.ToolTip%2A> Eigenschaft.  
+  
+ Ein <xref:System.Web.UI.WebControls.Menu> Steuerelement verfügt über verschiedene Typen von Menüelementen. Sie können das Format (z. B. Schriftart und Farbe) für die verschiedenen Menüs work Item Types steuern, indem Sie mithilfe der Eigenschaften in der folgenden Tabelle.  
+  
+|Menü-Element-Style-Eigenschaft|Beschreibung|  
+|------------------------------|-----------------|  
+|<xref:System.Web.UI.WebControls.Menu.DynamicHoverStyle%2A>|Die Stileigenschaften für ein dynamisches Menüelement, wenn der Mauszeiger darauf positioniert ist.|  
+|<xref:System.Web.UI.WebControls.Menu.DynamicMenuItemStyle%2A>|Die Stileigenschaften für ein einzelnes dynamischen Menüelement.|  
+|<xref:System.Web.UI.WebControls.Menu.DynamicMenuStyle%2A>|Die Stileigenschaften für ein dynamisches Menü.|  
+|<xref:System.Web.UI.WebControls.Menu.DynamicSelectedStyle%2A>|Die Stileigenschaften für den aktuell ausgewählten dynamischen Menüelements.|  
+|<xref:System.Web.UI.WebControls.Menu.StaticHoverStyle%2A>|Die Stileigenschaften für ein statisches Menüelement, wenn der Mauszeiger darauf positioniert ist.|  
+|<xref:System.Web.UI.WebControls.Menu.StaticMenuItemStyle%2A>|Die Stileigenschaften für einen einzelnen statischen Menüelements.|  
+|<xref:System.Web.UI.WebControls.Menu.StaticMenuStyle%2A>|Die Stileigenschaften für ein statisches Menü.|  
+|<xref:System.Web.UI.WebControls.Menu.StaticSelectedStyle%2A>|Die Stileigenschaften für das aktuell ausgewählte statische Menüelement.|  
+  
+ Statt das einzelne Stileigenschaften festlegen, können Sie die Formate angeben, die auf Grundlage der Ebene mit den Stil Auflistungen in der folgenden Tabelle gezeigt Menüelemente angewendet werden.  
+  
+|Formatvorlage Sammlungen|Beschreibung|  
+|-----------------------------|-----------------|  
+|<xref:System.Web.UI.WebControls.Menu.LevelMenuItemStyles%2A>|Eine Auflistung von <xref:System.Web.UI.WebControls.MenuItemStyle> entsprechend ihrer Ebene dar, das Format der Menüelemente zu steuern.|  
+|<xref:System.Web.UI.WebControls.Menu.LevelSelectedStyles%2A>|Eine Auflistung von <xref:System.Web.UI.WebControls.MenuItemStyle> -Objekten, die den Stil der ausgewählten Menüelemente, die entsprechend ihrer Ebene.|  
+|<xref:System.Web.UI.WebControls.Menu.LevelSubMenuStyles%2A>|Eine Auflistung von <xref:System.Web.UI.WebControls.MenuItemStyle> dar, das Format der Untermenüelemente steuern, entsprechend ihrer Ebene.|  
+  
+ Das erste Format in der Auflistung entspricht dem Format der Menüelemente auf der ersten Ebene in der Menüstruktur. Das zweite Format in der Auflistung entspricht dem Format der Menüelemente auf der zweiten Ebene in der Menüstruktur und So weiter. Dies wird am häufigsten verwendet zum Generieren von Navigationsmenüs Inhalt-Format, in denen sollten Menüelemente auf einer bestimmten Ebene unabhängig davon, ob diese Untermenüs haben die gleiche Darstellung haben.  
+  
+> [!NOTE]
+>  Wenn Sie eine der Formatvorlage Auflistungen in der vorherigen Tabelle aufgeführten verwenden, definieren Sie den Stil für die <xref:System.Web.UI.WebControls.Menu> Steuerelement diese stileinstellungen überschreiben, die einzelne Formateigenschaften des Menüelements.  
+  
+ Zusätzlich zum Anpassen eines Menüelements-Stil, können Sie auch dessen Darstellung anpassen. Sie können benutzerdefinierte Bilder für die verschiedenen Teile eines Menüelements angeben, durch Festlegen der Eigenschaften in der folgenden Tabelle.  
+  
+|Image-Eigenschaft|Beschreibung|  
+|--------------------|-----------------|  
+|<xref:System.Web.UI.WebControls.MenuItem.ImageUrl%2A>|Ein optionales Bild, das neben dem Text eines Menüelements angezeigt.|  
+|<xref:System.Web.UI.WebControls.MenuItem.PopOutImageUrl%2A>|Ein optionales Bild angezeigt, in ein Menüelement, um anzugeben, dass das Menüelement über ein dynamisches Untermenü verfügt.|  
+|<xref:System.Web.UI.WebControls.MenuItem.SeparatorImageUrl%2A>|Ein optionales Bild angezeigt, die am unteren Rand ein Menüelement von anderen Menüelementen abzugrenzen.|  
+  
+ Um festzustellen, ob ein Menüelement derzeit, in ausgewählt ist eine <xref:System.Web.UI.WebControls.Menu> steuern, verwenden Sie die <xref:System.Web.UI.WebControls.MenuItem.Selected%2A> Eigenschaft. Sie können auch bestimmen, ob ein Menüelement an Daten, mithilfe gebunden ist der <xref:System.Web.UI.WebControls.MenuItem.DataBound%2A> Eigenschaft. Wenn ein Menüelement an Daten gebunden ist, können Sie mithilfe der <xref:System.Web.UI.WebControls.MenuItem.DataItem%2A> Eigenschaft, um die Werte des Datenelements zugreifen auf das Menüelement gebunden.  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz der <xref:System.Web.UI.WebControls.MenuItem>-Klasse finden Sie im <xref:System.Web.UI.WebControls.MenuItem.%23ctor%2A>-Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie zum Auffüllen einer <xref:System.Web.UI.WebControls.Menu> steuern mit statischen <xref:System.Web.UI.WebControls.MenuItem> Objekte verwenden deklarativen Syntax.  
+  
+ [!code-aspx-csharp[MenuItem#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItem/CS/menuitemcs.aspx#1)]
+ [!code-aspx-vb[MenuItem#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItem/VB/menuitemvb.aspx#1)]  
+  
+ Das folgende Beispiel veranschaulicht das Binden einer <xref:System.Web.UI.WebControls.Menu> die Steuerung an eine <xref:System.Web.UI.WebControls.SiteMapDataSource> Steuerelement. Bei der Bindung an eine Datenquelle, die <xref:System.Web.UI.WebControls.Menu> -Steuerelement erstellt automatisch die <xref:System.Web.UI.WebControls.MenuItem> Objekte. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die Beispiel-Siteübersichtsdaten unten in einer Datei namens Web.sitemap kopieren.  
+  
+ [!code-aspx-csharp[MenuDataBind#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuDataBind/CS/menudatabindcs.aspx#1)]
+ [!code-aspx-vb[MenuDataBind#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuDataBind/VB/menudatabindvb.aspx#1)]  
+  
+ Im folgenden finden Beispiel-Siteübersichtsdaten für das vorherige Beispiel.  
+  
+ `<siteMap>`  
+  
+ `<siteMapNode url="~\Home.aspx"`  
+  
+ `title="Home"`  
+  
+ `description="Home">`  
+  
+ `<siteMapNode url="~\Music.aspx"`  
+  
+ `title="Music"`  
+  
+ `description="Music">`  
+  
+ `<siteMapNode url="~\Classical.aspx"`  
+  
+ `title="Classical"`  
+  
+ `description="Classical"/>`  
+  
+ `<siteMapNode url="~\Rock.aspx"`  
+  
+ `title="Rock"`  
+  
+ `description="Rock"/>`  
+  
+ `<siteMapNode url="~\Jazz.aspx"`  
+  
+ `title="Jazz"`  
+  
+ `description="Jazz"/>`  
+  
+ `</siteMapNode>`  
+  
+ `<siteMapNode url="~\Movies.aspx"`  
+  
+ `title="Movies"`  
+  
+ `description="Movies">`  
+  
+ `<siteMapNode url="~\Action.aspx"`  
+  
+ `title="Action"`  
+  
+ `description="Action"/>`  
+  
+ `<siteMapNode url="~\Drama.aspx"`  
+  
+ `title="Drama"`  
+  
+ `description="Drama"/>`  
+  
+ `<siteMapNode url="~\Musical.aspx"`  
+  
+ `title="Musical"`  
+  
+ `description="Musical"/>`  
+  
+ `</siteMapNode>`  
+  
+ `</siteMapNode>`  
+  
+ `</siteMap>`  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MenuItem ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItem.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.MenuItem" /> Klasse ohne Menütext oder einen Wert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor zum Erstellen einer neuen Instanz von einem <xref:System.Web.UI.WebControls.MenuItem> Klasse ohne Menütext oder einen Wert.  
+  
+> [!NOTE]
+>  Wenn dieser Konstruktor verwendet wird, werden alle Eigenschaften in der <xref:System.Web.UI.WebControls.MenuItem> Objekt werden auf ihre Standardwerte festgelegt. Achten Sie darauf, dass Sie die Eigenschaften nach Bedarf festlegen, nach dem Erstellen des Objekts.  
+  
+ Dieser Konstruktor wird normalerweise verwendet, wenn dynamisch aufgefüllt der <xref:System.Web.UI.WebControls.Menu.Items%2A> Auflistung von einer <xref:System.Web.UI.WebControls.Menu> Steuerelement oder die <xref:System.Web.UI.WebControls.MenuItem.ChildItems%2A> Auflistung von einem <xref:System.Web.UI.WebControls.MenuItem> Objekt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie dieser Konstruktor zum Erstellen einer neuen Instanz von der <xref:System.Web.UI.WebControls.MenuItem> Klasse. Die <xref:System.Web.UI.WebControls.MenuItem> Objekt wird dann verwendet, um die Menüelemente im dynamisch Ausfüllen einer <xref:System.Web.UI.WebControls.Menu> Steuerelement.  
+  
+ [!code-aspx-csharp[MenuItemCtorDefault#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemCtorDefault/CS/menuitemctordefaultcs.aspx#1)]
+ [!code-aspx-vb[MenuItemCtorDefault#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemCtorDefault/VB/menuitemctordefaultvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MenuItem (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItem.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der angezeigte Text für ein Menüelement in ein <see cref="T:System.Web.UI.WebControls.Menu" /> Steuerelement.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.MenuItem" /> -Klasse mit dem angegebenen Text.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor zum Erstellen einer neuen Instanz von der <xref:System.Web.UI.WebControls.MenuItem> -Klasse unter Verwendung der Menütexts gemäß der `text` Parameter.  
+  
+ Die folgende Tabelle zeigt die anfängliche Eigenschaftswert für eine Instanz von der <xref:System.Web.UI.WebControls.MenuItem> Klasse.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.MenuItem.Text%2A>|Der Wert des Text-Parameter.|  
+  
+ Dieser Konstruktor wird normalerweise verwendet, wenn dynamisch aufgefüllt der <xref:System.Web.UI.WebControls.Menu.Items%2A> Auflistung von einer <xref:System.Web.UI.WebControls.Menu> Steuerelement oder die <xref:System.Web.UI.WebControls.MenuItem.ChildItems%2A> Auflistung von einem <xref:System.Web.UI.WebControls.MenuItem> Objekt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie dieser Konstruktor zum Erstellen einer neuen Instanz von der <xref:System.Web.UI.WebControls.MenuItem> Klasse. Die <xref:System.Web.UI.WebControls.MenuItem> Objekt wird dann verwendet, um die Menüelemente im dynamisch Ausfüllen einer <xref:System.Web.UI.WebControls.Menu> Steuerelement.  
+  
+ [!code-aspx-csharp[MenuItemCtor1Param#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemCtor1Param/CS/menuitemctor1paramcs.aspx#1)]
+ [!code-aspx-vb[MenuItemCtor1Param#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemCtor1Param/VB/menuitemctor1paramvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MenuItem (string text, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItem.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der angezeigte Text für ein Menüelement in ein <see cref="T:System.Web.UI.WebControls.Menu" /> Steuerelement.</param>
+        <param name="value">Die ergänzenden Daten, die das Menüelement, z. B. Daten, die zur Behandlung von postback Ereignisse zugeordnet.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.MenuItem" /> -Klasse mit dem angegebenen Menütext und Wert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor zum Erstellen einer neuen Instanz von der <xref:System.Web.UI.WebControls.MenuItem> -Klasse mit dem Menütext und der angegebene Wert der `text` und `value` Parameter bzw..  
+  
+ In der folgenden Tabelle werden anfängliche Eigenschaftswerte für eine Instanz der <xref:System.Web.UI.WebControls.MenuItem>-Klasse aufgeführt.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.MenuItem.Text%2A>|Der Wert des `text`-Parameters.|  
+|<xref:System.Web.UI.WebControls.MenuItem.Value%2A>|Der Wert des `value`-Parameters.|  
+  
+ Dieser Konstruktor wird normalerweise verwendet, wenn dynamisch aufgefüllt der <xref:System.Web.UI.WebControls.Menu.Items%2A> Auflistung von einer <xref:System.Web.UI.WebControls.Menu> Steuerelement oder die <xref:System.Web.UI.WebControls.MenuItem.ChildItems%2A> Auflistung von einem <xref:System.Web.UI.WebControls.MenuItem> Objekt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie dieser Konstruktor zum Erstellen einer neuen Instanz von der <xref:System.Web.UI.WebControls.MenuItem> Klasse. Die <xref:System.Web.UI.WebControls.MenuItem> Objekt wird dann verwendet, um die Menüelemente im dynamisch Ausfüllen einer <xref:System.Web.UI.WebControls.Menu> Steuerelement.  
+  
+ [!code-aspx-csharp[MenuItemCtor2Param#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemCtor2Param/CS/menuitemctor2paramcs.aspx#1)]
+ [!code-aspx-vb[MenuItemCtor2Param#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemCtor2Param/VB/menuitemctor2paramvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MenuItem (string text, string value, string imageUrl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text, string value, string imageUrl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItem.#ctor(System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="imageUrl" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der angezeigte Text für ein Menüelement in ein <see cref="T:System.Web.UI.WebControls.Menu" /> Steuerelement.</param>
+        <param name="value">Die ergänzenden Daten, die das Menüelement, z. B. Daten, die zur Behandlung von postback Ereignisse zugeordnet.</param>
+        <param name="imageUrl">Die URL zu einem Bild, das neben dem Text in einem Menüelement angezeigt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.MenuItem" /> -Klasse unter Verwendung der angegebenen Menütext, den Wert und die URL zu einem Bild.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor zum Erstellen einer neuen Instanz von der <xref:System.Web.UI.WebControls.MenuItem> -Klasse unter Verwendung der Menütext Wert und Bild-URL, die gemäß der `text`, `value`, und `imageUrl` Parameter bzw..  
+  
+ In der folgenden Tabelle werden anfängliche Eigenschaftswerte für eine Instanz der <xref:System.Web.UI.WebControls.MenuItem>-Klasse aufgeführt.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.MenuItem.Text%2A>|Der Wert des `text`-Parameters.|  
+|<xref:System.Web.UI.WebControls.MenuItem.Value%2A>|Der Wert des `value`-Parameters.|  
+|<xref:System.Web.UI.WebControls.MenuItem.ImageUrl%2A>|Der Wert des `imageUrl`-Parameters.|  
+  
+ Dieser Konstruktor wird normalerweise verwendet, wenn dynamisch aufgefüllt der <xref:System.Web.UI.WebControls.Menu.Items%2A> Auflistung von einer <xref:System.Web.UI.WebControls.Menu> Steuerelement oder die <xref:System.Web.UI.WebControls.MenuItem.ChildItems%2A> Auflistung von einem <xref:System.Web.UI.WebControls.MenuItem> Objekt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie dieser Konstruktor zum Erstellen einer neuen Instanz von der <xref:System.Web.UI.WebControls.MenuItem> Klasse. Die <xref:System.Web.UI.WebControls.MenuItem> Objekt wird dann verwendet, um die Menüelemente im dynamisch Ausfüllen einer <xref:System.Web.UI.WebControls.Menu> Steuerelement.  
+  
+ [!code-aspx-csharp[MenuItemCtor3Param#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemCtor3Param/CS/menuitemctor3paramcs.aspx#1)]
+ [!code-aspx-vb[MenuItemCtor3Param#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemCtor3Param/VB/menuitemctor3paramvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MenuItem (string text, string value, string imageUrl, string navigateUrl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text, string value, string imageUrl, string navigateUrl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItem.#ctor(System.String,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="imageUrl" Type="System.String" />
+        <Parameter Name="navigateUrl" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der angezeigte Text für ein Menüelement in ein <see cref="T:System.Web.UI.WebControls.Menu" /> Steuerelement.</param>
+        <param name="value">Die ergänzenden Daten, die das Menüelement, z. B. Daten, die zur Behandlung von postback Ereignisse zugeordnet.</param>
+        <param name="imageUrl">Die URL zu einem Bild, das neben dem Text in einem Menüelement angezeigt.</param>
+        <param name="navigateUrl">Die URL zu verknüpfen, wenn das Menüelement geklickt wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.MenuItem" /> -Klasse unter Verwendung der angegebenen Menütext, Wert, Bild-URL und URL für die Navigation.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor zum Erstellen einer neuen Instanz von der <xref:System.Web.UI.WebControls.MenuItem> -Klasse Menütext, Wert, Bild-URL und die URL für die Navigation durch angegeben mit der `text`, `value`, `imageUrl`, und `navigateUrl` Parameter bzw..  
+  
+ In der folgenden Tabelle werden anfängliche Eigenschaftswerte für eine Instanz der <xref:System.Web.UI.WebControls.MenuItem>-Klasse aufgeführt.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.MenuItem.Text%2A>|Der Wert des `text`-Parameters.|  
+|<xref:System.Web.UI.WebControls.MenuItem.Value%2A>|Der Wert des `value`-Parameters.|  
+|<xref:System.Web.UI.WebControls.MenuItem.ImageUrl%2A>|Der Wert des `imageUrl`-Parameters.|  
+|<xref:System.Web.UI.WebControls.MenuItem.NavigateUrl%2A>|Der Wert des `navigateUrl`-Parameters.|  
+  
+ Dieser Konstruktor wird normalerweise verwendet, wenn dynamisch aufgefüllt der <xref:System.Web.UI.WebControls.Menu.Items%2A> Auflistung von einer <xref:System.Web.UI.WebControls.Menu> Steuerelement oder die <xref:System.Web.UI.WebControls.MenuItem.ChildItems%2A> Auflistung von einem <xref:System.Web.UI.WebControls.MenuItem> Objekt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie dieser Konstruktor zum Erstellen einer neuen Instanz von der <xref:System.Web.UI.WebControls.MenuItem> Klasse. Die <xref:System.Web.UI.WebControls.MenuItem> Objekt wird dann verwendet, um die Menüelemente im dynamisch Ausfüllen einer <xref:System.Web.UI.WebControls.Menu> Steuerelement.  
+  
+ [!code-aspx-csharp[MenuItemCtor4Param#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemCtor4Param/CS/menuitemctor4paramcs.aspx#1)]
+ [!code-aspx-vb[MenuItemCtor4Param#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemCtor4Param/VB/menuitemctor4paramvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MenuItem (string text, string value, string imageUrl, string navigateUrl, string target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text, string value, string imageUrl, string navigateUrl, string target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItem.#ctor(System.String,System.String,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="imageUrl" Type="System.String" />
+        <Parameter Name="navigateUrl" Type="System.String" />
+        <Parameter Name="target" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der angezeigte Text für ein Menüelement in ein <see cref="T:System.Web.UI.WebControls.Menu" /> Steuerelement.</param>
+        <param name="value">Die ergänzenden Daten, die das Menüelement, z. B. Daten, die zur Behandlung von postback Ereignisse zugeordnet.</param>
+        <param name="imageUrl">Die URL zu einem Bild, das neben dem Text in einem Menüelement angezeigt.</param>
+        <param name="navigateUrl">Die URL zu verknüpfen, wenn das Menüelement geklickt wird.</param>
+        <param name="target">Das Zielfenster oder der Zielframe, in dem der Webseiteninhalt angezeigt verknüpft, ein Menüelement, wenn das Menüelement geklickt wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.MenuItem" /> -Klasse unter Verwendung der angegebenen Menütext, Wert, Bild-URL, Navigations-URL und Ziel.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor zum Erstellen einer neuen Instanz von der <xref:System.Web.UI.WebControls.MenuItem> -Klasse mit den Menütext, Wert, Bild-URL, Navigations-URL und Ziel, die gemäß der `text`, `value`, `imageUrl`, `navigateUrl`, und `target` Parameter bzw..  
+  
+ In der folgenden Tabelle werden anfängliche Eigenschaftswerte für eine Instanz der <xref:System.Web.UI.WebControls.MenuItem>-Klasse aufgeführt.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.MenuItem.Text%2A>|Der Wert des `text`-Parameters.|  
+|<xref:System.Web.UI.WebControls.MenuItem.Value%2A>|Der Wert des `value`-Parameters.|  
+|<xref:System.Web.UI.WebControls.MenuItem.ImageUrl%2A>|Der Wert des `imageUrl`-Parameters.|  
+|<xref:System.Web.UI.WebControls.MenuItem.NavigateUrl%2A>|Der Wert des `navigateUrl`-Parameters.|  
+|<xref:System.Web.UI.WebControls.MenuItem.Target%2A>|Der Wert des `target`-Parameters.|  
+  
+ Dieser Konstruktor wird normalerweise verwendet, wenn dynamisch aufgefüllt der <xref:System.Web.UI.WebControls.Menu.Items%2A> Auflistung von einer <xref:System.Web.UI.WebControls.Menu> Steuerelement oder die <xref:System.Web.UI.WebControls.MenuItem.ChildItems%2A> Auflistung von einem <xref:System.Web.UI.WebControls.MenuItem> Objekt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie dieser Konstruktor zum Erstellen einer neuen Instanz von der <xref:System.Web.UI.WebControls.MenuItem> Klasse. Die <xref:System.Web.UI.WebControls.MenuItem> Objekt wird dann verwendet, um die Menüelemente im dynamisch Ausfüllen einer <xref:System.Web.UI.WebControls.Menu> Steuerelement.  
+  
+ [!code-aspx-csharp[MenuItemCtor5Param#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemCtor5Param/CS/menuitemctor5paramcs.aspx#1)]
+ [!code-aspx-vb[MenuItemCtor5Param#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemCtor5Param/VB/menuitemctor5paramvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChildItems">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.MenuItemCollection ChildItems { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.MenuItemCollection ChildItems" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItem.ChildItems" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerDefaultProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.MenuItemCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Web.UI.WebControls.MenuItemCollection" /> -Objekt, das die Untermenüelemente des aktuellen Menüelements enthält.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.MenuItemCollection" /> , das die Untermenüelemente des aktuellen Menüelements enthält. Die Standardeinstellung ist <see langword="null" />, was bedeutet, dass dieses Menüelement keine Untermenüelemente enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.MenuItem.ChildItems%2A> -Eigenschaft (Auflistung) auf die Untermenüelemente des aktuellen Menüelements ggf. zugreifen. Diese Auflistung enthält nur die Menüelemente der nächsten Ebene. Um Menüelemente weiter unten in der Menüstruktur im zuzugreifen, verwenden Sie die <xref:System.Web.UI.WebControls.MenuItem.ChildItems%2A> Eigenschaft eines nachfolgenden Menüelements. Wenn die <xref:System.Web.UI.WebControls.MenuItem.ChildItems%2A> Eigenschaft `null`, im aktuelle Menü verfügt nicht über Untermenüelemente.  
+  
+ Die <xref:System.Web.UI.WebControls.MenuItem.ChildItems%2A> Eigenschaft kann auch verwendet werden, um die Untermenüelemente des aktuellen Menüelements programmgesteuert zu verwalten. Sie können hinzufügen, einfügen, entfernen, abrufen und ändern Sie <xref:System.Web.UI.WebControls.MenuItem> Objekte aus der Auflistung. Alle Updates auf die Auflistung werden automatisch wiedergegeben werden, der <xref:System.Web.UI.WebControls.Menu> steuern Sie das nächste Mal die Seite wird aktualisiert.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.MenuItem.ChildItems%2A> Eigenschaft zum Durchlaufen der Elemente in einem <xref:System.Web.UI.WebControls.Menu> Steuerelement.  
+  
+ [!code-aspx-csharp[MenuItems#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItems/CS/menuitemscs.aspx#1)]
+ [!code-aspx-vb[MenuItems#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItems/VB/menuitemsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBound">
+      <MemberSignature Language="C#" Value="public bool DataBound { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DataBound" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItem.DataBound" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Menüelement über die Datenbindung erstellt wurde.</summary>
+        <value>
+          <see langword="true" />Wenn das Menüelement über die Datenbindung erstellt wurde. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.MenuItem.DataBound%2A> Eigenschaft wird verwendet, um programmgesteuert zu ermitteln, ob das Menüelement über die Datenbindung erstellt wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataItem">
+      <MemberSignature Language="C#" Value="public object DataItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DataItem" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItem.DataItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Datenelement, das an das Menüelement gebunden ist.</summary>
+        <value>Eine <see cref="T:System.Object" /> , die das Datenelement, das an das Menüelement gebunden ist darstellt. Der Standardwert ist <see langword="null" />, was bedeutet, dass das Menüelement nicht für alle Datenelement gebunden ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.WebControls.Menu> Steuerelement wird an eine Datenquelle gebunden, wie z. B. ein <xref:System.Web.UI.WebControls.XmlDataSource> Objekt, diese Eigenschaft wird festgelegt, um das Datenelement, das auf dieses bestimmte Menüelement gebunden ist. Diese Eigenschaft wird häufig verwendet, um den Wert des Datenelements zugreifen.  
+  
+> [!NOTE]
+>  Diese Eigenschaft steht nur nach dem Datenbindung aufgetreten ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataPath">
+      <MemberSignature Language="C#" Value="public string DataPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItem.DataPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Pfad zu den Daten, die an das Menüelement gebunden ist.</summary>
+        <value>Der Pfad zu den Daten, die auf den Knoten gebunden ist. Dieser Wert stammt aus der quellcodeverwaltung für hierarchische Daten, die <see cref="T:System.Web.UI.WebControls.Menu" /> gebunden ist. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.MenuItem.DataPath%2A> Eigenschaftswert wird häufig verwendet, beim Aufrufen der <xref:System.Web.UI.IHierarchicalDataSource.GetHierarchicalView%2A?displayProperty=nameWithType> Methode, um den Pfad zu den Daten bereitzustellen, die an das aktuelle Menüelement gebunden ist. Klicken Sie dann diese Methode gibt ein <xref:System.Web.UI.HierarchicalDataSourceView?displayProperty=nameWithType> Objekt, das die Daten im angegebenen Pfad enthält.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Depth">
+      <MemberSignature Language="C#" Value="public int Depth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Depth" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItem.Depth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ebene, bei der ein Menüelement angezeigt wird.</summary>
+        <value>Die Ebene, bei der ein Menüelement angezeigt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.MenuItem.Depth%2A> -Eigenschaft können Sie bestimmen die Tiefe des Menüelements. Die Tiefe gibt an, die auf welcher Ebene ein Menüelement angezeigt wird und die Anzahl der Ebenen der Hierarchie zwischen dem aktuellen Menüelement und das Stamm-Menüelement darstellt. Ein Stamm-Menüelement hat z. B. die Tiefe 0. Ein Element eines Untermenüs des Stammmenüelements hat die Tiefe 1, und So weiter.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.MenuItem.Depth%2A> -Eigenschaft können Sie bestimmen die Tiefe eines Menüelements.  
+  
+ [!code-aspx-csharp[MenuItemDepth#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemDepth/CS/menuitemdepthcs.aspx#1)]
+ [!code-aspx-vb[MenuItemDepth#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemDepth/VB/menuitemdepthvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItem.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.MenuItem" /> Objekt aktiviert ist, sodass das Element zum Anzeigen einer Popoutbild und allen untergeordneten Elementen Menüelemente.</summary>
+        <value>
+          <see langword="true" />Wenn das Menüelement aktiviert ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft festgelegt wird, um `false`, das Menüelement deaktiviert, sodass keine Popoutbild, der angibt, untergeordnete Elemente wird angezeigt. Wenn diese Eigenschaft auf `false` für ein Menüelement im Wesentlichen stellt das Menüelement am Ende dieses Knotens, in dem keine weiteren Ebenen nach diesem Knoten angezeigt werden. Der Standardwert ist `true`.  
+  
+ Wenn Sie möchten das Menüelement an alle untergeordneten Elemente anzeigen, aber nicht "geklickt werden kann" selbst werden, die <xref:System.Web.UI.WebControls.MenuItem.Selectable%2A> Eigenschaft und legen Sie dafür `false`.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie ein Menüelement mit der <xref:System.Web.UI.WebControls.MenuItem.Enabled%2A> -Eigenschaftensatz auf `false` angezeigt wird und in einem Menü-Funktion.  
+  
+ [!code-aspx-csharp[MenuSelectableEnabled#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuSelectableEnabled/CS/menuselectableenabledcs.aspx#1)]
+ [!code-aspx-vb[MenuSelectableEnabled#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuSelectableEnabled/VB/menuselectableenabledvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageUrl">
+      <MemberSignature Language="C#" Value="public string ImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItem.ImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL zu einem Bild, das neben dem Text in ein Menüelement angezeigt wird.</summary>
+        <value>Die URL zu einem benutzerdefinierten Bild, das neben dem Text eines Menüelements angezeigt wird. Der Standardwert ist eine leere Zeichenfolge (""), die angibt, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.MenuItem.ImageUrl%2A> -Eigenschaft an ein benutzerdefiniertes Bild für das aktuelle Menüelement in der <xref:System.Web.UI.WebControls.Menu> Steuerelement. Dieses Bild wird neben dem Text des Menüelements angezeigt und kann in einem beliebigen Dateiformat (JPG, GIF, BMP usw.) sein, solange im Browser des Clients dieses Format unterstützt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.MenuItem.ImageUrl%2A> Eigenschaft, um ein benutzerdefiniertes Bild neben dem Text eines Menüelements angezeigt.  
+  
+ [!code-aspx-csharp[MenuItem#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItem/CS/menuitemcs.aspx#1)]
+ [!code-aspx-vb[MenuItem#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItem/VB/menuitemvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NavigateUrl">
+      <MemberSignature Language="C#" Value="public string NavigateUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NavigateUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItem.NavigateUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.UrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL, zu der navigiert werden soll, wenn das Menüelement geklickt wird.</summary>
+        <value>Die URL zu navigieren, wenn das Menüelement geklickt wird. Der Standardwert ist eine leere Zeichenfolge (""), die angibt, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Menüelement kann in einem von zwei Modi: den Mehrfachauswahlmodus aufweist oder Navigationsmodus. Standardmäßig ist ein Menüelement in den Mehrfachauswahlmodus aufweist. Um ein Menüelement Navigationsmodus versetzen, legen Sie des Menüelements <xref:System.Web.UI.WebControls.MenuItem.NavigateUrl%2A> -Eigenschaft auf einen anderen Wert als eine leere Zeichenfolge ("").  
+  
+ Wenn ein Menüelement im Navigationsmodus befindet, werden alle Auswahlereignisse für das Menüelement deaktiviert. Klicken auf das Menüelement im Navigationsbereich-Modus wird der Benutzer zur angegebenen URL. Sie können optional Festlegen der <xref:System.Web.UI.WebControls.MenuItem.Target%2A> -Eigenschaft an das Fenster oder der Zielframe, in dem den verknüpften Inhalt angezeigt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.MenuItem.NavigateUrl%2A> Eigenschaft zum Angeben der URL, zu der navigiert werden soll, wenn der Benutzer ein Menüelement klickt.  
+  
+ [!code-aspx-csharp[MenuItem#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItem/CS/menuitemcs.aspx#1)]
+ [!code-aspx-vb[MenuItem#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItem/VB/menuitemvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.MenuItem Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.MenuItem Parent" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItem.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.MenuItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das übergeordnete Element des aktuellen Menüelements Menüelement ab.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.MenuItem" /> , der dem Menüelement, das übergeordnete Element des aktuellen Menüelements darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.MenuItem.Parent%2A> Eigenschaft, um die übergeordneten Menüelement zu bestimmen oder den Zugriff auf seine Eigenschaften.  
+  
+> [!NOTE]
+>  Ein Stammmenüelement einer übergeordneten Menüelement keinen.  
+  
+ Um auf die Untermenüelemente des aktuellen Menüelements zuzugreifen, verwenden Sie die <xref:System.Web.UI.WebControls.MenuItem.ChildItems%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.MenuItem.Parent%2A> der übergeordneten Menüelement eines Menüelements untergeordneten aufzurufende Eigenschaft.  
+  
+ [!code-aspx-csharp[MenuItemParent#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemParent/CS/menuitemparentcs.aspx#1)]
+ [!code-aspx-vb[MenuItemParent#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemParent/VB/menuitemparentvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PopOutImageUrl">
+      <MemberSignature Language="C#" Value="public string PopOutImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PopOutImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItem.PopOutImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL zu einem Bild, das angezeigt wird, in ein Menüelement, um anzugeben, dass das Menüelement über ein dynamisches Untermenü verfügt.</summary>
+        <value>Die URL zu einem Bild, das angezeigt wird, in ein Menüelement, um anzugeben, dass das Menüelement über ein dynamisches Untermenü verfügt. Der Standardwert ist eine leere Zeichenfolge ("") und gibt an, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Web.UI.WebControls.MenuRenderingMode?displayProperty=nameWithType> festgelegt ist, um `List`, oder wenn <xref:System.Web.UI.WebControls.MenuRenderingMode?displayProperty=nameWithType> auf festgelegt ist `Default` und <xref:System.Web.Configuration.PagesSection.ControlRenderingCompatibilityVersion%2A?displayProperty=nameWithType> auf festgelegt ist `4.0` oder höher, diese Eigenschaft hat keine Auswirkungen. Verwenden der <xref:System.Web.UI.WebControls.Menu.DynamicEnableDefaultPopOutImage%2A?displayProperty=nameWithType> Eigenschaft oder die <xref:System.Web.UI.WebControls.Menu.StaticEnableDefaultPopOutImage%2A?displayProperty=nameWithType> -Eigenschaft statt dieser Eigenschaft.  
+  
+ Wenn <xref:System.Web.UI.WebControls.MenuRenderingMode?displayProperty=nameWithType> auf festgelegt ist `Table`, oder wenn <xref:System.Web.UI.WebControls.MenuRenderingMode?displayProperty=nameWithType> festgelegt ist, um `Default` und <xref:System.Web.Configuration.PagesSection.ControlRenderingCompatibilityVersion%2A?displayProperty=nameWithType> auf festgelegt ist `3.5`, verwenden Sie diese Eigenschaft, um ein benutzerdefiniertes Bild anzugeben, die angezeigt wird, in ein Menüelement, um anzugeben, dass das Menüelement über ein dynamisches Untermenü verfügt. Dieses Bild kann beliebiges Dateiformat aufweisen (JPG, GIF, BMP usw.) sein, solange der Client-Browsers dieses Format unterstützt.  
+  
+> [!NOTE]
+>  Das angegebene Bild Festlegen dieser Eigenschaft überschreibt die <xref:System.Web.UI.WebControls.Menu.DynamicPopOutImageUrl%2A?displayProperty=nameWithType> und <xref:System.Web.UI.WebControls.Menu.StaticPopOutImageUrl%2A?displayProperty=nameWithType> Eigenschaften.  
+  
+ Sie können dieses Bild in einem statischen Menü auch deaktivieren, durch Festlegen dieser Eigenschaft auf eine leere Zeichenfolge und das Festlegen der <xref:System.Web.UI.WebControls.Menu.StaticEnableDefaultPopOutImage%2A> Eigenschaft `false`. Auf ähnliche Weise können Sie dieses Bild in einem dynamischen Menü deaktivieren, indem Sie durch Festlegen dieser Eigenschaft auf eine leere Zeichenfolge und das Festlegen der <xref:System.Web.UI.WebControls.Menu.DynamicEnableDefaultPopOutImage%2A> Eigenschaft `false`.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.MenuItem.PopOutImageUrl%2A> -Eigenschaft an ein benutzerdefiniertes Bild in einem Menüelement angezeigt wird, wenn das Menüelement über ein dynamisches Untermenü verfügt.  
+  
+ [!code-aspx-csharp[MenuItem#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItem/CS/menuitemcs.aspx#1)]
+ [!code-aspx-vb[MenuItem#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItem/VB/menuitemvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Selectable">
+      <MemberSignature Language="C#" Value="public bool Selectable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Selectable" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItem.Selectable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.MenuItem" /> -Objekt ausgewählt werden kann, oder "geklickt werden kann."</summary>
+        <value>
+          <see langword="true" />Wenn das Menüelement ausgewählt werden kann. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft festgelegt wird, um `false` über einem Menüelement keine Aktion ausgeführt wird, wenn das Menüelement (ausgewählt) geklickt wird. Das Popoutbild untergeordnete Menüelemente für das Menüelement angibt, wenn eine vorhanden ist, wird weiterhin angezeigt und ist verfügbar.  
+  
+ Wenn Sie keine untergeordnete Menüelemente für ein Menüelement angezeigt werden soll, legen Sie die <xref:System.Web.UI.WebControls.MenuItem.Enabled%2A> Eigenschaft `false`.  
+  
+ <xref:System.Web.UI.WebControls.MenuItem.Selectable%2A>gilt nur für Menüelemente, die, in dem Sinne ausgewählt werden können, die Sie auf ein Menüelement Postback, und legt das Element in den ausgewählten Zustand. Beachten Sie, dass ein Menüelement, die nicht ausgewählt werden weiterhin als Link formatiert ist. Dies ist aus Gründen der Barrierefreiheit, damit das Menüelement bewirken, dass eine Aktion, die auftreten kann. Darüber hinaus ein Menüelement, auch wenn es nicht ausgewählt werden kann, möglicherweise untergeordnete Menüelemente ausgewählt werden kann oder die angezeigt werden müssen.  
+  
+ Wenn Sie verhindern, dass einen Benutzer auf ein Menüelement möchten, führen Sie eine der folgenden:  
+  
+-   Stellen Sie keine <xref:System.Web.UI.WebControls.MenuItemBinding.NavigateUrl%2A> und <xref:System.Web.UI.WebControls.MenuItem.Selectable%2A> auf `false`.  
+  
+-   Legen Sie des Menüelements <xref:System.Web.UI.WebControls.MenuItem.Enabled%2A> Eigenschaft `false`.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie ein Menüelement mit der <xref:System.Web.UI.WebControls.MenuItem.Selectable%2A> -Eigenschaftensatz auf `false` angezeigt wird und in einem Menü-Funktion.  
+  
+ [!code-aspx-csharp[MenuSelectableEnabled#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuSelectableEnabled/CS/menuselectableenabledcs.aspx#1)]
+ [!code-aspx-vb[MenuSelectableEnabled#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuSelectableEnabled/VB/menuselectableenabledvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Selected">
+      <MemberSignature Language="C#" Value="public bool Selected { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Selected" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItem.Selected" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das aktuelle Menüelement, in ausgewählt ist einem <see cref="T:System.Web.UI.WebControls.Menu" /> Steuerelement.</summary>
+        <value>
+          <see langword="true" />um anzugeben, dass das aktuelle Menüelement, in ausgewählt ist eine <see cref="T:System.Web.UI.WebControls.Menu" /> steuern; anderenfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.MenuItem.Selected%2A> Eigenschaft festzulegen oder zu bestimmen, ob das aktuelle Menüelement ausgewählt ist.  
+  
+> [!NOTE]
+>  Obwohl die Eigenschaft verwendet werden kann, um zu bestimmen, ob ein Menüelement ausgewählt ist, ist es eher üblich, verwenden die <xref:System.Web.UI.WebControls.Menu.SelectedItem%2A> Eigenschaft.  
+  
+ Nur ein Menüelement ausgewählt werden kann, zu einem Zeitpunkt in der <xref:System.Web.UI.WebControls.Menu> Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.MenuItem.Selected%2A> Eigenschaft auf einen bestimmten Menübefehl in eine <xref:System.Web.UI.WebControls.Menu> steuern, wenn die Seite erstmals geladen wird. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die Beispiel-Siteübersichtsdaten unten in einer Datei namens Web.sitemap kopieren.  
+  
+ [!code-aspx-csharp[MenuItemSelected#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemSelected/CS/menuitemselectedcs.aspx#1)]
+ [!code-aspx-vb[MenuItemSelected#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemSelected/VB/menuitemselectedvb.aspx#1)]  
+  
+ Im folgenden finden Beispiel-Siteübersichtsdaten für das vorherige Beispiel.  
+  
+ `<siteMap>`  
+  
+ `<siteMapNode url="~\Home.aspx"`  
+  
+ `title="Home"`  
+  
+ `description="Home">`  
+  
+ `<siteMapNode url="~\Music.aspx"`  
+  
+ `title="Music"`  
+  
+ `description="Music">`  
+  
+ `<siteMapNode url="~\Classical.aspx"`  
+  
+ `title="Classical"`  
+  
+ `description="Classical"/>`  
+  
+ `<siteMapNode url="~\Rock.aspx"`  
+  
+ `title="Rock"`  
+  
+ `description="Rock"/>`  
+  
+ `<siteMapNode url="~\Jazz.aspx"`  
+  
+ `title="Jazz"`  
+  
+ `description="Jazz"/>`  
+  
+ `</siteMapNode>`  
+  
+ `<siteMapNode url="~\Movies.aspx"`  
+  
+ `title="Movies"`  
+  
+ `description="Movies">`  
+  
+ `<siteMapNode url="~\Action.aspx"`  
+  
+ `title="Action"`  
+  
+ `description="Action"/>`  
+  
+ `<siteMapNode url="~\Drama.aspx"`  
+  
+ `title="Drama"`  
+  
+ `description="Drama"/>`  
+  
+ `<siteMapNode url="~\Musical.aspx"`  
+  
+ `title="Musical"`  
+  
+ `description="Musical"/>`  
+  
+ `</siteMapNode>`  
+  
+ `</siteMapNode>`  
+  
+ `</siteMap>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SeparatorImageUrl">
+      <MemberSignature Language="C#" Value="public string SeparatorImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SeparatorImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItem.SeparatorImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL zu einem Bild angezeigt, die am unteren Rand ein Menüelement von anderen Menüelementen abzugrenzen.</summary>
+        <value>Die URL zu einem Bild verwendet, um das aktuelle Menüelement von anderen Menüelementen abzugrenzen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.MenuItem.SeparatorImageUrl%2A> Eigenschaft, um ein benutzerdefiniertes Bild (in der Regel von einer Zeile) anzugeben, die am unteren Rand ein Menüelement von anderen Menüelementen abzugrenzen angezeigt wird. Dieses Bild kann beliebiges Dateiformat aufweisen (JPG, GIF, BMP usw.) sein, solange der Client-Browsers dieses Format unterstützt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.MenuItem.SeparatorImageUrl%2A> -Eigenschaft an ein benutzerdefiniertes Bild für die anzuzeigenden am unteren Rand eines Menüelements von in anderen Menüelementen abzugrenzen ein <xref:System.Web.UI.WebControls.Menu> Steuerelement.  
+  
+ [!code-aspx-csharp[MenuItem#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItem/CS/menuitemcs.aspx#1)]
+ [!code-aspx-vb[MenuItem#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItem/VB/menuitemvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ICloneable.Clone">
+      <MemberSignature Language="C#" Value="object ICloneable.Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ICloneable.Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItem.System#ICloneable#Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Kopie des aktuellen <see cref="T:System.Web.UI.WebControls.MenuItem" /> Objekt.</summary>
+        <returns>Ein <see cref="T:System.Object" /> , die eine Kopie darstellt, die <see cref="T:System.Web.UI.WebControls.MenuItem" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.MenuItem.System%23ICloneable%23Clone%2A> Methode wird verwendet, durch die <xref:System.Web.UI.WebControls.MenuItem> Klasse, um eine Kopie von sich selbst zu erstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.IsTrackingViewState">
+      <MemberSignature Language="C#" Value="bool System.Web.UI.IStateManager.IsTrackingViewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.UI.IStateManager.IsTrackingViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItem.System#Web#UI#IStateManager#IsTrackingViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.MenuItem" /> Objekt Änderungen an seinem Ansichtszustand speichert.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement zum Speichern ihres Zustands markiert ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel sollten Sie verwenden die <xref:System.Web.UI.WebControls.MenuItem.System%23Web%23UI%23IStateManager%23IsTrackingViewState%2A> Member, um zu bestimmen, ob ein <xref:System.Web.UI.WebControls.MenuItem> Objekt Änderungen am Ansichtszustand nachverfolgt wird.  
+  
+ Die <xref:System.Web.UI.WebControls.MenuItem.System%23Web%23UI%23IStateManager%23IsTrackingViewState%2A> Member ist eine explizite Schnittstellenmember-Implementierung. Kann verwendet werden nur, wenn eine <xref:System.Web.UI.WebControls.MenuItem> Instanz umgewandelt wird eine <xref:System.Web.UI.IStateManager> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.LoadViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.LoadViewState (object state);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.LoadViewState(object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItem.System#Web#UI#IStateManager#LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="state">Ein <see cref="T:System.Object" /> , das die gespeicherten Ansichtszustandswerte enthält.</param>
+        <summary>Lädt des Menüelements den vorher gespeicherten Ansichtszustand.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.SaveViewState">
+      <MemberSignature Language="C#" Value="object IStateManager.SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.Web.UI.IStateManager.SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItem.System#Web#UI#IStateManager#SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert der Ansichtszustand Änderungen an einer <see cref="T:System.Object" />.</summary>
+        <returns>Die <see cref="T:System.Object" /> , das die Ansichtszustandsänderungen enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.TrackViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItem.System#Web#UI#IStateManager#TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Weist das <see cref="T:System.Web.UI.WebControls.MenuItem" />-Objekt an, Änderungen am Ansichtszustand nachzuverfolgen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach dem Aufruf dieser Methode für ein Serversteuerelement die <xref:System.Web.UI.Control.IsTrackingViewState%2A> -Eigenschaft gibt `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Target">
+      <MemberSignature Language="C#" Value="public string Target { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Target" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItem.Target" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Zielfenster oder den Zielframe ab, in dem die einem Menüeelement zugeordneten Webseiteninhalte angezeigt werden sollen, oder legt dieses Zielfenster bzw. den Zielframe fest.</summary>
+        <value>Das Zielfenster oder der Zielframe, in dem der verknüpfte Webseiteninhalt angezeigt werden soll. Der Standardwert ist eine leere Zeichenfolge (""), die das Fenster oder den Frame mit dem Fokus aktualisiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.MenuItem.Target%2A> Eigenschaft an das Fenster oder der Zielframe, in dem den Webinhalt angezeigt verknüpft ein Menüelement, wenn das Menüelement geklickt wird. Werte müssen mit einem Buchstaben im Bereich von A bis Z (Groß-/Kleinschreibung), mit Ausnahme von speziellen Werte beginnen, die mit einem Unterstrich beginnen, wie in der folgenden Tabelle gezeigt. Beachten Sie, die durch Festlegen dieser Eigenschaft überschreibt die <xref:System.Web.UI.WebControls.Menu.Target%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.Menu> Steuerelement für dieses Menüelement.  
+  
+|Zielwert|Beschreibung|  
+|------------------|-----------------|  
+|`_blank`|Rendert den Inhalt in einem neuen Fenster ohne Frames.|  
+|`_parent`|Rendert den Inhalt im unmittelbar übergeordneten Frameset.|  
+|`_search`|Rendert den Inhalt im Suchbereich.|  
+|`_self`|Rendert den Inhalt im Rahmen mit Fokus.|  
+|`_top`|Rendert den Inhalt in der gesamten Fenster ohne Frames.|  
+  
+> [!NOTE]
+>  Überprüfen Sie Ihre Browserdokumentation zum bestimmen, ob die `_search` Wert wird unterstützt. Beispielsweise Microsoft Internet Explorer 5.0 und höher, unterstützt die `_search` Zielwert.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.MenuItem.Target%2A> Eigenschaft wird dargestellt, wie ein `target` Attribut. Die `target` Attribut Ankerelemente ist im strict-Dokumenttypdefinition XHTML 1.1 nicht zulässig. Legen Sie nicht die <xref:System.Web.UI.WebControls.MenuItem.Target%2A> Eigenschaft Wenn der gerenderten Ausgabe für die <xref:System.Web.UI.WebControls.HyperLink> XHTML 1.1 kompatibel sein muss. Weitere Informationen finden Sie unter [XHTML-Standards in Visual Studio und ASP.NET](http://msdn.microsoft.com/library/1b78d416-66bb-43a5-ac77-c703aab55b97).  
+>   
+>  Wenn accessible Web Pages zu erstellen, es wird dringend empfohlen Sie vermeiden Sie die Verwendung der <xref:System.Web.UI.WebControls.MenuItem.Target%2A> Eigenschaft, um ein weiteres Fenster als Ziel. Weitere Informationen finden Sie unter [Barrierefreiheit in Visual Studio und ASP.NET](http://msdn.microsoft.com/library/7e3ce9c4-6b7d-4fb1-94b5-72cf2a44fe13).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.MenuItem.Target%2A> -Eigenschaft an ein Fenster oder der Zielframe, in dem den Webinhalt angezeigt auf ein Menüelement verknüpft sein, wenn das Menüelement geklickt wird.  
+  
+ [!code-aspx-csharp[MenuItemTarget#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemTarget/CS/menuitemtargetcs.aspx#1)]
+ [!code-aspx-vb[MenuItemTarget#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemTarget/VB/menuitemtargetvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItem.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text für das Menüelement in ein <see cref="T:System.Web.UI.WebControls.Menu" /> Steuerelement.</summary>
+        <value>Der angezeigte Text für das Menüelement in der <see cref="T:System.Web.UI.WebControls.Menu" /> Steuerelement. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.MenuItem.Text%2A> Eigenschaft angeben oder den Text, der für das Menüelement angezeigt wird, bestimmen die <xref:System.Web.UI.WebControls.Menu> Steuerelement.  
+  
+> [!NOTE]
+>  Wenn die <xref:System.Web.UI.WebControls.MenuItem.Text%2A> Eigenschaft enthält `null`, die `get` Accessor gibt den Wert der <xref:System.Web.UI.WebControls.MenuItem.Value%2A> Eigenschaft. Wenn die <xref:System.Web.UI.WebControls.MenuItem.Value%2A> Eigenschaft enthält wiederum `null`, <xref:System.String.Empty> wird zurückgegeben.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.MenuItem.Text%2A> -Eigenschaft in jeder Menüelement anzuzeigende Text an einer <xref:System.Web.UI.WebControls.Menu> Steuerelement.  
+  
+ [!code-aspx-csharp[MenuItem#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItem/CS/menuitemcs.aspx#1)]
+ [!code-aspx-vb[MenuItem#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItem/VB/menuitemvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTip">
+      <MemberSignature Language="C#" Value="public string ToolTip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolTip" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItem.ToolTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den QuickInfo-Text für das Menüelement.</summary>
+        <value>Der QuickInfo-Text für das Menüelement. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.MenuItem.ToolTip%2A> Eigenschaft, um den QuickInfo-Text für das Menüelement anzugeben. Der QuickInfo-Text wird angezeigt, wenn der Mauszeiger über das Menüelement positioniert ist.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.MenuItem.ToolTip%2A> -Eigenschaft in einer QuickInfo für jedes Menüelement an ein <xref:System.Web.UI.WebControls.Menu> Steuerelement.  
+  
+ [!code-aspx-csharp[MenuItem#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItem/CS/menuitemcs.aspx#1)]
+ [!code-aspx-vb[MenuItem#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItem/VB/menuitemvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItem.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder Festlegen eines nicht angezeigten Werts verwendet, um zusätzlichen Daten über das Menüelement, z. B. für die Behandlung von Ereignissen postback verwendeten Daten zu speichern.</summary>
+        <value>Zusätzliche Daten über das Menüelement, das nicht angezeigt wird. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.MenuItem.Value%2A> Eigenschaft dient als Ergänzung zu den <xref:System.Web.UI.WebControls.MenuItem.Text%2A> synchronisierungsleistung, da zusätzlichen Daten, die dem Menüelement zugeordnete Eigenschaft. Dieser Wert wird nicht im Steuerelement angezeigt und wird häufig zum Speichern von Daten für die Behandlung von Ereignissen postback verwendet.  
+  
+> [!NOTE]
+>  Wenn die <xref:System.Web.UI.WebControls.MenuItem.Value%2A> Eigenschaft enthält `null`, die `get` Accessor gibt den Wert der <xref:System.Web.UI.WebControls.MenuItem.Text%2A> Eigenschaft. Wenn die <xref:System.Web.UI.WebControls.MenuItem.Text%2A> Eigenschaft enthält wiederum `null`, <xref:System.String.Empty> wird zurückgegeben.  
+  
+ Der Wert von der <xref:System.Web.UI.WebControls.MenuItem.Value%2A> Eigenschaft wird auch verwendet, wenn der Wertpfad des im angegebenen die <xref:System.Web.UI.WebControls.MenuItem.ValuePath%2A> Eigenschaft generiert wird. Ein Wertpfad ist ein Trennzeichen getrennte Liste von Menüelementwerte, die einen Pfad aus dem Stamm Menüelement, das mit dem aktuellen Menüelement bildet. Der Wertpfad des wird verwendet, um anzugeben, die Position des Menüelements in einem <xref:System.Web.UI.WebControls.Menu> Steuerelement.  
+  
+> [!NOTE]
+>  Menüelemente auf derselben Menüebene müssen einen eindeutigen Wert für die <xref:System.Web.UI.WebControls.MenuItem.Value%2A> Eigenschaft; das <xref:System.Web.UI.WebControls.Menu> Steuerelement kann nicht zu unterscheiden, zwischen verschiedenen Menüelemente auf derselben Ebene, die den gleichen Wert aufweisen.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.MenuItem.Value%2A> für ein Menüelement und seinem übergeordneten Element, wenn der Benutzer ein Menüelement auswählt.  
+  
+ [!code-aspx-csharp[MenuItemValue#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemValue/CS/menuitemvaluecs.aspx#1)]
+ [!code-aspx-vb[MenuItemValue#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemValue/VB/menuitemvaluevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValuePath">
+      <MemberSignature Language="C#" Value="public string ValuePath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ValuePath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItem.ValuePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Pfad des Menüelements Stamm aktuellen Menüelements ab.</summary>
+        <value>Eine durch Trennzeichen getrennte Liste von Menüelement Werte, die dieses Formular einen Pfad aus dem Stamm Menüelement, das mit dem aktuellen Menüelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.MenuItem.ValuePath%2A> Eigenschaft enthält eine durch Trennzeichen getrennte Liste Menü Element Werte, die einen Pfad vom Stammmenüelement aktuellen Menüelements bilden. Der Wertpfad des wird verwendet, um anzugeben, die Position des Menüelements in einem <xref:System.Web.UI.WebControls.Menu> Steuerelement. Sie können angeben, dass das Trennzeichen zur Trennung der Menü-Element-Werte mithilfe der <xref:System.Web.UI.WebControls.Menu.PathSeparator%2A> Eigenschaft. Dieser Wert wird häufig verwendet, bei der Analyse der Liste für die einzelnen Werte oder als Argument zu übergeben, die <xref:System.Web.UI.WebControls.Menu.FindItem%2A> Methode der <xref:System.Web.UI.WebControls.TreeView> Klasse. Je nach Wert angezeigt, der <xref:System.Web.UI.WebControls.Menu> -Steuerelement, das Trennzeichen müssen möglicherweise geändert werden, um Konflikte zu vermeiden. Z. B. Wenn Sie ein Komma als Trennzeichen festlegen, sollte der angezeigte Wert keine Kommas enthalten. andernfalls, Sie können nicht ordnungsgemäß analysiert die <xref:System.Web.UI.WebControls.MenuItem.ValuePath%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Die Werte der <xref:System.Web.UI.WebControls.MenuItem.Value%2A> -Eigenschaft jedes Menüelements aus dem Menüelement, das Stammverzeichnis der aktuellen Menüelement werden verwendet, um der Wertpfad des generieren. Menüelemente auf derselben Menüebene müssen einen eindeutigen Wert für die <xref:System.Web.UI.WebControls.MenuItem.Value%2A> Eigenschaft; das <xref:System.Web.UI.WebControls.Menu> Steuerelement kann nicht zu unterscheiden, zwischen verschiedenen Menüelemente auf derselben Ebene, die den gleichen Wert aufweisen.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird veranschaulicht, wie den Wert, der analysiert die <xref:System.Web.UI.WebControls.MenuItem.ValuePath%2A> Eigenschaft für die Werte der einzelnen Menü-Element.  
+  
+ [!code-aspx-csharp[MenuItemValuePath#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemValuePath/CS/menuitemvaluepathcs.aspx#1)]
+ [!code-aspx-vb[MenuItemValuePath#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemValuePath/VB/menuitemvaluepathvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,209 @@
+<Type Name="ProxyAttribute" FullName="System.Runtime.Remoting.Proxies.ProxyAttribute">
+  <TypeSignature Language="C#" Value="public class ProxyAttribute : Attribute, System.Runtime.Remoting.Contexts.IContextAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProxyAttribute extends System.Attribute implements class System.Runtime.Remoting.Contexts.IContextAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Proxies.ProxyAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Contexts.IContextAttribute</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass ein Objekttyp einen benutzerdefinierten Proxy erforderlich ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenden Sie das aktuelle Attribut für Typen, die benutzerdefinierte Proxys benötigen. Können Sie die Klasse ProxyAttribute Abfangen der `new` (`New` in Visual Basic)-Anweisung durch Ableitung vom ProxyAttribute und platzieren das Attribut auf ein untergeordnetes Element des `ContextBoundObject`. (Platzieren die Proxy-Attribut auf ein untergeordnetes Element des `MarshalByRefObject` wird nicht unterstützt.)  
+  
+> [!NOTE]
+>  Diese Klasse stellt einen Linkaufruf und einer vererbungsanforderung auf Klassenebene. Ein <xref:System.Security.SecurityException> wird ausgelöst, wenn nicht für den unmittelbaren Aufrufer oder die abgeleitete Klasse Berechtigung für die Infrastruktur verfügt. Weitere Informationen zu sicherheitsforderungen, finden Sie unter [Verknüpfungsaufrufe](~/docs/framework/misc/link-demands.md) und [Vererbungsanforderungen](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9).  
+  
+   
+  
+## Examples  
+ [!code-cpp[CustomProxy_Attribute_RealProxy#11](~/samples/snippets/cpp/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/CPP/customproxy_sample.cpp#11)]
+ [!code-csharp[CustomProxy_Attribute_RealProxy#11](~/samples/snippets/csharp/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/CS/customproxy_sample.cs#11)]
+ [!code-vb[CustomProxy_Attribute_RealProxy#11](~/samples/snippets/visualbasic/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/VB/customproxy_sample.vb#11)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProxyAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Proxies.ProxyAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Remoting.Proxies.ProxyAttribute" />-Klasse mit Standardwerten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[CustomProxy_Attribute_RealProxy#11](~/samples/snippets/cpp/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/CPP/customproxy_sample.cpp#11)]
+ [!code-csharp[CustomProxy_Attribute_RealProxy#11](~/samples/snippets/csharp/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/CS/customproxy_sample.cs#11)]
+ [!code-vb[CustomProxy_Attribute_RealProxy#11](~/samples/snippets/visualbasic/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/VB/customproxy_sample.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstance">
+      <MemberSignature Language="C#" Value="public virtual MarshalByRefObject CreateInstance (Type serverType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.MarshalByRefObject CreateInstance(class System.Type serverType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Proxies.ProxyAttribute.CreateInstance(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.MarshalByRefObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serverType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serverType">Der Objekttyp zum Erstellen einer Instanz von.</param>
+        <summary>Erstellt entweder eine nicht initialisierte <see cref="T:System.MarshalByRefObject" /> oder einen transparenten Proxy, je nachdem, ob der angegebene Typ im aktuellen Kontext vorhanden sind.</summary>
+        <returns>Eine nicht initialisierte <see cref="T:System.MarshalByRefObject" /> oder ein transparenter Proxy.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[CustomProxy_Attribute_RealProxy#1](~/samples/snippets/cpp/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/CPP/customproxy_sample.cpp#1)]
+ [!code-csharp[CustomProxy_Attribute_RealProxy#1](~/samples/snippets/csharp/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/CS/customproxy_sample.cs#1)]
+ [!code-vb[CustomProxy_Attribute_RealProxy#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/VB/customproxy_sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateProxy">
+      <MemberSignature Language="C#" Value="public virtual System.Runtime.Remoting.Proxies.RealProxy CreateProxy (System.Runtime.Remoting.ObjRef objRef, Type serverType, object serverObject, System.Runtime.Remoting.Contexts.Context serverContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Runtime.Remoting.Proxies.RealProxy CreateProxy(class System.Runtime.Remoting.ObjRef objRef, class System.Type serverType, object serverObject, class System.Runtime.Remoting.Contexts.Context serverContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Proxies.ProxyAttribute.CreateProxy(System.Runtime.Remoting.ObjRef,System.Type,System.Object,System.Runtime.Remoting.Contexts.Context)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Proxies.RealProxy</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objRef" Type="System.Runtime.Remoting.ObjRef" />
+        <Parameter Name="serverType" Type="System.Type" />
+        <Parameter Name="serverObject" Type="System.Object" />
+        <Parameter Name="serverContext" Type="System.Runtime.Remoting.Contexts.Context" />
+      </Parameters>
+      <Docs>
+        <param name="objRef">Der Objektverweis auf das Remoteobjekt für die einen Proxy erstellt werden soll.</param>
+        <param name="serverType">Der Typ des Servers, auf dem das Remoteobjekt befindet.</param>
+        <param name="serverObject">Das Serverobjekt.</param>
+        <param name="serverContext">Der Kontext, in dem sich das Serverobjekt befindet.</param>
+        <summary>Erstellt eine Instanz von einem Remotingproxy für ein Remoteobjekt beschrieben, die durch das angegebene <see cref="T:System.Runtime.Remoting.ObjRef" />, und sich auf dem Server befindet.</summary>
+        <returns>Die neue Instanz der Remotingproxy für das remote-Objekt, das in den angegebenen beschrieben ist <see cref="T:System.Runtime.Remoting.ObjRef" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die aktuelle Methode wird aufgerufen, wenn ein Proxy, der erstellt wird eine <xref:System.Runtime.Remoting.ObjRef> Instanz, die eine Klasse, die verweist mit der <xref:System.Runtime.Remoting.Proxies.ProxyAttribute> Attribut. Daher wird die Methode verwendet nur, wenn ein <xref:System.Runtime.Remoting.ObjRef> aus einem Rückgabewert oder Parameter für einen Aufruf oder während der Aktivierung eines Objekts Client aktivierten empfangen wird. Die <xref:System.Runtime.Remoting.Proxies.ProxyAttribute> wird nicht für bekannte Objekttypen verwendet.  
+  
+   
+  
+## Examples  
+ [!code-cpp[CustomProxy_Attribute_RealProxy#2](~/samples/snippets/cpp/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/CPP/customproxy_sample.cpp#2)]
+ [!code-csharp[CustomProxy_Attribute_RealProxy#2](~/samples/snippets/csharp/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/CS/customproxy_sample.cs#2)]
+ [!code-vb[CustomProxy_Attribute_RealProxy#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/CustomProxy_Attribute_RealProxy/VB/customproxy_sample.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertiesForNewContext">
+      <MemberSignature Language="C#" Value="public void GetPropertiesForNewContext (System.Runtime.Remoting.Activation.IConstructionCallMessage msg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetPropertiesForNewContext(class System.Runtime.Remoting.Activation.IConstructionCallMessage msg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Proxies.ProxyAttribute.GetPropertiesForNewContext(System.Runtime.Remoting.Activation.IConstructionCallMessage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Runtime.Remoting.Activation.IConstructionCallMessage" />
+      </Parameters>
+      <Docs>
+        <param name="msg">Die Meldung für die ist der Kontext abgerufen werden sollen.</param>
+        <summary>Ruft Eigenschaften für einen neuen Kontext ab.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsContextOK">
+      <MemberSignature Language="C#" Value="public bool IsContextOK (System.Runtime.Remoting.Contexts.Context ctx, System.Runtime.Remoting.Activation.IConstructionCallMessage msg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsContextOK(class System.Runtime.Remoting.Contexts.Context ctx, class System.Runtime.Remoting.Activation.IConstructionCallMessage msg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Proxies.ProxyAttribute.IsContextOK(System.Runtime.Remoting.Contexts.Context,System.Runtime.Remoting.Activation.IConstructionCallMessage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ctx" Type="System.Runtime.Remoting.Contexts.Context" />
+        <Parameter Name="msg" Type="System.Runtime.Remoting.Activation.IConstructionCallMessage" />
+      </Parameters>
+      <Docs>
+        <param name="ctx">Der Kontext überprüft werden.</param>
+        <param name="msg">Die Meldung für den Remoteaufruf.</param>
+        <summary>Überprüft den angegebenen Kontext.</summary>
+        <returns>Der angegebene Kontext.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

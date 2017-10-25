@@ -1,0 +1,269 @@
+<Type Name="EncryptedSecurityTokenHandler" FullName="System.IdentityModel.Tokens.EncryptedSecurityTokenHandler">
+  <TypeSignature Language="C#" Value="public class EncryptedSecurityTokenHandler : System.IdentityModel.Tokens.SecurityTokenHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EncryptedSecurityTokenHandler extends System.IdentityModel.Tokens.SecurityTokenHandler" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Tokens.SecurityTokenHandler</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ein token Handler für verschlüsselte Sicherheitstoken. Handles-Token des Typs <see cref="T:System.IdentityModel.Tokens.EncryptedSecurityToken" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein token Handler, der serialisiert und deserialisiert <xref:System.IdentityModel.Tokens.EncryptedSecurityToken> Objekte aus `<xenc:EncryptedData>` Elemente und <xref:System.IdentityModel.Tokens.EncryptedKeyIdentifierClause> Objekte aus `<xenc:EncryptedKey>` Elemente gemäß der Spezifikation "XML Encryption Syntax and Processing" (http://www.w3.org/TR/2002/ REC-xmlenc-core-20021210).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EncryptedSecurityTokenHandler ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanReadKeyIdentifierClause">
+      <MemberSignature Language="C#" Value="public override bool CanReadKeyIdentifierClause (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanReadKeyIdentifierClause(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler.CanReadKeyIdentifierClause(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Ein XmlReader am Startelement positioniert. Der Leser sollte nicht erweitert werden.</param>
+        <summary>Gibt einen Wert, der angibt, ob das aktuelle XML-Element verweist ein <see langword="&lt;xenc:EncryptedKey&gt;" /> Element, das zu deserialisierende kann eine <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> von dieser Instanz.</summary>
+        <returns>
+          <see langword="true" />Wenn der XML-Reader positioniert ist, auf ein <see langword="&lt;xenc:EncryptedKey&gt;" /> Element gemäß Abschnitt 3.5.1 der XML Encryption Syntax and Processing-Spezifikation (http://www.w3.org/TR/2002/REC-xmlenc-core-20021210); andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanReadToken">
+      <MemberSignature Language="C#" Value="public override bool CanReadToken (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanReadToken(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler.CanReadToken(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der Reader am ein Sicherheitstoken (<see langword="&lt;xenc:EncryptedData&gt;" /> Element.)</param>
+        <summary>Gibt einen Wert, der angibt, ob der Reader verweist ein <see langword="&lt;xenc:EncryptedData&gt;" /> Element.</summary>
+        <returns>
+          <see langword="true" />Wenn der Reader positioniert ist, auf ein <see langword="&lt;xenc:EncryptedData&gt;" /> Element ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verschiebt den Reader nicht, Bindungsprozesses `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanWriteToken">
+      <MemberSignature Language="C#" Value="public override bool CanWriteToken { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanWriteToken" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler.CanWriteToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Handler Serialisierungsfunktionalität für Token bereitstellt.</summary>
+        <value>
+          <see langword="true" />Wenn der Handler Token serialisieren kann. andernfalls <see langword="false" />. Immer <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTokenTypeIdentifiers">
+      <MemberSignature Language="C#" Value="public override string[] GetTokenTypeIdentifiers ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string[] GetTokenTypeIdentifiers() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler.GetTokenTypeIdentifiers" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Typbezeichner URIs für Token behandelt, die von der aktuellen Instanz ab.</summary>
+        <returns>Standardmäßig gibt ein Array mit einem einzelnen <see langword="null" /> , da kein bestimmtes Tokentyp-Bezeichner, der zugeordnet ist eine Zeichenfolge der <see cref="T:System.IdentityModel.Tokens.EncryptedSecurityToken" /> Typ.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyInfoSerializer">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Selectors.SecurityTokenSerializer KeyInfoSerializer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Selectors.SecurityTokenSerializer KeyInfoSerializer" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler.KeyInfoSerializer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Selectors.SecurityTokenSerializer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <see cref="T:System.IdentityModel.Selectors.SecurityTokenSerializer" /> , die zum Serialisieren und Deserialisieren des Schlüsselbezeichners aus verwendet werden wird die <see langword="&lt;xenc:EncryptedData&gt;" /> Element.</summary>
+        <value>Das token-Serialisierungsprogramm, das zum Lesen und Schreiben von Schlüssel-IDs der verwendet wird.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Versuch, die Eigenschaft auf festgelegt <see langword="null" /> auftritt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadKeyIdentifierClause">
+      <MemberSignature Language="C#" Value="public override System.IdentityModel.Tokens.SecurityKeyIdentifierClause ReadKeyIdentifierClause (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IdentityModel.Tokens.SecurityKeyIdentifierClause ReadKeyIdentifierClause(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler.ReadKeyIdentifierClause(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Ein XML-Reader positioniert eine <see langword="&lt;xenc:EncryptedKey&gt;" /> Element als in "http://www.w3.org/TR/2002/REC-xmlenc-core-20021210" definiert ist, andernfalls <see langword="false" />.</param>
+        <summary>Liest eine <see cref="T:System.IdentityModel.Tokens.EncryptedKeyIdentifierClause" /> aus einem XML-Datenstrom.</summary>
+        <returns>Eine schlüsselbezeichnerklausel des Typs <see cref="T:System.IdentityModel.Tokens.EncryptedKeyIdentifierClause" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="reader" />befindet sich nicht auf eine <see langword="&lt;xenc:EncryptedKey&gt;" /> Element.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadToken">
+      <MemberSignature Language="C#" Value="public override System.IdentityModel.Tokens.SecurityToken ReadToken (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IdentityModel.Tokens.SecurityToken ReadToken(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler.ReadToken(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der Reader, aus dem das Token gelesen werden soll.</param>
+        <summary>Liest ein verschlüsseltes Sicherheitstoken an.</summary>
+        <returns>Ein Sicherheitstoken vom Typ <see cref="T:System.IdentityModel.Tokens.EncryptedSecurityToken" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Es ist kein konfigurierten Service-token-Konfliktlöser. (Entweder die <see cref="P:System.IdentityModel.Tokens.SecurityTokenHandler.Configuration" /> Eigenschaft oder die <see cref="P:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration.ServiceTokenResolver" /> Eigenschaft der referenzierten Tokenhandler Konfiguration ist <see langword="null" />. Ein Dienst-tokenresolver ist erforderlich, um die Schlüssel für die Entschlüsselung abrufen.  
+  
+ - oder -   
+  
+ Die <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandlerCollection" /> verwiesen wird, über die <see cref="P:System.IdentityModel.Tokens.SecurityTokenHandler.ContainingCollection" /> Eigenschaft wurde nicht gefunden wird eine <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandler" /> , die entschlüsselte XML lesen und zurückgeben kann eine <see cref="T:System.IdentityModel.Tokens.SecurityToken" />.</exception>
+        <exception cref="T:System.IdentityModel.Tokens.SecurityTokenException">Ein <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifier" /> innerhalb der XML-Code verweist, die der Reader wurde nicht gefunden.  
+  
+ - oder -   
+  
+ Die <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifier" /> ist eine <see cref="T:System.IdentityModel.Tokens.SymmetricSecurityKey" />.</exception>
+        <exception cref="T:System.IdentityModel.Tokens.EncryptedTokenDecryptionFailedException">Die <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifier" /> gefunden innerhalb der XML-Code kann nicht aufgelöst werden, durch den konfigurierten Service-token-Resolver auf eine <see cref="T:System.IdentityModel.Tokens.SecurityKey" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenType">
+      <MemberSignature Language="C#" Value="public override Type TokenType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type TokenType" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler.TokenType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Tokens behandelt, die von der aktuellen Instanz ab.</summary>
+        <value>Der Tokentyp behandelt, die von der aktuellen Instanz. Die Standardeinstellung ist <see langword="typeof" /> <see cref="T:System.IdentityModel.Tokens.EncryptedSecurityToken" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteToken">
+      <MemberSignature Language="C#" Value="public override void WriteToken (System.Xml.XmlWriter writer, System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteToken(class System.Xml.XmlWriter writer, class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler.WriteToken(System.Xml.XmlWriter,System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der XML-Writer, der das verschlüsselte Token zu schreiben.</param>
+        <param name="token">Das verschlüsselte Sicherheitstoken muss eine Instanz von <see cref="T:System.IdentityModel.Tokens.EncryptedSecurityToken" />.</param>
+        <summary>Schreibt ein verschlüsseltes Sicherheitstoken mit dem XML-Writer.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="token" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="token" />abfragesichtausdrucks kann nicht als <see cref="T:System.IdentityModel.Tokens.EncryptedSecurityToken" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.IdentityModel.Tokens.SecurityTokenHandler.Configuration" />-Eigenschaft ist <see langword="null" />. Diese Eigenschaft ist für das Abrufen von Schlüsseln für die Verschlüsselung erforderlich.  
+  
+ - oder -   
+  
+ Der Tokenhandler Auflistung zurückgegebenes der <see cref="P:System.IdentityModel.Tokens.SecurityTokenHandler.ContainingCollection" /> Eigenschaft wurde nicht gefunden eine <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandler" /> schreiben, die <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> zurückgegebenes der <see cref="P:System.IdentityModel.Tokens.EncryptedSecurityToken.Token" /> Eigenschaft.</exception>
+        <exception cref="T:System.IdentityModel.Tokens.SecurityTokenException">Die <see cref="P:System.IdentityModel.Tokens.EncryptingCredentials.SecurityKey" /> Eigenschaft abfragesichtausdrucks kann nicht als <see cref="T:System.IdentityModel.Tokens.SymmetricSecurityKey" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

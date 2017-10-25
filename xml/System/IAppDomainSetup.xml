@@ -1,0 +1,286 @@
+<Type Name="IAppDomainSetup" FullName="System.IAppDomainSetup">
+  <TypeSignature Language="C#" Value="public interface IAppDomainSetup" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IAppDomainSetup" />
+  <TypeSignature Language="DocId" Value="T:System.IAppDomainSetup" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("27FFF232-A7A8-40dd-8D4A-734AD59FCD41")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Assembly-Bindungsinformationen dar, die einer Instanz von <see cref="T:System.AppDomain" /> hinzugefügt werden können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Member dieser Schnittstelle werden verwendet, mit der <xref:System.AppDomain.GetData%2A?displayProperty=nameWithType> und <xref:System.AppDomain.SetData%2A?displayProperty=nameWithType> Methoden zum Identifizieren der <xref:System.AppDomain> Daten verwendet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ApplicationBase">
+      <MemberSignature Language="C#" Value="public string ApplicationBase { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationBase" />
+      <MemberSignature Language="DocId" Value="P:System.IAppDomainSetup.ApplicationBase" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Verzeichnisses ab, das die Anwendung enthält, oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.String" /> der Basisverzeichnisses enthält den Namen des Basisverzeichnisses der Anwendung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Abrufen oder Festlegen der Assemblys Cache-Manager ANWENDUNGSBASIS Variable verwendet. Dies ist das Verzeichnis, in dem die Assembly-Manager beginnen soll Suche nach Assemblys. Diese Eigenschaft kann nicht geändert werden, nachdem die <xref:System.AppDomain> die erste Bindung wurde beendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationName">
+      <MemberSignature Language="C#" Value="public string ApplicationName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationName" />
+      <MemberSignature Language="DocId" Value="P:System.IAppDomainSetup.ApplicationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Anwendung ab oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.String" /> , der den Namen der Anwendung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CachePath">
+      <MemberSignature Language="C#" Value="public string CachePath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CachePath" />
+      <MemberSignature Language="DocId" Value="P:System.IAppDomainSetup.CachePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt und definiert den Namen eines bestimmten an die Anwendung, in dem Dateien gespiegelt werden.</summary>
+        <value>Ein <see cref="T:System.String" /> also den voll qualifizierten Namen den Namen des Verzeichnisses Pfad und Dateinamen, in dem Dateien gespiegelt werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigurationFile">
+      <MemberSignature Language="C#" Value="public string ConfigurationFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConfigurationFile" />
+      <MemberSignature Language="DocId" Value="P:System.IAppDomainSetup.ConfigurationFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt und definiert den Namen der Konfigurationsdatei für eine Anwendungsdomäne.</summary>
+        <value>Ein <see cref="T:System.String" /> , der den Namen der Konfigurationsdatei angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Konfigurationsdatei beschreibt die Suchregeln und die Konfigurationsdaten für die Anwendungsdomäne. Der Host, der die Anwendungsdomäne erstellt ist verantwortlich für diese Daten bereitstellt, da die sinnvolle Werte von Fall zu Fall unterschiedlich sein.  
+  
+ Beispielsweise ist die Konfigurationsdaten für ASP.NET-Anwendungen für jede Anwendung, Website und -Computer gespeichert, während die Konfigurationsdaten für eine ausführbare Datei für jede Anwendung, Benutzer und Computer gespeichert ist. Nur der Host weiß, die Einzelheiten der Konfigurationsdaten für eine bestimmte Situation.  
+  
+ Diese Eigenschaft kann nicht geändert werden, nachdem die <xref:System.AppDomain> die erste Bindung wurde beendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DynamicBase">
+      <MemberSignature Language="C#" Value="public string DynamicBase { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DynamicBase" />
+      <MemberSignature Language="DocId" Value="P:System.IAppDomainSetup.DynamicBase" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Verzeichnis, in dem dynamisch generierte Dateien gespeichert und auf die zugegriffen werden.</summary>
+        <value>Ein <see cref="T:System.String" /> , die das Verzeichnis mit dynamischen Assemblys angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein <xref:System.AppDomain> wird erstellt, ein Verzeichnis namens dynamischen Verzeichnis angegeben werden, um dynamische Assemblys zu speichern. Dieses Verzeichnis befindet sich unter logisch der <xref:System.AppDomainSetup.ApplicationBase%2A>, obwohl sie in einem anderen Teil des Verzeichnisses befinden kann.  
+  
+ Diese Eigenschaft kann nicht geändert werden, nachdem die <xref:System.AppDomain> die erste Bindung wurde beendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LicenseFile">
+      <MemberSignature Language="C#" Value="public string LicenseFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LicenseFile" />
+      <MemberSignature Language="DocId" Value="P:System.IAppDomainSetup.LicenseFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Position der dieser Domäne zugeordneten Lizenzdatei ab oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.String" /> , der den Namen der Lizenzdatei angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrivateBinPath">
+      <MemberSignature Language="C#" Value="public string PrivateBinPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PrivateBinPath" />
+      <MemberSignature Language="DocId" Value="P:System.IAppDomainSetup.PrivateBinPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Liste der Verzeichnisse, die mit kombiniert wird die <see cref="P:System.AppDomainSetup.ApplicationBase" /> Verzeichnis, das nach privaten Assemblys suchen.</summary>
+        <value>Ein <see cref="T:System.String" /> mit einer Liste von Verzeichnisnamen, wobei jeder Name wird durch ein Semikolon getrennt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Private Assemblys werden in der gleichen Verzeichnisstruktur, wie die Anwendung bereitgestellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrivateBinPathProbe">
+      <MemberSignature Language="C#" Value="public string PrivateBinPathProbe { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PrivateBinPathProbe" />
+      <MemberSignature Language="DocId" Value="P:System.IAppDomainSetup.PrivateBinPathProbe" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder festlegen den privaten binäre Verzeichnispfad verwendet, um eine Anwendung zu suchen.</summary>
+        <value>Ein <see cref="T:System.String" /> mit einer Liste von Verzeichnisnamen, wobei jeder Name wird durch ein Semikolon getrennt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legen Sie diese Eigenschaft, um den Verzeichnispfad für die Anwendung von der Suche für die Anwendung auszuschließen. Die Suche ist auf private und globale binäre Verzeichnispfade und dem globalen Assemblycache beschränkt.  
+  
+ Diese Eigenschaft kann nicht geändert werden, nachdem die <xref:System.AppDomain> die erste Bindung wurde beendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShadowCopyDirectories">
+      <MemberSignature Language="C#" Value="public string ShadowCopyDirectories { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ShadowCopyDirectories" />
+      <MemberSignature Language="DocId" Value="P:System.IAppDomainSetup.ShadowCopyDirectories" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Namen der Verzeichnisse mit zu spiegelnden Assemblys ab oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.String" /> mit einer Liste von Verzeichnisnamen, wobei jeder Name wird durch ein Semikolon getrennt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle angegebenen Verzeichnisse <xref:System.AppDomainSetup.PrivateBinPath%2A>, einschließlich des durch angegebenen Verzeichnisses <xref:System.AppDomainSetup.ApplicationBase%2A>, sind Sie Schattenkopien in der Standardeinstellung, wenn diese Eigenschaft nicht festgelegt ist.  
+  
+ Wenn eine ausführbare Datei verwendet wird, werden Updates für die ausführbare Datei in eine Schattenkopieverzeichnis gespeichert. Vorhandene Benutzer weiterhin die ursprüngliche ausführbare Datei verwenden, bis er beendet wird, während neue Benutzer kopiert des Schattens ausführbare Datei.  
+  
+ Diese Eigenschaft kann nicht geändert werden, nachdem die <xref:System.AppDomain> die erste Bindung wurde beendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShadowCopyFiles">
+      <MemberSignature Language="C#" Value="public string ShadowCopyFiles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ShadowCopyFiles" />
+      <MemberSignature Language="DocId" Value="P:System.IAppDomainSetup.ShadowCopyFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge ab, die angibt, ob das Spiegeln ein- oder ausgeschaltet ist.</summary>
+        <value>Ein <see cref="T:System.String" /> FESTSTELLTASTE aktiviert ist, die den Wert "True" für aktiviertes Erstellen von Schattenkopien oder "false" für die von Schattenkopien deaktiviert ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann nicht geändert werden, nachdem die <xref:System.AppDomain> die erste Bindung wurde beendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

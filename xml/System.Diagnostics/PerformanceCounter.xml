@@ -1,0 +1,1541 @@
+<Type Name="PerformanceCounter" FullName="System.Diagnostics.PerformanceCounter">
+  <TypeSignature Language="C#" Value="public sealed class PerformanceCounter : System.ComponentModel.Component, System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PerformanceCounter extends System.ComponentModel.Component implements class System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.PerformanceCounter" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Component</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ISupportInitialize</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.InstallerType(typeof(System.Diagnostics.PerformanceCounterInstaller))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Windows NT-Leistungsindikatorkomponente dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.PerformanceCounter> Komponente kann für vorhandene vordefinierte oder benutzerdefinierte Leistungsindikatoren lesen und veröffentlichen (Schreiben) Leistung verwendet werden Daten für benutzerdefinierte Indikatoren.  
+  
+ Es gibt zahlreiche vordefinierte Leistungsindikatoren aufgeführt, die im Windows-Systemmonitor [im Dialogfeld Leistungsindikatoren hinzufügen](http://go.microsoft.com/fwlink/p/?LinkId=257854). Weitere Informationen zu den .NET Framework-Leistungsindikatoren finden Sie unter [Leistungsindikatoren](~/docs/framework/debug-trace-profile/performance-counters.md).  
+  
+ Dieser Typ implementiert die <xref:System.IDisposable> Schnittstelle. Wenn Sie mithilfe des Typs abgeschlossen haben, sollten Sie es entweder direkt oder indirekt freigeben. Aufrufen, um den Typ direkt zu verwerfen, dessen <xref:System.IDisposable.Dispose%2A> Methode in einer `try` / `catch` Block. Um es indirekt freizugeben, verwenden Sie ein Sprachkonstrukt z. B. `using` (in c#) oder `Using` (in Visual Basic). Weitere Informationen finden Sie im Abschnitt "Verwenden eines Objekts, implementiert IDisposable" in der <xref:System.IDisposable> Thema zur Schnittstelle.  
+  
+> [!IMPORTANT]
+>  In den Versionen 1.0 und 1.1 von .NET Framework benötigt diese Klasse direkten Aufrufern voll vertrauenswürdig sind. Beginnend mit .NET Framework, Version 2.0, diese Klasse benötigt <xref:System.Diagnostics.PerformanceCounterPermission> für bestimmte Aktionen. Es wird dringend empfohlen, die <xref:System.Diagnostics.PerformanceCounterPermission> nicht teilweise vertrauenswürdigem Code erteilt werden.  Die Möglichkeit zum Lesen und Schreiben von Leistungsindikatoren kann Code z. B. das Durchzählen ausgeführte Prozesse und Abrufen von Informationen zu diesen Aktionen.  
+>   
+>  Darüber hinaus übergibt eine <xref:System.Diagnostics.PerformanceCounter> Objekt weniger vertrauenswürdigen Code kann ein Sicherheitsproblem erstellen. Übergeben Sie nie Leistung Zählerobjekte, z. B. eine <xref:System.Diagnostics.PerformanceCounterCategory> oder <xref:System.Diagnostics.PerformanceCounter>in weniger vertrauenswürdigen Code.  
+  
+ Zum Lesen aus einem Leistungsindikator erstellen Sie eine Instanz von der <xref:System.Diagnostics.PerformanceCounter> Klasse, legen die <xref:System.Diagnostics.PerformanceCounter.CategoryName%2A>, <xref:System.Diagnostics.PerformanceCounter.CounterName%2A>, und optional die <xref:System.Diagnostics.PerformanceCounter.InstanceName%2A> oder <xref:System.Diagnostics.PerformanceCounter.MachineName%2A> Eigenschaften, und rufen Sie dann die <xref:System.Diagnostics.PerformanceCounter.NextValue%2A> Methode, um eine Leistung Leistungsindikator lesen.  
+  
+ Zum Veröffentlichen von Leistungsindikatordaten, erstellen Sie einen oder mehrere benutzerdefinierte Leistungsindikatoren, die mit der <xref:System.Diagnostics.PerformanceCounterCategory.Create%2A?displayProperty=nameWithType> -Methode, erstellen Sie eine Instanz von der <xref:System.Diagnostics.PerformanceCounter> Klasse, legen die <xref:System.Diagnostics.PerformanceCounter.CategoryName%2A>, <xref:System.Diagnostics.PerformanceCounter.CounterName%2A> und optional <xref:System.Diagnostics.PerformanceCounter.InstanceName%2A> oder <xref:System.Diagnostics.PerformanceCounter.MachineName%2A> Eigenschaften und rufen Sie anschließend die <xref:System.Diagnostics.PerformanceCounter.IncrementBy%2A>, <xref:System.Diagnostics.PerformanceCounter.Increment%2A>, oder <xref:System.Diagnostics.PerformanceCounter.Decrement%2A> Methoden oder Festlegen der <xref:System.Diagnostics.PerformanceCounter.RawValue%2A> Eigenschaft, um den Wert von dem benutzerdefinierten Indikatorensatz zu ändern.  
+  
+> [!NOTE]
+>  Die <xref:System.Diagnostics.PerformanceCounter.Increment%2A>, <xref:System.Diagnostics.PerformanceCounter.IncrementBy%2A>, und <xref:System.Diagnostics.PerformanceCounter.Decrement%2A> Methoden Sperren verwenden, um den Zählerwert zu aktualisieren. Dadurch wird den Wert dieses Indikators im Multithread- oder mehrerer Prozesse Szenarien, sondern auch zu Leistungseinbußen führt genau beibehalten. Wenn Sie die Genauigkeit nicht benötigen, die interlocked Operationen zu gewährleisten, können Sie aktualisieren die <xref:System.Diagnostics.PerformanceCounter.RawValue%2A> Eigenschaft direkt für bis zu 5 Mal leistungsverbesserung.  Allerdings möglicherweise in Multithreadszenarien, einige Updates an der Wert dieses Indikators ignoriert, wodurch ungenaue Daten.  
+  
+ Der Indikator ist ein Mechanismus, durch die die, den Leistung der Datenerfassung. Die Registrierung speichert die Namen aller Leistungsindikatoren, von denen jeder mit einem bestimmten Bereich der Systemfunktionalität verknüpft ist. Beispiele sind die Auslastung des Prozessors, speicherauslastung oder die Anzahl der Bytes, die über eine Netzwerkverbindung empfangen.  
+  
+ Jeder Leistungsindikator wird durch seinen Namen und den Speicherort eindeutig identifiziert. Auf die gleiche Weise, dass ein Dateipfad ein Laufwerk, ein Verzeichnis, ein oder mehrere Unterverzeichnisse und einen Dateinamen enthält, besteht die Indikatorinformationen vier Elemente: der Computer, der Kategorie, die Kategorieinstanz und den Namen des Leistungsindikators.  
+  
+ Die Indikatorinformationen muss die Kategorie oder die Leistungsobjekt, das Daten für den Leistungsindikator misst, enthalten. Ein Computer sind u. a. physische Komponenten, z. B. Prozessoren, Datenträger und Speicher. Es gibt auch System Kategorien, z. B. Prozesse und Threads. Jede Kategorie bezieht sich auf eine funktionale Element innerhalb des Computers, und ein Satz von standardmäßigen Leistungsindikatoren zugewiesen. Diese Objekte sind in der Leistung Objekt Dropdown-Liste im Dialogfeld Leistungsindikatoren hinzufügen in der Windows 2000-Systemmonitor aufgeführt, und müssen Sie sie in der Leistungsindikatorpfad einschließen. Leistungsdaten ist nach gruppiert die Kategorie, der sie zugeordnet sind.  
+  
+ In bestimmten Fällen können mehrere Kopien der gleichen Kategorie vorhanden sein. Z. B. mehrere Prozesse und Threads gleichzeitig ausgeführt werden, und einige Computer enthalten mehr als ein Prozessor. Die Kategorie Kopien sind Kategorieinstanzen aufgerufen, und jede Instanz verfügt über einen Satz von standardmäßigen Leistungsindikatoren zugewiesen. Wenn eine Kategorie mehrere Instanzen verfügen kann, muss eine Instanzspezifikation in die Indikatorinformationen enthalten sein.  
+  
+ Rufen Sie zum Abrufen von Leistungsdaten für die Leistungsindikatoren, die einen ersten oder den vorherigen Wert für das Ausführen der erforderlichen Berechnung erforderlich, die <xref:System.Diagnostics.PerformanceCounter.NextValue%2A> Methode zweimal und verwenden, die die Informationen zurückgegeben, die Anwendung erforderlich sind.  
+  
+> [!NOTE]
+>  Leistungsindikatorkategorien installiert, mit der [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] separaten freigegebenen Arbeitsspeicher mit jeder eine eigene Speicherkapazität Leistungsindikatorkategorie verwenden. Sie können die Größe des separater freigegebener Arbeitsspeicher angeben, indem Sie einen DWORD-Wert mit dem Namen FileMappingSize im Registrierungsschlüssel HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<Kategorienamen >*\ Die Leistung. Der FileMappingSize-Wert wird auf die freigegebene Speichergröße der Kategorie festgelegt. Die Standardgröße beträgt, Dezimal 131072. Wenn der FileMappingSize-Wert nicht vorhanden ist, ist die `fileMappingSize` -Attributwert für das `performanceCounters` in der Datei "Machine.config" angegebene Element verwendet wird, was zu zusätzlichem Aufwand für die Verarbeitung der Konfigurationsdatei. Sie können für den Start der Anwendung verbessert die Leistung durch Festlegen der Größe der Zuordnung in der Registrierung mit sich bringen. Weitere Informationen zur Größe Zuordnung finden Sie unter [ &lt;PerformanceCounters&gt;](~/docs/framework/configure-apps/file-schema/trace-debug/performancecounters-element.md).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Diagnostics.PerformanceCounter> Klasse zum Erstellen und Verwenden einer <xref:System.Diagnostics.PerformanceCounterType.AverageCount64> Leistungsindikator Typ. Im Beispiel Kategorien erstellt, Zähler eingerichtet, sammelt Daten aus den Leistungsindikatoren und ruft die <xref:System.Diagnostics.CounterSampleCalculator> Klasse, um die Leistungsindikatordaten zu interpretieren. Die intermediate und letzte Ergebnisse werden im Konsolenfenster angezeigt. Weitere Beispiele für andere Leistungsindikatortypen finden Sie unter der <xref:System.Diagnostics.PerformanceCounterType> Enumeration.  
+  
+ [!code-cpp[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/cpp/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/CPP/averagecount32.cpp#1)]
+ [!code-csharp[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/csharp/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/CS/averagecount32.cs#1)]
+ [!code-vb[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/VB/averagecount32.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PerformanceCounter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue schreibgeschützte Instanz der dem <see cref="T:System.Diagnostics.PerformanceCounter" /> -Klasse, ohne diese Instanz mit einem System- oder benutzerdefinierten Leistungsindikator zuzuordnen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung des Konstruktors die <xref:System.Diagnostics.PerformanceCounter.CategoryName%2A>, <xref:System.Diagnostics.PerformanceCounter.CounterName%2A>, und <xref:System.Diagnostics.PerformanceCounter.InstanceName%2A> Eigenschaften auf leere Zeichenfolgen (""), und legt die <xref:System.Diagnostics.PerformanceCounter.MachineName%2A> Eigenschaft auf dem lokalen Computer (".").  
+  
+ Dieser Konstruktor initialisiert den Leistungsindikator nicht, damit sie einen vorhandenen Indikator auf dem lokalen Computer nicht die Instanz zugeordnet ist. Verweisen auf einen bestimmten Leistungsindikator festgelegt die <xref:System.Diagnostics.PerformanceCounter.CategoryName%2A>, <xref:System.Diagnostics.PerformanceCounter.CounterName%2A>, und optional die <xref:System.Diagnostics.PerformanceCounter.InstanceName%2A> und <xref:System.Diagnostics.PerformanceCounter.MachineName%2A> Eigenschaften vor dem Lesen weiterer Eigenschaften oder Versuch eines Leistungsindikators zu lesen. Um einen Leistungsindikator zu schreiben, legen die <xref:System.Diagnostics.PerformanceCounter.ReadOnly%2A> Eigenschaft `false`.  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diesen Member angewendeten-Attribut besitzt den folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.Synchronization> &#124; <xref:System.Security.Permissions.HostProtectionResource.SharedState>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine Standardinstanz von die <xref:System.Diagnostics.PerformanceCounter> Klasse. Nach der Erstellung der Instanz die <xref:System.Diagnostics.PerformanceCounter.CategoryName%2A>, <xref:System.Diagnostics.PerformanceCounter.CounterName%2A>, und <xref:System.Diagnostics.PerformanceCounter.InstanceName%2A> Eigenschaftswerte sind Satz und die Ergebnisse eines Aufrufs an die <xref:System.Diagnostics.PerformanceCounter.NextValue%2A> Methode werden angezeigt.  
+  
+ [!code-cpp[PerfCounter#1](~/samples/snippets/cpp/VS_Snippets_CLR/PerfCounter/CPP/perfcounter.cpp#1)]
+ [!code-csharp[PerfCounter#1](~/samples/snippets/csharp/VS_Snippets_CLR/PerfCounter/CS/perfcounter.cs#1)]
+ [!code-vb[PerfCounter#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerfCounter/VB/perfcounter.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.PlatformNotSupportedException">Die Plattform ist Windows 98 oder Windows Millennium Edition (Me), die Leistungsindikatoren nicht unterstützt.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">zum Schreiben der Leistungsindikatorkategorie, wenn die <see cref="P:System.Diagnostics.PerformanceCounter.ReadOnly" /> Eigenschaft ist <see langword="false" />. Zugeordnete Enumeration: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Write" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PerformanceCounter (string categoryName, string counterName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string categoryName, string counterName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounter.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="categoryName" Type="System.String" />
+        <Parameter Name="counterName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="categoryName">Der Name des der Leistungsindikatorkategorie (Leistungsobjekt ""), die dieser Leistungsindikator zugeordnet ist.</param>
+        <param name="counterName">Der Name des Leistungsindikators "".</param>
+        <summary>Initialisiert eine neue schreibgeschützte Instanz der dem <see cref="T:System.Diagnostics.PerformanceCounter" /> -Klasse und ordnet dieses dem angegebenen System- oder benutzerdefinierten Leistungsindikator auf dem lokalen Computer. Dieser Konstruktor ist erforderlich, dass die Kategorie eine einzelne Instanz verfügen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Parameterzeichenfolgen werden nicht beachtet.  
+  
+ Verwenden Sie diese Überladung, um einen Zähler auf dem lokalen Computer keinen Zugriff auf eine Kategorie, Kategorie eine einzelne Leistungsindikatorinstanz enthält. Wenn Sie versuchen, diesen Konstruktor verwenden, um dies zu zeigen <xref:System.Diagnostics.PerformanceCounter> Instanz auf eine Kategorie, die mehrere Instanzen, die Konstruktors löst eine Ausnahme enthält. Diese Überladung kann Zugriff auf alle schreibgeschützten oder Lese-/Schreibzugriff Zähler, jedoch führt dies in einer nur-Lese-Modus. Ein <xref:System.Diagnostics.PerformanceCounter> Instanz erstellt wurde, verwenden diese Überladung kann nicht in den Zähler schreiben, selbst wenn der Zähler selbst Lese-/Schreibzugriff verfügt.  
+  
+ Diese Überladung des Konstruktors die <xref:System.Diagnostics.PerformanceCounter.CategoryName%2A> und <xref:System.Diagnostics.PerformanceCounter.CounterName%2A> Eigenschaften auf die Werte übergeben, wird dadurch die <xref:System.Diagnostics.PerformanceCounter.MachineName%2A> Eigenschaft auf dem lokalen Computer ".", und legt sie fest die <xref:System.Diagnostics.PerformanceCounter.InstanceName%2A> Eigenschaft auf eine leere Zeichenfolge ("").  
+  
+ Dieser Konstruktor initialisiert den Leistungsindikator und ordnet die Instanz einem vorhandenen Leistungsindikator (ein System oder einen benutzerdefinierten Indikator) auf dem lokalen Computer. Die Werte, die Sie, für übergeben die <xref:System.Diagnostics.PerformanceCounter.CategoryName%2A> und <xref:System.Diagnostics.PerformanceCounter.CounterName%2A> Eigenschaften müssen auf einen vorhandenen Leistungsindikator auf dem lokalen Computer verweisen.  
+  
+> [!NOTE]
+>  Zum Lesen von Leistungsindikatoren in Windows Vista, Windows XP Professional X64 Edition oder Windows Server 2003 müssen Sie Mitglied der Gruppe Systemmonitorbenutzer sein oder über Administratorrechte verfügen.  
+>   
+>  Um zu vermeiden, dass Ihre Berechtigungen für den Zugriff auf Leistungsindikatoren in Windows Vista erhöhen, fügen Sie der Gruppe Systemmonitorbenutzer selbst.  
+>   
+>  Unter Windows Vista werden die Berechtigungen eines Benutzers über die Benutzerkontensteuerung (User Account Control, UAC) bestimmt. Als Mitglied der integrierten Administratorgruppe sind Ihnen zwei Zugriffstoken für die Laufzeit zugewiesen: ein Standardbenutzertoken und ein Administratorzugriffstoken. Standardmäßig verwenden Sie die Standardbenutzerrolle. Um den Code auszuführen, der auf Leistungsindikatoren zugreift, müssen Sie zuerst Ihre Berechtigungen von Standardbenutzer auf Administrator erhöhen. Dazu starten Sie eine Anwendung, indem Sie mit der rechten Maustaste auf das Anwendungssymbol klicken und angeben, dass Sie die Anwendung als Administrator ausführen möchten.   
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="categoryName" /> ist eine leere Zeichenfolge ("").  
+  
+ - oder -   
+  
+ <paramref name="counterName" /> ist eine leere Zeichenfolge ("").  
+  
+ - oder -   
+  
+ Die angegebene Kategorie ist nicht vorhanden.  
+  
+ - oder -   
+  
+ Die angegebene Kategorie wird als mit mehreren Instanzen markiert und erfordert den Leistungsindikator mit einem Instanznamen erstellt werden.  
+  
+ - oder -   
+  
+ <paramref name="categoryName" />und <paramref name="counterName" /> haben unterschiedliche Sprachen lokalisiert wurden.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="categoryName" /> oder <paramref name="counterName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Beim Zugreifen auf eine System-API ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Die Plattform ist Windows 98 oder Windows Millennium Edition (Me), die Leistungsindikatoren nicht unterstützt.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Code, der ausgeführt wird, ohne Administratorrechte hat versucht, einen Leistungsindikator zu lesen.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">zum Schreiben der Leistungsindikatorkategorie, wenn die <see cref="P:System.Diagnostics.PerformanceCounter.ReadOnly" /> Eigenschaft ist <see langword="false" />. Zugeordnete Enumeration: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Write" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PerformanceCounter (string categoryName, string counterName, bool readOnly);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string categoryName, string counterName, bool readOnly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounter.#ctor(System.String,System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="categoryName" Type="System.String" />
+        <Parameter Name="counterName" Type="System.String" />
+        <Parameter Name="readOnly" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="categoryName">Der Name des der Leistungsindikatorkategorie (Leistungsobjekt ""), die dieser Leistungsindikator zugeordnet ist.</param>
+        <param name="counterName">Der Name des Leistungsindikators "".</param>
+        <param name="readOnly">
+          <see langword="true" />auf der Zähler in nur-Lese-Modus (obwohl die Zähler selbst Lese-/Schreibzugriff sein kann); <see langword="false" /> des Indikators in Lese-/Schreibmodus auf.</param>
+        <summary>Initialisiert eine neue, schreibgeschützten oder Lese-/Schreibzugriff-Instanz, von der <see cref="T:System.Diagnostics.PerformanceCounter" /> -Klasse und ordnet dieses dem angegebenen System- oder benutzerdefinierten Leistungsindikator auf dem lokalen Computer. Dieser Konstruktor ist erforderlich, dass die Kategorie eine Einzelinstanz enthält.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Parameterzeichenfolgen werden nicht beachtet.  
+  
+ Verwenden Sie diese Überladung, um eine nur-Lese-Zugriff oder Lese-/Schreibzugriff Zähler auf dem lokalen Computer, der einer Kategorie, Kategorie eine einzelne Leistungsindikatorinstanz enthält angehört. Wenn Sie versuchen, diesen Konstruktor verwenden, um dies zu zeigen <xref:System.Diagnostics.PerformanceCounter> Instanz auf eine Kategorie, die mehrere Instanzen, die Konstruktors löst eine Ausnahme enthält.  
+  
+ Diese Überladung des Konstruktors die <xref:System.Diagnostics.PerformanceCounter.CategoryName%2A>, <xref:System.Diagnostics.PerformanceCounter.CounterName%2A>, und <xref:System.Diagnostics.PerformanceCounter.ReadOnly%2A> Eigenschaften auf die Werte übergeben, wird dadurch die <xref:System.Diagnostics.PerformanceCounter.MachineName%2A> Eigenschaft auf dem lokalen Computer ".", und legt sie fest die <xref:System.Diagnostics.PerformanceCounter.InstanceName%2A> Eigenschaft auf eine leere Zeichenfolge ("").  
+  
+ Dieser Konstruktor initialisiert den Leistungsindikator und ordnet die Instanz einem vorhandenen Leistungsindikator (ein System oder einen benutzerdefinierten Indikator) auf dem lokalen Computer. Die Werte, die Sie, für übergeben die <xref:System.Diagnostics.PerformanceCounter.CategoryName%2A> und <xref:System.Diagnostics.PerformanceCounter.CounterName%2A> Eigenschaften müssen auf einen vorhandenen Leistungsindikator auf dem lokalen Computer verweisen. Wenn die Instanz des Leistungsindikators, der Sie zeigen nicht gültig ist, löst das Aufrufen des Konstruktors eine Ausnahme aus.  
+  
+> [!NOTE]
+>  Verwenden Sie diese Überladung, für die Verbindung zu einem System, aber Sie können nicht geschrieben werden, um einen Leistungsindikator System. Daher ist das Festlegen `readOnly` zu `false` beim Herstellen einer Verbindung mit einen Leistungsindikator System führt dazu, dass des Konstruktors eine Ausnahme auslöst.  
+  
+> [!NOTE]
+>  Zum Lesen von Leistungsindikatoren in Windows Vista, Windows XP Professional X64 Edition oder Windows Server 2003 müssen Sie Mitglied der Gruppe Systemmonitorbenutzer sein oder über Administratorrechte verfügen.  
+>   
+>  Um zu vermeiden, dass Ihre Berechtigungen für den Zugriff auf Leistungsindikatoren in Windows Vista erhöhen, fügen Sie der Gruppe Systemmonitorbenutzer selbst.  
+>   
+>  Unter Windows Vista werden die Berechtigungen eines Benutzers über die Benutzerkontensteuerung (User Account Control, UAC) bestimmt. Als Mitglied der integrierten Administratorgruppe sind Ihnen zwei Zugriffstoken für die Laufzeit zugewiesen: ein Standardbenutzertoken und ein Administratorzugriffstoken. Standardmäßig verwenden Sie die Standardbenutzerrolle. Um den Code auszuführen, der auf Leistungsindikatoren zugreift, müssen Sie zuerst Ihre Berechtigungen von Standardbenutzer auf Administrator erhöhen. Dazu starten Sie eine Anwendung, indem Sie mit der rechten Maustaste auf das Anwendungssymbol klicken und angeben, dass Sie die Anwendung als Administrator ausführen möchten.   
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine Instanz von der <xref:System.Diagnostics.PerformanceCounter> Klasse. Im Beispiel übergibt Kategorienamen Indikatornamen und ein Flagwert, der angibt, dass der Zähler nicht schreibgeschützt ist. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.PerformanceCounter> Klasse.  
+  
+ [!code-cpp[PerformanceCounterType.AverageCounter64#2](~/samples/snippets/cpp/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/CPP/averagecount32.cpp#2)]
+ [!code-csharp[PerformanceCounterType.AverageCounter64#2](~/samples/snippets/csharp/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/CS/averagecount32.cs#2)]
+ [!code-vb[PerformanceCounterType.AverageCounter64#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/VB/averagecount32.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <paramref name="categoryName" /> ist eine leere Zeichenfolge ("").  
+  
+ - oder -   
+  
+ Die <paramref name="counterName" /> ist eine leere Zeichenfolge ("").  
+  
+ - oder -   
+  
+ Die angegebene Kategorie ist nicht vorhanden. (Wenn <paramref name="readOnly" /> ist <see langword="true" />).  
+  
+ - oder -   
+  
+ Die angegebene Kategorie ist keine benutzerdefinierte .NET Framework-Kategorie (Wenn <paramref name="readOnly" /> ist <see langword="false" />).  
+  
+ - oder -   
+  
+ Die angegebene Kategorie wird als mit mehreren Instanzen markiert und erfordert den Leistungsindikator mit einem Instanznamen erstellt werden.  
+  
+ - oder -   
+  
+ <paramref name="categoryName" />und <paramref name="counterName" /> haben unterschiedliche Sprachen lokalisiert wurden.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="categoryName" /> oder <paramref name="counterName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Beim Zugreifen auf eine System-API ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Die Plattform ist Windows 98 oder Windows Millennium Edition (Me), die Leistungsindikatoren nicht unterstützt.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Code, der ausgeführt wird, ohne Administratorrechte hat versucht, einen Leistungsindikator zu lesen.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">zum Schreiben der Leistungsindikatorkategorie, wenn die <see cref="P:System.Diagnostics.PerformanceCounter.ReadOnly" /> Eigenschaft ist <see langword="false" />. Zugeordnete Enumeration: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Write" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PerformanceCounter (string categoryName, string counterName, string instanceName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string categoryName, string counterName, string instanceName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounter.#ctor(System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="categoryName" Type="System.String" />
+        <Parameter Name="counterName" Type="System.String" />
+        <Parameter Name="instanceName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="categoryName">Der Name des der Leistungsindikatorkategorie (Leistungsobjekt ""), die dieser Leistungsindikator zugeordnet ist.</param>
+        <param name="counterName">Der Name des Leistungsindikators "".</param>
+        <param name="instanceName">Der Name der Kategorieinstanz des Leistungsindikators oder eine leere Zeichenfolge (""), wenn die Kategorie eine Einzelinstanz enthält.</param>
+        <summary>Initialisiert eine neue schreibgeschützte Instanz der dem <see cref="T:System.Diagnostics.PerformanceCounter" /> -Klasse und ordnet dieses dem angegebenen System- oder benutzerdefinierten Leistungsindikator und Kategorie Instanz auf dem lokalen Computer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Parameterzeichenfolgen werden nicht beachtet.  
+  
+ Diese Überladung des Konstruktors die <xref:System.Diagnostics.PerformanceCounter.CategoryName%2A>, <xref:System.Diagnostics.PerformanceCounter.CounterName%2A>, und <xref:System.Diagnostics.PerformanceCounter.InstanceName%2A> Eigenschaften mit den Werten Sie übergeben und legt die <xref:System.Diagnostics.PerformanceCounter.MachineName%2A> Eigenschaft auf dem lokalen Computer ".".  
+  
+ Dieser Konstruktor initialisiert den Leistungsindikator und ordnet die Instanz einem vorhandenen Leistungsindikator (ein System oder einen benutzerdefinierten Indikator) auf dem lokalen Computer. Die Werte, die Sie, für übergeben die <xref:System.Diagnostics.PerformanceCounter.CategoryName%2A>, <xref:System.Diagnostics.PerformanceCounter.CounterName%2A>, und <xref:System.Diagnostics.PerformanceCounter.InstanceName%2A> Eigenschaften müssen auf einen vorhandenen Leistungsindikator auf dem lokalen Computer verweisen. Wenn die Instanz des Leistungsindikators, der Sie zeigen nicht gültig ist, löst das Aufrufen des Konstruktors eine Ausnahme aus.  
+  
+ Diese Überladung kann Zugriff auf alle schreibgeschützten oder Lese-/Schreibzugriff Zähler, jedoch führt dies in einer nur-Lese-Modus. Ein <xref:System.Diagnostics.PerformanceCounter> Instanz erstellt wurde, verwenden diese Überladung kann nicht in den Zähler schreiben, selbst wenn der Zähler selbst Lese-/Schreibzugriff verfügt.  
+  
+ Geben Sie zum Erstellen einer Instanz einer Leistungskategorie ein `instanceName` auf die <xref:System.Diagnostics.PerformanceCounter.%23ctor%2A> Konstruktor. Wenn durch die Kategorieinstanz angegeben `instanceName` ist bereits vorhanden. das neue Objekt wird die vorhandene Kategorieinstanz verweisen.  
+  
+> [!NOTE]
+>  Zum Lesen von Leistungsindikatoren in Windows Vista, Windows XP Professional X64 Edition oder Windows Server 2003 müssen Sie Mitglied der Gruppe Systemmonitorbenutzer sein oder über Administratorrechte verfügen.  
+>   
+>  Um zu vermeiden, dass Ihre Berechtigungen für den Zugriff auf Leistungsindikatoren in Windows Vista erhöhen, fügen Sie der Gruppe Systemmonitorbenutzer selbst.  
+>   
+>  Unter Windows Vista werden die Berechtigungen eines Benutzers über die Benutzerkontensteuerung (User Account Control, UAC) bestimmt. Als Mitglied der integrierten Administratorgruppe sind Ihnen zwei Zugriffstoken für die Laufzeit zugewiesen: ein Standardbenutzertoken und ein Administratorzugriffstoken. Standardmäßig verwenden Sie die Standardbenutzerrolle. Um den Code auszuführen, der auf Leistungsindikatoren zugreift, müssen Sie zuerst Ihre Berechtigungen von Standardbenutzer auf Administrator erhöhen. Dazu starten Sie eine Anwendung, indem Sie mit der rechten Maustaste auf das Anwendungssymbol klicken und angeben, dass Sie die Anwendung als Administrator ausführen möchten.   
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="categoryName" /> ist eine leere Zeichenfolge ("").  
+  
+ - oder -   
+  
+ <paramref name="counterName" /> ist eine leere Zeichenfolge ("").  
+  
+ - oder -   
+  
+ Die angegebene Kategorie ist ungültig.  
+  
+ - oder -   
+  
+ Die angegebene Kategorie wird als mit mehreren Instanzen markiert und erfordert den Leistungsindikator mit einem Instanznamen erstellt werden.  
+  
+ - oder -   
+  
+ <paramref name="instanceName" />ist länger als 127 Zeichen.  
+  
+ - oder -   
+  
+ <paramref name="categoryName" />und <paramref name="counterName" /> haben unterschiedliche Sprachen lokalisiert wurden.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="categoryName" /> oder <paramref name="counterName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Beim Zugreifen auf eine System-API ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Die Plattform ist Windows 98 oder Windows Millennium Edition (Me), die Leistungsindikatoren nicht unterstützt.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Code, der ausgeführt wird, ohne Administratorrechte hat versucht, einen Leistungsindikator zu lesen.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">zum Schreiben der Leistungsindikatorkategorie, wenn die <see cref="P:System.Diagnostics.PerformanceCounter.ReadOnly" /> Eigenschaft ist <see langword="false" />. Zugeordnete Enumeration: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Write" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PerformanceCounter (string categoryName, string counterName, string instanceName, bool readOnly);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string categoryName, string counterName, string instanceName, bool readOnly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounter.#ctor(System.String,System.String,System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="categoryName" Type="System.String" />
+        <Parameter Name="counterName" Type="System.String" />
+        <Parameter Name="instanceName" Type="System.String" />
+        <Parameter Name="readOnly" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="categoryName">Der Name des der Leistungsindikatorkategorie (Leistungsobjekt ""), die dieser Leistungsindikator zugeordnet ist.</param>
+        <param name="counterName">Der Name des Leistungsindikators "".</param>
+        <param name="instanceName">Der Name der Kategorieinstanz des Leistungsindikators oder eine leere Zeichenfolge (""), wenn die Kategorie eine Einzelinstanz enthält.</param>
+        <param name="readOnly">
+          <see langword="true" />Um einen Leistungsindikator im Nur-Lese-Modus Zugriff auf den; <see langword="false" /> ein Indikator in Lese-/Schreibmodus auf.</param>
+        <summary>Initialisiert eine neue, schreibgeschützten oder Lese-/Schreibzugriff-Instanz, von der <see cref="T:System.Diagnostics.PerformanceCounter" /> -Klasse und ordnet dieses dem angegebenen System- oder benutzerdefinierten Leistungsindikator und Kategorie Instanz auf dem lokalen Computer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Parameterzeichenfolgen werden nicht beachtet.  
+  
+ Verwenden Sie diese Überladung einen Leistungsindikator in entweder den Zugriff auf nur-Lese oder Lese-/Schreibmodus.  
+  
+ Diese Überladung des Konstruktors die <xref:System.Diagnostics.PerformanceCounter.CategoryName%2A>, <xref:System.Diagnostics.PerformanceCounter.CounterName%2A>, und <xref:System.Diagnostics.PerformanceCounter.InstanceName%2A> Eigenschaften mit den Werten übergeben und legt die <xref:System.Diagnostics.PerformanceCounter.MachineName%2A> Eigenschaft auf dem lokalen Computer ".".  
+  
+ Dieser Konstruktor initialisiert den Leistungsindikator und ordnet die Instanz einem vorhandenen Leistungsindikator (ein System oder einen benutzerdefinierten Indikator) auf dem lokalen Computer. Die Werte, die Sie, für übergeben die <xref:System.Diagnostics.PerformanceCounter.CategoryName%2A>, <xref:System.Diagnostics.PerformanceCounter.CounterName%2A>, und <xref:System.Diagnostics.PerformanceCounter.InstanceName%2A> Eigenschaften müssen auf einen vorhandenen Leistungsindikator auf dem lokalen Computer verweisen. Wenn die Instanz des Leistungsindikators, der Sie zeigen nicht gültig ist, löst das Aufrufen des Konstruktors eine Ausnahme aus.  
+  
+> [!NOTE]
+>  Verwenden Sie diese Überladung, für die Verbindung zu einem System, aber Sie können nicht geschrieben werden, um einen Leistungsindikator System. Daher ist das Festlegen `readOnly` zu `false` beim Herstellen einer Verbindung mit einen Leistungsindikator System führt dazu, dass des Konstruktors eine Ausnahme auslöst.  
+  
+ Geben Sie zum Erstellen einer Instanz einer Leistungskategorie ein `instanceName` auf die <xref:System.Diagnostics.PerformanceCounter.%23ctor%2A> Konstruktor. Wenn durch die Kategorieinstanz angegeben `instanceName` ist bereits vorhanden. das neue Objekt wird die vorhandene Kategorieinstanz verweisen.  
+  
+> [!NOTE]
+>  Zum Lesen von Leistungsindikatoren in Windows Vista, Windows XP Professional X64 Edition oder Windows Server 2003 müssen Sie Mitglied der Gruppe Systemmonitorbenutzer sein oder über Administratorrechte verfügen.  
+>   
+>  Um zu vermeiden, dass Ihre Berechtigungen für den Zugriff auf Leistungsindikatoren in Windows Vista erhöhen, fügen Sie der Gruppe Systemmonitorbenutzer selbst.  
+>   
+>  Unter Windows Vista werden die Berechtigungen eines Benutzers über die Benutzerkontensteuerung (User Account Control, UAC) bestimmt. Als Mitglied der integrierten Administratorgruppe sind Ihnen zwei Zugriffstoken für die Laufzeit zugewiesen: ein Standardbenutzertoken und ein Administratorzugriffstoken. Standardmäßig verwenden Sie die Standardbenutzerrolle. Um den Code auszuführen, der auf Leistungsindikatoren zugreift, müssen Sie zuerst Ihre Berechtigungen von Standardbenutzer auf Administrator erhöhen. Dazu starten Sie eine Anwendung, indem Sie mit der rechten Maustaste auf das Anwendungssymbol klicken und angeben, dass Sie die Anwendung als Administrator ausführen möchten.   
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="categoryName" /> ist eine leere Zeichenfolge ("").  
+  
+ - oder -   
+  
+ <paramref name="counterName" /> ist eine leere Zeichenfolge ("").  
+  
+ - oder -   
+  
+ Die Lese-/Schreibberechtigung, die die angeforderte Einstellung ist ungültig für diesen Leistungsindikator aus.  
+  
+ - oder -   
+  
+ Die angegebene Kategorie ist nicht vorhanden (Wenn <paramref name="readOnly" /> ist <see langword="true" />).  
+  
+ - oder -   
+  
+ Die angegebene Kategorie ist keine benutzerdefinierte .NET Framework-Kategorie (Wenn <paramref name="readOnly" /> ist <see langword="false" />).  
+  
+ - oder -   
+  
+ Die angegebene Kategorie wird als mit mehreren Instanzen markiert und erfordert den Leistungsindikator mit einem Instanznamen erstellt werden.  
+  
+ - oder -   
+  
+ <paramref name="instanceName" />ist länger als 127 Zeichen.  
+  
+ - oder -   
+  
+ <paramref name="categoryName" />und <paramref name="counterName" /> haben unterschiedliche Sprachen lokalisiert wurden.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="categoryName" /> oder <paramref name="counterName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Beim Zugreifen auf eine System-API ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Die Plattform ist Windows 98 oder Windows Millennium Edition (Me), die Leistungsindikatoren nicht unterstützt.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Code, der ausgeführt wird, ohne Administratorrechte hat versucht, einen Leistungsindikator zu lesen.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">zum Schreiben der Leistungsindikatorkategorie, wenn die <see cref="P:System.Diagnostics.PerformanceCounter.ReadOnly" /> Eigenschaft ist <see langword="false" />. Zugeordnete Enumeration: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Write" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PerformanceCounter (string categoryName, string counterName, string instanceName, string machineName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string categoryName, string counterName, string instanceName, string machineName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounter.#ctor(System.String,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="categoryName" Type="System.String" />
+        <Parameter Name="counterName" Type="System.String" />
+        <Parameter Name="instanceName" Type="System.String" />
+        <Parameter Name="machineName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="categoryName">Der Name des der Leistungsindikatorkategorie (Leistungsobjekt ""), die dieser Leistungsindikator zugeordnet ist.</param>
+        <param name="counterName">Der Name des Leistungsindikators "".</param>
+        <param name="instanceName">Der Name der Kategorieinstanz des Leistungsindikators oder eine leere Zeichenfolge (""), wenn die Kategorie eine Einzelinstanz enthält.</param>
+        <param name="machineName">Der Computer, auf dem der Leistungsindikator und die ihm zugeordnete Kategorie vorhanden.</param>
+        <summary>Initialisiert eine neue schreibgeschützte Instanz der dem <see cref="T:System.Diagnostics.PerformanceCounter" /> -Klasse und ordnet dieses dem angegebenen System- oder benutzerdefinierten Leistungsindikator sowie der angegebenen Instanz auf dem angegebenen Computer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Parameterzeichenfolgen werden nicht beachtet.  
+  
+ Diese Überladung des Konstruktors die <xref:System.Diagnostics.PerformanceCounter.CategoryName%2A>, <xref:System.Diagnostics.PerformanceCounter.CounterName%2A>, <xref:System.Diagnostics.PerformanceCounter.InstanceName%2A>, und <xref:System.Diagnostics.PerformanceCounter.MachineName%2A> Eigenschaften mit den Werten, die Sie übergeben.  
+  
+ Dieser Konstruktor initialisiert den Leistungsindikator und ordnet die Instanz einem vorhandenen Leistungsindikator (ein System oder einen benutzerdefinierten Indikator) auf dem angegebenen Computer. Die Werte, die Sie, für übergeben die <xref:System.Diagnostics.PerformanceCounter.CategoryName%2A>, <xref:System.Diagnostics.PerformanceCounter.CounterName%2A>, <xref:System.Diagnostics.PerformanceCounter.InstanceName%2A> und <xref:System.Diagnostics.PerformanceCounter.MachineName%2A> Eigenschaften müssen auf einen vorhandenen Leistungsindikator zeigen. Wenn die Instanz des Leistungsindikators, der Sie zeigen nicht gültig ist, löst das Aufrufen des Konstruktors eine Ausnahme aus. Diese Überladung kann Zugriff auf alle schreibgeschützten oder Lese-/Schreibzugriff Zähler, jedoch führt dies in einer nur-Lese-Modus. Ein <xref:System.Diagnostics.PerformanceCounter> Instanz erstellt wurde, verwenden diese Überladung kann nicht in den Zähler schreiben, selbst wenn der Zähler selbst Lese-/Schreibzugriff verfügt.  
+  
+> [!NOTE]
+>  Remote-Leistungsindikatoren kann nicht geschrieben werden. Es ist keine Überladung, die Ihnen ermöglicht, geben Sie eine Instanz Lese-/Schreibzugriff, der die <xref:System.Diagnostics.PerformanceCounter> -Klasse, die eine Verbindung mit einem Remotecomputer herstellt.  
+  
+ Geben Sie zum Erstellen einer Instanz einer Leistungskategorie ein `instanceName` auf die <xref:System.Diagnostics.PerformanceCounter.%23ctor%2A> Konstruktor. Wenn durch die Kategorieinstanz angegeben `instanceName` ist bereits vorhanden. das neue Objekt wird die vorhandene Kategorieinstanz verweisen.  
+  
+> [!NOTE]
+>  Zum Lesen von Leistungsindikatoren in Windows Vista, Windows XP Professional X64 Edition oder Windows Server 2003 müssen Sie Mitglied der Gruppe Systemmonitorbenutzer sein oder über Administratorrechte verfügen.  
+>   
+>  Um zu vermeiden, dass Ihre Berechtigungen für den Zugriff auf Leistungsindikatoren in Windows Vista erhöhen, fügen Sie der Gruppe Systemmonitorbenutzer selbst.  
+>   
+>  Unter Windows Vista werden die Berechtigungen eines Benutzers über die Benutzerkontensteuerung (User Account Control, UAC) bestimmt. Als Mitglied der integrierten Administratorgruppe sind Ihnen zwei Zugriffstoken für die Laufzeit zugewiesen: ein Standardbenutzertoken und ein Administratorzugriffstoken. Standardmäßig verwenden Sie die Standardbenutzerrolle. Um den Code auszuführen, der auf Leistungsindikatoren zugreift, müssen Sie zuerst Ihre Berechtigungen von Standardbenutzer auf Administrator erhöhen. Dazu starten Sie eine Anwendung, indem Sie mit der rechten Maustaste auf das Anwendungssymbol klicken und angeben, dass Sie die Anwendung als Administrator ausführen möchten.   
+  
+> [!NOTE]
+>  In Windows Vista Wenn der Remotecomputer ein Mitglied einer Arbeitsgruppe ist müssen Sie die Benutzerkontensteuerung deaktivieren, damit das lokale Benutzerkonto nicht gefiltert wird und kann auf einem lokalen Administratorkonto an. Aus Gründen der Sicherheit sollte das Deaktivieren der Benutzerkontensteuerung als letzter Ausweg erfolgen. Informationen zum Deaktivieren der Benutzerkontensteuerung finden Sie unter [User Account Control und WMI-](http://go.microsoft.com/fwlink/?LinkId=91617).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="categoryName" /> ist eine leere Zeichenfolge ("").  
+  
+ - oder -   
+  
+ <paramref name="counterName" /> ist eine leere Zeichenfolge ("").  
+  
+ - oder -   
+  
+ Die Lese-/Schreibberechtigung, die die angeforderte Einstellung ist ungültig für diesen Leistungsindikator aus.  
+  
+ - oder -   
+  
+ Der Zähler vorhanden auf dem angegebenen Computer nicht.  
+  
+ - oder -   
+  
+ Die angegebene Kategorie wird als mit mehreren Instanzen markiert und erfordert den Leistungsindikator mit einem Instanznamen erstellt werden.  
+  
+ - oder -   
+  
+ <paramref name="instanceName" />ist länger als 127 Zeichen.  
+  
+ - oder -   
+  
+ <paramref name="categoryName" />und <paramref name="counterName" /> haben unterschiedliche Sprachen lokalisiert wurden.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="machineName" /> -Parameter ist ungültig.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="categoryName" /> oder <paramref name="counterName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Beim Zugreifen auf eine System-API ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Die Plattform ist Windows 98 oder Windows Millennium Edition (Me), die Leistungsindikatoren nicht unterstützt.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Code, der ausgeführt wird, ohne Administratorrechte hat versucht, einen Leistungsindikator zu lesen.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">zum Schreiben der Leistungsindikatorkategorie, wenn die <see cref="P:System.Diagnostics.PerformanceCounter.ReadOnly" /> Eigenschaft ist <see langword="false" />. Zugeordnete Enumeration: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Write" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInit">
+      <MemberSignature Language="C#" Value="public void BeginInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounter.BeginInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beginnt die Initialisierung einer <see cref="T:System.Diagnostics.PerformanceCounter" /> Instanz, die in einem Formular oder von einer anderen Komponente verwendet. Die Initialisierung erfolgt zur Laufzeit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)] Entwurf Umgebung verwendet diese Methode, um die Initialisierung einer Komponente zu starten, die in einem Formular oder von einer anderen Komponente verwendet wird. Die <xref:System.Diagnostics.PerformanceCounter.EndInit%2A> -Methode beendet die Initialisierung. Mithilfe der <xref:System.Diagnostics.PerformanceCounter.BeginInit%2A> und <xref:System.Diagnostics.PerformanceCounter.EndInit%2A> Methoden wird verhindert, dass die Komponente verwendet wird, bevor er vollständig initialisiert wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CategoryName">
+      <MemberSignature Language="C#" Value="public string CategoryName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CategoryName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.PerformanceCounter.CategoryName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RecommendedAsConfigurable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Diagnostics.Design.CategoryValueConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Leistungsindikator-Kategorienamen für diesen Leistungsindikator.</summary>
+        <value>Der Name des der Leistungsindikatorkategorie (Leistungsobjekt ""), die dieser Leistungsindikator zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.PerformanceCounter.CategoryName%2A> wird angezeigt, der `Performance Object` -Feld der Leistung Leistungsindikator-Manager-MMC-Snap in der `Add Counter` (Dialogfeld).  
+  
+ Ein Leistungsindikator überwacht das Verhalten einer Kategorie oder Leistungsobjekt auf einem Computer. Kategorien umfassen die physischen Komponenten (z. B. Prozessoren, Datenträger und Speicher) und Systemobjekte (z. B. Prozesse und Threads). Systemleistungsindikatoren, die auf das gleiche Leistungsobjekt beziehen werden in einer Kategorie gruppiert, die ihre allgemeine Fokus angibt. Beim Erstellen einer Instanz von der <xref:System.Diagnostics.PerformanceCounter> -Klasse, geben Sie zuerst die Kategorie mit dem die Komponente interagiert, und wählen Sie dann einen Leistungsindikator aus dieser Kategorie.  
+  
+ Beispielsweise ist ein Windows-Leistungsindikator-Kategorienamen die Arbeitsspeicher-Kategorie. Systemleistungsindikatoren in dieser Kategorie verfolgen Speicherdaten, z. B. die Anzahl der Bytes, die verfügbar sind und die Anzahl der Bytes, die zwischengespeichert. Wenn Sie mit der Bytes, die in der Anwendung zwischengespeichert arbeiten möchten, erstellen Sie eine Instanz von der <xref:System.Diagnostics.PerformanceCounter> Komponente, verbinden Sie ihn mit der Kategorie Speicher, und wählen Sie dann den entsprechenden Zähler (in diesem Fall Cachebytes) aus dieser Kategorie.  
+  
+ Obwohl Ihr System eine Vielzahl weiterer Indikatorkategorien verfügbar ist, sind die Kategorien, denen Sie wahrscheinlich am häufigsten arbeiten, Cache, Speicher, Objekte, Physikalischer Datenträger, Prozessor, Server, System und Thread-Kategorien.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine Standardinstanz von die <xref:System.Diagnostics.PerformanceCounter> Klasse. Nach der Erstellung der Instanz die <xref:System.Diagnostics.PerformanceCounter.CategoryName%2A>, <xref:System.Diagnostics.PerformanceCounter.CounterName%2A>, und <xref:System.Diagnostics.PerformanceCounter.InstanceName%2A> Eigenschaftswerte sind Satz und die Ergebnisse eines Aufrufs an die <xref:System.Diagnostics.PerformanceCounter.NextValue%2A> Methode werden angezeigt.  
+  
+ [!code-cpp[PerfCounter#1](~/samples/snippets/cpp/VS_Snippets_CLR/PerfCounter/CPP/perfcounter.cpp#1)]
+ [!code-csharp[PerfCounter#1](~/samples/snippets/csharp/VS_Snippets_CLR/PerfCounter/CS/perfcounter.cs#1)]
+ [!code-vb[PerfCounter#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerfCounter/VB/perfcounter.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><see cref="P:System.Diagnostics.PerformanceCounter.CategoryName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Die Plattform ist Windows 98 oder Windows Millennium Edition (Me), die Leistungsindikatoren nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounter.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt den Leistungsindikator und gibt alle von dieser PerformanceCounter-Instanz reservierten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie diese zuordnen <xref:System.Diagnostics.PerformanceCounter> -Instanz mit einem Leistungsindikator, der auf dem Server, die das System befindet sich initialisiert die Instanz und belegt Speicher, um Informationen für Leistungsindikatoren Beispiel enthalten. Die <xref:System.Diagnostics.PerformanceCounter.Close%2A> -Methode gibt alle vom Objekt reservierten Ressourcen frei.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseSharedResources">
+      <MemberSignature Language="C#" Value="public static void CloseSharedResources ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void CloseSharedResources() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounter.CloseSharedResources" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Freigegeben Performance Counter freigegeben der Status der Bibliothek von Leistungsindikatoren zugeordnet.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">zum Lesen der Leistungsindikatorkategorie. Zugeordnete Enumeration: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CounterHelp">
+      <MemberSignature Language="C#" Value="public string CounterHelp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CounterHelp" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.PerformanceCounter.CounterHelp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("A description describing the counter.")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Beschreibung für diesen Leistungsindikator ab.</summary>
+        <value>Eine Beschreibung des Elements oder der Menge, der dieser Leistungsindikator misst.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Dialogfeld Leistungsindikatoren hinzufügen, der die Leistung Leistungsindikator-Manager-MMC-Snap-in zeigt den <xref:System.Diagnostics.PerformanceCounter.CounterHelp%2A> Text, wenn ein Benutzer einen Leistungsindikator aus der Liste der Leistungsindikatoren wählt und klickt auf die Schaltfläche "Erklärung".  
+  
+ Wenn Sie einen neuen Leistungsindikator zu erstellen, verwenden die <xref:System.Diagnostics.PerformanceCounter.CounterHelp%2A> Text zum Beschreiben, was der Leistungsindikator überwacht, folgert der Benutzer an, ob den Leistungsindikator des Systemmonitors anzeigen hinzugefügt bestimmen kann.  
+  
+> [!NOTE]
+>  Wenn der Wert für die <xref:System.Diagnostics.PerformanceCounter.InstanceLifetime%2A> Eigenschaft ist <xref:System.Diagnostics.PerformanceCounterInstanceLifetime.Process> und die Leistungsindikatorkategorie wurde mit .NET Framework, Version 1.0 oder 1.1, erstellt eine <xref:System.InvalidOperationException> ausgelöst wird. Leistungsindikatorkategorien, die mit früheren Versionen erstellten verwenden Sie globale freigegebene Speicher und der Wert für <xref:System.Diagnostics.PerformanceCounter.InstanceLifetime%2A> muss <xref:System.Diagnostics.PerformanceCounterInstanceLifetime.Global>. Wenn die Kategorie von Anwendungen auf Versionen 1.0 oder 1.1 von .NET Framework nicht verwendet wird, löschen und neu erstellen.  
+  
+> [!NOTE]
+>  Zum Lesen von Leistungsindikatoren in Windows Vista, Windows XP Professional X64 Edition oder Windows Server 2003 müssen Sie Mitglied der Gruppe Systemmonitorbenutzer sein oder über Administratorrechte verfügen.  
+>   
+>  Um zu vermeiden, dass Ihre Berechtigungen für den Zugriff auf Leistungsindikatoren in Windows Vista erhöhen, fügen Sie der Gruppe Systemmonitorbenutzer selbst.  
+>   
+>  Unter Windows Vista werden die Berechtigungen eines Benutzers über die Benutzerkontensteuerung (User Account Control, UAC) bestimmt. Als Mitglied der integrierten Administratorgruppe sind Ihnen zwei Zugriffstoken für die Laufzeit zugewiesen: ein Standardbenutzertoken und ein Administratorzugriffstoken. Standardmäßig verwenden Sie die Standardbenutzerrolle. Um den Code auszuführen, der auf Leistungsindikatoren zugreift, müssen Sie zuerst Ihre Berechtigungen von Standardbenutzer auf Administrator erhöhen. Dazu starten Sie eine Anwendung, indem Sie mit der rechten Maustaste auf das Anwendungssymbol klicken und angeben, dass Sie die Anwendung als Administrator ausführen möchten.   
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.Diagnostics.PerformanceCounter" /> Instanz ist nicht mit einem Leistungsindikator verknüpft.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.Diagnostics.PerformanceCounter.InstanceLifetime" /> -Eigenschaftensatz auf <see cref="F:System.Diagnostics.PerformanceCounterInstanceLifetime.Process" /> bei Verwendung von globalen shared Memory-Protokolls.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Die Plattform ist Windows 98 oder Windows Millennium Edition (Me), die Leistungsindikatoren nicht unterstützt.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Code, der ausgeführt wird, ohne Administratorrechte hat versucht, einen Leistungsindikator zu lesen.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">zum Lesen der Leistungsindikatorkategorie. Zugeordnete Enumeration: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CounterName">
+      <MemberSignature Language="C#" Value="public string CounterName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CounterName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.PerformanceCounter.CounterName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RecommendedAsConfigurable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Diagnostics.Design.CounterNameConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Leistungsindikators "", die mit dieser verknüpft ist <see cref="T:System.Diagnostics.PerformanceCounter" /> Instanz.</summary>
+        <value>Der Name des Leistungsindikators, der die zu messende Menge im Allgemeinen beschrieben wird. Dieser Name wird in der Liste der Leistungsindikatoren des Leistungsindikator-Manager MMC-Snap-Ins im Dialogfeld Leistungsindikatoren hinzufügen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie erhalten eine Liste der verfügbaren bereits vorhandenen Leistungsindikatoren aus dem Windows Performance Vorgesetzten [im Dialogfeld Leistungsindikatoren hinzufügen](http://go.microsoft.com/fwlink/p/?LinkId=257854).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Festlegen der <xref:System.Diagnostics.PerformanceCounter.CounterName%2A> Eigenschaft, um eine typische Indikatorname.  
+  
+ [!code-cpp[PerfCounter#1](~/samples/snippets/cpp/VS_Snippets_CLR/PerfCounter/CPP/perfcounter.cpp#1)]
+ [!code-csharp[PerfCounter#1](~/samples/snippets/csharp/VS_Snippets_CLR/PerfCounter/CS/perfcounter.cs#1)]
+ [!code-vb[PerfCounter#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerfCounter/VB/perfcounter.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><see cref="P:System.Diagnostics.PerformanceCounter.CounterName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Die Plattform ist Windows 98 oder Windows Millennium Edition (Me), die Leistungsindikatoren nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CounterType">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.PerformanceCounterType CounterType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.PerformanceCounterType CounterType" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.PerformanceCounter.CounterType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("The type of the counter.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Leistungsindikator vom Typ des zugeordneten Leistungsindikators ab.</summary>
+        <value>Ein <see cref="T:System.Diagnostics.PerformanceCounterType" /> , die beide beschreibt, wie der Indikator interagiert mit einer Anwendung überwachen und den Charakter der darin enthaltenen Werte (z. B. berechnete bzw. nicht berechneten).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.PerformanceCounterType> -Enumeration enthält die Leistungsindikatoren, mit denen Sie interagieren können. Einige der Indikatortypen Laufwerke berechneten Werten, z. B. den Durchschnitt der Leistungsindikator Messungen, die im System übernommen hat. Andere Typen darstellen, Ihren Rohwert bzw. nicht berechneten Werte. Die folgende Tabelle zeigt die Leistungsindikatortypen, die Sie am häufigsten interagiert, werden.  
+  
+|Aufgabe des Zählers|Wert von PerformanceCounterType|Beispiel|  
+|------------------------------|----------------------------------|-------------|  
+|Einfache Zählung von Elementen oder Operationen.|`NumberOfItems32`|Überwachen die Anzahl der Bestellungen empfangen als 32-Bit-Ganzzahl.|  
+|Höhere Kapazität einfache Zählung.|`NumberOfItems64`|Die Anzahl der Bestellungen für einen Standort mit sehr hohem Volumen nachverfolgen, gespeichert als 64-Bit-Ganzzahl.|  
+|Verfolgen Sie die Anzahl der Elemente oder Vorgänge pro Sekunde.|`RateOfCountsPerSecond32`|Überwachung von Aufträgen pro Sekunde empfangen wurden, auf einer Website.|  
+|Überwachen Sie eine höhere Kapazität-Anzahl der Elemente oder Vorgänge pro Sekunde.|`RateOfCountsPerSecond64`|Nachverfolgen von Bestellungen empfangen pro Sekunde auf einer Website mit sehr hohem Volumen.|  
+|Berechnen Sie die durchschnittliche Zeit, um einen Prozess auszuführen oder um ein Element zu verarbeiten.|`AverageTimer32`|Berechnet den durchschnittlichen Zeitaufwand eine Bestellung verarbeitet werden.|  
+  
+ Bei der Erstellung eines Leistungsindikators, dessen Typ die Verwendung von einer entsprechenden Basiszähler erfordert, müssen Sie deklarieren den Zähler und der Basis der <xref:System.Diagnostics.CounterCreationDataCollection> übergeben wird, an die <xref:System.Diagnostics.PerformanceCounterCategory.Create%2A?displayProperty=nameWithType> Methode.  
+  
+> [!NOTE]
+>  Wenn der Wert für die <xref:System.Diagnostics.PerformanceCounter.InstanceLifetime%2A> Eigenschaft ist <xref:System.Diagnostics.PerformanceCounterInstanceLifetime.Process> und die Leistungsindikatorkategorie wurde mit .NET Framework, Version 1.0 oder 1.1, erstellt eine <xref:System.InvalidOperationException> ausgelöst wird. Leistungsindikatorkategorien, die mit früheren Versionen erstellten verwenden Sie globale freigegebene Speicher und der Wert für <xref:System.Diagnostics.PerformanceCounter.InstanceLifetime%2A> muss <xref:System.Diagnostics.PerformanceCounterInstanceLifetime.Global>. Wenn die Kategorie von Anwendungen auf Versionen 1.0 oder 1.1 von .NET Framework nicht verwendet wird, löschen und neu erstellen.  
+  
+> [!NOTE]
+>  Zum Lesen von Leistungsindikatoren in Windows Vista, Windows XP Professional X64 Edition oder Windows Server 2003 müssen Sie Mitglied der Gruppe Systemmonitorbenutzer sein oder über Administratorrechte verfügen.  
+>   
+>  Um zu vermeiden, dass Ihre Berechtigungen für den Zugriff auf Leistungsindikatoren in Windows Vista erhöhen, fügen Sie der Gruppe Systemmonitorbenutzer selbst.  
+>   
+>  Unter Windows Vista werden die Berechtigungen eines Benutzers über die Benutzerkontensteuerung (User Account Control, UAC) bestimmt. Als Mitglied der integrierten Administratorgruppe sind Ihnen zwei Zugriffstoken für die Laufzeit zugewiesen: ein Standardbenutzertoken und ein Administratorzugriffstoken. Standardmäßig verwenden Sie die Standardbenutzerrolle. Um den Code auszuführen, der auf Leistungsindikatoren zugreift, müssen Sie zuerst Ihre Berechtigungen von Standardbenutzer auf Administrator erhöhen. Dazu starten Sie eine Anwendung, indem Sie mit der rechten Maustaste auf das Anwendungssymbol klicken und angeben, dass Sie die Anwendung als Administrator ausführen möchten.   
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Instanz ist nicht ordnungsgemäß einem Leistungsindikator zugeordnet.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.Diagnostics.PerformanceCounter.InstanceLifetime" /> -Eigenschaftensatz auf <see cref="F:System.Diagnostics.PerformanceCounterInstanceLifetime.Process" /> bei Verwendung von globalen shared Memory-Protokolls.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Die Plattform ist Windows 98 oder Windows Millennium Edition (Me), die Leistungsindikatoren nicht unterstützt.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Code, der ausgeführt wird, ohne Administratorrechte hat versucht, einen Leistungsindikator zu lesen.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">zum Lesen der Leistungsindikatorkategorie. Zugeordnete Enumeration: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Decrement">
+      <MemberSignature Language="C#" Value="public long Decrement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int64 Decrement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounter.Decrement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dekrementiert den zugeordneten Leistungsindikator Einerschritten über eine effiziente atomare Operation.</summary>
+        <returns>Der verringerte Leistungsindikatorwert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können nur für benutzerdefinierte Indikatoren schreiben. Alle Systemleistungsindikatoren sind schreibgeschützt.  
+  
+> [!NOTE]
+>  Die <xref:System.Diagnostics.PerformanceCounter.Increment%2A>, <xref:System.Diagnostics.PerformanceCounter.IncrementBy%2A>, und <xref:System.Diagnostics.PerformanceCounter.Decrement%2A> Methoden Sperren verwenden, um den Zählerwert zu aktualisieren. Dadurch wird den Wert dieses Indikators im Multithread- oder mehrerer Prozesse Szenarien, sondern auch zu Leistungseinbußen führt genau beibehalten. Wenn Sie die Genauigkeit nicht benötigen, die interlocked Operationen zu gewährleisten, können Sie aktualisieren die <xref:System.Diagnostics.PerformanceCounter.RawValue%2A> Eigenschaft direkt für bis zu 5 Mal leistungsverbesserung.  Allerdings möglicherweise in Multithreadszenarien, einige Updates an der Wert dieses Indikators ignoriert, wodurch ungenaue Daten.  
+  
+> [!NOTE]
+>  Wenn der Wert für die <xref:System.Diagnostics.PerformanceCounter.InstanceLifetime%2A> Eigenschaft ist <xref:System.Diagnostics.PerformanceCounterInstanceLifetime.Process> und die Leistungsindikatorkategorie wurde mit .NET Framework, Version 1.0 oder 1.1, erstellt eine <xref:System.InvalidOperationException> ausgelöst wird. Leistungsindikatorkategorien, die mit früheren Versionen erstellten verwenden Sie globale freigegebene Speicher und der Wert für <xref:System.Diagnostics.PerformanceCounter.InstanceLifetime%2A> muss <xref:System.Diagnostics.PerformanceCounterInstanceLifetime.Global>. Wenn die Kategorie von Anwendungen auf Versionen 1.0 oder 1.1 von .NET Framework nicht verwendet wird, löschen und neu erstellen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Zähler ist schreibgeschützt, damit die Anwendung dekrementiert werden kann.  
+  
+ - oder -   
+  
+ Die Instanz ist nicht ordnungsgemäß einem Leistungsindikator zugeordnet.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.Diagnostics.PerformanceCounter.InstanceLifetime" /> -Eigenschaftensatz auf <see cref="F:System.Diagnostics.PerformanceCounterInstanceLifetime.Process" /> bei Verwendung von globalen shared Memory-Protokolls.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Beim Zugreifen auf eine System-API ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Die Plattform ist Windows 98 oder Windows Millennium Edition (Me), die Leistungsindikatoren nicht unterstützt.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">zum Schreiben der Leistungsindikatorkategorie, wenn die <see cref="P:System.Diagnostics.PerformanceCounter.ReadOnly" /> Eigenschaft ist <see langword="false" />. Zugeordnete Enumeration: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Write" />.</permission>
+        <threadsafe>Diese Methode ist threadsicher.</threadsafe>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultFileMappingSize">
+      <MemberSignature Language="C#" Value="public static int DefaultFileMappingSize;" />
+      <MemberSignature Language="ILAsm" Value=".field public static int32 DefaultFileMappingSize" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceCounter.DefaultFileMappingSize" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Größe in Bytes, der dem globalen Arbeitsspeicher-Leistungsindikatoren gemeinsam genutzt wird. Die Standardgröße ist 524.288 Byte.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounter.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndInit">
+      <MemberSignature Language="C#" Value="public void EndInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounter.EndInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet die Initialisierung einer <see cref="T:System.Diagnostics.PerformanceCounter" /> -Instanz, die in einem Formular oder von einer anderen Komponente verwendet wird. Die Initialisierung erfolgt zur Laufzeit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)] Entwurf Umgebung verwendet diese Methode, um die Initialisierung einer Komponente zu beenden, die in einem Formular oder von einer anderen Komponente verwendet wird. Die <xref:System.Diagnostics.PerformanceCounter.BeginInit%2A> -Methode startet die Initialisierung. Mithilfe der <xref:System.Diagnostics.PerformanceCounter.BeginInit%2A> und <xref:System.Diagnostics.PerformanceCounter.EndInit%2A> Methoden wird verhindert, dass die Komponente verwendet wird, bevor er vollständig initialisiert wurde.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">zum Schreiben der Leistungsindikatorkategorie, wenn die <see cref="P:System.Diagnostics.PerformanceCounter.ReadOnly" /> Eigenschaft ist <see langword="false" />. Zugeordnete Enumeration: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Write" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Increment">
+      <MemberSignature Language="C#" Value="public long Increment ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int64 Increment() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounter.Increment" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erhöht den zugeordneten Leistungsindikator 1 über eine effiziente atomare Operation.</summary>
+        <returns>Der erhöhte Leistungsindikatorwert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können nur für benutzerdefinierte Indikatoren schreiben. Alle Systemleistungsindikatoren sind schreibgeschützt.  
+  
+> [!NOTE]
+>  Die <xref:System.Diagnostics.PerformanceCounter.Increment%2A>, <xref:System.Diagnostics.PerformanceCounter.IncrementBy%2A>, und <xref:System.Diagnostics.PerformanceCounter.Decrement%2A> Methoden Sperren verwenden, um den Zählerwert zu aktualisieren. Dadurch wird den Wert dieses Indikators im Multithread- oder mehrerer Prozesse Szenarien, sondern auch zu Leistungseinbußen führt genau beibehalten. Wenn Sie die Genauigkeit nicht benötigen, die interlocked Operationen zu gewährleisten, können Sie aktualisieren die <xref:System.Diagnostics.PerformanceCounter.RawValue%2A> Eigenschaft direkt für bis zu 5 Mal leistungsverbesserung.  Allerdings möglicherweise in Multithreadszenarien, einige Updates an der Wert dieses Indikators ignoriert, wodurch ungenaue Daten.  
+  
+> [!NOTE]
+>  Wenn der Wert für die <xref:System.Diagnostics.PerformanceCounter.InstanceLifetime%2A> Eigenschaft ist <xref:System.Diagnostics.PerformanceCounterInstanceLifetime.Process> und die Leistungsindikatorkategorie wurde mit .NET Framework, Version 1.0 oder 1.1, erstellt eine <xref:System.InvalidOperationException> ausgelöst wird. Leistungsindikatorkategorien, die mit früheren Versionen erstellten verwenden Sie globale freigegebene Speicher und der Wert für <xref:System.Diagnostics.PerformanceCounter.InstanceLifetime%2A> muss <xref:System.Diagnostics.PerformanceCounterInstanceLifetime.Global>. Wenn die Kategorie von Anwendungen auf Versionen 1.0 oder 1.1 von .NET Framework nicht verwendet wird, löschen und neu erstellen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Zähler ist schreibgeschützt, damit die Anwendung inkrementiert werden kann.  
+  
+ - oder -   
+  
+ Die Instanz ist nicht ordnungsgemäß einem Leistungsindikator zugeordnet.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.Diagnostics.PerformanceCounter.InstanceLifetime" /> -Eigenschaftensatz auf <see cref="F:System.Diagnostics.PerformanceCounterInstanceLifetime.Process" /> bei Verwendung von globalen shared Memory-Protokolls.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Beim Zugreifen auf eine System-API ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Die Plattform ist Windows 98 oder Windows Millennium Edition (Me), die Leistungsindikatoren nicht unterstützt.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">zum Schreiben der Leistungsindikatorkategorie, wenn die <see cref="P:System.Diagnostics.PerformanceCounter.ReadOnly" /> Eigenschaft ist <see langword="false" />. Zugeordnete Enumeration: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Write" />.</permission>
+        <threadsafe>Diese Methode ist threadsicher.</threadsafe>
+      </Docs>
+    </Member>
+    <Member MemberName="IncrementBy">
+      <MemberSignature Language="C#" Value="public long IncrementBy (long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int64 IncrementBy(int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounter.IncrementBy(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert zu erhöhen. (Ein negativer Wert verringert den Zähler.)</param>
+        <summary>Inkrementiert oder dekrementiert den Wert des zugeordneten Leistungsindikators um einen angegebenen Betrag über eine effiziente atomare Operation.</summary>
+        <returns>Der neue Wert dieses Indikators.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können nur für benutzerdefinierte Indikatoren schreiben. Alle Systemleistungsindikatoren sind schreibgeschützt.  
+  
+> [!NOTE]
+>  Die <xref:System.Diagnostics.PerformanceCounter.Increment%2A>, <xref:System.Diagnostics.PerformanceCounter.IncrementBy%2A>, und <xref:System.Diagnostics.PerformanceCounter.Decrement%2A> Methoden Sperren verwenden, um den Zählerwert zu aktualisieren. Dadurch wird den Wert dieses Indikators im Multithread- oder mehrerer Prozesse Szenarien, sondern auch zu Leistungseinbußen führt genau beibehalten. Wenn Sie die Genauigkeit nicht benötigen, die interlocked Operationen zu gewährleisten, können Sie aktualisieren die <xref:System.Diagnostics.PerformanceCounter.RawValue%2A> Eigenschaft direkt für bis zu 5 Mal leistungsverbesserung.  Allerdings möglicherweise in Multithreadszenarien, einige Updates an der Wert dieses Indikators ignoriert, wodurch ungenaue Daten.  
+  
+> [!NOTE]
+>  Wenn der Wert für die <xref:System.Diagnostics.PerformanceCounter.InstanceLifetime%2A> Eigenschaft ist <xref:System.Diagnostics.PerformanceCounterInstanceLifetime.Process> und die Leistungsindikatorkategorie wurde mit .NET Framework, Version 1.0 oder 1.1, erstellt eine <xref:System.InvalidOperationException> ausgelöst wird. Leistungsindikatorkategorien, die mit früheren Versionen erstellten verwenden Sie globale freigegebene Speicher und der Wert für <xref:System.Diagnostics.PerformanceCounter.InstanceLifetime%2A> muss <xref:System.Diagnostics.PerformanceCounterInstanceLifetime.Global>. Wenn die Kategorie von Anwendungen auf Versionen 1.0 oder 1.1 von .NET Framework nicht verwendet wird, löschen und neu erstellen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Diagnostics.PerformanceCounter.IncrementBy%2A> Methode, Inkremente um einen Leistungsindikator hinzuzufügen. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.PerformanceCounter> Klasse.  
+  
+ [!code-cpp[PerformanceCounterType.AverageCounter64#3](~/samples/snippets/cpp/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/CPP/averagecount32.cpp#3)]
+ [!code-csharp[PerformanceCounterType.AverageCounter64#3](~/samples/snippets/csharp/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/CS/averagecount32.cs#3)]
+ [!code-vb[PerformanceCounterType.AverageCounter64#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/VB/averagecount32.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Zähler ist schreibgeschützt, damit die Anwendung inkrementiert werden kann.  
+  
+ - oder -   
+  
+ Die Instanz ist nicht ordnungsgemäß einem Leistungsindikator zugeordnet.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.Diagnostics.PerformanceCounter.InstanceLifetime" /> -Eigenschaftensatz auf <see cref="F:System.Diagnostics.PerformanceCounterInstanceLifetime.Process" /> bei Verwendung von globalen shared Memory-Protokolls.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Beim Zugreifen auf eine System-API ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Die Plattform ist Windows 98 oder Windows Millennium Edition (Me), die Leistungsindikatoren nicht unterstützt.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">zum Schreiben der Leistungsindikatorkategorie, wenn die <see cref="P:System.Diagnostics.PerformanceCounter.ReadOnly" /> Eigenschaft ist <see langword="false" />. Zugeordnete Enumeration: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Write" />.</permission>
+        <threadsafe>Diese Methode ist threadsicher.</threadsafe>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceLifetime">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.PerformanceCounterInstanceLifetime InstanceLifetime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.PerformanceCounterInstanceLifetime InstanceLifetime" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.PerformanceCounter.InstanceLifetime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterInstanceLifetime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Lebensdauer eines Prozesses.</summary>
+        <value>Einer der <see cref="T:System.Diagnostics.PerformanceCounterInstanceLifetime" />-Werte. Die Standardeinstellung ist <see cref="F:System.Diagnostics.PerformanceCounterInstanceLifetime.Global" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Leistungsindikatorkategorie mit .NET Framework, Version 1.0 oder 1.1 erstellt wird, verwendet globale freigegebene Speicher und der Wert für <xref:System.Diagnostics.PerformanceCounter.InstanceLifetime%2A> muss <xref:System.Diagnostics.PerformanceCounterInstanceLifetime.Global>. Wenn die Kategorie von Anwendungen auf Versionen 1.0 oder 1.1 von .NET Framework nicht verwendet wird, löschen und neu erstellen.  
+  
+> [!NOTE]
+>  Wenn der Wert des der <xref:System.Diagnostics.PerformanceCounter.CounterType%2A> Eigenschaft ist <xref:System.Diagnostics.PerformanceCounterCategoryType.SingleInstance>, die <xref:System.Diagnostics.PerformanceCounter.InstanceLifetime%2A> Wert für der Leistungsindikator Transportservers <xref:System.Diagnostics.PerformanceCounterInstanceLifetime.Global>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der festgelegte Wert ist nicht Mitglied der <see cref="T:System.Diagnostics.PerformanceCounterInstanceLifetime" /> Enumeration.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.Diagnostics.PerformanceCounter.InstanceLifetime" />wird festgelegt, nachdem die <see cref="T:System.Diagnostics.PerformanceCounter" /> initialisiert wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceName">
+      <MemberSignature Language="C#" Value="public string InstanceName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InstanceName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.PerformanceCounter.InstanceName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RecommendedAsConfigurable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Diagnostics.Design.InstanceNameConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Instanznamen für diesen Leistungsindikator.</summary>
+        <value>Der Name der Kategorieinstanz des Leistungsindikators oder eine leere Zeichenfolge (""), wenn der Indikator ein Einzelinstanz-Leistungsindikator ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Instanznamen müssen weniger als 128 Zeichen lang sein.  
+  
+ In einigen Situationen werden Kategorien in Instanzen, unterteilt die Daten über mehrere Vorkommen des Objekts zu, die verfolgen auf eine Kategorie bezieht. Instanzen gelten nicht für einzelne Indikatoren, sondern auf die gesamte Kategorie. Jeder Leistungsindikator in einer Kategorie verfügt jede Instanz für die Kategorie definiert. Beispielsweise enthält die Prozesskategorie Instanzen Idle und System. Jeder Leistungsindikator in der Prozesskategorie enthält daher Daten für jede Instanz und zeigt Informationen zu Prozessen im Leerlauf oder Systemprozesse.  
+  
+ Viele Kategorien enthalten nicht mehrere Instanzen, damit Sie diese Eigenschaft leer lassen können, um anzugeben, dass keine Instanz der Kategorie zugeordnet ist.  
+  
+ Wenn diese <xref:System.Diagnostics.PerformanceCounter> Instanz verweist auf eine nicht benutzerdefinierte Kategorie klicken, können Sie nur den vorhandenen Kategorieinstanzen auswählen. Sie können neue Kategorieinstanzen nur in benutzerdefinierten Kategorien erstellen, die ermöglichen es Ihnen, die als Anzahl an Leistungsindikatoren und Kategorie Instanzen definieren, wie Sie benötigen.  
+  
+ Geben Sie zum Erstellen einer Instanz einer Leistungskategorie ein `instanceName` auf die <xref:System.Diagnostics.PerformanceCounter.%23ctor%2A> Konstruktor. Wenn durch die Kategorieinstanz angegeben `instanceName` ist bereits vorhanden. das neue Objekt wird die vorhandene Kategorieinstanz verweisen.  
+  
+> [!NOTE]
+>  Verwenden Sie nicht die Zeichen "(",")", "#", "\\", oder "/" in den Namen der Instanz. Wenn keines der folgenden Zeichen verwendet werden, wird der Leistungskonsole (finden Sie unter [Laufzeit-Profilerstellung](~/docs/framework/debug-trace-profile/runtime-profiling.md)) die Werte von Gruppeninstanzen möglicherweise nicht richtig angezeigt.  
+  
+ Wenn der Instanzname automatisch generiert wird und die Zeichen enthalten "(",")", "#", "\\", oder "/", verwenden Sie die zeichenzuordnung in der folgenden Tabelle.  
+  
+|Zeichen|Zugeordnetes Zeichen|  
+|---------------|----------------------|  
+|(|[|  
+|)|]|  
+|#|_|  
+|\|_|  
+|/|_|  
+  
+ Die <xref:System.AppDomain.FriendlyName%2A> Eigenschaft von der <xref:System.AppDomain> Objekt abgerufen, von der <xref:System.AppDomain.CurrentDomain%2A?displayProperty=nameWithType> Eigenschaft ist eine häufige Ursache für den Instanznamen, die ungültige Zeichen enthalten kann.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine Standardinstanz von die <xref:System.Diagnostics.PerformanceCounter> Klasse. Nach der Erstellung der Instanz die <xref:System.Diagnostics.PerformanceCounter.CategoryName%2A>, <xref:System.Diagnostics.PerformanceCounter.CounterName%2A>, und <xref:System.Diagnostics.PerformanceCounter.InstanceName%2A> Eigenschaftswerte sind Satz und die Ergebnisse eines Aufrufs an die <xref:System.Diagnostics.PerformanceCounter.NextValue%2A> Methode werden angezeigt.  
+  
+ [!code-cpp[PerfCounter#1](~/samples/snippets/cpp/VS_Snippets_CLR/PerfCounter/CPP/perfcounter.cpp#1)]
+ [!code-csharp[PerfCounter#1](~/samples/snippets/csharp/VS_Snippets_CLR/PerfCounter/CS/perfcounter.cs#1)]
+ [!code-vb[PerfCounter#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerfCounter/VB/perfcounter.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MachineName">
+      <MemberSignature Language="C#" Value="public string MachineName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MachineName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.PerformanceCounter.MachineName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(".")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RecommendedAsConfigurable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.MonoTODO("What's the machine name format?")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Computernamen für diesen Leistungsindikator</summary>
+        <value>Der Server, auf dem der Leistungsindikator und die ihm zugeordnete Kategorie befinden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können Werte nur für die Leistungsindikatoren, die befinden schreiben, auf dem lokalen Computer. Allerdings können Sie die Werte von Leistungsindikatoren lesen, von einem beliebigen, die Computer im Unternehmen für den Sie Zugriffsrechte verfügen.  
+  
+ Beim Festlegen der <xref:System.Diagnostics.PerformanceCounter.MachineName%2A> Eigenschaft, um auf einem Remotecomputer, und zeigen die <xref:System.Diagnostics.PerformanceCounter> Instanz versucht, den Zähler auf diesem Computer zu öffnen. Wenn der Leistungsindikator nicht vorhanden ist, löst das Festlegen dieser Eigenschaft eine Ausnahme aus.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.Diagnostics.PerformanceCounter.MachineName" /> weist ein ungültiges Format.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Die Plattform ist Windows 98 oder Windows Millennium Edition (Me), die Leistungsindikatoren nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NextSample">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.CounterSample NextSample ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Diagnostics.CounterSample NextSample() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounter.NextSample" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.CounterSample</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erhält eine, und gibt Sie dafür den Rohwert bzw. nicht berechneten Wert zurück.</summary>
+        <returns>Ein <see cref="T:System.Diagnostics.CounterSample" /> , das den nächsten Rohwert, der das System für diesen Indikator abrut darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode dient im Allgemeinen für die Leistungsindikatoren, die nicht berechnete Werte enthalten.  
+  
+> [!NOTE]
+>  Wenn der Wert für die <xref:System.Diagnostics.PerformanceCounter.InstanceLifetime%2A> Eigenschaft ist <xref:System.Diagnostics.PerformanceCounterInstanceLifetime.Process> und die Leistungsindikatorkategorie wurde mit .NET Framework, Version 1.0 oder 1.1, erstellt eine <xref:System.InvalidOperationException> ausgelöst wird. Leistungsindikatorkategorien, die mit früheren Versionen erstellten verwenden Sie globale freigegebene Speicher und der Wert für <xref:System.Diagnostics.PerformanceCounter.InstanceLifetime%2A> muss <xref:System.Diagnostics.PerformanceCounterInstanceLifetime.Global>. Wenn die Kategorie von Anwendungen auf Versionen 1.0 oder 1.1 von .NET Framework nicht verwendet wird, löschen und neu erstellen.  
+  
+> [!NOTE]
+>  Zum Lesen von Leistungsindikatoren in Windows Vista, Windows XP Professional X64 Edition oder Windows Server 2003 müssen Sie Mitglied der Gruppe Systemmonitorbenutzer sein oder über Administratorrechte verfügen.  
+>   
+>  Um zu vermeiden, dass Ihre Berechtigungen für den Zugriff auf Leistungsindikatoren in Windows Vista erhöhen, fügen Sie der Gruppe Systemmonitorbenutzer selbst.  
+>   
+>  Unter Windows Vista werden die Berechtigungen eines Benutzers über die Benutzerkontensteuerung (User Account Control, UAC) bestimmt. Als Mitglied der integrierten Administratorgruppe sind Ihnen zwei Zugriffstoken für die Laufzeit zugewiesen: ein Standardbenutzertoken und ein Administratorzugriffstoken. Standardmäßig verwenden Sie die Standardbenutzerrolle. Um den Code auszuführen, der auf Leistungsindikatoren zugreift, müssen Sie zuerst Ihre Berechtigungen von Standardbenutzer auf Administrator erhöhen. Dazu starten Sie eine Anwendung, indem Sie mit der rechten Maustaste auf das Anwendungssymbol klicken und angeben, dass Sie die Anwendung als Administrator ausführen möchten.   
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Diagnostics.PerformanceCounter.NextSample%2A> Methode, um den nächsten nicht berechneten Wert eines Leistungsindikators abzurufen. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.PerformanceCounter> Klasse.  
+  
+ [!code-cpp[PerformanceCounterType.AverageCounter64#3](~/samples/snippets/cpp/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/CPP/averagecount32.cpp#3)]
+ [!code-csharp[PerformanceCounterType.AverageCounter64#3](~/samples/snippets/csharp/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/CS/averagecount32.cs#3)]
+ [!code-vb[PerformanceCounterType.AverageCounter64#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/VB/averagecount32.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Instanz ist nicht ordnungsgemäß einem Leistungsindikator zugeordnet.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.Diagnostics.PerformanceCounter.InstanceLifetime" /> -Eigenschaftensatz auf <see cref="F:System.Diagnostics.PerformanceCounterInstanceLifetime.Process" /> bei Verwendung von globalen shared Memory-Protokolls.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Beim Zugreifen auf eine System-API ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Die Plattform ist Windows 98 oder Windows Millennium Edition (Me), die Leistungsindikatoren nicht unterstützt.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Code, der ausgeführt wird, ohne Administratorrechte hat versucht, einen Leistungsindikator zu lesen.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">zum Lesen der Leistungsindikatorkategorie. Zugeordnete Enumeration: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="NextValue">
+      <MemberSignature Language="C#" Value="public float NextValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float32 NextValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounter.NextValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erhält eine aus, und gibt Sie dafür den berechneten Wert zurück.</summary>
+        <returns>Den berechneten Wert, der das System für diesen Indikator abrut.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Wenn zwei Leistungsindikator Lesevorgänge der berechnete Wert eines Leistungsindikators abhängig ist, gibt der erste Lesevorgang 0,0 zurück. Zurücksetzen der Leistung Leistungsindikator-Eigenschaften, um einen anderen Leistungsindikator anzugeben, erstellen einen neuen Leistungsindikator entspricht, und der erste Lesevorgang mit den neuen Eigenschaften gibt 0,0. Die empfohlene Verzögerung zwischen den Aufrufen der <xref:System.Diagnostics.PerformanceCounter.NextValue%2A> Methode ist eine Sekunde, um den Zähler auf den nächsten inkrementellen Lesevorgang auszuführen zu ermöglichen.  
+  
+> [!NOTE]
+>  Um Leistungsindikatoren zu lesen, müssen Sie über Administratorrechte verfügen. Unter Windows Vista werden die Berechtigungen eines Benutzers über die Benutzerkontensteuerung (User Account Control, UAC) bestimmt. Als Mitglied der integrierten Administratorgruppe sind Ihnen zwei Zugriffstoken für die Laufzeit zugewiesen: ein Standardbenutzertoken und ein Administratorzugriffstoken. Standardmäßig verwenden Sie die Standardbenutzerrolle. Um den Code auszuführen, der auf Leistungsindikatoren zugreift, müssen Sie zuerst Ihre Berechtigungen von Standardbenutzer auf Administrator erhöhen. Dazu starten Sie eine Anwendung, indem Sie mit der rechten Maustaste auf das Anwendungssymbol klicken und angeben, dass Sie die Anwendung als Administrator ausführen möchten.   
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Diagnostics.PerformanceCounterType.ElapsedTime> Zähler und verwendet die <xref:System.Diagnostics.PerformanceCounter.NextValue%2A> Methode, um die Werte des Zählers für einen Zeitraum angezeigt.  
+  
+ [!code-cpp[PerformanceCounterType.ElapsedTime#2](~/samples/snippets/cpp/VS_Snippets_CLR/PerformanceCounterType.ElapsedTime/CPP/elapsedtime.cpp#2)]
+ [!code-csharp[PerformanceCounterType.ElapsedTime#2](~/samples/snippets/csharp/VS_Snippets_CLR/PerformanceCounterType.ElapsedTime/CS/elapsedtime.cs#2)]
+ [!code-vb[PerformanceCounterType.ElapsedTime#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerformanceCounterType.ElapsedTime/VB/elapsedtime.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Instanz ist nicht ordnungsgemäß einem Leistungsindikator zugeordnet.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Beim Zugreifen auf eine System-API ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Die Plattform ist Windows 98 oder Windows Millennium Edition (Me), die Leistungsindikatoren nicht unterstützt.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Code, der ausgeführt wird, ohne Administratorrechte hat versucht, einen Leistungsindikator zu lesen.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">zum Lesen der Leistungsindikatorkategorie. Zugeordnete Enumeration: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="RawValue">
+      <MemberSignature Language="C#" Value="public long RawValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 RawValue" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.PerformanceCounter.RawValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("The raw value of the counter.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Rohwert bzw. nicht berechneten Wert dieses Indikators.</summary>
+        <value>Der Rohwert des Indikators.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Leistungsindikator-Typ eine 32-Bit-Größe ist, und Sie versuchen, diese Eigenschaft auf einen Wert festgelegt, der zu groß ist, schneidet die Eigenschaft den Wert auf 32 Bits ab. Beim Lesen von benutzerdefinierter Leistungsindikatoren auf dem lokalen Computer unter Verwendung der <xref:System.Diagnostics.PerformanceCounter.RawValue%2A> Eigenschaft anstelle eines berechneten Werts kann zu einer deutlichen Leistungssteigerung in Szenarien, in denen der unformatierte Wert reicht, erzeugen.  
+  
+ Wenn der Leistungsindikator, die Sie lesen, schreibgeschützt ist, Abrufen der <xref:System.Diagnostics.PerformanceCounter.RawValue%2A> Eigenschaft Beispiele für den Leistungsindikator zu dem Zeitpunkt, die die Eigenschaft aufgerufen wird. Diese Aktion entspricht einem ersten Aufruf an die <xref:System.Diagnostics.PerformanceCounter.NextSample%2A> Methode. Wenn Sie anschließend aufrufen <xref:System.Diagnostics.PerformanceCounter.NextSample%2A>, können Sie Berechnungen ausführen, auf den Werten, die beide Aufrufe zurückgegeben.  
+  
+ Da Systemleistungsindikatoren schreibgeschützt sind, können Sie abrufen, jedoch nicht deren unformatierte Werte festgelegt werden.  
+  
+> [!NOTE]
+>  Die <xref:System.Diagnostics.PerformanceCounter.Increment%2A>, <xref:System.Diagnostics.PerformanceCounter.IncrementBy%2A>, und <xref:System.Diagnostics.PerformanceCounter.Decrement%2A> Methoden Sperren verwenden, um den Zählerwert zu aktualisieren. Dadurch wird den Wert dieses Indikators im Multithread- oder mehrerer Prozesse Szenarien, sondern auch zu Leistungseinbußen führt genau beibehalten. Wenn Sie die Genauigkeit nicht benötigen, die interlocked Operationen zu gewährleisten, können Sie aktualisieren die <xref:System.Diagnostics.PerformanceCounter.RawValue%2A> Eigenschaft direkt für bis zu 5 Mal leistungsverbesserung.  Allerdings möglicherweise in Multithreadszenarien, einige Updates an der Wert dieses Indikators ignoriert, wodurch ungenaue Daten.  
+  
+> [!NOTE]
+>  Wenn der Wert für die <xref:System.Diagnostics.PerformanceCounter.InstanceLifetime%2A> Eigenschaft ist <xref:System.Diagnostics.PerformanceCounterInstanceLifetime.Process> und die Leistungsindikatorkategorie wurde mit .NET Framework, Version 1.0 oder 1.1, erstellt eine <xref:System.InvalidOperationException> ausgelöst wird. Leistungsindikatorkategorien, die mit früheren Versionen erstellten verwenden Sie globale freigegebene Speicher und der Wert für <xref:System.Diagnostics.PerformanceCounter.InstanceLifetime%2A> muss <xref:System.Diagnostics.PerformanceCounterInstanceLifetime.Global>. Wenn die Kategorie von Anwendungen auf Versionen 1.0 oder 1.1 von .NET Framework nicht verwendet wird, löschen und neu erstellen.  
+  
+> [!NOTE]
+>  Zum Lesen von Leistungsindikatoren in Windows Vista, Windows XP Professional X64 Edition oder Windows Server 2003 müssen Sie Mitglied der Gruppe Systemmonitorbenutzer sein oder über Administratorrechte verfügen.  
+>   
+>  Um zu vermeiden, dass Ihre Berechtigungen für den Zugriff auf Leistungsindikatoren in Windows Vista erhöhen, fügen Sie der Gruppe Systemmonitorbenutzer selbst.  
+>   
+>  Unter Windows Vista werden die Berechtigungen eines Benutzers über die Benutzerkontensteuerung (User Account Control, UAC) bestimmt. Als Mitglied der integrierten Administratorgruppe sind Ihnen zwei Zugriffstoken für die Laufzeit zugewiesen: ein Standardbenutzertoken und ein Administratorzugriffstoken. Standardmäßig verwenden Sie die Standardbenutzerrolle. Um den Code auszuführen, der auf Leistungsindikatoren zugreift, müssen Sie zuerst Ihre Berechtigungen von Standardbenutzer auf Administrator erhöhen. Dazu starten Sie eine Anwendung, indem Sie mit der rechten Maustaste auf das Anwendungssymbol klicken und angeben, dass Sie die Anwendung als Administrator ausführen möchten.   
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Diagnostics.CounterSample> Klasse zum Anzeigen des Werts der <xref:System.Diagnostics.PerformanceCounter.RawValue%2A> -Eigenschaft für einen Leistungsindikator.  
+  
+ [!code-cpp[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/cpp/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/CPP/averagecount32.cpp#1)]
+ [!code-csharp[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/csharp/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/CS/averagecount32.cs#1)]
+ [!code-vb[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/VB/averagecount32.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Sie versuchen, den Leistungsindikator-Rohwert festzulegen, aber der Indikator ist schreibgeschützt.  
+  
+ - oder -   
+  
+ Die Instanz ist nicht ordnungsgemäß einem Leistungsindikator zugeordnet.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.Diagnostics.PerformanceCounter.InstanceLifetime" /> -Eigenschaftensatz auf <see cref="F:System.Diagnostics.PerformanceCounterInstanceLifetime.Process" /> bei Verwendung von globalen shared Memory-Protokolls.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Beim Zugreifen auf eine System-API ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Die Plattform ist Windows 98 oder Windows Millennium Edition (Me), die Leistungsindikatoren nicht unterstützt.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Code, der ausgeführt wird, ohne Administratorrechte hat versucht, einen Leistungsindikator zu lesen.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">zum Schreiben von Leistungsindikator-Kategorienamen ein. Zugeordnete Enumeration: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Write" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnly">
+      <MemberSignature Language="C#" Value="public bool ReadOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.PerformanceCounter.ReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("The accessability level of the counter.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob dies <see cref="T:System.Diagnostics.PerformanceCounter" /> Instanz befindet sich in nur-Lese-Modus.</summary>
+        <value>
+          <see langword="true" />, wenn die <see cref="T:System.Diagnostics.PerformanceCounter" /> Instanz befindet sich in nur-Lese-Modus (auch wenn der Zähler selbst eine benutzerdefinierte .NET Framework-Leistungsindikator ist); <see langword="false" /> , wenn es sich im Lese-/Schreibmodus befindet. Der Standardwert ist der Wert vom Konstruktor festgelegt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für einen Indikator System <xref:System.Diagnostics.PerformanceCounter.ReadOnly%2A> sollte immer `true`. Ein System Leistungsindikator kann nicht geschrieben werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveInstance">
+      <MemberSignature Language="C#" Value="public void RemoveInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveInstance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounter.RemoveInstance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht die Kategorieinstanz gemäß der <see cref="T:System.Diagnostics.PerformanceCounter" /> Objekt <see cref="P:System.Diagnostics.PerformanceCounter.InstanceName" /> Eigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können eine Instanz nur für einen benutzerdefinierten Leistungsindikator entfernen. Alle Systemleistungsindikatoren sind schreibgeschützt, damit möchten, entfernen Sie eines davon eine Ausnahme auslöst.  
+  
+> [!NOTE]
+>  Um eine mögliche Racebedingung zu vermeiden, wenn der Leistungsindikator freigegebenen Speicher freigegeben wird, wird empfohlen, die <xref:System.Diagnostics.PerformanceCounter.RemoveInstance%2A> Methode aufgerufen werden, aus der <xref:System.AppDomain.DomainUnload> -Ereignishandler.  
+  
+ Geben Sie zum Erstellen einer Instanz einer Leistungskategorie ein `instanceName` auf die <xref:System.Diagnostics.PerformanceCounter.%23ctor%2A> Konstruktor. Wenn durch die Kategorieinstanz angegeben `instanceName` ist bereits vorhanden. das neue Objekt wird die vorhandene Kategorieinstanz verweisen.  
+  
+> [!NOTE]
+>  Wenn der Wert für die <xref:System.Diagnostics.PerformanceCounter.InstanceLifetime%2A> Eigenschaft ist <xref:System.Diagnostics.PerformanceCounterInstanceLifetime.Process> und die Leistungsindikatorkategorie wurde mit .NET Framework, Version 1.0 oder 1.1, erstellt eine <xref:System.InvalidOperationException> ausgelöst wird. Leistungsindikatorkategorien, die mit früheren Versionen erstellten verwenden Sie globale freigegebene Speicher und der Wert für <xref:System.Diagnostics.PerformanceCounter.InstanceLifetime%2A> muss <xref:System.Diagnostics.PerformanceCounterInstanceLifetime.Global>. Wenn die Kategorie von Anwendungen auf Versionen 1.0 oder 1.1 von .NET Framework nicht verwendet wird, löschen und neu erstellen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Dieser Zähler ist schreibgeschützt, damit jede Instanz, die der Kategorie zugeordnet ist, nicht entfernt werden kann.  
+  
+ - oder -   
+  
+ Die Instanz ist nicht ordnungsgemäß einem Leistungsindikator zugeordnet.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.Diagnostics.PerformanceCounter.InstanceLifetime" /> -Eigenschaftensatz auf <see cref="F:System.Diagnostics.PerformanceCounterInstanceLifetime.Process" /> bei Verwendung von globalen shared Memory-Protokolls.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Beim Zugreifen auf eine System-API ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Die Plattform ist Windows 98 oder Windows Millennium Edition (Me), die Leistungsindikatoren nicht unterstützt.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">zum Schreiben von Leistungsindikator-Kategorienamen ein. Zugeordnete Enumeration: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Write" />.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

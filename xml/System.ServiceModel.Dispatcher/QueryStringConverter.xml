@@ -1,0 +1,232 @@
+<Type Name="QueryStringConverter" FullName="System.ServiceModel.Dispatcher.QueryStringConverter">
+  <TypeSignature Language="C#" Value="public class QueryStringConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit QueryStringConverter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.QueryStringConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Web</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Diese Klasse konvertiert einen Parameter in einer Abfragezeichenfolge in ein Objekt des entsprechenden Typs. Außerdem kann diese Klasse einen Parameter von einem Objekt in seine Abfragezeichenfolgendarstellung konvertieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Parameter können in einer Abfragezeichenfolge in einem URL angegeben werden. Diese Klasse konvertiert die in einer Zeichenfolge angegebenen Parameter in Objekte. Beispielsweise kann der folgende Vertrag definiert werden.  
+  
+```  
+[ServiceContract]  
+interface Calculator  
+{  
+   [WebGet(UriTemplate="Add?n1={n1}&n2={n2}")]  
+   [OperationContract]  
+   long Add(long n1, long n2);  
+}  
+```  
+  
+ Ein [!INCLUDE[indigo1](~/includes/indigo1-md.md)]-Dienst implementiert diese Schnittstelle und macht sie an einem Endpunkt mit <xref:System.ServiceModel.Description.WebHttpBehavior> unter http://localhost:8000/MyCalcService verfügbar. Der `Add`-Dienstvorgang kann durch Senden eines HTTP-GET-Aufrufs an http://localhost:8000/MyCalcService/Add?n1=10&n2=5 aufgerufen werden. Der <xref:System.ServiceModel.Dispatcher.QueryStringConverter> erhält diese URL und konvertiert die beiden darin angegebenen Parameter (n1 und n2) in zwei `long`-Objekte mit den entsprechenden Werten.  
+  
+ Sie können eine Klasse von <xref:System.ServiceModel.Dispatcher.QueryStringConverter> ableiten, um zu steuern, wie Abfragezeichenfolgenparameter den Parametern eines Dienstvorgangs zugeordnet werden.  
+  
+ Der <xref:System.ServiceModel.Dispatcher.QueryStringConverter> unterstützt standardmäßig die folgenden Typen:  
+  
+-   <xref:System.Byte>  
+  
+-   <xref:System.SByte>  
+  
+-   <xref:System.Int16>  
+  
+-   <xref:System.Int32>  
+  
+-   <xref:System.Int64>  
+  
+-   <xref:System.UInt16>  
+  
+-   <xref:System.UInt32>  
+  
+-   <xref:System.UInt64>  
+  
+-   <xref:System.Single>  
+  
+-   <xref:System.Double>  
+  
+-   <xref:System.Char>  
+  
+-   <xref:System.Decimal>  
+  
+-   <xref:System.Boolean>  
+  
+-   <xref:System.String>  
+  
+-   <xref:System.DateTime>  
+  
+-   <xref:System.TimeSpan>  
+  
+-   <xref:System.Guid>  
+  
+-   <xref:System.Byte>-Array  
+  
+-   <xref:System.Uri>  
+  
+-   <xref:System.Object>  
+  
+-   <xref:System.DateTimeOffset>  
+  
+-   Enumerationen  
+  
+-   Typen, die über ein `TypeConverterAttribute` verfügen, mit dem der Typ in eine Zeichenfolgendarstellung bzw. aus einer Zeichenfolgendarstellung konvertiert werden kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.ServiceModel.Dispatcher.QueryStringConverter>-Klasse zum Konvertieren zwischen einer Zeichenfolge und einer 32-Bit-Ganzzahl veranschaulicht.  
+  
+ [!code-csharp[QueryStringConverter#0](~/samples/snippets/csharp/VS_Snippets_CFX/querystringconverter/cs/program.cs#0)]
+ [!code-vb[QueryStringConverter#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/querystringconverter/vb/program.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public QueryStringConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.QueryStringConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Dispatcher.QueryStringConverter" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Instanz der <xref:System.ServiceModel.Dispatcher.QueryStringConverter>-Klasse erstellt wird.  
+  
+ [!code-csharp[QueryStringConverter#1](~/samples/snippets/csharp/VS_Snippets_CFX/querystringconverter/cs/program.cs#1)]
+ [!code-vb[QueryStringConverter#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/querystringconverter/vb/program.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvert">
+      <MemberSignature Language="C#" Value="public virtual bool CanConvert (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanConvert(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.QueryStringConverter.CanConvert(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die zu konvertierende <see cref="T:System.Type" />.</param>
+        <summary>Ermittelt, ob der angegebene Typ in eine bzw. aus einer Zeichenfolgendarstellung konvertiert werden kann.</summary>
+        <returns>Ein Wert, der angibt, ob der Typ konvertiert werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Code wird veranschaulicht, wie bestimmt wird, ob der <xref:System.ServiceModel.Dispatcher.QueryStringConverter> in den und aus dem angegebenen Typ konvertieren kann.  
+  
+ [!code-csharp[QueryStringConverter#2](~/samples/snippets/csharp/VS_Snippets_CFX/querystringconverter/cs/program.cs#2)]
+ [!code-vb[QueryStringConverter#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/querystringconverter/vb/program.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertStringToValue">
+      <MemberSignature Language="C#" Value="public virtual object ConvertStringToValue (string parameter, Type parameterType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object ConvertStringToValue(string parameter, class System.Type parameterType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.QueryStringConverter.ConvertStringToValue(System.String,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameter" Type="System.String" />
+        <Parameter Name="parameterType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="parameter">Die Zeichenfolgenform des Parameters und Werts.</param>
+        <param name="parameterType">Der <see cref="T:System.Type" />, in den der Parameter konvertiert wird.</param>
+        <summary>Konvertiert einen Abfragezeichenfolgenparameter in den angegebenen Typ.</summary>
+        <returns>Der konvertierte Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der `parameterType` ein Werttyp und der Parameter `null` ist, wird der Standardwert von `parameterType` zurückgegeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Code wird gezeigt, wie eine Zeichenfolge in den angegebenen Typ konvertiert wird.  
+  
+ [!code-csharp[QueryStringConverter#2](~/samples/snippets/csharp/VS_Snippets_CFX/querystringconverter/cs/program.cs#2)]
+ [!code-vb[QueryStringConverter#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/querystringconverter/vb/program.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.FormatException">Das Format der bereitgestellten Zeichenfolge ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertValueToString">
+      <MemberSignature Language="C#" Value="public virtual string ConvertValueToString (object parameter, Type parameterType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ConvertValueToString(object parameter, class System.Type parameterType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.QueryStringConverter.ConvertValueToString(System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameter" Type="System.Object" />
+        <Parameter Name="parameterType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="parameter">Der zu konvertierende Parameter.</param>
+        <param name="parameterType">Der <see cref="T:System.Type" /> des zu konvertierenden Parameters.</param>
+        <summary>Konvertiert einen Parameter in eine Abfragezeichenfolgendarstellung.</summary>
+        <returns>Name und Wert des Parameters.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Code wird gezeigt, wie ein eingegebener Wert in eine Zeichenfolgendarstellung des Werts konvertiert wird.  
+  
+ [!code-csharp[QueryStringConverter#3](~/samples/snippets/csharp/VS_Snippets_CFX/querystringconverter/cs/program.cs#3)]
+ [!code-vb[QueryStringConverter#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/querystringconverter/vb/program.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

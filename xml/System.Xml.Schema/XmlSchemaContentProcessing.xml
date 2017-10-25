@@ -1,0 +1,171 @@
+<Type Name="XmlSchemaContentProcessing" FullName="System.Xml.Schema.XmlSchemaContentProcessing">
+  <TypeSignature Language="C#" Value="public enum XmlSchemaContentProcessing" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed XmlSchemaContentProcessing extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Schema.XmlSchemaContentProcessing" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Enthält Informationen zu den Validierungsmodus des <see langword="any" /> und <see langword="anyAttribute" /> Element Ersetzungen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Lax">
+      <MemberSignature Language="C#" Value="Lax" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.Schema.XmlSchemaContentProcessing Lax = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Schema.XmlSchemaContentProcessing.Lax" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlEnum("lax")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaContentProcessing</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wenn das zugehörige Schema gefunden wird, werden die Dokumentelemente überprüft werden. Andernfalls werden kein Fehler ausgelöst.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Element nicht überprüft wird, versucht der XML-Prozessor Benachrichtigen des Clients durch einen Ereignishandler für die Überprüfung mit <xref:System.Xml.Schema.ValidationEventArgs.Severity%2A>  =  `XmlSeverityType.Warning`. Wenn ein Ereignishandler für die Validierung nicht eingerichtet wurde, wird keine Informationen zurückgegeben, wenn die Warnung generiert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.Schema.XmlSchemaContentProcessing None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Schema.XmlSchemaContentProcessing.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaContentProcessing</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dokumentelemente werden nicht überprüft.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Skip">
+      <MemberSignature Language="C#" Value="Skip" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.Schema.XmlSchemaContentProcessing Skip = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Schema.XmlSchemaContentProcessing.Skip" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlEnum("skip")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaContentProcessing</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dokumentelemente wohlgeformter XML-Code bestehen müssen, und es werden nicht durch das Schema überprüft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der XML-Prozessor versucht Benachrichtigen des Clients durch einen Ereignishandler für die Überprüfung mit <xref:System.Xml.Schema.ValidationEventArgs.Severity%2A>  =  `XmlSeverityType.Warning` , dass keine Validierung für das angegebene Element stattgefunden. Wenn ein Ereignishandler für die Validierung nicht eingerichtet wurde, wird keine Informationen zurückgegeben, wenn die Warnung generiert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Strict">
+      <MemberSignature Language="C#" Value="Strict" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.Schema.XmlSchemaContentProcessing Strict = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Schema.XmlSchemaContentProcessing.Strict" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlEnum("strict")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaContentProcessing</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Schemaprozessor muss ein Schema verknüpft mit dem angegebenen Namespace So überprüfen Sie die Dokumentelemente suchen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Prozessor kann kein Schema gefunden, oder die Elemente nicht gültig sind, versucht der XML-Prozessor Benachrichtigen des Clients durch einen Ereignishandler für die Überprüfung mit <xref:System.Xml.Schema.ValidationEventArgs.Severity%2A>  =  `XmlSeverityType.Warning`. Wenn ein Validierungsfehler auftritt, und ein Ereignishandler für die Überprüfung ist nicht angegeben, wird eine Ausnahme ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

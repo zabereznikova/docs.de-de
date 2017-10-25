@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.Services.Protocols">
+  <Docs>
+    <summary>Die <see cref="N:System.Web.Services.Protocols" /> Namespace enthält Klassen, die die Protokolle verwendet, um die Datenübertragung über das Netzwerk während der Kommunikation zwischen XML-Webdienstclients und mithilfe von ASP.NET erstellten XML-Webdienste definieren.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

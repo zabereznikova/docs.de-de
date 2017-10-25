@@ -1,0 +1,222 @@
+<Type Name="StreamUpgradeProvider" FullName="System.ServiceModel.Channels.StreamUpgradeProvider">
+  <TypeSignature Language="C#" Value="public abstract class StreamUpgradeProvider : System.ServiceModel.Channels.CommunicationObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit StreamUpgradeProvider extends System.ServiceModel.Channels.CommunicationObject" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.StreamUpgradeProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.CommunicationObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementiert einen benutzerdefinierten Upgradeanbieter, der von der <see langword="abstract" />-Basisklasse geerbt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Beispiel für ein Streamupgrade ist das Erstellen eines Komprimierungsstreams direkt über dem Transportstream. Um eine Sicherheitsaktualisierung hinzuzufügen, implementieren Sie zusätzlich eine Klasse, die von <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider> abgeleitet ist. Sie können mehrere Aktualisierungen implementieren, die die jeweils vorangehende Aktualisierung umschließen.  
+  
+ Der Aktualisierungsvorgang besteht aus folgenden Schritten:  
+  
+1.  Implementieren Sie eine Klasse, die von <xref:System.ServiceModel.Channels.StreamUpgradeProvider> abgeleitet ist.  
+  
+2.  Nehmen Sie eine Registrierung vor. Erstellen Sie dazu ein entsprechendes Bindungselement, und registrieren Sie den Anbieter in einer benutzerdefinierten Bindung.  
+  
+3.  Mit der abgeleiteten Klasse, die Sie implementieren, wird eine Instanz von <xref:System.ServiceModel.Channels.StreamUpgradeInitiator> erstellt. Damit wird zur Laufzeit eine Anforderung an das andere Ende der Verbindung zur Aktualisierung der Kanaltransportebene initialisiert.  
+  
+4.  Mit der abgeleiteten Klasse, die Sie implementieren, wird eine Instanz von <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor> erstellt, die zur Laufzeit die Aktualisierungsanforderung aus dem vorhergehenden Schritt empfängt sowie ggf. die Aktualisierung akzeptiert und den aktualisierten Stream an das andere Ende der Verbindung zurückgibt.  
+  
+5.  Zusätzliche Aktualisierungsanforderungen werden, wie in den vorangehenden zwei Schritten beschrieben, nacheinander verarbeitet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.StreamUpgradeProvider" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit <xref:System.ServiceModel.Channels.StreamUpgradeProvider.%23ctor%2A> können Sie explizit Werte für Timeouteigenschaften festlegen. Verwenden Sie andernfalls <xref:System.ServiceModel.Channels.StreamUpgradeProvider.%23ctor%2A>, um die Timeouteigenschaften auf `null` festzulegen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected StreamUpgradeProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.StreamUpgradeProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.StreamUpgradeProvider" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Timeouteigenschaften sind auf `null` festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected StreamUpgradeProvider (System.ServiceModel.IDefaultCommunicationTimeouts timeouts);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.IDefaultCommunicationTimeouts timeouts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.StreamUpgradeProvider.#ctor(System.ServiceModel.IDefaultCommunicationTimeouts)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="timeouts" Type="System.ServiceModel.IDefaultCommunicationTimeouts" />
+      </Parameters>
+      <Docs>
+        <param name="timeouts">Die Standardtimeoutwerte für die Kommunikation.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.StreamUpgradeProvider" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit den bereitgestellten Timeouts werden die Standardtimeoutwerte für das Öffnen und Schließen eines Transports mit dem Aktualisierungsanbieter gesteuert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateUpgradeAcceptor">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.Channels.StreamUpgradeAcceptor CreateUpgradeAcceptor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Channels.StreamUpgradeAcceptor CreateUpgradeAcceptor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeAcceptor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.StreamUpgradeAcceptor</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Instanz von <see cref="T:System.ServiceModel.Channels.StreamUpgradeAcceptor" />.</summary>
+        <returns>Gibt eine Instanz von <see cref="T:System.ServiceModel.Channels.StreamUpgradeAcceptor" /> zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode wird der zugeordnete UpgradeAcceptor für den Upgradeanbieter erstellt, der Upgradeanforderungen vom entsprechenden UpgradeInitiator akzeptieren kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateUpgradeInitiator">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.Channels.StreamUpgradeInitiator CreateUpgradeInitiator (System.ServiceModel.EndpointAddress remoteAddress, Uri via);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Channels.StreamUpgradeInitiator CreateUpgradeInitiator(class System.ServiceModel.EndpointAddress remoteAddress, class System.Uri via) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeInitiator(System.ServiceModel.EndpointAddress,System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.StreamUpgradeInitiator</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="remoteAddress" Type="System.ServiceModel.EndpointAddress" />
+        <Parameter Name="via" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="remoteAddress">Endpunktadresse für den Kanal.</param>
+        <param name="via">Die Adresse des Via-URIs (ein URI, über den die Kommunikation weitergeleitet werden kann).</param>
+        <summary>Erstellt eine Instanz von <see cref="T:System.ServiceModel.Channels.StreamUpgradeInitiator" />.</summary>
+        <returns>Gibt eine Instanz von <see cref="T:System.ServiceModel.Channels.StreamUpgradeInitiator" /> zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode wird der entsprechende <xref:System.ServiceModel.Channels.StreamUpgradeInitiator> für den Upgradeanbieter erstellt, der eine Upgradeanforderung für den zugeordneten <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor> am bereitgestellten Endpunkt erstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultCloseTimeout">
+      <MemberSignature Language="C#" Value="protected override TimeSpan DefaultCloseTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan DefaultCloseTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.StreamUpgradeProvider.DefaultCloseTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das DefaultCloseTimeout ab.</summary>
+        <value>Gibt eine <see cref="T:System.TimeSpan" /> für das DefaultCloseTimeout zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultOpenTimeout">
+      <MemberSignature Language="C#" Value="protected override TimeSpan DefaultOpenTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan DefaultOpenTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.StreamUpgradeProvider.DefaultOpenTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das DefaultOpenTimeout ab.</summary>
+        <value>Gibt eine <see cref="T:System.TimeSpan" /> für das DefaultOpenTimeout zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public virtual T GetProperty&lt;T&gt; () where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !!T GetProperty&lt;class T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.StreamUpgradeProvider.GetProperty``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">Der Typ des aktuellen Datenstroms.</typeparam>
+        <summary>Bei der Implementierung in einer abgeleiteten Klasse wird eine Eigenschaft des aktuellen Datenstroms abgerufen, der einen Initiator eines Datenstromupgrades darstellt.</summary>
+        <returns>Ein Initiator eines Datenstromupgrades.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

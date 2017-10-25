@@ -1,0 +1,111 @@
+<Type Name="IValueConverter" FullName="System.Windows.Data.IValueConverter">
+  <TypeSignature Language="C#" Value="public interface IValueConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IValueConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Data.IValueConverter" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet eine Möglichkeit, benutzerdefinierte Logik auf eine Bindung anzuwenden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie eine Bindung einen Wertkonverter zuordnen möchten, erstellen Sie eine Klasse, die implementiert die <xref:System.Windows.Data.IValueConverter> Schnittstelle und anschließenden Implementieren der <xref:System.Windows.Data.IValueConverter.Convert%2A> und <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> Methoden. Typkonverter können Daten von einem Typ in einen anderen ändern, übersetzen Daten basierend auf kulturinformationen oder ändern andere Aspekte der Präsentation. Beispiele für einige typische Konverter Szenarien, finden Sie unter "Datenkonvertierung" in [Übersicht über Datenbindung](~/docs/framework/wpf/data/data-binding-overview.md).  
+  
+ Wertkonverter sind kulturfähigen. Sowohl die <xref:System.Windows.Data.IValueConverter.Convert%2A> und <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> Methoden verfügen über eine `culture` Parameter, der die kulturinformationen angibt. Wenn die kulturinformationen für die Konvertierung nicht relevant ist, können Sie diesen Parameter in Ihrer benutzerdefinierten Konverter ignorieren.  
+  
+ Die <xref:System.Windows.Data.IValueConverter.Convert%2A> und <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> Methoden verfügen auch über einen Parameter namens `parameter` , damit Sie dieselbe Instanz des Konverters mit anderen Parametern verwenden können. Beispielsweise können Sie einen Konverter Formatierung schreiben, der anderen Formate der Daten auf Grundlage der input-Parameter, mit denen Sie erstellt. Können Sie die <xref:System.Windows.Data.Binding.ConverterParameter%2A> von der <xref:System.Windows.Data.Binding> Klasse, um einen Parameter übergeben, als Argument in der <xref:System.Windows.Data.IValueConverter.Convert%2A> und <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> Methoden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Convert">
+      <MemberSignature Language="C#" Value="public object Convert (object value, Type targetType, object parameter, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Convert(object value, class System.Type targetType, object parameter, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.IValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="targetType" Type="System.Type" />
+        <Parameter Name="parameter" Type="System.Object" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der von der Bindungsquelle erzeugte Wert.</param>
+        <param name="targetType">Der Typ der Bindungsziel-Eigenschaft.</param>
+        <param name="parameter">Der zu verwendende Konverterparameter.</param>
+        <param name="culture">Die im Konverter zu verwendende Kultur.</param>
+        <summary>Konvertiert einen Wert.</summary>
+        <returns>Ein konvertierter Wert. Wenn die Methode <see langword="null" /> zurückgibt, wird der gültige NULL-Wert verwendet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Datenbindungsmodul ruft diese Methode auf, wenn es sich um einen Wert von der Bindungsquelle zum Bindungsziel weitergibt.  
+  
+ Das Datenbindungsmodul fängt keine Ausnahmen, die von einem Benutzer angegebenen Konverter ausgelöst werden. Jede Ausnahme, die ausgelöst wird, indem Sie die <xref:System.Windows.Data.IValueConverter.Convert%2A> Methode oder eine nicht abgefangenen Ausnahmen, die durch Methoden ausgelöst werden, die die <xref:System.Windows.Data.IValueConverter.Convert%2A> Methodenaufrufe, als zur Laufzeit Fehler behandelt werden. Behandeln von erwarteten Probleme durch zurückgeben <xref:System.Windows.DependencyProperty.UnsetValue?displayProperty=nameWithType>.  
+  
+ Ein Rückgabewert von <xref:System.Windows.DependencyProperty.UnsetValue?displayProperty=nameWithType> gibt an, dass der Konverter keinen Wert erzeugt hat und dass die Bindung verwendet den <xref:System.Windows.Data.BindingBase.FallbackValue%2A>, falls vorhanden, oder stattdessen den Standardwert.  
+  
+ Ein Rückgabewert von <xref:System.Windows.Data.Binding.DoNothing?displayProperty=nameWithType> gibt an, dass die Bindung nicht den Wert übertragen oder verwenden Sie die <xref:System.Windows.Data.BindingBase.FallbackValue%2A> oder Standardwert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertBack">
+      <MemberSignature Language="C#" Value="public object ConvertBack (object value, Type targetType, object parameter, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object ConvertBack(object value, class System.Type targetType, object parameter, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.IValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="targetType" Type="System.Type" />
+        <Parameter Name="parameter" Type="System.Object" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert, der vom Bindungsziel erzeugt wird.</param>
+        <param name="targetType">Der Typ, in den konvertiert werden soll.</param>
+        <param name="parameter">Der zu verwendende Konverterparameter.</param>
+        <param name="culture">Die im Konverter zu verwendende Kultur.</param>
+        <summary>Konvertiert einen Wert.</summary>
+        <returns>Ein konvertierter Wert. Wenn die Methode <see langword="null" /> zurückgibt, wird der gültige NULL-Wert verwendet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Datenbindungsmodul ruft diese Methode auf, wenn es sich um einen Wert vom Bindungsziel zur Bindungsquelle weitergibt.  
+  
+ Die Implementierung dieser Methode muss die Umkehrung der <xref:System.Windows.Data.IValueConverter.Convert%2A> Methode.  
+  
+ Das Datenbindungsmodul fängt keine Ausnahmen, die von einem Benutzer angegebenen Konverter ausgelöst werden. Jede Ausnahme, die ausgelöst wird, indem Sie die <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> Methode oder eine nicht abgefangenen Ausnahmen, die durch Methoden ausgelöst werden, die die <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> Methodenaufrufe, als zur Laufzeit Fehler behandelt werden. Behandeln von erwarteten Probleme durch zurückgeben <xref:System.Windows.DependencyProperty>.<xref:System.Windows.DependencyProperty.UnsetValue>.  
+  
+ Ein Rückgabewert von <xref:System.Windows.DependencyProperty.UnsetValue?displayProperty=nameWithType> gibt an, dass der Konverter keinen Wert erzeugt hat und dass die Bindung verwendet den <xref:System.Windows.Data.BindingBase.FallbackValue%2A>, falls vorhanden, oder stattdessen den Standardwert.  
+  
+ Ein Rückgabewert von <xref:System.Windows.Data.Binding.DoNothing?displayProperty=nameWithType> gibt an, dass die Bindung nicht den Wert übertragen oder verwenden Sie die <xref:System.Windows.Data.BindingBase.FallbackValue%2A> oder Standardwert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

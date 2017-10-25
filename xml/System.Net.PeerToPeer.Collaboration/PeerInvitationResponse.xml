@@ -1,0 +1,45 @@
+<Type Name="PeerInvitationResponse" FullName="System.Net.PeerToPeer.Collaboration.PeerInvitationResponse">
+  <TypeSignature Language="C#" Value="public class PeerInvitationResponse" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PeerInvitationResponse extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.PeerToPeer.Collaboration.PeerInvitationResponse" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Antwort von einem Remoteserver Peer empfangen wird, auf eine Einladung gesendet, die über die <see cref="M:System.Net.PeerToPeer.Collaboration.Peer.Invite" /> oder <see cref="M:System.Net.PeerToPeer.Collaboration.PeerNearMe.Invite" /> Methode.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse keinen öffentlichen Konstruktor. Die <xref:System.Net.PeerToPeer.Collaboration.PeerInvitationResponseType> Klasse dient zum Kapseln der Antwort, um die Rückgabe von zusätzlichen Daten in einer zukünftigen Version aufzunehmen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="PeerInvitationResponseType">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.PeerInvitationResponseType PeerInvitationResponseType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.PeerToPeer.Collaboration.PeerInvitationResponseType PeerInvitationResponseType" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.PeerInvitationResponse.PeerInvitationResponseType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerInvitationResponseType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Antwort auf die Einladung von Remotepeers gemäß <see cref="T:System.Net.PeerToPeer.Collaboration.PeerInvitationResponseType" /> Klasse.</summary>
+        <value>
+          <see cref="T:System.Net.PeerToPeer.Collaboration.PeerInvitationResponseType" />Objekt, das die Antwort auf eine Einladung an einen Remoteserver Peer enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

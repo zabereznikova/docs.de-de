@@ -1,0 +1,295 @@
+<Type Name="PnrpPeerResolverBindingElement" FullName="System.ServiceModel.Channels.PnrpPeerResolverBindingElement">
+  <TypeSignature Language="C#" Value="public sealed class PnrpPeerResolverBindingElement : System.ServiceModel.Channels.PeerResolverBindingElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PnrpPeerResolverBindingElement extends System.ServiceModel.Channels.PeerResolverBindingElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.PnrpPeerResolverBindingElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.PeerResolverBindingElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert das Bindungselement, mit dem ein Peer Name Resolution Protocol (PNRP)-Resolver erstellt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement.CreatePeerResolver%2A> auf, nachdem die Instanz erstellt wurde, um einen Peerresolver aus einer Instanz dieser Klasse zu erstellen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PnrpPeerResolverBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.PnrpPeerResolverBindingElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Standardinstanz der <see cref="T:System.ServiceModel.Channels.PnrpPeerResolverBindingElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PnrpPeerResolverBindingElement (System.ServiceModel.PeerResolvers.PeerReferralPolicy referralPolicy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ServiceModel.PeerResolvers.PeerReferralPolicy referralPolicy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.PnrpPeerResolverBindingElement.#ctor(System.ServiceModel.PeerResolvers.PeerReferralPolicy)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="referralPolicy" Type="System.ServiceModel.PeerResolvers.PeerReferralPolicy" />
+      </Parameters>
+      <Docs>
+        <param name="referralPolicy">
+          Die <see cref="T:System.ServiceModel.PeerResolvers.PeerReferralPolicy" />, die die Verweisrichtlinie für diesen Resolver angibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.PnrpPeerResolverBindingElement" />-Klasse mit der bereitgestellten Peerverweisrichtlinie.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt; BuildChannelFactory&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.IChannelFactory`1&lt;!!TChannel&gt; BuildChannelFactory&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.PnrpPeerResolverBindingElement.BuildChannelFactory``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Der Kanaltyp, der erstellt werden soll.</typeparam>
+        <param name="context">
+          Der <see cref="T:System.ServiceModel.Channels.BindingContext" />, der den Bindungskontext für die Kanalfactory angibt.</param>
+        <summary>Erstellt eine Kanalfactory, mit der ein Kanal zum Senden von Nachrichten erstellt werden kann.</summary>
+        <returns>
+          Die <see cref="T:System.ServiceModel.Channels.IChannelFactory" />, die die neue Kanalfactory des angegebenen Typs enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode kann eine Kanalfactory zum Senden von Nachrichten auf Basis der Konfiguration des Transportbindungselements abgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt; BuildChannelListener&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.IChannelListener`1&lt;!!TChannel&gt; BuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.PnrpPeerResolverBindingElement.BuildChannelListener``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">
+          Der <see cref="T:System.ServiceModel.Channels.IChannel" />, der den Kanaltyp angibt, der erstellt werden soll.</typeparam>
+        <param name="context">
+          Der <see cref="T:System.ServiceModel.Channels.BindingContext" />, der den Bindungskontext für den Kanallistener angibt.</param>
+        <summary>Erstellt einen Kanallistener des angegebenen Typs zum Empfangen von Nachrichten.</summary>
+        <returns>
+          Der <see cref="T:System.ServiceModel.Channels.IChannelListener" />, der den neuen Kanallistener des angegebenen Typs enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode kann ein Kanallistener zum Empfangen von Nachrichten auf Basis der Konfiguration des Transportbindungselements abgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override bool CanBuildChannelFactory&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanBuildChannelFactory&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.PnrpPeerResolverBindingElement.CanBuildChannelFactory``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">
+          Der <see cref="T:System.ServiceModel.Channels.IChannel" />, der den Kanaltyp angibt, der erstellt werden soll.</typeparam>
+        <param name="context">
+          Der <see cref="T:System.ServiceModel.Channels.BindingContext" />, der den Bindungskontext für die Kanalfactory angibt.</param>
+        <summary>Bestimmt, ob eine Kanalfactory des angegebenen Typs erstellt werden kann.</summary>
+        <returns>
+          <see langword="true" />, wenn eine Kanalfactory des angegebenen Typs von diesem Bindungselement erstellt werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override bool CanBuildChannelListener&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanBuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.PnrpPeerResolverBindingElement.CanBuildChannelListener``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">
+          Der <see cref="T:System.ServiceModel.Channels.IChannel" />, der den Typ des Kanallisteners angibt.</typeparam>
+        <param name="context">
+          Der <see cref="T:System.ServiceModel.Channels.BindingContext" />, der den Bindungskontext für den Kanallistener angibt.</param>
+        <summary>Bestimmt, ob ein Kanallistener des angegebenen Typs erstellt werden kann.</summary>
+        <returns>
+          <see langword="true" />, wenn ein Kanallistener des angegebenen Typs vom Bindungselement erstellt werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.BindingElement Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.BindingElement Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.PnrpPeerResolverBindingElement.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz, die eine Kopie des aktuellen Bindungselements ist.</summary>
+        <returns>Ein neues <see cref="T:System.ServiceModel.Channels.BindingElement" /> , die eine Kopie des aktuellen Bindungselements enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Objekt, das von dieser Methode zurückgegeben wird, kann als Objekt des spezifischeren <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>-Typs neu geschachtelt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePeerResolver">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.PeerResolver CreatePeerResolver ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.PeerResolver CreatePeerResolver() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.PnrpPeerResolverBindingElement.CreatePeerResolver" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.PeerResolver</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine PNRP-spezifische Instanz von <see cref="T:System.ServiceModel.PeerResolver" />.</summary>
+        <returns>
+          Das <see cref="T:System.ServiceModel.PeerResolver" />-Objekt, das den neuen PNRP-Resolver enthält, der von diesem Bindungselement erstellt wurde.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public override T GetProperty&lt;T&gt; (System.ServiceModel.Channels.BindingContext context) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!T GetProperty&lt;class T&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.PnrpPeerResolverBindingElement.GetProperty``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Die Eigenschaft, die vom Bindungskontext abgerufen werden soll.</typeparam>
+        <param name="context">
+          Der <see cref="T:System.ServiceModel.Channels.BindingContext" />, der den Bindungskontext angibt.</param>
+        <summary>Gibt eine Eigenschaft des angegebenen <see cref="T:System.ServiceModel.Channels.BindingContext" />-Objekts zurück.</summary>
+        <returns>Die Eigenschaft für den angegebenen <see cref="T:System.ServiceModel.Channels.BindingContext" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReferralPolicy">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.PeerResolvers.PeerReferralPolicy ReferralPolicy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.PeerResolvers.PeerReferralPolicy ReferralPolicy" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.PnrpPeerResolverBindingElement.ReferralPolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.PeerResolvers.PeerReferralPolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Verweisrichtlinie für den PNRP-Resolver ab, der von diesem Bindungselement erstellt wurde, oder legt diese fest.</summary>
+        <value>
+          Die <see cref="T:System.ServiceModel.PeerResolvers.PeerReferralPolicy" />, die die Verweisrichtlinie für Resolver angibt, die von dieser Instanz des Bindungselements erstellt wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

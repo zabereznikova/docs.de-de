@@ -1,0 +1,25 @@
+<Type Name="HitTestParameters3D" FullName="System.Windows.Media.Media3D.HitTestParameters3D">
+  <TypeSignature Language="C#" Value="public abstract class HitTestParameters3D" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit HitTestParameters3D extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Media3D.HitTestParameters3D" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Treffertest für abstrakte Klasse, die Parameter für ein 3D-Diagrammlayout darstellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie zum Angeben eines Treffertests in einer 3D-Szene der <xref:System.Windows.Media.Media3D.RayHitTestParameters> Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

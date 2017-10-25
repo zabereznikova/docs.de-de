@@ -1,0 +1,198 @@
+<Type Name="WellKnownServiceTypeEntry" FullName="System.Runtime.Remoting.WellKnownServiceTypeEntry">
+  <TypeSignature Language="C#" Value="public class WellKnownServiceTypeEntry : System.Runtime.Remoting.TypeEntry" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WellKnownServiceTypeEntry extends System.Runtime.Remoting.TypeEntry" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.WellKnownServiceTypeEntry" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.Remoting.TypeEntry</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält Werte für einen Objekttyp, die auf der Dienstseite als ein Server aktivierten Typobjekt (einzelner Aufruf oder Singleton) registriert werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Server aktivierten Objekttypen können einzelne Aufruf oder Singleton sein. Wenn ein Objekttyp einzelne Aufruf handelt, wird eine neue Instanz davon jedes Mal erstellt, in ein Aufruf vom Client geliefert wird. Alle Aufrufe in ein Singleton-Objekt werden durch eine Instanz dieses Objekts behandelt.  
+  
+ Jeder Client, der den URI dieses Objekts kennt kann einen Proxy für dieses Objekt abrufen, indem er mit den bevorzugten Channel registrieren <xref:System.Runtime.Remoting.Channels.ChannelServices> und aktivieren das Objekt durch den Aufruf `new` oder <xref:System.Activator.GetObject%2A?displayProperty=nameWithType>.  
+  
+ Es ist wichtig zu beachten, dass das Remoteobjekt nicht von während der Registrierung erstellt wurde. Dies nur geschieht, wenn ein Client versucht, eine Methode für das Objekt aufrufen oder das Objekt von der Clientseite aktiviert.  
+  
+ Eine ausführlichere Beschreibung des Server-aktivierten Objekten und der Aktivierung von remote-Objekt, finden Sie unter [&#91;\< Topic://cpconActivation > &#93; ](http://msdn.microsoft.com/en-us/e90d0c64-00da-4080-ae78-a6c558825c25).  
+  
+   
+  
+## Examples  
+ [!code-cpp[WellKnownServiceTypeEntry_Server#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WellKnownServiceTypeEntry_Server/CPP/wellknownservicetypeentry_server.cpp#1)]
+ [!code-csharp[WellKnownServiceTypeEntry_Server#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WellKnownServiceTypeEntry_Server/CS/wellknownservicetypeentry_server.cs#1)]
+ [!code-vb[WellKnownServiceTypeEntry_Server#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WellKnownServiceTypeEntry_Server/VB/wellknownservicetypeentry_server.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WellKnownServiceTypeEntry (Type type, string objectUri, System.Runtime.Remoting.WellKnownObjectMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type, string objectUri, valuetype System.Runtime.Remoting.WellKnownObjectMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.WellKnownServiceTypeEntry.#ctor(System.Type,System.String,System.Runtime.Remoting.WellKnownObjectMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="objectUri" Type="System.String" />
+        <Parameter Name="mode" Type="System.Runtime.Remoting.WellKnownObjectMode" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die <see cref="T:System.Type" /> des Server aktivierten Typ Dienstobjekts.</param>
+        <param name="objectUri">Der URI des Typs Server aktiviert.</param>
+        <param name="mode">Die <see cref="T:System.Runtime.Remoting.WellKnownObjectMode" /> des Typs, der definiert, wie das Objekt aktiviert ist.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.Remoting.WellKnownServiceTypeEntry" /> -Klasse mit der angegebenen <see cref="T:System.Type" />, Objekt-URI und <see cref="T:System.Runtime.Remoting.WellKnownObjectMode" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WellKnownServiceTypeEntry (string typeName, string assemblyName, string objectUri, System.Runtime.Remoting.WellKnownObjectMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string typeName, string assemblyName, string objectUri, valuetype System.Runtime.Remoting.WellKnownObjectMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.WellKnownServiceTypeEntry.#ctor(System.String,System.String,System.String,System.Runtime.Remoting.WellKnownObjectMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+        <Parameter Name="assemblyName" Type="System.String" />
+        <Parameter Name="objectUri" Type="System.String" />
+        <Parameter Name="mode" Type="System.Runtime.Remoting.WellKnownObjectMode" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">Der vollständige Typname des Diensttyps Server aktiviert.</param>
+        <param name="assemblyName">Der Name der Assembly des Diensttyps Server aktiviert.</param>
+        <param name="objectUri">Der URI des Objekts Server aktiviert.</param>
+        <param name="mode">Die <see cref="T:System.Runtime.Remoting.WellKnownObjectMode" /> des Typs, der definiert, wie das Objekt aktiviert ist.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.Remoting.WellKnownServiceTypeEntry" /> Klasse mit dem angegebenen Typnamen, Assemblynamen, Objekt-URI und <see cref="T:System.Runtime.Remoting.WellKnownObjectMode" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextAttributes">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Contexts.IContextAttribute[] ContextAttributes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Remoting.Contexts.IContextAttribute[] ContextAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.WellKnownServiceTypeEntry.ContextAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Contexts.IContextAttribute[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Kontextattribute für den Server aktivierten Diensttyp.</summary>
+        <value>Ruft ab oder legt die Kontextattribute für den Server aktivierten Diensttyp.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aktuell dieser Indexer ist nicht implementiert, und Operationen darauf gibt keine Ergebnisse zurück.  
+  
+ Kontextattribute stellen Kontexteigenschaften bereit, die beim Hinzufügen zu einem Kontext Richtlinien wie Synchronisierung und Transaktionen erzwingen können.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.WellKnownObjectMode Mode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.Remoting.WellKnownObjectMode Mode" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.WellKnownServiceTypeEntry.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.WellKnownObjectMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Runtime.Remoting.WellKnownObjectMode" /> des Diensttyps Server aktiviert.</summary>
+        <value>Die <see cref="T:System.Runtime.Remoting.WellKnownObjectMode" /> des Diensttyps Server aktiviert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectType">
+      <MemberSignature Language="C#" Value="public Type ObjectType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ObjectType" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.WellKnownServiceTypeEntry.ObjectType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Type" /> des Diensttyps Server aktiviert.</summary>
+        <value>Die <see cref="T:System.Type" /> des Diensttyps Server aktiviert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectUri">
+      <MemberSignature Language="C#" Value="public string ObjectUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ObjectUri" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.WellKnownServiceTypeEntry.ObjectUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den URI des bekannten Diensttyps ab.</summary>
+        <value>Der URI des Diensttyps Server aktiviert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.WellKnownServiceTypeEntry.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Typnamen, Assemblynamen, Objekt-URI und die <see cref="T:System.Runtime.Remoting.WellKnownObjectMode" /> Server aktivierten Typ wie eine <see cref="T:System.String" />.</summary>
+        <returns>Der Typname, Assemblyname, Objekt-URI und die <see cref="T:System.Runtime.Remoting.WellKnownObjectMode" /> Server aktivierten Typ wie eine <see cref="T:System.String" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

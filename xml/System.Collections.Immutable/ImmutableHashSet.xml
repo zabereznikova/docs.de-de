@@ -1,0 +1,374 @@
+<Type Name="ImmutableHashSet" FullName="System.Collections.Immutable.ImmutableHashSet">
+  <TypeSignature Language="C#" Value="public static class ImmutableHashSet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ImmutableHashSet extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Immutable.ImmutableHashSet" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections.Immutable</AssemblyName>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <AssemblyVersion>1.2.1.0</AssemblyVersion>
+    <AssemblyVersion>1.2.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Reihe von Initialisierungsmethoden für Instanzen der <see cref="T:System.Collections.Immutable.ImmutableHashSet`1" /> Klasse bereit.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]</summary>
+    <remarks>To be added.</remarks>
+    <threadsafe>Dieser Typ ist threadsicher.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="Create&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableHashSet&lt;T&gt; Create&lt;T&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Immutable.ImmutableHashSet`1&lt;!!T&gt; Create&lt;T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableHashSet.Create``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableHashSet&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">Der Typ der Elemente, die im unveränderlichen Hashset gespeichert werden sollen.</typeparam>
+        <summary>Erstellt eine leeres unveränderliches Hashset.</summary>
+        <returns>Ein leeres unveränderliches Hashset.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableHashSet&lt;T&gt; Create&lt;T&gt; (System.Collections.Generic.IEqualityComparer&lt;T&gt; equalityComparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Immutable.ImmutableHashSet`1&lt;!!T&gt; Create&lt;T&gt;(class System.Collections.Generic.IEqualityComparer`1&lt;!!T&gt; equalityComparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableHashSet.Create``1(System.Collections.Generic.IEqualityComparer{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableHashSet&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="equalityComparer" Type="System.Collections.Generic.IEqualityComparer&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ der Elemente im unveränderlichen Hashset.</typeparam>
+        <param name="equalityComparer">Das Objekt, mit dem Objekte im Set auf Gleichheit verglichen werden sollen.</param>
+        <summary>Erstellt ein leeres unveränderliches Hashset, das den angegebenen Gleichheitsvergleich verwendet.</summary>
+        <returns>Ein leeres unveränderliches Hashset.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableHashSet&lt;T&gt; Create&lt;T&gt; (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Immutable.ImmutableHashSet`1&lt;!!T&gt; Create&lt;T&gt;(!!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableHashSet.Create``1(``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableHashSet&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ der Elemente im unveränderlichen Hashset.</typeparam>
+        <param name="item">Das Element, mit dem das Hashset vorab aufgefüllt wird.</param>
+        <summary>Erstellt ein neues unveränderliches Hashset, das das angegebene Element enthält.</summary>
+        <returns>Ein neues unveränderliches Hashset, das das angegebene Element enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableHashSet&lt;T&gt; Create&lt;T&gt; (params T[] items);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Immutable.ImmutableHashSet`1&lt;!!T&gt; Create&lt;T&gt;(!!T[] items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableHashSet.Create``1(``0[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableHashSet&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="items" Type="T[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ der Elemente im unveränderlichen Hashset.</typeparam>
+        <param name="items">Ein Array, das die Elemente enthält, um das Hashset vorab aufzufüllen.</param>
+        <summary>Erstellt ein neues unveränderliches Hashset, das das angegebene Array von Elementen enthält.</summary>
+        <returns>Ein neues unveränderliches Hashset, das die angegebenen Elemente enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableHashSet&lt;T&gt; Create&lt;T&gt; (System.Collections.Generic.IEqualityComparer&lt;T&gt; equalityComparer, T item);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Immutable.ImmutableHashSet`1&lt;!!T&gt; Create&lt;T&gt;(class System.Collections.Generic.IEqualityComparer`1&lt;!!T&gt; equalityComparer, !!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableHashSet.Create``1(System.Collections.Generic.IEqualityComparer{``0},``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableHashSet&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="equalityComparer" Type="System.Collections.Generic.IEqualityComparer&lt;T&gt;" />
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ der Elemente im unveränderlichen Hashset.</typeparam>
+        <param name="equalityComparer">Das Objekt, mit dem Objekte im Set auf Gleichheit verglichen werden sollen.</param>
+        <param name="item">Das Element, mit dem das Hashset vorab aufgefüllt wird.</param>
+        <summary>Erstellt ein neues unveränderliches Hashset, das das angegebene Element enthält, und verwendet für den Settyp den angegebenen Gleichheitsvergleich.</summary>
+        <returns>Ein neues unveränderliches Hashset, das das angegebene Element enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableHashSet&lt;T&gt; Create&lt;T&gt; (System.Collections.Generic.IEqualityComparer&lt;T&gt; equalityComparer, params T[] items);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Immutable.ImmutableHashSet`1&lt;!!T&gt; Create&lt;T&gt;(class System.Collections.Generic.IEqualityComparer`1&lt;!!T&gt; equalityComparer, !!T[] items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableHashSet.Create``1(System.Collections.Generic.IEqualityComparer{``0},``0[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableHashSet&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="equalityComparer" Type="System.Collections.Generic.IEqualityComparer&lt;T&gt;" />
+        <Parameter Name="items" Type="T[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ der Elemente, die im unveränderlichen Hashset gespeichert sind.</typeparam>
+        <param name="equalityComparer">Das Objekt, mit dem Objekte im Set auf Gleichheit verglichen werden sollen.</param>
+        <param name="items">Ein Array, das die Elemente enthält, um das Hashset vorab aufzufüllen.</param>
+        <summary>Erstellt ein neues unveränderliches Hashset, das die in der Auflistung angegebenen Elemente enthält, und verwendet für den Settyp den angegebenen Gleichheitsvergleich.</summary>
+        <returns>Ein neues unveränderliches Hashset, das die angegebenen Elemente enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBuilder&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableHashSet&lt;T&gt;.Builder CreateBuilder&lt;T&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Immutable.ImmutableHashSet`1/Builder&lt;!!T&gt; CreateBuilder&lt;T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableHashSet.CreateBuilder``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableHashSet&lt;T&gt;+Builder</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">Der Typ der in der Auflistung gespeicherten Elemente.</typeparam>
+        <summary>Erstellt einen neuen unveränderlichen Hashset-Generator.</summary>
+        <returns>Der unveränderliche Hashset-Generator.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBuilder&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableHashSet&lt;T&gt;.Builder CreateBuilder&lt;T&gt; (System.Collections.Generic.IEqualityComparer&lt;T&gt; equalityComparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Immutable.ImmutableHashSet`1/Builder&lt;!!T&gt; CreateBuilder&lt;T&gt;(class System.Collections.Generic.IEqualityComparer`1&lt;!!T&gt; equalityComparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableHashSet.CreateBuilder``1(System.Collections.Generic.IEqualityComparer{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableHashSet&lt;T&gt;+Builder</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="equalityComparer" Type="System.Collections.Generic.IEqualityComparer&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ der in der Auflistung gespeicherten Elemente.</typeparam>
+        <param name="equalityComparer">Das Objekt, mit dem Objekte im Set auf Gleichheit verglichen werden sollen.</param>
+        <summary>Erstellt einen neuen unveränderlichen Hashset-Generator.</summary>
+        <returns>Der neue unveränderliche Hashset-Generator.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateRange&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableHashSet&lt;T&gt; CreateRange&lt;T&gt; (System.Collections.Generic.IEnumerable&lt;T&gt; items);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Immutable.ImmutableHashSet`1&lt;!!T&gt; CreateRange&lt;T&gt;(class System.Collections.Generic.IEnumerable`1&lt;!!T&gt; items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableHashSet.CreateRange``1(System.Collections.Generic.IEnumerable{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableHashSet&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="items" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ der in der Auflistung gespeicherten Elemente.</typeparam>
+        <param name="items">Die Elemente, die dem Hashset hinzugefügt werden sollen.</param>
+        <summary>Erstellt ein neues unveränderliches Hashset, das mit den angegebenen Elementen vorab ausgefüllt ist.</summary>
+        <returns>Das neue unveränderliche Hashset, das die angegebenen Elemente enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateRange&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableHashSet&lt;T&gt; CreateRange&lt;T&gt; (System.Collections.Generic.IEqualityComparer&lt;T&gt; equalityComparer, System.Collections.Generic.IEnumerable&lt;T&gt; items);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Immutable.ImmutableHashSet`1&lt;!!T&gt; CreateRange&lt;T&gt;(class System.Collections.Generic.IEqualityComparer`1&lt;!!T&gt; equalityComparer, class System.Collections.Generic.IEnumerable`1&lt;!!T&gt; items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableHashSet.CreateRange``1(System.Collections.Generic.IEqualityComparer{``0},System.Collections.Generic.IEnumerable{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableHashSet&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="equalityComparer" Type="System.Collections.Generic.IEqualityComparer&lt;T&gt;" />
+        <Parameter Name="items" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ der in der Auflistung gespeicherten Elemente.</typeparam>
+        <param name="equalityComparer">Das Objekt, mit dem Objekte im Set auf Gleichheit verglichen werden sollen.</param>
+        <param name="items">Die Elemente, die der Auflistung hinzugefügt werden solle, bevor Unveränderlichkeit angewendet wird.</param>
+        <summary>Erstellt ein neues unveränderliches Hashset, das die angegebene Elemente enthält, und verwendet für den Settyp den angegebenen Gleichheitsvergleich.</summary>
+        <returns>Das neue unveränderliche Hashset.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToImmutableHashSet&lt;TSource&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableHashSet&lt;TSource&gt; ToImmutableHashSet&lt;TSource&gt; (this System.Collections.Generic.IEnumerable&lt;TSource&gt; source);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Immutable.ImmutableHashSet`1&lt;!!TSource&gt; ToImmutableHashSet&lt;TSource&gt;(class System.Collections.Generic.IEnumerable`1&lt;!!TSource&gt; source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableHashSet.ToImmutableHashSet``1(System.Collections.Generic.IEnumerable{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableHashSet&lt;TSource&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Collections.Generic.IEnumerable&lt;TSource&gt;" RefType="this" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">Der Typ der Elemente in der Sequenz.</typeparam>
+        <param name="source">Die Sequenz, die aufgelistet werden soll.</param>
+        <summary>Listet eine Sequenz auf und erzeugt ein unveränderliches Hashset ihrer Inhalte.</summary>
+        <returns>Ein unveränderliches Hashset, das die Elemente in der angegebenen Sequenz enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToImmutableHashSet&lt;TSource&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableHashSet&lt;TSource&gt; ToImmutableHashSet&lt;TSource&gt; (this System.Collections.Generic.IEnumerable&lt;TSource&gt; source, System.Collections.Generic.IEqualityComparer&lt;TSource&gt; equalityComparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Immutable.ImmutableHashSet`1&lt;!!TSource&gt; ToImmutableHashSet&lt;TSource&gt;(class System.Collections.Generic.IEnumerable`1&lt;!!TSource&gt; source, class System.Collections.Generic.IEqualityComparer`1&lt;!!TSource&gt; equalityComparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableHashSet.ToImmutableHashSet``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEqualityComparer{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableHashSet&lt;TSource&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Collections.Generic.IEnumerable&lt;TSource&gt;" RefType="this" />
+        <Parameter Name="equalityComparer" Type="System.Collections.Generic.IEqualityComparer&lt;TSource&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">Der Typ der Elemente in der Sequenz.</typeparam>
+        <param name="source">Die Sequenz, die aufgelistet werden soll.</param>
+        <param name="equalityComparer">Das Objekt, mit dem Objekte im Set auf Gleichheit verglichen werden sollen.</param>
+        <summary>Listet eine Sequenz auf, erzeugt ein unveränderliches Hashset ihres Inhalts und verwendet den angegebenen Gleichheitsvergleich für den Settyp.</summary>
+        <returns>Ein unveränderliches Hashset, das die Elemente in der angegebenen Sequenz enthält, und das den angegebenen Gleichheitsvergleich verwendet.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

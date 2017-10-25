@@ -1,0 +1,232 @@
+<Type Name="ManualWorkflowSchedulerService" FullName="System.Workflow.Runtime.Hosting.ManualWorkflowSchedulerService">
+  <TypeSignature Language="C#" Value="public class ManualWorkflowSchedulerService : System.Workflow.Runtime.Hosting.WorkflowSchedulerService" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ManualWorkflowSchedulerService extends System.Workflow.Runtime.Hosting.WorkflowSchedulerService" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Hosting.ManualWorkflowSchedulerService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.Runtime.Hosting.WorkflowSchedulerService</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Threadingdienst bereit, der der Hostanwendung, die eine Workflowinstanz erstellt, die Weitergabe des <see cref="T:System.Threading.Thread" /> ermöglicht, unter dem die Workflowinstanz ausgeführt wird. Mit diesem Threadingdienst können Hostanwendungen eine Workflowinstanz auf einem einzelnen <see cref="T:System.Threading.Thread" /> im synchronen Modus ausführen (wenn der Workflow eine Verzögerungsaktivität enthält, wird die Arbeit verschoben, bis die Verzögerungsaktivität in einem separaten, von <see cref="System.Threading.Timer" /> erzeugten Thread ausgeführt wurde). Dieser Modus blockiert die Ausführung der Workflowinstanz, bis die Workflowinstanz im Leerlauf ist. Anschließend kann die Workflowinstanz nur mit der <see cref="M:System.Workflow.Runtime.Hosting.ManualWorkflowSchedulerService.RunWorkflow(System.Guid)" />-Methode dieses Dienstes ausgeführt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ <xref:System.Workflow.Runtime.Hosting.ManualWorkflowSchedulerService> führt Workflowinstanzen, die sich in der Warteschlange befinden, nicht automatisch aus. Der Host muss <xref:System.Workflow.Runtime.Hosting.ManualWorkflowSchedulerService.RunWorkflow%2A> aufrufen, um einen angegebenen Workflow auszuführen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManualWorkflowSchedulerService ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.ManualWorkflowSchedulerService.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Runtime.Hosting.ManualWorkflowSchedulerService" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManualWorkflowSchedulerService (bool useActiveTimers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool useActiveTimers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.ManualWorkflowSchedulerService.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="useActiveTimers" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="useActiveTimers">
+          <see langword="Boolean" />, der bestimmt, wie Verzögerungsaktivitäten behandelt werden. Wenn <see langword="true" />, setzt der Taskplanerdienst Workflows nach dem Ablauf von Verzögerungsaktivitäten automatisch fort (mithilfe eines Zeitgebers im Arbeitsspeicher). Wenn <see langword="false" />, muss der Host den Workflow nach Ablauf der Verzögerungsaktivitäten manuell fortsetzen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Runtime.Hosting.ManualWorkflowSchedulerService" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManualWorkflowSchedulerService (System.Collections.Specialized.NameValueCollection parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Specialized.NameValueCollection parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.ManualWorkflowSchedulerService.#ctor(System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="parameters">Ein <see cref="T:System.Collections.Specialized.NameValueCollection" /> , enthält die Parameter für <c>UseActiveTimers</c>. Wenn <see langword="true" />, setzt der Taskplanerdienst Workflows nach dem Ablauf von Verzögerungsaktivitäten automatisch fort (mithilfe eines Zeitgebers im Arbeitsspeicher). Wenn <see langword="false" />, muss der Host den Workflow nach Ablauf der Verzögerungsaktivitäten manuell fortsetzen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Runtime.Hosting.ManualWorkflowSchedulerService" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="protected override void Cancel (Guid timerId);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Cancel(valuetype System.Guid timerId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.ManualWorkflowSchedulerService.Cancel(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timerId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="timerId"><see cref="T:System.Guid" />, die der vorhandenen geplanten Arbeitsaufgabe zugeordnet ist, die abgebrochen werden soll.</param>
+        <summary>Bricht das angegebene vorhandene Arbeitselement der Workflowinstanz ab.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStarted">
+      <MemberSignature Language="C#" Value="protected override void OnStarted ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnStarted() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.ManualWorkflowSchedulerService.OnStarted" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überladen von <see cref="M:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.OnStarted" />. Diese Methode wird bei jedem Aufruf von <see cref="M:System.Workflow.Runtime.WorkflowRuntime.StartRuntime" /> aufgerufen und wird von <see cref="T:System.Workflow.Runtime.Hosting.ManualWorkflowSchedulerService" /> für Aufgaben verwendet, die beim Starten von <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> anfallen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunWorkflow">
+      <MemberSignature Language="C#" Value="public bool RunWorkflow (Guid workflowInstanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool RunWorkflow(valuetype System.Guid workflowInstanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.ManualWorkflowSchedulerService.RunWorkflow(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workflowInstanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="workflowInstanceId"><see cref="T:System.Guid" /> für die auszuführende Workflowinstanz.</param>
+        <summary>Führt die angegebene Workflowinstanz aus.</summary>
+        <returns>
+          <see langword="true" />, wenn der Workflow gestartet wird, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist ein synchroner Aufruf, der mit dem aktuellen Thread den Workflow ausführt. Es erfolgt keine Rückgabe, bis der Workflow in den Leerlauf wechselt, vorübergehend oder ganz unterbrochen, abgeschlossen oder beendet wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="workflowInstanceId" /> ist eine leere GUID.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Schedule">
+      <MemberSignature Language="C#" Value="protected override void Schedule (System.Threading.WaitCallback callback, Guid workflowInstanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Schedule(class System.Threading.WaitCallback callback, valuetype System.Guid workflowInstanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.ManualWorkflowSchedulerService.Schedule(System.Threading.WaitCallback,System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Threading.WaitCallback" />
+        <Parameter Name="workflowInstanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Ein <see cref="T:System.Threading.WaitCallback" />-Multicastdelegat, der die auszuführende Methode darstellt.</param>
+        <param name="workflowInstanceId"><see cref="T:System.Guid" />, die die Workflowinstanz darstellt.</param>
+        <summary>Fügt der anstehenden Arbeitselementwarteschlange anhand der angegebenen Workflowinstanz unter Verwendung eines Multicastdelegaten eine Workflowinstanz hinzu.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="callback" /> enthält einen NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Schedule">
+      <MemberSignature Language="C#" Value="protected override void Schedule (System.Threading.WaitCallback callback, Guid workflowInstanceId, DateTime whenUtc, Guid timerId);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Schedule(class System.Threading.WaitCallback callback, valuetype System.Guid workflowInstanceId, valuetype System.DateTime whenUtc, valuetype System.Guid timerId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.ManualWorkflowSchedulerService.Schedule(System.Threading.WaitCallback,System.Guid,System.DateTime,System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Threading.WaitCallback" />
+        <Parameter Name="workflowInstanceId" Type="System.Guid" />
+        <Parameter Name="whenUtc" Type="System.DateTime" />
+        <Parameter Name="timerId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Ein <see cref="T:System.Threading.WaitCallback" />-Multicastdelegat, der die auszuführende Methode darstellt.</param>
+        <param name="workflowInstanceId"><see cref="T:System.Guid" />, die die Workflowinstanz darstellt.</param>
+        <param name="whenUtc"><see cref="T:System.DateTime" /> mit dem Zeitpunkt für den Beginn der Threadausführung.</param>
+        <param name="timerId"><see cref="T:System.Guid" />, die den geplanten Thread darstellt.</param>
+        <summary>Fügt der anstehenden Arbeitsaufgabenwarteschlange unter Verwendung des angegebenen Multicastdelegaten, von <see cref="T:System.DateTime" /> und von GUIDs die angegebene Workflowinstanz hinzu.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="callback" /> enthält einen NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="workflowInstanceId" /> oder <paramref name="timerId" /> ist eine leere GUID.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="protected override void Stop ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Stop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.ManualWorkflowSchedulerService.Stop" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überladen von <see cref="M:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Stop" />. <see cref="T:System.Workflow.Runtime.Hosting.ManualWorkflowSchedulerService" /> verwendet diese Methode für Aufgaben, die beim Beenden von <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> anfallen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

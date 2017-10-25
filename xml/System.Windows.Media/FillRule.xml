@@ -1,0 +1,50 @@
+<Type Name="FillRule" FullName="System.Windows.Media.FillRule">
+  <TypeSignature Language="C#" Value="public enum FillRule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FillRule extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.FillRule" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wie die sich überschneidenden Bereiche <see cref="T:System.Windows.Media.PathFigure" /> enthaltenen Objekte einer <see cref="T:System.Windows.Media.Geometry" /> werden kombiniert, um den Bereich des Formular die <see cref="T:System.Windows.Media.Geometry" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EvenOdd">
+      <MemberSignature Language="C#" Value="EvenOdd" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.FillRule EvenOdd = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.FillRule.EvenOdd" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FillRule</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Regel bestimmt, ob sich ein Punkt innerhalb des Ausfüllbereichs befindet, indem ein unendlicher Strahl von diesem Punkt in eine beliebige Richtung gezeichnet und die Anzahl der vom Strahl geschnittenen Pfadsegmente in der angegebenen Form gezählt wird. Bei einer ungeraden Zahl liegt der Punkt innen, und bei einer geraden Zahl liegt er außen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Nonzero">
+      <MemberSignature Language="C#" Value="Nonzero" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.FillRule Nonzero = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.FillRule.Nonzero" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FillRule</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Regel, die bestimmt, ob sich ein Punkt innerhalb des Ausfüllbereichs im Pfad befindet, indem ein unendlicher Strahl von diesem Punkt in eine beliebige Richtung gezeichnet und anschließend die Stellen untersucht werden, an denen ein Segment der Form den Strahl schneidet. Beginnen Sie mit dem Wert 0 (null), und addieren Sie für jede Stelle, an der ein Segment den Strahl von links nach rechts schneidet, den Wert 1. Subtrahieren Sie für jede Stelle, an der ein Pfadsegment den Strahl von rechts nach links schneidet, den Wert 1. Wenn das Ergebnis nach dem Zählen der Überschneidungen 0 (null) ist, liegt der Punkt außerhalb des Pfads. Andernfalls liegt er innerhalb des Pfads.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

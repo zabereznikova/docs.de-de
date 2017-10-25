@@ -1,0 +1,185 @@
+<Type Name="EventsTab" FullName="System.Windows.Forms.Design.EventsTab">
+  <TypeSignature Language="C#" Value="public class EventsTab : System.Windows.Forms.Design.PropertyTab" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EventsTab extends System.Windows.Forms.Design.PropertyTab" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Design.EventsTab" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Design.PropertyTab</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine <see cref="T:System.Windows.Forms.Design.PropertyTab" /> Ereignisse für die Auswahl und das Verknüpfen von anzeigen kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel enthält ein Beispiel <xref:System.Windows.Forms.Design.EventsTab>. Bei Auswahl dieser Option die <xref:System.Windows.Forms.Design.EventsTab> Listet alle Ereignisse für eine Komponente in der Reihenfolge der Delegattyp.  
+  
+ [!code-cpp[EventsTabExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/EventsTabExample/CPP/class1.cpp#1)]
+ [!code-csharp[EventsTabExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/EventsTabExample/CS/class1.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventsTab (IServiceProvider sp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IServiceProvider sp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.EventsTab.#ctor(System.IServiceProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sp" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="sp">Ein <see cref="T:System.IServiceProvider" /> verwenden.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.Design.EventsTab" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanExtend">
+      <MemberSignature Language="C#" Value="public override bool CanExtend (object extendee);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanExtend(object extendee) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.EventsTab.CanExtend(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="extendee" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="extendee">Das Objekt, für die Erweiterbarkeit testen.</param>
+        <summary>Ruft einen Wert, der angibt, ob das angegebene Objekt erweitert werden kann.</summary>
+        <returns>
+          <see langword="true" />Wenn das angegebene Objekt erweitert werden kann; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDefaultProperty">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.PropertyDescriptor GetDefaultProperty (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ComponentModel.PropertyDescriptor GetDefaultProperty(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.EventsTab.GetDefaultProperty(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das die Standardeigenschaft abgerufen werden soll.</param>
+        <summary>Ruft die Standardeigenschaft aus dem angegebenen Objekt ab.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.PropertyDescriptor" /> , der angibt, der Standardeigenschaft.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperties">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.PropertyDescriptorCollection GetProperties (object component, Attribute[] attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ComponentModel.PropertyDescriptorCollection GetProperties(object component, class System.Attribute[] attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.EventsTab.GetProperties(System.Object,System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+        <Parameter Name="attributes" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die Komponente, die Eigenschaften eines abzurufen.</param>
+        <param name="attributes">Ein Array von <see cref="T:System.Attribute" /> , der die Attribute der abzurufenden Eigenschaften angibt.</param>
+        <summary>Ruft alle Eigenschaften von der Registerkarte "Event", die den angegebenen Attributen übereinstimmen.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> , die die Eigenschaften enthält. Dies ist eine leere wird <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> , wenn einen Dienst nicht von die Komponente implementiert wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Registerkarte Ereigniseigenschaften werden von der Ereigniseigenschaften, die von einer Komponente im Ereignisdienst zurückgegeben bestimmt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperties">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.PropertyDescriptorCollection GetProperties (System.ComponentModel.ITypeDescriptorContext context, object component, Attribute[] attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ComponentModel.PropertyDescriptorCollection GetProperties(class System.ComponentModel.ITypeDescriptorContext context, object component, class System.Attribute[] attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.EventsTab.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object,System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="component" Type="System.Object" />
+        <Parameter Name="attributes" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> , der Kontextinformationen verwendet werden kann.</param>
+        <param name="component">Die Komponente, die Eigenschaften eines abzurufen.</param>
+        <param name="attributes">Ein Array vom Typ <see cref="T:System.Attribute" /> , der die Attribute der abzurufenden Eigenschaften angibt.</param>
+        <summary>Ruft alle Eigenschaften der Registerkarte "Event", die mit den angegebenen Attributen und Kontext übereinstimmen.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> , die die Eigenschaften enthält. Dies ist eine leere wird <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> , wenn einen Dienst nicht von die Komponente implementiert wird.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpKeyword">
+      <MemberSignature Language="C#" Value="public override string HelpKeyword { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HelpKeyword" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.EventsTab.HelpKeyword" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Hilfeschlüsselwort für die Registerkarte ab.</summary>
+        <value>Das Hilfeschlüsselwort für die Registerkarte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabName">
+      <MemberSignature Language="C#" Value="public override string TabName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TabName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.EventsTab.TabName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Registerkarte ab.</summary>
+        <value>Der Name der Registerkarte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

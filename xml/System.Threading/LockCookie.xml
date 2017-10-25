@@ -1,0 +1,217 @@
+<Type Name="LockCookie" FullName="System.Threading.LockCookie">
+  <TypeSignature Language="C#" Value="public struct LockCookie" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit LockCookie extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.LockCookie" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Threading</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert die Sperre, die einzelnen Writer/mehrere Lesevorgänge Semantik implementiert. Dies ist ein Werttyp.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie eine Sperre des Lesers anfordern, aktualisieren die Sperre des Lesers auf eine Sperre des Schreibers und Speichern der <xref:System.Threading.LockCookie>. Es verwendet dann die <xref:System.Threading.LockCookie> erneut auf eine Sperre des Lesers herabgestuft.  
+  
+ Dieser Code ist Teil eines umfangreicheren Beispiels für die <xref:System.Threading.ReaderWriterLock> Klasse.  
+  
+ [!code-cpp[System.Threading.ReaderWriterLock#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ReaderWriterLock/CPP/source.cpp#2)]
+ [!code-csharp[System.Threading.ReaderWriterLock#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ReaderWriterLock/CS/source.cs#2)]
+ [!code-vb[System.Threading.ReaderWriterLock#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.ReaderWriterLock/VB/source.vb#2)]  
+[!code-cpp[System.Threading.ReaderWriterLock#5](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ReaderWriterLock/CPP/source.cpp#5)]
+[!code-csharp[System.Threading.ReaderWriterLock#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ReaderWriterLock/CS/source.cs#5)]
+[!code-vb[System.Threading.ReaderWriterLock#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.ReaderWriterLock/VB/source.vb#5)]  
+[!code-cpp[System.Threading.ReaderWriterLock#7](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ReaderWriterLock/CPP/source.cpp#7)]
+[!code-csharp[System.Threading.ReaderWriterLock#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ReaderWriterLock/CS/source.cs#7)]
+[!code-vb[System.Threading.ReaderWriterLock#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.ReaderWriterLock/VB/source.vb#7)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Dieser Typ ist threadsicher.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.LockCookie.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das mit der aktuellen Instanz verglichen werden soll.</param>
+        <summary>Gibt an, ob ein angegebenes Objekt ist eine <see cref="T:System.Threading.LockCookie" /> und gleich der aktuellen Instanz.</summary>
+        <returns>
+          <see langword="true" />, wenn der Wert von <paramref name="obj" /> dem Wert der aktuellen Instanz entspricht, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Threading.LockCookie obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(valuetype System.Threading.LockCookie obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.LockCookie.Equals(System.Threading.LockCookie)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Threading.LockCookie" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Der <see cref="T:System.Threading.LockCookie" />, der mit der aktuellen Instanz verglichen werden soll.</param>
+        <summary>Gibt an, ob die aktuelle Instanz und der angegebene <see cref="T:System.Threading.LockCookie" /> gleich sind.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="obj" /> gleich dem Wert der aktuellen Instanz ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.LockCookie.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese Instanz zurück.</summary>
+        <returns>Ein 32-Bit-Hashcode als ganze Zahl mit Vorzeichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Threading.LockCookie a, System.Threading.LockCookie b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Threading.LockCookie a, valuetype System.Threading.LockCookie b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.LockCookie.op_Equality(System.Threading.LockCookie,System.Threading.LockCookie)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Threading.LockCookie" />
+        <Parameter Name="b" Type="System.Threading.LockCookie" />
+      </Parameters>
+      <Docs>
+        <param name="a">Die <see cref="T:System.Threading.LockCookie" /> für den Vergleich <c>b</c>.</param>
+        <param name="b">Die <see cref="T:System.Threading.LockCookie" /> für den Vergleich <c>eine</c>.</param>
+        <summary>Gibt an, ob zwei <see cref="T:System.Threading.LockCookie" />-Strukturen gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="a" /> und <paramref name="b" /> gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist <xref:System.Threading.LockCookie.Equals%28System.Threading.LockCookie%29?displayProperty=nameWithType>.]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Threading.LockCookie a, System.Threading.LockCookie b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Threading.LockCookie a, valuetype System.Threading.LockCookie b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.LockCookie.op_Inequality(System.Threading.LockCookie,System.Threading.LockCookie)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Threading.LockCookie" />
+        <Parameter Name="b" Type="System.Threading.LockCookie" />
+      </Parameters>
+      <Docs>
+        <param name="a">Die <see cref="T:System.Threading.LockCookie" /> für den Vergleich <c>b</c>.</param>
+        <param name="b">Die <see cref="T:System.Threading.LockCookie" /> für den Vergleich <c>eine</c>.</param>
+        <summary>Gibt an, ob zwei <see cref="T:System.Threading.LockCookie" />-Strukturen ungleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="a" /> und <paramref name="b" /> ungleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist <xref:System.Threading.LockCookie.Equals%28System.Threading.LockCookie%29?displayProperty=nameWithType>.]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,342 @@
+<Type Name="StandardEndpointElement" FullName="System.ServiceModel.Configuration.StandardEndpointElement">
+  <TypeSignature Language="C#" Value="public abstract class StandardEndpointElement : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit StandardEndpointElement extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.StandardEndpointElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Verwaltet ein Standardendpunktelement für die Konfigurationsdatei einer Dienstanwendung.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected StandardEndpointElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.StandardEndpointElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.ServiceModel.Configuration.StandardEndpointElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyConfiguration">
+      <MemberSignature Language="C#" Value="public void ApplyConfiguration (System.ServiceModel.Description.ServiceEndpoint endpoint, System.ServiceModel.Configuration.ChannelEndpointElement channelEndpointElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ApplyConfiguration(class System.ServiceModel.Description.ServiceEndpoint endpoint, class System.ServiceModel.Configuration.ChannelEndpointElement channelEndpointElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.StandardEndpointElement.ApplyConfiguration(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Configuration.ChannelEndpointElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="channelEndpointElement" Type="System.ServiceModel.Configuration.ChannelEndpointElement" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">Ein Endpunkt, der Clients ermöglicht, den Dienst zu finden und mit ihm zu kommunizieren.</param>
+        <param name="channelEndpointElement">Ein Endpunktelement, das die physische Übertragung von Nachrichten zwischen dem Client und dem Dienst definiert.</param>
+        <summary>Übernimmt den Inhalt eines bestimmten Dienstendpunkts für das aktuelle Channelendpunktelement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyConfiguration">
+      <MemberSignature Language="C#" Value="public void ApplyConfiguration (System.ServiceModel.Description.ServiceEndpoint endpoint, System.ServiceModel.Configuration.ServiceEndpointElement serviceEndpointElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ApplyConfiguration(class System.ServiceModel.Description.ServiceEndpoint endpoint, class System.ServiceModel.Configuration.ServiceEndpointElement serviceEndpointElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.StandardEndpointElement.ApplyConfiguration(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Configuration.ServiceEndpointElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="serviceEndpointElement" Type="System.ServiceModel.Configuration.ServiceEndpointElement" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">Ein Endpunkt, der Clients ermöglicht, den Dienst zu finden und mit ihm zu kommunizieren.</param>
+        <param name="serviceEndpointElement">Ein Endpunktelement, das die Art und Weise definiert, wie Clients den Dienst finden und mit ihm kommunizieren.</param>
+        <summary>Übernimmt den Inhalt eines bestimmten Dienstendpunkts für das aktuelle Dienstendpunktelement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateServiceEndpoint">
+      <MemberSignature Language="C#" Value="protected abstract System.ServiceModel.Description.ServiceEndpoint CreateServiceEndpoint (System.ServiceModel.Description.ContractDescription contractDescription);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.ServiceModel.Description.ServiceEndpoint CreateServiceEndpoint(class System.ServiceModel.Description.ContractDescription contractDescription) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.StandardEndpointElement.CreateServiceEndpoint(System.ServiceModel.Description.ContractDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceEndpoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contractDescription" Type="System.ServiceModel.Description.ContractDescription" />
+      </Parameters>
+      <Docs>
+        <param name="contractDescription">Informationen dazu, was in Nachrichten enthalten ist, die von einem Endpunkt gesendet werden.</param>
+        <summary>Erstellt beim Implementieren in einer abgeleiteten Klasse einen Dienstendpunkt aus der in der angegebenen Vertragsbeschreibung enthaltenen Nachrichteninformation.</summary>
+        <returns>Ein Dienstendpunkt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndpointType">
+      <MemberSignature Language="C#" Value="protected abstract Type EndpointType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type EndpointType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.StandardEndpointElement.EndpointType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nicht implementiert.</summary>
+        <value>
+          <see cref="T:System.Type" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeAndValidate">
+      <MemberSignature Language="C#" Value="public void InitializeAndValidate (System.ServiceModel.Configuration.ChannelEndpointElement channelEndpointElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InitializeAndValidate(class System.ServiceModel.Configuration.ChannelEndpointElement channelEndpointElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.StandardEndpointElement.InitializeAndValidate(System.ServiceModel.Configuration.ChannelEndpointElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="channelEndpointElement" Type="System.ServiceModel.Configuration.ChannelEndpointElement" />
+      </Parameters>
+      <Docs>
+        <param name="channelEndpointElement">Ein Endpunktelement, das die physische Übertragung von Nachrichten zwischen dem Client und dem Dienst definiert.</param>
+        <summary>Initialisiert und überprüft das Format des angegebenen Channelendpunkts in der Konfigurationsdatei einer Dienstanwendung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeAndValidate">
+      <MemberSignature Language="C#" Value="public void InitializeAndValidate (System.ServiceModel.Configuration.ServiceEndpointElement serviceEndpointElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InitializeAndValidate(class System.ServiceModel.Configuration.ServiceEndpointElement serviceEndpointElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.StandardEndpointElement.InitializeAndValidate(System.ServiceModel.Configuration.ServiceEndpointElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceEndpointElement" Type="System.ServiceModel.Configuration.ServiceEndpointElement" />
+      </Parameters>
+      <Docs>
+        <param name="serviceEndpointElement">Ein Endpunktelement, das Clients ermöglicht, den Dienst zu finden und mit ihm zu kommunizieren.</param>
+        <summary>Initialisiert und überprüft das Format des angegebenen Dienstendpunkts in der Konfigurationsdatei einer Dienstanwendung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeFrom">
+      <MemberSignature Language="C#" Value="protected virtual void InitializeFrom (System.ServiceModel.Description.ServiceEndpoint endpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void InitializeFrom(class System.ServiceModel.Description.ServiceEndpoint endpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.StandardEndpointElement.InitializeFrom(System.ServiceModel.Description.ServiceEndpoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">Ein Endpunkt, der Clients ermöglicht, den Dienst zu finden und mit ihm zu kommunizieren.</param>
+        <summary>Stellt sicher, dass der angegebene Dienst-Endpunkt nicht <see langword="null" /> und dessen Typ den Typ des aktuellen Endpunkts übereinstimmt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.StandardEndpointElement.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("name", Options=System.Configuration.ConfigurationPropertyOptions.IsKey)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des aktuellen Endpunktelements aus einer Liste von Konfigurationszeichenfolgen für dieses Element ab oder legt ihn fest.</summary>
+        <value>Der Name eines Endpunktelements.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnApplyConfiguration">
+      <MemberSignature Language="C#" Value="protected abstract void OnApplyConfiguration (System.ServiceModel.Description.ServiceEndpoint endpoint, System.ServiceModel.Configuration.ChannelEndpointElement channelEndpointElement);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnApplyConfiguration(class System.ServiceModel.Description.ServiceEndpoint endpoint, class System.ServiceModel.Configuration.ChannelEndpointElement channelEndpointElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Configuration.ChannelEndpointElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="channelEndpointElement" Type="System.ServiceModel.Configuration.ChannelEndpointElement" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">Ein Endpunkt, der Clients ermöglicht, den Dienst zu finden und mit ihm zu kommunizieren.</param>
+        <param name="channelEndpointElement">Ein Endpunktelement, das die physische Übertragung von Nachrichten zwischen dem Client und dem Dienst definiert.</param>
+        <summary>Lädt beim Aufrufen durch eine abgeleitete Klasse die Dienstbeschreibungsinformationen aus der Konfigurationsdatei und wendet sie auf die Laufzeit an, die erstellt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnApplyConfiguration">
+      <MemberSignature Language="C#" Value="protected abstract void OnApplyConfiguration (System.ServiceModel.Description.ServiceEndpoint endpoint, System.ServiceModel.Configuration.ServiceEndpointElement serviceEndpointElement);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnApplyConfiguration(class System.ServiceModel.Description.ServiceEndpoint endpoint, class System.ServiceModel.Configuration.ServiceEndpointElement serviceEndpointElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Configuration.ServiceEndpointElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="serviceEndpointElement" Type="System.ServiceModel.Configuration.ServiceEndpointElement" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">Ein Endpunkt, der Clients ermöglicht, den Dienst zu finden und mit ihm zu kommunizieren.</param>
+        <param name="serviceEndpointElement">Ein Dienstendpunktelement einer Dienstanwendung.</param>
+        <summary>Lädt beim Aufrufen durch eine abgeleitete Klasse die Dienstbeschreibungsinformationen aus der Konfigurationsdatei und wendet sie auf die Laufzeit an, die erstellt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInitializeAndValidate">
+      <MemberSignature Language="C#" Value="protected abstract void OnInitializeAndValidate (System.ServiceModel.Configuration.ChannelEndpointElement channelEndpointElement);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnInitializeAndValidate(class System.ServiceModel.Configuration.ChannelEndpointElement channelEndpointElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate(System.ServiceModel.Configuration.ChannelEndpointElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="channelEndpointElement" Type="System.ServiceModel.Configuration.ChannelEndpointElement" />
+      </Parameters>
+      <Docs>
+        <param name="channelEndpointElement">Ein Endpunktelement, das die physische Übertragung von Nachrichten zwischen dem Client und dem Dienst definiert.</param>
+        <summary>Initialisiert und überprüft beim Aufrufen durch eine abgeleitete Klasse das Format des angegebenen Dienstendpunkts in der Konfigurationsdatei einer Dienstanwendung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInitializeAndValidate">
+      <MemberSignature Language="C#" Value="protected abstract void OnInitializeAndValidate (System.ServiceModel.Configuration.ServiceEndpointElement serviceEndpointElement);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnInitializeAndValidate(class System.ServiceModel.Configuration.ServiceEndpointElement serviceEndpointElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate(System.ServiceModel.Configuration.ServiceEndpointElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceEndpointElement" Type="System.ServiceModel.Configuration.ServiceEndpointElement" />
+      </Parameters>
+      <Docs>
+        <param name="serviceEndpointElement">Ein Dienstendpunktelement, das Clients ermöglicht, den Dienst zu finden und mit ihm zu kommunizieren.</param>
+        <summary>Initialisiert und überprüft beim Aufrufen durch eine abgeleitete Klasse das Format des angegebenen Dienstendpunkts in der Konfigurationsdatei einer Dienstanwendung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.StandardEndpointElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Eigenschaften des aktuellen Endpunktelements ab.</summary>
+        <value>Eine Auflistung von Konfigurationselementeigenschaften.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="protected override void Reset (System.Configuration.ConfigurationElement parentElement);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Reset(class System.Configuration.ConfigurationElement parentElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.StandardEndpointElement.Reset(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parentElement" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="parentElement">Die oberste Ebene eines Konfigurationselements, das über Unterelemente verfügt.</param>
+        <summary>Setzt den internen Status dieses <see cref="T:System.Configuration.ConfigurationElement" />-Objekts zurück, einschließlich der Sperren und der Eigenschaftenauflistungen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

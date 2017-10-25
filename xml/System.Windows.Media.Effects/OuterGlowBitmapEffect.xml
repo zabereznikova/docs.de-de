@@ -1,0 +1,413 @@
+<Type Name="OuterGlowBitmapEffect" FullName="System.Windows.Media.Effects.OuterGlowBitmapEffect">
+  <TypeSignature Language="C#" Value="public sealed class OuterGlowBitmapEffect : System.Windows.Media.Effects.BitmapEffect" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed OuterGlowBitmapEffect extends System.Windows.Media.Effects.BitmapEffect" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Effects.OuterGlowBitmapEffect" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Effects.BitmapEffect</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.BlurEffect" />. Erstellt einen farbigen Haloeffekt, der farbige Objekte oder Bereiche umgibt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)]Bitmapeffekte handelt es sich um Software gerendert. Jedes Objekt, das einen Effekt anwendet, wird auch in der Software gerendert werden. Bitmapeffekte sollten nicht auf große visuelle Objekte oder Animationen angewendet werden, da dies die Leistung beeinträchtigen kann.  
+  
+ <xref:System.Windows.Media.Effects.OuterGlowBitmapEffect>ist einer von mehreren Effekten, die im Lieferumfang enthalten sind die [!INCLUDE[TLA2#tla_lhsdk](~/includes/tla2sharptla-lhsdk-md.md)]. Andere Effekte gehören:  
+  
+-   <xref:System.Windows.Media.Effects.BlurBitmapEffect>  
+  
+-   <xref:System.Windows.Media.Effects.DropShadowBitmapEffect>  
+  
+-   <xref:System.Windows.Media.Effects.EmbossBitmapEffect>  
+  
+-   <xref:System.Windows.Media.Effects.BevelBitmapEffect>  
+  
+ Die folgende Abbildung zeigt ein <xref:System.Windows.Media.Effects.OuterGlowBitmapEffect> auf ein visuelles Objekt angewendet (in diesem Fall angewendet, um eine <xref:System.Windows.Controls.TextBox>).  
+  
+ ![Bildschirmabbildung: OuterGlowBitmapEffect-Bitmapeffekt](~/add/media/effects-outerglowsimple.png "Bildschirmabbildung: OuterGlowBitmapEffect-Bitmapeffekt")  
+  
+ Die folgenden Abbildungen zeigen die Auswirkungen von mehreren grundlegenden Eigenschaften von <xref:System.Windows.Media.Effects.OuterGlowBitmapEffect>.  
+  
+-   Die <xref:System.Windows.Media.Effects.OuterGlowBitmapEffect.GlowSize%2A> Eigenschaft gibt die Größe des Halo-Lichteffekts:  
+  
+ ![Bildschirmabbildung: OuterGlowBitmapEffect-Bitmapeffekt](~/add/media/effects-outerglowglowsize.png "Bildschirmabbildung: OuterGlowBitmapEffect-Bitmapeffekt")  
+  
+-   Die <xref:System.Windows.Media.Effects.OuterGlowBitmapEffect.Noise%2A> Eigenschaft gibt die Ebene der Rauschen in der Leuchteffekt:  
+  
+ ![Bildschirmabbildung: Vergleichen von rauscheigenschaftswerten](~/add/media/effects-outerglownoise.png "Bildschirmabbildung: Vergleichen rauscheigenschaftswerten")  
+  
+-   Die <xref:System.Windows.Media.Effects.OuterGlowBitmapEffect.Opacity%2A> Eigenschaft gibt an, wie transparent der Leuchteffekt ist:  
+  
+ ![Bildschirmabbildung: Vergleichen von leuchtdeckkraft-Eigenschaftswerten](~/add/media/effects-outerglowopacity.png "Bildschirmabbildung: Vergleichen von leuchtdeckkraft-Eigenschaftswerten")  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.UIPermission">Erstellen Sie eine Instanz der <see cref="T:System.Windows.Media.Effects.OuterGlowBitmapEffect" /> Klasse. Zugeordnete Enumerationen:<see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OuterGlowBitmapEffect ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.OuterGlowBitmapEffect.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.BlurEffect" />. Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Effects.OuterGlowBitmapEffect" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Effects.OuterGlowBitmapEffect Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Effects.OuterGlowBitmapEffect Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.OuterGlowBitmapEffect.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Effects.OuterGlowBitmapEffect</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.BlurEffect" />. Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.Effects.OuterGlowBitmapEffect" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Effects.OuterGlowBitmapEffect CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Effects.OuterGlowBitmapEffect CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.OuterGlowBitmapEffect.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Effects.OuterGlowBitmapEffect</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.BlurEffect" />. Erstellt einen änderbaren Klon des <see cref="T:System.Windows.Media.Effects.OuterGlowBitmapEffect" />-Objekts, indem tiefe Kopien der aktuellen Werte dieses Objekts erzeugt werden. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true" /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.OuterGlowBitmapEffect.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateUnmanagedEffect">
+      <MemberSignature Language="C#" Value="protected override System.Runtime.InteropServices.SafeHandle CreateUnmanagedEffect ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Runtime.InteropServices.SafeHandle CreateUnmanagedEffect() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.OuterGlowBitmapEffect.CreateUnmanagedEffect" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("BitmapEffects are deprecated and no longer function.  Consider using Effects where appropriate instead.")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.SafeHandle</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlowColor">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Color GlowColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Color GlowColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Effects.OuterGlowBitmapEffect.GlowColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.BlurEffect" />. Ruft die Farbe des Halo-Lichteffekts ab oder legt sie fest.</summary>
+        <value>Die Farbe des Halo-Lichteffekts. Der Standardwert ist Weiß.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_GlowColor"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Effects.OuterGlowBitmapEffect.GlowColorProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlowColorProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty GlowColorProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty GlowColorProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Effects.OuterGlowBitmapEffect.GlowColorProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.BlurEffect" />. Bezeichnet die <see cref="P:System.Windows.Media.Effects.OuterGlowBitmapEffect.GlowColor" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlowSize">
+      <MemberSignature Language="C#" Value="public double GlowSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 GlowSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Effects.OuterGlowBitmapEffect.GlowSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.BlurEffect" />. Ruft die Dicke des Halo-Lichteffekts ab oder legt sie fest.</summary>
+        <value>Die Dicke des Halo-Lichteffekts in [!INCLUDE[TLA#tla_dipixel](~/includes/tlasharptla-dipixel-md.md)]. Der gültige Wertebereich liegt zwischen 1 und 199. Die Standardeinstellung ist 20.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Abbildung veranschaulicht die Wirkung dieser Eigenschaft.  
+  
+ ![Bildschirmabbildung: OuterGlowBitmapEffect-Bitmapeffekt](~/add/media/effects-outerglowglowsize.png "Bildschirmabbildung: OuterGlowBitmapEffect-Bitmapeffekt")  
+  
+<a name="dependencyPropertyInfo_GlowSize"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Effects.OuterGlowBitmapEffect.GlowSizeProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlowSizeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty GlowSizeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty GlowSizeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Effects.OuterGlowBitmapEffect.GlowSizeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.BlurEffect" />. Bezeichnet die <see cref="P:System.Windows.Media.Effects.OuterGlowBitmapEffect.GlowSize" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Noise">
+      <MemberSignature Language="C#" Value="public double Noise { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Noise" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Effects.OuterGlowBitmapEffect.Noise" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.BlurEffect" />. Ruft die Körnigkeit des Halo-Lichteffekts ab oder legt sie fest.</summary>
+        <value>Die Körnigkeit (der Rauschpegel) des Halo-Lichteffekts. Der gültige Wertebereich reicht von 0,0 bis 1,0, wobei 0,0 kein Rauschen und 1,0 maximales Rauschen angibt. Der Wert 0,5 gibt ein 50%iges Rauschen an, der Wert 0,75 ein 75%iges Rauschen usw. Der Standardwert ist 0,0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Abbildung veranschaulicht die Wirkung dieser Eigenschaft.  
+  
+ ![Bildschirmabbildung: Vergleichen von rauscheigenschaftswerten](~/add/media/effects-outerglownoise.png "Bildschirmabbildung: Vergleichen rauscheigenschaftswerten")  
+  
+<a name="dependencyPropertyInfo_Noise"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Effects.OuterGlowBitmapEffect.NoiseProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoiseProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty NoiseProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty NoiseProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Effects.OuterGlowBitmapEffect.NoiseProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.BlurEffect" />. Bezeichnet die <see cref="P:System.Windows.Media.Effects.OuterGlowBitmapEffect.Noise" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Opacity">
+      <MemberSignature Language="C#" Value="public double Opacity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Opacity" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Effects.OuterGlowBitmapEffect.Opacity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.BlurEffect" />. Ruft den Grad der Deckkraft des Lichthof-Leuchteffekts ab oder legt ihn fest.</summary>
+        <value>Die Deckkraft des Leuchteffekts. Der Wert 0 gibt an, dass der Lichthof-Leuchteffekt völlig transparent ist, während der Wert 1 angibt, dass der Leuchteffekt vollständig deckend ist. Der Wert 0,5 gibt an, dass der Leuchteffekt zu 50 Prozent deckt, der Wert 0,725 bedeutet, dass der Leuchteffekt zu 72,5 Prozent deckend ist, usw. Kleinere Werte als 0 werden als 0 behandelt, größere Werte als 1 als 1. Der Standard ist 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Abbildung veranschaulicht die Wirkung dieser Eigenschaft:  
+  
+ ![Bildschirmabbildung: Vergleichen von leuchtdeckkraft-Eigenschaftswerten](~/add/media/effects-outerglowopacity.png "Bildschirmabbildung: Vergleichen von leuchtdeckkraft-Eigenschaftswerten")  
+  
+ Deckkraft kann auch angegeben werden mit den Alphawert <xref:System.Windows.Media.Effects.OuterGlowBitmapEffect.GlowColor%2A>.  
+  
+<a name="dependencyPropertyInfo_Opacity"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Effects.OuterGlowBitmapEffect.OpacityProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpacityProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty OpacityProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty OpacityProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Effects.OuterGlowBitmapEffect.OpacityProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>**Hinweis: Diese API ist mittlerweile veraltet.** Die nicht veraltete Alternative ist <see cref="T:System.Windows.Media.Effects.BlurEffect" />. Bezeichnet die <see cref="P:System.Windows.Media.Effects.OuterGlowBitmapEffect.Opacity" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateUnmanagedPropertyState">
+      <MemberSignature Language="C#" Value="protected override void UpdateUnmanagedPropertyState (System.Runtime.InteropServices.SafeHandle unmanagedEffect);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void UpdateUnmanagedPropertyState(class System.Runtime.InteropServices.SafeHandle unmanagedEffect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.OuterGlowBitmapEffect.UpdateUnmanagedPropertyState(System.Runtime.InteropServices.SafeHandle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("BitmapEffects are deprecated and no longer function.  Consider using Effects where appropriate instead.")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="unmanagedEffect" Type="System.Runtime.InteropServices.SafeHandle" />
+      </Parameters>
+      <Docs>
+        <param name="unmanagedEffect">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

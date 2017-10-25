@@ -1,0 +1,48 @@
+<Type Name="Utilities" FullName="Microsoft.Build.BuildEngine.Utilities">
+  <TypeSignature Language="C#" Value="public static class Utilities" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit Utilities extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.BuildEngine.Utilities" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Hilfsmethoden, die von MSBuild verwendet. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Escape">
+      <MemberSignature Language="C#" Value="public static string Escape (string unescapedExpression);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string Escape(string unescapedExpression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Utilities.Escape(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="unescapedExpression" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="unescapedExpression">Die zu konvertierende Zeichenfolge.</param>
+        <summary>Konvertiert die angegebene Zeichenfolge in eine Syntax, kann die [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] Modul, das Zeichen als solches interpretiert werden sollen.</summary>
+        <returns>Der konvertierte Wert der angegebenen Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bestimmte Zeichen haben in Projektdateien [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] eine besondere Bedeutung. Beispiele für die Zeichen sind Semikolons (;) und Sternchen (*). Um diese Sonderzeichen als Literale zu verwenden, müssen sie mit der Syntax "%nn" auf, angegeben werden, wobei Nn den ASCII-Hexadezimalwert des Zeichens darstellt. Diese Methode führt, dass die Konvertierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,134 @@
+<Type Name="WorkflowApplicationAbortedException" FullName="System.Activities.WorkflowApplicationAbortedException">
+  <TypeSignature Language="C#" Value="public class WorkflowApplicationAbortedException : System.Activities.WorkflowApplicationException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit WorkflowApplicationAbortedException extends System.Activities.WorkflowApplicationException" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.WorkflowApplicationAbortedException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.WorkflowApplicationException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Ausnahme dar, die ausgelöst wird, wenn ein Vorgang für eine Workflowinstanz nicht gültig ist, da die Instanz abgebrochen wurde.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowApplicationAbortedException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowApplicationAbortedException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.WorkflowApplicationAbortedException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowApplicationAbortedException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowApplicationAbortedException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Beschreibung der Abbruchausnahme.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.WorkflowApplicationAbortedException" />-Klasse mit einer Beschreibung der Ausnahme als Textzeichenfolge.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WorkflowApplicationAbortedException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowApplicationAbortedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Alle erforderlichen Informationen, um das Abbruchausnahmeobjekt zu serialisieren oder zu deserialisieren.</param>
+        <param name="context">Die Quelle und das Ziel eines angegebenen serialisierten Streams und ein zusätzlicher, vom Aufrufer definierter Kontext.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.WorkflowApplicationAbortedException" />-Klasse mit dem Kontext und den Serialisierungsinformationen, die zum Abrufen von Daten über diese Ausnahme aus einem serialisierten Datenstrom erforderlich sind.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowApplicationAbortedException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowApplicationAbortedException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Beschreibung der Abbruchausnahme.</param>
+        <param name="innerException">Eine Ausnahme, die eine kausale Beziehung zur von der Anwendung abgebrochenen Ausnahme hat. Die von der Anwendung abgebrochene Ausnahme wird als Antwort auf die innere Ausnahme ausgelöst und kann Informationen der inneren Ausnahme verwenden, um den Fehler besser zu behandeln.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.WorkflowApplicationAbortedException" />-Klasse mit einer Beschreibung der Ausnahme als Textzeichenfolge und einer zusätzlichen Ausnahme, die die Abbruchausnahme verursacht hat.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowApplicationAbortedException (string message, Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowApplicationAbortedException.#ctor(System.String,System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Beschreibung der Abbruchausnahme.</param>
+        <param name="instanceId">Ein GUID (Globally Unique Identifier).</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.WorkflowApplicationAbortedException" />-Klasse mit einer Beschreibung der Abbruchausnahme als Textzeichenfolge und einem eindeutigen Bezeichner der Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowApplicationAbortedException (string message, Guid instanceId, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, valuetype System.Guid instanceId, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowApplicationAbortedException.#ctor(System.String,System.Guid,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Beschreibung der Abbruchausnahme.</param>
+        <param name="instanceId">Ein GUID (Globally Unique Identifier).</param>
+        <param name="innerException">Eine Ausnahme, die eine kausale Beziehung zur von der Anwendung abgebrochenen Ausnahme hat. Die von der Anwendung abgebrochene Ausnahme wird als Antwort auf die innere Ausnahme ausgelöst und kann Informationen der inneren Ausnahme verwenden, um den Fehler besser zu behandeln.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.WorkflowApplicationAbortedException" />-Klasse mit einer Beschreibung der Abbruchausnahme als Textzeichenfolge, einem eindeutigen Bezeichner der Ausnahme und einer zusätzlichen Ausnahme, die die Abbruchausnahme verursacht hat.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

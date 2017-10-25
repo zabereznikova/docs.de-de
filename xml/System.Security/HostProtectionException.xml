@@ -1,0 +1,326 @@
+<Type Name="HostProtectionException" FullName="System.Security.HostProtectionException">
+  <TypeSignature Language="C#" Value="public class HostProtectionException : SystemException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit HostProtectionException extends System.SystemException" />
+  <TypeSignature Language="DocId" Value="T:System.Security.HostProtectionException" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.SystemException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die Ausnahme, die bei Feststellung einer verweigerten Hostressource ausgelöst wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Security.Permissions.HostProtectionAttribute> Attribut wird verwendet, um zu bestimmen, ob ein Typ oder Member kann basierend auf dem Host Schutz Voreinstellungen hergestellt geladen werden, wenn die common Language Runtime gestartet wird,. Wenn ein Typ oder Member mit einem aktiven <xref:System.Security.Permissions.HostProtectionAttribute> aufgerufen wird, ein Linkaufruf für dieses Schutzattribut. Wenn der Aufrufer nicht der Anforderung für den Hostschutz, erfüllt eine <xref:System.Security.HostProtectionException> ausgelöst wird.  
+  
+> [!NOTE]
+>  Ein <xref:System.Security.Permissions.HostProtectionAttribute> ist keine Berechtigung, obwohl es sich um das Ziel einen Linkaufruf ist. Da eine <xref:System.Security.HostProtectionException> wird ausgelöst, für einen Linkaufruf, es kann nicht verarbeitet werden und daher es kann nicht abgefangen und verarbeitet werden, im Code.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HostProtectionException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.HostProtectionException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.HostProtectionException" />-Klasse mit Standardwerten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle zeigt die anfänglichen Eigenschaftswerte für eine Instanz der <xref:System.Security.HostProtectionException>-Klasse.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Security.HostProtectionException.ProtectedResources%2A>|<xref:System.Security.Permissions.HostProtectionResource?displayProperty=nameWithType>|  
+|<xref:System.Security.HostProtectionException.DemandedResources%2A>|<xref:System.Security.Permissions.HostProtectionResource?displayProperty=nameWithType>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HostProtectionException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.HostProtectionException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Meldung, in der der Fehler beschrieben wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.HostProtectionException" />-Klasse mit einer angegebenen Fehlermeldung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Inhalt der `message` Parameter muss für den Benutzer verständlich sein. Der Aufrufer dieses Konstruktors muss sicherstellen, dass diese Zeichenfolge für die aktuelle Systemkultur lokalisiert wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected HostProtectionException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.HostProtectionException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Das Objekt, das die Daten des serialisierten Objekts enthält.</param>
+        <param name="context">Die Kontextinformationen zur Quelle bzw. zum Ziel.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.HostProtectionException" /> -Klasse mithilfe der angegebenen Serialisierungsinformationen und Streamingkontext.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird während der Deserialisierung aufgerufen, um das über einen Stream übertragene Ausnahmeobjekt wiederherzustellen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="info" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HostProtectionException (string message, Exception e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.HostProtectionException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="e" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Fehlermeldung, in der die Ursache der Ausnahme erklärt wird.</param>
+        <param name="e">Die Ausnahme, die die Ursache der aktuellen Ausnahme ist. Wenn die <c>"InnerException"</c> -Parameter ist kein <see langword="null" />, die aktuelle Ausnahme wird ausgelöst, eine <see langword="catch" /> Block, der die innere Ausnahme behandelt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.HostProtectionException" />-Klasse mit einer angegebenen Fehlermeldung und einem Verweis auf die innere Ausnahme, die diese Ausnahme ausgelöst hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Ausnahme, die als direktes Ergebnis einer vorhergehenden Ausnahme ausgelöst wird, kann in der <xref:System.Exception.InnerException%2A>-Eigenschaft über einen Verweis auf die vorhergehende Ausnahme verfügen. Die <xref:System.Exception.InnerException%2A>-Eigenschaft gibt den gleichen Wert zurück, der an den Konstruktor übergeben wird, oder `null`, wenn die <xref:System.Exception.InnerException%2A>-Eigenschaft den Wert der inneren Ausnahme nicht an den Konstruktor übergibt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HostProtectionException (string message, System.Security.Permissions.HostProtectionResource protectedResources, System.Security.Permissions.HostProtectionResource demandedResources);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, valuetype System.Security.Permissions.HostProtectionResource protectedResources, valuetype System.Security.Permissions.HostProtectionResource demandedResources) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.HostProtectionException.#ctor(System.String,System.Security.Permissions.HostProtectionResource,System.Security.Permissions.HostProtectionResource)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="protectedResources" Type="System.Security.Permissions.HostProtectionResource" />
+        <Parameter Name="demandedResources" Type="System.Security.Permissions.HostProtectionResource" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Fehlermeldung, in der die Ursache der Ausnahme erklärt wird.</param>
+        <param name="protectedResources">Eine bitweise Kombination der Enumerationswerte, die die Hostressourcen angeben, die für teilweise vertrauenswürdigen Code zugegriffen werden kann.</param>
+        <param name="demandedResources">Eine bitweise Kombination der Enumerationswerte, der die angeforderten Ressourcen an.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.HostProtectionException" /> -Klasse mit einer angegebenen Fehlermeldung, den geschützten Hostressourcen und den Hostressourcen, die die Ausnahme verursacht hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `demandedResources` Parameter gibt die angeforderten Host Schutzkategorien, die die Ausnahme verursacht hat. Nehmen wir beispielsweise an, dass eine Methode verfügt über eine <xref:System.Security.Permissions.HostProtectionAttribute> Attribut, das angibt, dass die Methode Freigabezustand verfügbar macht. Wenn die Methode aufgerufen wird, die <xref:System.Security.Permissions.HostProtectionAttribute> führt einen Linkaufruf für gemeinsam verwendete Zustände. Wenn der Host gemeinsam verwendete Zustände als unzulässige Kategorie festgelegt hat ein <xref:System.Security.HostProtectionException> mit ausgelöst, eine `demandedResources` Eigenschaftswert des <xref:System.Security.Permissions.HostProtectionResource?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DemandedResources">
+      <MemberSignature Language="C#" Value="public System.Security.Permissions.HostProtectionResource DemandedResources { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Permissions.HostProtectionResource DemandedResources" />
+      <MemberSignature Language="DocId" Value="P:System.Security.HostProtectionException.DemandedResources" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.HostProtectionResource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen der angeforderte Host Schutz von Ressourcen, die die Ausnahme verursacht hat.</summary>
+        <value>Eine bitweise Kombination der <see cref="T:System.Security.Permissions.HostProtectionResource" /> Werte identifizieren die Schutzressourcen, die die Ausnahme ausgelöst wird. Die Standardeinstellung ist <see cref="F:System.Security.Permissions.HostProtectionResource.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt den angeforderten Host Schutzkategorien, die die Ausnahme verursacht hat. Nehmen wir beispielsweise an, dass eine Methode verfügt über eine <xref:System.Security.Permissions.HostProtectionAttribute> Attribut, das angibt, dass die Methode Freigabezustand verfügbar macht. Wenn die Methode aufgerufen wird, die <xref:System.Security.Permissions.HostProtectionAttribute> führt einen Linkaufruf für gemeinsam verwendete Zustände. Wenn der Host gemeinsam verwendete Zustände als unzulässige Kategorie festgelegt hat ein <xref:System.Security.HostProtectionException> ausgelöst wird, und der Wert des der <xref:System.Security.HostProtectionException.DemandedResources%2A> Eigenschaft ist <xref:System.Security.Permissions.HostProtectionResource?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.HostProtectionException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die serialisierten Objektdaten über die ausgelöste Ausnahme.</param>
+        <param name="context">Die Kontextinformationen zur Quelle bzw. zum Ziel.</param>
+        <summary>Setzt den angegebenen <see cref="T:System.Runtime.Serialization.SerializationInfo" /> -Objekt mit Informationen über die Host-Schutz-Ausnahme.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.HostProtectionException.GetObjectData%2A> -Methode legt eine <xref:System.Runtime.Serialization.SerializationInfo> Objekt mit allen Daten des Ausnahmeobjekts für die Serialisierung vorgesehen. Während der Deserialisierung wird die Ausnahme von rekonstruiert die <xref:System.Runtime.Serialization.SerializationInfo> über den Stream übertragen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="info" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtectedResources">
+      <MemberSignature Language="C#" Value="public System.Security.Permissions.HostProtectionResource ProtectedResources { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Permissions.HostProtectionResource ProtectedResources" />
+      <MemberSignature Language="DocId" Value="P:System.Security.HostProtectionException.ProtectedResources" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.HostProtectionResource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen der Host Schutz Ressourcen, die für teilweise vertrauenswürdigen Code zugegriffen werden kann.</summary>
+        <value>Eine bitweise Kombination der <see cref="T:System.Security.Permissions.HostProtectionResource" /> Werte, die die Hostschutzkategorien identifiziert. Die Standardeinstellung ist <see cref="F:System.Security.Permissions.HostProtectionResource.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kennzeichnet die Host-Schutz-Kategorien, die der Host angegeben hat, als nicht zugegriffen werden kann, dass der code nicht vollständig vertrauenswürdig ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.HostProtectionException.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolgendarstellung der aktuellen Host Schutz Ausnahme zurück.</summary>
+        <returns>Eine Zeichenfolgendarstellung des aktuellen <see cref="T:System.Security.HostProtectionException" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebene Zeichenfolge ist eine Textdarstellung der Ausnahme.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,176 @@
+<Type Name="ImmutableQueue" FullName="System.Collections.Immutable.ImmutableQueue">
+  <TypeSignature Language="C#" Value="public static class ImmutableQueue" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ImmutableQueue extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Immutable.ImmutableQueue" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections.Immutable</AssemblyName>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <AssemblyVersion>1.2.1.0</AssemblyVersion>
+    <AssemblyVersion>1.2.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Reihe von Initialisierungsmethoden für Instanzen der <see cref="T:System.Collections.Immutable.ImmutableQueue`1" /> Klasse bereit.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Queue>  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Dieser Typ ist threadsicher.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="Create&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableQueue&lt;T&gt; Create&lt;T&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Immutable.ImmutableQueue`1&lt;!!T&gt; Create&lt;T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableQueue.Create``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableQueue&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">Der Typ der in der unveränderlichen Warteschlange zu speichernden Elemente.</typeparam>
+        <summary>Erstellt eine leere unveränderliche Warteschlange.</summary>
+        <returns>Eine leere unveränderliche Warteschlange.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableQueue&lt;T&gt; Create&lt;T&gt; (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Immutable.ImmutableQueue`1&lt;!!T&gt; Create&lt;T&gt;(!!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableQueue.Create``1(``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableQueue&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ der Elemente in der unveränderlichen Warteschlange.</typeparam>
+        <param name="item">Das Element, mit dem die Warteschlange vorab aufgefüllt wird.</param>
+        <summary>Erstellt eine neue unveränderliche Warteschlange, die das angegebene Element enthält.</summary>
+        <returns>Eine neue unveränderliche Warteschlange, die das angegebene Element enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableQueue&lt;T&gt; Create&lt;T&gt; (params T[] items);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Immutable.ImmutableQueue`1&lt;!!T&gt; Create&lt;T&gt;(!!T[] items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableQueue.Create``1(``0[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableQueue&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="items" Type="T[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ der Elemente in der unveränderlichen Warteschlange.</typeparam>
+        <param name="items">Ein Array, das die Elemente enthält, um die Warteschlange vorab aufzufüllen.</param>
+        <summary>Erstellt eine neue unveränderliche Warteschlange, die das angegebene Array von Elementen enthält.</summary>
+        <returns>Eine neue unveränderliche Warteschlange, die die angegebenen Elemente enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateRange&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableQueue&lt;T&gt; CreateRange&lt;T&gt; (System.Collections.Generic.IEnumerable&lt;T&gt; items);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Immutable.ImmutableQueue`1&lt;!!T&gt; CreateRange&lt;T&gt;(class System.Collections.Generic.IEnumerable`1&lt;!!T&gt; items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableQueue.CreateRange``1(System.Collections.Generic.IEnumerable{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableQueue&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="items" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ der Elemente in der Warteschlange.</typeparam>
+        <param name="items">Das zur Warteschlange hinzuzufügende Element, bevor die Unveränderlichkeit angewendet wird.</param>
+        <summary>Erstellt eine neue unveränderliche Warteschlange, die die angegebenen Elemente enthält.</summary>
+        <returns>Eine neue unveränderliche Warteschlange, die die angegebenen Elemente enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dequeue&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.IImmutableQueue&lt;T&gt; Dequeue&lt;T&gt; (this System.Collections.Immutable.IImmutableQueue&lt;T&gt; queue, out T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Immutable.IImmutableQueue`1&lt;!!T&gt; Dequeue&lt;T&gt;(class System.Collections.Immutable.IImmutableQueue`1&lt;!!T&gt; queue, [out] !!T&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableQueue.Dequeue``1(System.Collections.Immutable.IImmutableQueue{``0},``0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableQueue&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="queue" Type="System.Collections.Immutable.IImmutableQueue&lt;T&gt;" RefType="this" />
+        <Parameter Name="value" Type="T&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ der Elemente in der unveränderlichen Warteschlange.</typeparam>
+        <param name="queue">Die Warteschlange, aus der das Element entfernt werden soll.</param>
+        <param name="value">Wenn diese Methode zurückgegeben wird, enthält sie das Element vom Anfang der Warteschlange.</param>
+        <summary>Entfernt das Element am Anfang der unveränderlichen Warteschlange und gibt die neue Warteschlange zurück.</summary>
+        <returns>Die neue Warteschlange mit dem entfernten Element.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

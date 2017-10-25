@@ -1,0 +1,173 @@
+<Type Name="IErrorHandler" FullName="System.ServiceModel.Dispatcher.IErrorHandler">
+  <TypeSignature Language="C#" Value="public interface IErrorHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IErrorHandler" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.IErrorHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht bei der Implementierung die Steuerung der Fehlermeldung, die an den Aufrufer zurückgegeben wird, und optional die Durchführung von benutzerdefinierter Verarbeitung, wie z.&amp;#160;B. Protokollierung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um explizit steuern das Verhalten der Anwendung auf, wenn eine Ausnahme ausgelöst wird, implementieren die <xref:System.ServiceModel.Dispatcher.IErrorHandler> Schnittstelle, und fügen Sie diese der <xref:System.ServiceModel.Dispatcher.ChannelDispatcher>des <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ErrorHandlers%2A> Eigenschaft. <xref:System.ServiceModel.Dispatcher.IErrorHandler> ermöglicht es Ihnen, explizit zu steuern, welcher SOAP-Fehler generiert wird, und zu entscheiden, ob der Fehler zurück zum Client geschickt und zugehörige Aufgaben ausgeführt werden sollen, z. B. Protokollieren. Fehlerhandler werden in der gleichen Reihenfolge aufgerufen, in der sie der <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ErrorHandlers%2A>-Eigenschaft hinzugefügt wurden.  
+  
+ Implementieren Sie die <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%2A>-Methode, um die Fehlermeldung zu steuern, die dem Client zurückgegeben wird.  
+  
+ Implementieren Sie die <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>-Methode, um fehlerbezogenes Verhalten, wie die Fehlerprotokollierung, die Sicherstellung eines Failfast, das Beenden der Anwendung und Ähnliches, zu ermöglichen.  
+  
+> [!NOTE]
+>  Da die <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>-Methode von vielen verschiedenen Quellen aus aufgerufen werden kann, kann nicht garantiert werden, über welchen Thread die Methode aufgerufen wird. Verlassen Sie sich nicht darauf, dass die <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>-Methode vom Vorgangsthread aufgerufen wird.  
+  
+ Alle <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%2A>-Implementierungen werden schon vor dem Senden einer Antwortnachricht aufgerufen. Wenn alle <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%2A>-Implementierungen aufgerufen und zurückgegeben wurden und wenn `fault` nicht `null` ist, wird sie gemäß dem Vorgangsvertrag an den Client zurückgesendet. Wenn `fault` `null` ist, nachdem alle Implementierungen aufgerufen wurden, wird die Antwortnachricht vom <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>-Eigenschaftswert gesteuert.  
+  
+> [!NOTE]
+>  Ausnahmen können auftreten, nachdem alle <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%2A>-Implementierungen aufgerufen wurden und eine Antwortnachricht an den Kanal weitergegeben wurde. Wenn eine Kanal-Ausnahme tritt auf (z. B. Probleme beim Serialisieren der Nachricht), <xref:System.ServiceModel.Dispatcher.IErrorHandler> Objekte benachrichtigt werden sollen. In diesem Fall sollten Sie dennoch sicherstellen, dass Ihre Entwicklungsumgebung abfängt und Sie solche Ausnahmen angezeigt oder binärencoder der Ablaufverfolgung, um das Problem zu ermitteln. Weitere Informationen zur Ablaufverfolgung finden Sie unter [mithilfe-Ablaufverfolgung zum Beheben der Anwendung](~/docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).  
+  
+ Nachdem die Antwortnachricht gesendet wurde, werden alle <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>-Implementierungen in der gleichen Reihenfolge aufgerufen.  
+  
+ In der Regel wird eine <xref:System.ServiceModel.Dispatcher.IErrorHandler>-Implementierung der <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ErrorHandlers%2A>-Eigenschaft für den Dienst hinzugefügt (und im Fall von Duplexkommunikation für den Client).  
+  
+ Sie können <xref:System.ServiceModel.Dispatcher.IErrorHandler> der Laufzeit hinzufügen, indem Sie Verhalten implementieren (entweder ein <xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=nameWithType>-Objekt, ein <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>-Objekt, ein <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>-Objekt oder ein <xref:System.ServiceModel.Description.IOperationBehavior?displayProperty=nameWithType>-Objekt) und das Verhalten programmgesteuert, von einer Konfigurationsdatei oder mit einem benutzerdefinierten Attribut zum Anfügen von <xref:System.ServiceModel.Dispatcher.IErrorHandler> verwenden.  
+  
+ Weitere Informationen zum Verwenden von Verhaltensweisen zum Ändern der Laufzeit finden Sie unter [konfigurieren und Erweitern der Laufzeit mit Verhalten](~/docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht einen Dienst, der <xref:System.ServiceModel.Dispatcher.IErrorHandler> implementiert, wodurch nur <xref:System.ServiceModel.FaultException%601> des Typs `GreetingFault` zurückgegeben wird, wenn eine Dienstmethode eine verwaltete Ausnahme auslöst.  
+  
+ [!code-csharp[IErrorHandler#6](~/samples/snippets/csharp/VS_Snippets_CFX/ierrorhandler/cs/ierrorhandler.cs#6)]
+ [!code-vb[IErrorHandler#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/ierrorhandler/vb/ierrorhandler.vb#6)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein Dienstverhalten verwendet wird, um die <xref:System.ServiceModel.Dispatcher.IErrorHandler>-Implementierung zur <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ErrorHandlers%2A>-Eigenschaft hinzuzufügen.  
+  
+ [!code-csharp[IErrorHandler#7](~/samples/snippets/csharp/VS_Snippets_CFX/ierrorhandler/cs/ierrorhandler.cs#7)]
+ [!code-vb[IErrorHandler#7](~/samples/snippets/visualbasic/VS_Snippets_CFX/ierrorhandler/vb/ierrorhandler.vb#7)]  
+  
+ Im folgenden Codebeispiel wird die Konfiguration des Diensts zum Laden des Dienstverhaltens mit der Anwendungskonfigurationsdatei veranschaulicht. Weitere Informationen zur Verfügbarmachung eines Dienstverhaltens in einer Konfigurationsdatei finden Sie unter <xref:System.ServiceModel.Description.IServiceBehavior>.  
+
+ [!code-xml[IErrorHandler#4](~/samples/snippets/csharp/VS_Snippets_CFX/ierrorhandler/cs/hostapplication.exe.config#4)]   
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="HandleError">
+      <MemberSignature Language="C#" Value="public bool HandleError (Exception exception);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool HandleError(class System.Exception exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.IErrorHandler.HandleError(System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="error" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="exception">To be added.</param>
+        <summary>Aktiviert fehlerbezogene Verarbeitung und gibt einen Wert zurück, der angibt, ob der Verteiler die Sitzung und den Instanzkontext in bestimmten Fällen abbricht.</summary>
+        <returns>
+          <see langword="true" />, falls [!INCLUDE[indigo1](~/includes/indigo1-md.md)] die Sitzung (sofern vorhanden) und den Instanzkontext nicht abbrechen soll, falls der Instanzkontext nicht <see cref="F:System.ServiceModel.InstanceContextMode.Single" /> lautet; andernfalls , <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>-Methode zum Implementieren von fehlerbezogenem Verhalten wie Fehlerprotokollierung, Systembenachrichtigungen, Herunterfahren der Anwendung und Ähnliches, und geben Sie einen Wert zurück, der angibt, ob die Ausnahme ordnungsgemäß behandelt wurde.  
+  
+> [!NOTE]
+>  Da die <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>-Methode von vielen verschiedenen Quellen aus aufgerufen werden kann, kann nicht garantiert werden, über welchen Thread die Methode aufgerufen wird. Verlassen Sie sich nicht darauf, dass die <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>-Methode vom Vorgangsthread aufgerufen wird.  
+  
+ Alle <xref:System.ServiceModel.Dispatcher.IErrorHandler>-Implementierungen werden aufgerufen. Standardmäßig (wenn der Rückgabewert `false` lautet) bricht der Verteiler bei Ausnahmen alle Sitzungen ab und bricht auch den <xref:System.ServiceModel.InstanceContext> ab, falls der <xref:System.ServiceModel.InstanceContextMode> <xref:System.ServiceModel.InstanceContextMode.Single> nicht entspricht.  Die Ausnahme gilt in diesem Fall als nicht behandelt, alle Zustände gelten als beschädigt.  
+  
+ Geben Sie `true` von <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> zurück, um dieses Standardverhalten zu verhindern. Falls ein Fehlerhandler `true` zurückgibt, wird [!INCLUDE[indigo2](~/includes/indigo2-md.md)] angewiesen, dass mithilfe der fehlgeschlagenen Anforderung fortgefahren werden kann.  
+  
+ Falls kein Fehlerhandler `true` für die <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>-Methode zurückgibt, gilt die Ausnahme als nicht behandelt. Die Standardantwort wird übernommen, was bei der Kommunikation über einen Sitzungskanal oder wenn die <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType>-Eigenschaft nicht auf <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> festgelegt ist, möglicherweise zu einem abgebrochenen <xref:System.ServiceModel.InstanceContextMode?displayProperty=nameWithType> und Channel führt.  
+  
+ Der `error`-Parameter ist nie `null` und enthält das Ausnahmeobjekt, das ausgelöst wurde.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht einen Dienst, der <xref:System.ServiceModel.Dispatcher.IErrorHandler> implementiert, wodurch nur <xref:System.ServiceModel.FaultException%601> des Typs `GreetingFault` zurückgegeben wird, wenn eine Dienstmethode eine verwaltete Ausnahme auslöst.  
+  
+ [!code-csharp[IErrorHandler#6](~/samples/snippets/csharp/VS_Snippets_CFX/ierrorhandler/cs/ierrorhandler.cs#6)]
+ [!code-vb[IErrorHandler#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/ierrorhandler/vb/ierrorhandler.vb#6)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein Dienstverhalten verwendet wird, um die <xref:System.ServiceModel.Dispatcher.IErrorHandler>-Implementierung zur <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ErrorHandlers%2A>-Eigenschaft hinzuzufügen.  
+  
+ [!code-csharp[IErrorHandler#7](~/samples/snippets/csharp/VS_Snippets_CFX/ierrorhandler/cs/ierrorhandler.cs#7)]
+ [!code-vb[IErrorHandler#7](~/samples/snippets/visualbasic/VS_Snippets_CFX/ierrorhandler/vb/ierrorhandler.vb#7)]  
+  
+ Im folgenden Codebeispiel wird die Konfiguration des Diensts zum Laden des Dienstverhaltens mit der Anwendungskonfigurationsdatei veranschaulicht. Weitere Informationen zur Verfügbarmachung eines Dienstverhaltens in einer Konfigurationsdatei finden Sie unter <xref:System.ServiceModel.Description.IServiceBehavior>.  
+  
+ [!code-xml[IErrorHandler#4](~/samples/snippets/csharp/VS_Snippets_CFX/ierrorhandler/cs/hostapplication.exe.config#4)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProvideFault">
+      <MemberSignature Language="C#" Value="public void ProvideFault (Exception exception, System.ServiceModel.Channels.MessageVersion version, ref System.ServiceModel.Channels.Message fault);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ProvideFault(class System.Exception exception, class System.ServiceModel.Channels.MessageVersion version, class System.ServiceModel.Channels.Message&amp; fault) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault(System.Exception,System.ServiceModel.Channels.MessageVersion,System.ServiceModel.Channels.Message@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="error" Type="System.Exception" />
+        <Parameter Name="version" Type="System.ServiceModel.Channels.MessageVersion" />
+        <Parameter Name="fault" Type="System.ServiceModel.Channels.Message&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="exception">To be added.</param>
+        <param name="version">Die SOAP-Version der Nachricht.</param>
+        <param name="fault">Das <see cref="T:System.ServiceModel.Channels.Message" />-Objekt, das dem Client oder bei Duplexkommunikation dem Dienst zurückgegeben wird.</param>
+        <summary>Aktiviert die Erstellung einer benutzerdefinierten <see cref="T:System.ServiceModel.FaultException`1" />, die während einer Dienstmethode von einer Ausnahme zurückgegeben wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementieren Sie die <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%2A>-Methode, um eine benutzerdefinierte Fehlermeldung zu erstellen, die dem Client zurückgegeben wird.  Die <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%2A> Methode wird immer aufgerufen werden, für die Ausnahmen, die Vorgänge, außer wenn die WCF-Laufzeit die Ausnahme als besonders Schwerwiegender erkennt und löst die Ausnahme selbst verlassen. Wenn alle <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%2A>-Implementierungen aufgerufen wurden, wird die Fehlermeldung zurück an den Client gesendet (sofern `fault` nicht `null` ist). Wenn die `fault` Parameter ist `null` der Standard-Fehler an den Client gesendet wird.  
+  
+> [!NOTE]
+>  Die eingehende Nachricht, die den Verarbeitungsfehler verursacht hat, ist während dieser Methode über die <xref:System.ServiceModel.OperationContext.RequestContext%2A?displayProperty=nameWithType>-Eigenschaft verfügbar.  
+  
+> [!NOTE]
+>  Da die <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%2A>-Methode von vielen verschiedenen Quellen aus aufgerufen werden kann, kann nicht garantiert werden, über welchen Thread die Methode aufgerufen wird. Verlassen Sie sich nicht darauf, dass die <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%2A>-Methode vom Vorgangsthread aufgerufen wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht einen Dienst, der <xref:System.ServiceModel.Dispatcher.IErrorHandler> implementiert, wodurch nur <xref:System.ServiceModel.FaultException%601> des Typs `GreetingFault` zurückgegeben wird, wenn eine Dienstmethode eine verwaltete Ausnahme auslöst.  
+  
+ [!code-csharp[IErrorHandler#6](~/samples/snippets/csharp/VS_Snippets_CFX/ierrorhandler/cs/ierrorhandler.cs#6)]
+ [!code-vb[IErrorHandler#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/ierrorhandler/vb/ierrorhandler.vb#6)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein Dienstverhalten verwendet wird, um die <xref:System.ServiceModel.Dispatcher.IErrorHandler>-Implementierung zur <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ErrorHandlers%2A>-Eigenschaft hinzuzufügen.  
+  
+ [!code-csharp[IErrorHandler#7](~/samples/snippets/csharp/VS_Snippets_CFX/ierrorhandler/cs/ierrorhandler.cs#7)]
+ [!code-vb[IErrorHandler#7](~/samples/snippets/visualbasic/VS_Snippets_CFX/ierrorhandler/vb/ierrorhandler.vb#7)]  
+  
+ Im folgenden Codebeispiel wird die Konfiguration des Diensts zum Laden des Dienstverhaltens mit der Anwendungskonfigurationsdatei veranschaulicht. Weitere Informationen zur Verfügbarmachung eines Dienstverhaltens in einer Konfigurationsdatei finden Sie unter <xref:System.ServiceModel.Description.IServiceBehavior>.  
+  
+ [!code-xml[IErrorHandler#4](~/samples/snippets/csharp/VS_Snippets_CFX/ierrorhandler/cs/hostapplication.exe.config#4)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

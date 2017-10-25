@@ -1,0 +1,166 @@
+<Type Name="TemplateGroup" FullName="System.Web.UI.Design.TemplateGroup">
+  <TypeSignature Language="C#" Value="public class TemplateGroup" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TemplateGroup extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.TemplateGroup" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Eine Auflistung von <see cref="T:System.Web.UI.Design.TemplateDefinition" /> Objekte, die die Elementen in einem Webserver-Steuerelement zur Entwurfszeit darstellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Steuerelement-Designer-Klasse erstellen, die von abgeleitet ist die <xref:System.Web.UI.Design.ControlDesigner> Klasse. Diese Steuerelement-Designer unterstützt ein Steuerelement mit vier möglichen Vorlagen.  
+  
+ Um dies zu versuchen, Kompilieren des Codes, und klicken Sie dann in einen Entwurf hosten, wie z. B. [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)], betrachten Sie die Seite in der Entwurfsansicht. Wählen Sie das Steuerelement, klicken Sie auf die Liste der Aktionen zum Auswählen einer Vorlage zu ändern und dann verwenden Sie die Drag-and-Drop-Funktion, um die Steuerelemente in die Vorlage verschoben.  
+  
+ [!code-csharp[DesignerTemplateGroupSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DesignerTemplateGroupSample/CS/TemplateGroupsSample.cs#1)]
+ [!code-aspx-csharp[DesignerTemplateGroupSample#2](~/samples/snippets/csharp/VS_Snippets_WebNet/DesignerTemplateGroupSample/CS/TemplateGroupsSample.aspx#2)]  
+
+ [!code-vb[DesignerTemplateGroupSample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DesignerTemplateGroupSample/VB/TemplateGroupsSample.vb#1)]  
+ [!code-aspx-vb[DesignerTemplateGroupSample#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DesignerTemplateGroupSample/VB/TemplateGroupsSample.aspx#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TemplateGroup (string groupName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string groupName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TemplateGroup.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="groupName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="groupName">Der Name der Gruppe.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.Design.TemplateGroup" /> -Klasse unter Verwendung des angegebenen Namens.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TemplateGroup (string groupName, System.Web.UI.WebControls.Style groupStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string groupName, class System.Web.UI.WebControls.Style groupStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TemplateGroup.#ctor(System.String,System.Web.UI.WebControls.Style)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="groupName" Type="System.String" />
+        <Parameter Name="groupStyle" Type="System.Web.UI.WebControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="groupName">Der Name der Gruppe "</param>
+        <param name="groupStyle">Ein <see cref="T:System.Web.UI.WebControls.Style" /> Objekt auf Vorlagen in der Gruppe angewendet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.Design.TemplateGroup" /> -Klasse unter Verwendung des angegebenen Namens und Stil.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddTemplateDefinition">
+      <MemberSignature Language="C#" Value="public void AddTemplateDefinition (System.Web.UI.Design.TemplateDefinition templateDefinition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddTemplateDefinition(class System.Web.UI.Design.TemplateDefinition templateDefinition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TemplateGroup.AddTemplateDefinition(System.Web.UI.Design.TemplateDefinition)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="templateDefinition" Type="System.Web.UI.Design.TemplateDefinition" />
+      </Parameters>
+      <Docs>
+        <param name="templateDefinition">Ein <see cref="T:System.Web.UI.Design.TemplateDefinition" />.</param>
+        <summary>Fügt die angegebene <see cref="T:System.Web.UI.Design.TemplateDefinition" /> hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GroupName">
+      <MemberSignature Language="C#" Value="public string GroupName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string GroupName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.TemplateGroup.GroupName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Gruppe ab.</summary>
+        <value>Der Name der Gruppe.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GroupStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Style GroupStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.Style GroupStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.TemplateGroup.GroupStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das aktuelle Format für die Gruppe ab.</summary>
+        <value>Die <see cref="T:System.Web.UI.WebControls.Style" /> für die Gruppe aus, wenn festgelegt ist, andernfalls <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public bool IsEmpty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEmpty" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.TemplateGroup.IsEmpty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Vorlagen in der Gruppe vorhanden sind.</summary>
+        <value>
+          <see langword="true" />Wenn es keine Vorlagen in der Gruppe sind; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Templates">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.TemplateDefinition[] Templates { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.TemplateDefinition[] Templates" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.TemplateGroup.Templates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.TemplateDefinition[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Array aller Vorlagendefinitionen in der Gruppe ab.</summary>
+        <value>Ein Array von <see cref="T:System.Web.UI.Design.TemplateDefinition" />-Objekten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

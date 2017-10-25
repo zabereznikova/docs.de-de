@@ -1,0 +1,265 @@
+<Type Name="EventLogEntryCollection" FullName="System.Diagnostics.EventLogEntryCollection">
+  <TypeSignature Language="C#" Value="public class EventLogEntryCollection : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EventLogEntryCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.EventLogEntryCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Definiert Größe und Enumeratoren für eine Auflistung von <see cref="T:System.Diagnostics.EventLogEntry" />-Instanzen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Diagnostics.EventLogEntryCollection> beim Lesen der Einträge, die zugeordnete Klasse eine <xref:System.Diagnostics.EventLog> Instanz. Die <xref:System.Diagnostics.EventLog.Entries%2A> Eigenschaft von der <xref:System.Diagnostics.EventLog> -Klasse ist eine Auflistung aller Einträge im Ereignisprotokoll.  
+  
+ Da neue Einträge an die vorhandene Liste angefügt sind, beim Durchlaufen der Auflistung können Sie die Einträge, die erstellt wurden, nachdem Sie ursprünglich erstellt haben, den Zugriff auf die <xref:System.Diagnostics.EventLogEntryCollection>. Jedoch, nachdem Sie die gesamte Liste anzuzeigen, nicht mit neuen Einträge aktualisiert.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie zum Abrufen von Ereignisprotokollinformationen aus einer <xref:System.Diagnostics.EventLogEntryCollection> Objekt.  
+  
+ [!code-cpp[EventLogEntry_CopyTo#1](~/samples/snippets/cpp/VS_Snippets_CLR/EventLogEntry_CopyTo/CPP/eventlogentry_copyto.cpp#1)]
+ [!code-csharp[EventLogEntry_CopyTo#1](~/samples/snippets/csharp/VS_Snippets_CLR/EventLogEntry_CopyTo/CS/eventlogentry_copyto.cs#1)]
+ [!code-vb[EventLogEntry_CopyTo#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/EventLogEntry_CopyTo/VB/eventlogentry_copyto.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Diagnostics.EventLogEntry[] eventLogEntries, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Diagnostics.EventLogEntry[] eventLogEntries, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogEntryCollection.CopyTo(System.Diagnostics.EventLogEntry[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entries" Type="System.Diagnostics.EventLogEntry[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="eventLogEntries">To be added.</param>
+        <param name="index">Der nullbasierte Index im Array, ab dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die Elemente der <see cref="T:System.Diagnostics.EventLogEntryCollection" /> auf ein Array von <see cref="T:System.Diagnostics.EventLogEntry" /> Instanzen, beginnend bei einem bestimmten Arrayindex begonnen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da neue Einträge an die vorhandene Liste angefügt sind, beim Durchlaufen der Auflistung können Sie die Einträge, die erstellt wurden, nachdem Sie ursprünglich erstellt haben, den Zugriff auf die <xref:System.Diagnostics.EventLogEntryCollection>. Ein Array von <xref:System.Diagnostics.EventLogEntry> Instanzen wurde behoben, die zum Zeitpunkt der Instanziierung. Sie können nicht aus diesem Grund neue Einträge gelesen, unter Verwendung des Arrays, die von zurückgegeben wird die <xref:System.Diagnostics.EventLogEntryCollection.CopyTo%2A> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Diagnostics.EventLogEntry> Array und verwendet die <xref:System.Diagnostics.EventLogEntryCollection.CopyTo%2A> Methode zum Kopieren der Inhalte einer <xref:System.Diagnostics.EventLogEntryCollection> hinein.  
+  
+ [!code-csharp[EventLogEntry_CopyTo#2](~/samples/snippets/csharp/VS_Snippets_CLR/EventLogEntry_CopyTo/CS/eventlogentry_copyto.cs#2)]
+ [!code-vb[EventLogEntry_CopyTo#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/EventLogEntry_CopyTo/VB/eventlogentry_copyto.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogEntryCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Einträge im Ereignisprotokoll (d. h. die Anzahl der Elemente in der <see cref="T:System.Diagnostics.EventLogEntry" /> Auflistung).</summary>
+        <value>Die Anzahl der Einträge, die derzeit im Ereignisprotokoll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Diagnostics.EventLogEntryCollection> stellt eine dynamische Liste aller Einträge in einem Protokoll dar. Aus diesem Grund die <xref:System.Diagnostics.EventLogEntryCollection.Count%2A> -Eigenschaft ändern, während der Lebensdauer der <xref:System.Diagnostics.EventLogEntryCollection> Instanz, die Sie erstellen. Es empfiehlt sich in der Regel zur Bearbeitung der <xref:System.Diagnostics.EventLogEntryCollection.Count%2A> -Eigenschaft direkt statt den Wert einer Variablen zuweisen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Diagnostics.EventLogEntryCollection.Count%2A> Eigenschaft zum Durchlaufen einer <xref:System.Diagnostics.EventLogEntryCollection> Objekt.  
+  
+ [!code-cpp[EventLogEntry_Item#1](~/samples/snippets/cpp/VS_Snippets_CLR/EventLogEntry_Item/CPP/eventlogentry_item.cpp#1)]
+ [!code-csharp[EventLogEntry_Item#1](~/samples/snippets/csharp/VS_Snippets_CLR/EventLogEntry_Item/CS/eventlogentry_item.cs#1)]
+ [!code-vb[EventLogEntry_Item#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/EventLogEntry_Item/VB/eventlogentry_item.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogEntryCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Unterstützt eine einfache Iteration durch die <see cref="T:System.Diagnostics.EventLogEntryCollection" /> Objekt.</summary>
+        <returns>Ein Objekt, das zum Durchlaufen der Auflistung verwendet werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Objekt, das von zurückgegebene der <xref:System.Diagnostics.EventLogEntryCollection.GetEnumerator%2A> Methode ist ein Wrapper für die <xref:System.Diagnostics.EventLogEntryCollection> Klasse, die implementiert die <xref:System.Collections.IEnumerator> Enumerator.  
+  
+> [!NOTE]
+>  Wenn die Auflistung während der Iteration geändert wird, wird die Iteration beendet. Um dies zu vermeiden, finden Sie unter der <xref:System.Diagnostics.EventLogEntryCollection.Item%2A> -Eigenschaft für ein alternatives Verfahren zum Durchlaufen einer Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual System.Diagnostics.EventLogEntry this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Diagnostics.EventLogEntry Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogEntryCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.EventLogEntry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, der dem Ereignisprotokolleintrag zugeordnet ist.</param>
+        <summary>Ruft einen Eintrag in das Ereignisprotokoll auf Grundlage eines Indexes, das mit 0 (null) beginnt.</summary>
+        <value>Der Eintrag im Ereignisprotokoll an der Position, die von angegeben wird die <paramref name="index" /> Parameter.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Diagnostics.EventLogEntry>Objekte werden vom System Ereignisprotokoll nach der chronologischen Reihenfolge indiziert, in denen sie im Ereignisprotokoll eingegangen ist. Verwenden der <xref:System.Diagnostics.EventLogEntryCollection.Item%2A> Eigenschaft, um einen bestimmten Ereignisprotokolleintrag auszuwählen, deren Index in der Auflistung bekannt ist.  
+  
+ Durchlaufen der <xref:System.Diagnostics.EventLogEntryCollection> lernen Sie jede Instanz <xref:System.Diagnostics.EventLogEntry> sequenziell-Objekt. Die Auflistung ist dynamisch, und die Anzahl der Einträge kann nicht unveränderlich sein, bei der Eingabe der schleifenstatus. Aus diesem Grund sollten Sie verwenden eine `for each...next` anstelle der Schleife eine `for(int i=0; i<count, i++)` Schleife zum Durchlaufen der Einträge, die zugeordnet sind die <xref:System.Diagnostics.EventLogEntryCollection> Instanz, um den gesamten Satz von Einträgen zu untersuchen.  
+  
+ Da neue Einträge an die vorhandene Liste angefügt sind, beim Durchlaufen der Auflistung können Sie die Einträge, die erstellt wurden, nachdem Sie ursprünglich erstellt haben, den Zugriff auf die <xref:System.Diagnostics.EventLogEntryCollection>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie zum Anzeigen von Informationen für die Elemente in einem <xref:System.Diagnostics.EventLogEntryCollection> Objekt.  
+  
+ [!code-cpp[EventLogEntry_Item#2](~/samples/snippets/cpp/VS_Snippets_CLR/EventLogEntry_Item/CPP/eventlogentry_item.cpp#2)]
+ [!code-csharp[EventLogEntry_Item#2](~/samples/snippets/csharp/VS_Snippets_CLR/EventLogEntry_Item/CS/eventlogentry_item.cs#2)]
+ [!code-vb[EventLogEntry_Item#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/EventLogEntry_Item/VB/eventlogentry_item.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogEntryCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale <see cref="T:System.Array" /> also das Ziel der Elemente, die aus der Auflistung kopiert werden. Für das <see cref="T:System.Array" /> muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="index">Der nullbasierte Index im <c>Array</c> an dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die Elemente der Auflistung in ein <see cref="T:System.Array" />, beginnend bei einem bestimmten <see cref="T:System.Array" />-Index.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Diagnostics.EventLogEntryCollection.CopyTo%2A> Methode der <xref:System.Diagnostics.EventLogEntryCollection> Klasse so kopieren Sie alle oder einen Teil der Auflistung in ein <xref:System.Diagnostics.EventLogEntry> Array.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogEntryCollection.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Zugriff auf <see cref="T:System.Diagnostics.EventLogEntryCollection" /> synchronisiert (threadsicher) ist.</summary>
+        <value>
+          <see langword="false" />Wenn der Zugriff auf die Auflistung nicht (threadsicher) synchronisiert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für die <xref:System.Diagnostics.EventLogEntryCollection> -Klasse, die <xref:System.Diagnostics.EventLogEntryCollection.System%23Collections%23ICollection%23IsSynchronized%2A> immer Methodenrückgabe `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogEntryCollection.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt ab, mit dem der Zugriff auf das <see cref="T:System.Diagnostics.EventLogEntryCollection" />-Objekt synchronisiert werden kann.</summary>
+        <value>Ein Objekt, mit dem der Zugriff auf die Auflistung synchronisiert werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für die <xref:System.Diagnostics.EventLogEntryCollection> -Klasse, die <xref:System.Diagnostics.EventLogEntryCollection.System%23Collections%23ICollection%23SyncRoot%2A> Eigenschaft gibt immer die aktuelle <xref:System.Diagnostics.EventLogEntryCollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

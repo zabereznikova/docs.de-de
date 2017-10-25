@@ -1,0 +1,343 @@
+<Type Name="PhysicalAddress" FullName="System.Net.NetworkInformation.PhysicalAddress">
+  <TypeSignature Language="C#" Value="public class PhysicalAddress" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PhysicalAddress extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.NetworkInformation.PhysicalAddress" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält die Media Access Control-oder MAC-Adresse für eine Netzwerkschnittstelle (Adapter).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die MAC-Adresse oder die physische Adresse ist eine Hardwareadresse, die jedem Knoten, z. B. einen Computer oder Drucker, in einem Netzwerk eindeutig identifiziert.  
+  
+ Instanzen dieser Klasse werden zurückgegeben, durch die <xref:System.Net.NetworkInformation.NetworkInterface.GetPhysicalAddress%2A?displayProperty=nameWithType> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die physischen Adressen aller Schnittstellen auf dem lokalen Computer.  
+  
+ [!code-cpp[NCLPhysicalAddress#2](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLPhysicalAddress/CPP/NCLPhysicalAddress.cpp#2)]
+ [!code-csharp[NCLPhysicalAddress#2](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLPhysicalAddress/CS/physaddresstester.cs#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PhysicalAddress (byte[] address);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.PhysicalAddress.#ctor(System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="address" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="address">Ein <see cref="T:System.Byte" /> Array, das die Adresse enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.NetworkInformation.PhysicalAddress" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gemeinsame Szenarien Anwendungen müssen nicht zum Aufrufen dieses Konstruktors; Instanzen dieser Klasse werden zurückgegeben, durch die <xref:System.Net.NetworkInformation.NetworkInterface.GetPhysicalAddress%2A> Methode.  
+  
+ Beachten Sie, mit denen Sie auch die <xref:System.Net.NetworkInformation.PhysicalAddress.Parse%2A> -Methode erstellt eine neue Instanz der <xref:System.Net.NetworkInformation.PhysicalAddress>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt ein neues <xref:System.Net.NetworkInformation.PhysicalAddress> Objekt.  
+  
+ [!code-cpp[NCLPhysicalAddress#4](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLPhysicalAddress/CPP/NCLPhysicalAddress.cpp#4)]
+ [!code-csharp[NCLPhysicalAddress#4](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLPhysicalAddress/CS/physaddresstester.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object comparand);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object comparand) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.PhysicalAddress.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="comparand" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="comparand">Der <see cref="T:System.Net.NetworkInformation.PhysicalAddress" />, der mit der aktuellen Instanz verglichen werden soll.</param>
+        <summary>Vergleicht zwei <see cref="T:System.Net.NetworkInformation.PhysicalAddress" /> Instanzen.</summary>
+        <returns>
+          <see langword="true" />Wenn diese Instanz und die angegebene Instanz die gleiche Adresse enthalten. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird vergleicht zwei <xref:System.Net.NetworkInformation.PhysicalAddress> Instanzen.  
+  
+ [!code-cpp[NCLPhysicalAddress#3](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLPhysicalAddress/CPP/NCLPhysicalAddress.cpp#3)]
+ [!code-csharp[NCLPhysicalAddress#3](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLPhysicalAddress/CS/physaddresstester.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAddressBytes">
+      <MemberSignature Language="C#" Value="public byte[] GetAddressBytes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetAddressBytes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.PhysicalAddress.GetAddressBytes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Adresse der aktuellen Instanz zurück.</summary>
+        <returns>Ein <see cref="T:System.Byte" /> Array, das die Adresse enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel ruft diese Methode, um die Adresse des Abrufen einer <xref:System.Net.NetworkInformation.PhysicalAddress> und die Adresse für die Anzeige formatiert.  
+  
+ [!code-cpp[NCLPhysicalAddress#2](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLPhysicalAddress/CPP/NCLPhysicalAddress.cpp#2)]
+ [!code-csharp[NCLPhysicalAddress#2](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLPhysicalAddress/CS/physaddresstester.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.PhysicalAddress.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashwert einer physischen Adresse zurück.</summary>
+        <returns>Ein ganzzahliger Hashwert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="public static readonly System.Net.NetworkInformation.PhysicalAddress None;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Net.NetworkInformation.PhysicalAddress None" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.PhysicalAddress.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.PhysicalAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine neue <see cref="T:System.Net.NetworkInformation.PhysicalAddress" /> -Instanz mit einer Adresse mit der Länge 0 (null). Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.NetworkInformation.PhysicalAddress.Parse%2A> -Methode zurückkehrt <xref:System.Net.NetworkInformation.PhysicalAddress.None> bei Angabe von `null` Adresse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, verwenden Sie dieses Feld um das Ergebnis der Analyse einer Adresse zu testen.  
+  
+ [!code-cpp[NCLPhysicalAddress#5](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLPhysicalAddress/CPP/NCLPhysicalAddress.cpp#5)]
+ [!code-csharp[NCLPhysicalAddress#5](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLPhysicalAddress/CS/physaddresstester.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static System.Net.NetworkInformation.PhysicalAddress Parse (string address);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.NetworkInformation.PhysicalAddress Parse(string address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.PhysicalAddress.Parse(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.PhysicalAddress</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="address">Ein <see cref="T:System.String" /> , enthält die Adresse, die verwendet wird, zum Initialisieren der <see cref="T:System.Net.NetworkInformation.PhysicalAddress" /> Instanz, die von dieser Methode zurückgegeben.</param>
+        <summary>Analysiert die angegebene <see cref="T:System.String" /> und speichert Sie seinen Inhalt als die Adressbytes, der die <see cref="T:System.Net.NetworkInformation.PhysicalAddress" /> von dieser Methode zurückgegeben.</summary>
+        <returns>Ein <see cref="T:System.Net.NetworkInformation.PhysicalAddress" /> Instanz mit der angegebenen Adresse.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `address` Parameter muss eine Zeichenfolge, die nur aus Zahlen bestehen kann enthalten und uchstaben als hexadezimale Ziffern. Einige Beispiele der Formate, die zulässig sind sind wie folgt aus:  
+  
+ `001122334455`  
+  
+ `00-11-22-33-44-55`  
+  
+ `F0-E1-D2-C3-B4-A5`  
+  
+ Beachten Sie, dass eine Adresse, die enthält `f0-e1-d2-c3-b4-a5` , zu analysieren und löst eine Ausnahme fehl.  
+  
+ Verwenden der <xref:System.Net.NetworkInformation.PhysicalAddress.GetAddressBytes%2A> Methode zum Abrufen der Adresse aus einem vorhandenen <xref:System.Net.NetworkInformation.PhysicalAddress> Instanz.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Net.NetworkInformation.PhysicalAddress> Instanz durch Aufrufen der <xref:System.Net.NetworkInformation.PhysicalAddress.Parse%2A> Methode.  
+  
+ [!code-cpp[NCLPhysicalAddress#5](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLPhysicalAddress/CPP/NCLPhysicalAddress.cpp#5)]
+ [!code-csharp[NCLPhysicalAddress#5](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLPhysicalAddress/CS/physaddresstester.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.FormatException">Die <paramref name="address" /> Parameter enthält eine ungültige Hardwareadresse.  
+  
+ Diese Ausnahme tritt auch auf, wenn die <paramref name="address" /> -Parameters enthält eine Zeichenfolge im falschen Format.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.PhysicalAddress.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die <see cref="T:System.String" /> Darstellung der Adresse dieser Instanz.</summary>
+        <returns>Ein <see cref="T:System.String" /> , die in dieser Instanz enthaltene Adresse enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, zeigt die Adresse in einem <xref:System.Net.NetworkInformation.PhysicalAddress> Instanz.  
+  
+ [!code-cpp[NCLPhysicalAddress#3](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLPhysicalAddress/CPP/NCLPhysicalAddress.cpp#3)]
+ [!code-csharp[NCLPhysicalAddress#3](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLPhysicalAddress/CS/physaddresstester.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

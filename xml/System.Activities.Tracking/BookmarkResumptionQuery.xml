@@ -1,0 +1,52 @@
+<Type Name="BookmarkResumptionQuery" FullName="System.Activities.Tracking.BookmarkResumptionQuery">
+  <TypeSignature Language="C#" Value="public sealed class BookmarkResumptionQuery : System.Activities.Tracking.TrackingQuery" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit BookmarkResumptionQuery extends System.Activities.Tracking.TrackingQuery" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Tracking.BookmarkResumptionQuery" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.Tracking.TrackingQuery</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Beim Hinzufügen zur <see cref="P:System.Activities.Tracking.TrackingProfile.Queries" />-Auflistung werden Datensätze für die Lesezeichenwiederaufnahme abonniert, wenn beim Nachverfolgungsprofil die Abfrage hinsichtlich <see cref="T:System.Activities.Tracking.TrackingRecord" />-Objekten erfolgt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BookmarkResumptionQuery ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Tracking.BookmarkResumptionQuery.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.Tracking.BookmarkResumptionQuery" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Tracking.BookmarkResumptionQuery.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des zu abonnierenden Lesezeichendatensatzes ab oder legt ihn fest.</summary>
+        <value>Der Name des Lesezeichens.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

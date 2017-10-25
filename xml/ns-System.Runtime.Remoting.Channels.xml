@@ -1,0 +1,17 @@
+<Namespace Name="System.Runtime.Remoting.Channels">
+  <Docs>
+    <summary>Die <see cref="N:System.Runtime.Remoting.Channels" /> -Namespace enthält Klassen, die Kanäle und Channelsenken, die als Transportmittel verwendet werden, wenn ein Client eine Methode auf einem remote-Objekt aufruft unterstützen und behandeln.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Channels sind Objekte, die Nachrichten zwischen Anwendungen über Remotegrenzen hinweg übermitteln, sei es zwischen Anwendungsdomänen, Prozessen oder Computern. Ein Channel kann einen Endpunkt auf eingehende Nachrichten überwachen und/oder ausgehende Nachrichten an einen anderen Endpunkt senden. Dadurch können Sie eine Vielzahl von Protokollen einbinden, selbst wenn am anderen Ende des Channels keine Common Language Runtime vorhanden ist.  
+  
+ Jedes Objekt durch eine Kette von kanalobjekten Senke vor dem Senden oder nach dem Empfang einer Nachricht senden Channels. Diese Senkenkette enthält senken, die für grundlegende Kanal-Funktionen, z. B. Transport- oder -Generator-senken, erforderlich sind, aber Sie können die Channelsenkenkette um spezielle Aufgaben im Zusammenhang mit einer Nachricht oder einem Stream anpassen. Jede Senke in der jeweiligen Kette das Objekt empfängt, führt eine bestimmte Operation und übergibt diese an den nächsten Empfänger in der Kette. Es ist keine Regel, die der eingegangenen Nachricht Senke genaue das Objekt an den nächsten Empfänger übergeben werden muss, obwohl dies häufig der Fall sein wird.  
+  
+ Weitere Informationen finden Sie unter [Kanäle](http://msdn.microsoft.com/en-us/6e9b60e0-9bc0-47b4-a8ef-3b78585f9a18) und [senken und die Senke Ketten](http://msdn.microsoft.com/en-us/516aaab7-5b3d-4c72-83dd-d435c01af8f6).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

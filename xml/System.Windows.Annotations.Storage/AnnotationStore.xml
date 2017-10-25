@@ -1,0 +1,592 @@
+<Type Name="AnnotationStore" FullName="System.Windows.Annotations.Storage.AnnotationStore">
+  <TypeSignature Language="C#" Value="public abstract class AnnotationStore : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit AnnotationStore extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Annotations.Storage.AnnotationStore" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt beim Überschreiben in einer abgeleiteten Klasse einen Datenspeicher zum Schreiben und Lesen von Benutzeranmerkungen dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AnnotationStore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.Storage.AnnotationStore.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Annotations.Storage.AnnotationStore" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAnnotation">
+      <MemberSignature Language="C#" Value="public abstract void AddAnnotation (System.Windows.Annotations.Annotation newAnnotation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddAnnotation(class System.Windows.Annotations.Annotation newAnnotation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.Storage.AnnotationStore.AddAnnotation(System.Windows.Annotations.Annotation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newAnnotation" Type="System.Windows.Annotations.Annotation" />
+      </Parameters>
+      <Docs>
+        <param name="newAnnotation">Die Anmerkung, die dem Speicher hinzugefügt werden soll.</param>
+        <summary>Fügt dem Speicher eine neue <see cref="T:System.Windows.Annotations.Annotation" /> hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein neuer <xref:System.Windows.Annotations.Annotation> wird hinzugefügt, in den Speicher seine [!INCLUDE[TLA#tla_guid](~/includes/tlasharptla-guid-md.md)] <xref:System.Windows.Annotations.Annotation.Id%2A> Eigenschaft auf einen neuen Wert festgelegt ist.  Wenn <xref:System.Windows.Annotations.Storage.AnnotationStore.AddAnnotation%2A> aufgerufen wird, dessen <xref:System.Windows.Annotations.Annotation.Id%2A> Eigenschaft wird geprüft, ob die <xref:System.Windows.Annotations.Annotation> bereits in den Speicher hinzugefügt wurde.  Wenn die <xref:System.Windows.Annotations.Annotation> bereits hinzugefügt wurde und im Speicher vorhanden ist (gemäß seiner <xref:System.Windows.Annotations.Annotation.Id%2A> Eigenschaft) eine <xref:System.ArgumentException> Fehler ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="newAnnotation" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Eine <see cref="T:System.Windows.Annotations.Annotation" /> mit dem gleichen <see cref="P:System.Windows.Annotations.Annotation.Id" />-Eigenschaftswert ist bereits im Speicher vorhanden.</exception>
+        <exception cref="T:System.ObjectDisposedException">
+          <see cref="Overload:System.Windows.Annotations.Storage.AnnotationStore.Dispose" /> wurde im Speicher aufgerufen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AnchorChanged">
+      <MemberSignature Language="C#" Value="public event System.Windows.Annotations.AnnotationResourceChangedEventHandler AnchorChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Annotations.AnnotationResourceChangedEventHandler AnchorChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Annotations.Storage.AnnotationStore.AnchorChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Annotations.AnnotationResourceChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich ein Anker für eine <see cref="T:System.Windows.Annotations.Annotation" /> im Speicher ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Annotations.Storage.AnnotationStore.AnchorChanged> -Ereignis kann zum Überwachen von Änderungen für die Anmerkung verwendet werden <xref:System.Windows.Annotations.Annotation.Anchors%2A> im Speicher ohne die Notwendigkeit, die auf jedem registrieren enthaltenen <xref:System.Windows.Annotations.Annotation> einzeln.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthorChanged">
+      <MemberSignature Language="C#" Value="public event System.Windows.Annotations.AnnotationAuthorChangedEventHandler AuthorChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Annotations.AnnotationAuthorChangedEventHandler AuthorChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Annotations.Storage.AnnotationStore.AuthorChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Annotations.AnnotationAuthorChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich ein Autor einer <see cref="T:System.Windows.Annotations.Annotation" /> im Speicher ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Annotations.Storage.AnnotationStore.AnchorChanged> -Ereignis kann zum Überwachen von Änderungen für die Anmerkung verwendet werden <xref:System.Windows.Annotations.Annotation.Authors%2A> im Speicher ohne die Notwendigkeit, die auf jedem registrieren enthaltenen <xref:System.Windows.Annotations.Annotation> einzeln.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoFlush">
+      <MemberSignature Language="C#" Value="public abstract bool AutoFlush { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoFlush" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Annotations.Storage.AnnotationStore.AutoFlush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, mit dem angegeben wird, ob Daten in Anmerkungspuffern sofort in den physischen Datenspeicher geschrieben werden sollen, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />, wenn Daten in Anmerkungspuffern für jede Operation sofort in den physischen Datenspeicher geschrieben werden sollen, andernfalls <see langword="false" />, wenn die Daten in Anmerkungspuffern nach dem expliziten Aufrufen von <see cref="M:System.Windows.Annotations.Storage.AnnotationStore.Flush" /> durch die Anwendung in den physischen Datenspeicher geschrieben werden sollen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anwendungen, die eine explizite speichern Modell verwenden können festlegen, <xref:System.Windows.Annotations.Storage.AnnotationStore.AutoFlush%2A> auf `false` , und rufen Sie <xref:System.Windows.Annotations.Storage.AnnotationStore.Flush%2A> direkt nachdem geeignete.  
+  
+ Anwendungen, die eine implizite speichern Modell verwenden können festlegen, <xref:System.Windows.Annotations.Storage.AnnotationStore.AutoFlush%2A> auf `true` verursachen <xref:System.Windows.Annotations.Storage.AnnotationStore.Flush%2A> automatisch nach jedem Wiederherstellungsvorgang aufgerufen werden (hinzufügen, löschen oder ändern).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CargoChanged">
+      <MemberSignature Language="C#" Value="public event System.Windows.Annotations.AnnotationResourceChangedEventHandler CargoChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Annotations.AnnotationResourceChangedEventHandler CargoChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Annotations.Storage.AnnotationStore.CargoChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Annotations.AnnotationResourceChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich eine Ladung einer <see cref="T:System.Windows.Annotations.Annotation" /> im Speicher ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Annotations.Storage.AnnotationStore.CargoChanged> -Ereignis kann zum Überwachen von Änderungen für die Anmerkung verwendet werden <xref:System.Windows.Annotations.Annotation.Cargos%2A> im Speicher ohne die Notwendigkeit, die auf jedem registrieren enthaltenen <xref:System.Windows.Annotations.Annotation> einzeln.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteAnnotation">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Annotations.Annotation DeleteAnnotation (Guid annotationId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Annotations.Annotation DeleteAnnotation(valuetype System.Guid annotationId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.Storage.AnnotationStore.DeleteAnnotation(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Annotations.Annotation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="annotationId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="annotationId">Die [!INCLUDE[TLA#tla_guid](~/includes/tlasharptla-guid-md.md)] <see cref="P:System.Windows.Annotations.Annotation.Id" /> Eigenschaft der zu löschenden Anmerkung.</param>
+        <summary>Löscht die Anmerkung mit der angegebenen <see cref="P:System.Windows.Annotations.Annotation.Id" /> aus dem Speicher.</summary>
+        <returns>Die gelöschte Anmerkung, andernfalls <see langword="null" />, wenn im Speicher keine Anmerkung mit der angegebenen <paramref name="annotationId" /> gefunden wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt die Verwendung der <xref:System.Windows.Annotations.Storage.AnnotationStore.DeleteAnnotation%2A> und <xref:System.Windows.Annotations.Storage.AnnotationStore.Flush%2A> Methoden.  
+  
+ [!code-csharp[DocumentSerialize#DocSerDelete](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserdelete)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">
+          <see cref="Overload:System.Windows.Annotations.Storage.AnnotationStore.Dispose" /> wurde im Speicher aufgerufen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.Storage.AnnotationStore.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle vom Speicher verwendeten verwalteten und nicht verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anwendungen sollten Aufrufen <xref:System.Windows.Annotations.Storage.AnnotationStore.Dispose%2A> abschließend mit der <xref:System.Windows.Annotations.Storage.AnnotationStore>.  Nach dem Aufruf <xref:System.Windows.Annotations.Storage.AnnotationStore.Dispose%2A> kann freigeben, die Anwendung alle Verweise auf die <xref:System.Windows.Annotations.Storage.AnnotationStore> zum Zulassen der Garbage Collector den Arbeitsspeicher freigeben, die <xref:System.Windows.Annotations.Storage.AnnotationStore> belegt wurde.  Weitere Informationen finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Die öffentliche <xref:System.Windows.Annotations.Storage.AnnotationStore.Dispose%2A> Methode ruft die geschützte <xref:System.Windows.Annotations.Storage.AnnotationStore.Dispose%2A> `(Boolean)` Methode mit der `disposing` Parameter `true` alle verwaltete als auch nicht verwaltete Ressourcen freizugeben.  
+  
+> [!NOTE]
+>  Rufen Sie <xref:System.Windows.Annotations.Storage.AnnotationStore.Dispose%2A> vor den letzten Verweis auf die <xref:System.Windows.Annotations.Storage.AnnotationStore> freigegeben wird.  Wenn <xref:System.Windows.Annotations.Storage.AnnotationStore.Dispose%2A> nicht aufgerufen wird, <xref:System.Windows.Annotations.Storage.AnnotationStore> Ressourcen nicht reserviert, bis der Garbage Collector des Speichers ruft <xref:System.Windows.Annotations.Storage.AnnotationStore.Finalize%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.Storage.AnnotationStore.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die vom Speicher verwendeten nicht verwalteten Ressourcen frei und gibt optional auch die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese geschützte <xref:System.Windows.Annotations.Storage.AnnotationStore.Dispose%2A> Methode wird aufgerufen, der öffentlich <xref:System.Windows.Annotations.Storage.AnnotationStore.Dispose%2A> und <xref:System.Object.Finalize%2A> Methoden.  Die öffentliche <xref:System.Windows.Annotations.Storage.AnnotationStore.Dispose%2A> Ruft die geschützte <xref:System.Windows.Annotations.Storage.AnnotationStore.Dispose%2A> `(Boolean)` Methode mit der `disposing` Parametersatz auf `true`.  <xref:System.Object.Finalize%2A>Ruft <xref:System.Windows.Annotations.Storage.AnnotationStore.Dispose%2A> mit `disposing` festgelegt `false`.  
+  
+ Wenn die `disposing` Parameter ist `true`, <xref:System.Windows.Annotations.Storage.AnnotationStore.Dispose%2A> Versionen, die alle Ressourcen frei, die sämtliche für verwaltete Objekte, die <xref:System.Windows.Annotations.Storage.AnnotationStore> Verweise.  <xref:System.Windows.Annotations.Storage.AnnotationStore.Dispose%2A>Ruft außerdem die `Dispose()` -Methode aller Objekte auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see cref="M:System.Windows.Annotations.Storage.AnnotationStore.Dispose(System.Boolean)" /> kann von anderen Objekten mehrmals aufgerufen werden.  Zum Überschreiben <see langword="Dispose(Boolean)" /> Achten Sie darauf, dass Sie nicht auf Objekte verweisen, die einen früheren Aufruf freigegeben wurden <see cref="M:System.Windows.Annotations.Storage.AnnotationStore.Dispose(System.Boolean)" />. Weitere Informationen zum Implementieren <see langword="" /> <see cref="M:System.Windows.Annotations.Storage.AnnotationStore.Dispose(System.Boolean)" /> <see langword="(Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see cref="M:System.IDisposable.Dispose" /> und <see cref="M:System.Object.Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~AnnotationStore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.Storage.AnnotationStore.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Garantiert, dass <see cref="M:System.Windows.Annotations.Storage.AnnotationStore.Dispose(System.Boolean)" /> schließlich für diesen Speicher aufgerufen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt <xref:System.Object.Finalize%2A> Methode.  Die Anwendung sollte nicht aufrufen <xref:System.Windows.Annotations.Storage.AnnotationStore.Finalize%2A> direkt.  <xref:System.Windows.Annotations.Storage.AnnotationStore.Finalize%2A>wird automatisch während der Garbagecollection aufgerufen, es sei denn, durch einen Aufruf von deaktiviert die <xref:System.GC.SuppressFinalize%2A> Methode.  
+  
+ Weitere Informationen finden Sie unter [Finalize-Methoden und Destruktoren](http://msdn.microsoft.com/en-us/fd376774-1643-499b-869e-9546a3aeea70), [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md), und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public abstract void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.Storage.AnnotationStore.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erzwingt, dass alle in internen Puffern beibehaltenen Anmerkungsdaten auf den zugrunde liegenden Datenträger geschrieben werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anwendungen, die eine explizite speichern Modell verwenden können festlegen, <xref:System.Windows.Annotations.Storage.AnnotationStore.AutoFlush%2A> auf `false` , und rufen Sie <xref:System.Windows.Annotations.Storage.AnnotationStore.Flush%2A> direkt nachdem geeignete.  
+  
+ Anwendungen, die eine implizite speichern Modell verwenden können festlegen, die <xref:System.Windows.Annotations.Storage.AnnotationStore.AutoFlush%2A> auf `true` verursachen <xref:System.Windows.Annotations.Storage.AnnotationStore.Flush%2A> automatisch nach jedem Wiederherstellungsvorgang aufgerufen werden (hinzufügen, löschen oder ändern).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Annotations.Storage.AnnotationStore.Flush%2A> Methode beim Schließen der Anwendung der <xref:System.Windows.Annotations.AnnotationService>.  
+  
+ [!code-csharp[DocViewerAnnotationsXps#StopAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/AnnotationsHelperXps.cs#stopannotations)]
+ [!code-vb[DocViewerAnnotationsXps#StopAnnotations](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DocViewerAnnotationsXps/visualbasic/annotationshelperxps.vb#stopannotations)]  
+  
+ Das folgende Beispiel zeigt die Verwendung der <xref:System.Windows.Annotations.Storage.AnnotationStore.DeleteAnnotation%2A> und <xref:System.Windows.Annotations.Storage.AnnotationStore.Flush%2A> Methoden.  
+  
+ [!code-csharp[DocumentSerialize#DocSerDelete](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserdelete)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">
+          <see cref="Overload:System.Windows.Annotations.Storage.AnnotationStore.Dispose" /> wurde im Speicher aufgerufen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAnnotation">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Annotations.Annotation GetAnnotation (Guid annotationId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Annotations.Annotation GetAnnotation(valuetype System.Guid annotationId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.Storage.AnnotationStore.GetAnnotation(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Annotations.Annotation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="annotationId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="annotationId">Die [!INCLUDE[TLA#tla_guid](~/includes/tlasharptla-guid-md.md)] <see cref="P:System.Windows.Annotations.Annotation.Id" /> -Eigenschaft der zurückzugebenden Anmerkung.</param>
+        <summary>Gibt die Anmerkung mit der angegebenen <see cref="P:System.Windows.Annotations.Annotation.Id" /> aus dem Speicher zurück.</summary>
+        <returns>Die Anmerkung mit der angegebenen <paramref name="annotationId" /> oder <see langword="null" />, wenn im Speicher keine Anmerkung mit der angegebenen <paramref name="annotationId" /> gefunden wurde.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">
+          <see cref="Overload:System.Windows.Annotations.Storage.AnnotationStore.Dispose" /> wurde im Speicher aufgerufen.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetAnnotations">
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gibt eine Liste der Anmerkungen im Speicher zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Annotations.Storage.AnnotationStore.GetAnnotations%2A> Methode, um festzustellen, ob alle im Speicher enthaltenen Anmerkungen sind.  
+  
+ [!code-csharp[DocumentSerialize#DocSerCloseFile](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserclosefile)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetAnnotations">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IList&lt;System.Windows.Annotations.Annotation&gt; GetAnnotations ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IList`1&lt;class System.Windows.Annotations.Annotation&gt; GetAnnotations() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.Storage.AnnotationStore.GetAnnotations" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Windows.Annotations.Annotation&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Liste aller Anmerkungen im Speicher zurück.</summary>
+        <returns>Die Liste aller derzeit im Speicher enthaltenen Anmerkungen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Annotations.Storage.AnnotationStore.GetAnnotations%2A> Methode, um festzustellen, ob alle im Speicher enthaltenen Anmerkungen sind.  
+  
+ [!code-csharp[DocumentSerialize#DocSerCloseFile](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserclosefile)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">
+          <see cref="Overload:System.Windows.Annotations.Storage.AnnotationStore.Dispose" /> wurde im Speicher aufgerufen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAnnotations">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IList&lt;System.Windows.Annotations.Annotation&gt; GetAnnotations (System.Windows.Annotations.ContentLocator anchorLocator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IList`1&lt;class System.Windows.Annotations.Annotation&gt; GetAnnotations(class System.Windows.Annotations.ContentLocator anchorLocator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.Storage.AnnotationStore.GetAnnotations(System.Windows.Annotations.ContentLocator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Windows.Annotations.Annotation&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="anchorLocator" Type="System.Windows.Annotations.ContentLocator" />
+      </Parameters>
+      <Docs>
+        <param name="anchorLocator">Die Startsequenz von <see cref="T:System.Windows.Annotations.ContentLocatorPart" />, für die entsprechende Anmerkungen zurückgegeben werden sollen.</param>
+        <summary>Gibt eine Liste der Anmerkungen zurück, die <see cref="P:System.Windows.Annotations.Annotation.Anchors" /> mit Locators aufweisen, die mit einer entsprechenden <see cref="T:System.Windows.Annotations.ContentLocatorPart" />-Sequenz beginnen.</summary>
+        <returns>Die Liste der Anmerkungen, die <see cref="P:System.Windows.Annotations.Annotation.Anchors" /> mit Locators aufweisen, die mit dem angegebenen <paramref name="anchorLocator" /> beginnen und diesem entsprechen, andernfalls <see langword="null" />, wenn keine entsprechenden Anmerkungen gefunden wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies <xref:System.Windows.Annotations.Storage.AnnotationStore.GetAnnotations%2A> -Methode intern verwendet der <xref:System.Windows.Annotations.ContentLocator.StartsWith%2A> Methode der <xref:System.Windows.Annotations.ContentLocator> Klasse suchen, und für die Anmerkungen zurückzugebenden übereinstimmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDisposed">
+      <MemberSignature Language="C#" Value="protected bool IsDisposed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDisposed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Annotations.Storage.AnnotationStore.IsDisposed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, mit dem angegeben wird, ob <see cref="Overload:System.Windows.Annotations.Storage.AnnotationStore.Dispose" /> aufgerufen wurde.</summary>
+        <value>
+          <see langword="true" />, wenn <see cref="Overload:System.Windows.Annotations.Storage.AnnotationStore.Dispose" /> aufgerufen wurde, andernfalls <see langword="false" />.  Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAnchorChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnAnchorChanged (System.Windows.Annotations.AnnotationResourceChangedEventArgs args);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnAnchorChanged(class System.Windows.Annotations.AnnotationResourceChangedEventArgs args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.Storage.AnnotationStore.OnAnchorChanged(System.Windows.Annotations.AnnotationResourceChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.Windows.Annotations.AnnotationResourceChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="args">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Windows.Annotations.Storage.AnnotationStore.AnchorChanged" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAuthorChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnAuthorChanged (System.Windows.Annotations.AnnotationAuthorChangedEventArgs args);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnAuthorChanged(class System.Windows.Annotations.AnnotationAuthorChangedEventArgs args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.Storage.AnnotationStore.OnAuthorChanged(System.Windows.Annotations.AnnotationAuthorChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.Windows.Annotations.AnnotationAuthorChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="args">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Windows.Annotations.Storage.AnnotationStore.AuthorChanged" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCargoChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnCargoChanged (System.Windows.Annotations.AnnotationResourceChangedEventArgs args);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnCargoChanged(class System.Windows.Annotations.AnnotationResourceChangedEventArgs args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.Storage.AnnotationStore.OnCargoChanged(System.Windows.Annotations.AnnotationResourceChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.Windows.Annotations.AnnotationResourceChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="args">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Windows.Annotations.Storage.AnnotationStore.CargoChanged" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStoreContentChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnStoreContentChanged (System.Windows.Annotations.Storage.StoreContentChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnStoreContentChanged(class System.Windows.Annotations.Storage.StoreContentChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.Storage.AnnotationStore.OnStoreContentChanged(System.Windows.Annotations.Storage.StoreContentChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Annotations.Storage.StoreContentChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Windows.Annotations.Storage.AnnotationStore.StoreContentChanged" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StoreContentChanged">
+      <MemberSignature Language="C#" Value="public event System.Windows.Annotations.Storage.StoreContentChangedEventHandler StoreContentChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Annotations.Storage.StoreContentChangedEventHandler StoreContentChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Annotations.Storage.AnnotationStore.StoreContentChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Annotations.Storage.StoreContentChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine <see cref="T:System.Windows.Annotations.Annotation" /> dem Speicher hinzugefügt oder aus dem Speicher gelöscht wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Hinzufügen ein Ereignisdelegaten für die <xref:System.Windows.Annotations.Storage.AnnotationStore.StoreContentChanged> Ereignis.  
+  
+ [!code-csharp[DocumentSerialize#DocSerEnableAnn](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserenableann)]  
+  
+ Das folgende Beispiel zeigt den Vorgang, der die <xref:System.Windows.Annotations.Storage.AnnotationStore.StoreContentChanged> Ereignisdelegaten.  
+  
+ [!code-csharp[DocumentSerialize#DocSerContentChanged](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docsercontentchanged)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="protected object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Annotations.Storage.AnnotationStore.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt ab, das als Synchronisierungssperre für Abschnitte verwendet werden soll, in denen der <see cref="T:System.Windows.Annotations.Storage.AnnotationStore" /> von großer Bedeutung ist.</summary>
+        <value>Das Objekt, das als Synchronisierungssperre für Abschnitte verwendet werden soll, in denen der <see cref="T:System.Windows.Annotations.Storage.AnnotationStore" /> von großer Bedeutung ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

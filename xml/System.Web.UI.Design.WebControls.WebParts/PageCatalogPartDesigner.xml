@@ -1,0 +1,83 @@
+<Type Name="PageCatalogPartDesigner" FullName="System.Web.UI.Design.WebControls.WebParts.PageCatalogPartDesigner">
+  <TypeSignature Language="C#" Value="public class PageCatalogPartDesigner : System.Web.UI.Design.WebControls.WebParts.CatalogPartDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PageCatalogPartDesigner extends System.Web.UI.Design.WebControls.WebParts.CatalogPartDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.WebParts.PageCatalogPartDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.WebControls.WebParts.CatalogPartDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt entwurfszeitunterstützung in einem visuellen Designer für ein <see cref="T:System.Web.UI.WebControls.WebParts.PageCatalogPart" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> -Klasse fungiert als eine Seitenkatalog zur Beibehaltung von Steuerelementen, die zuvor auf der Seite, die ein Benutzer geschlossen wurde, hinzugefügt, sodass der Benutzer sie zurück zur Seite hinzufügen kann. Dieses Steuerelement ist sichtbar, nur, wenn eine Webseite im Kataloganzeigemodus befindet. Die <xref:System.Web.UI.Design.WebControls.WebParts.PageCatalogPartDesigner> -Klasse bietet zur Entwurfszeit Unterstützung für die <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> Klasse.  
+  
+ In einem visuellen Designer beim Wechsel aus Quelle zur Entwurfsansicht Markup-Quellcode, beschreibt die <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> Steuerelement wird analysiert und eine Entwurfszeitversion des Steuerelements wird erstellt, auf der Entwurfsoberfläche angezeigt. Wenn Sie zurück zur Quellansicht wechseln, wird das Steuerelement zur Entwurfszeit auf den Markupquellcode beibehalten und in das Markup für die Webseite bearbeitet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PageCatalogPartDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WebParts.PageCatalogPartDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.WebControls.WebParts.PageCatalogPartDesigner" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WebParts.PageCatalogPartDesigner.GetDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den HTML-Code, der verwendet wird, um die Darstellung des Steuerelements zur Entwurfszeit ab.</summary>
+        <returns>Das HTML-Markup, das für die Darstellung des Steuerelements zur Entwurfszeit verwendet wird.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WebParts.PageCatalogPartDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die zu initialisierende <see cref="T:System.ComponentModel.IComponent" />.</param>
+        <summary>Bereitet den Designer zum Anzeigen, bearbeiten und Entwerfen der <see cref="T:System.Web.UI.WebControls.WebParts.PageCatalogPart" /> Steuerelement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

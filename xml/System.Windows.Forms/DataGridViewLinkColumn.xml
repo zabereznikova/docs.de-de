@@ -1,0 +1,432 @@
+<Type Name="DataGridViewLinkColumn" FullName="System.Windows.Forms.DataGridViewLinkColumn">
+  <TypeSignature Language="C#" Value="public class DataGridViewLinkColumn : System.Windows.Forms.DataGridViewColumn" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridViewLinkColumn extends System.Windows.Forms.DataGridViewColumn" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewLinkColumn" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.DataGridViewColumn</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Drawing.ToolboxBitmap(typeof(System.Windows.Forms.DataGridViewLinkColumn), "DataGridViewLinkColumn.bmp")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Spalte von Zellen, die Links in einem <see cref="T:System.Windows.Forms.DataGridView" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataGridViewLinkColumn> Klasse ist ein spezialisierter Typ von der <xref:System.Windows.Forms.DataGridViewColumn> -Klasse logisch hosten Zellen verwendet, die auf die benutzeraufrufen reagieren. Die <xref:System.Windows.Forms.DataGridViewLinkColumn> -Klasse ähnelt der <xref:System.Windows.Forms.DataGridViewButtonColumn> -Klasse stellt jedoch eine andere Benutzeroberfläche, die möglicherweise besser geeignet, in bestimmten Situationen, z. B. das Anzeigen einer URL, die in einer Datenbanktabelle gespeichert.  
+  
+ Wenn den gleiche Text des Links für jede Zelle anzeigen zu können, legen Sie die <xref:System.Windows.Forms.DataGridViewLinkColumn.UseColumnTextForLinkValue%2A> Eigenschaft, um `true` und legen Sie die <xref:System.Windows.Forms.DataGridViewLinkColumn.Text%2A> Eigenschaft, um den gewünschten Linktext.  
+  
+ Ein <xref:System.Windows.Forms.DataGridViewLinkColumn> verfügt über eine zugeordnete <xref:System.Windows.Forms.DataGridViewLinkCell> in jeder <xref:System.Windows.Forms.DataGridViewRow> , die Sie überschneidet.  
+  
+ Der Standardmodus für die Sortierung für diesen Typ der Spalte ist <xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable>.  
+  
+ Um die benutzeraufrufen-Link zu behandeln, behandeln die <xref:System.Windows.Forms.DataGridView.CellContentClick?displayProperty=nameWithType> Ereignis. Sie können auch die <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> Ereignis, um auf Klicks an einer beliebigen Stelle in der Zelle zu reagieren.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel legt Eigenschaften für eine <xref:System.Windows.Forms.DataGridViewLinkColumn>. In diesem Beispiel ist Teil eines umfangreicheren Beispiels zur Verfügung, in der <xref:System.Windows.Forms.DataGridViewComboBoxColumn> Übersichtsthema.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#70](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CPP/employees.cpp#70)]
+ [!code-csharp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#70](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CS/employees.cs#70)]
+ [!code-vb[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#70](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/VB/employees.vb#70)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Beim Ableiten von <see cref="T:System.Windows.Forms.DataGridViewLinkColumn" /> und der abgeleiteten Klasse neue Eigenschaften hinzugefügt haben, achten Sie darauf, dass Sie überschreiben die <see cref="M:System.Windows.Forms.DataGridViewLinkColumn.Clone" /> Methode, um die neuen Eigenschaften bei Klonvorgängen kopiert. Sie sollten auch der Basisklasse aufrufen, <see cref="M:System.Windows.Forms.DataGridViewLinkColumn.Clone" /> Methode, damit die Eigenschaften der Basisklasse in die neue Zelle kopiert werden.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridViewLinkColumn ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewLinkColumn.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.DataGridViewLinkColumn" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Initialisieren einer neuen <xref:System.Windows.Forms.DataGridViewLinkColumn> Instanz dieser Konstruktor legt die <xref:System.Windows.Forms.DataGridViewLinkColumn.CellTemplate%2A> Eigenschaft, um ein neues <xref:System.Windows.Forms.DataGridViewLinkCell> Instanz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActiveLinkColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color ActiveLinkColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ActiveLinkColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewLinkColumn.ActiveLinkColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Farbe, mit der ein aktiver Link innerhalb der Zellen in der Spalte angezeigt.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> , die die Farbe einen Link angezeigt, die ausgewählt wird, darstellt. Der Standardwert ist der Benutzer des Internet Explorer-Einstellung für die Farbe von Links im Hoverzustand.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Abrufen oder Festlegen dieser Eigenschaft ruft ab oder legt ihn fest der <xref:System.Windows.Forms.DataGridViewLinkCell.ActiveLinkColor%2A> -Eigenschaft des Objekts zurückgegeben wird, indem Sie die <xref:System.Windows.Forms.DataGridViewLinkColumn.CellTemplate%2A> Eigenschaft. Durch Festlegen dieser Eigenschaft wird auch die <xref:System.Windows.Forms.DataGridViewLinkCell.ActiveLinkColor%2A> -Eigenschaft für jede Zelle in der Spalte und Aktualisierungen in der Spalte angezeigt. Um den angegebenen Wert für einzelne Zellen zu überschreiben, legen Sie die Zellenwerte, nach dem Festlegen der Wert der Spalte.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel Beispiel initialisiert die <xref:System.Windows.Forms.DataGridViewLinkColumn.ActiveLinkColor%2A> Eigenschaft, damit die Verknüpfung weißen aktiviert Wenn vom Benutzer ausgewählt wird. In diesem Beispiel ist Teil eines umfangreicheren Beispiels zur Verfügung, in der <xref:System.Windows.Forms.DataGridViewComboBoxColumn> Übersichtsthema.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#70](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CPP/employees.cpp#70)]
+ [!code-csharp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#70](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CS/employees.cs#70)]
+ [!code-vb[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#70](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/VB/employees.vb#70)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Wert der <see cref="P:System.Windows.Forms.DataGridViewLinkColumn.CellTemplate" />-Eigenschaft ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CellTemplate">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.DataGridViewCell CellTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataGridViewCell CellTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewLinkColumn.CellTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewCell</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die zum Erstellen neuer Zellen verwendete Vorlage ab oder legt diese fest.</summary>
+        <value>Eine <see cref="T:System.Windows.Forms.DataGridViewCell" />, nach der alle anderen Zellen in der Spalte erstellt werden. Der Standardwert ist eine neue <see cref="T:System.Windows.Forms.DataGridViewLinkCell" /> Instanz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Konstruktor für die <xref:System.Windows.Forms.DataGridViewLinkColumn> Klasse initialisiert diese Eigenschaft zu einer neu erstellten <xref:System.Windows.Forms.DataGridViewLinkCell>.  
+  
+> [!CAUTION]
+>  Ändern der Eigenschaften der Zellvorlage wirkt sofort die Benutzeroberfläche (UI) von vorhandenen Zellen der Spalte sich nicht. Diese Änderungen sind nur offensichtlich, nachdem die Spalte erneut generiert wird (z. B. durch die Sortierung der Spalte oder durch einen Aufruf der <xref:System.Windows.Forms.DataGridView.InvalidateColumn%2A?displayProperty=nameWithType> Methode).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine <xref:System.Windows.Forms.DataGridViewCell> als Vorlage für eine <xref:System.Windows.Forms.DataGridViewColumn>. Stil-Änderungen an eine beliebige Zelle in der Spalte wirken sich auf alle Zellen der Spalte aus. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.DataGridViewColumn> Klasse.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#120](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewColumnDemo.cpp#120)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#120](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewColumnDemo.cs#120)]
+ [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#120](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewcolumndemo.vb#120)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Wenn diese Eigenschaft auf einen Wert festlegen, ist nicht vom Typ <see cref="T:System.Windows.Forms.DataGridViewLinkCell" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewLinkColumn.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine genaue Kopie dieser Spalte.</summary>
+        <returns>Ein <see cref="T:System.Object" />, das die geklonte <see cref="T:System.Windows.Forms.DataGridViewLinkColumn" /> darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um eine Spalte von Linkzellen duplizieren.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Wert der <see cref="P:System.Windows.Forms.DataGridViewLinkColumn.CellTemplate" />-Eigenschaft ist <see langword="null" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.DataGridViewLinkColumn.Clone" /> rufen Sie in einer abgeleiteten Klasse die Basisklasse <see cref="M:System.Windows.Forms.DataGridViewLinkColumn.Clone" /> Methode, damit die Eigenschaften der Basisklasse in die neue Zelle kopiert werden, und achten Sie darauf, dass Sie auch die Werte der Eigenschaften kopieren, die der abgeleiteten Klasse hinzugefügt wurden.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="LinkBehavior">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.LinkBehavior LinkBehavior { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.LinkBehavior LinkBehavior" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewLinkColumn.LinkBehavior" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.LinkBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der das Verhalten von Links in Zellen in der Spalte darstellt.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.LinkBehavior" /> Wert, der angibt, des Verhaltens von links. Die Standardeinstellung ist <see cref="F:System.Windows.Forms.LinkBehavior.SystemDefault" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Abrufen oder Festlegen dieser Eigenschaft ruft ab oder legt ihn fest der <xref:System.Windows.Forms.DataGridViewLinkCell.LinkBehavior%2A> -Eigenschaft des Objekts zurückgegeben wird, indem Sie die <xref:System.Windows.Forms.DataGridViewLinkColumn.CellTemplate%2A> Eigenschaft. Durch Festlegen dieser Eigenschaft wird auch die <xref:System.Windows.Forms.DataGridViewLinkCell.LinkBehavior%2A> -Eigenschaft für jede Zelle in der Spalte und Aktualisierungen in der Spalte angezeigt. Um den angegebenen Wert für einzelne Zellen zu überschreiben, legen Sie die Zellenwerte, nach dem Festlegen der Wert der Spalte.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird diese Eigenschaft auf initialisiert <xref:System.Windows.Forms.LinkBehavior.SystemDefault>, die ermöglicht, dass des Betriebssystems auswählen, wie der Link angezeigt wird. In diesem Beispiel ist Teil eines umfangreicheren Beispiels zur Verfügung, in der <xref:System.Windows.Forms.DataGridViewComboBoxColumn> Übersichtsthema.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#70](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CPP/employees.cpp#70)]
+ [!code-csharp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#70](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CS/employees.cs#70)]
+ [!code-vb[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#70](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/VB/employees.vb#70)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Wert der <see cref="P:System.Windows.Forms.DataGridViewLinkColumn.CellTemplate" />-Eigenschaft ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LinkColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color LinkColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color LinkColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewLinkColumn.LinkColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Farbe, die zur Anzeige von einer nicht ausgewählten Links in Zellen in der Spalte verwendet.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> , der die Farbe, mit der ein Link anfänglich angezeigt darstellt. Der Standardwert ist der Benutzer des Internet Explorer-Einstellung für die Farbe von links.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Abrufen oder Festlegen dieser Eigenschaft ruft ab oder legt ihn fest der <xref:System.Windows.Forms.DataGridViewLinkCell.LinkColor%2A> -Eigenschaft des Objekts zurückgegeben wird, indem Sie die <xref:System.Windows.Forms.DataGridViewLinkColumn.CellTemplate%2A> Eigenschaft. Durch Festlegen dieser Eigenschaft wird auch die <xref:System.Windows.Forms.DataGridViewLinkCell.LinkColor%2A> -Eigenschaft für jede Zelle in der Spalte und Aktualisierungen in der Spalte angezeigt. Um den angegebenen Wert für einzelne Zellen zu überschreiben, legen Sie die Zellenwerte, nach dem Festlegen der Wert der Spalte.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird diese Eigenschaft auf Blau initialisiert. In diesem Beispiel ist Teil eines umfangreicheren Beispiels zur Verfügung, in der <xref:System.Windows.Forms.DataGridViewComboBoxColumn> Übersichtsthema.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#70](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CPP/employees.cpp#70)]
+ [!code-csharp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#70](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CS/employees.cs#70)]
+ [!code-vb[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#70](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/VB/employees.vb#70)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Wert der <see cref="P:System.Windows.Forms.DataGridViewLinkColumn.CellTemplate" />-Eigenschaft ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewLinkColumn.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text des Links in den Zellen einer Spalte angezeigt, wenn <see cref="P:System.Windows.Forms.DataGridViewLinkColumn.UseColumnTextForLinkValue" /> ist <see langword="true" />.</summary>
+        <value>Ein <see cref="T:System.String" /> , enthält des Texts des Links.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Text sichtbar ist. wenn die <xref:System.Windows.Forms.DataGridViewLinkColumn.UseColumnTextForLinkValue%2A> -Eigenschaftensatz auf `true`. Andernfalls wird mit jeder Zelle Text des Links aufgefüllt der <xref:System.Windows.Forms.DataGridViewCell.FormattedValue%2A> -Eigenschaft jeder Zelle.  
+  
+ Sie überschreiben können die <xref:System.Windows.Forms.DataGridViewLinkColumn.Text%2A> Eigenschaftswert für einzelne Zellen durch Festlegen der Zelle <xref:System.Windows.Forms.DataGridViewLinkCell.UseColumnTextForLinkValue%2A> Eigenschaft, um `false` festlegen, nachdem die Spalte <xref:System.Windows.Forms.DataGridViewLinkColumn.UseColumnTextForLinkValue%2A> Eigenschaft `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Beim Festlegen dieser Eigenschaft, die den Wert der <see cref="P:System.Windows.Forms.DataGridViewLinkColumn.CellTemplate" /> Eigenschaft ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewLinkColumn.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Zeichenfolge ab, die die Spalte beschreibt.</summary>
+        <returns>Ein <see cref="T:System.String" />, der die Spalte beschreibt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackVisitedState">
+      <MemberSignature Language="C#" Value="public bool TrackVisitedState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TrackVisitedState" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewLinkColumn.TrackVisitedState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Verknüpfung Farbe ändert, wenn er aktiviert wurde.</summary>
+        <value>
+          <see langword="true" />Wenn der Link Farbe ändert, wenn diese Option ausgewählt ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Windows.Forms.DataGridViewLinkColumn.TrackVisitedState%2A> ist "true", die <xref:System.Windows.Forms.DataGridViewLinkColumn.VisitedLinkColor%2A> Eigenschaftswert wird verwendet, um Links angezeigt, die bereits aktiviert wurden.  
+  
+ Beim Abrufen oder Festlegen dieser Eigenschaft ruft ab oder legt ihn fest der <xref:System.Windows.Forms.DataGridViewLinkCell.TrackVisitedState%2A> -Eigenschaft des Objekts zurückgegeben wird, indem Sie die <xref:System.Windows.Forms.DataGridViewLinkColumn.CellTemplate%2A> Eigenschaft. Durch Festlegen dieser Eigenschaft wird auch die <xref:System.Windows.Forms.DataGridViewLinkCell.TrackVisitedState%2A> -Eigenschaft für jede Zelle in der Spalte und Aktualisierungen in der Spalte angezeigt. Um den angegebenen Wert für einzelne Zellen zu überschreiben, legen Sie die Zellenwerte, nach dem Festlegen der Wert der Spalte.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird diese Eigenschaft initialisiert, damit die Verknüpfung Farbe ändert, wenn diese Option ausgewählt ist. In diesem Beispiel ist Teil eines umfangreicheren Beispiels zur Verfügung, in der <xref:System.Windows.Forms.DataGridViewComboBoxColumn> Übersichtsthema.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#70](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CPP/employees.cpp#70)]
+ [!code-csharp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#70](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CS/employees.cs#70)]
+ [!code-vb[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#70](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/VB/employees.vb#70)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Wert der <see cref="P:System.Windows.Forms.DataGridViewLinkColumn.CellTemplate" />-Eigenschaft ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UseColumnTextForLinkValue">
+      <MemberSignature Language="C#" Value="public bool UseColumnTextForLinkValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseColumnTextForLinkValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewLinkColumn.UseColumnTextForLinkValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="P:System.Windows.Forms.DataGridViewLinkColumn.Text" /> Eigenschaftswert wird wie der Text des Links angezeigt.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="P:System.Windows.Forms.DataGridViewLinkColumn.Text" /> Eigenschaftswert wird angezeigt, wie der Text des Links; <see langword="false" /> Wenn die Zelle <see cref="P:System.Windows.Forms.DataGridViewCell.FormattedValue" /> Eigenschaftswert wird wie der Text des Links angezeigt. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Abrufen oder Festlegen dieser Eigenschaft ruft ab oder legt ihn fest der <xref:System.Windows.Forms.DataGridViewLinkCell.UseColumnTextForLinkValue%2A> -Eigenschaft des Objekts zurückgegeben wird, indem Sie die <xref:System.Windows.Forms.DataGridViewLinkColumn.CellTemplate%2A> Eigenschaft. Durch Festlegen dieser Eigenschaft wird auch die <xref:System.Windows.Forms.DataGridViewLinkCell.UseColumnTextForLinkValue%2A> -Eigenschaft für jede Zelle in der Spalte und Aktualisierungen in der Spalte angezeigt. Um den angegebenen Wert für einzelne Zellen zu überschreiben, legen Sie die Zellenwerte, nach dem Festlegen der Wert der Spalte.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie diese Eigenschaft festgelegt, damit die <xref:System.Windows.Forms.DataGridViewCell.FormattedValue%2A> Eigenschaft jeder Zelle, in diesem Fall die Mitarbeiter-ID des Vorgesetzten des Mitarbeiters, wird als Textlink angezeigt. Nachdem Sie den Link auswählen, wird die Auswahl, zeigen auf der Chef-Namen verschoben. In diesem Beispiel ist Teil eines umfangreicheren Beispiels zur Verfügung, in der <xref:System.Windows.Forms.DataGridViewComboBoxColumn> Übersichtsthema.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#70](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CPP/employees.cpp#70)]
+ [!code-csharp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#70](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CS/employees.cs#70)]
+ [!code-vb[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#70](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/VB/employees.vb#70)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Wert der <see cref="P:System.Windows.Forms.DataGridViewLinkColumn.CellTemplate" />-Eigenschaft ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitedLinkColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color VisitedLinkColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color VisitedLinkColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewLinkColumn.VisitedLinkColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Farbe, mit einem Link angezeigt werden, der zuvor aufgerufen wurde.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> , der die Farbe, mit einem Link angezeigt werden, die Sie besucht hat darstellt. Der Standardwert ist der Benutzer des Internet Explorer-Einstellung für die Farbe besuchter Link.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.DataGridViewLinkColumn.TrackVisitedState%2A> Eigenschaft auf "false" festgelegt ist die <xref:System.Windows.Forms.DataGridViewLinkColumn.VisitedLinkColor%2A> Eigenschaft wird ignoriert.  
+  
+ Beim Abrufen oder Festlegen dieser Eigenschaft ruft ab oder legt ihn fest der <xref:System.Windows.Forms.DataGridViewLinkCell.VisitedLinkColor%2A> -Eigenschaft des Objekts zurückgegeben wird, indem Sie die <xref:System.Windows.Forms.DataGridViewLinkColumn.CellTemplate%2A> Eigenschaft. Durch Festlegen dieser Eigenschaft wird auch die <xref:System.Windows.Forms.DataGridViewLinkCell.VisitedLinkColor%2A> -Eigenschaft für jede Zelle in der Spalte und Aktualisierungen in der Spalte angezeigt. Um den angegebenen Wert für einzelne Zellen zu überschreiben, legen Sie die Zellenwerte, nach dem Festlegen der Wert der Spalte.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird diese Eigenschaft initialisiert, so, dass der Link ist gelb und Grün, wenn der Benutzer, die sie besucht hat. In diesem Beispiel ist Teil eines umfangreicheren Beispiels zur Verfügung, in der <xref:System.Windows.Forms.DataGridViewComboBoxColumn> Übersichtsthema.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#70](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CPP/employees.cpp#70)]
+ [!code-csharp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#70](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CS/employees.cs#70)]
+ [!code-vb[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#70](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/VB/employees.vb#70)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Wert der <see cref="P:System.Windows.Forms.DataGridViewLinkColumn.CellTemplate" />-Eigenschaft ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

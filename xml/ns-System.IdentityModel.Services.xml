@@ -1,0 +1,6 @@
+<Namespace Name="System.IdentityModel.Services">
+  <Docs>
+    <summary>Die <see cref="N:System.IdentityModel.Services" /> -Namespace enthält in erster Linie die Klassen, die in Anwendungen, die mithilfe von Windows Identity Foundation (WIF) verwendet werden, die Verbundauthentifizierung mit dem WS-Verbund-Protokoll ausführen. Es enthält den HTTP-Modulen, <see cref="T:System.IdentityModel.Services.WSFederationAuthenticationModule" /> (WSFAM) und <see cref="T:System.IdentityModel.Services.SessionAuthenticationModule" /> (SAM), sowie Klassen, die den Vorgang zu unterstützen. Die WSFAM ermöglicht die Behandlung für die WS-Verbund-Anmeldung und Abmeldung Sequenzen und SAM bietet sitzungsverwaltung verwalten und Behandeln von Cookies. Der Namespace enthält auch Klassen, die WS-Verbund-Nachrichten darstellen (<see cref="T:System.IdentityModel.Services.WSFederationMessage" />), z. B.-Anmeldung (<see cref="T:System.IdentityModel.Services.SignInRequestMessage" />, <see cref="T:System.IdentityModel.Services.SignInResponseMessage" />) und abmeldenachrichten (<see cref="T:System.IdentityModel.Services.SignOutRequestMessage" />), sowie Serialisierungsprogramme, die Serialisierung und Deserialisierung von zwischen dem Objekt Modell und die in-the-Wire-Darstellung dieser Nachrichten.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

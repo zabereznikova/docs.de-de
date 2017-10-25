@@ -1,0 +1,56 @@
+<Type Name="WebBrowser+WebBrowserSite" FullName="System.Windows.Forms.WebBrowser+WebBrowserSite">
+  <TypeSignature Language="C#" Value="protected class WebBrowser.WebBrowserSite : System.Windows.Forms.WebBrowserSiteBase" />
+  <TypeSignature Language="ILAsm" Value=".class nested protected auto ansi beforefieldinit WebBrowser/WebBrowserSite extends System.Windows.Forms.WebBrowserSiteBase" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.WebBrowser.WebBrowserSite" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.WebBrowserSiteBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt das Hostfenster, der eine <see cref="T:System.Windows.Forms.WebBrowser" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie OLE-Entwicklung verwenden, die nicht verwaltete kennen `WebBrowser` ActiveX-Steuerelement, erweitern Sie die Funktionalität eines Windows Forms <xref:System.Windows.Forms.WebBrowser> Steuerelement, das einen verwalteten Wrapper für das ActiveX-Steuerelement ist. Sie können diese Erweiterungen, z. B. die Browser-Tastenkombinationen an Menüs und Tastenkombinationen anpassen oder geben Sie eine benutzerdefinierte Sicherheitskonfiguration für gehostete Dokumente verwenden.  
+  
+ Um dieses Feature verwenden zu können, implementieren Sie Klassen, die von erben die <xref:System.Windows.Forms.WebBrowser> und <xref:System.Windows.Forms.WebBrowser.WebBrowserSite> Klassen. Die nicht verwaltete `WebBrowser` ActiveX-Steuerelement verwendet die geschützte <xref:System.Windows.Forms.WebBrowser.CreateWebBrowserSiteBase%2A?displayProperty=nameWithType> Methode, um die Erweiterungsschnittstellen implementiert durch den <xref:System.Windows.Forms.WebBrowser.WebBrowserSite> Klasse. Überschreiben Sie die <xref:System.Windows.Forms.WebBrowser.CreateWebBrowserSiteBase%2A> Methode, um eine Instanz Ihrer eigenen Klasse zurückzugeben, die von erben die <xref:System.Windows.Forms.WebBrowser.WebBrowserSite> Klasse. Die <xref:System.Windows.Forms.WebBrowser.WebBrowserSite> Klasse bietet den Standardwert Implementierungen der OLE `IDocHostUIHandler` Schnittstelle. Weitere Informationen finden Sie unter [IDocHostUIHandler Interface](http://go.microsoft.com/fwlink/?LinkId=98895) in der MSDN Library. Sie können eine eigene Implementierung dieser Schnittstelle bereitzustellen oder implementieren Sie jede andere `WebBrowser` ActiveX-Steuerelement-Schnittstelle vorzunehmen, um das Verhalten des Steuerelements anzupassen. Weitere Informationen finden Sie unter [WebBrowser-Steuerelement](http://go.microsoft.com/fwlink/?LinkID=98894) in der MSDN Library.  
+  
+> [!NOTE]
+>  Wenn Sie eine eigene Implementierung für eine beliebige bereitstellen `IDocHostUIHandler` Mitglieder, müssen Sie alle Member dieser Schnittstelle implementieren.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.SecurityPermission">zum Überschreiben dieses Typs, erfordert der Zugriff auf nicht verwalteten Code. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /> und<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebBrowserSite (System.Windows.Forms.WebBrowser host);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.WebBrowser host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.WebBrowserSite.#ctor(System.Windows.Forms.WebBrowser)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="host" Type="System.Windows.Forms.WebBrowser" />
+      </Parameters>
+      <Docs>
+        <param name="host">Der <see cref="T:System.Windows.Forms.WebBrowser" /></param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.WebBrowser.WebBrowserSite" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Zugriff auf nicht verwalteten Code. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" /> und<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

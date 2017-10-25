@@ -1,0 +1,77 @@
+<Type Name="SqlNotificationType" FullName="System.Data.SqlClient.SqlNotificationType">
+  <TypeSignature Language="C#" Value="public enum SqlNotificationType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SqlNotificationType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.SqlClient.SqlNotificationType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Beschreibt die verschiedenen Benachrichtigungstypen an, die von empfangen werden können ein <see cref="T:System.Data.SqlClient.OnChangeEventHandler" /> -Ereignishandler durch den <see cref="T:System.Data.SqlClient.SqlNotificationEventArgs" /> Parameter.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.SqlClient.SqlNotificationType> Enumeration wird von einer Instanz von verwiesen die <xref:System.Data.SqlClient.SqlNotificationEventArgs> Klasse. Diese Informationen werden bereitgestellt, wenn ein Benachrichtigungsereignis ausgelöst wird, mit der <xref:System.Data.SqlClient.SqlDependency> Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Change">
+      <MemberSignature Language="C#" Value="Change" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlClient.SqlNotificationType Change = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlClient.SqlNotificationType.Change" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlNotificationType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Daten auf dem überwachten Server geändert. Verwenden der <see cref="T:System.Data.SqlClient.SqlNotificationInfo" /> Element aus, um die Details der Änderung zu ermitteln.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Subscribe">
+      <MemberSignature Language="C#" Value="Subscribe" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlClient.SqlNotificationType Subscribe = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlClient.SqlNotificationType.Subscribe" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlNotificationType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es wurde ein Fehler beim Erstellen eines Benachrichtigungsabonnements. Verwenden der <see cref="T:System.Data.SqlClient.SqlNotificationEventArgs" /> des Objekts <see cref="T:System.Data.SqlClient.SqlNotificationInfo" /> Element aus, um die Ursache des Fehlers zu ermitteln.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlClient.SqlNotificationType Unknown = int32(-1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlClient.SqlNotificationType.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlNotificationType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwendet, wenn die Option Type, die vom Server gesendete vom Client nicht erkannt wurde.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

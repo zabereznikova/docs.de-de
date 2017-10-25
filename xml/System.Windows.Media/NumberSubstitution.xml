@@ -1,0 +1,480 @@
+<Type Name="NumberSubstitution" FullName="System.Windows.Media.NumberSubstitution">
+  <TypeSignature Language="C#" Value="public class NumberSubstitution" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NumberSubstitution extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.NumberSubstitution" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt an, wie Zahlen im Text in unterschiedlichen Kulturen angezeigt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In den meisten Kulturen der Decimal-System verwenden, um Zahlen darzustellen, aber viele Kulturen verwenden unterschiedliche Ziffernformen. Die folgende Tabelle zeigt verschiedene Nummerierung Systeme von unterschiedlichen Kulturen verwendet.  
+  
+ ![Tabelle mit Symbolen für das Zahl ersetzen](~/add/media/numbersubstitution01.png "Tabelle mit Symbolen für das Zahl ersetzen")  
+Beispiel für die Darstellung von Ziffern in unterschiedlichen Kulturen  
+  
+ Es ist nicht ausreichen, um alternative Unicode-Codepunkten für jeden Satz von Ziffernformen zu gewähren, da im Gegensatz zu Buchstaben, Ziffern, die in Berechnungen verwendet werden. Jede Anwendung, jedes Betriebssystem und jede Laufzeitbibliothek enthält Code zum Konvertieren eines numerischen Werts der internen binären Format in eine Zeichenfolge von Zeichen, und umgekehrt. Diese Konvertierungsroutinen sind codiert, um Unicode-Ziffern "0030" bis "0039" verwenden.  
+  
+ Die <xref:System.Windows.Media.NumberSubstitution> -Klasse bietet eine Funktionalität, die unterschiedliche Kulturen, die entsprechende Ziffernformen zur Renderingzeit ersetzen kann. Diese Funktion ist ähnlich, die zum Bereitstellen von Schriftarten und Sprache abhängige Schriftart Rendering.  
+  
+> [!NOTE]
+>  Viele Kulturen werden ihre Formen traditionelle Zeichen verwerfen und Übernahme westlichen Ziffernformen, daher ersetzt erkennt die Unterschiede für jede Kultur herkömmlichen Ziffer Shapes und national standard Ziffer.  
+  
+<a name="xamlTextUsage_NumberSubstitution"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Dieser Typ wird nicht in der Regel im verwendet [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] als Objektelement. Der Typ macht jedoch mehrere angefügte Eigenschaften, die für andere Objektelemente festgelegt werden können, die Text-Inhalt aufweisen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NumberSubstitution ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.NumberSubstitution.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.NumberSubstitution" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NumberSubstitution (System.Windows.Media.NumberCultureSource source, System.Globalization.CultureInfo cultureOverride, System.Windows.Media.NumberSubstitutionMethod substitution);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Media.NumberCultureSource source, class System.Globalization.CultureInfo cultureOverride, valuetype System.Windows.Media.NumberSubstitutionMethod substitution) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.NumberSubstitution.#ctor(System.Windows.Media.NumberCultureSource,System.Globalization.CultureInfo,System.Windows.Media.NumberSubstitutionMethod)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="source" Type="System.Windows.Media.NumberCultureSource" />
+        <Parameter Name="cultureOverride" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="substitution" Type="System.Windows.Media.NumberSubstitutionMethod" />
+      </Parameters>
+      <Docs>
+        <param name="source">Identifiziert die Quelle des Kulturwerts, mit dem Ersetzen von Zahlen ermittelt wird.</param>
+        <param name="cultureOverride">Identifiziert die Kultur verwenden, wenn der Wert der <see cref="P:System.Windows.Media.NumberSubstitution.CultureSource" /> -Eigenschaftensatz auf <see cref="F:System.Windows.Media.NumberCultureSource.Override" />.</param>
+        <param name="substitution">Identifiziert die Ersetzungsmethode, mit dem Ersetzen von Zahlen ermittelt wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.NumberSubstitution" /> Klasse mit expliziten Eigenschaftswerten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CultureOverride">
+      <MemberSignature Language="C#" Value="public System.Globalization.CultureInfo CultureOverride { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Globalization.CultureInfo CultureOverride" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.NumberSubstitution.CultureOverride" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.CultureInfoIetfLanguageTagConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt diesen fest, der die Kultur bezeichnet, die verwendet werden soll, wenn der Wert der <see cref="P:System.Windows.Media.NumberSubstitution.CultureSource" />-Eigenschaft auf <see cref="F:System.Windows.Media.NumberCultureSource.Override" /> festgelegt ist.</summary>
+        <value>Ein <see cref="T:System.Globalization.CultureInfo" />-Wert, der die Kultur darstellt, die als Überschreibung verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert der <xref:System.Windows.Media.NumberSubstitution.CultureSource%2A> Eigenschaft ist `null`, wird als interpretiert das "En-us" Kultur Englisch (USA)).  
+  
+ Wenn <xref:System.Windows.Media.NumberSubstitution.CultureSource%2A> nicht festgelegt ist, um <xref:System.Windows.Media.NumberCultureSource.Override>, diese Eigenschaft wird ignoriert.  
+  
+ Diese Referenzseite stellt zwei identischen Namen, aber nicht vollständig äquivalente Verwendungsweisen für die <xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A> Eigenschaft:  
+  
+-   Sie können diese Eigenschaft im Code festlegen, auf eine <xref:System.Windows.Media.NumberSubstitution> Instanz als ein [!INCLUDE[TLA#tla_clr](~/includes/tlasharptla-clr-md.md)] Eigenschaft. Bei dieser Verwendung die Eigenschaft nicht durch den Bezeichner für eine Abhängigkeitseigenschaft unterstützt wird, wird durch ein privates Feld unterstützt und dient nicht als eine Abhängigkeitseigenschaft.  
+  
+-   Sie können diese Eigenschaft festlegen, wie die Verwendung einer angefügten Eigenschaft in [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)]. Die angefügte Eigenschaft Nutzung ist der Grund, warum diese Eigenschaft einen Abschnitt Informationen zur Abhängigkeitseigenschaft an, da die angefügte Eigenschaft durch den Bezeichner für eine Abhängigkeitseigenschaft gesichert wird. In [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], ist die Verwendung `<` *Objekt* **NumberSubstitution.CultureOverride**`="`*Wert*`".../>`, wobei *Objekt* ist ein Object-Element, in dem die angegebene Anzahl Austauschlogik angewendet wird, und *Wert* ist einer der Werte Zeichenfolgenformat wie im XAML-Werte erläutert. Im Code wird die Verwendung der angefügten Eigenschaft von unterstützt <xref:System.Windows.Media.NumberSubstitution.GetCultureOverride%2A> und <xref:System.Windows.Media.NumberSubstitution.SetCultureOverride%2A>.  
+  
+<a name="xamlAttributeUsage_CultureOverride"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object NumberSubstitution.CultureOverrideProperty="CultureInfo"/>  
+```  
+  
+<a name="xamlValues_CultureOverride"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *CultureInfo*  
+ Die Zeichenfolgendarstellung einer <xref:System.Globalization.CultureInfo> Wert. Z. B. die Zeichenfolge "En-us", die Einstellung der Vereinigten Staaten Englisch (USA) darstellt.  
+  
+<a name="dependencyPropertyInfo_CultureOverride"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.NumberSubstitution.CultureOverrideProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CultureOverrideProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CultureOverrideProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CultureOverrideProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.NumberSubstitution.CultureOverrideProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.NumberSubstitution.CultureOverride" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CultureSource">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.NumberCultureSource CultureSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.NumberCultureSource CultureSource" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.NumberSubstitution.CultureSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.NumberCultureSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der die Quelle des Kulturwerts angibt, über den Ersetzen von Zahlen ermittelt wird, oder legt diesen Wert fest.</summary>
+        <value>Ein Enumerationswert von <see cref="T:System.Windows.Media.NumberCultureSource" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert der <xref:System.Windows.Media.NumberSubstitution.CultureSource%2A> Eigenschaft ist <xref:System.Windows.Media.NumberCultureSource.Text>, also die Kultur des Texts ausführen.  
+  
+ Diese Referenzseite stellt zwei identischen Namen, aber nicht vollständig äquivalente Verwendungsweisen für die <xref:System.Windows.Media.NumberSubstitution.CultureSource%2A> Eigenschaft:  
+  
+-   Sie können diese Eigenschaft im Code festlegen, auf eine <xref:System.Windows.Media.NumberSubstitution> Instanz als ein [!INCLUDE[TLA#tla_clr](~/includes/tlasharptla-clr-md.md)] Eigenschaft. Bei dieser Verwendung die Eigenschaft nicht durch den Bezeichner für eine Abhängigkeitseigenschaft unterstützt wird, wird durch ein privates Feld unterstützt und dient nicht als eine Abhängigkeitseigenschaft.  
+  
+-   Sie können diese Eigenschaft festlegen, wie die Verwendung einer angefügten Eigenschaft in [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)]. Die angefügte Eigenschaft Nutzung ist der Grund, warum diese Eigenschaft einen Abschnitt Informationen zur Abhängigkeitseigenschaft an, da die angefügte Eigenschaft durch den Bezeichner für eine Abhängigkeitseigenschaft gesichert wird. In [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], ist die Verwendung `<` *Objekt* **NumberSubstitution.CultureSource**`="`*Wert*`".../>`, wobei *Objekt* ist ein Object-Element, in dem die angegebene Anzahl Austauschlogik angewendet wird, und *Wert* eine Darstellung der Zeichenfolge ein <xref:System.Windows.Media.NumberCultureSource> Wert. Im Code wird die Verwendung der angefügten Eigenschaft von unterstützt <xref:System.Windows.Media.NumberSubstitution.GetCultureSource%2A> und <xref:System.Windows.Media.NumberSubstitution.SetCultureSource%2A>.  
+  
+<a name="xamlAttributeUsage_CultureSource"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+ \<*Objekt* **NumberSubstitution.CultureSource**= "<xref:System.Windows.Media.NumberCultureSource>" / >  
+  
+<a name="dependencyPropertyInfo_CultureSource"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.NumberSubstitution.CultureSourceProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CultureSourceProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CultureSourceProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CultureSourceProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.NumberSubstitution.CultureSourceProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.NumberSubstitution.CultureSource" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.NumberSubstitution.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Die <see cref="T:System.Object" /> für den Vergleich mit dem aktuellen <see cref="T:System.Windows.Media.NumberSubstitution" /> Objekt.</param>
+        <summary>Bestimmt, ob das angegebene Objekt und das aktuelle <see cref="T:System.Windows.Media.NumberSubstitution" />-Objekt gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="o" /> gleich dem aktuellen <see cref="T:System.Windows.Media.NumberSubstitution" />-Objekt ist; andernfalls <see langword="false" />. Wenn <paramref name="o" /> keine <see cref="T:System.Windows.Media.NumberSubstitution" /> Objekt <see langword="false" /> wird zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zwei <xref:System.Windows.Media.NumberSubstitution> Objekte sind gleich, wenn die folgenden Eigenschaften gleich sind:  
+  
+-   <xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A>  
+  
+-   <xref:System.Windows.Media.NumberSubstitution.CultureSource%2A>  
+  
+-   <xref:System.Windows.Media.NumberSubstitution.Substitution%2A>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCultureOverride">
+      <MemberSignature Language="C#" Value="public static System.Globalization.CultureInfo GetCultureOverride (System.Windows.DependencyObject target);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Globalization.CultureInfo GetCultureOverride(class System.Windows.DependencyObject target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.NumberSubstitution.GetCultureOverride(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.CultureInfoIetfLanguageTagConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForType(typeof(System.Windows.DependencyObject))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="target">Das Element, für das ein <see cref="P:System.Windows.Media.NumberSubstitution.CultureOverride" />-Wert zurückgegeben werden soll.</param>
+        <summary>Gibt der Wert von <see cref="P:System.Windows.Media.NumberSubstitution.CultureOverride" /> aus dem bereitgestellten Element zurück.</summary>
+        <returns>Ein <see cref="T:System.Globalization.CultureInfo" />-Wert, der die Kultur darstellt, die als Überschreibung verwendet wird.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCultureSource">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.NumberCultureSource GetCultureSource (System.Windows.DependencyObject target);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Media.NumberCultureSource GetCultureSource(class System.Windows.DependencyObject target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.NumberSubstitution.GetCultureSource(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForType(typeof(System.Windows.DependencyObject))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.NumberCultureSource</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="target">Das Element, für das ein <see cref="P:System.Windows.Media.NumberSubstitution.CultureSource" />-Wert zurückgegeben werden soll.</param>
+        <summary>Gibt der Wert von <see cref="P:System.Windows.Media.NumberSubstitution.CultureSource" /> aus dem bereitgestellten Element zurück.</summary>
+        <returns>Ein Enumerationswert von <see cref="T:System.Windows.Media.NumberCultureSource" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.NumberSubstitution.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dient als Hashfunktion für <see cref="T:System.Windows.Media.NumberSubstitution" />. Sie eignet sich für die Verwendung in Hashalgorithmen und Datenstrukturen, z. B. einer Hashtabelle.</summary>
+        <returns>Ein <see cref="T:System.Int32" /> Wert, der den Hashcode für das aktuelle Objekt darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSubstitution">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.NumberSubstitutionMethod GetSubstitution (System.Windows.DependencyObject target);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Media.NumberSubstitutionMethod GetSubstitution(class System.Windows.DependencyObject target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.NumberSubstitution.GetSubstitution(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForType(typeof(System.Windows.DependencyObject))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.NumberSubstitutionMethod</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="target">Das Element, für das ein <see cref="P:System.Windows.Media.NumberSubstitution.Substitution" />-Wert zurückgegeben werden soll.</param>
+        <summary>Gibt der Wert von <see cref="P:System.Windows.Media.NumberSubstitution.Substitution" /> aus dem bereitgestellten Element zurück.</summary>
+        <returns>Ein Enumerationswert von <see cref="T:System.Windows.Media.NumberSubstitutionMethod" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCultureOverride">
+      <MemberSignature Language="C#" Value="public static void SetCultureOverride (System.Windows.DependencyObject target, System.Globalization.CultureInfo value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetCultureOverride(class System.Windows.DependencyObject target, class System.Globalization.CultureInfo value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.NumberSubstitution.SetCultureOverride(System.Windows.DependencyObject,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="target">Element, das eine Kultur angeben, wird außer Kraft setzen.</param>
+        <param name="value">Eine Kultur Außerkraftsetzungswert vom Typ <see cref="T:System.Globalization.CultureInfo" />.</param>
+        <summary>Legt den Wert des <see cref="P:System.Windows.Media.NumberSubstitution.CultureOverride" /> nach einem angegebenen Element.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCultureSource">
+      <MemberSignature Language="C#" Value="public static void SetCultureSource (System.Windows.DependencyObject target, System.Windows.Media.NumberCultureSource value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetCultureSource(class System.Windows.DependencyObject target, valuetype System.Windows.Media.NumberCultureSource value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.NumberSubstitution.SetCultureSource(System.Windows.DependencyObject,System.Windows.Media.NumberCultureSource)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Windows.Media.NumberCultureSource" />
+      </Parameters>
+      <Docs>
+        <param name="target">Element, das eine Kultur angeben, wird außer Kraft setzen.</param>
+        <param name="value">Ein Kulturwert für die Quelle des Typs <see cref="T:System.Windows.Media.NumberCultureSource" />.</param>
+        <summary>Legt den Wert des <see cref="P:System.Windows.Media.NumberSubstitution.CultureSource" /> nach einem angegebenen Element.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSubstitution">
+      <MemberSignature Language="C#" Value="public static void SetSubstitution (System.Windows.DependencyObject target, System.Windows.Media.NumberSubstitutionMethod value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetSubstitution(class System.Windows.DependencyObject target, valuetype System.Windows.Media.NumberSubstitutionMethod value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.NumberSubstitution.SetSubstitution(System.Windows.DependencyObject,System.Windows.Media.NumberSubstitutionMethod)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Windows.Media.NumberSubstitutionMethod" />
+      </Parameters>
+      <Docs>
+        <param name="target">Element, das eine Ersetzungsmethode angibt.</param>
+        <param name="value">Ein Ersatz-Methode Wert vom Typ <see cref="T:System.Windows.Media.NumberSubstitutionMethod" />.</param>
+        <summary>Legt den Wert des <see cref="P:System.Windows.Media.NumberSubstitution.Substitution" /> nach einem angegebenen Element.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Substitution">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.NumberSubstitutionMethod Substitution { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.NumberSubstitutionMethod Substitution" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.NumberSubstitution.Substitution" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.NumberSubstitutionMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen eines Werts, der die Ersetzungsmethode angibt, über den Ersetzen von Zahlen ermittelt wird.</summary>
+        <value>Ein Enumerationswert von <see cref="T:System.Windows.Media.NumberSubstitutionMethod" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert der <xref:System.Windows.Media.NumberSubstitution.CultureSource%2A> Eigenschaft ist <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>, der angibt, dass die Ersetzungsmethode bestimmt werden soll basierend auf der Anzahl Kultur <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A> Eigenschaftswert.  
+  
+ Diese Referenzseite stellt zwei identischen Namen, aber nicht vollständig äquivalente Verwendungsweisen für die <xref:System.Windows.Media.NumberSubstitution.Substitution%2A> Eigenschaft:  
+  
+-   Sie können diese Eigenschaft im Code festlegen, auf eine <xref:System.Windows.Media.NumberSubstitution> Instanz als ein [!INCLUDE[TLA#tla_clr](~/includes/tlasharptla-clr-md.md)] Eigenschaft. Bei dieser Verwendung die Eigenschaft nicht durch den Bezeichner für eine Abhängigkeitseigenschaft unterstützt wird, wird durch ein privates Feld unterstützt und dient nicht als eine Abhängigkeitseigenschaft.  
+  
+-   Sie können diese Eigenschaft festlegen, wie die Verwendung einer angefügten Eigenschaft in [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)]. Die angefügte Eigenschaft Nutzung ist der Grund, warum diese Eigenschaft einen Abschnitt Informationen zur Abhängigkeitseigenschaft an, da die angefügte Eigenschaft durch den Bezeichner für eine Abhängigkeitseigenschaft gesichert wird. In [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], ist die Verwendung `<` *Objekt* **NumberSubstitution.Substitution**`="`*Wert*`".../>`, wobei *Objekt* ist ein Object-Element, in dem die angegebene Anzahl Austauschlogik angewendet wird, und *Wert* eine Darstellung der Zeichenfolge ein <xref:System.Windows.Media.NumberSubstitutionMethod> Wert. Im Code wird die Verwendung der angefügten Eigenschaft von unterstützt <xref:System.Windows.Media.NumberSubstitution.GetSubstitution%2A> und <xref:System.Windows.Media.NumberSubstitution.SetSubstitution%2A>.  
+  
+<a name="xamlAttributeUsage_Substitution"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+ \<*Objekt* **NumberSubstitution.Substitution**= "<xref:System.Windows.Media.NumberSubstitutionMethod>" / >  
+  
+<a name="dependencyPropertyInfo_Substitution"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.NumberSubstitution.SubstitutionProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubstitutionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SubstitutionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SubstitutionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.NumberSubstitution.SubstitutionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.NumberSubstitution.Substitution" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

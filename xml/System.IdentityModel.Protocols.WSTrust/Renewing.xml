@@ -1,0 +1,136 @@
+<Type Name="Renewing" FullName="System.IdentityModel.Protocols.WSTrust.Renewing">
+  <TypeSignature Language="C#" Value="public class Renewing" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Renewing extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Protocols.WSTrust.Renewing" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Wst: Erneuern des Elements in einem WS-Trust-Anforderung erneuert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses optionale Element gibt an, den Aussteller des Tokens, dass das angeforderte Token erneuert werden kann, wenn das zulassen-Attribut auf "true" festgelegt ist und das Token erneuert werden kann, nachdem es abläuft, wenn das OK Attribut auf "true" festgelegt ist. Diese Attribute werden durch dargestellt die <xref:System.IdentityModel.Protocols.WSTrust.Renewing.AllowRenewal%2A> und <xref:System.IdentityModel.Protocols.WSTrust.Renewing.OkForRenewalAfterExpiration%2A> Eigenschaften bzw..  
+  
+ Weitere Informationen über das Element, das diese Klasse darstellt, finden Sie in der Version der WS-Trust-Spezifikation, die für Ihr Szenario zutrifft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Renewing ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.Renewing.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Protocols.WSTrust.Renewing" /> <see cref="T:System.IdentityModel.Protocols.WSTrust.Renewing" /> -Klasse mit Standardeigenschaftswerten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle zeigt die anfänglichen Eigenschaftenwerte für die neue <xref:System.IdentityModel.Protocols.WSTrust.Renewing> Instanz.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.IdentityModel.Protocols.WSTrust.Renewing.AllowRenewal%2A>|`true`|  
+|<xref:System.IdentityModel.Protocols.WSTrust.Renewing.OkForRenewalAfterExpiration%2A>|`false`|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Renewing (bool allowRenewal, bool okForRenewalAfterExpiration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool allowRenewal, bool okForRenewalAfterExpiration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.Renewing.#ctor(System.Boolean,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="allowRenewal" Type="System.Boolean" />
+        <Parameter Name="okForRenewalAfterExpiration" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="allowRenewal">
+          <see langword="true" />Wenn Erneuerung zulässig ist. andernfalls <see langword="false" />.</param>
+        <param name="okForRenewalAfterExpiration">
+          <see langword="true" />Wenn das angeforderte Token erneuert werden kann, wenn es abgelaufen ist; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Protocols.WSTrust.Renewing" /> <see cref="T:System.IdentityModel.Protocols.WSTrust.Renewing" /> Klasse mit den angegebenen Werten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Eigenschaften der neuen <xref:System.IdentityModel.Protocols.WSTrust.Renewing> -Instanz entsprechend dem Wert der Parameter festgelegt sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowRenewal">
+      <MemberSignature Language="C#" Value="public bool AllowRenewal { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowRenewal" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.Renewing.AllowRenewal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Token erneuert werden kann.</summary>
+        <value>
+          <see langword="true" />Wenn Erneuerung zulässig ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Stellt den Inhalt des Attributs zulassen. Dieses optionale Attribut wird verwendet, zum Anfordern eines Tokens erneuerbaren. Der Standardwert ist `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OkForRenewalAfterExpiration">
+      <MemberSignature Language="C#" Value="public bool OkForRenewalAfterExpiration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OkForRenewalAfterExpiration" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.Renewing.OkForRenewalAfterExpiration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Token erneuert werden kann, wenn es abgelaufen ist.</summary>
+        <value>
+          <see langword="true" />Wenn das angeforderte Token erneuert werden kann, wenn es abgelaufen ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Stellt den Inhalt des Attributs OK. Dieses optionale Attribut wird verwendet, um anzugeben, dass ein erneuerbares Token akzeptabel ist, wenn die angeforderte Dauer des Diensts Ausstellung überschreitet. D. h. wenn `true`, und klicken Sie dann das Token nach dessen Ablauf erneuert werden kann. Der Standardwert ist `false` aus Sicherheitsgründen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

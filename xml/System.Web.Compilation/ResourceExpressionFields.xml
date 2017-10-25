@@ -1,0 +1,93 @@
+<Type Name="ResourceExpressionFields" FullName="System.Web.Compilation.ResourceExpressionFields">
+  <TypeSignature Language="C#" Value="public sealed class ResourceExpressionFields" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ResourceExpressionFields extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Compilation.ResourceExpressionFields" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält die Felder aus einem Ressourcenausdruck analysierte.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Seite analysiert wird, werden die Werte in einem Ressourcenausdruck analysiert und in einer Instanz von gespeichert die <xref:System.Web.Compilation.ResourceExpressionFields> Klasse. Dies <xref:System.Web.Compilation.ResourceExpressionFields> Objekt enthält zwei Felder <xref:System.Web.Compilation.ResourceExpressionFields.ClassKey%2A> und <xref:System.Web.Compilation.ResourceExpressionFields.ResourceKey%2A>. Diese Felder werden aus den Werten eines Ausdrucks Ressource entweder in expliziter gezeichnet (`<%$ Resources: ClassKey, ResourceKey %>`) oder implizit (`meta:resourcekey="ResourceKey"`) Formular.  
+  
+ Die <xref:System.Web.Compilation.ResourceExpressionFields.ClassKey%2A> Eigenschaft identifiziert den Klassennamen einer Ressource, die zu einer Ressourcendatei zugeordnet ist. Um eine Ressourcendatei namens Financial.resx oder eine lokalisierte Version z. B. Financial.en-GB.resx zu verweisen, würde der Ressourcenausdruck beispielsweise als angezeigt `<%$ Resources: Financial, ResourceKey %>`. Nach der Analyse der <xref:System.Web.Compilation.ResourceExpressionFields.ClassKey%2A> würde die Eigenschaft "Financial" als Wert zurückgeben.  
+  
+ Die <xref:System.Web.Compilation.ResourceExpressionFields.ResourceKey%2A> Eigenschaft identifiziert bestimmte Schlüssel/Wert-Paar aus der Datei abgerufen werden sollen. Wenn die Datei Financial.resx ein Schlüssels Namens enthält `Currency`, konnte mit dem Ressourcenausdruck angegeben werden `<%$ Resources: Financial, Currency %>`. Nach der Analyse der <xref:System.Web.Compilation.ResourceExpressionFields.ResourceKey%2A> würde die Eigenschaft "Currency" als Wert zurückgeben.  
+  
+ Der Ressourcenausdruck wird analysiert, über die <xref:System.Web.Compilation.ResourceExpressionBuilder.ParseExpression%2A> Methode.  
+  
+> [!CAUTION]
+>  Vertraulicher Informationen sollten nicht in einer Ressourcendatei gespeichert werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ClassKey">
+      <MemberSignature Language="C#" Value="public string ClassKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClassKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.ResourceExpressionFields.ClassKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Class-Schlüssel für einen Ressourcenausdruck analysierte ab.</summary>
+        <value>Ein <see cref="T:System.String" /> , enthält die Class-Schlüssel oder <see cref="F:System.String.Empty" /> Wenn Class-Schlüssel nicht festgelegt wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt die Class-Schlüssel für eine analysierte Ressourcenausdruck zurück. Die Class-Schlüssel stellt den Namen der Ressourcendatei dar, und der angegebene Wert vor dem Komma (,) in einem Ausdruck der Form `<%$ Resources: [Namespace.]ClassKey, ResourceKey $>`. Ein Namespacewert für die Ressourcenklasse ist optional. Wenn ein Namespace angegeben wird, den Namespace und der Klassenschlüssel werden zurückgegeben, der <xref:System.Web.Compilation.ResourceExpressionFields.ClassKey%2A> Eigenschaft. Die Class-Schlüssel darf keine Leerzeichen enthalten oder Doppelbyte-Zeichensätze (DBCS).  
+  
+ Um eine Ressourcendatei namens Financial.resx oder eine lokalisierte Version z. B. Financial.en-GB.resx verweisen möchten, schließen Sie den Ressourcenausdruck <`%$ Resources: Financial, ResourceKey %>`. Nach der Analyse der <xref:System.Web.Compilation.ResourceExpressionFields.ClassKey%2A> würde die Eigenschaft "Financial" als Wert zurückgeben.  
+  
+> [!CAUTION]
+>  Vertraulicher Informationen sollten nicht in einer Ressourcendatei gespeichert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResourceKey">
+      <MemberSignature Language="C#" Value="public string ResourceKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ResourceKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.ResourceExpressionFields.ResourceKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Ressourcenschlüssel für einen Ressourcenausdruck analysierte ab.</summary>
+        <value>Ein <see cref="T:System.String" /> mit dem Ressourcenschlüssel oder <see cref="F:System.String.Empty" /> , wenn der Ressourcenschlüssel nicht festgelegt wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt den Ressourcenschlüssel für eine analysierte Ressourcenausdruck zurück. Der Ressourcenschlüssel ist der Wert, der nach dem Komma (,) in einem Ausdruck der Form angegeben `<%$ Resources: ClassKey, ResourceKey %>`. Die <xref:System.Web.Compilation.ResourceExpressionFields.ResourceKey%2A> Eigenschaft identifiziert einen bestimmten Schlüssel/Wertpaars in der Ressourcendatei, die Class-Schlüssel zugeordnet ist. Wenn eine Datei namens enthält Financial.resx beispielsweise einen Schlüssel namens `Currency`, konnte mit dem Ressourcenausdruck angegeben werden `<%$ Resources: Financial, Currency %>`. Nach der Analyse der <xref:System.Web.Compilation.ResourceExpressionFields.ResourceKey%2A> würde die Eigenschaft "Currency" als Wert zurückgeben.  
+  
+> [!CAUTION]
+>  Vertraulicher Informationen sollten nicht in einer Ressourcendatei gespeichert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

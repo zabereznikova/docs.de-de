@@ -1,0 +1,374 @@
+<Type Name="ObjectParameterCollection" FullName="System.Data.Objects.ObjectParameterCollection">
+  <TypeSignature Language="C#" Value="public sealed class ObjectParameterCollection : System.Collections.Generic.ICollection&lt;System.Data.Objects.ObjectParameter&gt;, System.Collections.Generic.IEnumerable&lt;System.Data.Objects.ObjectParameter&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ObjectParameterCollection extends System.Object implements class System.Collections.Generic.ICollection`1&lt;class System.Data.Objects.ObjectParameter&gt;, class System.Collections.Generic.IEnumerable`1&lt;class System.Data.Objects.ObjectParameter&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Objects.ObjectParameterCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;System.Data.Objects.ObjectParameter&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Data.Objects.ObjectParameter&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt die Abfrageparameter als <see cref="T:System.Data.Objects.ObjectParameter" />-Objekte dar, die in einer <see cref="T:System.Data.Objects.ObjectQuery`1" /> definiert sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Stellt die Abfrageparameter als <xref:System.Data.Objects.ObjectParameter>-Objekte dar, die in einer <xref:System.Data.Objects.ObjectQuery%601> definiert sind.  
+  
+ Diese Klasse kann nicht vererbt werden.  
+  
+ Die Parameter, die an Abfrage-Generator-Methoden übergeben werden, werden von aufeinander folgenden Instanzen einer <xref:System.Data.Objects.ObjectQuery%601> in der Sequenz aggregiert. Auf diese kann mithilfe der <xref:System.Data.Objects.ObjectQuery.Parameters%2A>-Eigenschaft zugegriffen werden, die die <xref:System.Data.Objects.ObjectParameterCollection> zurückgibt. Hinzugefügte Parameter können aus der Auflistung entfernt und die Auflistung kann gelöscht werden, solange die Abfrage nicht kompiliert oder ausgeführt wurde. Parameternamen können nicht geändert werden, Werte können jedoch jederzeit geändert werden.  
+  
+ Die Parameter müssen in der <xref:System.Data.Objects.ObjectParameterCollection> eindeutig sein. Es können sich nicht zwei Parameter mit demselben Namen in der Auflistung befinden.  
+  
+ Bei Zusammensetzungsmethoden wie <xref:System.Data.Objects.ObjectQuery%601.Union%2A>, <xref:System.Data.Objects.ObjectQuery%601.UnionAll%2A>, <xref:System.Data.Objects.ObjectQuery%601.Intersect%2A> und <xref:System.Data.Objects.ObjectQuery%601.Except%2A> werden die Parameter zusammengeführt. Wenn die Sätze von Parametern nicht kompatibel oder unvollständig sind, wird eine Ausnahme ausgelöst. Weitere Informationen finden Sie unter [Abfrage-Generator-Methoden](http://msdn.microsoft.com/en-us/05685434-05e6-41c2-8d5e-8933b88a40b0).  
+  
+   
+  
+## Examples  
+ Das Beispiel in diesem Thema beruht auf dem [AdventureWorks Sales-Modell](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). In diesem Beispiel werden der Auflistung neue Parameter hinzugefügt, und die Anzahl der Parameter in der Auflistung wird abgerufen. Daraufhin wird die <xref:System.Data.Objects.ObjectParameterCollection> durchlaufen, und für jeden Parameter in der Auflistung werden Name, Typ und Wert angezeigt.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectParameterCollection_Count_Add_Indexer](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectparametercollection_count_add_indexer)]
+ [!code-vb[DP ObjectServices Concepts#ObjectParameterCollection_Count_Add_Indexer](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectparametercollection_count_add_indexer)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Data.Objects.ObjectParameter parameter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(class System.Data.Objects.ObjectParameter parameter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectParameterCollection.Add(System.Data.Objects.ObjectParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameter" Type="System.Data.Objects.ObjectParameter" />
+      </Parameters>
+      <Docs>
+        <param name="parameter">Der der Auflistung hinzuzufügende Parameter.</param>
+        <summary>Fügt der Auflistung den angegebenen <see cref="T:System.Data.Objects.ObjectParameter" /> hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Hinzugefügte Parameter können aus der Auflistung entfernt und die Auflistung kann gelöscht werden, solange die Abfrage nicht kompiliert oder ausgeführt wurde. Parameternamen können nicht geändert werden, Werte können jedoch jederzeit geändert werden.  
+  
+ Die Parameter müssen in der <xref:System.Data.Objects.ObjectParameterCollection> eindeutig sein. Es können sich nicht zwei Parameter mit demselben Namen in der Auflistung befinden. Weitere Informationen finden Sie unter [Abfrage-Generator-Methoden](http://msdn.microsoft.com/en-us/05685434-05e6-41c2-8d5e-8933b88a40b0).  
+  
+   
+  
+## Examples  
+ Das Beispiel in diesem Thema beruht auf dem [AdventureWorks Sales-Modell](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). Im Beispiel werden der Auflistung neue Parameter hinzugefügt. Die <xref:System.Data.Objects.ObjectParameterCollection> wird durchlaufen, und für jeden Parameter in der Auflistung werden Name, Typ und Wert angezeigt.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectParameterCollection_Count_Add_Indexer](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectparametercollection_count_add_indexer)]
+ [!code-vb[DP ObjectServices Concepts#ObjectParameterCollection_Count_Add_Indexer](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectparametercollection_count_add_indexer)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="parameter" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="parameter" /> Argument in der Auflistung bereits vorhanden ist. Dieses Verhalten unterscheidet sich von dem der meisten Auflistungen, die doppelte Einträge zulassen.  
+  
+ - oder -   
+  
+ Ein anderer Parameter mit dem gleichen Namen wie die <paramref name="parameter" /> Argument in der Auflistung bereits vorhanden ist. Beachten Sie, dass bei der Suche die Groß- und Kleinschreibung nicht beachtet wird. Dieses Verhalten unterscheidet sich von dem der meisten Auflistungen und ähnelt dem eines <see cref="T:System.Collections.Generic.Dictionary" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Typ des der <paramref name="parameter" /> ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectParameterCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht sämtliche <see cref="T:System.Data.Objects.ObjectParameter" />-Instanzen aus der Auflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Data.Objects.ObjectParameter parameter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(class System.Data.Objects.ObjectParameter parameter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectParameterCollection.Contains(System.Data.Objects.ObjectParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameter" Type="System.Data.Objects.ObjectParameter" />
+      </Parameters>
+      <Docs>
+        <param name="parameter">Der <see cref="T:System.Data.Objects.ObjectParameter" />, der in der Auflistung gesucht werden soll.</param>
+        <summary>Überprüft nach Verweis das Vorliegen des angegebenen <see cref="T:System.Data.Objects.ObjectParameter" /> in der Auflistung.</summary>
+        <returns>Gibt <see langword="true" /> war das Parameterobjekt in der Auflistung gefunden wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist eine verweisbasierte Prüfung. D. h., wenn ein <xref:System.Data.Objects.ObjectParameter> wird angegeben, die den gleichen Namen wie ein Parameterobjekt in der Auflistung enthält nur von dieser Methode zurückgegeben `true` wird jedoch das gleiche Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="parameter" />-Argument lautet <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectParameterCollection.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des in der Auflistung zu suchenden Parameters. Dieser Name sollte nur den tatsächlichen Namen und nicht die Parametermarkierung "@" enthalten, die in den [!INCLUDE[esql](~/includes/esql-md.md)]-Anweisungen verwendet wird.</param>
+        <summary>Ermittelt, ob ein <see cref="T:System.Data.Objects.ObjectParameter" /> mit dem angegebenen Namen in der Auflistung vorhanden ist.</summary>
+        <returns>Gibt <see langword="true" /> , wenn ein Parameter mit dem angegebenen Namen in der Auflistung gefunden wurde, andernfalls wurde <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das Beispiel in diesem Thema beruht auf dem [AdventureWorks Sales-Modell](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). In dem Beispiel wird die <xref:System.Data.Objects.ObjectParameterCollection.Contains%2A>-Methode verwendet, um zu ermitteln, ob der angegebene Parameter in der Auflistung vorhanden ist.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectParameterCollection_StringArg](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectparametercollection_stringarg)]
+ [!code-vb[DP ObjectServices Concepts#ObjectParameterCollection_StringArg](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectparametercollection_stringarg)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="name" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Data.Objects.ObjectParameter[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Data.Objects.ObjectParameter[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectParameterCollection.CopyTo(System.Data.Objects.ObjectParameter[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Data.Objects.ObjectParameter[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das Array, in das die Parameter kopiert werden sollen.</param>
+        <param name="index">Der Index im Array, von dem ab die Parameter kopiert werden sollen.</param>
+        <summary>Ermöglicht das Kopieren der Parameter in der Auflistung, beginnend mit dem Objekt am angegebenen Index, in ein angegebenes Array.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das Beispiel in diesem Thema beruht auf dem [AdventureWorks Sales-Modell](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). Im Beispiel werden die Parameter in das angegebene Array kopiert.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectParameterCollection_CopyTo](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectparametercollection_copyto)]
+ [!code-vb[DP ObjectServices Concepts#ObjectParameterCollection_CopyTo](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectparametercollection_copyto)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.ObjectParameterCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuelle Anzahl der Parameter in der Auflistung ab.</summary>
+        <value>Die Anzahl der aktuell in der Auflistung enthaltenen <see cref="T:System.Data.Objects.ObjectParameter" />-Objekte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das Beispiel in diesem Thema beruht auf dem [AdventureWorks Sales-Modell](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). In diesem Beispiel werden der Auflistung neue Parameter hinzugefügt, und die Anzahl der Parameter in der Auflistung wird abgerufen. Daraufhin wird die <xref:System.Data.Objects.ObjectParameterCollection> durchlaufen, und für jeden Parameter in der Auflistung werden Name, Typ und Wert angezeigt.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectParameterCollection_Count_Add_Indexer](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectparametercollection_count_add_indexer)]
+ [!code-vb[DP ObjectServices Concepts#ObjectParameterCollection_Count_Add_Indexer](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectparametercollection_count_add_indexer)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.ObjectParameter this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Objects.ObjectParameter Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.ObjectParameterCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.ObjectParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des zu suchenden Parameters. Dieser Name sollte nur den tatsächlichen Namen und nicht die Parametermarkierung "@" enthalten, die in den [!INCLUDE[esql](~/includes/esql-md.md)]-Anweisungen verwendet wird.</param>
+        <summary>Stellt einen Indexer bereit, der Aufrufern ermöglicht, Parameter nach Namen abzurufen.</summary>
+        <value>Die <see cref="T:System.Data.Objects.ObjectParameter" />-Instanz.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Es wurde kein Parameter mit dem angegebenen Namen in der Auflistung gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (System.Data.Objects.ObjectParameter parameter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(class System.Data.Objects.ObjectParameter parameter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectParameterCollection.Remove(System.Data.Objects.ObjectParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameter" Type="System.Data.Objects.ObjectParameter" />
+      </Parameters>
+      <Docs>
+        <param name="parameter">Ein Objekt, das aus der Auflistung entfernt werden soll.</param>
+        <summary>Entfernt nach Verweis eine Instanz eines <see cref="T:System.Data.Objects.ObjectParameter" /> aus der Auflistung, wenn dieses in der Auflistung vorhanden ist.</summary>
+        <returns>Gibt <see langword="true" /> , wenn das Parameterobjekt gefunden und aus der Auflistung entfernt wurde, andernfalls wurde <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist ein verweisbasierter Vergleich. Dies bedeutet: Falls ein Abfrageparameterobjekt angegeben wird, der denselben Namen wie ein Parameterobjekt in der Auflistung enthält, wird der Parameter in der Auflistung nur dann entfernt, wenn es sich um dasselbe Objekt handelt. Um ein Objekt nach Name zu entfernen, verwenden Sie zunächst den Indexer, um die Parameterinstanz abzurufen, und entfernen diese dann mithilfe dieser Methode.  
+  
+   
+  
+## Examples  
+ Das Beispiel in diesem Thema beruht auf dem [AdventureWorks Sales-Modell](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). In diesem Beispiel werden der Auflistung zwei Parameter hinzugefügt und wieder entfernt.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectParameterCollection_Remove](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectparametercollection_remove)]
+ [!code-vb[DP ObjectServices Concepts#ObjectParameterCollection_Remove](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectparametercollection_remove)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="parameter" />-Argument lautet <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;System.Data.Objects.ObjectParameter&gt;.IsReadOnly">
+      <MemberSignature Language="C#" Value="bool System.Collections.Generic.ICollection&lt;System.Data.Objects.ObjectParameter&gt;.IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.Generic.ICollection&lt;System.Data.Objects.ObjectParameter&gt;.IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.ObjectParameterCollection.System#Collections#Generic#ICollection&lt;System#Data#Objects#ObjectParameter&gt;#IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Auflistung schreibgeschützt ist oder geändert werden kann.</summary>
+        <value>Ein boolescher Wert, der <see langword="true" /> , wenn die Auflistung schreibgeschützt ist und <see langword="false" /> der Auflistung können geändert werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Auflistung hat stets Lese-/Schreibzugriff. Parameter können hinzugefügt, entfernt und geändert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IEnumerable&lt;System.Data.Objects.ObjectParameter&gt;.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IEnumerator&lt;System.Data.Objects.ObjectParameter&gt; IEnumerable&lt;ObjectParameter&gt;.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;class System.Data.Objects.ObjectParameter&gt; System.Collections.Generic.IEnumerable&lt;System.Data.Objects.ObjectParameter&gt;.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectParameterCollection.System#Collections#Generic#IEnumerable&lt;System#Data#Objects#ObjectParameter&gt;#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Data.Objects.ObjectParameter&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen typisierten Enumerator für die Auflistung zurück.</summary>
+        <returns>Ein <see cref="T:System.Collections.Generic.IEnumerator`1" /> vom Typ <see cref="T:System.Data.Objects.ObjectParameter" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt eine <xref:System.Collections.Generic.IEnumerator%601>-Instanz zurück. Damit kann die Auflistung durchlaufen und durchsucht werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectParameterCollection.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen nicht typisierten Enumerator für die Auflistung zurück.</summary>
+        <returns>Eine <see cref="T:System.Collections.IEnumerator" />-Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt einen nicht typisierten Enumerator für die Auflistung zurück. Damit kann die Auflistung durchlaufen und durchsucht werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

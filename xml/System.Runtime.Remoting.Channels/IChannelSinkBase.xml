@@ -1,0 +1,57 @@
+<Type Name="IChannelSinkBase" FullName="System.Runtime.Remoting.Channels.IChannelSinkBase">
+  <TypeSignature Language="C#" Value="public interface IChannelSinkBase" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IChannelSinkBase" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Channels.IChannelSinkBase" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Basisschnittstelle für Kanal-senken bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kanal senken ermöglichen-Plug-Ins, die Zugriff auf die zugrunde liegenden Nachrichten, die durch den Kanal sowie der Stream, der zum Senden von Nachrichten zu einem Remoteobjekt vom Transportmechanismus verwendet fließen können. Kanal senken in einer Kette von Senkenanbietern miteinander verknüpft sind, und alle Nachrichten durchlaufen dieser Kette Kanal, bevor die Nachricht serialisiert und transportiert wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionary Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.IChannelSinkBase.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Wörterbuch, das über die Eigenschaften für die Senke zugegriffen werden können.</summary>
+        <value>Ein Wörterbuch, das über die Eigenschaften für die Senke zugegriffen werden können, oder <see langword="null" /> , wenn die Kanalsenke Eigenschaften nicht unterstützt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Eigenschaft nicht in diesem Kanalsenke vorhanden ist, wird die Eigenschaft zugriffsanforderung an den nächsten Empfänger in der Kette delegiert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

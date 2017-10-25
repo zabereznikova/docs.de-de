@@ -1,0 +1,751 @@
+<Type Name="TickBar" FullName="System.Windows.Controls.Primitives.TickBar">
+  <TypeSignature Language="C#" Value="public class TickBar : System.Windows.FrameworkElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi TickBar extends System.Windows.FrameworkElement" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Primitives.TickBar" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.FrameworkElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Steuerelement, das eine Gruppe von Teilstrichen zeichnet für kennzeichnet ein <see cref="T:System.Windows.Controls.Slider" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.Primitives.TickBar> -Steuerelement zeichnet Teilstriche, die von einem Pixel Breite aufweisen. Sie können die Position der Teilstriche definieren, indem Sie ein Wiederholungsintervall oder eine Reihe von expliziten Punkte angeben.  
+  
+ Die <xref:System.Windows.Controls.Primitives.TickBar> Steuerelement ist speziell für das Arbeiten mit einem <xref:System.Windows.Controls.Slider> Steuerelement. Ein <xref:System.Windows.Controls.Slider> zeigt Teilstriche. Die folgende Abbildung zeigt eine <xref:System.Windows.Controls.Slider> , besitzt eine <xref:System.Windows.Controls.Primitives.TickBar>.  
+  
+ **Schieberegler mit einer TickBar**  
+  
+ ![Schieberegler-Darstellung](~/add/media/genericslider.png "Schieberegler-Darstellung")  
+  
+ <xref:System.Windows.Controls.Primitives.TickBar>Steuerelemente werden in der Regel definiert, der <xref:System.Windows.Style> von einem <xref:System.Windows.Controls.Slider>. Ein Beispiel für eine <xref:System.Windows.Controls.Primitives.TickBar> dient, die in einer <xref:System.Windows.Controls.Slider> <xref:System.Windows.Style>, finden Sie unter [Schieberegler Stile und Vorlagen](~/docs/framework/wpf/controls/slider-styles-and-templates.md).  
+  
+ Die <xref:System.Windows.Controls.Primitives.TickBar> und <xref:System.Windows.Controls.Slider> beide Steuerelemente enthalten Eigenschaften, die die gleiche Funktion ausführen. Die folgende Tabelle zeigt die <xref:System.Windows.Controls.Primitives.TickBar> Eigenschaften und die entsprechende <xref:System.Windows.Controls.Slider> Eigenschaften, die mit dem sie verbunden sind. Die <xref:System.Windows.Controls.Primitives.TickBar> Eigenschaften haben Vorrang vor beim <xref:System.Windows.Controls.Slider> und <xref:System.Windows.Controls.Primitives.TickBar> Eigenschaften, die verknüpft sind, die beide angegeben sind.  
+  
+ **TickBar und Schieberegler-Eigenschaften**  
+  
+|<xref:System.Windows.Controls.Primitives.TickBar>-Eigenschaft|<xref:System.Windows.Controls.Slider>-Eigenschaft|  
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|  
+|<xref:System.Windows.Controls.Primitives.TickBar.IsDirectionReversed%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.Slider.IsDirectionReversed%2A?displayProperty=nameWithType>|  
+|<xref:System.Windows.Controls.Primitives.TickBar.IsSelectionRangeEnabled%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.Slider.IsSelectionRangeEnabled%2A?displayProperty=nameWithType>|  
+|<xref:System.Windows.Controls.Primitives.TickBar.Maximum%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A?displayProperty=nameWithType>|  
+|<xref:System.Windows.Controls.Primitives.TickBar.Minimum%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A?displayProperty=nameWithType>|  
+|<xref:System.Windows.Controls.Primitives.TickBar.SelectionEnd%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.Slider.SelectionEnd%2A?displayProperty=nameWithType>|  
+|<xref:System.Windows.Controls.Primitives.TickBar.SelectionStart%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.Slider.SelectionStart%2A?displayProperty=nameWithType>|  
+|<xref:System.Windows.Controls.Primitives.TickBar.TickFrequency%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.Slider.TickFrequency%2A?displayProperty=nameWithType>|  
+|<xref:System.Windows.Controls.Primitives.TickBar.Ticks%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.Slider.Ticks%2A?displayProperty=nameWithType>|  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TickBar ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TickBar.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.Primitives.TickBar" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fill">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush Fill { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush Fill" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TickBar.Fill" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.Media.Brush" /> , wird verwendet, um die Teilstriche gezeichnet werden soll.</summary>
+        <value>Ein <see cref="T:System.Windows.Media.Brush" /> , mit der Teilstriche gezeichnet werden soll. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Fill"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.TickBar.FillProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FillProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FillProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TickBar.FillProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.TickBar.Fill" />-Abhängigkeitseigenschaft. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Bezeichner für die <xref:System.Windows.Controls.Primitives.TickBar.Fill%2A>-Abhängigkeitseigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDirectionReversed">
+      <MemberSignature Language="C#" Value="public bool IsDirectionReversed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDirectionReversed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TickBar.IsDirectionReversed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Richtung des zu erhöhenden Werts der Teilstriche.</summary>
+        <value>
+          <see langword="true" />Wenn die Richtung des zu erhöhenden Werts nach links bei einem horizontalen ist <see cref="T:System.Windows.Controls.Slider" /> oder nach unten bei einem vertikalen <see cref="T:System.Windows.Controls.Slider" />ist, andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_IsDirectionReversed"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.TickBar.IsDirectionReversedProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDirectionReversedProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsDirectionReversedProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsDirectionReversedProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TickBar.IsDirectionReversedProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.TickBar.IsDirectionReversed" />-Abhängigkeitseigenschaft. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Bezeichner für die <xref:System.Windows.Controls.Primitives.TickBar.IsDirectionReversed%2A>-Abhängigkeitseigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSelectionRangeEnabled">
+      <MemberSignature Language="C#" Value="public bool IsSelectionRangeEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSelectionRangeEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TickBar.IsSelectionRangeEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, ob die <see cref="T:System.Windows.Controls.Primitives.TickBar" /> einen Auswahlbereich anzeigt.</summary>
+        <value>
+          <see langword="true" />, wenn ein Auswahlbereich angezeigt wird, andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.Slider.SelectionStart%2A> und <xref:System.Windows.Controls.Slider.SelectionEnd%2A> Eigenschaften definieren einen Auswahlbereich. Diese Eigenschaften müssen festgelegt werden, für den ausgewählten Bereich angezeigt werden <xref:System.Windows.Controls.Slider.IsSelectionRangeEnabled%2A> festgelegt ist, um `true`.  
+  
+ Die folgende Abbildung zeigt eine <xref:System.Windows.Controls.Slider> -Steuerelement, enthält eine <xref:System.Windows.Controls.Primitives.TickBar> , die einen Auswahlbereich definiert wurde.  
+  
+ ![Schiebereglerauswahlbereich](~/add/media/sliderselectionrange.GIF "schiebereglerauswahlbereich")  
+  
+<a name="dependencyPropertyInfo_IsSelectionRangeEnabled"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.TickBar.IsSelectionRangeEnabledProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSelectionRangeEnabledProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsSelectionRangeEnabledProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsSelectionRangeEnabledProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TickBar.IsSelectionRangeEnabledProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Slider.IsSelectionRangeEnabled" />-Abhängigkeitseigenschaft. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Maximum">
+      <MemberSignature Language="C#" Value="public double Maximum { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Maximum" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TickBar.Maximum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den maximalen Wert an, der für ein Teilstrich möglich ist.</summary>
+        <value>Den größtmöglichen Wert für einen Teilstrich. Der Standardwert ist 100,0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Primäre Teilstriche werden angezeigt, für die <xref:System.Windows.Controls.Primitives.TickBar.Minimum%2A> und <xref:System.Windows.Controls.Primitives.TickBar.Maximum%2A> Werte und sekundären Ticks für andere Werte angezeigt werden. Bei einem horizontalen <xref:System.Windows.Controls.Primitives.TickBar>, die Höhe der primären Teilstriche ist gleich der <xref:System.Windows.FrameworkElement.ActualHeight%2A> von der <xref:System.Windows.Controls.Primitives.TickBar>. Bei einem vertikalen <xref:System.Windows.Controls.Primitives.TickBar>, die Breite der primären Teilstriche ist gleich der <xref:System.Windows.FrameworkElement.ActualWidth%2A> von der <xref:System.Windows.Controls.Primitives.TickBar>. Die Größe der sekundären Teilstriche beträgt 75 Prozent der Größe der primären Teilstriche.  
+  
+<a name="dependencyPropertyInfo_Maximum"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.TickBar.MaximumProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MaximumProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MaximumProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TickBar.MaximumProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.TickBar.Maximum" />-Abhängigkeitseigenschaft. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Minimum">
+      <MemberSignature Language="C#" Value="public double Minimum { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Minimum" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TickBar.Minimum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den minimalen Wert an, der für ein Teilstrich möglich ist.</summary>
+        <value>Den kleinstmöglichen Wert für einen Teilstrich. Der Standardwert ist NULL (0,0).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Primäre Teilstriche werden angezeigt, für die <xref:System.Windows.Controls.Primitives.TickBar.Minimum%2A> und <xref:System.Windows.Controls.Primitives.TickBar.Maximum%2A> Werte und sekundären Ticks für andere Werte angezeigt werden. Bei einem horizontalen <xref:System.Windows.Controls.Primitives.TickBar>, die Höhe der primären Teilstriche ist gleich der <xref:System.Windows.FrameworkElement.ActualHeight%2A> von der <xref:System.Windows.Controls.Primitives.TickBar>. Bei einem vertikalen <xref:System.Windows.Controls.Primitives.TickBar>, die Breite der primären Teilstriche ist gleich der <xref:System.Windows.FrameworkElement.ActualWidth%2A> von der <xref:System.Windows.Controls.Primitives.TickBar>. Die Größe der sekundären Teilstriche beträgt 75 Prozent der Größe der primären Teilstriche.  
+  
+<a name="dependencyPropertyInfo_Minimum"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.TickBar.MinimumProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimumProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MinimumProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MinimumProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TickBar.MinimumProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.TickBar.Minimum" />-Abhängigkeitseigenschaft. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRender">
+      <MemberSignature Language="C#" Value="protected override void OnRender (System.Windows.Media.DrawingContext dc);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRender(class System.Windows.Media.DrawingContext dc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TickBar.OnRender(System.Windows.Media.DrawingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dc" Type="System.Windows.Media.DrawingContext" />
+      </Parameters>
+      <Docs>
+        <param name="dc">Die <see cref="T:System.Windows.Media.DrawingContext" /> , wird verwendet, um die Teilstriche gezeichnet werden soll.</param>
+        <summary>Zeichnet die Teilstriche für ein <see cref="T:System.Windows.Controls.Slider" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Werte der <xref:System.Windows.Controls.Primitives.TickBar.Placement%2A> Eigenschaft und die <xref:System.Windows.Controls.Primitives.TickBar.IsDirectionReversed%2A> -Eigenschaft bestimmt, wo der Teilstriche gezeichnet werden, eine <xref:System.Windows.Controls.Primitives.TickBar>.  
+  
+ Primäre Teilstriche werden angezeigt, für die <xref:System.Windows.Controls.Primitives.TickBar.Minimum%2A> und <xref:System.Windows.Controls.Primitives.TickBar.Maximum%2A> Werte und sekundären Ticks für andere Werte angezeigt werden. Bei einem horizontalen <xref:System.Windows.Controls.Primitives.TickBar>, die Höhe der primären Teilstriche ist gleich der <xref:System.Windows.FrameworkElement.ActualHeight%2A> von der <xref:System.Windows.Controls.Primitives.TickBar>. Bei einem vertikalen <xref:System.Windows.Controls.Primitives.TickBar>, die Breite der primären Teilstriche ist gleich der <xref:System.Windows.FrameworkElement.ActualWidth%2A> von der <xref:System.Windows.Controls.Primitives.TickBar>. Die Größe der sekundären Teilstriche beträgt 75 Prozent der Größe der primären Teilstriche.  
+  
+ Diese Methode zeichnet Teilstriche am Anfang und Ende eines Auswahlbereichs auch, wenn die <xref:System.Windows.Controls.Primitives.TickBar.IsSelectionRangeEnabled%2A> Eigenschaft ist `true` und, wenn die <xref:System.Windows.Controls.Primitives.TickBar.SelectionStart%2A> und <xref:System.Windows.Controls.Primitives.TickBar.SelectionEnd%2A> Eigenschaften gültig sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Placement">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Primitives.TickBarPlacement Placement { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.Primitives.TickBarPlacement Placement" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TickBar.Placement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.TickBarPlacement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest, die Anzeigeposition der Teilstriche relativ zu einer <see cref="T:System.Windows.Controls.Primitives.Track" /> von einem <see cref="T:System.Windows.Controls.Slider" /> Steuerelement.</summary>
+        <value>Ein <see cref="T:System.Windows.Controls.Primitives.TickBarPlacement" /> -Enumerationswert ab, der die Position des identifiziert die <see cref="T:System.Windows.Controls.Primitives.TickBar" /> in der <see cref="T:System.Windows.Style" /> Layout ein <see cref="T:System.Windows.Controls.Slider" />. Der Standardwert ist <see cref="F:System.Windows.Controls.Primitives.TickBarPlacement.Top" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.Primitives.TickBar.Placement%2A> Wert wird verwendet, um sicherzustellen, dass die sichtbaren Teilen des der <xref:System.Windows.Controls.Primitives.TickBar>, z. B. die Endpunkt-Anzeichen für ein Auswahlbereich ordnungsgemäß angezeigt werden.  
+  
+<a name="dependencyPropertyInfo_Placement"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.TickBar.PlacementProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PlacementProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PlacementProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PlacementProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TickBar.PlacementProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.TickBar.Placement" />-Abhängigkeitseigenschaft. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReservedSpace">
+      <MemberSignature Language="C#" Value="public double ReservedSpace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ReservedSpace" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TickBar.ReservedSpace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Puffer Speicherplatz für den Bereich, der die Teilstriche enthält, die für die angegeben sind eine <see cref="T:System.Windows.Controls.Primitives.TickBar" />.</summary>
+        <value>Ein Wert, der den gesamten Pufferbereich auf beiden Seiten der Zeile oder Spalte von Teilstrichen darstellt. Der Standardwert ist NULL (0,0).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Speicherplatz-Puffer, die von definiert ist die <xref:System.Windows.Controls.Primitives.TickBar.ReservedSpace%2A> Eigenschaft wurde entwickelt, um den Speicherplatz zu berücksichtigen, die <xref:System.Windows.Controls.Primitives.Thumb> Steuerelement verwendet wird, wenn es an einem Ende wird die <xref:System.Windows.Controls.Primitives.TickBar>. Der Wert, der die <xref:System.Windows.Controls.Primitives.TickBar.ReservedSpace%2A> Eigenschaft ist in der Hälfte zerteilt unterteilt. Eine Hälfte des Speicherplatzes dient als Puffer auf einer Seite der Teilstriche Markierung Auflistung und die andere Hälfte des Speicherplatzes dient als Puffer auf das andere Ende der Auflistung.  
+  
+<a name="dependencyPropertyInfo_ReservedSpace"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.TickBar.ReservedSpaceProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReservedSpaceProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ReservedSpaceProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ReservedSpaceProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TickBar.ReservedSpaceProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.TickBar.ReservedSpace" />-Abhängigkeitseigenschaft. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionEnd">
+      <MemberSignature Language="C#" Value="public double SelectionEnd { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 SelectionEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TickBar.SelectionEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Endpunkt einer Auswahl.</summary>
+        <value>Der letzte Wert in einem Bereich von Werten zur Auswahl mehrerer Zellen. Der Standardwert ist -1.0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.Primitives.TickBar.IsSelectionRangeEnabled%2A> Eigenschaft muss festgelegt werden, um `true` für die <xref:System.Windows.Controls.Primitives.TickBar.SelectionStart%2A> und <xref:System.Windows.Controls.Primitives.TickBar.SelectionEnd%2A> Eigenschaften verwendet werden.  
+  
+<a name="dependencyPropertyInfo_SelectionEnd"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.TickBar.SelectionEndProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionEndProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SelectionEndProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SelectionEndProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TickBar.SelectionEndProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.TickBar.SelectionEnd" />-Abhängigkeitseigenschaft. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionStart">
+      <MemberSignature Language="C#" Value="public double SelectionStart { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 SelectionStart" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TickBar.SelectionStart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Ausgangspunkt einer Auswahl.</summary>
+        <value>Der erste Wert in einem Bereich von Werten zur Auswahl mehrerer Zellen. Der Standardwert ist -1.0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.Primitives.TickBar.IsSelectionRangeEnabled%2A> Eigenschaft muss festgelegt werden, um `true` für die <xref:System.Windows.Controls.Primitives.TickBar.SelectionStart%2A> und <xref:System.Windows.Controls.Primitives.TickBar.SelectionEnd%2A> Eigenschaften verwendet werden.  
+  
+<a name="dependencyPropertyInfo_SelectionStart"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.TickBar.SelectionStartProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionStartProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SelectionStartProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SelectionStartProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TickBar.SelectionStartProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.TickBar.SelectionStart" />-Abhängigkeitseigenschaft. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TickFrequency">
+      <MemberSignature Language="C#" Value="public double TickFrequency { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 TickFrequency" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TickBar.TickFrequency" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Abstand zwischen den Teilstrichen ab oder legt diesen fest.</summary>
+        <value>Der Abstand zwischen Teilstrichen. Der Standardwert ist 1 (1.0).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Controls.Slider.Ticks%2A> Eigenschaftensatz wird auf einen Wert, der nicht `null`die <xref:System.Windows.Controls.Slider.TickFrequency%2A> Eigenschaft wird nicht verwendet. Teilstriche gezeichnet werden, während des Intervalls aus, die von angegeben wird die <xref:System.Windows.Controls.Slider.TickFrequency%2A> beginnend mit dem Wert der Eigenschaft der <xref:System.Windows.Controls.Primitives.TickBar.Minimum%2A> -Eigenschaft, und Sie den Vorgang fortsetzen, bis der Wert der die <xref:System.Windows.Controls.Primitives.TickBar.Maximum%2A> Eigenschaft erreicht ist.  
+  
+<a name="dependencyPropertyInfo_TickFrequency"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.TickBar.TickFrequencyProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TickFrequencyProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TickFrequencyProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TickFrequencyProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TickBar.TickFrequencyProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.TickBar.TickFrequency" />-Abhängigkeitseigenschaft. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Ticks">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.DoubleCollection Ticks { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.DoubleCollection Ticks" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TickBar.Ticks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.DoubleCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Positionen der Teilstriche markiert.</summary>
+        <value>Ein <see cref="T:System.Windows.Media.DoubleCollection" /> die Positionen der Teilstriche. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Teilstriche, die von definiert sind die <xref:System.Windows.Controls.Primitives.TickBar.Ticks%2A> -Eigenschaft und sind außerhalb des Bereichs, die von definiert ist die <xref:System.Windows.Controls.Primitives.TickBar.Minimum%2A> und <xref:System.Windows.Controls.Primitives.TickBar.Maximum%2A> Eigenschaftswerte werden nicht angezeigt.  
+  
+ Wenn die <xref:System.Windows.Controls.Primitives.TickBar.Ticks%2A> Eigenschaft festgelegt ist, die <xref:System.Windows.Controls.Primitives.TickBar.TickFrequency%2A> Eigenschaft wird nicht verwendet.  
+  
+<a name="dependencyPropertyInfo_Ticks"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.TickBar.TicksProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TicksProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TicksProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TicksProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TickBar.TicksProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.TickBar.Ticks" />-Abhängigkeitseigenschaft. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

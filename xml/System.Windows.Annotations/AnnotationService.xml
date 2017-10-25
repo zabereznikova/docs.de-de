@@ -1,0 +1,608 @@
+<Type Name="AnnotationService" FullName="System.Windows.Annotations.AnnotationService">
+  <TypeSignature Language="C#" Value="public sealed class AnnotationService : System.Windows.Threading.DispatcherObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AnnotationService extends System.Windows.Threading.DispatcherObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Annotations.AnnotationService" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Threading.DispatcherObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Core-Dienste von Microsoft Anmerkungen Framework zum Verwalten und Anzeigen von benutzeranmerkungen dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen und Starten einer <xref:System.Windows.Annotations.AnnotationService>.  
+  
+ [!code-csharp[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXml/CSharp/Window1.xaml.cs#docviewxmlstartannotations)]
+ [!code-vb[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DocViewerAnnotationsXml/visualbasic/window1.xaml.vb#docviewxmlstartannotations)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Annotations.AnnotationService" /> Klasse zur Verwendung mit einem angegebenen Dokument Steuerelement anzeigen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Annotations.AnnotationService> kann verwendet werden, mit dem folgenden Dokument Steuerelemente anzeigen:  
+  
+-   <xref:System.Windows.Controls.FlowDocumentReader>  
+  
+-   <xref:System.Windows.Controls.FlowDocumentScrollViewer>  
+  
+-   <xref:System.Windows.Controls.Primitives.DocumentViewerBase>abgeleitete Unterklassen  
+  
+    -   <xref:System.Windows.Controls.DocumentViewer>  
+  
+    -   <xref:System.Windows.Controls.FlowDocumentPageViewer>  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Verwendung der <xref:System.Windows.Annotations.AnnotationService.%23ctor%2A> Konstruktor.  
+  
+ [!code-csharp[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXml/CSharp/Window1.xaml.cs#docviewxmlstartannotations)]
+ [!code-vb[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DocViewerAnnotationsXml/visualbasic/window1.xaml.vb#docviewxmlstartannotations)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AnnotationService (System.Windows.Controls.FlowDocumentReader viewer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Controls.FlowDocumentReader viewer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.AnnotationService.#ctor(System.Windows.Controls.FlowDocumentReader)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="viewer" Type="System.Windows.Controls.FlowDocumentReader" />
+      </Parameters>
+      <Docs>
+        <param name="viewer">Das zugeordnete Steuerelement zum Lesen des Dokuments die <see cref="T:System.Windows.Annotations.AnnotationService" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Annotations.AnnotationService" /> Klasse zur Verwendung mit einem angegebenen <see cref="T:System.Windows.Controls.FlowDocumentReader" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt die Verwendung der <xref:System.Windows.Annotations.AnnotationService.%23ctor%2A> Konstruktor.  
+  
+ [!code-csharp[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXml/CSharp/Window1.xaml.cs#docviewxmlstartannotations)]
+ [!code-vb[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DocViewerAnnotationsXml/visualbasic/window1.xaml.vb#docviewxmlstartannotations)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AnnotationService (System.Windows.Controls.FlowDocumentScrollViewer viewer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Controls.FlowDocumentScrollViewer viewer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.AnnotationService.#ctor(System.Windows.Controls.FlowDocumentScrollViewer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="viewer" Type="System.Windows.Controls.FlowDocumentScrollViewer" />
+      </Parameters>
+      <Docs>
+        <param name="viewer">Das Dokument anzeigen des zugeordneten Steuerelements die <see cref="T:System.Windows.Annotations.AnnotationService" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Annotations.AnnotationService" /> Klasse zur Verwendung mit einem angegebenen <see cref="T:System.Windows.Controls.FlowDocumentScrollViewer" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt die Verwendung der <xref:System.Windows.Annotations.AnnotationService.%23ctor%2A> Konstruktor.  
+  
+ [!code-csharp[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXml/CSharp/Window1.xaml.cs#docviewxmlstartannotations)]
+ [!code-vb[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DocViewerAnnotationsXml/visualbasic/window1.xaml.vb#docviewxmlstartannotations)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="viewer" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AnnotationService (System.Windows.Controls.Primitives.DocumentViewerBase viewer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Controls.Primitives.DocumentViewerBase viewer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.AnnotationService.#ctor(System.Windows.Controls.Primitives.DocumentViewerBase)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="viewer" Type="System.Windows.Controls.Primitives.DocumentViewerBase" />
+      </Parameters>
+      <Docs>
+        <param name="viewer">Das Dokument anzeigen des zugeordneten Steuerelements die <see cref="T:System.Windows.Annotations.AnnotationService" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Annotations.AnnotationService" /> Klasse zur Verwendung mit einem angegebenen <see cref="T:System.Windows.Controls.DocumentViewer" /> oder <see cref="T:System.Windows.Controls.FlowDocumentPageViewer" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor kann verwendet werden, mit <xref:System.Windows.Controls.Primitives.DocumentViewerBase> abgeleitete Steuerelemente:  
+  
+-   <xref:System.Windows.Controls.DocumentViewer>  
+  
+-   <xref:System.Windows.Controls.FlowDocumentPageViewer>  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Verwendung der <xref:System.Windows.Annotations.AnnotationService.%23ctor%2A> Konstruktor.  
+  
+ [!code-csharp[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXml/CSharp/Window1.xaml.cs#docviewxmlstartannotations)]
+ [!code-vb[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DocViewerAnnotationsXml/visualbasic/window1.xaml.vb#docviewxmlstartannotations)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="viewer" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearHighlightsCommand">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.RoutedUICommand ClearHighlightsCommand;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.RoutedUICommand ClearHighlightsCommand" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Annotations.AnnotationService.ClearHighlightsCommand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Befehl zum Löschen markieren von Anmerkungen in der aktuellen Auswahl.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie Menüelemente im weitergeleiteten Befehlen zuzuweisende [!INCLUDE[TLA#tla_titlexaml](~/includes/tlasharptla-titlexaml-md.md)].  
+  
+ [!code-xaml[DocViewerAnnotationsXps#CreateDeleteAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHighlightCommand">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.RoutedUICommand CreateHighlightCommand;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.RoutedUICommand CreateHighlightCommand" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Annotations.AnnotationService.CreateHighlightCommand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Befehl zum eine Anmerkung hervorheben auf die aktuelle Auswahl erstellen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie Menüelemente im weitergeleiteten Befehlen zuzuweisende [!INCLUDE[TLA#tla_titlexaml](~/includes/tlasharptla-titlexaml-md.md)].  
+  
+ [!code-xaml[DocViewerAnnotationsXps#CreateDeleteAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInkStickyNoteCommand">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.RoutedUICommand CreateInkStickyNoteCommand;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.RoutedUICommand CreateInkStickyNoteCommand" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Annotations.AnnotationService.CreateInkStickyNoteCommand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Befehl zum Erstellen einer Freihand-Anmerkung für die aktuelle Auswahl.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie weitergeleitete Befehlen Menüelemente im zugewiesen sind [!INCLUDE[TLA#tla_titlexaml](~/includes/tlasharptla-titlexaml-md.md)].  
+  
+ [!code-xaml[DocViewerAnnotationsXps#CreateDeleteAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTextStickyNoteCommand">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.RoutedUICommand CreateTextStickyNoteCommand;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.RoutedUICommand CreateTextStickyNoteCommand" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Annotations.AnnotationService.CreateTextStickyNoteCommand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Befehl zum Erstellen einer Text-Anmerkung für die aktuelle Auswahl.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie weitergeleitete Befehlen Menüelemente im zugewiesen sind [!INCLUDE[TLA#tla_titlexaml](~/includes/tlasharptla-titlexaml-md.md)].  
+  
+ [!code-xaml[DocViewerAnnotationsXps#CreateDeleteAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteAnnotationsCommand">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.RoutedUICommand DeleteAnnotationsCommand;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.RoutedUICommand DeleteAnnotationsCommand" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Annotations.AnnotationService.DeleteAnnotationsCommand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Befehl So löschen Sie alle Freihand-Note, Text-Hinweis und Hervorhebung Anmerkungen in der aktuellen Auswahl.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie Menüelemente im weitergeleiteten Befehlen zuzuweisende [!INCLUDE[TLA#tla_titlexaml](~/includes/tlasharptla-titlexaml-md.md)].  
+  
+ [!code-xaml[DocViewerAnnotationsXps#CreateDeleteAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteStickyNotesCommand">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.RoutedUICommand DeleteStickyNotesCommand;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.RoutedUICommand DeleteStickyNotesCommand" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Annotations.AnnotationService.DeleteStickyNotesCommand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Befehl zum Löschen aller Freihand-Hinweis und Text-Hinweis Anmerkungen in der aktuellen Auswahl dar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie weitergeleitete Befehlen Menüelemente im zugewiesen sind [!INCLUDE[TLA#tla_titlexaml](~/includes/tlasharptla-titlexaml-md.md)].  
+  
+ [!code-xaml[DocViewerAnnotationsXps#CreateDeleteAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Disable">
+      <MemberSignature Language="C#" Value="public void Disable ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Disable() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.AnnotationService.Disable" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Deaktiviert die Verarbeitung von Anmerkungen, und blendet alle sichtbare Anmerkungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Windows.Annotations.AnnotationService.Disable%2A> heißt alle Anmerkungen ausgeblendet.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Annotations.AnnotationService.Disable%2A> Methode beim Beenden der <xref:System.Windows.Annotations.AnnotationService>.  
+  
+ [!code-csharp[DocViewerAnnotationsXml#DocViewXmlStopAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXml/CSharp/Window1.xaml.cs#docviewxmlstopannotations)]
+ [!code-vb[DocViewerAnnotationsXml#DocViewXmlStopAnnotations](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DocViewerAnnotationsXml/visualbasic/window1.xaml.vb#docviewxmlstopannotations)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enable">
+      <MemberSignature Language="C#" Value="public void Enable (System.Windows.Annotations.Storage.AnnotationStore annotationStore);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Enable(class System.Windows.Annotations.Storage.AnnotationStore annotationStore) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.AnnotationService.Enable(System.Windows.Annotations.Storage.AnnotationStore)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="annotationStore" Type="System.Windows.Annotations.Storage.AnnotationStore" />
+      </Parameters>
+      <Docs>
+        <param name="annotationStore">Die Anmerkung Speicher zum Lesen, schreiben und Anzeigen von Anmerkungen verwendet werden soll.</param>
+        <summary>Ermöglicht die <see cref="T:System.Windows.Annotations.AnnotationService" /> für die Verwendung mit einem angegebenen <see cref="T:System.Windows.Annotations.Storage.AnnotationStore" /> und aller sichtbare Anmerkungen angezeigt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Windows.Annotations.AnnotationService.Enable%2A> heißt aller Anmerkungen im Fenster Statusmeldungsanzeige-Steuerelement angezeigt werden.  (Das Viewer-Steuerelement, das dem Anmerkungsdienst zugeordnete wird angegeben, im Parameter für die <xref:System.Windows.Annotations.AnnotationService.%23ctor%2A> Konstruktor.)  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Annotations.AnnotationService.Enable%2A> Methode, die beim Starten einer <xref:System.Windows.Annotations.AnnotationService>.  
+  
+ [!code-csharp[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXml/CSharp/Window1.xaml.cs#docviewxmlstartannotations)]
+ [!code-vb[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DocViewerAnnotationsXml/visualbasic/window1.xaml.vb#docviewxmlstartannotations)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="annotationStore" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetService">
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gibt die <see cref="T:System.Windows.Annotations.AnnotationService" /> eines angegebenen Dokuments, das Anzeigen von Steuerelement zugeordnet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Annotations.AnnotationService.GetService%2A> Methode kann verwendet werden, um das Zurückgeben der <xref:System.Windows.Annotations.AnnotationService> zugeordneten das folgende Dokument Steuerelemente anzeigen:  
+  
+-   <xref:System.Windows.Controls.FlowDocumentReader>  
+  
+-   <xref:System.Windows.Controls.FlowDocumentScrollViewer>  
+  
+-   <xref:System.Windows.Controls.Primitives.DocumentViewerBase>abgeleitete Unterklassen  
+  
+    -   <xref:System.Windows.Controls.DocumentViewer>  
+  
+    -   <xref:System.Windows.Controls.FlowDocumentPageViewer>  
+  
+ Der Viewer-Steuerelement, das die Anmerkung Service zugeordnet wird angegeben, im Parameter für die <xref:System.Windows.Annotations.AnnotationService.%23ctor%2A> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetService">
+      <MemberSignature Language="C#" Value="public static System.Windows.Annotations.AnnotationService GetService (System.Windows.Controls.FlowDocumentReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Annotations.AnnotationService GetService(class System.Windows.Controls.FlowDocumentReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.AnnotationService.GetService(System.Windows.Controls.FlowDocumentReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Annotations.AnnotationService</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Windows.Controls.FlowDocumentReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Das Dokumentsteuerelement-Reader zurückgegeben der <see cref="T:System.Windows.Annotations.AnnotationService" /> für die Instanz.</param>
+        <summary>Gibt die <see cref="T:System.Windows.Annotations.AnnotationService" /> verknüpft sind mit einem angegebenen <see cref="T:System.Windows.Controls.FlowDocumentReader" />.</summary>
+        <returns>Die <see cref="T:System.Windows.Annotations.AnnotationService" /> verknüpft sind, mit dem angegebenen Reader Dokumentsteuerelement; oder <see langword="null" /> , wenn der Reader angegebene Dokument keine enthält <see cref="T:System.Windows.Annotations.AnnotationService" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Annotations.AnnotationService.GetService%2A> Methode kann verwendet werden, um das Zurückgeben der <xref:System.Windows.Annotations.AnnotationService> zugeordneten das folgende Dokument Steuerelemente anzeigen:  
+  
+-   <xref:System.Windows.Controls.FlowDocumentReader>  
+  
+-   <xref:System.Windows.Controls.FlowDocumentScrollViewer>  
+  
+-   <xref:System.Windows.Controls.Primitives.DocumentViewerBase>abgeleitete Unterklassen  
+  
+    -   <xref:System.Windows.Controls.DocumentViewer>  
+  
+    -   <xref:System.Windows.Controls.FlowDocumentPageViewer>  
+  
+ Der Viewer-Steuerelement, das die Anmerkung Service zugeordnet wird angegeben, im Parameter für die <xref:System.Windows.Annotations.AnnotationService.%23ctor%2A> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetService">
+      <MemberSignature Language="C#" Value="public static System.Windows.Annotations.AnnotationService GetService (System.Windows.Controls.FlowDocumentScrollViewer viewer);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Annotations.AnnotationService GetService(class System.Windows.Controls.FlowDocumentScrollViewer viewer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.AnnotationService.GetService(System.Windows.Controls.FlowDocumentScrollViewer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Annotations.AnnotationService</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="viewer" Type="System.Windows.Controls.FlowDocumentScrollViewer" />
+      </Parameters>
+      <Docs>
+        <param name="viewer">Das Dokument-Viewer-Steuerelement zum Zurückgeben der <see cref="T:System.Windows.Annotations.AnnotationService" /> für die Instanz.</param>
+        <summary>Gibt die <see cref="T:System.Windows.Annotations.AnnotationService" /> verknüpft sind mit einem angegebenen <see cref="T:System.Windows.Controls.FlowDocumentScrollViewer" />.</summary>
+        <returns>Die <see cref="T:System.Windows.Annotations.AnnotationService" /> mit dem angegebenen Dokument-Viewer-Steuerelement; verknüpfte oder <see langword="null" /> , wenn das angegebene Viewer-Steuerelement keine enthält <see cref="T:System.Windows.Annotations.AnnotationService" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Annotations.AnnotationService.GetService%2A> Methode kann verwendet werden, um das Zurückgeben der <xref:System.Windows.Annotations.AnnotationService> zugeordneten das folgende Dokument Steuerelemente anzeigen:  
+  
+-   <xref:System.Windows.Controls.FlowDocumentReader>  
+  
+-   <xref:System.Windows.Controls.FlowDocumentScrollViewer>  
+  
+-   <xref:System.Windows.Controls.Primitives.DocumentViewerBase>abgeleitete Unterklassen  
+  
+    -   <xref:System.Windows.Controls.DocumentViewer>  
+  
+    -   <xref:System.Windows.Controls.FlowDocumentPageViewer>  
+  
+ Der Viewer-Steuerelement, das die Anmerkung Service zugeordnet wird angegeben, im Parameter für die <xref:System.Windows.Annotations.AnnotationService.%23ctor%2A> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="viewer" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetService">
+      <MemberSignature Language="C#" Value="public static System.Windows.Annotations.AnnotationService GetService (System.Windows.Controls.Primitives.DocumentViewerBase viewer);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Annotations.AnnotationService GetService(class System.Windows.Controls.Primitives.DocumentViewerBase viewer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.AnnotationService.GetService(System.Windows.Controls.Primitives.DocumentViewerBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Annotations.AnnotationService</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="viewer" Type="System.Windows.Controls.Primitives.DocumentViewerBase" />
+      </Parameters>
+      <Docs>
+        <param name="viewer">Das Dokument anzeigen auf Zurückgeben der Kontrolle der <see cref="T:System.Windows.Annotations.AnnotationService" /> für die Instanz.</param>
+        <summary>Gibt die <see cref="T:System.Windows.Annotations.AnnotationService" /> Instanz eines angegebenen Dokuments, das Anzeigen von Steuerelement zugeordnet.</summary>
+        <returns>Die <see cref="T:System.Windows.Annotations.AnnotationService" /> verknüpft sind, mit dem angegebenen Dokument Steuerelement anzeigen oder <see langword="null" /> , wenn das angegebene Dokument anzeigen Steuerelement keine enthält <see cref="T:System.Windows.Annotations.AnnotationService" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Annotations.AnnotationService.GetService%2A> Methode kann verwendet werden, um das Zurückgeben der <xref:System.Windows.Annotations.AnnotationService> zugeordneten das folgende Dokument Steuerelemente anzeigen:  
+  
+-   <xref:System.Windows.Controls.FlowDocumentReader>  
+  
+-   <xref:System.Windows.Controls.FlowDocumentScrollViewer>  
+  
+-   <xref:System.Windows.Controls.Primitives.DocumentViewerBase>abgeleitete Unterklassen  
+  
+    -   <xref:System.Windows.Controls.DocumentViewer>  
+  
+    -   <xref:System.Windows.Controls.FlowDocumentPageViewer>  
+  
+ Der Viewer-Steuerelement, das die Anmerkung Service zugeordnet wird angegeben, im Parameter für die <xref:System.Windows.Annotations.AnnotationService.%23ctor%2A> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="viewer" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnabled">
+      <MemberSignature Language="C#" Value="public bool IsEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Annotations.AnnotationService.IsEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Windows.Annotations.AnnotationService" /> aktiviert ist.</summary>
+        <value>
+          <see langword="true" />, wenn das <see cref="T:System.Windows.Annotations.AnnotationService" /> aktiviert ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Annotations.AnnotationService.IsEnabled%2A> Eigenschaft beim Erstellen und Starten einer <xref:System.Windows.Annotations.AnnotationService>.  Auch wenn der Benutzer entscheidet, öffnen Sie ein neues Dokument im Viewer-Steuerelement, das <xref:System.Windows.Annotations.AnnotationService> muss für das alte Dokument deaktiviert, und klicken Sie dann für das neue Dokument aktiviert sein.  
+  
+ [!code-csharp[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXml/CSharp/Window1.xaml.cs#docviewxmlstartannotations)]
+ [!code-vb[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DocViewerAnnotationsXml/visualbasic/window1.xaml.vb#docviewxmlstartannotations)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Store">
+      <MemberSignature Language="C#" Value="public System.Windows.Annotations.Storage.AnnotationStore Store { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Annotations.Storage.AnnotationStore Store" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Annotations.AnnotationService.Store" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Annotations.Storage.AnnotationStore</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Annotations.Storage.AnnotationStore" /> verwendete <see cref="T:System.Windows.Annotations.AnnotationService" />.</summary>
+        <value>Der von diesem <see cref="T:System.Windows.Annotations.Storage.AnnotationStore" /> verwendete <see cref="T:System.Windows.Annotations.AnnotationService" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Annotations.Storage.AnnotationStore> verwendet werden, indem Sie die <xref:System.Windows.Annotations.AnnotationService> wird als Parameter in des Diensts angegeben <xref:System.Windows.Annotations.AnnotationService.Enable%2A> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Annotations.AnnotationService.Store%2A> -Eigenschaft beim Starten und Beenden einer <xref:System.Windows.Annotations.AnnotationService>.  
+  
+ [!code-csharp[DocViewerAnnotationsXml#DocViewXmlStartStopAnnotat](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXml/CSharp/Window1.xaml.cs#docviewxmlstartstopannotat)]
+ [!code-vb[DocViewerAnnotationsXml#DocViewXmlStartStopAnnotat](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DocViewerAnnotationsXml/visualbasic/window1.xaml.vb#docviewxmlstartstopannotat)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

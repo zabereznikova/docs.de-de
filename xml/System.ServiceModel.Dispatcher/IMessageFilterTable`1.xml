@@ -1,0 +1,437 @@
+<Type Name="IMessageFilterTable&lt;TFilterData&gt;" FullName="System.ServiceModel.Dispatcher.IMessageFilterTable&lt;TFilterData&gt;">
+  <TypeSignature Language="C#" Value="public interface IMessageFilterTable&lt;TFilterData&gt; : System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt;&gt;, System.Collections.Generic.IDictionary&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt;, System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt;&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IMessageFilterTable`1&lt;TFilterData&gt; implements class System.Collections.Generic.ICollection`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;class System.ServiceModel.Dispatcher.MessageFilter, !TFilterData&gt;&gt;, class System.Collections.Generic.IDictionary`2&lt;class System.ServiceModel.Dispatcher.MessageFilter, !TFilterData&gt;, class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;class System.ServiceModel.Dispatcher.MessageFilter, !TFilterData&gt;&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.IMessageFilterTable`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TFilterData" />
+  </TypeParameters>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt;&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IDictionary&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt;&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="TFilterData">Der Typ von Daten, der jedem Filter in der Tabelle zugeordnet ist.</typeparam>
+    <summary>Eine <see langword="interface" />, die den Vertrag definiert, den eine Filtertabelle implementieren muss, um Nachrichten mit aus einem oder mehreren Filtern abgeleiteten Abfragekriterien zu überprüfen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Filtertabelle ist eine Kernkomponente des Filtermoduls. Das Filtermodul wird in [!INCLUDE[indigo1](~/includes/indigo1-md.md)] in erster Linie dazu verwendet, um die Anwendungslogik mit Nachrichten abzugleichen, indem alle Filter gesucht werden, die mit einer Nachricht übereinstimmen.  
+  
+ Eine Filtertabelle ermöglicht es, mehrere Filter effizienter mit einer einzigen Nachricht zu abzugleichen als dies bei separaten Vorgängen möglich wäre. Eine Filtertabelle ordnet Filterdaten Filtern zu. Die Tabelle ist eine Auflistung von Schlüssel-Wert-Paaren, wobei der Schlüssel der <xref:System.ServiceModel.Dispatcher.MessageFilter> ist und der Wert die zugeordneten Filterdaten. Filterdaten können alle Daten des Typs sein, der im generischen Parameter angegeben ist. Sie können verwendet werden, um die Aktionen anzugeben, die durchgeführt werden sollen, wenn eine Übereinstimmung zwischen einer Nachricht und einem Filter in der Tabelle gefunden wird.  
+  
+ Auf Filtertabelleneinträge kann mit der <xref:System.Collections.Generic.IDictionary%602>-Funktion zugegriffen werden, die <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601> erbt.  
+  
+ Beachten Sie, dass einer gegebenen <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601> eine Filterinstanz nur einmal hinzugefügt werden kann. Um mehrere Instanzen dieses Filters zur selben Filtertabelle hinzuzufügen, verwenden Sie einen Filterkonstruktor, mit dem Sie weitere Instanzen erstellen.  
+  
+ Ein Filter stimmt mit einer Nachricht überein, wenn die Nachricht die Abfragekriterien des Filters erfüllt. Es gibt vier überladene Abgleichmethoden. Die zurückgegebenen Daten sind entweder die Filterdaten oder die <xref:System.ServiceModel.Dispatcher.MessageFilter>-Objekte selbst. Diese Daten werden zurückgegeben, unabhängig davon, ob mehrere Übereinstimmungen oder nur eine einzige Übereinstimmung zulässig sind. In der folgenden Tabelle werden diese Informationen für jede Überladung dargestellt.  
+  
+|Methodenname|Entsprechungen|Zurückgegebene Daten|  
+|-----------------|-------------|-------------------|  
+|<xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601.GetMatchingValue%2A>|Single|`FilterData`|  
+|<xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601.GetMatchingFilter%2A>|Single|<xref:System.ServiceModel.Dispatcher.MessageFilter>|  
+|<xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601.GetMatchingValues%2A>|Mehrere|`FilterData`|  
+|<xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601.GetMatchingFilters%2A>|Mehrere|<xref:System.ServiceModel.Dispatcher.MessageFilter>-Objekte|  
+  
+ Jede Methode enthält zwei Überladungen. Der Unterschied zwischen den zwei Überladungen besteht darin, dass eine Überladung einen <xref:System.ServiceModel.Channels.Message>-Parameter entgegennimmt und den Textinhalt nicht überprüfen darf, während die andere einen <xref:System.ServiceModel.Channels.MessageBuffer>-Parameter entgegennimmt und alle Teile der Nachricht überprüfen kann. Wenn Sie eine Methode mit dem Nachrichtenparameter aufrufen und die Filtertabelle einen Filter enthält, der den Inhalt des Nachrichtentexts überprüft, wird eine Ausnahme ausgelöst. Falls Sie sich nicht sicher sind, ob die Tabelle einen entsprechenden Filter enthält, rufen Sie die Überladung auf, die einen Nachrichtenpuffer entgegennimmt.  
+  
+ Nachrichtenheader werden automatisch gepuffert und können durch einen Filter geprüft werden, ohne verwendet zu werden. Wenn jedoch der Text durch einen Filter überprüft werden soll, muss die gesamte Nachricht gepuffert werden, da eine nicht gepufferte Nachricht durch eine Abfrage verwendet und ihr Inhalt vernichtet wird.  
+  
+ Die folgenden Klassen implementieren <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601>:  
+  
+-   <xref:System.ServiceModel.Dispatcher.MessageFilterTable%601>  
+  
+-   <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601>  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Filtertabellen sind in Bezug auf das Abgleichen von Vorgängen threadsicher, in Bezug auf Änderungen sind sie jedoch nicht threadsicher. Threads, die auf eine Filtertabelle zugreifen, sollten durch <see cref="T:System.Threading.ReaderWriterLock" /> oder eine ähnliche Sperrsemantik synchronisiert werden. Diese Sperre lässt das Ausführen mehrerer Lesevorgänge der Filtertabelle (beispielsweise für einen Abgleichvorgang) gleichzeitig zu. Um jedoch in eine Filtertabelle zu schreiben (beispielsweise, um einen Filter hinzuzufügen), muss ein Thread auf eine exklusive Sperre warten.  
+  
+ Die gesamte Kompilierung wird durchgeführt, wenn der Tabelle Filter hinzugefügt werden. Wenn Sie eine Filtertabelle im Voraus erstellen und diese nicht bearbeiten werden, ist keine Sperre während eines Abgleichvorgangs erforderlich.</threadsafe>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName="GetMatchingFilter">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gibt einen Filter aus der Tabelle zurück, dessen Abfragekriterien durch eine angegebene Nachricht oder gepufferte Nachricht erfüllt werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, wenn davon ausgegangen wird, dass ein einzelner Filter mit der Nachricht übereinstimmt und der übereinstimmende Filter erforderlich ist.  
+  
+ Verwenden Sie <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601.GetMatchingFilter%2A>, wenn der Inhalt des Nachrichtentexts nicht geprüft werden muss. Verwenden Sie <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601.GetMatchingFilter%2A>, wenn der Inhalt des Nachrichtentexts möglicherweise geprüft werden muss.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn mehr als ein Filter mit der Nachricht übereinstimmt, muss <see cref="T:System.ServiceModel.Dispatcher.MultipleFilterMatchesException" /> ausgelöst werden.</para>
+        </block>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetMatchingFilter">
+      <MemberSignature Language="C#" Value="public bool GetMatchingFilter (System.ServiceModel.Channels.Message message, out System.ServiceModel.Dispatcher.MessageFilter result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetMatchingFilter(class System.ServiceModel.Channels.Message message, [out] class System.ServiceModel.Dispatcher.MessageFilter&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.IMessageFilterTable`1.GetMatchingFilter(System.ServiceModel.Channels.Message,System.ServiceModel.Dispatcher.MessageFilter@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="filter" Type="System.ServiceModel.Dispatcher.MessageFilter&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="message">Der zu überprüfende <see cref="T:System.ServiceModel.Channels.Message" />.</param>
+        <param name="result">To be added.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob das Übereinstimmungskriterium exakt eines Filters in der Tabelle durch die angegebene Nachricht erfüllt wird, und gibt diesen Filter in einem <see langword="out" />-Parameter zurück.</summary>
+        <returns>
+          <see langword="true" />, wenn das Übereinstimmungskriterium mindestens eines Filters in der Tabelle durch <paramref name="message" /> erfüllt wird; <see langword="false" />, wenn kein Filter übereinstimmt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, wenn davon ausgegangen wird, dass ein einzelner Filter mit der Nachricht übereinstimmt und der übereinstimmende Filter erforderlich ist.  
+  
+ Wenn der Text der Nachricht durch einen Filter in der Filtertabelle überprüft werden muss, verwenden Sie die <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601.GetMatchingFilter%2A>-Version der Methode.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn mehr als ein Filter mit der Nachricht übereinstimmt, muss <see cref="T:System.ServiceModel.Dispatcher.MultipleFilterMatchesException" /> ausgelöst werden.  
+  
+ Diese Version nimmt <see cref="T:System.ServiceModel.Channels.Message" /> entgegen und muss <see cref="T:System.ServiceModel.Dispatcher.InvalidBodyAccessException" /> auslösen, wenn versucht wird, den Nachrichtentext zu überprüfen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMatchingFilter">
+      <MemberSignature Language="C#" Value="public bool GetMatchingFilter (System.ServiceModel.Channels.MessageBuffer buffer, out System.ServiceModel.Dispatcher.MessageFilter result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetMatchingFilter(class System.ServiceModel.Channels.MessageBuffer buffer, [out] class System.ServiceModel.Dispatcher.MessageFilter&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.IMessageFilterTable`1.GetMatchingFilter(System.ServiceModel.Channels.MessageBuffer,System.ServiceModel.Dispatcher.MessageFilter@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageBuffer" Type="System.ServiceModel.Channels.MessageBuffer" />
+        <Parameter Name="filter" Type="System.ServiceModel.Dispatcher.MessageFilter&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">To be added.</param>
+        <param name="result">To be added.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob das Übereinstimmungskriterium exakt eines Filters in der Tabelle durch die angegebene Nachricht oder die gepufferte Nachricht erfüllt wird, und gibt diesen Filter in einem <see langword="out" />-Parameter zurück.</summary>
+        <returns>
+          <see langword="true" />, wenn das Übereinstimmungskriterium mindestens eines Filters in der Tabelle durch <paramref name="messageBuffer" /> erfüllt wird; <see langword="false" />, wenn kein Filter übereinstimmt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, wenn erwartet wird, dass ein einzelner Filter mit der gepufferten Nachricht übereinstimmt, der übereinstimmende Filter zurückgegeben werden muss und der Text der Nachricht möglicherweise überprüft werden muss.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetMatchingFilters">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Fügt einer Auflistung die Filter hinzu, deren Abfragekriterien durch eine angegebene Nachricht oder gepufferte Nachricht erfüllt werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie eine dieser Methoden, wenn davon ausgegangen wird, dass mehrere Filter mit der Nachricht übereinstimmen und übereinstimmende Filter erforderlich sind. Beachten Sie, dass die Auflistung, die die Filter enthält, erst gelöscht wird, wenn die Ergebnisse hinzugefügt wurden. Dies ermöglicht es Ihnen, alle Übereinstimmungen aus mehreren Filtertabellen in einer einzelnen Auflistung zu sammeln.  
+  
+ Wenn der Text der Nachricht durch einen Filter in der Filtertabelle überprüft werden muss, puffern Sie die Nachricht, und übergeben Sie sie an die <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601.GetMatchingFilters%2A>-Methode. Verwenden Sie andernfalls <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601.GetMatchingFilters%2A>.  
+  
+ Die übereinstimmenden <xref:System.ServiceModel.Dispatcher.MessageFilter>-Objekte werden im `results`-Parameter gespeichert. Die Filterdaten können anschließend aus der Filtertabelle wiederhergestellt werden, indem diese Filter als Schlüssel für die durch <xref:System.Collections.Generic.IDictionary%602> bereitgestellten Methoden verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetMatchingFilters">
+      <MemberSignature Language="C#" Value="public bool GetMatchingFilters (System.ServiceModel.Channels.Message message, System.Collections.Generic.ICollection&lt;System.ServiceModel.Dispatcher.MessageFilter&gt; results);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetMatchingFilters(class System.ServiceModel.Channels.Message message, class System.Collections.Generic.ICollection`1&lt;class System.ServiceModel.Dispatcher.MessageFilter&gt; results) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.IMessageFilterTable`1.GetMatchingFilters(System.ServiceModel.Channels.Message,System.Collections.Generic.ICollection{System.ServiceModel.Dispatcher.MessageFilter})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="results" Type="System.Collections.Generic.ICollection&lt;System.ServiceModel.Dispatcher.MessageFilter&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="message">Der zu überprüfende <see cref="T:System.ServiceModel.Channels.Message" />.</param>
+        <param name="results">Verweisparameter, der speichert die <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" /> Objekte, die in entsprechen <see cref="T:System.Collections.Generic.ICollection`1" /> &lt;Filter&gt;.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob das Übereinstimmungskriterium eines Filters in der Tabelle durch die angegebene Nachricht erfüllt wird und die übereinstimmenden Filter einer Auflistung hinzufügt.</summary>
+        <returns>
+          <see langword="true" />, wenn das Übereinstimmungskriterium mindestens eines Filters in der Tabelle durch <paramref name="message" /> erfüllt wird; <see langword="false" />, wenn kein Filter übereinstimmt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, wenn erwartet wird, dass mehrere Filter mit der Nachricht übereinstimmen, die übereinstimmenden Filter erforderlich sind und der Text der Nachricht nicht überprüft werden muss.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Version nimmt <see cref="T:System.ServiceModel.Channels.Message" /> entgegen und muss <see cref="T:System.ServiceModel.Dispatcher.InvalidBodyAccessException" /> auslösen, wenn versucht wird, den Nachrichtentext zu überprüfen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMatchingFilters">
+      <MemberSignature Language="C#" Value="public bool GetMatchingFilters (System.ServiceModel.Channels.MessageBuffer buffer, System.Collections.Generic.ICollection&lt;System.ServiceModel.Dispatcher.MessageFilter&gt; results);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetMatchingFilters(class System.ServiceModel.Channels.MessageBuffer buffer, class System.Collections.Generic.ICollection`1&lt;class System.ServiceModel.Dispatcher.MessageFilter&gt; results) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.IMessageFilterTable`1.GetMatchingFilters(System.ServiceModel.Channels.MessageBuffer,System.Collections.Generic.ICollection{System.ServiceModel.Dispatcher.MessageFilter})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageBuffer" Type="System.ServiceModel.Channels.MessageBuffer" />
+        <Parameter Name="results" Type="System.Collections.Generic.ICollection&lt;System.ServiceModel.Dispatcher.MessageFilter&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">To be added.</param>
+        <param name="results">Verweisparameter, der speichert die <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" /> Objekte, die in entsprechen <see cref="T:System.Collections.Generic.ICollection`1" /> &lt;Filter&gt;.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob das Übereinstimmungskriterium eines Filters in der Tabelle durch die angegebene gepufferte Nachricht erfüllt wird und die übereinstimmenden Filter einer Auflistung hinzufügt.</summary>
+        <returns>
+          <see langword="true" />, wenn das Übereinstimmungskriterium mindestens eines Filters in der Tabelle durch <paramref name="messageBuffer" /> erfüllt wird; <see langword="false" />, wenn kein Filter übereinstimmt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, wenn erwartet wird, dass mehrere Filter mit der gepufferten Nachricht übereinstimmen, der übereinstimmende Filter erforderlich ist und der Text der Nachricht möglicherweise überprüft werden muss.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetMatchingValue">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gibt einen Wert zurück, der angibt, ob das Übereinstimmungskriterium eines Filters in der Tabelle durch die angegebene Nachricht oder die gepufferte Nachricht erfüllt wird, und gibt die Filterdaten für den übereinstimmenden Filter zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie eine dieser Methoden, wenn erwartet wird, dass höchstens ein Filter mit der Nachricht übereinstimmt und nur die Filterdaten des übereinstimmenden Filters wiederhergestellt werden müssen. Diese Methoden geben einen booleschen Wert zurück, der angibt, ob ein übereinstimmender Filter gefunden wurde, und den Referenzparameter `data` auf die übereinstimmenden Filterdaten festlegt.  
+  
+ Verwenden Sie <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601.GetMatchingFilter%2A>, wenn der Text der Nachricht nicht durch einen Filter in der Filtertabelle überprüft wird.  
+  
+ Wenn der Text der Nachricht möglicherweise durch einen Filter in der Filtertabelle überprüft wird, puffern Sie die Nachricht, und übergeben Sie sie an die <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601.GetMatchingFilter%2A>-Version der Methode.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn mehr als ein Filter mit der Nachricht übereinstimmt, muss <see cref="T:System.ServiceModel.Dispatcher.MultipleFilterMatchesException" /> ausgelöst werden.</para>
+        </block>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetMatchingValue">
+      <MemberSignature Language="C#" Value="public bool GetMatchingValue (System.ServiceModel.Channels.Message message, out TFilterData data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetMatchingValue(class System.ServiceModel.Channels.Message message, [out] !TFilterData&amp; data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.IMessageFilterTable`1.GetMatchingValue(System.ServiceModel.Channels.Message,`0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="value" Type="TFilterData&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="message">Der zu überprüfende <see cref="T:System.ServiceModel.Channels.Message" />.</param>
+        <param name="data">To be added.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob das Übereinstimmungskriterium exakt eines Filters in der Tabelle durch die angegebene Nachricht erfüllt wird und fügt die übereinstimmenden Filterdaten einer Auflistung hinzu.</summary>
+        <returns>
+          <see langword="true" />, wenn das Übereinstimmungskriterium exakt eines Filters in der Tabelle durch die Nachricht erfüllt wird; <see langword="false" />, wenn kein Filter übereinstimmt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, wenn erwartet wird, dass ein einzelner Filter mit der Nachricht übereinstimmt und nur die Filterdaten des übereinstimmenden Filters wiederhergestellt werden müssen.  
+  
+ Bei dieser Methode wird höchstens ein einziger übereinstimmender Filter erwartet. Wenn mehr als ein Filter eine Übereinstimmung aufweist, muss <xref:System.ServiceModel.Dispatcher.MultipleFilterMatchesException> ausgelöst werden.  
+  
+ Wenn der Text der Nachricht durch einen Filter in der Filtertabelle überprüft werden muss, puffern Sie die Nachricht unter Verwendung von <xref:System.ServiceModel.Channels.Message.CreateBufferedCopy%2A>, und übergeben Sie sie an die <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601.GetMatchingValue%2A>-Version der Methode.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn mehr als ein Filter mit der Nachricht übereinstimmt, muss <see cref="T:System.ServiceModel.Dispatcher.MultipleFilterMatchesException" /> ausgelöst werden.  
+  
+ Diese Überladung nimmt <see cref="T:System.ServiceModel.Channels.Message" /> entgegen und muss <see cref="T:System.ServiceModel.Dispatcher.InvalidBodyAccessException" /> auslösen, wenn versucht wird, den Nachrichtentext zu überprüfen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMatchingValue">
+      <MemberSignature Language="C#" Value="public bool GetMatchingValue (System.ServiceModel.Channels.MessageBuffer buffer, out TFilterData data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetMatchingValue(class System.ServiceModel.Channels.MessageBuffer buffer, [out] !TFilterData&amp; data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.IMessageFilterTable`1.GetMatchingValue(System.ServiceModel.Channels.MessageBuffer,`0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageBuffer" Type="System.ServiceModel.Channels.MessageBuffer" />
+        <Parameter Name="value" Type="TFilterData&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">To be added.</param>
+        <param name="data">To be added.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob das Übereinstimmungskriterium exakt eines Filters in der Tabelle durch die angegebene gepufferte Nachricht erfüllt wird und die übereinstimmenden Filterdaten einer Auflistung hinzufügt.</summary>
+        <returns>
+          <see langword="true" />, wenn das Übereinstimmungskriterium exakt eines Filters in der Tabelle durch die Nachricht erfüllt wird; <see langword="false" />, wenn kein Filter übereinstimmt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, wenn erwartet wird, dass ein einzelner Filter mit der gepufferten Nachricht übereinstimmt, nur die Filterdaten aus dem übereinstimmenden Filter zurückgegeben werden müssen und der Text der Nachricht möglicherweise überprüft werden muss.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn mehr als ein Filter mit der Nachricht übereinstimmt, muss <see cref="T:System.ServiceModel.Dispatcher.MultipleFilterMatchesException" /> ausgelöst werden.</para>
+        </block>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetMatchingValues">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Fügt einer Auflistung die Filterdaten der Filter hinzu, die mit einer angegebenen Nachricht oder gepufferten Nachricht übereinstimmen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, wenn davon ausgegangen wird, dass mehrere Filter mit der Nachricht übereinstimmen und nur die übereinstimmenden Filterdaten erforderlich sind. Diese Methoden geben einen booleschen Wert zurück, der angibt, ob übereinstimmende Filter gefunden wurden, und alle übereinstimmenden Filterdaten in eine Auflistung einfügt.  
+  
+ Beachten Sie, dass die Auflistung, die die Filterdaten enthält, erst gelöscht wird, wenn die Ergebnisse hinzugefügt wurden. Dies ermöglicht es Ihnen, alle Übereinstimmungen aus mehreren Filtertabellen in einer einzelnen Auflistung zu sammeln.  
+  
+ Verwenden Sie <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601.GetMatchingValues%2A>, wenn der Inhalt des Nachrichtentexts nicht geprüft werden muss. Verwenden Sie <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601.GetMatchingValues%2A>, wenn der Inhalt des Nachrichtentexts geprüft werden muss.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetMatchingValues">
+      <MemberSignature Language="C#" Value="public bool GetMatchingValues (System.ServiceModel.Channels.Message message, System.Collections.Generic.ICollection&lt;TFilterData&gt; results);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetMatchingValues(class System.ServiceModel.Channels.Message message, class System.Collections.Generic.ICollection`1&lt;!TFilterData&gt; results) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.IMessageFilterTable`1.GetMatchingValues(System.ServiceModel.Channels.Message,System.Collections.Generic.ICollection{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="results" Type="System.Collections.Generic.ICollection&lt;TFilterData&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="message">Der zu überprüfende <see cref="T:System.ServiceModel.Channels.Message" />.</param>
+        <param name="results">Verweisparameter, der die Filterdaten der übereinstimmenden Filter in einer generischen Auflistung speichert.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob das Übereinstimmungskriterium mindestens eines Filters in der Tabelle durch die angegebene Nachricht erfüllt wird und die <paramref name="FilterData" /> der übereinstimmenden Filter einer Auflistung hinzufügt.</summary>
+        <returns>
+          <see langword="true" />, wenn das Übereinstimmungskriterium mindestens eines Filters in der Tabelle durch <paramref name="message" /> erfüllt wird; <see langword="false" />, wenn kein Filter übereinstimmt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, wenn erwartet wird, dass ein oder mehrere Filter mit der Nachricht übereinstimmen, nur die Filterdaten erforderlich sind und der Inhalt des Nachrichtentexts nicht überprüft werden muss.  
+  
+ Die Filterdaten der übereinstimmenden <xref:System.ServiceModel.Dispatcher.MessageFilter>-Objekte werden im `results`-Parameter gespeichert.  
+  
+ Wenn der Text der Nachricht durch einen Filter in der Filtertabelle überprüft wird, puffern Sie die Nachricht, und übergeben Sie sie an die <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601.GetMatchingValues%2A>-Version der Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMatchingValues">
+      <MemberSignature Language="C#" Value="public bool GetMatchingValues (System.ServiceModel.Channels.MessageBuffer buffer, System.Collections.Generic.ICollection&lt;TFilterData&gt; results);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetMatchingValues(class System.ServiceModel.Channels.MessageBuffer buffer, class System.Collections.Generic.ICollection`1&lt;!TFilterData&gt; results) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.IMessageFilterTable`1.GetMatchingValues(System.ServiceModel.Channels.MessageBuffer,System.Collections.Generic.ICollection{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageBuffer" Type="System.ServiceModel.Channels.MessageBuffer" />
+        <Parameter Name="results" Type="System.Collections.Generic.ICollection&lt;TFilterData&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">To be added.</param>
+        <param name="results">Verweisparameter, der die Filterdaten der übereinstimmenden speichert Filter in einem generischen <see cref="T:System.Collections.Generic.ICollection`1" /> &lt; <c>"filterdata"</c>&gt;.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob das Übereinstimmungskriterium mindestens eines Filters in der Tabelle durch die angegebene gepufferte Nachricht erfüllt wird und die <paramref name="FilterData" /> der übereinstimmenden Filter einer Auflistung hinzufügt.</summary>
+        <returns>
+          <see langword="true" />, wenn das Übereinstimmungskriterium mindestens eines Filters in der Tabelle durch <paramref name="messageBuffer" /> erfüllt wird; <see langword="false" />, wenn kein Filter übereinstimmt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, wenn erwartet wird, dass ein oder mehrere Filter mit der gepufferten Nachricht übereinstimmen, nur die Filterdaten erforderlich sind und der Inhalt des Nachrichtentexts möglicherweise überprüft werden muss.  
+  
+ Die Filterdaten der übereinstimmenden <xref:System.ServiceModel.Dispatcher.MessageFilter>-Objekte werden im `results`-Parameter gespeichert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

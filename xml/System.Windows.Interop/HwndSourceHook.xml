@@ -1,0 +1,39 @@
+<Type Name="HwndSourceHook" FullName="System.Windows.Interop.HwndSourceHook">
+  <TypeSignature Language="C#" Value="public delegate IntPtr HwndSourceHook(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HwndSourceHook extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Interop.HwndSourceHook" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="hwnd" Type="System.IntPtr" />
+    <Parameter Name="msg" Type="System.Int32" />
+    <Parameter Name="wParam" Type="System.IntPtr" />
+    <Parameter Name="lParam" Type="System.IntPtr" />
+    <Parameter Name="handled" Type="System.Boolean&amp;" RefType="ref" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.IntPtr</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="hwnd">Das Fensterhandle.</param>
+    <param name="msg">Die Meldungs-ID.</param>
+    <param name="wParam">Die Nachricht wParam-Wert.</param>
+    <param name="lParam">Die Nachricht lParam-Wert.</param>
+    <param name="handled">Ein Wert, der angibt, ob die Meldung verarbeitet wurde. Legen Sie den Wert auf <see langword="true" /> war die Nachricht verarbeitet, andernfalls <see langword="false" />.</param>
+    <summary>Stellt die Methode, die Win32-Windows-Meldungen verarbeitet.</summary>
+    <returns>Der entsprechenden Rückgabewert hängt von der jeweiligen Meldung ab. Finden Sie in der Dokumentation für die [!INCLUDE[TLA2#tla_win32](~/includes/tla2sharptla-win32-md.md)] Nachricht verarbeitet wird.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Interop.HwndSource.AddHook%2A> Methode, um diesen Handler zum Empfangen von Nachrichten zu registrieren.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

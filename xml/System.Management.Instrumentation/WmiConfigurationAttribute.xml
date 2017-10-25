@@ -1,0 +1,273 @@
+<Type Name="WmiConfigurationAttribute" FullName="System.Management.Instrumentation.WmiConfigurationAttribute">
+  <TypeSignature Language="C#" Value="public sealed class WmiConfigurationAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WmiConfigurationAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Instrumentation.WmiConfigurationAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Das WmiConfiguration-Attribut gibt an, dass eine Assembly Code enthält, der einen WMI-Anbieter mithilfe des WMI.NET-Anbietererweiterungenmodells implementiert. Das Attribut akzeptiert Parameter, die die Konfiguration des implementierten WMI-Anbieters auf hoher Ebene einrichten.  
+  
+ Hinweis: Die WMI .NET-Bibliotheken werden jetzt als abgeschlossen betrachtet, und keine weiteren Entwicklungen, Verbesserungen oder Updates werden für nicht sicherheitsrelevante Aspekte verfügbar sein, die diese Bibliotheken betreffen. Die [MI APIs](https://msdn.microsoft.com/en-us/library/jj152383%28v=vs.80%29.aspx) für alle neuen Entwicklungen verwendet werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle enthält die Parameter akzeptiert, die von diesem Attribut zusammen mit welcher Aspekt der Anbieterkonfiguration es Ihnen zu steuern ermöglicht.  
+  
+|Parameter|Konfiguriert|  
+|---------------|----------------|  
+|<xref:System.Management.Instrumentation.WmiConfigurationAttribute.Scope>|Der Namespace, in dem der Anbieter Klassen verfügbar macht.|  
+|<xref:System.Management.Instrumentation.WmiConfigurationAttribute.NamespaceSecurity>|-Die Sicherheit (DACL) für den Namespace verwendet.|  
+|<xref:System.Management.Instrumentation.WmiConfigurationAttribute.HostingModel>|-Die Host-Modell, das vom Anbieter verwendet werden.|  
+|<xref:System.Management.Instrumentation.WmiConfigurationAttribute.IdentifyLevel>|– Der Identitätswechselmodus des Anbieters.|  
+|<xref:System.Management.Instrumentation.WmiConfigurationAttribute.HostingGroup>|Die hosting-Gruppe, der der Anbieter gehört. Dieser Parameter gilt nur, um den prozessinternen Anbieter.|  
+|<xref:System.Management.Instrumentation.WmiConfigurationAttribute.SecurityRestriction>|Die Sicherheit (DACL) für den WMI-Anbieter.|  
+  
+   
+  
+## Examples  
+  
+```  
+// Specify that this assembly contains code that implements a WMI  
+// Provider. Use the assembly:WmiConfiguration attribute to define  
+// the WMI namespace, the hosting model, and the impersonation mode  
+// of the WMI provider.  
+// The attribute below specifies that the class this provider  
+// exposes to WMI will be in the root/MortgageCalc namespace, will  
+// use the decoupled hosting model and will not allow the provider  
+// to impersonate its callers.  
+  
+[assembly: WmiConfiguration("root/MortgageCalc",HostingModel = ManagementHostingModel.Decoupled, IdentifyLevel = false)]  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WmiConfigurationAttribute (string scope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string scope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Instrumentation.WmiConfigurationAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scope" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="scope">Der WMI-Namespace, in dem der Anbieter Klassen verfügbar machen. Zum Beispiel: "Root\MyProviderNamespace".</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Management.WmiConfigurationAttribute" /> Klasse, die den WMI-Namespace angibt, in dem der WMI-Anbieter Klassen verfügbar macht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein WMI-Anbieter muss seine Klassen in einem Namespace verfügbar machen. Aus diesem Grund müssen den Konstruktor Bereichs als Parameter ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostingGroup">
+      <MemberSignature Language="C#" Value="public string HostingGroup { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HostingGroup" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Instrumentation.WmiConfigurationAttribute.HostingGroup" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die hosting-Gruppe für den WMI-Anbieter.</summary>
+        <value>Ein <see cref="T:System.String" /> Wert, der der Gruppe "hosting" für den WMI-Anbieter angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Hostgruppen gelten nur für Anbieter, bei denen prozessintern gehostet. Der Wert wird für Entkoppelte Anbieter ignoriert.  
+  
+ Eine Hostgruppe ist eine Reihe von prozessinternen Anbietern, die alle den gleichen hosting Gruppennamen zugewiesen sind. Das hosting Gruppenname ist eine Zeichenfolge, die Sie definieren, um die Anbieter logisch zu gruppieren. Alle in-Process-Anbieter in der gleichen hosting-Gruppe, die unter den gleichen Sicherheitskontext ausgeführt werden in einer einzelnen Instanz des Prozesses Wmiprvse.exe gehostet. Also freigeben Anbieter, die den gleichen Kontext für hosting und nutzen die gleichen Dienstprozess Host.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel die <xref:System.Management.Instrumentation.WmiConfigurationAttribute> wird verwendet, um anzugeben, dass die Assembly, die sie in enthalten ist einen in-Process-Anbieter, der im Sicherheitskontext des NetworkService ausgeführt wird und gehostet wird in einer Instanz des Prozesses Wmiprvse.exe implementiert, die auch eine hostet andere in-Process-Anbieter in der gleichen hosting-Gruppe, die auch innerhalb des Sicherheitskontexts NetworkService ausgeführt.  
+  
+```  
+[assembly: WmiConfiguration("root\\NVPair", HostingModel = ManagementHostingModel.NetworkService), HostingGroup = "MyProviders"]  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostingModel">
+      <MemberSignature Language="C#" Value="public System.Management.Instrumentation.ManagementHostingModel HostingModel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.Instrumentation.ManagementHostingModel HostingModel" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Instrumentation.WmiConfigurationAttribute.HostingModel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.Instrumentation.ManagementHostingModel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Hostmodell für den WMI-Anbieter.</summary>
+        <value>Ein <see cref="T:System.Management.Instrumentation.ManagementHostingModel" /> Wert, der das Hostingmodell des WMI-Anbieters angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ WMI-Anbieter können von einer Anwendung oder vom WMI-Dienst gehostet werden. WMI-Anbieter, die von einer Anwendung gehostet wird, werden als Entkoppelte Anbieter bezeichnet. Die von der WMI-Dienst gehostet werden in-Process-Anbieter aufgerufen. Das hosting Modellwert bestimmt das Hostingmodell Modell- und bei prozessinternen Anbieter, das Konto (Sicherheitskontext) unter dem der Anbieter ausgeführt wird. Weitere Details zu den möglichen Werten von HostingModel finden Sie unter <xref:System.Management.Instrumentation.ManagementHostingModel>.  
+  
+ Weitere Informationen zum Hosten von Modellen finden Sie unter der [Anbieterhosting und Sicherheit](http://go.microsoft.com/fwlink/?LinkId=100075) Thema in der WMI-SDK auf MSDN.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel die <xref:System.Management.Instrumentation.WmiConfigurationAttribute> wird verwendet, um anzugeben, dass die Assembly, die sie, in enthalten ist einen Anbieter implementiert, der durch den Root\NVPair-Namespace verfügbar gemacht wird. Da der Host-Modell nicht ist <xref:System.Management.Instrumentation.ManagementHostingModel.Decoupled>, es ist ein in-Process-Anbieter. Der Wert <xref:System.Management.Instrumentation.ManagementHostingModel.NetworkService> gibt an, dass der in-Process-Anbieter im Sicherheitskontext des NetworkService ausgeführt wird.  
+  
+```  
+[assembly: WmiConfiguration("root\\NVPair", HostingModel = ManagementHostingModel.NetworkService)]  
+```  
+  
+ Im nächsten Beispiel der <xref:System.Management.Instrumentation.WmiConfigurationAttribute> wird verwendet, um anzugeben, dass die Assembly, die sie, in enthalten ist einen Anbieter implementiert, der durch den Root\NVPair-Namespace verfügbar gemacht wird. Der Wert <xref:System.Management.Instrumentation.ManagementHostingModel.Decoupled> gibt an, dass es sich um einen Entkoppelte Anbieter ist.  
+  
+```  
+[assembly: WmiConfiguration("root\\NVPair", HostingModel = ManagementHostingModel.Decoupled)]  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IdentifyLevel">
+      <MemberSignature Language="C#" Value="public bool IdentifyLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IdentifyLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Instrumentation.WmiConfigurationAttribute.IdentifyLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der WMI-Anbieter seine Aufrufer Identität annehmen kann. Wenn der Wert auf "false" festgelegt ist, kann der Anbieter nicht imitieren, und wenn der Wert "true" ist, kann der Anbieter die Identität.</summary>
+        <value>Ein boolescher Wert, der angibt, ob ein Anbieter seine Aufrufer nicht imitieren kann oder kann. Wenn der Wert auf "false" festgelegt ist, kann der Anbieter nicht imitieren, und wenn der Wert "true" ist, kann der Anbieter die Identität.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie im Thema "Provider Hosting und Sicherheit" in der MSDN Library online unter [http://www.msdn.com](http://www.msdn.com/).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht den IdentifyLevel-Parameter verwenden, um anzugeben, dass der Anbieter seine Aufrufer imitieren kann.  
+  
+```  
+[assembly: WmiConfiguration("root/MyProv", HostingModel = ManagementHostingModel.Decoupled, IdentifyLevel = true]  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NamespaceSecurity">
+      <MemberSignature Language="C#" Value="public string NamespaceSecurity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NamespaceSecurity" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Instrumentation.WmiConfigurationAttribute.NamespaceSecurity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Zeichenfolge Security Descriptor Definition Language (SDDL), die die Sicherheitsbeschreibung für den Namespace angibt, in dem der Anbieter Verwaltungsobjekten verfügbar macht.</summary>
+        <value>Eine SDDL-Zeichenfolge, die die Sicherheitsbeschreibung für den Namespace darstellt, in dem der Anbieter Verwaltungsobjekten verfügbar macht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Darstellung von Sicherheitsdeskriptoren im SDDL-Format finden Sie unter der [Sicherheitsbeschreibungsformat Zeichenfolge](http://go.microsoft.com/fwlink/?LinkId=100763) Thema in der MSDN Library.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Namespacesicherheit-Parameter verwenden, um die Sicherheitsbeschreibung für den Namespace Root/SDTest festgelegt, in dem der Anbieter, die in dieser Assembly implementiert WMI-Klassen verfügbar macht.  
+  
+```  
+[assembly: WmiConfiguration("root/SDTest", HostingModel = ManagementHostingModel.Decoupled, IdentifyLevel = false, NamespaceSecurity = "O:BAG:BAD:(A;CI;0x60003;;;WD)")]  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scope">
+      <MemberSignature Language="C#" Value="public string Scope { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Scope" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Instrumentation.WmiConfigurationAttribute.Scope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den WMI-Namespace, in dem der WMI-Anbieter Klassen verfügbar macht.</summary>
+        <value>Ein <see cref="T:System.String" /> Wert, der den Namespace angibt, in dem der WMI-Anbieter macht Klassen verfügbar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein WMI-Namespace ist eine Kategorie in das WMI-Repository. Die am häufigsten verwendeten Root/cimv2 Namespace enthält Klassen, die das Common Information Model, Version 2, vom Consortium Desktop Management Task Force (DMTF) definierte beschreiben. Sie sollten Ihre Anbieter in diesem Namespace nur bereitstellen, wenn Sie nach dem Standand CIM-Modell erweitern. Andernfalls sollten Sie einen entsprechenden Namespace erstellen, der Benutzern den Typ des WMI-Klassen, die sie erwarten können verdeutlicht, finden Sie im Namespace.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityRestriction">
+      <MemberSignature Language="C#" Value="public string SecurityRestriction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SecurityRestriction" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Instrumentation.WmiConfigurationAttribute.SecurityRestriction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Sicherheitsbeschreibung für den WMI-Anbieter. Weitere Informationen finden Sie die Informationen im Thema "__Win32Provider" in der MSDN-Onlinebibliothek auf SecurityDescriptor [http://www.msdn.com](http://www.msdn.com/).</summary>
+        <value>Ein <see cref="T:System.String" /> Wert, der die Sicherheitsbeschreibung für den WMI-Anbieter enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,75 @@
+<Type Name="ByteConverter" FullName="System.ComponentModel.ByteConverter">
+  <TypeSignature Language="C#" Value="public class ByteConverter : System.ComponentModel.BaseNumberConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ByteConverter extends System.ComponentModel.BaseNumberConverter" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.ByteConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.BaseNumberConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Typkonverter für das Konvertieren von 8-Bit-Objekten, die ganze Zahlen ohne Vorzeichen sind, in verschiedene andere und aus verschiedenen anderen Darstellungen bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konverter kann nur eine 8-Bit-Ganzzahl ohne Vorzeichen zu und aus einer Zeichenfolge konvertieren.  
+  
+ Weitere Informationen zu den Einsatz von Typkonvertern, finden Sie unter der <xref:System.ComponentModel.TypeConverter> Basisklasse und [Vorgehensweise: Implementieren eines Typkonverters](http://msdn.microsoft.com/library/90373a3f-d8c8-492d-841c-945d62393c56).  
+  
+> [!NOTE]
+>  Erstellen Sie nie eine Instanz von einem <xref:System.ComponentModel.ByteConverter>. Rufen Sie stattdessen die <xref:System.ComponentModel.TypeDescriptor.GetConverter%2A> Methode <xref:System.ComponentModel.TypeDescriptor>. Weitere Informationen finden Sie in den Beispielen in der <xref:System.ComponentModel.TypeConverter> Basisklasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird deklariert und initialisiert ein 8-Bit-Ganzzahl ohne Vorzeichen und einer Zeichenfolge. Anschließend konvertiert der Code jede von ihnen in den anderen Typ bzw..  
+  
+ [!code-cpp[Converters#4](~/samples/snippets/cpp/VS_Snippets_Winforms/Converters/CPP/converters.cpp#4)]
+ [!code-csharp[Converters#4](~/samples/snippets/csharp/VS_Snippets_Winforms/Converters/CS/converters.cs#4)]
+ [!code-vb[Converters#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Converters/VB/converters.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ByteConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ByteConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.ByteConverter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

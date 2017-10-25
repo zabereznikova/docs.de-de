@@ -1,0 +1,94 @@
+<Type Name="CrossDomainMoveControl" FullName="System.DirectoryServices.Protocols.CrossDomainMoveControl">
+  <TypeSignature Language="C#" Value="public class CrossDomainMoveControl : System.DirectoryServices.Protocols.DirectoryControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CrossDomainMoveControl extends System.DirectoryServices.Protocols.DirectoryControl" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.Protocols.CrossDomainMoveControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.DirectoryServices.Protocols.DirectoryControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.DirectoryServices.Protocols.CrossDomainMoveControl" /> Klasse wird verwendet, mit einem <see cref="T:System.DirectoryServices.Protocols.ModifyDNRequest" /> Objekt ein LDAP-Objekt aus einer Domäne in eine andere verschoben.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CrossDomainMoveControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.CrossDomainMoveControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Der <see cref="M:System.DirectoryServices.Protocols.CrossDomainMoveControl.#ctor" />-Konstruktor erstellt eine Instanz der <see cref="T:System.DirectoryServices.Protocols.CrossDomainMoveControl" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CrossDomainMoveControl (string targetDomainController);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string targetDomainController) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.CrossDomainMoveControl.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="targetDomainController" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetDomainController">Der DNS-Name des Ziel-Domänencontrollers.</param>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.CrossDomainMoveControl.#ctor(System.String)" /> Konstruktor erstellt eine Instanz der <see cref="T:System.DirectoryServices.Protocols.CrossDomainMoveControl" /> -Klasse unter Verwendung der angegebenen Zieldomäne.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public override byte[] GetValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] GetValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.CrossDomainMoveControl.GetValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.CrossDomainMoveControl.GetValue" /> Methodenrückgabe binäre Darstellung des <see cref="T:System.DirectoryServices.Protocols.CrossDomainMoveControl" />.</summary>
+        <returns>Die binäre Darstellung von <see cref="T:System.DirectoryServices.Protocols.CrossDomainMoveControl" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetDomainController">
+      <MemberSignature Language="C#" Value="public string TargetDomainController { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetDomainController" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.CrossDomainMoveControl.TargetDomainController" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.DirectoryServices.Protocols.CrossDomainMoveControl.TargetDomainController" /> Eigenschaft ruft ab oder legt den DNS-Namen des Ziel-Domänencontrollers (DC).</summary>
+        <value>Der DNS-Name des Ziel-DC.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

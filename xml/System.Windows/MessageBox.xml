@@ -1,0 +1,555 @@
+<Type Name="MessageBox" FullName="System.Windows.MessageBox">
+  <TypeSignature Language="C#" Value="public sealed class MessageBox" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MessageBox extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.MessageBox" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Zeigt ein Meldungsfenster an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Meldungsfeld wird eine vorgefertigte modales Dialogfeld, in dem eine Textnachricht mit einem Benutzer angezeigt. Ein Meldungsfeld wird angezeigt, durch Aufrufen der statischen <xref:System.Windows.MessageBox.Show%2A> Methode der <xref:System.Windows.MessageBox> Klasse. Die Text-Meldung, die angezeigt wird, wird das Zeichenfolgenargument, das Sie übergeben <xref:System.Windows.MessageBox.Show%2A>. Verschiedene Überladungen der der <xref:System.Windows.MessageBox.Show%2A> Methode ist es auch ermöglicht Ihnen, eine Beschriftung der Titelleiste zu senden.  
+  
+ So aktivieren Sie einen Benutzer aus, um ein Dialogfeld zu schließen <xref:System.Windows.MessageBox.Show%2A> zeigt ein Meldungsfeld mit einer **OK** Schaltfläche und ein **schließen** Schaltfläche in der Titelleiste.  
+  
+ Ein Meldungsfeld können auch um einem Benutzer eine Frage zu stellen. Die Antworten der Benutzer durch Klicken auf eine Reihe von Schaltflächen, die Sie angeben, dass mithilfe der <xref:System.Windows.MessageBoxButton> Enumeration. Sie können diese Enumeration an mehrere Überladungen der übergeben der <xref:System.Windows.MessageBox.Show%2A> Methode. Der Standardwert der <xref:System.Windows.MessageBoxButton> Enumeration ist <xref:System.Windows.MessageBoxButton.OK>.  
+  
+ Sie können bestimmen, welche klickt ein Benutzer durch Auswertung des Werts, <xref:System.Windows.MessageBox.Show%2A> zurückgibt. Der Rückgabewert ist der Wert der <xref:System.Windows.MessageBoxResult> -Enumeration, wobei jeder Wert ist identisch mit dem eine der Schaltflächen, die ein Meldungsfeld angezeigt werden kann. Der Standardwert für das Meldungsfeld wird <xref:System.Windows.MessageBoxResult.OK> da **OK** ist die Standardschaltfläche der Nachricht ein. Allerdings einige der Überladungen der <xref:System.Windows.MessageBox.Show%2A> Methode ermöglichen es Ihnen, geben Sie einen anderen <xref:System.Windows.MessageBoxResult> default-Wert.  
+  
+ Meldungsfelder Übermittlung von Informationen und können Fragen, die in unterschiedlichem Umfang Bedeutung haben. Meldungsfelder verwenden Symbole, um die Wichtigkeit anzugeben. Beispielsweise können Symbole anzugeben, ob die Meldung nur zu Informationszwecken dient, eine Warnung ist oder wichtig ist. Die <xref:System.Windows.MessageBoxImage> Enumeration kapselt den Satz von möglichen Feld Symbole. Standardmäßig zeigt ein Meldungsfeld kein Symbol. Sie können jedoch übergeben einer <xref:System.Windows.MessageBoxImage> Wert, der eine von mehreren <xref:System.Windows.MessageBox.Show%2A> methodenüberladungen, um anzugeben, dass das Meldungsfeld ein Symbol enthält.  
+  
+ Meldungsfelder bieten manchmal auch spezielle Funktionen, wie das Lesen von rechts nach links. Sie können das Verhalten des ein Meldungsfeld anpassen, indem Sie mit einem oder mehreren <xref:System.Windows.MessageBoxOptions> Enumerationswerte, die von einigen Überladungen der akzeptiert werden die <xref:System.Windows.MessageBox.Show%2A> Methode.  
+  
+ Meldungsfelder verfügen immer über kein Besitzerfenster. Standardmäßig ist der Besitzer eines Meldungsfelds das Fenster, in einer Anwendung zur Zeit aktiv sind, die ein Meldungsfeld geöffnet wird. Sie können jedoch angeben, einen anderen Besitzer für die <xref:System.Windows.Window> mit mehreren <xref:System.Windows.MessageBox.Show%2A> Überladungen. Weitere Informationen zu Windows Besitzer, finden Sie unter <xref:System.Windows.Window.Owner%2A?displayProperty=nameWithType>.  
+  
+ Weitere Informationen finden Sie unter [MessageBox Sample](http://go.microsoft.com/fwlink/?LinkID=160023).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName="Show">
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Zeigt ein Meldungsfenster an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie eine Überladung von der <xref:System.Windows.MessageBox.Show%2A> -Methode, die Ihnen ermöglicht, eine Besitzerfenster festzulegen. Andernfalls ist das Meldungsfeld Fenster Besitz, die derzeit aktiv ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.MessageBoxResult Show (string messageBoxText);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.MessageBoxResult Show(string messageBoxText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.MessageBox.Show(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.MessageBoxResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageBoxText" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="messageBoxText">Ein <see cref="T:System.String" /> , die den anzuzeigenden Text angibt.</param>
+        <summary>Zeigt ein Meldungsfeld, hat eine Nachricht, die ein Ergebnis zurückgibt.</summary>
+        <returns>Ein <see cref="T:System.Windows.MessageBoxResult" /> Wert, der angibt, welche Schaltfläche im Meldungsfeld vom Benutzer geklickt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie diese Überladung verwenden die <xref:System.Windows.MessageBox.Show%2A> Methode.  
+  
+ [!code-csharp[MessageBoxSnippets#MessageBoxShow1CODE](~/samples/snippets/csharp/VS_Snippets_Wpf/MessageBoxSnippets/CSharp/Show1Window.xaml.cs#messageboxshow1code)]
+ [!code-vb[MessageBoxSnippets#MessageBoxShow1CODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MessageBoxSnippets/visualbasic/show1window.xaml.vb#messageboxshow1code)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.MessageBoxResult Show (string messageBoxText, string caption);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.MessageBoxResult Show(string messageBoxText, string caption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.MessageBox.Show(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.MessageBoxResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageBoxText" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="messageBoxText">Ein <see cref="T:System.String" /> , die den anzuzeigenden Text angibt.</param>
+        <param name="caption">Ein <see cref="T:System.String" /> , die angibt, dass die Beschriftung der Titelleiste angezeigt.</param>
+        <summary>Zeigt ein Meldungsfeld an, die eine Nachricht "und" Title Beschriftung an. und ein Ergebnis zurückgibt.</summary>
+        <returns>Ein <see cref="T:System.Windows.MessageBoxResult" /> Wert, der angibt, welche Schaltfläche im Meldungsfeld vom Benutzer geklickt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie diese Überladung verwenden die <xref:System.Windows.MessageBox.Show%2A> Methode.  
+  
+ [!code-csharp[MessageBoxSnippets#MessageBoxShow2CODE](~/samples/snippets/csharp/VS_Snippets_Wpf/MessageBoxSnippets/CSharp/Show2Window.xaml.cs#messageboxshow2code)]
+ [!code-vb[MessageBoxSnippets#MessageBoxShow2CODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MessageBoxSnippets/visualbasic/show2window.xaml.vb#messageboxshow2code)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.MessageBoxResult Show (System.Windows.Window owner, string messageBoxText);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.MessageBoxResult Show(class System.Windows.Window owner, string messageBoxText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.MessageBox.Show(System.Windows.Window,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.MessageBoxResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Window" />
+        <Parameter Name="messageBoxText" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Ein <see cref="T:System.Windows.Window" /> , die das besitzende Fenster des Meldungsfelds darstellt.</param>
+        <param name="messageBoxText">Ein <see cref="T:System.String" /> , die den anzuzeigenden Text angibt.</param>
+        <summary>Zeigt vor dem angegebenen Fensters ein Meldungsfeld an. Das Meldungsfeld wird eine Meldung angezeigt, und gibt ein Ergebnis zurück.</summary>
+        <returns>Ein <see cref="T:System.Windows.MessageBoxResult" /> Wert, der angibt, welche Schaltfläche im Meldungsfeld vom Benutzer geklickt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig angezeigt im Meldungsfeld wird das Fenster, das derzeit aktiv ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.MessageBoxResult Show (string messageBoxText, string caption, System.Windows.MessageBoxButton button);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.MessageBoxResult Show(string messageBoxText, string caption, valuetype System.Windows.MessageBoxButton button) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.MessageBox.Show(System.String,System.String,System.Windows.MessageBoxButton)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.MessageBoxResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageBoxText" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="button" Type="System.Windows.MessageBoxButton" />
+      </Parameters>
+      <Docs>
+        <param name="messageBoxText">Ein <see cref="T:System.String" /> , die den anzuzeigenden Text angibt.</param>
+        <param name="caption">Ein <see cref="T:System.String" /> , die angibt, dass die Beschriftung der Titelleiste angezeigt.</param>
+        <param name="button">Ein <see cref="T:System.Windows.MessageBoxButton" /> Wert, der angibt, welche Schaltfläche oder Schaltflächen angezeigt.</param>
+        <summary>Zeigt ein Meldungsfeld an, die eine Nachricht, die Beschriftung der Titelleiste oder die Schaltfläche verfügt. und ein Ergebnis zurückgibt.</summary>
+        <returns>Ein <see cref="T:System.Windows.MessageBoxResult" /> Wert, der angibt, welche Schaltfläche im Meldungsfeld vom Benutzer geklickt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie diese Überladung verwenden die <xref:System.Windows.MessageBox.Show%2A> Methode.  
+  
+ [!code-csharp[MessageBoxSnippets#MessageBoxShow3CODE](~/samples/snippets/csharp/VS_Snippets_Wpf/MessageBoxSnippets/CSharp/Show3Window.xaml.cs#messageboxshow3code)]
+ [!code-vb[MessageBoxSnippets#MessageBoxShow3CODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MessageBoxSnippets/visualbasic/show3window.xaml.vb#messageboxshow3code)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.MessageBoxResult Show (System.Windows.Window owner, string messageBoxText, string caption);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.MessageBoxResult Show(class System.Windows.Window owner, string messageBoxText, string caption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.MessageBox.Show(System.Windows.Window,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.MessageBoxResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Window" />
+        <Parameter Name="messageBoxText" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Ein <see cref="T:System.Windows.Window" /> , die das besitzende Fenster des Meldungsfelds darstellt.</param>
+        <param name="messageBoxText">Ein <see cref="T:System.String" /> , die den anzuzeigenden Text angibt.</param>
+        <param name="caption">Ein <see cref="T:System.String" /> , die angibt, dass die Beschriftung der Titelleiste angezeigt.</param>
+        <summary>Zeigt vor dem angegebenen Fensters ein Meldungsfeld an. Das Meldungsfeld zeigt eine Beschriftung der Nachricht "und" Title; und es gibt ein Ergebnis zurück.</summary>
+        <returns>Ein <see cref="T:System.Windows.MessageBoxResult" /> Wert, der angibt, welche Schaltfläche im Meldungsfeld vom Benutzer geklickt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig angezeigt im Meldungsfeld wird das Fenster, das derzeit aktiv ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.MessageBoxResult Show (string messageBoxText, string caption, System.Windows.MessageBoxButton button, System.Windows.MessageBoxImage icon);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.MessageBoxResult Show(string messageBoxText, string caption, valuetype System.Windows.MessageBoxButton button, valuetype System.Windows.MessageBoxImage icon) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.MessageBox.Show(System.String,System.String,System.Windows.MessageBoxButton,System.Windows.MessageBoxImage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.MessageBoxResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageBoxText" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="button" Type="System.Windows.MessageBoxButton" />
+        <Parameter Name="icon" Type="System.Windows.MessageBoxImage" />
+      </Parameters>
+      <Docs>
+        <param name="messageBoxText">Ein <see cref="T:System.String" /> , die den anzuzeigenden Text angibt.</param>
+        <param name="caption">Ein <see cref="T:System.String" /> , die angibt, dass die Beschriftung der Titelleiste angezeigt.</param>
+        <param name="button">Ein <see cref="T:System.Windows.MessageBoxButton" /> Wert, der angibt, welche Schaltfläche oder Schaltflächen angezeigt.</param>
+        <param name="icon">Ein <see cref="T:System.Windows.MessageBoxImage" /> Wert, der angibt, welches Symbol angezeigt.</param>
+        <summary>Zeigt ein Meldungsfeld an, die eine Nachricht, die Beschriftung der Titelleiste, die Schaltfläche und die Symbol verfügt; und ein Ergebnis zurückgibt.</summary>
+        <returns>Ein <see cref="T:System.Windows.MessageBoxResult" /> Wert, der angibt, welche Schaltfläche im Meldungsfeld vom Benutzer geklickt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie diese Überladung verwenden die <xref:System.Windows.MessageBox.Show%2A> Methode.  
+  
+ [!code-csharp[MessageBoxSnippets#MessageBoxShow4CODE](~/samples/snippets/csharp/VS_Snippets_Wpf/MessageBoxSnippets/CSharp/Show4Window.xaml.cs#messageboxshow4code)]
+ [!code-vb[MessageBoxSnippets#MessageBoxShow4CODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MessageBoxSnippets/visualbasic/show4window.xaml.vb#messageboxshow4code)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.MessageBoxResult Show (System.Windows.Window owner, string messageBoxText, string caption, System.Windows.MessageBoxButton button);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.MessageBoxResult Show(class System.Windows.Window owner, string messageBoxText, string caption, valuetype System.Windows.MessageBoxButton button) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.MessageBox.Show(System.Windows.Window,System.String,System.String,System.Windows.MessageBoxButton)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.MessageBoxResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Window" />
+        <Parameter Name="messageBoxText" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="button" Type="System.Windows.MessageBoxButton" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Ein <see cref="T:System.Windows.Window" /> , die das besitzende Fenster des Meldungsfelds darstellt.</param>
+        <param name="messageBoxText">Ein <see cref="T:System.String" /> , die den anzuzeigenden Text angibt.</param>
+        <param name="caption">Ein <see cref="T:System.String" /> , die angibt, dass die Beschriftung der Titelleiste angezeigt.</param>
+        <param name="button">Ein <see cref="T:System.Windows.MessageBoxButton" /> Wert, der angibt, welche Schaltfläche oder Schaltflächen angezeigt.</param>
+        <summary>Zeigt vor dem angegebenen Fensters ein Meldungsfeld an. Das Meldungsfeld zeigt eine Meldung, die Beschriftung der Titelleiste und die Schaltfläche; und es gibt auch ein Ergebnis zurück.</summary>
+        <returns>Ein <see cref="T:System.Windows.MessageBoxResult" /> Wert, der angibt, welche Schaltfläche im Meldungsfeld vom Benutzer geklickt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig angezeigt im Meldungsfeld wird das Fenster, das derzeit aktiv ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.MessageBoxResult Show (string messageBoxText, string caption, System.Windows.MessageBoxButton button, System.Windows.MessageBoxImage icon, System.Windows.MessageBoxResult defaultResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.MessageBoxResult Show(string messageBoxText, string caption, valuetype System.Windows.MessageBoxButton button, valuetype System.Windows.MessageBoxImage icon, valuetype System.Windows.MessageBoxResult defaultResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.MessageBox.Show(System.String,System.String,System.Windows.MessageBoxButton,System.Windows.MessageBoxImage,System.Windows.MessageBoxResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.MessageBoxResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageBoxText" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="button" Type="System.Windows.MessageBoxButton" />
+        <Parameter Name="icon" Type="System.Windows.MessageBoxImage" />
+        <Parameter Name="defaultResult" Type="System.Windows.MessageBoxResult" />
+      </Parameters>
+      <Docs>
+        <param name="messageBoxText">Ein <see cref="T:System.String" /> , die den anzuzeigenden Text angibt.</param>
+        <param name="caption">Ein <see cref="T:System.String" /> , die angibt, dass die Beschriftung der Titelleiste angezeigt.</param>
+        <param name="button">Ein <see cref="T:System.Windows.MessageBoxButton" /> Wert, der angibt, welche Schaltfläche oder Schaltflächen angezeigt.</param>
+        <param name="icon">Ein <see cref="T:System.Windows.MessageBoxImage" /> Wert, der angibt, welches Symbol angezeigt.</param>
+        <param name="defaultResult">Ein <see cref="T:System.Windows.MessageBoxResult" /> Wert, der standardmäßig das Ergebnis des Meldungsfelds angibt.</param>
+        <summary>Zeigt ein Meldungsfeld an, die eine Nachricht, die Beschriftung der Titelleiste, die Schaltfläche und die Symbol verfügt; und akzeptiert Sie im Feld ein Standardresultsets-Nachricht und gibt ein Ergebnis zurück.</summary>
+        <returns>Ein <see cref="T:System.Windows.MessageBoxResult" /> Wert, der angibt, welche Schaltfläche im Meldungsfeld vom Benutzer geklickt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie diese Überladung verwenden die <xref:System.Windows.MessageBox.Show%2A> Methode.  
+  
+ [!code-csharp[MessageBoxSnippets#MessageBoxShow5CODE](~/samples/snippets/csharp/VS_Snippets_Wpf/MessageBoxSnippets/CSharp/Show5Window.xaml.cs#messageboxshow5code)]
+ [!code-vb[MessageBoxSnippets#MessageBoxShow5CODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MessageBoxSnippets/visualbasic/show5window.xaml.vb#messageboxshow5code)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.MessageBoxResult Show (System.Windows.Window owner, string messageBoxText, string caption, System.Windows.MessageBoxButton button, System.Windows.MessageBoxImage icon);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.MessageBoxResult Show(class System.Windows.Window owner, string messageBoxText, string caption, valuetype System.Windows.MessageBoxButton button, valuetype System.Windows.MessageBoxImage icon) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.MessageBox.Show(System.Windows.Window,System.String,System.String,System.Windows.MessageBoxButton,System.Windows.MessageBoxImage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.MessageBoxResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Window" />
+        <Parameter Name="messageBoxText" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="button" Type="System.Windows.MessageBoxButton" />
+        <Parameter Name="icon" Type="System.Windows.MessageBoxImage" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Ein <see cref="T:System.Windows.Window" /> , die das besitzende Fenster des Meldungsfelds darstellt.</param>
+        <param name="messageBoxText">Ein <see cref="T:System.String" /> , die den anzuzeigenden Text angibt.</param>
+        <param name="caption">Ein <see cref="T:System.String" /> , die angibt, dass die Beschriftung der Titelleiste angezeigt.</param>
+        <param name="button">Ein <see cref="T:System.Windows.MessageBoxButton" /> Wert, der angibt, welche Schaltfläche oder Schaltflächen angezeigt.</param>
+        <param name="icon">Ein <see cref="T:System.Windows.MessageBoxImage" /> Wert, der angibt, welches Symbol angezeigt.</param>
+        <summary>Zeigt vor dem angegebenen Fensters ein Meldungsfeld an. Das Meldungsfeld zeigt eine Nachricht, die Beschriftung der Titelleiste, die Schaltfläche und die Symbol; und es gibt auch ein Ergebnis zurück.</summary>
+        <returns>Ein <see cref="T:System.Windows.MessageBoxResult" /> Wert, der angibt, welche Schaltfläche im Meldungsfeld vom Benutzer geklickt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig angezeigt im Meldungsfeld wird das Fenster, das derzeit aktiv ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.MessageBoxResult Show (string messageBoxText, string caption, System.Windows.MessageBoxButton button, System.Windows.MessageBoxImage icon, System.Windows.MessageBoxResult defaultResult, System.Windows.MessageBoxOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.MessageBoxResult Show(string messageBoxText, string caption, valuetype System.Windows.MessageBoxButton button, valuetype System.Windows.MessageBoxImage icon, valuetype System.Windows.MessageBoxResult defaultResult, valuetype System.Windows.MessageBoxOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.MessageBox.Show(System.String,System.String,System.Windows.MessageBoxButton,System.Windows.MessageBoxImage,System.Windows.MessageBoxResult,System.Windows.MessageBoxOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.MessageBoxResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageBoxText" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="button" Type="System.Windows.MessageBoxButton" />
+        <Parameter Name="icon" Type="System.Windows.MessageBoxImage" />
+        <Parameter Name="defaultResult" Type="System.Windows.MessageBoxResult" />
+        <Parameter Name="options" Type="System.Windows.MessageBoxOptions" />
+      </Parameters>
+      <Docs>
+        <param name="messageBoxText">Ein <see cref="T:System.String" /> , die den anzuzeigenden Text angibt.</param>
+        <param name="caption">Ein <see cref="T:System.String" /> , die angibt, dass die Beschriftung der Titelleiste angezeigt.</param>
+        <param name="button">Ein <see cref="T:System.Windows.MessageBoxButton" /> Wert, der angibt, welche Schaltfläche oder Schaltflächen angezeigt.</param>
+        <param name="icon">Ein <see cref="T:System.Windows.MessageBoxImage" /> Wert, der angibt, welches Symbol angezeigt.</param>
+        <param name="defaultResult">Ein <see cref="T:System.Windows.MessageBoxResult" /> Wert, der standardmäßig das Ergebnis des Meldungsfelds angibt.</param>
+        <param name="options">Ein <see cref="T:System.Windows.MessageBoxOptions" /> Wertobjekt, das die Optionen angibt.</param>
+        <summary>Zeigt ein Meldungsfeld an, die eine Nachricht, die Beschriftung der Titelleiste, die Schaltfläche und die Symbol verfügt; und, die im Feld ein Standardresultsets-Nachricht akzeptiert, ist mit den angegebenen Optionen und gibt ein Ergebnis zurück.</summary>
+        <returns>Ein <see cref="T:System.Windows.MessageBoxResult" /> Wert, der angibt, welche Schaltfläche im Meldungsfeld vom Benutzer geklickt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie diese Überladung verwenden die <xref:System.Windows.MessageBox.Show%2A> Methode.  
+  
+ [!code-csharp[MessageBoxSnippets#MessageBoxShow6CODE](~/samples/snippets/csharp/VS_Snippets_Wpf/MessageBoxSnippets/CSharp/Show6Window.xaml.cs#messageboxshow6code)]
+ [!code-vb[MessageBoxSnippets#MessageBoxShow6CODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MessageBoxSnippets/visualbasic/show6window.xaml.vb#messageboxshow6code)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.MessageBoxResult Show (System.Windows.Window owner, string messageBoxText, string caption, System.Windows.MessageBoxButton button, System.Windows.MessageBoxImage icon, System.Windows.MessageBoxResult defaultResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.MessageBoxResult Show(class System.Windows.Window owner, string messageBoxText, string caption, valuetype System.Windows.MessageBoxButton button, valuetype System.Windows.MessageBoxImage icon, valuetype System.Windows.MessageBoxResult defaultResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.MessageBox.Show(System.Windows.Window,System.String,System.String,System.Windows.MessageBoxButton,System.Windows.MessageBoxImage,System.Windows.MessageBoxResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.MessageBoxResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Window" />
+        <Parameter Name="messageBoxText" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="button" Type="System.Windows.MessageBoxButton" />
+        <Parameter Name="icon" Type="System.Windows.MessageBoxImage" />
+        <Parameter Name="defaultResult" Type="System.Windows.MessageBoxResult" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Ein <see cref="T:System.Windows.Window" /> , die das besitzende Fenster des Meldungsfelds darstellt.</param>
+        <param name="messageBoxText">Ein <see cref="T:System.String" /> , die den anzuzeigenden Text angibt.</param>
+        <param name="caption">Ein <see cref="T:System.String" /> , die angibt, dass die Beschriftung der Titelleiste angezeigt.</param>
+        <param name="button">Ein <see cref="T:System.Windows.MessageBoxButton" /> Wert, der angibt, welche Schaltfläche oder Schaltflächen angezeigt.</param>
+        <param name="icon">Ein <see cref="T:System.Windows.MessageBoxImage" /> Wert, der angibt, welches Symbol angezeigt.</param>
+        <param name="defaultResult">Ein <see cref="T:System.Windows.MessageBoxResult" /> Wert, der standardmäßig das Ergebnis des Meldungsfelds angibt.</param>
+        <summary>Zeigt vor dem angegebenen Fensters ein Meldungsfeld an. Das Meldungsfeld zeigt eine Nachricht, die Beschriftung der Titelleiste, die Schaltfläche und die Symbol; eine Nachricht im Feld Standardresultsets akzeptiert und gibt ein Ergebnis zurück.</summary>
+        <returns>Ein <see cref="T:System.Windows.MessageBoxResult" /> Wert, der angibt, welche Schaltfläche im Meldungsfeld vom Benutzer geklickt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig angezeigt im Meldungsfeld wird das Fenster, das derzeit aktiv ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public static System.Windows.MessageBoxResult Show (System.Windows.Window owner, string messageBoxText, string caption, System.Windows.MessageBoxButton button, System.Windows.MessageBoxImage icon, System.Windows.MessageBoxResult defaultResult, System.Windows.MessageBoxOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.MessageBoxResult Show(class System.Windows.Window owner, string messageBoxText, string caption, valuetype System.Windows.MessageBoxButton button, valuetype System.Windows.MessageBoxImage icon, valuetype System.Windows.MessageBoxResult defaultResult, valuetype System.Windows.MessageBoxOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.MessageBox.Show(System.Windows.Window,System.String,System.String,System.Windows.MessageBoxButton,System.Windows.MessageBoxImage,System.Windows.MessageBoxResult,System.Windows.MessageBoxOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.MessageBoxResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Window" />
+        <Parameter Name="messageBoxText" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="button" Type="System.Windows.MessageBoxButton" />
+        <Parameter Name="icon" Type="System.Windows.MessageBoxImage" />
+        <Parameter Name="defaultResult" Type="System.Windows.MessageBoxResult" />
+        <Parameter Name="options" Type="System.Windows.MessageBoxOptions" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Ein <see cref="T:System.Windows.Window" /> , die das besitzende Fenster des Meldungsfelds darstellt.</param>
+        <param name="messageBoxText">Ein <see cref="T:System.String" /> , die den anzuzeigenden Text angibt.</param>
+        <param name="caption">Ein <see cref="T:System.String" /> , die angibt, dass die Beschriftung der Titelleiste angezeigt.</param>
+        <param name="button">Ein <see cref="T:System.Windows.MessageBoxButton" /> Wert, der angibt, welche Schaltfläche oder Schaltflächen angezeigt.</param>
+        <param name="icon">Ein <see cref="T:System.Windows.MessageBoxImage" /> Wert, der angibt, welches Symbol angezeigt.</param>
+        <param name="defaultResult">Ein <see cref="T:System.Windows.MessageBoxResult" /> Wert, der standardmäßig das Ergebnis des Meldungsfelds angibt.</param>
+        <param name="options">Ein <see cref="T:System.Windows.MessageBoxOptions" /> Wertobjekt, das die Optionen angibt.</param>
+        <summary>Zeigt vor dem angegebenen Fensters ein Meldungsfeld an. Das Meldungsfeld zeigt eine Nachricht, die Beschriftung der Titelleiste, die Schaltfläche und die Symbol; Feld ein Standardresultsets-Nachricht akzeptiert, ist mit den angegebenen Optionen und gibt ein Ergebnis zurück.</summary>
+        <returns>Ein <see cref="T:System.Windows.MessageBoxResult" /> Wert, der angibt, welche Schaltfläche im Meldungsfeld vom Benutzer geklickt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig angezeigt im Meldungsfeld wird das Fenster, das derzeit aktiv ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

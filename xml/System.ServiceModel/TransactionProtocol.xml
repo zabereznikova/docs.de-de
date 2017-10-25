@@ -1,0 +1,139 @@
+<Type Name="TransactionProtocol" FullName="System.ServiceModel.TransactionProtocol">
+  <TypeSignature Language="C#" Value="public abstract class TransactionProtocol" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TransactionProtocol extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.TransactionProtocol" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ServiceModel.Configuration.TransactionProtocolConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt das Transaktionsprotokoll an, das bei Transaktionsflüssen verwendet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse wird zusammen mit der <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>-Klasse verwendet, um das gewünschte Protokoll für Transaktionsflüsse anzugeben.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TransactionProtocol ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.TransactionProtocol.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.TransactionProtocol" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.TransactionProtocol Default { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.TransactionProtocol Default" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.TransactionProtocol.Default" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.TransactionProtocol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Standardwert für das Transaktionsprotokoll ab.</summary>
+        <value>Ein gültiger <see cref="T:System.ServiceModel.TransactionProtocol" />-Wert, der das Standardtransaktionsprotokoll angibt, das beim Weitergeben einer Transaktion verwendet werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Auswahl eines Transaktionsprotokolls finden Sie unter [Transaktionsfluss aktivieren](http://msdn.microsoft.com/en-us/31a6bc6a-4ef4-45ba-a753-1efa1a19d917).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OleTransactions">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.TransactionProtocol OleTransactions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.TransactionProtocol OleTransactions" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.TransactionProtocol.OleTransactions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.TransactionProtocol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den OleTransactions-Transaktionsprotokollwert ab.</summary>
+        <value>Ein <see cref="P:System.ServiceModel.TransactionProtocol.OleTransactions" />-Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das OleTransactions-Protokoll eignet sich für Szenarien, in denen die Interoperabilität mit Protokollstapeln eines Drittanbieters nicht erforderlich ist und der Bereitsteller des Dienstes im Voraus weiß, dass WS-AtomicTransaction lokal deaktiviert ist oder die vorhandene Netzwerktopologie die Verwendung von WS-AtomicTransaction nicht unterstützt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WSAtomicTransaction11">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.TransactionProtocol WSAtomicTransaction11 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.TransactionProtocol WSAtomicTransaction11" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.TransactionProtocol.WSAtomicTransaction11" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.TransactionProtocol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den WSAtomicTransaction11-Transaktionsprotokollwert ab.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.TransactionProtocol" />-Wert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WSAtomicTransactionOctober2004">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.TransactionProtocol WSAtomicTransactionOctober2004 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.TransactionProtocol WSAtomicTransactionOctober2004" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.TransactionProtocol.WSAtomicTransactionOctober2004" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.TransactionProtocol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den WSAtomicTransactionOctober2004-Transaktionsprotokollwert ab.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.TransactionProtocol" />-Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das WS-AtomicTransaction-Protokoll eignet sich für Szenarien, in denen die Interoperabilität mit Protokollstapeln eines Drittanbieters erforderlich ist. Es eignet sich ebenfalls als einfacher Mechanismus zum Testen von Transaktionsflüssen und des Zweiphasencommit-Protokolls unter Verwendung des WS-AT-Protokolls, ohne Einfluss des OleTransactions-Protokolls.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

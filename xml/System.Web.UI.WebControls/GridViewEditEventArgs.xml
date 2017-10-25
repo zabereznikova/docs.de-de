@@ -1,0 +1,107 @@
+<Type Name="GridViewEditEventArgs" FullName="System.Web.UI.WebControls.GridViewEditEventArgs">
+  <TypeSignature Language="C#" Value="public class GridViewEditEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GridViewEditEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.GridViewEditEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Web.UI.WebControls.GridView.RowEditing" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.GridView> -Steuerelement löst die <xref:System.Web.UI.WebControls.GridView.RowEditing> Ereignis aus, wenn eine Schaltfläche "Bearbeiten" (eine Schaltfläche mit seiner `CommandName` -Eigenschaft auf "Bearbeiten" festgelegt) geklickt wird, jedoch bevor die <xref:System.Web.UI.WebControls.GridView> Steuerelement in den Bearbeitungsmodus wechselt. Dadurch können Sie eine Ereignisbehandlungsmethode bereitstellen, die eine benutzerdefinierte Routine, wie z. B. das Abbrechen des Bearbeitungsvorgangs bei jedem dieses Ereignisses auftreten ausführt.  
+  
+ Ein <xref:System.Web.UI.WebControls.GridViewEditEventArgs> Objekt übergeben wird, an die Methode für die Ereignisbehandlung, wodurch Sie den Index der zu bearbeitenden Zeile ermitteln und um anzugeben, dass die Bearbeitung abgebrochen werden soll. Legen Sie zum Abbrechen des Bearbeitungsvorgangs die <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.GridViewEditEventArgs> -Objekt `true`.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.WebControls.GridViewEditEventArgs>, finden Sie unter der <xref:System.Web.UI.WebControls.GridViewEditEventArgs.%23ctor%2A> Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.GridViewEditEventArgs> Objekt übergeben, um die Ereignisbehandlung-Methode, um den Vorgang abzubrechen, wenn der Benutzer versucht, eine Zeile zu bearbeiten, einen Autor mit dem Nachnamen White enthält.  
+  
+ [!code-aspx-csharp[GridViewRowEditing#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewRowEditing/CS/gridviewroweditingcs.aspx#1)]
+ [!code-aspx-vb[GridViewRowEditing#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewRowEditing/VB/gridviewroweditingvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GridViewEditEventArgs (int newEditIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 newEditIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.GridViewEditEventArgs.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="newEditIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="newEditIndex">Der Index des zu bearbeitenden Zeile.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.GridViewEditEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.GridViewEditEventArgs> Klasse.  
+  
+ Die folgende Tabelle zeigt die anfängliche Eigenschaftswert für eine Instanz von <xref:System.Web.UI.WebControls.GridViewEditEventArgs>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.GridViewEditEventArgs.NewEditIndex%2A>|Der Wert des `newEditIndex`-Parameters.|  
+  
+> [!NOTE]
+>  Dieser Konstruktor wird hauptsächlich von Steuerelemententwicklern verwendet, beim Auslösen von Ereignissen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewEditIndex">
+      <MemberSignature Language="C#" Value="public int NewEditIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NewEditIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewEditEventArgs.NewEditIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Index der Zeile, die bearbeitet wird.</summary>
+        <value>Der Index der Zeile, die bearbeitet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.GridViewEditEventArgs.NewEditIndex%2A> -Eigenschaft bestimmt den Index der Zeile, die bearbeitet wird. Der Zeilenindex wird häufig verwendet, zum Abrufen dieser Zeile aus der <xref:System.Web.UI.WebControls.GridView.Rows%2A> Auflistung von der <xref:System.Web.UI.WebControls.GridView> -Steuerelement, das Sie Eigenschaften der Zeile zugreifen kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.GridViewEditEventArgs.NewEditIndex%2A> -Eigenschaft bestimmt den Index der Zeile, die bearbeitet wird.  
+  
+ [!code-aspx-csharp[GridViewRowEditing#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewRowEditing/CS/gridviewroweditingcs.aspx#1)]
+ [!code-aspx-vb[GridViewRowEditing#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewRowEditing/VB/gridviewroweditingvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

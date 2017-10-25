@@ -1,0 +1,214 @@
+<Type Name="CompositionDependency" FullName="System.Composition.Hosting.Core.CompositionDependency">
+  <TypeSignature Language="C#" Value="public class CompositionDependency" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CompositionDependency extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Composition.Hosting.Core.CompositionDependency" />
+  <AssemblyInfo>
+    <AssemblyName>System.Composition.Hosting</AssemblyName>
+    <AssemblyVersion>1.0.31.0</AssemblyVersion>
+    <AssemblyVersion>1.0.32.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Abhängigkeit, die ein Teil aufweisen muss, um die Erfüllung einer <see cref="T:System.Composition.Hosting.Core.ExportDescriptorPromise" />. Diese Klasse wird während der Initialisierung vom Kompositionsmodul verwendet, um zu bestimmen, ob die Komposition vorgenommen werden kann, und wenn nicht, welche Fehler auftreten.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Contract">
+      <MemberSignature Language="C#" Value="public System.Composition.Hosting.Core.CompositionContract Contract { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Composition.Hosting.Core.CompositionContract Contract" />
+      <MemberSignature Language="DocId" Value="P:System.Composition.Hosting.Core.CompositionDependency.Contract" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Hosting</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Hosting.Core.CompositionContract</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Vertrag, der durch die Abhängigkeit erforderlich.</summary>
+        <value>Der Vertrag, der durch die Abhängigkeit erforderlich.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPrerequisite">
+      <MemberSignature Language="C#" Value="public bool IsPrerequisite { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPrerequisite" />
+      <MemberSignature Language="DocId" Value="P:System.Composition.Hosting.Core.CompositionDependency.IsPrerequisite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Hosting</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Abhängigkeit eine Voraussetzung ist, die erfüllt sein müssen, bevor alle Exporte aus dem abhängigen Teil abgerufen werden können.</summary>
+        <value>
+          <see langword="true" />Wenn die Abhängigkeit eine Voraussetzung ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Missing">
+      <MemberSignature Language="C#" Value="public static System.Composition.Hosting.Core.CompositionDependency Missing (System.Composition.Hosting.Core.CompositionContract contract, object site);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Composition.Hosting.Core.CompositionDependency Missing(class System.Composition.Hosting.Core.CompositionContract contract, object site) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Hosting.Core.CompositionDependency.Missing(System.Composition.Hosting.Core.CompositionContract,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Hosting</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Hosting.Core.CompositionDependency</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contract" Type="System.Composition.Hosting.Core.CompositionContract" />
+        <Parameter Name="site" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="contract">"&gt;Den Vertrag, der durch die Abhängigkeit erforderlich.</param>
+        <param name="site">Ein Marker, die zur Identifizierung der einzelnen Abhängigkeit zwischen den auf dem abhängigen Teil.</param>
+        <summary>Erstellt einen Platzhalter für fehlende Abhängigkeit an.</summary>
+        <returns>Die Abhängigkeit, die als Platzhalter fungiert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fehlende Abhängigkeit ist ein Fehler. Fehlende Abhängigkeit unterscheidet sich von einer optionalen Abhängigkeit.
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Oversupplied">
+      <MemberSignature Language="C#" Value="public static System.Composition.Hosting.Core.CompositionDependency Oversupplied (System.Composition.Hosting.Core.CompositionContract contract, System.Collections.Generic.IEnumerable&lt;System.Composition.Hosting.Core.ExportDescriptorPromise&gt; targets, object site);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Composition.Hosting.Core.CompositionDependency Oversupplied(class System.Composition.Hosting.Core.CompositionContract contract, class System.Collections.Generic.IEnumerable`1&lt;class System.Composition.Hosting.Core.ExportDescriptorPromise&gt; targets, object site) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Hosting.Core.CompositionDependency.Oversupplied(System.Composition.Hosting.Core.CompositionContract,System.Collections.Generic.IEnumerable{System.Composition.Hosting.Core.ExportDescriptorPromise},System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Hosting</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Hosting.Core.CompositionDependency</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contract" Type="System.Composition.Hosting.Core.CompositionContract" />
+        <Parameter Name="targets" Type="System.Collections.Generic.IEnumerable&lt;System.Composition.Hosting.Core.ExportDescriptorPromise&gt;" />
+        <Parameter Name="site" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="contract">Der Vertrag, der durch die Abhängigkeit erforderlich.</param>
+        <param name="targets">Eine Auflistung von den angegebenen Werten.</param>
+        <param name="site">Ein Marker für die Abhängigkeit.</param>
+        <summary>Erstellt einen Platzhalter für eine Abhängigkeit, die zu viele bereitgestellten Werte hat.</summary>
+        <returns>Die Platzhalter-Abhängigkeit.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Satisfied">
+      <MemberSignature Language="C#" Value="public static System.Composition.Hosting.Core.CompositionDependency Satisfied (System.Composition.Hosting.Core.CompositionContract contract, System.Composition.Hosting.Core.ExportDescriptorPromise target, bool isPrerequisite, object site);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Composition.Hosting.Core.CompositionDependency Satisfied(class System.Composition.Hosting.Core.CompositionContract contract, class System.Composition.Hosting.Core.ExportDescriptorPromise target, bool isPrerequisite, object site) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Hosting.Core.CompositionDependency.Satisfied(System.Composition.Hosting.Core.CompositionContract,System.Composition.Hosting.Core.ExportDescriptorPromise,System.Boolean,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Hosting</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Hosting.Core.CompositionDependency</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contract" Type="System.Composition.Hosting.Core.CompositionContract" />
+        <Parameter Name="target" Type="System.Composition.Hosting.Core.ExportDescriptorPromise" />
+        <Parameter Name="isPrerequisite" Type="System.Boolean" />
+        <Parameter Name="site" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="contract">Der Vertrag, der durch die Abhängigkeit erforderlich.</param>
+        <param name="target">Das Ziel Abhängigkeit. Ein <see cref="T:System.Composition.Hosting.Core.ExportDescriptorPromise" /> aus einem anderen Teil, der in diesem Teil abhängig ist.</param>
+        <param name="isPrerequisite">
+          <see langword="true" />um anzugeben, dass die Abhängigkeit eine Voraussetzung ist, die erfüllt sein müssen, bevor alle Exporte aus dem abhängigen Teil abgerufen werden können. andernfalls <see langword="false" />.</param>
+        <param name="site">Ein Marker, die zur Identifizierung der einzelnen Abhängigkeit zwischen den auf dem abhängigen Teil.</param>
+        <summary>Erstellt eine Abhängigkeit für das angegebene Ziel.</summary>
+        <returns>Die erstellten Abhängigkeit.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Site">
+      <MemberSignature Language="C#" Value="public object Site { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Site" />
+      <MemberSignature Language="DocId" Value="P:System.Composition.Hosting.Core.CompositionDependency.Site" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Hosting</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Marker, die zur Identifizierung der Abhängigkeit zwischen den auf dem abhängigen Teil ab.</summary>
+        <value>Der Marker.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Target">
+      <MemberSignature Language="C#" Value="public System.Composition.Hosting.Core.ExportDescriptorPromise Target { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Composition.Hosting.Core.ExportDescriptorPromise Target" />
+      <MemberSignature Language="DocId" Value="P:System.Composition.Hosting.Core.CompositionDependency.Target" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Hosting</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Hosting.Core.ExportDescriptorPromise</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zusage der Export-Deskriptor, der die Abhängigkeit auf.</summary>
+        <value>Die Zusicherung für den Export-Deskriptor.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Hosting.Core.CompositionDependency.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Hosting</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Zeichenfolgendarstellung dieses <see cref="T:System.Composition.Hosting.Core.CompositionDependency" />-Objekts zurück.</summary>
+        <returns>Eine Zeichenfolgendarstellung von <see cref="T:System.Composition.Hosting.Core.CompositionDependency" />.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

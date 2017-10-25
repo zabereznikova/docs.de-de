@@ -1,0 +1,93 @@
+<Type Name="OverflowAction" FullName="System.Diagnostics.OverflowAction">
+  <TypeSignature Language="C#" Value="public enum OverflowAction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed OverflowAction extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.OverflowAction" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wie die Einträge im Ereignisprotokoll zu behandeln, die die maximale Dateigröße erreicht wurde.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede Ereignisprotokoll hat eine maximale Größe "Limit" und eine konfigurierbare Einstellung, die die Regel zum Schreiben neuer Einträge auf diesen Grenzwert bereitstellt. Wenn das Ereignisprotokoll die maximale Größe erreicht hat, können Sie eine der folgenden Regeln angeben:  
+  
+-   Neue Einträge werden verworfen.  
+  
+-   Neue Einträge werden ältere Einträge überschrieben.  
+  
+-   Neue Einträge werden entweder verworfen oder bereits vorhandenen Einträge, je nach Alter der vorhandenen Einträge werden überschrieben.  
+  
+ Verwenden der <xref:System.Diagnostics.EventLog.ModifyOverflowPolicy%2A> Methode, um das Überlaufverhalten für ein <xref:System.Diagnostics.EventLog>. Überprüfen Sie die aktuelle konfigurierte Verhalten von einer <xref:System.Diagnostics.EventLog> über seine <xref:System.Diagnostics.EventLog.OverflowAction%2A> Eigenschaft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DoNotOverwrite">
+      <MemberSignature Language="C#" Value="DoNotOverwrite" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.OverflowAction DoNotOverwrite = int32(-1)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.OverflowAction.DoNotOverwrite" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.OverflowAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass vorhandene Einträge beibehalten werden, wenn das Ereignisprotokoll voll ist, und neue Einträge werden verworfen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OverwriteAsNeeded">
+      <MemberSignature Language="C#" Value="OverwriteAsNeeded" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.OverflowAction OverwriteAsNeeded = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.OverflowAction.OverwriteAsNeeded" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.OverflowAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass jeder neue Eintrag den ältesten Eintrag überschreibt, wenn das Ereignisprotokoll voll ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OverwriteOlder">
+      <MemberSignature Language="C#" Value="OverwriteOlder" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.OverflowAction OverwriteOlder = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.OverflowAction.OverwriteOlder" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.OverflowAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass neue Ereignisse zu Ereignisse, die älter überschreiben als die <see cref="P:System.Diagnostics.EventLog.MinimumRetentionDays" /> Eigenschaftswert, wenn das Ereignisprotokoll voll ist. Neue Ereignisse werden verworfen, wenn das Ereignisprotokoll voll ist und es keine Ereignisse, die älter gibt als die <see cref="P:System.Diagnostics.EventLog.MinimumRetentionDays" /> Eigenschaftswert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel listet die Ereignisprotokolle auf dem lokalen Computer definiert und zeigt Konfigurationsdetails für jedes Ereignis Protokoll.  
+  
+ [!code-cpp[EventLogProperties#2](~/samples/snippets/cpp/VS_Snippets_CLR/EventLogProperties/CPP/source.cpp#2)]
+ [!code-csharp[EventLogProperties#2](~/samples/snippets/csharp/VS_Snippets_CLR/EventLogProperties/CS/source.cs#2)]
+ [!code-vb[EventLogProperties#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/EventLogProperties/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

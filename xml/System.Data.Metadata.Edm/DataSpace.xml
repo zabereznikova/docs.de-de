@@ -1,0 +1,105 @@
+<Type Name="DataSpace" FullName="System.Data.Metadata.Edm.DataSpace">
+  <TypeSignature Language="C#" Value="public enum DataSpace" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataSpace extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Metadata.Edm.DataSpace" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Standardnamen für die Modelle im Entity Framework.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen über die Modelle in der [!INCLUDE[adonet_ef](~/includes/adonet-ef-md.md)], finden Sie unter [Übersicht über die Metadaten-Arbeitsbereich](http://msdn.microsoft.com/en-us/b9c75c95-7626-484d-86bb-2ddd4c7042e2).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CSpace">
+      <MemberSignature Language="C#" Value="CSpace" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Metadata.Edm.DataSpace CSpace = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Metadata.Edm.DataSpace.CSpace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.DataSpace</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Standardnamen für das konzeptionelle Modell dar.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CSSpace">
+      <MemberSignature Language="C#" Value="CSSpace" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Metadata.Edm.DataSpace CSSpace = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Metadata.Edm.DataSpace.CSSpace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.DataSpace</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Standardnamen für das Mapping zwischen dem konzeptionellen Modell und dem Speichermodell dar.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OCSpace">
+      <MemberSignature Language="C#" Value="OCSpace" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Metadata.Edm.DataSpace OCSpace = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Metadata.Edm.DataSpace.OCSpace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.DataSpace</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Standardnamen für das Mapping zwischen dem Objektmodell und dem konzeptionellen Modell dar.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OSpace">
+      <MemberSignature Language="C#" Value="OSpace" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Metadata.Edm.DataSpace OSpace = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Metadata.Edm.DataSpace.OSpace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.DataSpace</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Standardnamen für das Objektmodell dar.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SSpace">
+      <MemberSignature Language="C#" Value="SSpace" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Metadata.Edm.DataSpace SSpace = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Metadata.Edm.DataSpace.SSpace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.DataSpace</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Standardnamen für das Speichermodell dar.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

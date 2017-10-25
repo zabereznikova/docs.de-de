@@ -1,0 +1,82 @@
+<Type Name="TrustStatus" FullName="System.Security.Cryptography.X509Certificates.TrustStatus">
+  <TypeSignature Language="C#" Value="public enum TrustStatus" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TrustStatus extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.X509Certificates.TrustStatus" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Ebene der Vertrauenswürdigkeit, die die Signatur für ein Manifest zugewiesen ist.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="KnownIdentity">
+      <MemberSignature Language="C#" Value="KnownIdentity" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.TrustStatus KnownIdentity = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.TrustStatus.KnownIdentity" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.TrustStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Identität ist bekannt, und die Signatur ist gültig. Eine gültige Authenticode-Signatur bereitstellt eine Identität.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Trusted">
+      <MemberSignature Language="C#" Value="Trusted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.TrustStatus Trusted = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.TrustStatus.Trusted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.TrustStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Signatur gültig ist und von einem explizit vertrauenswürdigen Herausgeber erstellt wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UnknownIdentity">
+      <MemberSignature Language="C#" Value="UnknownIdentity" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.TrustStatus UnknownIdentity = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.TrustStatus.UnknownIdentity" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.TrustStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Identität ist nicht bekannt, und die Signatur ist ungültig. Da keine überprüfte Signatur vorhanden ist, kann eine Identität nicht bestimmt werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Untrusted">
+      <MemberSignature Language="C#" Value="Untrusted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.TrustStatus Untrusted = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.TrustStatus.Untrusted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.TrustStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Signatur wurde durch ein explizit nicht vertrauenswürdigen Herausgeber erstellt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

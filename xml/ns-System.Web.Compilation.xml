@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.Compilation">
+  <Docs>
+    <summary>Die <see cref="N:System.Web.Compilation" /> Namespace enthält Klassen zum Generieren und Kompilieren von benutzerdefinierten Dateitypen innerhalb der ASP.NET-ERSTELLUNGSUMGEBUNG Umgebung erstellen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

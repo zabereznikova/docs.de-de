@@ -1,0 +1,817 @@
+<Type Name="ChannelFactory" FullName="System.ServiceModel.ChannelFactory">
+  <TypeSignature Language="C#" Value="public abstract class ChannelFactory : System.ServiceModel.Channels.CommunicationObject, IDisposable, System.ServiceModel.Channels.IChannelFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ChannelFactory extends System.ServiceModel.Channels.CommunicationObject implements class System.IDisposable, class System.ServiceModel.Channels.IChannelFactory, class System.ServiceModel.ICommunicationObject" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.ChannelFactory" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.CommunicationObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Channels.IChannelFactory</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Erstellt und verwaltet die Kanäle, die von Clients zum Senden von Nachrichten an Dienstendpunkte verwendet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kanalfactorys, die die <xref:System.ServiceModel.Channels.IChannelFactory>-Schnittstelle und deren zugehörige Kanäle implementieren, werden in der Regel von den Initiatoren eines Kommunikationsmusters verwendet. Listenerfactorys, die die <xref:System.ServiceModel.Channels.IChannelListener>-Schnittstelle und deren zugehörigen Listener implementieren, stellen die Mechanismen bereit, mit denen Kanäle für die Kommunikation akzeptiert werden.  
+  
+ Diese Klasse ist nicht Teil des Kanal- sondern des Dienstmodells. Die <xref:System.ServiceModel.ChannelFactory.CreateFactory%2A>-Methode bietet die Mittel zum Erstellen von <xref:System.ServiceModel.Channels.IChannelFactory> für einen Dienstendpunkt. Verwenden Sie sie, um einen Client zu erstellen, der eine Verknüpfung zu einem Schnittstellenvertrag auf dem Dienst herstellt, ohne Metadaten oder Richtlinien zu verwenden.  
+  
+> [!NOTE]
+>  Durch das Festlegen von `ChannelFactory.Credentials.Windows.AllowedImpersonationLevel` auf `TokenImpersonationLevel.Anonymous` wird stets eine anonyme Anmeldung ausgeführt, unabhängig von der Identitätswechselebene.  
+  
+ Spezieller Hinweis für Benutzer von Managed C++, die von dieser Klasse ableiten:  
+  
+-   Fügen Sie den Bereinigungscode in (On)(Begin)Close (and/or OnAbort) ein, nicht in einen Destruktor.  
+  
+-   Vermeiden Sie Destruktoren: Sie bewirken, dass der Compiler <xref:System.IDisposable> automatisch generiert.  
+  
+-   Vermeiden Sie Member ohne Verweis: Sie können bewirken, dass der Compiler <xref:System.IDisposable> automatisch generiert.  
+  
+-   Vermeiden Sie die Verwendung eines Finalizers: Wenn Sie dennoch einen Finalizer verwenden, sollten Sie die Buildwarnung unterdrücken und <xref:System.GC.SuppressFinalize%28System.Object%29> sowie den Finalizer über (On)(Begin)Close (and/or OnAbort) aufrufen, um das ansonsten automatisch generierte <xref:System.IDisposable>-Verhalten zu emulieren.  
+  
+ Beim programmgesteuerten Hinzufügen von Verhalten, wird das Verhalten vor dem Erstellen eines Kanals der entsprechenden `Behaviors`-Eigenschaft in der <xref:System.ServiceModel.ChannelFactory> hinzugefügt. Ein Codebeispiel finden Sie im Beispielabschnitt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird das programmgesteuerte Einfügen eines Clientverhaltens vor dem Erstellen des Kanalobjekts durch die Factory veranschaulicht.  
+  
+ [!code-csharp[ChannelFactoryBehaviors#10](~/samples/snippets/csharp/VS_Snippets_CFX/channelfactorybehaviors/cs/client.cs#10)]
+ [!code-vb[ChannelFactoryBehaviors#10](~/samples/snippets/visualbasic/VS_Snippets_CFX/channelfactorybehaviors/vb/client.vb#10)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ChannelFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ChannelFactory.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.ChannelFactory" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyConfiguration">
+      <MemberSignature Language="C#" Value="protected virtual void ApplyConfiguration (string configurationName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ApplyConfiguration(string configurationName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ChannelFactory.ApplyConfiguration(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configurationName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="configurationName">Der Name der Konfigurationsdatei.</param>
+        <summary>Initialisiert die Kanalfactory mit den Verhaltensweisen, die von einer bestimmten Konfigurationsdatei bereitgestellt werden, sowie mit den Verhaltensweisen im Dienstendpunkt der Kanalfactory.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `configurationName` gleich `null` ist, werden nur die im Dienstendpunkt angegebenen Verhaltensweisen geladen. Wenn der Platzhalter "*" verwendet wird, wird jede Endpunktkonfiguration in der Clientkonfigurationsdatei verwendet, jedoch nur, wenn dort genau eine vorliegt. Andernfalls wird eine Ausnahme ausgelöst. Jeder andere Wert für `configurationName`, einschließlich die leere Zeichenfolge "", entspricht der Endpunktkonfiguration mit dem gleichen Namen. Finden Sie unter der [WCF-Clientkonfiguration](~/docs/framework/wcf/feature-details/client-configuration.md) Themas beschriebenen Clientkonfiguration.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Dienstendpunkt der Kanalfactory ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDescription">
+      <MemberSignature Language="C#" Value="protected abstract System.ServiceModel.Description.ServiceEndpoint CreateDescription ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.ServiceModel.Description.ServiceEndpoint CreateDescription() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ChannelFactory.CreateDescription" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceEndpoint</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt beim Implementieren in einer abgeleiteten Klasse eine Beschreibung des Dienstendpunkts, der der Kanalfactory zugeordnet ist.</summary>
+        <returns>Die <see cref="T:System.ServiceModel.Description.ServiceEndpoint" />-Einstellung, die der Kanalfactory zugeordnet ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFactory">
+      <MemberSignature Language="C#" Value="protected virtual System.ServiceModel.Channels.IChannelFactory CreateFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.ServiceModel.Channels.IChannelFactory CreateFactory() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ChannelFactory.CreateFactory" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelFactory</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt die Kanalfactory für den aktuellen Endpunkt der Factory.</summary>
+        <returns>Eine <see cref="T:System.ServiceModel.Channels.IChannelFactory" />-Einstellung für den Endpunkt der aktuellen Factory.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Der Endpunkt des Diensts, zu dem die Factorykanäle eine Verbindung aufbauen, ist <see langword="null" />, oder die Bindung des Endpunkts ist <see langword="null" /> oder enthält kein Element mit dem Konfigurationsnamen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Credentials">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ClientCredentials Credentials { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Description.ClientCredentials Credentials" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ChannelFactory.Credentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ClientCredentials</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anmeldeinformationen ab, die von Clients für die Kommunikation mit einem Dienstendpunkt über die von der Factory erzeugten Kanäle verwendet werden.</summary>
+        <value>Die von Clients verwendeten <see cref="T:System.ServiceModel.Description.ClientCredentials" />-Informationen, sofern sie für die Factory konfiguriert sind, oder sofern der Endpunkt nicht <see langword="null" /> ist und sich entweder im Erstellt-Zustand oder im Zustand des Öffnens für die Kommunikation befindet; andernfalls <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das <xref:System.ServiceModel.Description.ClientCredentials>-Objekt wird als Endpunktverhalten gespeichert. Es kann über die <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A>-Eigenschaft darauf zugegriffen werden.  
+  
+ Die <xref:System.ServiceModel.ChannelFactory.OnOpened%2A>-Methode initialisiert eine schreibgeschützte Kopie des <xref:System.ServiceModel.Description.ClientCredentials>-Objekts für die Factory.  
+  
+ Das <xref:System.ServiceModel.Description.ClientCredentials>-Objekt wird von der <xref:System.ServiceModel.ClientBase%601>-Klasse (oder einer von dieser Klasse abgeleiteten Klasse) verwendet, um die Proxyobjekte zu erstellen, die Dienste aufrufen können. Auf das <xref:System.ServiceModel.Description.ClientCredentials>-Objekt kann auch über die <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>-Eigenschaft zugegriffen werden.  
+  
+> [!NOTE]
+>  Durch das Festlegen von `ChannelFactory.Credentials.Windows.AllowedImpersonationLevel` auf `TokenImpersonationLevel.Anonymous` wird stets eine anonyme Anmeldung ausgeführt, unabhängig von der Identitätswechselebene.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultCloseTimeout">
+      <MemberSignature Language="C#" Value="protected override TimeSpan DefaultCloseTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan DefaultCloseTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ChannelFactory.DefaultCloseTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Standardzeitintervall ab, das für den Abschluss eines Schließvorgangs bereitgestellt wird.</summary>
+        <value>Die Standard-<see cref="T:System.Timespan" />, die angibt, wie viel Zeit für das Schließen bleibt, bevor ein Timeout eintritt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ruft das Timeout für das Schließen des Standarddienstmodells ab, wenn sowohl <xref:System.ServiceModel.Description.ServiceEndpoint> als auch <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> `null` sind. Der Standardwert des Timeouts zum Schließen des Dienstmodells beträgt 1 Minute. Andernfalls wird der Wert auf den <xref:System.ServiceModel.Channels.Binding.CloseTimeout%2A>-Wert festgelegt, der <xref:System.ServiceModel.Description.ServiceEndpoint> zugeordnet ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultOpenTimeout">
+      <MemberSignature Language="C#" Value="protected override TimeSpan DefaultOpenTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan DefaultOpenTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ChannelFactory.DefaultOpenTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Zeitintervall ab, das für den Abschluss eines Öffnungsvorgangs bereitgestellt wird.</summary>
+        <value>Die Standard-<see cref="T:System.TimeSpan" />, die angibt, wie viel Zeit für das Öffnen bleibt, bevor ein Timeout eintritt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ruft das Timeout für das Öffnen des Standarddienstmodells ab, wenn sowohl <xref:System.ServiceModel.Description.ServiceEndpoint> als auch <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> `null` sind. Der Standardwert des Timeouts für das Öffnen des Dienstmodells beträgt 1 Minute. Andernfalls wird der Wert auf den <xref:System.ServiceModel.Channels.Binding.OpenTimeout%2A>-Wert festgelegt, der <xref:System.ServiceModel.Description.ServiceEndpoint> zugeordnet ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Endpoint">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ServiceEndpoint Endpoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Description.ServiceEndpoint Endpoint" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ChannelFactory.Endpoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceEndpoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Dienstendpunkt ab, zu dem die von der Factory erzeugten Kanäle eine Verbindung aufbauen.</summary>
+        <value>Die <see cref="T:System.ServiceModel.Description.ServiceEndpoint" />-Einstellung, zu der die von der Factory erzeugte Kanäle eine Verbindung aufbauen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureOpened">
+      <MemberSignature Language="C#" Value="protected void EnsureOpened ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void EnsureOpened() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ChannelFactory.EnsureOpened" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Öffnet die aktuelle Kanalfactory, sofern diese noch nicht geöffnet ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Stellen Sie vor dem Öffnen der Kanalfactory sicher, dass sie nicht <xref:System.ServiceModel.CommunicationState.Closed>, <xref:System.ServiceModel.CommunicationState.Closing> oder <xref:System.ServiceModel.CommunicationState.Opened> ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Die aktuelle Factory wird entweder geschlossen oder ist bereits geschlossen und kann daher nicht geöffnet werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T GetProperty&lt;T&gt; () where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !!T GetProperty&lt;class T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ChannelFactory.GetProperty``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">Das typisierte Objekt, das von der Methode abgefragt wird.</typeparam>
+        <summary>Gibt das angeforderte typisierte Objekt von der entsprechenden Ebene im Kanalstapel zurück, wenn es vorhanden ist, oder <see langword="null" />, wenn es nicht vorhanden ist.</summary>
+        <returns>Das von <paramref name="T" /> angeforderte typisierte Objekt, oder <see langword="null" />, falls das Objekt nicht vorhanden ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie hiermit die Funktionalität, Anforderungen und Parameter vom Kanalstapel ab. Wenn eine Kanalfactory das Zurückgeben des angeforderten Objekts unterstützt, wird dieser Vorgang ausgeführt. Andernfalls wird der Aufruf an die nächste Ebene im Stapel delegiert. Wenn die letzte Ebene erreicht ist und das angeforderte Objekt von keiner Kanalfactory unterstützt wird, gibt die Methode `null` zurück.  
+  
+ `T` ist in der Regel eine Kanalschnittstelle, die von der Kanalfactory unterstützt werden kann. Wenn z. B. `GetProperty<IChannelListener>` auf einer Duplexkanalfactory aufgerufen wird, wird der zugrunde liegenden Listener zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="InitializeEndpoint">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert den Dienstendpunkt der Kanalfactory.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen über eine Adresse zum Initialisieren eines Endpunkts verfügen, es reicht jedoch, wenn Sie nur die Bindung oder Konfiguration anstelle des gesamten Endpunkts kennen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="InitializeEndpoint">
+      <MemberSignature Language="C#" Value="protected void InitializeEndpoint (System.ServiceModel.Description.ServiceEndpoint endpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void InitializeEndpoint(class System.ServiceModel.Description.ServiceEndpoint endpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ChannelFactory.InitializeEndpoint(System.ServiceModel.Description.ServiceEndpoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">Die <see cref="T:System.ServiceModel.Description.ServiceEndpoint" />-Einstellung zum Initialisieren der Kanalfactory.</param>
+        <summary>Initialisiert den Dienstendpunkt der Kanalfactory mit einem angegebenen Endpunkt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie <xref:System.ServiceModel.ChannelFactory.InitializeEndpoint%28System.ServiceModel.Channels.Binding%2CSystem.ServiceModel.EndpointAddress%29>, wenn Sie nur die Bindung kennen. Verwenden Sie <xref:System.ServiceModel.ChannelFactory.InitializeEndpoint%28System.String%2CSystem.ServiceModel.EndpointAddress%29>, wenn Sie die Konfiguration kennen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="endpoint" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeEndpoint">
+      <MemberSignature Language="C#" Value="protected void InitializeEndpoint (System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress address);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void InitializeEndpoint(class System.ServiceModel.Channels.Binding binding, class System.ServiceModel.EndpointAddress address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ChannelFactory.InitializeEndpoint(System.ServiceModel.Channels.Binding,System.ServiceModel.EndpointAddress)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+        <Parameter Name="address" Type="System.ServiceModel.EndpointAddress" />
+      </Parameters>
+      <Docs>
+        <param name="binding">Die <see cref="T:System.ServiceModel.Channels.Binding" />-Einstellung zum Initialisieren der Kanalfactory.</param>
+        <param name="address">Die <see cref="T:System.ServiceModel.EndpointAddress" />-Einstellung zum Initialisieren der Kanalfactory.</param>
+        <summary>Initialisiert den Dienstendpunkt der Kanalfactory mit einer angegebenen Bindung und Adresse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie <xref:System.ServiceModel.ChannelFactory.InitializeEndpoint%28System.String%2CSystem.ServiceModel.EndpointAddress%29>, wenn Sie die Konfiguration kennen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeEndpoint">
+      <MemberSignature Language="C#" Value="protected void InitializeEndpoint (string configurationName, System.ServiceModel.EndpointAddress remoteAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void InitializeEndpoint(string configurationName, class System.ServiceModel.EndpointAddress remoteAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ChannelFactory.InitializeEndpoint(System.String,System.ServiceModel.EndpointAddress)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configurationName" Type="System.String" />
+        <Parameter Name="address" Type="System.ServiceModel.EndpointAddress" />
+      </Parameters>
+      <Docs>
+        <param name="configurationName">Der Name der zum Initialisieren der Kanalfactory verwendeten Konfigurationsdatei.</param>
+        <param name="remoteAddress">To be added.</param>
+        <summary>Initialisiert den Dienstendpunkt der Kanalfactory mit einer angegebenen Adresse und Konfiguration.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie <xref:System.ServiceModel.ChannelFactory.InitializeEndpoint%28System.ServiceModel.Channels.Binding%2CSystem.ServiceModel.EndpointAddress%29>, wenn Sie nur die Bindung kennen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAbort">
+      <MemberSignature Language="C#" Value="protected override void OnAbort ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnAbort() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ChannelFactory.OnAbort" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet die innere Kanalfactory der aktuellen Kanalfactory.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.ChannelFactory.OnAbort%2A>-Methode wird in einer Factory aufgerufen, nachdem sie in den Schließzustand übergegangen ist, falls die <xref:System.ServiceModel.Channels.CommunicationObject.Abort%2A>-Methode aufgerufen wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeginClose">
+      <MemberSignature Language="C#" Value="protected override IAsyncResult OnBeginClose (TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.IAsyncResult OnBeginClose(valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ChannelFactory.OnBeginClose(System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Der <see cref="T:System.TimeSpan" />-Wert, der angibt, welcher Zeitraum für den Vorgang verbleibt, bevor ein Timeout auftritt.</param>
+        <param name="callback">Der <see cref="T:System.AsyncCallback" />-Delegat, der die Benachrichtigung über den Abschluss des asynchronen Vorgangs erhält.</param>
+        <param name="state">Ein durch die Anwendung festgelegtes Objekt, das dem asynchronen Vorgang zugeordnete Statusinformationen enthält.</param>
+        <summary>Startet einen asynchronen Schließvorgang in der inneren Kanalfactory der aktuellen Kanalfactory, der ein Statusobjekt zugeordnet ist.</summary>
+        <returns>Die <see cref="T:System.IAsyncResult" />-Einstellung, die auf den asynchronen Vorgang verweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Methode wird in einem Rückruf die Identität des Ereignishandlers für den Vorgang mitgeteilt. Der Vorgang ist nicht abgeschlossen, bevor entweder der asynchrone Schließvorgang in der inneren Kanalfactory erneut ausgelöst wird oder das Timeout auftritt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeginOpen">
+      <MemberSignature Language="C#" Value="protected override IAsyncResult OnBeginOpen (TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.IAsyncResult OnBeginOpen(valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ChannelFactory.OnBeginOpen(System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Der <see cref="T:System.TimeSpan" />-Wert, der angibt, welcher Zeitraum für den Vorgang verbleibt, bevor ein Timeout auftritt.</param>
+        <param name="callback">Der <see cref="T:System.AsyncCallback" />-Delegat, der die Benachrichtigung über den Abschluss des asynchronen Vorgangs erhält.</param>
+        <param name="state">Ein durch die Anwendung festgelegtes Objekt, das dem asynchronen Vorgang zugeordnete Statusinformationen enthält.</param>
+        <summary>Startet einen asynchronen Öffnungsvorgang in der inneren Kanalfactory der aktuellen Kanalfactory, der ein Statusobjekt zugeordnet ist.</summary>
+        <returns>Die <see cref="T:System.IAsyncResult" />-Einstellung, die auf den asynchronen Vorgang verweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Methode wird in einem Rückruf die Identität des Ereignishandlers für den Vorgang mitgeteilt. Der Vorgang ist nicht abgeschlossen, bevor entweder der asynchrone Öffnungsvorgang in der inneren Kanalfactory erneut ausgelöst wird oder das Timeout auftritt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClose">
+      <MemberSignature Language="C#" Value="protected override void OnClose (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClose(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ChannelFactory.OnClose(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Der <see cref="T:System.TimeSpan" />-Wert, der angibt, welcher Zeitraum für den Vorgang verbleibt, bevor ein Timeout auftritt.</param>
+        <summary>Aufrufe werden in der inneren Kanalfactory mit einem angegebenen Timeout zum Abschluss des Vorgangs geschlossen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEndClose">
+      <MemberSignature Language="C#" Value="protected override void OnEndClose (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnEndClose(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ChannelFactory.OnEndClose(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das <see cref="T:System.IAsyncResult" />, das durch einen Aufruf der <see cref="M:System.ServiceModel.ChannelFactory.OnBeginClose(System.TimeSpan,System.AsyncCallback,System.Object)" />-Methode zurückgegeben wurde.</param>
+        <summary>Schließt einen asynchronen Schließvorgang in der inneren Kanalfactory der aktuellen Kanalfactory ab.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEndOpen">
+      <MemberSignature Language="C#" Value="protected override void OnEndOpen (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnEndOpen(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ChannelFactory.OnEndOpen(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das <see cref="T:System.IAsyncResult" />, das durch einen Aufruf der <see cref="M:System.ServiceModel.ChannelFactory.OnBeginOpen(System.TimeSpan,System.AsyncCallback,System.Object)" />-Methode zurückgegeben wurde.</param>
+        <summary>Schließt einen asynchronen Öffnungsvorgang in der inneren Kanalfactory der aktuellen Kanalfactory ab.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnOpen">
+      <MemberSignature Language="C#" Value="protected override void OnOpen (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnOpen(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ChannelFactory.OnOpen(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Der <see cref="T:System.TimeSpan" />-Wert, der angibt, welcher Zeitraum für das Öffnen bleibt, bevor ein Timeout auftritt.</param>
+        <summary>Aufrufe werden in der inneren Kanalfactory der aktuellen Kanalfactory mit einem angegebenen Timeout zum Abschluss des Vorgangs geöffnet.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Der innere Kanal des aktuellen Kanals ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnOpened">
+      <MemberSignature Language="C#" Value="protected override void OnOpened ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnOpened() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ChannelFactory.OnOpened" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine schreibgeschützte Kopie des <see cref="T:System.ServiceModel.Description.ClientCredentials" />-Objekts für die Kanalfactory.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überschreibt die <xref:System.ServiceModel.Channels.CommunicationObject.OnOpened%2A>-Methode, die während des Übergangs eines Objekts in den Geöffnet-Zustand aufgerufen wird, und löst sie aus. Das <xref:System.ServiceModel.Description.ClientCredentials>-Objekt wird als Endpunktverhalten gespeichert. Es kann über die <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A>-Eigenschaft darauf zugegriffen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnOpening">
+      <MemberSignature Language="C#" Value="protected override void OnOpening ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnOpening() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ChannelFactory.OnOpening" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt die innere Kanalfactory für den aktuellen Kanal.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Die innere Kanalfactory für die Kanalfactory lautet <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IDisposable.Dispose">
+      <MemberSignature Language="C#" Value="void IDisposable.Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.IDisposable.Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ChannelFactory.System#IDisposable#Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt die aktuelle Kanalfactory.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

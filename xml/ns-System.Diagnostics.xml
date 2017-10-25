@@ -1,0 +1,20 @@
+<Namespace Name="System.Diagnostics">
+  <Docs>
+    <summary>Die <see cref="N:System.Diagnostics" /> Namespace enthält Klassen, die Sie für die Interaktion mit Systemprozessen, Ereignisprotokollen und Leistungsindikatoren ermöglichen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+-   Die <xref:System.Diagnostics.EventLog> -Komponente bietet Funktionen zum Schreiben in Ereignisprotokolle, lesen die Einträge im Ereignisprotokoll, und erstellen und Löschen von Ereignisprotokollen und Ereignisquellen im Netzwerk. Die <xref:System.Diagnostics.EntryWrittenEventHandler> bietet eine Möglichkeit, die asynchron mit Ereignisprotokolle zu interagieren. Unterstützende Klassen bieten Zugriff auf detailliertere Kontrolle, z. B.: berechtigungseinschränkungen, die Möglichkeit zum Angeben von Ereignisprotokolltypen (dem steuert des Typs des Standarddaten, die mit einem Eintrag im Ereignisprotokoll geschrieben wird) und zum Durchlaufen der Auflistungen des Ereignisprotokolls Einträge. Weitere Informationen zu diesen Aufgaben finden Sie unter der <xref:System.Diagnostics.EventLogPermission>, <xref:System.Diagnostics.EventLogEntryType>, und <xref:System.Diagnostics.EventLogEntryCollection> Klassen.  
+  
+-   Die <xref:System.Diagnostics.Process> -Klasse bietet eine Funktionalität, um Systemprozesse über das Netzwerk zu überwachen und zu starten und Anhalten lokaler Systemprozesse. Zusätzlich zum Abrufen von Listen mit ausgeführten Prozesse (durch Angabe der Computer, den Prozessnamen oder die Prozess-Id) oder das Anzeigen von Informationen über den Prozess, der gerade den Zugriff auf den Prozessor besitzt, können Sie Threads eines Prozesses ein fundiertes Wissen abrufen und Module über den <xref:System.Diagnostics.Process> selbst dar und durch die Interaktion mit der <xref:System.Diagnostics.ProcessThread> und <xref:System.Diagnostics.ProcessModule> Klassen. Die <xref:System.Diagnostics.ProcessStartInfo> -Klasse ermöglicht es Ihnen, eine Vielzahl von Elementen mit dem Starten Sie eines neuen Prozess, z. B. Eingabe-, Ausgabe- und Streams, Arbeitsverzeichnisse, und über die Befehlszeile Verben und Argumente angeben. Diese ermöglichen eine genaue Kontrolle über das Verhalten Ihrer Prozesse. Anderen verwandten Klassen können Sie angeben, Fensterstile, Prozess thread Prioritäten und Interaktion mit Sammlungen von Threads und Modulen.  
+  
+-   Die <xref:System.Diagnostics.PerformanceCounter> Klasse können Sie zum Überwachen der Systemleistung, während die <xref:System.Diagnostics.PerformanceCounterCategory> -Klasse bietet eine Möglichkeit zum Erstellen von neuen benutzerdefinierten Indikatoren und Kategorien. Sie können lokale benutzerdefinierte Leistungsindikatoren schreiben und Lesen von lokalen und Remotecomputern Leistungsindikatoren (System sowie benutzerdefinierte). Können Sie Beispiel-Leistungsindikatoren mithilfe der <xref:System.Diagnostics.PerformanceCounter> Klasse, und zum Berechnen von Ergebnissen aus aufeinander folgenden Leistungsindikatorsamplings, die mithilfe der <xref:System.Diagnostics.CounterSample> Klasse. Die <xref:System.Diagnostics.CounterCreationData> -Klasse ermöglicht es Ihnen, mehrere Leistungsindikatoren in einer Kategorie zu erstellen und deren Typen angeben. Andere Klassen im Zusammenhang mit der Leistungsindikatorkomponente ermöglichen den Zugriff für eine Sammlung von Leistungsindikatoren, die Leistungsindikator-Berechtigung und die Indikatortypen.  
+  
+ Die <xref:System.Diagnostics> -Namespace stellt auch Klassen, mit denen Sie die Anwendung zu debuggen und die Ausführung des Codes verfolgen können. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Diagnostics.Trace>-Klasse und zur <xref:System.Diagnostics.Debug>-Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

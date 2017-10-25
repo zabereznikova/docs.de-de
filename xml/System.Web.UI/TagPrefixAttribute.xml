@@ -1,0 +1,131 @@
+<Type Name="TagPrefixAttribute" FullName="System.Web.UI.TagPrefixAttribute">
+  <TypeSignature Language="C#" Value="public sealed class TagPrefixAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TagPrefixAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.TagPrefixAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly, AllowMultiple=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert das Tagpräfix auf einer Webseite verwendet wird, um benutzerdefinierte Steuerelemente zu identifizieren. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.TagPrefixAttribute> Klasse definiert ein Attribut auf Assemblyebene an Tag Präfix Aliase für benutzerdefinierte Steuerelemente erforderlich. Dieses Attribut wird von Tools wie Microsoft Visual Studio verwendet, zum automatischen Generieren einer `Register` -Direktive in der ASP.NET-Seite, in dem die benutzerdefinierten Steuerelemente verwendet werden.  
+  
+ Diese Direktive registriert das Tagpräfix mit einem Namespace. Darüber hinaus gibt es die Assembly, in dem sich die Implementierung des benutzerdefinierten Steuerelements Code befindet. Mit dieser Richtlinie vorhanden ist können Sie benutzerdefinierte Steuerelemente auf einer Webseite deklarativ verwenden.  
+  
+ Weitere Informationen zum Verwenden von Attributen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ [!code-csharp[SystemWebUI_TagPrefixAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SystemWebUI_TagPrefixAttribute/CS/tagprefixattribute.cs#1)]
+ [!code-vb[SystemWebUI_TagPrefixAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SystemWebUI_TagPrefixAttribute/VB/tagprefixattribute.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TagPrefixAttribute (string namespaceName, string tagPrefix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string namespaceName, string tagPrefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.TagPrefixAttribute.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="namespaceName" Type="System.String" />
+        <Parameter Name="tagPrefix" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="namespaceName">Eine Zeichenfolge, die den Namespace des benutzerdefinierten Steuerelements identifiziert.</param>
+        <param name="tagPrefix">Eine Zeichenfolge, die das Präfix des benutzerdefinierten Steuerelements bezeichnet.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.TagPrefixAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Definition des benutzerdefinierten Steuerelements und vor jeder Code sollten Sie diesen Klassenkonstruktor wie folgt aufrufen:  
+  
+ `[assembly:TagPrefix(namespace, tag)]`  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein Attribut auf Assemblyebene zu definieren, die Sie als Tag-Präfix-Alias für ein benutzerdefiniertes Steuerelement angeben können. Dieses Attribut wird von Tools wie Microsoft Visual Studio verwendet, zum automatischen Generieren einer `@ Register` -Direktive in Webseiten, auf dem die benutzerdefinierten Steuerelemente verwendet werden.  
+  
+ [!code-csharp[SystemWebUI_TagPrefixAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SystemWebUI_TagPrefixAttribute/CS/tagprefixattribute.cs#1)]
+ [!code-vb[SystemWebUI_TagPrefixAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SystemWebUI_TagPrefixAttribute/VB/tagprefixattribute.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="namespaceName" /> oder <paramref name="tagPrefix" /> ist <see langword="null" /> oder eine leere Zeichenfolge ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NamespaceName">
+      <MemberSignature Language="C#" Value="public string NamespaceName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NamespaceName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.TagPrefixAttribute.NamespaceName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Namespacepräfix für das angegebene Steuerelement.</summary>
+        <value>Der Namespacename.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[SystemWebUI_TagPrefixAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SystemWebUI_TagPrefixAttribute/CS/tagprefixattribute.cs#1)]
+ [!code-vb[SystemWebUI_TagPrefixAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SystemWebUI_TagPrefixAttribute/VB/tagprefixattribute.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TagPrefix">
+      <MemberSignature Language="C#" Value="public string TagPrefix { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TagPrefix" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.TagPrefixAttribute.TagPrefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Tagpräfix für das angegebene Steuerelement.</summary>
+        <value>Das Tagpräfix.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[SystemWebUI_TagPrefixAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SystemWebUI_TagPrefixAttribute/CS/tagprefixattribute.cs#1)]
+ [!code-vb[SystemWebUI_TagPrefixAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SystemWebUI_TagPrefixAttribute/VB/tagprefixattribute.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,148 @@
+<Type Name="ParameterDataSourceExpression" FullName="System.Web.UI.WebControls.Expressions.ParameterDataSourceExpression">
+  <TypeSignature Language="C#" Value="public abstract class ParameterDataSourceExpression : System.Web.UI.WebControls.Expressions.DataSourceExpression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ParameterDataSourceExpression extends System.Web.UI.WebControls.Expressions.DataSourceExpression" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Expressions.ParameterDataSourceExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.Expressions.DataSourceExpression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(true, "Parameters")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.PersistChildren(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine abstrakte Basisklasse für <see cref="T:System.Web.UI.WebControls.Expressions.ParameterDataSourceExpression" /> Objekte.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ParameterDataSourceExpression ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Expressions.ParameterDataSourceExpression.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.Expressions.ParameterDataSourceExpression" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected override void LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Expressions.ParameterDataSourceExpression.LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Ein Objekt, das den Status des darstellt der <see cref="T:System.Web.UI.WebControls.Expressions.ParameterDataSourceExpression" /> Objekt.</param>
+        <summary>Lädt den Zustand der Werte in der <see cref="T:System.Web.UI.WebControls.Expressions.ParameterDataSourceExpression" /> -Objekt, das beibehalten werden muss.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.ParameterCollection Parameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.ParameterCollection Parameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Expressions.ParameterDataSourceExpression.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerDefaultProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ParameterCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Parameter, die mit diesem verknüpft sind <see cref="T:System.Web.UI.WebControls.Expressions.DataSourceExpression" /> Objekt.</summary>
+        <value>Die Parameter, die zugeordnet sind die <see cref="T:System.Web.UI.WebControls.Expressions.DataSourceExpression" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveViewState">
+      <MemberSignature Language="C#" Value="protected override object SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Expressions.ParameterDataSourceExpression.SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert den aktuellen Ansichtszustand des der <see cref="T:System.Web.UI.WebControls.Expressions.ParameterDataSourceExpression" /> Objekt.</summary>
+        <returns>Ein Objekt, das den gespeicherten Zustand enthält das <see cref="T:System.Web.UI.WebControls.Expressions.ParameterDataSourceExpression" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetContext">
+      <MemberSignature Language="C#" Value="public override void SetContext (System.Web.UI.Control owner, System.Web.HttpContext context, System.Web.UI.WebControls.IQueryableDataSource dataSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetContext(class System.Web.UI.Control owner, class System.Web.HttpContext context, class System.Web.UI.WebControls.IQueryableDataSource dataSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Expressions.ParameterDataSourceExpression.SetContext(System.Web.UI.Control,System.Web.HttpContext,System.Web.UI.WebControls.IQueryableDataSource)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Web.UI.Control" />
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+        <Parameter Name="dataSource" Type="System.Web.UI.WebControls.IQueryableDataSource" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Das Besitzersteuerelement verwenden.</param>
+        <param name="context">Der zu verwendende Kontext.</param>
+        <param name="dataSource">Die Datenquelle zu verwenden.</param>
+        <summary>Der Ausdruck mithilfe des angegebenen Besitzersteuerelement, den Kontext und die Datenquelle ausgeführt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackViewState">
+      <MemberSignature Language="C#" Value="protected override void TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Expressions.ParameterDataSourceExpression.TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verfolgt nach, Änderungen am Ansichtszustand des der <see cref="T:System.Web.UI.WebControls.Expressions.ParameterDataSourceExpression" /> Objekt, sodass die Änderungen können, in gespeichert werden der <see cref="T:System.Web.UI.StateBag" /> Objekt für das Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

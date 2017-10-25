@@ -1,0 +1,182 @@
+<Type Name="EndpointPermission" FullName="System.Net.EndpointPermission">
+  <TypeSignature Language="C#" Value="public class EndpointPermission" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit EndpointPermission extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.EndpointPermission" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert einen Endpunkt, der von autorisiert ist eine <see cref="T:System.Net.SocketPermission" /> Instanz.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.EndpointPermission> Klasse definiert einen Netzwerkendpunkt einschließlich Hostname, Port-Netzwerknummer und Transporttyp, die zum Herstellen der Verbindung verwendet.  
+  
+> [!NOTE]
+>  Vermeiden Sie endpunktberechtigungen Hostnamen verwenden, da diese Namen in IP-Adresse aufgelöst werden, denen der Stapel blockiert werden konnte.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.EndpointPermission.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das <see cref="T:System.Object" />, das mit dem aktuellen <see langword="Object" /> verglichen werden soll.</param>
+        <summary>Bestimmt, ob das angegebene <see langword="Object" /> und das aktuelle <see langword="Object" /> gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn das angegebene <see langword="Object" /> gleich der aktuellen <see langword="Object" /> ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.EndpointPermission.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fungiert als Hashfunktion für einen besonderen Typ.</summary>
+        <returns>Ein Hashcode für die aktuelle <see cref="T:System.Object" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Hostname">
+      <MemberSignature Language="C#" Value="public string Hostname { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Hostname" />
+      <MemberSignature Language="DocId" Value="P:System.Net.EndpointPermission.Hostname" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den DNS-Hostname oder IP-Adresse des Servers, der diesen Endpunkt zugeordnet ist.</summary>
+        <value>Eine Zeichenfolge, die DNS-Hostname oder IP-Adresse des Servers enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Port">
+      <MemberSignature Language="C#" Value="public int Port { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Port" />
+      <MemberSignature Language="DocId" Value="P:System.Net.EndpointPermission.Port" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Netzwerk-Ports, die diesem Endpunkt zugeordnet ist.</summary>
+        <value>Die Netzwerk-Portnummer, die dieser Anforderung zugeordnet ist oder <see cref="F:System.Net.SocketPermission.AllPorts" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.EndpointPermission.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge zurück, die die aktuelle <see cref="T:System.Net.EndpointPermission" />-Instanz darstellt.</summary>
+        <returns>Eine Zeichenfolge, die für die aktuelle <see cref="T:System.Net.EndpointPermission" /> Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.EndpointPermission.ToString%2A> Methode gibt eine Zeichenfolge, die für den Inhalt für die <xref:System.Net.EndpointPermission> Instanz. Die Zeichenfolge hat das Format <xref:System.Net.EndpointPermission.Hostname%2A>  #  <xref:System.Net.EndpointPermission.Port%2A>  #  <xref:System.Net.EndpointPermission.Transport%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transport">
+      <MemberSignature Language="C#" Value="public System.Net.TransportType Transport { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.TransportType Transport" />
+      <MemberSignature Language="DocId" Value="P:System.Net.EndpointPermission.Transport" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.TransportType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Transport ab, die diesem Endpunkt zugeordnet ist.</summary>
+        <value>Einer der <see cref="T:System.Net.TransportType" />-Werte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

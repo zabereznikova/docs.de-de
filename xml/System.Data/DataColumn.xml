@@ -1,0 +1,1713 @@
+<Type Name="DataColumn" FullName="System.Data.DataColumn">
+  <TypeSignature Language="C#" Value="public class DataColumn : System.ComponentModel.MarshalByValueComponent" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataColumn extends System.ComponentModel.MarshalByValueComponent" />
+  <TypeSignature Language="DocId" Value="T:System.Data.DataColumn" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.MarshalByValueComponent</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("ColumnName")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DesignTimeVisible(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Editor("Microsoft.VSDesigner.Data.Design.DataColumnEditor, Microsoft.VSDesigner, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt das Schema einer Spalte in einer <see cref="T:System.Data.DataTable" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.DataColumn> ist der wesentliche Baustein zum Erstellen des Schemas von einem <xref:System.Data.DataTable>. Erstellen Sie das Schema durch Hinzufügen von mindestens <xref:System.Data.DataColumn> -Objekte und die <xref:System.Data.DataColumnCollection>. Weitere Informationen finden Sie unter [Hinzufügen von Spalten zu einer "DataTable"](~/docs/framework/data/adonet/dataset-datatable-dataview/adding-columns-to-a-datatable.md).  
+  
+ Jede <xref:System.Data.DataColumn> verfügt über eine <xref:System.Data.DataColumn.DataType%2A> Eigenschaft, die die Art der Daten bestimmt die <xref:System.Data.DataColumn> enthält. Beispielsweise können Sie den Datentyp auf ganze Zahlen, Zeichenfolgen oder Dezimalzahlen beschränken. Da durch enthaltenen Daten die <xref:System.Data.DataTable> wird in der Regel zusammengeführt wieder in der ursprünglichen Datenquelle müssen Sie die Datentypen, die in der Datenquelle übereinstimmen. Weitere Informationen finden Sie unter [Datentypzuordnungen in ADO.NET](~/docs/framework/data/adonet/data-type-mappings-in-ado-net.md).  
+  
+ Eigenschaften, z. B. <xref:System.Data.DataColumn.AllowDBNull%2A>, <xref:System.Data.DataColumn.Unique%2A>, und <xref:System.Data.DataColumn.ReadOnly%2A> put Einschränkungen auf den Eintrag und Aktualisieren von Daten, wodurch um die Datenintegrität zu gewährleisten. Sie können auch die <xref:System.Data.DataColumn.AutoIncrement%2A>, <xref:System.Data.DataColumn.AutoIncrementSeed%2A>, und <xref:System.Data.DataColumn.AutoIncrementStep%2A> Eigenschaften zum Steuern der Daten automatisch generieren. Weitere Informationen zu <xref:System.Data.DataColumn.AutoIncrement%2A> Spalten finden Sie unter [erstellen "AutoIncrement"-Spalten](~/docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md). Weitere Informationen finden Sie unter [Primärschlüssel definieren](~/docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).  
+  
+ Sie können auch sicherstellen, dass Werte in eine <xref:System.Data.DataColumn> eindeutig sind, durch das Erstellen einer <xref:System.Data.UniqueConstraint> und Hinzufügen zu der <xref:System.Data.ConstraintCollection> von der <xref:System.Data.DataTable> , die <xref:System.Data.DataColumn> gehört. Weitere Informationen finden Sie unter [DataTable-Einschränkungen](~/docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  
+  
+ So erstellen eine Beziehung zwischen <xref:System.Data.DataColumn> Erstellen von Objekten, eine <xref:System.Data.DataRelation> -Objekt und fügen Sie diese der <xref:System.Data.DataRelationCollection> von einer <xref:System.Data.DataSet>.  
+  
+ Können Sie die <xref:System.Data.DataColumn.Expression%2A> Eigenschaft von der <xref:System.Data.DataColumn> Objekt, das um die Werte in einer Spalte zu berechnen oder eine Aggregatsspalte zu erstellen. Weitere Informationen finden Sie unter [Erstellen von Ausdrucksspalten](~/docs/framework/data/adonet/dataset-datatable-dataview/creating-expression-columns.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.DataTable> mit mehreren <xref:System.Data.DataColumn> Objekte.  
+  
+ [!code-csharp[Classic WebData DataColumn Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataColumn Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataColumn Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumn Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Dieser Typ ist für schreibgeschützte Vorgänge mit mehreren Threads sicher. Sie müssen alle Schreibvorgänge synchronisieren.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataColumn ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataColumn.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der eine <see cref="T:System.Data.DataColumn" /> Klasse als Zeichenfolge.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn erstellt, eine <xref:System.Data.DataColumn> Objekt besitzt keinen Standard <xref:System.Data.DataColumn.ColumnName%2A> oder <xref:System.Data.DataColumn.Caption%2A>. Wenn Sie ihn zum Hinzufügen einer <xref:System.Data.DataColumnCollection>, ein Standardname ("Column1", "Column2" usw.) generiert werden, wenn ein Name nicht zugewiesen wurden die <xref:System.Data.DataColumn.ColumnName%2A>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt ein neues <xref:System.Data.DataColumn>verschiedene Eigenschaften festlegt und fügt es einer <xref:System.Data.DataColumnCollection> für die <xref:System.Data.DataTable> Objekt.  
+  
+ [!code-csharp[Classic WebData DataColumn.DataColumn Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataColumn.DataColumn Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataColumn.DataColumn Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumn.DataColumn Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataColumn (string columnName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string columnName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataColumn.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="columnName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="columnName">Eine Zeichenfolge, die den Namen der zu erstellenden Spalte darstellt. Wenn auf festgelegt <see langword="null" /> oder eine leere Zeichenfolge (""), wird ein Standardname angegeben werden, wenn es sich bei der Columns-Auflistung hinzugefügt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.DataColumn" /> Klasse, die als Typzeichenfolge sind, unter Verwendung des angegebenen Spaltennamens.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig wird der Name, die spezifisch für eine Spalte der <xref:System.Data.DataColumn.Caption%2A> Eigenschaftswert.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt ein neues <xref:System.Data.DataColumn> mit einem angegebenen <xref:System.Data.DataColumn.ColumnName%2A>.  
+  
+ [!code-csharp[Classic WebData DataColumn.DataColumn1 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataColumn.DataColumn1 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataColumn.DataColumn1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumn.DataColumn1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataColumn (string columnName, Type dataType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string columnName, class System.Type dataType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataColumn.#ctor(System.String,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="columnName" Type="System.String" />
+        <Parameter Name="dataType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="columnName">Eine Zeichenfolge, die den Namen der zu erstellenden Spalte darstellt. Wenn auf festgelegt <see langword="null" /> oder eine leere Zeichenfolge (""), wird ein Standardname angegeben werden, wenn es sich bei der Columns-Auflistung hinzugefügt.</param>
+        <param name="dataType">Ein unterstütztes <see cref="P:System.Data.DataColumn.DataType" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.DataColumn" /> -Klasse unter Verwendung der angegebenen Spalte Name und Datentyp.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt ein neues <xref:System.Data.DataColumn> mit einem angegebenen <xref:System.Data.DataColumn.ColumnName%2A> und <xref:System.Data.DataColumn.DataType%2A>.  
+  
+ [!code-csharp[Classic WebData DataColumn.DataColumn2 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataColumn.DataColumn2 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataColumn.DataColumn2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumn.DataColumn2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Keine <paramref name="dataType" /> angegeben wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataColumn (string columnName, Type dataType, string expr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string columnName, class System.Type dataType, string expr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataColumn.#ctor(System.String,System.Type,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="columnName" Type="System.String" />
+        <Parameter Name="dataType" Type="System.Type" />
+        <Parameter Name="expr" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="columnName">Eine Zeichenfolge, die den Namen der zu erstellenden Spalte darstellt. Wenn auf festgelegt <see langword="null" /> oder eine leere Zeichenfolge (""), wird ein Standardname angegeben werden, wenn es sich bei der Columns-Auflistung hinzugefügt.</param>
+        <param name="dataType">Ein unterstütztes <see cref="P:System.Data.DataColumn.DataType" />.</param>
+        <param name="expr">Der Ausdruck verwendet, um diese Spalte zu erstellen. Weitere Informationen finden Sie in den Ausführungen zur <see cref="P:System.Data.DataColumn.Expression" />-Eigenschaft.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.DataColumn" /> -Klasse mit dem angegebenen Namen, den Datentyp und den Ausdruck.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine berechnete Spalte.  
+  
+ [!code-csharp[Classic WebData DataColumn.DataColumn3 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataColumn.DataColumn3 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataColumn.DataColumn3 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumn.DataColumn3 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Keine <paramref name="dataType" /> angegeben wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataColumn (string columnName, Type dataType, string expr, System.Data.MappingType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string columnName, class System.Type dataType, string expr, valuetype System.Data.MappingType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataColumn.#ctor(System.String,System.Type,System.String,System.Data.MappingType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="columnName" Type="System.String" />
+        <Parameter Name="dataType" Type="System.Type" />
+        <Parameter Name="expr" Type="System.String" />
+        <Parameter Name="type" Type="System.Data.MappingType" />
+      </Parameters>
+      <Docs>
+        <param name="columnName">Eine Zeichenfolge, die den Namen der zu erstellenden Spalte darstellt. Wenn auf festgelegt <see langword="null" /> oder eine leere Zeichenfolge (""), wird ein Standardname angegeben werden, wenn es sich bei der Columns-Auflistung hinzugefügt.</param>
+        <param name="dataType">Ein unterstütztes <see cref="P:System.Data.DataColumn.DataType" />.</param>
+        <param name="expr">Der Ausdruck verwendet, um diese Spalte zu erstellen. Weitere Informationen finden Sie in den Ausführungen zur <see cref="P:System.Data.DataColumn.Expression" />-Eigenschaft.</param>
+        <param name="type">Einer der <see cref="T:System.Data.MappingType" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.DataColumn" /> -Klasse mit dem angegebenen Namen, Datentyp, Ausdruck und Wert, der bestimmt, ob die Spalte ein Attribut ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `type` Argument legt die <xref:System.Data.DataColumn.ColumnMapping%2A> Eigenschaft. Die Eigenschaft gibt an, wie eine <xref:System.Data.DataColumn> zugeordnet wird, wenn eine <xref:System.Data.DataSet> wird umgewandelt in ein XML-Dokument. Wenn die Spalte "VName" benannt wird, und der darin enthaltene Wert ist "Bob", z. B. und `type` auf festgelegt ist `MappingType.Attribute`, das XML-Element würde wie folgt lauten:  
+  
+ \<FName Name = "Bob" / >  
+  
+ Weitere Informationen über die Zuordnung von Spalten zu Elementen oder Attributen finden Sie unter der <xref:System.Data.DataColumn.ColumnMapping%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine berechnete Spalte.  
+  
+ [!code-csharp[Classic WebData DataColumn.DataColumn4 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataColumn.DataColumn4 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataColumn.DataColumn4 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumn.DataColumn4 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Keine <paramref name="dataType" /> angegeben wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowDBNull">
+      <MemberSignature Language="C#" Value="public bool AllowDBNull { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowDBNull" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.AllowDBNull" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob null-Werte in dieser Spalte für Zeilen zulässig sind, die zur Tabelle gehören.</summary>
+        <value>
+          <see langword="true" />Wenn null-Werte zulässig sind; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt ein neues <xref:System.Data.DataColumn> und legt seine <xref:System.Data.DataColumn.AllowDBNull%2A> Eigenschaft `true`.  
+  
+ [!code-csharp[Classic WebData DataColumn.AllowDBNull Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataColumn.AllowDBNull Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataColumn.AllowDBNull Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumn.AllowDBNull Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoIncrement">
+      <MemberSignature Language="C#" Value="public bool AutoIncrement { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoIncrement" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.AutoIncrement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Spalte automatisch inkrementiert den Wert der Spalte für neue Zeilen der Tabelle hinzugefügt wird.</summary>
+        <value>
+          <see langword="true" />Wenn der Wert der Spalte automatisch inkrementiert andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ist der Typ dieser Spalte nicht Int16, Int32, oder einen Int64, wenn diese Eigenschaft festgelegt ist, die <xref:System.Data.DataColumn.DataType%2A> Eigenschaft in Int32 umgewandelt. Eine Ausnahme wird generiert, wenn es sich um eine berechnete Spalte handelt. Die <xref:System.Data.DataColumn.Expression%2A> festgelegt wird. Der inkrementierte Wert wird verwendet, nur, wenn der Wert der Zeile für diese Spalte, wenn der Columns-Auflistung hinzugefügt der Standardwert entspricht.  
+  
+ Erstellen Sie eine neue Zeile mit der <xref:System.Data.DataRow.ItemArray%2A> Eigenschaft von der <xref:System.Data.DataRow> -Klasse und übergibt ein Array von Werten. Dies ist ein potenzielles Problem für eine Spalte mit seiner <xref:System.Data.DataColumn.AutoIncrement%2A> festgelegt `true`, da der Wert automatisch generiert wird. Verwenden der <xref:System.Data.DataRow.ItemArray%2A> -Eigenschaft, die direkten `null` in die Position der Spalte im Array. Weitere Informationen finden Sie unter der <xref:System.Data.DataRow.ItemArray%2A> Eigenschaft von der <xref:System.Data.DataRow> Klasse.  
+  
+ Wenn der Typ der Spalte <xref:System.Data.SqlTypes.SqlInt16> oder <xref:System.Data.SqlTypes.SqlInt32>, <xref:System.Data.DataColumn.AutoIncrement%2A> funktioniert nicht. Verwenden Sie stattdessen Int16 oder Int32.  
+  
+ Wenn der Typ der Spalte <xref:System.Data.SqlTypes.SqlInt64> oder <xref:System.Data.SqlTypes.SqlDecimal>, <xref:System.Data.DataColumn.AutoIncrement%2A> funktioniert nur teilweise. Verwenden Sie stattdessen Int64-Typ oder einen Dezimalwert.  
+  
+ Wenn die <xref:System.Data.DataColumn.AutoIncrementStep%2A> Wert hinzugefügt wird der aktuelle Wert der überlaufprüfung unterdrückt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.DataColumn.AutoIncrement%2A>, <xref:System.Data.DataColumn.AutoIncrementSeed%2A>, und <xref:System.Data.DataColumn.AutoIncrementStep%2A> Eigenschaften.  
+  
+ [!code-csharp[Classic WebData DataColumn.AutoIncrementSeed Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataColumn.AutoIncrementSeed Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataColumn.AutoIncrementSeed Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumn.AutoIncrementSeed Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Spalte ist eine berechnete Spalte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoIncrementSeed">
+      <MemberSignature Language="C#" Value="public long AutoIncrementSeed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 AutoIncrementSeed" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.AutoIncrementSeed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Startwert für eine Spalte mit seiner <see cref="P:System.Data.DataColumn.AutoIncrement" /> -Eigenschaftensatz auf <see langword="true" />. Der Standard ist 0.</summary>
+        <value>Der Anfangswert für die <see cref="P:System.Data.DataColumn.AutoIncrement" /> Funktion.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.DataColumn.AutoIncrement%2A>, <xref:System.Data.DataColumn.AutoIncrementSeed%2A>, und <xref:System.Data.DataColumn.AutoIncrementStep%2A> Eigenschaften.  
+  
+ [!code-csharp[Classic WebData DataColumn.AutoIncrementSeed Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataColumn.AutoIncrementSeed Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataColumn.AutoIncrementSeed Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumn.AutoIncrementSeed Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoIncrementStep">
+      <MemberSignature Language="C#" Value="public long AutoIncrementStep { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 AutoIncrementStep" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.AutoIncrementStep" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Inkrement, das verwendet wird, indem Sie eine Spalte mit seiner <see cref="P:System.Data.DataColumn.AutoIncrement" /> -Eigenschaftensatz auf <see langword="true" />.</summary>
+        <value>Die Anzahl, die der Wert der Spalte automatisch inkrementiert wird. Der Standard ist 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.DataColumn.AutoIncrement%2A>, <xref:System.Data.DataColumn.AutoIncrementSeed%2A>, und <xref:System.Data.DataColumn.AutoIncrementStep%2A> Eigenschaften.  
+  
+ [!code-csharp[Classic WebData DataColumn.AutoIncrementSeed Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataColumn.AutoIncrementSeed Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataColumn.AutoIncrementSeed Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumn.AutoIncrementSeed Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der festgelegte Wert ist 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Caption">
+      <MemberSignature Language="C#" Value="public string Caption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Caption" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.Caption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Beschriftung für die Spalte fest.</summary>
+        <value>Die Beschriftung der Spalte. Wenn nicht festgelegt ist, wird der <see cref="P:System.Data.DataColumn.ColumnName" /> Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die <xref:System.Data.DataColumn.Caption%2A> Eigenschaft anzuzeigenden einen beschreibenden bzw. angezeigten Namen für eine <xref:System.Data.DataColumn>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt ein neues <xref:System.Data.DataTable>. Dann fügt drei <xref:System.Data.DataColumn> -Objekte eine <xref:System.Data.DataColumnCollection> und legt der <xref:System.Data.DataColumn.Caption%2A> Eigenschaft für die einzelnen <xref:System.Data.DataColumn>.  
+  
+ [!code-csharp[Classic WebData DataColumn.Caption Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataColumn.Caption Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataColumn.Caption Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumn.Caption Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckNotAllowNull">
+      <MemberSignature Language="C#" Value="protected void CheckNotAllowNull ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void CheckNotAllowNull() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataColumn.CheckNotAllowNull" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dieser Member unterstützt die .NET Framework-Infrastruktur und ist nicht für die direkte Verwendung in Code vorgesehen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckUnique">
+      <MemberSignature Language="C#" Value="protected void CheckUnique ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CheckUnique() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataColumn.CheckUnique" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dieser Member unterstützt die .NET Framework-Infrastruktur und ist nicht für die direkte Verwendung in Code vorgesehen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnMapping">
+      <MemberSignature Language="C#" Value="public virtual System.Data.MappingType ColumnMapping { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.MappingType ColumnMapping" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.ColumnMapping" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.MappingType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Data.MappingType" /> der Spalte.</summary>
+        <value>Einer der <see cref="T:System.Data.MappingType" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.DataColumn.ColumnMapping%2A> Eigenschaft bestimmt, wie eine <xref:System.Data.DataColumn> zugeordnet wird, wenn eine <xref:System.Data.DataSet> gespeichert ist, als eine XML-Dokument mit der <xref:System.Data.DataSet.WriteXml%2A> Methode.  
+  
+ Z. B. wenn ein <xref:System.Data.DataColumn> ist mit dem Namen "CustomerID", und die zugehörige <xref:System.Data.DataColumn.ColumnMapping%2A> -Eigenschaftensatz auf `MappingType.Element`, der Spaltenwert erzeugt die folgende XML:  
+  
+```  
+<Customers>  
+ <customerID>ALFKI</customerID>  
+......  
+ </Customers>  
+ <Orders>  
+ <OrderID>12345</OrderID>  
+ <customerID>ALFKI</customerID>  
+......  
+ </Orders>  
+```  
+  
+ Jedoch, wenn die gleiche Spalte zugeordnet ist `MappingType.Attribute`, wird das folgende XML erstellt:  
+  
+```  
+<Customers customerID="ALFKI"........more attributes.....>  
+ <Order orderID="1234"....more attributes..../>  
+ <Order orderID="1234"....more attributes..../>  
+...... More orders for this customer  
+ </Customers>  
+```  
+  
+ Verwenden der <xref:System.Data.DataColumn.%23ctor%2A> -Konstruktor, enthält die `type` Argument wie der <xref:System.Data.DataColumn> zugeordnet wird, wenn seine <xref:System.Data.DataSet> wird ein XML-Dokument transformiert.  
+  
+ Die <xref:System.Data.DataColumn.ColumnMapping%2A> -Eigenschaft entspricht dem Konstruktorargument `type`.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.DataColumn.ColumnMapping%2A> type-Eigenschaft der neuen <xref:System.Data.DataColumn>.  
+  
+ [!code-csharp[Classic WebData DataColumn.ColumnMapping Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataColumn.ColumnMapping Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataColumn.ColumnMapping Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumn.ColumnMapping Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnName">
+      <MemberSignature Language="C#" Value="public string ColumnName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ColumnName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.ColumnName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Spalte in der <see cref="T:System.Data.DataColumnCollection" />.</summary>
+        <value>Der Name der Spalte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine <xref:System.Data.DataColumn> wird erstellt, es sind keine <xref:System.Data.DataColumn.ColumnName%2A> Wert. Jedoch, wenn die <xref:System.Data.DataColumn> hinzugefügt wird eine <xref:System.Data.DataColumnCollection> für eine <xref:System.Data.DataTable> -Objekt erhält einen Standardnamen ("Column1", "Column2" usw.).  
+  
+ Wird standardmäßig die <xref:System.Data.DataColumn.Caption%2A> Wert wird festgelegt, um die <xref:System.Data.DataColumn.ColumnName%2A> Wert.  
+  
+   
+  
+## Examples  
+ In den folgenden Beispielen ruft der <xref:System.Data.DataColumn.ColumnName%2A> für jede Spalte in jeder Tabelle in eine <xref:System.Data.DataSet>. Außerdem wird gezeigt, wie Sie erstellen eine <xref:System.Data.DataColumn> mit einem neuen <xref:System.Data.DataColumn.ColumnName%2A>.  
+  
+ [!code-csharp[Classic WebData DataColumn.ColumnName Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataColumn.ColumnName Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataColumn.ColumnName Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumn.ColumnName Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Eigenschaft wird festgelegt, um <see langword="null" /> oder eine leere Zeichenfolge und die Spalte gehört zu einer Auflistung.</exception>
+        <exception cref="T:System.Data.DuplicateNameException">Eine Spalte mit dem gleichen Namen ist bereits in der Auflistung vorhanden. Der Vergleich ist nicht in der Groß-/Kleinschreibung beachtet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DataType">
+      <MemberSignature Language="C#" Value="public Type DataType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type DataType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.DataType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Data.ColumnTypeConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ der in der Spalte gespeicherten Daten.</summary>
+        <value>Ein <see cref="T:System.Type" /> Objekt, das den Spaltendatentyp darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen der <xref:System.Data.DataColumn.DataType%2A> Wert ist sehr wichtig, den richtigen Erstellung und Aktualisierung von Daten in einer Datenquelle unerlässlich.  
+  
+ Die <xref:System.Data.DataColumn.DataType%2A> Eigenschaft unterstützt die folgenden .NET Framework-Basisdatentypen:  
+  
+-   <xref:System.Boolean>  
+  
+-   <xref:System.Byte>  
+  
+-   <xref:System.Char>  
+  
+-   <xref:System.DateTime>  
+  
+-   <xref:System.Decimal>  
+  
+-   <xref:System.Double>  
+  
+-   <xref:System.Guid>  
+  
+-   <xref:System.Int16>  
+  
+-   <xref:System.Int32>  
+  
+-   <xref:System.Int64>  
+  
+-   <xref:System.SByte>  
+  
+-   <xref:System.Single>  
+  
+-   <xref:System.String>  
+  
+-   <xref:System.TimeSpan>  
+  
+-   <xref:System.UInt16>  
+  
+-   <xref:System.UInt32>  
+  
+-   <xref:System.UInt64>  
+  
+ sowie die folgenden Arraytyp:  
+  
+-   `Byte[]`  
+  
+ Eine Ausnahme wird generiert, wenn das Ändern dieser Eigenschaft nach der Spalte Speichern von Daten begonnen wurde.  
+  
+ Wenn <xref:System.Data.DataColumn.AutoIncrement%2A> festgelegt ist, um `true` vor dem Festlegen der <xref:System.Data.DataColumn.DataType%2A> -Eigenschaft, und Sie versuchen, ein Integer-Datentyp festgelegt, wird eine Ausnahme generiert.  
+  
+> [!NOTE]
+>  Eine Spalte des Datentyps `Byte[]` ist in bestimmten Fällen eine besondere Behandlung erforderlich, da im Gegensatz zu den .NET Framework-Basisdatentypen es Datentyp ein Verweistyp ist. Wenn eine Spalte vom Datentyp `Byte[]` dient als ein <xref:System.Data.DataTable.PrimaryKey%2A>, oder als eine <xref:System.Data.DataView.Sort%2A> oder <xref:System.Data.DataView.RowFilter%2A> Schlüssel für eine <xref:System.Data.DataView>, alle Änderungen an der Spaltenwert muss umfassen Zuweisen der `Byte[]` Spaltenwert ein separat instanziiert `Byte[]` Objekt. Diese Zuweisung ist erforderlich, um die Aktualisierung der internen Indizes durch Sortieren, Filtern und primäre Schlüsselvorgänge verwendete ausgelöst. Dies wird im folgenden Beispiel illustriert:  
+  
+```  
+byte[] columnValue = (byte[])myDataTable.Rows[0][0];  
+byte[] newValue = (byte[])columnValue.Clone();  
+newValue[1] = 2;  
+myDataTable.Rows[0][0] = newValue;  
+```  
+  
+> [!NOTE]
+>  Obwohl es möglich, eine Spalte definieren, als Datentyp außer den .NET Framework-Basisdatentypen und `Byte[]`, eine solche Spalte als einen benutzerdefinierten Typ, gelten die folgenden Beschränkungen der Datenträgerverwendung behandelt werden. (Weitere Informationen zu benutzerdefinierten Typen, finden Sie unter [Creating and Using User-Defined Types](http://msdn.microsoft.com/en-us/ec0266d2-7e5b-47e4-938a-85ac9d04fa40).)  
+  
+-   Die Spalte darf nicht Teil einer <xref:System.Data.DataView.RowFilter%2A> oder <xref:System.Data.DataTable.Select%2A> Ausdruck.  
+  
+-   Wenn die Spalte, als verwendet wird ein <xref:System.Data.DataTable.PrimaryKey%2A>, oder als eine <xref:System.Data.DataView.Sort%2A> oder für eine <xref:System.Data.DataView>, müssen sie als ein unveränderliches Feld behandelt; die Daten der Spalte darf nicht geändert werden, nachdem sie der Tabelle hinzugefügt wurde.  
+  
+-   Die <xref:System.Data.DataColumn.ColumnMapping%2A> kann nur festgelegt werden, um `MappingType.Element`.  
+  
+-   Die Klasse, die implementiert, der Datentyp der Spalte muss, markiert werden müssen, mit der <xref:System.SerializableAttribute>, und wenn nötig implementieren die <xref:System.Runtime.Serialization.ISerializable> oder <xref:System.Xml.Serialization.IXmlSerializable> Schnittstelle.  
+  
+-   Unterstützung für die änderungsnachverfolgung ist eingeschränkt. Nutzen der <xref:System.Data.DataTable> Nachverfolgungsmechanismus des Klasse ändern, die Klasse, implementiert der Datentyp der Spalte, muss entweder implementieren. die <xref:System.ComponentModel.IChangeTracking> -Schnittstelle, oder übernehmen Sie die Verantwortung für informiert die <xref:System.Data.DataRow> Wenn der Spaltenwert wurde geändert haben, entweder durch den Aufruf von <xref:System.Data.DataRow.SetModified%2A> in der Zeile oder ein Wertobjekt separat instanziiert Spalte das Spaltenobjekt Wert zuweisen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Spalten mit verschiedenen Datentypen einen <xref:System.Data.DataTable>, und klicken Sie dann die Tabelle eine Zeile hinzugefügt.  
+  
+ [!code-csharp[Classic WebData DataColumn.DataType Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataColumn.DataType Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataColumn.DataType Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumn.DataType Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Spalte ist bereits Daten gespeichert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DateTimeMode">
+      <MemberSignature Language="C#" Value="public System.Data.DataSetDateTime DateTimeMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.DataSetDateTime DateTimeMode" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.DateTimeMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.DataSetDateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see langword="DateTimeMode" /> für die Spalte.</summary>
+        <value>Die <see cref="T:System.Data.DataSetDateTime" /> für die angegebene Spalte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.DataColumn.DateTimeMode%2A> kann nicht geändert werden, wenn Zeilen hinzugefügt haben eine <xref:System.Data.DataColumn>, mit Ausnahme von ändern <xref:System.Data.DataSetDateTime.Unspecified> und <xref:System.Data.DataSetDateTime.UnspecifiedLocal> oder umgekehrt. Die Änderung von `UnspecifiedLocal` auf `Unspecified` und umgekehrt ist zulässig, da der Unterschied zwischen diesen beiden Optionen nur während der Serialisierung wird und sich nicht auf den Speicher wirkt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultValue">
+      <MemberSignature Language="C#" Value="public object DefaultValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DefaultValue" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.DefaultValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Data.DefaultValueTypeConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Standardwert für die Spalte fest, wenn Sie neue Zeilen erstellen.</summary>
+        <value>Ein Wert, der für der Spaltenwerts geeignet <see cref="P:System.Data.DataColumn.DataType" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Standardwert ist der Wert, der die Spalte automatisch zugewiesen wird bei einer <xref:System.Data.DataRow> wird erstellt (z. B. das Datum und Uhrzeit der Erstellung der <xref:System.Data.DataRow> erstellt wurde.  
+  
+ Wenn <xref:System.Data.DataColumn.AutoIncrement%2A> festgelegt ist, auf "true", es kann kein Standardwert festgelegt.  
+  
+ Erstellen Sie eine neue Zeile mit der <xref:System.Data.DataRow.ItemArray%2A> Eigenschaft von der <xref:System.Data.DataRow> Klasse und übergibt der Methode ein Array von Werten. Dies ist ein potenzielles Problem für eine Spalte mit einem Standardwert, da der Wert automatisch generiert werden. Verwenden der <xref:System.Data.DataRow.ItemArray%2A> Eigenschaft mit einer solchen Spalte platzieren `null` in die Position der Spalte im Array. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Data.DataRow.ItemArray%2A>-Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt mehrere <xref:System.Data.DataColumn> Objekte, die unterschiedliche Datentypen aufweisen, und legt entsprechende Standardwerte für die einzelnen Spalten.  
+  
+ [!code-vb[Classic WebData DataColumn.DefaultValue Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumn.DefaultValue Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Wenn Sie eine Zeile hinzufügen, ist der Standardwert keine Instanz des Datentyps der Spalte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Expression">
+      <MemberSignature Language="C#" Value="public string Expression { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Expression" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.Expression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Ausdruck zum Filtern von Zeilen, die Werte in einer Spalte zu berechnen oder eine Aggregatsspalte zu erstellen.</summary>
+        <value>Ein Ausdruck, berechnen Sie den Wert einer Spalte oder eine Aggregatsspalte zu erstellen. Der Rückgabetyp eines Ausdrucks richtet sich nach den <see cref="P:System.Data.DataColumn.DataType" /> der Spalte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Verwendungsmöglichkeit von der <xref:System.Data.DataColumn.Expression%2A> Eigenschaft besteht im Erstellen von berechneter Spalten. Um ein Steuerwert zu berechnen, wird z. B. Preis pro Einheit mit dem Steuersatz einer bestimmten Region multipliziert. Da Steuersätze regional unterschiedlich sind, wäre es nicht möglich, einen einzigen Steuersatz in eine Spalte eingefügt; Stattdessen wird der Wert mit berechnet die <xref:System.Data.DataColumn.Expression%2A> Eigenschaft, die in der Visual Basic-Code im folgenden Abschnitt gezeigt:  
+  
+ DataSet1.Tables("Products"). Columns("Tax"). Ausdruck = "UnitPrice * 0.086"  
+  
+ Eine zweite Verwendungsmöglichkeit ist, um eine Aggregatsspalte zu erstellen. Ähnlich wie ein berechneter Wert, ein Aggregat führt eine Operation, die basierend auf den vollständigen Satz von Zeilen in der <xref:System.Data.DataTable>. Ein einfaches Beispiel ist die Anzahl der Zeilen in der Menge zurückgegeben. Dies ist die Methode, die Sie verwenden würden, um die Anzahl der von einem bestimmten Verkäufer abgeschlossenen Transaktionen zu ermitteln, wie in Visual Basic-Code dargestellt:  
+  
+```  
+DataSet1.Tables("Orders").Columns("OrderCount").Expression = "Count(OrderID)"  
+```  
+  
+## <a name="expression-syntax"></a>Ausdruckssyntax  
+ Wenn Sie einen Ausdruck erstellen, verwenden Sie die <xref:System.Data.DataColumn.ColumnName%2A> Eigenschaft zum Verweisen auf Spalten. Beispielsweise, wenn die <xref:System.Data.DataColumn.ColumnName%2A> für eine Spalte "UnitPrice" und einem anderen "Quantity" ist der Ausdruck wäre wie folgt:  
+  
+ "Einzelpreis * Menge"  
+  
+> [!NOTE]
+>  Wenn eine Spalte in einem Ausdruck verwendet wird, wird dann der Ausdruck hat eine Abhängigkeit für die betreffende Spalte. Wenn eine abhängige Spalte umbenannt oder entfernt wird, wird keine Ausnahme ausgelöst. Eine Ausnahme wird ausgelöst, wenn die Spalte jetzt unterbrochen Ausdruck zugegriffen wird.  
+  
+ Wenn Sie einen Ausdruck für einen Filter erstellen, schließen Sie Zeichenfolgen in einfache Anführungszeichen eingeschlossen:  
+  
+ "LastName"Jones"="  
+  
+ Wenn ein Spaltenname nicht-alphanumerische Zeichen enthält oder mit einer Ziffer beginnt oder keines der folgenden reservierten Wörter (Beachtung) entspricht, erfordert sie besondere Behandlung, wie in den folgenden Abschnitten beschrieben.  
+  
+ Und  
+  
+ Zwischen  
+  
+ Untergeordnet  
+  
+ False  
+  
+ In  
+  
+ Is  
+  
+ Like  
+  
+ Not  
+  
+ Null  
+  
+ Oder  
+  
+ Parent (Übergeordnet)  
+  
+ True  
+  
+ Wenn ein Spaltenname eines der oben genannten Bedingungen erfüllt, muss er in beiden eckige Klammern umschlossen werden oder die "'" (Graviszeichen) Anführungszeichen. Beispielsweise um eine Spalte mit dem Namen "Spaltennummer" in einem Ausdruck verwenden, Schreiben Sie entweder "[Spalte #]":  
+  
+ Insgesamt * [Spaltennummer]  
+  
+ oder "\`Spalte #" ":  
+  
+ Insgesamt * \`Spalte # "  
+  
+ Wenn die Spaltennamen in eckigen Klammern dann alle eingeschlossen ist "]" und "\\' Zeichen (jedoch keine andere Zeichen) darin müssen mit Escapezeichen versehen werden, wobei sie mit dem umgekehrten Schrägstrich vorangestellt wird ("\\") Zeichen. Wenn der Spaltenname in Graviszeichen eingeschlossen ist muss sie Graviszeichen darin nicht enthalten. Angenommen, eine Spalte mit dem Namen "Column []\\" geschrieben:  
+  
+ Insgesamt * [Spalte [\\]\\\\]  
+  
+ oder  
+  
+ Insgesamt * \`Spalte]\\`  
+  
+## <a name="user-defined-values"></a>Benutzerdefinierte Werte  
+ Benutzerdefinierte Werte können in Ausdrücken verwendet werden, mit Werten verglichen werden soll. Zeichenfolgenwerte in einfache Anführungszeichen eingeschlossen werden soll (und jedes einzelne Anführungszeichen in einem Zeichenfolgenwert vorangestellt durch ein anderes Zeichen für einzelne Anführungszeichen mit Escapezeichen versehen werden muss). Datumswerte sollte in Nummernzeichen (#) oder basierend auf den Datenanbieter einfache Anführungszeichen (') eingeschlossen werden. Dezimalstellen sowie die wissenschaftliche Schreibweise sind für numerische Werte zulässig. Zum Beispiel:  
+  
+ "FirstName"John"="  
+  
+ "Preis < = 50,00"  
+  
+ "" BirthDate "< #1/31/&#82;"  
+  
+ Für Spalten, die Enumerationswerte enthalten, können Umwandeln Sie den Wert in einen Integer-Datentyp. Zum Beispiel:  
+  
+ "EnumColumn = 5"  
+  
+## <a name="parsing-literal-expressions"></a>Literale Ausdrücke analysieren  
+ Alle Literale Ausdrücke müssen in das Gebietsschema für die invariante Kultur angegeben werden. Wenn `DataSet` analysiert und konvertiert Sie Literale Ausdrücke immer die invariante Kultur, nicht die aktuelle Kultur verwendet.  
+  
+ Zeichenfolgenliterale werden identifiziert, wenn einzelne Anführungszeichen um den Wert vorhanden sind. Zum Beispiel:  
+  
+ 'John'  
+  
+ `Boolean`Literale sind "true" und "false". Sie sind nicht in Ausdrücken in Anführungszeichen.  
+  
+ `Integer`Literale [+-]? [0-9] + werden behandelt, als `System.Int32`, `System.Int64` oder `System.Double`. `System.Double`abnehmen kann, je nachdem, wie groß die Zahl ist. Wenn die Anzahl im Literal 2147483650 ist beispielsweise `DataSet` versucht zunächst, analysieren die Zahl als eine `Int32`. Dies ist nicht erfolgreich, da die Zahl zu groß ist. In diesem Fall `DataSet` analysiert die Zahl als eine `Int64`, ist erfolgreich. Wenn das Literal eine Zahl größer als der maximale Wert von einem Int64-Typ wurde `DataSet` analysiert das literal mit `Double`.  
+  
+ Reelle Literale, die mit der wissenschaftlichen Schreibweise wie z. B. 4.42372E-30, sind mit analysierte `System.Double`.  
+  
+ Wirkliche Literale ohne wissenschaftliche Schreibweise, aber mit einem Dezimaltrennzeichen werden behandelt, als `System.Decimal`. Die Anzahl überschreitet die maximale oder minimale Werte, die von unterstützt `System.Decimal`, wird er als analysiert eine `System.Double`. Zum Beispiel:  
+  
+ 142526.144524 konvertiert eine `Decimal`.  
+  
+ 345262.78036719560925667 wird als behandelt eine `Double`.  
+  
+## <a name="operators"></a>Operatoren  
+ Verkettung ist mit booleschen AND, OR und NOT-Operatoren zulässig. Sie können mithilfe von Klammern gruppieren Sie Klauseln und Rangfolge zu erzwingen. Der AND-Operator hat Vorrang vor anderen Operatoren. Zum Beispiel:  
+  
+ (LastName = 'Smith' oder LastName = 'Jones') UND FirstName = "John"  
+  
+ Bei der Erstellung von Vergleichsausdrücken sind die folgenden Operatoren zulässig:  
+  
+ \<  
+  
+ >  
+  
+ \<=  
+  
+ >=  
+  
+ <>  
+  
+ =  
+  
+ IN  
+  
+ LIKE  
+  
+ Die folgenden arithmetischen Operatoren werden ebenfalls in Ausdrücken unterstützt:  
+  
+ \+(hinzufügen)  
+  
+ \- (Subtraktion)  
+  
+ \*(Multiplikation)  
+  
+ / (Division)  
+  
+ % (Modulo)  
+  
+## <a name="string-operators"></a>Zeichenfolgen-Operatoren  
+ Um eine Zeichenfolge zu verketten, verwenden Sie das Zeichen + enthält. Der Wert von der <xref:System.Data.DataSet.CaseSensitive%2A> Eigenschaft von der <xref:System.Data.DataSet> -Klasse bestimmt, ob Zeichenfolgenvergleiche die Groß-/Kleinschreibung. Allerdings können Sie diesen Wert durch Überschreiben der <xref:System.Data.DataTable.CaseSensitive%2A> Eigenschaft von der <xref:System.Data.DataTable> Klasse.  
+  
+## <a name="wildcard-characters"></a>Platzhalterzeichen  
+ Sowohl die * und % Synonym als Platzhalterzeichen im Vergleich mit LIKE verwendet werden kann. Wenn die Zeichenfolge in einer LIKE-Klausel enthält einen * oder % werden diese Zeichen in Klammern ([]) eingeschlossen werden soll. Wenn eine Klammer in der Klausel enthalten ist, sollte jeder Klammer in Klammern (z. B. [[[[] oder []]) eingeschlossen werden. Ein Platzhalter ist am Anfang und Ende eines Musters oder am Ende eines Musters oder zu Beginn eines Musters zulässig. Zum Beispiel:  
+  
+ "ItemName wie" * Produkt\*""  
+  
+ "ItemName wie" * Produkt ' "  
+  
+ "ItemName wie"Produkt "*"  
+  
+ Platzhalterzeichen sind nicht in der Mitte einer Zeichenfolge zulässig. Z. B. "Te * Xt' ist nicht zulässig.  
+  
+## <a name="parentchild-relation-referencing"></a>Übergeordnete/untergeordnete Beziehung verweisen auf  
+ Eine übergeordnete Tabelle darf in einem Ausdruck verwiesen werden, indem dem Spaltennamen vorangestellt wird `Parent`. Z. B. die `Parent.Price` verweist auf die übergeordnete Tabelle-Spalte, die mit dem Namen `Price`.  
+  
+ Wenn ein untergeordnetes Element mehrere übergeordnete Zeilen aufweist, verwenden Sie Parent(RelationName). Spaltenname. Der Parent(RelationName). Preis verweist auf die übergeordnete Tabelle-Spalte, die mit dem Namen Preis über die Beziehung.  
+  
+ Eine Spalte in einer untergeordneten Tabelle kann in einem Ausdruck verwiesen werden, indem dem Spaltennamen vorangestellt wird `Child`. Da die Beziehungen zwischen untergeordneten Elementen möglicherweise mehrere Zeilen zurückgibt, müssen Sie den Verweis auf die untergeordnete Spalte in einer Aggregatfunktion aufnehmen. Beispielsweise `Sum(Child.Price)` würde die Summe der Spalte mit dem Namen zurückgeben `Price` in der untergeordneten Tabelle.  
+  
+ Wenn eine Tabelle mehr als ein untergeordnetes Element verfügt, wird die Syntax lautet: `Child(RelationName)`. Angenommen, eine Tabelle verfügt über zwei untergeordnete-Tabellen, die mit dem Namen `Customers` und `Orders`, und die <xref:System.Data.DataRelation> Objekt heißt `Customers2Orders`, der Verweis würde wie folgt lauten:  
+  
+ AVG(Child(Customers2Orders). Menge)  
+  
+## <a name="aggregates"></a>Aggregate  
+ Die folgenden Aggregattypen werden unterstützt:  
+  
+ SUM (Summe)  
+  
+ AVG (Durchschnitt)  
+  
+ Min (Minimum)  
+  
+ Max (Maximum)  
+  
+ Count (Anzahl)  
+  
+ StDev (statistische Standardabweichung)  
+  
+ Var (statistische Varianz).  
+  
+ Aggregate sind in der Regel zusammen Beziehungen ausgeführt. Erstellen Sie einen Aggregatausdruck mithilfe einer der zuvor aufgeführten Funktionen und eine untergeordnete Tabellenspalte wie ausführlich in über-und untergeordneten Beziehung verweisen, das zuvor erläutert wurde. Zum Beispiel:  
+  
+ AVG(Child.Price)  
+  
+ AVG(Child(Orders2Details). Preis)  
+  
+ Ein Aggregat kann auch für eine einzelne Tabelle ausgeführt werden. Beispielsweise erstellen Sie eine Zusammenfassung der Zahlen in einer Spalte namens "Price":  
+  
+ Sum(Price)  
+  
+> [!NOTE]
+>  Wenn Sie eine einzelne Tabelle verwenden, um ein Aggregat zu erstellen, gäbe es keine Group by-Funktionalität. Stattdessen würden alle Zeilen der gleiche Wert in der Spalte angezeigt.  
+  
+ Wenn eine Tabelle keine Zeilen enthält, die Aggregatfunktionen zurück `null`.  
+  
+ Datentypen können immer ermittelt werden die <xref:System.Data.DataColumn.DataType%2A> Eigenschaft einer Spalte. Sie können auch mithilfe der Convert-Funktion, die im folgenden Abschnitt gezeigt Datentypen konvertieren.  
+  
+ Ein Aggregat kann nur auf eine einzelne Spalte angewendet werden und keine andere Ausdrücke können in das Aggregat verwendet werden.  
+  
+## <a name="functions"></a>Funktionen  
+ Die folgenden Funktionen werden ebenfalls unterstützt:  
+  
+ `CONVERT`  
+  
+|||  
+|-|-|  
+|Beschreibung|Konvertiert einen bestimmten Ausdruck in einen angegebenen .NET Framework-Typ.|  
+|Syntax|Konvertieren (`expression`, `type`)|  
+|Argumente|`expression`– Der zu konvertierende Ausdruck.<br /><br /> `type`– Die .NET Framework-Typ, den der Wert konvertiert wird.|  
+  
+ Beispiel: myDataColumn.Expression="Convert (insgesamt"System. Int32")"  
+  
+ Alle Konvertierungen mit den folgenden Ausnahmen gelten: `Boolean` umgewandelt werden kann, in und aus `Byte`, `SByte`, `Int16`, `Int32`, `Int64`, `UInt16`, `UInt32`, `UInt64`, `String` und sich selbst nur. `Char`kann erzwungen werden, in und aus `Int32`, `UInt32`, `String`, und nur selbst. `DateTime`kann erzwungen werden, in und aus `String` und sich selbst nur. `TimeSpan`kann erzwungen werden, in und aus `String` und sich selbst nur.  
+  
+ `LEN`  
+  
+|||  
+|-|-|  
+|Beschreibung|Ruft die Länge einer Zeichenfolge|  
+|Syntax|LEN (`expression`)|  
+|Argumente|`expression`--Die Zeichenfolge, die ausgewertet werden.|  
+  
+ Beispiel: Mydatacolumn.Expression="Len(ItemName)" "  
+  
+ `ISNULL`  
+  
+|||  
+|-|-|  
+|Beschreibung|Überprüfter Ausdruck oder einen Ersatzwert ein Ausdruck, und entweder gibt überprüft werden soll.|  
+|Syntax|ISNULL (`expression`, `replacementvalue`)|  
+|Argumente|`expression`– Der Ausdruck, um zu überprüfen.<br /><br /> `replacementvalue`– Wenn der Ausdruck ist `null`, `replacementvalue` wird zurückgegeben.|  
+  
+ Beispiel: myDataColumn.Expression="IsNull (Preis,-1)"  
+  
+ `IIF`  
+  
+|||  
+|-|-|  
+|Beschreibung|Ruft einen von zwei Werten abhängig vom Ergebnis eines logischen Ausdrucks.|  
+|Syntax|IIF (`expr`, `truepart`, `falsepart`)|  
+|Argumente|`expr`– Der auszuwertende Ausdruck.<br /><br /> `truepart`– Der zurückzugebende Wert, wenn der Ausdruck "true" ist.<br /><br /> `falsepart`– Der zurückzugebende Wert, wenn der Ausdruck "false" ist.|  
+  
+ Beispiel: myDataColumn.Expression = "IIF (insgesamt > 1000,"teure","geehrte(r)")  
+  
+ `TRIM`  
+  
+|||  
+|-|-|  
+|Beschreibung|Entfernt alle führenden und nachgestellten Leerraumzeichen, z. B. \r, \n, \t, ""|  
+|Syntax|TRIM (`expression`)|  
+|Argumente|`expression`– Der Ausdruck entfernt.|  
+  
+ `SUBSTRING`  
+  
+|||  
+|-|-|  
+|Beschreibung|Ruft eine untergeordnete Zeichenfolge mit einer angegebenen Länge, beginnend an einem bestimmten Punkt in der Zeichenfolge ab.|  
+|Syntax|SUBSTRING (`expression`, `start`, `length`)|  
+|Argumente|`expression`--Die Quellzeichenfolge für die Teilzeichenfolge.<br /><br /> `start`– Eine ganze Zahl, der angibt, an der die Teilzeichenfolge beginnt.<br /><br /> `length`– Ganze Zahl, die Länge der Teilzeichenfolge angibt.|  
+  
+ Beispiel: myDataColumn.Expression = "SUBSTRING (Telefon, 7, 8)"  
+  
+> [!NOTE]
+>  Sie können Zurücksetzen der <xref:System.Data.DataColumn.Expression%2A> Eigenschaft durch eine null-Wert oder eine leere Zeichenfolge zuweisen. Wenn auf die Ausdrucksspalte ein Standardwert festgelegt ist, werden alle bereits ausgefüllte Zeilen nach den Standardwert zugewiesen der <xref:System.Data.DataColumn.Expression%2A> -Eigenschaft zurückgesetzt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt drei Spalten in einer <xref:System.Data.DataTable>. Die zweite und dritte Spalte enthalten Ausdrücke. die zweite berechnet unter Verwendung eines Variable Steuersatzes und das dritte fügt das Ergebnis der Berechnung auf den Wert der ersten Spalte. Die daraus resultierende Tabelle wird angezeigt, einem <xref:System.Windows.Forms.DataGrid> Steuerelement.  
+  
+ [!code-csharp[Classic WebData DataColumn.Expression Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataColumn.Expression Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataColumn.Expression Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumn.Expression Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.Data.DataColumn.AutoIncrement" /> oder <see cref="P:System.Data.DataColumn.Unique" /> -Eigenschaftensatz auf <see langword="true" />.</exception>
+        <exception cref="T:System.FormatException">Wenn Sie die CONVERT-Funktion verwenden, der Ausdruck wird zu einer Zeichenfolge, aber die Zeichenfolge enthält keine Darstellung, die an den Typparameter konvertiert werden kann.</exception>
+        <exception cref="T:System.InvalidCastException">Wenn Sie die CONVERT-Funktion verwenden, ist die angeforderte Umwandlung nicht möglich. Finden Sie unter der Konvertierungsfunktion im folgenden Abschnitt, um ausführliche Informationen zu möglichen Umwandlungen.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Wenn Sie die SUBSTRING-Funktion verwenden, ist das Start-Argument außerhalb des gültigen Bereichs.  
+  
+ – oder –  
+  
+ Wenn Sie die SUBSTRING-Funktion verwenden, ist das Length-Argument außerhalb des gültigen Bereichs.</exception>
+        <exception cref="T:System.Exception">Wenn Sie die LEN-Funktion oder die TRIM-Funktion verwenden, wird der Ausdruck nicht in eine Zeichenfolge ausgewertet. Dazu gehören Ausdrücke, die zum Auswerten <see cref="T:System.Char" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtendedProperties">
+      <MemberSignature Language="C#" Value="public System.Data.PropertyCollection ExtendedProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.PropertyCollection ExtendedProperties" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.ExtendedProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.PropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der benutzerdefinierten zugeordneten Benutzerinformationen ein <see cref="T:System.Data.DataColumn" />.</summary>
+        <value>Ein <see cref="T:System.Data.PropertyCollection" /> von benutzerdefinierten Informationen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.DataColumn.ExtendedProperties%2A> -Eigenschaft können Sie benutzerdefinierte Informationen mit dem Objekt gespeichert. Beispielsweise können Sie eine zu speichern, wenn die Daten aktualisiert werden sollen.  
+  
+ Erweiterte Eigenschaften muss vom Typ <xref:System.String>. Eigenschaften, die nicht vom Typ <xref:System.String> werden nicht beibehalten, wenn die <xref:System.Data.DataColumn> als XML geschrieben wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine benutzerdefinierte Eigenschaft, die <xref:System.Data.PropertyCollection> zurückgegebenes der <xref:System.Data.DataColumn.ExtendedProperties%2A> Eigenschaft. Im zweite Beispiel ruft die benutzerdefinierte Eigenschaft ab.  
+  
+ [!code-csharp[Classic WebData DataColumn.ExtendedProperties Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataColumn.ExtendedProperties Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataColumn.ExtendedProperties Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumn.ExtendedProperties Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxLength">
+      <MemberSignature Language="C#" Value="public int MaxLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxLength" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.MaxLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(-1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Länge einer Text-Spalte.</summary>
+        <value>Die maximale Länge der Spalte in Zeichen. Wenn die Spalte keine maximale Länge verfügt, ist der Wert-1 (Standardwert).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.DataColumn.MaxLength%2A> Eigenschaft wird für nicht-Text-Spalten ignoriert. Ein <xref:System.ArgumentException> Ausnahme wird ausgelöst, wenn Sie zuweisen <xref:System.Data.DataColumn.MaxLength%2A> auf eine Zeichenfolgenspalte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public string Namespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namespace der <see cref="T:System.Data.DataColumn" />.</summary>
+        <value>Der Namespace von <see cref="T:System.Data.DataColumn" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.DataColumn.Namespace%2A> Eigenschaft wird beim Lesen und Schreiben von einem XML-Dokument verwendet eine <xref:System.Data.DataTable> in der <xref:System.Data.DataSet> mithilfe der <xref:System.Data.DataSet.ReadXml%2A>, <xref:System.Data.DataSet.WriteXml%2A>, <xref:System.Data.DataSet.ReadXmlSchema%2A>, oder <xref:System.Data.DataSet.WriteXmlSchema%2A> Methoden.  
+  
+ Der Namespace des XML-Dokuments wird verwendet, um die XML-Attribute und Elemente, die beim Lesen in Bereich eine <xref:System.Data.DataSet>. Z. B. eine <xref:System.Data.DataSet> enthält ein Schema aus einem Dokument zu lesen, den Namespace "MyCompany" besitzt, und es wird versucht, zum Lesen von Daten (mit der <xref:System.Data.DataSet.ReadXml%2A> Methode) aus einem Dokument mit dem Namespace "TheirCompany." Alle Daten, die nicht zum vorhandenen Schema entsprechen, werden ignoriert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der Namespace hat bereits Daten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPropertyChanging">
+      <MemberSignature Language="C#" Value="protected virtual void OnPropertyChanging (System.ComponentModel.PropertyChangedEventArgs pcevent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnPropertyChanging(class System.ComponentModel.PropertyChangedEventArgs pcevent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataColumn.OnPropertyChanging(System.ComponentModel.PropertyChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pcevent" Type="System.ComponentModel.PropertyChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="pcevent">Parameterverweis.</param>
+        <summary>Dieser Member unterstützt die .NET Framework-Infrastruktur und ist nicht für die direkte Verwendung in Code vorgesehen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Ordinal">
+      <MemberSignature Language="C#" Value="public int Ordinal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Ordinal" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.Ordinal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Position (nullbasierte) der Spalte in der <see cref="T:System.Data.DataColumnCollection" /> Auflistung.</summary>
+        <value>Die Position der Spalte. Ruft-1 ab, wenn die Spalte kein Mitglied einer Sammlung ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel gibt der Spalte Name, Ordnungszahl und den Datentyp einer Spalte zurück.  
+  
+ [!code-csharp[Classic WebData DataColumn.Ordinal Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataColumn.Ordinal Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataColumn.Ordinal Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumn.Ordinal Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prefix">
+      <MemberSignature Language="C#" Value="public string Prefix { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Prefix" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.Prefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest, die ein XML-Präfix, Aliase den Namespace des der <see cref="T:System.Data.DataTable" />.</summary>
+        <value>Das XML-Präfix für die <see cref="T:System.Data.DataTable" /> Namespace.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.DataTable.Prefix%2A> wird in einem XML-Dokument verwendet, um Elemente zu identifizieren, die dem Namespace gehören eine <xref:System.Data.DataSet> Objekt (wie durch Festlegen der <xref:System.Data.DataSet.Namespace%2A> Eigenschaft).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaisePropertyChanging">
+      <MemberSignature Language="C#" Value="protected void RaisePropertyChanging (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void RaisePropertyChanging(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataColumn.RaisePropertyChanging(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Parameterverweis.</param>
+        <summary>Dieser Member unterstützt die .NET Framework-Infrastruktur und ist nicht für die direkte Verwendung in Code vorgesehen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnly">
+      <MemberSignature Language="C#" Value="public bool ReadOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.ReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Spalte für Änderungen ermöglicht, als eine Zeile der Tabelle hinzugefügt wurde.</summary>
+        <value>
+          <see langword="true" />Wenn die Spalte schreibgeschützt ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.DataColumn> und legt seine <xref:System.Data.DataColumn.ReadOnly%2A> Eigenschaft `true`.  
+  
+ [!code-csharp[Classic WebData DataColumn.ReadOnly Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataColumn.ReadOnly Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataColumn.ReadOnly Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumn.ReadOnly Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Eigenschaft wird festgelegt, um <see langword="false" /> für eine berechnete Spalte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetOrdinal">
+      <MemberSignature Language="C#" Value="public void SetOrdinal (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetOrdinal(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataColumn.SetOrdinal(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">Die angegebene Ordnungszahl.</param>
+        <summary>Ändert die Ordnungszahl oder Position von der <see cref="T:System.Data.DataColumn" /> in die angegebene Ordnungszahl oder Position.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ändert die Ordnungszahl oder Position von der <xref:System.Data.DataColumn> in die angegebene Ordnungszahl oder Position. Wenn ordinal ist kleiner als 0 oder größer als die Anzahl der vorhandenen Spalten – 1 (größer als die Ordnungszahl für die letzte Spalte) eine ungültige <xref:System.ArgumentException> ausgelöst wird.  
+  
+ Wenn Sie die Ordinalzahl einer Spalte ändern, wird die Spalte an die neue Position in der Auflistung der Spalten verschoben. Alle Spalten zwischen der vorherigen und der neue Ordnungszahl werden umnummeriert werden für eine neue Spaltenordnungszahl anpassen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Table">
+      <MemberSignature Language="C#" Value="public System.Data.DataTable Table { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.DataTable Table" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.Table" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Data.DataTable" /> , die die Spalte gehört.</summary>
+        <value>Die <see cref="T:System.Data.DataTable" /> , die die <see cref="T:System.Data.DataColumn" /> angehört.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel gibt die übergeordneten Tabelle eine <xref:System.Data.DataColumn> über seine <xref:System.Data.DataColumn.Table%2A> Eigenschaft.  
+  
+ [!code-csharp[Classic WebData DataColumn.Table Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataColumn.Table Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataColumn.Table Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumn.Table Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataColumn.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die <see cref="P:System.Data.DataColumn.Expression" /> der Spalte, falls vorhanden.</summary>
+        <returns>Die <see cref="P:System.Data.DataColumn.Expression" /> Wert, wenn die Eigenschaft festgelegt wurde, andernfalls die <see cref="P:System.Data.DataColumn.ColumnName" /> Eigenschaft.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.DataColumn.ToString%2A> die Standardzeichenfolge jedes Element einer Auflistung von zurückzugebende Eigenschaft <xref:System.Data.DataColumn> Objekte.  
+  
+ [!code-csharp[Classic WebData DataColumn.ToString Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataColumn.ToString Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataColumn.ToString Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumn.ToString Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unique">
+      <MemberSignature Language="C#" Value="public bool Unique { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Unique" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.Unique" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Werte in jeder Zeile der Spalte eindeutig sein müssen.</summary>
+        <value>
+          <see langword="true" />Wenn der Wert eindeutig sein muss; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sobald diese Eigenschaft auf "true" aus "false" geändert wird, wird eine unique-Einschränkung für diese Spalte aus, um sicherzustellen, dass eindeutige Werte erstellt werden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt neue <xref:System.Data.DataColumn>, legt deren Eigenschaften fest und fügt es einer Tabelle Spalten Auflistung hinzu.  
+  
+ [!code-csharp[Classic WebData DataColumn.Unique Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataColumn.Unique Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataColumn.Unique Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumn.Unique Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Spalte ist eine berechnete Spalte.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

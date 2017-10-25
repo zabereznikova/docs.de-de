@@ -1,0 +1,568 @@
+<Type Name="MsmqBindingBase" FullName="System.ServiceModel.MsmqBindingBase">
+  <TypeSignature Language="C#" Value="public abstract class MsmqBindingBase : System.ServiceModel.Channels.Binding, System.ServiceModel.Channels.IBindingRuntimePreferences" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MsmqBindingBase extends System.ServiceModel.Channels.Binding implements class System.ServiceModel.Channels.IBindingRuntimePreferences" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.MsmqBindingBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.Binding</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Channels.IBindingRuntimePreferences</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Die Basisklasse für <see cref="T:System.ServiceModel.NetMsmqBinding" /> und <see cref="T:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese abstrakte Klasse enthält Eigenschaften, die <xref:System.ServiceModel.NetMsmqBinding> und <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> gemeinsam sind. Alle grundlegenden Warteschlangenkonzepte werden in Form von Eigenschaften angezeigt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MsmqBindingBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MsmqBindingBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.MsmqBindingBase" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomDeadLetterQueue">
+      <MemberSignature Language="C#" Value="public Uri CustomDeadLetterQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri CustomDeadLetterQueue" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen URI ab oder legt einen URI fest, der den Speicherort der Warteschlange für unzustellbare Meldungen für jede Anwendung enthält, in der Meldungen platziert werden, die abgelaufen sind oder für die die Übertragung fehlgeschlagen ist.</summary>
+        <value>Der <see cref="T:System.Uri" />, der den Speicherort der Warteschlange für unzustellbare Meldungen für jede Anwendung enthält. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Warteschlange für unzustellbare Meldungen ist eine Warteschlange für abgelaufene Meldungen, die nicht zugestellt werden konnten. Diese Warteschlange befindet sich im Warteschlangen-Manager der sendenden Anwendung.  
+  
+ Der URI, der von <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> angegeben wird, muss das net.msmq-Schema verwenden.  
+  
+ Wenn <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> auf <xref:System.ServiceModel.DeadLetterQueue.None> oder <xref:System.ServiceModel.DeadLetterQueue.System> festgelegt wird, muss <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> auf `null` festgelegt werden. Wenn <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> ungleich `null` ist, muss <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> auf <xref:System.ServiceModel.DeadLetterQueue.Custom> festgelegt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeadLetterQueue">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.DeadLetterQueue DeadLetterQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.DeadLetterQueue DeadLetterQueue" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqBindingBase.DeadLetterQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.DeadLetterQueue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Enumerationswert ab oder legt einen Enumerationswert fest, der den Typ der zu verwendenden Warteschlange für unzustellbare Meldungen angibt.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.DeadLetterQueue" />-Enumerationswert, der den Typ der zu verwendenden Warteschlange für unzustellbare Meldungen angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Warteschlange für unzustellbare Nachrichten ist eine Warteschlange für abgelaufene Nachrichten, die nicht zugestellt werden konnten. Diese Warteschlange befindet sich im Warteschlangen-Manager der sendenen Anwendung. Die Warteschlangen-Enumeration für unzustellbare Nachrichten gibt den zu verwendenden Typ der Warteschlange für unzustellbare Nachrichten an. Folgende Werte sind möglich:  
+  
+-   `None`: Keine Warteschlange für unzustellbare Meldungen erforderlich. Wenn die Nachrichtenzustellung fehlschlägt, werden in der Warteschlange für unzustellbare Nachrichten keine Angaben hierzu gespeichert. Dies ist der Standardwert, wenn <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> auf `false` festgelegt wird.  
+  
+-   `System`: Die systemweite Warteschlange für unzustellbare Meldungen wird verwendet, um Meldungen aufzuzeichnen, die nicht zugestellt werden können. Message Queuing (MSMQ) verfügt über eine transaktionale Systemwarteschlange für unzustellbare Nachrichten und eine nicht transaktionale Systemwarteschlange für unzustellbare Nachrichten, in der unzustellbare Nachrichten aus der transaktionalen bzw. der nicht transaktionalen Warteschlange verzeichnet werden. Dies ist der Standardwert, wenn <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> auf `true` festgelegt wird.  
+  
+-   `Custom`: Die in der <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>-Eigenschaft angegebene Warteschlange wird verwendet, um Nachrichten aufzuzeichnen, die nicht zugestellt werden können.  
+  
+ Unter anderem gibt es folgende Gründe, aus denen eine Meldung die empfangende Anwendung nicht erreichen kann:  
+  
+-   Eine Transaktionsmeldung wird an eine nicht transaktionale Warteschlange gesendet.  
+  
+-   Eine nicht transaktionale Meldung wird an eine transaktionale Warteschlange gesendet.  
+  
+-   Eine nicht authentifizierte Meldung wird an eine Warteschlange gesendet, die nur authentifizierte Meldungen akzeptiert.  
+  
+-   Eine unverschlüsselte Nachricht wird an eine Warteschlange gesendet, die nur verschlüsselte Nachrichten akzeptiert.  
+  
+-   Die Meldung läuft ab, bevor die Meldung einem Empfänger zugestellt wird.  
+  
+-   Das Nachrichtenspeicherkontingent des Zielcomputers oder das Speicherkontingent der Zielwarteschlange wurde überschritten, oder auf dem Zielcomputer ist kein Speicherplatz vorhanden, wenn die Nachricht eintrifft.  
+  
+-   Der Absender verfügt nicht über die [Zugriffsrechte](http://go.microsoft.com/fwlink/?LinkID=96167) erforderlich, um die Nachricht in die Zielwarteschlange zu platzieren.  
+  
+-   Die an die Meldung angefügte digitale Signatur ist nicht gültig.  
+  
+-   Eine verschlüsselte Nachricht kann nicht vom Zielwarteschlangenmanager entschlüsselt werden.  
+  
+-   Die Zielwarteschlange wird entfernt oder gelöscht, bevor die Nachricht abgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Durable">
+      <MemberSignature Language="C#" Value="public bool Durable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Durable" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqBindingBase.Durable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die von dieser Bindung verarbeiteten Meldungen permanent oder flüchtig sind, oder legt einen Wert fest.</summary>
+        <value>
+          <see langword="true" />, wenn die von dieser Bindung verarbeiteten Meldungen permanent sind; <see langword="false" />, wenn sie flüchtig sind. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine permanente Meldung überlebt einen Absturz des Warteschlangen-Managers, was für eine flüchtige Meldung nicht gilt. Flüchtige Nachrichten sind nützlich, wenn Anwendungen tolerieren können, dass Nachrichten gelegentlich verloren gehen.  
+  
+ Wenn <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> auf `true` festgelegt ist, müssen die Nachrichten permanent sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExactlyOnce">
+      <MemberSignature Language="C#" Value="public bool ExactlyOnce { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ExactlyOnce" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqBindingBase.ExactlyOnce" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab, der angibt, ob die von dieser Bindung verarbeiteten Meldungen genau einmal empfangen werden, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />, wenn von dieser Bindung verarbeitete Meldungen genau einmal empfangen werden, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Meldung kann mit oder ohne Zusicherungen gesendet werden. Eine Zusicherung ermöglicht es einer Anwendung, sicherzustellen, dass eine gesendete Nachricht die empfangende Nachrichtenwarteschlange erreicht hat. Andernfalls kann die Anwendung dies durch Lesen der Warteschlange für unzustellbare Nachrichten bestimmen.  
+  
+ Mit <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> gesendete Nachrichten, die auf `true` festgelegt sind, dürfen nur an eine Transaktionswarteschlange gesendet werden.  
+  
+ Wenn <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> auf `true` festgelegt wird, gibt dies an, dass Message Queuing (MSMQ) gewährleistet, dass eine gesendete Meldung genau einmal an die empfangende Meldungswarteschlange zugestellt wird. Wenn die Zustellung fehlschlägt, wird die Nachricht an die Warteschlange für unzustellbare Nachrichten gesendet.  
+  
+ Für Meldungen, die von <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> erfordern, `false` zu sein, wird die <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>-Eigenschaft standardmäßig auf `null` festgelegt.  
+  
+ Für Meldungen, für die <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> den Wert `true` aufweisen muss, erhält die <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>-Eigenschaft standardmäßig eine systemweite Transaktionswarteschlange für unzustellbare Meldungen in MSMQ.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxReceivedMessageSize">
+      <MemberSignature Language="C#" Value="public long MaxReceivedMessageSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaxReceivedMessageSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqBindingBase.MaxReceivedMessageSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(65536)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Größe in Byte für eine Nachricht, die von dieser Bindung verarbeitet wird.</summary>
+        <value>Die maximale Größe (in Byte) für eine Meldung, die von dieser Bindung verarbeitet wird. Der Standardwert ist 65.536 Bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Auf diese Weise sollen Denial-of-Service-Angriffe (DoS) reduziert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxRetryCycles">
+      <MemberSignature Language="C#" Value="public int MaxRetryCycles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxRetryCycles" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqBindingBase.MaxRetryCycles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(2)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl der Neuversuche für den Versand von Meldungen an die empfangende Anwendung ab oder legt sie fest.</summary>
+        <value>Die maximale Anzahl der Neuversuche für die Zustellung von Meldungen an die Anwendung. Der Standardwert ist 2.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein einzelner Wiederholungszyklus versucht, einer Anwendung eine Nachricht mit einer festgelegten Häufigkeit zuzustellen. Die Anzahl der unternommenen Versuche wird durch die <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>-Eigenschaft festgelegt. Wenn die Anwendung nach der angegebenen Anzahl von Wiederholungsversuchen nicht auf die Meldung zugreifen kann, wird die Meldung an eine Wiederholungswarteschlange gesendet. Nachfolgende Wiederholungszyklen bestehen aus der Meldung, die von der Wiederholungswarteschlange an die Anwendungswarteschlange zurückgegeben wurde, um erneut zu versuchen, der Anwendung die Meldung nach einer durch die <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A>-Eigenschaft angegebenen Verzögerung zuzustellen. Die <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>-Eigenschaft gibt die Anzahl der Wiederholungszyklen an, die die Anwendung für die Zustellung der Nachricht verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveContextEnabled">
+      <MemberSignature Language="C#" Value="public bool ReceiveContextEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReceiveContextEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqBindingBase.ReceiveContextEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt einen Wert fest, der angibt, ob das Empfangskontextverhalten angefordert wird.</summary>
+        <value>
+          <see langword="true" />Wenn das empfangskontextverhalten angefordert wird; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveErrorHandling">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.ReceiveErrorHandling ReceiveErrorHandling { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.ReceiveErrorHandling ReceiveErrorHandling" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ReceiveErrorHandling</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Enumerationswert fest, der angibt, wie nicht verarbeitbare Meldungen behandelt werden, oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.ReceiveErrorHandling" />-Wert, der angibt, wie Nachrichten, die nicht verarbeitet oder weitergeleitet werden können, behandelt werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Meldung in der Warteschlange gilt als nicht verarbeitbar, wenn sie mehrmals nicht zugestellt werden kann. Diese nicht verarbeitbaren Nachrichten werden schließlich auf Grundlage der Einstellung dieser Eigenschaft behandelt. Wenn diese Eigenschaft auf <xref:System.ServiceModel.ReceiveErrorHandling.Fault> festgelegt wird, gibt der Listener einen Fehler aus, und eine <xref:System.ServiceModel.MsmqPoisonMessageException> wird nachverfolgt und ausgelöst. Die nicht verarbeitbare Nachricht verbleibt in der Warteschlange und muss entfernt werden, bevor auf weitere Nachrichten in der Warteschlange zugegriffen werden kann. Die <xref:System.ServiceModel.MsmqPoisonMessageException> enthält eine <xref:System.ServiceModel.MsmqPoisonMessageException.MessageLookupId%2A>, die zum Identifizieren und manuellen Entfernen der problematischen Nachricht aus der Warteschlange verwendet werden kann.  
+  
+ Wenn diese Eigenschaft auf <xref:System.ServiceModel.ReceiveErrorHandling.Drop> festgelegt wird, wird die nicht verarbeitbare Meldung verworfen.  
+  
+ Wenn diese Eigenschaft auf <xref:System.ServiceModel.ReceiveErrorHandling.Reject> festgelegt wird, wird eine negative Bestätigung an den Client gesendet, und die problematische Meldung wird aus der Warteschlange entfernt. Diese Option ist nur in Message Queuing&#160;4.0 verfügbar und erfordert [!INCLUDE[wv](~/includes/wv-md.md)].  
+  
+ Wenn die Eigenschaft auf <xref:System.ServiceModel.ReceiveErrorHandling.Move> festgelegt wird, wird die unverarbeitbare Meldung in die letzte Unterwarteschlange für potenziell schädliche Meldungen verschoben. Diese Option ist nur in Message Queuing&#160;4.0 verfügbar und erfordert [!INCLUDE[wv](~/includes/wv-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveRetryCount">
+      <MemberSignature Language="C#" Value="public int ReceiveRetryCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ReceiveRetryCount" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(5)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl von unmittelbaren Zustellversuchen für eine Meldung ab, die aus der Anwendungswarteschlange gelesen wird, oder legt diese fest.</summary>
+        <value>Die maximale Anzahl unmittelbarer Übermittlungsversuche. Der Standard ist 5.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die maximale Anzahl unmittelbarer Zustellversuche für die Meldung erreicht ist und die Anwendung nicht auf die Meldung zugreift, wird die Meldung an eine Wiederholungswarteschlange gesendet, um später einen erneuten Zustellversuch auszuführen. Wenn keine Wiederholungszyklen angegeben sind, wird die Meldung entweder an die Warteschlange für potenziell schädliche Meldungen gesendet oder eine negative Bestätigung wird zurück zum Absender geschickt.  
+  
+ [!INCLUDE[crdefault](~/includes/crdefault-md.md)]<xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> und <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RetryCycleDelay">
+      <MemberSignature Language="C#" Value="public TimeSpan RetryCycleDelay { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan RetryCycleDelay" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqBindingBase.RetryCycleDelay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.TimeSpan), "00:30:00")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt einen Wert fest, der die Zeitverzögerung zwischen den Wiederholungszyklen angibt, in denen versucht wird, eine Meldung zuzustellen, die nicht sofort zugestellt werden konnte.</summary>
+        <value>Die <see cref="T:System.TimeSpan" />, die das Zeitintervall angibt, nach dem der nächste Zyklus der Zustellversuche an die empfangende Anwendung beginnen kann. Der Standardwert ist 10 Minuten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein einzelner Wiederholungszyklus versucht, einer empfangenden Anwendung eine Nachricht mit einer festgelegten Häufigkeit zuzustellen. Die Anzahl der unternommenen Versuche wird durch die <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>-Eigenschaft definiert. Wenn die Anwendung nach der angegebenen Anzahl von Wiederholungsversuchen nicht auf die Meldung zugreifen kann, wird die Meldung an eine Wiederholungswarteschlange gesendet. Nachfolgende Wiederholungszyklen umfassen die Nachricht, die von der Wiederholungswarteschlange an die Anwendungswarteschlange zurückgegeben wurde, um erneut zu versuchen, sie nach einer durch die <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A>-Eigenschaft angegebenen Verzögerung der Anwendung zuzustellen. Die Anzahl von Wiederholungszyklen wird durch <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> angegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scheme">
+      <MemberSignature Language="C#" Value="public override string Scheme { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Scheme" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqBindingBase.Scheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das Schema für diese Bindung zurück.</summary>
+        <value>Das Schema für diese Bindung. Welches Schema zurückgegeben wird, hängt von der Implementierung von <see cref="T:System.ServiceModel.MsmqBindingBase" /> ab. Die <see cref="T:System.ServiceModel.NetMsmqBinding" />-Implementierung gibt "net.msmq" zurück. Die <see cref="T:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding" />-Implementierung gibt "msmq.formatname" zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Message Queuing (MSMQ) unterstützt den Transport von Meldungen zwischen Warteschlangenmanagern unter Verwendung des nativen MSMQ-Protokolls und des SRMP-Protokolls. Anwendungen, die die Wartenschlangentransportbindung verwenden, können beide Protokolle verwenden. Die von der Warteschlangentransportbindung unterstützten Protokollschemata sind net.msmq für das native Protokoll, net.srmp für das SRMP-Protokoll und net.srmps für SRMP über HTTPS.  
+  
+ Die <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> unterstützt nur das Schema msmq.formatname, mit dem der Benutzer den Formatnamen der Warteschlange direkt in der Warteschlangenadresse angeben kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Channels.IBindingRuntimePreferences.ReceiveSynchronously">
+      <MemberSignature Language="C#" Value="bool System.ServiceModel.Channels.IBindingRuntimePreferences.ReceiveSynchronously { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.ServiceModel.Channels.IBindingRuntimePreferences.ReceiveSynchronously" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqBindingBase.System#ServiceModel#Channels#IBindingRuntimePreferences#ReceiveSynchronously" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob eingehende Anforderungen effizienter synchron oder asynchron behandelt werden können.</summary>
+        <value>
+          <see langword="true" />Wenn Anforderungen effizienter synchron behandelt werden können; andernfalls <see langword=" false" />. Der Standardwert ist <see langword="false" />, Anforderungen werden in diesem Fall asynchron gehandhabt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.MsmqBindingBase.System%23ServiceModel%23Channels%23IBindingRuntimePreferences%23ReceiveSynchronously%2A>-Eigenschaft ist auf `true` festgelegt, wenn <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> auf `true` gesetzt ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeToLive">
+      <MemberSignature Language="C#" Value="public TimeSpan TimeToLive { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan TimeToLive" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqBindingBase.TimeToLive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.TimeSpan), "1.00:00:00")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Zeitintervall ab, das angibt, wie lange die von dieser Bindung verarbeiteten Meldungen in der Warteschlange bleiben können, bevor sie ablaufen, oder legt das Zeitintervall fest.</summary>
+        <value>Der <see cref="T:System.TimeSpan" />, der angibt, wie lange die Meldungen in der Warteschlange verbleiben können, bevor sie ablaufen. Der Standardwert ist 1&amp;#160;Tag.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.MsmqBindingBase.TimeToLive%2A>-Eigenschaft wird festgelegt, um sicherzustellen, das zeitkritische Meldungen nicht veralten, bevor sie von den empfangenden Anwendungen verarbeitet werden. Eine in einer Warteschlange befindliche Nachricht, auf die die empfangende Anmeldung nicht innerhalb des angegebenen Zeitintervalls zugreift, läuft ab. Abgelaufene Nachrichten werden an eine spezielle Warteschlange gesendet und zwar an die Warteschlange für unzustellbare Nachrichten. Der Speicherort der Warteschlange für unzustellbare Meldungen wird mithilfe der <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>-Eigenschaft festgelegt. Andernfalls gilt die entsprechende, auf den Zusicherungen basierende Standardeinstellung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseMsmqTracing">
+      <MemberSignature Language="C#" Value="public bool UseMsmqTracing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseMsmqTracing" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqBindingBase.UseMsmqTracing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab, der angibt, ob von dieser Bindung verarbeitete Meldungen nachverfolgt werden sollen, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />, wenn von dieser Bindung verarbeitete Meldungen nachverfolgt werden sollen, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Ablaufverfolgung aktiviert ist, werden Berichtsnachrichten erstellt und jedes Mal an die Berichtswarteschlange gesendet, wenn die Nachricht einen Computer mit Message Queuing (MSMQ) erreicht oder verlässt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseSourceJournal">
+      <MemberSignature Language="C#" Value="public bool UseSourceJournal { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseSourceJournal" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqBindingBase.UseSourceJournal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob von dieser Bindung verarbeitete Meldungskopien in der Quelljournalwarteschlange gespeichert werden sollen, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />, wenn von dieser Bindung verarbeitete Meldungskopien in der Quelljournalwarteschlange gespeichert werden sollen, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anwendungen in Warteschlangen, die Meldungen aufzeichnen, die die Ausgangswarteschlange des Computers verlassen haben, können die Meldungen in eine Journalwarteschlange kopieren. Wenn eine Nachricht die Ausgangswarteschlange verlässt und eine Bestätigung empfangen wird, dass die Nachricht auf dem Zielcomputer empfangen wurde, wird eine Kopie der Nachricht in der Systemjournalwarteschlange des sendenden Computers beibehalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidityDuration">
+      <MemberSignature Language="C#" Value="public TimeSpan ValidityDuration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan ValidityDuration" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqBindingBase.ValidityDuration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.TimeSpan), "00:05:00")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt einen Wert fest, der die Dauer angibt, für die eine Meldung durch die Empfangskontextfunktion gesperrt wird.</summary>
+        <value>Ein timespan-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Wenn die <xref:System.ServiceModel.MsmqBindingBase.ValidityDuration%2A> für eine Meldung abläuft, wird jede Transaktion, die für deren Verarbeitung verwendet werden kann, zusammen mit der Workflowinstanz abgebrochen, sofern das Ablaufen während der Transaktion eintritt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

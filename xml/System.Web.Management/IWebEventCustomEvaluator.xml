@@ -1,0 +1,114 @@
+<Type Name="IWebEventCustomEvaluator" FullName="System.Web.Management.IWebEventCustomEvaluator">
+  <TypeSignature Language="C#" Value="public interface IWebEventCustomEvaluator" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IWebEventCustomEvaluator" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Management.IWebEventCustomEvaluator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Wertet aus, ob ein Ereignis für die Verarbeitung an den zugehörigen Anbieter gesendet werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET-Systemüberwachung kann Produktions- und Vorgänge Mitarbeiter bereitgestellte Webanwendungen verwalten. Die <xref:System.Web.Management> Namespace enthält die integritätsereignis Typen, die verantwortlich für das Verpacken Integritätsstatus Anwendungsdaten und die Anbietertypen, die für die Verarbeitung dieser Daten verantwortlich. Darüber hinaus wird die unterstützende Typen, mit denen bei der Verwaltung von integritätsereignisse enthält.  
+  
+ Diese Schnittstelle ermöglicht das Aktivieren bzw. deaktivieren das Auslösen eines bestimmten Ereignisses. Dies ist besonders nützlich, wenn Sie ein eigenes benutzerdefinierte Ereignis zu implementieren und möchten die Rate zu steuern, an der er an den zugehörigen Anbieter zur Verarbeitung gesendet wird.  
+  
+> [!NOTE]
+>  Diese Schnittstelle wird nicht gesteuert, wie oft das Ereignis ausgelöst wird. Es wird nur gesteuert, wie oft die Informationen zur Verarbeitung an den Anbieter gesendet wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Ableitung der <xref:System.Web.Management.IWebEventCustomEvaluator> -Schnittstelle beim Erstellen eines benutzerdefinierten Ereignisses.  
+  
+ [!code-csharp[System.Web.Management.WebBaseEvent#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/CS/webbaseevent.cs#1)]
+ [!code-vb[System.Web.Management.WebBaseEvent#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/VB/webbaseevent.vb#1)]  
+  
+ Im folgenden ist ein Auszug aus der Konfigurationsdatei, die ASP.NET verwenden, ermöglicht die <xref:System.Web.Management.IWebEventCustomEvaluator.CanFire%2A> Methode, um zu entscheiden, ob das ausgelöste Ereignis für die Verarbeitung an den Anbieter gesendet werden muss.  
+  
+```  
+<healthMonitoring   
+  heartBeatInterval="0" enabled="true">  
+  
+    <providers>  
+      <add name="SampleWebEventProvider"   
+        type="SamplesAspNet.SampleEventProvider, webeventprovider, Version=1.0.1741.20369, Culture=neutral, PublicKeyToken=cf85aa6c978d9dea, processorArchitecture=MSIL" />  
+    </providers>  
+  
+    <profiles>  
+      <add   
+        name="Custom"   
+        minInstances="1"   
+        maxLimit="Infinite"   
+        minInterval="00:00:00"   
+        custom ="SamplesAspNet.SampleWebRequestEvent,webrequestevent"   
+        />  
+    </profiles>  
+  
+    <eventMappings>  
+  
+      <add name="SampleWebRequestEvent" type="SamplesAspNet.SampleWebRequestEvent,webrequestevent, Version=1.0.1759.20533, Culture=neutral, PublicKeyToken=0d72899b07049076, processorArchitecture=MSIL" />  
+  
+    </eventMappings>  
+  
+    <rules>  
+      <clear />  
+  
+        <add name="Custom Web Request Event"   
+          eventName="SampleWebRequestEvent"  
+          provider="SampleWebEventProvider" profile="Custom" />  
+    </rules>  
+  
+</healthMonitoring>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CanFire">
+      <MemberSignature Language="C#" Value="public bool CanFire (System.Web.Management.WebBaseEvent raisedEvent, System.Web.Management.RuleFiringRecord record);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanFire(class System.Web.Management.WebBaseEvent raisedEvent, class System.Web.Management.RuleFiringRecord record) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.IWebEventCustomEvaluator.CanFire(System.Web.Management.WebBaseEvent,System.Web.Management.RuleFiringRecord)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="raisedEvent" Type="System.Web.Management.WebBaseEvent" />
+        <Parameter Name="record" Type="System.Web.Management.RuleFiringRecord" />
+      </Parameters>
+      <Docs>
+        <param name="raisedEvent">Das auszulösende Ereignis.</param>
+        <param name="record">Die <see cref="T:System.Web.Management.RuleFiringRecord" /> , die Informationen zum Ereignis enthält.</param>
+        <summary>Wertet aus, ob ein Ereignis ausgelöst werden soll.</summary>
+        <returns>
+          <see langword="true" />Wenn das Ereignis ausgelöst werden soll; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Auswertung des benutzerdefinierten Ereignisses zurückgibt `true`, das Ereignis wird ausgelöst, und klicken Sie dann zugeordnete Anbieter verarbeitet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, eine benutzerdefinierte Implementierung von der <xref:System.Web.Management.IWebEventCustomEvaluator.CanFire%2A> Methode.  
+  
+ [!code-csharp[System.Web.Management.WebBaseEvent#22](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/CS/webbaseevent.cs#22)]
+ [!code-vb[System.Web.Management.WebBaseEvent#22](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/VB/webbaseevent.vb#22)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

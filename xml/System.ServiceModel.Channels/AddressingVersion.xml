@@ -1,0 +1,151 @@
+<Type Name="AddressingVersion" FullName="System.ServiceModel.Channels.AddressingVersion">
+  <TypeSignature Language="C#" Value="public sealed class AddressingVersion" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AddressingVersion extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.AddressingVersion" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die Version der WS-Adressierung, die mit einer SOAP-Nachricht verknüpft oder die für einen Endpunkt verständlich ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Derzeit sind zwei Version der WS-Adressierung verfügbar: die WS-Adressierung vom August 2004 und die WS-Adressierung in der Version&#160;1.0. Diese Versionen können mit der <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressingAugust2004%2A>-Eigenschaft bzw. mit der <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A>-Eigenschaft abgerufen werden. Darüber hinaus ist eine Version der Adressierung verfügbar, die nicht mit der WS-Adressierung verknüpft ist. Diese wird mit der <xref:System.ServiceModel.Channels.AddressingVersion.None%2A>-Eigenschaft abgerufen. Der Wert gibt an, dass keine Version der WS-Adressierung verwendet wird. Dieses Verfahren wird in erster Linie für Übertragungen verwendet, bei denen SOAP-Umschläge keine Rolle spielen und folglich auch keine WS-Adressierung erforderlich ist.  
+  
+ Die Version der Adressierung ist Teil der Nachrichtenversion, genauer gesagt, der Rückgabetyp für die <xref:System.ServiceModel.Channels.AddressingVersion>-Eigenschaft wird von der <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> bereitgestellt. Die <xref:System.ServiceModel.Channels.MessageVersion> enthält neben den Versionsinformationen zur Adressierung auch die SOAP-Umschlagversion. Der Rückgabetyp für die <xref:System.ServiceModel.EnvelopeVersion>-Eigenschaft wird von der <xref:System.ServiceModel.Channels.MessageVersion.Envelope%2A> bereitgestellt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.AddressingVersion None { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.Channels.AddressingVersion None" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.AddressingVersion.None" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.AddressingVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Version der Adressierung, die nicht mit WS-Adressierungsversion verknüpft ist.</summary>
+        <value>Die <see cref="T:System.ServiceModel.Channels.AddressingVersion" /> also nicht zugeordneten WS-Adressierungsversion.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Version der Adressierung ist Teil der Nachrichtenversion, genauer gesagt, der Rückgabetyp für die <xref:System.ServiceModel.Channels.AddressingVersion>-Eigenschaft wird von der <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> bereitgestellt. Die <xref:System.ServiceModel.Channels.MessageVersion> enthält neben den Versionsinformationen zur Adressierung auch die SOAP-Umschlagversion. Der Rückgabetyp für die <xref:System.ServiceModel.EnvelopeVersion>-Eigenschaft wird von der <xref:System.ServiceModel.Channels.MessageVersion.Envelope%2A> bereitgestellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.AddressingVersion.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolgendarstellung der aktuellen Version der Adressierung zurück.</summary>
+        <returns>Eine Zeichenfolge, die die aktuelle Version der Adressierung darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WSAddressing10">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.AddressingVersion WSAddressing10 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.Channels.AddressingVersion WSAddressing10" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.AddressingVersion.WSAddressing10" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.AddressingVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Bezeichner für die Version der Adressierung ab, die der WS-Adressierung, Version&amp;#160;1.0 zugeordnet ist.</summary>
+        <value>Eine Singleton-Instanz, mit der die <see cref="T:System.ServiceModel.Channels.AddressingVersion" /> identifiziert wird, die der WS-Adressierung, Version&amp;#160;1.0, zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Version der Adressierung ist Teil der Nachrichtenversion, genauer gesagt, der Rückgabetyp für die <xref:System.ServiceModel.Channels.AddressingVersion>-Eigenschaft wird von der <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> bereitgestellt. Die <xref:System.ServiceModel.Channels.MessageVersion> enthält neben den Versionsinformationen zur Adressierung auch die SOAP-Umschlagversion. Der Rückgabetyp für die <xref:System.ServiceModel.EnvelopeVersion>-Eigenschaft wird von der <xref:System.ServiceModel.Channels.MessageVersion.Envelope%2A> bereitgestellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WSAddressingAugust2004">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.AddressingVersion WSAddressingAugust2004 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.Channels.AddressingVersion WSAddressingAugust2004" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.AddressingVersion.WSAddressingAugust2004" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.AddressingVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Version der WS-Adressierung ab, die der WS-Adressierung vom August 2004 zugeordnet ist.</summary>
+        <value>Eine Singleton-Instanz, mit der die <see cref="T:System.ServiceModel.Channels.AddressingVersion" /> identifiziert wird, die der WS-Adressierung vom August&amp;#160;2004, zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Version der Adressierung ist Teil der Nachrichtenversion, genauer gesagt, der Rückgabetyp für die <xref:System.ServiceModel.Channels.AddressingVersion>-Eigenschaft wird von der <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> bereitgestellt. Die <xref:System.ServiceModel.Channels.MessageVersion> enthält neben den Versionsinformationen zur Adressierung auch die SOAP-Umschlagversion. Der Rückgabetyp für die <xref:System.ServiceModel.EnvelopeVersion>-Eigenschaft wird von der <xref:System.ServiceModel.Channels.MessageVersion.Envelope%2A> bereitgestellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

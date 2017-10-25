@@ -1,0 +1,577 @@
+<Type Name="IList" FullName="System.Collections.IList">
+  <TypeSignature Language="C#" Value="public interface IList : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IList implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.IList" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine nicht generische Auflistung von Objekten dar, auf die einzeln über einen Index zugegriffen werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.IList>ein Nachfolger des der <xref:System.Collections.ICollection> Schnittstelle, und ist die Basisschnittstelle für alle nicht generischen Listen. <xref:System.Collections.IList>Implementierungen fallen in drei Kategorien: schreibgeschützte fester Größe und variabler Länge. Ein schreibgeschützter <xref:System.Collections.IList> kann nicht geändert werden. Ein fester Größe <xref:System.Collections.IList> lässt nicht zu, das Hinzufügen oder Entfernen von Elementen, aber es ermöglicht die Änderung von vorhandenen Elementen. Ein variabler Größe <xref:System.Collections.IList> ermöglicht das Hinzufügen, entfernen und Ändern von Elementen.  
+  
+ Die generische Version dieser Schnittstelle finden Sie unter <xref:System.Collections.Generic.IList%601?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Implementierung der <xref:System.Collections.IList> Schnittstelle, um eine einfache Liste, eine Liste mit fester Größe zu erstellen.  
+  
+ [!code-csharp[System.Collections.IList_Implementation#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.IList_Implementation/cs/Program.cs#01)]
+ [!code-vb[System.Collections.IList_Implementation#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.IList_Implementation/vb/Program.vb#01)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Add(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.IList.Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Objekt, das <see cref="T:System.Collections.IList" /> hinzugefügt werden soll.</param>
+        <summary>Fügt der <see cref="T:System.Collections.IList" /> ein Element hinzu.</summary>
+        <returns>Die Position, an der das neue Element eingefügt wurde, oder -1, um anzugeben, dass das Element nicht in die Auflistung eingefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Implementierung der <xref:System.Collections.IList> Schnittstelle, um eine einfache Liste mit fester Größe zu erstellen. Dieser Code ist Teil eines umfangreicheren Beispiels für die <xref:System.Collections.IList> Schnittstelle.  
+  
+ [!code-csharp[System.Collections.IList_Implementation#02](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.IList_Implementation/cs/Program.cs#02)]
+ [!code-vb[System.Collections.IList_Implementation#02](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.IList_Implementation/vb/Program.vb#02)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException"><see cref="T:System.Collections.IList" /> ist schreibgeschützt.  
+  
+ - oder -   
+  
+ <see cref="T:System.Collections.IList" /> hat eine feste Größe.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.IList.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Elemente aus <see cref="T:System.Collections.IList" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementierungen dieser Methode können variieren, wie sie verarbeiten die <xref:System.Collections.ICollection.Count%2A?displayProperty=nameWithType> und die Kapazität einer Auflistung. In der Regel wird die Anzahl auf 0 (null) festgelegt ist, und Verweise auf andere Objekte von Elementen in der Auflistung werden ebenfalls freigegeben. Die Kapazität kann auf 0 (null) oder einen Standardwert festgelegt werden, oder können, bleiben unverändert.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Implementierung der <xref:System.Collections.IList> Schnittstelle, um eine einfache Liste, eine Liste mit fester Größe zu erstellen. Dieser Code ist Teil eines umfangreicheren Beispiels für die <xref:System.Collections.IList> Schnittstelle.  
+  
+ [!code-csharp[System.Collections.IList_Implementation#02](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.IList_Implementation/cs/Program.cs#02)]
+ [!code-vb[System.Collections.IList_Implementation#02](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.IList_Implementation/vb/Program.vb#02)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException"><see cref="T:System.Collections.IList" /> ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.IList.Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das im <see cref="T:System.Collections.IList" /> zu suchende Objekt.</param>
+        <summary>Ermittelt, ob die <see cref="T:System.Collections.IList" /> einen bestimmten Wert enthält.</summary>
+        <returns>
+          <see langword="true" />, wenn <see cref="T:System.Object" /> in der <see cref="T:System.Collections.IList" /> gefunden wird, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beginnend mit .NET Framework 2.0, verwendet diese Methode Objekte in der Auflistung <xref:System.Object.Equals%2A> und <xref:System.IComparable.CompareTo%2A> Methoden auf `item` zu bestimmen, ob das Element vorhanden ist. In früheren Versionen von .NET Framework-diese Entscheidung wurde versucht, mithilfe der <xref:System.Object.Equals%2A> und <xref:System.IComparable.CompareTo%2A> Methoden der `item` Parameter für die Objekte in der Auflistung.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Implementierung der <xref:System.Collections.IList> Schnittstelle, um eine einfache Liste, eine Liste mit fester Größe zu erstellen. Dieser Code ist Teil eines umfangreicheren Beispiels für die <xref:System.Collections.IList> Schnittstelle.  
+  
+ [!code-csharp[System.Collections.IList_Implementation#02](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.IList_Implementation/cs/Program.cs#02)]
+ [!code-vb[System.Collections.IList_Implementation#02](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.IList_Implementation/vb/Program.vb#02)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOf(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.IList.IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das im <see cref="T:System.Collections.IList" /> zu suchende Objekt.</param>
+        <summary>Bestimmt den Index eines bestimmten Elements in der <see cref="T:System.Collections.IList" />.</summary>
+        <returns>Der Index von <paramref name="value" />, wenn das Element in der Liste gefunden wird, andernfalls -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beginnend mit .NET Framework 2.0, verwendet diese Methode Objekte in der Auflistung <xref:System.Object.Equals%2A> und <xref:System.IComparable.CompareTo%2A> Methoden auf `item` zu bestimmen, ob das Element vorhanden ist. In früheren Versionen von .NET Framework-diese Entscheidung wurde versucht, mithilfe der <xref:System.Object.Equals%2A> und <xref:System.IComparable.CompareTo%2A> Methoden der `item` Parameter für die Objekte in der Auflistung.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Implementierung der <xref:System.Collections.IList> Schnittstelle, um eine einfache Liste, eine Liste mit fester Größe zu erstellen. Dieser Code ist Teil eines umfangreicheren Beispiels für die <xref:System.Collections.IList> Schnittstelle.  
+  
+ [!code-csharp[System.Collections.IList_Implementation#02](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.IList_Implementation/cs/Program.cs#02)]
+ [!code-vb[System.Collections.IList_Implementation#02](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.IList_Implementation/vb/Program.vb#02)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Insert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.IList.Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem <c>Wert</c> eingefügt werden soll.</param>
+        <param name="value">Das in die <see cref="T:System.Collections.IList" /> einzufügende Objekt.</param>
+        <summary>Fügt am angegebenen Index ein Element in die <see cref="T:System.Collections.IList" /> ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `index` gleich der Anzahl der Elemente in <xref:System.Collections.IList> ist, wird `value` am Ende angefügt.  
+  
+ In Auflistungen mit zusammenhängenden Elementen, beispielsweise Listen, werden die Elemente hinter der Einfügemarke nach unten verschoben, um das neue Element aufzunehmen. Wenn die Auflistung indiziert ist, werden auch die Indizes der verschobenen Elemente aktualisiert. Dies gilt nicht für Auflistungen, in denen die Elemente konzeptionell in Buckets gruppiert sind, beispielsweise Hashtabellen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Implementierung der <xref:System.Collections.IList> Schnittstelle, um eine einfache Liste, eine Liste mit fester Größe zu erstellen. Dieser Code ist Teil eines umfangreicheren Beispiels für die <xref:System.Collections.IList> Schnittstelle.  
+  
+ [!code-csharp[System.Collections.IList_Implementation#02](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.IList_Implementation/cs/Program.cs#02)]
+ [!code-vb[System.Collections.IList_Implementation#02](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.IList_Implementation/vb/Program.vb#02)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist kein gültiger Index in <see cref="T:System.Collections.IList" />.</exception>
+        <exception cref="T:System.NotSupportedException"><see cref="T:System.Collections.IList" /> ist schreibgeschützt.  
+  
+ - oder -   
+  
+ <see cref="T:System.Collections.IList" /> hat eine feste Größe.</exception>
+        <exception cref="T:System.NullReferenceException">
+          <paramref name="value" />null-Verweis in der <see cref="T:System.Collections.IList" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFixedSize">
+      <MemberSignature Language="C#" Value="public bool IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.IList.IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Collections.IList" /> eine feste Größe aufweist.</summary>
+        <value>
+          <see langword="true" />, wenn das <see cref="T:System.Collections.IList" /> eine feste Größe aufweist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Auflistung mit fester Größe lässt das Hinzufügen oder Entfernen von Elementen nach dem Erstellen der Auflistung nicht zu. Vorhandene Elemente können jedoch geändert werden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Implementierung der <xref:System.Collections.IList> Schnittstelle, um eine einfache Liste, eine Liste mit fester Größe zu erstellen. Dieser Code ist Teil eines umfangreicheren Beispiels für die <xref:System.Collections.IList> Schnittstelle.  
+  
+ [!code-csharp[System.Collections.IList_Implementation#02](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.IList_Implementation/cs/Program.cs#02)]
+ [!code-vb[System.Collections.IList_Implementation#02](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.IList_Implementation/vb/Program.vb#02)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.IList.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Collections.IList" /> schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" />, wenn das <see cref="T:System.Collections.IList" /> schreibgeschützt ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine schreibgeschützte Auflistung gestattet nach dem Erstellen der Auflistung weder das Hinzufügen noch das Ändern oder Entfernen von Elementen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Implementierung der <xref:System.Collections.IList> Schnittstelle, um eine einfache Liste, eine Liste mit fester Größe zu erstellen. Dieser Code ist Teil eines umfangreicheren Beispiels für die <xref:System.Collections.IList> Schnittstelle.  
+  
+ [!code-csharp[System.Collections.IList_Implementation#02](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.IList_Implementation/cs/Program.cs#02)]
+ [!code-vb[System.Collections.IList_Implementation#02](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.IList_Implementation/vb/Program.vb#02)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.IList.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des Elements, das abgerufen oder festgelegt werden soll.</param>
+        <summary>Ruft das Element am angegebenen Index ab oder legt dieses fest.</summary>
+        <value>Das Element am angegebenen Index.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ermöglicht den Zugriff auf ein bestimmtes Element in der Auflistung mithilfe folgender Syntax: `myCollection[index]`.  
+  
+ Die Programmiersprache c# verwendet das Schlüsselwort der Indexer definieren die <xref:System.Collections.IList.Item%2A> Eigenschaft. Visual Basic implementiert <xref:System.Collections.IList.Item%2A> als Standardeigenschaft und stellt auf diese Weise dieselbe Indizierungsfunktionalität bereit.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Implementierung der <xref:System.Collections.IList> Schnittstelle, um eine einfache Liste, eine Liste mit fester Größe zu erstellen. Dieser Code ist Teil eines umfangreicheren Beispiels für die <xref:System.Collections.IList> Schnittstelle.  
+  
+ [!code-csharp[System.Collections.IList_Implementation#02](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.IList_Implementation/cs/Program.cs#02)]
+ [!code-vb[System.Collections.IList_Implementation#02](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.IList_Implementation/vb/Program.vb#02)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist kein gültiger Index in <see cref="T:System.Collections.IList" />.</exception>
+        <exception cref="T:System.NotSupportedException">Die Eigenschaft wird festgelegt, und <see cref="T:System.Collections.IList" /> ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.IList.Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das aus der <see cref="T:System.Collections.IList" /> zu entfernende Objekt.</param>
+        <summary>Entfernt das erste Vorkommen eines angegebenen Objekts aus der <see cref="T:System.Collections.IList" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Auflistungen mit zusammenhängenden Elementen, beispielsweise Listen, wird die nach dem Entfernen eines Elements entstandene Lücke durch Verschieben aller nachfolgenden Elemente gefüllt. Wenn die Auflistung indiziert ist, werden auch die Indizes der verschobenen Elemente aktualisiert. Dies gilt nicht für Auflistungen, in denen die Elemente konzeptionell in Buckets gruppiert sind, beispielsweise Hashtabellen. Wenn `value` in der <xref:System.Collections.IList> nicht gefunden wird, bleibt die <xref:System.Collections.IList> unverändert, und es wird keine Ausnahme ausgelöst.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Implementierung der <xref:System.Collections.IList> Schnittstelle, um eine einfache Liste, eine Liste mit fester Größe zu erstellen. Dieser Code ist Teil eines umfangreicheren Beispiels für die <xref:System.Collections.IList> Schnittstelle.  
+  
+ [!code-csharp[System.Collections.IList_Implementation#02](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.IList_Implementation/cs/Program.cs#02)]
+ [!code-vb[System.Collections.IList_Implementation#02](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.IList_Implementation/vb/Program.vb#02)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException"><see cref="T:System.Collections.IList" /> ist schreibgeschützt.  
+  
+ - oder -   
+  
+ <see cref="T:System.Collections.IList" /> hat eine feste Größe.</exception>
+        <block subset="none" type="overrides">
+          <para>Wenn <paramref name="value" /> befindet sich nicht in der Liste der <see cref="M:System.Collections.IList.Remove(System.Object)" /> Methode nichts tun. Insbesondere sollten sie keine Ausnahme auslöst.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.IList.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des zu entfernenden Elements.</param>
+        <summary>Entfernt das <see cref="T:System.Collections.IList" />-Element am angegebenen Index.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Auflistungen mit zusammenhängenden Elementen, beispielsweise Listen, wird die nach dem Entfernen eines Elements entstandene Lücke durch Verschieben aller nachfolgenden Elemente gefüllt. Wenn die Auflistung indiziert ist, werden auch die Indizes der verschobenen Elemente aktualisiert. Dies gilt nicht für Auflistungen, in denen die Elemente konzeptionell in Buckets gruppiert sind, beispielsweise Hashtabellen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Implementierung der <xref:System.Collections.IList> Schnittstelle, um eine einfache Liste, eine Liste mit fester Größe zu erstellen. Dieser Code ist Teil eines umfangreicheren Beispiels für die <xref:System.Collections.IList> Schnittstelle.  
+  
+ [!code-csharp[System.Collections.IList_Implementation#02](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.IList_Implementation/cs/Program.cs#02)]
+ [!code-vb[System.Collections.IList_Implementation#02](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.IList_Implementation/vb/Program.vb#02)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist kein gültiger Index in <see cref="T:System.Collections.IList" />.</exception>
+        <exception cref="T:System.NotSupportedException"><see cref="T:System.Collections.IList" /> ist schreibgeschützt.  
+  
+ - oder -   
+  
+ <see cref="T:System.Collections.IList" /> hat eine feste Größe.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

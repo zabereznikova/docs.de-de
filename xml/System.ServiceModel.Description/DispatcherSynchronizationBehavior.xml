@@ -1,0 +1,185 @@
+<Type Name="DispatcherSynchronizationBehavior" FullName="System.ServiceModel.Description.DispatcherSynchronizationBehavior">
+  <TypeSignature Language="C#" Value="public class DispatcherSynchronizationBehavior : System.ServiceModel.Description.IEndpointBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DispatcherSynchronizationBehavior extends System.Object implements class System.ServiceModel.Description.IEndpointBehavior" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.DispatcherSynchronizationBehavior" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IEndpointBehavior</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Ein Endpunktverhalten, das einem WCF-Dienst asynchron senden von Antworten ermöglicht.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DispatcherSynchronizationBehavior ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.DispatcherSynchronizationBehavior.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Description.DispatcherSynchronizationBehavior" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DispatcherSynchronizationBehavior (bool asynchronousSendEnabled, int maxPendingReceives);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool asynchronousSendEnabled, int32 maxPendingReceives) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.DispatcherSynchronizationBehavior.#ctor(System.Boolean,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="asynchronousSendEnabled" Type="System.Boolean" />
+        <Parameter Name="maxPendingReceives" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="asynchronousSendEnabled">Ein Wert, der angibt, ob ein asynchrones Sendeverhalten aktiviert ist.</param>
+        <param name="maxPendingReceives">Ein Wert, der die maximale Anzahl ausstehender, zu empfangender Meldungen angibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Description.DispatcherSynchronizationBehavior" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsynchronousSendEnabled">
+      <MemberSignature Language="C#" Value="public bool AsynchronousSendEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AsynchronousSendEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab bzw. legt diesen fest, der angibt, ob das asynchrone Sendeverhalten aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn die asynchrone Sendeverhalten aktiviert ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxPendingReceives">
+      <MemberSignature Language="C#" Value="public int MaxPendingReceives { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxPendingReceives" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.DispatcherSynchronizationBehavior.MaxPendingReceives" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl zu empfangender Meldungen ab, die gleichzeitig verarbeitet werden können, oder legt diese fest.</summary>
+        <value>Die maximale Anzahl zu empfangender Meldungen, die gleichzeitig verarbeitet werden können.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IEndpointBehavior.AddBindingParameters">
+      <MemberSignature Language="C#" Value="void IEndpointBehavior.AddBindingParameters (System.ServiceModel.Description.ServiceEndpoint serviceEndpoint, System.ServiceModel.Channels.BindingParameterCollection parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IEndpointBehavior.AddBindingParameters(class System.ServiceModel.Description.ServiceEndpoint serviceEndpoint, class System.ServiceModel.Channels.BindingParameterCollection parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.DispatcherSynchronizationBehavior.System#ServiceModel#Description#IEndpointBehavior#AddBindingParameters(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Channels.BindingParameterCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceEndpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="parameters" Type="System.ServiceModel.Channels.BindingParameterCollection" />
+      </Parameters>
+      <Docs>
+        <param name="serviceEndpoint">Der zu verändernde Endpunkt.</param>
+        <param name="parameters">Die Parameter, die für die Bindungselemente erforderlich sind, um das Verhalten zu implementieren.</param>
+        <summary>Übergibt Daten zur Laufzeit, um Bindungen zu aktivieren, die asynchrones Sendeverhalten unterstützen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior">
+      <MemberSignature Language="C#" Value="void IEndpointBehavior.ApplyClientBehavior (System.ServiceModel.Description.ServiceEndpoint serviceEndpoint, System.ServiceModel.Dispatcher.ClientRuntime behavior);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior(class System.ServiceModel.Description.ServiceEndpoint serviceEndpoint, class System.ServiceModel.Dispatcher.ClientRuntime behavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.DispatcherSynchronizationBehavior.System#ServiceModel#Description#IEndpointBehavior#ApplyClientBehavior(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.ClientRuntime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceEndpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="behavior" Type="System.ServiceModel.Dispatcher.ClientRuntime" />
+      </Parameters>
+      <Docs>
+        <param name="serviceEndpoint">Der Endpunkt, der geändert werden soll.</param>
+        <param name="behavior">Die Clientlaufzeit, die geändert werden soll.</param>
+        <summary>Implementiert eine Änderung oder Erweiterung eines Clients über einen Endpunkt hinweg, die das asynchrone Sendeverhalten aktiviert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior">
+      <MemberSignature Language="C#" Value="void IEndpointBehavior.ApplyDispatchBehavior (System.ServiceModel.Description.ServiceEndpoint serviceEndpoint, System.ServiceModel.Dispatcher.EndpointDispatcher endpointDispatcher);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior(class System.ServiceModel.Description.ServiceEndpoint serviceEndpoint, class System.ServiceModel.Dispatcher.EndpointDispatcher endpointDispatcher) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.DispatcherSynchronizationBehavior.System#ServiceModel#Description#IEndpointBehavior#ApplyDispatchBehavior(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.EndpointDispatcher)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceEndpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="endpointDispatcher" Type="System.ServiceModel.Dispatcher.EndpointDispatcher" />
+      </Parameters>
+      <Docs>
+        <param name="serviceEndpoint">Der Endpunkt, der den Vertrag verfügbar macht.</param>
+        <param name="endpointDispatcher">Der Endpunktverteiler, der geändert oder erweitert werden soll.</param>
+        <summary>Implementiert eine Änderung oder Erweiterung eines Diensts über einen Endpunkt hinweg, die das asynchrone Sendeverhalten aktiviert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IEndpointBehavior.Validate">
+      <MemberSignature Language="C#" Value="void IEndpointBehavior.Validate (System.ServiceModel.Description.ServiceEndpoint serviceEndpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IEndpointBehavior.Validate(class System.ServiceModel.Description.ServiceEndpoint serviceEndpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.DispatcherSynchronizationBehavior.System#ServiceModel#Description#IEndpointBehavior#Validate(System.ServiceModel.Description.ServiceEndpoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceEndpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="serviceEndpoint">Der zu überprüfende Endpunkt.</param>
+        <summary>Überprüft, ob der Endpunkt den Kriterien entspricht, die zum Aktivieren des asynchronen Sendeverhaltens erforderlich sind.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

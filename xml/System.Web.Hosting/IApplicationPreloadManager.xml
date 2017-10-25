@@ -1,0 +1,81 @@
+<Type Name="IApplicationPreloadManager" FullName="System.Web.Hosting.IApplicationPreloadManager">
+  <TypeSignature Language="C#" Value="public interface IApplicationPreloadManager" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IApplicationPreloadManager" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Hosting.IApplicationPreloadManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("AE54F424-71BC-4da5-AA2F-8C0CD53496FC")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält Methoden, die ASP.NET verwendet, um die Anwendung Preload-Funktion in IIS 7.0 aufzurufen.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="SetApplicationPreloadState">
+      <MemberSignature Language="C#" Value="public void SetApplicationPreloadState (string context, string appId, bool enabled);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetApplicationPreloadState([in]string context, [in]string appId, [in]bool enabled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.IApplicationPreloadManager.SetApplicationPreloadState(System.String,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.String" />
+        <Parameter Name="appId" Type="System.String" />
+        <Parameter Name="enabled" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der Anwendungskontext.</param>
+        <param name="appId">Die eindeutige ID der Anwendung.</param>
+        <param name="enabled">
+          <see langword="true" />um anzugeben, dass die Anwendung vorab geladen werden soll. andernfalls <see langword="false" />.</param>
+        <summary>Wird aufgerufen, indem Sie [!INCLUDE[iisver](~/includes/iisver-md.md)] um ASP.NET zu benachrichtigen, ob eine Anwendung geladen werden sollen.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SetApplicationPreloadUtil">
+      <MemberSignature Language="C#" Value="public void SetApplicationPreloadUtil (System.Web.Hosting.IApplicationPreloadUtil preloadUtil);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetApplicationPreloadUtil([in]class System.Web.Hosting.IApplicationPreloadUtil preloadUtil) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.IApplicationPreloadManager.SetApplicationPreloadUtil(System.Web.Hosting.IApplicationPreloadUtil)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="preloadUtil" Type="System.Web.Hosting.IApplicationPreloadUtil" />
+      </Parameters>
+      <Docs>
+        <param name="preloadUtil">Das Handle für eine nicht verwaltete Schnittstelle in [!INCLUDE[iisver](~/includes/iisver-md.md)] ASP.NET aufgerufen, um Informationen zu erhalten.</param>
+        <summary>Aufrufe [!INCLUDE[iisver](~/includes/iisver-md.md)] beim Abrufen von Informationen, die erforderlich sind, um eine Anwendung vorab zu laden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ IIS ruft ASP.NET über diese Schnittstelle gibt einen Verweis auf ein Objekt, implementiert die <xref:System.Web.Hosting.IApplicationPreloadUtil> Schnittstelle. Diese Schnittstelle wird von der ASP.NET später verwendet, um einen Rückruf in IIS beim Abrufen von Vorabladen Informationen für einzelne Anwendungen auszuführen.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

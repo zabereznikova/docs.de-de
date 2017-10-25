@@ -1,0 +1,15 @@
+<Namespace Name="System.ServiceModel.Security">
+  <Docs>
+    <summary>Die <see cref="N:System.ServiceModel.Security" /> Namespace befasst sich mit allgemeinen sicherheitsbezogenen Themen, z. B. <see cref="T:System.ServiceModel.Security.SecurityAlgorithmSuite" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Themen, sie sich mit Sicherheitstoken und Zertifikaten befassen (beispielsweise <xref:System.ServiceModel.Security.Tokens.WrappedKeySecurityToken>), finden Sie unter <xref:System.ServiceModel.Security.Tokens>.  
+  
+ Sicherheitsthemen, die sich mit dem Dienstmodell überschneiden (beispielsweise <xref:System.ServiceModel.TcpTransportSecurity>), finden Sie unter <xref:System.ServiceModel>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

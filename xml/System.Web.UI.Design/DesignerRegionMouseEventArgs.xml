@@ -1,0 +1,133 @@
+<Type Name="DesignerRegionMouseEventArgs" FullName="System.Web.UI.Design.DesignerRegionMouseEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class DesignerRegionMouseEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DesignerRegionMouseEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.DesignerRegionMouseEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für ein <see cref="E:System.Web.UI.Design.IControlDesignerView.ViewEvent" /> Ereignis, das ausgelöst wird, wenn Sie auf ein ausgewähltes Steuerelement oder einen Designerbereich in einem ausgewählten Steuerelement klicken. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.IControlDesignerView.ViewEvent> Ereignis wird vom Designerhost für bestimmte Aktionen für ein Steuerelement auf der Entwurfsoberfläche angezeigt. Beispielsweise wird ein Ereignis ausgelöst, wenn Sie ein ausgewähltes Steuerelement oder einen Designerbereich in einem ausgewählten Steuerelement auf der Entwurfsoberfläche klicken.  
+  
+ Die <xref:System.Web.UI.Design.ControlDesigner> -Klasse stellt ein Delegat standardmäßig behandelt der <xref:System.Web.UI.Design.IControlDesignerView.ViewEvent> Ereignis. Wenn Sie ein ausgewähltes Steuerelement oder einen Designerbereich des ausgewählten Steuerelements zur Entwurfszeit klicken, wird der Designerhost initialisiert ein <xref:System.Web.UI.Design.ViewEventArgs> -Objekt für eine <xref:System.Web.UI.Design.ViewEvent.Click> -Ereignis des Typs und legt dann die <xref:System.Web.UI.Design.ViewEventArgs.EventArgs%2A> Eigenschaft mit einer <xref:System.Web.UI.Design.DesignerRegionMouseEventArgs> Objekt.  
+  
+ Bei der <xref:System.Web.UI.Design.ViewEventArgs> Objekt gibt an, dass auf Sie geklickt Designerbereich, den Standarddelegaten, in der <xref:System.Web.UI.Design.ControlDesigner> -Klasse übergibt die <xref:System.Web.UI.Design.DesignerRegionMouseEventArgs> -Objekt an die <xref:System.Web.UI.Design.ControlDesigner.OnClick%2A> Methode. Klassen, die von der <xref:System.Web.UI.Design.ControlDesigner> -Klasse überschreiben die <xref:System.Web.UI.Design.ControlDesigner.OnClick%2A> Methode zum Verarbeiten von Ereignissen, die ausgelöst werden, wenn Sie ein Steuerelement im Entwurfshost klicken.  
+  
+ Die <xref:System.Web.UI.Design.DesignerRegionMouseEventArgs.Region%2A> Eigenschaft des Designerbereichs Steuerelement, das das Ereignis bezieht darstellt, sofern vorhanden. Die <xref:System.Web.UI.Design.DesignerRegionMouseEventArgs.Location%2A> Eigenschaft darstellt, die Position auf der Entwurfsoberfläche auf die geklickt wurde.  
+  
+ Weitere Informationen zu Ereignissen und Delegaten finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.Design.DesignerRegionMouseEventArgs> die Region zu identifizieren, die per Mausklick und die Anzeige entsprechend ändern. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.Design.EditableDesignerRegion> Klasse.  
+  
+ [!code-csharp[SimpleMultiRegionControlDesigner#4](~/samples/snippets/csharp/VS_Snippets_WebNet/SimpleMultiRegionControlDesigner/CS/SimpleMultiRegionControlDesigner.cs#4)]
+ [!code-vb[SimpleMultiRegionControlDesigner#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SimpleMultiRegionControlDesigner/VB/SimpleMultiRegionControlDesigner.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerRegionMouseEventArgs (System.Web.UI.Design.DesignerRegion region, System.Drawing.Point location);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.Design.DesignerRegion region, valuetype System.Drawing.Point location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DesignerRegionMouseEventArgs.#ctor(System.Web.UI.Design.DesignerRegion,System.Drawing.Point)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="region" Type="System.Web.UI.Design.DesignerRegion" />
+        <Parameter Name="location" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="region">Designerbereich, auf die geklickt wurde. zum Initialisieren der <see cref="P:System.Web.UI.Design.DesignerRegionMouseEventArgs.Region" />.</param>
+        <param name="location">Der Speicherort, der relativ zu der oberen linken Ecke des Bereichs geklickt wurde. zum Initialisieren der <see cref="P:System.Web.UI.Design.DesignerRegionMouseEventArgs.Location" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.Design.DesignerRegionMouseEventArgs" /> -Klasse mit der angegebenen Region und Ort.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Web.UI.Design.IControlDesignerView.ViewEvent> delegieren-Methode verwendet die <xref:System.Web.UI.Design.DesignerRegionMouseEventArgs.%23ctor%2A> Konstruktor initialisiert werden, eine <xref:System.Web.UI.Design.DesignerRegionMouseEventArgs> Objekt für die Verwendung mit einem <xref:System.Web.UI.Design.ViewEventArgs> Objekt.  
+  
+ Wenn Sie einen Steuerelementbereich zur Entwurfszeit klicken, um der Designerhost initialisiert ein <xref:System.Web.UI.Design.ViewEventArgs> -Objekt für eine <xref:System.Web.UI.Design.ViewEvent.Click> -Ereignis des Typs und legt dann die <xref:System.Web.UI.Design.ViewEventArgs.EventArgs%2A> Eigenschaft mit einer <xref:System.Web.UI.Design.DesignerRegionMouseEventArgs> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="public System.Drawing.Point Location { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Point Location" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DesignerRegionMouseEventArgs.Location" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Speicherort innerhalb des Steuerelements, auf die geklickt wurde.</summary>
+        <value>Die <see cref="T:System.Drawing.Point" /> identifizieren die Position innerhalb des Bereichs, auf den geklickt wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.DesignerRegionMouseEventArgs.Location%2A> Eigenschaft enthält die Koordinaten, die angeben, wo geklickt wurde, relativ zu der oberen linken Ecke des Bereichs.  
+  
+ Die <xref:System.Web.UI.Design.DesignerRegionMouseEventArgs.Location%2A> Eigenschaft wird initialisiert, indem die <xref:System.Web.UI.Design.DesignerRegionMouseEventArgs.%23ctor%2A> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Region">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.DesignerRegion Region { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.DesignerRegion Region" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DesignerRegionMouseEventArgs.Region" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.DesignerRegion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Bereich des Designers auf die geklickt wurde, ab, sofern vorhanden.</summary>
+        <value>Die <see cref="T:System.Web.UI.Design.DesignerRegion" /> , die das Click-Ereignis bezieht sich auf, oder <see langword="null" /> Wenn keinen Bereich geklickt wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.DesignerRegionMouseEventArgs.Region%2A> Eigenschaft des Designerbereichs Steuerelement, auf die geklickt wurde, darstellt, sofern vorhanden.  
+  
+ Die <xref:System.Web.UI.Design.DesignerRegionMouseEventArgs.Region%2A> Eigenschaft wird initialisiert, indem die <xref:System.Web.UI.Design.DesignerRegionMouseEventArgs.%23ctor%2A> Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.Design.DesignerRegionMouseEventArgs> die Region zu identifizieren, die per Mausklick und die Ansicht entsprechend geändert. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.Design.EditableDesignerRegion> Klasse.  
+  
+ [!code-csharp[SimpleMultiRegionControlDesigner#4](~/samples/snippets/csharp/VS_Snippets_WebNet/SimpleMultiRegionControlDesigner/CS/SimpleMultiRegionControlDesigner.cs#4)]
+ [!code-vb[SimpleMultiRegionControlDesigner#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SimpleMultiRegionControlDesigner/VB/SimpleMultiRegionControlDesigner.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

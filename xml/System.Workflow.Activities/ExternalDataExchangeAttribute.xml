@@ -1,0 +1,71 @@
+<Type Name="ExternalDataExchangeAttribute" FullName="System.Workflow.Activities.ExternalDataExchangeAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ExternalDataExchangeAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ExternalDataExchangeAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.ExternalDataExchangeAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Interface, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Markiert eine Schnittstelle als lokale Dienstschnittstelle. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!WARNING]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Eine Klasse, die eine lokale Dienstschnittstelle implementiert, muss <xref:System.Workflow.Activities.ExternalDataExchangeService> hinzugefügt werden und kann von <xref:System.Workflow.Activities.CallExternalMethodActivity> und <xref:System.Workflow.Activities.HandleExternalEventActivity> verwendet werden.  
+  
+ Ereignisse auf Schnittstellen, die <xref:System.Workflow.Activities.ExternalDataExchangeAttribute> zugeschrieben werden, sollten über Ereignisdaten verfügen, die von <xref:System.Workflow.Activities.ExternalDataEventArgs> abgeleitet werden.  
+  
+ Generische Typen werden zwar für Schnittstellenmethoden und Ereignisdeklarationen, jedoch nicht für die Schnittstellendeklaration selbst unterstützt. Die folgende Schnittstelle wäre für die Verwendung als `ExternalDataExchange` nicht gültig.  
+  
+```  
+public interface IInterfaceName<TCommand>  
+{   
+    void MethodName(TCommand Request);  
+}  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Festlegen von <xref:System.Workflow.Activities.ExternalDataExchangeAttribute> auf einer Schnittstelle dargestellt. Dieses Codebeispiel stammt aus dem ActiveDirectoryRoles SDK-Beispiel in der Datei IStartPurchaseOrder.cs. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Mithilfe von Active Directory-Rollen](http://msdn.microsoft.com/en-us/7b1708da-fd2a-47da-902b-3d50580ee781).  
+  
+ [!code-csharp[wf_samples#285](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#285)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExternalDataExchangeAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ExternalDataExchangeAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz des <see cref="T:System.Workflow.Activities.ExternalDataExchangeAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

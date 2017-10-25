@@ -1,0 +1,494 @@
+<Type Name="ObjectListFieldCollection" FullName="System.Web.UI.MobileControls.ObjectListFieldCollection">
+  <TypeSignature Language="C#" Value="public class ObjectListFieldCollection : System.Web.UI.MobileControls.ArrayListCollectionBase, System.Collections.ICollection, System.Web.UI.IStateManager, System.Web.UI.MobileControls.IObjectListFieldCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ObjectListFieldCollection extends System.Web.UI.MobileControls.ArrayListCollectionBase implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Web.UI.IStateManager, class System.Web.UI.MobileControls.IObjectListFieldCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.ObjectListFieldCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.MobileControls.ArrayListCollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.IStateManager</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.MobileControls.IObjectListFieldCollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Auflistung von<see cref="T:System.Web.UI.MobileControls.ObjectListField" />-Objekten dar. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Klassenobjekt stellt den Container für die Felder einer <xref:System.Web.UI.MobileControls.ObjectList>. Zugriff auf die <xref:System.Web.UI.MobileControls.ObjectList.Fields%2A> Eigenschaft ein <xref:System.Web.UI.MobileControls.ObjectList> Ruft eine <xref:System.Web.UI.MobileControls.ObjectListFieldCollection> Objekt.  
+  
+ Die Eigenschaften und Methoden von der <xref:System.Web.UI.MobileControls.ObjectListFieldCollection> -Klasse sind eine Obermenge von der <xref:System.Web.UI.MobileControls.IObjectListFieldCollection> Schnittstelle. Alle Eigenschaften und Methoden der Schnittstelle, einschließlich derer, die von ASP.NET erbt <xref:System.Collections.ICollection> Schnittstelle, die hier gelten. Diese Klasse bietet zusätzliche Eigenschaften und Methoden zum Ändern der Auflistung. Diese Eigenschaften und Methoden bieten standardsammlungsregel-Verwaltungsfunktionen, z. B. hinzufügen, entfernen oder Deaktivieren der auflistungs.  
+  
+ Wenn Sie die Auflistung ändern, durch Aufrufen der Methoden <xref:System.Web.UI.MobileControls.ObjectListFieldCollection.Add%2A>, <xref:System.Web.UI.MobileControls.ObjectListFieldCollection.AddAt%2A>, <xref:System.Web.UI.MobileControls.ObjectListFieldCollection.Remove%2A>, oder <xref:System.Web.UI.MobileControls.ObjectListFieldCollection.RemoveAt%2A> während Page_Init am Ansichtszustand für die <xref:System.Web.UI.MobileControls.ObjectList.Fields%2A>, <xref:System.Web.UI.MobileControls.ObjectList.Items%2A>, und <xref:System.Web.UI.MobileControls.ObjectList.ViewMode%2A> Eigenschaften der Objektliste wird ignoriert. .  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Web.UI.MobileControls.ObjectListField field);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Web.UI.MobileControls.ObjectListField field) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectListFieldCollection.Add(System.Web.UI.MobileControls.ObjectListField)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="field" Type="System.Web.UI.MobileControls.ObjectListField" />
+      </Parameters>
+      <Docs>
+        <param name="field">Der <see cref="T:System.Web.UI.MobileControls.ObjectListField" />, der am Ende der Auflistung hinzugefügt werden soll.</param>
+        <summary>Fügt ein Feld an das Ende der Auflistung. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist nicht verfügbar in der schreibgeschützten <xref:System.Web.UI.MobileControls.IObjectListFieldCollection> Schnittstelle. Ein Feld hinzufügen, um die feldauflistung für ein Objekt Liste ändert sich die Datenbindung Verhalten des Steuerelements und erfordert, dass Sie die Daten erneut an das Steuerelement zu binden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAt">
+      <MemberSignature Language="C#" Value="public void AddAt (int index, System.Web.UI.MobileControls.ObjectListField field);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddAt(int32 index, class System.Web.UI.MobileControls.ObjectListField field) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectListFieldCollection.AddAt(System.Int32,System.Web.UI.MobileControls.ObjectListField)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="field" Type="System.Web.UI.MobileControls.ObjectListField" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Position in der Auflistung, an dem das Feld hinzugefügt.</param>
+        <param name="field">Das Feld an der angegebenen Position in der Auflistung hinzufügen.</param>
+        <summary>Fügt ein Feld an der Position in der Auflistung, die durch die Indexparameter angegeben wird. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert-1 für das `index` Parameter gibt an, dass das Feld am Ende der Auflistung hinzugefügt wird.  
+  
+ Die Felder von einem Objekt Liste ändert sich die Datenbindung Verhalten des Steuerelements ein Feld hinzugefügt, und erfordert, dass Sie die Daten erneut an das Steuerelement zu binden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectListFieldCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht die Auflistung. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist nicht verfügbar in der schreibgeschützten <xref:System.Web.UI.MobileControls.IObjectListFieldCollection> Schnittstelle.  
+  
+ Sie können die <xref:System.Web.UI.MobileControls.ObjectListFieldCollection.Clear%2A> Methode für alle Klassen, in dem diese Methode gilt. Z. B. die <xref:System.Web.UI.MobileControls.ObjectListFieldCollection.Clear%2A> Methode für eine <xref:System.Web.UI.MobileControls.StyleSheet> Auflistung löscht alle Formate in der Auflistung befindet, oder für die <xref:System.Web.UI.MobileControls.DeviceSpecificChoiceCollection>, löscht Sie alle Optionen in der Auflistung.  
+  
+ Die Felder von einem Objekt Liste ändert sich die Datenbindung Verhalten des Steuerelements ein Feld hinzugefügt, und erfordert, dass Sie die Daten erneut an das Steuerelement zu binden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAll">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.ObjectListField[] GetAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.MobileControls.ObjectListField[] GetAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectListFieldCollection.GetAll" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.ObjectListField[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Elemente in der angegebenen Auflistung als einzelnes Array von <see cref="T:System.Web.UI.MobileControls.ObjectListItem" /> Objekte. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Die Elemente in der angegebenen Auflistung als einzelnes Array von <see cref="T:System.Web.UI.MobileControls.ObjectListItem" /> Objekte.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (string fieldIDOrName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOf(string fieldIDOrName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectListFieldCollection.IndexOf(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fieldIDOrName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fieldIDOrName">Eine Zeichenfolge für den Vergleich mit der <see cref="P:System.Web.UI.MobileControls.ObjectListField.Title" /> oder <see cref="P:System.Web.UI.MobileControls.ObjectListField.DataField" /> Eigenschaft.</param>
+        <summary>Gibt den Index eines Felds zurück. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Der Index des angegebenen Felds.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der zweiten Version dieser Methode, sucht es ein Feld mit der <xref:System.Web.UI.MobileControls.ObjectListField.Title%2A> Eigenschaft `fieldId` und gibt das erste übereinstimmende Feld zurück. Wenn keine Übereinstimmung gefunden wird, sucht es nach ein Feld mit der <xref:System.Web.UI.MobileControls.ObjectListField.DataField%2A> der Eigenschaft `fieldID` Parameter und gibt das erste übereinstimmende Feld zurück. Andernfalls wird-1 zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.UI.MobileControls.ObjectListField field);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOf(class System.Web.UI.MobileControls.ObjectListField field) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectListFieldCollection.IndexOf(System.Web.UI.MobileControls.ObjectListField)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="field" Type="System.Web.UI.MobileControls.ObjectListField" />
+      </Parameters>
+      <Docs>
+        <param name="field">Ein Feld, das in der angegebenen Auflistung gesucht werden soll.</param>
+        <summary>Gibt den Index eines Felds zurück. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Der Index des angegebenen Felds.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der ersten Version dieser Methode wird den Index des angegebenen Felds zurückgegeben. Wenn das angegebene Feld nicht in der Auflistung vorhanden ist, wird-1 zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTrackingViewState">
+      <MemberSignature Language="C#" Value="protected bool IsTrackingViewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTrackingViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ObjectListFieldCollection.IsTrackingViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob die Auflistung mit dem Nachverfolgen von seinen Ansichtszustand ändert. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>
+          <see langword="true" />Wenn die Änderungen des Ansichtszustands nachverfolgt; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.ObjectListField this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.ObjectListField Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ObjectListFieldCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.ObjectListField</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des abzurufenden Elements.</param>
+        <summary>Der Standardindexer für die <see cref="T:System.Web.UI.MobileControls.ObjectListFieldCollection" /> Klasse, ermöglicht die Suche nach Funktionswerten beliebiger über einen Index. Eine der Eigenschaften kann anhand des Namens zugegriffen werden. Allerdings wird der zurückgegebene Wert immer eine Zeichenfolge sein (oder <see langword="null" /> nicht definiert), anstatt einen Wert als typsicherer. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Eine Zeichenfolge, die den Wert des Felds am angegebenen Index darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected void LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectListFieldCollection.LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Das Objekt, das den Ansichtszustand zu ladenden Informationen enthält.</param>
+        <summary>Lädt den zuvor gespeicherten Ansichtszustand für das Steuerelement an. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.UI.MobileControls.ObjectListField field);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Web.UI.MobileControls.ObjectListField field) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectListFieldCollection.Remove(System.Web.UI.MobileControls.ObjectListField)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="field" Type="System.Web.UI.MobileControls.ObjectListField" />
+      </Parameters>
+      <Docs>
+        <param name="field">Das Feld zu entfernen.</param>
+        <summary>Entfernt das angegebene Feld. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nicht verfügbar in der <xref:System.Web.UI.MobileControls.IObjectListFieldCollection> Schnittstelle.  
+  
+ Entfernen eines Felds aus den Feldern von einer Objektliste das Datenbindung Verhalten des Steuerelements ändert, und erfordert, dass Sie die Daten erneut an das Steuerelement zu binden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectListFieldCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Indexnummer des zu entfernenden Elements.</param>
+        <summary>Entfernt das Element am angegebenen Index. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveViewState">
+      <MemberSignature Language="C#" Value="protected object SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectListFieldCollection.SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert die Änderungen am Ansichtszustand eines Serversteuerelements eine <see cref="T:System.Object" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Ein <see cref="T:System.Object" /> mit Informationen zum Ansichtszustand enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAll">
+      <MemberSignature Language="C#" Value="public void SetAll (System.Web.UI.MobileControls.ObjectListField[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAll(class System.Web.UI.MobileControls.ObjectListField[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectListFieldCollection.SetAll(System.Web.UI.MobileControls.ObjectListField[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.UI.MobileControls.ObjectListField[]" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das <see cref="T:System.Web.UI.MobileControls.ObjectListItem" />-Array.</param>
+        <summary>Legt das Array von <see cref="T:System.Web.UI.MobileControls.ObjectListItem" /> Objekte wie die <see cref="T:System.Web.UI.MobileControls.ObjectListFieldCollection" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.IsTrackingViewState">
+      <MemberSignature Language="C#" Value="bool System.Web.UI.IStateManager.IsTrackingViewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.UI.IStateManager.IsTrackingViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ObjectListFieldCollection.System#Web#UI#IStateManager#IsTrackingViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Web.UI.IStateManager.IsTrackingViewState" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.MobileControls.ObjectListFieldCollection>-Instanz in eine <xref:System.Web.UI.IStateManager>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.LoadViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.LoadViewState (object state);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.LoadViewState(object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectListFieldCollection.System#Web#UI#IStateManager#LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="state">Das Objekt mit der Ansichtszustand geladen werden.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Web.UI.IStateManager.LoadViewState(System.Object)" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.MobileControls.ObjectListFieldCollection>-Instanz in eine <xref:System.Web.UI.IStateManager>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.SaveViewState">
+      <MemberSignature Language="C#" Value="object IStateManager.SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.Web.UI.IStateManager.SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectListFieldCollection.System#Web#UI#IStateManager#SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Web.UI.IStateManager.SaveViewState" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Gibt ein Objekt, das die Ansichtszustandsänderungen enthält oder <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.MobileControls.ObjectListFieldCollection>-Instanz in eine <xref:System.Web.UI.IStateManager>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.TrackViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectListFieldCollection.System#Web#UI#IStateManager#TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Web.UI.IStateManager.TrackViewState" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.MobileControls.ObjectListFieldCollection>-Instanz in eine <xref:System.Web.UI.IStateManager>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackViewState">
+      <MemberSignature Language="C#" Value="protected void TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectListFieldCollection.TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Weist den Auflistung Änderungen an seinem Ansichtszustand nachverfolgt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach dem Aufruf dieser Methode die <xref:System.Web.UI.MobileControls.ObjectListFieldCollection.IsTrackingViewState%2A> Eigenschaft zurück `true`.  Darüber hinaus die <xref:System.Web.UI.IStateManager.IsTrackingViewState%2A> Eigenschaft von der <xref:System.Web.UI.IStateManager> Objekte in der <xref:System.Web.UI.MobileControls.MobileListItemCollection> festgelegt, um `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

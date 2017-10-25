@@ -1,0 +1,102 @@
+<Type Name="ITransaction" FullName="System.EnterpriseServices.ITransaction">
+  <TypeSignature Language="C#" Value="public interface ITransaction" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITransaction" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.ITransaction" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("0FB15084-AF41-11CE-BD2B-204C4F4F5020")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Entspricht der auf dem Distributed Transaction Coordinator (DTC) <see langword="ITransaction" /> -Schnittstelle und wird von Objekten, die über bezogenen unterstützt <see cref="P:System.EnterpriseServices.ContextUtil.Transaction" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Abort">
+      <MemberSignature Language="C#" Value="public void Abort (ref System.EnterpriseServices.BOID pboidReason, int fRetaining, int fAsync);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Abort(valuetype System.EnterpriseServices.BOID&amp; pboidReason, int32 fRetaining, int32 fAsync) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.ITransaction.Abort(System.EnterpriseServices.BOID@,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pboidReason" Type="System.EnterpriseServices.BOID&amp;" RefType="ref" />
+        <Parameter Name="fRetaining" Type="System.Int32" />
+        <Parameter Name="fAsync" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pboidReason">Ein optionales <see cref="T:System.EnterpriseServices.BOID" /> , der angibt, warum die Transaktion abgebrochen wird. Dieser Parameter kann <see langword="null" />, der angibt, die kein Grund für den Abbruch angegeben ist.</param>
+        <param name="fRetaining">Dieser Wert muss <see langword="false" /> sein.</param>
+        <param name="fAsync">Wenn <c>fAsync</c> ist <see langword="true" />, ein asynchroner Abbruch ausgeführt wird und des Aufrufers muss <see langword="ITransactionOutcomeEvents" /> um das Ergebnis der Transaktion zu erfahren.</param>
+        <summary>Wird die Transaktion abgebrochen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Commit">
+      <MemberSignature Language="C#" Value="public void Commit (int fRetaining, int grfTC, int grfRM);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Commit(int32 fRetaining, int32 grfTC, int32 grfRM) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.ITransaction.Commit(System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fRetaining" Type="System.Int32" />
+        <Parameter Name="grfTC" Type="System.Int32" />
+        <Parameter Name="grfRM" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="fRetaining">Dieser Wert muss <see langword="false" /> sein.</param>
+        <param name="grfTC">Ein Wert aus der OLE DB-Enumeration <see langword="XACTTC" />.</param>
+        <param name="grfRM">NULL muss sein.</param>
+        <summary>Führt einen Commit die Transaktion.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für Werte des `grfTC`, finden Sie unter `ITransaction::Commit` in der OLE DB-Programmierreferenz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTransactionInfo">
+      <MemberSignature Language="C#" Value="public void GetTransactionInfo (out System.EnterpriseServices.XACTTRANSINFO pinfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetTransactionInfo([out] valuetype System.EnterpriseServices.XACTTRANSINFO&amp; pinfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.ITransaction.GetTransactionInfo(System.EnterpriseServices.XACTTRANSINFO@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinfo" Type="System.EnterpriseServices.XACTTRANSINFO&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pinfo">Zeiger auf die vom Aufrufer reservierten <see cref="T:System.EnterpriseServices.XACTTRANSINFO" /> -Struktur, die Informationen zur Transaktion erhält. Dieser Wert darf nicht <see langword="null" /> sein.</param>
+        <summary>Gibt Informationen über ein Transaktionsobjekt zurück.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

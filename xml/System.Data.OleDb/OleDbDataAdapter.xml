@@ -1,0 +1,898 @@
+<Type Name="OleDbDataAdapter" FullName="System.Data.OleDb.OleDbDataAdapter">
+  <TypeSignature Language="C#" Value="public sealed class OleDbDataAdapter : System.Data.Common.DbDataAdapter, ICloneable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OleDbDataAdapter extends System.Data.Common.DbDataAdapter implements class System.Data.IDataAdapter, class System.Data.IDbDataAdapter, class System.ICloneable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.OleDb.OleDbDataAdapter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.DbDataAdapter</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("RowUpdated")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("Microsoft.VSDesigner.Data.VS.OleDbDataAdapterDesigner, Microsoft.VSDesigner, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem("Microsoft.VSDesigner.Data.VS.OleDbDataAdapterToolboxItem, Microsoft.VSDesigner, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Satz von Datenbefehlen und eine datenbankverbindung, die zum Füllen der <see cref="T:System.Data.DataSet" /> und aktualisiert die Datenquelle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.OleDb.OleDbDataAdapter> dient als Brücke zwischen einer <xref:System.Data.DataSet> und einer Datenquelle für das Abrufen und Speichern von Daten. Die <xref:System.Data.OleDb.OleDbDataAdapter> bietet diese Brücke mit <xref:System.Data.Common.DbDataAdapter.Fill%2A> zum Laden von Daten aus der Datenquelle in die <xref:System.Data.DataSet>, und Verwenden von <xref:System.Data.Common.DbDataAdapter.Update%2A> zum Senden von Änderungen in der <xref:System.Data.DataSet> zurück an die Datenquelle.  
+  
+ Wenn die <xref:System.Data.OleDb.OleDbDataAdapter> füllt eine <xref:System.Data.DataSet>, es werden die erforderlichen Tabellen und Spalten für die zurückgegebenen Daten erstellen, wenn sie nicht bereits vorhanden sind. Allerdings Primärschlüsselinformationen ist nicht im enthalten implizit erstellten Schemas, wenn die <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A> -Eigenschaftensatz auf <xref:System.Data.MissingSchemaAction.AddWithKey>. Möglicherweise müssen Sie auch die <xref:System.Data.OleDb.OleDbDataAdapter> erstellen das Schema der <xref:System.Data.DataSet>, einschließlich Primärschlüsselinformationen vor dem Füllen mit Daten mithilfe <xref:System.Data.Common.DbDataAdapter.FillSchema%2A>. Weitere Informationen finden Sie unter [Hinzufügen vorhandener Einschränkungen zu einem DataSet](~/docs/framework/data/adonet/adding-existing-constraints-to-a-dataset.md).  
+  
+ Beachten Sie, dass einige OLE DB-Anbieter, einschließlich den MSDataShape-Anbieter keine Basistabelle oder Primärschlüsselinformationen zurückgibt. Aus diesem Grund die <xref:System.Data.OleDb.OleDbDataAdapter> kann nicht ordnungsgemäß festgelegt die <xref:System.Data.DataTable.PrimaryKey%2A> Eigenschaft auf eine erstellte <xref:System.Data.DataTable>. In diesen Fällen müssen Sie explizit angeben Primärschlüssel für Tabellen in der <xref:System.Data.DataSet>.  
+  
+ Die <xref:System.Data.OleDb.OleDbDataAdapter> umfasst auch die <xref:System.Data.OleDb.OleDbDataAdapter.SelectCommand%2A>, <xref:System.Data.OleDb.OleDbDataAdapter.InsertCommand%2A>, <xref:System.Data.OleDb.OleDbDataAdapter.DeleteCommand%2A>, <xref:System.Data.OleDb.OleDbDataAdapter.UpdateCommand%2A>, und <xref:System.Data.Common.DataAdapter.TableMappings%2A> Eigenschaften, um das Laden und Aktualisieren von Daten zu ermöglichen.  
+  
+ Beim Erstellen einer Instanz von <xref:System.Data.OleDb.OleDbDataAdapter>, Eigenschaften werden auf ihre Ausgangswerte festgelegt. Eine Liste der folgenden Werte sind, finden Sie unter der <xref:System.Data.OleDb.OleDbDataAdapter> Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.OleDb.OleDbCommand>, <xref:System.Data.OleDb.OleDbDataAdapter> und <xref:System.Data.OleDb.OleDbConnection>, um Datensätze aus einer Access-Datenquelle auszuwählen, und füllen Sie eine <xref:System.Data.DataSet> mit den ausgewählten Zeilen. Die ausgefüllte <xref:System.Data.DataSet> wird zurückgegeben. Um dies zu erreichen, wird die Methode eine initialisierte übergeben <xref:System.Data.DataSet>, eine Verbindungszeichenfolge und eine Abfragezeichenfolge, die eine SQL SELECT-Anweisung ist.  
+  
+ [!code-csharp[Classic WebData OleDbDataAdapter Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbDataAdapter Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbDataAdapter Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbDataAdapter Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OleDbDataAdapter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbDataAdapter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.OleDb.OleDbDataAdapter" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen einer Instanz von <xref:System.Data.OleDb.OleDbDataAdapter>, werden die folgenden Eigenschaften für den Lese-/Schreibzugriff auf die folgenden Ausgangswerte festgelegt.  
+  
+|Eigenschaften|Anfangswert|  
+|----------------|-------------------|  
+|<xref:System.Data.Common.DataAdapter.MissingMappingAction%2A>|`MissingMappingAction.Passthrough`|  
+|<xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A>|`MissingSchemaAction.Add`|  
+  
+ Sie können den Wert der alle diese Eigenschaften über einen separaten Aufruf der Eigenschaft ändern.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OleDb.OleDbDataAdapter> und legt einige ihrer Eigenschaften.  
+  
+ [!code-csharp[Classic WebData OleDbDataAdapter.OleDbDataAdapter Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbDataAdapter.OleDbDataAdapter Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbDataAdapter.OleDbDataAdapter Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbDataAdapter.OleDbDataAdapter Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OleDbDataAdapter (System.Data.OleDb.OleDbCommand selectCommand);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.OleDb.OleDbCommand selectCommand) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbDataAdapter.#ctor(System.Data.OleDb.OleDbCommand)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="selectCommand" Type="System.Data.OleDb.OleDbCommand" />
+      </Parameters>
+      <Docs>
+        <param name="selectCommand">Ein <see cref="T:System.Data.OleDb.OleDbCommand" /> , die eine SELECT-Anweisung oder gespeicherte Prozedur, und wird als festgelegt die <see cref="P:System.Data.OleDb.OleDbDataAdapter.SelectCommand" /> Eigenschaft von der <see cref="T:System.Data.OleDb.OleDbDataAdapter" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.OleDb.OleDbDataAdapter" /> Klasse mit dem angegebenen <see cref="T:System.Data.OleDb.OleDbCommand" /> als die <see cref="P:System.Data.OleDb.OleDbDataAdapter.SelectCommand" /> Eigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung der <xref:System.Data.OleDb.OleDbDataAdapter> Standardkonstruktor legt die <xref:System.Data.OleDb.OleDbDataAdapter.SelectCommand%2A> -Eigenschaft auf den Wert im angegebenen der `selectCommand` Parameter.  
+  
+ Beim Erstellen einer Instanz von <xref:System.Data.OleDb.OleDbDataAdapter>, werden die folgenden Eigenschaften für den Lese-/Schreibzugriff auf die folgenden Ausgangswerte festgelegt.  
+  
+|Eigenschaften|Anfangswert|  
+|----------------|-------------------|  
+|<xref:System.Data.Common.DataAdapter.MissingMappingAction%2A>|`MissingMappingAction.Passthrough`|  
+|<xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A>|`MissingSchemaAction.Add`|  
+  
+ Sie können den Wert der alle diese Eigenschaften über einen separaten Aufruf der Eigenschaft ändern.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OleDb.OleDbDataAdapter> und legt einige ihrer Eigenschaften.  
+  
+ [!code-csharp[Classic WebData OleDbDataAdapter.OleDbDataAdapter1 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbDataAdapter.OleDbDataAdapter1 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbDataAdapter.OleDbDataAdapter1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbDataAdapter.OleDbDataAdapter1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OleDbDataAdapter (string selectCommandText, System.Data.OleDb.OleDbConnection selectConnection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string selectCommandText, class System.Data.OleDb.OleDbConnection selectConnection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbDataAdapter.#ctor(System.String,System.Data.OleDb.OleDbConnection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="selectCommandText" Type="System.String" />
+        <Parameter Name="selectConnection" Type="System.Data.OleDb.OleDbConnection" />
+      </Parameters>
+      <Docs>
+        <param name="selectCommandText">Eine Zeichenfolge, die eine SQL SELECT-Anweisung oder gespeicherte Prozedur von verwendet die <see cref="P:System.Data.OleDb.OleDbDataAdapter.SelectCommand" /> Eigenschaft von der <see cref="T:System.Data.OleDb.OleDbDataAdapter" />.</param>
+        <param name="selectConnection">Eine <see cref="T:System.Data.OleDb.OleDbConnection" /> , die die Verbindung darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.OleDb.OleDbDataAdapter" />-Klasse mit einem <see cref="P:System.Data.OleDb.OleDbDataAdapter.SelectCommand" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung der <xref:System.Data.OleDb.OleDbDataAdapter> öffnet und schließt ein <xref:System.Data.OleDb.OleDbConnection> , wenn er nicht bereits geöffnet ist. Dies kann in einer Anwendung, die aufgerufen werden muss, nützlich sein, die <xref:System.Data.Common.DbDataAdapter.Fill%2A> Methode für zwei oder mehr <xref:System.Data.OleDb.OleDbDataAdapter> Objekte. Wenn die <xref:System.Data.OleDb.OleDbConnection> ist bereits geöffnet ist, müssen Sie explizit aufrufen <xref:System.Data.OleDb.OleDbConnection.Close%2A> oder **Dispose** zu schließen.  
+  
+ Beim Erstellen einer Instanz von <xref:System.Data.OleDb.OleDbDataAdapter>, werden die folgenden Eigenschaften für den Lese-/Schreibzugriff auf die folgenden Ausgangswerte festgelegt.  
+  
+|Eigenschaften|Anfangswert|  
+|----------------|-------------------|  
+|<xref:System.Data.Common.DataAdapter.MissingMappingAction%2A>|`MissingMappingAction.Passthrough`|  
+|<xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A>|`MissingSchemaAction.Add`|  
+  
+ Sie können den Wert dieser Eigenschaften über einen separaten Aufruf der Eigenschaft ändern.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OleDb.OleDbDataAdapter> und legt einige ihrer Eigenschaften.  
+  
+ [!code-csharp[Classic WebData OleDbDataAdapter.OleDbDataAdapter3 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbDataAdapter.OleDbDataAdapter3 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbDataAdapter.OleDbDataAdapter3 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbDataAdapter.OleDbDataAdapter3 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OleDbDataAdapter (string selectCommandText, string selectConnectionString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string selectCommandText, string selectConnectionString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbDataAdapter.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="selectCommandText" Type="System.String" />
+        <Parameter Name="selectConnectionString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="selectCommandText">Eine Zeichenfolge, die eine SQL SELECT-Anweisung oder gespeicherte Prozedur von verwendet die <see cref="P:System.Data.OleDb.OleDbDataAdapter.SelectCommand" /> Eigenschaft von der <see cref="T:System.Data.OleDb.OleDbDataAdapter" />.</param>
+        <param name="selectConnectionString">Verbindungszeichenfolge.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.OleDb.OleDbDataAdapter" />-Klasse mit einem <see cref="P:System.Data.OleDb.OleDbDataAdapter.SelectCommand" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung der der <xref:System.Data.OleDb.OleDbDataAdapter> Konstruktor verwendet den `selectConnectionString` zum Festlegen der <xref:System.Data.OleDb.OleDbDataAdapter.SelectCommand%2A> Eigenschaft. Es wird jedoch nicht die Verbindung geöffnet. Sie müssen die Verbindung immer noch explizit öffnen.  
+  
+ Beim Erstellen einer Instanz von <xref:System.Data.OleDb.OleDbDataAdapter>, werden die folgenden Eigenschaften für den Lese-/Schreibzugriff auf die folgenden Ausgangswerte festgelegt.  
+  
+|Eigenschaften|Anfangswert|  
+|----------------|-------------------|  
+|<xref:System.Data.Common.DataAdapter.MissingMappingAction%2A>|`MissingMappingAction.Passthrough`|  
+|<xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A>|`MissingSchemaAction.Add`|  
+  
+ Sie können den Wert der alle diese Eigenschaften über einen separaten Aufruf der Eigenschaft ändern.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OleDb.OleDbDataAdapter> und legt einige ihrer Eigenschaften.  
+  
+ [!code-csharp[Classic WebData OleDbDataAdapter.OleDbDataAdapter2 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbDataAdapter.OleDbDataAdapter2 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbDataAdapter.OleDbDataAdapter2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbDataAdapter.OleDbDataAdapter2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateRowUpdatedEvent">
+      <MemberSignature Language="C#" Value="protected override System.Data.Common.RowUpdatedEventArgs CreateRowUpdatedEvent (System.Data.DataRow dataRow, System.Data.IDbCommand command, System.Data.StatementType statementType, System.Data.Common.DataTableMapping tableMapping);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Data.Common.RowUpdatedEventArgs CreateRowUpdatedEvent(class System.Data.DataRow dataRow, class System.Data.IDbCommand command, valuetype System.Data.StatementType statementType, class System.Data.Common.DataTableMapping tableMapping) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbDataAdapter.CreateRowUpdatedEvent(System.Data.DataRow,System.Data.IDbCommand,System.Data.StatementType,System.Data.Common.DataTableMapping)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.RowUpdatedEventArgs</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataRow" Type="System.Data.DataRow" />
+        <Parameter Name="command" Type="System.Data.IDbCommand" />
+        <Parameter Name="statementType" Type="System.Data.StatementType" />
+        <Parameter Name="tableMapping" Type="System.Data.Common.DataTableMapping" />
+      </Parameters>
+      <Docs>
+        <param name="dataRow">To be added.</param>
+        <param name="command">To be added.</param>
+        <param name="statementType">To be added.</param>
+        <param name="tableMapping">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateRowUpdatingEvent">
+      <MemberSignature Language="C#" Value="protected override System.Data.Common.RowUpdatingEventArgs CreateRowUpdatingEvent (System.Data.DataRow dataRow, System.Data.IDbCommand command, System.Data.StatementType statementType, System.Data.Common.DataTableMapping tableMapping);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Data.Common.RowUpdatingEventArgs CreateRowUpdatingEvent(class System.Data.DataRow dataRow, class System.Data.IDbCommand command, valuetype System.Data.StatementType statementType, class System.Data.Common.DataTableMapping tableMapping) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbDataAdapter.CreateRowUpdatingEvent(System.Data.DataRow,System.Data.IDbCommand,System.Data.StatementType,System.Data.Common.DataTableMapping)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.RowUpdatingEventArgs</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataRow" Type="System.Data.DataRow" />
+        <Parameter Name="command" Type="System.Data.IDbCommand" />
+        <Parameter Name="statementType" Type="System.Data.StatementType" />
+        <Parameter Name="tableMapping" Type="System.Data.Common.DataTableMapping" />
+      </Parameters>
+      <Docs>
+        <param name="dataRow">To be added.</param>
+        <param name="command">To be added.</param>
+        <param name="statementType">To be added.</param>
+        <param name="tableMapping">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteCommand">
+      <MemberSignature Language="C#" Value="public System.Data.OleDb.OleDbCommand DeleteCommand { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.OleDb.OleDbCommand DeleteCommand" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbDataAdapter.DeleteCommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("Microsoft.VSDesigner.Data.Design.DBCommandEditor, Microsoft.VSDesigner, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine SQL-Anweisung oder gespeicherte Prozedur zum Löschen von Datensätzen aus dem DataSet.</summary>
+        <value>Ein <see cref="T:System.Data.OleDb.OleDbCommand" /> verwendet werden, während der <see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" /> zum Löschen von Datensätzen in der Datenquelle, die entsprechen die gelöschten Zeilen in der <see cref="T:System.Data.DataSet" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Während der <xref:System.Data.Common.DbDataAdapter.Update%2A>, wenn diese Eigenschaft nicht festgelegt ist und Primärschlüsselinformationen in vorhanden ist die <xref:System.Data.DataSet>, die <xref:System.Data.OleDb.OleDbDataAdapter.DeleteCommand%2A> können automatisch generiert werden, wenn Sie festlegen, die <xref:System.Data.OleDb.OleDbDataAdapter.SelectCommand%2A> -Eigenschaft und die Verwendung der <xref:System.Data.OleDb.OleDbCommandBuilder>. Anschließend werden alle weiteren Befehle, die Sie nicht festlegen von generiert die <xref:System.Data.OleDb.OleDbCommandBuilder>. Diese Generierungslogik müssen Schlüsselspalteninformationen vorhanden sein der <xref:System.Data.DataSet>. Weitere Informationen finden Sie unter [Generieren von Befehlen mit CommandBuilder-Objekten](~/docs/framework/data/adonet/generating-commands-with-commandbuilders.md).  
+  
+ Wenn <xref:System.Data.OleDb.OleDbDataAdapter.DeleteCommand%2A> zugewiesen ist, ein zuvor erstelltes <xref:System.Data.OleDb.OleDbCommand>, die <xref:System.Data.OleDb.OleDbCommand> nicht geklont. Die <xref:System.Data.OleDb.OleDbDataAdapter.DeleteCommand%2A> behält einen Verweis auf das zuvor erstellte <xref:System.Data.OleDb.OleDbCommand> Objekt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OleDb.OleDbDataAdapter> und legt die <xref:System.Data.OleDb.OleDbDataAdapter.SelectCommand%2A> und <xref:System.Data.OleDb.OleDbDataAdapter.DeleteCommand%2A> Eigenschaften. Es wird davon ausgegangen, dass Sie bereits erstellt haben eine <xref:System.Data.OleDb.OleDbConnection> Objekt.  
+  
+ [!code-csharp[Classic WebData DbDataAdapter.DeleteCommand Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DbDataAdapter.DeleteCommand Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DbDataAdapter.DeleteCommand Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DbDataAdapter.DeleteCommand Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fill">
+      <MemberSignature Language="C#" Value="public int Fill (System.Data.DataTable dataTable, object ADODBRecordSet);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Fill(class System.Data.DataTable dataTable, object ADODBRecordSet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbDataAdapter.Fill(System.Data.DataTable,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataTable" Type="System.Data.DataTable" />
+        <Parameter Name="ADODBRecordSet" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dataTable">Ein <see cref="T:System.Data.DataTable" /> mit Datensätzen füllen und, falls erforderlich, Schema.</param>
+        <param name="ADODBRecordSet">Ein ADO <see langword="Recordset" /> oder <see langword="Record" /> Objekt.</param>
+        <summary>Fügt Zeilen in oder aktualisiert eine <see cref="T:System.Data.DataTable" /> entsprechend den in einer ADO <see langword="Recordset" /> oder <see langword="Record" /> -Objekt mit dem angegebenen <see cref="T:System.Data.DataTable" /> und ADO-Objekten.</summary>
+        <returns>Die Anzahl der Zeilen erfolgreich aktualisiert, um die <see cref="T:System.Data.DataTable" />. Dies schließt keine Zeilen betroffen von Anweisungen, die keine Zeilen zurückgeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Verknüpfung zwischen ActiveX Data Objects (ADO) und ADO.NET ist ein unidirektionaler Vorgang, dass Sie Daten von ADO zu kopieren, können die <xref:System.Data.DataSet>, aber alle Updates der Daten müssen vom ADO.NET behandelt werden.  
+  
+ Diese Überladung von der <xref:System.Data.OleDb.OleDbDataAdapter.Fill%2A> Methode schließt nicht die Eingabe `Recordset` nach Abschluss des der <xref:System.Data.OleDb.OleDbDataAdapter.Fill%2A> Vorgang.  
+  
+ Beim Verarbeiten von Batch-SQL-Anweisungen, die mehrere Ergebnisse, die dieser Implementierung von zurückgeben <xref:System.Data.OleDb.OleDbDataAdapter.Fill%2A> und <xref:System.Data.Common.DbDataAdapter.FillSchema%2A> für den OLE DB-.NET Framework-Datenanbieter Schemainformationen für nur das erste Ergebnis ab.  
+  
+ Die <xref:System.Data.OleDb.OleDbDataAdapter.Fill%2A> Vorgang fügt die Zeilen in das angegebene Ziel <xref:System.Data.DataTable> Objekt in der <xref:System.Data.DataSet>, wodurch die <xref:System.Data.DataTable> Objekt, wenn sie nicht bereits vorhanden ist. Beim Erstellen einer <xref:System.Data.DataTable> -Objekt, das <xref:System.Data.OleDb.OleDbDataAdapter.Fill%2A> Vorgang normalerweise nur Metadaten für Spaltennamen erstellt. Jedoch, wenn die <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A> -Eigenschaftensatz auf `AddWithKey`, entsprechenden Primärschlüssel und Einschränkungen werden ebenfalls erstellt.  
+  
+ Sie können die <xref:System.Data.OleDb.OleDbDataAdapter.Fill%2A> -Methode mehrere Male auf dem gleichen <xref:System.Data.DataTable>. Wenn ein Primärschlüssel vorhanden ist, werden eingehende Zeilen mit übereinstimmenden Zeilen zusammengeführt, die bereits vorhanden sind. Wenn kein Primärschlüssel vorhanden ist, werden eingehende Zeilen an angehängt der <xref:System.Data.DataTable>. Wenn Primärschlüsselinformationen vorhanden ist, alle doppelten Zeilen sind abgestimmt und nur einmal in der <xref:System.Data.DataTable> , entspricht der <xref:System.Data.DataSet>. Primärschlüsselinformationen kann festgelegt werden, entweder durch <xref:System.Data.Common.DbDataAdapter.FillSchema%2A>, durch Angabe der <xref:System.Data.DataTable.PrimaryKey%2A> Eigenschaft von der <xref:System.Data.DataTable>, oder durch Festlegen der <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A> Eigenschaft `AddWithKey`.  
+  
+ Wenn vom <xref:System.Data.OleDb.OleDbDataAdapter.SelectCommand%2A> die Ergebnisse eines OUTER JOIN zurückgegeben werden, wird vom `DataAdapter` kein <xref:System.Data.DataTable.PrimaryKey%2A>-Wert für die resultierende <xref:System.Data.DataTable> festgelegt. Sie müssen explizit definieren, dass den Primärschlüssel, um sicherzustellen, dass doppelte Zeilen ordnungsgemäß aufgelöst werden. Weitere Informationen finden Sie unter [Primärschlüssel definieren](~/docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).  
+  
+ Mit dem .NET Framework-Datenanbieter für OLE DB ordnungsgemäß `AddWithKey` erfordert, dass der systemeigene OLE DB-Anbieter erforderlichen Primärschlüsselinformationen durch Festlegen der DBPROP_UNIQUEROWS-Eigenschaft abruft und dann bestimmt, welche Spalten Primärschlüssel sind Spalten für eine der `IColumnsRowset`. Alternativ kann der Benutzer explizit die primary Key-Einschränkungen auf jedem festlegen <xref:System.Data.DataTable>. Dadurch wird sichergestellt, dass eingehende Datensätze, die vorhandene Daten überein, sondern aktualisiert werden angefügt.  
+  
+ Wenn die <xref:System.Data.OleDb.OleDbDataAdapter> mehrfach vorhandene Spalten findet beim Auffüllen des eine <xref:System.Data.DataTable>, generiert er Namen für die nachfolgenden Spalten, die mit dem Muster "*Columnname*1", "*Columnname*2", "*Columnname*3" und So weiter. Leere Spaltennamen werden hinzugefügt, um die <xref:System.Data.DataTable>, verwenden eine leere Zeichenfolge für die erste Spalte, gefolgt von "1", "2", "3" usw. für nachfolgenden leeren Spalten.  
+  
+ Werte in ADO `Recordset` oder `Record` Objekte sind konvertierte in common Language Runtime-Typen für die Speicherung in der <xref:System.Data.DataSet>.  
+  
+> [!CAUTION]
+>  Diese Überladung von der <xref:System.Data.OleDb.OleDbDataAdapter.Fill%2A> Methode nicht implizit aufgerufen `Close` für das ADO-Objekt, in der Füllvorgang abgeschlossen ist. Rufen Sie daher immer `Close` Sie abschließend mithilfe von ADO `Recordset` oder `Record` Objekte. Dadurch wird sichergestellt, dass die zugrunde liegende Verbindung mit einer Datenquelle rechtzeitig freigegeben wird und verhindert außerdem, mögliche zugriffsverletzungen aufgrund von nicht verwalteten ADO-Objekten, die von der Garbagecollection freigegeben werden dass, wenn noch vorhandenen Verweise vorhanden sind.  
+  
+ Beim Aufrufen der `TableMappings.Add` Methode auf eine `DataAdapter` und ordnen Sie der Quellparameter für die Tabelle explizit auf eine leere Zeichenfolge das Dataset erfolgreich mit der Quelltabelle gefüllt wird, jedoch ohne Angabe wird das Dataset aufgefüllt. Im folgenden Beispiel, z. B. `rDataSet` wird mit ' Nothing ' aufgefüllt werden.  
+  
+```  
+rAdapter.TableMappings.Add("source table", "");  
+rAdapter.Fill(rDataSet, "source table");     
+```  
+  
+ Dieses Beispiel zeigt, wie Sie ein Ergebnis beim Umgang mit mehreren Ergebnissen überspringen können.  
+  
+ Im folgenden Beispiel wird ein <xref:System.Data.OleDb.OleDbDataAdapter> zum Auffüllen einer <xref:System.Data.DataTable> mit einem ADO `Recordset`. In diesem Beispiel wird davon ausgegangen, dass Sie eine ADO erstellt haben `Recordset`.  
+  
+```vb  
+Dim custDA As OleDbDataAdapter = New OleDbDataAdapter()  
+     Dim custDS As DataSet = New DataSet  
+     Dim custTable As DataTable = New DataTable("Customers")  
+     custTable.Columns.Add("CustomerID", Type.GetType("System.String"))  
+     custTable.Columns.Add("CompanyName", Type.GetType("System.String"))  
+     custDS.Tables.Add(custTable)  
+     'Use ADO objects from ADO library (msado15.dll) imported  
+     ' as.NET library ADODB.dll using TlbImp.exe  
+     Dim adoConn As ADODB.Connection = New ADODB.Connection()  
+     Dim adoRS As ADODB.Recordset = New ADODB.Recordset()  
+     adoConn.Open("Provider=SQLOLEDB;Data Source=localhost;Initial Catalog=Northwind;Integrated Security=SSPI;", "", "", -1)  
+     adoRS.Open("SELECT CustomerID, CompanyName FROM Customers", adoConn, ADODB.CursorTypeEnum.adOpenForwardOnly, ADODB.LockTypeEnum.adLockReadOnly, 1)  
+     custDA.Fill(custTable, adoRS)  
+     adoRS.Close()  
+     adoConn.Close()  
+```  
+  
+```csharp  
+OleDbDataAdapter custDA = new OleDbDataAdapter();  
+     DataSet custDS = new DataSet();  
+     DataTable custTable = new DataTable("Customers");  
+     custTable.Columns.Add("CustomerID", typeof(String));  
+     custTable.Columns.Add("CompanyName", typeof(String));  
+     custDS.Tables.Add(custTable);  
+     //Use ADO objects from ADO library (msado15.dll) imported  
+     //  as.NET library ADODB.dll using TlbImp.exe  
+     ADODB.Connection adoConn = new ADODB.Connection();  
+     ADODB.Recordset adoRS = new ADODB.Recordset();  
+     adoConn.Open("Provider=SQLOLEDB;Data Source=localhost;Initial Catalog=Northwind;Integrated Security=SSPI;", "", "", -1);  
+     adoRS.Open("SELECT CustomerID, CompanyName FROM Customers", adoConn, ADODB.CursorTypeEnum.adOpenForwardOnly, ADODB.LockTypeEnum.adLockReadOnly, 1);  
+     custDA.Fill(custTable, adoRS);  
+     adoRS.Close();  
+     adoConn.Close();  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fill">
+      <MemberSignature Language="C#" Value="public int Fill (System.Data.DataSet dataSet, object ADODBRecordSet, string srcTable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Fill(class System.Data.DataSet dataSet, object ADODBRecordSet, string srcTable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbDataAdapter.Fill(System.Data.DataSet,System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSet" Type="System.Data.DataSet" />
+        <Parameter Name="ADODBRecordSet" Type="System.Object" />
+        <Parameter Name="srcTable" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="dataSet">Ein <see cref="T:System.Data.DataSet" /> mit Datensätzen füllen und, falls erforderlich, Schema.</param>
+        <param name="ADODBRecordSet">Ein ADO <see langword="Recordset" /> oder <see langword="Record" /> Objekt.</param>
+        <param name="srcTable">Die Quelltabelle für die tabellenzuordnungen verwendet wird.</param>
+        <summary>Fügt hinzu oder aktualisiert Zeilen in der <see cref="T:System.Data.DataSet" /> entsprechend den in einer ADO <see langword="Recordset" /> oder <see langword="Record" /> -Objekt mit dem angegebenen <see cref="T:System.Data.DataSet" />, ADO-Objekt und der Name der Quelltabelle.</summary>
+        <returns>Die Anzahl der Zeilen erfolgreich hinzugefügt oder aktualisiert werden, der <see cref="T:System.Data.DataSet" />. Dies schließt keine Zeilen betroffen von Anweisungen, die keine Zeilen zurückgeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Verknüpfung zwischen ActiveX Data Objects (ADO) und ADO.NET ist ein unidirektionaler Vorgang, dass Sie Daten von ADO zu kopieren, können die <xref:System.Data.DataSet>, aber alle Updates der Daten müssen vom ADO.NET behandelt werden.  
+  
+ Die <xref:System.Data.OleDb.OleDbDataAdapter.Fill%2A> Methode durchläuft die mehrere Ergebnisse durch Aufrufen der `NextRecordset` Methode für die `Recordset`, schließen die Eingabe `Recordset` nach Abschluss des der <xref:System.Data.OleDb.OleDbDataAdapter.Fill%2A> Vorgang.  
+  
+ Die <xref:System.Data.OleDb.OleDbDataAdapter.Fill%2A> Vorgang fügt die Zeilen in das angegebene Ziel <xref:System.Data.DataTable> Objekt in der <xref:System.Data.DataSet>, wodurch die <xref:System.Data.DataTable> Objekt, wenn sie nicht bereits vorhanden ist. Beim Erstellen einer <xref:System.Data.DataTable> -Objekt, das <xref:System.Data.OleDb.OleDbDataAdapter.Fill%2A> Vorgang normalerweise nur Metadaten für Spaltennamen erstellt. Jedoch, wenn die <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A> -Eigenschaftensatz auf `AddWithKey`, entsprechenden Primärschlüssel und Einschränkungen werden ebenfalls erstellt.  
+  
+ Wenn Primärschlüsselinformationen vorhanden ist, alle doppelten Zeilen sind abgestimmt und nur einmal in der <xref:System.Data.DataTable> , entspricht der <xref:System.Data.DataSet>. Primärschlüsselinformationen kann festgelegt werden, entweder durch <xref:System.Data.Common.DbDataAdapter.FillSchema%2A>, durch Angabe der <xref:System.Data.DataTable.PrimaryKey%2A> Eigenschaft von der <xref:System.Data.DataTable>, oder durch Festlegen der <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A> Eigenschaft `AddWithKey`.  
+  
+ Mit dem .NET Framework-Datenanbieter für OLE DB ordnungsgemäß `AddWithKey` erfordert den systemeigenen OLE DB-Anbieter zum Abrufen der erforderlichen Primärschlüsselinformationen durch Festlegen der DBPROP_UNIQUEROWS-Eigenschaft und dann zu bestimmen, welche Spalten Primärschlüssel sind Spalten für eine der **IColumnsRowset**. Alternativ kann der Benutzer explizit die primary Key-Einschränkungen auf jedem festlegen <xref:System.Data.DataTable>. Dadurch wird sichergestellt, dass eingehende Datensätze, die vorhandene Daten überein, sondern aktualisiert werden angefügt.  
+  
+ Wenn vom <xref:System.Data.OleDb.OleDbDataAdapter.SelectCommand%2A> die Ergebnisse eines OUTER JOIN zurückgegeben werden, wird vom `DataAdapter` kein <xref:System.Data.DataTable.PrimaryKey%2A>-Wert für die resultierende <xref:System.Data.DataTable> festgelegt. Sie müssen explizit definieren, dass den Primärschlüssel, um sicherzustellen, dass doppelte Zeilen ordnungsgemäß aufgelöst werden. Weitere Informationen finden Sie unter [Primärschlüssel definieren](~/docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).  
+  
+ Wenn die `Recordset` wird geschlossen, bevor das Starten der <xref:System.Data.OleDb.OleDbDataAdapter.Fill%2A> Vorgang, tritt kein Fehler. Dies ist für die Behandlung mehrerer Ergebnisse erforderlich, da Abfragen, die keine Zeilen zurückgeben angegeben sind durch ein geschlossenes `Recordset`. Die <xref:System.Data.OleDb.OleDbDataAdapter> ruft nur `NextRecordset` auf geschlossenen `Recordset` und setzt die Verarbeitung fort.  
+  
+ Wenn beim Auffüllen des Datasets ein Fehler aufgetreten ist, vor dem Auftreten des Fehlers hinzugefügte Zeilen bleiben die <xref:System.Data.DataSet>. Der Rest des Vorgangs wird abgebrochen.  
+  
+ Wenn die <xref:System.Data.Common.DbDataAdapter> Objekt trifft doppelte Spalten beim Auffüllen des eine <xref:System.Data.DataTable>, generiert er Namen für die nachfolgenden Spalten, die mit dem Muster "*Columnname*1","*Columnname*2", " *Columnname*3" und So weiter. Wenn die eingehenden Daten unbenannte Spalten enthalten, werden sie platziert, der <xref:System.Data.DataSet> gemäß dem Muster "Column1", "Column2" usw.. Wenn mehrere Resultsets hinzugefügt werden, um die <xref:System.Data.DataSet> jedes Resultset in einer separaten Tabelle platziert wird. Zusätzliche Resultsets werden mit dem Namen durch Anhängen von ganzzahligen Werten auf den angegebenen Tabellennamen (z. B. "Table", "Table1", "Table2" und So weiter.). Anwendungen, die Spalten- und Tabellennamen verwenden sollten sicherstellen, dass Konflikte mit dieser Benennungsschema erfolgt nicht.  
+  
+ Werte in ADO `Recordset` oder `Record` Objekte sind konvertierte in common Language Runtime-Typen für die Speicherung in der <xref:System.Data.DataSet>.  
+  
+> [!NOTE]
+>  Diese Überladung von der <xref:System.Data.OleDb.OleDbDataAdapter.Fill%2A> -Methode ruft implizit `Close` für das ADO-Objekt, in der Füllvorgang abgeschlossen ist.  
+  
+ Im folgenden Beispiel wird ein <xref:System.Data.OleDb.OleDbDataAdapter> zum Auffüllen einer <xref:System.Data.DataSet> mit einem ADO `Recordset` also ein ADO `Record` Objekt. In diesem Beispiel wird davon ausgegangen, dass Sie eine ADO erstellt haben `RecordSet` und `Record` Objekt.  
+  
+```vb  
+Dim custDA As OleDbDataAdapter = New OleDbDataAdapter()  
+     Dim custDS As DataSet = New DataSet  
+     'Use ADO objects from ADO library (msado15.dll) imported  
+     ' as.NET library ADODB.dll using TlbImp.exe  
+     Dim adoConn As ADODB.Connection = New ADODB.Connection()  
+     Dim adoRS As ADODB.Recordset = New ADODB.Recordset()  
+     adoConn.Open("Provider=SQLOLEDB;Data Source=localhost;Initial Catalog=Northwind;Integrated Security=SSPI;", "", "", -1)  
+     adoRS.Open("SELECT * FROM Customers", adoConn, ADODB.CursorTypeEnum.adOpenForwardOnly, ADODB.LockTypeEnum.adLockReadOnly, 1)  
+     custDA.Fill(custDS, adoRS, "Customers")  
+     adoConn.Close()  
+```  
+  
+```csharp  
+OleDbDataAdapter custDA = new OleDbDataAdapter();  
+     DataSet custDS = new DataSet();  
+     //Use ADO objects from ADO library (msado15.dll) imported  
+     // as.NET library ADODB.dll using TlbImp.exe  
+     ADODB.Connection adoConn = new ADODB.Connection();  
+     ADODB.Recordset adoRS = new ADODB.Recordset();  
+     adoConn.Open("Provider=SQLOLEDB;Data Source=localhost;Initial Catalog=Northwind;Integrated Security=SSPI;", "", "", -1);  
+     adoRS.Open("SELECT * FROM Customers", adoConn, ADODB.CursorTypeEnum.adOpenForwardOnly, ADODB.LockTypeEnum.adLockReadOnly, 1);  
+     custDA.Fill(custDS, adoRS, "Customers");  
+     adoConn.Close();  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.SystemException">Die Quelltabelle ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertCommand">
+      <MemberSignature Language="C#" Value="public System.Data.OleDb.OleDbCommand InsertCommand { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.OleDb.OleDbCommand InsertCommand" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbDataAdapter.InsertCommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("Microsoft.VSDesigner.Data.Design.DBCommandEditor, Microsoft.VSDesigner, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine zum Einfügen neuer Datensätze in die Datenquelle verwendete SQL-Anweisung oder gespeicherte Prozedur ab oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Data.OleDb.OleDbCommand" /> verwendet werden, während der <see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" /> zum Einfügen von Datensätzen in der Datenquelle, die neuen Zeilen in entsprechen den <see cref="T:System.Data.DataSet" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Während der <xref:System.Data.Common.DbDataAdapter.Update%2A>, wenn diese Eigenschaft nicht festgelegt ist und Primärschlüsselinformationen in vorhanden ist die <xref:System.Data.DataSet>, die <xref:System.Data.OleDb.OleDbDataAdapter.InsertCommand%2A> können automatisch generiert werden, wenn Sie festlegen, die <xref:System.Data.OleDb.OleDbDataAdapter.SelectCommand%2A> -Eigenschaft und die Verwendung der <xref:System.Data.OleDb.OleDbCommandBuilder>. Anschließend werden alle weiteren Befehle, die Sie nicht festlegen von generiert die <xref:System.Data.OleDb.OleDbCommandBuilder>. Diese Generierungslogik müssen Schlüsselspalteninformationen vorhanden sein der <xref:System.Data.DataSet>. Weitere Informationen finden Sie unter [Generieren von Befehlen mit CommandBuilder-Objekten](~/docs/framework/data/adonet/generating-commands-with-commandbuilders.md).  
+  
+ Wenn <xref:System.Data.OleDb.OleDbDataAdapter.InsertCommand%2A> zugewiesen ist, ein zuvor erstelltes <xref:System.Data.OleDb.OleDbCommand>, die <xref:System.Data.OleDb.OleDbCommand> nicht geklont. Die <xref:System.Data.OleDb.OleDbDataAdapter.InsertCommand%2A> behält einen Verweis auf das zuvor erstellte <xref:System.Data.OleDb.OleDbCommand> Objekt.  
+  
+> [!NOTE]
+>  Wenn die Ausführung dieses Befehls Zeilen zurückgegeben werden, können diese Zeilen hinzugefügt werden, auf die <xref:System.Data.DataSet> abhängig davon, wie Sie festlegen der <xref:System.Data.OleDb.OleDbCommand.UpdatedRowSource%2A> Eigenschaft der <xref:System.Data.OleDb.OleDbCommand> Objekt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OleDb.OleDbDataAdapter> und legt die <xref:System.Data.OleDb.OleDbDataAdapter.SelectCommand%2A> und <xref:System.Data.OleDb.OleDbDataAdapter.InsertCommand%2A> Eigenschaften. Es wird davon ausgegangen, dass Sie bereits erstellt haben eine <xref:System.Data.OleDb.OleDbConnection> Objekt.  
+  
+ [!code-csharp[Classic WebData DbDataAdapter.InsertCommand Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DbDataAdapter.InsertCommand Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DbDataAdapter.InsertCommand Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DbDataAdapter.InsertCommand Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRowUpdated">
+      <MemberSignature Language="C#" Value="protected override void OnRowUpdated (System.Data.Common.RowUpdatedEventArgs value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRowUpdated(class System.Data.Common.RowUpdatedEventArgs value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbDataAdapter.OnRowUpdated(System.Data.Common.RowUpdatedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.Common.RowUpdatedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRowUpdating">
+      <MemberSignature Language="C#" Value="protected override void OnRowUpdating (System.Data.Common.RowUpdatingEventArgs value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRowUpdating(class System.Data.Common.RowUpdatingEventArgs value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbDataAdapter.OnRowUpdating(System.Data.Common.RowUpdatingEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.Common.RowUpdatingEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowUpdated">
+      <MemberSignature Language="C#" Value="public event System.Data.OleDb.OleDbRowUpdatedEventHandler RowUpdated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Data.OleDb.OleDbRowUpdatedEventHandler RowUpdated" />
+      <MemberSignature Language="DocId" Value="E:System.Data.OleDb.OleDbDataAdapter.RowUpdated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbRowUpdatedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt während der <see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" /> nach dem ein Befehl für die Datenquelle ausgeführt wird. Wird versucht, die zum Aktualisieren. Aus diesem Grund tritt das Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Verwendung von <xref:System.Data.Common.DbDataAdapter.Update%2A>, es gibt zwei Ereignisse, die pro Datenzeile aktualisiert auftreten. Die Reihenfolge der Ausführung lautet wie folgt:  
+  
+1.  Die Werte in der <xref:System.Data.DataRow> in die Parameterwerte verschoben werden.  
+  
+2.  Das <xref:System.Data.Common.DbDataAdapter.OnRowUpdating%2A>-Ereignis wird ausgelöst.  
+  
+3.  Der Befehl ausgeführt wird.  
+  
+4.  Wenn der Befehl, um festgelegt ist `FirstReturnedRecord`, das erste zurückgegebene Ergebnis befindet sich der <xref:System.Data.DataRow>.  
+  
+5.  Wenn Output-Parameter vorhanden sind, werden sie platziert, der <xref:System.Data.DataRow>.  
+  
+6.  Das <xref:System.Data.Common.DbDataAdapter.OnRowUpdated%2A>-Ereignis wird ausgelöst.  
+  
+7.  <xref:System.Data.DataRow.AcceptChanges%2A> wird aufgerufen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die <xref:System.Data.OleDb.OleDbDataAdapter.RowUpdating> und <xref:System.Data.OleDb.OleDbDataAdapter.RowUpdated> Ereignisse, die verwendet wird.  
+  
+ [!code-csharp[Classic WebData OleDbDataAdapter.RowUpdated Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbDataAdapter.RowUpdated Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbDataAdapter.RowUpdated Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbDataAdapter.RowUpdated Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowUpdating">
+      <MemberSignature Language="C#" Value="public event System.Data.OleDb.OleDbRowUpdatingEventHandler RowUpdating;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Data.OleDb.OleDbRowUpdatingEventHandler RowUpdating" />
+      <MemberSignature Language="DocId" Value="E:System.Data.OleDb.OleDbDataAdapter.RowUpdating" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbRowUpdatingEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt während der <see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" /> , bevor ein Befehl für die Datenquelle ausgeführt wird. Wird versucht, die zum Aktualisieren. Aus diesem Grund tritt das Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Verwendung von <xref:System.Data.Common.DbDataAdapter.Update%2A>, es gibt zwei Ereignisse, die pro Datenzeile aktualisiert auftreten. Die Reihenfolge der Ausführung lautet wie folgt:  
+  
+1.  Die Werte in der <xref:System.Data.DataRow> in die Parameterwerte verschoben werden.  
+  
+2.  Das <xref:System.Data.Common.DbDataAdapter.OnRowUpdating%2A>-Ereignis wird ausgelöst.  
+  
+3.  Der Befehl ausgeführt wird.  
+  
+4.  Wenn der Befehl, um festgelegt ist `FirstReturnedRecord`, das erste zurückgegebene Ergebnis befindet sich der <xref:System.Data.DataRow>.  
+  
+5.  Wenn Output-Parameter vorhanden sind, werden sie platziert, der <xref:System.Data.DataRow>.  
+  
+6.  Das <xref:System.Data.Common.DbDataAdapter.OnRowUpdated%2A>-Ereignis wird ausgelöst.  
+  
+7.  <xref:System.Data.DataRow.AcceptChanges%2A> wird aufgerufen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die <xref:System.Data.OleDb.OleDbDataAdapter.RowUpdating> und <xref:System.Data.OleDb.OleDbDataAdapter.RowUpdated> Ereignisse, die verwendet wird.  
+  
+ [!code-csharp[Classic WebData OleDbDataAdapter.RowUpdated Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbDataAdapter.RowUpdated Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbDataAdapter.RowUpdated Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbDataAdapter.RowUpdated Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectCommand">
+      <MemberSignature Language="C#" Value="public System.Data.OleDb.OleDbCommand SelectCommand { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.OleDb.OleDbCommand SelectCommand" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbDataAdapter.SelectCommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("Microsoft.VSDesigner.Data.Design.DBCommandEditor, Microsoft.VSDesigner, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine SQL-Anweisung oder gespeicherte Prozedur, die zum Auswählen von Datensätzen in der Datenquelle verwendet.</summary>
+        <value>Ein <see cref="T:System.Data.OleDb.OleDbCommand" /> wird, während der <see cref="M:System.Data.Common.DbDataAdapter.Fill(System.Data.DataSet)" /> zum Auswählen von Datensätzen aus der Datenquelle für die Platzierung in der <see cref="T:System.Data.DataSet" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Data.OleDb.OleDbDataAdapter.SelectCommand%2A> zugewiesen ist, ein zuvor erstelltes <xref:System.Data.OleDb.OleDbCommand>, die <xref:System.Data.OleDb.OleDbCommand> nicht geklont. Die <xref:System.Data.OleDb.OleDbDataAdapter.SelectCommand%2A> behält einen Verweis auf das zuvor erstellte <xref:System.Data.OleDb.OleDbCommand> Objekt.  
+  
+ Wenn die <xref:System.Data.OleDb.OleDbDataAdapter.SelectCommand%2A> keine Zeilen zurückgibt, werden keine Tabellen hinzugefügt, um die <xref:System.Data.DataSet>, und keine Ausnahme ausgelöst wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OleDb.OleDbDataAdapter> und legt die <xref:System.Data.OleDb.OleDbDataAdapter.SelectCommand%2A> und <xref:System.Data.OleDb.OleDbDataAdapter.InsertCommand%2A> Eigenschaften. Es wird davon ausgegangen, dass Sie bereits erstellt haben eine <xref:System.Data.OleDb.OleDbConnection> Objekt.  
+  
+ [!code-csharp[Classic WebData DbDataAdapter.SelectCommand Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DbDataAdapter.SelectCommand Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DbDataAdapter.SelectCommand Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DbDataAdapter.SelectCommand Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.IDbDataAdapter.DeleteCommand">
+      <MemberSignature Language="C#" Value="System.Data.IDbCommand System.Data.IDbDataAdapter.DeleteCommand { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.IDbCommand System.Data.IDbDataAdapter.DeleteCommand" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbDataAdapter.System#Data#IDbDataAdapter#DeleteCommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IDbCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Data.IDbDataAdapter.DeleteCommand" />.</summary>
+        <value>Ein <see cref="T:System.Data.IDbCommand" /> während eines Updates zum Löschen von Datensätzen in der Datenquelle für gelöschte Zeilen im DataSet verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.OleDb.OleDbDataAdapter>-Instanz in eine <xref:System.Data.IDbDataAdapter>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.IDbDataAdapter.InsertCommand">
+      <MemberSignature Language="C#" Value="System.Data.IDbCommand System.Data.IDbDataAdapter.InsertCommand { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.IDbCommand System.Data.IDbDataAdapter.InsertCommand" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbDataAdapter.System#Data#IDbDataAdapter#InsertCommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IDbCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Data.IDbDataAdapter.InsertCommand" />.</summary>
+        <value>Eine <see cref="T:System.Data.IDbCommand" /> , die während eines Updates zum Einfügen von Datensätzen aus einer Datenquelle für die Platzierung im DataSet verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.OleDb.OleDbDataAdapter>-Instanz in eine <xref:System.Data.IDbDataAdapter>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.IDbDataAdapter.SelectCommand">
+      <MemberSignature Language="C#" Value="System.Data.IDbCommand System.Data.IDbDataAdapter.SelectCommand { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.IDbCommand System.Data.IDbDataAdapter.SelectCommand" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbDataAdapter.System#Data#IDbDataAdapter#SelectCommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IDbCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Data.IDbDataAdapter.SelectCommand" />.</summary>
+        <value>Eine <see cref="T:System.Data.IDbCommand" /> , die während eines Updates zum Auswählen von Datensätzen aus einer Datenquelle für die Platzierung im DataSet verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.OleDb.OleDbDataAdapter>-Instanz in eine <xref:System.Data.IDbDataAdapter>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.IDbDataAdapter.UpdateCommand">
+      <MemberSignature Language="C#" Value="System.Data.IDbCommand System.Data.IDbDataAdapter.UpdateCommand { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.IDbCommand System.Data.IDbDataAdapter.UpdateCommand" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbDataAdapter.System#Data#IDbDataAdapter#UpdateCommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IDbCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Data.IDbDataAdapter.UpdateCommand" />.</summary>
+        <value>Ein <see cref="T:System.Data.IDbCommand" /> während einer Updates aktualisiert Datensätze in der Datenquelle für geänderte Zeilen im DataSet verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.OleDb.OleDbDataAdapter>-Instanz in eine <xref:System.Data.IDbDataAdapter>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ICloneable.Clone">
+      <MemberSignature Language="C#" Value="object ICloneable.Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ICloneable.Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbDataAdapter.System#ICloneable#Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ICloneable.Clone" />.</summary>
+        <returns>Ein neues <see cref="T:System.Object" /> , eine Kopie dieser Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.OleDb.OleDbDataAdapter>-Instanz in eine <xref:System.ICloneable>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateCommand">
+      <MemberSignature Language="C#" Value="public System.Data.OleDb.OleDbCommand UpdateCommand { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.OleDb.OleDbCommand UpdateCommand" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbDataAdapter.UpdateCommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("Microsoft.VSDesigner.Data.Design.DBCommandEditor, Microsoft.VSDesigner, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine zum Aktualisieren von Datensätzen in der Datenquelle verwendete SQL-Anweisung oder gespeicherte Prozedur ab oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Data.OleDb.OleDbCommand" />, der beim <see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" /> zum Aktualisieren von Datensätzen in der Datenquelle verwendet wird, die geänderten Zeilen im <see cref="T:System.Data.DataSet" /> entsprechen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Während der <xref:System.Data.Common.DbDataAdapter.Update%2A>, wenn diese Eigenschaft nicht festgelegt ist und Primärschlüsselinformationen in vorhanden ist die <xref:System.Data.DataSet>, die <xref:System.Data.OleDb.OleDbDataAdapter.UpdateCommand%2A> können automatisch generiert werden, wenn Sie festlegen, die <xref:System.Data.OleDb.OleDbDataAdapter.SelectCommand%2A> -Eigenschaft und die Verwendung der <xref:System.Data.OleDb.OleDbCommandBuilder>. Anschließend werden alle weiteren Befehle, die Sie nicht festlegen von generiert die <xref:System.Data.OleDb.OleDbCommandBuilder>. Diese Generierungslogik müssen Schlüsselspalteninformationen vorhanden sein der <xref:System.Data.DataSet>. Weitere Informationen finden Sie unter [Generieren von Befehlen mit CommandBuilder-Objekten](~/docs/framework/data/adonet/generating-commands-with-commandbuilders.md).  
+  
+ Wenn <xref:System.Data.OleDb.OleDbDataAdapter.UpdateCommand%2A> zugewiesen ist, ein zuvor erstelltes <xref:System.Data.OleDb.OleDbCommand>, die <xref:System.Data.OleDb.OleDbCommand> nicht geklont. Die <xref:System.Data.OleDb.OleDbDataAdapter.UpdateCommand%2A> behält einen Verweis auf das zuvor erstellte <xref:System.Data.OleDb.OleDbCommand> Objekt.  
+  
+> [!NOTE]
+>  Wenn die Ausführung dieses Befehls Zeilen zurückgegeben werden, können diese Zeilen mit zusammengeführt werden die <xref:System.Data.DataSet> abhängig davon, wie Sie festlegen der <xref:System.Data.OleDb.OleDbCommand.UpdatedRowSource%2A> Eigenschaft von der <xref:System.Data.OleDb.OleDbCommand> Objekt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OleDb.OleDbDataAdapter> und legt die <xref:System.Data.OleDb.OleDbDataAdapter.SelectCommand%2A> und <xref:System.Data.OleDb.OleDbDataAdapter.UpdateCommand%2A> Eigenschaften. Es wird davon ausgegangen, dass Sie bereits erstellt haben eine <xref:System.Data.OleDb.OleDbConnection> Objekt.  
+  
+ [!code-csharp[Classic WebData OleDbDataAdapter.UpdateCommand Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbDataAdapter.UpdateCommand Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbDataAdapter.UpdateCommand Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbDataAdapter.UpdateCommand Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

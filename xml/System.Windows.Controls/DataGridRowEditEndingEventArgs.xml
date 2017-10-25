@@ -1,0 +1,94 @@
+<Type Name="DataGridRowEditEndingEventArgs" FullName="System.Windows.Controls.DataGridRowEditEndingEventArgs">
+  <TypeSignature Language="C#" Value="public class DataGridRowEditEndingEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridRowEditEndingEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.DataGridRowEditEndingEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Controls.DataGrid.RowEditEnding" />-Ereignis bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridRowEditEndingEventArgs (System.Windows.Controls.DataGridRow row, System.Windows.Controls.DataGridEditAction editAction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Controls.DataGridRow row, valuetype System.Windows.Controls.DataGridEditAction editAction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridRowEditEndingEventArgs.#ctor(System.Windows.Controls.DataGridRow,System.Windows.Controls.DataGridEditAction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="row" Type="System.Windows.Controls.DataGridRow" />
+        <Parameter Name="editAction" Type="System.Windows.Controls.DataGridEditAction" />
+      </Parameters>
+      <Docs>
+        <param name="row">Die Zeile, für die das Ereignis aufgetreten ist.</param>
+        <param name="editAction">Ein Wert, der angibt, ob die Bearbeitung abgebrochen wird oder ein Commit ausgeführt wurde.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.DataGridRowEditEndingEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="public bool Cancel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Cancel" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridRowEditEndingEventArgs.Cancel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Ereignis abgebrochen werden soll.</summary>
+        <value>
+          <see langword="true" />Wenn das Ereignis abgebrochen werden soll; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditAction">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.DataGridEditAction EditAction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.DataGridEditAction EditAction" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridRowEditEndingEventArgs.EditAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.DataGridEditAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Bearbeitung abgebrochen wird oder ein Commit ausgeführt wurde.</summary>
+        <value>Ein Wert, der angibt, ob die Bearbeitung abgebrochen wird oder ein Commit ausgeführt wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Row">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.DataGridRow Row { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.DataGridRow Row" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridRowEditEndingEventArgs.Row" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.DataGridRow</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeile für die das Ereignis aufgetreten ist.</summary>
+        <value>Die Zeile, für die das Ereignis aufgetreten ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

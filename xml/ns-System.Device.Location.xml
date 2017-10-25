@@ -1,0 +1,23 @@
+<Namespace Name="System.Device.Location">
+  <Docs>
+    <summary>Die <see cref="N:System.Device.Location" /> Namespace ermöglicht Anwendungsentwicklern, auf den Standort des Computers mit einer einzelnen-API zugreifen.  Informationen zum Speicherort möglicherweise stammen aus mehreren Anbietern, z. B. GPS, Wi-Fi-Dreieck und Mobilfunkmasten. Die <see cref="N:System.Device.Location" /> Klassen bieten eine einheitliche-API, um mehrere Standort-Anbieter auf einem Computer zu kapseln und unterstützen eine nahtlose Priorisierung und den Wechsel zwischen ihnen. Anwendungsentwickler, die diese API verwenden, müssen daher nicht Anwendungen auf bestimmten Hardwarekonfigurationen anzupassen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Device.Location.GeoCoordinateWatcher> koordiniert die Klasse stellt Standortdaten, die Breiten- und Längengrad basiert. Die <xref:System.Device.Location.CivicAddressResolver> und <xref:System.Device.Location.ICivicAddressResolver> Typen bieten die Möglichkeit, eine Koordinatenposition in eine Adresse aufgelöst. Darüber hinaus die <xref:System.Device.Location.IGeoPositionWatcher%601> -Schnittstelle kann implementiert werden, um die Arten von Standortdaten zu erweitern, die bereitgestellt werden.  
+  
+ In Windows 7 können alle die <xref:System.Device.Location> Klassen sind voll funktionsfähig, wenn ein Standortanbieter installiert ist und kann den Standort des Computers bestimmen. Auf Windows 7 Starter Edition ist der standardmäßige Speicherort-Anbieter, der in der Systemsteuerung festgelegt werden kann der einzige Ort-Anbieter, der unterstützt wird.  
+  
+ **Hinweis** In Versionen von Windows vor Windows 7, die Folgendes zutrifft:  
+  
+-   Alle <xref:System.Device.Location> Objekte, die über Konstruktoren verfügen, können erstellt werden, aber die <xref:System.Device.Location.GeoCoordinateWatcher.Status%2A> Eigenschaft besitzen immer den Wert <xref:System.Device.Location.GeoPositionStatus.Disabled>.  
+  
+-   Der Speicherort vom der <xref:System.Device.Location.GeoPosition%601.Location%2A> Eigenschaft <xref:System.Device.Location.GeoCoordinateWatcher.Position%2A> immer <xref:System.Device.Location.GeoCoordinate.Unknown>.  
+  
+-   Kein Speicherortereignisse werden ausgelöst werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

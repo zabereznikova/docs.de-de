@@ -1,0 +1,88 @@
+<Type Name="RuntimeNamePropertyAttribute" FullName="System.Windows.Markup.RuntimeNamePropertyAttribute">
+  <TypeSignature Language="C#" Value="public sealed class RuntimeNamePropertyAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RuntimeNamePropertyAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.RuntimeNamePropertyAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Typebene-Attribut, das meldet, dessen Eigenschaft des Typs ordnet der XAML-Code [X: Name-Attribut](~/docs/framework/xaml-services/x-name-directive.md).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Eigenschaft, die im angegebenen der <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> muss vom Typ <xref:System.String> muss Lese-/Schreibzugriff.  
+  
+ Frameworks können einer bestimmte Eigenschaft eines seiner Architektur Basiselemente um die entsprechende Verwendung von XAML-Name sein Attribut. Dies erfolgt, damit das Konzept des XAML-Namen in einem XAML-Namensbereich zur Verwendung von XAML-Ladezeit festlegen zur Laufzeit für ein Framework-Programmiermodell verfügbar ist.  
+  
+ Ein XAML-Name-Wert verwenden, muss die [XamlName-Grammatik](~/docs/framework/xaml-services/xamlname-grammar.md).  
+  
+ In früheren Versionen von .NET Framework war diese Klasse in der WPF-spezifischen Assembly WindowsBase. In [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> befindet sich in der System.Xaml-Assembly. Weitere Informationen finden Sie unter [aus WPF zu System.Xaml migrierte Typen](~/docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md).  
+  
+## <a name="wpf-usage-notes"></a>Hinweise zur WPF-Verwendung  
+ Ein Beispiel für eine vorhandene Klasse in [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] , in dem die <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> angewendet wird <xref:System.Windows.FrameworkElement>.  Die <xref:System.Windows.FrameworkElement.Name%2A> Eigenschaft auf <xref:System.Windows.FrameworkElement> ist mit dem <xref:System.Windows.Markup.RuntimeNamePropertyAttribute>, was dazu führt, in einem <xref:System.Windows.FrameworkElement> abgeleitete Klasse, die auch mit <xref:System.Windows.FrameworkElement.Name%2A> als zugehörige zur Laufzeit Name-Eigenschaft.  
+  
+ Im Allgemeinen, dass Sie in der Regel müssen nicht dieses Attribut in WPF anwenden, es sei denn, Sie ein neues implementieren oder <xref:System.Windows.FrameworkElement>-parallel-Frameworkebene-Klasse. `x:Name`sollte die Laufzeit-Name-Eigenschaft Vorrang, wenn beide als Attribute für ein Element vorhanden ist und eine Implementierung der XAML-Prozessor in der Regel in diesem Fall löst aus.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RuntimeNamePropertyAttribute (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.RuntimeNamePropertyAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Eigenschaft, die als verwendet die <see langword="x:Name" /> -Äquivalent der Klasse.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Markup.RuntimeNamePropertyAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die angegebene Eigenschaft muss vom Typ <xref:System.String> und verfügen über get- und Festlegen des Zugriffs auf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.RuntimeNamePropertyAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Laufzeiteigenschaft, die von dieser angegeben ist <see cref="T:System.Windows.Markup.RuntimeNamePropertyAttribute" />.</summary>
+        <value>Der Name der Eigenschaft.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

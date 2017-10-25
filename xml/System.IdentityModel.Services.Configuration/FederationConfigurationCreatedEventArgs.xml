@@ -1,0 +1,78 @@
+<Type Name="FederationConfigurationCreatedEventArgs" FullName="System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs">
+  <TypeSignature Language="C#" Value="public class FederationConfigurationCreatedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FederationConfigurationCreatedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=nameWithType> Ereignis wird ausgelöst, wenn das erste HTTP-Modul in der Webanwendung verweist auf die <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> Eigenschaft. Der erste Zugriff dieses bewirkt, dass ein <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> Objekt erstellt und von der Konfiguration initialisiert werden. Die <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=nameWithType> Ereignis wird ausgegeben. Sie erreichen das neu erstellte <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> -Objekt über die <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> Eigenschaft in einem Ereignishandler, um überprüfen oder ändern Sie sie.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FederationConfigurationCreatedEventArgs (System.IdentityModel.Services.Configuration.FederationConfiguration config);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Services.Configuration.FederationConfiguration config) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.#ctor(System.IdentityModel.Services.Configuration.FederationConfiguration)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="config" Type="System.IdentityModel.Services.Configuration.FederationConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="config">Das Konfigurationsobjekt für den Verbund. Ein <see cref="T:System.IdentityModel.Services.Configuration.FederationConfiguration" /> Objekt enthält die konfigurierbaren Eigenschaften für die WS-Verbund-Authentifizierungsmodul (<see cref="T:System.IdentityModel.Services.WSFederationAuthenticationModule" />) und die Sitzung Authentifizierungsmodul (<see cref="T:System.IdentityModel.Services.SessionAuthenticationModule" />) in einer Webanwendung.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs" /> -Klasse mit dem angegebenen Verbund Configuration-Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Initialisiert die <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A> Eigenschaft, um die Verbund-Konfigurationsobjekt gemäß `config`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FederationConfiguration">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Services.Configuration.FederationConfiguration FederationConfiguration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Services.Configuration.FederationConfiguration FederationConfiguration" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Services.Configuration.FederationConfiguration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das verbundobjekt in der Konfiguration ein, das initialisiert wurde aus der Konfigurationsdatei.</summary>
+        <value>Die Verbund-Konfigurationsobjekt, das aus der Konfiguration initialisiert wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> Objekt enthält die konfigurierbaren Eigenschaften für die WS-Verbund-Authentifizierungsmodul (<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>) und die Sitzung Authentifizierungsmodul (<xref:System.IdentityModel.Services.SessionAuthenticationModule>) in einer Webanwendung.  
+  
+ Um die Konfigurationseinstellungen zu ändern, können Sie Eigenschaften festlegen, auf die <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> -Objekt, das verweist diese Eigenschaft, oder Sie können eine neue bereitstellen <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

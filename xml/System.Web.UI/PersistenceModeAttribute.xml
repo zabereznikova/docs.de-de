@@ -1,0 +1,247 @@
+<Type Name="PersistenceModeAttribute" FullName="System.Web.UI.PersistenceModeAttribute">
+  <TypeSignature Language="C#" Value="public sealed class PersistenceModeAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PersistenceModeAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.PersistenceModeAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.All)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert das Metadatenattribut, das angibt, wie eine ASP.NET eine Eigenschaft oder ein Ereignis auf einer ASP.NET-Seite zur Entwurfszeit beibehalten wird. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum Verwenden von Attributen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).  
+  
+> [!NOTE]
+>  Webseiten-Designers in Visual Studio unterstützt nicht die `ResetPropertyName` Methode, die von Windows Forms-Steuerelemente für die Beständigkeit optional verfügbar gemacht wird. Serversteuerelemente serialisiert werden, mithilfe der bereitgestellten Methoden die <xref:System.Web.UI.Design.ControlPersister> Klasse. Die Implementierung dieser Methoden wird von Metadatenattributen gesteuert, wie z. B. <xref:System.ComponentModel.DefaultValueAttribute>, <xref:System.Web.UI.PersistenceModeAttribute>, und <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>.  
+  
+   
+  
+## Examples  
+ [!code-csharp[PersistenceMode#2](~/samples/snippets/csharp/VS_Snippets_WebNet/PersistenceMode/CS/persistencemodeattributesamples.cs#2)]
+ [!code-vb[PersistenceMode#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PersistenceMode/VB/persistencemodeattributesamples.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PersistenceModeAttribute (System.Web.UI.PersistenceMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Web.UI.PersistenceMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PersistenceModeAttribute.#ctor(System.Web.UI.PersistenceMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="mode" Type="System.Web.UI.PersistenceMode" />
+      </Parameters>
+      <Docs>
+        <param name="mode">Die <see cref="T:System.Web.UI.PersistenceMode" /> zuzuweisende Wert <see cref="P:System.Web.UI.PersistenceModeAttribute.Mode" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.PersistenceModeAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="mode" /> entspricht keinem der <see cref="T:System.Web.UI.PersistenceMode" />-Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Attribute">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.PersistenceModeAttribute Attribute;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.PersistenceModeAttribute Attribute" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.PersistenceModeAttribute.Attribute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.PersistenceModeAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Eigenschaft oder das Ereignis im öffnenden Tag des Serversteuerelements als Attribut erhalten bleibt. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.PersistenceModeAttribute Default;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.PersistenceModeAttribute Default" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.PersistenceModeAttribute.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.PersistenceModeAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Standardtyp für die <see cref="T:System.Web.UI.PersistenceModeAttribute" /> Klasse. Die Standardeinstellung ist <see langword="PersistenceMode.Attribute" />. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncodedInnerDefaultProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.PersistenceModeAttribute EncodedInnerDefaultProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.PersistenceModeAttribute EncodedInnerDefaultProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.PersistenceModeAttribute.EncodedInnerDefaultProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.PersistenceModeAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass eine Eigenschaft HTML-codiert ist und als nur innere Inhalt des Serversteuerelements ASP.NET weiterhin besteht. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PersistenceModeAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt verglichen werden soll.</param>
+        <summary>Vergleicht die <see cref="T:System.Web.UI.PersistenceModeAttribute" /> Objekt gegen ein anderes Objekt.</summary>
+        <returns>
+          <see langword="true" />, wenn die Objekte als gleich betrachtet werden, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.PersistenceModeAttribute.Equals%2A> Methode zuerst vergleicht das aktuelle Objekt mit dem angegebenen Objekt und gibt `true` bei vorliegender.  Wenn das angegebene Objekt auch ist, andernfalls ein <xref:System.Web.UI.PersistenceModeAttribute> -Objekt und kein `null`, die <xref:System.Web.UI.PersistenceModeAttribute.Mode%2A> Eigenschaften aller Objekte auf Gleichheit verglichen werden und das Ergebnis zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PersistenceModeAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt einen Hashwert für eine <see cref="T:System.Web.UI.PersistenceModeAttribute" /> Attribut.</summary>
+        <returns>Der Hashwert zuzuweisenden das <see cref="T:System.Web.UI.PersistenceModeAttribute" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerDefaultProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.PersistenceModeAttribute InnerDefaultProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.PersistenceModeAttribute InnerDefaultProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.PersistenceModeAttribute.InnerDefaultProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.PersistenceModeAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass eine Eigenschaft als nur innere Inhalt des Serversteuerelements ASP.NET erhalten bleibt. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.PersistenceModeAttribute InnerProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.PersistenceModeAttribute InnerProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.PersistenceModeAttribute.InnerProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.PersistenceModeAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Eigenschaft als geschachteltes Tag innerhalb des öffnenden und schließenden Tags des Serversteuerelements erhalten bleibt. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultAttribute">
+      <MemberSignature Language="C#" Value="public override bool IsDefaultAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefaultAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PersistenceModeAttribute.IsDefaultAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob die <see cref="T:System.Web.UI.PersistenceModeAttribute" /> Objekt hat den Standardtyp.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Web.UI.PersistenceModeAttribute" /> entspricht dem Standardtyp ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode führt Aufrufe der <xref:System.Web.UI.PersistenceModeAttribute.Equals%2A> beim übergeben, in dem Objekt verweist die <xref:System.Web.UI.PersistenceModeAttribute.Default> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public System.Web.UI.PersistenceMode Mode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.PersistenceMode Mode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PersistenceModeAttribute.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.PersistenceMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den aktuellen Wert von der <see cref="T:System.Web.UI.PersistenceMode" /> Enumeration.</summary>
+        <value>Ein <see cref="T:System.Web.UI.PersistenceMode" /> , die den aktuellen Wert der Enumeration darstellt. Mögliche Werte sind <see langword="Attribute" />, <see langword="InnerProperty" />, <see langword="InnerDefaultProperty" />, oder <see langword="EncodedInnerDefaultProperty" />. Die Standardeinstellung ist <see langword="Attribute" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[PersistenceMode#2](~/samples/snippets/csharp/VS_Snippets_WebNet/PersistenceMode/CS/persistencemodeattributesamples.cs#2)]
+ [!code-vb[PersistenceMode#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PersistenceMode/VB/persistencemodeattributesamples.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

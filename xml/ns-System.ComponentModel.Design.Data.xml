@@ -1,0 +1,6 @@
+<Namespace Name="System.ComponentModel.Design.Data">
+  <Docs>
+    <summary>Die <see cref="N:System.ComponentModel.Design.Data" /> -Namespace enthält Klassen, die benutzerdefinierte Entwurfszeitverhalten für datenbezogene Komponenten erstellen können.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,405 @@
+<Type Name="SymMethod" FullName="System.Diagnostics.SymbolStore.SymMethod">
+  <TypeSignature Language="C#" Value="public class SymMethod : System.Diagnostics.SymbolStore.SymMethodBase, IDisposable, System.Diagnostics.SymbolStore.ISymbolMethod" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SymMethod extends System.Diagnostics.SymbolStore.SymMethodBase implements class System.Diagnostics.SymbolStore.ISymbolMethod, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.SymbolStore.SymMethod" />
+  <AssemblyInfo>
+    <AssemblyName>ISymWrapper</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Diagnostics.SymbolStore.SymMethodBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Diagnostics.SymbolStore.ISymbolMethod</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Methode in einem Symbolspeicher dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.SymbolStore.SymMethod> Klasse bietet ausschließlich Zugriff auf die symbolbezogenen Attribute einer Methode, wie z. B. Sequenzpunkte lexikalischen Gültigkeitsbereiche und Parameterinformationen. Verwenden der <xref:System.Reflection> Klassen, die Typ-bezogene Attribute einer Methode zu lesen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SymMethod (System.Diagnostics.SymbolStore.Private.ISymUnmanagedMethod* pMethod);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Diagnostics.SymbolStore.Private.ISymUnmanagedMethod* pMethod) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymMethod.#ctor(System.Diagnostics.SymbolStore.Private.ISymUnmanagedMethod*)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pMethod" Type="System.Diagnostics.SymbolStore.Private.ISymUnmanagedMethod*" />
+      </Parameters>
+      <Docs>
+        <param name="pMethod">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public override sealed void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymMethod.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle von der aktuellen Instanz der <see cref="T:System.Diagnostics.SymbolStore.SymMethod" />-Klasse verwendeten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool A_0);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool A_0) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymMethod.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptions</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="A_0" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="A_0">
+          <see langword="true" />, um verwaltete und nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Wird von der <see cref="M:System.Diagnostics.SymbolStore.SymMethod.Dispose" />-Methode und der <see cref="M:System.Diagnostics.SymbolStore.SymMethod.Finalize" />-Methode aufgerufen, um die verwalteten und nicht verwalteten von der aktuellen Instanz der <see cref="T:System.Diagnostics.SymbolStore.SymMethod" />-Klasse verwendeten Ressourcen freizugeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, nur von den öffentlichen <xref:System.Diagnostics.SymbolStore.SymMethod.Dispose%2A> und <xref:System.Diagnostics.SymbolStore.SymMethod.Finalize%2A> -Methoden für diese Methode nicht direkt aufrufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~SymMethod ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymMethod.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt nicht verwaltete Ressourcen frei und führt andere Bereinigungsvorgänge durch, bevor die <see cref="T:System.Diagnostics.SymbolStore.SymMethod" /> durch die Garbage Collection wieder zugänglich gemacht wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt <xref:System.Object.Finalize%2A>. Diese Methode sollte nicht von Anwendungscode aufgerufen werden. ein Objekt `Finalize` Methode wird automatisch während der Garbagecollection aufgerufen, durch einen Aufruf von seiner Finalisierung verfolgt, durch den Garbage Collector deaktiviert wurde die <xref:System.GC.SuppressFinalize%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNamespace">
+      <MemberSignature Language="C#" Value="public virtual System.Diagnostics.SymbolStore.ISymbolNamespace GetNamespace ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Diagnostics.SymbolStore.ISymbolNamespace GetNamespace() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymMethod.GetNamespace" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SymbolStore.ISymbolNamespace</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löst in allen Fällen eine <see cref="T:System.NotSupportedException" /> aus.</summary>
+        <returns>Löst in allen Fällen eine <see cref="T:System.NotSupportedException" /> aus.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">In allen Fällen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOffset">
+      <MemberSignature Language="C#" Value="public virtual int GetOffset (System.Diagnostics.SymbolStore.ISymbolDocument document, int line, int column);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetOffset(class System.Diagnostics.SymbolStore.ISymbolDocument document, int32 line, int32 column) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymMethod.GetOffset(System.Diagnostics.SymbolStore.ISymbolDocument,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="document" Type="System.Diagnostics.SymbolStore.ISymbolDocument" />
+        <Parameter Name="line" Type="System.Int32" />
+        <Parameter Name="column" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="document">Das Dokument, für das der Offset angefordert wird.</param>
+        <param name="line">Die Dokumentzeile, für die der Offset angefordert wird.</param>
+        <param name="column">Die Dokumentspalte, für die der Offset angefordert wird.</param>
+        <summary>Ruft den MSIL-Offset (Microsoft Intermediate Language) innerhalb der Methode ab, der der angegebenen Position entspricht.</summary>
+        <returns>Der IL-Offset in der aktuellen Methode an der angegebenen Position im Dokument.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParameters">
+      <MemberSignature Language="C#" Value="public virtual System.Diagnostics.SymbolStore.ISymbolVariable[] GetParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Diagnostics.SymbolStore.ISymbolVariable[] GetParameters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymMethod.GetParameters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SymbolStore.ISymbolVariable[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Parameter für die aktuelle Methode ab.</summary>
+        <returns>Das Array von Parametern für die aktuelle Methode.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Parameter werden in der Reihenfolge zurückgegeben, dass sie in der Signatur der Methode definiert sind. Das zurückgegebene Array ist leer, wenn die Methode keine Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRanges">
+      <MemberSignature Language="C#" Value="public virtual int[] GetRanges (System.Diagnostics.SymbolStore.ISymbolDocument document, int line, int column);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32[] GetRanges(class System.Diagnostics.SymbolStore.ISymbolDocument document, int32 line, int32 column) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymMethod.GetRanges(System.Diagnostics.SymbolStore.ISymbolDocument,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="document" Type="System.Diagnostics.SymbolStore.ISymbolDocument" />
+        <Parameter Name="line" Type="System.Int32" />
+        <Parameter Name="column" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="document">Das Dokument, für das die IL-Offsetbereiche angefordert werden.</param>
+        <param name="line">Die Dokumentzeile, für die die IL-Offsetbereiche angefordert werden.</param>
+        <param name="column">Die Dokumentspalte, für die die IL-Offsetbereiche angefordert werden.</param>
+        <summary>Ruft ein Array von Start-/Endoffsetpaaren ab, die den Bereichen der MSIL-Offsets (Microsoft Intermediate Language) entsprechen, die von einer angegebenen Position innerhalb dieser Methode abgedeckt werden.</summary>
+        <returns>Ein Array von IL-Start-/Endoffsetpaaren.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Array ist ein Array von ganzen Zahlen im Format {{start1, end1}, {start2, end2}...}, wobei jedes Paar eine IL-Offsetbereich innerhalb der Methode darstellt. Die Anzahl der Bereiche ist die Länge des Arrays geteilt durch 2.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetScope">
+      <MemberSignature Language="C#" Value="public virtual System.Diagnostics.SymbolStore.ISymbolScope GetScope (int offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Diagnostics.SymbolStore.ISymbolScope GetScope(int32 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymMethod.GetScope(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SymbolStore.ISymbolScope</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="offset">Der IL-Offset innerhalb der Methode, der gesucht werden soll.</param>
+        <summary>Gibt den umfassendsten lexikalischen Gültigkeitsbereich zurück, wenn ein Offset innerhalb einer Methode angegeben ist.</summary>
+        <returns>Der umfassendste lexikalische Gültigkeitsbereich für den angegebenen IL-Offset innerhalb der Methode.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die <xref:System.Diagnostics.SymbolStore.ISymbolMethod.GetScope%2A> Methode, um die lokalen Variablen starten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSequencePoints">
+      <MemberSignature Language="C#" Value="public virtual void GetSequencePoints (int[] offsets, System.Diagnostics.SymbolStore.ISymbolDocument[] documents, int[] lines, int[] columns, int[] endLines, int[] endColumns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetSequencePoints(int32[] offsets, class System.Diagnostics.SymbolStore.ISymbolDocument[] documents, int32[] lines, int32[] columns, int32[] endLines, int32[] endColumns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymMethod.GetSequencePoints(System.Int32[],System.Diagnostics.SymbolStore.ISymbolDocument[],System.Int32[],System.Int32[],System.Int32[],System.Int32[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offsets" Type="System.Int32[]" />
+        <Parameter Name="documents" Type="System.Diagnostics.SymbolStore.ISymbolDocument[]" />
+        <Parameter Name="lines" Type="System.Int32[]" />
+        <Parameter Name="columns" Type="System.Int32[]" />
+        <Parameter Name="endLines" Type="System.Int32[]" />
+        <Parameter Name="endColumns" Type="System.Int32[]" />
+      </Parameters>
+      <Docs>
+        <param name="offsets">Ein Array, in dem die IL-Offsets vom Anfang der Methode für die Sequenzpunkte gespeichert werden sollen.</param>
+        <param name="documents">Ein Array, in dem die Dokumente gespeichert werden sollen, in denen sich die Sequenzpunkte befinden.</param>
+        <param name="lines">Ein Array, in dem die Zeilen in den Dokumenten gespeichert werden sollen, in denen sich die Sequenzpunkte befinden.</param>
+        <param name="columns">Ein Array, in dem die Spalten in den Dokumenten gespeichert werden sollen, in denen sich die Sequenzpunkte befinden.</param>
+        <param name="endLines">Das Array von Zeilen in den Dokumenten, in denen die Sequenzpunkte enden.</param>
+        <param name="endColumns">Das Array von Spalten in den Dokumenten, in denen die Sequenzpunkte enden.</param>
+        <summary>Ruft die Sequenzpunkte für die aktuelle Methode ab und speichert die Informationen in den angegebenen Arrays.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zuordnung zwischen Speicherorte für Quelldateien und IL-Offsets werden Sequenzpunkte verwendet.  Jeder Sequenzpunkt besteht aus einem IL-Offset und quellregion Datei gemäß der Start- und Ende einer Zeile/Spalte Zahlen relativ zur ein <xref:System.Diagnostics.SymbolStore.ISymbolDocument> Objekt.  Jedes Element an einem bestimmten Index jedes Arrays entspricht einem bestimmten Sequenzpunkt. Der Aufrufer muss vorab zugeordnete Arrays, um die Informationen zurückgegeben werden angeben. Alle Werte in den Arrays werden überschrieben. Verwendung <xref:System.Diagnostics.SymbolStore.ISymbolMethod.SequencePointCount%2A> zum Abrufen der Anzahl aller Sequenzpunkte und Arrays der richtigen Größe zu erstellen. Die Sequenzpunkte per Offset sortiert werden und gelten für alle Dokumente in der Methode. <xref:System.Diagnostics.SymbolStore.ISymbolMethod.GetSequencePoints%2A>überprüft die Größe der einzelnen Arrays und platziert die Informationen in jeder Sequenz. Wenn Array `null`, die Daten für das Array werden nicht zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSourceStartEnd">
+      <MemberSignature Language="C#" Value="public virtual bool GetSourceStartEnd (System.Diagnostics.SymbolStore.ISymbolDocument[] docs, int[] lines, int[] columns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetSourceStartEnd(class System.Diagnostics.SymbolStore.ISymbolDocument[] docs, int32[] lines, int32[] columns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymMethod.GetSourceStartEnd(System.Diagnostics.SymbolStore.ISymbolDocument[],System.Int32[],System.Int32[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="docs" Type="System.Diagnostics.SymbolStore.ISymbolDocument[]" />
+        <Parameter Name="lines" Type="System.Int32[]" />
+        <Parameter Name="columns" Type="System.Int32[]" />
+      </Parameters>
+      <Docs>
+        <param name="docs">Dieser Parameter wird nicht verwendet.</param>
+        <param name="lines">Dieser Parameter wird nicht verwendet.</param>
+        <param name="columns">Dieser Parameter wird nicht verwendet.</param>
+        <summary>Löst in allen Fällen eine <see cref="T:System.NotSupportedException" /> aus.</summary>
+        <returns>Löst in allen Fällen eine <see cref="T:System.NotSupportedException" /> aus.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">In allen Fällen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RootScope">
+      <MemberSignature Language="C#" Value="public virtual System.Diagnostics.SymbolStore.ISymbolScope RootScope { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Diagnostics.SymbolStore.ISymbolScope RootScope" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.SymbolStore.SymMethod.RootScope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SymbolStore.ISymbolScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den lexikalischen Stammgültigkeitsbereich für die aktuelle Methode ab. Dieser Gültigkeitsbereich umfasst die gesamte Methode.</summary>
+        <value>Der lexikalische Stammgültigkeitsbereich, der die gesamte Methode einschließt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RootScopeInternal">
+      <MemberSignature Language="C#" Value="public virtual System.Diagnostics.SymbolStore.ISymbolScope RootScopeInternal ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Diagnostics.SymbolStore.ISymbolScope RootScopeInternal() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymMethod.RootScopeInternal" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SymbolStore.ISymbolScope</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den lexikalischen Stammgültigkeitsbereich für die aktuelle Methode ab. Dieser Gültigkeitsbereich umfasst die gesamte Methode.</summary>
+        <returns>Der lexikalische Stammgültigkeitsbereich, der die gesamte Methode einschließt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SequencePointCount">
+      <MemberSignature Language="C#" Value="public virtual int SequencePointCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SequencePointCount" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.SymbolStore.SymMethod.SequencePointCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Sequenzpunkte in der Methode ab.</summary>
+        <value>Die Anzahl der Sequenzpunkte in der Methode.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Token">
+      <MemberSignature Language="C#" Value="public virtual System.Diagnostics.SymbolStore.SymbolToken Token { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.SymbolStore.SymbolToken Token" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.SymbolStore.SymMethod.Token" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SymbolStore.SymbolToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.Diagnostics.SymbolStore.SymbolToken" /> mit den Metadaten für die aktuelle Methode ab.</summary>
+        <value>Das Metadatentoken für die aktuelle Methode.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

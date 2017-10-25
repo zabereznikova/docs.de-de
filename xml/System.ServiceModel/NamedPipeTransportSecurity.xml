@@ -1,0 +1,80 @@
+<Type Name="NamedPipeTransportSecurity" FullName="System.ServiceModel.NamedPipeTransportSecurity">
+  <TypeSignature Language="C#" Value="public sealed class NamedPipeTransportSecurity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit NamedPipeTransportSecurity extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.NamedPipeTransportSecurity" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Eigenschaften bereit, mit denen die Sicherheitsebenen für eine benannte Pipe gesteuert werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse wird von <xref:System.ServiceModel.NetNamedPipeSecurity.Transport%2A> verwendet, um die Sicherheitseinstellungen für eine Bindung auf Transportebene festzulegen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NamedPipeTransportSecurity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.NamedPipeTransportSecurity.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.NamedPipeTransportSecurity" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtectionLevel">
+      <MemberSignature Language="C#" Value="public System.Net.Security.ProtectionLevel ProtectionLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Security.ProtectionLevel ProtectionLevel" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.NamedPipeTransportSecurity.ProtectionLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.Security.ProtectionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Sicherheit für die benannte Pipe an.</summary>
+        <value>Ein <see cref="T:System.Net.Security.ProtectionLevel" />. Die Standardeinstellung ist <see cref="F:System.Net.Security.ProtectionLevel.EncryptAndSign" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der zurückgegebene Enumerationsmember gibt die für den authentifizierten Stream erforderlichen Sicherheitsdienste an.  
+  
+ Folgende Werte sind gültig:  
+  
+-   <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>  
+  
+-   <xref:System.Net.Security.ProtectionLevel.None>  
+  
+-   <xref:System.Net.Security.ProtectionLevel.Sign>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert ist kein gültiger <see cref="T:System.Net.Security.ProtectionLevel" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

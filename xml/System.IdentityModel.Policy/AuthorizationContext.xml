@@ -1,0 +1,200 @@
+<Type Name="AuthorizationContext" FullName="System.IdentityModel.Policy.AuthorizationContext">
+  <TypeSignature Language="C#" Value="public abstract class AuthorizationContext : System.IdentityModel.Policy.IAuthorizationComponent" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit AuthorizationContext extends System.Object implements class System.IdentityModel.Policy.IAuthorizationComponent" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Policy.AuthorizationContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IdentityModel.Policy.IAuthorizationComponent</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Das Auswertungsergebnis aller Autorisierungsrichtlinien, die von den Tokens in der gesendeten Nachricht und durch Aufrufen der <see cref="M:System.ServiceModel.ServiceAuthorizationManager.GetAuthorizationPolicies(System.ServiceModel.OperationContext)" />-Methode verfügbar sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Auswertung aller Autorisierungsrichtlinien in einem Autorisierungs-Manager führt zu einem Satz von <xref:System.IdentityModel.Claims.ClaimSet>-Objekten. Diese Objekte bilden einen Autorisierungskontext.  
+  
+ Ein Autorisierungskontext enthält eine Gruppe von Anspruchsatzobjekten, eine Ablaufzeit, die den Gültigkeitszeitraum des Evaluierungskontexts angibt, und einen eindeutigen Bezeichner.  
+  
+ Auf den <xref:System.IdentityModel.Policy.AuthorizationContext> für die aktuelle Operation kann über die <xref:System.ServiceModel.ServiceSecurityContext.AuthorizationContext%2A>-Eigenschaft zugegriffen werden.  
+  
+   
+  
+## Examples  
+ [!code-csharp[C_IAuthorizationPolicy#4](~/samples/snippets/csharp/VS_Snippets_CFX/c_iauthorizationpolicy/cs/service.cs#4)]
+ [!code-vb[C_IAuthorizationPolicy#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_iauthorizationpolicy/vb/myauthorizationpolicy.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AuthorizationContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Policy.AuthorizationContext.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Policy.AuthorizationContext" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardkonstruktor führt keine Aktion aus.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClaimSets">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Claims.ClaimSet&gt; ClaimSets { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.IdentityModel.Claims.ClaimSet&gt; ClaimSets" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Policy.AuthorizationContext.ClaimSets" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Claims.ClaimSet&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Satz von den einer Autorisierungsrichtlinie zugeordneten Ansprüchen ab.</summary>
+        <value>Ein <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> des Typs <see cref="T:System.IdentityModel.Claims.ClaimSet" />, der den Satz von Ansprüchen enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A>-Eigenschaft, um den Satz von Ansprüchen abzurufen, der von der Autorisierungsrichtlinie hinzugefügt wurde. Eine Klasse, die sich vom <xref:System.ServiceModel.ServiceAuthorizationManager> herleitet, kann die Ansprüche verwenden, um Autorisierungsentscheidungen zu treffen.  
+  
+   
+  
+## Examples  
+ [!code-csharp[C_IAuthorizationPolicy#5](~/samples/snippets/csharp/VS_Snippets_CFX/c_iauthorizationpolicy/cs/service.cs#5)]
+ [!code-vb[C_IAuthorizationPolicy#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_iauthorizationpolicy/vb/myauthorizationpolicy.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDefaultAuthorizationContext">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Policy.AuthorizationContext CreateDefaultAuthorizationContext (System.Collections.Generic.IList&lt;System.IdentityModel.Policy.IAuthorizationPolicy&gt; policies);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Policy.AuthorizationContext CreateDefaultAuthorizationContext(class System.Collections.Generic.IList`1&lt;class System.IdentityModel.Policy.IAuthorizationPolicy&gt; policies) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Policy.AuthorizationContext.CreateDefaultAuthorizationContext(System.Collections.Generic.IList{System.IdentityModel.Policy.IAuthorizationPolicy})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Policy.AuthorizationContext</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authorizationPolicies" Type="System.Collections.Generic.IList&lt;System.IdentityModel.Policy.IAuthorizationPolicy&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="policies">To be added.</param>
+        <summary>Werten Sie alle angegebenen Autorisierungsrichtlinien aus, und erstellen Sie einen <see cref="T:System.IdentityModel.Policy.AuthorizationContext" />.</summary>
+        <returns>Ein <see cref="T:System.IdentityModel.Policy.AuthorizationContext" />, der das Auswertungsergebnis aller angegebenen Autorisierungsrichtlinien enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Policy.AuthorizationContext.CreateDefaultAuthorizationContext%2A>-Methode wird in der Regel nur von der Infrastruktur verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpirationTime">
+      <MemberSignature Language="C#" Value="public abstract DateTime ExpirationTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime ExpirationTime" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Policy.AuthorizationContext.ExpirationTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Datum und die Zeit ab, ab wann dieses <see cref="T:System.IdentityModel.Policy.AuthorizationContext" />-Objekt nicht mehr gültig ist.</summary>
+        <value>Ein <see cref="T:System.DateTime" />-Wert, der das Datum und die Zeit angibt, ab wann dieses <see cref="T:System.IdentityModel.Policy.AuthorizationContext" />-Objekt nicht mehr gültig ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Policy.AuthorizationContext.ExpirationTime%2A>-Eigenschaft ist in koordinierter Weltzeit (UTC) angegeben.  
+  
+> [!NOTE]
+>  Das Dienstmodell in [!INCLUDE[indigo2](~/includes/indigo2-md.md)] überprüft den Wert der <xref:System.IdentityModel.Policy.AuthorizationContext.ExpirationTime%2A>-Eigenschaft nicht. Diese Eigenschaft wird von [!INCLUDE[indigo2](~/includes/indigo2-md.md)] mithilfe der <xref:System.IdentityModel.Tokens.SecurityToken.ValidTo%2A>-Eigenschaft des Sicherheitstokens, auf dem der Autorisierungskontext basiert, festgelegt. Die <xref:System.IdentityModel.Tokens.SecurityToken.ValidTo%2A>-Eigenschaft wird jedoch von [!INCLUDE[indigo2](~/includes/indigo2-md.md)] überprüft. Die Ablaufzeit des Autorisierungskontexts ist für Szenarien bestimmt, in denen z. B. eine Autorisierungsrichtlinie nach Ablauf eine Aktion ausführen muss.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public abstract string Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Policy.AuthorizationContext.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen eindeutigen Bezeichner für dieses <see cref="T:System.IdentityModel.Policy.AuthorizationContext" />-Objekt ab.</summary>
+        <value>Ein <see cref="T:System.IdentityModel.Policy.AuthorizationContext" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel ist die <xref:System.IdentityModel.Policy.AuthorizationContext.Id%2A>-Eigenschaft eine GUID.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IDictionary&lt;string,object&gt; Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; Properties" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Policy.AuthorizationContext.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der diesem <see cref="T:System.IdentityModel.Policy.AuthorizationContext" />-Objekt zugeordneten Nicht-Ansprucheigenschaften ab.</summary>
+        <value>Eine <see cref="T:System.Collections.Generic.Dictionary`2" />, die eine Auflistung der Nicht-Ansprucheigenschaften angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[vsindigo](~/includes/vsindigo-md.md)]reserviert zwei Eigenschaften: `Identities` und `Principal`. Die `Identities`-Eigenschaft wird von einer <xref:System.IdentityModel.Policy.IAuthorizationPolicy> zur Angabe von <xref:System.Collections.Generic.IList%601> von mindestens einer Identität verwendet, die mit <xref:System.IdentityModel.Policy.AuthorizationContext> verbunden sind. Die `Principal`-Eigenschaft wird von einer <xref:System.IdentityModel.Policy.IAuthorizationPolicy> zur Angabe von <xref:System.Security.Principal.IPrincipal> verwendet, der einem <xref:System.IdentityModel.Policy.AuthorizationContext> zugeordnet ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

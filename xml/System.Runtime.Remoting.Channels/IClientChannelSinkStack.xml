@@ -1,0 +1,95 @@
+<Type Name="IClientChannelSinkStack" FullName="System.Runtime.Remoting.Channels.IClientChannelSinkStack">
+  <TypeSignature Language="C#" Value="public interface IClientChannelSinkStack : System.Runtime.Remoting.Channels.IClientResponseChannelSinkStack" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IClientChannelSinkStack implements class System.Runtime.Remoting.Channels.IClientResponseChannelSinkStack" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Channels.IClientChannelSinkStack" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Channels.IClientResponseChannelSinkStack</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bietet Funktionalität für einen Stapel von Client Channelsenken, die während einer asynchronen Antwort nachrichtenentschlüsselung aufgerufen werden müssen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Remoting.Channels.IClientChannelSinkStack> wird während der Verarbeitung der Antworten auf asynchrone Aufrufe verwendet.  
+  
+ Bei einem synchronen Aufruf der <xref:System.Runtime.Remoting.Channels.IClientChannelSink.ProcessMessage%2A?displayProperty=nameWithType> Methode wird aufgerufen, wenn eine Nachricht an den Server gesendet wird. Jede Senke in der Senkenkette ruft die <xref:System.Runtime.Remoting.Channels.IClientChannelSink.ProcessMessage%2A> Methode für die nächste Senke, bis der Aufruf die Transportsenke am Ende der Kette erreicht. Von dort aus wird die Nachricht an den Server übertragen.  
+  
+ Wenn die Formatierungssenke aufgerufen wird, über die <xref:System.Runtime.Remoting.Messaging.IMessageSink.AsyncProcessMessage%2A> -Methode, es leitet den Aufruf asynchron durch Aufruf <xref:System.Runtime.Remoting.Channels.IClientChannelSink.AsyncProcessRequest%2A> auf den nächsten Kanal Senke. Ein Stapel von Antwortsenken ist erforderlich, um die Antwort zu verarbeiten. Jede Senke, die die Antwort verarbeiten möchte muss sich an den Client Senke Kanalstapel innerhalb eines push <xref:System.Runtime.Remoting.Channels.IClientChannelSink.AsyncProcessRequest%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Pop">
+      <MemberSignature Language="C#" Value="public object Pop (System.Runtime.Remoting.Channels.IClientChannelSink sink);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Pop(class System.Runtime.Remoting.Channels.IClientChannelSink sink) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.IClientChannelSinkStack.Pop(System.Runtime.Remoting.Channels.IClientChannelSink)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sink" Type="System.Runtime.Remoting.Channels.IClientChannelSink" />
+      </Parameters>
+      <Docs>
+        <param name="sink">Die Senke zu entfernen und zurückzugeben, die aus dem Senkenstapel.</param>
+        <summary>Holt die Informationen, die alle Senken aus dem Senkenstapel zugeordnet sind, bis zu und einschließlich der angegebenen Senke.</summary>
+        <returns>Informationen auf der Anforderungsseite generiert und die angegebene Senke zugeordnet.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Push">
+      <MemberSignature Language="C#" Value="public void Push (System.Runtime.Remoting.Channels.IClientChannelSink sink, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Push(class System.Runtime.Remoting.Channels.IClientChannelSink sink, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.IClientChannelSinkStack.Push(System.Runtime.Remoting.Channels.IClientChannelSink,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sink" Type="System.Runtime.Remoting.Channels.IClientChannelSink" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="sink">Die Senke, das auf dem Stapel abgelegt.</param>
+        <param name="state">Informationen, die generiert wird, auf der Anforderungsseite, die auf der Antwortseite erforderlich ist.</param>
+        <summary>Legt die angegebene Senke und Informationen, die auf den Senkenstapel zugeordnet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Informationen auf der Anforderungsseite generiert und im angegebenen der `state` Parameter zurückgegeben, der `state` Parameter von der <xref:System.Runtime.Remoting.Channels.IClientChannelSink.AsyncProcessResponse%2A> Methode für die entsprechende Senke.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

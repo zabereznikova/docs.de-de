@@ -1,0 +1,375 @@
+<Type Name="FormattableString" FullName="System.FormattableString">
+  <TypeSignature Language="C#" Value="public abstract class FormattableString : IFormattable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit FormattableString extends System.Object implements class System.IFormattable" />
+  <TypeSignature Language="DocId" Value="T:System.FormattableString" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IFormattable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine zusammengesetzte Formatzeichenfolge zusammen mit den zu formatierenden Argumenten dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine kombinierte Formatzeichenfolge besteht aus festgelegtem Text mit indizierten Platzhaltern, so genannten Formatelementen, die den Objekten in der Liste entsprechen. Der Formatierungsvorgang liefert eine Ergebniszeichenfolge, die sich aus dem ursprünglichen festgelegten Text und der Zeichenfolgendarstellung der Objekte in der Liste zusammensetzt. Kombinierte Formatierung mit Methoden unterstützt wird, z. B. <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, und <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>.  Weitere Informationen zur zusammengesetzten Formatierung finden Sie unter [kombinierte Formatierung](~/docs/standard/base-types/composite-formatting.md).  
+  
+ Ein <xref:System.FormattableString> Instanz möglicherweise aus der eine interpolierte Zeichenfolge in c# oder Visual Basic.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected FormattableString ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.FormattableString.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Instanziiert eine neue Instanz der <see cref="T:System.FormattableString" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArgumentCount">
+      <MemberSignature Language="C#" Value="public abstract int ArgumentCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ArgumentCount" />
+      <MemberSignature Language="DocId" Value="P:System.FormattableString.ArgumentCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der zu formatierenden Argumenten ab.</summary>
+        <value>Die Anzahl der zu formatierenden Argumenten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Argumente können aus dem Objektarray zurückgegebenes abgerufen werden die <xref:System.FormattableString.GetArguments%2A> -Methode, oder sie können abgerufen werden einzeln anhand der Indexnummer aus der <xref:System.FormattableString.GetArgument%2A> Methode. Die Indizes der einzelnen Argumente im Bereich von 0 bis <xref:System.FormattableString.ArgumentCount%2A> – 1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Format">
+      <MemberSignature Language="C#" Value="public abstract string Format { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Format" />
+      <MemberSignature Language="DocId" Value="P:System.FormattableString.Format" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die zusammengesetzte Formatierungszeichenfolge zurück.</summary>
+        <value>Die zusammengesetzte Formatierungszeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine kombinierte Formatzeichenfolge besteht aus 0 (null) oder mehreren Einheiten festgelegten Text ein oder mehrere Formatelemente, die eine Indexnummer mit Klammern als Trennzeichen angegeben werden (z. B. `{0}`). Der Index der jedes Formatelement entspricht Argument in einer Objektliste, die die zusammengesetzte Formatierungszeichenfolge folgt. Angenommen, in der folgenden Anweisung:  
+  
+ [!code-csharp[Formatting.Composite#9](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#9)]
+ [!code-vb[Formatting.Composite#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#9)]  
+  
+ die kombinierte Formatzeichenfolge ist `"Name = {0}, hours = {1:hh}"`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetArgument">
+      <MemberSignature Language="C#" Value="public abstract object GetArgument (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetArgument(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.FormattableString.GetArgument(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des Arguments. Der Wert kann im Bereich von 0 (null) bis eins weniger als der Wert des <see cref="P:System.FormattableString.ArgumentCount" />.</param>
+        <summary>Gibt das Argument an der angegebenen Indexposition zurück.</summary>
+        <returns>Das Argument.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetArguments">
+      <MemberSignature Language="C#" Value="public abstract object[] GetArguments ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object[] GetArguments() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.FormattableString.GetArguments" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein Objektarray, das eine oder mehrere zu formatierenden Objekten.</summary>
+        <returns>Ein Objektarray, das eine oder mehrere zu formatierenden Objekten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Clients sollten den Inhalt des Arrays nicht ändern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invariant">
+      <MemberSignature Language="C#" Value="public static string Invariant (FormattableString formattable);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string Invariant(class System.FormattableString formattable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.FormattableString.Invariant(System.FormattableString)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formattable" Type="System.FormattableString" />
+      </Parameters>
+      <Docs>
+        <param name="formattable">Das Objekt, das in eine Ergebniszeichenfolge zu konvertieren.</param>
+        <summary>Gibt eine Ergebniszeichenfolge, in der Argumente mit den Konventionen der invarianten Kultur formatiert sind.</summary>
+        <returns>Die Zeichenfolge, die aus die aktuelle Instanz mit den Konventionen der invarianten Kultur formatieren.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese statische Methode kann durch die folgende Anweisung in c# importiert werden:  
+  
+```csharp  
+using static System.FormattableString;  
+```  
+  
+ Innerhalb des Bereichs, `import` Richtlinie, eine interpolierte Zeichenfolge kann formatiert werden mit den Konventionen der invarianten Kultur durch folgenden Code:  
+  
+```csharp  
+Invariant($"{{ lat = {latitude}; lon = {longitude} }}")   
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="formattable" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IFormattable.ToString">
+      <MemberSignature Language="C#" Value="string IFormattable.ToString (string ignored, IFormatProvider formatProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.IFormattable.ToString(string ignored, class System.IFormatProvider formatProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.FormattableString.System#IFormattable#ToString(System.String,System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ignored" Type="System.String" />
+        <Parameter Name="formatProvider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="ignored">Eine Zeichenfolge. Dieses Argument wird ignoriert.</param>
+        <param name="formatProvider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt.</param>
+        <summary>Gibt die Zeichenfolge, die aus die Formatzeichenfolge zusammen mit den Argumenten unter Verwendung der Formatierungskonventionen einer angegebenen Kultur Formatierung zurück.</summary>
+        <returns>Formatiert eine Zeichenfolge, mit den Konventionen der der <paramref name="formatProvider" /> Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung ruft der abgeleiteten Klasse <xref:System.FormattableString.ToString%28System.IFormatProvider%29> Implementierung.  
+  
+ Dieser Member ist eine explizite Schnittstellenimplementierung. Er kann nur verwendet werden, wenn die <xref:System.FormattableString>-Instanz in eine <xref:System.IFormattable>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.FormattableString.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Zeichenfolge, die aus formatieren die kombinierte Formatzeichenfolge zusammen mit den Argumenten durch Verwendung der Formatierungskonventionen der aktuellen Kultur zurück.</summary>
+        <returns>Eine Ergebniszeichenfolge, die mit den Konventionen der aktuellen Kultur formatiert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public abstract string ToString (IFormatProvider formatProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ToString(class System.IFormatProvider formatProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.FormattableString.ToString(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formatProvider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="formatProvider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt.</param>
+        <summary>Gibt die Zeichenfolge, die aus die zusammengesetzte Formatzeichenfolge zusammen mit den Argumenten unter Verwendung der Formatierungskonventionen einer angegebenen Kultur Formatierung zurück.</summary>
+        <returns>Eine Ergebniszeichenfolge, die mit den Konventionen der formatiert <paramref name="formatProvider" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

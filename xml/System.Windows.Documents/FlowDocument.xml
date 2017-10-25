@@ -1,0 +1,2592 @@
+<Type Name="FlowDocument" FullName="System.Windows.Documents.FlowDocument">
+  <TypeSignature Language="C#" Value="public class FlowDocument : System.Windows.FrameworkContentElement, IServiceProvider, System.Windows.Documents.IDocumentPaginatorSource, System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi FlowDocument extends System.Windows.FrameworkContentElement implements class System.IServiceProvider, class System.Windows.Documents.IDocumentPaginatorSource, class System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.FlowDocument" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.FrameworkContentElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IServiceProvider</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Windows.Documents.IDocumentPaginatorSource</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Windows.Markup.IAddChild</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.Inherit, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Blocks")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Hostet und formatiert fortlaufende Inhalte mit erweiterten Dokumentfunktionen, z. B. Paginierung und Spalten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Documents.FlowDocument>Erzwingt ein starkes Inhaltsmodell für den untergeordneten Inhalt an.  Auf der obersten Ebene der untergeordneten Elemente in einem <xref:System.Windows.Documents.FlowDocument> abgeleitet werden müssen <xref:System.Windows.Documents.Block>.  Gültige auf oberster Ebene untergeordnete Elemente umfassen Folgendes:  
+  
+-   <xref:System.Windows.Documents.BlockUIContainer>  
+  
+-   <xref:System.Windows.Documents.List>  
+  
+-   <xref:System.Windows.Documents.Paragraph>  
+  
+-   <xref:System.Windows.Documents.Section>  
+  
+-   <xref:System.Windows.Documents.Table>  
+  
+ Die Standardeinstellung <xref:System.Windows.DataTemplate> für <xref:System.Windows.Documents.FlowDocument> enthält eine <xref:System.Windows.Controls.FlowDocumentReader> , wird verwendet, um das Dokument anzeigen, bei Verwendung von <xref:System.Windows.Documents.FlowDocument> als Stammelement einer XAML-Datei. Wenn <xref:System.Windows.Documents.FlowDocument> ist nicht das Stammelement des Dokuments kann angezeigt werden, eine <xref:System.Windows.Controls.FlowDocumentScrollViewer>, eine <xref:System.Windows.Controls.FlowDocumentPageViewer>, oder ein <xref:System.Windows.Controls.FlowDocumentReader> Steuerelement. Sie können auch Bearbeiten einer <xref:System.Windows.Documents.FlowDocument> in einem <xref:System.Windows.Controls.RichTextBox> Steuerelement.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FlowDocument ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.FlowDocument.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue, leere Instanz der dem <see cref="T:System.Windows.Documents.FlowDocument" /> Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FlowDocument (System.Windows.Documents.Block block);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Documents.Block block) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.FlowDocument.#ctor(System.Windows.Documents.Block)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="block" Type="System.Windows.Documents.Block" />
+      </Parameters>
+      <Docs>
+        <param name="block">Ein Objekt, das Ableiten von der abstrakten <see cref="T:System.Windows.Documents.Block" /> -Klasse, als den ursprünglichen Inhalt hinzugefügt werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Documents.FlowDocument" /> -Klasse, indem eine angegebene <see cref="T:System.Windows.Documents.Block" /> Element als den ursprünglichen Inhalt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Typen von gültigen Eingaben für `block` enthalten <xref:System.Windows.Documents.BlockUIContainer>, <xref:System.Windows.Documents.List>, <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Section>, und <xref:System.Windows.Documents.Table>.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird die Verwendung dieses Konstruktors veranschaulicht.  In diesem Fall die <xref:System.Windows.Documents.FlowDocument> enthält einen Datenfluss Block Elementstruktur bestehend aus einer textausführung in einem Absatz geschachtelt.  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentConstructorSimple](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentconstructorsimple)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentConstructorSimple](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentconstructorsimple)]  
+  
+ Im folgenden Beispiel wird programmgesteuert eine einfache 2 x 2-Tabelle erstellt und verwendet dann die <xref:System.Windows.Documents.FlowDocument> Konstruktor zum Erstellen eines neuen <xref:System.Windows.Documents.FlowDocument> , die die Tabelle enthält.  Obwohl eine etwas kompliziertere Element Blockstruktur verwendet wird, ist die Verwendung des Konstruktors wie im obigen Beispiel identisch.  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentConstructorTable](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentconstructortable)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentConstructorTable](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentconstructortable)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="block" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Background">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush Background { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush Background" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FlowDocument.Background" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den <see cref="T:System.Windows.Media.Brush" /> zum Ausfüllen des Inhaltsbereichs verwendet.</summary>
+        <value>Der Pinsel, der zum Ausfüllen des Inhaltsbereichs, verwendet oder <see langword="null" /> Hintergrundpinsel nicht zu verwenden. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Tabelle der Muster, die die verfügbaren vordefinierten Pinsel Farben angezeigt werden, finden Sie unter <xref:System.Windows.Media.Brushes>.  
+  
+<a name="dependencyPropertyInfo_Background"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.FlowDocument.BackgroundProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.Background%2A> Attribut des ein <xref:System.Windows.Documents.FlowDocument> Element.  
+  
+ [!code-xaml[FlowDocumentSnippets#_FlowDocumentBackgroundXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_flowdocumentbackgroundxaml)]  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.Background%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentBackground](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentbackground)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentBackground](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentbackground)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BackgroundProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BackgroundProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.FlowDocument.BackgroundProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.FlowDocument.Background" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Blocks">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.BlockCollection Blocks { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.BlockCollection Blocks" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FlowDocument.Blocks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.BlockCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Documents.Block" />-Elemente der obersten Ebene des Inhalts des <see cref="T:System.Windows.Documents.FlowDocument" /> ab.</summary>
+        <value>Eine <see cref="T:System.Windows.Documents.BlockCollection" /> mit den <see cref="T:System.Windows.Documents.Block" />-Elementen, aus denen der Inhalt des <see cref="T:System.Windows.Documents.FlowDocument" /> besteht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Documents.BlockCollection> zurückgegeben, die von dieser Eigenschaft aufzuzählen oder zu bearbeiten des Inhalts einer <xref:System.Windows.Documents.FlowDocument>.  
+  
+ Auf der obersten Ebene der untergeordneten Elemente in einem <xref:System.Windows.Documents.FlowDocument> abgeleitet werden müssen <xref:System.Windows.Documents.Block>.  Gültige auf oberster Ebene untergeordnete Elemente umfassen Folgendes:  
+  
+-   <xref:System.Windows.Documents.BlockUIContainer>  
+  
+-   <xref:System.Windows.Documents.List>  
+  
+-   <xref:System.Windows.Documents.Paragraph>  
+  
+-   <xref:System.Windows.Documents.Section>  
+  
+-   <xref:System.Windows.Documents.Table>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnGap">
+      <MemberSignature Language="C#" Value="public double ColumnGap { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ColumnGap" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FlowDocument.ColumnGap" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.LengthConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Spaltenabstandswert ab, der den Abstand zwischen Spalten in einem <see cref="T:System.Windows.Documents.FlowDocument" /> angibt, oder legt diesen fest.</summary>
+        <value>Der Spaltenabstand in geräteunabhängigen Pixeln.  Der Wert <see cref="F:System.Double.NaN" /> (entspricht dem Attributwert "<c>automatisch</c>") gibt an, dass der Spaltenabstand entspricht der <see cref="P:System.Windows.Documents.FlowDocument.LineHeight" /> Eigenschaft. Die Standardeinstellung ist <see cref="F:System.Double.NaN" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Abrufen dieser Eigenschaft gibt die aktuelle Spaltenabstand zurück.  Das Festlegen dieses Werts ändert der derzeit wirksame Spaltenabstand und kann dazu führen, dass Inhalt Textfluss.  
+  
+ Der Spaltenabstand darf nicht das aktuelle überschreiten <xref:System.Windows.Documents.FlowDocument.PageWidth%2A> abzüglich <xref:System.Windows.Documents.FlowDocument.PagePadding%2A>.  Wenn der Wert der <xref:System.Windows.Documents.FlowDocument.ColumnGap%2A> Eigenschaft überschreitet diese Beschränkung, wird der tatsächliche Spaltenabstand verringert, um dieses Limit zu beobachten.  
+  
+ Diese Eigenschaft hat keine Auswirkung, wenn <xref:System.Windows.Documents.FlowDocument.ColumnWidth%2A> ist `null`.  
+  
+<a name="xamlAttributeUsage_ColumnGap"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object ColumnGap="double"/>  
+- or -  
+<object ColumnGap="qualifiedDouble"/>  
+- or -  
+<object ColumnGap="Auto"/>  
+```  
+  
+<a name="xamlValues_ColumnGap"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *double*  
+ <xref:System.Double>  
+  
+ Die Zeichenfolgendarstellung einer <xref:System.Double> Wert größer als 0,0 jedoch kleiner als oder gleich <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>. Ein nicht qualifizierter Wert wird in geräteunabhängigen Pixeln gemessen. Zeichenfolgen müssen nicht explizit Dezimaltrennzeichen enthalten.  
+  
+ *qualifiedDouble*  
+ Ein *doppelte* Wert wie oben beschrieben (ausgenommen `Auto`), gefolgt von einer der folgenden Einheitenbezeichner: `px`, `in`, `cm`, `pt`.  
+  
+ `px`(Standard)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`ist Zoll. 1 In == 96px  
+  
+ `cm`ist Zentimeter an. 1cm==(96/2.54) px  
+  
+ `pt`ist die Punkte. 1pt==(96/72) px  
+  
+ Auto  
+ Bewirkt, dass die tatsächlichen Abstand zwischen Spalten mit dem aktuellen Wert des festzulegenden der <xref:System.Windows.Documents.FlowDocument.LineHeight%2A> Eigenschaft.  Entspricht einem Eigenschaftswert des <xref:System.Double.NaN>.  
+  
+<a name="dependencyPropertyInfo_ColumnGap"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.FlowDocument.ColumnGapProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.ColumnGap%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentColumnGap](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentcolumngap)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentColumnGap](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentcolumngap)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnGapProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ColumnGapProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ColumnGapProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.FlowDocument.ColumnGapProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.FlowDocument.ColumnGap" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnRuleBrush">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush ColumnRuleBrush { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush ColumnRuleBrush" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FlowDocument.ColumnRuleBrush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Legt den <see cref="T:System.Windows.Media.Brush" /> fest, mit dem die Trennlinie zwischen Spalten gezeichnet wird, oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Windows.Media.Brush" />, der zum Zeichnen der Trennlinie zwischen Spalten verwendet werden soll, oder <see langword="null" />, damit kein Hintergrundpinsel verwendet wird. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Spaltentrennlinie ist eine Linie, die zwischen Spalten gezeichnet wird, und wird verwendet, um visuell Trennen der Spalten des Inhalts.  
+  
+ Eine Tabelle der Muster, die die verfügbaren vordefinierten Pinsel Farben angezeigt werden, finden Sie unter <xref:System.Windows.Media.Brushes>.  
+  
+ Diese Eigenschaft hat keine Auswirkung, wenn die <xref:System.Windows.Documents.FlowDocument.ColumnRuleWidth%2A> Eigenschaft ist 0 oder `null`.  
+  
+ Spaltenregeln werden nur angezeigt, wenn zwei oder mehr Spalten vorhanden sind.  
+  
+<a name="dependencyPropertyInfo_ColumnRuleBrush"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.FlowDocument.ColumnRuleBrushProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.ColumnRuleBrush%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentColumnRule](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentcolumnrule)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentColumnRule](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentcolumnrule)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnRuleBrushProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ColumnRuleBrushProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ColumnRuleBrushProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.FlowDocument.ColumnRuleBrushProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.FlowDocument.ColumnRuleBrush" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnRuleWidth">
+      <MemberSignature Language="C#" Value="public double ColumnRuleWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ColumnRuleWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FlowDocument.ColumnRuleWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.LengthConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Breite der Spaltentrennlinie ab oder legt diese fest.</summary>
+        <value>Die Breite der Spaltentrennlinie in geräteunabhängigen Pixeln. Der Standardwert ist 0,0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Spaltentrennlinie ist eine Linie, die zwischen Spalten gezeichnet wird, und wird verwendet, um visuell Trennen der Spalten des Inhalts.  
+  
+ Diese Eigenschaft hat keine Auswirkung, wenn die <xref:System.Windows.Documents.FlowDocument.ColumnRuleBrush%2A> Eigenschaft ist `null`.  
+  
+ Spaltenregeln werden nur angezeigt, wenn zwei oder mehr Spalten vorhanden sind.  Die Breite der Spaltentrennlinie ist kleiner als oder gleich sein beschränkt die <xref:System.Windows.Documents.FlowDocument.ColumnGap%2A>.  
+  
+<a name="xamlAttributeUsage_ColumnRuleWidth"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object ColumnRuleWidth="double"/>  
+- or -  
+<object ColumnRuleWidth="qualifiedDouble"/>  
+```  
+  
+<a name="xamlValues_ColumnRuleWidth"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *double*  
+ <xref:System.Double>  
+  
+ Die Zeichenfolgendarstellung einer <xref:System.Double> Wert größer als 0,0 jedoch kleiner als oder gleich <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>. Ein nicht qualifizierter Wert wird in geräteunabhängigen Pixeln gemessen. Zeichenfolgen müssen nicht explizit Dezimaltrennzeichen enthalten.  
+  
+ *qualifiedDouble*  
+ Ein *doppelte* Wert, wie oben beschrieben, gefolgt von einem der folgenden Einheitenbezeichner: `px`, `in`, `cm`, `pt`.  
+  
+ `px`(Standard)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`ist Zoll. 1 In == 96px  
+  
+ `cm`ist Zentimeter an. 1cm==(96/2.54) px  
+  
+ `pt`ist die Punkte. 1pt==(96/72) px  
+  
+<a name="dependencyPropertyInfo_ColumnRuleWidth"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.FlowDocument.ColumnRuleWidthProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.ColumnRuleWidth%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentColumnRule](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentcolumnrule)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentColumnRule](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentcolumnrule)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnRuleWidthProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ColumnRuleWidthProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ColumnRuleWidthProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.FlowDocument.ColumnRuleWidthProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.FlowDocument.ColumnRuleWidth" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnWidth">
+      <MemberSignature Language="C#" Value="public double ColumnWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ColumnWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FlowDocument.ColumnWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.LengthConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die mindestens gewünschte Breite der Spalten in einem <see cref="T:System.Windows.Documents.FlowDocument" /> ab oder legt sie fest.</summary>
+        <value>Die mindestens gewünschte Spaltenbreite in geräteunabhängigen Pixeln. Der Wert <see cref="F:System.Double.NaN" /> bewirkt, dass nur eine Spalte angezeigt wird, unabhängig von der Seitenbreite.  Die Standardeinstellung ist <see cref="F:System.Double.NaN" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Documents.FlowDocument> dynamisch anpasst, den Dateiinhalt, um die Darstellung des Inhalts in den verfügbaren Anzeigebereich zu maximieren.  Die Anzahl der sichtbaren Spalten richtet sich nach der Anzahl der Spalten, die in verfügbaren Speicher, die minimale Spaltenbreite, die von dieser Eigenschaft angegebenen passen.  Die Spaltenbreite möglicherweise größer als die von dieser Eigenschaft angegebene Wert.  
+  
+ Ändern der Größe des Fensters in beide Richtungen führt Spalten wird dynamisch neu generiert, um Platz optimal zu nutzen. Auf diese Weise wird der Inhalt an die Umgebung des Benutzers dynamisch angepasst.  
+  
+<a name="xamlAttributeUsage_ColumnWidth"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object ColumnWidth="double"/>  
+- or -  
+<object ColumnWidth="qualifiedDouble"/>  
+- or -  
+<object ColumnWidth="Auto"/>  
+```  
+  
+<a name="xamlValues_ColumnWidth"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *double*  
+ <xref:System.Double>  
+  
+ Die Zeichenfolgendarstellung einer <xref:System.Double> Wert größer als 0,0 jedoch kleiner als oder gleich <xref:System.Double?displayProperty=nameWithType>. Ein nicht qualifizierter Wert wird in geräteunabhängigen Pixeln gemessen. Zeichenfolgen müssen nicht explizit Dezimaltrennzeichen enthalten.  
+  
+ *qualifiedDouble*  
+ Ein *doppelte* Wert wie oben beschrieben (ausgenommen `Auto`) gefolgt von einem der folgenden Einheitenbezeichner: `px`, `in`, `cm`, `pt`.  
+  
+ `px`(Standard)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`ist Zoll. 1 In == 96px  
+  
+ `cm`ist Zentimeter an. 1cm==(96/2.54) px  
+  
+ `pt`ist die Punkte. 1pt==(96/72) px  
+  
+ Auto  
+ Bewirkt, dass die Spaltenbreite automatisch berechnet werden sollen, werden 20-Mal die aktuelle <xref:System.Windows.Documents.FlowDocument.FontSize%2A>.  
+  
+<a name="dependencyPropertyInfo_ColumnWidth"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.FlowDocument.ColumnWidthProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.ColumnWidth%2A> Attribut des ein <xref:System.Windows.Documents.FlowDocument> Element.  
+  
+ [!code-xaml[FlowDocumentSnippets#_FlowDocumentColumnWidthXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_flowdocumentcolumnwidthxaml)]  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.ColumnWidth%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentColumnWidth](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentcolumnwidth)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentColumnWidth](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentcolumnwidth)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnWidthProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ColumnWidthProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ColumnWidthProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.FlowDocument.ColumnWidthProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.FlowDocument.ColumnWidth" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentEnd">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.TextPointer ContentEnd { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.TextPointer ContentEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FlowDocument.ContentEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.TextPointer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Documents.TextPointer" /> , darstellt, das Ende des Inhalts in einen <see cref="T:System.Windows.Documents.FlowDocument" />.</summary>
+        <value>Ein <see cref="T:System.Windows.Documents.TextPointer" /> , das das Ende des Inhalts im darstellt der <see cref="T:System.Windows.Documents.FlowDocument" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Documents.FlowDocument.ContentEnd%2A> Eigenschaft wird häufig verwendet, um Inhalt am Ende Anfügen einer <xref:System.Windows.Documents.FlowDocument>.  
+  
+ Die <xref:System.Windows.Documents.TextPointer> von dieser Eigenschaft zurückgegebene verfügt immer über seine <xref:System.Windows.Documents.TextPointer.LogicalDirection%2A> festgelegt <xref:System.Windows.Documents.LogicalDirection?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Windows.Documents.FlowDocument.ContentEnd%2A> Eigenschaft anzufügende Inhalt an einen <xref:System.Windows.Documents.FlowDocument>.  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentContentEnd](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentcontentend)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentContentEnd](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentcontentend)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentStart">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.TextPointer ContentStart { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.TextPointer ContentStart" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FlowDocument.ContentStart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.TextPointer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Documents.TextPointer" /> , die den Anfang des Inhalts im darstellt eine <see cref="T:System.Windows.Documents.FlowDocument" />.</summary>
+        <value>Ein <see cref="T:System.Windows.Documents.TextPointerContext" /> , die den Anfang des Inhalts im darstellt der <see cref="T:System.Windows.Documents.FlowDocument" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Documents.FlowDocument.ContentStart%2A> Eigenschaft wird häufig zum Einfügen von Inhalt an den Anfang einer <xref:System.Windows.Documents.FlowDocument>.  
+  
+ Die <xref:System.Windows.Documents.TextPointer> von dieser Eigenschaft zurückgegebene verfügt immer über seine <xref:System.Windows.Documents.TextPointer.LogicalDirection%2A> festgelegt <xref:System.Windows.Documents.LogicalDirection?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Windows.Documents.FlowDocument.ContentStart%2A> Eigenschaft einzufügende Inhalt am Anfang einer <xref:System.Windows.Documents.FlowDocument>.  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentContentStart](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentcontentstart)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentContentStart](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentcontentstart)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FlowDirection">
+      <MemberSignature Language="C#" Value="public System.Windows.FlowDirection FlowDirection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FlowDirection FlowDirection" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FlowDocument.FlowDirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FlowDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die relative Richtung für die Übermittlung von Inhalten in einem <see cref="T:System.Windows.Documents.FlowDocument" />.</summary>
+        <value>Eines der <see cref="T:System.Windows.FlowDirection" /> Werten, die die relative flussrichtung angibt. Die Standardeinstellung ist <see cref="F:System.Windows.FlowDirection.LeftToRight" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Abrufen dieser Eigenschaft gibt die derzeit gültigen flussrichtung zurück.  Durch Festlegen dieser Eigenschaft führt dazu, dass der Inhalt der <xref:System.Windows.Documents.FlowDocument> Textfluss in der angegebenen Richtung.  
+  
+ Die <xref:System.Windows.Documents.FlowDocument.FlowDirection%2A> des Inhalts in der Regel entspricht dem Standard flussrichtung der Sprache, dargestellt wird.  Hebräisch und Arabisch sind Beispiele für Sprachen, die natürliche Weise von rechts nach links fließen.  Englisch, Deutsch und Russisch sind Beispiele für Sprachen, die von links nach rechts geschrieben.  
+  
+> [!NOTE]
+>  Der Wert dieser Eigenschaft wird nicht automatisch geändert, entsprechend die Sprache, die vom Betriebssystem verwendet wird. Wenn Sie einen anderen Wert wird der Standardwert verwenden müssen <xref:System.Windows.FlowDirection.LeftToRight>, Sie müssen selbst angeben.  
+  
+<a name="dependencyPropertyInfo_FlowDirection"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.FlowDocument.FlowDirectionProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsParentArrange%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.FlowDirection%2A> Attribut des ein <xref:System.Windows.Documents.FlowDocument> Element.  
+  
+ [!code-xaml[FlowDocumentSnippets#_FlowDocumentFlowDirectionXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_flowdocumentflowdirectionxaml)]  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.FlowDirection%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentFlowDirection](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentflowdirection)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentFlowDirection](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentflowdirection)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FlowDirectionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FlowDirectionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FlowDirectionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.FlowDocument.FlowDirectionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.FlowDocument.FlowDirection" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontFamily">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.FontFamily FontFamily { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.FontFamily FontFamily" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FlowDocument.FontFamily" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.Font, Modifiability=System.Windows.Modifiability.Unmodifiable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FontFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Schriftfamilie der obersten Ebene bevorzugte für die <see cref="T:System.Windows.Documents.FlowDocument" />.</summary>
+        <value>Ein <see cref="T:System.Windows.Media.FontFamily" /> Objekt, das die bevorzugte Schriftfamilie oder eine primäre bevorzugte Schriftfamilie mit einer oder mehreren ausweichschriftfamilien angibt. Die Standardeinstellung ist die Schriftart, die bestimmt, indem die <see cref="P:System.Windows.SystemFonts.MessageFontFamily" /> Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle <xref:System.Windows.Documents.FlowDocument.FontFamily%2A> diese Einstellung auf der obersten Ebene durch die Einstellungen für untergeordnete Elemente überschrieben.  
+  
+ Wenn mehrere Familien angegeben werden, dienen die zweite und alle nachfolgenden Schriftartfamilien als Alternative Produktreihen in Fällen verwendet werden, in dem die primäre Schriftfamilie nicht verfügbar oder nicht anwendbar ist.  
+  
+ Diese Eigenschaft gibt nur eine Einstellung an.  Wenn die angegebene Schriftfamilie nicht verfügbar ist, ist die <xref:System.Windows.Documents.FlowDocument> wird automatisch ein Fallback auf die Schriftart, die bestimmt, indem die <xref:System.Windows.SystemFonts.MessageFontFamily%2A?displayProperty=nameWithType> Wert.  
+  
+<a name="xamlAttributeUsage_FontFamily"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object FontFamily="fontFamilyName"/>  
+- or -  
+<object FontFamily="fontFamilyNamesList"/>  
+- or -  
+<object FontFamily="fontFamilyFolderReference"/>  
+- or -  
+<object FontFamily="fontFamilyUriReference"/>  
+```  
+  
+<a name="xamlValues_FontFamily"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *fontFamilyName*  
+ Eine Zeichenfolge, die einen Namen der Schriftfamilie angibt.  Beispielsweise `"Arial"` oder `"Century Gothic"`.  
+  
+ *fontFamilyNamesList*  
+ Eine Zeichenfolge, die mehrere Namen angeben, getrennt durch ein Komma (Leerräume nach einem Komma wird ignoriert).  Das erste angegebene Schriftfamilie dient als die primäre Schriftfamilie; Nachfolgende Schriftartfamilien dienen als Alternative Produktreihen in Fällen verwendet werden, in dem die primäre Schriftfamilie nicht verfügbar oder nicht anwendbar ist.  Beispielsweise `"Arial, Century Gothic"` Arial als die primäre Schriftfamilie, mit dem Gotischen mit Jahrhundert als fallback-Schriftfamilie angegeben.  
+  
+ *fontFamilyFolderReference*  
+ Eine Zeichenfolge, die einen Ordner mit der Schriftart, zusammen mit einem Namen der Schriftfamilie angibt.  Die Ordner und den Namen der Schriftfamilie werden durch das Zeichen # getrennt.  Der Ordnerverweis kann absolut oder relativ sein.  Beispielsweise `"Custom Fonts\#My Custom Font"`.  
+  
+ *fontFamilyUriReference*  
+ Eine Zeichenfolge, eine [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] für die Schriftart, zusammen mit einem Namen der Schriftfamilie.  Die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] und Namen der Schriftfamilie, die durch ein Nummernzeichen (#) getrennt sind.  Beispielsweise `"http://MyFontServer/Fonts/#My Custom Font"`.  
+  
+<a name="dependencyPropertyInfo_FontFamily"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.FlowDocument.FontFamilyProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.FontFamily%2A> Attribut des ein <xref:System.Windows.Documents.FlowDocument> Element.  
+  
+ [!code-xaml[FlowDocumentSnippets#_FlowDocumentFontStuffXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_flowdocumentfontstuffxaml)]  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.FontFamily%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentFontStuff](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentfontstuff)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentFontStuff](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentfontstuff)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontFamilyProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FontFamilyProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FontFamilyProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.FlowDocument.FontFamilyProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.FlowDocument.FontFamily" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontSize">
+      <MemberSignature Language="C#" Value="public double FontSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 FontSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FlowDocument.FontSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.FontSizeConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Schriftgrad der obersten Ebene für die <see cref="T:System.Windows.Documents.FlowDocument" />.</summary>
+        <value>(Der zu verwendende Wunschschriftgrad in geräteunabhängigen Pixeln.)   Der Standardwert richtet sich nach der <see cref="P:System.Windows.SystemFonts.MessageFontSize" /> Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle <xref:System.Windows.Documents.FlowDocument.FontSize%2A> Einstellungen auf untergeordnete Elemente überschreiben diese auf der obersten Ebene.  
+  
+<a name="xamlAttributeUsage_FontSize"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object FontSize="double"/>  
+- or -  
+<object FontSize="qualifiedDouble"/>  
+```  
+  
+<a name="xamlValues_FontSize"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *double*  
+ <xref:System.Double>  
+  
+ Die Zeichenfolgendarstellung einer <xref:System.Double> Wert größer als 0,0 jedoch kleiner als oder gleich <xref:System.Double?displayProperty=nameWithType>. Ein nicht qualifizierter Wert wird in geräteunabhängigen Pixeln gemessen. Zeichenfolgen müssen nicht explizit Dezimaltrennzeichen enthalten.  
+  
+ *qualifiedDouble*  
+ Ein *doppelte* Wert, wie oben beschrieben, gefolgt von einem der folgenden Einheitenbezeichner: `px`, `in`, `cm`, `pt`.  
+  
+ `px`(Standard)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`ist Zoll. 1 In == 96px  
+  
+ `cm`ist Zentimeter an. 1cm==(96/2.54) px  
+  
+ `pt`ist die Punkte. 1pt==(96/72) px  
+  
+<a name="dependencyPropertyInfo_FontSize"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.FlowDocument.FontSizeProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.FontSize%2A> Attribut des ein <xref:System.Windows.Documents.FlowDocument> Element.  
+  
+ [!code-xaml[FlowDocumentSnippets#_FlowDocumentFontStuffXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_flowdocumentfontstuffxaml)]  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.FontSize%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentFontStuff](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentfontstuff)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentFontStuff](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentfontstuff)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontSizeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FontSizeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FontSizeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.FlowDocument.FontSizeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.FlowDocument.FontSize" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontStretch">
+      <MemberSignature Language="C#" Value="public System.Windows.FontStretch FontStretch { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FontStretch FontStretch" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FlowDocument.FontStretch" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontStretch</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die obersten Ebene Eigenschaften zum Strecken einer Schriftart für die <see cref="T:System.Windows.Documents.FlowDocument" />.</summary>
+        <value>Ein Mitglied der <see cref="T:System.Windows.FontStretch" /> Klasse, die die gewünschten Eigenschaften zum Strecken einer Schriftart verwenden angibt. Die Standardeinstellung ist <see cref="P:System.Windows.FontStretches.Normal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle <xref:System.Windows.Documents.FlowDocument.FontStretch%2A> Einstellungen auf untergeordnete Elemente überschreiben diese auf der obersten Ebene.  
+  
+<a name="dependencyPropertyInfo_FontStretch"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.FlowDocument.FontStretchProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.FontStretch%2A> Attribut des ein <xref:System.Windows.Documents.FlowDocument> Element.  
+  
+ [!code-xaml[FlowDocumentSnippets#_FlowDocumentFontStuffXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_flowdocumentfontstuffxaml)]  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.FontStretch%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentFontStuff](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentfontstuff)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentFontStuff](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentfontstuff)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontStretchProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FontStretchProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FontStretchProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.FlowDocument.FontStretchProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.FlowDocument.FontStretch" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.FontStyle FontStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FontStyle FontStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FlowDocument.FontStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Schriftschnitt der obersten Ebene für die <see cref="T:System.Windows.Documents.FlowDocument" />.</summary>
+        <value>Ein Mitglied der <see cref="T:System.Windows.FontStyles" /> Klasse, die den gewünschten Schriftschnitt angibt. Der Standardwert richtet sich nach der <see cref="P:System.Windows.SystemFonts.MessageFontStyle" /> Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle <xref:System.Windows.Documents.FlowDocument.FontStyle%2A> Einstellungen auf untergeordnete Elemente überschreiben diese auf der obersten Ebene.  
+  
+<a name="dependencyPropertyInfo_FontStyle"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.FlowDocument.FontStyleProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.FontStyle%2A> Attribut des ein <xref:System.Windows.Documents.FlowDocument> Element.  
+  
+ [!code-xaml[FlowDocumentSnippets#_FlowDocumentFontStuffXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_flowdocumentfontstuffxaml)]  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.FontStyle%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentFontStuff](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentfontstuff)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentFontStuff](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentfontstuff)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontStyleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FontStyleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FontStyleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.FlowDocument.FontStyleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.FlowDocument.FontStyle" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontWeight">
+      <MemberSignature Language="C#" Value="public System.Windows.FontWeight FontWeight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FontWeight FontWeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FlowDocument.FontWeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontWeight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Schriftbreite der obersten Ebene für die <see cref="T:System.Windows.Documents.FlowDocument" />.</summary>
+        <value>Ein Mitglied der <see cref="T:System.Windows.FontWeights" /> Klasse, die die gewünschte Schriftbreite angibt. Der Standardwert richtet sich nach der <see cref="P:System.Windows.SystemFonts.MessageFontWeight" /> Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle <xref:System.Windows.Documents.FlowDocument.FontWeight%2A> Einstellungen auf untergeordnete Elemente überschreiben diese auf der obersten Ebene.  
+  
+<a name="dependencyPropertyInfo_FontWeight"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.FlowDocument.FontWeightProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.FontWeight%2A> Attribut des ein <xref:System.Windows.Documents.FlowDocument> Element.  
+  
+ [!code-xaml[FlowDocumentSnippets#_FlowDocumentFontStuffXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_flowdocumentfontstuffxaml)]  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.FontWeight%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentFontStuff](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentfontstuff)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentFontStuff](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentfontstuff)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontWeightProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FontWeightProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FontWeightProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.FlowDocument.FontWeightProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.FlowDocument.FontWeight" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Foreground">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush Foreground { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush Foreground" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FlowDocument.Foreground" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <see cref="T:System.Windows.Media.Brush" /> an, den Textinhalt der <see cref="T:System.Windows.Documents.FlowDocument" />.</summary>
+        <value>Der Pinsel, der auf den Textinhalt angewendet werden soll. Die Standardeinstellung ist <see cref="P:System.Windows.Media.Brushes.Black" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Tabelle mit Feldern, die die verfügbaren vordefinierten Pinsel Farben anzeigt, finden Sie unter <xref:System.Windows.Media.Brushes>.  
+  
+ Alle <xref:System.Windows.Documents.FlowDocument.Foreground%2A> Einstellungen auf untergeordnete Elemente überschreiben diese auf der obersten Ebene.  
+  
+<a name="dependencyPropertyInfo_Foreground"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.FlowDocument.ForegroundProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>,<br /><br /> <xref:System.Windows.FrameworkPropertyMetadataOptions.SubPropertiesDoNotAffectRender>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.Foreground%2A> Attribut des ein <xref:System.Windows.Documents.FlowDocument> Element.  
+  
+ [!code-xaml[FlowDocumentSnippets#_FlowDocumentBackgroundXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_flowdocumentbackgroundxaml)]  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.Foreground%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentBackground](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentbackground)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentBackground](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentbackground)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForegroundProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ForegroundProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ForegroundProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.FlowDocument.ForegroundProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.FlowDocument.Foreground" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsColumnWidthFlexible">
+      <MemberSignature Language="C#" Value="public bool IsColumnWidthFlexible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsColumnWidthFlexible" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FlowDocument.IsColumnWidthFlexible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="P:System.Windows.Documents.FlowDocument.ColumnWidth" /> Wert flexibel oder fest ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Spaltenbreite flexibel ist; <see langword="false" /> Wenn die Spaltenbreite behoben wurde. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Documents.FlowDocument.IsColumnWidthFlexible%2A> Eigenschaft bestimmt die Art und Weise, in dem die Breite überzähliger Inhalt (d. h. der Unterschied zwischen der Seitenbreite und die Breite des Inhalts nach dem Layout) auf Spalten verteilt. Wenn diese Einstellung `true` bedeutet, dass zusätzliche Leerzeichen verteilt ist gleichermaßen für jede Spalte; in diesem Fall müssen Sie Spalten möglicherweise breiter als der vom angegebenen Breite angepasst werden die <xref:System.Windows.Documents.FlowDocument.ColumnWidth%2A> Eigenschaft.  Wenn diese Einstellung `false` bedeutet, dass überflüssige Platz auf den Leerraum auf der rechten Seite der Seite verteilt; in diesem Fall die Spalten immer an der angegebenen Breite Größe werden der <xref:System.Windows.Documents.FlowDocument.ColumnWidth%2A> Eigenschaft (solange diese Breite kleiner als die Breite der Seite abzüglich ist < c 4 > <xref:System.Windows.Documents.FlowDocument.PagePadding%2A> ).  
+  
+ Die folgende Abbildung veranschaulicht den Unterschied im Layout, wenn diese Eigenschaft ist `true` oder `false`.  Hellblau dargestellt von Inhalt in einem <xref:System.Windows.Documents.FlowDocument>.  
+  
+ ![Bildschirmabbildung: Vergleichen von IsColumnWidthFlexible-Werten](~/add/media/flowdoc-columnflex.png "Bildschirmabbildung: Vergleichen von IsColumnWidthFlexible-Werten")  
+  
+<a name="dependencyPropertyInfo_IsColumnWidthFlexible"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.FlowDocument.IsColumnWidthFlexibleProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.IsColumnWidthFlexible%2A> Attribut des ein <xref:System.Windows.Documents.FlowDocument> Element.  
+  
+ [!code-xaml[FlowDocumentSnippets#_FlowDocumentColumnFlexXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_flowdocumentcolumnflexxaml)]  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.IsColumnWidthFlexible%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentColumnFlex](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentcolumnflex)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentColumnFlex](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentcolumnflex)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsColumnWidthFlexibleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsColumnWidthFlexibleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsColumnWidthFlexibleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.FlowDocument.IsColumnWidthFlexibleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.FlowDocument.IsColumnWidthFlexible" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnabledCore">
+      <MemberSignature Language="C#" Value="protected override bool IsEnabledCore { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEnabledCore" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FlowDocument.IsEnabledCore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der <see cref="P:System.Windows.ContentElement.IsEnabled" /> -Eigenschaft für die <see cref="T:System.Windows.Documents.FlowDocument" />.</summary>
+        <value>Der Wert, der die <see cref="P:System.Windows.ContentElement.IsEnabled" /> -Eigenschaft für die <see cref="T:System.Windows.Documents.FlowDocument" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsHyphenationEnabled">
+      <MemberSignature Language="C#" Value="public bool IsHyphenationEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsHyphenationEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FlowDocument.IsHyphenationEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die automatische Silbentrennung von Wörtern aktiviert oder deaktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn automatische wichtige und Silbentrennung von Wörtern aktiviert ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Funktion für automatische Silbentrennung ermöglicht eine <xref:System.Windows.Documents.FlowDocument> automatisch unterbrechen und Wörter, die basierend auf den aktuellen Layout Bedingungen trennen.  Dadurch kann lange Wörter in einer Zeile beginnen und in der nächsten fortgesetzt und tendenziell eine gleichmäßigere Verteilung von Leerraum im Blocksatz zu erreichen.  Wörter werden aufgeteilt und gemäß der Grammatikregeln für den standardmäßigen getrennt.  Automatische Silbentrennung ist vor allem effizient, wenn gekoppelt mit optimalen Absatzlayout (dargestellt durch die <xref:System.Windows.Documents.FlowDocument.IsOptimalParagraphEnabled%2A> Eigenschaft).  
+  
+<a name="dependencyPropertyInfo_IsHyphenationEnabled"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.FlowDocument.IsHyphenationEnabledProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.IsHyphenationEnabled%2A> Attribut des ein <xref:System.Windows.Documents.FlowDocument> Element.  
+  
+ [!code-xaml[FlowDocumentSnippets#_FlowDocumentHyphenateXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_flowdocumenthyphenatexaml)]  
+  
+ Die folgende Abbildung zeigt, wie das vorherige <xref:System.Windows.Documents.FlowDocument> rendert.  
+  
+ ![Bildschirmabbildung: Flussdokument mit aktivierten Bindestrichen](~/add/media/flowdoc-hyphenenabled.png "Bildschirmabbildung: Flussdokument mit aktivierten Bindestrichen")  
+  
+ Die folgende Abbildung zeigt, wie die gleiche <xref:System.Windows.Documents.FlowDocument> gerendert wird, mit der Standardeinstellung von <xref:System.Windows.Documents.FlowDocument.IsHyphenationEnabled%2A> = `false`.  
+  
+ ![Bildschirmabbildung: Flussdokument mit deaktivierten Bindestrichen](~/add/media/flowdoc-hyphendisabled.png "Bildschirmabbildung: Flussdokument mit deaktivierten Bindestrichen")  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.IsHyphenationEnabled%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentHyphenate](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumenthyphenate)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentHyphenate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumenthyphenate)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsHyphenationEnabledProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsHyphenationEnabledProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsHyphenationEnabledProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.FlowDocument.IsHyphenationEnabledProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.FlowDocument.IsHyphenationEnabled" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOptimalParagraphEnabled">
+      <MemberSignature Language="C#" Value="public bool IsOptimalParagraphEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOptimalParagraphEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FlowDocument.IsOptimalParagraphEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob eine optimale Absatzlayout aktiviert oder deaktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn eine optimale Absatzlayout aktiviert ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Optimale Absatzlayout ist ein Feature, das die Absätze in der <xref:System.Windows.Documents.FlowDocument> , dass Leerraum möglichst gleichmäßig verteilt wird.  Theoretisch, bietet dies eine optimale Übersichtlichkeit durch die Beseitigung von irritierende Leerzeichen, die mit Zeile ausgerichteten Text und andere Routinen Layout auftreten können.  Optimale Absatzlayout ist vor allem effizient, wenn mit der automatischen Silbentrennung (dargestellt durch die <xref:System.Windows.Documents.FlowDocument.IsHyphenationEnabled%2A> Eigenschaft).  
+  
+<a name="dependencyPropertyInfo_Opt"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.FlowDocument.IsOptimalParagraphEnabledProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.IsOptimalParagraphEnabled%2A> Attribut des ein <xref:System.Windows.Documents.FlowDocument> Element.  
+  
+ [!code-xaml[FlowDocumentSnippets#_FlowDocumentHyphenateXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_flowdocumenthyphenatexaml)]  
+  
+ Die folgende Abbildung zeigt, wie das vorherige <xref:System.Windows.Documents.FlowDocument> rendert.  
+  
+ ![Bildschirmabbildung: Flussdokument mit aktivierten Bindestrichen](~/add/media/flowdoc-hyphenenabled.png "Bildschirmabbildung: Flussdokument mit aktivierten Bindestrichen")  
+  
+ Die folgende Abbildung zeigt, wie die gleiche <xref:System.Windows.Documents.FlowDocument> gerendert wird, mit der Standardeinstellung von <xref:System.Windows.Documents.FlowDocument.IsOptimalParagraphEnabled%2A> = `false`.  
+  
+ ![Bildschirmabbildung: Flussdokument mit deaktivierten Bindestrichen](~/add/media/flowdoc-hyphendisabled.png "Bildschirmabbildung: Flussdokument mit deaktivierten Bindestrichen")  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.IsOptimalParagraphEnabled%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentHyphenate](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumenthyphenate)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentHyphenate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumenthyphenate)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOptimalParagraphEnabledProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsOptimalParagraphEnabledProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsOptimalParagraphEnabledProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.FlowDocument.IsOptimalParagraphEnabledProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.FlowDocument.IsOptimalParagraphEnabled" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineHeight">
+      <MemberSignature Language="C#" Value="public double LineHeight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 LineHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FlowDocument.LineHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.LengthConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Höhe jeder Inhaltszeile ab bzw. legt diese fest.</summary>
+        <value>Die Höhe der einzelnen Zeilen in geräteunabhängigen Pixeln im Bereich von 0,0034 bis 160000. Der Wert <see cref="F:System.Double.NaN" /> (entspricht dem Attributwert "<c>automatisch</c>") wird die Zeilenhöhe automatisch anhand der aktuellen Schriftartmerkmale bestimmt. Die Standardeinstellung ist <see cref="F:System.Double.NaN" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Ändern dieses Werts ändert sich nicht auf die Höhe des zugehörigen Texts; Stattdessen ändert sich die Höhe der Zeile, die den Text enthält. Um die Größe des Texts zu ändern, verwenden die <xref:System.Windows.Documents.FlowDocument.FontSize%2A> Eigenschaft.  
+  
+ Zusätzlich zu dieser Eigenschaft, die das Layout der Zeilen in einer <xref:System.Windows.Documents.FlowDocument> hat Auswirkungen auf die <xref:System.Windows.Documents.FlowDocument.LineStackingStrategy%2A> Eigenschaft.  
+  
+<a name="xamlAttributeUsage_LineHeight"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object LineHeight="double"/>  
+- or -  
+<object LineHeight="qualifiedDouble"/>  
+- or -  
+<object LineHeight="Auto"/>  
+```  
+  
+<a name="xamlValues_LineHeight"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *double*  
+ <xref:System.Double>  
+  
+ Die Zeichenfolgendarstellung einer <xref:System.Double> Wert größer als oder gleich `0.0034` und kleiner oder dann `160000`. Ein nicht qualifizierter Wert wird in geräteunabhängigen Pixeln gemessen. Zeichenfolgen müssen nicht explizit Dezimaltrennzeichen enthalten.  
+  
+ *qualifiedDouble*  
+ Ein *doppelte* Wert wie oben beschrieben (ausgenommen `Auto`) gefolgt von einem der folgenden Einheitenbezeichner: `px`, `in`, `cm`, `pt`.  
+  
+ `px`(Standard)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`ist Zoll. 1 In == 96px  
+  
+ `cm`ist Zentimeter an. 1cm==(96/2.54) px  
+  
+ `pt`ist die Punkte. 1pt==(96/72) px  
+  
+ Auto  
+ Bewirkt, dass die Zeilenhöhe automatisch anhand der aktuellen Schriftartmerkmale bestimmt.  Entspricht einem Eigenschaftswert des <xref:System.Double.NaN?displayProperty=nameWithType>.  
+  
+<a name="dependencyPropertyInfo_LineHeight"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.FlowDocument.LineHeightProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.LineHeight%2A> Attribut des ein <xref:System.Windows.Documents.FlowDocument> Element.  
+  
+ [!code-xaml[FlowDocumentSnippets#_FlowDocumentLineHeightXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_flowdocumentlineheightxaml)]  
+  
+ Die folgende Abbildung zeigt, wie das vorherige <xref:System.Windows.Documents.FlowDocument> rendert.  
+  
+ ![Bildschirmabbildung: FlowDocument LineHeight](~/add/media/flowdocument-lineheight.png "Bildschirmabbildung: FlowDocument LineHeight")  
+  
+ Die folgende Abbildung zeigt, wie die gleiche <xref:System.Windows.Documents.FlowDocument> gerendert wird, mit der Standardeinstellung von <xref:System.Windows.Documents.FlowDocument.LineHeight%2A> = <xref:System.Double.NaN?displayProperty=nameWithType>.  
+  
+ ![Bildschirmabbildung: FlowDocument LineHeight Standard](~/add/media/flowdocument-lineheightdefault.png "Bildschirmabbildung: FlowDocument LineHeight Standard")  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.LineHeight%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentLineHeight](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentlineheight)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentLineHeight](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentlineheight)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <see cref="P:System.Windows.Controls.TextBlock.LineHeight" />wird auf einen nicht positiven Wert festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LineHeightProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty LineHeightProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty LineHeightProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.FlowDocument.LineHeightProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.FlowDocument.LineHeight" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineStackingStrategy">
+      <MemberSignature Language="C#" Value="public System.Windows.LineStackingStrategy LineStackingStrategy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.LineStackingStrategy LineStackingStrategy" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FlowDocument.LineStackingStrategy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LineStackingStrategy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der Mechanismus, mit dem eine zeilenbox bestimmt wird, für jede Textzeile in der <see cref="T:System.Windows.Documents.FlowDocument" />.</summary>
+        <value>Eines der <see cref="T:System.Windows.LineStackingStrategy" /> Werte, der angibt, der Mechanismus, mit dem eine zeilenbox bestimmt wird, für jede Textzeile in der <see cref="T:System.Windows.Documents.FlowDocument" />. Die Standardeinstellung ist <see cref="F:System.Windows.LineStackingStrategy.MaxHeight" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_LineStackingStrategy"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.FlowDocument.LineStackingStrategyProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Controls.TextBlock.LineStackingStrategy%2A> -Eigenschaft können Sie bestimmen, wie die Zeilenfelder für Textzeilen erstellt werden ein <xref:System.Windows.Controls.TextBlock>. Die erste <xref:System.Windows.Controls.TextBlock> verfügt über eine <xref:System.Windows.Controls.TextBlock.LineStackingStrategy%2A> Wert <xref:System.Windows.LineStackingStrategy.MaxHeight> und das zweite <xref:System.Windows.Controls.TextBlock> hat den Wert <xref:System.Windows.LineStackingStrategy.BlockLineHeight>.  
+  
+ [!code-xaml[FlowMiscSnippets_snip#LineStackingStrategyExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowMiscSnippets_snip/cs/linestackingstrategyexample.xaml#linestackingstrategyexamplewholepage)]  
+  
+ Die folgende Abbildung zeigt das Ergebnis des vorangehenden Codes.  
+  
+ ![Bildschirmabbildung: Vergleichen von LineStackingStrategy-Werten](~/add/media/flow-linestackingstrategy.gif "Bildschirmabbildung: Vergleichen von LineStackingStrategy-Werten")  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineStackingStrategyProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty LineStackingStrategyProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty LineStackingStrategyProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.FlowDocument.LineStackingStrategyProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.FlowDocument.LineStackingStrategy" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogicalChildren">
+      <MemberSignature Language="C#" Value="protected override System.Collections.IEnumerator LogicalChildren { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerator LogicalChildren" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FlowDocument.LogicalChildren" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der die logischen untergeordneten Elemente durchlaufen, kann die <see cref="T:System.Windows.Documents.FlowDocument" />.</summary>
+        <value>Ein Enumerator für die logischen untergeordneten Elemente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxPageHeight">
+      <MemberSignature Language="C#" Value="public double MaxPageHeight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 MaxPageHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FlowDocument.MaxPageHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.LengthConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Höhe für Seiten in einem <see cref="T:System.Windows.Documents.FlowDocument" />.</summary>
+        <value>Die maximale Höhe in geräteunabhängigen Pixeln für Seiten in der <see cref="T:System.Windows.Documents.FlowDocument" />. Die Standardeinstellung ist <see cref="F:System.Double.PositiveInfinity" /> (keine maximale Seitenhöhe).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn auf ein Kontinuum angezeigt der <xref:System.Windows.Documents.FlowDocument.MinPageHeight%2A> Eigenschaft hat Vorrang vor den <xref:System.Windows.Documents.FlowDocument.MaxPageHeight%2A> -Eigenschaft, die wiederum Vorrang vor der <xref:System.Windows.Documents.FlowDocument.PageHeight%2A> Eigenschaft. Wenn alle drei Eigenschaften auf einer gegebenen Seite festgelegt werden, ist dies die Reihenfolge, in der die Eigenschaften ausgewertet werden.  
+  
+ Diese Eigenschaft hat keine Wirkung, wenn <xref:System.Windows.Documents.FlowDocument.PageHeight%2A> festgelegt ist, um <xref:System.Double.NaN?displayProperty=nameWithType> (Auto).  
+  
+<a name="xamlAttributeUsage_MaxPageHeight"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object MaxPageHeight="double"/>  
+- or -  
+<object MaxPageHeight="qualifiedDouble"/>  
+```  
+  
+<a name="xamlValues_MaxPageHeight"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *double*  
+ <xref:System.Double>  
+  
+ Die Zeichenfolgendarstellung einer <xref:System.Double> Wert größer als 0,0 jedoch kleiner als oder gleich <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>. Ein nicht qualifizierter Wert wird in geräteunabhängigen Pixeln gemessen. Zeichenfolgen müssen nicht explizit Dezimaltrennzeichen enthalten.  
+  
+ *qualifiedDouble*  
+ Ein *doppelte* Wert, wie oben beschrieben, gefolgt von einem der folgenden Einheitenbezeichner: `px`, `in`, `cm`, `pt`.  
+  
+ `px`(Standard)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`ist Zoll. 1 In == 96px  
+  
+ `cm`ist Zentimeter an. 1cm==(96/2.54) px  
+  
+ `pt`ist die Punkte. 1pt==(96/72) px  
+  
+<a name="dependencyPropertyInfo_MaxPageHeight"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.FlowDocument.MaxPageHeightProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.MaxPageHeight%2A> Attribut des ein <xref:System.Windows.Documents.FlowDocument> Element.  
+  
+ [!code-xaml[FlowDocumentSnippets#_FlowDocumentPageWidthHeightXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_flowdocumentpagewidthheightxaml)]  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.MaxPageHeight%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentPageWidthHeight](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentpagewidthheight)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentPageWidthHeight](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentpagewidthheight)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxPageHeightProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MaxPageHeightProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MaxPageHeightProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.FlowDocument.MaxPageHeightProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.FlowDocument.MaxPageHeight" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxPageWidth">
+      <MemberSignature Language="C#" Value="public double MaxPageWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 MaxPageWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FlowDocument.MaxPageWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.LengthConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Breite für Seiten in einem <see cref="T:System.Windows.Documents.FlowDocument" />.</summary>
+        <value>Die maximale Breite in geräteunabhängigen Pixeln für Seiten in der <see cref="T:System.Windows.Documents.FlowDocument" />. Die Standardeinstellung ist <see cref="F:System.Double.PositiveInfinity" /> (keine maximale Seitenbreite).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn auf ein Kontinuum angezeigt der <xref:System.Windows.Documents.FlowDocument.MinPageWidth%2A> Eigenschaft hat Vorrang vor den <xref:System.Windows.Documents.FlowDocument.MaxPageWidth%2A> -Eigenschaft, die wiederum Vorrang vor der <xref:System.Windows.Documents.FlowDocument.PageWidth%2A> Eigenschaft. Wenn alle drei Eigenschaften auf einer gegebenen Seite festgelegt werden, ist dies die Reihenfolge, in der die Eigenschaften ausgewertet werden.  
+  
+ Diese Eigenschaft hat keine Wirkung, wenn <xref:System.Windows.Documents.FlowDocument.PageWidth%2A> festgelegt ist, um <xref:System.Double.NaN?displayProperty=nameWithType> (Auto).  
+  
+<a name="xamlAttributeUsage_MaxPageWidth"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object MaxPageWidth="double"/>  
+- or -  
+<object MaxPageWidth="qualifiedDouble"/>  
+```  
+  
+<a name="xamlValues_MaxPageWidth"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *double*  
+ <xref:System.Double>  
+  
+ Die Zeichenfolgendarstellung einer <xref:System.Double> Wert größer als 0,0 jedoch kleiner als oder gleich <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>. Ein nicht qualifizierter Wert wird in geräteunabhängigen Pixeln gemessen. Zeichenfolgen müssen nicht explizit Dezimaltrennzeichen enthalten.  
+  
+ *qualifiedDouble*  
+ Ein *doppelte* Wert, wie oben beschrieben, gefolgt von einem der folgenden Einheitenbezeichner: `px`, `in`, `cm`, `pt`.  
+  
+ `px`(Standard)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`ist Zoll. 1 In == 96px  
+  
+ `cm`ist Zentimeter an. 1cm==(96/2.54) px  
+  
+ `pt`ist die Punkte. 1pt==(96/72) px  
+  
+<a name="dependencyPropertyInfo_MaxPageWidth"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.FlowDocument.MaxPageWidthProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.MaxPageWidth%2A> Attribut des ein <xref:System.Windows.Documents.FlowDocument> Element.  
+  
+ [!code-xaml[FlowDocumentSnippets#_FlowDocumentPageWidthHeightXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_flowdocumentpagewidthheightxaml)]  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.MaxPageWidth%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentPageWidthHeight](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentpagewidthheight)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentPageWidthHeight](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentpagewidthheight)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxPageWidthProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MaxPageWidthProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MaxPageWidthProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.FlowDocument.MaxPageWidthProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.FlowDocument.MaxPageWidth" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinPageHeight">
+      <MemberSignature Language="C#" Value="public double MinPageHeight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 MinPageHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FlowDocument.MinPageHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.LengthConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die minimale Höhe für Seiten in einem <see cref="T:System.Windows.Documents.FlowDocument" />.</summary>
+        <value>Die minimale Höhe in geräteunabhängigen Pixeln für Seiten in der <see cref="T:System.Windows.Documents.FlowDocument" />. Der Standardwert ist 0,0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn auf ein Kontinuum angezeigt der <xref:System.Windows.Documents.FlowDocument.MinPageHeight%2A> Eigenschaft hat Vorrang vor den <xref:System.Windows.Documents.FlowDocument.MaxPageHeight%2A> -Eigenschaft, die wiederum Vorrang vor der <xref:System.Windows.Documents.FlowDocument.PageHeight%2A> Eigenschaft. Wenn alle drei Eigenschaften auf einer gegebenen Seite festgelegt werden, ist dies die Reihenfolge, in der die Eigenschaften ausgewertet werden.  
+  
+ Diese Eigenschaft hat keine Wirkung, wenn <xref:System.Windows.Documents.FlowDocument.PageHeight%2A> festgelegt ist, um <xref:System.Double.NaN?displayProperty=nameWithType> (Auto).  
+  
+<a name="xamlAttributeUsage_MinPageHeight"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object MinPageHeight="double"/>  
+- or -  
+<object MinPageHeight="qualifiedDouble"/>  
+```  
+  
+<a name="xamlValues_MinPageHeight"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *double*  
+ <xref:System.Double>  
+  
+ Die Zeichenfolgendarstellung einer <xref:System.Double> Wert größer als 0,0 jedoch kleiner als oder gleich <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>. Ein nicht qualifizierter Wert wird in geräteunabhängigen Pixeln gemessen. Zeichenfolgen müssen nicht explizit Dezimaltrennzeichen enthalten.  
+  
+ *qualifiedDouble*  
+ Ein *doppelte* Wert, wie oben beschrieben, gefolgt von einem der folgenden Einheitenbezeichner: `px`, `in`, `cm`, `pt`.  
+  
+ `px`(Standard)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`ist Zoll. 1 In == 96px  
+  
+ `cm`ist Zentimeter an. 1cm==(96/2.54) px  
+  
+ `pt`ist die Punkte. 1pt==(96/72) px  
+  
+<a name="dependencyPropertyInfo_MinPageHeight"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.FlowDocument.MinPageHeightProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.MinPageHeight%2A> Attribut des ein <xref:System.Windows.Documents.FlowDocument> Element.  
+  
+ [!code-xaml[FlowDocumentSnippets#_FlowDocumentPageWidthHeightXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_flowdocumentpagewidthheightxaml)]  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.MinPageHeight%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentPageWidthHeight](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentpagewidthheight)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentPageWidthHeight](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentpagewidthheight)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinPageHeightProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MinPageHeightProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MinPageHeightProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.FlowDocument.MinPageHeightProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.FlowDocument.MinPageHeight" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinPageWidth">
+      <MemberSignature Language="C#" Value="public double MinPageWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 MinPageWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FlowDocument.MinPageWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.LengthConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Mindestbreite für Seiten in einem <see cref="T:System.Windows.Documents.FlowDocument" />.</summary>
+        <value>Die minimale Breite in geräteunabhängigen Pixeln für Seiten in der <see cref="T:System.Windows.Documents.FlowDocument" />. Der Standardwert ist 0,0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn auf ein Kontinuum angezeigt der <xref:System.Windows.Documents.FlowDocument.MinPageWidth%2A> Eigenschaft hat Vorrang vor den <xref:System.Windows.Documents.FlowDocument.MaxPageWidth%2A> -Eigenschaft, die wiederum Vorrang vor der <xref:System.Windows.Documents.FlowDocument.PageWidth%2A> Eigenschaft. Wenn alle drei Eigenschaften auf einer gegebenen Seite festgelegt werden, ist dies die Reihenfolge, in der die Eigenschaften ausgewertet werden.  
+  
+ Diese Eigenschaft hat keine Wirkung, wenn <xref:System.Windows.Documents.FlowDocument.PageWidth%2A> festgelegt ist, um <xref:System.Double.NaN?displayProperty=nameWithType> (Auto).  
+  
+<a name="xamlAttributeUsage_MinPageWidth"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object MinPageWidth="double"/>  
+- or -  
+<object MinPageWidth="qualifiedDouble"/>  
+```  
+  
+<a name="xamlValues_MinPageWidth"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *double*  
+ <xref:System.Double>  
+  
+ Die Zeichenfolgendarstellung einer <xref:System.Double> Wert größer als 0,0 jedoch kleiner als oder gleich <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>. Ein nicht qualifizierter Wert wird in geräteunabhängigen Pixeln gemessen. Zeichenfolgen müssen nicht explizit Dezimaltrennzeichen enthalten.  
+  
+ *qualifiedDouble*  
+ Ein *doppelte* Wert, wie oben beschrieben, gefolgt von einem der folgenden Einheitenbezeichner: `px`, `in`, `cm`, `pt`.  
+  
+ `px`(Standard)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`ist Zoll. 1 In == 96px  
+  
+ `cm`ist Zentimeter an. 1cm==(96/2.54) px  
+  
+ `pt`ist die Punkte. 1pt==(96/72) px  
+  
+<a name="dependencyPropertyInfo_MinPageWidth"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.FlowDocument.MinPageWidthProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.MinPageWidth%2A> Attribut des ein <xref:System.Windows.Documents.FlowDocument> Element.  
+  
+ [!code-xaml[FlowDocumentSnippets#_FlowDocumentPageWidthHeightXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_flowdocumentpagewidthheightxaml)]  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.MinPageWidth%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentPageWidthHeight](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentpagewidthheight)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentPageWidthHeight](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentpagewidthheight)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinPageWidthProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MinPageWidthProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MinPageWidthProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.FlowDocument.MinPageWidthProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.FlowDocument.MinPageWidth" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.FlowDocument.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse bietet bestimmte <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> Implementierungen, um die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Infrastruktur.</summary>
+        <returns>Die typspezifische <see cref="T:System.Windows.Automation.Peers.AutomationPeer" />-Implementierung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Implementierung dieser Methode wird in der Regel Aufruf des Konstruktors einer bestimmten <xref:System.Windows.Automation.Peers.AutomationPeer> Implementierung und das Ergebnis zurückzugeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPropertyChanged">
+      <MemberSignature Language="C#" Value="protected override sealed void OnPropertyChanged (System.Windows.DependencyPropertyChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPropertyChanged(valuetype System.Windows.DependencyPropertyChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.FlowDocument.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.DependencyPropertyChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Argumente für das zugeordnete Ereignis.</param>
+        <summary>Wird aufgerufen, wenn die effektiven Werte mindestens einer für das Element vorhandenen Abhängigkeitseigenschaft geändert wurden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt <xref:System.Windows.FrameworkContentElement.OnPropertyChanged%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageHeight">
+      <MemberSignature Language="C#" Value="public double PageHeight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 PageHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FlowDocument.PageHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.LengthConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die bevorzugte Höhe für Seiten in einem <see cref="T:System.Windows.Documents.FlowDocument" />.</summary>
+        <value>Die bevorzugte Höhe in geräteunabhängigen Pixeln für Seiten in der <see cref="T:System.Windows.Documents.FlowDocument" />. Der Wert <see cref="F:System.Double.NaN" /> (entspricht dem Attributwert "<c>Auto</c>") wird die Seitenhöhe automatisch bestimmt werden soll. Die Standardeinstellung ist <see cref="F:System.Double.NaN" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn auf ein Kontinuum angezeigt der <xref:System.Windows.Documents.FlowDocument.MinPageHeight%2A> Eigenschaft hat Vorrang vor den <xref:System.Windows.Documents.FlowDocument.MaxPageHeight%2A> -Eigenschaft, die wiederum Vorrang vor der <xref:System.Windows.Documents.FlowDocument.PageHeight%2A> Eigenschaft. Wenn alle drei Eigenschaften auf einer gegebenen Seite festgelegt werden, ist dies die Reihenfolge, in der die Eigenschaften ausgewertet werden.  
+  
+<a name="xamlAttributeUsage_PageHeight"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object PageHeight="double"/>  
+- or -  
+<object PageHeight="qualifiedDouble"/>  
+- or -  
+<object PageHeight="Auto"/>  
+```  
+  
+<a name="xamlValues_PageHeight"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *double*  
+ <xref:System.Double>  
+  
+ Die Zeichenfolgendarstellung einer <xref:System.Double> Wert größer als 0,0 jedoch kleiner als oder gleich <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>. Ein nicht qualifizierter Wert wird in geräteunabhängigen Pixeln gemessen. Zeichenfolgen müssen nicht explizit Dezimaltrennzeichen enthalten.  
+  
+ *qualifiedDouble*  
+ Ein *doppelte* Wert, wie oben beschrieben, gefolgt von einem der folgenden Einheitenbezeichner: `px`, `in`, `cm`, `pt`.  
+  
+ `px`(Standard)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`ist Zoll. 1 In == 96px  
+  
+ `cm`ist Zentimeter an. 1cm==(96/2.54) px  
+  
+ `pt`ist die Punkte. 1pt==(96/72) px  
+  
+ *Auto*  
+ Bewirkt, dass die Seitenhöhe automatisch bestimmt werden soll.  Entspricht einem Eigenschaftswert des <xref:System.Double.NaN?displayProperty=nameWithType>.  
+  
+<a name="dependencyPropertyInfo_PageHeight"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.FlowDocument.PageHeightProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.PageHeight%2A> Attribut des ein <xref:System.Windows.Documents.FlowDocument> Element.  
+  
+ [!code-xaml[FlowDocumentSnippets#_FlowDocumentPageWidthHeightXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_flowdocumentpagewidthheightxaml)]  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.PageHeight%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentPageWidthHeight](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentpagewidthheight)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentPageWidthHeight](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentpagewidthheight)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageHeightProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PageHeightProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PageHeightProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.FlowDocument.PageHeightProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.FlowDocument.PageHeight" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PagePadding">
+      <MemberSignature Language="C#" Value="public System.Windows.Thickness PagePadding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Thickness PagePadding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FlowDocument.PagePadding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Thickness</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, mit dem die Größe des Abstands zwischen den Seitenbegrenzungen und dem Seiteninhalt angegeben wird, oder legt diesen Wert fest.</summary>
+        <value>Ein <see cref="T:System.Windows.Thickness" /> -Struktur, die den anzuwendenden Abstand in geräteunabhängigen Pixeln angibt. Der Standardwert ist die einheitliche Stärke 0 (null), also (0,0).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Documents.FlowDocument.PagePadding%2A>kann als Uniform in allen Richtungen beschrieben werden (`PagePadding="10"`), oder vier unterschiedliche Werte angegeben werden, die darstellen, links, oben, mit der rechten Maustaste und unabhängig Auffüllung unten (`PagePadding="5,0,10,20"`).  
+  
+ Eine angegebene abstandsstärke überschreitet die entsprechende Seite-Dimension (z. B. die Summe aus der linken und rechten Leerraums überschreitet die Seitenbreite), die Stärke des Abstands wird proportional reduziert werden, um nicht größer sein als die entsprechende Seite-Dimension .  
+  
+<a name="xamlAttributeUsage_PagePadding"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object PagePadding="uniformThickness"/>  
+- or -  
+<object PagePadding="independentThickness"/>  
+- or -  
+<object PagePadding="qualifiedUniformThickness"/>  
+- or -  
+<object PagePadding="qualifiedIndependentThickness"/>  
+```  
+  
+<a name="xamlValues_PagePadding"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *uniformThickness*  
+ Entspricht der Zeichenfolgendarstellung eines einzelnen <xref:System.Double> Wert gleichmäßig auf alle vier Stärke Dimensionen angewendet.  Z. B. einen Wert von `"10"` entspricht dem Wert `"10,10,10,10"`.  Ein nicht qualifizierter Wert wird in geräteunabhängigen Pixeln gemessen. Zeichenfolgen müssen nicht explizit Dezimaltrennzeichen enthalten.  
+  
+ *independentThickness*  
+ Entspricht der Zeichenfolgendarstellung von vier geordnete <xref:System.Double> Werten, die Dicke Dimensionen für Links, oben, mit der rechten Maustaste, und unten in dieser Reihenfolge.  Die vier Werte müssen durch Kommas getrennt werden; Leerzeichen sind nicht zulässig.  Beispielsweise 5,10,15,20 "" 5 Pixeln Abstand um links neben dem Inhalt, 10 Pixeln oben, 15 Pixel der Auffüllung rechts vom Inhalt und 20 Pixel Abstand unterhalb des Inhalts.  
+  
+ *qualifiedUniformThickness*  
+ Ein Wert von beschriebenen *UniformThickness* gefolgt von einem der folgenden Einheitenbezeichner: `px`, `in`.  
+  
+ `px`(Standard)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`ist Zoll. 1 In == 96px  
+  
+ Beispielsweise `"1in"` uniform Abstand von 1 Zoll in allen Richtungen bereitstellt.  
+  
+ *qualifiedIndependentThickness*  
+ Ein Wert von beschrieben *IndependentThickness*, wobei jeder unabhängigen Wert gefolgt von einem der folgenden Einheitenbezeichner: `px`, `in`.  
+  
+ `px`(Standard)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`ist Zoll. 1 In == 96px  
+  
+ Beispielsweise `"1.5in,0.8in,1.5in,0.8in"`.  Einheit-Spezifizierer möglicherweise gemischt oder aus einem oder mehreren Werten weggelassen werden.  
+  
+<a name="dependencyPropertyInfo_PagePadding"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.FlowDocument.PagePaddingProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+   
+  
+## Examples  
+ In den folgenden Beispielen werden verschiedene Möglichkeiten zum Festlegen der <xref:System.Windows.Documents.FlowDocument.PagePadding%2A> Attribut von einem <xref:System.Windows.Documents.FlowDocument> Element.  
+  
+ [!code-xaml[FlowDocumentSnippets#_FlowDocumentPaddingXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_flowdocumentpaddingxaml)]  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.PagePadding%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentPadding](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentpadding)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentPadding](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentpadding)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PagePaddingProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PagePaddingProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PagePaddingProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.FlowDocument.PagePaddingProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.FlowDocument.PagePadding" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageWidth">
+      <MemberSignature Language="C#" Value="public double PageWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 PageWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FlowDocument.PageWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.LengthConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die bevorzugte Breite für Seiten in einem <see cref="T:System.Windows.Documents.FlowDocument" />.</summary>
+        <value>Die bevorzugte Breite in geräteunabhängigen Pixeln für Seiten in der <see cref="T:System.Windows.Documents.FlowDocument" />. Der Wert <see cref="F:System.Double.NaN" /> (entspricht dem Attributwert "<c>automatisch</c>") wird die Seitenbreite automatisch bestimmt werden soll. Die Standardeinstellung ist <see cref="F:System.Double.NaN" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn auf ein Kontinuum angezeigt der <xref:System.Windows.Documents.FlowDocument.MinPageWidth%2A> Eigenschaft hat Vorrang vor den <xref:System.Windows.Documents.FlowDocument.MaxPageWidth%2A> -Eigenschaft, die wiederum Vorrang vor der <xref:System.Windows.Documents.FlowDocument.PageWidth%2A> Eigenschaft. Wenn alle drei Eigenschaften auf einer gegebenen Seite festgelegt werden, ist dies die Reihenfolge, in der die Eigenschaften ausgewertet werden.  
+  
+<a name="xamlAttributeUsage_PageWidth"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object PageWidth="double"/>  
+- or -  
+<object PageWidth="qualifiedDouble"/>  
+- or -  
+<object PageWidth="Auto"/>  
+```  
+  
+<a name="xamlValues_PageWidth"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *double*  
+ <xref:System.Double>  
+  
+ Die Zeichenfolgendarstellung einer <xref:System.Double> Wert größer als 0,0 jedoch kleiner als oder gleich <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>. Ein nicht qualifizierter Wert wird in geräteunabhängigen Pixeln gemessen. Zeichenfolgen müssen nicht explizit Dezimaltrennzeichen enthalten.  
+  
+ *qualifiedDouble*  
+ Ein *doppelte* Wert, wie oben beschrieben, gefolgt von einem der folgenden Einheitenbezeichner: `px`, `in`, `cm`, `pt`.  
+  
+ `px`(Standard)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`ist Zoll. 1 In == 96px  
+  
+ `cm`ist Zentimeter an. 1cm==(96/2.54) px  
+  
+ `pt`ist die Punkte. 1pt==(96/72) px  
+  
+ *Auto*  
+ Bewirkt, dass die Seitenbreite automatisch bestimmt werden soll.  Entspricht einem Eigenschaftswert des <xref:System.Double.NaN?displayProperty=nameWithType>.  
+  
+<a name="dependencyPropertyInfo_PageWidth"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.FlowDocument.PageWidthProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.PageWidth%2A> Attribut des ein <xref:System.Windows.Documents.FlowDocument> Element.  
+  
+ [!code-xaml[FlowDocumentSnippets#_FlowDocumentPageWidthHeightXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_flowdocumentpagewidthheightxaml)]  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.PageWidth%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentPageWidthHeight](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentpagewidthheight)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentPageWidthHeight](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentpagewidthheight)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageWidthProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PageWidthProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PageWidthProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.FlowDocument.PageWidthProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.FlowDocument.PageWidth" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDpi">
+      <MemberSignature Language="C#" Value="public void SetDpi (System.Windows.DpiScale dpiInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetDpi(valuetype System.Windows.DpiScale dpiInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.FlowDocument.SetDpi(System.Windows.DpiScale)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dpiInfo" Type="System.Windows.DpiScale" />
+      </Parameters>
+      <Docs>
+        <param name="dpiInfo">Die DPI-Einstellung, aus der ein <see cref="T:System.Windows.Media.Visual" /> oder ein <see cref="T:System.Windows.UIElement" /> gerendert wird.</param>
+        <summary>Legt den DPI-Wert für das FlowDocument fest, sodass dieses erneut berechnet und gerendert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sollte in pro-Monitor-DPI-Szenarien verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IServiceProvider.GetService">
+      <MemberSignature Language="C#" Value="object IServiceProvider.GetService (Type serviceType);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.IServiceProvider.GetService(class System.Type serviceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.FlowDocument.System#IServiceProvider#GetService(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">Ein Objekt, das den Typ des abzurufenden Dienstobjekts angibt.</param>
+        <summary>Ruft das Dienstobjekt des angegebenen Typs ab.</summary>
+        <returns>Ein Dienstobjekt vom Typ<paramref name="serviceType." />  
+  
+ - oder -   
+  
+ <see langword="null" />Es ist kein Dienstobjekt vom Typ <paramref name="serviceType" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Documents.IDocumentPaginatorSource.DocumentPaginator">
+      <MemberSignature Language="C#" Value="System.Windows.Documents.DocumentPaginator System.Windows.Documents.IDocumentPaginatorSource.DocumentPaginator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.DocumentPaginator System.Windows.Documents.IDocumentPaginatorSource.DocumentPaginator" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FlowDocument.System#Windows#Documents#IDocumentPaginatorSource#DocumentPaginator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.DocumentPaginator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Definiert das Quellobjekt, das tatsächliche Inhalt Paginierung ausführt.</summary>
+        <value>Das Objekt, das die Paginierung des tatsächlichen Inhalts ausführt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddChild">
+      <MemberSignature Language="C#" Value="void IAddChild.AddChild (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddChild(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.FlowDocument.System#Windows#Markup#IAddChild#AddChild(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das hinzuzufügende untergeordnete Objekt.</param>
+        <summary>Fügt ein untergeordnetes Objekt hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddText">
+      <MemberSignature Language="C#" Value="void IAddChild.AddText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.FlowDocument.System#Windows#Markup#IAddChild#AddText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der dem Objekt hinzuzufügende Text.</param>
+        <summary>Fügt dem Objekt den Textinhalt eines Knotens hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextAlignment">
+      <MemberSignature Language="C#" Value="public System.Windows.TextAlignment TextAlignment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.TextAlignment TextAlignment" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FlowDocument.TextAlignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.TextAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der die horizontale Ausrichtung von Textinhalten angibt, oder legt diesen fest.</summary>
+        <value>Eines der <see cref="T:System.Windows.TextAlignment" /> Werte, die die gewünschte Ausrichtung angeben. Die Standardeinstellung ist <see cref="F:System.Windows.TextAlignment.Left" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_TextAlignment"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.FlowDocument.TextAlignmentProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.TextAlignment%2A> Attribut des ein <xref:System.Windows.Documents.FlowDocument> Element.  
+  
+ [!code-xaml[FlowDocumentSnippets#_FlowDocumentTextAlignmentXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_flowdocumenttextalignmentxaml)]  
+  
+ Die folgende Abbildung zeigt, wie das vorherige <xref:System.Windows.Documents.FlowDocument> rendert mit <xref:System.Windows.TextAlignment.Left> textausrichtung (Standard).  
+  
+ ![Bildschirmabbildung: TextAlign-Eigenschaftswert Left](~/add/media/flowdoc-textalign-left.png "Bildschirmabbildung: TextAlign-Eigenschaftswert Left")  
+  
+ Die folgende Abbildung zeigt, wie die gleiche <xref:System.Windows.Documents.FlowDocument> mit rendert <xref:System.Windows.TextAlignment.Right> textausrichtung.  
+  
+ ![Bildschirmabbildung: TextAlign-Wert rechts](~/add/media/flowdoc-textalign-right.png "Bildschirmabbildung: TextAlign-Wert, der rechts")  
+  
+ Die folgende Abbildung zeigt, wie die gleiche <xref:System.Windows.Documents.FlowDocument> mit rendert <xref:System.Windows.TextAlignment.Center> textausrichtung.  
+  
+ ![Bildschirmabbildung: TextAlign-Eigenschaftswert Center](~/add/media/flowdoc-textalign-center.png "Bildschirmabbildung: TextAlign-Eigenschaftswert Center")  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Documents.FlowDocument.TextAlignment%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentTextAlignment](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumenttextalignment)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentTextAlignment](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumenttextalignment)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextAlignmentProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TextAlignmentProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TextAlignmentProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.FlowDocument.TextAlignmentProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.FlowDocument.TextAlignment" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextEffects">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.TextEffectCollection TextEffects { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.TextEffectCollection TextEffects" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FlowDocument.TextEffects" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.TextEffectCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Auswirkungen auf den Text anzuwendende eine <see cref="T:System.Windows.Documents.FlowDocument" />.</summary>
+        <value>Ein <see cref="T:System.Windows.Media.TextEffectCollection" /> mit einer oder mehreren <see cref="T:System.Windows.Media.TextEffect" /> Objekten, die Auswirkungen auf den Text anzuwendende definieren die <see cref="T:System.Windows.Documents.FlowDocument" />. Die Standardeinstellung ist <see langword="null" /> (keine Effekte angewendet).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_TextEffects"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Documents.FlowDocument.TextEffectsProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextEffectsProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TextEffectsProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TextEffectsProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.FlowDocument.TextEffectsProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Documents.FlowDocument.TextEffects" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Typography">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.Typography Typography { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.Typography Typography" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.FlowDocument.Typography" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.Typography</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die derzeit gültigen Typografievarianten für den Textinhalt der <see cref="T:System.Windows.Documents.FlowDocument" />.</summary>
+        <value>Ein <see cref="T:System.Windows.Documents.Typography" /> Objekt, das die derzeit gültigen Typografie Variationen angibt. Eine Liste der Standardwerte für die Typografie, finden Sie unter <see cref="T:System.Windows.Documents.Typography" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Documents.FlowDocument.Typography%2A> Eigenschaft gilt nur für [!INCLUDE[TLA#tla_opentype](~/includes/tlasharptla-opentype-md.md)] Schriftarten. Eine Variante Typografie wirkt sich nicht auf Schriftarten, die sich bei der Variante nicht unterstützen.  Weitere Informationen zu diesem Thema finden Sie unter [Typografie in WPF](~/docs/framework/wpf/advanced/typography-in-wpf.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie verschiedene Typografievarianten mit Festlegen der <xref:System.Windows.Documents.FlowDocument.Typography%2A> Attribut eine <xref:System.Windows.Documents.FlowDocument> Element.  
+  
+ [!code-xaml[FlowDocumentSnippets#_FlowDocumentTypographyXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_flowdocumenttypographyxaml)]  
+  
+ Das folgende Beispiel zeigt, wie Sie verschiedene Aspekte der Festlegen der <xref:System.Windows.Documents.FlowDocument.Typography%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentTypography](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumenttypography)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentTypography](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumenttypography)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

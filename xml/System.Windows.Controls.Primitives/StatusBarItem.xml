@@ -1,0 +1,76 @@
+<Type Name="StatusBarItem" FullName="System.Windows.Controls.Primitives.StatusBarItem">
+  <TypeSignature Language="C#" Value="public class StatusBarItem : System.Windows.Controls.ContentControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi StatusBarItem extends System.Windows.Controls.ContentControl" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Primitives.StatusBarItem" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.ContentControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.Inherit)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Element von einem <see cref="T:System.Windows.Controls.Primitives.StatusBar" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Controls.Primitives.StatusBarItem> ist eine <xref:System.Windows.Controls.ContentControl>, was bedeutet, dass es ein einzelnes Objekt eines beliebigen Typs (z. B. eine Zeichenfolge, ein Bild oder ein Bereich) enthalten kann. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Windows.Controls.ContentControl>-Klasse.  
+  
+ <xref:System.Windows.Controls.Primitives.StatusBarItem>Objekte werden zum Definieren von Elementen in einem <xref:System.Windows.Controls.Primitives.StatusBar> Steuerelement. Ein <xref:System.Windows.Controls.Primitives.StatusBar> ist ein horizontaler Bereich am unteren Rand einer übergeordneten Fenster, in dem eine Anwendung Statusinformationen anzeigen kann. Ein <xref:System.Windows.Controls.Primitives.StatusBarItem> darf komplexen Inhalt, z. B. Grafiken und Text, und Ereignisse empfangen werden können. Die <xref:System.Windows.Controls.Primitives.StatusBar> und <xref:System.Windows.Controls.Primitives.StatusBarItem> Objekte können nicht über den Tastaturfokus erhalten.  
+  
+ Abhängigkeitseigenschaften für dieses Steuerelement können vom Standardformat für das Steuerelement festgelegt werden.  Wenn eine Eigenschaft von einem Standardformat festgelegt ist, kann die Eigenschaft von seinem Standardwert ändern, wenn das Steuerelement in der Anwendung angezeigt wird. Das Standardformat wird bestimmt, welche desktop Design verwendet wird, wenn die Anwendung ausgeführt wird.  Weitere Informationen finden Sie unter [Standard-WPF-Designs](http://go.microsoft.com/fwlink/?LinkID=158252).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Controls.Primitives.StatusBar>.  
+  
+ [!code-xaml[StatusBar_Snips#1](~/samples/snippets/csharp/VS_Snippets_Wpf/StatusBar_Snips/CS/Window1.xaml#1)]   
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StatusBarItem ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.StatusBarItem.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.Primitives.StatusBarItem" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.StatusBarItem.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> für die <see cref="T:System.Windows.Controls.Primitives.StatusBarItem" />.</summary>
+        <returns>Ein <see cref="T:System.Windows.Automation.Peers.StatusBarItemAutomationPeer" /> dafür <see cref="T:System.Windows.Controls.Primitives.StatusBarItem" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

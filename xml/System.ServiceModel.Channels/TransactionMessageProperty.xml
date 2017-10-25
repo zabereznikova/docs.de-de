@@ -1,0 +1,77 @@
+<Type Name="TransactionMessageProperty" FullName="System.ServiceModel.Channels.TransactionMessageProperty">
+  <TypeSignature Language="C#" Value="public sealed class TransactionMessageProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TransactionMessageProperty extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.TransactionMessageProperty" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht einen benutzerdefinierten Kanal, der einen proprietären transaktionsflussmechanismus verwendet, seine Transaktion in der Windows Communication Foundation (WCF)-Framework einzufügen. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse ermöglicht es Kanalentwicklern Dritter, die einen proprietären Transaktionsflussmechanismus für ihren Kanal verwenden, ihre Transaktion in den ServiceModel-Framework einzufügen. Die Transaktion wird dann verwendet, wenn die Dienstmethode ausgeführt wird. Dieser Mechanismus kann nicht in Verbindung mit <xref:System.ServiceModel.TransactionFlowAttribute> verwendet werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Set">
+      <MemberSignature Language="C#" Value="public static void Set (System.Transactions.Transaction transaction, System.ServiceModel.Channels.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Set(class System.Transactions.Transaction transaction, class System.ServiceModel.Channels.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.TransactionMessageProperty.Set(System.Transactions.Transaction,System.ServiceModel.Channels.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transaction" Type="System.Transactions.Transaction" />
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+      </Parameters>
+      <Docs>
+        <param name="transaction">Die Transaktion, die verwendet wird, wenn die Dienstmethode ausgeführt wird.</param>
+        <param name="message">Die eingehende Nachricht, die dazu führt, dass die Dienstmethode aufgerufen wird.</param>
+        <summary>Richtet die Transaktion ein, die verwendet wird, wenn die Dienstmethode ausgeführt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein benutzerdefinierter eingehender Kanal (der Teil des Kanalstapels des Diensts ist) kann diese Methode aufrufen, um eine <xref:System.ServiceModel.Channels.TransactionMessageProperty>, die den `transaction`-Parameter enthält, zur `Properties`-Auflistung des `message`-Parameters hinzuzufügen. Hierdurch erhält die Infrastruktur eine Aufforderung zur Erstellung einer <xref:System.Transactions.TransactionScope>-Instanz mithilfe der übergebenen Transaktion, bevor die Dienstmethode, die in der eingehenden Nachricht angefordert wurde, aufgerufen wird. Für die Dienstmethode muss die <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A>-Eigenschaft auf `true` gesetzt sein.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ServiceModel.FaultException">Die Eigenschaft wurde bereits in der <paramref name="message" /> eingerichtet.</exception>
+        <exception cref="T:System.Transactions.TransactionException">
+          Das Marshalling für diese <paramref name="transaction" /> muss rückgängig gemacht werden, und dieser Vorgang schlägt fehl.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Transaction">
+      <MemberSignature Language="C#" Value="public System.Transactions.Transaction Transaction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Transactions.Transaction Transaction" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.TransactionMessageProperty.Transaction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.Transaction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Transaktion ab, die verwendet wird, wenn die Dienstmethode ausgeführt wird.</summary>
+        <value>Eine <see cref="T:System.Transactions.Transaction" />-Instanz, die verwendet wird, wenn die Dienstmethode ausgeführt wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

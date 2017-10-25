@@ -1,0 +1,1129 @@
+<Type Name="ScrollBar" FullName="System.Windows.Controls.Primitives.ScrollBar">
+  <TypeSignature Language="C#" Value="public class ScrollBar : System.Windows.Controls.Primitives.RangeBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi ScrollBar extends System.Windows.Controls.Primitives.RangeBase" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Primitives.ScrollBar" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Primitives.RangeBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.NeverLocalize)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_Track", Type=typeof(System.Windows.Controls.Primitives.Track))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Steuerelement, das eine Bildlaufleiste enthält, die einem verschiebbaren <see cref="T:System.Windows.Controls.Primitives.Thumb" /> , dessen Position einem Wert entspricht.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Abbildung zeigt eine <xref:System.Windows.Controls.Primitives.ScrollBar> Steuerelement.  
+  
+ ![Abbildung der Schiebeleiste](~/add/media/scrollbar-illustration.JPG "Scrollbar-Abbildung")  
+  
+ Die <xref:System.Windows.Controls.Primitives.ScrollBar> Steuerelement enthält eine <xref:System.Windows.Controls.Primitives.Track> Steuerelement. Die <xref:System.Windows.Controls.Primitives.Track> -Steuerelement besteht aus einem <xref:System.Windows.Controls.Primitives.Thumb> -Steuerelement und zwei <xref:System.Windows.Controls.Primitives.RepeatButton> Steuerelemente. Können Sie zu- oder abnimmt der <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> Eigenschaft von der <xref:System.Windows.Controls.Primitives.ScrollBar> Steuerelement durch Drücken der <xref:System.Windows.Controls.Primitives.RepeatButton> steuert, oder Verschieben von der <xref:System.Windows.Controls.Primitives.Thumb>. Der Standardwertebereich für die <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> Eigenschaft liegt zwischen 0 und 1. Die <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> repräsentiert die lineare Entfernung von der <xref:System.Windows.Controls.Primitives.Thumb> zwischen den Endpunkten der <xref:System.Windows.Controls.Primitives.ScrollBar>. Sie können den Standardwertebereich der Werte ändern, durch Festlegen der <xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A> und <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A> Eigenschaften. Die <xref:System.Windows.Controls.Primitives.ScrollBar.Orientation%2A> Eigenschaft bestimmt, ob die <xref:System.Windows.Controls.Primitives.ScrollBar> horizontal oder vertikal angezeigt wird und Sie müssen diese Eigenschaft für definieren die <xref:System.Windows.Controls.Primitives.ScrollBar> Steuerelement angezeigt.  
+  
+ Die <xref:System.Windows.Controls.Primitives.Track> in einem <xref:System.Windows.Controls.Primitives.ScrollBar> ausgerichtet ist, sodass die Werte von oben nach unten bei einem vertikalen zu <xref:System.Windows.Controls.Primitives.ScrollBar> oder von links nach rechts bei einem horizontalen <xref:System.Windows.Controls.Primitives.ScrollBar>.  
+  
+ Die <xref:System.Windows.Controls.Primitives.Track> Eigenschaften in der folgenden Tabelle sind die Bindungsziele für die für den entsprechenden <xref:System.Windows.Controls.Primitives.ScrollBar> Eigenschaften bei der <xref:System.Windows.Controls.Primitives.ScrollBar.Track%2A> -Eigenschaft nicht explizit definiert. Wenn Sie explizit definieren die <xref:System.Windows.Controls.Primitives.ScrollBar.Track%2A> -Eigenschaft, die Bindung erfolgt nicht.  
+  
+|<xref:System.Windows.Controls.Primitives.Track>-Eigenschaft|<xref:System.Windows.Controls.Primitives.ScrollBar>-Eigenschaft|  
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
+|<xref:System.Windows.Controls.Primitives.Track.Maximum%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A?displayProperty=nameWithType>|  
+|<xref:System.Windows.Controls.Primitives.Track.Minimum%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A?displayProperty=nameWithType>|  
+|<xref:System.Windows.Controls.Primitives.Track.Value%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.Primitives.RangeBase.Value%2A?displayProperty=nameWithType>|  
+  
+ Sie erreichen die <xref:System.Windows.Controls.Primitives.Track> Kontrolle über eine <xref:System.Windows.Controls.Primitives.ScrollBar> -Steuerelement mithilfe der <xref:System.Windows.Controls.Primitives.ScrollBar.Track%2A> Eigenschaft.  
+  
+ Anzuzeigende <xref:System.Windows.UIElement> -Inhalt in einem Feld, die Bildlaufleisten, verwendet die <xref:System.Windows.Controls.ScrollViewer> Steuerelement.  
+  
+## <a name="customizing-the-scrollbar-control"></a>Anpassen der ScrollBar-Steuerelement  
+ Zum Anwenden der gleichen eigenschafteneinstellungen mit mehreren <xref:System.Windows.Controls.Primitives.ScrollBar> -Steuerelemente verwenden die <xref:System.Windows.FrameworkElement.Style%2A> Eigenschaft. Sie können den Standardwert ändern <xref:System.Windows.Controls.ControlTemplate> auf dem Steuerelement ein einzigartiges aussehen zu verleihen. Weitere Informationen zum Erstellen einer <xref:System.Windows.Controls.ControlTemplate>, finden Sie unter [Anpassen der Darstellung von einem vorhandenen Steuerelement durch Erstellen einer ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  Um anzuzeigen, die Teile und Zustände, die spezifisch für die <xref:System.Windows.Controls.Primitives.ScrollBar>, finden Sie unter [ScrollBar-Stile und Vorlagen](~/docs/framework/wpf/controls/scrollbar-styles-and-templates.md).  
+  
+ Abhängigkeitseigenschaften für dieses Steuerelement können vom Standardformat für das Steuerelement festgelegt werden.  Wenn eine Eigenschaft von einem Standardformat festgelegt ist, kann die Eigenschaft von seinem Standardwert ändern, wenn das Steuerelement in der Anwendung angezeigt wird. Das Standardformat wird bestimmt, welche desktop Design verwendet wird, wenn die Anwendung ausgeführt wird.  Weitere Informationen finden Sie unter [Standard-WPF-Designs](http://go.microsoft.com/fwlink/?LinkID=158252).  
+  
+> [!NOTE]
+>  Festlegen einer visuellen Eigenschaft haben nur Auswirkungen, wenn diese Eigenschaft sowohl in vorhanden ist <xref:System.Windows.Controls.Primitives.ScrollBar> Steuerelement die Standardvorlage und festgelegt ist, mit ein. Sie finden eine Liste der Eigenschaften visueller Elemente im Abschnitt "Ändern der visuellen Struktur eines Steuerelements" [Anpassen der Darstellung von einem vorhandenen Steuerelement durch Erstellen einer ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer horizontalen <xref:System.Windows.Controls.Primitives.ScrollBar> , besitzt einen Bereich von Werten zwischen 0 und 100.  
+  
+ [!code-xaml[ScrollBarSnips#ScrollBar](~/samples/snippets/csharp/VS_Snippets_Wpf/ScrollBarSnips/CSharp/Window1.xaml#scrollbar)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScrollBar ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ScrollBar.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.Primitives.ScrollBar" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeferScrollToHorizontalOffsetCommand">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.RoutedCommand DeferScrollToHorizontalOffsetCommand;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.RoutedCommand DeferScrollToHorizontalOffsetCommand" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ScrollBar.DeferScrollToHorizontalOffsetCommand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Befehl, der benachrichtigt den <see cref="T:System.Windows.Controls.ScrollViewer" /> , die der Benutzer zieht die <see cref="T:System.Windows.Controls.Primitives.Thumb" /> des horizontalen <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> auf den Wert, der im bereitgestellt wird <see cref="P:System.Windows.Input.ExecutedRoutedEventArgs.Parameter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Benutzer den Ziehpunkt des zieht eine <xref:System.Windows.Controls.Primitives.ScrollBar>, die <xref:System.Windows.Controls.Primitives.ScrollBar> Aufrufe <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> für die <xref:System.Windows.Controls.Primitives.ScrollBar.DeferScrollToHorizontalOffsetCommand>. Wenn <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> gibt `true`die <xref:System.Windows.Controls.Primitives.ScrollBar> führt den Befehl.  Wenn <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> gibt `false`, <xref:System.Windows.Controls.Primitives.ScrollBar> führt die <xref:System.Windows.Controls.Primitives.ScrollBar.ScrollToHorizontalOffsetCommand>.  
+  
+ Die <xref:System.Windows.Controls.ScrollViewer> mit diesem Befehl den verzögerten Bildlauf aktivieren. Beim <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A?displayProperty=nameWithType> ist `true` und ein Benutzer zieht die <xref:System.Windows.Controls.Primitives.Thumb> von der <xref:System.Windows.Controls.Primitives.ScrollBar>, der Inhalt des der <xref:System.Windows.Controls.ScrollViewer> wird nicht geändert werden, bis der Benutzer der <xref:System.Windows.Controls.Primitives.Thumb>. Falls verzögerte Bildlauf aktiviert ist, die <xref:System.Windows.Controls.Primitives.ScrollBar> führt die <xref:System.Windows.Controls.Primitives.ScrollBar.DeferScrollToHorizontalOffsetCommand> bei einem horizontalen <xref:System.Windows.Controls.Primitives.ScrollBar> Wenn der Benutzer zieht die <xref:System.Windows.Controls.Primitives.Thumb>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeferScrollToVerticalOffsetCommand">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.RoutedCommand DeferScrollToVerticalOffsetCommand;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.RoutedCommand DeferScrollToVerticalOffsetCommand" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ScrollBar.DeferScrollToVerticalOffsetCommand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Befehl, der benachrichtigt den <see cref="T:System.Windows.Controls.ScrollViewer" /> , die der Benutzer zieht die <see cref="T:System.Windows.Controls.Primitives.Thumb" /> des vertikalen <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> auf den Wert, der im bereitgestellt wird <see cref="P:System.Windows.Input.ExecutedRoutedEventArgs.Parameter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Benutzer den Ziehpunkt des zieht eine <xref:System.Windows.Controls.Primitives.ScrollBar>, die <xref:System.Windows.Controls.Primitives.ScrollBar> Aufrufe <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> für die <xref:System.Windows.Controls.Primitives.ScrollBar.DeferScrollToVerticalOffsetCommand>. Wenn <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> gibt `true`die <xref:System.Windows.Controls.Primitives.ScrollBar> führt den Befehl.  Wenn <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> gibt `false`, <xref:System.Windows.Controls.Primitives.ScrollBar> führt die <xref:System.Windows.Controls.Primitives.ScrollBar.ScrollToVerticalOffsetCommand>.  
+  
+ Die <xref:System.Windows.Controls.ScrollViewer> mit diesem Befehl den verzögerten Bildlauf aktivieren. Beim <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A?displayProperty=nameWithType> ist `true` und ein Benutzer zieht die <xref:System.Windows.Controls.Primitives.Thumb> von der <xref:System.Windows.Controls.Primitives.ScrollBar>, der Inhalt des der <xref:System.Windows.Controls.ScrollViewer> wird nicht geändert werden, bis der Benutzer der <xref:System.Windows.Controls.Primitives.Thumb>. Falls verzögerte Bildlauf aktiviert ist, die <xref:System.Windows.Controls.Primitives.ScrollBar> führt die <xref:System.Windows.Controls.Primitives.ScrollBar.DeferScrollToVerticalOffsetCommand> bei einem vertikalen <xref:System.Windows.Controls.Primitives.ScrollBar> Wenn der Benutzer zieht die <xref:System.Windows.Controls.Primitives.Thumb>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnabledCore">
+      <MemberSignature Language="C#" Value="protected override bool IsEnabledCore { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEnabledCore" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.ScrollBar.IsEnabledCore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> aktiviert ist, einem <see cref="T:System.Windows.Controls.ScrollViewer" /> und die Größe des Inhalts ist größer als der Anzeigebereich ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung legt <xref:System.Windows.Controls.Primitives.ScrollBar.IsEnabledCore%2A> auf `true` nur, wenn die <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A> Wert der <xref:System.Windows.Controls.Primitives.ScrollBar> ist größer als die <xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A> Wert und die <xref:System.Windows.Controls.Primitives.ScrollBar> aktiviert ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineDownCommand">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.RoutedCommand LineDownCommand;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.RoutedCommand LineDownCommand" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ScrollBar.LineDownCommand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Befehl, verschiebt eine <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> durch eine kleine Menge in vertikaler Richtung des zu erhöhenden Werts, der seine <see cref="T:System.Windows.Controls.Primitives.Track" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl erhöht die <xref:System.Windows.Controls.Primitives.Track.Value%2A> von der <xref:System.Windows.Controls.Primitives.Track> in der <xref:System.Windows.Controls.Primitives.ScrollBar> durch den Wert von der <xref:System.Windows.Controls.Primitives.RangeBase.SmallChange%2A> Eigenschaft.  
+  
+ Mit diesem Befehl tritt auf, wenn der Benutzer die nach-unten-Taste drückt.  
+  
+ Beim Implementieren einer <xref:System.Windows.Controls.Primitives.ScrollBar> als Teil einer <xref:System.Windows.Controls.ScrollViewer> -Steuerelement, die <xref:System.Windows.Controls.ScrollViewer> führt dieser Befehl.  
+  
+<a name="xamlTextUsage_LineDownCommand"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ `<`*Objekt* *Eigenschaft*`="`**ScrollBar.LineDownCommand**`"/>`  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie die <xref:System.Windows.Controls.Primitives.ScrollBar.LineDownCommand> in einem benutzerdefinierten <xref:System.Windows.Controls.Primitives.ScrollBar> Formatvorlage.  
+  
+ [!code-xaml[ScrollBarTemplateExample#LineDownCommand](~/samples/snippets/csharp/VS_Snippets_Wpf/ScrollBarTemplateExample/CS/Window1.xaml#linedowncommand)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineLeftCommand">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.RoutedCommand LineLeftCommand;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.RoutedCommand LineLeftCommand" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ScrollBar.LineLeftCommand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Befehl, verschiebt eine <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> durch eine kleine Menge in horizontaler Richtung kleiner werdender Werte von seiner <see cref="T:System.Windows.Controls.Primitives.Track" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl verringert die <xref:System.Windows.Controls.Primitives.Track.Value%2A> von der <xref:System.Windows.Controls.Primitives.Track> in der <xref:System.Windows.Controls.Primitives.ScrollBar> durch den Wert des der <xref:System.Windows.Controls.Primitives.RangeBase.SmallChange%2A> Eigenschaft.  
+  
+ Mit diesem Befehl tritt auf, wenn der Benutzer auf der linken Seite drückt <xref:System.Windows.Controls.Primitives.RepeatButton>.  
+  
+ Beim Implementieren einer <xref:System.Windows.Controls.Primitives.ScrollBar> als Teil einer <xref:System.Windows.Controls.ScrollViewer> -Steuerelement, die <xref:System.Windows.Controls.ScrollViewer> führt dieser Befehl.  
+  
+<a name="xamlTextUsage_LineLeftCommand"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ `<`*Objekt* *Eigenschaft*`="`**ScrollBar.LineLeftCommand**`"/>`  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie die <xref:System.Windows.Controls.Primitives.ScrollBar.LineLeftCommand> in einem benutzerdefinierten <xref:System.Windows.Controls.Primitives.ScrollBar> Formatvorlage.  
+  
+ [!code-xaml[ScrollBarTemplateExample#LineLeftCommand](~/samples/snippets/csharp/VS_Snippets_Wpf/ScrollBarTemplateExample/CS/Window1.xaml#lineleftcommand)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineRightCommand">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.RoutedCommand LineRightCommand;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.RoutedCommand LineRightCommand" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ScrollBar.LineRightCommand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Befehl, verschiebt eine <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> durch eine kleine Menge in horizontaler Richtung des zu erhöhenden Werts, der seine <see cref="T:System.Windows.Controls.Primitives.Track" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl erhöht die <xref:System.Windows.Controls.Primitives.Track.Value%2A> von der <xref:System.Windows.Controls.Primitives.Track> in der <xref:System.Windows.Controls.Primitives.ScrollBar> durch den Wert von der <xref:System.Windows.Controls.Primitives.RangeBase.SmallChange%2A> Eigenschaft.  
+  
+ Mit diesem Befehl tritt auf, wenn der Benutzer das Recht drückt <xref:System.Windows.Controls.Primitives.RepeatButton>.  
+  
+ Beim Implementieren einer <xref:System.Windows.Controls.Primitives.ScrollBar> als Teil einer <xref:System.Windows.Controls.ScrollViewer> -Steuerelement, die <xref:System.Windows.Controls.ScrollViewer> führt dieser Befehl.  
+  
+<a name="xamlTextUsage_LineRightCommand"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ `<`*Objekt* *Eigenschaft*`="`**ScrollBar.LineRightCommand**`"/>`  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie die <xref:System.Windows.Controls.Primitives.ScrollBar.LineRightCommand> in einem benutzerdefinierten <xref:System.Windows.Controls.Primitives.ScrollBar> Formatvorlage.  
+  
+ [!code-xaml[ScrollBarTemplateExample#LineRightCommand](~/samples/snippets/csharp/VS_Snippets_Wpf/ScrollBarTemplateExample/CS/Window1.xaml#linerightcommand)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineUpCommand">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.RoutedCommand LineUpCommand;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.RoutedCommand LineUpCommand" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ScrollBar.LineUpCommand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Befehl, verschiebt eine <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> durch eine kleine Menge in vertikaler Richtung kleiner werdender Werte von seiner <see cref="T:System.Windows.Controls.Primitives.Track" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl verringert die <xref:System.Windows.Controls.Primitives.Track.Value%2A> von der <xref:System.Windows.Controls.Primitives.Track> in der <xref:System.Windows.Controls.Primitives.ScrollBar> durch den Wert des der <xref:System.Windows.Controls.Primitives.RangeBase.SmallChange%2A> Eigenschaft.  
+  
+ Mit diesem Befehl tritt auf, wenn der Benutzer die nach-oben-Taste drückt.  
+  
+ Beim Implementieren einer <xref:System.Windows.Controls.Primitives.ScrollBar> als Teil einer <xref:System.Windows.Controls.ScrollViewer> -Steuerelement, die <xref:System.Windows.Controls.ScrollViewer> führt dieser Befehl.  
+  
+<a name="xamlTextUsage_LineUpCommand"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ `<`*Objekt* *Eigenschaft*`="`**ScrollBar.LineUpCommand**`"/>`  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie die <xref:System.Windows.Controls.Primitives.ScrollBar.LineUpCommand> in einem benutzerdefinierten <xref:System.Windows.Controls.Primitives.ScrollBar> Formatvorlage.  
+  
+ [!code-xaml[ScrollBarTemplateExample#LineUpCommand](~/samples/snippets/csharp/VS_Snippets_Wpf/ScrollBarTemplateExample/CS/Window1.xaml#lineupcommand)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnApplyTemplate">
+      <MemberSignature Language="C#" Value="public override void OnApplyTemplate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnApplyTemplate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ScrollBar.OnApplyTemplate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt die visuelle Struktur für die <see cref="T:System.Windows.Controls.Primitives.ScrollBar" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung legt außerdem die <xref:System.Windows.Controls.Primitives.ScrollBar.Track%2A> Eigenschaft, um die <xref:System.Windows.Controls.Primitives.Track> in definierten der <xref:System.Windows.Controls.Primitives.ScrollBar> Vorlage.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnContextMenuClosing">
+      <MemberSignature Language="C#" Value="protected override void OnContextMenuClosing (System.Windows.Controls.ContextMenuEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnContextMenuClosing(class System.Windows.Controls.ContextMenuEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ScrollBar.OnContextMenuClosing(System.Windows.Controls.ContextMenuEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Controls.ContextMenuEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Stellt eine Klassenbehandlung für die <see cref="E:System.Windows.FrameworkElement.ContextMenuClosing" /> das Ereignis tritt bei der <see cref="T:System.Windows.Controls.ContextMenu" /> für eine <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> geschlossen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.ContextMenu> von einer <xref:System.Windows.Controls.Primitives.ScrollBar> bietet Optionen zum Ändern der <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> von der <xref:System.Windows.Controls.Primitives.ScrollBar>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnContextMenuOpening">
+      <MemberSignature Language="C#" Value="protected override void OnContextMenuOpening (System.Windows.Controls.ContextMenuEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnContextMenuOpening(class System.Windows.Controls.ContextMenuEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ScrollBar.OnContextMenuOpening(System.Windows.Controls.ContextMenuEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Controls.ContextMenuEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Stellt eine Klassenbehandlung für die <see cref="E:System.Windows.FrameworkElement.ContextMenuOpening" /> das Ereignis tritt bei der <see cref="T:System.Windows.Controls.ContextMenu" /> für eine <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> wird geöffnet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.ContextMenu> von einer <xref:System.Windows.Controls.Primitives.ScrollBar> bietet Optionen zum Ändern der <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> von der <xref:System.Windows.Controls.Primitives.ScrollBar>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ScrollBar.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> dafür <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> Steuerelement.</summary>
+        <returns>Ein <see cref="T:System.Windows.Automation.Peers.ScrollBarAutomationPeer" /> für die <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> Steuerelement.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreviewMouseLeftButtonDown">
+      <MemberSignature Language="C#" Value="protected override void OnPreviewMouseLeftButtonDown (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPreviewMouseLeftButtonDown(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ScrollBar.OnPreviewMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Stellt eine Klassenbehandlung für das <see cref="E:System.Windows.UIElement.PreviewMouseLeftButtonDown" />-Ereignis bereit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung ändert die <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> von der <xref:System.Windows.Controls.Primitives.ScrollBar> auf den Speicherort der der <xref:System.Windows.UIElement.PreviewMouseLeftButtonDown> Ereignis, das auftritt, während der Benutzer die UMSCHALT-Taste drückt. Das Ereignis behandelt, indem <xref:System.Windows.RoutedEventArgs.Handled%2A> in den Ereignisdaten `e` auf `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreviewMouseRightButtonUp">
+      <MemberSignature Language="C#" Value="protected override void OnPreviewMouseRightButtonUp (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPreviewMouseRightButtonUp(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ScrollBar.OnPreviewMouseRightButtonUp(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Stellt eine Klassenbehandlung für das <see cref="E:System.Windows.UIElement.PreviewMouseRightButtonUp" />-Ereignis bereit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung speichert die Position des Mausklicks, damit die <xref:System.Windows.Controls.Primitives.ScrollBar> können einen Bildlauf zu dieser Position als Antwort auf eine <xref:System.Windows.Controls.Primitives.ScrollBar.ScrollHereCommand>.  
+  
+   
+  
+## Examples  
+ Ein <xref:System.Windows.Controls.Primitives.ScrollBar.ScrollHereCommand> tritt auf, wenn der Benutzer wählt **Bildlauf hier** aus dem Menü, das wird, wenn angezeigt der Benutzer die rechte Maustaste drückt über die <xref:System.Windows.Controls.Primitives.ScrollBar>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Orientation">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Orientation Orientation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.Orientation Orientation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.ScrollBar.Orientation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Orientation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, ob die <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> horizontal oder vertikal angezeigt wird.</summary>
+        <value>Ein <see cref="T:System.Windows.Controls.Orientation" /> Enumerationswert, der definiert, ob die <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> horizontal oder vertikal angezeigt wird. Die Standardeinstellung ist <see cref="F:System.Windows.Controls.Orientation.Vertical" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Orientation"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.ScrollBar.OrientationProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Controls.Primitives.ScrollBar.Orientation%2A> -Eigenschaft für eine <xref:System.Windows.Controls.Primitives.ScrollBar> Steuerelement.  
+  
+ [!code-csharp[ScrollBarSnips#Orientation](~/samples/snippets/csharp/VS_Snippets_Wpf/ScrollBarSnips/CSharp/Window1.xaml.cs#orientation)]
+ [!code-vb[ScrollBarSnips#Orientation](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ScrollBarSnips/visualbasic/window1.xaml.vb#orientation)]
+ [!code-xaml[ScrollBarSnips#Orientation](~/samples/snippets/csharp/VS_Snippets_Wpf/ScrollBarSnips/CSharp/Window1.xaml#orientation)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OrientationProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty OrientationProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty OrientationProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ScrollBar.OrientationProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.ScrollBar.Orientation" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageDownCommand">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.RoutedCommand PageDownCommand;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.RoutedCommand PageDownCommand" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ScrollBar.PageDownCommand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Befehl, verschiebt eine <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> durch eine große Menge in vertikaler Richtung des zu erhöhenden Werts, der seine <see cref="T:System.Windows.Controls.Primitives.Track" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl erhöht die <xref:System.Windows.Controls.Primitives.Track.Value%2A> von der <xref:System.Windows.Controls.Primitives.Track> in der <xref:System.Windows.Controls.Primitives.ScrollBar> durch den Wert von der <xref:System.Windows.Controls.Primitives.RangeBase.LargeChange%2A> Eigenschaft.  
+  
+ Mit diesem Befehl tritt auf, wenn der Benutzer die Bild-ab-Taste drückt.  
+  
+ Beim Implementieren einer <xref:System.Windows.Controls.Primitives.ScrollBar> als Teil einer <xref:System.Windows.Controls.ScrollViewer> -Steuerelement, die <xref:System.Windows.Controls.ScrollViewer> führt dieser Befehl.  
+  
+<a name="xamlTextUsage_PageDownCommand"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ `<`*Objekt* *Eigenschaft*`="`**ScrollBar.PageDownCommand**`"/>`  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie die <xref:System.Windows.Controls.Primitives.ScrollBar.PageDownCommand> in einem benutzerdefinierten <xref:System.Windows.Controls.Primitives.ScrollBar> Formatvorlage.  
+  
+ [!code-xaml[ScrollBarTemplateExample#PageDownCommand](~/samples/snippets/csharp/VS_Snippets_Wpf/ScrollBarTemplateExample/CS/Window1.xaml#pagedowncommand)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageLeftCommand">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.RoutedCommand PageLeftCommand;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.RoutedCommand PageLeftCommand" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ScrollBar.PageLeftCommand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Befehl, verschiebt eine <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> durch eine große Menge in horizontaler Richtung kleiner werdender Werte von seiner <see cref="T:System.Windows.Controls.Primitives.Track" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl verringert die <xref:System.Windows.Controls.Primitives.Track.Value%2A> von der <xref:System.Windows.Controls.Primitives.Track> in der <xref:System.Windows.Controls.Primitives.ScrollBar> durch den Wert des der <xref:System.Windows.Controls.Primitives.RangeBase.LargeChange%2A> Eigenschaft.  
+  
+ Mit diesem Befehl tritt auf, wenn der Benutzer die Schaltfläche "" drückt, die auf der linken Seite des ist die <xref:System.Windows.Controls.Primitives.Thumb>. Die folgende Abbildung zeigt die Schaltflächen in einem <xref:System.Windows.Controls.Primitives.ScrollBar>.  
+  
+ ![Die verschiedenen Teile einer Bildlaufleiste](~/add/media/scrollbarpagebutton.png "die unterschiedlichen Teil einer ScrollBar")  
+  
+ Beim Implementieren einer <xref:System.Windows.Controls.Primitives.ScrollBar> als Teil einer <xref:System.Windows.Controls.ScrollViewer> -Steuerelement, die <xref:System.Windows.Controls.ScrollViewer> führt dieser Befehl.  
+  
+<a name="xamlTextUsage_PageLeftCommand"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ `<`*Objekt* *Eigenschaft*`="`**ScrollBar.PageLeftCommand**`"/>`  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie die <xref:System.Windows.Controls.Primitives.ScrollBar.PageLeftCommand> in einem benutzerdefinierten <xref:System.Windows.Controls.Primitives.ScrollBar> Formatvorlage.  
+  
+ [!code-xaml[ScrollBarTemplateExample#PageLeftCommand](~/samples/snippets/csharp/VS_Snippets_Wpf/ScrollBarTemplateExample/CS/Window1.xaml#pageleftcommand)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageRightCommand">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.RoutedCommand PageRightCommand;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.RoutedCommand PageRightCommand" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ScrollBar.PageRightCommand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Befehl, verschiebt eine <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> durch eine große Menge in horizontaler Richtung des zu erhöhenden Werts, der seine <see cref="T:System.Windows.Controls.Primitives.Track" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl erhöht die <xref:System.Windows.Controls.Primitives.Track.Value%2A> von der <xref:System.Windows.Controls.Primitives.Track> in der <xref:System.Windows.Controls.Primitives.ScrollBar> durch den Wert von der <xref:System.Windows.Controls.Primitives.RangeBase.LargeChange%2A> Eigenschaft.  
+  
+ Mit diesem Befehl tritt auf, wenn der Benutzer die Schaltfläche "" drückt, die rechts neben der <xref:System.Windows.Controls.Primitives.Thumb>. Die folgende Abbildung zeigt die Schaltflächen in einem <xref:System.Windows.Controls.Primitives.ScrollBar>.  
+  
+ ![Die verschiedenen Teile einer Bildlaufleiste](~/add/media/scrollbarpagebutton.png "die unterschiedlichen Teil einer ScrollBar")  
+  
+ Beim Implementieren einer <xref:System.Windows.Controls.Primitives.ScrollBar> als Teil einer <xref:System.Windows.Controls.ScrollViewer> -Steuerelement, die <xref:System.Windows.Controls.ScrollViewer> führt dieser Befehl.  
+  
+<a name="xamlTextUsage_PageRightCommand"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ `<`*Objekt* *Eigenschaft*`="`**ScrollBar.PageRightCommand**`"/>`  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie die <xref:System.Windows.Controls.Primitives.ScrollBar.PageRightCommand> in einem benutzerdefinierten <xref:System.Windows.Controls.Primitives.ScrollBar> Formatvorlage.  
+  
+ [!code-xaml[ScrollBarTemplateExample#PageRightCommand](~/samples/snippets/csharp/VS_Snippets_Wpf/ScrollBarTemplateExample/CS/Window1.xaml#pagerightcommand)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageUpCommand">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.RoutedCommand PageUpCommand;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.RoutedCommand PageUpCommand" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ScrollBar.PageUpCommand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Befehl, verschiebt eine <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> durch eine große Menge in vertikaler Richtung kleiner werdender Werte von seiner <see cref="T:System.Windows.Controls.Primitives.Track" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl verringert die <xref:System.Windows.Controls.Primitives.Track.Value%2A> von der <xref:System.Windows.Controls.Primitives.Track> in der <xref:System.Windows.Controls.Primitives.ScrollBar> durch den Wert des der <xref:System.Windows.Controls.Primitives.RangeBase.LargeChange%2A> Eigenschaft.  
+  
+ Mit diesem Befehl tritt auf, wenn der Benutzer die Bild-Taste drückt.  
+  
+ Beim Implementieren einer <xref:System.Windows.Controls.Primitives.ScrollBar> als Teil einer <xref:System.Windows.Controls.ScrollViewer> -Steuerelement, die <xref:System.Windows.Controls.ScrollViewer> führt dieser Befehl.  
+  
+<a name="xamlTextUsage_PageUpCommand"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ `<`*Objekt* *Eigenschaft*`="`**ScrollBar.PageUpCommand**`"/>`  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie die <xref:System.Windows.Controls.Primitives.ScrollBar.PageUpCommand> in einem benutzerdefinierten <xref:System.Windows.Controls.Primitives.ScrollBar> Formatvorlage.  
+  
+ [!code-xaml[ScrollBarTemplateExample#PageUpCommand](~/samples/snippets/csharp/VS_Snippets_Wpf/ScrollBarTemplateExample/CS/Window1.xaml#pageupcommand)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scroll">
+      <MemberSignature Language="C#" Value="public event System.Windows.Controls.Primitives.ScrollEventHandler Scroll;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Controls.Primitives.ScrollEventHandler Scroll" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.Primitives.ScrollBar.Scroll" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.ScrollEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt einmal oder mehrmals als Inhalt einem <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> beim Bewegen der <see cref="P:System.Windows.Controls.Primitives.Track.Thumb" /> mit der Maus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis tritt normalerweise auf mehrere Male ändert sich der Benutzer bei der <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> von der <xref:System.Windows.Controls.Primitives.ScrollBar> durch Ziehen der <xref:System.Windows.Controls.Primitives.Track.Thumb%2A>. Es gibt keine Beschränkung, wie oft dieses Ereignis, als ausgelöst wird die <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> Position gezogen wird.  
+  
+ Dieses Ereignis ist nicht ausgelöst, wenn die <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> von der <xref:System.Windows.Controls.Primitives.ScrollBar> Steuerelement im Code geändert wird.  
+  
+<a name="routedEventInfo_Scroll"></a>   
+## <a name="routed-event-information"></a>Informationen zum Routingereignis  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.ScrollBar.ScrollEvent>|  
+|Routing-Strategie|Bubbling|  
+|Delegate|<xref:System.Windows.Controls.Primitives.ScrollEventHandler>|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie zuweisen einen Ereignishandler für die <xref:System.Windows.Controls.Primitives.ScrollBar.Scroll> Ereignis, um eine <xref:System.Windows.Controls.Primitives.ScrollBar> -Steuerelement, und wie den Ereignishandler im Code definiert.  
+  
+ [!code-xaml[ScrollBarSnips#Scroll](~/samples/snippets/csharp/VS_Snippets_Wpf/ScrollBarSnips/CSharp/Window1.xaml#scroll)]  
+  
+ [!code-csharp[ScrollBarSnips#ScrollHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/ScrollBarSnips/CSharp/Window1.xaml.cs#scrollhandler)]
+ [!code-vb[ScrollBarSnips#ScrollHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ScrollBarSnips/visualbasic/window1.xaml.vb#scrollhandler)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent ScrollEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent ScrollEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ScrollBar.ScrollEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert das <see cref="E:System.Windows.Controls.Primitives.ScrollBar.Scroll" />-Routingereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollHereCommand">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.RoutedCommand ScrollHereCommand;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.RoutedCommand ScrollHereCommand" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ScrollBar.ScrollHereCommand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Befehl, verschiebt eine <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> bis zum Zeitpunkt des Mausklicks, die geöffnet der <see cref="T:System.Windows.Controls.ContextMenu" /> in der <see cref="T:System.Windows.Controls.Primitives.ScrollBar" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Befehl tritt auf, wenn der Benutzer auswählt **Bildlauf hier** aus der <xref:System.Windows.Controls.ContextMenu> Optionen. Die <xref:System.Windows.Controls.ContextMenu> von der <xref:System.Windows.Controls.Primitives.ScrollBar> wird angezeigt, wenn der Benutzer den Mauszeiger über hält die <xref:System.Windows.Controls.Primitives.ScrollBar> und die rechte Maustaste drückt. Dieses Menü bietet Optionen zum Durchführen eines Bildlaufs der <xref:System.Windows.Controls.Primitives.ScrollBar>.  
+  
+ Dieser Befehl ist für eine <xref:System.Windows.Controls.Primitives.ScrollBar> Teil einer <xref:System.Windows.Controls.ScrollViewer> steuern und wird ausgeführt, indem die <xref:System.Windows.Controls.ScrollViewer>.  
+  
+<a name="xamlTextUsage_ScrollHereCommand"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ `<`*Objekt* *Eigenschaft* `="` **ScrollBar.ScrollHereCommand**`"/>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollToBottomCommand">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.RoutedCommand ScrollToBottomCommand;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.RoutedCommand ScrollToBottomCommand" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ScrollBar.ScrollToBottomCommand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Befehl, verschiebt eine <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> auf die <see cref="P:System.Windows.Controls.Primitives.RangeBase.Maximum" /> Wert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei einem vertikalen <xref:System.Windows.Controls.Primitives.ScrollBar>, diese Verschiebung tritt auf, wenn der Benutzer die Tasten STRG + ENDE drückt.  
+  
+ Beim Implementieren einer <xref:System.Windows.Controls.Primitives.ScrollBar> als Teil einer <xref:System.Windows.Controls.ScrollViewer> -Steuerelement, die <xref:System.Windows.Controls.ScrollViewer> führt dieser Befehl.  
+  
+<a name="xamlTextUsage_ScrollToBottomCommand"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ `<`*Objekt* *Eigenschaft*`="`**ScrollBar.ScrollToBottomCommand**`"/>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollToEndCommand">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.RoutedCommand ScrollToEndCommand;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.RoutedCommand ScrollToEndCommand" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ScrollBar.ScrollToEndCommand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Befehl, der den Inhalt auf der unteren rechten Ecke des verschiebt eine <see cref="T:System.Windows.Controls.ScrollViewer" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Befehl wird nur verwendet, mit einem <xref:System.Windows.Controls.ScrollViewer> Steuerelement.  
+  
+<a name="xamlTextUsage_ScrollToEndCommand"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ `<`*Objekt* *Eigenschaft*`="`**ScrollBar.ScrollToEndCommand**`"/>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollToHomeCommand">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.RoutedCommand ScrollToHomeCommand;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.RoutedCommand ScrollToHomeCommand" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ScrollBar.ScrollToHomeCommand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Befehl, den Inhalt an der linken oberen Ecke des verschiebt, eine <see cref="T:System.Windows.Controls.ScrollViewer" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Befehl wird nur verwendet, mit einem <xref:System.Windows.Controls.ScrollViewer> Steuerelement.  
+  
+<a name="xamlTextUsage_ScrollToHomeCommand"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ `<`*Objekt* *Eigenschaft*`="`**ScrollBar.ScrollToHomeCommand**`"/>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollToHorizontalOffsetCommand">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.RoutedCommand ScrollToHorizontalOffsetCommand;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.RoutedCommand ScrollToHorizontalOffsetCommand" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ScrollBar.ScrollToHorizontalOffsetCommand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Befehl, eine horizontalen verschiebt <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> in einem <see cref="T:System.Windows.Controls.ScrollViewer" /> auf den Wert, der im bereitgestellt wird <see cref="P:System.Windows.Input.ExecutedRoutedEventArgs.Parameter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Befehl wird nur verwendet, mit einem <xref:System.Windows.Controls.ScrollViewer> Steuerelement.  
+  
+<a name="xamlTextUsage_ScrollToHorizontalOffsetCommand"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ `<`*Objekt* *Eigenschaft*`="`**ScrollBar.ScrollToHorizontalOffsetCommand**`"/>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollToLeftEndCommand">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.RoutedCommand ScrollToLeftEndCommand;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.RoutedCommand ScrollToLeftEndCommand" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ScrollBar.ScrollToLeftEndCommand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Befehl, verschiebt eine <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> auf die <see cref="P:System.Windows.Controls.Primitives.RangeBase.Minimum" /> Wert bei einem horizontalen <see cref="T:System.Windows.Controls.Primitives.ScrollBar" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Befehl tritt auf, wenn der Benutzer STRG + POS1, bei einem horizontalen drückt <xref:System.Windows.Controls.Primitives.ScrollBar>.  
+  
+ Beim Implementieren einer <xref:System.Windows.Controls.Primitives.ScrollBar> als Teil einer <xref:System.Windows.Controls.ScrollViewer> -Steuerelement, die <xref:System.Windows.Controls.ScrollViewer> führt dieser Befehl.  
+  
+<a name="xamlTextUsage_ScrollToLeftEndCommand"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ `<`*Objekt* *Eigenschaft* `="` **ScrollBar.ScrollToLeftEndCommand**`"/>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollToRightEndCommand">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.RoutedCommand ScrollToRightEndCommand;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.RoutedCommand ScrollToRightEndCommand" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ScrollBar.ScrollToRightEndCommand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Befehl, verschiebt eine <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> auf die <see cref="P:System.Windows.Controls.Primitives.RangeBase.Maximum" /> Wert bei einem horizontalen <see cref="T:System.Windows.Controls.Primitives.ScrollBar" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Befehl tritt auf, wenn der Benutzer STRG + Ende, bei einem horizontalen drückt <xref:System.Windows.Controls.Primitives.ScrollBar>.  
+  
+ Beim Implementieren einer <xref:System.Windows.Controls.Primitives.ScrollBar> als Teil einer <xref:System.Windows.Controls.ScrollViewer> -Steuerelement, die <xref:System.Windows.Controls.ScrollViewer> führt dieser Befehl.  
+  
+<a name="xamlTextUsage_ScrollToRightEndCommand"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ `<`*Objekt* *Eigenschaft* `="` **ScrollBar.ScrollToRightEndCommand**`"/>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollToTopCommand">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.RoutedCommand ScrollToTopCommand;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.RoutedCommand ScrollToTopCommand" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ScrollBar.ScrollToTopCommand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Befehl, verschiebt eine <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> auf die <see cref="P:System.Windows.Controls.Primitives.RangeBase.Maximum" /> Wert bei einem vertikalen <see cref="T:System.Windows.Controls.Primitives.ScrollBar" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei einem vertikalen <xref:System.Windows.Controls.Primitives.ScrollBar>, diese Verschiebung tritt auf, wenn der Benutzer STRG + POS1 drückt.  
+  
+ Beim Implementieren einer <xref:System.Windows.Controls.Primitives.ScrollBar> als Teil einer <xref:System.Windows.Controls.ScrollViewer> -Steuerelement, die <xref:System.Windows.Controls.ScrollViewer> führt dieser Befehl.  
+  
+<a name="xamlTextUsage_ScrollToTopCommand"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ `<`*Objekt* *Eigenschaft*`="`**ScrollBar.ScrollToTopCommand**`"/>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollToVerticalOffsetCommand">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.RoutedCommand ScrollToVerticalOffsetCommand;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.RoutedCommand ScrollToVerticalOffsetCommand" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ScrollBar.ScrollToVerticalOffsetCommand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Befehl, der eine vertikalen verschiebt <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> in einem <see cref="T:System.Windows.Controls.ScrollViewer" /> auf den Wert, der im bereitgestellt wird <see cref="P:System.Windows.Input.ExecutedRoutedEventArgs.Parameter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Befehl wird nur verwendet, mit einem <xref:System.Windows.Controls.ScrollViewer> Steuerelement.  
+  
+<a name="xamlTextUsage_ScrollToVerticalOffsetCommand"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ `<`*Objekt* *Eigenschaft*`="`**ScrollBar.ScrollToVerticalOffsetCommand**`"/>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Track">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Primitives.Track Track { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.Primitives.Track Track" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.ScrollBar.Track" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.Track</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Controls.Primitives.Track" /> für eine <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> Steuerelement.</summary>
+        <value>Die <see cref="T:System.Windows.Controls.Primitives.Track" /> wird, mit einem <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine typische Formatvorlage für eine <xref:System.Windows.Controls.Primitives.ScrollBar> Steuerelement schließt eine <xref:System.Windows.Controls.Primitives.Track> Steuerelement, das auf beiden Seiten von zwei umgeben ist <xref:System.Windows.Controls.Button> Steuerelemente.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht den Zugriff auf die <xref:System.Windows.Controls.Primitives.Track> Steuerelement mit einem <xref:System.Windows.Controls.Primitives.ScrollBar> Steuerelement.  
+  
+ [!code-csharp[ScrollBarSnips#Track](~/samples/snippets/csharp/VS_Snippets_Wpf/ScrollBarSnips/CSharp/Window1.xaml.cs#track)]
+ [!code-vb[ScrollBarSnips#Track](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ScrollBarSnips/visualbasic/window1.xaml.vb#track)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewportSize">
+      <MemberSignature Language="C#" Value="public double ViewportSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ViewportSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.ScrollBar.ViewportSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, wie bildlauffähigen Inhalt, der derzeit angezeigt wird.</summary>
+        <value>Die Größe des bildlauffähigen Inhalt, der derzeit angezeigt wird. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Einheiten für die verwendeten <xref:System.Windows.Controls.Primitives.ScrollBar.ViewportSize%2A> sind die gleichen Einheiten, die zum Beschreiben der Länge des Inhalts verwendet werden. Einige Beispiele sind Textzeilen oder Seiten des Texts.  
+  
+ Der Wert des der <xref:System.Windows.Controls.Primitives.ScrollBar.ViewportSize%2A> Eigenschaft dient zur Berechnung der Größe der <xref:System.Windows.Controls.Primitives.Thumb> Steuerelement, das als die verschiebbaren Indikator der Wert im angezeigt wird ein <xref:System.Windows.Controls.Primitives.ScrollBar> Steuerelement. Die <xref:System.Windows.Controls.Primitives.Thumb> Größe des Steuerelements darstellt, die Menge an eine <xref:System.Windows.Controls.ScrollViewer> der Inhalt des Steuerelements, das sichtbar ist.  Wenn 25 Prozent der eine <xref:System.Windows.Controls.ScrollViewer> der Inhalt des Steuerelements sichtbar ist, wird die <xref:System.Windows.Controls.Primitives.Thumb> belegt 25 % für den Verlauf in die <xref:System.Windows.Controls.Primitives.ScrollBar>.  
+  
+ Sie können entscheiden, welche Einheiten <xref:System.Windows.Controls.Primitives.ScrollBar.ViewportSize%2A> verwendet.  Wenn Sie diese Eigenschaft festlegen, stellen sicher, dass die <xref:System.Windows.Controls.Primitives.ScrollBar.ViewportSize%2A>, <xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A>, <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A>, und <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> Eigenschaften verwenden die gleichen Einheiten.  
+  
+ Die folgende Abbildung zeigt wie die <xref:System.Windows.Controls.Primitives.Thumb> Größe gibt die Menge an Inhalten, die angezeigt wird.  
+  
+ ![Die Länge und Ziehpunktgröße einer ScrollBar](~/add/media/scrollbarthumbsize.png "die Länge und Ziehpunktgröße einer ScrollBar")  
+  
+<a name="dependencyPropertyInfo_ViewportSize"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.ScrollBar.ViewportSizeProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Controls.Primitives.ScrollBar.ViewportSize%2A> auf eine <xref:System.Windows.Controls.Primitives.ScrollBar> Steuerelement.  
+  
+ [!code-csharp[ScrollBarSnips#Viewport](~/samples/snippets/csharp/VS_Snippets_Wpf/ScrollBarSnips/CSharp/Window1.xaml.cs#viewport)]
+ [!code-vb[ScrollBarSnips#Viewport](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ScrollBarSnips/visualbasic/window1.xaml.vb#viewport)]
+ [!code-xaml[ScrollBarSnips#Viewport](~/samples/snippets/csharp/VS_Snippets_Wpf/ScrollBarSnips/CSharp/Window1.xaml#viewport)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewportSizeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ViewportSizeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ViewportSizeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ScrollBar.ViewportSizeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.ScrollBar.ViewportSize" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

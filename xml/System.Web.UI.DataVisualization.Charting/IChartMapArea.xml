@@ -1,0 +1,106 @@
+<Type Name="IChartMapArea" FullName="System.Web.UI.DataVisualization.Charting.IChartMapArea">
+  <TypeSignature Language="C#" Value="public interface IChartMapArea" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IChartMapArea" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.IChartMapArea" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Allgemeine Schnittstelle für alle Diagrammelemente, die Imagemaps unterstützen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="MapAreaAttributes">
+      <MemberSignature Language="C#" Value="public string MapAreaAttributes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MapAreaAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.IChartMapArea.MapAreaAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die benutzerdefinierten Attribute des einen Zuordnungsbereich.</summary>
+        <value>Ein <see langword="string" />-Wert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostBackValue">
+      <MemberSignature Language="C#" Value="public string PostBackValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PostBackValue" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.IChartMapArea.PostBackValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Postbackwert für den Kartenbereich.</summary>
+        <value>Ein <see langword="string" /> Wert, der den Postbackwert darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tag">
+      <MemberSignature Language="C#" Value="public object Tag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Tag" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.IChartMapArea.Tag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest benutzerdefinierte Daten für den Zuordnungsbereich.</summary>
+        <value>Eine <see cref="T:System.Object" /> , die das benutzerdefinierte Tag darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTip">
+      <MemberSignature Language="C#" Value="public string ToolTip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolTip" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.IChartMapArea.ToolTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt in einer QuickInfo für den Kartenbereich.</summary>
+        <value>Ein <see langword="string" /> Wert, der die QuickInfo darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Url">
+      <MemberSignature Language="C#" Value="public string Url { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Url" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.IChartMapArea.Url" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL für den Kartenbereich.</summary>
+        <value>Ein <see langword="string" /> Wert, der die URL des Strukturbereichs darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,102 @@
+<Type Name="ErrorEventArgs" FullName="System.IdentityModel.Services.ErrorEventArgs">
+  <TypeSignature Language="C#" Value="public class ErrorEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ErrorEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Services.ErrorEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.IdentityModel.Services.SessionAuthenticationModule.SignOutError" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IdentityModel.Services.ErrorEventArgs>leitet sich von der <xref:System.ComponentModel.CancelEventArgs> -Klasse, die Daten für ein abbrechbares Ereignis bereitstellt. Sie können in einem Ereignishandler Festlegen der <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft, um `true` um das Ereignis abzubrechen. Für die <xref:System.IdentityModel.Services.SessionAuthenticationModule.SignOutError> -Ereignis, wenn diese Eigenschaft auf `true` gibt an, dass die Verarbeitung der Abmeldung Anforderung beendet werden soll, und die Ausnahme nicht an den Client weitergegeben werden sollten.  
+  
+ Die <xref:System.IdentityModel.Services.ErrorEventArgs.Exception%2A> Eigenschaft enthält die zugrunde liegende Ausnahme, die im Ereignis ausgelöst wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ErrorEventArgs (Exception exception);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Exception exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.ErrorEventArgs.#ctor(System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="exception" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="exception">Die aufgetretene Ausnahme. Legt die <see cref="P:System.IdentityModel.Services.ErrorEventArgs.Exception" />-Eigenschaft fest.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Services.ErrorEventArgs" /> Klasse mit der angegebenen Ausnahme.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> -Eigenschaft der neuen <xref:System.IdentityModel.Services.ErrorEventArgs> -Instanz wird initialisiert, um `false`; das Ereignis wird nicht abgebrochen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="exception" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ErrorEventArgs (bool cancel, Exception exception);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool cancel, class System.Exception exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.ErrorEventArgs.#ctor(System.Boolean,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="cancel" Type="System.Boolean" />
+        <Parameter Name="exception" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="cancel">Der Status des anfänglichen "Abbrechen". Legt die <see cref="P:System.ComponentModel.CancelEventArgs.Cancel" />-Eigenschaft fest.</param>
+        <param name="exception">Die aufgetretene Ausnahme. Legt die <see cref="P:System.IdentityModel.Services.ErrorEventArgs.Exception" />-Eigenschaft fest.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Services.ErrorEventArgs" /> Klasse mit dem angegebenen "Abbrechen", Status und die Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="exception" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public Exception Exception { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Exception" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.ErrorEventArgs.Exception" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ausnahme, die aufgetreten sind.</summary>
+        <value>Die aufgetretene Ausnahme.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Ausnahme, die das Ereignis ausgelöst wurde, werden verursacht hat.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

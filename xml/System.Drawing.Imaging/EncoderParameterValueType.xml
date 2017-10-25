@@ -1,0 +1,155 @@
+<Type Name="EncoderParameterValueType" FullName="System.Drawing.Imaging.EncoderParameterValueType">
+  <TypeSignature Language="C#" Value="public enum EncoderParameterValueType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EncoderParameterValueType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Imaging.EncoderParameterValueType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Verwendet, um den Datentyp der angeben der <see cref="T:System.Drawing.Imaging.EncoderParameter" /> verwendet, mit der <see cref="Overload:System.Drawing.Image.Save" /> oder <see cref="Overload:System.Drawing.Image.SaveAdd" /> Methode eines Bilds.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ GDI + verwendet Bildencodern konvertieren Sie die Images im <xref:System.Drawing.Bitmap> Objekte für verschiedene Dateiformate. Bildencoder werden für den BMP, JPEG, GIF, TIFF und PNG-Formaten in GDI + integriert. Ein Encoder wird aufgerufen, wenn Sie rufen die <xref:System.Drawing.Image.Save%2A> oder <xref:System.Drawing.Image.SaveAdd%2A> Methode eine <xref:System.Drawing.Bitmap> Objekt.  
+  
+ Die <xref:System.Drawing.Imaging.EncoderParameter.NumberOfValues%2A> Datenmember der <xref:System.Drawing.Imaging.EncoderParameter> Objekt gibt an, die Länge der Zeichenfolge einschließlich der `null` Abschlusszeichen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ValueTypeAscii">
+      <MemberSignature Language="C#" Value="ValueTypeAscii" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderParameterValueType ValueTypeAscii = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeAscii" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderParameterValueType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass das Array von Werten einen Null-terminierte ASCII-Zeichenfolge. Beachten Sie, dass die <see langword="NumberOfValues" /> Datenmember der <see cref="T:System.Drawing.Imaging.EncoderParameter" /> Objekt gibt die Länge der Zeichenfolge einschließlich des NULL-Terminators an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueTypeByte">
+      <MemberSignature Language="C#" Value="ValueTypeByte" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderParameterValueType ValueTypeByte = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeByte" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderParameterValueType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass jeder Wert im Array eine 8-Bit-Ganzzahl ohne Vorzeichen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueTypeLong">
+      <MemberSignature Language="C#" Value="ValueTypeLong" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderParameterValueType ValueTypeLong = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeLong" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderParameterValueType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass jeder Wert im Array eine 32-Bit-Ganzzahl ohne Vorzeichen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueTypeLongRange">
+      <MemberSignature Language="C#" Value="ValueTypeLongRange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderParameterValueType ValueTypeLongRange = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeLongRange" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderParameterValueType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass jeder Wert im Array ein Paar von 32-Bit-Ganzzahlen ohne Vorzeichen. Jedes Paar stellt einen Bereich von Zahlen dar.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueTypeRational">
+      <MemberSignature Language="C#" Value="ValueTypeRational" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderParameterValueType ValueTypeRational = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeRational" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderParameterValueType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass jeder Wert im Array ein Paar von 32-Bit-Ganzzahlen ohne Vorzeichen. Jedes Paar stellt einen Bruch, die erste ganze Zahl der Zähler und die zweite ganze Zahl der Nenner.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueTypeRationalRange">
+      <MemberSignature Language="C#" Value="ValueTypeRationalRange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderParameterValueType ValueTypeRationalRange = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeRationalRange" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderParameterValueType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass jeder Wert im Array einen Satz von vier 32-Bit-Ganzzahlen ohne Vorzeichen. Die ersten beiden Ganzzahlen stellen eine Bruchzahl, und die zweite von zwei ganzen Zahlen eine zweite Bruchzahl dar. Die zwei Bruchzahlen stellen einen Bereich von rationale Zahlen dar. Der erste Teil ist die kleinste rationale Zahl im Bereich, und der zweite Teil ist die größte rationale Zahl im Bereich.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueTypeShort">
+      <MemberSignature Language="C#" Value="ValueTypeShort" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderParameterValueType ValueTypeShort = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeShort" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderParameterValueType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass jeder Wert im Array eine 16-Bit-Ganzzahl ohne Vorzeichen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueTypeUndefined">
+      <MemberSignature Language="C#" Value="ValueTypeUndefined" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderParameterValueType ValueTypeUndefined = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeUndefined" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderParameterValueType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass das Array von Werten ein Array von Bytes, die über keine definierten Datentyp verfügt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

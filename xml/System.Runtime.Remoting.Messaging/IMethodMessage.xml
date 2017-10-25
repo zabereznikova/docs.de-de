@@ -1,0 +1,347 @@
+<Type Name="IMethodMessage" FullName="System.Runtime.Remoting.Messaging.IMethodMessage">
+  <TypeSignature Language="C#" Value="public interface IMethodMessage : System.Runtime.Remoting.Messaging.IMessage" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IMethodMessage implements class System.Runtime.Remoting.Messaging.IMessage" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Messaging.IMethodMessage" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Messaging.IMessage</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert die Methode Message-Schnittstelle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Nachricht Methode dient zum Senden von Informationen zu und von Remotemethoden. Nachrichten, die für Remotemethodenaufrufe verwendet z. B. Implementieren der <xref:System.Runtime.Remoting.Messaging.IMethodMessage> Schnittstelle.  
+  
+   
+  
+## Examples  
+ Der folgende Beispielcode zeigt einem benutzerdefinierten Proxy diese Außerkraftsetzungen `RealProxy.Invoke` zum Schreiben der Nachrichteninformationen in der Konsole und sofort ohne einen Remoteaufruf zurückgeben.  
+  
+ [!code-cpp[IMethodMessage_MethodName#1](~/samples/snippets/cpp/VS_Snippets_Remoting/IMethodMessage_MethodName/CPP/imethodmessage_methodname.cpp#1)]
+ [!code-csharp[IMethodMessage_MethodName#1](~/samples/snippets/csharp/VS_Snippets_Remoting/IMethodMessage_MethodName/CS/imethodmessage_methodname.cs#1)]
+ [!code-vb[IMethodMessage_MethodName#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/IMethodMessage_MethodName/VB/imethodmessage_methodname.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ArgCount">
+      <MemberSignature Language="C#" Value="public int ArgCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ArgCount" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.IMethodMessage.ArgCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl von Argumenten, die an die Methode übergeben.</summary>
+        <value>Die Anzahl von Argumenten, die an die Methode übergeben werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Der folgende Beispielcode zeigt einem benutzerdefinierten Proxy diese Außerkraftsetzungen `RealProxy.Invoke` zum Schreiben von Informationen der Nachricht an die Konsole, mit der `ArgCount` Eigenschaft zum Durchlaufen der Argumente.  
+  
+ [!code-cpp[IMethodMessage_MethodName#2](~/samples/snippets/cpp/VS_Snippets_Remoting/IMethodMessage_MethodName/CPP/imethodmessage_methodname.cpp#2)]
+ [!code-csharp[IMethodMessage_MethodName#2](~/samples/snippets/csharp/VS_Snippets_Remoting/IMethodMessage_MethodName/CS/imethodmessage_methodname.cs#2)]
+ [!code-vb[IMethodMessage_MethodName#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/IMethodMessage_MethodName/VB/imethodmessage_methodname.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der direkte Aufrufer führt den Aufruf über einen Verweis auf die Schnittstelle durch und hat keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Args">
+      <MemberSignature Language="C#" Value="public object[] Args { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object[] Args" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.IMethodMessage.Args" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Array von Argumenten, die an die Methode übergeben.</summary>
+        <value>Ein <see cref="T:System.Object" /> Array mit den Argumenten, die an die Methode übergeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Obwohl die <xref:System.Runtime.Remoting.Messaging.IMethodMessage.Args%2A> Eigenschaft ist redundant, da die gleiche Funktionalität durch erreicht werden kann die <xref:System.Runtime.Remoting.Messaging.IMethodMessage.ArgCount%2A> und <xref:System.Runtime.Remoting.Messaging.IMethodMessage.GetArg%2A>, möglicherweise zur Optimierung der Leistung verfügbar sind, wenn der Implementierer versteht, wenn alle Argumente werden abgerufen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der direkte Aufrufer führt den Aufruf über einen Verweis auf die Schnittstelle durch und hat keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetArg">
+      <MemberSignature Language="C#" Value="public object GetArg (int argNum);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetArg(int32 argNum) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Messaging.IMethodMessage.GetArg(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="argNum" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="argNum">Die Anzahl der angeforderten Arguments.</param>
+        <summary>Ruft ein bestimmtes Argument als ein <see cref="T:System.Object" />.</summary>
+        <returns>Das Argument an die Methode übergeben.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Der direkte Aufrufer führt den Aufruf über einen Verweis auf die Schnittstelle durch und hat keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetArgName">
+      <MemberSignature Language="C#" Value="public string GetArgName (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetArgName(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Messaging.IMethodMessage.GetArgName(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Anzahl der angeforderten Arguments.</param>
+        <summary>Ruft den Namen des an die Methode übergebenen Arguments.</summary>
+        <returns>Der Name des angegebenen Arguments übergeben wird, an die Methode oder <see langword="null" /> , wenn die aktuelle Methode nicht implementiert ist.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Der direkte Aufrufer führt den Aufruf über einen Verweis auf die Schnittstelle durch und hat keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="HasVarArgs">
+      <MemberSignature Language="C#" Value="public bool HasVarArgs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasVarArgs" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.IMethodMessage.HasVarArgs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Nachricht mit Variable Argumenten hat.</summary>
+        <value>
+          <see langword="true" />Wenn die Methode eine Variable Anzahl von Argumenten akzeptieren kann; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Der folgende Beispielcode zeigt einem benutzerdefinierten Proxy diese Außerkraftsetzungen `RealProxy.Invoke` zum Schreiben von Informationen der Nachricht an die Konsole, z. B. ob der Aufruf der Methode mit Variablenargumenten hat.  
+  
+ [!code-cpp[IMethodMessage_MethodName#2](~/samples/snippets/cpp/VS_Snippets_Remoting/IMethodMessage_MethodName/CPP/imethodmessage_methodname.cpp#2)]
+ [!code-csharp[IMethodMessage_MethodName#2](~/samples/snippets/csharp/VS_Snippets_Remoting/IMethodMessage_MethodName/CS/imethodmessage_methodname.cs#2)]
+ [!code-vb[IMethodMessage_MethodName#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/IMethodMessage_MethodName/VB/imethodmessage_methodname.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der direkte Aufrufer führt den Aufruf über einen Verweis auf die Schnittstelle durch und hat keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="LogicalCallContext">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Messaging.LogicalCallContext LogicalCallContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Remoting.Messaging.LogicalCallContext LogicalCallContext" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.IMethodMessage.LogicalCallContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Messaging.LogicalCallContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Runtime.Remoting.Messaging.LogicalCallContext" /> für den aktuellen Methodenaufruf.</summary>
+        <value>Ruft die <see cref="T:System.Runtime.Remoting.Messaging.LogicalCallContext" /> für den aktuellen Methodenaufruf.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, wie mithilfe der `LogicalCallContext` Eigenschaft, um zu bestimmen, ob Werte an den logischen Thread angefügt sind.  
+  
+ [!code-cpp[IMethodMessage_LogicalCallContext#1](~/samples/snippets/cpp/VS_Snippets_Remoting/IMethodMessage_LogicalCallContext/CPP/imethodmessage_logicalcallcontext.cpp#1)]
+ [!code-csharp[IMethodMessage_LogicalCallContext#1](~/samples/snippets/csharp/VS_Snippets_Remoting/IMethodMessage_LogicalCallContext/CS/imethodmessage_logicalcallcontext.cs#1)]
+ [!code-vb[IMethodMessage_LogicalCallContext#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/IMethodMessage_LogicalCallContext/VB/imethodmessage_logicalcallcontext.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der direkte Aufrufer führt den Aufruf über einen Verweis auf die Schnittstelle durch und hat keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodBase">
+      <MemberSignature Language="C#" Value="public System.Reflection.MethodBase MethodBase { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MethodBase MethodBase" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.IMethodMessage.MethodBase" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Reflection.MethodBase" /> der aufgerufenen Methode.</summary>
+        <value>Die <see cref="T:System.Reflection.MethodBase" /> der aufgerufenen Methode.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Informationen nicht an einem Remotespeicherort übertragen wird, sondern wird verwendet, um die Methodenbasis zwischengespeichert werden, nachdem er einmal nachgeschlagen wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der direkte Aufrufer führt den Aufruf über einen Verweis auf die Schnittstelle durch und hat keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodName">
+      <MemberSignature Language="C#" Value="public string MethodName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MethodName" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.IMethodMessage.MethodName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der aufgerufenen Methode ab.</summary>
+        <value>Der Name der aufgerufenen Methode.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Der folgende Beispielcode zeigt einem benutzerdefinierten Proxy diese Außerkraftsetzungen `RealProxy.Invoke` um den Namen der Methode in der Konsole zu schreiben.  
+  
+ [!code-cpp[IMethodMessage_MethodName#2](~/samples/snippets/cpp/VS_Snippets_Remoting/IMethodMessage_MethodName/CPP/imethodmessage_methodname.cpp#2)]
+ [!code-csharp[IMethodMessage_MethodName#2](~/samples/snippets/csharp/VS_Snippets_Remoting/IMethodMessage_MethodName/CS/imethodmessage_methodname.cs#2)]
+ [!code-vb[IMethodMessage_MethodName#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/IMethodMessage_MethodName/VB/imethodmessage_methodname.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der direkte Aufrufer führt den Aufruf über einen Verweis auf die Schnittstelle durch und hat keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodSignature">
+      <MemberSignature Language="C#" Value="public object MethodSignature { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object MethodSignature" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.IMethodMessage.MethodSignature" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt mit der Signatur der Methode ab.</summary>
+        <value>Ein Objekt mit der Signatur der Methode.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle Implementierung des <xref:System.Runtime.Remoting.Messaging.IMethodMessage> zurückgeben ein Array von <xref:System.Type> -Objekten, die Parametertypen der Methode enthält.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der direkte Aufrufer führt den Aufruf über einen Verweis auf die Schnittstelle durch und hat keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeName">
+      <MemberSignature Language="C#" Value="public string TypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.IMethodMessage.TypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den vollständigen <see cref="T:System.Type" /> Name des Objekts, der für der Aufruf bestimmt ist.</summary>
+        <value>Die vollständige <see cref="T:System.Type" /> Name des Objekts, der für der Aufruf bestimmt ist.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Der direkte Aufrufer führt den Aufruf über einen Verweis auf die Schnittstelle durch und hat keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public string Uri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Uri" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.IMethodMessage.Uri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den URI des bestimmten Objekts, der für der Aufruf bestimmt ist.</summary>
+        <value>Der URI des Remoteobjekts, das die aufgerufene Methode enthält.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Der direkte Aufrufer führt den Aufruf über einen Verweis auf die Schnittstelle durch und hat keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

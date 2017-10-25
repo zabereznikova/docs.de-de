@@ -1,0 +1,26 @@
+<Type Name="DereferenceConnectionCallback" FullName="System.DirectoryServices.Protocols.DereferenceConnectionCallback">
+  <TypeSignature Language="C#" Value="public delegate void DereferenceConnectionCallback(LdapConnection primaryConnection, LdapConnection connectionToDereference);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DereferenceConnectionCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.Protocols.DereferenceConnectionCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="primaryConnection" Type="System.DirectoryServices.Protocols.LdapConnection" />
+    <Parameter Name="connectionToDereference" Type="System.DirectoryServices.Protocols.LdapConnection" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="primaryConnection">Ein <see cref="T:System.DirectoryServices.Protocols.LdapConnection" /> Objekt, das die primäre Verbindung angibt.</param>
+    <param name="connectionToDereference">Ein <see cref="T:System.DirectoryServices.Protocols.LdapConnection" /> Objekt, das die Verbindung zum Dereferenzieren angibt.</param>
+    <summary>Die <see cref="T:System.DirectoryServices.Protocols.DereferenceConnectionCallback" /> Delegaten dereferenziert eine Verbindung, die nicht mehr benötigt wird. Die Verbindung hergestellt wurde wahrscheinlich durch einen erfolgreichen Aufruf der <see cref="T:System.DirectoryServices.Protocols.QueryForConnectionCallback" /> oder <see cref="T:System.DirectoryServices.Protocols.NotifyOfNewConnectionCallback" /> delegieren.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

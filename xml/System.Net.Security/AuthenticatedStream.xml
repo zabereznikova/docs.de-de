@@ -1,0 +1,434 @@
+<Type Name="AuthenticatedStream" FullName="System.Net.Security.AuthenticatedStream">
+  <TypeSignature Language="C#" Value="public abstract class AuthenticatedStream : System.IO.Stream" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit AuthenticatedStream extends System.IO.Stream" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Security.AuthenticatedStream" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IO.Stream</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Methoden für Anmeldeinformationen über einen Stream übergeben und anfordern oder Ausführen der Authentifizierung für Client / Server-Anwendungen bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese abstrakte Klasse stellt Methoden und Eigenschaften, die für authentifizierte Streams gemeinsam verwendet werden.  
+  
+ Authentifizierte Streams bieten Authentifizierung "Signierung", Daten und Verschlüsselungsdienste, mit deren Hilfe können verwalten, die Integrität und Vertraulichkeit der Daten mithilfe der übertragen der <xref:System.Net.Security.AuthenticatedStream.InnerStream%2A>.  
+  
+ Das Sicherheitsprotokoll durch eine Klasse, die abgeleitet implementiert <xref:System.Net.Security.AuthenticatedStream> zusammen mit der Sicherheit auf dem Client und Server unterstützten Protokolle bestimmt die Sicherheitsfunktionen, die für eine Anwendung verfügbar sind. Die <xref:System.Net.Security.NegotiateStream> und <xref:System.Net.Security.SslStream> Klassen erben von <xref:System.Net.Security.AuthenticatedStream> und Implementieren der Sicherheit Negotiate bzw. Secure Sockets Layer.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die Eigenschaften eines authentifizierten Streams.  
+  
+ [!code-cpp[NclNegoAsyncClient#6](~/samples/snippets/cpp/VS_Snippets_Remoting/NclNegoasyncClient/CPP/NclNegoasyncClient.cpp#6)]
+ [!code-csharp[NclNegoAsyncClient#6](~/samples/snippets/csharp/VS_Snippets_Remoting/NclNegoasyncClient/CS/client.cs#6)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Die folgenden Elemente müssen in einer abgeleiteten Klasse überschrieben werden: <see cref="P:System.Net.Security.AuthenticatedStream.IsAuthenticated" />, <see cref="P:System.Net.Security.AuthenticatedStream.IsEncrypted" />, <see cref="P:System.Net.Security.AuthenticatedStream.IsMutuallyAuthenticated" />, <see cref="P:System.Net.Security.AuthenticatedStream.IsServer" />, und <see cref="P:System.Net.Security.AuthenticatedStream.IsSigned" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AuthenticatedStream (System.IO.Stream innerStream, bool leaveInnerStreamOpen);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream innerStream, bool leaveInnerStreamOpen) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Security.AuthenticatedStream.#ctor(System.IO.Stream,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="innerStream" Type="System.IO.Stream" />
+        <Parameter Name="leaveInnerStreamOpen" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="innerStream">Ein <see cref="T:System.IO.Stream" /> Objekt, das verwendet wird, indem die <see cref="T:System.Net.Security.AuthenticatedStream" /> für das Senden und Empfangen von Daten.</param>
+        <param name="leaveInnerStreamOpen">Ein <see cref="T:System.Boolean" /> , der angibt, ob das Schließen dieses <see cref="T:System.Net.Security.AuthenticatedStream" /> Objekt schließt außerdem <c>InnerStream</c>.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Security.AuthenticatedStream" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Geben Sie bei `true` für die `leaveStreamOpen` -Parameter schließen die <xref:System.Net.Security.AuthenticatedStream> hat keine Auswirkungen auf die `innerStream` Stream.  
+  
+ Dieser Konstruktor wird bei der Implementierung von authentifizierten Streams bereitgestellt und kann nur durch die von der abgeleiteten Klassen aufgerufen werden <xref:System.Net.Security.AuthenticatedStream>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="innerStream" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="innerStream" /> ist gleich <see cref="F:System.IO.Stream.Null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Security.AuthenticatedStream.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.Net.Security.AuthenticatedStream" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich `Dispose()` Methode und die <xref:System.Object.Finalize%2A> Methode. `Dispose()`Ruft die geschützte `Dispose(Boolean)` Methode mit dem `disposing` Parametersatz auf `true`. <xref:System.Object.Finalize%2A>Ruft `Dispose` mit `disposing` festgelegt `false`.  
+  
+ Wenn die `disposing` Parameter ist "true", gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte, die von diesem <xref:System.Net.Security.AuthenticatedStream> Verweise. Diese Methode ruft die `Dispose()`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Zum Überschreiben <see langword="Dispose(Boolean)" /> Achten Sie darauf, dass Sie nicht auf Objekte verweisen, die einen früheren Aufruf freigegeben wurden <see langword="Dispose" />. Weitere Informationen zum Implementieren <see langword="Dispose(Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see langword="Dispose" /> und <see cref="M:System.Object.Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerStream">
+      <MemberSignature Language="C#" Value="protected System.IO.Stream InnerStream { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Stream InnerStream" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Security.AuthenticatedStream.InnerStream" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Stream, der von diesem verwendet <see cref="T:System.Net.Security.AuthenticatedStream" /> für das Senden und Empfangen von Daten.</summary>
+        <value>Ein <see cref="T:System.IO.Stream" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Klassen, die von erben <xref:System.Net.Security.AuthenticatedStream> können diese Eigenschaft verwenden, den an übergebenen Stream Zugriff auf die <xref:System.Net.Security.AuthenticatedStream.%23ctor%28System.IO.Stream%2CSystem.Boolean%29>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAuthenticated">
+      <MemberSignature Language="C#" Value="public abstract bool IsAuthenticated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAuthenticated" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Security.AuthenticatedStream.IsAuthenticated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Boolean" /> Wert, der angibt, ob die Authentifizierung erfolgreich war.</summary>
+        <value>
+          <see langword="true" />Wenn eine erfolgreicher Authentifizierung erfolgt ist andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Durchführen der Authentifizierung aufgerufenen Methoden werden in den Klassen, die von erben definiert <xref:System.Net.Security.AuthenticatedStream>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NclNegoAsyncClient#6](~/samples/snippets/cpp/VS_Snippets_Remoting/NclNegoasyncClient/CPP/NclNegoasyncClient.cpp#6)]
+ [!code-csharp[NclNegoAsyncClient#6](~/samples/snippets/csharp/VS_Snippets_Remoting/NclNegoasyncClient/CS/client.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEncrypted">
+      <MemberSignature Language="C#" Value="public abstract bool IsEncrypted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEncrypted" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Security.AuthenticatedStream.IsEncrypted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Boolean" /> Wert, der angibt, ob Daten gesendet, mit diesem <see cref="T:System.Net.Security.AuthenticatedStream" /> verschlüsselt ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Daten vor der Übertragung über das Netzwerk verschlüsselt und entschlüsselt erreicht Wenn den Remoteendpunkt; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verschlüsselung trägt zum Schutz von Daten auf des Datenschutzes; Es wird nämlich sichergestellt, dass während Daten übertragen werden, es von Dritten gelesen werden kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NclNegoAsyncClient#6](~/samples/snippets/cpp/VS_Snippets_Remoting/NclNegoasyncClient/CPP/NclNegoasyncClient.cpp#6)]
+ [!code-csharp[NclNegoAsyncClient#6](~/samples/snippets/csharp/VS_Snippets_Remoting/NclNegoasyncClient/CS/client.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMutuallyAuthenticated">
+      <MemberSignature Language="C#" Value="public abstract bool IsMutuallyAuthenticated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsMutuallyAuthenticated" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Security.AuthenticatedStream.IsMutuallyAuthenticated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Boolean" /> Wert, der angibt, ob sowohl Client als auch Server authentifiziert wurden.</summary>
+        <value>
+          <see langword="true" />Wenn Client und Server authentifiziert wurden; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nicht alle Sicherheitsprotokolle unterstützen die gegenseitigen Authentifizierung. Um festzustellen, ob die gegenseitiger Authentifizierung unterstützt wird, indem das Sicherheitsprotokoll Implementierung in einer Klasse, die von erben <xref:System.Net.Security.AuthenticatedStream>, überprüfen Sie die Klassendokumentation.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NclNegoAsyncClient#6](~/samples/snippets/cpp/VS_Snippets_Remoting/NclNegoasyncClient/CPP/NclNegoasyncClient.cpp#6)]
+ [!code-csharp[NclNegoAsyncClient#6](~/samples/snippets/csharp/VS_Snippets_Remoting/NclNegoasyncClient/CS/client.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsServer">
+      <MemberSignature Language="C#" Value="public abstract bool IsServer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsServer" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Security.AuthenticatedStream.IsServer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Boolean" /> Wert, der angibt, ob die lokale Seite der Verbindung als Server authentifiziert wurde.</summary>
+        <value>
+          <see langword="true" />Wenn der lokale Endpunkt als die Serverseite einer authentifizierten Client-/ Server-Verbindung authentifiziert wurde. <see langword="false" /> , wenn der lokale Endpunkt wie der Client authentifiziert wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die meisten Sicherheitsprotokolle, die für die Client / Server-Authentifizierung verwendet definieren bestimmte Verhalten und Anforderungen für die Angabe von Anmeldeinformationen für die Authentifizierung basierend auf, ob Sie den Client oder Server sind.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NclNegoAsyncClient#6](~/samples/snippets/cpp/VS_Snippets_Remoting/NclNegoasyncClient/CPP/NclNegoasyncClient.cpp#6)]
+ [!code-csharp[NclNegoAsyncClient#6](~/samples/snippets/csharp/VS_Snippets_Remoting/NclNegoasyncClient/CS/client.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSigned">
+      <MemberSignature Language="C#" Value="public abstract bool IsSigned { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSigned" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Security.AuthenticatedStream.IsSigned" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Boolean" /> Wert, der angibt, ob die mit diesem Stream gesendeten Daten signiert wurde.</summary>
+        <value>
+          <see langword="true" />Wenn die Daten vor der Übertragung signiert ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Signieren von Daten schützt die Integrität der Daten; nämlich leichter den Empfänger zu bestimmen, ob die Daten bei der Übertragung manipuliert wurde.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NclNegoAsyncClient#6](~/samples/snippets/cpp/VS_Snippets_Remoting/NclNegoasyncClient/CPP/NclNegoasyncClient.cpp#6)]
+ [!code-csharp[NclNegoAsyncClient#6](~/samples/snippets/csharp/VS_Snippets_Remoting/NclNegoasyncClient/CS/client.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LeaveInnerStreamOpen">
+      <MemberSignature Language="C#" Value="public bool LeaveInnerStreamOpen { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool LeaveInnerStreamOpen" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Security.AuthenticatedStream.LeaveInnerStreamOpen" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob der Stream von diesem verwendet <see cref="T:System.Net.Security.AuthenticatedStream" /> für senden und Empfangen von Daten geöffnet bleibt.</summary>
+        <value>
+          <see langword="true" />Wenn der innere Datenstrom hat noch geöffnet; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Festlegung auf `true`, der an den Konstruktor dieser Klasse übergebene Stream wird nicht geschlossen werden, nachdem die Instanz dieser Klasse geschlossen wurde. Bei Festlegung auf `false`, schließen die Instanz dieser Klasse wird auch die Transportstream geschlossen. Der Standardwert dieser Eigenschaft ist `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

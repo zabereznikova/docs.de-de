@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.Windows.Input">
+  <Docs>
+    <summary>Enthält Schnittstellen für Preview-Befehle in einem Microsoft-Ribbon für WPF-Steuerelement.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

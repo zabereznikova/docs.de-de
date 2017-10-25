@@ -1,0 +1,240 @@
+<Type Name="FORMATETC" FullName="System.Runtime.InteropServices.ComTypes.FORMATETC">
+  <TypeSignature Language="C#" Value="public struct FORMATETC" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit FORMATETC extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ComTypes.FORMATETC" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein generalisiertes Zwischenablageformat dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.InteropServices.ComTypes.FORMATETC> -Struktur umfasst ein Zielgerät, den Aspekt oder die Ansicht der Daten und einen Indikator für das Speichermedium. Anstatt ein Zwischenablageformat verwendet OLE stattdessen eine FORMATETC-Datenstruktur. Diese Struktur wird in der OLE-Funktionen und Methoden, die Formatierungsinformationen der Daten erfordern als Parameter verwendet.  
+  
+ Weitere Informationen zu den `FORMATETC` -Struktur, finden Sie in der MSDN Library.  
+  
+ Die common Language Runtime löst eine Ausnahme aus, wenn eine COM-Methode in systemeigenem Code ein HRESULT zurückgibt. Weitere Informationen finden Sie unter [Vorgehensweise: Zuordnen von HRESULTs und Ausnahmen](~/docs/framework/interop/how-to-map-hresults-and-exceptions.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="cfFormat">
+      <MemberSignature Language="C#" Value="public short cfFormat;" />
+      <MemberSignature Language="ILAsm" Value=".field public int16 cfFormat" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.ComTypes.FORMATETC.cfFormat" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, die bestimmten Zwischenablageformat von Interesse sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ OLE erkennt drei Formate:  
+  
+-   Standardverarbeitung von Austauschvorgängen Formate, wie z. B. `CF_TEXT`.  
+  
+-   Private anwendungsformate verstanden nur von der Anwendung, die das Format Angebot oder von anderen Anwendungen, die ähnliche Funktionen bietet.  
+  
+-   OLE-Formate, die zum Erstellen von verknüpfte oder eingebettete Objekte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="dwAspect">
+      <MemberSignature Language="C#" Value="public System.Runtime.InteropServices.ComTypes.DVASPECT dwAspect;" />
+      <MemberSignature Language="ILAsm" Value=".field public valuetype System.Runtime.InteropServices.ComTypes.DVASPECT dwAspect" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.ComTypes.FORMATETC.dwAspect" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.ComTypes.DVASPECT</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen von der <see cref="T:System.Runtime.InteropServices.ComTypes.DVASPECT" /> Enumerationskonstanten, der angibt, wie viele Details beim Rendern enthalten sein soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein einzelnes Zwischenablageformat kann mehrere Aspekte oder Ansichten des Objekts unterstützen. Die meisten Übertragung von Daten und Präsentationsinformationen und das Zwischenspeichern von Methoden übergeben Aspekt Informationen. Ein Aufrufer kann z. B. Zwischenablageformat für ein Objekt, fordern Sie mithilfe der Metafile-Format der Zwischenablage abgerufen werden. Beachten Sie, dass nur eine <xref:System.Runtime.InteropServices.ComTypes.DVASPECT> Wert kann verwendet werden, <xref:System.Runtime.InteropServices.ComTypes.FORMATETC.dwAspect>. D. h. <xref:System.Runtime.InteropServices.ComTypes.FORMATETC.dwAspect> kann nicht das Ergebnis von einer `BOOLEAN OR` Vorgang auf mehreren <xref:System.Runtime.InteropServices.ComTypes.DVASPECT> Werte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="lindex">
+      <MemberSignature Language="C#" Value="public int lindex;" />
+      <MemberSignature Language="ILAsm" Value=".field public int32 lindex" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.ComTypes.FORMATETC.lindex" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt Teil der Aspekt, wenn die Daten über die Seite Grenzen hinweg aufgeteilt werden müssen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der am häufigsten verwendete Wert ist 1, der alle Daten angibt. Für die Aspekte <xref:System.Runtime.InteropServices.ComTypes.DVASPECT.DVASPECT_THUMBNAIL> und <xref:System.Runtime.InteropServices.ComTypes.DVASPECT.DVASPECT_ICON>, <xref:System.Runtime.InteropServices.ComTypes.FORMATETC.lindex> wird ignoriert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ptd">
+      <MemberSignature Language="C#" Value="public IntPtr ptd;" />
+      <MemberSignature Language="ILAsm" Value=".field public native int ptd" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.ComTypes.FORMATETC.ptd" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen Zeiger auf eine <see langword="DVTARGETDEVICE" /> Struktur mit Informationen über das Zielgerät, das die Daten erstellt werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein null-Wert wird verwendet, wenn das angegebene Datenformat ist unabhängig des Zielgeräts oder wenn der Aufrufer nicht ignoriert welches Gerät verwendet wird. In letzterem Fall wenn die Daten auf einem Zielgerät erfordert sollten das Objekt ein Standardgerät (häufig die Anzeige für visuelle Komponenten) auswählen. Von einem Objekt mit einem null-Zielgerät, z. B. die meisten Metadateien abgerufene Daten ist unabhängig von dem Zielgerät. Die resultierenden Daten entspricht normalerweise dem wäre, wenn der Benutzer die **speichern unter** Befehl die **Datei** Menü und ein Austauschformat ausgewählt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="tymed">
+      <MemberSignature Language="C#" Value="public System.Runtime.InteropServices.ComTypes.TYMED tymed;" />
+      <MemberSignature Language="ILAsm" Value=".field public valuetype System.Runtime.InteropServices.ComTypes.TYMED tymed" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.ComTypes.FORMATETC.tymed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.ComTypes.TYMED</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen von der <see cref="T:System.Runtime.InteropServices.ComTypes.TYMED" /> Enumerationskonstanten, die den Typ der Speichermedium zur Übertragung von Daten für das Objekt angibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Daten können mit beliebigen Mittel sinnvoll für das Objekt übertragen werden. Beispielsweise können Daten mithilfe von globalen Arbeitsspeicher, eine Datenträgerdatei oder strukturierten Speicherobjekte übergeben werden. Weitere Informationen finden Sie unter der <xref:System.Runtime.InteropServices.ComTypes.TYMED>-Enumeration.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

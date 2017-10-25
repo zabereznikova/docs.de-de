@@ -1,0 +1,105 @@
+<Type Name="XamlXmlWriterSettings" FullName="System.Xaml.XamlXmlWriterSettings">
+  <TypeSignature Language="C#" Value="public class XamlXmlWriterSettings : System.Xaml.XamlWriterSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XamlXmlWriterSettings extends System.Xaml.XamlWriterSettings" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.XamlXmlWriterSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xaml.XamlWriterSettings</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Initialisierung von Einstellungen für die <see cref="T:System.Xaml.XamlXmlWriter" /> -XAML-Writer-Implementierung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardwerte für alle <xref:System.Xaml.XamlXmlWriterSettings> Werte sind `false`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlXmlWriterSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlXmlWriterSettings.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xaml.XamlXmlWriterSettings" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssumeValidInput">
+      <MemberSignature Language="C#" Value="public bool AssumeValidInput { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AssumeValidInput" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlXmlWriterSettings.AssumeValidInput" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Xaml.XamlXmlWriter" /> sollte immer gültige XAML-Eingabe zum Zweck der doppelten Auflösung oder andere fehlerüberprüfung voraussetzen.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Xaml.XamlXmlWriter" /> überspringt bestimmte Überprüfungen Überprüfung oder Fehler, z. B. das Auslösen von Ausnahmen auf doppelte Elemente. <see langword="false" />Wenn die <see cref="T:System.Xaml.XamlXmlWriter" /> löst Ausnahmen aus, wenn ungültige XAML erkannt wird. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseOutput">
+      <MemberSignature Language="C#" Value="public bool CloseOutput { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CloseOutput" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlXmlWriterSettings.CloseOutput" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Xaml.XamlXmlWriter" /> sollten sofort auf Schließen <see langword="Dispose" /> oder andere Vorgänge, oder ob die Pufferausgabe vor dem Schließen der XAML-Writer stattdessen schreiben soll. Verwenden Sie diese Einstellung mit Vorsicht; Schließen sofort kann Ungültige XAML führen, die nicht erneut geladen werden kann.</summary>
+        <value>
+          <see langword="true" />Wenn <see cref="T:System.Xaml.XamlXmlWriter" /> sofort geschlossen wird, auf eine <see langword="Dispose" /> oder ähnliche Vorgänge. <see langword="false" />Wenn die verbleibende Pufferausgabe geschrieben werden, vor der <see cref="T:System.Xaml.XamlXmlWriter" /> freigegeben wird. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Einstellung wirkt sich auf die Logik der <xref:System.Xaml.XamlXmlWriter.Dispose%2A?displayProperty=nameWithType>, welche Aufrufe `Close` für den zugrunde liegenden <xref:System.Xml.XmlWriter> oder <xref:System.IO.TextWriter> Wenn <xref:System.Xaml.XamlXmlWriterSettings.CloseOutput%2A> ist `true`; oder ruft <xref:System.Xaml.XamlXmlWriter.Flush%2A> (erneut an den zugrunde liegenden gebunden <xref:System.Xml.XmlWriter> oder <xref:System.IO.TextWriter>) Wenn <xref:System.Xaml.XamlXmlWriterSettings.CloseOutput%2A> ist `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public System.Xaml.XamlXmlWriterSettings Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xaml.XamlXmlWriterSettings Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlXmlWriterSettings.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlXmlWriterSettings</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Kopie dieser <see cref="T:System.Xaml.XamlXmlWriterSettings" /> Instanz.</summary>
+        <returns>Die zurückgegebene Kopie.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

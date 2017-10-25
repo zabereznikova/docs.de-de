@@ -1,0 +1,50 @@
+<Type Name="ToolStripItemAlignment" FullName="System.Windows.Forms.ToolStripItemAlignment">
+  <TypeSignature Language="C#" Value="public enum ToolStripItemAlignment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ToolStripItemAlignment extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolStripItemAlignment" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Bestimmt die Ausrichtung des eine <see cref="T:System.Windows.Forms.ToolStripItem" /> in einem <see cref="T:System.Windows.Forms.ToolStrip" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="Left" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolStripItemAlignment Left = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolStripItemAlignment.Left" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripItemAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die <see cref="T:System.Windows.Forms.ToolStripItem" /> gegen linken oder oberen Ende des verankert werden die <see cref="T:System.Windows.Forms.ToolStrip" />, abhängig von der <see cref="T:System.Windows.Forms.ToolStrip" /> Ausrichtung. Wenn der Wert der <see cref="T:System.Windows.Forms.RightToLeft" /> ist <see langword="Yes" />, gekennzeichnete Elemente als <see cref="F:System.Windows.Forms.ToolStripItemAlignment.Left" /> rechts ausgerichtet werden die <see cref="T:System.Windows.Forms.ToolStrip" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="Right" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolStripItemAlignment Right = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolStripItemAlignment.Right" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripItemAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die <see cref="T:System.Windows.Forms.ToolStripItem" /> am rechten oder unteren Ende des verankert werden die <see cref="T:System.Windows.Forms.ToolStrip" />, abhängig von der <see cref="T:System.Windows.Forms.ToolStrip" /> Ausrichtung. Wenn der Wert der <see cref="T:System.Windows.Forms.RightToLeft" /> ist <see langword="Yes" />, gekennzeichnete Elemente als <see cref="F:System.Windows.Forms.ToolStripItemAlignment.Right" /> ausgerichtet sind, auf der linken Seite des der <see cref="T:System.Windows.Forms.ToolStrip" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,301 @@
+<Type Name="OutOfMemoryException" FullName="System.OutOfMemoryException">
+  <TypeSignature Language="C#" Value="public class OutOfMemoryException : SystemException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit OutOfMemoryException extends System.SystemException" />
+  <TypeSignature Language="DocId" Value="T:System.OutOfMemoryException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-4.5">System.SystemException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die Ausnahme, die ausgelöst wird, wenn für die weitere Ausführung eines Programms nicht genügend Arbeitsspeicher zur Verfügung steht.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.OutOfMemoryException> Ausnahme hat zwei wichtige Gründe:  
+  
+-   Sie versuchen, erweitern eine <xref:System.Text.StringBuilder> Objekt überschreitet die Länge von definiert seine <xref:System.Text.StringBuilder.MaxCapacity%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+-   Die common Language Runtime kann kein genügend zusammenhängenden Arbeitsspeicher, um erfolgreich ausführen eines Vorgangs zugeordnet werden. Diese Ausnahme kann durch eine beliebige Eigenschaft Zuweisung oder ein Methodenaufruf ausgelöst werden, die eine speicherbelegung erfordert. Weitere Informationen über die Ursache des der <xref:System.OutOfMemoryException> Ausnahme finden Sie unter ["nicht genügend Arbeitsspeicher" verweist nicht auf den physischen Arbeitsspeichers](http://blogs.msdn.com/b/ericlippert/archive/2009/06/08/out-of-memory-does-not-refer-to-physical-memory.aspx).  
+  
+     Diese Art von <xref:System.OutOfMemoryException> Ausnahme darstellt, nach einen schwerwiegenden Fehler. Falls gewünscht, die Ausnahme zu behandeln, sollten Sie enthalten eine `catch` Block, der Aufrufe der <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> Methode, um Ihre app zu beenden und dem Systemereignisprotokoll ein Eintrag hinzugefügt, wie im folgenden Beispiel wird.  
+  
+     [!code-csharp[System.OutOfMemoryException#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.outofmemoryexception/cs/failfast1.cs#2)]
+     [!code-vb[System.OutOfMemoryException#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.outofmemoryexception/vb/failfast1.vb#2)]  
+  
+ Beispiele für die Bedingungen, unter dem die Ausnahme wird ausgelöst, und die Aktionen, die Sie ergreifen können, um es zu entfernen, umfassen Folgendes:  
+  
+ Aufrufen von werden die <xref:System.Text.StringBuilder.Insert%2A?displayProperty=nameWithType> Methode.  
+ Sie versuchen, erhöhen Sie die Länge des eine <xref:System.Text.StringBuilder> Objekt den übersteigt gemäß seiner <xref:System.Text.StringBuilder.MaxCapacity%2A?displayProperty=nameWithType> Eigenschaft. Das folgende Beispiel veranschaulicht die <xref:System.OutOfMemoryException> Ausnahme durch einen Aufruf der <xref:System.Text.StringBuilder.Insert%28System.Int32%2CSystem.String%2CSystem.Int32%29?displayProperty=nameWithType> Methode, wenn das Beispiel versucht, eine Zeichenfolge einfügen, die des Objekts würde <xref:System.Text.StringBuilder.Length%2A> Eigenschaft überschreitet die maximale Kapazität.  
+  
+ [!code-csharp[System.OutOfMemoryException#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.outofmemoryexception/cs/sb_example1.cs#1)]
+ [!code-vb[System.OutOfMemoryException#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.outofmemoryexception/vb/sb_example1.vb#1)]  
+  
+ Sie können eine der folgenden Behebung des Fehlers Aktionen ausführen:  
+  
+-   Ersetzen Sie den Aufruf an die <xref:System.Text.StringBuilder.%23ctor%28System.Int32%2CSystem.Int32%29?displayProperty=nameWithType> Konstruktor mit einem Aufruf einer anderen <xref:System.Text.StringBuilder> Konstruktorüberladung. Die maximale Kapazität der <xref:System.Text.StringBuilder> Objektsatz auf den Standardwert, also <xref:System.Int32.MaxValue?displayProperty=nameWithType>.  
+  
+-   Rufen Sie die <xref:System.Text.StringBuilder.%23ctor%28System.Int32%2CSystem.Int32%29?displayProperty=nameWithType> Konstruktor mit einer `maxCapacity` Wert, der groß genug für alle Erweiterungen auf der <xref:System.Text.StringBuilder> Objekt.  
+  
+ Ihre app wird als 32-Bit-Prozess ausgeführt.  
+ 32-Bit-Prozesse können maximal 2 GB Arbeitsspeicher der virtuellen Benutzermodus auf 32-Bit-Systemen und 4 GB Arbeitsspeicher der virtuellen Benutzer-Modus auf 64-Bit-Systemen zuzuordnen. Dies kann erschweren für die common Language Runtime ausreichend zusammenhängenden Arbeitsspeicher zuweisen, wenn eine große Belegung benötigt wird. Im Gegensatz dazu können die 64-Bit-Prozessen bis zu 8 TB an virtuellem Arbeitsspeicher zugewiesen werden. Um diese Ausnahme zu behandeln, kompilieren Sie Ihre app eine 64-Bit-Zielplattform neu. Informationen für bestimmte Plattformen in Visual Studio finden Sie unter [Vorgehensweise: Konfigurieren von Projekten für Zielplattformen](http://msdn.microsoft.com/library/845302fc-273d-4f81-820a-7296ce91bd76).  
+  
+ Ihre app wird nicht verwaltete Ressourcen gelangen.  
+ Obwohl der Garbage Collector in verwaltete Typen belegten Arbeitsspeicher freizugeben werden kann, verwaltet er keine nicht verwalteten Ressourcen wie z. B. Betriebssystem behandelt (einschließlich Handles für Dateien, Speicherabbilddateien Pipes, Registrierungsschlüssel und Wait-Handles) zugewiesene Arbeitsspeicher und Speicherblöcke zugeordnet werden direkt von Windows-API-Aufrufe oder durch Aufrufe von Speicherverwaltungsfunktionen wie z. B. `malloc`. Implementieren von Typen, die nicht verwaltete Ressourcen nutzen die <xref:System.IDisposable> Schnittstelle.  
+  
+ Wenn Sie einen Typ, die nicht verwaltete Ressourcen verwendet verwenden, Sie sollten darauf achten, rufen Sie die <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> Methode, wenn Sie ihn nicht mehr benötigen. (Einige Typen implementieren darüber hinaus eine `Close` -Methode, die in der Funktion an identisch ist eine `Dispose` Methode.) Weitere Informationen finden Sie unter der [mithilfe von Objekten, implementieren IDisposable](~/docs/standard/garbage-collection/using-objects.md) Thema.  
+  
+ Wenn Sie einen Typ, der nicht verwaltete Ressourcen verwendet erstellt haben, stellen Sie sicher, dass Sie das Dispose-Muster implementiert und, bei Bedarf einer Finalize-Methode bereitgestellten. Weitere Informationen finden Sie unter der [Dispose-Muster](~/docs/standard/design-guidelines/dispose-pattern.md), [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md), und <xref:System.Object.Finalize%2A?displayProperty=nameWithType> Themen.  
+  
+ Sie versuchen, ein großes Array in eine 64-Bit-Prozess zu erstellen.  
+ Standardmäßig lässt die common Language Runtime nicht einzelne Objekte zu, deren Größe über 2 GB überschreitet. Um diese Standardeinstellung zu überschreiben, können Sie die Einstellung in der Konfigurationsdatei Arrays aktivieren, deren Gesamtgröße 2 GB überschreitet.  
+  
+ Sie arbeiten mit sehr großen Mengen von Daten (z. B. Arrays, Auflistungen oder Datenbank-Datasets) im Arbeitsspeicher.  
+ Wenn Datenstrukturen oder Datasets, die im Arbeitsspeicher befinden sich so groß, dass die common Language Runtime genügend zusammenhängenden Arbeitsspeicher belegt werden, ist ein <xref:System.OutOfMemoryException> Ausnahmeergebnisse.  
+  
+ Um zu verhindern, dass die <xref:System.OutOfMemoryException> Ausnahmen, damit weniger Daten im Speicher ist, oder die Daten in Segmenten, die erfordern kleinere speicherbelegungen aufgeteilt werden, ändern Sie die Anwendung muss. Zum Beispiel:  
+  
+-   Wenn Sie alle Daten aus einer Datenbank abgerufen und Filtern es in Ihrer app in der Roundtrips zum Server zu minimieren, sollten Sie Ihre Abfragen, um nur die Teilmenge der Daten zurückzugeben, die Ihre app benötigt ändern. Bei der Arbeit mit großen Tabellen mehrere Abfragen sind fast immer mehr effizient als alle Daten in einer einzelnen Tabelle abrufen und bearbeiten sie.  
+  
+-   Wenn Sie Abfragen, die Benutzer dynamisch zu erstellen ausführen, sollten Sie sicherstellen, dass die Anzahl der von der Abfrage zurückgegebenen Datensätze beschränkt ist.  
+  
+-   Wenn Sie mit großen Arrays oder andere Auflistung-, deren Größe Ergebnisse in Objekten eine <xref:System.OutOfMemoryException> Ausnahme, sollten Sie die Anwendung, um die Daten in Teilmengen zu arbeiten, statt alle auf einmal bearbeiten ändern.  
+  
+ Im folgenden Beispiel wird ein Array, das von Gleitkommawerten 200 Millionen besteht aus und klicken Sie dann deren Mittelwert berechnet. Die Ausgabe des Beispiels zeigt, dass die da im Beispiel werden das gesamte Array im Arbeitsspeicher gespeichert, bevor sie den Mittelwert berechnet eine <xref:System.OutOfMemoryException> wird ausgelöst.  
+  
+ [!code-csharp[System.OutOfMemoryException#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.outofmemoryexception/cs/data1.cs#3)]
+ [!code-vb[System.OutOfMemoryException#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.outofmemoryexception/vb/data1.vb#3)]  
+  
+ Das folgende Beispiel schließt den <xref:System.OutOfMemoryException> Ausnahme durch die Verarbeitung der eingehenden Daten ohne das gesamte Dataset im Arbeitsspeicher, die Daten in eine Datei zu serialisieren, ggf. um weitere Verarbeitung zu ermöglichen (diese Zeilen auskommentiert werden im Beispiel speichern Da in diesem Fall hervorrufen eine Datei, deren Größe größer als 1 GB ist), und den Mittelwert der berechneten und die Anzahl von Fällen an die aufrufende Routine zurückgegeben.  
+  
+ [!code-csharp[System.OutOfMemoryException#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.outofmemoryexception/cs/data2.cs#4)]
+ [!code-vb[System.OutOfMemoryException#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.outofmemoryexception/vb/data2.vb#4)]  
+  
+ Sie werden wiederholt große Zeichenfolgen verketten.  
+ Da Zeichenfolgen unveränderlich sind, wird jede Verkettung "String"-Vorgang eine neue Zeichenfolge erstellt. Die Auswirkungen für kurze Zeichenfolgen oder für eine kleine Anzahl von Verkettungsvorgänge, sind zu vernachlässigen. Aber für große Zeichenfolgen oder eine sehr große Anzahl von Verkettungsvorgänge Verketten von Zeichenfolgen an eine große Anzahl von speicherbelegungen und der Fragmentierung des Arbeitsspeichers, denen eine schlechte Leistung und möglicherweise <xref:System.OutOfMemoryException> Ausnahmen.  
+  
+ Wenn große Zeichenfolgen verketten oder eine große Anzahl von Verkettungsvorgänge ausführen, Sie sollten verwenden die <xref:System.Text.StringBuilder> -Klasse statt der <xref:System.String> Klasse. Wenn Sie die Zeichenfolge bearbeiten abgeschlossen haben, konvertieren die <xref:System.Text.StringBuilder> Instanz in eine Zeichenfolge durch Aufrufen der <xref:System.Text.StringBuilder.ToString%2A?displayProperty=nameWithType> Methode.  
+  
+ Heften Sie eine große Anzahl von Objekten im Arbeitsspeicher.  
+ Eine große Anzahl von Objekten im Arbeitsspeicher längere Zeiträume anheften kann für den Garbage Collector auf zusammenhängenden Speicherblöcke belegen erschweren. Wenn Sie eine große Anzahl von Objekten im Arbeitsspeicher, z. B. mit angeheftet haben die `fixed` -Anweisung in c# oder durch Aufrufen der <xref:System.Runtime.InteropServices.GCHandle.Alloc%28System.Object%2CSystem.Runtime.InteropServices.GCHandleType%29?displayProperty=nameWithType> Methode mit einem Handle <xref:System.Runtime.InteropServices.GCHandleType?displayProperty=nameWithType>, erreichen Sie Folgendes verwenden, um die Adresse der <xref:System.OutOfMemoryException> Ausnahme.  
+  
+-   Bewerten Sie, ob jedes Objekt wirklich angeheftet werden muss,  
+  
+-   Stellen Sie sicher, dass jedes Objekt so bald wie möglich gelöst ist.  
+  
+-   Stellen Sie sicher, dass jeder Aufruf der <xref:System.Runtime.InteropServices.GCHandle.Alloc%28System.Object%2CSystem.Runtime.InteropServices.GCHandleType%29?displayProperty=nameWithType> Methode, um die Pin-Speicher verfügt über einen zugehörigen Aufruf an die <xref:System.Runtime.InteropServices.GCHandle.Free%2A?displayProperty=nameWithType> Methode an, dass der Arbeitsspeicher zu lösen.  
+  
+ Die folgenden Microsoft intermediate (MSIL)-Anweisungen Auslösen einer <xref:System.OutOfMemoryException> Ausnahme:  
+  
+-   [Kontrollkästchen](http://msdn.microsoft.com/library/system.reflection.emit.opcodes.box.aspx)  
+  
+-   [newarr](http://msdn.microsoft.com/library/system.reflection.emit.opcodes.newarr.aspx)  
+  
+-   [Newobj](http://msdn.microsoft.com/library/system.reflection.emit.opcodes.newobj.aspx)Newobj  
+  
+ <xref:System.OutOfMemoryException>verwendet das HRESULT `COR_E_OUTOFMEMORY`, der über den Wert 0x8007000E verfügt.  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.OutOfMemoryException>, finden Sie unter der <xref:System.OutOfMemoryException.%23ctor%2A> Konstruktoren.  
+  
+> [!NOTE]
+>  Der Wert des geerbten <xref:System.Exception.Data%2A> Eigenschaft ist immer `null`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OutOfMemoryException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.OutOfMemoryException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.OutOfMemoryException" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert die <xref:System.Exception.Message%2A> -Eigenschaft der neuen Instanz mit einer vom System gelieferten Meldung, die den Fehler beschreibt, wie z. B. "Es war nicht genügend Arbeitsspeicher, um die Ausführung des Programms fortzusetzen." Diese Meldung berücksichtigt die aktuelle Systemkultur.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.OutOfMemoryException>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|`null`.|  
+|<xref:System.Exception.Message%2A>|Die lokalisierte Zeichenfolge mit der Fehlermeldung.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OutOfMemoryException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.OutOfMemoryException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Meldung, in der der Fehler beschrieben wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.OutOfMemoryException" />-Klasse mit einer angegebenen Fehlermeldung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Inhalt des `message`-Parameters sollte für Personen verständlich sein. Der Aufrufer dieses Konstruktors muss sicherstellen, dass diese Zeichenfolge für die aktuelle Systemkultur lokalisiert wurde.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.OutOfMemoryException>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Ein NULL-Verweis (`Nothing` in Visual Basic).|  
+|<xref:System.Exception.Message%2A>|Die Zeichenfolge der Fehlermeldung.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected OutOfMemoryException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.OutOfMemoryException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Das Objekt, das die Daten des serialisierten Objekts enthält.</param>
+        <param name="context">Die Kontextinformationen zur Quelle bzw. zum Ziel.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.OutOfMemoryException" />-Klasse mit serialisierten Daten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird während der Deserialisierung aufgerufen, um das über einen Stream übertragene Ausnahmeobjekt wiederherzustellen. Weitere Informationen finden Sie unter [XML- und SOAP-Serialisierung](~/docs/standard/serialization/xml-and-soap-serialization.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OutOfMemoryException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.OutOfMemoryException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Fehlermeldung, in der die Ursache der Ausnahme erklärt wird.</param>
+        <param name="innerException">Die Ausnahme, die die Ursache der aktuellen Ausnahme ist. Wenn die <c>"InnerException"</c> Parameter ist kein null-Verweis (<see langword="Nothing" /> in Visual Basic), die aktuelle Ausnahme wird ausgelöst, einem <see langword="catch" /> Block, der die innere Ausnahme behandelt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.OutOfMemoryException" />-Klasse mit einer angegebenen Fehlermeldung und einem Verweis auf die innere Ausnahme, die diese Ausnahme ausgelöst hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Ausnahme, die als direktes Ergebnis einer vorhergehenden Ausnahme ausgelöst wird, kann in der <xref:System.Exception.InnerException%2A>-Eigenschaft über einen Verweis auf die vorhergehende Ausnahme verfügen. Die <xref:System.Exception.InnerException%2A>-Eigenschaft gibt denselben Wert zurück, der an den Konstruktor übergeben wurde, bzw. einen NULL-Verweis (`Nothing` in Visual Basic), wenn die <xref:System.Exception.InnerException%2A>-Eigenschaft nicht den Wert für die innere Ausnahme für den Konstruktor bereitstellt.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.OutOfMemoryException>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Der Verweis auf die interne Ausnahme.|  
+|<xref:System.Exception.Message%2A>|Die Zeichenfolge der Fehlermeldung.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

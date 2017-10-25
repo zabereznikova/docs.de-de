@@ -1,0 +1,774 @@
+<Type Name="Random" FullName="System.Random">
+  <TypeSignature Language="C#" Value="public class Random" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit Random extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Random" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Generator für Pseudozufallszahlen dar, d. h. ein Gerät, das eine Zahlenfolge erzeugt, die bestimmte statistische Anforderungen hinsichtlich ihrer Zufälligkeit erfüllt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die .NET Framework-Quellcodes für diesen Typ finden Sie unter der [Verweisquelle](http://referencesource.microsoft.com/#mscorlib/system/random.cs#bb77e610694e64ca). Sie können den Quellcode online Durchsuchen, Referenz für die Offlineanzeige herunterladen und schrittweise durchlaufen (inklusive Patches und Updates) während des Debuggens; finden Sie unter [Anweisungen](http://referencesource.microsoft.com/).  
+  
+ Pseudozufallszahlen werden aus einer endlichen Menge von Zahlen mit gleicher Wahrscheinlichkeit ausgewählt. Die ausgewählten Zahlen sind nicht vollständig zufälligen, da ein mathematisches Algorithmus verwendet wird, um sie auszuwählen, aber sie ausreichend zufällige aus praktischen Gründen sind. Die aktuelle Implementierung von der <xref:System.Random> Klasse basiert auf eine geänderte Version des Donald E. Knuths Subtraktive Algorithmus mit Zufallszahlengenerator. Weitere Informationen finden Sie unter D. E. Knuth. *Die Art des Computers Programmierung, Volume 2: Seminumerical Algorithmen*. Addison-Wesley, lesen, MA, dritte Edition, 1997.  
+  
+ Verwenden Sie eine kryptografisch sichere Zufallszahl, z. B. einen generieren, für das Erstellen eines zufälligen Kennworts entspricht, der <xref:System.Security.Cryptography.RNGCryptoServiceProvider> Klasse oder eine Klasse von <xref:System.Security.Cryptography.RandomNumberGenerator?displayProperty=nameWithType>.  
+  
+ In diesem Thema:  
+  
+ [Instanziieren den Zufallszahlen-generator](#Instantiate)   
+ [Mehrere Instanziierungen vermeiden](#Multiple)   
+ [Der System.Random-Klasse und Thread-Sicherheit](#ThreadSafety)   
+ [Verschiedene Typen von Zufallszahlen generieren](#Functionality)   
+ [Ersetzen einen eigenen Algorithmus](#Overriding)   
+ [Wie werden System.Random, verwendet...](#Operations)   
+ [Die gleiche Sequenz von Zufallswerten abrufen](#Same)  
+ [Eindeutige Sequenzen von Zufallswerten abrufen](#Unique)  
+ [Abrufen von ganzen Zahlen in einem angegebenen Bereich](#Range)  
+ [Abrufen von ganzen Zahlen mit einer angegebenen Anzahl von Ziffern](#Digits)  
+ [Abrufen von Gleitkommawerten in einem angegebenen Bereich](#Floats)  
+ [Generieren von zufälligen boolesche Werte](#Boolean)  
+ [Generieren von zufälligen 64-Bit-Ganzzahlen](#Long)  
+ [Abrufen von Bytes in einem angegebenen Bereich](#Bytes)  
+ [Nach dem Zufallsprinzip ein Element aus einem Array oder einer Auflistung abrufen](#Array)  
+ [Ein eindeutiges Element aus einem Array oder einer Auflistung abrufen](#UniqueArray)  
+  
+<a name="Instantiate"></a>   
+## <a name="instantiating-the-random-number-generator"></a>Instanziieren den Zufallszahlen-generator  
+ Zufallszahlen-Generator wird durch Angeben eines Ausgangswert-Werts (ein Startwert für die Generierung Algorithmus Pseudozufallszahlen) instanziieren, um eine <xref:System.Random.%23ctor%2A> Klassenkonstruktor.  Sie können den Ausgangswert entweder explizit oder implizit angeben:  
+  
+-   Die <xref:System.Random.%23ctor%28System.Int32%29> -Konstruktor verwendet einen explizite Seed-Wert, den Sie angeben.  
+  
+-   Die <xref:System.Random.%23ctor> Konstruktor verwendet die Systemuhr einen Ausgangswert angeben. Dies ist üblicherweise wird bei der Instanziierung des Zufallszahlengenerator.  
+  
+ Wenn der gleiche Ausgangswert, für Separate verwendet wird <xref:System.Random> Objekte aufweist, werden sie der gleichen Reihe von Zufallszahlen generiert. Dies kann zum Erstellen einer Testsammlung aus, die Zufallswerte verarbeitet oder für die Wiedergabe Spiele, die ihre Daten von Zufallszahlen abgeleitet werden, nützlich sein. Beachten Sie jedoch, dass <xref:System.Random> Objekte in der Prozesse, die unter verschiedenen Versionen von .NET Framework ausgeführt werden. möglicherweise verschiedene Reihen mit Zufallszahlen zurück, selbst wenn sie mit identischen Startwerten instanziiert werden.  
+  
+ Um verschiedene Sequenzen von Zufallszahlen zu erzeugen, möglich den Ausgangswert zeitabhängige, dadurch erzeugt eine andere Serie mit jeder neuen Instanz des <xref:System.Random>. Die parametrisierte <xref:System.Random.%23ctor%28System.Int32%29> Konstruktor akzeptiert ein <xref:System.Int32> Wert basierend auf der Anzahl der Ticks in die aktuelle Uhrzeit, während die parameterlose <xref:System.Random.%23ctor> Konstruktor verwendet die Systemuhr zum Generieren des Startwerts. Jedoch, da die Uhr endliche Auflösung hat, mithilfe des Konstruktors verschiedenen <xref:System.Random> Objekte schließen nacheinander erstellt random Number-Generatoren, die identische Sequenzen von Zufallszahlen erzeugen. Im folgende Beispiel wird veranschaulicht, wie zwei <xref:System.Random> Objekte, die in Zufallszahlengeneratoren instanziiert eine identische Folge von zufälligen Zahlen zu generieren. In den meisten Windows-Systemen <xref:System.Random> innerhalb von 15 Millisekunden voneinander erstellten Objekte werden wahrscheinlich identische Ausgangswerte haben.  
+  
+ [!code-cpp[System.Random#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/random1.cpp#1)]
+ [!code-csharp[System.Random#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/Random1.cs#1)]
+ [!code-vb[System.Random#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/Random1.vb#1)]  
+  
+ Um dieses Problem zu vermeiden, erstellen Sie eine einzelne <xref:System.Random> Objekt anstelle mehrerer Objekte.  
+  
+<a name="Multiple"></a>   
+## <a name="avoiding-multiple-instantiations"></a>Mehrere Instanziierungen vermeiden  
+ Initialisieren von zwei random Number-Generatoren in einer dichten Schleife oder in schneller Folge erstellt zwei random Number-Generatoren, die identische Sequenzen von Zufallszahlen generieren können. In den meisten Fällen ist kein des Entwicklers Absicht es kann zu Leistungsproblemen können führen, da instanziieren und Initialisieren eines Zufallszahlen-Generators relativ kostenintensiv ist.  
+  
+ Sowohl zum Verbessern der Leistung und um zu vermeiden, versehentlich erstellen separate random Number-Generatoren, die identische numerische Sequenzen zu generieren, es wird empfohlen, Sie eine erstellen <xref:System.Random> Objekt viele Zufallszahlen im Laufe der Zeit anstatt zu erstellen neue <xref:System.Random> -Objekten, die eine Zufallszahl zu generieren.  
+  
+ Allerdings die <xref:System.Random> Klasse nicht threadsicher ist. Beim Aufrufen <xref:System.Random> Methoden aus mehreren Threads verwenden, befolgen Sie die Richtlinien, die im nächsten Abschnitt erläutert.  
+  
+<a name="ThreadSafety"></a>   
+## <a name="the-systemrandom-class-and-thread-safety"></a>Der System.Random-Klasse und Thread-Sicherheit  
+ Statt einzelne Instanziierung <xref:System.Random> Objekte, es wird empfohlen, dass Sie beim Erstellen einer einzelnen <xref:System.Random> Instanz alle von der Anwendung benötigten Zufallszahlen generiert. Allerdings <xref:System.Random> Objekte sind nicht threadsicher. Wenn Ihre app aufruft <xref:System.Random> Methoden aus mehreren Threads, müssen Sie ein Synchronisierungsobjekt verwenden, um sicherzustellen, dass nur ein Thread den Zufallszahlen-Generator zu einem Zeitpunkt zugreifen kann. Wenn Sie nicht sicherstellen, dass die <xref:System.Random> Objekt auf threadsichere Weise zugegriffen wird, Aufrufe von Methoden, die Zufallszahlen zurückgeben geben 0 zurück.  
+  
+ Im folgenden Beispiel wird der C#- [lock-Anweisung](~/docs/csharp/language-reference/keywords/lock-statement.md) und Visual Basic [SyncLock-Anweisung](~/docs/visual-basic/language-reference/statements/synclock-statement.md) , stellen Sie sicher, dass eine einzelne Zufallszahlen-Generators auf threadsichere Weise von 11 Threads zugegriffen wird. Jeder Thread 2 Millionen Zufallszahlen generiert, zählt die Anzahl der Zufallszahlen generiert und deren Summe berechnet und aktualisiert dann die Gesamtwerte für alle Threads aus, wenn sie die Ausführung abschließt.  
+  
+ [!code-cpp[System.Random#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/threadsafeex1.cpp#3)]
+ [!code-csharp[System.Random#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/threadsafeex1.cs#3)]
+ [!code-vb[System.Random#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/threadsafeex1.vb#3)]  
+  
+ Im Beispiel wird sichergestellt, dass Threadsicherheit auf folgende Weise:  
+  
+-   Die <xref:System.ThreadStaticAttribute> Attribut wird verwendet, um die Thread-lokalen Variablen definieren, die die Gesamtanzahl der Zufallszahlen generiert und deren Summe für jeden Thread zu verfolgen.  
+  
+-   Eine Sperre (die `lock` -Anweisung in c# und die `SyncLock` -Anweisung in Visual Basic) schützt den Zugriff auf die Variablen für den insgesamt und die Summe aller Zufallszahlen generiert für alle Threads.  
+  
+-   Ein Semaphor (die <xref:System.Threading.CountdownEvent> Objekt) wird verwendet, um sicherzustellen, dass der Hauptthread wird blockiert, bis alle anderen Threads die Ausführung abschließt.  
+  
+-   Im Beispiel wird überprüft, ob die Zufallszahlen-Generators durch bestimmen beschädigt wurde, ob zwei aufeinander folgende Aufrufe von Zufallszahlen generieren, Methoden geben 0 zurück. Wenn eine Beschädigung festgestellt wird, wird im Beispiel wird die <xref:System.Threading.CancellationTokenSource> -Objekt signalisiert, dass alle Threads abgebrochen werden soll.  
+  
+-   Vor dem Generieren von jeder Zufallszahl jeder Thread überprüft den Status der <xref:System.Threading.CancellationToken> Objekt. Wenn der Abbruch angefordert wird, wird im Beispiel wird die <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A?displayProperty=nameWithType> Methode, um den Thread abzubrechen.  
+  
+ Das folgende Beispiel ist mit dem ersten identisch, außer dass mithilfe einer <xref:System.Threading.Tasks.Task> -Objekt und einen Lambda-Ausdruck anstelle von <xref:System.Threading.Thread> Objekte.  
+  
+ [!code-csharp[System.Random#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/threadsafeex2.cs#4)]
+ [!code-vb[System.Random#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/threadsafeex2.vb#4)]  
+  
+ Es unterscheidet sich von der ersten Beispiel auf folgende Weise:  
+  
+-   Die Variablen zum Nachverfolgen der Anzahl der Zufallszahlen generiert und deren Summe in jeder Aufgabe befinden sich lokal auf die Aufgabe, daher keine Notwendigkeit zum Verwenden besteht der <xref:System.ThreadStaticAttribute> Attribut.  
+  
+-   Die statische <xref:System.Threading.Tasks.Task.WaitAll%2A?displayProperty=nameWithType> Methode wird verwendet, um sicherzustellen, dass der Hauptthread nicht abgeschlossen, bevor alle Aufgaben beendet wurden. Besteht keine Notwendigkeit für die <xref:System.Threading.CountdownEvent> Objekt.  
+  
+-   Die Ausnahme, die durch den Aufgabenabbruch entsteht werden eingeblendet, der <xref:System.Threading.Tasks.Task.WaitAll%2A?displayProperty=nameWithType> Methode. Im vorherigen Beispiel wird sie von jedem Thread verarbeitet.  
+  
+<a name="Functionality"></a>   
+## <a name="generating-different-types-of-random-numbers"></a>Verschiedene Typen von Zufallszahlen generieren  
+ Der Zufallszahlengenerator bietet Methoden, mit die Sie die folgenden Arten von Zufallszahlen generieren können:  
+  
+-   Eine Reihe von <xref:System.Byte> Werte. Sie bestimmen die Anzahl der Byte-Werten durch Übergeben eines Arrays initialisiert, um die Anzahl der Elemente, die Sie die Methode zum zurückgeben möchten der <xref:System.Random.NextBytes%2A> Methode. Im folgende Beispiel werden 20 Byte an Daten generiert.  
+  
+     [!code-cpp[System.Random#5](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/nextbytes1.cpp#5)]
+     [!code-csharp[System.Random#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/nextbytes1.cs#5)]
+     [!code-vb[System.Random#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/nextbytes1.vb#5)]  
+  
+-   Eine einzelne ganze Zahl. Sie können auswählen, ob Sie eine Ganzzahl zwischen 0 und einen maximalen Wert (<xref:System.Int32.MaxValue?displayProperty=nameWithType> – 1) durch Aufrufen der <xref:System.Random.Next> -Methode, eine ganze Zahl zwischen 0 und einen bestimmten Wert durch Aufrufen der <xref:System.Random.Next%28System.Int32%29> -Methode oder eine ganze Zahl innerhalb eines Bereichs von Werten durch Aufrufen der <xref:System.Random.Next%28System.Int32%2CSystem.Int32%29>Methode. In den parametrisierten Überladungen ist der angegebene maximale Wert; die tatsächliche Höchstanzahl generiert also eine kleiner als der angegebene Wert.  
+  
+     Im folgenden Beispiel wird die <xref:System.Random.Next%28System.Int32%2CSystem.Int32%29> Methode zum Generieren der 10 zufälliger Zahlen zwischen-10 und 10. Beachten Sie, dass das zweite Argument an die Methode gibt an, die exklusive obere Grenze des Bereichs von zufälligen Werten, die von der Methode zurückgegeben. Das heißt, die größte ganze Zahl, die die Methode zurückgeben kann, ist kleiner als dieser Wert.  
+  
+     [!code-cpp[System.Random#6](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/nextex1.cpp#6)]
+     [!code-csharp[System.Random#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/nextex1.cs#6)]
+     [!code-vb[System.Random#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/nextex1.vb#6)]  
+  
+-   Eine einzelne Gleitkommawert zwischen 0,0 und kleiner als 1,0 durch Aufrufen der <xref:System.Random.NextDouble%2A> Methode. Die exklusive obere Grenze der von der Methode zurückgegebenen Zufallszahl ist 1, damit die tatsächliche Obergrenze 0.99999999999999978 ist. Im folgende Beispiel wird 10 zufällige Gleitkommazahlen generiert.  
+  
+     [!code-cpp[System.Random#7](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/nextdoubleex1.cpp#7)]
+     [!code-csharp[System.Random#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/nextdoubleex1.cs#7)]
+     [!code-vb[System.Random#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/nextdoubleex1.vb#7)]  
+  
+> [!IMPORTANT]
+>  Die <xref:System.Random.Next%28System.Int32%2CSystem.Int32%29> Methode können Sie den Bereich der zurückgegebenen Zufallszahl an. Allerdings die `maxValue` -Parameter, der angibt, der obere Bereich zurückgegebene Zahl, wird eine exklusive, keine inklusive Wert. Dies bedeutet, dass den Methodenaufruf `Next(0, 100)` gibt einen Wert zwischen 0 und 99, und nicht zwischen 0 und 100.  
+  
+ Können Sie auch die <xref:System.Random> Klasse für Aufgaben wie das Generieren von [Zufallswerte: System.Boolean](#Boolean), Generieren von [zufällige Gleitkommazahlen Werte mit einem Bereich von 0 bis 1 außer](#Floats), Generieren von [zufälligen 64-Bit-Ganzzahlen](#Long), und [nach dem Zufallsprinzip ein eindeutiges Element aus einem Array oder einer Auflistung abrufen](#UniqueArray). Diese und andere häufige Aufgaben finden Sie in der [wie verwenden Sie System.Random zu...](#Operations) Abschnitt.  
+  
+<a name="Overriding"></a>   
+## <a name="substituting-your-own-algorithm"></a>Ersetzen einen eigenen Algorithmus  
+ Sie können eigene Zufallszahlengenerator implementieren, durch Erben von der <xref:System.Random> Klasse und Ihre Generierung Algorithmus Zufallszahlen bereitstellt. Um einen eigenen Algorithmus angeben, müssen Sie überschreiben die <xref:System.Random.Sample%2A> -Methode, die der zufällige Zahlen generieren-Algorithmus implementiert. Sie sollten auch überschreiben die <xref:System.Random.Next>, <xref:System.Random.Next%28System.Int32%2CSystem.Int32%29>, und <xref:System.Random.NextBytes%2A> Methoden, um sicherzustellen, dass sie die überschriebene Aufrufen <xref:System.Random.Sample%2A> Methode. Sie überschreiben, müssen die <xref:System.Random.Next%28System.Int32%29> und <xref:System.Random.NextDouble%2A> Methoden.  
+  
+ Ein Beispiel, das von abgeleitet ist die <xref:System.Random> Klasse und ändert dessen Standardwert Pseudozufallszahlen, finden Sie unter der <xref:System.Random.Sample%2A> Referenzseite.  
+  
+<a name="Operations"></a>   
+## <a name="how-do-you-use-systemrandom-to"></a>Wie werden System.Random, verwendet...  
+ In den folgenden Abschnitten besprechen und stellen entsprechenden Beispielcode für einige der Methoden, die Zufallszahlen in Ihrer app verwenden werden sollen.  
+  
+<a name="Same"></a>   
+### <a name="retrieve-the-same-sequence-of-random-values"></a>Die gleiche Sequenz von Zufallswerten abrufen  
+ In einigen Fällen Sie dieselbe Sequenz von Zufallszahlen in Software Testszenarios und Spiel Wiedergabe generieren möchten. Mit derselben Sequenz von Zufallszahlen testen, können Sie erkennen von Regressionen und Fehlerbehebungen zu bestätigen. Die gleiche Sequenz von Zufallszahl können Spiele Sie vorherige Spiele wiedergeben.  
+  
+ Sie können die gleiche Sequenz von Zufallszahlen generieren, indem Sie den gleichen Ausgangswert zum Bereitstellen der <xref:System.Random.%23ctor%28System.Int32%29> Konstruktor. Der Ausgangswert stellt einen Startwert für die Generierung Algorithmus Pseudozufallszahlen bereit. Im folgenden Beispiel wird 100100 als eine beliebige Ausgangswert zum Instanziieren der <xref:System.Random> Objekt 20 zufällige Gleitkommazahlen-Punktwerte angezeigt und bleibt weiterhin den Ausgangswert. Anschließend wird der Ausgangswert wiederhergestellt, instanziiert einen neuen Zufallszahlengenerator, und zeigt die gleichen 20 zufällige Gleitkommazahlen Werte.  Beachten Sie, dass im Beispiel verschiedene Sequenzen von Zufallszahlen erzeugen kann, wenn in verschiedenen Versionen von .NET Framework ausgeführt werden.  
+  
+ [!code-cpp[System.Random#12](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/same1.cpp#12)]
+ [!code-csharp[System.Random#12](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/same1.cs#12)]
+ [!code-vb[System.Random#12](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/same1.vb#12)]  
+  
+<a name="Unique"></a>   
+### <a name="retrieve-unique-sequences-of-random-numbers"></a>Abrufen von eindeutigen Sequenzen von Zufallszahlen  
+ Bietet verschiedene Ausgangswerte auf Instanzen von der <xref:System.Random> Klasse bewirkt, dass jede Zufallszahlen-Generator um eine andere Sequenz von Werten zu erzeugen. Sie können einem Ausgangswert angeben, entweder explizit durch Aufrufen der <xref:System.Random.%23ctor%28System.Int32%29> -Konstruktor oder implizit durch Aufrufen der <xref:System.Random.%23ctor> Konstruktor. Die meisten Entwickler Aufrufen des Konstruktors, der Systemuhr verwendet. Im folgenden Beispiel wird dieser Ansatz zum Instanziieren zweier <xref:System.Random> Instanzen. Jede Instanz zeigt eine Reihe von 10 zufällige ganze Zahlen.  
+  
+ [!code-cpp[System.Random#13](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/unique.cpp#13)]
+ [!code-csharp[System.Random#13](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/unique.cs#13)]
+ [!code-vb[System.Random#13](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/unique.vb#13)]  
+  
+ Jedoch aufgrund seiner endliche Auflösung erkennt die Systemuhr Zeitunterschiede nicht, die weniger als etwa 15 Millisekunden. Daher Ihren Code aufruft der <xref:System.Random.%23ctor> Überladung zum Instanziieren zweier <xref:System.Random> Objekte nacheinander, Sie versehentlich geleistet werden die Objekte mit identischen Ausgangswerte. Um dies im vorherigen Beispiel zu sehen, kommentieren Sie Sie aus der <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> -Methodenaufruf, und kompilieren und führen Sie das Beispiel erneut aus.  
+  
+ Um dies zu vermeiden, wird empfohlen, dass Sie ein einzelnes instanziieren <xref:System.Random> -Objekt statt mehrere Sitzungen. Da jedoch <xref:System.Random> ist nicht threadsicher ist, müssen Sie einige Synchronisierung-Gerät verwenden, wenn der Zugriff auf eine <xref:System.Random> -Instanz aus mehreren Threads; Weitere Informationen verwenden, finden Sie unter [der zufälligen Klasse und Threadsicherheit](#ThreadSafety) weiter oben in dieser Thema. Alternativ können Sie einen verzögerungsmechanismus, wie z. B. die <xref:System.Threading.Thread.Sleep%2A> Methode, die im vorherigen Beispiel verwendet werden, um sicherzustellen, dass die Instanziierungen mehr als 15 Millisekunden voneinander auftreten.  
+  
+<a name="Range"></a>   
+### <a name="retrieve-integers-in-a-specified-range"></a>Abrufen von ganzen Zahlen in einem angegebenen Bereich  
+ Abrufen von ganzen Zahlen in einem angegebenen Bereich durch Aufrufen der <xref:System.Random.Next%28System.Int32%2CSystem.Int32%29> -Methode, die ermöglicht die Angabe der niedrigere Wert und die Obergrenze für die Zahlen den Zufallszahlengenerator zurückgeben möchten. Die Obergrenze ist eine exklusive, keine inklusive Wert. Es ist nicht, also in den Bereich der Werte, die von der Methode zurückgegebenen enthalten. Im folgenden Beispiel wird diese Methode zum Generieren von Zufallszahlen zwischen-10 und 10 ein. Beachten Sie, dass es 11, gibt der eins größer als den gewünschten Wert, als der Wert von der `maxValue` Argument im Aufruf Methode.  
+  
+ [!code-cpp[System.Random#15](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/range1.cpp#15)]
+ [!code-csharp[System.Random#15](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/range1.cs#15)]
+ [!code-vb[System.Random#15](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/range1.vb#15)]  
+  
+<a name="Digits"></a>   
+### <a name="retrieve-integers-with-a-specified-number-of-digits"></a>Abrufen von ganzen Zahlen mit einer angegebenen Anzahl von Ziffern  
+ Sie erreichen die <xref:System.Random.Next%28System.Int32%2CSystem.Int32%29> Methode, um Zahlen mit einer angegebenen Anzahl von Ziffern abzurufen. Beispielsweise zum Abrufen von Zahlen mit vier Ziffern (d. h., Zahlen, die im Bereich von 1000 bis 9999), rufen Sie die <xref:System.Random.Next%28System.Int32%2CSystem.Int32%29> Methode mit einem `minValue` Wert 1000 und ein `maxValue` Wert von 10.000, wie im folgenden Beispiel gezeigt.  
+  
+ [!code-cpp[System.Random#16](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/range2.cpp#16)]
+ [!code-csharp[System.Random#16](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/range2.cs#16)]
+ [!code-vb[System.Random#16](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/range2.vb#16)]  
+  
+<a name="Floats"></a>   
+### <a name="retrieve-floating-point-values-in-a-specified-range"></a>Abrufen von Gleitkommawerten in einem angegebenen Bereich  
+ Die <xref:System.Random.NextDouble%2A> Methode gibt zufällige Gleitkommazahlen-Punktwerte dieses Bereichs liegt zwischen 0 und kleiner als 1. Sie sollten jedoch häufig zum Generieren von zufälliger Werten in einem anderen Bereich zu können.  
+  
+ Wenn das Intervall zwischen den minimalen und maximalen Werten für den gewünschten 1 ist, können Sie den Unterschied zwischen der gewünschten beginnend Intervall und 0 hinzufügen, auf die zurückgegebene Anzahl der <xref:System.Random.NextDouble%2A> Methode. Im folgende Beispiel wird diese Option, um 10 Zufallszahlen zwischen-1 und 0.  
+  
+ [!code-cpp[System.Random#17](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/doublerange2.cpp#17)]
+ [!code-csharp[System.Random#17](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/doublerange2.cs#17)]
+ [!code-vb[System.Random#17](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/doublerange2.vb#17)]  
+  
+ Um zufällige Gleitkommazahlen generiert wird, dessen untere Grenze 0 jedoch Obergrenze ist größer als 1 (oder bei negativen Zahlen, dessen untere Grenze ist kleiner als-1 und obere Grenze ist 0), Multiplizieren Sie Zufallszahl mit der Grenze ungleich NULL. Im folgende Beispiel wird diese Option, um 20 Millionen zufällige Gleitkommazahlen generiert dieses Bereichs von 0 bis <xref:System.Int64.MaxValue?displayProperty=nameWithType>. In zeigt auch die Verteilung von Zufallswerten, die von der Methode generiert.  
+  
+ [!code-cpp[System.Random#18](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/doublerange1.cpp#18)]
+ [!code-csharp[System.Random#18](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/doublerange1.cs#18)]
+ [!code-vb[System.Random#18](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/doublerange1.vb#18)]  
+  
+ Um zufällige Gleitkommazahlen zwischen zwei beliebigen Werten zu generieren, wie die <xref:System.Random.Next%28System.Int32%2CSystem.Int32%29> Methode für ganze Zahlen enthält, verwenden Sie die folgende Formel:  
+  
+```  
+Random.NextDouble() * (maxValue – minValue) + minValue  
+```  
+  
+ Im folgenden Beispiel generiert 1 Million Zufallszahlen, die im Bereich von 10.0 11.0 und zeigt die Verteilung.  
+  
+ [!code-cpp[System.Random#19](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/doublerange3.cpp#19)]
+ [!code-csharp[System.Random#19](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/doublerange3.cs#19)]
+ [!code-vb[System.Random#19](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/doublerange3.vb#19)]  
+  
+<a name="Boolean"></a>   
+### <a name="generate-random-boolean-values"></a>Generieren von zufälligen boolesche Werte  
+ Die <xref:System.Random> Klasse stellt Methoden zur Erstellung keinen <xref:System.Boolean> Werte. Allerdings können Sie eine eigene Klasse oder Methode dafür definieren. Das folgende Beispiel definiert eine Klasse `BooleanGenerator`, mit einer einzelnen Methode `NextBoolean`. Die `BooleanGenerator` -Klasse speichert ein <xref:System.Random> Objekt als eine private Variable. Die `NextBoolean` Methodenaufrufe der <xref:System.Random.Next%28System.Int32%2CSystem.Int32%29?displayProperty=nameWithType> Methode und übergibt das Ergebnis, das die <xref:System.Convert.ToBoolean%28System.Int32%29?displayProperty=nameWithType> Methode. Beachten Sie, dass 2 als Argument an die obere Grenze der zufälligen Zahl verwendet wird. Da dies ein ausgeschlossener Wert ist, gibt der Aufruf der Methode zurück, entweder 0 oder 1.  
+  
+ [!code-cpp[System.Random#8](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/booleans1.cpp#8)]
+ [!code-csharp[System.Random#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/booleans1.cs#8)]
+ [!code-vb[System.Random#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/booleans1.vb#8)]  
+  
+ Statt eine separate Klasse generieren zufälliger <xref:System.Boolean> Werte, die im Beispiel können einfach eine einzelne Methode definiert haben. In diesem Fall wird jedoch die <xref:System.Random> Objekt sollte als einer Variablen auf Klassenebene, um zu vermeiden, instanziieren ein neues definiert wurden <xref:System.Random> Instanz in jedem Methodenaufruf. In Visual Basic Random-Instanz definiert werden kann, als ein [statische](~/docs/visual-basic/language-reference/modifiers/static.md) -Variable in der `NextBoolean` Methode.  Im folgende Beispiel stellt eine Implementierung bereit.  
+  
+ [!code-cpp[System.Random#20](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/booleans2.cpp#20)]
+ [!code-csharp[System.Random#20](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/booleans2.cs#20)]
+ [!code-vb[System.Random#20](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/booleans2.vb#20)]  
+  
+<a name="Long"></a>   
+### <a name="generate-random-64-bit-integers"></a>Generieren von zufälligen 64-Bit-Ganzzahlen  
+ Die Überladungen der <xref:System.Random.Next%2A> Methodenrückgabewert 32-Bit-Ganzzahlen. In einigen Fällen möchten jedoch möglicherweise mit 64-Bit-Ganzzahlen arbeiten. Sie können dies wie folgt tun:  
+  
+1.  Rufen Sie die <xref:System.Random.NextDouble%2A> Methode zum Abrufen der Gleitkommazahl mit doppelter Genauigkeit Datenpunktwert.  
+  
+2.  Multiplizieren Sie den Wert von <xref:System.Int64.MaxValue?displayProperty=nameWithType>.  
+  
+ Im folgenden Beispiel verwendet dieses Verfahren zu lange 20 Millionen Zufallszahlen generieren und diese in 10 gleich große Gruppen kategorisiert. Wertet dann die Verteilung der zufälligen Zahlen durch zählen der Anzahl in jeder Gruppe von 0 bis <xref:System.Int64.MaxValue?displayProperty=nameWithType>. Wie die Ausgabe des Beispiels zeigt, werden die Zahlen über den Bereich einer langen ganzen Zahl mehr oder weniger gleichmäßig verteilt.  
+  
+ [!code-cpp[System.Random#14](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/long1.cpp#14)]
+ [!code-csharp[System.Random#14](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/long1.cs#14)]
+ [!code-vb[System.Random#14](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/long1.vb#14)]  
+  
+ Ein alternatives Verfahren, dass Bitmanipulation verwendet keine echten Zufallszahlen generiert. Diese Methode ruft <xref:System.Random.Next> zum Generieren von zwei ganzen Zahlen nach links verschiebt eine von 32 Bits und oder-Operatoren werden zusammen. Dieses Verfahren hat zwei Nachteile:  
+  
+1.  Da Bit 31 das signierte Bit ist, lautet der Wert in Bit 31 des resultierenden long integer-Wert immer 0.  Dies kann durch Generieren einer zufälligen 0 oder 1, es links-Verschiebung Bits 31 und OR adressiert werden mit der ursprünglichen zufällige lange ganze Zahl.  
+  
+2.  Mehr erheblich, da die Wahrscheinlichkeit, die der Wert von zurückgegeben <xref:System.Random.Next> wird "0" sein, es werden ggf. einige Zufallszahlen im Bereich 0 x 0 – 0x00000000FFFFFFFF.  
+  
+<a name="Bytes"></a>   
+### <a name="retrieve-bytes-in-a-specified-range"></a>Abrufen von Bytes in einem angegebenen Bereich  
+ Überladungen der der <xref:System.Random.Next%2A> Methode ermöglichen Ihnen das Festlegen des Bereichs von zufälligen Zahlen, aber die <xref:System.Random.NextBytes%2A> Methode nicht. Das folgende Beispiel implementiert eine `NextBytes` Methode, die Sie den Bereich der zurückgegebenen Bytes angeben kann. Definiert eine `Random2` von abgeleitete Klasse <xref:System.Random> und überlädt die `NextBytes` Methode.  
+  
+ [!code-cpp[System.Random#9](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/bytes1.cpp#9)]
+ [!code-csharp[System.Random#9](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/bytes1.cs#9)]
+ [!code-vb[System.Random#9](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/bytes1.vb#9)]  
+  
+ Die `NextBytes(Byte[], Byte, Byte)` Methode bindet einen Aufruf der <xref:System.Random.Next%28System.Int32%2CSystem.Int32%29> Methode und gibt den minimalen und Wert größer als der maximale Wert (in diesem Fall 0 und 101), dass wir in der Byte-Array zurückgegeben werden sollen. Da wir sicher sind, dass die ganzzahligen Werte zurückgegebene der <xref:System.Random.Next%2A> Methode sind innerhalb des Bereichs von der <xref:System.Byte> -Datentyp, wir können sicher umgewandelt werden (in c#) oder konvertieren Sie sie (in Visual Basic) von ganzen Zahlen in Byte.  
+  
+<a name="Array"></a>   
+### <a name="retrieve-an-element-from-an-array-or-collection-at-random"></a>Nach dem Zufallsprinzip ein Element aus einem Array oder einer Auflistung abrufen  
+ Zufallszahlen dienen häufig als Indizes, um Werte aus Arrays oder Auflistungen abzurufen. Um einen zufälligen Indexwert abzurufen, rufen Sie die <xref:System.Random.Next%28System.Int32%2CSystem.Int32%29> -Methode, und verwenden Sie die untere Grenze des Arrays als Wert für die `minValue` Argument und der eins größer als die obere Grenze des Arrays als Wert des seine `maxValue` Argument. Für ein nullbasiertes Array entspricht dies dem seine <xref:System.Array.Length%2A> Eigenschaft oder eins größer als der Rückgabewert von der <xref:System.Array.GetUpperBound%2A?displayProperty=nameWithType> Methode. Das folgende Beispiel ruft den Namen eines Orts in den USA nach dem Zufallsprinzip aus einem Array aus Städten ab.  
+  
+ [!code-cpp[System.Random#10](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/array1.cpp#10)]
+ [!code-csharp[System.Random#10](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/array1.cs#10)]
+ [!code-vb[System.Random#10](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/array1.vb#10)]  
+  
+<a name="UniqueArray"></a>   
+### <a name="retrieve-a-unique-element-from-an-array-or-collection"></a>Ein eindeutiges Element aus einem Array oder einer Auflistung abrufen  
+ Eine Zufallszahlen-Generators kann immer doppelte Werte zurückgeben. Der Bereich von Zahlen wird kleiner, oder die Anzahl der generierten Werte größer wird, wächst die Wahrscheinlichkeit von Duplikaten. Wenn Zufallswerte eindeutig sein müssen, werden weitere Zahlen generiert, um Duplikate zu kompensieren zunehmend eine schlechte Leistung.  
+  
+ Es gibt eine Reihe von Techniken, dieses Szenario zu behandeln. Eine allgemeine Lösung besteht darin, erstellen Sie ein Array oder Auflistung mit den Werten abgerufen werden sollen und ein paralleles Array, das zufällige Gleitkommazahlen enthält. Das zweite Array wird mit Zufallszahlen aufgefüllt, die zum Zeitpunkt der erste Array erstellt wird, und die <xref:System.Array.Sort%28System.Array%2CSystem.Array%29?displayProperty=nameWithType> Methode wird verwendet, um das erste Array zu sortieren, indem Sie mithilfe der Werte in den parallelen Arrays.  
+  
+ Z. B. Wenn Sie ein Solitärspiel entwickeln, möchten Sie sicherstellen, dass jede Karte nur einmal verwendet wird. Anstatt das Generieren von Zufallszahlen zum Abrufen einer Karte und nachverfolgen, ob diese Karte bereits behandelt wurde, können Sie ein paralleles Array von Zufallszahlen erstellen, die zum Sortieren der Deckblatt verwendet werden kann. Sobald die Deckblatt sortiert ist, kann Ihre app einen Zeiger, um den Index des nächsten Karte auf der Deckblatt anzugeben verwalten.  
+  
+ Dieser Ansatz wird anhand des folgenden Beispiels veranschaulicht. Definiert eine `Card` -Klasse, stellt ein Playing Karte und `Dealer` -Klasse, die eine falsch platzierte Kartenstapel behandelt. Die `Dealer` Klassenkonstruktor füllt zwei Arrays: eine `deck` Array, das über einen Klassenbereich und, die alle Karten Deckblatt; und einem lokalen darstellt `order` Array, das die gleiche von Elementen als Anzahl die `deck` array erstellt und gefüllt ist mit nach dem Zufallsprinzip generiert <xref:System.Double> Werte.  Die <xref:System.Array.Sort%28System.Array%2CSystem.Array%29?displayProperty=nameWithType> Methode wird aufgerufen, um das Sortieren der `deck` Array basierend auf den Werten in der `order` Array.  
+  
+ [!code-cpp[System.Random#11](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/uniquearray1.cpp#11)]
+ [!code-csharp[System.Random#11](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/uniquearray1.cs#11)]
+ [!code-vb[System.Random#11](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/uniquearray1.vb#11)]  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine einzelne Zufallszahlen-Generators und ruft seine <xref:System.Random.NextBytes%2A>, <xref:System.Random.Next%2A>, und <xref:System.Random.NextDouble%2A> Methoden zum Generieren von Sequenzen von Zufallszahlen in verschiedenen Bereichen.  
+  
+ [!code-cpp[System.Random#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/random2.cpp#2)]
+ [!code-csharp[System.Random#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/Random2.cs#2)]
+ [!code-vb[System.Random#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/Random2.vb#2)]  
+  
+ Das folgende Beispiel generiert eine zufällige ganze Zahl, die als Index verwendet einen Zeichenfolgenwert aus einem Array abgerufen.  
+  
+ [!code-cpp[System.Random.Next#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random.Next/CPP/next1.cpp#3)]
+ [!code-csharp[System.Random.Next#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random.Next/CS/next1.cs#3)]
+ [!code-vb[System.Random.Next#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random.Next/VB/next1.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>In .NET Framework 1.0 und 1.1, eine minimale Implementierung einer Klasse abgeleitet <see cref="T:System.Random" /> erforderlich sind, überschreiben die <see cref="M:System.Random.Sample" /> Methode, um einen neuen oder geänderten Algorithmus zum Generieren von Zufallszahlen zu definieren. Die abgeleitete Klasse konnten klicken Sie dann auf die Implementierung der Basisklasse der Verlassen der <see cref="M:System.Random.Next" />, <see cref="M:System.Random.Next(System.Int32)" />, <see cref="M:System.Random.Next(System.Int32,System.Int32)" />, <see cref="M:System.Random.NextBytes(System.Byte[])" />, und <see cref="M:System.Random.NextDouble" /> Methoden zur Implementierung der abgeleiteten Klasse Aufrufen der <see cref="M:System.Random.Sample" /> Methode.  
+  
+ In .NET Framework 2.0 und höher, das Verhalten der <see cref="M:System.Random.Next" />, <see cref="M:System.Random.Next(System.Int32,System.Int32)" />, und <see cref="M:System.Random.NextBytes(System.Byte[])" /> Methoden wurden geändert, sodass diese Methoden nicht unbedingt Implementierung der abgeleiteten Klasse Aufrufen der <see cref="M:System.Random.Sample" /> Methode. Folglich von abgeleiteten Klassen <see cref="T:System.Random" /> , die als Ziel .NET Framework 2.0 und höher sollten auch diese drei Methoden überschreiben.</para>
+    </block>
+    <block subset="none" type="usage">
+      <para>Die Implementierung des Zufallszahlen-Generator in der <see cref="T:System.Random" /> Klasse ist nicht unbedingt Hauptversionen von .NET Framework unverändert. Daher sollte nicht Sie davon ausgehen, dass der gleiche Ausgangswert in derselben Reihenfolge an pseudozufälligen Schlüsselbytes in verschiedenen Versionen von .NET Framework führt.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Random ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Random.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Random" /> -Klasse unter Verwendung einer Standardstartwert der zeitabhängige.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardstartwert wird aus der Systemuhr abgeleitet und verfügt über begrenzte Auflösung. Als Ergebnis unterschiedliche <xref:System.Random> durch einen Aufruf des Standardkonstruktors in Zufallszahlengeneratoren erstellten Objekte müssen identische Ausgangswert Standardwerte, und daher entsteht identische Sätze von Zufallszahlen. Dieses Problem kann vermieden werden, mithilfe einer einzelnes <xref:System.Random> Objekt, das alle Zufallszahlen generiert. Sie können auch umgehen, es durch Ändern der Startwert der Systemuhr zurückgegebenes und klicken Sie dann auf diese neuen Ausgangswerts explizite Angabe der <xref:System.Random.%23ctor%28System.Int32%29> Konstruktor. Weitere Informationen finden Sie unter der <xref:System.Random.%23ctor%28System.Int32%29> Konstruktor.  
+  
+ Rufen Sie diesen Konstruktor, gegebenenfalls Ihre Zufallszahlen-Generators eine zufällige Sequenz von Zahlen zu generieren. Um einer festen Reihenfolge von Zufallszahlen generieren, die für verschiedene Zufallszahlengeneratoren identisch sind, rufen Sie die <xref:System.Random.%23ctor%28System.Int32%29> Konstruktor mit einem festen Ausgangswert. Dies <xref:System.Random> Konstruktorüberladung wird häufig verwendet, beim Testen von apps, die Zufallszahlen verwenden.  
+  
+ Nachdem Sie den Zufallszahlen-Generator instanziiert haben, rufen Sie einzelne <xref:System.Random> Methoden, wie z. B. <xref:System.Random.Next> oder <xref:System.Random.NextDouble>, um zufällige Zahlen zu generieren.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird den Standardkonstruktor drei instanziieren <xref:System.Random> Objekte und eine Sequenz von fünf zufällige ganze Zahlen enthält, für die einzelnen. Da die ersten beiden <xref:System.Random> Objekte schließen nacheinander erstellt werden, sie mit identischen Startwerten basierend auf der Systemzeit instanziiert werden und daher eine identische Folge von zufälligen Zahlen hervorrufen. Auf der anderen Seite der Standardkonstruktor des dritten <xref:System.Random> Objekt wird aufgerufen, nachdem eine Verzögerung von zwei Sekunden durch einen Aufruf verursacht die <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> Methode. Da dies einen anderer Startwert für die dritte erzeugt <xref:System.Random> -Objekt, es wird eine andere Sequenz von Zufallszahlen generiert.  
+  
+ [!code-csharp[System.Random.Ctor#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random.Ctor/CS/ctor1.cs#2)]
+ [!code-vb[System.Random.Ctor#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random.Ctor/VB/ctor1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Random (int Seed);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 Seed) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Random.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="Seed" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="Seed">Eine Zahl, mit der ein Startwert für Folgen von Pseudozufallszahlen berechnet wird. Wenn eine negative Zahl angegeben wird, wird der absolute Wert der Zahl verwendet.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Random" /> -Klasse unter Verwendung des angegebene Startwerts.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bereitstellen eines identischen Startwerts zu anderen <xref:System.Random> Objekte bewirkt, dass jede Instanz identische Sequenzen von Zufallszahlen erzeugen. Dies erfolgt häufig beim Testen von apps, die auf Zufallszahlen-Generatoren abhängig sind.  
+  
+ Wenn Ihre Anwendung verschiedene Folgen von Zufallszahlen erfordert, rufen Sie diesen Konstruktor wiederholt mit verschiedenen Ausgangswerte. Eine Möglichkeit zur Erzeugung eines Werts eindeutige Ausgangswert ist zum erleichtern der zeitabhängige. Die Systemuhr, z. B. den Ausgangswert abgeleitet werden, als die <xref:System.Random.%23ctor> Überladung ist. Die Systemuhr möglicherweise jedoch nicht ausreichend Auflösung verschiedene Aufrufen dieses Konstruktors mit einem anderen Ausgangswert angeben. Dies führt in random Number-Generatoren, die identische Sequenzen von pseudozufälligen Zahlen zu generieren, wie die ersten beiden veranschaulicht <xref:System.Random> Objekte im folgenden Beispiel. Um dies zu verhindern, wenden Sie einen Algorithmus zum unterscheiden des Seed-Werts in jeder Aufruf oder ein Aufruf der <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> Methode, um sicherzustellen, dass Sie jeder Konstruktor mit einem anderen Ausgangswert angeben.  
+  
+ [!code-csharp[System.Random.Ctor#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random.Ctor/CS/ctor4.cs#4)]
+ [!code-vb[System.Random.Ctor#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random.Ctor/VB/ctor4.vb#4)]  
+  
+ Eine weitere Möglichkeit besteht, instanziieren Sie ein einzelnes <xref:System.Random> Objekt, das Sie verwenden, um die Zufallszahlen in Ihrer Anwendung zu generieren. Dies ergibt eine etwas bessere Leistung, da Instanziieren eines Zufallszahlen-Generators relativ teuer ist.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt <xref:System.Random> Objekte mit dem Konstruktor der Klasse, die nimmt einen ausgangswertparameter und generiert eine Sequenz von Zufallszahlen und Double-Werte. Im Beispiel wird veranschaulicht, dass die gleiche Sequenz generiert, wird bei der <xref:System.Random> Objekt erneut mit dem Konstruktor und einem Startwert Parameter erstellt.  
+  
+ [!code-cpp[System.Random.Ctor#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random.Ctor/CPP/ctor.cpp#1)]
+ [!code-csharp[System.Random.Ctor#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random.Ctor/CS/ctor.cs#1)]
+ [!code-vb[System.Random.Ctor#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random.Ctor/VB/ctor.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Next">
+      <MemberSignature Language="C#" Value="public virtual int Next ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Next() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Random.Next" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine nicht negative Zufallsganzzahl zurück.</summary>
+        <returns>Eine 32-Bit-Ganzzahl mit Vorzeichen, die größer als oder gleich 0 und kleiner ist als <see cref="F:System.Int32.MaxValue" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Random.Next%2A?displayProperty=nameWithType>generiert eine zufällige Zahl, deren Wert liegt, zwischen 0 und kleiner als <xref:System.Int32?displayProperty=nameWithType>. Verwenden Sie zum Generieren einer zufälligen Zahl, deren Wert im Bereich, von 0 zu einer anderen positive Zahl der <xref:System.Random.Next%28System.Int32%29?displayProperty=nameWithType> -methodenüberladung. Verwenden Sie zum Generieren einer Zufallszahl in einen anderen Bereich der <xref:System.Random.Next%28System.Int32%2CSystem.Int32%29?displayProperty=nameWithType> -methodenüberladung.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die wiederholte Aufrufe an die <xref:System.Random.Next%2A> Methode zum Generieren einer bestimmten Anzahl von zufälligen Zahlen, die vom Benutzer angefordert wird. Die <xref:System.Console.ReadLine%2A?displayProperty=nameWithType> Methode wird verwendet, um Kundeninformationen zu erhalten.  
+  
+ [!code-cpp[System.Random.Next#5](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random.Next/CPP/next3.cpp#5)]
+ [!code-csharp[System.Random.Next#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random.Next/CS/next3.cs#5)]
+ [!code-vb[System.Random.Next#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random.Next/VB/next3.vb#5)]  
+  
+ Im folgende Beispiel wird eine Klasse von abgeleitet <xref:System.Random> zum Generieren von zufälligen Zahlenfolge, deren Verteilung unterscheidet sich, von der einheitlichen Verteilung von generiert die <xref:System.Random.Sample%2A> Methode der Basisklasse. Es überschreibt die <xref:System.Random.Sample%2A> Methode, um die Verteilung von Zufallszahlen und überschreibt bereitzustellen die <xref:System.Random.Next%2A?displayProperty=nameWithType> Methode, um eine Reihe von Zufallszahlen verwenden.  
+  
+ [!code-cpp[System.Random.Sample#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random.Sample/cpp/sampleex.cpp#1)]
+ [!code-csharp[System.Random.Sample#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random.Sample/CS/sample.cs#1)]
+ [!code-vb[System.Random.Sample#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random.Sample/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ab .NET Framework, Version 2.0, wenn Sie beim Ableiten einer Klasse von <see cref="T:System.Random" /> und überschreiben die <see cref="M:System.Random.Sample" /> -Methode, die durch die Implementierung der abgeleiteten Klasse zur Verfügung gestellte Verteilung der <see cref="M:System.Random.Sample" /> Methode wird nicht verwendet, in der Basisklasse aufrufen Implementierung der <see cref="M:System.Random.Next" /> Methode. Die gleichverteilung stattdessen zurückgegeben, der vom Basistyp <see cref="T:System.Random" /> Klasse dient. Dieses Verhalten verbessert die gesamtleistung der <see cref="T:System.Random" /> Klasse. So ändern Sie dieses Verhalten so rufen Sie die <see cref="M:System.Random.Sample" /> Methode in der abgeleiteten Klasse, müssen Sie auch überschreiben die <see cref="M:System.Random.Next" /> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Next">
+      <MemberSignature Language="C#" Value="public virtual int Next (int maxValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Next(int32 maxValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Random.Next(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="maxValue" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="maxValue">Die exklusive obere Grenze der Zufallszahl generiert werden soll. <c>"MaxValue"</c> muss größer als oder gleich 0 sein.</param>
+        <summary>Gibt eine nicht negative Zufallsganzzahl zurück, die kleiner als das angegebene Maximum ist.</summary>
+        <returns>Eine 32-Bit-Ganzzahl mit Vorzeichen, die größer als oder gleich 0 und kleiner ist als <paramref name="maxValue" />; d. h. des Bereichs von Werten in der Regel 0 umfasst jedoch nicht <paramref name="maxValue" />. Jedoch wenn <paramref name="maxValue" /> gleich 0 ist, <paramref name="maxValue" /> wird zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Random.Next%28System.Int32%29> Überladung gibt zufälligen ganze Zahlen dieses Bereichs von 0 bis `maxValue` – 1. Jedoch wenn `maxValue` gleich 0 ist, die Methode gibt 0 zurück.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die zufällige ganze Zahlen mit verschiedenen Überladungen der <xref:System.Random.Next%2A> Methode.  
+  
+ [!code-cpp[System.Random.Next#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random.Next/CPP/next.cpp#1)]
+ [!code-csharp[System.Random.Next#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random.Next/CS/next.cs#1)]
+ [!code-vb[System.Random.Next#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random.Next/VB/next.vb#1)]  
+  
+ Das folgende Beispiel generiert eine zufällige ganze Zahl, die als Index verwendet einen Zeichenfolgenwert aus einem Array abgerufen. Da der höchste Index des Arrays 1 kleiner als die Länge ist, den Wert des ist der <xref:System.Array.Length%2A?displayProperty=nameWithType> -Eigenschaft angegeben ist, als eine der `maxValue` Parameter.  
+  
+ [!code-cpp[System.Random.Next#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random.Next/CPP/next1.cpp#3)]
+ [!code-csharp[System.Random.Next#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random.Next/CS/next1.cs#3)]
+ [!code-vb[System.Random.Next#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random.Next/VB/next1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="maxValue" /> ist kleiner als 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Next">
+      <MemberSignature Language="C#" Value="public virtual int Next (int minValue, int maxValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Next(int32 minValue, int32 maxValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Random.Next(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="minValue" Type="System.Int32" />
+        <Parameter Name="maxValue" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="minValue">Die inklusive untere Grenze der zufälligen Zahl zurückgegeben.</param>
+        <param name="maxValue">Die exklusive obere Grenze der zufälligen Zahl zurückgegeben. <c>"MaxValue"</c> muss größer als oder gleich <c>"MinValue"</c>.</param>
+        <summary>Gibt eine Zufallsganzzahl zurück, die in einem angegebenen Bereich liegt.</summary>
+        <returns>Eine 32-Bit-Ganzzahl mit Vorzeichen größer oder gleich <paramref name="minValue" /> und weniger als <paramref name="maxValue" />; ist, enthält des Bereichs der Rückgabewerte <paramref name="minValue" /> , aber nicht <paramref name="maxValue" />. Wenn <paramref name="minValue" /> gleich <paramref name="maxValue" />, <paramref name="minValue" /> wird zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Random.Next%28System.Int32%2CSystem.Int32%29> Überladung gibt eine zufälligen ganze Zahlen zwischen `minValue` auf `maxValue` – 1. Jedoch wenn `maxValue` gleich `minValue`, gibt die Methode `minValue`.  
+  
+ Im Gegensatz zu anderen Überladungen auf der die <xref:System.Random.Next%2A> -Methode, die nur positive Werte zurückzugeben, kann diese Methode eine negative Zufallsganzzahl zurück.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Random.Next%28System.Int32%2CSystem.Int32%29?displayProperty=nameWithType> Methode zum Generieren von Zufallszahlen mit drei verschiedenen Wertebereichen. Beachten Sie, dass der vom System bereitgestellten Ausgangswert übergeben, um die genaue Ausgabe des Beispiels hängt die <xref:System.Random> Klassenkonstruktor.  
+  
+ [!code-cpp[System.Random.Next#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random.Next/CPP/next2.cpp#2)]
+ [!code-csharp[System.Random.Next#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random.Next/CS/Next2.cs#2)]
+ [!code-vb[System.Random.Next#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random.Next/VB/next2.vb#2)]  
+  
+ Das folgende Beispiel generiert eine zufällige ganze Zahl, die als Index verwendet einen Zeichenfolgenwert aus einem Array abgerufen. Da der höchste Index des Arrays 1 kleiner als die Länge ist, den Wert des ist der <xref:System.Array.Length%2A?displayProperty=nameWithType> -Eigenschaft angegeben ist, als eine der `maxValue` Parameter.  
+  
+ [!code-cpp[System.Random.Next#4](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random.Next/CPP/next4.cpp#4)]
+ [!code-csharp[System.Random.Next#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random.Next/CS/next4.cs#4)]
+ [!code-vb[System.Random.Next#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random.Next/VB/next4.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="minValue" /> ist größer als <paramref name="maxValue" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Ab .NET Framework, Version 2.0, wenn Sie beim Ableiten einer Klasse von <see cref="T:System.Random" /> und überschreiben die <see cref="M:System.Random.Sample" /> -Methode, die durch die Implementierung der abgeleiteten Klasse zur Verfügung gestellte Verteilung der <see cref="M:System.Random.Sample" /> Methode wird nicht verwendet, in der Basisklasse aufrufen Implementierung von der <see cref="M:System.Random.Next(System.Int32,System.Int32)" /> Methode zu überladen, wenn der Unterschied zwischen der <paramref name="minValue" /> und <paramref name="maxValue" /> Parameter ist größer als <see cref="F:System.Int32.MaxValue" />. Die gleichverteilung stattdessen zurückgegeben, der vom Basistyp <see cref="T:System.Random" /> Klasse dient. Dieses Verhalten verbessert die gesamtleistung der <see cref="T:System.Random" /> Klasse. So ändern Sie dieses Verhalten so rufen Sie die <see cref="M:System.Random.Sample" /> Methode in der abgeleiteten Klasse, müssen Sie auch überschreiben die <see cref="M:System.Random.Next(System.Int32,System.Int32)" /> -methodenüberladung.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="NextBytes">
+      <MemberSignature Language="C#" Value="public virtual void NextBytes (byte[] buffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void NextBytes(unsigned int8[] buffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Random.NextBytes(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Ein Array von Bytes, die Zufallszahlen enthalten.</param>
+        <summary>Füllt die Elemente eines angegebenen Bytearrays mit Zufallszahlen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jedes Element des Arrays von Bytes in eine Zufallszahl größer oder gleich 0 (null) festgelegt ist und kleiner als oder gleich <xref:System.Byte.MaxValue>.  
+  
+ Beispielsweise um eine kryptografisch sicheren Zufallszahl, die für das Erstellen eines zufälligen Kennworts generieren möchten, verwenden Sie eine Methode wie z. B. <xref:System.Security.Cryptography.RNGCryptoServiceProvider.GetBytes%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Random.NextBytes%2A> Methode, um ein Array von Bytes mit zufälliger Bytewerte zu füllen.  
+  
+ [!code-cpp[Classic Random.NextBytes Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Random.NextBytes Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Random.NextBytes Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Random.NextBytes Example/CS/source.cs#1)]
+ [!code-vb[Classic Random.NextBytes Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Random.NextBytes Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> ist <see langword="null" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Ab .NET Framework, Version 2.0, wenn Sie beim Ableiten einer Klasse von <see cref="T:System.Random" /> und überschreiben die <see cref="M:System.Random.Sample" /> -Methode, die durch die Implementierung der abgeleiteten Klasse zur Verfügung gestellte Verteilung der <see cref="M:System.Random.Sample" /> Methode wird nicht verwendet, in der Basisklasse aufrufen Implementierung der <see cref="M:System.Random.NextBytes(System.Byte[])" /> Methode. Die gleichverteilung stattdessen zurückgegeben, der vom Basistyp <see cref="T:System.Random" /> Klasse dient. Dieses Verhalten verbessert die gesamtleistung der <see cref="T:System.Random" /> Klasse. So ändern Sie dieses Verhalten so rufen Sie die <see cref="M:System.Random.Sample" /> Methode in der abgeleiteten Klasse, müssen Sie auch überschreiben die <see cref="M:System.Random.NextBytes(System.Byte[])" /> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="NextDouble">
+      <MemberSignature Language="C#" Value="public virtual double NextDouble ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance float64 NextDouble() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Random.NextDouble" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine zufällige Gleitkommazahl zurück, die größer oder gleich 0,0 und kleiner als 1,0 ist.</summary>
+        <returns>Eine Gleitkommazahl mit doppelter Genauigkeit, die größer oder gleich 0,0 und kleiner als 1,0 ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die tatsächliche Obergrenze für die von dieser Methode zurückgegebene Zufallszahl ist 0.99999999999999978.  
+  
+ Um zufällige Gleitkommazahlen-Punktwerte innerhalb eines Bereichs als 0,0 und 1,0 abzurufen, finden Sie im Abschnitt "Werte für Gleitkommazahlen in einem angegebenen Bereich abgerufen werden" von der <xref:System.Random> klassenthema.  
+  
+ Diese Methode ist die öffentliche Version der geschützten Methode <xref:System.Random.Sample%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Random.NextDouble%2A> Methode zum Generieren von Sequenzen von Double.  
+  
+ [!code-cpp[System.Random.Ctor#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random.Ctor/CPP/ctor.cpp#1)]
+ [!code-csharp[System.Random.Ctor#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random.Ctor/CS/ctor.cs#1)]
+ [!code-vb[System.Random.Ctor#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random.Ctor/VB/ctor.vb#1)]  
+  
+ Im folgenden Beispiel wird die <xref:System.Random.NextDouble%2A> Methode zum Generieren von 100 zufällige Zahlen und zeigt deren Häufigkeit-Verteilung.  
+  
+ [!code-csharp[System.Random.NextDouble#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.random.nextdouble/cs/nextdouble1.cs#2)]
+ [!code-vb[System.Random.NextDouble#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.random.nextdouble/vb/nextdouble1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sample">
+      <MemberSignature Language="C#" Value="protected virtual double Sample ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance float64 Sample() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Random.Sample" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine zufällige Gleitkommazahl zwischen 0,0 und 1,0 zurück.</summary>
+        <returns>Eine Gleitkommazahl mit doppelter Genauigkeit, die größer oder gleich 0,0 und kleiner als 1,0 ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine andere zufällige Verteilung oder ein unterschiedliche random Number Generatorprinzip erzeugt werden, leiten Sie eine Klasse von der <xref:System.Random> Klasse, und überschreiben die <xref:System.Random.Sample%2A> Methode.  
+  
+> [!IMPORTANT]
+>  Die <xref:System.Random.Sample%2A> Methode ist `protected`, was bedeutet, dass darauf zugreifen können, nur innerhalb der <xref:System.Random> Klasse und abgeleitete Klassen. Generiert eine Zufallszahl zwischen 0 und 1 aus einer <xref:System.Random> Instanz ist, rufen Sie die <xref:System.Random.NextDouble%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird eine Klasse von abgeleitet <xref:System.Random> und überschreibt die <xref:System.Random.Sample%2A> Methode, um eine Verteilung von Zufallszahlen generieren. Diese Verteilung unterscheidet sich von der einheitlichen Verteilung von generiert die <xref:System.Random.Sample%2A> Methode der Basisklasse.  
+  
+ [!code-cpp[System.Random.Sample#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random.Sample/cpp/sampleex.cpp#1)]
+ [!code-csharp[System.Random.Sample#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random.Sample/CS/sample.cs#1)]
+ [!code-vb[System.Random.Sample#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random.Sample/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ab .NET Framework, Version 2.0, wenn Sie beim Ableiten einer Klasse von <see cref="T:System.Random" /> und überschreiben die <see cref="M:System.Random.Sample" /> -Methode, die durch die Implementierung der abgeleiteten Klasse zur Verfügung gestellte Verteilung der <see cref="M:System.Random.Sample" /> Methode wird nicht verwendet, in der Basisklasse aufrufen die Implementierung der folgenden Methoden:  
+  
+-   Die <see cref="M:System.Random.NextBytes(System.Byte[])" />-Methode.  
+  
+-   Die <see cref="M:System.Random.Next" />-Methode.  
+  
+-   Die <see cref="M:System.Random.Next(System.Int32,System.Int32)" /> -Methode, wenn (<paramref name="maxValue" /> - <paramref name="minValue" />) ist größer als <see cref="F:System.Int32.MaxValue" />.  
+  
+ Stattdessen die Basis der gleichverteilung gebotenen <see cref="T:System.Random" /> Klasse dient. Dieses Verhalten verbessert die gesamtleistung der <see cref="T:System.Random" /> Klasse. So ändern Sie das Verhalten, dass die Implementierung von Aufrufen der <see cref="M:System.Random.Sample" /> Methode in der abgeleiteten Klasse, müssen Sie auch das Verhalten dieser drei Member überschreiben. Dies wird im Beispiel veranschaulicht.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

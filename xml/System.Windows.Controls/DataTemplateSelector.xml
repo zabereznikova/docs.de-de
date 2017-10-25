@@ -1,0 +1,118 @@
+<Type Name="DataTemplateSelector" FullName="System.Windows.Controls.DataTemplateSelector">
+  <TypeSignature Language="C#" Value="public class DataTemplateSelector" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataTemplateSelector extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.DataTemplateSelector" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet eine Möglichkeit zum Auswählen einer <see cref="T:System.Windows.DataTemplate" /> auf der Grundlage des Datenobjekts und des datengebundenen Elements.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalerweise erstellen Sie eine <xref:System.Windows.Controls.DataTemplateSelector> , wenn Sie haben mehr als eine <xref:System.Windows.DataTemplate> für den gleichen Typ von Objekten, und Sie möchten Ihre eigene Logik zum Auswählen einer <xref:System.Windows.DataTemplate> anzuwendende auf Grundlage der Eigenschaften der einzelnen Datenobjekte. Beachten Sie, die Ihnen ggf. Objekte von anderen Typen festgelegt können die <xref:System.Windows.DataTemplate.DataType%2A> Eigenschaft auf die <xref:System.Windows.DataTemplate>. Wenn Sie dies vornehmen, besteht keine Notwendigkeit zum Erstellen einer <xref:System.Windows.Controls.DataTemplateSelector>. Darüber hinaus, wenn Sie Objekte vom gleichen Typ, aber mit verschiedenen Eigenschaften verfügen, Sie können auch erwägen eine <xref:System.Windows.DataTrigger> oder einen Datenkonverter. Weitere Informationen finden Sie unter [Übersicht über Datenvorlagen](~/docs/framework/wpf/data/data-templating-overview.md).  
+  
+ Um einen Selektor für eine Vorlage zu erstellen, erstellen Sie eine Klasse, die von erben <xref:System.Windows.Controls.DataTemplateSelector> und überschreiben die <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> Methode. Sobald die Klasse definiert wurde, können Sie eine Instanz der Klasse der Vorlage Auswahlzeiger-Eigenschaft des Elements zuweisen.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird die Bindungsquelle eine Liste der `Task` Objekte. Eine der Eigenschaften von einer `Task` Objekt `Priority`. Es gibt zwei Datenvorlagen definiert, `myTaskTemplate` und `importantTaskTemplate`.  
+  
+ Angeben der Logik zum Auswählen der <xref:System.Windows.DataTemplate> auf der Grundlage der `Priority` Wert des Datenobjekts, erstellen Sie eine Unterklasse von <xref:System.Windows.Controls.DataTemplateSelector> und überschreiben die <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> Methode. Im folgenden Beispiel die <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> Methode stellt die Logik zum Zurückgeben der entsprechenden Vorlage basierend auf dem Wert, der die `Priority` Eigenschaft. Die Vorlage zurückzugebenden befindet sich in den Ressourcen des umschließenden <xref:System.Windows.Window> Element.  
+  
+ [!code-csharp[DataTemplatingIntro_snip#DTSClass](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/TaskListDataTemplateSelector.cs#dtsclass)]
+ [!code-vb[DataTemplatingIntro_snip#DTSClass](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataTemplatingIntro_snip/visualbasic/tasklistdatatemplateselector.vb#dtsclass)]  
+  
+ Wir können dann den `TaskListDataTemplateSelector` als Ressource deklarieren:  
+  
+ [!code-xaml[DataTemplatingIntro_snip#R1](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#r1)]  
+[!code-xaml[DataTemplatingIntro_snip#DTS](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#dts)]  
+[!code-xaml[DataTemplatingIntro_snip#R2](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#r2)]  
+  
+ Um die Auswahl Dialogfeldvorlagen-Ressource zu verwenden, weisen sie Sie der <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A> Eigenschaft von der <xref:System.Windows.Controls.ListBox>. Die <xref:System.Windows.Controls.ListBox> Aufrufe der <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> Methode der `TaskListDataTemplateSelector` für jedes der Elemente in der zugrunde liegenden Auflistung. Beim Aufruf wird das Datenobjekt als Elementparameter übergeben. Die <xref:System.Windows.DataTemplate> der zurückgegeben wird, indem die Methode auf dieses Datenobjekt angewendet.  
+  
+ [!code-xaml[DataTemplatingIntro_snip#ItemTemplateSelector](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#itemtemplateselector)]  
+  
+ Das vollständige Beispiel finden Sie unter [Einführung in das Datenvorlagenbeispiel](http://go.microsoft.com/fwlink/?LinkID=160009).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataTemplateSelector ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataTemplateSelector.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.DataTemplateSelector" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectTemplate">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.DataTemplate SelectTemplate (object item, System.Windows.DependencyObject container);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.DataTemplate SelectTemplate(object item, class System.Windows.DependencyObject container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataTemplateSelector.SelectTemplate(System.Object,System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DataTemplate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+        <Parameter Name="container" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das Datenobjekt, für das die Vorlage ausgewählt werden soll.</param>
+        <param name="container">Das datengebundene Objekt.</param>
+        <summary>Gibt beim Überschreiben in einer abgeleiteten Klasse eine <see cref="T:System.Windows.DataTemplate" /> auf benutzerdefinierter Logik basierende.</summary>
+        <returns>Gibt ein <see cref="T:System.Windows.DataTemplate" /> oder <see langword="null" /> zurück. Der Standardwert ist <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel verwenden Sie eine Vorlagenauswahl, wenn Sie mehr als eine Datenvorlage für den gleichen Typ von Objekten definiert haben. Z. B. wenn die Bindungsquelle Liste ist eine Liste der Student-Objekten, und Sie eine bestimmte Vorlage auf Teilzeit Studenten anwenden möchten. Hierzu können Sie durch Erstellen einer Klasse, die von erben <xref:System.Windows.Controls.DataTemplateSelector> und überschreiben die <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> Methode. Sobald die Klasse definiert wurde, können Sie eine Instanz der Klasse der Vorlage Auswahlzeiger-Eigenschaft des Elements zuweisen.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird die Bindungsquelle eine Liste der `Task` Objekte. Eine der Eigenschaften von einer `Task` Objekt `Priority`. Es gibt zwei Datenvorlagen definiert, `myTaskTemplate` und `importantTaskTemplate`.  
+  
+ Angeben der Logik zum Auswählen der <xref:System.Windows.DataTemplate> auf der Grundlage der `Priority` Wert des Datenobjekts, erstellen Sie eine Unterklasse von <xref:System.Windows.Controls.DataTemplateSelector> und überschreiben die <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> Methode. Im folgenden Beispiel die <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> Methode stellt die Logik zum Zurückgeben der entsprechenden Vorlage basierend auf dem Wert, der die `Priority` Eigenschaft. Die Vorlage zurückzugebenden befindet sich in den Ressourcen des umschließenden <xref:System.Windows.Window> Element.  
+  
+ [!code-csharp[DataTemplatingIntro_snip#DTSClass](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/TaskListDataTemplateSelector.cs#dtsclass)]
+ [!code-vb[DataTemplatingIntro_snip#DTSClass](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataTemplatingIntro_snip/visualbasic/tasklistdatatemplateselector.vb#dtsclass)]  
+  
+ Wir können dann den `TaskListDataTemplateSelector` als Ressource deklarieren:  
+  
+ [!code-xaml[DataTemplatingIntro_snip#R1](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#r1)]  
+[!code-xaml[DataTemplatingIntro_snip#DTS](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#dts)]  
+[!code-xaml[DataTemplatingIntro_snip#R2](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#r2)]  
+  
+ Um die Auswahl Dialogfeldvorlagen-Ressource zu verwenden, weisen sie Sie der <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A> Eigenschaft von der <xref:System.Windows.Controls.ListBox>. Die <xref:System.Windows.Controls.ListBox> Aufrufe der <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> Methode der `TaskListDataTemplateSelector` für jedes der Elemente in der zugrunde liegenden Auflistung. Beim Aufruf wird das Datenobjekt als Elementparameter übergeben. Die <xref:System.Windows.DataTemplate> der zurückgegeben wird, indem die Methode auf dieses Datenobjekt angewendet.  
+  
+ [!code-xaml[DataTemplatingIntro_snip#ItemTemplateSelector](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#itemtemplateselector)]  
+  
+ Das vollständige Beispiel finden Sie unter [Einführung in das Datenvorlagenbeispiel](http://go.microsoft.com/fwlink/?LinkID=160009).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

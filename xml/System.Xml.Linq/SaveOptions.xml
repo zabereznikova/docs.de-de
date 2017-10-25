@@ -1,0 +1,173 @@
+<Type Name="SaveOptions" FullName="System.Xml.Linq.SaveOptions">
+  <TypeSignature Language="C#" Value="public enum SaveOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SaveOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Linq.SaveOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XDocument</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.Linq</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt Serialisierungsoptionen an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie die Formatierung beim Serialisieren deaktivieren, wird die gesamte nicht signifikante Leerraum in der XML-Struktur serialisiert, wie ist. Wenn Sie die Formatierung nicht deaktivieren, dann wird die gesamte nicht signifikante Leerraum in der XML-Struktur verworfen, und der XML-Code wird formatiert (eingerückt), wie diese serialisiert wird.  
+  
+ Dieses Typs können Sie steuern, wie LINQ to XML Leerzeichen behandelt, bei der Serialisierung. Weitere Informationen finden Sie unter [bleiben Leerraum beim Laden oder Analysieren der XML-](http://msdn.microsoft.com/library/093a7169-a04e-4638-b08c-d1cb98aa650d) und [bleiben Leerzeichen beim Serialisieren](http://msdn.microsoft.com/library/fb146217-0a49-4efc-ac84-7265b91d3939).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt zwei Möglichkeiten, zu serialisieren. Die erste behält nicht signifikanten Leerraum in der XML-Struktur. Die zweite serialisiert die <xref:System.Xml.Linq.XElement> mit Formatierung.  
+  
+```csharp  
+  
+                string str;  
+XElement root = XElement.Parse(@"<Root> <Child> Text </Child> </Root>");  
+  
+root.Save("Root.xml", SaveOptions.DisableFormatting);  
+str = File.ReadAllText("Root.xml");  
+Console.WriteLine(str);  
+  
+Console.WriteLine("=====");  
+  
+root.Save("Root.xml", SaveOptions.None);  
+str = File.ReadAllText("Root.xml");  
+Console.WriteLine(str);  
+```  
+  
+```vb  
+  
+                Dim str As String  
+Dim root As XElement = <Root><Child> Text </Child></Root>  
+  
+root.Save("Root.xml", SaveOptions.DisableFormatting)  
+str = File.ReadAllText("Root.xml")  
+Console.WriteLine(str)  
+  
+Console.WriteLine("=====")  
+  
+root.Save("Root.xml", SaveOptions.None)  
+str = File.ReadAllText("Root.xml")  
+Console.WriteLine(str)  
+  
+```  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```  
+<?xml version="1.0" encoding="utf-8"?><Root><Child> Text </Child></Root>  
+=====  
+<?xml version="1.0" encoding="utf-8"?>  
+<Root>  
+  <Child> Text </Child>  
+</Root>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DisableFormatting">
+      <MemberSignature Language="C#" Value="DisableFormatting" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.Linq.SaveOptions DisableFormatting = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Linq.SaveOptions.DisableFormatting" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Linq.SaveOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erhalten Sie alle nicht signifikanter Leerraum beim Serialisieren.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.Linq.SaveOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Linq.SaveOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Linq.SaveOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Format der XML (Einzug) beim Serialisieren.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OmitDuplicateNamespaces">
+      <MemberSignature Language="C#" Value="OmitDuplicateNamespaces" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.Linq.SaveOptions OmitDuplicateNamespaces = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Linq.SaveOptions.OmitDuplicateNamespaces" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Linq.SaveOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Entfernen Sie die doppelten Namespacedeklarationen beim Serialisieren.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,44 @@
+<Type Name="JumpItem" FullName="System.Windows.Shell.JumpItem">
+  <TypeSignature Language="C#" Value="public abstract class JumpItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit JumpItem extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Shell.JumpItem" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Basisklasse für die Klassen <see cref="T:System.Windows.Shell.JumpPath" /> und <see cref="T:System.Windows.Shell.JumpTask" /> dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CustomCategory">
+      <MemberSignature Language="C#" Value="public string CustomCategory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CustomCategory" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shell.JumpItem.CustomCategory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Kategorie der <see cref="T:System.Windows.Shell.JumpItem" /> mit gruppiert ist, der [!INCLUDE[win7](~/includes/win7-md.md)] Taskleiste Liste zu wechseln.</summary>
+        <value>Der Name der Kategorie der <see cref="T:System.Windows.Shell.JumpItem" /> mit gruppiert wird. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Shell.JumpItem.CustomCategory%2A> Eigenschaft `null` oder <xref:System.String.Empty>, das Element wird hinzugefügt, um die **Aufgaben** Kategorie. Wenn ein Wert angegeben ist, wird das Element auf eine Kategorie hinzugefügt, die den angegebenen Namen verwendet. Elemente in benutzerdefinierte Kategorien können vom Benutzer zur Sprungliste angeheftet werden. Wenn ein Element fixiert ist, verschiebt eine automatische Kategorie namens **angeheftete**. Der Benutzer entfernen kann auch Elemente aus der Liste zu wechseln.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

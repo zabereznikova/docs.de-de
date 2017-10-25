@@ -1,0 +1,40 @@
+<Type Name="WebPartVerbsEventHandler" FullName="System.Web.UI.WebControls.WebParts.WebPartVerbsEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void WebPartVerbsEventHandler(object sender, WebPartVerbsEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WebPartVerbsEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebPartVerbsEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Web.UI.WebControls.WebParts.WebPartVerbsEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Die Ereignisargumente.</param>
+    <summary>Stellt den Delegaten für die <see cref="E:System.Web.UI.WebControls.WebParts.WebPartZoneBase.CreateVerbs" /> Ereignis.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartVerbsEventHandler> Klasse wird verwendet, an die Methoden, die aufgerufen werden als Antwort auf eine <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.CreateVerbs> Ereignis, das auftritt, wenn die Webparts-Verben für eine Zone erstellt werden, die von abgeleitet ist die <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Klasse.  
+  
+ Webparts-Verben repräsentieren Aktionen, die Benutzer in der Benutzeroberfläche (UI) einer Webparts-Seite, z. B. minimieren, schließen oder Wiederherstellen von Steuerelementen ausführen können. Hinzufügen von Steuerelementen zu einer Seite; oder Abbrechen eines Vorgangs. Verben in Kopf- und Fußzeilen Bereiche einer Zone angezeigt werden können, und sind sowohl Standardverben mit den Webparts-Steuerelementsatz bereitgestellten und benutzerdefinierten Verben, die von Entwicklern hinzugefügt werden können. Ein Verb liegt in der Benutzeroberfläche von einem durch Klicken aktivierbaren-Objekt, das Sie festlegen können, als einen Link, ein Bild oder eine Schaltfläche angezeigt werden, indem mithilfe der <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.VerbButtonType%2A> Eigenschaft.  
+  
+ Ein <xref:System.Web.UI.WebControls.WebParts.WebPartZone> Zone bietet einen Standardsatz von Verben, die im Verbmenü des Webparts-Steuerelement gerendert werden. Eine benutzerdefinierte Webparts-Zone oder ein Webparts-Steuerelement in einer Webparts-Zone kann zusätzliche Verben zum Menü hinzufügen.  
+  
+ Ein Steuerelement in einer Webparts-Zone kann hinzufügen Verben Verbmenü das Steuerelement durch Erben von der <xref:System.Web.UI.WebControls.WebParts.WebPart> -Basisklasse und überschreiben die <xref:System.Web.UI.WebControls.WebParts.WebPart.Verbs%2A> Eigenschaft. Wenn das Steuerelement nicht von erbt die <xref:System.Web.UI.WebControls.WebParts.WebPart> Basisklasse, können Sie ein neues Verb hinzufügen, durch die Implementierung der <xref:System.Web.UI.WebControls.WebParts.IWebActionable> -Schnittstelle, und klicken Sie dann überschreiben die <xref:System.Web.UI.WebControls.WebParts.IWebActionable.Verbs%2A> Auflistung.  
+  
+ Die geschützte <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.OnCreateVerbs%2A?displayProperty=nameWithType> Methode kann abgeleitete Klassen das Ereignis ohne Anfügen ein Delegaten zu überschreiben. Rufen Sie eine abgeleitete Klasse muss immer die <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.OnCreateVerbs%2A> Methode der Basisklasse, um sicherzustellen, dass registrierte Delegaten das Ereignis empfangen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

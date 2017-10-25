@@ -1,0 +1,197 @@
+<Type Name="PropertyPath" FullName="System.Windows.PropertyPath">
+  <TypeSignature Language="C#" Value="public sealed class PropertyPath" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PropertyPath extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.PropertyPath" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.PropertyPathConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementiert eine Datenstruktur zum Beschreiben einer Eigenschaft als Pfad unterhalb einer anderen Eigenschaft oder unterhalb eines besitzenden Typs. Eigenschaftspfade werden bei der Datenbindung an Objekte verwendet und in Storyboards und Zeitachsen für Animationen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse enthält eine Zeichenfolge <xref:System.Windows.PropertyPath.Path%2A>, und eine Liste von Abhängigkeitseigenschaften, die die <xref:System.Windows.PropertyPath.PathParameters%2A> in die Zeichenfolge <xref:System.Windows.PropertyPath.Path%2A>.  
+  
+ <xref:System.Windows.PropertyPath>unterstützt zwei Bereitstellungsmodi Verhalten:  
+  
+ **Der Modus der** beschreibt einen Pfad zu einer Eigenschaft, die als Quelle für einen anderen Vorgang verwendet wird. Dieser Modus wird verwendet, durch die <xref:System.Windows.Data.Binding> Klasse, um die Datenbindung zu unterstützen.  
+  
+ **Zielmodus** beschreibt einen Pfad zu einer Eigenschaft, die als eine Zieleigenschaft festgelegt werden. In diesem Modus wird von der Animation zur Unterstützung von Storyboards und Zeitachsen Setter verwendet.  
+  
+ Z. B. `Background.Opacity` ist ein Pfad in zwei Schritten. Dieser Pfad impliziert: Suchen Sie zunächst die `Background` Eigenschaft eines Objekts, rufen Sie das Wertobjekt, das die `Background` Eigenschaft auf festgelegt ist, und rufen Sie anschließend den Wert von der `Opacity` Eigenschaft für dieses Objekt.  
+  
+<a name="xamlAttributeUsage_PropertyPath"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="propertyPath" .../>  
+```  
+  
+<a name="xamlValues_PropertyPath"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *"PropertyPath"*  
+ Eine Zeichenfolge, die ausgewertet wird, um entweder eine einfache oder komplexe Eigenschaftenpfad sein. Die Syntax zum Festlegen einer <xref:System.Windows.PropertyPath> in [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] ist vielseitig jedoch komplex und wird in der separaten Thema beschriebenen [die Verwendung von XAML-Syntax "PropertyPath"](~/docs/framework/wpf/advanced/propertypath-xaml-syntax.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyPath (object parameter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object parameter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.PropertyPath.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="parameter" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="parameter">Einen Eigenschaftspfad aus, die entweder einen Pfad zum Beschreiben einer [!INCLUDE[TLA#tla_clr](~/includes/tlasharptla-clr-md.md)] Eigenschaft oder eine einzelne Abhängigkeitseigenschaft.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.PropertyPath" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor verfügt über zwei völlig unterschiedlich Verwendungen, je nachdem, ob sie für eine Quelle im Benutzermodus Eigenschaftspfad für eine Bindung oder eine einstufiger Eigenschaftspfad Zielmodus für ein Storyboardziel verwendet wird.  
+  
+ Wenn dieser <xref:System.Windows.PropertyPath> im Quellmodus für eine Bindung `parameter` ist eine Zeichenfolge, die einen Eigenschaftennamen darstellt, oder eine Zeichenfolge, die zur Eigenschaft im Pfad "schrittweisen" beschreibt die [!INCLUDE[TLA2#tla_clr](~/includes/tla2sharptla-clr-md.md)] -Objektmodell das Objekt, das als Quelle verwendet wird für eine Bindung. Für einen Eigenschaftspfad Bindung ist das Zeichen, das einen "Schritt" identifiziert einen Punkt (.). Indexer-Verweise (einschließlich mehrere Indexer und Typ Differenzierung) werden ebenfalls unterstützt. Weitere Informationen zur Syntax der Zeichenfolge, die als eindeutig anhand der <xref:System.Windows.Data.Binding> Objekt, finden Sie unter <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType>. Eine Abhängigkeitseigenschaft muss die nicht für einer Eigenschaft, die als Bindungsquelle verwendet. Falls die Bindung bidirektionale aktualisiert werden, muss die referenzierte Eigenschaft Lese-/ Schreibzugriff sein. Beachten Sie außerdem, dass das Bindungsziel verfügt, um eine Abhängigkeitseigenschaft. Weitere Informationen finden Sie unter [Übersicht über Datenbindung](~/docs/framework/wpf/data/data-binding-overview.md).  
+  
+ Wenn dieser <xref:System.Windows.PropertyPath> im Zielmodus für einen Schritt für Schritt Pfad für ein Storyboardziel `parameter` dient im Allgemeinen als Typ <xref:System.Windows.DependencyProperty>. Sie können auch angeben, eine Zeichenfolge, die <xref:System.Windows.DependencyProperty.Name%2A>. Eine dieser Optionen ergeben das gleiche Ergebnis, da er intern als Zeichenfolge gespeichert ist. Ein bereitgestelltes <xref:System.Windows.DependencyProperty> wird konvertiert in eine Zeichenfolge über <xref:System.Windows.Markup.DependencyPropertyConverter>. Die <xref:System.Windows.Markup.DependencyPropertyConverter> ein qualifizierter Namensformat für Abhängigkeitseigenschaften, unterstützt werden, damit Sie angeben können, eine *TypeName*.* PropertyName* Abhängigkeit Eigenschaft Namenszeichenfolge zu qualifiziert die <xref:System.Windows.PropertyPath.%23ctor%2A?displayProperty=nameWithType> Konstruktor im Code. Die vollqualifizierten Pfad zum Bezeichner für die Abhängigkeitseigenschaft ist eine komplexe Pfad unterscheidet sich grundlegend. Ein komplexer Pfad <xref:System.Windows.PropertyPath> sollten stattdessen erstellt werden, mit der <xref:System.Windows.PropertyPath.%23ctor%2A?displayProperty=nameWithType> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyPath (string path, params object[] pathParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, object[] pathParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.PropertyPath.#ctor(System.String,System.Object[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="pathParameters" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="path">Eine Zeichenfolge, die angibt, die <see cref="P:System.Windows.PropertyPath.Path" />, in einem Format mit Token.</param>
+        <param name="pathParameters">Ein Array von Objekten, die legt die <see cref="P:System.Windows.PropertyPath.PathParameters" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.PropertyPath" /> -Klasse, mit dem bereitgestellten Tokenzeichenfolge und Parameter.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Signatur wird im Allgemeinen nur für den Ziel-Modus verwendet <xref:System.Windows.PropertyPath> Verwendungen mit komplexen Pfaden.  
+  
+ Dieser Konstruktor unterstützt `params` für die `pathParameters` Konstruktorargument. Aus diesem Grund können Sie angeben, den Inhalt der `pathParameters` als eine Reihe von durch Trennzeichen getrennte Konstruktorargumente, das Auffüllen von Arrays, anstatt ein Array-dimension, und füllen Sie dann mit der `pathParameters` Elemente. Jedes Element, das Sie angeben, muss einen der folgenden Typen sein: <xref:System.Windows.DependencyProperty>, <xref:System.Reflection.PropertyInfo>, <xref:System.ComponentModel.PropertyDescriptor>.  
+  
+ Weitere Informationen zu den Anforderungen der Parameter finden Sie unter <xref:System.Windows.PropertyPath.Path%2A> und <xref:System.Windows.PropertyPath.PathParameters%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.PropertyPath.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeichenfolge, die den Pfad beschreibt.</summary>
+        <value>Die Zeichenfolge, die den Pfad beschreibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Zeichenfolge in dieser Eigenschaft hat drei vollständig verschiedene Bedeutungen, je nachdem, ob eine <xref:System.Windows.PropertyPath> für eine Quelle im Benutzermodus Eigenschaftspfad für eine Bindung, die für einen Schritt für Schritt Eigenschaftspfad Zielmodus für ein Storyboardziel oder für eine komplexe verwendet wird der Pfad für ein Storyboardziel.  
+  
+ Wenn dieser <xref:System.Windows.PropertyPath> im Quellmodus für eine Bindung <xref:System.Windows.PropertyPath.Path%2A> ist eine Zeichenfolge, die einen Eigenschaftennamen darstellt, oder eine Zeichenfolge, die zur Eigenschaft im Pfad "schrittweisen" beschreibt die [!INCLUDE[TLA2#tla_clr](~/includes/tla2sharptla-clr-md.md)] -Objektmodell das Objekt, das als Quelle verwendet wird für eine Bindung. Für einen Eigenschaftspfad Bindung ist das Zeichen, das einen "Schritt" identifiziert einen Punkt (.). Indexer-Verweise (einschließlich mehrere Indexer und Typ Differenzierung) werden ebenfalls unterstützt. Weitere Informationen zur Syntax der Zeichenfolge, die als eindeutig anhand der <xref:System.Windows.Data.Binding> Objekt, finden Sie unter <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType>. Eine Abhängigkeitseigenschaft muss die nicht für einer Eigenschaft, die als Bindungsquelle verwendet. Falls die Bindung bidirektionale aktualisiert werden, muss der Eigenschaftsquelle Lese-/ Schreibzugriff sein. Beachten Sie außerdem, dass das Bindungsziel verfügt, um eine Abhängigkeitseigenschaft. Weitere Informationen finden Sie unter [Übersicht über Datenbindung](~/docs/framework/wpf/data/data-binding-overview.md).  
+  
+ Wenn dieser <xref:System.Windows.PropertyPath> im Zielmodus für einen Schritt für Schritt Pfad für ein Storyboardziel <xref:System.Windows.PropertyPath> ist eine Zeichenfolge, die eine *TypeName*.* PropertyName* Abhängigkeit Eigenschaft Namenszeichenfolge qualifiziert.  
+  
+ Wenn dieser <xref:System.Windows.PropertyPath> für einen komplexen Pfad für ein Storyboardziel <xref:System.Windows.PropertyPath.Path%2A> ist ein Token dargestellten Zeichenfolgenformat, das die Beziehungen zwischen die verschiedenen Objekte in angegebenen beschreibt die <xref:System.Windows.PropertyPath.PathParameters%2A>.  
+  
+-   Jedes Element im Array wird durch den Index des Arrays für das Element, das in Klammern eingeschlossen sind im folgenden Format angegeben. Um das erste Element im Array angegeben wird, ist das Zeichenfolgentoken, das z. B. `(0)`.  
+  
+-   Beziehungen zwischen Elementen (im Pfad "Schritte") werden durch einen Punkt (.) angegeben. Die Eigenschaft vor dem Punkt ist der erste Schritt im Pfad, ist die Eigenschaft nach dem der zweite Schritt usw. (Sie können mehr als zwei Schritte angeben). Der letzte Schritt in der Kette stellt immer zu animierende Eigenschaft dar.  
+  
+-   Elemente in den Sammlungseigenschaften erfolgt mit einem Indexersyntax, mit dem Index in eckige Klammern ([und]). Der Indexer ist kumulativ mit dem Token, das die Eigenschaft darstellt. Folgendes ist z. B. einen Pfad in zwei Schritten mit der Kombination aus den token im ersten Schritt das zweite Element aus der Auflistung dieser Eigenschaft angeben: `(0)[1].(1)` . Einen Indexer kann nicht auf die letzte Eigenschaft in der Kette verwenden werden. Sie können nicht die tatsächliche Auflistungsposition animieren, müssen Sie eine Eigenschaft für dieses Objekt animiert.  
+  
+ Die Pfadzeichenfolge für eine <xref:System.Windows.PropertyPath> ist in der Regel durch die Konstruktoren festgelegt: die <xref:System.Windows.PropertyPath.%23ctor%28System.Object%29> Signatur für Bindungen oder einstufiger Storyboardziele, die <xref:System.Windows.PropertyPath.%23ctor%28System.String%2CSystem.Object%5B%5D%29> Signatur für mehrstufiges Storyboardziele.  
+  
+ **XAML:** bei Verwendung einer <xref:System.Windows.PropertyPath> beschreiben ein Eigenschaftsverweis in [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], wie ein Wert des Attributs die Zeichenfolge, die Sie angeben, durch einen Typkonverter zuerst behandelt wird (<xref:System.Windows.PropertyPathConverter>). Dieser Typkonverter verarbeitet die Zeichenfolge, und basierend auf seiner Syntax wird rufen Sie eine der der <xref:System.Windows.PropertyPath> Konstruktorsignaturen. Dieser Umweg über den Typkonverter, die Behandlung von Attributwert ist in der Regel für die Verwendung von <xref:System.Windows.PropertyPath> in [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], anstatt Deklarieren einer <xref:System.Windows.PropertyPath> Objekt Element durchläuft und bestimmte Werte für Attribute wie z. B. <xref:System.Windows.PropertyPath.Path%2A> und <xref:System.Windows.PropertyPath.PathParameters%2A>. Weitere Informationen finden Sie unter [die Verwendung von XAML-Syntax "PropertyPath"](~/docs/framework/wpf/advanced/propertypath-xaml-syntax.md).  
+  
+<a name="xamlTextUsage_Path"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Mitglieder der <xref:System.Windows.PropertyPath> Typ werden nicht in der Regel in einer direkten festgelegt [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Syntax. Siehe Hinweise.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PathParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;object&gt; PathParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;object&gt; PathParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.PropertyPath.PathParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Liste der Parameter zu verwenden, wenn der Pfad auf indizierte Parameter verweist.</summary>
+        <value>Die Parameterliste.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Eigenschaften für eine <xref:System.Windows.PropertyPath> in der Regel durch die Konstruktoren eingerichtet werden. Für die Einstellung <xref:System.Windows.PropertyPath.PathParameters%2A>, die <xref:System.Windows.PropertyPath.%23ctor%2A> Konstruktor ist besonders praktisch da die `pathParameters` Konstruktorargument als festgelegt wurde `params`, was bedeutet, dass Sie nicht benötigen, erstellen oder ein Array für die Konstruktion dimension. Sie geben einfach jedes Element des Arrays als zusätzlicher Parameter an.  
+  
+ Ist die letzte Eigenschaft, die das Ziel ist eine <xref:System.Windows.Freezable> eingeben, dieser Wert wird geklont werden. Weitere Informationen finden Sie unter [Storyboards Overview](~/docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
+  
+ Die tatsächliche Auswertung der Eigenschaftenkette erfolgt über die Mechanismen der Storyboard-Animation. Bei der <xref:System.Windows.PropertyPath> Ebene wird keine Validierung ausgeführt, um sicherzustellen, dass die Schritte des Pfads überhaupt verbunden. Sie können z. B. erstellen einen Eigenschaftenpfad mit <xref:System.Windows.Controls.Control.BackgroundProperty?displayProperty=nameWithType> als ersten Schritt und <xref:System.Windows.FrameworkElement.FlowDirectionProperty?displayProperty=nameWithType> als der zweite Schritt. Aber solche ein Eigenschaftspfad würde fehlschlagen, wenn tatsächlich als ein Ziel angewendet, da der Pinsel geben, füllt <xref:System.Windows.Controls.Control.BackgroundProperty?displayProperty=nameWithType> verfügt nicht über eine <xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType> Eigenschaft. Ungültige Eigenschaftenpfade fehl automatisch. Weitere Informationen finden Sie unter [Übersicht über Storyboards](~/docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
+  
+ **XAML:** bei Verwendung einer <xref:System.Windows.PropertyPath> beschreiben ein Eigenschaftsverweis in [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], wie ein Wert des Attributs die Zeichenfolge, die Sie angeben, durch einen Typkonverter zuerst behandelt wird (<xref:System.Windows.PropertyPathConverter>). Dieser Typkonverter verarbeitet die Zeichenfolge, und basierend auf seiner Syntax wird rufen Sie eine der der <xref:System.Windows.PropertyPath> Konstruktorsignaturen. Dieser Umweg über den Typkonverter, die Behandlung von Attributwert ist in der Regel für die Verwendung von <xref:System.Windows.PropertyPath> in [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], anstatt Deklarieren einer <xref:System.Windows.PropertyPath> Objekt Element durchläuft und bestimmte Werte für Attribute wie z. B. <xref:System.Windows.PropertyPath.Path%2A> und <xref:System.Windows.PropertyPath.PathParameters%2A>. Weitere Informationen finden Sie unter [die Verwendung von XAML-Syntax "PropertyPath"](~/docs/framework/wpf/advanced/propertypath-xaml-syntax.md).  
+  
+<a name="xamlTextUsage_PathParameters"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Mitglieder der <xref:System.Windows.PropertyPath> Typ werden nicht in der Regel in einer direkten festgelegt [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Syntax. Siehe Hinweise.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

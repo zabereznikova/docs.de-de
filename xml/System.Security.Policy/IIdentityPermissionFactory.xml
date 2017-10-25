@@ -1,0 +1,60 @@
+<Type Name="IIdentityPermissionFactory" FullName="System.Security.Policy.IIdentityPermissionFactory">
+  <TypeSignature Language="C#" Value="public interface IIdentityPermissionFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IIdentityPermissionFactory" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Policy.IIdentityPermissionFactory" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert die Methode, die eine neue Identitätsberechtigung erstellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei einigen Typen von Beweisen sind eine entsprechende Identitätsberechtigung, die mit dieser Beweis Assemblys gewährt wird. Dies ermöglicht anderen Code für die Identität beansprucht wird, stellen, sodass nur Code mit einer bestimmten Indizien übergeben wird. Beispielsweise können Sie fordern, dass Ihre Aufrufer einen bestimmten starken Namen verfügen; nur Aufrufer mit den starken Namen werden die Anforderung übergeben. Durch die Implementierung <xref:System.Security.Policy.IIdentityPermissionFactory> für ein Beweisobjekt stellen Sie eine Implementierung der <xref:System.Security.Policy.IIdentityPermissionFactory.CreateIdentityPermission%2A> , dass die .NET Framework-Sicherheitssystem aufrufen kann, um eine Identitätsberechtigung zu erhalten, die dieses Element von Beweisen darstellt. Während der richtlinienauflösung, wird das Sicherheitssystem diese Methode aufzurufen, für alle Beweisobjekte, die implementieren <xref:System.Security.Policy.IIdentityPermissionFactory> und die resultierende Identitätsberechtigungen auf der entsprechenden Assembly zu gewähren.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateIdentityPermission">
+      <MemberSignature Language="C#" Value="public System.Security.IPermission CreateIdentityPermission (System.Security.Policy.Evidence evidence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.IPermission CreateIdentityPermission(class System.Security.Policy.Evidence evidence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.IIdentityPermissionFactory.CreateIdentityPermission(System.Security.Policy.Evidence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="evidence" Type="System.Security.Policy.Evidence" />
+      </Parameters>
+      <Docs>
+        <param name="evidence">Der Beweis, aus dem die neue Identitätsberechtigung erstellt werden soll.</param>
+        <summary>Erstellt eine neue Identitätsberechtigung für die angegebene Beweis.</summary>
+        <returns>Die neue Identitätsberechtigung.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

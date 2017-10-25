@@ -1,0 +1,135 @@
+<Type Name="MethodDataCollection+MethodDataEnumerator" FullName="System.Management.MethodDataCollection+MethodDataEnumerator">
+  <TypeSignature Language="C#" Value="public class MethodDataCollection.MethodDataEnumerator : System.Collections.IEnumerator" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit MethodDataCollection/MethodDataEnumerator extends System.Object implements class System.Collections.IEnumerator" />
+  <TypeSignature Language="DocId" Value="T:System.Management.MethodDataCollection.MethodDataEnumerator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerator</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt den Enumerator für <see cref="T:System.Management.MethodData" />-Objekte in der <see cref="T:System.Management.MethodDataCollection" /> dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel durchläuft die Methoden in der **Win32_LogicalDisk** -Klasse und zeigt diese an.  
+  
+ [!code-csharp[wminet_MethodDataEnumerator#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_MethodDataEnumerator/cs/MethodDataEnumerator.cs#1)]
+ [!code-vb[wminet_MethodDataEnumerator#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_MethodDataEnumerator/vb/MethodDataEnumerator.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public System.Management.MethodData Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.MethodData Current" />
+      <MemberSignature Language="DocId" Value="P:System.Management.MethodDataCollection.MethodDataEnumerator.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.MethodData</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die aktuellen <see cref="T:System.Management.MethodData" /> in der <see cref="T:System.Management.MethodDataCollection" />-Enumeration zurück.</summary>
+        <value>Das aktuelle <see cref="T:System.Management.MethodData" />-Element in der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveNext">
+      <MemberSignature Language="C#" Value="public bool MoveNext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool MoveNext() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.MethodDataCollection.MethodDataEnumerator.MoveNext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wechselt zum nächsten Element in der <see cref="T:System.Management.MethodDataCollection" />-Enumeration.</summary>
+        <returns>
+          <see langword="true" />, wenn der Enumerator erfolgreich auf die nächste Methode gesetzt wurde, <see langword="false" />, wenn der Enumerator das Ende der Auflistung überschritten hat.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.MethodDataCollection.MethodDataEnumerator.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt den Enumerator auf den Anfang der <see cref="T:System.Management.MethodDataCollection" />-Enumeration zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerator.Current">
+      <MemberSignature Language="C#" Value="object System.Collections.IEnumerator.Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IEnumerator.Current" />
+      <MemberSignature Language="DocId" Value="P:System.Management.MethodDataCollection.MethodDataEnumerator.System#Collections#IEnumerator#Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das aktuelle Objekt in der Auflistung ab.</summary>
+        <value>Gibt das aktuelle Element in der Auflistung zurück.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Die Sammlung wurde nach der Erstellung des Enumerators geändert.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

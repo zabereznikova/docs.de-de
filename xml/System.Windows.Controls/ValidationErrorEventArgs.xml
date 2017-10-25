@@ -1,0 +1,78 @@
+<Type Name="ValidationErrorEventArgs" FullName="System.Windows.Controls.ValidationErrorEventArgs">
+  <TypeSignature Language="C#" Value="public class ValidationErrorEventArgs : System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ValidationErrorEventArgs extends System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.ValidationErrorEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.RoutedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Informationen für die <see cref="E:System.Windows.Controls.Validation.Error" /> angefügtes Ereignis.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.ValidationErrorEventAction Action { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.ValidationErrorEventAction Action" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ValidationErrorEventArgs.Action" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ValidationErrorEventAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Fehler ist, einen neuen Fehler oder einen vorhandenen Fehler, der nun behoben wurde.</summary>
+        <value>Ein <see cref="T:System.Windows.Controls.ValidationErrorEventAction" /> Wert, der angibt, ob der Fehler ist, einen neuen Fehler oder einen vorhandenen Fehler, der nun behoben wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Error">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.ValidationError Error { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.ValidationError Error" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ValidationErrorEventArgs.Error" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ValidationError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Fehler ab, die die Ursache <see cref="E:System.Windows.Controls.Validation.Error" /> Ereignis.</summary>
+        <value>Die <see cref="T:System.Windows.Controls.ValidationError" /> -Objekt, das die Ursache <see cref="E:System.Windows.Controls.Validation.Error" /> Ereignis.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeEventHandler">
+      <MemberSignature Language="C#" Value="protected override void InvokeEventHandler (Delegate genericHandler, object genericTarget);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InvokeEventHandler(class System.Delegate genericHandler, object genericTarget) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ValidationErrorEventArgs.InvokeEventHandler(System.Delegate,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="genericHandler" Type="System.Delegate" />
+        <Parameter Name="genericTarget" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="genericHandler">Der generische Handler auf eine Weise typspezifische aufrufen.</param>
+        <param name="genericTarget">Das Objekt für die Handler aufgerufen werden soll.</param>
+        <summary>Ruft den angegebenen Handler in eine typspezifische für das angegebene Objekt auf.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

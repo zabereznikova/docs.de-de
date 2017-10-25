@@ -1,0 +1,109 @@
+<Type Name="ControlSkin" FullName="System.Web.UI.ControlSkin">
+  <TypeSignature Language="C#" Value="public class ControlSkin" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ControlSkin extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ControlSkin" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Steuerelementdesign, also eine Möglichkeit zum stilistischer Eigenschaften definieren, die auf einem ASP.NET-Webserversteuerelement angewendet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Seiten- und Entwickler verwenden Sie nicht die <xref:System.Web.UI.ControlSkinDelegate>, <xref:System.Web.UI.ControlSkin>, oder <xref:System.Web.UI.PageTheme> Klassen direkt. Diese Klassen werden intern durch das ASP.NET-Seitenframework verwendet, anzuwendende serverseitigen Eigenschaften und Definitionen von cascading Stylesheet, die in ASP.NET-Designs und Benutzersteuerelement Skin-Dateien für bestimmte Typen von Steuerelementen definiert sind.  
+  
+ <xref:System.Web.UI.ControlSkin>-Objekte darstellen, ein benanntes Design oder Default-Design von einem <xref:System.Web.UI.Control> Steuerelement zur Laufzeit und Entwurfszeit. ASP.NET baut <xref:System.Web.UI.PageTheme>, <xref:System.Web.UI.ControlSkin> und <xref:System.Web.UI.ControlSkinDelegate> -Objekten, die die Stilelemente definiert, Designs und Steuerelement Skin-Dateien für die ASP.NET Web-Seiten und Steuerelemente gelten.  
+  
+ Weitere Informationen zu Designs und Steuerelementskins, finden Sie unter [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie das Steuerelementdesigns für Steuerelemente in einer deklarativen ASP.NET-Seite angegeben werden. Das Beispiel zeigt drei ASP.NET-Serversteuerelemente in der gleichen Seite, zwei, mit denen die gleiche benannte Design und die andere ein anderes Design verwendet gefunden.  
+  
+ [!code-aspx-csharp[ControlSkin#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlSkin/CS/controlskincs.aspx#1)]
+ [!code-aspx-vb[ControlSkin#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlSkin/VB/controlskinvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ControlSkin (Type controlType, System.Web.UI.ControlSkinDelegate themeDelegate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type controlType, class System.Web.UI.ControlSkinDelegate themeDelegate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlSkin.#ctor(System.Type,System.Web.UI.ControlSkinDelegate)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="controlType" Type="System.Type" />
+        <Parameter Name="themeDelegate" Type="System.Web.UI.ControlSkinDelegate" />
+      </Parameters>
+      <Docs>
+        <param name="controlType">Die <see cref="T:System.Type" /> von <see cref="T:System.Web.UI.Control" /> auf die das Design angewendet wird, verwendet, um typkonsistenz zwischen benannte Designs zu erzwingen.</param>
+        <param name="themeDelegate">Die <see cref="T:System.Web.UI.ControlSkinDelegate" /> , die die Stilelemente definiert, die in einem Steuerelement-Designdatei auf den identifizierten Typ gilt die <c>ControlType</c> Parameter.</param>
+        <summary>Erstellt eine neue Instanz der dem <see cref="T:System.Web.UI.ControlSkin" /> -Klasse mit dem übergebenen <see cref="T:System.Web.UI.Control" /> geben und delegieren.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplySkin">
+      <MemberSignature Language="C#" Value="public void ApplySkin (System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ApplySkin(class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlSkin.ApplySkin(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="control">Das Steuerelement, auf die das Design angewendet werden soll.</param>
+        <summary>Wendet das Design der <see cref="T:System.Web.UI.Control" /> enthaltene Steuerelement der <see cref="T:System.Web.UI.ControlSkin" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Übergibt die <xref:System.Web.UI.Control> Objekt zugeordnet der <xref:System.Web.UI.ControlSkin> Klasse, um die <xref:System.Web.UI.ControlSkinDelegate>, der gilt, Designs, das die <xref:System.Web.UI.Control> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlType">
+      <MemberSignature Language="C#" Value="public Type ControlType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ControlType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlSkin.ControlType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Type" /> des Steuerelements, das <see cref="T:System.Web.UI.ControlSkin" /> Objekt zugeordnet ist.</summary>
+        <value>Die <see cref="T:System.Type" /> von der <see cref="T:System.Web.UI.Control" /> in dieser Instanz verwendet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

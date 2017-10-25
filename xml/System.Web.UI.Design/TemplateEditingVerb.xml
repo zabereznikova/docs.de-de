@@ -1,0 +1,228 @@
+<Type Name="TemplateEditingVerb" FullName="System.Web.UI.Design.TemplateEditingVerb">
+  <TypeSignature Language="C#" Value="public class TemplateEditingVerb : System.ComponentModel.Design.DesignerVerb, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TemplateEditingVerb extends System.ComponentModel.Design.DesignerVerb implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.TemplateEditingVerb" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Design.DesignerVerb</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Use of this type is not recommended because template editing is handled in ControlDesigner. To support template editing expose template data in the TemplateGroups property and call SetViewFlags(ViewFlags.TemplateEditing, true). http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Designerverb, der einen Vorlagenbearbeitungsrahmen erstellt, und, kann nur durch eine Vorlagen-Editor aufgerufen werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.TemplateEditingVerb> Klasse ist veraltet. Stellen Sie Vorlagen über die <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> Eigenschaft von einem Steuerelement-Designer. Der Entwurfshost erstellt eine <xref:System.Web.UI.Design.TemplatedEditableDesignerRegion> für jede <xref:System.Web.UI.Design.TemplateGroup> für ein Steuerelement-Designer definiert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TemplateEditingVerb (string text, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TemplateEditingVerb.#ctor(System.String,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der Text für das Verb in einem Menü angezeigt werden soll.</param>
+        <param name="index">Ein optionaler ganzzahliger Wert, der von einem Designer in der Regel verwendet werden kann, um den Index des Verbs in einer Gruppe von Verben anzugeben.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.Design.TemplateEditingVerb" /> Klasse mit dem angegebenen Verbtext und den Index.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.TemplateEditingVerb> Klasse ist veraltet. Stellen Sie Vorlagen über die <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> Eigenschaft von einem Steuerelement-Designer. Der Entwurfshost erstellt eine <xref:System.Web.UI.Design.TemplatedEditableDesignerRegion> für jede <xref:System.Web.UI.Design.TemplateGroup> für ein Steuerelement-Designer definiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TemplateEditingVerb (string text, int index, System.Web.UI.Design.TemplatedControlDesigner designer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text, int32 index, class System.Web.UI.Design.TemplatedControlDesigner designer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TemplateEditingVerb.#ctor(System.String,System.Int32,System.Web.UI.Design.TemplatedControlDesigner)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="designer" Type="System.Web.UI.Design.TemplatedControlDesigner" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der Text für das Verb in einem Menü angezeigt werden soll.</param>
+        <param name="index">Ein optionaler ganzzahliger Wert, der von einem Designer in der Regel verwendet werden kann, um den Index des Verbs in einer Gruppe von Verben anzugeben.</param>
+        <param name="designer">Die <see cref="T:System.Web.UI.Design.TemplatedControlDesigner" /> dieses Verb zu verwenden.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.TemplateEditingVerb" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.TemplateEditingVerb> Klasse ist veraltet. Stellen Sie Vorlagen über die <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> Eigenschaft von einem Steuerelement-Designer. Der Entwurfshost erstellt eine <xref:System.Web.UI.Design.TemplatedEditableDesignerRegion> für jede <xref:System.Web.UI.Design.TemplateGroup> für ein Steuerelement-Designer definiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TemplateEditingVerb.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle vom <see cref="T:System.Web.UI.Design.TemplateEditingVerb" /> verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen von <xref:System.Web.UI.Design.TemplateEditingVerb.Dispose%2A> können Ressourcen von der <xref:System.Web.UI.Design.TemplateEditingVerb> neu für andere Zwecke reserviert werden.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.TemplateEditingVerb> Klasse ist veraltet. Stellen Sie Vorlagen über die <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> Eigenschaft von einem Steuerelement-Designer. Der Entwurfshost erstellt eine <xref:System.Web.UI.Design.TemplatedEditableDesignerRegion> für jede <xref:System.Web.UI.Design.TemplateGroup> für ein Steuerelement-Designer definiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TemplateEditingVerb.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.Web.UI.Design.TemplateEditingVerb" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich `Dispose` Methode und die <xref:System.Object.Finalize%2A> Methode. `Dispose`Ruft die geschützte `Dispose(Boolean)` Methode mit `disposing` festgelegt `true`. <xref:System.Object.Finalize%2A>Ruft `Dispose` mit `disposing` festgelegt `false`.  
+  
+ Wenn `disposing` ist `true`, diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte frei, die von diesem <xref:System.Web.UI.Design.TemplateEditingVerb> Verweise. Diese Methode ruft die `Dispose`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <block subset="none" type="note">
+              <para>  
+ Die <see cref="T:System.Web.UI.Design.TemplateEditingVerb" /> Klasse ist veraltet. Stellen Sie Vorlagen über die <see cref="P:System.Web.UI.Design.ControlDesigner.TemplateGroups" /> Eigenschaft von einem Steuerelement-Designer. Der Entwurfshost erstellt eine <see cref="T:System.Web.UI.Design.TemplatedEditableDesignerRegion" /> für jede <see cref="T:System.Web.UI.Design.TemplateGroup" /> für ein Steuerelement-Designer definiert.  
+  
+</para>
+            </block>
+            <see langword="Dispose" />kann von anderen Objekten mehrmals aufgerufen werden. Beim Überschreiben von <see langword="Dispose(Boolean)" /> müssen Sie darauf achten, nicht auf Objekte zu verweisen, die durch einen früheren Aufruf von <see langword="Dispose" /> freigegeben wurden. Weitere Informationen zum Implementieren <see langword="Dispose(Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see langword="Dispose" /> und <see cref="M:System.Object.Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~TemplateEditingVerb ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TemplateEditingVerb.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Versuch, Ressourcen freizugeben, bevor das Objekt durch die Garbagecollection freigegeben wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt <xref:System.Object.Finalize%2A?displayProperty=nameWithType> und bereinigt Ressourcen durch Aufrufen von `Dispose(false)`. Überschreiben Sie `Dispose(Boolean)`, um die Bereinigung anzupassen.  
+  
+ Diese Methode sollte nicht von Anwendungscode aufgerufen werden. ein Objekt `Finalize` Methode wird automatisch während der Garbagecollection aufgerufen, durch einen Aufruf von seiner Finalisierung verfolgt, durch den Garbage Collector deaktiviert wurde die <xref:System.GC.SuppressFinalize%2A?displayProperty=nameWithType> Methode.  
+  
+ Weitere Informationen finden Sie unter [Finalize-Methoden und Destruktoren](http://msdn.microsoft.com/en-us/fd376774-1643-499b-869e-9546a3aeea70), [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md), und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.TemplateEditingVerb> Klasse ist veraltet. Stellen Sie Vorlagen über die <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> Eigenschaft von einem Steuerelement-Designer. Der Entwurfshost erstellt eine <xref:System.Web.UI.Design.TemplatedEditableDesignerRegion> für jede <xref:System.Web.UI.Design.TemplateGroup> für ein Steuerelement-Designer definiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Index">
+      <MemberSignature Language="C#" Value="public int Index { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Index" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.TemplateEditingVerb.Index" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index oder anderen Benutzerdaten für das Verb ab.</summary>
+        <value>Der Index oder der Benutzer Daten für das Verb.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird manchmal verwendet, um den Index eines Verbs in einem Satz von Verben zu speichern. Wenn Sie einen benutzerdefinierten Designer implementieren, kann diese Eigenschaft zum Speichern von benutzerdefinierten Ganzzahldaten verwendet werden.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.TemplateEditingVerb> Klasse ist veraltet. Stellen Sie Vorlagen über die <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> Eigenschaft von einem Steuerelement-Designer. Der Entwurfshost erstellt eine <xref:System.Web.UI.Design.TemplatedEditableDesignerRegion> für jede <xref:System.Web.UI.Design.TemplateGroup> für ein Steuerelement-Designer definiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

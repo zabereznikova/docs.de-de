@@ -1,0 +1,355 @@
+<Type Name="FolderBrowserDialog" FullName="System.Windows.Forms.FolderBrowserDialog">
+  <TypeSignature Language="C#" Value="public sealed class FolderBrowserDialog : System.Windows.Forms.CommonDialog" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit FolderBrowserDialog extends System.Windows.Forms.CommonDialog" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.FolderBrowserDialog" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.CommonDialog</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("HelpRequest")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("SelectedPath")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Windows.Forms.Design.FolderBrowserDialogDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fordert den Benutzer um einen Ordner auszuwählen. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse bietet eine Möglichkeit, den Benutzer auffordern, durchsuchen, erstellen und schließlich wählen Sie einen Ordner. Verwenden Sie diese Klasse, wenn Sie nur den Benutzer zur Auswahl der Ordner, Dateien nicht zulassen möchten. Der Ordner durchsuchen, erfolgt über ein Strukturansicht-Steuerelement. Nur die Ordner aus dem Dateisystem können ausgewählt werden. virtuelle Ordner ist nicht möglich.  
+  
+ In der Regel nach dem Erstellen eines neuen <xref:System.Windows.Forms.FolderBrowserDialog>, legen Sie die <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> an die Position, ab dem begonnen werden soll. Optional können Sie festlegen der <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> in einen absoluten Pfad, der einen Unterordner des <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> , die ursprünglich ausgewählt werden. Sie können auch optional Festlegen der <xref:System.Windows.Forms.FolderBrowserDialog.Description%2A> Eigenschaft zusätzliche Anweisungen für den Benutzer bereitstellen. Rufen Sie zum Schluss die <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> Methode, um das Dialogfeld für den Benutzer anzuzeigen. Wenn das Dialogfeld geschlossen wird und das Dialogfeld ergeben <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> ist <xref:System.Windows.Forms.DialogResult?displayProperty=nameWithType>die <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> eine Zeichenfolge mit dem Pfad zu dem ausgewählten Ordner.  
+  
+ Können Sie die <xref:System.Windows.Forms.FolderBrowserDialog.ShowNewFolderButton%2A> -Eigenschaft können Sie steuern, wenn der Benutzer kann zum Erstellen von neuen Ordnern mit den **neuer Ordner** Schaltfläche.  
+  
+ <xref:System.Windows.Forms.FolderBrowserDialog>ist ein modales Dialogfeld an. aus diesem Grund wird beim dargestellt, sie den Rest der Anwendung bis zum der Benutzer einen Ordner ausgewählt hat. Wenn ein Dialogfeld modal angezeigt wird, kann keine Eingabe (Tastatur- oder Maustastenzustand klicken) auf Objekte im Dialogfeld außer auftreten. Das Programm muss ausblenden oder schließen das Dialogfeld (normalerweise als Reaktion auf eine Benutzeraktion) vor der Eingabe an das aufrufende Programm auftreten kann.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine Anwendung, die dem Benutzer ermöglicht, öffnen Sie rich-Text (RTF) Dateien innerhalb der <xref:System.Windows.Forms.RichTextBox> Steuerelement.  
+  
+ [!code-cpp[System.Windows.Forms.FolderBrowserDialog#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.FolderBrowserDialog#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.FolderBrowserDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FolderBrowserDialog ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FolderBrowserDialog.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.FolderBrowserDialog" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardkonstruktor initialisiert die Eigenschaften mit ihren Standardwerten.  
+  
+ Beim Erstellen eines neuen <xref:System.Windows.Forms.FolderBrowserDialog> erstellt wird, die <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> -Eigenschaftensatz auf <xref:System.Environment.SpecialFolder?displayProperty=nameWithType>, die <xref:System.Windows.Forms.FolderBrowserDialog.Description%2A> Eigenschaft auf eine leere Zeichenfolge festgelegt ist (""), die <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> Eigenschaft auf eine leere Zeichenfolge festgelegt ist und die <xref:System.Windows.Forms.FolderBrowserDialog.ShowNewFolderButton%2A> Eigenschaftensatz zu `true`.  
+  
+ In der Regel nach dem Erstellen eines neuen <xref:System.Windows.Forms.FolderBrowserDialog>, legen Sie die <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> an die Position, ab dem begonnen werden soll. Optional können Sie festlegen der <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> auf den Pfad, der einen Unterordner des <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> , die ursprünglich ausgewählt werden. Sie können auch optional Festlegen der <xref:System.Windows.Forms.FolderBrowserDialog.Description%2A> Eigenschaft zusätzliche Anweisungen für den Benutzer bereitstellen. Rufen Sie zum Schluss die <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> Methode, um das Dialogfeld für den Benutzer anzuzeigen. Wenn das Dialogfeld geschlossen wird und das Dialogergebnis aus <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> ist <xref:System.Windows.Forms.DialogResult?displayProperty=nameWithType>die <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> eine Zeichenfolge mit dem Pfad zu dem ausgewählten Ordner.  
+  
+ <xref:System.Windows.Forms.FolderBrowserDialog>ist ein modales Dialogfeld an. aus diesem Grund wird beim dargestellt, sie den Rest der Anwendung bis zum der Benutzer einen Ordner ausgewählt hat. Wenn ein Dialogfeld modal angezeigt wird, kann keine Eingabe (Tastatur- oder Maustastenzustand klicken) auf Objekte im Dialogfeld außer auftreten. Das Programm muss ausblenden oder schließen das Dialogfeld (normalerweise als Reaktion auf eine Benutzeraktion) vor der Eingabe an das aufrufende Programm auftreten kann.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine Anwendung, die dem Benutzer ermöglicht, öffnen Sie rich-Text (RTF) Dateien innerhalb der <xref:System.Windows.Forms.RichTextBox> Steuerelement.  
+  
+ [!code-cpp[System.Windows.Forms.FolderBrowserDialog#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.FolderBrowserDialog#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.FolderBrowserDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.FolderBrowserDialog.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den beschreibenden Text, der über dem Strukturansicht-Steuerelement im Dialogfeld angezeigt.</summary>
+        <value>Die Beschreibung angezeigt. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.FolderBrowserDialog.Description%2A> Eigenschaft kann verwendet werden, um zusätzliche Informationen für den Benutzer, z. B. Anweisungen angeben.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine Anwendung, die dem Benutzer ermöglicht, öffnen Sie rich-Text (RTF) Dateien innerhalb der <xref:System.Windows.Forms.RichTextBox> Steuerelement.  
+  
+ [!code-cpp[System.Windows.Forms.FolderBrowserDialog#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.FolderBrowserDialog#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.FolderBrowserDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpRequest">
+      <MemberSignature Language="C#" Value="public event EventHandler HelpRequest;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler HelpRequest" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.FolderBrowserDialog.HelpRequest" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Benutzer klickt auf die **Hilfe** Schaltfläche im Dialogfeld.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public override void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FolderBrowserDialog.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt Eigenschaften auf ihre Standardwerte zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Setzt die <xref:System.Windows.Forms.FolderBrowserDialog.Description%2A>, <xref:System.Windows.Forms.FolderBrowserDialog.ShowNewFolderButton%2A>, <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> und <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> Eigenschaften mit ihren Standardwerten. Eine Liste der Standardwerte, finden Sie unter der <xref:System.Windows.Forms.FolderBrowserDialog.%23ctor%2A> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RootFolder">
+      <MemberSignature Language="C#" Value="public Environment.SpecialFolder RootFolder { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Environment/SpecialFolder RootFolder" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.FolderBrowserDialog.RootFolder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.SpecialFolderEnumConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest, wo das Durchsuchen von beginnt, Stammordner.</summary>
+        <value>Einer der <see cref="T:System.Environment.SpecialFolder" />-Werte. Die Standardeinstellung ist <see langword="Desktop" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nur die angegebenen Ordner und alle Unterordner, die darunter liegenden werden im Dialogfeld angezeigt und ausgewählt werden. Die <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> Eigenschaft zusammen mit <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A>, bestimmt, was vom ausgewählten Ordner werden wird, wenn das Dialogfeld angezeigt, solange wird <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> ist ein absoluter Pfad, der einen Unterordner des <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> (oder mehr genau, verweist auf einen Unterordner des Shell-Namespace dargestellte <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A>).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine Anwendung, die dem Benutzer ermöglicht, öffnen Sie rich-Text (RTF) Dateien innerhalb der <xref:System.Windows.Forms.RichTextBox> Steuerelement.  
+  
+ [!code-cpp[System.Windows.Forms.FolderBrowserDialog#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.FolderBrowserDialog#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.FolderBrowserDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der zugewiesene Wert ist nicht der <see cref="T:System.Environment.SpecialFolder" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RunDialog">
+      <MemberSignature Language="C#" Value="protected override bool RunDialog (IntPtr hWndOwner);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool RunDialog(native int hWndOwner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FolderBrowserDialog.RunDialog(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hWndOwner" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="hWndOwner">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedPath">
+      <MemberSignature Language="C#" Value="public string SelectedPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SelectedPath" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.FolderBrowserDialog.SelectedPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.SelectedPathEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den vom Benutzer ausgewählten Pfad fest.</summary>
+        <value>Der Pfad der zuerst im Dialogfeld ausgewählten Ordner oder der letzte Ordner, der vom Benutzer ausgewählt wurden. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> Eigenschaft vor dem Anzeigen des Dialogfelds "" festgelegt ist, ist der Ordner mit diesem Pfad des ausgewählten Ordners, solange <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> festgelegt ist, in einen absoluten Pfad, der einen Unterordner des <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> (oder mehr genau, verweist auf einen Unterordner der Shell Namespace dargestellte <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A>).  
+  
+ Wenn die <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> gibt <xref:System.Windows.Forms.DialogResult.OK>, d. h. der Benutzer geklickt hat die **OK** Schaltfläche, die <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> Eigenschaft gibt eine Zeichenfolge mit dem Pfad des ausgewählten Ordners zurück. Wenn <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> gibt <xref:System.Windows.Forms.DialogResult.Cancel>, d. h. der Benutzer das Dialogfeld abgebrochen, wird diese Eigenschaft hat den gleichen Wert, den er hatte vor der Anzeige des Dialogfelds "". Wenn der Benutzer einen Ordner auswählt, die nicht mit einen physischen Pfad (z. B. Arbeitsplatz), verfügt der **OK** auf das Dialogfeld auf die Schaltfläche wird deaktiviert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine Anwendung, die dem Benutzer ermöglicht, öffnen Sie rich-Text (RTF) Dateien innerhalb der <xref:System.Windows.Forms.RichTextBox> Steuerelement.  
+  
+ [!code-cpp[System.Windows.Forms.FolderBrowserDialog#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.FolderBrowserDialog#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.FolderBrowserDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">zum Abrufen des Pfads an. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowNewFolderButton">
+      <MemberSignature Language="C#" Value="public bool ShowNewFolderButton { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowNewFolderButton" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.FolderBrowserDialog.ShowNewFolderButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die **neuer Ordner** Schaltfläche im Dialogfeld für den Ordner wird angezeigt.</summary>
+        <value>
+          <see langword="true" />Wenn die **neuer Ordner** Schaltfläche wird im Dialogfeld angezeigt, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Windows.Forms.FolderBrowserDialog.ShowNewFolderButton%2A> ist `true`, **neuer Ordner** Schaltfläche ist sichtbar ist, wird dadurch des Benutzers die Möglichkeit, einen Ordner zu erstellen. Wenn der Benutzer klickt auf die **neuer Ordner** Schaltfläche wird ein neuer Ordner erstellt, und der Benutzer wird aufgefordert, den Ordnernamen angeben. Der ausgewählte Knoten in der Struktur wird das übergeordnete Element des neuen Ordners. Der tatsächlichen Beschriftung, der die **neuer Ordner** Schaltfläche variieren je nach Betriebssystem  
+  
+> [!IMPORTANT]
+>  Festlegen von <xref:System.Windows.Forms.FolderBrowserDialog.ShowNewFolderButton%2A> auf `false` funktioniert nicht unter Windows 2000.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine Anwendung, die dem Benutzer ermöglicht, öffnen Sie rich-Text (RTF) Dateien innerhalb der <xref:System.Windows.Forms.RichTextBox> Steuerelement.  
+  
+ [!code-cpp[System.Windows.Forms.FolderBrowserDialog#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.FolderBrowserDialog#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.FolderBrowserDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

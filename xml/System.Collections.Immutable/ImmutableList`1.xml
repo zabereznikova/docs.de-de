@@ -1,0 +1,2361 @@
+<Type Name="ImmutableList&lt;T&gt;" FullName="System.Collections.Immutable.ImmutableList&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public sealed class ImmutableList&lt;T&gt; : System.Collections.Generic.ICollection&lt;T&gt;, System.Collections.Generic.IEnumerable&lt;T&gt;, System.Collections.Generic.IList&lt;T&gt;, System.Collections.Generic.IReadOnlyCollection&lt;T&gt;, System.Collections.Generic.IReadOnlyList&lt;T&gt;, System.Collections.IList, System.Collections.Immutable.IImmutableList&lt;T&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ImmutableList`1&lt;T&gt; extends System.Object implements class System.Collections.Generic.ICollection`1&lt;!T&gt;, class System.Collections.Generic.IEnumerable`1&lt;!T&gt;, class System.Collections.Generic.IList`1&lt;!T&gt;, class System.Collections.Generic.IReadOnlyCollection`1&lt;!T&gt;, class System.Collections.Generic.IReadOnlyList`1&lt;!T&gt;, class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList, class System.Collections.Immutable.IImmutableList`1&lt;!T&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Immutable.ImmutableList`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections.Immutable</AssemblyName>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <AssemblyVersion>1.2.1.0</AssemblyVersion>
+    <AssemblyVersion>1.2.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IList&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IReadOnlyCollection&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IReadOnlyList&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Immutable.IImmutableList&lt;T&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="T">Der Typ der Elemente in der Liste.</typeparam>
+    <summary>Stellt eine unveränderliche Liste dar, bei der es sich um eine stark typisierte Liste von Objekten handelt, auf die über einen Index zugegriffen werden kann.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Hinzufügen oder Entfernen von Elementen aus einem unveränderlichen Liste, erfolgt eine Kopie der ursprünglichen Liste mit den Elementen, die hinzugefügt oder entfernt, und die ursprüngliche Liste ist unverändert.  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Dieser Typ ist threadsicher.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableList&lt;T&gt; Add (T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.ImmutableList`1&lt;!T&gt; Add(!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.Add(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das hinzuzufügende Objekt.</param>
+        <summary>Fügt das angegebene Objekt am Ende der unveränderlichen Liste hinzu.</summary>
+        <returns>Eine neue unveränderliche Liste mit dem hinzugefügten Objekt, oder die aktuelle Liste, wenn sie das angegebene Objekt bereits enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableList&lt;T&gt; AddRange (System.Collections.Generic.IEnumerable&lt;T&gt; items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.ImmutableList`1&lt;!T&gt; AddRange(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.AddRange(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="items" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="items">Die Sammlung, deren Elemente am Ende der Liste hinzugefügt werden.</param>
+        <summary>Fügt die Elemente der angegebenen Auflistung am Ende der unveränderlichen Liste hinzu.</summary>
+        <returns>Eine neue unveränderliche Liste mit den hinzugefügten Elementen, oder die aktuelle Liste, wenn sie die angegebenen Objekte bereits enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BinarySearch">
+      <MemberSignature Language="C#" Value="public int BinarySearch (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 BinarySearch(!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.BinarySearch(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das zu suchende Objekt. Der Wert kann für Verweistypen <see langword="null" /> sein.</param>
+        <summary>Durchsucht mithilfe des Standardcomparers die gesamte sortierte Liste nach einem Element und gibt den nullbasierten Index des Elements zurück.</summary>
+        <returns>Der nullbasierte Index des Elements in der sortierten Liste, sofern das Element gefunden wird, andernfalls eine negative Zahl, die das bitweise Komplement des Indexes des nächsten Elements darstellt, das größer als das Element ist, oder, wenn kein größeres Element vorhanden ist, das bitweise Komplement von <see cref="P:System.Collections.ICollection.Count" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Die standardmäßige Vergleichsfunktion Vergleichs-Implementierung von kann nicht gefunden werden die für den Typ T.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BinarySearch">
+      <MemberSignature Language="C#" Value="public int BinarySearch (T item, System.Collections.Generic.IComparer&lt;T&gt; comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 BinarySearch(!T item, class System.Collections.Generic.IComparer`1&lt;!T&gt; comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.BinarySearch(`0,System.Collections.Generic.IComparer{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+        <Parameter Name="comparer" Type="System.Collections.Generic.IComparer&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das zu suchende Objekt. Der Wert kann für Verweistypen NULL sein.</param>
+        <param name="comparer">Die Vergleichsimplementierung, die beim Vergleichen von Elementen verwendet werden soll, oder null, wenn der Standardvergleich verwendet werden soll.</param>
+        <summary>Durchsucht mithilfe des angegebenen Vergleichs die gesamte sortierte Liste nach einem Element und gibt den nullbasierten Index des Elements zurück.</summary>
+        <returns>Der nullbasierte Index des Elements in der sortierten Liste, sofern das Element gefunden wird, andernfalls eine negative Zahl, die das bitweise Komplement des Indexes des nächsten Elements darstellt, das größer als das Element ist, oder, wenn kein größeres Element vorhanden ist, das bitweise Komplement von <see cref="P:System.Collections.ICollection.Count" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Vergleich <see langword="null" />, und der Standardcomparer findet keine Vergleichs-Implementierung für den Typ T.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BinarySearch">
+      <MemberSignature Language="C#" Value="public int BinarySearch (int index, int count, T item, System.Collections.Generic.IComparer&lt;T&gt; comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 BinarySearch(int32 index, int32 count, !T item, class System.Collections.Generic.IComparer`1&lt;!T&gt; comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.BinarySearch(System.Int32,System.Int32,`0,System.Collections.Generic.IComparer{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="item" Type="T" />
+        <Parameter Name="comparer" Type="System.Collections.Generic.IComparer&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Startindex des zu durchsuchenden Bereichs.</param>
+        <param name="count">Die Länge des zu durchsuchenden Bereichs.</param>
+        <param name="item">Das zu suchende Objekt. Der Wert kann für Verweistypen NULL sein.</param>
+        <param name="comparer">Die Vergleichsimplementierung, die beim Vergleichen von Elementen verwendet werden soll, oder <see langword="null" />, wenn der Standardvergleich verwendet werden soll.</param>
+        <summary>Durchsucht mithilfe des angegebenen Vergleichs einen Bereich von Elementen in der sortierten Liste nach einem Element und gibt den nullbasierten Index des Elements zurück.</summary>
+        <returns>Der nullbasierte Index des Elements in der sortierten Liste, sofern das Element gefunden wird, andernfalls eine negative Zahl, die das bitweise Komplement des Indexes des nächsten Elements darstellt, das größer als das Element ist, oder, wenn kein größeres Element vorhanden ist, das bitweise Komplement von <paramref name="count" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Index ist kleiner als 0 oder <paramref name="count" /> ist kleiner als 0.</exception>
+        <exception cref="T:System.ArgumentException">Index und <paramref name="count" /> keinen gültigen Bereich in der Liste an.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="comparer" />ist <see langword="null" />, und der Standardcomparer findet keine Vergleichs-Implementierung für den Typ T.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableList&lt;T&gt; Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.ImmutableList`1&lt;!T&gt; Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Elemente aus der unveränderlichen Liste.</summary>
+        <returns>Eine leere Liste, die die gleiche Sortierung oder ungeordnete Semantik dieser Instanz beibehält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.Contains(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu suchende Wert.</param>
+        <summary>Ermittelt, ob diese unveränderliche Liste den angegebenen Wert enthält.</summary>
+        <returns>
+          <see langword="true" />, wenn die Liste den angegebenen Wert enthält, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertAll&lt;TOutput&gt;">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableList&lt;TOutput&gt; ConvertAll&lt;TOutput&gt; (Func&lt;T,TOutput&gt; converter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.ImmutableList`1&lt;!!TOutput&gt; ConvertAll&lt;TOutput&gt;(class System.Func`2&lt;!T, !!TOutput&gt; converter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.ConvertAll``1(System.Func{`0,``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableList&lt;TOutput&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TOutput" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="converter" Type="System.Func&lt;T,TOutput&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TOutput">Der Typ der Elemente des Zielarrays.</typeparam>
+        <param name="converter">Ein Delegat, der jedes Element von einem Typ in einen anderen Typ konvertiert.</param>
+        <summary>Konvertiert die Elemente in der aktuellen unveränderlichen Liste in einen anderen Typ und gibt eine Liste der konvertierten Elemente zurück.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (T[] array);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(!T[] array) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.CopyTo(`0[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="T[]" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale Array, das als Ziel der aus der unveränderlichen Liste kopierten Elemente fungiert. Für das Array muss eine nullbasierte Indizierung verwendet werden.</param>
+        <summary>Kopiert die gesamte unveränderliche Liste in ein kompatibles eindimensionales Array, wobei am Anfang des Zielarrays begonnen wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (T[] array, int arrayIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(!T[] array, int32 arrayIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.CopyTo(`0[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="T[]" />
+        <Parameter Name="arrayIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale Array, das als Ziel der aus der unveränderlichen Liste kopierten Elemente fungiert. Für das Array muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="arrayIndex">Der nullbasierte Index im <c>Array</c> an dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die gesamte unveränderliche Liste in ein kompatibles eindimensionales Array, wobei am angegebenen Index im Zielarray begonnen wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (int index, T[] array, int arrayIndex, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(int32 index, !T[] array, int32 arrayIndex, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.CopyTo(System.Int32,`0[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="array" Type="T[]" />
+        <Parameter Name="arrayIndex" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index in der unveränderlichen Quellliste, bei dem mit dem Kopieren begonnen wird.</param>
+        <param name="array">Das eindimensionale Array, das als Ziel der aus der unveränderlichen Liste kopierten Elemente fungiert. Für das Array muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="arrayIndex">Der nullbasierte Index im Array, ab dem kopiert wird.</param>
+        <param name="count">Die Anzahl der zu kopierenden Elemente.</param>
+        <summary>Kopiert einen Bereich von Elementen aus der unveränderlichen Liste in ein kompatibles eindimensionales Array, beginnend am angegebenen Index im Zielarray.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Immutable.ImmutableList`1.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Elemente ab, die in der Liste enthalten sind.</summary>
+        <value>Die Anzahl von Elementen in der Liste.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static readonly System.Collections.Immutable.ImmutableList&lt;T&gt; Empty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Collections.Immutable.ImmutableList`1&lt;!T&gt; Empty" />
+      <MemberSignature Language="DocId" Value="F:System.Collections.Immutable.ImmutableList`1.Empty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen leeren Satz mit dem Standardvergleich für die Sortierung ab.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exists">
+      <MemberSignature Language="C#" Value="public bool Exists (Predicate&lt;T&gt; match);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Exists(class System.Predicate`1&lt;!T&gt; match) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.Exists(System.Predicate{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="match" Type="System.Predicate&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="match">Der Delegat, der die Bedingungen für die Elemente definiert, nach denen gesucht werden soll.</param>
+        <summary>Bestimmt, ob die unveränderliche Liste Elemente enthält, die mit den vom angegebenen Prädikat definierten Bedingungen übereinstimmen.</summary>
+        <returns>
+          <see langword="true" />, wenn die unveränderliche Liste ein oder mehr Elemente enthält, die die durch das angegebene Prädikat definierten Bedingungen erfüllen, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Find">
+      <MemberSignature Language="C#" Value="public T Find (Predicate&lt;T&gt; match);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !T Find(class System.Predicate`1&lt;!T&gt; match) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.Find(System.Predicate{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="match" Type="System.Predicate&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="match">Der Delegat, der die Bedingungen für das Element definiert, nach dem gesucht werden soll.</param>
+        <summary>Sucht nach einem Element, das die durch das angegebene Prädikat definierten Bedingungen erfüllt, und gibt das erste Vorkommen in der gesamten unveränderlichen Liste zurück.</summary>
+        <returns>Das erste Element, das die durch das angegebene Prädikat definierten Bedingungen erfüllt, sofern vorhanden, andernfalls der Standardwert für den Typ <paramref name="T" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAll">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableList&lt;T&gt; FindAll (Predicate&lt;T&gt; match);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.ImmutableList`1&lt;!T&gt; FindAll(class System.Predicate`1&lt;!T&gt; match) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.FindAll(System.Predicate{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="match" Type="System.Predicate&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="match">Der Delegat, der die Bedingungen für die Elemente definiert, nach denen gesucht werden soll.</param>
+        <summary>Ruft alle Elemente ab, die die vom angegebenen Prädikat definierten Bedingungen erfüllen.</summary>
+        <returns>Eine unveränderliche Liste mit allen Elementen, die die durch das angegebene Prädikat angegebenen Bedingungen erfüllen, sofern gefunden, andernfalls eine leere Liste.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindIndex">
+      <MemberSignature Language="C#" Value="public int FindIndex (Predicate&lt;T&gt; match);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 FindIndex(class System.Predicate`1&lt;!T&gt; match) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.FindIndex(System.Predicate{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="match" Type="System.Predicate&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="match">Der Delegat, der die Bedingungen für das Element definiert, nach dem gesucht werden soll.</param>
+        <summary>Sucht nach einem Element, das die durch das angegebene Prädikat definierten Bedingungen erfüllt, und gibt den nullbasierten Index des ersten Vorkommens in der gesamten unveränderlichen Liste zurück.</summary>
+        <returns>Der nullbasierte Index des ersten Vorkommnisses eines Elements, das mit den durch die Übereinstimmung definierten Bedingungen übereinstimmt, sofern gefunden, andernfalls ?1.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindIndex">
+      <MemberSignature Language="C#" Value="public int FindIndex (int startIndex, Predicate&lt;T&gt; match);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 FindIndex(int32 startIndex, class System.Predicate`1&lt;!T&gt; match) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.FindIndex(System.Int32,System.Predicate{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="startIndex" Type="System.Int32" />
+        <Parameter Name="match" Type="System.Predicate&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="startIndex">Der nullbasierte Startindex für die Suche.</param>
+        <param name="match">Der Delegat, der die Bedingungen für das Element definiert, nach dem gesucht werden soll.</param>
+        <summary>Sucht nach einem Element, das die durch das angegebene Prädikat definierten Bedingungen erfüllt, und gibt den nullbasierten Index des ersten Vorkommens innerhalb des Bereichs von Elementen in der unveränderlichen Liste zurück, der vom angegebenen Index bis zum letzten Element reicht.</summary>
+        <returns>Der nullbasierte Index des ersten Vorkommnisses eines Elements, das mit den durch die Übereinstimmung definierten Bedingungen übereinstimmt, sofern gefunden, andernfalls ?1.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindIndex">
+      <MemberSignature Language="C#" Value="public int FindIndex (int startIndex, int count, Predicate&lt;T&gt; match);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 FindIndex(int32 startIndex, int32 count, class System.Predicate`1&lt;!T&gt; match) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.FindIndex(System.Int32,System.Int32,System.Predicate{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="startIndex" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="match" Type="System.Predicate&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="startIndex">Der nullbasierte Startindex für die Suche.</param>
+        <param name="count">Die Anzahl der Elemente im zu durchsuchenden Abschnitt.</param>
+        <param name="match">Der Delegat, der die Bedingungen für das Element definiert, nach dem gesucht werden soll.</param>
+        <summary>Sucht nach einem Element, das die durch das angegebene Prädikat definierten Bedingungen erfüllt, und gibt den nullbasierten Index des ersten Vorkommens innerhalb des Bereichs von Elementen in der unveränderlichen Liste zurück, der am angegebenen Index beginnt und die angegebene Anzahl von Elementen umfasst.</summary>
+        <returns>Der nullbasierte Index des ersten Vorkommnisses eines Elements, das mit den durch die Übereinstimmung definierten Bedingungen übereinstimmt, sofern gefunden, andernfalls ?1.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindLast">
+      <MemberSignature Language="C#" Value="public T FindLast (Predicate&lt;T&gt; match);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !T FindLast(class System.Predicate`1&lt;!T&gt; match) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.FindLast(System.Predicate{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="match" Type="System.Predicate&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="match">Der Delegat, der die Bedingungen für das Element definiert, nach dem gesucht werden soll.</param>
+        <summary>Sucht nach einem Element, das die durch das angegebene Prädikat definierten Bedingungen erfüllt, und gibt das letzte Vorkommen in der gesamten unveränderlichen Liste zurück.</summary>
+        <returns>Das letzte Element, das die durch das angegebene Prädikat definierten Bedingungen erfüllt, sofern vorhanden, andernfalls der Standardwert für den Typ <paramref name="T" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindLastIndex">
+      <MemberSignature Language="C#" Value="public int FindLastIndex (Predicate&lt;T&gt; match);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 FindLastIndex(class System.Predicate`1&lt;!T&gt; match) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.FindLastIndex(System.Predicate{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="match" Type="System.Predicate&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="match">Der Delegat, der die Bedingungen für das Element definiert, nach dem gesucht werden soll.</param>
+        <summary>Sucht nach einem Element, das die durch das angegebene Prädikat definierten Bedingungen erfüllt, und gibt den nullbasierten Index des letzten Vorkommens in der gesamten unveränderlichen Liste zurück.</summary>
+        <returns>Der nullbasierte Index des letzten Vorkommnisses eines Elements, das mit den durch <paramref name="match" /> definierten Bedingungen übereinstimmt, sofern gefunden, andernfalls ?1.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindLastIndex">
+      <MemberSignature Language="C#" Value="public int FindLastIndex (int startIndex, Predicate&lt;T&gt; match);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 FindLastIndex(int32 startIndex, class System.Predicate`1&lt;!T&gt; match) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.FindLastIndex(System.Int32,System.Predicate{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="startIndex" Type="System.Int32" />
+        <Parameter Name="match" Type="System.Predicate&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="startIndex">Der nullbasierte Startindex für die Rückwärtssuche.</param>
+        <param name="match">Der Delegat, der die Bedingungen für das Element definiert, nach dem gesucht werden soll.</param>
+        <summary>Sucht nach einem Element, das die durch das angegebene Prädikat definierten Bedingungen erfüllt, und gibt den nullbasierten Index des letzten Vorkommens innerhalb des Bereichs von Elementen in der unveränderlichen Liste zurück, der vom ersten Element bis zum angegebenen Index reicht.</summary>
+        <returns>Der nullbasierte Index des letzten Vorkommnisses eines Elements, das mit den durch <paramref name="match" /> definierten Bedingungen übereinstimmt, sofern gefunden, andernfalls ?1.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindLastIndex">
+      <MemberSignature Language="C#" Value="public int FindLastIndex (int startIndex, int count, Predicate&lt;T&gt; match);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 FindLastIndex(int32 startIndex, int32 count, class System.Predicate`1&lt;!T&gt; match) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.FindLastIndex(System.Int32,System.Int32,System.Predicate{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="startIndex" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="match" Type="System.Predicate&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="startIndex">Der nullbasierte Startindex für die Rückwärtssuche.</param>
+        <param name="count">Die Anzahl der Elemente im zu durchsuchenden Abschnitt.</param>
+        <param name="match">Der Delegat, der die Bedingungen für das Element definiert, nach dem gesucht werden soll.</param>
+        <summary>Sucht nach einem Element, das die durch das angegebene Prädikat definierten Bedingungen erfüllt, und gibt den nullbasierten Index des letzten Vorkommens innerhalb des Bereichs von Elementen in der unveränderlichen Liste zurück, der die angegebene Anzahl von Elementen umfasst und am angegebenen Index endet.</summary>
+        <returns>Der nullbasierte Index des letzten Vorkommnisses eines Elements, das mit den durch <paramref name="match" /> definierten Bedingungen übereinstimmt, sofern gefunden, andernfalls ?1.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForEach">
+      <MemberSignature Language="C#" Value="public void ForEach (Action&lt;T&gt; action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ForEach(class System.Action`1&lt;!T&gt; action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.ForEach(System.Action{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="action" Type="System.Action&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="action">Der Delegat, der für jedes Element der unveränderlichen Liste ausgeführt werden soll.</param>
+        <summary>Führt die angegebene Aktion für jedes Element der unveränderlichen Liste aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableList&lt;T&gt;.Enumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Collections.Immutable.ImmutableList`1/Enumerator&lt;!T&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableList&lt;T&gt;+Enumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der die unveränderliche Liste durchläuft.</summary>
+        <returns>Ein Enumerator, mit dem die Elemente in der unveränderlichen Liste durchlaufen werden können.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  Wenn dieser Enumerator als Wert verwendet wird (d. h. bei ist nicht Boxing) eingeben, nicht kopiert, sie durch Zuweisen einer zweiten Variable oder durch Übergabe an eine andere Methode. Wenn dieser Enumerator verworfen wird und es gibt einen änderbare Verweis Typ Stapel, an einen Ressourcenpool zurück, wenn der Wert typenumerator kopiert wird (die einfach unbeabsichtigt kann passieren, wenn der Wert um übergeben werden), besteht das Risiko, die einen Stapel, der bereits stattgefunden hat zurückgegeben, auf die Ressource Pool noch nicht von einem der Enumerator Kopien, was zu beschädigten Daten oder Ausnahmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRange">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableList&lt;T&gt; GetRange (int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.ImmutableList`1&lt;!T&gt; GetRange(int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.GetRange(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem der Bereich beginnt.</param>
+        <param name="count">Die Anzahl der Elemente im Bereich.</param>
+        <summary>Erstellt eine flache Kopie eines Bereichs von Elementen in der unveränderlichen Quellliste.</summary>
+        <returns>Eine flache Kopie eines Bereichs von Elementen in der unveränderlichen Quellliste.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOf(!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.IndexOf(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Objekt, das in der unveränderlichen Liste gesucht werden soll. Der Wert kann <c>null</c> für Verweistypen.</param>
+        <summary>Sucht nach dem angegebenen Objekt und gibt den nullbasierten Index des ersten Vorkommens innerhalb der gesamten unveränderlichen Liste zurück.</summary>
+        <returns>Der nullbasierte Index des ersten Vorkommens von <paramref name="value" /> in der gesamten unveränderlichen Liste, andernfalls ?1.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (T item, int index, int count, System.Collections.Generic.IEqualityComparer&lt;T&gt; equalityComparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOf(!T item, int32 index, int32 count, class System.Collections.Generic.IEqualityComparer`1&lt;!T&gt; equalityComparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.IndexOf(`0,System.Int32,System.Int32,System.Collections.Generic.IEqualityComparer{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="equalityComparer" Type="System.Collections.Generic.IEqualityComparer&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das in der Liste zu suchende Objekt. Der Wert kann für Verweistypen null sein.</param>
+        <param name="index">Der nullbasierte Startindex für die Suche. 0 (null) ist in einer leeren Liste gültig.</param>
+        <param name="count">Die Anzahl der Elemente im zu durchsuchenden Abschnitt.</param>
+        <param name="equalityComparer">Der Gleichheitsvergleich für die Suche.</param>
+        <summary>Sucht nach dem angegebenen Objekt und gibt den nullbasierten Index des ersten Vorkommens innerhalb des Bereichs von Elementen in der Liste zurück, der am angegebenen Index beginnt und die angegebene Anzahl von Elementen enthält.</summary>
+        <returns>Der nullbasierte Index des ersten Vorkommens des Elements innerhalb des Bereichs von Elementen in der Liste, die am Index beginnt und eine Anzahl von Elementen enthält, sofern gefunden, andernfalls -1.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableList&lt;T&gt; Insert (int index, T item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.ImmutableList`1&lt;!T&gt; Insert(int32 index, !T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.Insert(System.Int32,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem das Objekt eingefügt werden soll.</param>
+        <param name="item">Das einzufügende Objekt.</param>
+        <summary>Fügt das angegebene Objekt am angegebenen Index in die unveränderliche Liste ein.</summary>
+        <returns>Die neue unveränderliche Liste, nachdem das Objekt eingefügt wurde.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertRange">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableList&lt;T&gt; InsertRange (int index, System.Collections.Generic.IEnumerable&lt;T&gt; items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.ImmutableList`1&lt;!T&gt; InsertRange(int32 index, class System.Collections.Generic.IEnumerable`1&lt;!T&gt; items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.InsertRange(System.Int32,System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="items" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem die Elemente eingefügt werden sollen.</param>
+        <param name="items">Die Auflistung, deren Elemente eingefügt werden sollen.</param>
+        <summary>Fügt die Elemente einer Auflistung am angegebenen Index in die unveränderliche Liste ein.</summary>
+        <returns>Die neue unveränderliche Liste, nachdem die Elemente eingefügt wurden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public bool IsEmpty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEmpty" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Immutable.ImmutableList`1.IsEmpty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob diese Liste leer ist.</summary>
+        <value>
+          <see langword="true" />, wenn die Liste leer ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public T this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !T Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Immutable.ImmutableList`1.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des abzurufenden Elements.</param>
+        <summary>Ruft das Element am angegebenen Index der Liste ab.</summary>
+        <value>Das Element am angegebenen Index.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastIndexOf">
+      <MemberSignature Language="C#" Value="public int LastIndexOf (T item, int index, int count, System.Collections.Generic.IEqualityComparer&lt;T&gt; equalityComparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 LastIndexOf(!T item, int32 index, int32 count, class System.Collections.Generic.IEqualityComparer`1&lt;!T&gt; equalityComparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.LastIndexOf(`0,System.Int32,System.Int32,System.Collections.Generic.IEqualityComparer{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="equalityComparer" Type="System.Collections.Generic.IEqualityComparer&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das Objekt, das in der Liste gesucht werden soll. Der Wert kann für Verweistypen NULL sein.</param>
+        <param name="index">Der nullbasierte Startindex für die Rückwärtssuche.</param>
+        <param name="count">Die Anzahl der Elemente im zu durchsuchenden Abschnitt.</param>
+        <param name="equalityComparer">Der Gleichheitsvergleich für die Suche.</param>
+        <summary>Sucht nach dem angegebenen Objekt und gibt den nullbasierten Index des letzten Vorkommens innerhalb des Bereichs von Elementen in der Liste zurück, die die angegebene Anzahl von Elementen enthält und am angegebenen Index endet.</summary>
+        <returns>Der nullbasierte Index des letzten Vorkommens des Elements innerhalb des Bereichs von Elementen in der Liste, die die Anzahl von Elementen enthält und am Index endet, sofern gefunden, andernfalls -1.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableList&lt;T&gt; Remove (T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.ImmutableList`1&lt;!T&gt; Remove(!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.Remove(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu entfernende Objekt.</param>
+        <summary>Entfernt das erste Vorkommen des angegebenen Objekts aus dieser unveränderlichen Liste.</summary>
+        <returns>Eine neue Liste mit entferntem Objekt, oder diese Liste, wenn das angegebene Objekt nicht in dieser Liste enthalten ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableList&lt;T&gt; Remove (T value, System.Collections.Generic.IEqualityComparer&lt;T&gt; equalityComparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.ImmutableList`1&lt;!T&gt; Remove(!T value, class System.Collections.Generic.IEqualityComparer`1&lt;!T&gt; equalityComparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.Remove(`0,System.Collections.Generic.IEqualityComparer{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+        <Parameter Name="equalityComparer" Type="System.Collections.Generic.IEqualityComparer&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert des Elements, das aus der Liste entfernt wird.</param>
+        <param name="equalityComparer">Der Gleichheitsvergleich für die Suche.</param>
+        <summary>Entfernt das erste Vorkommen des Objekts, das mit dem angegebenen Wert in dieser unveränderlichen Liste übereinstimmt.</summary>
+        <returns>Eine neue Liste mit entferntem Objekt, oder diese Liste, wenn das angegebene Objekt nicht in dieser Liste enthalten ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAll">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableList&lt;T&gt; RemoveAll (Predicate&lt;T&gt; match);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.ImmutableList`1&lt;!T&gt; RemoveAll(class System.Predicate`1&lt;!T&gt; match) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.RemoveAll(System.Predicate{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="match" Type="System.Predicate&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="match">Der Delegat, der die Bedingungen für die Elemente definiert, die entfernt werden sollen.</param>
+        <summary>Entfernt alle Elemente, die die vom angegebenen Prädikat definierten Bedingungen erfüllen.</summary>
+        <returns>Eine neue Liste mit den entfernten Elementen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableList&lt;T&gt; RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.ImmutableList`1&lt;!T&gt; RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des zu entfernenden Elements.</param>
+        <summary>Entfernt das Element am angegebenen Index.</summary>
+        <returns>Eine neue Liste, aus der das Element entfernt wurde.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveRange">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableList&lt;T&gt; RemoveRange (System.Collections.Generic.IEnumerable&lt;T&gt; items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.ImmutableList`1&lt;!T&gt; RemoveRange(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.RemoveRange(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="items" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="items">Die Auflistung, deren Elemente entfernt werden sollen, wenn in dieser Liste Übereinstimmungen gefunden werden.</param>
+        <summary>Entfernt einen Bereich von Elementen aus dieser unveränderlichen Liste.</summary>
+        <returns>Eine neue Liste mit den entfernten Elementen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveRange">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableList&lt;T&gt; RemoveRange (System.Collections.Generic.IEnumerable&lt;T&gt; items, System.Collections.Generic.IEqualityComparer&lt;T&gt; equalityComparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.ImmutableList`1&lt;!T&gt; RemoveRange(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; items, class System.Collections.Generic.IEqualityComparer`1&lt;!T&gt; equalityComparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.RemoveRange(System.Collections.Generic.IEnumerable{`0},System.Collections.Generic.IEqualityComparer{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="items" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+        <Parameter Name="equalityComparer" Type="System.Collections.Generic.IEqualityComparer&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="items">Die zu entfernenden Elemente, wenn Übereinstimmungen in dieser Liste gefunden werden.</param>
+        <param name="equalityComparer">Der Gleichheitsvergleich für die Suche.</param>
+        <summary>Entfernt die angegebenen Werte aus dieser Liste.</summary>
+        <returns>Eine neue Liste mit den entfernten Elementen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveRange">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableList&lt;T&gt; RemoveRange (int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.ImmutableList`1&lt;!T&gt; RemoveRange(int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.RemoveRange(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Startindex, beim dem mit dem Entfernen begonnen werden soll.</param>
+        <param name="count">Die Anzahl der zu entfernenden Elemente.</param>
+        <summary>Entfernt einen Bereich von Elementen, beginnend beim angegebenen Index und mit der angegebenen Anzahl von Elementen, aus dieser unveränderlichen Liste.</summary>
+        <returns>Eine neue Liste mit den entfernten Elementen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Replace">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableList&lt;T&gt; Replace (T oldValue, T newValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.ImmutableList`1&lt;!T&gt; Replace(!T oldValue, !T newValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.Replace(`0,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldValue" Type="T" />
+        <Parameter Name="newValue" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="oldValue">Das zu ersetzende Element.</param>
+        <param name="newValue">Das zu ersetzende Element <c>OldValue</c> mit.</param>
+        <summary>Ersetzt das angegebene Element in der unveränderlichen Liste durch ein neues Element.</summary>
+        <returns>Die neue Liste mit dem ersetzten Element, auch wenn es dem alten Element entspricht.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="oldValue" />ist in der unveränderlichen Liste nicht vorhanden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Replace">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableList&lt;T&gt; Replace (T oldValue, T newValue, System.Collections.Generic.IEqualityComparer&lt;T&gt; equalityComparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.ImmutableList`1&lt;!T&gt; Replace(!T oldValue, !T newValue, class System.Collections.Generic.IEqualityComparer`1&lt;!T&gt; equalityComparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.Replace(`0,`0,System.Collections.Generic.IEqualityComparer{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldValue" Type="T" />
+        <Parameter Name="newValue" Type="T" />
+        <Parameter Name="equalityComparer" Type="System.Collections.Generic.IEqualityComparer&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="oldValue">Das in der Liste zu ersetzende Element.</param>
+        <param name="newValue">Das zu ersetzende Element <c>OldValue</c> mit.</param>
+        <param name="equalityComparer">Der Vergleich. der für die Gleichheitsprüfung verwendet werden soll.</param>
+        <summary>Ersetzt das angegebene Element in der unveränderlichen Liste durch ein neues Element.</summary>
+        <returns>Eine neue Liste mit dem ersetzten Objekt, oder diese Liste, wenn das angegebene Objekt nicht in dieser Liste enthalten ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reverse">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableList&lt;T&gt; Reverse ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.ImmutableList`1&lt;!T&gt; Reverse() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.Reverse" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Kehrt die Reihenfolge der Elemente in der gesamten unveränderlichen Liste um.</summary>
+        <returns>Die umgekehrte Liste.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reverse">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableList&lt;T&gt; Reverse (int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.ImmutableList`1&lt;!T&gt; Reverse(int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.Reverse(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Startindex des Bereichs, in dem die Reihenfolge umgekehrt werden soll.</param>
+        <param name="count">Die Anzahl der Elemente im Bereich, in dem die Reihenfolge umgekehrt werden soll.</param>
+        <summary>Kehrt die Reihenfolge der Elemente im angegebenen Bereich der unveränderlichen Liste um.</summary>
+        <returns>Die umgekehrte Liste.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItem">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableList&lt;T&gt; SetItem (int index, T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.ImmutableList`1&lt;!T&gt; SetItem(int32 index, !T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.SetItem(System.Int32,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Position des zu ersetzenden Elements in der Liste.</param>
+        <param name="value">Das durch ein Element zu ersetzende alte Element.</param>
+        <summary>Ersetzt ein Element an einer bestimmten Position in der unveränderliche Liste mit dem angegebenen Element.</summary>
+        <returns>Die neue Liste mit dem ersetzten Element, auch wenn es dem alten Element an dieser Position entspricht.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sort">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableList&lt;T&gt; Sort ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.ImmutableList`1&lt;!T&gt; Sort() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.Sort" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Sortiert die Elemente in der gesamten unveränderlichen Liste mithilfe des Standardvergleichs.</summary>
+        <returns>Die sortierte Liste.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sort">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableList&lt;T&gt; Sort (System.Collections.Generic.IComparer&lt;T&gt; comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.ImmutableList`1&lt;!T&gt; Sort(class System.Collections.Generic.IComparer`1&lt;!T&gt; comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.Sort(System.Collections.Generic.IComparer{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="comparer" Type="System.Collections.Generic.IComparer&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="comparer">Die Implementierung, die beim Vergleichen von Elementen verwendet werden soll, oder <see langword="null" />, wenn der Standardvergleich (<see cref="P:System.Collections.Generic.Comparer`1.Default" />) verwendet werden soll.</param>
+        <summary>Sortiert die Elemente in der gesamten unveränderlichen Liste mithilfe des angegebenen Vergleichs.</summary>
+        <returns>Die sortierte Liste.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sort">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableList&lt;T&gt; Sort (Comparison&lt;T&gt; comparison);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.ImmutableList`1&lt;!T&gt; Sort(class System.Comparison`1&lt;!T&gt; comparison) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.Sort(System.Comparison{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="comparison" Type="System.Comparison&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="comparison">Der Delegat, der beim Vergleich von Elementen verwendet werden soll.</param>
+        <summary>Sortiert die Elemente in der gesamten unveränderlichen Liste mithilfe des angegebenen Vergleichs.</summary>
+        <returns>Die sortierte Liste.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sort">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableList&lt;T&gt; Sort (int index, int count, System.Collections.Generic.IComparer&lt;T&gt; comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.ImmutableList`1&lt;!T&gt; Sort(int32 index, int32 count, class System.Collections.Generic.IComparer`1&lt;!T&gt; comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.Sort(System.Int32,System.Int32,System.Collections.Generic.IComparer{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="comparer" Type="System.Collections.Generic.IComparer&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Startindex des zu sortierenden Bereichs.</param>
+        <param name="count">Die Länge des zu sortierenden Bereichs.</param>
+        <param name="comparer">Die Implementierung, die beim Vergleichen von Elementen verwendet werden soll, oder <see langword="null" />, wenn der Standardvergleich (<see cref="P:System.Collections.Generic.Comparer`1.Default" />) verwendet werden soll.</param>
+        <summary>Sortiert einen Bereich von Elementen in der unveränderlichen Liste mithilfe des angegebenen Vergleichs.</summary>
+        <returns>Die sortierte Liste.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;T&gt;.Add">
+      <MemberSignature Language="C#" Value="void ICollection&lt;T&gt;.Add (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.ICollection&lt;T&gt;.Add(!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.System#Collections#Generic#ICollection&lt;T&gt;#Add(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das Element, das hinzugefügt werden soll.</param>
+        <summary>Fügt der unveränderlichen Liste das angegebene Element hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableList%601>-Instanz in eine <xref:System.Collections.Generic.ICollection%601>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException" />
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;T&gt;.Clear">
+      <MemberSignature Language="C#" Value="void ICollection&lt;T&gt;.Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.ICollection&lt;T&gt;.Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.System#Collections#Generic#ICollection&lt;T&gt;#Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Elemente aus der unveränderlichen Liste.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableList%601>-Instanz in eine <xref:System.Collections.Generic.ICollection%601>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException" />
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;T&gt;.IsReadOnly">
+      <MemberSignature Language="C#" Value="bool System.Collections.Generic.ICollection&lt;T&gt;.IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.Generic.ICollection&lt;T&gt;.IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Immutable.ImmutableList`1.System#Collections#Generic#ICollection&lt;T&gt;#IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Collections.Generic.ICollection`1" /> schreibgeschützt ist.</summary>
+        <value>True, wenn die <see cref="T:System.Collections.Generic.ICollection`1" /> schreibgeschützt ist, andernfalls "false" ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;T&gt;.Remove">
+      <MemberSignature Language="C#" Value="bool ICollection&lt;T&gt;.Remove (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.Generic.ICollection&lt;T&gt;.Remove(!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.System#Collections#Generic#ICollection&lt;T&gt;#Remove(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das zu entfernende Objekt.</param>
+        <summary>Entfernt das erste Vorkommen eines bestimmten Objekts aus der unveränderlichen Liste.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="item" /> erfolgreich aus der Liste entfernt wurde, andernfalls <see langword="false" />. Diese Methode gibt auch dann <see langword="false" /> zurück, wenn <paramref name="item" /> nicht in der ursprünglichen Liste gefunden wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableList%601>-Instanz in eine <xref:System.Collections.Generic.ICollection%601>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IEnumerator&lt;T&gt; IEnumerable&lt;T&gt;.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;!T&gt; System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.System#Collections#Generic#IEnumerable&lt;T&gt;#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der die unveränderliche Liste durchläuft.</summary>
+        <returns>Ein Enumerator, der zum Durchlaufen der Liste verwendet werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableList%601>-Instanz in eine <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IList&lt;T&gt;.Insert">
+      <MemberSignature Language="C#" Value="void IList&lt;T&gt;.Insert (int index, T item);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.IList&lt;T&gt;.Insert(int32 index, !T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.System#Collections#Generic#IList&lt;T&gt;#Insert(System.Int32,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem <c>Element</c> eingefügt werden soll.</param>
+        <param name="item">Das einzufügende Objekt.</param>
+        <summary>Fügt ein Objekt am angegebenen Index in die unveränderliche Liste ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableList%601>-Instanz in eine <xref:System.Collections.Generic.IList%601>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException" />
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IList&lt;T&gt;.Item">
+      <MemberSignature Language="C#" Value="T System.Collections.Generic.IList&lt;T&gt;.Item[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !T System.Collections.Generic.IList&lt;T&gt;.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Immutable.ImmutableList`1.System#Collections#Generic#IList&lt;T&gt;#Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <summary>Ruft den Wert am angegebenen Index ab oder legt diesen fest.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Ausgelöst von Getter beim <paramref name="index" /> ist ein negativer Wert oder nicht kleiner als <see cref="P:System.Collections.Immutable.ImmutableList`1.Count" />.</exception>
+        <exception cref="T:System.NotSupportedException">Der Setter für eine immer ausgelöst.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IList&lt;T&gt;.RemoveAt">
+      <MemberSignature Language="C#" Value="void IList&lt;T&gt;.RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.IList&lt;T&gt;.RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.System#Collections#Generic#IList&lt;T&gt;#RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des zu entfernenden Elements.</param>
+        <summary>Entfernt den Wert am angegebenen Index.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableList%601>-Instanz in eine <xref:System.Collections.Generic.IList%601>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException" />
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int arrayIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 arrayIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="arrayIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale Array, bei dem es sich um das Ziel der aus der unveränderlichen Liste kopierten Elemente handelt.</param>
+        <param name="arrayIndex">Der nullbasierte Index im <c>Array</c> an dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die gesamte unveränderliche Liste in ein kompatibles eindimensionales Array, beginnend am angegebenen Index des Arrays.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableList%601>-Instanz in eine <xref:System.Collections.ICollection>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Immutable.ImmutableList`1.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Finden Sie unter der <see cref="T:System.Collections.ICollection" /> Schnittstelle.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Immutable.ImmutableList`1.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Siehe <see cref="T:System.Collections.ICollection" />.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der die unveränderliche Liste durchläuft.</summary>
+        <returns>Ein Enumerator, der zum Durchlaufen der Liste verwendet werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableList%601>-Instanz in eine <xref:System.Collections.IEnumerable>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Add">
+      <MemberSignature Language="C#" Value="int IList.Add (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.Add(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.System#Collections#IList#Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Objekt, das der Liste hinzugefügt werden soll.</param>
+        <summary>Fügt der unveränderlichen Liste ein Element hinzu.</summary>
+        <returns>Die Position, an der das neue Element eingefügt wurde, oder -1, um anzugeben, dass das Element nicht in die Liste eingefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableList%601>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException" />
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Clear">
+      <MemberSignature Language="C#" Value="void IList.Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.System#Collections#IList#Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Elemente aus der unveränderlichen Liste.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableList%601>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException" />
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Contains">
+      <MemberSignature Language="C#" Value="bool IList.Contains (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IList.Contains(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.System#Collections#IList#Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Objekt, das in der Liste gesucht werden soll.</param>
+        <summary>Bestimmt, ob die unveränderliche Liste einen bestimmten Wert enthält.</summary>
+        <returns>
+          <see langword="true" />, wenn das Objekt in der Liste gefunden wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableList%601>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException" />
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IndexOf">
+      <MemberSignature Language="C#" Value="int IList.IndexOf (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.IndexOf(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.System#Collections#IList#IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Objekt, das in der Liste gesucht werden soll.</param>
+        <summary>Bestimmt den Index eines bestimmten Elements in der unveränderlichen Liste.</summary>
+        <returns>Der Index von <paramref name="value" />, wenn das Element in der Liste gefunden wird, andernfalls -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableList%601>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException" />
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Insert">
+      <MemberSignature Language="C#" Value="void IList.Insert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Insert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.System#Collections#IList#Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem <c>Wert</c> eingefügt werden soll.</param>
+        <param name="value">Das Objekt, das in die Liste eingefügt werden soll.</param>
+        <summary>Fügt ein Element am angegebenen Index in die unveränderliche Liste ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableList%601>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException" />
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Immutable.ImmutableList`1.System#Collections#IList#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Collections.IList" /> eine feste Größe aufweist.</summary>
+        <value>True, wenn die <see cref="T:System.Collections.IList" /> hat eine feste Größe, andernfalls "false".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsReadOnly">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Immutable.ImmutableList`1.System#Collections#IList#IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Collections.Generic.ICollection`1" /> schreibgeschützt ist.</summary>
+        <value>True, wenn die <see cref="T:System.Collections.Generic.ICollection`1" /> schreibgeschützt ist, andernfalls "false" ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IList.Item[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IList.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Immutable.ImmutableList`1.System#Collections#IList#Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index.</param>
+        <summary>Ruft die <see cref="T:System.Object" />-Klasse am angegebenen Index ab oder legt diese fest.</summary>
+        <value>Der Wert am angegebenen Index.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Ausgelöst von Getter beim <paramref name="index" /> ist ein negativer Wert oder nicht kleiner als <see cref="P:System.Collections.Immutable.ImmutableList`1.Count" />.</exception>
+        <exception cref="T:System.NotSupportedException">Der Setter für eine immer ausgelöst.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Remove">
+      <MemberSignature Language="C#" Value="void IList.Remove (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Remove(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.System#Collections#IList#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Objekt, das aus der Liste entfernt werden soll.</param>
+        <summary>Entfernt das erste Vorkommen eines bestimmten Objekts aus der unveränderlichen Liste.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableList%601>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException" />
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.RemoveAt">
+      <MemberSignature Language="C#" Value="void IList.RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.System#Collections#IList#RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des zu entfernenden Elements.</param>
+        <summary>Entfernt das Element am angegebenen Index aus der unveränderlichen Liste.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableList%601>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException" />
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Immutable.IImmutableList&lt;T&gt;.Add">
+      <MemberSignature Language="C#" Value="System.Collections.Immutable.IImmutableList&lt;T&gt; IImmutableList&lt;T&gt;.Add (T value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableList`1&lt;!T&gt; System.Collections.Immutable.IImmutableList&lt;T&gt;.Add(!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.System#Collections#Immutable#IImmutableList&lt;T&gt;#Add(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der hinzuzufügende Wert.</param>
+        <summary>Fügt dieser unveränderlichen Liste den angegebenen Wert hinzu.</summary>
+        <returns>Eine neue Liste mit dem hinzugefügten Element oder diese Liste, wenn das Element bereits in der Liste enthalten ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableList%601>-Instanz in eine <xref:System.Collections.Immutable.IImmutableList%601>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Immutable.IImmutableList&lt;T&gt;.AddRange">
+      <MemberSignature Language="C#" Value="System.Collections.Immutable.IImmutableList&lt;T&gt; IImmutableList&lt;T&gt;.AddRange (System.Collections.Generic.IEnumerable&lt;T&gt; items);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableList`1&lt;!T&gt; System.Collections.Immutable.IImmutableList&lt;T&gt;.AddRange(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.System#Collections#Immutable#IImmutableList&lt;T&gt;#AddRange(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="items" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="items">Die hinzuzufügenden Werte.</param>
+        <summary>Fügt die angegebenen Werte dieser unveränderliche Liste hinzu.</summary>
+        <returns>Eine neue Liste mit den hinzugefügten Elementen oder diese Liste, wenn die Elemente bereits in der Liste enthalten sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableList%601>-Instanz in eine <xref:System.Collections.Immutable.IImmutableList%601>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Immutable.IImmutableList&lt;T&gt;.Clear">
+      <MemberSignature Language="C#" Value="System.Collections.Immutable.IImmutableList&lt;T&gt; IImmutableList&lt;T&gt;.Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableList`1&lt;!T&gt; System.Collections.Immutable.IImmutableList&lt;T&gt;.Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.System#Collections#Immutable#IImmutableList&lt;T&gt;#Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine leere Liste ab, die dieselbe Sortierungs- und Reihenfolgensematik wie diese Instanz besitzt.</summary>
+        <returns>Eine leere Liste, die dieselbe Sortierungs- und Reihenfolgensemantik wie diese Instanz besitzt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableList%601>-Instanz in eine <xref:System.Collections.Immutable.IImmutableList%601>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Immutable.IImmutableList&lt;T&gt;.Insert">
+      <MemberSignature Language="C#" Value="System.Collections.Immutable.IImmutableList&lt;T&gt; IImmutableList&lt;T&gt;.Insert (int index, T item);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableList`1&lt;!T&gt; System.Collections.Immutable.IImmutableList&lt;T&gt;.Insert(int32 index, !T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.System#Collections#Immutable#IImmutableList&lt;T&gt;#Insert(System.Int32,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index, an dem der Wert eingefügt werden soll.</param>
+        <param name="item">Das einzufügende Element.</param>
+        <summary>Fügt das angegebene Element am angegebenen Index in die unveränderliche Liste ein.</summary>
+        <returns>Eine neue unveränderliche Liste, die das angegebene Element enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableList%601>-Instanz in eine <xref:System.Collections.Immutable.IImmutableList%601>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Immutable.IImmutableList&lt;T&gt;.InsertRange">
+      <MemberSignature Language="C#" Value="System.Collections.Immutable.IImmutableList&lt;T&gt; IImmutableList&lt;T&gt;.InsertRange (int index, System.Collections.Generic.IEnumerable&lt;T&gt; items);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableList`1&lt;!T&gt; System.Collections.Immutable.IImmutableList&lt;T&gt;.InsertRange(int32 index, class System.Collections.Generic.IEnumerable`1&lt;!T&gt; items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.System#Collections#Immutable#IImmutableList&lt;T&gt;#InsertRange(System.Int32,System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="items" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index, an dem die Elemente eingefügt werden sollen.</param>
+        <param name="items">Die einzufügenden Elemente.</param>
+        <summary>Fügt die angegebenen Elemente am angegebenen Index in die unveränderliche Liste ein.</summary>
+        <returns>Eine neue unveränderliche Liste, die die angegebenen Elemente enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableList%601>-Instanz in eine <xref:System.Collections.Immutable.IImmutableList%601>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Immutable.IImmutableList&lt;T&gt;.Remove">
+      <MemberSignature Language="C#" Value="System.Collections.Immutable.IImmutableList&lt;T&gt; IImmutableList&lt;T&gt;.Remove (T value, System.Collections.Generic.IEqualityComparer&lt;T&gt; equalityComparer);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableList`1&lt;!T&gt; System.Collections.Immutable.IImmutableList&lt;T&gt;.Remove(!T value, class System.Collections.Generic.IEqualityComparer`1&lt;!T&gt; equalityComparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.System#Collections#Immutable#IImmutableList&lt;T&gt;#Remove(`0,System.Collections.Generic.IEqualityComparer{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+        <Parameter Name="equalityComparer" Type="System.Collections.Generic.IEqualityComparer&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert des Elements, das aus der Liste entfernt wird.</param>
+        <param name="equalityComparer">Der zu verwendende Vergleich zum Vergleichen von Elementen auf Gleichheit.</param>
+        <summary>Entfernt das Element mit dem angegebenen Wert aus der Liste.</summary>
+        <returns>Gibt eine neue <see cref="T:System.Collections.Immutable.ImmutableList`1" /> zurück, aus der das angegebenen Element entfernt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableList%601>-Instanz in eine <xref:System.Collections.Immutable.IImmutableList%601>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Immutable.IImmutableList&lt;T&gt;.RemoveAll">
+      <MemberSignature Language="C#" Value="System.Collections.Immutable.IImmutableList&lt;T&gt; IImmutableList&lt;T&gt;.RemoveAll (Predicate&lt;T&gt; match);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableList`1&lt;!T&gt; System.Collections.Immutable.IImmutableList&lt;T&gt;.RemoveAll(class System.Predicate`1&lt;!T&gt; match) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.System#Collections#Immutable#IImmutableList&lt;T&gt;#RemoveAll(System.Predicate{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="match" Type="System.Predicate&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="match">Der Delegat, der die Bedingungen für die Elemente definiert, die entfernt werden sollen.</param>
+        <summary>Entfernt alle Elemente, die die vom angegebenen Prädikat definierten Bedingungen erfüllen.</summary>
+        <returns>Eine neue unveränderlichen Liste, aus der die Elemente entfernt wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableList%601>-Instanz in eine <xref:System.Collections.Immutable.IImmutableList%601>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Immutable.IImmutableList&lt;T&gt;.RemoveAt">
+      <MemberSignature Language="C#" Value="System.Collections.Immutable.IImmutableList&lt;T&gt; IImmutableList&lt;T&gt;.RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableList`1&lt;!T&gt; System.Collections.Immutable.IImmutableList&lt;T&gt;.RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.System#Collections#Immutable#IImmutableList&lt;T&gt;#RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des zu entfernenden Elements.</param>
+        <summary>Entfernt das Element am angegebenen Index der unveränderlichen Liste.</summary>
+        <returns>Eine neue Liste, aus der das Element entfernt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableList%601>-Instanz in eine <xref:System.Collections.Immutable.IImmutableList%601>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="System.Collections.Immutable.IImmutableList&lt;T&gt;.RemoveRange">
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Entfernt einen Bereich von Elementen aus dieser unveränderlichen Liste.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableList%601>-Instanz in eine <xref:System.Collections.Immutable.IImmutableList%601>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="System.Collections.Immutable.IImmutableList&lt;T&gt;.RemoveRange">
+      <MemberSignature Language="C#" Value="System.Collections.Immutable.IImmutableList&lt;T&gt; IImmutableList&lt;T&gt;.RemoveRange (System.Collections.Generic.IEnumerable&lt;T&gt; items, System.Collections.Generic.IEqualityComparer&lt;T&gt; equalityComparer);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableList`1&lt;!T&gt; System.Collections.Immutable.IImmutableList&lt;T&gt;.RemoveRange(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; items, class System.Collections.Generic.IEqualityComparer`1&lt;!T&gt; equalityComparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.System#Collections#Immutable#IImmutableList&lt;T&gt;#RemoveRange(System.Collections.Generic.IEnumerable{`0},System.Collections.Generic.IEqualityComparer{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="items" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+        <Parameter Name="equalityComparer" Type="System.Collections.Generic.IEqualityComparer&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="items">Der Bereich von Elementen, die aus der Liste entfernt werden sollen, falls gefunden.</param>
+        <param name="equalityComparer">Der Gleichheitsvergleich zum Vergleichen von Elementen.</param>
+        <summary>Entfernt einen Bereich von Elementen aus dieser unveränderliche Liste, die die angegebenen Elementen entsprechen.</summary>
+        <returns>Eine unveränderliche Liste, aus der die Elemente entfernt wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableList%601>-Instanz in eine <xref:System.Collections.Immutable.IImmutableList%601>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="items" /> oder <paramref name="equalityComparer" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Immutable.IImmutableList&lt;T&gt;.RemoveRange">
+      <MemberSignature Language="C#" Value="System.Collections.Immutable.IImmutableList&lt;T&gt; IImmutableList&lt;T&gt;.RemoveRange (int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableList`1&lt;!T&gt; System.Collections.Immutable.IImmutableList&lt;T&gt;.RemoveRange(int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.System#Collections#Immutable#IImmutableList&lt;T&gt;#RemoveRange(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Startindex für den Bereich der zu entfernenden Elemente.</param>
+        <param name="count">Die Anzahl der zu entfernenden Elemente.</param>
+        <summary>Entfernt die angegebene Anzahl von Elementen an der angegebenen Position aus dieser Liste.</summary>
+        <returns>Eine neue Liste mit den entfernten Elementen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableList%601>-Instanz in eine <xref:System.Collections.Immutable.IImmutableList%601>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Immutable.IImmutableList&lt;T&gt;.Replace">
+      <MemberSignature Language="C#" Value="System.Collections.Immutable.IImmutableList&lt;T&gt; IImmutableList&lt;T&gt;.Replace (T oldValue, T newValue, System.Collections.Generic.IEqualityComparer&lt;T&gt; equalityComparer);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableList`1&lt;!T&gt; System.Collections.Immutable.IImmutableList&lt;T&gt;.Replace(!T oldValue, !T newValue, class System.Collections.Generic.IEqualityComparer`1&lt;!T&gt; equalityComparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.System#Collections#Immutable#IImmutableList&lt;T&gt;#Replace(`0,`0,System.Collections.Generic.IEqualityComparer{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldValue" Type="T" />
+        <Parameter Name="newValue" Type="T" />
+        <Parameter Name="equalityComparer" Type="System.Collections.Generic.IEqualityComparer&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="oldValue">Das zu ersetzende Element.</param>
+        <param name="newValue">Das durch ein Element zu ersetzende alte Element.</param>
+        <param name="equalityComparer">Der Gleichheitsvergleich für die Suche.</param>
+        <summary>Ersetzt ein Element in der Liste durch das angegebene Element.</summary>
+        <returns>Die neue Liste.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Wird ausgelöst, wenn der alte Wert nicht in der Liste vorhanden ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Immutable.IImmutableList&lt;T&gt;.SetItem">
+      <MemberSignature Language="C#" Value="System.Collections.Immutable.IImmutableList&lt;T&gt; IImmutableList&lt;T&gt;.SetItem (int index, T value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableList`1&lt;!T&gt; System.Collections.Immutable.IImmutableList&lt;T&gt;.SetItem(int32 index, !T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.System#Collections#Immutable#IImmutableList&lt;T&gt;#SetItem(System.Int32,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Position des zu ersetzenden Elements in der Liste.</param>
+        <param name="value">Das durch ein Element zu ersetzende alte Element.</param>
+        <summary>Ersetzt ein Element an einer bestimmten Position in der Liste durch das angegebene Element.</summary>
+        <returns>Die neue Liste.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Collections.Immutable.ImmutableList%601>-Instanz in eine <xref:System.Collections.Immutable.IImmutableList%601>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToBuilder">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableList&lt;T&gt;.Builder ToBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Immutable.ImmutableList`1/Builder&lt;!T&gt; ToBuilder() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.ToBuilder" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableList&lt;T&gt;+Builder</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Liste mit dem gleichen Inhalt der Liste und kann über mehrere Vorgänge mithilfe von Standardschnittstellen effizient verändert werden kann.</summary>
+        <returns>Die erstellte Liste mit dem gleichen Inhalt wie diese Liste.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist ein o(1)-Vorgang und führt nur eine (klein) speicherbelegung. Die änderbare Liste, die zurückgegeben wird, ist nicht threadsicher.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrueForAll">
+      <MemberSignature Language="C#" Value="public bool TrueForAll (Predicate&lt;T&gt; match);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TrueForAll(class System.Predicate`1&lt;!T&gt; match) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableList`1.TrueForAll(System.Predicate{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="match" Type="System.Predicate&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="match">Der Delegat, der die Bedingungen definiert, auf die die Elemente geprüft werden sollen.</param>
+        <summary>Bestimmt, ob jedes Element in der unveränderlichen Liste die vom angegebenen Prädikat definierten Bedingungen erfüllt.</summary>
+        <returns>
+          <see langword="true" />, wenn jedes Element in der unveränderlichen Liste die vom angegebenen Prädikat definierten Bedingungen erfüllt; andernfalls <see langword="false" />. Wenn die Liste über keine Elemente verfügt, ist der Rückgabewert <see langword="true" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

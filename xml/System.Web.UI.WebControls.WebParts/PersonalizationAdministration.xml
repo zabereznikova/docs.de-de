@@ -1,0 +1,1506 @@
+<Type Name="PersonalizationAdministration" FullName="System.Web.UI.WebControls.WebParts.PersonalizationAdministration">
+  <TypeSignature Language="C#" Value="public static class PersonalizationAdministration" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit PersonalizationAdministration extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.PersonalizationAdministration" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementiert Verwaltungs- und administrative Funktionen für die Webparts Personalisierung. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse stellt mehrere statische Methoden und Eigenschaften, die Verwaltungsfunktionalität für die Webparts Personalisierung verfügbar machen. Diese Methoden gelten für die Personalisierung Standardanbieter konfiguriert der <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement für eine Webparts-Steuerelement. Wenn Sie mehrere Datenspeicher zu verwalten, die als Personalisierungsanbieter fungiert werden müssen, sollten Sie die Methoden direkt auf die einzelnen Personalisierung-Anbieterklassen verwenden. Beachten Sie, dass die Auflistung der von Personalisierungsanbietern für konfiguriert eine <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement steht über den <xref:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.Providers%2A> statische Eigenschaft.  
+  
+ Es ist wichtig zu berücksichtigen, dass die Personalisierung fehl, wenn Ihre Webanwendung nicht auf die Vertrauenswürdigkeit der Standard-Ebene der ausgeführt wird <xref:System.Web.AspNetHostingPermissionLevel.Medium> oder höher (Sie können benutzerdefinierte Vertrauensebenen festlegen, in einer Datei "Web.config" mit der `<trust level="" />` Element). Die <xref:System.Web.UI.WebControls.WebParts.PersonalizationAdministration> und <xref:System.Web.UI.WebControls.WebParts.SqlPersonalizationProvider> beide Klassen prüfen, ob ein Maß an Vertrauenswürdigkeit <xref:System.Web.AspNetHostingPermissionLevel.Low> bei ihrer Initialisierung. Wenn Sie Ihre Anwendung eine Vertrauensstellung der Ausführungsintervall konfigurieren <xref:System.Web.AspNetHostingPermissionLevel.Low>, und verwenden Sie den Standardnamen <xref:System.Web.UI.WebControls.WebParts.SqlPersonalizationProvider> Anbieter zur Verwaltung der Personalisierungsdaten für Ihre Anwendung wird dieser ersten, der die Anwendung versucht, Zugriff fehl, da ein Ausführen im ASP.NET-Arbeitsprozess <xref:System.Web.AspNetHostingPermissionLevel.Low> Vertrauensstellung verfügt nicht über die erforderlichen Berechtigungen zum Aufrufen von der verschiedenen Klassen im die <xref:System.Data.SqlClient> Namespace.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mehrere Methoden in der <xref:System.Web.UI.WebControls.WebParts.PersonalizationAdministration> Klasse. In diesem Beispiel besteht aus einer ASPX-Seite, die auf einer Webparts-Benutzersteuerelement mit dem Namen verweist `Persadmin.ascx`. Der folgende Code enthält die ASPX-Datei für das Beispiel.  
+  
+ [!code-aspx-csharp[WebParts_PersAdmin#7](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_PersAdmin/CS/defaultcs.aspx#7)]  
+  
+ Dieser Code stellt die `Persadmin.ascx` Steuerelement.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[WebParts_PersAdmin#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_PersAdmin/CS/PersAdmin.ascx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ApplicationName">
+      <MemberSignature Language="C#" Value="public static string ApplicationName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property string ApplicationName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.ApplicationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Anwendung, die vom Anbieter angegeben.</summary>
+        <value>Der Anwendungsname.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Anwendung Namen wirkt sich auf die Daten abgerufen und vom Personalisierungsanbieter gespeichert und können für mehrere Anwendungen zum Freigeben von Daten durch Festlegen eines Anwendungsnamens identisch oder Partitionieren Sie Daten innerhalb derselben Datenbank durch Angabe von anderen Anwendungsnamen. Der Anwendungsname wird in den Abschnitt Personalisierung Datenanbieters in der Datei "Web.config" oder System.config gefunden.  
+  
+> [!CAUTION]
+>  Da eine einzelne Standardinstanz Profil Anbieter, für alle Anforderungen, die vom verwendet wird ein <xref:System.Web.HttpApplication> -Objekt können mehrere Anforderungen gleichzeitig ausgeführt und versucht, legen Sie die <xref:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.ApplicationName%2A> Eigenschaftswert. Die <xref:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.ApplicationName%2A> Eigenschaft ist für mehrere Schreibvorgänge nicht threadsicher und Ändern der <xref:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.ApplicationName%2A> Eigenschaftswert kann zu unerwartetem Verhalten für mehrere Benutzer einer Anwendung führen. Es wird empfohlen, dass Sie vermeiden, dass Code ermöglicht Benutzern das Festlegen der <xref:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.ApplicationName%2A> Eigenschaft, sofern nicht erforderlich. Ein Beispiel für eine Anwendung in dem das Festlegen der <xref:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.ApplicationName%2A> Eigenschaft u. u. notwendig sein sollte eine verwaltende Anwendung, die Profildaten für mehrere Anwendungen verwaltet wird. Eine solche Anwendung sollte einen Einzelbenutzer-Anwendung und nicht um eine Webanwendung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der Anbieter für einen in der Konfiguration definierten Personalisierungsanbieter weist nicht den richtigen Typ auf.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Beim Versuch, eine Instanz eines konfigurierten Personalisierungsanbieters zu erstellen und zu initialisieren, ist eine Konfigurationsausnahme aufgetreten.  
+  
+ \- oder –  
+  
+ Der in der Konfiguration definierte standardmäßige Personalisierungsanbieter wurde nicht gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindInactiveUserState">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection FindInactiveUserState (string pathToMatch, string usernameToMatch, DateTime userInactiveSinceDate);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection FindInactiveUserState(string pathToMatch, string usernameToMatch, valuetype System.DateTime userInactiveSinceDate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.FindInactiveUserState(System.String,System.String,System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pathToMatch" Type="System.String" />
+        <Parameter Name="usernameToMatch" Type="System.String" />
+        <Parameter Name="userInactiveSinceDate" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="pathToMatch">Der Pfad der Seite entsprechend.</param>
+        <param name="usernameToMatch">Die Benutzernamen übereinstimmt, der mit der Seite zugeordneten Personalisierungsdaten verfügt.</param>
+        <param name="userInactiveSinceDate">Das Datum der letzten wurde Personalisierungsinformationen eines Benutzers zugegriffen werden.</param>
+        <summary>Gibt eine Auflistung von benutzerspezifische Personalisierung Statusinformationen für inaktive Benutzer basierend auf den angegebenen Parametern.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection" /> , benutzerspezifische Personalisierungszustandsinformationen enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt eine Auflistung von <xref:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo> -Instanzen bestehen, benutzerspezifische Personalisierungszustandsinformationen, in dem die `pathToMatch` Parameterwert entspricht der Pfad einer Seite `usernameToMatch` entspricht einen Benutzernamen, Personalisierungsdaten zugeordnet sind, verfügt, Seite ", und die Benutzer werden als inaktiv betrachtet. Das heißt, für jeden zurückgegebenen Datensatz des Benutzers <xref:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo.LastActivityDate%2A> Eigenschaftswert ist kleiner als oder gleich `userInactiveSinceDate`. Die zurückgegebene Auflistung enthält nur <xref:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo> Instanzen.  
+  
+ Diese Methode übergibt Platzhalterzeichen für Abfragen an den zugrunde liegenden Datenspeicher. Unterstützung für Platzhalterzeichen ist zurzeit an der Behandlung von Zeichen, z. B. ein Sternchen (*), ein Prozentzeichen (%) oder einem Unterstrich (_) in jeder Anbieter abhängig.  
+  
+ In der Regel SQL-kompatible Datenspeicher, führen Sie ein Platzhalterzeichen Search auf einen partiellen Pfad mit dem Platzhalterzeichen am Anfang, am Ende oder in der Mitte des Texts der Suchzeichenfolge in der <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.PathToMatch%2A> Eigenschaft. Um beispielsweise alle Pfade zu finden, die mit "~/vdir", beginnen die <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.PathToMatch%2A> Eigenschaft würde auf "~/vdir%" festgelegt werden.  
+  
+ Ebenso konnte eine Platzhaltersuche auf einen partiellen Benutzernamen das Platzhalterzeichen an einem beliebigen Punkt in der Textzeichenfolge angezeigt haben die <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UsernameToMatch%2A> Eigenschaft. Um beispielsweise alle Benutzernamen, die beginnen mit "John", suchen die <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UsernameToMatch%2A> Eigenschaft sieht dann wie "John %".  
+  
+ Mit dem Standardanbieter Personalisierung der <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo>-abgeleitete Objekte in alphabetischer Reihenfolge zurückgegeben werden, und durch eine Kombination von Pfad und Namen in aufsteigender Reihenfolge sortiert. Die Reihenfolge der Objekte in der Auflistung wird vom Anbieter bestimmt.  
+  
+ Wenn `userInactiveSinceDate` ist <xref:System.DateTime.MaxValue>, dann sind die zurückgegebenen Werte aus dieser Methode entspricht <xref:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.FindUserState%2A>.  
+  
+ Beide `pathToMatch` und `usernameToMatch` kann `null`. Die `usernameToMatch` Parameter kann Kommas (,) enthalten, da einige Datenspeicher, z. B. die Microsoft SQL Server ausgeführt, um Kommas als Platzhalterzeichen zulässig.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="pathToMatch" />oder <paramref name="usernameToMatch" /> vor oder nach dem Verkürzen eine leere Zeichenfolge ("").  
+  
+ \- oder –  
+  
+ Der Anbieter für einen in der Konfiguration definierten Personalisierungsanbieter weist nicht den richtigen Typ auf.  
+  
+ \- oder –  
+  
+ Die Länge der Zeichenfolge eines beliebigen Parameters beträgt mehr als 256 Zeichen.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Beim Versuch, eine Instanz eines konfigurierten Personalisierungsanbieters zu erstellen und zu initialisieren, ist eine Konfigurationsausnahme aufgetreten.  
+  
+ \- oder –  
+  
+ Der in der Konfiguration definierte standardmäßige Personalisierungsanbieter wurde nicht gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindInactiveUserState">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection FindInactiveUserState (string pathToMatch, string usernameToMatch, DateTime userInactiveSinceDate, int pageIndex, int pageSize, out int totalRecords);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection FindInactiveUserState(string pathToMatch, string usernameToMatch, valuetype System.DateTime userInactiveSinceDate, int32 pageIndex, int32 pageSize, [out] int32&amp; totalRecords) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.FindInactiveUserState(System.String,System.String,System.DateTime,System.Int32,System.Int32,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pathToMatch" Type="System.String" />
+        <Parameter Name="usernameToMatch" Type="System.String" />
+        <Parameter Name="userInactiveSinceDate" Type="System.DateTime" />
+        <Parameter Name="pageIndex" Type="System.Int32" />
+        <Parameter Name="pageSize" Type="System.Int32" />
+        <Parameter Name="totalRecords" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pathToMatch">Der Pfad der Seite entsprechend.</param>
+        <param name="usernameToMatch">Die Benutzernamen übereinstimmt, der mit der Seite zugeordneten Personalisierungsdaten verfügt.</param>
+        <param name="userInactiveSinceDate">Das letzte Datum Personalisierungsinformationen zugegriffen wurde.</param>
+        <param name="pageIndex">Der nullbasierte Index der zurückzugebenden Ergebnisseite.</param>
+        <param name="pageSize">Die Anzahl der zurückzugebenden Datensätze.</param>
+        <param name="totalRecords">Die Gesamtanzahl von Datensätzen verfügbar.</param>
+        <summary>Gibt eine Auflistung von benutzerspezifische Personalisierung Statusinformationen für inaktive Benutzer basierend auf den angegebenen Parametern.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection" /> , benutzerspezifische Personalisierungszustandsinformationen enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt eine Auflistung von <xref:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo> -Instanzen bestehen, benutzerspezifische Personalisierungszustandsinformationen, in dem die `pathToMatch` Parameterwert entspricht der Pfad einer Seite `usernameToMatch` entspricht einen Benutzernamen, Personalisierungsdaten zugeordnet sind, verfügt, Seite ", und die Benutzer werden als inaktiv betrachtet. Das heißt, für jeden zurückgegebenen Datensatz des Benutzers <xref:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo.LastActivityDate%2A> Eigenschaftswert ist kleiner als oder gleich `userInactiveSinceDate`. Die Auflistung enthält nur <xref:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo> Instanzen.  
+  
+ Diese Methode übergibt Parameter Platzhalterzeichen an den zugrunde liegenden Personalisierungsanbieter, Behandlung von Zeichen, z. B. ein Sternchen (*), ein Prozentzeichen (%) oder einem Unterstrich (_) durch der Anbieter hängt also wie Datenspeicher diese Zeichen behandelt.  
+  
+ In der Regel SQL-kompatible Datenspeicher, führen Sie ein Platzhalterzeichen Search auf einen partiellen Pfad mit dem Platzhalterzeichen am Anfang, am Ende oder in der Mitte des Texts der Suchzeichenfolge in der <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.PathToMatch%2A> Eigenschaft. Um beispielsweise alle Pfade zu finden, die mit "~/vdir", beginnen die <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.PathToMatch%2A> Eigenschaft würde auf "~/vdir%" festgelegt werden.  
+  
+ Ebenso konnte eine Platzhaltersuche auf einen partiellen Benutzernamen das Platzhalterzeichen an einem beliebigen Punkt in der Textzeichenfolge angezeigt haben die <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UsernameToMatch%2A> Eigenschaft. Um beispielsweise alle Benutzernamen, die beginnen mit "John", suchen die <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UsernameToMatch%2A> Eigenschaft sieht dann wie "John %".  
+  
+ Mit dem Standardanbieter Personalisierung der <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo>-abgeleitete Objekte in alphabetischer Reihenfolge zurückgegeben werden, und durch eine Kombination von Pfad und Namen in aufsteigender Reihenfolge sortiert. Die Reihenfolge der Objekte in der Auflistung wird vom Anbieter bestimmt.  
+  
+ Wenn `userInactiveSinceDate` ist <xref:System.DateTime.MaxValue>, dann sind die zurückgegebenen Werte aus dieser Methode entspricht <xref:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.FindUserState%2A>.  
+  
+ Beide `pathToMatch` und `usernameToMatch` kann `null`. Die `usernameToMatch` Parameter kann Kommas (,) aufweisen, da einige Datenspeicher, z. B. die Microsoft SQL Server ausgeführt, um Kommas als Platzhalterzeichen zulässig.  
+  
+ Die zurückgegebenen Daten werden von eingeschränkt `pageIndex` und `pageSize`, wobei `pageIndex` steuert, welche Datensätze zurückzugeben und `pageSize` steuert die Anzahl der zurückzugebenden Datensätze. Z. B. wenn `pageIndex` auf 0 festgelegt wurde und `pageSize` auf 25 festgelegt ist, die zurückgegebenen Daten werden die ersten 25 Einträge. Wenn `pageIndex` auf 1 festgelegt wurde und `pageSize` auf 25 festgelegt ist, werden die zurückgegebenen Daten Einträge 26 bis 50. Die `totalRecords` Parameter gibt die Gesamtzahl der Datensätze, die verfügbar sind.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="pathToMatch" />oder <paramref name="usernameToMatch" /> vor oder nach dem Verkürzen eine leere Zeichenfolge ("").  
+  
+ \- oder –  
+  
+ <paramref name="pageIndex" />ist kleiner als 0 (null)  
+  
+ \- oder –  
+  
+ <paramref name="pageSize" /> ist kleiner gleich 0 (null).  
+  
+ \- oder –  
+  
+ die Kombination von <paramref name="pageIndex" /> und <paramref name="pageSize" /> überschreitet <see cref="F:System.Int32.MaxValue" />.  
+  
+ \- oder –  
+  
+ Der Anbieter für einen in der Konfiguration definierten Personalisierungsanbieter weist nicht den richtigen Typ auf.  
+  
+ \- oder –  
+  
+ Die Länge der Zeichenfolge eines beliebigen Parameters beträgt mehr als 256 Zeichen.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Beim Versuch, eine Instanz eines konfigurierten Personalisierungsanbieters zu erstellen und zu initialisieren, ist eine Konfigurationsausnahme aufgetreten.  
+  
+ \- oder –  
+  
+ Der in der Konfiguration definierte standardmäßige Personalisierungsanbieter wurde nicht gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindSharedState">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection FindSharedState (string pathToMatch);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection FindSharedState(string pathToMatch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.FindSharedState(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pathToMatch" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="pathToMatch">Der Pfad der Seite entsprechend.</param>
+        <summary>Gibt eine Auflistung der freigegebenen Personalisierungszustandsinformationen auf Grundlage des angegebenen Pfads zurück.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection" /> , freigegebene Personalisierungszustandsinformationen enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt eine Auflistung von <xref:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo> Instanzen Where der `pathToMatch` Wert entspricht der Pfad einer Seite, die Personalisierungszustandsdaten freigegeben wurde. Die Auflistung enthält nur <xref:System.Web.UI.WebControls.WebParts.SharedPersonalizationStateInfo> Instanzen.  
+  
+ Diese Methode übergibt Parameter Platzhalterzeichen an den zugrunde liegenden Personalisierungsanbieter, Behandlung von Zeichen, z. B. ein Sternchen (*), ein Prozentzeichen (%) oder einem Unterstrich (_) durch der Anbieter hängt also wie Datenspeicher diese Zeichen behandelt.  
+  
+ In der Regel SQL-kompatible Datenspeicher, führen Sie ein Platzhalterzeichen Search auf einen partiellen Pfad mit dem Platzhalterzeichen am Anfang, am Ende oder in der Mitte des Texts der Suchzeichenfolge in der <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.PathToMatch%2A> Eigenschaft. Um beispielsweise alle Pfade zu finden, die mit "~/vdir", beginnen die <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.PathToMatch%2A> Eigenschaft würde auf "~/vdir%" festgelegt werden.  
+  
+ Mit dem Standardanbieter Personalisierung der <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo>-abgeleitete Objekte in alphabetischer Reihenfolge zurückgegeben werden, und durch eine Kombination von Pfad und Namen in aufsteigender Reihenfolge sortiert. Die Reihenfolge der Objekte in der Auflistung wird vom Anbieter bestimmt.  
+  
+ Die `pathToMatch` Parameter möglich `null`. Wenn auf festgelegt `null`, der Parameter wird ignoriert, wenn Abfragen ausführen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="pathToMatch" />ist eine leere Zeichenfolge ("") entweder vor oder nach dem verkürzen.  
+  
+ \- oder –  
+  
+ Der Anbieter für einen in der Konfiguration definierten Personalisierungsanbieter weist nicht den richtigen Typ auf.  
+  
+ \- oder –  
+  
+ Die Länge der Zeichenfolge eines beliebigen Parameters beträgt mehr als 256 Zeichen.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Beim Versuch, eine Instanz eines konfigurierten Personalisierungsanbieters zu erstellen und zu initialisieren, ist eine Konfigurationsausnahme aufgetreten.  
+  
+ \- oder –  
+  
+ Der in der Konfiguration definierte standardmäßige Personalisierungsanbieter wurde nicht gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindSharedState">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection FindSharedState (string pathToMatch, int pageIndex, int pageSize, out int totalRecords);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection FindSharedState(string pathToMatch, int32 pageIndex, int32 pageSize, [out] int32&amp; totalRecords) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.FindSharedState(System.String,System.Int32,System.Int32,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pathToMatch" Type="System.String" />
+        <Parameter Name="pageIndex" Type="System.Int32" />
+        <Parameter Name="pageSize" Type="System.Int32" />
+        <Parameter Name="totalRecords" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pathToMatch">Der Pfad der Seite entsprechend.</param>
+        <param name="pageIndex">Der nullbasierte Index der zurückzugebenden Ergebnisseite.</param>
+        <param name="pageSize">Die Anzahl der zurückzugebenden Datensätze.</param>
+        <param name="totalRecords">Die Gesamtanzahl von Datensätzen verfügbar.</param>
+        <summary>Gibt eine Auflistung der freigegebenen Zustand Personalisierungsinformationen basierend auf den angegebenen Parametern.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection" /> , freigegebene Personalisierungszustandsinformationen enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt eine Auflistung von <xref:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo> Instanzen Where der `pathToMatch` Wert entspricht der Pfad einer Seite, die Personalisierungszustandsdaten freigegeben wurde. Die Auflistung enthält nur <xref:System.Web.UI.WebControls.WebParts.SharedPersonalizationStateInfo> Instanzen.  
+  
+ Diese Methode übergibt Parameter Platzhalterzeichen an den zugrunde liegenden Personalisierungsanbieter, Behandlung von Zeichen, z. B. ein Sternchen (*), ein Prozentzeichen (%) oder einem Unterstrich (_) durch der Anbieter hängt also wie Datenspeicher diese Zeichen behandelt.  
+  
+ In der Regel SQL-kompatible Datenspeicher, führen Sie ein Platzhalterzeichen Search auf einen partiellen Pfad mit dem Platzhalterzeichen am Anfang, am Ende oder in der Mitte des Texts der Suchzeichenfolge in der <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.PathToMatch%2A> Eigenschaft. Um beispielsweise alle Pfade zu finden, die mit "~/vdir", beginnen die <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.PathToMatch%2A> Eigenschaft würde auf "~/vdir%" festgelegt werden.  
+  
+ Mit dem Standardanbieter Personalisierung der <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo>-abgeleitete Objekte in alphabetischer Reihenfolge zurückgegeben werden, und durch eine Kombination von Pfad und Namen in aufsteigender Reihenfolge sortiert. Die Reihenfolge der Objekte in der Auflistung wird vom Anbieter bestimmt.  
+  
+ Die `pathToMatch` Parameter möglich `null`. Wenn auf festgelegt `null`, der Parameter wird ignoriert, wenn Abfragen ausführen.  
+  
+ Die zurückgegebenen Daten werden von eingeschränkt `pageIndex` und `pageSize`, wobei `pageIndex` steuert, welche Datensätze zurückzugeben und `pageSize` steuert die Anzahl der zurückzugebenden Datensätze. Z. B. wenn `pageIndex` auf 0 festgelegt wurde und `pageSize` auf 25 festgelegt ist, die zurückgegebenen Daten werden die ersten 25 Einträge. Wenn `pageIndex` auf 1 festgelegt wurde und `pageSize` auf 25 festgelegt ist, werden die zurückgegebenen Daten Einträge 26 bis 50. Die `totalRecords` Parameter gibt die Gesamtzahl der Datensätze, die verfügbar sind.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="pathToMatch" />vor oder nach dem Verkürzen eine leere Zeichenfolge ("").  
+  
+ \- oder –  
+  
+ <paramref name="pageIndex" /> ist kleiner als Null.  
+  
+ \- oder –  
+  
+ <paramref name="pageSize" /> ist kleiner gleich 0 (null).  
+  
+ \- oder –  
+  
+ die Kombination von <paramref name="pageIndex" /> und <paramref name="pageSize" /> überschreitet <see cref="F:System.Int32.MaxValue" />.  
+  
+ \- oder –  
+  
+ Der Anbieter für einen in der Konfiguration definierten Personalisierungsanbieter weist nicht den richtigen Typ auf.  
+  
+ \- oder –  
+  
+ Die Länge der Zeichenfolge eines beliebigen Parameters beträgt mehr als 256 Zeichen.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Beim Versuch, eine Instanz eines konfigurierten Personalisierungsanbieters zu erstellen und zu initialisieren, ist eine Konfigurationsausnahme aufgetreten.  
+  
+ \- oder –  
+  
+ Der in der Konfiguration definierte standardmäßige Personalisierungsanbieter wurde nicht gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindUserState">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection FindUserState (string pathToMatch, string usernameToMatch);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection FindUserState(string pathToMatch, string usernameToMatch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.FindUserState(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pathToMatch" Type="System.String" />
+        <Parameter Name="usernameToMatch" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="pathToMatch">Der Pfad der Seite entsprechend.</param>
+        <param name="usernameToMatch">Die Benutzernamen übereinstimmt, der mit der Seite zugeordneten Personalisierungsdaten verfügt.</param>
+        <summary>Gibt eine Auflistung von Statusinformationen für benutzerspezifische Personalisierung basierend auf den Benutzer Name und Pfad zurück.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection" /> , benutzerspezifische Personalisierungszustandsinformationen enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt eine Auflistung von <xref:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo> Instanzen Where der `pathToMatch` Parameterwert entspricht der Pfad einer Seite und `usernameToMatch` entspricht, einen Benutzernamen ein, die Personalisierungsdaten zugeordnet sind. Die Auflistung enthält nur <xref:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo> Instanzen.  
+  
+ Diese Methode übergibt Parameter Platzhalterzeichen an den zugrunde liegenden Personalisierungsanbieter, Behandlung von Zeichen, z. B. ein Sternchen (*), ein Prozentzeichen (%) oder einem Unterstrich (_) durch der Anbieter hängt also wie Datenspeicher diese Zeichen behandelt.  
+  
+ In der Regel SQL-kompatible Datenspeicher, führen Sie ein Platzhalterzeichen Search auf einen partiellen Pfad mit dem Platzhalterzeichen am Anfang, am Ende oder in der Mitte des Texts der Suchzeichenfolge in der <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.PathToMatch%2A> Eigenschaft. Um beispielsweise alle Pfade zu finden, die mit "~/vdir", beginnen die <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.PathToMatch%2A> Eigenschaft würde auf "~/vdir%" festgelegt werden.  
+  
+ Ebenso konnte eine Platzhaltersuche auf einen partiellen Benutzernamen das Platzhalterzeichen an einem beliebigen Punkt in der Textzeichenfolge angezeigt haben die <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UsernameToMatch%2A> Eigenschaft. Um beispielsweise alle Benutzernamen, die beginnen mit "John", suchen die <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UsernameToMatch%2A> Eigenschaft sieht dann wie "John %".  
+  
+ Mit dem Standardanbieter Personalisierung der <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo>-abgeleitete Objekte in alphabetischer Reihenfolge zurückgegeben werden, und durch eine Kombination von Pfad und Namen in aufsteigender Reihenfolge sortiert. Die Reihenfolge der Objekte in der Auflistung wird vom Anbieter bestimmt.  
+  
+ Beide `pathToMatch` und `usernameToMatch` kann `null`. Die `usernameToMatch` Parameter kann Kommas (,) aufweisen, da einige Datenspeicher, z. B. die Microsoft SQL Server ausgeführt, um Kommas als Platzhalterzeichen zulässig.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.FindUserState%2A>-Methode verwenden. Das vollständige Beispiel finden Sie in der <xref:System.Web.UI.WebControls.WebParts.PersonalizationAdministration> Übersichtsthema.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-csharp[WebParts_PersAdmin#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_PersAdmin/CS/PersAdmin.ascx#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="pathToMatch" />oder <paramref name="usernameToMatch" /> vor oder nach dem Verkürzen eine leere Zeichenfolge ("").  
+  
+ \- oder –  
+  
+ Der Anbieter für einen in der Konfiguration definierten Personalisierungsanbieter weist nicht den richtigen Typ auf.  
+  
+ \- oder –  
+  
+ Die Länge der Zeichenfolge eines beliebigen Parameters beträgt mehr als 256 Zeichen.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Beim Versuch, eine Instanz eines konfigurierten Personalisierungsanbieters zu erstellen und zu initialisieren, ist eine Konfigurationsausnahme aufgetreten.  
+  
+ \- oder –  
+  
+ Der in der Konfiguration definierte standardmäßige Personalisierungsanbieter wurde nicht gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindUserState">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection FindUserState (string pathToMatch, string usernameToMatch, int pageIndex, int pageSize, out int totalRecords);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection FindUserState(string pathToMatch, string usernameToMatch, int32 pageIndex, int32 pageSize, [out] int32&amp; totalRecords) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.FindUserState(System.String,System.String,System.Int32,System.Int32,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pathToMatch" Type="System.String" />
+        <Parameter Name="usernameToMatch" Type="System.String" />
+        <Parameter Name="pageIndex" Type="System.Int32" />
+        <Parameter Name="pageSize" Type="System.Int32" />
+        <Parameter Name="totalRecords" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pathToMatch">Der Pfad der Seite entsprechend.</param>
+        <param name="usernameToMatch">Die Benutzernamen übereinstimmt, der mit der Seite zugeordneten Personalisierungsdaten verfügt.</param>
+        <param name="pageIndex">Der nullbasierte Index der zurückzugebenden Ergebnisseite.</param>
+        <param name="pageSize">Die Anzahl der zurückzugebenden Datensätze.</param>
+        <param name="totalRecords">Die Gesamtanzahl oder Datensätze verfügbar.</param>
+        <summary>Gibt eine Auflistung von Statusinformationen für benutzerspezifische Personalisierung basierend auf den angegebenen Parametern.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection" /> , benutzerspezifische Personalisierungszustandsinformationen enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt eine Auflistung von <xref:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo> Instanzen Where der `pathToMatch` Parameterwert entspricht der Pfad einer Seite und `usernameToMatch` entspricht, einen Benutzernamen ein, die Personalisierungsdaten zugeordnet sind. Die Auflistung enthält nur <xref:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo> Instanzen.  
+  
+ Diese Methode übergibt Parameter Platzhalterzeichen an den zugrunde liegenden Personalisierungsanbieter, wie der Datenspeicher für diese Zeichen verarbeitet, hängt wie der Anbieter Zeichen als ein Sternchen (*), ein Prozentzeichen (%) oder einem Unterstrich (_) behandelt.  
+  
+ In der Regel SQL-kompatible Datenspeicher, führen Sie ein Platzhalterzeichen Search auf einen partiellen Pfad mit dem Platzhalterzeichen am Anfang, am Ende oder in der Mitte des Texts der Suchzeichenfolge in der <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.PathToMatch%2A> Eigenschaft. Um beispielsweise alle Pfade zu finden, die mit "~/vdir", beginnen die <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.PathToMatch%2A> Eigenschaft würde auf "~/vdir%" festgelegt werden.  
+  
+ Ebenso konnte eine Platzhaltersuche auf einen partiellen Benutzernamen das Platzhalterzeichen an einem beliebigen Punkt in der Textzeichenfolge angezeigt haben die <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UsernameToMatch%2A> Eigenschaft. Um beispielsweise alle Benutzernamen, die beginnen mit "John", suchen die <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UsernameToMatch%2A> Eigenschaft sieht dann wie "John %".  
+  
+ Mit dem Standardanbieter Personalisierung der <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo>-abgeleitete Objekte in alphabetischer Reihenfolge zurückgegeben werden, und durch eine Kombination von Pfad und Namen in aufsteigender Reihenfolge sortiert. Die Reihenfolge der Objekte in der Auflistung wird vom Anbieter bestimmt.  
+  
+ Beide `pathToMatch` und `usernameToMatch` kann `null`. Die `usernameToMatch` Parameter kann Kommas (,) aufweisen, da einige Datenspeicher, z. B. die Microsoft SQL Server ausgeführt, um Kommas als Platzhalterzeichen zulässig.  
+  
+ Die zurückgegebenen Daten werden von eingeschränkt `pageIndex` und `pageSize`, wobei `pageIndex` steuert, welche Datensätze zurückzugeben und `pageSize` steuert die Anzahl der zurückzugebenden Datensätze. Z. B. wenn `pageIndex` auf 0 festgelegt wurde und `pageSize` auf 25 festgelegt ist, die zurückgegebenen Daten werden die ersten 25 Einträge. Wenn `pageIndex` auf 1 festgelegt wurde und `pageSize` auf 25 festgelegt ist, werden die zurückgegebenen Daten Einträge 26 bis 50. Die `totalRecords` Parameter gibt die Gesamtzahl der Datensätze, die verfügbar sind.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.FindUserState%2A>-Methode verwenden. Das vollständige Beispiel finden Sie in der <xref:System.Web.UI.WebControls.WebParts.PersonalizationAdministration> Übersichtsthema.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-csharp[WebParts_PersAdmin#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_PersAdmin/CS/PersAdmin.ascx#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="pathToMatch" />oder <paramref name="usernameToMatch" /> vor oder nach dem Verkürzen eine leere Zeichenfolge ("").  
+  
+ \- oder –  
+  
+ <paramref name="pageIndex" /> ist kleiner als Null.  
+  
+ \- oder –  
+  
+ <paramref name="pageSize" /> ist kleiner gleich 0 (null).  
+  
+ - oder -   
+  
+ die Kombination von <paramref name="pageIndex" /> und <paramref name="pageSize" /> überschreitet <see cref="F:System.Int32.MaxValue" />.  
+  
+ \- oder –  
+  
+ Der Anbieter für einen in der Konfiguration definierten Personalisierungsanbieter weist nicht den richtigen Typ auf.  
+  
+ \- oder –  
+  
+ Die Länge der Zeichenfolge eines beliebigen Parameters beträgt mehr als 256 Zeichen.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Beim Versuch, eine Instanz eines konfigurierten Personalisierungsanbieters zu erstellen und zu initialisieren, ist eine Konfigurationsausnahme aufgetreten.  
+  
+ \- oder –  
+  
+ Der in der Konfiguration definierte standardmäßige Personalisierungsanbieter wurde nicht gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllInactiveUserState">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection GetAllInactiveUserState (DateTime userInactiveSinceDate);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection GetAllInactiveUserState(valuetype System.DateTime userInactiveSinceDate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.GetAllInactiveUserState(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userInactiveSinceDate" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="userInactiveSinceDate">Das Datum der letzten wurde Personalisierungsinformationen eines Benutzers zugegriffen werden.</param>
+        <summary>Gibt eine Auflistung aller benutzerspezifische Personalisierung zugeordnete Zustandsinformationen inaktive Benutzer basierend auf dem angegebenen Datum zurück.</summary>
+        <returns>Eine Auflistung von <see cref="T:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo" />-Instanzen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebene Auflistung enthält nur <xref:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo> Instanzen. Mit dem Standardanbieter Personalisierung der <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo>-abgeleitete Objekte in alphabetischer Reihenfolge zurückgegeben werden, und durch eine Kombination von Pfad und Namen in aufsteigender Reihenfolge sortiert. Die Reihenfolge der Objekte in der Auflistung wird vom Anbieter bestimmt.  
+  
+ Diese Methode gibt Objekte zurück, in denen des Benutzers <xref:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo.LastActivityDate%2A> Eigenschaftswert ist kleiner als oder gleich der <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UserInactiveSinceDate%2A> Eigenschaftswert. Wenn <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UserInactiveSinceDate%2A> ist <xref:System.DateTime.MaxValue>, gibt diese Methode effektiv alle benutzerspezifische Daten im zugrunde liegenden Datenspeicher zurück.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der Anbieter für einen in der Konfiguration definierten Personalisierungsanbieter weist nicht den richtigen Typ auf.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Beim Versuch, eine Instanz eines konfigurierten Personalisierungsanbieters zu erstellen und zu initialisieren, ist eine Konfigurationsausnahme aufgetreten.  
+  
+ \- oder –  
+  
+ Der in der Konfiguration definierte standardmäßige Personalisierungsanbieter wurde nicht gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllInactiveUserState">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection GetAllInactiveUserState (DateTime userInactiveSinceDate, int pageIndex, int pageSize, out int totalRecords);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection GetAllInactiveUserState(valuetype System.DateTime userInactiveSinceDate, int32 pageIndex, int32 pageSize, [out] int32&amp; totalRecords) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.GetAllInactiveUserState(System.DateTime,System.Int32,System.Int32,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userInactiveSinceDate" Type="System.DateTime" />
+        <Parameter Name="pageIndex" Type="System.Int32" />
+        <Parameter Name="pageSize" Type="System.Int32" />
+        <Parameter Name="totalRecords" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="userInactiveSinceDate">Das Datum der letzten wurde Personalisierungsinformationen eines Benutzers zugegriffen werden.</param>
+        <param name="pageIndex">Der nullbasierte Index der zurückzugebenden Ergebnisseite.</param>
+        <param name="pageSize">Die Anzahl der zurückzugebenden Datensätze.</param>
+        <param name="totalRecords">Die Gesamtanzahl von Datensätzen verfügbar.</param>
+        <summary>Gibt eine Teilmenge der alle benutzerspezifische Personalisierung zugeordnete Zustandsinformationen inaktive Benutzer basierend auf den angegebenen Parametern zurück.</summary>
+        <returns>Eine Auflistung von <see cref="T:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo" />-Instanzen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebene Auflistung enthält nur <xref:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo> Instanzen. Mit dem Standardanbieter Personalisierung der <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo>-abgeleitete Objekte in alphabetischer Reihenfolge zurückgegeben werden, und durch eine Kombination von Pfad und Namen in aufsteigender Reihenfolge sortiert. Die Reihenfolge der Objekte in der Auflistung wird vom Anbieter bestimmt.  
+  
+ Diese Methode gibt Objekte zurück, in denen des Benutzers <xref:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo.LastActivityDate%2A> Eigenschaftswert ist kleiner als oder gleich der <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UserInactiveSinceDate%2A> Eigenschaftswert. Wenn <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UserInactiveSinceDate%2A> ist <xref:System.DateTime.MaxValue>, gibt diese Methode effektiv alle benutzerspezifische Daten im zugrunde liegenden Datenspeicher zurück.  
+  
+ Die Rückgabewerte werden eingeschränkt, indem die `pageIndex` und `pageSize` Parameter, in dem `pageIndex` steuert, welche Datensätze zurückzugeben und `pageSize` steuert die Anzahl der zurückzugebenden Datensätze. Z. B. wenn `pageIndex` auf 0 festgelegt wurde und `pageSize` auf 25 festgelegt ist, die zurückgegebenen Daten werden die ersten 25 Einträge. Wenn `pageIndex` auf 1 festgelegt wurde und `pageSize` auf 25 festgelegt ist, werden die zurückgegebenen Daten Einträge 26 bis 50. Die `totalRecords` Parameter gibt die Gesamtzahl der Datensätze, die verfügbar sind.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="pageIndex" /> ist kleiner als Null.  
+  
+ \- oder –  
+  
+ <paramref name="pageSize" /> ist kleiner gleich 0 (null).  
+  
+ \- oder –  
+  
+ die Kombination von <paramref name="pageIndex" /> und <paramref name="pageSize" /> überschreitet <see cref="F:System.Int32.MaxValue" />.  
+  
+ \- oder –  
+  
+ Der Anbieter für einen in der Konfiguration definierten Personalisierungsanbieter weist nicht den richtigen Typ auf.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Beim Versuch, eine Instanz eines konfigurierten Personalisierungsanbieters zu erstellen und zu initialisieren, ist eine Konfigurationsausnahme aufgetreten.  
+  
+ \- oder –  
+  
+ Der in der Konfiguration definierte standardmäßige Personalisierungsanbieter wurde nicht gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllState">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection GetAllState (System.Web.UI.WebControls.WebParts.PersonalizationScope scope);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection GetAllState(valuetype System.Web.UI.WebControls.WebParts.PersonalizationScope scope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.GetAllState(System.Web.UI.WebControls.WebParts.PersonalizationScope)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scope" Type="System.Web.UI.WebControls.WebParts.PersonalizationScope" />
+      </Parameters>
+      <Docs>
+        <param name="scope">Der Bereich der Personalisierungsinformationen abgerufen werden sollen.</param>
+        <summary>Gibt eine Auflistung aller Personalisierungsinformationen Zustand aus dem zugrunde liegenden Datenspeicher für den angeforderten Personalisierungsbereich zurück.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection" /> Informationen zum Status für den angegebenen Bereich enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beachten Sie, die nur die zurückgegebene Auflistung enthält <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo>-abgeleitete Objekte des Typs <xref:System.Web.UI.WebControls.WebParts.SharedPersonalizationStateInfo> oder Typ <xref:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo>. Mit dem Standardanbieter Personalisierung der <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo>-abgeleitete Objekte in alphabetischer Reihenfolge zurückgegeben werden, und durch eine Kombination von Pfad und Namen in aufsteigender Reihenfolge sortiert. Die Reihenfolge der Objekte in der Auflistung wird vom Anbieter bestimmt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der Anbieter für einen in der Konfiguration definierten Personalisierungsanbieter weist nicht den richtigen Typ auf.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Beim Versuch, eine Instanz eines konfigurierten Personalisierungsanbieters zu erstellen und zu initialisieren, ist eine Konfigurationsausnahme aufgetreten.  
+  
+ \- oder –  
+  
+ Der in der Konfiguration definierte standardmäßige Personalisierungsanbieter wurde nicht gefunden.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="scope" />ist kein gültiges Element der der <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationScope" /> Enumeration.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllState">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection GetAllState (System.Web.UI.WebControls.WebParts.PersonalizationScope scope, int pageIndex, int pageSize, out int totalRecords);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection GetAllState(valuetype System.Web.UI.WebControls.WebParts.PersonalizationScope scope, int32 pageIndex, int32 pageSize, [out] int32&amp; totalRecords) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.GetAllState(System.Web.UI.WebControls.WebParts.PersonalizationScope,System.Int32,System.Int32,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scope" Type="System.Web.UI.WebControls.WebParts.PersonalizationScope" />
+        <Parameter Name="pageIndex" Type="System.Int32" />
+        <Parameter Name="pageSize" Type="System.Int32" />
+        <Parameter Name="totalRecords" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="scope">Der Bereich der Personalisierungsinformationen abgerufen werden sollen.</param>
+        <param name="pageIndex">Der nullbasierte Index der zurückzugebenden Ergebnisseite.</param>
+        <param name="pageSize">Die Anzahl der zurückzugebenden Datensätze.</param>
+        <param name="totalRecords">Die Gesamtanzahl von Datensätzen verfügbar.</param>
+        <summary>Gibt eine Teilmenge aller Personalisierungsinformationen Zustand aus dem zugrunde liegenden Datenspeicher, basierend auf den angegebenen Parametern zurück.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection" /> Informationen zum Status für den angegebenen Bereich und Parameter enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Elemente in der zurückgegebenen Auflistung basieren in erster Linie auf Bereich, und klicken Sie dann die Einträge für den betreffenden Bereich auf eine Teilmenge basierend auf Weiter reduziert werden die `pageIndex` und `pageSize` Parameter. Die zurückgegebene Auflistung enthält entweder <xref:System.Web.UI.WebControls.WebParts.SharedPersonalizationStateInfo> nur Instanzen oder <xref:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo> nur Instanzen.  
+  
+ Zurückgegebenen Elementen sind eingeschränkt, indem die `pageIndex` und `pageSize` Parameter, in dem `pageIndex` steuert, welche Datensätze zurückzugeben und `pageSize` die Anzahl der zurückgegebenen Datensätze steuert. Z. B. wenn `pageIndex` auf 0 festgelegt wurde und `pageSize` auf 25 festgelegt ist, die zurückgegebenen Daten werden die ersten 25 Einträge. Wenn `pageIndex` auf 1 festgelegt wurde und `pageSize` auf 25 festgelegt ist, werden die zurückgegebenen Daten Einträge 26 bis 50. Die `totalRecords` Parameter gibt die Gesamtzahl der Datensätze, die verfügbar sind.  
+  
+ Mit dem Standardanbieter Personalisierung der <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo>-abgeleitete Objekte in alphabetischer Reihenfolge zurückgegeben werden, und durch eine Kombination von Pfad und Namen in aufsteigender Reihenfolge sortiert. Die Reihenfolge der Objekte in der Auflistung wird vom Anbieter bestimmt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="pageIndex" /> ist kleiner als Null.  
+  
+ \- oder –  
+  
+ <paramref name="pageSize" /> ist kleiner gleich 0 (null).  
+  
+ \- oder –  
+  
+ Der Anbieter für einen in der Konfiguration definierten Personalisierungsanbieter weist nicht den richtigen Typ auf.  
+  
+ \- oder –  
+  
+ die Kombination von <paramref name="pageIndex" /> und <paramref name="pageSize" /> überschreitet <see cref="F:System.Int32.MaxValue" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="scope" />ist kein gültiges Element der der <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationScope" /> Enumeration.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Beim Versuch, eine Instanz eines konfigurierten Personalisierungsanbieters zu erstellen und zu initialisieren, ist eine Konfigurationsausnahme aufgetreten.  
+  
+ \- oder –  
+  
+ Der in der Konfiguration definierte standardmäßige Personalisierungsanbieter wurde nicht gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCountOfInactiveUserState">
+      <MemberSignature Language="C#" Value="public static int GetCountOfInactiveUserState (DateTime userInactiveSinceDate);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 GetCountOfInactiveUserState(valuetype System.DateTime userInactiveSinceDate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.GetCountOfInactiveUserState(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userInactiveSinceDate" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="userInactiveSinceDate">Das Datum der letzten wurde Personalisierungsinformationen eines Benutzers zugegriffen werden.</param>
+        <summary>Gibt die Anzahl der pro-Benutzer Personalisierungselemente im zugrunde liegenden Datenspeicher für inaktive Benutzer basierend auf den angegebenen Parameter zurück.</summary>
+        <returns>Die Anzahl der Personalisierungselemente für inaktive Benutzer.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt die Datensätze zurück, in denen des Benutzers <xref:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo.LastActivityDate%2A> Eigenschaftswert ist kleiner als oder gleich der <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UserInactiveSinceDate%2A> Eigenschaftswert. Wenn <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UserInactiveSinceDate%2A> festgelegt ist, um <xref:System.DateTime.MaxValue>, Anzahl der Personalisierungsinformationen für alle Benutzer zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der Anbieter für einen in der Konfiguration definierten Personalisierungsanbieter weist nicht den richtigen Typ auf.  
+  
+ \- oder –  
+  
+ Die Länge der Zeichenfolge eines beliebigen Parameters beträgt mehr als 256 Zeichen.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Beim Versuch, eine Instanz eines konfigurierten Personalisierungsanbieters zu erstellen und zu initialisieren, ist eine Konfigurationsausnahme aufgetreten.  
+  
+ \- oder –  
+  
+ Der in der Konfiguration definierte standardmäßige Personalisierungsanbieter wurde nicht gefunden.</exception>
+        <exception cref="T:System.Web.HttpException">Der Standardanbieter zurückgegeben, für die Anzahl eine negative Zahl.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCountOfInactiveUserState">
+      <MemberSignature Language="C#" Value="public static int GetCountOfInactiveUserState (string pathToMatch, DateTime userInactiveSinceDate);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 GetCountOfInactiveUserState(string pathToMatch, valuetype System.DateTime userInactiveSinceDate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.GetCountOfInactiveUserState(System.String,System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pathToMatch" Type="System.String" />
+        <Parameter Name="userInactiveSinceDate" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="pathToMatch">Der Pfad zur Seite mit Personalisierung Statuselemente abgerufen werden soll.</param>
+        <param name="userInactiveSinceDate">Das Datum der letzten wurde Personalisierungsinformationen eines Benutzers zugegriffen werden.</param>
+        <summary>Gibt die Anzahl der pro-Benutzer Personalisierungselemente im zugrunde liegenden Datenspeicher für inaktive Benutzer basierend auf den angegebenen Parametern zurück.</summary>
+        <returns>Die Anzahl der pro Benutzer Personalisierungselemente in der zugrunde liegenden Datenspeicher für inaktive Benutzer.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt Datensätze zurück, in denen entspricht der Seite angegebenen `pathtoMatch` Parameter und des Benutzers <xref:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo.LastActivityDate%2A> Eigenschaftswert ist kleiner als oder gleich der <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UserInactiveSinceDate%2A> Eigenschaftswert. Wenn <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UserInactiveSinceDate%2A> festgelegt ist, um <xref:System.DateTime.MaxValue>, Anzahl der Personalisierungsinformationen für alle Benutzer zurückgegeben.  
+  
+ Beachten Sie, dass die `pathToMatch` Parameter kann Platzhalterzeichen enthalten. Die Methode übergibt Platzhalterzeichen an den zugrunde liegenden Datenspeicher. Die Unterstützung von Platzhalterzeichen ist zurzeit an der Behandlung von Zeichen, z. B. ein Sternchen (*), ein Prozentzeichen (%) oder einem Unterstrich (_) in jeder Anbieter abhängig.  
+  
+ In der Regel SQL-kompatible Datenspeicher, führen Sie ein Platzhalterzeichen Search auf einen partiellen Pfad mit dem Platzhalterzeichen am Anfang, am Ende oder in der Mitte des Texts der Suchzeichenfolge in der <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.PathToMatch%2A> Eigenschaft. Um beispielsweise alle Pfade zu finden, die mit "~/vdir", beginnen die <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.PathToMatch%2A> Eigenschaft würde auf "~/vdir%" festgelegt werden.  
+  
+ Die `pathToMatch` Parameter möglich `null`. Wenn auf festgelegt `null`, der Parameter wird ignoriert, wenn Abfragen ausführen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="pathToMatch" />, nach dem verkürzen, ist eine leere Zeichenfolge ("").  
+  
+ \- oder –  
+  
+ Der Anbieter für einen in der Konfiguration definierten Personalisierungsanbieter weist nicht den richtigen Typ auf.  
+  
+ \- oder –  
+  
+ Die Länge der Zeichenfolge eines beliebigen Parameters beträgt mehr als 256 Zeichen.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Beim Versuch, eine Instanz eines konfigurierten Personalisierungsanbieters zu erstellen und zu initialisieren, ist eine Konfigurationsausnahme aufgetreten.  
+  
+ \- oder –  
+  
+ Der in der Konfiguration definierte standardmäßige Personalisierungsanbieter wurde nicht gefunden.</exception>
+        <exception cref="T:System.Web.HttpException">Der Standardanbieter zurückgegeben, für die Anzahl eine negative Zahl.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCountOfState">
+      <MemberSignature Language="C#" Value="public static int GetCountOfState (System.Web.UI.WebControls.WebParts.PersonalizationScope scope);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 GetCountOfState(valuetype System.Web.UI.WebControls.WebParts.PersonalizationScope scope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.GetCountOfState(System.Web.UI.WebControls.WebParts.PersonalizationScope)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scope" Type="System.Web.UI.WebControls.WebParts.PersonalizationScope" />
+      </Parameters>
+      <Docs>
+        <param name="scope">Der Bereich der Personalisierung Statuselemente abgerufen werden soll.</param>
+        <summary>Gibt eine Anzahl der Personalisierung Statuselemente in den zugrunde liegenden Datenspeicher, die für den angegebenen Bereich vorhanden sind.</summary>
+        <returns>Die Anzahl der Personalisierung Statuselemente für den angegebenen Bereich.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um die Anzahl der Personalisierung Statuselemente in den zugrunde liegenden Datenspeicher für den angegebenen Bereich zu bestimmen. Verwenden der <xref:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.GetCountOfState%2A> Methode, um die Anzahl die zu einer bestimmten Seite einzugrenzen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.GetCountOfState%2A>-Methode verwenden. Das vollständige Beispiel finden Sie in der <xref:System.Web.UI.WebControls.WebParts.PersonalizationAdministration> Übersichtsthema.  
+  
+ [!code-csharp[WebParts_PersAdmin#5](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_PersAdmin/CS/PersAdmin.ascx#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="scope" />ist kein gültiges Element der der <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationScope" /> Enumeration.</exception>
+        <exception cref="T:System.ArgumentException">Der Anbieter für einen in der Konfiguration definierten Personalisierungsanbieter weist nicht den richtigen Typ auf.  
+  
+ \- oder –  
+  
+ Die Länge der Zeichenfolge eines beliebigen Parameters beträgt mehr als 256 Zeichen.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Beim Versuch, eine Instanz eines konfigurierten Personalisierungsanbieters zu erstellen und zu initialisieren, ist eine Konfigurationsausnahme aufgetreten.  
+  
+ \- oder –  
+  
+ Der in der Konfiguration definierte standardmäßige Personalisierungsanbieter wurde nicht gefunden.</exception>
+        <exception cref="T:System.Web.HttpException">Der Standardanbieter zurückgegeben, für die Anzahl eine negative Zahl.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCountOfState">
+      <MemberSignature Language="C#" Value="public static int GetCountOfState (System.Web.UI.WebControls.WebParts.PersonalizationScope scope, string pathToMatch);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 GetCountOfState(valuetype System.Web.UI.WebControls.WebParts.PersonalizationScope scope, string pathToMatch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.GetCountOfState(System.Web.UI.WebControls.WebParts.PersonalizationScope,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scope" Type="System.Web.UI.WebControls.WebParts.PersonalizationScope" />
+        <Parameter Name="pathToMatch" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="scope">Der Bereich der Personalisierung Statuselemente abgerufen werden soll.</param>
+        <param name="pathToMatch">Der Pfad zur Seite mit Personalisierung Statuselemente abgerufen werden soll.</param>
+        <summary>Gibt eine Anzahl der Personalisierung Statuselemente im zugrunde liegenden Datenspeicher, die für den angegebenen Parametern vorhanden sind.</summary>
+        <returns>Die Anzahl der Personalisierung Statuselemente für den angegebenen Bereich.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um die Anzahl der Personalisierung Statuselemente in den zugrunde liegenden Datenspeicher für den angegebenen Bereich und den Pfad zu bestimmen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der Anbieter für einen in der Konfiguration definierten Personalisierungsanbieter weist nicht den richtigen Typ auf.  
+  
+ \- oder –  
+  
+ <paramref name="pathToMatch" />, nach dem verkürzen, ist eine leere Zeichenfolge ("").  
+  
+ \- oder –  
+  
+ Die Länge der Zeichenfolge eines beliebigen Parameters beträgt mehr als 256 Zeichen.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Beim Versuch, eine Instanz eines konfigurierten Personalisierungsanbieters zu erstellen und zu initialisieren, ist eine Konfigurationsausnahme aufgetreten.  
+  
+ \- oder –  
+  
+ Der in der Konfiguration definierte standardmäßige Personalisierungsanbieter wurde nicht gefunden.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="scope" />ist kein gültiges Element der der <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationScope" /> Enumeration.</exception>
+        <exception cref="T:System.Web.HttpException">Der Standardanbieter zurückgegeben, für die Anzahl eine negative Zahl.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCountOfUserState">
+      <MemberSignature Language="C#" Value="public static int GetCountOfUserState (string usernameToMatch);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 GetCountOfUserState(string usernameToMatch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.GetCountOfUserState(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="usernameToMatch" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="usernameToMatch">Der Benutzername, der die Personalisierung Statusinformationen abrufen zugeordnet wird.</param>
+        <summary>Gibt eine Anzahl der Personalisierung Statuselemente in den zugrunde liegenden Datenspeicher, die für den angegebenen Benutzer vorhanden sind.</summary>
+        <returns>Die Anzahl der Personalisierung Statuselemente für den angegebenen Benutzer.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt die Anzahl der pro Benutzer Personalisierungselemente im zugrunde liegenden Datenspeicher, die für den angegebenen `usernameToMatch`.  
+  
+ Beachten Sie, dass die `usernameToMatch` Parameter kann Platzhalterzeichen enthalten. Diese Methode übergibt Platzhalterzeichen an den zugrunde liegenden Datenspeicher. Die Unterstützung von Platzhalterzeichen ist zurzeit an der Behandlung von Zeichen, z. B. ein Sternchen (*), ein Prozentzeichen (%) oder einem Unterstrich (_) in jeder Anbieter abhängig.  
+  
+ In der Regel wird für SQL-kompatible Datenspeicher, eine Platzhaltersuche auf einen partiellen Benutzernamen können das Platzhalterzeichen an einem beliebigen Punkt in der Textzeichenfolge angezeigt werden die <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UsernameToMatch%2A> Eigenschaft. Um beispielsweise alle Benutzernamen, die beginnen mit "John", suchen die <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UsernameToMatch%2A> Parameter wie "John %" aussehen würde.  
+  
+ Die `usernameToMatch` Parameter möglich `null`. Wenn auf festgelegt `null`, der Parameter wird ignoriert, wenn Abfragen ausführen. Die `usernameToMatch` Parameter darf Kommas (,) enthalten, da einige Datenspeicher, z. B. die Microsoft SQL Server ausgeführt, um Kommas als Platzhalterzeichen zulässig.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="usernameToMatch" />ist eine leere Zeichenfolge ("") nach dem verkürzen.  
+  
+ \- oder –  
+  
+ Der Anbieter für einen in der Konfiguration definierten Personalisierungsanbieter weist nicht den richtigen Typ auf.  
+  
+ \- oder –  
+  
+ Die Länge der Zeichenfolge eines beliebigen Parameters beträgt mehr als 256 Zeichen.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Beim Versuch, eine Instanz eines konfigurierten Personalisierungsanbieters zu erstellen und zu initialisieren, ist eine Konfigurationsausnahme aufgetreten.  
+  
+ \- oder –  
+  
+ Der in der Konfiguration definierte standardmäßige Personalisierungsanbieter wurde nicht gefunden.</exception>
+        <exception cref="T:System.Web.HttpException">Der Standardanbieter zurückgegeben, für die Anzahl eine negative Zahl.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Provider">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.WebControls.WebParts.PersonalizationProvider Provider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Web.UI.WebControls.WebParts.PersonalizationProvider Provider" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.Provider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PersonalizationProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine Instanz des Standardanbieters Personalisierung zurück.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationProvider" /> des Standardanbieters.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um eine Instanz des Standardanbieters Personalisierung abzurufen. Dies ist der Anbieter in den Abschnitt Personalisierung Datenanbieters in der Datei "Web.config" oder "Machine.config" angegeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.Provider%2A> Eigenschaft.  
+  
+ [!code-csharp[WebParts_PersAdmin#4](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_PersAdmin/CS/PersAdmin.ascx#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der Anbieter für einen in der Konfiguration definierten Personalisierungsanbieter weist nicht den richtigen Typ auf.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Beim Versuch, eine Instanz eines konfigurierten Personalisierungsanbieters zu erstellen und zu initialisieren, ist eine Konfigurationsausnahme aufgetreten.  
+  
+ \- oder –  
+  
+ Der in der Konfiguration definierte standardmäßige Personalisierungsanbieter wurde nicht gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Providers">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.WebControls.WebParts.PersonalizationProviderCollection Providers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Web.UI.WebControls.WebParts.PersonalizationProviderCollection Providers" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.Providers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PersonalizationProviderCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine Auflistung der Personalisierungsanbieter nach Namen indiziert.</summary>
+        <value>Ein schreibgeschützter <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationProviderCollection" /> , enthält die Personalisierungsanbieter für die Anwendung verfügbar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt eine Auflistung von Personalisierungsanbietern. Die Auflistung wird bei der Initialisierung der Anwendung ausgefüllt, und es enthält Verweise auf Anbieterobjekte nach Namen indiziert. Der Standardanbieter wird von der in der Konfigurationsdatei "Web.config" oder "Machine.config" angegebene Domänenname indiziert.  
+  
+ Beachten Sie, dass die zurückgegebene Auflistung schreibgeschützt ist. Aufrufe von `Remove`, `Add`, oder `Clear` führt dazu, eine Ausnahme ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der Anbieter für einen in der Konfiguration definierten Personalisierungsanbieter weist nicht den richtigen Typ auf.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Beim Versuch, eine Instanz eines konfigurierten Personalisierungsanbieters zu erstellen und zu initialisieren, ist eine Konfigurationsausnahme aufgetreten.  
+  
+ \- oder –  
+  
+ Der in der Konfiguration definierte standardmäßige Personalisierungsanbieter wurde nicht gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetAllState">
+      <MemberSignature Language="C#" Value="public static int ResetAllState (System.Web.UI.WebControls.WebParts.PersonalizationScope scope);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 ResetAllState(valuetype System.Web.UI.WebControls.WebParts.PersonalizationScope scope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.ResetAllState(System.Web.UI.WebControls.WebParts.PersonalizationScope)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scope" Type="System.Web.UI.WebControls.WebParts.PersonalizationScope" />
+      </Parameters>
+      <Docs>
+        <param name="scope">Der Bereich verknüpft sind, mit der personalisierten Daten gelöscht werden soll.</param>
+        <summary>Setzt alle Personalisierungsdaten im zugrunde liegenden Datenspeicher durch das Löschen aller Zeilen im angegebenen Bereich zugeordneten zurück.</summary>
+        <returns>Die Anzahl der Elemente, die zurückgesetzt wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode löscht alle Zeilen in den zugrunde liegenden Datenspeicher, der den angegebenen Personalisierungsbereich zugeordnet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="scope" />ist kein gültiges Element der der <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationScope" /> Enumeration.</exception>
+        <exception cref="T:System.ArgumentException">Der Anbieter für einen in der Konfiguration definierten Personalisierungsanbieter weist nicht den richtigen Typ auf.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Beim Versuch, eine Instanz eines konfigurierten Personalisierungsanbieters zu erstellen und zu initialisieren, ist eine Konfigurationsausnahme aufgetreten.  
+  
+ \- oder –  
+  
+ Der in der Konfiguration definierte standardmäßige Personalisierungsanbieter wurde nicht gefunden.</exception>
+        <exception cref="T:System.Web.HttpException">Der Standardanbieter hat eine negative Zahl für die Anzahl der betroffenen Zeilen zurückgegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetInactiveUserState">
+      <MemberSignature Language="C#" Value="public static int ResetInactiveUserState (DateTime userInactiveSinceDate);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 ResetInactiveUserState(valuetype System.DateTime userInactiveSinceDate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.ResetInactiveUserState(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userInactiveSinceDate" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="userInactiveSinceDate">Das Datum der letzten wurde Personalisierungsinformationen eines Benutzers zugegriffen werden.</param>
+        <summary>Setzt alle benutzerspezifische Personalisierungszustandsinformationen in den zugrunde liegenden Datenspeicher basierend auf den angegebenen Parameter zurück.</summary>
+        <returns>Die Anzahl der Zeilen in den zugrunde liegenden Datenspeicher, die zurückgesetzt wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode setzt alle benutzerspezifischen Zustandsinformationen in den zugrunde liegenden Datenspeicher, in denen des Benutzers <xref:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo.LastActivityDate%2A> Eigenschaftswert ist kleiner als oder gleich der <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UserInactiveSinceDate%2A> Wert.  
+  
+ Wenn <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UserInactiveSinceDate%2A> festgelegt ist, um <xref:System.DateTime.MaxValue>, diese Methode setzt alle pro-Benutzer Daten im zugrunde liegenden Datenspeicher.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der Anbieter für einen in der Konfiguration definierten Personalisierungsanbieter weist nicht den richtigen Typ auf.  
+  
+ \- oder –  
+  
+ Die Länge der Zeichenfolge eines beliebigen Parameters beträgt mehr als 256 Zeichen.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Beim Versuch, eine Instanz eines konfigurierten Personalisierungsanbieters zu erstellen und zu initialisieren, ist eine Konfigurationsausnahme aufgetreten.  
+  
+ \- oder –  
+  
+ Der in der Konfiguration definierte standardmäßige Personalisierungsanbieter wurde nicht gefunden.</exception>
+        <exception cref="T:System.Web.HttpException">Der Standardanbieter zurückgegeben, für die Anzahl eine negative Zahl.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetInactiveUserState">
+      <MemberSignature Language="C#" Value="public static int ResetInactiveUserState (string path, DateTime userInactiveSinceDate);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 ResetInactiveUserState(string path, valuetype System.DateTime userInactiveSinceDate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.ResetInactiveUserState(System.String,System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="userInactiveSinceDate" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Pfad zur Seite "zugeordneten Status Personalisierungsinformationen, die zurückgesetzt werden".</param>
+        <param name="userInactiveSinceDate">Das letzte aktive Datum zurücksetzen Benutzer Personalisierung Statuselemente verwendet werden sollen.</param>
+        <summary>Setzt alle benutzerspezifischen Zustandsinformationen im zugrunde liegenden Datenspeicher für inaktive Benutzer basierend auf den angegebenen Parametern.</summary>
+        <returns>Die Anzahl der Zeilen in den zugrunde liegenden Datenspeicher, die zurückgesetzt wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode setzt alle benutzerspezifische Zustand in den zugrunde liegenden Datenspeicher mit dem angegebenen Pfad verknüpft sind, in denen des Benutzers <xref:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo.LastActivityDate%2A> Eigenschaftswert ist kleiner als oder gleich der <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UserInactiveSinceDate%2A> Eigenschaftswert.  
+  
+ Datenspeicher, die mehr als eine Zeile mit Daten zum Speichern der Personalisierungszustand für eine Seite oder erfordern für einen Benutzer und die Seite Kombination, unterscheiden sich die Anzahl der Zeilen für das Zurücksetzen von der Anzahl der Personalisierungszustand. Wenn der zugrunde liegende Anbieter Daten aus einem Datenspeicher Transaktionen unterstützende verfügbar macht, wird seine Vorgänge in einer einzelnen Transaktion.  
+  
+ Es ist kein Fehler Versuch, einen nicht vorhandenen freigegebenen Zustand zurückzusetzen.  
+  
+ Wenn <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateQuery.UserInactiveSinceDate%2A> ist <xref:System.DateTime.MaxValue>, diese Methode setzt effektiv alle pro-Benutzer Daten im zugrunde liegenden Datenspeicher für den angegebenen Pfad zurück.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" />ist eine leere Zeichenfolge ("") nach dem verkürzen.  
+  
+ \- oder –  
+  
+ Der Anbieter für einen in der Konfiguration definierten Personalisierungsanbieter weist nicht den richtigen Typ auf.  
+  
+ \- oder –  
+  
+ Die Länge der Zeichenfolge eines beliebigen Parameters beträgt mehr als 256 Zeichen.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Beim Versuch, eine Instanz eines konfigurierten Personalisierungsanbieters zu erstellen und zu initialisieren, ist eine Konfigurationsausnahme aufgetreten.  
+  
+ \- oder –  
+  
+ Der in der Konfiguration definierte standardmäßige Personalisierungsanbieter wurde nicht gefunden.</exception>
+        <exception cref="T:System.Web.HttpException">Der Standardanbieter zurückgegeben, für die Anzahl eine negative Zahl.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetSharedState">
+      <MemberSignature Language="C#" Value="public static bool ResetSharedState (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ResetSharedState(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.ResetSharedState(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Pfad zur Seite "zugeordneten Status Personalisierungsinformationen, die zurückgesetzt werden".</param>
+        <summary>Setzt den Freigabezustand in den zugrunde liegenden Datenspeicher für den angegebenen Pfad.</summary>
+        <returns>
+          <see langword="true" />Wenn der Freigabezustand Personalisierung wurde zurückgesetzt; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist kein Fehler Versuch, einen nicht vorhandenen freigegebenen Zustand zurückzusetzen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" />ist eine leere Zeichenfolge ("") nach dem verkürzen.  
+  
+ \- oder –  
+  
+ Der Anbieter für einen in der Konfiguration definierten Personalisierungsanbieter weist nicht den richtigen Typ auf.  
+  
+ \- oder –  
+  
+ Die Länge der Zeichenfolge eines beliebigen Parameters beträgt mehr als 256 Zeichen.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Beim Versuch, eine Instanz eines konfigurierten Personalisierungsanbieters zu erstellen und zu initialisieren, ist eine Konfigurationsausnahme aufgetreten.  
+  
+ \- oder –  
+  
+ Der in der Konfiguration definierte standardmäßige Personalisierungsanbieter wurde nicht gefunden.</exception>
+        <exception cref="T:System.Web.HttpException">Der Standardanbieter ergaben, dass die Anzahl der gelöschten Zeilen entweder eine negative Zahl war oder größer als 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetSharedState">
+      <MemberSignature Language="C#" Value="public static int ResetSharedState (string[] paths);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 ResetSharedState(string[] paths) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.ResetSharedState(System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="paths" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="paths">Die Pfade zu den Seiten auf die Personalisierungsinformationen Zustand zurückgesetzt werden sollen.</param>
+        <summary>Setzt den Freigabezustand in den zugrunde liegenden Datenspeicher für die angegebenen Pfade.</summary>
+        <returns>Die Anzahl von Zeilen, die zurückgesetzt wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt die Anzahl der Zeilen, die zurückgesetzt wurden. Es ist kein Fehler Versuch, einen nicht vorhandenen freigegebenen Zustand zurückzusetzen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="paths" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="paths" /> ist ein Array der Länge 0 (null).  
+  
+ \- oder –  
+  
+ Ein Mitglied <paramref name="paths" /> handelt es sich um <see langword="null" /> oder eine leere Zeichenfolge ("") nach dem verkürzen.  
+  
+ \- oder –  
+  
+ Der Anbieter für einen in der Konfiguration definierten Personalisierungsanbieter weist nicht den richtigen Typ auf.  
+  
+ \- oder –  
+  
+ Die Länge der Zeichenfolge eines beliebigen Parameters beträgt mehr als 256 Zeichen.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Beim Versuch, eine Instanz eines konfigurierten Personalisierungsanbieters zu erstellen und zu initialisieren, ist eine Konfigurationsausnahme aufgetreten.  
+  
+ \- oder –  
+  
+ Der in der Konfiguration definierte standardmäßige Personalisierungsanbieter wurde nicht gefunden.</exception>
+        <exception cref="T:System.Web.HttpException">Der Standardanbieter hat angegeben, dass die Anzahl von gelöschten Zeilen eine negative Zahl war.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetState">
+      <MemberSignature Language="C#" Value="public static int ResetState (System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection data);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 ResetState(class System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.ResetState(System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection" />
+      </Parameters>
+      <Docs>
+        <param name="data">Eine Sammlung von <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo" />-Objekten, die angeben, welche Daten zurückgesetzt werden sollen.</param>
+        <summary>Setzt Personalisierungsdaten im zugrunde liegenden Datenspeicher zurück, basierend auf den in der Sammlung enthaltenen Elementen.</summary>
+        <returns>Die Anzahl von Zeilen, die zurückgesetzt wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode setzt Personalisierungsdaten im zugrunde liegenden Datenspeicher basierend auf den <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo> in der Auflistung enthaltenen Objekte. Sie können diese Methode verwenden, um selektiv löschen Sie eine Mischung aus freigegebenen und benutzerspezifische Daten basierend auf den Inhalt der Auflistung. <xref:System.Web.UI.WebControls.WebParts.SharedPersonalizationStateInfo>-Objekte geben an, dass freigegebene Daten für eine Seite zurückgesetzt werden; <xref:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo> Objekte anzugeben, dass pro-Benutzerdaten für eine bestimmte Seite zurückgesetzt wird.  
+  
+> [!NOTE]
+>  Diese Methode kann nicht garantiert werden, dass alle Zurücksetzen von Kennwörtern innerhalb einer einzelnen Transaktion auftreten, da die Auflistung zu zufälligen Personalisierung Datasets verweist.  
+  
+ Es ist kein Fehler für die Sammlung Objekte enthält, die nicht vorhandene Daten verweisen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="data" /> ist eine leere Sammlung.  
+  
+ - oder -   
+  
+ Ein Element der Sammlung ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Der Pfadwert einer <see cref="T:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo" />-Instanz in der Sammlung ist <see langword="null" /> oder eine leere Zeichenfolge ("").  
+  
+ - oder -   
+  
+ Der <paramref name="user" />-Wert einer <see cref="T:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo" />-Instanz in der Sammlung ist <see langword="null" />, ist eine leere Zeichenfolge oder enthält Kommas.  
+  
+ - oder -   
+  
+ Der Anbieter für einen in der Konfiguration definierten Personalisierungsanbieter weist nicht den richtigen Typ auf.  
+  
+ - oder -   
+  
+ Die Länge der Zeichenfolge eines beliebigen Parameters beträgt mehr als 256 Zeichen.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Beim Versuch, eine Instanz eines konfigurierten Personalisierungsanbieters zu erstellen und zu initialisieren, ist eine Konfigurationsausnahme aufgetreten.  
+  
+ - oder -   
+  
+ Der in der Konfiguration definierte standardmäßige Personalisierungsanbieter wurde nicht gefunden.</exception>
+        <exception cref="T:System.Web.HttpException">Der Standardanbieter hat angegeben, dass die Anzahl von gelöschten Zeilen eine negative Zahl war.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetUserState">
+      <MemberSignature Language="C#" Value="public static int ResetUserState (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 ResetUserState(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.ResetUserState(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Pfad zur Seite "zugeordneten Status Personalisierungsinformationen, die zurückgesetzt werden".</param>
+        <summary>Setzt alle benutzerspezifische Zustand in den zugrunde liegenden Datenspeicher für den angegebenen Pfad zurück.</summary>
+        <returns>Die Anzahl von Zeilen, die zurückgesetzt wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt die Anzahl der Zeilen, die zurückgesetzt wurden. Es ist kein Fehler Versuch, einen nicht vorhandenen freigegebenen Zustand zurückzusetzen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" /> ist eine leere Zeichenfolge ("").  
+  
+ \- oder –  
+  
+ Der Anbieter für einen in der Konfiguration definierten Personalisierungsanbieter weist nicht den richtigen Typ auf.  
+  
+ \- oder –  
+  
+ Die Länge der Zeichenfolge eines beliebigen Parameters beträgt mehr als 256 Zeichen.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Beim Versuch, eine Instanz eines konfigurierten Personalisierungsanbieters zu erstellen und zu initialisieren, ist eine Konfigurationsausnahme aufgetreten.  
+  
+ \- oder –  
+  
+ Der in der Konfiguration definierte standardmäßige Personalisierungsanbieter wurde nicht gefunden.</exception>
+        <exception cref="T:System.Web.HttpException">Der Standardanbieter hat angegeben, dass die Anzahl von gelöschten Zeilen eine negative Zahl war.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetUserState">
+      <MemberSignature Language="C#" Value="public static int ResetUserState (string[] usernames);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 ResetUserState(string[] usernames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.ResetUserState(System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="usernames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="usernames">Ein Array von Benutzernamen, deren benutzerspezifische Daten zurückgesetzt werden soll.</param>
+        <summary>Setzt alle benutzerspezifische Zustand in den zugrunde liegenden Datenspeicher für die angegebenen Pfade zurück.</summary>
+        <returns>Die Anzahl von Zeilen, die zurückgesetzt wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode setzt alle benutzerspezifische Zustand in den zugrunde liegenden Datenspeicher, die der Benutzer in zugeordneten der `usernames` Parameter, und gibt die Anzahl der Zeilen, die zurückgesetzt wurden.  
+  
+ Es ist kein Fehler Versuch, einen nicht vorhandenen freigegebenen Zustand zurückzusetzen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="usernames" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="usernames" /> ist ein Array der Länge 0 (null).  
+  
+ \- oder –  
+  
+ Ein Mitglied <paramref name="usernames" /> handelt es sich um <see langword="null" />, Kommas enthält oder ist eine leere Zeichenfolge ("") nach dem verkürzen.  
+  
+ \- oder –  
+  
+ Der Anbieter für einen in der Konfiguration definierten Personalisierungsanbieter weist nicht den richtigen Typ auf.  
+  
+ \- oder –  
+  
+ Die Länge der Zeichenfolge eines beliebigen Parameters beträgt mehr als 256 Zeichen.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Beim Versuch, eine Instanz eines konfigurierten Personalisierungsanbieters zu erstellen und zu initialisieren, ist eine Konfigurationsausnahme aufgetreten.  
+  
+ \- oder –  
+  
+ Der in der Konfiguration definierte standardmäßige Personalisierungsanbieter wurde nicht gefunden.</exception>
+        <exception cref="T:System.Web.HttpException">Der Standardanbieter hat angegeben, dass die Anzahl von gelöschten Zeilen eine negative Zahl war.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetUserState">
+      <MemberSignature Language="C#" Value="public static bool ResetUserState (string path, string username);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ResetUserState(string path, string username) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.ResetUserState(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="username" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Pfad zur Seite "zugeordneten Status Personalisierungsinformationen, die zurückgesetzt werden".</param>
+        <param name="username">Der Benutzername mit der personalisierten Daten zurückgesetzt werden sollen.</param>
+        <summary>Setzt benutzerspezifische Zustand in den zugrunde liegenden Datenspeicher für die angegebene Kombination aus Benutzername und Pfad.</summary>
+        <returns>Die Anzahl von Zeilen, die zurückgesetzt wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist kein Fehler Versuch, einen nicht vorhandenen Benutzerzustand zurückzusetzen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> oder <paramref name="username" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" />oder <paramref name="username" /> ist eine leere Zeichenfolge ("") nach dem verkürzen.  
+  
+ \- oder –  
+  
+ <paramref name="username" />enthält Kommas.  
+  
+ \- oder –  
+  
+ Der Anbieter für einen in der Konfiguration definierten Personalisierungsanbieter weist nicht den richtigen Typ auf.  
+  
+ \- oder –  
+  
+ Die Länge der Zeichenfolge eines beliebigen Parameters beträgt mehr als 256 Zeichen.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Beim Versuch, eine Instanz eines konfigurierten Personalisierungsanbieters zu erstellen und zu initialisieren, ist eine Konfigurationsausnahme aufgetreten.  
+  
+ \- oder –  
+  
+ Der in der Konfiguration definierte standardmäßige Personalisierungsanbieter wurde nicht gefunden.</exception>
+        <exception cref="T:System.Web.HttpException">Der Standardanbieter hat angegeben, dass die Anzahl von gelöschten Zeilen eine negative Zahl war.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetUserState">
+      <MemberSignature Language="C#" Value="public static int ResetUserState (string path, string[] usernames);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 ResetUserState(string path, string[] usernames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationAdministration.ResetUserState(System.String,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="usernames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Pfad zur Seite "zugeordneten Status Personalisierungsinformationen, die zurückgesetzt werden".</param>
+        <param name="usernames">Die Benutzernamen verknüpft sind, mit der personalisierten Daten zurückgesetzt werden sollen.</param>
+        <summary>Setzt benutzerspezifische Zustand in den zugrunde liegenden Datenspeicher für die Seite und den angegebenen Benutzer zurück.</summary>
+        <returns>Die Anzahl von Zeilen, die zurückgesetzt wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode setzt benutzerspezifische Zustand in den zugrunde liegenden Datenspeicher, der mit jeder Benutzer im verbundstamm verknüpft die `usernames` -Parameter für die angegebene von Seite`path.`  
+  
+ Es ist kein Fehler Versuch, einen nicht vorhandenen Benutzerzustand zurückzusetzen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> oder <paramref name="usernames" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" />ist eine leere Zeichenfolge ("") nach dem verkürzen.  
+  
+ \- oder –  
+  
+ Ein Mitglied <paramref name="usernames" /> ist <see langword="null" />, eine leere Zeichenfolge nach dem verkürzen oder Kommas enthält.  
+  
+ \- oder –  
+  
+ <paramref name="usernames" /> ist ein Array der Länge 0 (null).  
+  
+ \- oder –  
+  
+ Der Anbieter für einen in der Konfiguration definierten Personalisierungsanbieter weist nicht den richtigen Typ auf.  
+  
+ \- oder –  
+  
+ Die Länge der Zeichenfolge eines beliebigen Parameters beträgt mehr als 256 Zeichen.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Beim Versuch, eine Instanz eines konfigurierten Personalisierungsanbieters zu erstellen und zu initialisieren, ist eine Konfigurationsausnahme aufgetreten.  
+  
+ \- oder –  
+  
+ Der in der Konfiguration definierte standardmäßige Personalisierungsanbieter wurde nicht gefunden.</exception>
+        <exception cref="T:System.Web.HttpException">Der Standardanbieter hat angegeben, dass die Anzahl von gelöschten Zeilen eine negative Zahl war.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

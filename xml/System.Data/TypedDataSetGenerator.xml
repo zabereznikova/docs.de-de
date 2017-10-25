@@ -1,0 +1,116 @@
+<Type Name="TypedDataSetGenerator" FullName="System.Data.TypedDataSetGenerator">
+  <TypeSignature Language="C#" Value="public class TypedDataSetGenerator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TypedDataSetGenerator extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.TypedDataSetGenerator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("TypedDataSetGenerator class will be removed in a future release. Please use System.Data.Design.TypedDataSetGenerator in System.Design.dll.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Zum Erstellen eines stark typisierten <see cref="T:System.Data.DataSet" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.TypedDataSetGenerator> Klasse dient nicht zur Verwendung als eigenständige Komponente, sondern als eine Klasse, die von der andere Klassen Standardfunktionen ableiten.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypedDataSetGenerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.TypedDataSetGenerator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.TypedDataSetGenerator" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.TypedDataSetGenerator> Klasse dient nicht zur Verwendung als eigenständige Komponente, sondern als eine Klasse, die von der andere Klassen Standardfunktionen ableiten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Generate">
+      <MemberSignature Language="C#" Value="public static void Generate (System.Data.DataSet dataSet, System.CodeDom.CodeNamespace codeNamespace, System.CodeDom.Compiler.ICodeGenerator codeGen);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Generate(class System.Data.DataSet dataSet, class System.CodeDom.CodeNamespace codeNamespace, class System.CodeDom.Compiler.ICodeGenerator codeGen) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.TypedDataSetGenerator.Generate(System.Data.DataSet,System.CodeDom.CodeNamespace,System.CodeDom.Compiler.ICodeGenerator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSet" Type="System.Data.DataSet" />
+        <Parameter Name="codeNamespace" Type="System.CodeDom.CodeNamespace" />
+        <Parameter Name="codeGen" Type="System.CodeDom.Compiler.ICodeGenerator" />
+      </Parameters>
+      <Docs>
+        <param name="dataSet">Die Quelle <see cref="T:System.Data.DataSet" /> , die angibt, dass der Metadaten für das typisierte <see cref="T:System.Data.DataSet" />.</param>
+        <param name="codeNamespace">Der Namespace, der den Zielnamespace für das typisierte <see cref="T:System.Data.DataSet" />.</param>
+        <param name="codeGen">Der Generator verwendet, um das typisierte erstellen <see cref="T:System.Data.DataSet" />.</param>
+        <summary>Generiert eine stark typisierte <see cref="T:System.Data.DataSet" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.TypedDataSetGenerator> Klasse dient nicht zur Verwendung als eigenständige Komponente, sondern als eine Klasse, die von der andere Klassen Standardfunktionen ableiten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateIdName">
+      <MemberSignature Language="C#" Value="public static string GenerateIdName (string name, System.CodeDom.Compiler.ICodeGenerator codeGen);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GenerateIdName(string name, class System.CodeDom.Compiler.ICodeGenerator codeGen) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.TypedDataSetGenerator.GenerateIdName(System.String,System.CodeDom.Compiler.ICodeGenerator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="codeGen" Type="System.CodeDom.Compiler.ICodeGenerator" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Quellenname zur Umwandlung in einen gültigen typisierten <see cref="T:System.Data.DataSet" /> Name.</param>
+        <param name="codeGen">Der Generator, der zum Durchführen der Konvertierung verwendet wird.</param>
+        <summary>Wandelt eine Zeichenfolge in einen gültigen typisierten <see cref="T:System.Data.DataSet" /> Name.</summary>
+        <returns>Eine Zeichenfolge, die das konvertierte Name ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.TypedDataSetGenerator> Klasse dient nicht zur Verwendung als eigenständige Komponente, sondern als eine Klasse, die von der andere Klassen Standardfunktionen ableiten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

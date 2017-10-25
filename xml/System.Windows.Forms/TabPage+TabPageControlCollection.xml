@@ -1,0 +1,82 @@
+<Type Name="TabPage+TabPageControlCollection" FullName="System.Windows.Forms.TabPage+TabPageControlCollection">
+  <TypeSignature Language="C#" Value="public class TabPage.TabPageControlCollection : System.Windows.Forms.Control.ControlCollection" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit TabPage/TabPageControlCollection extends System.Windows.Forms.Control/ControlCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TabPage.TabPageControlCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Control+ControlCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält die Auflistung der Steuerelemente, die <see cref="T:System.Windows.Forms.TabPage" /> verwendet.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TabPageControlCollection (System.Windows.Forms.TabPage owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.TabPage owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TabPage.TabPageControlCollection.#ctor(System.Windows.Forms.TabPage)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.TabPage" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Die <see cref="T:System.Windows.Forms.TabPage" /> , enthält diese Auflistung von Steuerelementen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.TabPage.TabPageControlCollection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public override void Add (System.Windows.Forms.Control value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Add(class System.Windows.Forms.Control value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TabPage.TabPageControlCollection.Add(System.Windows.Forms.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Steuerelement, hinzufügen.</param>
+        <summary>Die Auflistung hinzugefügt ein Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das angegebene Steuerelement wird am Ende der Auflistung hinzugefügt. Wenn das Steuerelement bereits ein untergeordnetes Element eines anderen Steuerelements ist, wird er aus dem anderen Steuerelement entfernt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.TabControl> mit einem <xref:System.Windows.Forms.TabPage>. Dieses Beispiel verwendet die <xref:System.Windows.Forms.TabPage.TabPageControlCollection.Add%2A> Methode, um ein einzelnes Steuerelement hinzuzufügen `button1`, zu der `tabPage1`. Die <xref:System.Windows.Forms.Control.Controls%2A> Eigenschaft dient zum Abrufen der `tabPage1` Auflistung zum Hinzufügen von Steuerelementen auf die Auflistung steuert.  
+  
+ Verwenden der <xref:System.Drawing> und <xref:System.Windows.Forms> Namespaces für dieses Beispiel.  
+  
+ [!code-cpp[TabPageControlCollection.Add#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TabPageControlCollection.Add/CPP/add.cpp#1)]
+ [!code-csharp[TabPageControlCollection.Add#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TabPageControlCollection.Add/CS/add.cs#1)]
+ [!code-vb[TabPageControlCollection.Add#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TabPageControlCollection.Add/VB/add.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Das angegebene Steuerelement ist ein <see cref="T:System.Windows.Forms.TabPage" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

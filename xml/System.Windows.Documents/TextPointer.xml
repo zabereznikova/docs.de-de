@@ -1,0 +1,1018 @@
+<Type Name="TextPointer" FullName="System.Windows.Documents.TextPointer">
+  <TypeSignature Language="C#" Value="public class TextPointer : System.Windows.Documents.ContentPosition" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TextPointer extends System.Windows.Documents.ContentPosition" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.TextPointer" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Documents.ContentPosition</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Position in einer <see cref="T:System.Windows.Documents.FlowDocument" /> oder <see cref="T:System.Windows.Controls.TextBlock" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Documents.TextPointer> Klasse führt die folgende Terminologie:  
+  
+-   Position - grundsätzlich, ein <xref:System.Windows.Documents.TextPointer> verweist immer auf eine *Position* im Inhalt.  Diese Positionen entweder zwischen Zeichen im Inhalt oder Fluss fallen Content-Element-tags definieren die Struktur für den Inhalt.  
+  
+-   Aktuelle Position: Da eine <xref:System.Windows.Documents.TextPointer> immer gibt eine Position und da viele Vorgänge, die über ausgeführt werden können eine <xref:System.Windows.Documents.TextPointer> sind relativ zur Position, die derzeit verweist der <xref:System.Windows.Documents.TextPointer>, es ist sinnvoll, verweisen einfach auf die durch angegebenen Position ein <xref:System.Windows.Documents.TextPointer> als die *aktuelle Position*.  
+  
+-   Position der Einfügemarke - ein *Einfügeposition* ist eine Position, in neuer Inhalte ohne Unterbrechung semantischen Regeln für den zugehörigen Inhalt hinzugefügt werden kann.  In der Praxis ist eine Einfügeposition an einer beliebigen Stelle im Inhalt, in denen eine Einfügemarke positioniert werden kann.  Ein Beispiel einer gültigen <xref:System.Windows.Documents.TextPointer> Position an, die sich nicht um eine Einfügeposition ist, ist die Position zwischen zwei angrenzende <xref:System.Windows.Documents.Paragraph> Tags (d. h. zwischen dem Endtag aus dem vorherigen Absatz und das öffnende Tag eines nächsten Absatz).  
+  
+-   Symbol: im Rahmen <xref:System.Windows.Documents.TextPointer> Vorgänge, die Symbole betreffen, keines der folgenden gilt eine *Symbol*:  
+  
+    -   Start- oder Endtag für ein <xref:System.Windows.Documents.TextElement> Element.  
+  
+    -   Ein <xref:System.Windows.UIElement> Element innerhalb einer <xref:System.Windows.Documents.InlineUIContainer> oder <xref:System.Windows.Documents.BlockUIContainer>.  Beachten Sie, dass solche eine <xref:System.Windows.UIElement> wird immer als genau ein Symbol ist eine zusätzliche Inhalts- oder Elemente gezählt der <xref:System.Windows.UIElement> werden als Symbole nicht gezählt.  
+  
+    -   Jedes 16-Bit [!INCLUDE[TLA#tla_unicode](~/includes/tlasharptla-unicode-md.md)] -Zeichen in einem <xref:System.Windows.Documents.Run> Element.  
+  
+-   Textcontainer – eine *Textcontainer* wird das Element, das den äußeren Rahmen der fortlaufenden Inhalts bildet, die vom angegebenen Position ein <xref:System.Windows.Documents.TextPointer> liegt immer in einem Textcontainer.  Derzeit ein Textcontainer muss entweder eine <xref:System.Windows.Documents.FlowDocument> oder ein <xref:System.Windows.Controls.TextBlock>.  Im Allgemeinen steigen zwischen <xref:System.Windows.Documents.TextPointer> Instanzen in anderen Text-Container werden nicht unterstützt.  
+  
+-   Dokument - der Inhalt in einem Textcontainer wird bezeichnet als eine *Dokument*, z. B. die <xref:System.Windows.Documents.TextPointer.IsInSameDocument%2A> Methode und die <xref:System.Windows.Documents.TextPointer.DocumentStart%2A> und <xref:System.Windows.Documents.TextPointer.DocumentEnd%2A> Eigenschaften.  
+  
+ Die <xref:System.Windows.Documents.TextPointer> Klasse dient zur Vereinfachung Durchlauf und Bearbeitung von Inhalt, der durch dargestellt wird [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] flow Inhaltselemente; in der Regel solche Elemente abgeleitet <xref:System.Windows.Documents.TextElement>.  Einige der Vorgänge, die <xref:System.Windows.Documents.TextPointer> erleichtert umfassen Folgendes:  
+  
+-   Führen Sie einen Ordinalvergleich von der aktuellen Position mit einer zweiten angegebenen Position.  Finden Sie unter der <xref:System.Windows.Documents.TextPointer.CompareTo%2A> Methode.  
+  
+-   Die Art des Inhalts an die aktuelle Position in einer angegebenen Richtung angrenzende bestimmt.  Finden Sie unter der <xref:System.Windows.Documents.TextPointer.GetPointerContext%2A> Methode und <xref:System.Windows.Documents.TextPointerContext> Enumeration.  
+  
+-   Abrufen der <xref:System.Windows.Documents.TextElement> , die Bereiche oder angrenzend an die aktuelle Position ist.  Finden Sie unter <xref:System.Windows.Documents.Paragraph> und die <xref:System.Windows.Documents.TextPointer.GetAdjacentElement%2A> Methode.  
+  
+-   Abrufen des Textcontainers aus, die das aktuelle Dokument Bereiche.  Siehe <xref:System.Windows.Documents.TextPointer.Parent%2A>-Eigenschaft.  
+  
+-   Abrufen Sie eine angegebene Anzahl von Zeichen, die vor oder nach der aktuellen Position.  Finden Sie unter der <xref:System.Windows.Documents.TextPointer.GetTextInRun%2A> Methode.  
+  
+-   Fügen Sie eine Zeichenfolge von Zeichen an der aktuellen Position.  Finden Sie unter der <xref:System.Windows.Documents.TextPointer.InsertTextInRun%2A> Methode.  
+  
+-   Suchen Sie Zeile Grenzen im Inhalt.  Finden Sie unter der <xref:System.Windows.Documents.TextPointer.GetLineStartPosition%2A> Methode und <xref:System.Windows.Documents.TextPointer.IsAtLineStartPosition%2A> Eigenschaft.  
+  
+-   Übersetzt zwischen <xref:System.Windows.Documents.TextPointer> Positionen und das Symbol für UTC-offsets in Inhalte.  Finden Sie unter der <xref:System.Windows.Documents.TextPointer.GetOffsetToPosition%2A> und <xref:System.Windows.Documents.TextPointer.GetPositionAtOffset%2A> Methoden.  
+  
+-   Führen Sie die visuellen Treffertests durch Übersetzen zwischen ein <xref:System.Windows.Documents.TextPointer> Position und eine <xref:System.Windows.Point> , relative Koordinaten darstellt.  
+  
+-   Suchen einer nahe gelegenen Einfügeposition oder Überprüfen Sie, ob die aktuelle Position eine Einfügeposition ist.  Finden Sie unter der <xref:System.Windows.Documents.TextPointer.GetInsertionPosition%2A> und <xref:System.Windows.Documents.TextPointer.GetNextInsertionPosition%2A> Methoden und die <xref:System.Windows.Documents.TextPointer.IsAtInsertionPosition%2A> Eigenschaft.  
+  
+ Die Position und <xref:System.Windows.Documents.TextPointer.LogicalDirection%2A> erkennbar ein <xref:System.Windows.Documents.TextPointer> Objekt sind unveränderlich.  Wenn Inhalt bearbeitet oder geändert wird, die vom angegebenen Position eine <xref:System.Windows.Documents.TextPointer> ändert sich nicht relativ zum umgebenden Textes; stattdessen der Offset der Position vom Anfang des Inhalts entsprechend entsprechend die neue relative Position im angepasst wird Inhalt.  Angenommen, ein <xref:System.Windows.Documents.TextPointer> , der angibt, eine Position, an den Anfang eines bestimmten Absatzes, zeigen Sie auf den Anfang des Absatzes, selbst wenn Inhalt eingefügt oder werden, vor oder nach dem Absatz gelöscht wird fortgesetzt.  
+  
+ Die <xref:System.Windows.Documents.TextPointer> Klasse keine öffentlichen Konstruktoren bereit.  Eine Instanz von <xref:System.Windows.Documents.TextPointer> wird erstellt, indem Sie mithilfe der Eigenschaften oder Methoden anderer Objekte (einschließlich anderer <xref:System.Windows.Documents.TextPointer> Objekte). Die folgende Liste enthält einige Beispiele für Methoden und Eigenschaften, erstellen und zurückgeben, einer <xref:System.Windows.Documents.TextPointer>.  Diese Liste ist nicht vollständig:  
+  
+-   Aus einem <xref:System.Windows.Documents.TextRange>: <xref:System.Windows.Documents.TextRange.Start%2A> und <xref:System.Windows.Documents.TextRange.End%2A>.  
+  
+-   Aus einem <xref:System.Windows.Documents.TextElement>: <xref:System.Windows.Documents.TextElement.ContentStart%2A>, <xref:System.Windows.Documents.TextElement.ContentEnd%2A>, <xref:System.Windows.Documents.TextElement.ElementStart%2A>, und <xref:System.Windows.Documents.TextElement.ElementEnd%2A>.  
+  
+-   Aus einem <xref:System.Windows.Controls.TextBlock> (Textcontainer): <xref:System.Windows.Controls.TextBlock.ContentStart%2A>, <xref:System.Windows.Controls.TextBlock.ContentEnd%2A>, und <xref:System.Windows.Controls.TextBlock.GetPositionFromPoint%2A>.  
+  
+-   Aus einem <xref:System.Windows.Documents.FlowDocument> (Textcontainer): <xref:System.Windows.Documents.FlowDocument.ContentStart%2A>, und<xref:System.Windows.Documents.FlowDocument.ContentEnd%2A>  
+  
+-   Aus einer vorhandenen <xref:System.Windows.Documents.TextPointer>: <xref:System.Windows.Documents.TextPointer.DocumentStart%2A>, <xref:System.Windows.Documents.TextPointer.DocumentEnd%2A>, <xref:System.Windows.Documents.TextPointer.GetNextInsertionPosition%2A>, und <xref:System.Windows.Documents.TextPointer.GetPositionAtOffset%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie eine <xref:System.Windows.Documents.TextPointer> finden Sie eine Position der ersten <xref:System.Windows.Documents.Run> Element in einem Container angegebenen Text.  
+  
+ [!code-csharp[TextPointer_Snippets#_TextPointer_TextPointer1](~/samples/snippets/csharp/VS_Snippets_Wpf/TextPointer_Snippets/CSharp/Window1.xaml.cs#_textpointer_textpointer1)]
+ [!code-vb[TextPointer_Snippets#_TextPointer_TextPointer1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextPointer_Snippets/visualbasic/window1.xaml.vb#_textpointer_textpointer1)]  
+  
+ Das folgende Beispiel implementiert eine vereinfachte Suchalgorithmus mit <xref:System.Windows.Documents.TextPointer> Einrichtungen.  
+  
+ [!code-csharp[TextPointer_Snippets#_TextPointer_TextPointer2](~/samples/snippets/csharp/VS_Snippets_Wpf/TextPointer_Snippets/CSharp/Window1.xaml.cs#_textpointer_textpointer2)]
+ [!code-vb[TextPointer_Snippets#_TextPointer_TextPointer2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextPointer_Snippets/visualbasic/window1.xaml.vb#_textpointer_textpointer2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CompareTo">
+      <MemberSignature Language="C#" Value="public int CompareTo (System.Windows.Documents.TextPointer position);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 CompareTo(class System.Windows.Documents.TextPointer position) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TextPointer.CompareTo(System.Windows.Documents.TextPointer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="position" Type="System.Windows.Documents.TextPointer" />
+      </Parameters>
+      <Docs>
+        <param name="position">Ein <see cref="T:System.Windows.Documents.TextPointer" /> , der angibt, dass einer Position, an der aktuellen Position verglichen werden soll.</param>
+        <summary>Führt einen ordinalen Vergleich zwischen den Positionen, die vom aktuellen angegebenen <see cref="T:System.Windows.Documents.TextPointer" /> und ein zweites angegebenes <see cref="T:System.Windows.Documents.TextPointer" />.</summary>
+        <returns>– 1, wenn die aktuelle <see cref="T:System.Windows.Documents.TextPointer" /> vorausgeht <paramref name="position" />; 0, wenn die Speicherorte, die identisch sind; + 1-Wenn die aktuelle <see cref="T:System.Windows.Documents.TextPointer" /> folgt <paramref name="position" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert-1 gibt an, dass die Position von der aktuellen angegeben <xref:System.Windows.Documents.TextPointer> steht vor der angegebenen Position `position`.  Der Wert 0 gibt an, dass die angegebenen Positionen gleich sind.  Ein Wert von + 1 gibt an, dass die Position von der aktuellen angegeben <xref:System.Windows.Documents.TextPointer> resultiert aus der angegebenen Position `position`.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird eine Verwendung für diese Methode veranschaulicht.  Im Beispiel die <xref:System.Windows.Documents.TextPointer.CompareTo%2A> Methode dient in Verbindung mit der <xref:System.Windows.Documents.TextPointer.GetInsertionPosition%2A> Methode zu testen, ob ein angegebenes <xref:System.Windows.Documents.TextElement> ist leer.  
+  
+ [!code-csharp[TextPointer_Snippets#_TextPointer_GetInsertionPosition](~/samples/snippets/csharp/VS_Snippets_Wpf/TextPointer_Snippets/CSharp/Window1.xaml.cs#_textpointer_getinsertionposition)]
+ [!code-vb[TextPointer_Snippets#_TextPointer_GetInsertionPosition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextPointer_Snippets/visualbasic/window1.xaml.vb#_textpointer_getinsertionposition)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="position" />Gibt eine Position außerhalb der aktuellen Position zugeordneten Textcontainers.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteTextInRun">
+      <MemberSignature Language="C#" Value="public int DeleteTextInRun (int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 DeleteTextInRun(int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TextPointer.DeleteTextInRun(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="count">Die Anzahl der zu löschenden Zeichen an der aktuellen Position ab. Geben Sie einen positiven Wert ein, um Zeichen zu löschen, die vor der aktuellen Position. Geben Sie einen negativen Wert, um Zeichen zu löschen, die vor der aktuellen Position.</param>
+        <summary>Löscht die angegebene Anzahl von Zeichen aus der angegebenen, von der aktuellen Position <see cref="T:System.Windows.Documents.TextPointer" />.</summary>
+        <returns>Die Anzahl der Zeichen, die tatsächlich gelöscht werden soll.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Geben Sie einen positiven Wert ein, um Zeichen zu löschen, die vor der aktuellen Position (wie in <xref:System.Windows.Documents.LogicalDirection?displayProperty=nameWithType>); Geben Sie einen negativen Wert, um Zeichen zu löschen, die vor der aktuellen Position (wie in <xref:System.Windows.Documents.LogicalDirection?displayProperty=nameWithType>).  
+  
+ Die Anzahl der Zeichen, die tatsächlich gelöscht, ist möglicherweise kleiner als die Anzahl von angegebenen `count`.  Dies geschieht in Fällen, in denen `count` gibt mehr Zeichen als vorhanden sind, gelöscht werden sollen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Methode wird an einer Position aufgerufen, in dem Text nicht zulässig ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DocumentEnd">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.TextPointer DocumentEnd { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.TextPointer DocumentEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TextPointer.DocumentEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.TextPointer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Documents.TextPointer" /> am Ende des Inhalts in der aktuellen Position zugeordneten Textcontainers.</summary>
+        <value>Ein <see cref="T:System.Windows.Documents.TextPointer" /> am Ende des Inhalts in der aktuellen Position zugeordneten Textcontainers.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Documents.TextPointer.Parent%2A> für das zurückgegebene <xref:System.Windows.Documents.TextPointer> ist immer ein Textcontainer (<xref:System.Windows.Controls.TextBlock> oder <xref:System.Windows.Documents.FlowDocument>), anstelle eines <xref:System.Windows.Documents.TextElement>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DocumentStart">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.TextPointer DocumentStart { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.TextPointer DocumentStart" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TextPointer.DocumentStart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.TextPointer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Documents.TextPointer" /> am Anfang des Inhalts in der aktuellen Position zugeordneten Textcontainers.</summary>
+        <value>Ein <see cref="T:System.Windows.Documents.TextPointer" /> am Anfang des Inhalts in der aktuellen Position zugeordneten Textcontainers.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die Position, die von dieser Eigenschaft zurückgegeben wird, als eine Baselineposition aus dem Arbeiten mit relativen Versatz an andere Positionen an.  Die <xref:System.Windows.Documents.TextPointer.GetOffsetToPosition%2A> und <xref:System.Windows.Documents.TextPointer.GetPositionAtOffset%2A> Methoden bieten eine Möglichkeit zum Konvertieren zwischen Positionen und offsets.  
+  
+ Die <xref:System.Windows.Documents.TextPointer.Parent%2A> für das zurückgegebene <xref:System.Windows.Documents.TextPointer> ist immer ein Textcontainer (<xref:System.Windows.Controls.TextBlock> oder <xref:System.Windows.Documents.FlowDocument>), anstelle eines <xref:System.Windows.Documents.TextElement>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAdjacentElement">
+      <MemberSignature Language="C#" Value="public System.Windows.DependencyObject GetAdjacentElement (System.Windows.Documents.LogicalDirection direction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.DependencyObject GetAdjacentElement(valuetype System.Windows.Documents.LogicalDirection direction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TextPointer.GetAdjacentElement(System.Windows.Documents.LogicalDirection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="direction" Type="System.Windows.Documents.LogicalDirection" />
+      </Parameters>
+      <Docs>
+        <param name="direction">Eines der <see cref="T:System.Windows.Documents.LogicalDirection" /> Werte, der angibt, die logische Richtung, in dem nach einem angrenzenden Element gesucht werden soll.</param>
+        <summary>Gibt das Element zurück, falls vorhanden, die den aktuellen Rahmen <see cref="T:System.Windows.Documents.TextPointer" /> in der angegebenen logischen Richtung.</summary>
+        <returns>Der benachbarten Elemente im angegebenen <paramref name="direction" />, oder <see langword="null" /> , wenn kein angrenzendes Element vorhanden ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das zurückgegebene Element ist in der Regel eine <xref:System.Windows.Documents.TextElement>.  Ein <xref:System.Windows.UIElement> können zurückgegeben werden, wenn die <xref:System.Windows.Documents.TextPointer> gibt eine Position innerhalb einer <xref:System.Windows.Documents.BlockUIContainer> Element oder ein <xref:System.Windows.Documents.InlineUIContainer> Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCharacterRect">
+      <MemberSignature Language="C#" Value="public System.Windows.Rect GetCharacterRect (System.Windows.Documents.LogicalDirection direction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Rect GetCharacterRect(valuetype System.Windows.Documents.LogicalDirection direction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TextPointer.GetCharacterRect(System.Windows.Documents.LogicalDirection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="direction" Type="System.Windows.Documents.LogicalDirection" />
+      </Parameters>
+      <Docs>
+        <param name="direction">Eines der <see cref="T:System.Windows.Documents.LogicalDirection" /> Werte, mit denen die logische Richtung in der einen umgebendes Feld Inhalt gesucht.</param>
+        <summary>Gibt ein umgebendes Feld (<see cref="T:System.Windows.Rect" />) für Inhalte, die den aktuellen Rahmen <see cref="T:System.Windows.Documents.TextPointer" /> in der angegebenen logischen Richtung.</summary>
+        <returns>Ein Begrenzungsrahmen für Inhalte, die den aktuellen Rahmen <see cref="T:System.Windows.Documents.TextPointer" /> in der angegebenen Richtung oder <see cref="P:System.Windows.Rect.Empty" /> gültige Layoutinformationen ist nicht verfügbar, wenn die aktuelle,.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Documents.TextElement>Ränder werden Inhalt im Rahmen dieser Methode nicht berücksichtigt werden.  Wenn die <xref:System.Windows.Documents.TextPointer> positioniert ist, bevor Sie eine <xref:System.Windows.Documents.TextElement> Edge, der Rückgabewert wird ein Begrenzungsrahmen für den nächsten nicht-<xref:System.Windows.Documents.TextElement> Inhalte in der angegebenen Richtung.  Wenn kein Inhalt vorhanden, in der angegebenen Richtung, eine Breite von NULL ist <xref:System.Windows.Rect> wird mit einer Höhe entsprechen die Höhe des vorhergehenden Inhalt zurückgegeben.  
+  
+ Eine gültige Layout abhängt, Vorgang, der von dieser Methode ausgeführt.  Diese Methode versucht bei Bedarf automatisch ein gültiges Layout vor dem Fortsetzen des Vorgangs neu generieren.  Erneutes Generieren eines Layouts kann eine relativ aufwändige Operation.  Verwenden der <xref:System.Windows.Documents.TextPointer.HasValidLayout%2A> Eigenschaft, um ein gültiges Layout überprüfen Sie vor dem Ausführen von Vorgängen, die das Layout erneut generiert werden können.  Weitere Informationen finden Sie unter [Layout](~/docs/framework/wpf/advanced/layout.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInsertionPosition">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.TextPointer GetInsertionPosition (System.Windows.Documents.LogicalDirection direction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Documents.TextPointer GetInsertionPosition(valuetype System.Windows.Documents.LogicalDirection direction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TextPointer.GetInsertionPosition(System.Windows.Documents.LogicalDirection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.TextPointer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="direction" Type="System.Windows.Documents.LogicalDirection" />
+      </Parameters>
+      <Docs>
+        <param name="direction">Eines der <see cref="T:System.Windows.Documents.LogicalDirection" /> Werte, die logische Richtung, in die Suche nach der nächsten Einfügeposition angibt.</param>
+        <summary>Gibt eine <see cref="T:System.Windows.Documents.TextPointer" /> an der nächsten Einfügeposition in der angegebenen logischen Richtung.</summary>
+        <returns>Ein <see cref="T:System.Windows.Documents.TextPointer" /> an der nächsten Einfügeposition in der angegebenen Richtung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Einfügeposition handelt es sich um eine Position, wo neuer Inhalte hinzugefügt werden kann, ohne Unterbrechung semantischen Regeln für den zugehörigen Inhalt.  In der Praxis ist eine Einfügeposition an einer beliebigen Stelle im Inhalt, in denen eine Einfügemarke positioniert werden kann.  Ein Beispiel einer gültigen <xref:System.Windows.Documents.TextPointer> Position an, die sich nicht um eine Einfügeposition ist, ist die Position zwischen zwei angrenzende <xref:System.Windows.Documents.Paragraph> Tags (d. h. zwischen dem Endtag aus dem vorherigen Absatz und das öffnende Tag eines nächsten Absatz).  
+  
+ Wenn die <xref:System.Windows.Documents.TextPointer> bereits verweist auf eine gültige Einfügeposition, aber das Endtag für eine Formatierung nicht leere Sequenz direkt auf diese Position in der angegebenen Richtung folgt die <xref:System.Windows.Documents.TextPointer> zurückgegeben, die von dieser Methode so angepasst wird, zeigen Sie auf das Einfügen Positionieren Sie einfach nach dem Schließen der Formatierung Sequenz. Betrachten Sie beispielsweise die Markupsequenz `<Bold>a</Bold>b`. Beachten Sie, dass es zwei Einfügepositionen zwischen den Buchstaben gibt `a` und `b` – vor der öffnenden `Bold` -Tag und direkt nach dem schließenden `Bold` Tag. Wenn <xref:System.Windows.Documents.TextPointer.GetInsertionPosition%2A> für aufgerufen wird eine <xref:System.Windows.Documents.TextPointer> auf die Position direkt hinter dem Buchstaben `a` und vor des Abschlusses `Bold` Tag, und mit einer `direction` von <xref:System.Windows.Documents.LogicalDirection.Forward>, zurückgegebenen <xref:System.Windows.Documents.TextPointer> wird angepasst, um zu zeigen die die Position unmittelbar vor dem Buchstaben `b`, nach dem schließenden `Bold` Tag. Zum Öffnen von Formatierungstags bei der Arbeit in die Gegenrichtung logischen wird eine ähnliche Anpassung vorgenommen. Diese Methode soll systemverarbeitungsaufwand Mehrdeutigkeit zwischen Positionen der Einfügemarke in ähnlichen Fällen.  
+  
+ Diese Methode kann auch verwendet werden, selektive Einfügemarken sein, wenn eine Sequenz von Strukturtags beteiligt ist. Z. B. an der Position zwischen schließen und Öffnen von Absatztags, die Richtung-Parameter kann verwendet werden, wählen Sie die nächste Einfügemarke am Anfang des folgenden Absatzes (durch Angabe <xref:System.Windows.Documents.LogicalDirection?displayProperty=nameWithType>) oder am Ende der vorherigen Absatz ( durch Angabe <xref:System.Windows.Documents.LogicalDirection?displayProperty=nameWithType>).  
+  
+ Wenn der Mauszeiger befindet sich bereits an der Position der Einfügemarke, und es keine benachbarten Formatierungstags in der angegebenen gibt `direction`, das zurückgegebene <xref:System.Windows.Documents.TextPointer> verweist auf derselben Position wie die aufrufende <xref:System.Windows.Documents.TextPointer>.  
+  
+ Es ist möglich, dass keine gültige Einfügeposition relativ zur Position verweist vorhanden ist eine <xref:System.Windows.Documents.TextPointer>.  Dies kann geschehen, wenn der referenzierte Inhalt strukturell unvollständig sind, wie eine leere Tabelle oder Liste.  In solchen Fällen gibt diese Methode einfach eine <xref:System.Windows.Documents.TextPointer> an derselben Position wie das <xref:System.Windows.Documents.TextPointer> aus dem diese Methode aufgerufen wurde.  Diese Methode gibt immer einen gültigen <xref:System.Windows.Documents.TextPointer>.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel zeigt, wie die <xref:System.Windows.Documents.TextPointer.GetInsertionPosition%2A> -Methode überprüft, ob ein angegebener <xref:System.Windows.Documents.TextElement> druckbaren Inhalt leer ist.  
+  
+ [!code-csharp[TextPointer_Snippets#_TextPointer_GetInsertionPosition](~/samples/snippets/csharp/VS_Snippets_Wpf/TextPointer_Snippets/CSharp/Window1.xaml.cs#_textpointer_getinsertionposition)]
+ [!code-vb[TextPointer_Snippets#_TextPointer_GetInsertionPosition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextPointer_Snippets/visualbasic/window1.xaml.vb#_textpointer_getinsertionposition)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLineStartPosition">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.TextPointer GetLineStartPosition (int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Documents.TextPointer GetLineStartPosition(int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TextPointer.GetLineStartPosition(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.TextPointer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="count">Die Anzahl der Start-of-Line-Marker überspringen beim Bestimmen der Zeile für die die Startposition zurückgegeben werden sollen. Negative Werte vorangehende Zeilen angegeben, 0 gibt an, die aktuelle Zeile und positive Werte angeben, nach Zeilen.</param>
+        <summary>Gibt eine <see cref="T:System.Windows.Documents.TextPointer" /> am Anfang einer Zeile, die relativ zum aktuellen angegeben wird <see cref="T:System.Windows.Documents.TextPointer" />.</summary>
+        <returns>Ein <see cref="T:System.Windows.Documents.TextPointer" /> am Anfang der angegebenen Zeile verweist (mit der <see cref="P:System.Windows.Documents.TextPointer.LogicalDirection" /> festgelegt <see cref="F:System.Windows.Documents.LogicalDirection.Forward" />), oder <see langword="null" /> , wenn die angegebene Zeile außerhalb des gültigen Bereichs ist, oder andernfalls kann nicht gefunden werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Documents.TextPointer> verweist auf eine mehrdeutige Position, z. B. zwischen zwei Zeilen, die Zeile in der vom angegebenen Richtung <xref:System.Windows.Documents.TextPointer.LogicalDirection%2A> als relative Anfangszeile ausgewählt ist.  
+  
+ Eine gültige Layout abhängt, Vorgang, der von dieser Methode ausgeführt.  Diese Methode versucht bei Bedarf automatisch ein gültiges Layout vor dem Fortsetzen des Vorgangs neu generieren.  Erneutes Generieren eines Layouts kann eine relativ aufwändige Operation.  Verwendung <xref:System.Windows.Documents.TextPointer.HasValidLayout%2A> zu prüfen, ob ein gültiges Layout vor dem Ausführen von Vorgängen, die das Layout erneut generiert werden können.  Weitere Informationen finden Sie unter [Layout](~/docs/framework/wpf/advanced/layout.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLineStartPosition">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.TextPointer GetLineStartPosition (int count, out int actualCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Documents.TextPointer GetLineStartPosition(int32 count, [out] int32&amp; actualCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TextPointer.GetLineStartPosition(System.Int32,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.TextPointer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="actualCount" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="count">Die Anzahl der Start-of-Line-Marker überspringen beim Bestimmen der Zeile für die die Startposition zurückgegeben werden sollen. Negative Werte vorangehende Zeilen angegeben, 0 gibt an, die aktuelle Zeile und positive Werte angeben, nach Zeilen.</param>
+        <param name="actualCount">Bei der Rückgabe dieser Methode enthält die tatsächliche Anzahl der Start-of-Line-Marker, die beim Bestimmen der Zeile für die die Anfangsposition zurückgegeben ausgelassen wurden.  Dieser Wert ist möglicherweise kleiner als <c>Anzahl</c> , wenn der Anfang oder Ende des Inhalts gefunden wird, bevor die angegebene Anzahl von Zeilen übersprungen werden. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Gibt eine <see cref="T:System.Windows.Documents.TextPointer" /> am Anfang einer Zeile, die relativ zum aktuellen angegeben wird <see cref="T:System.Windows.Documents.TextPointer" />, und gibt an, wie viele Zeilen übersprungen wurden.</summary>
+        <returns>Ein <see cref="T:System.Windows.Documents.TextPointer" /> am Anfang der angegebenen Zeile verweist (mit der <see cref="P:System.Windows.Documents.TextPointer.LogicalDirection" /> festgelegt <see cref="F:System.Windows.Documents.LogicalDirection.Forward" />), oder am Anfang der Zeile, die am nächsten an der angegebenen Zeile auf, wenn die angegebene Zeile außerhalb des gültigen Bereichs liegt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Documents.TextPointer> verweist auf eine mehrdeutige Position, z. B. zwischen zwei Zeilen, die Zeile in der vom angegebenen Richtung der <xref:System.Windows.Documents.TextPointer.LogicalDirection%2A> Eigenschaft als relative Anfangszeile ausgewählt ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNextContextPosition">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.TextPointer GetNextContextPosition (System.Windows.Documents.LogicalDirection direction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Documents.TextPointer GetNextContextPosition(valuetype System.Windows.Documents.LogicalDirection direction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TextPointer.GetNextContextPosition(System.Windows.Documents.LogicalDirection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.TextPointer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="direction" Type="System.Windows.Documents.LogicalDirection" />
+      </Parameters>
+      <Docs>
+        <param name="direction">Eines der <see cref="T:System.Windows.Documents.LogicalDirection" /> Werte, der angibt, die logische Richtung, in dem für das nächste Symbol gesucht werden soll.</param>
+        <summary>Gibt einen Zeiger auf das nächste Symbol in der angegebenen logischen Richtung.</summary>
+        <returns>Ein <see cref="T:System.Windows.Documents.TextPointer" /> auf das nächste Symbol in der angeforderten Richtung oder <see langword="null" /> Wenn das aktuelle <see cref="T:System.Windows.Documents.TextPointer" /> Rahmen am Anfang oder Ende des Inhalts.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Folgendes gilt ein Symbol sein:  
+  
+-   Start- oder Endtag für ein <xref:System.Windows.Documents.TextElement> Element.  
+  
+-   Ein <xref:System.Windows.UIElement> in enthaltenen Elementen ein <xref:System.Windows.Documents.InlineUIContainer> oder <xref:System.Windows.Documents.BlockUIContainer>.  Beachten Sie, dass solche eine <xref:System.Windows.UIElement> wird immer als genau ein Symbol ist eine zusätzliche Inhalts- oder Elemente gezählt der <xref:System.Windows.UIElement> werden als Symbole nicht gezählt.  
+  
+-   Eine 16-Bit- [!INCLUDE[TLA#tla_unicode](~/includes/tlasharptla-unicode-md.md)] -Zeichen in einem <xref:System.Windows.Documents.Run> Element.  
+  
+ Wenn das nächste Symbol als kategorisiert wird <xref:System.Windows.Documents.TextPointerContext.EmbeddedElement>, <xref:System.Windows.Documents.TextPointerContext.ElementStart>, oder <xref:System.Windows.Documents.TextPointerContext.ElementEnd> (, das durch die <xref:System.Windows.Documents.TextPointer.GetPointerContext%2A> Methode), die <xref:System.Windows.Documents.TextPointer> zurückgegeben, die von dieser Methode ist genau ein Primärschlüsselsymbol erweiterten, von der aktuellen Position.  
+  
+ Wenn das nächste Symbol als kategorisiert wird <xref:System.Windows.Documents.TextPointerContext.Text>, die <xref:System.Windows.Documents.TextPointer> zurückgegeben, die von dieser Methode wird hinter dem Text vorgerückt, auf das nächste-n Nichttext-Symbol (, also der nächsten position, an der <xref:System.Windows.Documents.TextPointerContext> ist nicht <xref:System.Windows.Documents.TextPointerContext.Text>).  Die genaue Anzahl kann im Voraus berechnet werden, durch Aufrufen der <xref:System.Windows.Documents.TextPointer.GetTextRunLength%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird eine Verwendung für diese Methode veranschaulicht.  Im Beispiel wird die <xref:System.Windows.Documents.TextPointer.GetNextContextPosition%2A> Methode in Verbindung mit der <xref:System.Windows.Documents.TextPointer.GetPointerContext%2A> Methode durchlaufen und extrahiert die Symbole in einem angegebenen <xref:System.Windows.Documents.TextElement>.  
+  
+ Während das Beispiel kann, zum Extrahieren verwendet werden einer [!INCLUDE[TLA#tla_titlexaml](~/includes/tlasharptla-titlexaml-md.md)] Struktur für den Inhalt der einer angegebenen <xref:System.Windows.Documents.TextElement>, es dient nur zur Veranschaulichung und sollte nicht im Produktionscode verwendet werden.  Finden Sie unter der <xref:System.Xml> Namespace-URI für einen umfangreichen Satz von Typen, die zum Arbeiten mit und die XML-Verarbeitung entworfen wurden.  
+  
+ [!code-csharp[TextPointer_Snippets#_TextPointer_GetNextContextPosition](~/samples/snippets/csharp/VS_Snippets_Wpf/TextPointer_Snippets/CSharp/Window1.xaml.cs#_textpointer_getnextcontextposition)]
+ [!code-vb[TextPointer_Snippets#_TextPointer_GetNextContextPosition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextPointer_Snippets/visualbasic/window1.xaml.vb#_textpointer_getnextcontextposition)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNextInsertionPosition">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.TextPointer GetNextInsertionPosition (System.Windows.Documents.LogicalDirection direction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Documents.TextPointer GetNextInsertionPosition(valuetype System.Windows.Documents.LogicalDirection direction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TextPointer.GetNextInsertionPosition(System.Windows.Documents.LogicalDirection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.TextPointer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="direction" Type="System.Windows.Documents.LogicalDirection" />
+      </Parameters>
+      <Docs>
+        <param name="direction">Eines der <see cref="T:System.Windows.Documents.LogicalDirection" /> Werte, die logische Richtung, in die Suche nach der nächsten Position der Einfügemarke angibt.</param>
+        <summary>Gibt eine <see cref="T:System.Windows.Documents.TextPointer" /> an der nächsten Einfügeposition in der angegebenen logischen Richtung.</summary>
+        <returns>Ein <see cref="T:System.Windows.Documents.TextPointer" /> , identifiziert die nächste Einfügeposition in der angegebenen Richtung oder <see langword="null" /> Wenn keine nächste Einfügeposition gefunden werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein *Einfügeposition* ist eine Position, in neuer Inhalte ohne Unterbrechung semantischen Regeln für den zugehörigen Inhalt hinzugefügt werden kann.  In der Praxis ist eine Einfügeposition an einer beliebigen Stelle im Inhalt, in denen eine Einfügemarke positioniert werden kann.  Ein Beispiel einer gültigen <xref:System.Windows.Documents.TextPointer> Position an, die sich nicht um eine Einfügeposition ist, ist die Position zwischen zwei angrenzende <xref:System.Windows.Documents.Paragraph> Tags (d. h. zwischen dem Endtag aus dem vorherigen Absatz und das öffnende Tag eines nächsten Absatz).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird eine Verwendung für diese Methode veranschaulicht. Im Beispiel wird die <xref:System.Windows.Documents.TextPointer.GetNextInsertionPosition%2A> Methode Inhaltselement Grenzen durchlaufen, um die Anzahl der <xref:System.Windows.Documents.Paragraph> Elemente darstellen, zwischen zwei angegebenen <xref:System.Windows.Documents.TextPointer> Instanzen.  
+  
+ [!code-csharp[TextPointer_Snippets#_TextPointer_GetNextInsertionPosition](~/samples/snippets/csharp/VS_Snippets_Wpf/TextPointer_Snippets/CSharp/Window1.xaml.cs#_textpointer_getnextinsertionposition)]
+ [!code-vb[TextPointer_Snippets#_TextPointer_GetNextInsertionPosition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextPointer_Snippets/visualbasic/window1.xaml.vb#_textpointer_getnextinsertionposition)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOffsetToPosition">
+      <MemberSignature Language="C#" Value="public int GetOffsetToPosition (System.Windows.Documents.TextPointer position);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetOffsetToPosition(class System.Windows.Documents.TextPointer position) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TextPointer.GetOffsetToPosition(System.Windows.Documents.TextPointer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="position" Type="System.Windows.Documents.TextPointer" />
+      </Parameters>
+      <Docs>
+        <param name="position">Ein <see cref="T:System.Windows.Documents.TextPointer" /> , eine Position, um den Abstand (in Symbolen) zu "Suchen" angibt.</param>
+        <summary>Gibt die Anzahl der Symbole zwischen dem aktuellen <see cref="T:System.Windows.Documents.TextPointer" /> und ein zweites angegebenes <see cref="T:System.Windows.Documents.TextPointer" />.</summary>
+        <returns>Die relative Anzahl der Symbole zwischen dem aktuellen <see cref="T:System.Windows.Documents.TextPointer" /> und <paramref name="position" />.  Ein negativer Wert gibt an, dass die aktuelle <see cref="T:System.Windows.Documents.TextPointer" /> resultiert aus der angegebenen Position <paramref name="position" />, 0 gibt an, dass die Positionen gleich sind, und ein positiver Wert gibt an, dass die aktuelle <see cref="T:System.Windows.Documents.TextPointer" /> von angegebenenPositionbefindet<paramref name="position" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Folgendes gilt ein Symbol sein:  
+  
+-   Start- oder Endtag für ein <xref:System.Windows.Documents.TextElement> Element.  
+  
+-   Ein <xref:System.Windows.UIElement> in enthaltenen Elementen ein <xref:System.Windows.Documents.InlineUIContainer> oder <xref:System.Windows.Documents.BlockUIContainer>.  Beachten Sie, dass solche eine <xref:System.Windows.UIElement> wird immer als genau ein Symbol ist eine zusätzliche Inhalts- oder Elemente gezählt der <xref:System.Windows.UIElement> werden als Symbole nicht gezählt.  
+  
+-   Eine 16-Bit- [!INCLUDE[TLA#tla_unicode](~/includes/tlasharptla-unicode-md.md)] -Zeichen in einem <xref:System.Windows.Documents.Run> Element.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird eine Verwendung für diese Methode veranschaulicht. Im Beispiel wird die <xref:System.Windows.Documents.TextPointer.GetOffsetToPosition%2A> Methode, um die Offsets für zwei ermitteln <xref:System.Windows.Documents.TextPointer> Instanzen und verwendet dann diese Informationen speichern und Wiederherstellen der Auswahl in einem <xref:System.Windows.Controls.RichTextBox>.  Das Beispiel setzt voraus, dass der Inhalt des der <xref:System.Windows.Controls.RichTextBox> zwischen einem speichern und eine Wiederherstellen der Auswahl nicht geändert wurden.  
+  
+ [!code-csharp[TextPointer_Snippets#_TextPointer_GetOffsetToPosition](~/samples/snippets/csharp/VS_Snippets_Wpf/TextPointer_Snippets/CSharp/Window1.xaml.cs#_textpointer_getoffsettoposition)]
+ [!code-vb[TextPointer_Snippets#_TextPointer_GetOffsetToPosition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextPointer_Snippets/visualbasic/window1.xaml.vb#_textpointer_getoffsettoposition)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="position" />Gibt eine Position außerhalb der aktuellen Position zugeordneten Textcontainers.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPointerContext">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.TextPointerContext GetPointerContext (System.Windows.Documents.LogicalDirection direction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Documents.TextPointerContext GetPointerContext(valuetype System.Windows.Documents.LogicalDirection direction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TextPointer.GetPointerContext(System.Windows.Documents.LogicalDirection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.TextPointerContext</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="direction" Type="System.Windows.Documents.LogicalDirection" />
+      </Parameters>
+      <Docs>
+        <param name="direction">Eines der <see cref="T:System.Windows.Documents.LogicalDirection" /> Werten, die in der die Kategorie für benachbarten Inhalt bestimmt die logische Richtung angibt.</param>
+        <summary>Gibt einen Kategorieindikator für den Inhalt neben dem aktuellen <see cref="T:System.Windows.Documents.TextPointer" /> in der angegebenen logischen Richtung.</summary>
+        <returns>Eines der <see cref="T:System.Windows.Documents.TextPointerContext" /> Werte, der die Kategorie für benachbarten Inhalt in der angegebenen logische Richtung angibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird eine Verwendung für diese Methode veranschaulicht. Im Beispiel wird die <xref:System.Windows.Documents.TextPointer.GetPointerContext%2A> Methode für die Implementierung eines Algorithmus zum Berechnen des Saldo der Start- und Endtags Element zwischen zwei angegebenen <xref:System.Windows.Documents.TextPointer> Positionen.  Jeder öffnenden Element als + 1, und jeder gezählt wird das Endtag des Elements als – 1 gezählt wird.  
+  
+ [!code-csharp[TextPointer_Snippets#_TextPointer_GetOffsetToPosition2](~/samples/snippets/csharp/VS_Snippets_Wpf/TextPointer_Snippets/CSharp/Window1.xaml.cs#_textpointer_getoffsettoposition2)]
+ [!code-vb[TextPointer_Snippets#_TextPointer_GetOffsetToPosition2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextPointer_Snippets/visualbasic/window1.xaml.vb#_textpointer_getoffsettoposition2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPositionAtOffset">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.TextPointer GetPositionAtOffset (int offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Documents.TextPointer GetPositionAtOffset(int32 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TextPointer.GetPositionAtOffset(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.TextPointer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="offset">Ein Offset in Symbolen für das berechnen und die Position zurück.  Wenn der Offset negativ ist, wird die Position in der logischen Richtung Gegenteil der durch berechnet die <see cref="P:System.Windows.Documents.TextPointer.LogicalDirection" /> Eigenschaft.</param>
+        <summary>Gibt eine <see cref="T:System.Windows.Documents.TextPointer" /> auf die von der angegebenen Offset in Symbole, vom Anfang der aktuellen Position <see cref="T:System.Windows.Documents.TextPointer" />.</summary>
+        <returns>Ein <see cref="T:System.Windows.Documents.TextPointer" /> auf die Position des angegebenen Offsets oder <see langword="null" /> Wenn keine entsprechenden Position nicht gefunden werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Folgendes gilt ein Symbol sein:  
+  
+-   Eine öffnende oder schließende Tag für den <xref:System.Windows.Documents.TextElement> Element.  
+  
+-   Ein <xref:System.Windows.UIElement> in enthaltenen Elementen ein <xref:System.Windows.Documents.InlineUIContainer> oder <xref:System.Windows.Documents.BlockUIContainer>.  Beachten Sie, dass solche eine <xref:System.Windows.UIElement> wird immer als genau ein Symbol ist eine zusätzliche Inhalts- oder Elemente gezählt der <xref:System.Windows.UIElement> werden als Symbole nicht gezählt.  
+  
+-   Eine 16-Bit- [!INCLUDE[TLA#tla_unicode](~/includes/tlasharptla-unicode-md.md)] -Zeichen in einem <xref:System.Windows.Documents.Run> Element.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird eine Verwendung für diese Methode veranschaulicht. Im Beispiel wird die <xref:System.Windows.Documents.TextPointer.GetPositionAtOffset%2A> Methode für die Implementierung von ein Paar von Methoden, mit einem Methodenpaar an eine angegebene Position relativ zum alle hosting Absatz, und die andere zum Zurückgeben einer <xref:System.Windows.Documents.TextPointer> an einem angegebenen Offset in einem angegebenen Absatz.  
+  
+ [!code-csharp[TextPointer_Snippets#_TextPointer_GetPositionAtOffset](~/samples/snippets/csharp/VS_Snippets_Wpf/TextPointer_Snippets/CSharp/Window1.xaml.cs#_textpointer_getpositionatoffset)]
+ [!code-vb[TextPointer_Snippets#_TextPointer_GetPositionAtOffset](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextPointer_Snippets/visualbasic/window1.xaml.vb#_textpointer_getpositionatoffset)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPositionAtOffset">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.TextPointer GetPositionAtOffset (int offset, System.Windows.Documents.LogicalDirection direction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Documents.TextPointer GetPositionAtOffset(int32 offset, valuetype System.Windows.Documents.LogicalDirection direction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TextPointer.GetPositionAtOffset(System.Int32,System.Windows.Documents.LogicalDirection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.TextPointer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="direction" Type="System.Windows.Documents.LogicalDirection" />
+      </Parameters>
+      <Docs>
+        <param name="offset">Ein Offset in Symbolen für das berechnen und die Position zurück.  Wenn der Offset negativ ist, ist das zurückgegebene <see cref="T:System.Windows.Documents.TextPointer" /> steht vor der aktuellen <see cref="T:System.Windows.Documents.TextPointer" />ist, andernfalls darauf folgt.</param>
+        <param name="direction">Eines der <see cref="T:System.Windows.Documents.LogicalDirection" /> Werte, mit denen die logische Richtung des zurückgegebenen <see cref="T:System.Windows.Documents.TextPointer" />.</param>
+        <summary>Gibt eine <see cref="T:System.Windows.Documents.TextPointer" /> auf die von der angegebenen Offset in Symbole, vom Anfang der aktuellen Position <see cref="T:System.Windows.Documents.TextPointer" /> und in der angegebenen Richtung.</summary>
+        <returns>Ein <see cref="T:System.Windows.Documents.TextPointer" /> auf die Position des angegebenen Offsets oder <see langword="null" /> hinter das Ende des Inhalts der Offset erstreckt sich.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Folgendes gilt ein Symbol sein:  
+  
+-   Eine öffnende oder schließende Tag für den <xref:System.Windows.Documents.TextElement> Element.  
+  
+-   Ein <xref:System.Windows.UIElement> in enthaltenen Elementen ein <xref:System.Windows.Documents.InlineUIContainer> oder <xref:System.Windows.Documents.BlockUIContainer>.  Beachten Sie, dass solche eine <xref:System.Windows.UIElement> wird immer als genau ein Symbol ist eine zusätzliche Inhalts- oder Elemente gezählt der <xref:System.Windows.UIElement> werden als Symbole nicht gezählt.  
+  
+-   Eine 16-Bit- [!INCLUDE[TLA#tla_unicode](~/includes/tlasharptla-unicode-md.md)] -Zeichen in einem <xref:System.Windows.Documents.Run> Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTextInRun">
+      <MemberSignature Language="C#" Value="public string GetTextInRun (System.Windows.Documents.LogicalDirection direction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetTextInRun(valuetype System.Windows.Documents.LogicalDirection direction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TextPointer.GetTextInRun(System.Windows.Documents.LogicalDirection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="direction" Type="System.Windows.Documents.LogicalDirection" />
+      </Parameters>
+      <Docs>
+        <param name="direction">Eines der <see cref="T:System.Windows.Documents.LogicalDirection" /> Werte, die logische Richtung, in der zum Suchen und Ausgeben von angrenzenden Text angibt.</param>
+        <summary>Eine Zeichenfolge zurückgegeben, die über Text hinausragen, mit dem aktuellen <see cref="T:System.Windows.Documents.TextPointer" /> in der angegebenen logischen Richtung.</summary>
+        <returns>Eine Zeichenfolge, enthält alle angrenzenden Text in der angegebenen logischen Richtung oder <see cref="F:System.String.Empty" /> Wenn keine angrenzenden Text nicht gefunden werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt nur ununterbrochene textausführungen.  Nichts wird zurückgegeben, wenn alle Typ außer symbol <xref:System.Windows.Documents.TextPointerContext.Text> wird neben dem aktuellen <xref:System.Windows.Documents.TextPointer> in der angegebenen Richtung.  Auf ähnliche Weise wird der Text nur bis zur nächsten-n Nichttext-Symbol zurückgegeben.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird eine Verwendung für diese Methode veranschaulicht. Im Beispiel wird die <xref:System.Windows.Documents.TextPointer.GetTextInRun%2A> Methode für die Implementierung von einem einfachen Text extrahieren.  Die Methode gibt eine zeichenfolgenverkettung aus sämtlichen Text zwischen zwei angegebenen <xref:System.Windows.Documents.TextPointer> Instanzen.  
+  
+ Während das Beispiel kann, zum Extrahieren von Text zwischen zwei verwendet werden <xref:System.Windows.Documents.TextPointer> Instanzen, es dient nur zur Veranschaulichung und sollte nicht im Produktionscode verwendet werden.  Verwenden Sie stattdessen die <xref:System.Windows.Documents.TextRange.Text%2A?displayProperty=nameWithType>-Eigenschaft.  
+  
+ [!code-csharp[TextPointer_Snippets#_TextPointer_GetTextInRun](~/samples/snippets/csharp/VS_Snippets_Wpf/TextPointer_Snippets/CSharp/Window1.xaml.cs#_textpointer_gettextinrun)]
+ [!code-vb[TextPointer_Snippets#_TextPointer_GetTextInRun](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextPointer_Snippets/visualbasic/window1.xaml.vb#_textpointer_gettextinrun)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTextInRun">
+      <MemberSignature Language="C#" Value="public int GetTextInRun (System.Windows.Documents.LogicalDirection direction, char[] textBuffer, int startIndex, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetTextInRun(valuetype System.Windows.Documents.LogicalDirection direction, char[] textBuffer, int32 startIndex, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TextPointer.GetTextInRun(System.Windows.Documents.LogicalDirection,System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="direction" Type="System.Windows.Documents.LogicalDirection" />
+        <Parameter Name="textBuffer" Type="System.Char[]" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="direction">Eines der <see cref="T:System.Windows.Documents.LogicalDirection" /> Werte, die logische Richtung, in der zum Suchen und kopieren Sie alle angrenzenden Text angibt.</param>
+        <param name="textBuffer">Ein Puffer, in den Text kopiert wird.</param>
+        <param name="startIndex">Ein Index in <c>Textpuffer</c> ab dem kopiert das Schreiben von Text.</param>
+        <param name="count">Die maximale Anzahl der zu kopierenden Zeichen.</param>
+        <summary>Kopiert die angegebene maximale Anzahl von Zeichen aus angrenzenden Text in der angegebenen Richtung in ein vom Aufrufer angegebene Zeichenarray.</summary>
+        <returns>Die Anzahl der Zeichen, die tatsächlich in kopiert <paramref name="textBuffer" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt nur ununterbrochene textausführungen.  Nichts wird zurückgegeben, wenn alle Typ außer symbol <xref:System.Windows.Documents.TextPointerContext.Text> wird neben dem aktuellen <xref:System.Windows.Documents.TextPointer> in der angegebenen Richtung.  Auf ähnliche Weise wird der Text nur bis zur nächsten-n Nichttext-Symbol zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="startIndex" />ist kleiner als 0 oder größer als die <see cref="P:System.Array.Length" /> Eigenschaft <paramref name="textBuffer" />.  
+  
+ - oder -   
+  
+ <paramref name="count" />ist kleiner als 0 oder größer als der restliche Speicherplatz in <paramref name="textBuffer" /> (<paramref name="textBuffer" />.<see cref="P:System.Array.Length" /> minus <paramref name="startIndex" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTextRunLength">
+      <MemberSignature Language="C#" Value="public int GetTextRunLength (System.Windows.Documents.LogicalDirection direction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetTextRunLength(valuetype System.Windows.Documents.LogicalDirection direction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TextPointer.GetTextRunLength(System.Windows.Documents.LogicalDirection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="direction" Type="System.Windows.Documents.LogicalDirection" />
+      </Parameters>
+      <Docs>
+        <param name="direction">Eines der <see cref="T:System.Windows.Documents.LogicalDirection" /> Werte, die logische Richtung, in der die Anzahl von Zeichen angibt.</param>
+        <summary>Gibt die Anzahl von Unicode-Zeichen zwischen dem aktuellen <see cref="T:System.Windows.Documents.TextPointer" /> und das nächste-n Nichttext-Symbol in der angegebenen logischen Richtung.</summary>
+        <returns>Die Anzahl der Unicode-Zeichen zwischen dem aktuellen <see cref="T:System.Windows.Documents.TextPointer" /> und das nächste-n Nichttext-Symbol.  Diese Zahl kann 0 sein, wenn kein angrenzenden Text vorhanden ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Folgendes gilt ein Symbol sein:  
+  
+-   Eine öffnende oder schließende Tag für den <xref:System.Windows.Documents.TextElement> Element.  
+  
+-   Ein <xref:System.Windows.UIElement> in enthaltenen Elementen ein <xref:System.Windows.Documents.InlineUIContainer> oder <xref:System.Windows.Documents.BlockUIContainer>.  Beachten Sie, dass solche eine <xref:System.Windows.UIElement> wird immer als genau ein Symbol ist eine zusätzliche Inhalts- oder Elemente gezählt der <xref:System.Windows.UIElement> werden als Symbole nicht gezählt.  
+  
+-   Eine 16-Bit- [!INCLUDE[TLA#tla_unicode](~/includes/tlasharptla-unicode-md.md)] -Zeichen in einem <xref:System.Windows.Documents.Run> Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasValidLayout">
+      <MemberSignature Language="C#" Value="public bool HasValidLayout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasValidLayout" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TextPointer.HasValidLayout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der aktuellen Position zugeordneten Textcontainers ein gültiges (aktuelles) Layout verfügt.</summary>
+        <value>
+          <see langword="true" />Wenn das Layout aktuell und gültig ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Bedarf werden Vorgänge, die von einem gültigen Layout abhängen (z. B. die <xref:System.Windows.Documents.TextPointer.GetLineStartPosition%2A> -Methode, <xref:System.Windows.Documents.TextPointer.GetCharacterRect%2A> -Methode und <xref:System.Windows.Documents.TextPointer.IsAtLineStartPosition%2A> Eigenschaft) versuchen, ein gültiges Layout vor dem Fortsetzen des Vorgangs automatisch erneut zu generieren.  Erneutes Generieren eines Layouts kann eine relativ aufwändige Operation.  Verwenden Sie diese Eigenschaft, um ein gültiges Layout überprüfen Sie vor dem Ausführen von Vorgängen, die das Layout erneut generiert werden können.  Weitere Informationen finden Sie unter [Layout](~/docs/framework/wpf/advanced/layout.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertLineBreak">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.TextPointer InsertLineBreak ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Documents.TextPointer InsertLineBreak() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TextPointer.InsertLineBreak" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.TextPointer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fügt einen Zeilenumbruch an der aktuellen Position.</summary>
+        <returns>Ein <see cref="T:System.Windows.Documents.TextPointer" /> positionierte unmittelbar nach der <see cref="T:System.Windows.Documents.LineBreak" /> Elements eingefügt, die von dieser Methode.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertParagraphBreak">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.TextPointer InsertParagraphBreak ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Documents.TextPointer InsertParagraphBreak() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TextPointer.InsertParagraphBreak" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.TextPointer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fügt eine Absatzmarke an der aktuellen Position.</summary>
+        <returns>Ein <see cref="T:System.Windows.Documents.TextPointer" /> am Anfang (<see cref="P:System.Windows.Documents.TextElement.ContentStart" />) aus dem neuen Absatz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Methode aufgerufen wird, wenn die aktuelle Position innerhalb einer vorhandenen ist <xref:System.Windows.Documents.Paragraph> -Element, den vorhandenen Absatz und alle Inhalte, die es enthält sind an der aktuellen Position in zwei Absätze aufgeteilt.  Wenn diese Methode aufgerufen wird, wenn die aktuelle Position nicht in einen vorhandenen Absatz ist, wird ein neuer, leerer Absatz eingefügt.  Wenn diese Methode an einer Position für das Aufteilen oder Einfügen eines Absatzes ungeeignet aufgerufen wird (z. B., wenn die aktuelle Position innerhalb des ist ein <xref:System.Windows.Documents.Hyperlink> Element), wird eine Ausnahme ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Diese Methode wird aufgerufen, auf eine Position an, die kann nicht geteilt werden, um einen neuen Absatz, z. B. im Rahmen zu ermöglichen eine <see cref="T:System.Windows.Documents.Hyperlink" /> oder <see cref="T:System.Windows.Documents.InlineUIContainer" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertTextInRun">
+      <MemberSignature Language="C#" Value="public void InsertTextInRun (string textData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InsertTextInRun(string textData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TextPointer.InsertTextInRun(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textData" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="textData">Der einzufügende Text.</param>
+        <summary>Fügt den angegebenen Text in den Text <see cref="T:System.Windows.Documents.Run" /> an der aktuellen Position.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Documents.TextPointer> nicht beschränkt wird eine <xref:System.Windows.Documents.Run> Element, eine <xref:System.Windows.Documents.Run> eingefügt wird, zusammen mit den `textData`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die aktuelle Position ist nicht in einem <see cref="T:System.Windows.Documents.Run" /> Element.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="textData" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAtInsertionPosition">
+      <MemberSignature Language="C#" Value="public bool IsAtInsertionPosition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAtInsertionPosition" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TextPointer.IsAtInsertionPosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die aktuelle Position eine Einfügeposition ist.</summary>
+        <value>
+          <see langword="true" />Wenn die aktuelle Position eine Einfügeposition ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Einfügeposition handelt es sich um eine Position, wo neuer Inhalte hinzugefügt werden kann, ohne Unterbrechung semantischen Regeln für den zugehörigen Inhalt.  In der Praxis ist eine Einfügeposition an einer beliebigen Stelle im Inhalt, in denen eine Einfügemarke positioniert werden kann.  Ein Beispiel einer gültigen <xref:System.Windows.Documents.TextPointer> Position an, die sich nicht um eine Einfügeposition ist, ist die Position zwischen zwei angrenzende <xref:System.Windows.Documents.Paragraph> Tags (d. h. zwischen dem Endtag aus dem vorherigen Absatz und das öffnende Tag eines nächsten Absatz).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAtLineStartPosition">
+      <MemberSignature Language="C#" Value="public bool IsAtLineStartPosition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAtLineStartPosition" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TextPointer.IsAtLineStartPosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die aktuelle Position am Anfang einer Zeile ist.</summary>
+        <value>
+          <see langword="true" />Wenn die aktuelle Position am Anfang einer Zeile ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Documents.TextPointer> verweist auf eine mehrdeutige Position, z. B. zwischen zwei Zeilen, die Zeile in der vom angegebenen Richtung der <xref:System.Windows.Documents.TextPointer.LogicalDirection%2A> Eigenschaft als relative Anfangszeile ausgewählt ist.  
+  
+ Der Vorgang ausgeführt wird, die von dieser Eigenschaft hängt von einem gültigen Layout ab.  Diese Methode versucht bei Bedarf automatisch ein gültiges Layout vor dem Fortsetzen des Vorgangs neu generieren.  Erneutes Generieren eines Layouts kann eine relativ aufwändige Operation.  Verwenden der <xref:System.Windows.Documents.TextPointer.HasValidLayout%2A> Eigenschaft, um ein gültiges Layout überprüfen Sie vor dem Ausführen von Vorgängen, die das Layout erneut generiert werden können.  Weitere Informationen finden Sie unter [Layout](~/docs/framework/wpf/advanced/layout.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInSameDocument">
+      <MemberSignature Language="C#" Value="public bool IsInSameDocument (System.Windows.Documents.TextPointer textPosition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsInSameDocument(class System.Windows.Documents.TextPointer textPosition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TextPointer.IsInSameDocument(System.Windows.Documents.TextPointer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textPosition" Type="System.Windows.Documents.TextPointer" />
+      </Parameters>
+      <Docs>
+        <param name="textPosition">Ein <see cref="T:System.Windows.Documents.TextPointer" /> , der angibt, dass einer Position, an der aktuellen Position verglichen werden soll.</param>
+        <summary>Gibt an, ob die angegebene Position in der gleichen Textcontainer wie die aktuelle Position ist.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="textPosition" /> gibt eine Position, die in der gleichen Textcontainer wie die aktuelle Position; anderenfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die meisten Operationen mit mehreren <xref:System.Windows.Documents.TextPointer> Instanzen sind nur gültig, wenn die betreffenden Instanzen Positionen anzuzeigen, die im gleichen Textfeld Containerbereich sind.  Zum Beispiel die <xref:System.Windows.Documents.TextPointer.CompareTo%2A> und <xref:System.Windows.Documents.TextPointer.GetOffsetToPosition%2A> Methoden können nicht verwendet werden, mit einer <xref:System.Windows.Documents.TextPointer> an eine Position außerhalb der aktuellen Position zugeordneten Textcontainers.  Verwenden Sie diese Methode zum Überprüfen, ob ein angegebenes <xref:System.Windows.Documents.TextPointer> ist kompatibel mit der aktuellen Position für solche Vorgänge.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird eine Verwendung für diese Methode veranschaulicht.  Im Beispiel wird die <xref:System.Windows.Documents.TextPointer.IsInSameDocument%2A> -Methode überprüft, ob ein angegebener <xref:System.Windows.Documents.TextPointer> befindet sich zwischen zwei anderen angegebenen <xref:System.Windows.Documents.TextPointer> Instanzen in eine Situation, besteht keine Garantie, dass alle drei Positionen auf den gleichen Textcontainer gehören.  
+  
+ [!code-csharp[TextPointer_Snippets#_TextPointer_IsInSameDocument](~/samples/snippets/csharp/VS_Snippets_Wpf/TextPointer_Snippets/CSharp/Window1.xaml.cs#_textpointer_isinsamedocument)]
+ [!code-vb[TextPointer_Snippets#_TextPointer_IsInSameDocument](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextPointer_Snippets/visualbasic/window1.xaml.vb#_textpointer_isinsamedocument)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="textPosition" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LogicalDirection">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.LogicalDirection LogicalDirection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Documents.LogicalDirection LogicalDirection" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TextPointer.LogicalDirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.LogicalDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die logische Richtung verknüpft sind, mit der aktuellen Position, die verwendet wird, um die aktuelle Position zugeordneten Inhalte zu unterscheiden.</summary>
+        <value>Die <see cref="T:System.Windows.Documents.LogicalDirection" /> -Wert, der die aktuelle Position zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Als Beispiel dafür, wie diese Eigenschaft verwendet wird die <xref:System.Windows.Documents.LogicalDirection> von der <xref:System.Windows.Documents.TextPointer> zurückgegeben von einem Treffertest Methode ergibt einen Treffer zwischen beiden Zeichen des Texts. Die logische Richtung gibt an, welche der beiden Zeichen tatsächlich erreicht wurde, links oder rechts.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Paragraph">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.Paragraph Paragraph { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.Paragraph Paragraph" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TextPointer.Paragraph" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.Paragraph</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab den Absatz, der die aktuelle Position festgelegt, sofern vorhanden.</summary>
+        <value>Die <see cref="T:System.Windows.Documents.Paragraph" /> , die die aktuelle Position, Bereiche oder <see langword="null" /> Wenn kein entsprechender Absatz vorhanden ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public System.Windows.DependencyObject Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DependencyObject Parent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TextPointer.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das logische übergeordnete Element, das die aktuelle Position festgelegt.</summary>
+        <value>Das logische übergeordnete Element, das die aktuelle Position festgelegt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TextPointer.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dieser Typ oder Member unterstützt die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <returns>Die Zeichenfolge, die das Objekt darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

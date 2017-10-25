@@ -1,0 +1,69 @@
+<Type Name="IReceiveContextSettings" FullName="System.ServiceModel.Channels.IReceiveContextSettings">
+  <TypeSignature Language="C#" Value="public interface IReceiveContextSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IReceiveContextSettings" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.IReceiveContextSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Eine Schnittstelle, die Ihnen ermöglicht, Empfangskontexteinstellungen festzulegen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Verwenden eines unidirektionalen Meldungskanals und zerstörungsfreier Lesevorgänge berücksichtigt der Empfangskontext die gesteuerte Bestätigung, wenn ein in der Warteschlange stehender Kanal verwendet wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.IReceiveContextSettings.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab bzw. legt einen Wert fest, der angibt, ob die der Empfangskontext aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn empfangen Kontext aktiviert ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidityDuration">
+      <MemberSignature Language="C#" Value="public TimeSpan ValidityDuration { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan ValidityDuration" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.IReceiveContextSettings.ValidityDuration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der ein Verbindungstimeout angibt, wenn bei Verwendung eines in der Warteschlange stehenden Kanals direkte Kanäle und eine Meldungssperrdauer verwendet werden.</summary>
+        <value>Ein Timeout-Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Wenn <xref:System.ServiceModel.Channels.IReceiveContextSettings.ValidityDuration%2A> für eine Nachricht, die jede Transaktion, für deren Verarbeitung verwendet werden kann, zusammen mit der Workflowinstanz abgebrochen, sofern das Ablaufen während der Transaktion eintritt abläuft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

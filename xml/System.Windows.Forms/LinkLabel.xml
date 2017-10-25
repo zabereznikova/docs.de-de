@@ -1,0 +1,1427 @@
+<Type Name="LinkLabel" FullName="System.Windows.Forms.LinkLabel">
+  <TypeSignature Language="C#" Value="public class LinkLabel : System.Windows.Forms.Label, System.Windows.Forms.IButtonControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LinkLabel extends System.Windows.Forms.Label implements class System.Windows.Forms.IButtonControl" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.LinkLabel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Label</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Forms.IButtonControl</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("LinkClicked")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem("System.Windows.Forms.Design.AutoSizeToolboxItem,System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Label-Steuerelement in Windows dar, das Links anzeigen kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ToolStripLabel> -Steuerelement ersetzt und funktionell erweitert, um die <xref:System.Windows.Forms.Label> und <xref:System.Windows.Forms.LinkLabel> Steuerelemente. Allerdings die <xref:System.Windows.Forms.Label> und <xref:System.Windows.Forms.LinkLabel> Steuerelemente werden für die Abwärtskompatibilität und für zukünftige Verwendung beibehalten, falls gewünscht.  
+  
+ Die <xref:System.Windows.Forms.LinkLabel> Steuerelement ähnelt einem <xref:System.Windows.Forms.Label> -Steuerelement mit der Ausnahme, dass einen Link angezeigt werden können. Mehrere Hyperlinks können im Text des Steuerelements angegeben werden. Jeder Link kann innerhalb einer Anwendung eine andere Aufgabe ausführen. Beispielsweise können Sie einen Hyperlink ein auf eine Website in Microsoft Internet Explorer anzuzeigen oder eine Protokolldatei, die einer Anwendung zugeordnet zu laden.  
+  
+ Jeder Link angezeigt, der <xref:System.Windows.Forms.LinkLabel> -Steuerelement ist eine Instanz von der <xref:System.Windows.Forms.LinkLabel.Link> Klasse. Die <xref:System.Windows.Forms.LinkLabel.Link> Klasse definiert Anzeigeinformationen, Zustand, und den Speicherort des Links. Darüber hinaus die <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> Eigenschaft von der <xref:System.Windows.Forms.LinkLabel.Link> -Klasse ermöglicht es Ihnen, ordnen Sie die Informationen, z. B. eine URL mit den Link angezeigt. Klickt ein Benutzer einen Link innerhalb des Steuerelements die <xref:System.Windows.Forms.LinkLabel.LinkClicked> Ereignis wird ausgelöst, und die <xref:System.Windows.Forms.LinkLabel.Link> übergeben, das den Hyperlink, der per Mausklick darstellt wird als Teil der <xref:System.Windows.Forms.LinkLabelLinkClickedEventArgs> -Objekt, das als Parameter an den Ereignishandler übergeben wird. Verwenden Sie dieses Objekt zum Abrufen der <xref:System.Windows.Forms.LinkLabel.Link> mit den Hyperlink, der vom Benutzer auf die geklickt wurde. Alle Links, die als Bestandteil der <xref:System.Windows.Forms.LinkLabel> Steuerelement werden gespeichert, der <xref:System.Windows.Forms.LinkLabel.LinkCollection> Klasseninstanz für das Steuerelement.  
+  
+ Es gibt zwei Möglichkeiten, um einen Link zum Hinzufügen der <xref:System.Windows.Forms.LinkLabel> Steuerelement. Die schnellste Möglichkeit ist die Angabe einer <xref:System.Windows.Forms.LinkArea> und weisen Sie ihn der <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> Eigenschaft. Dadurch können Sie einen einzelnen Link im Text des Steuerelements anzugeben. Um mehrere Links hinzugefügt werden, können Sie die <xref:System.Windows.Forms.LinkLabel.LinkCollection.Add%2A> Methode der <xref:System.Windows.Forms.LinkLabel.LinkCollection> Klasse durch den Zugriff auf die Auflistung über die <xref:System.Windows.Forms.LinkLabel.Links%2A> Eigenschaft.  
+  
+ Wenn eine <xref:System.Windows.Forms.LinkLabel> Steuerelement erstellt wurde, ist einen Standardhyperlink, der enthält den Text innerhalb der <xref:System.Windows.Forms.LinkLabel> Steuerelement hinzugefügt wird die <xref:System.Windows.Forms.LinkLabel.LinkCollection>. Sie können diesen Standardhyperlink überschreiben, indem Sie einen neuen Linkbereich mit Angabe der <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> -Eigenschaft, oder geben Sie eine Verknüpfung mit der <xref:System.Windows.Forms.LinkLabel.LinkCollection.Add%2A> Methode der <xref:System.Windows.Forms.LinkLabel.LinkCollection>. Sie können auch das Standard-Hyperlink entfernen, mit der <xref:System.Windows.Forms.LinkLabel.LinkCollection.Remove%2A> Methode der <xref:System.Windows.Forms.LinkLabel.LinkCollection> Klasse.  
+  
+ Die <xref:System.Windows.Forms.Label.TabStop%2A> Eigenschaft `true` standardmäßig, solange es ist mindestens ein Link mit einer Länge größer als 0 (null) in der <xref:System.Windows.Forms.LinkLabel.Links%2A> Auflistung. Die <xref:System.Windows.Forms.LinkLabel> Steuerelement verfügt über ein einzelnes <xref:System.Windows.Forms.Control.TabIndex%2A> Wert. Jeder Link mit einer Länge größer als 0 ruft jedoch eigene Tabstopp, in Reihenfolge von links nach rechts. Registerkartennavigation zum Verhindern der <xref:System.Windows.Forms.LinkLabel> steuern, legen Sie die <xref:System.Windows.Forms.Label.TabStop%2A> Eigenschaft `false`. Jedoch beachtet werden, Hinzufügen von neuen verknüpft die <xref:System.Windows.Forms.LinkLabel.Links%2A> Auflistung werden automatisch festgelegt, die <xref:System.Windows.Forms.Label.TabStop%2A> Eigenschaft `true` erneut.  
+  
+ Die <xref:System.Windows.Forms.LinkLabel> bietet eine Reihe von Eigenschaften, die Ihnen ermöglichen, die Darstellung von Hyperlinks im Steuerelement zu definieren. Die <xref:System.Windows.Forms.LinkLabel.ActiveLinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.DisabledLinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, und <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> Eigenschaften definieren die Farben, einen Link zum Anzeigen in verschiedenen Zuständen verwenden. Die <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A> -Eigenschaft definiert die Anzeige der Unterstreichung, die einem Link zugeordnet ist.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.LinkLabel> Klasse. Die Beispiel-Handles die <xref:System.Windows.Forms.LinkLabel.LinkClicked> Ereignis, indem Sie eine Website öffnen.  
+  
+ [!code-csharp[System.Windows.Forms.LinkLabelSimple#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabelSimple/CS/form.cs#1)]
+ [!code-vb[System.Windows.Forms.LinkLabelSimple#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LinkLabelSimple/VB/form.vb#1)]  
+  
+ Das folgende Beispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.LinkLabel> -Klasse, mit mehreren <xref:System.Windows.Forms.LinkArea> Abschnitten definiert sind, um eine Bezeichnung auf einem Formular angezeigt. Das Beispiel veranschaulicht das Festlegen der <xref:System.Windows.Forms.Label.AutoSize%2A>, <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.DisabledLinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, und <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> Eigenschaften zum Anpassen des Aussehens von der <xref:System.Windows.Forms.LinkLabel>. Die erste <xref:System.Windows.Forms.LinkArea> wird angegeben, mit der <xref:System.Windows.Forms.LinkLabel.LinkArea%2A?displayProperty=nameWithType> Eigenschaft. Zusätzliche Links werden hinzugefügt, um die <xref:System.Windows.Forms.LinkLabel> mithilfe der <xref:System.Windows.Forms.LinkLabel.LinkCollection.Add%2A?displayProperty=nameWithType> Methode. Die Beispiel-Handles die <xref:System.Windows.Forms.LinkLabel.LinkClicked> -Ereignis durch Starten des Webbrowsers für Links und zum Anzeigen einer <xref:System.Windows.Forms.MessageBox> für andere Links.  
+  
+ [!code-cpp[System.Windows.Forms.LinkLabel#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/CPP/linklabel.cpp#1)]
+ [!code-csharp[System.Windows.Forms.LinkLabel#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/CS/linklabel.cs#1)]
+ [!code-vb[System.Windows.Forms.LinkLabel#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/VB/linklabel.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinkLabel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Standardinstanz der <see cref="T:System.Windows.Forms.LinkLabel" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.LinkLabel> -Klasse, mit mehreren <xref:System.Windows.Forms.LinkArea> Abschnitten definiert sind, um eine Bezeichnung auf einem Formular angezeigt. Das Beispiel veranschaulicht das Festlegen der <xref:System.Windows.Forms.Label.AutoSize%2A>, <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.DisabledLinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, und <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> Eigenschaften zum Anpassen des Aussehens von der <xref:System.Windows.Forms.LinkLabel>. Die erste <xref:System.Windows.Forms.LinkArea> wird angegeben, mit der <xref:System.Windows.Forms.LinkLabel.LinkArea%2A?displayProperty=nameWithType> Eigenschaft. Zusätzliche Links werden hinzugefügt, um die <xref:System.Windows.Forms.LinkLabel> mithilfe der <xref:System.Windows.Forms.LinkLabel.LinkCollection.Add%2A?displayProperty=nameWithType> Methode. Die Beispiel-Handles die <xref:System.Windows.Forms.LinkLabel.LinkClicked> -Ereignis durch Starten des Webbrowsers für Links und zum Anzeigen einer <xref:System.Windows.Forms.MessageBox> für andere Links.  
+  
+ [!code-cpp[System.Windows.Forms.LinkLabel#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/CPP/linklabel.cpp#1)]
+ [!code-csharp[System.Windows.Forms.LinkLabel#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/CS/linklabel.cs#1)]
+ [!code-vb[System.Windows.Forms.LinkLabel#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/VB/linklabel.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActiveLinkColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color ActiveLinkColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ActiveLinkColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LinkLabel.ActiveLinkColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Farbe ab, in der ein aktiver Link angezeigt wird, oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> , die die Farbe für einen aktiven Link Anzeige darstellt. Die Standardfarbe wird durch das System angegeben, in der Regel ist dies die Farbe <see langword="Color.Red" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein aktiver Link ist eine Verknüpfung, die gerade geklickt wird. Dies ist vergleichbar mit den heruntergedrückte Status einer <xref:System.Windows.Forms.Button> Steuerelement. Sie können diese Eigenschaft verwenden, die Farbe an, der in der Link angezeigt wird, wenn der Link gerade geklickt wird.  
+  
+ Es gibt eine Anzahl von Farben, die einen Link zugeordnet. Die <xref:System.Windows.Forms.LinkLabel.LinkColor%2A> gibt die Farbe aller Links angezeigt, der <xref:System.Windows.Forms.LinkLabel> Steuerelement. Die <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> Eigenschaft ermöglicht Ihnen, geben Sie die Farbe einer Verknüpfung aus, nachdem er vom Benutzer besucht wurde. Wenn ein Link deaktiviert ist, die <xref:System.Windows.Forms.LinkLabel.DisabledLinkColor%2A> dient zur Anzeige des Links in einem deaktivierten Zustand.  
+  
+> [!NOTE]
+>  Wenn Sie diese Eigenschaft festlegen, stellen Sie sicher, dass die Farbe Sie die Eigenschaft, die keine Konflikte mit der Hintergrundfarbe des Steuerelements festlegen oder der Text nicht ordnungsgemäß angezeigt. Beispielsweise ist die Hintergrundfarbe des Steuerelements `Color.Red` und diese Eigenschaft wird festgelegt, um `Color.Red`, der Text ist nicht richtig angezeigt bei wird der Link geklickt wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Festlegen der <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A> Eigenschaft mit dem <xref:System.Windows.Forms.LinkBehavior> Enumeration. Außerdem zeigt es die Einstellung der <xref:System.Windows.Forms.LinkLabel.ActiveLinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A> und <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> Eigenschaften. Zum Ausführen dieses Beispiels fügen Sie ihn in ein leeres Formular, und rufen `InitializeLinkLabel` aus den Konstruktor des Formulars oder `Load` Methode.  
+  
+ [!code-cpp[System.Windows.Forms.LinkLabelExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabelExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.LinkLabelExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabelExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.LinkLabelExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LinkLabelExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateAccessibilityInstance">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.AccessibleObject CreateAccessibilityInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Forms.AccessibleObject CreateAccessibilityInstance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.CreateAccessibilityInstance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues Objekt für die Barrierefreiheit für das <see cref="T:System.Windows.Forms.LinkLabel" />-Steuerelement.</summary>
+        <returns>Ein neues <see cref="T:System.Windows.Forms.AccessibleObject" /> für das Steuerelement.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie die <xref:System.Windows.Forms.LinkLabel.CreateAccessibilityInstance%2A>-Methode nicht explizit aufrufen, wird sie beim Verweis auf die <xref:System.Windows.Forms.Control.AccessibilityObject%2A>-Eigenschaft aufgerufen.  
+  
+ Hinweis: zum Abrufen oder Festlegen der <xref:System.Windows.Forms.Control.AccessibilityObject%2A> -Eigenschaft müssen Sie einen Verweis auf die mit .NET Framework installierte Eingabenhilfenassembly hinzufügen.  
+  
+ Hinweise zur Vererbung: zum Überschreiben <xref:System.Windows.Forms.LinkLabel.CreateAccessibilityInstance%2A> in einer abgeleiteten Klasse aufrufen, sollten Sie nicht der Basisklasse <xref:System.Windows.Forms.LinkLabel.CreateAccessibilityInstance%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHandle">
+      <MemberSignature Language="C#" Value="protected override void CreateHandle ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CreateHandle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.CreateHandle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein Handle für dieses Steuerelement. Diese Methode sollte ausschließlich von .NET Framework aufgerufen werden. Erbende Klassen müssen immer <see langword="base.createHandle" /> beim Überschreiben dieser Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisabledLinkColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color DisabledLinkColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color DisabledLinkColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LinkLabel.DisabledLinkColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Farbe ab, in der ein deaktivierter Link angezeigt wird, oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> , die die Farbe darstellt, wenn ein deaktivierter Link angezeigt. Die Standardeinstellung ist <see langword="Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ermöglicht Ihnen das Festlegen die Farbe für Links, die deaktiviert sind, in der <xref:System.Windows.Forms.LinkLabel>. Deaktivierter Links führen nicht dazu, dass die <xref:System.Windows.Forms.LinkLabel.LinkClicked> Ereignis ausgelöst wurde.  
+  
+ Es gibt eine Anzahl von Farben, die einen Link zugeordnet. Alle Links in der <xref:System.Windows.Forms.LinkLabel> werden zuerst angezeigt, mit der Farbe, die definiert, der <xref:System.Windows.Forms.LinkLabel.LinkColor%2A> Eigenschaft. Die <xref:System.Windows.Forms.LinkLabel.ActiveLinkColor%2A> Eigenschaft können Sie die Farbe des Links angeben, wenn es gerade geklickt wird. Die <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> Eigenschaft ermöglicht Ihnen, geben Sie die Farbe einer Verknüpfung aus, nachdem er vom Benutzer besucht wurde.  
+  
+> [!NOTE]
+>  Wenn Sie diese Eigenschaft festlegen, stellen Sie sicher, dass die Farbe Sie die Eigenschaft, die keine Konflikte mit der Hintergrundfarbe des Steuerelements festlegen oder der Text nicht ordnungsgemäß angezeigt. Beispielsweise ist die Hintergrundfarbe des Steuerelements `Color.Red` und diese Eigenschaft wird festgelegt, um `Color.Red`, der Text ist nicht richtig angezeigt Wenn die Verknüpfung deaktiviert ist.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.LinkLabel> -Klasse, mit mehreren <xref:System.Windows.Forms.LinkArea> Abschnitten definiert sind, um eine Bezeichnung auf einem Formular angezeigt. Das Beispiel veranschaulicht das Festlegen der <xref:System.Windows.Forms.Label.AutoSize%2A>, <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.DisabledLinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, und <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> Eigenschaften zum Anpassen des Aussehens von der <xref:System.Windows.Forms.LinkLabel>. Die erste <xref:System.Windows.Forms.LinkArea> wird angegeben, mit der <xref:System.Windows.Forms.LinkLabel.LinkArea%2A?displayProperty=nameWithType> Eigenschaft. Zusätzliche Links werden hinzugefügt, um die <xref:System.Windows.Forms.LinkLabel> mithilfe der <xref:System.Windows.Forms.LinkLabel.LinkCollection.Add%2A?displayProperty=nameWithType> Methode. Die Beispiel-Handles die <xref:System.Windows.Forms.LinkLabel.LinkClicked> -Ereignis durch Starten des Webbrowsers für Links und zum Anzeigen einer <xref:System.Windows.Forms.MessageBox> für andere Links.  
+  
+ [!code-cpp[System.Windows.Forms.LinkLabel#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/CPP/linklabel.cpp#1)]
+ [!code-csharp[System.Windows.Forms.LinkLabel#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/CS/linklabel.cs#1)]
+ [!code-vb[System.Windows.Forms.LinkLabel#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/VB/linklabel.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FlatStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.FlatStyle FlatStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.FlatStyle FlatStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LinkLabel.FlatStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FlatStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die flache Darstellung des der <see cref="T:System.Windows.Forms.LinkLabel" />.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.FlatStyle" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für diese Klasse nicht relevant.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinkArea">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.LinkArea LinkArea { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.LinkArea LinkArea" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LinkLabel.LinkArea" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.LinkAreaEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.LinkArea</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Textbereich ab, der als Link behandelt werden soll, oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.LinkArea" /> , der als Link behandelten Bereich darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> Eigenschaft bietet eine schnelle Möglichkeit, geben Sie einen einzelnen Link im Text des anzuzeigenden der <xref:System.Windows.Forms.LinkLabel> Steuerelement. Die <xref:System.Windows.Forms.LinkArea> Objekt enthält Eigenschaften, die die Anfangsposition des Links im Text des Steuerelements sowie die Länge des Texts für den Link angeben. Wenn ein Link mit angegeben wird die <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> -Eigenschaft, der Link hinzugefügt wird die <xref:System.Windows.Forms.LinkLabel.LinkCollection> des Steuerelements. Die <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> Eigenschaft konvertiert die <xref:System.Windows.Forms.LinkArea> Objekt zugewiesen, um eine <xref:System.Windows.Forms.LinkLabel.Link> -Objekt, das in der Auflistung gespeichert wird.  
+  
+ Um mehrere Links auf den Text des Steuerelements hinzugefügt werden, können Sie die <xref:System.Windows.Forms.LinkLabel.Links%2A> Eigenschaft. Die <xref:System.Windows.Forms.LinkLabel.Links%2A> Eigenschaft können Sie die Eigenschaften und Methoden für den Zugriff auf die <xref:System.Windows.Forms.LinkLabel.LinkCollection>, die speichert die Links für das Steuerelement angegeben. Diese Methode zum Hinzufügen von Links zu den <xref:System.Windows.Forms.LinkLabel> auch ermöglicht Ihnen die Angabe von Daten in der <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> -Eigenschaft, die gerade erstellten Link zugeordnet ist. Der Wert, der die <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> Eigenschaft kann verwendet werden, um den Speicherort einer Datei mit Anzeige oder die Adresse einer Website zu speichern.  
+  
+ Wenn eine <xref:System.Windows.Forms.LinkLabel> Steuerelement erstellt wurde, ist einen Standardhyperlink, der enthält den Text innerhalb der <xref:System.Windows.Forms.LinkLabel> Steuerelement hinzugefügt wird die <xref:System.Windows.Forms.LinkLabel.LinkCollection>. Sie können diesen Standardhyperlink überschreiben, indem Sie einen neuen Linkbereich mit Angabe der <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> -Eigenschaft, oder geben Sie eine Verknüpfung mit der <xref:System.Windows.Forms.LinkLabel.LinkCollection.Add%2A> Methode der <xref:System.Windows.Forms.LinkLabel.LinkCollection>. Sie können auch das Standard-Hyperlink entfernen, mit der <xref:System.Windows.Forms.LinkLabel.LinkCollection.Remove%2A> Methode der <xref:System.Windows.Forms.LinkLabel.LinkCollection> Klasse.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> Eigenschaft gibt immer das erste Element in der <xref:System.Windows.Forms.LinkLabel.LinkCollection>, unabhängig davon, wie der Link der Auflistung hinzugefügt wurde.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.LinkArea.Length%2A> Eigenschaft <xref:System.Windows.Forms.LinkArea> variieren, wenn Sie aufrufen <xref:System.Windows.Forms.LinkLabel.UseCompatibleTextRendering%2A>, und die <xref:System.Windows.Forms.LinkLabel.Text%2A> Eigenschaft Doppelbyte-Zeichen enthält. Beim Aufrufen <xref:System.Windows.Forms.LinkLabel.UseCompatibleTextRendering%2A>, die Anzahl der Bytes in der Zeichenfolge zurückgegeben. Andernfalls wird die tatsächliche Anzahl der Zeichen zurückgegeben.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.LinkLabel> -Klasse, mit mehreren <xref:System.Windows.Forms.LinkArea> Abschnitten definiert sind, um eine Bezeichnung auf einem Formular angezeigt. Das Beispiel veranschaulicht das Festlegen der <xref:System.Windows.Forms.Label.AutoSize%2A>, <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.DisabledLinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, und <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> Eigenschaften zum Anpassen des Aussehens von der <xref:System.Windows.Forms.LinkLabel>. Die erste <xref:System.Windows.Forms.LinkArea> wird angegeben, mit der <xref:System.Windows.Forms.LinkLabel.LinkArea%2A?displayProperty=nameWithType> Eigenschaft. Zusätzliche Links werden hinzugefügt, um die <xref:System.Windows.Forms.LinkLabel> mithilfe der <xref:System.Windows.Forms.LinkLabel.LinkCollection.Add%2A?displayProperty=nameWithType> Methode. Die Beispiel-Handles die <xref:System.Windows.Forms.LinkLabel.LinkClicked> -Ereignis durch Starten des Webbrowsers für Links und zum Anzeigen einer <xref:System.Windows.Forms.MessageBox> für andere Links.  
+  
+ [!code-cpp[System.Windows.Forms.LinkLabel#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/CPP/linklabel.cpp#1)]
+ [!code-csharp[System.Windows.Forms.LinkLabel#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/CS/linklabel.cs#1)]
+ [!code-vb[System.Windows.Forms.LinkLabel#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/VB/linklabel.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <see cref="P:System.Windows.Forms.LinkArea.Start" /> Eigenschaft von der <see cref="T:System.Windows.Forms.LinkArea" /> -Objekts ist kleiner als 0 (null).  
+  
+ - oder -   
+  
+ Die <see cref="P:System.Windows.Forms.LinkArea.Length" /> Eigenschaft von der <see cref="T:System.Windows.Forms.LinkArea" /> Objekt ist kleiner als -1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LinkBehavior">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.LinkBehavior LinkBehavior { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.LinkBehavior LinkBehavior" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LinkLabel.LinkBehavior" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.LinkBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der das Verhalten eines Links darstellt, oder legt diesen fest.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.LinkBehavior" />-Werte. Die Standardeinstellung ist <see langword="LinkBehavior.SystemDefault" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Eigenschaft können Sie das Verhalten von Links angeben, wenn sie im Steuerelement angezeigt werden. Z. B. gegebenenfalls Links zu den mit einer Unterstreichung werden nur angezeigt, wenn der Mauszeiger über einen Link befindet, Sie können diese Eigenschaft festlegen `LinkBehavior.HoverUnderline`. Weitere Informationen zu den Typen von Verhaltensweisen, die mit einem Link zugeordnet werden können, finden Sie unter <xref:System.Windows.Forms.LinkBehavior>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.LinkLabel> -Klasse, mit mehreren <xref:System.Windows.Forms.LinkArea> Abschnitten definiert sind, um eine Bezeichnung auf einem Formular angezeigt. Das Beispiel veranschaulicht das Festlegen der <xref:System.Windows.Forms.Label.AutoSize%2A>, <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.DisabledLinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, und <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> Eigenschaften zum Anpassen des Aussehens von der <xref:System.Windows.Forms.LinkLabel>. Die erste <xref:System.Windows.Forms.LinkArea> wird angegeben, mit der <xref:System.Windows.Forms.LinkLabel.LinkArea%2A?displayProperty=nameWithType> Eigenschaft. Zusätzliche Links werden hinzugefügt, um die <xref:System.Windows.Forms.LinkLabel> mithilfe der <xref:System.Windows.Forms.LinkLabel.LinkCollection.Add%2A?displayProperty=nameWithType> Methode. Die Beispiel-Handles die <xref:System.Windows.Forms.LinkLabel.LinkClicked> -Ereignis durch Starten des Webbrowsers für Links und zum Anzeigen einer <xref:System.Windows.Forms.MessageBox> für andere Links.  
+  
+ [!code-cpp[System.Windows.Forms.LinkLabel#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/CPP/linklabel.cpp#1)]
+ [!code-csharp[System.Windows.Forms.LinkLabel#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/CS/linklabel.cs#1)]
+ [!code-vb[System.Windows.Forms.LinkLabel#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/VB/linklabel.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Ein Wert zugewiesen, nicht die <see cref="T:System.Windows.Forms.LinkBehavior" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LinkClicked">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.LinkLabelLinkClickedEventHandler LinkClicked;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.LinkLabelLinkClickedEventHandler LinkClicked" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.LinkLabel.LinkClicked" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.LinkLabelLinkClickedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn im Steuerelement auf einen Link geklickt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel die <xref:System.Windows.Forms.LinkLabel.LinkClicked> -Ereignis behandelt wird, um Aufgaben auszuführen, wenn der Benutzer auf einen Link in das Steuerelement klickt. Der Ereignishandler für die <xref:System.Windows.Forms.LinkLabel.LinkClicked> Ereignis ist eine Instanz von übergeben der <xref:System.Windows.Forms.LinkLabelLinkClickedEventArgs> Klasse enthält eine <xref:System.Windows.Forms.LinkLabel.Link> Objekt, mit dem Link zugeordnet ist, auf die geklickt wurde. Können Sie Angaben der <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> Eigenschaft <xref:System.Windows.Forms.LinkLabel.Link> Klasse, um zu bestimmen, welchen link geklickt wurde oder welche Art von Aufgaben beim Ausführen den Link geklickt werden. Z. B. wenn eine <xref:System.Windows.Forms.LinkLabel> Steuerelement besitzt eine <xref:System.Windows.Forms.LinkLabel.Link> Objekt definiert, mit dessen <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> Eigenschaft auf die Zeichenfolge www.microsoft.com festgelegt wurde, können Sie diese Informationen in einem Ereignishandler für die <xref:System.Windows.Forms.LinkLabel.LinkClicked> Ereignis, um die Website anzuzeigen.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.LinkLabel> Klasse. Die Beispiel-Handles die <xref:System.Windows.Forms.LinkLabel.LinkClicked> Ereignis, indem Sie eine Website öffnen.  
+  
+ [!code-csharp[System.Windows.Forms.LinkLabelSimple#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabelSimple/CS/form.cs#1)]
+ [!code-vb[System.Windows.Forms.LinkLabelSimple#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LinkLabelSimple/VB/form.vb#1)]  
+  
+ Das folgende Beispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.LinkLabel> -Klasse, mit mehreren <xref:System.Windows.Forms.LinkArea> Abschnitten definiert sind, um eine Bezeichnung auf einem Formular angezeigt. Das Beispiel veranschaulicht das Festlegen der <xref:System.Windows.Forms.Label.AutoSize%2A>, <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.DisabledLinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, und <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> Eigenschaften zum Anpassen des Aussehens von der <xref:System.Windows.Forms.LinkLabel>. Die erste <xref:System.Windows.Forms.LinkArea> wird angegeben, mit der <xref:System.Windows.Forms.LinkLabel.LinkArea%2A?displayProperty=nameWithType> Eigenschaft. Zusätzliche Links werden hinzugefügt, um die <xref:System.Windows.Forms.LinkLabel> mithilfe der <xref:System.Windows.Forms.LinkLabel.LinkCollection.Add%2A?displayProperty=nameWithType> Methode. Die Beispiel-Handles die <xref:System.Windows.Forms.LinkLabel.LinkClicked> -Ereignis durch Starten des Webbrowsers für Links und zum Anzeigen einer <xref:System.Windows.Forms.MessageBox> für andere Links.  
+  
+ [!code-cpp[System.Windows.Forms.LinkLabel#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/CPP/linklabel.cpp#1)]
+ [!code-csharp[System.Windows.Forms.LinkLabel#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/CS/linklabel.cs#1)]
+ [!code-vb[System.Windows.Forms.LinkLabel#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/VB/linklabel.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinkColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color LinkColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color LinkColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LinkLabel.LinkColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Farbe ab, in der ein normaler Link angezeigt wird, oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> , die die Farbe zum Anzeigen von ein normaler Link darstellt. Die Standardfarbe wird durch das System angegeben, in der Regel ist dies die Farbe <see langword="Color.Blue" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ermöglicht Ihnen das Festlegen der Farbe, die für alle Links im anfänglich angezeigt wird der <xref:System.Windows.Forms.LinkLabel>.  
+  
+ Es gibt eine Anzahl von Farben, die einen Link zugeordnet. Die <xref:System.Windows.Forms.LinkLabel.ActiveLinkColor%2A> Eigenschaft können Sie die Farbe des Links angeben, wenn es gerade geklickt wird. Die <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> Eigenschaft ermöglicht Ihnen, geben Sie die Farbe einer Verknüpfung aus, nachdem er vom Benutzer besucht wurde. Wenn ein Link deaktiviert ist, die <xref:System.Windows.Forms.LinkLabel.DisabledLinkColor%2A> dient zur Anzeige des Links in einem deaktivierten Zustand.  
+  
+> [!NOTE]
+>  Wenn Sie diese Eigenschaft festlegen, stellen Sie sicher, dass die Farbe Sie die Eigenschaft, die keine Konflikte mit der Hintergrundfarbe des Steuerelements festlegen oder der Text nicht ordnungsgemäß angezeigt. Beispielsweise ist die Hintergrundfarbe des Steuerelements `Color.Red` und diese Eigenschaft wird festgelegt, um `Color.Red`, wird der Text des Links nicht ordnungsgemäß angezeigt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.LinkLabel> -Klasse, mit mehreren <xref:System.Windows.Forms.LinkArea> Abschnitten definiert sind, um eine Bezeichnung auf einem Formular angezeigt. Das Beispiel veranschaulicht das Festlegen der <xref:System.Windows.Forms.Label.AutoSize%2A>, <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.DisabledLinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, und <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> Eigenschaften zum Anpassen des Aussehens von der <xref:System.Windows.Forms.LinkLabel>. Die erste <xref:System.Windows.Forms.LinkArea> wird angegeben, mit der <xref:System.Windows.Forms.LinkLabel.LinkArea%2A?displayProperty=nameWithType> Eigenschaft. Zusätzliche Links werden hinzugefügt, um die <xref:System.Windows.Forms.LinkLabel> mithilfe der <xref:System.Windows.Forms.LinkLabel.LinkCollection.Add%2A?displayProperty=nameWithType> Methode. Die Beispiel-Handles die <xref:System.Windows.Forms.LinkLabel.LinkClicked> -Ereignis durch Starten des Webbrowsers für Links und zum Anzeigen einer <xref:System.Windows.Forms.MessageBox> für andere Links.  
+  
+ [!code-cpp[System.Windows.Forms.LinkLabel#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/CPP/linklabel.cpp#1)]
+ [!code-csharp[System.Windows.Forms.LinkLabel#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/CS/linklabel.cs#1)]
+ [!code-vb[System.Windows.Forms.LinkLabel#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/VB/linklabel.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Links">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.LinkLabel.LinkCollection Links { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.LinkLabel/LinkCollection Links" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LinkLabel.Links" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.LinkLabel+LinkCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Links, die als Bestandteil der <see cref="T:System.Windows.Forms.LinkLabel" />.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.LinkLabel.LinkCollection" /> , die die enthaltenen Links darstellt, die <see cref="T:System.Windows.Forms.LinkLabel" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Forms.LinkLabel> -Steuerelement kann eine beliebige Anzahl von Links innerhalb des Texts des Steuerelements anzeigen. Diese Eigenschaft ermöglicht den Zugriff auf die <xref:System.Windows.Forms.LinkLabel.LinkCollection> zugeordnete Instanz der <xref:System.Windows.Forms.LinkLabel> , die die Auflistung von Links, die im Steuerelement angezeigte darstellt. Anschließend können Sie die Mitglieder der <xref:System.Windows.Forms.LinkLabel.LinkCollection> Klasse hinzufügen, entfernen und Suchen von Links in der Auflistung. Weitere Informationen zu den Arten von Aufgaben mit der Auflistung Link Ihnen ausführen können, finden Sie unter <xref:System.Windows.Forms.LinkLabel.LinkCollection>.  
+  
+ Wenn eine <xref:System.Windows.Forms.LinkLabel> Steuerelement erstellt wurde, ist einen Standardhyperlink, der enthält den Text innerhalb der <xref:System.Windows.Forms.LinkLabel> Steuerelement hinzugefügt wird die <xref:System.Windows.Forms.LinkLabel.LinkCollection>. Sie können diesen Standardhyperlink überschreiben, indem Sie einen neuen Linkbereich mit Angabe der <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> -Eigenschaft, oder geben Sie eine Verknüpfung mit der <xref:System.Windows.Forms.LinkLabel.LinkCollection.Add%2A> Methode der <xref:System.Windows.Forms.LinkLabel.LinkCollection>. Sie können auch das Standard-Hyperlink entfernen, mit der <xref:System.Windows.Forms.LinkLabel.LinkCollection.Remove%2A> Methode der <xref:System.Windows.Forms.LinkLabel.LinkCollection> Klasse.  
+  
+ Wenn Sie nicht benötigen, geben Sie mehr als einen Link zur Anzeige in der <xref:System.Windows.Forms.LinkLabel>, können Sie die <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.LinkLabel> -Klasse, mit mehreren <xref:System.Windows.Forms.LinkArea> Abschnitten definiert sind, um eine Bezeichnung auf einem Formular angezeigt. Das Beispiel veranschaulicht das Festlegen der <xref:System.Windows.Forms.Label.AutoSize%2A>, <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.DisabledLinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, und <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> Eigenschaften zum Anpassen des Aussehens von der <xref:System.Windows.Forms.LinkLabel>. Die erste <xref:System.Windows.Forms.LinkArea> wird angegeben, mit der <xref:System.Windows.Forms.LinkLabel.LinkArea%2A?displayProperty=nameWithType> Eigenschaft. Zusätzliche Links werden hinzugefügt, um die <xref:System.Windows.Forms.LinkLabel> mithilfe der <xref:System.Windows.Forms.LinkLabel.LinkCollection.Add%2A?displayProperty=nameWithType> Methode. Die Beispiel-Handles die <xref:System.Windows.Forms.LinkLabel.LinkClicked> -Ereignis durch Starten des Webbrowsers für Links und zum Anzeigen einer <xref:System.Windows.Forms.MessageBox> für andere Links.  
+  
+ [!code-cpp[System.Windows.Forms.LinkLabel#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/CPP/linklabel.cpp#1)]
+ [!code-csharp[System.Windows.Forms.LinkLabel#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/CS/linklabel.cs#1)]
+ [!code-vb[System.Windows.Forms.LinkLabel#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/VB/linklabel.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinkVisited">
+      <MemberSignature Language="C#" Value="public bool LinkVisited { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool LinkVisited" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LinkLabel.LinkVisited" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob ein Link als bereits besuchter Link angezeigt werden soll, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />Wenn Links angezeigt werden soll, als wären sie besuchten; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Forms.LinkLabel> Steuerelement ist nicht automatisch darauf hin, dass ein Link auf ein bereits besuchter Link ist. Um die Verknüpfung als ein bereits besuchter Link anzuzeigen, können Sie den Wert dieser Eigenschaft auf festgelegt `true` in einem Ereignishandler für das <xref:System.Windows.Forms.LinkLabel.LinkClicked> -Ereignis für ein <xref:System.Windows.Forms.LinkLabel>. Ein bereits besuchter Link angezeigt, über die angegebene Farbe der <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> Eigenschaft von der <xref:System.Windows.Forms.LinkLabel> Steuerelement. Wenn das Formular mit dem <xref:System.Windows.Forms.LinkLabel> Steuerelement geschlossen wird, der damit verbundenen mit dem Link "Alle anzeigen"-Status wird gelöscht. Um den Anzeigezustand der Link beibehalten werden sollen, müssen Sie zum Speichern des Anzeigestatus des Links in einer Einstellung in der Registrierung Ihrer Anwendung zugeordnet.  
+  
+> [!NOTE]
+>  Diese Eigenschaft wirkt sich nur auf den ersten Link in definiert die <xref:System.Windows.Forms.LinkLabel> Steuerelement. Wenn Sie mehr als einen Link im Steuerelement angegeben haben, verwenden Sie die <xref:System.Windows.Forms.LinkLabel.Link.Visited%2A> Eigenschaft von der <xref:System.Windows.Forms.LinkLabel.Link> Klasse. Sie erreichen die Links, die definiert, der <xref:System.Windows.Forms.LinkLabel> mithilfe der <xref:System.Windows.Forms.LinkLabel.Links%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Festlegen der <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A> Eigenschaft mit dem <xref:System.Windows.Forms.LinkBehavior> Enumeration. Außerdem zeigt es die Einstellung der <xref:System.Windows.Forms.LinkLabel.ActiveLinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A> und <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> Eigenschaften. Zum Ausführen dieses Beispiels fügen Sie ihn in ein leeres Formular, und rufen `InitializeLinkLabel` aus den Konstruktor des Formulars oder `Load` Methode.  
+  
+ [!code-cpp[System.Windows.Forms.LinkLabelExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabelExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.LinkLabelExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabelExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.LinkLabelExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LinkLabelExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAutoSizeChanged">
+      <MemberSignature Language="C#" Value="protected override void OnAutoSizeChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnAutoSizeChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.OnAutoSizeChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Label.AutoSizeChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.LinkLabel.OnAutoSizeChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.LinkLabel.OnAutoSizeChanged(System.EventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.LinkLabel.OnAutoSizeChanged(System.EventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEnabledChanged">
+      <MemberSignature Language="C#" Value="protected override void OnEnabledChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnEnabledChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.OnEnabledChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Ermöglicht die Behandlung der <see cref="E:System.Windows.Forms.Control.EnabledChanged" /> Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.LinkLabel.OnEnabledChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.LinkLabel.OnEnabledChanged(System.EventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.LinkLabel.OnEnabledChanged(System.EventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFontChanged">
+      <MemberSignature Language="C#" Value="protected override void OnFontChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnFontChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.OnFontChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.FontChanged" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnGotFocus">
+      <MemberSignature Language="C#" Value="protected override void OnGotFocus (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnGotFocus(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.OnGotFocus(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.GotFocus" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.LinkLabel.OnGotFocus(System.EventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.Control.OnGotFocus(System.EventArgs)" /> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyDown">
+      <MemberSignature Language="C#" Value="protected override void OnKeyDown (System.Windows.Forms.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyDown(class System.Windows.Forms.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.OnKeyDown(System.Windows.Forms.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.KeyEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="M:System.Windows.Forms.Control.OnKeyDown(System.Windows.Forms.KeyEventArgs)" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.LinkLabel.OnKeyDown(System.Windows.Forms.KeyEventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.Control.OnKeyDown(System.Windows.Forms.KeyEventArgs)" /> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLinkClicked">
+      <MemberSignature Language="C#" Value="protected virtual void OnLinkClicked (System.Windows.Forms.LinkLabelLinkClickedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnLinkClicked(class System.Windows.Forms.LinkLabelLinkClickedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.OnLinkClicked(System.Windows.Forms.LinkLabelLinkClickedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.LinkLabelLinkClickedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.LinkLabelLinkClickedEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.LinkLabel.LinkClicked" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.LinkLabel.OnLinkClicked%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.LinkLabel.OnLinkClicked(System.Windows.Forms.LinkLabelLinkClickedEventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.LinkLabel.OnLinkClicked(System.Windows.Forms.LinkLabelLinkClickedEventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLostFocus">
+      <MemberSignature Language="C#" Value="protected override void OnLostFocus (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnLostFocus(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.OnLostFocus(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.LostFocus" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.LinkLabel.OnLostFocus(System.EventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.Control.OnLostFocus(System.EventArgs)" /> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseDown">
+      <MemberSignature Language="C#" Value="protected override void OnMouseDown (System.Windows.Forms.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseDown(class System.Windows.Forms.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.OnMouseDown(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.MouseEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="M:System.Windows.Forms.Control.OnMouseDown(System.Windows.Forms.MouseEventArgs)" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.LinkLabel.OnMouseDown(System.Windows.Forms.MouseEventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.Control.OnMouseDown(System.Windows.Forms.MouseEventArgs)" /> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseLeave">
+      <MemberSignature Language="C#" Value="protected override void OnMouseLeave (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseLeave(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.OnMouseLeave(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="M:System.Windows.Forms.Control.OnMouseLeave(System.EventArgs)" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.LinkLabel.OnMouseLeave(System.EventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.Control.OnMouseLeave(System.EventArgs)" /> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseMove">
+      <MemberSignature Language="C#" Value="protected override void OnMouseMove (System.Windows.Forms.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseMove(class System.Windows.Forms.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.OnMouseMove(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.MouseEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="M:System.Windows.Forms.Control.OnMouseMove(System.Windows.Forms.MouseEventArgs)" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.LinkLabel.OnMouseMove(System.Windows.Forms.MouseEventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.Control.OnMouseMove(System.Windows.Forms.MouseEventArgs)" /> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseUp">
+      <MemberSignature Language="C#" Value="protected override void OnMouseUp (System.Windows.Forms.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseUp(class System.Windows.Forms.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.OnMouseUp(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.MouseEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="M:System.Windows.Forms.Control.OnMouseUp(System.Windows.Forms.MouseEventArgs)" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.LinkLabel.OnMouseUp(System.Windows.Forms.MouseEventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.Control.OnMouseUp(System.Windows.Forms.MouseEventArgs)" /> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaddingChanged">
+      <MemberSignature Language="C#" Value="protected override void OnPaddingChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPaddingChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.OnPaddingChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.PaddingChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.LinkLabel.OnPaddingChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.LinkLabel.OnPaddingChanged(System.EventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.LinkLabel.OnPaddingChanged(System.EventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaint">
+      <MemberSignature Language="C#" Value="protected override void OnPaint (System.Windows.Forms.PaintEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPaint(class System.Windows.Forms.PaintEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.OnPaint(System.Windows.Forms.PaintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.PaintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.PaintEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="M:System.Windows.Forms.Control.OnPaint(System.Windows.Forms.PaintEventArgs)" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.LinkLabel.OnPaint(System.Windows.Forms.PaintEventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.Control.OnPaint(System.Windows.Forms.PaintEventArgs)" /> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaintBackground">
+      <MemberSignature Language="C#" Value="protected override void OnPaintBackground (System.Windows.Forms.PaintEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPaintBackground(class System.Windows.Forms.PaintEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.OnPaintBackground(System.Windows.Forms.PaintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.PaintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.PaintEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Zeichnet den Hintergrund des Steuerelements.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTextAlignChanged">
+      <MemberSignature Language="C#" Value="protected override void OnTextAlignChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnTextAlignChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.OnTextAlignChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Label.TextAlignChanged" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTextChanged">
+      <MemberSignature Language="C#" Value="protected override void OnTextChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnTextChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.OnTextChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Ermöglicht die Behandlung der <see cref="E:System.Windows.Forms.Control.TextChanged" /> Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OverrideCursor">
+      <MemberSignature Language="C#" Value="protected System.Windows.Forms.Cursor OverrideCursor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Cursor OverrideCursor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LinkLabel.OverrideCursor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt Sie den Mauszeiger zu verwenden, wenn der Mauszeiger innerhalb der Grenzen der <see cref="T:System.Windows.Forms.LinkLabel" />.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.Cursor" /> zu verwenden, wenn der Mauszeiger innerhalb der <see cref="T:System.Windows.Forms.LinkLabel" /> Grenzen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Padding">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Padding Padding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Padding Padding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LinkLabel.Padding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Padding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den inneren Abstand in Pixel, zwischen den Rändern eines eine <see cref="T:System.Windows.Forms.LinkLabel" /> und dessen Inhalt.</summary>
+        <value>
+          <see cref="T:System.Windows.Forms.Padding" />Werte, die den inneren Abstand in Pixel darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PointInLink">
+      <MemberSignature Language="C#" Value="protected System.Windows.Forms.LinkLabel.Link PointInLink (int x, int y);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Windows.Forms.LinkLabel/Link PointInLink(int32 x, int32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.PointInLink(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.LinkLabel+Link</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die horizontale Koordinate des Punktes, der für einen Link zu suchen.</param>
+        <param name="y">Die vertikale Koordinate des Punktes, der für einen Link zu suchen.</param>
+        <summary>Ruft den an den angegebenen Clientkoordinaten positionierten Link ab.</summary>
+        <returns>Ein <see cref="T:System.Windows.Forms.LinkLabel.Link" /> an den angegebenen Koordinaten befindet, die den Link darstellt. Wenn der Punkt nicht über einen Link enthält <see langword="null" /> zurückgegeben wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ermöglicht es Ihnen, um zu bestimmen, ob ein Link zu einem bestimmten Zeitpunkt innerhalb befindet ein <xref:System.Windows.Forms.LinkLabel> Steuerelement. Verwenden Sie diese Methode in einem Ereignishandler für das <xref:System.Windows.Forms.Control.MouseEnter> -Ereignisses des Steuerelements zu bestimmen, ob sich der Mauszeiger über einen Link im Steuerelement bewegt wird. Nachdem Sie festgestellt haben, dass der Mauszeiger über einen Link befindet, können Sie zusätzliche Informationen über den Link dann anzeigen, für den Benutzer über <xref:System.Windows.Forms.StatusBar> Text oder ein <xref:System.Windows.Forms.ToolTip>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessDialogKey">
+      <MemberSignature Language="C#" Value="protected override bool ProcessDialogKey (System.Windows.Forms.Keys keyData);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ProcessDialogKey(valuetype System.Windows.Forms.Keys keyData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.ProcessDialogKey(System.Windows.Forms.Keys)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyData" Type="System.Windows.Forms.Keys" />
+      </Parameters>
+      <Docs>
+        <param name="keyData">Code und der Modifizierer Flags-Taste.</param>
+        <summary>Verarbeitet eine Tastatureingabe im Dialogfeld.</summary>
+        <returns>
+          <see langword="true" />den Schlüssel zu verwenden; <see langword="false" /> , damit die weitere Verarbeitung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird während der Verarbeitung von Nachrichten vor zur Verarbeitung von Dialogfeldzeichen, z. B. Tabstopp, RETURN, ESCAPESEQUENZEN und Pfeiltasten aufgerufen. Diese Methode wird aufgerufen, wenn nur die `isInputKey` Methode gibt an, dass der Schlüssel für das Steuerelement nicht relevant ist. `processDialogKey`sendet das Zeichen einfach an die übergeordnete `processDialogKey` -Methode, oder gibt "false" werden, wenn das Steuerelement kein übergeordnetes Element besitzt. Die `Form` Klasse überschreibt diese Methode, um die tatsächliche Verarbeitung der Dialogfeld-Schlüssel ausführen. Zum Überschreiben `processDialogKey`, ein Steuerelement sollte zurückgeben `true` um anzugeben, dass sie die Taste verarbeitet wurde. Für Schlüssel, die nicht vom Steuerelement, das Ergebnis des verarbeiteten `base.processDialogChar` zurückgegeben werden soll. Steuerelemente nur in seltenen Fällen, müssen wenn überhaupt, diese Methode überschreiben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="protected override void Select (bool directed, bool forward);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Select(bool directed, bool forward) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.Select(System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="directed" Type="System.Boolean" />
+        <Parameter Name="forward" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="directed">
+          <see langword="true" />, um die Richtung für die Auswahl des Steuerelements anzugeben, andernfalls <see langword="false" />.</param>
+        <param name="forward">
+          <see langword="true" />, um sich in der Aktivierreihenfolge vorwärts zu bewegen, <see langword="false" />, um sich rückwärts zu bewegen.</param>
+        <summary>Aktiviert ein untergeordnetes Steuerelement. Gibt optional die Richtung in der Aktivierreihenfolge für die Auswahl des Steuerelements an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBoundsCore">
+      <MemberSignature Language="C#" Value="protected override void SetBoundsCore (int x, int y, int width, int height, System.Windows.Forms.BoundsSpecified specified);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetBoundsCore(int32 x, int32 y, int32 width, int32 height, valuetype System.Windows.Forms.BoundsSpecified specified) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.SetBoundsCore(System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.BoundsSpecified)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+        <Parameter Name="specified" Type="System.Windows.Forms.BoundsSpecified" />
+      </Parameters>
+      <Docs>
+        <param name="x">New-links neben dem Steuerelement.</param>
+        <param name="y">Neue rechts neben dem Steuerelement.</param>
+        <param name="width">Neue Breite des Steuerelements.</param>
+        <param name="height">Neue Höhe des Steuerelements.</param>
+        <param name="specified">Die Werte, für die Angaben gemacht wurden. Dieser Parameter gibt die Benutzerabsicht wieder, nicht die geänderten Werte.</param>
+        <summary>Führt die Arbeit, legt die Begrenzungen dieses Steuerelements fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erbende Klassen außer Kraft setzen zu dieser Funktion können Sie Größe Einschränkungen hinzufügen. Erbende Klassen müssen `base.setBoundsCore` darin, dass tatsächlich die Grenzen des Steuerelements ändern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Forms.IButtonControl.DialogResult">
+      <MemberSignature Language="C#" Value="System.Windows.Forms.DialogResult System.Windows.Forms.IButtonControl.DialogResult { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DialogResult System.Windows.Forms.IButtonControl.DialogResult" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LinkLabel.System#Windows#Forms#IButtonControl#DialogResult" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Windows.Forms.IButtonControl.DialogResult" />.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.DialogResult" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.LinkLabel>-Instanz in eine <xref:System.Windows.Forms.IButtonControl>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Forms.IButtonControl.NotifyDefault">
+      <MemberSignature Language="C#" Value="void IButtonControl.NotifyDefault (bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Forms.IButtonControl.NotifyDefault(bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.System#Windows#Forms#IButtonControl#NotifyDefault(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">
+          <see langword="true" />Wenn das Steuerelement als Standardschaltfläche Verhalten soll. andernfalls <see langword="false" />.</param>
+        <summary>Benachrichtigt den <see cref="T:System.Windows.Forms.LinkLabel" /> Steuerelement, dass es die Standardschaltfläche ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Forms.LinkLabel> Steuerelement angezeigt wird, unabhängig davon, ob er die Standardschaltfläche ist identisch, deshalb wird beim Aufrufen dieser Methode wird nicht geändert werden, die Darstellung oder Verhalten der <xref:System.Windows.Forms.LinkLabel>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Forms.IButtonControl.PerformClick">
+      <MemberSignature Language="C#" Value="void IButtonControl.PerformClick ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Forms.IButtonControl.PerformClick() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.System#Windows#Forms#IButtonControl#PerformClick" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Generiert eine <see cref="E:System.Windows.Forms.Control.Click" /> -Ereignis für die <see cref="T:System.Windows.Forms.LinkLabel" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufrufen dieser Methode bewirkt, dass den ersten Link in der <xref:System.Windows.Forms.LinkLabel.LinkCollection> geklickt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabStop">
+      <MemberSignature Language="C#" Value="public bool TabStop { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TabStop" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LinkLabel.TabStop" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob zur Registerkarte "Benutzer" kann die <see cref="T:System.Windows.Forms.LinkLabel" />.</summary>
+        <value>
+          <see langword="true" />Wenn Sie zur Registerkarte "Benutzer" kann die <see cref="T:System.Windows.Forms.LinkLabel" />ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.LinkLabel.TabStop%2A> Eigenschaft `true` standardmäßig, solange es ist mindestens ein Link mit einer Länge größer als 0 (null) in der <xref:System.Windows.Forms.LinkLabel.Links%2A> Auflistung. Die <xref:System.Windows.Forms.LinkLabel> Steuerelement verfügt über ein einzelnes <xref:System.Windows.Forms.Control.TabIndex%2A> Wert. Jeder Link mit einer Länge größer als 0 ruft jedoch eigene Tabstopp, in Reihenfolge von links nach rechts. Registerkartennavigation zum Verhindern der <xref:System.Windows.Forms.LinkLabel> steuern, legen Sie die <xref:System.Windows.Forms.LinkLabel.TabStop%2A> Eigenschaft `false`. Jedoch beachtet werden, Hinzufügen von neuen verknüpft die <xref:System.Windows.Forms.LinkLabel.Links%2A> Auflistung werden automatisch festgelegt, die <xref:System.Windows.Forms.LinkLabel.TabStop%2A> Eigenschaft `true` erneut.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabStopChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler TabStopChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TabStopChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.LinkLabel.TabStopChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.Label.TabStop" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.LinkLabel.TabStopChanged> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.LinkLabel> mit dem Namen `LinkLabel1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.LinkLabel.TabStopChanged> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#460](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#460)]
+ [!code-vb[System.Windows.Forms.EventExamples#460](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#460)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public override string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LinkLabel.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text angezeigt, indem die <see cref="T:System.Windows.Forms.LinkLabel" />.</summary>
+        <value>Der Text angezeigt, indem die <see cref="T:System.Windows.Forms.LinkLabel" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseCompatibleTextRendering">
+      <MemberSignature Language="C#" Value="public bool UseCompatibleTextRendering { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseCompatibleTextRendering" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LinkLabel.UseCompatibleTextRendering" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der bestimmt, ob verwendet die <see cref="T:System.Drawing.Graphics" /> Klasse ([!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)]) oder die <see cref="T:System.Windows.Forms.TextRenderer" /> Klasse ([!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)]) Text gerendert.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Drawing.Graphics" /> Klasse sollten verwendet werden, um Textrendering für die Kompatibilität mit den Versionen 1.0 und 1.1 ausführen. der .NET Framework andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.LinkLabel.UseCompatibleTextRendering%2A> -Eigenschaftensatz auf `false`die <xref:System.Windows.Forms.LinkArea> deckt den gesamten Text. Beispielsweise wird Text wie z. B. "Abcd" mit Unterstrichen Leerzeichen gerendert.  
+  
+ Wenn die <xref:System.Windows.Forms.LinkLabel.UseCompatibleTextRendering%2A> -Eigenschaftensatz auf `true`die <xref:System.Windows.Forms.LinkArea> deckt sich nicht auf den gesamten Text.  
+  
+ Die `UseCompatibleTextRendering` Eigenschaft dient als visuelle Kompatibilität zwischen Windows Forms-Steuerelemente, Render Text mithilfe der <xref:System.Windows.Forms.TextRenderer> Klasse und [!INCLUDE[net_v10_short](~/includes/net-v10-short-md.md)] und [!INCLUDE[net_v11_short](~/includes/net-v11-short-md.md)] Anwendungen, die mithilfe der benutzerdefiniertenText-Renderingausführen<xref:System.Drawing.Graphics>Klasse. In den meisten Fällen, wenn Ihre Anwendung nicht von aktualisiert wird [!INCLUDE[net_v10_short](~/includes/net-v10-short-md.md)] oder [!INCLUDE[net_v11_short](~/includes/net-v11-short-md.md)], es wird empfohlen, dass Sie lassen `UseCompatibleTextRendering` auf den Standardwert festgelegt `false`.  
+  
+ Die [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)] basierend <xref:System.Windows.Forms.TextRenderer> Klasse seit der [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] zum Verbessern der Leistung, formatieren Sie Text verbessern und verbessern die Unterstützung für internationale Schriftarten. In früheren Versionen von der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] basierend <xref:System.Drawing.Graphics> Klasse wurde verwendet, um alle Textrendering ausführen. [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)]berechnet Zeichenabstand und Wortumbruch anders als [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)]. In einer Windows Forms-Anwendung, verwendet der <xref:System.Drawing.Graphics> Klasse, um Text zu rendern, dies kann führen, dass des Texts für Steuerelemente, mit denen <xref:System.Windows.Forms.TextRenderer> sich von der restliche Text in der Anwendung angezeigt werden. Um diese Inkompatibilität zu beheben, legen Sie die `UseCompatibleTextRendering` Eigenschaft `true` für ein bestimmtes Steuerelement. Festzulegende `UseCompatibleTextRendering` auf `true` rufen Sie für alle unterstützten Steuerelemente in der Anwendung, die <xref:System.Windows.Forms.Application.SetCompatibleTextRenderingDefault%2A?displayProperty=nameWithType> Methode mit einem Parameter des `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitedLinkColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color VisitedLinkColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color VisitedLinkColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LinkLabel.VisitedLinkColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Farbe ab, in der ein bereits besuchter Link angezeigt wird, oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> , die die Farbe für Links angezeigt, die aktiviert wurden darstellt. Die Standardfarbe wird durch das System angegeben, in der Regel ist dies die Farbe <see langword="Color.Purple" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ermöglicht Ihnen die Farbe an, die für alle Links in der `LinkLabel` <xref:System.Windows.Forms> , die vom Benutzer besucht wurde haben.  
+  
+ Es gibt eine Anzahl von Farben, die einen Link zugeordnet. Alle Links in der <xref:System.Windows.Forms.LinkLabel> werden zuerst angezeigt, mit der Farbe, die definiert, der <xref:System.Windows.Forms.LinkLabel.LinkColor%2A> Eigenschaft. Die <xref:System.Windows.Forms.LinkLabel.ActiveLinkColor%2A> Eigenschaft können Sie die Farbe des Links angeben, wenn es gerade geklickt wird. Wenn ein Link deaktiviert ist, die <xref:System.Windows.Forms.LinkLabel.DisabledLinkColor%2A> dient zur Anzeige des Links in einem deaktivierten Zustand.  
+  
+> [!NOTE]
+>  Wenn Sie diese Eigenschaft festlegen, stellen Sie sicher, dass die Farbe Sie die Eigenschaft, die keine Konflikte mit der Hintergrundfarbe des Steuerelements festlegen oder der Text nicht ordnungsgemäß angezeigt. Beispielsweise ist die Hintergrundfarbe des Steuerelements `Color.Red` und diese Eigenschaft wird festgelegt, um `Color.Red`, der Text ist nicht richtig angezeigt Wenn der Link als ein bereits besuchter Link angezeigt wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.LinkLabel> -Klasse, mit mehreren <xref:System.Windows.Forms.LinkArea> Abschnitten definiert sind, um eine Bezeichnung auf einem Formular angezeigt. Das Beispiel veranschaulicht das Festlegen der <xref:System.Windows.Forms.Label.AutoSize%2A>, <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.DisabledLinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, und <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> Eigenschaften zum Anpassen des Aussehens von der <xref:System.Windows.Forms.LinkLabel>. Die erste <xref:System.Windows.Forms.LinkArea> wird angegeben, mit der <xref:System.Windows.Forms.LinkLabel.LinkArea%2A?displayProperty=nameWithType> Eigenschaft. Zusätzliche Links werden hinzugefügt, um die <xref:System.Windows.Forms.LinkLabel> mithilfe der <xref:System.Windows.Forms.LinkLabel.LinkCollection.Add%2A?displayProperty=nameWithType> Methode. Die Beispiel-Handles die <xref:System.Windows.Forms.LinkLabel.LinkClicked> -Ereignis durch Starten des Webbrowsers für Links und zum Anzeigen einer <xref:System.Windows.Forms.MessageBox> für andere Links.  
+  
+ [!code-cpp[System.Windows.Forms.LinkLabel#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/CPP/linklabel.cpp#1)]
+ [!code-csharp[System.Windows.Forms.LinkLabel#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/CS/linklabel.cs#1)]
+ [!code-vb[System.Windows.Forms.LinkLabel#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/VB/linklabel.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WndProc">
+      <MemberSignature Language="C#" Value="protected override void WndProc (ref System.Windows.Forms.Message msg);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void WndProc(valuetype System.Windows.Forms.Message&amp; msg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.WndProc(System.Windows.Forms.Message@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="msg">Die zu verarbeitende Meldung.</param>
+        <summary>Verarbeitet die angegebene Windows-Meldung.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit nicht verwaltetem Code. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

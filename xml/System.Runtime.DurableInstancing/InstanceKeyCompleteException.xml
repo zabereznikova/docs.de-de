@@ -1,0 +1,211 @@
+<Type Name="InstanceKeyCompleteException" FullName="System.Runtime.DurableInstancing.InstanceKeyCompleteException">
+  <TypeSignature Language="C#" Value="public class InstanceKeyCompleteException : System.Runtime.DurableInstancing.InstancePersistenceCommandException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit InstanceKeyCompleteException extends System.Runtime.DurableInstancing.InstancePersistenceCommandException" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.DurableInstancing.InstanceKeyCompleteException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.DurableInstancing.InstancePersistenceCommandException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ein Dauerhaftigkeitsanbieter löst diese Ausnahme aus, wenn er davon ausgeht, einen Instanzschlüssel im zugeordneten Zustand vorzufinden, sich der Schlüssel jedoch im abgeschlossenen Zustand befindet.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstanceKeyCompleteException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceKeyCompleteException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstanceKeyCompleteException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstanceKeyCompleteException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceKeyCompleteException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Der Grund für die Ausnahme.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstanceKeyCompleteException" />-Klasse mithilfe der Fehlermeldung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected InstanceKeyCompleteException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceKeyCompleteException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die Informationen zur aktuellen Ausnahme.</param>
+        <param name="context">Die Kontextinformationen zur Quelle bzw. zum Ziel.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstanceKeyCompleteException" />-Klasse mit den serialisierten Daten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstanceKeyCompleteException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceKeyCompleteException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Der Grund für die Ausnahme.</param>
+        <param name="innerException">Die Ausnahme, die die aktuelle Ausnahme verursacht hat.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstanceKeyCompleteException" />-Klasse mithilfe der Fehlermeldung und der Informationen zur inneren Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstanceKeyCompleteException (System.Xml.Linq.XName commandName, System.Runtime.DurableInstancing.InstanceKey instanceKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Linq.XName commandName, class System.Runtime.DurableInstancing.InstanceKey instanceKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceKeyCompleteException.#ctor(System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceKey)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="commandName" Type="System.Xml.Linq.XName" />
+        <Parameter Name="instanceKey" Type="System.Runtime.DurableInstancing.InstanceKey" />
+      </Parameters>
+      <Docs>
+        <param name="commandName">Der XName (Kombination aus Namespace und Name) des Befehls.</param>
+        <param name="instanceKey">Die Informationen zum Instanzschlüssel.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstanceKeyCompleteException" />-Klasse unter Verwendung des Namens des Befehls und der Informationen zum Instanzschlüssel.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstanceKeyCompleteException (System.Xml.Linq.XName commandName, System.Runtime.DurableInstancing.InstanceKey instanceKey, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Linq.XName commandName, class System.Runtime.DurableInstancing.InstanceKey instanceKey, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceKeyCompleteException.#ctor(System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceKey,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="commandName" Type="System.Xml.Linq.XName" />
+        <Parameter Name="instanceKey" Type="System.Runtime.DurableInstancing.InstanceKey" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="commandName">Der XName (Kombination aus Namespace und Name) des Befehls.</param>
+        <param name="instanceKey">Die Informationen zum Instanzschlüssel.</param>
+        <param name="innerException">Die Ausnahme, die die aktuelle Ausnahme verursacht hat.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstanceKeyCompleteException" />-Klasse unter Verwendung des Namens des Befehls, der Informationen zum Instanzschlüssel und der inneren Ausnahme (der Ausnahme, die die aktuelle Ausnahme verursacht hat).</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstanceKeyCompleteException (System.Xml.Linq.XName commandName, Guid instanceId, System.Runtime.DurableInstancing.InstanceKey instanceKey, string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Linq.XName commandName, valuetype System.Guid instanceId, class System.Runtime.DurableInstancing.InstanceKey instanceKey, string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceKeyCompleteException.#ctor(System.Xml.Linq.XName,System.Guid,System.Runtime.DurableInstancing.InstanceKey,System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="commandName" Type="System.Xml.Linq.XName" />
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="instanceKey" Type="System.Runtime.DurableInstancing.InstanceKey" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="commandName">Der XName (Kombination aus Namespace und Name) des Befehls.</param>
+        <param name="instanceId">Die ID der Instanz, für die der Befehl ausgeführt wurde.</param>
+        <param name="instanceKey">Die Informationen zum Instanzschlüssel.</param>
+        <param name="message">Fehlermeldung, in der die Ursache der Ausnahme erklärt wird.</param>
+        <param name="innerException">Die Ausnahme, die die aktuelle Ausnahme verursacht hat.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstanceKeyCompleteException" />-Klasse unter Verwendung des Namens des Befehls, der ID der Instanz, für die der Befehl ausgeführt wurde, Informationen zum Instanzschlüssel, der Fehlermeldung, aus der der Grund für die Ausnahme hervorgeht, und der inneren Ausnahme, also der Ausnahme, die die aktuelle Ausnahme verursacht hat (als Parameter übergeben).</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceKeyCompleteException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die serialisierten Objektdaten über die ausgelöste Ausnahme.</param>
+        <param name="context">Die Kontextinformationen über die Quelle oder das Ziel.</param>
+        <summary>Legt das <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Objekt mit Informationen zur Ausnahme fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceKey">
+      <MemberSignature Language="C#" Value="public System.Runtime.DurableInstancing.InstanceKey InstanceKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.DurableInstancing.InstanceKey InstanceKey" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.DurableInstancing.InstanceKeyCompleteException.InstanceKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.DurableInstancing.InstanceKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enthält Informationen zum Instanzschlüssel.</summary>
+        <value>Die Informationen zum Instanzschlüssel. Geben NULL zurück, wenn der Instanzschlüssel unbekannt ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

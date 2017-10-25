@@ -1,0 +1,91 @@
+<Type Name="INullable" FullName="System.Data.SqlTypes.INullable">
+  <TypeSignature Language="C#" Value="public interface INullable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract INullable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.SqlTypes.INullable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.SqlClient</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Alle der <see cref="N:System.Data.SqlTypes" /> Objekte und-Strukturen implementieren die <see langword="INullable" /> Schnittstelle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `SqlTypes`können den Wert Null enthalten, und Verwenden von Datenbanksemantik für die Bewertung von NULL-Werte. NULL-Werte werden in einer Datenbank verwendet, um einen unbekannten oder fehlenden Wert anzugeben.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsNull">
+      <MemberSignature Language="C#" Value="public bool IsNull { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNull" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlTypes.INullable.IsNull" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob eine Struktur null ist. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <value>
+          <see cref="T:System.Data.SqlTypes.SqlBoolean" />
+          <see langword="true" />Wenn der Wert dieses Objekts null ist. Andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für alle <xref:System.Data.SqlTypes>-Instanzen ist NULL. Verwendung <xref:System.Data.SqlTypes.INullable.IsNull%2A> Eigenschaft zum Testen auf null-Werte.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine <xref:System.Data.DataTable> mit zwei Spalten erstellt, die als <xref:System.Data.SqlTypes.SqlInt32> und <xref:System.Data.SqlTypes.SqlString> definiert werden. Der Code fügt eine Zeile mit bekannten Werten und eine Zeile mit NULL-Werten hinzu und durchläuft dann die <xref:System.Data.DataTable>. Dabei werden den Variablen die Werte zugewiesen und die Ausgabe im Konsolenfenster angezeigt.  
+  
+ [!code-csharp[DataWorks SqlTypes.IsNull#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlTypes.IsNull/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlTypes.IsNull#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlTypes.IsNull/VB/source.vb#1)]  
+  
+ In diesem Beispiel werden die folgenden Ergebnisse angezeigt:  
+  
+```  
+isColumnNull=False, ID=123, Description=Side Mirror  
+isColumnNull=True, ID=Null, Description=Null  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

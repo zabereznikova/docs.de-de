@@ -1,0 +1,108 @@
+<Type Name="MetadataTypeAttribute" FullName="System.ComponentModel.DataAnnotations.MetadataTypeAttribute">
+  <TypeSignature Language="C#" Value="public sealed class MetadataTypeAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MetadataTypeAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.DataAnnotations.MetadataTypeAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Metadatenklasse, eine Datenmodellklasse zugeordnet werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.DataAnnotations.MetadataTypeAttribute> -Attributs können Sie eine Klasse mit einer partiellen Klasse für Data-Modell zuordnen. In dieser zugeordneten Klasse geben Sie Informationen zu zusätzlichen Metadaten, die nicht im Datenmodell enthalten ist.  
+  
+ Angenommen, in der zugeordneten Klasse Sie können wenden die <xref:System.ComponentModel.DataAnnotations.RequiredAttribute> -Attribut auf ein Feld "Daten". Dies führt dazu, dass kein Wert für das Feld angegeben ist, auch wenn diese Einschränkung nicht das Schema der Datenbank erforderlich ist.  
+  
+ Sie verwenden die <xref:System.ComponentModel.DataAnnotations.MetadataTypeAttribute> -Attribut wie folgt:  
+  
+-   Erstellen Sie eine Datei, in der Sie die partielle Klasse für Data-Modell erstellen, die Sie ändern möchten, in der Anwendung.  
+  
+-   Erstellen Sie die zugehörigen Metadaten-Klasse.  
+  
+-   Anwenden der <xref:System.ComponentModel.DataAnnotations.MetadataTypeAttribute> -Attribut auf die partielle Entitätsklasse, die zugeordnete Klasse angeben.  
+  
+ Wenn Sie dieses Attribut anwenden, müssen Sie die folgenden verwendungseinschränkungen befolgen:  
+  
+-   Das Attribut kann nur auf eine Klasse angewendet werden.  
+  
+-   Das Attribut kann nicht von abgeleiteten Klassen geerbt werden.  
+  
+-   Das Attribut kann nur einmal angewendet werden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.ComponentModel.DataAnnotations.MetadataTypeAttribute> , eine partielle Klasse der Entität eine Metadatenklasse zugeordnet werden soll. Das Beispiel wendet die <xref:System.ComponentModel.DataAnnotations.RequiredAttribute> -Attribut auf ein Feld "Daten" zeigen, wie zum Bereitstellen zusätzlicher Informationen in der zugehörigen Metadaten-Klasse.  
+  
+ [!code-csharp[System.ComponentModel.DataAnnotations.MetadataTypeAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.MetadataTypeAttribute/CS/Customer.cs#1)]
+ [!code-vb[System.ComponentModel.DataAnnotations.MetadataTypeAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.MetadataTypeAttribute/VB/Customer.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MetadataTypeAttribute (Type metadataClassType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type metadataClassType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.MetadataTypeAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="metadataClassType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="metadataClassType">Die Metadatenklasse zu verweisen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.DataAnnotations.MetadataTypeAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.ComponentModel.DataAnnotations.MetadataTypeAttribute> , eine partielle Klasse der Entität eine Metadatenklasse zugeordnet werden soll.  
+  
+ [!code-csharp[System.ComponentModel.DataAnnotations.MetadataTypeAttribute#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.MetadataTypeAttribute/CS/Customer.cs#2)]
+ [!code-vb[System.ComponentModel.DataAnnotations.MetadataTypeAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.MetadataTypeAttribute/VB/Customer.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="metadataClassType" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MetadataClassType">
+      <MemberSignature Language="C#" Value="public Type MetadataClassType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type MetadataClassType" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.MetadataTypeAttribute.MetadataClassType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Metadatenklasse, die eine partielle Klasse des Datenmodells zugeordnet ist.</summary>
+        <value>Der Typwert, der die Metadatenklasse darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

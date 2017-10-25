@@ -1,0 +1,59 @@
+<Type Name="DataTemplateKey" FullName="System.Windows.DataTemplateKey">
+  <TypeSignature Language="C#" Value="public class DataTemplateKey : System.Windows.TemplateKey" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataTemplateKey extends System.Windows.TemplateKey" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.DataTemplateKey" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.TemplateKey</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Den Ressourcenschlüssel für stellt die <see cref="T:System.Windows.DataTemplate" /> Klasse.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataTemplateKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataTemplateKey.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.DataTemplateKey" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie ohne einen-Datentyp erstellt wird, müssen Sie angeben `DataType` als Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataTemplateKey (object dataType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object dataType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataTemplateKey.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dataType" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dataType">Der Typ, für den diese Vorlage vorgesehen ist. Dies liegt entweder an eine <see cref="T:System.Type" /> (gibt an, dass die <see cref="T:System.Windows.DataTemplate" /> wird verwendet, um die Elemente des angegebenen Typs angezeigt werden), oder eine Zeichenfolge (gibt an, dass die <see cref="T:System.Windows.DataTemplate" /> dient zum Anzeigen <see cref="T:System.Xml.XmlNode" /> Elemente mit den angegebenen Tagnamen).</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.DataTemplateKey" />-Klasse mit dem angegebenen Typ.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

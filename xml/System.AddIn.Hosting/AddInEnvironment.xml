@@ -1,0 +1,97 @@
+<Type Name="AddInEnvironment" FullName="System.AddIn.Hosting.AddInEnvironment">
+  <TypeSignature Language="C#" Value="public sealed class AddInEnvironment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AddInEnvironment extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Hosting.AddInEnvironment" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet Zugriff auf die Anwendungsdomäne und der Prozess ein Add-in.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Klasse, um-add-ins in eine gewünschte Umgebung zu laden, wodurch der folgenden Werte sind möglich:  
+  
+-   Eine vorhandene Anwendungsdomäne, für die Sie über, die <xref:System.AppDomain> Objekt.  
+  
+-   Eine Anwendungsdomäne, die automatisch generiert wurde, um ein Add-in zu aktivieren.  
+  
+-   Ein vorhandener externer Prozess.  
+  
+ Zum Abrufen der <xref:System.AddIn.Hosting.AddInEnvironment> für ein Add-in-Objekt, und übergeben Sie das Add-in Anwendungsdomäne, die <xref:System.AddIn.Hosting.AddInEnvironment> Klassenkonstruktor. Alternativ können Sie die <xref:System.AddIn.Hosting.AddInController.AddInEnvironment%2A> Eigenschaft von der <xref:System.AddIn.Hosting.AddInController> Klasse, um das Add-in abrufen <xref:System.AddIn.Hosting.AddInEnvironment> Objekt.  
+  
+ Nach dem Erwerb der <xref:System.AddIn.Hosting.AddInEnvironment> -Objekt, können Sie wie folgt vorgehen:  
+  
+-   Übergeben, <xref:System.AddIn.Hosting.AddInEnvironment> Objekt an die entsprechende <xref:System.AddIn.Hosting.AddInToken.Activate%2A> -methodenüberladung. Das Add-In wird in der Anwendungsdomäne und der Prozess, der durch dargestellt wird aktiviert werden die <xref:System.AddIn.Hosting.AddInEnvironment> Objekt.  
+  
+-   Verwenden der <xref:System.AddIn.Hosting.AddInEnvironment.Process%2A> -Eigenschaft zum Abrufen einer <xref:System.AddIn.Hosting.AddInProcess> Objekt. Übergeben Sie das Objekt in das entsprechende <xref:System.AddIn.Hosting.AddInToken.Activate%2A> -methodenüberladung. Das Add-In wird in den Prozess, der durch dargestellt wird aktiviert werden die <xref:System.AddIn.Hosting.AddInProcess> Objekt jedoch in eine neue Anwendungsdomäne.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AddInEnvironment (AppDomain appDomain);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.AppDomain appDomain) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInEnvironment.#ctor(System.AppDomain)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="appDomain" Type="System.AppDomain" />
+      </Parameters>
+      <Docs>
+        <param name="appDomain">Die Anwendungsdomäne, die das Add-in enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.AddIn.Hosting.AddInEnvironment" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie Zugriff auf die Anwendungsdomäne, die das Add-in enthält, Sie müssen, haben, können Sie mithilfe dieses Konstruktors erhalten das Add-in <xref:System.AddIn.Hosting.AddInEnvironment> Objekt. Andernfalls können Sie die <xref:System.AddIn.Hosting.AddInController.AddInEnvironment%2A> Eigenschaft des der <xref:System.AddIn.Hosting.AddInController> Klasse zum Abrufen der <xref:System.AddIn.Hosting.AddInEnvironment> Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="appDomain" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">Volle Vertrauenswürdigkeit gefordert wird. Ein Aufrufer in der Aufrufkette nicht über ausreichende Berechtigungen haben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Process">
+      <MemberSignature Language="C#" Value="public System.AddIn.Hosting.AddInProcess Process { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.AddIn.Hosting.AddInProcess Process" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Hosting.AddInEnvironment.Process" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Hosting.AddInProcess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.AddIn.Hosting.AddInProcess" /> -Objekt, das den Prozess darstellt, in der das Add-In ausgeführt wird.</summary>
+        <value>Der Prozess, in dem das Add-In ausgeführt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Eigenschaft verwenden, um mehrere Add-Ins in demselben Prozess, aber in unterschiedlichen Domänen zu aktivieren.  
+  
+ Übergeben der <xref:System.AddIn.Hosting.AddInProcess> Objekt abgerufen, mit dieser Eigenschaft auf die entsprechenden <xref:System.AddIn.Hosting.AddInToken.Activate%2A> -methodenüberladung.  
+  
+ Wenn Sie diese in der gleichen Domäne in einem externen Prozess aktivieren möchten übergeben Sie die <xref:System.AddIn.Hosting.AddInEnvironment> Objekt direkt an die <xref:System.AddIn.Hosting.AddInToken.Activate%60%601%28System.AddIn.Hosting.AddInEnvironment%29?displayProperty=nameWithType> -methodenüberladung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

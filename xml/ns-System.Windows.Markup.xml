@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Markup">
+  <Docs>
+    <summary>Stellt Typen zur Unterstützung von XAML. Einige dieser Typen befinden sich im WPF-Assemblys und gelten für WPF-Szenarios mit XAML. Andere Typen in diesem Namespace bieten Unterstützung für .NET Framework-XAML-Dienste im Allgemeinen und erfordern keine Verweise auf WPF-Assemblys.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

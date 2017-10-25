@@ -1,0 +1,162 @@
+<Type Name="ProviderBase" FullName="System.Configuration.Provider.ProviderBase">
+  <TypeSignature Language="C#" Value="public abstract class ProviderBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ProviderBase extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.Provider.ProviderBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine basisimplementierung für die erweiterbare Anbietermodell bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Anbietermodell ist vorgesehen, um alle oder einen Teil der Funktionalität von mehreren ASP.NET-Funktionen, z. B. Mitgliedschaft, Profile und die geschützte Konfiguration zu kapseln. Er ermöglicht es dem Entwickler unterstützende Klassen erstellen, die mehrere Implementierungen der gekapselte Funktionalität bereitstellen. Darüber hinaus können Entwickler neue Funktionen, die mit dem Schreiben. Dies kann eine effektive Möglichkeit für mehrere Implementierungen von Funktionen eine Funktion zu unterstützen, ohne den Code der Funktion duplizieren oder die Anwendungsschicht kann, wenn die Implementierungsmethode geändert werden muss.  
+  
+ Die <xref:System.Configuration.Provider.ProviderBase> Klasse ist einfach und enthält nur einige grundlegende Methoden und Eigenschaften, die allen Anbietern sind. Featurespezifische Anbieter (z. B. <xref:System.Web.Security.MembershipProvider>) erben <xref:System.Configuration.Provider.ProviderBase> und legen die erforderlichen Methoden und Eigenschaften, die die implementierungsspezifischen Anbieter für die jeweilige Funktion zu unterstützen, müssen. Implementierungsspezifische Anbieter (z. B. <xref:System.Web.Security.SqlMembershipProvider>) erben wiederum von einem Anbieter featurespezifische (in diesem Fall <xref:System.Web.Security.MembershipProvider>).  
+  
+ Der wichtigste Aspekt des Anbietermodells ist, dass die Implementierung (z. B., ob Daten als Textdatei oder in einer Datenbank persistent gespeichert werden) aus dem Anwendungscode abstrahiert wird. Der Typ des Anbieters implementierungsspezifische für die angegebene Funktion wird in einer Konfigurationsdatei festgelegt. Klicken Sie dann die Funktionsebene-Anbieter in den Typ aus der Konfigurationsdatei liest und fungiert als Factory für die Funktion Code. Der Anwendungsentwickler kann dann die Featureklassen im Anwendungscode verwenden. Der Implementierungstyp kann in der Konfigurationsdatei ausgelagert werden dadurch entfällt die Notwendigkeit schreiben Sie den Code, um die verschiedenen Implementierungsmethoden aufzunehmen.  
+  
+ Der Anbieter in ASP.NET sind größtenteils Abstraktionen Data Persistenz-Implementierungen für Funktionen wie die Profile oder die Mitgliedschaft. Allerdings kann dieses Modell auf eine andere Art von Funktionen angewendet werden, die abstrahiert und auf verschiedene Weise implementiert werden konnte.  
+  
+   
+  
+## Examples  
+ Ein Beispiel zum Verwenden der <xref:System.Configuration.Provider.ProviderBase> Klasse, finden Sie unter [Profil Anbieter Implementierungsbeispiel](http://msdn.microsoft.com/library/c36e8a56-b416-40b7-95c1-c662cfb8f906).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ProviderBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Provider.ProviderBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.Provider.ProviderBase" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public virtual string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Provider.ProviderBase.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine kurze, benutzerfreundliche Beschreibung für die Anzeige in Verwaltungstools oder anderen Benutzeroberflächen (UIs).</summary>
+        <value>Eine kurze, benutzerfreundliche Beschreibung für die Anzeige in Verwaltungstools oder anderen Benutzeroberflächen geeignet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein konfigurierter Anbieter eine Beschreibung, den Wert des keinen bereitstellt der <xref:System.Configuration.Provider.ProviderBase.Name%2A> Eigenschaft wird als Standardwert zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public virtual void Initialize (string name, System.Collections.Specialized.NameValueCollection config);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize(string name, class System.Collections.Specialized.NameValueCollection config) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Provider.ProviderBase.Initialize(System.String,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="config" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Anzeigename des Anbieters.</param>
+        <param name="config">Eine Auflistung der Name-Wert-Paare, die in der Konfiguration für diesen Anbieter die anbieterspezifischen Attribute darstellen.</param>
+        <summary>Initialisiert den Konfigurations-Generator.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die basisklassenimplementierung intern verfolgt die Anzahl der Male des Anbieters `Initialize` -Methode aufgerufen wurde. Wenn ein Anbieter nicht mehr als einmal initialisiert wird ein `InvalidOperationException` wird ausgelöst, die besagt, dass der Anbieter bereits initialisiert ist.  
+  
+ Da die meisten Anbieter-Aufruf feature <xref:System.Configuration.Provider.ProviderBase.Initialize%2A> vor der Durchführung von anbieterspezifischen Initialisierung, wird diese Methode einen zentralen Ort zum Verhindern einer doppelten Initialisierung.  
+  
+   
+  
+## Examples  
+ Ein Beispiel zum Verwenden von <xref:System.Configuration.Provider.ProviderBase.Initialize%2A>, finden Sie unter [Profil Anbieter Implementierungsbeispiel](http://msdn.microsoft.com/library/c36e8a56-b416-40b7-95c1-c662cfb8f906).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Name des Anbieters lautet <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Der Name des Anbieters weist die Länge 0 (null) auf.</exception>
+        <exception cref="T:System.InvalidOperationException">Es wurde versucht, <see cref="M:System.Configuration.Provider.ProviderBase.Initialize(System.String,System.Collections.Specialized.NameValueCollection)" /> für einen Anbieter aufzurufen, nachdem der Anbieter bereits initialisiert wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public virtual string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Provider.ProviderBase.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Anzeigenamen, die zum Verweisen auf den Anbieter während der Konfiguration ab.</summary>
+        <value>Der Anzeigename verwendet, um den Anbieter während der Konfiguration zu verweisen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das empfohlene Muster für diese Zeichenfolge ist: [*Anbieterersteller*] [*Implementierungstyp*] [*Feature*] Anbieter. Obwohl die <xref:System.Configuration.Provider.ProviderBase.Description%2A> Eigenschaft bietet auch eine benutzerfreundliche Beschreibung der <xref:System.Configuration.Provider.ProviderBase.Name%2A> Eigenschaft dient als Bezeichner für den Anbieter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

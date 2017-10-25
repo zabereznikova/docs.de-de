@@ -1,0 +1,136 @@
+<Type Name="ThemeDictionaryExtension" FullName="System.Windows.ThemeDictionaryExtension">
+  <TypeSignature Language="C#" Value="public class ThemeDictionaryExtension : System.Windows.Markup.MarkupExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ThemeDictionaryExtension extends System.Windows.Markup.MarkupExtension" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.ThemeDictionaryExtension" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Markup.MarkupExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.MarkupExtensionReturnType(typeof(System.Uri))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementiert das aktuelle Systemdesign eine Markuperweiterung, die es ermöglicht Anwendern Steuerelementtypen anpassen Grundlage.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse ist eine Implementierung der Markuperweiterung. Markuperweiterungsklassen vorhanden sind, hauptsächlich, dass die Infrastruktur für einige Aspekte der unterstützen die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] -prozessorimplementierung und die durch eine Markuperweiterung offengelegten Mitglieder sind nicht in der Regel von Benutzercode aufgerufen. Diese Erweiterung unterstützt die [ThemeDictionary Markuperweiterung](~/docs/framework/wpf/advanced/themedictionary-markup-extension.md) Verwendung von [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+<a name="xamlTextUsage_ThemeDictionaryExtension"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Für [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Informationen finden Sie unter [ThemeDictionary Markuperweiterung](~/docs/framework/wpf/advanced/themedictionary-markup-extension.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ThemeDictionaryExtension ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ThemeDictionaryExtension.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.ThemeDictionaryExtension" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ThemeDictionaryExtension (string assemblyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string assemblyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ThemeDictionaryExtension.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="assemblyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="assemblyName">Die Assembly-Zeichenfolge.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.ThemeDictionaryExtension" /> -Klasse unter Verwendung des angegebenen Assemblynamens.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyName">
+      <MemberSignature Language="C#" Value="public string AssemblyName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AssemblyName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.ThemeDictionaryExtension.AssemblyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Zeichenfolge, die Einstellung einer bestimmten Benennungskonvention zu identifizieren, welche Wörterbuch für ein bestimmtes Design angewendet wird.</summary>
+        <value>Die Assembly-Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_AssemblyName"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Für [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Informationen finden Sie unter [ThemeDictionary Markuperweiterung](~/docs/framework/wpf/advanced/themedictionary-markup-extension.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProvideValue">
+      <MemberSignature Language="C#" Value="public override object ProvideValue (IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ProvideValue(class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ThemeDictionaryExtension.ProvideValue(System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Ein Objekt, das Dienste für die Markuperweiterung bereitstellen kann. Dieser Dienst wird erwartet, um Ergebnisse für bereitzustellen <see cref="T:System.Windows.Markup.IXamlTypeResolver" />.</param>
+        <summary>Gibt ein Objekt zurück, das auf die Eigenschaft festgelegt werden soll, auf die diese Erweiterung angewendet wird. Für <see cref="T:System.Windows.ThemeDictionaryExtension" />, dies ist die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] Wert für eine bestimmte Erweiterung Wörterbuch.</summary>
+        <returns>Der Objektwert, der für die Eigenschaft festgelegt werden soll, auf die die Erweiterung angewendet wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode unterstützt [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] -prozessorimplementierung, und sollte nicht direkt aufgerufen werden. Die [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] -prozessorimplementierung verwendet diese Methode für die ordnungsgemäße Behandlung von `ThemeResourceDictionary` erweiterungswerte während der Erstellung des Objekts.  
+  
+ Diese Implementierung verwendet Dienste basierend auf übergebenem `serviceProvider`. Es muss nicht `null`. Die `serviceProvider` Objekt wird erwartet, dass implementieren <xref:System.Windows.Markup.IXamlTypeResolver>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Windows.ThemeDictionaryExtension.AssemblyName" />-Eigenschaft ist <see langword="null" />. Sie müssen diesen Wert festlegen, während der Erstellung oder vor der Verwendung der <see cref="M:System.Windows.ThemeDictionaryExtension.ProvideValue(System.IServiceProvider)" /> Methode.  
+  
+ - oder -   
+  
+ <paramref name="serviceProvider" />ist <see langword="null" /> oder stellt keinen Dienst für <see cref="T:System.Windows.Markup.IXamlTypeResolver" />.  
+  
+ - oder -   
+  
+ <paramref name="serviceProvider" />Gibt einen Zieltyp an, die nicht übereinstimmen <see cref="P:System.Windows.ResourceDictionary.Source" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

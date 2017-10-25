@@ -1,0 +1,129 @@
+<Type Name="DataSetViewSchema" FullName="System.Web.UI.Design.DataSetViewSchema">
+  <TypeSignature Language="C#" Value="public sealed class DataSetViewSchema : System.Web.UI.Design.IDataSourceViewSchema" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataSetViewSchema extends System.Object implements class System.Web.UI.Design.IDataSourceViewSchema" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.DataSetViewSchema" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.Design.IDataSourceViewSchema</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Die Struktur bzw. das Schema darstellt, der eine <see cref="T:System.Data.DataTable" />. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.Design.DataSetViewSchema> Klasse, um die Liste der Struktur der Daten mithilfe einer <xref:System.Data.DataTable> zur Entwurfszeit. Verwenden der <xref:System.Web.UI.Design.DataSetViewSchema.GetFields%2A> Methode zum Abrufen einer Liste mit Informationen zu den einzelnen Feldern als <xref:System.Data.DataColumn> Objekte.  
+  
+ Die <xref:System.Web.UI.Design.DataSetViewSchema> Klasse dient benutzerdefiniertes Steuerelement-Designer-Komponenten beim Benutzeroberflächenoptionen für den Benutzer zur Entwurfszeit, die genau wieder, die Struktur der Daten bereitstellen.  
+  
+ Untersuchen Sie die Komponenten von Daten mit einem <xref:System.Data.DataSet>, verwenden Sie die folgenden Klassen.  
+  
+-   <xref:System.Web.UI.Design.DataSetSchema>  
+  
+-   <xref:System.Web.UI.Design.DataSetViewSchema>  
+  
+-   <xref:System.Web.UI.Design.DataSetFieldSchema>  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataSetViewSchema (System.Data.DataTable dataTable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.DataTable dataTable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DataSetViewSchema.#ctor(System.Data.DataTable)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dataTable" Type="System.Data.DataTable" />
+      </Parameters>
+      <Docs>
+        <param name="dataTable">Die <see cref="T:System.Data.DataTable" /> , die die <see cref="T:System.Web.UI.Design.DataSetViewSchema" /> Instanz beschreibt.</param>
+        <summary>Erstellt eine Instanz der <see cref="T:System.Web.UI.Design.DataSetViewSchema" /> -Klasse mit einer angegebenen <see cref="T:System.Data.DataTable" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildren">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.IDataSourceViewSchema[] GetChildren ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.Design.IDataSourceViewSchema[] GetChildren() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DataSetViewSchema.GetChildren" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.IDataSourceViewSchema[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft ein Array ab, das die in der aktuellen Ansicht enthaltenen untergeordneten Ansichten darstellt.</summary>
+        <returns>
+          <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.DataSetViewSchema.GetChildren%2A> Methode geerbt von <xref:System.Web.UI.Design.IDataSourceViewSchema> ist nicht in dieser Klasse implementiert, und gibt immer `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFields">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.IDataSourceFieldSchema[] GetFields ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.Design.IDataSourceFieldSchema[] GetFields() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DataSetViewSchema.GetFields" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.IDataSourceFieldSchema[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft ein Array mit Informationen zu einzelnen Datenfelder in der Ansicht ab.</summary>
+        <returns>Ein Array von <see cref="T:System.Web.UI.Design.IDataSourceFieldSchema" />-Objekten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.DataSetViewSchema.GetFields%2A> Methode gibt keine Informationen über ausgeblendete Felder zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DataSetViewSchema.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Sicht mithilfe seiner <see cref="P:System.Data.DataTable.TableName" /> Eigenschaft.</summary>
+        <value>Der Name der Sicht.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

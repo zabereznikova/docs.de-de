@@ -1,0 +1,666 @@
+<Type Name="ApplicationTrustCollection" FullName="System.Security.Policy.ApplicationTrustCollection">
+  <TypeSignature Language="C#" Value="public sealed class ApplicationTrustCollection : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ApplicationTrustCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Policy.ApplicationTrustCollection" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Auflistung von<see cref="T:System.Security.Policy.ApplicationTrust" />-Objekten dar. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.Policy.ApplicationTrust>Objekte kapseln sicherheitsrelevanten Aspekten einer Anwendung.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Security.Policy.ApplicationTrust trust);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Security.Policy.ApplicationTrust trust) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.ApplicationTrustCollection.Add(System.Security.Policy.ApplicationTrust)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="trust" Type="System.Security.Policy.ApplicationTrust" />
+      </Parameters>
+      <Docs>
+        <param name="trust">Das hinzuzufügende <see cref="T:System.Security.Policy.ApplicationTrust" />-Objekt.</param>
+        <summary>Fügt der Auflistung ein Element hinzu.</summary>
+        <returns>Der Index, an dem das neue Element eingefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Policy.ApplicationTrust> Objekt am Ende der Auflistung hinzugefügt wird.  Um die Vertrauenswürdigkeit der Anwendung zu entfernen, die Sie zuvor hinzugefügt haben, verwenden die <xref:System.Security.Policy.ApplicationTrustCollection.Remove%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="trust" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.Security.Policy.ApplicationTrust.ApplicationIdentity" /> Eigenschaft von der <see cref="T:System.Security.Policy.ApplicationTrust" /> im angegebenen <paramref name="trust" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.Security.Policy.ApplicationTrust[] trusts);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.Security.Policy.ApplicationTrust[] trusts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.ApplicationTrustCollection.AddRange(System.Security.Policy.ApplicationTrust[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="trusts" Type="System.Security.Policy.ApplicationTrust[]" />
+      </Parameters>
+      <Docs>
+        <param name="trusts">Ein Array vom Typ <see cref="T:System.Security.Policy.ApplicationTrust" /> mit den Objekten, das der Auflistung hinzugefügt.</param>
+        <summary>Kopiert die Elemente des angegebenen <see cref="T:System.Security.Policy.ApplicationTrust" /> Array an das Ende der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Policy.ApplicationTrust> enthaltenen Objekte der `trusts` Array an das Ende der Auflistung angefügt werden.  
+  
+ Um einen Bereich von Anwendungsvertrauensstellungen zu entfernen, die Sie zuvor hinzugefügt haben, verwenden Sie die <xref:System.Security.Policy.ApplicationTrustCollection.RemoveRange%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="trusts" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.Security.Policy.ApplicationTrust.ApplicationIdentity" /> Eigenschaft ein <see cref="T:System.Security.Policy.ApplicationTrust" /> im angegebenen <paramref name="trust" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.Security.Policy.ApplicationTrustCollection trusts);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.Security.Policy.ApplicationTrustCollection trusts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.ApplicationTrustCollection.AddRange(System.Security.Policy.ApplicationTrustCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="trusts" Type="System.Security.Policy.ApplicationTrustCollection" />
+      </Parameters>
+      <Docs>
+        <param name="trusts">Ein <see cref="T:System.Security.Policy.ApplicationTrustCollection" /> mit den Objekten, das der Auflistung hinzugefügt.</param>
+        <summary>Kopiert die Elemente des angegebenen <see cref="T:System.Security.Policy.ApplicationTrustCollection" /> an das Ende der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Policy.ApplicationTrust> in enthaltenen Objekte `trusts` am Ende der Auflistung angefügt werden.  
+  
+ Können Sie die <xref:System.Security.Policy.ApplicationTrustCollection.AddRange%2A> Methode zum schnellen Hinzufügen von einer ganzen Sammlung von Anwendungsobjekte-Vertrauensstellung zu der Auflistung anstelle von manuellen Hinzufügen von jeder Anwendung Vertrauensstellung mithilfe der <xref:System.Security.Policy.ApplicationTrustCollection.Add%2A> Methode.  
+  
+ Um einen Bereich von Anwendungsvertrauensstellungen zu entfernen, die Sie zuvor hinzugefügt haben, verwenden Sie die <xref:System.Security.Policy.ApplicationTrustCollection.RemoveRange%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="trusts" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.Security.Policy.ApplicationTrust.ApplicationIdentity" /> Eigenschaft ein <see cref="T:System.Security.Policy.ApplicationTrust" /> im angegebenen <paramref name="trust" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.ApplicationTrustCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Anwendungsvertrauensstellungen aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede <xref:System.Security.Policy.ApplicationTrust> in der Auflistung wird anhand seiner <xref:System.Security.Policy.ApplicationTrust.ApplicationIdentity%2A> Eigenschaft. Wenn der Wert des der <xref:System.Security.Policy.ApplicationTrust.ApplicationIdentity%2A> Eigenschaft für eine <xref:System.Security.Policy.ApplicationTrust> Objekt in der Auflistung ist `null`, wird eine <xref:System.ArgumentException> ausgelöst wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.Security.Policy.ApplicationTrust.ApplicationIdentity" /> Eigenschaft eines Elements in der Auflistung ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Security.Policy.ApplicationTrust[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Security.Policy.ApplicationTrust[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.ApplicationTrustCollection.CopyTo(System.Security.Policy.ApplicationTrust[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Security.Policy.ApplicationTrust[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionales Array vom Typ <see cref="T:System.Security.Policy.ApplicationTrust" /> , die das Ziel der aus der aktuellen Auflistung kopierten Elemente ist.</param>
+        <param name="index">Der nullbasierte Index im <c>Array</c> an dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die gesamte Auflistung in ein kompatibles eindimensionales Array, wobei am angegebenen Index im Zielarray begonnen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  Alles, was die Anwendung in der Auflistung als vertrauenswürdig eingestuft werden in das Array, beginnend an der angegebenen Indexposition innerhalb des Bereichs von Objekten, die in das Array kopiert alle vorhandenen Daten überschreiben kopiert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist kleiner als die untere <paramref name="array" />-Grenze.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" /> ist mehrdimensional.  
+  
+ - oder -   
+  
+ Die Anzahl der Elemente in der <see cref="T:System.Security.Policy.ApplicationTrustCollection" /> ist größer als der verfügbare Platz vom <paramref name="index" /> bis zum Ende des Ziels <paramref name="array" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.ApplicationTrustCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der in der Auflistung enthaltenen Elemente ab.</summary>
+        <value>Die Anzahl der in der Auflistung befindlichen Elemente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Find">
+      <MemberSignature Language="C#" Value="public System.Security.Policy.ApplicationTrustCollection Find (ApplicationIdentity applicationIdentity, System.Security.Policy.ApplicationVersionMatch versionMatch);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.Policy.ApplicationTrustCollection Find(class System.ApplicationIdentity applicationIdentity, valuetype System.Security.Policy.ApplicationVersionMatch versionMatch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.ApplicationTrustCollection.Find(System.ApplicationIdentity,System.Security.Policy.ApplicationVersionMatch)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.ApplicationTrustCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="applicationIdentity" Type="System.ApplicationIdentity" />
+        <Parameter Name="versionMatch" Type="System.Security.Policy.ApplicationVersionMatch" />
+      </Parameters>
+      <Docs>
+        <param name="applicationIdentity">Ein <see cref="T:System.ApplicationIdentity" /> -Objekt, das der gesuchten Anwendung beschreibt.</param>
+        <param name="versionMatch">Einer der <see cref="T:System.Security.Policy.ApplicationVersionMatch" />-Werte.</param>
+        <summary>Ruft die Anwendungsvertrauensstellungen in der Auflistung, die die Identität des angegebenen entsprechen.</summary>
+        <returns>Ein <see cref="T:System.Security.Policy.ApplicationTrustCollection" /> , enthält alle entsprechenden <see cref="T:System.Security.Policy.ApplicationTrust" /> Objekte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Vertrauenswürdigkeit der Anwendung wird optional durch eine genaue Version-Übereinstimmung, basierend auf den Wert des ausgewählt wurde die `versionMatch` Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Security.Policy.ApplicationTrustEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.Policy.ApplicationTrustEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.ApplicationTrustCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.ApplicationTrustEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein Objekt, das zum Durchlaufen der Auflistung verwendet werden kann.</summary>
+        <returns>Ein <see cref="T:System.Security.Policy.ApplicationTrustEnumerator" /> , der zum Durchlaufen der Auflistung verwendet werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Policy.ApplicationTrustEnumerator> implementiert die <xref:System.Collections.IEnumerator?displayProperty=nameWithType> Schnittstelle, die Sie zum Navigieren innerhalb einer Auflistung ermöglicht.  
+  
+ Verwenden der <xref:System.Collections.IEnumerator.Current%2A?displayProperty=nameWithType> Eigenschaft, um das Element derzeit in der Auflistung verweist.  
+  
+ Verwenden der <xref:System.Collections.IEnumerator.MoveNext%2A?displayProperty=nameWithType> -Methode zum nächsten Element in der Auflistung zu verschieben.  
+  
+ Verwenden der <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> Methode, um den Enumerator auf seine anfängliche Position zu verschieben.  
+  
+> [!NOTE]
+>  Nach dem Erstellen des Enumerators, oder verwenden Sie die <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> Methode, um den Enumerator auf den Anfang der Auflistung neu positionieren müssen, rufen Sie dann die <xref:System.Collections.IEnumerator.MoveNext%2A?displayProperty=nameWithType> Methode, um den Enumerator auf das erste Element zu positionieren. Andernfalls das Element dargestellt, durch die <xref:System.Collections.IEnumerator.Current%2A?displayProperty=nameWithType> Eigenschaft ist nicht definiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.ApplicationTrustCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Zugriff auf die Auflistung synchronisiert ist (threadsicher).</summary>
+        <value>
+          <see langword="false" /> in allen Fällen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Security.Policy.ApplicationTrust this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Policy.ApplicationTrust Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.ApplicationTrustCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.ApplicationTrust</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des Objekts in der Auflistung.</param>
+        <summary>Ruft die <see cref="T:System.Security.Policy.ApplicationTrust" /> -Objekt am angegebenen Index in der Auflistung.</summary>
+        <value>Die <see cref="T:System.Security.Policy.ApplicationTrust" /> Objekt am angegebenen Index in der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Abrufen einer <xref:System.Security.Policy.ApplicationTrust> -Objekt aus der <xref:System.Security.Policy.ApplicationTrustCollection> am angegebenen Index.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" />ist größer als oder gleich der Anzahl der Objekte in der Auflistung.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="index" /> ist ein negativer Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Security.Policy.ApplicationTrust this[string appFullName] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Policy.ApplicationTrust Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.ApplicationTrustCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.ApplicationTrust</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="appFullName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="appFullName">Der vollständige Name der Anwendung.</param>
+        <summary>Ruft die <see cref="T:System.Security.Policy.ApplicationTrust" /> Objekt für die angegebene Anwendung.</summary>
+        <value>Die <see cref="T:System.Security.Policy.ApplicationTrust" /> Objekt für die angegebene Anwendung oder <see langword="null" /> , wenn das Objekt nicht gefunden werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Policy.ApplicationTrust.ApplicationIdentity%2A> -Eigenschaft jedes <xref:System.Security.Policy.ApplicationTrust> Objekt in der Auflistung wird untersucht, für eine <xref:System.ApplicationIdentity.FullName%2A> Eigenschaftswert, der die angegebene Anwendung entspricht der `appFullName` Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Security.Policy.ApplicationTrust trust);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Security.Policy.ApplicationTrust trust) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.ApplicationTrustCollection.Remove(System.Security.Policy.ApplicationTrust)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="trust" Type="System.Security.Policy.ApplicationTrust" />
+      </Parameters>
+      <Docs>
+        <param name="trust">Das zu entfernende <see cref="T:System.Security.Policy.ApplicationTrust" />-Objekt.</param>
+        <summary>Entfernt die angegebene Anwendung Vertrauensstellung aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die gesamte Auflistung durchsucht wird, und alle Instanzen der angegebenen Anwendung Vertrauensstellung entfernt.  
+  
+ Die Objekte, die auf die entfernten Objekte verschoben einrichten, um die frei werdenden Positionen einzunehmen. Die Indizes der Objekte, die verschoben werden, werden auch aktualisiert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="trust" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.Security.Policy.ApplicationTrust.ApplicationIdentity" /> Eigenschaft von der <see cref="T:System.Security.Policy.ApplicationTrust" /> angegebene Objekt <paramref name="trust" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (ApplicationIdentity applicationIdentity, System.Security.Policy.ApplicationVersionMatch versionMatch);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.ApplicationIdentity applicationIdentity, valuetype System.Security.Policy.ApplicationVersionMatch versionMatch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.ApplicationTrustCollection.Remove(System.ApplicationIdentity,System.Security.Policy.ApplicationVersionMatch)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="applicationIdentity" Type="System.ApplicationIdentity" />
+        <Parameter Name="versionMatch" Type="System.Security.Policy.ApplicationVersionMatch" />
+      </Parameters>
+      <Docs>
+        <param name="applicationIdentity">Die <see cref="T:System.ApplicationIdentity" /> von der <see cref="T:System.Security.Policy.ApplicationTrust" /> das zu entfernende Objekt.</param>
+        <param name="versionMatch">Einer der <see cref="T:System.Security.Policy.ApplicationVersionMatch" />-Werte.</param>
+        <summary>Entfernt alle Anwendung Trust-Objekte, die aus der Auflistung die angegebenen Kriterien entsprechen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Vertrauenswürdigkeit der Anwendung kann ermittelt werden, durch die eine Übereinstimmung genaue Version, die abhängig von den Wert des der `versionMatch` Parameter. Die <xref:System.Security.Policy.ApplicationTrustCollection.Find%2A> Methode wird verwendet, um alle übereinstimmenden Anwendungsvertrauensstellungen zu suchen, und die entsprechenden Elemente aus der Auflistung entfernt werden.  
+  
+ Die Objekte, die auf die entfernten Objekte verschoben einrichten, um die frei werdenden Positionen einzunehmen. Die Indizes der Objekte, die verschoben werden, werden auch aktualisiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveRange">
+      <MemberSignature Language="C#" Value="public void RemoveRange (System.Security.Policy.ApplicationTrust[] trusts);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveRange(class System.Security.Policy.ApplicationTrust[] trusts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.ApplicationTrustCollection.RemoveRange(System.Security.Policy.ApplicationTrust[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="trusts" Type="System.Security.Policy.ApplicationTrust[]" />
+      </Parameters>
+      <Docs>
+        <param name="trusts">Ein eindimensionales Array vom Typ <see cref="T:System.Security.Policy.ApplicationTrust" /> enthält Elemente aus der aktuellen Auflistung entfernt werden soll.</param>
+        <summary>Entfernt die Vertrauensstellung Anwendungsobjekte im angegebenen Array aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Objekte, die auf die entfernten Objekte verschoben einrichten, um die frei werdenden Positionen einzunehmen. Die Indizes der Objekte, die verschoben werden, werden auch aktualisiert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="trusts" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveRange">
+      <MemberSignature Language="C#" Value="public void RemoveRange (System.Security.Policy.ApplicationTrustCollection trusts);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveRange(class System.Security.Policy.ApplicationTrustCollection trusts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.ApplicationTrustCollection.RemoveRange(System.Security.Policy.ApplicationTrustCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="trusts" Type="System.Security.Policy.ApplicationTrustCollection" />
+      </Parameters>
+      <Docs>
+        <param name="trusts">Ein <see cref="T:System.Security.Policy.ApplicationTrustCollection" /> enthält Elemente aus der aktuellen Auflistung entfernt werden soll.</param>
+        <summary>Entfernt die Vertrauensstellung Anwendungsobjekte in der angegebenen Auflistung aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Objekte, die auf die entfernten Objekte verschoben einrichten, um die frei werdenden Positionen einzunehmen. Die Indizes der Objekte, die verschoben werden, werden auch aktualisiert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="trusts" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.ApplicationTrustCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt ab, mit dem der Zugriff auf die Auflistung synchronisiert werden kann.</summary>
+        <value>Das Objekt, das zum Synchronisieren des Zugriffs auf die Auflistung verwenden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardimplementierung gibt das aktuelle Anwendungsobjekt Vertrauensstellung zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.ApplicationTrustCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale <see cref="T:System.Array" />, das das Ziel der aus der <see cref="T:System.Collections.ICollection" /> kopierten Elemente ist. Für das <see cref="T:System.Array" /> muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="index">Der nullbasierte Index im <c>Array</c> an dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die Elemente der <see cref="T:System.Collections.ICollection" /> in den angegebenen <see cref="T:System.Array" />, beginnend am angegebenen <see cref="T:System.Array" /> Index.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist kleiner als Null.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" /> ist mehrdimensional.  
+  
+ - oder -   
+  
+ Die Anzahl der Elemente in der Quell-<see cref="T:System.Collections.ICollection" /> ist größer als der verfügbare Platz vom <paramref name="index" /> bis zum Ende des Ziel-<paramref name="array" />s.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.ApplicationTrustCollection.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der die Auflistung durchläuft.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" />, der zum Durchlaufen der Auflistung verwendet werden kann.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

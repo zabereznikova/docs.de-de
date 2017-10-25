@@ -1,0 +1,136 @@
+<Type Name="TypeLibExporterFlags" FullName="System.Runtime.InteropServices.TypeLibExporterFlags">
+  <TypeSignature Language="C#" Value="public enum TypeLibExporterFlags" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed TypeLibExporterFlags extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.TypeLibExporterFlags" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, wie eine Typbibliothek erzeugt werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit verwendet <xref:System.Runtime.InteropServices.TypeLibConverter.ConvertAssemblyToTypeLib%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CallerResolvedReferences">
+      <MemberSignature Language="C#" Value="CallerResolvedReferences" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.TypeLibExporterFlags CallerResolvedReferences = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.TypeLibExporterFlags.CallerResolvedReferences" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.TypeLibExporterFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermöglicht dem Aufrufer Typbibliotheksverweise explizit zu beheben, ohne auf die Registrierung zurückzugreifen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportAs32Bit">
+      <MemberSignature Language="C#" Value="ExportAs32Bit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.TypeLibExporterFlags ExportAs32Bit = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.TypeLibExporterFlags.ExportAs32Bit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.TypeLibExporterFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Beim Kompilieren auf einem 64-Bit-Computer gibt an, dass das Type Library Exporter (Tlbexp.exe) eine 32-Bit-Typbibliothek generiert. Alle Datentypen werden entsprechend umgewandelt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportAs64Bit">
+      <MemberSignature Language="C#" Value="ExportAs64Bit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.TypeLibExporterFlags ExportAs64Bit = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.TypeLibExporterFlags.ExportAs64Bit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.TypeLibExporterFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Beim Kompilieren auf einem 32-Bit-Computer gibt an, dass das Type Library Exporter (Tlbexp.exe) eine 64-Bit-Typbibliothek generiert. Alle Datentypen werden entsprechend umgewandelt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.TypeLibExporterFlags None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.TypeLibExporterFlags.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.TypeLibExporterFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt keine Flags an. Dies ist die Standardeinstellung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OldNames">
+      <MemberSignature Language="C#" Value="OldNames" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.TypeLibExporterFlags OldNames = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.TypeLibExporterFlags.OldNames" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.TypeLibExporterFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Beim Exportieren von Typbibliotheken Datentyps der .NET Framework löst Namenskonflikte werden, indem den Typ mit dem Namen des Namespaces an. beispielsweise <see langword="System.Windows.Forms.HorizontalAlignment" /> als exportiert <see langword="System_Windows_Forms_HorizontalAlignment" />. Wird ein Konflikt mit dem Namen eines Typs, die nicht von COM sichtbar ist, exportiert .NET Framework den nicht ergänzten Namen an. Festlegen der <see cref="F:System.Runtime.InteropServices.TypeLibExporterFlags.OldNames" /> kennzeichnen bzw. zum Verwenden der <see langword="/oldnames" /> in der Option Type Library Exporter-Tool (Tlbexp.exe) erzwingen, die .NET Framework der ergänzte Name exportiert. Beachten Sie, dass der ergänzte Name exportiert das Standardverhalten in Versionen vor .NET Framework, Version 2.0 wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OnlyReferenceRegistered">
+      <MemberSignature Language="C#" Value="OnlyReferenceRegistered" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.TypeLibExporterFlags OnlyReferenceRegistered = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.TypeLibExporterFlags.OnlyReferenceRegistered" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.TypeLibExporterFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verweise auf Typen, die von COM als importiert wurden exportiert <see langword="IUnknown" /> Wenn der Typ nicht registrierten Typbibliothek besitzt. Legen Sie dieses Flag an, wenn Sie möchten, dass das Type Library Exporter-Tool für abhängige Typen in der Registrierung nicht im selben Verzeichnis wie die Eingabe Assembly gesucht werden soll.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

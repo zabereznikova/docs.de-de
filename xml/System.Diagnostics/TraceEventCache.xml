@@ -1,0 +1,275 @@
+<Type Name="TraceEventCache" FullName="System.Diagnostics.TraceEventCache">
+  <TypeSignature Language="C#" Value="public class TraceEventCache" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TraceEventCache extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.TraceEventCache" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet Ereignisablaufverfolgungsdaten spezifisch für einen Thread und einen Prozess an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Diagnostics.TraceEventCache> Klasse, die als für Trace-Listener-Aufrufe zur Optimierung der Leistung entworfen wird, von Interesse sind nur für Entwickler benutzerdefinierter Ablaufverfolgungslistener erstellen.  
+  
+ Die <xref:System.Diagnostics.TraceEventCache> Klasse wird in Ablaufverfolgungsmethoden als Parameter verwendet, um die Quelle des ein Ablaufverfolgungsereignis genauer zu identifizieren. Beispiele für Methoden, mit denen <xref:System.Diagnostics.TraceEventCache> sind <xref:System.Diagnostics.TraceListener.TraceEvent%2A?displayProperty=nameWithType> und <xref:System.Diagnostics.TraceFilter.ShouldTrace%2A?displayProperty=nameWithType>. Die <xref:System.Diagnostics.TraceEventCache.LogicalOperationStack%2A> Eigenschaft enthält Daten, die zum Korrelieren der Ablaufverfolgungs mit verknüpften ablaufverfolgungen verwendet werden können.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TraceEventCache ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceEventCache.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Diagnostics.TraceEventCache" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Callstack">
+      <MemberSignature Language="C#" Value="public string Callstack { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Callstack" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.TraceEventCache.Callstack" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Aufrufliste für den aktuellen Thread ab.</summary>
+        <value>Eine Zeichenfolge, die Stapelüberwachungsinformationen enthält. Dieser Wert kann eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.TraceEventCache.Callstack%2A> -Eigenschaft ruft die Aufrufliste aus der <xref:System.Environment.StackTrace%2A> Eigenschaft von der <xref:System.Environment> Klasse. Den Wert der Eigenschaft werden die Methodenaufrufe in umgekehrter chronologischer Reihenfolge aufgeführt. Der letzte Methodenaufruf ist, also zuerst beschrieben. Für jeden Methodenaufruf auf dem Stapel wird eine Zeile der Stapelüberwachungsinformationen aufgeführt. Weitere Informationen finden Sie unter <xref:System.Environment.StackTrace%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.EnvironmentPermission">für Vollzugriff auf die durch die Berechtigung geschützten Ressource. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DateTime">
+      <MemberSignature Language="C#" Value="public DateTime DateTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime DateTime" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.TraceEventCache.DateTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Datum und die Uhrzeit, an dem die ereignisablaufverfolgung aufgetreten ist.</summary>
+        <value>Ein <see cref="T:System.DateTime" /> -Struktur, deren Wert ein Datum und eine Uhrzeit in Coordinated Universal Time (UTC) ausgedrückt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die ersten Zugriff auf die Eigenschaft in einer Instanz von der <xref:System.Diagnostics.TraceEventCache> Klasse, die aktuelle Zeit zurückgegeben. Nachfolgende Abfragen dieser Eigenschaft in dieser Instanz zurück, das gleiche <xref:System.DateTime> Wert, sodass es als Timestamp verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogicalOperationStack">
+      <MemberSignature Language="C#" Value="public System.Collections.Stack LogicalOperationStack { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Stack LogicalOperationStack" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.TraceEventCache.LogicalOperationStack" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Stack</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Korrelationsdaten, die in einem Stapel enthalten.</summary>
+        <value>Ein <see cref="T:System.Collections.Stack" /> , Korrelationsdaten enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Korrelationsdaten werden als ein Objekt, in dem Aufrufkontext mit dem Namen "System.Diagnostics.Trace.CorrelationManagerSlot" gespeichert. Die <xref:System.Diagnostics.CorrelationManager> Klasse enthält Methoden, die eine logische Operation-Identität in einem Thread datengebundenen Kontext speichern, und jedes Ablaufverfolgungsereignis generiert, die für den Thread mit der gespeicherten Identität verwendet. Die <xref:System.Diagnostics.CorrelationManager> erfolgt über die <xref:System.Diagnostics.Trace.CorrelationManager%2A?displayProperty=nameWithType> Eigenschaft. Bei jedem Aufruf der <xref:System.Diagnostics.CorrelationManager.StartLogicalOperation%2A> Methode wird eine neue logische Operation Identität im Stapel. Bei jedem Aufruf der <xref:System.Diagnostics.CorrelationManager.StopLogicalOperation%2A> -Methode nimmt eine logische Operation-Identität aus dem Stapel  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessId">
+      <MemberSignature Language="C#" Value="public int ProcessId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ProcessId" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.TraceEventCache.ProcessId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den eindeutigen Bezeichner des aktuellen Prozesses ab.</summary>
+        <value>Der vom System generierte eindeutige Bezeichner des aktuellen Prozesses aus.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bis der Prozess beendet wird, identifiziert den Prozess im gesamten System die Prozess-ID eindeutig.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Fähigkeit, nicht verwalteten Code aufrufen. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ThreadId">
+      <MemberSignature Language="C#" Value="public string ThreadId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ThreadId" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.TraceEventCache.ThreadId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen eindeutigen Bezeichner für den aktuellen verwalteten Thread ab.</summary>
+        <value>Eine Zeichenfolge, die einen eindeutige ganzzahlige Bezeichner für diesen verwalteten Thread darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Threadbezeichner ist der Wert der <xref:System.Threading.Thread.ManagedThreadId%2A?displayProperty=nameWithType> Eigenschaft als Zeichenfolge formatiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Timestamp">
+      <MemberSignature Language="C#" Value="public long Timestamp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Timestamp" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.TraceEventCache.Timestamp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuelle Anzahl der Ticks im Zeitgebermechanismus ab.</summary>
+        <value>Den Tickzählerwert des zugrunde liegenden Zeitgebermechanismus angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Get-Accessor-Aufrufe der <xref:System.Diagnostics.Stopwatch.GetTimestamp%2A?displayProperty=nameWithType> Methode zum Abrufen des Zeitstempels. Wenn die <xref:System.Diagnostics.Stopwatch> Klasse verwendet, einen hochauflösenden Leistungsindikator <xref:System.Diagnostics.Stopwatch.GetTimestamp%2A> gibt den aktuellen Wert dieses Indikators. Wenn die <xref:System.Diagnostics.Stopwatch> Klasse verwendet den Systemzeitgeber <xref:System.Diagnostics.Stopwatch.GetTimestamp%2A> gibt die <xref:System.DateTime.Ticks%2A> Eigenschaft <xref:System.DateTime.Now%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,209 @@
+<Type Name="KeyAgreeRecipientInfo" FullName="System.Security.Cryptography.Pkcs.KeyAgreeRecipientInfo">
+  <TypeSignature Language="C#" Value="public sealed class KeyAgreeRecipientInfo : System.Security.Cryptography.Pkcs.RecipientInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit KeyAgreeRecipientInfo extends System.Security.Cryptography.Pkcs.RecipientInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Pkcs.KeyAgreeRecipientInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.Pkcs.RecipientInfo</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.Security.Cryptography.Pkcs.KeyAgreeRecipientInfo" /> Klasse definiert Empfängerinformationen Schlüsselaustausch. Schlüsselaustausch-Algorithmen verwenden in der Regel Diffie-Hellman-Schlüsselaustausch-Algorithmus, in der die zwei Parteien, die einen gemeinsamen kryptografischen Schlüssel einzurichten nehmen Teil seiner Generierung sowohl, stimmen per Definition auf diesen Schlüssel. Dies ist im Gegensatz zu den wichtigsten Transport Algorithmen, in denen eine Partei einseitig generiert den Schlüssel und sendet, oder transportiert, an die andere Partei.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse keinen öffentlichen Konstruktor; aus diesem Grund kann es öffentlich instanziiert werden. Es ist eine nur-Lese Klasse, die aus zugegriffen werden kann die <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.RecipientInfos%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Date">
+      <MemberSignature Language="C#" Value="public DateTime Date { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime Date" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.KeyAgreeRecipientInfo.Date" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.Security.Cryptography.Pkcs.KeyAgreeRecipientInfo.Date" /> Eigenschaft ruft Datum und Uhrzeit des Beginns des der Schlüsselvereinbarungsprotokoll ab, durch den Ersteller.</summary>
+        <value>Datum und Uhrzeit des Beginns der durch den Ersteller der Schlüsselvereinbarungsprotokoll.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Der Empfänger-ID ist keinen Subjektschlüsselbezeichner.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptedKey">
+      <MemberSignature Language="C#" Value="public override byte[] EncryptedKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] EncryptedKey" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.KeyAgreeRecipientInfo.EncryptedKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.Security.Cryptography.Pkcs.KeyAgreeRecipientInfo.EncryptedKey" /> -Eigenschaft ruft die verschlüsselte Schlüsselinformationen für den Empfänger.</summary>
+        <value>Ein Array von Bytewerten, die die verschlüsselte Schlüsselinformationen für den Empfänger enthalten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyEncryptionAlgorithm">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.Pkcs.AlgorithmIdentifier KeyEncryptionAlgorithm { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Pkcs.AlgorithmIdentifier KeyEncryptionAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.KeyAgreeRecipientInfo.KeyEncryptionAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Pkcs.AlgorithmIdentifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.Security.Cryptography.Pkcs.KeyAgreeRecipientInfo.KeyEncryptionAlgorithm" /> -Eigenschaft ruft den Algorithmus verwendet, um den Schlüsselaustausch auszuführen.</summary>
+        <value>Der Wert des-Algorithmus verwendet, um den Schlüsselaustausch auszuführen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OriginatorIdentifierOrKey">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Pkcs.SubjectIdentifierOrKey OriginatorIdentifierOrKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Pkcs.SubjectIdentifierOrKey OriginatorIdentifierOrKey" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.KeyAgreeRecipientInfo.OriginatorIdentifierOrKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Pkcs.SubjectIdentifierOrKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.Security.Cryptography.Pkcs.KeyAgreeRecipientInfo.OriginatorIdentifierOrKey" /> Eigenschaft ruft Informationen über den Ersteller der wichtigsten Vereinbarung für den Schlüsselaustausch Algorithmen, die hier ab.</summary>
+        <value>Ein Objekt, das Informationen zu dem Absender der wichtigsten Vereinbarung enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OtherKeyAttribute">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.CryptographicAttributeObject OtherKeyAttribute { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.CryptographicAttributeObject OtherKeyAttribute" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.KeyAgreeRecipientInfo.OtherKeyAttribute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CryptographicAttributeObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.Security.Cryptography.Pkcs.KeyAgreeRecipientInfo.OtherKeyAttribute" /> Eigenschaft ruft die Attribute des Schlüsselmaterials ab.</summary>
+        <value>Die Attribute des Schlüsselmaterials.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Der Empfänger-ID ist keinen Subjektschlüsselbezeichner.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RecipientIdentifier">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.Pkcs.SubjectIdentifier RecipientIdentifier { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Pkcs.SubjectIdentifier RecipientIdentifier" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.KeyAgreeRecipientInfo.RecipientIdentifier" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Pkcs.SubjectIdentifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.Security.Cryptography.Pkcs.KeyAgreeRecipientInfo.RecipientIdentifier" /> Eigenschaft ruft den Bezeichner des Empfängers ab.</summary>
+        <value>Der Bezeichner des Empfängers.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public override int Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Version" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.KeyAgreeRecipientInfo.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.Security.Cryptography.Pkcs.KeyAgreeRecipientInfo.Version" /> Eigenschaft ruft die Version des Empfängers Schlüsselaustausch ab. Dies wird für Objekte in dieser Klasse automatisch festgelegt, und der Wert bedeutet, dass der Empfänger Teil ein Algorithmus Schlüsselaustausch dauert.</summary>
+        <value>Die Version der <see cref="T:System.Security.Cryptography.Pkcs.KeyAgreeRecipientInfo" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Version bestimmt, ob die Nachricht in der diese <xref:System.Security.Cryptography.Pkcs.KeyAgreeRecipientInfo> Objekt befindet ist eine PKCS #7-Nachricht oder eine Nachricht Cryptographic Message Syntax (CMS). CMS ist eine neuere Obermenge von PKCS #7.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

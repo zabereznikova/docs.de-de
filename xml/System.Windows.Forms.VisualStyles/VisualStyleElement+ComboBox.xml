@@ -1,0 +1,25 @@
+<Type Name="VisualStyleElement+ComboBox" FullName="System.Windows.Forms.VisualStyles.VisualStyleElement+ComboBox">
+  <TypeSignature Language="C#" Value="public static class VisualStyleElement.ComboBox" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi abstract sealed beforefieldinit VisualStyleElement/ComboBox extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.VisualStyleElement.ComboBox" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält eine Klasse, eine <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> -Objekte für den Dropdown-Pfeil der Kombinationsfelder. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ComboBox> Klasse bietet eine Grundlage, in dem die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ComboBox.DropDownButton> Klasse definiert ist. <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ComboBox.DropDownButton>bietet eine Reihe von Eigenschaften, die Zurückgeben einer <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> für jeden Status der Dropdown-Pfeil von einem Kombinationsfeld-Steuerelement. Zum Abrufen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> für den Textfeldbereich eines Kombinationsfelds, gehen die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox.TextEdit> Eigenschaften.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

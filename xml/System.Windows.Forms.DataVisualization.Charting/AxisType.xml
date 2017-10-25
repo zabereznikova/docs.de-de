@@ -1,0 +1,70 @@
+<Type Name="AxisType" FullName="System.Windows.Forms.DataVisualization.Charting.AxisType">
+  <TypeSignature Language="C#" Value="public enum AxisType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AxisType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.AxisType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Typ der Achse für die X- und y-Achse zu der eine <see cref="T:System.Windows.Forms.DataVisualization.Charting.Series" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.AxisType> Enumeration stellt den Typ der Achse für die X- und Y-Achse verwendet eine <xref:System.Windows.Forms.DataVisualization.Charting.Series>.  
+  
+ Ein <xref:System.Windows.Forms.DataVisualization.Charting.Series> mit zwei Achsen, mit Ausnahme von Kreis-und Ringdiagramme dargestellt wird. Diese Enumeration wird verwendet, in Verbindung mit der <xref:System.Windows.Forms.DataVisualization.Charting.Series.XAxisType%2A> und <xref:System.Windows.Forms.DataVisualization.Charting.Series.YAxisType%2A> Eigenschaften zum Festlegen der Achsen, die zum Zeichnen der zugeordneten Datenpunkte der Reihe verwendet.  
+  
+ Sind für alle Diagramme mit Ausnahme von Balken, gestapelter Balken Kreis- und Ringdiagramme Typen, die primären und sekundären Achsen wie folgt ein:  
+  
+|Der Achsentyp|Beschreibung|  
+|---------------|-----------------|  
+|Primäre X-Achse|Untere horizontale Achse.|  
+|Sekundäre X-Achse|Obere horizontale Achse.|  
+|Primäre Y-Achse|Linke vertikale Achse.|  
+|Sekundäre Y-Achse|Vertikale Achse.|  
+  
+ Balken- und gestapelte Balkendiagramme haben die Achsen gedreht 90 Grad im Uhrzeigersinn. Beispielsweise ist die primäre X-Achse für diese zwei Diagramme die linke vertikale Achse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Primary">
+      <MemberSignature Language="C#" Value="Primary" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.AxisType Primary = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.AxisType.Primary" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.AxisType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Legt eine Achse wie die primäre Achse fest.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Secondary">
+      <MemberSignature Language="C#" Value="Secondary" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.AxisType Secondary = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.AxisType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Legt eine Achse als sekundäre Achse fest.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1274 @@
+<Type Name="EventInfo" FullName="System.Reflection.EventInfo">
+  <TypeSignature Language="C#" Value="public abstract class EventInfo : System.Reflection.MemberInfo, System.Runtime.InteropServices._EventInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi abstract serializable beforefieldinit EventInfo extends System.Reflection.MemberInfo implements class System.Runtime.InteropServices._EventInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.EventInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Reflection.MemberInfo</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.InteropServices._EventInfo</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComDefaultInterface(typeof(System.Runtime.InteropServices._EventInfo))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermittelt die Attribute eines Ereignisses und ermöglicht den Zugriff auf die Metadaten des Ereignisses.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Reflection.EventInfo> Klasse, um Ereignisse zu überprüfen und um Ereignishandler zu verknüpfen, wie im Beispielcode für gezeigt die <xref:System.Reflection.EventInfo.AddEventHandler%2A> Methode.  
+  
+> [!NOTE]
+>  <xref:System.Reflection.EventInfo>ist nicht vorgesehen, die zum Auslösen von Ereignissen verwendet werden. Ein Objekt löst Ereignisse aus, wie von den internen Zustand vorgegeben.  
+  
+ Ereignisse werden mit Delegaten verwendet. Ein Ereignislistener instanziiert eine Ereignishandler-Delegat, der aufgerufen wird, wenn das Ereignis von einer Ereignisquelle ausgelöst wird. Um eine Verbindung herzustellen, für die Ereignisquelle verwendet wurden, fügt der Ereignislistener dieser Delegat der Aufrufliste in der Quelle an. Wenn das Ereignis ausgelöst wird, wird die Invoke-Methode des Delegaten für Ereignishandler aufgerufen. Sowohl Multicast- und einzelne Umwandlung ereignisbenachrichtigungen werden unterstützt. Die `Add` und `Remove` Methoden als auch die Ereignishandler Delegate-Klasse, die einem Ereignis zugeordneten muss in den Metadaten markiert werden.  
+  
+ Delegaten sind objektorientierte Funktionszeiger. In C oder C++ ist ein Funktionszeiger einen Verweis auf eine Methode an. Im Gegensatz zu den Funktionszeiger C- oder C++ ein Delegat enthält zwei Verweise: einen Verweis auf eine Methode und einem Verweis auf ein Objekt, das die Methode unterstützt. Delegaten können eine Methode aufrufen, ohne den Klassentyp, der deklariert oder erbt von der Methode. Delegaten müssen lediglich Rückgabeliste für Typ und die Parameter der Methode kennen.  
+  
+ Das Ereignismodell funktioniert ebenso gut für die einzelnen Umwandlung und Multicastdelegaten. Wenn der Delegat des aufrufen wird Methode aufgerufen, darf nur ein einzelnes Objekt eine Methode aufgerufen wird. Multicast-Modifizierer kann auf eine Delegatdeklaration angewendet werden kann mehrere Methoden, die aufgerufen werden, wenn die Invoke-Methode der Delegat aufgerufen wird.  
+  
+ Aufrufen von <xref:System.Reflection.ICustomAttributeProvider.GetCustomAttributes%2A?displayProperty=nameWithType> auf `EventInfo` bei der `inherit` Parameter `GetCustomAttributes` ist `true` die Typhierarchie nicht durchlaufen. Verwendung <xref:System.Attribute?displayProperty=nameWithType> benutzerdefinierte Attribute geerbt.  
+  
+   
+  
+## Examples  
+ Der folgende code Ruft eine <xref:System.Reflection.EventInfo> -Objekt für die <xref:System.Windows.Forms.Control.Click> -Ereignis für die <xref:System.Windows.Forms.Button> Klasse.  
+  
+ [!code-cpp[type_getevent1#1](~/samples/snippets/cpp/VS_Snippets_CLR/type_getevent1/CPP/type_getevent1.cpp#1)]
+ [!code-csharp[type_getevent1#1](~/samples/snippets/csharp/VS_Snippets_CLR/type_getevent1/CS/type_getevent1.cs#1)]
+ [!code-vb[type_getevent1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/type_getevent1/VB/type_getevent1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für erben. Diese Klasse kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+    <threadsafe>Dieser Typ ist threadsicher.</threadsafe>
+    <block subset="none" type="overrides">
+      <para>Beim Erben von <see langword="EventInfo" />, müssen Sie die folgenden Member überschreiben: <see cref="M:System.Reflection.EventInfo.GetAddMethod(System.Boolean)" />, <see cref="M:System.Reflection.EventInfo.GetRemoveMethod(System.Boolean)" />, und <see cref="M:System.Reflection.EventInfo.GetRaiseMethod(System.Boolean)" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected EventInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.EventInfo.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see langword="EventInfo" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="AddEventHandler">
+      <MemberSignature Language="C#" Value="public virtual void AddEventHandler (object target, Delegate handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddEventHandler(object target, class System.Delegate handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.EventInfo.AddEventHandler(System.Object,System.Delegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Object" />
+        <Parameter Name="handler" Type="System.Delegate" />
+      </Parameters>
+      <Docs>
+        <param name="target">Die Ereignisquelle.</param>
+        <param name="handler">Kapselt eine Methode oder Methoden ein, die aufgerufen werden sollen, wenn das Ereignis vom Ziel ausgelöst wird.</param>
+        <summary>Fügt einen Ereignishandler einer Ereignisquelle hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode versucht, ein Delegat, der das Ereignis für das Zielobjekt synchronisieren hinzuzufügen.  
+  
+ Jedes Mal, wenn das Ereignis, durch den Target-Parameter ausgelöst wird, werden die Methode oder die vom Handler gekapselten Methoden aufgerufen werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Laden einer Assembly, erstellen Sie eine Instanz eines Typs aus der Assembly, einen Ereignishandler, die mithilfe einer dynamischen Assembly erstellen und Verknüpfen mit der dynamische Ereignishandler veranschaulicht. Alle Aktionen sind mit später Bindung ausgeführt.  
+  
+ Das Codebeispiel lädt "System.dll" und erstellt eine Instanz der <xref:System.Timers.Timer?displayProperty=nameWithType> Klasse. Im Beispiel wird die <xref:System.Type.GetEvent%2A?displayProperty=nameWithType> Methode zum Abrufen der <xref:System.Timers.Timer.Elapsed> -Ereignis und die <xref:System.Reflection.EventInfo.EventHandlerType%2A> Eigenschaft, um den Delegattyp für das Ereignis abzurufen.  
+  
+ Das Codebeispiel ruft ein <xref:System.Reflection.MethodInfo> für die `Invoke` -Methode des Delegattyps und aus der <xref:System.Reflection.MethodInfo> wird die Signatur des Delegaten abgerufen. Das Codebeispiel erstellt dann eine dynamische Assembly mit einem Modul mit einem einzelnen Typ mit dem Namen `Handler`, und gibt den Typ einer `static` Methode (`Shared` Methode in Visual Basic) mit dem Namen `DynamicHandler` , die zur Behandlung des Ereignisses verwendet werden.  
+  
+ Nachdem der dynamische Typ erstellt wurde, ruft das Codebeispiel eine <xref:System.Reflection.MethodInfo> für die abgeschlossene Methode und verwendet, um eine Delegatinstanz zu erstellen. Diese Instanz wird übergeben, um die <xref:System.Reflection.EventInfo.AddEventHandler%2A> Methode, um das Ereignis zu verknüpfen. Die programmausführung wird dann um das Ereignis ausgelöst wurde, werden zu ermöglichen.  
+  
+ [!code-cpp[AddEventHandler#1](~/samples/snippets/cpp/VS_Snippets_CLR/AddEventHandler/cpp/source.cpp#1)]
+ [!code-csharp[AddEventHandler#1](~/samples/snippets/csharp/VS_Snippets_CLR/AddEventHandler/cs/source.cs#1)]
+ [!code-vb[AddEventHandler#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/AddEventHandler/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Ereignis besitzt keinen öffentlichen <see langword="add" />-Accessor.</exception>
+        <exception cref="T:System.ArgumentException">Der übergebene Handler kann nicht verwendet werden.</exception>
+        <exception cref="T:System.MethodAccessException">
+          <block subset="none" type="note">
+            <para>  
+ In der [.NET für Windows Store-apps](http://go.microsoft.com/fwlink/?LinkID=247912) oder [Portable Class Library](~/docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md), fangen Sie die basisklassenausnahme <see cref="T:System.MemberAccessException" />, stattdessen.  
+  
+</para>
+          </block>  
+  
+ Der Aufrufer verfügt nicht über Zugriffsberechtigung für diesen Member.</exception>
+        <exception cref="T:System.Reflection.TargetException">
+          <block subset="none" type="note">
+            <para>  
+ In der [.NET für Windows Store-apps](http://go.microsoft.com/fwlink/?LinkID=247912) oder [Portable Class Library](~/docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md), catch <see cref="T:System.Exception" /> stattdessen.  
+  
+</para>
+          </block>  
+  
+ Der <paramref name="target" />-Parameter ist <see langword="null" />, und das Ereignis ist nicht statisch.  
+  
+ - oder -   
+  
+ Die <see cref="T:System.Reflection.EventInfo" /> ist im Ziel nicht deklariert.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="AddMethod">
+      <MemberSignature Language="C#" Value="public virtual System.Reflection.MethodInfo AddMethod { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MethodInfo AddMethod" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.EventInfo.AddMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Reflection.MethodInfo" /> -Objekt für die <see cref="M:System.Reflection.EventInfo.AddEventHandler(System.Object,System.Delegate)" /> Methode des Ereignisses, einschließlich der nicht öffentlichen Methoden.</summary>
+        <value>Die <see cref="T:System.Reflection.MethodInfo" /> -Objekt für die <see cref="M:System.Reflection.EventInfo.AddEventHandler(System.Object,System.Delegate)" /> Methode.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft entspricht dem Aufrufen der <xref:System.Reflection.EventInfo.GetAddMethod%2A> mit einem Wert von `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public abstract System.Reflection.EventAttributes Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.EventAttributes Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.EventInfo.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.EventAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Attribute für dieses Ereignis ab.</summary>
+        <value>Die nur-Lese Attribute für dieses Ereignis.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Attribute werden in einer 4-Byte-Ganzzahl, die eine Bitmap der Attribute für das Ereignis, das von dieser Instanz reflektiert festgelegt darstellt zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.EventInfo.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Ein Objekt, das mit dieser Instanz verglichen werden soll, oder <see langword="null" />.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einem angegebenen Objekt ist.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="obj" /> dem Typ und dem Wert dieser Instanz entspricht, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventHandlerType">
+      <MemberSignature Language="C#" Value="public virtual Type EventHandlerType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type EventHandlerType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.EventInfo.EventHandlerType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see langword="Type" /> Objekt des zugrunde liegenden Ereignishandler Delegaten, die dem Ereignis zugeordnet.</summary>
+        <value>Ein schreibgeschützter <see langword="Type" /> Objekt, das den Ereignishandler des Delegaten darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Reflection.EventInfo.EventHandlerType%2A> Eigenschaft zum Ermitteln des Delegattyp eines Ereignisses und die Parametertypen anzuzeigen.  
+  
+ Im Beispiel definiert einen Delegaten, der mit dem Namen `MyDelegate` und ein Ereignis namens `ev` vom Typ `MyDelegate`. Der Code in der `Main` Methode ermittelt die Ereignissignatur durch Abrufen den Delegattyp des Ereignisses, Abrufen der `Invoke` Methode der Delegattyp, und klicken Sie dann abrufen und Anzeigen von den Parametern.  
+  
+ [!code-cpp[eventarg#1](~/samples/snippets/cpp/VS_Snippets_CLR/EventArg/CPP/eventarg.cpp#1)]
+ [!code-csharp[eventarg#1](~/samples/snippets/csharp/VS_Snippets_CLR/EventArg/CS/eventarg.cs#1)]
+ [!code-vb[eventarg#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/EventArg/VB/eventarg.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAddMethod">
+      <MemberSignature Language="C#" Value="public System.Reflection.MethodInfo GetAddMethod ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.MethodInfo GetAddMethod() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.EventInfo.GetAddMethod" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Methode zurück, die zum Hinzufügen eines Ereignishandlerdelegaten zur Ereignisquelle verwendet wird.</summary>
+        <returns>Ein <see cref="T:System.Reflection.MethodInfo" />-Objekt, das die Methode zum Hinzufügen eines Ereignishandlerdelegaten zur Ereignisquelle darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `GetAddMethod`Initialisiert und fügt das Ereignis subscribe-Methode. Die `AddEventHandler` Methode wird verwendet, um die Aufrufliste, die aus einer Ereignisquelle einen Delegaten für Ereignishandler hinzugefügt.  
+  
+   
+  
+## Examples  
+ Normalerweise weist die Methode die folgende Signatur:  
+  
+```  
+add_<EventName>(<EventHandlerType> handler)  
+```  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAddMethod">
+      <MemberSignature Language="C#" Value="public abstract System.Reflection.MethodInfo GetAddMethod (bool nonPublic);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.MethodInfo GetAddMethod(bool nonPublic) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.EventInfo.GetAddMethod(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nonPublic" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="nonPublic">
+          <see langword="true" />, wenn nicht öffentliche Methoden zurückgegeben werden können; andernfalls <see langword="false" />.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse das <see langword="MethodInfo" />-Objekt für die <see cref="M:System.Reflection.EventInfo.AddEventHandler(System.Object,System.Delegate)" />-Methode des Ereignisses ab und gibt an, ob nicht öffentliche Methoden zurückgegeben werden sollen.</summary>
+        <returns>Ein <see cref="T:System.Reflection.MethodInfo" />-Objekt, das die Methode zum Hinzufügen eines Ereignishandlerdelegaten zur Ereignisquelle darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `GetAddMethod` initialisiert und fügt das Ereignis subscribe-Methode als boolescher Wert. Die `AddEventHandler` Methode wird verwendet, um die Aufrufliste, die aus einer Ereignisquelle einen Delegaten für Ereignishandler hinzugefügt.  
+  
+   
+  
+## Examples  
+ Normalerweise weist die Methode die folgende Signatur:  
+  
+```  
+add_<EventName>(<EventHandlerType> handler)  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.MethodAccessException">
+          <paramref name="nonPublic" /> ist <see langword="true" />, die zum Hinzufügen von Ereignishandlerdelegaten verwendete Methode ist nicht öffentlich, und der Aufrufer verfügt nicht über die Berechtigung zum Reflektieren nicht öffentlicher Methoden.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.EventInfo.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese Instanz zurück.</summary>
+        <returns>Ein 32-Bit-Hashcode als ganze Zahl mit Vorzeichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOtherMethods">
+      <MemberSignature Language="C#" Value="public System.Reflection.MethodInfo[] GetOtherMethods ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Reflection.MethodInfo[] GetOtherMethods() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.EventInfo.GetOtherMethods" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die öffentlichen Methoden, die ein Ereignis in den Metadaten mit zugeordnet wurden die <see langword=".other" /> Richtlinie.</summary>
+        <returns>Ein Array von <see cref="T:System.Reflection.EventInfo" /> Objekte, die die öffentlichen Methoden, die dem Ereignis in den Metadaten zugeordnet, mithilfe wurden der <see langword=".other" /> Richtlinie. Wenn keine solchen öffentlichen Methoden vorhanden sind, wird ein leeres Array zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Metadaten für ein Ereignis kann vier Arten von Methoden mit dem Ereignis zuordnen:  
+  
+-   Die `.addon` Richtlinie gibt die Methode verwendet, um Ereignishandler hinzuzufügen. Verwenden der <xref:System.Reflection.EventInfo.GetAddMethod%2A> Methode zum Abrufen einer <xref:System.Reflection.EventInfo> für diese Methode.  
+  
+-   Die `.removeon` Richtlinie gibt die Methode verwendet, um Ereignishandler zu trennen. Verwenden der <xref:System.Reflection.EventInfo.GetRemoveMethod%2A> Methode zum Abrufen einer <xref:System.Reflection.EventInfo> für diese Methode.  
+  
+-   Die `.fire` -Direktive gibt die Methode zum Auslösen des Ereignisses an. Verwenden der <xref:System.Reflection.EventInfo.GetRaiseMethod%2A> Methode zum Abrufen einer <xref:System.Reflection.EventInfo> für diese Methode.  
+  
+-   Die `.other` Richtlinie gibt an, alle anderen Methoden, die dem Ereignis zugeordnet. Verwenden der <xref:System.Reflection.EventInfo.GetOtherMethods%2A> Methode zum Abrufen eines Arrays von <xref:System.Reflection.EventInfo> -Objekten für diese Methoden.  
+  
+ Die Methoden, die für ein Ereignis mit der `.other` Richtlinie haben keine besondere Bedeutung für die Laufzeit. Verwenden Sie die C#- und Visual Basic-Compiler nicht die `.other` Richtlinie.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOtherMethods">
+      <MemberSignature Language="C#" Value="public virtual System.Reflection.MethodInfo[] GetOtherMethods (bool nonPublic);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.MethodInfo[] GetOtherMethods(bool nonPublic) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.EventInfo.GetOtherMethods(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nonPublic" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="nonPublic">
+          <see langword="true" />nicht öffentliche Methoden eingeschlossen werden sollen; andernfalls <see langword="false" />.</param>
+        <summary>Gibt die Methoden, die dem Ereignis in den Metadaten mit zugeordnet wurden die <see langword=".other" /> Richtlinie gibt an, ob nicht öffentliche Methoden eingeschlossen werden sollen.</summary>
+        <returns>Ein Array von <see cref="T:System.Reflection.EventInfo" /> Objekte, die Methoden, die ein Ereignis in den Metadaten zugeordnet, mithilfe wurden der <see langword=".other" /> Richtlinie. Wenn es keine Methoden, die der Spezifikation entsprechen gibt, wird ein leeres Array zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Metadaten für ein Ereignis kann vier Arten von Methoden mit dem Ereignis zuordnen:  
+  
+-   Die `.addon` Richtlinie gibt die Methode verwendet, um Ereignishandler hinzuzufügen. Verwenden der <xref:System.Reflection.EventInfo.GetAddMethod%2A> Methode zum Abrufen einer <xref:System.Reflection.EventInfo> für diese Methode.  
+  
+-   Die `.removeon` Richtlinie gibt die Methode verwendet, um Ereignishandler zu trennen. Verwenden der <xref:System.Reflection.EventInfo.GetRemoveMethod%2A> Methode zum Abrufen einer <xref:System.Reflection.EventInfo> für diese Methode.  
+  
+-   Die `.fire` -Direktive gibt die Methode zum Auslösen des Ereignisses an. Verwenden der <xref:System.Reflection.EventInfo.GetRaiseMethod%2A> Methode zum Abrufen einer <xref:System.Reflection.EventInfo> für diese Methode.  
+  
+-   Die `.other` Richtlinie gibt an, alle anderen Methoden, die dem Ereignis zugeordnet. Verwenden der <xref:System.Reflection.EventInfo.GetOtherMethods%2A> Methode zum Abrufen eines Arrays von <xref:System.Reflection.EventInfo> -Objekten für diese Methoden.  
+  
+ Die Methoden, die für ein Ereignis mit der `.other` Richtlinie haben keine besondere Bedeutung für die Laufzeit. Verwenden Sie die C#- und Visual Basic-Compiler nicht die `.other` Richtlinie.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Diese Methode ist nicht implementiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRaiseMethod">
+      <MemberSignature Language="C#" Value="public System.Reflection.MethodInfo GetRaiseMethod ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.MethodInfo GetRaiseMethod() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.EventInfo.GetRaiseMethod" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Methode zurück, die beim Auslösen des Ereignisses aufgerufen wird.</summary>
+        <returns>Die Methode, die beim Auslösen des Ereignisses aufgerufen wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt i. d. r. `null` für Ereignisse, die mit dem c# deklariert `event` Schlüsselwort oder Visual Basic `Event` Schlüsselwort. Dies ist, da die C#- und Visual Basic-Compiler keine solche Methode standardmäßig generieren.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRaiseMethod">
+      <MemberSignature Language="C#" Value="public abstract System.Reflection.MethodInfo GetRaiseMethod (bool nonPublic);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.MethodInfo GetRaiseMethod(bool nonPublic) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.EventInfo.GetRaiseMethod(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nonPublic" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="nonPublic">
+          <see langword="true" />, wenn nicht öffentliche Methoden zurückgegeben werden können; andernfalls <see langword="false" />.</param>
+        <summary>Gibt beim Überschreiben in einer abgeleiteten Klasse die Methode zurück, die beim Auslösen des Ereignisses aufgerufen wird, und gibt an, ob nicht öffentliche Methoden zurückgegeben werden sollen.</summary>
+        <returns>Ein <see langword="MethodInfo" />-Objekt, das beim Auslösen des Ereignisses aufgerufen wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt i. d. r. `null` für Ereignisse, die mit dem c# deklariert `event` Schlüsselwort oder Visual Basic `Event` Schlüsselwort. Dies ist, da die C#- und Visual Basic-Compiler keine solche Methode standardmäßig generieren.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.MethodAccessException">
+          <paramref name="nonPublic" /> ist <see langword="true" />, die zum Hinzufügen von Ereignishandlerdelegaten verwendete Methode ist nicht öffentlich, und der Aufrufer verfügt nicht über die Berechtigung zum Reflektieren nicht öffentlicher Methoden.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRemoveMethod">
+      <MemberSignature Language="C#" Value="public System.Reflection.MethodInfo GetRemoveMethod ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.MethodInfo GetRemoveMethod() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.EventInfo.GetRemoveMethod" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Methode zurück, die zum Entfernen eines Ereignishandlerdelegaten aus der Ereignisquelle verwendet wird.</summary>
+        <returns>Ein <see cref="T:System.Reflection.MethodInfo" />-Objekt, das die Methode zum Entfernen eines Ereignishandlerdelegaten aus der Ereignisquelle darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Normalerweise weist die Methode die folgende Signatur:  
+  
+```  
+remove_<EventName>(<EventHandlerType> handler)  
+```  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRemoveMethod">
+      <MemberSignature Language="C#" Value="public abstract System.Reflection.MethodInfo GetRemoveMethod (bool nonPublic);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.MethodInfo GetRemoveMethod(bool nonPublic) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.EventInfo.GetRemoveMethod(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nonPublic" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="nonPublic">
+          <see langword="true" />, wenn nicht öffentliche Methoden zurückgegeben werden können; andernfalls <see langword="false" />.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse das <see langword="MethodInfo" />-Objekt zum Entfernen einer Methode des Ereignisses ab und gibt an, ob nicht öffentliche Methoden zurückgegeben werden sollen.</summary>
+        <returns>Ein <see cref="T:System.Reflection.MethodInfo" />-Objekt, das die Methode zum Entfernen eines Ereignishandlerdelegaten aus der Ereignisquelle darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Normalerweise weist die Methode die folgende Signatur:  
+  
+```  
+remove_<EventName>(<EventHandlerType> handler)  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.MethodAccessException">
+          <paramref name="nonPublic" /> ist <see langword="true" />, die zum Hinzufügen von Ereignishandlerdelegaten verwendete Methode ist nicht öffentlich, und der Aufrufer verfügt nicht über die Berechtigung zum Reflektieren nicht öffentlicher Methoden.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMulticast">
+      <MemberSignature Language="C#" Value="public virtual bool IsMulticast { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsMulticast" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.EventInfo.IsMulticast" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob es sich um ein Multicastereignis handelt.</summary>
+        <value>
+          <see langword="true" />, wenn der Delegat eine Instanz eines Multicastdelegaten ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSpecialName">
+      <MemberSignature Language="C#" Value="public bool IsSpecialName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSpecialName" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.EventInfo.IsSpecialName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see langword="EventInfo" /> hat einen Namen mit eine besondere Bedeutung.</summary>
+        <value>
+          <see langword="true" />Wenn dieses Ereignis einen besonderen Namen hat. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft bestimmt, ob der Name eines Ereignisses eine besondere Bedeutung hat. Namen, die beginnen mit einem Unterstrich (_), Eigenschaftenaccessoren und Operatoren überladen von Methoden enthalten, sind Beispiele für Namen, die von einigen Compilern möglicherweise eine besondere Behandlung erfordern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberType">
+      <MemberSignature Language="C#" Value="public override System.Reflection.MemberTypes MemberType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.MemberTypes MemberType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.EventInfo.MemberType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MemberTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen <see cref="T:System.Reflection.MemberTypes" />-Wert ab, der angibt, dass dieser Member ein Ereignis ist.</summary>
+        <value>Ein <see cref="T:System.Reflection.MemberTypes" />-Wert, der angibt, dass dieser Member ein Ereignis ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft überschreibt <xref:System.Reflection.MemberInfo.MemberType%2A>. Wenn Sie daher eine Reihe von untersuchen <xref:System.Reflection.MemberInfo> Objekte – z. B. das zurückgegebene Array <xref:System.Type.GetMembers%2A> – die <xref:System.Reflection.MemberInfo.MemberType%2A> -Eigenschaft gibt <xref:System.Reflection.MemberTypes?displayProperty=nameWithType> nur, wenn ein angegebenes Element ein Ereignis ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Reflection.EventInfo left, System.Reflection.EventInfo right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class System.Reflection.EventInfo left, class System.Reflection.EventInfo right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.EventInfo.op_Equality(System.Reflection.EventInfo,System.Reflection.EventInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Reflection.EventInfo" />
+        <Parameter Name="right" Type="System.Reflection.EventInfo" />
+      </Parameters>
+      <Docs>
+        <param name="left">Das erste zu vergleichende Objekt.</param>
+        <param name="right">Das zweite zu vergleichende Objekt.</param>
+        <summary>Gibt an, ob zwei <see cref="T:System.Reflection.EventInfo" />-Objekte gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="left" /> und <paramref name="right" /> gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Reflection.EventInfo left, System.Reflection.EventInfo right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.Reflection.EventInfo left, class System.Reflection.EventInfo right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.EventInfo.op_Inequality(System.Reflection.EventInfo,System.Reflection.EventInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Reflection.EventInfo" />
+        <Parameter Name="right" Type="System.Reflection.EventInfo" />
+      </Parameters>
+      <Docs>
+        <param name="left">Das erste zu vergleichende Objekt.</param>
+        <param name="right">Das zweite zu vergleichende Objekt.</param>
+        <summary>Gibt an, ob zwei <see cref="T:System.Reflection.EventInfo" />-Objekte ungleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="left" /> und <paramref name="right" /> ungleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseMethod">
+      <MemberSignature Language="C#" Value="public virtual System.Reflection.MethodInfo RaiseMethod { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MethodInfo RaiseMethod" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.EventInfo.RaiseMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Methode, die aufgerufen wird, wenn das Ereignis ausgelöst wird, einschließlich der nicht öffentlichen Methoden ab.</summary>
+        <value>Die Methode, die beim Auslösen des Ereignisses aufgerufen wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft entspricht dem Aufrufen der <xref:System.Reflection.EventInfo.GetRaiseMethod%2A> mit einem Wert von `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveEventHandler">
+      <MemberSignature Language="C#" Value="public virtual void RemoveEventHandler (object target, Delegate handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveEventHandler(object target, class System.Delegate handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.EventInfo.RemoveEventHandler(System.Object,System.Delegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Object" />
+        <Parameter Name="handler" Type="System.Delegate" />
+      </Parameters>
+      <Docs>
+        <param name="target">Die Ereignisquelle.</param>
+        <param name="handler">Der Delegat, dessen Zuordnung zu den Ereignissen, die vom Ziel ausgelöst werden, aufgehoben werden soll.</param>
+        <summary>Entfernt einen Ereignishandler aus einer Ereignisquelle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode versucht, die der Delegat nicht entfernt, die dieses Ereignis für das Zielobjekt synchronisiert werden kann.  
+  
+ Wenn ein Ereignis ausgelöst wird, vom Ziel, Methode oder Methoden, die durch gekapselte `handler` wird nicht mehr aufgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Ereignis besitzt keinen öffentlichen <see langword="remove" />-Accessor.</exception>
+        <exception cref="T:System.ArgumentException">Der übergebene Handler kann nicht verwendet werden.</exception>
+        <exception cref="T:System.Reflection.TargetException">
+          <block subset="none" type="note">
+            <para>  
+ In der [.NET für Windows Store-apps](http://go.microsoft.com/fwlink/?LinkID=247912) oder [Portable Class Library](~/docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md), catch <see cref="T:System.Exception" /> stattdessen.  
+  
+</para>
+          </block>  
+  
+ Der <paramref name="target" />-Parameter ist <see langword="null" />, und das Ereignis ist nicht statisch.  
+  
+ - oder -   
+  
+ Die <see cref="T:System.Reflection.EventInfo" /> ist im Ziel nicht deklariert.</exception>
+        <exception cref="T:System.MethodAccessException">
+          <block subset="none" type="note">
+            <para>  
+ In der [.NET für Windows Store-apps](http://go.microsoft.com/fwlink/?LinkID=247912) oder [Portable Class Library](~/docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md), fangen Sie die basisklassenausnahme <see cref="T:System.MemberAccessException" />, stattdessen.  
+  
+</para>
+          </block>  
+  
+ Der Aufrufer verfügt nicht über Zugriffsberechtigung für diesen Member.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveMethod">
+      <MemberSignature Language="C#" Value="public virtual System.Reflection.MethodInfo RemoveMethod { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MethodInfo RemoveMethod" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.EventInfo.RemoveMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see langword="MethodInfo" /> Objekt zum Entfernen einer Methode des Ereignisses, einschließlich der nicht öffentlichen Methoden.</summary>
+        <value>Die <see langword="MethodInfo" /> Objekt zum Entfernen einer Methode des Ereignisses.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft entspricht dem Aufrufen der <xref:System.Reflection.EventInfo.GetRemoveMethod%2A> mit einem Wert von `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._EventInfo.GetIDsOfNames">
+      <MemberSignature Language="C#" Value="void _EventInfo.GetIDsOfNames (ref Guid riid, IntPtr rgszNames, uint cNames, uint lcid, IntPtr rgDispId);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._EventInfo.GetIDsOfNames([in]valuetype System.Guid&amp; riid, native int rgszNames, unsigned int32 cNames, unsigned int32 lcid, native int rgDispId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.EventInfo.System#Runtime#InteropServices#_EventInfo#GetIDsOfNames(System.Guid@,System.IntPtr,System.UInt32,System.UInt32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="rgszNames" Type="System.IntPtr" />
+        <Parameter Name="cNames" Type="System.UInt32" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="rgDispId" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="riid">Für zukünftige Verwendung reserviert. Muss IID_NULL sein.</param>
+        <param name="rgszNames">Das übergebene Array von zuzuordnenden Namen.</param>
+        <param name="cNames">Die Anzahl der zuzuordnenden Namen.</param>
+        <param name="lcid">Der Gebietsschemakontext, in dem die Namen interpretiert werden sollen.</param>
+        <param name="rgDispId">Das vom Aufrufer zugewiesene Array, das die IDs entsprechend den Namen empfängt.</param>
+        <summary>Ordnet eine Reihe von Namen einer entsprechenden Reihe von Dispatchbezeichnern zu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::GetIDsOfNames`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Spät gebundener Zugriff mithilfe des erweiterten COM <c>IDispatch</c> Schnittstelle wird nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._EventInfo.GetType">
+      <MemberSignature Language="C#" Value="Type _EventInfo.GetType ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Type System.Runtime.InteropServices._EventInfo.GetType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.EventInfo.System#Runtime#InteropServices#_EventInfo#GetType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <c>t: System.Type</c> Objekt darstellt der <see cref="T:System.Reflection.EventInfo" /> Typ.</summary>
+        <returns>Ein <c>t: System.Type</c> Objekt darstellt der <see cref="T:System.Reflection.EventInfo" /> Typ.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._EventInfo.GetTypeInfo">
+      <MemberSignature Language="C#" Value="void _EventInfo.GetTypeInfo (uint iTInfo, uint lcid, IntPtr ppTInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._EventInfo.GetTypeInfo(unsigned int32 iTInfo, unsigned int32 lcid, native int ppTInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.EventInfo.System#Runtime#InteropServices#_EventInfo#GetTypeInfo(System.UInt32,System.UInt32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="iTInfo" Type="System.UInt32" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="ppTInfo" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="iTInfo">Die zurückzugebenden Typinformationen.</param>
+        <param name="lcid">Der Gebietsschemabezeichner für die Typinformationen.</param>
+        <param name="ppTInfo">Empfängt einen Zeiger auf das angeforderte Objekt mit den Typinformationen.</param>
+        <summary>Ruft die Typinformationen für ein Objekt ab, die dann zum Abrufen der Typinformationen für eine Schnittstelle verwendet werden können.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::GetTypeInfo`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Spät gebundener Zugriff mithilfe des erweiterten COM <c>IDispatch</c> Schnittstelle wird nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._EventInfo.GetTypeInfoCount">
+      <MemberSignature Language="C#" Value="void _EventInfo.GetTypeInfoCount (out uint pcTInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._EventInfo.GetTypeInfoCount([out] unsigned int32&amp; pcTInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.EventInfo.System#Runtime#InteropServices#_EventInfo#GetTypeInfoCount(System.UInt32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pcTInfo" Type="System.UInt32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pcTInfo">Zeigt auf einen Speicherort, der die Anzahl der Schnittstellen mit Typinformationen empfängt, die vom Objekt bereitgestellt werden.</param>
+        <summary>Ruft die Anzahl der Schnittstellen mit Typinformationen ab, die von einem Objekt bereitgestellt werden (0 oder 1).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::GetTypeInfoCount`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Spät gebundener Zugriff mithilfe des erweiterten COM <c>IDispatch</c> Schnittstelle wird nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._EventInfo.Invoke">
+      <MemberSignature Language="C#" Value="void _EventInfo.Invoke (uint dispIdMember, ref Guid riid, uint lcid, short wFlags, IntPtr pDispParams, IntPtr pVarResult, IntPtr pExcepInfo, IntPtr puArgErr);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._EventInfo.Invoke(unsigned int32 dispIdMember, [in]valuetype System.Guid&amp; riid, unsigned int32 lcid, int16 wFlags, native int pDispParams, native int pVarResult, native int pExcepInfo, native int puArgErr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.EventInfo.System#Runtime#InteropServices#_EventInfo#Invoke(System.UInt32,System.Guid@,System.UInt32,System.Int16,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dispIdMember" Type="System.UInt32" />
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="wFlags" Type="System.Int16" />
+        <Parameter Name="pDispParams" Type="System.IntPtr" />
+        <Parameter Name="pVarResult" Type="System.IntPtr" />
+        <Parameter Name="pExcepInfo" Type="System.IntPtr" />
+        <Parameter Name="puArgErr" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="dispIdMember">Bezeichnet den Member.</param>
+        <param name="riid">Für zukünftige Verwendung reserviert. Muss IID_NULL sein.</param>
+        <param name="lcid">Der Gebietsschemakontext, in dem Argumente interpretiert werden sollen.</param>
+        <param name="wFlags">Flags, die den Kontext des Aufrufs beschreiben.</param>
+        <param name="pDispParams">Ein Zeiger auf eine Struktur, die ein Array von Argumenten und ein Array von Argument-DISPIDs für benannte Argumente sowie Zähler für die Anzahl der Elemente in jedem Array enthält.</param>
+        <param name="pVarResult">Ein Verweis auf den Speicherort, an dem das Ergebnis gespeichert werden soll.</param>
+        <param name="pExcepInfo">Ein Zeiger auf eine Struktur mit Ausnahmeinformationen.</param>
+        <param name="puArgErr">Der Index des ersten Arguments mit einem Fehler.</param>
+        <summary>Stellt den Zugriff auf von einem Objekt verfügbar gemachte Eigenschaften und Methoden bereit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::Invoke`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Spät gebundener Zugriff mithilfe des erweiterten COM <c>IDispatch</c> Schnittstelle wird nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

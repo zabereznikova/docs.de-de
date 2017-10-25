@@ -1,0 +1,115 @@
+<Type Name="StringSplitOptions" FullName="System.StringSplitOptions">
+  <TypeSignature Language="C#" Value="public enum StringSplitOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed StringSplitOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.StringSplitOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, ob zutreffend <see cref="Overload:System.String.Split" /> methodenüberladungen eingeschlossen oder weglassen leere Teilzeichenfolgen aus dem Rückgabewert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.String.Split%2A?displayProperty=nameWithType> Methode gibt ein Array von Teilzeichenfolgen in einer angegebenen Zeichenfolge, die durch angegebene Zeichen oder Zeichenfolgen getrennt werden. Aufeinander folgende Trennzeichen ergeben ein Arrayelement, das eine leere Zeichenfolge (""). Die Werte der <xref:System.StringSplitOptions> Enumeration angeben, ob ein Arrayelement, das eine leere Zeichenfolge enthält, im zurückgegebenen Array enthalten ist.  
+  
+ Geben Sie keine Wert, der das Standardverhalten von Aufrufen der <xref:System.String.Split%2A?displayProperty=nameWithType> -Methode, die ein Array von Teilzeichenfolgen, die nicht leer sind und leere Teilzeichenfolgen zurückgegeben wird. Geben Sie den RemoveEmptyEntries-Wert, sodass die <xref:System.String.Split%2A?displayProperty=nameWithType> Methode, um ein Array ausschließlich Teilzeichenfolgen, die nicht leer sind, zurückzugeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.StringSplitOptions.RemoveEmptyEntries> Enumeration zum ein- bzw. Ausschließen von generierte Teilzeichenfolgen die <xref:System.String.Split%2A?displayProperty=nameWithType> Methode.  
+  
+ [!code-cpp[string.split3#1](~/samples/snippets/cpp/VS_Snippets_CLR/string.split3/CPP/omit.cpp#1)]
+ [!code-csharp[string.split3#1](~/samples/snippets/csharp/VS_Snippets_CLR/string.split3/CS/omit.cs#1)]
+ [!code-vb[string.split3#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/string.split3/VB/omit.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.StringSplitOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.StringSplitOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.StringSplitOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Rückgabewert enthält die Array-Elemente, die eine leere Zeichenfolge enthalten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveEmptyEntries">
+      <MemberSignature Language="C#" Value="RemoveEmptyEntries" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.StringSplitOptions RemoveEmptyEntries = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.StringSplitOptions.RemoveEmptyEntries" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.StringSplitOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Rückgabewert umfasst keine Array-Elemente, die eine leere Zeichenfolge enthalten</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

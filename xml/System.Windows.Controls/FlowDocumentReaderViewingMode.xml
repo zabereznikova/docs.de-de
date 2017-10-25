@@ -1,0 +1,83 @@
+<Type Name="FlowDocumentReaderViewingMode" FullName="System.Windows.Controls.FlowDocumentReaderViewingMode">
+  <TypeSignature Language="C#" Value="public enum FlowDocumentReaderViewingMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FlowDocumentReaderViewingMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.FlowDocumentReaderViewingMode" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Benennt Anzeigemodi für den <see cref="T:System.Windows.Controls.FlowDocumentReader" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Abbildung zeigt ein Beispiel für Seite Anzeigemodus.  Page-Modus zeigt eine einzelne Seite des Inhalts zu einem Zeitpunkt.  Beachten Sie, dass dieser Modus Seitennavigation enthält Steuerelemente zur Anzeige von der aktuellen Seite die Anzahl und Position, und geben Sie **Weiter** und **vorherige** Seite Schaltflächen.  In diesem Anzeigemodus zeigt keine Bildlaufleisten.  
+  
+ ![FlowDocReader-Ansichtsmodus der Seite](~/add/media/flowdocrdrviewmode-page.png "FlowDocReader-Ansichtsmodus der Seite "")  
+  
+ Die folgende Abbildung zeigt eine Beispiel für den Anzeigemodus TwoPage.  TwoPage Modus gleicht Page-Modus, außer dass zwei gegenüberliegende Seiten zu einem Zeitpunkt, ähnlich wie bei einer geöffneten Buch angezeigt werden.  Beachten Sie, dass dieser Modus Seitennavigation enthält Steuerelemente zur Anzeige von der aktuellen Seite die Anzahl und Position, und geben Sie **Weiter** und **vorherige** Seite Schaltflächen; in diesem Modus kann die **Weiter**und **vorherige** Schaltflächen dazu führen, dass Inhalt durch zwei Seiten zu einem Zeitpunkt, ähnlich wie das Aktivieren einer Seite in einem Buch zu springen.  Die aktuelle Seitenzahl gibt die führende Seite an.  In diesem Anzeigemodus zeigt keine Bildlaufleisten.  
+  
+ ![FlowDocumentReader-Ansichtsmodus des Buchs](~/add/media/flowdocrdrviewmode-book.png "FlowDocumentReader-Ansichtsmodus des Buchs")  
+  
+ Die folgende Abbildung zeigt ein Beispiel des Bildlaufs Anzeigemodus.  In diesem Anzeigemodus umfasst keine Steuerelemente für die Seitennavigation; der Benutzer navigiert stattdessen Inhalt mit Bildlaufleisten.  Für die Zwecke der Seitenzahl und die Navigation präsentiert Scroll Anzeigemodus eine einzelne Seite, deren Spaltenanzahl immer 1 ist.  
+  
+ ![Bildschirmabbildung: FlowDocumentReader-Ansichtsmodus des Bildlaufs](~/add/media/flowdocrdrviewmode-scroll.png "Bildschirmabbildung: FlowDocumentReader-Ansichtsmodus des Bildlaufs")  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Page">
+      <MemberSignature Language="C#" Value="Page" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.FlowDocumentReaderViewingMode Page = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.FlowDocumentReaderViewingMode.Page" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.FlowDocumentReaderViewingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die <see cref="T:System.Windows.Controls.FlowDocumentReader" /> sollten Inhaltsseite anzeigen zu einem Zeitpunkt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Scroll">
+      <MemberSignature Language="C#" Value="Scroll" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.FlowDocumentReaderViewingMode Scroll = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.FlowDocumentReaderViewingMode.Scroll" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.FlowDocumentReaderViewingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die <see cref="T:System.Windows.Controls.FlowDocumentReader" /> sollte im fortlaufenden Modus aus fortlaufenden Inhalt anzeigen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TwoPage">
+      <MemberSignature Language="C#" Value="TwoPage" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.FlowDocumentReaderViewingMode TwoPage = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.FlowDocumentReaderViewingMode.TwoPage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.FlowDocumentReaderViewingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die <see cref="T:System.Windows.Controls.FlowDocumentReader" /> sollten zwei Inhaltsseiten anzeigen zu einem Zeitpunkt, ähnlich wie ein Buch öffnen.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

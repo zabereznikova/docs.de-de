@@ -1,0 +1,57 @@
+<Type Name="WebPartVerbRenderMode" FullName="System.Web.UI.WebControls.WebParts.WebPartVerbRenderMode">
+  <TypeSignature Language="C#" Value="public enum WebPartVerbRenderMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WebPartVerbRenderMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebPartVerbRenderMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wie die Verben auf gerendert werden soll eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.WebPartVerbRenderMode%2A> Eigenschaft bestimmt, ob die Verben auf <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente in einer Webparts-Zone in der Titelleiste des Steuerelements oder in einem Dropdown-Verbenmenü gerendert werden. Die <xref:System.Web.UI.WebControls.WebParts.WebPartVerbRenderMode> -Enumeration enthält Werte, die angewendet werden können die <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.WebPartVerbRenderMode%2A> Eigenschaft, um anzugeben, wie die Verben gerendert werden soll.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Menu">
+      <MemberSignature Language="C#" Value="Menu" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.WebParts.WebPartVerbRenderMode Menu = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.WebPartVerbRenderMode.Menu" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartVerbRenderMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verben werden in einem Kontextmenü in der Titelleiste gerendert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TitleBar">
+      <MemberSignature Language="C#" Value="TitleBar" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.WebParts.WebPartVerbRenderMode TitleBar = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.WebPartVerbRenderMode.TitleBar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartVerbRenderMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verben werden als Links direkt in der Titelleiste gerendert.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

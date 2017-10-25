@@ -1,0 +1,136 @@
+<Type Name="UndoUnit" FullName="System.Activities.Presentation.UndoUnit">
+  <TypeSignature Language="C#" Value="public abstract class UndoUnit" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit UndoUnit extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.UndoUnit" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen einzelnen Arbeitsschritt dar, der rückgängig gemacht werden kann. Eine Komponente dieser Art wird einem Rückgängig-Stapel hinzugefügt, und es werden Methoden bereitgestellt, um den Stapel zu durchlaufen und für jede Komponente eine Rückgängig-Aktion durchzuführen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected UndoUnit (System.Activities.Presentation.EditingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Activities.Presentation.EditingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.UndoUnit.#ctor(System.Activities.Presentation.EditingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.Presentation.EditingContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der Bearbeitungskontext.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Activities.Presentation.UndoUnit" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyGlobalState">
+      <MemberSignature Language="C#" Value="protected void ApplyGlobalState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ApplyGlobalState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.UndoUnit.ApplyGlobalState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wendet den gespeicherten Designer als Stamm-Designer an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.UndoUnit.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Beschreibung dieser Rückgängig-Komponente ab bzw. legt diese fest.</summary>
+        <value>Gibt <see cref="T:System.String" />zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Redo">
+      <MemberSignature Language="C#" Value="public abstract void Redo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Redo() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.UndoUnit.Redo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt den in dieser Rückgängig-Komponente enthaltenen Inhalt wieder her (Wiederholen).</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveGlobalState">
+      <MemberSignature Language="C#" Value="protected void SaveGlobalState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SaveGlobalState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.UndoUnit.SaveGlobalState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Behält den aktuellen Stamm-Designer bei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Undo">
+      <MemberSignature Language="C#" Value="public abstract void Undo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Undo() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.UndoUnit.Undo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Macht den in dieser Rückgängig-Komponente enthaltenen Inhalt rückgängig.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rückgängig-Vorgänge schalten für ein Objekt zwischen dem Rückgängig- und Wiederholen-Zustand um. Daher bewirkt das zweimalige Aufrufen dieser Methode das Zurücksetzen des Objekts auf seinen Originalzustand.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

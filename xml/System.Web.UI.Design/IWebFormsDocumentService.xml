@@ -1,0 +1,221 @@
+<Type Name="IWebFormsDocumentService" FullName="System.Web.UI.Design.IWebFormsDocumentService">
+  <TypeSignature Language="C#" Value="public interface IWebFormsDocumentService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IWebFormsDocumentService" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.IWebFormsDocumentService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The recommended alternative is System.Web.UI.Design.WebFormsRootDesigner. The WebFormsRootDesigner contains additional functionality and allows for more extensibility. To get the WebFormsRootDesigner use the RootDesigner property from your ControlDesigner. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Methoden zum Zugriff auf Dienste für zustandsnachverfolgung das Laden eines Dokuments Web Forms, Behandlung von Ereignissen zur Ladezeit, den Zugriff auf den Speicherort eines Dokuments, Verwalten des Dokuments rückgängig-Diensts und eine neue Auswahl innerhalb des Dokuments festlegen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.IWebFormsDocumentService> Schnittstelle ist veraltet. Verwenden der <xref:System.Web.UI.Design.WebFormsRootDesigner> entsprechende Designerfunktionen-Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateDiscardableUndoUnit">
+      <MemberSignature Language="C#" Value="public object CreateDiscardableUndoUnit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object CreateDiscardableUndoUnit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.IWebFormsDocumentService.CreateDiscardableUndoUnit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine entfernbare Rückgängig-Komponente.</summary>
+        <returns>Die neue entfernbare Rückgängig-Komponente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist veraltet, und es ist keine entsprechende Funktionalität.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DiscardUndoUnit">
+      <MemberSignature Language="C#" Value="public void DiscardUndoUnit (object discardableUndoUnit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DiscardUndoUnit(object discardableUndoUnit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.IWebFormsDocumentService.DiscardUndoUnit(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="discardableUndoUnit" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="discardableUndoUnit">Die Rückgängig-Komponente zu verwerfen.</param>
+        <summary>Verwirft den angegebenen Rückgängig-Komponente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist veraltet, und es ist keine entsprechende Funktionalität.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DocumentUrl">
+      <MemberSignature Language="C#" Value="public string DocumentUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DocumentUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.IWebFormsDocumentService.DocumentUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die URL, an dem sich das Dokument befindet.</summary>
+        <value>Die URL, an dem sich das Dokument befindet, oder <see langword="null" /> , wenn das Dokument keine URL zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.IWebFormsDocumentService.DocumentUrl%2A> Schnittstelleneigenschaft ist veraltet. Verwenden der <xref:System.Web.UI.Design.WebFormsRootDesigner.DocumentUrl%2A> Eigenschaft auf die <xref:System.Web.UI.Design.WebFormsRootDesigner> entsprechende Designerfunktionen-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableUndo">
+      <MemberSignature Language="C#" Value="public void EnableUndo (bool enable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EnableUndo(bool enable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.IWebFormsDocumentService.EnableUndo(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="enable">
+          <see langword="true" />Wenn Aktionen rückgängig gemacht werden werden sollen; andernfalls <see langword="false" />.</param>
+        <summary>Bietet die Möglichkeit, Aktionen rückgängig zu machen, die in Rückgängigaktion Einheiten oder Transaktionen auftreten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist veraltet, und es ist keine entsprechende Funktionalität.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLoading">
+      <MemberSignature Language="C#" Value="public bool IsLoading { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLoading" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.IWebFormsDocumentService.IsLoading" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Dokumentdienst aktuell geladen wird.</summary>
+        <value>
+          <see langword="true" />Wenn der Dokumentdienst geladen wird; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.IWebFormsDocumentService.IsLoading%2A> Schnittstelleneigenschaft ist veraltet. Verwenden der <xref:System.Web.UI.Design.WebFormsRootDesigner.IsLoading%2A> Eigenschaft auf die <xref:System.Web.UI.Design.WebFormsRootDesigner> entsprechende Designerfunktionen-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadComplete">
+      <MemberSignature Language="C#" Value="public event EventHandler LoadComplete;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler LoadComplete" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.Design.IWebFormsDocumentService.LoadComplete" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Dienst nach dem Laden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.Design.IWebFormsDocumentService.LoadComplete> Schnittstellenereignisses ist veraltet. Verwenden der <xref:System.Web.UI.Design.WebFormsRootDesigner.LoadComplete> Ereignis auf der <xref:System.Web.UI.Design.WebFormsRootDesigner> entsprechende Designerfunktionen-Klasse.  
+  
+ Dieses Ereignis bietet die Möglichkeit, Vorgänge auszuführen, unmittelbar nach dem Ladevorgang abgeschlossen ist. Ereignisse, die zur Ladezeit erfolgen soll, können als Ereignishandler für dieses Ereignis registriert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateSelection">
+      <MemberSignature Language="C#" Value="public void UpdateSelection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UpdateSelection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.IWebFormsDocumentService.UpdateSelection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beim Implementieren in einer abgeleiteten Klasse wird die aktuelle Auswahl aktualisiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist veraltet, und es ist keine entsprechende Funktionalität.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

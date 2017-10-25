@@ -1,0 +1,190 @@
+<Type Name="PrecompilationFlags" FullName="System.Web.Compilation.PrecompilationFlags">
+  <TypeSignature Language="C#" Value="public enum PrecompilationFlags" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PrecompilationFlags extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Compilation.PrecompilationFlags" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Flags bereit, die das Vorkompilierungsverhalten bestimmen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `PrecompilationFlags` Klasse definiert das Verhalten des Build-Managers während der Vorkompilierung. Die <xref:System.Web.Compilation.ClientBuildManager> -Klasse nimmt `PrecompilationFlags` als einen seiner Konstruktorparameter. Vorkompilierung erfolgen kann programmgesteuert über <xref:System.Web.Compilation.ClientBuildManager> oder über das Befehlszeilenprogramm "Aspnet_compiler.exe".  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllowPartiallyTrustedCallers">
+      <MemberSignature Language="C#" Value="AllowPartiallyTrustedCallers" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Compilation.PrecompilationFlags AllowPartiallyTrustedCallers = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Compilation.PrecompilationFlags.AllowPartiallyTrustedCallers" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.PrecompilationFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein <see cref="T:System.Security.AllowPartiallyTrustedCallersAttribute" />-Attribut wird für die Assemblys generiert, d.h. die Assemblys können von teilweise vertrauenswürdigem Code aufgerufen werden. Das <see langword="/aptca" />-Flag wird als Kompilierungssymbol hinzugefügt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Clean">
+      <MemberSignature Language="C#" Value="Clean" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Compilation.PrecompilationFlags Clean = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Compilation.PrecompilationFlags.Clean" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.PrecompilationFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Anwendung wird „sauber“ erstellt: Vorher kompilierte Komponenten werden erneut kompiliert. Dieses Feld entspricht dem <see langword="-c" />-Schalter in „Aspnet_compiler.exe“.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CodeAnalysis">
+      <MemberSignature Language="C#" Value="CodeAnalysis" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Compilation.PrecompilationFlags CodeAnalysis = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Compilation.PrecompilationFlags.CodeAnalysis" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.PrecompilationFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das <see langword="/define:CodeAnalysis" />-Flag wird als Kompilierungssymbol hinzugefügt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Compilation.PrecompilationFlags Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Compilation.PrecompilationFlags.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.PrecompilationFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Standardwert. Für die Vorkompilierung ist kein besonderes Verhalten angegeben.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DelaySign">
+      <MemberSignature Language="C#" Value="DelaySign" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Compilation.PrecompilationFlags DelaySign = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Compilation.PrecompilationFlags.DelaySign" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.PrecompilationFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Assembly wird bei ihrer Erstellung nicht vollständig signiert. Die Assembly kann später durch ein Signaturtool wie „Sn.exe“ signiert werden. Das <see langword="/delaysign" />-Flag wird als Kompilierungssymbol hinzugefügt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FixedNames">
+      <MemberSignature Language="C#" Value="FixedNames" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Compilation.PrecompilationFlags FixedNames = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Compilation.PrecompilationFlags.FixedNames" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.PrecompilationFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Assembly wird mit festgelegten Namen für die Webseiten generiert. Die Dateien werden nicht batchweise und stattdessen einzeln kompiliert, um die festgelegten Namen zu erzeugen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ForceDebug">
+      <MemberSignature Language="C#" Value="ForceDebug" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Compilation.PrecompilationFlags ForceDebug = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Compilation.PrecompilationFlags.ForceDebug" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.PrecompilationFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Compiler gibt Debuginformationen aus. Dieses Feld entspricht dem <see langword="-d" />-Schalter in „Aspnet_compiler.exe“.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreBadImageFormatException">
+      <MemberSignature Language="C#" Value="IgnoreBadImageFormatException" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Compilation.PrecompilationFlags IgnoreBadImageFormatException = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Compilation.PrecompilationFlags.IgnoreBadImageFormatException" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.PrecompilationFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Compiler ignoriert Formatausnahmen, die auf fehlerhaften Images basieren.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OverwriteTarget">
+      <MemberSignature Language="C#" Value="OverwriteTarget" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Compilation.PrecompilationFlags OverwriteTarget = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Compilation.PrecompilationFlags.OverwriteTarget" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.PrecompilationFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Zielverzeichnis kann überschrieben werden. Dieses Feld entspricht dem <see langword="-f" />-Schalter in „Aspnet_compiler.exe“ für ein bereits vorkompiliertes Ziel.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Updatable">
+      <MemberSignature Language="C#" Value="Updatable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Compilation.PrecompilationFlags Updatable = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Compilation.PrecompilationFlags.Updatable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.PrecompilationFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die bereitgestellte Anwendung kann aktualisiert werden. Dieses Feld entspricht dem <see langword="-u" />-Schalter in „Aspnet_compiler.exe“.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

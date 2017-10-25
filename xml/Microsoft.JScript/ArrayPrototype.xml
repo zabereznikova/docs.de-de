@@ -1,0 +1,428 @@
+<Type Name="ArrayPrototype" FullName="Microsoft.JScript.ArrayPrototype">
+  <TypeSignature Language="C#" Value="public class ArrayPrototype : Microsoft.JScript.ArrayObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ArrayPrototype extends Microsoft.JScript.ArrayObject" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.ArrayPrototype" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.JScript.ArrayObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt statische Methoden und Eigenschaften für <see cref="T:Microsoft.JScript.ArrayObject" /> Objekte. Alle Methoden dieser Klasse werden durch Übergabe eines Verweises auf das Objekt aufgerufen, die Zugriff auf die Methode anfordert. Diese Klasse gehört zu "Modell" integrierten Objekt.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="concat">
+      <MemberSignature Language="C#" Value="public static Microsoft.JScript.ArrayObject concat (object thisob, Microsoft.JScript.Vsa.VsaEngine engine, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.JScript.ArrayObject concat(object thisob, class Microsoft.JScript.Vsa.VsaEngine engine, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ArrayPrototype.concat(System.Object,Microsoft.JScript.Vsa.VsaEngine,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject | Microsoft.JScript.JSFunctionAttributeEnum.HasVarArgs | Microsoft.JScript.JSFunctionAttributeEnum.HasEngine, Microsoft.JScript.JSBuiltin.Array_concat)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.ArrayObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+        <Parameter Name="engine" Type="Microsoft.JScript.Vsa.VsaEngine" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <param name="engine">Ein Verweis auf das Skriptmodul.</param>
+        <param name="args">Die Objekte oder Arrays zum Anfügen an <c>Thisob</c>.</param>
+        <summary>Verkettet Objekte oder Arrays an das Ende der angegebenen Objekt oder Array.</summary>
+        <returns>
+          <paramref name="thisob" />und <paramref name="args" /> verkettet.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="constructor">
+      <MemberSignature Language="C#" Value="public static Microsoft.JScript.ArrayConstructor constructor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.JScript.ArrayConstructor constructor" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.ArrayPrototype.constructor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.ArrayConstructor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf ein prototypbasierten-Objekt, das diesen Prototyp verwendet wird.</summary>
+        <value>Ein Verweis auf ein prototypbasierten-Objekt.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="join">
+      <MemberSignature Language="C#" Value="public static string join (object thisob, object separator);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string join(object thisob, object separator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ArrayPrototype.join(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.Array_join)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+        <Parameter Name="separator" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <param name="separator">Die Zeichenfolge, die Elemente zu trennen. Der Standardwert ist ein Komma.</param>
+        <summary>Verkettet die Elemente des angegebenen Arrays in eine Zeichenfolge. Die Elemente werden durch das angegebene Trennzeichen getrennt.</summary>
+        <returns>Eine Zeichenfolge, die verkettet die Elemente eines <paramref name="thisob" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="pop">
+      <MemberSignature Language="C#" Value="public static object pop (object thisob);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object pop(object thisob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ArrayPrototype.pop(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.Array_pop)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <summary>Entfernt das letzte Element aus dem angegebenen Array und gibt es zurück.</summary>
+        <returns>Das letzte Element der <paramref name="thisob" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="push">
+      <MemberSignature Language="C#" Value="public static long push (object thisob, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int64 push(object thisob, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ArrayPrototype.push(System.Object,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject | Microsoft.JScript.JSFunctionAttributeEnum.HasVarArgs, Microsoft.JScript.JSBuiltin.Array_push)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <param name="args">Die Elemente hinzuzufügende <c>Thisob</c>.</param>
+        <summary>Das Ende des angegebenen Arrays hinzugefügt neue Elemente.</summary>
+        <returns>Die neue Länge des <paramref name="thisob" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="reverse">
+      <MemberSignature Language="C#" Value="public static object reverse (object thisob);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object reverse(object thisob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ArrayPrototype.reverse(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.Array_reverse)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <summary>Kehrt die Elemente des angegebenen Arrays an.</summary>
+        <returns>
+          <paramref name="thisob" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="shift">
+      <MemberSignature Language="C#" Value="public static object shift (object thisob);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object shift(object thisob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ArrayPrototype.shift(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.Array_shift)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <summary>Entfernt das erste Element aus dem angegebenen Array und gibt es zurück. Verschiebt die verbleibenden Elemente zu den vorherigen Positionen an.</summary>
+        <returns>Das erste Element des <paramref name="thisob" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="slice">
+      <MemberSignature Language="C#" Value="public static Microsoft.JScript.ArrayObject slice (object thisob, Microsoft.JScript.Vsa.VsaEngine engine, double start, object end);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.JScript.ArrayObject slice(object thisob, class Microsoft.JScript.Vsa.VsaEngine engine, float64 start, object end) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ArrayPrototype.slice(System.Object,Microsoft.JScript.Vsa.VsaEngine,System.Double,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject | Microsoft.JScript.JSFunctionAttributeEnum.HasEngine, Microsoft.JScript.JSBuiltin.Array_slice)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.ArrayObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+        <Parameter Name="engine" Type="Microsoft.JScript.Vsa.VsaEngine" />
+        <Parameter Name="start" Type="System.Double" />
+        <Parameter Name="end" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <param name="engine">Ein Verweis auf das Skriptmodul.</param>
+        <param name="start">Das erste Element mit aufeinander folgenden abgerufen.</param>
+        <param name="end">Das letzte aufeinander folgende Element abrufen.</param>
+        <summary>Erstellt ein neues Array, das die angegebenen aufeinander folgende Elemente aus dem angegebenen Array enthält.</summary>
+        <returns>Ein neues Array, das aufeinander folgende Elemente zwischen enthält <paramref name="thisob" />[<paramref name="start" />] und <paramref name="thisob" />[<paramref name="end" />].</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="sort">
+      <MemberSignature Language="C#" Value="public static object sort (object thisob, object function);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object sort(object thisob, object function) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ArrayPrototype.sort(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.Array_sort)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+        <Parameter Name="function" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <param name="function">Die Funktion zum Vergleichen von Elementen verwendet werden soll.</param>
+        <summary>Sortiert die Elemente des angegebenen Arrays mithilfe der angegebenen Funktion, die Elemente verglichen werden soll.</summary>
+        <returns>
+          <paramref name="thisob" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="splice">
+      <MemberSignature Language="C#" Value="public static Microsoft.JScript.ArrayObject splice (object thisob, Microsoft.JScript.Vsa.VsaEngine engine, double start, double deleteCnt, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.JScript.ArrayObject splice(object thisob, class Microsoft.JScript.Vsa.VsaEngine engine, float64 start, float64 deleteCnt, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ArrayPrototype.splice(System.Object,Microsoft.JScript.Vsa.VsaEngine,System.Double,System.Double,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject | Microsoft.JScript.JSFunctionAttributeEnum.HasVarArgs | Microsoft.JScript.JSFunctionAttributeEnum.HasEngine, Microsoft.JScript.JSBuiltin.Array_splice)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.ArrayObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+        <Parameter Name="engine" Type="Microsoft.JScript.Vsa.VsaEngine" />
+        <Parameter Name="start" Type="System.Double" />
+        <Parameter Name="deleteCnt" Type="System.Double" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <param name="engine">Ein Verweis auf das Skriptmodul.</param>
+        <param name="start">Die Position im Array hinzufügen und Entfernen von Elementen.</param>
+        <param name="deleteCnt">Die Anzahl von Elementen, die ggf. zu entfernen.</param>
+        <param name="args">Die hinzuzufügenden Elemente, sofern vorhanden.</param>
+        <summary>Hinzugefügt und entfernt Elemente aus einem Array, an der angegebenen Position im Array. Sie können Elemente, Elemente entfernen oder beides hinzufügen.</summary>
+        <returns>Ein neues Array mit den Elementen daraus <paramref name="thisob" />, sofern die solche entfernt wurden.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="toLocaleString">
+      <MemberSignature Language="C#" Value="public static string toLocaleString (object thisob);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string toLocaleString(object thisob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ArrayPrototype.toLocaleString(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.Array_toLocaleString)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <summary>Erstellt eine Zeichenfolgendarstellung des angegebenen Objekts, die verkettet die Elemente und teilt ihnen mit einer <see cref="P:System.Globalization.TextInfo.ListSeparator" /> und ein Leerzeichen.</summary>
+        <returns>Eine Zeichenfolge, die verkettet die Elemente eines <paramref name="thisob" /> und trennt mit einem <see cref="P:System.Globalization.TextInfo.ListSeparator" /> und ein Leerzeichen.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="toString">
+      <MemberSignature Language="C#" Value="public static string toString (object thisob);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string toString(object thisob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ArrayPrototype.toString(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.Array_toString)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <summary>Erstellt eine Zeichenfolgendarstellung des angegebenen Objekts, das verkettet die Elemente und durch ein Komma voneinander trennt.</summary>
+        <returns>Eine Zeichenfolge, die verkettet die Elemente eines <paramref name="thisob" /> und durch ein Komma voneinander trennt.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="unshift">
+      <MemberSignature Language="C#" Value="public static object unshift (object thisob, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object unshift(object thisob, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ArrayPrototype.unshift(System.Object,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject | Microsoft.JScript.JSFunctionAttributeEnum.HasVarArgs, Microsoft.JScript.JSBuiltin.Array_unshift)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <param name="args">Die Elemente hinzuzufügende <c>Thisob</c>.</param>
+        <summary>Am Anfang des angegebenen Arrays hinzugefügt neue Elemente. Verschiebt die vorhandenen Elemente zu den nächsten Positionen an.</summary>
+        <returns>Die neue Länge des <paramref name="thisob" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

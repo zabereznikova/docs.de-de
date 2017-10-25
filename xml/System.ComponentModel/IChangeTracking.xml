@@ -1,0 +1,83 @@
+<Type Name="IChangeTracking" FullName="System.ComponentModel.IChangeTracking">
+  <TypeSignature Language="C#" Value="public interface IChangeTracking" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IChangeTracking" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.IChangeTracking" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert den Mechanismus zum Abfragen von Änderungen des Objekts sowie zum Zurücksetzen des geänderten Status.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AcceptChanges">
+      <MemberSignature Language="C#" Value="public void AcceptChanges ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AcceptChanges() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.IChangeTracking.AcceptChanges" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt den Zustand des Objekts durch Akzeptieren der Änderungen auf unverändert zurück.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsChanged">
+      <MemberSignature Language="C#" Value="public bool IsChanged { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsChanged" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.IChangeTracking.IsChanged" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Änderungsstatus des Objekts ab.</summary>
+        <value>
+          <see langword="true" />Wenn Sie den Inhalt des Objekts seit dem letzten Aufruf von geänderten <see cref="M:System.ComponentModel.IChangeTracking.AcceptChanges" />ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

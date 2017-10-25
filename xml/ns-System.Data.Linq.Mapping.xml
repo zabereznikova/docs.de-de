@@ -1,0 +1,6 @@
+<Namespace Name="System.Data.Linq.Mapping">
+  <Docs>
+    <summary>Die <see cref="N:System.Data.Linq.Mapping" /> -Namespace enthält Klassen, die verwendet werden, um eine LINQ to SQL-Objektmodell zu generieren, die die Struktur und den Inhalt einer relationalen Datenbank darstellt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

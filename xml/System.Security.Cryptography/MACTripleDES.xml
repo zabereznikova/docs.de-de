@@ -1,0 +1,282 @@
+<Type Name="MACTripleDES" FullName="System.Security.Cryptography.MACTripleDES">
+  <TypeSignature Language="C#" Value="public class MACTripleDES : System.Security.Cryptography.KeyedHashAlgorithm" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MACTripleDES extends System.Security.Cryptography.KeyedHashAlgorithm" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.MACTripleDES" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.KeyedHashAlgorithm</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Berechnet einen MAC (Message Authentication Code) unter Verwendung von <see cref="T:System.Security.Cryptography.TripleDES" /> für den <see cref="T:System.Security.Cryptography.CryptoStream" /> der Eingabedaten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein MAC kann verwendet werden, um zu bestimmen, ob eine über einen unsicheren Kanal gesendete Nachricht manipuliert wurde, vorausgesetzt, dass Sender und Empfänger einen gemeinsamen geheimen Schlüssel besitzen. Der Absender der MAC für die ursprünglichen Daten berechnet und als eine einzelne Nachricht sendet. Der Empfänger den MAC für die empfangene Nachricht neuberechnungen und überprüft, ob die berechnete MAC übertragenen Mac übereinstimmt  
+  
+ Die Daten oder die MAC-Ergebnisse zu einer Diskrepanz ändern, da Wissen des geheimen Schlüssels erforderlich ist, ändern Sie die Nachricht, und reproduzieren das richtige Mac Aus diesem Grund wird die Codes übereinstimmen, die Nachricht authentifiziert.  
+  
+ <xref:System.Security.Cryptography.MACTripleDES>verwendet einen Schlüssel, der 16 oder 24 Byte lang ist, und erzeugt eine Hashsequenz, die 8 Bytes lang ist.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt einen MAC für eine Datei namens `input.txt`, befindet sich im Ordner "", die im Beispiel ausführbare enthält. Der MAC und den ursprünglichen Text werden geschrieben, in eine Datei mit dem Namen `encrypted.hsh` im selben Ordner. Die signierte Datei dann gelesen wird und der MAC für den Textteil der Datei berechnet und im Vergleich zu den MAC, der mit dem Text enthalten ist.  
+  
+ [!code-csharp[MAC3DES#1](~/samples/snippets/csharp/VS_Snippets_CLR/MAC3DES/CS/program.cs#1)]
+ [!code-vb[MAC3DES#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/MAC3DES/VB/program.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MACTripleDES ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.MACTripleDES.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.MACTripleDES" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor verwendet die standardmäßige Implementierung des <xref:System.Security.Cryptography.TripleDES>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MACTripleDES (byte[] rgbKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] rgbKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.MACTripleDES.#ctor(System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rgbKey" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="rgbKey">Der geheime Schlüssel für die <see cref="T:System.Security.Cryptography.MACTripleDES" />-Verschlüsselung.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.MACTripleDES" />-Klasse mit den angegebenen Schlüsseldaten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor verwendet die standardmäßige Implementierung des <xref:System.Security.Cryptography.TripleDES>. Die `rgbKey` -Parameter muss 16 oder 24 Byte lang sein.  
+  
+   
+  
+## Examples  
+ Ein Beispiel dafür, wie dieser Konstruktor verwendet, finden Sie die <xref:System.Security.Cryptography.MACTripleDES> Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="rgbKey" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MACTripleDES (string strTripleDES, byte[] rgbKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string strTripleDES, unsigned int8[] rgbKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.MACTripleDES.#ctor(System.String,System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="strTripleDES" Type="System.String" />
+        <Parameter Name="rgbKey" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="strTripleDES">Der Name der zu verwendenden <see cref="T:System.Security.Cryptography.TripleDES" />-Implementierung.</param>
+        <param name="rgbKey">Der geheime Schlüssel für die <see cref="T:System.Security.Cryptography.MACTripleDES" />-Verschlüsselung.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.MACTripleDES" />-Klasse mit den angegebenen Schlüsseldaten und unter Verwendung der angegebenen Implementierung von <see cref="T:System.Security.Cryptography.TripleDES" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `strTripleDES` Parameter ist der Anzeigename, der die <xref:System.Security.Cryptography.TripleDES> Implementierungstyp. Die Standardimplementierung gibt System.Security.Cryptography.TripleDES.  
+  
+ Die `rgbKey` -Parameter muss 16 oder 24 Byte lang sein.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="rgbKey" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicUnexpectedOperationException">Die <paramref name="strTripleDES" /> -Parameter ist kein gültiger Name einer <see cref="T:System.Security.Cryptography.TripleDES" /> Implementierung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.MACTripleDES.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, wenn die Methode von einer <see cref="M:System.IDisposable.Dispose" />-Implementierung aufgerufen wird, andernfalls <see langword="false" />.</param>
+        <summary>Gibt die von der <see cref="T:System.Security.Cryptography.MACTripleDES" />-Instanz verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich `Dispose()` Methode und die `Finalize` Methode. `Dispose()`Ruft die geschützte `Dispose(Boolean)` Methode mit der disposing-Parameter auf festgelegt `true`. `Finalize`Ruft `Dispose` mit disposing auf `false`.  
+  
+ Wenn der `disposing`-Parameter `true` ist, gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte reserviert sind, auf die dieser <xref:System.Security.Cryptography.MACTripleDES> verweist. Diese Methode ruft die `Dispose()`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Zum Überschreiben <see langword="Dispose(Boolean)" />müssen Sie darauf achten, nicht auf Objekte verweisen, die einen früheren Aufruf freigegeben wurden <see langword="Dispose" />. Weitere Informationen zum Implementieren <see langword="Dispose(Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see langword="Dispose" /> und <see langword="Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="HashCore">
+      <MemberSignature Language="C#" Value="protected override void HashCore (byte[] rgbData, int ibStart, int cbSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void HashCore(unsigned int8[] rgbData, int32 ibStart, int32 cbSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.MACTripleDES.HashCore(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rgbData" Type="System.Byte[]" />
+        <Parameter Name="ibStart" Type="System.Int32" />
+        <Parameter Name="cbSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rgbData">Die Eingabedaten.</param>
+        <param name="ibStart">Der Offset im Bytearray, ab dem Daten verwendet werden sollen.</param>
+        <param name="cbSize">Die Anzahl der Bytes im Array, die als Daten verwendet werden sollen.</param>
+        <summary>Leitet die in das Objekt geschriebenen Daten in das <see cref="T:System.Security.Cryptography.TripleDES" />-Verschlüsselungsobjekt zum Berechnen des MAC (Message Authentication Code) weiter.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HashFinal">
+      <MemberSignature Language="C#" Value="protected override byte[] HashFinal ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance unsigned int8[] HashFinal() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.MACTripleDES.HashFinal" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den errechneten MAC (Message Authentication Code) zurück, nachdem alle Daten in das Objekt geschrieben wurden.</summary>
+        <returns>Der errechnete MAC.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diesen Wert nur, nachdem alle Daten geschrieben werden soll, und Sie können nicht mehr Daten anschließend schreiben lesen. Erstellen Sie eine neue Instanz der <xref:System.Security.Cryptography.MACTripleDES> für jede separate Segment von Daten auf den MAC für diese Daten zu berechnen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.MACTripleDES.Initialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine Instanz von <see cref="T:System.Security.Cryptography.MACTripleDES" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ruft den Standardkonstruktor für die Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Padding">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.PaddingMode Padding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.PaddingMode Padding" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.MACTripleDES.Padding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.PaddingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den im Hashalgorithmus verwendeten Füllzeichenmodus ab oder legt diesen fest.</summary>
+        <value>Der im Hashalgorithmus verwendete Füllzeichenmodus.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die meisten nur-Text-Nachrichten keine Anzahl von Bytes bestehen, die Blöcke vollständig ausfüllen. Häufig sind nicht ausreichende Anzahl von Bytes zum Ausfüllen des letzten Blocks. In diesem Fall wird der Text eine Auffüllung Zeichenfolge hinzugefügt. Wenn die Blocklänge 64 Bits beträgt und der letzte Block nur 40 Bits enthält, werden z. B. 24 Bits der Auffüllung hinzugefügt. Finden Sie unter <xref:System.Security.Cryptography.PaddingMode> eine Beschreibung der einzelnen Modi.  
+  
+ Dieses Feld erfolgt über die <xref:System.Security.Cryptography.SymmetricAlgorithm.Padding%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Die Eigenschaft kann nicht festgelegt werden, da der Füllzeichenmodus ungültig ist.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

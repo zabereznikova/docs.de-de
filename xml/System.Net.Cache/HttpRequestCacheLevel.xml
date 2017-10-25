@@ -1,0 +1,273 @@
+<Type Name="HttpRequestCacheLevel" FullName="System.Net.Cache.HttpRequestCacheLevel">
+  <TypeSignature Language="C#" Value="public enum HttpRequestCacheLevel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HttpRequestCacheLevel extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Cache.HttpRequestCacheLevel" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Requests</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt das Verhalten beim Zwischenspeichern für Ressourcen, die mit dem Hypertext Transfer-Protokoll (HTTP) abgerufen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird verwendet, der Cacheebene gemäß festzulegende <xref:System.Net.Cache.HttpRequestCachePolicy> Objekte.  
+  
+ Dieser BypassCache-Wert ist das Standardverhalten-Cache angegeben, in der Computerkonfigurationsdatei, die mit .NET Framework geliefert wird. Keine Einträge sind Caches entnommen, Caches hinzugefügt oder aus Caches zwischen Client und Server entfernt.  
+  
+ Die <xref:System.Net.HttpWebRequest.DefaultCachePolicy%2A?displayProperty=nameWithType> Eigenschaft dient zum Abrufen oder Festlegen der Standardcacherichtlinie für <xref:System.Net.HttpWebRequest.DefaultCachePolicy%2A?displayProperty=nameWithType> Instanzen. Die <xref:System.Net.WebRequest.CachePolicy%2A?displayProperty=nameWithType> Eigenschaft dient zum Abrufen oder Festlegen der Standardcacherichtlinie für eine <xref:System.Net.WebRequest.CachePolicy%2A?displayProperty=nameWithType> Instanzen. Die <xref:System.Net.WebRequest.CachePolicy%2A?displayProperty=nameWithType> Eigenschaft wird zum Abrufen oder Festlegen der Cacherichtlinie für eine bestimmte Anforderung verwendet.  
+  
+ Eine Kopie einer Ressource wird nur in den Cache hinzugefügt, wenn der Antwortstream für die Ressource abgerufen und bis zum Ende des Streams gelesen wird. Damit eine andere Anforderung für die gleiche Ressource eine zwischengespeicherte Kopie abhängig von der Ebene für die Richtlinie von Caches für diese Anforderung verwenden kann.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel legt die Cachingrichtlinie für die Anwendungsdomäne an Standardeinstellung fest.  
+  
+ [!code-cpp[NCLSimpleCache#2](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLSimpleCache/CPP/NCLSimpleCache.cpp#2)]
+ [!code-csharp[NCLSimpleCache#2](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLSimpleCache/CS/example.cs#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BypassCache">
+      <MemberSignature Language="C#" Value="BypassCache" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Cache.HttpRequestCacheLevel BypassCache = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Cache.HttpRequestCacheLevel.BypassCache" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Cache.HttpRequestCacheLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Führt eine Anforderung unter Verwendung des Servers an. Keine Einträge sind Caches entnommen, Caches hinzugefügt oder aus Caches zwischen Client und Server entfernt. Keine Einträge sind Caches entnommen, Caches hinzugefügt oder aus Caches zwischen Client und Server entfernt. Dies ist das Standardverhalten-Cache angegeben, in der Computerkonfigurationsdatei, die mit .NET Framework geliefert wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheIfAvailable">
+      <MemberSignature Language="C#" Value="CacheIfAvailable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Cache.HttpRequestCacheLevel CacheIfAvailable = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Cache.HttpRequestCacheLevel.CacheIfAvailable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Cache.HttpRequestCacheLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erfüllt eine Anforderung für eine Ressource aus dem Cache an, wenn die Ressource verfügbar ist; andernfalls sendet eine Anforderung für eine Ressource mit dem Server. Wenn das angeforderte Element in einem Cache zwischen dem Client und der Server verfügbar ist, kann die Anforderung von der zwischen-Cache erfüllt werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheOnly">
+      <MemberSignature Language="C#" Value="CacheOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Cache.HttpRequestCacheLevel CacheOnly = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Cache.HttpRequestCacheLevel.CacheOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Cache.HttpRequestCacheLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Führt eine Anforderung mithilfe der lokal zwischengespeicherten Ressource. eine Anforderung für ein Element, das nicht im Cache vorhanden ist, werden keine gesendet werden. Wenn diese Richtlinie Cacheebene angegeben wird, eine <see cref="T:System.Net.WebException" /> Ausnahme wird ausgelöst, wenn das Element nicht im Clientcache vorhanden ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheOrNextCacheOnly">
+      <MemberSignature Language="C#" Value="CacheOrNextCacheOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Cache.HttpRequestCacheLevel CacheOrNextCacheOnly = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Cache.HttpRequestCacheLevel.CacheOrNextCacheOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Cache.HttpRequestCacheLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Führt eine Anforderung für eine Ressource über den Cache des lokalen Computers oder einer remote-Cache auf dem lokalen Netzwerk. Wenn die Anforderung nicht erfüllen kann, eine <see cref="T:System.Net.WebException" /> Ausnahme wird ausgelöst. In der HTTP-Protokoll zwischenspeichern, erfolgt dies mithilfe der <see langword="only-if-cached" /> -cachekontrolldirektive.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Cache.HttpRequestCacheLevel Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Cache.HttpRequestCacheLevel.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Cache.HttpRequestCacheLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erfüllt eine Anforderung für eine Ressource an, mit die zwischengespeicherte Kopie der Ressource oder eine Anforderung für die Ressource an den Server gesendet. Die Aktion wird durch die aktuelle Cacherichtlinie und das Alter des Inhalts im Cache bestimmt. Dies ist die Cacheebene, die von den meisten Anwendungen verwendet werden soll.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoCacheNoStore">
+      <MemberSignature Language="C#" Value="NoCacheNoStore" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Cache.HttpRequestCacheLevel NoCacheNoStore = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Cache.HttpRequestCacheLevel.NoCacheNoStore" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Cache.HttpRequestCacheLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nie eine Anforderung erfüllt, die Ressourcen aus dem Cache nutzen und Ressourcen werden nicht zwischengespeichert. Wenn die Ressource im lokalen Cache vorhanden ist, wird es entfernt. Dieser Richtlinienebene zeigt intermediate Caches an, dass die Ressource entfernt werden soll. In der HTTP-Protokoll Zwischenspeichern erfolgt dies mithilfe der ohne-Cache-Cache-Control-Direktive.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Refresh">
+      <MemberSignature Language="C#" Value="Refresh" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Cache.HttpRequestCacheLevel Refresh = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Cache.HttpRequestCacheLevel.Refresh" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Cache.HttpRequestCacheLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Führt eine Anforderung mit dem Server oder einen Cache als dem lokalen Cache. Bevor die Anforderung durch einen Zwischen-Cache erfüllt werden kann, muss dieser Cache seinen zwischengespeicherten Eintrag mit dem Server erneut überprüfen. In der HTTP-Protokoll zwischenspeichern, erfolgt dies mithilfe der Max-Age = 0-cachekontrolldirektive und den No-Cache <see langword="Pragma" /> Header.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Reload">
+      <MemberSignature Language="C#" Value="Reload" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Cache.HttpRequestCacheLevel Reload = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Cache.HttpRequestCacheLevel.Reload" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Cache.HttpRequestCacheLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Führt eine Anforderung unter Verwendung des Servers an. Die Antwort möglicherweise im Cache gespeichert werden. In der HTTP-Protokoll zwischenspeichern, erfolgt dies mithilfe der ohne-Cache-Cache-Control-Direktive und den No-Cache <see langword="Pragma" /> Header.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Revalidate">
+      <MemberSignature Language="C#" Value="Revalidate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Cache.HttpRequestCacheLevel Revalidate = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Cache.HttpRequestCacheLevel.Revalidate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Cache.HttpRequestCacheLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Vergleicht die Kopie der Ressource im Cache mit der Kopie auf dem Server. Wenn die Kopie auf dem Server neuer ist, wird sie zum Erfüllen der Anforderung verwendet und ersetzt die Kopie im Cache. Wenn die Kopie im Cache mit der Serverkopie übereinstimmt, wird die zwischengespeicherte Kopie verwendet. Im HTTP-Cacheprotokoll wird dies erreicht, indem eine bedingte Anforderung verwendet wird.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

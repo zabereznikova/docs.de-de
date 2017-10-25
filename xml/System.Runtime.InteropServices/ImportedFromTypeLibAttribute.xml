@@ -1,0 +1,94 @@
+<Type Name="ImportedFromTypeLibAttribute" FullName="System.Runtime.InteropServices.ImportedFromTypeLibAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ImportedFromTypeLibAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ImportedFromTypeLibAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ImportedFromTypeLibAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass innerhalb einer Assembly definierten Typen ursprünglich in einer Typbibliothek definiert wurden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können dieses Attribut auf Assemblys anwenden, obwohl die [Tlbimp.exe (Type Library Importer-Tool)](~/docs/framework/tools/tlbimp-exe-type-library-importer.md) gilt sie in der Regel für Sie bei der es eine Typbibliothek.  
+  
+ Die vorrangige Verwendung des Attributs ist die ursprüngliche Quelle der Informationen zum erfassen. Sie können z. B. A.tlb als Interop-Assembly A.dll importieren und Assembly B.dll auf A.dll verweisen haben. Beim Exportieren von B.dll nach B.tlb bewirkt, dass dieses Attribut die Verweise in B.tlb, die auf A.dll stattdessen auf A.tlb zeigen. Dies sollte nicht mit verwechselt werden die <xref:System.Runtime.InteropServices.ComImportAttribute>, der angibt, dass ein einzelner Typ in COM implementiert ist  
+  
+   
+  
+## Examples  
+ [!code-cpp[ImprovedInteropSnippets#3](~/samples/snippets/cpp/VS_Snippets_CLR/ImprovedInteropSnippets/CPP/codefile3.cpp#3)]
+ [!code-csharp[ImprovedInteropSnippets#3](~/samples/snippets/csharp/VS_Snippets_CLR/ImprovedInteropSnippets/CS/codefile3.cs#3)]
+ [!code-vb[ImprovedInteropSnippets#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/ImprovedInteropSnippets/VB/codefile3.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImportedFromTypeLibAttribute (string tlbFile);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string tlbFile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ImportedFromTypeLibAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tlbFile" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="tlbFile">Der Speicherort der ursprünglichen Typbibliotheksdatei an.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.InteropServices.ImportedFromTypeLibAttribute" /> Klasse mit dem Namen der ursprünglichen Typbibliotheksdatei an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.ImportedFromTypeLibAttribute.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der ursprünglichen Typbibliothek ab.</summary>
+        <value>Der Name der ursprünglichen Typbibliotheksdatei an.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,337 @@
+<Type Name="FaultContractAttribute" FullName="System.ServiceModel.FaultContractAttribute">
+  <TypeSignature Language="C#" Value="public sealed class FaultContractAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit FaultContractAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.FaultContractAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, AllowMultiple=true, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt einen oder mehrere SOAP-Fehler an, die zurückgegeben werden, wenn bei einem Dienstvorgang ein Verarbeitungsfehler festgestellt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Markieren Sie einen Vorgang mit dem <xref:System.ServiceModel.FaultContractAttribute>-Attribut, um eine oder mehrere spezifische Ausnahmebedingungen zu deklarieren, die zur WSDL (Web Service Description Language)-Beschreibung des Dienstvorgangs als vom Vorgang zurückgegebene, ausdrückliche SOAP-Fehlernachrichten hinzugefügt werden.  
+  
+ In allen verwalteten Anwendungen werden Verarbeitungsfehler durch <xref:System.Exception>-Objekte dargestellt. In SOAP-basierten Anwendungen, wie z.&#160;B. [!INCLUDE[indigo1](~/includes/indigo1-md.md)]-Anwendungen, übermitteln Dienstmethoden Verarbeitungsfehlerinformationen mit SOAP-Fehlernachrichten. Da [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Anwendungen unter beiden Fehlersystemtypen ausgeführt werden, müssen alle an den Client zu sendenden verwalteten Ausnahmeinformationen von Ausnahmen in SOAP-Fehler konvertiert werden. Sie können die Standard-Dienstausnahmeverhalten verwenden oder aber ausdrücklich steuern, ob und wie Ausnahmen zu Fehlernachrichten zugewiesen werden. Für eine Übersicht über Ausnahme-und SOAP-Fehler [!INCLUDE[indigo2](~/includes/indigo2-md.md)] -Anwendungen finden Sie unter [angeben und Behandeln von Fehlern in Verträgen und Diensten](~/docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+  
+ Nach Möglichkeit sollten Dienstvorgänge den <xref:System.ServiceModel.FaultContractAttribute> verwenden, um alle SOAP-Fehler formal anzugeben, die bei einem Client während des normalen Betriebs eingehen können. Es wird außerdem empfohlen, dass nur die Informationen, die ein Client erhalten muss, in einem SOAP-Fehler zurückgegeben werden, um die Offenlegung von Informationen möglichst gering zu halten.  
+  
+-   Mit der <xref:System.ServiceModel.FaultContractAttribute.Action%2A>-Eigenschaft wird die Aktion der Fehlernachricht gesteuert.  
+  
+-   Mit der <xref:System.ServiceModel.FaultContractAttribute.DetailType%2A>-Eigenschaft wird der Typ des in der Fehlernachricht serialisierten Detailobjekts abgerufen.  
+  
+-   Die <xref:System.ServiceModel.FaultContractAttribute.Name%2A>-Eigenschaft und die <xref:System.ServiceModel.FaultContractAttribute.Namespace%2A>-Eigenschaft steuern entsprechend den Namen und den Namespace der Fehlernachricht.  
+  
+-   Der <xref:System.ServiceModel.FaultContractAttribute.HasProtectionLevel%2A> gibt an, ob für die Fehlernachricht eine Sicherheitsebene angegeben wurde, und falls dies der Fall ist, ob die <xref:System.ServiceModel.FaultContractAttribute.ProtectionLevel%2A>-Eigenschaft diese Sicherheitsebene steuert.  
+  
+> [!CAUTION]
+>  Enthält eine Fehlernachricht vertrauliche Informationen oder Informationen, die Sicherheitsprobleme zur Folge haben können, sollte nach Möglichkeit die <xref:System.ServiceModel.FaultContractAttribute.ProtectionLevel%2A>-Eigenschaft festgelegt werden.  
+  
+-   Setzen Sie den <xref:System.ServiceModel.FaultContractAttribute.ProtectionLevel%2A> ausdrücklich auf <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType> oder auf <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType>, müssen Sie eine Bindung verwenden, deren Sicherheit mit der <xref:System.ServiceModel.SecurityMode?displayProperty=nameWithType>-Eigenschaft für die Bindung aktiviert wurde. Andernfalls wird eine Ausnahme ausgelöst.  
+  
+-   Wählen Sie eine Bindung aus, die Sicherheit aktiviert, und legen Sie im Vertrag keine <xref:System.ServiceModel.FaultContractAttribute.ProtectionLevel%2A>-Eigenschaft fest, werden alle Daten verschlüsselt und signiert.  
+  
+-   Wählen Sie eine Bindung aus, für die keine Sicherheit aktiviert wurde (für <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> ist beispielsweise Sicherheit standardmäßig deaktiviert), und für die <xref:System.ServiceModel.FaultContractAttribute.ProtectionLevel%2A> nicht ausdrücklich festgelegt ist, werden keine Anwendungsdaten geschützt.  
+  
+ Für viele Szenarios reicht es vollkommen aus, <xref:System.ServiceModel.FaultContractAttribute.ProtectionLevel%2A> für Fehlernachrichten auf <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> festzulegen. Weitere Informationen finden Sie unter [Verständnis Schutzebene](~/docs/framework/wcf/understanding-protection-level.md).  
+  
+ Soll ein angegebener Fehler von einem mit <xref:System.ServiceModel.FaultContractAttribute> markierten Vorgang zurückgegeben werden, lösen Sie eine <xref:System.ServiceModel.FaultException%601> aus (wobei der Typparameter die serialisierbare Fehlerinformation ist), wenn die verwaltete Ausnahme während des Vorgangs auftritt. [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Clientanwendungen zeigen den SOAP-Fehler als gleicher Typ, wie in der Clientimplementierung – d. h. ausgelöst wurde als ein <xref:System.ServiceModel.FaultException%601> (wobei der Typparameter die serialisierbare Fehlerinformation ist). Der <xref:System.ServiceModel.FaultContractAttribute> kann nur zur Angabe von SOAP-Fehlern für bidirektionale Dienstvorgänge und für asynchrone Vorgangspaare verwendet werden. Unidirektionale Vorgänge unterstützen keine SOAP-Fehler und unterstützen daher auch keinen <xref:System.ServiceModel.FaultContractAttribute>.  
+  
+> [!NOTE]
+>  Sie können zur Übermittlung von Fehlerinformationen jeden serialisierbaren Typ verwenden. Die einzige Einschränkung in dieser [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Version besteht darin, dass in einem <xref:System.ServiceModel.FaultContractAttribute> angegebene Typen von <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> serialisierbar sein müssen. Die Serialisierungsunterstützung der <xref:System.Runtime.Serialization.DataContractSerializer> bereitstellt, finden Sie unter [Datenvertragsserialisierer](~/docs/framework/wcf/feature-details/data-contract-serializer.md).  
+  
+ Um beispielsweise anzugeben, dass Clients einen SOAP-Fehler mit einem <xref:System.Int32> erwarten können, fügen Sie den Typparameter in den <xref:System.ServiceModel.FaultContractAttribute> Ihrer Dienstmethode ein.  
+  
+> [!NOTE]
+>  In den folgenden Codebeispielen werden die Eigenschaften <xref:System.ServiceModel.FaultContractAttribute.ProtectionLevel%2A>, <xref:System.ServiceModel.FaultContractAttribute.Name%2A> oder <xref:System.ServiceModel.FaultContractAttribute.Namespace%2A> nicht festgelegt.  
+  
+ [!code-csharp[C_FCA#1](~/samples/snippets/csharp/VS_Snippets_CFX/c_fca/cs/fcademo.cs#1)]
+ [!code-vb[C_FCA#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_fca/vb/fcademo.vb#1)]  
+  
+ Lösen Sie dann in Ihrer Dienstmethode einen neuen <xref:System.ServiceModel.FaultException%601> aus, wobei der Typparameter der Typ ist, der die Fehlerinformationen enthält (im voranstehendem Beispiel einen <xref:System.Int32>). Zum Beispiel:  
+  
+ [!code-csharp[C_FCA#2](~/samples/snippets/csharp/VS_Snippets_CFX/c_fca/cs/fcademo.cs#2)]
+ [!code-vb[C_FCA#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_fca/vb/fcademo.vb#2)]  
+  
+ Das voranstehende Beispiel ist ein sehr einfaches Beispiel. Nahezu alle Informationen können mit einem <xref:System.Int32?displayProperty=nameWithType>-Code übergeben werden. Das heißt, dieser Detailtyp ist nicht besonders hilfreich. Üblicherweise geben [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Anwendungen SOAP-Fehler mit für die Fehlerinformationsanforderungen des Client spezifischen Detailtypen an. Ein komplexeres Beispiel finden Sie im Beispielabschnitt.  
+  
+> [!NOTE]
+>  Wenn Sie einen <xref:System.ServiceModel.FaultException%601> angeben, in dem der Typparameter ein <xref:System.String?displayProperty=nameWithType> ist, wird der Zeichenfolgenwert der Detaileigenschaft in der Clientanwendung zugewiesen. Clients können diese Zeichenfolge nicht durch Aufruf der <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType>-Methode abrufen. Damit der Zeichenfolgewert zurückgegeben wird, wenn die Clientanwendung <xref:System.Exception.ToString%2A?displayProperty=nameWithType> aufruft, lösen Sie im Vorgang eine <xref:System.ServiceModel.FaultException?displayProperty=nameWithType>-Ausnahme aus, und übergeben Sie die Zeichenfolge dem Konstruktor.  
+  
+ Um das Anwendungsverhalten explizit zu steuern, wenn eine Ausnahme oder <xref:System.ServiceModel.FaultException%601> ausgelöst wird, implementieren Sie die <xref:System.ServiceModel.Dispatcher.IErrorHandler?displayProperty=nameWithType>-Schnittstelle auf einem <xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=nameWithType>, <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> oder <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> und weisen Sie sie der <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ErrorHandlers%2A?displayProperty=nameWithType>-Eigenschaft zu. <xref:System.ServiceModel.Dispatcher.IErrorHandler>können Sie den SOAP-Fehler explizit zu steuern, der generiert wird und angibt, ob er an den Client gesendet.  
+  
+ Für ein einfacheres Debuggen legen die <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> auf `true` im Code oder Sie können die <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> in einer Anwendungskonfigurationsdatei. Bei Aktivierung gibt der Dienst automatisch Ausnahmeinformationen an den Aufrufer zurück. Diese Fehler erscheinen auf dem Client als <xref:System.ServiceModel.FaultException>-Ausnahmen.  
+  
+> [!IMPORTANT]
+>  Da mit verwalteten Ausnahmen interne Anwendungsinformationen verfügbar gemacht werden können, kann mit der Festlegung von <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> oder <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> auf `true` [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Clients ermöglicht werden, Informationen über interne Dienstvorgangsausnahmen, einschließlich persönlich identifizierbarer oder anderer vertraulicher Informationen abzurufen.  
+>   
+>  Daher wird die Festlegung von <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> für <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> oder `true` nur für das vorübergehende Debuggen einer Dienstanwendung empfohlen. Außerdem beinhaltet die WSDL für eine Methode, die nicht behandelte verwaltete Ausnahmen auf diese Weise zurückgibt, keinen Vertrag für die <xref:System.ServiceModel.FaultException%601> vom Typ <xref:System.String>. Clients müssen auf die Möglichkeit von unbekannten SOAP-Fehlern vorbereitet sein, die an [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Clients als <xref:System.ServiceModel.FaultException?displayProperty=nameWithType>-Objekte zurückgegeben werden, damit sie die Debuginformationen korrekt abrufen können.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mit dem <xref:System.ServiceModel.FaultContractAttribute> angegeben werden kann, dass der `SampleMethod`-Vorgang einen SOAP-Fehler mit dem Detailtyp `GreetingFault` zurückgeben kann.  
+  
+ [!code-csharp[FaultContractAttribute#1](~/samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#1)]
+ [!code-vb[FaultContractAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, dass [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Clients von `ISampleService` diesen SOAP-Fehler als <xref:System.ServiceModel.FaultException%601> des Typs `GreetingFault` betrachten.  
+  
+ [!code-csharp[FaultContractAttribute#3](~/samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/client.cs#3)]
+ [!code-vb[FaultContractAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/client.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FaultContractAttribute (Type detailType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type detailType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.FaultContractAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="detailType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="detailType">Der serialisierbare Typ, der Fehlerinformationen für den Aufrufer enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.FaultContractAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Konstruktor wird üblicherweise durch Anwendung des Attributs auf eine Dienstmethode und Angabe eines Typs als Argument im Attribut ausgeführt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mit dem <xref:System.ServiceModel.FaultContractAttribute> angegeben werden kann, dass der `SampleMethod`-Vorgang einen SOAP-Fehler mit dem Detailtyp `GreetingFault` zurückgeben kann.  
+  
+ [!code-csharp[FaultContractAttribute#1](~/samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#1)]
+ [!code-vb[FaultContractAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="detailType" />-Argument lautet <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public string Action { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Action" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.FaultContractAttribute.Action" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Aktion der SOAP-Fehlernachricht ab, die als Bestandteil des Vorgangsvertrags angegeben wurde, oder legt sie fest.</summary>
+        <value>Der Wert der Aktion für die SOAP-Fehlernachricht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zur Steuerung der Aktion der SOAP-Fehlernachricht verwenden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DetailType">
+      <MemberSignature Language="C#" Value="public Type DetailType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type DetailType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.FaultContractAttribute.DetailType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ eines serialisierbaren Objekts ab, das Fehlerinformationen enthält.</summary>
+        <value>Der Typ, der die serialisierbare Fehlerklasse darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mit dem <xref:System.ServiceModel.FaultContractAttribute> angegeben werden kann, dass der `SampleMethod`-Vorgang einen SOAP-Fehler mit dem Detailtyp `GreetingFault` zurückgeben kann.  
+  
+ [!code-csharp[FaultContractAttribute#1](~/samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#1)]
+ [!code-vb[FaultContractAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasProtectionLevel">
+      <MemberSignature Language="C#" Value="public bool HasProtectionLevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasProtectionLevel" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.FaultContractAttribute.HasProtectionLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der SOAP-Fehlernachricht eine Sicherheitsebene zugewiesen wurde.</summary>
+        <value>
+          <see langword="true" />, wenn die Fehlernachricht über eine Sicherheitsebene verfügt, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.ServiceModel.FaultContractAttribute.HasProtectionLevel%2A>-Eigenschaft, um anzugeben, ob die SOAP-Fehlernachricht verschlüsselt oder signiert werden muss oder beides. Weitere Informationen finden Sie unter der <xref:System.ServiceModel.FaultContractAttribute.ProtectionLevel%2A>-Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.FaultContractAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Fehlernachricht in WSDL (Web Services Description Language) fest.</summary>
+        <value>Der Name der Fehlermeldung. Standardmäßig wird der Name des als Fehlerdetail verwendeten Typs verwendet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public string Namespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.FaultContractAttribute.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namespace des SOAP-Fehlers ab oder legt diesen fest.</summary>
+        <value>Der Namespace des SOAP-Fehlers.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtectionLevel">
+      <MemberSignature Language="C#" Value="public System.Net.Security.ProtectionLevel ProtectionLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Security.ProtectionLevel ProtectionLevel" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.FaultContractAttribute.ProtectionLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Security.ProtectionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Sicherheitsebene an, die der SOAP-Fehler von der Bindung fordert.</summary>
+        <value>Einer der <see cref="T:System.Net.Security.ProtectionLevel" />-Werte. Die Standardeinstellung ist <see cref="F:System.Net.Security.ProtectionLevel.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Geben Sie mit der <xref:System.ServiceModel.Description.FaultDescription.ProtectionLevel%2A?displayProperty=nameWithType>-Eigenschaft an, wie stark die Bindung beim Senden des SOAP-Fehlers verschlüsseln, signieren oder verschlüsseln und signieren muss. Nach Möglichkeit sollte der Fehler eines Vorgangs ausdrücklich über die Sicherheitsebenenanforderungen im Vertrag entscheiden. Die Standardsicherheitsebene ist <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType>, das heißt, für die von Ihnen definierte SOAP-Fehlernachricht ist keine Verschlüsselung oder digitale Signatur erforderlich (auch wenn Ihre Bindung bei entsprechender Konfiguration dies möglicherweise unterstützt). Enthält eine Fehlernachricht vertrauliche Informationen oder Informationen, die Sicherheitsprobleme zur Folge haben können, sollte nach Möglichkeit für die <xref:System.ServiceModel.FaultContractAttribute.ProtectionLevel%2A>-Eigenschaft <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType> festgelegt werden. Weitere Informationen zu Sicherheitsproblemen finden Sie unter [Verständnis Schutzebene](~/docs/framework/wcf/understanding-protection-level.md).  
+  
+ Das Sicherheitsverhalten während der Laufzeit ist die Kombination der Sicherheitsebeneneigenschaften, die über eine hierarchische Struktur verfügen. Mit der Festlegung des äußersten Werts wird die Standardeinstellung für alle engeren Bereiche festgelegt, es sei denn, es wird ausdrücklich ein anderer Wert für einen engeren Bereich definiert. In diesem Fall bleibt der äußere Wert der Standardwert für alle engeren Bereiche mit Ausnahme des ausdrücklich festgelegten Werts.  
+  
+ Ist beispielsweise für <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A?displayProperty=nameWithType> <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType> festgelegt und sind für keine weiteren engeren Bereiche Sicherheitsebeneneinstellungen definiert, werden alle Nachrichten in einem Vorgangsvertrag verschlüsselt und signiert, einschließlich der Fehlernachrichten. Ist für einen dieser Vorgänge jedoch <xref:System.ServiceModel.OperationContractAttribute> auf <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType> gesetzt, werden die Nachrichten für diesen Vorgang signiert, alle anderen Nachrichten im Vertrag werden jedoch verschlüsselt und signiert, einschließlich der Fehlernachrichten.  
+  
+ Die Bereiche, für die diese Werte festgelegt wurden:  
+  
+ <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A?displayProperty=nameWithType>  
+  
+ <xref:System.ServiceModel.OperationContractAttribute.ProtectionLevel%2A?displayProperty=nameWithType>  
+  
+ <xref:System.ServiceModel.FaultContractAttribute.ProtectionLevel%2A?displayProperty=nameWithType>  
+  
+ <xref:System.ServiceModel.MessageContractAttribute.ProtectionLevel%2A?displayProperty=nameWithType>  
+  
+ Die <xref:System.ServiceModel.MessageContractMemberAttribute.ProtectionLevel%2A?displayProperty=nameWithType>-Eigenschaft für <xref:System.ServiceModel.MessageHeaderAttribute?displayProperty=nameWithType>.  
+  
+ Die <xref:System.ServiceModel.MessageContractMemberAttribute.ProtectionLevel%2A?displayProperty=nameWithType>-Eigenschaft für <xref:System.ServiceModel.MessageBodyMemberAttribute?displayProperty=nameWithType>.  
+  
+ Wenn im Vertrag nicht ausdrücklich eine Schutzebene festgelegt ist und die zugrunde liegende Bindung Sicherheitsfunktionen (auf der Transport- oder Nachrichtenebene) unterstützt, ist die effektive Schutzebene für den gesamten Vertrag <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType>. Wenn die Bindung keine Sicherheitsfunktionen (wie beispielsweise <xref:System.ServiceModel.BasicHttpBinding>) unterstützt, ist die effektive <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType> für den gesamten Vertrag <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType>. Im Ergebnis können Clients abhängig von der Endpunktbindung unterschiedlichen Nachrichten- oder Transportebenenschutz auch dann anfordern, wenn im Vertrag <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType> angegeben ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,109 @@
+<Type Name="IDesignerLoaderHost2" FullName="System.ComponentModel.Design.Serialization.IDesignerLoaderHost2">
+  <TypeSignature Language="C#" Value="public interface IDesignerLoaderHost2 : IServiceProvider, System.ComponentModel.Design.Serialization.IDesignerLoaderHost" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDesignerLoaderHost2 implements class System.ComponentModel.Design.IDesignerHost, class System.ComponentModel.Design.IServiceContainer, class System.ComponentModel.Design.Serialization.IDesignerLoaderHost, class System.IServiceProvider" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Serialization.IDesignerLoaderHost2" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.Design.Serialization.IDesignerLoaderHost</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IServiceProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Schnittstelle, die erweitert <see cref="T:System.ComponentModel.Design.Serialization.IDesignerLoaderHost" /> angeben, ob während des Ladens eines Entwurfsdokuments Fehler toleriert werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderHost2> Schnittstelle, um anzugeben, ob das Designerladeprogramm Laden auftreten von Fehlern während der Deserialisierung fortgesetzt werden kann.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CanReloadWithErrors">
+      <MemberSignature Language="C#" Value="public bool CanReloadWithErrors { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanReloadWithErrors" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.IDesignerLoaderHost2.CanReloadWithErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob es möglich ist, die mit Fehlern neu laden.</summary>
+        <value>
+          <see langword="true" />Wenn das Designerladeprogramm das Entwurfsdokument erneut laden kann bei Fehlern erkannten; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einigen Szenarien kann nicht die Option Laden Fehler ignoriert werden. Die Implementierung des Designerladeprogramm zurückgeben sollte `false` Wenn dies der Fall ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreErrorsDuringReload">
+      <MemberSignature Language="C#" Value="public bool IgnoreErrorsDuringReload { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IgnoreErrorsDuringReload" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.IDesignerLoaderHost2.IgnoreErrorsDuringReload" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Fehler sein soll ignoriert, wenn <see cref="M:System.ComponentModel.Design.Serialization.IDesignerLoaderHost.Reload" /> aufgerufen wird.</summary>
+        <value>
+          <see langword="true" />Wenn das Designerladeprogramm beim erneuten Laden Fehler ignoriert; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderHost2.IgnoreErrorsDuringReload%2A> Eigenschaft kann nur festgelegt werden, um `true` Wenn <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderHost2.CanReloadWithErrors%2A> ist `true`. Wenn <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderHost2.CanReloadWithErrors%2A> ist `false`, den Wert des <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderHost2.IgnoreErrorsDuringReload%2A> wird ignoriert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

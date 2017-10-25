@@ -1,0 +1,1075 @@
+<Type Name="WebProxy" FullName="System.Net.WebProxy">
+  <TypeSignature Language="C#" Value="public class WebProxy : System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit WebProxy extends System.Object implements class System.Net.IWebProxy, class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Net.WebProxy" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.WebProxy</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Enthält die HTTP-Proxy-Einstellungen für die <see cref="T:System.Net.WebRequest" /> Klasse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebProxy> Klasse enthält die Proxyeinstellungen, <xref:System.Net.WebRequest> Instanzen verwenden, um zu bestimmen, ob ein Webproxy verwendet wird, um Anforderungen zu senden. Globale Web Proxy-Einstellungen in Computer- und Anwendungskonfigurationsdateien angegeben werden können, können Instanzen von der <xref:System.Net.WebProxy> Klasse webanwendungsproxy-Verwendung anpassen. Die <xref:System.Net.WebProxy> Klasse ist die grundlegende Implementierung von der <xref:System.Net.IWebProxy> Schnittstelle.  
+  
+ Um Instanzen der Proxyklasse zu erhalten, können Sie eine der folgenden Methoden verwenden:  
+  
+-   Die <xref:System.Net.WebProxy.%23ctor%2A> Konstruktor.  
+  
+-   Die <xref:System.Net.WebProxy.GetDefaultProxy%2A>-Methode.  
+  
+-   Die <xref:System.Net.GlobalProxySelection.Select%2A>-Methode.  
+  
+ Geben Sie diese Methoden geben jeweils einen <xref:System.Net.WebProxy> Instanz, der Sie können weiter anpassen; der Unterschied ist, wie die Instanz initialisiert wird, bevor es an Ihre Anwendung zurückgegeben wird. Die <xref:System.Net.WebProxy.%23ctor%2A> Konstruktor gibt eine Instanz von der <xref:System.Net.WebProxy> -Klasse mit der <xref:System.Net.WebProxy.Address%2A> -Eigenschaftensatz auf `null`. Wenn eine Anforderung verwendet eine <xref:System.Net.WebProxy> Instanz in diesem Status, kein Proxy wird verwendet, um die Anforderung zu senden.  
+  
+ Die <xref:System.Net.WebProxy.GetDefaultProxy%2A> Methode gibt eine Instanz der <xref:System.Net.WebProxy> -Klasse mit der <xref:System.Net.WebProxy.Address%2A>, <xref:System.Net.WebProxy.BypassProxyOnLocal%2A>, und <xref:System.Net.WebProxy.BypassList%2A> Eigenschaften legen die Werte von Internet Explorer 5.5 und höher verwendet.  
+  
+ Die <xref:System.Net.GlobalProxySelection.Select%2A> Methode gibt eine Instanz der <xref:System.Net.WebProxy> Klasse mit Eigenschaften, die gemäß einer Kombination von Einstellungen in Internet Explorer und die Konfiguration festgelegt.  
+  
+ Die <xref:System.Net.WebProxy> -Klasse unterstützt die automatische Erkennung und Ausführung des Proxykonfigurationsskripts. Diese Funktion ist auch bekannt als Web Proxy Auto-Discovery (WPAD). Bei Verwendung der automatischen Proxykonfiguration muss ein Konfigurationsskript, in der Regel mit dem Namen Wpad.dat, sich befindet, heruntergeladen, kompiliert und ausgeführt werden. Falls diese Vorgänge erfolgreich sind, gibt das Skript die Proxys, die für eine Anforderung verwendet werden können.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel Beispiel weist eine <xref:System.Net.WebProxy> -Instanz, auf eine <xref:System.Net.WebRequest> Instanz. Die <xref:System.Net.WebRequest> Instanz den Proxy für die Verbindung zu externen Ressourcen im Internet verwendet. (Ein Beispiel, das zeigt, wie mithilfe des WPAD-Features finden Sie in der Dokumentation für die <xref:System.Net.IWebProxyScript> Klasse.)  
+  
+ [!code-cpp[Classic WebProxy Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic WebProxy Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebProxy Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic WebProxy Example/CS/source.cs#1)]
+ [!code-vb[Classic WebProxy Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic WebProxy Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebProxy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebProxy.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebProxy</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine leere Instanz der <see cref="T:System.Net.WebProxy" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardkonstruktor initialisiert eine leere Instanz der <xref:System.Net.WebProxy> -Klasse mit der <xref:System.Net.WebProxy.Address%2A> -Eigenschaftensatz auf `null`.  
+  
+ Wenn die <xref:System.Net.WebProxy.Address%2A> Eigenschaft ist `null`, die <xref:System.Net.WebProxy.IsBypassed%2A> -Methode zurückkehrt `true` und <xref:System.Net.WebProxy.GetProxy%2A> Methodenrückgabe die Zieladresse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel veranschaulicht das Aufrufen dieses Konstruktors.  
+  
+ [!code-cpp[NCLWebProxy#1](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLWebProxy/CPP/nclwebproxy.cpp#1)]
+ [!code-csharp[NCLWebProxy#1](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLWebProxy/CS/nclwebproxy.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebProxy (string Address);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string Address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebProxy.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebProxy</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="Address" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="Address">Der URI des Proxyservers.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.WebProxy" />-Klasse mit dem angegebenen URI.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebProxy> -Instanz wird initialisiert, wobei die <xref:System.Net.WebProxy.Address%2A> -Eigenschaftensatz auf eine <xref:System.Uri> Instanz mit `Address`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel veranschaulicht das Aufrufen dieses Konstruktors.  
+  
+ [!code-cpp[NCLWebProxy#6](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLWebProxy/CPP/nclwebproxy.cpp#6)]
+ [!code-csharp[NCLWebProxy#6](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLWebProxy/CS/nclwebproxy.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UriFormatException">
+          <paramref name="Address" />ist ein ungültiger URI.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebProxy (Uri Address);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri Address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebProxy.#ctor(System.Uri)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebProxy</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="Address" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="Address">Ein <see cref="T:System.Uri" /> Instanz, die die Adresse des Proxyservers enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.WebProxy" />-Klasse mit der angegebenen <see cref="T:System.Uri" />-Instanz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebProxy> -Instanz wird initialisiert, wobei die <xref:System.Net.WebProxy.Address%2A> -Eigenschaftensatz auf die `Address` Parameter.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel veranschaulicht das Aufrufen dieses Konstruktors.  
+  
+ [!code-cpp[NCLWebProxy#2](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLWebProxy/CPP/nclwebproxy.cpp#2)]
+ [!code-csharp[NCLWebProxy#2](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLWebProxy/CS/nclwebproxy.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WebProxy (System.Runtime.Serialization.SerializationInfo serializationInfo, System.Runtime.Serialization.StreamingContext streamingContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo serializationInfo, valuetype System.Runtime.Serialization.StreamingContext streamingContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebProxy.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebProxy</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serializationInfo" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="streamingContext" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="serializationInfo">Die Serialisierungsdaten.</param>
+        <param name="streamingContext">Der Kontext für die serialisierten Daten.</param>
+        <summary>Initialisiert eine Instanz von der <see cref="T:System.Net.WebProxy" /> -Klasse unter Verwendung der zuvor serialisierte Inhalt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, die vom System deserialisiert eine <xref:System.Net.WebProxy> Instanz; Anwendungen stimmen nicht aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebProxy (string Address, bool BypassOnLocal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string Address, bool BypassOnLocal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebProxy.#ctor(System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebProxy</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="Address" Type="System.String" />
+        <Parameter Name="BypassOnLocal" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="Address">Der URI des Proxyservers.</param>
+        <param name="BypassOnLocal">
+          <see langword="true" />der Proxy für lokale Adressen umgangen werden soll; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Net.WebProxy" /> -Klasse mit dem angegebenen URI und die Einstellung zu umgehen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebProxy> -Instanz wird initialisiert, wobei die <xref:System.Net.WebProxy.Address%2A> -Eigenschaftensatz auf eine <xref:System.Uri> -Instanz, enthält `Address` und die <xref:System.Net.WebProxy.BypassProxyOnLocal%2A> -Eigenschaftensatz auf `BypassOnLocal`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel veranschaulicht das Aufrufen dieses Konstruktors.  
+  
+ [!code-cpp[NCLWebProxy#7](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLWebProxy/CPP/nclwebproxy.cpp#7)]
+ [!code-csharp[NCLWebProxy#7](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLWebProxy/CS/nclwebproxy.cs#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UriFormatException">
+          <paramref name="Address" />ist ein ungültiger URI.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebProxy (string Host, int Port);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string Host, int32 Port) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebProxy.#ctor(System.String,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebProxy</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="Host" Type="System.String" />
+        <Parameter Name="Port" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="Host">Der Name des Proxyhosts.</param>
+        <param name="Port">Die Portnummer auf <c>Host</c> verwenden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Net.WebProxy" /> Klasse mit dem angegebenen Host und die Portnummer an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebProxy> -Instanz wird initialisiert, wobei die <xref:System.Net.WebProxy.Address%2A> -Eigenschaftensatz auf eine <xref:System.Uri> Instanz im Format http:// `Host` : `Port`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel veranschaulicht das Aufrufen dieses Konstruktors.  
+  
+ [!code-cpp[NCLWebProxy#5](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLWebProxy/CPP/nclwebproxy.cpp#5)]
+ [!code-csharp[NCLWebProxy#5](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLWebProxy/CS/nclwebproxy.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UriFormatException">Der URI durch Kombinieren von gebildet <paramref name="Host" /> und <paramref name="Port" /> ist kein gültiger URI.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebProxy (Uri Address, bool BypassOnLocal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri Address, bool BypassOnLocal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebProxy.#ctor(System.Uri,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebProxy</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="Address" Type="System.Uri" />
+        <Parameter Name="BypassOnLocal" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="Address">Ein <see cref="T:System.Uri" /> Instanz, die die Adresse des Proxyservers enthält.</param>
+        <param name="BypassOnLocal">
+          <see langword="true" />der Proxy für lokale Adressen umgangen werden soll; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Net.WebProxy" /> -Klasse mit der <see cref="T:System.Uri" /> -Instanz und die Einstellung zu umgehen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebProxy> -Instanz wird initialisiert, wobei die <xref:System.Net.WebProxy.Address%2A> -Eigenschaftensatz auf `Address` und mit der <xref:System.Net.WebProxy.BypassProxyOnLocal%2A> -Eigenschaftensatz auf `BypassOnLocal`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel veranschaulicht das Aufrufen dieses Konstruktors.  
+  
+ [!code-cpp[NCLWebProxy#3](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLWebProxy/CPP/nclwebproxy.cpp#3)]
+ [!code-csharp[NCLWebProxy#3](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLWebProxy/CS/nclwebproxy.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebProxy (string Address, bool BypassOnLocal, string[] BypassList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string Address, bool BypassOnLocal, string[] BypassList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebProxy.#ctor(System.String,System.Boolean,System.String[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebProxy</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="Address" Type="System.String" />
+        <Parameter Name="BypassOnLocal" Type="System.Boolean" />
+        <Parameter Name="BypassList" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="Address">Der URI des Proxyservers.</param>
+        <param name="BypassOnLocal">
+          <see langword="true" />der Proxy für lokale Adressen umgangen werden soll; andernfalls <see langword="false" />.</param>
+        <param name="BypassList">Ein Array mit reguläre Ausdrücke, die URIs der Server umgangen enthalten.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Net.WebProxy" /> -Klasse mit dem angegebenen URI, die Umgehung festlegen und die Liste der URIs zu umgehen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebProxy> Instanz initialisiert wird, mit der <xref:System.Net.WebProxy.Address%2A> -Eigenschaftensatz auf eine <xref:System.Uri> -Instanz, enthält `Address`, die <xref:System.Net.WebProxy.BypassProxyOnLocal%2A> -Eigenschaftensatz auf `BypassOnLocal`, und die <xref:System.Net.WebProxy.BypassList%2A> -Eigenschaftensatz auf `BypassList`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel veranschaulicht das Aufrufen dieses Konstruktors.  
+  
+ [!code-cpp[NCLWebProxy#8](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLWebProxy/CPP/nclwebproxy.cpp#8)]
+ [!code-csharp[NCLWebProxy#8](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLWebProxy/CS/nclwebproxy.cs#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UriFormatException">
+          <paramref name="Address" />ist ein ungültiger URI.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebProxy (Uri Address, bool BypassOnLocal, string[] BypassList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri Address, bool BypassOnLocal, string[] BypassList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebProxy.#ctor(System.Uri,System.Boolean,System.String[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebProxy</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="Address" Type="System.Uri" />
+        <Parameter Name="BypassOnLocal" Type="System.Boolean" />
+        <Parameter Name="BypassList" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="Address">Ein <see cref="T:System.Uri" /> Instanz, die die Adresse des Proxyservers enthält.</param>
+        <param name="BypassOnLocal">
+          <see langword="true" />der Proxy für lokale Adressen umgangen werden soll; andernfalls <see langword="false" />.</param>
+        <param name="BypassList">Ein Array von Zeichenfolgen mit regulären Ausdrücken, die URIs der Server umgangen enthält.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Net.WebProxy" /> Klasse mit dem angegebenen <see cref="T:System.Uri" /> Instanz umgehen festlegen und Liste der URIs zu umgehen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebProxy> -Instanz wird initialisiert, wobei die <xref:System.Net.WebProxy.Address%2A> -Eigenschaftensatz auf `Address`, die <xref:System.Net.WebProxy.BypassProxyOnLocal%2A> -Eigenschaftensatz auf `BypassOnLocal`, und die <xref:System.Net.WebProxy.BypassList%2A> -Eigenschaftensatz auf `BypassList`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel veranschaulicht das Aufrufen dieses Konstruktors.  
+  
+ [!code-cpp[NCLWebProxy#4](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLWebProxy/CPP/nclwebproxy.cpp#4)]
+ [!code-csharp[NCLWebProxy#4](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLWebProxy/CS/nclwebproxy.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebProxy (string Address, bool BypassOnLocal, string[] BypassList, System.Net.ICredentials Credentials);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string Address, bool BypassOnLocal, string[] BypassList, class System.Net.ICredentials Credentials) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebProxy.#ctor(System.String,System.Boolean,System.String[],System.Net.ICredentials)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebProxy</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="Address" Type="System.String" />
+        <Parameter Name="BypassOnLocal" Type="System.Boolean" />
+        <Parameter Name="BypassList" Type="System.String[]" />
+        <Parameter Name="Credentials" Type="System.Net.ICredentials" />
+      </Parameters>
+      <Docs>
+        <param name="Address">Der URI des Proxyservers.</param>
+        <param name="BypassOnLocal">
+          <see langword="true" />der Proxy für lokale Adressen umgangen werden soll; andernfalls <see langword="false" />.</param>
+        <param name="BypassList">Ein Array von Zeichenfolgen mit regulären Ausdrücken, die URIs der Server umgangen enthält.</param>
+        <param name="Credentials">Eine <see cref="T:System.Net.ICredentials" /> -Instanz mit dem Proxyserver für die Authentifizierung.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Net.WebProxy" /> -Klasse mit dem angegebenen URI, festlegen, Liste der URIs zu umgehen und Anmeldeinformationen zu umgehen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.Net.WebProxy> -Instanz wird initialisiert, wobei die <xref:System.Net.WebProxy.Address%2A> -Eigenschaftensatz auf eine <xref:System.Uri> -Instanz, enthält `Address`, die <xref:System.Net.WebProxy.BypassProxyOnLocal%2A> -Eigenschaftensatz auf `BypassOnLocal`, die <xref:System.Net.WebProxy.BypassList%2A> -Eigenschaftensatz auf `BypassList`, und die <xref:System.Net.WebProxy.Credentials%2A> -Eigenschaftensatz auf `Credentials`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel veranschaulicht das Aufrufen dieses Konstruktors.  
+  
+ [!code-cpp[NCLWebProxy#9](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLWebProxy/CPP/nclwebproxy.cpp#9)]
+ [!code-csharp[NCLWebProxy#9](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLWebProxy/CS/nclwebproxy.cs#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UriFormatException">
+          <paramref name="Address" />ist ein ungültiger URI.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebProxy (Uri Address, bool BypassOnLocal, string[] BypassList, System.Net.ICredentials Credentials);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri Address, bool BypassOnLocal, string[] BypassList, class System.Net.ICredentials Credentials) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebProxy.#ctor(System.Uri,System.Boolean,System.String[],System.Net.ICredentials)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebProxy</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="Address" Type="System.Uri" />
+        <Parameter Name="BypassOnLocal" Type="System.Boolean" />
+        <Parameter Name="BypassList" Type="System.String[]" />
+        <Parameter Name="Credentials" Type="System.Net.ICredentials" />
+      </Parameters>
+      <Docs>
+        <param name="Address">Ein <see cref="T:System.Uri" /> Instanz, die die Adresse des Proxyservers enthält.</param>
+        <param name="BypassOnLocal">
+          <see langword="true" />der Proxy für lokale Adressen umgangen werden soll; andernfalls <see langword="false" />.</param>
+        <param name="BypassList">Ein Array von Zeichenfolgen mit regulären Ausdrücken, die URIs der Server umgangen enthält.</param>
+        <param name="Credentials">Eine <see cref="T:System.Net.ICredentials" /> -Instanz mit dem Proxyserver für die Authentifizierung.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Net.WebProxy" /> Klasse mit dem angegebenen <see cref="T:System.Uri" /> Instanz, die festlegen, Liste der URIs zu umgehen und Anmeldeinformationen zu umgehen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebProxy> -Instanz wird initialisiert, wobei die <xref:System.Net.WebProxy.Address%2A> -Eigenschaftensatz auf `Address`, die <xref:System.Net.WebProxy.BypassProxyOnLocal%2A> -Eigenschaftensatz auf `BypassOnLocal`, die <xref:System.Net.WebProxy.BypassList%2A> -Eigenschaftensatz auf `BypassList`, und die <xref:System.Net.WebProxy.Credentials%2A> -Eigenschaft auf festgelegt`Credentials`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel veranschaulicht das Aufrufen dieses Konstruktors.  
+  
+ [!code-cpp[NCLWebProxy#13](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLWebProxy/CPP/nclwebproxy.cpp#13)]
+ [!code-csharp[NCLWebProxy#13](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLWebProxy/CS/nclwebproxy.cs#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Address">
+      <MemberSignature Language="C#" Value="public Uri Address { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Address" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebProxy.Address" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebProxy</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Adresse des Proxyservers.</summary>
+        <value>Ein <see cref="T:System.Uri" /> Instanz, die die Adresse des Proxyservers enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebProxy.Address%2A> Eigenschaft enthält die Adresse des Proxyservers. Wenn die automatische Proxyerkennung nicht aktiviert ist, und kein Skript für automatische Konfiguration angegeben ist, die <xref:System.Net.WebProxy.Address%2A> Eigenschaft und <xref:System.Net.WebProxy.BypassList%2A> bestimmen den Proxy für eine Anforderung verwendet.  
+  
+ Wenn die <xref:System.Net.WebProxy.Address%2A> Eigenschaft `null`, Anforderungen den Proxy zu umgehen und direkt mit dem Zielhost verbinden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Eigenschaften der einer <xref:System.Net.WebProxy> Objekts, einschließlich seiner <xref:System.Net.WebProxy.Address%2A>.  
+  
+ [!code-cpp[NCLAutoProxy#1](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLAutoProxy/CPP/proxy.cpp#1)]
+ [!code-csharp[NCLAutoProxy#1](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLAutoProxy/CS/proxy.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BypassArrayList">
+      <MemberSignature Language="C#" Value="public System.Collections.ArrayList BypassArrayList { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ArrayList BypassArrayList" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebProxy.BypassArrayList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebProxy</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ArrayList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste der Adressen, die nicht den Proxyserver verwenden.</summary>
+        <value>Ein <see cref="T:System.Collections.ArrayList" /> , enthält eine Liste der <see cref="P:System.Net.WebProxy.BypassList" /> Arrays, die URIs darstellt, die beim Zugriff auf den Proxyserver nicht verwenden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebProxy.BypassList%2A> ist ein Array von Zeichenfolgen mit regulären Ausdrücken, die die URIs zu beschreiben, die eine <xref:System.Net.WebRequest> Instanz direkt und nicht über den Proxyserver zugreift.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BypassList">
+      <MemberSignature Language="C#" Value="public string[] BypassList { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] BypassList" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebProxy.BypassList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebProxy</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Array von Adressen, die nicht den Proxyserver verwenden.</summary>
+        <value>Ein Array enthält, die eine Liste von regulären Ausdrücken, die URIs zu beschreiben, die beim Zugriff auf den Proxyserver nicht verwenden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebProxy.BypassList%2A> -Eigenschaft enthält ein Array von regulären Ausdrücken, die URIs zu beschreiben, die eine <xref:System.Net.WebRequest> Instanz direkt und nicht über den Proxyserver zugreift.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Eigenschaften der einer <xref:System.Net.WebProxy> Objekts, einschließlich seiner <xref:System.Net.WebProxy.BypassList%2A> Eigenschaft.  
+  
+ [!code-cpp[NCLAutoProxy#1](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLAutoProxy/CPP/proxy.cpp#1)]
+ [!code-csharp[NCLAutoProxy#1](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLAutoProxy/CS/proxy.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BypassProxyOnLocal">
+      <MemberSignature Language="C#" Value="public bool BypassProxyOnLocal { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BypassProxyOnLocal" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebProxy.BypassProxyOnLocal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebProxy</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt einen Wert fest, der angibt, ob der Proxyserver bei lokalen Adressen umgangen werden soll.</summary>
+        <value>
+          <see langword="true" />, um den Proxyserver bei lokalen Adressen zu umgehen, andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Einstellung von der <xref:System.Net.WebProxy.BypassProxyOnLocal%2A> Eigenschaft bestimmt, ob <xref:System.Net.WebRequest> Instanzen beim Zugriff auf lokale Internetressourcen der Proxyserver verwenden.  
+  
+ Wenn <xref:System.Net.WebProxy.BypassProxyOnLocal%2A> `true` ist, wird bei Anforderungen an lokale Internetressourcen der Proxyserver nicht verwendet. Lokale Anforderungen werden anhand des fehlenden Punkts (.) im URI an, wie in http://webserver/, identifiziert oder Zugriff auf den lokalen Server, z. B. http://localhost, http://loopback oder http://127.0.0.1. Wenn <xref:System.Net.WebProxy.BypassProxyOnLocal%2A> `false` ist, werden alle Internetanforderungen über den Proxyserver ausgeführt.  
+  
+> [!NOTE]
+>  Anforderungen an einen lokalen Host mit einem URI, die keinen Punkt enthalten verwenden Proxy. Um zu vermeiden, einen Proxy in diesen Fällen verwenden, erstellen Sie einen Eintrag für den Host in der <xref:System.Net.WebProxy.BypassList%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, Aufruf eines Konstruktors, das diese Eigenschaft legt fest, und Abrufen des Werts dieser Eigenschaft.  
+  
+ [!code-cpp[NCLWebProxy#7](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLWebProxy/CPP/nclwebproxy.cpp#7)]
+ [!code-csharp[NCLWebProxy#7](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLWebProxy/CS/nclwebproxy.cs#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDefaultProxy">
+      <MemberSignature Language="C#" Value="public static System.Net.IWebProxy CreateDefaultProxy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.IWebProxy CreateDefaultProxy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebProxy.CreateDefaultProxy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IWebProxy</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Credentials">
+      <MemberSignature Language="C#" Value="public System.Net.ICredentials Credentials { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.ICredentials Credentials" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebProxy.Credentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebProxy</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.ICredentials</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anmeldeinformationen ab oder legt diese fest, die an den Proxyserver zur Authentifizierung übermittelt werden sollen.</summary>
+        <value>Eine <see cref="T:System.Net.ICredentials" /> -Instanz, die Anmeldeinformationen für den Proxyserver für die Authentifizierung Einreichung enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebProxy.Credentials%2A> Eigenschaft enthält die Anmeldeinformationen für die Authentifizierung mit dem Proxyserver in Reaktion auf ein Statuscode "HTTP 407 (Proxyautorisierung)" zu senden. In den meisten Clientszenarien, sollten Sie verwenden die <xref:System.Net.CredentialCache.DefaultCredentials%2A>, sind die Anmeldeinformationen des angemeldeten Benutzers. Legen Sie hierzu die <xref:System.Net.WebProxy.UseDefaultCredentials%2A> Eigenschaft `true` anstatt durch Festlegen dieser Eigenschaft.  
+  
+> [!NOTE]
+>  Wenn Sie festlegen, die <xref:System.Net.WebProxy.Credentials%2A> Eigenschaft, um Anmeldeinformationen außer der <xref:System.Net.CredentialCache.DefaultCredentials%2A>wird durch das Festlegen der <xref:System.Net.WebProxy.UseDefaultCredentials%2A> Eigenschaft, um `true` bewirkt, dass eine <xref:System.InvalidOperationException>. Um dies zu verhindern, müssen Sie festlegen der <xref:System.Net.WebProxy.Credentials%2A> Eigenschaft `null` vor dem Festlegen der <xref:System.Net.WebProxy.UseDefaultCredentials%2A> Eigenschaft `true`. Ebenso können Sie diese Eigenschaft auf eine festlegen Wert <xref:System.Net.WebProxy.UseDefaultCredentials%2A> ist `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Sie haben versucht, diese Eigenschaft festgelegt bei der <see cref="P:System.Net.WebProxy.UseDefaultCredentials" /> -Eigenschaft wurde festgelegt, um <see langword="true" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDefaultProxy">
+      <MemberSignature Language="C#" Value="public static System.Net.WebProxy GetDefaultProxy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.WebProxy GetDefaultProxy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebProxy.GetDefaultProxy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebProxy</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This method has been deprecated. Please use the proxy selected for you by default. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.WebProxy</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Liest die nicht dynamischen Proxyeinstellungen von Internet Explorer.</summary>
+        <returns>Ein <see cref="T:System.Net.WebProxy" /> -Instanz, die nicht dynamischen Proxyeinstellungen von Internet Explorer 5.5 und höher enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebProxy.GetDefaultProxy%2A> Methode liest die nicht dynamischen Proxyeinstellungen von Internet Explorer 5.5 und höher gespeichert, und erstellt eine <xref:System.Net.WebProxy> Instanz mit diesen Einstellungen.  
+  
+ Die <xref:System.Net.WebProxy.GetDefaultProxy%2A> Methode abholen nicht auf alle dynamischen Einstellungen, die von Skripts zum Ausführen von Internet Explorer, automatische Konfigurationseinträge oder DHCP- oder DNS-Lookups generiert werden.  
+  
+ Anwendungen sollten verwenden die <xref:System.Net.WebRequest.DefaultWebProxy%2A?displayProperty=nameWithType> Eigenschaft und die <xref:System.Net.WebRequest.GetSystemWebProxy%2A?displayProperty=nameWithType> -Methode anstelle der <xref:System.Net.WebProxy.GetDefaultProxy%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, das Aufrufen dieser Methode.  
+  
+ [!code-cpp[NCLWebProxy#11](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLWebProxy/CPP/nclwebproxy.cpp#11)]
+ [!code-csharp[NCLWebProxy#11](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLWebProxy/CS/nclwebproxy.cs#11)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Net.WebPermission">für den uneingeschränkten Zugriff auf Netzwerkressourcen. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="protected virtual void GetObjectData (System.Runtime.Serialization.SerializationInfo serializationInfo, System.Runtime.Serialization.StreamingContext streamingContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo serializationInfo, valuetype System.Runtime.Serialization.StreamingContext streamingContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebProxy.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebProxy</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationInfo" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="streamingContext" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="serializationInfo">Die mit Daten zu füllende <see cref="T:System.Runtime.Serialization.SerializationInfo" />.</param>
+        <param name="streamingContext">Ein <see cref="T:System.Runtime.Serialization.StreamingContext" />, der das Ziel für diese Serialisierung angibt.</param>
+        <summary>Füllt eine <see cref="T:System.Runtime.Serialization.SerializationInfo" /> mit den Daten auf, die zum Serialisieren des Zielobjekts erforderlich sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Objekte eingeschlossen wurden die <xref:System.Runtime.Serialization.SerializationInfo> automatisch nachverfolgt und vom Formatierungsprogramm serialisiert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProxy">
+      <MemberSignature Language="C#" Value="public Uri GetProxy (Uri destination);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Uri GetProxy(class System.Uri destination) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebProxy.GetProxy(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebProxy</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destination" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="destination">Die <see cref="T:System.Uri" /> Instanz der angeforderten Internetressource.</param>
+        <summary>Gibt den Proxy-URI für eine Anforderung zurück.</summary>
+        <returns>Die <see cref="T:System.Uri" /> Instanz der Internetressource, wenn die Ressource auf Umgehungsliste; ist, andernfalls der <see cref="T:System.Uri" /> Instanz des Proxys.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebProxy.GetProxy%2A> Methode gibt den URI zurück, die die <xref:System.Net.WebRequest> Instanz verwendet wird, Zugriff auf die Internetressource.  
+  
+ <xref:System.Net.WebProxy.GetProxy%2A>Vergleicht `destination` mit dem Inhalt des <xref:System.Net.WebProxy.BypassList%2A>unter Verwendung der <xref:System.Net.WebProxy.IsBypassed%2A> Methode. Wenn <xref:System.Net.WebProxy.IsBypassed%2A> gibt `true`, <xref:System.Net.WebProxy.GetProxy%2A> gibt `destination` und <xref:System.Net.WebRequest> Instanz verwendet den Proxyserver nicht.  
+  
+ Wenn `destination` befindet sich nicht in <xref:System.Net.WebProxy.BypassList%2A>, <xref:System.Net.WebRequest> Instanz den Proxyserver verwendet und die <xref:System.Net.WebProxy.Address%2A> Eigenschaft zurückgegeben wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Net.WebProxy> -Objekt und ruft diese Methode, um die ausgewählten Proxy für eine Ressource abzurufen.  
+  
+ [!code-cpp[NCLAutoProxy#2](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLAutoProxy/CPP/proxy.cpp#2)]
+ [!code-csharp[NCLAutoProxy#2](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLAutoProxy/CS/proxy.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="destination" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBypassed">
+      <MemberSignature Language="C#" Value="public bool IsBypassed (Uri host);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsBypassed(class System.Uri host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebProxy.IsBypassed(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebProxy</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="host" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="host">Die <see cref="T:System.Uri" /> Instanz des Hosts zu suchende Proxy verwenden.</param>
+        <summary>Gibt an, ob den Proxyserver für den angegebenen Host verwendet werden soll.</summary>
+        <returns>
+          <see langword="true" />Wenn der Proxyserver nicht soll, können Sie für verwendet werden <paramref name="host" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebProxy.IsBypassed%2A> Methode wird verwendet, um zu ermitteln, ob der Proxyserver umgangen, wenn der Zugriff auf eine Internetressource.  
+  
+ Die <xref:System.Net.WebProxy.BypassProxyOnLocal%2A> und <xref:System.Net.WebProxy.BypassList%2A> Eigenschaften steuern, den Rückgabewert der <xref:System.Net.WebProxy.IsBypassed%2A> Methode.  
+  
+ <xref:System.Net.WebProxy.IsBypassed%2A>Gibt `true` unter einer der folgenden Bedingungen:  
+  
+-   Wenn <xref:System.Net.WebProxy.BypassProxyOnLocal%2A> ist `true` und `host` ein lokaler URI. Lokale Anforderungen werden anhand des fehlenden Punkts (.) im URI an, wie in "http://webserver/" identifiziert.  
+  
+-   Wenn `host` gleicht einen regulären Ausdruck in <xref:System.Net.WebProxy.BypassList%2A>.  
+  
+-   Wenn <xref:System.Net.WebProxy.Address%2A> gleich `null` ist.  
+  
+ Zurückgeben von allen anderen Bedingungen `false`.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Net.WebProxy> -Objekt und ruft diese Methode, um zu überprüfen, ob die Umgehungsliste ordnungsgemäß festgelegt ist.  
+  
+ [!code-cpp[NCLWebProxy#12](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLWebProxy/CPP/nclwebproxy.cpp#12)]
+ [!code-csharp[NCLWebProxy#12](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLWebProxy/CS/nclwebproxy.cs#12)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="host" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo serializationInfo, System.Runtime.Serialization.StreamingContext streamingContext);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo serializationInfo, valuetype System.Runtime.Serialization.StreamingContext streamingContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebProxy.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebProxy</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationInfo" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="streamingContext" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="serializationInfo">Das mit Daten aufzufüllende <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Objekt.</param>
+        <param name="streamingContext">Ein <see cref="T:System.Runtime.Serialization.StreamingContext" /> -Struktur, die das Ziel für diese Serialisierung angibt.</param>
+        <summary>Erstellt die Serialisierungsdaten und dem Kontext, die vom System verwendet werden, zum Serialisieren einer <see cref="T:System.Net.WebProxy" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das System ruft diese Methode, um ein Objekt zu serialisieren. Anwendungen nicht direkt aufgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseDefaultCredentials">
+      <MemberSignature Language="C#" Value="public bool UseDefaultCredentials { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseDefaultCredentials" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebProxy.UseDefaultCredentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebProxy</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest ein <see cref="T:System.Boolean" /> Wert, der steuert, ob die <see cref="P:System.Net.CredentialCache.DefaultCredentials" /> mit Anforderungen gesendet werden.</summary>
+        <value>
+          <see langword="true" />Wenn die Standardanmeldeinformationen verwendet werden. andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legen Sie diese Eigenschaft auf `true` bei Anforderungen von diesem <xref:System.Net.WebProxy> Objekt sollte, wenn vom Server angefordert authentifiziert werden mit den Anmeldeinformationen des angemeldeten Benutzers. Bei Clientanwendungen ist dies das gewünschte Verhalten in den meisten Szenarien. Für Anwendungen der mittleren Ebene, z. B. ASP.NET-Anwendungen, anstatt Sie mithilfe dieser Eigenschaft, legen Sie in der Regel die <xref:System.Net.WebProxy.Credentials%2A> Eigenschaft, um die Anmeldeinformationen des Clients auf, deren Namen die Anforderung erfolgt.  
+  
+ Die folgende Tabelle zeigt die Auswirkung der Einstellung der <xref:System.Net.WebProxy.UseDefaultCredentials%2A> Wert basierend auf den Wert der <xref:System.Net.WebProxy.Credentials%2A> Eigenschaft.  
+  
+|<xref:System.Net.WebProxy.Credentials%2A>-Wert|<xref:System.Net.WebProxy.UseDefaultCredentials%2A>-Wert|Effekt|  
+|----------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|  
+|<xref:System.Net.CredentialCache.DefaultCredentials%2A>|`true`|Keine Auswirkung.|  
+|<xref:System.Net.CredentialCache.DefaultCredentials%2A>|`false`|Für <xref:System.Net.WebProxy.Credentials%2A> ist `null` festgelegt.|  
+|`null`|`true`|Für <xref:System.Net.WebProxy.Credentials%2A> ist <xref:System.Net.CredentialCache.DefaultCredentials%2A> festgelegt.|  
+|Jeder andere Wert als <xref:System.Net.CredentialCache.DefaultCredentials%2A> oder`null`|`true` oder `false`|Festlegen von <xref:System.Net.WebProxy.UseDefaultCredentials%2A> löst eine Ausnahme aus.|  
+  
+ Wenn <xref:System.Net.WebProxy.UseDefaultCredentials%2A> ist `false`, können Sie ändern die <xref:System.Net.WebProxy.Credentials%2A> Eigenschaft, um alle Anmeldeinformationen. Wenn <xref:System.Net.WebProxy.UseDefaultCredentials%2A> ist `true`Ändern der <xref:System.Net.WebProxy.Credentials%2A> Eigenschaft von <xref:System.Net.CredentialCache.DefaultCredentials%2A> (der Wert, der angegeben ist die <xref:System.Net.WebProxy.UseDefaultCredentials%2A> -Eigenschaftensatz auf `true`) wird eine Ausnahme ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Sie haben versucht, diese Eigenschaft festgelegt bei der <see cref="P:System.Net.WebProxy.Credentials" /> -Eigenschaft enthält die Anmeldeinformationen als die standardmäßigen Anmeldeinformationen.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

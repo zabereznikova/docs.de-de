@@ -1,0 +1,117 @@
+<Type Name="ResourceDictionaryDiagnostics" FullName="System.Windows.Diagnostics.ResourceDictionaryDiagnostics">
+  <TypeSignature Language="C#" Value="public static class ResourceDictionaryDiagnostics" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ResourceDictionaryDiagnostics extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Diagnostics.ResourceDictionaryDiagnostics" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht die Enumeration von generischen und Designs <see cref="T:System.Windows.ResourceDictionary" /> Instanzen und bietet eine Benachrichtigungsinfrastruktur für das Lauschen auf das Laden und Entladen von <see cref="T:System.Windows.ResourceDictionary" /> Instanzen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Typ unterstützt die .NET Framework-Infrastruktur und sollte nicht direkt im Anwendungscode verwendet werden.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="GenericResourceDictionaries">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEnumerable&lt;System.Windows.Diagnostics.ResourceDictionaryInfo&gt; GenericResourceDictionaries { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Collections.Generic.IEnumerable`1&lt;class System.Windows.Diagnostics.ResourceDictionaryInfo&gt; GenericResourceDictionaries" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GenericResourceDictionaries" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Windows.Diagnostics.ResourceDictionaryInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle Instanzen generischer <see cref="T:System.Windows.ResourceDictionary" />-Objekte ab, die von der Anwendung geladen werden, wenn ein verwalteter Debugger angefügt ist.</summary>
+        <value>
+          <see cref="P:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GenericResourceDictionaries" />-Eigenschaft</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenericResourceDictionaryLoaded">
+      <MemberSignature Language="C#" Value="public static event EventHandler&lt;System.Windows.Diagnostics.ResourceDictionaryLoadedEventArgs&gt; GenericResourceDictionaryLoaded;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Diagnostics.ResourceDictionaryLoadedEventArgs&gt; GenericResourceDictionaryLoaded" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GenericResourceDictionaryLoaded" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Diagnostics.ResourceDictionaryLoadedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein verwalteter Debugger angefügt ist, und eine generische <see cref="T:System.Windows.ResourceDictionary" /> Objekt von der Anwendung geladen wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThemedResourceDictionaries">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEnumerable&lt;System.Windows.Diagnostics.ResourceDictionaryInfo&gt; ThemedResourceDictionaries { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Collections.Generic.IEnumerable`1&lt;class System.Windows.Diagnostics.ResourceDictionaryInfo&gt; ThemedResourceDictionaries" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.ThemedResourceDictionaries" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Windows.Diagnostics.ResourceDictionaryInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle Instanzen mit Design versehener <see cref="T:System.Windows.ResourceDictionary" />-Objekte ab, die von der Anwendung geladen werden, wenn ein verwalteter Debugger angefügt ist.</summary>
+        <value>
+          <see cref="P:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.ThemedResourceDictionaries" />
+        </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThemedResourceDictionaryLoaded">
+      <MemberSignature Language="C#" Value="public static event EventHandler&lt;System.Windows.Diagnostics.ResourceDictionaryLoadedEventArgs&gt; ThemedResourceDictionaryLoaded;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Diagnostics.ResourceDictionaryLoadedEventArgs&gt; ThemedResourceDictionaryLoaded" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.ThemedResourceDictionaryLoaded" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Diagnostics.ResourceDictionaryLoadedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein verwalteter Debugger angefügt ist, sowie eine Designs <see cref="T:System.Windows.ResourceDictionary" /> Objekt von der Anwendung geladen wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThemedResourceDictionaryUnloaded">
+      <MemberSignature Language="C#" Value="public static event EventHandler&lt;System.Windows.Diagnostics.ResourceDictionaryUnloadedEventArgs&gt; ThemedResourceDictionaryUnloaded;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Diagnostics.ResourceDictionaryUnloadedEventArgs&gt; ThemedResourceDictionaryUnloaded" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.ThemedResourceDictionaryUnloaded" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Diagnostics.ResourceDictionaryUnloadedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein verwalteter Debugger angefügt und Designs <see cref="T:System.Windows.ResourceDictionary" /> Objekt aus der Anwendung entfernt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,952 @@
+<Type Name="SecurityTokenHandler" FullName="System.IdentityModel.Tokens.SecurityTokenHandler">
+  <TypeSignature Language="C#" Value="public abstract class SecurityTokenHandler : System.IdentityModel.Configuration.ICustomIdentityConfiguration" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SecurityTokenHandler extends System.Object implements class System.IdentityModel.Configuration.ICustomIdentityConfiguration" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.SecurityTokenHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IdentityModel.Configuration.ICustomIdentityConfiguration</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Die abstrakte Basisklasse für Sicherheitstokenhandler.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.SecurityTokenHandler> Klasse ist die Basisklasse, die von der die gesamte Sicherheit Tokenhandler abgeleitet werden. Sicherheit-Tokenhandler ist verantwortlich für:  
+  
+-   Validierung der Sicherheitstoken (<xref:System.IdentityModel.Tokens.SecurityToken>) des Typs, es dient zum Verarbeiten und Verpacken, die die Ansprüche im Token in enthaltenen, ein <xref:System.Security.Claims.ClaimsIdentity> Objekt.  
+  
+-   Serialisieren und Deserialisieren von Sicherheitstoken des Typs ist es für die Verarbeitung konzipiert.  
+  
+-   Serialisieren und Deserialisieren von schlüsselbezeichnerklauseln (<xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause>) mit Verweisen auf Token des Typs in und aus verarbeiten soll `<wsse:SecurityTokenReference>` Elemente.  
+  
+-   Erstellen von Sicherheitstokens von einem <xref:System.IdentityModel.Tokens.SecurityTokenDescriptor> Implementierungen von übergebenes Objekt der <xref:System.IdentityModel.SecurityTokenService> Klasse.  
+  
+-   Erstellen von schlüsselbezeichnerklauseln aus einem Sicherheitstoken für Implementierungen von der <xref:System.IdentityModel.SecurityTokenService> Klasse.  
+  
+ Windows Identity Foundation (WIF) enthält die folgenden Sicherheitstokenhandler ausgegeben:  
+  
+-   <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>  
+  
+-   <xref:System.IdentityModel.Tokens.KerberosSecurityTokenHandler>  
+  
+-   <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>  
+  
+-   <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler>  
+  
+-   <xref:System.IdentityModel.Tokens.RsaSecurityTokenHandler>  
+  
+-   <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>  
+  
+-   <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>  
+  
+-   <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>  
+  
+-   <xref:System.IdentityModel.Tokens.UserNameSecurityTokenHandler>  
+  
+-   <xref:System.IdentityModel.Tokens.WindowsUserNameSecurityTokenHandler>  
+  
+-   <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>  
+  
+ Die meisten dieser Klassen verfügbar machen, zusätzliche Elemente, die Funktionalität zu implementieren, die speziell für die Verarbeitung der Token ist für die Klasse entworfen wird. In vielen Fällen ist es möglicherweise besser, leiten Sie von einer dieser Klassen anstatt direkt aus der <xref:System.IdentityModel.Tokens.SecurityTokenHandler> Klasse.  
+  
+ Sicherheit-Tokenhandler kann hinzugefügt oder entfernt aus einer Auflistung Tokenhandler durch Angabe der [ &lt;hinzufügen&gt;](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md), [ &lt;entfernen&gt;](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/remove.md), oder [ &lt;deaktivieren&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/clear.md) Elemente unter dem [ &lt;SecurityTokenHandlers&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md) Element in einer Konfigurationsdatei. Die <xref:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration> Objekt, das die Konfigurationseinstellungen für die Handlerauflistung enthält durch zugegriffen werden kann die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.Configuration%2A> -Eigenschaft und die Ereignishandler-Auflistung, die der Tokenhandler Mitglied ist möglich, die von der <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ContainingCollection%2A> Eigenschaft. Sie können außer Kraft setzen die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.LoadCustomConfiguration%2A> Methode, um benutzerdefinierte Konfigurationselemente zu verarbeiten, die der Handler verwendet.  
+  
+ Die <xref:System.IdentityModel.Tokens.SecurityTokenHandler> Klasse macht mehrere Eigenschaften und Methoden. Abhängig von den Funktionen, den Sie implementieren möchten, können Sie einige oder alle diese Member überschreiben.  
+  
+ Müssen Sie überschreiben die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.TokenType%2A> Eigenschaft und die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.GetTokenTypeIdentifiers%2A> Methode, um die WIF-Infrastruktur mit Informationen über den Typ des Sicherheitstokens bereitzustellen, die Ihre Klasse ist für die Verarbeitung konzipiert.  
+  
+ Validierung, Serialisierung und Deserialisierung Funktionalität wird bereitgestellt, über die Eigenschaften oder Methoden, die angeben, ob der Handler ausführen kann eine bestimmte Funktion, die zusammen mit der Methode oder die Methoden, die die Funktionalität zu implementieren. Die folgende Liste-Paaren, die Eigenschaften oder Methoden, die Funktionen mit den Methoden angeben, die diese Funktionalität zu implementieren:  
+  
+-   Die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanValidateToken%2A> Eigenschaft und die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> Methode: überprüft ein Token, und verpackt die Ansprüche im Token in einer <xref:System.Security.Claims.ClaimsIdentity>.  
+  
+-   Die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanWriteToken%2A> Eigenschaft und die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.WriteToken%2A> Methoden: Token-Serialisierung.  
+  
+-   Die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A> Methoden und die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ReadToken%2A> Methoden: Deserialisierung-Token.  
+  
+-   Die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadKeyIdentifierClause%2A> Methode und die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ReadKeyIdentifierClause%2A> Methode: Deserialisieren von schlüsselbezeichnerklauseln.  
+  
+-   Die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanWriteKeyIdentifierClause%2A> Methode und die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.WriteKeyIdentifierClause%2A> Methode: Serialisieren von schlüsselbezeichnerklauseln.  
+  
+ Die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CreateToken%2A> und <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CreateSecurityTokenReference%2A> Methoden werden aufgerufen, aus der Pipeline in Implementierungen von der <xref:System.IdentityModel.SecurityTokenService> Klasse.  
+  
+ Die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.DetectReplayedToken%2A> Methode wird aufgerufen, durch die WIF-Infrastruktur, um zu bestimmen, ob das angegebene Token bereits empfangen wurde. Standardmäßig gibt diese Methode `false`, was bedeutet, dass das Token noch nicht empfangen wurde. Sie können die Methode überschreiben und Logik zum Erkennen von wiedergegebenen Tokens bereitstellen.  
+  
+   
+  
+## Examples  
+ Die Codebeispiele in allen der <xref:System.IdentityModel.Tokens.SecurityTokenHandler> Themen stammen aus den `Custom Token` Beispiel. Dieses Beispiel stellt benutzerdefinierte Klassen, die Verarbeitung von Simple Web Token (SWT) zu ermöglichen. Weitere Informationen in diesem Beispiel und weitere Beispiele für WIF und wo Sie sie herunterladen, finden Sie unter [WIF Beispiel Codeindex](~/docs/framework/security/wif-code-sample-index.md). Das folgende XML zeigt, wie den SWT-Tokenhandler der Tokenhandler-Auflistung hinzugefügt wird.  
+  
+```xml  
+<system.identityModel>  
+  <identityConfiguration saveBootstrapContext="true">  
+    <issuerTokenResolver type="SimpleWebToken.CustomIssuerTokenResolver, SimpleWebToken">  
+      <AddAudienceKeyPair  symmetricKey="wAVkldQiFypTQ+kdNdGWCYCHRcee8XmXxOvgmak8vSY=" audience="http://localhost:19851/" />  
+    </issuerTokenResolver>  
+    <issuerNameRegistry type="RelyingParty.TrustedIssuerNameRegistry, RelyingParty"/>  
+    <audienceUris>  
+      <add value="http://localhost:19851/"/>  
+    </audienceUris>  
+    <securityTokenHandlers>  
+      <add type="SimpleWebToken.SimpleWebTokenHandler, SimpleWebToken" />  
+    </securityTokenHandlers>  
+  </identityConfiguration>  
+</system.identityModel>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SecurityTokenHandler ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandler.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Aufgerufen von Konstruktoren in abgeleiteten Klassen zum Initialisieren der <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandler" /> Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanReadKeyIdentifierClause">
+      <MemberSignature Language="C#" Value="public virtual bool CanReadKeyIdentifierClause (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanReadKeyIdentifierClause(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadKeyIdentifierClause(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Ein XmlReader am Startelement positioniert. Der Leser sollte nicht von dieser Methode erweitert werden.</param>
+        <summary>Gibt einen Wert, der angibt, ob das XML-Element verweist der angegebene XML-Reader eine schlüsselbezeichnerklausel, die von dieser Instanz deserialisiert werden kann.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="M:System.IdentityModel.Tokens.SecurityTokenHandler.ReadKeyIdentifierClause(System.Xml.XmlReader)" /> Methode das Element lesen kann, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt die standardmäßige Implementierung `false` um anzugeben, dass die schlüsselbezeichnerklausel nicht gelesen werden kann.  
+  
+ Eine abgeleitete Klasse überprüft das Element, dem der Reader auf bezieht, um festzustellen, ob die Instanz eine schlüsselbezeichnerklausel deserialisiert werden kann. Dies erfolgt normalerweise durch einen Aufruf der <xref:System.Xml.XmlReader.IsStartElement%2A?displayProperty=nameWithType> Methode mit der entsprechenden und der Namespace-Zeichenfolgen angegeben. Wenn Sie außer Kraft setzen <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadKeyIdentifierClause%2A>, müssen Sie auch überschreiben die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ReadKeyIdentifierClause%2A> Methode, um die Logik zum Deserialisieren der schlüsselbezeichnerklausel bereitzustellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanReadToken">
+      <MemberSignature Language="C#" Value="public virtual bool CanReadToken (string tokenString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanReadToken(string tokenString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tokenString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="tokenString">Die Tokenzeichenfolge, zu lesen.</param>
+        <summary>Gibt einen Wert, der angibt, ob die angegebene Zeichenfolge als ein Token vom Typ verarbeitet von dieser Instanz deserialisiert werden kann.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="M:System.IdentityModel.Tokens.SecurityTokenHandler.ReadToken(System.String)" /> Methode das Element lesen kann, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt die standardmäßige Implementierung immer `false`.  
+  
+ Wenn Sie diese Methode überschreiben, müssen Sie auch überschreiben die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ReadToken%2A?displayProperty=nameWithType> Methode, um die Logik zum Deserialisieren des Tokens bereitzustellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanReadToken">
+      <MemberSignature Language="C#" Value="public virtual bool CanReadToken (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanReadToken(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Ein XmlReader ein Startelement positioniert. Der Leser sollte nicht von dieser Methode erweitert werden.</param>
+        <summary>Gibt einen Wert, der angibt, ob ein Token des Typs, der von dieser Instanz verarbeitet das XML-Element verwiesen wird, vom angegebenen XML-Reader gelesen werden kann.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="M:System.IdentityModel.Tokens.SecurityTokenHandler.ReadToken(System.Xml.XmlReader)" /> Methode das Element lesen kann, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt die standardmäßige Implementierung immer `false`.  
+  
+ Eine abgeleitete Klasse überprüft das Element, dem der Reader auf bezieht, um festzustellen, ob ein Sicherheitstoken von die Instanz deserialisiert werden kann. Dies erfolgt normalerweise durch einen Aufruf der <xref:System.Xml.XmlReader.IsStartElement%2A> Methode mit der entsprechenden und der Namespace-Zeichenfolgen angegeben. Wenn Sie außer Kraft setzen <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadKeyIdentifierClause%2A>, müssen Sie auch überschreiben die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ReadToken%2A?displayProperty=nameWithType> Methode oder die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ReadToken%2A?displayProperty=nameWithType> Methode, um die Logik zum Deserialisieren der schlüsselbezeichnerklausel bereitzustellen.  
+  
+   
+  
+## Examples  
+ Der folgende Code veranschaulicht das Überschreiben der <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A> Methode, um zu bestimmen, ob ein Token von einem Handler gelesen werden kann. Der Code stammt aus dem `Custom Token` Beispiel. Dieses Beispiel stellt benutzerdefinierte Klassen, die Verarbeitung von Simple Web Token (SWT) zu ermöglichen. Weitere Informationen in diesem Beispiel und weitere Beispiele für WIF und wo Sie sie herunterladen, finden Sie unter [WIF Beispiel Codeindex](~/docs/framework/security/wif-code-sample-index.md).  
+  
+ [!code-csharp[WifRcCustomToken#1](~/samples/snippets/csharp/VS_Snippets_Misc/wifrccustomtoken/cs/simplewebtoken/simplewebtokenhandler.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanValidateToken">
+      <MemberSignature Language="C#" Value="public virtual bool CanValidateToken { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanValidateToken" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityTokenHandler.CanValidateToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Handler die Überprüfung von Sicherheitstoken unterstützt.</summary>
+        <value>
+          <see langword="true" />Wenn die Klasse "Finance.Secure.contoso.com" Überprüfen von Sicherheitstoken fähig ist. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Implementieren von Überprüfung in einer abgeleiteten Klasse außer Kraft setzen diese Eigenschaft zurückgegeben `true` und überschreiben die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> Methode, um die Validierungslogik zu implementieren.  
+  
+   
+  
+## Examples  
+ Der folgende Code veranschaulicht das Überschreiben der <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanValidateToken%2A> Eigenschaft, um anzugeben, dass ein benutzerdefinierter Handler Token überprüfen kann. Der Code stammt aus dem `Custom Token` Beispiel. Dieses Beispiel stellt benutzerdefinierte Klassen, die Verarbeitung von Simple Web Token (SWT) zu ermöglichen. Weitere Informationen in diesem Beispiel und weitere Beispiele für WIF und wo Sie sie herunterladen, finden Sie unter [WIF Beispiel Codeindex](~/docs/framework/security/wif-code-sample-index.md).  
+  
+ [!code-csharp[WifRcCustomToken#2](~/samples/snippets/csharp/VS_Snippets_Misc/wifrccustomtoken/cs/simplewebtoken/simplewebtokenhandler.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanWriteKeyIdentifierClause">
+      <MemberSignature Language="C#" Value="public virtual bool CanWriteKeyIdentifierClause (System.IdentityModel.Tokens.SecurityKeyIdentifierClause securityKeyIdentifierClause);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanWriteKeyIdentifierClause(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause securityKeyIdentifierClause) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandler.CanWriteKeyIdentifierClause(System.IdentityModel.Tokens.SecurityKeyIdentifierClause)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="securityKeyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+      </Parameters>
+      <Docs>
+        <param name="securityKeyIdentifierClause">Die schlüsselbezeichnerklausel überprüft werden soll.</param>
+        <summary>Gibt einen Wert, der angibt, ob die angegebene schlüsselbezeichnerklausel von dieser Instanz serialisiert werden kann.</summary>
+        <returns>
+          <see langword="true" />Wenn die schlüsselbezeichnerklausel serialisiert werden kann; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt die standardmäßige Implementierung immer `false`.  
+  
+ Wenn Sie außer Kraft setzen <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanWriteKeyIdentifierClause%2A>, müssen Sie auch überschreiben die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.WriteKeyIdentifierClause%2A> Methode, um die Logik zum Serialisieren der schlüsselbezeichnerklausel bereitzustellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanWriteToken">
+      <MemberSignature Language="C#" Value="public virtual bool CanWriteToken { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanWriteToken" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityTokenHandler.CanWriteToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Handler Sicherheitstoken serialisieren kann.</summary>
+        <value>
+          <see langword="true" />Wenn die Klasse, der Token serialisieren kann; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Implementieren der Serialisierung in einer abgeleiteten Klasse außer Kraft setzen diese Eigenschaft zurückgeben `true` und überschreiben die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.WriteToken%2A> Methoden, die die Serialisierungslogik implementiert.  
+  
+   
+  
+## Examples  
+ Der folgende Code veranschaulicht das Überschreiben der <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanWriteToken%2A> Eigenschaft, um anzugeben, dass ein benutzerdefinierter Handler Token serialisieren kann. Der Code stammt aus dem `Custom Token` Beispiel. Dieses Beispiel stellt benutzerdefinierte Klassen, die Verarbeitung von Simple Web Token (SWT) zu ermöglichen. Weitere Informationen in diesem Beispiel und weitere Beispiele für WIF und wo Sie sie herunterladen, finden Sie unter [WIF Beispiel Codeindex](~/docs/framework/security/wif-code-sample-index.md).  
+  
+ [!code-csharp[WifRcCustomToken#3](~/samples/snippets/csharp/VS_Snippets_Misc/wifrccustomtoken/cs/simplewebtoken/simplewebtokenhandler.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Configuration">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration Configuration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration Configuration" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityTokenHandler.Configuration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration" /> -Objekt, das Konfiguration für die aktuelle Instanz bereitstellt.</summary>
+        <value>Das Konfigurationsobjekt für die aktuelle Instanz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.Configuration%2A> Eigenschaftensatz wird in der Regel von der Konfigurationsinfrastruktur aus der [ &lt;SecurityTokenHandlerConfiguration&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) Element in der Konfigurationsdatei, während die Anwendung gestartet wird.  
+  
+ In abgeleiteten Klassen, die Sie verwenden die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.Configuration%2A> Eigenschaft, um auf Konfigurationseinstellungen zuzugreifen, z. B. der ausstellernamenregistration zur Verwendung in der <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> -Methode zugegriffen werden kann, aus der <xref:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration.IssuerNameRegistry%2A?displayProperty=nameWithType> Eigenschaft des Konfigurationsobjekts.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainingCollection">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityTokenHandlerCollection ContainingCollection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SecurityTokenHandlerCollection ContainingCollection" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityTokenHandler.ContainingCollection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityTokenHandlerCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Tokenhandler-Auflistung, die die aktuelle Instanz enthält.</summary>
+        <value>Die Tokenhandler-Auflistung, die die aktuelle Instanz enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Tokenhandler hinzugefügt wird, um eine <xref:System.IdentityModel.Tokens.SecurityTokenHandlerCollection> -Instanz, die diese Eigenschaft wird automatisch festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSecurityTokenReference">
+      <MemberSignature Language="C#" Value="public virtual System.IdentityModel.Tokens.SecurityKeyIdentifierClause CreateSecurityTokenReference (System.IdentityModel.Tokens.SecurityToken token, bool attached);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IdentityModel.Tokens.SecurityKeyIdentifierClause CreateSecurityTokenReference(class System.IdentityModel.Tokens.SecurityToken token, bool attached) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandler.CreateSecurityTokenReference(System.IdentityModel.Tokens.SecurityToken,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+        <Parameter Name="attached" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="token">Das Token für das der Verweis ist, erstellt werden.</param>
+        <param name="attached">
+          <see langword="true" />Wenn eine angefügte Verweisdaten erstellt werden sollten. <see langword="false" /> , wenn ein nicht angefügte Verweis erstellt werden soll.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse wird die Sicherheitstokenverweis für Token verarbeitet von dieser Klasse erstellt. Diese Methode wird in der Regel von einem Sicherheitstokendienst (STS) aufgerufen.</summary>
+        <returns>Eine schlüsselbezeichnerklausel, die das angegebene Token verweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig löst diese Methode eine <xref:System.NotImplementedException> Ausnahme.  
+  
+ Abgeleitete Klassen überschreiben diese Methode, um eine schlüsselbezeichnerklausel zurückgeben (<xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause>), die verwendet werden kann, zum Erstellen einer `<wsse:SecurityTokenReference>` -Element für das angegebene Token.  
+  
+ Aufgerufen von Implementierungen der <xref:System.IdentityModel.SecurityTokenService> Klasse.  
+  
+ In der Regel eine <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause> muss nicht nur verwendet werden, wenn ein benutzerdefinierter Sicherheitstokendienst erstellt wird. Wenn ein Sicherheitstokendienst ein Sicherheitstoken zurückgibt, enthält das ausgegebene Sicherheitstoken Verweise auf angefügte und nicht angefügte Sicherheitstoken. Die angefügten Verweise beziehen sich auf Sicherheitstoken, die im Sicherheitsheader einer SOAP-Nachricht enthalten sind, und nicht angehängte Verweise beziehen sich auf Sicherheitstoken, die nicht im Sicherheitsheader einer SOAP-Nachricht enthalten sind. Diese Verweise bestätigen in der Regel die Echtheit des ausgegebenen Sicherheitstokens.  
+  
+   
+  
+## Examples  
+ Der folgende Code veranschaulicht das Überschreiben der <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CreateSecurityTokenReference%2A> Methode, um eine schlüsselbezeichnerklausel aus dem angegebenen Token zu erstellen. Der Code stammt aus dem `Custom Token` Beispiel. Dieses Beispiel stellt benutzerdefinierte Klassen, die Verarbeitung von Simple Web Token (SWT) zu ermöglichen. Weitere Informationen in diesem Beispiel und weitere Beispiele für WIF und wo Sie sie herunterladen, finden Sie unter [WIF Beispiel Codeindex](~/docs/framework/security/wif-code-sample-index.md).  
+  
+ [!code-csharp[WifRcCustomToken#5](~/samples/snippets/csharp/VS_Snippets_Misc/wifrccustomtoken/cs/simplewebtoken/simplewebtokenhandler.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateToken">
+      <MemberSignature Language="C#" Value="public virtual System.IdentityModel.Tokens.SecurityToken CreateToken (System.IdentityModel.Tokens.SecurityTokenDescriptor tokenDescriptor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IdentityModel.Tokens.SecurityToken CreateToken(class System.IdentityModel.Tokens.SecurityTokenDescriptor tokenDescriptor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandler.CreateToken(System.IdentityModel.Tokens.SecurityTokenDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tokenDescriptor" Type="System.IdentityModel.Tokens.SecurityTokenDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="tokenDescriptor">Die token Sicherheitsbeschreibung von der das Token ist, erstellt werden. Eigenschaften des Deskriptors token werden festgelegt, bevor diese Methode aufgerufen wird.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse wird ein Sicherheitstoken, die mit dem angegebenen token Deskriptor erstellt. Diese Methode wird von einem Sicherheitstokendienst (STS) aufgerufen.</summary>
+        <returns>Ein Sicherheitstoken, das die Eigenschaften des Deskriptors token entspricht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig löst diese Methode eine <xref:System.NotImplementedException> Ausnahme.  
+  
+ Aufgerufen von Implementierungen der <xref:System.IdentityModel.SecurityTokenService> Klasse.  
+  
+   
+  
+## Examples  
+ Der folgende Code veranschaulicht das Überschreiben der <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CreateToken%2A> Methode zum Erstellen und ein Token von einem token Deskriptor zurück. Der Code stammt aus dem `Custom Token` Beispiel. Dieses Beispiel stellt benutzerdefinierte Klassen, die Verarbeitung von Simple Web Token (SWT) zu ermöglichen. Weitere Informationen in diesem Beispiel und weitere Beispiele für WIF und wo Sie sie herunterladen, finden Sie unter [WIF Beispiel Codeindex](~/docs/framework/security/wif-code-sample-index.md).  
+  
+ [!code-csharp[WifRcCustomToken#4](~/samples/snippets/csharp/VS_Snippets_Misc/wifrccustomtoken/cs/simplewebtoken/simplewebtokenhandler.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DetectReplayedToken">
+      <MemberSignature Language="C#" Value="protected virtual void DetectReplayedToken (System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void DetectReplayedToken(class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandler.DetectReplayedToken(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">Das Token für die Wiedergabe überprüft.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse löst eine Ausnahme aus, wenn das angegebene Token erkannt wird, als wiedergegeben wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Standardimplementierung wird keine Aktion ausgeführt.  
+  
+ Abgeleitete Klassen sollten Auslösen einer <xref:System.IdentityModel.Tokens.SecurityTokenReplayDetectedException> , wenn das Token wurde bereits verwendet.  
+  
+ Windows Identity Foundation (WIF) bietet die <xref:System.IdentityModel.Tokens.TokenReplayCache> Klasse, die von der Wiedergabe Caches abgeleitet werden können und die [ &lt;TokenReplayCache&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) Konfigurationselement, das verwendet werden kann, so konfigurieren Sie die Wiedergeben von Tokenhandler in einer Anwendung verwendeten Cache; allerdings die genaue Implementierung der <xref:System.IdentityModel.Tokens.SecurityTokenHandler.DetectReplayedToken%2A> Methode wird bis zu der Designer der abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTokenTypeIdentifiers">
+      <MemberSignature Language="C#" Value="public abstract string[] GetTokenTypeIdentifiers ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string[] GetTokenTypeIdentifiers() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandler.GetTokenTypeIdentifiers" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse gibt den Satz von URIs, die verwendet werden in Anforderungen, um ein Token vom Typ verarbeitet von der abgeleiteten Klasse zu identifizieren.</summary>
+        <returns>Der Satz von URIs, die den Typ des Sicherheitstoken zu identifizieren, den von diesem Handler unterstützt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Type> des Tokens, die von der aktuellen Instanz verarbeitet erfolgt über die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.TokenType%2A> Eigenschaft. Die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.GetTokenTypeIdentifiers%2A> Methode gibt den Satz der zulässigen Bezeichner, die verwendet werden kann, in Nachrichten zum Verweisen auf den Typ des Sicherheitstokens. Z. B. der URI-Wert verwendet, der `<wst:TokenType>` Element unter der `<wst:RequestSecurityToken>` Element um eine bestimmte Art von Token anzufordern (dargestellt durch die <xref:System.IdentityModel.Protocols.WSTrust.WSTrustMessage.TokenType%2A?displayProperty=nameWithType> Eigenschaft im Objektmodell).  
+  
+   
+  
+## Examples  
+ Der folgende Code veranschaulicht das Überschreiben der <xref:System.IdentityModel.Tokens.SecurityTokenHandler.GetTokenTypeIdentifiers%2A> Methode, um den Typ des Sicherheitstokens Bezeichner für ein benutzerdefiniertes Token zurückzugeben. Der Code stammt aus dem `Custom Token` Beispiel. Dieses Beispiel stellt benutzerdefinierte Klassen, die Verarbeitung von Simple Web Token (SWT) zu ermöglichen. Weitere Informationen in diesem Beispiel und weitere Beispiele für WIF und wo Sie sie herunterladen, finden Sie unter [WIF Beispiel Codeindex](~/docs/framework/security/wif-code-sample-index.md).  
+  
+ [!code-csharp[WifRcCustomToken#17](~/samples/snippets/csharp/VS_Snippets_Misc/wifrccustomtoken/cs/simplewebtoken/simplewebtokenhandler.cs#17)]  
+[!code-csharp[WifRcCustomToken#6](~/samples/snippets/csharp/VS_Snippets_Misc/wifrccustomtoken/cs/simplewebtoken/simplewebtokenhandler.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadCustomConfiguration">
+      <MemberSignature Language="C#" Value="public virtual void LoadCustomConfiguration (System.Xml.XmlNodeList nodelist);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LoadCustomConfiguration(class System.Xml.XmlNodeList nodelist) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandler.LoadCustomConfiguration(System.Xml.XmlNodeList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nodelist" Type="System.Xml.XmlNodeList" />
+      </Parameters>
+      <Docs>
+        <param name="nodelist">Die XML-Konfigurationselemente. Jeder Knoten in der Liste ist vom Typ <see cref="T:System.Xml.XmlElement" />.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse lädt benutzerdefinierte Konfiguration aus XML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.LoadCustomConfiguration%2A> Methode wird von der Konfigurationsinfrastruktur aufgerufen. Wenn diese Methode aufgerufen wird, die `nodelist` enthält die Elemente der obersten Ebene untergeordnetes Element von der Tokenhandler [ &lt;hinzufügen&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md) Element aus der Konfigurationsdatei. Jede dieser kann wiederum enthalten Attribute oder untergeordnete Elemente abhängig von dem Konfigurationsschema, das Sie für die abgeleitete Klasse zu definieren.  
+  
+ Die Standardimplementierung löst eine <xref:System.NotImplementedException>. Überschreiben Sie diese Methode in der abgeleiteten Klasse Initialisierung von Ihrem Sicherheitstokenhandler aus einer Konfigurationsdatei zu aktivieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadKeyIdentifierClause">
+      <MemberSignature Language="C#" Value="public virtual System.IdentityModel.Tokens.SecurityKeyIdentifierClause ReadKeyIdentifierClause (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IdentityModel.Tokens.SecurityKeyIdentifierClause ReadKeyIdentifierClause(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandler.ReadKeyIdentifierClause(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Ein XmlReader am Startelement des der XML-Code in die schlüsselbezeichnerklausel deserialisiert werden.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse deserialisiert den XML-Code verweist auf den angegebenen XML-Reader eine schlüsselbezeichnerklausel, die ein Token verarbeitet von der abgeleiteten Klasse verweist.</summary>
+        <returns>Die schlüsselbezeichnerklausel, die aus XML deserialisiert wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig löst diese Methode eine <xref:System.NotImplementedException> Ausnahme.  
+  
+ Überschreiben Sie diese Methode, um die Logik, um eine schlüsselbezeichnerklausel aus XML deserialisiert bereitzustellen. Wenn Sie diese Methode überschreiben, sollten Sie auch überschreiben die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadKeyIdentifierClause%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadToken">
+      <MemberSignature Language="C#" Value="public virtual System.IdentityModel.Tokens.SecurityToken ReadToken (string tokenString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IdentityModel.Tokens.SecurityToken ReadToken(string tokenString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandler.ReadToken(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tokenString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="tokenString">Die Zeichenfolge, die deserialisiert werden.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse deserialisiert die angegebene Zeichenfolge in ein Token des Typs von der abgeleiteten Klasse verarbeitet.</summary>
+        <returns>Das Sicherheitstoken, das aus der angegebenen Zeichenfolge deserialisiert wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Beim Aufrufen dieser Methode mit nicht vertrauenswürdigen Daten stellt ein Sicherheitsrisiko dar. Rufen Sie diese Methode nur mit vertrauenswürdigen Daten. Weitere Informationen finden Sie unter [Sicherheitsrisiken für nicht vertrauenswürdige Daten](http://go.microsoft.com/fwlink/?LinkId=330378).  
+  
+ Standardmäßig löst diese Methode eine <xref:System.NotImplementedException> Ausnahme.  
+  
+ Überschreiben Sie diese Methode, um die Funktionalität bereit, die ein Sicherheitstoken aus einer Zeichenfolge deserialisiert werden kann. Wenn Sie, diese Methode überschreiben, sollten Sie auch überschreiben die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadToken">
+      <MemberSignature Language="C#" Value="public virtual System.IdentityModel.Tokens.SecurityToken ReadToken (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IdentityModel.Tokens.SecurityToken ReadToken(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandler.ReadToken(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Ein XmlReader am Startelement des Tokens positioniert.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse deserialisiert den XML-Code, der den angegebenen XML-Reader ein Token vom Typ verarbeitet von der abgeleiteten Klasse verweist.</summary>
+        <returns>Das Sicherheitstoken, das aus XML deserialisiert wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Beim Aufrufen dieser Methode mit nicht vertrauenswürdigen Daten stellt ein Sicherheitsrisiko dar. Rufen Sie diese Methode nur mit vertrauenswürdigen Daten. Weitere Informationen finden Sie unter [Sicherheitsrisiken für nicht vertrauenswürdige Daten](http://go.microsoft.com/fwlink/?LinkId=330378).  
+  
+ Standardmäßig löst diese Methode eine <xref:System.NotImplementedException> Ausnahme.  
+  
+ Überschreiben Sie diese Methode, um die Logik, um ein Sicherheitstoken aus XML deserialisiert bereitzustellen. Wenn Sie diese Methode überschreiben, sollten Sie auch überschreiben die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A?displayProperty=nameWithType> Methode. In der Regel in abgeleiteten Klassen, wenn die Methode das Token aus dem referenzierten XML deserialisiert werden kann löst sie eine <xref:System.Xml.XmlException>.  
+  
+   
+  
+## Examples  
+ Der folgende Code veranschaulicht das Überschreiben der <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ReadToken%2A> Methode, um ein benutzerdefiniertes Token aus dem angegebenen XML-Reader zu lesen. Der Code stammt aus dem `Custom Token` Beispiel. Dieses Beispiel stellt benutzerdefinierte Klassen, die Verarbeitung von Simple Web Token (SWT) zu ermöglichen. Weitere Informationen in diesem Beispiel und weitere Beispiele für WIF und wo Sie sie herunterladen, finden Sie unter [WIF Beispiel Codeindex](~/docs/framework/security/wif-code-sample-index.md).  
+  
+ [!code-csharp[WifRcCustomToken#7](~/samples/snippets/csharp/VS_Snippets_Misc/wifrccustomtoken/cs/simplewebtoken/simplewebtokenhandler.cs#7)]  
+[!code-csharp[WifRcCustomToken#8](~/samples/snippets/csharp/VS_Snippets_Misc/wifrccustomtoken/cs/simplewebtoken/simplewebtokenhandler.cs#8)]  
+[!code-csharp[WifRcCustomToken#14](~/samples/snippets/csharp/VS_Snippets_Misc/wifrccustomtoken/cs/simplewebtoken/simplewebtokenhandler.cs#14)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadToken">
+      <MemberSignature Language="C#" Value="public virtual System.IdentityModel.Tokens.SecurityToken ReadToken (System.Xml.XmlReader reader, System.IdentityModel.Selectors.SecurityTokenResolver tokenResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IdentityModel.Tokens.SecurityToken ReadToken(class System.Xml.XmlReader reader, class System.IdentityModel.Selectors.SecurityTokenResolver tokenResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandler.ReadToken(System.Xml.XmlReader,System.IdentityModel.Selectors.SecurityTokenResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="tokenResolver" Type="System.IdentityModel.Selectors.SecurityTokenResolver" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Ein XmlReader am Startelement des Tokens positioniert.</param>
+        <param name="tokenResolver">Ein Resolver, der Out-of-Band- und die zwischengespeicherte Token enthält.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse deserialisiert das XML, auf die verwiesen wird, das im angegebenen XmlReader in ein Token des Typs von der abgeleiteten Klasse unter Verwendung der angegebenen tokenresolver verarbeitet.</summary>
+        <returns>Das Sicherheitstoken, das aus XML deserialisiert wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Beim Aufrufen dieser Methode mit nicht vertrauenswürdigen Daten stellt ein Sicherheitsrisiko dar. Rufen Sie diese Methode nur mit vertrauenswürdigen Daten. Weitere Informationen finden Sie unter [Sicherheitsrisiken für nicht vertrauenswürdige Daten](http://go.microsoft.com/fwlink/?LinkId=330378).  
+  
+ Die standardmäßige Implementierung ignoriert die `tokenResolver` Parameter und den Aufruf an die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ReadToken%2A?displayProperty=nameWithType> Methode.  
+  
+ Überschreiben Sie diese Methode, um die Logik, um ein Sicherheitstoken aus XML deserialisiert bereitzustellen. Wenn Sie diese Methode überschreiben, sollten Sie auch überschreiben die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A?displayProperty=nameWithType> Methode. In der Regel in abgeleiteten Klassen, wenn die Methode das Token aus dem referenzierten XML deserialisiert werden kann löst sie eine <xref:System.Xml.XmlException>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenType">
+      <MemberSignature Language="C#" Value="public abstract Type TokenType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type TokenType" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityTokenHandler.TokenType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft den Typ des Sicherheitstokens, der von dieser Instanz verarbeitet wird.</summary>
+        <value>Der Typ des Sicherheitstokens, der von dieser Instanz verarbeitet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen diese Eigenschaft in abgeleiteten Klassen überschreiben und Zurückgeben der <xref:System.Type> des Sicherheitstokens (<xref:System.IdentityModel.Tokens.SecurityToken>), die von der abgeleiteten Klasse verarbeitet wird.  
+  
+   
+  
+## Examples  
+ Der folgende Code veranschaulicht das Überschreiben der <xref:System.IdentityModel.Tokens.SecurityTokenHandler.TokenType%2A> -Eigenschaft zum Zurückgeben der <xref:System.Type> von die Sicherheitstoken, die von einem benutzerdefinierten Handler verarbeitet werden. Der Code stammt aus dem `Custom Token` Beispiel. Dieses Beispiel stellt benutzerdefinierte Klassen, die Verarbeitung von Simple Web Token (SWT) zu ermöglichen. Weitere Informationen in diesem Beispiel und weitere Beispiele für WIF und wo Sie sie herunterladen, finden Sie unter [WIF Beispiel Codeindex](~/docs/framework/security/wif-code-sample-index.md).  
+  
+ [!code-csharp[WifRcCustomToken#18](~/samples/snippets/csharp/VS_Snippets_Misc/wifrccustomtoken/cs/simplewebtoken/simplewebtokenhandler.cs#18)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceTokenValidationFailure">
+      <MemberSignature Language="C#" Value="protected void TraceTokenValidationFailure (System.IdentityModel.Tokens.SecurityToken token, string errorMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void TraceTokenValidationFailure(class System.IdentityModel.Tokens.SecurityToken token, string errorMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandler.TraceTokenValidationFailure(System.IdentityModel.Tokens.SecurityToken,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+        <Parameter Name="errorMessage" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="token">Das Sicherheitstoken, das überprüft wird.</param>
+        <param name="errorMessage">Die Meldung, in der Ablaufverfolgung zu schreiben.</param>
+        <summary>Verfolgt die Failure-Ereignis während der Validierung von Sicherheitstoken an, wenn Ablaufverfolgung aktiviert ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode sollte aufgerufen werden, aus der <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> Methode, die bei einem Überprüfungsfehler des Tokens.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceTokenValidationSuccess">
+      <MemberSignature Language="C#" Value="protected void TraceTokenValidationSuccess (System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void TraceTokenValidationSuccess(class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandler.TraceTokenValidationSuccess(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">Das Token, das überprüft wurde.</param>
+        <summary>Zeichnet die erfolgreiche Überprüfung der Sicherheitsereignis Token, wenn Ablaufverfolgung aktiviert ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode sollte aufgerufen werden, aus der <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> -Methode auf, nachdem das Token erfolgreich validiert wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateToken">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Security.Claims.ClaimsIdentity&gt; ValidateToken (System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Security.Claims.ClaimsIdentity&gt; ValidateToken(class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Security.Claims.ClaimsIdentity&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">Das Token zu überprüfen.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse überprüft das angegebene Sicherheitstoken. Das Token muss vom Typ verarbeitet von der abgeleiteten Klasse sein.</summary>
+        <returns>Die im Token enthaltenen Identitäten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig löst diese Methode eine <xref:System.NotImplementedException> Ausnahme.  
+  
+ Die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> Methode wird von der Infrastruktur, um zu überprüfen, und extrahieren die Ansprüche aus dem deserialisierten Sicherheitstoken aufgerufen. Diese Ansprüche werden zurückgegeben, in der Auflistung der <xref:System.Security.Claims.ClaimsIdentity> Objekte, die von der Methode zurückgegeben. Im Normalfall enthält diese Auflistung eine einzelne Identität.  
+  
+ Validierung enthält in abgeleiteten Klassen in der Regel überprüft das beabsichtigte Zielgruppe, die im Token für die Zielgruppe, die im angegebenen URIs angegeben die <xref:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration.AudienceRestriction%2A?displayProperty=nameWithType> Eigenschaft des Konfigurationsobjekts Tokenhandler angegeben wird, auf die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.Configuration%2A> Eigenschaft. Diese URIs werden in der Regel legen Sie in der Konfigurationsdatei unter der [ &lt;AudienceUris&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md) Element. Wenn die Zielgruppe kann nicht überprüft werden, eine <xref:System.IdentityModel.Tokens.AudienceUriValidationFailedException> Ausnahme ausgelöst werden soll.  
+  
+ Beim Verarbeiten von Token wird der Aussteller in der Regel durch Übergeben des ausstellertokens eines überprüft die <xref:System.IdentityModel.Tokens.IssuerNameRegistry.GetIssuerName%2A> Methoden für die <xref:System.IdentityModel.Tokens.IssuerNameRegistry> -Objekt, das für den Handler über konfiguriert ist die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.Configuration%2A> Eigenschaft. Der ausstellernamenregistration wird in der Regel über konfiguriert die [ &lt;IssuerNameRegistry&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md) Element in der Konfigurationsdatei. Die <xref:System.IdentityModel.Tokens.IssuerNameRegistry.GetIssuerName%2A> gibt den Namen des Ausstellers zurück. Dieser Name sollte zum Festlegen der <xref:System.Security.Claims.Claim.Issuer%2A?displayProperty=nameWithType> Eigenschaft im Token enthaltenen Ansprüche. Wenn der ausstellernamenregistration keinen Eintrag für die ausstellertokens <xref:System.IdentityModel.Tokens.IssuerNameRegistry.GetIssuerName%2A> gibt `null`. In diesem Fall eine <xref:System.IdentityModel.Tokens.SecurityTokenException> wird in der Regel in abgeleiteten Klassen ausgelöst, aber dieses Verhalten ist bis zu der Designer der-Klasse.  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt eine Überschreibung der <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> Methode nach einem Security token Handler, der simple webtoken (SWT) verarbeitet. Der Code stammt aus dem `CustomToken` Beispiel. Weitere Informationen in diesem Beispiel und weitere Beispiele für WIF und wo Sie sie herunterladen, finden Sie unter [WIF Beispiel Codeindex](~/docs/framework/security/wif-code-sample-index.md).  
+  
+ [!code-csharp[WifRcCustomToken#9](~/samples/snippets/csharp/VS_Snippets_Misc/wifrccustomtoken/cs/simplewebtoken/simplewebtokenhandler.cs#9)]  
+  
+ Der folgende code zeigt `CreateClaims` -Methode, die aufgerufen wird, von der Überschreibung von der <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> Methode im vorherigen Beispiel. Diese Methode gibt ein <xref:System.Security.Claims.ClaimsIdentity> -Objekt, das aus der Ansprüche im Token erstellt wird. Der Code stammt aus dem `CustomToken` Beispiel. Weitere Informationen in diesem Beispiel und weitere Beispiele für WIF und wo Sie sie herunterladen, finden Sie unter [WIF Beispiel Codeindex](~/docs/framework/security/wif-code-sample-index.md).  
+  
+ [!code-csharp[WifRcCustomToken#15](~/samples/snippets/csharp/VS_Snippets_Misc/wifrccustomtoken/cs/simplewebtoken/simplewebtokenhandler.cs#15)]  
+  
+ Der folgende code zeigt `ValidateSignature` -Methode, die aufgerufen wird, von der Überschreibung von der <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> Methode im simple Web token Handler. Diese Methode überprüft die Signatur im Token mit den konfigurierten <xref:System.IdentityModel.Tokens.IssuerTokenResolver>. Der Code stammt aus dem `CustomToken` Beispiel. Weitere Informationen in diesem Beispiel und weitere Beispiele für WIF und wo Sie sie herunterladen, finden Sie unter [WIF Beispiel Codeindex](~/docs/framework/security/wif-code-sample-index.md).  
+  
+ [!code-csharp[WifRcCustomToken#12](~/samples/snippets/csharp/VS_Snippets_Misc/wifrccustomtoken/cs/simplewebtoken/simplewebtokenhandler.cs#12)]  
+[!code-csharp[WifRcCustomToken#11](~/samples/snippets/csharp/VS_Snippets_Misc/wifrccustomtoken/cs/simplewebtoken/simplewebtokenhandler.cs#11)]  
+  
+ Der folgende code zeigt `ValidateAudience` -Methode, die aufgerufen wird, von der Überschreibung von der <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> Methode im simple Web token Handler. Diese Methode überprüft, ob die Zielgruppe enthalten, die im Token für die Zielgruppe URIs, die in der Konfiguration angegeben wurden. Der Code stammt aus dem `CustomToken` Beispiel. Weitere Informationen in diesem Beispiel und weitere Beispiele für WIF und wo Sie sie herunterladen, finden Sie unter [WIF Beispiel Codeindex](~/docs/framework/security/wif-code-sample-index.md).  
+  
+ [!code-csharp[WifRcCustomToken#13](~/samples/snippets/csharp/VS_Snippets_Misc/wifrccustomtoken/cs/simplewebtoken/simplewebtokenhandler.cs#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteKeyIdentifierClause">
+      <MemberSignature Language="C#" Value="public virtual void WriteKeyIdentifierClause (System.Xml.XmlWriter writer, System.IdentityModel.Tokens.SecurityKeyIdentifierClause securityKeyIdentifierClause);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteKeyIdentifierClause(class System.Xml.XmlWriter writer, class System.IdentityModel.Tokens.SecurityKeyIdentifierClause securityKeyIdentifierClause) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandler.WriteKeyIdentifierClause(System.Xml.XmlWriter,System.IdentityModel.Tokens.SecurityKeyIdentifierClause)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="securityKeyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der XML-Writer.</param>
+        <param name="securityKeyIdentifierClause">Die schlüsselbezeichnerklausel zu serialisieren.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse wird die angegebene schlüsselbezeichnerklausel in XML serialisiert. Die schlüsselbezeichnerklausel muss des Typs von der abgeleiteten Klasse unterstützt werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig löst diese Methode eine <xref:System.NotImplementedException> Ausnahme.  
+  
+ Überschreiben Sie diese Methode, um die Logik, um eine schlüsselbezeichnerklausel zu XML-Serialisierung bereitstellen. Wenn Sie diese Methode überschreiben, sollten Sie auch überschreiben die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanWriteKeyIdentifierClause%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteToken">
+      <MemberSignature Language="C#" Value="public virtual string WriteToken (System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string WriteToken(class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandler.WriteToken(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">Das zu serialisierende Token.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse serialisiert das angegebene Sicherheitstoken in eine Zeichenfolge. Das Token muss vom Typ verarbeitet von der abgeleiteten Klasse sein.</summary>
+        <returns>Das serialisierte Token.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig löst diese Methode eine <xref:System.NotImplementedException> Ausnahme.  
+  
+ Überschreiben Sie diese Methode, um die Logik, um ein Sicherheitstoken für XML-Serialisierung bereitstellen. Wenn Sie diese Methode überschreiben, sollten Sie auch überschreiben die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanWriteToken%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteToken">
+      <MemberSignature Language="C#" Value="public virtual void WriteToken (System.Xml.XmlWriter writer, System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteToken(class System.Xml.XmlWriter writer, class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityTokenHandler.WriteToken(System.Xml.XmlWriter,System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der XML-Writer.</param>
+        <param name="token">Das zu serialisierende Token.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse wird das angegebene Sicherheitstoken in XML serialisiert. Das Token muss vom Typ verarbeitet von der abgeleiteten Klasse sein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig löst diese Methode eine <xref:System.NotImplementedException> Ausnahme.  
+  
+ Überschreiben Sie diese Methode, um die Logik, um ein Sicherheitstoken für XML-Serialisierung bereitstellen. Wenn Sie diese Methode überschreiben, sollten Sie auch überschreiben die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanWriteToken%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Der folgende Code veranschaulicht das Überschreiben der <xref:System.IdentityModel.Tokens.SecurityTokenHandler.WriteToken%2A> Methode, um ein benutzerdefiniertes Token zu serialisieren. Der Code stammt aus dem `Custom Token` Beispiel. Dieses Beispiel stellt benutzerdefinierte Klassen, die Verarbeitung von Simple Web Token (SWT) zu ermöglichen. Weitere Informationen in diesem Beispiel und weitere Beispiele für WIF und wo Sie sie herunterladen, finden Sie unter [WIF Beispiel Codeindex](~/docs/framework/security/wif-code-sample-index.md).  
+  
+ [!code-csharp[WifRcCustomToken#10](~/samples/snippets/csharp/VS_Snippets_Misc/wifrccustomtoken/cs/simplewebtoken/simplewebtokenhandler.cs#10)]  
+[!code-csharp[WifRcCustomToken#11](~/samples/snippets/csharp/VS_Snippets_Misc/wifrccustomtoken/cs/simplewebtoken/simplewebtokenhandler.cs#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

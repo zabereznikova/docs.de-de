@@ -1,0 +1,77 @@
+<Type Name="ArgumentDirection" FullName="System.Activities.ArgumentDirection">
+  <TypeSignature Language="C#" Value="public enum ArgumentDirection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ArgumentDirection extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.ArgumentDirection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Richtung des Datenflusses für ein <see cref="T:System.Activities.Argument" /> an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ In diesem Beispiel wird ein <xref:System.Activities.InArgument%601> des Typs <xref:System.String> mit der <xref:System.Activities.Argument.Create%2A>-Methode der <xref:System.Activities.Argument>-Klasse erstellt.  
+  
+```csharp  
+Argument a = Argument.Create(typeof(string), ArgumentDirection.In);  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="In">
+      <MemberSignature Language="C#" Value="In" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Activities.ArgumentDirection In = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.ArgumentDirection.In" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.ArgumentDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein <see cref="T:System.Activities.Argument" />, das den Fluss der Daten in einen Workflow oder eine Aktivität darstellt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InOut">
+      <MemberSignature Language="C#" Value="InOut" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Activities.ArgumentDirection InOut = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.ArgumentDirection.InOut" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.ArgumentDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein <see cref="T:System.Activities.Argument" />, das den Fluss der Daten in einen Workflow oder eine Aktivität und wieder heraus darstellt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Out">
+      <MemberSignature Language="C#" Value="Out" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Activities.ArgumentDirection Out = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.ArgumentDirection.Out" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.ArgumentDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein <see cref="T:System.Activities.Argument" />, das den Fluss der Daten aus einem Workflow oder einer Aktivität darstellt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

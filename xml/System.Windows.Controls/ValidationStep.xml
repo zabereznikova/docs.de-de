@@ -1,0 +1,98 @@
+<Type Name="ValidationStep" FullName="System.Windows.Controls.ValidationStep">
+  <TypeSignature Language="C#" Value="public enum ValidationStep" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ValidationStep extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.ValidationStep" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wann eine <see cref="T:System.Windows.Controls.ValidationRule" /> ausgeführt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird eine <xref:System.Windows.Controls.ValidationRule> mit dem Namen `ValidateDateAndPrice`. Die <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> für diese Regel auf ConvertedProposedValue festgelegt ist, sodass bei der Ausführung, die <xref:System.Windows.Controls.ValidationRule.Validate%2A> Methode hat Zugriff auf die Werte des Typs für die Source-Eigenschaft.  
+  
+ Wenn die `PriceIsAPositiveNumber` und `FutureDateRule` Regeln ausgeführt, die Werte in den einzelnen <xref:System.Windows.Controls.ValidationRule.Validate%2A> Methode sind Zeichenfolgen, da der Standardwert von <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> RawProposedValue ist. Führen Sie daher die Regeln auf, bevor Sie die Werte in ihren entsprechenden Typen konvertiert werden.  
+  
+ [!code-xaml[BindingGroupSnippets#WindowLayout](~/samples/snippets/csharp/VS_Snippets_Wpf/BindingGroupSnippets/CSharp/Window1.xaml#windowlayout)]  
+  
+ Das folgende Beispiel zeigt die `ValidateDateAndPrice` <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>. In der <xref:System.Windows.Controls.ValidationRule.Validate%2A> -Methode, die `Price` -Eigenschaft ist vom Typ <xref:System.Double> und `OfferExpires` -Eigenschaft ist vom Typ <xref:System.DateTime>. Die Zeichenfolgen wurden in ihren entsprechenden Typen konvertiert, nach der Dauer der <xref:System.Windows.Controls.ValidationRule> ausgeführt wird.  
+  
+ [!code-csharp[BindingGroupSnippets#ValidateObject](~/samples/snippets/csharp/VS_Snippets_Wpf/BindingGroupSnippets/CSharp/Data.cs#validateobject)]
+ [!code-vb[BindingGroupSnippets#ValidateObject](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindingGroupSnippets/visualbasic/data.vb#validateobject)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CommittedValue">
+      <MemberSignature Language="C#" Value="CommittedValue" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.ValidationStep CommittedValue = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ValidationStep.CommittedValue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ValidationStep</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Führt die <see cref="T:System.Windows.Controls.ValidationRule" /> nachdem der Wert an die Quelle ein Commit ausgeführt wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertedProposedValue">
+      <MemberSignature Language="C#" Value="ConvertedProposedValue" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.ValidationStep ConvertedProposedValue = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ValidationStep.ConvertedProposedValue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ValidationStep</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Führt die <see cref="T:System.Windows.Controls.ValidationRule" /> nach der Konvertierung ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RawProposedValue">
+      <MemberSignature Language="C#" Value="RawProposedValue" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.ValidationStep RawProposedValue = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ValidationStep.RawProposedValue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ValidationStep</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Führt die <see cref="T:System.Windows.Controls.ValidationRule" /> , bevor es Konvertierung erfolgt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdatedValue">
+      <MemberSignature Language="C#" Value="UpdatedValue" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.ValidationStep UpdatedValue = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ValidationStep.UpdatedValue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ValidationStep</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Führt die <see cref="T:System.Windows.Controls.ValidationRule" /> nach der Aktualisierung der Quelle.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

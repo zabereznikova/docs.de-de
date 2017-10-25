@@ -1,0 +1,112 @@
+<Type Name="ToolZoneDesigner" FullName="System.Web.UI.Design.WebControls.WebParts.ToolZoneDesigner">
+  <TypeSignature Language="C#" Value="public class ToolZoneDesigner : System.Web.UI.Design.WebControls.WebParts.WebZoneDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ToolZoneDesigner extends System.Web.UI.Design.WebControls.WebParts.WebZoneDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.WebParts.ToolZoneDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.WebControls.WebParts.WebZoneDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Entwurfszeitunterstützung in einem visuellen Designer für eine Webparts-Zone bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einem visuellen Designer beim Wechsel aus Quelle zur Entwurfsansicht Markup-Quellcode, beschreibt die <xref:System.Web.UI.WebControls.WebParts.ToolZone> Steuerelement wird analysiert und eine Entwurfszeitversion des Steuerelements wird erstellt, auf der Entwurfsoberfläche angezeigt. Wenn Sie zurück zur Quellansicht wechseln, wird das Steuerelement zur Entwurfszeit auf den Markupquellcode beibehalten und in das Markup für die Webseite bearbeitet.  
+  
+ Die Eigenschaften der <xref:System.Web.UI.Design.WebControls.WebParts.ToolZoneDesigner> Klasse bieten die folgenden Funktionen:  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.WebParts.ToolZoneDesigner.ActionLists%2A> -Eigenschaft gibt ein <xref:System.ComponentModel.Design.DesignerActionListCollection> Objekt, das alle Elemente in einen Smarttagbereich in der Regel enthält.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.WebParts.ToolZoneDesigner.ViewInBrowseMode%2A> Eigenschaft gibt an, ob die Zone angezeigt wird, wenn der Benutzer im Durchsuchenmodus ist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolZoneDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WebParts.ToolZoneDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.WebControls.WebParts.ToolZoneDesigner" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActionLists">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.Design.DesignerActionListCollection ActionLists { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.DesignerActionListCollection ActionLists" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.WebParts.ToolZoneDesigner.ActionLists" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerActionListCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktionslistenauflistung für den Designer Zone ab.</summary>
+        <value>Die diesem Designer zugeordnete <see cref="T:System.ComponentModel.Design.DesignerActionListCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.WebParts.ToolZoneDesigner.ActionLists%2A> Eigenschaft enthält eine <xref:System.ComponentModel.Design.DesignerActionListCollection> Auflistung, die die Aggregation aller Elemente in einen Smarttagbereich darstellt. Die <xref:System.ComponentModel.Design.DesignerActionListCollection> Klasse enthält 0 (null) oder mehrere <xref:System.ComponentModel.Design.DesignerActionList> Objekte. Jede dieser Listen enthält null oder mehr Objekte, die abgeleitet sind und Darstellen von der tatsächlichen Elemente im Bereich der <xref:System.ComponentModel.Design.DesignerActionItem> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WebParts.ToolZoneDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die zu initialisierende <see cref="T:System.ComponentModel.IComponent" />.</param>
+        <summary>Bereitet den Designer zum Anzeigen, bearbeiten und Entwerfen des Webparts-Zone.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewInBrowseMode">
+      <MemberSignature Language="C#" Value="protected bool ViewInBrowseMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ViewInBrowseMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.WebParts.ToolZoneDesigner.ViewInBrowseMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Webparts-Zone angezeigt wird, wenn der Benutzer im Durchsuchenmodus angezeigt wird.</summary>
+        <value>
+          <see langword="true" />Wenn die Webparts-Zone angezeigt wird, wenn der Benutzer in der Anzeige der Durchsuchenmodus ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

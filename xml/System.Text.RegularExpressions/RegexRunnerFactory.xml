@@ -1,0 +1,101 @@
+<Type Name="RegexRunnerFactory" FullName="System.Text.RegularExpressions.RegexRunnerFactory">
+  <TypeSignature Language="C#" Value="public abstract class RegexRunnerFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit RegexRunnerFactory extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Text.RegularExpressions.RegexRunnerFactory" />
+  <AssemblyInfo>
+    <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Erstellt eine <see cref="T:System.Text.RegularExpressions.RegexRunner" /> Klasse für ein kompilierter regulärer Ausdruck.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Text.RegularExpressions.RegexRunner> -Objekt ausgeführt wird, einen kompilierten regulären Ausdruck. Ein regulärer Ausdruck, der auf eine Assembly kompiliert wird, wird ein Typ in dieser Assembly, und ein Objekt dieses Typs wird i. d. r. über Reflektion ermöglicht. Allerdings ist das Erstellen eines Objekts durch Reflektion ein aufwendiger Vorgang aus. Die <xref:System.Text.RegularExpressions.RegexRunnerFactory> Klasse verbessert die Leistung von .NET Framework, indem die <xref:System.Text.RegularExpressions.RegexRunnerFactory.CreateInstance%2A> -Methode, die erstellt eine <xref:System.Text.RegularExpressions.RegexRunner> -Objekt für ein bestimmten regulären Ausdruck kompilierten.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected RegexRunnerFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.RegularExpressions.RegexRunnerFactory.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Text.RegularExpressions.RegexRunnerFactory" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstance">
+      <MemberSignature Language="C#" Value="protected abstract System.Text.RegularExpressions.RegexRunner CreateInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.Text.RegularExpressions.RegexRunner CreateInstance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.RegularExpressions.RegexRunnerFactory.CreateInstance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.RegularExpressions.RegexRunner</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt beim Überschreiben in einer abgeleiteten Klasse eine <see cref="T:System.Text.RegularExpressions.RegexRunner" /> -Objekt für ein bestimmten regulären Ausdruck kompilierten.</summary>
+        <returns>Ein <see cref="T:System.Text.RegularExpressions.RegexRunner" /> Objekt zur Ausführung eines bestimmtes entworfen kompilierten regulären Ausdrucks.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

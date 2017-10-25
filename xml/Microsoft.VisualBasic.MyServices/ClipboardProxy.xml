@@ -1,0 +1,1214 @@
+<Type Name="ClipboardProxy" FullName="Microsoft.VisualBasic.MyServices.ClipboardProxy">
+  <TypeSignature Language="C#" Value="public class ClipboardProxy" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi ClipboardProxy extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.MyServices.ClipboardProxy" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Methoden zur Bearbeitung der Zwischenablage bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Elemente in die Zwischenablage verschoben oder kopiert wird beibehalten, auch nachdem die Anwendung heruntergefahren wird.  
+  
+ Daten in der Zwischenablage können in beliebiges Datenformat, das auch als Zwischenablageformat bezeichnet werden. Eine Liste der vordefinierten Formate für die Verwendung mit der Zwischenablage, finden Sie unter <xref:System.Windows.Forms.DataFormats>. Wenn ein Element in die Zwischenablage kopiert oder verschoben wird, werden Elemente in anderen Formaten gelöscht. Um die anderen Formate, die beibehalten werden, verwenden Sie <xref:Microsoft.VisualBasic.VariantType.DataObject>, die kopiert den gesamten Inhalt auf der aktuellen Zwischenablage, einschließlich der Elemente, die von anderen Anwendungen eingefügt. Hinzufügen von Daten zur Zwischenablage in verschiedenen Formaten, die Möglichkeit zu maximieren, dass eine Zielanwendung, dessen formatanforderungen, die Sie möglicherweise nicht bekannt, die Daten erfolgreich abgerufen werden.  
+  
+ Da alle Windows-Anwendungen die Systemzwischenablage gemeinsam nutzen, können den Inhalt ändern, beim Wechsel zu einer anderen Anwendung.  
+  
+ Eine Klasse muss dafür in die Zwischenablage zu versetzen serialisierbar sein. Finden Sie unter [Serialisierung](http://msdn.microsoft.com/library/f7570c09-7db5-44f2-983a-e8859caeb0d5) für Weitere Informationen.  
+  
+ Wenn Remotezugriff, auf die Zwischenablage ein <xref:System.Threading.ThreadStateException> ausgelöst wird, es sei denn, der beim Zugriff auf den Thread im STA (Singlethreaded Apartment) Modus ausgeführt wird. Um dieses Problem zu beheben, legen die `ThreadApartmentState` auf `STA`. Weitere Informationen finden Sie unter <xref:System.STAThreadAttribute>.  
+  
+ Weitere Informationen finden Sie unter [Speichern von Daten in der Zwischenablage und Lesen aus der Zwischenablage](~/docs/visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md).  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel liest Text aus der Zwischenablage in die Zeichenfolge `textOnClipboard`.  
+  
+ [!code-vb[VbVbcnMyClipboard#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#6)]  
+  
+ In diesem Beispiel schlägt fehl, wenn kein Text vorhanden, in die Zwischenablage ist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht die Zwischenablage.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Permissions.UIPermission> Klasse steuert den Zugriff auf die Zwischenablage, und die zugeordnete <xref:System.Security.Permissions.UIPermissionClipboard> Enumerationswert gibt die Zugriffsebene an. Weitere Informationen finden Sie unter [zusätzliche Überlegungen zur Sicherheit in Windows Forms](~/docs/framework/winforms/additional-security-considerations-in-windows-forms.md).  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel werden die Zwischenablage.  
+  
+```  
+My.Computer.Clipboard.Clear()  
+```  
+  
+ Dies entfernt alle Daten aus der Zwischenablage ein.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />Berechtigung ist erforderlich, um der Zwischenablage des Systems zugreifen.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsAudio">
+      <MemberSignature Language="C#" Value="public bool ContainsAudio ();" />
+      <MemberSignature Language="ILAsm" Value=".method public instance bool ContainsAudio() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsAudio" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob die Zwischenablage Audiodaten enthält.</summary>
+        <returns>
+          <see langword="True" />Wenn in der Zwischenablage; Audiodaten gespeichert ist andernfalls <see langword="False" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird bestimmt, ob die Zwischenablage Audiodaten enthält, und das Ergebnis wird angezeigt.  
+  
+ [!code-vb[VbRefClipbd#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRefClipbd/VB/Class1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />Berechtigung ist erforderlich, um der Zwischenablage des Systems zugreifen.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsData">
+      <MemberSignature Language="C#" Value="public bool ContainsData (string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance bool ContainsData(string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsData(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="format">
+          <see langword="String" />. Name des benutzerdefinierten Formats, das überprüft werden soll. Erforderlich.</param>
+        <summary>Gibt an, ob die Zwischenablage Daten im angegebenen benutzerdefinierten Format enthält.</summary>
+        <returns>
+          <see langword="True" />Wenn Daten in die angegebenen benutzerdefinierten Format in die Zwischenablage; gespeichert werden andernfalls <see langword="False" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie benutzerdefinierte formatierte Daten in der Zwischenablage platziert haben, können mit dieser Methode überprüfen Sie die Zwischenablage, um Daten in diesem Format.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird überprüft, ob Daten im benutzerdefinierten Format `specialFormat`.  
+  
+ [!code-vb[VbRefClipbd#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRefClipbd/VB/Class1.vb#6)]  
+  
+ Ersetzen Sie `specialFormat` durch den Namen der das benutzerdefinierte Format, das Sie überprüfen möchten.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />Berechtigung ist erforderlich, um der Zwischenablage des Systems zugreifen.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsFileDropList">
+      <MemberSignature Language="C#" Value="public bool ContainsFileDropList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public instance bool ContainsFileDropList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsFileDropList" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see langword="Boolean" /> , der angibt, ob die Zwischenablage eine Dropdownliste Datei enthält.</summary>
+        <returns>
+          <see langword="True" />Liste wird in der Zwischenablage gespeichert, wenn eine Datei löschen; andernfalls <see langword="False" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Datei Dropdown-Liste ist eine Auflistung von Zeichenfolgen, die Pfadinformationen für Dateien enthält.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird bestimmt, ob eine Datei Dropdown-Liste in die Zwischenablage und fügt die Liste, um die `ListBox.lstFiles` , wenn sie vorhanden sind.  
+  
+ [!code-vb[VbRefClipbd#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRefClipbd/VB/Class1.vb#12)]  
+  
+ Mit diesem Code wird eine Ausnahme erstellen, ist keine `ListBox` mit dem Namen `lstFiles`.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />Berechtigung ist erforderlich, um der Zwischenablage des Systems zugreifen.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsImage">
+      <MemberSignature Language="C#" Value="public bool ContainsImage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public instance bool ContainsImage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsImage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see langword="Boolean" /> , der angibt, ob ein Bild in der Zwischenablage gespeichert ist.</summary>
+        <returns>
+          <see langword="True" />Wenn ein Bild in der Zwischenablage; gespeichert ist andernfalls <see langword="False" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird überprüft, wenn ein Bild in der Zwischenablage vorliegt, und wenn Ja, ruft das Bild ab und fügt es `PictureBox1`.  
+  
+ [!code-vb[VbRefClipbd#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRefClipbd/VB/Class1.vb#8)]  
+  
+ In diesem Beispiel hängt das Vorhandensein einer `PictureBox` mit dem Namen `PictureBox1`.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />Berechtigung ist erforderlich, um der Zwischenablage des Systems zugreifen.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsText">
+      <MemberSignature Language="C#" Value="public bool ContainsText ();" />
+      <MemberSignature Language="ILAsm" Value=".method public instance bool ContainsText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob der Text in der Zwischenablage vorhanden ist.</summary>
+        <returns>
+          <see langword="True" />Wenn die Zwischenablage Text enthält. andernfalls <see langword="False" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mögliche Formate sind <xref:System.Windows.Forms.TextDataFormat.CommaSeparatedValue>, <xref:System.Windows.Forms.TextDataFormat.Html>, <xref:System.Windows.Forms.TextDataFormat.Rtf> und <xref:System.Windows.Forms.TextDataFormat.UnicodeText>.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird bestimmt, ob HTML-Text in die Zwischenablage und Lesevorgänge aus der Zwischenablage gespeichert ist, wenn dies der Fall ist.  
+  
+ [!code-vb[VbRefClipbd#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRefClipbd/VB/Class1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />Berechtigung ist erforderlich, um der Zwischenablage des Systems zugreifen.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsText">
+      <MemberSignature Language="C#" Value="public bool ContainsText (System.Windows.Forms.TextDataFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance bool ContainsText(valuetype System.Windows.Forms.TextDataFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsText(System.Windows.Forms.TextDataFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.Windows.Forms.TextDataFormat" />
+      </Parameters>
+      <Docs>
+        <param name="format">
+          <see cref="T:System.Windows.Forms.TextDataFormat" />. Wenn angegeben, gibt welche Textformat auf überprüft werden soll. Erforderlich.</param>
+        <summary>Bestimmt, ob der Text in der Zwischenablage vorhanden ist.</summary>
+        <returns>
+          <see langword="True" />Wenn die Zwischenablage Text enthält. andernfalls <see langword="False" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mögliche Formate sind <xref:System.Windows.Forms.TextDataFormat.CommaSeparatedValue>, <xref:System.Windows.Forms.TextDataFormat.Html>, <xref:System.Windows.Forms.TextDataFormat.Rtf> und <xref:System.Windows.Forms.TextDataFormat.UnicodeText>.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird bestimmt, ob HTML-Text in die Zwischenablage und Lesevorgänge aus der Zwischenablage gespeichert ist, wenn dies der Fall ist.  
+  
+ [!code-vb[VbRefClipbd#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRefClipbd/VB/Class1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />Berechtigung ist erforderlich, um der Zwischenablage des Systems zugreifen.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAudioStream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream GetAudioStream ();" />
+      <MemberSignature Language="ILAsm" Value=".method public instance class System.IO.Stream GetAudioStream() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetAudioStream" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Audiostream aus der Zwischenablage ab.</summary>
+        <returns>Ein <see cref="T:System.IO.Stream" /> Objekt mit audio Daten oder <see langword="Nothing" /> , wenn die Zwischenablage keine Audiodaten enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel ruft einen Audiostream aus der Zwischenablage und wiedergegeben.  
+  
+ [!code-vb[VbRefClipbd#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRefClipbd/VB/Class1.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />Berechtigung ist erforderlich, um der Zwischenablage des Systems zugreifen.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetData">
+      <MemberSignature Language="C#" Value="public object GetData (string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance object GetData(string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetData(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="format">
+          <see langword="String" />. Der Name des Datenformats. Erforderlich.</param>
+        <summary>Ruft Daten in einem benutzerdefinierten Format aus der Zwischenablage ab.</summary>
+        <returns>Ein <see langword="Object" /> , die Daten in der Zwischenablage darstellt oder <see langword="Nothing" /> , wenn die Zwischenablage keine Daten enthält, die im angegebenen Format oder in diesem Format konvertiert werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ Dieses Beispiel liest Daten im Format `specialformat` aus der Zwischenablage und schreibt Sie in der Datei.  
+  
+ [!code-vb[VbRefClipbd#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRefClipbd/VB/Class1.vb#7)]  
+  
+ Ersetzen Sie `specialformat` durch das benutzerdefinierte Datenformat Sie abrufen möchten.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />Berechtigung ist erforderlich, um der Zwischenablage des Systems zugreifen.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataObject">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.IDataObject GetDataObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public instance class System.Windows.Forms.IDataObject GetDataObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetDataObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.IDataObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft Daten aus der Zwischenablage als ein <see cref="T:System.Windows.Forms.IDataObject" />.</summary>
+        <returns>Ein <see cref="T:System.Windows.Forms.IDataObject" /> Objekt, das die Daten aktuell in der Zwischenablage oder <see langword="Nothing" /> Wenn es keine Daten in die Zwischenablage.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist ein erweiterter Member. Es werden keine in IntelliSense angezeigt, es sei denn, Sie klicken Sie auf die **alle** Registerkarte.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ Dieses Beispiel liest Daten aus der Zwischenablage in Form einer <xref:System.Windows.Forms.IDataObject> und schreibt ihn dann in eine Datei.  
+  
+ [!code-vb[VbRefClipbd#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRefClipbd/VB/Class1.vb#1)]  
+  
+ Ersetzen Sie `C:\mylogfile` durch den Namen der Datei geschrieben werden soll.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />Berechtigung ist erforderlich, um der Zwischenablage des Systems zugreifen.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFileDropList">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.StringCollection GetFileDropList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public instance class System.Collections.Specialized.StringCollection GetFileDropList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetFileDropList" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.StringCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Auflistung von Zeichenfolgen, die Dateinamen aus der Zwischenablage ab.</summary>
+        <returns>Ein <see cref="T:System.Collections.Specialized.StringCollection" /> mit Dateinamen oder <see langword="Nothing" /> , wenn die Zwischenablage keine Daten enthält, die in der <see cref="F:System.Windows.Forms.DataFormats.FileDrop" /> formatieren oder in diesem Format konvertiert werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist nur für nicht-Server-Clientanwendungen verfügbar sind.  
+  
+ Eine Datei Dropdown-Liste ist eine Auflistung von Zeichenfolgen, die Pfadinformationen für Dateien enthält.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird bestimmt, ob eine Datei Dropdown-Liste in die Zwischenablage und fügt die Liste, um die `ListBox.lstFiles` , wenn sie vorhanden sind.  
+  
+ [!code-vb[VbRefClipbd#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRefClipbd/VB/Class1.vb#9)]  
+  
+ Dieser Code erstellt eine Ausnahme aus, wenn es ist keine `ListBox` mit dem Namen `lstFiles`.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />Berechtigung ist erforderlich, um der Zwischenablage des Systems zugreifen.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetImage">
+      <MemberSignature Language="C#" Value="public System.Drawing.Image GetImage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public instance class System.Drawing.Image GetImage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetImage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft ein Bild aus der Zwischenablage ab.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Image" /> , das die Bilddaten Zwischenablage darstellt oder <see langword="Nothing" /> , wenn die Zwischenablage keine Daten enthält, die in der <see cref="F:System.Windows.Forms.DataFormats.Bitmap" /> formatieren oder in diesem Format konvertiert werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird überprüft, ob ein Bild in der Zwischenablage ist, bevor es abgerufen und `PictureBox1` zugewiesen wird.  
+  
+ [!code-vb[VbRefClipbd#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRefClipbd/VB/Class1.vb#4)]  
+  
+ In diesem Beispiel einwandfrei funktioniert, es muss ein `PictureBox` mit dem Namen `PictureBox1` auf dem Formular.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />Berechtigung ist erforderlich, um der Zwischenablage des Systems zugreifen.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetText">
+      <MemberSignature Language="C#" Value="public string GetText ();" />
+      <MemberSignature Language="ILAsm" Value=".method public instance string GetText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Text aus der Zwischenablage ab.</summary>
+        <returns>Die Textdaten für die Zwischenablage oder eine leere Zeichenfolge, enthält die Zwischenablage keine Daten in die <see cref="F:System.Windows.Forms.DataFormats.Text" /> oder <see cref="F:System.Windows.Forms.TextDataFormat.UnicodeText" /> Format, je nach Betriebssystem.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mögliche Formate sind <xref:System.Windows.Forms.TextDataFormat.CommaSeparatedValue>, <xref:System.Windows.Forms.TextDataFormat.Html>, <xref:System.Windows.Forms.TextDataFormat.Rtf> und <xref:System.Windows.Forms.TextDataFormat.UnicodeText>.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel liest Text aus der Zwischenablage in die Zeichenfolge `textOnClipboard`.  
+  
+ [!code-vb[VbVbcnMyClipboard#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#6)]  
+  
+ In diesem Beispiel schlägt fehl, wenn kein Text vorhanden, in die Zwischenablage ist.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />Berechtigung ist erforderlich, um der Zwischenablage des Systems zugreifen.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetText">
+      <MemberSignature Language="C#" Value="public string GetText (System.Windows.Forms.TextDataFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance string GetText(valuetype System.Windows.Forms.TextDataFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetText(System.Windows.Forms.TextDataFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.Windows.Forms.TextDataFormat" />
+      </Parameters>
+      <Docs>
+        <param name="format">
+          <see cref="T:System.Windows.Forms.TextDataFormat" />. Wenn angegeben, identifiziert, in welchem Textformat abgerufen werden soll. Der Standardwert ist <see cref="F:System.Windows.Forms.TextDataFormat.CommaSeparatedValue" />. Erforderlich.</param>
+        <summary>Ruft den Text aus der Zwischenablage ab.</summary>
+        <returns>Die Textdaten für die Zwischenablage oder eine leere Zeichenfolge, wenn die Zwischenablage keine Daten im angegebenen Format enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mögliche Formate sind <xref:System.Windows.Forms.TextDataFormat.CommaSeparatedValue>, <xref:System.Windows.Forms.TextDataFormat.Html>, <xref:System.Windows.Forms.TextDataFormat.Rtf> und <xref:System.Windows.Forms.TextDataFormat.UnicodeText>.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel liest Text aus der Zwischenablage in die Zeichenfolge `textOnClipboard`.  
+  
+ [!code-vb[VbVbcnMyClipboard#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#6)]  
+  
+ In diesem Beispiel schlägt fehl, wenn kein Text vorhanden, in die Zwischenablage ist.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />Berechtigung ist erforderlich, um der Zwischenablage des Systems zugreifen.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAudio">
+      <MemberSignature Language="C#" Value="public void SetAudio (byte[] audioBytes);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void SetAudio(unsigned int8[] audioBytes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetAudio(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="audioBytes" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="audioBytes">
+          <see langword="Byte" />-Array. Audio-Daten in die Zwischenablage geschrieben werden sollen. Erforderlich.</param>
+        <summary>Schreibt Audiodaten in die Zwischenablage.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Da auf die Zwischenablage von anderen Benutzern zugegriffen werden kann, verwenden Sie sie nicht, um sensible Informationen wie Passwörter oder vertrauliche Daten zu speichern.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird das Bytearray `musicReader` erstellt, die Datei `cool.wav` darin gelesen und anschließend in die Zwischenablage geschrieben.  
+  
+ [!code-vb[VbRefClipbd#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRefClipbd/VB/Class1.vb#2)]  
+  
+ Ersetzen Sie `cool.wav` mit dem Namen und Pfad der Datei, die Sie lesen möchten.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />Berechtigung ist erforderlich, um der Zwischenablage des Systems zugreifen.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAudio">
+      <MemberSignature Language="C#" Value="public void SetAudio (System.IO.Stream audioStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void SetAudio(class System.IO.Stream audioStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetAudio(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="audioStream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="audioStream">
+          <see cref="T:System.IO.Stream" />Audio-Daten in die Zwischenablage geschrieben werden sollen. Erforderlich.</param>
+        <summary>Schreibt Audiodaten in die Zwischenablage.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Da auf die Zwischenablage von anderen Benutzern zugegriffen werden kann, verwenden Sie sie nicht, um sensible Informationen wie Passwörter oder vertrauliche Daten zu speichern.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird das Bytearray `musicReader` erstellt, die Datei `cool.wav` darin gelesen und anschließend in die Zwischenablage geschrieben.  
+  
+ [!code-vb[VbRefClipbd#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRefClipbd/VB/Class1.vb#2)]  
+  
+ Ersetzen Sie `cool.wav` mit dem Namen und Pfad der Datei, die Sie lesen möchten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetData">
+      <MemberSignature Language="C#" Value="public void SetData (string format, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void SetData(string format, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetData(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="format">
+          <see langword="String" />. Format der Daten. Erforderlich.</param>
+        <param name="data">
+          <see langword="Object" />. Das Datenobjekt in die Zwischenablage geschrieben werden sollen. Erforderlich.</param>
+        <summary>Schreibt Daten in einem benutzerdefinierten Format in die Zwischenablage.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Da auf die Zwischenablage von anderen Benutzern zugegriffen werden kann, verwenden Sie sie nicht, um sensible Informationen wie Passwörter oder vertrauliche Daten zu speichern.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird das `DataObject.dataChunk` im benutzerdefiniertem Format `specialFormat` in die Zwischenablage geschrieben.  
+  
+ [!code-vb[VbVbcnMyClipboard#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#7)]  
+  
+ In diesem Beispiel hängt das Vorhandensein des benutzerdefinierten Datenformats `specialFormat`.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />Berechtigung ist erforderlich, um der Zwischenablage des Systems zugreifen.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDataObject">
+      <MemberSignature Language="C#" Value="public void SetDataObject (System.Windows.Forms.DataObject data);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void SetDataObject(class System.Windows.Forms.DataObject data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetDataObject(System.Windows.Forms.DataObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Windows.Forms.DataObject" />
+      </Parameters>
+      <Docs>
+        <param name="data">
+          <see cref="T:System.Windows.Forms.DataObject" />. Das Datenobjekt in die Zwischenablage geschrieben werden sollen. Erforderlich.</param>
+        <summary>Schreibt eine <see cref="T:System.Windows.Forms.DataObject" /> in die Zwischenablage.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist ein erweiterter Member. Es werden keine in IntelliSense angezeigt, es sei denn, Sie klicken Sie auf die **alle** Registerkarte.  
+  
+> [!IMPORTANT]
+>  Da auf die Zwischenablage von anderen Benutzern zugegriffen werden kann, verwenden Sie sie nicht, um sensible Informationen wie Passwörter oder vertrauliche Daten zu speichern.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel schreibt das Datenobjekt `dataChunk` in die Zwischenablage.  
+  
+ [!code-vb[VbVbcnMyClipboard#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#9)]  
+  
+ In diesem Beispiel hängt das Vorhandensein des Datenobjekts `dataChunk`.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />Berechtigung ist erforderlich, um der Zwischenablage des Systems zugreifen.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFileDropList">
+      <MemberSignature Language="C#" Value="public void SetFileDropList (System.Collections.Specialized.StringCollection filePaths);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void SetFileDropList(class System.Collections.Specialized.StringCollection filePaths) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetFileDropList(System.Collections.Specialized.StringCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filePaths" Type="System.Collections.Specialized.StringCollection" />
+      </Parameters>
+      <Docs>
+        <param name="filePaths">
+          <see cref="T:System.Collections.Specialized.StringCollection" />. Die Liste der Dateinamen. Erforderlich.</param>
+        <summary>Schreibt eine Auflistung von Zeichenfolgen, die Dateipfade in die Zwischenablage.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Datei Dropdown-Liste ist eine Auflistung von Zeichenfolgen, die Dateinamen darstellt.  
+  
+> [!IMPORTANT]
+>  Da auf die Zwischenablage von anderen Benutzern zugegriffen werden kann, verwenden Sie sie nicht, um sensible Informationen wie Passwörter oder vertrauliche Daten zu speichern.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel ruft die Auflistung der Dateinamen von **eigene**, konvertiert es in der Dropdownliste eine Datei und schreibt es in die Zwischenablage.  
+  
+ [!code-vb[VbRefClipbd#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRefClipbd/VB/Class1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetImage">
+      <MemberSignature Language="C#" Value="public void SetImage (System.Drawing.Image image);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void SetImage(class System.Drawing.Image image) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetImage(System.Drawing.Image)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="image" Type="System.Drawing.Image" />
+      </Parameters>
+      <Docs>
+        <param name="image">
+          <see cref="T:System.Drawing.Image" />. Bild, das geschrieben werden. Erforderlich.</param>
+        <summary>Schreibt ein Image in die Zwischenablage.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Da auf die Zwischenablage von anderen Benutzern zugegriffen werden kann, verwenden Sie sie nicht, um sensible Informationen wie Passwörter oder vertrauliche Daten zu speichern.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel schreibt das Bild `coolPicture` in die Zwischenablage.  
+  
+ [!code-vb[VbVbcnMyClipboard#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#8)]  
+  
+ In diesem Beispiel hängt das Vorhandensein des Bilds `coolPicture`.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />Berechtigung ist erforderlich, um der Zwischenablage des Systems zugreifen.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetText">
+      <MemberSignature Language="C#" Value="public void SetText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void SetText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">
+          <see langword="String" />. Text, der geschrieben werden. Erforderlich.</param>
+        <summary>Schreibt Text in die Zwischenablage.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mögliche Formate sind <xref:System.Windows.Forms.TextDataFormat.CommaSeparatedValue>, <xref:System.Windows.Forms.TextDataFormat.Html>, <xref:System.Windows.Forms.TextDataFormat.Rtf> und <xref:System.Windows.Forms.TextDataFormat.UnicodeText>.  
+  
+ Vorherige Zwischenablageformate werden nicht beibehalten.  
+  
+> [!IMPORTANT]
+>  Da auf die Zwischenablage von anderen Benutzern zugegriffen werden kann, verwenden Sie sie nicht, um sensible Informationen wie Passwörter oder vertrauliche Daten zu speichern.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel schreibt die Zeichenfolge `This is a test string.` in die Zwischenablage.  
+  
+ [!code-vb[VbVbcnMyClipboard#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="text" /> ist eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="text" /> ist <see langword="Nothing" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />Berechtigung ist erforderlich, um der Zwischenablage des Systems zugreifen.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetText">
+      <MemberSignature Language="C#" Value="public void SetText (string text, System.Windows.Forms.TextDataFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void SetText(string text, valuetype System.Windows.Forms.TextDataFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetText(System.String,System.Windows.Forms.TextDataFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="format" Type="System.Windows.Forms.TextDataFormat" />
+      </Parameters>
+      <Docs>
+        <param name="text">
+          <see langword="String" />. Text, der geschrieben werden. Erforderlich.</param>
+        <param name="format">
+          <see cref="T:System.Windows.Forms.TextDataFormat" />. Formatieren Sie beim Schreiben von Text verwendet werden soll. Der Standardwert ist <see cref="F:System.Windows.Forms.TextDataFormat.UnicodeText" />. Erforderlich.</param>
+        <summary>Schreibt Text in die Zwischenablage.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mögliche Formate sind <xref:System.Windows.Forms.TextDataFormat.CommaSeparatedValue>, <xref:System.Windows.Forms.TextDataFormat.Html>, <xref:System.Windows.Forms.TextDataFormat.Rtf> und <xref:System.Windows.Forms.TextDataFormat.UnicodeText>.  
+  
+ Vorherige Zwischenablageformate werden nicht beibehalten.  
+  
+> [!IMPORTANT]
+>  Da auf die Zwischenablage von anderen Benutzern zugegriffen werden kann, verwenden Sie sie nicht, um sensible Informationen wie Passwörter oder vertrauliche Daten zu speichern.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel schreibt die Zeichenfolge `This is a test string.` in die Zwischenablage.  
+  
+ [!code-vb[VbVbcnMyClipboard#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="text" /> ist eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="text" /> ist <see langword="Nothing" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />Berechtigung ist erforderlich, um der Zwischenablage des Systems zugreifen.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

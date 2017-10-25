@@ -1,0 +1,16 @@
+<Namespace Name="System.Data.EntityClient">
+  <Docs>
+    <summary>Die <see cref="N:System.Data.EntityClient" /> -Namespace ist der .NET Framework-Datenanbieter für das Entity Framework.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `EntityClient` -Anbieter verwendet die speicherspezifischen [!INCLUDE[vstecado](~/includes/vstecado-md.md)] Datenanbieter Klassen und Zuordnungen Metadaten für die Interaktion mit Entity Data Models. `EntityClient`übersetzt die Operationen auf konzeptionellen Entitäten in Operationen auf physischen Datenquellen. Umgekehrt übersetzt er von physischen Datenquellen zurückgegebene Resultsets in konzeptionelle Entitäten.  
+  
+> [!NOTE]
+>  Weitere Informationen zum Verwenden dieses Namespaces in [!INCLUDE[adonet_ef](~/includes/adonet-ef-md.md)] -Anwendungen finden Sie unter [ADO.NET Entity Framework](http://msdn.microsoft.com/library/a437041f-6899-4ae7-96ce-aabf528d7205).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

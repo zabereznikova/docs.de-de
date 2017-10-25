@@ -1,0 +1,626 @@
+<Type Name="ConfigurationErrorsException" FullName="System.Configuration.ConfigurationErrorsException">
+  <TypeSignature Language="C#" Value="public class ConfigurationErrorsException : System.Configuration.ConfigurationException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ConfigurationErrorsException extends System.Configuration.ConfigurationException" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.ConfigurationErrorsException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die Ausnahme, die ausgelöst wird, wenn ein Konfigurationsfehler aufgetreten ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.ConfigurationErrorsException> Ausnahme wird ausgelöst, wenn ein Fehler auftritt, während die Konfigurationsinformationen gelesen bzw. geschrieben werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt einen benutzerdefinierten Bereich und generiert eine <xref:System.Configuration.ConfigurationErrorsException> -Ausnahme aus, wenn er seine Eigenschaften ändert.  
+  
+ [!code-csharp[System.Configuration.ConfigurationErrorsException#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationErrorsException/CS/ConfigurationErrorsException.cs#1)]
+ [!code-vb[System.Configuration.ConfigurationErrorsException#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationErrorsException/VB/ConfigurationErrorsException.vb#1)]  
+  
+ Im folgende Beispiel wird eine Konfiguration Auszug aus der im vorherigen Beispiel verwendet.  
+  
+```  
+<?xml version="1.0" encoding="utf-8"?>  
+<configuration>  
+  <configSections>  
+    <section name="CustomSection" type="Samples.AspNet.CustomSection,   
+      ConfigurationErrorsException, Version=1.0.0.0, Culture=neutral,   
+      PublicKeyToken=null" allowDefinition="Everywhere"   
+      allowExeDefinition="MachineToApplication"   
+      restartOnExternalChanges="true" />  
+  </configSections>  
+  <CustomSection fileName="default.txt" maxUsers="10" />  
+</configuration>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConfigurationErrorsException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationErrorsException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.ConfigurationErrorsException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConfigurationErrorsException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationErrorsException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Meldung, die beschreibt, warum dies <see cref="T:System.Configuration.ConfigurationErrorsException" /> wurde eine Ausnahme ausgelöst.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.ConfigurationErrorsException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ConfigurationErrorsException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationErrorsException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Das Objekt, das Informationen zum Deserialisieren enthält.</param>
+        <param name="context">Die Kontextinformationen zur Quelle bzw. zum Ziel.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.ConfigurationErrorsException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Der aktuelle Typ ist ein <see cref="T:System.Configuration.ConfigurationException" /> oder ein <see cref="T:System.Configuration.ConfigurationErrorsException" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConfigurationErrorsException (string message, Exception inner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception inner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationErrorsException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="inner" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Meldung, die beschreibt, warum dies <see cref="T:System.Configuration.ConfigurationErrorsException" /> wurde eine Ausnahme ausgelöst.</param>
+        <param name="inner">Die Ausnahme, die die Ursache <see cref="T:System.Configuration.ConfigurationErrorsException" /> Ausnahme ausgelöst wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.ConfigurationErrorsException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConfigurationErrorsException (string message, System.Xml.XmlNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Xml.XmlNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationErrorsException.#ctor(System.String,System.Xml.XmlNode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="node" Type="System.Xml.XmlNode" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Meldung, die beschreibt, warum dies <see cref="T:System.Configuration.ConfigurationErrorsException" /> wurde eine Ausnahme ausgelöst.</param>
+        <param name="node">Die <see cref="T:System.Xml.XmlNode" /> -Objekt, das die Ursache <see cref="T:System.Configuration.ConfigurationErrorsException" /> Ausnahme ausgelöst wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.ConfigurationErrorsException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConfigurationErrorsException (string message, System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationErrorsException.#ctor(System.String,System.Xml.XmlReader)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Meldung, die beschreibt, warum dies <see cref="T:System.Configuration.ConfigurationErrorsException" /> wurde eine Ausnahme ausgelöst.</param>
+        <param name="reader">Die <see cref="T:System.Xml.XmlReader" /> -Objekt, das die Ursache <see cref="T:System.Configuration.ConfigurationErrorsException" /> Ausnahme ausgelöst wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.ConfigurationErrorsException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConfigurationErrorsException (string message, Exception inner, System.Xml.XmlNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception inner, class System.Xml.XmlNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationErrorsException.#ctor(System.String,System.Exception,System.Xml.XmlNode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="inner" Type="System.Exception" />
+        <Parameter Name="node" Type="System.Xml.XmlNode" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Meldung, die beschreibt, warum dies <see cref="T:System.Configuration.ConfigurationErrorsException" /> wurde eine Ausnahme ausgelöst.</param>
+        <param name="inner">Die innere Ausnahme, die Ursache hierfür <see cref="T:System.Configuration.ConfigurationErrorsException" /> Ausnahme ausgelöst wird.</param>
+        <param name="node">Die <see cref="T:System.Xml.XmlNode" /> -Objekt, das die Ursache <see cref="T:System.Configuration.ConfigurationErrorsException" /> Ausnahme ausgelöst wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.ConfigurationErrorsException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConfigurationErrorsException (string message, Exception inner, System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception inner, class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationErrorsException.#ctor(System.String,System.Exception,System.Xml.XmlReader)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="inner" Type="System.Exception" />
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Meldung, die beschreibt, warum dies <see cref="T:System.Configuration.ConfigurationErrorsException" /> wurde eine Ausnahme ausgelöst.</param>
+        <param name="inner">Die innere Ausnahme, die Ursache hierfür <see cref="T:System.Configuration.ConfigurationErrorsException" /> Ausnahme ausgelöst wird.</param>
+        <param name="reader">Die <see cref="T:System.Xml.XmlReader" /> -Objekt, das die Ursache <see cref="T:System.Configuration.ConfigurationErrorsException" /> Ausnahme ausgelöst wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.ConfigurationErrorsException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConfigurationErrorsException (string message, string filename, int line);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, string filename, int32 line) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationErrorsException.#ctor(System.String,System.String,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="filename" Type="System.String" />
+        <Parameter Name="line" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Meldung, die beschreibt, warum dies <see cref="T:System.Configuration.ConfigurationErrorsException" /> wurde eine Ausnahme ausgelöst.</param>
+        <param name="filename">Der Pfad zur Konfigurationsdatei, die die Ursache <see cref="T:System.Configuration.ConfigurationErrorsException" /> Ausnahme ausgelöst wird.</param>
+        <param name="line">Die Zeilennummer in der Konfigurationsdatei an der diese <see cref="T:System.Configuration.ConfigurationErrorsException" /> wurde eine Ausnahme ausgelöst.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.ConfigurationErrorsException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConfigurationErrorsException (string message, Exception inner, string filename, int line);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception inner, string filename, int32 line) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationErrorsException.#ctor(System.String,System.Exception,System.String,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="inner" Type="System.Exception" />
+        <Parameter Name="filename" Type="System.String" />
+        <Parameter Name="line" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Meldung, die beschreibt, warum dies <see cref="T:System.Configuration.ConfigurationErrorsException" /> wurde eine Ausnahme ausgelöst.</param>
+        <param name="inner">Die innere Ausnahme, die Ursache hierfür <see cref="T:System.Configuration.ConfigurationErrorsException" /> Ausnahme ausgelöst wird.</param>
+        <param name="filename">Der Pfad zur Konfigurationsdatei, die die Ursache <see cref="T:System.Configuration.ConfigurationErrorsException" /> Ausnahme ausgelöst wird.</param>
+        <param name="line">Die Zeilennummer in der Konfigurationsdatei an der diese <see cref="T:System.Configuration.ConfigurationErrorsException" /> wurde eine Ausnahme ausgelöst.</param>
+        <summary>Initialisiert eine neue Instanz einer <see cref="T:System.Configuration.ConfigurationErrorsException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BareMessage">
+      <MemberSignature Language="C#" Value="public override string BareMessage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BareMessage" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationErrorsException.BareMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Beschreibung, warum diese Konfigurationsausnahme ausgelöst wurde.</summary>
+        <value>Eine Beschreibung der verdeutlichen, warum dies <see cref="T:System.Configuration.ConfigurationErrorsException" /> ausgelöst wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.ConfigurationErrorsException.BareMessage%2A> Eigenschaft enthält den Namen der Konfigurationsdatei oder die Nummer der Zeile zu der diese keine <xref:System.Configuration.ConfigurationErrorsException> Ausnahme aufgetreten ist. Verwenden Sie, wenn Sie möchten, dass eine Nachricht, die den Namen der Konfigurationsdatei und die Zeilennummer, zusammen mit der Nachricht enthält die <xref:System.Configuration.ConfigurationErrorsException.Message%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Abrufen der <xref:System.Configuration.ConfigurationErrorsException.BareMessage%2A> Eigenschaftswert.  
+  
+ [!code-csharp[System.Configuration.ConfigurationErrorsException#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationErrorsException/CS/ConfigurationErrorsException.cs#6)]
+ [!code-vb[System.Configuration.ConfigurationErrorsException#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationErrorsException/VB/ConfigurationErrorsException.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Errors">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection Errors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Errors" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationErrorsException.Errors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einer Auflistung von Fehlern, mit denen die Gründe dies <see cref="T:System.Configuration.ConfigurationErrorsException" /> wurde eine Ausnahme ausgelöst.</summary>
+        <value>Ein <see cref="T:System.Collections.ICollection" /> -Objekt, das enthält Fehler, die die Gründe Identifizieren dieser <see cref="T:System.Configuration.ConfigurationErrorsException" /> wurde eine Ausnahme ausgelöst.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.ConfigurationErrorsException.Errors%2A> Eigenschaft sammelt so viele Fehler wie möglich, die während eines Vorgangs, z. B. beim Lesen einer Konfigurationsdatei auftreten können. Die Ausnahme wird ausgelöst, wird nur den ersten Fehler. Sie erreichen <xref:System.Configuration.ConfigurationErrorsException.Errors%2A> sehen Sie alle Fehler ausgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filename">
+      <MemberSignature Language="C#" Value="public override string Filename { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Filename" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationErrorsException.Filename" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Pfad zur Konfigurationsdatei, die diese Konfigurationsausnahme ausgelöst wird, verursacht hat.</summary>
+        <value>Der Pfad zur Konfigurationsdatei, die die Ursache <see cref="T:System.Configuration.ConfigurationErrorsException" /> ausgelöst wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Abrufen der <xref:System.Configuration.ConfigurationErrorsException.Filename%2A> Eigenschaftswert.  
+  
+ [!code-csharp[System.Configuration.ConfigurationErrorsException#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationErrorsException/CS/ConfigurationErrorsException.cs#4)]
+ [!code-vb[System.Configuration.ConfigurationErrorsException#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationErrorsException/VB/ConfigurationErrorsException.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFilename">
+      <MemberSignature Language="C#" Value="public static string GetFilename (System.Xml.XmlNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetFilename(class System.Xml.XmlNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationErrorsException.GetFilename(System.Xml.XmlNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Xml.XmlNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">Die <see cref="T:System.Xml.XmlNode" /> -Objekt, das die Ursache <see cref="T:System.Configuration.ConfigurationErrorsException" /> Ausnahme ausgelöst wird.</param>
+        <summary>Ruft den Pfad der Konfigurationsdatei aus dem internen <see cref="T:System.Xml.XmlNode" /> Objekt geladen wurde, als diese Konfigurationsausnahme ausgelöst wurde.</summary>
+        <returns>Der Pfad zur Konfigurationsdatei, aus der internen <see cref="T:System.Xml.XmlNode" /> Objekt geladen wurde, als diese Konfigurationsausnahme ausgelöst wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.ConfigurationErrorsException.GetFilename%2A> -Methode gibt den Namen der Konfigurationsdatei, die enthält die <xref:System.Xml.XmlNode> -Objekt analysiert werden, wenn die Ausnahme aufgetreten ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFilename">
+      <MemberSignature Language="C#" Value="public static string GetFilename (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetFilename(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationErrorsException.GetFilename(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Die <see cref="T:System.Xml.XmlReader" /> -Objekt, das die Ursache <see cref="T:System.Configuration.ConfigurationErrorsException" /> Ausnahme ausgelöst wird.</param>
+        <summary>Ruft dem Pfad zur Konfigurationsdatei, die die interne <see cref="T:System.Xml.XmlReader" /> beim Lesen, wenn diese Konfigurationsausnahme ausgelöst wurde.</summary>
+        <returns>Der Pfad der Konfiguration der Datei das interne <see cref="T:System.Xml.XmlReader" /> Objekt zugegriffen hat, wenn die Ausnahme aufgetreten ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.ConfigurationErrorsException.GetFilename%2A> Methode gibt den Namen der Konfigurationsdatei zurück, die die <xref:System.Xml.XmlReader> Objekt zugegriffen hat, wenn die Ausnahme aufgetreten ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLineNumber">
+      <MemberSignature Language="C#" Value="public static int GetLineNumber (System.Xml.XmlNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 GetLineNumber(class System.Xml.XmlNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationErrorsException.GetLineNumber(System.Xml.XmlNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Xml.XmlNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">Die <see cref="T:System.Xml.XmlNode" /> -Objekt, das die Ursache <see cref="T:System.Configuration.ConfigurationErrorsException" /> Ausnahme ausgelöst wird.</param>
+        <summary>Ruft die Zeilennummer in der Konfigurationsdatei ab, die die interne <see cref="T:System.Xml.XmlNode" /> Objekt dargestellt wird, wenn diese Konfigurationsausnahme ausgelöst wurde.</summary>
+        <returns>Die Zeilennummer in der Konfigurationsdatei mit dem <see cref="T:System.Xml.XmlNode" /> -Objekt analysiert werden, wenn diese Konfigurationsausnahme ausgelöst wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.ConfigurationErrorsException.GetFilename%2A> -Methode gibt den Namen der Konfigurationsdatei, die enthält die <xref:System.Xml.XmlNode> -Objekt analysiert werden, wenn die Ausnahme aufgetreten ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLineNumber">
+      <MemberSignature Language="C#" Value="public static int GetLineNumber (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 GetLineNumber(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationErrorsException.GetLineNumber(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Die <see cref="T:System.Xml.XmlReader" /> -Objekt, das die Ursache <see cref="T:System.Configuration.ConfigurationErrorsException" /> Ausnahme ausgelöst wird.</param>
+        <summary>Ruft die Zeilennummer in der Konfigurationsdatei ab, die die interne <see cref="T:System.Xml.XmlReader" /> Objekt wurde verarbeitet, wenn diese Konfigurationsausnahme ausgelöst wurde.</summary>
+        <returns>Die Zeilennummer in der Konfiguration der Datei, die die <see cref="T:System.Xml.XmlReader" /> Objekt zugegriffen hat, wenn die Ausnahme aufgetreten ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.ConfigurationErrorsException.GetLineNumber%2A> Methode gibt den Namen der Konfigurationsdatei zurück, die die <xref:System.Xml.XmlReader> Objekt zugegriffen hat, wenn die Ausnahme aufgetreten ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationErrorsException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Das Objekt, das die Informationen zu serialisierende enthält.</param>
+        <param name="context">Die Kontextinformationen zur Quelle bzw. zum Ziel.</param>
+        <summary>Legt die <see cref="T:System.Runtime.Serialization.SerializationInfo" /> Objekt mit dem Dateinamen und Zeilennummern zu der diese Konfigurationsausnahme aufgetreten ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.ConfigurationErrorsException.GetObjectData%2A> -Methode legt eine <xref:System.Runtime.Serialization.SerializationInfo> Objekt mit dem Dateinamen und Zeilennummern zu der diese <xref:System.Configuration.ConfigurationErrorsException> Ausnahme aufgetreten ist. Während der Deserialisierung wird die <xref:System.Configuration.ConfigurationErrorsException> übertragenen Ausnahme aus der <xref:System.Runtime.Serialization.SerializationInfo> -Objekt, das über den Stream übertragen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Line">
+      <MemberSignature Language="C#" Value="public override int Line { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Line" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationErrorsException.Line" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeilennummer in der Konfigurationsdatei, an der diese Konfigurationsausnahme ausgelöst wurde.</summary>
+        <value>Die Zeilennummer in der Konfigurationsdatei an der diese <see cref="T:System.Configuration.ConfigurationErrorsException" /> wurde eine Ausnahme ausgelöst.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Abrufen der <xref:System.Configuration.ConfigurationErrorsException.Line%2A> Eigenschaftswert.  
+  
+ [!code-csharp[System.Configuration.ConfigurationErrorsException#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationErrorsException/CS/ConfigurationErrorsException.cs#5)]
+ [!code-vb[System.Configuration.ConfigurationErrorsException#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationErrorsException/VB/ConfigurationErrorsException.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public override string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationErrorsException.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine erweiterte Beschreibung, warum diese Konfigurationsausnahme ausgelöst wurde.</summary>
+        <value>Eine erweiterte Beschreibung verdeutlichen, warum dies <see cref="T:System.Configuration.ConfigurationErrorsException" /> wurde eine Ausnahme ausgelöst.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Abrufen der <xref:System.Configuration.ConfigurationErrorsException.Message%2A> Eigenschaftswert.  
+  
+ [!code-csharp[System.Configuration.ConfigurationErrorsException#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationErrorsException/CS/ConfigurationErrorsException.cs#3)]
+ [!code-vb[System.Configuration.ConfigurationErrorsException#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationErrorsException/VB/ConfigurationErrorsException.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

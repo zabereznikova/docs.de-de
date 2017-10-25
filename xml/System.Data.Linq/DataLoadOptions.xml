@@ -1,0 +1,334 @@
+<Type Name="DataLoadOptions" FullName="System.Data.Linq.DataLoadOptions">
+  <TypeSignature Language="C#" Value="public sealed class DataLoadOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataLoadOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Linq.DataLoadOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Linq</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Zum sofortigen Laden und Filtern von verknüpften Daten enthält.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="general"></a>Allgemein  
+ Wenn Sie eine Abfrage für ein Objekt durchführen, wird nur das angeforderte Objekt abgerufen. Die *verwandte* Objekte werden nicht automatisch zum gleichen Zeitpunkt abgerufen. (Weitere Informationen finden Sie unter [Beziehungsübergreifendes](~/docs/framework/data/adonet/sql/linq/querying-across-relationships.md).)  
+  
+ Die <xref:System.Data.Linq.DataLoadOptions> Klasse bietet zwei Methoden zum unmittelbarem Laden des angegebenen verknüpften Daten zu erzielen. Die <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> Methode zum sofortigen Laden von Daten zum Hauptziel ermöglicht. Die <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> Methode ermöglicht das Filtern verwandter Objekte.  
+  
+## <a name="rules"></a>Regeln  
+ Beachten Sie die folgenden Regeln im Hinblick auf <xref:System.Data.Linq.DataLoadOptions> Verwendung:  
+  
+-   Zuweisen einer <xref:System.Data.Linq.DataLoadOptions> zu einem <xref:System.Data.Linq.DataContext> nach dem Ausführen der ersten Abfrage wird eine Ausnahme generiert.  
+  
+-   Ändern einer <xref:System.Data.Linq.DataLoadOptions> nach dem er zugewiesen wurde eine <xref:System.Data.Linq.DataContext> wird eine Ausnahme generiert  
+  
+## <a name="cycle-handling"></a>Behandlung von der Reihe nach  
+ <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>und <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> -Direktiven dürfen keine Zyklen erstellen. Die folgenden stellen Beispiele für solche Diagramme dar:  
+  
+-   : Beispiel 1 rekursive  
+  
+    -   `dlo.LoadWith<Employee>(e => e.Reports);`  
+  
+-   Beispiel 2: Zurück-Zeiger  
+  
+    -   `dlo.LoadWith <Customer>(c => C.Orders);`  
+  
+    -   `dlo.LoadWith <Order>(o => o.Customer);`  
+  
+-   Beispiel 3: Längere Zyklen  
+  
+     Obwohl dies nicht in einem ordnungsgemäß normalisierten Modell erfolgen soll, ist es möglich.  
+  
+    -   `dlo.LoadWith <A>(a => a.Bs);`  
+  
+    -   `dlo.LoadWith <B>(b => b.Cs);`  
+  
+    -   `dlo.LoadWith <C>(c => c.As);`  
+  
+-   : Beispiel 4 Rekursive Unterabfragen  
+  
+    -   `dlo.AssociateWith<A>(a=>a.As.Where(a=>a.Id=33));`  
+  
+-   Beispiel 5: Längere Rekursive Unterabfragen  
+  
+    -   `dlo.AssociateWith<A>(a=>a.Bs.Where(b=>b.Id==3));`  
+  
+    -   `dlo.AssociateWith<B>(b=>b.As.Where(a=>a.Id==3));`  
+  
+ Im folgenden sind einige allgemeine Regeln, die Ihnen helfen verstehen, was in diesen Szenarien wird.  
+  
+ **LoadWith Vorzeitiges** bei jedem Aufruf <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> überprüft, ob Zyklen Quellcodemodells eingeführt wurden. Wenn Sie vorhanden sind, wie in den Beispielen 1, ist 2 und 3, eine Ausnahme ausgelöst.  
+  
+ **AssociateWith** das Modul zur Laufzeit aber nicht für die vorhandenen Unterabfrage-Klauseln der Beziehung innerhalb des Ausdrucks.  
+  
+-   In Beispiel 4 stellen die `Where` -Klausel ausgeführt wird, für alle `A`, nicht nur diejenigen vom gefiltert Unterabfrage-Ausdruck selbst (da es sich um eine, die rekursive handeln würde)  
+  
+-   In Beispiel 5 die erste `Where` -Klausel wird angewendet, um alle der `B`s, obwohl der Unterabfragen vorhanden sind, auf `B`. Die zweite `Where` -Klausel wird angewendet, um alle der `A`s, obwohl es sind in Unterabfragen `A`.  
+  
+   
+  
+## Examples  
+ Beim Abrufen `Customers` aus der Northwind-Beispieldatenbank, können Sie <xref:System.Data.Linq.DataLoadOptions> angeben, dass `Orders` ist auch abgerufen werden sollen. Sie können auch angeben, welche Teilmenge der `Orders` abgerufen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataLoadOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DataLoadOptions.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Linq.DataLoadOptions" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssociateWith">
+      <MemberSignature Language="C#" Value="public void AssociateWith (System.Linq.Expressions.LambdaExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AssociateWith(class System.Linq.Expressions.LambdaExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DataLoadOptions.AssociateWith(System.Linq.Expressions.LambdaExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Linq.Expressions.LambdaExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Gibt die Abfrage für ein bestimmtes 1: n-Feld oder eine Eigenschaft verwendet werden soll. Beachten Sie Folgendes:  
+  
+ Wenn der Ausdruck nicht, mit der ein Feld oder eine Eigenschaft, die eine 1: n-Beziehung darstellt gestartet wird, wird eine Ausnahme ausgelöst.  
+  
+ Wenn Sie ein anderen Operator als gültiger Operator im Ausdruck angezeigt wird, wird eine Ausnahme ausgelöst. Gültige Operatoren lauten wie folgt:  
+  
+ Wobei  
+  
+ OrderBy  
+  
+ ThenBy  
+  
+ OrderByDescending  
+  
+ ThenByDescending  
+  
+ Take</param>
+        <summary>Filtert die Objekte, die für eine bestimmte Beziehung abgerufen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im folgenden Beispiel die innere Schleife durchläuft nur die `Orders` , die noch nicht heute versendet wurden.  
+  
+   
+  
+## Examples  
+ [!code-csharp[System.Data.Linq.DataLoadOptions#1](~/samples/snippets/csharp/VS_Snippets_Data/system.data.linq.dataloadoptions/cs/program.cs#1)]
+ [!code-vb[System.Data.Linq.DataLoadOptions#1](~/samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.dataloadoptions/vb/module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssociateWith&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public void AssociateWith&lt;T&gt; (System.Linq.Expressions.Expression&lt;Func&lt;T,object&gt;&gt; expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AssociateWith&lt;T&gt;(class System.Linq.Expressions.Expression`1&lt;class System.Func`2&lt;!!T, object&gt;&gt; expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DataLoadOptions.AssociateWith``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Linq.Expressions.Expression&lt;System.Func&lt;T,System.Object&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Typ, der abgefragt wird.  
+  
+ Wenn der Typ nicht zugeordnet ist, wird eine Ausnahme ausgelöst.</typeparam>
+        <param name="expression">Gibt die Abfrage für ein bestimmtes 1: n-Feld oder eine Eigenschaft verwendet werden soll. Beachten Sie Folgendes:  
+  
+ Wenn der Ausdruck nicht, mit der ein Feld oder eine Eigenschaft, die eine 1: n-Beziehung darstellt gestartet wird, wird eine Ausnahme ausgelöst.  
+  
+ Wenn Sie ein anderen Operator als gültiger Operator im Ausdruck angezeigt wird, wird eine Ausnahme ausgelöst. Gültige Operatoren lauten wie folgt:  
+  
+ Wobei  
+  
+ OrderBy  
+  
+ ThenBy  
+  
+ OrderByDescending  
+  
+ ThenByDescending  
+  
+ Take</param>
+        <summary>Filtert die Objekte, die für eine bestimmte Beziehung abgerufen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Vermeidung von Zyklen finden Sie unter <xref:System.Data.Linq.DataLoadOptions>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel die innere Schleife durchläuft nur die `Orders` , die noch nicht heute versendet wurden.  
+  
+ [!code-csharp[System.Data.Linq.DataLoadOptions#1](~/samples/snippets/csharp/VS_Snippets_Data/system.data.linq.dataloadoptions/cs/program.cs#1)]
+ [!code-vb[System.Data.Linq.DataLoadOptions#1](~/samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.dataloadoptions/vb/module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAssociationCriteria">
+      <MemberSignature Language="C#" Value="public bool GetAssociationCriteria (System.Reflection.MemberInfo memberInfo, out System.Linq.Expressions.LambdaExpression associationCriteria);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool GetAssociationCriteria(class System.Reflection.MemberInfo memberInfo, [out] class System.Linq.Expressions.LambdaExpression&amp; associationCriteria) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DataLoadOptions.GetAssociationCriteria(System.Reflection.MemberInfo,System.Linq.Expressions.LambdaExpression@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="memberInfo" Type="System.Reflection.MemberInfo" />
+        <Parameter Name="associationCriteria" Type="System.Linq.Expressions.LambdaExpression&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="memberInfo">To be added.</param>
+        <param name="associationCriteria">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsImmediate">
+      <MemberSignature Language="C#" Value="public bool IsImmediate (System.Reflection.MemberInfo memberInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsImmediate(class System.Reflection.MemberInfo memberInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DataLoadOptions.IsImmediate(System.Reflection.MemberInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="memberInfo" Type="System.Reflection.MemberInfo" />
+      </Parameters>
+      <Docs>
+        <param name="memberInfo">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadWith">
+      <MemberSignature Language="C#" Value="public void LoadWith (System.Linq.Expressions.LambdaExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LoadWith(class System.Linq.Expressions.LambdaExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DataLoadOptions.LoadWith(System.Linq.Expressions.LambdaExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Linq.Expressions.LambdaExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Ein Lambda-Ausdruck, der die verwandte Material identifiziert.</param>
+        <summary>Ruft die angegebenen Daten zum Hauptziel mit einem Lambdaausdruck.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im folgenden Beispiel werden alle `Orders` (Bestellungen) für alle `Customers` (Kunden) in London abgerufen, wenn die Abfrage ausgeführt wird. Aufgrund dessen wird bei nachfolgenden Zugriffen auf die `Orders`-Eigenschaft für ein `Customer`-Objekt keine neue Datenbankabfrage ausgelöst.  
+  
+   
+  
+## Examples  
+ [!code-csharp[System.Data.Linq.DataLoadOptions#2](~/samples/snippets/csharp/VS_Snippets_Data/system.data.linq.dataloadoptions/cs/program.cs#2)]
+ [!code-vb[System.Data.Linq.DataLoadOptions#2](~/samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.dataloadoptions/vb/module1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadWith&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public void LoadWith&lt;T&gt; (System.Linq.Expressions.Expression&lt;Func&lt;T,object&gt;&gt; expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LoadWith&lt;T&gt;(class System.Linq.Expressions.Expression`1&lt;class System.Func`2&lt;!!T, object&gt;&gt; expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DataLoadOptions.LoadWith``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Linq.Expressions.Expression&lt;System.Func&lt;T,System.Object&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Typ, der abgefragt wird.  
+  
+ Wenn dieser Typ aufgehoben wird, wird eine Ausnahme ausgelöst.</typeparam>
+        <param name="expression">Identifiziert das Feld oder die Eigenschaft abgerufen werden sollen.  
+  
+ Wenn der Ausdruck nicht bestimmt werden, ein Feld oder eine Eigenschaft, die eine 1: 1- oder 1: n-Beziehung darstellt, wird eine Ausnahme ausgelöst.</param>
+        <summary>Gibt an, welche Unterobjekte abzurufen, wenn eine Abfrage für ein Objekt vom Typ t gesendet wird</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können nicht angeben, das Laden von Beziehungen zwischen zwei Ebenen (z. B. `Orders.OrderDetails`). In diesen Szenarien müssen Sie zwei Separate angeben <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> Methoden.  
+  
+ Zur Vermeidung von Zyklen finden Sie unter "Hinweise" im Abschnitt <xref:System.Data.Linq.DataLoadOptions>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel werden alle `Orders` (Bestellungen) für alle `Customers` (Kunden) in London abgerufen, wenn die Abfrage ausgeführt wird. Aufgrund dessen wird bei nachfolgenden Zugriffen auf die `Orders`-Eigenschaft für ein `Customer`-Objekt keine neue Datenbankabfrage ausgelöst.  
+  
+ [!code-csharp[System.Data.Linq.DataLoadOptions#2](~/samples/snippets/csharp/VS_Snippets_Data/system.data.linq.dataloadoptions/cs/program.cs#2)]
+ [!code-vb[System.Data.Linq.DataLoadOptions#2](~/samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.dataloadoptions/vb/module1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

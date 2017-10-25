@@ -1,0 +1,253 @@
+<Type Name="ReadOnlyPermissionSet" FullName="System.Security.ReadOnlyPermissionSet">
+  <TypeSignature Language="C#" Value="public sealed class ReadOnlyPermissionSet : System.Security.PermissionSet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit ReadOnlyPermissionSet extends System.Security.PermissionSet" />
+  <TypeSignature Language="DocId" Value="T:System.Security.ReadOnlyPermissionSet" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.PermissionSet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine schreibgeschützte Auflistung, die viele verschiedene Berechtigungstypen enthalten kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Schreibgeschützte Berechtigungssätze werden aus explizitem XML erstellt und können nicht nach der Erstellung nicht geändert werden. Diese Einschränkung stellt sicher, dass der Berechtigungssatz wiederhergestellt wird, auf das gleiche XML-Codierungstyp fest, der er ursprünglich erstellt wurde. Beim Hinzufügen oder Entfernen einer Berechtigung für die <xref:System.Security.ReadOnlyPermissionSet> führt zu einer <xref:System.InvalidOperationException>.  
+  
+ Beachten Sie, dass keine Berechtigung Sie von erhalten der <xref:System.Security.ReadOnlyPermissionSet> ist nur eine Kopie der Berechtigung. Wenn die Kopie änderbar ist und geändert wird, wird die Berechtigung, die in der <xref:System.Security.ReadOnlyPermissionSet> wird nicht geändert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ReadOnlyPermissionSet (System.Security.SecurityElement permissionSetXml);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.SecurityElement permissionSetXml) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.ReadOnlyPermissionSet.#ctor(System.Security.SecurityElement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="permissionSetXml" Type="System.Security.SecurityElement" />
+      </Parameters>
+      <Docs>
+        <param name="permissionSetXml">Die XML-Element, aus dem der Wert der neuen <see cref="T:System.Security.ReadOnlyPermissionSet" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.ReadOnlyPermissionSet" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="permissionSetXml" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPermissionImpl">
+      <MemberSignature Language="C#" Value="protected override System.Security.IPermission AddPermissionImpl (System.Security.IPermission perm);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Security.IPermission AddPermissionImpl(class System.Security.IPermission perm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.ReadOnlyPermissionSet.AddPermissionImpl(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="perm" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="perm">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Security.PermissionSet Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.PermissionSet Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.ReadOnlyPermissionSet.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.PermissionSet</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Kopie des <see cref="T:System.Security.ReadOnlyPermissionSet" />-Objekts.</summary>
+        <returns>Legen Sie eine Kopie der Leseberechtigung verfügen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXml">
+      <MemberSignature Language="C#" Value="public override void FromXml (System.Security.SecurityElement et);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void FromXml(class System.Security.SecurityElement et) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.ReadOnlyPermissionSet.FromXml(System.Security.SecurityElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="et" Type="System.Security.SecurityElement" />
+      </Parameters>
+      <Docs>
+        <param name="et">Die XML-Codierung zur Wiederherstellung des Sicherheitsobjekts.</param>
+        <summary>Stellt ein Sicherheitsobjekt mit einem angegebenen Zustand aus einer XML-Codierung wieder her.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überschreibung der <xref:System.Security.PermissionSet.FromXml%2A?displayProperty=nameWithType> sollte von der Basisklasse aufgerufen werden <xref:System.Security.PermissionSet> beim Deserialisieren des Berechtigungssatzes. Eine Ausnahme wird ausgelöst, wenn Sie versuchen, zu <xref:System.Security.ReadOnlyPermissionSet.FromXml%2A> direkt. Kann nicht geändert werden einen nur-Lese Berechtigungssatz mit einem <xref:System.Security.ReadOnlyPermissionSet.FromXml%2A> aufrufen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="et" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="et" /> -Parameter ist kein gültiges Berechtigungselement.  
+  
+ - oder -   
+  
+ Die <paramref name="et" /> Versionsnummer des Parameters wird nicht unterstützt.</exception>
+        <exception cref="T:System.InvalidOperationException">Das Objekt ist nicht deserialisiert werden; d. h. <see cref="T:System.Security.PermissionSet" /> aufgerufen haben, nicht wieder in <see cref="M:System.Security.ReadOnlyPermissionSet.FromXml(System.Security.SecurityElement)" /> während der Deserialisierung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumeratorImpl">
+      <MemberSignature Language="C#" Value="protected override System.Collections.IEnumerator GetEnumeratorImpl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Collections.IEnumerator GetEnumeratorImpl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.ReadOnlyPermissionSet.GetEnumeratorImpl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPermissionImpl">
+      <MemberSignature Language="C#" Value="protected override System.Security.IPermission GetPermissionImpl (Type permClass);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Security.IPermission GetPermissionImpl(class System.Type permClass) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.ReadOnlyPermissionSet.GetPermissionImpl(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="permClass" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="permClass">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public override bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Security.ReadOnlyPermissionSet.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Auflistung schreibgeschützt ist.</summary>
+        <value>Immer <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Security.ReadOnlyPermissionSet> ist immer schreibgeschützt, daher muss dieser Wert immer sein `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePermissionImpl">
+      <MemberSignature Language="C#" Value="protected override System.Security.IPermission RemovePermissionImpl (Type permClass);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Security.IPermission RemovePermissionImpl(class System.Type permClass) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.ReadOnlyPermissionSet.RemovePermissionImpl(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="permClass" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="permClass">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPermissionImpl">
+      <MemberSignature Language="C#" Value="protected override System.Security.IPermission SetPermissionImpl (System.Security.IPermission perm);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Security.IPermission SetPermissionImpl(class System.Security.IPermission perm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.ReadOnlyPermissionSet.SetPermissionImpl(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="perm" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="perm">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public override System.Security.SecurityElement ToXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.SecurityElement ToXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.ReadOnlyPermissionSet.ToXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine XML-Codierung des Sicherheitsobjekts und seines aktuellen Zustands.</summary>
+        <returns>Eine XML-Codierung des Sicherheitsobjekts, einschließlich aller Zustandsinformationen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

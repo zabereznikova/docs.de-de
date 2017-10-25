@@ -1,0 +1,88 @@
+<Type Name="RegexWorker" FullName="System.Web.Configuration.RegexWorker">
+  <TypeSignature Language="C#" Value="public class RegexWorker" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RegexWorker extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.RegexWorker" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Wird intern verwendet, zur Laufzeit durch <see cref="T:System.Web.Configuration.BrowserCapabilitiesFactory" /> und <see cref="T:System.Web.Configuration.BrowserCapabilitiesCodeGenerator" /> zum Analysieren von Anforderungsdaten verwendet werden und den Browser zu identifizieren.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RegexWorker (System.Web.HttpBrowserCapabilities browserCaps);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.HttpBrowserCapabilities browserCaps) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.RegexWorker.#ctor(System.Web.HttpBrowserCapabilities)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="browserCaps" Type="System.Web.HttpBrowserCapabilities" />
+      </Parameters>
+      <Docs>
+        <param name="browserCaps">Die <see cref="T:System.Web.Configuration.HttpCapabilitiesBase" /> Objekt konfiguriert werden.</param>
+        <summary>Erstellt eine neue Instanz von <see cref="T:System.Web.Configuration.RegexWorker" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public string this[string key] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.RegexWorker.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der angegebene Schlüssel.</param>
+        <summary>Accessor für diese Klasse.</summary>
+        <value>Der interne Wert verknüpft sind, mit dem angegebenen <paramref name="key" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRegex">
+      <MemberSignature Language="C#" Value="public bool ProcessRegex (string target, string regexExpression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ProcessRegex(string target, string regexExpression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.RegexWorker.ProcessRegex(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.String" />
+        <Parameter Name="regexExpression" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="target">Der Funktionswert von einer internen Auflistung von Browsern.</param>
+        <param name="regexExpression">Der Wert des angegebenen Anforderungsheaders.</param>
+        <summary>Wird intern zur Laufzeit verwendet, um zu bestimmen, ob der angegebene Anforderungsheader alle Funktionen von einer internen Auflistung von Browsern übereinstimmt.</summary>
+        <returns>
+          <see langword="true" />Wenn der Wert des angegebenen Anforderungsheaders alle Funktionen von einer internen Auflistung von Browsern entspricht; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,232 @@
+<Type Name="QualificationDataItem" FullName="System.AddIn.Hosting.QualificationDataItem">
+  <TypeSignature Language="C#" Value="public struct QualificationDataItem" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit QualificationDataItem extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Hosting.QualificationDataItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Informationen bereitgestellt, die vom Entwickler eines Pipelinesegments, für die Verwendung durch den Host dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jedes Datenelement Qualifizierung besteht ein Name/Wert-Paar, die auf ein Pipelinesegment, mithilfe angewendet wurde der <xref:System.AddIn.Pipeline.QualificationDataAttribute> -Attribut, um Informationen bereitzustellen, die die Verwendung des Segments (z. B. die empfohlene Isolationsstufe für das Segment) qualifiziert. Die <xref:System.AddIn.Hosting.QualificationDataItem> Struktur enthält ein Name/Wert-Paar und den Typ der Pipelinesegment, die es angewendet wurde.  
+  
+ Verwenden der <xref:System.AddIn.Hosting.AddInToken.QualificationData%2A?displayProperty=nameWithType> Eigenschaft zum Abrufen eines geschachtelten Satzes von Wörterbüchern, die enthält <xref:System.AddIn.Hosting.QualificationDataItem> Strukturen für die Pipelinesegmente zugeordneten ein <xref:System.AddIn.Hosting.AddInToken>.  
+  
+ Verwenden Sie alternativ die <xref:System.AddIn.Hosting.AddInToken.GetEnumerator%2A?displayProperty=nameWithType> Methode, um einen Enumerator zum Abrufen der <xref:System.AddIn.Hosting.QualificationDataItem> Strukturen der Pipelinesegmente verknüpft sind mit einem Token oder einfach verwenden eine `foreach` Anweisung (`For Each` in Visual Basic `for each` in Visual C++), Das Token zu behandeln, als handele es sich um eine Auflistung von <xref:System.AddIn.Hosting.QualificationDataItem> Strukturen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel listet die Qualifizierungsdaten für die einzelnen zugeordnet Pipelinesegmente <xref:System.AddIn.Hosting.AddInToken> in einer Auflistung von Token.  
+  
+ [!code-csharp[AddInP3Host#12](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#12)]
+ [!code-vb[AddInP3Host#12](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#12)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.QualificationDataItem.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das zu vergleichende Objekt.</param>
+        <summary>Bestimmt, ob ein angegebenes Objekt gleich der aktuellen Qualifizierungsdatenelement ist.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="obj" /> der aktuellen Instanz entspricht, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.QualificationDataItem.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Hashcode für dieses Qualifizierungsdatenelement ab.</summary>
+        <returns>Der Hashcode.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Hosting.QualificationDataItem.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Qualifizierungsdatenelements ab.</summary>
+        <value>Der Name des Qualifizierungsdatenelements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jedes Datenelement Qualifizierung besteht ein Name/Wert-Paar, die auf ein Pipelinesegment, mithilfe angewendet wurde der <xref:System.AddIn.Pipeline.QualificationDataAttribute> -Attribut, um Consumern des Add-in-Anmeldeinformationen. Die <xref:System.AddIn.Hosting.QualificationDataItem.Name%2A> Eigenschaft ruft den Namen ab. Verwenden der <xref:System.AddIn.Hosting.QualificationDataItem.Value%2A> Eigenschaft, um den Wert abzurufen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel listet die Qualifizierungsdaten für die einzelnen zugeordnet Pipelinesegmente <xref:System.AddIn.Hosting.AddInToken> in einer Auflistung von Token. Die <xref:System.AddIn.Hosting.QualificationDataItem.Name%2A> Eigenschaft wird verwendet, um den Namen jedes Elements anzuzeigen.  
+  
+ [!code-csharp[AddInP3Host#12](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#12)]
+ [!code-vb[AddInP3Host#12](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.AddIn.Hosting.QualificationDataItem item1, System.AddIn.Hosting.QualificationDataItem item2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.AddIn.Hosting.QualificationDataItem item1, valuetype System.AddIn.Hosting.QualificationDataItem item2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.QualificationDataItem.op_Equality(System.AddIn.Hosting.QualificationDataItem,System.AddIn.Hosting.QualificationDataItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item1" Type="System.AddIn.Hosting.QualificationDataItem" />
+        <Parameter Name="item2" Type="System.AddIn.Hosting.QualificationDataItem" />
+      </Parameters>
+      <Docs>
+        <param name="item1">Der erste zu vergleichende <see cref="T:System.AddIn.Hosting.QualificationDataItem" />.</param>
+        <param name="item2">Der zweite zu vergleichende <see cref="T:System.AddIn.Hosting.QualificationDataItem" />.</param>
+        <summary>Bestimmt, ob zwei <see cref="T:System.AddIn.Hosting.QualificationDataItem" /> -Strukturen gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="item1" /> und <paramref name="item2" /> gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.AddIn.Hosting.QualificationDataItem item1, System.AddIn.Hosting.QualificationDataItem item2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.AddIn.Hosting.QualificationDataItem item1, valuetype System.AddIn.Hosting.QualificationDataItem item2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.QualificationDataItem.op_Inequality(System.AddIn.Hosting.QualificationDataItem,System.AddIn.Hosting.QualificationDataItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item1" Type="System.AddIn.Hosting.QualificationDataItem" />
+        <Parameter Name="item2" Type="System.AddIn.Hosting.QualificationDataItem" />
+      </Parameters>
+      <Docs>
+        <param name="item1">Der erste zu vergleichende <see cref="T:System.AddIn.Hosting.QualificationDataItem" />.</param>
+        <param name="item2">Der zweite zu vergleichende <see cref="T:System.AddIn.Hosting.QualificationDataItem" />.</param>
+        <summary>Bestimmt, ob zwei <see cref="T:System.AddIn.Hosting.QualificationDataItem" /> Strukturen sind unterschiedlich.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="item1" /> und <paramref name="item2" /> ungleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Segment">
+      <MemberSignature Language="C#" Value="public System.AddIn.Hosting.AddInSegmentType Segment { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.AddIn.Hosting.AddInSegmentType Segment" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Hosting.QualificationDataItem.Segment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Hosting.AddInSegmentType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einem Wert, der die Pipelinesegment gibt die Qualifikation, Datenelement angewendet wurde.</summary>
+        <value>Die Art der Pipelinesegment, in dem die Daten angewendet wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie Qualifizierungsdaten aufzählen, verwenden Sie diese Eigenschaft die Qualifizierungsdaten zu identifizieren, die zu einem bestimmten Segment der Pipeline gehört.  
+  
+> [!NOTE]
+>  Das Add-In Modell verwendet nicht die Qualifizierungsdaten, die auf die Hostansicht des Add-Ins angewendet wird. Wenn Sie aufzählen Qualifizierungsdaten nicht findet daher Elemente angegeben, deren <xref:System.AddIn.Hosting.QualificationDataItem.Segment%2A> Eigenschaft ist <xref:System.AddIn.Hosting.AddInSegmentType.HostViewOfAddIn>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel listet die Qualifizierungsdaten für die einzelnen zugeordnet Pipelinesegmente <xref:System.AddIn.Hosting.AddInToken> in einer Auflistung von Token. Die <xref:System.AddIn.Hosting.QualificationDataItem.Segment%2A> Eigenschaft wird verwendet, um die Art des Segments anzuzeigen.  
+  
+ [!code-csharp[AddInP3Host#12](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#12)]
+ [!code-vb[AddInP3Host#12](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Hosting.QualificationDataItem.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert des Qualifizierungsdatenelements ab.</summary>
+        <value>Der Wert des Elements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jedes Datenelement Qualifizierung besteht ein Name/Wert-Paar, die auf ein Pipelinesegment, mithilfe angewendet wurde der <xref:System.AddIn.Pipeline.QualificationDataAttribute> -Attribut, um Consumern des Add-in-Anmeldeinformationen. Die <xref:System.AddIn.Hosting.QualificationDataItem.Value%2A> Eigenschaft ruft den Wert ab. Verwenden der <xref:System.AddIn.Hosting.QualificationDataItem.Name%2A> Eigenschaft zum Abrufen des Namens.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel listet die Qualifizierungsdaten für die einzelnen zugeordnet Pipelinesegmente <xref:System.AddIn.Hosting.AddInToken> in einer Auflistung von Token. Die <xref:System.AddIn.Hosting.QualificationDataItem.Value%2A> Eigenschaft wird verwendet, um den Wert des Elements anzuzeigen.  
+  
+ [!code-csharp[AddInP3Host#12](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#12)]
+ [!code-vb[AddInP3Host#12](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

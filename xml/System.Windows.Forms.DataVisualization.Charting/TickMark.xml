@@ -1,0 +1,140 @@
+<Type Name="TickMark" FullName="System.Windows.Forms.DataVisualization.Charting.TickMark">
+  <TypeSignature Language="C#" Value="public class TickMark : System.Windows.Forms.DataVisualization.Charting.Grid" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TickMark extends System.Windows.Forms.DataVisualization.Charting.Grid" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.TickMark" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.DataVisualization.Charting.Grid</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Enabled")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt kennzeichnet die Haupt- und Nebenversionsnummern Teilstriche auf einer Achse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.TickMark> -Klasse kapselt die Funktionalität für alle Teilstriche Diagramm.  
+  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.TickMark> Klasse verfügbar gemacht wird, als die <xref:System.Windows.Forms.DataVisualization.Charting.Axis.MajorTickMark%2A> und <xref:System.Windows.Forms.DataVisualization.Charting.Axis.MinorTickMark%2A> Eigenschaften <xref:System.Windows.Forms.DataVisualization.Charting.Axis> Objekte.  
+  
+ Standardmäßig werden Hauptteilstriche werden auf die Hauptgitternetzlinien angezeigt, wohingegen Hilfsteilstriche explizit angezeigt werden müssen.  
+  
+ MajorTickMark.Interval ist nicht festgelegt (`Double.NaN`) standardmäßig und Teilstriche Markierungen gezeichnet werden, entsprechend dem <xref:System.Windows.Forms.DataVisualization.Charting.Axis.Interval%2A>. MinorTickMark.Interval wird festgelegt, um `Auto` (`0`) standardmäßig und das Diagramm bestimmt automatisch das Intervall.  
+  
+ Ein Entwickler kann diese Klasse zu verwenden:  
+  
+-   Aktivieren Sie oder deaktivieren Sie der Teilstriche.  
+  
+-   Legen Sie die Farbe, Breite, Länge und Format der Teilstriche markiert.  
+  
+-   Geben Sie ein Format, der bestimmt, ob Teilstriche außerhalb der Achse, in der Achse oder über der Achse angezeigt werden.  
+  
+-   Geben Sie den Startpunkt –, an der erste Teilstrich gezeichnet – sowie das Teilstrichintervall, die auf ihre Häufigkeit korreliert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TickMark ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.TickMark.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.DataVisualization.Charting.TickMark" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public float Size { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Size" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.TickMark.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Länge der Teilstriche markiert. Die Länge wird in Einheiten gemessen, die einen Prozentsatz der Höhe oder Breite des Diagrammbilds, abhängig von der Achse darstellen.</summary>
+        <value>Ein <see langword="float" /> Wert, der die Größe oder die Länge der Teilstriche darstellt. Der Standardwert ist 1,0 Prozent.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Größe eines Teilstrichs bestimmt die Länge des Teilstrichs.  
+  
+ Die `Size` -Eigenschaft in Einheiten, die einen Prozentsatz der Höhe oder Breite des Diagrammbilds darstellen gemessen wird. Wenn der Teilstrich entlang einer vertikalen Achse angezeigt wird, ist die Maßeinheit ein Prozentsatz der Breite des Diagrammbilds. Wenn der Teilstrich entlang einer horizontalen Achse angezeigt wird, ist die Maßeinheit Prozentsatz der Höhe des Diagrammbilds.  
+  
+ Eine Änderung in der Breite des Diagrammbilds führt zu der Größenänderung des alle Teilstriche entlang dieser Achse für alle Diagrammflächen angezeigt. Auf ähnliche Weise führt eine Änderung der Höhe des Diagrammbilds in der Größenänderung des alle Teilstriche, die entlang der horizontalen Achse, für alle Diagrammflächen angezeigt.  
+  
+ Teilstriche für dreidimensionale (3D) Diagramme anzeigen, damit sie nur für die Breite einer Wand gezeichnet werden, legen Sie die <xref:System.Windows.Forms.DataVisualization.Charting.TickMark.TickMarkStyle%2A> Eigenschaft <xref:System.Windows.Forms.DataVisualization.Charting.TickMarkStyle.AcrossAxis> , und geben Sie als Teilstriche Markierung Größe Null (0) mithilfe der <xref:System.Windows.Forms.DataVisualization.Charting.TickMark.Size%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TickMarkStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.TickMarkStyle TickMarkStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.TickMarkStyle TickMarkStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.TickMark.TickMarkStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.TickMarkStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Format der Tick-Markierung.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.TickMarkStyle" />-Enumerationswert. Der Standardwert ist <see cref="F:System.Windows.Forms.DataVisualization.Charting.TickMarkStyle.OutsideArea" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.TickMark.TickMarkStyle%2A> Eigenschaft bestimmt den Stil der Teilstriche.  
+  
+ Teilstriche innerhalb der Diagrammfläche, außerhalb der Diagrammfläche gezeichnet werden können, um über eine Achsenlinie oder deaktiviert werden.  
+  
+ Legen Sie zum Anzeigen von Teilstrichen für Diagramme dreidimensionale (3D), sodass sie nur für die Breite einer Wand gezeichnet werden, die <xref:System.Windows.Forms.DataVisualization.Charting.TickMark.TickMarkStyle%2A> Eigenschaft <xref:System.Windows.Forms.DataVisualization.Charting.TickMarkStyle.AcrossAxis?displayProperty=nameWithType>. Geben Sie dann eine Tick Markierung Größe Null (0) mithilfe der <xref:System.Windows.Forms.DataVisualization.Charting.TickMark.Size%2A> Eigenschaft.  
+  
+ Wenn die <xref:System.Windows.Forms.DataVisualization.Charting.TickMark.TickMarkStyle%2A> -Eigenschaftensatz auf <xref:System.Windows.Forms.DataVisualization.Charting.TickMarkStyle.None?displayProperty=nameWithType>, werden keine Teilstriche angezeigt. Teilstriche können auch ein-/ausgeschaltet werden ein- oder ausschalten durch Festlegen der <xref:System.Windows.Forms.DataVisualization.Charting.Grid.Enabled%2A> Eigenschaft `true` oder `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

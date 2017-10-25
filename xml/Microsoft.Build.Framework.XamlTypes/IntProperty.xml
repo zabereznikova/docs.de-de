@@ -1,0 +1,106 @@
+<Type Name="IntProperty" FullName="Microsoft.Build.Framework.XamlTypes.IntProperty">
+  <TypeSignature Language="C#" Value="public sealed class IntProperty : Microsoft.Build.Framework.XamlTypes.BaseProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit IntProperty extends Microsoft.Build.Framework.XamlTypes.BaseProperty" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.XamlTypes.IntProperty" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Framework.XamlTypes.BaseProperty</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellen Sie das Schema der Integer-Eigenschaft dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IntProperty ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.XamlTypes.IntProperty.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Der Standardkonstruktor für eine ganzzahlige Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndInit">
+      <MemberSignature Language="C#" Value="public override void EndInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void EndInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.XamlTypes.IntProperty.EndInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Siehe <see cref="M:System.ComponentModel.ISupportInitialize.EndInit" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxValue">
+      <MemberSignature Language="C#" Value="public Nullable&lt;int&gt; MaxValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; MaxValue" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.IntProperty.MaxValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximal zulässige Wert für diese Eigenschaft.</summary>
+        <value>Gibt den maximal zulässigen Wert zurück. Gibt <see langword="null" /> Wenn diese Eigenschaft nicht festgelegt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Feld ist optional.  
+  
+ Der Wert dieser Eigenschaft muss größer als oder gleich der <xref:Microsoft.Build.Framework.XamlTypes.IntProperty.MinValue%2A> Eigenschaft (wenn der zweite Wert definiert ist).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinValue">
+      <MemberSignature Language="C#" Value="public Nullable&lt;int&gt; MinValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; MinValue" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.IntProperty.MinValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den minimal zulässigen Wert für diese Eigenschaft.</summary>
+        <value>Gibt den minimal zulässigen Wert zurück. Gibt <see langword="null" /> Wenn diese Eigenschaft nicht festgelegt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Feld ist optional.  
+  
+ Der Wert dieser Eigenschaft muss kleiner als oder gleich der <xref:Microsoft.Build.Framework.XamlTypes.IntProperty.MaxValue%2A> Eigenschaft (wenn der zweite Wert definiert ist).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

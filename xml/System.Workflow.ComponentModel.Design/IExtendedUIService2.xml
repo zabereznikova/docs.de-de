@@ -1,0 +1,116 @@
+<Type Name="IExtendedUIService2" FullName="System.Workflow.ComponentModel.Design.IExtendedUIService2">
+  <TypeSignature Language="C#" Value="public interface IExtendedUIService2" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IExtendedUIService2" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Design.IExtendedUIService2" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert die Methoden, die Workflow-Designerhosts zum Bestimmen der Umgebungseinstellungen aufrufen können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetReflectionAssembly">
+      <MemberSignature Language="C#" Value="public System.Reflection.Assembly GetReflectionAssembly (System.Reflection.AssemblyName assemblyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.Assembly GetReflectionAssembly(class System.Reflection.AssemblyName assemblyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.IExtendedUIService2.GetReflectionAssembly(System.Reflection.AssemblyName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Assembly</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assemblyName" Type="System.Reflection.AssemblyName" />
+      </Parameters>
+      <Docs>
+        <param name="assemblyName">Der Name der Assembly.</param>
+        <summary>Gibt die im Reflexionskontext für das aktuelle Zielframework geladene Assembly zurück.</summary>
+        <returns>Die im Reflexionskontext für das aktuelle Zielframework geladene Assembly.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRuntimeType">
+      <MemberSignature Language="C#" Value="public Type GetRuntimeType (Type reflectionType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type GetRuntimeType(class System.Type reflectionType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.IExtendedUIService2.GetRuntimeType(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reflectionType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="reflectionType">Der Reflektionstyp, der von der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]-Zielversion abhängt.</param>
+        <summary>Gibt den aktuellen Laufzeittyp für den angegebenen Reflektionstyp zurück. Der Reflektionstyp hängt von der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]-Zielversion ab.</summary>
+        <returns>Der aktuelle Laufzeittyp.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTargetFrameworkVersion">
+      <MemberSignature Language="C#" Value="public long GetTargetFrameworkVersion ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int64 GetTargetFrameworkVersion() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.IExtendedUIService2.GetTargetFrameworkVersion" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]-Zielversion des aktuellen Projekts zurück.</summary>
+        <returns>Die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]-Zielversion des aktuellen Projekts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSupportedType">
+      <MemberSignature Language="C#" Value="public bool IsSupportedType (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsSupportedType(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.IExtendedUIService2.IsSupportedType(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der zu überprüfende Typ.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob der angegebene Typ in der aktuellen [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]-Zielversion unterstützt wird.</summary>
+        <returns>
+          <see langword="true" />Wenn der angegebene Typ, in der aktuellen unterstützt wird [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Version ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,2387 @@
+<Type Name="TextBoxBase" FullName="System.Windows.Controls.Primitives.TextBoxBase">
+  <TypeSignature Language="C#" Value="public abstract class TextBoxBase : System.Windows.Controls.Control" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract TextBoxBase extends System.Windows.Controls.Control" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Primitives.TextBoxBase" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Control</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.Text)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_ContentHost", Type=typeof(System.Windows.FrameworkElement))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Eine abstrakte Basisklasse, die Funktionalität für Steuerelemente, einschließlich der Textbearbeitung <see cref="T:System.Windows.Controls.TextBox" /> und <see cref="T:System.Windows.Controls.RichTextBox" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die abgeleitete <xref:System.Windows.Controls.TextBox> -Objekt in [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)].  
+  
+ [!code-xaml[TextBoxBase_Samp#TextBoxBase1](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxBase_Samp/CSharp/Window1.xaml#textboxbase1)]  
+  
+ Im folgenden Beispiel wird veranschaulicht, wie die abgeleitete <xref:System.Windows.Controls.RichTextBox> Objekt im Code.  
+  
+ [!code-csharp[richtextboxsnippets#_RichTextBox_MouseUpDown](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_richtextbox_mouseupdown)]
+ [!code-vb[richtextboxsnippets#_RichTextBox_MouseUpDown](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_richtextbox_mouseupdown)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AcceptsReturn">
+      <MemberSignature Language="C#" Value="public bool AcceptsReturn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AcceptsReturn" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TextBoxBase.AcceptsReturn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab bzw. legt einen Wert fest, der angibt, wie das Steuerelement zur Textbearbeitung reagiert, wenn Benutzer die EINGABETASTE drücken.</summary>
+        <value>
+          <see langword="true" />, wenn durch Drücken der EINGABETASTE an der aktuellen Cursorposition eine neue Zeile eingefügt wird, andernfalls wird die EINGABETASTE ignoriert. Der Standardwert ist <see langword="false" /> für <see cref="T:System.Windows.Controls.TextBox" /> und <see langword="true" /> für <see cref="T:System.Windows.Controls.RichTextBox" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die EINGABETASTE entspricht `VK_RETURN` virtuellem Tastencode.  
+  
+<a name="dependencyPropertyInfo_AcceptsReturn"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.TextBoxBase.AcceptsReturnProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptsReturnProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty AcceptsReturnProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty AcceptsReturnProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TextBoxBase.AcceptsReturnProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.TextBoxBase.AcceptsReturn" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptsTab">
+      <MemberSignature Language="C#" Value="public bool AcceptsTab { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AcceptsTab" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TextBoxBase.AcceptsTab" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab bzw. legt einen Wert fest, der angibt, wie das Steuerelement zur Textbearbeitung reagiert, wenn Benutzer die Tab-Taste drücken.</summary>
+        <value>
+          <see langword="true" />, wenn durch Drücken der TABULATORTASTE ein Tabstoppzeichen an der aktuellen Cursorposition eingefügt wird; <see langword="false" />, wenn durch Drücken der TABULATORTASTE der Fokus auf das nächste Steuerelement in der Aktivierreihenfolge verschoben und kein Tabstoppzeichen eingefügt wird.  
+  
+ Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die TAB-Taste entspricht **VK_TAB** virtuellem Tastencode.  
+  
+<a name="dependencyPropertyInfo_AcceptsTab"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.TextBoxBase.AcceptsTabProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptsTabProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty AcceptsTabProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty AcceptsTabProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TextBoxBase.AcceptsTabProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.TextBoxBase.AcceptsTab" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendText">
+      <MemberSignature Language="C#" Value="public void AppendText (string textData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendText(string textData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.AppendText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textData" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="textData">Eine Zeichenfolge, die den Text zum Anfügen an den aktuellen Inhalt des Textsteuerelements angibt.</param>
+        <summary>Fügt eine Zeichenfolge mit dem Inhalt des Text-Steuerelement an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.Primitives.TextBoxBase.AppendText%2A> Methode ermöglicht dem Benutzer das Anfügen von Text an den Inhalt eines Textsteuerelements ohne textverkettungsoperatoren, was eine bessere Leistung führen kann, wenn viele Verkettungen erforderlich sind.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.Windows.Controls.Primitives.TextBoxBase.AppendText%2A>-Methode veranschaulicht.  
+  
+ [!code-csharp[TextBoxBase_Samp#TextBoxBase11](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxBase_Samp/CSharp/Window1.xaml.cs#textboxbase11)]
+ [!code-vb[TextBoxBase_Samp#TextBoxBase11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxBase_Samp/VisualBasic/Window1.xaml.vb#textboxbase11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoWordSelection">
+      <MemberSignature Language="C#" Value="public bool AutoWordSelection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoWordSelection" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TextBoxBase.AutoWordSelection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der bestimmt, ob ein Benutzer Teil eines Worts auswählt, indem Sie mit der Maus ziehen, der Rest des Worts aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn die automatische Auswahl aktiviert ist; andernfalls <see langword="false" />.  
+  
+ Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Windows.Controls.Primitives.TextBoxBase.AutoWordSelection%2A> ist aktiviert, jedes Mal, wenn der Benutzer über einen Teil eines Worts, das mit der Maus ziehen, dass ein Teil eines Worts ausgewählt ist, die Auswahl wird automatisch erweitert, um das ganze Wort enthalten. Der Benutzer kann die automatischen Auswahl eines ganzen Worts überschreiben, indem vorübergehend umgekehrt die Richtung, in der der Mauszeiger gezogen wird. Diese Aktion rückgängig macht die automatische Auswahl des ganzen Worts und ermöglicht es dem Benutzer das Wort ganz oder teilweise genau zu markieren.  
+  
+ Wenn <xref:System.Windows.Controls.Primitives.TextBoxBase.AutoWordSelection%2A> ist deaktiviert, eine Auswahl wird nicht automatisch erweitert, um ganze Wörter sind u. a.; in diesem Fall präzise Auswahl immer manuell bestimmt werden.  
+  
+ **Hinweis:** automatische Auswahl wirkt sich nicht auf das erste Wort, das der Benutzer über gezogen. Es wird erst nach dieser ersten Wortgrenze ist, dass die automatische Auswahl in Kraft tritt.  
+  
+<a name="dependencyPropertyInfo_AutoWordSelection"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.TextBoxBase.AutoWordSelectionProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoWordSelectionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty AutoWordSelectionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty AutoWordSelectionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TextBoxBase.AutoWordSelectionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.TextBoxBase.AutoWordSelection" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginChange">
+      <MemberSignature Language="C#" Value="public void BeginChange ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void BeginChange() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.BeginChange" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beginnt einen Änderungsblock.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ **Hinweis:** beim Aufruf <xref:System.Windows.Controls.Primitives.TextBoxBase.BeginChange%2A>, müssen Sie auch aufrufen <xref:System.Windows.Controls.Primitives.TextBoxBase.EndChange%2A> den Änderungsblock abgeschlossen andernfalls eine Ausnahme ausgelöst.  
+  
+ Ein Änderungsblock logisch gruppiert mehrere Änderungen in einen einzelnen Rückgängig-Komponente und verhindert, dass Text-Inhalt oder Auswahl Änderungsereignisse erst nach den Änderungsblock ausgelöst wird. Auf diese Weise können Sie mehrere Änderungen an das Textelement ohne das Risiko des Textelements zur gleichen Zeit geändert wird, die von einem anderen Listener vornehmen. Ein Änderungsblock wird erstellt, durch Aufrufen der <xref:System.Windows.Controls.Primitives.TextBoxBase.DeclareChangeBlock%2A> Methode. Aufrufen der <xref:System.Windows.Controls.Primitives.TextBoxBase.BeginChange%2A> Methode bewirkt, dass alle nachfolgenden Änderungen in den angegebenen Änderungsblock einbezogen werden, bis ein entsprechender Aufruf von der <xref:System.Windows.Controls.Primitives.TextBoxBase.EndChange%2A> Methode erfolgt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Controls.Primitives.TextBoxBase.BeginChange%2A> und <xref:System.Windows.Controls.Primitives.TextBoxBase.EndChange%2A> Methoden zum Erstellen eines Blocks ändern.  
+  
+ [!code-csharp[TextBoxMiscSnippets_procedural_snip#BeginChangeEndChangeCodeExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_procedural_snip/CSharp/BeginChangeEndChangeExample.cs#beginchangeendchangecodeexampleinline1)]
+ [!code-vb[TextBoxMiscSnippets_procedural_snip#BeginChangeEndChangeCodeExampleInline1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxMiscSnippets_procedural_snip/visualbasic/beginchangeendchangeexample.vb#beginchangeendchangecodeexampleinline1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRedo">
+      <MemberSignature Language="C#" Value="public bool CanRedo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanRedo" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TextBoxBase.CanRedo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die letzte Rückgängig-Aktion wiederholt werden kann.</summary>
+        <value>
+          <see langword="true" />Wenn die letzte Rückgängig-Aktion wiederholt werden kann; andernfalls <see langword="false" />.  
+  
+ Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Controls.Primitives.TextBoxBase.CanRedo%2A> Eigenschaft, um zu bestimmen, ob die letzte Rückgängig-Aktion wiederholt werden kann.  
+  
+ [!code-csharp[TextBoxBase_Samp#TextBoxBase9](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxBase_Samp/CSharp/Window1.xaml.cs#textboxbase9)]
+ [!code-vb[TextBoxBase_Samp#TextBoxBase9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxBase_Samp/VisualBasic/Window1.xaml.vb#textboxbase9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanUndo">
+      <MemberSignature Language="C#" Value="public bool CanUndo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanUndo" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TextBoxBase.CanUndo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die letzte Aktion rückgängig gemacht werden kann.</summary>
+        <value>
+          <see langword="true" />Wenn die letzte Aktion rückgängig gemacht werden kann. andernfalls <see langword="false" />.  
+  
+ Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Controls.Primitives.TextBoxBase.CanUndo%2A> Eigenschaft, um zu bestimmen, ob die letzte Aktion rückgängig gemacht werden kann.  
+  
+ [!code-csharp[TextBoxBase_Samp#TextBoxBase8](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxBase_Samp/CSharp/Window1.xaml.cs#textboxbase8)]
+ [!code-vb[TextBoxBase_Samp#TextBoxBase8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxBase_Samp/VisualBasic/Window1.xaml.vb#textboxbase8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CaretBrush">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush CaretBrush { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush CaretBrush" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TextBoxBase.CaretBrush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Pinsel, der zum Zeichnen der Einfügemarke des Textfelds verwendet wird.</summary>
+        <value>Der Pinsel, der zum Zeichnen der Einfügemarke des Textfelds verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Controls.TextBox> und fügt den Text "This is some Text." Im Beispiel wird die <xref:System.Windows.Controls.Primitives.TextBoxBase.CaretBrush%2A> und <xref:System.Windows.Controls.Control.Foreground%2A> Eigenschaften einer <xref:System.Windows.Controls.TextBox> Blau.  
+  
+ [!code-xaml[TextBaseSelectionBrush#TextBox](~/samples/snippets/csharp/VS_Snippets_Wpf/textbaseselectionbrush/CS/window1.xaml#textbox)]   
+  
+ Im vorhergehende Beispiel die Ausgabe, die der folgenden Abbildung ähnelt.  
+  
+ ![TextBox mit CaretBrush festgelegt auf Blau. ] (~/add/media/textboxcaretbrush.png "TextBox mit CaretBrush auf Blau festgelegt.")  
+TextBox mit CaretBrush festgelegt auf Blau.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CaretBrushProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CaretBrushProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CaretBrushProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TextBoxBase.CaretBrushProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.TextBoxBase.CaretBrush" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public void Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Kopiert die aktuelle Auswahl des Textbearbeitungssteuerelements auf die <see cref="T:System.Windows.Clipboard" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Vorgang zum Kopieren, kopiert den ausgewählten Text auf der <xref:System.Windows.Clipboard>. Beachten Sie, dass es sich bei der ausgewählte Text aus Textbearbeitungssteuerelements im Prozess nicht entfernt wird. Eine ähnliche Methode <xref:System.Windows.Controls.Primitives.TextBoxBase.Cut%2A>, verschiebt die aktuelle Auswahl der <xref:System.Windows.Clipboard> und entfernt den ausgewählten Text aus Textbearbeitungssteuerelements im Prozess.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Windows.Controls.Primitives.TextBoxBase.Copy%2A> Methode, um den Text kopieren, die ausgewählt wurde ein <xref:System.Windows.Controls.TextBox> Steuerelement.  
+  
+ [!code-csharp[TextBoxBase_Samp#TextBoxBase4](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxBase_Samp/CSharp/Window1.xaml.cs#textboxbase4)]
+ [!code-vb[TextBoxBase_Samp#TextBoxBase4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxBase_Samp/VisualBasic/Window1.xaml.vb#textboxbase4)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">für volle Vertrauenswürdigkeit für erben. Dieser Member kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Cut">
+      <MemberSignature Language="C#" Value="public void Cut ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Cut() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.Cut" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt die aktuelle Auswahl aus dem Textbearbeitungssteuerelement und kopiert ihn auf die <see cref="T:System.Windows.Clipboard" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ausschneidevorgangs entfernt die aktuelle Auswahl aus dem Textbearbeitungssteuerelement und kopiert ihn auf die <xref:System.Windows.Clipboard>. Beachten Sie, dass der ausgewählte Text entfernt wird (cut) von Textbearbeitungssteuerelements im Prozess. Eine ähnliche Methode <xref:System.Windows.Controls.Primitives.TextBoxBase.Copy%2A>, die aktuelle Auswahl in die Zwischenablage kopiert, aber nicht den ausgewählten Text aus Textbearbeitungssteuerelements entfernt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Windows.Controls.Primitives.TextBoxBase.Cut%2A> Methode, um den Text zu löschen, die ausgewählt wurde ein <xref:System.Windows.Controls.TextBox> Steuerelement.  
+  
+ [!code-csharp[TextBoxBase_Samp#TextBoxBase5](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxBase_Samp/CSharp/Window1.xaml.cs#textboxbase5)]
+ [!code-vb[TextBoxBase_Samp#TextBoxBase5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxBase_Samp/VisualBasic/Window1.xaml.vb#textboxbase5)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">für volle Vertrauenswürdigkeit für erben. Dieser Member kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DeclareChangeBlock">
+      <MemberSignature Language="C#" Value="public IDisposable DeclareChangeBlock ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IDisposable DeclareChangeBlock() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.DeclareChangeBlock" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IDisposable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen Änderungsblock.</summary>
+        <returns>Ein <see cref="T:System.IDisposable" /> -Objekt, das auf einen neuen Änderungsblock verweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Änderungsblock Gruppen logisch mehrere Änderungen in einen einzelnen Rückgängig-Komponente. Ein Änderungsblock wird erstellt, durch Aufrufen der <xref:System.Windows.Controls.Primitives.TextBoxBase.DeclareChangeBlock%2A> Methode. Aufrufen der <xref:System.Windows.Controls.Primitives.TextBoxBase.BeginChange%2A> Methode bewirkt, dass alle nachfolgenden Änderungen in den angegebenen Änderungsblock einbezogen werden, bis ein entsprechender Aufruf von der <xref:System.Windows.Controls.Primitives.TextBoxBase.EndChange%2A> Methode erfolgt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndChange">
+      <MemberSignature Language="C#" Value="public void EndChange ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndChange() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.EndChange" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet einen Änderungsblock.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ **Hinweis:** beim Aufruf <xref:System.Windows.Controls.Primitives.TextBoxBase.BeginChange%2A>, müssen Sie auch aufrufen <xref:System.Windows.Controls.Primitives.TextBoxBase.EndChange%2A> den Änderungsblock abgeschlossen andernfalls eine Ausnahme ausgelöst.  
+  
+ Ein Änderungsblock logisch gruppiert mehrere Änderungen in einen einzelnen Rückgängig-Komponente und verhindert, dass Text-Inhalt oder Auswahl Änderungsereignisse erst nach den Änderungsblock ausgelöst wird. Auf diese Weise können Sie mehrere Änderungen an das Textelement ohne das Risiko des Textelements zur gleichen Zeit geändert wird, die von einem anderen Prozess vornehmen. Ein Änderungsblock wird erstellt, durch Aufrufen der <xref:System.Windows.Controls.Primitives.TextBoxBase.DeclareChangeBlock%2A> Methode. Aufrufen der <xref:System.Windows.Controls.Primitives.TextBoxBase.BeginChange%2A> Methode bewirkt, dass alle nachfolgenden Änderungen in den angegebenen Änderungsblock einbezogen werden, bis ein entsprechender Aufruf von der <xref:System.Windows.Controls.Primitives.TextBoxBase.EndChange%2A> Methode erfolgt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Controls.Primitives.TextBoxBase.BeginChange%2A> und <xref:System.Windows.Controls.Primitives.TextBoxBase.EndChange%2A> Methoden zum Erstellen eines Blocks ändern.  
+  
+ [!code-csharp[TextBoxMiscSnippets_procedural_snip#BeginChangeEndChangeCodeExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_procedural_snip/CSharp/BeginChangeEndChangeExample.cs#beginchangeendchangecodeexampleinline1)]
+ [!code-vb[TextBoxMiscSnippets_procedural_snip#BeginChangeEndChangeCodeExampleInline1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxMiscSnippets_procedural_snip/visualbasic/beginchangeendchangeexample.vb#beginchangeendchangecodeexampleinline1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtentHeight">
+      <MemberSignature Language="C#" Value="public double ExtentHeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ExtentHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TextBoxBase.ExtentHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die vertikale Größe des sichtbaren Inhaltsbereichs ab.</summary>
+        <value>Ein Gleitkommawert, der angibt, der die vertikale Größe des sichtbaren Inhaltsbereichs in [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)].  
+  
+ Der Wert dieser Eigenschaft ist 0,0 an, wenn das Textbearbeitungssteuerelement nicht konfiguriert ist, um einen Bildlauf zu unterstützen.  
+  
+ Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie der Wert der gelesenen der <xref:System.Windows.Controls.Primitives.TextBoxBase.ExtentHeight%2A> Eigenschaft.  
+  
+ [!code-csharp[TextBoxBase_Samp#TextBoxBase3](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxBase_Samp/CSharp/Window1.xaml.cs#textboxbase3)]
+ [!code-vb[TextBoxBase_Samp#TextBoxBase3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxBase_Samp/VisualBasic/Window1.xaml.vb#textboxbase3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtentWidth">
+      <MemberSignature Language="C#" Value="public double ExtentWidth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ExtentWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TextBoxBase.ExtentWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die horizontale Größe des sichtbaren Inhaltsbereichs ab.</summary>
+        <value>Ein Gleitkommawert, der angibt, der die horizontale Größe des sichtbaren Inhaltsbereichs in [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)].  
+  
+ Der Wert dieser Eigenschaft ist 0,0, wenn das Bearbeitungssteuerelement Text nicht, zum Durchführen eines Bildlaufs unterstützt konfiguriert ist.  
+  
+ Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie der Wert der gelesenen der <xref:System.Windows.Controls.Primitives.TextBoxBase.ExtentWidth%2A> Eigenschaft.  
+  
+ [!code-csharp[TextBoxBase_Samp#TextBoxBase3](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxBase_Samp/CSharp/Window1.xaml.cs#textboxbase3)]
+ [!code-vb[TextBoxBase_Samp#TextBoxBase3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxBase_Samp/VisualBasic/Window1.xaml.vb#textboxbase3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalOffset">
+      <MemberSignature Language="C#" Value="public double HorizontalOffset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 HorizontalOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TextBoxBase.HorizontalOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die horizontale Bildlaufposition ab oder legt sie fest.</summary>
+        <value>Ein Gleitkommawert, der angibt, die horizontale Bildlaufposition in [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)].  
+  
+ Durch Festlegen dieser Eigenschaft führt dazu, dass die Textbearbeitungssteuerelements einen Bildlauf bis zum angegebenen horizontalen Offset. Lesen diese Eigenschaft gibt die aktuellen horizontalen Offset zurück.  
+  
+ Der Wert dieser Eigenschaft ist 0,0, wenn das Bearbeitungssteuerelement Text nicht, zum Durchführen eines Bildlaufs unterstützt konfiguriert ist.  
+  
+ Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der horizontale Offset wird vom rechten Rand des sichtbaren Textbereichs gemessen, wenn Sie im rechts-nach-links-Modus arbeiten; Andernfalls wird es von der linken Seite gemessen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie der Wert der gelesenen der <xref:System.Windows.Controls.Primitives.TextBoxBase.HorizontalOffset%2A> Eigenschaft.  
+  
+ [!code-csharp[TextBoxBase_Samp#TextBoxBase3](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxBase_Samp/CSharp/Window1.xaml.cs#textboxbase3)]
+ [!code-vb[TextBoxBase_Samp#TextBoxBase3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxBase_Samp/VisualBasic/Window1.xaml.vb#textboxbase3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Es wird versucht, diese Eigenschaft auf einen negativen Wert festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalScrollBarVisibility">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.ScrollBarVisibility HorizontalScrollBarVisibility { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.ScrollBarVisibility HorizontalScrollBarVisibility" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TextBoxBase.HorizontalScrollBarVisibility" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ScrollBarVisibility</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob eine horizontale Bildlaufleiste angezeigt wird.</summary>
+        <value>Ein Wert, der definiert wird die <see cref="T:System.Windows.Controls.ScrollBarVisibility" /> Enumeration.  
+  
+ Der Standardwert ist <see cref="F:System.Windows.Visibility.Hidden" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_HorizontalScrollBarVisibility"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.TextBoxBase.HorizontalScrollBarVisibilityProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht das Festlegen des Werts der <xref:System.Windows.Controls.Primitives.TextBoxBase.HorizontalScrollBarVisibility%2A> Eigenschaft mithilfe von [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)].  
+  
+ [!code-xaml[TextBoxBase_Samp#TextBoxBase1](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxBase_Samp/CSharp/Window1.xaml#textboxbase1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalScrollBarVisibilityProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HorizontalScrollBarVisibilityProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HorizontalScrollBarVisibilityProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TextBoxBase.HorizontalScrollBarVisibilityProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.TextBoxBase.HorizontalScrollBarVisibility" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInactiveSelectionHighlightEnabled">
+      <MemberSignature Language="C#" Value="public bool IsInactiveSelectionHighlightEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInactiveSelectionHighlightEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TextBoxBase.IsInactiveSelectionHighlightEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Textfeld markierter Text angezeigt, wenn das Textfeld nicht den Fokus besitzt.</summary>
+        <value>
+          <see langword="true" />Wenn das Textfeld markierter Text angezeigt, wenn das Textfeld nicht den Fokus besitzt; andernfalls <see langword="false" />.  
+  
+ Der registrierte Standardwert ist <see langword="false" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter [Dependency Property Value Precedence](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_IsInactiveSelectionHighlightEnabled"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.TextBoxBase.IsInactiveSelectionHighlightEnabledProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInactiveSelectionHighlightEnabledProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsInactiveSelectionHighlightEnabledProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsInactiveSelectionHighlightEnabledProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TextBoxBase.IsInactiveSelectionHighlightEnabledProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.TextBoxBase.IsInactiveSelectionHighlightEnabled" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TextBoxBase.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab bzw. legt einen Wert fest, der angibt, ob das Steuerelement zur Textbearbeitung für einen Benutzer, der das Steuerelement interaktiv verwendet, schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Inhalt des Textbearbeitungssteuerelements für einen Benutzer schreibgeschützt sind. Andernfalls können der Inhalt des Textbearbeitungssteuerelements vom Benutzer geändert werden. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert wirkt sich nur einen Benutzer, der mit dem Steuerelement interagiert. Der Inhalt des Textbearbeitungssteuerelements können immer programmatisch geändert werden.  
+  
+<a name="dependencyPropertyInfo_IsReadOnly"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.TextBoxBase.IsReadOnlyProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnlyCaretVisible">
+      <MemberSignature Language="C#" Value="public bool IsReadOnlyCaretVisible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnlyCaretVisible" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TextBoxBase.IsReadOnlyCaretVisible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob ein nur-Lese Textfeld eine Einfügemarke angezeigt.</summary>
+        <value>
+          <see langword="true" />Wenn ein nur-Lese Textfeld eine Einfügemarke angezeigt wird; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Windows.Controls.Primitives.TextBoxBase.IsReadOnly%2A> ist `true`, ein Benutzer kann weiterhin Text auswählen und kopieren. Wenn die <xref:System.Windows.Controls.Primitives.TextBoxBase.IsReadOnlyCaretVisible%2A> -Eigenschaftensatz ist auch auf `true`, ein Caretzeichen in das Textfeld angezeigt, wenn das Textfeld den Tastaturfokus verfügt. Wenn <xref:System.Windows.Controls.Primitives.TextBoxBase.IsReadOnly%2A> ist `false`die <xref:System.Windows.Controls.Primitives.TextBoxBase.IsReadOnlyCaretVisible%2A> Eigenschaft hat keine Auswirkungen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnlyCaretVisibleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsReadOnlyCaretVisibleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsReadOnlyCaretVisibleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TextBoxBase.IsReadOnlyCaretVisibleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.TextBoxBase.IsReadOnlyCaretVisible" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnlyProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsReadOnlyProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsReadOnlyProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TextBoxBase.IsReadOnlyProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.TextBoxBase.IsReadOnly" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSelectionActive">
+      <MemberSignature Language="C#" Value="public bool IsSelectionActive { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSelectionActive" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TextBoxBase.IsSelectionActive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Textfeld den Fokus und den ausgewählten Text verfügt.</summary>
+        <value>
+          <see langword="true" />Wenn das Textfeld den Fokus und den ausgewählten Text enthält. andernfalls <see langword="false" />.  
+  
+ Der registrierte Standardwert ist <see langword="false" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter [Dependency Property Value Precedence](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_IsSelectionActive"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.TextBoxBase.IsSelectionActiveProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSelectionActiveProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsSelectionActiveProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsSelectionActiveProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TextBoxBase.IsSelectionActiveProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.TextBoxBase.IsSelectionActive" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUndoEnabled">
+      <MemberSignature Language="C#" Value="public bool IsUndoEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsUndoEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TextBoxBase.IsUndoEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Rückgängig-Unterstützung für das Textbearbeitungssteuerelement aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Rückgängig-Unterstützung aktiviert ist; andernfalls <see langword="false" />. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft auf `false` löscht den Rückgängigstapel. Aus diesem Grund Wenn Sie zum Rückgängigmachen deaktivieren und dann wieder aktivieren, funktionieren Rückgängig-Befehle weiterhin nicht, da die Rückgängig-Stapel geleert wurde, wenn Sie zum Rückgängigmachen deaktiviert.  
+  
+<a name="dependencyPropertyInfo_IsUndoEnabled"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.TextBoxBase.IsUndoEnabledProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Windows.Controls.Primitives.TextBoxBase.IsUndoEnabled%2A> Eigenschaft im [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)].  
+  
+ [!code-xaml[TextBoxBase_Samp#TextBoxBase1](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxBase_Samp/CSharp/Window1.xaml#textboxbase1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUndoEnabledProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsUndoEnabledProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsUndoEnabledProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TextBoxBase.IsUndoEnabledProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.TextBoxBase.IsUndoEnabled" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineDown">
+      <MemberSignature Language="C#" Value="public void LineDown ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LineDown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.LineDown" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Scrollt durch den Inhalt des Steuerelements nach unten durch eine Linie ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Windows.Controls.Primitives.TextBoxBase.LineDown%2A> Methode, um den Bildlauf eine <xref:System.Windows.Controls.TextBox> Steuerelement.  
+  
+ [!code-csharp[TextBoxBase_Samp#TextBoxBase13](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxBase_Samp/CSharp/Window1.xaml.cs#textboxbase13)]
+ [!code-vb[TextBoxBase_Samp#TextBoxBase13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxBase_Samp/VisualBasic/Window1.xaml.vb#textboxbase13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineLeft">
+      <MemberSignature Language="C#" Value="public void LineLeft ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LineLeft() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.LineLeft" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Scrollt durch den Inhalt des Steuerelements auf der linken Seite, um eine Zeile aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Windows.Controls.Primitives.TextBoxBase.LineLeft%2A> Methode, um den Bildlauf eine <xref:System.Windows.Controls.TextBox> Steuerelement.  
+  
+ [!code-csharp[TextBoxBase_Samp#TextBoxBase14](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxBase_Samp/CSharp/Window1.xaml.cs#textboxbase14)]
+ [!code-vb[TextBoxBase_Samp#TextBoxBase14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxBase_Samp/VisualBasic/Window1.xaml.vb#textboxbase14)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineRight">
+      <MemberSignature Language="C#" Value="public void LineRight ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LineRight() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.LineRight" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Scrollt durch den Inhalt des Steuerelements nach rechts um eine Zeile aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Windows.Controls.Primitives.TextBoxBase.LineRight%2A> Methode, um den Bildlauf eine <xref:System.Windows.Controls.TextBox> Steuerelement.  
+  
+ [!code-csharp[TextBoxBase_Samp#TextBoxBase15](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxBase_Samp/CSharp/Window1.xaml.cs#textboxbase15)]
+ [!code-vb[TextBoxBase_Samp#TextBoxBase15](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxBase_Samp/VisualBasic/Window1.xaml.vb#textboxbase15)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineUp">
+      <MemberSignature Language="C#" Value="public void LineUp ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LineUp() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.LineUp" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Scrollt durch den Inhalt des Steuerelements nach oben, um eine Zeile.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Windows.Controls.Primitives.TextBoxBase.LineUp%2A> Methode, um den Bildlauf eine <xref:System.Windows.Controls.TextBox> Steuerelement.  
+  
+ [!code-csharp[TextBoxBase_Samp#TextBoxBase16](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxBase_Samp/CSharp/Window1.xaml.cs#textboxbase16)]
+ [!code-vb[TextBoxBase_Samp#TextBoxBase16](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxBase_Samp/VisualBasic/Window1.xaml.vb#textboxbase16)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LockCurrentUndoUnit">
+      <MemberSignature Language="C#" Value="public void LockCurrentUndoUnit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LockCurrentUndoUnit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.LockCurrentUndoUnit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Sperrt die letzte Rückgängig-Komponente, die Rückgängig-Stapel von der Anwendung an. Dadurch wird verhindert, dass die gesperrte Einheit mit Rückgängigeinheiten, die später hinzugefügt werden, die zusammengeführt werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie diese Methode, wenn die Anwendung main Rückgängig-Stapel einen-n Nichttext Rückgängig-Komponente hinzugefügt wird. Dadurch wird verhindert, dass die gesperrte Einheit mit Rückgängigeinheiten, die später hinzugefügt werden, die zusammengeführt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnApplyTemplate">
+      <MemberSignature Language="C#" Value="public override void OnApplyTemplate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnApplyTemplate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.OnApplyTemplate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, wenn eine Steuerelementvorlage angewendet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überschreibt <xref:System.Windows.FrameworkElement.OnApplyTemplate%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Implementieren in einer abgeleiteten Klasse wird diese Methode aufgerufen, wenn Anwendungscode oder interne Prozesse rufen <see cref="M:System.Windows.FrameworkElement.ApplyTemplate" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnContextMenuOpening">
+      <MemberSignature Language="C#" Value="protected override void OnContextMenuOpening (System.Windows.Controls.ContextMenuEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnContextMenuOpening(class System.Windows.Controls.ContextMenuEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.OnContextMenuOpening(System.Windows.Controls.ContextMenuEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Controls.ContextMenuEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Argumente des Ereignisses.</param>
+        <summary>Wird aufgerufen, sobald ein nicht behandeltes <see cref="E:System.Windows.FrameworkElement.ContextMenuOpening" /> Routingereignis beim Durchlauf, erreicht dieser Klasse in seiner Route. Implementieren Sie diese Methode, um eine Klassenbehandlung für dieses Ereignis hinzuzufügen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode hat keine Standardimplementierung. Für den Fall, dass eine Zwischenklasse in der Vererbung diese Methode implementiert hat, sollten Sie dennoch die basisimplementierung aufrufen.  
+  
+ Wird diese Methode ähnelt der [!INCLUDE[TLA#tla_clr](~/includes/tlasharptla-clr-md.md)] -Ereignismuster auf * Methoden: sie können das übereinstimmende Ereignis von abgeleiteten Klassen zu behandeln, indem Sie einem Klassenhandler statt einem Instanzhandler. In diesem Fall wird das übereinstimmende Ereignis ein Routingereignis. Das Implementierungsmuster der On * Methoden unterscheidet sich für Routingereignisse, da das Routingereignis von einem untergeordneten Element ausgelöst werden kann, dies ist nicht notwendigerweise das Element, das Handler aufruft. Aus diesem Grund Ihrer Implementierung muss die Argumente berücksichtigen (und sollten nicht versuchen, erneut Auslösen des Ereignisses in den meisten Fällen). Unterklassen des <xref:System.Windows.Controls.Primitives.TextBoxBase> können Ereignishandlermethoden private Klasse aufrufen, wenn das Ereignis entlang der Route empfangen wird. Ein Szenario besteht darin die Argumente des Ereignisses und das Ereignis absichtlich als behandelt markiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDragEnter">
+      <MemberSignature Language="C#" Value="protected override void OnDragEnter (System.Windows.DragEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDragEnter(class System.Windows.DragEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.OnDragEnter(System.Windows.DragEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.DragEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Stellt Daten zum Ereignis.</param>
+        <summary>Wird aufgerufen, wenn ein nicht behandeltes <see cref="E:System.Windows.DragDrop.DragEnter" /> angefügten Routingereignis beim Durchlauf erreicht ein Element, das von dieser Klasse in seiner Route abgeleitet. Implementieren Sie diese Methode, um eine Klassenbehandlung für dieses Ereignis hinzuzufügen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDragLeave">
+      <MemberSignature Language="C#" Value="protected override void OnDragLeave (System.Windows.DragEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDragLeave(class System.Windows.DragEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.OnDragLeave(System.Windows.DragEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.DragEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Stellt Daten zum Ereignis.</param>
+        <summary>Wird aufgerufen, wenn ein nicht behandeltes <see cref="E:System.Windows.DragDrop.DragLeave" /> angefügten Routingereignis beim Durchlauf erreicht ein Element, das von dieser Klasse in seiner Route abgeleitet. Implementieren Sie diese Methode, um eine Klassenbehandlung für dieses Ereignis hinzuzufügen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDragOver">
+      <MemberSignature Language="C#" Value="protected override void OnDragOver (System.Windows.DragEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDragOver(class System.Windows.DragEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.OnDragOver(System.Windows.DragEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.DragEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Stellt Daten zum Ereignis.</param>
+        <summary>Wird aufgerufen, wenn ein nicht behandeltes <see cref="E:System.Windows.DragDrop.DragOver" /> angefügten Routingereignis beim Durchlauf erreicht ein Element, das von dieser Klasse in seiner Route abgeleitet. Implementieren Sie diese Methode, um eine Klassenbehandlung für dieses Ereignis hinzuzufügen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDrop">
+      <MemberSignature Language="C#" Value="protected override void OnDrop (System.Windows.DragEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDrop(class System.Windows.DragEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.OnDrop(System.Windows.DragEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.DragEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Stellt Daten zum Ereignis.</param>
+        <summary>Wird aufgerufen, wenn ein nicht behandeltes <see cref="E:System.Windows.DragDrop.DragEnter" /> angefügten Routingereignis beim Durchlauf erreicht ein Element, das von dieser Klasse in seiner Route abgeleitet. Implementieren Sie diese Methode, um eine Klassenbehandlung für dieses Ereignis hinzuzufügen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnGiveFeedback">
+      <MemberSignature Language="C#" Value="protected override void OnGiveFeedback (System.Windows.GiveFeedbackEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnGiveFeedback(class System.Windows.GiveFeedbackEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.OnGiveFeedback(System.Windows.GiveFeedbackEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.GiveFeedbackEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Stellt Daten zum Ereignis.</param>
+        <summary>Wird aufgerufen, wenn ein nicht behandeltes <see cref="E:System.Windows.DragDrop.GiveFeedback" /> angefügten Routingereignis beim Durchlauf erreicht ein Element, das von dieser Klasse in seiner Route abgeleitet. Implementieren Sie diese Methode, um eine Klassenbehandlung für dieses Ereignis hinzuzufügen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnGotKeyboardFocus">
+      <MemberSignature Language="C#" Value="protected override void OnGotKeyboardFocus (System.Windows.Input.KeyboardFocusChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnGotKeyboardFocus(class System.Windows.Input.KeyboardFocusChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.OnGotKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyboardFocusChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Stellt Daten zum Ereignis.</param>
+        <summary>Wird aufgerufen, wenn ein nicht behandeltes <see cref="E:System.Windows.Input.Keyboard.GotKeyboardFocus" /> angefügten Routingereignis beim Durchlauf erreicht ein Element, das von dieser Klasse in seiner Route abgeleitet. Implementieren Sie diese Methode, um eine Klassenbehandlung für dieses Ereignis hinzuzufügen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyDown">
+      <MemberSignature Language="C#" Value="protected override void OnKeyDown (System.Windows.Input.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyDown(class System.Windows.Input.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.OnKeyDown(System.Windows.Input.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Stellt Daten zum Ereignis.</param>
+        <summary>Wird aufgerufen, wenn ein nicht behandeltes <see cref="E:System.Windows.Input.Keyboard.KeyDown" /> angefügten Routingereignis beim Durchlauf erreicht ein Element, das von dieser Klasse in seiner Route abgeleitet. Implementieren Sie diese Methode, um eine Klassenbehandlung für dieses Ereignis hinzuzufügen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyUp">
+      <MemberSignature Language="C#" Value="protected override void OnKeyUp (System.Windows.Input.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyUp(class System.Windows.Input.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.OnKeyUp(System.Windows.Input.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Stellt Daten zum Ereignis.</param>
+        <summary>Wird aufgerufen, wenn ein nicht behandeltes <see cref="E:System.Windows.Input.Keyboard.KeyUp" /> angefügten Routingereignis beim Durchlauf erreicht ein Element, das von dieser Klasse in seiner Route abgeleitet. Implementieren Sie diese Methode, um eine Klassenbehandlung für dieses Ereignis hinzuzufügen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLostFocus">
+      <MemberSignature Language="C#" Value="protected override void OnLostFocus (System.Windows.RoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnLostFocus(class System.Windows.RoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.OnLostFocus(System.Windows.RoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.RoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Stellt Daten zum Ereignis.</param>
+        <summary>Löst das <see cref="E:System.Windows.UIElement.LostFocus" /> Ereignisses (mithilfe der angegebenen Argumente).</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLostKeyboardFocus">
+      <MemberSignature Language="C#" Value="protected override void OnLostKeyboardFocus (System.Windows.Input.KeyboardFocusChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnLostKeyboardFocus(class System.Windows.Input.KeyboardFocusChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.OnLostKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyboardFocusChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Stellt Daten zum Ereignis.</param>
+        <summary>Wird aufgerufen, wenn ein nicht behandeltes <see cref="E:System.Windows.Input.Keyboard.LostKeyboardFocus" /> angefügten Routingereignis beim Durchlauf erreicht ein Element, das von dieser Klasse in seiner Route abgeleitet. Implementieren Sie diese Methode, um eine Klassenbehandlung für dieses Ereignis hinzuzufügen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseDown">
+      <MemberSignature Language="C#" Value="protected override void OnMouseDown (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseDown(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.OnMouseDown(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Stellt Daten zum Ereignis.</param>
+        <summary>Wird aufgerufen, wenn ein nicht behandeltes <see cref="E:System.Windows.Input.Mouse.MouseDown" /> angefügten Routingereignis beim Durchlauf erreicht ein Element, das von dieser Klasse in seiner Route abgeleitet. Implementieren Sie diese Methode, um eine Klassenbehandlung für dieses Ereignis hinzuzufügen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseMove">
+      <MemberSignature Language="C#" Value="protected override void OnMouseMove (System.Windows.Input.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseMove(class System.Windows.Input.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.OnMouseMove(System.Windows.Input.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Stellt Daten zum Ereignis.</param>
+        <summary>Wird aufgerufen, wenn ein nicht behandeltes <see cref="E:System.Windows.Input.Mouse.MouseMove" /> angefügten Routingereignis beim Durchlauf erreicht ein Element, das von dieser Klasse in seiner Route abgeleitet. Implementieren Sie diese Methode, um eine Klassenbehandlung für dieses Ereignis hinzuzufügen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseUp">
+      <MemberSignature Language="C#" Value="protected override void OnMouseUp (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseUp(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.OnMouseUp(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Argumente des Ereignisses. Diese Argumente enthält Details über die Maustaste gedrückt wurde, und zum behandelten Zustand.</param>
+        <summary>Wird aufgerufen, wenn ein nicht behandeltes <see cref="E:System.Windows.Input.Mouse.MouseUp" /> -Ereignis beim Durchlauf ein von dieser Klasse in seiner Route abgeleitetes Element erreicht.. Implementieren Sie diese Methode, um eine Klassenbehandlung für dieses Ereignis hinzuzufügen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseWheel">
+      <MemberSignature Language="C#" Value="protected override void OnMouseWheel (System.Windows.Input.MouseWheelEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseWheel(class System.Windows.Input.MouseWheelEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.OnMouseWheel(System.Windows.Input.MouseWheelEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseWheelEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Maus Wheel Argumente, die mit diesem Ereignis verknüpft sind.</param>
+        <summary>Wird aufgerufen, wenn eine <see cref="E:System.Windows.UIElement.MouseWheel" /> Routingereignis wird diese Klasse (oder auf eine Klasse, die von dieser Klasse erbt).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.UIElement.MouseWheel> Ereignis tritt auf, wenn das Mausrad gedreht wird.  
+  
+ Überschreibt <xref:System.Windows.UIElement.OnMouseWheel%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreviewKeyDown">
+      <MemberSignature Language="C#" Value="protected override void OnPreviewKeyDown (System.Windows.Input.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPreviewKeyDown(class System.Windows.Input.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.OnPreviewKeyDown(System.Windows.Input.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Wird aufgerufen, wenn <see cref="E:System.Windows.UIElement.KeyDown" /> auftritt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnQueryContinueDrag">
+      <MemberSignature Language="C#" Value="protected override void OnQueryContinueDrag (System.Windows.QueryContinueDragEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnQueryContinueDrag(class System.Windows.QueryContinueDragEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.OnQueryContinueDrag(System.Windows.QueryContinueDragEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.QueryContinueDragEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Stellt Daten zum Ereignis.</param>
+        <summary>Wird aufgerufen, wenn ein nicht behandeltes <see cref="E:System.Windows.DragDrop.QueryContinueDrag" /> angefügten Routingereignis beim Durchlauf erreicht ein Element, das von dieser Klasse in seiner Route abgeleitet. Implementieren Sie diese Methode, um eine Klassenbehandlung für dieses Ereignis hinzuzufügen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode hat keine Standardimplementierung. Der Aufruf von base() in Ihrer Implementierung wird weiterhin empfohlen, für den Fall, dass eine Zwischenklasse in der Vererbung diese Methode implementiert. Base() kann entweder vor oder nach Ihrem besondere Behandlung, je nach Ihren Anforderungen aufgerufen werden.  
+  
+ Wird diese Methode ähnelt der [!INCLUDE[TLA#tla_clr](~/includes/tlasharptla-clr-md.md)] -Ereignismuster auf * Methoden: sie können das übereinstimmende Ereignis von abgeleiteten Klassen zu behandeln, indem Sie einem Klassenhandler statt einem Instanzhandler. In diesem Fall wird das übereinstimmende Ereignis ein Routingereignis. Das Implementierungsmuster der On * Methoden unterscheidet sich für Routingereignisse, da das Routingereignis von einem untergeordneten Element ausgelöst werden kann, dies ist nicht notwendigerweise das Element, das Handler aufruft. Aus diesem Grund Ihrer Implementierung muss die Argumente berücksichtigen (und sollten nicht versuchen, erneut Auslösen des Ereignisses in den meisten Fällen). Unterklassen des <xref:System.Windows.Controls.Primitives.TextBoxBase> könne Ereignishandlermethoden private Klasse aufgerufen wird, wenn das Ereignis entlang der Route empfangen wird. Ein Szenario ist die Argumente des Ereignisses und das Ereignis als behandelt markiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnQueryCursor">
+      <MemberSignature Language="C#" Value="protected override void OnQueryCursor (System.Windows.Input.QueryCursorEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnQueryCursor(class System.Windows.Input.QueryCursorEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.OnQueryCursor(System.Windows.Input.QueryCursorEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.QueryCursorEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Stellt Daten zum Ereignis.</param>
+        <summary>Wird aufgerufen, wenn ein nicht behandeltes <see cref="E:System.Windows.Input.Mouse.QueryCursor" /> angefügten Routingereignis beim Durchlauf erreicht ein Element, das von dieser Klasse in seiner Route abgeleitet. Implementieren Sie diese Methode, um eine Klassenbehandlung für dieses Ereignis hinzuzufügen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelectionChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnSelectionChanged (System.Windows.RoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSelectionChanged(class System.Windows.RoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.OnSelectionChanged(System.Windows.RoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.RoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Argumente, die zugeordnet sind die <see cref="E:System.Windows.Controls.Primitives.TextBoxBase.SelectionChanged" /> Ereignis.</param>
+        <summary>Wird aufgerufen, wenn die Position der Einfügemarke oder der aktuellen Auswahl geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode löst eine <xref:System.Windows.Controls.Primitives.TextBoxBase.SelectionChanged> Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTemplateChanged">
+      <MemberSignature Language="C#" Value="protected override void OnTemplateChanged (System.Windows.Controls.ControlTemplate oldTemplate, System.Windows.Controls.ControlTemplate newTemplate);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnTemplateChanged(class System.Windows.Controls.ControlTemplate oldTemplate, class System.Windows.Controls.ControlTemplate newTemplate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.OnTemplateChanged(System.Windows.Controls.ControlTemplate,System.Windows.Controls.ControlTemplate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldTemplate" Type="System.Windows.Controls.ControlTemplate" />
+        <Parameter Name="newTemplate" Type="System.Windows.Controls.ControlTemplate" />
+      </Parameters>
+      <Docs>
+        <param name="oldTemplate">Ein <see cref="T:System.Windows.Controls.ControlTemplate" /> -Objekt, das die Vorlage "Steuerelement" gibt an, die derzeit aktiv ist.</param>
+        <param name="newTemplate">Ein <see cref="T:System.Windows.Controls.ControlTemplate" /> Objekt, das eine neue Steuerelementvorlage verwenden angibt.</param>
+        <summary>Wird aufgerufen, wenn die Vorlage des Steuerelements geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überschreibt <xref:System.Windows.Controls.Control.OnTemplateChanged%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTextChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnTextChanged (System.Windows.Controls.TextChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnTextChanged(class System.Windows.Controls.TextChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.OnTextChanged(System.Windows.Controls.TextChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Controls.TextChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Argumente, die zugeordnet sind die <see cref="E:System.Windows.Controls.Primitives.TextBoxBase.TextChanged" /> Ereignis.</param>
+        <summary>Wird aufgerufen, wenn der Inhalt in dieses Bearbeitungssteuerelement geändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode löst eine <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTextInput">
+      <MemberSignature Language="C#" Value="protected override void OnTextInput (System.Windows.Input.TextCompositionEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnTextInput(class System.Windows.Input.TextCompositionEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.OnTextInput(System.Windows.Input.TextCompositionEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.TextCompositionEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Stellt Daten zum Ereignis.</param>
+        <summary>Wird aufgerufen, wenn ein nicht behandeltes <see cref="E:System.Windows.Input.TextCompositionManager.TextInput" /> angefügten Routingereignis beim Durchlauf erreicht ein Element, das von dieser Klasse in seiner Route abgeleitet. Implementieren Sie diese Methode, um eine Klassenbehandlung für dieses Ereignis hinzuzufügen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageDown">
+      <MemberSignature Language="C#" Value="public void PageDown ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PageDown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.PageDown" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Scrollt den Inhalt des Steuerelements nach unten, um eine Seite.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Windows.Controls.Primitives.TextBoxBase.PageDown%2A> Methode, um den Bildlauf eine <xref:System.Windows.Controls.TextBox> Steuerelement.  
+  
+ [!code-csharp[TextBoxBase_Samp#TextBoxBase17](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxBase_Samp/CSharp/Window1.xaml.cs#textboxbase17)]
+ [!code-vb[TextBoxBase_Samp#TextBoxBase17](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxBase_Samp/VisualBasic/Window1.xaml.vb#textboxbase17)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageLeft">
+      <MemberSignature Language="C#" Value="public void PageLeft ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PageLeft() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.PageLeft" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Scrollt durch den Inhalt des Steuerelements auf der linken Seite, um eine Seite aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Windows.Controls.Primitives.TextBoxBase.PageLeft%2A> Methode, um den Bildlauf eine <xref:System.Windows.Controls.TextBox> Steuerelement.  
+  
+ [!code-csharp[TextBoxBase_Samp#TextBoxBase18](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxBase_Samp/CSharp/Window1.xaml.cs#textboxbase18)]
+ [!code-vb[TextBoxBase_Samp#TextBoxBase18](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxBase_Samp/VisualBasic/Window1.xaml.vb#textboxbase18)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageRight">
+      <MemberSignature Language="C#" Value="public void PageRight ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PageRight() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.PageRight" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Scrollt durch den Inhalt des Steuerelements nach rechts um eine Seite aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Windows.Controls.Primitives.TextBoxBase.PageRight%2A> Methode, um den Bildlauf eine <xref:System.Windows.Controls.TextBox> Steuerelement.  
+  
+ [!code-csharp[TextBoxBase_Samp#TextBoxBase19](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxBase_Samp/CSharp/Window1.xaml.cs#textboxbase19)]
+ [!code-vb[TextBoxBase_Samp#TextBoxBase19](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxBase_Samp/VisualBasic/Window1.xaml.vb#textboxbase19)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageUp">
+      <MemberSignature Language="C#" Value="public void PageUp ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PageUp() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.PageUp" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Scrollt durch den Inhalt des Steuerelements sich um eine Seite.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Windows.Controls.Primitives.TextBoxBase.PageUp%2A> Methode, um den Bildlauf eine <xref:System.Windows.Controls.TextBox> Steuerelement.  
+  
+ [!code-csharp[TextBoxBase_Samp#TextBoxBase20](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxBase_Samp/CSharp/Window1.xaml.cs#textboxbase20)]
+ [!code-vb[TextBoxBase_Samp#TextBoxBase20](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxBase_Samp/VisualBasic/Window1.xaml.vb#textboxbase20)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Paste">
+      <MemberSignature Language="C#" Value="public void Paste ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Paste() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.Paste" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fügt den Inhalt der Zwischenablage über der aktuellen Auswahl im Steuerelement bearbeiten Text an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Windows.Controls.Primitives.TextBoxBase.Paste%2A> Methode zum Einfügen von ausgewählten Inhalt in einem <xref:System.Windows.Controls.TextBox> Steuerelement.  
+  
+ [!code-csharp[TextBoxBase_Samp#TextBoxBase6](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxBase_Samp/CSharp/Window1.xaml.cs#textboxbase6)]
+ [!code-vb[TextBoxBase_Samp#TextBoxBase6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxBase_Samp/VisualBasic/Window1.xaml.vb#textboxbase6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Redo">
+      <MemberSignature Language="C#" Value="public bool Redo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Redo() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.Redo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Macht den letzten Befehl "Rückgängig" Rückgängig. Das heißt, wiederholt die letzte Rückgängig-Komponente auf dem Rückgängig-Stapel.</summary>
+        <returns>
+          <see langword="true" />Wenn der Wiederherstellungsvorgang erfolgreich war; andernfalls <see langword="false" />. Diese Methode gibt <see langword="false" /> es ist kein Befehl "Rückgängig" verfügbar ist (der Rückgängig-Stapel leer ist).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.Windows.Controls.Primitives.TextBoxBase.Redo%2A>-Methode veranschaulicht.  
+  
+ [!code-csharp[TextBoxBase_Samp#TextBoxBase9](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxBase_Samp/CSharp/Window1.xaml.cs#textboxbase9)]
+ [!code-vb[TextBoxBase_Samp#TextBoxBase9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxBase_Samp/VisualBasic/Window1.xaml.vb#textboxbase9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollToEnd">
+      <MemberSignature Language="C#" Value="public void ScrollToEnd ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ScrollToEnd() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.ScrollToEnd" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt einen Bildlauf die Ansicht des Bearbeitungssteuerelements bis zum Ende des Inhalts.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Windows.Controls.Primitives.TextBoxBase.ScrollToEnd%2A> Methode, um den Bildlauf eine <xref:System.Windows.Controls.TextBox> Steuerelement.  
+  
+ [!code-csharp[TextBoxBase_Samp#TextBoxBase22](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxBase_Samp/CSharp/Window1.xaml.cs#textboxbase22)]
+ [!code-vb[TextBoxBase_Samp#TextBoxBase22](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxBase_Samp/VisualBasic/Window1.xaml.vb#textboxbase22)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollToHome">
+      <MemberSignature Language="C#" Value="public void ScrollToHome ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ScrollToHome() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.ScrollToHome" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt einen Bildlauf die Ansicht des Bearbeitungssteuerelements zum Anfang des Viewports.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Windows.Controls.Primitives.TextBoxBase.ScrollToHome%2A> Methode, um den Bildlauf eine <xref:System.Windows.Controls.TextBox> Steuerelement.  
+  
+ [!code-csharp[TextBoxBase_Samp#TextBoxBase21](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxBase_Samp/CSharp/Window1.xaml.cs#textboxbase21)]
+ [!code-vb[TextBoxBase_Samp#TextBoxBase21](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxBase_Samp/VisualBasic/Window1.xaml.vb#textboxbase21)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollToHorizontalOffset">
+      <MemberSignature Language="C#" Value="public void ScrollToHorizontalOffset (double offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ScrollToHorizontalOffset(float64 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.ScrollToHorizontalOffset(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="offset">Ein Double-Wert, der den horizontalen Offset angibt, zu dem gescrollt werden soll.</param>
+        <summary>Scrollt durch den Inhalt des Bearbeitungssteuerelements zum angegebenen horizontalen Offset.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollToVerticalOffset">
+      <MemberSignature Language="C#" Value="public void ScrollToVerticalOffset (double offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ScrollToVerticalOffset(float64 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.ScrollToVerticalOffset(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="offset">Ein Double-Wert, der den vertikalen Offset angibt, zu dem gescrollt werden soll.</param>
+        <summary>Scrollt durch den Inhalt des Bearbeitungssteuerelements zum angegebenen vertikalen Offset.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectAll">
+      <MemberSignature Language="C#" Value="public void SelectAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SelectAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.SelectAll" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wählt den gesamten Inhalt des Textbearbeitungssteuerelements.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Windows.Controls.Primitives.TextBoxBase.SelectAll%2A> Methode, um den Inhalt der Auswählen einer <xref:System.Windows.Controls.TextBox> Steuerelement.  
+  
+ [!code-csharp[TextBoxBase_Samp#TextBoxBase7](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxBase_Samp/CSharp/Window1.xaml.cs#textboxbase7)]
+ [!code-vb[TextBoxBase_Samp#TextBoxBase7](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxBase_Samp/VisualBasic/Window1.xaml.vb#textboxbase7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionBrush">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush SelectionBrush { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush SelectionBrush" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TextBoxBase.SelectionBrush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Pinsel, der ausgewählte Text markiert.</summary>
+        <value>Der Pinsel, der ausgewählte Text markiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können angeben, dass den Pinsel, der ausgewählte Text, durch Festlegen markiert der <xref:System.Windows.Controls.Primitives.TextBoxBase.SelectionBrush%2A> und <xref:System.Windows.Controls.Primitives.TextBoxBase.SelectionOpacity%2A> Eigenschaften. Die <xref:System.Windows.Controls.Primitives.TextBoxBase.SelectionOpacity%2A> Eigenschaft gibt an, der die Deckkraft der <xref:System.Windows.Controls.Primitives.TextBoxBase.SelectionBrush%2A>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Controls.TextBox> und fügt den Text "This is some Text." Im Beispiel wird die <xref:System.Windows.Controls.Primitives.TextBoxBase.SelectionBrush%2A> -Eigenschaft auf Rot und die <xref:System.Windows.Controls.Primitives.TextBoxBase.SelectionOpacity%2A> Eigenschaft auf 0,5, um die Darstellung des ausgewählten Texts anzupassen.  
+  
+ [!code-xaml[TextBaseSelectionBrush#TextBox](~/samples/snippets/csharp/VS_Snippets_Wpf/textbaseselectionbrush/CS/window1.xaml#textbox)]   
+  
+ Die folgende Abbildung zeigt die <xref:System.Windows.Controls.TextBox> aus dem vorherigen Beispiel mit ausgewähltem Text.  
+  
+ ![TextBox mit einem roten SelectionBrush](~/add/media/textboxselectionbrush.png "TextBox mit einem roten SelectionBrush")  
+Ausgewählten Text in einem Textfeld mit SelectionBrush festgelegt auf Rot.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionBrushProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SelectionBrushProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SelectionBrushProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TextBoxBase.SelectionBrushProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.TextBoxBase.SelectionBrush" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionChanged">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler SelectionChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler SelectionChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.Primitives.TextBoxBase.SelectionChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich die Textauswahl geändert hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="routedEventInfo_SelectionChanged"></a>   
+## <a name="routed-event-information"></a>Informationen zum Routingereignis  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.TextBoxBase.SelectionChangedEvent>|  
+|Routing-Strategie|Bubbling|  
+|Delegate|<xref:System.Windows.RoutedEventHandler>|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Behandeln der <xref:System.Windows.Controls.Primitives.TextBoxBase.SelectionChanged> Ereignis mithilfe von Code.  
+  
+ [!code-csharp[TextBoxBase_Samp#TextBoxBase10](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxBase_Samp/CSharp/Window1.xaml.cs#textboxbase10)]
+ [!code-vb[TextBoxBase_Samp#TextBoxBase10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxBase_Samp/VisualBasic/Window1.xaml.vb#textboxbase10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionChangedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent SelectionChangedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent SelectionChangedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TextBoxBase.SelectionChangedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert das <see cref="E:System.Windows.Controls.Primitives.TextBoxBase.SelectionChanged" />-Routingereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionOpacity">
+      <MemberSignature Language="C#" Value="public double SelectionOpacity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 SelectionOpacity" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TextBoxBase.SelectionOpacity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Deckkraft der <see cref="P:System.Windows.Controls.Primitives.TextBoxBase.SelectionBrush" />.</summary>
+        <value>Die Deckkraft der <see cref="P:System.Windows.Controls.Primitives.TextBoxBase.SelectionBrush" />. Der Standardwert ist 0,4.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Windows.Controls.Primitives.TextBoxBase.SelectionOpacity%2A> ist auf 0 festgelegt, die <xref:System.Windows.Controls.Primitives.TextBoxBase.SelectionBrush%2A> transparent ist und nicht sichtbar ist. Wenn <xref:System.Windows.Controls.Primitives.TextBoxBase.SelectionOpacity%2A> 1.0 oder höher festgelegt ist, wird die <xref:System.Windows.Controls.Primitives.TextBoxBase.SelectionBrush%2A> ist nicht transparent, und der ausgewählte Text ist nicht sichtbar.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Controls.TextBox> und fügt den Text "This is some Text." Im Beispiel wird die <xref:System.Windows.Controls.Primitives.TextBoxBase.SelectionBrush%2A> -Eigenschaft auf Rot und die <xref:System.Windows.Controls.Primitives.TextBoxBase.SelectionOpacity%2A> Eigenschaft auf 0,5, um die Darstellung des ausgewählten Texts anzupassen.  
+  
+ [!code-xaml[TextBaseSelectionBrush#TextBox](~/samples/snippets/csharp/VS_Snippets_Wpf/textbaseselectionbrush/CS/window1.xaml#textbox)]   
+  
+ Die folgende Abbildung zeigt die <xref:System.Windows.Controls.TextBox> aus dem vorherigen Beispiel mit ausgewähltem Text.  
+  
+ ![TextBox mit einem roten SelectionBrush](~/add/media/textboxselectionbrush.png "TextBox mit einem roten SelectionBrush")  
+Ausgewählten Text in einem Textfeld mit SelectionOpacity auf 0,5 festgelegt ist  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionOpacityProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SelectionOpacityProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SelectionOpacityProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TextBoxBase.SelectionOpacityProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.TextBoxBase.SelectionOpacity" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpellCheck">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.SpellCheck SpellCheck { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.SpellCheck SpellCheck" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TextBoxBase.SpellCheck" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.SpellCheck</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Controls.SpellCheck" /> -Objekt, das Zugriff auf Rechtschreibfehler im Textinhalt bietet eine <see cref="T:System.Windows.Controls.Primitives.TextBoxBase" /> oder <see cref="T:System.Windows.Controls.RichTextBox" />.</summary>
+        <value>Ein <see cref="T:System.Windows.Controls.SpellCheck" /> -Objekt, das Zugriff auf Rechtschreibfehler im Textinhalt bietet eine <see cref="T:System.Windows.Controls.Primitives.TextBoxBase" /> oder <see cref="T:System.Windows.Controls.RichTextBox" />.  
+  
+ Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextChanged">
+      <MemberSignature Language="C#" Value="public event System.Windows.Controls.TextChangedEventHandler TextChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Controls.TextChangedEventHandler TextChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.Primitives.TextBoxBase.TextChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.TextChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Inhalt im Textelement geändert hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für eine <xref:System.Windows.Controls.TextBox>, dieses Ereignis tritt auf, wenn der Text ändert; für eine <xref:System.Windows.Controls.RichTextBox>, dieses Ereignis tritt auf, wenn ein Inhalt oder die Formatierung des Änderungen (z. B. Bilder, Tabelle oder Background-Farbe).  
+  
+<a name="routedEventInfo_TextChanged"></a>   
+## <a name="routed-event-information"></a>Informationen zum Routingereignis  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.TextBoxBase.TextChangedEvent>|  
+|Routing-Strategie|Bubbling|  
+|Delegate|<xref:System.Windows.Controls.TextChangedEventHandler>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextChangedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent TextChangedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent TextChangedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TextBoxBase.TextChangedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert das <see cref="E:System.Windows.Controls.Primitives.TextBoxBase.TextChanged" />-Routingereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Undo">
+      <MemberSignature Language="C#" Value="public bool Undo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Undo() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.TextBoxBase.Undo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Macht den letzten Befehl "Rückgängig" Rückgängig. In anderen Worten, macht die letzte Rückgängig-Komponente auf dem Rückgängig-Stapel.</summary>
+        <returns>
+          <see langword="true" />Wenn der Rückgängig-Vorgang erfolgreich war; andernfalls <see langword="false" />. Diese Methode gibt <see langword="false" /> Wenn der Rückgängig-Stapel leer ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.Windows.Controls.Primitives.TextBoxBase.Undo%2A>-Methode veranschaulicht.  
+  
+ [!code-csharp[TextBoxBase_Samp#TextBoxBase8](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxBase_Samp/CSharp/Window1.xaml.cs#textboxbase8)]
+ [!code-vb[TextBoxBase_Samp#TextBoxBase8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxBase_Samp/VisualBasic/Window1.xaml.vb#textboxbase8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UndoLimit">
+      <MemberSignature Language="C#" Value="public int UndoLimit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 UndoLimit" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TextBoxBase.UndoLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Anzahl der Aktionen, die in die Rückgängig-Warteschlange gespeichert.</summary>
+        <value>Die Anzahl der Aktionen, die in die Rückgängig-Warteschlange gespeichert werden soll. Der Standardwert ist -1, was bedeutet, dass die Rückgängig-Warteschlange auf den Arbeitsspeicher beschränkt, die verfügbar ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen von <xref:System.Windows.Controls.Primitives.TextBoxBase.UndoLimit%2A> die Rückgängig-Warteschlange wird geleert. Wenn <xref:System.Windows.Controls.Primitives.TextBoxBase.UndoLimit%2A> festgelegt ist – 1 ist, wird die Rückgängig-Warteschlange beschränkt, nur durch den Arbeitsspeicher, der verfügbar ist. Wenn <xref:System.Windows.Controls.Primitives.TextBoxBase.UndoLimit%2A> festgelegt ist auf 0 (null) ist deaktiviert "Rückgängig" auf die <xref:System.Windows.Controls.Primitives.TextBoxBase>.  
+  
+ <xref:System.Windows.Controls.Primitives.TextBoxBase.UndoLimit%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.Windows.Controls.Primitives.TextBoxBase.UndoLimit" />wird festgelegt, nach dem Aufruf <see cref="M:System.Windows.Controls.Primitives.TextBoxBase.BeginChange" /> und vor dem Aufruf <see cref="M:System.Windows.Controls.Primitives.TextBoxBase.EndChange" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UndoLimitProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty UndoLimitProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty UndoLimitProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TextBoxBase.UndoLimitProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.TextBoxBase.UndoLimit" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.Primitives.TextBoxBase.UndoLimitProperty>wird in .NET Framework, Version 3.5 eingeführt. Weitere Informationen finden Sie unter[-Versionen und-Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalOffset">
+      <MemberSignature Language="C#" Value="public double VerticalOffset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 VerticalOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TextBoxBase.VerticalOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die vertikale Bildlaufposition ab oder legt sie fest.</summary>
+        <value>Ein Gleitkommawert, der angibt, die vertikale Bildlaufposition in [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)].  
+  
+ Durch Festlegen dieser Eigenschaft führt dazu, dass die Textbearbeitungssteuerelements einen Bildlauf bis zum angegebenen vertikalen Offset. Lesen diese Eigenschaft gibt die aktuellen vertikalen Offset zurück.  
+  
+ Der Wert dieser Eigenschaft ist 0,0, wenn das Bearbeitungssteuerelement Text nicht, zum Durchführen eines Bildlaufs unterstützt konfiguriert ist.  
+  
+ Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der vertikale Offset wird vom oberen Rand des sichtbaren Textbereichs gemessen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie der Wert der gelesenen der <xref:System.Windows.Controls.Primitives.TextBoxBase.VerticalOffset%2A> Eigenschaft.  
+  
+ [!code-csharp[TextBoxBase_Samp#TextBoxBase3](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxBase_Samp/CSharp/Window1.xaml.cs#textboxbase3)]
+ [!code-vb[TextBoxBase_Samp#TextBoxBase3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxBase_Samp/VisualBasic/Window1.xaml.vb#textboxbase3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Es wird versucht, diese Eigenschaft auf einen negativen Wert festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalScrollBarVisibility">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.ScrollBarVisibility VerticalScrollBarVisibility { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.ScrollBarVisibility VerticalScrollBarVisibility" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TextBoxBase.VerticalScrollBarVisibility" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ScrollBarVisibility</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob eine vertikale Bildlaufleiste sichtbar ist, oder legt ihn fest.</summary>
+        <value>Ein Wert, der definiert wird die <see cref="T:System.Windows.Controls.ScrollBarVisibility" /> Enumeration.  
+  
+ Der Standardwert ist <see cref="F:System.Windows.Visibility.Hidden" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_VerticalScrollBarVisibility"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Primitives.TextBoxBase.VerticalScrollBarVisibilityProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalScrollBarVisibilityProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty VerticalScrollBarVisibilityProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty VerticalScrollBarVisibilityProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TextBoxBase.VerticalScrollBarVisibilityProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.TextBoxBase.VerticalScrollBarVisibility" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewportHeight">
+      <MemberSignature Language="C#" Value="public double ViewportHeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ViewportHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TextBoxBase.ViewportHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die vertikale Größe des scrollbaren Inhaltsbereichs ab.</summary>
+        <value>Ein Gleitkommawert, der angibt, der die vertikale Größe des bildlauffähigen Inhaltsbereichs in [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)].  
+  
+ Der Wert dieser Eigenschaft ist 0,0, wenn das Bearbeitungssteuerelement Text nicht, zum Durchführen eines Bildlaufs unterstützt konfiguriert ist.  
+  
+ Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie der Wert der gelesenen der <xref:System.Windows.Controls.Primitives.TextBoxBase.ViewportHeight%2A> Eigenschaft.  
+  
+ [!code-csharp[TextBoxBase_Samp#TextBoxBase3](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxBase_Samp/CSharp/Window1.xaml.cs#textboxbase3)]
+ [!code-vb[TextBoxBase_Samp#TextBoxBase3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxBase_Samp/VisualBasic/Window1.xaml.vb#textboxbase3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewportWidth">
+      <MemberSignature Language="C#" Value="public double ViewportWidth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ViewportWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.TextBoxBase.ViewportWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die horizontale Größe des bildlauffähigen Inhaltsbereichs ab.</summary>
+        <value>Ein Gleitkommawert, der angibt, der die horizontale Größe des bildlauffähigen Inhaltsbereichs in [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)].  
+  
+ Der Wert dieser Eigenschaft ist 0,0, wenn das Bearbeitungssteuerelement Text nicht, zum Durchführen eines Bildlaufs unterstützt konfiguriert ist.  
+  
+ Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie der Wert der gelesenen der <xref:System.Windows.Controls.Primitives.TextBoxBase.ViewportWidth%2A> Eigenschaft.  
+  
+ [!code-csharp[TextBoxBase_Samp#TextBoxBase3](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxBase_Samp/CSharp/Window1.xaml.cs#textboxbase3)]
+ [!code-vb[TextBoxBase_Samp#TextBoxBase3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxBase_Samp/VisualBasic/Window1.xaml.vb#textboxbase3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

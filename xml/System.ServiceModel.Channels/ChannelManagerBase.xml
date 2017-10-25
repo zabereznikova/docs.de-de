@@ -1,0 +1,255 @@
+<Type Name="ChannelManagerBase" FullName="System.ServiceModel.Channels.ChannelManagerBase">
+  <TypeSignature Language="C#" Value="public abstract class ChannelManagerBase : System.ServiceModel.Channels.CommunicationObject, System.ServiceModel.IDefaultCommunicationTimeouts" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ChannelManagerBase extends System.ServiceModel.Channels.CommunicationObject implements class System.ServiceModel.ICommunicationObject, class System.ServiceModel.IDefaultCommunicationTimeouts" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.ChannelManagerBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.CommunicationObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.IDefaultCommunicationTimeouts</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Basisimplementierung zum Verwalten der Standardtimeouts bereit, die Kanal- und Listenerfactorys zugeordnet sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse bietet eine gemeinsame Basisimplementierung für die <xref:System.ServiceModel.Channels.ChannelFactoryBase>-Kanalmanagerklasse und die <xref:System.ServiceModel.Channels.ChannelListenerBase>-Kanalmanagerklasse zum Verwalten der Standardtimeouts, die den Kanalfactorys und Listenern zugeordnet sind. Der Liste, die vom Manager mit einer der <xref:System.ServiceModel.Channels.ChannelFactoryBase%601.CreateChannel%2A>-Methoden verwaltet wird, werden Kanäle hinzugefügt. Abstrakte Eigenschaften der von Kanälen und Listenern verwendeten, erstellten Timeouts zum Senden und Empfangen, werden so festgelegt, dass die für die abgeleiteten Kanal- und Listenerfactorys festgelegten Werte koordiniert werden.  
+  
+ Die <xref:System.ServiceModel.Channels.ChannelBase>, die die Basisimplementierung für benutzerdefinierte Kanäle bereitstellt, erhält ihre Kommunikations-Standardtimeoutwerte für das Öffnen, Senden, Empfangen und Schließen von der zugeordneten <xref:System.ServiceModel.Channels.ChannelManagerBase>.  
+  
+ Die <xref:System.ServiceModel.Channels.ChannelBase> übernimmt auch die Verwaltung des Managers. Zusätzlich zum Bereitstellen eines Verweises auf den Manager benachrichtigt die Basisklasse den Manager, wenn Kanäle erstellt und gelöscht werden. Doch der Verweis auf den Manager ist nur gültig, bis der Kanal gelöscht wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ChannelManagerBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ChannelManagerBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.ChannelManagerBase" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultReceiveTimeout">
+      <MemberSignature Language="C#" Value="protected abstract TimeSpan DefaultReceiveTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan DefaultReceiveTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ChannelManagerBase.DefaultReceiveTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wenn dies in einer abgeleiteten Klasse überschrieben wird, wird hierdurch das Standardzeitintervall, in dem ein Kanal den Empfang einer Nachricht abschließen muss, abgerufen.</summary>
+        <value>Die Standard-<see cref="T:System.TimeSpan" />, die festlegt, wie viel Zeit dem Kanal ab dem Abruf der Empfangsmethode bleibt, um den Empfang einer Nachricht vor dem Timeout abzuschließen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Allen Vorgängen, die potenziell lange dauern, muss ein Timeout zugewiesen sein. Methoden, die kein explizites Timeout haben, müssen an Methoden mit Standardtimeouts delegieren oder dürfen keine blockierenden Arbeiten durchführen. Timeouts sind die Gesamtzeit, in der Vorgänge auf höherer Ebene fertig gestellt werden müssen. Sämtliche Wiederholungsversuche müssen also auf die Zeit beschränkt werden, die nicht bereits bei vorherigen Versuchen verbraucht wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSendTimeout">
+      <MemberSignature Language="C#" Value="protected abstract TimeSpan DefaultSendTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan DefaultSendTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ChannelManagerBase.DefaultSendTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wenn dies in einer abgeleiteten Klasse überschrieben wird, wird hierdurch das Standardzeitintervall abgerufen, in dem ein Kanal den Versand einer Nachricht abschließen muss.</summary>
+        <value>Die Standard-<see cref="T:System.TimeSpan" />, die festlegt, wie viel Zeit dem Kanal ab dem Aufruf der Versandmethode bleibt, um den Versand einer Nachricht vor dem Timeout abzuschließen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Allen Vorgängen, die potenziell lange dauern, muss ein Timeout zugewiesen sein. Methoden, die kein explizites Timeout haben, müssen an Methoden mit Standardtimeouts delegieren oder dürfen keine blockierenden Arbeiten durchführen. Timeouts sind die Gesamtzeit, in der Vorgänge auf höherer Ebene fertig gestellt werden müssen. Sämtliche Wiederholungsversuche müssen also auf die Zeit beschränkt werden, die nicht bereits bei vorherigen Versuchen verbraucht wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.IDefaultCommunicationTimeouts.CloseTimeout">
+      <MemberSignature Language="C#" Value="TimeSpan System.ServiceModel.IDefaultCommunicationTimeouts.CloseTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan System.ServiceModel.IDefaultCommunicationTimeouts.CloseTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ChannelManagerBase.System#ServiceModel#IDefaultCommunicationTimeouts#CloseTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Zeitintervall ab, nach dem die von einem Kommunikationsobjekt aufgerufene Schließmethode das Zeitlimit überschreitet.</summary>
+        <value>Die <see cref="T:System.Timespan" />, die das Zeitintervall angibt, bis die Schließmethode das Zeitlimit überschreitet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Allen Vorgängen, die potenziell lange dauern, muss ein Timeout zugewiesen sein. Methoden, die kein explizites Timeout haben, müssen an Methoden mit Standardtimeouts delegieren oder dürfen keine blockierenden Arbeiten durchführen. Timeouts sind die Gesamtzeit, in der Vorgänge auf höherer Ebene fertig gestellt werden müssen. Sämtliche Wiederholungsversuche müssen also auf die Zeit beschränkt werden, die nicht bereits bei vorherigen Versuchen verbraucht wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.IDefaultCommunicationTimeouts.OpenTimeout">
+      <MemberSignature Language="C#" Value="TimeSpan System.ServiceModel.IDefaultCommunicationTimeouts.OpenTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan System.ServiceModel.IDefaultCommunicationTimeouts.OpenTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ChannelManagerBase.System#ServiceModel#IDefaultCommunicationTimeouts#OpenTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Zeitintervall ab, nach dem die von einem Kommunikationsobjekt aufgerufene Öffnungsmethode das Zeitlimit überschreitet.</summary>
+        <value>Die <see cref="T:System.Timespan" />, die das Zeitintervall angibt, bis die Öffnungsmethode das Zeitlimit überschreitet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Allen Vorgängen, die potenziell lange dauern, muss ein Timeout zugewiesen sein. Methoden, die kein explizites Timeout haben, müssen an Methoden mit Standardtimeouts delegieren oder dürfen keine blockierenden Arbeiten durchführen. Timeouts sind die Gesamtzeit, in der Vorgänge auf höherer Ebene fertig gestellt werden müssen. Sämtliche Wiederholungsversuche müssen also auf die Zeit beschränkt werden, die nicht bereits bei vorherigen Versuchen verbraucht wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.IDefaultCommunicationTimeouts.ReceiveTimeout">
+      <MemberSignature Language="C#" Value="TimeSpan System.ServiceModel.IDefaultCommunicationTimeouts.ReceiveTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan System.ServiceModel.IDefaultCommunicationTimeouts.ReceiveTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ChannelManagerBase.System#ServiceModel#IDefaultCommunicationTimeouts#ReceiveTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Zeitintervall ab, nach dem die von einem Kommunikationsobjekt aufgerufene Empfangsmethode das Zeitlimit überschreitet.</summary>
+        <value>Die <see cref="T:System.Timespan" />, die das Zeitintervall angibt, bis die Empfangsmethode das Zeitlimit überschreitet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.Channels.ChannelManagerBase.System%23ServiceModel%23IDefaultCommunicationTimeouts%23ReceiveTimeout%2A> ruft <xref:System.ServiceModel.Channels.ChannelManagerBase.DefaultReceiveTimeout%2A> auf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.IDefaultCommunicationTimeouts.SendTimeout">
+      <MemberSignature Language="C#" Value="TimeSpan System.ServiceModel.IDefaultCommunicationTimeouts.SendTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan System.ServiceModel.IDefaultCommunicationTimeouts.SendTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ChannelManagerBase.System#ServiceModel#IDefaultCommunicationTimeouts#SendTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Zeitintervall ab, nach dem die von einem Kommunikationsobjekt aufgerufene Sendemethode das Zeitlimit überschreitet.</summary>
+        <value>Die <see cref="T:System.Timespan" />, die das Zeitintervall angibt, bis die Sendemethode das Zeitlimit überschreitet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.Channels.ChannelManagerBase.System%23ServiceModel%23IDefaultCommunicationTimeouts%23SendTimeout%2A> ruft <xref:System.ServiceModel.Channels.ChannelManagerBase.DefaultSendTimeout%2A> auf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

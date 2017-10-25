@@ -1,0 +1,35 @@
+<Type Name="MethodInvoker" FullName="System.Windows.Forms.MethodInvoker">
+  <TypeSignature Language="C#" Value="public delegate void MethodInvoker();" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MethodInvoker extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.MethodInvoker" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters />
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <summary>Stellt ein Delegat, der eine beliebige Methode in verwaltetem Code ausgeführt werden kann, die "void" deklariert ist, und nimmt keine Parameter an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.MethodInvoker>Stellt einen einfachen Delegaten ab, das Aufrufen einer Methode mit einer "void" Parameterliste bereit. Dieser Delegat kann verwendet werden, wenn Aufrufe an ein Steuerelement <xref:System.Windows.Forms.Control.Invoke%2A> -Methode, oder wenn Sie eine einfache benötigen, Delegaten, jedoch nicht selbst definieren möchten.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine <xref:System.Windows.Forms.MethodInvoker> zum Aufrufen einer Methode, die die Titelleiste des Formulars Anwendung aktualisiert.  
+  
+ [!code-csharp[System.Windows.Forms.MethodInvoker#1](~/samples/snippets/csharp/VS_Snippets_Winforms/system.windows.forms.methodinvoker/cs/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.MethodInvoker#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/system.windows.forms.methodinvoker/vb/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

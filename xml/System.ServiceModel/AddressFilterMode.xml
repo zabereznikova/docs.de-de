@@ -1,0 +1,93 @@
+<Type Name="AddressFilterMode" FullName="System.ServiceModel.AddressFilterMode">
+  <TypeSignature Language="C#" Value="public enum AddressFilterMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AddressFilterMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.AddressFilterMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Typ der Übereinstimmungssemantik an, der vom Verteiler für die Weiterleitung eingehender Nachrichten an den korrekten Endpunkt verwendet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert der <xref:System.ServiceModel.AddressFilterMode>-Enumeration wird in der <xref:System.ServiceModel.ServiceBehaviorAttribute.AddressFilterMode%2A>-Eigenschaft festgelegt.  
+  
+ Die längsten Präfix Übereinstimmungskriterium nach Präfix angegeben ist erforderlich, dass die Zieladresse mit der größten Anzahl an führenden Adressbits im Filter abgeglichen werden. Der Standardwert ist identisch.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_AddressFilter#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_addressfilter/cs/service.cs#0)]
+ [!code-vb[S_UE_AddressFilter#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_addressfilter/vb/service.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Any">
+      <MemberSignature Language="C#" Value="Any" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.AddressFilterMode Any = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.AddressFilterMode.Any" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.AddressFilterMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen Filter an, der mit jeder Adresse einer eingehenden Nachricht übereinstimmt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch die Verwendung dieses Werts wird die [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Adressfilterprüfung deaktiviert. Alle Nachrichten werden unabhängig von ihrer WS-Adressing:To-Identität akzeptiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exact">
+      <MemberSignature Language="C#" Value="Exact" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.AddressFilterMode Exact = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.AddressFilterMode.Exact" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.AddressFilterMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen Filter an, der mit der Adresse einer eingehenden Nachricht genau übereinstimmt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Prefix">
+      <MemberSignature Language="C#" Value="Prefix" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.AddressFilterMode Prefix = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.AddressFilterMode.Prefix" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.AddressFilterMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass ein Filter die längsten Präfixübereinstimmungen mit der Adresse einer eingehenden Nachricht aufweist.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

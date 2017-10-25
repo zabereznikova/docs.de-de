@@ -1,0 +1,593 @@
+<Type Name="SizeAnimation" FullName="System.Windows.Media.Animation.SizeAnimation">
+  <TypeSignature Language="C#" Value="public class SizeAnimation : System.Windows.Media.Animation.SizeAnimationBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi SizeAnimation extends System.Windows.Media.Animation.SizeAnimationBase" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.SizeAnimation" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.SizeAnimationBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Erstellt eine Animation des Werts einer <see cref="T:System.Windows.Size" />-Eigenschaft zwischen zwei Zielwerten unter Verwendung der linearen Interpolation für eine angegebene <see cref="P:System.Windows.Media.Animation.Timeline.Duration" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Animation aktualisiert den Wert einer Eigenschaft über einen Zeitraum an.  Kann ein Animationseffekt feine, z. B. das Verschieben einer <xref:System.Windows.Shapes.Shape> wenigen Pixeln links und rechts oder drastisch, z. B. ein Objekt auf 200 Zeiten seine ursprüngliche Größe vergrößern, während es dreht und seine Farbe ändern. So erstellen eine Animation in [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)], müssen Sie eine Animation Eigenschaftswert eines Objekts zuordnen.  
+  
+## <a name="target-values"></a>Zielwerte  
+ Die <xref:System.Windows.Media.Animation.SizeAnimation> -Klasse erstellt einen Übergang zwischen zwei Zielwerten. Um die Zielwerte festzulegen, verwenden die <xref:System.Windows.Media.Animation.SizeAnimation.From%2A>, <xref:System.Windows.Media.Animation.SizeAnimation.To%2A>, und <xref:System.Windows.Media.Animation.SizeAnimation.By%2A> Eigenschaften.  Die folgende Tabelle enthält wie die <xref:System.Windows.Media.Animation.SizeAnimation.From%2A>, <xref:System.Windows.Media.Animation.SizeAnimation.To%2A>, und <xref:System.Windows.Media.Animation.SizeAnimation.By%2A> Eigenschaften dürfen zusammen verwendet werden oder separat um Zielwerte einer Animation zu bestimmen.  
+  
+|Angegebene Eigenschaften|Resultierendes Verhalten|  
+|--------------------------|------------------------|  
+|<xref:System.Windows.Media.Animation.SizeAnimation.From%2A>|Im Verlauf des Animation aus dem angegebenen Wert der <xref:System.Windows.Media.Animation.SizeAnimation.From%2A> Eigenschaft oder einer vorherigen Animation dem Basiswert der animierten Eigenschaft Ausgabewert, abhängig von der Konfiguration der vorherigen Animation.|  
+|<xref:System.Windows.Media.Animation.SizeAnimation.From%2A> und <xref:System.Windows.Media.Animation.SizeAnimation.To%2A>|Im Verlauf des Animation aus dem angegebenen Wert der <xref:System.Windows.Media.Animation.SizeAnimation.From%2A> -Eigenschaft auf den Wert gemäß der <xref:System.Windows.Media.Animation.SizeAnimation.To%2A> Eigenschaft.|  
+|<xref:System.Windows.Media.Animation.SizeAnimation.From%2A> und <xref:System.Windows.Media.Animation.SizeAnimation.By%2A>|Im Verlauf des Animation aus dem angegebenen Wert der <xref:System.Windows.Media.Animation.SizeAnimation.From%2A> auf den Wert, der durch die Summe der angegebenen Eigenschaft der <xref:System.Windows.Media.Animation.SizeAnimation.From%2A> und <xref:System.Windows.Media.Animation.SizeAnimation.By%2A> Eigenschaften.|  
+|<xref:System.Windows.Media.Animation.SizeAnimation.To%2A>|Die Animation Zustand aus dem Basiswert der animierten Eigenschaft oder eine vorherige Animation Ausgabewert angegebene Wert der <xref:System.Windows.Media.Animation.SizeAnimation.To%2A> Eigenschaft.|  
+|<xref:System.Windows.Media.Animation.SizeAnimation.By%2A>|Im Verlauf des Animation aus dem Basiswert der animierten Eigenschaft oder einer vorherigen Animation Ausgabewert die Summe dieses Werts und auf dem angegebenen Wert der <xref:System.Windows.Media.Animation.SizeAnimation.By%2A> Eigenschaft.|  
+  
+> [!NOTE]
+>  Wenn Sie beide Optionen festlegen der <xref:System.Windows.Media.Animation.SizeAnimation.To%2A> und <xref:System.Windows.Media.Animation.SizeAnimation.By%2A> Eigenschaften, die <xref:System.Windows.Media.Animation.SizeAnimation.To%2A> Eigenschaft hat Vorrang vor und die <xref:System.Windows.Media.Animation.SizeAnimation.By%2A> Eigenschaft wird ignoriert.  
+  
+ Um andere Interpolationsmethoden verwenden oder eine Animation zwischen mehr als zwei Zielwerten, verwenden eine <xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames> Objekt.  
+  
+ Informationen zum Anwenden mehrerer Animationen auf eine einzelne Eigenschaft finden Sie unter [Keyframe-Animationen Übersicht](~/docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md).  
+  
+## <a name="freezable-features"></a>Funktionen von Freezable-Objekten  
+ Da die <xref:System.Windows.Media.Animation.SizeAnimation> Klasse erbt von <xref:System.Windows.Freezable>, <xref:System.Windows.Media.Animation.SizeAnimation> Objekte zu erhalten, mehrere besondere Features zählen folgende: sie können werden deklariert, wie für mehrere Objekte freigegeben, zur Verbesserung der Leistung mit Schreibschutz versehen wurden geklont und vorgenommen Thread-sicher. Weitere Informationen zu den verschiedenen Features von <xref:System.Windows.Freezable> anzuzeigen, die [Freezable Objects Overview](~/docs/framework/wpf/advanced/freezable-objects-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SizeAnimation ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.SizeAnimation.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.SizeAnimation" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SizeAnimation (System.Windows.Size toValue, System.Windows.Duration duration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Size toValue, valuetype System.Windows.Duration duration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.SizeAnimation.#ctor(System.Windows.Size,System.Windows.Duration)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="toValue" Type="System.Windows.Size" />
+        <Parameter Name="duration" Type="System.Windows.Duration" />
+      </Parameters>
+      <Docs>
+        <param name="toValue">Der Zielwert der Animation.</param>
+        <param name="duration">Die Dauer der Animation von Anfang bis Ende. Weitere Informationen finden Sie in den Ausführungen zur <see cref="P:System.Windows.Media.Animation.Timeline.Duration" />-Eigenschaft.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.SizeAnimation" />-Klasse, die eine Animation über den angegebenen Zeitraum bis zum angegebenen Wert erzeugt. Der Startwert der Animation ist der Basiswert der zu animierenden Eigenschaft oder der Ausgabewert einer anderen Animation.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SizeAnimation (System.Windows.Size toValue, System.Windows.Duration duration, System.Windows.Media.Animation.FillBehavior fillBehavior);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Size toValue, valuetype System.Windows.Duration duration, valuetype System.Windows.Media.Animation.FillBehavior fillBehavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.SizeAnimation.#ctor(System.Windows.Size,System.Windows.Duration,System.Windows.Media.Animation.FillBehavior)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="toValue" Type="System.Windows.Size" />
+        <Parameter Name="duration" Type="System.Windows.Duration" />
+        <Parameter Name="fillBehavior" Type="System.Windows.Media.Animation.FillBehavior" />
+      </Parameters>
+      <Docs>
+        <param name="toValue">Der Zielwert der Animation.</param>
+        <param name="duration">Die Dauer der Animation von Anfang bis Ende. Weitere Informationen finden Sie in den Ausführungen zur <see cref="P:System.Windows.Media.Animation.Timeline.Duration" />-Eigenschaft.</param>
+        <param name="fillBehavior">Gibt an, wie sich die Animation verhält, wenn sie nicht aktiv ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.SizeAnimation" />-Klasse, die eine Animation über die angegebene Dauer bis zum angegebenen Wert erstellt und das angegebene Füllungsverhalten aufweist. Der Startwert der Animation ist der Basiswert der zu animierenden Eigenschaft oder der Ausgabewert einer anderen Animation.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SizeAnimation (System.Windows.Size fromValue, System.Windows.Size toValue, System.Windows.Duration duration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Size fromValue, valuetype System.Windows.Size toValue, valuetype System.Windows.Duration duration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.SizeAnimation.#ctor(System.Windows.Size,System.Windows.Size,System.Windows.Duration)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fromValue" Type="System.Windows.Size" />
+        <Parameter Name="toValue" Type="System.Windows.Size" />
+        <Parameter Name="duration" Type="System.Windows.Duration" />
+      </Parameters>
+      <Docs>
+        <param name="fromValue">Der Anfangswert der Animation.</param>
+        <param name="toValue">Der Zielwert der Animation.</param>
+        <param name="duration">Die Dauer der Animation von Anfang bis Ende. Weitere Informationen finden Sie in den Ausführungen zur <see cref="P:System.Windows.Media.Animation.Timeline.Duration" />-Eigenschaft.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.SizeAnimation" />-Klasse, die eine Animation über die angegebene Dauer vom angegebenen Anfangswert bis zum angegebenen Zielwert erstellt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SizeAnimation (System.Windows.Size fromValue, System.Windows.Size toValue, System.Windows.Duration duration, System.Windows.Media.Animation.FillBehavior fillBehavior);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Size fromValue, valuetype System.Windows.Size toValue, valuetype System.Windows.Duration duration, valuetype System.Windows.Media.Animation.FillBehavior fillBehavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.SizeAnimation.#ctor(System.Windows.Size,System.Windows.Size,System.Windows.Duration,System.Windows.Media.Animation.FillBehavior)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fromValue" Type="System.Windows.Size" />
+        <Parameter Name="toValue" Type="System.Windows.Size" />
+        <Parameter Name="duration" Type="System.Windows.Duration" />
+        <Parameter Name="fillBehavior" Type="System.Windows.Media.Animation.FillBehavior" />
+      </Parameters>
+      <Docs>
+        <param name="fromValue">Der Anfangswert der Animation.</param>
+        <param name="toValue">Der Zielwert der Animation.</param>
+        <param name="duration">Die Dauer der Animation von Anfang bis Ende. Weitere Informationen finden Sie in den Ausführungen zur <see cref="P:System.Windows.Media.Animation.Timeline.Duration" />-Eigenschaft.</param>
+        <param name="fillBehavior">Gibt an, wie sich die Animation verhält, wenn sie nicht aktiv ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.SizeAnimation" />-Klasse, die eine Animation über die angegebene Dauer vom angegebenen Anfangswert bis zum angegebenen Zielwert erstellt und das angegebene Füllungsverhalten aufweist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="By">
+      <MemberSignature Language="C#" Value="public Nullable&lt;System.Windows.Size&gt; By { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.Windows.Size&gt; By" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.SizeAnimation.By" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Windows.Size&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Gesamtbetrag ab, um den die Animation ihren Startwert ändert, oder legt diesen fest.</summary>
+        <value>Der Gesamtbetrag, um den die Animation ihren Startwert ändert.     Der Standardwert ist NULL.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Media.Animation.SizeAnimation.By%2A> Eigenschaft, wenn Sie einen Wert "von" eine bestimmte Menge, statt einen Anfangs-oder Endwert animiert werden soll. Sie können auch die <xref:System.Windows.Media.Animation.SizeAnimation.By%2A> Eigenschaft mit dem <xref:System.Windows.Media.Animation.SizeAnimation.From%2A> Eigenschaft. Die folgende Tabelle enthält wie die <xref:System.Windows.Media.Animation.SizeAnimation.From%2A>, <xref:System.Windows.Media.Animation.SizeAnimation.To%2A>, und <xref:System.Windows.Media.Animation.SizeAnimation.By%2A> Eigenschaften dürfen zusammen verwendet werden oder separat um Zielwerte einer Animation zu bestimmen.  
+  
+|Eigenschaften angegeben|Resultierende Verhalten|  
+|--------------------------|------------------------|  
+|<xref:System.Windows.Media.Animation.SizeAnimation.From%2A>|Im Verlauf des Animation aus dem angegebenen Wert der <xref:System.Windows.Media.Animation.SizeAnimation.From%2A> Eigenschaft oder einer vorherigen Animation dem Basiswert der animierten Eigenschaft Ausgabewert, abhängig von der Konfiguration der vorherigen Animation.|  
+|<xref:System.Windows.Media.Animation.SizeAnimation.From%2A> und <xref:System.Windows.Media.Animation.SizeAnimation.To%2A>|Im Verlauf des Animation aus dem angegebenen Wert der <xref:System.Windows.Media.Animation.SizeAnimation.From%2A> -Eigenschaft auf den Wert gemäß der <xref:System.Windows.Media.Animation.SizeAnimation.To%2A> Eigenschaft.|  
+|<xref:System.Windows.Media.Animation.SizeAnimation.From%2A> und <xref:System.Windows.Media.Animation.SizeAnimation.By%2A>|Im Verlauf des Animation aus dem angegebenen Wert der <xref:System.Windows.Media.Animation.SizeAnimation.From%2A> auf den Wert, der durch die Summe der angegebenen Eigenschaft der <xref:System.Windows.Media.Animation.SizeAnimation.From%2A> und <xref:System.Windows.Media.Animation.SizeAnimation.By%2A> Eigenschaften.|  
+|<xref:System.Windows.Media.Animation.SizeAnimation.To%2A>|Die Animation Zustand aus dem Basiswert der animierten Eigenschaft oder eine vorherige Animation Ausgabewert angegebene Wert der <xref:System.Windows.Media.Animation.SizeAnimation.To%2A> Eigenschaft.|  
+|<xref:System.Windows.Media.Animation.SizeAnimation.By%2A>|Im Verlauf des Animation aus dem Basiswert der animierten Eigenschaft oder einer vorherigen Animation Ausgabewert die Summe dieses Werts und auf dem angegebenen Wert der <xref:System.Windows.Media.Animation.SizeAnimation.By%2A> Eigenschaft.|  
+  
+ **Hinweis** Wenn Sie beide Optionen festlegen der <xref:System.Windows.Media.Animation.SizeAnimation.To%2A> und <xref:System.Windows.Media.Animation.SizeAnimation.By%2A> Eigenschaften, die <xref:System.Windows.Media.Animation.SizeAnimation.To%2A> Eigenschaft hat Vorrang vor und die <xref:System.Windows.Media.Animation.SizeAnimation.By%2A> Eigenschaft wird ignoriert.  
+  
+ Um andere Interpolationsmethoden verwenden oder eine Animation zwischen mehr als zwei Zielwerten, verwenden eine <xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames> Objekt.  
+  
+<a name="xamlAttributeUsage_By"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+ <*Objekt* `By`= "<xref:System.Windows.Size>" / >  
+  
+ \- oder –  
+  
+ <*Objekt* `By`= "{[X: Null-Markuperweiterung](~/docs/framework/xaml-services/x-null-markup-extension.md)}" / >  
+  
+<a name="xamlPropertyElementUsage_By"></a>   
+## <a name="xaml-property-element-usage"></a>Verwendung von XAML-Eigenschaftenelementen  
+ \<*Objekt*>  
+  
+ <*Objekt*.`By`>  
+  
+ \<<xref:System.Windows.Size> />  
+  
+ </*Objekt*.`By`>  
+  
+ \</*Objekt*>  
+  
+<a name="dependencyPropertyInfo_By"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Animation.SizeAnimation.ByProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ByProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ByProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ByProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.SizeAnimation.ByProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Animation.SizeAnimation.By" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.SizeAnimation Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Animation.SizeAnimation Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.SizeAnimation.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.SizeAnimation</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.Animation.SizeAnimation" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.SizeAnimation.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Windows.Media.Animation.SizeAnimation" />.</summary>
+        <returns>Die neue Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EasingFunction">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.IEasingFunction EasingFunction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Animation.IEasingFunction EasingFunction" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.SizeAnimation.EasingFunction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.IEasingFunction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die auf diese Animation angewendete Beschleunigungsfunktion ab oder legt sie fest.</summary>
+        <value>Die auf diese Animation angewendete Beschleunigungsfunktion.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beschleunigungsfunktionen können Sie eine Vielzahl von spezialisierten Animationseffekte einschließlich verarbeit erstellen, spring pendeln und verschiedene Größenordnung Beschleunigung und Verzögerung Animationen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EasingFunctionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty EasingFunctionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty EasingFunctionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.SizeAnimation.EasingFunctionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Animation.SizeAnimation.EasingFunction" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="From">
+      <MemberSignature Language="C#" Value="public Nullable&lt;System.Windows.Size&gt; From { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.Windows.Size&gt; From" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.SizeAnimation.From" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Windows.Size&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Anfangswert der Animation ab oder legt ihn fest.</summary>
+        <value>Der Anfangswert der Animation. Der Standardwert ist NULL.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle enthält wie die <xref:System.Windows.Media.Animation.SizeAnimation.From%2A>, <xref:System.Windows.Media.Animation.SizeAnimation.To%2A>, und <xref:System.Windows.Media.Animation.SizeAnimation.By%2A> Eigenschaften dürfen zusammen verwendet werden oder separat um Zielwerte einer Animation zu bestimmen.  
+  
+|Eigenschaften angegeben|Resultierende Verhalten|  
+|--------------------------|------------------------|  
+|<xref:System.Windows.Media.Animation.SizeAnimation.From%2A>|Im Verlauf des Animation aus dem angegebenen Wert der <xref:System.Windows.Media.Animation.SizeAnimation.From%2A> Eigenschaft oder einer vorherigen Animation dem Basiswert der animierten Eigenschaft Ausgabewert, abhängig von der Konfiguration der vorherigen Animation.|  
+|<xref:System.Windows.Media.Animation.SizeAnimation.From%2A> und <xref:System.Windows.Media.Animation.SizeAnimation.To%2A>|Im Verlauf des Animation aus dem angegebenen Wert der <xref:System.Windows.Media.Animation.SizeAnimation.From%2A> -Eigenschaft auf den Wert gemäß der <xref:System.Windows.Media.Animation.SizeAnimation.To%2A> Eigenschaft.|  
+|<xref:System.Windows.Media.Animation.SizeAnimation.From%2A> und <xref:System.Windows.Media.Animation.SizeAnimation.By%2A>|Im Verlauf des Animation aus dem angegebenen Wert der <xref:System.Windows.Media.Animation.SizeAnimation.From%2A> auf den Wert, der durch die Summe der angegebenen Eigenschaft der <xref:System.Windows.Media.Animation.SizeAnimation.From%2A> und <xref:System.Windows.Media.Animation.SizeAnimation.By%2A> Eigenschaften.|  
+|<xref:System.Windows.Media.Animation.SizeAnimation.To%2A>|Die Animation Zustand aus dem Basiswert der animierten Eigenschaft oder eine vorherige Animation Ausgabewert angegebene Wert der <xref:System.Windows.Media.Animation.SizeAnimation.To%2A> Eigenschaft.|  
+|<xref:System.Windows.Media.Animation.SizeAnimation.By%2A>|Im Verlauf des Animation aus dem Basiswert der animierten Eigenschaft oder einer vorherigen Animation Ausgabewert die Summe dieses Werts und auf dem angegebenen Wert der <xref:System.Windows.Media.Animation.SizeAnimation.By%2A> Eigenschaft.|  
+  
+ **Hinweis** Wenn Sie beide Optionen festlegen der <xref:System.Windows.Media.Animation.SizeAnimation.To%2A> und <xref:System.Windows.Media.Animation.SizeAnimation.By%2A> Eigenschaften, die <xref:System.Windows.Media.Animation.SizeAnimation.To%2A> Eigenschaft hat Vorrang vor und die <xref:System.Windows.Media.Animation.SizeAnimation.By%2A> Eigenschaft wird ignoriert.  
+  
+ Um andere Interpolationsmethoden verwenden oder eine Animation zwischen mehr als zwei Zielwerten, verwenden eine <xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames> Objekt.  
+  
+<a name="xamlAttributeUsage_From"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+ <*Objekt* `From`= "<xref:System.Windows.Size>" / >  
+  
+ \- oder –  
+  
+ <*Objekt* `From`= "{[X: Null-Markuperweiterung](~/docs/framework/xaml-services/x-null-markup-extension.md)}" / >  
+  
+<a name="xamlPropertyElementUsage_From"></a>   
+## <a name="xaml-property-element-usage"></a>Verwendung von XAML-Eigenschaftenelementen  
+ \<*Objekt*>  
+  
+ <*Objekt*.`By`>  
+  
+ \<<xref:System.Windows.Size> />  
+  
+ </*Objekt*.`By`>  
+  
+ \</*Objekt*>  
+  
+<a name="dependencyPropertyInfo_From"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Animation.SizeAnimation.FromProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FromProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FromProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.SizeAnimation.FromProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Animation.SizeAnimation.From" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentValueCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size GetCurrentValueCore (System.Windows.Size defaultOriginValue, System.Windows.Size defaultDestinationValue, System.Windows.Media.Animation.AnimationClock animationClock);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size GetCurrentValueCore(valuetype System.Windows.Size defaultOriginValue, valuetype System.Windows.Size defaultDestinationValue, class System.Windows.Media.Animation.AnimationClock animationClock) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.SizeAnimation.GetCurrentValueCore(System.Windows.Size,System.Windows.Size,System.Windows.Media.Animation.AnimationClock)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="defaultOriginValue" Type="System.Windows.Size" />
+        <Parameter Name="defaultDestinationValue" Type="System.Windows.Size" />
+        <Parameter Name="animationClock" Type="System.Windows.Media.Animation.AnimationClock" />
+      </Parameters>
+      <Docs>
+        <param name="defaultOriginValue">Der vorgeschlagene Ursprungswert, der verwendet wird, wenn die Animation nicht über einen eigenen explizit festgelegten Startwert verfügt.</param>
+        <param name="defaultDestinationValue">Der vorgeschlagene Zielwert, der verwendet wird, wenn die Animation nicht über einen eigenen explizit festgelegten Endwert verfügt.</param>
+        <param name="animationClock">Ein <see cref="T:System.Windows.Media.Animation.AnimationClock" /> , generiert der <see cref="P:System.Windows.Media.Animation.Clock.CurrentTime" /> oder <see cref="P:System.Windows.Media.Animation.Clock.CurrentProgress" /> von der Animation verwendet.</param>
+        <summary>Berechnet einen Wert, der den aktuellen Wert der zu animierenden Eigenschaft darstellt, durch die <see cref="T:System.Windows.Media.Animation.SizeAnimation" />.</summary>
+        <returns>Der berechnete Wert der Eigenschaft, die durch die aktuelle Animation bestimmt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `defaultOriginValue` ist die erste dieser Wert wird in der Kompositionskette sein, den Momentaufnahmenwert (sofern verfügbar) oder der Wert der Basiseigenschaft; andernfalls wird dieser Wert den Rückgabewert von der vorherigen Animation in der Kette mit einer <xref:System.Windows.Media.Animation.AnimationClock> , die sich nicht < C4 > <xref:System.Windows.Media.Animation.Clock.Stopped%2A> .  
+  
+ Die `defaultDestinationValue` ist der Basiswert, wenn die Animation wird in der ersten Kompositionsebene von Animationen in einer Eigenschaft; andernfalls ist der Wert aus der vorherigen Kompositionsebene von Animationen für die Eigenschaft der Ausgabewert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAdditive">
+      <MemberSignature Language="C#" Value="public bool IsAdditive { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAdditive" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.SizeAnimation.IsAdditive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der aktuelle Wert der Zieleigenschaft zum Anfangswert dieser Animation hinzugefügt werden soll, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />Wenn die Zieleigenschaft aktuelle's sollten Wert Anfangswert dieser Animation hinzugefügt werden; andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn nur eine von der Animation ist der <xref:System.Windows.Media.Animation.SizeAnimation.From%2A>, <xref:System.Windows.Media.Animation.SizeAnimation.To%2A>, oder <xref:System.Windows.Media.Animation.SizeAnimation.By%2A> Eigenschaften festgelegt werden, wenn diese Eigenschaft hat keine Auswirkung.  
+  
+<a name="dependencyPropertyInfo_Additive"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Animation.AnimationTimeline.IsAdditiveProperty>|  
+|Festgelegte Metadateneigenschaften **"true"**|Keine|  
+  
+> [!NOTE]
+>  Diese Abhängigkeitseigenschaft ist ungewöhnlich, dass die Bezeichnerfeld stammen <xref:System.Windows.Media.Animation.AnimationTimeline>, und verschiedene abgeleitete Klassen freigegeben ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCumulative">
+      <MemberSignature Language="C#" Value="public bool IsCumulative { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCumulative" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.SizeAnimation.IsCumulative" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Wert der Animation bei Wiederholung akkumuliert wird, oder legt diesen Wert fest.</summary>
+        <value>**"true"** , wenn die Werte der Animation akkumuliert bei seiner <see cref="P:System.Windows.Media.Animation.Timeline.RepeatBehavior" /> -Eigenschaft bewirkt, dass ihre einfache Dauer wiederholt. andernfalls **"false"**. Der Standardwert ist **"false"**.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft festgelegt wird, um **"true"**, Ausgabewert die Animation zum Werte nur gesammelt, wenn der Animation <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> -Eigenschaft bewirkt, dass ihre einfache Dauer wiederholt. Die Werte werden nicht gesammelt, wenn er neu gestartet wird, da das übergeordnete Element wiederholt oder weil die Uhr aus neu gestartet wurde eine <xref:System.Windows.Media.Animation.ClockController.Begin%2A> aufrufen.  
+  
+<a name="dependencyPropertyInfo_Cumulative"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Animation.AnimationTimeline.IsCumulativeProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+> [!NOTE]
+>  Diese Abhängigkeitseigenschaft ist ungewöhnlich, dass die Bezeichnerfeld stammen <xref:System.Windows.Media.Animation.AnimationTimeline>, und verschiedene abgeleitete Klassen freigegeben ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="To">
+      <MemberSignature Language="C#" Value="public Nullable&lt;System.Windows.Size&gt; To { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.Windows.Size&gt; To" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.SizeAnimation.To" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Windows.Size&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Endwert der Animation ab oder legt ihn fest.</summary>
+        <value>Der Endwert der Animation. Der Standardwert ist NULL.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle enthält wie die <xref:System.Windows.Media.Animation.SizeAnimation.From%2A>, <xref:System.Windows.Media.Animation.SizeAnimation.To%2A>, und <xref:System.Windows.Media.Animation.SizeAnimation.By%2A> Eigenschaften dürfen zusammen verwendet werden oder separat um Zielwerte einer Animation zu bestimmen.  
+  
+|Eigenschaften angegeben|Resultierende Verhalten|  
+|--------------------------|------------------------|  
+|<xref:System.Windows.Media.Animation.SizeAnimation.From%2A>|Im Verlauf des Animation aus dem angegebenen Wert der <xref:System.Windows.Media.Animation.SizeAnimation.From%2A> Eigenschaft oder einer vorherigen Animation dem Basiswert der animierten Eigenschaft Ausgabewert, abhängig von der Konfiguration der vorherigen Animation.|  
+|<xref:System.Windows.Media.Animation.SizeAnimation.From%2A> und <xref:System.Windows.Media.Animation.SizeAnimation.To%2A>|Im Verlauf des Animation aus dem angegebenen Wert der <xref:System.Windows.Media.Animation.SizeAnimation.From%2A> -Eigenschaft auf den Wert gemäß der <xref:System.Windows.Media.Animation.SizeAnimation.To%2A> Eigenschaft.|  
+|<xref:System.Windows.Media.Animation.SizeAnimation.From%2A> und <xref:System.Windows.Media.Animation.SizeAnimation.By%2A>|Im Verlauf des Animation aus dem angegebenen Wert der <xref:System.Windows.Media.Animation.SizeAnimation.From%2A> auf den Wert, der durch die Summe der angegebenen Eigenschaft der <xref:System.Windows.Media.Animation.SizeAnimation.From%2A> und <xref:System.Windows.Media.Animation.SizeAnimation.By%2A> Eigenschaften.|  
+|<xref:System.Windows.Media.Animation.SizeAnimation.To%2A>|Die Animation Zustand aus dem Basiswert der animierten Eigenschaft oder eine vorherige Animation Ausgabewert angegebene Wert der <xref:System.Windows.Media.Animation.SizeAnimation.To%2A> Eigenschaft.|  
+|<xref:System.Windows.Media.Animation.SizeAnimation.By%2A>|Im Verlauf des Animation aus dem Basiswert der animierten Eigenschaft oder einer vorherigen Animation Ausgabewert die Summe dieses Werts und auf dem angegebenen Wert der <xref:System.Windows.Media.Animation.SizeAnimation.By%2A> Eigenschaft.|  
+  
+ **Hinweis** Wenn Sie beide Optionen festlegen der <xref:System.Windows.Media.Animation.SizeAnimation.To%2A> und <xref:System.Windows.Media.Animation.SizeAnimation.By%2A> Eigenschaften, die <xref:System.Windows.Media.Animation.SizeAnimation.To%2A> Eigenschaft hat Vorrang vor und die <xref:System.Windows.Media.Animation.SizeAnimation.By%2A> Eigenschaft wird ignoriert.  
+  
+ Um andere Interpolationsmethoden verwenden oder eine Animation zwischen mehr als zwei Zielwerten, verwenden eine <xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames> Objekt.  
+  
+<a name="xamlAttributeUsage_To"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+ <*Objekt* `To`= "<xref:System.Windows.Size>" / >  
+  
+ \- oder –  
+  
+ <*Objekt* `To`= "{[X: Null-Markuperweiterung](~/docs/framework/xaml-services/x-null-markup-extension.md)}" / >  
+  
+<a name="xamlPropertyElementUsage_To"></a>   
+## <a name="xaml-property-element-usage"></a>Verwendung von XAML-Eigenschaftenelementen  
+ \<*Objekt*>  
+  
+ <*Objekt*.`By`>  
+  
+ \<<xref:System.Windows.Size> />  
+  
+ </*Objekt*.`By`>  
+  
+ \</*Objekt*>  
+  
+<a name="dependencyPropertyInfo_To"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Animation.SizeAnimation.ToProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ToProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ToProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.SizeAnimation.ToProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Animation.SizeAnimation.To" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

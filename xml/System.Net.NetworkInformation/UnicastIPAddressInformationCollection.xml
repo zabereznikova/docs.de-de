@@ -1,0 +1,405 @@
+<Type Name="UnicastIPAddressInformationCollection" FullName="System.Net.NetworkInformation.UnicastIPAddressInformationCollection">
+  <TypeSignature Language="C#" Value="public class UnicastIPAddressInformationCollection : System.Collections.Generic.ICollection&lt;System.Net.NetworkInformation.UnicastIPAddressInformation&gt;, System.Collections.Generic.IEnumerable&lt;System.Net.NetworkInformation.UnicastIPAddressInformation&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UnicastIPAddressInformationCollection extends System.Object implements class System.Collections.Generic.ICollection`1&lt;class System.Net.NetworkInformation.UnicastIPAddressInformation&gt;, class System.Collections.Generic.IEnumerable`1&lt;class System.Net.NetworkInformation.UnicastIPAddressInformation&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Net.NetworkInformation.UnicastIPAddressInformationCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;System.Net.NetworkInformation.UnicastIPAddressInformation&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Net.NetworkInformation.UnicastIPAddressInformation&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Speichert einen Satz von <see cref="T:System.Net.NetworkInformation.UnicastIPAddressInformation" /> Typen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected UnicastIPAddressInformationCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.UnicastIPAddressInformationCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.NetworkInformation.UnicastIPAddressInformationCollection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual void Add (System.Net.NetworkInformation.UnicastIPAddressInformation address);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(class System.Net.NetworkInformation.UnicastIPAddressInformation address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.UnicastIPAddressInformationCollection.Add(System.Net.NetworkInformation.UnicastIPAddressInformation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="System.Net.NetworkInformation.UnicastIPAddressInformation" />
+      </Parameters>
+      <Docs>
+        <param name="address">Das Objekt, das der Auflistung hinzugefügt werden.</param>
+        <summary>Löst ein <see cref="T:System.NotSupportedException" /> , da dieser Vorgang nicht für diese Sammlung unterstützt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public virtual void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.UnicastIPAddressInformationCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löst ein <see cref="T:System.NotSupportedException" /> , da dieser Vorgang nicht für diese Sammlung unterstützt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public virtual bool Contains (System.Net.NetworkInformation.UnicastIPAddressInformation address);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(class System.Net.NetworkInformation.UnicastIPAddressInformation address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.UnicastIPAddressInformationCollection.Contains(System.Net.NetworkInformation.UnicastIPAddressInformation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="System.Net.NetworkInformation.UnicastIPAddressInformation" />
+      </Parameters>
+      <Docs>
+        <param name="address">Die <see cref="T:System.Net.NetworkInformation.UnicastIPAddressInformation" /> Objekt in der Auflistung gesucht werden soll.</param>
+        <summary>Überprüft, ob die Auflistung das angegebene enthält <see cref="T:System.Net.NetworkInformation.UnicastIPAddressInformation" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Net.NetworkInformation.UnicastIPAddressInformation" /> Objekt in der Auflistung vorhanden ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public virtual void CopyTo (System.Net.NetworkInformation.UnicastIPAddressInformation[] array, int offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Net.NetworkInformation.UnicastIPAddressInformation[] array, int32 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.UnicastIPAddressInformationCollection.CopyTo(System.Net.NetworkInformation.UnicastIPAddressInformation[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Net.NetworkInformation.UnicastIPAddressInformation[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Ein eindimensionales Array, das eine Kopie der Auflistung empfängt.</param>
+        <param name="offset">Der nullbasierte Index im <c>Array</c> bei dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die Elemente in dieser Auflistung in ein eindimensionales Array vom Typ <see cref="T:System.Net.NetworkInformation.UnicastIPAddressInformation" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Arrayparameter muss eindimensional mit nullbasierter Indizierung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist kleiner als Null.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" /> ist mehrdimensional.  
+  
+ - oder -   
+  
+ Die Anzahl der Elemente in dieser <see cref="T:System.Net.NetworkInformation.UnicastIPAddressInformationCollection" /> ist größer als der verfügbare Platz vom <paramref name="offset" /> bis zum Ende des Ziels <paramref name="array" />.</exception>
+        <exception cref="T:System.InvalidCastException">Die Elemente in dieser <see cref="T:System.Net.NetworkInformation.UnicastIPAddressInformationCollection" /> kann nicht automatisch in den Typ des Ziels umgewandelt werden <paramref name="array" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public virtual int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.UnicastIPAddressInformationCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der <see cref="T:System.Net.NetworkInformation.UnicastIPAddressInformation" /> Typen in dieser Auflistung.</summary>
+        <value>Ein <see cref="T:System.Int32" /> Wert, der die Anzahl der enthält <see cref="T:System.Net.NetworkInformation.UnicastIPAddressInformation" /> Typen in dieser Auflistung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IEnumerator&lt;System.Net.NetworkInformation.UnicastIPAddressInformation&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;class System.Net.NetworkInformation.UnicastIPAddressInformation&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.UnicastIPAddressInformationCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Net.NetworkInformation.UnicastIPAddressInformation&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein Objekt, das mit diese Auflistung durchlaufen werden kann.</summary>
+        <returns>Ein Objekt, implementiert die <see cref="T:System.Collections.IEnumerator" /> Schnittstelle und ermöglicht den Zugriff auf die <see cref="T:System.Net.NetworkInformation.UnicastIPAddressInformation" /> Typen in dieser Auflistung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Objekt, das von dieser Methode zurückgegeben wird, wird anfänglich vor dem ersten Element in dieser Auflistung positioniert. Rufen Sie die <xref:System.Collections.IEnumerator.MoveNext%2A> -Methode auf, bevor Sie das erste Element zugreifen können. Um das Element an der aktuellen Position zuzugreifen, rufen die <xref:System.Collections.IEnumerator.Current%2A> Eigenschaft.  
+  
+ Ändern Sie die Auflistung während der Verwendung des Enumerators nicht. Wenn die Auflistung geändert wird, während eines Enumerators verwenden, Fehler beim Festlegen der Position durch Aufrufen von <xref:System.Collections.IEnumerator.MoveNext%2A> oder <xref:System.Collections.IEnumerator.Reset%2A> bewirkt, dass ein <xref:System.InvalidOperationException>.  
+  
+ Eine ausführliche Beschreibung von Enumeratoren, finden Sie in der Dokumentation für die <xref:System.Collections.IEnumerator> Klasse und die <xref:System.Collections.IEnumerable.GetEnumerator%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public virtual bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.UnicastIPAddressInformationCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Zugriff auf diese Auflistung schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" /> in allen Fällen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual System.Net.NetworkInformation.UnicastIPAddressInformation this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.NetworkInformation.UnicastIPAddressInformation Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.UnicastIPAddressInformationCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.UnicastIPAddressInformation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des Elements.</param>
+        <summary>Ruft die <see cref="T:System.Net.NetworkInformation.UnicastIPAddressInformation" /> Instanz am angegebenen Index in der Auflistung.</summary>
+        <value>Die <see cref="T:System.Net.NetworkInformation.UnicastIPAddressInformation" /> an der angegebenen Position.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public virtual bool Remove (System.Net.NetworkInformation.UnicastIPAddressInformation address);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(class System.Net.NetworkInformation.UnicastIPAddressInformation address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.UnicastIPAddressInformationCollection.Remove(System.Net.NetworkInformation.UnicastIPAddressInformation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="System.Net.NetworkInformation.UnicastIPAddressInformation" />
+      </Parameters>
+      <Docs>
+        <param name="address">Das Objekt entfernt werden soll.</param>
+        <summary>Löst ein <see cref="T:System.NotSupportedException" /> Elemente können nicht entfernt werden, da die Auflistung schreibgeschützt ist.</summary>
+        <returns>Löst immer eine <see cref="T:System.NotSupportedException" /> aus.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.UnicastIPAddressInformationCollection.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein Objekt, das mit diese Auflistung durchlaufen werden kann.</summary>
+        <returns>Ein Objekt, implementiert die <see cref="T:System.Collections.IEnumerator" /> Schnittstelle und ermöglicht den Zugriff auf die <see cref="T:System.Net.NetworkInformation.UnicastIPAddressInformation" /> Typen in dieser Auflistung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Objekt, das von dieser Methode zurückgegeben wird, wird anfänglich vor dem ersten Element in dieser Auflistung positioniert. Rufen Sie die <xref:System.Collections.IEnumerator.MoveNext%2A> -Methode auf, bevor Sie das erste Element zugreifen können. Um das Element an der aktuellen Position zuzugreifen, rufen die <xref:System.Collections.IEnumerator.Current%2A> Eigenschaft.  
+  
+ Ändern Sie die Auflistung während der Verwendung des Enumerators nicht. Wenn die Auflistung geändert wird, während eines Enumerators verwenden, Fehler beim Festlegen der Position durch Aufrufen von <xref:System.Collections.IEnumerator.MoveNext%2A> oder <xref:System.Collections.IEnumerator.Reset%2A> bewirkt, dass ein <xref:System.InvalidOperationException>.  
+  
+ Eine ausführliche Beschreibung von Enumeratoren, finden Sie in der Dokumentation für die <xref:System.Collections.IEnumerator> Klasse und die <xref:System.Collections.IEnumerable.GetEnumerator%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

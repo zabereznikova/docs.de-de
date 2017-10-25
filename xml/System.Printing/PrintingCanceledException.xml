@@ -1,0 +1,200 @@
+<Type Name="PrintingCanceledException" FullName="System.Printing.PrintingCanceledException">
+  <TypeSignature Language="C#" Value="public class PrintingCanceledException : System.Printing.PrintJobException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit PrintingCanceledException extends System.Printing.PrintJobException" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.PrintingCanceledException" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Printing.PrintJobException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die Ausnahme, die auftritt, wenn der Code versucht, auf einen abgebrochenen Druckauftrag zuzugreifen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie erstellen eine [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Anwendung, die Druckfunktionen beinhaltet und können Druckaufträge abgebrochen werden, müssen Sie diese Ausnahme korrekt behandeln. Eine nicht behandelte Ausnahme dieses Typs kann dazu führen, dass eine Windows Presentation Foundation-Anwendung nicht mehr reagiert.  
+  
+> [!CAUTION]
+>  Klassen, die innerhalb der <xref:System.Printing> Namespace werden nicht für die Verwendung innerhalb einer Windows-Dienst oder der ASP.NET-Anwendung oder der Dienst unterstützt. Unerwartete Probleme erzeugen versucht, diese Klassen von innerhalb einer dieser Anwendungstypen zu verwenden, wie z. B. wirkte-service-Leistung und zur Laufzeit Ausnahmen.  
+  
+ Wenn Sie aus einer Windows Forms-Anwendung drucken möchten, finden Sie unter der <xref:System.Drawing.Printing> Namespace.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintingCanceledException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintingCanceledException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Printing.PrintingCanceledException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintingCanceledException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintingCanceledException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Ein <see cref="T:System.String" /> , die den Fehlerzustand beschreibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Printing.PrintingCanceledException" /> Klasse, die einen bestimmten Fehlerzustand bereitstellt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintingCanceledException (int errorCode, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 errorCode, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintingCanceledException.#ctor(System.Int32,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="errorCode" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="errorCode">Ein <see cref="T:System.Int32" /> , wird interpretiert, als ein HRESULT, einen codierten numerischen Wert, der einer bestimmten Ausnahme zugewiesen ist.</param>
+        <param name="message">Ein <see cref="T:System.String" /> , die den Fehlerzustand beschreibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Printing.PrintingCanceledException" /> Klasse, die einen bestimmten Fehlercode und Fehlerzustand bereitstellt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PrintingCanceledException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintingCanceledException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die Daten, die zum Serialisieren oder Deserialisieren eines Objekts erforderlich ist.</param>
+        <param name="context">Der Kontext, einschließlich der Quelle und das Ziel des serialisierten Streams.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Printing.PrintingCanceledException" /> Klasse, die eine bestimmte <see cref="T:System.Runtime.Serialization.SerializationInfo" /> und <see cref="T:System.Runtime.Serialization.StreamingContext" />. Dieser Konstruktor ist geschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintingCanceledException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintingCanceledException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Ein <see cref="T:System.String" /> , die den Fehlerzustand beschreibt.</param>
+        <param name="innerException">Der zugrunde liegende Fehlerzustand, verursacht die <see cref="T:System.Printing.PrintingCanceledException" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Printing.PrintingCanceledException" /> Adapterklasse, die einen bestimmten Fehlerzustand, einschließlich der zugrunde liegende Ursache für die Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintingCanceledException (int errorCode, string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 errorCode, string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintingCanceledException.#ctor(System.Int32,System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="errorCode" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="errorCode">Ein <see cref="T:System.Int32" /> , wird interpretiert, als ein HRESULT, einen codierten numerischen Wert, der einer bestimmten Ausnahme zugewiesen ist.</param>
+        <param name="message">Ein <see cref="T:System.String" /> , die den Fehlerzustand beschreibt.</param>
+        <param name="innerException">Der zugrunde liegende Fehlerzustand, verursacht die <see cref="T:System.Printing.PrintingCanceledException" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Printing.PrintingCanceledException" /> Adapterklasse, die einen anwendungsspezifischen Fehlercode und Fehlerzustand sowie die zugrunde liegende Ursache für die Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintingCanceledException (int errorCode, string message, string printQueueName, string jobName, int jobId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 errorCode, string message, string printQueueName, string jobName, int32 jobId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintingCanceledException.#ctor(System.Int32,System.String,System.String,System.String,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="errorCode" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="printQueueName" Type="System.String" />
+        <Parameter Name="jobName" Type="System.String" />
+        <Parameter Name="jobId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="errorCode">Ein <see cref="T:System.Int32" /> , wird interpretiert, als ein HRESULT, einen codierten numerischen Wert, der einer bestimmten Ausnahme zugewiesen ist.</param>
+        <param name="message">Ein <see cref="T:System.String" /> , die den Fehlerzustand beschreibt.</param>
+        <param name="printQueueName">Der Name des der Druckwarteschlange des Druckauftrags, die die Ausnahme verursacht hat.</param>
+        <param name="jobName">Der Name des Druckauftrags, die die Ausnahme verursacht hat.</param>
+        <param name="jobId">Die ID-Nummer des Druckauftrags, die die Ausnahme verursacht hat.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Printing.PrintingCanceledException" /> Klasse, die einen bestimmten Fehlercode, Fehlerzustand Druckerwarteschlange Name, Auftragsname und Auftrags-ID bereitstellt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintingCanceledException (int errorCode, string message, string printQueueName, string jobName, int jobId, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 errorCode, string message, string printQueueName, string jobName, int32 jobId, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintingCanceledException.#ctor(System.Int32,System.String,System.String,System.String,System.Int32,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="errorCode" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="printQueueName" Type="System.String" />
+        <Parameter Name="jobName" Type="System.String" />
+        <Parameter Name="jobId" Type="System.Int32" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="errorCode">Ein <see cref="T:System.Int32" /> , wird interpretiert, als ein HRESULT, einen codierten numerischen Wert, der einer bestimmten Ausnahme zugewiesen ist.</param>
+        <param name="message">Ein <see cref="T:System.String" /> , die den Fehlerzustand beschreibt.</param>
+        <param name="printQueueName">Der Name des der Druckwarteschlange des Druckauftrags, die die Ausnahme verursacht hat.</param>
+        <param name="jobName">Der Name des Druckauftrags, die die Ausnahme verursacht hat.</param>
+        <param name="jobId">Die ID-Nummer des Druckauftrags, die die Ausnahme verursacht hat.</param>
+        <param name="innerException">Die zugrunde liegende Ursache der Ausnahme.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Printing.PrintingCanceledException" /> -Klasse mit einer bestimmten Fehlercode, Fehlerzustand, Namen der Druckwarteschlange, Name des Auftrags, Auftrags-ID und zugrunde liegende Ursache der Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,356 @@
+<Type Name="WorkflowDesigner" FullName="System.Activities.Presentation.WorkflowDesigner">
+  <TypeSignature Language="C#" Value="public class WorkflowDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi WorkflowDesigner extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.WorkflowDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Designerzeichnungsbereich bereit, in dem die visuelle Darstellung eines Workflowmodells während des Entwurfsvorgangs gerendert wird.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.WorkflowDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Activities.Presentation.WorkflowDesigner" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public System.Activities.Presentation.EditingContext Context { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Presentation.EditingContext Context" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesigner.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.EditingContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Activities.Presentation.EditingContext" /> -Objekt, das eine Sammlung von Diensten, die gemeinsam von allen Elementen im Designer enthalten ist und für die Interaktion zwischen dem Host und der Designer verwendet wird. Dienste werden über den <see cref="T:System.Activities.Presentation.EditingContext" /> veröffentlicht und angefordert.</summary>
+        <value>Der Bearbeitungskontext für den Workflowdesigner.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist nicht gewährleistet, dass während der Initialisierung Kontext verfügbar ist, da die Datenbindung möglicherweise noch nicht aufgelöst wurde. Es gibt zwei Möglichkeiten, sicherzustellen, dass ein Bearbeitungskontext verfügbar ist.  
+  
+-   Verwenden Sie <xref:System.Activities.Presentation.WorkflowDesigner.ModelChanged>, das ausgeführt wird, wenn das Modell zugewiesen wird oder der Wert, auf den die Eigenschaft zeigt, aktualisiert wird.  
+  
+-   Abonnieren Sie die Verfügbarkeit der <xref:System.Activities.Presentation.WorkflowDesigner.Context%2A>-Abhängigkeitseigenschaft mithilfe von <xref:System.Workflow.ComponentModel.DependencyProperty.Register%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenu">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.ContextMenu ContextMenu { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.ContextMenu ContextMenu" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesigner.ContextMenu" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ContextMenu</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Kontextmenü für diesen Designer ab.</summary>
+        <value>Das Kontextmenü für den Designer.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DebugManagerView">
+      <MemberSignature Language="C#" Value="public System.Activities.Presentation.Debug.IDesignerDebugView DebugManagerView { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Presentation.Debug.IDesignerDebugView DebugManagerView" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesigner.DebugManagerView" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.Debug.IDesignerDebugView</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Activities.Presentation.Debug.DebuggerService" /> , die zum Debuggen zur Laufzeit verwendet wird.</summary>
+        <value>Ein Objekt, das die <see cref="T:System.Activities.Presentation.Debug.IDesignerDebugView" /> implementiert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.WorkflowDesigner.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert den aktuellen Zustand des Workflows in der <see cref="P:System.WorkflowModel.Design.WorkflowDesigner.Text" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInErrorState">
+      <MemberSignature Language="C#" Value="public bool IsInErrorState ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsInErrorState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.WorkflowDesigner.IsInErrorState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob die [!INCLUDE[wfd1](~/includes/wfd1-md.md)] befindet sich im Status "Fehler".</summary>
+        <returns>
+          <see langword="true" />Wenn die [!INCLUDE[wfd2](~/includes/wfd2-md.md)] richtig ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public void Load ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Load() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.WorkflowDesigner.Load" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lädt einen Workflow aus dem XAML-Code in der <see cref="P:System.Activities.Presentation.WorkflowDesigner.Text" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public void Load (object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Load(object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.WorkflowDesigner.Load(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Der Stamm des zu ladenden Workflows.</param>
+        <summary>Lädt einen Workflow mit der angegebenen Instanz.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public void Load (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Load(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.WorkflowDesigner.Load(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Dateiname der XAML-Datei.</param>
+        <summary>Lädt einen Workflow aus dem XAML-Code in der angegebenen Datei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModelChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ModelChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ModelChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Activities.Presentation.WorkflowDesigner.ModelChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den Ereignishandler dar, der wirksam wird, wenn am Workflowmodell eine Änderung vorgenommen wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutlineView">
+      <MemberSignature Language="C#" Value="public System.Windows.UIElement OutlineView { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.UIElement OutlineView" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesigner.OutlineView" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.UIElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Gliederungsansicht im Workflow-Designer ab.</summary>
+        <value>Die Gliederungsansicht im Workflow-Designer.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyInspectorFontAndColorData">
+      <MemberSignature Language="C#" Value="public string PropertyInspectorFontAndColorData { set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PropertyInspectorFontAndColorData" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorFontAndColorData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Legt die Schriftart und die Farbdaten für die Eigenschaftenanalyse in einem serialisierten Wörterbuchformat fest.</summary>
+        <value>Die Schriftart und Farbe der Daten für die Eigenschaftenanalyse in einem serialisierten Wörterbuchformat.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Eigenschaftenanalyse wird in der Regel als Eigenschaftenraster bezeichnet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyInspectorView">
+      <MemberSignature Language="C#" Value="public System.Windows.UIElement PropertyInspectorView { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.UIElement PropertyInspectorView" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.UIElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Eigenschaftenanalyse ab, die in der Regel als Eigenschaftenraster bezeichnet wird.</summary>
+        <value>Der Eigenschaftenanalyse.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.WorkflowDesigner.Save(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Dateiname der XAML-Datei.</param>
+        <summary>Speichern des Workflows in eine XAML-Datei an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesigner.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die XAML-Zeichenfolgendarstellung des Workflows ab bzw. legt diese fest.</summary>
+        <value>Die Verwendung von XAML-Zeichenfolgendarstellung des Workflows.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie vor dem Abrufen dieses Werts <xref:System.Activities.Presentation.WorkflowDesigner.Flush%2A> auf, um den aktuellen Workflow in Text zu konvertieren. Rufen Sie nach dem Festlegen dieses Werts <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> auf, um den XAML-Code in den Workflow zu laden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextChanged">
+      <MemberSignature Language="C#" Value="public event System.Windows.Controls.TextChangedEventHandler TextChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Controls.TextChangedEventHandler TextChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Activities.Presentation.WorkflowDesigner.TextChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.TextChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der <see cref="P:System.Activities.Presentation.WorkflowDesigner.Text" />-Eigenschaftswert geändert wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="View">
+      <MemberSignature Language="C#" Value="public System.Windows.UIElement View { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.UIElement View" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowDesigner.View" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.UIElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Element der Benutzeroberfläche, die der Benutzer anzeigen und bearbeiten den Workflow visuell ermöglicht. Dieses Benutzeroberflächenelement wird normalerweise als Zeichnungsbereich des Workflows bezeichnet.</summary>
+        <value>Ein Benutzeroberflächenelement, das den Benutzer anzeigen und bearbeiten den Workflow visuell ermöglicht.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

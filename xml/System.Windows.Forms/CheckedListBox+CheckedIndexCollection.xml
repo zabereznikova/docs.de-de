@@ -1,0 +1,561 @@
+<Type Name="CheckedListBox+CheckedIndexCollection" FullName="System.Windows.Forms.CheckedListBox+CheckedIndexCollection">
+  <TypeSignature Language="C#" Value="public class CheckedListBox.CheckedIndexCollection : System.Collections.IList" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit CheckedListBox/CheckedIndexCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.CheckedListBox.CheckedIndexCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Kapselt die Auflistung der Indizes der aktivierten Elemente in einem <see cref="T:System.Windows.Forms.CheckedListBox" /> (einschließlich der Elemente in unbestimmtem Zustand).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Indizes-Auflistung ist eine Teilmenge der Indizes in der Auflistung aller Elemente in der <xref:System.Windows.Forms.CheckedListBox> Steuerelement. Diese Indizes geben Elemente in einem aktivierten oder einen unbestimmten Zustand.  
+  
+ In der folgenden Tabelle ist ein Beispiel für die indizierte Auflistung der Elemente im Steuerelement (alle Elemente im Steuerelement enthalten sind).  
+  
+|Index|Element|Status überprüfen|  
+|-----------|----------|-----------------|  
+|0|Objekt 1|<xref:System.Windows.Forms.CheckState.Unchecked>|  
+|1|Objekt 2|<xref:System.Windows.Forms.CheckState.Checked>|  
+|2|3-Objekt|<xref:System.Windows.Forms.CheckState.Unchecked>|  
+|3|4-Objekt|<xref:System.Windows.Forms.CheckState.Indeterminate>|  
+|4|5-Objekt|<xref:System.Windows.Forms.CheckState.Checked>|  
+  
+ Basierend auf dem vorherigen Beispiel, zeigt die folgende Tabelle die indizierte Auflistung der Indizes der aktivierten Elemente.  
+  
+|Index|Index des Elements|  
+|-----------|-------------------|  
+|0|1|  
+|1|3|  
+|2|4|  
+  
+ Die <xref:System.Windows.Forms.CheckedListBox> -Klasse verfügt über zwei Member, die Sie auf die gespeicherten Indizes zugreifen können die <xref:System.Windows.Forms.CheckedListBox.CheckedIndexCollection.Item%2A> Eigenschaft und die <xref:System.Windows.Forms.CheckedListBox.CheckedIndexCollection.IndexOf%2A> Methode.  
+  
+ Basierend auf dem vorherigen Beispiel, einen Aufruf der <xref:System.Windows.Forms.CheckedListBox.CheckedIndexCollection.Item%2A> Eigenschaft mit dem der Parameterwert 1 gibt einen Wert von 3 zurück. Ein Aufruf von <xref:System.Windows.Forms.CheckedListBox.CheckedIndexCollection.IndexOf%2A> mit einem Parameter 3 gibt den Wert 1 zurück.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel listet die aktivierten Elemente in der <xref:System.Windows.Forms.CheckedListBox.CheckedIndexCollection> sehen, was Überprüfen der Status eines Elements lautet. Im Beispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.CheckedListBox.GetItemCheckState%2A> Methode, um den Aktivierungszustand eines Elements festlegen. Auch das Beispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.CheckedListBox.CheckedIndices%2A> Eigenschaft, um die <xref:System.Windows.Forms.CheckedListBox.CheckedIndexCollection>, und die <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> Eigenschaft, um die <xref:System.Windows.Forms.CheckedListBox.CheckedItemCollection>.  
+  
+ Die erste Schleife verwendet den <xref:System.Windows.Forms.CheckedListBox.GetItemCheckState%2A> Methode zum Abrufen der <xref:System.Windows.Forms.CheckState> der einzelnen Elemente, die den Index des Elements angegeben. Die zweite Schleife verwendet ebenfalls <xref:System.Windows.Forms.CheckedListBox.GetItemCheckState%2A>, verwendet aber die <xref:System.Windows.Forms.ListBox.ObjectCollection.IndexOf%2A?displayProperty=nameWithType> Methode, um den Index des Elements abzurufen.  
+  
+ [!code-cpp[CheckedListBox#2](~/samples/snippets/cpp/VS_Snippets_Winforms/CheckedListBox/CPP/source.cpp#2)]
+ [!code-csharp[CheckedListBox#2](~/samples/snippets/csharp/VS_Snippets_Winforms/CheckedListBox/CS/source.cs#2)]
+ [!code-vb[CheckedListBox#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/CheckedListBox/VB/source.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CheckedListBox.CheckedIndexCollection.Contains(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index in der Auflistung gesucht werden soll.</param>
+        <summary>Bestimmt, ob der angegebene Index in der Auflistung befindet.</summary>
+        <returns>
+          <see langword="true" />Wenn der angegebene Index aus der <see cref="T:System.Windows.Forms.CheckedListBox.ObjectCollection" /> ist ein Element in dieser Auflistung enthalten ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Methode verwenden, um festzustellen, ob ein Index aus der <xref:System.Windows.Forms.CheckedListBox.Items%2A> Sammlung ist die <xref:System.Windows.Forms.CheckedListBox.CheckedIndices%2A> Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array dest, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array dest, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CheckedListBox.CheckedIndexCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dest" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="dest">Das Zielarray.</param>
+        <param name="index">Der nullbasierte relative Index im <c>Dest</c> an dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die gesamte Auflistung in ein vorhandenes Array an einer angegebenen Position innerhalb des Arrays.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Methode verwenden, der ausgewählten Indizes über mehrere Sammlungen in ein einzelnes Array kombiniert werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.RankException">
+          <paramref name="array" /> ist mehrdimensional.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist kleiner als Null.</exception>
+        <exception cref="T:System.ArgumentException">Die Anzahl der Elemente in der Quelle <see cref="T:System.Array" /> ist größer als der verfügbare Platz vom Index bis zum Ende des Ziels <see cref="T:System.Array" />.</exception>
+        <exception cref="T:System.ArrayTypeMismatchException">Der Typ des Quell-<see cref="T:System.Array" />s kann nicht automatisch in den Typ des Ziel-<see cref="T:System.Array" />s umgewandelt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CheckedListBox.CheckedIndexCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der aktivierten Elemente ab.</summary>
+        <value>Die Anzahl der Indizes in der Auflistung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CheckedListBox.CheckedIndexCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator, der verwendet werden kann, zum Durchlaufen der <see cref="P:System.Windows.Forms.CheckedListBox.CheckedIndices" /> Auflistung.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" /> zum Navigieren in der Liste.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CheckedListBox.CheckedIndexCollection.IndexOf(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des markierten Elements.</param>
+        <summary>Gibt einen Index in die Auflistung von Indizes.</summary>
+        <returns>Der Index, der den Index des markierten Elements oder -1 gibt an, wenn die <paramref name="index" /> Parameter ist nicht in der Auflistung von Indizes. Weitere Informationen finden Sie in den Beispielen in der <see cref="T:System.Windows.Forms.CheckedListBox.CheckedIndexCollection" /> -Klassenübersicht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `index` Parameter ist der Index eines aktivierten Elements in der Items-Auflistung. Der Rückgabewert ist der zugehörige Index in die Auflistung von Indizes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CheckedListBox.CheckedIndexCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Auflistung schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" /> in allen Fällen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public int this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CheckedListBox.CheckedIndexCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Ein Index in die Auflistung von Indizes. Dieser Index gibt den Index des markierten Elements, die Sie abrufen möchten.</param>
+        <summary>Ruft den Index eines aktivierten Elements in der <see cref="T:System.Windows.Forms.CheckedListBox" /> Steuerelement.</summary>
+        <value>Der Index des markierten Elements. Weitere Informationen finden Sie in den Beispielen in der <see cref="T:System.Windows.Forms.CheckedListBox.CheckedIndexCollection" /> -Klassenübersicht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `index` Parameter ist ein Index in die Auflistung von Indizes. Der Rückgabewert ist der entsprechenden indizierten-Wert, der der Index eines aktivierten Elements in der Items-Auflistung ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="index" /> ist kleiner als 0 (null).  
+  
+ - oder -   
+  
+ Die <paramref name="index" /> ist nicht in der Auflistung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CheckedListBox.CheckedIndexCollection.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Zugriff auf die <see cref="T:System.Windows.Forms.CheckedListBox.CheckedIndexCollection" /> synchronisiert (threadsicher) ist.</summary>
+        <value>
+          <see langword="false" /> in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.CheckedListBox.CheckedIndexCollection>-Instanz in eine <xref:System.Collections.ICollection>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CheckedListBox.CheckedIndexCollection.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt, das zum Synchronisieren des Zugriffs auf die Auflistung von Steuerelementen verwendet werden kann. Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Collections.ICollection.SyncRoot" />.</summary>
+        <value>Die <see cref="T:System.Object" /> verwendet, um auf die Auflistung zu synchronisieren.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.CheckedListBox.CheckedIndexCollection>-Instanz in eine <xref:System.Collections.ICollection>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Add">
+      <MemberSignature Language="C#" Value="int IList.Add (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.Add(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CheckedListBox.CheckedIndexCollection.System#Collections#IList#Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das dem <see cref="T:System.Windows.Forms.CheckedListBox.CheckedIndexCollection" /> hinzuzufügende Objekt.</param>
+        <summary>Fügt der <see cref="T:System.Windows.Forms.CheckedListBox.CheckedIndexCollection" /> ein Element hinzu. Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.IList.Add(System.Object)" />.</summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können nicht geändert werden die <xref:System.Windows.Forms.CheckedListBox.CheckedIndexCollection> -Klasse direkt verwendet. Zum Hinzufügen eines Elements auf der <xref:System.Windows.Forms.CheckedListBox.CheckedIndexCollection>, verwenden Sie die <xref:System.Windows.Forms.CheckedListBox.SetItemChecked%2A> oder <xref:System.Windows.Forms.CheckedListBox.SetItemCheckState%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Wird immer ausgelöst.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Clear">
+      <MemberSignature Language="C#" Value="void IList.Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CheckedListBox.CheckedIndexCollection.System#Collections#IList#Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Elemente aus <see cref="T:System.Windows.Forms.CheckedListBox.CheckedIndexCollection" />. Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.IList.Clear" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können nicht geändert werden die <xref:System.Windows.Forms.CheckedListBox.CheckedIndexCollection> -Klasse direkt verwendet. So löschen Sie die <xref:System.Windows.Forms.CheckedListBox.CheckedIndexCollection>, verwenden Sie die <xref:System.Windows.Forms.CheckedListBox.SetItemChecked%2A> oder <xref:System.Windows.Forms.CheckedListBox.SetItemCheckState%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Wird immer ausgelöst.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Contains">
+      <MemberSignature Language="C#" Value="bool IList.Contains (object index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IList.Contains(object index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CheckedListBox.CheckedIndexCollection.System#Collections#IList#Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index in der Auflistung gesucht werden soll.</param>
+        <summary>Bestimmt, ob der angegebene Index, in befindet der <see cref="T:System.Windows.Forms.CheckedListBox.CheckedIndexCollection" />. Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.IList.Contains(System.Object)" />.</summary>
+        <returns>
+          <see langword="true" />Wenn der angegebene Index aus der <see cref="T:System.Windows.Forms.CheckedListBox.ObjectCollection" /> für die <see cref="T:System.Windows.Forms.CheckedListBox" /> ist ein Element in dieser Auflistung enthalten ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.CheckedListBox.CheckedIndexCollection>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IndexOf">
+      <MemberSignature Language="C#" Value="int IList.IndexOf (object index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.IndexOf(object index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CheckedListBox.CheckedIndexCollection.System#Collections#IList#IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index aus der <see cref="T:System.Windows.Forms.CheckedListBox.ObjectCollection" /> in dieser Auflistung gesucht werden soll.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.IList.IndexOf(System.Object)" />.</summary>
+        <returns>Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <see cref="T:System.Windows.Forms.CheckedListBox.CheckedIndexCollection" />-Instanz in eine <see cref="T:System.Collections.IList" />-Schnittstelle umgewandelt wird.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Insert">
+      <MemberSignature Language="C#" Value="void IList.Insert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Insert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CheckedListBox.CheckedIndexCollection.System#Collections#IList#Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index, an dem Wert eingefügt werden soll.</param>
+        <param name="value">Das dem <see cref="T:System.Windows.Forms.CheckedListBox.CheckedIndexCollection" /> hinzuzufügende Objekt.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.IList.Insert(System.Int32,System.Object)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können nicht geändert werden die <xref:System.Windows.Forms.CheckedListBox.CheckedIndexCollection> -Klasse direkt verwendet. Zum Hinzufügen eines Elements auf der <xref:System.Windows.Forms.CheckedListBox.CheckedIndexCollection>, verwenden Sie die <xref:System.Windows.Forms.CheckedListBox.SetItemChecked%2A> oder <xref:System.Windows.Forms.CheckedListBox.SetItemCheckState%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Wird immer ausgelöst.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CheckedListBox.CheckedIndexCollection.System#Collections#IList#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Collections.IList.IsFixedSize" />.</summary>
+        <value>
+          <see langword="true" /> in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.CheckedListBox.CheckedIndexCollection>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IList.Item[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IList.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CheckedListBox.CheckedIndexCollection.System#Collections#IList#Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des abzurufenden Elements.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Collections.IList.Item(System.Int32)" />.</summary>
+        <value>Der Indexwert aus der <see cref="T:System.Windows.Forms.CheckedListBox.ObjectCollection" /> , der am angegebenen Speicherort gespeichert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.CheckedListBox.CheckedIndexCollection>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Remove">
+      <MemberSignature Language="C#" Value="void IList.Remove (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Remove(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CheckedListBox.CheckedIndexCollection.System#Collections#IList#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Objekt, das aus entfernt die <see cref="T:System.Windows.Forms.CheckedListBox.CheckedIndexCollection" />.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.IList.Remove(System.Object)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können nicht geändert werden die <xref:System.Windows.Forms.CheckedListBox.CheckedIndexCollection> -Klasse direkt verwendet. So entfernen Sie ein Element aus der <xref:System.Windows.Forms.CheckedListBox.CheckedIndexCollection>, verwenden Sie die <xref:System.Windows.Forms.CheckedListBox.SetItemChecked%2A> oder <xref:System.Windows.Forms.CheckedListBox.SetItemCheckState%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Wird immer ausgelöst.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.RemoveAt">
+      <MemberSignature Language="C#" Value="void IList.RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CheckedListBox.CheckedIndexCollection.System#Collections#IList#RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des zu entfernenden Elements.</param>
+        <summary>oder eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Collections.IList.RemoveAt(System.Int32)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können nicht geändert werden die <xref:System.Windows.Forms.CheckedListBox.CheckedIndexCollection> -Klasse direkt verwendet. So entfernen Sie ein Element aus der <xref:System.Windows.Forms.CheckedListBox.CheckedIndexCollection>, verwenden Sie die <xref:System.Windows.Forms.CheckedListBox.SetItemChecked%2A> oder <xref:System.Windows.Forms.CheckedListBox.SetItemCheckState%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Wird immer ausgelöst.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,30 @@
+<Type Name="BuildSubmissionCompleteCallback" FullName="Microsoft.Build.Execution.BuildSubmissionCompleteCallback">
+  <TypeSignature Language="C#" Value="public delegate void BuildSubmissionCompleteCallback(BuildSubmission submission);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BuildSubmissionCompleteCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Execution.BuildSubmissionCompleteCallback" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="submission" Type="Microsoft.Build.Execution.BuildSubmission" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="submission">Die Übermittlung, die den Build initiiert.</param>
+    <summary>Eine Rückruffunktion, die Benachrichtigung erhält, wenn ein Build abgeschlossen ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn dieser Delegat aufgerufen wird, die `WaitHandle` auf die <xref:Microsoft.Build.Execution.BuildSubmission> wird signalisiert, und die <xref:Microsoft.Build.Execution.BuildResult.OverallResult%2A> gültig.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

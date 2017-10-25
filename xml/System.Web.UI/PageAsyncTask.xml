@@ -1,0 +1,351 @@
+<Type Name="PageAsyncTask" FullName="System.Web.UI.PageAsyncTask">
+  <TypeSignature Language="C#" Value="public sealed class PageAsyncTask" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PageAsyncTask extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.PageAsyncTask" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Informationen über eine asynchrone Aufgabe, die auf eine Seite registriert. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET-Version 2.0 können Sie mehrere Aufgaben zu einer Seite registrieren und asynchron ausgeführt, vor dem Rendern der Seite. Sie können angeben, dass eine Aufgabe asynchron ausgeführt werden, wenn es ein langsamer Vorgang ist und nicht möchten, dass andere Prozesse auf die Sie gebunden werden, während er ausgeführt wird. Die asynchrone Aufgaben können parallel oder sequenziell ausgeführt werden.  
+  
+ Ein <xref:System.Web.UI.PageAsyncTask> Objekt muss registriert werden, auf der Seite über die <xref:System.Web.UI.Page.RegisterAsyncTask%2A> Methode. Die Seite selbst muss nicht asynchron verarbeitet werden, um asynchrone Aufgaben ausführen. Sie können festlegen, die `Async` Attribut entweder `true` (wie im folgenden Codebeispiel gezeigt) oder `false` auf der Seite Richtlinie und die asynchrone Aufgaben werden immer noch asynchron verarbeitet werden:  
+  
+ `<%@ Page Async="true" %>`  
+  
+ Wenn die `Async` -Attributsatz zur `false`, den Thread, der die Seite ausführt wird blockiert, bis alle asynchronen Vorgänge abgeschlossen sind.  
+  
+ Alle asynchronen Vorgänge registriert werden, bevor die <xref:System.Web.UI.Page.PreRenderComplete> Ereignis wird automatisch von der Seite ausgeführt werden, wenn sie nicht bereits ausgeführt wurde. Registrierten asynchronen Aufgaben nach der <xref:System.Web.UI.Page.PreRenderComplete> Ereignis muss über explizit ausgeführt werden, die <xref:System.Web.UI.Page.ExecuteRegisteredAsyncTasks%2A> Methode. Die <xref:System.Web.UI.Page.ExecuteRegisteredAsyncTasks%2A> Methode kann auch verwendet werden, um die Aufgaben vor dem Starten der <xref:System.Web.UI.Page.PreRenderComplete> Ereignis. Die <xref:System.Web.UI.Page.ExecuteRegisteredAsyncTasks%2A> Methode alle registrierten asynchrone Aufgaben ausführt, auf der Seite, die nicht ausgeführt wurden.  
+  
+ Standardmäßig wird eine asynchrone Aufgabe einen Timeout beendet wird, wenn er nicht innerhalb von 45 Sekunden abgeschlossen wurde. Sie können einen anderen Timeoutwert angeben, in der Datei "Web.config" oder der Seitendirektive. Die `<pages>` Abschnitt der Datei "Web.config" enthält ein `asyncTimeout` Attribut, wie unten dargestellt.  
+  
+ `<system.web>`  
+  
+ `<pages asyncTimeout="30">`  
+  
+ `</pages>`  
+  
+ `</system.web>`  
+  
+ Der Seitendirektive enthält ein `AsyncTimeout` Attribut.  
+  
+ `<%@ Page AsyncTimeout="30" %>`  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird drei asynchrone Aufgaben zu einer Seite registriert und parallel ausgeführt. Eine Methode, die lediglich den Thread 5 Sekunden im Ruhezustand verbleiben, bewirkt, dass Ruft jede Aufgabe.  
+  
+ [!code-aspx-csharp[System.Web.UI.PageAsyncTask#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.PageAsyncTask/CS/page_asynctask.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.PageAsyncTask#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.PageAsyncTask/VB/page_asynctask.aspx#1)]  
+  
+ [!code-csharp[System.Web.UI.PageAsyncTask#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.PageAsyncTask/CS/App_Code/SlowTask.cs#2)]
+ [!code-vb[System.Web.UI.PageAsyncTask#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.PageAsyncTask/VB/App_Code/SlowTask.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PageAsyncTask (Func&lt;System.Threading.CancellationToken,System.Threading.Tasks.Task&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Func`2&lt;valuetype System.Threading.CancellationToken, class System.Threading.Tasks.Task&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PageAsyncTask.#ctor(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="handler" Type="System.Func&lt;System.Threading.CancellationToken,System.Threading.Tasks.Task&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="handler">Ein Ereignishandler.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.PageAsyncTask" /> -Klasse mit einem Ereignishandler, die der Task abgebrochen wird aktiviert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor dient als Wrapper für eine <xref:System.Web.TaskEventHandler> delegieren, damit die <xref:System.Web.UI.PageAsyncTask> Objekt kann asynchronen Code integrieren (basierend auf <xref:System.Threading.Tasks.Task> Objekte) mit der vorhandenen ASP.NET Web Forms asynchrone Seiten-Funktion. ASP.NET signalisiert der <xref:System.Threading.CancellationToken> -Objekt, das übergeben wird eine <xref:System.Web.TaskEventHandler> delegieren Abbrüche basierend auf der <xref:System.Web.UI.Page.AsyncTimeout%2A> Attribut festgelegt wird, der `@ Page` Richtlinie der Webseite. Wenn die <xref:System.Web.UI.Page.AsyncTimeout%2A> Wert erreicht haben, die <xref:System.Threading.CancellationToken> -Objekt signalisiert wird. Die `CancellationToken` Parameter übergeben werden muss, um alle asynchronen APIs, die durch Ihre Implementierung von aufgerufen werden der <xref:System.Web.TaskEventHandler> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PageAsyncTask (Func&lt;System.Threading.Tasks.Task&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Func`1&lt;class System.Threading.Tasks.Task&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PageAsyncTask.#ctor(System.Func{System.Threading.Tasks.Task})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="handler" Type="System.Func&lt;System.Threading.Tasks.Task&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="handler">Ein Ereignishandler.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.PageAsyncTask" /> -Klasse mit einem Ereignishandler, die die vom Task behandelt werden aktiviert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PageAsyncTask (System.Web.BeginEventHandler beginHandler, System.Web.EndEventHandler endHandler, System.Web.EndEventHandler timeoutHandler, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.BeginEventHandler beginHandler, class System.Web.EndEventHandler endHandler, class System.Web.EndEventHandler timeoutHandler, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PageAsyncTask.#ctor(System.Web.BeginEventHandler,System.Web.EndEventHandler,System.Web.EndEventHandler,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="beginHandler" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="endHandler" Type="System.Web.EndEventHandler" />
+        <Parameter Name="timeoutHandler" Type="System.Web.EndEventHandler" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="beginHandler">Der Handler, der aufgerufen wird, wenn eine asynchrone Aufgabe ab.</param>
+        <param name="endHandler">Der Handler, der aufgerufen wird, wenn der Task erfolgreich innerhalb des Timeouts abgeschlossen ist.</param>
+        <param name="timeoutHandler">Der Handler, der aufgerufen wird, wenn die Aufgabe innerhalb des Timeoutzeitraums nicht erfolgreich abgeschlossen wird.</param>
+        <param name="state">Das Objekt, das den Status des Vorgangs darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.PageAsyncTask" /> -Klasse unter Verwendung des Standardwerts für die parallele Ausführung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung des Konstruktors die <xref:System.Web.UI.PageAsyncTask.ExecuteInParallel%2A> Eigenschaft `false` damit die asynchrone Aufgabe nicht parallel mit anderen Aufgaben auf der Seite verarbeitet wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="beginHandler" /> Parameter oder <paramref name="endHandler" /> -Parameter nicht angegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PageAsyncTask (System.Web.BeginEventHandler beginHandler, System.Web.EndEventHandler endHandler, System.Web.EndEventHandler timeoutHandler, object state, bool executeInParallel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.BeginEventHandler beginHandler, class System.Web.EndEventHandler endHandler, class System.Web.EndEventHandler timeoutHandler, object state, bool executeInParallel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PageAsyncTask.#ctor(System.Web.BeginEventHandler,System.Web.EndEventHandler,System.Web.EndEventHandler,System.Object,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="beginHandler" Type="System.Web.BeginEventHandler" />
+        <Parameter Name="endHandler" Type="System.Web.EndEventHandler" />
+        <Parameter Name="timeoutHandler" Type="System.Web.EndEventHandler" />
+        <Parameter Name="state" Type="System.Object" />
+        <Parameter Name="executeInParallel" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="beginHandler">Der Handler, der aufgerufen wird, wenn eine asynchrone Aufgabe ab.</param>
+        <param name="endHandler">Der Handler, der aufgerufen wird, wenn der Task erfolgreich innerhalb des Timeouts abgeschlossen ist.</param>
+        <param name="timeoutHandler">Der Handler, der aufgerufen wird, wenn die Aufgabe innerhalb des Timeoutzeitraums nicht erfolgreich abgeschlossen wird.</param>
+        <param name="state">Das Objekt, das den Status des Vorgangs darstellt.</param>
+        <param name="executeInParallel">Der Wert, der angibt, ob der Task parallel mit anderen Aufgaben verarbeitet werden kann.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.PageAsyncTask" /> -Klasse mit dem angegebenen Wert für die parallele Ausführung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung des Konstruktors können Sie festlegen, ob die asynchrone Aufgabe parallel mit anderen Aufgaben auf der Seite verarbeitet werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt drei asynchrone Tasks, die verarbeitet werden parallel zueinander. In diesem Beispiel ist Teil eines umfangreicheren Beispiels der <xref:System.Web.UI.PageAsyncTask> -Klassenübersicht.  
+  
+ [!code-csharp[System.Web.UI.PageAsyncTask#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.PageAsyncTask/CS/page_asynctask.aspx#3)]
+ [!code-vb[System.Web.UI.PageAsyncTask#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.PageAsyncTask/VB/page_asynctask.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="beginHandler" /> Parameter oder <paramref name="endHandler" /> -Parameter nicht angegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginHandler">
+      <MemberSignature Language="C#" Value="public System.Web.BeginEventHandler BeginHandler { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.BeginEventHandler BeginHandler" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PageAsyncTask.BeginHandler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.BeginEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Methode aufrufen, wenn Ruft eine asynchrone Aufgabe beginnt.</summary>
+        <value>Ein <see cref="T:System.Web.BeginEventHandler" /> Delegat, der die darstellt, die aufgerufen wird, wenn die asynchrone Aufgabe ab.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.PageAsyncTask.BeginHandler%2A> Delegat wird im Konstruktor festgelegt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird drei asynchrone Aufgaben zu einer Seite registriert und parallel ausgeführt. Eine Methode, die lediglich den Thread 5 Sekunden im Ruhezustand verbleiben, bewirkt, dass Ruft jede Aufgabe. Ein <xref:System.Web.UI.PageAsyncTask.BeginHandler%2A> Delegaten für jede Aufgabe angegeben wird.  
+  
+ [!code-aspx-csharp[System.Web.UI.PageAsyncTask#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.PageAsyncTask/CS/page_asynctask.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.PageAsyncTask#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.PageAsyncTask/VB/page_asynctask.aspx#1)]  
+  
+ [!code-csharp[System.Web.UI.PageAsyncTask#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.PageAsyncTask/CS/App_Code/SlowTask.cs#2)]
+ [!code-vb[System.Web.UI.PageAsyncTask#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.PageAsyncTask/VB/App_Code/SlowTask.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndHandler">
+      <MemberSignature Language="C#" Value="public System.Web.EndEventHandler EndHandler { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.EndEventHandler EndHandler" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PageAsyncTask.EndHandler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.EndEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Methode, die aufgerufen wird, wenn die Aufgabe erfolgreich innerhalb des Timeouts abgeschlossen ist.</summary>
+        <value>Ein <see cref="T:System.Web.EndEventHandler" /> Delegat, der stellt die Methode aufrufen, wenn die Aufgabe erfolgreich innerhalb des Timeouts abgeschlossen ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.PageAsyncTask.EndHandler%2A> Delegat wird im Konstruktor festgelegt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird drei asynchrone Aufgaben zu einer Seite registriert und parallel ausgeführt. Eine Methode, die lediglich den Thread 5 Sekunden im Ruhezustand verbleiben, bewirkt, dass Ruft jede Aufgabe. Ein <xref:System.Web.UI.PageAsyncTask.EndHandler%2A> Delegaten für jede Aufgabe angegeben wird.  
+  
+ [!code-aspx-csharp[System.Web.UI.PageAsyncTask#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.PageAsyncTask/CS/page_asynctask.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.PageAsyncTask#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.PageAsyncTask/VB/page_asynctask.aspx#1)]  
+  
+ [!code-csharp[System.Web.UI.PageAsyncTask#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.PageAsyncTask/CS/App_Code/SlowTask.cs#2)]
+ [!code-vb[System.Web.UI.PageAsyncTask#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.PageAsyncTask/VB/App_Code/SlowTask.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteInParallel">
+      <MemberSignature Language="C#" Value="public bool ExecuteInParallel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ExecuteInParallel" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PageAsyncTask.ExecuteInParallel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Task parallel mit anderen Aufgaben verarbeitet werden kann.</summary>
+        <value>
+          <see langword="true" />Wenn der Task parallel mit anderen Aufgaben verarbeitet werden sollen; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.PageAsyncTask.ExecuteInParallel%2A> Eigenschaft wird im Konstruktor festgelegt. Wenn mehrere Aufgaben auf einer Seite registriert sind und die <xref:System.Web.UI.PageAsyncTask.ExecuteInParallel%2A> -Eigenschaftensatz auf `true`, und klicken Sie dann diese Aufgaben gleichzeitig verarbeitet werden. Jedoch, wenn die <xref:System.Web.UI.PageAsyncTask.ExecuteInParallel%2A> -Eigenschaftensatz auf `false`, und klicken Sie dann diese Vorgänge sequenziell verarbeitet werden. Wenn eine Seite beispielsweise zwei asynchrone Aufgaben enthält, die jede 5 Sekunden abgeschlossen und <xref:System.Web.UI.PageAsyncTask.ExecuteInParallel%2A> auf festgelegt ist `true`, beide Aufgaben innerhalb von 5 Sekunden abgeschlossen werden. Wenn <xref:System.Web.UI.PageAsyncTask.ExecuteInParallel%2A> festgelegt ist, um `false` für dieselben zwei Aufgaben, und klicken Sie dann die erste Aufgabe wird in 5 Sekunden abgeschlossen und die zweite Aufgabe 5 Sekunden nach dem Abschluss der ersten Aufgabe abgeschlossen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel definiert drei asynchrone Tasks, die jede werden parallel verarbeitet werden. In diesem Beispiel ist Teil eines umfangreicheren Beispiels der <xref:System.Web.UI.PageAsyncTask> -Klassenübersicht.  
+  
+ [!code-csharp[System.Web.UI.PageAsyncTask#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.PageAsyncTask/CS/page_asynctask.aspx#3)]
+ [!code-vb[System.Web.UI.PageAsyncTask#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.PageAsyncTask/VB/page_asynctask.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public object State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object State" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PageAsyncTask.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt, das den Status des Vorgangs darstellt.</summary>
+        <value>Eine <see cref="T:System.Object" /> , die den Status des Vorgangs darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.PageAsyncTask.State%2A> Eigenschaft wird im Konstruktor festgelegt und kann nicht geändert werden, während der Ausführung der asynchronen Aufgabe. Sie können asynchrone Aufgaben in einer Seite unterscheiden, indem Sie Werte zuweisen, eindeutige Zeichenfolge, die ihren jeweiligen <xref:System.Web.UI.PageAsyncTask.State%2A> Eigenschaften.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel werden drei asynchrone Aufgaben erstellt und erhalten sie eine eindeutige Werte für ihre <xref:System.Web.UI.PageAsyncTask.State%2A> Eigenschaften. In diesem Beispiel ist Teil eines umfangreicheren Beispiels der <xref:System.Web.UI.PageAsyncTask> -Klassenübersicht.  
+  
+ [!code-csharp[System.Web.UI.PageAsyncTask#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.PageAsyncTask/CS/page_asynctask.aspx#3)]
+ [!code-vb[System.Web.UI.PageAsyncTask#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.PageAsyncTask/VB/page_asynctask.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeoutHandler">
+      <MemberSignature Language="C#" Value="public System.Web.EndEventHandler TimeoutHandler { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.EndEventHandler TimeoutHandler" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PageAsyncTask.TimeoutHandler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.EndEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Methode, die aufgerufen wird, wenn die Aufgabe innerhalb des Timeoutzeitraums nicht erfolgreich abgeschlossen wird.</summary>
+        <value>Ein <see cref="T:System.Web.EndEventHandler" /> Delegat, der stellt die Methode aufrufen, wenn die Aufgabe innerhalb des Timeoutzeitraums nicht erfolgreich abgeschlossen wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.PageAsyncTask.TimeoutHandler%2A> Delegat wird im Konstruktor festgelegt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird drei asynchrone Aufgaben zu einer Seite registriert und parallel ausgeführt. Eine Methode, die lediglich den Thread 5 Sekunden im Ruhezustand verbleiben, bewirkt, dass Ruft jede Aufgabe. Ein <xref:System.Web.UI.PageAsyncTask.TimeoutHandler%2A> Delegaten für jede Aufgabe angegeben wird.  
+  
+ [!code-aspx-csharp[System.Web.UI.PageAsyncTask#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.PageAsyncTask/CS/page_asynctask.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.PageAsyncTask#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.PageAsyncTask/VB/page_asynctask.aspx#1)]  
+  
+ [!code-csharp[System.Web.UI.PageAsyncTask#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.PageAsyncTask/CS/App_Code/SlowTask.cs#2)]
+ [!code-vb[System.Web.UI.PageAsyncTask#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.PageAsyncTask/VB/App_Code/SlowTask.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1360 @@
+<Type Name="UnmanagedMemoryStream" FullName="System.IO.UnmanagedMemoryStream">
+  <TypeSignature Language="C#" Value="public class UnmanagedMemoryStream : System.IO.Stream" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UnmanagedMemoryStream extends System.IO.Stream" />
+  <TypeSignature Language="DocId" Value="T:System.IO.UnmanagedMemoryStream" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.UnmanagedMemoryStream</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IO.Stream</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht den Zugriff auf nicht verwaltete Speicherblöcke aus verwaltetem Code heraus.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse unterstützt den Zugriff auf nicht verwalteten Speicher, die mit dem vorhandenen streambasierte Modell und erfordert nicht, dass der Inhalt in den nicht verwalteten Speicher, die dem Heap kopiert werden.  
+  
+[!INCLUDE[note_unnecessary_dispose](~/includes/note-unnecessary-dispose.md)]
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Lesen und Schreiben in nicht verwalteten Speicher mithilfe der <xref:System.IO.UnmanagedMemoryStream> Klasse.  Ein nicht verwalteten Speicherblock ist reserviert und aufgehoben mithilfe der <xref:System.Runtime.InteropServices.Marshal> Klasse.  
+  
+ [!code-csharp[System.IO.UnmanagedMemoryStream#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.UnmanagedMemoryStream/cs/sample.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected UnmanagedMemoryStream ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.UnmanagedMemoryStream.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.UnmanagedMemoryStream</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.UnmanagedMemoryStream" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Der Benutzer besitzt nicht die erforderliche Berechtigung.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode">für den Zugriff auf nicht verwalteten Speicher.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UnmanagedMemoryStream (byte* pointer, long length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8* pointer, int64 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.UnmanagedMemoryStream.#ctor(System.Byte*,System.Int64)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.UnmanagedMemoryStream</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="pointer" Type="System.Byte*" />
+        <Parameter Name="length" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="pointer">Ein Zeiger auf eine nicht verwaltete Speicheradresse.</param>
+        <param name="length">Die Länge des zu verwendenden Speichers.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.UnmanagedMemoryStream" />-Klasse mit der angegebenen Position und Speicherlänge.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt eine neue Instanz der der <xref:System.IO.UnmanagedMemoryStream> -Klasse und legt fest, in der Standardeinstellung die <xref:System.IO.UnmanagedMemoryStream.CanWrite%2A> Eigenschaft `false` und die <xref:System.IO.UnmanagedMemoryStream.CanRead%2A> Eigenschaft `true`. Die <xref:System.IO.UnmanagedMemoryStream.Length%2A> auf den Wert der Eigenschaft festgelegt ist die `length` Parameter und kann nicht geändert werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Lesen und Schreiben in nicht verwalteten Speicher mithilfe der <xref:System.IO.UnmanagedMemoryStream> Klasse. Ein nicht verwalteten Speicherblock ist reserviert und aufgehoben mithilfe der <xref:System.Runtime.InteropServices.Marshal> Klasse.  
+  
+ [!code-csharp[System.IO.UnmanagedMemoryStream_Example#00](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.UnmanagedMemoryStream_Example/cs/program.cs#00)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der Benutzer besitzt nicht die erforderliche Berechtigung.</exception>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="pointer" />-Wert ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="length" /> Wert ist kleiner als 0 (null).  
+  
+ \- oder –  
+  
+ Die <paramref name="length" /> ist groß genug, um zu einem Überlauf führen.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode">für den Zugriff auf nicht verwalteten Speicher.</permission>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UnmanagedMemoryStream (System.Runtime.InteropServices.SafeBuffer buffer, long offset, long length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Runtime.InteropServices.SafeBuffer buffer, int64 offset, int64 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.UnmanagedMemoryStream.#ctor(System.Runtime.InteropServices.SafeBuffer,System.Int64,System.Int64)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.UnmanagedMemoryStream</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Runtime.InteropServices.SafeBuffer" />
+        <Parameter Name="offset" Type="System.Int64" />
+        <Parameter Name="length" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Der Puffer, der den nicht verwalteten Speicherstream enthalten soll.</param>
+        <param name="offset">Die Byteposition im Puffer, ab der der nicht verwaltete Speicherstream beginnen soll.</param>
+        <param name="length">Die Länge des nicht verwalteten Speicherstreams.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.UnmanagedMemoryStream" />-Klasse in einem sicheren Puffer mit einem angegebenen Offset und einer angegebenen Länge.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UnmanagedMemoryStream (byte* pointer, long length, long capacity, System.IO.FileAccess access);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8* pointer, int64 length, int64 capacity, valuetype System.IO.FileAccess access) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.UnmanagedMemoryStream.#ctor(System.Byte*,System.Int64,System.Int64,System.IO.FileAccess)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.UnmanagedMemoryStream</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="pointer" Type="System.Byte*" />
+        <Parameter Name="length" Type="System.Int64" />
+        <Parameter Name="capacity" Type="System.Int64" />
+        <Parameter Name="access" Type="System.IO.FileAccess" />
+      </Parameters>
+      <Docs>
+        <param name="pointer">Ein Zeiger auf eine nicht verwaltete Speicheradresse.</param>
+        <param name="length">Die Länge des zu verwendenden Speichers.</param>
+        <param name="capacity">Die Gesamtgröße des dem Stream zugewiesenen Speichers.</param>
+        <param name="access">Einer der <see cref="T:System.IO.FileAccess" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.UnmanagedMemoryStream" />-Klasse mit der angegebenen Position, Speicherlänge, Gesamtspeichergröße und den Dateizugriffswerten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `length` Parameter definiert die aktuelle Menge an Arbeitsspeicher verwendet. Beim Lesen oder Anfügen von Daten in den Stream der `length` Wert muss gleich der Menge gültige Daten im Datenstrom gelesen werden soll, oder beibehalten. Wenn in den Stream zu schreiben, sollte dieser Wert 0 (null) sein.  
+  
+ Die `capacity` Parameter gibt den Umfang des verfügbaren Gesamtspeichers. Dieser Wert kann beschreiben eine Region, die länger als die angegebene Länge ist auch ein Anzeichen eine Region, die hinzugefügt werden kann. Jeder Versuch, diesen Wert hinaus schreiben schlägt fehl.  
+  
+ Die `access` Parametersätze der <xref:System.IO.UnmanagedMemoryStream.CanRead%2A>, und <xref:System.IO.UnmanagedMemoryStream.CanWrite%2A> Eigenschaften. Beachten Sie, dass die Angabe <xref:System.IO.FileAccess.Write> garantiert nicht, dass der Stream geschrieben werden kann. Die Zugriffsparameter zulassen die Implementierung ein Objekt zu erstellen, deren Implementierung den tatsächlichen Stream verglichen werden kann, der verfügbar gemacht wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Lesen und Schreiben in nicht verwalteten Speicher mithilfe der <xref:System.IO.UnmanagedMemoryStream> Klasse.  Ein nicht verwalteten Speicherblock ist reserviert und aufgehoben mithilfe der <xref:System.Runtime.InteropServices.Marshal> Klasse.  
+  
+ [!code-csharp[System.IO.UnmanagedMemoryStream#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.UnmanagedMemoryStream/cs/sample.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der Benutzer besitzt nicht die erforderliche Berechtigung.</exception>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="pointer" />-Wert ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="length" /> Wert ist kleiner als 0 (null).  
+  
+ \- oder –  
+  
+ Die <paramref name="capacity" /> Wert ist kleiner als 0 (null).  
+  
+ \- oder –  
+  
+ Die <paramref name="length" /> Wert ist größer als die <paramref name="capacity" /> Wert.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode">für den Zugriff auf nicht verwalteten Speicher.</permission>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UnmanagedMemoryStream (System.Runtime.InteropServices.SafeBuffer buffer, long offset, long length, System.IO.FileAccess access);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Runtime.InteropServices.SafeBuffer buffer, int64 offset, int64 length, valuetype System.IO.FileAccess access) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.UnmanagedMemoryStream.#ctor(System.Runtime.InteropServices.SafeBuffer,System.Int64,System.Int64,System.IO.FileAccess)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.UnmanagedMemoryStream</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Runtime.InteropServices.SafeBuffer" />
+        <Parameter Name="offset" Type="System.Int64" />
+        <Parameter Name="length" Type="System.Int64" />
+        <Parameter Name="access" Type="System.IO.FileAccess" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Der Puffer, der den nicht verwalteten Speicherstream enthalten soll.</param>
+        <param name="offset">Die Byteposition im Puffer, ab der der nicht verwaltete Speicherstream beginnen soll.</param>
+        <param name="length">Die Länge des nicht verwalteten Speicherstreams.</param>
+        <param name="access">Der Modus des Dateizugriffs auf den nicht verwalteten Speicherstream.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.UnmanagedMemoryStream" />-Klasse in einem sicheren Puffer mit einem angegebenen Offset, einer angegebenen Länge und angegebenem Dateizugriff.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRead">
+      <MemberSignature Language="C#" Value="public override bool CanRead { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanRead" />
+      <MemberSignature Language="DocId" Value="P:System.IO.UnmanagedMemoryStream.CanRead" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.UnmanagedMemoryStream</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob ein Stream Lesevorgänge unterstützt.</summary>
+        <value>
+          <see langword="false" />, wenn das Objekt von einem Konstruktor mit einem <paramref name="access" />-Parameter erstellt wurde, das Lesen des Streams nicht eingeschlossen war und der Stream geschlossen ist, andernfalls <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt an, ob das aktuelle Streamobjekt Lesevorgänge unterstützt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Lesen und Schreiben in nicht verwalteten Speicher mithilfe der <xref:System.IO.UnmanagedMemoryStream> Klasse. Ein nicht verwalteten Speicherblock ist reserviert und aufgehoben mithilfe der <xref:System.Runtime.InteropServices.Marshal> Klasse. In diesem Beispiel wird ein <xref:System.IO.UnmanagedMemoryStream> Objekt wird an eine Methode, die überprüft, übergeben die <xref:System.IO.UnmanagedMemoryStream.CanRead%2A> Eigenschaft, bevor Sie versuchen, den Inhalt in der Konsole anzeigen.  
+  
+ [!code-csharp[System.IO.UnmanagedMemoryStream_Example#00](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.UnmanagedMemoryStream_Example/cs/program.cs#00)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanSeek">
+      <MemberSignature Language="C#" Value="public override bool CanSeek { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanSeek" />
+      <MemberSignature Language="DocId" Value="P:System.IO.UnmanagedMemoryStream.CanSeek" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.UnmanagedMemoryStream</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob ein Stream Suchvorgänge unterstützt.</summary>
+        <value>
+          <see langword="false" />, wenn der Stream geschlossen ist, andernfalls <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt an, ob das aktuelle Streamobjekt Suchvorgänge unterstützt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanWrite">
+      <MemberSignature Language="C#" Value="public override bool CanWrite { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanWrite" />
+      <MemberSignature Language="DocId" Value="P:System.IO.UnmanagedMemoryStream.CanWrite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.UnmanagedMemoryStream</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob ein Stream Schreibvorgänge unterstützt.</summary>
+        <value>
+          <see langword="false" />, wenn das Objekt von einem Konstruktor mit einem <paramref name="access" />-Parameterwert erstellt wurde, der Schreibvorgänge unterstützt, oder wenn es von einem Konstruktor ohne Parameter erstellt wurde oder wenn der Stream geschlossen ist, andernfalls <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt an, ob das aktuelle Streamobjekt Schreibvorgänge unterstützt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Lesen und Schreiben in nicht verwalteten Speicher mithilfe der <xref:System.IO.UnmanagedMemoryStream> Klasse. Ein nicht verwalteten Speicherblock ist reserviert und aufgehoben mithilfe der <xref:System.Runtime.InteropServices.Marshal> Klasse. In diesem Beispiel wird ein <xref:System.IO.UnmanagedMemoryStream> Objekt wird an eine Methode, die überprüft, übergeben die <xref:System.IO.UnmanagedMemoryStream.CanWrite%2A> Eigenschaft, bevor Sie versuchen, die Daten in den Stream geschrieben.  
+  
+ [!code-csharp[System.IO.UnmanagedMemoryStream_Example#00](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.UnmanagedMemoryStream_Example/cs/program.cs#00)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Capacity">
+      <MemberSignature Language="C#" Value="public long Capacity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Capacity" />
+      <MemberSignature Language="DocId" Value="P:System.IO.UnmanagedMemoryStream.Capacity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.UnmanagedMemoryStream</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Streamlänge (Größe) oder die Gesamtgröße des einem Stream zugewiesenen Speichers (Kapazität) ab.</summary>
+        <value>Die Größe oder die Kapazität des Streams.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt die `capacity` Wert für den Konstruktor bereitgestellt. Wenn kein `capacity` Wert wurde angegeben, wenn der Stream initialisiert wurde, gibt diese Eigenschaft die Länge des Streams.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Der Stream ist geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.UnmanagedMemoryStream.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.UnmanagedMemoryStream</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.IO.UnmanagedMemoryStream" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich <xref:System.ComponentModel.Component.Dispose%2A> Methode und die <xref:System.Object.Finalize%2A> Methode. <xref:System.ComponentModel.Component.Dispose%2A>Ruft die geschützte <xref:System.IO.UnmanagedMemoryStream.Dispose%2A> Methode mit dem `disposing` Parametersatz auf `true`. <xref:System.Object.Finalize%2A>Ruft <xref:System.IO.UnmanagedMemoryStream.Dispose%2A> mit `disposing` festgelegt `false`.  
+  
+ Wenn der `disposing`-Parameter `true` ist, gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte reserviert sind, auf die dieser <xref:System.IO.UnmanagedMemoryStream> verweist. Diese Methode ruft die <xref:System.ComponentModel.Component.Dispose%2A>-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see cref="M:System.ComponentModel.Component.Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Zum Überschreiben <see cref="M:System.IO.UnmanagedMemoryStream.Dispose(System.Boolean)" /> Achten Sie darauf, dass Sie nicht auf Objekte verweisen, die einen früheren Aufruf freigegeben wurden <see cref="M:System.ComponentModel.Component.Dispose" />. Weitere Informationen zum Implementieren <see cref="M:System.IO.UnmanagedMemoryStream.Dispose(System.Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see cref="M:System.ComponentModel.Component.Dispose" /> und <see cref="M:System.Object.Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public override void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.UnmanagedMemoryStream.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.UnmanagedMemoryStream</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überschreibt die <see cref="M:System.IO.Stream.Flush" />-Methode, sodass keine Aktion durchgeführt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode führt keine Aktion für diese Klasse jedoch als Bestandteil von wird der <xref:System.IO.Stream> Basisklasse. Da alle Daten in den Arbeitsspeicher geschrieben werden, ist diese Methode redundant.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Der Stream ist geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FlushAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task FlushAsync (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task FlushAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.UnmanagedMemoryStream.FlushAsync(System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.UnmanagedMemoryStream</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">Das Token zum überwachen von Abbruchanforderungen . Der Standardwert ist <see cref="P:System.Threading.CancellationToken.None" />.</param>
+        <summary>Überschreibt die <see cref="M:System.IO.Stream.FlushAsync(System.Threading.CancellationToken)" />-Methode. Der Vorgang wird abgebrochen, wenn dies angegeben wurde, ansonsten wird keine Aktion durchgeführt.  
+  
+ Verfügbar ab [!INCLUDE[net_2015](~/includes/net-2015-md.md)]</summary>
+        <returns>Eine Aufgabe, die die asynchrone Leerung darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Vorgang abgebrochen wird nicht, die <xref:System.IO.UnmanagedMemoryStream> Aufrufe der <xref:System.IO.UnmanagedMemoryStream.Flush%2A> Methode, was bedeutet, dass keine Aktion durchgeführt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="protected void Initialize (byte* pointer, long length, long capacity, System.IO.FileAccess access);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void Initialize(unsigned int8* pointer, int64 length, int64 capacity, valuetype System.IO.FileAccess access) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.UnmanagedMemoryStream.Initialize(System.Byte*,System.Int64,System.Int64,System.IO.FileAccess)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.UnmanagedMemoryStream</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pointer" Type="System.Byte*" />
+        <Parameter Name="length" Type="System.Int64" />
+        <Parameter Name="capacity" Type="System.Int64" />
+        <Parameter Name="access" Type="System.IO.FileAccess" />
+      </Parameters>
+      <Docs>
+        <param name="pointer">Ein Zeiger auf eine nicht verwaltete Speicheradresse.</param>
+        <param name="length">Die Länge des zu verwendenden Speichers.</param>
+        <param name="capacity">Die Gesamtgröße des dem Stream zugewiesenen Speichers.</param>
+        <param name="access">Einer der <see cref="T:System.IO.FileAccess" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.UnmanagedMemoryStream" />-Klasse unter Verwendung eines Zeigers auf eine nicht verwaltete Speicheradresse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode entspricht der <xref:System.IO.UnmanagedMemoryStream.%23ctor%2A> Konstruktor. Es unterstützt Methoden, die den Zeiger zu initialisieren, vor dem Festlegen von Streamvariablen müssen und deshalb darf nicht den parametrisierten Konstruktor aufrufen. Solche Methoden sollten den Standardkonstruktor verwenden <xref:System.IO.UnmanagedMemoryStream.%23ctor>, initialisieren Sie den Zeiger und rufen dann die <xref:System.IO.UnmanagedMemoryStream.Initialize%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der Benutzer besitzt nicht die erforderliche Berechtigung.</exception>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="pointer" />-Wert ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="length" /> Wert ist kleiner als 0 (null).  
+  
+ \- oder –  
+  
+ Die <paramref name="capacity" /> Wert ist kleiner als 0 (null).  
+  
+ \- oder –  
+  
+ Die <paramref name="length" /> Wert ist groß genug, um zu einem Überlauf führen.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode">für den Zugriff auf nicht verwalteten Speicher.</permission>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="protected void Initialize (System.Runtime.InteropServices.SafeBuffer buffer, long offset, long length, System.IO.FileAccess access);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void Initialize(class System.Runtime.InteropServices.SafeBuffer buffer, int64 offset, int64 length, valuetype System.IO.FileAccess access) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.UnmanagedMemoryStream.Initialize(System.Runtime.InteropServices.SafeBuffer,System.Int64,System.Int64,System.IO.FileAccess)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.UnmanagedMemoryStream</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Runtime.InteropServices.SafeBuffer" />
+        <Parameter Name="offset" Type="System.Int64" />
+        <Parameter Name="length" Type="System.Int64" />
+        <Parameter Name="access" Type="System.IO.FileAccess" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Der Puffer, der den nicht verwalteten Speicherstream enthalten soll.</param>
+        <param name="offset">Die Byteposition im Puffer, ab der der nicht verwaltete Speicherstream beginnen soll.</param>
+        <param name="length">Die Länge des nicht verwalteten Speicherstreams.</param>
+        <param name="access">Der Modus des Dateizugriffs auf den nicht verwalteten Speicherstream.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.UnmanagedMemoryStream" />-Klasse in einem sicheren Puffer mit einem angegebenen Offset, einer angegebenen Länge und angegebenem Dateizugriff.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public override long Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Length" />
+      <MemberSignature Language="DocId" Value="P:System.IO.UnmanagedMemoryStream.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.UnmanagedMemoryStream</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Länge der Daten in einem Stream ab.</summary>
+        <value>Die Länge der Daten im Stream.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn unverändert, da der Stream initialisiert wurde, gibt diese Eigenschaft den Wert für die Länge für den Konstruktor bereitgestellt. Wenn Änderungen in den Stream aufgetreten sind, gibt diese Eigenschaft Änderungen auf die Länge der Daten wieder.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Lesen und Schreiben in nicht verwalteten Speicher mithilfe der <xref:System.IO.UnmanagedMemoryStream> Klasse. Ein nicht verwalteten Speicherblock ist reserviert und aufgehoben mithilfe der <xref:System.Runtime.InteropServices.Marshal> Klasse.  
+  
+ [!code-csharp[System.IO.UnmanagedMemoryStream_Example#00](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.UnmanagedMemoryStream_Example/cs/program.cs#00)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Der Stream ist geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Position">
+      <MemberSignature Language="C#" Value="public override long Position { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Position" />
+      <MemberSignature Language="DocId" Value="P:System.IO.UnmanagedMemoryStream.Position" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.UnmanagedMemoryStream</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>set: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuelle Position in einem Stream ab oder legt diese fest.</summary>
+        <value>Die aktuelle Position in dem Stream.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Stream initialisiert wird, wird diese Eigenschaft auf 0 (null) festgelegt.  
+  
+ Obwohl Sie die Position des Streams über den Stream Kapazität festlegen können, Sie ist nicht möglich, Bereich mit den Zugriff auf die <xref:System.IO.UnmanagedMemoryStream.Read%2A> und <xref:System.IO.UnmanagedMemoryStream.Write%2A> Methoden. <xref:System.IO.UnmanagedMemoryStream.Read%2A>Gibt 0 zurück und <xref:System.IO.UnmanagedMemoryStream.Write%2A> löst eine <xref:System.NotSupportedException>. Diese Unterstützung wird in erster Linie für Entwurf und Code Kompatibilität mit grundlegenden FileStream-Vorgänge.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Der Stream ist geschlossen.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Position auf einen Wert, der kleiner als 0 (null) festgelegt ist, oder die Position ist größer als <see cref="F:System.Int32.MaxValue" /> oder Ergebnisse in einen Überlauf, wenn der Zeiger auf den aktuellen hinzugefügt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PositionPointer">
+      <MemberSignature Language="C#" Value="public byte* PositionPointer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8* PositionPointer" />
+      <MemberSignature Language="DocId" Value="P:System.IO.UnmanagedMemoryStream.PositionPointer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.UnmanagedMemoryStream</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte*</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Bytezeiger auf einen Stream auf Grundlage der aktuellen Position im Stream ab oder legt diesen fest.</summary>
+        <value>Ein Bytezeiger.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um einen Zeiger auf den gesamten Stream zurückzugeben, legen die <xref:System.IO.UnmanagedMemoryStream.Position%2A> Eigenschaft auf 0 (null), und rufen Sie diese Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Die aktuelle Position ist größer als die Kapazität des Streams.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Position wird Set ist keine gültige Position im aktuellen Stream.</exception>
+        <exception cref="T:System.IO.IOException">Der Zeiger wird auf einen niedrigeren Wert als die Anfangsposition des Datenstroms festgelegt.</exception>
+        <exception cref="T:System.NotSupportedException">Der Stream initialisiert wurde, für die Verwendung mit einem <see cref="T:System.Runtime.InteropServices.SafeBuffer" />. Die <see cref="P:System.IO.UnmanagedMemoryStream.PositionPointer" /> Eigenschaft gilt nur für Streams, die initialisiert werden, mit einem <see cref="T:System.Byte" /> Zeiger.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Rufen Sie zum Aufrufen von nicht verwalteten Codes, wie das Aufrufen von systemeigenem Code mit dem Plattformaufruf oder COM-Integration. Sicherheitsaktion: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public override int Read (byte[] buffer, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 Read([out] unsigned int8[] buffer, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.UnmanagedMemoryStream.Read(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.UnmanagedMemoryStream</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Enthält nach Rückkehr dieser Methode das angegebene Bytearray mit den Werten zwischen <c>Offset</c> und (<c>Offset</c> + <c>Anzahl</c> - 1) durch die aus gelesenen Bytes ersetzt der aktuellen Quelle. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <param name="offset">Der nullbasierte Byteoffset im <c>Puffer</c> ab dem aus dem aktuellen Stream gelesenen Daten gespeichert.</param>
+        <param name="count">Die maximale Anzahl an Bytes, die aus dem aktuellen Stream gelesen werden sollen.</param>
+        <summary>Liest die angegebene Anzahl von Bytes in das angegebene Array.</summary>
+        <returns>Die Gesamtanzahl der in den Puffer gelesenen Bytes. Dies kann weniger als die Anzahl der angeforderten Bytes sein, wenn diese Anzahl an Bytes derzeit nicht verfügbar ist, oder 0, wenn das Ende des Streams erreicht ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `offset` -Parameter gibt den Offset des Bytes in der `array` Parameter (Pufferindex), ab dem gelesen werden soll und die `count` Parameter gibt die maximale Anzahl von Bytes, die aus diesem Stream gelesen werden. Der zurückgegebene Wert ist die tatsächliche Anzahl der gelesenen Bytes oder 0 (null), wenn das Ende des Streams erreicht ist. Wenn der Lesevorgang erfolgreich ist, wird die aktuelle Position im Stream um die Anzahl der gelesenen Bytes erweiterte. Wenn eine Ausnahme auftritt, ist die aktuelle Position im Stream nicht geändert.  
+  
+ Die <xref:System.IO.UnmanagedMemoryStream.Read%2A> Methode gibt 0 (null) erst nach dem Ende des Streams erreicht. Andernfalls <xref:System.IO.UnmanagedMemoryStream.Read%2A> liest immer mindestens ein Byte aus dem Stream vor der Rückgabe. Wenn keine Daten verfügbar, aus dem Stream bei einem Aufruf von sind <xref:System.IO.UnmanagedMemoryStream.Read%2A>, die Methode blockiert, bis mindestens 1 Byte Daten zurückgegeben werden kann. Eine Implementierung kann weniger Bytes als angefordert zurückgeben, selbst wenn das Ende des Streams nicht erreicht wurde.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Lesen und Schreiben in nicht verwalteten Speicher mithilfe der <xref:System.IO.UnmanagedMemoryStream> Klasse.  Ein nicht verwalteten Speicherblock ist reserviert und aufgehoben mithilfe der <xref:System.Runtime.InteropServices.Marshal> Klasse.  
+  
+ [!code-csharp[System.IO.UnmanagedMemoryStream#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.UnmanagedMemoryStream/cs/sample.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Der Stream ist geschlossen.</exception>
+        <exception cref="T:System.NotSupportedException">Lesevorgänge werden von der zugrunde liegende Arbeitsspeicher nicht unterstützt.  
+  
+ \- oder –  
+  
+ Die <see cref="P:System.IO.UnmanagedMemoryStream.CanRead" />-Eigenschaft ist auf <see langword="false" /> festgelegt.</exception>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="buffer" />-Parameter ist auf <see langword="null" /> festgelegt.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="offset" /> Parameter ist kleiner als 0 (null).  
+  
+ \- oder –  
+  
+ Die <paramref name="count" /> Parameter ist kleiner als 0 (null).</exception>
+        <exception cref="T:System.ArgumentException">Die Länge des Pufferarrays minus der <paramref name="offset" /> Parameter ist kleiner als das <paramref name="count" /> Parameter.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task&lt;int&gt; ReadAsync (byte[] buffer, int offset, int count, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task`1&lt;int32&gt; ReadAsync(unsigned int8[] buffer, int32 offset, int32 count, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.UnmanagedMemoryStream.ReadAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.UnmanagedMemoryStream</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Der Puffer, in den die Daten geschrieben werden sollen.</param>
+        <param name="offset">Der Byteoffset im <c>Puffer</c> ab dem Daten aus dem Stream geschrieben.</param>
+        <param name="count">Die maximale Anzahl der zu lesenden Bytes.</param>
+        <param name="cancellationToken">Das Token zum überwachen von Abbruchanforderungen . Der Standardwert ist <see cref="P:System.Threading.CancellationToken.None" />.</param>
+        <summary>Liest die angegebene Anzahl von Bytes asynchron in das angegebene Array.  
+  
+ Verfügbar ab [!INCLUDE[net_2015](~/includes/net-2015-md.md)]</summary>
+        <returns>Eine Aufgabe, die den asynchronen Lesevorgang darstellt. Der Wert des <paramref name="TResult" />-Parameters enthält die Gesamtzahl der Bytes, die in den Puffer gelesen werden. Der Ergebniswert kann niedriger als die Anzahl der angeforderten Bytes sein, wenn die Anzahl an derzeit verfügbaren Bytes kleiner ist als die angeforderte Anzahl, oder sie kann 0 (null) sein, wenn das Datenstromende erreicht ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Ausnahme während des Lesevorgangs auftritt, wird es als Festlegen der <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> der Eigenschaft der zurückgegebenen Aufgabe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadByte">
+      <MemberSignature Language="C#" Value="public override int ReadByte ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 ReadByte() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.UnmanagedMemoryStream.ReadByte" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.UnmanagedMemoryStream</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Liest ein Byte aus einem Stream und erhöht die Position im Stream um ein Byte, oder gibt -1 zurück, wenn das Ende des Streams erreicht ist.</summary>
+        <returns>Das Byte ohne Vorzeichen, umgewandelt in ein <see cref="T:System.Int32" />-Objekt, oder -1, wenn das Ende des Streams erreicht ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um ganzzahlige Werte aus dem Stream zurückzugeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Lesen und Schreiben in nicht verwalteten Speicher mithilfe der <xref:System.IO.UnmanagedMemoryStream> Klasse. Ein nicht verwalteten Speicherblock ist reserviert und aufgehoben mithilfe der <xref:System.Runtime.InteropServices.Marshal> Klasse. In diesem Beispiel ein <xref:System.IO.UnmanagedMemoryStream> Objekt wird an eine Methode, die überprüft, übergeben die <xref:System.IO.UnmanagedMemoryStream.CanRead%2A> Eigenschaft vor dem Lesen und den Inhalt in der Konsole anzeigen.  
+  
+ [!code-csharp[System.IO.UnmanagedMemoryStream_Example#00](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.UnmanagedMemoryStream_Example/cs/program.cs#00)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Der Stream ist geschlossen.</exception>
+        <exception cref="T:System.NotSupportedException">Lesevorgänge werden von der zugrunde liegende Arbeitsspeicher nicht unterstützt.  
+  
+ \- oder –  
+  
+ Die aktuelle Position ist am Ende des Streams.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Seek">
+      <MemberSignature Language="C#" Value="public override long Seek (long offset, System.IO.SeekOrigin loc);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int64 Seek(int64 offset, valuetype System.IO.SeekOrigin loc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.UnmanagedMemoryStream.Seek(System.Int64,System.IO.SeekOrigin)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.UnmanagedMemoryStream</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Int64" />
+        <Parameter Name="loc" Type="System.IO.SeekOrigin" />
+      </Parameters>
+      <Docs>
+        <param name="offset">Der Punkt relativ zu <c>Ursprung</c> beginnen gesucht werden soll.</param>
+        <param name="loc">Gibt den Anfang, am Ende oder die aktuelle Position als Bezugspunkt für <c>Ursprung</c>, anhand eines Werts vom Typ <see cref="T:System.IO.SeekOrigin" />.</param>
+        <summary>Legt die aktuelle Position des aktuellen Streams auf den angegebenen Wert fest.</summary>
+        <returns>Die neue Position im Stream.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu suchen, finden Sie unter <xref:System.IO.FileStream.Seek%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Es wurde versucht, vor dem Anfang des Datenstroms zu suchen.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="offset" /> -Wert größer ist als die maximale Größe des Datenstroms.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="loc" /> ist ungültig.</exception>
+        <exception cref="T:System.ObjectDisposedException">Der Stream ist geschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLength">
+      <MemberSignature Language="C#" Value="public override void SetLength (long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetLength(int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.UnmanagedMemoryStream.SetLength(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.UnmanagedMemoryStream</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die Länge des Streams.</param>
+        <summary>Legt die Länge eines Streams auf einen angegebenen Wert fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der angegebene Wert kleiner als die aktuelle Länge des Streams ist, wird der Stream abgeschnitten. Wenn der angegebene Wert größer als die aktuelle Länge des Streams ist, wird der Stream erweitert. Wenn der Stream erweitert wird, sind der Inhalt des Streams zwischen der alten und neuen Länge nicht definiert.  
+  
+ Ein Stream muss Schreib- und Suchvorgänge für unterstützen <xref:System.IO.UnmanagedMemoryStream.SetLength%2A> arbeiten.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Ein E/A-Fehler ist aufgetreten.</exception>
+        <exception cref="T:System.ObjectDisposedException">Der Stream ist geschlossen.</exception>
+        <exception cref="T:System.NotSupportedException">Der zugrunde liegende Speicher unterstützt keine Schreibvorgänge.  
+  
+ \- oder –  
+  
+ Es wird versucht, in den Stream geschrieben und die <see cref="P:System.IO.UnmanagedMemoryStream.CanWrite" /> Eigenschaft ist <see langword="false" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Das angegebene <paramref name="value" /> überschreitet die Kapazität des Streams.  
+  
+ \- oder –  
+  
+ Das angegebene <paramref name="value" /> ist ein negativer Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (byte[] buffer, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(unsigned int8[] buffer, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.UnmanagedMemoryStream.Write(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.UnmanagedMemoryStream</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Das Bytearray, aus dem Bytes in den aktuellen Stream kopiert werden sollen.</param>
+        <param name="offset">Der Offset im Puffer, ab dem Bytes in den aktuellen Stream kopiert werden sollen.</param>
+        <param name="count">Die Anzahl der Bytes, die in den aktuellen Stream geschrieben werden sollen.</param>
+        <summary>Schreibt einen Byteblock mit den Daten aus einem Puffer in den aktuellen Stream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Schreiben von tritt ein, an der aktuellen Position im Stream.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Lesen und Schreiben in nicht verwalteten Speicher mithilfe der <xref:System.IO.UnmanagedMemoryStream> Klasse.  Ein nicht verwalteten Speicherblock ist reserviert und aufgehoben mithilfe der <xref:System.Runtime.InteropServices.Marshal> Klasse.  
+  
+ [!code-csharp[System.IO.UnmanagedMemoryStream#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.UnmanagedMemoryStream/cs/sample.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Der Stream ist geschlossen.</exception>
+        <exception cref="T:System.NotSupportedException">Der zugrunde liegende Speicher unterstützt keine Schreibvorgänge.  
+  
+ \- oder –  
+  
+ Es wird versucht, in den Stream geschrieben und die <see cref="P:System.IO.UnmanagedMemoryStream.CanWrite" /> Eigenschaft ist <see langword="false" />.  
+  
+ \- oder –  
+  
+ Die <paramref name="count" /> Wert ist größer als die Kapazität des Streams.  
+  
+ \- oder –  
+  
+ Die Position ist am Ende der Streamkapazität.</exception>
+        <exception cref="T:System.IO.IOException">Ein E/A-Fehler tritt auf.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Einer der angegebenen Parameter ist kleiner als 0 (null).</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="offset" /> abzüglich der Länge des Parameters der <paramref name="buffer" /> Parameter ist kleiner als das <paramref name="count" /> Parameter.</exception>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="buffer" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task WriteAsync (byte[] buffer, int offset, int count, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task WriteAsync(unsigned int8[] buffer, int32 offset, int32 count, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.UnmanagedMemoryStream.WriteAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.UnmanagedMemoryStream</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Der Puffer, aus dem Daten geschrieben werden sollen.</param>
+        <param name="offset">Der nullbasierte Byteoffset im <c>Puffer</c> aus dem Bytes in den Stream kopiert werden soll.</param>
+        <param name="count">Die maximale Anzahl der zu schreibenden Bytes.</param>
+        <param name="cancellationToken">Das Token zum überwachen von Abbruchanforderungen . Der Standardwert ist <see cref="P:System.Threading.CancellationToken.None" />.</param>
+        <summary>Schreibt beim Überschreiben in einer abgeleiteten Klasse eine Folge von Bytes asynchron in den aktuellen Stream und erhöht die aktuelle Position im Stream um die Anzahl der geschriebenen Bytes und überwacht Abbruchanforderungen.  
+  
+ Verfügbar ab [!INCLUDE[net_2015](~/includes/net-2015-md.md)]</summary>
+        <returns>Eine Aufgabe, die den asynchronen Schreibvorgang darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Ausnahme während des Schreibvorgangs auftritt, wird es als Festlegen der <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> der Eigenschaft der zurückgegebenen Aufgabe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteByte">
+      <MemberSignature Language="C#" Value="public override void WriteByte (byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteByte(unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.UnmanagedMemoryStream.WriteByte(System.Byte)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.UnmanagedMemoryStream</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Bytewert, der in den Stream geschrieben werden soll.</param>
+        <summary>Schreibt ein Byte an die aktuelle Position im Dateistream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Lesen und Schreiben in nicht verwalteten Speicher mithilfe der <xref:System.IO.UnmanagedMemoryStream> Klasse. Ein nicht verwalteten Speicherblock ist reserviert und aufgehoben mithilfe der <xref:System.Runtime.InteropServices.Marshal> Klasse. In diesem Beispiel wird ein <xref:System.IO.UnmanagedMemoryStream> Objekt wird an eine Methode, die überprüft, übergeben die <xref:System.IO.UnmanagedMemoryStream.CanWrite%2A> Eigenschaft, bevor Sie versuchen, die Daten in den Stream geschrieben.  
+  
+ [!code-csharp[System.IO.UnmanagedMemoryStream_Example#00](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.UnmanagedMemoryStream_Example/cs/program.cs#00)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Der Stream ist geschlossen.</exception>
+        <exception cref="T:System.NotSupportedException">Der zugrunde liegende Speicher unterstützt keine Schreibvorgänge.  
+  
+ \- oder –  
+  
+ Es wird versucht, in den Stream geschrieben und die <see cref="P:System.IO.UnmanagedMemoryStream.CanWrite" /> Eigenschaft ist <see langword="false" />.  
+  
+ \- oder –  
+  
+ Die aktuelle Position ist am Ende der Kapazität des Streams.</exception>
+        <exception cref="T:System.IO.IOException">Die angegebene <paramref name="value" /> bewirkt, dass den Stream überschreiten der maximalen Kapazität.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

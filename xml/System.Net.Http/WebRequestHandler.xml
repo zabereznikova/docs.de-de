@@ -1,0 +1,314 @@
+<Type Name="WebRequestHandler" FullName="System.Net.Http.WebRequestHandler">
+  <TypeSignature Language="C#" Value="public class WebRequestHandler : System.Net.Http.HttpClientHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebRequestHandler extends System.Net.Http.HttpClientHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Http.WebRequestHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Http.WebRequest</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Net.Http.HttpClientHandler</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet die Desktop-spezifische Funktionen für Windows Store-apps oder anderen Umgebungen nicht verfügbar sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse implementiert einen Transport-Handler mit <xref:System.Net.HttpWebRequest> Instanzen HTTP-Anforderungen an Server senden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebRequestHandler ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.WebRequestHandler.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http.WebRequest</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Http.WebRequestHandler" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowPipelining">
+      <MemberSignature Language="C#" Value="public bool AllowPipelining { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowPipelining" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.WebRequestHandler.AllowPipelining" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http.WebRequest</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Anforderung über Pipelineverbindungen zur Internetressource gesendet werden soll, oder legt diesen fest.</summary>
+        <value>Gibt <see cref="T:System.Boolean" />zurück.  
+  
+ <see langword="true" />, wenn die Anforderung über Pipelineverbindungen gesendet werden soll, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Anwendung verwendet die <xref:System.Net.Http.WebRequestHandler.AllowPipelining%2A> Eigenschaft, um eine Einstellung dafür pipelineverbindungen anzugeben. Wenn <xref:System.Net.Http.WebRequestHandler.AllowPipelining%2A> ist `true`, eine Anwendung macht pipelineverbindungen zu den Servern, die sie unterstützen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationLevel">
+      <MemberSignature Language="C#" Value="public System.Net.Security.AuthenticationLevel AuthenticationLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Security.AuthenticationLevel AuthenticationLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.WebRequestHandler.AuthenticationLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http.WebRequest</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Security.AuthenticationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, der Ebene der Authentifizierung und Identitätswechsel für diese Anforderung verwendet.</summary>
+        <value>Gibt <see cref="T:System.Net.Security.AuthenticationLevel" />zurück.  
+  
+ Eine bitweise Kombination der <see cref="T:System.Net.Security.AuthenticationLevel" />-Werte.  Der Standardwert ist <see cref="F:System.Net.Security.AuthenticationLevel.MutualAuthRequested" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei gegenseitiger Authentifizierung stellen sowohl Client als auch Server Anmeldeinformationen bereit, um ihre Identität anzugeben. Der <xref:System.Net.Security.AuthenticationLevel.MutualAuthRequired>-Wert und der <xref:System.Net.Security.AuthenticationLevel.MutualAuthRequested>-Wert sind für die Kerberos-Authentifizierung relevant. Kerberos-Authentifizierung kann direkt unterstützt oder verwendet werden, wenn das tatsächliche Sicherheitsprotokoll mithilfe des Negotiate-Sicherheitsprotokolls ausgewählt wird. Weitere Informationen über Authentifizierungsprotokolle finden Sie unter [Internetauthentifizierung](~/docs/framework/network-programming/internet-authentication.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CachePolicy">
+      <MemberSignature Language="C#" Value="public System.Net.Cache.RequestCachePolicy CachePolicy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Cache.RequestCachePolicy CachePolicy" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.WebRequestHandler.CachePolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http.WebRequest</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Cache.RequestCachePolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Cacherichtlinie für diese Anforderung ab oder legt diese fest.</summary>
+        <value>Gibt <see cref="T:System.Net.Cache.RequestCachePolicy" />zurück.  
+  
+ Ein <see cref="T:System.Net.Cache.RequestCachePolicy" />-Objekt, das eine Cacherichtlinie definiert. Die Standardeinstellung ist <see cref="P:System.Net.WebRequest.DefaultCachePolicy" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle Cacherichtlinie und das Vorhandensein der angeforderten Ressource im Cache bestimmen, ob eine Antwort aus dem Cache abgerufen werden kann. Verwendung von zwischengespeicherten Antworten in der Regel verbessert die Anwendungsleistung, aber besteht das Risiko, dass die Antwort im Cache nicht die Antwort auf dem Server übereinstimmt.  
+  
+ Die Standardcacherichtlinie kann angegeben werden, in der Konfigurationsdatei "Machine.config" oder durch Festlegen der <xref:System.Net.HttpWebRequest.DefaultCachePolicy%2A> Eigenschaft.  
+  
+ Eine Kopie einer Ressource wird nur in den Cache hinzugefügt, wenn der Antwortstream für die Ressource abgerufen und bis zum Ende des Streams gelesen wird. Damit eine andere Anforderung für die gleiche Ressource eine zwischengespeicherte Kopie abhängig von der Cacheebene für die Richtlinie für diese Anforderung verwenden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientCertificates">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509CertificateCollection ClientCertificates { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509CertificateCollection ClientCertificates" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.WebRequestHandler.ClientCertificates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http.WebRequest</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509CertificateCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die dieser Anforderung zugeordnete Auflistung von Sicherheitszertifikaten ab oder legt diese fest.</summary>
+        <value>Gibt <see cref="T:System.Security.Cryptography.X509Certificates.X509CertificateCollection" />zurück.  
+  
+ Die Auflistung von dieser Anforderung zugeordneten Sicherheitszertifikaten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinueTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan ContinueTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan ContinueTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.WebRequestHandler.ContinueTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http.WebRequest</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, wie der Zeit in Millisekunden, wartet die Anwendung für die 100-vom Server vor dem Hochladen von Daten fortsetzen.</summary>
+        <value>Gibt <see cref="T:System.TimeSpan" />zurück.  
+  
+ Die Zeitspanne in Millisekunden, wartet die Anwendung für die 100-vom Server vor dem Hochladen von Daten fortsetzen. Der Standardwert beträgt 350 Millisekunden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImpersonationLevel">
+      <MemberSignature Language="C#" Value="public System.Security.Principal.TokenImpersonationLevel ImpersonationLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Principal.TokenImpersonationLevel ImpersonationLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.WebRequestHandler.ImpersonationLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http.WebRequest</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.TokenImpersonationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ebene des Identitätswechsels für die aktuelle Anforderung ab oder legt diese fest.</summary>
+        <value>Gibt <see cref="T:System.Security.Principal.TokenImpersonationLevel" />zurück.  
+  
+ Die Ebene des Identitätswechsels für die Anforderung. Die Standardeinstellung ist <see cref="F:System.Security.Principal.TokenImpersonationLevel.Delegation" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Ebene des Identitätswechsels bestimmt, wie der Server die Anmeldeinformationen des Clients verwenden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxResponseHeadersLength">
+      <MemberSignature Language="C#" Value="public int MaxResponseHeadersLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxResponseHeadersLength" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.WebRequestHandler.MaxResponseHeadersLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http.WebRequest</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximal zulässige Länge der Antwortheader ab oder legt diese fest.</summary>
+        <value>Gibt <see cref="T:System.Int32" />zurück.  
+  
+ Die Länge der Antwortheader in KB (1024 Bytes).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Länge der Antwortheader enthält die Antwortstatuszeile und keine zusätzlichen Steuerzeichen, die als Teil des HTTP-Protokoll empfangen werden. Ein Wert von-1 bedeutet, dass, die keine auf die Antwortheader Beschränkung. der Wert 0 bedeutet, bei denen alle Anforderungen.  
+  
+ Wenn die <xref:System.Net.Http.WebRequestHandler.MaxResponseHeadersLength%2A> Eigenschaft nicht ausdrücklich festgelegt ist, wird standardmäßig der Wert, der die <xref:System.Net.HttpWebRequest.DefaultMaximumResponseHeadersLength%2A> Eigenschaft.  
+  
+ Überschreitet die Länge der Antwortheader empfangen den Wert, der die <xref:System.Net.Http.WebRequestHandler.MaxResponseHeadersLength%2A> -Eigenschaft, eine Ausnahme wird ausgelöst, wenn die Antwort zugegriffen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadWriteTimeout">
+      <MemberSignature Language="C#" Value="public int ReadWriteTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ReadWriteTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.WebRequestHandler.ReadWriteTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http.WebRequest</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Timeoutwert in Millisekunden fest, wenn eine Anforderung zum Schreiben oder Lesen Sie eine Antwort von einem Server.</summary>
+        <value>Gibt <see cref="T:System.Int32" />zurück.  
+  
+ Die Anzahl von Millisekunden vor dem Timeout für das Schreiben oder Lesen. Der Standardwert ist 300.000 Millisekunden (5 Minuten).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerCertificateValidationCallback">
+      <MemberSignature Language="C#" Value="public System.Net.Security.RemoteCertificateValidationCallback ServerCertificateValidationCallback { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Security.RemoteCertificateValidationCallback ServerCertificateValidationCallback" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.WebRequestHandler.ServerCertificateValidationCallback" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http.WebRequest</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Security.RemoteCertificateValidationCallback</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Rückrufmethode zur Überprüfung des Serverzertifikats ab oder legt diese fest.</summary>
+        <value>Gibt <see cref="T:System.Net.Security.RemoteCertificateValidationCallback" />zurück.  
+  
+ Eine Rückrufmethode zur Überprüfung des Serverzertifikats.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Net.Http.WebRequestHandler.ServerCertificateValidationCallback%2A> ist `null`, das Serverzertifikat überprüft, die mit standardmäßigen bekannten Zertifizierungsstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnsafeAuthenticatedConnectionSharing">
+      <MemberSignature Language="C#" Value="public bool UnsafeAuthenticatedConnectionSharing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UnsafeAuthenticatedConnectionSharing" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.WebRequestHandler.UnsafeAuthenticatedConnectionSharing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http.WebRequest</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>set: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Freigabe NTLM-authentifizierter Hochgeschwindigkeitsverbindungen zulässig ist, oder legt diesen fest.</summary>
+        <value>Gibt <see cref="T:System.Boolean" />zurück.  
+  
+ <see langword="true" />, um die authentifizierte Verbindung geöffnet zu halten, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für diese Eigenschaft ist `false`, die bewirkt, dass der aktuellen Verbindungs nach Abschluss einer Anforderung geschlossen werden. Die Anwendung muss Authentifizierungssequenz durchlaufen, jedes Mal, wenn sie eine neue Anforderung ausstellt. Wenn diese Eigenschaft, um festgelegt wird `true`, die zum Abrufen der Antwort verwendete Verbindung bleibt geöffnet, nachdem die Authentifizierung erfolgt ist. In diesem Fall andere Anforderungen, die diese Eigenschaft auf festgelegt haben `true` kann die Verbindung ohne erneute Authentifizierung verwenden. Das heißt, wenn eine Verbindung für Benutzer A authentifiziert wurde, Benutzer B möglicherweise wiederverwenden-Verbindung. Benutzer B die Anforderung wird erfüllt, basierend auf den Anmeldeinformationen des Benutzers A.  
+  
+> [!CAUTION]
+>  Da es für eine Anwendung, die Verbindung zu verwenden, ohne Authentifizierung möglich ist, müssen Sie darauf achten, keine administrativen Sicherheitslücken in Ihrem System vorhanden ist, beim Festlegen dieser Eigenschaft auf `true`. Wenn Ihre Anwendung Anforderungen für mehrere Benutzer sendet (nimmt mehrere Benutzerkonten) und verlässt sich auf die Authentifizierung beim Schützen von Ressourcen, legen Sie nicht diese Eigenschaft auf `true` außer Verbindungsgruppen verwenden, wie unten beschrieben.  
+  
+ Sie sollten in Betracht ziehen, aktivieren dieses Verfahren aus, wenn Ihre Probleme bei der Leistung und die Anwendung auf einem Webserver mit integrierter Windows-Authentifizierung ausgeführt wird.  
+  
+ Wenn Sie diese Einstellung aktivieren, wird das System Sicherheitsrisiken. Wenn Sie festlegen, die <xref:System.Net.HttpWebRequest.UnsafeAuthenticatedConnectionSharing%2A> Eigenschaft, um `true` Achten Sie darauf, dass Sie die folgenden Vorsichtsmaßnahmen:  
+  
+-   Führen Sie die Anwendung in einer geschützten Umgebung, um zu verhindern, dass mögliche Verbindung-Exploits.  
+  
+ Wenn Sie die Back-End-Server steuern, als Alternative ggf. Sie authentifizierungspersistenz deaktivieren. Dies verbessert die Leistung in einem geringeren Ausmaß, aber es ist sicherer. Weitere Informationen suchen Sie nach AuthPersistence in der MSDN Library unter [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

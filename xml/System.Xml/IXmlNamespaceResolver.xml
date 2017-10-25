@@ -1,0 +1,181 @@
+<Type Name="IXmlNamespaceResolver" FullName="System.Xml.IXmlNamespaceResolver">
+  <TypeSignature Language="C#" Value="public interface IXmlNamespaceResolver" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IXmlNamespaceResolver" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.IXmlNamespaceResolver" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht schreibgeschützten Zugriff auf einen Satz von Präfix- und Namespacezuordnungen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetNamespacesInScope">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,string&gt; GetNamespacesInScope (System.Xml.XmlNamespaceScope scope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; GetNamespacesInScope(valuetype System.Xml.XmlNamespaceScope scope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.IXmlNamespaceResolver.GetNamespacesInScope(System.Xml.XmlNamespaceScope)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scope" Type="System.Xml.XmlNamespaceScope" />
+      </Parameters>
+      <Docs>
+        <param name="scope">Ein <see cref="T:System.Xml.XmlNamespaceScope" />-Wert, der den Typ der Namespaceknoten angibt, die zurückgegeben werden sollen.</param>
+        <summary>Ruft eine Auflistung von definierte Präfix und Namespace-Zuordnungen, die derzeit im Gültigkeitsbereich befinden.</summary>
+        <returns>Ein <see cref="T:System.Collections.IDictionary" />, das die derzeit im Gültigkeitsbereich enthaltenen Namespaces enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Auflistung ist sortiert nach Präfix und kann zum Auflisten der Namespaces aktuell im Gültigkeitsbereich verwendet werden. Die Auflistung ist eine nicht verbundene Kopie der Liste der aktuellen Namespace.  
+  
+ Die folgende Tabelle enthält die <xref:System.Xml.XmlNamespaceScope> Werte und wie sie die ob wirkt sich auf die Standard- und integrierten Namespaces von zurückgegeben werden die <xref:System.Xml.IXmlNamespaceResolver.GetNamespacesInScope%2A> Methode.  
+  
+|XmlNamespaceScope-Wert|xmlns: XML|xmlns:xmlns|Xmlns = ""|  
+|-----------------------------|---------------|-----------------|---------------|  
+|<xref:System.Xml.XmlNamespaceScope.All>|ja|nein|nein|  
+|<xref:System.Xml.XmlNamespaceScope.ExcludeXml>|nein|nein|nein|  
+|<xref:System.Xml.XmlNamespaceScope.Local>|nein|nein|ja|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupNamespace">
+      <MemberSignature Language="C#" Value="public string LookupNamespace (string prefix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string LookupNamespace(string prefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.IXmlNamespaceResolver.LookupNamespace(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">Das Präfix, dessen Namespace-URI gesucht werden soll.</param>
+        <summary>Ruft den Namespace-URI, dem angegebenen Präfix zugeordnet.</summary>
+        <returns>Der Namespace-URI, der dem Präfix zugeordnet ist. <see langword="null" />, wenn das Präfix keinem Namespace-URI zugeordnet ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Namespace-URI-Präfix-Zuordnungen können zwischen Knoten in einem XML-Dokument ändern. Sie können nicht das Ergebnis einer Suche wird von einem Knoten zum nächsten konsistent abhängen.  
+  
+ In der folgenden Tabelle wird beschrieben, wie die Standard- und integrierten Namespaces behandelt werden, durch die <xref:System.Xml.IXmlNamespaceResolver.LookupNamespace%2A> Methode.  
+  
+|Präfix|Rückgabewert|  
+|------------|------------------|  
+|xml|http://www.w3.org/XML/1998/namespace|  
+|xmlns|http://www.w3.org/2000/xmlns/|  
+|`String.Empty`(Standardnamespace wurde zugewiesen).|Der aktuell zugewiesene Standardnamespace.|  
+|`String.Empty`(Der Standard-Namespace wurde nicht explizit zugewiesen).|`String.Empty`(Das leere Präfix ist verknüpft mit Elementen, die nicht in allen Namespaces sind).|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupPrefix">
+      <MemberSignature Language="C#" Value="public string LookupPrefix (string namespaceName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string LookupPrefix(string namespaceName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.IXmlNamespaceResolver.LookupPrefix(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="namespaceName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="namespaceName">Der Namespace-URI, dessen Präfix gesucht werden soll.</param>
+        <summary>Ruft das Präfix, das den angegebenen Namespace-URI zugeordnet ist.</summary>
+        <returns>Das Präfix, das dem Namespace-URI zugeordnet ist; <see langword="null" />, wenn der Namespace-URI keinem Präfix zugeordnet ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist möglich, dass ein Namespace-URI, die mehrere Präfixe zugeordnet werden. Da die Präfixe nicht in einer vorhersagbaren Weise zugeordnet sind, hängen Sie sollte nicht Abrufen eines bestimmten Präfixes, wenn ein Namespace-URI mehr als ein Präfix zugeordnet ist.  
+  
+> [!NOTE]
+>  Namespace-URI zu präfixzuordnungen können zwischen Knoten in einem XML-Dokument ändern. Sie können nicht das Ergebnis einer Suche wird von einem Knoten zum nächsten konsistent abhängen.  
+  
+ In der folgenden Tabelle wird beschrieben, wie die Standard- und integrierten Namespaces behandelt werden, durch die <xref:System.Xml.IXmlNamespaceResolver.LookupPrefix%2A> Methode.  
+  
+|Namespace|Rückgabewert|  
+|---------------|------------------|  
+|http://www.w3.org/XML/1998/namespace|xml|  
+|http://www.w3.org/2000/xmlns/|xmlns|  
+|Ein leerer Namespace.|Ein Standardnamespace, der nicht definiert wurde.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

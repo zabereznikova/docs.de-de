@@ -1,0 +1,1445 @@
+<Type Name="TreeNodeCollection" FullName="System.Windows.Forms.TreeNodeCollection">
+  <TypeSignature Language="C#" Value="public class TreeNodeCollection : System.Collections.IList" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TreeNodeCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TreeNodeCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.TreeNodeCollectionEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Auflistung von<see cref="T:System.Windows.Forms.TreeNode" />-Objekten dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TreeNodeCollection.Add%2A>, <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A>, und <xref:System.Windows.Forms.TreeNodeCollection.RemoveAt%2A> Methoden ermöglichen es Ihnen, hinzufügen und Entfernen von einzelnen Strukturknoten aus der Auflistung.  
+  
+> [!NOTE]
+>  Auflisten der auflistungs und Entfernen von Knoten wird nicht unterstützt.  
+  
+ Sie können auch die <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> oder <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> Methoden zum Hinzufügen oder entfernen alle Strukturknoten aus der Auflistung.  
+  
+ Klassen können nicht von erben die <xref:System.Windows.Forms.TreeNodeCollection> Klasse.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Kundeninformationen in einem <xref:System.Windows.Forms.TreeView> Steuerelement. Der Stammknoten der Struktur anzuzeigen, Kundennamen und die untergeordneten Knoten anzuzeigen, die Auftragsnummern auf den einzelnen Kunden zugewiesen. In diesem Beispiel werden 1.000 Kunden mit jeweils 15 Aufträgen angezeigt. Das Neuzeichnen der der <xref:System.Windows.Forms.TreeView> unterdrückt wird, mithilfe der <xref:System.Windows.Forms.TreeView.BeginUpdate%2A> und <xref:System.Windows.Forms.TreeView.EndUpdate%2A> Methoden und einer Wartezeit von <xref:System.Windows.Forms.Cursor> wird angezeigt, während die <xref:System.Windows.Forms.TreeView> erstellt und zeichnet die <xref:System.Windows.Forms.TreeNode> Objekte. Dieses Beispiel benötigen Sie ein `Customer` -Objekt, das eine Auflistung von aufnehmen kann `Order` Objekte. Darüber hinaus müssen Sie eine Instanz von erstellt haben eine <xref:System.Windows.Forms.TreeView> control für eine <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[TreeView#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeView/CPP/treeview.cpp#1)]
+ [!code-csharp[TreeView#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeView/CS/treeview.cs#1)]
+ [!code-vb[TreeView#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeView/VB/treeview.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Add (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.TreeNode Add(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.Add(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der Bezeichnungstext angezeigt, indem die <see cref="T:System.Windows.Forms.TreeNode" />.</param>
+        <summary>Fügt einen neuen Strukturknoten mit dem angegebenen Bezeichnungstext an das Ende der aktuellen Auflistung von Strukturknoten.</summary>
+        <returns>Ein <see cref="T:System.Windows.Forms.TreeNode" /> , die der Auflistung hinzugefügten Strukturknoten darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können auch neue hinzufügen <xref:System.Windows.Forms.TreeNode> -Objekte der Auflistung mithilfe der <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> oder <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> Methoden.  
+  
+ So entfernen Sie eine <xref:System.Windows.Forms.TreeNode> , die Sie zuvor hinzugefügt haben, verwenden Sie die <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A>, <xref:System.Windows.Forms.TreeNodeCollection.RemoveAt%2A>, oder <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> Methoden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Kundeninformationen in einem <xref:System.Windows.Forms.TreeView> Steuerelement. Der Stammknoten der Struktur anzuzeigen, Kundennamen und die untergeordneten Knoten anzuzeigen, die Auftragsnummern auf den einzelnen Kunden zugewiesen. In diesem Beispiel werden 1.000 Kunden mit jeweils 15 Aufträgen angezeigt. Das Neuzeichnen der der <xref:System.Windows.Forms.TreeView> unterdrückt wird, mithilfe der <xref:System.Windows.Forms.TreeView.BeginUpdate%2A> und <xref:System.Windows.Forms.TreeView.EndUpdate%2A> Methoden und einer Wartezeit von <xref:System.Windows.Forms.Cursor> wird angezeigt, während die <xref:System.Windows.Forms.TreeView> erstellt und zeichnet die <xref:System.Windows.Forms.TreeNode> Objekte. Dieses Beispiel benötigen Sie ein `Customer` -Objekt, das eine Auflistung von aufnehmen kann `Order` Objekte. Darüber hinaus müssen Sie eine Instanz von erstellt haben eine <xref:System.Windows.Forms.TreeView> control für eine <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[TreeView#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeView/CPP/treeview.cpp#1)]
+ [!code-csharp[TreeView#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeView/CS/treeview.cs#1)]
+ [!code-vb[TreeView#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeView/VB/treeview.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual int Add (System.Windows.Forms.TreeNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Add(class System.Windows.Forms.TreeNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.Add(System.Windows.Forms.TreeNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Windows.Forms.TreeNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">Der der Auflistung hinzuzufügende <see cref="T:System.Windows.Forms.TreeNode" />.</param>
+        <summary>Fügt einen zuvor erstelltes Strukturknoten an das Ende der Auflistung von Strukturknoten.</summary>
+        <returns>Der nullbasierte Indexwert des der <see cref="T:System.Windows.Forms.TreeNode" /> hinzugefügt, um die Auflistung von Strukturknoten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Version von der <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> Methode können Sie hinzuzufügende zuvor erstellte <xref:System.Windows.Forms.TreeNode> Objekte an das Ende der Auflistung der Strukturknoten.  
+  
+ Sie können auch neue hinzufügen <xref:System.Windows.Forms.TreeNode> -Objekte der Auflistung mithilfe der <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> oder <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> Methoden.  
+  
+ So entfernen Sie eine <xref:System.Windows.Forms.TreeNode> , die Sie zuvor hinzugefügt haben, verwenden Sie die <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A>, <xref:System.Windows.Forms.TreeNodeCollection.RemoveAt%2A>, oder <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> Methoden.  
+  
+> [!NOTE]
+>  Ein <xref:System.Windows.Forms.TreeNode> zugewiesen werden können, nur an eine <xref:System.Windows.Forms.TreeView> Steuerelement zu einem Zeitpunkt. Um den Konsolenstrukturknoten "" einem neuen Strukturansicht-Steuerelement hinzugefügt haben, müssen Sie es löschen aus der anderen Strukturansicht zunächst oder Klonen Sie es.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Kundeninformationen in einem <xref:System.Windows.Forms.TreeView> Steuerelement. Der Stammknoten der Struktur anzuzeigen, Kundennamen und die untergeordneten Knoten anzuzeigen, die Auftragsnummern auf den einzelnen Kunden zugewiesen. In diesem Beispiel werden 1.000 Kunden mit jeweils 15 Aufträgen angezeigt. Das Neuzeichnen der der <xref:System.Windows.Forms.TreeView> unterdrückt wird, mithilfe der <xref:System.Windows.Forms.TreeView.BeginUpdate%2A> und <xref:System.Windows.Forms.TreeView.EndUpdate%2A> Methoden und einer Wartezeit von <xref:System.Windows.Forms.Cursor> wird angezeigt, während die <xref:System.Windows.Forms.TreeView> erstellt und zeichnet die <xref:System.Windows.Forms.TreeNode> Objekte. Dieses Beispiel benötigen Sie ein `Customer` -Objekt, das eine Auflistung von aufnehmen kann `Order` Objekte. Darüber hinaus müssen Sie eine Instanz von erstellt haben eine <xref:System.Windows.Forms.TreeView> control für eine <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[TreeView#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeView/CPP/treeview.cpp#1)]
+ [!code-csharp[TreeView#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeView/CS/treeview.cs#1)]
+ [!code-vb[TreeView#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeView/VB/treeview.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="node" /> ist zurzeit zu einem anderen zugewiesen <see cref="T:System.Windows.Forms.TreeView" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Add (string key, string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.TreeNode Add(string key, string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.Add(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Name des Strukturknotens.</param>
+        <param name="text">Der im Strukturknoten anzuzeigende Text.</param>
+        <summary>Erstellt einen neuen Strukturknoten mit dem angegebenen Schlüssel und den Text, und fügt es der Auflistung hinzu.</summary>
+        <returns>Die <see cref="T:System.Windows.Forms.TreeNode" /> , die der Auflistung hinzugefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TreeNode.Name%2A> Eigenschaft entspricht dem Schlüssel für eine <xref:System.Windows.Forms.TreeNode> in der <xref:System.Windows.Forms.TreeNodeCollection>.  
+  
+ Sie können auch neue hinzufügen <xref:System.Windows.Forms.TreeNode> -Objekte der Auflistung mithilfe der <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> oder <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Add (string key, string text, int imageIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.TreeNode Add(string key, string text, int32 imageIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.Add(System.String,System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="imageIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Name des Strukturknotens.</param>
+        <param name="text">Der im Strukturknoten anzuzeigende Text.</param>
+        <param name="imageIndex">Der Index des Bilds in den Strukturknoten angezeigt wird.</param>
+        <summary>Erstellt einen Strukturknoten mit dem angegebenen Schlüssel, Text und Image, und fügt es der Auflistung hinzu.</summary>
+        <returns>Die <see cref="T:System.Windows.Forms.TreeNode" /> , die der Auflistung hinzugefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TreeNode.Name%2A> Eigenschaft entspricht dem Schlüssel für eine <xref:System.Windows.Forms.TreeNode> in der <xref:System.Windows.Forms.TreeNodeCollection>.  
+  
+ Die `imageIndex` Parameter verweist auf ein Bild in der <xref:System.Windows.Forms.TreeView.ImageList%2A> Eigenschaft des übergeordneten Elements <xref:System.Windows.Forms.TreeView>.  
+  
+ Der Konsolenstrukturknoten "" wird am Ende der Auflistung hinzugefügt. Sie können auch neue hinzufügen <xref:System.Windows.Forms.TreeNode> -Objekte der Auflistung mithilfe der <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> oder <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Add (string key, string text, string imageKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.TreeNode Add(string key, string text, string imageKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.Add(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="imageKey" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Name des Strukturknotens.</param>
+        <param name="text">Der im Strukturknoten anzuzeigende Text.</param>
+        <param name="imageKey">Das Bild in den Strukturknoten angezeigt wird.</param>
+        <summary>Erstellt einen Strukturknoten mit dem angegebenen Schlüssel, Text und Image, und fügt es der Auflistung hinzu.</summary>
+        <returns>Die <see cref="T:System.Windows.Forms.TreeNode" /> , die der Auflistung hinzugefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TreeNode.Name%2A> Eigenschaft entspricht dem Schlüssel für eine <xref:System.Windows.Forms.TreeNode> in der <xref:System.Windows.Forms.TreeNodeCollection>.  
+  
+ Der Konsolenstrukturknoten "" wird am Ende der Auflistung hinzugefügt. Sie können auch neue hinzufügen <xref:System.Windows.Forms.TreeNode> -Objekte der Auflistung mithilfe der <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> oder <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> Methoden.  
+  
+ Die `imageKey` Parameter verweist auf ein Bild in der <xref:System.Windows.Forms.TreeView.ImageList%2A> Eigenschaft des übergeordneten Elements <xref:System.Windows.Forms.TreeView>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Add (string key, string text, int imageIndex, int selectedImageIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.TreeNode Add(string key, string text, int32 imageIndex, int32 selectedImageIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.Add(System.String,System.String,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="imageIndex" Type="System.Int32" />
+        <Parameter Name="selectedImageIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Name des Strukturknotens.</param>
+        <param name="text">Der im Strukturknoten anzuzeigende Text.</param>
+        <param name="imageIndex">Der Index des Bilds in den Strukturknoten angezeigt wird.</param>
+        <param name="selectedImageIndex">Der Index des Bilds, das im Strukturknoten angezeigt werden, wenn es in einem ausgewählten Zustand befindet.</param>
+        <summary>Erstellt einen Strukturknoten mit dem angegebenen Schlüssel, Text und Bildern und fügt es der Auflistung hinzu.</summary>
+        <returns>Der Konsolenstrukturknoten "", das der Auflistung hinzugefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TreeNode.Name%2A> Eigenschaft entspricht dem Schlüssel für eine <xref:System.Windows.Forms.TreeNode> in der <xref:System.Windows.Forms.TreeNodeCollection>.  
+  
+ Der Konsolenstrukturknoten "" wird am Ende der Auflistung hinzugefügt. Sie können auch neue hinzufügen <xref:System.Windows.Forms.TreeNode> -Objekte der Auflistung mithilfe der <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> oder <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> Methoden.  
+  
+ Die `imageIndex` Parameter verweist auf ein Bild in der <xref:System.Windows.Forms.TreeView.ImageList%2A> Eigenschaft des übergeordneten Elements <xref:System.Windows.Forms.TreeView>.  
+  
+ Die `selectedImageIndex` Parameter verweist auf ein Bild in der <xref:System.Windows.Forms.TreeView.StateImageList%2A> Eigenschaft des übergeordneten Elements <xref:System.Windows.Forms.TreeView>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Add (string key, string text, string imageKey, string selectedImageKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.TreeNode Add(string key, string text, string imageKey, string selectedImageKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.Add(System.String,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="imageKey" Type="System.String" />
+        <Parameter Name="selectedImageKey" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Name des Strukturknotens.</param>
+        <param name="text">Der im Strukturknoten anzuzeigende Text.</param>
+        <param name="imageKey">Der Schlüssel des Bilds im Strukturknoten angezeigt wird.</param>
+        <param name="selectedImageKey">Der Schlüssel des Bilds angezeigt, wenn der Knoten im ausgewählten Zustand befindet.</param>
+        <summary>Erstellt einen Strukturknoten mit dem angegebenen Schlüssel, Text und Bildern und fügt es der Auflistung hinzu.</summary>
+        <returns>Die <see cref="T:System.Windows.Forms.TreeNode" /> , die der Auflistung hinzugefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TreeNode.Name%2A> Eigenschaft entspricht dem Schlüssel für eine <xref:System.Windows.Forms.TreeNode> in der <xref:System.Windows.Forms.TreeNodeCollection>.  
+  
+ Der Konsolenstrukturknoten "" wird am Ende der Auflistung hinzugefügt. Sie können auch neue hinzufügen <xref:System.Windows.Forms.TreeNode> -Objekte der Auflistung mithilfe der <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> oder <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> Methoden.  
+  
+ Die `imageKey` Parameter verweist auf ein Bild in der <xref:System.Windows.Forms.TreeView.ImageList%2A> Eigenschaft des übergeordneten Elements <xref:System.Windows.Forms.TreeView>.  
+  
+ Die `selectedImageKey` Parameter verweist auf ein Bild in der <xref:System.Windows.Forms.TreeView.StateImageList%2A> Eigenschaft des übergeordneten Elements <xref:System.Windows.Forms.TreeView>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public virtual void AddRange (System.Windows.Forms.TreeNode[] nodes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddRange(class System.Windows.Forms.TreeNode[] nodes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.AddRange(System.Windows.Forms.TreeNode[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nodes" Type="System.Windows.Forms.TreeNode[]" />
+      </Parameters>
+      <Docs>
+        <param name="nodes">Ein Array von <see cref="T:System.Windows.Forms.TreeNode" /> Objekten, die die Strukturknoten der Auflistung hinzuzufügende darstellen.</param>
+        <summary>Fügt ein Array von zuvor erstellten Strukturknoten zur Auflistung hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TreeNode> enthaltenen Objekte der `nodes` Array an das Ende der Auflistung angefügt werden.  
+  
+ Können Sie die <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> Methode, um schnell eine Gruppe von zuvor hinzufügen erstellt <xref:System.Windows.Forms.TreeNode> -Objekte der Auflistung anstelle von manuell hinzufügen und <xref:System.Windows.Forms.TreeNode> mithilfe der <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> Methode.  
+  
+ So entfernen Sie eine <xref:System.Windows.Forms.TreeNode> , die Sie zuvor hinzugefügt haben, verwenden Sie die <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A>, <xref:System.Windows.Forms.TreeNodeCollection.RemoveAt%2A>, oder <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> Methoden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird Kopien der <xref:System.Windows.Forms.TreeNodeCollection> aus einer <xref:System.Windows.Forms.TreeView> an einen temporären <xref:System.Array>, und fügt dann den Inhalt des Arrays zu einem anderen <xref:System.Windows.Forms.TreeView> mithilfe der <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> Methode. Die <xref:System.Windows.Forms.TreeNodeCollection> aus der Quelldatenbank <xref:System.Windows.Forms.TreeView> deaktiviert ist, mithilfe der <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> Methode. Dieses Beispiel benötigen Sie, dass zwei <xref:System.Windows.Forms.TreeView> Steuerelemente, die eine mit einer Auflistung von <xref:System.Windows.Forms.TreeNode> Objekte.  
+  
+ [!code-cpp[TreeNodeCollection_Clear#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNodeCollection_Clear/CPP/treenodecollection_clear.cpp#1)]
+ [!code-csharp[TreeNodeCollection_Clear#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNodeCollection_Clear/CS/treenodecollection_clear.cs#1)]
+ [!code-vb[TreeNodeCollection_Clear#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNodeCollection_Clear/VB/treenodecollection_clear.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="nodes" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="nodes" />das untergeordnete Element eines anderen <see cref="T:System.Windows.Forms.TreeView" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public virtual void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Strukturknoten aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode können Sie um die gesamte Auflistung von Strukturknoten aus der Strukturansicht zu löschen.  
+  
+ Um einen einzelnen Strukturknoten aus der Auflistung zu entfernen, verwenden Sie die <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A> oder <xref:System.Windows.Forms.TreeNodeCollection.RemoveAt%2A> Methoden.  
+  
+ Hinzufügen neuer <xref:System.Windows.Forms.TreeNode> -Objekte der Auflistung mithilfe der <xref:System.Windows.Forms.TreeNodeCollection.Add%2A>, <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A>, oder <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> Methoden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird Kopien der <xref:System.Windows.Forms.TreeNodeCollection> aus einer <xref:System.Windows.Forms.TreeView> an einen temporären <xref:System.Array>, und fügt dann den Inhalt des Arrays zu einem anderen <xref:System.Windows.Forms.TreeView> mithilfe der <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> Methode. Die <xref:System.Windows.Forms.TreeNodeCollection> aus der Quelldatenbank <xref:System.Windows.Forms.TreeView> deaktiviert ist, mithilfe der <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> Methode. Dieses Beispiel benötigen Sie, dass zwei <xref:System.Windows.Forms.TreeView> Steuerelemente, die eine mit einer Auflistung von <xref:System.Windows.Forms.TreeNode> Objekte.  
+  
+ [!code-cpp[TreeNodeCollection_Clear#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNodeCollection_Clear/CPP/treenodecollection_clear.cpp#1)]
+ [!code-csharp[TreeNodeCollection_Clear#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNodeCollection_Clear/CS/treenodecollection_clear.cs#1)]
+ [!code-vb[TreeNodeCollection_Clear#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNodeCollection_Clear/VB/treenodecollection_clear.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Windows.Forms.TreeNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Windows.Forms.TreeNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.Contains(System.Windows.Forms.TreeNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Windows.Forms.TreeNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">Die <see cref="T:System.Windows.Forms.TreeNode" />, die in der Auflistung gesucht werden soll.</param>
+        <summary>Bestimmt, ob der angegebene Strukturknoten ein Member der Auflistung ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Forms.TreeNode" /> ist ein Member der Auflistung ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ermöglicht Ihnen zu bestimmen, ob eine <xref:System.Windows.Forms.TreeNode> ist ein Member der Auflistung vor dem Versuch, die Operationen für die <xref:System.Windows.Forms.TreeNode>. Sie können diese Methode verwenden, um zu bestätigen, dass eine <xref:System.Windows.Forms.TreeNode> hinzugefügt wurde, oder ist immer noch ein Element der Auflistung.  
+  
+ Die Zeitspanne, die diese Methode nimmt ist proportional zur Größe der Auflistung Knoten, daher Sie vermeiden sollten, mit großen Auflistungen.  
+  
+ Diese Methode überprüft nur Verweisgleichheit. Es können keine um zu bestimmen, ob ein Knoten entspricht, aber nicht identische in der Auflistung befindet.  
+  
+> [!NOTE]
+>  Eine Folge der Verweisgleichheit Anforderung ist, dass Sie das Verhalten dieser Methode nicht anpassen können, für abgeleitete <xref:System.Windows.Forms.TreeNode> Typen durch Überschreiben der <xref:System.Object.Equals%2A> Methode der <xref:System.Windows.Forms.TreeNode> Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird bestimmt, ob ein angegebenes <xref:System.Windows.Forms.TreeNode> innerhalb einer <xref:System.Windows.Forms.TreeNodeCollection>, und klicken Sie dann die Auflistung aufgezählt. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.Form> mit einer <xref:System.Windows.Forms.TreeView> , besitzt eine <xref:System.Windows.Forms.TreeNodeCollection> , enthält eine <xref:System.Windows.Forms.TreeNode> mit dem Namen `myTreeNode2`.  
+  
+ [!code-cpp[TreeNodeCollection_Contains_GetEnumerator#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNodeCollection_Contains_GetEnumerator/CPP/treenodecollection_contains_getenumerator.cpp#1)]
+ [!code-csharp[TreeNodeCollection_Contains_GetEnumerator#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNodeCollection_Contains_GetEnumerator/CS/treenodecollection_contains_getenumerator.cs#1)]
+ [!code-vb[TreeNodeCollection_Contains_GetEnumerator#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNodeCollection_Contains_GetEnumerator/VB/treenodecollection_contains_getenumerator.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsKey">
+      <MemberSignature Language="C#" Value="public virtual bool ContainsKey (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ContainsKey(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.ContainsKey(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Name der zu suchenden <see cref="T:System.Windows.Forms.TreeNode" />.</param>
+        <summary>Bestimmt, ob die Auflistung einen Strukturknoten mit dem angegebenen Schlüssel enthält.</summary>
+        <returns>
+          <see langword="true" />um anzugeben, dass die Auflistung enthält ein <see cref="T:System.Windows.Forms.TreeNode" /> mit dem angegebenen Schlüssel ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TreeNode.Name%2A> Eigenschaft entspricht dem Schlüssel für eine <xref:System.Windows.Forms.TreeNode> in der <xref:System.Windows.Forms.TreeNodeCollection>.  
+  
+ Der Schlüsselvergleich ist nicht in der Groß-/Kleinschreibung beachtet. Wenn die `key` Parameter ist `null` oder eine leere Zeichenfolge, die <xref:System.Windows.Forms.TreeNodeCollection.Item%2A> -Eigenschaft gibt `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array dest, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array dest, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dest" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="dest">Das Zielarray.</param>
+        <param name="index">Der Index im Zielarray, ab dem gespeichert wird.</param>
+        <summary>Kopiert die gesamte Auflistung in ein vorhandenes Array an einer angegebenen Position innerhalb des Arrays.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Anzahl der <xref:System.Windows.Forms.TreeNode> Objekte in einem <xref:System.Windows.Forms.TreeNodeCollection>, kopiert den Inhalt der Auflistung in ein <xref:System.Object> Array- und zeigt eine Liste der Strukturknoten in eine <xref:System.Windows.Forms.Label> Steuerelement. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.TreeView> mit mindestens einer <xref:System.Windows.Forms.TreeNode> in seiner <xref:System.Windows.Forms.TreeNodeCollection>, und ein <xref:System.Windows.Forms.Label> control für eine <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[TreeNodeCollection_Count_CopyTo#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNodeCollection_Count_CopyTo/CPP/treenodecollection_count_copyto.cpp#1)]
+ [!code-csharp[TreeNodeCollection_Count_CopyTo#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNodeCollection_Count_CopyTo/CS/treenodecollection_count_copyto.cs#1)]
+ [!code-vb[TreeNodeCollection_Count_CopyTo#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNodeCollection_Count_CopyTo/VB/treenodecollection_count_copyto.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNodeCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Gesamtzahl der <see cref="T:System.Windows.Forms.TreeNode" /> Objekte in der Auflistung.</summary>
+        <value>Die Gesamtanzahl der <see cref="T:System.Windows.Forms.TreeNode" /> Objekte in der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TreeNodeCollection.Count%2A> Eigenschaft enthält die Anzahl der <xref:System.Windows.Forms.TreeNode> zugewiesenen Objekte an der Auflistung. Sie können die <xref:System.Windows.Forms.TreeNodeCollection.Count%2A> Eigenschaftswert als obere Grenze einer Schleife zum Durchlaufen einer Auflistung.  
+  
+> [!NOTE]
+>  Da der Indexwert einer Auflistung ein nullbasierter Index ist, müssen Sie von der Schleifenvariablen subtrahieren. Wenn Sie nicht für dieses Konto, werden Sie die oberen Grenzen der Sammlung und der Throw überschreiten eine <xref:System.IndexOutOfRangeException> Ausnahme.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Anzahl der <xref:System.Windows.Forms.TreeNode> Objekte in einem <xref:System.Windows.Forms.TreeNodeCollection>, kopiert den Inhalt der Auflistung in ein <xref:System.Object> Array- und zeigt eine Liste der Strukturknoten in eine <xref:System.Windows.Forms.Label> Steuerelement. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.TreeView> mit mindestens einer <xref:System.Windows.Forms.TreeNode> in seiner <xref:System.Windows.Forms.TreeNodeCollection>, und ein <xref:System.Windows.Forms.Label> control für eine <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[TreeNodeCollection_Count_CopyTo#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNodeCollection_Count_CopyTo/CPP/treenodecollection_count_copyto.cpp#1)]
+ [!code-csharp[TreeNodeCollection_Count_CopyTo#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNodeCollection_Count_CopyTo/CS/treenodecollection_count_copyto.cs#1)]
+ [!code-vb[TreeNodeCollection_Count_CopyTo#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNodeCollection_Count_CopyTo/VB/treenodecollection_count_copyto.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Find">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TreeNode[] Find (string key, bool searchAllChildren);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.TreeNode[] Find(string key, bool searchAllChildren) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.Find(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="searchAllChildren" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Name des zu suchenden Strukturknotens.</param>
+        <param name="searchAllChildren">
+          <see langword="true" />untergeordnete Knoten von Knoten in der Ausdrucksbaumstruktur gesucht werden soll. andernfalls <see langword="false" />.</param>
+        <summary>Sucht die Strukturknoten mit dem angegebenen Schlüssel, die optional auch die untergeordneten Knoten durchsucht.</summary>
+        <returns>Ein Array von <see cref="T:System.Windows.Forms.TreeNode" /> -Objekte, deren <see cref="P:System.Windows.Forms.TreeNode.Name" /> -Eigenschaft mit den angegebenen Schlüssel übereinstimmt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TreeNode.Name%2A> Eigenschaft entspricht dem Schlüssel für eine <xref:System.Windows.Forms.TreeNode> in der <xref:System.Windows.Forms.TreeNodeCollection>.  
+  
+ Der Schlüsselvergleich ist nicht in der Groß-/Kleinschreibung beachtet. Wenn die `key` Parameter ist `null` oder eine leere Zeichenfolge, oder es sind keine Übereinstimmungen die <xref:System.Windows.Forms.TreeNodeCollection.Item%2A> Eigenschaft gibt ein leeres Array zurück.`.`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator, der zum Durchlaufen der Auflistung der Strukturknoten verwendet werden kann.</summary>
+        <returns>Eine <see cref="T:System.Collections.IEnumerator" /> , die die Auflistung von Strukturknoten darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird bestimmt, ob ein angegebenes <xref:System.Windows.Forms.TreeNode> innerhalb einer <xref:System.Windows.Forms.TreeNodeCollection>, und klicken Sie dann die Auflistung aufgezählt. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.Form> mit einer <xref:System.Windows.Forms.TreeView> , besitzt eine <xref:System.Windows.Forms.TreeNodeCollection> , enthält eine <xref:System.Windows.Forms.TreeNode> mit dem Namen `myTreeNode2`.  
+  
+ [!code-cpp[TreeNodeCollection_Contains_GetEnumerator#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNodeCollection_Contains_GetEnumerator/CPP/treenodecollection_contains_getenumerator.cpp#1)]
+ [!code-csharp[TreeNodeCollection_Contains_GetEnumerator#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNodeCollection_Contains_GetEnumerator/CS/treenodecollection_contains_getenumerator.cs#1)]
+ [!code-vb[TreeNodeCollection_Contains_GetEnumerator#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNodeCollection_Contains_GetEnumerator/VB/treenodecollection_contains_getenumerator.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Windows.Forms.TreeNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Windows.Forms.TreeNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.IndexOf(System.Windows.Forms.TreeNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Windows.Forms.TreeNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">Die <see cref="T:System.Windows.Forms.TreeNode" />, die in der Auflistung gesucht werden soll.</param>
+        <summary>Gibt den Index des angegebenen Strukturknotens in der Auflistung zurück.</summary>
+        <returns>Der nullbasierte Index des Elements in der Auflistung der Strukturknoten gefunden; andernfalls -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Zeitspanne, die diese Methode nimmt ist proportional zur Größe der Auflistung Knoten, daher Sie vermeiden sollten, mit großen Auflistungen.  
+  
+ Diese Methode überprüft nur Verweisgleichheit. Sie können es den Index eines Knotens entspricht, aber nicht identische in der Auflistung abzurufen.  
+  
+> [!NOTE]
+>  Eine Folge der Verweisgleichheit Anforderung ist, dass Sie das Verhalten dieser Methode nicht anpassen können, für abgeleitete <xref:System.Windows.Forms.TreeNode> Typen durch Überschreiben der <xref:System.Object.Equals%2A> Methode der <xref:System.Windows.Forms.TreeNode> Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird bestimmt, ob ein angegebenes <xref:System.Windows.Forms.TreeNode> innerhalb einer <xref:System.Windows.Forms.TreeNodeCollection>, und klicken Sie dann die Auflistung aufgezählt. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.Form> mit einer <xref:System.Windows.Forms.TreeView> , besitzt eine <xref:System.Windows.Forms.TreeNodeCollection> , enthält eine <xref:System.Windows.Forms.TreeNode> mit dem Namen `myTreeNode2`.  
+  
+ [!code-cpp[TreeNodeCollection_Contains_GetEnumerator#2](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNodeCollection_Contains_GetEnumerator/CPP/treenodecollection_contains_getenumerator.cpp#2)]
+ [!code-csharp[TreeNodeCollection_Contains_GetEnumerator#2](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNodeCollection_Contains_GetEnumerator/CS/treenodecollection_contains_getenumerator.cs#2)]
+ [!code-vb[TreeNodeCollection_Contains_GetEnumerator#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNodeCollection_Contains_GetEnumerator/VB/treenodecollection_contains_getenumerator.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOfKey">
+      <MemberSignature Language="C#" Value="public virtual int IndexOfKey (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOfKey(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.IndexOfKey(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Name des zu suchenden Strukturknotens.</param>
+        <summary>Gibt den Index des ersten Vorkommens von einem Strukturknoten mit dem angegebenen Schlüssel zurück.</summary>
+        <returns>Der nullbasierte Index des ersten Vorkommens von einem Strukturknoten mit dem angegebenen Schlüssel, falls gefunden; andernfalls -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Windows.Forms.TreeNodeCollection.IndexOfKey%2A> wird aufgerufen, die letzte Index zuerst nach einer Übereinstimmung Schlüssel überprüft, und wenn keine Übereinstimmung vorhanden ist, beginnt die Suche am Anfang der Auflistung zurückgegeben.  
+  
+ Die <xref:System.Windows.Forms.TreeNode.Name%2A> Eigenschaft entspricht dem Schlüssel für eine <xref:System.Windows.Forms.TreeNode> in der <xref:System.Windows.Forms.TreeNodeCollection>.  
+  
+ Der Schlüsselvergleich ist nicht in der Groß-/Kleinschreibung beachtet. Wenn `key` ist `null` oder eine leere Zeichenfolge, die <xref:System.Windows.Forms.TreeNodeCollection.Item%2A> Eigenschaft gibt-1 zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Insert (int index, string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.TreeNode Insert(int32 index, string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.Insert(System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Position in der Auflistung, die Knoten einfügen.</param>
+        <param name="text">Der im Strukturknoten anzuzeigende Text.</param>
+        <summary>Erstellt einen Strukturknoten mit dem angegebenen Text und fügt es am angegebenen Index.</summary>
+        <returns>Die <see cref="T:System.Windows.Forms.TreeNode" /> , die in der Auflistung eingefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.TreeView.Sorted%2A> -Eigenschaftensatz auf `true`die `index` Parameterwert wird ignoriert. Die <xref:System.Windows.Forms.TreeNode> wird in der Strukturansicht eingefügt und die <xref:System.Windows.Forms.TreeView> erneut sortiert wird.  
+  
+ Sie können auch neue hinzufügen <xref:System.Windows.Forms.TreeNode> -Objekte der Auflistung mithilfe der <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> oder <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public virtual void Insert (int index, System.Windows.Forms.TreeNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Insert(int32 index, class System.Windows.Forms.TreeNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.Insert(System.Int32,System.Windows.Forms.TreeNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="node" Type="System.Windows.Forms.TreeNode" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der indizierten Position in der Auflistung den Strukturknoten eingefügt.</param>
+        <param name="node">Die <see cref="T:System.Windows.Forms.TreeNode" /> zum Einfügen in die Auflistung.</param>
+        <summary>Fügt der Auflistung von Strukturknoten an der angegebenen Position einen vorhandenen Strukturknoten zu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.TreeView.Sorted%2A?displayProperty=nameWithType> -Eigenschaftensatz auf `true`die `index` Parameterwert wird ignoriert. Die <xref:System.Windows.Forms.TreeNode> wird in der Strukturansicht eingefügt und die <xref:System.Windows.Forms.TreeView> neu sortiert.  
+  
+ Sie können auch neue hinzufügen <xref:System.Windows.Forms.TreeNode> -Objekte der Auflistung mithilfe der <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> oder <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> Methoden.  
+  
+ So entfernen Sie eine <xref:System.Windows.Forms.TreeNode> , die Sie zuvor hinzugefügt haben, verwenden Sie die <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A>, <xref:System.Windows.Forms.TreeNodeCollection.RemoveAt%2A>, oder <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> Methoden.  
+  
+> [!NOTE]
+>  Ein <xref:System.Windows.Forms.TreeNode> zugewiesen werden können, nur an eine <xref:System.Windows.Forms.TreeView> Steuerelement zu einem Zeitpunkt. Um den Konsolenstrukturknoten "" einem neuen Strukturansicht-Steuerelement hinzugefügt haben, müssen Sie es löschen aus der anderen Strukturansicht zunächst oder Klonen Sie es.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird den ausgewählte Strukturknoten entfernt, von einem <xref:System.Windows.Forms.TreeView> und fügt es in eine andere hinzu, wenn beide Auflistungen der Struktur der Knoten nicht schreibgeschützt sind. Beim ein <xref:System.Windows.Forms.Button> geklickt wird, die <xref:System.Windows.Forms.TreeNode> dargestellte der <xref:System.Windows.Forms.TreeView.SelectedNode%2A?displayProperty=nameWithType> Eigenschaft wird von einem gelöscht <xref:System.Windows.Forms.TreeView> mithilfe der <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A> Methode und die andere hinzugefügt <xref:System.Windows.Forms.TreeView> mithilfe der <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> Methode. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.Form> enthält zwei <xref:System.Windows.Forms.TreeView> Steuerelemente und ein <xref:System.Windows.Forms.Button>. Die <xref:System.Windows.Forms.TreeView> Steuerelemente heißen `treeView1` und `treeView2`.  
+  
+ [!code-cpp[TreeNodeCollection#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNodeCollection/CPP/treenodecollection.cpp#1)]
+ [!code-csharp[TreeNodeCollection#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNodeCollection/CS/treenodecollection.cs#1)]
+ [!code-vb[TreeNodeCollection#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNodeCollection/VB/treenodecollection.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="node" /> ist zurzeit zu einem anderen zugewiesen <see cref="T:System.Windows.Forms.TreeView" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Insert (int index, string key, string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.TreeNode Insert(int32 index, string key, string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.Insert(System.Int32,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Position in der Auflistung, die Knoten einfügen.</param>
+        <param name="key">Der Name des Strukturknotens.</param>
+        <param name="text">Der im Strukturknoten anzuzeigende Text.</param>
+        <summary>Erstellt einen Strukturknoten mit dem angegebenen Text und der Schlüssel und fügt der Auflistung.</summary>
+        <returns>Die <see cref="T:System.Windows.Forms.TreeNode" /> , die in der Auflistung eingefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.TreeView.Sorted%2A> -Eigenschaftensatz auf `true`die `index` Parameterwert wird ignoriert. Die <xref:System.Windows.Forms.TreeNode> wird in der Strukturansicht eingefügt und die <xref:System.Windows.Forms.TreeView> erneut sortiert wird.  
+  
+ Sie können auch neue hinzufügen <xref:System.Windows.Forms.TreeNode> -Objekte der Auflistung mithilfe der <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> oder <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> Methoden.  
+  
+ Die <xref:System.Windows.Forms.TreeNode.Name%2A> Eigenschaft entspricht dem Schlüssel für eine <xref:System.Windows.Forms.TreeNode> in der <xref:System.Windows.Forms.TreeNodeCollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Insert (int index, string key, string text, int imageIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.TreeNode Insert(int32 index, string key, string text, int32 imageIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.Insert(System.Int32,System.String,System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="imageIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Position in der Auflistung, die Knoten einfügen.</param>
+        <param name="key">Der Name des Strukturknotens.</param>
+        <param name="text">Der im Strukturknoten anzuzeigende Text.</param>
+        <param name="imageIndex">Der Index des Bilds in den Strukturknoten angezeigt wird.</param>
+        <summary>Erstellt einen Strukturknoten mit dem angegebenen Schlüssel, Text und Bild und fügt es am angegebenen Index in die Auflistung.</summary>
+        <returns>Die <see cref="T:System.Windows.Forms.TreeNode" /> , die in der Auflistung eingefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.TreeView.Sorted%2A> -Eigenschaftensatz auf `true`die `index` Parameterwert wird ignoriert. Die <xref:System.Windows.Forms.TreeNode> wird in der Strukturansicht eingefügt und die <xref:System.Windows.Forms.TreeView> erneut sortiert wird.  
+  
+ Sie können auch neue hinzufügen <xref:System.Windows.Forms.TreeNode> -Objekte der Auflistung mithilfe der <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> oder <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> Methoden.  
+  
+ Die <xref:System.Windows.Forms.TreeNode.Name%2A> Eigenschaft entspricht dem Schlüssel für eine <xref:System.Windows.Forms.TreeNode> in der <xref:System.Windows.Forms.TreeNodeCollection>.  
+  
+ Die `imageIndex` Parameter verweist auf ein Bild in der <xref:System.Windows.Forms.TreeView.ImageList%2A> Eigenschaft des übergeordneten Elements <xref:System.Windows.Forms.TreeView>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Insert (int index, string key, string text, string imageKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.TreeNode Insert(int32 index, string key, string text, string imageKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.Insert(System.Int32,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="imageKey" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Position in der Auflistung, die Knoten einfügen.</param>
+        <param name="key">Der Name des Strukturknotens.</param>
+        <param name="text">Der im Strukturknoten anzuzeigende Text.</param>
+        <param name="imageKey">Der Schlüssel des Bilds im Strukturknoten angezeigt wird.</param>
+        <summary>Erstellt einen Strukturknoten mit dem angegebenen Schlüssel, Text und Bild und fügt es am angegebenen Index in die Auflistung.</summary>
+        <returns>Die <see cref="T:System.Windows.Forms.TreeNode" /> , die in der Auflistung eingefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.TreeView.Sorted%2A> -Eigenschaftensatz auf `true`die `index` Parameterwert wird ignoriert. Die <xref:System.Windows.Forms.TreeNode> wird in der Strukturansicht eingefügt und die <xref:System.Windows.Forms.TreeView> erneut sortiert wird.  
+  
+ Sie können auch neue hinzufügen <xref:System.Windows.Forms.TreeNode> -Objekte der Auflistung mithilfe der <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> oder <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> Methoden.  
+  
+ Die <xref:System.Windows.Forms.TreeNode.Name%2A> Eigenschaft entspricht dem Schlüssel für eine <xref:System.Windows.Forms.TreeNode> in der <xref:System.Windows.Forms.TreeNodeCollection>.  
+  
+ Die `imageKey` Parameter verweist auf ein Bild in der <xref:System.Windows.Forms.TreeView.ImageList%2A> Eigenschaft des übergeordneten Elements <xref:System.Windows.Forms.TreeView>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Insert (int index, string key, string text, int imageIndex, int selectedImageIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.TreeNode Insert(int32 index, string key, string text, int32 imageIndex, int32 selectedImageIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.Insert(System.Int32,System.String,System.String,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="imageIndex" Type="System.Int32" />
+        <Parameter Name="selectedImageIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Position in der Auflistung, die Knoten einfügen.</param>
+        <param name="key">Der Name des Strukturknotens.</param>
+        <param name="text">Der im Strukturknoten anzuzeigende Text.</param>
+        <param name="imageIndex">Der Index des Bilds in den Strukturknoten angezeigt wird.</param>
+        <param name="selectedImageIndex">Der Index des Bilds, das im Strukturknoten angezeigt wird, wenn es in einem ausgewählten Zustand befindet.</param>
+        <summary>Erstellt einen Strukturknoten mit dem angegebenen Schlüssel, Text und Bildern und fügt es am angegebenen Index in die Auflistung ein.</summary>
+        <returns>Die <see cref="T:System.Windows.Forms.TreeNode" /> , die in der Auflistung eingefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.TreeView.Sorted%2A> -Eigenschaftensatz auf `true`die `index` Parameterwert wird ignoriert. Die <xref:System.Windows.Forms.TreeNode> wird in der Strukturansicht eingefügt und die <xref:System.Windows.Forms.TreeView> erneut sortiert wird.  
+  
+ Sie können auch neue hinzufügen <xref:System.Windows.Forms.TreeNode> -Objekte der Auflistung mithilfe der <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> oder <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> Methoden.  
+  
+ Die <xref:System.Windows.Forms.TreeNode.Name%2A> Eigenschaft entspricht dem Schlüssel für eine <xref:System.Windows.Forms.TreeNode> in der <xref:System.Windows.Forms.TreeNodeCollection>.  
+  
+ Die `imageIndex` Parameter verweist auf ein Bild in der <xref:System.Windows.Forms.TreeView.ImageList%2A> Eigenschaft des übergeordneten Elements <xref:System.Windows.Forms.TreeView>.  
+  
+ Die `selectedimageIndex` Parameter verweist auf ein Bild in der <xref:System.Windows.Forms.TreeView.StateImageList%2A> Eigenschaft des übergeordneten Elements <xref:System.Windows.Forms.TreeView>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Insert (int index, string key, string text, string imageKey, string selectedImageKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.TreeNode Insert(int32 index, string key, string text, string imageKey, string selectedImageKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.Insert(System.Int32,System.String,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="imageKey" Type="System.String" />
+        <Parameter Name="selectedImageKey" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Position in der Auflistung, die Knoten einfügen.</param>
+        <param name="key">Der Name des Strukturknotens.</param>
+        <param name="text">Der im Strukturknoten anzuzeigende Text.</param>
+        <param name="imageKey">Der Schlüssel des Bilds im Strukturknoten angezeigt wird.</param>
+        <param name="selectedImageKey">Der Schlüssel des Bildes, das im Strukturknoten angezeigt wird, wenn es in einem ausgewählten Zustand befindet.</param>
+        <summary>Erstellt einen Strukturknoten mit dem angegebenen Schlüssel, Text und Bildern und fügt es am angegebenen Index in die Auflistung ein.</summary>
+        <returns>Die <see cref="T:System.Windows.Forms.TreeNode" /> , die in der Auflistung eingefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.TreeView.Sorted%2A> -Eigenschaftensatz auf `true`die `index` Parameterwert wird ignoriert. Die <xref:System.Windows.Forms.TreeNode> wird in der Strukturansicht eingefügt und die <xref:System.Windows.Forms.TreeView> erneut sortiert wird.  
+  
+ Sie können auch neue hinzufügen <xref:System.Windows.Forms.TreeNode> -Objekte der Auflistung mithilfe der <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> oder <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> Methoden.  
+  
+ Die <xref:System.Windows.Forms.TreeNode.Name%2A> Eigenschaft entspricht dem Schlüssel für eine <xref:System.Windows.Forms.TreeNode> in der <xref:System.Windows.Forms.TreeNodeCollection>.  
+  
+ Die `imageKey` Parameter verweist auf ein Bild in der <xref:System.Windows.Forms.TreeView.ImageList%2A> Eigenschaft des übergeordneten Elements <xref:System.Windows.Forms.TreeView>.  
+  
+ Die `selectedimageKey` Parameter verweist auf ein Bild in der <xref:System.Windows.Forms.TreeView.StateImageList%2A> Eigenschaft des übergeordneten Elements <xref:System.Windows.Forms.TreeView>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNodeCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Auflistung schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" />, wenn die Auflistung schreibgeschützt ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird den ausgewählte Strukturknoten entfernt, von einem <xref:System.Windows.Forms.TreeView> und fügt es in eine andere hinzu, wenn beide Auflistungen der Struktur der Knoten nicht schreibgeschützt sind. Beim ein <xref:System.Windows.Forms.Button> geklickt wird, die <xref:System.Windows.Forms.TreeNode> dargestellte der <xref:System.Windows.Forms.TreeView.SelectedNode%2A?displayProperty=nameWithType> Eigenschaft wird von einem gelöscht <xref:System.Windows.Forms.TreeView> mithilfe der <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A> Methode und die andere hinzugefügt <xref:System.Windows.Forms.TreeView> mithilfe der <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> Methode. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.Form> enthält zwei <xref:System.Windows.Forms.TreeView> Steuerelemente und ein <xref:System.Windows.Forms.Button>. Die <xref:System.Windows.Forms.TreeView> Steuerelemente heißen `treeView1` und `treeView2`.  
+  
+ [!code-cpp[TreeNodeCollection#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNodeCollection/CPP/treenodecollection.cpp#1)]
+ [!code-csharp[TreeNodeCollection#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNodeCollection/CS/treenodecollection.cs#1)]
+ [!code-vb[TreeNodeCollection#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNodeCollection/VB/treenodecollection.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.TreeNode Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNodeCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die indizierte Position von der <see cref="T:System.Windows.Forms.TreeNode" /> in der Auflistung.</param>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.Forms.TreeNode" /> an der angegebenen indizierten Position in der Auflistung.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.TreeNode" /> an der angegebenen indizierten Position in der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zuweisen von <xref:System.Windows.Forms.TreeNode> Objekte daraus abgerufen oder an einem bestimmten Speicherort der <xref:System.Windows.Forms.TreeNodeCollection>, können Sie das Objekt mit einem bestimmten Indexwert verweisen. Der Indexwert des der <xref:System.Windows.Forms.TreeNodeCollection> ist ein nullbasierter Index.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel entfernt das erste <xref:System.Windows.Forms.TreeNode> aus einem <xref:System.Windows.Forms.TreeView> wenn seine <xref:System.Windows.Forms.TreeNode.Text%2A?displayProperty=nameWithType> Eigenschaft auf "Node0" festgelegt ist. Wenn eine <xref:System.Windows.Forms.Button> geklickt wird, wird die erste <xref:System.Windows.Forms.TreeNode> in der <xref:System.Windows.Forms.TreeView> wird gelöscht, mit der <xref:System.Windows.Forms.TreeNodeCollection.RemoveAt%2A> Methode. Dieses Beispiel benötigen Sie nach der Erstellung einer <xref:System.Windows.Forms.TreeView> und ein <xref:System.Windows.Forms.Button> auf eine <xref:System.Windows.Forms.Form>. Die erste <xref:System.Windows.Forms.TreeNode> in Ihrer <xref:System.Windows.Forms.TreeView> müssen eine Texteigenschaft "Node0."  
+  
+ [!code-cpp[TreeNodeCollection#2](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNodeCollection/CPP/treenodecollection.cpp#2)]
+ [!code-csharp[TreeNodeCollection#2](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNodeCollection/CS/treenodecollection.cs#2)]
+ [!code-vb[TreeNodeCollection#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNodeCollection/VB/treenodecollection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="index" /> Wert ist kleiner als 0 oder größer als die Anzahl der Strukturknoten in der Auflistung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode this[string key] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.TreeNode Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNodeCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Name des der <see cref="T:System.Windows.Forms.TreeNode" /> aus der Auflistung abgerufen.</param>
+        <summary>Ruft den Strukturknoten mit dem angegebenen Schlüssel aus der Auflistung ab.</summary>
+        <value>Das <see cref="T:System.Windows.Forms.TreeNode" /> mit dem angegebenen Schlüssel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TreeNode.Name%2A> Eigenschaft entspricht dem Schlüssel für eine <xref:System.Windows.Forms.TreeNode> in der <xref:System.Windows.Forms.TreeNodeCollection>.  
+  
+ Der Schlüsselvergleich ist nicht in der Groß-/Kleinschreibung beachtet. Wenn die `key` Parameter ist `null` oder eine leere Zeichenfolge, die <xref:System.Windows.Forms.TreeNodeCollection.Item%2A> -Eigenschaft gibt `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Windows.Forms.TreeNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Windows.Forms.TreeNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.Remove(System.Windows.Forms.TreeNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Windows.Forms.TreeNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">Das zu entfernende <see cref="T:System.Windows.Forms.TreeNode" />-Element.</param>
+        <summary>Entfernt den angegebenen Knoten aus der Auflistung von Strukturknoten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein <xref:System.Windows.Forms.TreeNode> aus der Auflistung der Strukturknoten, alle nachfolgenden Struktur Knoten verschoben werden, um eine Position in der Auflistung entfernt wird.  
+  
+ Sie können auch entfernen einer <xref:System.Windows.Forms.TreeNode> , die Sie zuvor hinzugefügt haben, mithilfe der <xref:System.Windows.Forms.TreeNodeCollection.RemoveAt%2A> oder <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> Methoden.  
+  
+> [!NOTE]
+>  Auflisten der auflistungs und Entfernen von Knoten wird nicht unterstützt.  
+  
+ Hinzufügen neuer <xref:System.Windows.Forms.TreeNode> -Objekte der Auflistung mithilfe der <xref:System.Windows.Forms.TreeNodeCollection.Add%2A>, <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A>, oder <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> Methoden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird den ausgewählte Strukturknoten entfernt, von einem <xref:System.Windows.Forms.TreeView> und fügt es in eine andere hinzu, wenn beide Auflistungen der Struktur der Knoten nicht schreibgeschützt sind. Beim ein <xref:System.Windows.Forms.Button> geklickt wird, die <xref:System.Windows.Forms.TreeNode> dargestellte der <xref:System.Windows.Forms.TreeView.SelectedNode%2A?displayProperty=nameWithType> Eigenschaft wird von einem gelöscht <xref:System.Windows.Forms.TreeView> mithilfe der <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A> Methode und die andere hinzugefügt <xref:System.Windows.Forms.TreeView> mithilfe der <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> Methode. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.Form> enthält zwei <xref:System.Windows.Forms.TreeView> Steuerelemente und ein <xref:System.Windows.Forms.Button>. Die <xref:System.Windows.Forms.TreeView> Steuerelemente heißen `treeView1` und `treeView2`.  
+  
+ [!code-cpp[TreeNodeCollection#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNodeCollection/CPP/treenodecollection.cpp#1)]
+ [!code-csharp[TreeNodeCollection#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNodeCollection/CS/treenodecollection.cs#1)]
+ [!code-vb[TreeNodeCollection#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNodeCollection/VB/treenodecollection.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public virtual void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des der <see cref="T:System.Windows.Forms.TreeNode" /> zu entfernen.</param>
+        <summary>Entfernt einen Knoten aus der Auflistung von Strukturknoten an einem angegebenen Index.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein <xref:System.Windows.Forms.TreeNode> aus der Auflistung der Strukturknoten, alle nachfolgenden Struktur Knoten verschoben werden, um eine Position in der Auflistung entfernt wird.  
+  
+ Sie können auch entfernen einer <xref:System.Windows.Forms.TreeNode> , die Sie zuvor hinzugefügt haben, mithilfe der <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A> oder <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> Methoden.  
+  
+> [!NOTE]
+>  Auflisten der auflistungs und Entfernen von Knoten wird nicht unterstützt.  
+  
+ Hinzufügen neuer <xref:System.Windows.Forms.TreeNode> -Objekte der Auflistung mithilfe der <xref:System.Windows.Forms.TreeNodeCollection.Add%2A>, <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A>, oder <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> Methoden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel entfernt das erste <xref:System.Windows.Forms.TreeNode> aus einem <xref:System.Windows.Forms.TreeView> wenn seine <xref:System.Windows.Forms.TreeNode.Text%2A?displayProperty=nameWithType> Eigenschaft auf "Node0" festgelegt ist. Wenn eine <xref:System.Windows.Forms.Button> geklickt wird, wird die erste <xref:System.Windows.Forms.TreeNode> in der <xref:System.Windows.Forms.TreeView> wird gelöscht, mit der <xref:System.Windows.Forms.TreeNodeCollection.RemoveAt%2A> Methode. Dieses Beispiel benötigen Sie nach der Erstellung einer <xref:System.Windows.Forms.TreeView> und ein <xref:System.Windows.Forms.Button> auf eine <xref:System.Windows.Forms.Form>. Die erste <xref:System.Windows.Forms.TreeNode> in Ihrer <xref:System.Windows.Forms.TreeView> müssen eine Texteigenschaft "Node0."  
+  
+ [!code-cpp[TreeNodeCollection#2](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNodeCollection/CPP/treenodecollection.cpp#2)]
+ [!code-csharp[TreeNodeCollection#2](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNodeCollection/CS/treenodecollection.cs#2)]
+ [!code-vb[TreeNodeCollection#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNodeCollection/VB/treenodecollection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveByKey">
+      <MemberSignature Language="C#" Value="public virtual void RemoveByKey (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveByKey(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.RemoveByKey(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Name des Strukturknotens aus der Auflistung entfernt werden soll.</param>
+        <summary>Entfernt den Strukturknoten mit dem angegebenen Schlüssel aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TreeNode.Name%2A> Eigenschaft entspricht dem Schlüssel für eine <xref:System.Windows.Forms.TreeNode> in der <xref:System.Windows.Forms.TreeNodeCollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNodeCollection.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Zugriff auf die Auflistung synchronisiert ist (threadsicher).</summary>
+        <value>
+          <see langword="false" /> in allen Fällen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNodeCollection.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt ab, mit dem der Zugriff auf die Auflistung synchronisiert werden kann.</summary>
+        <value>Ein Objekt, mit dem der Zugriff auf die <see cref="T:System.Windows.Forms.TreeNodeCollection" /> synchronisiert werden kann.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Add">
+      <MemberSignature Language="C#" Value="int IList.Add (object node);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.Add(object node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.System#Collections#IList#Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="node">Das Objekt, das die Auflistung von Strukturknoten hinzugefügt werden soll.</param>
+        <summary>Fügt ein Objekt am Ende der Auflistung von Strukturknoten.</summary>
+        <returns>Der nullbasierte Indexwert des der <see cref="T:System.Windows.Forms.TreeNode" /> , die auf die Auflistung von Strukturknoten hinzugefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `node` ist keine <xref:System.Windows.Forms.TreeNodeCollection>, die <xref:System.Windows.Forms.TreeNodeCollection.System%23Collections%23IList%23Add%2A> Methode verwendet die zurückgegebene Zeichenfolge den <xref:System.Windows.Forms.TreeNode.ToString%2A> Methode der <xref:System.Windows.Forms.TreeNode> Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">
+          <paramref name="node" />zugewiesener in eine andere <see cref="T:System.Windows.Forms.TreeView" /> Steuerelement.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="node" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Contains">
+      <MemberSignature Language="C#" Value="bool IList.Contains (object node);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IList.Contains(object node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.System#Collections#IList#Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="node">Das Objekt, das in der Auflistung gesucht werden soll.</param>
+        <summary>Bestimmt, ob der angegebene Strukturknoten ein Member der Auflistung ist.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="node" /> ist ein Member der Auflistung ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `node` ist ein <xref:System.Windows.Forms.TreeNode>, die <xref:System.Windows.Forms.TreeNodeCollection.System%23Collections%23IList%23Contains%2A> -Methode zurückkehrt `false`. Sie können nicht aus diesem Grund übergeben, in einer Zeichenfolge zu bestimmen, ob die Auflistung einen Knoten enthält, mit dem Wert der Zeichenfolge als seine <xref:System.Windows.Forms.TreeNode.Text%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IndexOf">
+      <MemberSignature Language="C#" Value="int IList.IndexOf (object node);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.IndexOf(object node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.System#Collections#IList#IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="node">Die <see cref="T:System.Windows.Forms.TreeNode" />, die in der Auflistung gesucht werden soll.</param>
+        <summary>Gibt den Index des angegebenen Strukturknotens in der Auflistung zurück.</summary>
+        <returns>Der nullbasierte Index des Elements in der Auflistung der Strukturknoten gefunden; andernfalls -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `node` ist ein <xref:System.Windows.Forms.TreeNode>die <xref:System.Windows.Forms.TreeNodeCollection.System%23Collections%23IList%23IndexOf%2A> Methode gibt-1 zurück. Sie können nicht aus diesem Grund übergeben, in eine Zeichenfolge für den Knoten zu suchen, die den Wert der Zeichenfolge als hat seine <xref:System.Windows.Forms.TreeNode.Text%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Insert">
+      <MemberSignature Language="C#" Value="void IList.Insert (int index, object node);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Insert(int32 index, object node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.System#Collections#IList#Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="node" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der indizierten Position in der Auflistung den Strukturknoten eingefügt.</param>
+        <param name="node">Die <see cref="T:System.Windows.Forms.TreeNode" /> zum Einfügen in die Auflistung.</param>
+        <summary>Fügt einer vorhandenen Strukturknoten in der Auflistung von Strukturknoten an der angegebenen Position ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.TreeView.Sorted%2A> -Eigenschaftensatz auf `true`die `index` Parameter wird ignoriert. Die <xref:System.Windows.Forms.TreeNode> wird in der Strukturansicht eingefügt und die <xref:System.Web.UI.WebControls.TreeView> erneut sortiert wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="node" />zugewiesener in eine andere <see cref="T:System.Windows.Forms.TreeView" />.  
+  
+ - oder -   
+  
+ <paramref name="node" /> ist keine <see cref="T:System.Windows.Forms.TreeNode" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNodeCollection.System#Collections#IList#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Auflistung von Strukturknoten eine feste Größe aufweist.</summary>
+        <value>
+          <see langword="false" /> in allen Fällen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IList.Item[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IList.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNodeCollection.System#Collections#IList#Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem abzurufenden oder festzulegenden Elements.</param>
+        <summary>Abrufen oder festlegen den Strukturknoten am angegebenen Index in der Auflistung.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.TreeNode" /> am angegebenen Index in die <see cref="T:System.Windows.Forms.TreeNodeCollection" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Der festgelegte Wert ist eine <see cref="T:System.Windows.Forms.TreeNode" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Remove">
+      <MemberSignature Language="C#" Value="void IList.Remove (object node);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Remove(object node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.System#Collections#IList#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="node">Die aus der Auflistung zu entfernende <see cref="T:System.Windows.Forms.TreeNode" />.</param>
+        <summary>Entfernt den angegebenen Knoten aus der Auflistung von Strukturknoten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können keine übergeben, in einer Zeichenfolge So entfernen Sie den Knoten mit dem Wert der Zeichenfolge als seine <xref:System.Windows.Forms.TreeNode.Text%2A> Eigenschaft.  
+  
+ Wenn ein <xref:System.Windows.Forms.TreeNode> aus der Auflistung der Strukturknoten, alle nachfolgenden Struktur Knoten verschoben werden, um eine Position in der Auflistung entfernt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

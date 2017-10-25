@@ -1,0 +1,418 @@
+<Type Name="LinearGradientBrush" FullName="System.Windows.Media.LinearGradientBrush">
+  <TypeSignature Language="C#" Value="public sealed class LinearGradientBrush : System.Windows.Media.GradientBrush" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LinearGradientBrush extends System.Windows.Media.GradientBrush" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.LinearGradientBrush" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.GradientBrush</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Zeichnet einen Bereich mit einem linearen Farbverlauf.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Media.LinearGradientBrush> zeichnet einen Bereich mit einem linearen Farbverlauf. Ein linearer Farbverlauf definiert einen linearen Farbverlauf. Endpunkte der Linie werden definiert, durch die <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> und <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> Eigenschaften des linearen Farbverlaufs. Ein <xref:System.Windows.Media.LinearGradientBrush> Pinsel zeichnet seine <xref:System.Windows.Media.GradientBrush.GradientStops%2A> anhand dieser Zeile.  
+  
+ Standardmäßige linearen Farbverlaufs ist eine diagonale. In der Standardeinstellung die <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> eines linearen Farbverlaufs ist (0,0) der oberen linken Ecke des Clientbereichs gezeichnet wird, und die zugehörige <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> ist (1,1), der unteren rechten Ecke der Bereich gezeichnet wird. Die Farben im resultierenden Farbverlauf interpoliert werden auf dem diagonalen Pfad.  
+  
+ Die folgende Abbildung zeigt einen diagonalen Farbverlauf. Eine Zeile wurde hinzugefügt, um die Interpolationspfad des Farbverlaufs aus den Startpunkt und den Endpunkt hervorzuheben.  
+  
+ ![Farbverlaufachse für einen diagonalen linearen Farbverlauf](~/add/media/wcpsdk-graphicsmm-diagonalgradientaxis.png "Farbverlauf Achse für ein diagonaler, linearer Farbverlauf")  
+Ein diagonaler, linearer Farbverlauf  
+  
+ Die nächste Abbildung zeigt den gleichen linearen Farbverlauf, aber mit hervorgehobenen Farbverlaufsstopps.  
+  
+ ![Farbverlaufstopps in einem linearen Farbverlauf](~/add/media/wcpsdk-graphicsmm-4gradientstops.png "Farbverlaufstopps in einem linearen Farbverlauf")  
+Ein diagonaler, linearer Farbverlauf mit hervorgehobenen Farbverlaufsstopps  
+  
+ Es ist möglich, eine Farbverlaufsachse anzugeben, die nicht vollständig ausfüllt Bereich gezeichnet wird. In diesem Fall die <xref:System.Windows.Media.GradientBrush.SpreadMethod%2A> Eigenschaft bestimmt, wie der verbleibende Bereich gezeichnet wird.  
+  
+## <a name="freezable-features"></a>Funktionen von Freezable-Objekten  
+ Ein <xref:System.Windows.Media.LinearGradientBrush> ist eine Art von <xref:System.Windows.Freezable> Objekt und kann daher fixiert werden, um die Leistung zu verbessern. Informationen zu <xref:System.Windows.Freezable> Funktionen, z. B. Einfrieren und Klonen, finden Sie unter [Freezable Objects Overview](~/docs/framework/wpf/advanced/freezable-objects-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.LinearGradientBrush" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.GradientBrush.MappingMode%2A> des Pinsels mit initialisiert <xref:System.Windows.Media.BrushMappingMode.RelativeToBoundingBox>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinearGradientBrush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.LinearGradientBrush.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.LinearGradientBrush" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.GradientBrush.MappingMode%2A> des Pinsels mit initialisiert <xref:System.Windows.Media.BrushMappingMode.RelativeToBoundingBox>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinearGradientBrush (System.Windows.Media.GradientStopCollection gradientStopCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Media.GradientStopCollection gradientStopCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.LinearGradientBrush.#ctor(System.Windows.Media.GradientStopCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="gradientStopCollection" Type="System.Windows.Media.GradientStopCollection" />
+      </Parameters>
+      <Docs>
+        <param name="gradientStopCollection">Die <see cref="P:System.Windows.Media.GradientBrush.GradientStops" /> für diesen Pinsel festgelegt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.LinearGradientBrush" /> Klasse, die die angegebenen Farbverlaufsstopps verfügt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.GradientBrush.MappingMode%2A> des Pinsels mit initialisiert <xref:System.Windows.Media.BrushMappingMode.RelativeToBoundingBox>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinearGradientBrush (System.Windows.Media.GradientStopCollection gradientStopCollection, double angle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Media.GradientStopCollection gradientStopCollection, float64 angle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.LinearGradientBrush.#ctor(System.Windows.Media.GradientStopCollection,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="gradientStopCollection" Type="System.Windows.Media.GradientStopCollection" />
+        <Parameter Name="angle" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="gradientStopCollection">Die <see cref="P:System.Windows.Media.GradientBrush.GradientStops" /> für diesen Pinsel festgelegt.</param>
+        <param name="angle">Ein <see cref="T:System.Double" /> , der den Winkel in Grad, eines Farbverlaufs darstellt. Der Wert 0,0 erstellt einen horizontalen Farbverlauf und der Wert 90,0 erstellt einen vertikalen Farbverlauf.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.LinearGradientBrush" /> Klasse mit dem angegebenen <see cref="T:System.Windows.Media.GradientStopCollection" /> und Winkel.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.GradientBrush.MappingMode%2A> des Pinsels mit initialisiert <xref:System.Windows.Media.BrushMappingMode.RelativeToBoundingBox>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinearGradientBrush (System.Windows.Media.Color startColor, System.Windows.Media.Color endColor, double angle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Media.Color startColor, valuetype System.Windows.Media.Color endColor, float64 angle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.LinearGradientBrush.#ctor(System.Windows.Media.Color,System.Windows.Media.Color,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="startColor" Type="System.Windows.Media.Color" />
+        <Parameter Name="endColor" Type="System.Windows.Media.Color" />
+        <Parameter Name="angle" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="startColor">Die <see cref="T:System.Windows.Media.Color" /> am Offset 0,0.</param>
+        <param name="endColor">Die <see cref="T:System.Windows.Media.Color" /> Offset 1.0.</param>
+        <param name="angle">Ein <see cref="T:System.Double" /> , der den Winkel in Grad, eines Farbverlaufs darstellt. Der Wert 0,0 erstellt einen horizontalen Farbverlauf und der Wert 90,0 erstellt einen vertikalen Farbverlauf.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.LinearGradientBrush" /> -Klasse, die den angegebenen Start <see cref="T:System.Windows.Media.Color" />, End <see cref="T:System.Windows.Media.Color" />, und Winkel.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.GradientBrush.MappingMode%2A> des Pinsels mit initialisiert <xref:System.Windows.Media.BrushMappingMode.RelativeToBoundingBox>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinearGradientBrush (System.Windows.Media.GradientStopCollection gradientStopCollection, System.Windows.Point startPoint, System.Windows.Point endPoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Media.GradientStopCollection gradientStopCollection, valuetype System.Windows.Point startPoint, valuetype System.Windows.Point endPoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.LinearGradientBrush.#ctor(System.Windows.Media.GradientStopCollection,System.Windows.Point,System.Windows.Point)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="gradientStopCollection" Type="System.Windows.Media.GradientStopCollection" />
+        <Parameter Name="startPoint" Type="System.Windows.Point" />
+        <Parameter Name="endPoint" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="gradientStopCollection">Die <see cref="P:System.Windows.Media.GradientBrush.GradientStops" /> für diesen Pinsel festgelegt.</param>
+        <param name="startPoint">Die <see cref="P:System.Windows.Media.LinearGradientBrush.StartPoint" /> des Farbverlaufs.</param>
+        <param name="endPoint">Die <see cref="P:System.Windows.Media.LinearGradientBrush.EndPoint" /> des Farbverlaufs.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.LinearGradientBrush" /> -Klasse, die die angegebenen Farbverlaufsstopps <see cref="P:System.Windows.Media.LinearGradientBrush.StartPoint" />, und <see cref="P:System.Windows.Media.LinearGradientBrush.EndPoint" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.GradientBrush.MappingMode%2A> des Pinsels mit initialisiert <xref:System.Windows.Media.BrushMappingMode.RelativeToBoundingBox>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinearGradientBrush (System.Windows.Media.Color startColor, System.Windows.Media.Color endColor, System.Windows.Point startPoint, System.Windows.Point endPoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Media.Color startColor, valuetype System.Windows.Media.Color endColor, valuetype System.Windows.Point startPoint, valuetype System.Windows.Point endPoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.LinearGradientBrush.#ctor(System.Windows.Media.Color,System.Windows.Media.Color,System.Windows.Point,System.Windows.Point)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="startColor" Type="System.Windows.Media.Color" />
+        <Parameter Name="endColor" Type="System.Windows.Media.Color" />
+        <Parameter Name="startPoint" Type="System.Windows.Point" />
+        <Parameter Name="endPoint" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="startColor">Die <see cref="T:System.Windows.Media.Color" /> am Offset 0,0.</param>
+        <param name="endColor">Die <see cref="T:System.Windows.Media.Color" /> Offset 1.0.</param>
+        <param name="startPoint">Die <see cref="P:System.Windows.Media.LinearGradientBrush.StartPoint" /> des Farbverlaufs.</param>
+        <param name="endPoint">Die <see cref="P:System.Windows.Media.LinearGradientBrush.EndPoint" /> des Farbverlaufs.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.LinearGradientBrush" /> -Klasse, die den angegebenen Start <see cref="T:System.Windows.Media.Color" />, End <see cref="T:System.Windows.Media.Color" />, <see cref="P:System.Windows.Media.LinearGradientBrush.StartPoint" />, und <see cref="P:System.Windows.Media.LinearGradientBrush.EndPoint" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.GradientBrush.MappingMode%2A> des Pinsels mit initialisiert <xref:System.Windows.Media.BrushMappingMode.RelativeToBoundingBox>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.LinearGradientBrush Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.LinearGradientBrush Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.LinearGradientBrush.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.LinearGradientBrush</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.LinearGradientBrush" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.LinearGradientBrush CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.LinearGradientBrush CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.LinearGradientBrush.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.LinearGradientBrush</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon des <see cref="T:System.Windows.Media.LinearGradientBrush" />-Objekts, indem tiefe Kopien der aktuellen Werte dieses Objekts erzeugt werden. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true" /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.LinearGradientBrush.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndPoint">
+      <MemberSignature Language="C#" Value="public System.Windows.Point EndPoint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Point EndPoint" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.LinearGradientBrush.EndPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die zweidimensionalen Endkoordinaten des linearen Farbverlaufs ab oder legt diese fest.</summary>
+        <value>Die zweidimensionalen Endkoordinaten des linearen Farbverlaufs. Die Standardeinstellung ist „(1,1)“.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Media.LinearGradientBrush> zeichnet einen linearen Farbverlauf. Start- und Endpunkte der Linie werden definiert, indem die <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> und <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> Eigenschaften der <xref:System.Windows.Media.LinearGradientBrush>.  
+  
+ Standardmäßige linearen Farbverlaufs ist eine diagonale. In der Standardeinstellung die <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> eines linearen Farbverlaufs ist (0,0), oben links die Fläche ausgefüllt wird, und die zugehörige <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> ist (1,1), unten rechts die Fläche ausgefüllt wird. Die Farben im resultierenden Farbverlauf interpoliert werden auf dem diagonalen Pfad.  
+  
+ Die folgende Abbildung zeigt einen diagonalen Farbverlauf. Die schwarze Linie wurde hinzugefügt, um die Interpolationspfad des Farbverlaufs aus den Startpunkt und den Endpunkt hervorzuheben.  
+  
+ ![Farbverlaufachse für einen diagonalen linearen Farbverlauf](~/add/media/wcpsdk-graphicsmm-diagonalgradientaxis.png "Farbverlauf Achse für ein diagonaler, linearer Farbverlauf")  
+Ein diagonaler, linearer Farbverlauf  
+  
+## <a name="specifying-relative-or-absolute-values"></a>Angeben von relativen oder absoluten Werten  
+ Beachten Sie, dass die <xref:System.Windows.Media.GradientBrush.MappingMode%2A> Eigenschaft eine <xref:System.Windows.Media.LinearGradientBrush> bestimmt, ob die <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> wird als relativer oder absoluter Wert interpretiert. Ein <xref:System.Windows.Media.GradientBrush.MappingMode%2A> von <xref:System.Windows.Media.BrushMappingMode.RelativeToBoundingBox> gibt an, dass die <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> Wert ist relativ zur Größe des gezeichneten Bereichs. Ein <xref:System.Windows.Media.GradientBrush.MappingMode%2A> von <xref:System.Windows.Media.BrushMappingMode.Absolute> gibt an, dass die <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> Wert wird in geräteunabhängigen Pixeln angegeben. Wird standardmäßig die <xref:System.Windows.Media.GradientBrush.MappingMode%2A> festgelegt ist, um <xref:System.Windows.Media.BrushMappingMode.RelativeToBoundingBox>, sodass die <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> ein relativer Wert.  
+  
+<a name="dependencyPropertyInfo_EndPoint"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.LinearGradientBrush.EndPointProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndPointProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty EndPointProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty EndPointProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.LinearGradientBrush.EndPointProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.LinearGradientBrush.EndPoint" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartPoint">
+      <MemberSignature Language="C#" Value="public System.Windows.Point StartPoint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Point StartPoint" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.LinearGradientBrush.StartPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die zweidimensionalen Anfangskoordinaten des linearen Farbverlaufs ab oder legt diese fest.</summary>
+        <value>Die zweidimensionalen Anfangskoordinaten des linearen Farbverlaufs. Der Standardwert ist (0, 0).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Media.LinearGradientBrush> zeichnet einen linearen Farbverlauf. Start- und Endpunkte der Linie werden definiert, indem die <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> und <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> Eigenschaften der <xref:System.Windows.Media.LinearGradientBrush>.  
+  
+ Standardmäßige linearen Farbverlaufs ist eine diagonale. In der Standardeinstellung die <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> eines linearen Farbverlaufs ist (0,0), oben links die Fläche ausgefüllt wird, und die zugehörige <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> ist (1,1), unten rechts die Fläche ausgefüllt wird. Die Farben im resultierenden Farbverlauf interpoliert werden auf dem diagonalen Pfad.  
+  
+ Die folgende Abbildung zeigt einen diagonalen Farbverlauf. Die schwarze Linie wurde hinzugefügt, um die Interpolationspfad des Farbverlaufs aus den Startpunkt und den Endpunkt hervorzuheben.  
+  
+ ![Farbverlaufachse für einen diagonalen linearen Farbverlauf](~/add/media/wcpsdk-graphicsmm-diagonalgradientaxis.png "Farbverlauf Achse für ein diagonaler, linearer Farbverlauf")  
+Ein diagonaler, linearer Farbverlauf  
+  
+## <a name="specifying-relative-or-absolute-values"></a>Angeben von relativen oder absoluten Werten  
+ Beachten Sie, dass die <xref:System.Windows.Media.GradientBrush.MappingMode%2A> Eigenschaft eine <xref:System.Windows.Media.LinearGradientBrush> bestimmt, ob die <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> wird als relativer oder absoluter Wert interpretiert. Ein <xref:System.Windows.Media.GradientBrush.MappingMode%2A> von <xref:System.Windows.Media.BrushMappingMode.RelativeToBoundingBox> gibt an, dass die <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> Wert ist relativ zur Größe des gezeichneten Bereichs. Ein <xref:System.Windows.Media.GradientBrush.MappingMode%2A> von <xref:System.Windows.Media.BrushMappingMode.Absolute> gibt an, dass die <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> Wert wird in geräteunabhängigen Pixeln angegeben. Wird standardmäßig die <xref:System.Windows.Media.GradientBrush.MappingMode%2A> festgelegt ist, um <xref:System.Windows.Media.BrushMappingMode.RelativeToBoundingBox>, sodass die <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> ein relativer Wert.  
+  
+<a name="dependencyPropertyInfo_StartPoint"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.LinearGradientBrush.StartPointProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartPointProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty StartPointProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty StartPointProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.LinearGradientBrush.StartPointProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.LinearGradientBrush.StartPoint" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,212 @@
+<Type Name="LingerOption" FullName="System.Net.Sockets.LingerOption">
+  <TypeSignature Language="C#" Value="public class LingerOption" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LingerOption extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Sockets.LingerOption" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Sockets</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt an, ob eine <see cref="T:System.Net.Sockets.Socket" /> bleibt die Verbindung nach einem Aufruf von der <see cref="M:System.Net.Sockets.Socket.Close" /> oder <see cref="M:System.Net.Sockets.TcpClient.Close" /> Methoden und die Zeitdauer, es wird weiterhin, verbunden, wenn weitere Daten gesendet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Werden ggf. noch Daten im ausgehenden Netzwerkpuffer verfügbar, nachdem eine Anwendung ruft die <xref:System.Net.Sockets.Socket> oder <xref:System.Net.Sockets.TcpClient> Methode. Sollten Sie den Umfang der Zeitpunkt, der <xref:System.Net.Sockets.Socket> wird versucht, nicht gesendete Daten nach dem Schließen zu übertragen, erstellen Sie eine <xref:System.Net.Sockets.LingerOption> mit der `enable` Parameter festgelegt wird, um `true`, und die `seconds` -Parameter auf die gewünschte Zeitdauer festgelegt . Die `seconds` Parameter wird verwendet, um anzugeben, wie lange Sie möchten die <xref:System.Net.Sockets.Socket> , bevor ein Timeout verbunden bleiben. Wenn Sie nicht möchten die <xref:System.Net.Sockets.Socket> damit verbunden für unbestimmte Zeit nach dem Schließen bleibt, erstellen eine <xref:System.Net.Sockets.LingerOption> -Instanz mit der `enable` Parameter festgelegt wird, um `true` und die `seconds` -Parameter auf 0 (null) festgelegt. In diesem Fall die <xref:System.Net.Sockets.Socket> sofort geschlossen und nicht gesendete Daten verloren. Übergeben Sie nach der Erstellung der <xref:System.Net.Sockets.LingerOption> auf die <xref:System.Net.Sockets.Socket.SetSocketOption%2A?displayProperty=nameWithType> Methode. Wenn Sie senden und Empfangen von Daten mit einer <xref:System.Net.Sockets.TcpClient>, legen Sie dann die <xref:System.Net.Sockets.LingerOption> Instanz der <xref:System.Net.Sockets.TcpClient.LingerState%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Der IP-Stapel berechnet die Timeoutzeitspanne standardmäßig IP-Protokoll verwenden, basierend auf die Roundtripzeit der Verbindung. In den meisten Fällen ist das Timeout berechnet, indem der Stapel relevanter als ein von einer Anwendung definiert. Dies ist das Standardverhalten für eine <xref:System.Net.Sockets.Socket> bei der <xref:System.Net.Sockets.Socket.LingerState%2A> Eigenschaft nicht festgelegt ist und für eine <xref:System.Net.Sockets.TcpClient> bei der <xref:System.Net.Sockets.TcpClient.LingerState%2A> Eigenschaft nicht festgelegt ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein zuvor erstelltes <xref:System.Net.Sockets.Socket> zu linger einer Sekunde nach dem Aufruf der <xref:System.Net.Sockets.Socket.Close%2A> Methode.  
+  
+ [!code-cpp[Classic LingerOption Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic LingerOption Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic LingerOption Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic LingerOption Example/CS/source.cs#1)]
+ [!code-vb[Classic LingerOption Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic LingerOption Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LingerOption (bool enable, int seconds);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool enable, int32 seconds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.LingerOption.#ctor(System.Boolean,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="enable" Type="System.Boolean" />
+        <Parameter Name="seconds" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="enable">
+          <see langword="true" />Um nach bestehen bleiben die <see cref="M:System.Net.Sockets.Socket.Close" /> Methode wird aufgerufen, andernfalls <see langword="false" />.</param>
+        <param name="seconds">Die Anzahl der Sekunden, nach dem verbunden die <see cref="M:System.Net.Sockets.Socket.Close" /> -Methode aufgerufen wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Sockets.LingerOption" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Werden ggf. noch Daten im ausgehenden Netzwerkpuffer verfügbar nach dem Schließen der <xref:System.Net.Sockets.Socket>. Verwenden der `enable` Parameter, um anzugeben, ob Sie möchten die <xref:System.Net.Sockets.Socket> zu fortfahren, nicht gesendete Daten zu übertragen, nachdem die close-Methode aufgerufen wird. Verwenden der `seconds` Parameter, um anzugeben, wie lange Sie möchten die <xref:System.Net.Sockets.Socket> versucht, nicht gesendete Datenübertragung, bevor ein Timeout auftritt. Bei Angabe von `true` für die `enable` Parameter und 0 für die `seconds` Parameter, die <xref:System.Net.Sockets.Socket> versucht, Daten zu senden, bis im ausgehenden Netzwerkpuffer keine Daten mehr vorhanden ist. Bei Angabe von `false` für die `enable` Parameter, die <xref:System.Net.Sockets.Socket> sofort geschlossen und nicht gesendete Daten verloren.  
+  
+ Die folgende Tabelle beschreibt das Verhalten auf die <xref:System.Net.Sockets.Socket.Close%2A?displayProperty=nameWithType> und <xref:System.Net.Sockets.TcpClient.Close%2A?displayProperty=nameWithType> Methoden basierend auf der möglichen Werte für die `enable` und `seconds` Parameter, wenn eine t:System.NET.Sockets.LingerOption-Instanz erstellt wird, und Sie in der Legen<xref:System.Net.Sockets.Socket.LingerState%2A?displayProperty=nameWithType> oder <xref:System.Net.Sockets.TcpClient.LingerState%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+|`enable`|`seconds`|Verhalten|  
+|--------------|---------------|--------------|  
+|`false`(deaktiviert), den Standardwert|Das Timeout ist nicht anwendbar (Standard).|Versuche zum ausstehende Daten für einen verbindungsorientierten Socket (z. B. TCP), bis die Standardeinstellung IP-Protokolltimeout senden läuft ab.|  
+|`true`(aktiviert)|Ein Wert ungleich NULL Timeout|Versucht, ausstehende Daten senden, bis das angegebene Timeout abläuft, und wenn der Versuch fehlschlägt, klicken Sie dann Winsock setzt die Verbindung zurück.|  
+|`true`(aktiviert)|0 (null) ein Timeout.|Verwirft alle ausstehenden Daten. Für verbindungsorientierte Sockets (z. B. TCP) und setzt Winsock die Verbindung zurück.|  
+  
+ Der IP-Stapel berechnet die Timeoutzeitspanne standardmäßig IP-Protokoll verwenden, basierend auf die Roundtripzeit der Verbindung. In den meisten Fällen ist das Timeout berechnet, indem der Stapel relevanter als ein von einer Anwendung definiert. Dies ist das Standardverhalten für ein Socket bei der <xref:System.Net.Sockets.Socket.LingerState%2A> Eigenschaft nicht festgelegt ist.  
+  
+ Wenn die <xref:System.Net.Sockets.LingerOption.LingerTime%2A> Eigenschaft gespeichert, der <xref:System.Net.Sockets.Socket.LingerState%2A> Eigenschaft größer als das Standardtimeout für IP-Protokoll festgelegt ist, das Standardtimeout für IP-Protokoll wird weiterhin gelten, und überschreiben.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein zuvor erstelltes <xref:System.Net.Sockets.Socket> zu linger einer Sekunde nach dem Aufruf der <xref:System.Net.Sockets.Socket.Close%2A> Methode.  
+  
+ [!code-cpp[Classic LingerOption Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic LingerOption Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic LingerOption Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic LingerOption Example/CS/source.cs#1)]
+ [!code-vb[Classic LingerOption Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic LingerOption Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Sockets.LingerOption.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob nach linger der <see cref="T:System.Net.Sockets.Socket" /> geschlossen wird.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Net.Sockets.Socket" /> sollte nach linger <see cref="M:System.Net.Sockets.Socket.Close" /> aufgerufen wurde, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die <xref:System.Net.Sockets.LingerOption.Enabled%2A> -Eigenschaft können Sie bestimmen, ob die <xref:System.Net.Sockets.Socket> wird nach dem Schließen linger. Ändern Sie diesen Wert auf `true` oder `false` und übergeben Sie die geänderte <xref:System.Net.Sockets.LingerOption> auf die <xref:System.Net.Sockets.Socket.SetSocketOption%2A> Methode bzw. einer Gruppe die <xref:System.Net.Sockets.TcpClient.LingerState%2A> oder <xref:System.Net.Sockets.Socket.LingerState%2A> Nachlauf deaktiviert zu aktivieren oder.  
+  
+ Die folgende Tabelle beschreibt das Verhalten für die möglichen Werte für die <xref:System.Net.Sockets.LingerOption.Enabled%2A> Eigenschaft und die <xref:System.Net.Sockets.LingerOption.LingerTime%2A> Eigenschaft gespeichert, der <xref:System.Net.Sockets.Socket.LingerState%2A> Eigenschaft.  
+  
+|`enable`|`seconds`|Verhalten|  
+|--------------|---------------|--------------|  
+|`false`(deaktiviert), den Standardwert|Das Timeout ist nicht anwendbar (Standard).|Versuche zum ausstehende Daten für einen verbindungsorientierten Socket (z. B. TCP), bis die Standardeinstellung IP-Protokolltimeout senden läuft ab.|  
+|`true`(aktiviert)|Ein Wert ungleich NULL Timeout|Versucht, ausstehende Daten senden, bis das angegebene Timeout abläuft, und wenn der Versuch fehlschlägt, klicken Sie dann Winsock setzt die Verbindung zurück.|  
+|`true`(aktiviert)|0 (null) ein Timeout.|Verwirft alle ausstehenden Daten. Für verbindungsorientierte Sockets (z. B. TCP) und setzt Winsock die Verbindung zurück.|  
+  
+ Der IP-Stapel berechnet die Timeoutzeitspanne standardmäßig IP-Protokoll verwenden, basierend auf die Roundtripzeit der Verbindung. In den meisten Fällen ist das Timeout berechnet, indem der Stapel relevanter als ein von einer Anwendung definiert. Dies ist das Standardverhalten für ein Socket bei der <xref:System.Net.Sockets.Socket.LingerState%2A> Eigenschaft nicht festgelegt ist.  
+  
+ Wenn die <xref:System.Net.Sockets.LingerOption.LingerTime%2A> Eigenschaft gespeichert, der <xref:System.Net.Sockets.Socket.LingerState%2A> Eigenschaft größer als das Standardtimeout für IP-Protokoll festgelegt ist, das Standardtimeout für IP-Protokoll wird weiterhin gelten, und überschreiben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LingerTime">
+      <MemberSignature Language="C#" Value="public int LingerTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LingerTime" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Sockets.LingerOption.LingerTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeitspanne, nach dem Aufruf verbunden bleiben die <see cref="M:System.Net.Sockets.Socket.Close" /> Methode, wenn die Daten verbleiben, um gesendet werden.</summary>
+        <value>Die Zeitdauer in Sekunden, nach dem Aufruf verbunden bleiben <see cref="M:System.Net.Sockets.Socket.Close" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Wert aus, wenn Sie, wie lange eine geschlossene bestimmen möchten <xref:System.Net.Sockets.Socket> wird versucht, bevor ein Timeout nicht gesendete Daten zu übertragen. Sie können diesen Wert auch auf das gewünschte Timeoutintervall in Sekunden festlegen.  
+  
+ Wenn die <xref:System.Net.Sockets.LingerOption.Enabled%2A> Eigenschaft ist `true`, und legen Sie <xref:System.Net.Sockets.LingerOption.LingerTime%2A> auf 0, die <xref:System.Net.Sockets.Socket> verwirft alle ausstehenden Daten, die im ausgehenden Netzwerkpuffer gesendet. Wenn Sie diesen Wert ändern, müssen Sie die geänderte übergeben <xref:System.Net.Sockets.LingerOption> -Instanz, auf die <xref:System.Net.Sockets.Socket.SetSocketOption%2A> Methode bzw. einer Gruppe die <xref:System.Net.Sockets.TcpClient.LingerState%2A> oder <xref:System.Net.Sockets.Socket.LingerState%2A> Eigenschaft.  
+  
+ Die folgende Tabelle beschreibt das Verhalten für die möglichen Werte für die <xref:System.Net.Sockets.LingerOption.Enabled%2A> Eigenschaft und die <xref:System.Net.Sockets.LingerOption.LingerTime%2A> Eigenschaft gespeichert, der <xref:System.Net.Sockets.Socket.LingerState%2A> Eigenschaft.  
+  
+|`enable`|`seconds`|Verhalten|  
+|--------------|---------------|--------------|  
+|`false`(deaktiviert), den Standardwert|Das Timeout ist nicht anwendbar (Standard).|Versuche zum ausstehende Daten für einen verbindungsorientierten Socket (z. B. TCP), bis die Standardeinstellung IP-Protokolltimeout senden läuft ab.|  
+|`true`(aktiviert)|Ein Wert ungleich NULL Timeout|Versucht, ausstehende Daten senden, bis das angegebene Timeout abläuft, und wenn der Versuch fehlschlägt, klicken Sie dann Winsock setzt die Verbindung zurück.|  
+|`true`(aktiviert)|0 (null) ein Timeout.|Verwirft alle ausstehenden Daten. Für verbindungsorientierte Sockets (z. B. TCP) und setzt Winsock die Verbindung zurück.|  
+  
+ Der IP-Stapel berechnet die Timeoutzeitspanne standardmäßig IP-Protokoll verwenden, basierend auf die Roundtripzeit der Verbindung. In den meisten Fällen ist das Timeout berechnet, indem der Stapel relevanter als ein von einer Anwendung definiert. Dies ist das Standardverhalten für ein Socket bei der <xref:System.Net.Sockets.Socket.LingerState%2A> Eigenschaft nicht festgelegt ist.  
+  
+ Wenn die <xref:System.Net.Sockets.LingerOption.LingerTime%2A> Eigenschaft gespeichert, der <xref:System.Net.Sockets.Socket.LingerState%2A> Eigenschaft größer als das Standardtimeout für IP-Protokoll festgelegt ist, das Standardtimeout für IP-Protokoll wird weiterhin gelten, und überschreiben.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[Socket_Socket_Options#2](~/samples/snippets/cpp/VS_Snippets_Remoting/Socket_Socket_Options/CPP/source.cpp#2)]
+ [!code-csharp[Socket_Socket_Options#2](~/samples/snippets/csharp/VS_Snippets_Remoting/Socket_Socket_Options/CS/source.cs#2)]
+ [!code-vb[Socket_Socket_Options#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Socket_Socket_Options/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

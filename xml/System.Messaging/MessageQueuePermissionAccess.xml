@@ -1,0 +1,129 @@
+<Type Name="MessageQueuePermissionAccess" FullName="System.Messaging.MessageQueuePermissionAccess">
+  <TypeSignature Language="C#" Value="public enum MessageQueuePermissionAccess" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed MessageQueuePermissionAccess extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.MessageQueuePermissionAccess" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert Zugriffsebenen verwendeten <see cref="N:System.Messaging" /> Berechtigungsklassen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit <xref:System.Messaging.MessageQueuePermissionAccess> erstellen Sie eine neue Instanz der <xref:System.Messaging.MessageQueuePermission>.  
+  
+ [!code-cpp[MessageQueuePermissionAccess#0](~/samples/snippets/cpp/VS_Snippets_Remoting/MessageQueuePermissionAccess/cpp/class1.cpp#0)]
+ [!code-csharp[MessageQueuePermissionAccess#0](~/samples/snippets/csharp/VS_Snippets_Remoting/MessageQueuePermissionAccess/CS/class1.cs#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Administer">
+      <MemberSignature Language="C#" Value="Administer" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessageQueuePermissionAccess Administer = int32(62)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessageQueuePermissionAccess.Administer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueuePermissionAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Messaging.MessageQueue" /> sehen Sie sich die Warteschlangen aus, die verfügbar sind, lesen Sie die Nachrichten in der Warteschlange und senden und Empfangen von Nachrichten kann.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Browse">
+      <MemberSignature Language="C#" Value="Browse" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessageQueuePermissionAccess Browse = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessageQueuePermissionAccess.Browse" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueuePermissionAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Messaging.MessageQueue" /> können betrachten Sie die Warteschlangen, die verfügbar sind.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessageQueuePermissionAccess None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessageQueuePermissionAccess.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueuePermissionAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Messaging.MessageQueue" /> verfügt über keine Berechtigungen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Peek">
+      <MemberSignature Language="C#" Value="Peek" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessageQueuePermissionAccess Peek = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessageQueuePermissionAccess.Peek" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueuePermissionAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Messaging.MessageQueue" /> können betrachten Sie die Warteschlangen, die verfügbar sind und die Nachrichten in der Warteschlange zu lesen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Receive">
+      <MemberSignature Language="C#" Value="Receive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessageQueuePermissionAccess Receive = int32(26)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessageQueuePermissionAccess.Receive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueuePermissionAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Messaging.MessageQueue" /> sehen Sie sich die Warteschlangen aus, die verfügbar sind, werden die Nachrichten in der Warteschlange lesen können, und Empfangen von Nachrichten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Send">
+      <MemberSignature Language="C#" Value="Send" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessageQueuePermissionAccess Send = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessageQueuePermissionAccess.Send" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueuePermissionAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Messaging.MessageQueue" /> können Sie die Warteschlangen aus, die verfügbar sind, und Senden von Nachrichten anzeigen.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

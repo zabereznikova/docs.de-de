@@ -1,0 +1,517 @@
+<Type Name="ApplicationPartition" FullName="System.DirectoryServices.ActiveDirectory.ApplicationPartition">
+  <TypeSignature Language="C#" Value="public class ApplicationPartition : System.DirectoryServices.ActiveDirectory.ActiveDirectoryPartition" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ApplicationPartition extends System.DirectoryServices.ActiveDirectory.ActiveDirectoryPartition" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ActiveDirectory.ApplicationPartition" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.DirectoryServices.ActiveDirectory.ActiveDirectoryPartition</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.DirectoryServices.ActiveDirectory.ApplicationPartition" /> -Klasse stellt eine Anwendungspartition für eine bestimmte Domäne dar.</summary>
+    <remarks>To be added.</remarks>
+    <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Wert der Anforderung:<see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ApplicationPartition (System.DirectoryServices.ActiveDirectory.DirectoryContext context, string distinguishedName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.DirectoryServices.ActiveDirectory.DirectoryContext context, string distinguishedName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ApplicationPartition.#ctor(System.DirectoryServices.ActiveDirectory.DirectoryContext,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.ActiveDirectory.DirectoryContext" />
+        <Parameter Name="distinguishedName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">Die <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" /> -Objekt, das zum Erstellen dieser Anwendungspartition verwendet wird.</param>
+        <param name="distinguishedName">Die <see cref="T:System.String" /> , die den distinguished Name für diese Anwendungspartition angibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.DirectoryServices.ActiveDirectory.ApplicationPartition" /> -Klasse unter Verwendung des angegebenen distinguished Namens.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardklasse für das Objekt, die die Anwendungspartition darstellt, ist DomainDNS.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ArgumentException">Das Ziel in der <paramref name="context" /> Parameter ist kein Server, oder der <paramref name="distinguishedName" /> Parameter ist nicht in einem gültigen DN-Format.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> oder <paramref name="distinguishedName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ApplicationPartition (System.DirectoryServices.ActiveDirectory.DirectoryContext context, string distinguishedName, string objectClass);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.DirectoryServices.ActiveDirectory.DirectoryContext context, string distinguishedName, string objectClass) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ApplicationPartition.#ctor(System.DirectoryServices.ActiveDirectory.DirectoryContext,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.ActiveDirectory.DirectoryContext" />
+        <Parameter Name="distinguishedName" Type="System.String" />
+        <Parameter Name="objectClass" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">Die <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" /> -Objekt, das zum Erstellen dieser Anwendungspartition verwendet wird.</param>
+        <param name="distinguishedName">Die <see cref="T:System.String" /> , die den distinguished Name für diese Anwendungspartition angibt.</param>
+        <param name="objectClass">Die <see cref="T:System.String" /> , angibt, dass die Object-Klasse, die dieser Anwendungspartition darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.DirectoryServices.ActiveDirectory.ApplicationPartition" /> -Klasse unter Verwendung der angegebenen distinguished Name und der angegebenen Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardklasse für das Objekt, die die Anwendungspartition darstellt, ist DomainDNS.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ArgumentException">Das Ziel in der <paramref name="context" /> Parameter ist kein Server, oder der <paramref name="distinguishedName" /> Parameter ist nicht in einem gültigen DN-Format.  Diese Ausnahme wird auch ausgelöst, wenn die Anwendungspartition innerhalb einer Active Directory-Gesamtstruktur erstellt wird statt eine AD LDS-Konfiguration, da Festlegen der <paramref name="objectClass" /> kann nur für AD LDS-Konfigurationssätze angegeben werden.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> oder <paramref name="distinguishedName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public void Delete ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Delete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ApplicationPartition.Delete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht diese Anwendungspartition an.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.DirectoryServices.ActiveDirectory.ApplicationPartition" /> Objekt wurde noch nicht im zugrunde liegenden Verzeichnisspeicher gespeichert.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DirectoryServers">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.DirectoryServerCollection DirectoryServers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.DirectoryServerCollection DirectoryServers" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ApplicationPartition.DirectoryServers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.DirectoryServerCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryServerCollection" /> -Objekt, das die Verzeichnisserver enthält, die diese Anwendungspartition hosten.</summary>
+        <value>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryServerCollection" /> Objekt, das enthält <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryServer" /> Objekte, die Verzeichnisserver für diese Anwendungspartition darstellen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.DirectoryServices.ActiveDirectory.ApplicationPartition.DirectoryServers%2A?displayProperty=nameWithType> Eigenschaft gibt die gleiche Auflistung der <xref:System.DirectoryServices.ActiveDirectory.DirectoryServer> -Objekten als der <xref:System.DirectoryServices.ActiveDirectory.ApplicationPartition.FindAllDirectoryServers?displayProperty=nameWithType> Methode Wenn der <xref:System.DirectoryServices.ActiveDirectory.ApplicationPartition> Objekt in den zugrunde liegenden Verzeichnisspeicher Services ein Commit ausgeführt wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.DirectoryServices.ActiveDirectory.ApplicationPartition" /> Objekt wurde noch kein Commit in den zugrunde liegenden Verzeichnisspeicher.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ApplicationPartition.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">Ein <see cref="T:System.Boolean" />-Wert, der bestimmt, ob die verwalteten Ressourcen freigegeben werden sollen. <see langword="true" />, wenn die verwalteten Ressourcen freigegeben werden sollen, <see langword="false" />, wenn nur die nicht verwalteten Ressourcen freigegeben werden sollen.</param>
+        <summary>Gibt die verwalteten Ressourcen, mit denen, die <see cref="T:System.DirectoryServices.ActiveDirectory.ApplicationPartition" /> Objekt und optional Versionen nicht verwalteten Ressourcen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAllDirectoryServers">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.ReadOnlyDirectoryServerCollection FindAllDirectoryServers ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.ActiveDirectory.ReadOnlyDirectoryServerCollection FindAllDirectoryServers() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ApplicationPartition.FindAllDirectoryServers" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ReadOnlyDirectoryServerCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.DirectoryServices.ActiveDirectory.ReadOnlyDirectoryServerCollection" /> -Objekt, das alle Verzeichnisserver enthält, die diese Anwendungspartition hosten.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.ReadOnlyDirectoryServerCollection" /> -Objekt, das alle Verzeichnisserver enthält, die diese Anwendungspartition hosten.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.DirectoryServices.ActiveDirectory.ApplicationPartition" /> Objekt wurde noch kein Commit in den zugrunde liegenden Verzeichnisspeicher.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAllDirectoryServers">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.ReadOnlyDirectoryServerCollection FindAllDirectoryServers (string siteName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.ActiveDirectory.ReadOnlyDirectoryServerCollection FindAllDirectoryServers(string siteName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ApplicationPartition.FindAllDirectoryServers(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ReadOnlyDirectoryServerCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="siteName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="siteName">Ein <see cref="T:System.String" /> , der den Namen des zu durchsuchenden Standorts angibt.</param>
+        <summary>Gibt ein <see cref="T:System.DirectoryServices.ActiveDirectory.ReadOnlyDirectoryServerCollection" /> -Objekt, das alle Verzeichnisserver enthält, die diese Anwendungspartition am angegebenen Standort hosten.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.ReadOnlyDirectoryServerCollection" /> -Objekt, das die Verzeichnisserver enthält, die diese Anwendungspartition am angegebenen Standort hosten.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="siteName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="siteName" /> ist eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.DirectoryServices.ActiveDirectory.ApplicationPartition" /> Objekt wurde noch kein Commit in den zugrunde liegenden Verzeichnisspeicher.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAllDiscoverableDirectoryServers">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.ReadOnlyDirectoryServerCollection FindAllDiscoverableDirectoryServers ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.ActiveDirectory.ReadOnlyDirectoryServerCollection FindAllDiscoverableDirectoryServers() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ApplicationPartition.FindAllDiscoverableDirectoryServers" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ReadOnlyDirectoryServerCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.DirectoryServices.ActiveDirectory.ReadOnlyDirectoryServerCollection" /> Objekt, das alle Verzeichnisserver, die entweder registriert haben einen standortspezifischen DNS-Eintrag für den aktuellen Standort oder Standort-spezifische DNS-Eintrags für die Anwendungspartition enthält.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.ReadOnlyDirectoryServerCollection" /> -Objekt, das die Verzeichnisserver enthält, die gefunden wurden.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.DirectoryServices.ActiveDirectory.ApplicationPartition" /> Objekt wurde noch kein Commit in den zugrunde liegenden Verzeichnisspeicher.</exception>
+        <exception cref="T:System.NotSupportedException">Die Anwendungspartition ist ein AD LDS-Anwendungspartition.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAllDiscoverableDirectoryServers">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.ReadOnlyDirectoryServerCollection FindAllDiscoverableDirectoryServers (string siteName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.ActiveDirectory.ReadOnlyDirectoryServerCollection FindAllDiscoverableDirectoryServers(string siteName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ApplicationPartition.FindAllDiscoverableDirectoryServers(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ReadOnlyDirectoryServerCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="siteName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="siteName">Ein <see cref="T:System.String" /> , der den Namen des zu durchsuchenden Standorts angibt.</param>
+        <summary>Gibt eine <see cref="T:System.DirectoryServices.ActiveDirectory.ReadOnlyDirectoryServerCollection" /> -Objekt, das alle Verzeichnisserver enthält, die einen standortspezifischen DNS-Eintrag für den angegebenen Standort, für die Anwendungspartition registriert haben.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.ReadOnlyDirectoryServerCollection" /> -Objekt, das die gefundenen Verzeichnisserver enthält.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="siteName" /> ist eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="siteName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.DirectoryServices.ActiveDirectory.ApplicationPartition" /> Objekt wurde noch kein Commit in den zugrunde liegenden Verzeichnisspeicher.</exception>
+        <exception cref="T:System.NotSupportedException">Die Anwendungspartition ist ein AD LDS-Anwendungspartition.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindByName">
+      <MemberSignature Language="C#" Value="public static System.DirectoryServices.ActiveDirectory.ApplicationPartition FindByName (System.DirectoryServices.ActiveDirectory.DirectoryContext context, string distinguishedName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.DirectoryServices.ActiveDirectory.ApplicationPartition FindByName(class System.DirectoryServices.ActiveDirectory.DirectoryContext context, string distinguishedName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ApplicationPartition.FindByName(System.DirectoryServices.ActiveDirectory.DirectoryContext,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ApplicationPartition</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.ActiveDirectory.DirectoryContext" />
+        <Parameter Name="distinguishedName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" /> -Objekt, das das Ziel und die Anmeldeinformationen für die Suche enthält.</param>
+        <param name="distinguishedName">Ein <see cref="T:System.String" /> , die den distinguished Name des zu suchenden Anwendungspartition enthält.</param>
+        <summary>Gibt eine <see cref="T:System.DirectoryServices.ActiveDirectory.ApplicationPartition" /> -Objekt für einen bestimmten <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" /> Objekt und der definierte Name.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.ApplicationPartition" /> Objekt, das die Ergebnisse der Suche darstellt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Diese Ausnahme wird für jede der folgenden Gründe auftreten:  
+  
+-   Ein Ziel angegeben, der <paramref name="context" /> Parameter konnte nicht gefunden werden.  
+  
+-   Das Ziel eines Konfigurationssatzes und in diesem Konfigurationssatz wurde keine AD LDS-Instanz gefunden.  
+  
+-   Das Ziel einer Gesamtstruktur und die Anwendungspartition in dieser Gesamtstruktur nicht gefunden.  
+  
+-   Das Ziel ist kein host für die aktuelle Anwendungspartition.  
+  
+-   Für die Anwendungspartition wurde keine AD LDS-Instanz gefunden.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> oder <paramref name="distinguishedName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Diese Ausnahme tritt aus beliebigen der folgenden Gründe auf:  
+  
+-   Die <paramref name="context" /> Parameter ist nicht an eine gültige Gesamtstrukturen, Konfigurationssatz oder Verzeichnisserver.  
+  
+-   Die <paramref name="distinguishedName" /> hat die Länge 0  
+  
+-   Die <paramref name="distinguishedName" /> Parameter weist ein ungültiges Format.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindDirectoryServer">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.DirectoryServer FindDirectoryServer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.ActiveDirectory.DirectoryServer FindDirectoryServer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ApplicationPartition.FindDirectoryServer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.DirectoryServer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryServer" /> Objekt für diese Anwendungspartition und den aktuellen Standort.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryServer" /> Objekt für diese Anwendungspartition und den Standort.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.DirectoryServices.ActiveDirectory.ApplicationPartition" /> Objekt wurde noch kein Commit in den zugrunde liegenden Verzeichnisspeicher.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindDirectoryServer">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.DirectoryServer FindDirectoryServer (bool forceRediscovery);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.ActiveDirectory.DirectoryServer FindDirectoryServer(bool forceRediscovery) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ApplicationPartition.FindDirectoryServer(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.DirectoryServer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="forceRediscovery" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="forceRediscovery">Ein <see cref="T:System.Boolean" /> Wert, der angibt, ob zwischengespeicherte Informationen ignoriert werden sollen. <see langword="true" />Wenn zwischengespeicherte Informationen ignoriert werden sollen; andernfalls <see langword="false" />.</param>
+        <summary>Gibt eine <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryServer" /> Objekt für die Anwendungspartition und der aktuelle Standort mit der Option, um zwischengespeicherte Informationen zu ignorieren.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryServer" /> Objekt für diese Anwendungspartition und den Standort.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.DirectoryServices.ActiveDirectory.ApplicationPartition" /> Objekt wurde noch kein Commit in den zugrunde liegenden Verzeichnisspeicher.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindDirectoryServer">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.DirectoryServer FindDirectoryServer (string siteName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.ActiveDirectory.DirectoryServer FindDirectoryServer(string siteName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ApplicationPartition.FindDirectoryServer(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.DirectoryServer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="siteName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="siteName">Ein <see cref="T:System.String" /> , einen Standortnamen an angibt.</param>
+        <summary>Gibt eine <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryServer" /> -Objekt für die Anwendungspartition und einen angegebenen Standort.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryServer" /> Objekt für diese Anwendungspartition und den angegebenen Standort.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="siteName" /> ist eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="siteName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.DirectoryServices.ActiveDirectory.ApplicationPartition" /> Objekt wurde noch kein Commit in den zugrunde liegenden Verzeichnisspeicher.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindDirectoryServer">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.DirectoryServer FindDirectoryServer (string siteName, bool forceRediscovery);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.ActiveDirectory.DirectoryServer FindDirectoryServer(string siteName, bool forceRediscovery) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ApplicationPartition.FindDirectoryServer(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.DirectoryServer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="siteName" Type="System.String" />
+        <Parameter Name="forceRediscovery" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="siteName">Ein <see cref="T:System.String" /> , einen Standortnamen an angibt.</param>
+        <param name="forceRediscovery">Ein <see cref="T:System.Boolean" /> Wert, der angibt, ob zwischengespeicherte Informationen ignoriert werden sollen. <see langword="true" />Wenn zwischengespeicherte Informationen ignoriert werden sollen; andernfalls <see langword="false" />.</param>
+        <summary>Gibt eine <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryServer" /> Objekt für diese Anwendungspartition für einen bestimmten Standort, mit der Option, um zwischengespeicherte Informationen zu ignorieren.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryServer" /> Objekt für diese Anwendungspartition und den angegebenen Standort.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="siteName" /> ist eine leere Zeichenfolge.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="siteName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.DirectoryServices.ActiveDirectory.ApplicationPartition" /> Objekt wurde noch kein Commit in den zugrunde liegenden Verzeichnisspeicher.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetApplicationPartition">
+      <MemberSignature Language="C#" Value="public static System.DirectoryServices.ActiveDirectory.ApplicationPartition GetApplicationPartition (System.DirectoryServices.ActiveDirectory.DirectoryContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.DirectoryServices.ActiveDirectory.ApplicationPartition GetApplicationPartition(class System.DirectoryServices.ActiveDirectory.DirectoryContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ApplicationPartition.GetApplicationPartition(System.DirectoryServices.ActiveDirectory.DirectoryContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ApplicationPartition</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.ActiveDirectory.DirectoryContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" /> -Objekt, das das Ziel und die Anmeldeinformationen zum Abrufen des Objekts der Partition enthält.  Directory-Kontextes muss den DNS-Namen der Anwendungspartition angeben.</param>
+        <summary>Gibt ein <see cref="T:System.DirectoryServices.ActiveDirectory.ApplicationPartition" /> Objekt für einen angegebenen Verzeichniskontext.</summary>
+        <returns>Ein <see cref="T:System.DirectoryServices.ActiveDirectory.ApplicationPartition" /> Objekt, das die Anwendungspartition für den angegebenen Verzeichniskontext darstellt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Ein Ziel im angegebenen <paramref name="context" /> konnte nicht gefunden werden.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="context" /> ist nicht gültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDirectoryEntry">
+      <MemberSignature Language="C#" Value="public override System.DirectoryServices.DirectoryEntry GetDirectoryEntry ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.DirectoryServices.DirectoryEntry GetDirectoryEntry() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ApplicationPartition.GetDirectoryEntry" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.DirectoryEntry</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.DirectoryServices.DirectoryEntry" /> Objekt für diese Anwendungspartition.</summary>
+        <returns>Die <see cref="T:System.DirectoryServices.DirectoryEntry" /> für diese Anwendungspartition.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.DirectoryServices.ActiveDirectory.ApplicationPartition" /> Objekt wurde noch nicht in den Active Directory-Domänendiensten gespeichert zu speichern.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Wert der Anforderung:<see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ApplicationPartition.Save" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert alle Änderungen, die aktuelle Partition Anwendungsobjekts an den zugrunde liegenden Verzeichnisspeicher.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectExistsException">Eine Anwendungspartition mit dem gleichen Namen ist bereits vorhanden.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityReferenceDomain">
+      <MemberSignature Language="C#" Value="public string SecurityReferenceDomain { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SecurityReferenceDomain" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ApplicationPartition.SecurityReferenceDomain" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt und definiert die Sicherheitsreferenzdomäne für diese Anwendungspartition.</summary>
+        <value>Der distinguished Name der Security-Referenzdomäne für diese Anwendung.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">Der Zielserver ist entweder ausgelastet oder nicht verfügbar.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.DirectoryServices.ActiveDirectory.ApplicationPartition" /> Objekt wurde noch kein Commit in den zugrunde liegenden Verzeichnisspeicher (gilt nur für Festlegungsvorgänge).</exception>
+        <exception cref="T:System.NotSupportedException">Die Anwendungspartition ist ein AD LDS-Anwendungspartition.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

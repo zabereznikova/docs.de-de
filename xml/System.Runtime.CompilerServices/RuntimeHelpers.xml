@@ -1,0 +1,861 @@
+<Type Name="RuntimeHelpers" FullName="System.Runtime.CompilerServices.RuntimeHelpers">
+  <TypeSignature Language="C#" Value="public static class RuntimeHelpers" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit RuntimeHelpers extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.CompilerServices.RuntimeHelpers" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Satz statischer Methoden und Eigenschaften zur Compiler-Unterstützung bereit. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie verlässlich Handles festlegen, indem die <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> Methode. Um ein Handle für eine angegebene bereits vorhandene Handle zuverlässig festzulegen, Sie müssen sicherstellen, dass die Zuordnung von das systemeigene Handle und die nachfolgende Aufzeichnung dieses Handle in einen <xref:System.Runtime.InteropServices.SafeHandle> -Objekt atomar ist. Jeder Fehler zwischen diesen Operationen (z. B. Threadabbruchs oder Out-of-Memory-Ausnahme) führt das systemeigene Handle zugreifen.  Sie können die <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> Methode, um sicherzustellen, dass das Handle nicht weitergegeben wird.  
+  
+ [!code-csharp[SafeHandle-RuntimeHelpers.PrepareConstrainedRegions#1](~/samples/snippets/csharp/VS_Snippets_CLR/SafeHandle-RuntimeHelpers.PrepareConstrainedRegions/cs/sample.cs#1)]
+ [!code-vb[SafeHandle-RuntimeHelpers.PrepareConstrainedRegions#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/SafeHandle-RuntimeHelpers.PrepareConstrainedRegions/vb/sample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EnsureSufficientExecutionStack">
+      <MemberSignature Language="C#" Value="public static void EnsureSufficientExecutionStack ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void EnsureSufficientExecutionStack() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.RuntimeHelpers.EnsureSufficientExecutionStack" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt sicher, dass der verbleibende Stapelspeicher groß genug für die durchschnittliche .NET Framework-Funktion auszuführen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Runtime.CompilerServices.RuntimeHelpers.EnsureSufficientExecutionStack%2A>enthält Informationen über einen künstlich eingeschränkten Stapel, der genügend Platz für eine Ausnahme ausgelöst wird, werden beibehalten und die Wiederherstellungsaktion an, die ausgeführt werden. Das Limit künstliche Stapel wird durch die common Language Runtime ausgewählt, um sicherzustellen, dass genügend Speicherplatz verbleibt, bevor er eine Ausnahme auslöst, sicher.  
+  
+ Diese Methode ist hilfreich in Situationen, in denen Stapelüberlauf aufgrund unbegrenzte Rekursion auftreten können. Es dient zur Verwendung in Szenarios mit Compiler, obwohl sie auch sicher in andere Entwicklungsszenarien verwendet werden kann.  
+  
+ Wenn der Stapelspeicher ausreichend ist, wird die Ausnahme ausgelöst, und die meisten .NET Framework-Typen und Member können trotzdem aufgerufen werden.  
+  
+> [!NOTE]
+>  Diese Methode ist nicht Teil der eingeschränkten Unterstützung des Ausführungsbereichs (CER) und dürfen nicht mit verwechselt werden die <xref:System.Runtime.CompilerServices.RuntimeHelpers.ProbeForSufficientStack%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InsufficientExecutionStackException">Der verfügbaren Stapelspeicher ausreicht, um die durchschnittliche .NET Framework-Funktion ausführen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public static bool Equals (object o1, object o2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Equals(object o1, object o2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.RuntimeHelpers.Equals(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o1" Type="System.Object" />
+        <Parameter Name="o2" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o1">Das erste zu vergleichende Objekt.</param>
+        <param name="o2">Das zweite zu vergleichende Objekt.</param>
+        <summary>Stellt fest, ob die angegebenen <see cref="T:System.Object" />-Instanzen als gleich betrachtet werden.</summary>
+        <returns>
+          <see langword="true" />Wenn die <paramref name="o1" /> Parameter ist der gleichen Instanz wie die <paramref name="o2" /> Parameter, oder beide <see langword="null" />, oder wenn <c>o1. Equals(O2)</c> gibt <see langword="true" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird von Compilern verwendet.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie zum Vergleichen von zwei Objekte mithilfe der <xref:System.Runtime.CompilerServices.RuntimeHelpers.Equals%2A> Methode.  
+  
+ [!code-csharp[Runtime.CompilerServices.RuntimeHelpers.Equals#1](~/samples/snippets/csharp/VS_Snippets_CLR/Runtime.CompilerServices.RuntimeHelpers.Equals/cs/example.cs#1)]
+ [!code-vb[Runtime.CompilerServices.RuntimeHelpers.Equals#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Runtime.CompilerServices.RuntimeHelpers.Equals/vb/example.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteCodeWithGuaranteedCleanup">
+      <MemberSignature Language="C#" Value="public static void ExecuteCodeWithGuaranteedCleanup (System.Runtime.CompilerServices.RuntimeHelpers.TryCode code, System.Runtime.CompilerServices.RuntimeHelpers.CleanupCode backoutCode, object userData);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ExecuteCodeWithGuaranteedCleanup(class System.Runtime.CompilerServices.RuntimeHelpers/TryCode code, class System.Runtime.CompilerServices.RuntimeHelpers/CleanupCode backoutCode, object userData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup(System.Runtime.CompilerServices.RuntimeHelpers.TryCode,System.Runtime.CompilerServices.RuntimeHelpers.CleanupCode,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="code" Type="System.Runtime.CompilerServices.RuntimeHelpers+TryCode" />
+        <Parameter Name="backoutCode" Type="System.Runtime.CompilerServices.RuntimeHelpers+CleanupCode" />
+        <Parameter Name="userData" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="code">Ein Delegat, den Code um zu versuchen.</param>
+        <param name="backoutCode">Ein Delegat, der der Code ausgeführt wird, wenn eine Ausnahme auftritt.</param>
+        <param name="userData">Die Daten für die Übergabe an <c>Code</c> und <c>BackoutCode</c>.</param>
+        <summary>Führt Code unter Verwendung einer <see cref="T:System.Delegate" /> bei der Verwendung einer anderen <see cref="T:System.Delegate" /> im Falle einer Ausnahme kein zusätzlichen Code ausgeführt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird von Compilern verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public static int GetHashCode (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 GetHashCode(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.RuntimeHelpers.GetHashCode(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Ein Objekt, das den Hashcode für abzurufen.</param>
+        <summary>Dient als Hashfunktion für ein bestimmtes Objekt aus, und für die Verwendung in Hashalgorithmen und-Datenstrukturen, mit denen Hashcodes, z. B. einer Hashtabelle geeignet ist.</summary>
+        <returns>Ein Hashcode für das identifizierte Objekt die <paramref name="o" /> Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.CompilerServices.RuntimeHelpers.GetHashCode%2A?displayProperty=nameWithType> Methodenaufrufe immer die <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> Methode nicht virtuell, selbst wenn der Typ des Objekts außer Kraft gesetzt wurde die <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> Methode. Aus diesem Grund mithilfe von <xref:System.Runtime.CompilerServices.RuntimeHelpers.GetHashCode%2A?displayProperty=nameWithType> weicht möglicherweise von Aufrufen der `GetHashCode` direkt auf das Objekt mit der <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> Methode.  
+  
+> [!WARNING]
+>  Obwohl die <xref:System.Runtime.CompilerServices.RuntimeHelpers.GetHashCode%2A?displayProperty=nameWithType> Methodenrückgabe identische Hashcodes für identische Objektverweise, sollten Sie nicht mit dieser Methode für die Objektidentität zu testen, da diese Hashcode einen Objektverweis nicht eindeutig identifiziert. So testen Sie für das Objekt identifizieren (So testen Sie, dass zwei Objekte Verweis das gleiche Objekt im Arbeitsspeicher), rufen Sie die <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> Methode. Oder Sie verwenden sollten <xref:System.Runtime.CompilerServices.RuntimeHelpers.GetHashCode%2A> , testen, ob zwei Zeichenfolgen gleich Objektverweise, darstellen, da es sich bei die Zeichenfolge intern gespeichert werden. Um Internalisierung testen, rufen Sie die <xref:System.String.IsInterned%2A?displayProperty=nameWithType> Methode.  
+  
+ Die <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> und <xref:System.Runtime.CompilerServices.RuntimeHelpers.GetHashCode%2A?displayProperty=nameWithType> Methoden unterscheiden sich wie folgt:  
+  
+-   <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>Gibt einen Hashcode, der auf die Objektdefinition von Gleichheit basiert. Beispielsweise werden zwei Zeichenfolgen mit identischem Inhalt für den gleichen Wert zurückgeben <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>.  
+  
+-   <xref:System.Runtime.CompilerServices.RuntimeHelpers.GetHashCode%2A?displayProperty=nameWithType>Gibt einen Hashcode, der Identität des Objekts angibt. D. h. zwei Variablen, deren Inhalte identisch sind und eine Zeichenfolge, die intern gespeichert werden darstellen, Zeichenfolge (finden Sie unter der [Internalisierung](#interning) Abschnitt) oder die Hashcodes, darstellen, die eine einzelne Zeichenfolge im Arbeitsspeicher zurückgeben identisch.  
+  
+> [!IMPORTANT]
+>  Beachten Sie, dass <xref:System.Runtime.CompilerServices.RuntimeHelpers.GetHashCode%2A> immer identische Hashcodes für gleich Objektverweise zurück. Das Gegenteil stimmt aber nicht "true": gleich Hashcodes nicht gleich Objektverweise hin. Ein bestimmten Hashcodewert sind nicht eindeutig, Verweis auf ein bestimmtes Objekt; verschiedene Objektverweise können identische Hashcodes generieren.  
+  
+ Diese Methode wird von Compilern verwendet.  
+  
+<a name="interning"></a>   
+## <a name="string-interning"></a>Internalisierung  
+ Die common Language Runtime (CLR) verwaltet einen internen Pool von Zeichenfolgen und Literale im Pool gespeichert. Wenn zwei Zeichenfolgen (z. B. `str1` und `str2`) aus einer identischen Zeichenfolgenliteral, die CLR gebildet `str1` und `str2` , zeigen Sie auf den gleichen Speicherort auf dem verwalteten Heap an, um Speicherplatz zu sparen. Aufrufen von <xref:System.Runtime.CompilerServices.RuntimeHelpers.GetHashCode%2A?displayProperty=nameWithType> für diese zwei Zeichenfolge erzeugt Objekte denselben Hashcode, im Gegensatz zur zweiten Aufzählungspunkt im vorherigen Abschnitt.  
+  
+ Die CLR hinzugefügt den Pool nur Literale. Ergebnisse von Zeichenfolgenoperationen, z. B. der Verkettung werden an den Pool nicht hinzugefügt werden, es sei denn, der Compiler das Verketten von Zeichenfolgen als einzelne Zeichenfolgenliteral löst. Aus diesem Grund Wenn `str2` erstellt wurde, als Ergebnis eines verkettungsvorgangs und `str2` ist identisch mit `str1`mit <xref:System.Runtime.CompilerServices.RuntimeHelpers.GetHashCode%2A?displayProperty=nameWithType> für diese zwei Zeichenfolgenobjekte erzeugen Objekte nicht denselben Hashcode.  
+  
+ Wenn Sie eine verkettete Zeichenfolge explizit in den Pool hinzufügen möchten, verwenden Sie die <xref:System.String.Intern%2A?displayProperty=nameWithType> Methode.  
+  
+ Sie können auch die <xref:System.String.IsInterned%2A?displayProperty=nameWithType> -Methode überprüft, ob eine Zeichenfolge einen Verweis im Internpool vorhanden ist.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht den Unterschied zwischen der <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> und <xref:System.Runtime.CompilerServices.RuntimeHelpers.GetHashCode%2A?displayProperty=nameWithType> Methoden. Die Ausgabe im Beispiel veranschaulicht Folgendes:  
+  
+-   Beide Gruppen von Hashcodes für die erste Gruppe von Zeichenfolgen übergeben, um die `ShowHashCodes` Methode unterschiedlich sind, da die Zeichenfolgen völlig unterschiedlich sind.  
+  
+-   <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>generiert den gleichen Hashcode für die zweite Gruppe von Zeichenfolgen übergeben der `ShowHashCodes` -Methode, da die Zeichenfolgen gleich sind. Allerdings die <xref:System.Runtime.CompilerServices.RuntimeHelpers.GetHashCode%2A?displayProperty=nameWithType> Methode nicht. Die erste Zeichenfolge ist ein Zeichenfolgenliteral mit definiert und ist daher intern gespeichert. Obwohl der Wert der zweiten Zeichenfolge identisch ist, es ist nicht intern gespeichert, da er durch einen Aufruf zurückgegeben wird die <xref:System.String.Format%2A?displayProperty=nameWithType> Methode.  
+  
+-   Bei der dritten Zeichenfolge, der die Hashcodes von erzeugten <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> für beide Zeichenfolgen identisch sind, werden als der Hashcodes von erzeugten <xref:System.Runtime.CompilerServices.RuntimeHelpers.GetHashCode%2A?displayProperty=nameWithType>. Dies ist, da der Compiler Zeichenfolgen als einzelne Zeichenfolgenliteral zugewiesenen Wert behandelt wurde, und somit die Zeichenfolgenvariablen auf dieselbe Zeichenfolge, die im Internpool vorhanden verweisen.  
+  
+ [!code-csharp[System.Runtime.CompilerServices.RuntimeHelpers.GetHashCode#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.compilerservices.runtimehelpers.gethashcode/cs/gethashcodeex1.cs#1)]
+ [!code-vb[System.Runtime.CompilerServices.RuntimeHelpers.GetHashCode#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.runtime.compilerservices.runtimehelpers.gethashcode/vb/gethashcodeex1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectValue">
+      <MemberSignature Language="C#" Value="public static object GetObjectValue (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetObjectValue(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.RuntimeHelpers.GetObjectValue(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Der Werttyp geschachtelt werden.</param>
+        <summary>Schachtelt einen Werttyp an.</summary>
+        <returns>Eine geschachtelte Kopie von <paramref name="obj" /> wird jedoch eine Wertklasse; anderenfalls <paramref name="obj" /> selbst.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Boxing eines Werttyps erstellt ein Objekt und führt eine flache Kopie der Felder des Typs angegebenen Wert in das neue Objekt.  
+  
+ Diese Methode ermöglicht, eine Wertklasse als ein Objekt bearbeitet werden, während das Aliasing Verhalten einer Wertklasse beibehalten wird.  
+  
+ Der Rückgabewert hängt davon ab, ob die Wertklasse änderbare oder unveränderlich ist:  
+  
+-   Wenn der Wert zugewiesen wird, eine Wertklasse ist, gibt die Methode eine flache Kopie der Klasse zurück, Schreibberechtigung Wertklassen Semantik zum Kopieren.  
+  
+-   Wenn der Wert zugewiesen wird, eine Wertklasse ist, gibt die Methode das Objekt selbst, anstatt eine Kopie der Klasse zurück.  
+  
+ Compiler dynamisch typisierte Sprachen können diese Methode verwenden, um sicherzustellen, dass geschachtelte Werttypen identisch der Arbeit für nicht geschachtelte Werttypen. Geschachtelte Werttypen abrufen, also geklont, wenn übergeben, und sie werden immer als Wert übergeben. Der Compiler kann Aufrufen <xref:System.Runtime.CompilerServices.RuntimeHelpers.GetObjectValue%2A> einen Werttyp auf ein Objekt zuzuweisen oder um einen Werttyp als Parameter für ein Objekt vom Typ übergeben.  
+  
+ Diese Methode wird von Compilern verwendet.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie eine Wertklasse mit Box die <xref:System.Runtime.CompilerServices.RuntimeHelpers.GetObjectValue%2A> Methode.  
+  
+ [!code-csharp[Runtime.CompilerServices.RuntimeHelpers.GetObjectValue#1](~/samples/snippets/csharp/VS_Snippets_CLR/Runtime.CompilerServices.RuntimeHelpers.GetObjectValue/cs/example.cs#1)]
+ [!code-vb[Runtime.CompilerServices.RuntimeHelpers.GetObjectValue#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Runtime.CompilerServices.RuntimeHelpers.GetObjectValue/vb/example.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUninitializedObject">
+      <MemberSignature Language="C#" Value="public static object GetUninitializedObject (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetUninitializedObject(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.RuntimeHelpers.GetUninitializedObject(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeArray">
+      <MemberSignature Language="C#" Value="public static void InitializeArray (Array array, RuntimeFieldHandle fldHandle);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void InitializeArray(class System.Array array, valuetype System.RuntimeFieldHandle fldHandle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.RuntimeHelpers.InitializeArray(System.Array,System.RuntimeFieldHandle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="fldHandle" Type="System.RuntimeFieldHandle" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das Array initialisiert werden.</param>
+        <param name="fldHandle">Ein Feldhandle, der angibt, den Speicherort der Daten verwendet, um das Array zu initialisieren.</param>
+        <summary>Bietet eine schnelle Möglichkeit zum Initialisieren eines Arrays aus Daten, die in einem Modul gespeichert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird von Compilern verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReferenceOrContainsReferences&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static bool IsReferenceOrContainsReferences&lt;T&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsReferenceOrContainsReferences&lt;T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.RuntimeHelpers.IsReferenceOrContainsReferences``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">To be added.</typeparam>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OffsetToStringData">
+      <MemberSignature Language="C#" Value="public static int OffsetToStringData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 OffsetToStringData" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.CompilerServices.RuntimeHelpers.OffsetToStringData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Offset in Bytes, die die Daten in die angegebene Zeichenfolge an.</summary>
+        <value>Der Byte-Offset vom Anfang der <see cref="T:System.String" /> -Objekt, das erste Zeichen in der Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Compiler verwenden diese Eigenschaft für unsichere jedoch effizienter, zeigervorgängen anhand der Zeichen in eine verwaltete Zeichenfolge. Compiler sollte die Zeichenfolge gegen Bewegung durch den Garbage Collector vor der Verwendung anheften. Beachten Sie, dass die common Language Runtime-Zeichenfolgen unveränderlich sind. d. h. deren Inhalt zwar gelesen, aber nicht geändert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrepareConstrainedRegions">
+      <MemberSignature Language="C#" Value="public static void PrepareConstrainedRegions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PrepareConstrainedRegions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Kennzeichnet einen Codeabschnitt als einem eingeschränkten Ausführungsbereich (CER).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Compiler verwenden diese Methode markiert `catch`, `finally`, und `fault` Blöcke als eingeschränkte Ausführungsbereiche (CERs). Code, der als eine eingeschränkte Region nur anderen Code mit starken Zuverlässigkeitsverträge aufrufen muss gekennzeichnet ist. Es sollte nicht zuordnen oder virtuellen Aufrufe Vorbereitung oder unzuverlässigen Methode vorzunehmen, es sei denn, sie vorbereitet wird, um Fehler zu behandeln.  
+  
+ Beachten Sie, die nicht die Language-Opcodes außer intermediate `NOP`, dürfen zwischen einem Aufruf von der <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> Methode und die `try` Block. Weitere Informationen über CERs finden Sie unter den Klassen in der <xref:System.Runtime.ConstrainedExecution> Namespace.  
+  
+ CERs, die markiert sind, mithilfe der <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> Methode funktionieren nicht perfekt beim eine <xref:System.StackOverflowException> wird generiert, von der `try` Block. Weitere Informationen finden Sie unter der Methode <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A>.  
+  
+ Die <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>-Methode ruft die <xref:System.Runtime.CompilerServices.RuntimeHelpers.ProbeForSufficientStack%2A>-Methode auf.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie verlässlich Handles festlegen, indem die <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> Methode. Um ein Handle für eine angegebene bereits vorhandene Handle zuverlässig festzulegen, Sie müssen sicherstellen, dass die Zuordnung von das systemeigene Handle und die nachfolgende Aufzeichnung dieses Handle in einen <xref:System.Runtime.InteropServices.SafeHandle> -Objekt atomar ist. Jeder Fehler zwischen diesen Operationen (z. B. Threadabbruchs oder Out-of-Memory-Ausnahme) führt das systemeigene Handle zugreifen. Sie können die <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> Methode, um sicherzustellen, dass das Handle nicht weitergegeben wird.  
+  
+ [!code-csharp[SafeHandle-RuntimeHelpers.PrepareConstrainedRegions#1](~/samples/snippets/csharp/VS_Snippets_CLR/SafeHandle-RuntimeHelpers.PrepareConstrainedRegions/cs/sample.cs#1)]
+ [!code-vb[SafeHandle-RuntimeHelpers.PrepareConstrainedRegions#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/SafeHandle-RuntimeHelpers.PrepareConstrainedRegions/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="PrepareConstrainedRegionsNoOP">
+      <MemberSignature Language="C#" Value="public static void PrepareConstrainedRegionsNoOP ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PrepareConstrainedRegionsNoOP() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegionsNoOP" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Kennzeichnet einen Codeabschnitt als einem eingeschränkten Ausführungsbereich (CER), ohne dass eine Überprüfung durchgeführt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Compiler sollten diese Methode nicht direkt aufrufen. Definieren Sie stattdessen eine CER durch Aufrufen der <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="PrepareContractedDelegate">
+      <MemberSignature Language="C#" Value="public static void PrepareContractedDelegate (Delegate d);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PrepareContractedDelegate(class System.Delegate d) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.RuntimeHelpers.PrepareContractedDelegate(System.Delegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="d" Type="System.Delegate" />
+      </Parameters>
+      <Docs>
+        <param name="d">Der Ereignisdelegat vorbereiten.</param>
+        <summary>Bietet eine Möglichkeit für Anwendungen dynamisch vorbereiten <see cref="T:System.AppDomain" /> Ereignisdelegaten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.AppDomain>Ereignis Delegaten, z. B. <xref:System.AppDomain.DomainUnload>, <xref:System.AppDomain.ProcessExit>, und <xref:System.AppDomain.UnhandledException> werden nicht automatisch beim Start vorbereitet. Sie können die folgenden Methoden verwenden, zu deren Vorbereitung:  
+  
+-   -Attribut die Methode mithilfe der <xref:System.Runtime.ConstrainedExecution.PrePrepareMethodAttribute> Attribut.  
+  
+-   -Attribut die Methode mithilfe der <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> Attribut.  
+  
+-   Rufen Sie die <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareContractedDelegate%2A> Methode, um den Delegaten dynamisch vorzubereiten.  
+  
+ Weitere Informationen finden Sie im Artikel [weiterhin Ihr Code ausgeführt mit den Features für die Zuverlässigkeit von .NET Framework](http://go.microsoft.com/fwlink/?LinkId=145491) im MSDN Magazin.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="PrepareDelegate">
+      <MemberSignature Language="C#" Value="public static void PrepareDelegate (Delegate d);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PrepareDelegate(class System.Delegate d) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.RuntimeHelpers.PrepareDelegate(System.Delegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="d" Type="System.Delegate" />
+      </Parameters>
+      <Docs>
+        <param name="d">Der Delegattyp vorbereiten.</param>
+        <summary>Gibt an, dass der angegebene Delegat für die Aufnahme in einem eingeschränkten Ausführungsbereich (CER) vorbereitet werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Compiler verwenden diese Methode einen Delegaten vorbereiten und das Ziel dieses Aufrufs (und der Delegat statisch bestimmbare Aufrufdiagramm) vorbereiten als einem eingeschränkten Ausführungsbereich (CER).  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="PrepareMethod">
+      <MemberSignature Language="C#" Value="public static void PrepareMethod (RuntimeMethodHandle method);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PrepareMethod(valuetype System.RuntimeMethodHandle method) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod(System.RuntimeMethodHandle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="method" Type="System.RuntimeMethodHandle" />
+      </Parameters>
+      <Docs>
+        <param name="method">Ein Handle für die aufzurufende Methode vorbereiten.</param>
+        <summary>Bereitet eine Methode für die Aufnahme in einem eingeschränkten Ausführungsbereich (CER) vor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Compiler verwenden dabei die <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%28System.RuntimeMethodHandle%29> Methode, um virtuelle Aufrufe zu verarbeiten, die in einem eingeschränkten Ausführungsbereich (CER) vorgenommen werden. Bei der JIT-Kompilierung muss die common Language Runtime nicht in der Regel genügend Informationen über das Ziel eines virtuellen Aufrufs. Aus diesem Grund ist die Common Language Runtime nicht ursprünglich dieses Segment des Aufrufdiagramms vorbereitet werden. Wenn genügend kennt der Code, die der CER verwendet, um zu bestimmen, das Ziel zu einem beliebigen Zeitpunkt vor der CER tatsächlich eingegeben wurden, Aufrufen <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%28System.RuntimeMethodHandle%29> zum Ausführen der gleichen Laufzeit Vorbereitung normal ausgeführt wird, für die Methode wurde als Argument eine CER Stamm.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="PrepareMethod">
+      <MemberSignature Language="C#" Value="public static void PrepareMethod (RuntimeMethodHandle method, RuntimeTypeHandle[] instantiation);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PrepareMethod(valuetype System.RuntimeMethodHandle method, valuetype System.RuntimeTypeHandle[] instantiation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod(System.RuntimeMethodHandle,System.RuntimeTypeHandle[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="method" Type="System.RuntimeMethodHandle" />
+        <Parameter Name="instantiation" Type="System.RuntimeTypeHandle[]" />
+      </Parameters>
+      <Docs>
+        <param name="method">Ein Handle für die aufzurufende Methode vorbereiten.</param>
+        <param name="instantiation">Die Instanziierung, die an die Methode übergeben.</param>
+        <summary>Bereitet eine Methode für die Aufnahme in einem eingeschränkten Ausführungsbereich (CER) mit der angegebenen Instanziierung vor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bieten Unterstützung für Generika zur Compiler mithilfe der <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%28System.RuntimeMethodHandle%2CSystem.RuntimeTypeHandle%5B%5D%29> Methode. Die common Language Runtime kann nicht vorbereiten eingeschränkte Ausführungsbereiche (CERs) haben Ihren Stammpfad in eine Methode, die generischen Typparameter (Typparameter für die Klasse enthält die Methode oder an die Methode selbst) aufweist, wenn diese Typparameter instanziiert werden als Verweistypen.  
+  
+ Verwenden Sie diese Überladung, um eine bestimmte Instanziierung (z. B. ein Array von Typen) zu übergeben zuerst angeben von Typparameter der Klasse (sofern vorhanden), gefolgt von Methodenparameter Typ (sofern vorhanden). Die Common Language Runtime bereitet, Instanziierung der Methode. (Dies ist nur erforderlich, wenn die Instanziierungen an, die Sie verwenden mindestens ein Verweisparameter Typ enthalten.) Daher können Sie eine CER-Format `try` -Klausel in einer generischen Methode (oder eine nicht generische Methode für eine generische Klasse) und funktioniert es zuverlässig mit Instanziierungen von <xref:System.Int32> oder andere Werttypen. Referenz zu instanziieren Typen wie <xref:System.String>, verwenden Sie eine explizite <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%28System.RuntimeMethodHandle%2CSystem.RuntimeTypeHandle%5B%5D%29> Methode für die CER-root-Methode zuerst.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ProbeForSufficientStack">
+      <MemberSignature Language="C#" Value="public static void ProbeForSufficientStack ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ProbeForSufficientStack() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.RuntimeHelpers.ProbeForSufficientStack" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Prüfpunkte für eine bestimmte Menge an Stapelspeicher, um sicherzustellen, dass ein Stapelüberlauf in einem nachfolgenden Codeblock (vorausgesetzt, dass Ihr Code nur eine begrenzte und mittlere Menge an Stapelspeicher verwendet) auftreten kann. Es wird empfohlen, dass Sie statt dieser Methode einem eingeschränkten Ausführungsbereich (CER) verwenden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird von der constrained Execution Region (CER)-Infrastruktur verwendet, wenn auf den Hosts ausgeführt wird, die flexibel auf Stapelüberlauf wie Microsoft SQL Server und Microsoft Exchange-Server sind. Diese Methode wird derzeit auf 48 KB an Stapelspeicher für die X86 Prüfpunkte Plattform, aber die genaue Größe der Zeit ändern können und auf anderen Plattformen abweichen.  
+  
+ Diese Methode wird auch vom Compiler verwendet.  
+  
+ Anstatt die <xref:System.Runtime.CompilerServices.RuntimeHelpers.ProbeForSufficientStack%2A> -Methode, sollten Sie einen standard-CER verwenden. Wenn Sie planen, eine mittlere Menge an Stapelspeicher zu verwenden, d. h. Aufrufen der <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=nameWithType> Methode unmittelbar vor Ihrer `try` / `finally` oder `try` / `catch` Block. Wenn Sie eine rekursive Methode oder einen Plan zu viel Stapelspeicher aufrufen, müssen Sie verwenden die <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="RunClassConstructor">
+      <MemberSignature Language="C#" Value="public static void RunClassConstructor (RuntimeTypeHandle type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RunClassConstructor(valuetype System.RuntimeTypeHandle type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(System.RuntimeTypeHandle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.RuntimeTypeHandle" />
+      </Parameters>
+      <Docs>
+        <param name="type">Ein Typhandle, der angibt, die Konstruktormethode der Klasse ausgeführt.</param>
+        <summary>Führt eine angegebene Klasse Konstruktor-Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird von Compilern verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.TypeInitializationException">Die Klasseninitialisierer löst eine Ausnahme aus.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RunModuleConstructor">
+      <MemberSignature Language="C#" Value="public static void RunModuleConstructor (ModuleHandle module);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RunModuleConstructor(valuetype System.ModuleHandle module) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.RuntimeHelpers.RunModuleConstructor(System.ModuleHandle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="module" Type="System.ModuleHandle" />
+      </Parameters>
+      <Docs>
+        <param name="module">Ein Handle, das die Modul-Konstruktormethode auszuführende angibt.</param>
+        <summary>Führt eine angegebene Modul Konstruktor-Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird von Compilern verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.TypeInitializationException">Die Modul-Konstruktors löst eine Ausnahme aus.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryEnsureSufficientExecutionStack">
+      <MemberSignature Language="C#" Value="public static bool TryEnsureSufficientExecutionStack ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryEnsureSufficientExecutionStack() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.RuntimeHelpers.TryEnsureSufficientExecutionStack" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

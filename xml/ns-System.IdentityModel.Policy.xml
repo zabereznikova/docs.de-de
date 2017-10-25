@@ -1,0 +1,8 @@
+<Namespace Name="System.IdentityModel.Policy">
+  <Docs>
+    <summary>Die <see cref="N:System.IdentityModel.Policy" /> -Namespace enthält Klassen, mit denen Autorisierungsrichtlinie implementieren, wenn das anspruchsbasierte Identitätsmodell von WCF verwenden.  
+  
+ Ab .NET Framework 4.5 und die Integration von Windows Identity Foundation (WIF) in .NET Framework, wurde das anspruchsbasierte Identitätsmodell WCF von WIF abgelöst. WIF bietet eine anspruchsbasierte Identität-Objektmodell, das verwendet werden kann, um die Authentifizierung und Autorisierung über verschiedene Microsoft-Produkt-Stacks, einschließlich der CLR, WCF und ASP.NET bereit. In WIF Autorisierungsrichtlinie implementiert wird, durch die Erweiterung der <see cref="T:System.Security.Claims.ClaimsAuthorizationManager" /> Klasse. Ab .NET 4.5, Autorisierungsrichtlinie sollte implementiert werden durch die Klassen in WIF anstelle der <see cref="N:System.IdentityModel.Claims" /> Namespace.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

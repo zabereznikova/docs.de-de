@@ -1,0 +1,215 @@
+<Type Name="IAmbientProvider" FullName="System.Xaml.IAmbientProvider">
+  <TypeSignature Language="C#" Value="public interface IAmbientProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IAmbientProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.IAmbientProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Dienst, der Informationselementen zu Umgebungseigenschaften oder ambient-Typen an Typkonverter und Markuperweiterungen zurückgeben kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle stellt den Dienst, mit denen Typkonverter und Markuperweiterungen die ambient-Eigenschaft-IDs für die Verwendung von XAML-Typsystem abrufen kann (<xref:System.Xaml.XamlMember> Objekte). Der Dienst kann auch die ambient-Eigenschaftswerte aus Klassen abrufen. Typen können auch ambient sein. ein Element, das als Wert dieses Typs verwendet, sollte ambient angesehen werden.  
+  
+ Dieser Dienst wird in der Regel durch einen Aufruf von zurückgegeben <xref:System.IServiceProvider.GetService%2A>, anhand eines Dienstanbieters kontextspezifisch besteht. Der Dienstanbieter ist allgemein verfügbar auf Kontexte, die ihn, z. B. der Ausführungscode eines Wertkonverters benötigen. Weitere Informationen finden Sie unter [Typkonverter und Markuperweiterungen für XAML](~/docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md) und [verfügbare Dienstkontexte Typkonverter und Markuperweiterungen](~/docs/framework/xaml-services/service-contexts-available-to-type-converters-and-markup-extensions.md).  
+  
+## <a name="about-ambient-properties"></a>Zur Ambient-Eigenschaften  
+ Eine Ambiente-Eigenschaft ist eine Eigenschaft, deren Wert der Eigenschaft auf den Typ-Konverter und Markuperweiterungsverwendungen, die vorhanden sind, in der XAML-Knotenstruktur und im Objektdiagramm erstellt wurden, verfügbar sein sollten. Dies ist relevant für einen XAML-Prozessor, während der Phase Objekt zum Schreiben der Ladepfad oder der Serialisierungsphase eines Speichervorgangs Pfad.  
+  
+ Im Fall Pfad laden möglicherweise der Wert der ambient-Eigenschaft den Wert im Objektdiagramm mit anderen Eigenschaften beeinflussen, die darunter in eine XAML-Knotenstruktur vorhanden sind. Wenn als einen XAML-Knotenstream verarbeitet, das Umgebungskonzept bedeutet, dass die ambient-Eigenschaft-Wert muss für Typkonverter und Markuperweiterungen aus verfügbar sein `StartObject` auf `EndObject`. Auf ähnliche Weise einen Typkonverter, die verwendet wird, für die Speicherfunktion kann Pfad Kenntnisse der ambient-Eigenschaft und seinen Wert verwenden. Daher ist der XAML-Code, das erzeugt wird eine bessere Roundtripdarstellung.  
+  
+ Für Elemente im Allgemeinen gibt XAML die Reihenfolge keine in der Member eines Objekts verarbeitet werden müssen. Allerdings ausnahmslos ambient-Eigenschaft muss zuerst verarbeitet werden, die XAML-Reader, damit die Typ-Konverter und Markuperweiterungsverwendungen, die in anderen Eigenschaften enthalten sind, die über zugreifen können die <xref:System.Xaml.IAmbientProvider> Dienst.  
+  
+ <xref:System.Xaml.XamlMember.DependsOn%2A>ist ein ähnliches Konzept, das auch die Verwendung von XAML-Knoten-Verarbeitungsreihenfolge von Artikeln beeinflusst. Allerdings <xref:System.Xaml.XamlMember.DependsOn%2A> kann nur verwendet werden, für die Peer-Member und Knoten Beziehungen; es kann nicht beeinflusst werden alle abhängigen Elemente. Darüber hinaus <xref:System.Xaml.XamlMember.DependsOn%2A> direkt beeinflusst Graph-Eigenschaft festlegen;-Objekt während die Ambiente-Technik für den Einsatz von Typkonvertern oder Markuperweiterungen basiert. In der ambient-Technik muss gibt es zudem eine bestimmte Typkonverter oder Markup ressourcenerweiterungsdefinition, der angibt, wie der ambient-Eigenschaft-Wert interpretiert und auf das Objekt angewendet werden soll.  
+  
+## <a name="wpf-usage-notes"></a>Hinweise zur WPF-Verwendung  
+ Eine ambient-Eigenschaft das in dargestellte Szenario ist die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] -Funktionsgruppe ist <xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>, können die erforderliche Eigenschaft Name Suchvorgängen wird für andere Werte qualifizieren. In diesem Fall die <xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType> Wert qualifiziert die <xref:System.Windows.Setter.Property%2A?displayProperty=nameWithType> Werte, die in der Verwendung von XAML-Knoten darunter befinden. <xref:System.Windows.Setter.Property%2A?displayProperty=nameWithType>verwendet das Verhalten des Typ-Konverter für eine <xref:System.Windows.DependencyProperty>. Dieses Verhalten greift auf den Ambient- <xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType> Wert durch Abfragen <xref:System.Xaml.IAmbientProvider.GetFirstAmbientValue%2A> aus einen Dienstkontext, der für Typkonverter und Markuperweiterungen verfügbar ist.  
+  
+ Ist ein Umgebungstyp das in den Satz von WPF dargestellte Szenario ist <xref:System.Windows.ResourceDictionary>. <xref:System.Windows.ResourceDictionary>verfügt über eine <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> -Eigenschaft, die andere enthält kann <xref:System.Windows.ResourceDictionary> Objekte zum Zusammenführen und die beabsichtigte Auflösungsreihenfolge von Ressourcen für die zusammengeführten Szenario Konflikt mit der Reihenfolge, in Typen geladen werden. <xref:System.Windows.ResourceDictionary>wendet <xref:System.Windows.Markup.AmbientAttribute> , damit ein XAML-Prozessor die Verweise in einem zusammengeführten Wörterbuch mit ordnungsgemäß verarbeiten kann `StaticResource` Verwendungen. Insbesondere `StaticResource` ist eine Markuperweiterung, der aufgerufen wird, <xref:System.Xaml.IAmbientProvider.GetAllAmbientValues%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetAllAmbientValues">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;object&gt; GetAllAmbientValues (params System.Xaml.XamlType[] types);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;object&gt; GetAllAmbientValues(class System.Xaml.XamlType[] types) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.IAmbientProvider.GetAllAmbientValues(System.Xaml.XamlType[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="types" Type="System.Xaml.XamlType[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="types">Der Satz von Typen aus der ambient-Typinformationen abgerufen.</param>
+        <summary>Gibt einen zählbarer Satz von Objektinstanzen möglicher ambient-Typen für die angeforderten Zugriffstypen zurück.</summary>
+        <returns>Ein zählbarer Satz von Objekten, die die Werte für die angeforderte Menge von darstellen <see cref="T:System.Xaml.XamlType" /> Bezeichner.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllAmbientValues">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Xaml.AmbientPropertyValue&gt; GetAllAmbientValues (System.Collections.Generic.IEnumerable&lt;System.Xaml.XamlType&gt; ceilingTypes, params System.Xaml.XamlMember[] properties);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Xaml.AmbientPropertyValue&gt; GetAllAmbientValues(class System.Collections.Generic.IEnumerable`1&lt;class System.Xaml.XamlType&gt; ceilingTypes, class System.Xaml.XamlMember[] properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.IAmbientProvider.GetAllAmbientValues(System.Collections.Generic.IEnumerable{System.Xaml.XamlType},System.Xaml.XamlMember[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Xaml.AmbientPropertyValue&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ceilingTypes" Type="System.Collections.Generic.IEnumerable&lt;System.Xaml.XamlType&gt;" />
+        <Parameter Name="properties" Type="System.Xaml.XamlMember[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="ceilingTypes">Gibt einen oder mehrere Typen, die die Auswertung beendet werden soll, wenn sie erkannt werden, in dem Objektdiagramm nach oben durchlaufen. Dieser Typ enthält die gewünschte Ambiente-Eigenschaft. Kann <see langword="null" /> sein.</param>
+        <param name="properties">Gibt einen oder mehrere Eigenschaft Bezeichnerobjekte, die die Eigenschaften, die als ambient betrachtet werden.</param>
+        <summary>Gibt einen zählbarer Satz von Informationselementen ambient-Eigenschaft, für die angeforderte Menge von Eigenschaften zurück.</summary>
+        <returns>Ein zählbarer Satz von Informationselementen ambient-Eigenschaft, für die angeforderte Menge von Eigenschaften. Die Eigenschaftsinformationen für jedes <see cref="T:System.Xaml.AmbientPropertyValue" /> zurückgegeben wird, entspricht einer der Eingabe <paramref name="properties" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede <xref:System.Xaml.AmbientPropertyValue> zurückgegeben wird, enthält die <xref:System.Xaml.XamlMember> -ID und einen Eigenschaftswert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllAmbientValues">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Xaml.AmbientPropertyValue&gt; GetAllAmbientValues (System.Collections.Generic.IEnumerable&lt;System.Xaml.XamlType&gt; ceilingTypes, bool searchLiveStackOnly, System.Collections.Generic.IEnumerable&lt;System.Xaml.XamlType&gt; types, params System.Xaml.XamlMember[] properties);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Xaml.AmbientPropertyValue&gt; GetAllAmbientValues(class System.Collections.Generic.IEnumerable`1&lt;class System.Xaml.XamlType&gt; ceilingTypes, bool searchLiveStackOnly, class System.Collections.Generic.IEnumerable`1&lt;class System.Xaml.XamlType&gt; types, class System.Xaml.XamlMember[] properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.IAmbientProvider.GetAllAmbientValues(System.Collections.Generic.IEnumerable{System.Xaml.XamlType},System.Boolean,System.Collections.Generic.IEnumerable{System.Xaml.XamlType},System.Xaml.XamlMember[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Xaml.AmbientPropertyValue&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ceilingTypes" Type="System.Collections.Generic.IEnumerable&lt;System.Xaml.XamlType&gt;" />
+        <Parameter Name="searchLiveStackOnly" Type="System.Boolean" />
+        <Parameter Name="types" Type="System.Collections.Generic.IEnumerable&lt;System.Xaml.XamlType&gt;" />
+        <Parameter Name="properties" Type="System.Xaml.XamlMember[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="ceilingTypes">Gibt einen oder mehrere Typen, die die Auswertung beendet werden soll, wenn sie erkannt werden, in dem Objektdiagramm nach oben durchlaufen. Dieser Typ enthält die gewünschte Ambiente-Eigenschaft. Kann <see langword="null" /> sein.</param>
+        <param name="searchLiveStackOnly">
+          <see langword="true" />Um einen gespeicherten Kontext nicht verwendet werden soll. <see langword="false" /> einen gespeicherten Kontext verwenden. Die Standardeinstellung ist <see langword="false" />.</param>
+        <param name="types">To be added.</param>
+        <param name="properties">Gibt einen oder mehrere Eigenschaft Bezeichnerobjekte, die die Eigenschaften, die als ambient betrachtet werden.</param>
+        <summary>Gibt einen aufzählbaren Satz von ambient-Eigenschaftsinformationselementen für den angeforderten Satz von Typen und Eigenschaften zurück.</summary>
+        <returns>Ein zählbarer Satz von Informationselementen ambient-Eigenschaft für die angeforderte Menge von Typen und Eigenschaften. Die Eigenschaftsinformationen für jedes <see cref="T:System.Xaml.AmbientPropertyValue" /> zurückgegeben wird, entspricht einer der Eingabe <paramref name="types" /> oder <paramref name="properties" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede <xref:System.Xaml.AmbientPropertyValue> zurückgegeben wird, enthält die <xref:System.Xaml.XamlMember> -ID und einen Eigenschaftswert.  
+  
+ Dieser spezielle <xref:System.Xaml.IAmbientProvider.GetAllAmbientValues%2A> Überladung ambient-Typen suchen kann und Umgebungseigenschaften in der gleichen Durchlaufen einer Struktur. Mit dieser Überladung führt zu einer Sortierung der Elemente in der Rückgabewert, der vom unterscheidet <xref:System.Xaml.IAmbientProvider.GetAllAmbientValues%28System.Collections.Generic.IEnumerable%7BSystem.Xaml.XamlType%7D%2CSystem.Xaml.XamlMember%5B%5D%29> oder <xref:System.Xaml.IAmbientProvider.GetAllAmbientValues%28System.Xaml.XamlType%5B%5D%29>.  
+  
+ Diese Überladung kann außerdem die Suche auf alle gespeicherten Kontext nicht verwendet. Die <xref:System.Xaml.IAmbientProvider.GetAllAmbientValues%28System.Collections.Generic.IEnumerable%7BSystem.Xaml.XamlType%7D%2CSystem.Xaml.XamlMember%5B%5D%29> oder <xref:System.Xaml.IAmbientProvider.GetAllAmbientValues%28System.Xaml.XamlType%5B%5D%29> Überladungen implizit einen gespeicherten Kontext verwenden, sofern dieser verfügbar ist (sie immer fungieren, als wäre eine implizite `searchLiveStackOnly` Parameter ist `false`). Das Konzept eines gespeicherten Kontexts ist möglicherweise anders behandelt werden, indem bestimmte XAML-Schema-Kontexten oder Frameworks, die XAML integrieren. In der WPF-XAML-Implementierung werden gespeicherte Kontexten für die Erweiterung der Vorlage als auch andere Funktionsbereiche verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFirstAmbientValue">
+      <MemberSignature Language="C#" Value="public object GetFirstAmbientValue (params System.Xaml.XamlType[] types);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetFirstAmbientValue(class System.Xaml.XamlType[] types) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.IAmbientProvider.GetFirstAmbientValue(System.Xaml.XamlType[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="types" Type="System.Xaml.XamlType[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="types">Der Satz von Typen aus der ambient-Typinformationen abgerufen.</param>
+        <summary>Gibt den ersten übereinstimmenden Objekts, das einen möglichen ambient-Typ für die angeforderten Zugriffstypen zurück.</summary>
+        <returns>Das erste Ergebnisobjekt, das für die angeforderte Menge.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFirstAmbientValue">
+      <MemberSignature Language="C#" Value="public System.Xaml.AmbientPropertyValue GetFirstAmbientValue (System.Collections.Generic.IEnumerable&lt;System.Xaml.XamlType&gt; ceilingTypes, params System.Xaml.XamlMember[] properties);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xaml.AmbientPropertyValue GetFirstAmbientValue(class System.Collections.Generic.IEnumerable`1&lt;class System.Xaml.XamlType&gt; ceilingTypes, class System.Xaml.XamlMember[] properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.IAmbientProvider.GetFirstAmbientValue(System.Collections.Generic.IEnumerable{System.Xaml.XamlType},System.Xaml.XamlMember[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.AmbientPropertyValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ceilingTypes" Type="System.Collections.Generic.IEnumerable&lt;System.Xaml.XamlType&gt;" />
+        <Parameter Name="properties" Type="System.Xaml.XamlMember[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="ceilingTypes">Gibt einen oder mehrere Typen, die die Auswertung beendet werden soll, wenn sie erkannt werden, in dem Objektdiagramm nach oben durchlaufen. Dieser Typ enthält die gewünschte Ambiente-Eigenschaft.</param>
+        <param name="properties">Gibt ein oder mehrere Objekte, die die Eigenschaften, die als ambient betrachtet werden.</param>
+        <summary>Gibt die angeforderte Menge von Eigenschaften auf Grundlage der Eigenschaftswerte erstmals auftritt, wird eine einzelne ambient-Eigenschaft Informationen-Element zurück.</summary>
+        <returns>Eine einzelne ambient-Eigenschaftsinformationselement für den ersten Wert der ambient-Eigenschaft aus der <paramref name="properties" /> Liste, die gefunden wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede <xref:System.Xaml.AmbientPropertyValue> zurückgegeben wird, enthält die <xref:System.Xaml.XamlMember> -ID und einen Eigenschaftswert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

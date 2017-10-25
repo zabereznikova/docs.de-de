@@ -1,0 +1,257 @@
+<Type Name="SqlUserDefinedTypeAttribute" FullName="Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SqlUserDefinedTypeAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SqlUserDefinedTypeAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Struct, AllowMultiple=false, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Wird verwendet, um die Definition eines Typs in einer Assembly als einen benutzerdefinierten Typ (UDT) in SQL Server markieren. Die Eigenschaften des Attributs entsprechen die physischen Merkmale verwendet, wenn der Typ mit SQL Server registriert ist. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ SQL Server erstellt einen benutzerdefinierten Typ, der zur Definition gebunden ist, enthält die <xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute> benutzerdefinierten Attributs. Dieses Attribut muss jedem UDT angemerkt werden. Finden Sie unter [benutzerdefinierte CLR-Typen](http://go.microsoft.com/fwlink/?LinkId=128028) für Weitere Informationen zu UDTs, einschließlich eines Beispiels für einen UDT.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die `UserDefinedType` Attribut des Point-UDT.  Der UDT Bytereihenfolge ist, wird mit dem Namen "Point" hat eine Validierungsmethode mit dem Namen "ValidatePoint" und verwendet das systemeigene Serialisierungsformat.  
+  
+ [!code-csharp[DataWorks SqlUserDefinedTypeAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlUserDefinedTypeAttribute Example/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlUserDefinedTypeAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlUserDefinedTypeAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlUserDefinedTypeAttribute (Microsoft.SqlServer.Server.Format format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.SqlServer.Server.Format format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.#ctor(Microsoft.SqlServer.Server.Format)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="format" Type="Microsoft.SqlServer.Server.Format" />
+      </Parameters>
+      <Docs>
+        <param name="format">Eines der <see cref="T:Microsoft.SqlServer.Server.Format" /> Werte, der das Serialisierungsformat des Typs darstellt.</param>
+        <summary>Ein erforderliches Attribut für einen benutzerdefinierten Typ (UDT), verwendet, um sicherzustellen, dass der angegebene Typ ein UDT ist und das Speicherformat des UDTS anzugeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das folgende Beispiel gibt an, dass die `Format` des benutzerdefinierten Typs ist `SerializedDataWithMetadata` und `MaxByteSize` beträgt 8000 Bytes.  
+  
+   
+  
+## Examples  
+ [!code-csharp[VbRaddataSQLObjects#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSQLObjects/CS/Type1.cs#12)]
+ [!code-vb[VbRaddataSQLObjects#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSQLObjects/VB/Type1.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Format">
+      <MemberSignature Language="C#" Value="public Microsoft.SqlServer.Server.Format Format { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.SqlServer.Server.Format Format" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.Format" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.SqlServer.Server.Format</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Serialisierungsformat als eine <see cref="T:Microsoft.SqlServer.Server.Format" />.</summary>
+        <value>Ein <see cref="T:Microsoft.SqlServer.Server.Format" /> Wert, der das Serialisierungsformat darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsByteOrdered">
+      <MemberSignature Language="C#" Value="public bool IsByteOrdered { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsByteOrdered" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.IsByteOrdered" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob der benutzerdefinierte Typ Byte sortiert ist.</summary>
+        <value>
+          <see langword="true" />Wenn der benutzerdefinierte Typ Byte sortiert ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Festlegung auf `true`die <xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.IsByteOrdered%2A> Eigenschaft wirksam wird sichergestellt, dass die serialisierten Binärdaten für eine semantische Sortierung der Informationen verwendet werden können. Daher kann jede Instanz eines UDT-Objekts mit Bytereihenfolge nur eine einzige serialisierte Darstellung haben. Wenn eine Vergleichsoperation für die serialisierten Bytes in SQL Server ausgeführt wird, sollte ihre Ergebnisse identisch sein, als ob die gleiche Vergleichsoperation in verwaltetem Code stattgefunden hat...  
+  
+ Die folgenden Funktionen werden unterstützt. wenn <xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.IsByteOrdered%2A> festgelegt ist, um `true`:  
+  
+-   Die Fähigkeit zum Erstellen von Indizes für Spalten dieses Typs.  
+  
+-   Die Fähigkeit, Primär-und Fremdschlüssel sowie CHECK und UNIQUE-Einschränkungen für Spalten dieses Typs zu erstellen.  
+  
+-   Die Fähigkeit, Transact-SQL ORDER BY, GROUP BY- und PARTITION BY-Klauseln können verwendet werden. In diesen Fällen wird die binäre Darstellung des Typs verwendet, um die Reihenfolge zu bestimmen.  
+  
+-   Die Fähigkeit, Vergleichsoperatoren in Transact-SQL-Anweisungen verwenden.  
+  
+-   Die Fähigkeit, berechnete Spalten dieses Typs beibehalten.  
+  
+ Beachten Sie, dass sowohl die `Native` und `UserDefined` Serialisierungsformate unterstützen die folgenden Vergleichsoperatoren beim <xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.IsByteOrdered%2A> festgelegt ist, um `true`:  
+  
+-   Gleich (=)  
+  
+-   Ist ungleich (!=)  
+  
+-   Größer als (>)  
+  
+-   Kleiner als (\<)  
+  
+-   Größer oder gleich (>=)  
+  
+-   Kleiner oder gleich (<=)  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFixedLength">
+      <MemberSignature Language="C#" Value="public bool IsFixedLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFixedLength" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.IsFixedLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob alle Instanzen dieses benutzerdefinierten Typs die gleiche Länge aufweisen.</summary>
+        <value>
+          <see langword="true" />Wenn alle Instanzen dieses Typs die gleiche Länge aufweisen; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn auf festgelegt `true`, alle Instanzen von UDTs, die auf diesen Typ der common Language Runtime (CLR) haben eine Länge in Bytes, die genau gleich <xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.MaxByteSize%2A>. Dieses Attribut ist nur für UDTs mit relevanten `UserDefined` Serialisierung <xref:Microsoft.SqlServer.Server.Format>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxByteSize">
+      <MemberSignature Language="C#" Value="public int MaxByteSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxByteSize" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.MaxByteSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die maximale Größe der Instanz, in Bytes.</summary>
+        <value>Ein <see cref="T:System.Int32" /> Wert, der die maximale Größe der Instanz darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen angeben, die <xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.MaxByteSize%2A> Eigenschaft mit dem `UserDefined` Serialisierung <xref:Microsoft.SqlServer.Server.Format>.  
+  
+ Beim Verbinden mit SQL Server 2005 oder früher, <xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.MaxByteSize%2A> muss zwischen 1 und 8000 sein.  
+  
+ Legen Sie bei der Verbindung mit SQL Server 2008 oder höher <xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.MaxByteSize%2A> zwischen 1 und 8000, für einen Typ, mit deren Instanzen immer 8.000 Bytes sind, oder weniger. Geben Sie für Typen, die größer als 8000 Instanzen ausgeführt werden können-1 an.  
+  
+ Bei einem UDT, der eine benutzerdefinierte Serialisierung festgelegt ist <xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.MaxByteSize%2A> bezieht sich auf die Gesamtgröße des UDTS in ihrem serialisierten Format als vom Benutzer definiert. Betrachten Sie einen UDT mit einer Eigenschaft eine Zeichenfolge von 10 Zeichen (<xref:System.Char>). Wenn der UDT mit serialisiert wird eine <xref:System.IO.BinaryWriter>, die Gesamtgröße der serialisierten Zeichenfolge ist 22 Bytes: 2 Bytes pro Unicode-UTF-16-Zeichen, die die maximale Anzahl von Zeichen, multipliziert, plus 2 Steuerelement Bytes Verarbeitungsaufwand entstehen aus beim Serialisieren eines binären Datenstroms. Also wenn bestimmt wird des Werts des <xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.MaxByteSize%2A>, muss die Gesamtgröße des serialisierten UDT berücksichtigt werden: die Größe der ins Binärformat serialisierten Daten plus der bei der Serialisierung anfallenden.  
+  
+ Diese Eigenschaft sollte nicht verwendet werden, mit `Native` Serialisierung <xref:Microsoft.SqlServer.Server.Format>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der SQL Server-Name des benutzerdefinierten Typs.</summary>
+        <value>Ein <see cref="T:System.String" /> Wert, der den SQL Server-Namen des benutzerdefinierten Typs darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.Name%2A> Eigenschaft wird nicht innerhalb von SQL Server verwendet, jedoch wird durch die Microsoft Visual Studio .NET Umgebung IDE (Integrated Development) verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationMethodName">
+      <MemberSignature Language="C#" Value="public string ValidationMethodName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ValidationMethodName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.ValidationMethodName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Name der Methode zum Überprüfen von Instanzen des benutzerdefinierten Typs verwendet werden soll.</summary>
+        <value>Ein <see cref="T:System.String" /> , die den Namen der Methode zum Überprüfen von Instanzen des benutzerdefinierten Typs verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Von diesem Attribut angegebene Methode überprüft Instanzen des UDTS, wenn der UDT aus einem Binärwert deserialisiert worden ist, die nicht vertrauenswürdig ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

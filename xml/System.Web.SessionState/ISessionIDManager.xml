@@ -1,0 +1,299 @@
+<Type Name="ISessionIDManager" FullName="System.Web.SessionState.ISessionIDManager">
+  <TypeSignature Language="C#" Value="public interface ISessionIDManager" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISessionIDManager" />
+  <TypeSignature Language="DocId" Value="T:System.Web.SessionState.ISessionIDManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert den Vertrag, den ein benutzerdefinierten Sitzungsstatus Bezeichner-Manager implementieren müssen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.SessionState.ISessionIDManager> Schnittstelle identifiziert die Methoden, die Sie implementieren müssen, um das Erstellen eines benutzerdefinierten Managers für Sitzungs-ID Werte. Ein <xref:System.Web.SessionState.ISessionIDManager> -Implementierung erstellt und überprüft die Sitzungs-ID Werte und verwaltet die eine Sitzungs-ID in der HTTP-Antwort-Speicher sowie den Abruf von einer Sitzungs-ID Wert, der HTTP-Anforderung. Aktivieren Sie die benutzerdefinierte Sitzungs-ID-Manager mithilfe der `sessionIDManagerType` Attribut von der [SessionState Element ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/bda6fb8c-0076-43e3-9ce2-8cf1f8bdaa7d) Konfigurationselement.  
+  
+ Wenn Ihre <xref:System.Web.SessionState.ISessionIDManager> Implementierung Sitzungsbezeichner unterstützen, müssen Sie zum Implementieren einer Lösung für das Senden und Abrufen von Sitzungs-IDs in der URL, z. B. einen ISAPI-Filter.  
+  
+ Wenn Sie nur benutzerdefinierte Sitzungsbezeichner Werte von ASP.NET-Sitzungsstatus zu verwendende angeben möchten, können Sie erstellen eine Klasse, erbt die <xref:System.Web.SessionState.SessionIDManager> Klasse, und überschreiben Sie nur die <xref:System.Web.SessionState.SessionIDManager.CreateSessionID%2A> und <xref:System.Web.SessionState.SessionIDManager.Validate%2A> Methoden durch eine eigene benutzerdefinierte Implementierung. Dies ermöglicht es Ihnen, Ihre eigenen Werte Sitzungsbezeichner einzugeben, während der vertrauenden Seite auf der Basis <xref:System.Web.SessionState.SessionIDManager> Klasse, um Werte für die HTTP-Antwort speichern und Abrufen von Werten aus der HTTP-Anforderung. Für ein Beispiel zum Überschreiben der <xref:System.Web.SessionState.SessionIDManager> -Klasse und die Implementierung dieser Methoden finden Sie im Beispiel für die <xref:System.Web.SessionState.SessionIDManager.CreateSessionID%2A> Methode der <xref:System.Web.SessionState.SessionIDManager> Klasse.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt eine Klasse, die eine Cookie-basierte Sitzungs-ID-Manager.  
+  
+ [!code-csharp[System.Web.SessionState.ISessionIDModule#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SessionState.ISessionIDModule/CS/isessionidmodulesnippets.cs#1)]
+ [!code-vb[System.Web.SessionState.ISessionIDModule#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SessionState.ISessionIDModule/VB/isessionidmodulesnippets.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateSessionID">
+      <MemberSignature Language="C#" Value="public string CreateSessionID (System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string CreateSessionID(class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.ISessionIDManager.CreateSessionID(System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Die aktuelle <see cref="T:System.Web.HttpContext" /> Objekt, das Verweisen auf Serverobjekte verwendet wird, um HTTP-Anforderungen zu verarbeiten (z. B. die <see cref="P:System.Web.HttpContext.Request" /> und <see cref="P:System.Web.HttpContext.Response" /> Eigenschaften).</param>
+        <summary>Erstellt einen eindeutige Sitzungsbezeichner.</summary>
+        <returns>Eine eindeutige Sitzungsbezeichner.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.SessionState.ISessionIDManager.CreateSessionID%2A> Methode wird verwendet, um eine eindeutige Sitzungs-ID zu generieren, die die <xref:System.Web.SessionState.SessionStateModule> Objekt verwendet, um eine neue Sitzung zu identifizieren. Der Rückgabewert von <xref:System.Web.SessionState.ISessionIDManager.CreateSessionID%2A> muss eindeutig sein und muss gültige Zeichen enthalten, die in einer HTTP-Antwort und Anforderung gespeichert werden können. Wenn es möglich ist, dass der Rückgabewert von Ihrer <xref:System.Web.SessionState.ISessionIDManager.CreateSessionID%2A> Implementierung enthält Zeichen, die nicht in einer HTTP-Antwort oder die Anforderung gültig sind, sollten Sie mit der <xref:System.Web.HttpUtility.UrlEncode%2A> -Methode zum Codieren des Sitzungs-ID Werts in der <xref:System.Web.SessionState.ISessionIDManager.SaveSessionID%2A> Methode Implementierung und die <xref:System.Web.HttpUtility.UrlDecode%2A> Methode zum Decodieren des Sitzungs-ID Werts in Ihrem <xref:System.Web.SessionState.ISessionIDManager.GetSessionID%2A> methodenimplementierung.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel implementiert die <xref:System.Web.SessionState.ISessionIDManager.CreateSessionID%2A> Methode. Die Methode erstellt ein neues <xref:System.Guid> als eine Sitzungs-ID verwendet werden soll.  
+  
+ [!code-csharp[System.Web.SessionState.ISessionIDModule#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SessionState.ISessionIDModule/CS/isessionidmodulesnippets.cs#3)]
+ [!code-vb[System.Web.SessionState.ISessionIDModule#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SessionState.ISessionIDModule/VB/isessionidmodulesnippets.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSessionID">
+      <MemberSignature Language="C#" Value="public string GetSessionID (System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetSessionID(class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.ISessionIDManager.GetSessionID(System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Die aktuelle <see cref="T:System.Web.HttpContext" /> Objekt, das Verweisen auf Serverobjekte verwendet wird, um HTTP-Anforderungen zu verarbeiten (z. B. die <see cref="P:System.Web.HttpContext.Request" /> und <see cref="P:System.Web.HttpContext.Response" /> Eigenschaften).</param>
+        <summary>Ruft die Sitzungs-ID aus dem Kontext der aktuellen HTTP-Anforderung ab.</summary>
+        <returns>Die aktuelle Sitzungs-ID mit der HTTP-Anforderung gesendet wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.SessionState.ISessionIDManager.GetSessionID%2A> Methode wird aufgerufen, indem Sie die <xref:System.Web.SessionState.SessionStateModule> während der <xref:System.Web.HttpApplication.AcquireRequestState?displayProperty=nameWithType> und <xref:System.Web.HttpApplication.EndRequest?displayProperty=nameWithType> Ereignisse. Wenn Sie eine gültige Sitzungs-ID aus der HTTP-Anforderung abgerufen werden können, zurück `null`. Wenn die <xref:System.Web.SessionState.SessionStateModule> empfängt `null` aus der <xref:System.Web.SessionState.ISessionIDManager.GetSessionID%2A> -Methode, er ruft die <xref:System.Web.SessionState.ISessionIDManager.CreateSessionID%2A> Methode, um eine neue Sitzungs-ID für eine neue Sitzung zu erhalten.  
+  
+ Wenn es möglich ist, dass der Rückgabewert von Ihrer <xref:System.Web.SessionState.ISessionIDManager.CreateSessionID%2A> Implementierung enthält Zeichen, die nicht in einer HTTP-Antwort oder die Anforderung gültig sind, sollten Sie mit der <xref:System.Web.HttpUtility.UrlEncode%2A> -Methode zum Codieren des Sitzungs-ID Werts in der <xref:System.Web.SessionState.ISessionIDManager.SaveSessionID%2A> Methode Implementierung und die <xref:System.Web.HttpUtility.UrlDecode%2A> Methode zum Decodieren des Sitzungs-ID Werts in Ihrem <xref:System.Web.SessionState.ISessionIDManager.GetSessionID%2A> methodenimplementierung.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt eine teilweise implementierte <xref:System.Web.SessionState.ISessionIDManager.GetSessionID%2A> Methode. Wenn Ihre benutzerdefinierte Sitzungs-ID-Manager Sitzungsbezeichner unterstützt, müssen Sie zum Implementieren einer Lösung für das Senden und Abrufen von Sitzungs-IDs in der URL, z. B. einen ISAPI-Filter.  
+  
+ [!code-csharp[System.Web.SessionState.ISessionIDModule#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SessionState.ISessionIDModule/CS/isessionidmodulesnippets.cs#2)]
+ [!code-vb[System.Web.SessionState.ISessionIDModule#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SessionState.ISessionIDModule/VB/isessionidmodulesnippets.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public void Initialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.ISessionIDManager.Initialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert die <see cref="T:System.Web.SessionState.SessionIDManager" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.SessionState.ISessionIDManager.Initialize%2A> Methode zum Initialisieren der <xref:System.Web.SessionState.ISessionIDManager> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeRequest">
+      <MemberSignature Language="C#" Value="public bool InitializeRequest (System.Web.HttpContext context, bool suppressAutoDetectRedirect, out bool supportSessionIDReissue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool InitializeRequest(class System.Web.HttpContext context, bool suppressAutoDetectRedirect, [out] bool&amp; supportSessionIDReissue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.ISessionIDManager.InitializeRequest(System.Web.HttpContext,System.Boolean,System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+        <Parameter Name="suppressAutoDetectRedirect" Type="System.Boolean" />
+        <Parameter Name="supportSessionIDReissue" Type="System.Boolean&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="context">Die <see cref="T:System.Web.HttpContext" /> -Objekt, das Informationen zur aktuellen Anforderung enthält.</param>
+        <param name="suppressAutoDetectRedirect">
+          <see langword="true" />Wenn die Sitzungs-ID-Manager umleiten soll, um zu bestimmen, Unterstützung von Cookies; andernfalls <see langword="false" /> automatische Umleitung, um zu bestimmen, Unterstützung von Cookies zu unterdrücken.</param>
+        <param name="supportSessionIDReissue">Enthält nach Rückkehr dieser Methode einen booleschen Wert ab, der angibt, ob die <see cref="T:System.Web.SessionState.ISessionIDManager" /> Objekt ausstellenden neue Sitzungs-IDs unterstützt, wenn die ursprüngliche ID veraltet ist. Dieser Parameter wird nicht initialisiert übergeben.  
+  
+ Wiederverwendung von Sitzungs-ID ist geeignet, wenn der Sitzungsstatus ID in einer URL codiert wird und es besteht die Möglichkeit, für die URL, freigegeben oder per e-Mail gesendet werden soll.  
+  
+ Wenn eine benutzerdefinierte Implementierung des Sitzungsstatus Partitionen Cookies vom virtuellen Pfad, sollten auch Sitzungszustand unterstützt werden.</param>
+        <summary>Führt Initialisierung anforderungsspezifische der <see cref="T:System.Web.SessionState.SessionIDManager" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />um anzugeben, dass die Initialisierung eine Umleitung ausgeführt. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.SessionState.ISessionIDManager.InitializeRequest%2A> Methode wird aufgerufen, für jede Anforderung behandelt, indem die <xref:System.Web.SessionState.ISessionIDManager> Objekt. Verwenden der <xref:System.Web.SessionState.ISessionIDManager.InitializeRequest%2A> Methode zum Initialisieren der Daten pro Anforderung für die <xref:System.Web.SessionState.SessionIDManager> Objekt.  
+  
+ Wenn die `suppressAutoDetectRedirect` Parameter ist `true`die <xref:System.Web.SessionState.ISessionIDManager> Objekt sollte nicht die Umleitung verwenden, um zu bestimmen, ob der Browser Cookies unterstützt.  
+  
+ Die `supportSessionIDReissue` Parameter zurückgegeben werden soll `false` Wenn Cookies für die Sitzungsidentifikation; verwendet werden, andernfalls zurückgeben `true` Wenn Ihre <xref:System.Web.SessionState.ISessionIDManager> Implementierung unterstützt erneut ausstellenden Sitzungs-IDs.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveSessionID">
+      <MemberSignature Language="C#" Value="public void RemoveSessionID (System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveSessionID(class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.ISessionIDManager.RemoveSessionID(System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Die aktuelle <see cref="T:System.Web.HttpContext" /> Objekt, das Verweisen auf Serverobjekte verwendet wird, um HTTP-Anforderungen zu verarbeiten (z. B. die <see cref="P:System.Web.HttpContext.Request" /> und <see cref="P:System.Web.HttpContext.Response" /> Eigenschaften).</param>
+        <summary>Löscht die Sitzungs-ID an, aus dem Cookie oder aus der URL.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.SessionState.SessionStateModule> Aufrufe der <xref:System.Web.SessionState.SessionIDManager.RemoveSessionID%2A> Methode während der <xref:System.Web.HttpApplication.ReleaseRequestState?displayProperty=nameWithType> entfernt die Sitzungs-ID aus der <xref:System.Web.HttpResponse.Cookies%2A?displayProperty=nameWithType> Auflistung, wenn eine neue Sitzung erstellt wurde, aber nicht verwendet wurde.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel implementiert die <xref:System.Web.SessionState.ISessionIDManager.RemoveSessionID%2A> Methode.  
+  
+ [!code-csharp[System.Web.SessionState.ISessionIDModule#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SessionState.ISessionIDModule/CS/isessionidmodulesnippets.cs#4)]
+ [!code-vb[System.Web.SessionState.ISessionIDModule#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SessionState.ISessionIDModule/VB/isessionidmodulesnippets.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveSessionID">
+      <MemberSignature Language="C#" Value="public void SaveSessionID (System.Web.HttpContext context, string id, out bool redirected, out bool cookieAdded);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SaveSessionID(class System.Web.HttpContext context, string id, [out] bool&amp; redirected, [out] bool&amp; cookieAdded) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.ISessionIDManager.SaveSessionID(System.Web.HttpContext,System.String,System.Boolean@,System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="redirected" Type="System.Boolean&amp;" RefType="out" />
+        <Parameter Name="cookieAdded" Type="System.Boolean&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="context">Die aktuelle <see cref="T:System.Web.HttpContext" /> Objekt, das Verweisen auf Serverobjekte verwendet wird, um HTTP-Anforderungen zu verarbeiten (z. B. die <see cref="P:System.Web.HttpContext.Request" /> und <see cref="P:System.Web.HttpContext.Response" /> Eigenschaften).</param>
+        <param name="id">Die Sitzungs-ID.</param>
+        <param name="redirected">Enthält nach Rückkehr dieser Methode einen booleschen Wert, der <see langword="true" /> , wenn die Antwort umgeleitet mit der aktuellen URL mit der Sitzungs-ID, die zur URL hinzugefügt wird; andernfalls, <see langword="false" />.</param>
+        <param name="cookieAdded">Enthält nach Rückkehr dieser Methode einen booleschen Wert, der <see langword="true" /> Wenn ein Cookie an die HTTP-Antwort hinzugefügt wurde, andernfalls wurde <see langword="false" />.</param>
+        <summary>Speichert einen neu erstellte Sitzungsbezeichner für die HTTP-Antwort.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.SessionState.ISessionIDManager.SaveSessionID%2A> Methode wird aufgerufen, indem Sie die <xref:System.Web.SessionState.SessionStateModule> -Objekt während der <xref:System.Web.HttpApplication.AcquireRequestState?displayProperty=nameWithType> Ereignis. Die <xref:System.Web.SessionState.ISessionIDManager.SaveSessionID%2A> Methode speichert die Sitzungs-ID in der URL (wenn der Sitzungszustand verwendet wird) oder in einem nicht ablaufenden Sitzungscookie.  
+  
+ Wenn es möglich ist, dass der Rückgabewert aus Ihrer <xref:System.Web.SessionState.ISessionIDManager.CreateSessionID%2A> Implementierung enthält Zeichen, die nicht in einer HTTP-Antwort oder die Anforderung gültig sind, sollten Sie mit der <xref:System.Web.HttpUtility.UrlEncode%2A> -Methode zum Codieren des Sitzungs-ID Werts in Ihrer <xref:System.Web.SessionState.ISessionIDManager.SaveSessionID%2A> Methode Implementierung und die <xref:System.Web.HttpUtility.UrlDecode%2A> Methode zum Decodieren des Sitzungs-ID Werts in Ihrem <xref:System.Web.SessionState.ISessionIDManager.GetSessionID%2A> methodenimplementierung.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt eine teilweise implementierte <xref:System.Web.SessionState.ISessionIDManager.GetSessionID%2A> Methode. Wenn Ihre benutzerdefinierte Sitzungs-ID-Manager Sitzungsbezeichner unterstützt, müssen Sie zum Implementieren einer Lösung für das Senden und Abrufen von Sitzungs-IDs in der URL, z. B. einen ISAPI-Filter.  
+  
+ [!code-csharp[System.Web.SessionState.ISessionIDModule#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SessionState.ISessionIDModule/CS/isessionidmodulesnippets.cs#5)]
+ [!code-vb[System.Web.SessionState.ISessionIDModule#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SessionState.ISessionIDModule/VB/isessionidmodulesnippets.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public bool Validate (string id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Validate(string id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.ISessionIDManager.Validate(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="id">Die Sitzungs-ID, um zu überprüfen.</param>
+        <summary>Bestätigt, dass die angegebene Sitzungs-ID gültig ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die Sitzungs-ID gültig ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.SessionState.ISessionIDManager.Validate%2A> Methode überprüft, ob das angegebene `id` eine gültige Sitzungs-ID ist.  
+  
+ Ihre <xref:System.Web.SessionState.ISessionIDManager> Implementierung aufrufen sollte die <xref:System.Web.SessionState.ISessionIDManager.Validate%2A> Methode aus der <xref:System.Web.SessionState.ISessionIDManager.GetSessionID%2A> Methode beim Abrufen von eine Sitzungs-ID aus einer HTTP-Anforderung, um sicherzustellen, dass die angegebene Sitzungs-ID korrekt formatiert ist.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel implementiert die <xref:System.Web.SessionState.ISessionIDManager.Validate%2A> Methode und wird sichergestellt, dass der Sitzungs-ID Wert ist ein gültiger <xref:System.Guid>.  
+  
+ [!code-csharp[System.Web.SessionState.ISessionIDModule#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SessionState.ISessionIDModule/CS/isessionidmodulesnippets.cs#6)]
+ [!code-vb[System.Web.SessionState.ISessionIDModule#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SessionState.ISessionIDModule/VB/isessionidmodulesnippets.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

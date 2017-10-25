@@ -1,0 +1,129 @@
+<Type Name="IEnumerable&lt;T&gt;" FullName="System.Collections.Generic.IEnumerable&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public interface IEnumerable&lt;out T&gt; : System.Collections.IEnumerable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IEnumerable`1&lt;+ T&gt; implements class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Generic.IEnumerable`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T">
+      <Constraints>
+        <ParameterAttribute>Covariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="T">Der Typ der aufzulistenden Objekte.</typeparam>
+    <summary>Macht den Enumerator verfügbar, der eine einfache Iteration durch eine Auflistung eines angegebenen Typs unterstützt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die .NET Framework-Quellcodes für diesen Typ finden Sie unter der [Verweisquelle](http://referencesource.microsoft.com/#mscorlib/system/collections/generic/ienumerable.cs#3acf01620172c7f0). Sie können den Quellcode online Durchsuchen, Referenz für die Offlineanzeige herunterladen und schrittweise durchlaufen (inklusive Patches und Updates) während des Debuggens; finden Sie unter [Anweisungen](http://referencesource.microsoft.com/).  
+  
+ <xref:System.Collections.Generic.IEnumerable%601>ist die Basisschnittstelle für Sammlungen in der <xref:System.Collections.Generic> Namespace z. B. <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.Dictionary%602>, und <xref:System.Collections.Generic.Stack%601> und andere generischen Auflistungen wie z. B. <xref:System.Collections.ObjectModel.ObservableCollection%601> und <xref:System.Collections.Concurrent.ConcurrentStack%601>. Auflistungen bereit, implementieren <xref:System.Collections.Generic.IEnumerable%601> aufgelistet werden kann, mithilfe der `foreach` Anweisung. Die nicht generische Version dieser Schnittstelle finden Sie <xref:System.Collections.IEnumerable?displayProperty=nameWithType>.  
+  
+ Die nicht generische Version dieser Schnittstelle finden Sie <xref:System.Collections.IEnumerable?displayProperty=nameWithType>.  
+  
+ <xref:System.Collections.Generic.IEnumerable%601>enthält eine einzelne Methode, die Sie implementieren müssen, wenn Sie diese Schnittstelle implementieren. <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A>, welche gibt ein <xref:System.Collections.Generic.IEnumerator%601> Objekt. Das zurückgegebene <xref:System.Collections.Generic.IEnumerator%601> bietet die Möglichkeit zum Durchlaufen der Auflistung, verfügbar machen, eine <xref:System.Collections.Generic.IEnumerator%601.Current%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Implementieren der <xref:System.Collections.Generic.IEnumerable%601> -Schnittstelle und, dass diese Implementierung zu verwenden, um eine LINQ-Abfrage zu erstellen. Bei der Implementierung <xref:System.Collections.Generic.IEnumerable%601>, müssen Sie auch implementieren <xref:System.Collections.Generic.IEnumerator%601> oder nur für c#, können Sie die [yield](~/docs/csharp/language-reference/keywords/yield.md) Schlüsselwort. Implementieren von <xref:System.Collections.Generic.IEnumerator%601> erfordert außerdem <xref:System.IDisposable> implementiert werden, die in diesem Beispiel angezeigt werden.  
+  
+ [!code-csharp[System.Collections.Generic.IEnumerableEx#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.generic.ienumerableex/cs/program.cs#1)]
+ [!code-vb[System.Collections.Generic.IEnumerableEx#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.ienumerableex/vb/module1.vb#1)]  
+  
+ Eine andere C#-Beispiel für die Implementierung der <xref:System.Collections.Generic.IEnumerable%601> Schnittstelle, finden Sie unter der [Generikabeispiel](http://code.msdn.microsoft.com/Generics-Sample-C-9b41a192/sourcecode?fileId=46476&pathId=1364935593). Dieses Beispiel verwendet die `yield` Schlüsselwort, anstatt zu implementieren <xref:System.Collections.Generic.IEnumerator%601>.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>
+        <see cref="T:System.Collections.Generic.IEnumerable`1" />ist für die Parität mit nicht-generische Auflistungen enthalten. Implementieren von <see cref="T:System.Collections.Generic.IEnumerable`1" /> kann eine generische Auflistung, an eine Methode übergeben werden, erwartet ein <see cref="T:System.Collections.IEnumerable" /> Objekt.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerator&lt;out T&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;!T&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.IEnumerable`1.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der die Auflistung durchläuft.</summary>
+        <returns>Ein Enumerator, der zum Durchlaufen der Auflistung verwendet werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das zurückgegebene <xref:System.Collections.Generic.IEnumerator%601> bietet die Möglichkeit zum Durchlaufen der Auflistung, verfügbar machen, eine <xref:System.Collections.Generic.IEnumerator%601.Current%2A> Eigenschaft. Mit Enumeratoren können die Daten in einer Auflistung gelesen, jedoch nicht zum Ändern der Auflistung.  
+  
+ Zu Beginn wird der Enumerator vor das erste Element in der Auflistung positioniert. An dieser Position ist <xref:System.Collections.Generic.IEnumerator%601.Current%2A> nicht definiert. Sie müssen daher rufen die <xref:System.Collections.IEnumerator.MoveNext%2A> Methode, um den Enumerator auf das erste Element der Auflistung vor dem Lesen des Werts von <xref:System.Collections.Generic.IEnumerator%601.Current%2A>.  
+  
+ <xref:System.Collections.Generic.IEnumerator%601.Current%2A>Gibt das gleiche Objekt bis <xref:System.Collections.IEnumerator.MoveNext%2A> erneut aufgerufen, als <xref:System.Collections.IEnumerator.MoveNext%2A> legt <xref:System.Collections.Generic.IEnumerator%601.Current%2A> auf das nächste Element.  
+  
+ Wenn <xref:System.Collections.IEnumerator.MoveNext%2A> übergibt am Ende der Auflistung der Enumerator hinter dem letzten Element in der Auflistung positioniert ist und <xref:System.Collections.IEnumerator.MoveNext%2A> gibt `false`. Wenn der Enumerator ist an dieser Position ist nachfolgende Aufrufe <xref:System.Collections.IEnumerator.MoveNext%2A> auch zurückgeben `false`. Wenn der letzte Aufruf <xref:System.Collections.IEnumerator.MoveNext%2A> zurückgegebene `false`, <xref:System.Collections.Generic.IEnumerator%601.Current%2A> ist nicht definiert. Sie können <xref:System.Collections.Generic.IEnumerator%601.Current%2A> nicht erneut auf das erste Element der Auflistung festlegen, sondern müssen eine neue Enumeratorinstanz erstellen.  
+  
+ Ein Enumerator hat keinen exklusiven Zugriff auf die Auflistung so ein Enumerator gültig, bleibt solange die Auflistung unverändert ist. Wenn Änderungen an der Auflistung vorgenommen werden, z. B. hinzufügen, bearbeiten oder Löschen von Elementen, wird der Enumerator ungültig, und erhalten Sie möglicherweise unerwartete Ergebnisse. Darüber hinaus ist die enumerieren einer Auflistung keine threadsichere Prozedur. Um Threadsicherheit zu gewährleisten, sollten Sie die Auflistung während der Enumerator sperren oder implementieren Sie die Synchronisierung in der Auflistung.  
+  
+ Standardimplementierungen der Auflistungen in der <xref:System.Collections.Generic?displayProperty=nameWithType> Namespace werden nicht synchronisiert.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Implementieren der <xref:System.Collections.Generic.IEnumerable%601> Schnittstelle, und diese Implementierung verwendet, um eine LINQ-Abfrage zu erstellen. Bei der Implementierung <xref:System.Collections.Generic.IEnumerable%601>, müssen Sie auch implementieren <xref:System.Collections.Generic.IEnumerator%601> oder nur für c#, können Sie die [yield](~/docs/csharp/language-reference/keywords/yield.md) Schlüsselwort. Implementieren von <xref:System.Collections.Generic.IEnumerator%601> erfordert außerdem <xref:System.IDisposable> implementiert werden, die in diesem Beispiel angezeigt werden.  
+  
+ [!code-csharp[System.Collections.Generic.IEnumerableEx#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.generic.ienumerableex/cs/program.cs#1)]
+ [!code-vb[System.Collections.Generic.IEnumerableEx#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.ienumerableex/vb/module1.vb#1)]  
+  
+ Eine andere C#-Beispiel für die Implementierung der <xref:System.Collections.Generic.IEnumerable%601> Schnittstelle, finden Sie unter der [Generikabeispiel](http://code.msdn.microsoft.com/Generics-Sample-C-9b41a192/sourcecode?fileId=46476&pathId=1364935593). Dieses Beispiel verwendet, der die `yield` Schlüsselwort, anstatt zu implementieren <xref:System.Collections.Generic.IEnumerator%601>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

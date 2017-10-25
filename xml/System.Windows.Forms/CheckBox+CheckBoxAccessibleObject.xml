@@ -1,0 +1,139 @@
+<Type Name="CheckBox+CheckBoxAccessibleObject" FullName="System.Windows.Forms.CheckBox+CheckBoxAccessibleObject">
+  <TypeSignature Language="C#" Value="public class CheckBox.CheckBoxAccessibleObject : System.Windows.Forms.ButtonBase.ButtonBaseAccessibleObject" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit CheckBox/CheckBoxAccessibleObject extends System.Windows.Forms.ButtonBase/ButtonBaseAccessibleObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.CheckBox.CheckBoxAccessibleObject" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.ButtonBase+ButtonBaseAccessibleObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Clientprogrammen für Barrierefreiheit Informationen über das <see cref="T:System.Windows.Forms.CheckBox" />-Steuerelement bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Windows Forms verfügt über integrierte Accessibility-Unterstützung und stellt Informationen zu Ihrer Anwendung, die Arbeit mit Clientanwendungen für Barrierefreiheit ermöglicht. Beispiele für die Clientanwendungen für Barrierefreiheit sind Bildschirm Dienstprogramme Enlarger "und" Prüfer, voice-Hilfsprogramme, auf dem Bildschirm Tastaturen, alternative Eingabegeräte und Tastatur Erweiterung Hilfsprogramme. Die <xref:System.Windows.Forms.CheckBox.CheckBoxAccessibleObject> Klasse erbt von der <xref:System.Windows.Forms.ButtonBase.ButtonBaseAccessibleObject> Klasse von Informationen über die <xref:System.Windows.Forms.CheckBox> Steuerelement Clientanwendungen für Barrierefreiheit.  
+  
+ Instanzen sind vorhanden, wenn Sie, geben Sie benutzerdefinierte Informationen wie Name oder Beschreibung Clientanwendungen für Barrierefreiheit des Steuerelements möchten. Es gibt zwei Möglichkeiten, diese Informationen bereitstellen. Festlegen, um begrenzte Informationen zu Eingabehilfen für vorhandene Steuerelemente zu ermöglichen, welches Steuerelement <xref:System.Windows.Forms.Control.AccessibleName%2A>, <xref:System.Windows.Forms.Control.AccessibleDescription%2A>, <xref:System.Windows.Forms.Control.AccessibleDefaultActionDescription%2A>, und <xref:System.Windows.Forms.Control.AccessibleRole%2A> Eigenschaftswerte, die Clientanwendungen für Barrierefreiheit gemeldet werden.  
+  
+ Wenn Sie weitere Informationen zur Barrierefreiheit in das Steuerelement enthalten benötigen, können Sie eine eigene Klasse, die abgeleitet ist Schreiben der <xref:System.Windows.Forms.AccessibleObject> oder <xref:System.Windows.Forms.Control.ControlAccessibleObject> Klassen. Angenommen, Sie schreiben ein eigene Steuerelement, das die Standardsteuerelemente nicht abgeleitet ist oder Sie Vorgänge wie das Treffertests innerhalb Ihrer Kontrolle benötigen, erstellen Sie eine <xref:System.Windows.Forms.Control.ControlAccessibleObject> für das Steuerelement durch Aufrufen der <xref:System.Windows.Forms.Control.CreateAccessibilityInstance%2A> Methode.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CheckBoxAccessibleObject (System.Windows.Forms.Control owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.Control owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CheckBox.CheckBoxAccessibleObject.#ctor(System.Windows.Forms.Control)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Der <see cref="T:System.Windows.Forms.CheckBox" />, der die <see cref="T:System.Windows.Forms.CheckBox.CheckBoxAccessibleObject" /> besitzt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.CheckBox.CheckBoxAccessibleObject" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultAction">
+      <MemberSignature Language="C#" Value="public override string DefaultAction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultAction" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CheckBox.CheckBoxAccessibleObject.DefaultAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge, die die Standardaktion des beschreibt, die <see cref="T:System.Windows.Forms.CheckBox" /> Steuerelement.</summary>
+        <value>Die Beschreibung der Standardaktion des der <see cref="T:System.Windows.Forms.CheckBox" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein aktiviertes Kontrollkästchen verfügt über eine Standardaktion "Deaktivieren" und den Wert "Aktiviert". Ein deaktiviertes Kontrollkästchen verfügt über eine Standardaktion "Check" und den Wert "Deaktiviert".  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DoDefaultAction">
+      <MemberSignature Language="C#" Value="public override void DoDefaultAction ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void DoDefaultAction() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CheckBox.CheckBoxAccessibleObject.DoDefaultAction" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt die Standardaktion, die dieses zugreifbaren Objekts zugeordnet.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den unmittelbaren Aufrufer zum Aufrufen von nicht verwalteten Codes. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Role">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AccessibleRole Role { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.AccessibleRole Role" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CheckBox.CheckBoxAccessibleObject.Role" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleRole</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Rolle dieses zugreifbaren Objekts ab.</summary>
+        <value>Der <see cref="F:System.Windows.Forms.AccessibleRole.CheckButton" />-Wert.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AccessibleStates State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.AccessibleStates State" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CheckBox.CheckBoxAccessibleObject.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Status der <see cref="T:System.Windows.Forms.CheckBox" /> Steuerelement.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.AccessibleStates" />-Werte. Wenn die <see cref="P:System.Windows.Forms.CheckBox.CheckState" /> -Eigenschaftensatz auf <see cref="F:System.Windows.Forms.CheckState.Checked" />, gibt diese Eigenschaft <see cref="F:System.Windows.Forms.AccessibleStates.Checked" />. Wenn <see cref="P:System.Windows.Forms.CheckBox.CheckState" /> festgelegt ist, um <see cref="F:System.Windows.Forms.CheckState.Indeterminate" />, gibt diese Eigenschaft <see cref="F:System.Windows.Forms.AccessibleStates.Indeterminate" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

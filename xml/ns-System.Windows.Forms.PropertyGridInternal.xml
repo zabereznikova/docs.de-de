@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Forms.PropertyGridInternal">
+  <Docs>
+    <summary>Die <see langword="PropertyGridInternal" /> bietet der Namespace interne Unterstützung für die <see langword="PropertyGrid" /> Steuerelement. Die Klassen in diesem Namespace unterstützt die .NET Framework-Infrastruktur und nicht direkt aus Ihrem Code verwendet werden sollen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

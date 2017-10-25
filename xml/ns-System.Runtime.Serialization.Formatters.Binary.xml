@@ -1,0 +1,6 @@
+<Namespace Name="System.Runtime.Serialization.Formatters.Binary">
+  <Docs>
+    <summary>Die <see cref="N:System.Runtime.Serialization.Formatters.Binary" /> -Namespace enthält die <see cref="T:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter" /> -Klasse, die zum Serialisieren und Deserialisieren von Objekten im binären Format verwendet werden kann.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

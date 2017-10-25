@@ -1,0 +1,194 @@
+<Type Name="HostExecutionContextManager" FullName="System.Threading.HostExecutionContextManager">
+  <TypeSignature Language="C#" Value="public class HostExecutionContextManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HostExecutionContextManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.HostExecutionContextManager" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Threading</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Funktionalität, die einen common Language Runtime-Host im Datenfluss oder Migration des Ausführungskontexts teilnehmen kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die aktuelle <xref:System.AppDomainManager> enthält einen Verweis auf eine <xref:System.Threading.HostExecutionContextManager> in seine <xref:System.AppDomainManager.HostExecutionContextManager%2A> -Eigenschaft, und klicken Sie dann auf die common Language Runtime Ruft den Manager jedes Mal einen Aufruf von der <xref:System.Threading.ExecutionContext.Run%2A?displayProperty=nameWithType> Methode auftritt, um den Host zur Teilnahme an des Fluss der Ausführung zu ermöglichen. Kontext.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HostExecutionContextManager ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.HostExecutionContextManager.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Threading.HostExecutionContextManager" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Capture">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.HostExecutionContext Capture ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.HostExecutionContext Capture() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.HostExecutionContextManager.Capture" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.HostExecutionContext</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erfasst den Hostkontext für die Ausführung des aktuellen Threads an.</summary>
+        <returns>Ein <see cref="T:System.Threading.HostExecutionContext" /> Objekt, das den Hostkontext für die Ausführung des aktuellen Threads darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Threading.HostExecutionContext> erstellt, wobei ein SafeHandle, enthält die `IUnknown` Zeiger für den Host, der den aktuellen Thread ausführt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Revert">
+      <MemberSignature Language="C#" Value="public virtual void Revert (object previousState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Revert(object previousState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.HostExecutionContextManager.Revert(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="previousState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="previousState">Der vorherige kontextstatus wiederhergestellt.</param>
+        <summary>Den Ausführungskontext für den Host in den früheren Zustand wiederhergestellt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `previousState`zurückgegeben werden muss das Objekt von der <xref:System.Threading.HostExecutionContextManager.SetHostExecutionContext%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="previousState" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="previousState" />für den aktuellen Thread wurde nicht erstellt werden.  
+  
+ - oder -   
+  
+ <paramref name="previousState" />ist nicht der letzte Zustand für die <see cref="T:System.Threading.HostExecutionContext" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetHostExecutionContext">
+      <MemberSignature Language="C#" Value="public virtual object SetHostExecutionContext (System.Threading.HostExecutionContext hostExecutionContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object SetHostExecutionContext(class System.Threading.HostExecutionContext hostExecutionContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.HostExecutionContextManager.SetHostExecutionContext(System.Threading.HostExecutionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hostExecutionContext" Type="System.Threading.HostExecutionContext" />
+      </Parameters>
+      <Docs>
+        <param name="hostExecutionContext">Die festzulegende <see cref="T:System.Threading.HostExecutionContext" />.</param>
+        <summary>Legt den aktuellen Ausführungskontext für den Host auf den Ausführungskontext für den angegebenen Host fest.</summary>
+        <returns>Ein Objekt für die Wiederherstellung der <see cref="T:System.Threading.HostExecutionContext" /> den ursprünglichen Zustand.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Threading.HostExecutionContextManager.SetHostExecutionContext%2A> Methode wird der Host-Ausführungskontext für den aktuellen <xref:System.Threading.HostExecutionContext>.  Ein <xref:System.Threading.HostExecutionContext> , wurde als Argument an einen anderen verwendet <xref:System.Threading.HostExecutionContextManager.SetHostExecutionContext%2A> Methodenaufruf kann nicht als Parameter für diese Methode übergeben werden. Verwenden Sie stattdessen die <xref:System.Threading.HostExecutionContext.CreateCopy%2A?displayProperty=nameWithType> Methode, um eine Kopie erstellen eine <xref:System.Threading.HostExecutionContext> Objekt, und klicken Sie dann die Kopie zum Festlegen des Hostausführungskontexts verwenden.  
+  
+ Rufen Sie die <xref:System.Threading.HostExecutionContextManager.Revert%2A> Methode mithilfe der von dieser Methode zurückgegebenen Objekts zum Wiederherstellen der <xref:System.Threading.HostExecutionContext> den ursprünglichen Zustand.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="hostExecutionContext" />durch einen Capture-Vorgang wurde nicht abgerufen werden.  
+  
+ - oder -   
+  
+ <paramref name="hostExecutionContext" />wurde das Argument in einem vorherigen <see cref="M:System.Threading.HostExecutionContextManager.SetHostExecutionContext(System.Threading.HostExecutionContext)" /> -Methodenaufruf.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

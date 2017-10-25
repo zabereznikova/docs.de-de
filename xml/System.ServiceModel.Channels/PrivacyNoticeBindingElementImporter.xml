@@ -1,0 +1,60 @@
+<Type Name="PrivacyNoticeBindingElementImporter" FullName="System.ServiceModel.Channels.PrivacyNoticeBindingElementImporter">
+  <TypeSignature Language="C#" Value="public class PrivacyNoticeBindingElementImporter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PrivacyNoticeBindingElementImporter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.PrivacyNoticeBindingElementImporter" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+  </Interfaces>
+  <Docs>
+    <summary>Importiert WSDL-basierte Richtlinien und Verträge über Datenschutzhinweise in Beschreibungen der Bindungselemente, die diese Richtlinien für den Dienst implementieren können.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrivacyNoticeBindingElementImporter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.PrivacyNoticeBindingElementImporter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.PrivacyNoticeBindingElementImporter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy">
+      <MemberSignature Language="C#" Value="void IPolicyImportExtension.ImportPolicy (System.ServiceModel.Description.MetadataImporter importer, System.ServiceModel.Description.PolicyConversionContext policyContext);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy(class System.ServiceModel.Description.MetadataImporter importer, class System.ServiceModel.Description.PolicyConversionContext policyContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.PrivacyNoticeBindingElementImporter.System#ServiceModel#Description#IPolicyImportExtension#ImportPolicy(System.ServiceModel.Description.MetadataImporter,System.ServiceModel.Description.PolicyConversionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="importer" Type="System.ServiceModel.Description.MetadataImporter" />
+        <Parameter Name="policyContext" Type="System.ServiceModel.Description.PolicyConversionContext" />
+      </Parameters>
+      <Docs>
+        <param name="importer"><see cref="T:System.ServiceModel.Description.MetadataImporter" /> zum Importieren der Metadateninformationen.</param>
+        <param name="policyContext">Das <see cref="T:System.ServiceModel.Description.PolicyConversionContext" />-Objekt, das die zu importierenden Richtlinienassertionen und die Auflistungen von Bindungselementen enthält, denen benutzerdefinierte Bindungselemente, die die Codierungsrichtlinie implementieren, hinzugefügt werden können.</param>
+        <summary>Importiert benutzerdefinierte Richtlinienassertionen für Datenschutzhinweise, und fügt die Bindungselemente hinzu, die die Richtlinie implementieren.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

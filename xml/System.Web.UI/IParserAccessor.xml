@@ -1,0 +1,46 @@
+<Type Name="IParserAccessor" FullName="System.Web.UI.IParserAccessor">
+  <TypeSignature Language="C#" Value="public interface IParserAccessor" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IParserAccessor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IParserAccessor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die Methode, die ASP.NET-Serversteuerelemente implementieren müssen, um zu erkennen, wenn Elemente, HTML- oder XML analysiert werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Elemente nicht analysiert werden, werden sie als untergeordnete Steuerelemente des Serversteuerelements erkannt, die diese Schnittstelle implementiert. Diese Elemente werden in Objekte konvertiert. Wenn Sie diese Schnittstelle implementieren, definiert das Steuerelement, das Sie erstellen, welche Verarbeitung erfolgt, sobald es, dass ein Element analysiert wurde benachrichtigt wurde.  
+  
+ Da die <xref:System.Web.UI.Control> -Klasse implementiert diese Schnittstelle, es ist einfacher, diese Klasse erweitern und seiner Implementierung von überschreiben die <xref:System.Web.UI.IParserAccessor.AddParsedSubObject%2A> Methode als diese Schnittstelle selbst zu implementieren.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddParsedSubObject">
+      <MemberSignature Language="C#" Value="public void AddParsedSubObject (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddParsedSubObject(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IParserAccessor.AddParsedSubObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Die <see cref="T:System.Object" /> , analysiert wurde.</param>
+        <summary>Bei der Implementierung durch ein ASP.NET-Serversteuerelement benachrichtigt das Serversteuerelement, dass ein Element, XML oder HTML-Code analysiert wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

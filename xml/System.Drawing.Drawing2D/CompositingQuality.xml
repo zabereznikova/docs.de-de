@@ -1,0 +1,121 @@
+<Type Name="CompositingQuality" FullName="System.Drawing.Drawing2D.CompositingQuality">
+  <TypeSignature Language="C#" Value="public enum CompositingQuality" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CompositingQuality extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Drawing2D.CompositingQuality" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Ebene Qualität bei der Komposition verwenden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Compositing erfolgt während des Renderings Pixel der Quelle in Kombination mit der Ziel-Pixel die daraus resultierenden Pixel erzeugt werden. Die Qualität der Zusammensetzung direkt bezieht sich auf die visuelle Qualität der Ausgabe und die Renderingzeit umgekehrt proportional ist. Je höher die Qualität, desto langsamer die Renderingzeit. Dies ist da je höher der Qualitätsstufe mehr benachbarten Pixel während die kombinierten berücksichtigt werden müssen. Die lineare Qualität Einstellung (AssumeLinear) gefährdet durch bessere Qualität als die Standardqualität eine etwas niedrigere Geschwindigkeit bereitstellen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AssumeLinear">
+      <MemberSignature Language="C#" Value="AssumeLinear" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.CompositingQuality AssumeLinear = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.CompositingQuality.AssumeLinear" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.CompositingQuality</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Übernehmen Sie lineare Werte.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.CompositingQuality Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.CompositingQuality.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.CompositingQuality</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Standardqualität.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GammaCorrected">
+      <MemberSignature Language="C#" Value="GammaCorrected" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.CompositingQuality GammaCorrected = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.CompositingQuality.GammaCorrected" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.CompositingQuality</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gammakorrektur wird verwendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HighQuality">
+      <MemberSignature Language="C#" Value="HighQuality" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.CompositingQuality HighQuality = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.CompositingQuality.HighQuality" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.CompositingQuality</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Hohe Qualität, langsame Zusammensetzung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HighSpeed">
+      <MemberSignature Language="C#" Value="HighSpeed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.CompositingQuality HighSpeed = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.CompositingQuality.HighSpeed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.CompositingQuality</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Hohe Geschwindigkeit, niedrige Qualität.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Invalid">
+      <MemberSignature Language="C#" Value="Invalid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.CompositingQuality Invalid = int32(-1)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.CompositingQuality.Invalid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.CompositingQuality</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ungültige Qualität.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

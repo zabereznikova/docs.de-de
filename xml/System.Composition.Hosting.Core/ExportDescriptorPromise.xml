@@ -1,0 +1,179 @@
+<Type Name="ExportDescriptorPromise" FullName="System.Composition.Hosting.Core.ExportDescriptorPromise">
+  <TypeSignature Language="C#" Value="public class ExportDescriptorPromise" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ExportDescriptorPromise extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Composition.Hosting.Core.ExportDescriptorPromise" />
+  <AssemblyInfo>
+    <AssemblyName>System.Composition.Hosting</AssemblyName>
+    <AssemblyVersion>1.0.31.0</AssemblyVersion>
+    <AssemblyVersion>1.0.32.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Exportdeskriptor dar, den einen verfügbaren Teil bereitstellen kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Typ ist ein wesentlicher Bestandteil der Zyklus wird überprüft, Anpassung und Funktionen der Kompilierung des Containers.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExportDescriptorPromise (System.Composition.Hosting.Core.CompositionContract contract, string origin, bool isShared, Func&lt;System.Collections.Generic.IEnumerable&lt;System.Composition.Hosting.Core.CompositionDependency&gt;&gt; dependencies, Func&lt;System.Collections.Generic.IEnumerable&lt;System.Composition.Hosting.Core.CompositionDependency&gt;,System.Composition.Hosting.Core.ExportDescriptor&gt; getDescriptor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Composition.Hosting.Core.CompositionContract contract, string origin, bool isShared, class System.Func`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class System.Composition.Hosting.Core.CompositionDependency&gt;&gt; dependencies, class System.Func`2&lt;class System.Collections.Generic.IEnumerable`1&lt;class System.Composition.Hosting.Core.CompositionDependency&gt;, class System.Composition.Hosting.Core.ExportDescriptor&gt; getDescriptor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Hosting.Core.ExportDescriptorPromise.#ctor(System.Composition.Hosting.Core.CompositionContract,System.String,System.Boolean,System.Func{System.Collections.Generic.IEnumerable{System.Composition.Hosting.Core.CompositionDependency}},System.Func{System.Collections.Generic.IEnumerable{System.Composition.Hosting.Core.CompositionDependency},System.Composition.Hosting.Core.ExportDescriptor})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Hosting</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contract" Type="System.Composition.Hosting.Core.CompositionContract" />
+        <Parameter Name="origin" Type="System.String" />
+        <Parameter Name="isShared" Type="System.Boolean" />
+        <Parameter Name="dependencies" Type="System.Func&lt;System.Collections.Generic.IEnumerable&lt;System.Composition.Hosting.Core.CompositionDependency&gt;&gt;" />
+        <Parameter Name="getDescriptor" Type="System.Func&lt;System.Collections.Generic.IEnumerable&lt;System.Composition.Hosting.Core.CompositionDependency&gt;,System.Composition.Hosting.Core.ExportDescriptor&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="contract">Der zugesagte Vertrag.</param>
+        <param name="origin">Eine Beschreibung des Ursprungs der Zusage. Angenommen, ein Teiletyp.</param>
+        <param name="isShared">
+          <see langword="true" />Wenn die Verfügbarkeitszusage, andernfalls freigegeben ist <see langword="false" />.</param>
+        <param name="dependencies">Eine Funktion, die zur Erfüllung der Zusage erforderlichen Abhängigkeiten bereitstellt.</param>
+        <param name="getDescriptor">Eine Funktion, die den zugesagten Deskriptor bereitstellt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Composition.Hosting.Core.ExportDescriptorPromise" />-Klasse.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contract">
+      <MemberSignature Language="C#" Value="public System.Composition.Hosting.Core.CompositionContract Contract { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Composition.Hosting.Core.CompositionContract Contract" />
+      <MemberSignature Language="DocId" Value="P:System.Composition.Hosting.Core.ExportDescriptorPromise.Contract" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Hosting</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Hosting.Core.CompositionContract</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Vertrag ab, der durch diese Zusage erfüllt wird.</summary>
+        <value>Der Vertrag</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dependencies">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Composition.Hosting.Core.CompositionDependency&gt; Dependencies { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Composition.Hosting.Core.CompositionDependency&gt; Dependencies" />
+      <MemberSignature Language="DocId" Value="P:System.Composition.Hosting.Core.ExportDescriptorPromise.Dependencies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Hosting</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Composition.Hosting.Core.CompositionDependency&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Abhängigkeiten, die erforderlich sind, um diese Zusage ab.</summary>
+        <value>Eine Auflistung von Abhängigkeiten.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDescriptor">
+      <MemberSignature Language="C#" Value="public System.Composition.Hosting.Core.ExportDescriptor GetDescriptor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Hosting.Core.ExportDescriptor GetDescriptor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Hosting.Core.ExportDescriptorPromise.GetDescriptor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Hosting</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Hosting.Core.ExportDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den zugesagten Deskriptor ab.</summary>
+        <returns>Die Beschreibung.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsShared">
+      <MemberSignature Language="C#" Value="public bool IsShared { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsShared" />
+      <MemberSignature Language="DocId" Value="P:System.Composition.Hosting.Core.ExportDescriptorPromise.IsShared" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Hosting</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Verfügbarkeitszusage freigegeben ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Verfügbarkeitszusage, in einen Kontext freigegeben ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Origin">
+      <MemberSignature Language="C#" Value="public string Origin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Origin" />
+      <MemberSignature Language="DocId" Value="P:System.Composition.Hosting.Core.ExportDescriptorPromise.Origin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Hosting</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Beschreibung der, in dem die Zusage (z. B. eine Teiltyp) stammt, verwendet, um lesbare Fehler bereitzustellen.</summary>
+        <value>Eine Beschreibung des Ursprungs der Zusage.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Hosting.Core.ExportDescriptorPromise.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Hosting</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Zeichenfolgendarstellung dieses <see cref="T:System.Composition.Hosting.Core.ExportDescriptorPromise" />-Objekts zurück.</summary>
+        <returns>Die Zeichenfolgendarstellung dieses <see cref="T:System.Composition.Hosting.Core.ExportDescriptorPromise" />-Objekts.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

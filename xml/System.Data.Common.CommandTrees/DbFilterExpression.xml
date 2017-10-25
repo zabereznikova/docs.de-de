@@ -1,0 +1,108 @@
+<Type Name="DbFilterExpression" FullName="System.Data.Common.CommandTrees.DbFilterExpression">
+  <TypeSignature Language="C#" Value="public sealed class DbFilterExpression : System.Data.Common.CommandTrees.DbExpression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DbFilterExpression extends System.Data.Common.CommandTrees.DbExpression" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Common.CommandTrees.DbFilterExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.CommandTrees.DbExpression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein für die Filterung eines Eingabesets verwendetes Prädikat dar. Damit wird der Satz von Elementen erstellt, die das Prädikat erfüllen. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Accept">
+      <MemberSignature Language="C#" Value="public override void Accept (System.Data.Common.CommandTrees.DbExpressionVisitor visitor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Accept(class System.Data.Common.CommandTrees.DbExpressionVisitor visitor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbFilterExpression.Accept(System.Data.Common.CommandTrees.DbExpressionVisitor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visitor" Type="System.Data.Common.CommandTrees.DbExpressionVisitor" />
+      </Parameters>
+      <Docs>
+        <param name="visitor">Eine Instanz von <see cref="T:System.Data.Common.CommandTrees.DbExpressionVisitor" />.</param>
+        <summary>Implementiert das Besuchermuster für Ausdrücke, die keinen Ergebniswert erstellen.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="visitor" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Accept&lt;TResultType&gt;">
+      <MemberSignature Language="C#" Value="public override TResultType Accept&lt;TResultType&gt; (System.Data.Common.CommandTrees.DbExpressionVisitor&lt;TResultType&gt; visitor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!TResultType Accept&lt;TResultType&gt;(class System.Data.Common.CommandTrees.DbExpressionVisitor`1&lt;!!TResultType&gt; visitor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbFilterExpression.Accept``1(System.Data.Common.CommandTrees.DbExpressionVisitor{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResultType" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="visitor" Type="System.Data.Common.CommandTrees.DbExpressionVisitor&lt;TResultType&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResultType">Der Typ des Ergebnisses von erzeugten <c>Besucher</c>.</typeparam>
+        <param name="visitor">Eine Instanz eines typisierten <see cref="T:System.Data.Common.CommandTrees.DbExpressionVisitor" />, der einen Ergebniswert eines bestimmten Typs erstellt.</param>
+        <summary>Implementiert das Besuchermuster für Ausdrücke, die einen Ergebniswert eines bestimmten Typs erstellen.</summary>
+        <returns>Ein Ergebniswert eines bestimmten Typs, der von <see cref="T:System.Data.Common.CommandTrees.DbExpressionVisitor" /> erstellt wird.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="visitor" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Input">
+      <MemberSignature Language="C#" Value="public System.Data.Common.CommandTrees.DbExpressionBinding Input { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Common.CommandTrees.DbExpressionBinding Input" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.CommandTrees.DbFilterExpression.Input" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.CommandTrees.DbExpressionBinding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Data.Common.CommandTrees.DbExpressionBinding" /> ab, die das Eingabeset angibt.</summary>
+        <value>Die <see cref="T:System.Data.Common.CommandTrees.DbExpressionBinding" />, die das Eingabeset angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Predicate">
+      <MemberSignature Language="C#" Value="public System.Data.Common.CommandTrees.DbExpression Predicate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Common.CommandTrees.DbExpression Predicate" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.CommandTrees.DbFilterExpression.Predicate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.CommandTrees.DbExpression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Data.Common.CommandTrees.DbExpression" /> ab, der das zum Filtern des Eingabesets verwendete Prädikat angibt, oder legt diesen fest.</summary>
+        <value>Der <see cref="T:System.Data.Common.CommandTrees.DbExpression" />, der das zum Filtern des Eingabesets verwendete Prädikat angibt.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der Ausdruck ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Der Ausdruck ist nicht mit der Befehlsstruktur des verknüpft die <see cref="T:System.Data.Common.CommandTrees.DbFilterExpression" />, oder der Ergebnistyp ist keine <see langword="Boolean" /> Typ.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

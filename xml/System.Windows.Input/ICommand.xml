@@ -1,0 +1,180 @@
+<Type Name="ICommand" FullName="System.Windows.Input.ICommand">
+  <TypeSignature Language="C#" Value="public interface ICommand" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICommand" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.ICommand" />
+  <AssemblyInfo>
+    <AssemblyName>System.ObjectModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert einen Befehl.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Input.RoutedCommand>und <xref:System.Windows.Input.RoutedUICommand> sind zwei Implementierungen der <xref:System.Windows.Input.ICommand> -Schnittstelle in [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)].  
+  
+## <a name="icommand-in-windows-runtime-apps"></a>ICommand in Windows-Runtime-apps  
+ Die <xref:System.Windows.Input.ICommand> Schnittstelle ist der Codevertrag für Befehle, die in .NET für Windows-Runtime-apps geschrieben sind. Diese Befehle geben Sie das Verhalten der Befehle für Benutzeroberflächenelemente, z. B. eine Windows-Runtime-XAML `Button` und insbesondere eine `AppBarButton`. Wenn Sie Befehle für Windows-Runtime-apps definieren verwenden Sie im Wesentlichen die gleichen Techniken, die Sie zum Definieren von Befehlen für eine app .NET verwenden würden. Implementieren Sie den Befehl durch Definition einer Klasse, die implementiert <xref:System.Windows.Input.ICommand> , und implementieren Sie speziell die <xref:System.Windows.Input.ICommand.Execute%2A> Methode.  
+  
+ XAML für Windows-Runtime unterstützt keine x`:Static`, sodass Sie nicht versuchen, verwenden Sie die `x:Static` Markuperweiterung, wenn der Befehl von Windows-Runtime-XAML verwendet wird. Darüber hinaus ist keine Windows-Runtime alle vordefinierten Befehl-Bibliotheken daher die Verwendung von XAML-Syntax, die hier gezeigten wirklich für die Groß-/Kleinschreibung gelten nicht, in dem Sie die Schnittstelle implementieren und definieren den Befehl für die Verwendung der Windows-Runtime.  
+  
+<a name="xamlTextUsage_ICommand"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+ \<*-Objekteigenschaft*= "*PredefinedCommandName*" / >  
+  
+ \- oder –  
+  
+ \<*-Objekteigenschaft*= "*predefinedCommandName.predefinedCommandName*" / >  
+  
+ \- oder –  
+  
+ \<*-Objekteigenschaft*= "{ *customClassName.customCommandName*}" / >  
+  
+<a name="xamlValues_ICommand"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *predefinedClassName*  
+ Einer der vordefinierten Befehlsklassen.  
+  
+ *predefinedCommandName*  
+ Einer der vordefinierten Befehle.  
+  
+ *customClassName*  
+ Eine benutzerdefinierte Klasse, die die benutzerdefinierte Befehl enthält. Benutzerdefinierte Klassen im Allgemeinen erfordern eine `xlmns` Präfix-Zuordnung; Siehe [XAML-Namespaces und Namespace-Zuordnung für WPF-XAML](~/docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+  
+ *customCommandName*  
+ Einen benutzerdefinierten Befehl.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CanExecute">
+      <MemberSignature Language="C#" Value="public bool CanExecute (object parameter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanExecute(object parameter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.ICommand.CanExecute(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameter" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="parameter">Vom Befehl verwendete Daten.  Wenn der Befehl keine Datenübergabe erfordert, kann das Objekt auf <see langword="null" /> festgelegt werden.</param>
+        <summary>Definiert die Methode, die bestimmt, ob der Befehl im aktuellen Zustand ausgeführt werden kann.</summary>
+        <returns>
+          <see langword="true" />, wenn der Befehl ausgeführt werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel eine Befehlsquelle aufgerufen der <xref:System.Windows.Input.ICommand.CanExecute%2A> Methode bei der <xref:System.Windows.Input.ICommand.CanExecuteChanged> Ereignis wird ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanExecuteChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler CanExecuteChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler CanExecuteChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Input.ICommand.CanExecuteChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn Änderungen auftreten, die sich auf die Ausführung des Befehls auswirken.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel ruft eine Befehlsquelle <xref:System.Windows.Input.ICommand.CanExecute%2A> auf den Befehl aus, wenn dieses Ereignis auftritt.  
+  
+ Normalerweise, wenn der Befehl nicht ausführen kann, deaktiviert die Befehlsquelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public void Execute (object parameter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Execute(object parameter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.ICommand.Execute(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameter" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="parameter">Vom Befehl verwendete Daten.  Wenn der Befehl keine Datenübergabe erfordert, kann das Objekt auf <see langword="null" /> festgelegt werden.</param>
+        <summary>Definiert die Methode, die aufgerufen wird, wenn der Befehl aufgerufen wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

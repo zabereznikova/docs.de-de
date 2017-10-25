@@ -1,0 +1,231 @@
+<Type Name="CollectionsUtil" FullName="System.Collections.Specialized.CollectionsUtil">
+  <TypeSignature Language="C#" Value="public class CollectionsUtil" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CollectionsUtil extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Specialized.CollectionsUtil" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Erstellt Auflistungen, die die Groß-und Kleinschreibung in Zeichenfolgen ignoriert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methoden generiert eine Instanz Groß-/Kleinschreibung der Auflistung unter Verwendung von Groß-/Kleinschreibung Implementierungen der Hashcode-Standardanbieter und den Vergleich. Die resultierenden Instanz kann wie alle anderen Instanzen dieser Klasse verwendet werden, obwohl es sich anders verhalten.  
+  
+ Nehmen wir beispielsweise an zwei Objekte mit den Schlüsseln "Hello" und "HELLO" sind eine Hashtabelle hinzugefügt werden. Groß-/Kleinschreibung beachtet Hashtabelle würde es sich um zwei verschiedene Einträge erstellt; dagegen eine Hashtabelle Groß-/Kleinschreibung eine Ausnahme ausgelöst würde, wenn Sie das zweite Objekt hinzufügen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die beiden Auflistungen, Hashtabellen und eine sortierte Liste Auffüllung Werte für eine Gruppe von Städten enthalten. Die Werte werden aus der Sammlungen mit den Ortsnamen, die als Schlüssel abgerufen. Die City-Namen sind in gemischter Schreibung ihrer Verwendung als Schlüssel der Groß-/Kleinschreibung anzeigen.  
+  
+ [!code-cpp[System.Collections.Specialized.CollectionsUtil#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.collections.specialized.collectionsutil/cpp/source.cpp#1)]
+ [!code-csharp[System.Collections.Specialized.CollectionsUtil#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.specialized.collectionsutil/cs/source.cs#1)]
+ [!code-vb[System.Collections.Specialized.CollectionsUtil#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.specialized.collectionsutil/vb/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Ein <see cref="T:System.Collections.Hashtable" /> gleichzeitige Unterstützung einen Writer und mehrere Reader. Um mehrere Writer zu unterstützen, müssen alle Vorgänge über den Wrapper zurückgegebene ausgeführt werden die <see cref="M:System.Collections.Hashtable.Synchronized(System.Collections.Hashtable)" /> Methode.  
+  
+ Ein <see cref="T:System.Collections.SortedList" /> Unterstützung für mehrere Reader gleichzeitig, solange die Auflistung nicht geändert wird. Um die Threadsicherheit der <see cref="T:System.Collections.SortedList" />, alle Operationen müssen ausgeführt werden, über den Wrapper zurückgegebene die <see cref="M:System.Collections.SortedList.Synchronized(System.Collections.SortedList)" /> Methode.  
+  
+ Einer Auflistung ist systemintern keine threadsichere Prozedur. Selbst wenn eine Auflistung synchronisiert wird, besteht die Möglichkeit, dass andere Threads sie ändern. Dies führt dazu, dass der Enumerator eine Ausnahme auslöst. Um während der Enumeration Threadsicherheit zu gewährleisten, können Sie entweder die Auflistung während der gesamten Enumeration sperren oder die Ausnahmen, die aus von anderen Threads stammenden Änderungen resultieren, abfangen.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CollectionsUtil ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.CollectionsUtil.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Collections.Specialized.CollectionsUtil" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCaseInsensitiveHashtable">
+      <MemberSignature Language="C#" Value="public static System.Collections.Hashtable CreateCaseInsensitiveHashtable ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Hashtable CreateCaseInsensitiveHashtable() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Hashtable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Groß-/Kleinschreibung Instanz von der <see cref="T:System.Collections.Hashtable" /> -Klasse mit der anfänglichen Standardkapazität.</summary>
+        <returns>Eine neue Groß-/Kleinschreibung-Instanz, der die <see cref="T:System.Collections.Hashtable" /> -Klasse mit der anfänglichen Standardkapazität.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anstatt die <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A> -Methode, mit der <xref:System.Collections.Hashtable.%23ctor%28System.Collections.IEqualityComparer%29?displayProperty=nameWithType> Konstruktor zur Erstellung einer Groß-/Kleinschreibung <xref:System.Collections.Hashtable> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCaseInsensitiveHashtable">
+      <MemberSignature Language="C#" Value="public static System.Collections.Hashtable CreateCaseInsensitiveHashtable (System.Collections.IDictionary d);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Hashtable CreateCaseInsensitiveHashtable(class System.Collections.IDictionary d) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Hashtable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="d" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="d">Die <see cref="T:System.Collections.IDictionary" /> So kopieren Sie in ein neues Groß-/Kleinschreibung <see cref="T:System.Collections.Hashtable" />.</param>
+        <summary>Kopiert die Einträge aus dem angegebenen Wörterbuch auf eine neue Groß-/Kleinschreibung Instanz von der <see cref="T:System.Collections.Hashtable" /> -Klasse mit der gleichen anfängliche Kapazität entspricht der Anzahl der kopierten Einträge entspricht.</summary>
+        <returns>Eine neue Groß-/Kleinschreibung Instanz von der <see cref="T:System.Collections.Hashtable" /> Klasse, die die Einträge aus dem angegebenen enthält <see cref="T:System.Collections.IDictionary" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anstatt die <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A> -Methode, mit der <xref:System.Collections.Hashtable.%23ctor%28System.Collections.IDictionary%2CSystem.Collections.IEqualityComparer%29?displayProperty=nameWithType> Konstruktor zur Erstellung einer Groß-/Kleinschreibung <xref:System.Collections.Hashtable> Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="d" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCaseInsensitiveHashtable">
+      <MemberSignature Language="C#" Value="public static System.Collections.Hashtable CreateCaseInsensitiveHashtable (int capacity);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Hashtable CreateCaseInsensitiveHashtable(int32 capacity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Hashtable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="capacity" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="capacity">Die ungefähre Anzahl von Einträgen, die die <see cref="T:System.Collections.Hashtable" /> anfänglich enthalten kann.</param>
+        <summary>Erstellt eine neue Groß-/Kleinschreibung Instanz von der <see cref="T:System.Collections.Hashtable" /> -Klasse mit der angegebenen Anfangskapazität.</summary>
+        <returns>Eine neue Groß-/Kleinschreibung-Instanz, der die <see cref="T:System.Collections.Hashtable" /> -Klasse mit der angegebenen Anfangskapazität.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anstatt die <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A> -Methode, mit der <xref:System.Collections.Hashtable.%23ctor%28System.Int32%2CSystem.Collections.IEqualityComparer%29?displayProperty=nameWithType> Konstruktor zur Erstellung einer Groß-/Kleinschreibung <xref:System.Collections.Hashtable> Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" /> ist kleiner als Null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCaseInsensitiveSortedList">
+      <MemberSignature Language="C#" Value="public static System.Collections.SortedList CreateCaseInsensitiveSortedList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.SortedList CreateCaseInsensitiveSortedList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveSortedList" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.SortedList</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der dem <see cref="T:System.Collections.SortedList" /> -Klasse, die die Groß-/Kleinschreibung Zeichenfolgen ignoriert.</summary>
+        <returns>Eine neue Instanz der dem <see cref="T:System.Collections.SortedList" /> -Klasse, die die Groß-/Kleinschreibung Zeichenfolgen ignoriert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die neue <xref:System.Collections.SortedList> Instanz Sortierung erfolgt entsprechend der <xref:System.Collections.CaseInsensitiveComparer>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,324 @@
+<Type Name="TransformerInfoCollection" FullName="System.Web.Configuration.TransformerInfoCollection">
+  <TypeSignature Language="C#" Value="public sealed class TransformerInfoCollection : System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TransformerInfoCollection extends System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.TransformerInfoCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElementCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Configuration.ConfigurationCollection(typeof(System.Web.Configuration.TransformerInfo))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält eine Auflistung von <see cref="T:System.Web.Configuration.TransformerInfo" />-Objekten. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.TransformerInfoCollection> -Klasse ermöglicht den programmgesteuerten Zugriff auf und Ändern der `transformers` Teil der `webParts` Abschnitt einer Konfigurationsdatei.  
+  
+ <xref:System.Web.Configuration.TransformerInfo>Objekte, die als Teil einer <xref:System.Web.Configuration.TransformerInfoCollection>, geben Sie benutzerdefinierte Klassen, Erweitern der <xref:System.Web.UI.WebControls.WebParts.WebPartTransformer> Klasse. Diese Transformatorklassen als Brücken zwischen verbundenen Webparts fungieren, gesendet übersetzen Daten von einem Verbindungsanbieter in einem Vorgang, der die Verbindungsconsumer akzeptieren kann.  
+  
+   
+  
+## Examples  
+ Der folgende Auszug aus der Datei wird gezeigt, wie Werte für mehrere Eigenschaften der deklarativ angeben, die <xref:System.Web.Configuration.TransformerInfoCollection> Klasse.  
+  
+```  
+<system.web>  
+  <webParts>  
+    <transformers>  
+      <clear />  
+      <remove name="RowToKeysTransformer" />  
+      <add name="RowToFieldTransformer"  
+        type="System.Web.UI.WebControls.WebParts.RowToFieldTransformer" />  
+      <add name="RowToFilterTransformer"  
+        type="System.Web.UI.WebControls.WebParts.RowToFilterTransformer" />  
+      <add name="RowToParametersTransformer"  
+        type="System.Web.UI.WebControls.WebParts.RowToParametersTransformer" />  
+    </transformers>  
+  </webParts>   
+</system.web>  
+```  
+  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.TransformerInfoCollection>-Klasse veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.WebPartsSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.WebPartsSection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebPartsSection/CS/usingwebpartssection.cs#2)]
+ [!code-vb[System.Web.Configuration.WebPartsSection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebPartsSection/VB/usingwebpartssection.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TransformerInfoCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TransformerInfoCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Configuration.TransformerInfoCollection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.TransformerInfoCollection.%23ctor%2A> Konstruktor ist nicht vorgesehen, direkt aus Ihrem Code verwendet werden. Sie wird vom Konfigurationssystem von ASP.NET aufgerufen. Die <xref:System.Web.Configuration.WebPartsSection.Transformers%2A> Eigenschaft von der <xref:System.Web.Configuration.WebPartsSection> Klasse enthält immer eine Instanz von der <xref:System.Web.Configuration.TransformerInfoCollection> Typ. Verwenden Sie diese Instanz, anstatt eine eigene erstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Web.Configuration.TransformerInfo transformerInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Web.Configuration.TransformerInfo transformerInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TransformerInfoCollection.Add(System.Web.Configuration.TransformerInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transformerInfo" Type="System.Web.Configuration.TransformerInfo" />
+      </Parameters>
+      <Docs>
+        <param name="transformerInfo">Ein <see cref="T:System.Web.Configuration.TransformerInfo" /> Objekt, das der Auflistung hinzugefügt.</param>
+        <summary>Fügt der Auflistung ein <see cref="T:System.Web.Configuration.TransformerInfo" />-Objekt hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Auflistung darf nicht bereits ein <xref:System.Web.Configuration.TransformerInfo> Objekt mit derselben <xref:System.Web.Configuration.TransformerInfo.Name%2A> Eigenschaftswert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.TransformerInfoCollection.Add%2A>-Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.WebPartsSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.WebPartsSection#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebPartsSection/CS/usingwebpartssection.cs#5)]
+ [!code-vb[System.Web.Configuration.WebPartsSection#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebPartsSection/VB/usingwebpartssection.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">Die <see cref="T:System.Web.Configuration.TransformerInfo" /> Objekt bereits in der Auflistung vorhanden ist.  
+  
+ \- oder –  
+  
+ Die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TransformerInfoCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle <see cref="T:System.Web.Configuration.TransformerInfo" />-Objekte aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode entfernt alle <xref:System.Web.Configuration.TransformerInfo> Objekte aus der Auflistung und fügt eine `clear` Element in der `transformers` Auflistung von der `webParts` Abschnitt der Konfigurationsdatei.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.TransformerInfoCollection.Clear%2A>-Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.WebPartsSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.WebPartsSection#9](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebPartsSection/CS/usingwebpartssection.cs#9)]
+ [!code-vb[System.Web.Configuration.WebPartsSection#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebPartsSection/VB/usingwebpartssection.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNewElement">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationElement CreateNewElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Configuration.ConfigurationElement CreateNewElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TransformerInfoCollection.CreateNewElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetElementKey">
+      <MemberSignature Language="C#" Value="protected override object GetElementKey (System.Configuration.ConfigurationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetElementKey(class System.Configuration.ConfigurationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TransformerInfoCollection.GetElementKey(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.TransformerInfo this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.TransformerInfo Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TransformerInfoCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.TransformerInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des ein <see cref="T:System.Web.Configuration.TransformerInfo" /> Objekt in der Auflistung.</param>
+        <summary>Ruft ab oder legt die <see cref="T:System.Web.Configuration.TagMapInfo" /> Objekt an der angegebenen Indexposition.</summary>
+        <value>Die <see cref="T:System.Web.Configuration.TransformerInfo" /> Objekt am angegebenen Index oder <see langword="null" /> Wenn an diesem Index kein Objekt vorhanden ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.TransformerInfoCollection.Item%28System.Int32%29> Eigenschaft überschreibt die <xref:System.Web.Configuration.TransformerInfo> Objekt bereits vorhanden ist; andernfalls ein neues Objekt erstellt und der Teamprojektsammlung hinzugefügt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.TransformerInfoCollection.Item%2A>-Eigenschaft veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.WebPartsSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.WebPartsSection#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebPartsSection/CS/usingwebpartssection.cs#6)]
+ [!code-vb[System.Web.Configuration.WebPartsSection#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebPartsSection/VB/usingwebpartssection.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TransformerInfoCollection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TransformerInfoCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Der Name des eine <see cref="T:System.Web.Configuration.TransformerInfo" /> aus der Auflistung zu entfernende Objekt.</param>
+        <summary>Entfernt die <see cref="T:System.Web.Configuration.TransformerInfo" /> Objekt mit dem übergebenen <see cref="P:System.Web.Configuration.TransformerInfo.Name" /> Eigenschaftswert aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode entfernt eine <xref:System.Web.Configuration.TransformerInfo> Objekt aus der Auflistung und, wenn die <xref:System.Web.Configuration.TransformerInfo> Objekt in einer Konfigurationsdatei definiert ist, fügt eine `remove` Element in der `transformers` Auflistung von der `webParts` Teil der die Konfigurationsdatei.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.TransformerInfoCollection.Remove%2A>-Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.WebPartsSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.WebPartsSection#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebPartsSection/CS/usingwebpartssection.cs#7)]
+ [!code-vb[System.Web.Configuration.WebPartsSection#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebPartsSection/VB/usingwebpartssection.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TransformerInfoCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index von einem <see cref="T:System.Web.Configuration.TransformerInfo" /> aus der Auflistung zu entfernende Objekt.</param>
+        <summary>Entfernt die <see cref="T:System.Web.Configuration.TransformerInfo" /> Objekt an der übergebene Index aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode entfernt eine <xref:System.Web.Configuration.TransformerInfo> Objekt aus der Auflistung und, wenn die <xref:System.Web.Configuration.TransformerInfo> Objekt in einer Konfigurationsdatei definiert ist, fügt eine `remove` Element in der `transformers` Auflistung von der `webParts` Teil der die Konfigurationsdatei.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.TransformerInfoCollection.RemoveAt%2A>-Methode veranschaulicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Configuration.WebPartsSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.WebPartsSection#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebPartsSection/CS/usingwebpartssection.cs#8)]
+ [!code-vb[System.Web.Configuration.WebPartsSection#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebPartsSection/VB/usingwebpartssection.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,85 @@
+<Type Name="WorkflowEnvironment" FullName="System.Workflow.Runtime.WorkflowEnvironment">
+  <TypeSignature Language="C#" Value="public static class WorkflowEnvironment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit WorkflowEnvironment extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.WorkflowEnvironment" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Transaktionsumgebung der Workflowinstanz dar, die auf dem aktuellen Thread ausgeführt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ <xref:System.Workflow.Runtime.WorkflowEnvironment> stellt die Transaktionsumgebung der Workflowinstanz dar, die auf dem aktuellen Thread ausgeführt wird. <xref:System.Workflow.Runtime.WorkflowEnvironment> verfügt über zwei Eigenschaften: die  <xref:System.Workflow.Runtime.WorkflowEnvironment.WorkBatch%2A> -Eigenschaft, die den aktuellen Arbeitsbatch offenlegt und es einem Host oder Hostdienst ermöglicht, an der aktuellen Transaktion teilzunehmen, indem dieser Eigenschaft <xref:System.Workflow.Runtime.IPendingWork> -Elemente hinzugefügt werden. Die zweite Eigenschaft ist die <xref:System.Workflow.Runtime.WorkflowEnvironment.WorkflowInstanceId%2A>-Eigenschaft, die die <xref:System.Guid> der Workflowinstanz offenlegt, die momentan in diesem Thread ausgeführt wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="WorkBatch">
+      <MemberSignature Language="C#" Value="public static System.Workflow.Runtime.IWorkBatch WorkBatch { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Workflow.Runtime.IWorkBatch WorkBatch" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.WorkflowEnvironment.WorkBatch" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.IWorkBatch</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den aktuellen Arbeitsbatch ab.</summary>
+        <value>Der <see cref="T:System.Workflow.Runtime.IWorkBatch" />, der den aktuellen Arbeitsbatch darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Workflow.Runtime.WorkflowEnvironment.WorkBatch%2A>-Eigenschaft ermöglicht es Hosts oder Hostdiensten, an der aktuellen Transaktion teilzunehmen, indem dem aktuellen Arbeitsbatch anstehende Arbeitsaufgaben hinzugefügt werden. Ein Host oder ein Hostdienst, der an der aktuellen Transaktion teilnehmen möchte, muss die <xref:System.Workflow.Runtime.IPendingWork>-Schnittstelle implementieren und <xref:System.Workflow.Runtime.IWorkBatch.Add%2A?displayProperty=nameWithType> verwenden, um dem <xref:System.Workflow.Runtime.WorkflowEnvironment.WorkBatch%2A> anstehende Arbeitsaufgaben hinzuzufügen. Permanente Dienste sollten dem <xref:System.Workflow.Runtime.WorkflowEnvironment.WorkBatch%2A> Elemente hinzufügen, um den Zustand ihrer Datenspeicher mit dem Zustand der Workflowinstanz konsistent zu halten. Die vordefinierten permanenten Dienste, <xref:System.Workflow.Runtime.Tracking.SqlTrackingService> und <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>, implementieren jeweils diese Funktionalität.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowInstanceId">
+      <MemberSignature Language="C#" Value="public static Guid WorkflowInstanceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Guid WorkflowInstanceId" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.WorkflowEnvironment.WorkflowInstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Guid" /> der Workflowinstanz ab, die dem aktuellen Thread zugeordnet ist.</summary>
+        <value>Die <see cref="T:System.Guid" />, die die aktuelle Workflowinstanz identifiziert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.WorkflowEnvironment.WorkflowInstanceId%2A> enthält die <xref:System.Guid> der Workflowinstanz, die momentan in diesem Thread ausgeführt wird. Wenn Code aus einem Workflowthread ausgeführt wird, können Sie jeweils die <xref:System.Guid> der Workflowinstanz über die <xref:System.Workflow.Runtime.WorkflowEnvironment.WorkflowInstanceId%2A>-Eigenschaft abrufen. Wenn Ihr Code beispielsweise in einem Dienst enthalten ist, der von einer Aktivität aufgerufen wird, stellt <xref:System.Workflow.Runtime.WorkflowEnvironment.WorkflowInstanceId%2A> die <xref:System.Guid> der Workflowinstanz für die aufrufende Aktivität bereit.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

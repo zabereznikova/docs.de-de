@@ -1,0 +1,102 @@
+<Type Name="TickPlacement" FullName="System.Windows.Controls.Primitives.TickPlacement">
+  <TypeSignature Language="C#" Value="public enum TickPlacement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TickPlacement extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Primitives.TickPlacement" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Position von Teilstrichen in einem <see cref="T:System.Windows.Controls.Slider" /> steuern in Bezug auf die <see cref="T:System.Windows.Controls.Primitives.Track" /> , die das Steuerelement implementiert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.Primitives.TickPlacement> Enumeration zum Festlegen der <xref:System.Windows.Controls.Slider.TickPlacement%2A> Eigenschaft eine <xref:System.Windows.Controls.Slider>.  
+  
+ Die folgende Abbildung zeigt eine <xref:System.Windows.Controls.Slider> mit dem Teilstriche, die im folgenden sind die <xref:System.Windows.Controls.Primitives.Track>. In diesem Beispiel wird die <xref:System.Windows.Controls.Slider.TickPlacement%2A> Eigenschaft auf BottomRight festgelegt ist.  
+  
+ **Schieberegler-Beispiel**  
+  
+ ![Schieberegler-Darstellung](~/add/media/genericslider.png "Schieberegler-Darstellung")  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Controls.Slider.TickPlacement%2A> -Eigenschaft für eine <xref:System.Windows.Controls.Slider.TickPlacement%2A> Steuerelement.  
+  
+ [!code-xaml[Slider#4](~/samples/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Both">
+      <MemberSignature Language="C#" Value="Both" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.TickPlacement Both = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TickPlacement.Both" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.TickPlacement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Teilstriche angezeigt werden, oberhalb und unterhalb der <see cref="T:System.Windows.Controls.Primitives.Track" /> bei einem horizontalen <see cref="T:System.Windows.Controls.Slider" />, oder nach links und rechts neben der <see cref="T:System.Windows.Controls.Primitives.Track" /> bei einem vertikalen <see cref="T:System.Windows.Controls.Slider" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BottomRight">
+      <MemberSignature Language="C#" Value="BottomRight" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.TickPlacement BottomRight = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TickPlacement.BottomRight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.TickPlacement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Teilstriche werden unterhalb der <see cref="T:System.Windows.Controls.Primitives.Track" /> bei einem horizontalen <see cref="T:System.Windows.Controls.Slider" />, oder rechts neben der <see cref="T:System.Windows.Controls.Primitives.Track" /> bei einem vertikalen <see cref="T:System.Windows.Controls.Slider" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.TickPlacement None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TickPlacement.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.TickPlacement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es werden keine Teilstriche angezeigt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TopLeft">
+      <MemberSignature Language="C#" Value="TopLeft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.TickPlacement TopLeft = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TickPlacement.TopLeft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.TickPlacement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Teilstriche angezeigt werden, über die <see cref="T:System.Windows.Controls.Primitives.Track" /> bei einem horizontalen <see cref="T:System.Windows.Controls.Slider" />, oder auf der linken Seite des der <see cref="T:System.Windows.Controls.Primitives.Track" /> bei einem vertikalen <see cref="T:System.Windows.Controls.Slider" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

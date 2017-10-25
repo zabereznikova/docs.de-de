@@ -1,0 +1,244 @@
+<Type Name="IXmlSchemaInfo" FullName="System.Xml.Schema.IXmlSchemaInfo">
+  <TypeSignature Language="C#" Value="public interface IXmlSchemaInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IXmlSchemaInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Schema.IXmlSchemaInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die post-schema-Validation-Infoset des validierten XML-Knotens.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsDefault">
+      <MemberSignature Language="C#" Value="public bool IsDefault { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDefault" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.IXmlSchemaInfo.IsDefault" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob diese validierten XML-Knoten als Ergebnis von einem Standard-angewendet wird, während der schemavalidierung XML Schema Definition Language (XSD) festgelegt wurde.</summary>
+        <value>
+          <see langword="true" />Wenn dies XML-Knoten validierten wurde als Ergebnis von einem Standard-angewendet wird, während der schemavalidierung festgelegt; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Schema.IXmlSchemaInfo> Eigenschaft gibt keine Auskunft über Document Type Definition (DTD) Standardwerte  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNil">
+      <MemberSignature Language="C#" Value="public bool IsNil { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNil" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.IXmlSchemaInfo.IsNil" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Wert für diesen validierten XML-Knoten NULL ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Wert für diesen XML-Knoten validierten ist NULL. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberType">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaSimpleType MemberType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaSimpleType MemberType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.IXmlSchemaInfo.MemberType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaSimpleType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den dynamischen Schematyp für diesen validierten XML-Knoten.</summary>
+        <value>Ein <see cref="T:System.Xml.Schema.XmlSchemaSimpleType" /> Objekt, das dynamische Schema dafür darstellt, überprüft die XML-Knoten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Schema.IXmlSchemaInfo.MemberType%2A> Eigenschaft festgelegt ist, nur dann, wenn der statische Typ des XML-Knotens eines union-Typs in diesem Fall ist die <xref:System.Xml.Schema.IXmlSchemaInfo.MemberType%2A> Eigenschaft gibt dem Typ aus der Vereinigung den XML-Knoten, die gegen zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SchemaAttribute">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaAttribute SchemaAttribute { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaAttribute SchemaAttribute" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.IXmlSchemaInfo.SchemaAttribute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die kompilierten <see cref="T:System.Xml.Schema.XmlSchemaAttribute" /> , die diesem validierten XML-Knoten entspricht.</summary>
+        <value>Eine <see cref="T:System.Xml.Schema.XmlSchemaAttribute" /> , die diesem validierten XML-Knoten entspricht.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SchemaElement">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaElement SchemaElement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaElement SchemaElement" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.IXmlSchemaInfo.SchemaElement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die kompilierten <see cref="T:System.Xml.Schema.XmlSchemaElement" /> , die diesem validierten XML-Knoten entspricht.</summary>
+        <value>Eine <see cref="T:System.Xml.Schema.XmlSchemaElement" /> , die diesem validierten XML-Knoten entspricht.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SchemaType">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaType SchemaType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaType SchemaType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.IXmlSchemaInfo.SchemaType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den statischen Typ des XML Schema Definition Language (XSD)-Schemas dieses validierten XML-Knotens ab.</summary>
+        <value>Ein <see cref="T:System.Xml.Schema.XmlSchemaType" /> dieses validierten XML-Knoten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der statische Typ eines XML-Knotens ist der Typ, der im XSD-Schema deklariert wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validity">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaValidity Validity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.Schema.XmlSchemaValidity Validity" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.IXmlSchemaInfo.Validity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaValidity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Xml.Schema.XmlSchemaValidity" /> Wert dieser überprüft die XML-Knoten.</summary>
+        <value>Ein <see cref="T:System.Xml.Schema.XmlSchemaValidity" /> Wert dieser überprüft die XML-Knoten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die möglichen <xref:System.Xml.Schema.XmlSchemaValidity> Werte für diesen XML-Knoten sind <xref:System.Xml.Schema.XmlSchemaValidity.Valid>, <xref:System.Xml.Schema.XmlSchemaValidity.Invalid>, und <xref:System.Xml.Schema.XmlSchemaValidity.NotKnown>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

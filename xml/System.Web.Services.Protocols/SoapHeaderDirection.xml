@@ -1,0 +1,110 @@
+<Type Name="SoapHeaderDirection" FullName="System.Web.Services.Protocols.SoapHeaderDirection">
+  <TypeSignature Language="C#" Value="public enum SoapHeaderDirection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SoapHeaderDirection extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.SoapHeaderDirection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, ob der Empfänger die <see cref="T:System.Web.Services.Protocols.SoapHeader" /> ist der XML-Webdienst, der XML-Webdienstclient oder beides.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Web.Services.Protocols.SoapHeaderAttribute> kann auf eine XML-Webdienstmethode oder eine Methode eine Proxyklasse, um einen XML-Webdienst angewendet werden. In beiden Fällen werden die Empfänger angegeben, indem die <xref:System.Web.Services.Protocols.SoapHeaderAttribute.Direction%2A> Eigenschaft <xref:System.Web.Services.Protocols.SoapHeaderAttribute>. Um anzugeben, dass eine XML-Webdienstmethode einen SOAP-Header zurückgibt, beim Auftreten einer während seiner Ausführung Ausnahme, gelten eine <xref:System.Web.Services.Protocols.SoapHeaderAttribute> an die Methode, und legen die <xref:System.Web.Services.Protocols.SoapHeaderAttribute.Direction%2A> Eigenschaft fehlerhaft agiert.  
+  
+ Version 1.0 von .NET Framework unterstützt nicht den Wert des Fehlers.  
+  
+   
+  
+## Examples  
+ Die folgende XML-Webdienstmethode gibt an, dass die `myHeader` <xref:System.Web.Services.Protocols.SoapHeaderDirection.Fault> aus der XML-Webdienstclient an den XML-Webdienst gesendet wird, und klicken Sie dann zurück an den XML-Webdienstclient unabhängig von der eine Ausnahme ausgelöst wird, während der Ausführung des XML-service Methode.  
+  
+ [!code-cpp[Classic SoapHeaderDirection Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic SoapHeaderDirection Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic SoapHeaderDirection Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic SoapHeaderDirection Example/CS/source.cs#1)]
+ [!code-vb[Classic SoapHeaderDirection Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic SoapHeaderDirection Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Fault">
+      <MemberSignature Language="C#" Value="Fault" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Services.Protocols.SoapHeaderDirection Fault = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Services.Protocols.SoapHeaderDirection.Fault" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.SoapHeaderDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die <see cref="T:System.Web.Services.Protocols.SoapHeader" /> an die XML-Webdienstclient gesendet, wenn eine Ausnahme, indem Sie die XML-Webdienstmethode ausgelöst wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="In">
+      <MemberSignature Language="C#" Value="In" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Services.Protocols.SoapHeaderDirection In = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Services.Protocols.SoapHeaderDirection.In" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.SoapHeaderDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die <see cref="T:System.Web.Services.Protocols.SoapHeader" /> an den XML-Webdienst gesendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InOut">
+      <MemberSignature Language="C#" Value="InOut" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Services.Protocols.SoapHeaderDirection InOut = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Services.Protocols.SoapHeaderDirection.InOut" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.SoapHeaderDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, die <see cref="T:System.Web.Services.Protocols.SoapHeader" /> wird gesendet, um den XML-Webdienst und den XML-Webdienstclient.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Out">
+      <MemberSignature Language="C#" Value="Out" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Services.Protocols.SoapHeaderDirection Out = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Services.Protocols.SoapHeaderDirection.Out" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.SoapHeaderDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, die <see cref="T:System.Web.Services.Protocols.SoapHeader" /> wird gesendet, um die XML-Webdienstclient.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

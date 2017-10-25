@@ -1,0 +1,26 @@
+<Type Name="GroupDescriptionSelectorCallback" FullName="System.Windows.Data.GroupDescriptionSelectorCallback">
+  <TypeSignature Language="C#" Value="public delegate System.ComponentModel.GroupDescription GroupDescriptionSelectorCallback(CollectionViewGroup group, int level);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed GroupDescriptionSelectorCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Data.GroupDescriptionSelectorCallback" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="group" Type="System.Windows.Data.CollectionViewGroup" />
+    <Parameter Name="level" Type="System.Int32" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.ComponentModel.GroupDescription</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="group">Die übergeordnete Gruppe.</param>
+    <param name="level">Das Maß an <c>Gruppe</c>.</param>
+    <summary>Stellt eine Methode, die verwendet wird, geben Sie benutzerdefinierte Logik zum Auswählen der <see cref="T:System.ComponentModel.GroupDescription" /> basierend auf der übergeordneten Gruppe und die Ebene.</summary>
+    <returns>Die <see cref="T:System.ComponentModel.GroupDescription" /> ausgewählte basierend auf der übergeordneten Gruppe und die Ebene.</returns>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

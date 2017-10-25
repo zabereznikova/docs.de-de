@@ -1,0 +1,263 @@
+<Type Name="IDataServiceMetadataProvider" FullName="System.Data.Services.Providers.IDataServiceMetadataProvider">
+  <TypeSignature Language="C#" Value="public interface IDataServiceMetadataProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDataServiceMetadataProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.Providers.IDataServiceMetadataProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Verwaltet Metadaten zu einem benutzerdefinierten Datendienstanbieter.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ContainerName">
+      <MemberSignature Language="C#" Value="public string ContainerName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContainerName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Providers.IDataServiceMetadataProvider.ContainerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Containername für die Datenquelle.</summary>
+        <value>Die Zeichenfolge, die den Namen des Containers enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainerNamespace">
+      <MemberSignature Language="C#" Value="public string ContainerNamespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContainerNamespace" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Providers.IDataServiceMetadataProvider.ContainerNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Namespacename für die Datenquelle.</summary>
+        <value>Die Zeichenfolge, die den Namen des Namespace enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDerivedTypes">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Data.Services.Providers.ResourceType&gt; GetDerivedTypes (System.Data.Services.Providers.ResourceType resourceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Data.Services.Providers.ResourceType&gt; GetDerivedTypes(class System.Data.Services.Providers.ResourceType resourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.IDataServiceMetadataProvider.GetDerivedTypes(System.Data.Services.Providers.ResourceType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Data.Services.Providers.ResourceType&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceType" Type="System.Data.Services.Providers.ResourceType" />
+      </Parameters>
+      <Docs>
+        <param name="resourceType">Der Basis-<see cref="T:System.Data.Services.Providers.ResourceType" />.</param>
+        <summary>Versucht, alle Typen zurückzugeben, die vom angegebenen Ressourcentyp abgeleitet werden.</summary>
+        <returns>Eine <see cref="T:System.Collections.Generic.IEnumerable`1" />-Auflistung abgeleiteter <see cref="T:System.Data.Services.Providers.ResourceType" />-Objekte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Services.Providers.IDataServiceMetadataProvider.GetDerivedTypes%2A>-Methode muss eine Auflistung aller von `resourceType` abgeleiteten Typen zurückgeben.  
+  
+ Der mithilfe des `resourceType`-Parameters an die Methode übergebene Typ darf in der Auflistung nicht zurückgegeben werden.  
+  
+ Eine Implementierung der <xref:System.Data.Services.Providers.IDataServiceMetadataProvider>-Schnittstelle muss den Wert NULL zurückgeben, wenn keine Typen vom angegebenen Typ abgeleitet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResourceAssociationSet">
+      <MemberSignature Language="C#" Value="public System.Data.Services.Providers.ResourceAssociationSet GetResourceAssociationSet (System.Data.Services.Providers.ResourceSet resourceSet, System.Data.Services.Providers.ResourceType resourceType, System.Data.Services.Providers.ResourceProperty resourceProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Data.Services.Providers.ResourceAssociationSet GetResourceAssociationSet(class System.Data.Services.Providers.ResourceSet resourceSet, class System.Data.Services.Providers.ResourceType resourceType, class System.Data.Services.Providers.ResourceProperty resourceProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.IDataServiceMetadataProvider.GetResourceAssociationSet(System.Data.Services.Providers.ResourceSet,System.Data.Services.Providers.ResourceType,System.Data.Services.Providers.ResourceProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Providers.ResourceAssociationSet</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceSet" Type="System.Data.Services.Providers.ResourceSet" />
+        <Parameter Name="resourceType" Type="System.Data.Services.Providers.ResourceType" />
+        <Parameter Name="resourceProperty" Type="System.Data.Services.Providers.ResourceProperty" />
+      </Parameters>
+      <Docs>
+        <param name="resourceSet">Der Ressourcensatz des Quellenzuordnungsendes.</param>
+        <param name="resourceType">Der Ressourcentyp des Quellenzuordnungsendes.</param>
+        <param name="resourceProperty">Die Ressourceneigenschaft des Quellenzuordnungsendes.</param>
+        <summary>Ruft die <see cref="T:System.Data.Services.Providers.ResourceAssociationSet" />-Instanz ab, wenn das Quellenzuordnungsende angegeben wird.</summary>
+        <returns>Eine <see cref="T:System.Data.Services.Providers.ResourceAssociationSet" />-Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasDerivedTypes">
+      <MemberSignature Language="C#" Value="public bool HasDerivedTypes (System.Data.Services.Providers.ResourceType resourceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool HasDerivedTypes(class System.Data.Services.Providers.ResourceType resourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.IDataServiceMetadataProvider.HasDerivedTypes(System.Data.Services.Providers.ResourceType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceType" Type="System.Data.Services.Providers.ResourceType" />
+      </Parameters>
+      <Docs>
+        <param name="resourceType">Ein auszuwertendes <see cref="T:System.Data.Services.Providers.ResourceType" />-Objekt.</param>
+        <summary>Bestimmt, ob ein Ressourcentyp abgeleitete Typen aufweist.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="resourceType" /> stellt eine Entität, die abgeleiteten Typen; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResourceSets">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Data.Services.Providers.ResourceSet&gt; ResourceSets { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class System.Data.Services.Providers.ResourceSet&gt; ResourceSets" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Providers.IDataServiceMetadataProvider.ResourceSets" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Data.Services.Providers.ResourceSet&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle verfügbaren Container ab.</summary>
+        <value>Eine <see cref="T:System.Collections.Generic.IEnumerable`1" />-Auflistung von <see cref="T:System.Data.Services.Providers.ResourceSet" />-Objekten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceOperations">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Data.Services.Providers.ServiceOperation&gt; ServiceOperations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class System.Data.Services.Providers.ServiceOperation&gt; ServiceOperations" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Providers.IDataServiceMetadataProvider.ServiceOperations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Data.Services.Providers.ServiceOperation&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt alle Dienstvorgänge in dieser Datenquelle zurück.</summary>
+        <value>Eine <see cref="T:System.Collections.Generic.IEnumerable`1" />-Auflistung von <see cref="T:System.Data.Services.Providers.ServiceOperation" />-Objekten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryResolveResourceSet">
+      <MemberSignature Language="C#" Value="public bool TryResolveResourceSet (string name, out System.Data.Services.Providers.ResourceSet resourceSet);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryResolveResourceSet(string name, [out] class System.Data.Services.Providers.ResourceSet&amp; resourceSet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.IDataServiceMetadataProvider.TryResolveResourceSet(System.String,System.Data.Services.Providers.ResourceSet@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="resourceSet" Type="System.Data.Services.Providers.ResourceSet&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der aufzulösende Name des <see cref="T:System.Data.Services.Providers.ResourceSet" />.</param>
+        <param name="resourceSet">Gibt den Ressourcensatz oder ein <see langword="null" /> -Wert, wenn eine Ressource mit Festlegen der angegebenen <c>Namen</c> wurde nicht gefunden.</param>
+        <summary>Versucht, auf Grundlage des angegebenen Namens einen Ressourcensatz abzurufen.</summary>
+        <returns>
+          <see langword="true" />Wenn die Ressource festgelegt, mit der angegebenen <paramref name="name" /> gefunden wird; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryResolveResourceType">
+      <MemberSignature Language="C#" Value="public bool TryResolveResourceType (string name, out System.Data.Services.Providers.ResourceType resourceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryResolveResourceType(string name, [out] class System.Data.Services.Providers.ResourceType&amp; resourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.IDataServiceMetadataProvider.TryResolveResourceType(System.String,System.Data.Services.Providers.ResourceType@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="resourceType" Type="System.Data.Services.Providers.ResourceType&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der aufzulösende Name des Typs.</param>
+        <param name="resourceType">Gibt den Ressourcentyp oder ein <see langword="null" /> -Wert, wenn ein Ressourcentyp mit der angegebenen <c>Namen</c> wurde nicht gefunden.</param>
+        <summary>Versucht, auf Grundlage des angegebenen Namens einen Ressourcentyp abzurufen.</summary>
+        <returns>
+          <see langword="true" />Wenn ein Ressourcentyp mit dem angegebenen <paramref name="name" /> gefunden wird; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryResolveServiceOperation">
+      <MemberSignature Language="C#" Value="public bool TryResolveServiceOperation (string name, out System.Data.Services.Providers.ServiceOperation serviceOperation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryResolveServiceOperation(string name, [out] class System.Data.Services.Providers.ServiceOperation&amp; serviceOperation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.IDataServiceMetadataProvider.TryResolveServiceOperation(System.String,System.Data.Services.Providers.ServiceOperation@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="serviceOperation" Type="System.Data.Services.Providers.ServiceOperation&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der aufzulösende Name des Dienstvorgangs.</param>
+        <param name="serviceOperation">Gibt den Dienstvorgang oder einer <see langword="null" /> -Wert, wenn ein Dienstvorgang mit der angegebenen <c>Namen</c> wurde nicht gefunden.</param>
+        <summary>Versucht, auf Grundlage des angegebenen Namens einen Dienstvorgang abzurufen.</summary>
+        <returns>
+          <see langword="true" />Wenn ein Dienstvorgang mit dem angegebenen <paramref name="name" /> gefunden wird; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Types">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Data.Services.Providers.ResourceType&gt; Types { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class System.Data.Services.Providers.ResourceType&gt; Types" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Providers.IDataServiceMetadataProvider.Types" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Data.Services.Providers.ResourceType&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt alle Typen in dieser Datenquelle zurück.</summary>
+        <value>Eine <see cref="T:System.Collections.Generic.IEnumerable`1" />-Auflistung von <see cref="T:System.Data.Services.Providers.ResourceType" />-Objekten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

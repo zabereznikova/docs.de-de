@@ -1,0 +1,76 @@
+<Type Name="DbAggregate" FullName="System.Data.Common.CommandTrees.DbAggregate">
+  <TypeSignature Language="C#" Value="public abstract class DbAggregate" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DbAggregate extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Common.CommandTrees.DbAggregate" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementiert die grundlegenden Funktionen von Aggregaten in einem <see langword="GroupBy" /> Klausel.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aggregate sind Pseudoausdrücke. Ihre Verwendung ist stark eingeschränkt. Aggregate können nur verwendet werden, in der Aggregate-Klausel einer `GroupBy` Ausdruck.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Arguments">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Data.Common.CommandTrees.DbExpression&gt; Arguments { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class System.Data.Common.CommandTrees.DbExpression&gt; Arguments" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.CommandTrees.DbAggregate.Arguments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Data.Common.CommandTrees.DbExpression&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Liste der Ausdrücke ab, die die Argumente für dieses <see cref="T:System.Data.Common.CommandTrees.DbAggregate" /> definieren.</summary>
+        <value>Die Liste der Ausdrücke, die die Argumente für dieses <see cref="T:System.Data.Common.CommandTrees.DbAggregate" /> definieren.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Common.CommandTrees.DbAggregate.Arguments%2A>-Eigenschaft des <xref:System.Data.Common.CommandTrees.DbAggregate> beschreibt die Argumente des Aggregats.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResultType">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.TypeUsage ResultType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Metadata.Edm.TypeUsage ResultType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.CommandTrees.DbAggregate.ResultType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.TypeUsage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Ergebnistyp dieses <see cref="T:System.Data.Common.CommandTrees.DbAggregate" /> ab.</summary>
+        <value>Der Ergebnistyp dieses <see cref="T:System.Data.Common.CommandTrees.DbAggregate" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Common.CommandTrees.DbAggregate.ResultType%2A>-Eigenschaft beschreibt den Ergebnistyp des Aggregats.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

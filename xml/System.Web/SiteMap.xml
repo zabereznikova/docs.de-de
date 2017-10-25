@@ -1,0 +1,323 @@
+<Type Name="SiteMap" FullName="System.Web.SiteMap">
+  <TypeSignature Language="C#" Value="public static class SiteMap" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit SiteMap extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.SiteMap" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.Web.SiteMap" /> Klasse ist eine in-Memory-Darstellung der Navigationsstruktur für einen Standort, das von einem oder mehreren Anbietern der Siteübersicht bereitgestellt wird. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Website-Zuordnungen werden verwendet, in Verbindung mit der <xref:System.Web.UI.WebControls.SiteMapDataSource>, <xref:System.Web.UI.WebControls.SiteMapPath>, und andere Steuerelemente, die eine effektive Navigationsschnittstelle zum Navigieren von einer Websites zu rendern. Ein <xref:System.Web.SiteMap> Objekt ist eine Komponente von Standortinfrastruktur Navigation der ASP.NET den Zugriff auf nur-Lese Karte Standortinformationen für Seiten- und Entwickler mithilfe der Navigation und <xref:System.Web.UI.WebControls.SiteMapDataSource> Steuerelemente. Andere Komponenten der ASP.NET-Infrastruktur der Navigation enthalten die <xref:System.Web.SiteMapProvider> und <xref:System.Web.XmlSiteMapProvider> Klassen, die Datei Web.sitemap und den verschiedenen Steuerelementen, die mit arbeiten die <xref:System.Web.SiteMap> Klasse, z. B. die <xref:System.Web.UI.WebControls.SiteMapPath> -Steuerelement, zum Rendern von Inhalt und Menüs.  
+  
+ Die <xref:System.Web.SiteMap> verfügt über mehrere Funktionen:  
+  
+-   Es stellt den Stammknoten der Navigationshierarchie (es kann nur ein Stammknoten) bereit.  
+  
+-   Es identifiziert, welche Site Kartenanbieter der Prinzipal oder Standard-Anbieter ist.  
+  
+-   Er behält den Überblick über die Anbieterobjekte, die zum Erstellen der <xref:System.Web.SiteMap>.  
+  
+ Im Grunde die <xref:System.Web.SiteMap> ist ein Container für eine hierarchische Auflistung der <xref:System.Web.SiteMapNode> Objekte. Allerdings die <xref:System.Web.SiteMap> behält die Beziehungen zwischen Knoten aus, und stattdessen delegiert dies an den Anbietern der Siteübersicht. Die <xref:System.Web.SiteMap> fungiert als eine Schnittstelle für die Navigation Standortinformationen (in Form von <xref:System.Web.SiteMapNode> Objekte), die von diesen Anbietern der Siteübersicht aufrechterhalten wird. Er behält den Überblick über den Anbieter aus dem können Zugriff auf Standortdaten für die Navigation und macht seine <xref:System.Web.SiteMap.Providers%2A> Auflistung. Ein Anbieter kann die Standortinformationen für die Zuordnung in keiner Weise speichern – solange es erweitert die <xref:System.Web.SiteMapProvider> abstrakte Klasse, die <xref:System.Web.SiteMap> Klasse daraus erfolgreich initialisiert werden kann.  
+  
+ Der Standardanbieter für die <xref:System.Web.SiteMap> Klasse ist die <xref:System.Web.XmlSiteMapProvider> -Klasse, die mit einer XML-Konfigurationsdatei Web.sitemap funktioniert. Sie können jedoch Schreiben eigener <xref:System.Web.SiteMapProvider> -Objekts und zum Initialisieren der Siteübersicht für Ihre Website verwenden. Ein Beispiel für eine benutzerdefinierte Website Kartenanbieter, finden Sie unter <xref:System.Web.SiteMapProvider>.  
+  
+ Eine standardmäßige Zuordnung Standortkonfiguration Angabe, die die Navigation Standortkonfiguration verwaltet. Sie können diese Konfiguration in der Datei "Web.config" überschreiben, die Sie auswählen sollten, eine eigene Website Kartenanbieter schreiben.  
+  
+ Die <xref:System.Web.SiteMap> Klasse bietet nur statische Member für Leistung und zu einem beliebigen Zeitpunkt in eine vorhandene Website aus einem Web Form oder Webserversteuerelement zugegriffen werden kann.  
+  
+   
+  
+## Examples  
+ Dieser Abschnitt enthält zwei Codebeispiele. Im ersten Codebeispiel wird veranschaulicht, wie einem Kartenanbieter Standort in eine Datei "Web.config" deklariert. Im zweiten Codebeispiel wird veranschaulicht, wie ein <xref:System.Web.SiteMap> Objekt.  
+  
+ Im folgenden Codebeispiel wird eine Datei "Web.config"-Konfigurationsabschnitt, der veranschaulicht, wie ein <xref:System.Web.XmlSiteMapProvider> Objekt wird als Standard deklariert <xref:System.Web.SiteMapProvider> Objekt.  
+  
+```  
+<siteMap defaultProvider="MyXmlSiteMapProvider" enabled="true">  
+  <providers>  
+    <add name="MyXmlSiteMapProvider"  
+      description="The site map provider that reads in the .sitemap XML files."  
+      type="System.Web.XmlSiteMapProvider, System.Web, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"  
+      siteMapFile="my.sitemap" />  
+  </providers>  
+</siteMap>  
+```  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.SiteMap> Objekt durch den Zugriff auf seine statischen Member zum Anzeigen von Informationen über die <xref:System.Web.SiteMap.RootNode%2A> und <xref:System.Web.SiteMap.CurrentNode%2A> Eigenschaften. Vergleichen Sie sie mit der Ausgabe, die vom gerendert wird die <xref:System.Web.UI.WebControls.SiteMapPath> Steuerelement.  
+  
+ [!code-aspx-csharp[System.Web.SiteMap_3#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SiteMap_3/CS/sitemapcs.aspx#1)]
+ [!code-aspx-vb[System.Web.SiteMap_3#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SiteMap_3/VB/sitemapvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CurrentNode">
+      <MemberSignature Language="C#" Value="public static System.Web.SiteMapNode CurrentNode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Web.SiteMapNode CurrentNode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SiteMap.CurrentNode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SiteMapNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Web.SiteMapNode" /> -Steuerelement, die gerade angeforderte Seite darstellt.</summary>
+        <value>Ein <see cref="T:System.Web.SiteMapNode" /> -Instanz, die gerade angeforderte Seite darstellt, andernfalls <see langword="null" />, sofern kein repräsentativer Knoten in die Standortinformationen für die Zuordnung vorhanden ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.SiteMap> -Klasse ruft die <xref:System.Web.SiteMap.CurrentNode%2A> Eigenschaft, indem sie vom Anbieter anfordern.  
+  
+ Wenn kein repräsentativer Knoten für die Seite in die Standortinformationen für die Zuordnung vorhanden ist oder aus Sicherheitsgründen aktiviert ist und der Knoten kann nicht für den aktuellen Benutzer zurückgeliefert werden `null` wird zurückgegeben.  
+  
+ Die <xref:System.Web.SiteMap.SiteMapResolve> Ereignis wird vom Standardanbieter der Zuordnung ausgelöst, wenn eine oder mehrere Abonnements vorhanden sind.  
+  
+ Wenn Sie eine eigene implementieren <xref:System.Web.SiteMapProvider> Objekt möglicherweise erstellen Sie einen eigenen Mechanismus zum Suchen und Abrufen der <xref:System.Web.SiteMapProvider.CurrentNode%2A>. Jedoch wenn Sie erweitern die <xref:System.Web.StaticSiteMapProvider> Klasse und ein URL-Schema zum Identifizieren von Seiten verwenden, können Sie überschreiben die <xref:System.Web.StaticSiteMapProvider.FindSiteMapNode%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.SiteMap.CurrentNode%2A> Eigenschaft zum Abrufen der <xref:System.Web.SiteMapNode> Objekt, das die aktuelle Seite darstellt.  
+  
+ [!code-aspx-csharp[System.Web.SiteMap_1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SiteMap_1/CS/catalogcs.aspx#1)]
+ [!code-aspx-vb[System.Web.SiteMap_1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SiteMap_1/VB/catalogvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Website-Map-Funktion ist nicht aktiviert.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">In der Konfiguration angegebene Standardanbieter ist nicht vorhanden.</exception>
+        <exception cref="T:System.Web.HttpException">Das Feature wird nur unterstützt, wenn in der geringen Vertrauenswürdigkeit oder höher ausgeführt wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public static bool Enabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SiteMap.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert, der angibt, ab, wenn einem Kartenanbieter Standort in der Datei "Web.config" angegeben ist und der Standort Kartenanbieter aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn einem Kartenanbieter Standort konfiguriert und aktiviert ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine standardmäßige Zuordnung Standortkonfiguration Angabe, die die Navigation Standortkonfiguration verwaltet. Sie können diese Konfiguration in der Datei "Web.config" überschreiben, die Sie auswählen sollten, eine eigene Website Kartenanbieter schreiben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine Datei "Web.config"-Konfigurationsabschnitt, der veranschaulicht, wie ein <xref:System.Web.XmlSiteMapProvider> Objekt wird deklariert, um das standardmäßige Pufferverhalten <xref:System.Web.SiteMapProvider> Objekt.  
+  
+```  
+<siteMap defaultProvider="MyXmlSiteMapProvider" enabled="true">  
+  <providers>  
+    <add name="MyXmlSiteMapProvider"  
+      description="SiteMap provider that reads in .sitemap XML files."  
+      type="System.Web.XmlSiteMapProvider, System.Web, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"  
+      siteMapFile="my.sitemap" />  
+  </providers>  
+</siteMap>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Provider">
+      <MemberSignature Language="C#" Value="public static System.Web.SiteMapProvider Provider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Web.SiteMapProvider Provider" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SiteMap.Provider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SiteMapProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die standardmäßigen ab <see cref="T:System.Web.SiteMapProvider" /> Objekt für die aktuelle Site-Zuordnung.</summary>
+        <value>Der Anbieter für die Zuordnung von Standort für die <see cref="T:System.Web.SiteMap" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird standardmäßig die <xref:System.Web.XmlSiteMapProvider> Objekt dient und Standortdaten für die Navigation erfolgt, aus der Datei Web.sitemap, die in das Stammverzeichnis der Website befindet. Dies wird in den Management-Klassen identifiziert, die die Navigation Standortkonfiguration und den Standort Zuordnung-Konfigurationsabschnitt der Datei Web.config zu verwalten. Standardmäßig ist es eine Instanz von der <xref:System.Web.XmlSiteMapProvider> -Klasse, die die Datei Web.sitemap als ihren permanenten Speicher verwendet. Sie können jedoch ein eigene Website-Zuordnung Speicher- und Schema implementieren, Schreiben Sie eine Klasse, die abstrakte implementiert <xref:System.Web.SiteMapProvider> Klasse. Weitere Informationen zum Schreiben von Ihren eigenen Anbieter finden Sie unter <xref:System.Web.SiteMapProvider>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie auf die Standardeinstellung <xref:System.Web.SiteMapProvider> Objekt für den Standort mithilfe der statischen <xref:System.Web.SiteMap.Provider%2A> Eigenschaft.  
+  
+ [!code-aspx-csharp[System.Web.SiteMap_2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SiteMap_2/CS/catalog2cs.aspx#1)]
+ [!code-aspx-vb[System.Web.SiteMap_2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SiteMap_2/VB/catalog2vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Website-Map-Funktion ist nicht aktiviert.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">In der Konfiguration angegebene Standardanbieter ist nicht vorhanden.</exception>
+        <exception cref="T:System.Web.HttpException">Das Feature wird nur unterstützt, wenn in der geringen Vertrauenswürdigkeit oder höher ausgeführt wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Providers">
+      <MemberSignature Language="C#" Value="public static System.Web.SiteMapProviderCollection Providers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Web.SiteMapProviderCollection Providers" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SiteMap.Providers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SiteMapProviderCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine schreibgeschützte Auflistung von namens <see cref="T:System.Web.SiteMapProvider" /> Objekte, die zur Verfügung stehen die <see cref="T:System.Web.SiteMap" /> Klasse.</summary>
+        <value>Ein <see cref="T:System.Web.SiteMapProviderCollection" /> des benannten <see cref="T:System.Web.SiteMapProvider" /> Objekte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Anbietern der Siteübersicht, die in aufgeführt sind die <xref:System.Web.SiteMap.Providers%2A> Auflistung, die zum Initialisieren der Konfigurationshierarchie festgelegt sind, werden die <xref:System.Web.SiteMap> Klasse. Nur der Standardanbieter (identifizierte der <xref:System.Web.SiteMap.Provider%2A> Eigenschaft) wird sichergestellt, dass von verwendet werden die <xref:System.Web.SiteMap> während der Initialisierung; das Vorhandensein eines Anbieters in der <xref:System.Web.SiteMap.Providers%2A> Auflistung bedeutet, dass er in der Konfiguration angegeben wurde, und wurde während der Initialisierung verfügbar.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Abrufen der <xref:System.Web.SiteMap.Providers%2A> Auflistung aus der <xref:System.Web.SiteMap> Klasse, und klicken Sie dann die durchlaufen werden kann.  
+  
+ [!code-aspx-csharp[System.Web.SiteMap_2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SiteMap_2/CS/catalog2cs.aspx#1)]
+ [!code-aspx-vb[System.Web.SiteMap_2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SiteMap_2/VB/catalog2vb.aspx#1)]  
+  
+ Wenn Sie mehr als nur den Standardanbieter für Ihren Standort konfiguriert haben, sehen Sie jeder Anbieter angezeigt. Z. B. bei Verwendung von Microsoft Access-Beispielanbieter (siehe <xref:System.Web.StaticSiteMapProvider>), erhalten Sie die folgende Ausgabe:  
+  
+```  
+XmlSiteMapProvider   System.Web.XmlSiteMapProvider  
+AccessSiteMapProvider   Samples.AspNet.AccessSiteMapProvider  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Website-Map-Funktion ist nicht aktiviert.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">In der Konfiguration angegebene Standardanbieter ist nicht vorhanden.</exception>
+        <exception cref="T:System.Web.HttpException">Das Feature wird nur unterstützt, wenn in der geringen Vertrauenswürdigkeit oder höher ausgeführt wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RootNode">
+      <MemberSignature Language="C#" Value="public static System.Web.SiteMapNode RootNode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Web.SiteMapNode RootNode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SiteMap.RootNode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SiteMapNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Web.SiteMapNode" /> Objekt, das Seite die obersten Ebene der Navigationsstruktur für den Standort darstellt.</summary>
+        <value>Ein <see cref="T:System.Web.SiteMapNode" /> , die Seite der Navigationsstruktur des Standorts die obersten Ebene darstellt, andernfalls <see langword="null" />, wenn aus Sicherheitsgründen aktiviert ist und der Knoten kann nicht mit dem aktuellen Benutzer zurückgegeben werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.SiteMap> -Klasse ruft die <xref:System.Web.SiteMap.RootNode%2A> Eigenschaft, indem sie vom Anbieter anfordern. Wenn es eine Anbieterhierarchie, die <xref:System.Web.SiteMap> Klasse ruft den Stammknoten des Stammanbieters in der Hierarchie ab. Um den Stammknoten des Standardanbieters zuzugreifen, rufen die <xref:System.Web.SiteMap.Provider%2A> -Eigenschaft, die beide den Standardanbieter abruft und die zugehörige <xref:System.Web.SiteMapProvider.RootNode%2A> Eigenschaft.  
+  
+ Die <xref:System.Web.XmlSiteMapProvider> -Objekt, das der Standardanbieter ist für die <xref:System.Web.SiteMap> -Klasse unterstützt nur einen <xref:System.Web.XmlSiteMapProvider.RootNode%2A>.  
+  
+ Wenn Sie eine eigene implementieren <xref:System.Web.SiteMapProvider> Klasse, und überschreiben Sie die abstrakte <xref:System.Web.SiteMapProvider.RootNode%2A> -Eigenschaft, müssen Sie eine eigene Implementierung zum Nachverfolgen von bereitzustellen der <xref:System.Web.SiteMapProvider.RootNode%2A> Eigenschaft von der <xref:System.Web.SiteMapNode> Instanz.  
+  
+ Der Stammknoten muss für alle Benutzer, beabsichtigt sichtbar. Ist der Stammknoten nicht für alle Benutzer sichtbar beim Sicherheitsgründen aktiviert ist, den Zugriff auf die <xref:System.Web.SiteMap.RootNode%2A> Eigenschaft unter Umständen eine <xref:System.InvalidOperationException> Ausnahme.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.SiteMap.RootNode%2A> Eigenschaft zum Abrufen der <xref:System.Web.SiteMapNode> Objekt, das den Stammknoten des Standorts, unabhängig von der aktuellen Position in der Seitenhierarchie darstellt.  
+  
+ [!code-aspx-csharp[System.Web.SiteMap_1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SiteMap_1/CS/catalogcs.aspx#1)]
+ [!code-aspx-vb[System.Web.SiteMap_1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SiteMap_1/VB/catalogvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Website-Map-Funktion ist nicht aktiviert.  
+  
+ \- oder –  
+  
+ Die <see cref="P:System.Web.SiteMap.RootNode" /> löst in <see langword="null" />, Dies tritt ein, wenn aus Sicherheitsgründen aktiviert ist und der Stammknoten nicht mit dem aktuellen Benutzer sichtbar ist.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">In der Konfiguration angegebene Standardanbieter ist nicht vorhanden.</exception>
+        <exception cref="T:System.Web.HttpException">Das Feature wird nur unterstützt, wenn in der geringen Vertrauenswürdigkeit oder höher ausgeführt wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SiteMapResolve">
+      <MemberSignature Language="C#" Value="public static event System.Web.SiteMapResolveEventHandler SiteMapResolve;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.SiteMapResolveEventHandler SiteMapResolve" />
+      <MemberSignature Language="DocId" Value="E:System.Web.SiteMap.SiteMapResolve" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SiteMapResolveEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die <see cref="P:System.Web.SiteMap.CurrentNode" /> Eigenschaft zugegriffen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anfügen von Abonnenten eine <xref:System.Web.SiteMapResolveEventHandler> Objekt, das die statische <xref:System.Web.SiteMap.SiteMapResolve> Ereignis benachrichtigt werden soll bei der <xref:System.Web.SiteMap.CurrentNode%2A> Eigenschaft zugegriffen wird. Dadurch kann der Benutzer benutzerdefinierten Logik implementieren, beim Erstellen einer <xref:System.Web.SiteMapNode> Darstellung der aktuell ausgeführten Seite ohne Implementierung eines benutzerdefinierten Anbieters.  
+  
+ Wenn Sie abonnieren das <xref:System.Web.SiteMap.SiteMapResolve> Ereignis auch abonnieren Sie die <xref:System.Web.SiteMapProvider.SiteMapResolve> Ereignis auf der Website-Karte Standardanbieter.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie behandelt die <xref:System.Web.SiteMap.SiteMapResolve> Ereignis auf einer ASP.NET-Webseite so ändern Sie den Ziel-URLs, die von einem Standort Navigation-Steuerelement angezeigt werden, z. B. die <xref:System.Web.UI.WebControls.SiteMapPath> Steuerelement. In diesem Beispiel wird die aktuelle Seite eine Post-Seite in einem online Bulletin Boards oder Forum. Um aussagekräftigere Rendern Websitenavigation, die URLs der Knoten, die vom Navigationssteuerelement angezeigt werden relevante Abfragezeichenfolgen Kontext angefügt.  
+  
+> [!NOTE]
+>  Die Website-Navigation ASP.NET-Infrastruktur schützt, vor Endlosschleife, die eine Schutzvorrichtung bereitgestellt und minimiert das Sicherheitsrisiko, das Zugriff auf zugeordnet ist die <xref:System.Web.SiteMap.CurrentNode%2A> Eigenschaft innerhalb der <xref:System.Web.SiteMapResolveEventHandler> Klasse.  
+  
+ Der folgende Code ist Teil der Datei "Global.asax". Der Ereignishandler wird nur einmal für die Anwendung angefügt werden. Der Code erkennt, ob die Seite implementiert die `ISiteMapResolver` Schnittstelle. Wenn die Schnittstelle implementiert wird, die `ExpandForumPaths` Funktion aufgerufen wird.  
+  
+ [!code-csharp[System.Web.SiteMap.SiteMapResolve#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SiteMap.SiteMapResolve/CS/sitemapresolve1cs.aspx.cs#1)]
+ [!code-vb[System.Web.SiteMap.SiteMapResolve#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SiteMap.SiteMapResolve/VB/sitemapresolve1vb.aspx.vb#1)]  
+  
+ Der folgende Code definiert eine separate Schnittstelle. (In einem Websiteprojekt können Sie diesen Code im Ordner "App_Code" einfügen.) Die `ISiteMapResolver` Schnittstelle definiert die `ExpandForumPaths` Methode.  
+  
+ [!code-csharp[System.Web.SiteMap.SiteMapResolve#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SiteMap.SiteMapResolve/CS/sitemapresolve1cs.aspx.cs#2)]
+ [!code-vb[System.Web.SiteMap.SiteMapResolve#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SiteMap.SiteMapResolve/VB/sitemapresolve1vb.aspx.vb#2)]  
+  
+ Der folgende Code gehört, mit der Seite, die mindestens drei Knoten ist tief in der Siteübersicht Struktur. Die Seite implementiert die `ISiteMapResolver` -Schnittstelle ein, wodurch die `ExpandForumPaths` Methode, die aufgerufen werden.  
+  
+ [!code-aspx-csharp[System.Web.SiteMap.SiteMapResolve#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SiteMap.SiteMapResolve/CS/sitemapresolve1cs.aspx#3)]
+ [!code-aspx-vb[System.Web.SiteMap.SiteMapResolve#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SiteMap.SiteMapResolve/VB/sitemapresolve1vb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

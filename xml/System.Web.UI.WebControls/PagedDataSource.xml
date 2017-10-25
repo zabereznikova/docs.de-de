@@ -1,0 +1,711 @@
+<Type Name="PagedDataSource" FullName="System.Web.UI.WebControls.PagedDataSource">
+  <TypeSignature Language="C#" Value="public sealed class PagedDataSource : System.Collections.ICollection, System.ComponentModel.ITypedList" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PagedDataSource extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.ComponentModel.ITypedList" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.PagedDataSource" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ITypedList</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Kapselt die Auslagerung-bezogenen Eigenschaften eines datengebundenen Steuerelements (z. B. <see cref="T:System.Web.UI.WebControls.DataGrid" />, <see cref="T:System.Web.UI.WebControls.GridView" />, <see cref="T:System.Web.UI.WebControls.DetailsView" />, und <see cref="T:System.Web.UI.WebControls.FormView" />), mit denen das Paging. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.PagedDataSource> -Klasse kapselt die Eigenschaften, die Datenquellen-Steuerelementen, wie z. B. können die <xref:System.Web.UI.WebControls.DataGrid>, <xref:System.Web.UI.WebControls.GridView>, <xref:System.Web.UI.WebControls.DetailsView>, und <xref:System.Web.UI.WebControls.FormView>, das Paging. Diese Klasse wird von Steuerelemententwicklern verwendet, bei der Bereitstellung von Unterstützung der Paginierung auf ein benutzerdefiniertes datengebundenen Steuerelement.  
+  
+ Diese Klasse verwendet die optimale Methode zur Aufzählung der Daten, die der aktuellen Seite gehören. Wenn die zugrunde liegenden Datenquelle indizierten Zugriff unterstützt (z. B. <xref:System.Array?displayProperty=nameWithType> und <xref:System.Collections.IList?displayProperty=nameWithType>), verwendet die Klasse diese. Andernfalls wird den Enumerator erstellt, indem die <xref:System.Collections.IEnumerable.GetEnumerator%2A> Methode.  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.WebControls.PagedDataSource>, finden Sie unter der <xref:System.Web.UI.WebControls.PagedDataSource.%23ctor%2A> Konstruktor.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PagedDataSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.PagedDataSource.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.PagedDataSource" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.PagedDataSource> Klasse.  
+  
+ In der folgenden Tabelle zeigt die anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.WebControls.PagedDataSource>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.PagedDataSource.AllowCustomPaging%2A>|`false`|  
+|<xref:System.Web.UI.WebControls.PagedDataSource.AllowPaging%2A>|`false`|  
+|<xref:System.Web.UI.WebControls.PagedDataSource.AllowServerPaging%2A>|`false`|  
+|<xref:System.Web.UI.WebControls.PagedDataSource.CurrentPageIndex%2A>|0|  
+|<xref:System.Web.UI.WebControls.PagedDataSource.PageSize%2A>|10|  
+|<xref:System.Web.UI.WebControls.PagedDataSource.VirtualCount%2A>|0|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowCustomPaging">
+      <MemberSignature Language="C#" Value="public bool AllowCustomPaging { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowCustomPaging" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.AllowCustomPaging" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das benutzerdefiniertes Paging in einem datengebundenen Steuerelement aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn das benutzerdefiniertes Paging aktiviert ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.PagedDataSource.AllowCustomPaging%2A> Eigenschaft, um anzugeben, ob das benutzerdefiniertes Paging aktiviert ist. Benutzerdefiniertes Paging ist ein optionaler Typ auslagerungen insbesondere vom bereitgestellten der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement. ASP.NET Version 2.0 des datengebundenen Steuerelements (z. B. <xref:System.Web.UI.WebControls.GridView>, <xref:System.Web.UI.WebControls.DetailsView>, und <xref:System.Web.UI.WebControls.FormView>) serverseitiges Paging verwendet und das benutzerdefiniertes Paging nicht unterstützt. Benutzerdefinierte und serverseitiges Paging schließen sich gegenseitig aus. Wenn Sie festlegen, <xref:System.Web.UI.WebControls.PagedDataSource.AllowCustomPaging%2A> auf `true`, achten Sie darauf, <xref:System.Web.UI.WebControls.PagedDataSource.AllowServerPaging%2A> festgelegt ist, um `false`.  
+  
+ Weitere Informationen über benutzerdefiniertes Paging finden Sie unter <xref:System.Web.UI.WebControls.DataGrid.AllowCustomPaging%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowPaging">
+      <MemberSignature Language="C#" Value="public bool AllowPaging { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowPaging" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.AllowPaging" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob in einem datengebundenen Steuerelement Paging aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn Auslagerung aktiviert ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.PagedDataSource.AllowPaging%2A> Eigenschaft, um anzugeben, ob ein datengebundenes Steuerelement Paging aktiviert ist. ASP.NET Version 2.0 von datengebundenen Steuerelementen (z. B. <xref:System.Web.UI.WebControls.GridView>, <xref:System.Web.UI.WebControls.DetailsView>, und <xref:System.Web.UI.WebControls.FormView>) auch serverseitiges Paging verwenden, um automatische Pagingfunktionen bereitzustellen. Weitere Informationen über serverseitiges Paging finden Sie unter <xref:System.Web.UI.WebControls.PagedDataSource.AllowServerPaging%2A>. Bei Verwendung der <xref:System.Web.UI.WebControls.DataGrid> -Steuerelement, Sie können auch eigene benutzerdefinierte Paginglogik bereitstellen. Weitere Informationen über das benutzerdefinierte Paging finden Sie unter <xref:System.Web.UI.WebControls.DataGrid.AllowCustomPaging%2A?displayProperty=nameWithType> und <xref:System.Web.UI.WebControls.PagedDataSource.AllowCustomPaging%2A?displayProperty=nameWithType>.  
+  
+ Weitere Informationen zur pagingunterstützung von für datengebundene Steuerelemente finden Sie unter der `AllowPaging` Eigenschaft des datengebundenen Steuerelements.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowServerPaging">
+      <MemberSignature Language="C#" Value="public bool AllowServerPaging { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowServerPaging" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.AllowServerPaging" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob serverseitiges Paging aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn serverseitiges Paging aktiviert ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET Version 2.0 von datengebundenen Steuerelementen (z. B. <xref:System.Web.UI.WebControls.GridView>, <xref:System.Web.UI.WebControls.DetailsView>, und <xref:System.Web.UI.WebControls.FormView>) mithilfe von serverseitiges Paging automatische Pagingfunktionen bereitzustellen. Wenn Sie ein datengebundenes Steuerelement von ASP.NET 2.0 verwenden, legen Sie diese Eigenschaft auf `true`.  
+  
+> [!NOTE]
+>  Serverseitiges und benutzerdefiniertes Paging schließen sich gegenseitig aus. Wenn Sie festlegen, <xref:System.Web.UI.WebControls.PagedDataSource.AllowServerPaging%2A> auf `true`, achten Sie darauf, <xref:System.Web.UI.WebControls.PagedDataSource.AllowCustomPaging%2A> festgelegt ist, um `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.PagedDataSource.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Eine nullbasierte <see cref="T:System.Array" /> , empfängt der kopierten Elemente aus der Datenquelle.</param>
+        <param name="index">Die erste Position in der angegebenen <see cref="T:System.Array" /> den kopierten Inhalt empfängt.</param>
+        <summary>Kopiert alle Elemente aus der Datenquelle mit dem angegebenen <see cref="T:System.Array" />, beginnend am angegebenen Index in die <see cref="T:System.Array" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode können Sie den Inhalt der Datenquelle in das angegebene kopieren <xref:System.Array?displayProperty=nameWithType>, beginnend am angegebenen Index. Die <xref:System.Array?displayProperty=nameWithType> wird häufig zum Durchlaufen der Elemente in der Datenquelle verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Elemente aus der Datenquelle verwendet werden.</summary>
+        <value>Die Anzahl der Elemente aus der Datenquelle verwendet werden sollen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.PagedDataSource.Count%2A> -Eigenschaft können Sie bestimmen die Anzahl der Elemente aus der Datenquelle verwendet werden sollen. Der zurückgegebene Wert hängt davon ab, ob die Auslagerung aktiviert ist, und gibt an, ob das benutzerdefinierte Paging verwendet wird.  
+  
+-   Wenn das Paging deaktiviert ist (durch Festlegen der <xref:System.Web.UI.WebControls.PagedDataSource.IsPagingEnabled%2A> Eigenschaft, um `false`), den Wert des der <xref:System.Web.UI.WebControls.PagedDataSource.DataSourceCount%2A> Eigenschaft zurückgegeben wird.  
+  
+-   Wenn Paging aktiviert ist (durch Festlegen der <xref:System.Web.UI.WebControls.PagedDataSource.IsPagingEnabled%2A> Eigenschaft, um `true`) und benutzerdefiniertes Paging aktiviert ist (durch Festlegen der <xref:System.Web.UI.WebControls.PagedDataSource.IsCustomPagingEnabled%2A> -Eigenschaftensatz auf `true`), den Wert des der <xref:System.Web.UI.WebControls.PagedDataSource.PageSize%2A> Eigenschaft zurückgegeben wird.  
+  
+-   Wenn Auslagerung aktiviert ist (durch Festlegen der <xref:System.Web.UI.WebControls.PagedDataSource.IsPagingEnabled%2A> Eigenschaft `true`) und die <xref:System.Web.UI.WebControls.PagedDataSource.IsLastPage%2A> -Eigenschaftensatz auf `false`, den Wert des der <xref:System.Web.UI.WebControls.PagedDataSource.PageSize%2A> Eigenschaft zurückgegeben wird.  
+  
+-   Wenn Auslagerung aktiviert ist (durch Festlegen der <xref:System.Web.UI.WebControls.PagedDataSource.IsPagingEnabled%2A> Eigenschaft, um `true`), benutzerdefiniertes Paging ist deaktiviert (durch Festlegen der <xref:System.Web.UI.WebControls.PagedDataSource.IsCustomPagingEnabled%2A> Eigenschaft `false`), und die <xref:System.Web.UI.WebControls.PagedDataSource.IsLastPage%2A> -Eigenschaftensatz auf `true`, den Wert der <xref:System.Web.UI.WebControls.PagedDataSource.DataSourceCount%2A>Eigenschaft wird vom Wert subtrahiert die <xref:System.Web.UI.WebControls.PagedDataSource.FirstIndexInPage%2A> Eigenschaft, bevor sie zurückgegeben werden.  
+  
+> [!NOTE]
+>  Wenn die <xref:System.Web.UI.WebControls.PagedDataSource.DataSource%2A> Eigenschaft enthält `null`, wird 0 zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentPageIndex">
+      <MemberSignature Language="C#" Value="public int CurrentPageIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CurrentPageIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.CurrentPageIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Index der aktuellen Seite fest.</summary>
+        <value>Der Index der aktuellen Seite.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.PagedDataSource.CurrentPageIndex%2A> Eigenschaft angeben oder den Index der aktuellen Seite zu ermitteln.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSource">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerable DataSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerable DataSource" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.DataSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest.</summary>
+        <value>Ein <see cref="T:System.Collections.IEnumerable" /> implementiert-Objekt, das die Datenquelle darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.PagedDataSource.DataSource%2A> Eigenschaft angeben oder die Datenquelle, die ausgelagerte ermitteln.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSourceCount">
+      <MemberSignature Language="C#" Value="public int DataSourceCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DataSourceCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.DataSourceCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Elemente in der Datenquelle ab.</summary>
+        <value>Die Anzahl der Elemente in der Datenquelle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.PagedDataSource.DataSourceCount%2A> -Eigenschaft können Sie die Anzahl der Elemente in der Datenquelle zu bestimmen. Wenn benutzerdefiniertes oder serverseitiges Paging verwendet wird, den Wert der <xref:System.Web.UI.WebControls.PagedDataSource.VirtualCount%2A> Eigenschaft zurückgegeben; andernfalls wird die Gesamtanzahl der Elemente in der Datenquelle zurückgegeben.  
+  
+> [!NOTE]
+>  Wenn die <xref:System.Web.UI.WebControls.PagedDataSource.DataSource%2A> Eigenschaft enthält `null`, wird 0 zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Die Datenquelle ist ein <see cref="T:System.Collections.ICollection" /> Objekt implementiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstIndexInPage">
+      <MemberSignature Language="C#" Value="public int FirstIndexInPage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 FirstIndexInPage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.FirstIndexInPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index des ersten Datensatzes, der auf der Seite angezeigt.</summary>
+        <value>Der Index des ersten Datensatzes, der auf der Seite angezeigt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.PagedDataSource.FirstIndexInPage%2A> -Eigenschaft können Sie den Index des ersten Elements auf der aktuellen Seite zu bestimmen.  
+  
+> [!NOTE]
+>  Wenn die <xref:System.Web.UI.WebControls.PagedDataSource.IsPagingEnabled%2A> -Eigenschaftensatz auf `false`, oder die <xref:System.Web.UI.WebControls.PagedDataSource.IsCustomPagingEnabled%2A> oder <xref:System.Web.UI.WebControls.PagedDataSource.AllowServerPaging%2A> Eigenschaften werden festgelegt, um `true`, oder die <xref:System.Web.UI.WebControls.PagedDataSource.DataSource%2A> Eigenschaft enthält `null`, wird 0 zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.PagedDataSource.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.Collections.IEnumerator" /> implementiert-Objekt, das alle Elemente in der Datenquelle enthält.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" /> implementiert-Objekt, das alle Elemente in der Datenquelle enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Erstellen einer <xref:System.Collections.IEnumerator?displayProperty=nameWithType> , der durchlaufen werden kann, um jedes Element in der Datenquelle abzurufen. Verwenden Sie für den Zugriff auf das Element an der aktuellen Position des Enumerators, der <xref:System.Collections.IEnumerator.Current%2A?displayProperty=nameWithType> Eigenschaft. Verwenden der <xref:System.Collections.IEnumerator.MoveNext%2A?displayProperty=nameWithType> -Methode zum nächsten Element in der Auflistung zu verschieben. Um den Enumerator auf seine anfängliche Position zu verschieben, verwenden Sie die <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> Methode.  
+  
+> [!NOTE]
+>  Wenn Sie anfänglich Abrufen des Enumerators oder verwenden Sie die <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> Methode, um den Enumerator auf das erste Element in der Auflistung rufen Sie die <xref:System.Collections.IEnumerator.MoveNext%2A?displayProperty=nameWithType> Methode. Andernfalls das Element dargestellt, durch die <xref:System.Collections.IEnumerator.Current%2A?displayProperty=nameWithType> Eigenschaft ist nicht definiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItemProperties">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.PropertyDescriptorCollection GetItemProperties (System.ComponentModel.PropertyDescriptor[] listAccessors);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptorCollection GetItemProperties(class System.ComponentModel.PropertyDescriptor[] listAccessors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.PagedDataSource.GetItemProperties(System.ComponentModel.PropertyDescriptor[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="listAccessors" Type="System.ComponentModel.PropertyDescriptor[]" />
+      </Parameters>
+      <Docs>
+        <param name="listAccessors">Ein Array von <see cref="T:System.ComponentModel.PropertyDescriptor" /> Objekte zurückgegeben, die den Namen der Liste enthält. Dieser Wert kann <see langword="null" /> sein.</param>
+        <summary>Gibt die <see cref="T:System.ComponentModel.PropertyDescriptorCollection" />-Klasse zurück, die die Eigenschaften auf jedem Element darstellt, das zum Binden von Daten verwendet wird.</summary>
+        <returns>Die <see cref="T:System.ComponentModel.PropertyDescriptorCollection" />, die die Eigenschaften auf jedem Element darstellt, das zum Binden von Daten verwendet wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.PagedDataSource.GetItemProperties%2A> Methode zum Erstellen einer <xref:System.ComponentModel.PropertyDescriptorCollection?displayProperty=nameWithType> , die die Eigenschaften für jedes Element, das zum Binden von Daten darstellt. Wenn die <xref:System.Web.UI.WebControls.PagedDataSource.DataSource%2A> Eigenschaft ist `null` oder keine <xref:System.ComponentModel.ITypedList?displayProperty=nameWithType> Objekt implementiert `null` zurückgegeben wird. Weitere Informationen zu den <xref:System.Web.UI.WebControls.PagedDataSource.GetItemProperties%2A> -Methode finden Sie unter <xref:System.ComponentModel.ITypedList.GetItemProperties%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetListName">
+      <MemberSignature Language="C#" Value="public string GetListName (System.ComponentModel.PropertyDescriptor[] listAccessors);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetListName(class System.ComponentModel.PropertyDescriptor[] listAccessors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.PagedDataSource.GetListName(System.ComponentModel.PropertyDescriptor[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="listAccessors" Type="System.ComponentModel.PropertyDescriptor[]" />
+      </Parameters>
+      <Docs>
+        <param name="listAccessors">Ein Array von <see cref="T:System.ComponentModel.PropertyDescriptor" /> Objekte zurückgegeben, die den Namen der Liste enthält. Dieser Wert kann <see langword="null" /> sein.</param>
+        <summary>Gibt den Namen der Liste zurück. Diese Methode gilt nicht für diese Klasse.</summary>
+        <returns>
+          <see cref="F:System.String.Empty" />in allen Fällen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird vom geerbt <xref:System.ComponentModel.ITypedList?displayProperty=nameWithType> und gilt nicht für diese Klasse. Es wurde implementiert, um zurückzukehren <xref:System.String.Empty?displayProperty=nameWithType> in allen Fällen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCustomPagingEnabled">
+      <MemberSignature Language="C#" Value="public bool IsCustomPagingEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCustomPagingEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.IsCustomPagingEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das benutzerdefiniertes Paging aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn das benutzerdefiniertes Paging aktiviert ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.PagedDataSource.IsCustomPagingEnabled%2A> Eigenschaft, um zu bestimmen, ob das benutzerdefiniertes Paging aktiviert ist.  
+  
+> [!NOTE]
+>  Sowohl die <xref:System.Web.UI.WebControls.PagedDataSource.IsPagingEnabled%2A> und <xref:System.Web.UI.WebControls.PagedDataSource.AllowCustomPaging%2A> Eigenschaften muss `true` für diese Eigenschaft zurückzugebenden `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFirstPage">
+      <MemberSignature Language="C#" Value="public bool IsFirstPage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFirstPage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.IsFirstPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die aktuelle Seite die erste Seite ist.</summary>
+        <value>
+          <see langword="true" />Wenn die aktuelle Seite die erste Seite ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.PagedDataSource.IsFirstPage%2A> Eigenschaft, um zu bestimmen, ob die aktuelle Seite die erste Seite ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLastPage">
+      <MemberSignature Language="C#" Value="public bool IsLastPage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLastPage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.IsLastPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die aktuelle Seite die letzte Seite ist.</summary>
+        <value>
+          <see langword="true" />Wenn die aktuelle Seite die letzte Seite ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.PagedDataSource.IsLastPage%2A> Eigenschaft, um zu bestimmen, ob die aktuelle Seite die letzte Seite ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPagingEnabled">
+      <MemberSignature Language="C#" Value="public bool IsPagingEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPagingEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.IsPagingEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob Paging aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn Auslagerung aktiviert ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.PagedDataSource.IsPagingEnabled%2A> Eigenschaft, um zu bestimmen, ob die Auslagerung aktiviert ist.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.PagedDataSource.AllowPaging%2A> Eigenschaft muss `true` und <xref:System.Web.UI.WebControls.PagedDataSource.PageSize%2A> Eigenschaft kann nicht für diese Eigenschaft zurückzugebenden auf 0 festgelegt werden `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Datenquelle schreibgeschützt ist.</summary>
+        <value>
+          <see langword="false" />in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird implementiert, um stets `false`, was bedeutet, dass die Datenquelle in allen Fällen geändert werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsServerPagingEnabled">
+      <MemberSignature Language="C#" Value="public bool IsServerPagingEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsServerPagingEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.IsServerPagingEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob Unterstützung für serverseitiges Paging aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn Paging aktiviert ist und serverseitiges Paging angegeben wird, mit der <see cref="P:System.Web.UI.WebControls.PagedDataSource.AllowServerPaging" /> Eigenschaft ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Serverseitiges Paging aktiviert ist bei der <xref:System.Web.UI.WebControls.PagedDataSource.AllowPaging%2A> und <xref:System.Web.UI.WebControls.PagedDataSource.AllowServerPaging%2A> Eigenschaften festgelegt `true`, und die Menge der von der Datenquelle abgerufenen Daten nicht in einer einzelnen Seite angezeigt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Zugriff auf die Datenquelle synchronisiert (threadsicher).</summary>
+        <value>
+          <see langword="false" />in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stammt aus dem <xref:System.Collections.ICollection?displayProperty=nameWithType> -Klasse und wird überschrieben, um stets `false` , um anzugeben, dass diese Klasse nicht threadsicher ist.  
+  
+ Weitere Informationen zu den <xref:System.Web.UI.WebControls.PagedDataSource.IsSynchronized%2A> -Eigenschaft, finden Sie unter der <xref:System.Collections.ICollection.IsSynchronized%2A?displayProperty=nameWithType> Eigenschaft von der <xref:System.Collections.ICollection?displayProperty=nameWithType> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageCount">
+      <MemberSignature Language="C#" Value="public int PageCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PageCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.PageCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Gesamtanzahl der Seiten, die zum Anzeigen aller Elemente in der Datenquelle ab.</summary>
+        <value>Die Anzahl der Seiten, die zum Anzeigen aller Elemente in der Datenquelle erforderlich.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.PagedDataSource.PageCount%2A> Eigenschaft, um die Anzahl der Seiten, die zum Anzeigen aller Elemente in der Datenquelle zu ermitteln.  
+  
+> [!NOTE]
+>  Wenn die <xref:System.Web.UI.WebControls.PagedDataSource.DataSource%2A> Eigenschaft ist `null`, wird 0 zurückgegeben. Wenn die <xref:System.Web.UI.WebControls.PagedDataSource.IsPagingEnabled%2A> -Eigenschaftensatz auf `false` oder die <xref:System.Web.UI.WebControls.PagedDataSource.DataSourceCount%2A> Eigenschaft auf 0 oder weniger festgelegt ist, wird 1 zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageSize">
+      <MemberSignature Language="C#" Value="public int PageSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PageSize" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.PageSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Anzahl der Elemente auf einer einzelnen Seite angezeigt werden sollen.</summary>
+        <value>Die Anzahl der Elemente auf einer einzelnen Seite angezeigt werden sollen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.PagedDataSource.PageSize%2A> Eigenschaft festzulegen oder zu bestimmen die Anzahl der Elemente auf einer einzelnen Seite angezeigt werden sollen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt, das mit der Zugriff auf die Auflistung synchronisiert werden kann.</summary>
+        <value>Ein Objekt, mit dem der Zugriff auf die Auflistung synchronisiert werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das in dieser Implementierung zurückgegebene Objekt stellt der <xref:System.Web.UI.WebControls.PagedDataSource> Objekt selbst.  
+  
+ Weitere Informationen zu den <xref:System.Web.UI.WebControls.DataGridColumnCollection.SyncRoot%2A> -Eigenschaft, finden Sie unter der <xref:System.Collections.ICollection.SyncRoot%2A?displayProperty=nameWithType> Eigenschaft von der <xref:System.Collections.ICollection?displayProperty=nameWithType> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VirtualCount">
+      <MemberSignature Language="C#" Value="public int VirtualCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 VirtualCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.VirtualCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die virtuelle Anzahl von Elementen in der Datenquelle, wenn benutzerdefiniertes Paging verwendet wird.</summary>
+        <value>Die virtuelle Anzahl von Elementen in der Datenquelle, wenn das benutzerdefiniertes Paging verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.PagedDataSource.VirtualCount%2A> Eigenschaft, wenn Sie benutzerdefinierte oder serverseitiges Paging verwendet wird, um die virtuelle Anzahl von Elementen in der Datenquelle zu ermitteln. Weitere Informationen zu den <xref:System.Web.UI.WebControls.PagedDataSource.VirtualCount%2A> Eigenschaft finden Sie unter <xref:System.Web.UI.WebControls.DataGrid.VirtualItemCount%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

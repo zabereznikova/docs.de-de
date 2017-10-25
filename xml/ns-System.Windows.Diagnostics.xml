@@ -1,0 +1,13 @@
+<Namespace Name="System.Windows.Diagnostics">
+  <Docs>
+    <summary>Bietet Unterstützung für Windows Presentation Foundation (WPF)-XAML-Tools.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Klassen in diesem Namespace unterstützen die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] und werden nicht direkt aus Ihrem Code verwendet werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

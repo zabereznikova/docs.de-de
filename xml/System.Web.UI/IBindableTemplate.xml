@@ -1,0 +1,90 @@
+<Type Name="IBindableTemplate" FullName="System.Web.UI.IBindableTemplate">
+  <TypeSignature Language="C#" Value="public interface IBindableTemplate : System.Web.UI.ITemplate" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IBindableTemplate implements class System.Web.UI.ITemplate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IBindableTemplate" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.ITemplate</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Bietet eine Möglichkeit für ASP.NET datengebundenen Steuerelemente, z. B. <see cref="T:System.Web.UI.WebControls.DetailsView" /> und <see cref="T:System.Web.UI.WebControls.FormView" />, um automatisch an eine ASP.NET Datenquellen-Steuerelements in auf Vorlagen basierende Inhaltsabschnitte zu binden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.IBindableTemplate> Schnittstelle bietet eine Möglichkeit für ASP.NET datengebundenen Steuerelemente, z. B. <xref:System.Web.UI.WebControls.DetailsView>, <xref:System.Web.UI.WebControls.GridView>, und <xref:System.Web.UI.WebControls.FormView>, binden an Daten, z. B. von Datenquellen-Steuerelement, ein ASP.NET bereitgestellten <xref:System.Web.UI.WebControls.ObjectDataSource> oder <xref:System.Web.UI.WebControls.SqlDataSource>, wenn die datengebundenes Steuerelement umfasst Vorlageninhalt.  
+  
+> [!NOTE]
+>  Entwickler von Seiten implementiert nicht die <xref:System.Web.UI.IBindableTemplate> Schnittstelle. Entwickler, die Erstellung benutzerdefinierter datengebundene Steuerelemente bearbeiten möglicherweise <xref:System.Web.UI.IBindableTemplate> Objekte in Implementierungen von der <xref:System.Web.UI.WebControls.DataBoundControl.PerformDataBinding%2A> und <xref:System.Web.UI.WebControls.GridView.ExtractRowValues%2A> Methoden, jedoch nicht implementiert, ihre eigenen <xref:System.Web.UI.IBindableTemplate> Objekte.  
+  
+ Datengebundene Steuerelemente wie z. B. <xref:System.Web.UI.WebControls.GridView> in der Regel kennen ihre untergeordneten Steuerelement Strukturen und können daher Werte an diese binden, Extrahieren von Werten von ihnen und die Werte zwischen dem datengebundenen Steuerelement und ein Datenquellen-Steuerelement übergeben werden, wenn die Datenbindung tritt auf, . Wenn ein Entwickler auf Vorlagen basierenden Inhalt für ein datengebundenes Steuerelement definiert, das die untergeordneten Steuerelemente in der Vorlage sind jedoch nicht für das übergeordnete datengebundene Steuerelement sichtbar: Rendern des übergeordneten untergeordneten Inhalt (da effektiv selbst Rendern von Steuerelementen), aber es kann nicht extrahiert werden die Werte dieser untergeordneten Steuerelemente Übergabe an einen zugeordneten Datenquellen-Steuerelements Update, Insert oder Delete-Vorgang. In Datenbindungsszenarien ist auf Vorlagen basierenden Inhalt für eine übergeordnete datengebundene Steuerelement nicht transparent. Die `Bind` Syntax kommt es möglich, dass das datengebundene Steuerelement zum Extrahieren der Werte von einem Steuerelement datengebundenen innerhalb einer <xref:System.Web.UI.IBindableTemplate> Instanz.  
+  
+ Die Datenbindung kann uni- oder bidirektional sein. (Diese Bindung-Anweisungen werden definiert, indem die <xref:System.ComponentModel.BindingDirection> -Enumeration.) Unidirektionale Datenbindung ist, dass eine Datenbindung in eine ausgehende Richtung, aus den Datenquellen-Steuerelements an datengebundene Steuerelement ausgeführt. Beispielsweise beinhaltet Daten lesen Szenario unidirektionale Datenbindung. Für die unidirektionale Datenbindung, Sie können unidirektionale Daten Bindungssyntax verwenden (`<%# Eval("fieldname") %>`) in auf Vorlagen basierenden Inhalt und erübrigt sich die Syntax für bidirektionale Datenbindung verwenden. Bidirektionale Datenbindung beschreibt die Datenbindung in eingehender Richtung, aus dem datengebundenen Steuerelement, Datenquellen-Steuerelements. Automatische bearbeiten, INSERT- und Delete-Szenarien, die mithilfe von ASP.NET datengebundenen und Datenquellen-Steuerelementen sind bidirektionale Datenbindungsszenarien. Diese Szenarien verwenden bidirektionale Datenbindungsausdrücke (`<%# Bind("fieldname") %>`). Die <xref:System.Web.UI.IBindableTemplate> Schnittstelle und die ASP.NET-Infrastruktur automatische, deklarative, bidirektionale Datenbindung zwischen ASP.NET-Datenquellensteuerelemente und Vorlageninhalt zu unterstützen. Weitere Informationen über ASP.NET Datenbindungsausdrücke und zur Syntax finden Sie unter [Binden an Datenbanken](http://msdn.microsoft.com/en-us/ab7b2846-975b-4057-a948-45527497c742) und [Datenbindungsfunktionen Expressions Overview](http://msdn.microsoft.com/library/14cdd57d-0f82-4667-b503-73e1a96f136a).  
+  
+ Vorlageninhalt für datengebundene Steuerelemente wird am häufigsten deklarativ definiert werden. Die folgende Tabelle beschreibt die Prozesse, die am häufigsten zum Binden von Daten aus einer Vorlage gebildete an datengebundene Steuerelemente verwendet werden.  
+  
+|Datengebundenes Steuerelement|Prozess|  
+|-------------------------|-------------|  
+|<xref:System.Web.UI.WebControls.DetailsView>|Das datengebundene Steuerelement gebunden ist, Daten mithilfe der `DataSourceID` -Eigenschaft des Datenquellen-Steuerelements und der Inhalt aus einer Vorlage gebildete ist definiert einem <xref:System.Web.UI.WebControls.TemplateField.ItemTemplate%2A>, <xref:System.Web.UI.WebControls.TemplateField.EditItemTemplate%2A> oder <xref:System.Web.UI.WebControls.TemplateField.InsertItemTemplate%2A> Eigenschaft.|  
+|<xref:System.Web.UI.WebControls.GridView>|Das datengebundene Steuerelement gebunden ist, Daten mithilfe der `DataSourceID` -Eigenschaft des Datenquellen-Steuerelements und der Inhalt aus einer Vorlage gebildete ist definiert einem <xref:System.Web.UI.WebControls.TemplateField.ItemTemplate%2A> oder <xref:System.Web.UI.WebControls.TemplateField.EditItemTemplate%2A> Eigenschaft. Die <xref:System.Web.UI.WebControls.GridView> -Steuerelement einen Insert-Vorgang nicht unterstützt.|  
+|<xref:System.Web.UI.WebControls.FormView>|Das datengebundene Steuerelement gebunden ist, Daten mithilfe der `DataSourceID` Eigenschaft und den Inhalt aus einer Vorlage gebildete wird definiert, eine <xref:System.Web.UI.WebControls.FormView.ItemTemplate%2A>, <xref:System.Web.UI.WebControls.FormView.InsertItemTemplate%2A>, oder <xref:System.Web.UI.WebControls.FormView.EditItemTemplate%2A> -Eigenschaft, oder in einer <xref:System.Web.UI.WebControls.TemplateField> Objekt.|  
+  
+ Die <xref:System.Web.UI.WebControls.DataList> und <xref:System.Web.UI.WebControls.Repeater> Steuerelemente unterstützen nicht die automatische bidirektionale Datenbindungsszenarien.  
+  
+ ASP.NET erstellt implizit eine <xref:System.Web.UI.IBindableTemplate> Objekt, wenn aus einer Vorlage gebildete Inhalte, die an ein ASP.NET Datenquellen-Steuerelements innerhalb der Vorlage bindet analysiert werden. Insbesondere der Parser ASP.NET erstellt eine Instanz der <xref:System.Web.UI.CompiledBindableTemplateBuilder> Klasse bei der Vorlageninhalt analysiert wird, die ASP.NET Datenbindungsfunktionen Syntax verwendet, und enthält ASP.NET Web-Server-Steuerelemente, die die Datenbindung zu unterstützen. Diese ASP.NET-Serversteuerelemente sind gekennzeichnet durch die <xref:System.ComponentModel.BindableAttribute> Attribut.  
+  
+ Die <xref:System.Web.UI.IBindableTemplate> Schnittstelle definiert eine Methode, <xref:System.Web.UI.IBindableTemplate.ExtractValues%2A>. Diese Methode ist für die bidirektionale Datenbindung, definiert, sodass ein datengebundenes Steuerelement automatisch Name/Wert-Paare aus Vorlageninhalt extrahieren und die-Paare an ein Datenquellen-Steuerelement zur Laufzeit übergeben. Für die automatische Datenbindung erfolgreich ausgeführt werden kann, extrahiert die Feldnamen aus dem auf Vorlagen basierenden Inhalt durch die <xref:System.Web.UI.IBindableTemplate.ExtractValues%2A> Methode muss die Parameternamen in einer zugeordneten Datenquellen-Steuerelements entsprechen. Steuern von Entwicklern Aufruf der <xref:System.Web.UI.IBindableTemplate.ExtractValues%2A> Methode explizit nur in ihren Implementierungen von <xref:System.Web.UI.WebControls.FormView.ExtractRowValues%2A> oder eine andere ähnliche Methode eines benutzerdefinierten datengebundenen Steuerelements.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine <xref:System.Web.UI.WebControls.FormView> -Steuerelement deklarativ definieren Vorlageninhalt, binden Sie Daten einer <xref:System.Web.UI.WebControls.SqlDataSource> zu steuern, anzeigen und Bearbeiten vorhandener Datensätze. Der ASP.NET-Parser analysiert den Vorlageninhalt und erstellt eine <xref:System.Web.UI.IBindableTemplate> Objekt zur Laufzeit, die Werte von binden kann die <xref:System.Web.UI.WebControls.SqlDataSource> Steuerelement in die Bereiche für die Datenbindung von sowohl unidirektionale ASP.NET-Syntax Datenbindung in der Vorlage definiert (`<%# Eval("fieldname") %>`) und die bidirektionale Datenbindung Syntax (`<%# Bind("fieldname") %>`).  
+  
+> [!IMPORTANT]
+>  Dieses Steuerelement besitzt ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[FormView#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormView/CS/formvieweditcs.aspx#1)]
+ [!code-aspx-vb[FormView#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormView/VB/formvieweditvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ExtractValues">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary ExtractValues (System.Web.UI.Control container);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Specialized.IOrderedDictionary ExtractValues(class System.Web.UI.Control container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IBindableTemplate.ExtractValues(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="container">Die <see cref="T:System.Web.UI.Control" /> aus dem Name/Wert-Paare extrahiert werden soll, übergeben werden durch das datengebundene Steuerelement zu einem zugeordneten Datenquellen-Steuerelements in bidirektionalen Datenbindungsszenarien.</param>
+        <summary>Bei der Implementierung durch eine Klasse ruft einen Satz von Name/Wert-Paare für Werte, die mithilfe der bidirektionalen Datenbindung ASP.NET-Syntax innerhalb der Vorlageninhalt gebunden.</summary>
+        <returns>Ein <see cref="T:System.Collections.Specialized.IOrderedDictionary" /> von Name/Wert-Paaren. Der Name stellt den Namen des Steuerelements in auf Vorlagen basierenden Inhalt und der Wert ist der aktuelle Wert eines Eigenschaftswerts, der mithilfe der Syntax für bidirektionale Datenbindung gebunden.</returns>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Ein <see cref="M:System.Web.UI.IBindableTemplate.ExtractValues(System.Web.UI.Control)" /> Methode muss die folgenden Regeln entsprechen:  
+  
+-   Wenn mehr als eine Bindung für ein bestimmtes Feld vorhanden ist, wird die letzte Bindung festgestellt verwendet.  
+  
+-   Um den Bezeichner eines Steuerelements in verweisen die <see cref="M:System.Web.UI.IBindableTemplate.ExtractValues(System.Web.UI.Control)" /> -Methode, das Steuerelement muss eine benutzerdefinierte ID-Eigenschaft zur Analysezeit auch verfügen. Wenn keine ID vorhanden ist, führt dies zu einem Analysefehler.  
+  
+-   Syntax für bidirektionale Datenbindung ist nur gültig, in eine <see cref="T:System.Web.UI.ITemplate" /> oder <see cref="T:System.Web.UI.IBindableTemplate" /> Eigenschaft eines datengebundenen Steuerelements.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

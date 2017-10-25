@@ -1,0 +1,52 @@
+<Type Name="ICompositeControlDesignerAccessor" FullName="System.Web.UI.WebControls.ICompositeControlDesignerAccessor">
+  <TypeSignature Language="C#" Value="public interface ICompositeControlDesignerAccessor" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICompositeControlDesignerAccessor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ICompositeControlDesignerAccessor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Schnittstelle zum Zulassen von eines zusammengesetzten Steuerelements-Designers, um die untergeordneten Steuerelemente des zugeordneten Steuerelements zur Entwurfszeit neu zu erstellen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine abgeleitete Klasse <xref:System.Web.UI.WebControls.CompositeControl> implementiert die <xref:System.Web.UI.WebControls.ICompositeControlDesignerAccessor> Schnittstelle, damit den zugeordneten Designer aufrufen, des Steuerelements kann <xref:System.Web.UI.WebControls.ICompositeControlDesignerAccessor.RecreateChildControls%2A> Methode zur Entwurfszeit. Der zugeordnete Designer leiten von <xref:System.Web.UI.Design.WebControls.CompositeControlDesigner>.  
+  
+ Die <xref:System.Web.UI.WebControls.ICompositeControlDesignerAccessor> Schnittstelle wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="RecreateChildControls">
+      <MemberSignature Language="C#" Value="public void RecreateChildControls ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RecreateChildControls() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ICompositeControlDesignerAccessor.RecreateChildControls" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>In einem Steuerelement abgeleitet <see cref="T:System.Web.UI.WebControls.CompositeControl" />, das die untergeordneten Steuerelemente zur Entwurfszeit erstellt. Wird aufgerufen, durch das Steuerelement zugeordneten Designer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ICompositeControlDesignerAccessor.RecreateChildControls%2A> -Methode ermöglicht es einen Designer für ein zusammengesetztes Steuerelement untergeordneten Steuerelemente des Steuerelements zur Entwurfszeit neu zu erstellen.  
+  
+ Die <xref:System.Web.UI.WebControls.ICompositeControlDesignerAccessor.RecreateChildControls%2A> Methode wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

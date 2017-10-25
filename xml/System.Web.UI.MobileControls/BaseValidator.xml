@@ -1,0 +1,431 @@
+<Type Name="BaseValidator" FullName="System.Web.UI.MobileControls.BaseValidator">
+  <TypeSignature Language="C#" Value="public abstract class BaseValidator : System.Web.UI.MobileControls.TextControl, System.Web.UI.IValidator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BaseValidator extends System.Web.UI.MobileControls.TextControl implements class System.Web.UI.IValidator" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.BaseValidator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.MobileControls.TextControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IValidator</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("ErrorMessage")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer(typeof(System.Web.UI.Design.MobileControls.BaseValidatorDesigner))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.DataBindingHandler("System.Web.UI.Design.TextDataBindingHandler, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.MobileControls.DesignerAdapter(typeof(System.Web.UI.Design.MobileControls.Adapters.DesignerValidatorAdapter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Basisimplementierung für alle von dieser Klasse abgeleiteten Validierungssteuerelemente bereit. Eine abstrakte Klasse, die nicht instanziiert werden darf. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.BaseValidator> Klasse erbt von der <xref:System.Web.UI.MobileControls.TextControl> Basisklasse und verfügt daher über eine <xref:System.Web.UI.MobileControls.TextControl.Text%2A> Eigenschaft. Im Falle eines ungültigen Eintrags das Validierungssteuerelement zeigt den Wert der <xref:System.Web.UI.MobileControls.TextControl.Text%2A> Eigenschaft. Wenn die Eigenschaft nicht festgelegt ist, zeigt das Validierungssteuerelement den Wert des der <xref:System.Web.UI.MobileControls.BaseValidator.ErrorMessage%2A> Eigenschaft stattdessen; Dies ist der Text, die in angezeigt wird der <xref:System.Web.UI.MobileControls.ValidationSummary> Steuerelement. Dieses Verhalten ist konsistent mit Web Forms-Validierungssteuerelemente.  
+  
+ ASP.NET mobile-Steuerelemente, die Validierung unterstützen, sind die <xref:System.Web.UI.MobileControls.TextBox> Steuerelement (seine <xref:System.Web.UI.MobileControls.TextControl.Text%2A> Eigenschaft) und die <xref:System.Web.UI.MobileControls.SelectionList> Steuerelement (dessen <xref:System.Web.UI.MobileControls.SelectionList.SelectedIndex%2A> Eigenschaft). Andere Steuerelemente können bei der Validierung teilnehmen, einschließlich einer <xref:System.Web.UI.ValidationPropertyAttribute> Attribut. Weitere Informationen finden Sie unter der [Vorgehensweise: Überprüfen Sie anhand eines bestimmten Wertes für ASP.NET-Serversteuerelemente](http://msdn.microsoft.com/library/3db6f7e6-ad52-42cf-a429-c2aaa7d64ed7) Dokumentation.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BaseValidator ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.BaseValidator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.MobileControls.BaseValidator" />-Klasse. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Obwohl Sie nicht direkt erstellt eine <xref:System.Web.UI.MobileControls.BaseValidator> -Klasse, Sie können dieses Konstruktors vom Konstruktor einer erbenden Klasse aufrufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckControlValidationProperty">
+      <MemberSignature Language="C#" Value="protected void CheckControlValidationProperty (string name, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CheckControlValidationProperty(string name, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.BaseValidator.CheckControlValidationProperty(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Steuerelements, das eine Eigenschaft, die überprüft werden.</param>
+        <param name="propertyName">Der Name der Eigenschaft, die überprüft werden soll.</param>
+        <summary>Bestimmt, ob das angegebene Steuerelement validiert werden über eine Eigenschaft verfügt, die überprüft werden kann. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">entweder die <paramref name="name" /> oder <paramref name="propertyName" /> Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlPropertiesValid">
+      <MemberSignature Language="C#" Value="protected virtual bool ControlPropertiesValid ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool ControlPropertiesValid() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.BaseValidator.ControlPropertiesValid" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob die zu überprüfenden Eigenschaften gültig sind. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>
+          <see langword="true" />, wenn die zu überprüfenden Eigenschaften gültig sind, anderenfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">die <see cref="P:System.Web.UI.MobileControls.BaseValidator.ControlToValidate" /> -Eigenschaft ist leer, oder das Steuerelement ist nicht vorhanden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlToValidate">
+      <MemberSignature Language="C#" Value="public string ControlToValidate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ControlToValidate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.BaseValidator.ControlToValidate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.Design.MobileControls.Converters.ValidatedMobileControlConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die ID des Steuerelements, um zu überprüfen. Der Standardwert ist <see cref="F:System.String.Empty" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die ID des Steuerelements, um zu überprüfen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Löst eine Ausnahme während der Wiedergabe vor, wenn die ID leer oder ungültig ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateStyle">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.MobileControls.Style CreateStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.MobileControls.Style CreateStyle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.BaseValidator.CreateStyle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.Style</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt und gibt die <see cref="T:System.Web.UI.MobileControls.Style" /> Objekt, das dem Steuerelement zugeordnet werden. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Ein neues <see cref="T:System.Web.UI.MobileControls.Style" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateWebValidator">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.WebControls.BaseValidator CreateWebValidator ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.WebControls.BaseValidator CreateWebValidator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.BaseValidator.CreateWebValidator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.BaseValidator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Virtuelle Methode für die abgeleitete Klasse, um eine eigene aggregierte Webbestätigung zu erstellen. Die Webbestätigung dient zum Abrufen und Festlegen der allgemeinen Eigenschaften einer webbasierten Bestätigung. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Eine aggregierte Webbestätigung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erstellt und gibt das entsprechende Websteuerelemente Validierungssteuerelement-Objekt. Die standardmäßige Implementierung dieser Methode in einer <xref:System.Web.UI.WebControls.BaseValidator> Objekt gibt null zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Display">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.ValidatorDisplay Display { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.ValidatorDisplay Display" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.BaseValidator.Display" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ValidatorDisplay</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Verhalten der Fehlermeldung des Validierungssteuerelements. Der Standardwert ist <see cref="F:System.Web.UI.WebControls.ValidatorDisplay.Dynamic" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Das Anzeigeverhalten der Fehlermeldung des Validierungssteuerelements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.BaseValidator.Display%2A> unterstützt nur die Eigenschaft der <xref:System.Web.UI.WebControls.ValidatorDisplay.Dynamic> Wert.  
+  
+ Die .NET Framework-Webformulare <xref:System.Web.UI.WebControls.ValidatorDisplay> -Enumeration stellt die verschiedenen Verhaltensweisen der Anzeige der Fehlermeldungen in Validierungssteuerelementen dar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorMessage">
+      <MemberSignature Language="C#" Value="public string ErrorMessage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ErrorMessage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.BaseValidator.ErrorMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text, der für die Fehlermeldung verwendet wird. Der Standardwert ist <see cref="F:System.String.Empty" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Der Text, der für die Fehlermeldung verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird auf zwei Arten verwendet. Erste, wenn kein für Wert die <xref:System.Web.UI.MobileControls.BaseValidator.Display%2A> -Eigenschaft, der Wert der <xref:System.Web.UI.MobileControls.BaseValidator.ErrorMessage%2A> Eigenschaft wird an deren Stelle verwendet. Sekunde, bei der <xref:System.Web.UI.MobileControls.ValidationSummary> Steuerelement verwendet wird, die Zusammenfassung verwendet den Wert der <xref:System.Web.UI.MobileControls.BaseValidator.ErrorMessage%2A> -Eigenschaft für die einzelnen Validierungssteuerelemente, das ungültiges Steuerelement darstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluateIsValid">
+      <MemberSignature Language="C#" Value="protected abstract bool EvaluateIsValid ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool EvaluateIsValid() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.BaseValidator.EvaluateIsValid" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird während der Validierungsphase aufgerufen, wenn ASP.NET ein Web Form verarbeitet. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>
+          <see langword="true" />, wenn das Validierungssteuerelement gültig ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Methode mit einer abgeleiteten Methode, um Ihre eigene Validierungslogik bereitzustellen, bei der Implementierung Ihrer eigenen Validierungssteuerelemente überschreiben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValid">
+      <MemberSignature Language="C#" Value="public bool IsValid { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsValid" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.BaseValidator.IsValid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die vom Steuerelement überprüften Daten gültig ist. Der Standardwert ist <see langword="true" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>
+          <see langword="true" />Wenn die Daten, die vom Steuerelement validiert gültig ist. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInit">
+      <MemberSignature Language="C#" Value="protected override void OnInit (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnInit(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.BaseValidator.OnInit(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Keine</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.Init" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.BaseValidator.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Keine</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.PreRender" />-Ereignis aus. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StyleReference">
+      <MemberSignature Language="C#" Value="public override string StyleReference { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StyleReference" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.BaseValidator.StyleReference" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("error")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf die Stileigenschaften für ein Steuerelement ab, oder legt diesen fest. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Keine</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public void Validate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Validate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.BaseValidator.Validate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt die Überprüfung des Steuerelements, und legt dann die <see cref="P:System.Web.UI.MobileControls.BaseValidator.IsValid" /> Eigenschaft auf Grundlage der Ergebnisse der Überprüfung. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.BaseValidator.Validate%2A> -Methode nimmt die <xref:System.Web.UI.MobileControls.BaseValidator.IsValid%2A> Eigenschaft des Steuerelements festgelegt werden, um `true` oder `false`, je nachdem, auf das Ergebnis des Überprüfungstests.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisibleWeight">
+      <MemberSignature Language="C#" Value="public override int VisibleWeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 VisibleWeight" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.BaseValidator.VisibleWeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die ungefähre Gewichtung des Steuerelements in Zeichen zurück. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Keine</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

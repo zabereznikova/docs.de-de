@@ -1,0 +1,6 @@
+<Namespace Name="System.Data.Linq.SqlClient">
+  <Docs>
+    <summary>Die <see cref="N:System.Data.Linq.SqlClient" /> Namespace enthält Anbieterklassen, die für die Kommunikation mit SQL Server und Klassen, die Hilfsmethoden der Abfrage enthalten.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

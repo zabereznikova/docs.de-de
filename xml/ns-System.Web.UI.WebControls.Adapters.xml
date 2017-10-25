@@ -1,0 +1,13 @@
+<Namespace Name="System.Web.UI.WebControls.Adapters">
+  <Docs>
+    <summary>Die <see cref="N:System.Web.UI.WebControls.Adapters" /> -Namespace enthält Klassen, die Sie zum Überschreiben der Phasen im Lebenszyklus eines Websteuerelements verwenden können. Die Klassen können Sie ein Steuerelement Markup oder Verhalten für neue Markupstandards oder für bestimmte Browser zu ändern.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter> Klasse wird von geerbt <xref:System.Web.UI.WebControls.Adapters.MenuAdapter> und <xref:System.Web.UI.WebControls.Adapters.DataBoundControlAdapter> Klassen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

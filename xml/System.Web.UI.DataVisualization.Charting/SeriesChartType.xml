@@ -1,0 +1,578 @@
+<Type Name="SeriesChartType" FullName="System.Web.UI.DataVisualization.Charting.SeriesChartType">
+  <TypeSignature Language="C#" Value="public enum SeriesChartType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SeriesChartType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.SeriesChartType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt einen Diagrammtyp für eine <see cref="T:System.Web.UI.DataVisualization.Charting.Series" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Area">
+      <MemberSignature Language="C#" Value="Area" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SeriesChartType Area = int32(13)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Area" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SeriesChartType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Flächendiagrammtyps.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Bar">
+      <MemberSignature Language="C#" Value="Bar" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SeriesChartType Bar = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Bar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SeriesChartType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Balkendiagramm-Typ.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BoxPlot">
+      <MemberSignature Language="C#" Value="BoxPlot" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SeriesChartType BoxPlot = int32(28)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.BoxPlot" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SeriesChartType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Typ Boxplotdiagramm.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Bubble">
+      <MemberSignature Language="C#" Value="Bubble" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SeriesChartType Bubble = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Bubble" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SeriesChartType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Blasendiagrammtyps.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Candlestick">
+      <MemberSignature Language="C#" Value="Candlestick" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SeriesChartType Candlestick = int32(20)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Candlestick" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SeriesChartType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Kerzendiagramme.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Column">
+      <MemberSignature Language="C#" Value="Column" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SeriesChartType Column = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Column" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SeriesChartType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diagramm der Spaltentyp.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Doughnut">
+      <MemberSignature Language="C#" Value="Doughnut" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SeriesChartType Doughnut = int32(18)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Doughnut" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SeriesChartType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ringdiagrammtyp.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorBar">
+      <MemberSignature Language="C#" Value="ErrorBar" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SeriesChartType ErrorBar = int32(27)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.ErrorBar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SeriesChartType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Typ Fehlerindikatorendiagramm.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FastLine">
+      <MemberSignature Language="C#" Value="FastLine" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SeriesChartType FastLine = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.FastLine" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SeriesChartType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>FastLine-Diagrammtyps.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FastPoint">
+      <MemberSignature Language="C#" Value="FastPoint" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SeriesChartType FastPoint = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.FastPoint" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SeriesChartType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>FastPoint-Diagrammtyps.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Funnel">
+      <MemberSignature Language="C#" Value="Funnel" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SeriesChartType Funnel = int32(33)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Funnel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SeriesChartType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Typ Trichterdiagramm.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Kagi">
+      <MemberSignature Language="C#" Value="Kagi" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SeriesChartType Kagi = int32(31)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Kagi" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SeriesChartType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Kagi-Diagrammtyp.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Line">
+      <MemberSignature Language="C#" Value="Line" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SeriesChartType Line = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Line" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SeriesChartType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Liniendiagrammtyps.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Pie">
+      <MemberSignature Language="C#" Value="Pie" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SeriesChartType Pie = int32(17)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Pie" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SeriesChartType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Kreisdiagramm-Typ.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Point">
+      <MemberSignature Language="C#" Value="Point" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SeriesChartType Point = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Point" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SeriesChartType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zeigen Sie Diagrammtyp an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PointAndFigure">
+      <MemberSignature Language="C#" Value="PointAndFigure" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SeriesChartType PointAndFigure = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.PointAndFigure" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SeriesChartType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zeichendiagrammtyp.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Polar">
+      <MemberSignature Language="C#" Value="Polar" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SeriesChartType Polar = int32(26)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Polar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SeriesChartType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Polardiagramm-Typ.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Pyramid">
+      <MemberSignature Language="C#" Value="Pyramid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SeriesChartType Pyramid = int32(34)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Pyramid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SeriesChartType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Pyramidendiagramme.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Radar">
+      <MemberSignature Language="C#" Value="Radar" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SeriesChartType Radar = int32(25)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Radar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SeriesChartType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Netzdiagramme.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Range">
+      <MemberSignature Language="C#" Value="Range" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SeriesChartType Range = int32(21)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Range" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SeriesChartType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diagrammtyp im Bereich.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RangeBar">
+      <MemberSignature Language="C#" Value="RangeBar" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SeriesChartType RangeBar = int32(23)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.RangeBar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SeriesChartType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>RangeBar Diagrammtyp.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RangeColumn">
+      <MemberSignature Language="C#" Value="RangeColumn" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SeriesChartType RangeColumn = int32(24)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.RangeColumn" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SeriesChartType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Im Bereich Säulendiagrammtyp.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Renko">
+      <MemberSignature Language="C#" Value="Renko" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SeriesChartType Renko = int32(29)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Renko" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SeriesChartType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Renko-Diagrammtyp.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Spline">
+      <MemberSignature Language="C#" Value="Spline" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SeriesChartType Spline = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Spline" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SeriesChartType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Splinediagramm.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SplineArea">
+      <MemberSignature Language="C#" Value="SplineArea" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SeriesChartType SplineArea = int32(14)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.SplineArea" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SeriesChartType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Typ Splineflächendiagramm.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SplineRange">
+      <MemberSignature Language="C#" Value="SplineRange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SeriesChartType SplineRange = int32(22)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.SplineRange" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SeriesChartType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Typ Splinebereichsdiagramm.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="StackedArea">
+      <MemberSignature Language="C#" Value="StackedArea" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SeriesChartType StackedArea = int32(15)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.StackedArea" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SeriesChartType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gestapeltes Flächendiagramm.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="StackedArea100">
+      <MemberSignature Language="C#" Value="StackedArea100" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SeriesChartType StackedArea100 = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.StackedArea100" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SeriesChartType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>100 % gestapeltes Flächendiagramm Diagrammtyp.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="StackedBar">
+      <MemberSignature Language="C#" Value="StackedBar" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SeriesChartType StackedBar = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.StackedBar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SeriesChartType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein gestapeltes Balkendiagramm Typ darstellt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="StackedBar100">
+      <MemberSignature Language="C#" Value="StackedBar100" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SeriesChartType StackedBar100 = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.StackedBar100" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SeriesChartType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>100 % gestapeltes Balkendiagramm-Typ.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="StackedColumn">
+      <MemberSignature Language="C#" Value="StackedColumn" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SeriesChartType StackedColumn = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.StackedColumn" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SeriesChartType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gestapeltes Säulendiagramm.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="StackedColumn100">
+      <MemberSignature Language="C#" Value="StackedColumn100" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SeriesChartType StackedColumn100 = int32(12)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.StackedColumn100" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SeriesChartType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>100 % gestapeltes Säulendiagramm.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="StepLine">
+      <MemberSignature Language="C#" Value="StepLine" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SeriesChartType StepLine = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.StepLine" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SeriesChartType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Schrittlinie Diagrammtyp.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Stock">
+      <MemberSignature Language="C#" Value="Stock" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SeriesChartType Stock = int32(19)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.Stock" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SeriesChartType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Kursdiagramm-Typ.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ThreeLineBreak">
+      <MemberSignature Language="C#" Value="ThreeLineBreak" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SeriesChartType ThreeLineBreak = int32(30)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SeriesChartType.ThreeLineBreak" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SeriesChartType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Typ der ThreeLineBreak-Diagramm.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

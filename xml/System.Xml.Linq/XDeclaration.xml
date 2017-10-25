@@ -1,0 +1,441 @@
+<Type Name="XDeclaration" FullName="System.Xml.Linq.XDeclaration">
+  <TypeSignature Language="C#" Value="public class XDeclaration" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XDeclaration extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Linq.XDeclaration" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XDocument</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.Linq</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine XML-Deklaration dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine XML-Deklaration wird verwendet, um die XML-Version, die Codierung zu deklarieren, und davon, ob das XML-Dokument eigenständig ist. Diese Klasse stellt das XML-Konzept einer XML-Deklaration dar.  
+  
+ Deklarationen sind wie die XML-Standard in einem Dokument zugeordnet. Wenn Sie ein Dokument erstellen, müssen Sie die Option aus, um die Deklaration für das Dokument angeben. Die <xref:System.Xml.Linq.XDocument> Klasse enthält die <xref:System.Xml.Linq.XDocument.Declaration%2A> -Eigenschaft, die können Sie die Deklaration festzulegen oder abzurufen. Informationen zur Vorgehensweise beim Serialisieren einer XML-Struktur mit einer XML-Deklaration finden Sie unter [Serialisieren mit einer XML-Deklaration](http://msdn.microsoft.com/library/30f1b564-62b5-4e5d-9c36-884e51113feb).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XDeclaration (System.Xml.Linq.XDeclaration other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Linq.XDeclaration other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XDeclaration.#ctor(System.Xml.Linq.XDeclaration)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="other" Type="System.Xml.Linq.XDeclaration" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die <see cref="T:System.Xml.Linq.XDeclaration" /> verwendet zum Initialisieren dieses <see cref="T:System.Xml.Linq.XDeclaration" /> Objekt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.Linq.XDeclaration" />-Klasse mit einem anderen <see cref="T:System.Xml.Linq.XDeclaration" /> -Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird hauptsächlich intern verwendet, um eine tiefe Kopie einer XML-Struktur erstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XDeclaration (string version, string encoding, string standalone);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string version, string encoding, string standalone) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XDeclaration.#ctor(System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="version" Type="System.String" />
+        <Parameter Name="encoding" Type="System.String" />
+        <Parameter Name="standalone" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="version">Die Version der XML, in der Regel "1.0".</param>
+        <param name="encoding">Die Codierung des XML-Dokuments.</param>
+        <param name="standalone">Eine Zeichenfolge mit "yes" oder "no", die angibt, ob der XML-Code eigenständig ist oder externe Entitäten aufgelöst werden muss.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xml.Linq.XDeclaration" /> -Klasse mit der angegebenen Version, Codierung und Eigenständigkeitsstatus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt ein Dokument, das eine Deklaration enthält.  
+  
+```csharp  
+  
+                XDocument doc = new XDocument(  
+    new XDeclaration("1.0", "utf-8", "yes"),  
+    new XComment("This is a comment"),  
+    new XElement("Root", "content")  
+);  
+doc.Save("Root.xml");  
+  
+Console.WriteLine(File.ReadAllText("Root.xml"));  
+```  
+  
+```vb  
+  
+                Dim doc As XDocument = _   
+        <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
+            <!--This is a comment-->  
+            <Root>content</Root>  
+  
+doc.Save("Root.xml")  
+  
+Console.WriteLine(File.ReadAllText("Root.xml"))  
+```  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```xml  
+  
+                <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
+<!--This is a comment-->  
+<Root>content</Root>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Encoding">
+      <MemberSignature Language="C#" Value="public string Encoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Encoding" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Linq.XDeclaration.Encoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, die Codierung für dieses Dokument.</summary>
+        <value>Ein <see cref="T:System.String" /> , die den Codeseitennamen für dieses Dokument enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jeder von <xref:System.Text.Encoding.WebName%2A> zurückgegebene Wert ist ein gültiger Wert.  
+  
+ Wenn Sie ein codiertes Dokument gelesen haben, wird diese Eigenschaft auf den Codeseitennamen festgelegt werden.  
+  
+ Wenn Sie diese Eigenschaft auf einen gültigen Codeseitennamen serialisieren festlegen, erfolgt die Serialisierung LINQ to XML mit der angegebenen Codierung.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt zwei Dokumente: eines mit UTF-8-Codierung und eines mit UTF-16-Codierung. Anschließend werden die Dokumente geladen, und die Codierung wird auf der Konsole ausgegeben.  
+  
+```csharp  
+  
+                Console.WriteLine("Creating a document with utf-8 encoding");  
+XDocument encodedDoc8 = new XDocument(  
+    new XDeclaration("1.0", "utf-8", "yes"),  
+    new XElement("Root", "Content")  
+);  
+encodedDoc8.Save("EncodedUtf8.xml");  
+Console.WriteLine("Encoding is:{0}", encodedDoc8.Declaration.Encoding);  
+Console.WriteLine();  
+  
+Console.WriteLine("Creating a document with utf-16 encoding");  
+XDocument encodedDoc16 = new XDocument(  
+    new XDeclaration("1.0", "utf-16", "yes"),  
+    new XElement("Root", "Content")  
+);  
+encodedDoc16.Save("EncodedUtf16.xml");  
+Console.WriteLine("Encoding is:{0}", encodedDoc16.Declaration.Encoding);  
+Console.WriteLine();  
+  
+XDocument newDoc8 = XDocument.Load("EncodedUtf8.xml");  
+Console.WriteLine("Encoded document:");  
+Console.WriteLine(File.ReadAllText("EncodedUtf8.xml"));  
+Console.WriteLine();  
+Console.WriteLine("Encoding of loaded document is:{0}", newDoc8.Declaration.Encoding);  
+Console.WriteLine();  
+  
+XDocument newDoc16 = XDocument.Load("EncodedUtf16.xml");  
+Console.WriteLine("Encoded document:");  
+Console.WriteLine(File.ReadAllText("EncodedUtf16.xml"));  
+Console.WriteLine();  
+Console.WriteLine("Encoding of loaded document is:{0}", newDoc16.Declaration.Encoding);  
+```  
+  
+```vb  
+  
+                Console.WriteLine("Creating a document with utf-8 encoding")  
+Dim encodedDoc8 As XDocument = _   
+        <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
+            <Root>Content</Root>  
+encodedDoc8.Save("EncodedUtf8.xml")  
+Console.WriteLine("Encoding is:{0}", encodedDoc8.Declaration.Encoding)  
+Console.WriteLine()  
+  
+Console.WriteLine("Creating a document with utf-16 encoding")  
+Dim encodedDoc16 As XDocument = _   
+        <?xml version="1.0" encoding="utf-16" standalone="yes"?>  
+            <Root>Content</Root>  
+  
+encodedDoc16.Save("EncodedUtf16.xml")  
+Console.WriteLine("Encoding is:{0}", encodedDoc16.Declaration.Encoding)  
+Console.WriteLine()  
+  
+Dim newDoc8 As XDocument = XDocument.Load("EncodedUtf8.xml")  
+Console.WriteLine("Encoded document:")  
+Console.WriteLine(File.ReadAllText("EncodedUtf8.xml"))  
+Console.WriteLine()  
+Console.WriteLine("Encoding of loaded document is:{0}", newDoc8.Declaration.Encoding)  
+Console.WriteLine()  
+  
+Dim newDoc16 As XDocument = XDocument.Load("EncodedUtf16.xml")  
+Console.WriteLine("Encoded document:")  
+Console.WriteLine(File.ReadAllText("EncodedUtf16.xml"))  
+Console.WriteLine()  
+Console.WriteLine("Encoding of loaded document is:{0}", newDoc16.Declaration.Encoding)  
+```  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```  
+Creating a document with utf-8 encoding  
+Encoding is:utf-8  
+  
+Creating a document with utf-16 encoding  
+Encoding is:utf-16  
+  
+Encoded document:  
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>  
+<Root>Content</Root>  
+  
+Encoding of loaded document is:utf-8  
+  
+Encoded document:  
+<?xml version="1.0" encoding="utf-16" standalone="yes"?>  
+<Root>Content</Root>  
+  
+Encoding of loaded document is:utf-16  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Standalone">
+      <MemberSignature Language="C#" Value="public string Standalone { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Standalone" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Linq.XDeclaration.Standalone" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder Festlegen der Eigenständigkeitseigenschaft für dieses Dokument.</summary>
+        <value>Ein <see cref="T:System.String" /> , eigenständige-Eigenschaft für dieses Dokument enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die gültigen Werte für eigenständige sind "yes" oder "no". Diese Werte werden nicht erzwungen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird diese Eigenschaft so drucken Sie die Eigenständigkeitseigenschaft einer Deklaration.  
+  
+```csharp  
+  
+                XDeclaration xd = new XDeclaration("1.0", "utf-8", "yes");  
+Console.WriteLine(xd.Version);  
+Console.WriteLine(xd.Encoding);  
+Console.WriteLine(xd.Standalone);  
+```  
+  
+```vb  
+  
+                Dim xd As XDeclaration = New XDeclaration("1.0", "utf-8", "yes")  
+Console.WriteLine(xd.Version)  
+Console.WriteLine(xd.Encoding)  
+Console.WriteLine(xd.Standalone)  
+  
+```  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```  
+1.0  
+utf-8  
+yes  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XDeclaration.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt die Deklaration als eine formatierte Zeichenfolge.</summary>
+        <returns>Ein <see cref="T:System.String" /> , die die formatierte XML-Zeichenfolge enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public string Version { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Version" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Linq.XDeclaration.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Versionseigenschaft für dieses Dokument fest.</summary>
+        <value>Ein <see cref="T:System.String" /> , die die Versionseigenschaft für dieses Dokument enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert ist in der Regel "1.0". Dieser Wert wird nicht erzwungen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird diese Eigenschaft so drucken Sie die Versionseigenschaft einer Deklaration.  
+  
+```csharp  
+XDeclaration xd = new XDeclaration("1.0", "utf-8", "yes");  
+Console.WriteLine(xd.Version);  
+Console.WriteLine(xd.Encoding);  
+Console.WriteLine(xd.Standalone);  
+```  
+  
+```vb  
+Dim xd As XDeclaration = New XDeclaration("1.0", "utf-8", "yes")  
+Console.WriteLine(xd.Version)  
+Console.WriteLine(xd.Encoding)  
+Console.WriteLine(xd.Standalone)  
+```  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```  
+1.0  
+utf-8  
+yes  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

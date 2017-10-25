@@ -1,0 +1,198 @@
+<Type Name="PeerNode" FullName="System.ServiceModel.PeerNode">
+  <TypeSignature Language="C#" Value="public sealed class PeerNode : System.ServiceModel.IOnlineStatus" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PeerNode extends System.Object implements class System.ServiceModel.IOnlineStatus" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.PeerNode" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.IOnlineStatus</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Definiert die Instanz eines Peerknotens, der von einer Anwendung verwendet wird, die Teil eines bestimmten Peermeshs ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Peerknoten kann als Host für mehrere Peerkanäle innerhalb des Meshs fungieren, sofern sie eine gemeinsame URI und einen gemeinsamen Hostnamen haben, die bzw. der der Bindung für jeden Kanal durch <xref:System.ServiceModel.EndpointAddress> bereitgestellt wird.  
+  
+ Wenn zwei oder mehr der für einen Peerknoten definierten Peerkanäle mit separaten Bindungen erstellt werden, müssen die Eigenschaften <xref:System.ServiceModel.NetPeerTcpBinding.Port%2A>, <xref:System.ServiceModel.NetPeerTcpBinding.ListenIPAddress%2A> und <xref:System.ServiceModel.NetPeerTcpBinding.Resolver%2A> identisch bei allen Bindungen sein.  
+  
+ Wenn nach der ersten Kanalbindung eine weitere Kanalbindung für die gleiche Peerknoteninstanz erstellt wird, muss die <xref:System.ServiceModel.NetPeerTcpBinding.MaxReceivedMessageSize%2A>-Eigenschaft für diese und nachfolgende Bindungen kleiner oder gleich dem Wert der <xref:System.ServiceModel.NetPeerTcpBinding.MaxReceivedMessageSize%2A>-Eigenschaft sein, der für die erste Kanalbindung festgelegt wurde.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsOnline">
+      <MemberSignature Language="C#" Value="public bool IsOnline { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOnline" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerNode.IsOnline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Peerknoten online und in der Lage ist, Nachrichten an benachbarte Knoten im Peermesh zu senden.</summary>
+        <value>
+          <see langword="true" />, wenn der Peerknoten online ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ "Online" gibt an, dass ein Peerknoten über Nachbarknoten verfügt. "Offline" gibt an, dass ein Peerknoten nicht über Nachbarknoten verfügt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessagePropagationFilter">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.PeerMessagePropagationFilter MessagePropagationFilter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.PeerMessagePropagationFilter MessagePropagationFilter" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerNode.MessagePropagationFilter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.PeerMessagePropagationFilter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen benutzerdefinierten Filter für Nachrichten ab, die über den Peerkanal empfangen werden, oder legt diese fest.</summary>
+        <value>
+          <see cref="T:System.ServiceModel.PeerMessagePropagationFilter" />, der einen benutzerdefinierten Nachrichtenfilter enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Nachrichtenfilter muss ein abgeleiteter Typ sein und sollte in diesen Typ umgewandelt werden, um alle dafür definierten benutzerdefinierten Funktionen zu verwenden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Kein Kanal ist geöffnet zum Abhören.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Offline">
+      <MemberSignature Language="C#" Value="public event EventHandler Offline;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Offline" />
+      <MemberSignature Language="DocId" Value="E:System.ServiceModel.PeerNode.Offline" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, wenn der Peerknoten das Peermesh verlässt (offline geht).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Offlinepeerknoten verfügt über keine Nachbarknoten innerhalb des Peermeshs, mit dem es eine Verbindung herstellen kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Online">
+      <MemberSignature Language="C#" Value="public event EventHandler Online;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Online" />
+      <MemberSignature Language="DocId" Value="E:System.ServiceModel.PeerNode.Online" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, wenn ein Peerknoten Teil des Peermeshs wird (online geht).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Onlinepeerknoten verfügt über mindestens einen Nachbarknoten innerhalb des Peermeshs, mit dem es verbunden ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Port">
+      <MemberSignature Language="C#" Value="public int Port { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Port" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerNode.Port" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Netzwerkport ab, den der Peerknoten abhört.</summary>
+        <value>
+          <see cref="T:System.Int32" />, die den Netzwerkport angibt, den der Peerknoten abhört.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Kein Kanal ist geöffnet zum Abhören.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RefreshConnection">
+      <MemberSignature Language="C#" Value="public void RefreshConnection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RefreshConnection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerNode.RefreshConnection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aktualisiert die Verbindung mit dem Peermesh.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Kein Kanal ist geöffnet zum Abhören.</exception>
+        <exception cref="T:System.TimeoutException">Es ist ein Timeout für den Aktualisierungsvorgang aufgetreten.</exception>
+        <exception cref="T:System.ServiceModel.CommunicationException">Ein Netzwerkfehler ist während des Aktualisierungsversuchs aufgetreten.</exception>
+        <exception cref="T:System.ServiceModel.CommunicationObjectAbortedException">Die Verbindung wurde während des Aktualisierungsversuchs abgebrochen.</exception>
+        <exception cref="T:System.ServiceModel.CommunicationObjectFaultedException">Bei der Verbindung ist während des Aktualisierungsversuchs ein Fehler aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerNode.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt eine Zeichenfolgenentsprechung eines Peerknotens bereit.</summary>
+        <returns>
+          <see cref="T:System.String" />-Wert, der die Mesh-ID des Peerknotens enthält, wenn die Mesh-ID festgelegt ist; andernfalls wird der Typ zurückgegeben.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,151 @@
+<Type Name="UnitConverter" FullName="System.Web.UI.WebControls.UnitConverter">
+  <TypeSignature Language="C#" Value="public class UnitConverter : System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UnitConverter extends System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.UnitConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.TypeConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Konvertiert von einem <see cref="T:System.Web.UI.WebControls.Unit" /> -Objekt in ein Objekt eines anderen Datentyps und von einem anderen Typ zu einer <see cref="T:System.Web.UI.WebControls.Unit" /> Objekt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.UnitConverter> -Klasse zum Konvertieren einer <xref:System.Web.UI.WebControls.Unit> auf ein Objekt mit einem anderen Datentyp. Sie können auch die <xref:System.Web.UI.WebControls.UnitConverter> Klasse, um ein Objekt mit einem anderen Datentyp zu konvertieren einer <xref:System.Web.UI.WebControls.Unit>.  
+  
+> [!NOTE]
+>  Dieser Konverter kann nur eine Zeichenfolge zu konvertieren <xref:System.Web.UI.WebControls.Unit> und ein <xref:System.Web.UI.WebControls.Unit> in eine Zeichenfolge.  
+  
+> [!CAUTION]
+>  Sie sollten einen Typkonverter nie direkt zugreifen. Rufen Sie stattdessen mit den entsprechenden Konverter <xref:System.ComponentModel.TypeDescriptor?displayProperty=nameWithType>. Weitere Informationen finden Sie in den Beispielen in der <xref:System.ComponentModel.TypeConverter?displayProperty=nameWithType> Basisklasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UnitConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.UnitConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.UnitConverter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFrom">
+      <MemberSignature Language="C#" Value="public override bool CanConvertFrom (System.ComponentModel.ITypeDescriptorContext context, Type sourceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Type sourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.UnitConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="sourceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> -Instanz, die den Kontext des zu konvertierenden Objekts angibt.</param>
+        <param name="sourceType">Der Typ der Quelle.</param>
+        <summary>Gibt einen Wert, der angibt, ob der Einheitenkonverter aus dem angegebenen Quelltyp konvertieren kann.</summary>
+        <returns>
+          <see langword="true" />Wenn Sie der Quelltyp aus konvertiert werden kann; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertTo">
+      <MemberSignature Language="C#" Value="public override bool CanConvertTo (System.ComponentModel.ITypeDescriptorContext context, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.UnitConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> , der den Kontext, der das zu konvertierende Objekt angibt.</param>
+        <param name="destinationType">Die <see cref="T:System.Type" /> , die den Datentyp zu konvertieren darstellt.</param>
+        <summary>Gibt einen Wert, der angibt, ob der Konverter konvertieren kann ein <see cref="T:System.Web.UI.WebControls.Unit" /> Objekt in den angegebenen Typ.</summary>
+        <returns>
+          <see langword="true" />Wenn der Konverter die Konvertierung unterstützt eine <see cref="T:System.Web.UI.WebControls.Unit" /> Objekt in den Zieltyp; anderenfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.UnitConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> -Instanz, die den Kontext des zu konvertierenden Objekts angibt.</param>
+        <param name="culture">Ein <see cref="T:System.Globalization.CultureInfo" /> Objekt, das Informationen über eine Kultur, z. B. Sprache, Kalendersystem usw. darstellt. Dieser Parameter wird in dieser Methode nicht verwendet. Es ist für zukünftige Versionen von dieser Methode reserviert. Sie können optional übergeben <see langword="null" /> für diesen Parameter.</param>
+        <param name="value">Das zu konvertierende Objekt.</param>
+        <summary>Führt die Konvertierung aus der angegebenen Liste von Kontext, Objekt, und das Argument vom Typ.</summary>
+        <returns>Das Objekt, das sich aus der Konvertierung ergibt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public override object ConvertTo (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.UnitConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> -Instanz, die den Kontext des zu konvertierenden Objekts angibt.</param>
+        <param name="culture">Ein <see cref="T:System.Globalization.CultureInfo" /> Objekt, das Informationen über eine Kultur, z. B. Sprache, Kalendersystem usw. darstellt. Dieser Parameter wird in dieser Methode nicht verwendet. Es ist für zukünftige Versionen von dieser Methode reserviert. Sie können optional übergeben <see langword="null" /> für diesen Parameter.</param>
+        <param name="value">Das zu konvertierende Objekt.</param>
+        <param name="destinationType">Der Typ, in den konvertiert werden soll.</param>
+        <summary>Führt die Konvertierung in den angegebenen Zieltyp die angegebene Kontext, Objekt und Argument-Liste angegeben.</summary>
+        <returns>Das Objekt, das sich aus der Konvertierung ergibt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

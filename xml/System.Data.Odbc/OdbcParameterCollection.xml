@@ -1,0 +1,1097 @@
+<Type Name="OdbcParameterCollection" FullName="System.Data.Odbc.OdbcParameterCollection">
+  <TypeSignature Language="C#" Value="public sealed class OdbcParameterCollection : System.Data.Common.DbParameterCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OdbcParameterCollection extends System.Data.Common.DbParameterCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Odbc.OdbcParameterCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Odbc</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.DbParameterCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Editor("Microsoft.VSDesigner.Data.Design.DBParametersEditor, Microsoft.VSDesigner, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ListBindable(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Auflistung von Parametern für ein <see cref="T:System.Data.Odbc.OdbcCommand" /> sowie deren jeweiligen Zuordnungen zu Spalten in einem <see cref="T:System.Data.DataSet" />. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Anzahl von Parametern in der Auflistung muss gleich der Anzahl der Parameterplatzhalter in der Befehlstext, da sonst die .NET Framework-Datenanbieter für ODBC löst einen Fehler aus.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird davon ausgegangen, dass die Datenquelle eine Tabelle namens **MoneyTable** und eine gespeicherte Prozedur namens **MoneyProcedure**, die wie folgt definiert werden:  
+  
+```  
+CREATE TABLE MoneyTable (col1 int, col2 smallmoney, col3 decimal);  
+  
+CREATE PROC MoneyProcedure (@p1 int, @p2 smallmoney, @p3 decimal)   
+AS   
+INSERT INTO MyTable VALUES (@p1, @p2, @p3);  
+  
+```  
+  
+ Im Beispiel wird erstellt, Parameter und ruft die **MoneyProcedure** gespeicherte Prozedur.  
+  
+ [!code-csharp[Classic WebData OdbcParameter.DbType#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OdbcParameter.DbType/CS/source.cs#1)]
+ [!code-vb[Classic WebData OdbcParameter.DbType#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OdbcParameter.DbType/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.Odbc.OdbcParameter Add (System.Data.Odbc.OdbcParameter value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Odbc.OdbcParameter Add(class System.Data.Odbc.OdbcParameter value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameterCollection.Add(System.Data.Odbc.OdbcParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.Odbc.OdbcParameter" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der der Auflistung hinzuzufügende <see cref="T:System.Data.Odbc.OdbcParameter" />.</param>
+        <summary>Fügt dem <see cref="T:System.Data.Odbc.OdbcParameter" /> die angegebene <see cref="T:System.Data.Odbc.OdbcParameterCollection" /> hinzu.</summary>
+        <returns>Der Index des neuen <see cref="T:System.Data.Odbc.OdbcParameter" />-Objekts.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="T:System.Data.Odbc.OdbcParameter" /> angegebenen in der <paramref name="value" /> Parameter wurde bereits hinzugefügt, um diesem oder einem anderen <see cref="T:System.Data.Odbc.OdbcParameterCollection" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="value" /> -Parameter ist null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public override int Add (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 Add(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameterCollection.Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.Object" />.</param>
+        <summary>Fügt der <see cref="T:System.Data.Odbc.OdbcParameter" /> das angegebene <see cref="T:System.Data.Odbc.OdbcParameterCollection" />-Objekt hinzu.</summary>
+        <returns>Der Index des neuen <see cref="T:System.Data.Odbc.OdbcParameter" /> Objekt in der Auflistung.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.Odbc.OdbcParameter Add (string parameterName, System.Data.Odbc.OdbcType odbcType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Odbc.OdbcParameter Add(string parameterName, valuetype System.Data.Odbc.OdbcType odbcType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameterCollection.Add(System.String,System.Data.Odbc.OdbcType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="odbcType" Type="System.Data.Odbc.OdbcType" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">Der Name des Parameters.</param>
+        <param name="odbcType">Einer der <see cref="T:System.Data.Odbc.OdbcType" />-Werte.</param>
+        <summary>Fügt eine <see cref="T:System.Data.Odbc.OdbcParameter" /> auf die <see cref="T:System.Data.Odbc.OdbcParameterCollection" />, erhält der Parameter Name und Datentyp.</summary>
+        <returns>Der Index des neuen <see cref="T:System.Data.Odbc.OdbcParameter" />-Objekts.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird ein <xref:System.Data.Odbc.OdbcParameter> auf die <xref:System.Data.Odbc.OdbcCommand.Parameters%2A> Auflistung.  
+  
+ [!code-csharp[Classic WebData OdbcParameterCollection.Add2#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OdbcParameterCollection.Add2/CS/source.cs#1)]
+ [!code-vb[Classic WebData OdbcParameterCollection.Add2#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OdbcParameterCollection.Add2/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.Odbc.OdbcParameter Add (string parameterName, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Odbc.OdbcParameter Add(string parameterName, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameterCollection.Add(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("Add(String parameterName, Object value) has been deprecated.  Use AddWithValue(String parameterName, Object value).  http://go.microsoft.com/fwlink/?linkid=14202", false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">Der Name des Parameters.</param>
+        <param name="value">Die <see cref="P:System.Data.OleDb.OleDbParameter.Value" /> von der <see cref="T:System.Data.Odbc.OdbcParameter" /> in der Auflistung hinzu.</param>
+        <summary>Fügt eine <see cref="T:System.Data.Odbc.OdbcParameter" /> auf die <see cref="T:System.Data.Odbc.OdbcParameterCollection" /> unter Verwendung des Parametername und Wert.</summary>
+        <returns>Der Index des neuen <see cref="T:System.Data.Odbc.OdbcParameter" />-Objekts.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gehen Sie vorsichtig vor, wenn dieser Überladung von der <xref:System.Data.Odbc.OdbcParameterCollection.Add%2A> Methode, um Ganzzahlwerte für Parameter anzugeben. Da diese Überladung lässt eine `value` des Typs <xref:System.Object>, müssen Sie den ganzzahligen Wert zu konvertieren einer <xref:System.Object> eingeben, wenn der Wert 0 (null), ist, wie im folgenden C#-Beispiel veranschaulicht.  
+  
+```  
+parameters.Add("@pname", Convert.ToInt32(0));  
+```  
+  
+ Wenn Sie diese Konvertierung nicht ausführen, der Compiler geht davon aus Sie versuchen, rufen Sie die <xref:System.Data.Odbc.OdbcParameterCollection.Add%2A?displayProperty=nameWithType> überladen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Die <paramref name="value" /> -Parameter ist ein <see cref="T:System.Data.Odbc.OdbcParameter" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.Odbc.OdbcParameter Add (string parameterName, System.Data.Odbc.OdbcType odbcType, int size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Odbc.OdbcParameter Add(string parameterName, valuetype System.Data.Odbc.OdbcType odbcType, int32 size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameterCollection.Add(System.String,System.Data.Odbc.OdbcType,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="odbcType" Type="System.Data.Odbc.OdbcType" />
+        <Parameter Name="size" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">Der Name des Parameters.</param>
+        <param name="odbcType">Einer der <see cref="T:System.Data.Odbc.OdbcType" />-Werte.</param>
+        <param name="size">Die Länge der Spalte.</param>
+        <summary>Fügt eine <see cref="T:System.Data.Odbc.OdbcParameter" /> auf die <see cref="T:System.Data.Odbc.OdbcParameterCollection" />gegebenem den Parameternamen, den Datentyp und die Spaltenlänge.</summary>
+        <returns>Der Index des neuen <see cref="T:System.Data.Odbc.OdbcParameter" />-Objekts.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird ein <xref:System.Data.Odbc.OdbcParameter> auf die `OdbcCommand.Parameters` Auflistung.  
+  
+ [!code-csharp[Classic WebData OdbcParameterCollection.Add3#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OdbcParameterCollection.Add3/CS/source.cs#1)]
+ [!code-vb[Classic WebData OdbcParameterCollection.Add3#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OdbcParameterCollection.Add3/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.Odbc.OdbcParameter Add (string parameterName, System.Data.Odbc.OdbcType odbcType, int size, string sourceColumn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Odbc.OdbcParameter Add(string parameterName, valuetype System.Data.Odbc.OdbcType odbcType, int32 size, string sourceColumn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameterCollection.Add(System.String,System.Data.Odbc.OdbcType,System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="odbcType" Type="System.Data.Odbc.OdbcType" />
+        <Parameter Name="size" Type="System.Int32" />
+        <Parameter Name="sourceColumn" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">Der Name des Parameters.</param>
+        <param name="odbcType">Einer der <see cref="T:System.Data.Odbc.OdbcType" />-Werte.</param>
+        <param name="size">Die Länge der Spalte.</param>
+        <param name="sourceColumn">Der Name der Quellspalte.</param>
+        <summary>Fügt eine <see cref="T:System.Data.Odbc.OdbcParameter" /> auf die <see cref="T:System.Data.Odbc.OdbcParameterCollection" /> angegebenen Parameternamen, Datentyp, Spaltenlänge und Quellspaltennamen.</summary>
+        <returns>Der Index des neuen <see cref="T:System.Data.Odbc.OdbcParameter" />-Objekts.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird ein <xref:System.Data.Odbc.OdbcParameter> auf die <xref:System.Data.Odbc.OdbcCommand.Parameters%2A> Auflistung.  
+  
+ [!code-csharp[Classic WebData OdbcParameterCollection.Add4#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OdbcParameterCollection.Add4/CS/source.cs#1)]
+ [!code-vb[Classic WebData OdbcParameterCollection.Add4#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OdbcParameterCollection.Add4/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public override void AddRange (Array values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AddRange(class System.Array values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameterCollection.AddRange(System.Array)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Array" />
+      </Parameters>
+      <Docs>
+        <param name="values">Die hinzuzufügenden <see cref="T:System.Array" />-Werte.</param>
+        <summary>Fügt ein Array von Werten am Ende der <see cref="T:System.Data.Odbc.OdbcParameterCollection" /> hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.Data.Odbc.OdbcParameter[] values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.Data.Odbc.OdbcParameter[] values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameterCollection.AddRange(System.Data.Odbc.OdbcParameter[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Data.Odbc.OdbcParameter[]" />
+      </Parameters>
+      <Docs>
+        <param name="values">Ein Array von <see cref="T:System.Data.Odbc.OdbcParameter" />-Objekten, die der Auflistung hinzugefügt werden sollen.</param>
+        <summary>Fügt ein Array von <see cref="T:System.Data.Odbc.OdbcParameter" />-Werten am Ende der <see cref="T:System.Data.Odbc.OdbcParameterCollection" /> hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddWithValue">
+      <MemberSignature Language="C#" Value="public System.Data.Odbc.OdbcParameter AddWithValue (string parameterName, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Odbc.OdbcParameter AddWithValue(string parameterName, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameterCollection.AddWithValue(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">Der Name des Parameters.</param>
+        <param name="value">Der hinzuzufügende Wert.</param>
+        <summary>Fügt am Ende der <see cref="T:System.Data.Odbc.OdbcParameterCollection" /> einen Wert hinzu.</summary>
+        <returns>Ein <see cref="T:System.Data.Odbc.OdbcParameter" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public override void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameterCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle <see cref="T:System.Data.Odbc.OdbcParameter" /> Objekte aus der <see cref="T:System.Data.Odbc.OdbcParameterCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Data.Odbc.OdbcParameter value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Data.Odbc.OdbcParameter value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameterCollection.Contains(System.Data.Odbc.OdbcParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.Odbc.OdbcParameter" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der <see cref="T:System.Data.Odbc.OdbcParameter" />-Wert.</param>
+        <summary>Bestimmt, ob der angegebene <see cref="T:System.Data.Odbc.OdbcParameter" /> in dieser <see cref="T:System.Data.Odbc.OdbcParameterCollection" /> vorhanden ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Data.Odbc.OdbcParameter" /> befindet sich in der Auflistung befindet, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public override bool Contains (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Contains(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameterCollection.Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der <see cref="T:System.Object" />-Wert.</param>
+        <summary>Bestimmt, ob der angegebene <see cref="T:System.Object" /> in dieser <see cref="T:System.Data.Odbc.OdbcParameterCollection" /> vorhanden ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Data.Odbc.OdbcParameterCollection" /> enthält den Wert andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public override bool Contains (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Contains(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameterCollection.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Name des der <see cref="T:System.Data.Odbc.OdbcParameter" /> zu suchenden Objekts.</param>
+        <summary>Ruft einen Wert, der angibt, ob ein <see cref="T:System.Data.Odbc.OdbcParameter" /> Objekt mit dem angegebenen Parameternamen in der Auflistung vorhanden ist.</summary>
+        <returns>
+          <see langword="true" />, wenn die Sammlung den Parameter enthält; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel sucht nach einer <xref:System.Data.Odbc.OdbcParameter> mit einer angegebenen <xref:System.Data.Odbc.OdbcParameter.ParameterName%2A> innerhalb einer <xref:System.Data.Odbc.OdbcParameterCollection>. Wenn der Parameter vorhanden ist, zeigt das Beispiel den Namen und den Index des Parameters. Wenn der Parameter nicht vorhanden ist, zeigt das Beispiel einen Fehler auf. In diesem Beispiel wird vorausgesetzt, dass ein <xref:System.Data.Odbc.OdbcParameterCollection> bereits erstellt wurde.  
+  
+ [!code-csharp[Classic WebData OdbcParameterCollection.this1#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OdbcParameterCollection.this1/CS/source.cs#1)]
+ [!code-vb[Classic WebData OdbcParameterCollection.this1#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OdbcParameterCollection.this1/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public override void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameterCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale <see cref="T:System.Array" />, das das Ziel der aus der aktuellen <see cref="T:System.Data.Odbc.OdbcParameterCollection" /> kopierten Elemente ist.</param>
+        <param name="index">Eine 32-Bit-Ganzzahl, die den Index in der <see cref="T:System.Array" /> darstellt, ab dem kopiert werden soll.</param>
+        <summary>Kopiert alle Elemente der aktuellen <see cref="T:System.Data.Odbc.OdbcParameterCollection" /> in das angegebene eindimensionale <see cref="T:System.Array" />, beginnend am angegebenen Index des Ziel-<see cref="T:System.Array" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Data.Odbc.OdbcParameter[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Data.Odbc.OdbcParameter[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameterCollection.CopyTo(System.Data.Odbc.OdbcParameter[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Data.Odbc.OdbcParameter[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Die <see cref="T:System.Data.Odbc.OdbcParameterCollection" />, die das Ziel der aus der aktuellen <see cref="T:System.Data.Odbc.OdbcParameterCollection" /> kopierten Elemente ist.</param>
+        <param name="index">Eine 32-Bit-Ganzzahl, die den Index in der <see cref="T:System.Data.Odbc.OdbcParameterCollection" /> darstellt, ab dem kopiert werden soll.</param>
+        <summary>Kopiert alle Elemente der aktuellen <see cref="T:System.Data.Odbc.OdbcParameterCollection" /> in die angegebene <see cref="T:System.Data.Odbc.OdbcParameterCollection" />, beginnend am angegebenen Zielindex.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public override int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcParameterCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine ganze Zahl, der die Anzahl von Elementen in der <see cref="T:System.Data.Odbc.OdbcParameterCollection" />. Schreibgeschützt.</summary>
+        <value>Die Anzahl der Elemente in der <see cref="T:System.Data.Odbc.OdbcParameterCollection" /> als ganze Zahl.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public override System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameterCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der die <see cref="T:System.Data.Odbc.OdbcParameterCollection" /> durchläuft.</summary>
+        <returns>Ein <see cref="T:System.Collections.Generic.IEnumerator" /> für das <see cref="T:System.Data.Odbc.OdbcParameterCollection" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParameter">
+      <MemberSignature Language="C#" Value="protected override System.Data.Common.DbParameter GetParameter (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Data.Common.DbParameter GetParameter(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameterCollection.GetParameter(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParameter">
+      <MemberSignature Language="C#" Value="protected override System.Data.Common.DbParameter GetParameter (string parameterName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Data.Common.DbParameter GetParameter(string parameterName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameterCollection.GetParameter(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Data.Odbc.OdbcParameter value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Data.Odbc.OdbcParameter value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameterCollection.IndexOf(System.Data.Odbc.OdbcParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.Odbc.OdbcParameter" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.Data.Odbc.OdbcParameter" /> Objekt in der Auflistung gefunden.</param>
+        <summary>Ruft die Position des angegebenen <see cref="T:System.Data.Odbc.OdbcParameter" /> innerhalb der Auflistung.</summary>
+        <returns>Die nullbasierte Position des angegebenen <see cref="T:System.Data.Odbc.OdbcParameter" /> innerhalb der Auflistung.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public override int IndexOf (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 IndexOf(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameterCollection.IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das zu suchende <see cref="T:System.Object" />.</param>
+        <summary>Ruft die Position des angegebenen <see cref="T:System.Object" /> innerhalb der Auflistung.</summary>
+        <returns>Die nullbasierte Position des angegebenen <see cref="T:System.Object" /> also eine <see cref="T:System.Data.Odbc.OdbcParameter" /> innerhalb der Auflistung.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public override int IndexOf (string parameterName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 IndexOf(string parameterName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameterCollection.IndexOf(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">Der Name des zu suchenden <see cref="T:System.Data.Odbc.OdbcParameter" /> unter Berücksichtigung von Groß- und Kleinschreibung.</param>
+        <summary>Ruft die Position des angegebenen <see cref="T:System.Data.Odbc.OdbcParameter" /> mit dem angegebenen Namen ab.</summary>
+        <returns>Die nullbasierte Position des angegebenen <see cref="T:System.Data.Odbc.OdbcParameter" /> mit dem angegebenen Namen unter Berücksichtigung von Groß- und Kleinschreibung.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Data.Odbc.OdbcParameter value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Data.Odbc.OdbcParameter value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameterCollection.Insert(System.Int32,System.Data.Odbc.OdbcParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Data.Odbc.OdbcParameter" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem das Objekt eingefügt werden soll.</param>
+        <param name="value">Ein <see cref="T:System.Data.Odbc.OdbcParameter" />-Objekt, das in die <see cref="T:System.Data.Odbc.OdbcParameterCollection" /> eingefügt werden soll.</param>
+        <summary>Fügt ein <see cref="T:System.Data.Odbc.OdbcParameter" />-Objekt am angegebenen Index in die <see cref="T:System.Data.Odbc.OdbcParameterCollection" /> ein.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public override void Insert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Insert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameterCollection.Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem das Objekt eingefügt werden soll.</param>
+        <param name="value">Ein <see cref="T:System.Object" /> zum Einfügen in die <see cref="T:System.Data.Odbc.OdbcParameterCollection" />.</param>
+        <summary>Fügt am angegebenen Index ein <see cref="T:System.Object" />-Element in die <see cref="T:System.Data.Odbc.OdbcParameterCollection" /> ein.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFixedSize">
+      <MemberSignature Language="C#" Value="public override bool IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcParameterCollection.IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die <see cref="T:System.Data.Odbc.OdbcParameterCollection" /> eine feste Größe hat. Schreibgeschützt.</summary>
+        <value>
+          <see langword="true" />, wenn die <see cref="T:System.Data.Odbc.OdbcParameterCollection" />-Auflistung eine feste Größe hat, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public override bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcParameterCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die <see cref="T:System.Data.Odbc.OdbcParameterCollection" /> schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Data.Odbc.OdbcParameterCollection" /> schreibgeschützt ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public override bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcParameterCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die <see cref="T:System.Data.Odbc.OdbcParameterCollection" /> synchronisiert ist. Schreibgeschützt.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Data.Odbc.OdbcParameterCollection" /> synchronisiert ist, andernfalls wird <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Data.Odbc.OdbcParameter this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Odbc.OdbcParameter Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcParameterCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des abzurufenden Parameters.</param>
+        <summary>Ruft die <see cref="T:System.Data.Odbc.OdbcParameter" />-Klasse am angegebenen Index ab oder legt diese fest.</summary>
+        <value>Der <see cref="T:System.Data.Odbc.OdbcParameter" /> am angegebenen Index.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.Odbc.OdbcParameterCollection>, zusätzlich Instanzen der <xref:System.Data.Odbc.OdbcParameter> auf die Auflistung zeigt die Namen seiner <xref:System.Data.Odbc.OdbcParameter> Objekten zurück und löscht dann die Auflistung.  
+  
+ [!code-csharp[Classic WebData OdbcParameterCollection.Count#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OdbcParameterCollection.Count/CS/source.cs#1)]
+ [!code-vb[Classic WebData OdbcParameterCollection.Count#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OdbcParameterCollection.Count/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Der angegebene Index ist nicht vorhanden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Data.Odbc.OdbcParameter this[string parameterName] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Odbc.OdbcParameter Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcParameterCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">Der Name des abzurufenden Parameters.</param>
+        <summary>Ruft ab oder legt die <see cref="T:System.Data.Odbc.OdbcParameter" /> mit dem angegebenen Namen.</summary>
+        <value>Der <see cref="T:System.Data.Odbc.OdbcParameter" /> mit dem angegebenen Namen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel sucht nach einer <xref:System.Data.Odbc.OdbcParameter> mit einer angegebenen <xref:System.Data.Odbc.OdbcParameter.ParameterName%2A> innerhalb einer <xref:System.Data.Odbc.OdbcParameterCollection>. Wenn der Parameter vorhanden ist, zeigt das Beispiel den Namen und den Index des Parameters. Wenn der Parameter nicht vorhanden ist, zeigt das Beispiel einen Fehler auf. In diesem Beispiel wird vorausgesetzt, dass ein <xref:System.Data.Odbc.OdbcParameterCollection> bereits erstellt wurde.  
+  
+ [!code-csharp[Classic WebData OdbcParameterCollection.this1#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OdbcParameterCollection.this1/CS/source.cs#1)]
+ [!code-vb[Classic WebData OdbcParameterCollection.this1#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OdbcParameterCollection.this1/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Der angegebene Name ist nicht vorhanden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Data.Odbc.OdbcParameter value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Data.Odbc.OdbcParameter value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameterCollection.Remove(System.Data.Odbc.OdbcParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.Odbc.OdbcParameter" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.Data.Odbc.OdbcParameter" />-Objekt, das aus der Auflistung entfernt werden soll.</param>
+        <summary>Entfernt die <see cref="T:System.Data.Odbc.OdbcParameter" /> aus der <see cref="T:System.Data.Odbc.OdbcParameterCollection" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidCastException">Der Parameter ist kein <see cref="T:System.Data.Odbc.OdbcParameter" />.</exception>
+        <exception cref="T:System.SystemException">Der Parameter ist in der Auflistung nicht vorhanden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public override void Remove (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Remove(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameterCollection.Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.Object" /> aus zu entfernenden der <see cref="T:System.Data.Odbc.OdbcParameterCollection" />.</param>
+        <summary>Entfernt die <see cref="T:System.Object" /> -Objekt aus der <see cref="T:System.Data.Odbc.OdbcParameterCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public override void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameterCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des zu entfernenden <see cref="T:System.Data.Odbc.OdbcParameter" />-Objekts.</param>
+        <summary>Entfernt den <see cref="T:System.Data.Odbc.OdbcParameter" /> am angegebenen Index aus der <see cref="T:System.Data.Odbc.OdbcParameterCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public override void RemoveAt (string parameterName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RemoveAt(string parameterName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameterCollection.RemoveAt(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">Der Name des der <see cref="T:System.Data.Odbc.OdbcParameter" /> zu entfernende Objekt.</param>
+        <summary>Entfernt die <see cref="T:System.Data.Odbc.OdbcParameter" /> aus der <see cref="T:System.Data.Odbc.OdbcParameterCollection" /> mit dem angegebenen Parameternamen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetParameter">
+      <MemberSignature Language="C#" Value="protected override void SetParameter (int index, System.Data.Common.DbParameter value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetParameter(int32 index, class System.Data.Common.DbParameter value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameterCollection.SetParameter(System.Int32,System.Data.Common.DbParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Data.Common.DbParameter" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetParameter">
+      <MemberSignature Language="C#" Value="protected override void SetParameter (string parameterName, System.Data.Common.DbParameter value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetParameter(string parameterName, class System.Data.Common.DbParameter value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcParameterCollection.SetParameter(System.String,System.Data.Common.DbParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="value" Type="System.Data.Common.DbParameter" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public override object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcParameterCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt ab, mit dem der Zugriff auf <see cref="T:System.Data.Odbc.OdbcParameterCollection" /> synchronisiert werden kann. Schreibgeschützt.</summary>
+        <value>Ein Objekt, mit dem der Zugriff auf die <see cref="T:System.Data.Odbc.OdbcParameterCollection" /> synchronisiert werden kann.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

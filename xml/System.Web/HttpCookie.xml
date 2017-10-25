@@ -1,0 +1,424 @@
+<Type Name="HttpCookie" FullName="System.Web.HttpCookie">
+  <TypeSignature Language="C#" Value="public sealed class HttpCookie" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit HttpCookie extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpCookie" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet eine typsichere Möglichkeit zum Erstellen und bearbeiten die einzelnen HTTP-Cookies.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpCookie> Klasse ruft ab und legt die Eigenschaften einzelner Cookies fest. Die <xref:System.Web.HttpCookieCollection> -Klasse stellt Methoden zum Speichern, abrufen und Verwalten mehrerer Cookies bereit.  
+  
+ ASP.NET umfasst zwei systeminterne Cookie-Auflistungen. Die bindungsauflistung erfolgt über die <xref:System.Web.HttpRequest.Cookies%2A> Auflistung von der <xref:System.Web.HttpRequest> Objekt enthält die Cookies, die vom Client an den Server übertragen der `Cookie` Header. Die bindungsauflistung erfolgt über die <xref:System.Web.HttpResponse.Cookies%2A> Auflistung von der <xref:System.Web.HttpResponse> Objekt enthält neue Cookies auf dem Server erstellt und übermittelt an den Client in der `Set-Cookie` HTTP-Antwortheader.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie für ein Cookie mit dem Namen überprüfen `DateCookieExample` in die <xref:System.Web.HttpRequest> Objekt. Wenn das Cookie nicht gefunden wird, wird es erstellt und hinzugefügt, die <xref:System.Web.HttpResponse> Objekt. Das Cookie wird festgelegt, in 10 Minuten abläuft.  
+  
+ [!code-aspx-csharp[System.Web.HttpCookie#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpCookie/cs/HttpCookie.cs.aspx#1)]
+ [!code-aspx-vb[System.Web.HttpCookie#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpCookie/vb/HttpCookie.vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpCookie (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCookie.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des neuen Cookies.</param>
+        <summary>Erstellt und benennt ein neues Cookie.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird erstellt und benennt ein neues Cookie.  
+  
+ [!code-csharp[Classic HttpCookie.HttpCookie Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpCookie.HttpCookie Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpCookie.HttpCookie Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpCookie.HttpCookie Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpCookie (string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCookie.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des neuen Cookies.</param>
+        <param name="value">Der Wert des neuen Cookies.</param>
+        <summary>Erstellt und benannt, und weist einen Wert ein neues Cookie.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird erstellt, Namen, und legt den Wert für ein neues Cookie.  
+  
+ [!code-csharp[Classic HttpCookie.HttpCookie1 Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpCookie.HttpCookie1 Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpCookie.HttpCookie1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpCookie.HttpCookie1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Domain">
+      <MemberSignature Language="C#" Value="public string Domain { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Domain" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpCookie.Domain" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Domäne, der das Cookie zugeordnet werden soll.</summary>
+        <value>Der Name der Domäne, die das Cookie zugeordnet werden soll. Der Standardwert ist der aktuellen Domäne an.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen der `Domain` Attribut beschränkt die Übertragung des Cookies an Clients, die eine Ressource aus dieser Domäne anfordern.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Domäne des Cookies.  
+  
+ [!code-csharp[Classic HttpCookie.Domain Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpCookie.Domain Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpCookie.Domain Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpCookie.Domain Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expires">
+      <MemberSignature Language="C#" Value="public DateTime Expires { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime Expires" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpCookie.Expires" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, das Ablaufdatum und-Uhrzeit für das Cookie.</summary>
+        <value>Die Zeit des Tages (auf dem Client), an dem das Cookie abläuft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel legt die Ablaufzeit des Cookies auf 10 Minuten nach der aktuellen Uhrzeit fest.  
+  
+ [!code-csharp[Classic HttpCookie.Expires Example#2](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpCookie.Expires Example/CS/default.aspx#2)]
+ [!code-vb[Classic HttpCookie.Expires Example#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpCookie.Expires Example/VB/default.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasKeys">
+      <MemberSignature Language="C#" Value="public bool HasKeys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasKeys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpCookie.HasKeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein Cookie über Unterschlüssel verfügt.</summary>
+        <value>
+          <see langword="true" />Wenn das Cookie Unterschlüsseln gespeichert, andernfalls hat <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel überprüft jedes Element einer Auflistung der Cookies für mehrere Werte. Wenn ein Cookie <xref:System.Web.HttpCookie.HasKeys%2A> Eigenschaft `true`, gibt an, dass mehrere Werte vorhanden sind, in diesem Beispiel kopiert die Namen der Werte in ein Zeichenfolgenarray und die entsprechenden Werte in einem anderen Array von Zeichenfolgen. Ein Beispiel zum Erstellen mehrerer Werte für ein Cookie, finden Sie unter <xref:System.Web.HttpCookie.Values%2A>.  
+  
+ [!code-csharp[Classic HttpCookie.HasKeys Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpCookie.HasKeys Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpCookie.HasKeys Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpCookie.HasKeys Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpOnly">
+      <MemberSignature Language="C#" Value="public bool HttpOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HttpOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpCookie.HttpOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob ein Cookie durch clientseitiges Skript zugegriffen werden kann.</summary>
+        <value>
+          <see langword="true" />Wenn das Cookie wurde die <see langword="HttpOnly" /> Attribut, und nicht durch ein clientseitiges Skript zugegriffen wurde, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Microsoft Internet Explorer Version 6 Servicepack 1 und höher unterstützt eine Cookieeigenschaft <xref:System.Web.HttpCookie.HttpOnly%2A>, Cross-Site scripting Gefahren, die sich gestohlene Cookies ergeben unterstützen kann. Gestohlene Cookies können enthalten vertrauliche Informationen, die den Benutzer an den Standort, z. B. die ASP.NET Session ID Formularauthentifizierungsticket, identifizieren und wiedergegeben werden können, von der Angreifer, um sich als Benutzer auszugeben oder vertraulichen Informationen zu erhalten. Wenn ein `HttpOnly` Cookie wird von einem kompatiblen Browser empfangen, es ist nicht auf clientseitiges Skript zugegriffen werden kann.  
+  
+> [!CAUTION]
+>  Festlegen der <xref:System.Web.HttpCookie.HttpOnly%2A> Eigenschaft `true` wird nicht verhindert, könnte ein Angreifer Zugriff auf den Netzwerkkanal direkten Zugriff auf das Cookie. Erwägen Sie, Secure Sockets Layer (SSL) um zu unterstützen, dies zu vermeiden. Arbeitsstation Sicherheit ist außerdem wichtig, da ein böswilliger Benutzer ein Browserfenster öffnen oder ein Computer mit permanenten Cookies verwenden kann, um Zugriff auf eine Website mit einem legitimen Benutzer Identität zu erhalten.  
+  
+ Weitere Informationen zu möglichen Angriffen und wie diese Eigenschaft kann minimiert werden können, finden Sie unter [abschwächen von Cross-Site Scripting mit nur für HTTP-Cookies](http://go.microsoft.com/fwlink/?LinkId=41580).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Schreiben einer `HttpOnly` Cookie und gezeigt, wie sie nicht durch den Client über ECMAScript zugänglich ist.  
+  
+ [!code-aspx-csharp[HttpOnlyCookie#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HttpOnlyCookie/CS/httponlycookiecs.aspx#1)]
+ [!code-aspx-vb[HttpOnlyCookie#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HttpOnlyCookie/vb/httponlycookievb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public string this[string key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpCookie.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel (Index) des Cookiewerts.</param>
+        <summary>Ruft eine Verknüpfung mit der <see cref="P:System.Web.HttpCookie.Values" /> Eigenschaft. Diese Eigenschaft ist für die Kompatibilität mit früheren Versionen von Active Server Pages (ASP) bereitgestellt.</summary>
+        <value>Der Cookiewert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpCookie.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen eines Cookies.</summary>
+        <value>Der Standardwert ist ein null-Verweis (<see langword="Nothing" /> in Visual Basic), wenn der Konstruktor nicht anders angegeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird empfängt eine cookieauflistung vom Client in der `Cookie` Header und durchläuft die Auflistung, die ein Cookie mit dem angegebenen Namen gesucht.  
+  
+ [!code-csharp[Classic HttpCookie.Name Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpCookie.Name Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpCookie.Name Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpCookie.Name Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpCookie.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den virtuellen Pfad, mit dem aktuellen Cookie übertragen werden soll.</summary>
+        <value>Der virtuelle Pfad mit dem Cookie übertragen werden soll. Die Standardeinstellung ist <see langword="/" />, den Server Stammknoten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpCookie.Path%2A> Eigenschaft erweitert die <xref:System.Web.HttpCookie.Domain%2A> Eigenschaft, um die bestimmte URL vollständig zu beschreiben, auf die das Cookie angewendet. Beispielsweise in der URL http:/ www.microsoft.com/asp die Domäne www.microsoft.com und der Pfad/ASP dar.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die <xref:System.Web.HttpCookie.Path%2A> Eigenschaft eines neuen Cookies.  
+  
+ [!code-csharp[Classic HttpCookie.Path Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpCookie.Path Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpCookie.Path Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpCookie.Path Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Secure">
+      <MemberSignature Language="C#" Value="public bool Secure { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Secure" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpCookie.Secure" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Cookie mit Secure Sockets Layer (SSL) – d. h. nur über HTTPS übertragen werden soll.</summary>
+        <value>
+          <see langword="true" />um das Cookie über eine SSL-Verbindung (HTTPS) übertragen werden soll. andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um die Übertragung von Cookies mithilfe von SSL für eine gesamte Anwendung festzulegen, aktivieren Sie ihn in die Anwendung Konfigurationsdatei "Web.config", die sich im Stammverzeichnis der Anwendung befinden. Weitere Informationen finden Sie unter [HttpCookies Element ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/74790718-bfa3-4935-bc9a-59c88797e08f). Zurückgeht programmgesteuert mithilfe der <xref:System.Web.HttpCookie.Secure%2A> Eigenschaftenüberschreibungswerte in der Datei "Web.config" festgelegt.  
+  
+ Beim Umgang mit vertraulichen Informationen ist es dringend empfohlen, dass Sie HTTPS-Protokoll mit SSL-Verschlüsselung verwenden. SSL schützt vor Daten, die geändert wird (die Datenintegrität), schützt die Identität eines Benutzers (Vertraulichkeit) und stellt sicher, dass Daten vom erwarteten Client (Authentifizierung) stammen. Weitere Informationen zu den Vorteilen der Verschlüsselung finden Sie unter [Kryptografiedienste](~/docs/standard/security/cryptographic-services.md). Weitere Informationen zum Konfigurieren von SSL auf einem Webserver (Internet Information Services, IIS) finden Sie unter [Konfigurieren von SSL auf einem Webserver oder eine Website](http://go.microsoft.com/fwlink/?LinkId=38553).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel führt die Aktion, wenn das Cookie festgelegt ist, übertragen Sie die Verwendung von SSL.  
+  
+ [!code-csharp[Classic HttpCookie.Secure Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpCookie.Secure Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpCookie.Secure Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpCookie.Secure Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Shareable">
+      <MemberSignature Language="C#" Value="public bool Shareable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Shareable" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpCookie.Shareable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bestimmt, ob das Cookie zur Teilnahme an Zwischenspeichern der Ausgabe zulässig ist.</summary>
+        <value>
+          <see langword="true" />um anzugeben, dass das Zwischenspeichern der Ausgabe nicht für einen angegebenen unterdrückten <see cref="T:System.Web.HttpResponse" /> , die eine oder mehrere ausgehende Cookies enthält, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine bestimmte <xref:System.Web.HttpResponse> enthält eine oder mehrere ausgehende Cookies mit <xref:System.Web.HttpCookie.Shareable%2A> auf festgelegt ist `false` (Standardwert) Ausgabe Zwischenspeichern für die Antwort unterdrückt. Dies verhindert, dass Cookies, die potenziell vertrauliche Informationen nicht enthalten, in der Antwort zwischengespeichert und an mehrere Clients gesendet.  Damit wird eine Antwort mit Cookies zwischengespeichert werden soll, Konfigurieren von caching normalerweise für die Antwort, z. B. mit der `OutputCache` Direktive oder MVC [OutputCache]-Attribut an, und legen Sie alle ausgehenden Cookies haben <xref:System.Web.HttpCookie.Shareable%2A> festgelegt `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpCookie.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Cookiewert für die einzelnen.</summary>
+        <value>Der Wert des Cookies. Der Standardwert ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel legt den Wert eines vorhandenen Cookies auf "abc123" fest.  
+  
+ [!code-csharp[Classic HttpCookie.Value Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpCookie.Value Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpCookie.Value Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpCookie.Value Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.NameValueCollection Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.NameValueCollection Values" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpCookie.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Schlüssel/Wert-Paaren, die innerhalb eines einzelnen Cookie-Objekts enthalten sind.</summary>
+        <value>Eine Auflistung von Cookiewerte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel erstellt ein neues Cookie und mehrere Werte hinzugefügt. Ein Beispiel zum Extrahieren von mehreren Werten aus einem Cookie finden Sie unter <xref:System.Web.HttpCookie.HasKeys%2A>.  
+  
+ [!code-csharp[Classic HttpCookie.Values Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpCookie.Values Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpCookie.Values Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpCookie.Values Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

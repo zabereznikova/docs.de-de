@@ -1,0 +1,453 @@
+<Type Name="ActivityTrackingLocation" FullName="System.Workflow.Runtime.Tracking.ActivityTrackingLocation">
+  <TypeSignature Language="C#" Value="public sealed class ActivityTrackingLocation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit ActivityTrackingLocation extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Tracking.ActivityTrackingLocation" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert eine aktivitätsrelevante Position, die einem Aktivitätsstatusereignis im möglichen Ausführungspfad einer Stammworkflowinstanz entspricht. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Bei jeder Änderung des Ausführungsstatus einer Aktivität gibt die Workflowinstanz ein Aktivitätsstatusereignis an die Laufzeitverfolgungsinfrastruktur aus. Die Laufzeitverfolgungsinfrastruktur kann bei jedem Eintreten eines Aktivitätsstatusereignisses einen <xref:System.Workflow.Runtime.Tracking.ActivityTrackingRecord> an den Überwachungsdienst senden. In der Regel ist nicht jedes Aktivitätsstatusereignis der Workflowinstanz für den Überwachungsdienst von Belang, sondern nur Aktivitätsstatusereignisse, die bestimmten Aktivitätsarten an bestimmten Positionen der Workflowinstanz zugeordnet sind. <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation> definiert die Übereinstimmungsparameter für diese Positionen. Dazu werden ein Referenzaktivitätstyp, eine Reihe von Aktivitätsstatus-Änderungsereignissen und eine Reihe von Bedingungen angegeben, die eine oder mehrere Instanzen des Referenzaktivitätstyps genauer bestimmen.  
+  
+> [!NOTE]
+>  Eine einzelne <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation> kann sich auf mehrere tatsächliche Positionen im möglichen Pfad einer Workflowinstanz beziehen.  
+  
+ Sie können <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation> und <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint.MatchingLocations%2A> <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint.ExcludedLocations%2A>-Objekte hinzufügen, um die Übereinstimmungsparameter für einen <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint> in einem <xref:System.Workflow.Runtime.Tracking.TrackingProfile> zu definieren.  
+  
+ Geben Sie den abzugleichenden Referenzaktivitätstyp an, indem Sie <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ActivityTypeName%2A> oder <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ActivityType%2A> festlegen.  
+  
+ Sie können <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.MatchDerivedTypes%2A> festlegen, um relevante Aktivitäten anzugeben, die vom Referenzaktivitätstyp abgeleitet werden.  
+  
+ Sie können <xref:System.Workflow.ComponentModel.ActivityExecutionStatus> <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ExecutionStatusEvents%2A>-Werte hinzufügen, um die abzugleichenden Aktivitätsstatusereignisse anzugeben.  
+  
+ Sie können <xref:System.Workflow.Runtime.Tracking.ActivityTrackingCondition> <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.Conditions%2A>-Objekte hinzufügen, um nur für spezielle Bedingungen relevante Referenzaktivitätstypen anzugeben. Geben Sie z.&#160;B. an, dass nur eine bestimmte Namensinstanz des Referenzaktivitätstyps relevant ist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityTrackingLocation ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Runtime.Tracking.ActivityTrackingLocation" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie den Standardkonstruktor verwenden, müssen Sie im Code ausdrücklich <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ActivityType%2A> oder <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ActivityTypeName%2A> festlegen. Andernfalls wird eine Ausnahme ausgelöst, wenn <xref:System.Workflow.Runtime.Tracking.TrackingProfileSerializer> später für das Verfolgungsprofil verwendet wird.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ActivityTypeName%2A>|Ein NULL-Verweis (`Nothing` in Visual Basic).|  
+|<xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ActivityType%2A>|Ein NULL-Verweis (`Nothing`).|  
+|<xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.Conditions%2A>|Ein leerer <xref:System.Workflow.Runtime.Tracking.TrackingConditionCollection>.|  
+|<xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ExecutionStatusEvents%2A>|Ein leerer <xref:System.Collections.Generic.List%601>.|  
+|<xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.MatchDerivedTypes%2A>|`false`.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityTrackingLocation (string activityTypeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string activityTypeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="activityTypeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="activityTypeName">Der nicht qualifizierte Name des CLR-Typs (Common Language Runtime) einer Aktivität.</param>
+        <summary>Initialisiert mit dem angegebenen Aktivitätsnamen eine neue Instanz der <see cref="T:System.Workflow.Runtime.Tracking.ActivityTrackingLocation" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen den nicht qualifizierten Namen des Referenzaktivitätstyps angeben. Beispielsweise lautet der nicht qualifizierte Name des CLR-Typs einer <xref:System.Workflow.Activities.CodeActivity>-Aktivität "CodeActivity". Für <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ActivityTypeName%2A> ist `activityTypeName` festgelegt.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ActivityTypeName%2A>|Der mit `activityTypeName` angegebene nicht qualifizierte Name des Referenzaktivitätstyps.|  
+|<xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ActivityType%2A>|Ein NULL-Verweis (`Nothing`).|  
+|<xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.Conditions%2A>|Ein leerer <xref:System.Workflow.Runtime.Tracking.TrackingConditionCollection>.|  
+|<xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ExecutionStatusEvents%2A>|Ein leerer <xref:System.Collections.Generic.List%601>.|  
+|<xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.MatchDerivedTypes%2A>|`false`.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="activityTypeName" /> ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityTrackingLocation (Type activityType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type activityType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="activityType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="activityType"><see cref="T:System.Type" /> einer Aktivität.</param>
+        <summary>Initialisiert mit dem angegebenen Referenzaktivitätstyp eine neue Instanz der <see cref="T:System.Workflow.Runtime.Tracking.ActivityTrackingLocation" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ActivityType%2A> ist `activityType` festgelegt.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ActivityTypeName%2A>|Ein NULL-Verweis (`Nothing` in Visual Basic).|  
+|<xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ActivityType%2A>|Der mit `activityType` angegebene Referenzaktivitätstyp.|  
+|<xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.Conditions%2A>|Ein leerer <xref:System.Workflow.Runtime.Tracking.TrackingConditionCollection>.|  
+|<xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ExecutionStatusEvents%2A>|Ein leerer <xref:System.Collections.Generic.List%601>.|  
+|<xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.MatchDerivedTypes%2A>|`false`.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="activityType" /> ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityTrackingLocation (string activityTypeName, System.Collections.Generic.IEnumerable&lt;System.Workflow.ComponentModel.ActivityExecutionStatus&gt; executionStatusEvents);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string activityTypeName, class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Workflow.ComponentModel.ActivityExecutionStatus&gt; executionStatusEvents) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.#ctor(System.String,System.Collections.Generic.IEnumerable{System.Workflow.ComponentModel.ActivityExecutionStatus})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="activityTypeName" Type="System.String" />
+        <Parameter Name="executionStatusEvents" Type="System.Collections.Generic.IEnumerable&lt;System.Workflow.ComponentModel.ActivityExecutionStatus&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="activityTypeName">Der nicht qualifizierte Name des CLR-Typs (Common Language Runtime) einer Aktivität.</param>
+        <param name="executionStatusEvents">Eine Auflistung, die einen oder mehrere <see cref="T:System.Workflow.ComponentModel.ActivityExecutionStatus" />-Werte enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Runtime.Tracking.ActivityTrackingLocation" />-Klasse, die einen Referenzaktivitätstyp mit dem angegebenen nicht qualifizierten Namen besitzt und den angegebenen Aktivitätsstatusereignissen entspricht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen den nicht qualifizierten Namen des Referenzaktivitätstyps angeben. Beispielsweise lautet der nicht qualifizierte Name des CLR-Typs einer <xref:System.Workflow.Activities.CodeActivity>-Aktivität "CodeActivity".  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ActivityTypeName%2A>|Der mit `activityTypeName` angegebene nicht qualifizierte Name des Referenzaktivitätstyps.|  
+|<xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ActivityType%2A>|Ein NULL-Verweis (`Nothing`).|  
+|<xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.Conditions%2A>|Ein leerer <xref:System.Workflow.Runtime.Tracking.TrackingConditionCollection>.|  
+|<xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ExecutionStatusEvents%2A>|Eine <xref:System.Collections.Generic.List%601> mit den von <xref:System.Workflow.ComponentModel.ActivityExecutionStatus> angegebenen `ExecutionStatusEvents`-Werten.|  
+|<xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.MatchDerivedTypes%2A>|`false`.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="activityTypeName" /> ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).  
+  
+ - oder -   
+  
+ <paramref name="executionStatusEvents" /> ist ein NULL-Verweis (<see langword="Nothing" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityTrackingLocation (Type activityType, System.Collections.Generic.IEnumerable&lt;System.Workflow.ComponentModel.ActivityExecutionStatus&gt; executionStatusEvents);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type activityType, class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Workflow.ComponentModel.ActivityExecutionStatus&gt; executionStatusEvents) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.#ctor(System.Type,System.Collections.Generic.IEnumerable{System.Workflow.ComponentModel.ActivityExecutionStatus})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="activityType" Type="System.Type" />
+        <Parameter Name="executionStatusEvents" Type="System.Collections.Generic.IEnumerable&lt;System.Workflow.ComponentModel.ActivityExecutionStatus&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="activityType"><see cref="T:System.Type" /> einer Aktivität.</param>
+        <param name="executionStatusEvents">Eine Auflistung, die einen oder mehrere <see cref="T:System.Workflow.ComponentModel.ActivityExecutionStatus" />-Werte enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Runtime.Tracking.ActivityTrackingLocation" />-Klasse, die den angegebenen Referenzaktivitätstyp besitzt und dem angegebenen Aktivitätsstatusereignissen entspricht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ActivityTypeName%2A>|Ein NULL-Verweis (`Nothing`).|  
+|<xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ActivityType%2A>|Der mit `activityType` angegebene Referenzaktivitätstyp.|  
+|<xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.Conditions%2A>|Ein leerer <xref:System.Workflow.Runtime.Tracking.TrackingConditionCollection>.|  
+|<xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ExecutionStatusEvents%2A>|Eine <xref:System.Collections.Generic.List%601> mit den von <xref:System.Workflow.ComponentModel.ActivityExecutionStatus> angegebenen `executionStatusEvents`-Werten.|  
+|<xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.MatchDerivedTypes%2A>|`false`.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="activityType" /> ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).  
+  
+ - oder -   
+  
+ <paramref name="executionStatusEvents" /> ist ein NULL-Verweis (<see langword="Nothing" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityTrackingLocation (string activityTypeName, bool matchDerivedTypes, System.Collections.Generic.IEnumerable&lt;System.Workflow.ComponentModel.ActivityExecutionStatus&gt; executionStatusEvents);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string activityTypeName, bool matchDerivedTypes, class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Workflow.ComponentModel.ActivityExecutionStatus&gt; executionStatusEvents) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.#ctor(System.String,System.Boolean,System.Collections.Generic.IEnumerable{System.Workflow.ComponentModel.ActivityExecutionStatus})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="activityTypeName" Type="System.String" />
+        <Parameter Name="matchDerivedTypes" Type="System.Boolean" />
+        <Parameter Name="executionStatusEvents" Type="System.Collections.Generic.IEnumerable&lt;System.Workflow.ComponentModel.ActivityExecutionStatus&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="activityTypeName">Der nicht qualifizierte Name des CLR-Typs (Common Language Runtime) einer Aktivität.</param>
+        <param name="matchDerivedTypes">
+          <see langword="true" />, wenn vom Referenzaktivitätstyp abgeleitete Aktivitäten abgeglichen werden sollen, andernfalls <see langword="false" />.</param>
+        <param name="executionStatusEvents">Eine Auflistung, die einen oder mehrere <see cref="T:System.Workflow.ComponentModel.ActivityExecutionStatus" />-Werte enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Runtime.Tracking.ActivityTrackingLocation" />-Klasse, die einen Referenzaktivitätstyp mit dem angegebenen nicht qualifizierten Namen besitzt, die angibt, ob vom Referenzaktivitätstyp abgeleitete Aktivitäten abgeglichen werden sollen, und die die angegebenen Aktivitätsstatusereignisse abgleicht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen den nicht qualifizierten Namen des Referenzaktivitätstyps angeben. Beispielsweise lautet der nicht qualifizierte Name des CLR-Typs einer <xref:System.Workflow.Activities.CodeActivity>-Aktivität "CodeActivity".  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ActivityTypeName%2A>|Der mit `activityTypeName` angegebene nicht qualifizierte Name des Referenzaktivitätstyps.|  
+|<xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ActivityType%2A>|Ein NULL-Verweis (`Nothing`).|  
+|<xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.Conditions%2A>|Ein leerer <xref:System.Workflow.Runtime.Tracking.TrackingConditionCollection>.|  
+|<xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ExecutionStatusEvents%2A>|Eine <xref:System.Collections.Generic.List%601> mit den von <xref:System.Workflow.ComponentModel.ActivityExecutionStatus> angegebenen `executionStatusEvents`-Werten.|  
+|<xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.MatchDerivedTypes%2A>|Der von `matchDerivedTypes` angegebene Wert.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="activityTypeName" /> ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).  
+  
+ - oder -   
+  
+ <paramref name="executionStatusEvents" /> ist ein NULL-Verweis (<see langword="Nothing" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityTrackingLocation (Type activityType, bool matchDerivedTypes, System.Collections.Generic.IEnumerable&lt;System.Workflow.ComponentModel.ActivityExecutionStatus&gt; executionStatusEvents);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type activityType, bool matchDerivedTypes, class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Workflow.ComponentModel.ActivityExecutionStatus&gt; executionStatusEvents) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.#ctor(System.Type,System.Boolean,System.Collections.Generic.IEnumerable{System.Workflow.ComponentModel.ActivityExecutionStatus})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="activityType" Type="System.Type" />
+        <Parameter Name="matchDerivedTypes" Type="System.Boolean" />
+        <Parameter Name="executionStatusEvents" Type="System.Collections.Generic.IEnumerable&lt;System.Workflow.ComponentModel.ActivityExecutionStatus&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="activityType"><see cref="T:System.Type" /> einer Aktivität.</param>
+        <param name="matchDerivedTypes">
+          <see langword="true" />, wenn vom Referenzaktivitätstyp abgeleitete Aktivitäten abgeglichen werden sollen, andernfalls <see langword="false" />.</param>
+        <param name="executionStatusEvents">Eine Auflistung, die einen oder mehrere <see cref="T:System.Workflow.ComponentModel.ActivityExecutionStatus" />-Werte enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Runtime.Tracking.ActivityTrackingLocation" />-Klasse, die den angegebenen Referenzaktivitätstyp besitzt, die angibt, ob vom Referenzaktivitätstyp abgeleitete Aktivitäten abgeglichen werden sollen, und die die angegebenen Aktivitätsstatusereignisse abgleicht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ActivityTypeName%2A>|Ein NULL-Verweis (`Nothing`).|  
+|<xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ActivityType%2A>|Der mit `activityType` angegebene Referenzaktivitätstyp.|  
+|<xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.Conditions%2A>|Ein leerer <xref:System.Workflow.Runtime.Tracking.TrackingConditionCollection>.|  
+|<xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ExecutionStatusEvents%2A>|Eine <xref:System.Collections.Generic.List%601> mit den von <xref:System.Workflow.ComponentModel.ActivityExecutionStatus> angegebenen `executionStatusEvents`-Werten.|  
+|<xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.MatchDerivedTypes%2A>|Der von `matchDerivedTypes` angegebene Wert.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="activityType" /> ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).  
+  
+ - oder -   
+  
+ <paramref name="executionStatusEvents" /> ist ein NULL-Verweis (<see langword="Nothing" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ActivityType">
+      <MemberSignature Language="C#" Value="public Type ActivityType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ActivityType" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ActivityType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den CRL-Typ (Common Language Runtime) der abzugleichenden Referenzaktivität ab oder legt den CRL-Typ fest.</summary>
+        <value><see cref="T:System.Type" /> der Aktivität.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ActivityTypeName%2A> oder <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ActivityType%2A> für <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation> angeben. Wenn Sie den Referenzaktivitätstyp versionsunabhängig angeben möchten, verwenden Sie <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ActivityTypeName%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActivityTypeName">
+      <MemberSignature Language="C#" Value="public string ActivityTypeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ActivityTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ActivityTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den nicht qualifizierten Namen des Referenzaktivitätstyps für die Position ab oder legt den Namen fest.</summary>
+        <value>Der nicht qualifizierte Name des Referenzaktivitätstyps.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen den nicht qualifizierten Namen des Referenzaktivitätstyps angeben. Wenn Sie beispielsweise den nicht qualifizierten Namen einer <xref:System.Workflow.Activities.CodeActivity>-Aktivität angeben möchten, legen Sie <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ActivityTypeName%2A> auf "CodeActivity" fest.  
+  
+ <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ActivityTypeName%2A> vereinfacht das Angeben eines Referenzaktivitätstyps erheblich, wenn Sie ein Profil direkt in XML erstellen. <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ActivityTypeName%2A> ermöglicht auch versionsunabhängige Verweise auf einen Referenzaktivitätstyp.  
+  
+ Sie müssen <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ActivityTypeName%2A> oder <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ActivityType%2A> für <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation> angeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Conditions">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.Tracking.TrackingConditionCollection Conditions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Runtime.Tracking.TrackingConditionCollection Conditions" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.Conditions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.TrackingConditionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der Bedingungen ab, die die Relevanz einer Aktivität bestimmen.</summary>
+        <value><see cref="T:System.Workflow.Runtime.Tracking.TrackingConditionCollection" /> mit Bedingungen, die die Relevanz einer Aktivität bestimmen. Der Standard ist eine leere Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können mit <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.Conditions%2A> die Instanz des abzugleichenden Referenzaktivitätstyps genauer definieren. Wenn Sie z.&#160;B. nur <xref:System.Workflow.Activities.CodeActivity>-Aktivitäten mit einem <xref:System.Workflow.ComponentModel.Activity.Name%2A?displayProperty=nameWithType> "MyCode" abgleichen möchten, können Sie <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ActivityTypeName%2A> auf "CodeActivity" festlegen und <xref:System.Workflow.Runtime.Tracking.ActivityTrackingCondition> eine <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.Conditions%2A> hinzufügen, die angibt, dass die <xref:System.Workflow.ComponentModel.Activity.Name%2A?displayProperty=nameWithType>-Eigenschaft der Aktivitätsinstanz "MyCode" entsprechen muss.  
+  
+ Jede <xref:System.Workflow.Runtime.Tracking.TrackingCondition> in <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.Conditions%2A> muss `true` sein, und einer der <xref:System.Workflow.ComponentModel.ActivityExecutionStatus>-Werte in <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ExecutionStatusEvents%2A> muss mit der abzugleichenden <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation> übereinstimmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecutionStatusEvents">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Workflow.ComponentModel.ActivityExecutionStatus&gt; ExecutionStatusEvents { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;valuetype System.Workflow.ComponentModel.ActivityExecutionStatus&gt; ExecutionStatusEvents" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ExecutionStatusEvents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Workflow.ComponentModel.ActivityExecutionStatus&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Liste der Aktivitätsstatusereignisse ab, die mit dieser Position abgeglichen werden können.</summary>
+        <value><see cref="T:System.Collections.Generic.IList`1" />, die einen oder mehrere der <see cref="T:System.Workflow.ComponentModel.ActivityExecutionStatus" />-Werte enthält. Der Standardwert ist eine leere Liste.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ExecutionStatusEvents%2A> gibt die Aktivitätsstatusereignisse an, die mit <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation> abgeglichen werden können. Einer der <xref:System.Workflow.ComponentModel.ActivityExecutionStatus>-Werte in <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ExecutionStatusEvents%2A> muss übereinstimmen und jede <xref:System.Workflow.Runtime.Tracking.TrackingCondition> in <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.Conditions%2A> muss `true` sein, damit die <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation> abgeglichen wird. Eine leere Liste gibt an, dass keine Ereignisse abgeglichen werden sollen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MatchDerivedTypes">
+      <MemberSignature Language="C#" Value="public bool MatchDerivedTypes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MatchDerivedTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.ActivityTrackingLocation.MatchDerivedTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob vom Referenzaktivitätstyp abgeleitete Aktivitäten abgeglichen werden sollen.</summary>
+        <value>
+          <see langword="true" />, wenn vom Referenzaktivitätstyp der Position abgeleitete Aktivitäten abgeglichen werden sollen, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,154 @@
+<Type Name="FormViewModeEventArgs" FullName="System.Web.UI.WebControls.FormViewModeEventArgs">
+  <TypeSignature Language="C#" Value="public class FormViewModeEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FormViewModeEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.FormViewModeEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Web.UI.WebControls.FormView.ModeChanging" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.FormView.ModeChanging> Ereignis wird ausgelöst, wenn ein <xref:System.Web.UI.WebControls.FormView> Steuerelement versucht, wechseln Sie zwischen bearbeiten, einfügen und nur-Lese-Modus, jedoch bevor der Modus tatsächlich ändert. Dadurch können Sie eine Ereignisbehandlungsmethode bereitstellen, die führt eine benutzerdefinierte Routine, z. B. das Konfigurieren der <xref:System.Web.UI.WebControls.FormView> für einen bestimmten Modus zu steuern oder die Änderung Modus abbrechen, wenn dieses Ereignis tritt auf.  
+  
+ Ein <xref:System.Web.UI.WebControls.FormViewInsertEventArgs> Ereignisbehandlungsmethode, dadurch können Sie den Modus ermitteln-Objekt übergeben wird die <xref:System.Web.UI.WebControls.FormView> Steuerelement ändern, um zu bestimmen, ob die <xref:System.Web.UI.WebControls.FormView.ModeChanging> Ereignis ausgelöst wurde, weil der Benutzer, die durch das Abbrechen einer bearbeiten oder einfügen der Vorgang, oder um anzugeben, dass die Änderung des abgebrochen werden soll. Den neuen Modus ermitteln Sie mithilfe der <xref:System.Web.UI.WebControls.FormViewModeEventArgs.NewMode%2A> Eigenschaft. Können Sie auch die <xref:System.Web.UI.WebControls.FormViewModeEventArgs.NewMode%2A> -Eigenschaft an, dass programmgesteuert einen alternativen Modus die ändern, indem Sie es in eines der <xref:System.Web.UI.WebControls.FormViewMode> Enumerationswerte. Verwenden der <xref:System.Web.UI.WebControls.FormViewModeEventArgs.CancelingEdit%2A> Eigenschaft, um zu bestimmen, ob dieses Ereignis ausgelöst wurde, als das Ergebnis des Benutzers eine Bearbeitung abbrechen oder Einfügevorgang. Um die Änderung abzubrechen, legen die <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft `true`.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz der <xref:System.Web.UI.WebControls.FormViewModeEventArgs>-Klasse finden Sie im <xref:System.Web.UI.WebControls.FormViewModeEventArgs.%23ctor%2A>-Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.FormViewModeEventArgs> -Objekt übergeben, um die Ereignisbehandlungsmethode für den <xref:System.Web.UI.WebControls.FormView.ModeChanging> Ereignis an den Pager ausblenden Datenzeile, wenn die <xref:System.Web.UI.WebControls.FormView> steuern, in den Bearbeitungsmodus wechselt.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[FormViewModeEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewModeEventArgs/CS/formviewmodeeventargscs.aspx#1)]
+ [!code-aspx-vb[FormViewModeEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewModeEventArgs/VB/formviewmodeeventargsvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FormViewModeEventArgs (System.Web.UI.WebControls.FormViewMode mode, bool cancelingEdit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Web.UI.WebControls.FormViewMode mode, bool cancelingEdit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FormViewModeEventArgs.#ctor(System.Web.UI.WebControls.FormViewMode,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="mode" Type="System.Web.UI.WebControls.FormViewMode" />
+        <Parameter Name="cancelingEdit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="mode">Einer der <see cref="T:System.Web.UI.WebControls.FormViewMode" />-Enumerationswerte.</param>
+        <param name="cancelingEdit">
+          <see langword="true" />um anzugeben, die <see cref="E:System.Web.UI.WebControls.FormView.ModeChanging" /> Ereignis wurde ausgelöst, als Ergebnis der Benutzer einen Bearbeitungsvorgang abgebrochen wurde, andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.FormViewModeEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.FormViewModeEventArgs> Klasse.  
+  
+ In der folgenden Tabelle werden anfängliche Eigenschaftswerte für eine Instanz der <xref:System.Web.UI.WebControls.FormViewModeEventArgs>-Klasse aufgeführt.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.FormViewModeEventArgs.CancelingEdit%2A>|Der Wert des `cancelingEdit`-Parameters.|  
+|<xref:System.Web.UI.WebControls.FormViewModeEventArgs.NewMode%2A>|Der Wert des `mode`-Parameters.|  
+  
+> [!NOTE]
+>  Dieser Konstruktor wird hauptsächlich von Steuerelemententwicklern verwendet, beim Auslösen von Ereignissen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelingEdit">
+      <MemberSignature Language="C#" Value="public bool CancelingEdit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CancelingEdit" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FormViewModeEventArgs.CancelingEdit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="E:System.Web.UI.WebControls.FormView.ModeChanging" /> Ereignis ausgelöst wurde, weil der Benutzer einen Bearbeitungsvorgang abgebrochen.</summary>
+        <value>
+          <see langword="true" />um anzugeben, die <see cref="E:System.Web.UI.WebControls.FormView.ModeChanging" /> Ereignis wurde ausgelöst, als Ergebnis der Benutzer einen Bearbeitungsvorgang abgebrochen wurde, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.FormView.ModeChanging> Ereignis wird ausgelöst, wenn ein <xref:System.Web.UI.WebControls.FormView> Steuerelement versucht, wechseln Sie zwischen bearbeiten, einfügen und nur-Lese-Modus, jedoch bevor der Modus tatsächlich ändert. Verwenden der <xref:System.Web.UI.WebControls.FormViewModeEventArgs.CancelingEdit%2A> -Eigenschaft können Sie bestimmen, ob die <xref:System.Web.UI.WebControls.FormView.ModeChanging> Ereignis ausgelöst wurde, weil der Benutzer einen bearbeiten oder Insert-Vorgang abgebrochen wird. Angenommen, Sie möchten möglicherweise Zurücksetzen der <xref:System.Web.UI.WebControls.FormView> Steuerelement, wenn der Benutzer einen Bearbeitungsvorgang an abbricht.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.FormViewModeEventArgs.CancelingEdit%2A> Eigenschaft, um zu bestimmen, ob eine Änderung des Modus das Ergebnis der Benutzer einen Bearbeitungsvorgang abgebrochen wird.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[FormViewModeEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewModeEventArgs/CS/formviewmodeeventargscs.aspx#1)]
+ [!code-aspx-vb[FormViewModeEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewModeEventArgs/VB/formviewmodeeventargsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewMode">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.FormViewMode NewMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.FormViewMode NewMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FormViewModeEventArgs.NewMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FormViewMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Modus fest, zu dem die <see cref="T:System.Web.UI.WebControls.FormView" /> Steuerelement geändert wird.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.FormViewMode" />-Enumerationswerte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.FormViewModeEventArgs.NewMode%2A> -Eigenschaft bestimmt den Modus der <xref:System.Web.UI.WebControls.FormView> Steuerelement geändert wird. Beispielsweise sollten Sie so konfigurieren Sie die <xref:System.Web.UI.WebControls.FormView> Steuerelement basieren auf den Modus, der geändert wird. Sie können diese Eigenschaft auch verwenden, den Modus an die <xref:System.Web.UI.WebControls.FormView> steuern Sie durch Festlegen auf eine der Änderungen der <xref:System.Web.UI.WebControls.FormViewMode> Enumerationswerte.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.FormViewModeEventArgs.NewMode%2A> -Eigenschaft bestimmt den Modus der <xref:System.Web.UI.WebControls.FormView> Steuerelement befindet sich im Übergang.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[FormViewModeEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewModeEventArgs/CS/formviewmodeeventargscs.aspx#1)]
+ [!code-aspx-vb[FormViewModeEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewModeEventArgs/VB/formviewmodeeventargsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

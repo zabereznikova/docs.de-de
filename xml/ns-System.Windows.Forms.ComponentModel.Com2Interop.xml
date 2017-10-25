@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Forms.ComponentModel.Com2Interop">
+  <Docs>
+    <summary>Die <see cref="N:System.Windows.Forms.ComponentModel.Com2Interop" /> -Namespace enthält Hilfsklassen, die Visual Studio verwendet wird, um die Eigenschaftenseiten im Entwurfsmodus angezeigt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

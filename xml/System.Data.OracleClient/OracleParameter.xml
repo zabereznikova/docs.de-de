@@ -1,0 +1,1003 @@
+<Type Name="OracleParameter" FullName="System.Data.OracleClient.OracleParameter">
+  <TypeSignature Language="C#" Value="public sealed class OracleParameter : System.Data.Common.DbParameter, ICloneable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OracleParameter extends System.Data.Common.DbParameter implements class System.Data.IDataParameter, class System.Data.IDbDataParameter, class System.ICloneable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.OracleClient.OracleParameter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.OracleClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.DbParameter</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Data.OracleClient.OracleParameter/OracleParameterConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Parameter für ein <see cref="T:System.Data.OracleClient.OracleCommand" /> und optional für seine Zuordnung zu einem <see cref="T:System.Data.DataColumn" />. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Parameternamen wird die Groß-/Kleinschreibung nicht berücksichtigt.  
+  
+ Beim Abfragen einer Oracle-Datenbank mithilfe der Microsoft OLE DB-Anbieter für Oracle (MSDAORA) und der ODBC.NET Framework-Datenanbieter, unter Verwendung der `LIKE` -Klausel, um die Abfragewerte in Feldern mit fester Länge, die möglicherweise nicht alle erwartete Übereinstimmungen zurück. Der Grund hierfür ist, die bei Oracle Werte für Felder mit fester Länge in entspricht einer `LIKE` -Klausel die gesamte Länge der Zeichenfolge, einschließlich aller auffüllleerzeichen. Wenn eine Tabelle enthält eine Oracle-Datenbank z. B. ein Feld mit dem Namen "Field1", die als definiert ist `char(3)`, und Sie geben den Wert "a" in eine Zeile der Tabelle, den folgenden Code wird die Zeile nicht zurückgeben.  
+  
+```vb  
+Dim queryString As String = "SELECT * FROM Table1 WHERE Field1 LIKE ?"  
+Dim command As OleDbCommand = New OleDbCommand(queryString, connection)  
+command.Parameters.Add("@p1", OleDbType.Char, 3).Value = "a"  
+Dim reader As OleDbDataReader = command.ExecuteReader()  
+```  
+  
+```csharp  
+string queryString = "SELECT * FROM Table1 WHERE Field1 LIKE ?";  
+OleDbCommand command = new OleDbCommand(queryString, connection);  
+command.Parameters.Add("@p1", OleDbType.Char, 3).Value = "a";  
+OleDbDataReader reader = command.ExecuteReader();  
+```  
+  
+ Dies ist, da Oracle den Spaltenwert als "a" speichert (padding "a" durch nachfolgende Leerzeichen, um die feste Länge von 3), die Oracle nicht als Übereinstimmung für den Parameterwert von "a" im Fall von behandelt eine `LIKE` Vergleich von Feldern mit fester Länge.  
+  
+ Um dieses Problem zu beheben, fügen Sie ein Platzhalterzeichen Prozent ("%") mit dem Parameterwert (`"a%"`), oder verwenden Sie eine SQL `=` Vergleich stattdessen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt mehrere Instanzen von <xref:System.Data.OracleClient.OracleParameter> über die <xref:System.Data.OracleClient.OracleParameterCollection> innerhalb der <xref:System.Data.OracleClient.OracleDataAdapter>. Diese Parameter werden verwendet, um Daten aus der Datenbank auszuwählen, und platzieren Sie die Daten in der <xref:System.Data.DataSet>. In diesem Beispiel wird vorausgesetzt, dass ein <xref:System.Data.DataSet> und ein <xref:System.Data.OracleClient.OracleDataAdapter> mithilfe des entsprechenden Schemas, die Befehle und die Verbindung bereits erstellt wurden.  
+  
+ [!code-csharp[Classic WebData OracleParameter#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OracleParameter/CS/source.cs#1)]
+ [!code-vb[Classic WebData OracleParameter#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OracleParameter/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OracleParameter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleParameter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.OracleClient.OracleParameter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OracleParameter (string name, System.Data.OracleClient.OracleType oracleType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Data.OracleClient.OracleType oracleType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleParameter.#ctor(System.String,System.Data.OracleClient.OracleType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="oracleType" Type="System.Data.OracleClient.OracleType" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Parameters.</param>
+        <param name="oracleType">Einer der <see cref="T:System.Data.OracleClient.OracleType" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.OracleClient.OracleParameter" /> Klasse, die die Parameter Name und Datentyp verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OracleClient.OracleParameter> und legt einige ihrer Eigenschaften.  
+  
+ [!code-csharp[Classic WebData OracleParameter.OracleParameter1#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OracleParameter.OracleParameter1/CS/source.cs#1)]
+ [!code-vb[Classic WebData OracleParameter.OracleParameter1#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OracleParameter.OracleParameter1/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der im <paramref name="oracleType" />-Parameter angegebene Wert ist ein ungültiger Back-End-Datentyp.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OracleParameter (string name, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleParameter.#ctor(System.String,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Parameters.</param>
+        <param name="value">Ein <see cref="T:System.Data.OracleClient.OracleParameter" />-Objekt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.OracleClient.OracleParameter" /> Klasse, die den Namen des Parameters verwendet und ein <see cref="T:System.Data.OracleClient.OracleParameter" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Angeben von einer <xref:System.Object> in der `value` Parameter, die <xref:System.Data.DbType> wird abgeleitet aus dem Microsoft .NET Framework-Typ, der die <xref:System.Object>.  
+  
+ Gehen Sie vorsichtig vor, bei der Verwendung dieser Überladung von der <xref:System.Data.OracleClient.OracleParameter> Konstruktor. Da diese Überladung lässt eine `value` des Typs <xref:System.Object>, müssen Sie den ganzzahligen Wert zu konvertieren einer <xref:System.Object> eingeben, wenn der Wert 0 (null), ist, wie im folgenden Microsoft Visual C#-Beispiel veranschaulicht.  
+  
+```  
+Parameter = new OracleParameter("pname", Convert.ToInt32(0));  
+```  
+  
+ Wenn Sie diese Konvertierung nicht ausführen, der Compiler geht davon aus, dass Sie aufrufen möchten die `OracleParameter`(`string`, `OracleType`) Überladung des Konstruktors.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OracleParameter (string name, System.Data.OracleClient.OracleType oracleType, int size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Data.OracleClient.OracleType oracleType, int32 size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleParameter.#ctor(System.String,System.Data.OracleClient.OracleType,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="oracleType" Type="System.Data.OracleClient.OracleType" />
+        <Parameter Name="size" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Parameters.</param>
+        <param name="oracleType">Einer der <see cref="T:System.Data.OracleClient.OracleType" />-Werte.</param>
+        <param name="size">Die Länge des Parameters.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.OracleClient.OracleParameter" /> Klasse, die den Parameternamen, den Datentyp und die Länge verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OracleClient.OracleParameter> und legt einige ihrer Eigenschaften.  
+  
+ [!code-csharp[Classic WebData OracleParameter.OracleParameter2#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OracleParameter.OracleParameter2/CS/source.cs#1)]
+ [!code-vb[Classic WebData OracleParameter.OracleParameter2#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OracleParameter.OracleParameter2/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der im <paramref name="oracleType" />-Parameter angegebene Wert ist ein ungültiger Back-End-Datentyp.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OracleParameter (string name, System.Data.OracleClient.OracleType oracleType, int size, string srcColumn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Data.OracleClient.OracleType oracleType, int32 size, string srcColumn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleParameter.#ctor(System.String,System.Data.OracleClient.OracleType,System.Int32,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="oracleType" Type="System.Data.OracleClient.OracleType" />
+        <Parameter Name="size" Type="System.Int32" />
+        <Parameter Name="srcColumn" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Parameters.</param>
+        <param name="oracleType">Einer der <see cref="T:System.Data.OracleClient.OracleType" />-Werte.</param>
+        <param name="size">Die Länge des Parameters.</param>
+        <param name="srcColumn">Der Name der Quellspalte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.OracleClient.OracleParameter" /> Klasse, die den Parameternamen, Datentyp, Länge und Quellspaltennamen verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OracleClient.OracleParameter> und legt einige ihrer Eigenschaften.  
+  
+ [!code-csharp[Classic WebData OracleParameter.OracleParameter3#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OracleParameter.OracleParameter3/CS/source.cs#1)]
+ [!code-vb[Classic WebData OracleParameter.OracleParameter3#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OracleParameter.OracleParameter3/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der im <paramref name="oracleType" />-Parameter angegebene Wert ist ein ungültiger Back-End-Datentyp.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OracleParameter (string name, System.Data.OracleClient.OracleType oracleType, int size, System.Data.ParameterDirection direction, string sourceColumn, System.Data.DataRowVersion sourceVersion, bool sourceColumnNullMapping, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Data.OracleClient.OracleType oracleType, int32 size, valuetype System.Data.ParameterDirection direction, string sourceColumn, valuetype System.Data.DataRowVersion sourceVersion, bool sourceColumnNullMapping, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleParameter.#ctor(System.String,System.Data.OracleClient.OracleType,System.Int32,System.Data.ParameterDirection,System.String,System.Data.DataRowVersion,System.Boolean,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="oracleType" Type="System.Data.OracleClient.OracleType" />
+        <Parameter Name="size" Type="System.Int32" />
+        <Parameter Name="direction" Type="System.Data.ParameterDirection" />
+        <Parameter Name="sourceColumn" Type="System.String" />
+        <Parameter Name="sourceVersion" Type="System.Data.DataRowVersion" />
+        <Parameter Name="sourceColumnNullMapping" Type="System.Boolean" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des zuzuordnenden Parameters.</param>
+        <param name="oracleType">Einer der <see cref="T:System.Data.OracleClient.OracleType" />-Werte.</param>
+        <param name="size">Die Länge des Parameters.</param>
+        <param name="direction">Einer der <see cref="T:System.Data.ParameterDirection" />-Werte.</param>
+        <param name="sourceColumn">Der Name der Quellspalte.</param>
+        <param name="sourceVersion">Einer der <see cref="T:System.Data.DataRowVersion" />-Werte.</param>
+        <param name="sourceColumnNullMapping">
+          <see langword="true" />Wenn die Quellspalte NULL-Werte zulässt, andernfalls <see langword="false" />.</param>
+        <param name="value">Ein <see cref="T:System.Object" />, das den Wert des <see cref="T:System.Data.OracleClient.OracleParameter" /> darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.OracleClient.OracleParameter" /> Klasse, die den Parameternamen, Datentyp, Größe, Richtung, Quellspalte, Quellversion und andere Eigenschaften verwendet.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Der im <paramref name="oracleType" />-Parameter angegebene Wert ist ein ungültiger Back-End-Datentyp.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OracleParameter (string name, System.Data.OracleClient.OracleType oracleType, int size, System.Data.ParameterDirection direction, bool isNullable, byte precision, byte scale, string srcColumn, System.Data.DataRowVersion srcVersion, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Data.OracleClient.OracleType oracleType, int32 size, valuetype System.Data.ParameterDirection direction, bool isNullable, unsigned int8 precision, unsigned int8 scale, string srcColumn, valuetype System.Data.DataRowVersion srcVersion, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleParameter.#ctor(System.String,System.Data.OracleClient.OracleType,System.Int32,System.Data.ParameterDirection,System.Boolean,System.Byte,System.Byte,System.String,System.Data.DataRowVersion,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="oracleType" Type="System.Data.OracleClient.OracleType" />
+        <Parameter Name="size" Type="System.Int32" />
+        <Parameter Name="direction" Type="System.Data.ParameterDirection" />
+        <Parameter Name="isNullable" Type="System.Boolean" />
+        <Parameter Name="precision" Type="System.Byte" />
+        <Parameter Name="scale" Type="System.Byte" />
+        <Parameter Name="srcColumn" Type="System.String" />
+        <Parameter Name="srcVersion" Type="System.Data.DataRowVersion" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Parameters.</param>
+        <param name="oracleType">Einer der <see cref="T:System.Data.OracleClient.OracleType" />-Werte.</param>
+        <param name="size">Die Länge des Parameters.</param>
+        <param name="direction">Einer der <see cref="T:System.Data.ParameterDirection" />-Werte.</param>
+        <param name="isNullable">
+          <see langword="true" />Wenn der Wert des Felds, andernfalls null sein kann <see langword="false" />.</param>
+        <param name="precision">Die Gesamtanzahl der Ziffern links und rechts vom Dezimaltrennzeichen, in die <see cref="P:System.Data.OracleClient.OracleParameter.Value" /> aufgelöst wird.</param>
+        <param name="scale">Die Gesamtanzahl der Dezimalstellen, in die <see cref="P:System.Data.OracleClient.OracleParameter.Value" /> aufgelöst wird.</param>
+        <param name="srcColumn">Der Name der Quellspalte.</param>
+        <param name="srcVersion">Einer der <see cref="T:System.Data.DataRowVersion" />-Werte.</param>
+        <param name="value">Ein <see cref="T:System.Object" />, das den Wert des <see cref="T:System.Data.OracleClient.OracleParameter" /> darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.OracleClient.OracleParameter" />-Klasse, die Parametername, Datentyp, Länge, Quellspaltenname, Richtung des Parameters, numerische Genauigkeit und andere Eigenschaften verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OracleClient.OracleParameter> und zeigt die <xref:System.Data.OracleClient.OracleParameter.ParameterName%2A>.  
+  
+ [!code-csharp[Classic WebData OracleParameter.OracleParameter4#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OracleParameter.OracleParameter4/CS/source.cs#1)]
+ [!code-vb[Classic WebData OracleParameter.OracleParameter4#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OracleParameter.OracleParameter4/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der im <paramref name="oracleType" />-Parameter angegebene Wert ist ein ungültiger Back-End-Datentyp.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DbType">
+      <MemberSignature Language="C#" Value="public override System.Data.DbType DbType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.DbType DbType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleParameter.DbType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Data.DbType" /> des Parameters ab oder legt ihn fest.</summary>
+        <value>Einer der <see cref="T:System.Data.DbType" />-Werte. Die Standardeinstellung ist <see cref="F:System.Data.DbType.AnsiString" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.OracleClient.OracleParameter.OracleType%2A> und <xref:System.Data.OracleClient.OracleParameter.DbType%2A> verknüpft sind. Daher ist das Festlegen der <xref:System.Data.OracleClient.OracleParameter.DbType%2A> Änderungen der <xref:System.Data.OracleClient.OracleParameter.OracleType%2A> zu unterstützenden <xref:System.Data.OracleClient.OracleParameter.OracleType%2A>.  
+  
+ Die <xref:System.Data.OracleClient.OracleParameter.DbType%2A>, <xref:System.Data.OracleClient.OracleParameter.OracleType%2A>, und <xref:System.Data.OracleClient.OracleParameter.Size%2A> Eigenschaften eines Parameters abgeleitet werden können, durch Festlegen von <xref:System.Data.OracleClient.OracleParameter.Value%2A>. Aus diesem Grund müssen Sie nicht angeben. Sie werden jedoch nicht bereitgestellt <xref:System.Data.OracleClient.OracleParameter> eigenschafteneinstellungen. Wenn die Größe des Parameters abgeleitet wurde, z. B. <xref:System.Data.OracleClient.OracleParameter.Size%2A> abgeleitete Wert nach der anweisungsausführung nicht enthält. Für `String` Datentypen, die der Standardwert ist <xref:System.Data.DbType.AnsiString>.  
+  
+ Eine Liste der unterstützten Datentypen, finden Sie unter dem entsprechenden <xref:System.Data.OracleClient.OracleParameter.OracleType%2A> Member. Weitere Informationen finden Sie unter [DataAdapter-Parameter](~/docs/framework/data/adonet/dataadapter-parameters.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OracleClient.OracleParameter> und legt einige ihrer Eigenschaften.  
+  
+ [!code-csharp[Classic WebData OracleParameter.DbType#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OracleParameter.DbType/CS/source.cs#1)]
+ [!code-vb[Classic WebData OracleParameter.DbType#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OracleParameter.DbType/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Eigenschaft wurde nicht auf einen gültigen <see cref="T:System.Data.DbType" /> festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Direction">
+      <MemberSignature Language="C#" Value="public override System.Data.ParameterDirection Direction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.ParameterDirection Direction" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleParameter.Direction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.ParameterDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt einen Wert fest, der angibt, ob der Parameter nur zur Eingabe, nur zur Ausgabe oder bidirektional verwendet wird oder ob es sich um einen Parameter für den Rückgabewert einer gespeicherten Prozedur handelt.</summary>
+        <value>Einer der <see cref="T:System.Data.ParameterDirection" />-Werte. Die Standardeinstellung ist <see langword="Input" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der <xref:System.Data.ParameterDirection> ausgegeben wird und Ausführung der zugeordneten <xref:System.Data.OracleClient.OracleCommand> keinen Rückgabewert angeben, der <xref:System.Data.OracleClient.OracleParameter> enthält einen null-Wert.  
+  
+ `Output`, `InputOut`, und `ReturnValue` Parameter zurückgegeben, indem <xref:System.Data.OracleClient.OracleCommand.ExecuteReader%2A> kann nicht zugegriffen werden, bis Sie rufen <xref:System.Data.OracleClient.OracleDataReader.Close%2A> auf die <xref:System.Data.OracleClient.OracleDataReader>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OracleClient.OracleParameter> und legt einige ihrer Eigenschaften.  
+  
+```vb  
+Public Sub CreateOracleDbParameter()  
+   Dim parameter As New OracleParameter()  
+   parameter.ParameterName = "pDName"  
+   parameter.DbType = DbType.String  
+   parameter.Value = "ENGINEERING"  
+   parameter.SourceColumn = "DName"  
+End Sub  
+```  
+  
+```csharp  
+public void CreateOracleDbParameter()   
+{  
+   OracleParameter parameter = new OracleParameter();  
+   parameter.ParameterName = "pDName";  
+   parameter.DbType = DbType.String;  
+   parameter.Value = "ENGINEERING";  
+   parameter.SourceColumn = "DName";  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Eigenschaft wurde nicht auf einen der gültigen <see cref="T:System.Data.ParameterDirection" />-Werte festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNullable">
+      <MemberSignature Language="C#" Value="public override bool IsNullable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNullable" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleParameter.IsNullable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Parameter NULL-Werte akzeptiert, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />Wenn null-Werte, andernfalls akzeptiert werden <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ NULL-Werte behandelt werden, mithilfe der <xref:System.DBNull> Klasse.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OracleClient.OracleParameter> und legt einige ihrer Eigenschaften.  
+  
+```vb  
+Public Sub CreateOracleParameter()  
+   Dim parameter As New OracleParameter("DName", OracleType.VarChar, 14)  
+   parameter.IsNullable = True  
+   parameter.Direction = ParameterDirection.Output  
+End Sub  
+```  
+  
+```csharp  
+public void CreateOracleParameter()   
+{  
+   OracleParameter parameter = new OracleParameter("DName", OracleType.VarChar, 14);  
+   parameter.IsNullable = true;  
+   parameter.Direction = ParameterDirection.Output;  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Offset">
+      <MemberSignature Language="C#" Value="public int Offset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Offset" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleParameter.Offset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Offset zur <see cref="P:System.Data.OracleClient.OracleParameter.Value" />-Eigenschaft ab oder legt diesen fest.</summary>
+        <value>Der Offset zu <see cref="P:System.Data.OracleClient.OracleParameter.Value" />. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Offset` Eigenschaft wird für die clientseitige Segmentierung von Binär- und Daten verwendet. Z. B. um 10 MB des Texts in einer Spalte auf einem Server einfügen, ein Benutzer u. u. ausgeführt 10 parametrisierte Einfügevorgänge von 1 MB-Blöcke, den Wert der Verschiebung `Offset` bei jeder Iteration von 1 MB.  
+  
+ `Offset`Gibt die Anzahl der Bytes für binary-Typen und die Anzahl der Zeichen für Zeichenfolgen. Die Anzahl die für Zeichenfolgen umfasst nicht das abschließende Zeichen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OracleClient.OracleParameter> und legt einige ihrer Eigenschaften.  
+  
+```vb  
+Public Sub CreateOracleParameter()  
+   Dim parameter As New OracleParameter("pDName", OracleType.VarChar)  
+   parameter.IsNullable = True  
+   parameter.Offset = 3  
+End Sub  
+```  
+  
+```csharp  
+public void CreateOracleParameter()   
+{  
+   OracleParameter parameter = new OracleParameter("pDName", OracleType.VarChar);  
+   parameter.IsNullable = true;  
+   parameter.Offset = 3;  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OracleType">
+      <MemberSignature Language="C#" Value="public System.Data.OracleClient.OracleType OracleType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.OracleClient.OracleType OracleType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleParameter.OracleType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Data.Common.DbProviderSpecificTypeProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Data.OracleClient.OracleType" /> des Parameters ab oder legt ihn fest.</summary>
+        <value>Ein <see cref="T:System.Data.OracleClient.OracleType" /> Wert, der die <see cref="T:System.Data.OracleClient.OracleType" /> des Parameters. Die Standardeinstellung ist <see cref="F:System.Data.OracleClient.OracleType.VarChar" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.OracleClient.OracleParameter.OracleType%2A> und <xref:System.Data.OracleClient.OracleParameter.DbType%2A> verknüpft sind. Daher ist das Festlegen der <xref:System.Data.OracleClient.OracleParameter.DbType%2A> Änderungen der <xref:System.Data.OracleClient.OracleParameter.OracleType%2A> zu unterstützenden <xref:System.Data.OracleClient.OracleType>.  
+  
+ Die <xref:System.Data.OracleClient.OracleParameter.DbType%2A>, <xref:System.Data.OracleClient.OracleParameter.OracleType%2A>, und <xref:System.Data.OracleClient.OracleParameter.Size%2A> Eigenschaften eines Parameters abgeleitet werden können, durch Festlegen von <xref:System.Data.OracleClient.OracleParameter.Value%2A>. Aus diesem Grund müssen Sie nicht angeben. Sie werden jedoch nicht bereitgestellt <xref:System.Data.OracleClient.OracleParameter> eigenschafteneinstellungen. Wenn die Größe des Parameters abgeleitet wurde, z. B. <xref:System.Data.OracleClient.OracleParameter.Size%2A> abgeleitete Wert nach der anweisungsausführung nicht enthält. Für `String` Datentypen, die der Standardwert ist <xref:System.Data.OracleClient.OracleType.VarChar>.  
+  
+ Eine Liste der unterstützten Datentypen, finden Sie unter dem entsprechenden <xref:System.Data.OracleClient.OracleType> Member. Weitere Informationen finden Sie unter [DataAdapter-Parameter](~/docs/framework/data/adonet/dataadapter-parameters.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterName">
+      <MemberSignature Language="C#" Value="public override string ParameterName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ParameterName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleParameter.ParameterName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der <see cref="T:System.Data.OracleClient.OracleParameter" /> ab oder legt diesen fest.</summary>
+        <value>Der Name des <see cref="T:System.Data.OracleClient.OracleParameter" />. Der Standardwert ist eine leere Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die .NET Framework-Datenanbieter für Oracle unterstützt positionelle Parameter nicht an, die mit einem Fragezeichen (?) markiert sind.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OracleClient.OracleParameter> und legt einige ihrer Eigenschaften.  
+  
+```vb  
+Public Sub CreateOracleDbParameter()  
+   Dim parameter As New OracleParameter()  
+   parameter.ParameterName = "pDName"  
+   parameter.DbType = DbType.String  
+   parameter.Value = "ENGINEERING"  
+   parameter.SourceColumn = "DName"  
+End Sub  
+```  
+  
+```csharp  
+public void CreateOracleDbParameter()   
+{  
+   OracleParameter parameter = new OracleParameter();  
+   parameter.ParameterName = "pDName";  
+   parameter.DbType = DbType.String;  
+   parameter.Value = "ENGINEERING";  
+   parameter.SourceColumn = "DName";  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Precision">
+      <MemberSignature Language="C#" Value="public byte Precision { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Precision" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleParameter.Precision" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("Precision has been deprecated.  Use the Math classes to explicitly set the precision of a decimal.  http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl von Ziffern ab, die zur Darstellung der <see cref="P:System.Data.OracleClient.OracleParameter.Value" />-Eigenschaft verwendet werden kann, oder legt diese fest.</summary>
+        <value>Die maximale Anzahl von Ziffern für die Darstellung der <see cref="P:System.Data.OracleClient.OracleParameter.Value" />-Eigenschaft. Der Standardwert ist-0 und bedeutet, dass der Datenanbieter die Genauigkeit für festlegt <see cref="P:System.Data.OracleClient.OracleParameter.Value" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen der <xref:System.Data.OracleClient.OracleParameter.Precision%2A> oder <xref:System.Data.OracleClient.OracleParameter.Scale%2A> Eigenschaften hat keine Auswirkungen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetDbType">
+      <MemberSignature Language="C#" Value="public override void ResetDbType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ResetDbType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleParameter.ResetDbType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt den diesem <see cref="T:System.Data.OracleClient.OracleParameter" /> zugeordneten Typ zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Ausführen eines Befehls, die Parameterwerte umfasst, Code kann entweder der Typ eines Parameters explizit festgelegt oder der Parameter kann den Typ von seinem Wert ableiten. Beim Aufrufen dieser Methode setzt den Parameter zurück, sodass sie erneut den Typ aus dem Wert im Parameter übergebenen ableiten kann. Beim Aufrufen dieser Methode wirkt sich sowohl der <xref:System.Data.Odbc.OdbcParameter.DbType%2A> und <xref:System.Data.OracleClient.OracleParameter.OracleType%2A> Eigenschaften der <xref:System.Data.OracleClient.OracleParameter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetOracleType">
+      <MemberSignature Language="C#" Value="public void ResetOracleType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetOracleType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleParameter.ResetOracleType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt den diesem <see cref="T:System.Data.OracleClient.OracleParameter" /> zugeordneten Typ zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Ausführen eines Befehls, die Parameterwerte umfasst, Code kann entweder der Typ eines Parameters explizit festgelegt oder der Parameter kann den Typ von seinem Wert ableiten. Beim Aufrufen dieser Methode setzt den Parameter zurück, sodass sie erneut den Typ aus dem Wert im Parameter übergebenen ableiten kann. Beim Aufrufen dieser Methode wirkt sich sowohl der <xref:System.Data.Odbc.OdbcParameter.DbType%2A> und <xref:System.Data.OracleClient.OracleParameter.OracleType%2A> Eigenschaften der <xref:System.Data.OracleClient.OracleParameter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scale">
+      <MemberSignature Language="C#" Value="public byte Scale { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Scale" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleParameter.Scale" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("Scale has been deprecated.  Use the Math classes to explicitly set the scale of a decimal.  http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Dezimalstellen ab, in die <see cref="P:System.Data.OracleClient.OracleParameter.Value" /> aufgelöst wird, oder legt diese fest.</summary>
+        <value>Die Anzahl der Dezimalstellen, in die <see cref="P:System.Data.OracleClient.OracleParameter.Value" /> aufgelöst wird. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen der <xref:System.Data.OracleClient.OracleParameter.Precision%2A> oder <xref:System.Data.OracleClient.OracleParameter.Scale%2A> Eigenschaften hat keine Auswirkungen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public override int Size { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Size" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleParameter.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen der maximalen Größe (in Bytes) der Daten in der Spalte.</summary>
+        <value>Die maximale Größe (in Bytes) der Daten in der Spalte. Der Standardwert ist 0 (um verwendet werden, wenn Sie nicht, geben Sie die maximale Größe des Werts möchten).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen von <xref:System.Data.OracleClient.OracleParameter.Size%2A> wirkt sich nur den Wert eines Parameters. Output-Parameter und Rückgabewerte sind von dieser Eigenschaft nicht betroffen.  
+  
+ Die <xref:System.Data.OracleClient.OracleParameter.Size%2A> Eigenschaft wird für Binär- und Zeichenfolgentypen verwendet.  
+  
+ Für Datentypen Objektressourcen und ANSI-Daten String, die <xref:System.Data.OracleClient.OracleParameter.Size%2A> Eigenschaft bezieht sich auf die Anzahl der Bytes. Bei Unicode-Zeichenfolgendaten <xref:System.Data.OracleClient.OracleParameter.Size%2A> bezieht sich auf die Anzahl der Zeichen. Die Anzahl die für Zeichenfolgen umfasst nicht das abschließende Zeichen.  
+  
+ Für Datentypen mit variabler Länge <xref:System.Data.OracleClient.OracleParameter.Size%2A> beschreibt die Höchstmenge an Daten, die an den Server übermittelt. Beispielsweise für einen Unicode-Zeichenfolgenwert <xref:System.Data.OracleClient.OracleParameter.Size%2A> missbraucht werden zur Begrenzung des Umfangs der Daten, die an den Server, auf die ersten 100 Zeichen gesendet.  
+  
+ Für bidirektionale und Ausgabeparameter und Rückgabewerte müssen Sie den Wert der Größe festlegen. Dies ist nicht erforderlich für Eingabeparameter, und wenn nicht explizit festgelegt, der Wert des abgeleitet ist von der tatsächlichen Größe des angegebenen Parameters, wenn eine parametrisierte Anweisung ausgeführt wird.  
+  
+ Die <xref:System.Data.OracleClient.OracleParameter.DbType%2A>, <xref:System.Data.OracleClient.OracleParameter.OracleType%2A>, und <xref:System.Data.OracleClient.OracleParameter.Size%2A> Eigenschaften eines Parameters abgeleitet werden können, durch Festlegen von <xref:System.Data.OracleClient.OracleParameter.Value%2A>. Aus diesem Grund müssen Sie nicht angeben. Sie werden jedoch nicht bereitgestellt <xref:System.Data.OracleClient.OracleParameter> eigenschafteneinstellungen. Wenn die Größe des Parameters abgeleitet wurde, z. B. <xref:System.Data.OracleClient.OracleParameter.Size%2A> abgeleitete Wert nach der anweisungsausführung nicht enthält.  
+  
+ Für die feste Länge für Datentypen, die den Wert des <xref:System.Data.OracleClient.OracleParameter.Size%2A> wird ignoriert. Sie können für Informationszwecke abgerufen werden und gibt die Höchstmenge an Bytes, die der Anbieter verwendet, wenn den Wert des Parameters an den Server übertragen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OracleClient.OracleParameter> und legt einige ihrer Eigenschaften.  
+  
+```vb  
+Public Sub CreateOracleParameter()  
+   Dim parameter As New OracleParameter("pDescription", OracleType.VarChar)  
+   parameter.IsNullable = True  
+   parameter.Direction = ParameterDirection.Output  
+   parameter.Size = 88  
+End Sub  
+```  
+  
+```csharp  
+public void CreateOracleParameter()   
+{  
+   OracleParameter parameter = new OracleParameter("pDescription", OracleType.VarChar);  
+   parameter.IsNullable = true;  
+   parameter.Direction = ParameterDirection.Output;  
+   parameter.Size = 88;  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceColumn">
+      <MemberSignature Language="C#" Value="public override string SourceColumn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SourceColumn" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleParameter.SourceColumn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Quellspalte ab, die dem <see cref="T:System.Data.DataSet" /> zugeordnet ist und zum Laden oder Zurückgeben des <see cref="P:System.Data.OracleClient.OracleParameter.Value" /> verwendet wird, oder legt diesen Namen fest.</summary>
+        <value>Der Name der Quellspalte, die dem <see cref="T:System.Data.DataSet" /> zugeordnet ist. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Verknüpfung zwischen dem Wert des der <xref:System.Data.OracleClient.OracleParameter> und <xref:System.Data.DataTable> möglicherweise bidirektionalen abhängig vom Wert der <xref:System.Data.OracleClient.OracleParameter.Direction%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OracleClient.OracleParameter> und legt einige ihrer Eigenschaften.  
+  
+```vb  
+Public Sub CreateOracleDbParameter()  
+   Dim parameter As New OracleParameter()  
+   parameter.ParameterName = "pDName"  
+   parameter.DbType = DbType.String  
+   parameter.Value = "ENGINEERING"  
+   parameter.SourceColumn = "DName"  
+End Sub  
+```  
+  
+```csharp  
+public void CreateOracleDbParameter()   
+{  
+   OracleParameter parameter = new OracleParameter();  
+   parameter.ParameterName = "pDName";  
+   parameter.DbType = DbType.String;  
+   parameter.Value = "ENGINEERING";  
+   parameter.SourceColumn = "DName";  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceColumnNullMapping">
+      <MemberSignature Language="C#" Value="public override bool SourceColumnNullMapping { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SourceColumnNullMapping" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleParameter.SourceColumnNullMapping" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Legt einen Wert fest, der angibt, ob die Quellspalte NULL-Werte zulässt, oder ruft ihn ab. Dadurch kann <see cref="T:System.Data.OracleClient.OracleCommandBuilder" /> ordnungsgemäß Update-Anweisungen für Spalten generieren, die NULL-Werte zulassen.</summary>
+        <value>
+          <see langword="True" />Wenn die Quellspalte NULL-Werte zulässt, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OracleClient.OracleParameter.SourceColumnNullMapping%2A>wird verwendet, durch die <xref:System.Data.OracleClient.OracleCommandBuilder> ordnungsgemäß Update-Befehle generieren, beim Umgang mit Spalten NULL-Werte zulässt. Im Allgemeinen die Verwendung von <xref:System.Data.OracleClient.OracleParameter.SourceColumnNullMapping%2A> ist für Entwickler, die von erben beschränkt <xref:System.Data.OracleClient.OracleCommandBuilder>.  
+  
+ <xref:System.Data.Common.DbCommandBuilder>Diese Eigenschaft verwendet, um zu bestimmen, ob die Quellspalte NULL-Werte zulässt, und wird diese Eigenschaft auf `true` wird jedoch auf NULL festlegbar und `false` wird jedoch nicht. Wenn <xref:System.Data.OracleClient.OracleCommandBuilder> ist generieren die Update-Anweisung, untersucht der <xref:System.Data.OracleClient.OracleParameter.SourceColumnNullMapping%2A> für jeden Parameter. Wenn die Eigenschaft `true`, <xref:System.Data.OracleClient.OracleCommandBuilder> generiert eine WHERE-Klausel wie folgt (in diesem Abfrageausdruck, stellt "FieldName" den Namen des Felds dar):  
+  
+```  
+((@IsNull_FieldName = 1 AND FieldName IS NULL) OR   
+  (FieldName = @Original_FieldName))  
+```  
+  
+ Wenn <xref:System.Data.OracleClient.OracleParameter.SourceColumnNullMapping%2A> für das Feld "false" ist <xref:System.Data.OracleClient.OracleCommandBuilder> generiert die folgende WHERE-Klausel:  
+  
+```  
+FieldName = @OriginalFieldName  
+```  
+  
+ Darüber hinaus @IsNull_FieldName 1 enthält, wenn das Quellfeld enthält Null, und 0, wenn dies nicht der Fall. Dieser Mechanismus ermöglicht die Optimierung der Leistung in Oracle-Server sowie für gemeinsamen Code, der über mehrere Anbieter funktioniert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceVersion">
+      <MemberSignature Language="C#" Value="public override System.Data.DataRowVersion SourceVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.DataRowVersion SourceVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleParameter.SourceVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRowVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Data.DataRowVersion" /> verwenden, wenn Sie zum Laden <see cref="P:System.Data.OracleClient.OracleParameter.Value" />.</summary>
+        <value>Einer der <see cref="T:System.Data.DataRowVersion" />-Werte. Die Standardeinstellung ist <see langword="Current" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird verwendet, durch die <xref:System.Data.OracleClient.OracleDataAdapter.UpdateCommand%2A> während der <xref:System.Data.Common.DbDataAdapter.Update%2A?displayProperty=nameWithType> zu bestimmen, ob der ursprüngliche oder der aktuelle Wert für den Parameterwert verwendet wird. Auf diese Weise können Primärschlüssel aktualisiert werden. Diese Eigenschaft wird festgelegt, auf die Version von der <xref:System.Data.DataRow> verwendet werden, indem Sie die <xref:System.Data.DataRow.Item%2A?displayProperty=nameWithType> Eigenschaft (<xref:System.Data.DataRow> Indexer), oder die <xref:System.Data.DataRow.GetChildRows%2A?displayProperty=nameWithType> Methode der <xref:System.Data.DataRow> Objekt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.OracleClient.OracleParameter> und legt einige ihrer Eigenschaften.  
+  
+```vb  
+Public Sub CreateOracleParameter()  
+   Dim parameter As New OracleParameter("pDName", OracleType.VarChar)  
+   parameter.IsNullable = True  
+   parameter.SourceColumn = "Description"  
+   parameter.SourceVersion = DataRowVersion.Current  
+   parameter.Direction = ParameterDirection.Output  
+End Sub  
+```  
+  
+```csharp  
+public void CreateOracleParameter()   
+{  
+   OracleParameter parameter = new OracleParameter("pDName", OracleType.VarChar);  
+   parameter.IsNullable = true;  
+   parameter.SourceColumn = "Description";  
+   parameter.SourceVersion = DataRowVersion.Current;  
+   parameter.Direction = ParameterDirection.Output;  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ICloneable.Clone">
+      <MemberSignature Language="C#" Value="object ICloneable.Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ICloneable.Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleParameter.System#ICloneable#Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ICloneable.Clone" />.</summary>
+        <returns>Ein neues Objekt, das eine Kopie dieser Instanz ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.OracleClient.OracleParameter>-Instanz in eine <xref:System.ICloneable>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleParameter.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Zeichenfolge ab, die den <see cref="P:System.Data.OracleClient.OracleParameter.ParameterName" /> enthält.</summary>
+        <returns>Eine Zeichenfolge, die den <see cref="P:System.Data.OracleClient.OracleParameter.ParameterName" /> enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public override object Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleParameter.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.StringConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert des Parameters ab oder legt diesen fest.</summary>
+        <value>Ein Objekt, das der Wert des Parameters ist. Der Standardwert ist NULL.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für Eingabeparameter, der Wert gebunden ist, um die <xref:System.Data.OracleClient.OracleCommand> , die an den Server gesendet wird. Für Ausgaben und Parameter des Rückgabewerts ist der Wert festgelegt, nach Abschluss des der <xref:System.Data.OracleClient.OracleCommand> und nach der <xref:System.Data.OracleClient.OracleDataReader> geschlossen wird.  
+  
+ Für einen Eingabeparameter <xref:System.Data.OracleClient.OracleParameter.Value%2A> kann auf ein Objekt von einer Microsoft .NET Framework-Datentyp oder einen Oracle-Datentyp festgelegt werden (z. B. ein <xref:System.Data.OracleClient.OracleNumber> oder <xref:System.Data.OracleClient.OracleString>).  
+  
+ Wenn Sie einen null-Parameterwert an den Server senden, müssen Sie DBNull ungleich null angeben. Ein null-Wert im System ist ein leeres Objekt, das über keinen Wert verfügt. DBNull wird verwendet, um null-Werte darstellen.  
+  
+ Wenn die Anwendung den Datenbanktyp angibt, wird der gebundene Wert in diesen Typ konvertiert, wenn der Anbieter die Daten an den Server sendet. Der Anbieter versucht, sämtliche Typen von Werten zu konvertieren, wenn es unterstützt die <xref:System.IConvertible> Schnittstelle. Fehler bei der Konvertierung möglicherweise auf, wenn der angegebene Typ nicht kompatibel mit dem Wert ist.  
+  
+ Die <xref:System.Data.OracleClient.OracleParameter.DbType%2A>, <xref:System.Data.OracleClient.OracleParameter.OracleType%2A>, und <xref:System.Data.OracleClient.OracleParameter.Size%2A> Eigenschaften eines Parameters durch Festlegen der Wert abgeleitet werden können. Aus diesem Grund müssen Sie nicht angeben. Sie werden jedoch nicht bereitgestellt <xref:System.Data.OracleClient.OracleParameter> eigenschafteneinstellungen. Z. B. wenn die Größe des Parameters abgeleitet wurde, enthält Größe nicht abgeleiteten Wert nach der anweisungsausführung.  
+  
+ Die `InputOutput`, `Output`, und `ReturnValue` <xref:System.Data.ParameterDirection> Werte, die von der Value-Eigenschaft verwendet werden Microsoft .NET Framework-Datentypen, es sei denn, der Eingabewert mit dem Oracle-Datentyp wurde (z. B. <xref:System.Data.OracleClient.OracleNumber> oder <xref:System.Data.OracleClient.OracleString>). Dadurch werden keine gelten für den REF CURSOR, BFILE oder LOB-Datentypen.  
+  
+ Die <xref:System.Data.OracleClient.OracleParameter.Value%2A> Eigenschaft wird überschrieben, indem Sie die **Update** Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

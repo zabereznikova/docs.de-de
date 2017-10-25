@@ -1,0 +1,722 @@
+<Type Name="Rfc2898DeriveBytes" FullName="System.Security.Cryptography.Rfc2898DeriveBytes">
+  <TypeSignature Language="C#" Value="public class Rfc2898DeriveBytes : System.Security.Cryptography.DeriveBytes" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Rfc2898DeriveBytes extends System.Security.Cryptography.DeriveBytes" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Rfc2898DeriveBytes" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.DeriveBytes</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementiert mithilfe eines auf <see cref="T:System.Security.Cryptography.HMACSHA1" /> basierenden Generators für Pseudozufallszahlen die kennwortbasierte Schlüsselableitungsfunktion PBKDF2.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.Cryptography.Rfc2898DeriveBytes>akzeptiert ein Kennwort, eine Salt und eine Anzahl von Iterationen und generiert dann Schlüsseln durch Aufrufe der <xref:System.Security.Cryptography.Rfc2898DeriveBytes.GetBytes%2A> Methode.  
+  
+ RFC 2898 enthält Methoden zum Erstellen von Schlüssel und Initialisierungsvektor (IV) aus einem Kennwort und den Salt-Wert. Sie können eine kennwortbasierte Schlüsselableitungsfunktion PBKDF2 zum Ableiten von Schlüsseln mit pseudozufälligen Schlüsselbytes-Funktion, die Schlüssel des zu generierenden praktisch unbegrenzte Länge ermöglicht. Die <xref:System.Security.Cryptography.Rfc2898DeriveBytes> Klasse kann verwendet werden, um einen abgeleiteten Schlüssel aus einem base-Schlüssel und andere Parameter zu generieren. In einer Funktion kennwortbasierte schlüsselableitung der base-Schlüssel ist ein Kennwort und die anderen Parameter sind salt-Wert und eine Anzahl von Iterationen.  
+  
+ Weitere Informationen zu PBKDF2 finden Sie unter RFC 2898, "PKCS #5: Password-Based Cryptography Specification Version 2.0," verfügbar, auf die [Request for Comments-Website](http://go.microsoft.com/fwlink/?LinkID=37119). Vollständige Informationen finden Sie in Abschnitt 5.2, "PBKDF2".  
+  
+> [!IMPORTANT]
+>  Nie hartcodieren ein Kennwort im Quellcode.  Hartcodierte Kennwörter können aus einer Assembly abgerufen werden, mithilfe der [Ildasm.exe (IL-Disassembler)](~/docs/framework/tools/ildasm-exe-il-disassembler.md), mit einem Hexadezimal-Editor oder durch das Öffnen der Assembly in einem Text-Editor wie Notepad.exe.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Security.Cryptography.Rfc2898DeriveBytes> Tasten für die Klasse, um zwei identische erstellen die <xref:System.Security.Cryptography.TripleDES> Klasse.  Klicken Sie dann verschlüsselt, und einige Daten mit dem Schlüssel entschlüsselt.  
+  
+ [!code-cpp[rfc28981#1](~/samples/snippets/cpp/VS_Snippets_CLR/rfc28981/CPP/rfc28981.cpp#1)]
+ [!code-csharp[rfc28981#1](~/samples/snippets/csharp/VS_Snippets_CLR/rfc28981/CS/rfc28981.cs#1)]
+ [!code-vb[rfc28981#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/rfc28981/vb/rfc28981.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Rfc2898DeriveBytes (string password, byte[] salt);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string password, unsigned int8[] salt) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Rfc2898DeriveBytes.#ctor(System.String,System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="password" Type="System.String" />
+        <Parameter Name="salt" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="password">Das zum Ableiten des Schlüssels verwendete Kennwort.</param>
+        <param name="salt">Die zum Ableiten des Schlüssels verwendete Schlüsselsalt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.Rfc2898DeriveBytes" />-Klasse mithilfe des Kennworts und des Salts zum Ableiten des Schlüssels.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Saltgröße muss 8 Bytes groß.  
+  
+ RFC 2898 enthält Methoden zum Erstellen von Schlüssel und Initialisierungsvektor (IV) aus einem Kennwort und den Salt-Wert. Sie können eine kennwortbasierte Schlüsselableitungsfunktion PBKDF2 zum Ableiten von Schlüsseln mit pseudozufälligen Schlüsselbytes-Funktion, die Schlüssel des zu generierenden praktisch unbegrenzte Länge ermöglicht. Die <xref:System.Security.Cryptography.Rfc2898DeriveBytes> Klasse kann verwendet werden, um einen abgeleiteten Schlüssel aus einem base-Schlüssel und andere Parameter zu generieren. In einer Funktion kennwortbasierte schlüsselableitung der base-Schlüssel ist ein Kennwort und die anderen Parameter sind salt-Wert und eine Anzahl von Iterationen.  
+  
+ Weitere Informationen zu PBKDF2 finden Sie unter RFC 2898, "PKCS #5: Password-Based Cryptography Specification Version 2.0," verfügbar, auf die [Request for Comments-Website](http://go.microsoft.com/fwlink/?LinkID=37119). Vollständige Informationen finden Sie in Abschnitt 5.2, "PBKDF2".  
+  
+> [!IMPORTANT]
+>  Nie hartcodieren ein Kennwort im Quellcode.  Hartcodierte Kennwörter können aus einer Assembly abgerufen werden, mithilfe der [Ildasm.exe (IL-Disassembler)](~/docs/framework/tools/ildasm-exe-il-disassembler.md), mit einem Hexadezimal-Editor oder durch das Öffnen der Assembly in einem Text-Editor wie Notepad.exe.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Security.Cryptography.Rfc2898DeriveBytes> Tasten für die Klasse, um zwei identische erstellen die <xref:System.Security.Cryptography.TripleDES> Klasse.  Klicken Sie dann verschlüsselt, und einige Daten mit dem Schlüssel entschlüsselt.  
+  
+ [!code-cpp[rfc28981#1](~/samples/snippets/cpp/VS_Snippets_CLR/rfc28981/CPP/rfc28981.cpp#1)]
+ [!code-csharp[rfc28981#1](~/samples/snippets/csharp/VS_Snippets_CLR/rfc28981/CS/rfc28981.cs#1)]
+ [!code-vb[rfc28981#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/rfc28981/vb/rfc28981.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die angegebene Saltgröße ist kleiner als 8 Bytes oder die Anzahl der Iterationen ist kleiner als 1.</exception>
+        <exception cref="T:System.ArgumentNullException">Das Kennwort oder die Salt ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Rfc2898DeriveBytes (string password, int saltSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string password, int32 saltSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Rfc2898DeriveBytes.#ctor(System.String,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="password" Type="System.String" />
+        <Parameter Name="saltSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="password">Das zum Ableiten des Schlüssels verwendete Kennwort.</param>
+        <param name="saltSize">Die Größe der Zufallssalt, die von der Klasse generiert werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.Rfc2898DeriveBytes" />-Klasse mithilfe des Kennworts und der Saltgröße zum Ableiten des Schlüssels.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Saltgröße muss 8 Bytes groß.  
+  
+ RFC 2898 enthält Methoden zum Erstellen von Schlüssel und Initialisierungsvektor (IV) aus einem Kennwort und den Salt-Wert. Sie können eine kennwortbasierte Schlüsselableitungsfunktion PBKDF2 zum Ableiten von Schlüsseln mit pseudozufälligen Schlüsselbytes-Funktion, die Schlüssel des zu generierenden praktisch unbegrenzte Länge ermöglicht. Die <xref:System.Security.Cryptography.Rfc2898DeriveBytes> Klasse kann verwendet werden, um einen abgeleiteten Schlüssel aus einem base-Schlüssel und andere Parameter zu generieren. In einer Funktion kennwortbasierte schlüsselableitung der base-Schlüssel ist ein Kennwort und die anderen Parameter sind salt-Wert und eine Anzahl von Iterationen.  
+  
+ Weitere Informationen zu PBKDF2 finden Sie unter RFC 2898, "PKCS #5: Password-Based Cryptography Specification Version 2.0," verfügbar, auf die [Request for Comments-Website](http://go.microsoft.com/fwlink/?LinkID=37119). Vollständige Informationen finden Sie in Abschnitt 5.2, "PBKDF2".  
+  
+> [!IMPORTANT]
+>  Nie hartcodieren ein Kennwort im Quellcode.  Hartcodierte Kennwörter können aus einer Assembly abgerufen werden, mithilfe der [Ildasm.exe (IL-Disassembler)](~/docs/framework/tools/ildasm-exe-il-disassembler.md), mit einem Hexadezimal-Editor oder durch das Öffnen der Assembly in einem Text-Editor wie Notepad.exe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die angegebene Saltgröße ist kleiner als 8 Bytes.</exception>
+        <exception cref="T:System.ArgumentNullException">Das Kennwort oder die Salt ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Rfc2898DeriveBytes (byte[] password, byte[] salt, int iterations);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] password, unsigned int8[] salt, int32 iterations) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Rfc2898DeriveBytes.#ctor(System.Byte[],System.Byte[],System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="password" Type="System.Byte[]" />
+        <Parameter Name="salt" Type="System.Byte[]" />
+        <Parameter Name="iterations" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="password">Das zum Ableiten des Schlüssels verwendete Kennwort.</param>
+        <param name="salt">Die zum Ableiten des Schlüssels verwendete Schlüsselsalt.</param>
+        <param name="iterations">Die Anzahl der Iterationen für die Operation.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.Rfc2898DeriveBytes" />-Klasse mithilfe des Kennworts, der Salt und der Anzahl an Iterationen zum Ableiten des Schlüssels.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Saltgröße muss 8 Bytes Groß und die Anzahl der Iterationen muss größer als 0 (null) sein. Die empfohlene Mindestanzahl von Iterationen ist 1000.  
+  
+ RFC 2898 enthält Methoden zum Erstellen von Schlüssel und Initialisierungsvektor (IV) aus einem Kennwort und den Salt-Wert. Sie können eine kennwortbasierte Schlüsselableitungsfunktion PBKDF2 zum Ableiten von Schlüsseln mit pseudozufälligen Schlüsselbytes-Funktion, die Schlüssel des zu generierenden praktisch unbegrenzte Länge ermöglicht. Die <xref:System.Security.Cryptography.Rfc2898DeriveBytes> Klasse kann verwendet werden, um einen abgeleiteten Schlüssel aus einem base-Schlüssel und andere Parameter zu generieren. In einer Funktion kennwortbasierte schlüsselableitung der base-Schlüssel ist ein Kennwort und die anderen Parameter sind salt-Wert und eine Anzahl von Iterationen.  
+  
+ Weitere Informationen zu PBKDF2 finden Sie unter RFC 2898, "PKCS #5: Password-Based Cryptography Specification Version 2.0," verfügbar, auf die [Request for Comments-Website](http://go.microsoft.com/fwlink/?LinkID=37119). Vollständige Informationen finden Sie in Abschnitt 5.2, "PBKDF2".  
+  
+> [!IMPORTANT]
+>  Nie hartcodieren ein Kennwort im Quellcode.  Hartcodierte Kennwörter können aus einer Assembly abgerufen werden, mithilfe der [Ildasm.exe (IL-Disassembler)](~/docs/framework/tools/ildasm-exe-il-disassembler.md), mit einem Hexadezimal-Editor oder durch das Öffnen der Assembly in einem Text-Editor wie Notepad.exe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die angegebene Saltgröße ist kleiner als 8 Bytes oder die Anzahl der Iterationen ist kleiner als 1.</exception>
+        <exception cref="T:System.ArgumentNullException">Das Kennwort oder die Salt ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Rfc2898DeriveBytes (string password, byte[] salt, int iterations);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string password, unsigned int8[] salt, int32 iterations) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Rfc2898DeriveBytes.#ctor(System.String,System.Byte[],System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="password" Type="System.String" />
+        <Parameter Name="salt" Type="System.Byte[]" />
+        <Parameter Name="iterations" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="password">Das zum Ableiten des Schlüssels verwendete Kennwort.</param>
+        <param name="salt">Die zum Ableiten des Schlüssels verwendete Schlüsselsalt.</param>
+        <param name="iterations">Die Anzahl der Iterationen für die Operation.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.Rfc2898DeriveBytes" />-Klasse mithilfe des Kennworts, der Salt und der Anzahl an Iterationen zum Ableiten des Schlüssels.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Saltgröße muss 8 Bytes Groß und die Anzahl der Iterationen muss größer als 0 (null) sein. Die empfohlene Mindestanzahl von Iterationen ist 1000.  
+  
+ RFC 2898 enthält Methoden zum Erstellen von Schlüssel und Initialisierungsvektor (IV) aus einem Kennwort und den Salt-Wert. Sie können eine kennwortbasierte Schlüsselableitungsfunktion PBKDF2 zum Ableiten von Schlüsseln mit pseudozufälligen Schlüsselbytes-Funktion, die Schlüssel des zu generierenden praktisch unbegrenzte Länge ermöglicht. Die <xref:System.Security.Cryptography.Rfc2898DeriveBytes> Klasse kann verwendet werden, um einen abgeleiteten Schlüssel aus einem base-Schlüssel und andere Parameter zu generieren. In einer Funktion kennwortbasierte schlüsselableitung der base-Schlüssel ist ein Kennwort und die anderen Parameter sind salt-Wert und eine Anzahl von Iterationen.  
+  
+ Weitere Informationen zu PBKDF2 finden Sie unter RFC 2898, "PKCS #5: Password-Based Cryptography Specification Version 2.0," verfügbar, auf die [Request for Comments-Website](http://go.microsoft.com/fwlink/?LinkID=37119). Vollständige Informationen finden Sie in Abschnitt 5.2, "PBKDF2".  
+  
+> [!IMPORTANT]
+>  Nie hartcodieren ein Kennwort im Quellcode.  Hartcodierte Kennwörter können aus einer Assembly abgerufen werden, mithilfe der [Ildasm.exe (IL-Disassembler)](~/docs/framework/tools/ildasm-exe-il-disassembler.md), mit einem Hexadezimal-Editor oder durch das Öffnen der Assembly in einem Text-Editor wie Notepad.exe.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Security.Cryptography.Rfc2898DeriveBytes> Tasten für die Klasse, um zwei identische erstellen die <xref:System.Security.Cryptography.TripleDES> Klasse.  Klicken Sie dann verschlüsselt, und einige Daten mit dem Schlüssel entschlüsselt.  
+  
+ [!code-cpp[rfc28981#1](~/samples/snippets/cpp/VS_Snippets_CLR/rfc28981/CPP/rfc28981.cpp#1)]
+ [!code-csharp[rfc28981#1](~/samples/snippets/csharp/VS_Snippets_CLR/rfc28981/CS/rfc28981.cs#1)]
+ [!code-vb[rfc28981#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/rfc28981/vb/rfc28981.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die angegebene Saltgröße ist kleiner als 8 Bytes oder die Anzahl der Iterationen ist kleiner als 1.</exception>
+        <exception cref="T:System.ArgumentNullException">Das Kennwort oder die Salt ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Rfc2898DeriveBytes (string password, int saltSize, int iterations);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string password, int32 saltSize, int32 iterations) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Rfc2898DeriveBytes.#ctor(System.String,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="password" Type="System.String" />
+        <Parameter Name="saltSize" Type="System.Int32" />
+        <Parameter Name="iterations" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="password">Das zum Ableiten des Schlüssels verwendete Kennwort.</param>
+        <param name="saltSize">Die Größe der Zufallssalt, die von der Klasse generiert werden soll.</param>
+        <param name="iterations">Die Anzahl der Iterationen für die Operation.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.Rfc2898DeriveBytes" />-Klasse mithilfe des Kennworts, einer Saltgröße und der Anzahl an Iterationen zum Ableiten des Schlüssels.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Saltgröße muss 8 Bytes Groß und die Anzahl der Iterationen muss größer als 0 (null) sein. Die empfohlene Mindestanzahl von Iterationen ist 1000.  
+  
+ RFC 2898 enthält Methoden zum Erstellen von Schlüssel und Initialisierungsvektor (IV) aus einem Kennwort und den Salt-Wert. Sie können eine kennwortbasierte Schlüsselableitungsfunktion PBKDF2 zum Ableiten von Schlüsseln mit pseudozufälligen Schlüsselbytes-Funktion, die Schlüssel des zu generierenden praktisch unbegrenzte Länge ermöglicht. Die <xref:System.Security.Cryptography.Rfc2898DeriveBytes> Klasse kann verwendet werden, um einen abgeleiteten Schlüssel aus einem base-Schlüssel und andere Parameter zu generieren. In einer Funktion kennwortbasierte schlüsselableitung der base-Schlüssel ist ein Kennwort und die anderen Parameter sind salt-Wert und eine Anzahl von Iterationen.  
+  
+ Weitere Informationen zu PBKDF2 finden Sie unter RFC 2898, "PKCS #5: Password-Based Cryptography Specification Version 2.0," verfügbar, auf die [Request for Comments-Website](http://go.microsoft.com/fwlink/?LinkID=37119). Vollständige Informationen finden Sie in Abschnitt 5.2, "PBKDF2".  
+  
+> [!IMPORTANT]
+>  Nie hartcodieren ein Kennwort im Quellcode.  Hartcodierte Kennwörter können aus einer Assembly abgerufen werden, mithilfe der [Ildasm.exe (IL-Disassembler)](~/docs/framework/tools/ildasm-exe-il-disassembler.md), mit einem Hexadezimal-Editor oder durch das Öffnen der Assembly in einem Text-Editor wie Notepad.exe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die angegebene Saltgröße ist kleiner als 8 Bytes oder die Anzahl der Iterationen ist kleiner als 1.</exception>
+        <exception cref="T:System.ArgumentNullException">Das Kennwort oder die Salt ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="iterations" /> liegt außerhalb des Bereichs. Dieser Parameter muss eine nicht Negative Zahl.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Rfc2898DeriveBytes (byte[] password, byte[] salt, int iterations, System.Security.Cryptography.HashAlgorithmName hashAlgorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] password, unsigned int8[] salt, int32 iterations, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Rfc2898DeriveBytes.#ctor(System.Byte[],System.Byte[],System.Int32,System.Security.Cryptography.HashAlgorithmName)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="password" Type="System.Byte[]" />
+        <Parameter Name="salt" Type="System.Byte[]" />
+        <Parameter Name="iterations" Type="System.Int32" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+      </Parameters>
+      <Docs>
+        <param name="password">To be added.</param>
+        <param name="salt">To be added.</param>
+        <param name="iterations">To be added.</param>
+        <param name="hashAlgorithm">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Rfc2898DeriveBytes (string password, byte[] salt, int iterations, System.Security.Cryptography.HashAlgorithmName hashAlgorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string password, unsigned int8[] salt, int32 iterations, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Rfc2898DeriveBytes.#ctor(System.String,System.Byte[],System.Int32,System.Security.Cryptography.HashAlgorithmName)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="password" Type="System.String" />
+        <Parameter Name="salt" Type="System.Byte[]" />
+        <Parameter Name="iterations" Type="System.Int32" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+      </Parameters>
+      <Docs>
+        <param name="password">To be added.</param>
+        <param name="salt">To be added.</param>
+        <param name="iterations">To be added.</param>
+        <param name="hashAlgorithm">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Rfc2898DeriveBytes (string password, int saltSize, int iterations, System.Security.Cryptography.HashAlgorithmName hashAlgorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string password, int32 saltSize, int32 iterations, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Rfc2898DeriveBytes.#ctor(System.String,System.Int32,System.Int32,System.Security.Cryptography.HashAlgorithmName)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="password" Type="System.String" />
+        <Parameter Name="saltSize" Type="System.Int32" />
+        <Parameter Name="iterations" Type="System.Int32" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+      </Parameters>
+      <Docs>
+        <param name="password">To be added.</param>
+        <param name="saltSize">To be added.</param>
+        <param name="iterations">To be added.</param>
+        <param name="hashAlgorithm">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CryptDeriveKey">
+      <MemberSignature Language="C#" Value="public byte[] CryptDeriveKey (string algname, string alghashname, int keySize, byte[] rgbIV);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] CryptDeriveKey(string algname, string alghashname, int32 keySize, unsigned int8[] rgbIV) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Rfc2898DeriveBytes.CryptDeriveKey(System.String,System.String,System.Int32,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algname" Type="System.String" />
+        <Parameter Name="alghashname" Type="System.String" />
+        <Parameter Name="keySize" Type="System.Int32" />
+        <Parameter Name="rgbIV" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="algname">Der Name des Algorithmus, für den der Schlüssel abgeleitet werden soll.</param>
+        <param name="alghashname">Der Name des Hashalgorithmus, der zum Ableiten des Schlüssels verwendet werden soll.</param>
+        <param name="keySize">Die Größe des abzuleitenden Schlüssels in Bits.</param>
+        <param name="rgbIV">Der zum Ableiten des Schlüssels zu verwendende Initialisierungsvektor.</param>
+        <summary>Leitet einen kryptografischen Schlüssel vom <see cref="T:System.Security.Cryptography.Rfc2898DeriveBytes" />-Objekt ab.</summary>
+        <returns>Der abgeleitete Schlüssel.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Funktion ist ein Wrapper für die CryptoAPI-Funktion CryptDeriveKey() und dient der Interoperabilität mit Anwendungen, die mithilfe der Crypto-API zu bieten.  
+  
+ Wenn die `keySize` Parameter auf 0 Bit festgelegt ist, wird die Standard-Schlüsselgröße für den angegebenen Algorithmus verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Die <paramref name="keySize" /> Parameter ist falsch.  
+  
+ - oder -   
+  
+ Der Kryptografiedienstanbieter (Cryptographic Service Provider, CSP) kann nicht abgerufen werden.  
+  
+ - oder -   
+  
+ Die <paramref name="algname" /> -Parameter ist kein gültiger Algorithmusname.  
+  
+ - oder -   
+  
+ Die <paramref name="alghashname" /> Parameter ist nicht der Name ein gültiger Hashalgorithmus.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Rfc2898DeriveBytes.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von der <see cref="T:System.Security.Cryptography.Rfc2898DeriveBytes" />-Klasse verwendeten nicht verwalteten Ressourcen frei und gibt (optional) auch die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich `Dispose()` Methode und die `Finalize` Methode. `Dispose()`Ruft die geschützte `Dispose(Boolean)` Methode mit dem `disposing` Parametersatz auf `true`. `Finalize`Ruft `Dispose` mit `disposing` festgelegt `false`.  
+  
+ Wenn der `disposing`-Parameter `true` ist, gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte reserviert sind, auf die dieser <xref:System.Security.Cryptography.Rfc2898DeriveBytes> verweist. Diese Methode ruft die `Dispose()`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Zum Überschreiben <see langword="Dispose(Boolean)" />müssen Sie darauf achten, nicht auf Objekte verweisen, die einen früheren Aufruf freigegeben wurden <see langword="Dispose" />. Weitere Informationen zum Implementieren <see langword="Dispose(Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see langword="Dispose" /> und <see langword="Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public override byte[] GetBytes (int cb);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] GetBytes(int32 cb) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Rfc2898DeriveBytes.GetBytes(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cb" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="cb">Die Anzahl der zu generierenden pseudozufälligen Schlüsselbytes.</param>
+        <summary>Gibt den pseudozufälligen Schlüssel für dieses Objekt zurück.</summary>
+        <returns>Ein mit pseudozufälligen Schlüsselbytes gefülltes Bytearray.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Rfc2898DeriveBytes> Klasse implementiert die PBKDF2-Funktion mit einem basierenden Generators für Pseudozufallszahlen auf <xref:System.Security.Cryptography.HMACSHA1>. Die <xref:System.Security.Cryptography.Rfc2898DeriveBytes> Klasse akzeptiert ein Kennwort, eine Salt und eine Anzahl von Iterationen und generiert dann Schlüsseln durch Aufrufe der <xref:System.Security.Cryptography.Rfc2898DeriveBytes.GetBytes%2A> Methode. Wiederholte Aufrufe dieser Methode werden nicht den gleichen Schlüssel generiert. Anhängen stattdessen zwei Aufrufe der der <xref:System.Security.Cryptography.Rfc2898DeriveBytes.GetBytes%2A> Methode mit einer `cb` -Parameterwert `20` ist das Äquivalent eines Aufrufs der <xref:System.Security.Cryptography.Rfc2898DeriveBytes.GetBytes%2A> Methode einmal mit einer `cb` -Parameterwert `40`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Security.Cryptography.Rfc2898DeriveBytes.GetBytes%2A> den Schlüssel für eine Instanz der abzurufenden Methode <xref:System.Security.Cryptography.Rfc2898DeriveBytes>. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Cryptography.Rfc2898DeriveBytes> Klasse.  
+  
+ [!code-cpp[rfc28981#2](~/samples/snippets/cpp/VS_Snippets_CLR/rfc28981/CPP/rfc28981.cpp#2)]
+ [!code-csharp[rfc28981#2](~/samples/snippets/csharp/VS_Snippets_CLR/rfc28981/CS/rfc28981.cs#2)]
+ [!code-vb[rfc28981#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/rfc28981/vb/rfc28981.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="cb" /> liegt außerhalb des Bereichs. Dieser Parameter muss eine nicht Negative Zahl.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HashAlgorithm">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.HashAlgorithmName HashAlgorithm { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.HashAlgorithmName HashAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Rfc2898DeriveBytes.HashAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.HashAlgorithmName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IterationCount">
+      <MemberSignature Language="C#" Value="public int IterationCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 IterationCount" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Rfc2898DeriveBytes.IterationCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Iterationen für die Operation ab oder legt diese fest.</summary>
+        <value>Die Anzahl der Iterationen für die Operation.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anzahl der Szenarioiterationen ist die Anzahl der Häufigkeit, mit die ein Vorgang ausgeführt wird. Für diese Methode sollte die Anzahl größer als 0 (null) sein. Die empfohlene Mindestanzahl von Iterationen ist 1000.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Security.Cryptography.Rfc2898DeriveBytes.IterationCount%2A> Eigenschaft, um die Anzahl von Iterationen festlegt, die in die Generierung des Schlüssels angezeigt. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Cryptography.Rfc2898DeriveBytes> Klasse.  
+  
+ [!code-cpp[rfc28981#3](~/samples/snippets/cpp/VS_Snippets_CLR/rfc28981/CPP/rfc28981.cpp#3)]
+ [!code-csharp[rfc28981#3](~/samples/snippets/csharp/VS_Snippets_CLR/rfc28981/CS/rfc28981.cs#3)]
+ [!code-vb[rfc28981#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/rfc28981/vb/rfc28981.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Anzahl der Iterationen ist kleiner als 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public override void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Rfc2898DeriveBytes.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt den Zustand der Operation zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird automatisch aufgerufen, wenn die Anzahl der Salt-Wert oder eine Iteration geändert wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung der <xref:System.Security.Cryptography.Rfc2898DeriveBytes.Reset%2A>-Methode gezeigt. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Cryptography.Rfc2898DeriveBytes> Klasse.  
+  
+ [!code-cpp[rfc28981#5](~/samples/snippets/cpp/VS_Snippets_CLR/rfc28981/CPP/rfc28981.cpp#5)]
+ [!code-csharp[rfc28981#5](~/samples/snippets/csharp/VS_Snippets_CLR/rfc28981/CS/rfc28981.cs#5)]
+ [!code-vb[rfc28981#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/rfc28981/vb/rfc28981.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Salt">
+      <MemberSignature Language="C#" Value="public byte[] Salt { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Salt" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Rfc2898DeriveBytes.Salt" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Salt-Wert des Schlüssels für die Operation ab oder legt diesen fest.</summary>
+        <value>Der Wert der Schlüsselsalt für die Operation.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Salt-Wert, eine zufällige Gruppe von Bytes wird verwendet, um nicht autorisierte Entschlüsseln einer Nachricht, die schwieriger zu machen. Ein Wörterbuchangriff ist ein Angriff, in dem der Angreifer versucht, eine verschlüsselte Nachricht durch Vergleichen des verschlüsselten Werts mit der zuvor berechnete verschlüsselte Werte für den wahrscheinlichsten Schlüssel entschlüsselt. Dieser Angriff erfolgt durch die Einführung von salt oder zufällige Bytes, die am Ende des Kennworts vor dem schlüsselableitung viel schwieriger.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die angegebene Saltgröße ist kleiner als 8 Bytes.</exception>
+        <exception cref="T:System.ArgumentNullException">Der Saltwert ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,133 @@
+<Type Name="ReceiveErrorHandling" FullName="System.ServiceModel.ReceiveErrorHandling">
+  <TypeSignature Language="C#" Value="public enum ReceiveErrorHandling" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ReceiveErrorHandling extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.ReceiveErrorHandling" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Eine Enumeration, die die Handhabung für eine beschädigte Nachricht angibt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine beschädigte Nachricht ist eine Nachricht, die selbst nach mehrfachen Versuchen der Anwendung nicht zugestellt werden kann. Dies ist nur zutreffend, wenn eine auf Message Queuing (MSMQ) basierende Bindung verwendet wird. Der Standardwert ist `Fault`, wodurch der Listener und somit auch der ServiceHost fehlerhaft agieren. In Fällen, in denen der Dienst aufgrund einer beschädigten Nachricht fehlerhaft agiert, wird <xref:System.ServiceModel.MsmqPoisonMessageException> ausgelöst. Die Ausnahme enthält die `LookupId`-Einstellung der MSMQ-Nachricht, die dazu verwendet werden kann, die Nachricht mit System.Messaging API beiseite zu schieben. Bestimmte Werte der <xref:System.ServiceModel.ReceiveErrorHandling>-Enumeration, wie `Reject` und `Move`, sind nur auf [!INCLUDE[wv](~/includes/wv-md.md)] verfügbar. Sie können die Handhabung beschädigter Nachrichten steuern, indem Sie die <xref:System.ServiceModel.Channels.MsmqBindingElementBase.ReceiveErrorHandling%2A>-Eigenschaft auf einen der Werte dieser Enumeration festlegen.  
+  
+   
+  
+## Examples  
+ Der folgende Konfigurationscode veranschaulicht das Einstellen dieser Eigenschaft in der Dienstkonfigurationsdatei:  
+  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Drop">
+      <MemberSignature Language="C#" Value="Drop" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.ReceiveErrorHandling Drop = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.ReceiveErrorHandling.Drop" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ReceiveErrorHandling</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Option verwirft die beschädigte Nachricht. Die Nachricht wird der Anwendung nicht zugestellt. Wenn die Gültigkeitsdauer (Time to Live, TTL) der Nachricht zu diesem Zeitpunkt bereits abgelaufen ist, kann die Nachricht in der Warteschlange für unzustellbare Nachrichten des Absenders angezeigt werden. Andernfalls wird die Nachricht nirgendwo angezeigt. Diese Option gibt an, dass es für den Benutzer nicht wirklich wichtig ist, wenn die Nachricht verloren geht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gültige Plattformen: [!INCLUDE[wxp](~/includes/wxp-md.md)], [!INCLUDE[ws2003](~/includes/ws2003-md.md)] und [!INCLUDE[wv](~/includes/wv-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fault">
+      <MemberSignature Language="C#" Value="Fault" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.ReceiveErrorHandling Fault = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.ReceiveErrorHandling.Fault" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ReceiveErrorHandling</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Option sendet einen Fehler an den Listener, der bewirkt hat, dass der ServiceHost fehlerhaft agiert. Die Nachricht muss durch einen externen Mechanismus aus der Anwendungswarteschlange entfernt werden, bevor die Anwendung mit der Verarbeitung von Nachrichten aus der Warteschlange fortfahren kann.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gültige Plattformen: Windows XP, Windows Server 2003 und Windows Vista.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Move">
+      <MemberSignature Language="C#" Value="Move" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.ReceiveErrorHandling Move = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.ReceiveErrorHandling.Move" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ReceiveErrorHandling</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Hierdurch wird die beschädigte Nachricht in eine Warteschlange für beschädigte Nachrichten verschoben, sodass sie später durch eine Anwendung zur Handhabung beschädigter Nachrichten verarbeitet werden kann.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gültige Plattformen: nur [!INCLUDE[wv](~/includes/wv-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reject">
+      <MemberSignature Language="C#" Value="Reject" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.ReceiveErrorHandling Reject = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.ReceiveErrorHandling.Reject" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ReceiveErrorHandling</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Damit wird das Message Queuing (MSMQ) angewiesen, eine negative Bestätigung an den Warteschlangen-Manager zurück zu senden, die den Hinweis enthält, dass die Anwendung die Nachricht nicht empfangen kann. Die Nachricht wird in die Warteschlange für unzustellbare Nachrichten des sendenden Warteschlangen-Managers eingefügt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gültige Plattformen: nur [!INCLUDE[wv](~/includes/wv-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,683 @@
+<Type Name="WebResponse" FullName="System.Net.WebResponse">
+  <TypeSignature Language="C#" Value="public abstract class WebResponse : MarshalByRefObject, IDisposable, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit WebResponse extends System.MarshalByRefObject implements class System.IDisposable, class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Net.WebResponse" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Requests</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-4.5">System.MarshalByRefObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Antwort eines URIs (Uniform Resource Identifier) bereit. Dies ist eine <see langword="abstract" /> Klasse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebResponse> Klasse ist die `abstract` Basisklasse, die aus der protokollspezifische Antwortklassen abgeleitet werden. Anwendungen können Anforderungs- und Antwortnachrichten Transaktionen in protokollunabhängige Weise mit Instanzen von teilnehmen die <xref:System.Net.WebResponse> -Klasse beim protokollspezifische Klassen abgeleitet <xref:System.Net.WebResponse> führen Sie die Details der Anforderung.  
+  
+ Clientanwendungen erstellen nicht <xref:System.Net.WebResponse> Objekte direkt; sie werden durch den Aufruf erstellt die <xref:System.Net.WebRequest.GetResponse%2A> Methode auf eine <xref:System.Net.WebRequest> Instanz.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Net.WebResponse> -Instanz von einer <xref:System.Net.WebRequest>.  
+  
+ [!code-cpp[Classic WebRequest Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic WebRequest Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebRequest Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic WebRequest Example/CS/source.cs#1)]
+ [!code-vb[Classic WebRequest Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic WebRequest Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Beim Erben von <see cref="T:System.Net.WebResponse" />, müssen Sie die folgenden Member überschreiben: <see cref="P:System.Net.WebResponse.ContentLength" />, <see cref="P:System.Net.WebResponse.ContentType" />, <see cref="M:System.Net.WebResponse.GetResponseStream" />, <see cref="P:System.Net.WebResponse.ResponseUri" />, und <see cref="P:System.Net.WebResponse.Headers" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WebResponse ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebResponse.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.WebResponse" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anwendungen rufen Sie nicht die <xref:System.Net.WebResponse> Konstruktor direkt; verwenden Sie die <xref:System.Net.WebRequest.GetResponse%2A> Methode auf eine <xref:System.Net.WebRequest> Instanz.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Dieser Konstruktor erstellt und initialisiert die erforderlichen Felder für abgeleitete Klassen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WebResponse (System.Runtime.Serialization.SerializationInfo serializationInfo, System.Runtime.Serialization.StreamingContext streamingContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo serializationInfo, valuetype System.Runtime.Serialization.StreamingContext streamingContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebResponse.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serializationInfo" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="streamingContext" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="serializationInfo">Eine Instanz der <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Klasse mit den für die Serialisierung der neuen <see cref="T:System.Net.WebRequest" />-Instanz erforderlichen Informationen.</param>
+        <param name="streamingContext">Eine Instanz der <see cref="T:System.Runtime.Serialization.StreamingContext" />-Klasse, die die Quelle des serialisierten Streams angibt, der der neuen <see cref="T:System.Net.WebRequest" />-Instanz zugeordnet ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.WebResponse" />-Klasse aus den angegebenen Instanzen der <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Klasse und der <see cref="T:System.Runtime.Serialization.StreamingContext" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Implementierung durch eine abgeleitete Klasse dieser Konstruktor implementiert die <xref:System.Runtime.Serialization.ISerializable> eine Schnittstelle für die <xref:System.Net.WebResponse> untergeordneten.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Es wird versucht, auf den Konstruktor zugreifen, wenn der Konstruktor nicht in einer abgeleiteten Klasse außer Kraft gesetzt wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public virtual void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebResponse.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt beim Überschreiben durch eine Nachfolgerklasse den Antwortstream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebResponse.Close%2A> Methode bereinigt Ressourcen durch eine <xref:System.Net.WebResponse> und schließt den zugrunde liegenden Stream durch Aufrufen der <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> Methode.  
+  
+> [!NOTE]
+>  Die Antwort muss geschlossen werden, um zu vermeiden, der Systemressourcen knapp wird. Der Antwortstream kann geschlossen werden, durch den Aufruf <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> oder <xref:System.Net.WebResponse.Close%2A>.  
+  
+> [!NOTE]
+>  Die <xref:System.Net.WebResponse> Klasse ist eine `abstract` Klasse. Das tatsächliche Verhalten <xref:System.Net.WebResponse> Instanzen zur Laufzeit richtet sich nach der Nachfolgerklasse zurückgegebenes <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType>. Weitere Informationen über Standardwerte und Ausnahmen finden Sie die Dokumentation für den abgeleiteten Klassen, z. B. <xref:System.Net.HttpWebResponse> und <xref:System.Net.FileWebResponse>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Net.WebResponse.Close%2A> Methode zum Schließen der `WebResponse`.  
+  
+ [!code-cpp[WebResponse_close#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebResponse_Close/CPP/webresponse_close.cpp#1)]
+ [!code-csharp[WebResponse_close#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebResponse_Close/CS/webresponse_close.cs#1)]
+ [!code-vb[WebResponse_close#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebResponse_Close/VB/webresponse_close.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Es wird versucht, auf die Methode zuzugreifen, wenn die Methode nicht in einer abgeleiteten Klasse überschrieben wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentLength">
+      <MemberSignature Language="C#" Value="public virtual long ContentLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 ContentLength" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebResponse.ContentLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer Nachfolgerklasse die Inhaltslänge der empfangenen Daten ab oder legt diese fest.</summary>
+        <value>Die Anzahl der von der Internetressource zurückgegebenen Bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebResponse.ContentLength%2A> -Eigenschaft enthält die Länge in Byte der Antwort von der Internetressource. Für Anforderungsmethoden, die Headerinformationen der <xref:System.Net.WebResponse.ContentLength%2A> schließt nicht die Länge der Headerinformationen.  
+  
+> [!NOTE]
+>  Die <xref:System.Net.WebResponse> Klasse ist eine `abstract` Klasse. Das tatsächliche Verhalten <xref:System.Net.WebResponse> Instanzen zur Laufzeit richtet sich nach der Nachfolgerklasse zurückgegebenes <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType>. Weitere Informationen über Standardwerte und Ausnahmen finden Sie die Dokumentation für den abgeleiteten Klassen, z. B. <xref:System.Net.HttpWebResponse> und <xref:System.Net.FileWebResponse>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Net.WebResponse.ContentLength%2A> -Eigenschaft zum Abrufen der Länge der Ressource zurückgegeben.  
+  
+ [!code-cpp[WebResponse_ContentLength_Type#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebResponse_ContentLength_Type/CPP/webresponse_contentlength_type.cpp#1)]
+ [!code-csharp[WebResponse_ContentLength_Type#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebResponse_ContentLength_Type/CS/webresponse_contentlength_type.cs#1)]
+ [!code-vb[WebResponse_ContentLength_Type#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebResponse_ContentLength_Type/VB/webresponse_contentlength_type.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Bei jedem Versuch erfolgt zum Abrufen oder Festlegen der Eigenschaft, wenn die Eigenschaft nicht in einer abgeleiteten Klasse außer Kraft gesetzt wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentType">
+      <MemberSignature Language="C#" Value="public virtual string ContentType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContentType" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebResponse.ContentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse den Inhaltstyp der empfangenen Daten ab oder legt diesen fest.</summary>
+        <value>Eine Zeichenfolge, die den Inhaltstyp der Antwort enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebResponse.ContentType%2A> Eigenschaft enthält den MIME-Inhaltstyp der Antwort von der Internetressource, sofern bekannt.  
+  
+> [!NOTE]
+>  Die <xref:System.Net.WebResponse> Klasse ist eine `abstract` Klasse. Das tatsächliche Verhalten <xref:System.Net.WebResponse> Instanzen zur Laufzeit richtet sich nach der Nachfolgerklasse zurückgegebenes <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType>. Weitere Informationen über Standardwerte und Ausnahmen finden Sie die Dokumentation für den abgeleiteten Klassen, z. B. <xref:System.Net.HttpWebResponse> und <xref:System.Net.FileWebResponse>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Net.WebResponse.ContentType%2A> Eigenschaft, um den Inhaltstyp der Antwort zu erhalten.  
+  
+ [!code-cpp[WebResponse_ContentLength_Type#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebResponse_ContentLength_Type/CPP/webresponse_contentlength_type.cpp#1)]
+ [!code-csharp[WebResponse_ContentLength_Type#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebResponse_ContentLength_Type/CS/webresponse_contentlength_type.cs#1)]
+ [!code-vb[WebResponse_ContentLength_Type#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebResponse_ContentLength_Type/VB/webresponse_contentlength_type.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Bei jedem Versuch erfolgt zum Abrufen oder Festlegen der Eigenschaft, wenn die Eigenschaft nicht in einer abgeleiteten Klasse außer Kraft gesetzt wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebResponse.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die vom <see cref="T:System.Net.WebResponse" />-Objekt verwendeten nicht verwalteten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebResponse.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben. <see langword="false" />, wenn ausschließlich nicht verwaltete Ressourcen freigegeben werden sollen.</param>
+        <summary>Gibt die vom <see cref="T:System.Net.WebResponse" />-Objekt verwendeten nicht verwalteten Ressourcen und verwirft optional auch die verwalteten Ressourcen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich `Dispose()` Methode und die <xref:System.Object.Finalize%2A> Methode. `Dispose()`Ruft die geschützte `Dispose(Boolean)` Methode mit dem `disposing` Parametersatz auf `true`. <xref:System.Object.Finalize%2A>Ruft `Dispose` mit `disposing` festgelegt `false`.  
+  
+ Wenn der `disposing`-Parameter `true` ist, gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte reserviert sind, auf die dieser <xref:System.Net.WebResponse> verweist. Diese Methode ruft die `Dispose()`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+> [!NOTE]
+>  Dieser Member gibt Ablaufverfolgungsinformationen aus, wenn Sie die Netzwerkablaufverfolgung in der Anwendung aktivieren. Weitere Informationen finden Sie unter [Netzwerkablaufverfolgung in .NET Framework](~/docs/framework/network-programming/network-tracing.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="protected virtual void GetObjectData (System.Runtime.Serialization.SerializationInfo serializationInfo, System.Runtime.Serialization.StreamingContext streamingContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo serializationInfo, valuetype System.Runtime.Serialization.StreamingContext streamingContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebResponse.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationInfo" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="streamingContext" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="serializationInfo">Die mit Daten zu füllende <see cref="T:System.Runtime.Serialization.SerializationInfo" />.</param>
+        <param name="streamingContext">Ein <see cref="T:System.Runtime.Serialization.StreamingContext" />, der das Ziel für diese Serialisierung angibt.</param>
+        <summary>Füllt eine <see cref="T:System.Runtime.Serialization.SerializationInfo" /> mit den Daten auf, die zum Serialisieren des Zielobjekts erforderlich sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Objekte eingeschlossen wurden die <xref:System.Runtime.Serialization.SerializationInfo> automatisch nachverfolgt und vom Formatierungsprogramm serialisiert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResponseStream">
+      <MemberSignature Language="C#" Value="public virtual System.IO.Stream GetResponseStream ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.Stream GetResponseStream() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebResponse.GetResponseStream" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt beim Überschreiben in einer Nachfolgerklasse den Datenstream von der Internetressource zurück.</summary>
+        <returns>Eine Instanz der <see cref="T:System.IO.Stream" />-Klasse zum Lesen von Daten aus der Internetressource.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebResponse.GetResponseStream%2A> -Methode gibt den Datenstream von der Internetressource zurück.  
+  
+> [!NOTE]
+>  Der Antwortstream muss geschlossen werden, um zu vermeiden, der Systemressourcen knapp wird. Der Antwortstream kann geschlossen werden, durch den Aufruf <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> oder<xref:System.Net.WebResponse.Close%2A>  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Net.WebResponse.GetResponseStream%2A> zurückzugebenden eine <xref:System.IO.StreamReader> Instanz. Kleiner lokaler Puffer wird verwendet, um das Lesen von Daten aus der <xref:System.IO.StreamReader> und es an die Konsole ausgegeben.  
+  
+ [!code-cpp[WebResponse_GetResponseStream#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebResponse_GetResponseStream/CPP/webresponse_getresponsestream.cpp#1)]
+ [!code-csharp[WebResponse_GetResponseStream#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebResponse_GetResponseStream/CS/webresponse_getresponsestream.cs#1)]
+ [!code-vb[WebResponse_GetResponseStream#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebResponse_GetResponseStream/VB/webresponse_getresponsestream.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Es wird versucht, auf die Methode zuzugreifen, wenn die Methode nicht in einer abgeleiteten Klasse überschrieben wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Headers">
+      <MemberSignature Language="C#" Value="public virtual System.Net.WebHeaderCollection Headers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.WebHeaderCollection Headers" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebResponse.Headers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebHeaderCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse eine Auflistung von Name-Wert-Paaren für Header ab, die dieser Anforderung zugeordnet sind.</summary>
+        <value>Eine Instanz der <see cref="T:System.Net.WebHeaderCollection" />-Klasse, die Headerwerte enthält, die dieser Antwort zugeordnet sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebResponse.Headers%2A> Eigenschaft enthält die von Name / Wert-Headerpaare, die in der Antwort zurückgegeben.  
+  
+> [!NOTE]
+>  Die <xref:System.Net.WebResponse> Klasse ist eine `abstract` Klasse. Das tatsächliche Verhalten <xref:System.Net.WebResponse> Instanzen zur Laufzeit richtet sich nach der Nachfolgerklasse zurückgegebenes <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType>. Weitere Informationen über Standardwerte und Ausnahmen finden Sie die Dokumentation für den abgeleiteten Klassen, z. B. <xref:System.Net.HttpWebResponse> und <xref:System.Net.FileWebResponse>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt alle von der Name / Wert-Paaren für Header, das zurückgegeben wird, der <xref:System.Net.WebResponse>.  
+  
+ [!code-cpp[WebResponse_Headers#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebResponse_Headers/CPP/webresponse_headers.cpp#1)]
+ [!code-csharp[WebResponse_Headers#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebResponse_Headers/CS/webresponse_headers.cs#1)]
+ [!code-vb[WebResponse_Headers#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebResponse_Headers/VB/webresponse_headers.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Bei jedem Versuch erfolgt zum Abrufen oder Festlegen der Eigenschaft, wenn die Eigenschaft nicht in einer abgeleiteten Klasse außer Kraft gesetzt wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFromCache">
+      <MemberSignature Language="C#" Value="public virtual bool IsFromCache { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFromCache" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebResponse.IsFromCache" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen <see cref="T:System.Boolean" />-Wert ab, der angibt, ob diese Antwort aus dem Cache abgerufen wurde.</summary>
+        <value>
+          <see langword="true" />, wenn die Antwort aus dem Cache stammt, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle Cacherichtlinie und das Vorhandensein der angeforderten Ressource im Cache bestimmen, ob eine Antwort aus dem Cache abgerufen werden kann. Verwendung von zwischengespeicherten Antworten in der Regel verbessert die Anwendungsleistung, aber besteht das Risiko, dass die Antwort im Cache nicht die Antwort auf dem Server übereinstimmt. Verwenden der <xref:System.Net.WebRequest.CachePolicy%2A> festzulegende Eigenschaft und die <xref:System.Net.Cache.RequestCachePolicy> Klasse, um die aktuellen Cacherichtlinie auflisten.  
+  
+ Beachten Sie, dass beim Abrufen dieser Eigenschaft auslösen kann <xref:System.ObjectDisposedException>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMutuallyAuthenticated">
+      <MemberSignature Language="C#" Value="public virtual bool IsMutuallyAuthenticated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsMutuallyAuthenticated" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebResponse.IsMutuallyAuthenticated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen <see cref="T:System.Boolean" />-Wert ab, der angibt, ob eine gegenseitige Authentifizierung erfolgt ist.</summary>
+        <value>
+          <see langword="true" />, wenn sowohl Client als auch Server authentifiziert wurden, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um gegenseitige Authentifizierung anzufordern, legen Sie die <xref:System.Net.WebRequest.AuthenticationLevel%2A?displayProperty=nameWithType> Eigenschaft mit dem <xref:System.Net.Security.AuthenticationLevel.MutualAuthRequested> oder <xref:System.Net.Security.AuthenticationLevel.MutualAuthRequired> Enumerationswert. Der Standardwert für die <xref:System.Net.WebRequest.AuthenticationLevel%2A?displayProperty=nameWithType> Eigenschaft enthält <xref:System.Security.Principal.TokenImpersonationLevel.Delegation> und <xref:System.Net.Security.AuthenticationLevel.MutualAuthRequested>.  
+  
+ Beachten Sie, dass beim Abrufen dieser Eigenschaft auslösen kann <xref:System.ObjectDisposedException>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird überprüft, ob den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NclCredPolicy#1](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLCredPolicy/CPP/NCLCredPolicy.cpp#1)]
+ [!code-csharp[NclCredPolicy#1](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLCredPolicy/CS/websample.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseUri">
+      <MemberSignature Language="C#" Value="public virtual Uri ResponseUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri ResponseUri" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebResponse.ResponseUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse den URI der Internetressource ab, die letztlich auf die Anforderung geantwortet hat.</summary>
+        <value>Eine Instanz der <see cref="T:System.Uri" />-Klasse, die den URI der Internetressource enthält, die letztlich auf die Anforderung geantwortet hat.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.WebResponse.ResponseUri%2A> -Eigenschaft enthält den URI der Internetressource, die tatsächlich die Antwortdaten bereitgestellt. Diese Ressource möglicherweise nicht ursprünglich angeforderten URI, wenn die zugrunde liegenden Protokoll Umleitung der Anforderung zulässt.  
+  
+> [!NOTE]
+>  Die <xref:System.Net.WebResponse> Klasse ist eine `abstract` Klasse. Das tatsächliche Verhalten <xref:System.Net.WebResponse> Instanzen zur Laufzeit richtet sich nach der Nachfolgerklasse zurückgegebenes <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType>. Weitere Informationen über Standardwerte und Ausnahmen finden Sie die Dokumentation für den abgeleiteten Klassen, z. B. <xref:System.Net.HttpWebResponse> und <xref:System.Net.FileWebResponse>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Net.WebResponse.ResponseUri%2A> -Eigenschaft können Sie bestimmen den Speicherort der <xref:System.Net.WebResponse> stammt.  
+  
+ [!code-cpp[WebResponse_ResponseUri#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebResponse_ResponseUri/CPP/webresponse_responseuri.cpp#1)]
+ [!code-csharp[WebResponse_ResponseUri#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebResponse_ResponseUri/CS/webresponse_responseuri.cs#1)]
+ [!code-vb[WebResponse_ResponseUri#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebResponse_ResponseUri/VB/webresponse_responseuri.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Bei jedem Versuch erfolgt zum Abrufen oder Festlegen der Eigenschaft, wenn die Eigenschaft nicht in einer abgeleiteten Klasse außer Kraft gesetzt wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsHeaders">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsHeaders { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsHeaders" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebResponse.SupportsHeaders" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob Header unterstützt werden.</summary>
+        <value>Gibt <see cref="T:System.Boolean" />zurück.  
+  
+ <see langword="true" />, wenn Header unterstützt werden, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist immer "true" für [!INCLUDE[net_v45](~/includes/net-v45-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo serializationInfo, System.Runtime.Serialization.StreamingContext streamingContext);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo serializationInfo, valuetype System.Runtime.Serialization.StreamingContext streamingContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebResponse.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationInfo" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="streamingContext" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="serializationInfo">Eine <see cref="T:System.Runtime.Serialization.SerializationInfo" /> mit den serialisierten Daten für die <see cref="T:System.Net.WebResponse" />.</param>
+        <param name="streamingContext">Ein <see cref="T:System.Runtime.Serialization.StreamingContext" /> mit dem Ziel des serialisierten Streams, der der neuen <see cref="T:System.Net.WebResponse" /> zugeordnet ist.</param>
+        <summary>Füllt eine <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Instanz mit den zum Serialisieren der <see cref="T:System.Net.WebResponse" /> erforderlichen Daten auf.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,59 @@
+<Type Name="SerialErrorReceivedEventArgs" FullName="System.IO.Ports.SerialErrorReceivedEventArgs">
+  <TypeSignature Language="C#" Value="public class SerialErrorReceivedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SerialErrorReceivedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Ports.SerialErrorReceivedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Ports</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bereitet Daten für die <see cref="E:System.IO.Ports.SerialPort.ErrorReceived" /> Ereignis.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse wird verwendet, mit der <xref:System.IO.Ports.SerialPort.ErrorReceived> Ereignis.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EventType">
+      <MemberSignature Language="C#" Value="public System.IO.Ports.SerialError EventType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.Ports.SerialError EventType" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Ports.SerialErrorReceivedEventArgs.EventType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.SerialError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Ereignistyp.</summary>
+        <value>Einer der <see cref="T:System.IO.Ports.SerialError" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stellt Informationen bereit, auf den Ereignistyp, der verursacht hat die <xref:System.IO.Ports.SerialPort.ErrorReceived> Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

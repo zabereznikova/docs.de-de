@@ -1,0 +1,478 @@
+<Type Name="CompositeDesignerTheme" FullName="System.Workflow.ComponentModel.Design.CompositeDesignerTheme">
+  <TypeSignature Language="C#" Value="public class CompositeDesignerTheme : System.Workflow.ComponentModel.Design.ActivityDesignerTheme" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CompositeDesignerTheme extends System.Workflow.ComponentModel.Design.ActivityDesignerTheme" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Design.CompositeDesignerTheme" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.ComponentModel.Design.ActivityDesignerTheme</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Designeinstellungen für <see cref="T:System.Workflow.ComponentModel.Design.CompositeActivityDesigner" />-Objekte zur Verfügung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Die <xref:System.Workflow.ComponentModel.Design.CompositeDesignerTheme>-Klasse kontrolliert das Aussehen und Verhalten eines <xref:System.Workflow.ComponentModel.Design.CompositeActivityDesigner>-Objekts auf einer Workflowentwurfsoberfläche.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird das Erstellen eines benutzerdefinierten <xref:System.Workflow.ComponentModel.Design.CompositeDesignerTheme> durch Ableiten von der <xref:System.Workflow.ComponentModel.Design.CompositeDesignerTheme>-Klasse und Festlegen der entsprechenden Eigenschaften für das neue Design erläutert.  
+  
+ [!code-csharp[WF_Samples#30](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#30)]
+ [!code-vb[WF_Samples#30](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#30)]  
+  
+ Um das Design auf einem <xref:System.Workflow.ComponentModel.Design.CompositeActivityDesigner> zu verwenden, übernehmen Sie <xref:System.Workflow.ComponentModel.Design.ActivityDesignerThemeAttribute> für die <xref:System.Workflow.ComponentModel.Design.CompositeActivityDesigner>-Klasse.  
+  
+ [!code-csharp[WF_Samples#24](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#24)]
+ [!code-vb[WF_Samples#24](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#24)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompositeDesignerTheme (System.Workflow.ComponentModel.Design.WorkflowTheme theme);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Workflow.ComponentModel.Design.WorkflowTheme theme) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.CompositeDesignerTheme.#ctor(System.Workflow.ComponentModel.Design.WorkflowTheme)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="theme" Type="System.Workflow.ComponentModel.Design.WorkflowTheme" />
+      </Parameters>
+      <Docs>
+        <param name="theme">Das <see cref="T:System.Workflow.ComponentModel.Design.WorkflowTheme" />, das dem zusammengesetzten Designer-Design zugeordnet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.ComponentModel.Design.CompositeDesignerTheme" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird das Erstellen eines benutzerdefinierten <xref:System.Workflow.ComponentModel.Design.CompositeDesignerTheme> durch Ableiten von der <xref:System.Workflow.ComponentModel.Design.CompositeDesignerTheme>-Klasse und Festlegen der entsprechenden Eigenschaften für das neue Design erläutert.  
+  
+ [!code-csharp[WF_Samples#30](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#30)]
+ [!code-vb[WF_Samples#30](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#30)]  
+  
+ Um das Design auf einem <xref:System.Workflow.ComponentModel.Design.CompositeActivityDesigner> zu verwenden, übernehmen Sie <xref:System.Workflow.ComponentModel.Design.ActivityDesignerThemeAttribute> für die <xref:System.Workflow.ComponentModel.Design.CompositeActivityDesigner>-Klasse.  
+  
+ [!code-csharp[WF_Samples#24](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#24)]
+ [!code-vb[WF_Samples#24](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#24)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectorEndCap">
+      <MemberSignature Language="C#" Value="public virtual System.Workflow.ComponentModel.Design.LineAnchor ConnectorEndCap { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Workflow.ComponentModel.Design.LineAnchor ConnectorEndCap" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.CompositeDesignerTheme.ConnectorEndCap" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(12)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.LineAnchor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der die Form bestimmt, die am Ende einer Verbindung angezeigt wird, oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.Workflow.ComponentModel.Design.LineAnchor" />-Enumerationswert, der die Form definiert, die am Ende der Verbindung angezeigt wird. Der Standardwert ist <see cref="F:System.Workflow.ComponentModel.Design.LineAnchor.ArrowAnchor" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird das Erstellen eines benutzerdefinierten <xref:System.Workflow.ComponentModel.Design.CompositeDesignerTheme> durch Ableiten von der <xref:System.Workflow.ComponentModel.Design.CompositeDesignerTheme>-Klasse und Festlegen der entsprechenden Eigenschaften für das neue Design erläutert.  
+  
+ [!code-csharp[WF_Samples#30](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#30)]
+ [!code-vb[WF_Samples#30](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#30)]  
+  
+ Um das Design auf einem <xref:System.Workflow.ComponentModel.Design.CompositeActivityDesigner> zu verwenden, übernehmen Sie <xref:System.Workflow.ComponentModel.Design.ActivityDesignerThemeAttribute> für die <xref:System.Workflow.ComponentModel.Design.CompositeActivityDesigner>-Klasse.  
+  
+ [!code-csharp[WF_Samples#24](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#24)]
+ [!code-vb[WF_Samples#24](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#24)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectorSize">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Size ConnectorSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size ConnectorSize" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.CompositeDesignerTheme.ConnectorSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Drawing.Size" /> der Verbindung ab.</summary>
+        <value>Ein <see cref="T:System.Drawing.Size" />-Objekt mit Informationen zur Höhe und Breite der Verbindung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectorStartCap">
+      <MemberSignature Language="C#" Value="public virtual System.Workflow.ComponentModel.Design.LineAnchor ConnectorStartCap { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Workflow.ComponentModel.Design.LineAnchor ConnectorStartCap" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.CompositeDesignerTheme.ConnectorStartCap" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(11)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.LineAnchor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der die Form bestimmt, die am Anfang einer Verbindung angezeigt wird, oder legt diesen fest.</summary>
+        <value>Ein <see cref="T:System.Workflow.ComponentModel.Design.LineAnchor" />-Enumerationswert, der die Form definiert, die am Anfang der Verbindung angezeigt wird. Der Standardwert ist <see cref="F:System.Workflow.ComponentModel.Design.LineAnchor.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird das Erstellen eines benutzerdefinierten <xref:System.Workflow.ComponentModel.Design.CompositeDesignerTheme> durch Ableiten von der <xref:System.Workflow.ComponentModel.Design.CompositeDesignerTheme>-Klasse und Festlegen der entsprechenden Eigenschaften für das neue Design erläutert.  
+  
+ [!code-csharp[WF_Samples#30](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#30)]
+ [!code-vb[WF_Samples#30](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#30)]  
+  
+ Um das Design auf einem <xref:System.Workflow.ComponentModel.Design.CompositeActivityDesigner> zu verwenden, übernehmen Sie <xref:System.Workflow.ComponentModel.Design.ActivityDesignerThemeAttribute> für die <xref:System.Workflow.ComponentModel.Design.CompositeActivityDesigner>-Klasse.  
+  
+ [!code-csharp[WF_Samples#24](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#24)]
+ [!code-vb[WF_Samples#24](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#24)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.CompositeDesignerTheme.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.Workflow.ComponentModel.Design.CompositeDesignerTheme" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpandButtonSize">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Size ExpandButtonSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size ExpandButtonSize" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.CompositeDesignerTheme.ExpandButtonSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Drawing.Size" /> der Schaltfläche Erweitern auf dem zusammengesetzten Aktivitätsdesigner ab.</summary>
+        <value>Ein <see cref="T:System.Drawing.Size" />-Objekt mit Informationen zur Höhe und Breite der Schaltfläche Erweitern auf dem <see cref="T:System.Workflow.ComponentModel.Design.CompositeActivityDesigner" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExpandButtonBackgroundBrush">
+      <MemberSignature Language="C#" Value="public System.Drawing.Brush GetExpandButtonBackgroundBrush (System.Drawing.Rectangle rectangle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Drawing.Brush GetExpandButtonBackgroundBrush(valuetype System.Drawing.Rectangle rectangle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.CompositeDesignerTheme.GetExpandButtonBackgroundBrush(System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Brush</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rectangle" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="rectangle">Das <see cref="T:System.Drawing.Rectangle" />, das die Begrenzungen der Schaltfläche Erweitern auf <see cref="T:System.Workflow.ComponentModel.Design.CompositeActivityDesigner" /> definiert.</param>
+        <summary>Ruft einen Pinsel auf, in dem die Eigenschaften der Hintergrundanzeige der Schaltfläche Erweitern auf dem zusammengesetzten Aktivitätsdesigner definiert sind.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" />-Objekt, das <paramref name="rectangle" />-Parameter zur Definition des Schaltflächenbereichs verwendet, in dem durch den Pinsel zwei Farben in einem linearen Farbverlauf von der linken oberen Ecke zur rechten unteren Ecke der Schaltfläche Erweitern angebracht werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Falls der Hintergrundpinsel für die Schaltfläche Erweitern nicht auf `null` (`Nothing` in Visual Basic) festgelegt ist, bevor <xref:System.Workflow.ComponentModel.Design.CompositeDesignerTheme.GetExpandButtonBackgroundBrush%2A> aufgerufen wird, wird der vorherige Pinsel von der Methode freigegeben und ein neuer erstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.CompositeDesignerTheme.Initialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt Initialisierungsaufgaben jenseits der durch den <see cref="M:System.Workflow.ComponentModel.Design.CompositeDesignerTheme.#ctor(System.Workflow.ComponentModel.Design.WorkflowTheme)" />-Konstruktor bereitgestellten Aufgaben aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Falls die <xref:System.Workflow.ComponentModel.Design.AmbientTheme.UseOperatingSystemSettings%2A>-Eigenschaft auf `true` gesetzt ist, werden von der <xref:System.Workflow.ComponentModel.Design.CompositeDesignerTheme.Initialize%2A>-Methode Einstellungen für das <xref:System.Workflow.ComponentModel.Design.CompositeDesignerTheme>-Objekt vom Betriebssystem abgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAmbientPropertyChanged">
+      <MemberSignature Language="C#" Value="public override void OnAmbientPropertyChanged (System.Workflow.ComponentModel.Design.AmbientProperty ambientProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnAmbientPropertyChanged(valuetype System.Workflow.ComponentModel.Design.AmbientProperty ambientProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.CompositeDesignerTheme.OnAmbientPropertyChanged(System.Workflow.ComponentModel.Design.AmbientProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ambientProperty" Type="System.Workflow.ComponentModel.Design.AmbientProperty" />
+      </Parameters>
+      <Docs>
+        <param name="ambientProperty">Der <see cref="T:System.Workflow.ComponentModel.Design.AmbientProperty" />-Enumerationswert, den das zusammengesetzte Designer-Design jetzt verwenden soll.</param>
+        <summary>Benachrichtigt das <see cref="T:System.Workflow.ComponentModel.Design.CompositeDesignerTheme" />-Objekt, dass sich die Ambient-Eigenschaftseinstellungen für den Designer geändert haben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Methode aufgerufen wird, werden die <xref:System.Workflow.ComponentModel.Design.ActivityDesignerTheme.BackColorStart%2A>-Eigenschaft und die <xref:System.Workflow.ComponentModel.Design.ActivityDesignerTheme.BackColorEnd%2A>-Eigenschaft auf <xref:System.Drawing.Color.Empty> festgelegt.  
+  
+ Die <xref:System.Workflow.ComponentModel.Design.AmbientProperty>-Enumeration bestimmt, woher ein Designer-Design die Ambient-Eigenschafteneinstellungen erhält. Wenn der Wert <xref:System.Workflow.ComponentModel.Design.AmbientProperty.DesignerSize> festgelegt ist, erhält die Designer-Designklasse die Ambient-Einstellungen von der <xref:System.Workflow.ComponentModel.Design.WorkflowTheme.AmbientTheme%2A>-Eigenschaft. Wenn der Wert <xref:System.Workflow.ComponentModel.Design.AmbientProperty.DesignerSize> festgelegt ist, erhält die Designer-Designklasse die Ambient-Einstellungen vom Betriebssystem, auf dem der Designer installiert ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowDropShadow">
+      <MemberSignature Language="C#" Value="public virtual bool ShowDropShadow { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowDropShadow" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.CompositeDesignerTheme.ShowDropShadow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(10)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das zusammengesetzte Designer-Design Schlagschatten um den zusammengesetzten Aktivitätsdesigner anzeigt, oder legt einen Wert dafür fest.</summary>
+        <value>
+          <see langword="true" />, wenn <see cref="T:System.Workflow.ComponentModel.Design.CompositeDesignerTheme" /> Schlagschatten um <see cref="T:System.Workflow.ComponentModel.Design.CompositeActivityDesigner" /> anzeigt, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird das Erstellen eines benutzerdefinierten <xref:System.Workflow.ComponentModel.Design.CompositeDesignerTheme> durch Ableiten von der <xref:System.Workflow.ComponentModel.Design.CompositeDesignerTheme>-Klasse und Festlegen der entsprechenden Eigenschaften für das neue Design erläutert.  
+  
+ [!code-csharp[WF_Samples#30](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#30)]
+ [!code-vb[WF_Samples#30](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#30)]  
+  
+ Um das Design auf einem <xref:System.Workflow.ComponentModel.Design.CompositeActivityDesigner> zu verwenden, übernehmen Sie <xref:System.Workflow.ComponentModel.Design.ActivityDesignerThemeAttribute> für die <xref:System.Workflow.ComponentModel.Design.CompositeActivityDesigner>-Klasse.  
+  
+ [!code-csharp[WF_Samples#24](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#24)]
+ [!code-vb[WF_Samples#24](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#24)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WatermarkAlignment">
+      <MemberSignature Language="C#" Value="public virtual System.Workflow.ComponentModel.Design.DesignerContentAlignment WatermarkAlignment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Workflow.ComponentModel.Design.DesignerContentAlignment WatermarkAlignment" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.CompositeDesignerTheme.WatermarkAlignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(9)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.DesignerContentAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ausrichtung des Wasserzeichenbilds in <see cref="T:System.Workflow.ComponentModel.Design.CompositeActivityDesigner" /> ab.</summary>
+        <value>Ein <see cref="T:System.Workflow.ComponentModel.Design.DesignerContentAlignment" />-Enumerationswert, der angibt, wo das Wasserzeichenbild in <see cref="T:System.Workflow.ComponentModel.Design.CompositeActivityDesigner" /> eingefügt wird. Der Standardwert ist <see cref="F:System.Workflow.ComponentModel.Design.DesignerContentAlignment.BottomRight" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird das Erstellen eines benutzerdefinierten <xref:System.Workflow.ComponentModel.Design.CompositeDesignerTheme> durch Ableiten von der <xref:System.Workflow.ComponentModel.Design.CompositeDesignerTheme>-Klasse und Festlegen der entsprechenden Eigenschaften für das neue Design erläutert.  
+  
+ [!code-csharp[WF_Samples#30](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#30)]
+ [!code-vb[WF_Samples#30](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#30)]  
+  
+ Um das Design auf einem <xref:System.Workflow.ComponentModel.Design.CompositeActivityDesigner> zu verwenden, übernehmen Sie <xref:System.Workflow.ComponentModel.Design.ActivityDesignerThemeAttribute> für die <xref:System.Workflow.ComponentModel.Design.CompositeActivityDesigner>-Klasse.  
+  
+ [!code-csharp[WF_Samples#24](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#24)]
+ [!code-vb[WF_Samples#24](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#24)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WatermarkImage">
+      <MemberSignature Language="C#" Value="public System.Drawing.Image WatermarkImage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Image WatermarkImage" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.CompositeDesignerTheme.WatermarkImage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Wasserzeichenbild ab, das auf dem zusammengesetzten Aktivitätsdesigner verwendet werden soll.</summary>
+        <value>Das <see cref="T:System.Drawing.Image" />-Objekt, das als Wasserzeichen für den <see cref="T:System.Workflow.ComponentModel.Design.CompositeActivityDesigner" /> verwendet werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Falls der <xref:System.Workflow.ComponentModel.Design.CompositeDesignerTheme.WatermarkImagePath%2A>-Eigenschaftswert `null` (`Nothing` in Visual Basic) ist, enthält diese Eigenschaft das Bild für das Wasserzeichen. Falls die <xref:System.Workflow.ComponentModel.Design.CompositeDesignerTheme.WatermarkImagePath%2A>-Eigenschaft auf einen gültigen Wert festgelegt wird, wird diese Eigenschaft auf `null` (`Nothing`) gesetzt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WatermarkImagePath">
+      <MemberSignature Language="C#" Value="public virtual string WatermarkImagePath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string WatermarkImagePath" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.CompositeDesignerTheme.WatermarkImagePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor(typeof(System.Workflow.ComponentModel.Design.ImageBrowserEditor), typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(8)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den relativen Pfad zum Wasserzeichenbild ab, das auf dem zusammengesetzten Aktivitätsdesigner verwendet werden soll, oder legt den Pfad fest.</summary>
+        <value>Ein Zeichenfolgenwert, der den relativen Pfad zum Wasserzeichenbild darstellt, das in <see cref="T:System.Workflow.ComponentModel.Design.CompositeActivityDesigner" /> verwendet werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird das Erstellen eines benutzerdefinierten <xref:System.Workflow.ComponentModel.Design.CompositeDesignerTheme> durch Ableiten von der <xref:System.Workflow.ComponentModel.Design.CompositeDesignerTheme>-Klasse und Festlegen der entsprechenden Eigenschaften für das neue Design erläutert.  
+  
+ [!code-csharp[WF_Samples#24](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#24)]
+ [!code-vb[WF_Samples#24](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#24)]  
+  
+ Um das Design auf einem <xref:System.Workflow.ComponentModel.Design.CompositeActivityDesigner> zu verwenden, übernehmen Sie <xref:System.Workflow.ComponentModel.Design.ActivityDesignerThemeAttribute> für die <xref:System.Workflow.ComponentModel.Design.CompositeActivityDesigner>-Klasse.  
+  
+ [!code-csharp[WF_Samples#24](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#24)]
+ [!code-vb[WF_Samples#24](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#24)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

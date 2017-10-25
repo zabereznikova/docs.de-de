@@ -1,0 +1,70 @@
+<Type Name="MailSettingsSectionGroup" FullName="System.Net.Configuration.MailSettingsSectionGroup">
+  <TypeSignature Language="C#" Value="public sealed class MailSettingsSectionGroup : System.Configuration.ConfigurationSectionGroup" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MailSettingsSectionGroup extends System.Configuration.ConfigurationSectionGroup" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Configuration.MailSettingsSectionGroup" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSectionGroup</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Configuration.MailSettingsSectionGroup" />-Klasse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse entspricht dem [ &lt;MailSettings&gt; -Element (Netzwerkeinstellungen)](~/docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md) Konfigurationselement.  
+  
+ Diese Klasse wird verwendet, um Informationen zu SMTP-Einstellungen für den lokalen Computer zugreifen.  
+  
+ Diese Klasse bietet programmgesteuerten Zugriff auf Informationen, die in Konfigurationsdateien gespeichert werden kann.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MailSettingsSectionGroup ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Configuration.MailSettingsSectionGroup.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Configuration.MailSettingsSectionGroup" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Smtp">
+      <MemberSignature Language="C#" Value="public System.Net.Configuration.SmtpSection Smtp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Configuration.SmtpSection Smtp" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.MailSettingsSectionGroup.Smtp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Configuration.SmtpSection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die SMTP-Einstellungen für den lokalen Computer ab.</summary>
+        <value>Ein <see cref="T:System.Net.Configuration.SmtpSection" /> -Objekt, das Konfigurationsinformationen für den lokalen Computer enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ E-Mail-Einstellungen wirken sich auf das Verhalten der <xref:System.Net.Mail.SmtpClient> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

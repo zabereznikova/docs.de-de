@@ -1,0 +1,2222 @@
+<Type Name="Calendar" FullName="System.Web.UI.WebControls.Calendar">
+  <TypeSignature Language="C#" Value="public class Calendar : System.Web.UI.WebControls.WebControl, System.Web.UI.IPostBackEventHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Calendar extends System.Web.UI.WebControls.WebControl implements class System.Web.UI.IPostBackEventHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Calendar" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IPostBackEventHandler</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("SelectionChanged")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("SelectedDate")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.CalendarDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ControlValueProperty("SelectedDate", typeof(System.DateTime), "1/1/0001")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.DataBindingHandler("System.Web.UI.Design.WebControls.CalendarDataBindingHandler, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.SupportsEventValidation</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Zeigt einen Kalender für einen Monat an, in dem der Benutzer Datumsangaben auswählen und zum nächsten oder vorherigen Monat wechseln kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In diesem Thema:  
+  
+-   [Introduction (Einführung)](#Introduction)  
+  
+-   [Barrierefreiheit](#Accessibility)  
+  
+-   [Deklarationssyntax](#DeclarativeSyntax)  
+  
+<a name="Introduction"></a>   
+## <a name="introduction"></a>Einführung  
+ Verwenden der <xref:System.Web.UI.WebControls.Calendar> -Steuerelement zum Anzeigen von eines Monats für einen Kalender auf einer Webseite. Das Steuerelement können Sie Datumsangaben auswählen und zum nächsten oder vorherigen Monat wechseln. Die <xref:System.Web.UI.WebControls.Calendar> Steuerelement unterstützt alle der <xref:System.Globalization.Calendar?displayProperty=nameWithType> Typen in den <xref:System.Globalization> Namespace. Abgesehen von dem gregorianischen Kalender schließt dies auch Kalender mit einem anderen Jahr und Monat Systeme, z. B. der Hjiri-Kalender.  
+  
+ Sie können angeben, ob die <xref:System.Web.UI.WebControls.Calendar> Steuerelement ermöglicht es Ihnen, ein einzelnes Tag, Woche oder ganzen Monat auszuwählen, indem die <xref:System.Web.UI.WebControls.Calendar.SelectionMode%2A> Eigenschaft.  
+  
+ Standardmäßig zeigt das Steuerelement die Tage des Monats, Tagesüberschriften für die Tage der Woche, ein Titel mit der Monatsname und Jahr, Links für die Auswahl einzelner Tage des Monats und Links für die Umstellung auf die vorherigen und nächsten Monat. Sie können die Darstellung Anpassen der <xref:System.Web.UI.WebControls.Calendar> Steuerelement durch Festlegen der Eigenschaften, die den Stil für die verschiedenen Teile des Steuerelements zu steuern. Die folgende Tabelle enthält die Eigenschaften, die den Stil für die verschiedenen Teile des Steuerelements an.  
+  
+|Eigenschaft|Beschreibung|  
+|--------------|-----------------|  
+|<xref:System.Web.UI.WebControls.Calendar.DayHeaderStyle%2A>|Gibt den Stil für den Abschnitt, in dem die Wochentage angezeigt.|  
+|<xref:System.Web.UI.WebControls.Calendar.DayStyle%2A>|Gibt den Stil für die Datumsangaben im Monat angezeigt.|  
+|<xref:System.Web.UI.WebControls.Calendar.NextPrevStyle%2A>|Gibt den Stil für die Navigationssteuerelemente im Titelbereich an.|  
+|<xref:System.Web.UI.WebControls.Calendar.OtherMonthDayStyle%2A>|Gibt den Stil für die Datumsangaben, die nicht in den derzeit angezeigten Monat enthalten sind.|  
+|<xref:System.Web.UI.WebControls.Calendar.SelectedDayStyle%2A>|Gibt den Stil für die ausgewählten Datumsangaben im Kalender.|  
+|<xref:System.Web.UI.WebControls.Calendar.SelectorStyle%2A>|Gibt den Stil für die Woche und Monat Datumsauswahl Spalte.|  
+|<xref:System.Web.UI.WebControls.Calendar.TitleStyle%2A>|Gibt den Stil für den Titelabschnitt.|  
+|<xref:System.Web.UI.WebControls.Calendar.TodayDayStyle%2A>|Gibt die Art des heutigen Datums.|  
+|<xref:System.Web.UI.WebControls.Calendar.WeekendDayStyle%2A>|Gibt den Stil für die Wochenenden an.|  
+  
+ Sie können auch ein- oder Ausblenden von verschiedenen Teilen des Steuerelements. Die folgende Tabelle enthält die Eigenschaften, die steuern, welche Teile angezeigt oder ausgeblendet werden.  
+  
+|Eigenschaft|Beschreibung|  
+|--------------|-----------------|  
+|<xref:System.Web.UI.WebControls.Calendar.ShowDayHeader%2A>|Anzeigen oder Ausblenden den Abschnitt, in dem die Wochentage angezeigt.|  
+|<xref:System.Web.UI.WebControls.Calendar.ShowGridLines%2A>|Anzeigen oder Ausblenden der Rasterlinien zwischen den Tagen des Monats.|  
+|<xref:System.Web.UI.WebControls.Calendar.ShowNextPrevMonth%2A>|Anzeigen oder Ausblenden der Steuerelemente für die Seitennavigation auf den nächsten oder vorherigen Monat.|  
+|<xref:System.Web.UI.WebControls.Calendar.ShowTitle%2A>|Anzeigen oder Ausblenden der Title-Abschnitt.|  
+  
+ Obwohl die Bindung an eine Datenquelle nicht unterstützt wird die <xref:System.Web.UI.WebControls.Calendar> -Steuerelement, können Sie den Inhalt und die Formatierung der einzelnen Datumszellen ändern. Bevor Sie die <xref:System.Web.UI.WebControls.Calendar> Steuerelement auf der Webseite angezeigt wird, erstellt und assembliert die Komponenten, aus denen das Steuerelement besteht. Die <xref:System.Web.UI.WebControls.Calendar.DayRender> Ereignis wird ausgelöst, wenn jedes Datum Zelle der <xref:System.Web.UI.WebControls.Calendar> Steuerelement erstellt wird. Sie können steuern, den Inhalt und Formatieren einer Zelle Date, wie er wird erstellt, durch die Bereitstellung von Code im Ereignishandler für das <xref:System.Web.UI.WebControls.Calendar.DayRender> Ereignis. Weitere Informationen zum Anpassen des Inhalts einer Zelle Date, finden Sie unter <xref:System.Web.UI.WebControls.Calendar.OnDayRender%2A>.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.Calendar> Steuerelement rendert ECMAScript (JScript, JavaScript) an den Clientbrowser. Der Clientbrowser benötigen für das genannte Steuerelement aktiviert ECMAScript, ordnungsgemäß funktioniert. Weitere Informationen zu Clientskript, finden Sie unter [Clientskripts in ASP.NET Web Pages](http://msdn.microsoft.com/library/13edb6b9-2dea-43c6-b8c1-a47207de19aa).  
+  
+<a name="Accessibility"></a>   
+## <a name="accessibility"></a>Barrierefreiheit  
+ Das Markup gerendert wird, wird standardmäßig für dieses Steuerelement kann nicht Accessibility Standards entsprechen. Ausführliche Informationen zu Accessibility-Unterstützung für das genannte Steuerelement finden Sie unter [ASP.NET-Steuerelemente und Barrierefreiheit](http://msdn.microsoft.com/library/847a37e3-ce20-41da-b0d3-7dfb0fdae9a0).  
+  
+<a name="DeclarativeSyntax"></a>   
+## <a name="declarative-syntax"></a>Deklarationssyntax  
+  
+```  
+<asp:Calendar  
+    AccessKey="string"  
+    BackColor="color name|#dddddd"  
+    BorderColor="color name|#dddddd"  
+    BorderStyle="NotSet|None|Dotted|Dashed|Solid|Double|Groove|Ridge|  
+        Inset|Outset"  
+    BorderWidth="size"  
+    Caption="string"  
+    CaptionAlign="NotSet|Top|Bottom|Left|Right"  
+    CellPadding="integer"  
+    CellSpacing="integer"  
+    CssClass="string"  
+    DayNameFormat="Full|Short|FirstLetter|FirstTwoLetters|Shortest"  
+    Enabled="True|False"  
+    EnableTheming="True|False"  
+    EnableViewState="True|False"  
+    FirstDayOfWeek="Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|  
+        Saturday|Default"  
+    Font-Bold="True|False"  
+    Font-Italic="True|False"  
+    Font-Names="string"  
+    Font-Overline="True|False"  
+    Font-Size="string|Smaller|Larger|XX-Small|X-Small|Small|Medium|  
+        Large|X-Large|XX-Large"  
+    Font-Strikeout="True|False"  
+    Font-Underline="True|False"  
+    ForeColor="color name|#dddddd"  
+    Height="size"  
+    ID="string"  
+    NextMonthText="string"  
+    NextPrevFormat="CustomText|ShortMonth|FullMonth"  
+    OnDataBinding="DataBinding event handler"  
+    OnDayRender="DayRender event handler"  
+    OnDisposed="Disposed event handler"  
+    OnInit="Init event handler"  
+    OnLoad="Load event handler"  
+    OnPreRender="PreRender event handler"  
+    OnSelectionChanged="SelectionChanged event handler"  
+    OnUnload="Unload event handler"  
+    OnVisibleMonthChanged="VisibleMonthChanged event handler"  
+    PrevMonthText="string"  
+    runat="server"  
+    SelectedDate="string"  
+    SelectionMode="None|Day|DayWeek|DayWeekMonth"  
+    SelectMonthText="string"  
+    SelectWeekText="string"  
+    ShowDayHeader="True|False"  
+    ShowGridLines="True|False"  
+    ShowNextPrevMonth="True|False"  
+    ShowTitle="True|False"  
+    SkinID="string"  
+    Style="string"  
+    TabIndex="integer"  
+    TitleFormat="Month|MonthYear"  
+    ToolTip="string"  
+    UseAccessibleHeader="True|False"  
+    Visible="True|False"  
+    VisibleDate="string"  
+    Width="size"  
+>  
+        <DayHeaderStyle/>  
+        <DayStyle/>  
+        <NextPrevStyle/>  
+        <OtherMonthDayStyle/>  
+        <SelectedDayStyle/>  
+        <SelectorStyle/>  
+        <TitleStyle/>  
+        <TodayDayStyle/>  
+        <WeekendDayStyle/>  
+</asp:Calendar>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Web.UI.WebControls.Calendar> Steuerelement auf einer Webseite.  
+  
+ [!code-aspx-csharp[Classic Calendar Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Calendar Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Calendar Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Calendar Example/VB/sourcevb.aspx#1)]  
+  
+ Das folgende Beispiel zeigt eine <xref:System.Web.UI.WebControls.Calendar> Steuerelement verwendet, wenn eine der Spalten angezeigt werden, indem Sie bearbeiten ein <xref:System.Web.UI.WebControls.GridView> Steuerelement. Die <xref:System.Web.UI.WebControls.Calendar> gebunden ist mit der Datenquelle mit dem `Bind` Methode. Die `Eval` Methode wird verwendet, um den Date-Wert zu binden, der vom angezeigt wird der <xref:System.Web.UI.WebControls.Calendar> Steuerelement.  
+  
+ [!code-aspx-csharp[GridViewConcepts#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewConcepts/CS/gridviewcustomcs.aspx#1)]
+ [!code-aspx-vb[GridViewConcepts#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewConcepts/VB/gridviewcustomvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Calendar ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Calendar.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.Calendar" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.Calendar> Klasse.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Erstellen und initialisieren eine neue Instanz der dem <xref:System.Web.UI.WebControls.Calendar> Klasse.  
+  
+ [!code-aspx-csharp[Classic Calendar.Calendar Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Calendar.Calendar Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Calendar.Calendar Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Calendar.Calendar Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Caption">
+      <MemberSignature Language="C#" Value="public virtual string Caption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Caption" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Calendar.Caption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Textwert, der gerendert wird als Beschriftung für den Kalender.</summary>
+        <value>Der Tabellentitel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tabellenbeschriftung wird verwendet, um die Art der Tabelle in einem von drei Sätze zu beschreiben. Verwenden der <xref:System.Web.UI.WebControls.Calendar.CaptionAlign%2A> Eigenschaft, um die Beschriftung der Kalender ausgerichtet.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [ASP.NET-Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Calendar.Caption%2A> eine Beschriftung für die anzuzeigende Eigenschaft ein <xref:System.Web.UI.WebControls.Calendar> Steuerelement.  
+  
+ [!code-aspx-csharp[CalendarCaption#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarCaption/CS/calendarcaptioncs.aspx#1)]
+ [!code-aspx-vb[CalendarCaption#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarCaption/VB/calendarcaptionvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CaptionAlign">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.TableCaptionAlign CaptionAlign { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.TableCaptionAlign CaptionAlign" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Calendar.CaptionAlign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableCaptionAlign</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Ausrichtung des Texts, die gerendert wird als Beschriftung für den Kalender.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.TableCaptionAlign" /> Wert, der die Ausrichtung der Beschriftung angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft bestimmt, wo die Beschriftung in Bezug auf angezeigt wird der <xref:System.Web.UI.WebControls.Calendar> Steuerelement. Der Standardwert ist <xref:System.Web.UI.WebControls.TableCaptionAlign.NotSet>, die ermöglicht, dass des Browsers, wo die Beschriftung ausgerichtet werden soll. Die folgende Tabelle erläutert die Beziehung zwischen der <xref:System.Web.UI.WebControls.TableCaptionAlign> Wert und die Darstellung der Beschriftung.  
+  
+|<xref:System.Web.UI.WebControls.TableCaptionAlign>-Wert|Darstellung|  
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|  
+|`Bottom`|Die Beschriftung wird am unteren Rand des Kalenders, mit dem Text zentriert.|  
+|`Left`|Die Beschriftung wird am oberen Rand des Kalenders der Text linksbündig ausgerichtet angezeigt.|  
+|`NotSet`|Die Ausrichtung der Beschriftung ist nicht festgelegt und richtet sich nach den Browser.|  
+|`Right`|Die Beschriftung wird am oberen Rand der Kalender, mit dem Text rechtsbündig ausgerichtet angezeigt.|  
+|`Top`|Die Beschriftung wird am oberen Rand der Kalender, mit dem Text zentriert.|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Calendar.CaptionAlign%2A> Eigenschaft zum Ausrichten einer Beschriftung für eine <xref:System.Web.UI.WebControls.Calendar> Steuerelement.  
+  
+ [!code-aspx-csharp[CalendarCaption#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarCaption/CS/calendarcaptioncs.aspx#1)]
+ [!code-aspx-vb[CalendarCaption#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarCaption/VB/calendarcaptionvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der angegebene Wert ist nicht der <see cref="T:System.Web.UI.WebControls.TableCaptionAlign" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CellPadding">
+      <MemberSignature Language="C#" Value="public int CellPadding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CellPadding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Calendar.CellPadding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(2)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Abstand zwischen dem Inhalt einer Zelle und dem Zellenrahmen.</summary>
+        <value>Die Menge des Speicherplatzes (in Pixel) zwischen dem Inhalt einer Zelle und dem Zellenrahmen. Der Standardwert ist <see langword="2" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um den Abstand zwischen dem Inhalt einer Zelle und dem Zellenrahmen steuern. Der angegebene Leerraum wird allen vier Seiten einer Zelle hinzugefügt. Größe der einzelnen Zelle können nicht angegeben werden.  
+  
+> [!NOTE]
+>  Wenn diese Eigenschaft auf `-1` gibt an, dass diese Eigenschaft nicht in der gerenderten Tabelle festgelegt ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Calendar.CellPadding%2A> Eigenschaft füllt jede Zelle mit 5 Pixeln.  
+  
+ [!code-aspx-csharp[Classic Calendar.CellPadding Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Calendar.CellPadding Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Calendar.CellPadding Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Calendar.CellPadding Example/VB/sourcevb.aspx#1)]  
+  
+ [!code-aspx-csharp[CalendarCellPadding#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarCellPadding/CS/calendarcellpaddingcs.aspx#1)]
+ [!code-aspx-vb[CalendarCellPadding#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarCellPadding/VB/calendarcellpaddingvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der angegebene Textabstand ist kleiner als -1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CellSpacing">
+      <MemberSignature Language="C#" Value="public int CellSpacing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CellSpacing" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Calendar.CellSpacing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Abstand zwischen den Zellen.</summary>
+        <value>Die Menge des Speicherplatzes (in Pixel) zwischen Zellen. Der Standardwert ist <see langword="0" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um den Abstand zwischen den einzelnen Zellen im Kalender steuern. Dieser Abstand wird vertikal und horizontal angewendet.  
+  
+> [!NOTE]
+>  Wenn diese Eigenschaft auf `-1` gibt an, dass diese Eigenschaft nicht in der gerenderten Tabelle festgelegt ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Calendar.CellSpacing%2A> Eigenschaft, um die 5 Pixel zwischen Zellen.  
+  
+ [!code-aspx-csharp[Classic Calendar.CellSpacing Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Calendar.CellSpacing Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Calendar.CellSpacing Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Calendar.CellSpacing Example/VB/sourcevb.aspx#1)]  
+  
+ [!code-aspx-csharp[CalendarCellPadding#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarCellPadding/CS/calendarcellpaddingcs.aspx#1)]
+ [!code-aspx-vb[CalendarCellPadding#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarCellPadding/VB/calendarcellpaddingvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der angegebene Zellenabstand ist kleiner als -1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateControlCollection">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.ControlCollection CreateControlCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.ControlCollection CreateControlCollection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Calendar.CreateControlCollection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Auflistung zum Speichern untergeordneter Steuerelemente.</summary>
+        <returns>Gibt immer eine <see langword="InternalControlCollection" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Calendar.CreateControlCollection%2A> Methode wird hauptsächlich von Steuerelement-Entwickler, die die Funktionalität eines Monatskalender-Steuerelement zu erweitern.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.Calendar.CreateControlCollection%2A> Methode in einem benutzerdefinierten steuern, sodass sie immer eine neue Instanz der zurückgibt der <xref:System.Web.UI.EmptyControlCollection> -Klasse für die <xref:System.Web.UI.WebControls.Calendar> Steuerelement.  
+  
+ [!code-aspx-csharp[CustomCalendarCreateControlCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomCalendarCreateControlCollection/CS/custom_calendar_createcontrolcollectioncs.aspx#1)]
+ [!code-aspx-vb[CustomCalendarCreateControlCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomCalendarCreateControlCollection/VB/custom_calendar_createcontrolcollectionvb.aspx#1)]  
+  
+ [!code-csharp[CustomCalendarCreateControlCollection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomCalendarCreateControlCollection/CS/custom_calendar_createcontrolcollection.cs#2)]
+ [!code-vb[CustomCalendarCreateControlCollection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomCalendarCreateControlCollection/VB/custom_calendar_createcontrolcollection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DayHeaderStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.TableItemStyle DayHeaderStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.TableItemStyle DayHeaderStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Calendar.DayHeaderStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableItemStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Stileigenschaften für den Abschnitt, der den Tag der Woche anzeigt.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.TableItemStyle" /> , enthält die Stileigenschaften für den Abschnitt, den Tag der Woche anzeigt. Der Standardwert ist eine leere <see cref="T:System.Web.UI.WebControls.TableItemStyle" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um den Stil für den Abschnitt anzugeben, die die Tage der Woche anzeigt. Weitere Informationen zu den anderen Stil-Eigenschaften, die kontrolliert werden kann, finden Sie unter <xref:System.Web.UI.WebControls.TableItemStyle>.  
+  
+> [!NOTE]
+>  Das Namensformat für die Tage der Woche wird gesteuert, indem die <xref:System.Web.UI.WebControls.Calendar.DayNameFormat%2A> Eigenschaft.  
+  
+ Diese Eigenschaft wird nur angewendet, wenn die <xref:System.Web.UI.WebControls.Calendar.ShowDayHeader%2A>-Eigenschaft auf `true` festgelegt ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Calendar.DayHeaderStyle%2A> -Eigenschaft fett formatierter Schrift für den Abschnitt an, die die Tage der Woche anzeigt.  
+  
+ [!code-aspx-csharp[Classic Calendar.DayHeaderStyle Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Calendar.DayHeaderStyle Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Calendar.DayHeaderStyle Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Calendar.DayHeaderStyle Example/VB/sourcevb.aspx#1)]  
+  
+ [!code-aspx-csharp[CalendarDayHeaderStyle#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarDayHeaderStyle/CS/calendardayheaderstylecs.aspx#1)]
+ [!code-aspx-vb[CalendarDayHeaderStyle#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarDayHeaderStyle/VB/calendardayheaderstylevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DayNameFormat">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.DayNameFormat DayNameFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.DayNameFormat DayNameFormat" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Calendar.DayNameFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DayNameFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Namensformat für die Wochentage fest.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.DayNameFormat" />-Werte. Der Standardwert ist <see langword="Short" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Calendar.DayNameFormat%2A> Eigenschaft, um das Namensformat für die Wochentage anzugeben. Diese Eigenschaft wird festgelegt, mit einem der <xref:System.Web.UI.WebControls.DayNameFormat> Enumerationswerte. Sie können angeben, ob als den vollständigen Namen der Wochentage angezeigt werden, kurz (Kurzname), die ersten Buchstaben des Tages oder die ersten beiden Buchstaben des Tages.  
+  
+ Diese Eigenschaft gilt nur, wenn die <xref:System.Web.UI.WebControls.Calendar.ShowDayHeader%2A> -Eigenschaftensatz auf `true`.  
+  
+ Die Tagesnamen basieren auf den lokalen servereinstellungen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Calendar.DayNameFormat%2A> Eigenschaft, um anzugeben, dass die Wochentage vollständig angezeigt werden.  
+  
+ [!code-aspx-csharp[Classic Calendar.DayNameFormat Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Calendar.DayNameFormat Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Calendar.DayNameFormat Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Calendar.DayNameFormat Example/VB/sourcevb.aspx#1)]  
+  
+ [!code-aspx-csharp[CalendarDayNameFormat#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarDayNameFormat/CS/calendardaynameformatcs.aspx#1)]
+ [!code-aspx-vb[CalendarDayNameFormat#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarDayNameFormat/VB/calendardaynameformatvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Das Format des angegebenen Tag ist nicht die <see cref="T:System.Web.UI.WebControls.DayNameFormat" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DayRender">
+      <MemberSignature Language="C#" Value="public event System.Web.UI.WebControls.DayRenderEventHandler DayRender;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.UI.WebControls.DayRenderEventHandler DayRender" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.Calendar.DayRender" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DayRenderEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn in der Steuerelementhierarchie für jeden Tag erstellt wird die <see cref="T:System.Web.UI.WebControls.Calendar" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn in der Steuerelementhierarchie für jeden Tag erstellt wird die <xref:System.Web.UI.WebControls.Calendar> Steuerelement.  
+  
+ Obwohl die Datenbindung nicht unterstützt wird die <xref:System.Web.UI.WebControls.Calendar> -Steuerelement, ist es möglich, zum Ändern des Inhalts und der einzelnen Datumszellen formatieren. Bevor Sie die <xref:System.Web.UI.WebControls.Calendar> Steuerelement auf der Webseite angezeigt wird, erstellt und assembliert die Komponenten, aus denen das Steuerelement besteht. Die <xref:System.Web.UI.WebControls.Calendar.DayRender> Ereignis wird ausgelöst, wenn jedes Datum Zelle der <xref:System.Web.UI.WebControls.Calendar> Steuerelement erstellt wird. Sie können steuern, den Inhalt und die Formatierung der Datumszelle, wenn es erstellt wird, indem Sie Code im Ereignishandler für das <xref:System.Web.UI.WebControls.Calendar.DayRender> Ereignis. Weitere Informationen zum Anpassen des Inhalts einer Zelle Date, finden Sie unter <xref:System.Web.UI.WebControls.Calendar.OnDayRender%2A>.  
+  
+> [!NOTE]
+>  Da die <xref:System.Web.UI.WebControls.Calendar.DayRender> Ereignis wird ausgelöst, während die <xref:System.Web.UI.WebControls.Calendar> Steuerelement gerendert wird, können Sie ein Steuerelement, das ebenfalls ein Ereignis, wie z. B. auslösen kann hinzufügen <xref:System.Web.UI.WebControls.LinkButton>. Sie können nur statische Steuerelemente hinzufügen, wie z. B. <xref:System.Web.UI.LiteralControl?displayProperty=nameWithType>, <xref:System.Web.UI.WebControls.Label>, <xref:System.Web.UI.WebControls.Image>, und <xref:System.Web.UI.WebControls.HyperLink>.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie angegeben und code für die <xref:System.Web.UI.WebControls.Calendar.DayRender> Ereignis, um den Hintergrund für die Tage im Monat angezeigten gelber Farbe zu gestalten. Außerdem wird veranschaulicht, wie auf den Inhalt einer Zelle anpassen, durch Hinzufügen einer <xref:System.Web.UI.LiteralControl?displayProperty=nameWithType> Steuerelement auf die Zelle.  
+  
+ [!code-aspx-csharp[Classic Calendar.DayRender Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Calendar.DayRender Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Calendar.DayRender Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Calendar.DayRender Example/VB/sourcevb.aspx#1)]  
+  
+ [!code-aspx-csharp[CalendarDayRender#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarDayRender/CS/calendardayrendercs.aspx#1)]
+ [!code-aspx-vb[CalendarDayRender#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarDayRender/VB/calendardayrendervb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DayStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.TableItemStyle DayStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.TableItemStyle DayStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Calendar.DayStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableItemStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Stileigenschaften für die Tage im Monat angezeigt.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.TableItemStyle" /> , enthält die Stileigenschaften für die Tage im Monat angezeigt. Der Standardwert ist eine leere <see cref="T:System.Web.UI.WebControls.TableItemStyle" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft den Stil für die Tage im angezeigten Monat an.  
+  
+> [!NOTE]
+>  Wenn Sie einen anderen Stil für das ausgewählte Datum, Wochenenden, Datumsangaben nicht im aktuell angezeigten Monat oder des heutigen Datums nicht angeben, diese Datumsangaben angezeigt mit dem angegeben wird, indem Sie die <xref:System.Web.UI.WebControls.Calendar.DayStyle%2A> Eigenschaft. Verwenden der <xref:System.Web.UI.WebControls.Calendar.SelectedDayStyle%2A>, <xref:System.Web.UI.WebControls.Calendar.WeekendDayStyle%2A>, <xref:System.Web.UI.WebControls.Calendar.OtherMonthDayStyle%2A>, und <xref:System.Web.UI.WebControls.Calendar.TodayDayStyle%2A> Eigenschaften zur Angabe der alternativen Stile für diese Datumsangaben.  
+  
+ Weitere Informationen zu den anderen Stil-Eigenschaften, die kontrolliert werden kann, finden Sie unter <xref:System.Web.UI.WebControls.TableItemStyle>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Calendar.DayStyle%2A> Eigenschaft, um anzugeben, dass der Tage im Monat aktuell angezeigte in grau dargestellt werden.  
+  
+ [!code-aspx-csharp[Classic Calendar.DayStyle Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Calendar.DayStyle Example/CS/sourcecs.aspx#1)]
+ [!code-xml[Classic Calendar.DayStyle Example#1](~/samples/snippets/common/VS_Snippets_WebNet/Classic Calendar.DayStyle Example/Common/source.xml#1)]  
+  
+ [!code-aspx-csharp[CalendarDayStyle#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarDayStyle/CS/calendardaystylecs.aspx#1)]
+ [!code-aspx-vb[CalendarDayStyle#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarDayStyle/VB/calendardaystylevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstDayOfWeek">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.FirstDayOfWeek FirstDayOfWeek { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.FirstDayOfWeek FirstDayOfWeek" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Calendar.FirstDayOfWeek" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FirstDayOfWeek</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Tag der Woche in der ersten Tagesspalte des anzuzeigenden der <see cref="T:System.Web.UI.WebControls.Calendar" /> Steuerelement.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.FirstDayOfWeek" />-Werte. Die Standardeinstellung ist <see langword="Default" />, was bedeutet, dass der in die Einstellung für das angegebene Tag verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Calendar.FirstDayOfWeek%2A> -Eigenschaft an den Tag der Woche in der ersten Tagesspalte des anzuzeigenden der <xref:System.Web.UI.WebControls.Calendar> Steuerelement. Diese Eigenschaft wird festgelegt, mit einem der <xref:System.Web.UI.WebControls.FirstDayOfWeek> Enumerationswerte. Sie können einem beliebigen Tag der Woche angeben oder `FirstDayOfWeek.Default`, was bedeutet, dass das Datum, die von den Systemeinstellungen bestimmt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Calendar.FirstDayOfWeek%2A> die ersten Spalte der Tag Montag festzulegende Eigenschaft.  
+  
+ [!code-aspx-csharp[Classic Calendar.FirstDayOfWeek Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Calendar.FirstDayOfWeek Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Calendar.FirstDayOfWeek Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Calendar.FirstDayOfWeek Example/VB/sourcevb.aspx#1)]  
+  
+ [!code-aspx-csharp[CalendarFirstDayOfWeek#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarFirstDayOfWeek/CS/calendarfirstdayofweekcs.aspx#1)]
+ [!code-aspx-vb[CalendarFirstDayOfWeek#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarFirstDayOfWeek/VB/calendarfirstdayofweekvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Das angegebene Datum ist nicht die <see cref="T:System.Web.UI.WebControls.FirstDayOfWeek" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HasWeekSelectors">
+      <MemberSignature Language="C#" Value="protected bool HasWeekSelectors (System.Web.UI.WebControls.CalendarSelectionMode selectionMode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool HasWeekSelectors(valuetype System.Web.UI.WebControls.CalendarSelectionMode selectionMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Calendar.HasWeekSelectors(System.Web.UI.WebControls.CalendarSelectionMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="selectionMode" Type="System.Web.UI.WebControls.CalendarSelectionMode" />
+      </Parameters>
+      <Docs>
+        <param name="selectionMode">Einer der <see cref="T:System.Web.UI.WebControls.CalendarSelectionMode" />-Werte.</param>
+        <summary>Bestimmt, ob ein <see cref="T:System.Web.UI.WebControls.CalendarSelectionMode" /> Objekt enthält die Wochenselektoren.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Web.UI.WebControls.CalendarSelectionMode" /> Wochenselektoren enthält, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.CalendarSelectionMode> Werte `DayWeek` und `DayWeekMonth` beide Wochenselektoren enthalten.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Bestimmen des Werts, der die <xref:System.Web.UI.WebControls.Calendar.HasWeekSelectors%2A> Eigenschaft in einem benutzerdefinierten <xref:System.Web.UI.WebControls.Calendar> Steuerelement.  
+  
+ [!code-aspx-csharp[CustomCalendarHasWeekSelectors#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomCalendarHasWeekSelectors/CS/custom_calendar_hasweekselectorscs.aspx#1)]
+ [!code-aspx-vb[CustomCalendarHasWeekSelectors#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomCalendarHasWeekSelectors/VB/custom_calendar_hasweekselectorsvb.aspx#1)]  
+  
+ [!code-csharp[CustomCalendarHasWeekSelectors#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomCalendarHasWeekSelectors/CS/custom_calendar_hasweekselectors.cs#2)]
+ [!code-vb[CustomCalendarHasWeekSelectors#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomCalendarHasWeekSelectors/VB/custom_calendar_hasweekselectors.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected override void LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Calendar.LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Ein <see cref="T:System.Object" /> , der den gespeicherten Zustand des enthält die <see cref="T:System.Web.UI.WebControls.Calendar" />.</param>
+        <summary>Lädt einen gespeicherten Zustand, der die <see cref="T:System.Web.UI.WebControls.Calendar" /> Steuerelement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextMonthText">
+      <MemberSignature Language="C#" Value="public string NextMonthText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NextMonthText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Calendar.NextMonthText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("&amp;gt;")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text für den nächsten Monat Navigationssteuerelement angezeigt.</summary>
+        <value>Der Beschriftungstext für den nächsten Monat Navigationssteuerelement. Der Standardwert ist <see langword="&quot;&amp;gt;&quot;" />, die als das größer-als-Zeichen gerendert wird (&gt;).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Calendar.NextMonthText%2A> Eigenschaft, um benutzerdefinierten Text für den nächsten Monat Navigationssteuerelement bereitstellen. Diese Eigenschaft dient häufig zusammen mit der <xref:System.Web.UI.WebControls.Calendar.PrevMonthText%2A> Eigenschaft, um einen benutzerdefinierten Satz von Navigationssteuerelemente bereitzustellen.  
+  
+> [!NOTE]
+>  Diese Eigenschaft wird nicht automatisch als HTML-Codierung. Wenn das Zeichen als HTML behandelt werden sollen, müssen Sie Sonderzeichen in den entsprechenden HTML-Wert zu konvertieren. Beispielsweise anzuzeigenden explizit das größer-als-Zeichen (>), müssen Sie den Wert verwenden `&gt;`.  
+  
+ Da diese Eigenschaft nicht automatisch auf HTML codiert ist, es ist möglich, geben Sie eine HTML-Tags für die <xref:System.Web.UI.WebControls.Calendar.NextMonthText%2A> Eigenschaft. Z. B., wenn Sie ein Bild für den nächsten Monat Navigationssteuerelement anzeigen möchten, Sie können diese Eigenschaft auf einen Ausdruck festgelegt, die enthält ein `<img>` Element.  
+  
+ Diese Eigenschaft gilt nur, wenn die <xref:System.Web.UI.WebControls.Calendar.ShowNextPrevMonth%2A> -Eigenschaftensatz auf `true`.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [ASP.NET-Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Calendar.NextMonthText%2A> Eigenschaft, um benutzerdefinierten Text für das Navigationssteuerelement in den nächsten Monat anzugeben.  
+  
+ [!code-aspx-csharp[Classic Calendar.NextMonthText Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Calendar.NextMonthText Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Calendar.NextMonthText Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Calendar.NextMonthText Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextPrevFormat">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.NextPrevFormat NextPrevFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.NextPrevFormat NextPrevFormat" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Calendar.NextPrevFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.NextPrevFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Format des vorherigen und nächsten Monats Navigationselementen im Titelabschnitt, der die <see cref="T:System.Web.UI.WebControls.Calendar" /> Steuerelement.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.NextPrevFormat" />-Werte. Der Standardwert ist <see langword="CustomText" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Calendar.NextPrevFormat%2A> -Eigenschaft auf das Format für die vorherigen und nächsten Monat Navigationselementen an die <xref:System.Web.UI.WebControls.Calendar> Steuerelement. Diese Eigenschaft wird festgelegt, mit einem der <xref:System.Web.UI.WebControls.NextPrevFormat> Enumerationswerte. Sie können angeben, ob der Text für die Navigationssteuerelemente als den vollständigen Monatsnamen, die kurze (abgekürzte) Monatsnamen oder benutzerdefinierten Text angezeigt wird.  
+  
+ Um benutzerdefinierte Navigationstext anzugeben, legen Sie diese Eigenschaft auf `NextPrevFormat.CustomText` und legen Sie die <xref:System.Web.UI.WebControls.Calendar.NextMonthText%2A> und <xref:System.Web.UI.WebControls.Calendar.PrevMonthText%2A> Eigenschaften auf den benutzerdefinierten Text.  
+  
+ Diese Eigenschaft gilt nur, wenn die <xref:System.Web.UI.WebControls.Calendar.ShowNextPrevMonth%2A> -Eigenschaftensatz auf `true`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Calendar.NextPrevFormat%2A> Eigenschaft, um das monatskurzname-Format für die Navigationssteuerelemente anzugeben.  
+  
+ [!code-aspx-csharp[Classic Calendar.NextPrevFormat Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Calendar.NextPrevFormat Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Calendar.NextPrevFormat Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Calendar.NextPrevFormat Example/VB/sourcevb.aspx#1)]  
+  
+ [!code-aspx-csharp[CalendarNextPrevFormat#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarNextPrevFormat/CS/calendarnextprevformatcs.aspx#1)]
+ [!code-aspx-vb[CalendarNextPrevFormat#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarNextPrevFormat/VB/calendarnextprevformatvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Das angegebene Format ist nicht die <see cref="T:System.Web.UI.WebControls.NextPrevFormat" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NextPrevStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.TableItemStyle NextPrevStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.TableItemStyle NextPrevStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Calendar.NextPrevStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableItemStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Stileigenschaften für den nächsten und vorhergehenden Monat Navigationselementen ab.</summary>
+        <value>Die Stileigenschaften für den nächsten und vorherigen Monat Navigationselementen. Der Standardwert ist eine leere <see cref="T:System.Web.UI.WebControls.TableItemStyle" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um den Stil für die vorherigen und nächsten Monat Navigationselementen anzugeben. Weitere Informationen zu den anderen Stil-Eigenschaften, die kontrolliert werden kann, finden Sie unter <xref:System.Web.UI.WebControls.TableItemStyle>.  
+  
+ Diese Eigenschaft gilt nur, wenn die <xref:System.Web.UI.WebControls.Calendar.ShowNextPrevMonth%2A> -Eigenschaftensatz auf `true`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Calendar.NextPrevStyle%2A> steuert die-Eigenschaft blauer Text für den nächsten Monat und die Navigation zum vorherigen Monat an.  
+  
+ [!code-aspx-csharp[Classic Calendar.NextPrevStyle Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Calendar.NextPrevStyle Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Calendar.NextPrevStyle Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Calendar.NextPrevStyle Example/VB/sourcevb.aspx#1)]  
+  
+ [!code-aspx-csharp[CalendarNextPrevStyle#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarNextPrevStyle/CS/calendarnextprevstylecs.aspx#1)]
+ [!code-aspx-vb[CalendarNextPrevStyle#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarNextPrevStyle/VB/calendarnextprevstylevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDayRender">
+      <MemberSignature Language="C#" Value="protected virtual void OnDayRender (System.Web.UI.WebControls.TableCell cell, System.Web.UI.WebControls.CalendarDay day);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDayRender(class System.Web.UI.WebControls.TableCell cell, class System.Web.UI.WebControls.CalendarDay day) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Calendar.OnDayRender(System.Web.UI.WebControls.TableCell,System.Web.UI.WebControls.CalendarDay)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cell" Type="System.Web.UI.WebControls.TableCell" />
+        <Parameter Name="day" Type="System.Web.UI.WebControls.CalendarDay" />
+      </Parameters>
+      <Docs>
+        <param name="cell">Ein <see cref="T:System.Web.UI.WebControls.TableCell" /> , Informationen über die zu rendernden Zelle enthält.</param>
+        <param name="day">Ein <see cref="T:System.Web.UI.WebControls.CalendarDay" /> enthält Informationen über den Tag zu rendern.</param>
+        <summary>Löst die <see cref="E:System.Web.UI.WebControls.Calendar.DayRender" /> -Ereignis für die <see cref="T:System.Web.UI.WebControls.Calendar" /> steuern und ermöglicht Ihnen, senden einen benutzerdefinierten Handler für das <see cref="E:System.Web.UI.WebControls.Calendar.DayRender" /> Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Obwohl die Datenbindung nicht unterstützt wird die <xref:System.Web.UI.WebControls.Calendar> -Steuerelement, ist es möglich, zum Ändern des Inhalts und der einzelnen Datumszellen formatieren. Bevor Sie die <xref:System.Web.UI.WebControls.Calendar> Steuerelement auf der Webseite angezeigt wird, erstellt und assembliert die Komponenten, aus denen das Steuerelement besteht. Die <xref:System.Web.UI.WebControls.Calendar.DayRender> Ereignis wird ausgelöst, wenn jedes Datum Zelle der <xref:System.Web.UI.WebControls.Calendar> Steuerelement erstellt wird. Sie können steuern, den Inhalt und die Formatierung der Datumszelle, wenn es erstellt wird, indem Sie Code im Ereignishandler für das <xref:System.Web.UI.WebControls.Calendar.DayRender> Ereignis.  
+  
+ Der Ereignishandler empfängt ein <xref:System.Web.UI.WebControls.DayRenderEventArgs> -Objekt, das Ereignisdaten enthält. Die <xref:System.Web.UI.WebControls.DayRenderEventArgs> Objekt enthält zwei Eigenschaften, die Sie verwenden können, um das Format der Datumszelle programmgesteuert zu steuern. Die <xref:System.Web.UI.WebControls.DayRenderEventArgs.Cell%2A> Eigenschaft stellt die Zelle gerendert wird, während er sich die <xref:System.Web.UI.WebControls.DayRenderEventArgs.Day%2A> Eigenschaft darstellt, das Datum in der Zelle gerendert werden soll.  
+  
+ Sie können auch den Inhalt einer Zelle anpassen, indem dynamisch hinzufügen von Steuerelementen zu den <xref:System.Web.UI.Control.Controls%2A?displayProperty=nameWithType> Auflistung von der <xref:System.Web.UI.WebControls.DayRenderEventArgs.Cell%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Da die <xref:System.Web.UI.WebControls.Calendar.DayRender> Ereignis wird ausgelöst, während die <xref:System.Web.UI.WebControls.Calendar> Steuerelement gerendert wird, können Sie ein Steuerelement, das ebenfalls ein Ereignis, wie z. B. auslösen kann hinzufügen <xref:System.Web.UI.WebControls.LinkButton>. Sie können nur statische Steuerelemente hinzufügen, wie z. B. <xref:System.Web.UI.LiteralControl?displayProperty=nameWithType>, <xref:System.Web.UI.WebControls.Label>, <xref:System.Web.UI.WebControls.Image>, und <xref:System.Web.UI.WebControls.HyperLink>.  
+  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+ Mit der <xref:System.Web.UI.WebControls.Calendar.OnDayRender%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie angegeben und code für die <xref:System.Web.UI.WebControls.Calendar.DayRender> Ereignis, um den Hintergrund für die Tage im Monat angezeigten gelber Farbe zu gestalten. Außerdem wird veranschaulicht, wie auf den Inhalt einer Zelle anpassen, durch Hinzufügen einer <xref:System.Web.UI.LiteralControl?displayProperty=nameWithType> Steuerelement auf die Zelle.  
+  
+ [!code-aspx-csharp[Classic Calendar.DayRender Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Calendar.DayRender Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Calendar.DayRender Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Calendar.DayRender Example/VB/sourcevb.aspx#1)]  
+  
+ [!code-aspx-csharp[CalendarDayRender#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarDayRender/CS/calendardayrendercs.aspx#1)]
+ [!code-aspx-vb[CalendarDayRender#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarDayRender/VB/calendardayrendervb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Web.UI.WebControls.Calendar.OnDayRender(System.Web.UI.WebControls.TableCell,System.Web.UI.WebControls.CalendarDay)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Web.UI.WebControls.Calendar.OnDayRender(System.Web.UI.WebControls.TableCell,System.Web.UI.WebControls.CalendarDay)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Calendar.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.PreRender" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.Web.UI.WebControls.Calendar.OnPreRender%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.Calendar.OnPreRender%2A> Methode, sodass die It stets einen Rahmen für die drei Punkte in einem benutzerdefinierten angezeigt <xref:System.Web.UI.WebControls.Calendar> Serversteuerelement.  
+  
+ [!code-aspx-csharp[CustomCalendarOnPreRender#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomCalendarOnPreRender/CS/custom_calendar_onprerendercs.aspx#1)]
+ [!code-aspx-vb[CustomCalendarOnPreRender#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomCalendarOnPreRender/VB/custom_calendar_onprerendervb.aspx#1)]  
+  
+ [!code-csharp[CustomCalendarOnPreRender#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomCalendarOnPreRender/CS/custom_calendar_onprerender.cs#2)]
+ [!code-vb[CustomCalendarOnPreRender#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomCalendarOnPreRender/VB/custom_calendar_onprerender.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Web.UI.WebControls.Calendar.OnPreRender(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Web.UI.Control.OnPreRender(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelectionChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnSelectionChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSelectionChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Calendar.OnSelectionChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löst die <see cref="E:System.Web.UI.WebControls.Calendar.SelectionChanged" /> -Ereignis für die <see cref="T:System.Web.UI.WebControls.Calendar" /> steuern und ermöglicht Ihnen, senden einen benutzerdefinierten Handler für das <see cref="E:System.Web.UI.WebControls.Calendar.SelectionChanged" /> Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Calendar.SelectionChanged> Ereignis wird ausgelöst, wenn der Benutzer einen Tag, Woche oder einen gesamten Monat auswählt, indem Sie auf die Steuerelemente des Selektor.  
+  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+ Mit der <xref:System.Web.UI.WebControls.Calendar.OnSelectionChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie angegeben und code für die <xref:System.Web.UI.WebControls.Calendar.SelectionChanged> Ereignis, um die Anzahl der in der ausgewählten Elemente anzeigen die <xref:System.Web.UI.WebControls.Calendar> Steuerelement.  
+  
+ [!code-aspx-csharp[CalendarSelectionChanged#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarSelectionChanged/CS/calendarselectionchangedcs.aspx#1)]
+ [!code-aspx-vb[CalendarSelectionChanged#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarSelectionChanged/VB/calendarselectionchangedvb.aspx#1)]  
+  
+ [!code-aspx-csharp[CalendarSelectionChanged2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarSelectionChanged2/CS/calendarselectionchanged2cs.aspx#1)]
+ [!code-aspx-vb[CalendarSelectionChanged2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarSelectionChanged2/VB/calendarselectionchanged2vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Web.UI.WebControls.Calendar.OnSelectionChanged" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Web.UI.WebControls.Calendar.OnSelectionChanged" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnVisibleMonthChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnVisibleMonthChanged (DateTime newDate, DateTime previousDate);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnVisibleMonthChanged(valuetype System.DateTime newDate, valuetype System.DateTime previousDate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Calendar.OnVisibleMonthChanged(System.DateTime,System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newDate" Type="System.DateTime" />
+        <Parameter Name="previousDate" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="newDate">Ein <see cref="T:System.DateTime" /> , die den Monat derzeit in stellt das <see cref="T:System.Web.UI.WebControls.Calendar" />.</param>
+        <param name="previousDate">Ein <see cref="T:System.DateTime" /> , die den vorhergehenden Monat angezeigt, indem darstellt der <see cref="T:System.Web.UI.WebControls.Calendar" />.</param>
+        <summary>Löst die <see cref="E:System.Web.UI.WebControls.Calendar.VisibleMonthChanged" /> -Ereignis für die <see cref="T:System.Web.UI.WebControls.Calendar" /> steuern und ermöglicht Ihnen, senden einen benutzerdefinierten Handler für das <see cref="E:System.Web.UI.WebControls.Calendar.VisibleMonthChanged" /> Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Calendar.VisibleMonthChanged> Ereignis wird ausgelöst, wenn der Benutzer den nächsten oder vorherigen Monat Navigationselementen im Abschnitt "Titel" klickt.  
+  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+ Mit der <xref:System.Web.UI.WebControls.Calendar.OnVisibleMonthChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie angegeben und code für die <xref:System.Web.UI.WebControls.Calendar.VisibleMonthChanged> Ereignis, um anzuzeigen, ob die <xref:System.Web.UI.WebControls.Calendar> einen Monat vorwärts oder rückwärts verschoben wurde.  
+  
+ [!code-aspx-csharp[CalendarVisibleMonthChanged#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarVisibleMonthChanged/CS/calendarvisiblemonthchangedcs.aspx#1)]
+ [!code-aspx-vb[CalendarVisibleMonthChanged#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarVisibleMonthChanged/VB/calendarvisiblemonthchangedvb.aspx#1)]  
+  
+ [!code-aspx-csharp[CalendarVisibleMonthChanged#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarVisibleMonthChanged/CS/calendarvisiblemonthchangedcs.aspx#1)]
+ [!code-aspx-vb[CalendarVisibleMonthChanged#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarVisibleMonthChanged/VB/calendarvisiblemonthchangedvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Web.UI.WebControls.Calendar.OnVisibleMonthChanged(System.DateTime,System.DateTime)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Web.UI.WebControls.Calendar.OnVisibleMonthChanged(System.DateTime,System.DateTime)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OtherMonthDayStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.TableItemStyle OtherMonthDayStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.TableItemStyle OtherMonthDayStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Calendar.OtherMonthDayStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableItemStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Stileigenschaften für die Tage für die <see cref="T:System.Web.UI.WebControls.Calendar" /> Steuerelement, das in den angezeigten Monat nicht enthalten sind.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.TableItemStyle" /> , enthält die Stileigenschaften für die Tage, für die <see cref="T:System.Web.UI.WebControls.Calendar" /> Steuerelement, das in den angezeigten Monat nicht enthalten sind. Der Standardwert ist eine leere <see cref="T:System.Web.UI.WebControls.TableItemStyle" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft den Stil für die Tage an, auf die <xref:System.Web.UI.WebControls.Calendar> Steuerelement, das in den angezeigten Monat nicht enthalten sind. Wenn die <xref:System.Web.UI.WebControls.Calendar.OtherMonthDayStyle%2A> Eigenschaft nicht festgelegt ist, der Stil angegeben der <xref:System.Web.UI.WebControls.Calendar.DayStyle%2A> Eigenschaft wird verwendet.  
+  
+ Weitere Informationen zu den anderen Stil-Eigenschaften, die kontrolliert werden kann, finden Sie unter <xref:System.Web.UI.WebControls.TableItemStyle>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Calendar.OtherMonthDayStyle%2A> Eigenschaft, um eine hellgraue Vordergrundfarbe für die Tage anzugeben, auf die <xref:System.Web.UI.WebControls.Calendar> Steuerelement, das nicht in den derzeit angezeigten Monat sind.  
+  
+ [!code-aspx-csharp[CalendarOtherMonthDayStyle#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarOtherMonthDayStyle/CS/calendarothermonthdaystylecs.aspx#1)]
+ [!code-aspx-vb[CalendarOtherMonthDayStyle#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarOtherMonthDayStyle/VB/calendarothermonthdaystylevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrevMonthText">
+      <MemberSignature Language="C#" Value="public string PrevMonthText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PrevMonthText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Calendar.PrevMonthText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("&amp;lt;")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text für die vorhergehenden Monat Navigationssteuerelement angezeigt.</summary>
+        <value>Der Beschriftungstext für den vorherigen Monat Navigationssteuerelement. Der Standardwert ist <see langword="&quot;&amp;lt;&quot;" />, die als das kleiner-als-Zeichen gerendert wird (&lt;).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Calendar.PrevMonthText%2A> Eigenschaft, um benutzerdefinierten Text für die vorhergehenden Monat Navigationssteuerelement bereitstellen. Diese Eigenschaft dient häufig zusammen mit der <xref:System.Web.UI.WebControls.Calendar.NextMonthText%2A> Eigenschaft, um einen benutzerdefinierten Satz von Navigationssteuerelemente bereitzustellen.  
+  
+> [!NOTE]
+>  Diese Eigenschaft wird nicht automatisch als HTML-Codierung. Wenn das Zeichen als HTML behandelt werden sollen, müssen Sie Sonderzeichen in den entsprechenden HTML-Wert zu konvertieren. Beispielsweise anzuzeigenden explizit das größer-als-Zeichen (>), müssen Sie den Wert verwenden `&gt;`.  
+  
+ Da diese Eigenschaft nicht automatisch auf HTML codiert ist, es ist möglich, geben Sie eine HTML-Tags für die <xref:System.Web.UI.WebControls.Calendar.PrevMonthText%2A> Eigenschaft. Z. B., wenn Sie ein Bild für den nächsten Monat Navigationssteuerelement anzeigen möchten, Sie können diese Eigenschaft auf einen Ausdruck festgelegt, die enthält ein `<img>` Element.  
+  
+ Diese Eigenschaft gilt nur, wenn die <xref:System.Web.UI.WebControls.Calendar.ShowNextPrevMonth%2A> -Eigenschaftensatz auf `true`.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [ASP.NET-Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Calendar.PrevMonthText%2A> Eigenschaft, um benutzerdefinierten Text für die vorhergehenden Monat Navigationssteuerelement anzugeben.  
+  
+ [!code-aspx-csharp[Classic Calendar.NextMonthText Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Calendar.NextMonthText Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Calendar.NextMonthText Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Calendar.NextMonthText Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="protected virtual void RaisePostBackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RaisePostBackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Calendar.RaisePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">Ein <see cref="T:System.String" />, der das an den Ereignishandler übergebene Ereignisargument darstellt.</param>
+        <summary>Löst ein Ereignis für die <see cref="T:System.Web.UI.WebControls.Calendar" /> steuern, wenn es an den Server zurückgesendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird intern von verwendet die <xref:System.Web.UI.WebControls.Calendar> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Calendar.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Web.UI.HtmlTextWriter" />, der den Ausgabestream für das Rendering auf dem Client enthält.</param>
+        <summary>Zeigt das <see cref="T:System.Web.UI.WebControls.Calendar" />-Steuerelement auf dem Client an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.Calendar.Render%2A> -Methode in ein benutzerdefiniertes Steuerelement, damit die <xref:System.Web.UI.WebControls.Calendar> immer ein Bild anzeigt.  
+  
+ [!code-aspx-csharp[CustomCalendarRender#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomCalendarRender/CS/custom_calendar_rendercs.aspx#1)]
+ [!code-aspx-vb[CustomCalendarRender#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomCalendarRender/VB/custom_calendar_rendervb.aspx#1)]  
+  
+ [!code-csharp[CustomCalendarRender#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomCalendarRender/CS/custom_calendar_render.cs#2)]
+ [!code-vb[CustomCalendarRender#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomCalendarRender/VB/custom_calendar_render.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveViewState">
+      <MemberSignature Language="C#" Value="protected override object SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Calendar.SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert den Zustand der <see cref="T:System.Web.UI.WebControls.Calendar" /> Steuerelement.</summary>
+        <returns>Ein Objekt, das den gespeicherten Zustand enthält die <see cref="T:System.Web.UI.WebControls.Calendar" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedDate">
+      <MemberSignature Language="C#" Value="public DateTime SelectedDate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime SelectedDate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Calendar.SelectedDate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true, System.ComponentModel.BindingDirection.TwoWay)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.DateTime), "1/1/0001")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das ausgewählte Datum fest.</summary>
+        <value>Ein <see cref="T:System.DateTime" /> , die das ausgewählte Datum darstellt. Der Standardwert ist <see cref="F:System.DateTime.MinValue" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Calendar.SelectedDate%2A> Eigenschaft, um das ausgewählte Datum zu bestimmen, auf die <xref:System.Web.UI.WebControls.Calendar> Steuerelement.  
+  
+ Die <xref:System.Web.UI.WebControls.Calendar.SelectedDate%2A> Eigenschaft und die <xref:System.Web.UI.WebControls.Calendar.SelectedDates%2A> Auflistung sind eng miteinander verknüpft. Wenn die <xref:System.Web.UI.WebControls.Calendar.SelectionMode%2A> -Eigenschaftensatz auf `CalendarSelectionMode.Day`, Modus nur eine einzelnen Datumsauswahl bietet <xref:System.Web.UI.WebControls.Calendar.SelectedDate%2A> und `SelectedDates[0]` denselben Wert haben und `SelectedDates.Count` gleich 1 ist. Wenn die <xref:System.Web.UI.WebControls.Calendar.SelectionMode%2A> -Eigenschaftensatz auf `CalendarSelectionMode.DayWeek` oder `CalendarSelectionMode.DayWeekMonth`, Modi, die Datums-, Mehrfachauswahl <xref:System.Web.UI.WebControls.Calendar.SelectedDate%2A> und `SelectedDates[0]` denselben Wert haben.  
+  
+ Die <xref:System.Web.UI.WebControls.Calendar.SelectedDate%2A> Eigenschaftensatz wird mithilfe einer <xref:System.DateTime?displayProperty=nameWithType> Objekt.  
+  
+ Wenn der Benutzer wählt ein Datum auf der <xref:System.Web.UI.WebControls.Calendar> -Steuerelement, das <xref:System.Web.UI.WebControls.Calendar.SelectionChanged> Ereignis wird ausgelöst. Die <xref:System.Web.UI.WebControls.Calendar.SelectedDate%2A> Eigenschaft wird auf dem ausgewählten Datum aktualisiert. Die <xref:System.Web.UI.WebControls.Calendar.SelectedDates%2A> Auflistung wird ebenfalls aktualisiert, um nur dieses Datum enthalten.  
+  
+> [!NOTE]
+>  Sowohl die <xref:System.Web.UI.WebControls.Calendar.SelectedDate%2A> Eigenschaft und die <xref:System.Web.UI.WebControls.Calendar.SelectedDates%2A> Auflistung aktualisiert werden, bevor die <xref:System.Web.UI.WebControls.Calendar.SelectionChanged> Ereignis wird ausgelöst. Sie können die Datumsauswahl überschreiben, indem Sie mit der <xref:System.Web.UI.WebControls.Calendar.OnSelectionChanged%2A> Ereignishandler manuell festlegen, die <xref:System.Web.UI.WebControls.Calendar.SelectedDate%2A> Eigenschaft. Die <xref:System.Web.UI.WebControls.Calendar.SelectionChanged> Ereignis wird nicht ausgelöst, wenn diese Eigenschaft programmgesteuert festgelegt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Calendar.SelectedDate%2A> Eigenschaft, um das ausgewählte Datum zu bestimmen, auf die <xref:System.Web.UI.WebControls.Calendar> Steuerelement.  
+  
+ [!code-aspx-csharp[Classic Calendar.SelectedDate Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Calendar.SelectedDate Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Calendar.SelectedDate Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Calendar.SelectedDate Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedDates">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.SelectedDatesCollection SelectedDates { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.SelectedDatesCollection SelectedDates" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Calendar.SelectedDates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.SelectedDatesCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von <see cref="T:System.DateTime" /> Objekte, die auf die ausgewählten Datumsangaben darstellen der <see cref="T:System.Web.UI.WebControls.Calendar" /> Steuerelement.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.SelectedDatesCollection" /> , enthält eine Auflistung von <see cref="T:System.DateTime" /> Objekten, die die ausgewählten Datumsangaben darstellen, auf die <see cref="T:System.Web.UI.WebControls.Calendar" />. Der Standardwert ist eine leere <see cref="T:System.Web.UI.WebControls.SelectedDatesCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Calendar.SelectedDates%2A> Auflistung, um zu bestimmen, die derzeit ausgewählten Datumsangaben in der <xref:System.Web.UI.WebControls.Calendar> Steuerelement.  
+  
+ Die <xref:System.Web.UI.WebControls.Calendar.SelectedDate%2A> Eigenschaft und die <xref:System.Web.UI.WebControls.Calendar.SelectedDates%2A> Auflistung sind eng miteinander verknüpft. Wenn die <xref:System.Web.UI.WebControls.Calendar.SelectionMode%2A> -Eigenschaftensatz auf `CalendarSelectionMode.Day`, Modus nur eine einzelnen Datumsauswahl bietet <xref:System.Web.UI.WebControls.Calendar.SelectedDate%2A> und `SelectedDates[0]` denselben Wert haben und `SelectedDates.Count` gleich 1 ist. Wenn die <xref:System.Web.UI.WebControls.Calendar.SelectionMode%2A> -Eigenschaftensatz auf `CalendarSelectionMode.DayWeek` oder `CalendarSelectionMode.DayWeekMonth`, Modi, die Datums-, Mehrfachauswahl <xref:System.Web.UI.WebControls.Calendar.SelectedDate%2A> und `SelectedDates[0]` denselben Wert haben.  
+  
+ Die <xref:System.Web.UI.WebControls.Calendar.SelectedDates%2A> Eigenschaft speichert eine Auflistung von <xref:System.DateTime?displayProperty=nameWithType> Objekte.  
+  
+ Wenn der Benutzer wählt eine Woche oder Monat auf die <xref:System.Web.UI.WebControls.Calendar> -Steuerelement, das <xref:System.Web.UI.WebControls.Calendar.SelectionChanged> Ereignis wird ausgelöst. Die ausgewählten Datumsangaben werden hinzugefügt, um die <xref:System.Web.UI.WebControls.Calendar.SelectedDates%2A> -Auflistung, und Ersetzen Sie dabei den bisherigen Inhalt. Des Bereichs von Datumsangaben werden in aufsteigender Reihenfolge nach Datum sortiert. Die <xref:System.Web.UI.WebControls.Calendar.SelectedDate%2A> Eigenschaft wird ebenfalls aktualisiert, um das erste Datum im enthalten die <xref:System.Web.UI.WebControls.Calendar.SelectedDates%2A> Auflistung.  
+  
+ Sie können auch die <xref:System.Web.UI.WebControls.Calendar.SelectedDates%2A> Auswahl von Datumsangaben programmgesteuert auf diese Auflistung die <xref:System.Web.UI.WebControls.Calendar> Steuerelement. Verwenden der <xref:System.Web.UI.WebControls.SelectedDatesCollection.Add%2A>, <xref:System.Web.UI.WebControls.SelectedDatesCollection.Remove%2A>, <xref:System.Web.UI.WebControls.SelectedDatesCollection.Clear%2A>, und <xref:System.Web.UI.WebControls.SelectedDatesCollection.SelectRange%2A> Methoden, um die ausgewählten Datumsangaben in programmgesteuert zu bearbeiten der <xref:System.Web.UI.WebControls.Calendar.SelectedDates%2A> Auflistung.  
+  
+> [!NOTE]
+>  Sowohl die <xref:System.Web.UI.WebControls.Calendar.SelectedDate%2A> Eigenschaft und die <xref:System.Web.UI.WebControls.Calendar.SelectedDates%2A> Auflistung aktualisiert werden, bevor die <xref:System.Web.UI.WebControls.Calendar.SelectionChanged> Ereignis wird ausgelöst. Sie können die Datumsauswahl überschreiben, indem Sie mit der <xref:System.Web.UI.WebControls.Calendar.OnSelectionChanged%2A> Ereignishandler manuell festlegen, die <xref:System.Web.UI.WebControls.Calendar.SelectedDates%2A> Auflistung. Die <xref:System.Web.UI.WebControls.Calendar.SelectionChanged> Ereignis wird nicht ausgelöst, wenn diese Auflistung programmgesteuert festgelegt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Calendar.SelectedDates%2A> Auflistung, um die ausgewählten Datumsangaben zu bestimmen, auf die <xref:System.Web.UI.WebControls.Calendar> Steuerelement.  
+  
+ [!code-aspx-csharp[Classic Calendar.SelectedDates Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Calendar.SelectedDates Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Calendar.SelectedDates Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Calendar.SelectedDates Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedDayStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.TableItemStyle SelectedDayStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.TableItemStyle SelectedDayStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Calendar.SelectedDayStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableItemStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Stileigenschaften für die ausgewählten Datumsangaben ab.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.TableItemStyle" /> , der die Stileigenschaften für die ausgewählten Datumsangaben enthält. Der Standardwert ist eine leere <see cref="T:System.Web.UI.WebControls.TableItemStyle" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft den Stil für die ausgewählten Datumsangaben an, auf die <xref:System.Web.UI.WebControls.Calendar> Steuerelement. Wenn die <xref:System.Web.UI.WebControls.Calendar.SelectedDayStyle%2A> Eigenschaft nicht festgelegt ist, der Stil angegeben der <xref:System.Web.UI.WebControls.Calendar.DayStyle%2A> Eigenschaft wird verwendet.  
+  
+ Weitere Informationen zu den anderen Stil-Eigenschaften, die kontrolliert werden kann, finden Sie unter <xref:System.Web.UI.WebControls.TableItemStyle>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Calendar.SelectedDayStyle%2A> Eigenschaft, um eine blaue Hintergrundfarbe für die ausgewählten Datumsangaben anzugeben, auf die <xref:System.Web.UI.WebControls.Calendar> Steuerelement.  
+  
+ [!code-aspx-csharp[Classic Calendar.SelectedDayStyle Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Calendar.SelectedDayStyle Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Calendar.SelectedDayStyle Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Calendar.SelectedDayStyle Example/VB/sourcevb.aspx#1)]  
+  
+ [!code-aspx-csharp[CalendarSelectedDayStyle#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarSelectedDayStyle/CS/calendarselecteddaystylecs.aspx#1)]
+ [!code-aspx-vb[CalendarSelectedDayStyle#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarSelectedDayStyle/VB/calendarselecteddaystylevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler SelectionChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler SelectionChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.Calendar.SelectionChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Benutzer einen Tag einer Woche oder einen gesamten Monat auswählt, indem Sie auf die Steuerelemente des Selektor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn der Benutzer einen Tag einer Woche oder einen gesamten Monat auswählt, indem Sie auf die Steuerelemente des Selektor.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie angegeben und code für die <xref:System.Web.UI.WebControls.Calendar.SelectionChanged> Ereignis, um die Anzahl der in der ausgewählten Elemente anzeigen die <xref:System.Web.UI.WebControls.Calendar> Steuerelement.  
+  
+ [!code-aspx-csharp[CalendarSelectionChanged#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarSelectionChanged/CS/calendarselectionchangedcs.aspx#1)]
+ [!code-aspx-vb[CalendarSelectionChanged#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarSelectionChanged/VB/calendarselectionchangedvb.aspx#1)]  
+  
+ [!code-aspx-csharp[CalendarSelectionChanged2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarSelectionChanged2/CS/calendarselectionchanged2cs.aspx#1)]
+ [!code-aspx-vb[CalendarSelectionChanged2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarSelectionChanged2/VB/calendarselectionchanged2vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionMode">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.CalendarSelectionMode SelectionMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.CalendarSelectionMode SelectionMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Calendar.SelectionMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.CalendarSelectionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Modus für die Auswahl auf der <see cref="T:System.Web.UI.WebControls.Calendar" /> Steuerelement, das angibt, ob der Benutzer ein Tages, einer Woche oder einen gesamten Monat auswählen kann.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.CalendarSelectionMode" />-Werte. Der Standardwert ist <see langword="Day" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Calendar.SelectionMode%2A> -Eigenschaft geben Sie den Modus für die Auswahl auf der <xref:System.Web.UI.WebControls.Calendar> Steuerelement. Diese Eigenschaft wird festgelegt, mit einem der <xref:System.Web.UI.WebControls.CalendarSelectionMode> Enumerationswerte. Sie können angeben, ob der Benutzer kann einem Tag, Woche oder einen gesamten Monat auswählen, können Sie die Datumsauswahl Funktionalität vollständig deaktivieren.  
+  
+ Wenn diese Eigenschaft festgelegt wird, um `CalendarSelectionMode.DayWeek` oder `CalendarSelectionMode.DayWeekMonth`, eine zusätzliche Auswahlspalte, die Woche und Monat Auswahlsteuerelemente enthält, wird angezeigt, in der ersten Spalte von der <xref:System.Web.UI.WebControls.Calendar> Steuerelement. Verwenden der <xref:System.Web.UI.WebControls.Calendar.SelectorStyle%2A> Eigenschaft, um die Darstellung dieser Spalte anpassen.  
+  
+ Um die Auswahl des Datums zu deaktivieren, legen Sie diese Eigenschaft auf `CalendarSelectionMode.None`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Calendar.SelectionMode%2A> Eigenschaft, um die Auswahl von einem Tag, Woche oder einen gesamten Monat des Datums zulassen.  
+  
+ [!code-aspx-csharp[Classic Calendar.SelectionMode Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Calendar.SelectionMode Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Calendar.SelectionMode Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Calendar.SelectionMode Example/VB/sourcevb.aspx#1)]  
+  
+ [!code-aspx-csharp[CalendarSelectionMode2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarSelectionMode2/CS/calendarselectionmodecs.aspx#1)]
+ [!code-aspx-vb[CalendarSelectionMode2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarSelectionMode2/VB/calendarselectionmodevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der angegebene Auswahlmodus ist nicht die <see cref="T:System.Web.UI.WebControls.CalendarSelectionMode" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectMonthText">
+      <MemberSignature Language="C#" Value="public string SelectMonthText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SelectMonthText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Calendar.SelectMonthText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("&amp;gt;&amp;gt;")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text für das Element den Monat in der Spalte Selektor für angezeigt.</summary>
+        <value>Für das Element den Monat in der Spalte Selektor für angezeigte Text. Der Standardwert ist <see langword="&quot;&amp;gt;&amp;gt;&quot;" />, dem wird dargestellt als zwei größer als-Zeichen (&gt;&gt;).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Calendar.SelectMonthText%2A> Eigenschaft, um benutzerdefinierten Text für das Element den Monat in der Spalte Selektor für bereitzustellen.  
+  
+> [!NOTE]
+>  Diese Eigenschaft wird nicht automatisch als HTML-Codierung. Wenn das Zeichen als HTML behandelt werden sollen, müssen Sie Sonderzeichen in den entsprechenden HTML-Wert zu konvertieren. Beispielsweise anzuzeigenden explizit das größer-als-Zeichen (>), müssen Sie den Wert verwenden `&gt;`.  
+  
+ Da diese Eigenschaft nicht automatisch auf HTML codiert ist, es ist möglich, geben Sie eine HTML-Tags für die <xref:System.Web.UI.WebControls.Calendar.SelectMonthText%2A> Eigenschaft. Z. B., wenn Sie ein Bild für den nächsten Monat Navigationssteuerelement anzeigen möchten, Sie können diese Eigenschaft auf einen Ausdruck festgelegt, die enthält ein `<img>` Element.  
+  
+ Diese Eigenschaft gilt nur, wenn die <xref:System.Web.UI.WebControls.Calendar.SelectionMode%2A> -Eigenschaftensatz auf `CalendarSelectionMode.DayWeekMonth`.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [ASP.NET-Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Calendar.SelectMonthText%2A> Eigenschaft, um benutzerdefinierten Text für das Element der Monat Auswahl bereitzustellen.  
+  
+ [!code-aspx-csharp[Classic Calendar.SelectMonthText Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Calendar.SelectMonthText Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Calendar.SelectMonthText Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Calendar.SelectMonthText Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectorStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.TableItemStyle SelectorStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.TableItemStyle SelectorStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Calendar.SelectorStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableItemStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Stileigenschaften für die Spalte der Selektor Woche und Monat ab.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.TableItemStyle" /> , der die Stileigenschaften für die Woche und Monat-Selektor-Spalte enthält. Der Standardwert ist eine leere <see cref="T:System.Web.UI.WebControls.TableItemStyle" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um den Stil für die Woche und Monat Selektor Spalte anzugeben. Weitere Informationen zu den anderen Stil-Eigenschaften, die kontrolliert werden kann, finden Sie unter <xref:System.Web.UI.WebControls.TableItemStyle>.  
+  
+ Die <xref:System.Web.UI.WebControls.Calendar.SelectorStyle%2A> Eigenschaft gilt nur, wenn die <xref:System.Web.UI.WebControls.Calendar.SelectionMode%2A> -Eigenschaftensatz auf `CalendarSelectionMode.DayWeek` oder `CalendarSelectionMode.DayWeekMonth`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Calendar.SelectorStyle%2A> Eigenschaft, um eine hellgraue Hintergrundfarbe für die Auswahlspalte anzugeben.  
+  
+ [!code-aspx-csharp[Classic Calendar.SelectorStyle Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Calendar.SelectorStyle Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Calendar.SelectorStyle Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Calendar.SelectorStyle Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectWeekText">
+      <MemberSignature Language="C#" Value="public string SelectWeekText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SelectWeekText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Calendar.SelectWeekText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("&amp;gt;")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text für das Element in der Auswahlspalte der Woche für angezeigt.</summary>
+        <value>Für das Element in der Auswahlspalte der Woche für angezeigte Text. Der Standardwert ist <see langword="&quot;&amp;gt;&quot;" />, dem wird gerendert, als ein größer-als-Zeichen (&gt;).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Calendar.SelectWeekText%2A> Eigenschaft, um benutzerdefinierten Text für das Element in der Auswahlspalte der Woche für bereitzustellen.  
+  
+> [!NOTE]
+>  Diese Eigenschaft wird nicht automatisch als HTML-Codierung. Wenn das Zeichen als HTML behandelt werden sollen, müssen Sie Sonderzeichen in den entsprechenden HTML-Wert zu konvertieren. Beispielsweise anzuzeigenden explizit das größer-als-Zeichen (>), müssen Sie den Wert verwenden `&gt;`.  
+  
+ Da diese Eigenschaft nicht automatisch auf HTML codiert ist, es ist möglich, geben Sie eine HTML-Tags für die <xref:System.Web.UI.WebControls.Calendar.SelectWeekText%2A> Eigenschaft. Z. B., wenn Sie ein Bild für den nächsten Monat Navigationssteuerelement anzeigen möchten, Sie können diese Eigenschaft auf einen Ausdruck festgelegt, die enthält ein `<img>` Element.  
+  
+ Diese Eigenschaft gilt nur, wenn die <xref:System.Web.UI.WebControls.Calendar.SelectionMode%2A> -Eigenschaftensatz auf `CalendarSelectionMode.DayWeek` oder `CalendarSelectionMode.DayWeekMonth`.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [ASP.NET-Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Calendar.SelectWeekText%2A> Eigenschaft, um benutzerdefinierten Text für das Element der Woche Auswahl bereitzustellen.  
+  
+ [!code-aspx-csharp[Classic Calendar.SelectWeekText Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Calendar.SelectWeekText Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Calendar.SelectWeekText Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Calendar.SelectWeekText Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowDayHeader">
+      <MemberSignature Language="C#" Value="public bool ShowDayHeader { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowDayHeader" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Calendar.ShowDayHeader" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Spaltenüberschrift, um die Tage der Woche angezeigt wird.</summary>
+        <value>
+          <see langword="true" />Wenn die Überschrift für die Wochentage angezeigt wird; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Calendar.ShowDayHeader%2A> Eigenschaft, um anzugeben, ob die Spaltenüberschrift, um die Tage der Woche angezeigt wird.  
+  
+ Die Darstellung der Überschrift kann angepasst werden, mithilfe der <xref:System.Web.UI.WebControls.Calendar.DayHeaderStyle%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Calendar.ShowDayHeader%2A> Eigenschaft, um den Spaltenüberschrift, um die Tage der Woche auszublenden.  
+  
+ [!code-aspx-csharp[Classic Calendar.ShowDayHeader Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Calendar.ShowDayHeader Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Calendar.ShowDayHeader Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Calendar.ShowDayHeader Example/VB/sourcevb.aspx#1)]  
+  
+ [!code-aspx-csharp[CalendarShowDayHeader#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarShowDayHeader/CS/calendarshowdayheadercs.aspx#1)]
+ [!code-aspx-vb[CalendarShowDayHeader#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarShowDayHeader/VB/calendarshowdayheadervb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowGridLines">
+      <MemberSignature Language="C#" Value="public bool ShowGridLines { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowGridLines" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Calendar.ShowGridLines" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Tage der <see cref="T:System.Web.UI.WebControls.Calendar" /> -Steuerelement Rasterlinien voneinander getrennt werden.</summary>
+        <value>
+          <see langword="true" />Wenn die Tage der <see cref="T:System.Web.UI.WebControls.Calendar" /> Steuerelement sind Rasterlinien getrennt ist, andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Calendar.ShowGridLines%2A> Eigenschaft, um anzugeben, ob die Tage der <xref:System.Web.UI.WebControls.Calendar> -Steuerelement Rasterlinien voneinander getrennt werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Calendar.ShowGridLines%2A> Eigenschaft zum Anzeigen der Rasterlinien zwischen Tagen in den <xref:System.Web.UI.WebControls.Calendar> Steuerelement.  
+  
+ [!code-aspx-csharp[Classic Calendar.ShowGridLines Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Calendar.ShowGridLines Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Calendar.ShowGridLines Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Calendar.ShowGridLines Example/VB/sourcevb.aspx#1)]  
+  
+ [!code-aspx-csharp[CalendarShowGridLines#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarShowGridLines/CS/calendarshowgridlinescs.aspx#1)]
+ [!code-aspx-vb[CalendarShowGridLines#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarShowGridLines/VB/calendarshowgridlinesvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowNextPrevMonth">
+      <MemberSignature Language="C#" Value="public bool ShowNextPrevMonth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowNextPrevMonth" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Calendar.ShowNextPrevMonth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.Calendar" /> -Steuerelement zeigt die vorherigen und nächsten Monat Navigationselementen im Titelabschnitt.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Web.UI.WebControls.Calendar" /> zeigt die vorherigen und nächsten Monat Navigationselementen im Titelabschnitt "; anderenfalls <see langword="false" />. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Calendar.ShowNextPrevMonth%2A> Eigenschaft, um anzugeben, ob der vorherigen und nächsten Monat Navigationselementen im Titelabschnitt angezeigt werden.  
+  
+ Die Darstellung des vorherigen und nächsten Monats Navigationssteuerelemente werden, mithilfe angepasst können der <xref:System.Web.UI.WebControls.Calendar.NextPrevStyle%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Calendar.ShowNextPrevMonth%2A> Eigenschaft, um die vorherigen und nächsten Monatsnavigation auszublenden im Titelbereich steuert.  
+  
+ [!code-aspx-csharp[Classic Calendar.ShowNextPrevMonth Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Calendar.ShowNextPrevMonth Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Calendar.ShowNextPrevMonth Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Calendar.ShowNextPrevMonth Example/VB/sourcevb.aspx#1)]  
+  
+ [!code-aspx-csharp[CalendarShowNextPrevMonth#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarShowNextPrevMonth/CS/calendarshownextprevmonthcs.aspx#1)]
+ [!code-aspx-vb[CalendarShowNextPrevMonth#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarShowNextPrevMonth/VB/calendarshownextprevmonthvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowTitle">
+      <MemberSignature Language="C#" Value="public bool ShowTitle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowTitle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Calendar.ShowTitle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Titelabschnitt angezeigt wird.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Web.UI.WebControls.Calendar" /> Titelabschnitt angezeigt, andernfalls <see langword="false" />. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Calendar.ShowTitle%2A> Eigenschaft, um anzugeben, ob der Titelabschnitt angezeigt wird.  
+  
+> [!NOTE]
+>  Titelabschnitt auch ausblenden, wird die nächste Steuerelemente und vorherigen Monat Navigation.  
+  
+ Die Darstellung des Abschnitts Titel kann angepasst werden, mithilfe der <xref:System.Web.UI.WebControls.Calendar.TitleStyle%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Calendar.ShowTitle%2A> Eigenschaft, um den Titelheader auszublenden.  
+  
+ [!code-aspx-csharp[CalendarShowTitle#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarShowTitle/CS/calendarshowtitlecs.aspx#1)]
+ [!code-aspx-vb[CalendarShowTitle#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarShowTitle/VB/calendarshowtitlevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsDisabledAttribute">
+      <MemberSignature Language="C#" Value="public override bool SupportsDisabledAttribute { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsDisabledAttribute" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Calendar.SupportsDisabledAttribute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob vom Steuerelement das <see langword="disabled" />-Attribut des gerenderten HTML-Elements auf "disabled" festgelegt werden soll, wenn die <see cref="P:System.Web.UI.WebControls.WebControl.IsEnabled" />-Eigenschaft des Steuerelements <see langword="false" /> ist.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="P:System.Web.UI.Control.RenderingCompatibility" /> Eigenschaft gibt an, eine frühere ASP.NET-Version als <c>4.0</c>ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt an, wie ASP.NET HTML für ein Steuerelement rendern soll, wenn das Steuerelement deaktiviert ist. Wenn diese Eigenschaft ist `true`, rendert ASP.NET ein `disabled` Attribut, wenn ein Steuerelement deaktiviert ist. Wenn diese Eigenschaft ist `false`, rendert ASP.NET ein `class` Attribut, wenn ein Steuerelement deaktiviert ist. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.WebControl.SupportsDisabledAttribute%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IPostBackEventHandler.RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="void IPostBackEventHandler.RaisePostBackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Calendar.System#Web#UI#IPostBackEventHandler#RaisePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">Das Argument für das Ereignis.</param>
+        <summary>Löst beim Postback für Ereignisse der <see cref="T:System.Web.UI.WebControls.Calendar" /> Steuerelement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TitleFormat">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.TitleFormat TitleFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.TitleFormat TitleFormat" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Calendar.TitleFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TitleFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Format für die Title-Abschnitt.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.TitleFormat" />-Werte. Der Standardwert ist <see langword="MonthYear" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Calendar.TitleFormat%2A> Eigenschaft, um das Format für den Titelabschnitt anzugeben. Diese Eigenschaft wird festgelegt, mit einem der <xref:System.Web.UI.WebControls.TitleFormat> Enumerationswerte. Sie können angeben, ob der Titel als Monat oder den Monat und Jahr angezeigt wird.  
+  
+ Diese Eigenschaft gilt nur, wenn die <xref:System.Web.UI.WebControls.Calendar.ShowTitle%2A> -Eigenschaftensatz auf `true`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Calendar.TitleFormat%2A> Eigenschaft des Monats und Jahrs im Titelabschnitt angezeigt.  
+  
+ [!code-aspx-csharp[Classic Calendar.TitleFormat Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Calendar.TitleFormat Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Calendar.TitleFormat Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Calendar.TitleFormat Example/VB/sourcevb.aspx#1)]  
+  
+ [!code-aspx-csharp[CalendarTitleFormat#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarTitleFormat/CS/calendartitleformatcs.aspx#1)]
+ [!code-aspx-vb[CalendarTitleFormat#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarTitleFormat/VB/calendartitleformatvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Das Format der angegebene Titel ist nicht die <see cref="T:System.Web.UI.WebControls.TitleFormat" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TitleStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.TableItemStyle TitleStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.TableItemStyle TitleStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Calendar.TitleStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableItemStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Stileigenschaften für den Spaltenüberschrift Titel, um die <see cref="T:System.Web.UI.WebControls.Calendar" /> Steuerelement.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.TableItemStyle" /> , enthält die Stileigenschaften den Spaltenüberschrift Titel, um die <see cref="T:System.Web.UI.WebControls.Calendar" />. Der Standardwert ist eine leere <see cref="T:System.Web.UI.WebControls.TableItemStyle" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft den Stil für die Titelüberschrift, der an die <xref:System.Web.UI.WebControls.Calendar> Steuerelement. Weitere Informationen zu den anderen Stil-Eigenschaften, die kontrolliert werden kann, finden Sie unter <xref:System.Web.UI.WebControls.TableItemStyle>.  
+  
+ Die <xref:System.Web.UI.WebControls.Calendar.TitleStyle%2A> Eigenschaft gilt nur, wenn die <xref:System.Web.UI.WebControls.Calendar.ShowTitle%2A> -Eigenschaftensatz auf `true`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Calendar.TitleStyle%2A> -Eigenschaft an eine blaue Hintergrundfarbe und eine gelbe Vordergrundfarbe für den Titelüberschrift der <xref:System.Web.UI.WebControls.Calendar> Steuerelement.  
+  
+ [!code-aspx-csharp[Classic Calendar.TitleStyle Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Calendar.TitleStyle Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Calendar.TitleStyle Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Calendar.TitleStyle Example/VB/sourcevb.aspx#1)]  
+  
+ [!code-aspx-csharp[CalendarTitleStyle#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarTitleStyle/CS/calendartitlestylecs.aspx#1)]
+ [!code-aspx-vb[CalendarTitleStyle#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarTitleStyle/VB/calendartitlestylevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TodayDayStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.TableItemStyle TodayDayStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.TableItemStyle TodayDayStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Calendar.TodayDayStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableItemStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Stileigenschaften des heutigen Datums ab, auf die <see cref="T:System.Web.UI.WebControls.Calendar" /> Steuerelement.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.TableItemStyle" /> , die Stileigenschaften für das heutige Datum enthält, auf die <see cref="T:System.Web.UI.WebControls.Calendar" /> Steuerelement. Der Standardwert ist eine leere <see cref="T:System.Web.UI.WebControls.TableItemStyle" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft den Stil für das heutige Datum an, auf die <xref:System.Web.UI.WebControls.Calendar> Steuerelement. Wenn die <xref:System.Web.UI.WebControls.Calendar.TodayDayStyle%2A> Eigenschaft nicht festgelegt ist, der Stil angegeben der <xref:System.Web.UI.WebControls.Calendar.DayStyle%2A> Eigenschaft wird verwendet.  
+  
+ Weitere Informationen zu den anderen Stil-Eigenschaften, die kontrolliert werden kann, finden Sie unter <xref:System.Web.UI.WebControls.TableItemStyle>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Calendar.TodayDayStyle%2A> Eigenschaft, um eine blaue Hintergrundfarbe und eine gelbe Vordergrundfarbe für das heutige Datum anzugeben.  
+  
+ [!code-aspx-csharp[Classic Calendar.TodayDayStyle Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Calendar.TodayDayStyle Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Calendar.TodayDayStyle Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Calendar.TodayDayStyle Example/VB/sourcevb.aspx#1)]  
+  
+ [!code-aspx-csharp[CalendarTodayDayStyle#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarTodayDayStyle/CS/calendartodaydaystylecs.aspx#1)]
+ [!code-aspx-vb[CalendarTodayDayStyle#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarTodayDayStyle/VB/calendartodaydaystylevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TodaysDate">
+      <MemberSignature Language="C#" Value="public DateTime TodaysDate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime TodaysDate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Calendar.TodaysDate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert des heutigen Datums.</summary>
+        <value>Ein <see cref="T:System.DateTime" /> , den Wert enthält, die die <see cref="T:System.Web.UI.WebControls.Calendar" /> werden an das aktuelle Datum verwendet werden. Wenn diese Eigenschaft nicht explizit festgelegt ist, wird dieses Datum das Datum auf dem Server sein.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Calendar.TodaysDate%2A> -Eigenschaft zum Bestimmen des heutigen Datums. Sie können diese Eigenschaft auch verwenden, zum programmgesteuerten Festlegen des Werts des heutigen Datums auf die <xref:System.Web.UI.WebControls.Calendar> Steuerelement. Diese Eigenschaft wird festgelegt, mit einem <xref:System.DateTime?displayProperty=nameWithType> Objekt.  
+  
+> [!NOTE]
+>  Dieses Datum müssen möglicherweise angepasst werden, um Benutzer aufnehmen zu können, die in einer anderen Zeitzone befinden.  
+  
+ Die Darstellung der angegebenen Datum die durch die <xref:System.Web.UI.WebControls.Calendar.TodaysDate%2A> Eigenschaft angepasst werden kann, mithilfe der <xref:System.Web.UI.WebControls.Calendar.TodayDayStyle%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Wenn die <xref:System.Web.UI.WebControls.Calendar.VisibleDate%2A> Eigenschaft nicht festgelegt ist, wird das Datum gemäß der <xref:System.Web.UI.WebControls.Calendar.TodaysDate%2A> Eigenschaft bestimmt der Monat angezeigt wird, in der <xref:System.Web.UI.WebControls.Calendar> Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Calendar.TodaysDate%2A> Eigenschaft zum programmgesteuerten Festlegen des Werts des heutigen Datums auf die <xref:System.Web.UI.WebControls.Calendar> Steuerelement.  
+  
+ [!code-aspx-csharp[Classic Calendar.TodaysDate Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Calendar.TodaysDate Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Calendar.TodaysDate Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Calendar.TodaysDate Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackViewState">
+      <MemberSignature Language="C#" Value="protected override void TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Calendar.TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Markiert den Anfangspunkt, um nachzuverfolgen und zu speichern von Änderungen an das Steuerelement als Teil der steuerelementansichtzustand zu starten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseAccessibleHeader">
+      <MemberSignature Language="C#" Value="public virtual bool UseAccessibleHeader { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseAccessibleHeader" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Calendar.UseAccessibleHeader" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Header der Tabelle gerendert <see langword="&lt;th&gt;" /> HTML-Element für die Tagheader, statt die Tabellendaten <see langword="&lt;td&gt;" /> HTML-Element.</summary>
+        <value>
+          <see langword="true" />Wenn die <see langword="&lt;th&gt;" /> Element wird zum Tagheaderzellen; <see langword="false" /> Wenn das <see langword="&lt;td&gt;" /> -Element für den Tagheader verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Tabellenkopfzeile `<th>` HTML-Element ist standardmäßig für Tagheaderzellen verwendet. Sie können zurückkehren, um das Verhalten der .NET Framework Version 1.0 der Verwendung von `<td>` Elemente für Tagheaderzellen durch Festlegen dieser Eigenschaft auf `false`.  
+  
+ Beachten Sie, dass durch Ändern dieses Werts Skripts auswirken kann, die auf das Renderingverhalten der Version 1.0-Edition von diesem Steuerelement basieren. Die Verwendung von der `<th>` Element ändert sich möglicherweise auch das sichtbare Rendering der <xref:System.Web.UI.WebControls.Calendar> -Steuerelement in Browsern, dadurch dass der Tag-Headerzellen zentriert ausgerichtet und fett.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisibleDate">
+      <MemberSignature Language="C#" Value="public DateTime VisibleDate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime VisibleDate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Calendar.VisibleDate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.DateTime), "1/1/0001")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <see cref="T:System.DateTime" /> Wert, der angibt, den Monat anzuzeigende der <see cref="T:System.Web.UI.WebControls.Calendar" /> Steuerelement.</summary>
+        <value>Ein <see cref="T:System.DateTime" /> gibt den Monat anzuzeigende an, die die <see cref="T:System.Web.UI.WebControls.Calendar" />. Der Standardwert ist <see cref="F:System.DateTime.MinValue" />, die anzeigt, des Monats, der das Datum gemäß enthält <see cref="P:System.Web.UI.WebControls.Calendar.TodaysDate" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.Calendar.VisibleDate%2A> Monats anzuzeigende programmgesteuert festzulegende Eigenschaft der <xref:System.Web.UI.WebControls.Calendar> Steuerelement. Das angegebene Datum kann beliebiges Datum des Monats sein, die Sie anzeigen möchten, obwohl es üblich, dass das erste Datum im Monat verwendet wird. Diese Eigenschaft wird festgelegt, mit einem <xref:System.DateTime?displayProperty=nameWithType> Objekt.  
+  
+ Die <xref:System.Web.UI.WebControls.Calendar.VisibleDate%2A> Eigenschaft aktualisiert wird, bevor die <xref:System.Web.UI.WebControls.Calendar.VisibleMonthChanged> Ereignis wird ausgelöst. Sie können eine benutzerdefinierte bereitstellen <xref:System.Web.UI.WebControls.Calendar.OnVisibleMonthChanged%2A> Ereignishandler Festlegen der <xref:System.Web.UI.WebControls.Calendar.VisibleDate%2A> -Eigenschaft und den automatisch generierten Wert überschreiben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Calendar.VisibleDate%2A> Eigenschaft zum programmgesteuerten Festlegen des Werts, der den Monat bestimmt, die in angezeigt wird der <xref:System.Web.UI.WebControls.Calendar> Steuerelement.  
+  
+ [!code-aspx-csharp[Classic Calendar.VisibleDate Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Calendar.VisibleDate Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Calendar.VisibleDate Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Calendar.VisibleDate Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisibleMonthChanged">
+      <MemberSignature Language="C#" Value="public event System.Web.UI.WebControls.MonthChangedEventHandler VisibleMonthChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.UI.WebControls.MonthChangedEventHandler VisibleMonthChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.Calendar.VisibleMonthChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.MonthChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Benutzer klickt auf den nächsten oder vorherigen Monat Steuerelemente für die Navigation auf die Titelüberschrift.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn der Benutzer den nächsten oder vorherigen Monat Navigationselementen auf die Titelüberschrift klickt.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie angegeben und code für die <xref:System.Web.UI.WebControls.Calendar.VisibleMonthChanged> Ereignis, um anzuzeigen, ob die <xref:System.Web.UI.WebControls.Calendar> Steuerelement verfügt über einen Monat vorwärts oder rückwärts verschoben.  
+  
+ [!code-aspx-csharp[CalendarVisibleMonthChanged#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarVisibleMonthChanged/CS/calendarvisiblemonthchangedcs.aspx#1)]
+ [!code-aspx-vb[CalendarVisibleMonthChanged#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarVisibleMonthChanged/VB/calendarvisiblemonthchangedvb.aspx#1)]  
+  
+ [!code-aspx-csharp[CalendarVisibleMonthChanged2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarVisibleMonthChanged2/CS/calendarvisiblemonthchanged2cs.aspx#1)]
+ [!code-aspx-vb[CalendarVisibleMonthChanged2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarVisibleMonthChanged2/VB/calendarvisiblemonthchanged2vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WeekendDayStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.TableItemStyle WeekendDayStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.TableItemStyle WeekendDayStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Calendar.WeekendDayStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableItemStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Stileigenschaften für die Wochenenden ab, auf die <see cref="T:System.Web.UI.WebControls.Calendar" /> Steuerelement.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.TableItemStyle" /> , der die Stileigenschaften für die Wochenenden enthält, auf die <see cref="T:System.Web.UI.WebControls.Calendar" />. Der Standardwert ist eine leere <see cref="T:System.Web.UI.WebControls.TableItemStyle" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft den Stil für die Wochenenden an, auf die <xref:System.Web.UI.WebControls.Calendar> Steuerelement. Wenn die <xref:System.Web.UI.WebControls.Calendar.WeekendDayStyle%2A> Eigenschaft nicht festgelegt ist, der Stil angegeben der <xref:System.Web.UI.WebControls.Calendar.DayStyle%2A> Eigenschaft wird verwendet.  
+  
+ Weitere Informationen zu den anderen Stil-Eigenschaften, die kontrolliert werden kann, finden Sie unter <xref:System.Web.UI.WebControls.TableItemStyle>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.Calendar.WeekendDayStyle%2A> Eigenschaft, um eine blaue Hintergrundfarbe und eine gelbe Vordergrundfarbe für Wochenenden anzugeben.  
+  
+ [!code-aspx-csharp[Classic Calendar.WeekendDayStyle Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Calendar.WeekendDayStyle Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Calendar.WeekendDayStyle Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Calendar.WeekendDayStyle Example/VB/sourcevb.aspx#1)]  
+  
+ [!code-aspx-csharp[CalendarWeekendDayStyle#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarWeekendDayStyle/CS/calendarweekenddaystylecs.aspx#1)]
+ [!code-aspx-vb[CalendarWeekendDayStyle#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarWeekendDayStyle/VB/calendarweekenddaystylevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

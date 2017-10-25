@@ -1,0 +1,243 @@
+<Type Name="RayMeshGeometry3DHitTestResult" FullName="System.Windows.Media.Media3D.RayMeshGeometry3DHitTestResult">
+  <TypeSignature Language="C#" Value="public sealed class RayMeshGeometry3DHitTestResult : System.Windows.Media.Media3D.RayHitTestResult" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RayMeshGeometry3DHitTestResult extends System.Windows.Media.Media3D.RayHitTestResult" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Media3D.RayMeshGeometry3DHitTestResult" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Media3D.RayHitTestResult</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Schnittpunkt eines Strahlentreffertests Treffertests und ein <see cref="T:System.Windows.Media.Media3D.MeshGeometry3D" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse gibt Informationen über den Schnittpunkt eines Strahls und ein <xref:System.Windows.Media.Media3D.MeshGeometry3D>.  
+  
+ Barycentric Koordinaten zurückgegebenes <xref:System.Windows.Media.Media3D.RayMeshGeometry3DHitTestResult.VertexWeight1%2A>, <xref:System.Windows.Media.Media3D.RayMeshGeometry3DHitTestResult.VertexWeight2%2A>, und <xref:System.Windows.Media.Media3D.RayMeshGeometry3DHitTestResult.VertexWeight3%2A> können interpoliert werden, um das Suchen der <xref:System.Windows.Media.Media3D.Point3D> , in dem die Schnittmenge ist aufgetreten, oder der Punkt in der Schnittmenge des Modells Textur mit Texturkoordinaten.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DistanceToRayOrigin">
+      <MemberSignature Language="C#" Value="public override double DistanceToRayOrigin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 DistanceToRayOrigin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.RayMeshGeometry3DHitTestResult.DistanceToRayOrigin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Abstand zwischen dem Schnittpunkt und dem Ursprung des Strahls in der Koordinatenbereich <see cref="T:System.Windows.Media.Media3D.Visual3D" /> den Treffertest initiiert hat.</summary>
+        <value>Double, der den Abstand zwischen dem Schnittpunkt und dem Ursprung des Strahls in der Koordinatenbereich angibt <see cref="T:System.Windows.Media.Media3D.Visual3D" /> den Treffertest initiiert hat.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codeauszug liest diese Eigenschaft.  
+  
+ [!code-csharp[hittest3d#HitTest3D3DN7](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/Window1.xaml.cs#hittest3d3dn7)]
+ [!code-vb[hittest3d#HitTest3D3DN7](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTest3D/visualbasic/window1.xaml.vb#hittest3d3dn7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeshHit">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.MeshGeometry3D MeshHit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Media3D.MeshGeometry3D MeshHit" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.RayMeshGeometry3DHitTestResult.MeshHit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.MeshGeometry3D</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Media.Media3D.MeshGeometry3D" /> von diesem Treffertest geschnitten wurde.</summary>
+        <value>
+          <see cref="T:System.Windows.Media.Media3D.MeshGeometry3D" />von dem Strahl geschnitten wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PointHit">
+      <MemberSignature Language="C#" Value="public override System.Windows.Media.Media3D.Point3D PointHit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Media3D.Point3D PointHit" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.RayMeshGeometry3DHitTestResult.PointHit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Point3D</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Punkt ab, an dem das Gitter von dem Strahl geschnitten wurde, für den der Treffertest ausgeführt wurde.</summary>
+        <value>Das Point3D-Objekt, an dem das Gitter geschnitten wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VertexIndex1">
+      <MemberSignature Language="C#" Value="public int VertexIndex1 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 VertexIndex1" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.RayMeshGeometry3DHitTestResult.VertexIndex1" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ersten Vertex eines Gitterdreiecks, die von dem Strahl geschnitten wurde.</summary>
+        <value>Der Index des ersten Vertex.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ermöglicht die Indexposition des Vertex in der <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>, <xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A>, und <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A> Auflistungen von Gitterdreiecks unterbrochen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VertexIndex2">
+      <MemberSignature Language="C#" Value="public int VertexIndex2 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 VertexIndex2" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.RayMeshGeometry3DHitTestResult.VertexIndex2" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zweiten Vertex eines Gitterdreiecks, die von dem Strahl geschnitten wurde.</summary>
+        <value>Der Index des zweiten Vertex.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ermöglicht die Indexposition des Vertex in der <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>, <xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A>, und <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A> Auflistungen von Gitterdreiecks unterbrochen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VertexIndex3">
+      <MemberSignature Language="C#" Value="public int VertexIndex3 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 VertexIndex3" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.RayMeshGeometry3DHitTestResult.VertexIndex3" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dritten Vertex eines Gitterdreiecks, die von dem Strahl geschnitten wurde.</summary>
+        <value>Der Index des dritten Vertex.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ermöglicht die Indexposition des Vertex in der <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>, <xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A>, und <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A> Auflistungen von Gitterdreiecks unterbrochen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VertexWeight1">
+      <MemberSignature Language="C#" Value="public double VertexWeight1 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 VertexWeight1" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.RayMeshGeometry3DHitTestResult.VertexWeight1" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der relative Anteil des ersten Vertex eines Gitterdreiecks bis zu dem Punkt, an dem das Dreieck vom Treffertest durchkreuzt wurde, ausgedrückt als Wert zwischen 0 und 1.</summary>
+        <value>Die Gewichtung des ersten Vertex.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist die erste von der Gitterdreiecks Barycentric Koordinaten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VertexWeight2">
+      <MemberSignature Language="C#" Value="public double VertexWeight2 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 VertexWeight2" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.RayMeshGeometry3DHitTestResult.VertexWeight2" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der relative Anteil des zweiten Vertex eines Gitterdreiecks bis zu dem Punkt, an dem das Dreieck vom Treffertest durchkreuzt wurde, ausgedrückt als Wert zwischen 0 und 1.</summary>
+        <value>Die Gewichtung des zweiten Vertex.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist die zweite von Gitterdreiecks Barycentric Koordinaten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VertexWeight3">
+      <MemberSignature Language="C#" Value="public double VertexWeight3 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 VertexWeight3" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.RayMeshGeometry3DHitTestResult.VertexWeight3" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der relative Anteil des dritten Vertex eines Gitterdreiecks bis zu dem Punkt, an dem das Dreieck vom Treffertest durchkreuzt wurde, ausgedrückt als Wert zwischen 0 und 1.</summary>
+        <value>Die Gewichtung des dritten Vertex.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist die dritte von Gitterdreiecks Barycentric Koordinaten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

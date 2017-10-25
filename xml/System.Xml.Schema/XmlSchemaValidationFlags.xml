@@ -1,0 +1,248 @@
+<Type Name="XmlSchemaValidationFlags" FullName="System.Xml.Schema.XmlSchemaValidationFlags">
+  <TypeSignature Language="C#" Value="public enum XmlSchemaValidationFlags" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed XmlSchemaValidationFlags extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Schema.XmlSchemaValidationFlags" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt Schemavalidierungsoptionen verwendet werden, indem Sie die <see cref="T:System.Xml.Schema.XmlSchemaValidator" /> und <see cref="T:System.Xml.XmlReader" /> Klassen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im folgenden werden Anmerkungen sollten bei der Verwendung <xref:System.Xml.Schema.XmlSchemaValidationFlags> Werte mit den <xref:System.Xml.XmlReader>.  
+  
+-   <xref:System.Xml.Schema.XmlSchemaValidationFlags>Werte definieren Überprüfungsoptionen verwendet werden, indem Sie ein Schema überprüfen <xref:System.Xml.XmlReader> XML-Überprüfung anhand eines Schemas ausführen. <xref:System.Xml.Schema.XmlSchemaValidationFlags>Werte für ein validierendes <xref:System.Xml.XmlReader> angegeben sind, mithilfe der <xref:System.Xml.XmlReaderSettings.ValidationFlags%2A> Eigenschaft.  
+  
+ Es folgen Anmerkungen sollten bei Verwendung des AllowXmlAttributes-Werts.  
+  
+1.  Wenn kein Schema den XML-Namespace importieren.  
+  
+    1.  Wenn AllowXmlAttributes, um festgelegt ist `true` (Standard) und das Instanzdokument Xml-Attribute enthält, Validierungsmodul wird eine Momentaufnahme des Standardschemas XML-Namespace zu laden und verwenden sie für die Überprüfung. Wenn im Instanzdokument verwendete XML-Attribute im Standardschema nicht gefunden werden, wird das Dokument nicht überprüft werden.  
+  
+    2.  Wenn AllowXmlAttributes, um festgelegt ist `false` und Instanzdokument Xml-Attribute enthält, das Modul für Überprüfung ein Fehler gemeldet wird.  
+  
+2.  Ein Schema importiert die XML-Namespace, ohne einen Speicherort.  
+  
+    1.  Wenn AllowXmlAttributes, um festgelegt ist `true` (Standard) und Instanzdokument Xml-Attribute enthält, das Modul für Überprüfung wird das Standardschema für XML-Namespace für die Validierung verwenden. Wenn im Instanzdokument verwendete XML-Attribute im Standardschema nicht gefunden werden, wird das Dokument nicht überprüft werden.  
+  
+    2.  Wenn AllowXmlAttributes, um festgelegt ist `false` und Instanzdokument Xml-Attribute enthält, die durch das Schema nicht explizit zugelassen werden Validierungsmodul meldet einen Fehler.  
+  
+    3.  Wenn AllowXmlAttributes, um festgelegt ist `false` und Instanzdokument enthält XML-Attribute, die explizit durch das Schema zulässig sind, überprüft das Modul für Überprüfung der Attribute auf die gleiche Weise wie andere Attribute unter Verwendung der Standard-Xml Namespace-Schema.  
+  
+3.  Ein Schema importiert ein benutzerdefiniertes XML-Namespace-Schema mit einer benutzerdefinierten SchemaLocation.  
+  
+    1.  Wenn AllowXmlAttributes, um festgelegt ist `true` (Standard) und das Instanzdokument Xml-Attribute enthält, Validierungsmodul verwendet das benutzerdefinierte XML-Namespace-Schema für die Validierung. Wenn im Instanzdokument verwendete XML-Attribute in das angegebene Schema nicht gefunden werden, wird das Dokument nicht überprüft werden.  
+  
+    2.  Wenn AllowXmlAttributes, um festgelegt ist `false` und Instanzdokument Xml-Attribute enthält, die durch das Schema nicht explizit zugelassen werden Validierungsmodul meldet einen Fehler.  
+  
+    3.  Wenn AllowXmlAttributes, um festgelegt ist `false` und Instanzdokument Xml-Attribute enthält, die vom Schema explizit zugelassen werden validiert Validierungsmodul die Attribute auf die gleiche Weise wie andere Attribute mit der angegebenen XML-Datei überprüft Namespace-Schema.  
+  
+4.  Wenn ein Schema definiert ein Xml: *-Attribut mit Use = "required".  
+  
+    1.  Folgendes gilt, wenn AllowXmlAttributes, um festgelegt ist `true` und `false`. Erforderliche Xml: * Attribute als andere Attribute behandelt werden soll und unter Verwendung der angegebenen XML-Namespace-Schemas überprüft.  
+  
+5.  Wenn ein Schema definiert ein Xml: *-Attribut mit Use = "prohibited".  
+  
+    1.  Folgendes gilt, wenn AllowXmlAttributes, um festgelegt ist `true` und `false`. Wenn einem Instanzdokument XML-Code enthält: * Attribute, die explizit sind nicht zulässig, durch das Schema, das Modul für Überprüfung meldet einen Fehler.  
+  
+6.  Wenn ein Schema für ein Attributplatzhalter gibt.  
+  
+    1.  Wenn einem Instanzdokument ein XML-Attribut enthält, und das Schema ein Attributplatzhalter mit ProcessContents gibt entweder ausgelassen oder auf "strict" festgelegt, verwendet das Modul für Überprüfung das Schema der XML-Namespace vorhanden, in der <xref:System.Xml.Schema.XmlSchemaSet>. Wenn kein XML-Namespace-Schema angegeben ist, verhält sich das Modul für Überprüfung wie folgt.  
+  
+    2.  Wenn AllowXmlAttributes, um festgelegt ist `true`, Validierungsmodul wird das Standardschema für XML-Namespace verwenden, um die Validierung ausführen.  
+  
+    3.  Wenn AllowXmlAttributes, um festgelegt ist `false`, Validierungsmodul meldet einen Fehler.  
+  
+    4.  Wenn einem Instanzdokument ein XML-Attribut enthält, und das Schema ein Attributplatzhalter mit ProcessContents gibt "Überspringen" festgelegt, wird es Validierungsmodul Attribut Überprüfung übersprungen.  
+  
+    5.  Wenn einem Instanzdokument ein XML-Attribut enthält, und das Schema ein Attributplatzhalter mit ProcessContents auf "lax" festgelegt gibt, verwendet das Modul für Überprüfung das Schema der XML-Namespace vorhanden, in der <xref:System.Xml.Schema.XmlSchemaSet>. Wenn kein XML-Namespace-Schema angegeben ist, verhält sich das Modul für Überprüfung wie folgt.  
+  
+    6.  Wenn AllowXmlAttributes, um festgelegt ist `true`, Validierungsmodul wird das Standardschema für XML-Namespace verwenden, um die Validierung ausführen.  
+  
+    7.  Wenn AllowXmlAttributes, um festgelegt ist `false`, Attribut Überprüfung wird nicht ausgeführt werden.  
+  
+7.  Validieren von einfachen Typen.  
+  
+    1.  Wenn AllowXmlAttributes festgelegt wird, um `true` (Standard), wird XML-Attribute für Elemente, von einfachen Typen zulässig.  
+  
+   
+  
+## Examples  
+ Ein Beispiel für die <xref:System.Xml.Schema.XmlSchemaValidationFlags.AllowXmlAttributes> Klasse, finden Sie unter der <xref:System.Xml.Schema.XmlSchemaValidator> Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllowXmlAttributes">
+      <MemberSignature Language="C#" Value="AllowXmlAttributes" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.Schema.XmlSchemaValidationFlags AllowXmlAttributes = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Schema.XmlSchemaValidationFlags.AllowXmlAttributes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaValidationFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Lassen Sie Xml: * Attribute, auch wenn sie nicht im Schema definiert sind. Die Attribute werden basierend auf deren Datentyp überprüft werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.Schema.XmlSchemaValidationFlags None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Schema.XmlSchemaValidationFlags.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaValidationFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identity-Einschränkung, Inlineschemas, Schemaspeicherort oder Bericht schemavalidierungswarnungen nicht verarbeitet werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessIdentityConstraints">
+      <MemberSignature Language="C#" Value="ProcessIdentityConstraints" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.Schema.XmlSchemaValidationFlags ProcessIdentityConstraints = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Schema.XmlSchemaValidationFlags.ProcessIdentityConstraints" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaValidationFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verarbeiten von Identity-Einschränkung (<c>xs: ID</c>, <c>xs: IDREF</c>, <c>xs</c>, <c>xs: keyref</c>, <c>Xs: eindeutige</c>) während der Validierung gefunden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessInlineSchema">
+      <MemberSignature Language="C#" Value="ProcessInlineSchema" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.Schema.XmlSchemaValidationFlags ProcessInlineSchema = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Schema.XmlSchemaValidationFlags.ProcessInlineSchema" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaValidationFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Während der Validierung gefundene Prozess-Inlineschemas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessSchemaLocation">
+      <MemberSignature Language="C#" Value="ProcessSchemaLocation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.Schema.XmlSchemaValidationFlags ProcessSchemaLocation = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Schema.XmlSchemaValidationFlags.ProcessSchemaLocation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaValidationFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verarbeiten von Schemaspeicherort (<c>xsi: schemaLocation</c>, <c>xsi: noNamespaceSchemaLocation</c>) während der Validierung gefunden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReportValidationWarnings">
+      <MemberSignature Language="C#" Value="ReportValidationWarnings" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.Schema.XmlSchemaValidationFlags ReportValidationWarnings = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Schema.XmlSchemaValidationFlags.ReportValidationWarnings" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaValidationFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Während der Validierung gefundene schemavalidierungswarnungen zu melden.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

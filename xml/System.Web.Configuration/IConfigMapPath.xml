@@ -1,0 +1,243 @@
+<Type Name="IConfigMapPath" FullName="System.Web.Configuration.IConfigMapPath">
+  <TypeSignature Language="C#" Value="public interface IConfigMapPath" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IConfigMapPath" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.IConfigMapPath" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht den Zugriff auf die Zuordnung zwischen Konfigurationsdatei virtuellen und physischen Pfade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Configuration.IConfigMapPath>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="GetAppPathForPath">
+      <MemberSignature Language="C#" Value="public string GetAppPathForPath (string siteID, string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetAppPathForPath(string siteID, string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.IConfigMapPath.GetAppPathForPath(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="siteID" Type="System.String" />
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="siteID">Ein eindeutiger Bezeichner für den Standort.</param>
+        <param name="path">Die URL der Website zugeordnet.</param>
+        <summary>Ruft den virtuellen Verzeichnisses Namen einem bestimmten Standort zugeordnet.</summary>
+        <returns>Die <paramref name="siteID" /> muss eindeutig sein. Keine zwei Standorte verwenden dieselbe Id an. Die <paramref name="siteID" /> unterscheidet Standorte, die den gleichen Namen haben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Configuration.IConfigMapPath.GetAppPathForPath%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetDefaultSiteNameAndID">
+      <MemberSignature Language="C#" Value="public void GetDefaultSiteNameAndID (out string siteName, out string siteID);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetDefaultSiteNameAndID([out] string&amp; siteName, [out] string&amp; siteID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.IConfigMapPath.GetDefaultSiteNameAndID(System.String@,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="siteName" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="siteID" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="siteName">Der Standardname für die Website.</param>
+        <param name="siteID">Ein eindeutiger Bezeichner für den Standort.</param>
+        <summary>Füllt den Standardnamen für die Website und die Website-ID.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Configuration.IConfigMapPath.GetDefaultSiteNameAndID%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetMachineConfigFilename">
+      <MemberSignature Language="C#" Value="public string GetMachineConfigFilename ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetMachineConfigFilename() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.IConfigMapPath.GetMachineConfigFilename" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Namen der Computerkonfigurationsdatei.</summary>
+        <returns>Der Name des Computer-Konfigurationsdatei.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Configuration.IConfigMapPath.GetMachineConfigFilename%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetPathConfigFilename">
+      <MemberSignature Language="C#" Value="public void GetPathConfigFilename (string siteID, string path, out string directory, out string baseName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetPathConfigFilename(string siteID, string path, [out] string&amp; directory, [out] string&amp; baseName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.IConfigMapPath.GetPathConfigFilename(System.String,System.String,System.String@,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="siteID" Type="System.String" />
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="directory" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="baseName" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="siteID">Ein eindeutiger Bezeichner für den Standort.</param>
+        <param name="path">Die URL der Website zugeordnet.</param>
+        <param name="directory">Das physische Verzeichnis für den Konfigurationspfad.</param>
+        <param name="baseName">Der Name der Konfigurationsdatei.</param>
+        <summary>Füllt das Verzeichnis und den Namen der Konfigurationsdatei auf Basis der Site-ID und den Pfad der Website an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Configuration.IConfigMapPath.GetPathConfigFilename%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetRootWebConfigFilename">
+      <MemberSignature Language="C#" Value="public string GetRootWebConfigFilename ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetRootWebConfigFilename() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.IConfigMapPath.GetRootWebConfigFilename" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Namen der Konfigurationsdatei an das Stammverzeichnis ab.</summary>
+        <returns>Der Name der Konfigurationsdatei im Stammverzeichnis Web.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Configuration.IConfigMapPath.GetRootWebConfigFilename%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MapPath">
+      <MemberSignature Language="C#" Value="public string MapPath (string siteID, string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string MapPath(string siteID, string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.IConfigMapPath.MapPath(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="siteID" Type="System.String" />
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="siteID">Ein eindeutiger Bezeichner für den Standort.</param>
+        <param name="path">Die URL der Website zugeordnet.</param>
+        <summary>Ruft ab, der physische Verzeichnispfad basierend auf der Site-ID und die URL der Website zugeordnet.</summary>
+        <returns>Der physische Verzeichnispfad.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Configuration.IConfigMapPath.MapPath%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveSiteArgument">
+      <MemberSignature Language="C#" Value="public void ResolveSiteArgument (string siteArgument, out string siteName, out string siteID);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ResolveSiteArgument(string siteArgument, [out] string&amp; siteName, [out] string&amp; siteID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.IConfigMapPath.ResolveSiteArgument(System.String,System.String@,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="siteArgument" Type="System.String" />
+        <Parameter Name="siteName" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="siteID" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="siteArgument">Der Standortname oder die Websitebezeichner.</param>
+        <param name="siteName">Der Standardname für die Website.</param>
+        <param name="siteID">Ein eindeutiger Bezeichner für den Standort.</param>
+        <summary>Füllt der Sitename und die Website-ID, die basierend auf einer Website Argumentwert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `siteArgument` ist `null`, entspricht dem Standardnamen für die Website oder die Standard-Site-ID entspricht der `siteName` und `siteID` werden mit den Standardwerten für die Website aufgefüllt.  
+  
+ <xref:System.Web.Configuration.IConfigMapPath.ResolveSiteArgument%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

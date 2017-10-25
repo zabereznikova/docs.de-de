@@ -1,0 +1,6 @@
+<Namespace Name="System.EnterpriseServices.CompensatingResourceManager">
+  <Docs>
+    <summary>Die <see cref="N:System.EnterpriseServices.CompensatingResourceManager" /> Namespace enthält Klassen, mit denen Sie eine kompensierenden Ressourcen-Manager (CRM) in verwaltetem Code verwenden können. Ein CRM ist ein von COM+, die Ihnen das Einfügen von nicht transaktionalen Objekten in Microsoft Distributed Transaction Coordinator (DTC)-Transaktionen ermöglicht bereitgestellter Dienst. Obwohl es sich bei CRM nicht die Funktionen des vollständigen Ressourcen-Manager bereitgestellt werden, aber es strikten Unteilbarkeit von Transaktionen (alle oder nichts Verhalten) und Beständigkeit über das Wiederherstellungsprotokoll bereitgestellt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,1272 @@
+<Type Name="ComponentCommands" FullName="System.Windows.Input.ComponentCommands">
+  <TypeSignature Language="C#" Value="public static class ComponentCommands" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ComponentCommands extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.ComponentCommands" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Standardsatz von komponentenbezogenen Befehlen bereit, die über vordefinierte Schlüsseleingabegesten und <see cref="P:System.Windows.Input.RoutedUICommand.Text" />-Eigenschaften verfügen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Befehle in der <xref:System.Windows.Input.ComponentCommands> Klasse und Befehle in der anderen Befehl Bibliotheksklassen, z. B. <xref:System.Windows.Input.ApplicationCommands> und <xref:System.Windows.Input.NavigationCommands>, sollen einen Satz von allgemeinen Befehlen darstellen, die Anwendungsprogrammierer häufig stoßen.  Nur die Befehle darstellen, die Instanz von der <xref:System.Windows.Input.RoutedCommand> und nicht auf die Implementierungslogik für den Befehl. Die Implementierungslogik gebunden ist, an den Befehl über eine <xref:System.Windows.UIElement.CommandBindings%2A>. Z. B. wenn die <xref:System.Windows.Input.ComponentCommands.MoveLeft%2A> Befehl ausgeführt wird, auf ein Steuerelement (das Befehlsziel), die Logik, die führt die <xref:System.Windows.Input.ComponentCommands.MoveLeft%2A> Befehl möglicherweise nicht, sofern das Befehlsziel also der Anwendungs-Writer verantwortlich ist für das Schreiben der Logik, die bestimmt, wie das Befehlsziel verarbeitet den Befehl.  
+  
+ Viele Steuerelemente bieten Implementierungslogik, aber für viele der Befehle in der Befehlsbibliothek.  Z. B. die <xref:System.Windows.Controls.TextBox> Klasse stellt die Logik für die <xref:System.Windows.Input.ApplicationCommands.Paste%2A> Befehl <xref:System.Windows.Input.ApplicationCommands.Cut%2A> Befehl <xref:System.Windows.Input.ApplicationCommands.Copy%2A> Befehl, <xref:System.Windows.Input.ApplicationCommands.Undo%2A> Befehl, und <xref:System.Windows.Input.ApplicationCommands.Redo%2A> Befehl. Finden Sie in der Dokumentation zur Klasse für Weitere Informationen über bestimmte Steuerelementklassen.  
+  
+ Weitere Informationen über Befehle und die Befehle finden Sie unter [Befehle (Übersicht)](~/docs/framework/wpf/advanced/commanding-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ExtendSelectionDown">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ExtendSelectionDown { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ExtendSelectionDown" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.ExtendSelectionDown" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Auswahl nach unten erweitern“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>UMSCHALT + nach-unten  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Erweitern der Markierung nach unten  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass die Auswahl nach unten erweitert.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_ExtendSelectionDown"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="ExtendSelectionDown"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtendSelectionLeft">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ExtendSelectionLeft { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ExtendSelectionLeft" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.ExtendSelectionLeft" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Auswahl nach links erweitern“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>UMSCHALT + nach-links  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Erweitern der Auswahl nach links  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass die Auswahl auf der linken Seite erweitert wird.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_ExtendSelectionLeft"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="ExtendSelectionLeft"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtendSelectionRight">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ExtendSelectionRight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ExtendSelectionRight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.ExtendSelectionRight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Auswahl nach rechts erweitern“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>UMSCHALT + nach-rechts  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Erweitern der Auswahl nach rechts  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass die Auswahl nach rechts erweitert wird.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_ExtendSelectionRight"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="ExtendSelectionRight"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtendSelectionUp">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ExtendSelectionUp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ExtendSelectionUp" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.ExtendSelectionUp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Auswahl nach oben erweitern“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>UMSCHALT + nach-oben  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Auswahl nach oben erweitern  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass die Auswahl nach oben erweitern.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_ExtendSelectionUp"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="ExtendSelectionUp"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveDown">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveDown { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveDown" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.MoveDown" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Nach unten“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Nach-unten  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Nach unten verschieben  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass die Auswahl nach unten erweitert.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_MoveDown"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="MoveDown"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveFocusBack">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveFocusBack { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveFocusBack" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.MoveFocusBack" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Fokus nach hinten verschieben“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>STRG + nach-links  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Verschieben des Fokus wieder  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass die Auswahl nach hinten zu erweitern.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_MoveFocusBack"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="MoveFocusBack"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveFocusDown">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveFocusDown { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveFocusDown" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.MoveFocusDown" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Fokus nach unten verschieben“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>STRG + nach-unten  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Fokus nach unten verschieben  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt die Absicht zum Erweitern den Fokus nach unten zu verschieben.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_MoveFocusDown"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="MoveFocusDown"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveFocusForward">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveFocusForward { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveFocusForward" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.MoveFocusForward" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Fokus nach vorne verschieben“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>STRG + nach-rechts  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Fokus nach vorne verschieben  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass der Fokus nach vorne verschoben wird.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_MoveFocusForward"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="MoveFocusForward"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveFocusPageDown">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveFocusPageDown { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveFocusPageDown" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.MoveFocusPageDown" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Fokus eine Seite nach unten verschieben“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Strg + Bild-ab  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Verschieben des Fokus Bild-ab  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt die Absicht an, den Fokus eine Seite nach unten zu verschieben.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_MoveFocusPageDown"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="MoveFocusPageDown"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveFocusPageUp">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveFocusPageUp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveFocusPageUp" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.MoveFocusPageUp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Fokus eine Seite nach oben verschieben“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Strg + Bild  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Verschieben des Fokus Bild-auf  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt die Absicht an, den Fokus eine Seite nach oben zu verschieben.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_MoveFocusPageUp"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="MoveFocusPageUp"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveFocusUp">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveFocusUp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveFocusUp" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.MoveFocusUp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Fokus nach oben verschieben“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>STRG + nach-oben  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Fokus nach oben verschieben  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass den Fokus nach oben zu verschieben.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_MoveFocusUp"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="MoveFocusUp"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveLeft">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveLeft { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveLeft" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.MoveLeft" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Nach links verschieben“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Links  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Nach links verschieben  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass die Auswahl nach links verschoben wird.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_MoveLeft"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="MoveLeft"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveRight">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveRight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveRight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.MoveRight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl "Nach rechts" darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Richting  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Nach rechts verschieben  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass die Auswahl nach rechts verschoben wird.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_MoveRight"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="MoveRight"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToEnd">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveToEnd { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveToEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.MoveToEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Zum Ende verschieben“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Ende  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Ans Ende  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass die Auswahl bis zum letzten Element zu verschieben.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_MoveToEnd"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="MoveToEnd"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToHome">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveToHome { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveToHome" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.MoveToHome" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Zu Home verschieben“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Startseite  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Wechseln Sie zur Startseite  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass die Auswahl auf das erste Element zu verschieben.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_MoveToHome"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="MoveToHome"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToPageDown">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveToPageDown { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveToPageDown" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.MoveToPageDown" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Eine Seite nach unten verschieben“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Bild-ab  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Seite nach unten verschieben  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass die Auswahl auf eine Seite nach unten zu verschieben.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_MoveToPageDown"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="MoveToPageDown"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToPageUp">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveToPageUp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveToPageUp" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.MoveToPageUp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Eine Seite nach oben verschieben“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>PageUp  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Seite nach oben verschieben  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt die Absicht die Markierung um eine Seite nach oben zu verschieben.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_MoveToPageUp"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="MoveToPageUp"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveUp">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveUp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveUp" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.MoveUp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Nach oben“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Nach-oben  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Nach oben verschieben  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass die Auswahl nach oben zu verschieben.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_MoveUp"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="MoveUp"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollByLine">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ScrollByLine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ScrollByLine" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.ScrollByLine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Bildlauf pro Zeile“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Keine Tastenkombination definiert  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Bildlauf pro Zeile  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt die Absicht, durch eine angegebene Anzahl von Zeilen nach oben vertikal zu scrollen.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_ScrollByLine"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="ScrollByLine"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollPageDown">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ScrollPageDown { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ScrollPageDown" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.ScrollPageDown" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Bildlauf eine Seite nach unten“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Bild-ab  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Bildlauf eine Seite nach unten  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt die Absicht an, durch die entsprechende Seite vertikal nach unten zu blättern.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_ScrollPageDown"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="ScrollPageDown"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollPageLeft">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ScrollPageLeft { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ScrollPageLeft" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.ScrollPageLeft" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Bildlauf eine Seite nach links durchführen“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Keine Aktion definiert.  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Führen Sie einen Bildlauf eine Seite nach links  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt die Absicht an, führen Sie einen Bildlauf eine Seite nach links an.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_ScrollPageLeft"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="ScrollPageLeft"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollPageRight">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ScrollPageRight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ScrollPageRight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.ScrollPageRight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Bildlauf eine Seite nach rechts durchführen“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Keine Aktion definiert.  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Führen Sie einen Bildlauf eine Seite nach rechts  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt die Absicht an, führen Sie einen Bildlauf eine Seite nach rechts.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_ScrollPageRight"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="ScrollPageRight"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollPageUp">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ScrollPageUp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ScrollPageUp" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.ScrollPageUp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Bildlauf eine Seite nach oben“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>PageUp  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Bildlauf eine Seite nach oben  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt die Absicht an, durch die entsprechende Seite vertikal nach oben zu blättern.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_ScrollPageUp"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="ScrollPageUp"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectToEnd">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectToEnd { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectToEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.SelectToEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Markieren bis Ende“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Umschalt + Ende  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Markieren bis Ende  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass die Elemente aus dem aktuellen Element bis zum letzten Element auszuwählen.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_SelectToEnd"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="SelectToEnd"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectToHome">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectToHome { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectToHome" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.SelectToHome" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Markieren bis Home“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>UMSCHALT + POS1  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Wählen Sie zur Startseite  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt die Absicht zum Erweitern des aktuellen Elements auf das erste Element der Elemente auswählen.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_SelectToHome"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="SelectToHome"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectToPageDown">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectToPageDown { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectToPageDown" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.SelectToPageDown" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Markieren bis eine Seite nach unten“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Umschalt + Bild-ab  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Wählen Sie eine Seite nach unten  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt die Absicht an, wählen Sie in das aktuelle Element auf eine Seite nach unten an.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_SelectToPageDown"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="SelectToPageDown"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectToPageUp">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectToPageUp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectToPageUp" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.SelectToPageUp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der den Befehl „Markieren bis eine Seite nach oben“ darstellt.</summary>
+        <value>Der Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>Umschalt + Bild  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Wählen Sie eine Seite nach oben  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt die Absicht an, wählen Sie in das aktuelle Element um eine Seite an.  
+  
+ Es ist nicht notwendigerweise einer wirklichen Implementierung reagieren auf den Befehl für ein angegebenes Objekt. in vielen Fällen ist die Implementierung als Antwort auf den Befehl der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_SelectToPageUp"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="SelectToPageUp"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

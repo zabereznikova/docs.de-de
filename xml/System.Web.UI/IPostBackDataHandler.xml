@@ -1,0 +1,104 @@
+<Type Name="IPostBackDataHandler" FullName="System.Web.UI.IPostBackDataHandler">
+  <TypeSignature Language="C#" Value="public interface IPostBackDataHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPostBackDataHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IPostBackDataHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert Methoden, die ASP.NET-Serversteuerelemente implementieren müssen, um Postbackdaten automatisch zu laden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie implementieren müssen die <xref:System.Web.UI.IPostBackDataHandler> Schnittstelle, wenn ein Serversteuerelement erstellen, die Formulardaten überprüfen soll, die vom Client an den Server zurückgesendet wird. Der Vertrag, den diese Schnittstelle definiert ermöglicht ein Serversteuerelement bestimmen, ob dessen Status aufgrund des Postbacks geändert werden sollen, und klicken Sie auf die entsprechenden Ereignisse auszulösen. Weitere Informationen finden Sie unter [Server Event Handling in ASP.NET Web Forms-Seiten](http://msdn.microsoft.com/library/765bfc89-33ee-4d0d-bbe6-3b172c06def9).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, einen benutzerdefinierter Text im Feld Serversteuerelement, implementiert die <xref:System.Web.UI.IPostBackDataHandler> Schnittstelle. Die <xref:System.Web.UI.WebControls.TextBox.Text%2A> Eigenschaft wird aufgrund des Postbacks geändert, und löst das Serversteuerelement aus einem <xref:System.Web.UI.WebControls.TextBox.TextChanged> Ereignis nach Postbackdaten geladen wurde.  
+  
+ [!code-csharp[Classic IPostBackDataHandler Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic IPostBackDataHandler Example/CS/source.cs#1)]
+ [!code-vb[Classic IPostBackDataHandler Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic IPostBackDataHandler Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="LoadPostData">
+      <MemberSignature Language="C#" Value="public bool LoadPostData (string postDataKey, System.Collections.Specialized.NameValueCollection postCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool LoadPostData(string postDataKey, class System.Collections.Specialized.NameValueCollection postCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IPostBackDataHandler.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="postDataKey" Type="System.String" />
+        <Parameter Name="postCollection" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="postDataKey">Die Schlüsselkennung für das Steuerelement.</param>
+        <param name="postCollection">Die Sammlung aller eingehenden Namenswerte.</param>
+        <summary>Bei der Implementierung durch eine Klasse Postbackdaten Prozesse für ein ASP.NET-Serversteuerelement.</summary>
+        <returns>
+          <see langword="true" />, wenn der Zustand des Serversteuerelements aufgrund des Postbacks geändert wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das ASP.NET-Seitenframework verfolgt alle Serversteuerelemente, die zurückgeben `true` an diesen Methodenaufruf, und ruft dann die <xref:System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent%2A> -Methode für diese Steuerelemente.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, ein Serversteuerelement, das eine Version des implementiert die <xref:System.Web.UI.IPostBackDataHandler.LoadPostData%2A> Methode.  
+  
+ [!code-csharp[Classic IPostBackDataHandler.LoadPostData Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic IPostBackDataHandler.LoadPostData Example/CS/source.cs#1)]
+ [!code-vb[Classic IPostBackDataHandler.LoadPostData Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic IPostBackDataHandler.LoadPostData Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaisePostDataChangedEvent">
+      <MemberSignature Language="C#" Value="public void RaisePostDataChangedEvent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RaisePostDataChangedEvent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bei der Implementierung durch eine Klasse signalisiert das Serversteuerelement an die ASP.NET-Anwendung zu benachrichtigen, die dass der Zustand des Steuerelements geändert wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent%2A> Methode löst alle Änderungsereignisse für das Serversteuerelement, implementiert die <xref:System.Web.UI.IPostBackDataHandler> Schnittstelle.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein Steuerelement implementieren, kann die <xref:System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent%2A> Methode.  
+  
+ [!code-csharp[Classic IPostBackDataHandler.RaisePostDataChangedEvent Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic IPostBackDataHandler.RaisePostDataChangedEvent Example/CS/source.cs#1)]
+ [!code-vb[Classic IPostBackDataHandler.RaisePostDataChangedEvent Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic IPostBackDataHandler.RaisePostDataChangedEvent Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

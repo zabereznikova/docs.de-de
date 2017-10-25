@@ -1,0 +1,972 @@
+<Type Name="DesignSurface" FullName="System.ComponentModel.Design.DesignSurface">
+  <TypeSignature Language="C#" Value="public class DesignSurface : IDisposable, IServiceProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DesignSurface extends System.Object implements class System.IDisposable, class System.IServiceProvider" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.DesignSurface" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IServiceProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Security.SecurityCritical</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Benutzeroberfläche zum Entwerfen von Komponenten an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.DesignSurface> Klasse implementiert, was der Benutzer als Designer wahrnimmt. <xref:System.ComponentModel.Design.DesignSurface>ist die Benutzeroberfläche den Benutzer bearbeitet werden, um Entwurfszeitfunktionen zu ändern. <xref:System.ComponentModel.Design.DesignSurface>Stellt eine vollständig eigenständige Entwurfsoberfläche bereit.  
+  
+ Die <xref:System.ComponentModel.Design.DesignSurface> Klasse als eigenständiger Designer verwendet werden kann, oder es gekoppelt werden kann, mit der <xref:System.ComponentModel.Design.DesignSurfaceManager> Klasse, um eine allgemeine Implementierung für eine Anwendung bereitstellen, die mehrere hosts <xref:System.ComponentModel.Design.DesignSurface> Objekte.  
+  
+ Die <xref:System.ComponentModel.Design.DesignSurface> -Klasse kann eigenständig verwendet werden, oder der Benutzer kann eine neue Klasse ableiten und erweitern Sie das Verhalten.  
+  
+ Die <xref:System.ComponentModel.Design.DesignSurface> -Klasse stellt mehrere Entwurfszeitdienste automatisch bereit. Die <xref:System.ComponentModel.Design.DesignSurface> Klasse fügt alle seine Dienste in seinem Konstruktor hinzu. Die meisten Dienste können überschrieben werden, indem sie in der geschützten ersetzt <xref:System.ComponentModel.Design.DesignSurface.ServiceContainer%2A> Eigenschaft. Um einen Dienst zu ersetzen, überschreiben Sie den Konstruktor aufrufen, Basis und Änderungen über das geschützte <xref:System.ComponentModel.Design.DesignSurface.ServiceContainer%2A> Eigenschaft. Alle Dienste, die dem Dienstcontainer hinzugefügt werden und die implementieren <xref:System.IDisposable> werden verworfen, wenn die Entwurfsoberfläche verworfen wird. Der Standardsatz von ersetzbaren Dienste, von denen die <xref:System.ComponentModel.Design.DesignSurface> Klasse bereitstellt, die in der folgenden Tabelle gezeigt wird.  
+  
+|Dienst|Beschreibung|  
+|-------------|-----------------|  
+|<xref:System.ComponentModel.Design.IExtenderProviderService>|Ermöglicht es Objekten, die nicht Teil des Containers komponentenauflistung eigene Extenderanbieter bereitgestellt sind.|  
+|<xref:System.ComponentModel.Design.IExtenderListService>|Verwendet von <xref:System.ComponentModel.TypeDescriptor> um eine Liste der Extenderanbieter abzurufen. Bei diesem Dienst können Extenderanbieter außerhalb der Container befinden.|  
+|<xref:System.ComponentModel.Design.ITypeDescriptorFilterService>|Stellt Designermetadaten-Hooks bereit. Dies ist die Hauptschnittstelle für die Metadaten zu filtern.|  
+|<xref:System.ComponentModel.Design.ISelectionService>|Bietet eine Möglichkeit, die Komponenten im Designer auswählen.|  
+|<xref:System.ComponentModel.Design.IReferenceService>|Bietet eine Möglichkeit, erhalten einen Namen für Objekte, selbst wenn diese Objekte nicht platziert werden.|  
+|<xref:System.ComponentModel.Design.DesignSurface>|Bietet die Entwurfsoberfläche selbst als Dienst.|  
+|<xref:System.ComponentModel.Design.DesignerOptionService>|Stellt eine Basisklasse zum Abrufen und Festlegen von Optionswerten für einen Designer bereit.|  
+  
+ Die folgende Tabelle zeigt nicht austauschbare standardmäßig bereitgestellten Dienste.  
+  
+|Dienst|Beschreibung|  
+|-------------|-----------------|  
+|<xref:System.ComponentModel.Design.IComponentChangeService>|Löst Ereignisse aus, wie Komponenten geändert werden.|  
+|<xref:System.ComponentModel.Design.IDesignerHost>|Steuert den Zugriff auf Typen, Dienste und Transaktionen. Master-Schnittstelle für den Designer.|  
+|<xref:System.ComponentModel.IContainer>|Besitzt den Satz von Komponenten, die entwickelt werden. Jeder Designer verfügt über eine <xref:System.ComponentModel.IContainer> , die die Komponenten besitzt.|  
+|<xref:System.ComponentModel.Design.IServiceContainer>|Leitet sich von <xref:System.IServiceProvider> und bietet eine Möglichkeit zum Hinzufügen und Entfernen von Diensten aus dem Designer.|  
+  
+ Zusätzlich zu diesen Diensten die <xref:System.ComponentModel.Design.DesignSurface> Klasse bietet auch einen einzelnen Dienst, der über eine Komponente-Website verfügbar ist. Dieser Dienst ist für jede Komponente eindeutig. Die folgende Tabelle zeigt die Dienste, die nicht ersetzt werden können.  
+  
+|Dienst|Beschreibung|  
+|-------------|-----------------|  
+|<xref:System.ComponentModel.Design.IDictionaryService>|Ein generisches Wörterbuch von Schlüssel/Wert-Paaren, die verwendet werden kann, um beliebige Daten zu einer Komponente zu speichern.|  
+|<xref:System.ComponentModel.INestedContainer>|Ein Container, der eine Komponente, für die zusätzliche untergeordnete Komponenten zum Designer hinzufügen kann. Diese Komponenten werden Teil der Entwurfsoberfläche angezeigt, aber nicht bei der Serialisierung einbezogen werden. Dies ist hilfreich, wenn Sie ein Steuerelement entwerfen müssen, können einen Bereich von sich selbst in einem Designer verfügbar machen, werden, möchten, aber nicht möchten, dass die Region, in der Serialisierung teilzunehmen.|  
+  
+ Zusätzlich zu <xref:System.ComponentModel.ISite>, der Standort auch die folgenden Schnittstellen implementiert.  
+  
+> [!CAUTION]
+>  Überprüfen Sie das Vorhandensein dieser Schnittstellen, anstatt die willkürliche Umwandlung verwendet werden, da andere Website Implementierungen nicht implementieren können.  
+  
+|Dienst|Beschreibung|  
+|-------------|-----------------|  
+|<xref:System.ComponentModel.Design.IServiceContainer>|Bietet eine Möglichkeit, um den Container standortspezifische Dienste zu erhalten. Beispielsweise <xref:System.ComponentModel.Design.IDictionaryService> ist ein standortspezifische-Dienst. Bei diesem Dienst können Sie zusätzliche sitespezifische Dienste hinzufügen.|  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.NamedPermissionSet">für Vollzugriff auf Systemressourcen verfügbar sind. "Demand" Werte: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />, <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Zugeordneten Zustand:</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignSurface ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignSurface.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Design.DesignSurface" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.ComponentModel.Design.IDesignerHost" /> angefügt, um die <see cref="T:System.ComponentModel.Design.DesignSurface" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignSurface (IServiceProvider parentProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IServiceProvider parentProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignSurface.#ctor(System.IServiceProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="parentProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="parentProvider">Der Dienstanbieter übergeordneten oder <see langword="null" /> , wenn kein übergeordnetes Element zum Auflösen der Dienste verwendet.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Design.DesignSurface" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `parentProvide` vorhanden ist, Designern in der Oberfläche können Dienste von der Anwendung abgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.ComponentModel.Design.IDesignerHost" /> angefügt, um die <see cref="T:System.ComponentModel.Design.DesignSurface" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignSurface (Type rootComponentType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type rootComponentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignSurface.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rootComponentType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="rootComponentType">Der Typ des zu erstellenden Stammkomponente.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Design.DesignSurface" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Verwendung der <xref:System.ComponentModel.Design.DesignSurface.%23ctor%2A> -Konstruktor erstellt ein einfaches Designerladeprogramm, die wiederum eine Komponente des angegebenen Typs erstellt und beendet dann den Ladevorgang. Dies ist eine einfache Methode zum Erstellen von eines Designers, unter der Annahme, die alle extern Speichern des Zustands durchgeführt werden. Intern ruft diese <xref:System.ComponentModel.Design.DesignSurface.BeginLoad%2A> und übergibt den Stammtyp für die Komponente.  
+  
+> [!NOTE]
+>  Die <xref:System.ComponentModel.Design.DesignSurface.%23ctor%2A> Überladung ist nicht betroffen von <xref:System.Windows.Forms.Design.DesignerOptions>. Die <xref:System.Windows.Forms.Design.DesignerOptions> muss im Dienstcontainer vor dem Laden der Entwurfsoberfläche angezeigt. Wenn benötigt Zugriff auf <xref:System.Windows.Forms.Design.DesignerOptions>, rufen Sie den leeren Konstruktor, Hinzufügen der <xref:System.Windows.Forms.Design.DesignerOptions> auf die <xref:System.ComponentModel.Design.DesignSurface.ServiceContainer%2A> , und rufen Sie <xref:System.ComponentModel.Design.DesignSurface.BeginLoad%2A> mit `rootComponentType`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="rootComponent" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.ComponentModel.Design.IDesignerHost" /> angefügt, um die <see cref="T:System.ComponentModel.Design.DesignSurface" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignSurface (IServiceProvider parentProvider, Type rootComponentType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IServiceProvider parentProvider, class System.Type rootComponentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignSurface.#ctor(System.IServiceProvider,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="parentProvider" Type="System.IServiceProvider" />
+        <Parameter Name="rootComponentType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="parentProvider">Der Dienstanbieter übergeordneten oder <see langword="null" /> , wenn kein übergeordnetes Element zum Auflösen der Dienste verwendet.</param>
+        <param name="rootComponentType">Der Typ des zu erstellenden Stammkomponente.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Design.DesignSurface" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mithilfe der <xref:System.ComponentModel.Design.DesignSurface.%23ctor%2A> Konstruktor erstellt ein einfaches Designerladeprogramm, die eine Komponente des angegebenen Typs erstellt und anschließend den Ladevorgang beendet. Dies ist eine einfache Methode zum Erstellen von eines Designers, unter der Annahme, die alle extern Speichern des Zustands durchgeführt werden. Intern ruft diese <xref:System.ComponentModel.Design.DesignSurface.BeginLoad%2A> und übergibt den Stammtyp für die Komponente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="rootComponent" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.ComponentModel.Design.IDesignerHost" /> angefügt, um die <see cref="T:System.ComponentModel.Design.DesignSurface" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginLoad">
+      <MemberSignature Language="C#" Value="public void BeginLoad (System.ComponentModel.Design.Serialization.DesignerLoader loader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void BeginLoad(class System.ComponentModel.Design.Serialization.DesignerLoader loader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignSurface.BeginLoad(System.ComponentModel.Design.Serialization.DesignerLoader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="loader" Type="System.ComponentModel.Design.Serialization.DesignerLoader" />
+      </Parameters>
+      <Docs>
+        <param name="loader">Das Designerladeprogramm zum Laden des Designers verwendet werden soll.</param>
+        <summary>Startet den Ladevorgang mit dem angegebenen Designerladeprogramm.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Designer laden kann asynchron sein, sodass das Laden weiterhin ausgeführt, nachdem dieser Aufruf zurückgegeben wurde. Fügen Sie einen Ereignishandler an das <xref:System.ComponentModel.Design.IDesignerHost.LoadComplete> Ereignis benachrichtigt werden, wenn die Entwurfsoberfläche Laden abgeschlossen wurde.  
+  
+ Nach dem <xref:System.ComponentModel.Design.DesignSurface.BeginLoad%2A> wird aufgerufen, Sie können sofort abrufen, die Ansicht für den Designer, da-Designer-Ladeprogramme mindestens die Stammkomponente bereitstellen müssen, wenn Sie asynchron geladen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="loader" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.ComponentModel.Design.IDesignerHost" /> angefügt, um die <see cref="T:System.ComponentModel.Design.DesignSurface" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginLoad">
+      <MemberSignature Language="C#" Value="public void BeginLoad (Type rootComponentType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void BeginLoad(class System.Type rootComponentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignSurface.BeginLoad(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rootComponentType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="rootComponentType">Der Typ der Komponente im Entwurfsmodus erstellen.</param>
+        <summary>Startet den Ladevorgang.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `rootComponentType` angegeben wird, eine Standard-Designer-Ladeprogramm, die einfach eine Instanz erstellt `rootComponentType` verwendet werden. Designer laden kann asynchron sein, sodass das Laden weiterhin ausgeführt, nachdem dieser Aufruf zurückgegeben wurde. Fügen Sie einen Ereignishandler an das <xref:System.ComponentModel.Design.IDesignerHost.LoadComplete> Ereignis benachrichtigt werden, wenn die Entwurfsoberfläche Laden abgeschlossen wurde.  
+  
+ Nach dem <xref:System.ComponentModel.Design.DesignSurface.BeginLoad%2A> wird aufgerufen, Sie können sofort abrufen, die Ansicht für den Designer, da-Designer-Ladeprogramme mindestens die Stammkomponente bereitstellen müssen, wenn Sie asynchron geladen.  
+  
+> [!NOTE]
+>  Die <xref:System.ComponentModel.Design.DesignSurface.BeginLoad%2A> Methode erstellt eine Instanz des Komponententyps und initialisiert einen Designer für diese Instanz. Die <xref:System.ComponentModel.Design.DesignSurface.Loaded> Ereignis wird ausgelöst, bevor diese Methode zurückgibt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="rootComponentType" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.ComponentModel.Design.IDesignerHost" /> angefügt, um die <see cref="T:System.ComponentModel.Design.DesignSurface" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ComponentContainer">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.IContainer ComponentContainer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.IContainer ComponentContainer" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.DesignSurface.ComponentContainer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IContainer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.ComponentModel.IContainer" /> Implementierung innerhalb der Entwurfsoberfläche angezeigt.</summary>
+        <value>Die <see cref="T:System.ComponentModel.IContainer" /> Implementierung innerhalb der Entwurfsoberfläche angezeigt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.DesignSurface.ComponentContainer%2A> Eigenschaft enthält alle Objekte, die derzeit im Entwurfsmodus befinden. Wenn Komponenten hinzugefügt werden <xref:System.ComponentModel.Design.DesignSurface.ComponentContainer%2A>, deren Designer, sofern vorhanden, wird geladen. Die Komponente ist mit einem Standort platziert, die uneingeschränkten Zugriff auf die Entwurfsoberfläche bereitstellt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.ComponentModel.Design.IDesignerHost" /> angefügt, um die <see cref="T:System.ComponentModel.Design.DesignSurface" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateComponent">
+      <MemberSignature Language="C#" Value="protected virtual System.ComponentModel.IComponent CreateComponent (Type componentType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.ComponentModel.IComponent CreateComponent(class System.Type componentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignSurface.CreateComponent(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("CreateComponent has been replaced by CreateInstance and will be removed after Beta2")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IComponent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="componentType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="componentType">Der Typ des zu erstellenden Komponente.</param>
+        <summary>Erstellt eine Instanz einer Komponente.</summary>
+        <returns>Die neu erstellte Komponente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.DesignSurface.CreateComponent%2A> Methode wird aufgerufen, indem Sie der Entwurfsoberfläche <xref:System.ComponentModel.Design.IDesignerHost.CreateComponent%2A> Methode zum Erstellen einer Instanz einer Komponente. Die Komponente soll erstellt und dem öffentlichen Container auf der Entwurfsoberfläche hinzugefügt werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="componentType" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.ComponentModel.Design.IDesignerHost" /> angefügt, um die <see cref="T:System.ComponentModel.Design.DesignSurface" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDesigner">
+      <MemberSignature Language="C#" Value="protected virtual System.ComponentModel.Design.IDesigner CreateDesigner (System.ComponentModel.IComponent component, bool rootDesigner);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.ComponentModel.Design.IDesigner CreateDesigner(class System.ComponentModel.IComponent component, bool rootDesigner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignSurface.CreateDesigner(System.ComponentModel.IComponent,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.IDesigner</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+        <Parameter Name="rootDesigner" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die Komponente, für die der Designer erstellt werden soll.</param>
+        <param name="rootDesigner">
+          <see langword="true" />Um einen Stammdesigner zu erstellen; <see langword="false" /> einen normalen Designer erstellen.</param>
+        <summary>Einen Designer erstellt, wenn der Container eine Komponente hinzugefügt wird.</summary>
+        <returns>Eine Instanz des angeforderten Designers oder <see langword="null" /> Wenn kein entsprechender Designer gefunden werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.DesignSurface.CreateDesigner%2A> Methode wird aufgerufen, indem Sie der Entwurfsoberfläche <xref:System.ComponentModel.IContainer> Wenn der Container eine Komponente hinzugefügt wird. Diese Methode wird ein Designer erstellt, aber nicht initialisiert. Wenn es zurückgibt, wird der Designer vom Container initialisiert.  
+  
+ <xref:System.ComponentModel.Design.DesignSurface.CreateDesigner%2A>kann zwei verschiedene Typen von Designern erstellen: Stammdesigner und normale Designer. Einen Stammdesigner handelt es sich um einen Designer für die Stammkomponente auf der Entwurfsoberfläche, gemäß, die Definition die erste Komponente, die dem Container nicht hinzugefügt ist. Stammdesigner unterscheiden sich von normalen Designern, da verantwortlich für die Benutzeroberfläche für den Endbenutzer angezeigt werden. Stammdesigner koordiniert werden i. d. r. mit dem Rest des Designern auf einer Entwurfsoberfläche diese Schnittstelle bereitstellen.  
+  
+ Die standardmäßige Implementierung dieser Methode delegiert an <xref:System.ComponentModel.TypeDescriptor>, und übergeben Sie <xref:System.ComponentModel.Design.IRootDesigner> als Designertyp für Stamm-Designer oder <xref:System.ComponentModel.Design.IDesigner> für normale Designer. Sie können diese Methode, um einen bestimmten Typ von Designer anfordern überschreiben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="component" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.ComponentModel.Design.IDesignerHost" /> angefügt, um die <see cref="T:System.ComponentModel.Design.DesignSurface" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstance">
+      <MemberSignature Language="C#" Value="protected virtual object CreateInstance (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance object CreateInstance(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignSurface.CreateInstance(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der zu erstellende Typ.</param>
+        <summary>Erstellt eine Instanz des angegebenen Typs.</summary>
+        <returns>Das neu erstellte Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `type` ist ein <xref:System.ComponentModel.IComponent>, <xref:System.ComponentModel.Design.DesignSurface.CreateInstance%2A> sucht einen Konstruktor des Typs <xref:System.ComponentModel.IContainer> zuerst, gefolgt von einem leeren Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.ComponentModel.Design.IDesignerHost" /> angefügt, um die <see cref="T:System.ComponentModel.Design.DesignSurface" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNestedContainer">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.INestedContainer CreateNestedContainer (System.ComponentModel.IComponent owningComponent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.INestedContainer CreateNestedContainer(class System.ComponentModel.IComponent owningComponent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignSurface.CreateNestedContainer(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.INestedContainer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owningComponent" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="owningComponent">Die Komponente, die die geschachtelten Container verwaltet werden.</param>
+        <summary>Erstellt einen Container für die Schachtelung von Steuerelementen oder Komponenten geeignet ist.</summary>
+        <returns>Die geschachtelten Container.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Hinzufügen einer Komponente zu einem geschachtelten Container Designer erstellt und befördert geeignet für alle Dienste auf der Entwurfsoberfläche verfügbar. Komponenten, die geschachtelte Container hinzugefügt bei der Serialisierung nicht einbezogen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="owningComponent" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.ComponentModel.Design.IDesignerHost" /> angefügt, um die <see cref="T:System.ComponentModel.Design.DesignSurface" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNestedContainer">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.INestedContainer CreateNestedContainer (System.ComponentModel.IComponent owningComponent, string containerName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.INestedContainer CreateNestedContainer(class System.ComponentModel.IComponent owningComponent, string containerName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignSurface.CreateNestedContainer(System.ComponentModel.IComponent,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.INestedContainer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owningComponent" Type="System.ComponentModel.IComponent" />
+        <Parameter Name="containerName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="owningComponent">Die Komponente, die die geschachtelten Container verwaltet werden.</param>
+        <param name="containerName">Eine weitere Namen für die geschachtelten Container.</param>
+        <summary>Erstellt einen Container für die Schachtelung von Steuerelementen oder Komponenten geeignet ist.</summary>
+        <returns>Die geschachtelten Container.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Hinzufügen einer Komponente zu einem geschachtelten Container Designer erstellt und befördert geeignet für alle Dienste auf der Entwurfsoberfläche verfügbar. Komponenten, die geschachtelte Container hinzugefügt bei der Serialisierung nicht einbezogen.  
+  
+ Sie bieten einen zusätzlichen Namen für die <xref:System.ComponentModel.Design.DesignSurface.CreateNestedContainer%2A> Methode durch die Übergabe des Werts in `containerName`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="owningComponent" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.ComponentModel.Design.IDesignerHost" /> angefügt, um die <see cref="T:System.ComponentModel.Design.DesignSurface" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignSurface.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die von der <see cref="T:System.ComponentModel.Design.DesignSurface" /> verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die öffentliche <xref:System.ComponentModel.Design.DesignSurface.Dispose%2A> -Methode folgt den Standard <xref:System.IDisposable> Muster. Beim Aufrufen dieser Methode zerstört die Entwurfsoberfläche. Die geschützte Version dieser Methode ist `virtual` und folgt dem normalen <xref:System.IDisposable> Muster.  
+  
+> [!NOTE]
+>  Da <xref:System.ComponentModel.Design.DesignSurface> keinen systemeigenen Code zum Bereinigen, er verfügt nicht über einen Finalizer, Aufrufe <xref:System.ComponentModel.Design.DesignSurface.Dispose%28System.Boolean%29>. Wenn Sie aufrufen müssen <xref:System.ComponentModel.Design.DesignSurface.Dispose%28System.Boolean%29>, Sie müssen einen Finalizer selbst hinzufügen.  
+  
+ Rufen Sie <xref:System.ComponentModel.Design.DesignSurface.Dispose%2A> auf, wenn Sie <xref:System.ComponentModel.Design.DesignSurface> nicht mehr benötigen. Die <xref:System.ComponentModel.Design.DesignSurface.Dispose%2A>-Methode bewirkt, dass <xref:System.ComponentModel.Design.DesignSurface> nicht mehr verwendet werden kann. Nach dem Aufruf <xref:System.ComponentModel.Design.DesignSurface.Dispose%2A>, müssen Sie alle Verweise auf Freigeben der <xref:System.ComponentModel.Design.DesignSurface> , damit der Garbage Collector den Arbeitsspeicher freigeben kann, die die <xref:System.ComponentModel.Design.DesignSurface> belegt wurde. Weitere Informationen finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Rufen Sie immer <xref:System.ComponentModel.Design.DesignSurface.Dispose%2A> auf, bevor Sie den letzten Verweis auf das <xref:System.ComponentModel.Design.DesignSurface> freigeben. Andernfalls bleiben die verwendeten Ressourcen reserviert, bis die Garbage Collection die <xref:System.ComponentModel.Design.DesignSurface>-Methode des `Finalize`-Objekts aufruft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignSurface.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von der <see cref="T:System.ComponentModel.Design.DesignSurface" /> verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die öffentliche <xref:System.ComponentModel.Design.DesignSurface.Dispose> -Methode folgt den Standard <xref:System.IDisposable> Muster. Beim Aufrufen dieser Methode zerstört die Entwurfsoberfläche. Die geschützte Version dieser Methode ist `virtual` und folgt dem normalen <xref:System.IDisposable> Muster.  
+  
+> [!NOTE]
+>  Da <xref:System.ComponentModel.Design.DesignSurface> keinen systemeigenen Code zum Bereinigen, er verfügt nicht über einen Finalizer, Aufrufe <xref:System.ComponentModel.Design.DesignSurface.Dispose%2A>. Wenn Sie aufrufen müssen <xref:System.ComponentModel.Design.DesignSurface.Dispose%2A>, Sie müssen einen Finalizer selbst hinzufügen.  
+  
+ Diese Methode wird aufgerufen, der öffentlich `Dispose()` Methode und die <xref:System.Object.Finalize%2A> Methode. `Dispose()`Ruft die geschützte `Dispose(Boolean)` Methode mit dem `disposing` Parametersatz auf `true`. <xref:System.Object.Finalize%2A>Ruft `Dispose` mit `disposing` festgelegt `false`.  
+  
+ Wenn die `disposing` Parameter ist "true", gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte, die von diesem <xref:System.ComponentModel.Design.DesignSurface> Verweise. Diese Methode ruft die `Dispose()`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Zum Überschreiben <see langword="Dispose(Boolean)" /> Achten Sie darauf, dass Sie nicht auf Objekte verweisen, die einen früheren Aufruf freigegeben wurden <see langword="Dispose" />. Weitere Informationen zum Implementieren <see langword="Dispose(Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see langword="Dispose" /> und <see cref="M:System.Object.Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Disposed">
+      <MemberSignature Language="C#" Value="public event EventHandler Disposed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Disposed" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.Design.DesignSurface.Disposed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Entwurfsoberfläche verworfen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Oberfläche wird nur freigegeben, wenn die öffentliche <xref:System.ComponentModel.Design.DesignSurface.Dispose%2A> Methode <xref:System.ComponentModel.Design.DesignSurface> aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DtelLoading">
+      <MemberSignature Language="C#" Value="public bool DtelLoading { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DtelLoading" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.DesignSurface.DtelLoading" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die **während der Entwurfszeit-Fehlerliste** wird geladen.</summary>
+        <value>
+          <see langword="true" />Wenn die **während der Entwurfszeit-Fehlerliste** laden, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignSurface.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Serialisiert die Änderungen auf die Entwurfsoberfläche.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.DesignSurface.Flush%2A> Methode kann aufgerufen werden, um Änderungen an der Entwurfsoberfläche auf das Serialisierungsprogramm mithilfe von Push übertragen. Dadurch wird sichergestellt, dass die Entwurfsoberfläche und den serialisierten Zustand synchronisiert werden. Die tatsächliche Implementierung dieser Methode wird in der Entwurfsoberfläche zugeordnete Designerladeprogramm weitergeleitet. Das Designerladeprogramm Änderungen erst verzögern möchten <xref:System.ComponentModel.Design.DesignSurface.Flush%2A> aufgerufen wird, oder sie können die serialisierten Daten mit benutzeränderungen für alle auf dem neuesten Stand zu halten. Die <xref:System.ComponentModel.Design.DesignSurface.Flush%2A> Methode wird sichergestellt, dass unabhängig von der Modell-Designer-Ladeprogramm entscheidet sich für die Verwendung der serialisierte Status mit der tatsächlichen Entwurfsoberfläche synchronisiert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flushed">
+      <MemberSignature Language="C#" Value="public event EventHandler Flushed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Flushed" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.Design.DesignSurface.Flushed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein Aufruf der <see cref="M:System.ComponentModel.Design.DesignSurface.Flush" /> Methode <see cref="T:System.ComponentModel.Design.DesignSurface" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Designerladeprogramm wird zuerst geleert und dann die <xref:System.ComponentModel.Design.DesignSurface.Flushed> Ereignis wird ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetService">
+      <MemberSignature Language="C#" Value="public object GetService (Type serviceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetService(class System.Type serviceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignSurface.GetService(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">Der Typ des abzurufenden Diensts.</param>
+        <summary>Ruft einen Dienst aus dem Dienstcontainer ab.</summary>
+        <returns>Ein Objekt, das implementiert oder eine abgeleitete Klasse, <paramref name="serviceType" />, oder <see langword="null" /> , wenn der Dienst nicht im Dienstcontainer vorhanden ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.DesignSurface.GetService%2A> Methode ruft einen Dienst in der Entwurfsoberfläche Dienstcontainer ab. Darüber hinaus leitet diese an alle Dienstanbieter, der auf die Entwurfsoberfläche, die zur Entwurfszeit zugewiesen wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLoaded">
+      <MemberSignature Language="C#" Value="public bool IsLoaded { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLoaded" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.DesignSurface.IsLoaded" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Entwurfsoberfläche gerade geladen ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Entwurfsoberfläche ist derzeit geladen; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Loaded">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.Design.LoadedEventHandler Loaded;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.Design.LoadedEventHandler Loaded" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.Design.DesignSurface.Loaded" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.LoadedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn das Laden des Designers abgeschlossen wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.DesignSurface.Loaded> Ereignis wird für erfolgreich laden als auch nicht erfolgreichen. Wenn Code in diesem Ereignishandler eine Ausnahme auslöst, wird der Designer entladen.  
+  
+ Die <xref:System.ComponentModel.Design.LoadedEventArgs> Objekt kann verwendet werden, um zu bestimmen, ob der Ladevorgang erfolgreich, und sie bieten auch eine Liste von Fehlern, die während des Auslastungstests aufgetreten sind.  
+  
+> [!NOTE]
+>  Für erfolgreich lädt, können Fehler auftreten, vorausgesetzt, dass das Serialisierungssystem Fehler tolerieren kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadErrors">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection LoadErrors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection LoadErrors" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.DesignSurface.LoadErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine Auflistung von laden, Fehler oder eine "void" Auflistung zurück.</summary>
+        <value>Ein <see cref="T:System.Collections.ICollection" /> Laden von Fehlern.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Loading">
+      <MemberSignature Language="C#" Value="public event EventHandler Loading;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Loading" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.Design.DesignSurface.Loading" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Designer geladen werden soll.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLoaded">
+      <MemberSignature Language="C#" Value="protected virtual void OnLoaded (System.ComponentModel.Design.LoadedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnLoaded(class System.ComponentModel.Design.LoadedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignSurface.OnLoaded(System.ComponentModel.Design.LoadedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.ComponentModel.Design.LoadedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.ComponentModel.Design.LoadedEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.ComponentModel.Design.DesignSurface.Loaded" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLoading">
+      <MemberSignature Language="C#" Value="protected virtual void OnLoading (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnLoading(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignSurface.OnLoading(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.ComponentModel.Design.DesignSurface.Loading" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnUnloaded">
+      <MemberSignature Language="C#" Value="protected virtual void OnUnloaded (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnUnloaded(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignSurface.OnUnloaded(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.ComponentModel.Design.DesignSurface.Unloaded" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnUnloading">
+      <MemberSignature Language="C#" Value="protected virtual void OnUnloading (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnUnloading(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignSurface.OnUnloading(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.ComponentModel.Design.DesignSurface.Unloading" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnViewActivate">
+      <MemberSignature Language="C#" Value="protected virtual void OnViewActivate (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnViewActivate(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignSurface.OnViewActivate(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.ComponentModel.Design.DesignSurface.ViewActivated" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceContainer">
+      <MemberSignature Language="C#" Value="protected System.ComponentModel.Design.ServiceContainer ServiceContainer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.ServiceContainer ServiceContainer" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.DesignSurface.ServiceContainer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.ServiceContainer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Dienstcontainer ab.</summary>
+        <value>Der Dienstcontainer, der alle Dienste für Designern in der Entwurfsoberfläche bereitstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Konstruktion <xref:System.ComponentModel.Design.DesignSurface> dieser Dienstcontainer fügt Standarddiensten. Lassen Sie die Standarddienste in ihrem aktuellen Zustand, oder Sie können entfernen und Ersetzen Sie sie durch Ihren eigenen. Die Standarddienste werden alle nach Bedarf erstellt, damit es kein Datenverlust bei der Leistung entsteht für die sie zur Entwurfszeit hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.ComponentModel.Design.IDesignerHost" /> angefügt, um die <see cref="T:System.ComponentModel.Design.DesignSurface" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Unloaded">
+      <MemberSignature Language="C#" Value="public event EventHandler Unloaded;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Unloaded" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.Design.DesignSurface.Unloaded" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein Designer entladen abgeschlossen ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unloading">
+      <MemberSignature Language="C#" Value="public event EventHandler Unloading;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Unloading" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.Design.DesignSurface.Unloading" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein Designer, entladen werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Designer entladen wurde, wird der gesamte Zustand für diesen Designer zerstört, einschließlich der Designer-Ansicht. Die Ansicht sollte zu diesem Zeitpunkt ihrem übergeordneten Element getrennt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="View">
+      <MemberSignature Language="C#" Value="public object View { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object View" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.DesignSurface.View" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ansicht für den Stamm-Designer.</summary>
+        <value>Die Ansicht für den Stamm-Designer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.DesignSurface.BeginLoad%2A> Methode muss aufgerufen werden, im voraus, um den Ladevorgang zu starten. Es ist möglich, eine Sicht zurückgegeben werden, bevor das Designerladeprogramm geladen ist vollständig, da die Stamm-Designer, der die Ansicht bereitstellt, das erste Objekt, das durch das Designerladeprogramm erstellt wird. Wenn eine Sicht nicht verfügbar ist, ist <xref:System.ComponentModel.Design.DesignSurface.BeginLoad%2A> löst eine Ausnahme aus.  
+  
+ Das Konzept einer Ansicht-Technologie ist veraltet. Sie verbleibt jedoch in den Schnittstellen für Stammdesigner für die Abwärtskompatibilität. Seine Verwendung wird von einem beliebigen Benutzer mit ausgeblendet <xref:System.ComponentModel.Design.DesignSurface> Objekte. Die <xref:System.ComponentModel.Design.DesignSurface.View%2A> Eigenschaft Blendet Ansicht Technologien, durch das Übergeben von unterstützten Technologies zurück an die Stamm-Designer.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie <xref:System.ComponentModel.Design.DesignSurface.View%2A> Blendet anzeigen Technologien.  
+  
+ ```csharp 
+ IRootDesigner d;  
+  
+ ViewTechnology[] supported = d.SupportedTechnologies;  
+  
+ return d.GetView(supported[0]);
+ ``` 
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Entwurfsoberfläche wird nicht geladen, das Designerladeprogramm noch nicht erstellt einen Stamm-Designer oder der Entwurfsoberfläche wurde die Last, aber noch nicht beendet. Weitere Informationen kann zur Verfügung, in der <see cref="P:System.Exception.InnerException" />.</exception>
+        <exception cref="T:System.NotSupportedException">Der Designer geladen, aber es bietet eine Ansicht, die kompatibel mit dieser Entwurfsoberfläche nicht.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.ComponentModel.Design.IDesignerHost" /> angefügt, um die <see cref="T:System.ComponentModel.Design.DesignSurface" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewActivated">
+      <MemberSignature Language="C#" Value="public event EventHandler ViewActivated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ViewActivated" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.Design.DesignSurface.ViewActivated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die <see cref="M:System.ComponentModel.Design.IDesignerHost.Activate" /> Methode wurde aufgerufen <see cref="T:System.ComponentModel.Design.IDesignerHost" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie unterstützen möchten die <xref:System.ComponentModel.Design.IDesignerHost.Activate%2A> -Methode, der Ereignishandler sollte das Fenster für diese Entwurfsoberfläche aktivieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

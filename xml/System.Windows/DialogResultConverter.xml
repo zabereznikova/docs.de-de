@@ -1,0 +1,152 @@
+<Type Name="DialogResultConverter" FullName="System.Windows.DialogResultConverter">
+  <TypeSignature Language="C#" Value="public class DialogResultConverter : System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DialogResultConverter extends System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.DialogResultConverter" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.TypeConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Konvertiert die <see cref="P:System.Windows.Window.DialogResult" /> Eigenschaft, die eine <see cref="T:System.Nullable`1" /> Wert vom Typ <see cref="T:System.Boolean" />zu und aus anderen Typen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="XAMLTextUsage_DialogResultConverter"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DialogResultConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DialogResultConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.DialogResultConverter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFrom">
+      <MemberSignature Language="C#" Value="public override bool CanConvertFrom (System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, Type sourceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFrom(class System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, class System.Type sourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DialogResultConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeDescriptorContext" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="sourceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="typeDescriptorContext">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, der einen Formatierungskontext bereitstellt.</param>
+        <param name="sourceType">Ein <see cref="T:System.Type" /> , der den Typ zum Konvertieren von darstellt.</param>
+        <summary>
+          <see cref="T:System.Windows.DialogResultConverter" />unterstützt nicht das Konvertieren von anderen Typen in <see cref="P:System.Windows.Window.DialogResult" /> (eine <see cref="T:System.Nullable`1" /> Wert vom Typ <see cref="T:System.Boolean" />).</summary>
+        <returns>Ein <see cref="T:System.Boolean" /> , die immer gibt <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertTo">
+      <MemberSignature Language="C#" Value="public override bool CanConvertTo (System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertTo(class System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DialogResultConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeDescriptorContext" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="typeDescriptorContext">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, der einen Formatierungskontext bereitstellt.</param>
+        <param name="destinationType">Ein <see cref="T:System.Type" /> , der den Zieltyp der Konvertierung darstellt.</param>
+        <summary>
+          <see cref="T:System.Windows.DialogResultConverter" />unterstützt nicht das Konvertieren von <see cref="P:System.Windows.Window.DialogResult" /> (eine <see cref="T:System.Nullable`1" /> Wert vom Typ <see cref="T:System.Boolean" />) in andere Typen.</summary>
+        <returns>Ein <see cref="T:System.Boolean" /> , die immer gibt <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, System.Globalization.CultureInfo cultureInfo, object source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, class System.Globalization.CultureInfo cultureInfo, object source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DialogResultConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeDescriptorContext" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="cultureInfo" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="source" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="typeDescriptorContext">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, der einen Formatierungskontext bereitstellt.</param>
+        <param name="cultureInfo">Das als aktuelle Kultur zu verwendende <see cref="T:System.Globalization.CultureInfo" />-Element. Wenn <see langword="null" /> übergeben wird, wird von der aktuellen Kultur ausgegangen.</param>
+        <param name="source">Die zu konvertierende <see cref="T:System.Object" />.</param>
+        <summary>
+          <see cref="T:System.Windows.DialogResultConverter" />unterstützt nicht das Konvertieren von <see cref="P:System.Windows.Window.DialogResult" /> (eine <see cref="T:System.Nullable`1" /> Wert vom Typ <see cref="T:System.Boolean" />) in andere Typen.</summary>
+        <returns>Löst immer <see cref="T:System.InvalidOperationException" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="M:System.Windows.DialogResultConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" /> wird aufgerufen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public override object ConvertTo (System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, System.Globalization.CultureInfo cultureInfo, object value, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(class System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, class System.Globalization.CultureInfo cultureInfo, object value, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DialogResultConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeDescriptorContext" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="cultureInfo" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="typeDescriptorContext">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, der einen Formatierungskontext bereitstellt.</param>
+        <param name="cultureInfo">Das als aktuelle Kultur zu verwendende <see cref="T:System.Globalization.CultureInfo" />-Element. Wenn <see langword="null" /> übergeben wird, wird von der aktuellen Kultur ausgegangen.</param>
+        <param name="value">Die zu konvertierende <see cref="T:System.Object" />.</param>
+        <param name="destinationType">Der <see cref="T:System.Type" />, in den der Wertparameter konvertiert wird.</param>
+        <summary>
+          <see cref="T:System.Windows.DialogResultConverter" />unterstützt nicht das Konvertieren von anderen Typen in <see cref="P:System.Windows.Window.DialogResult" /> (eine <see cref="T:System.Nullable`1" /> Wert vom Typ <see cref="T:System.Boolean" />).</summary>
+        <returns>Löst immer <see cref="T:System.InvalidOperationException" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="M:System.Windows.DialogResultConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)" /> wird aufgerufen.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

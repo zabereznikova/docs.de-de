@@ -1,0 +1,226 @@
+<Type Name="VirtualizationCacheLengthConverter" FullName="System.Windows.Controls.VirtualizationCacheLengthConverter">
+  <TypeSignature Language="C#" Value="public class VirtualizationCacheLengthConverter : System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit VirtualizationCacheLengthConverter extends System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.VirtualizationCacheLengthConverter" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.TypeConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Konvertiert Objekte in und aus einem <see cref="T:System.Windows.Controls.VirtualizationCacheLength" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public VirtualizationCacheLengthConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizationCacheLengthConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.VirtualizationCacheLengthConverter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFrom">
+      <MemberSignature Language="C#" Value="public override bool CanConvertFrom (System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, Type sourceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFrom(class System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, class System.Type sourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizationCacheLengthConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeDescriptorContext" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="sourceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="typeDescriptorContext">Ein Objekt, das einen Formatierungskontext bereitstellt.</param>
+        <param name="sourceType">Der Typ, aus dem konvertiert wird.</param>
+        <summary>Bestimmt, ob die <see cref="T:System.Windows.Controls.VirtualizationCacheLengthConverter" /> können ein Objekt des angegebenen Typs zu konvertieren, eine <see cref="T:System.Windows.Controls.VirtualizationCacheLength" />, mit dem angegebenen Kontext.</summary>
+        <returns>True, wenn die <see cref="T:System.Windows.Controls.VirtualizationCacheLengthConverter" /> auf den angegebenen Typ konvertiert werden kann ein <see cref="T:System.Windows.Controls.VirtualizationCacheLength" />, andernfalls "false".</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.VirtualizationCacheLengthConverter> können die folgenden Typen konvertieren einer <xref:System.Windows.Controls.VirtualizationCacheLength>:  
+  
+-   <xref:System.String>  
+  
+-   <xref:System.Decimal>  
+  
+-   <xref:System.Single>  
+  
+-   <xref:System.Double>  
+  
+-   <xref:System.Int16>  
+  
+-   <xref:System.Int32>  
+  
+-   <xref:System.Int64>  
+  
+-   <xref:System.UInt16>  
+  
+-   <xref:System.UInt32>  
+  
+-   <xref:System.UInt64>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertTo">
+      <MemberSignature Language="C#" Value="public override bool CanConvertTo (System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertTo(class System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizationCacheLengthConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeDescriptorContext" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="typeDescriptorContext">Ein Objekt, das einen Formatierungskontext bereitstellt.</param>
+        <param name="destinationType">Der Typ, in den konvertiert werden soll.</param>
+        <summary>Bestimmt, ob die <see cref="T:System.Windows.Controls.VirtualizationCacheLengthConverter" /> können Konvertieren einer <see cref="T:System.Windows.Controls.VirtualizationCacheLength" /> in den angegebenen Typ.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Controls.VirtualizationCacheLengthConverter" /> konvertieren können eine <see cref="T:System.Windows.Controls.VirtualizationCacheLength" /> in den angegebenen Typ ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.VirtualizationCacheLengthConverter.CanConvertTo%2A> -Methode zurückkehrt `true` Wenn `destinationType` ist <xref:System.String> oder <xref:System.ComponentModel.Design.Serialization.InstanceDescriptor>. Andernfalls <xref:System.Windows.Controls.VirtualizationCacheLengthConverter.CanConvertTo%2A> gibt `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, System.Globalization.CultureInfo cultureInfo, object source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, class System.Globalization.CultureInfo cultureInfo, object source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizationCacheLengthConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeDescriptorContext" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="cultureInfo" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="source" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="typeDescriptorContext">Ein Objekt, das einen Formatierungskontext bereitstellt.</param>
+        <param name="cultureInfo">Ein Objekt, das Informationen zur Kultur bereitstellt, die während der Konvertierung verwendet wird.</param>
+        <param name="source">Das Objekt, das zum Konvertieren einer <see cref="T:System.Windows.Controls.VirtualizationCacheLength" />.</param>
+        <summary>Konvertiert das angegebene Objekt in eine <see cref="T:System.Windows.Controls.VirtualizationCacheLength" />.</summary>
+        <returns>Das konvertierte Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.VirtualizationCacheLengthConverter> können die folgenden Typen konvertieren einer <xref:System.Windows.Controls.VirtualizationCacheLength>:  
+  
+-   <xref:System.String>  
+  
+-   <xref:System.Decimal>  
+  
+-   <xref:System.Single>  
+  
+-   <xref:System.Double>  
+  
+-   <xref:System.Int16>  
+  
+-   <xref:System.Int32>  
+  
+-   <xref:System.Int64>  
+  
+-   <xref:System.UInt16>  
+  
+-   <xref:System.UInt32>  
+  
+-   <xref:System.UInt64>  
+  
+ Rufen Sie die <xref:System.Windows.Controls.VirtualizationCacheLengthConverter.CanConvertFrom%2A> Methode vor dem Aufruf der <xref:System.Windows.Controls.VirtualizationCacheLengthConverter.ConvertFrom%2A> zu vermeiden, dass eine Ausnahme ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="source" /> ist <see langword="null" />.  
+  
+ – oder –  
+  
+ <paramref name="source" />kann nicht konvertiert werden, um eine <see cref="T:System.Windows.Controls.VirtualizationCacheLength" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public override object ConvertTo (System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, System.Globalization.CultureInfo cultureInfo, object value, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(class System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, class System.Globalization.CultureInfo cultureInfo, object value, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizationCacheLengthConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeDescriptorContext" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="cultureInfo" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="typeDescriptorContext">Ein Objekt, das einen Formatierungskontext bereitstellt.</param>
+        <param name="cultureInfo">Ein Objekt, das Informationen zur Kultur bereitstellt, die während der Konvertierung verwendet wird.</param>
+        <param name="value">Ein <see cref="T:System.Windows.Controls.VirtualizationCacheLength" /> in einen anderen Typ zu konvertieren.</param>
+        <param name="destinationType">Der Typ, in den konvertiert werden soll.</param>
+        <summary>Konvertiert das angegebene <see cref="T:System.Windows.Controls.VirtualizationCacheLength" /> auf ein Objekt des angegebenen Typs.</summary>
+        <returns>Das konvertierte Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie die <xref:System.Windows.Controls.VirtualizationCacheLengthConverter.CanConvertTo%2A> Methode vor dem Aufruf der <xref:System.Windows.Controls.VirtualizationCacheLengthConverter.ConvertFrom%2A> zu vermeiden, dass eine Ausnahme ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="destinationType" /> ist <paramref name="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="value" /> ist <see langword="null" />.  
+  
+ – oder –  
+  
+ <paramref name="value" /> ist keine <see cref="T:System.Windows.Controls.VirtualizationCacheLength" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

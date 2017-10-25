@@ -1,0 +1,105 @@
+<Type Name="LineAnchorCapStyle" FullName="System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle">
+  <TypeSignature Language="C#" Value="public enum LineAnchorCapStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LineAnchorCapStyle extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Form – d. h. die ankerabschluss – die am Punktende der Bezeichnungslegendenlinie gezeichnet werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle> Enumeration stellt die Form, die am Punktende der Bezeichnungslegendenlinie gezeichnet werden soll. Es dient in Verbindung mit der <xref:System.Web.UI.DataVisualization.Charting.SmartLabelStyle.CalloutStyle%2A> und <xref:System.Web.UI.DataVisualization.Charting.SmartLabelStyle.CalloutLineAnchorCapStyle%2A> Eigenschaften. Wenn eine Legendenlinie nicht verwendet wird, wird diese Enumeration keine Auswirkungen haben.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Arrow">
+      <MemberSignature Language="C#" Value="Arrow" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle Arrow = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle.Arrow" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ankerabschluss wird mit einer Pfeilspitze gezeichnet werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Diamond">
+      <MemberSignature Language="C#" Value="Diamond" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle Diamond = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle.Diamond" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ankerabschluss wird mit einem End rautenförmiges gezeichnet werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ankerabschluss wird nicht gezeichnet werden soll.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Round">
+      <MemberSignature Language="C#" Value="Round" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle Round = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle.Round" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ankerabschluss wird mit einem runden Ende gezeichnet werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Square">
+      <MemberSignature Language="C#" Value="Square" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle Square = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle.Square" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ankerabschluss wird mit einer quadratischen Head gezeichnet werden.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

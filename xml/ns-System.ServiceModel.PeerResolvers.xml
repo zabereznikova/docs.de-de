@@ -1,0 +1,6 @@
+<Namespace Name="System.ServiceModel.PeerResolvers">
+  <Docs>
+    <summary>Der <see cref="N:System.ServiceModel.PeerResolvers" />-Namespace enthält Klassen, mit denen Entwickler Peer Name Resolution-Protokoll-Dienst anzupassen und zu erweitern.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

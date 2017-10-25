@@ -1,0 +1,111 @@
+<Type Name="EllipseStylusShape" FullName="System.Windows.Ink.EllipseStylusShape">
+  <TypeSignature Language="C#" Value="public sealed class EllipseStylusShape : System.Windows.Ink.StylusShape" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EllipseStylusShape extends System.Windows.Ink.StylusShape" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Ink.EllipseStylusShape" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Ink.StylusShape</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Tablettstift Tipp Form einer Ellipse dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie ein <xref:System.Windows.Ink.EllipseStylusShape> und übergeben sie an der <xref:System.Windows.Ink.StrokeCollection.GetIncrementalStrokeHitTester%2A> Methode, um einen Teil eines Löschen einer <xref:System.Windows.Ink.Stroke>. In diesem Beispiel wird davon ausgegangen, dass es ist ein <xref:System.Windows.Ink.IncrementalStrokeHitTester> aufgerufen `eraseTester` und dass seine <xref:System.Windows.Ink.IncrementalStrokeHitTester.StrokeHit> Ereignis an den Ereignishandler, die in diesem Beispiel definierte verbunden wurde. Um ein Steuerelement erstellen, die dem Benutzer Freihandeingaben gelöscht werden können, finden Sie unter [Vorgehensweise: Löschen Freihand-auf ein benutzerdefiniertes Steuerelement](~/docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md).  
+  
+ [!code-csharp[InkEraser#4](~/samples/snippets/csharp/VS_Snippets_Wpf/InkEraser/CSharp/InkEraser.cs#4)]
+ [!code-vb[InkEraser#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkEraser/VisualBasic/InkEraser.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Ink.EllipseStylusShape" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im folgenden Beispiel wird veranschaulicht, wie ein <xref:System.Windows.Ink.EllipseStylusShape> und übergeben sie an der <xref:System.Windows.Ink.StrokeCollection.GetIncrementalStrokeHitTester%2A> Methode, um einen Teil eines Löschen einer <xref:System.Windows.Ink.Stroke>. In diesem Beispiel wird davon ausgegangen, dass es ist ein <xref:System.Windows.Ink.IncrementalStrokeHitTester> aufgerufen `eraseTester` und dass seine <xref:System.Windows.Ink.IncrementalStrokeHitTester.StrokeHit> Ereignis an den Ereignishandler, die in diesem Beispiel definierte verbunden wurde. Um ein Steuerelement erstellen, die dem Benutzer Freihandeingaben gelöscht werden können, finden Sie unter [Vorgehensweise: Löschen Freihand-auf ein benutzerdefiniertes Steuerelement](~/docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md).  
+  
+ [!code-csharp[InkEraser#4](~/samples/snippets/csharp/VS_Snippets_Wpf/InkEraser/CSharp/InkEraser.cs#4)]
+ [!code-vb[InkEraser#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkEraser/VisualBasic/InkEraser.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EllipseStylusShape (double width, double height);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 width, float64 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.EllipseStylusShape.#ctor(System.Double,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="width" Type="System.Double" />
+        <Parameter Name="height" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="width">Die Breite der Tablettstiftform.</param>
+        <param name="height">Die Höhe der Tablettstiftform.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Ink.EllipseStylusShape" />-Klasse mit der angegebenen Breite und Höhe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie ein <xref:System.Windows.Ink.EllipseStylusShape> und übergeben sie an der <xref:System.Windows.Ink.StrokeCollection.GetIncrementalStrokeHitTester%2A> Methode, um einen Teil eines Löschen einer <xref:System.Windows.Ink.Stroke>. In diesem Beispiel wird davon ausgegangen, dass es ist ein <xref:System.Windows.Ink.IncrementalStrokeHitTester> aufgerufen `eraseTester` und dass seine <xref:System.Windows.Ink.IncrementalStrokeHitTester.StrokeHit> Ereignis an den Ereignishandler, die in diesem Beispiel definierte verbunden wurde. Um ein Steuerelement erstellen, die dem Benutzer Freihandeingaben gelöscht werden können, finden Sie unter [Vorgehensweise: Löschen Freihand-auf ein benutzerdefiniertes Steuerelement](~/docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md).  
+  
+ [!code-csharp[InkEraser#4](~/samples/snippets/csharp/VS_Snippets_Wpf/InkEraser/CSharp/InkEraser.cs#4)]
+ [!code-vb[InkEraser#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkEraser/VisualBasic/InkEraser.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EllipseStylusShape (double width, double height, double rotation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 width, float64 height, float64 rotation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.EllipseStylusShape.#ctor(System.Double,System.Double,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="width" Type="System.Double" />
+        <Parameter Name="height" Type="System.Double" />
+        <Parameter Name="rotation" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="width">Die Breite der Tablettstiftform.</param>
+        <param name="height">Die Höhe der Tablettstiftform.</param>
+        <param name="rotation">Der Winkel der Tablettstiftform.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Ink.EllipseStylusShape" />-Klasse mit Breite, Höhe und Winkel laut Angabe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie ein <xref:System.Windows.Ink.EllipseStylusShape> und übergeben sie an der <xref:System.Windows.Ink.StrokeCollection.GetIncrementalStrokeHitTester%2A> Methode, um einen Teil eines Löschen einer <xref:System.Windows.Ink.Stroke>. In diesem Beispiel wird davon ausgegangen, dass es ist ein <xref:System.Windows.Ink.IncrementalStrokeHitTester> aufgerufen `eraseTester` und dass seine <xref:System.Windows.Ink.IncrementalStrokeHitTester.StrokeHit> Ereignis an den Ereignishandler, die in diesem Beispiel definierte verbunden wurde. Um ein Steuerelement erstellen, die dem Benutzer Freihandeingaben gelöscht werden können, finden Sie unter [Vorgehensweise: Löschen Freihand-auf ein benutzerdefiniertes Steuerelement](~/docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md).  
+  
+ [!code-csharp[InkEraser#4](~/samples/snippets/csharp/VS_Snippets_Wpf/InkEraser/CSharp/InkEraser.cs#4)]
+ [!code-vb[InkEraser#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkEraser/VisualBasic/InkEraser.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

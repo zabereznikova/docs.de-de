@@ -1,0 +1,86 @@
+<Type Name="CompiledTemplateBuilder" FullName="System.Web.UI.CompiledTemplateBuilder">
+  <TypeSignature Language="C#" Value="public sealed class CompiledTemplateBuilder : System.Web.UI.ITemplate" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CompiledTemplateBuilder extends System.Object implements class System.Web.UI.ITemplate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.CompiledTemplateBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.ITemplate</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Ein <see cref="T:System.Web.UI.ITemplate" /> Implementierung, die von der generierten Klasse Seitencode aufgerufen wird. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.CompiledTemplateBuilder> -Klasse wird von ASP.NET zum Erstellen einer Vorlage für ein Steuerelement mit Vorlagen aus der generierten Klassencode verwendet. Es ist nicht vorgesehen, die direkt im Code verwendet werden.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompiledTemplateBuilder (System.Web.UI.BuildTemplateMethod buildTemplateMethod);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.BuildTemplateMethod buildTemplateMethod) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.CompiledTemplateBuilder.#ctor(System.Web.UI.BuildTemplateMethod)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="buildTemplateMethod" Type="System.Web.UI.BuildTemplateMethod" />
+      </Parameters>
+      <Docs>
+        <param name="buildTemplateMethod">Ein Delegat, der zum Behandeln der <see cref="M:System.Web.UI.CompiledTemplateBuilder.InstantiateIn(System.Web.UI.Control)" /> -Methodenaufruf.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.CompiledTemplateBuilder" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird von ASP.NET intern verwendet, erstellen Sie eine neue Instanz der dem <xref:System.Web.UI.CompiledTemplateBuilder> Klasse. Es ist nicht vorgesehen, die direkt im Code verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="InstantiateIn">
+      <MemberSignature Language="C#" Value="public void InstantiateIn (System.Web.UI.Control container);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void InstantiateIn(class System.Web.UI.Control container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.CompiledTemplateBuilder.InstantiateIn(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="container">Ein <see cref="T:System.Web.UI.Control" /> , der den Container verwendet, um die untergeordneten Steuerelemente in der Vorlage speichern darstellt.</param>
+        <summary>Füllt die <see cref="T:System.Web.UI.Control" /> Objekt mit den untergeordneten Steuerelementen in der Vorlage enthalten sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.CompiledBindableTemplateBuilder.InstantiateIn%2A> Methode ist die <xref:System.Web.UI.TemplateBuilder> Implementierung der Klasse die <xref:System.Web.UI.ITemplate.InstantiateIn%2A?displayProperty=nameWithType> Methode. Es wird von ASP.NET zum Erstellen der Steuerelementhierarchie der Vorlage verwendet und ist nicht vorgesehen, direkt im Code verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

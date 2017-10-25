@@ -1,0 +1,162 @@
+<Type Name="WindowsAuthenticationEventArgs" FullName="System.Web.Security.WindowsAuthenticationEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class WindowsAuthenticationEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WindowsAuthenticationEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Security.WindowsAuthenticationEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für die **WindowsAuthentication_OnAuthenticate** Ereignis. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.WindowsAuthenticationEventArgs> Klasse wird verwendet, um Ereigniswerte an die **WindowsAuthentication_OnAuthenticate** Ereignis und ermöglichen Ihnen die Angabe eine benutzerdefinierte Windows-Identität für die aktuelle Anforderung.  
+  
+ Die <xref:System.Web.Security.WindowsAuthenticationModule> erstellt eine <xref:System.Web.Security.WindowsAuthenticationEventArgs> -Objekt unter Verwendung der Windows-Identität von IIS und der aktuelle bereitgestellten <xref:System.Web.HttpContext> und übergibt es an die **WindowsAuthentication_OnAuthenticate** Ereignis.  
+  
+ Können Sie die <xref:System.Web.Security.WindowsAuthenticationEventArgs.User%2A> Eigenschaft von der <xref:System.Web.Security.WindowsAuthenticationEventArgs> -Objekt bereitgestellt werden, um die **WindowsAuthentication_OnAuthenticate** Ereignis als festzulegen der <xref:System.Web.HttpContext.User%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> für eine benutzerdefinierte <xref:System.Security.Principal.IPrincipal>Objekt. Wenn Sie einen Wert für nicht angeben der <xref:System.Web.Security.WindowsAuthenticationEventArgs.User%2A> Eigenschaft während der **WindowsAuthentication_OnAuthenticate** Ereignis, Windows, die von IIS bereitgestellte Identität als Identität für die aktuelle Anforderung verwendet wird. Wenn IIS die anonyme Authentifizierung verwendet und dann die <xref:System.Web.Security.WindowsAuthenticationEventArgs.Identity%2A> Eigenschaftensatz auf die zurückgegebene Identität der <xref:System.Security.Principal.WindowsIdentity.GetAnonymous%2A> Methode.  
+  
+ Die **WindowsAuthentication_OnAuthenticate** Ereignis wird ausgelöst, nur, wenn die Authentifizierung <xref:System.Web.Configuration.AuthenticationSection.Mode%2A> festgelegt ist, um <xref:System.Web.Configuration.AuthenticationMode.Windows> und die <xref:System.Web.Security.WindowsAuthenticationModule> ein aktives HTTP-Modul für die Anwendung.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der **WindowsAuthentication_OnAuthenticate** Ereignis als festzulegen der <xref:System.Web.HttpContext.User%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> für eine benutzerdefinierte <xref:System.Security.Principal.IPrincipal> Objekt.  
+  
+ [!code-csharp[System.Web.Security.WindowsAuthenticationModule#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.WindowsAuthenticationModule/CS/global.asax#1)]
+ [!code-vb[System.Web.Security.WindowsAuthenticationModule#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.WindowsAuthenticationModule/VB/global.asax#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WindowsAuthenticationEventArgs (System.Security.Principal.WindowsIdentity identity, System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.WindowsIdentity identity, class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.WindowsAuthenticationEventArgs.#ctor(System.Security.Principal.WindowsIdentity,System.Web.HttpContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.WindowsIdentity" />
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Die Windows-Identity-Objekts.</param>
+        <param name="context">Der Kontext für das Ereignis.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Security.WindowsAuthenticationEventArgs" /> Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.WindowsAuthenticationModule> erstellt eine <xref:System.Web.Security.WindowsAuthenticationEventArgs> -Objekt unter Verwendung der Windows-Identität von IIS und der aktuelle bereitgestellten <xref:System.Web.HttpContext> und übergibt es an die **WindowsAuthentication_OnAuthenticate** Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public System.Web.HttpContext Context { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpContext Context" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.WindowsAuthenticationEventArgs.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.Web.HttpContext" />-Objekt für die aktuelle HTTP-Anforderung ab.</summary>
+        <value>Das <see cref="T:System.Web.HttpContext" />-Objekt für die aktuelle HTTP-Anforderung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpContext> ermöglicht den Zugriff auf <xref:System.Web.HttpContext.Request%2A>, <xref:System.Web.HttpContext.Response%2A>, und <xref:System.Web.HttpContext.User%2A> Objekte für die aktuelle Anforderung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Identity">
+      <MemberSignature Language="C#" Value="public System.Security.Principal.WindowsIdentity Identity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Principal.WindowsIdentity Identity" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.WindowsAuthenticationEventArgs.Identity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.WindowsIdentity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Windows-Identität, die zum Übergeben der <see cref="T:System.Web.Security.WindowsAuthenticationEventArgs" /> Konstruktor.</summary>
+        <value>Die Windows-Identität zu übergeben, um die <see cref="T:System.Web.Security.WindowsAuthenticationEventArgs" /> Konstruktor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.WindowsAuthenticationModule> erstellt eine <xref:System.Web.Security.WindowsAuthenticationEventArgs> -Objekt unter Verwendung der Windows-Identität von IIS und der aktuelle bereitgestellten <xref:System.Web.HttpContext> und übergibt es an die **WindowsAuthentication_OnAuthenticate** Ereignis.  
+  
+ Wenn IIS die anonyme Authentifizierung verwendet das <xref:System.Web.Security.WindowsAuthenticationEventArgs.Identity%2A> Eigenschaftensatz auf die zurückgegebene Identität der <xref:System.Security.Principal.WindowsIdentity.GetAnonymous%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der **WindowsAuthentication_OnAuthenticate** Ereignis als festzulegen der <xref:System.Web.HttpContext.User%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> für eine benutzerdefinierte <xref:System.Security.Principal.IPrincipal> Objekt.  
+  
+ [!code-csharp[System.Web.Security.WindowsAuthenticationModule#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.WindowsAuthenticationModule/CS/global.asax#1)]
+ [!code-vb[System.Web.Security.WindowsAuthenticationModule#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.WindowsAuthenticationModule/VB/global.asax#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="User">
+      <MemberSignature Language="C#" Value="public System.Security.Principal.IPrincipal User { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Principal.IPrincipal User" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.WindowsAuthenticationEventArgs.User" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.IPrincipal</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Security.Principal.IPrincipal" /> Objekt, das die aktuelle Anforderung zugeordnet werden.</summary>
+        <value>Die <see cref="T:System.Security.Principal.IPrincipal" /> Objekt, das die aktuelle Anforderung zugeordnet werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die <xref:System.Web.Security.WindowsAuthenticationEventArgs.User%2A> -Eigenschaft zum Festlegen der <xref:System.Web.HttpContext.User%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> für eine benutzerdefinierte <xref:System.Security.Principal.IPrincipal> Objekt.  
+  
+ Wenn Sie einen Wert für nicht angeben der <xref:System.Web.Security.WindowsAuthenticationEventArgs.User%2A> Eigenschaft während der **WindowsAuthentication_OnAuthenticate** Ereignis, Windows, die von IIS bereitgestellte Identität als Identität für die aktuelle Anforderung verwendet wird. Wenn IIS die anonyme Authentifizierung verwendet und dann die <xref:System.Web.Security.WindowsAuthenticationEventArgs.Identity%2A> Eigenschaftensatz auf die zurückgegebene Identität der <xref:System.Security.Principal.WindowsIdentity.GetAnonymous%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der **WindowsAuthentication_OnAuthenticate** Ereignis als festzulegen der <xref:System.Web.HttpContext.User%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> für eine benutzerdefinierte <xref:System.Security.Principal.IPrincipal> Objekt.  
+  
+ [!code-csharp[System.Web.Security.WindowsAuthenticationModule#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.WindowsAuthenticationModule/CS/global.asax#1)]
+ [!code-vb[System.Web.Security.WindowsAuthenticationModule#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.WindowsAuthenticationModule/VB/global.asax#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

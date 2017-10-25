@@ -1,0 +1,194 @@
+<Type Name="HttpCacheAgeControl" FullName="System.Net.Cache.HttpCacheAgeControl">
+  <TypeSignature Language="C#" Value="public enum HttpCacheAgeControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HttpCacheAgeControl extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Cache.HttpCacheAgeControl" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Requests</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Bedeutung der Time-Werten, das Verhalten beim Zwischenspeichern für Ressourcen, die mittels abgerufen <see cref="T:System.Net.HttpWebRequest" /> Objekte.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird verwendet, von einem Mitglied der <xref:System.Net.Cache.HttpRequestCachePolicy> Klasse, um den Time-Werten für Cacherichtlinien zu konfigurieren.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine Richtlinie basierend auf MaxAgeAndMinFresh erstellt.  
+  
+ [!code-cpp[NclSimpleCache#9](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLSimpleCache/CPP/NCLSimpleCache.cpp#9)]
+ [!code-csharp[NclSimpleCache#9](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLSimpleCache/CS/example.cs#9)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="MaxAge">
+      <MemberSignature Language="C#" Value="MaxAge" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Cache.HttpCacheAgeControl MaxAge = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Cache.HttpCacheAgeControl.MaxAge" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Cache.HttpCacheAgeControl</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Inhalt kann aus dem Cache abgerufen werden, bis er älter als die mit diesem Wert angegebene Alter überschritten ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxAgeAndMaxStale">
+      <MemberSignature Language="C#" Value="MaxAgeAndMaxStale" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Cache.HttpCacheAgeControl MaxAgeAndMaxStale = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMaxStale" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Cache.HttpCacheAgeControl</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="P:System.Net.Cache.HttpRequestCachePolicy.MaxAge" /> und <see cref="P:System.Net.Cache.HttpRequestCachePolicy.MaxStale" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxAgeAndMinFresh">
+      <MemberSignature Language="C#" Value="MaxAgeAndMinFresh" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Cache.HttpCacheAgeControl MaxAgeAndMinFresh = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMinFresh" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Cache.HttpCacheAgeControl</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="P:System.Net.Cache.HttpRequestCachePolicy.MaxAge" /> und <see cref="P:System.Net.Cache.HttpRequestCachePolicy.MinFresh" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxStale">
+      <MemberSignature Language="C#" Value="MaxStale" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Cache.HttpCacheAgeControl MaxStale = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Cache.HttpCacheAgeControl.MaxStale" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Cache.HttpCacheAgeControl</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Inhalt kann aus dem Cache abgerufen werden, wenn es abgelaufen ist, bis die mit diesem Wert angegebene Zeit verstrichen ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MinFresh">
+      <MemberSignature Language="C#" Value="MinFresh" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Cache.HttpCacheAgeControl MinFresh = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Cache.HttpCacheAgeControl.MinFresh" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Cache.HttpCacheAgeControl</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Inhalt kann aus dem Cache ausgeführt werden, wenn die Zeit bis zum Ablauf größer als oder gleich der mit diesem Wert angegeben ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Cache.HttpCacheAgeControl None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Cache.HttpCacheAgeControl.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Requests</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Cache.HttpCacheAgeControl</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nur für interne Verwendung. Löst das Framework eine <see cref="T:System.ArgumentException" /> , wenn Sie versuchen, diesen Member verwenden.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

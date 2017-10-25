@@ -1,0 +1,103 @@
+<Type Name="ResolveResponseInfo" FullName="System.ServiceModel.PeerResolvers.ResolveResponseInfo">
+  <TypeSignature Language="C#" Value="public class ResolveResponseInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ResolveResponseInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.PeerResolvers.ResolveResponseInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ServiceModel.MessageContract(IsWrapped=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält Antwortinformationen, die als Ergebnis eines Peerendpunktauflösungsvorgangs auf dem Peerresolver zurückgegeben wurden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService.Resolve%28System.ServiceModel.PeerResolvers.ResolveInfo%29> oder eine Implementierung von <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract.Resolve%28System.ServiceModel.PeerResolvers.ResolveInfo%29> wird aufgerufen, wird dieses Objekt an den Client zurückgegeben. Enthält die für den Peer registrierten Endpunkte, die in einer vorherigen entsprechenden, an den Peerresolver gesendeten <xref:System.ServiceModel.PeerResolvers.ResolveInfo>-Instanz angegeben wurden.  
+  
+ Instanzen dieser Klasse werden vorwiegend zur Übergabe von Informationen vom Resolverdienst an einen Netzwerkclient dieses Diensts verwendet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResolveResponseInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.ResolveResponseInfo.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Standardinstanz der <see cref="T:System.ServiceModel.PeerResolvers.ResolveResponseInfo" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResolveResponseInfo (System.ServiceModel.PeerNodeAddress[] addresses);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.PeerNodeAddress[] addresses) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.ResolveResponseInfo.#ctor(System.ServiceModel.PeerNodeAddress[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="addresses" Type="System.ServiceModel.PeerNodeAddress[]" />
+      </Parameters>
+      <Docs>
+        <param name="addresses">Array mit <see cref="T:System.ServiceModel.PeerNodeAddress" />-Objekten, die für den Peer, dessen Endpunkte in einem vorherigen Auflösungsvorgang angefordert wurden, registrierte Endpunktadressen enthalten.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.PeerResolvers.ResolveResponseInfo" />-Klasse mit dem zur Verfügung gestellten Satz Peerendpunktadressen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Addresses">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.ServiceModel.PeerNodeAddress&gt; Addresses { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class System.ServiceModel.PeerNodeAddress&gt; Addresses" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerResolvers.ResolveResponseInfo.Addresses" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.ServiceModel.PeerNodeAddress&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Auflistung von Peerknotenadressen fest.</summary>
+        <value>Generische Liste &lt;IList&gt; von <see cref="T:System.ServiceModel.PeerNodeAddress" /> Objekten, die die Endpunktadressen enthalten registriert wird, um dem Peer, dessen Endpunkte in einem vorherigen Auflösungsvorgang angefordert wurden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasBody">
+      <MemberSignature Language="C#" Value="public bool HasBody ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HasBody() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.ResolveResponseInfo.HasBody" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob der Text der Nachricht, die eine serialisierte Instanz dieses Typs enthält, richtig formatiert ist.</summary>
+        <returns>True, wenn der Auflösungs-Antwortinformationstext vom Absender richtig formatiert wurde, False, wenn dies nicht der Fall ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

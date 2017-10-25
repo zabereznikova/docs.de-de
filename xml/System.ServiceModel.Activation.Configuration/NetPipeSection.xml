@@ -1,0 +1,185 @@
+<Type Name="NetPipeSection" FullName="System.ServiceModel.Activation.Configuration.NetPipeSection">
+  <TypeSignature Language="C#" Value="public sealed class NetPipeSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit NetPipeSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activation.Configuration.NetPipeSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Konfigurationselemente für den Freigabedienst NetPipeActivator. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Named Pipe Activation Service verwaltet die Lebensdauer der Named Pipe-Verbindung und behandelt Aktivierungsanforderungen, die über benannte Pipes eingehen. Diese Klasse enthält Eigenschaften, die diesen Dienst konfigurieren.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NetPipeSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activation.Configuration.NetPipeSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Activation.Configuration.NetPipeSection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowAccounts">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Activation.Configuration.SecurityIdentifierElementCollection AllowAccounts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Activation.Configuration.SecurityIdentifierElementCollection AllowAccounts" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activation.Configuration.NetPipeSection.AllowAccounts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("allowAccounts")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Activation.Configuration.SecurityIdentifierElementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Benutzerkonten für Prozesse ab, die [!INCLUDE[indigo1](~/includes/indigo1-md.md)]-Dienste hosten und Verbindungszugriff auf den Freigabedienst haben.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.Activation.Configuration.SecurityIdentifierElementCollection" />, der Benutzerkonten für Prozesse enthält, die [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Dienste hosten und Verbindungszugriff auf den Freigabedienst haben. Die zurückgegebenen Standardwerte sind LocalSystem, Admin, NS, LS und IIS_USRS.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeDefault">
+      <MemberSignature Language="C#" Value="protected override void InitializeDefault ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InitializeDefault() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activation.Configuration.NetPipeSection.InitializeDefault" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxPendingAccepts">
+      <MemberSignature Language="C#" Value="public int MaxPendingAccepts { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxPendingAccepts" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activation.Configuration.NetPipeSection.MaxPendingAccepts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("maxPendingAccepts", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MinValue=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Höchstwert für ausstehende gleichzeitig annehmende Threads am überwachenden Endpunkt für den Freigabedienst ab oder legt ihn fest.</summary>
+        <value>Der Höchstwert für ausstehende gleichzeitig annehmende Threads am überwachenden Endpunkt für den Freigabedienst. Der Standard ist 2.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxPendingConnections">
+      <MemberSignature Language="C#" Value="public int MaxPendingConnections { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxPendingConnections" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activation.Configuration.NetPipeSection.MaxPendingConnections" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("maxPendingConnections", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MinValue=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl ausstehender Verbindungen für diesen Freigabedienst ab oder legt sie fest.</summary>
+        <value>Die maximale Anzahl ausstehender Verbindungen für diesen Freigabedienst.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activation.Configuration.NetPipeSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan ReceiveTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan ReceiveTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activation.Configuration.NetPipeSection.ReceiveTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ServiceModel.Configuration.TimeSpanOrInfiniteConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("receiveTimeout", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Timeout für den Freigabedienst NetPipeActivator ab oder legt es fest.</summary>
+        <value>Der Standardwert ist 10 Sekunden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt das Timeout für das Lesen der Rahmendaten und das Ausführen der Verbindungsverteilung der zugrunde liegenden Verbindungen an.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

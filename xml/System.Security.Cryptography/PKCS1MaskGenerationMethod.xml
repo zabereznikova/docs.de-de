@@ -1,0 +1,145 @@
+<Type Name="PKCS1MaskGenerationMethod" FullName="System.Security.Cryptography.PKCS1MaskGenerationMethod">
+  <TypeSignature Language="C#" Value="public class PKCS1MaskGenerationMethod : System.Security.Cryptography.MaskGenerationMethod" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PKCS1MaskGenerationMethod extends System.Security.Cryptography.MaskGenerationMethod" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.PKCS1MaskGenerationMethod" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.MaskGenerationMethod</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Berechnet Masken für Schlüsselaustauschalgorithmen anhand von PKCS #1.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse dient nur zur Generierung von Masken durch Implementierungen von Schlüsselaustauschalgorithmen. Diese Klasse wird nicht direkt vom Anwendungscode verwendet werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PKCS1MaskGenerationMethod ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.PKCS1MaskGenerationMethod.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.PKCS1MaskGenerationMethod" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor legt <xref:System.Security.Cryptography.PKCS1MaskGenerationMethod.HashName%2A> an Standardeinstellung der Name des Hashalgorithmus (SHA-1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateMask">
+      <MemberSignature Language="C#" Value="public override byte[] GenerateMask (byte[] rgbSeed, int cbReturn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] GenerateMask(unsigned int8[] rgbSeed, int32 cbReturn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.PKCS1MaskGenerationMethod.GenerateMask(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rgbSeed" Type="System.Byte[]" />
+        <Parameter Name="cbReturn" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rgbSeed">Der Zufallsstartwert zum Berechnen der Maske.</param>
+        <param name="cbReturn">Die Länge der generierten Maske in Bytes.</param>
+        <summary>Generiert eine Maske aus dem angegebenen Zufallsstartwert der angegebenen Länge und gibt diese Maske zurück.</summary>
+        <returns>Eine zufällig generierte Maske, deren Länge gleich ist, der <paramref name="cbReturn" /> Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Masken kommen in den Schlüsselaustausch Berechnung und im Allgemeinen nicht von Anwendungen verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HashName">
+      <MemberSignature Language="C#" Value="public string HashName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HashName" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.PKCS1MaskGenerationMethod.HashName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Hashalgorithmustyps ab, der zum Generieren der Maske verwendet werden soll, oder legt diesen Namen fest.</summary>
+        <value>Der Name des Typs, der den Hashalgorithmus implementiert, mit dem die Maske berechnet werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn keine Hash-Algorithmus angegeben wird, <xref:System.Security.Cryptography.SHA1> wird standardmäßig verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

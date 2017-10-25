@@ -1,0 +1,189 @@
+<Type Name="PreparingEnlistment" FullName="System.Transactions.PreparingEnlistment">
+  <TypeSignature Language="C#" Value="public class PreparingEnlistment : System.Transactions.Enlistment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PreparingEnlistment extends System.Transactions.Enlistment" />
+  <TypeSignature Language="DocId" Value="T:System.Transactions.PreparingEnlistment" />
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions.Local</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Transactions.Enlistment</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht die Kommunikation zwischen einem eingetragenen Transaktionsteilnehmer und dem Transaktions-Manager während der Vorbereitungsphase der Transaktion.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Während des Ladevorgangs (Vorbereitung) Phase der Transaktion übergibt der Transaktions-Manager diesen Typ an dem Ressourcen-Manager durch Aufrufen der <xref:System.Transactions.IEnlistmentNotification.Prepare%2A> Methode, um eine Ressource für die Transaktion abgerufen. Je nachdem, ob es bestimmt, ob für einen commit oder Rollback ausgeführt wurde, die Implementierung des Ressourcen-Managers aufrufen, sollten die <xref:System.Transactions.PreparingEnlistment.Prepared%2A> oder <xref:System.Transactions.PreparingEnlistment.ForceRollback%2A> Methoden dieses Typs.  
+  
+ Der Ressourcen-Manager kann auch einen Aufruf der <xref:System.Transactions.Enlistment.Done%2A> Methode am jederzeit vor, die sie aufgerufen hat die <xref:System.Transactions.PreparingEnlistment.Prepared%2A> Methode. Auf diese Weise wird die Eintragung einer schreibgeschützten Zustimmung, was bedeutet, dass es, stimmen der Commit für die Transaktion aber nicht auf das endgültige Ergebnis zu erhalten.  
+  
+ Permanente Ressourcen-Manager können die Informationen abrufen vom Transaktions-Manager für die erneute Eintragung von benötigt die <xref:System.Transactions.PreparingEnlistment.RecoveryInformation%2A> Eigenschaft. Weitere Informationen zur Wiederherstellung finden Sie unter [Wiederherstellung ausführen](http://msdn.microsoft.com/en-us/d342c5c7-da64-4a4c-8e63-b52f4fbf2691).  
+  
+   
+  
+## Examples  
+ [!code-csharp[Tx_Enlist#2](~/samples/snippets/csharp/VS_Snippets_CFX/tx_enlist/cs/enlist.cs#2)]
+ [!code-vb[Tx_Enlist#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/tx_enlist/vb/enlist.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Dieser Typ ist threadsicher.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="ForceRollback">
+      <MemberSignature Language="C#" Value="public void ForceRollback ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ForceRollback() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.PreparingEnlistment.ForceRollback" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, dass die Transaktion ein Rollback ausgeführt werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Implementierung von der <xref:System.Transactions.IEnlistmentNotification.Prepare%2A> Methode der <xref:System.Transactions.IEnlistmentNotification> Schnittstelle ruft diese Methode, um anzugeben, dass die Transaktion ein Rollback ausgeführt werden muss.  
+  
+   
+  
+## Examples  
+ [!code-csharp[Tx_Enlist#2](~/samples/snippets/csharp/VS_Snippets_CFX/tx_enlist/cs/enlist.cs#2)]
+ [!code-vb[Tx_Enlist#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/tx_enlist/vb/enlist.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForceRollback">
+      <MemberSignature Language="C#" Value="public void ForceRollback (Exception ex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ForceRollback(class System.Exception ex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.PreparingEnlistment.ForceRollback(System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="ex">To be added.</param>
+        <summary>Gibt an, dass die Transaktion ein Rollback ausgeführt werden soll.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prepared">
+      <MemberSignature Language="C#" Value="public void Prepared ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Prepared() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.PreparingEnlistment.Prepared" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, dass die Transaktion ein Commit ausgeführt werden kann.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der ersten (Vorbereitung) Phase eines Zweiphasen-Commits ein Ressourcen-Manager implementieren die <xref:System.Transactions.IEnlistmentNotification.Prepare%2A> Methode der <xref:System.Transactions.IEnlistmentNotification> -Schnittstelle, ruft diese Methode, um anzugeben, dass die Transaktion ein Commit ausgeführt werden kann.  
+  
+ Rufen Sie der Ressourcen-Manager kann die <xref:System.Transactions.Enlistment.Done%2A> Methode am jederzeit vor dem diese Methode aufgerufen hat.  Auf diese Weise wird die Eintragung einer schreibgeschützten Zustimmung, was bedeutet, dass es, stimmen der Commit für die Transaktion aber nicht auf das endgültige Ergebnis zu erhalten.  
+  
+ Sobald diese Methode, durch eine Eintragung aufgerufen wird und vor dem zurückgeben, es möglich ist, einen anderen Thread oder demselben Thread womöglich einen Aufruf an die gleiche Methode für die Eintragung wie z. B. <xref:System.Transactions.IEnlistmentNotification.Rollback%2A> um einen Rollback auszuführen. Dies kann in einer Deadlocksituation führen, wenn die Implementierung des Ressourcen-Managers nicht Ressourcensperren bis freigibt, nach der Methodenrückgabe.  
+  
+   
+  
+## Examples  
+ [!code-csharp[Tx_Enlist#2](~/samples/snippets/csharp/VS_Snippets_CFX/tx_enlist/cs/enlist.cs#2)]
+ [!code-vb[Tx_Enlist#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/tx_enlist/vb/enlist.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RecoveryInformation">
+      <MemberSignature Language="C#" Value="public byte[] RecoveryInformation ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] RecoveryInformation() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.PreparingEnlistment.RecoveryInformation" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Wiederherstellungsinformationen einer Eintragung ab.</summary>
+        <returns>Die Wiederherstellungsinformationen einer Eintragung.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Der Versuch, die Wiederherstellungsinformationen in einer flüchtigen Eintragung abzurufen, bei denen keine Wiederherstellungsinformationen generiert.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

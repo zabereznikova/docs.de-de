@@ -1,0 +1,273 @@
+<Type Name="ScopedMessagePartSpecification" FullName="System.ServiceModel.Security.ScopedMessagePartSpecification">
+  <TypeSignature Language="C#" Value="public class ScopedMessagePartSpecification" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ScopedMessagePartSpecification extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.ScopedMessagePartSpecification" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt an, welche Teile in einer Nachricht enthalten sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse enthält die <xref:System.ServiceModel.Security.MessagePartSpecification>-Instanzen anderer Nachrichten, die jeweils anhand der Nachrichtenaktion unterschieden werden können.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScopedMessagePartSpecification ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.ScopedMessagePartSpecification.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Security.ScopedMessagePartSpecification" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScopedMessagePartSpecification (System.ServiceModel.Security.ScopedMessagePartSpecification other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Security.ScopedMessagePartSpecification other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.ScopedMessagePartSpecification.#ctor(System.ServiceModel.Security.ScopedMessagePartSpecification)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="other" Type="System.ServiceModel.Security.ScopedMessagePartSpecification" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die andere <see cref="T:System.ServiceModel.Security.ScopedMessagePartSpecification" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Security.ScopedMessagePartSpecification" />-Klasse aus einer anderen Instanz dieser Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Actions">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;string&gt; Actions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;string&gt; Actions" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.ScopedMessagePartSpecification.Actions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Aktionsschlüsseln ab.</summary>
+        <value><see cref="T:System.Collections.Generic.ICollection`1" /> vom Typ <see cref="T:System.String" />, die die Schlüssel einer Auflistung von Aktionsteilen enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddParts">
+      <MemberSignature Language="C#" Value="public void AddParts (System.ServiceModel.Security.MessagePartSpecification parts);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddParts(class System.ServiceModel.Security.MessagePartSpecification parts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.ScopedMessagePartSpecification.AddParts(System.ServiceModel.Security.MessagePartSpecification)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parts" Type="System.ServiceModel.Security.MessagePartSpecification" />
+      </Parameters>
+      <Docs>
+        <param name="parts"><see cref="T:System.ServiceModel.Security.MessagePartSpecification" /> mit den hinzuzufügenden Teilen.</param>
+        <summary>Fügt den Auflistungen in der Instanz dieser Klasse Kanalnachrichtenteile hinzu.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="parts" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException"><see cref="T:System.ServiceModel.Security.MessagePartSpecification" /> ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddParts">
+      <MemberSignature Language="C#" Value="public void AddParts (System.ServiceModel.Security.MessagePartSpecification parts, string action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddParts(class System.ServiceModel.Security.MessagePartSpecification parts, string action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.ScopedMessagePartSpecification.AddParts(System.ServiceModel.Security.MessagePartSpecification,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parts" Type="System.ServiceModel.Security.MessagePartSpecification" />
+        <Parameter Name="action" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parts"><see cref="T:System.ServiceModel.Security.MessagePartSpecification" /> mit den hinzuzufügenden Teilen.</param>
+        <param name="action">Der Aktionsschlüssel, mit dem eine Übereinstimmung erzielt werden muss.</param>
+        <summary>Fügt der <see langword="MessagePartSpecification" /> Nachrichtenteile hinzu, die der angegebenen Aktion entsprechen.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="parts" /> oder <paramref name="action" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException"><see cref="T:System.ServiceModel.Security.MessagePartSpecification" /> ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ChannelParts">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.MessagePartSpecification ChannelParts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Security.MessagePartSpecification ChannelParts" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.ScopedMessagePartSpecification.ChannelParts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.MessagePartSpecification</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Nachrichtenteilspezifikation ab, die die Kanalteile enthält.</summary>
+        <value><see cref="T:System.ServiceModel.Security.MessagePartSpecification" />, die die Kanalteile enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Kanalteile geben die Nachrichtenteile an, die allen Nachrichten gemeinsam sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.ScopedMessagePartSpecification.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob die Spezifikation schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" />, wenn die Spezifikation schreibgeschützt ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können <xref:System.ServiceModel.Security.ScopedMessagePartSpecification.MakeReadOnly%2A> verwenden, um diese Eigenschaft auf `true` festzulegen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MakeReadOnly">
+      <MemberSignature Language="C#" Value="public void MakeReadOnly ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MakeReadOnly() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.ScopedMessagePartSpecification.MakeReadOnly" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt Schreibschutz für die Spezifikation fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetParts">
+      <MemberSignature Language="C#" Value="public bool TryGetParts (string action, out System.ServiceModel.Security.MessagePartSpecification parts);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetParts(string action, [out] class System.ServiceModel.Security.MessagePartSpecification&amp; parts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.ScopedMessagePartSpecification.TryGetParts(System.String,System.ServiceModel.Security.MessagePartSpecification@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="action" Type="System.String" />
+        <Parameter Name="parts" Type="System.ServiceModel.Security.MessagePartSpecification&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="action">Der Aktionsschlüssel.</param>
+        <param name="parts">Die Methode gibt eine <see cref="T:System.ServiceModel.Security.MessagePartSpecification" /> zurück, die die gefundenen Teile enthält. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Überprüft, ob es Teile gibt, die zu einem gegebenen Aktionsschlüssel passen.</summary>
+        <returns>
+          <see langword="true" />, wenn übereinstimmende Teile gefunden wurden, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die gegebene Aktion nicht in der <xref:System.ServiceModel.Security.ScopedMessagePartSpecification> vorhanden ist, werden die für die Platzhalteraktion ("*") konfigurierten Nachrichtenteile zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetParts">
+      <MemberSignature Language="C#" Value="public bool TryGetParts (string action, bool excludeChannelScope, out System.ServiceModel.Security.MessagePartSpecification parts);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetParts(string action, bool excludeChannelScope, [out] class System.ServiceModel.Security.MessagePartSpecification&amp; parts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.ScopedMessagePartSpecification.TryGetParts(System.String,System.Boolean,System.ServiceModel.Security.MessagePartSpecification@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="action" Type="System.String" />
+        <Parameter Name="excludeChannelScope" Type="System.Boolean" />
+        <Parameter Name="parts" Type="System.ServiceModel.Security.MessagePartSpecification&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="action">Der Aktionsschlüssel.</param>
+        <param name="excludeChannelScope">Wenn <see langword="true" />, werden die Teile auf den aktuellen Kanal beschränkt.</param>
+        <param name="parts">Die Methode gibt eine <see cref="T:System.ServiceModel.Security.MessagePartSpecification" /> zurück, die die gefundenen Teile enthält. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Überprüft, ob es Teile gibt, die zu einem gegebenen Aktionsschlüssel passen.</summary>
+        <returns>
+          <see langword="true" />, wenn übereinstimmende Teile gefunden wurden, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die gegebene Aktion nicht in der <xref:System.ServiceModel.Security.ScopedMessagePartSpecification> vorhanden ist, werden die für die Platzhalteraktion ("*") konfigurierten Nachrichtenteile zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

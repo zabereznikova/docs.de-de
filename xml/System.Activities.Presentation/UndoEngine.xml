@@ -1,0 +1,257 @@
+<Type Name="UndoEngine" FullName="System.Activities.Presentation.UndoEngine">
+  <TypeSignature Language="C#" Value="public class UndoEngine" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UndoEngine extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.UndoEngine" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt für Designer Implementierungen der Vorgänge "Rückgängig" und "Wiederholen" bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UndoEngine (System.Activities.Presentation.EditingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Activities.Presentation.EditingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.UndoEngine.#ctor(System.Activities.Presentation.EditingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.Presentation.EditingContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der Bearbeitungskontext.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Activities.Presentation.UndoEngine" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddUndoUnit">
+      <MemberSignature Language="C#" Value="public void AddUndoUnit (System.Activities.Presentation.UndoUnit unit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddUndoUnit(class System.Activities.Presentation.UndoUnit unit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.UndoEngine.AddUndoUnit(System.Activities.Presentation.UndoUnit)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="unit" Type="System.Activities.Presentation.UndoUnit" />
+      </Parameters>
+      <Docs>
+        <param name="unit">Die hinzuzufügende Rückgängig-Komponente.</param>
+        <summary>Fügt die angegebene Komponente dem Rückgängig-Stapel hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRedoActions">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;string&gt; GetRedoActions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; GetRedoActions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.UndoEngine.GetRedoActions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Collections.Generic.IEnumerable`1" />-Auflistung mit Wiederholen-Vorgängen ab.</summary>
+        <returns>Ein einfacher Iterator für eine Auflistung mit Wiederholen-Vorgängen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUndoActions">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;string&gt; GetUndoActions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; GetUndoActions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.UndoEngine.GetUndoActions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Collections.Generic.IEnumerable`1" />-Auflistung mit Rückgängig-Vorgängen ab.</summary>
+        <returns>Ein einfacher Iterator für eine Auflistung mit Rückgängig-Vorgängen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUndoRedoInProgress">
+      <MemberSignature Language="C#" Value="public bool IsUndoRedoInProgress { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsUndoRedoInProgress" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.UndoEngine.IsUndoRedoInProgress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Boolean" /> Wert, der angibt, ob ein Vorgang rückgängig gemacht bzw. wiederholt ausgeführt wird.</summary>
+        <value>
+          <see langword="true" />Wenn ein Vorgang rückgängig gemacht bzw. wiederholt ausgeführt wird; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Redo">
+      <MemberSignature Language="C#" Value="public bool Redo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Redo() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.UndoEngine.Redo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt die letzte <see cref="T:System.Activities.Presentation.UndoUnit" />-Instanz aus dem Wiederholen-Stapel und führt für die Komponente einen Wiederholen-Vorgang aus. Die <see cref="T:System.Activities.Presentation.UndoUnit" />-Instanz wird dann in den Rückgängig-Stapel eingefügt.</summary>
+        <returns>
+          <see langword="true" />Wenn diese Methode erfolgreich ist. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RedoCompleted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Activities.Presentation.UndoUnitEventArgs&gt; RedoCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Activities.Presentation.UndoUnitEventArgs&gt; RedoCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Activities.Presentation.UndoEngine.RedoCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Activities.Presentation.UndoUnitEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Wiederherstellungsvorgang abgeschlossen ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Undo">
+      <MemberSignature Language="C#" Value="public bool Undo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Undo() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.UndoEngine.Undo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt die letzte <see cref="T:System.Activities.Presentation.UndoUnit" />-Instanz aus dem Rückgängig-Stapel und führt für die Komponente einen Rückgängig-Vorgang aus. Die <see cref="T:System.Activities.Presentation.UndoUnit" />-Instanz wird dann in den Wiederholen-Stapel eingefügt.</summary>
+        <returns>
+          <see langword="true" />Wenn diese Methode erfolgreich ist. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UndoCompleted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Activities.Presentation.UndoUnitEventArgs&gt; UndoCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Activities.Presentation.UndoUnitEventArgs&gt; UndoCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Activities.Presentation.UndoEngine.UndoCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Activities.Presentation.UndoUnitEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Rückgängig-Vorgang abgeschlossen ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UndoRedoBufferChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler UndoRedoBufferChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler UndoRedoBufferChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Activities.Presentation.UndoEngine.UndoRedoBufferChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt beim Ändern von der Puffern, die halten zum Rückgängigmachen und wiederholen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UndoUnitAdded">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Activities.Presentation.UndoUnitEventArgs&gt; UndoUnitAdded;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Activities.Presentation.UndoUnitEventArgs&gt; UndoUnitAdded" />
+      <MemberSignature Language="DocId" Value="E:System.Activities.Presentation.UndoEngine.UndoUnitAdded" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Activities.Presentation.UndoUnitEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine Rückgängig-Komponente aus dem Rückgängig-Stapel entfernt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UndoUnitCancelled">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Activities.Presentation.UndoUnitEventArgs&gt; UndoUnitCancelled;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Activities.Presentation.UndoUnitEventArgs&gt; UndoUnitCancelled" />
+      <MemberSignature Language="DocId" Value="E:System.Activities.Presentation.UndoEngine.UndoUnitCancelled" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Activities.Presentation.UndoUnitEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine Rückgängig-Komponente aus dem Rückgängig-Stapel abgebrochen wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UndoUnitDiscarded">
+      <MemberSignature Language="C#" Value="public event EventHandler UndoUnitDiscarded;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler UndoUnitDiscarded" />
+      <MemberSignature Language="DocId" Value="E:System.Activities.Presentation.UndoEngine.UndoUnitDiscarded" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine Rückgängig-Komponente aus dem Rückgängig-Stapel entfernt wird, ohne dass vorher ein Rückgängig-Vorgang ausgeführt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

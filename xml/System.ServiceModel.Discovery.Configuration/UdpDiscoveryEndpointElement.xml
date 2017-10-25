@@ -1,0 +1,320 @@
+<Type Name="UdpDiscoveryEndpointElement" FullName="System.ServiceModel.Discovery.Configuration.UdpDiscoveryEndpointElement">
+  <TypeSignature Language="C#" Value="public class UdpDiscoveryEndpointElement : System.ServiceModel.Discovery.Configuration.DiscoveryEndpointElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UdpDiscoveryEndpointElement extends System.ServiceModel.Discovery.Configuration.DiscoveryEndpointElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Discovery.Configuration.UdpDiscoveryEndpointElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Discovery.Configuration.DiscoveryEndpointElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert ein Konfigurationselement für einen UDP-Ermittlungsendpunkt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein UDP-Ermittlungsendpunkt ist ein Standardendpunkt, der angibt, an welcher Stelle ein sichtbarer Dienst, der UDP-Transport verwendet, Ermittlungsmeldungen überwacht und an welcher Stelle Clients Suchmeldungen senden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UdpDiscoveryEndpointElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.Configuration.UdpDiscoveryEndpointElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.ServiceModel.Discovery.Configuration.UdpDiscoveryEndpointElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateServiceEndpoint">
+      <MemberSignature Language="C#" Value="protected override System.ServiceModel.Description.ServiceEndpoint CreateServiceEndpoint (System.ServiceModel.Description.ContractDescription contractDescription);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.ServiceModel.Description.ServiceEndpoint CreateServiceEndpoint(class System.ServiceModel.Description.ContractDescription contractDescription) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.Configuration.UdpDiscoveryEndpointElement.CreateServiceEndpoint(System.ServiceModel.Description.ContractDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceEndpoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contractDescription" Type="System.ServiceModel.Description.ContractDescription" />
+      </Parameters>
+      <Docs>
+        <param name="contractDescription">Nicht implementiert.</param>
+        <summary>Beim Aufrufen oder Überschreiben durch eine abgeleitete Klasse wird hierdurch eine neue Instanz der <see cref="T:System.ServiceModel.Discovery.UdpDiscoveryEndpoint" />-Klasse erstellt und initialisiert, die die Vertragsbeschreibung der aktuellen Version und des aktuellen Modus des Discovery-Protokolls verwendet.</summary>
+        <returns>Ein UDP-Ermittlungsendpunkt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DiscoveryMode">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Discovery.ServiceDiscoveryMode DiscoveryMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.Discovery.ServiceDiscoveryMode DiscoveryMode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.Configuration.UdpDiscoveryEndpointElement.DiscoveryMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("discoveryMode", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Discovery.ServiceDiscoveryMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Ermittlungsmodus ab, der vom Ermittlungsendpunkt verwendet wird, oder legt ihn fest.</summary>
+        <value>Der Ermittlungsmodus.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ermittlungen können in zwei Modi durchgeführt werden: im Ad-hoc-Modus und im verwalteten Modus. Bei der Ad-hoc-Ermittlung werden Ermittlungsmeldungen per Multicast an alle verfügbaren Dienste ausgesandt. Bei der verwalteten Ermittlung werden Meldungen per Unicast an einen Ermittlungsproxy gesendet. [!INCLUDE[crabout](~/includes/crabout-md.md)]den ermittlungsmodi finden Sie unter [Überblick über WCF-Ermittlung](~/docs/framework/wcf/feature-details/wcf-discovery-overview.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndpointType">
+      <MemberSignature Language="C#" Value="protected override Type EndpointType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type EndpointType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.Configuration.UdpDiscoveryEndpointElement.EndpointType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Beim Aufrufen oder Überschreiben durch eine abgeleitete Klasse wird hierdurch der Typ des UDP-Ermittlungsendpunkts abgerufen.</summary>
+        <value>Der Typ des Ermittlungsendpunkts.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeFrom">
+      <MemberSignature Language="C#" Value="protected override void InitializeFrom (System.ServiceModel.Description.ServiceEndpoint endpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void InitializeFrom(class System.ServiceModel.Description.ServiceEndpoint endpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.Configuration.UdpDiscoveryEndpointElement.InitializeFrom(System.ServiceModel.Description.ServiceEndpoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">Das zu konvertierende Dienstendpunktobjekt.</param>
+        <summary>Konvertiert den angegebenen <see cref="T:System.ServiceModel.Description.ServiceEndpoint" /> in einen <see cref="T:System.ServiceModel.Discovery.UdpDiscoveryEndpoint" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxResponseDelay">
+      <MemberSignature Language="C#" Value="public TimeSpan MaxResponseDelay { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan MaxResponseDelay" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.Configuration.UdpDiscoveryEndpointElement.MaxResponseDelay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ServiceModel.Configuration.TimeSpanOrInfiniteConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("maxResponseDelay", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ServiceModel.Configuration.ServiceModelTimeSpanValidator(MinValueString="00:00:00")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale <see cref="T:System.TimeSpan" /> ab, in der alle ProbeMatches für einen Dienst gesendet werden, der auf einen Überprüfungsvorgang reagiert, oder legt diese fest.</summary>
+        <value>Die maximale Verzögerung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MulticastAddress">
+      <MemberSignature Language="C#" Value="public Uri MulticastAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri MulticastAddress" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.Configuration.UdpDiscoveryEndpointElement.MulticastAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("multicastAddress", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="P:System.ServiceModel.Discovery.Configuration.UdpDiscoveryEndpointElement.MulticastAddress" />-Eigenschaft eines UDP-Ermittlungsendpunktelements ab oder legt sie fest.</summary>
+        <value>Eine IP-Adresse.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Multicastadresse ist die IP-Adresse, von der Meldungen gleichzeitig an mehrere Hostcomputer gesendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnApplyConfiguration">
+      <MemberSignature Language="C#" Value="protected override void OnApplyConfiguration (System.ServiceModel.Description.ServiceEndpoint endpoint, System.ServiceModel.Configuration.ChannelEndpointElement serviceEndpointElement);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnApplyConfiguration(class System.ServiceModel.Description.ServiceEndpoint endpoint, class System.ServiceModel.Configuration.ChannelEndpointElement serviceEndpointElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.Configuration.UdpDiscoveryEndpointElement.OnApplyConfiguration(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Configuration.ChannelEndpointElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="serviceEndpointElement" Type="System.ServiceModel.Configuration.ChannelEndpointElement" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">Der Dienstendpunkt, für den die Konfigurationseinstellungen angewendet werden.</param>
+        <param name="serviceEndpointElement">Nicht implementiert.</param>
+        <summary>Beim Aufrufen oder Überschreiben durch eine abgeleitete Klasse wird hierdurch der angegebene <see cref="T:System.ServiceModel.Description.ServiceEndpoint" /> in einen UDP-Ermittlungsendpunkt konvertiert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnApplyConfiguration">
+      <MemberSignature Language="C#" Value="protected override void OnApplyConfiguration (System.ServiceModel.Description.ServiceEndpoint endpoint, System.ServiceModel.Configuration.ServiceEndpointElement serviceEndpointElement);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnApplyConfiguration(class System.ServiceModel.Description.ServiceEndpoint endpoint, class System.ServiceModel.Configuration.ServiceEndpointElement serviceEndpointElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.Configuration.UdpDiscoveryEndpointElement.OnApplyConfiguration(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Configuration.ServiceEndpointElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="serviceEndpointElement" Type="System.ServiceModel.Configuration.ServiceEndpointElement" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">Der Dienstendpunkt, für den die Konfigurationseinstellungen angewendet werden.</param>
+        <param name="serviceEndpointElement">Nicht implementiert.</param>
+        <summary>Beim Aufrufen oder Überschreiben durch eine abgeleitete Klasse wird hierdurch der angegebene <see cref="T:System.ServiceModel.Description.ServiceEndpoint" /> in einen UDP-Ermittlungsendpunkt konvertiert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInitializeAndValidate">
+      <MemberSignature Language="C#" Value="protected override void OnInitializeAndValidate (System.ServiceModel.Configuration.ChannelEndpointElement channelEndpointElement);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnInitializeAndValidate(class System.ServiceModel.Configuration.ChannelEndpointElement channelEndpointElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.Configuration.UdpDiscoveryEndpointElement.OnInitializeAndValidate(System.ServiceModel.Configuration.ChannelEndpointElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="channelEndpointElement" Type="System.ServiceModel.Configuration.ChannelEndpointElement" />
+      </Parameters>
+      <Docs>
+        <param name="channelEndpointElement">Das zu initialisierende und zu überprüfende Kanalendpunktelement.</param>
+        <summary>Beim Aufrufen oder Überschreiben durch eine abgeleitete Klasse wird hierdurch die angegebene Instanz von einem <see cref="T:System.ServiceModel.Configuration.ChannelEndpointElement" /> initialisiert und überprüft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInitializeAndValidate">
+      <MemberSignature Language="C#" Value="protected override void OnInitializeAndValidate (System.ServiceModel.Configuration.ServiceEndpointElement serviceEndpointElement);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnInitializeAndValidate(class System.ServiceModel.Configuration.ServiceEndpointElement serviceEndpointElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.Configuration.UdpDiscoveryEndpointElement.OnInitializeAndValidate(System.ServiceModel.Configuration.ServiceEndpointElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceEndpointElement" Type="System.ServiceModel.Configuration.ServiceEndpointElement" />
+      </Parameters>
+      <Docs>
+        <param name="serviceEndpointElement">Das zu initialisierende und zu überprüfende Dienstendpunktelement.</param>
+        <summary>Beim Aufrufen oder Überschreiben durch eine abgeleitete Klasse wird hierdurch die angegebene Instanz von einem <see cref="T:System.ServiceModel.Configuration.ServiceEndpointElement" /> initialisiert und überprüft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.Configuration.UdpDiscoveryEndpointElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Beim Aufrufen oder Überschreiben durch eine abgeleitete Klasse wird hierdurch eine Auflistung der in der <see cref="T:System.ServiceModel.Discovery.Configuration.UdpDiscoveryEndpointElement" />-Instanz enthaltenen Konfigurationseinstellungen abgerufen.</summary>
+        <value>Eine Auflistung der Konfigurationseinstellungen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransportSettings">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Discovery.Configuration.UdpTransportSettingsElement TransportSettings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Discovery.Configuration.UdpTransportSettingsElement TransportSettings" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.Configuration.UdpDiscoveryEndpointElement.TransportSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("transportSettings")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Discovery.Configuration.UdpTransportSettingsElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Bindungseinstellungen eines UDP-Transportkonfigurationselements ab.</summary>
+        <value>Ein UDP- Konfigurationselement.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

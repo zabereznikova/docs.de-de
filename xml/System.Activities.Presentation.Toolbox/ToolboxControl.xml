@@ -1,0 +1,427 @@
+<Type Name="ToolboxControl" FullName="System.Activities.Presentation.Toolbox.ToolboxControl">
+  <TypeSignature Language="C#" Value="public sealed class ToolboxControl : System.Windows.Controls.Control" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ToolboxControl extends System.Windows.Controls.Control" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.Toolbox.ToolboxControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Control</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Categories")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_SearchBox")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_Tools")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Funktionen bereit, um eine Auflistung kategorisierter Tools zu rendern, und informiert Benutzer über Toolauswahl- und Erstellungsereignisse. Diese Klasse ist <see langword="sealed" /> und kann also nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse bietet Unterstützung für die Darstellung von Toolbox-Steuerelementen beim erneuten Hosten die [!INCLUDE[wfd1](~/includes/wfd1-md.md)] außerhalb von Visual Studio. Sie implementiert <xref:System.Windows.Controls.Control>. <xref:System.Activities.Presentation.Toolbox.ToolboxControl> enthält eine Auflistung von Toolboxkategorien, die verschiedene Kategorien von Tools aufweisen kann, auf die mit der <xref:System.Activities.Presentation.Toolbox.ToolboxControl.Categories%2A>-Eigenschaft zugegriffen werden kann. Damit kann auch der <xref:System.Activities.Presentation.WorkflowDesigner> abgerufen werden, dem es mit der <xref:System.Activities.Presentation.Toolbox.ToolboxControl.AssociatedDesigner%2A>-Eigenschaft zugeordnet ist.  
+  
+> [!WARNING]
+>  Für Aktivitäten, die in der Toolbox ordnungsgemäß geladen muss die Assembly mit den Aktivitäten werden geladen zuerst. Verwendung <xref:System.Reflection.Assembly.LoadFrom%2A> des Aktivitätstyps geladen, wenn in einer anderen Assembly enthalten; wird dagegen <xref:System.Object.GetType%2A> stattdessen löst eine Ausnahme ausgelöst wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolboxControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Toolbox.ToolboxControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Activities.Presentation.Toolbox.ToolboxControl" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssociatedDesigner">
+      <MemberSignature Language="C#" Value="public System.Activities.Presentation.WorkflowDesigner AssociatedDesigner { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Presentation.WorkflowDesigner AssociatedDesigner" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Toolbox.ToolboxControl.AssociatedDesigner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.WorkflowDesigner</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das [!INCLUDE[wfd1](~/includes/wfd1-md.md)]-Objekt ab, mit dem dieses Toolboxsteuerelement zugeordnet ist, oder legt es fest.</summary>
+        <value>Die <see cref="T:System.Activities.Presentation.Toolbox.WorkflowDesigner" />-Instanz, der dieses Toolboxsteuerelement zugeordnet ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Categories">
+      <MemberSignature Language="C#" Value="public System.Activities.Presentation.Toolbox.ToolboxCategoryItems Categories { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Presentation.Toolbox.ToolboxCategoryItems Categories" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Toolbox.ToolboxControl.Categories" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.Toolbox.ToolboxCategoryItems</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von diesem Steuerelement zugeordneten Toolboxkategorien ab oder legt sie fest.</summary>
+        <value>Die <see cref="T:System.Activities.Design.Toolbox.ToolboxCategoryItems" />, die die Auflistung von <see cref="T:System.Activities.Design.Toolbox.ToolboxCategory" />-Objekten enthält, die diesem <see cref="T:System.Activities.Presentation.Toolbox.ToolboxControl" /> zugeordnet sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der festgelegte Wert ist `null`, die Kategorien in der <xref:System.Activities.Presentation.Toolbox.ToolboxCategoryItems> wird gelöscht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CategoryItemStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Style CategoryItemStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Style CategoryItemStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Toolbox.ToolboxControl.CategoryItemStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das für jedes Kategorieelement verwendete Format ab oder legt es fest.</summary>
+        <value>Das <see cref="T:System.Windows.Style" />-Objekt, das das Format enthält, das auf die einzelnen Kategorien angewendet ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CategoryItemStyleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CategoryItemStyleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CategoryItemStyleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.Toolbox.ToolboxControl.CategoryItemStyleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Activities.Presentation.Toolbox.ToolboxControl.CategoryItemStyle" />-Abhängigkeitseigenschaft. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CategoryTemplate">
+      <MemberSignature Language="C#" Value="public System.Windows.DataTemplate CategoryTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DataTemplate CategoryTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Toolbox.ToolboxControl.CategoryTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DataTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die für die Kategorie verwendete Datenvorlage ab oder legt sie fest.</summary>
+        <value>Die <see cref="T:System.Windows.DataTemplate" /> für die Kategorie.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CategoryTemplateProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CategoryTemplateProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CategoryTemplateProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.Toolbox.ToolboxControl.CategoryTemplateProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Activities.Presentation.Toolbox.ToolboxControl.CategoryTemplate" />-Abhängigkeitseigenschaft. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnApplyTemplate">
+      <MemberSignature Language="C#" Value="public override void OnApplyTemplate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnApplyTemplate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Toolbox.ToolboxControl.OnApplyTemplate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt die visuelle Struktur für dieses Toolboxsteuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Activities.Presentation.Toolbox.ToolboxControl.OnApplyTemplate%2A>-Methode wird von der <xref:System.Windows.FrameworkElement.ApplyTemplate%2A>-Methode aufgerufen. <xref:System.Activities.Presentation.Toolbox.ToolboxControl> implementiert das <xref:System.Windows.Controls.Control>-Element, das wiederum <xref:System.Windows.FrameworkElement> implementiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreviewKeyDown">
+      <MemberSignature Language="C#" Value="protected override void OnPreviewKeyDown (System.Windows.Input.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPreviewKeyDown(class System.Windows.Input.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Toolbox.ToolboxControl.OnPreviewKeyDown(System.Windows.Input.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedTool">
+      <MemberSignature Language="C#" Value="public System.Drawing.Design.ToolboxItem SelectedTool { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Design.ToolboxItem SelectedTool" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Toolbox.ToolboxControl.SelectedTool" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.ToolboxItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Tool ab, das in der Toolbox ausgewählt wird, oder legt es fest.</summary>
+        <value>Das ausgewählte <see cref="T:System.Drawing.Design.ToolboxItem" />-Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedToolProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SelectedToolProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SelectedToolProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.Toolbox.ToolboxControl.SelectedToolProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Activities.Presentation.Toolbox.ToolboxControl.SelectedTool" />-Abhängigkeitseigenschaft. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolboxFile">
+      <MemberSignature Language="C#" Value="public string ToolboxFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolboxFile" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Toolbox.ToolboxControl.ToolboxFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Toolboxdatei ab oder legt ihn fest.</summary>
+        <value>Der Name der Toolboxdatei.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolboxFileProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ToolboxFileProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ToolboxFileProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.Toolbox.ToolboxControl.ToolboxFileProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Activities.Presentation.Toolbox.ToolboxControl.ToolboxFile" />-Abhängigkeitseigenschaft. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolCreated">
+      <MemberSignature Language="C#" Value="public event System.Activities.Presentation.Toolbox.ToolCreatedEventHandler ToolCreated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Activities.Presentation.Toolbox.ToolCreatedEventHandler ToolCreated" />
+      <MemberSignature Language="DocId" Value="E:System.Activities.Presentation.Toolbox.ToolboxControl.ToolCreated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.Toolbox.ToolCreatedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn im Toolboxsteuerelement ein Tool erstellt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolCreatedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent ToolCreatedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent ToolCreatedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.Toolbox.ToolboxControl.ToolCreatedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet das <see cref="E:System.Activities.Presentation.Toolbox.ToolboxControl.ToolCreated" />-Ereignis. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolItemStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Style ToolItemStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Style ToolItemStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Toolbox.ToolboxControl.ToolItemStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das für die Toolelemente verwendete Format ab oder legt es fest.</summary>
+        <value>Das <see cref="T:System.Windows.Style" /> für die Toolelemente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolItemStyleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ToolItemStyleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ToolItemStyleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.Toolbox.ToolboxControl.ToolItemStyleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Activities.Presentation.Toolbox.ToolboxControl.ToolItemStyle" />-Abhängigkeitseigenschaft. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolSelected">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler ToolSelected;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler ToolSelected" />
+      <MemberSignature Language="DocId" Value="E:System.Activities.Presentation.Toolbox.ToolboxControl.ToolSelected" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn im Toolbox-Steuerelement ein Tool ausgewählt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolSelectedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent ToolSelectedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent ToolSelectedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.Toolbox.ToolboxControl.ToolSelectedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet das <see cref="E:System.Activities.Presentation.Toolbox.ToolboxControl.ToolSelected" />-Ereignis. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTemplate">
+      <MemberSignature Language="C#" Value="public System.Windows.DataTemplate ToolTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DataTemplate ToolTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Toolbox.ToolboxControl.ToolTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DataTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die für die Tools verwendete Datenvorlage ab oder legt sie fest.</summary>
+        <value>Die für die Tools verwendete <see cref="T:System.Windows.DataTemplate" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTemplateProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ToolTemplateProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ToolTemplateProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.Toolbox.ToolboxControl.ToolTemplateProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Activities.Presentation.Toolbox.ToolboxControl.ToolTemplate" />-Abhängigkeitseigenschaft. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

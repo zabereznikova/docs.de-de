@@ -1,0 +1,570 @@
+<Type Name="Clock" FullName="System.Windows.Media.Animation.Clock">
+  <TypeSignature Language="C#" Value="public class Clock : System.Windows.Threading.DispatcherObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Clock extends System.Windows.Threading.DispatcherObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.Clock" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Threading.DispatcherObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Verwaltet den Laufzeitzustand der zeitlichen Steuerung für eine <see cref="T:System.Windows.Media.Animation.Timeline" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Media.Animation.Timeline>, alleine erfolgt jedoch nicht durch alle Elemente außer beschreiben einen Zeitabschnitt. Es handelt sich um der Zeitachse <xref:System.Windows.Media.Animation.Clock> -Objekt, das die eigentliche Arbeit übernimmt: Es verwaltet zeitbezogenen Laufzeitzustand der Zeitachse.  
+  
+ In den meisten Fällen wird eine Uhr automatisch für den Zeitplan erstellt. Wenn Sie Animationen mit einer <xref:System.Windows.Media.Animation.Storyboard> oder die <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> -Methode, Uhren automatisch für die Zeitachsen und Animationen erstellt und auf die Zieleigenschaften angewendet. Beispiele finden Sie unter [Vorgehensweise: Animieren einer Eigenschaft eines Drehbuchs mit](~/docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md) und [Vorgehensweise: Animieren einer Eigenschaft ohne Verwendung eines Storyboards](~/docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md).  
+  
+ Sie können auch erstellen eine <xref:System.Windows.Media.Animation.Clock> explizit mithilfe der <xref:System.Windows.Media.Animation.Timeline.CreateClock%2A> Methode. Im ressourcenintensiven Szenarien, z. B. animieren zahlreiche ähnliche Objekte verwalten Ihren eigenen <xref:System.Windows.Media.Animation.Clock> verwenden kann Leistungsvorteile bieten.  
+  
+ Uhren in Strukturen, die die Struktur der entsprechen angeordnet sind die <xref:System.Windows.Media.Animation.Timeline> Objektstruktur, aus der sie erstellt werden. Die Stammuhr einer solchen Zeitstruktur kann interaktiv bearbeitet werden (angehalten, fortgesetzt, angehalten usw.) durch das Abrufen von dessen <xref:System.Windows.Media.Animation.Clock.Controller%2A>. Nicht-Root Uhren können nicht direkt gesteuert werden.  
+  
+ Nachdem Sie erstellt haben, kann keine Uhr geändert werden (jedoch bearbeitet werden können).  
+  
+## <a name="using-a-timeline-as-a-timer"></a>Verwenden eine Zeitachse als Zeitgeber  
+ Uhr einer Zeitachse wird nur ausgeführt, wenn ein Ereignishandler zugeordnet oder (im Fall von einem <xref:System.Windows.Media.Animation.AnimationClock> Objekt) eine Eigenschaft zugeordnet ist. Aus diesem Grund (und andere), wird nicht empfohlen, Sie verwenden eine <xref:System.Windows.Media.Animation.Timeline> als Zeitgeber.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Abgeleitete Klassen implementieren sollten <see cref="M:System.Windows.Media.Animation.Clock.GetCurrentTimeCore" /> Wenn wie Zeit dieser Uhr fließt geändert werden soll. Abgeleitete Klassen können erfolgen, damit die weiteren Schritte beim Uhr wiederholt, überspringt, Suchvorgängen, beginnt, angehalten, fortgesetzt wird, oder durch Überschreiben Beenden der <see cref="M:System.Windows.Media.Animation.Clock.DiscontinuousTimeMovement" />, <see cref="M:System.Windows.Media.Animation.Clock.SpeedChanged" />, und <see cref="M:System.Windows.Media.Animation.Clock.Stopped" /> Methoden.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Clock (System.Windows.Media.Animation.Timeline timeline);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(class System.Windows.Media.Animation.Timeline timeline) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Clock.#ctor(System.Windows.Media.Animation.Timeline)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="timeline" Type="System.Windows.Media.Animation.Timeline" />
+      </Parameters>
+      <Docs>
+        <param name="timeline">Die <see cref="P:System.Windows.Media.Animation.Clock.Timeline" /> aus der dieser Uhr erstellt werden soll. Uhren werden nicht für jegliche untergeordneten erstellt <see cref="P:System.Windows.Media.Animation.Clock.Timeline" /> Objekte, sofern vorhanden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.Animation.Clock" /> -Klasse mit dem angegebenen <see cref="P:System.Windows.Media.Animation.Clock.Timeline" /> als Vorlage. Die neue <see cref="T:System.Windows.Media.Animation.Clock" /> Objekt weist keine untergeordneten Elemente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Completed">
+      <MemberSignature Language="C#" Value="public event EventHandler Completed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Completed" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Media.Animation.Clock.Completed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn dieser Uhr vollständig beendet wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Uhr die Stammuhr einer Uhr-Struktur ist, hat es abgeschlossen, spielen nach des Endes der aktive Dauer erreichen (einschließlich Wiederholungen) und aller diesem untergeordneten Elemente am Ende ihrer aktiven Dauer erreicht haben. Wenn die Uhr einer untergeordneten Uhr ist, gilt es vollständig abgeschlossen ist wiedergegeben, wenn die Stammuhr der Uhrenstruktur, die zu der sie erreicht gehört das Ende der aktiven Duration "und" alle untergeordneten Uhren Wiedergabe beendet wurde.  
+  
+ Beim Beenden einer Uhr das abgeschlossene Ereignis nicht ausgelöst, jedoch ist es auf den Füllzeitraum Vorlauf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Controller">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.ClockController Controller { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Animation.ClockController Controller" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.Clock.Controller" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.ClockController</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen <see cref="T:System.Windows.Media.Animation.ClockController" /> ab, der zum Starten, Anhalten, Fortsetzen, Suchen, Überspringen, Beenden oder Entfernen dieser <see cref="T:System.Windows.Media.Animation.Clock" /> verwendet werden kann.</summary>
+        <value>Ein <see cref="T:System.Windows.Media.Animation.ClockController" />, wenn dies eine Stammuhr ist, anderenfalls <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nur Stammuhren können interaktiv gesteuert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentGlobalSpeed">
+      <MemberSignature Language="C#" Value="public Nullable&lt;double&gt; CurrentGlobalSpeed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;float64&gt; CurrentGlobalSpeed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.Clock.CurrentGlobalSpeed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Double&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Rate ab, mit der die Zeit einer Uhr gegenwärtig im Verhältnis zur tatsächlichen Zeit fortschreitet.</summary>
+        <value>Die Rate, mit der die Zeit dieser Uhr gegenwärtig im Verhältnis zur tatsächlichen Zeit fortschreitet. Wenn die Uhr angehalten wird, gibt diese Eigenschaft <see langword="null" /> zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentGlobalSpeedInvalidated">
+      <MemberSignature Language="C#" Value="public event EventHandler CurrentGlobalSpeedInvalidated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler CurrentGlobalSpeedInvalidated" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Media.Animation.Clock.CurrentGlobalSpeedInvalidated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Taktfrequenz aktualisiert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anhalten, fortsetzen, umkehren, beschleunigen, verlangsamen, Suchvorgänge, beenden oder Änderung einer Uhr der interaktiven beschleunigen mithilfe einer <xref:System.Windows.Media.Animation.ClockController> löst dieses Ereignis.  
+  
+ Obwohl dieses Ereignis tritt auf, wenn die <xref:System.Windows.Media.Animation.Clock.CurrentGlobalSpeed%2A> Eigenschaft ist ungültig, die nicht unbedingt der geänderten Eigenschaft bedeutet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentGlobalTime">
+      <MemberSignature Language="C#" Value="protected TimeSpan CurrentGlobalTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan CurrentGlobalTime" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.Clock.CurrentGlobalTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuelle globale Zeit ab, wie die [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] Zeitsteuerungssystems.</summary>
+        <value>Die aktuelle globale Zeit für die [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] Zeitsteuerungssystems.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentIteration">
+      <MemberSignature Language="C#" Value="public Nullable&lt;int&gt; CurrentIteration { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; CurrentIteration" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.Clock.CurrentIteration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Rufen Sie die aktuelle Iteration der Uhr.</summary>
+        <value>Diese Uhr aktuelle Iteration in der aktuellen aktiven Zeitraum oder <see langword="null" /> , wenn diese Uhr angehalten wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erste Iteration einer Uhr hat den Wert 1.  
+  
+ Wenn diese Uhr Zeitachse verfügt ein <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> Festlegen von `true`, eine vollständige Iteration besteht aus einem Vorwärts-Rückwärts-Paar, nicht nur eines dieser Segmente.  
+  
+ Unabhängig von der aktuellen Iteration Gibt beim Durchsuchen einer Uhr die aktuellen Iteration 1 zurück. Beim Neustarten einer Uhr gibt auch die aktuelle Iteration 1 zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentProgress">
+      <MemberSignature Language="C#" Value="public Nullable&lt;double&gt; CurrentProgress { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;float64&gt; CurrentProgress" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.Clock.CurrentProgress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Double&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den aktuellen Status dieses <see cref="T:System.Windows.Media.Animation.Clock" /> innerhalb der aktuellen Iteration.</summary>
+        <value>
+          <see langword="null" />Wenn die Uhr <see cref="F:System.Windows.Media.Animation.ClockState.Stopped" />, oder 0,0, wenn die Uhr aktiv ist und die zugehörige <see cref="P:System.Windows.Media.Animation.Clock.Timeline" /> verfügt über eine <see cref="P:System.Windows.Media.Animation.Timeline.Duration" /> von <see cref="P:System.Windows.Duration.Forever" />ist, andernfalls einen Wert zwischen 0,0 und 1,0, der den aktuellen Status dieser Uhr innerhalb der aktuellen Iteration angibt. Der Wert 0,0 zeigt an, keinen Status und ein Wert von 1,0 gibt an, dass die Uhr am Ende der aktuellen Iteration.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Eigenschaft gibt die <xref:System.Windows.Media.Animation.Clock.CurrentTime%2A> normalisiert durch die <xref:System.Windows.Media.Animation.Timeline.Duration%2A> dieser Uhr <xref:System.Windows.Media.Animation.Clock.Timeline%2A>.  
+  
+ Eine Uhr, ist <xref:System.Windows.Media.Animation.ClockState.Filling> verfügt über eine <xref:System.Windows.Media.Animation.Clock.CurrentProgress%2A> 1,0.  
+  
+## <a name="using-a-timeline-as-a-timer"></a>Verwenden eine Zeitachse als Zeitgeber  
+ Uhr einer Zeitachse wird nur ausgeführt, wenn ein Ereignishandler zugeordnet ist oder (im Fall von einem <xref:System.Windows.Media.Animation.AnimationClock> Objekt) eine Eigenschaft zugeordnet ist. Aus diesem Grund (und andere), wird nicht empfohlen, Sie verwenden eine <xref:System.Windows.Media.Animation.Timeline> als Zeitgeber.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentState">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.ClockState CurrentState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Animation.ClockState CurrentState" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.Clock.CurrentState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.ClockState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Uhr aktuell <see cref="F:System.Windows.Media.Animation.ClockState.Active" />, <see cref="F:System.Windows.Media.Animation.ClockState.Filling" /> oder <see cref="F:System.Windows.Media.Animation.ClockState.Stopped" /> ist.</summary>
+        <value>Der aktuelle Zustand der Uhr: <see cref="F:System.Windows.Media.Animation.ClockState.Active" />, <see cref="F:System.Windows.Media.Animation.ClockState.Filling" /> oder <see cref="F:System.Windows.Media.Animation.ClockState.Stopped" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beachten Sie der Uhr <xref:System.Windows.Media.Animation.Clock.CurrentState%2A> Eigenschaft keine geben Aufschluss darüber, ob er angehalten wurde. Um zu bestimmen, ob eine Uhr angehalten wurde, verwenden Sie die <xref:System.Windows.Media.Animation.Clock.IsPaused%2A> Eigenschaft.  
+  
+ Die <xref:System.Windows.Media.Animation.Clock.CurrentStateInvalidated> tritt auf, wenn der Wert dieser Eigenschaft ändert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentStateInvalidated">
+      <MemberSignature Language="C#" Value="public event EventHandler CurrentStateInvalidated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler CurrentStateInvalidated" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Media.Animation.Clock.CurrentStateInvalidated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die <see cref="P:System.Windows.Media.Animation.Clock.CurrentState" />-Eigenschaft der Uhr aktualisiert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> Ereignis, wenn Sie möchten, um benachrichtigt zu werden, wenn die Uhr beginnt, beendet oder ausgefüllt wird. Die <xref:System.Object> Parameter von der <xref:System.EventHandler> -Ereignishandler ist der <xref:System.Windows.Media.Animation.Clock> , deren Zustand ungültig war.  
+  
+ Durch das Anhalten einer <xref:System.Windows.Media.Animation.Clock> ändert nicht ihre <xref:System.Windows.Media.Animation.Clock.CurrentState%2A>. Um benachrichtigt zu werden, wenn eine Uhr angehalten wird, verwenden die <xref:System.Windows.Media.Animation.Timeline.CurrentGlobalSpeedInvalidated> Ereignis.  
+  
+ Obwohl dieses Ereignis tritt auf, wenn die <xref:System.Windows.Media.Animation.ClockState> ungültig, die nicht unbedingt bedeutet der <xref:System.Windows.Media.Animation.ClockState> geändert: eine <xref:System.Windows.Media.Animation.Clock> , wechselt von <xref:System.Windows.Media.Animation.ClockState.Active> zu <xref:System.Windows.Media.Animation.ClockState.Filling> und dann zurück in <xref:System.Windows.Media.Animation.ClockState.Active> am selben Teilstrich führt dazu, dass Dieses Ereignis ausgelöst wird, aber seine <xref:System.Windows.Media.Animation.Clock.CurrentState%2A> Eigenschaft wird nicht tatsächlich ändern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentTime">
+      <MemberSignature Language="C#" Value="public Nullable&lt;TimeSpan&gt; CurrentTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.TimeSpan&gt; CurrentTime" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.Clock.CurrentTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.TimeSpan&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Uhr die aktuelle Zeit innerhalb der aktuellen Iteration.</summary>
+        <value>
+          <see langword="null" />Wenn die Uhr <see cref="F:System.Windows.Media.Animation.ClockState.Stopped" />ist, andernfalls die aktuelle Zeit dieser Uhr.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="using-a-timeline-as-a-timer"></a>Verwenden eine Zeitachse als Zeitgeber  
+ Uhr einer Zeitachse wird nur ausgeführt, wenn ein Ereignishandler zugeordnet ist oder (im Fall von einem <xref:System.Windows.Media.Animation.AnimationClock> Objekt) eine Eigenschaft zugeordnet ist. Aus diesem Grund (und andere), wird nicht empfohlen, Sie verwenden eine <xref:System.Windows.Media.Animation.Timeline> als Zeitgeber.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentTimeInvalidated">
+      <MemberSignature Language="C#" Value="public event EventHandler CurrentTimeInvalidated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler CurrentTimeInvalidated" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Media.Animation.Clock.CurrentTimeInvalidated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn diese Uhr <see cref="P:System.Windows.Media.Animation.Clock.CurrentTime" /> ungültig wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einer Uhr <xref:System.Windows.Media.Animation.Clock.CurrentTime%2A> wird ungültig, wenn die Uhr ausgeführt. Die folgenden interaktiven Vorgänge zudem das CurrentTimeInvalidated-Ereignis ausgelöst: <xref:System.Windows.Media.Animation.ClockController.Begin%2A>, <xref:System.Windows.Media.Animation.ClockController.SkipToFill%2A>, <xref:System.Windows.Media.Animation.ClockController.Seek%2A>, <xref:System.Windows.Media.Animation.ClockController.SeekAlignedToLastTick%2A>, und <xref:System.Windows.Media.Animation.ClockController.Stop%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DiscontinuousTimeMovement">
+      <MemberSignature Language="C#" Value="protected virtual void DiscontinuousTimeMovement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void DiscontinuousTimeMovement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Clock.DiscontinuousTimeMovement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beim Implementieren in einer abgeleiteten Klasse aufgerufen, wenn eine Uhr wiederholt wird, überspringt oder Suchvorgängen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCanSlip">
+      <MemberSignature Language="C#" Value="protected virtual bool GetCanSlip ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool GetCanSlip() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Clock.GetCanSlip" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt zurück, ob die <see cref="T:System.Windows.Media.Animation.Clock" /> verfügt über einen eigenen externen Zeitquelle, die Synchronisierung mit der Zeitsteuerungssystems erfordern.</summary>
+        <returns>Gibt **"true"** Wenn die <see cref="T:System.Windows.Media.Animation.Clock" /> verfügt über einen eigenen externen Quelle für Zeit, die Synchronisierung mit der Zeitsteuerungssystems; erfordern kann, andernfalls **"false"**.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Medien mit wiedergegeben wird <xref:System.Windows.Media.MediaTimeline> innerhalb einer <xref:System.Windows.Media.Animation.Storyboard> ist ein Beispiel zum Erstellen einer <xref:System.Windows.Media.Animation.Clock> müsste, die eine externen Zeitquelle (z. B. eines Videoclips) die Synchronisierung mit anderen Zeitplänen im erfordern möglicherweise die <xref:System.Windows.Media.Animation.Storyboard>. Weitere Informationen finden Sie unter <xref:System.Windows.Media.Animation.ParallelTimeline.SlipBehavior%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentTimeCore">
+      <MemberSignature Language="C#" Value="protected virtual TimeSpan GetCurrentTimeCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance valuetype System.TimeSpan GetCurrentTimeCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Clock.GetCurrentTimeCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Uhr die aktuelle Zeit innerhalb der aktuellen Iteration.</summary>
+        <returns>Die aktuelle Zeit dieser Uhr, wenn es aktiv "oder" gefüllt ist; andernfalls <see cref="F:System.TimeSpan.Zero" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, in der Implementierung der <xref:System.Windows.Media.Animation.Clock.CurrentTime%2A> Methode und sollte nicht direkt aus Ihrem Code aufgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Abgeleitete Klassen sollten diese Methode überschreiben, wenn sie ändern, wie sie die aktuelle Uhrzeit bestimmen möchten.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="HasControllableRoot">
+      <MemberSignature Language="C#" Value="public bool HasControllableRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasControllableRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.Clock.HasControllableRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob dies <see cref="T:System.Windows.Media.Animation.Clock" /> ist Teil einer steuerbaren Uhrenstruktur.</summary>
+        <value>
+          <see langword="true" />Wenn diese Uhr zu einer Uhrenstruktur mit einer steuerbaren Stammuhr gehört oder diese Uhr selbst eine steuerbare Stammuhr ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPaused">
+      <MemberSignature Language="C#" Value="public bool IsPaused { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPaused" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.Clock.IsPaused" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob dies <see cref="T:System.Windows.Media.Animation.Clock" />, oder eines seiner übergeordneten Elemente angehalten wurde.</summary>
+        <value>
+          <see langword="true" />Wenn diese <see cref="T:System.Windows.Media.Animation.Clock" /> oder eines seiner übergeordneten Elemente angehalten ist, andernfalls wird <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NaturalDuration">
+      <MemberSignature Language="C#" Value="public System.Windows.Duration NaturalDuration { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Duration NaturalDuration" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.Clock.NaturalDuration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Duration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die natürliche Dauer dieser Uhr <see cref="P:System.Windows.Media.Animation.Clock.Timeline" />.</summary>
+        <value>Die natürliche Dauer dieser Uhr, gemäß seiner <see cref="P:System.Windows.Media.Animation.Clock.Timeline" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur internen Dauer finden Sie unter der <xref:System.Windows.Media.Animation.Timeline.GetNaturalDuration%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.Clock Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Animation.Clock Parent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.Clock.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.Clock</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Uhr, die das übergeordnete Element dieser Uhr ist.</summary>
+        <value>Das übergeordnete Element dieser Uhr oder <see langword="null" /> Wenn dieser Uhr ein Stammdesigner ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveRequested">
+      <MemberSignature Language="C#" Value="public event EventHandler RemoveRequested;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler RemoveRequested" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Media.Animation.Clock.RemoveRequested" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die <see cref="M:System.Windows.Media.Animation.ClockController.Remove" /> Methode wird aufgerufen, für dieses <see cref="T:System.Windows.Media.Animation.Clock" /> oder eine ihrer übergeordneten Uhren.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpeedChanged">
+      <MemberSignature Language="C#" Value="protected virtual void SpeedChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void SpeedChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Clock.SpeedChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beim Implementieren in einer abgeleiteten Klasse aufgerufen, wenn eine Uhr beginnt, überspringt, angehalten, fortgesetzt wird, oder wenn der Uhr <see cref="P:System.Windows.Media.Animation.ClockController.SpeedRatio" /> geändert wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stopped">
+      <MemberSignature Language="C#" Value="protected virtual void Stopped ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Stopped() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Clock.Stopped" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beim Implementieren in einer abgeleiteten Klasse aufgerufen, wenn eine Uhr angehalten wird mithilfe der <see cref="M:System.Windows.Media.Animation.ClockController.Stop" /> Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Timeline">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.Timeline Timeline { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Animation.Timeline Timeline" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.Clock.Timeline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.Timeline</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="P:System.Windows.Media.Animation.Clock.Timeline" /> aus der <see cref="T:System.Windows.Media.Animation.Clock" /> erstellt wurde.</summary>
+        <value>Die <see cref="P:System.Windows.Media.Animation.Clock.Timeline" /> aus der <see cref="T:System.Windows.Media.Animation.Clock" /> erstellt wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ändern einer Uhr <xref:System.Windows.Media.MediaTimeline> aktualisiert sich nicht auf die Uhr; muss eine neue Uhr erstellt werden von der geänderten <xref:System.Windows.Media.Animation.Timeline>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

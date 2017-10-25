@@ -1,0 +1,52 @@
+<Type Name="IChannelInfo" FullName="System.Runtime.Remoting.IChannelInfo">
+  <TypeSignature Language="C#" Value="public interface IChannelInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IChannelInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.IChannelInfo" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält benutzerdefinierte Kanalinformationen, die zusammen mit übergeben werden die <see cref="T:System.Runtime.Remoting.ObjRef" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle wird implementiert, indem Sie die <xref:System.Runtime.Remoting.ObjRef.ChannelInfo%2A?displayProperty=nameWithType> Eigenschaft. Bietet Zugriff auf spezifische Transportinformationen beigetragen hat, von den Kanälen, die Aufrufe im Prozess empfangen werden oder die Anwendungsdomäne, in dem das Objekt aktiv ist. Diese Schnittstelle kann auch verwendet werden, beim Erstellen benutzerdefinierter <xref:System.Runtime.Remoting.ObjRef> Klassen.  
+  
+ Wenn eine vorhandene Objektinstanz gemarshallt wird, erzeugt eine <xref:System.Runtime.Remoting.ObjRef>, die <xref:System.Runtime.Remoting.IChannelInfo.ChannelData%2A> wird kopiert, aus dem Kanal (finden Sie unter <xref:System.Runtime.Remoting.Channels.IChannelReceiver>) für jede Kanal registrierten und, in gespeichert der <xref:System.Runtime.Remoting.ObjRef>. Wenn der <xref:System.Runtime.Remoting.ObjRef> an ihrem Ziel rückgängig gemacht wird der <xref:System.Runtime.Remoting.IChannelInfo.ChannelData%2A> über bereitgestellt, der <xref:System.Runtime.Remoting.IChannelInfo> Schnittstelle untersucht und durch entsprechende Kanäle in dieser Domäne verarbeiten oder in der Anwendungskonfigurationsdatei verwendet werden, um die Senke Transport Nachricht zu erstellen, die verwaltet werden kann die Kommunikation zwischen dem Proxy und das Serverobjekt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ChannelData">
+      <MemberSignature Language="C#" Value="public object[] ChannelData { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object[] ChannelData" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.IChannelInfo.ChannelData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt und definiert die Channeldaten für jeden Kanal.</summary>
+        <value>Die Kanal-Daten für jeden Kanal.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Der direkte Aufrufer führt den Aufruf über einen Verweis auf die Schnittstelle durch und hat keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

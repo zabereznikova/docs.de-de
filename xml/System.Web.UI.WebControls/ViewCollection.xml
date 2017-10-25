@@ -1,0 +1,176 @@
+<Type Name="ViewCollection" FullName="System.Web.UI.WebControls.ViewCollection">
+  <TypeSignature Language="C#" Value="public class ViewCollection : System.Web.UI.ControlCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ViewCollection extends System.Web.UI.ControlCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ViewCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.ControlCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Auflistungscontainer, die ermöglicht eine <see cref="T:System.Web.UI.WebControls.MultiView" /> Steuerelement, um eine Liste der untergeordneten Steuerelemente zu verwalten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ViewCollection> Klasse stellt einen Auflistungscontainer, die ermöglicht eine <xref:System.Web.UI.WebControls.MultiView> Steuerelement, um eine Liste der untergeordneten Steuerelemente zu verwalten. Ein <xref:System.Web.UI.WebControls.MultiView> Steuerelement darf nur <xref:System.Web.UI.WebControls.View> Steuerelemente als untergeordnete Steuerelemente.  
+  
+ Verwenden der <xref:System.Web.UI.WebControls.ViewCollection.Add%2A> Methode zum Hinzufügen einer neuen <xref:System.Web.UI.WebControls.View> die Steuerung an die <xref:System.Web.UI.WebControls.ViewCollection> Auflistung am Ende eines Arrays Ordinalindex. Verwenden der <xref:System.Web.UI.WebControls.ViewCollection.AddAt%2A> Methode, um ein neues Steuerelement an einer bestimmten Indexposition hinzuzufügen. Verwenden der <xref:System.Web.UI.WebControls.ViewCollection.Item%2A> Indexer zum Abrufen einer <xref:System.Web.UI.WebControls.View> -Steuerelement aus der <xref:System.Web.UI.WebControls.ViewCollection> Auflistung am angegebenen Index mithilfe von einfachen Array-Notation.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie programmgesteuert hinzufügen <xref:System.Web.UI.WebControls.View> -Steuerelementen an eine <xref:System.Web.UI.WebControls.MultiView> Steuerelement. Nach jedem <xref:System.Web.UI.WebControls.View> Steuerelement erstellt, die <xref:System.Web.UI.WebControls.ViewCollection.AddAt%2A> Methode wird verwendet, um das Hinzufügen der <xref:System.Web.UI.WebControls.View> die Steuerung an die <xref:System.Web.UI.WebControls.ViewCollection> Auflistung von der <xref:System.Web.UI.WebControls.MultiView> Steuerelement am angegebenen Index. Die <xref:System.Web.UI.WebControls.ViewCollection.Item%2A> Indexer wird verwendet, für den Zugriff auf die <xref:System.Web.UI.Control.ID%2A> Eigenschaften der <xref:System.Web.UI.WebControls.View> Steuerelemente gespeichert, der <xref:System.Web.UI.WebControls.ViewCollection> Auflistung und dem Benutzer angezeigt werden können.  
+  
+ [!code-aspx-vb[ViewCollection.AddAt Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ViewCollection.AddAt Example/VB/viewcollectionaddatvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ViewCollection (System.Web.UI.Control owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.Control owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ViewCollection.#ctor(System.Web.UI.Control)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Die <see cref="T:System.Web.UI.WebControls.MultiView" /> -Steuerelement, das Besitzer dieser Sammlung von untergeordneten Steuerelementen ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.ViewCollection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie programmgesteuert hinzufügen <xref:System.Web.UI.WebControls.View> -Steuerelementen an eine <xref:System.Web.UI.WebControls.MultiView> Steuerelement. Nach jedem <xref:System.Web.UI.WebControls.View> Steuerelement erstellt, die <xref:System.Web.UI.WebControls.ViewCollection.AddAt%2A> Methode wird verwendet, um das Hinzufügen der <xref:System.Web.UI.WebControls.View> die Steuerung an die <xref:System.Web.UI.WebControls.ViewCollection> Auflistung von der <xref:System.Web.UI.WebControls.MultiView> Steuerelement am angegebenen Index. Die <xref:System.Web.UI.WebControls.ViewCollection.Item%2A> Indexer wird verwendet, für den Zugriff auf die <xref:System.Web.UI.Control.ID%2A> Eigenschaften der <xref:System.Web.UI.WebControls.View> Steuerelemente gespeichert, der <xref:System.Web.UI.WebControls.ViewCollection> Auflistung und dem Benutzer angezeigt werden können.  
+  
+ [!code-aspx-vb[ViewCollection.AddAt Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ViewCollection.AddAt Example/VB/viewcollectionaddatvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public override void Add (System.Web.UI.Control v);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Add(class System.Web.UI.Control v) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ViewCollection.Add(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="v" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="v">Die <see cref="T:System.Web.UI.WebControls.View" /> Steuerelement, das der Auflistung hinzugefügt.</param>
+        <summary>Fügt das angegebene <see cref="T:System.Web.UI.WebControls.View" /> Steuerelement in der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ViewCollection.Add%2A> Methode fügt das neue Steuerelement am Ende eines Arrays Ordinalindex. Das Steuerelement kann nur eine Instanz von einem <xref:System.Web.UI.WebControls.View> Steuerelement.  
+  
+ Verwenden Sie zum Hinzufügen eines Steuerelements an einer bestimmten Indexposition in die Auflistung der <xref:System.Web.UI.WebControls.ViewCollection.AddAt%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie programmgesteuert hinzufügen <xref:System.Web.UI.WebControls.View> -Steuerelementen an eine <xref:System.Web.UI.WebControls.MultiView> Steuerelement. Nach jedem <xref:System.Web.UI.WebControls.View> Steuerelement erstellt, die `MultiView.Views.Add()` Syntax wird verwendet, um das Hinzufügen der <xref:System.Web.UI.WebControls.View> die Steuerung an die <xref:System.Web.UI.WebControls.ViewCollection> Auflistung von der <xref:System.Web.UI.WebControls.MultiView> Steuerelement.  
+  
+ [!code-aspx-vb[MultiView.Views Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MultiView.Views Example/VB/multiviewviewsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="v" /> -Parameter gibt nicht an eine <see cref="T:System.Web.UI.WebControls.View" /> Steuerelement.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAt">
+      <MemberSignature Language="C#" Value="public override void AddAt (int index, System.Web.UI.Control v);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AddAt(int32 index, class System.Web.UI.Control v) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ViewCollection.AddAt(System.Int32,System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="v" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Arrayindex, ab dem Hinzufügen der <see cref="T:System.Web.UI.WebControls.View" /> Steuerelement.</param>
+        <param name="v">Die <see cref="T:System.Web.UI.WebControls.View" /> Steuerelement, das der Auflistung hinzugefügt.</param>
+        <summary>Fügt das angegebene <see cref="T:System.Web.UI.WebControls.View" /> Steuerelement auf die Auflistung an der angegebenen Indexposition.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ViewCollection.AddAt%2A> Methode fügt das neue Steuerelement an der angegebenen Indexposition in die Auflistung. Das Steuerelement kann nur eine Instanz von einem <xref:System.Web.UI.WebControls.View> Steuerelement.  
+  
+ Verwenden Sie zum Hinzufügen eines Steuerelements am Ende eines Arrays Ordinalindex der <xref:System.Web.UI.WebControls.ViewCollection.Add%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie programmgesteuert hinzufügen <xref:System.Web.UI.WebControls.View> -Steuerelementen an eine <xref:System.Web.UI.WebControls.MultiView> Steuerelement. Nach jedem <xref:System.Web.UI.WebControls.View> Steuerelement erstellt, die <xref:System.Web.UI.WebControls.ViewCollection.AddAt%2A> Methode wird verwendet, um das Hinzufügen der <xref:System.Web.UI.WebControls.View> die Steuerung an die <xref:System.Web.UI.WebControls.ViewCollection> Auflistung von der <xref:System.Web.UI.WebControls.MultiView> Steuerelement am angegebenen Index. Die <xref:System.Web.UI.WebControls.ViewCollection.Item%2A> Indexer wird verwendet, für den Zugriff auf die <xref:System.Web.UI.Control.ID%2A> Eigenschaften der <xref:System.Web.UI.WebControls.View> Steuerelemente gespeichert, der <xref:System.Web.UI.WebControls.ViewCollection> Auflistung und dem Benutzer angezeigt werden können.  
+  
+ [!code-aspx-vb[ViewCollection.AddAt Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ViewCollection.AddAt Example/VB/viewcollectionaddatvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="v" /> -Parameter gibt nicht an eine <see cref="T:System.Web.UI.WebControls.View" /> Steuerelement.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.View this[int i] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.View Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ViewCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.View</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Der Ordinalindex-Wert, der den Speicherort der gibt an, die <see cref="T:System.Web.UI.WebControls.View" /> steuern, der <see cref="T:System.Web.UI.WebControls.ViewCollection" />.</param>
+        <summary>Ruft einen Verweis auf die <see cref="T:System.Web.UI.WebControls.View" /> Steuerelement an der angegebenen Indexposition in der <see cref="T:System.Web.UI.WebControls.ViewCollection" /> Auflistung.</summary>
+        <value>Ein Verweis auf eine <see cref="T:System.Web.UI.WebControls.View" /> steuern, der <see cref="T:System.Web.UI.WebControls.ViewCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Indexer zum Abrufen einer <xref:System.Web.UI.WebControls.View> -Steuerelement aus der <xref:System.Web.UI.WebControls.ViewCollection> Auflistung am angegebenen Index mithilfe der einfachen Arraynotation.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie programmgesteuert hinzufügen <xref:System.Web.UI.WebControls.View> -Steuerelementen an eine <xref:System.Web.UI.WebControls.MultiView> Steuerelement. Nach jedem <xref:System.Web.UI.WebControls.View> Steuerelement erstellt, die <xref:System.Web.UI.WebControls.ViewCollection.AddAt%2A> Methode wird verwendet, um das Hinzufügen der <xref:System.Web.UI.WebControls.View> die Steuerung an die <xref:System.Web.UI.WebControls.ViewCollection> Auflistung von der <xref:System.Web.UI.WebControls.MultiView> Steuerelement am angegebenen Index. Die <xref:System.Web.UI.WebControls.ViewCollection.Item%2A> Indexer wird verwendet, für den Zugriff auf die <xref:System.Web.UI.Control.ID%2A> Eigenschaften der <xref:System.Web.UI.WebControls.View> Steuerelemente gespeichert, der <xref:System.Web.UI.WebControls.ViewCollection> Auflistung und dem Benutzer angezeigt werden können.  
+  
+ [!code-aspx-vb[ViewCollection.AddAt Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ViewCollection.AddAt Example/VB/viewcollectionaddatvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

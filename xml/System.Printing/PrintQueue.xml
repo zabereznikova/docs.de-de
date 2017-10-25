@@ -1,0 +1,3050 @@
+<Type Name="PrintQueue" FullName="System.Printing.PrintQueue">
+  <TypeSignature Language="C#" Value="public class PrintQueue : System.Printing.PrintSystemObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi PrintQueue extends System.Printing.PrintSystemObject" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.PrintQueue" />
+  <AssemblyInfo>
+    <AssemblyName>System.Printing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Printing.PrintSystemObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Drucker und Druckaufträge verwaltet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige Eigenschaften der <xref:System.Printing.PrintQueue> -Objekts stellen Merkmale des Hilfsprogramms Druckwarteschlange auf dem Computer ausgeführt wird, aber andere Funktionen oder Zustände des Druckers selbst darstellen. Beispielsweise <xref:System.Printing.PrintQueue.NumberOfJobs%2A> ist ein Merkmal der Druckwarteschlange, aber <xref:System.Printing.PrintQueue.Location%2A> ist eine Eigenschaft des Druckers. Viele der Eigenschaften des Druckers, wie z. B., ob es Benutzer, eingreifen müssen übergeben werden, mithilfe eines der <xref:System.Printing.PrintQueue.Refresh%2A> -Methode aus den Drucker selbst auf die <xref:System.Printing.PrintQueue> Objekt. Dies sollte vor der entsprechenden Eigenschaft (<xref:System.Printing.PrintQueue.NeedUserIntervention%2A>) wird vom Programm gelesen. Auf ähnliche Weise, wenn das Programm ändert die Werte der eine oder mehrere Eigenschaften von einem <xref:System.Printing.PrintQueue> -Objekt, die Änderung muss auf dem Computer mit der tatsächlichen Druckerwarteschlange Hilfsprogramm geschrieben werden. Führen Sie dies mit der <xref:System.Printing.PrintQueue.Commit%2A> Methode.  
+  
+> [!CAUTION]
+>  Klassen, die innerhalb der <xref:System.Printing> Namespace werden nicht für die Verwendung innerhalb einer Windows-Dienst oder der ASP.NET-Anwendung oder der Dienst unterstützt. Unerwartete Probleme erzeugen versucht, diese Klassen von innerhalb einer dieser Anwendungstypen zu verwenden, wie z. B. wirkte-service-Leistung und zur Laufzeit Ausnahmen.  
+  
+ Wenn Sie aus einer Windows Forms-Anwendung drucken möchten, finden Sie unter der <xref:System.Drawing.Printing> Namespace.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintQueue (System.Printing.PrintServer printServer, string printQueueName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Printing.PrintServer printServer, string printQueueName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.#ctor(System.Printing.PrintServer,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="printServer" Type="System.Printing.PrintServer" />
+        <Parameter Name="printQueueName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="printServer">Der Druckserver die Druckerwarteschlange zu hosten.</param>
+        <param name="printQueueName">Der Name der Druckwarteschlange.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Printing.PrintQueue" /> -Klasse mit dem angegebenen <see cref="T:System.Printing.PrintServer" /> und Name der Warteschlange.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Printing.PrintQueue>Konstruktoren, die keine <xref:System.Printing.PrintSystemDesiredAccess> Parameter standardmäßig <xref:System.Printing.PrintSystemDesiredAccess.UsePrinter> Zugriff.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintQueue (System.Printing.PrintServer printServer, string printQueueName, int printSchemaVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Printing.PrintServer printServer, string printQueueName, int32 printSchemaVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.#ctor(System.Printing.PrintServer,System.String,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="printServer" Type="System.Printing.PrintServer" />
+        <Parameter Name="printQueueName" Type="System.String" />
+        <Parameter Name="printSchemaVersion" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="printServer">Der Druckserver, der die Druckerwarteschlange hostet.</param>
+        <param name="printQueueName">Der Name der Druckwarteschlange.</param>
+        <param name="printSchemaVersion">Die Version des Schemas, Drucken zu verwenden.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Printing.PrintQueue" /> -Klasse mit dem angegebenen <see cref="T:System.Printing.PrintServer" />, Warteschlangenname und drucken Sie die Version des Datenbankschemas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Printing.PrintQueue>Konstruktoren, die keine <xref:System.Printing.PrintSystemDesiredAccess> Parameter standardmäßig <xref:System.Printing.PrintSystemDesiredAccess.UsePrinter> Zugriff.  
+  
+ Die [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397) Version, die mit Windows Vista veröffentlicht ist "1".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintQueue (System.Printing.PrintServer printServer, string printQueueName, System.Printing.PrintQueueIndexedProperty[] propertyFilter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Printing.PrintServer printServer, string printQueueName, valuetype System.Printing.PrintQueueIndexedProperty[] propertyFilter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.#ctor(System.Printing.PrintServer,System.String,System.Printing.PrintQueueIndexedProperty[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="printServer" Type="System.Printing.PrintServer" />
+        <Parameter Name="printQueueName" Type="System.String" />
+        <Parameter Name="propertyFilter" Type="System.Printing.PrintQueueIndexedProperty[]" />
+      </Parameters>
+      <Docs>
+        <param name="printServer">Der Druckserver, der die Druckerwarteschlange hostet.</param>
+        <param name="printQueueName">Der Name der Druckwarteschlange.</param>
+        <param name="propertyFilter">Ein Array von <see cref="T:System.Printing.PrintQueueIndexedProperty" /> Werte, der angibt, die Eigenschaftswerte zu initialisieren.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Printing.PrintQueue" /> -Klasse mit dem angegebenen <see cref="T:System.Printing.PrintServer" />, Warteschlangenname und Array von <see cref="T:System.Printing.PrintQueueIndexedProperty" /> Werten initialisiert werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Printing.PrintQueue>Konstruktoren, die keine <xref:System.Printing.PrintSystemDesiredAccess> Parameter standardmäßig <xref:System.Printing.PrintSystemDesiredAccess.UsePrinter> Zugriff.  
+  
+ Die Verwendung eines Konstruktors mit den `propertyFilter` Parameter verbessert die Leistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintQueue (System.Printing.PrintServer printServer, string printQueueName, System.Printing.PrintSystemDesiredAccess desiredAccess);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Printing.PrintServer printServer, string printQueueName, valuetype System.Printing.PrintSystemDesiredAccess desiredAccess) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.#ctor(System.Printing.PrintServer,System.String,System.Printing.PrintSystemDesiredAccess)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="printServer" Type="System.Printing.PrintServer" />
+        <Parameter Name="printQueueName" Type="System.String" />
+        <Parameter Name="desiredAccess" Type="System.Printing.PrintSystemDesiredAccess" />
+      </Parameters>
+      <Docs>
+        <param name="printServer">Der Druckserver, der die Druckerwarteschlange hostet.</param>
+        <param name="printQueueName">Der Name der Druckwarteschlange.</param>
+        <param name="desiredAccess">Eines der <see cref="T:System.Printing.PrintSystemDesiredAccess" /> Werte, die den Typ des Zugriffs auf die Druckerwarteschlange angibt, die das Programm benötigt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Printing.PrintQueue" /> -Klasse mit dem angegebenen <see cref="T:System.Printing.PrintServer" />, Warteschlangenname und des gewünschten Zugriffs.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Printing.PrintQueueException">
+          <paramref name="desiredAccess" />ist ein Wert, der nur für angewendet werden kann, eine <see cref="T:System.Printing.PrintServer" /> -Objekt und keine <see cref="T:System.Printing.PrintQueue" /> Objekt. Beispielsweise <see cref="F:System.Printing.PrintSystemDesiredAccess.AdministrateServer" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintQueue (System.Printing.PrintServer printServer, string printQueueName, string[] propertyFilter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Printing.PrintServer printServer, string printQueueName, string[] propertyFilter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.#ctor(System.Printing.PrintServer,System.String,System.String[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="printServer" Type="System.Printing.PrintServer" />
+        <Parameter Name="printQueueName" Type="System.String" />
+        <Parameter Name="propertyFilter" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="printServer">Der Druckserver, der die Druckerwarteschlange hostet.</param>
+        <param name="printQueueName">Der Name der Druckwarteschlange.</param>
+        <param name="propertyFilter">Ein Array der Namen von Eigenschaften zu initialisieren.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Printing.PrintQueue" /> -Klasse mit dem angegebenen <see cref="T:System.Printing.PrintServer" />, Warteschlangenname und Array von Eigenschaftsnamen initialisiert werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Printing.PrintQueue>Konstruktoren, die keine <xref:System.Printing.PrintSystemDesiredAccess> Parameter standardmäßig <xref:System.Printing.PrintSystemDesiredAccess.UsePrinter> Zugriff.  
+  
+ Die Verwendung eines Konstruktors mit den `propertyFilter` Parameter verbessert die Leistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintQueue (System.Printing.PrintServer printServer, string printQueueName, int printSchemaVersion, System.Printing.PrintSystemDesiredAccess desiredAccess);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Printing.PrintServer printServer, string printQueueName, int32 printSchemaVersion, valuetype System.Printing.PrintSystemDesiredAccess desiredAccess) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.#ctor(System.Printing.PrintServer,System.String,System.Int32,System.Printing.PrintSystemDesiredAccess)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="printServer" Type="System.Printing.PrintServer" />
+        <Parameter Name="printQueueName" Type="System.String" />
+        <Parameter Name="printSchemaVersion" Type="System.Int32" />
+        <Parameter Name="desiredAccess" Type="System.Printing.PrintSystemDesiredAccess" />
+      </Parameters>
+      <Docs>
+        <param name="printServer">Der Druckserver, der die Druckerwarteschlange hostet.</param>
+        <param name="printQueueName">Der Name der Druckwarteschlange.</param>
+        <param name="printSchemaVersion">Die Version des Schemas, Drucken zu verwenden.</param>
+        <param name="desiredAccess">Eines der <see cref="T:System.Printing.PrintSystemDesiredAccess" /> Werte, die den Typ des Zugriffs auf die Druckerwarteschlange angibt, die das Programm benötigt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Printing.PrintQueue" /> -Klasse mit dem angegebenen <see cref="T:System.Printing.PrintServer" />, Warteschlangenname, Schemaversionen und die gewünschte Zugriffsart zu drucken.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397) Version, die mit Windows Vista veröffentlicht ist "1".  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Printing.PrintQueueException">
+          <paramref name="desiredAccess" />ist ein Wert, der nur für angewendet werden kann, eine <see cref="T:System.Printing.PrintServer" /> -Objekt und keine <see cref="T:System.Printing.PrintQueue" /> Objekt. Beispielsweise <see cref="F:System.Printing.PrintSystemDesiredAccess.AdministrateServer" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintQueue (System.Printing.PrintServer printServer, string printQueueName, System.Printing.PrintQueueIndexedProperty[] propertyFilter, System.Printing.PrintSystemDesiredAccess desiredAccess);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Printing.PrintServer printServer, string printQueueName, valuetype System.Printing.PrintQueueIndexedProperty[] propertyFilter, valuetype System.Printing.PrintSystemDesiredAccess desiredAccess) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.#ctor(System.Printing.PrintServer,System.String,System.Printing.PrintQueueIndexedProperty[],System.Printing.PrintSystemDesiredAccess)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="printServer" Type="System.Printing.PrintServer" />
+        <Parameter Name="printQueueName" Type="System.String" />
+        <Parameter Name="propertyFilter" Type="System.Printing.PrintQueueIndexedProperty[]" />
+        <Parameter Name="desiredAccess" Type="System.Printing.PrintSystemDesiredAccess" />
+      </Parameters>
+      <Docs>
+        <param name="printServer">Der Druckserver, der die Druckerwarteschlange hostet.</param>
+        <param name="printQueueName">Der Name der Druckwarteschlange.</param>
+        <param name="propertyFilter">Ein Array von <see cref="T:System.Printing.PrintQueueIndexedProperty" /> Werte, der angibt, die Eigenschaften zu initialisieren.</param>
+        <param name="desiredAccess">Eines der <see cref="T:System.Printing.PrintSystemDesiredAccess" /> Werte, die den Typ des Zugriffs auf die Druckerwarteschlange angibt, die das Programm benötigt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Printing.PrintQueue" /> Klasse mit dem angegebenen <see cref="T:System.Printing.PrintServer" />, Warteschlangenname, Array von <see cref="T:System.Printing.PrintQueueIndexedProperty" /> Werte zu initialisieren und den gewünschten Zugriff.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Verwendung eines Konstruktors mit den `propertyFilter` Parameter verbessert die Leistung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Printing.PrintQueueException">
+          <paramref name="desiredAccess" />ist ein Wert, der nur für angewendet werden kann, eine <see cref="T:System.Printing.PrintServer" /> -Objekt und keine <see cref="T:System.Printing.PrintQueue" /> Objekt. Beispielsweise <see cref="F:System.Printing.PrintSystemDesiredAccess.AdministrateServer" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintQueue (System.Printing.PrintServer printServer, string printQueueName, string[] propertyFilter, System.Printing.PrintSystemDesiredAccess desiredAccess);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Printing.PrintServer printServer, string printQueueName, string[] propertyFilter, valuetype System.Printing.PrintSystemDesiredAccess desiredAccess) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.#ctor(System.Printing.PrintServer,System.String,System.String[],System.Printing.PrintSystemDesiredAccess)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="printServer" Type="System.Printing.PrintServer" />
+        <Parameter Name="printQueueName" Type="System.String" />
+        <Parameter Name="propertyFilter" Type="System.String[]" />
+        <Parameter Name="desiredAccess" Type="System.Printing.PrintSystemDesiredAccess" />
+      </Parameters>
+      <Docs>
+        <param name="printServer">Der Druckserver, der die Druckerwarteschlange hostet.</param>
+        <param name="printQueueName">Der Name der Druckwarteschlange.</param>
+        <param name="propertyFilter">Ein Array der Namen von Eigenschaften zu initialisieren.</param>
+        <param name="desiredAccess">Eines der <see cref="T:System.Printing.PrintSystemDesiredAccess" /> Werte, die den Typ des Zugriffs auf die Druckerwarteschlange angibt, die das Programm benötigt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Printing.PrintQueue" /> -Klasse mit dem angegebenen <see cref="T:System.Printing.PrintServer" />, Warteschlangenname, Eigenschaftenfilter, und des gewünschten Zugriffs.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Verwendung eines Konstruktors mit den `propertyFilter` Parameter verbessert die Leistung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Printing.PrintQueueException">
+          <paramref name="desiredAccess" />ist ein Wert, der nur für angewendet werden kann, eine <see cref="T:System.Printing.PrintServer" /> -Objekt und keine <see cref="T:System.Printing.PrintQueue" /> Objekt. Beispielsweise <see cref="F:System.Printing.PrintSystemDesiredAccess.AdministrateServer" />.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="AddJob">
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Fügt einen neuen Druckauftrag in die Warteschlange ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Warteschlange angehalten wird, oder in einem Fehlerzustand befindet, des Auftrags gibt am Anfang der Warteschlange erreicht, daher ist dies eine Druckfunktion.  
+  
+ Andere Möglichkeiten zum Drucken [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] enthalten die <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A?displayProperty=nameWithType> -Methode, die mit oder ohne Sie öffnen das Dialogfeld ", und die zahlreichen verwendet werden kann <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> und <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> Methoden die <xref:System.Windows.Xps.XpsDocumentWriter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="AddJob">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintSystemJobInfo AddJob ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Printing.PrintSystemJobInfo AddJob() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.AddJob" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintSystemJobInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fügt einen neuen (generisch benannten) Druckauftrag, dessen Inhalt ist ein <see cref="T:System.Byte" /> Array, in die Warteschlange.</summary>
+        <returns>Ein <see cref="T:System.Printing.PrintSystemJobInfo" /> , den Druckauftrag und seinen Status darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode können Sie um bestimmte Geräteinformationen in eine Spooldatei zu schreiben, die nicht automatisch von der [!INCLUDE[TLA#tla_win](~/includes/tlasharptla-win-md.md)] Spooler. Natürlich müssen Sie entscheiden, ob die Spooldatei [!INCLUDE[TLA#tla_emf](~/includes/tlasharptla-emf-md.md)] oder [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)]. Wenn Sie es vorziehen, arbeiten mit der <xref:System.IO.Stream> [!INCLUDE[TLA#tla_api](~/includes/tlasharptla-api-md.md)], können Sie die <xref:System.Printing.PrintQueueStream> Klasse statt dieser Methode.  
+  
+ Nach der <xref:System.Printing.PrintQueue.AddJob%2A> -Methode aufgerufen wurde, müssen Sie schreiben eine <xref:System.Byte> array an die <xref:System.Printing.PrintSystemJobInfo.JobStream%2A> Eigenschaft von der <xref:System.Printing.PrintSystemJobInfo> von zurückgegebenen <xref:System.Printing.PrintQueue.AddJob%2A> oder keine Druckauftrag erstellt wird. Dieses Array ist, was ausgegeben, wenn der Drucker funktioniert und wurde nicht angehalten.  
+  
+> [!CAUTION]
+>  Wenn die <xref:System.Printing.PrintSystemJobInfo.JobStream%2A> ist nicht geschlossen werden, mit <xref:System.IO.Stream.Close%2A> vor dem Ende der Thread, in dem <xref:System.Printing.PrintQueue.AddJob%2A> aufgerufen wird, wird eine <xref:System.InvalidOperationException> wird ausgelöst, wenn dieser Thread beendet wird, weil der Spoolerthread über die Steuerung übernehmen kann nicht die <xref:System.IO.Stream> Objekt.  
+  
+ In der Druckerwarteschlange [!INCLUDE[TLA#tla_gui](~/includes/tlasharptla-gui-md.md)], der Auftrag hat den Namen "System Beleg drucken". Um dem Auftrag einen anderen Namen geben, verwenden die <xref:System.Printing.PrintQueue.AddJob%28System.String%29> überladen.  
+  
+ Andere Möglichkeiten zum Drucken [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] enthalten die <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A?displayProperty=nameWithType> -Methode, die mit oder ohne Sie öffnen das Dialogfeld ", und die zahlreichen verwendet werden kann <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> und <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> Methoden die <xref:System.Windows.Xps.XpsDocumentWriter>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie <xref:System.Printing.PrintQueue.AddJob> zum Senden einer <xref:System.Byte> Array in einer Druckwarteschlange. Dieser Code funktioniert nur mit Drucker, die erkennen können, und Drucken von nur-Text. Einige von ihnen nicht möglich.  
+  
+ [!code-csharp[WriteToSpoolFile#AddUnnamedJob](~/samples/snippets/csharp/VS_Snippets_Wpf/WriteToSpoolFile/CSharp/Program.cs#addunnamedjob)]
+ [!code-vb[WriteToSpoolFile#AddUnnamedJob](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WriteToSpoolFile/visualbasic/program.vb#addunnamedjob)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddJob">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintSystemJobInfo AddJob (string jobName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Printing.PrintSystemJobInfo AddJob(string jobName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.AddJob(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintSystemJobInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="jobName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="jobName">Der Name des Druckauftrags.</param>
+        <summary>Fügt einen neuen Druckauftrag zurück, deren Inhalt eine <see cref="T:System.Byte" /> Array, in die Warteschlange.</summary>
+        <returns>Ein <see cref="T:System.Printing.PrintSystemJobInfo" /> , den Druckauftrag und seinen Status darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode können Sie um bestimmte Geräteinformationen in eine Spooldatei zu schreiben, die nicht automatisch von der [!INCLUDE[TLA#tla_win](~/includes/tlasharptla-win-md.md)] Spooler. Natürlich müssen Sie entscheiden, ob die Spooldatei [!INCLUDE[TLA#tla_emf](~/includes/tlasharptla-emf-md.md)] oder [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)]. Wenn Sie es vorziehen, arbeiten mit der <xref:System.IO.Stream> [!INCLUDE[TLA#tla_api](~/includes/tlasharptla-api-md.md)], können Sie die <xref:System.Printing.PrintQueueStream> Klasse statt dieser Methode.  
+  
+ Nach der <xref:System.Printing.PrintQueue.AddJob%2A> -Methode aufgerufen wurde, müssen Sie schreiben eine <xref:System.Byte> array an die <xref:System.Printing.PrintSystemJobInfo.JobStream%2A> Eigenschaft von der <xref:System.Printing.PrintSystemJobInfo> von zurückgegebenen <xref:System.Printing.PrintQueue.AddJob%2A> oder keine Druckauftrag erstellt wird. Dieses Array ist, was ausgegeben, wenn der Drucker funktioniert und wurde nicht angehalten.  
+  
+> [!CAUTION]
+>  Wenn die <xref:System.Printing.PrintSystemJobInfo.JobStream%2A> ist nicht geschlossen werden, mit <xref:System.IO.Stream.Close%2A> vor dem Ende der Thread, in dem <xref:System.Printing.PrintQueue.AddJob%2A> aufgerufen wird, wird eine <xref:System.InvalidOperationException> wird ausgelöst, wenn dieser Thread beendet wird, weil der Spoolerthread über die Steuerung übernehmen kann nicht die <xref:System.IO.Stream> Objekt.  
+  
+ Andere Möglichkeiten zum Drucken [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] enthalten die <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A?displayProperty=nameWithType> -Methode, die mit oder ohne Sie öffnen das Dialogfeld ", und die zahlreichen verwendet werden kann <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> und <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> Methoden die <xref:System.Windows.Xps.XpsDocumentWriter>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie <xref:System.Printing.PrintQueue.AddJob%28System.String%29> zum Lesen einer Datei in eine <xref:System.Byte> array erstellt und das Array auf eine Druckwarteschlange gesendet. Mit diesem Code wird davon ausgegangen, dass eine Datei namens "Test.txt" im Stammverzeichnis des Laufwerks "c:" vorhanden ist. Dieser Code funktioniert nur mit Drucker, die erkennen können, und Drucken von nur-Text. Einige von ihnen nicht möglich.  
+  
+ [!code-csharp[WriteToSpoolFile#AddNamedJob](~/samples/snippets/csharp/VS_Snippets_Wpf/WriteToSpoolFile/CSharp/Program.cs#addnamedjob)]
+ [!code-vb[WriteToSpoolFile#AddNamedJob](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WriteToSpoolFile/visualbasic/program.vb#addnamedjob)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddJob">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintSystemJobInfo AddJob (string jobName, System.Printing.PrintTicket printTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Printing.PrintSystemJobInfo AddJob(string jobName, class System.Printing.PrintTicket printTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.AddJob(System.String,System.Printing.PrintTicket)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintSystemJobInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="jobName" Type="System.String" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="jobName">Der Pfad und Name des Dokuments, das gedruckt wird.</param>
+        <param name="printTicket">Die Einstellungen des Druckauftrags.</param>
+        <summary>Fügt einen neuen Druckauftrag für eine [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] Dokument in die Warteschlange und ermöglicht es dem angegebenen Namen und Einstellungen.</summary>
+        <returns>Ein <see cref="T:System.Printing.PrintSystemJobInfo" /> , den Druckauftrag und seinen Status darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter <xref:System.Printing.PrintQueue.AddJob%28System.String%29>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddJob">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintSystemJobInfo AddJob (string jobName, string documentPath, bool fastCopy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Printing.PrintSystemJobInfo AddJob(string jobName, string documentPath, bool fastCopy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.AddJob(System.String,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintSystemJobInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="jobName" Type="System.String" />
+        <Parameter Name="documentPath" Type="System.String" />
+        <Parameter Name="fastCopy" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="jobName">Der Name des Druckauftrags.</param>
+        <param name="documentPath">Der Pfad und Name des Dokuments, das gedruckt wird.</param>
+        <param name="fastCopy">
+          <see langword="true" />Um schnell zu spoolen, Feedback zum Fortschritt der Seite für Seite und ohne zu überprüfen, ob die Datei gültig ist [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)]ist, andernfalls <see langword="false" />.</param>
+        <summary>Fügt einen neuen Druckauftrag für eine [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] Dokument in die Warteschlange weist den angegebenen Namen und gibt an, ob überprüft werden soll.</summary>
+        <returns>Ein <see cref="T:System.Printing.PrintSystemJobInfo" /> , den Druckauftrag und seinen Status darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `fastCopy` ist `true`, und klicken Sie dann der Drucker Transportservers ein [drucken – Übersicht](~/docs/framework/wpf/advanced/printing-overview.md). Wenn sie nicht der Fall ist die <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> Methode löst eine Ausnahme aus.  
+  
+ Wenn `fastCopy` ist `false`, ist es nicht notwendig, einen XPSDrv-Drucker zu verwenden. Die [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] des Druckers Seite Beschreibung-Sprache, z. B. PCL oder PostScript-Datei, die an die Warteschlange hinzugefügt wird konvertiert. Jedoch wird durch diese Art der Druckfunktion von einem Aufruf von [!INCLUDE[TLA#tla_com](~/includes/tlasharptla-com-md.md)]. Der Aufruf von [!INCLUDE[TLA2#tla_com](~/includes/tla2sharptla-com-md.md)] erfordert, dass der aufrufende Thread ein Singlethread-Apartment ist (<xref:System.Threading.ApartmentState.STA>) anstelle von Multithread-Apartment (<xref:System.Threading.ApartmentState.MTA>) Dies ist die Standardeinstellung in [!INCLUDE[TLA#tla_net](~/includes/tlasharptla-net-md.md)] 2.0 oder höher. (Weitere Informationen zu threading und Apartment finden Sie unter [verwaltet und nicht verwaltetes Threading](http://msdn.microsoft.com/en-us/db425c20-4b2f-4433-bf96-76071c7881e5), und <xref:System.Threading.ApartmentState>.) Es gibt zwei Möglichkeiten, dies:  
+  
+-   Die einfachste Möglichkeit besteht darin, hinzuzufügen der <xref:System.STAThreadAttribute> (d. h. "`[System.STAThreadAttribute()]`") direkt über die erste Zeile der Anwendung `Main` -Methode (in der Regel "`static void Main(string[] args)`").  
+  
+-   Wenn Sie müssen Ihre `Main` des Threads Apartmentzustand <xref:System.Threading.ApartmentState.MTA>, können Sie den Aufruf von house <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> in einem separaten Thread, der Apartmentzustand, um festgelegt ist <xref:System.Threading.ApartmentState.STA> mit <xref:System.Threading.Thread.SetApartmentState%2A>. Das folgende Beispiel veranschaulicht dieses zweite Verfahren.  
+  
+> [!NOTE]
+>  Kann nicht der <xref:System.STAThreadAttribute> an jede Methode außer `Main` und können keine <xref:System.Threading.Thread.SetApartmentState%2A> für die `Main` Thread.  
+  
+ Andere Möglichkeiten zum Drucken [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] enthalten die <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A?displayProperty=nameWithType> -Methode, die mit oder ohne Sie öffnen das Dialogfeld ", und die zahlreichen verwendet werden kann <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> und <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> Methoden die <xref:System.Windows.Xps.XpsDocumentWriter>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> zum Drucken der gesamten batch der [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] Dateien in einem Verzeichnis.  
+  
+ [!code-csharp[BatchPrintXPSFiles#BatchPrintXPSFiles](~/samples/snippets/csharp/VS_Snippets_Wpf/BatchPrintXPSFiles/CSharp/Program.cs#batchprintxpsfiles)]
+ [!code-vb[BatchPrintXPSFiles#BatchPrintXPSFiles](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BatchPrintXPSFiles/visualbasic/program.vb#batchprintxpsfiles)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddJob">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintSystemJobInfo AddJob (string jobName, string documentPath, bool fastCopy, System.Printing.PrintTicket printTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Printing.PrintSystemJobInfo AddJob(string jobName, string documentPath, bool fastCopy, class System.Printing.PrintTicket printTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.AddJob(System.String,System.String,System.Boolean,System.Printing.PrintTicket)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintSystemJobInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="jobName" Type="System.String" />
+        <Parameter Name="documentPath" Type="System.String" />
+        <Parameter Name="fastCopy" Type="System.Boolean" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="jobName">Der Pfad und Name des Dokuments, das gedruckt wird.</param>
+        <param name="documentPath">Der Pfad und Name des Dokuments, das gedruckt wird.</param>
+        <param name="fastCopy">
+          <see langword="true" />Um schnell zu spoolen, Feedback zum Fortschritt der Seite für Seite und ohne zu überprüfen, ob die Datei gültig ist [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)]ist, andernfalls <see langword="false" />.</param>
+        <param name="printTicket">Die Einstellungen des Druckauftrags.</param>
+        <summary>Fügt einen neuen Druckauftrag für eine [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] Dokument in die Warteschlange ermöglicht es dem angegebenen Namen und die Einstellungen, und gibt an, ob überprüft werden soll.</summary>
+        <returns>Ein <see cref="T:System.Printing.PrintSystemJobInfo" /> , den Druckauftrag und seinen Status darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AveragePagesPerMinute">
+      <MemberSignature Language="C#" Value="public virtual int AveragePagesPerMinute { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AveragePagesPerMinute" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.AveragePagesPerMinute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Geschwindigkeit des Druckers, gemessen in Seiten pro Minute.</summary>
+        <value>Durchschnittliche Seiten pro Minute des Druckers.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientPrintSchemaVersion">
+      <MemberSignature Language="C#" Value="public int ClientPrintSchemaVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ClientPrintSchemaVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.ClientPrintSchemaVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Version der [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397).</summary>
+        <value>Die Version der [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397) verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397) Version, die mit Windows Vista veröffentlicht ist 1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Comment">
+      <MemberSignature Language="C#" Value="public virtual string Comment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Comment" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.Comment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert einen Kommentar zu den Drucker.</summary>
+        <value>Ein Kommentar zum Drucker.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Kommentar ist für Benutzer in der Liste der Windows-Drucker und auf dem Windows allgemeine Dialogfeld "Drucken" sichtbar. Sie können angeben, dass Informationen nicht in des Druckers-Name, Model- oder Eigenschaften, die an den gleichen stellen ebenfalls sichtbar sind; z. B. "reserviert für Gehaltsabrechnungen Abteilung zwischen 3 und 4 liegen." (Die <xref:System.Printing.PrintQueue.Description%2A> Eigenschaft ermöglicht Ihnen, Informationen zu speichern, die Benutzer anzeigen können, es sei denn, Ihre Anwendung sie sichtbar macht.)  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Commit">
+      <MemberSignature Language="C#" Value="public override void Commit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Commit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.Commit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schreibt die aktuellen Eigenschaften des der <see cref="T:System.Printing.PrintQueue" /> Objekt, das die Druckwarteschlange auf dem Druckserver.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Änderungen, die an den Eigenschaften des Programms vornimmt eine <xref:System.Printing.PrintQueue> Objekt werden tatsächlich erst wirksam, führt das Programm die <xref:System.Printing.PrintQueue.Commit%2A> Methode.  
+  
+ Die Methode erfordert, dass die <xref:System.Printing.PrintQueue> Objekt erstellt werden, mit <xref:System.Printing.PrintSystemDesiredAccess.AdministratePrinter> Rechte.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie diese Methode, die beim Zusammenführen von zwei Drucktickets verwendet wird.  
+  
+ [!code-csharp[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#usingmergeandvalidate)]
+ [!code-vb[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#usingmergeandvalidate)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Printing.PrintSystemException">Einige der Eigenschaften kann kein Commit ausgeführt werden.</exception>
+        <exception cref="T:System.Printing.PrintCommitAttributesException">Einige der Eigenschaften kann kein Commit ausgeführt werden.  
+  
+ \- oder –  
+  
+ Die <see cref="T:System.Printing.PrintQueue" /> Objekt wurde nicht mit ausreichenden Rechten erstellt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateXpsDocumentWriter">
+      <MemberSignature Language="C#" Value="public static System.Windows.Xps.XpsDocumentWriter CreateXpsDocumentWriter (ref System.Printing.PrintDocumentImageableArea documentImageableArea);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Xps.XpsDocumentWriter CreateXpsDocumentWriter(class System.Printing.PrintDocumentImageableArea&amp; documentImageableArea) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.CreateXpsDocumentWriter(System.Printing.PrintDocumentImageableArea@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.XpsDocumentWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="documentImageableArea" Type="System.Printing.PrintDocumentImageableArea&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="documentImageableArea">Ein Verweis auf ein Objekt, das die Dimensionen des Bereichs der Seite enthält, auf denen das Gerät drucken kann. Da es sich bei Angabe des Datentyps keinen öffentlichen Konstruktor verfügt, wird dieser Parameter nicht initialisiert übergeben.</param>
+        <summary>Erstellt ein <see cref="T:System.Windows.Xps.XpsDocumentWriter" /> Objekt, öffnet Windows allgemeine Dialogfeld "Drucken" und gibt eine <see langword="ref" /> (<see langword="ByRef" /> in Visual Basic) Parameter, der Informationen zu Druckbereichs und die Dimensionen des Mediums darstellt.</summary>
+        <returns>Ein <see cref="T:System.Windows.Xps.XpsDocumentWriter" /> , XPS-Daten in einen Stream schreibt. Dieser Wert kann <see langword="null" /> sein. (Der Parameter <paramref name="documentImageableArea" /> ist ein <see langword="ref" /> [<see langword="ByRef" /> in Visual Basic] Parameter, die von der Methode initialisiert wird, damit ein zweites darstellt Element zurückgegeben.)</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Viele Drucker müssen auf ein Viertel Zoll äußeren Platz um die Ränder Rand jeder Seite auf den Ziehpunkt in diesem Dokument einrichten und den Drucker durchlaufen. Andernfalls würde Toner den Führungsmechanismus. Der Bereich, der gedruckt werden kann, wird "Druckbereichs."  
+  
+ Der Typ <xref:System.Printing.PrintDocumentImageableArea> über keinen öffentlichen Konstruktor verfügt. Daher wird die Variable `documentImageableArea` muss deklariert und zugewiesen `null` und erst dann an die Methode übergeben. Diese Methode zeigt eine <xref:System.Windows.Controls.PrintDialog> , die Eingaben des Benutzers erfordern. Nachdem der Benutzer einen Drucker, Papierformat und Ausrichtung ausgewählt und das Dialogfeld geschlossen hat `documentImageableArea` verweist auf ein tatsächliches Objekt und seine Eigenschaften werden initialisiert.  
+  
+ Wenn der Benutzer abbricht, oder das Dialogfeld wird geschlossen, ist der Rückgabewert `null`. Daher muss der Rückgabewert für überprüft `null` von der Anwendung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateXpsDocumentWriter">
+      <MemberSignature Language="C#" Value="public static System.Windows.Xps.XpsDocumentWriter CreateXpsDocumentWriter (System.Printing.PrintQueue printQueue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Xps.XpsDocumentWriter CreateXpsDocumentWriter(class System.Printing.PrintQueue printQueue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.CreateXpsDocumentWriter(System.Printing.PrintQueue)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.XpsDocumentWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="printQueue" Type="System.Printing.PrintQueue" />
+      </Parameters>
+      <Docs>
+        <param name="printQueue">Eine Druckwarteschlange auf das XPS-Dokument zu drucken.</param>
+        <summary>Erstellt ein <see cref="T:System.Windows.Xps.XpsDocumentWriter" /> Objekt, und ordnet die angegebene Druckerwarteschlange.</summary>
+        <returns>Ein <see cref="T:System.Windows.Xps.XpsDocumentWriter" /> , in eine XPS-Stream schreibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie diese Methode verwendet zum Erstellen einer <xref:System.Windows.Xps.XpsDocumentWriter>.  
+  
+ [!code-csharp[XpsPrint#PrintQueueSnip](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsPrint/CSharp/XpsPrintHelper.cs#printqueuesnip)]
+ [!code-vb[XpsPrint#PrintQueueSnip](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsPrint/visualbasic/xpsprinthelper.vb#printqueuesnip)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateXpsDocumentWriter">
+      <MemberSignature Language="C#" Value="public static System.Windows.Xps.XpsDocumentWriter CreateXpsDocumentWriter (ref double width, ref double height);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Xps.XpsDocumentWriter CreateXpsDocumentWriter(float64&amp; width, float64&amp; height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.CreateXpsDocumentWriter(System.Double@,System.Double@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.XpsDocumentWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="width" Type="System.Double&amp;" RefType="ref" />
+        <Parameter Name="height" Type="System.Double&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="width">Die Breite des XPS-Dokuments.</param>
+        <param name="height">Die Höhe des XPS-Dokuments.</param>
+        <summary>Erstellt ein <see cref="T:System.Windows.Xps.XpsDocumentWriter" /> Objekt mit den angegebenen Dimensionen.</summary>
+        <returns>Ein <see cref="T:System.Windows.Xps.XpsDocumentWriter" /> , in eine XPS-Stream schreibt. Dieser Wert kann <see langword="null" /> sein.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode zeigt eine <xref:System.Windows.Controls.PrintDialog> , die Eingaben des Benutzers erfordern. Wenn der Benutzer abbricht, oder das Dialogfeld wird geschlossen, ist der Rückgabewert `null`. Daher muss der Rückgabewert für überprüft `null` von der Anwendung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateXpsDocumentWriter">
+      <MemberSignature Language="C#" Value="public static System.Windows.Xps.XpsDocumentWriter CreateXpsDocumentWriter (string jobDescription, ref System.Printing.PrintDocumentImageableArea documentImageableArea);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Xps.XpsDocumentWriter CreateXpsDocumentWriter(string jobDescription, class System.Printing.PrintDocumentImageableArea&amp; documentImageableArea) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.CreateXpsDocumentWriter(System.String,System.Printing.PrintDocumentImageableArea@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.XpsDocumentWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="jobDescription" Type="System.String" />
+        <Parameter Name="documentImageableArea" Type="System.Printing.PrintDocumentImageableArea&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="jobDescription">Ein Name für den Auftrag. Er wird in der Windows-Benutzeroberfläche drucken.</param>
+        <param name="documentImageableArea">Ein Verweis auf ein Objekt, das die Dimensionen des Bereichs der Seite enthält, auf denen das Gerät drucken kann. Da es sich bei Angabe des Datentyps keinen öffentlichen Konstruktor verfügt, wird dieser Parameter nicht initialisiert übergeben.</param>
+        <summary>Erstellt ein <see cref="T:System.Windows.Xps.XpsDocumentWriter" /> Objekt, öffnet Windows allgemeine Dialogfeld "Drucken" (und stellt sie eine auftragsbeschreibung) und gibt eine <see langword="ref" /> (<see langword="ByRef" /> in Visual Basic) Parameter, der Informationen zu Druckbereichs und die Dimensionen des Mediums darstellt. .</summary>
+        <returns>Ein <see cref="T:System.Windows.Xps.XpsDocumentWriter" /> , XPS-Daten in einen Stream schreibt. Dieser Wert kann <see langword="null" /> sein. (Der Parameter <paramref name="documentImageableArea" /> ist ein <see langword="ref" /> [<see langword="ByRef" /> in Visual Basic] Parameter, die von der Methode initialisiert wird, damit ein zweites darstellt Element zurückgegeben.)</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Viele Drucker müssen auf ein Viertel Zoll äußeren Platz um die Ränder Rand jeder Seite auf den Ziehpunkt in diesem Dokument einrichten und den Drucker durchlaufen. Andernfalls würde Toner den Führungsmechanismus. Der Bereich, der gedruckt werden kann, wird "Druckbereichs."  
+  
+ Der Typ <xref:System.Printing.PrintDocumentImageableArea> über keinen öffentlichen Konstruktor verfügt. Daher wird die Variable `documentImageableArea` muss deklariert und zugewiesen `null` und erst dann an die Methode übergeben. Diese Methode zeigt eine <xref:System.Windows.Controls.PrintDialog> , die Eingaben des Benutzers erfordern. Nachdem der Benutzer einen Drucker, Papierformat und Ausrichtung ausgewählt und das Dialogfeld geschlossen hat `documentImageableArea` verweist auf ein tatsächliches Objekt und seine Eigenschaften werden initialisiert.  
+  
+ Wenn der Benutzer abbricht, oder das Dialogfeld wird geschlossen, ist der Rückgabewert `null`. Daher muss der Rückgabewert für überprüft `null` von der Anwendung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateXpsDocumentWriter">
+      <MemberSignature Language="C#" Value="public static System.Windows.Xps.XpsDocumentWriter CreateXpsDocumentWriter (ref System.Printing.PrintDocumentImageableArea documentImageableArea, ref System.Windows.Controls.PageRangeSelection pageRangeSelection, ref System.Windows.Controls.PageRange pageRange);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Xps.XpsDocumentWriter CreateXpsDocumentWriter(class System.Printing.PrintDocumentImageableArea&amp; documentImageableArea, valuetype System.Windows.Controls.PageRangeSelection&amp; pageRangeSelection, valuetype System.Windows.Controls.PageRange&amp; pageRange) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.CreateXpsDocumentWriter(System.Printing.PrintDocumentImageableArea@,System.Windows.Controls.PageRangeSelection@,System.Windows.Controls.PageRange@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.XpsDocumentWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="documentImageableArea" Type="System.Printing.PrintDocumentImageableArea&amp;" RefType="ref" />
+        <Parameter Name="pageRangeSelection" Type="System.Windows.Controls.PageRangeSelection&amp;" RefType="ref" />
+        <Parameter Name="pageRange" Type="System.Windows.Controls.PageRange&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="documentImageableArea">Ein Verweis auf ein Objekt, das die Dimensionen des Bereichs der Seite enthält, auf denen das Gerät drucken kann. Da es sich bei Angabe des Datentyps keinen öffentlichen Konstruktor verfügt, wird dieser Parameter nicht initialisiert übergeben.</param>
+        <param name="pageRangeSelection">Ein Wert, der angibt, ob das Drucken aller Seiten oder nur einen Bereich, der vom Benutzer angegeben wird.</param>
+        <param name="pageRange">Der Bereich von Seiten, der gedruckt wird.</param>
+        <summary>Erstellt ein <see cref="T:System.Windows.Xps.XpsDocumentWriter" /> -Objekt, öffnet Windows allgemeine Dialogfeld "Drucken", bietet das Dialogfeld eines Seitenbereichs und eine Beschreibung des Druckauftrags und gibt eine <see langword="ref" /> (<see langword="ByRef" /> in Visual Basic) Parameter, die Informationen darstellt, zu der Druckbereichs und die Dimensionen des Mediums.</summary>
+        <returns>Ein <see cref="T:System.Windows.Xps.XpsDocumentWriter" /> , XPS-Daten in einen Stream schreibt. Dieser Wert kann <see langword="null" /> sein. (Die Parameter <paramref name="documentImageableArea" />, <paramref name="pageRangeSelection" />, und <paramref name="pageRange" /> sind alle <see langword="ref" /> [<see langword="ByRef" /> in Visual Basic] Parameter, die vom Benutzer initialisiert und zurückgegeben, wenn das Dialogfeld geschlossen wird, sodass jeweils ein zusätzliches Element zurückgegeben darstellen werden.)</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Viele Drucker müssen auf ein Viertel Zoll äußeren Platz um die Ränder Rand jeder Seite auf den Ziehpunkt in diesem Dokument einrichten und den Drucker durchlaufen. Andernfalls würde Toner den Führungsmechanismus. Der Bereich, der gedruckt werden kann, wird "Druckbereichs."  
+  
+ Der Typ <xref:System.Printing.PrintDocumentImageableArea> über keinen öffentlichen Konstruktor verfügt. Daher wird die Variable `documentImageableArea` muss deklariert und zugewiesen `null` und erst dann an die Methode übergeben. Diese Methode zeigt eine <xref:System.Windows.Controls.PrintDialog> , die Eingaben des Benutzers erfordern. Der Benutzer konfiguriert den Druckauftrag auf das Dialogfeld "(einschließlich Drucker, Papierformat, Ausrichtung und Seitenbereich auswählen). Wenn das Dialogfeld geschlossen wird, `pageRangeSelection` und `pageRange` Werte aufweisen, und `documentImageableArea` verweist auf ein tatsächliches Objekt, dessen Eigenschaften initialisiert werden.  
+  
+ Wenn der Benutzer abbricht, oder das Dialogfeld wird geschlossen, ist der Rückgabewert `null`. Daher muss der Rückgabewert für überprüft `null` von der Anwendung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateXpsDocumentWriter">
+      <MemberSignature Language="C#" Value="public static System.Windows.Xps.XpsDocumentWriter CreateXpsDocumentWriter (string jobDescription, ref System.Printing.PrintDocumentImageableArea documentImageableArea, ref System.Windows.Controls.PageRangeSelection pageRangeSelection, ref System.Windows.Controls.PageRange pageRange);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Xps.XpsDocumentWriter CreateXpsDocumentWriter(string jobDescription, class System.Printing.PrintDocumentImageableArea&amp; documentImageableArea, valuetype System.Windows.Controls.PageRangeSelection&amp; pageRangeSelection, valuetype System.Windows.Controls.PageRange&amp; pageRange) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.CreateXpsDocumentWriter(System.String,System.Printing.PrintDocumentImageableArea@,System.Windows.Controls.PageRangeSelection@,System.Windows.Controls.PageRange@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.XpsDocumentWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="jobDescription" Type="System.String" />
+        <Parameter Name="documentImageableArea" Type="System.Printing.PrintDocumentImageableArea&amp;" RefType="ref" />
+        <Parameter Name="pageRangeSelection" Type="System.Windows.Controls.PageRangeSelection&amp;" RefType="ref" />
+        <Parameter Name="pageRange" Type="System.Windows.Controls.PageRange&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="jobDescription">Ein Name für den Auftrag. Er wird in der Windows-Benutzeroberfläche drucken.</param>
+        <param name="documentImageableArea">Ein Verweis auf ein Objekt, das die Dimensionen des Bereichs der Seite enthält, auf denen das Gerät drucken kann. Da es sich bei Angabe des Datentyps keinen öffentlichen Konstruktor verfügt, wird dieser Parameter nicht initialisiert übergeben.</param>
+        <param name="pageRangeSelection">Ein Wert, der angibt, ob das Drucken aller Seiten oder nur einen Bereich, der vom Benutzer angegeben wird.</param>
+        <param name="pageRange">Der Bereich von Seiten, der gedruckt wird.</param>
+        <summary>Erstellt ein <see cref="T:System.Windows.Xps.XpsDocumentWriter" /> -Objekt, öffnet Windows allgemeine Dialogfeld "Drucken", bietet das Dialogfeld mit einem Seitenbereich und gibt eine <see langword="ref" /> (<see langword="ByRef" /> in Visual Basic) Parameter, Informationen zu Druckbereichs und die Dimensionen der darstellt, der Medien.</summary>
+        <returns>Ein <see cref="T:System.Windows.Xps.XpsDocumentWriter" /> , XPS-Daten in einen Stream schreibt. Dieser Wert kann <see langword="null" /> sein. (Die Parameter <paramref name="documentImageableArea" />, <paramref name="pageRangeSelection" />, und <paramref name="pageRange" /> sind alle <see langword="ref" /> [<see langword="ByRef" /> in Visual Basic] Parameter, die vom Benutzer initialisiert und zurückgegeben, wenn das Dialogfeld geschlossen wird, sodass jeweils ein zusätzliches Element zurückgegeben darstellen werden.)</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Viele Drucker müssen auf ein Viertel Zoll äußeren Platz um die Ränder Rand jeder Seite auf den Ziehpunkt in diesem Dokument einrichten und den Drucker durchlaufen. Andernfalls würde Toner den Führungsmechanismus. Der Bereich, der gedruckt werden kann, wird "Druckbereichs."  
+  
+ Der Typ <xref:System.Printing.PrintDocumentImageableArea> über keinen öffentlichen Konstruktor verfügt. Daher wird die Variable `documentImageableArea` muss deklariert und zugewiesen `null` und erst dann an die Methode übergeben. Diese Methode zeigt eine <xref:System.Windows.Controls.PrintDialog> , die Eingaben des Benutzers erfordern. Der Benutzer konfiguriert den Druckauftrag auf das Dialogfeld "(einschließlich Drucker, Papierformat, Ausrichtung und Seitenbereich auswählen). Wenn das Dialogfeld geschlossen wird, `pageRangeSelection` und `pageRange` Werte aufweisen, und `documentImageableArea` verweist auf ein tatsächliches Objekt, dessen Eigenschaften initialisiert werden.  
+  
+ Wenn der Benutzer abbricht, oder das Dialogfeld wird geschlossen, ist der Rückgabewert `null`. Daher muss der Rückgabewert für überprüft `null` von der Anwendung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentJobSettings">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintJobSettings CurrentJobSettings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Printing.PrintJobSettings CurrentJobSettings" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.CurrentJobSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintJobSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt, das die Konfigurationseinstellungen für den aktuellen Druckauftrag enthält.</summary>
+        <value>Ein <see cref="T:System.Printing.PrintJobSettings" /> Wert, der die Einstellungen von der derzeit Druckauftrag enthält. Diese Einstellungen umfassen eine Beschreibung des Auftrags und einen Verweis auf des Auftrags <see cref="T:System.Printing.PrintTicket" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultPrintTicket">
+      <MemberSignature Language="C#" Value="public virtual System.Printing.PrintTicket DefaultPrintTicket { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Printing.PrintTicket DefaultPrintTicket" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.DefaultPrintTicket" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintTicket</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt Standardoptionen für die Drucker zugeordnete <see cref="T:System.Printing.PrintQueue" />.</summary>
+        <value>Die Standardeinstellung <see cref="T:System.Printing.PrintTicket" /> für die Druckerwarteschlange; oder <see langword="null" /> Wenn in der Druckwarteschlange ein Fehler aufgetreten ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardeinstellung <xref:System.Printing.PrintTicket> Druckauftragsoptionen wie z. B. gibt <xref:System.Printing.PrintTicket.CopyCount%2A>, <xref:System.Printing.PrintTicket.PageOrientation%2A>, <xref:System.Printing.PrintTicket.Duplexing%2A>, <xref:System.Printing.PrintTicket.Stapling%2A>, und andere.  
+  
+ Jede <xref:System.Printing.PrintQueue> verwaltet einen eigenen <xref:System.Printing.PrintQueue.DefaultPrintTicket%2A>.  
+  
+ Im normalen Betrieb das <xref:System.Printing.PrintQueue.DefaultPrintTicket%2A> Eigenschaft gibt eine <xref:System.Printing.PrintTicket>.  Wenn die <xref:System.Printing.PrintQueue> erkennt einen ungültigen Status <xref:System.Printing.PrintQueue.DefaultPrintTicket%2A> gibt `null`.  Wenn <xref:System.Printing.PrintQueue.DefaultPrintTicket%2A> gibt `null`, die Anwendung sollte eine informative Benutzer (Dialogfeld), die ein Fehler aufgetreten ist für diese Druckerwarteschlange anzeigen und der Druckauftrag nicht mit der Ausgabe an eine andere Druckwarteschlange weitergeleitet neu gestartet werden soll.  
+  
+ Beim Abrufen oder Festlegen der <xref:System.Printing.PrintQueue.DefaultPrintTicket%2A> Eigenschaft überprüft nicht die <xref:System.Printing.PrintTicket>.  Die <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> Methode kann verwendet werden, um zu überprüfen einer <xref:System.Printing.PrintTicket>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Eigenschaft beim Testen der Funktionen eines Druckers und Konfigurieren eines Druckauftrags verwendet, sie nutzen.  
+  
+ [!code-cpp[XpsCreate#PrinterCapabilities](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#printercapabilities)]
+ [!code-csharp[XpsCreate#PrinterCapabilities](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#printercapabilities)]
+ [!code-vb[XpsCreate#PrinterCapabilities](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#printercapabilities)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultPriority">
+      <MemberSignature Language="C#" Value="public virtual int DefaultPriority { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DefaultPriority" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.DefaultPriority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Standardpriorität, die auf jeden neuen Druckauftrag zur Warteschlange hinzugefügten gewährt wird.</summary>
+        <value>Die Standardpriorität für Druckaufträge zur Warteschlange hinzugefügt werden soll. Mögliche Werte liegen zwischen 1 und 99. Der Standard ist 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Priorität eines Druckauftrags kann von Benutzern geändert werden, nachdem sie die Druckerwarteschlange eingegeben hat.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public virtual string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Beschreibung der Druckwarteschlange.</summary>
+        <value>Eine Beschreibung der Druckwarteschlange.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Warteschlange erstellt wird, wird standardmäßig auf eine dreiteilige-Zeichenfolge, die der der Warteschlangenname, Modell und Speicherort, die durch Kommas getrennt besteht, die Beschreibung. Kontrast der <xref:System.Printing.PrintQueue.Description%2A> Eigenschaft mit dem <xref:System.Printing.PrintQueue.Comment%2A> Eigenschaft, die für Benutzer in das allgemeine Dialogfeld "Drucken" und die Drucker und Faxgeräte-Liste angezeigt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullName">
+      <MemberSignature Language="C#" Value="public string FullName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FullName" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.FullName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den vollständigen Namen der Warteschlange ab.</summary>
+        <value>Der vollständige Name der Druckwarteschlange.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für die Druckerwarteschlangen auf dem lokalen Druckserver, der Wert dieser Eigenschaft ist identisch mit <xref:System.Printing.PrintQueue.Name%2A>, andernfalls enthält er den vollständigen UNC (Universal Naming Convention) Namen.  
+  
+ Die <xref:System.Printing.PrintQueue> -Objekt verfügt außerdem über beschreibbare <xref:System.Printing.PrintQueue.Name%2A> und <xref:System.Printing.PrintQueue.ShareName%2A> Eigenschaften.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie diese Eigenschaft, die beim Zusammenführen von zwei Drucktickets verwendet wird.  
+  
+ [!code-csharp[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#usingmergeandvalidate)]
+ [!code-vb[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#usingmergeandvalidate)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetJob">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintSystemJobInfo GetJob (int jobId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Printing.PrintSystemJobInfo GetJob(int32 jobId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.GetJob(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintSystemJobInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="jobId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="jobId">Die Anzahl der der Auftrag in der Warteschlange.</param>
+        <summary>Ruft den Druckauftrag mit der angegebenen ID ab.</summary>
+        <returns>Ein <see cref="T:System.Printing.PrintSystemJobInfo" /> , die die Eigenschaften des Auftrags und dessen Status angibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können auch die <xref:System.Printing.PrintSystemJobInfo.Get%2A?displayProperty=nameWithType> Methode für den gleichen Zweck.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Methode verwendet, wenn ein Problem bei einem Druckauftrag diagnostizieren.  
+  
+ [!code-cpp[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#enumeratejobsinqueues)]
+ [!code-csharp[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#enumeratejobsinqueues)]
+ [!code-vb[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#enumeratejobsinqueues)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPrintCapabilities">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintCapabilities GetPrintCapabilities ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Printing.PrintCapabilities GetPrintCapabilities() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.GetPrintCapabilities" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintCapabilities</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Printing.PrintCapabilities" /> -Objekt, das die Funktionen des Druckers identifiziert.</summary>
+        <returns>Ein <see cref="T:System.Printing.PrintCapabilities" /> Objekt, das angibt, was der Drucker kann und was nicht möglich, z. B. zweiseitigen Schreibversuche oder automatische heften.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie diese Methode, die beim Zusammenführen von zwei Drucktickets verwendet wird.  
+  
+ [!code-csharp[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#usingmergeandvalidate)]
+ [!code-vb[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#usingmergeandvalidate)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Printing.PrintQueueException">Die <see cref="T:System.Printing.PrintCapabilities" /> Objekt konnte nicht abgerufen werden.</exception>
+        <permission cref="T:System.Drawing.Printing.PrintingPermission">für die Berechtigung zum Drucken Funktionen abzurufen. Zugeordnete Enumeration:<see cref="F:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPrintCapabilities">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintCapabilities GetPrintCapabilities (System.Printing.PrintTicket printTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Printing.PrintCapabilities GetPrintCapabilities(class System.Printing.PrintTicket printTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.GetPrintCapabilities(System.Printing.PrintTicket)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintCapabilities</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="printTicket">Ein Druckticket, die die Grundlage bereitstellt, auf der die Druckfunktionen gemeldet werden.</param>
+        <summary>Ruft eine <see cref="T:System.Printing.PrintCapabilities" /> -Objekt, das die Funktionen des Druckers identifiziert.</summary>
+        <returns>Ein <see cref="T:System.Printing.PrintCapabilities" /> Objekt, das angibt, was der Drucker kann und was nicht möglich, z. B. zweiseitigen Schreibversuche oder automatische heften.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Printing.PrintTicket> Parameter dient als Grundlage für das Erstellen der <xref:System.Printing.PrintCapabilities> Objekt. Nehmen wir beispielsweise an der Drucker unterstützt nur die Medientypen A und B aus der Eingabe "bin", 1 und unterstützt nur Medientyp C aus der Eingabe "bin" 2. Wenn die `printTicket` Parameter angegebene Eingabe "bin", 1, und klicken Sie dann die <xref:System.Printing.PrintCapabilities> -Objekt, das zurückgegeben wird, enthält alle drei Medientypen, aber es Verwaltungsvorlage Typ C als "eingeschränkt" an. Wenn die `printTicket` Parameter angegebene Eingabe "bin", 2, und klicken Sie dann die <xref:System.Printing.PrintCapabilities> -Objekt, das zurückgegeben wird, enthält alle drei Medientypen, aber es würde Berichttypen A und B als "eingeschränkt". Finden Sie unter der [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397) für Weitere Informationen zu Einschränkungen.  
+  
+ Wenn `printTicket` ist `null`, die <xref:System.Printing.PrintQueue.UserPrintTicket%2A> verwendet wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Printing.PrintQueueException">Die <see cref="T:System.Printing.PrintCapabilities" /> Objekt konnte nicht abgerufen werden.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="printTicket" />ist nicht ordnungsgemäß formatiert.</exception>
+        <permission cref="T:System.Drawing.Printing.PrintingPermission">für die Berechtigung zum Drucken Funktionen abzurufen. Zugeordnete Enumeration:<see cref="F:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting" /></permission>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetPrintCapabilitiesAsXml">
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.IO.MemoryStream" /> , der angibt, die Funktionen des Druckers als XML-stream, die das Objekt entspricht der [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das XML-Schema verwendet heißt "PrintCapabilities", ein Teil der [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397) System.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetPrintCapabilitiesAsXml">
+      <MemberSignature Language="C#" Value="public System.IO.MemoryStream GetPrintCapabilitiesAsXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.MemoryStream GetPrintCapabilitiesAsXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.GetPrintCapabilitiesAsXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryStream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.IO.MemoryStream" /> , der angibt, die Funktionen des Druckers als XML-stream, die das Objekt entspricht der [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397).</summary>
+        <returns>Ein <see cref="T:System.IO.MemoryStream" /> die Leistungsmerkmale des Druckers angeben, unter Verwendung des XML-Schemas "PrintCapabilities", ein Teil der [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397) System.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Printing.PrintQueueException">Die Druckfunktionen konnten nicht abgerufen werden.</exception>
+        <permission cref="T:System.Drawing.Printing.PrintingPermission">für die Berechtigung zum Drucken Funktionen abzurufen. Zugeordnete Enumeration:<see cref="F:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPrintCapabilitiesAsXml">
+      <MemberSignature Language="C#" Value="public System.IO.MemoryStream GetPrintCapabilitiesAsXml (System.Printing.PrintTicket printTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.MemoryStream GetPrintCapabilitiesAsXml(class System.Printing.PrintTicket printTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.GetPrintCapabilitiesAsXml(System.Printing.PrintTicket)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryStream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="printTicket">Ein Druckticket, die die Grundlage bereitstellt, auf der die Druckfunktionen gemeldet werden.</param>
+        <summary>Ruft eine <see cref="T:System.IO.MemoryStream" /> einhält-Objekt, das angibt, den Drucker-Funktionen in einem XML-format, die die [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397).</summary>
+        <returns>Ein <see cref="T:System.IO.MemoryStream" /> die Leistungsmerkmale des Druckers angeben, unter Verwendung des XML-Schemas "PrintCapabilities", ein Teil der [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397) System.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Printing.PrintTicket> Parameter wird als Grundlage für die zu erstellende XML verwendet. Nehmen wir beispielsweise an der Drucker unterstützt nur die Medientypen A und B aus der Eingabe "bin", 1 und unterstützt nur Medientyp C aus der Eingabe "bin" 2. Wenn die `printTicket` Parameter angegebene Eingabe "bin", 1, und klicken Sie dann die Druckfunktionen XML, die zurückgegeben werden würden alle drei Medientypen enthalten, aber Medientyp C als "eingeschränkt" an. Wenn die `printTicket` Parameter angegebene Eingabe "bin", 2, und klicken Sie dann die XML, das zurückgegeben wird, enthält alle drei Medientypen, aber Medientypen A und B als "eingeschränkt". Finden Sie unter der [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397) für Weitere Informationen zu Einschränkungen.  
+  
+ Wenn `printTicket` ist `null`, die <xref:System.Printing.PrintQueue.UserPrintTicket%2A> verwendet wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Printing.PrintQueueException">Die Druckfunktionen konnten nicht abgerufen werden.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="printTicket" />ist nicht ordnungsgemäß formatiert.</exception>
+        <permission cref="T:System.Drawing.Printing.PrintingPermission">für die Berechtigung zum Drucken Funktionen abzurufen. Zugeordnete Enumeration:<see cref="F:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPrintJobInfoCollection">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintJobInfoCollection GetPrintJobInfoCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Printing.PrintJobInfoCollection GetPrintJobInfoCollection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.GetPrintJobInfoCollection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintJobInfoCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Auflistung mit einem <see cref="T:System.Printing.PrintSystemJobInfo" /> Objekt für jeden Auftrag in der Warteschlange.</summary>
+        <returns>Gibt eine <see cref="T:System.Printing.PrintJobInfoCollection" /> von <see cref="T:System.Printing.PrintSystemJobInfo" /> Objekte. Es ist eine für jeden Auftrag in der Warteschlange.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Methode verwendet wird, beim Ausführen der gleichen Aktion für jeden Auftrag in einer Warteschlange.  
+  
+ [!code-cpp[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#enumeratejobsinqueues)]
+ [!code-csharp[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#enumeratejobsinqueues)]
+ [!code-vb[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#enumeratejobsinqueues)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasPaperProblem">
+      <MemberSignature Language="C#" Value="public bool HasPaperProblem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasPaperProblem" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.HasPaperProblem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Drucker einen nicht angegebenen Papier-Fehler aufgetreten sind.</summary>
+        <value>
+          <see langword="true" />Wenn ein nicht angegebener Papierproblem; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Drucker einem Signal mit dieser Bedeutung nicht unterstützt, und klicken Sie dann die Eigenschaft ist immer `false`.  
+  
+ Die <xref:System.Printing.PrintQueue> -Objekt verfügt außerdem über <xref:System.Printing.PrintQueue.IsPaperJammed%2A> und <xref:System.Printing.PrintQueue.IsOutOfPaper%2A> Eigenschaften.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Eigenschaft als Teil einer Umfrage verwendet alle Drucker auf mögliche Fehler.  
+  
+ [!code-cpp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#spottroubleusingqueueproperties)]
+ [!code-csharp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#spottroubleusingqueueproperties)]
+ [!code-vb[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#spottroubleusingqueueproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasToner">
+      <MemberSignature Language="C#" Value="public bool HasToner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasToner" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.HasToner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, wenn der Drucker Toner verfügt.</summary>
+        <value>
+          <see langword="true" />Wenn der aktuelle Drucker Toner verfügt; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige Druckerhersteller möglicherweise dieses Signal verwenden, um anzugeben, dass diese Toner nicht ausreicht. Dürfen andere Benutzer Sie verwenden, um anzugeben, dass die Cartridge Toner vorhanden und ordnungsgemäß eingefügten bei der Verwendung <xref:System.Printing.PrintQueue.IsTonerLow%2A> an, dass diese Toner ist niedrig.  
+  
+ Wenn ein Drucker einem Signal mit dieser Bedeutung nicht unterstützt, und klicken Sie dann die Eigenschaft ist immer `false`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Eigenschaft als Teil einer Umfrage verwendet alle Drucker auf mögliche Fehler.  
+  
+ [!code-cpp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#spottroubleusingqueueproperties)]
+ [!code-csharp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#spottroubleusingqueueproperties)]
+ [!code-vb[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#spottroubleusingqueueproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostingPrintServer">
+      <MemberSignature Language="C#" Value="public virtual System.Printing.PrintServer HostingPrintServer { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Printing.PrintServer HostingPrintServer" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.HostingPrintServer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintServer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest (geschützt) den Druckserver, der steuert, die Druckerwarteschlange.</summary>
+        <value>Der Name und andere Eigenschaften des der <see cref="T:System.Printing.PrintServer" /> , von die Druckerwarteschlange gehostet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann festgelegt werden, nur durch eine Klasse, die abgeleitet <xref:System.Printing.PrintQueue> ist die Eigenschaft-Setter `protected`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InPartialTrust">
+      <MemberSignature Language="C#" Value="public bool InPartialTrust { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool InPartialTrust" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.InPartialTrust" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Warteschlange in einem teilweise vertrauenswürdigen Modus, ein höheres Maß an Vertrauenswürdigkeit ausgeführt wird.</summary>
+        <value>
+          <see langword="true" />Wenn die Warteschlange in einem teilweise vertrauenswürdigen Modus ausgeführt wird; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Printing.PrintQueue.InPartialTrust%2A> Eigenschaft ist `true`, das Programm kann nicht erstellt werden ein <xref:System.Printing.PrintQueue> Objekt, das diesen Drucker darstellt, es sei denn, der Benutzer drucken Vollzugriff für den Drucker.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalDispose">
+      <MemberSignature Language="C#" Value="protected override sealed void InternalDispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InternalDispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.InternalDispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.Printing.PrintQueue" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBidiEnabled">
+      <MemberSignature Language="C#" Value="public bool IsBidiEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBidiEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsBidiEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die bidirektionale Kommunikation aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn die bidirektionale Kommunikation aktiviert ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBusy">
+      <MemberSignature Language="C#" Value="public bool IsBusy { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBusy" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsBusy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Druckgerät ausgelastet ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Gerät ausgelastet ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ausgelastet bedeutet nicht unbedingt, dass er einen Druckauftrag verarbeitet wird. Wenn das Gerät eine Kombination aus Drucker/Fax/Kopierer ist, kann anschließend Faxen Kopieren bzw. werden. Vergleichen Sie mit der <xref:System.Printing.PrintQueue.IsProcessing%2A> Eigenschaft.  
+  
+ Wenn das Gerät einem Signal mit dieser Bedeutung nicht unterstützt, und klicken Sie dann die Eigenschaft immer ist `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDevQueryEnabled">
+      <MemberSignature Language="C#" Value="public bool IsDevQueryEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDevQueryEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsDevQueryEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Warteschlange Dokumente enthält, wenn Dokument-und Druckerkonfiguration nicht übereinstimmen.</summary>
+        <value>
+          <see langword="true" />Wenn die Warteschlange nicht übereinstimmende Konfigurationen enthält. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDirect">
+      <MemberSignature Language="C#" Value="public bool IsDirect { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDirect" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsDirect" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Warteschlange direkt an den Drucker oder Spulen Dokumente enthalten erste ab, und klicken Sie dann ausgegeben.</summary>
+        <value>
+          <see langword="true" />Wenn die Warteschlange direkt an den Drucker gedruckt. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann nur über die Windows allgemeine Dialogfeld "Drucken" festgelegt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDoorOpened">
+      <MemberSignature Language="C#" Value="public bool IsDoorOpened { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDoorOpened" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsDoorOpened" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob eine Tür auf den Drucker geöffnet ist.</summary>
+        <value>
+          <see langword="true" />Wenn eine Tür geöffnet ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Drucker einem Signal mit dieser Bedeutung nicht unterstützt, und klicken Sie dann die Eigenschaft ist immer `false`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Eigenschaft als Teil einer Umfrage verwendet alle Drucker auf mögliche Fehler.  
+  
+ [!code-cpp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#spottroubleusingqueueproperties)]
+ [!code-csharp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#spottroubleusingqueueproperties)]
+ [!code-vb[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#spottroubleusingqueueproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsHidden">
+      <MemberSignature Language="C#" Value="public bool IsHidden { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsHidden" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsHidden" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Druckerwarteschlange in Ihrer Anwendung Benutzeroberfläche ausgeblendet wird.</summary>
+        <value>
+          <see langword="true" />Wenn die Druckerwarteschlange, in der Windows-Benutzeroberfläche ausgeblendet ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nicht automatisch ausgeblendet, die Druckerwarteschlange, wenn Sie diese Eigenschaft, um festlegen `true`. Das Programm muss dennoch Schritte aus, um sicherzustellen, dass es nicht in einer Liste von Warteschlangen in der Benutzeroberfläche angezeigt wird.  
+  
+ Druckwarteschlangen können nicht in der Windows-Benutzeroberfläche, z. B. die Drucker und Faxgeräte Liste ausgeblendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInError">
+      <MemberSignature Language="C#" Value="public bool IsInError { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInError" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsInError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Drucker oder das Gerät in einem Fehlerzustand befindet.</summary>
+        <value>
+          <see langword="true" />Wenn das Gerät in einem Fehlerzustand befindet; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Drucker einem Signal mit dieser Bedeutung nicht unterstützt, und klicken Sie dann die Eigenschaft ist immer `false`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Eigenschaft als Teil einer Umfrage verwendet alle Drucker auf mögliche Fehler.  
+  
+ [!code-cpp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#spottroubleusingqueueproperties)]
+ [!code-csharp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#spottroubleusingqueueproperties)]
+ [!code-vb[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#spottroubleusingqueueproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInitializing">
+      <MemberSignature Language="C#" Value="public bool IsInitializing { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInitializing" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsInitializing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Drucker selbst initialisiert wird.</summary>
+        <value>
+          <see langword="true" />Wenn der Drucker eine Initialisierung ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Drucker einem Signal mit dieser Bedeutung nicht unterstützt, und klicken Sie dann die Eigenschaft ist immer `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsIOActive">
+      <MemberSignature Language="C#" Value="public bool IsIOActive { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsIOActive" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsIOActive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Drucker empfangen oder Senden von Daten oder Signale ab.</summary>
+        <value>
+          <see langword="true" />Wenn der Drucker empfangen oder senden; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Drucker einem Signal mit dieser Bedeutung nicht unterstützt, und klicken Sie dann die Eigenschaft ist immer `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsManualFeedRequired">
+      <MemberSignature Language="C#" Value="public bool IsManualFeedRequired { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsManualFeedRequired" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsManualFeedRequired" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Drucker muss manuell für den aktuellen Druckauftrag Papier eingelesen werden.</summary>
+        <value>
+          <see langword="true" />Wenn der Drucker muss manuell Papier eingezogen; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Drucker einem Signal mit dieser Bedeutung nicht unterstützt, und klicken Sie dann die Eigenschaft ist immer `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNotAvailable">
+      <MemberSignature Language="C#" Value="public bool IsNotAvailable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNotAvailable" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsNotAvailable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Drucker verfügbar ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Drucker verfügbar ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Drucker einem Signal mit dieser Bedeutung nicht unterstützt, und klicken Sie dann die Eigenschaft ist immer `false`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Eigenschaft als Teil einer Umfrage verwendet alle Drucker auf mögliche Fehler.  
+  
+ [!code-cpp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#spottroubleusingqueueproperties)]
+ [!code-csharp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#spottroubleusingqueueproperties)]
+ [!code-vb[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#spottroubleusingqueueproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOffline">
+      <MemberSignature Language="C#" Value="public bool IsOffline { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOffline" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsOffline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Drucker offline ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Drucker offline ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Drucker einem Signal mit dieser Bedeutung nicht unterstützt, und klicken Sie dann die Eigenschaft ist immer `false`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Eigenschaft als Teil einer Umfrage verwendet alle Drucker auf mögliche Fehler.  
+  
+ [!code-cpp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#spottroubleusingqueueproperties)]
+ [!code-csharp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#spottroubleusingqueueproperties)]
+ [!code-vb[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#spottroubleusingqueueproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOutOfMemory">
+      <MemberSignature Language="C#" Value="public bool IsOutOfMemory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOutOfMemory" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsOutOfMemory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Drucker nicht genügend Arbeitsspeicher.</summary>
+        <value>
+          <see langword="true" />Wenn der Drucker nicht genügend Arbeitsspeicher ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Drucker einem Signal mit dieser Bedeutung nicht unterstützt, und klicken Sie dann die Eigenschaft ist immer `false`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Eigenschaft als Teil einer Umfrage verwendet alle Drucker auf mögliche Fehler.  
+  
+ [!code-cpp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#spottroubleusingqueueproperties)]
+ [!code-csharp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#spottroubleusingqueueproperties)]
+ [!code-vb[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#spottroubleusingqueueproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOutOfPaper">
+      <MemberSignature Language="C#" Value="public bool IsOutOfPaper { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOutOfPaper" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsOutOfPaper" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Drucker mit Papier, der die für den aktuellen Auftrag benötigte Größe geladen werden muss.</summary>
+        <value>
+          <see langword="true" />Wenn der Drucker erneut geladen muss; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Drucker einem Signal mit dieser Bedeutung nicht unterstützt, und klicken Sie dann die Eigenschaft ist immer `false`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Eigenschaft als Teil einer Umfrage verwendet alle Drucker auf mögliche Fehler.  
+  
+ [!code-cpp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#spottroubleusingqueueproperties)]
+ [!code-csharp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#spottroubleusingqueueproperties)]
+ [!code-vb[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#spottroubleusingqueueproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOutputBinFull">
+      <MemberSignature Language="C#" Value="public bool IsOutputBinFull { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOutputBinFull" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsOutputBinFull" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Gefahr eines Überlaufs von der Ausgabebereich des Druckers ist.</summary>
+        <value>
+          <see langword="true" />Wenn Sie der Ausgabebereich des Druckers voll ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Drucker einem Signal mit dieser Bedeutung nicht unterstützt, und klicken Sie dann die Eigenschaft ist immer `false`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Eigenschaft als Teil einer Umfrage verwendet alle Drucker auf mögliche Fehler.  
+  
+ [!code-cpp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#spottroubleusingqueueproperties)]
+ [!code-csharp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#spottroubleusingqueueproperties)]
+ [!code-vb[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#spottroubleusingqueueproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPaperJammed">
+      <MemberSignature Language="C#" Value="public bool IsPaperJammed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPaperJammed" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsPaperJammed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das aktuelle Blatt Papier im Drucker Problem vorliegt.</summary>
+        <value>
+          <see langword="true" />Wenn ein Papierstau; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Drucker einem Signal mit dieser Bedeutung nicht unterstützt, und klicken Sie dann die Eigenschaft ist immer `false`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Eigenschaft als Teil einer Umfrage verwendet alle Drucker auf mögliche Fehler.  
+  
+ [!code-cpp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#spottroubleusingqueueproperties)]
+ [!code-csharp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#spottroubleusingqueueproperties)]
+ [!code-vb[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#spottroubleusingqueueproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPaused">
+      <MemberSignature Language="C#" Value="public bool IsPaused { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPaused" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsPaused" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Druckwarteschlange angehalten wurde.</summary>
+        <value>
+          <see langword="true" />Wenn die Druckerwarteschlange angehalten wurde. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Drucker einem Signal mit dieser Bedeutung nicht unterstützt, und klicken Sie dann die Eigenschaft ist immer `false`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Eigenschaft als Teil einer Umfrage verwendet alle Drucker auf mögliche Fehler.  
+  
+ [!code-cpp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#spottroubleusingqueueproperties)]
+ [!code-csharp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#spottroubleusingqueueproperties)]
+ [!code-vb[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#spottroubleusingqueueproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPendingDeletion">
+      <MemberSignature Language="C#" Value="public bool IsPendingDeletion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPendingDeletion" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsPendingDeletion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Drucker wird gerade durch das Löschen eines Druckauftrags.</summary>
+        <value>
+          <see langword="true" />Wenn der Drucker einen Auftrag löscht; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Drucker einem Signal mit dieser Bedeutung nicht unterstützt, und klicken Sie dann die Eigenschaft ist immer `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPowerSaveOn">
+      <MemberSignature Language="C#" Value="public bool IsPowerSaveOn { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPowerSaveOn" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsPowerSaveOn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Drucker im Energiesparmodus befindet.</summary>
+        <value>
+          <see langword="true" />Speichern Sie Modus, wenn der Drucker im Energiesparmodus befindet; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Drucker einem Signal mit dieser Bedeutung nicht unterstützt, und klicken Sie dann die Eigenschaft ist immer `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPrinting">
+      <MemberSignature Language="C#" Value="public bool IsPrinting { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPrinting" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsPrinting" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein Auftrag gedruckt wird.</summary>
+        <value>
+          <see langword="true" />Wenn ein Auftrag gedruckt wird; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Drucker einem Signal mit dieser Bedeutung nicht unterstützt, und klicken Sie dann die Eigenschaft ist immer `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsProcessing">
+      <MemberSignature Language="C#" Value="public bool IsProcessing { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsProcessing" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsProcessing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Drucker einen Druckauftrag verarbeitet wird.</summary>
+        <value>
+          <see langword="true" />Wenn der Drucker einen Druckauftrag; verarbeitet andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige Druckerhersteller unterstützen dieses Signal anstelle der weniger spezifischen <xref:System.Printing.PrintQueue.IsBusy%2A>.  
+  
+ Wenn ein Drucker einem Signal mit dieser Bedeutung nicht unterstützt, und klicken Sie dann die Eigenschaft ist immer `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPublished">
+      <MemberSignature Language="C#" Value="public bool IsPublished { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPublished" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsPublished" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Drucker für andere Benutzer im Netzwerk sichtbar ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Drucker für andere Benutzer im Netzwerk sichtbar ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsQueued">
+      <MemberSignature Language="C#" Value="public bool IsQueued { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsQueued" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsQueued" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Drucker jeweils eine Warteschlange mit mehr als ein Druckauftrag darin unterstützen kann.</summary>
+        <value>
+          <see langword="true" />Wenn der Drucker unterstützt die queuing mehrere Druckaufträge; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Drucker einem Signal mit dieser Bedeutung nicht unterstützt, und klicken Sie dann die Eigenschaft ist immer `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRawOnlyEnabled">
+      <MemberSignature Language="C#" Value="public bool IsRawOnlyEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRawOnlyEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsRawOnlyEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Druckerwarteschlange EMF (Enhanced Meta-Datei) verwenden kann, die schneller Datenfluss aus einer Anwendung zum Drucken auf der Windows-Druckspooler ermöglicht.</summary>
+        <value>
+          <see langword="true" />Wenn der Drucker EMF Drucken verwenden kann; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsServerUnknown">
+      <MemberSignature Language="C#" Value="public bool IsServerUnknown { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsServerUnknown" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsServerUnknown" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Drucker im Status "Fehler" ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Drucker in einem Fehlerzustand; wird andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Drucker einem Signal mit dieser Bedeutung nicht unterstützt, und klicken Sie dann die Eigenschaft ist immer `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsShared">
+      <MemberSignature Language="C#" Value="public bool IsShared { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsShared" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsShared" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Drucker für andere Computer im Netzwerk verfügbar ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Drucker freigegeben wird; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann nur mit dem Windows allgemeine Dialogfeld "Drucken" festgelegt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTonerLow">
+      <MemberSignature Language="C#" Value="public bool IsTonerLow { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTonerLow" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsTonerLow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Drucker nicht genügend Toner ausgeführt wird.</summary>
+        <value>
+          <see langword="true" />Wenn der Drucker nicht genügend Toner ausgeführt wird; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Drucker einem Signal mit dieser Bedeutung nicht unterstützt, und klicken Sie dann die Eigenschaft ist immer `false`.  
+  
+ Die <xref:System.Printing.PrintQueue> -Objekt verfügt außerdem über eine <xref:System.Printing.PrintQueue.HasToner%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Eigenschaft als Teil einer Umfrage verwendet alle Drucker auf mögliche Fehler.  
+  
+ [!code-cpp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#spottroubleusingqueueproperties)]
+ [!code-csharp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#spottroubleusingqueueproperties)]
+ [!code-vb[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#spottroubleusingqueueproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsWaiting">
+      <MemberSignature Language="C#" Value="public bool IsWaiting { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsWaiting" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsWaiting" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein Auftrag hinzugefügt werden die Warteschlange warten.</summary>
+        <value>
+          <see langword="true" />Wenn die Warteschlange für einen Auftrag wartet; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Drucker einem Signal mit dieser Bedeutung nicht unterstützt, und klicken Sie dann die Eigenschaft ist immer `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsWarmingUp">
+      <MemberSignature Language="C#" Value="public bool IsWarmingUp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsWarmingUp" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsWarmingUp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Drucker Aufwärmphase ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Drucker Aufwärmphase; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Drucker einem Signal mit dieser Bedeutung nicht unterstützt, und klicken Sie dann die Eigenschaft ist immer `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsXpsDevice">
+      <MemberSignature Language="C#" Value="public bool IsXpsDevice { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsXpsDevice" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.IsXpsDevice" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Druckertreiber erstellt wird, auf die [drucken – Übersicht](~/docs/framework/wpf/advanced/printing-overview.md) daher [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] als Seite Beschreibungssprache.</summary>
+        <value>
+          <see langword="true" />Wenn der Drucker verwendet die [drucken – Übersicht](~/docs/framework/wpf/advanced/printing-overview.md)ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Drucker einem Signal mit dieser Bedeutung nicht unterstützt, und klicken Sie dann die Eigenschaft ist immer `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeepPrintedJobs">
+      <MemberSignature Language="C#" Value="public bool KeepPrintedJobs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool KeepPrintedJobs" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.KeepPrintedJobs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Warteschlange der Drucker-Sprachdatei statt zu löschen, nach dem Drucken speichern ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Warteschlange der Drucker-Sprachdatei speichert; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Drucker einem Signal mit dieser Bedeutung nicht unterstützt, und klicken Sie dann die Eigenschaft ist immer `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="public virtual string Location { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Location" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.Location" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen des Druckers physischen Standort.</summary>
+        <value>Der Drucker physischen Standort.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Eigenschaft verwendet, um eine Teilmenge der verfügbaren Druckwarteschlangen aufzulisten.  
+  
+ [!code-cpp[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](~/samples/snippets/cpp/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/CPP/Program.cpp#listsubsetofprintqueues)]
+ [!code-csharp[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/CSharp/Program.cs#listsubsetofprintqueues)]
+ [!code-vb[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/visualbasic/program.vb#listsubsetofprintqueues)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxPrintSchemaVersion">
+      <MemberSignature Language="C#" Value="public static int MaxPrintSchemaVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 MaxPrintSchemaVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.MaxPrintSchemaVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuelle Versionsnummer des der [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397) , das die Warteschlange verwenden kann.</summary>
+        <value>Die Nummer der letzten Version von den [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397) , das die Warteschlange verwenden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Version der [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397) mit Windows Vista veröffentlicht ist 1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeAndValidatePrintTicket">
+      <MemberSignature Language="C#" Value="public System.Printing.ValidationResult MergeAndValidatePrintTicket (System.Printing.PrintTicket basePrintTicket, System.Printing.PrintTicket deltaPrintTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Printing.ValidationResult MergeAndValidatePrintTicket(class System.Printing.PrintTicket basePrintTicket, class System.Printing.PrintTicket deltaPrintTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.MergeAndValidatePrintTicket(System.Printing.PrintTicket,System.Printing.PrintTicket)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Printing.ValidationResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="basePrintTicket" Type="System.Printing.PrintTicket" />
+        <Parameter Name="deltaPrintTicket" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="basePrintTicket">Die erste Druckticket.</param>
+        <param name="deltaPrintTicket">Das zweite Druckticket. Dieser Wert kann <see langword="null" /> sein.</param>
+        <summary>Werden zwei <see cref="T:System.Printing.PrintTicket" />s und stellt sicher, dass das resultierende <see cref="T:System.Printing.PrintTicket" /> gültig ist, und fordert Sie keine Funktionen, die der Drucker nicht unterstützt.</summary>
+        <returns>Ein <see cref="T:System.Printing.ValidationResult" /> , umfasst das zusammengeführte <see cref="T:System.Printing.PrintTicket" /> und ein Hinweis darauf, ob die Einstellungen geändert werden, um die Durchführbarkeit zu gewährleisten musste.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methode erzeugt eine sinnvolle Druckticket; d. h. ein Ticket, das keine anfordert, dass die Druckfunktionen des Druckers nicht unterstützt. Die Methode überprüft zuerst die zwei Drucktickets gegen die [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397). Wenn Sie ungültig ist, wird eine Ausnahme ausgelöst.  
+  
+ Klicken Sie dann die Tickets zusammengeführt. Besäßen sie unterschiedliche Werte für eine bestimmte Eigenschaft verwendet das resultierende zusammengeführte Ticket zunächst der Wert, der das Delta-Ticket.  
+  
+ Das zusammengeführte Ticket wird dann anhand der tatsächlichen Funktionen des Druckers überprüft. Wenn alle Einstellungen in das Ticket mit die Leistungsmerkmale des Druckers nicht kompatibel sind, und klicken Sie dann der Druckertreiber ändert diese Einstellungen mithilfe von Logik, möchte er. In der Regel, ersetzt er des Benutzers oder des Druckers ein Standardwert für die Einstellung an. Es Treiberquelle Substitute Werte ist nicht der gleiche Ticket als `basePrintTicket`, und klicken Sie dann das zusammengeführte Ticket einige Einstellungen möglicherweise, die sich aus den beiden Eingabedaten Tickets unterscheiden. Wenn der Druckertreiber installiert ist, um alle Einstellungen zu ändern, und klicken Sie dann diese Tatsache wurde in der die <xref:System.Printing.ValidationResult.ConflictStatus%2A> Eigenschaft von der <xref:System.Printing.ValidationResult>.  
+  
+ Zusammenführen und überprüfen Sie basierend auf einer Druckerwarteschlange Standardeinstellungen, sollten Sie festlegen `basePrintTicket` auf die <xref:System.Printing.PrintQueue.DefaultPrintTicket%2A> oder <xref:System.Printing.PrintQueue.UserPrintTicket%2A>.  
+  
+ Die `deltaPrintTicket` Parameter möglich `null`, in diesem Fall die `basePrintTicket` wird überprüft, Durchführbarkeit überprüft und zurückgegeben werden, möglicherweise mit Änderungen.  
+  
+ Mit dieser Überladung von <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A>, die beide die `deltaPrintTicket` und <xref:System.Printing.PrintTicket> in der <xref:System.Printing.ValidationResult> haben Gültigkeitsbereich des Auftrags zurückgegeben wird. Verwenden Sie die andere Überladung dieser Methode, um anzugeben, ein anderen Bereich.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Methode zum Zusammenführen von zwei Drucktickets und Antworten auf die <xref:System.Printing.ValidationResult> zurückgegeben wird.  
+  
+ [!code-csharp[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#usingmergeandvalidate)]
+ [!code-vb[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#usingmergeandvalidate)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Mindestens eines der Drucktickets ist ungültig.</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="basePrintTicket" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Printing.PrintQueueException">Die Überprüfung, Fusion und die Prüfung der Vorgang ist fehlgeschlagen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeAndValidatePrintTicket">
+      <MemberSignature Language="C#" Value="public System.Printing.ValidationResult MergeAndValidatePrintTicket (System.Printing.PrintTicket basePrintTicket, System.Printing.PrintTicket deltaPrintTicket, System.Printing.PrintTicketScope scope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Printing.ValidationResult MergeAndValidatePrintTicket(class System.Printing.PrintTicket basePrintTicket, class System.Printing.PrintTicket deltaPrintTicket, valuetype System.Printing.PrintTicketScope scope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.MergeAndValidatePrintTicket(System.Printing.PrintTicket,System.Printing.PrintTicket,System.Printing.PrintTicketScope)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Printing.ValidationResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="basePrintTicket" Type="System.Printing.PrintTicket" />
+        <Parameter Name="deltaPrintTicket" Type="System.Printing.PrintTicket" />
+        <Parameter Name="scope" Type="System.Printing.PrintTicketScope" />
+      </Parameters>
+      <Docs>
+        <param name="basePrintTicket">Die erste Druckticket.</param>
+        <param name="deltaPrintTicket">Das zweite Druckticket. Dieser Wert kann <see langword="null" /> sein.</param>
+        <param name="scope">Ein Wert, der angibt, ob der Bereich der <c>DeltaPrintTicket</c>, und den Bereich des zurückgegeben, die im Drucktickets der <see cref="T:System.Printing.ValidationResult" />, ist eine Seite, ein Dokument oder den gesamten Auftrag.</param>
+        <summary>Werden zwei <see cref="T:System.Printing.PrintTicket" />s und stellt sicher, dass das resultierende <see cref="T:System.Printing.PrintTicket" /> gültig ist, ist nicht für alle Druckfunktionen bitten Sie, dass der Drucker nicht unterstützt und im angegebenen Bereich beschränkt ist.</summary>
+        <returns>Ein <see cref="T:System.Printing.ValidationResult" /> , umfasst das zusammengeführte <see cref="T:System.Printing.PrintTicket" /> und ein Hinweis darauf, ob die Einstellungen geändert werden, um die Durchführbarkeit zu gewährleisten musste.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methode erzeugt eine sinnvolle Druckticket; d. h. ein Ticket, das keine anfordert, dass die Druckfunktionen des Druckers nicht unterstützt. Die Methode überprüft zuerst die zwei Drucktickets gegen die [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397). Wenn Sie ungültig ist, wird eine Ausnahme ausgelöst.  
+  
+ Klicken Sie dann die Tickets zusammengeführt. Besäßen sie unterschiedliche Werte für eine bestimmte Eigenschaft verwendet das resultierende zusammengeführte Ticket zunächst der Wert, der das Delta-Ticket.  
+  
+ Das zusammengeführte Ticket wird dann anhand der tatsächlichen Funktionen des Druckers überprüft. Wenn alle Einstellungen in das Ticket mit die Leistungsmerkmale des Druckers nicht kompatibel sind, und klicken Sie dann der Druckertreiber ändert diese Einstellungen mithilfe von Logik, möchte er. In der Regel, ersetzt er des Benutzers oder des Druckers ein Standardwert für die Einstellung an. Es Treiberquelle Substitute Werte ist nicht der gleiche Ticket als `basePrintTicket`, und klicken Sie dann das zusammengeführte Ticket einige Einstellungen möglicherweise, die sich aus den beiden Eingabedaten Tickets unterscheiden. Wenn der Druckertreiber installiert ist, um alle Einstellungen zu ändern, und klicken Sie dann diese Tatsache wurde in der die <xref:System.Printing.ValidationResult.ConflictStatus%2A> Eigenschaft von der <xref:System.Printing.ValidationResult>.  
+  
+ Zusammenführen und überprüfen Sie basierend auf einer Druckerwarteschlange Standardeinstellungen, sollten Sie festlegen `basePrintTicket` auf die <xref:System.Printing.PrintQueue.DefaultPrintTicket%2A> oder <xref:System.Printing.PrintQueue.UserPrintTicket%2A>.  
+  
+ Die `deltaPrintTicket` Parameter möglich `null`, in diesem Fall die `basePrintTicket` wird überprüft, Durchführbarkeit überprüft und zurückgegeben werden, möglicherweise mit Änderungen.  
+  
+ Wenn die `scope` ist ein Auftrag, und klicken Sie dann im Drucktickets zurückgegeben der <xref:System.Printing.ValidationResult> zählen [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397) Parameter mit Präfixen für Auftrag, Dokument und Page. Wenn die `scope` ist ein Dokument, und klicken Sie dann auf Einstellungen für die auftragsbezogene in `deltaPrintTicket` werden ignoriert, und das zurückgegebene Ticket kann Parameter mit dem Dokument enthalten und Seite das Präfix. Wenn die `scope` ist eine Seite, und klicken Sie dann die auftragsbezogene-Einstellungen und die pro-Dokument-Einstellungen in `deltaPrintTicket` werden ignoriert, und das zurückgegebene Ticket kann Parameter mit der Seite "-Präfix enthalten.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Mindestens eines der Drucktickets ist ungültig.</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="basePrintTicket" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="scope" /> Parameter verfügt nicht über eine gültige <see cref="T:System.Printing.PrintTicketScope" /> Wert.</exception>
+        <exception cref="T:System.Printing.PrintQueueException">Die Überprüfung, Fusion und die Prüfung der Vorgang ist fehlgeschlagen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override sealed string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Druckerwarteschlange Namen.</summary>
+        <value>Der Name der Druckwarteschlange.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Printing.PrintQueue> -Objekt verfügt auch über eine schreibgeschützte <xref:System.Printing.PrintQueue.FullName%2A> -Eigenschaft und eine beschreibbare <xref:System.Printing.PrintQueue.ShareName%2A> Eigenschaft.  
+  
+ Für Warteschlangen auf dem lokalen Druckerserver <xref:System.Printing.PrintQueue.Name%2A> und <xref:System.Printing.PrintQueue.FullName%2A> sind identisch.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Eigenschaft verwendet, um eine Teilmenge der verfügbaren Druckwarteschlangen aufzulisten.  
+  
+ [!code-cpp[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](~/samples/snippets/cpp/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/CPP/Program.cpp#listsubsetofprintqueues)]
+ [!code-csharp[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/CSharp/Program.cs#listsubsetofprintqueues)]
+ [!code-vb[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/visualbasic/program.vb#listsubsetofprintqueues)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NeedUserIntervention">
+      <MemberSignature Language="C#" Value="public bool NeedUserIntervention { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NeedUserIntervention" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.NeedUserIntervention" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Drucker ein Eingreifen des ein Benutzereingriff erforderlich.</summary>
+        <value>
+          <see langword="true" />Wenn die Benutzereingriff; erforderlich andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Drucker einem Signal mit dieser Bedeutung nicht unterstützt, und klicken Sie dann die Eigenschaft ist immer `false`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Eigenschaft als Teil einer Umfrage verwendet alle Drucker auf mögliche Fehler.  
+  
+ [!code-cpp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#spottroubleusingqueueproperties)]
+ [!code-csharp[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#spottroubleusingqueueproperties)]
+ [!code-vb[PrinterStatusSurvey#SpotTroubleUsingQueueProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#spottroubleusingqueueproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumberOfJobs">
+      <MemberSignature Language="C#" Value="public virtual int NumberOfJobs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NumberOfJobs" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.NumberOfJobs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Gesamtanzahl der Aufträge in der Druckwarteschlange Zeilenrand ab.</summary>
+        <value>Die Anzahl der Aufträge in der Warteschlange.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PagePunt">
+      <MemberSignature Language="C#" Value="public bool PagePunt { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PagePunt" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.PagePunt" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Drucker konnte nicht die aktuelle Seite gedruckt wird.</summary>
+        <value>
+          <see langword="true" />Wenn der Drucker konnte nicht zum Drucken der aktuellen Seite ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Drucker einem Signal mit dieser Bedeutung nicht unterstützt, und klicken Sie dann die Eigenschaft ist immer `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pause">
+      <MemberSignature Language="C#" Value="public virtual void Pause ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Pause() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.Pause" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Hält die Druckerwarteschlange. Es bleibt angehalten, bis <see cref="M:System.Printing.PrintQueue.Resume" /> ausgeführt wird.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Printing.PrintSystemException">Der Drucker kann nicht angehalten werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PrintingIsCancelled">
+      <MemberSignature Language="C#" Value="public bool PrintingIsCancelled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PrintingIsCancelled" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.PrintingIsCancelled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der aktuelle Druckauftrag abgebrochen wird.</summary>
+        <value>
+          <see langword="true" />Wenn der Druckauftrag abgebrochen wird; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Priority">
+      <MemberSignature Language="C#" Value="public virtual int Priority { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Priority" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.Priority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Priorität der Druckwarteschlange relativ zu anderen Druckwarteschlangen, die von demselben print Server gehostet werden und, die den gleichen physischen Drucker verwenden.</summary>
+        <value>Die Priorität für die Druckerwarteschlange. Mögliche Werte reichen von 1 bis 99. Der Standard ist 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vergleichen Sie diese Eigenschaft mit dem <xref:System.Printing.PrintQueue.DefaultPriority%2A> Eigenschaft, die die relative Priorität von Druckaufträgen in der Warteschlange ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Purge">
+      <MemberSignature Language="C#" Value="public virtual void Purge ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Purge() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.Purge" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Aufträge in der Druckwarteschlange.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Printing.PrintSystemException">Einige Druckaufträge konnte nicht aus der Warteschlange entfernt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="QueueAttributes">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintQueueAttributes QueueAttributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Printing.PrintQueueAttributes QueueAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.QueueAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintQueueAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Eigenschaften der Warteschlange ab.</summary>
+        <value>Eine bitweise Kombination der <see cref="T:System.Printing.PrintQueueAttributes" />-Enumerationswerte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueueDriver">
+      <MemberSignature Language="C#" Value="public virtual System.Printing.PrintDriver QueueDriver { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Printing.PrintDriver QueueDriver" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.QueueDriver" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintDriver</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Druckertreiber für die Warteschlange.</summary>
+        <value>Die <see cref="T:System.Printing.PrintDriver" /> , die der Warteschlange verwendet wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueuePort">
+      <MemberSignature Language="C#" Value="public virtual System.Printing.PrintPort QueuePort { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Printing.PrintPort QueuePort" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.QueuePort" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintPort</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Port, den der Warteschlange verwendet wird.</summary>
+        <value>Die <see cref="T:System.Printing.PrintPort" /> , die Druckerwarteschlange zugewiesen ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueuePrintProcessor">
+      <MemberSignature Language="C#" Value="public virtual System.Printing.PrintProcessor QueuePrintProcessor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Printing.PrintProcessor QueuePrintProcessor" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.QueuePrintProcessor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintProcessor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest Druckprozessors, die der Warteschlange verwendet wird.</summary>
+        <value>Die <see cref="T:System.Printing.PrintProcessor" /> , die die Warteschlange verwendet wird, z. B. WinPrint oder ModiPrint.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueueStatus">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintQueueStatus QueueStatus { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Printing.PrintQueueStatus QueueStatus" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.QueueStatus" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintQueueStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der den Status des Druckers darstellt. Dazu gehören "Aufwärmen von,", "Initialisieren", "Drucken" und andere.</summary>
+        <value>Der aktuelle <see cref="T:System.Printing.PrintQueueStatus" />-Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Eigenschaft als Teil einer Umfrage verwendet alle Drucker auf mögliche Fehler.  
+  
+ [!code-cpp[PrinterStatusSurvey#SpotTroubleUsingQueueAttributes](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#spottroubleusingqueueattributes)]
+ [!code-csharp[PrinterStatusSurvey#SpotTroubleUsingQueueAttributes](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#spottroubleusingqueueattributes)]
+ [!code-vb[PrinterStatusSurvey#SpotTroubleUsingQueueAttributes](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#spottroubleusingqueueattributes)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Refresh">
+      <MemberSignature Language="C#" Value="public override void Refresh ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Refresh() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.Refresh" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aktualisiert die Eigenschaften der <see cref="T:System.Printing.PrintQueue" /> Objekt mit Werten aus den Drucker und die Druckerwarteschlange-Hilfsprogramm, das auf dem Computer ausgeführt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Änderungen, die das Programm stellt eine <xref:System.Printing.PrintQueue> Objekteigenschaften verloren <xref:System.Printing.PrintQueue.Refresh%2A> ausgeführt wird, es sei denn, sie in den Drucker und die Druckerwarteschlange mit geschrieben wurden <xref:System.Printing.PrintQueue.Commit%2A>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie diese Methode als Teil einer Umfrage verwendet alle Drucker auf mögliche Fehler.  
+  
+ [!code-cpp[PrinterStatusSurvey#SurveyQueues](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#surveyqueues)]
+ [!code-csharp[PrinterStatusSurvey#SurveyQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#surveyqueues)]
+ [!code-vb[PrinterStatusSurvey#SurveyQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#surveyqueues)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Printing.PrintSystemException">Einige Eigenschaften konnten nicht aktualisiert werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Resume">
+      <MemberSignature Language="C#" Value="public virtual void Resume ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Resume() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueue.Resume" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Startet eine Druckerwarteschlange, die angehalten wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie diese Methode verwenden, um einen angehaltenen Drucker fortsetzen.  
+  
+ [!code-cpp[DiagnoseProblematicPrintJob#HandlePausedJob](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#handlepausedjob)]
+ [!code-csharp[DiagnoseProblematicPrintJob#HandlePausedJob](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#handlepausedjob)]
+ [!code-vb[DiagnoseProblematicPrintJob#HandlePausedJob](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#handlepausedjob)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Printing.PrintSystemException">Der Drucker kann nicht fortgesetzt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ScheduleCompletedJobsFirst">
+      <MemberSignature Language="C#" Value="public bool ScheduleCompletedJobsFirst { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ScheduleCompletedJobsFirst" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.ScheduleCompletedJobsFirst" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab einen Wert, der angibt, ob der Drucker Aufträge, die die Spoolvorgang vor Aufträge abgeschlossen wurden, die nicht vollständig übertragene haben enthalten, auch wenn Letzteres der Warteschlange hinzugefügt wurde, erste oder eine höhere Priorität haben.</summary>
+        <value>
+          <see langword="true" />Wenn der Drucker Aufträge, die die Spoolvorgang vor Aufträge abgeschlossen wurden, die nicht vollständig übertragene; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SeparatorFile">
+      <MemberSignature Language="C#" Value="public virtual string SeparatorFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SeparatorFile" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.SeparatorFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt der Pfad und Dateiname einer Datei, die die zu Beginn jedes Druckauftrags eingefügt wird.</summary>
+        <value>Der Pfad und Dateiname der Trenndatei.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist normalerweise eine Einzelseiten-Datei, die zum Trennen Sie der Ausgabe von anderen Druckaufträgen erleichtern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShareName">
+      <MemberSignature Language="C#" Value="public virtual string ShareName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ShareName" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.ShareName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Namen für den Drucker, der von Benutzern im Netzwerk angezeigt wird, wenn sie freigegeben werden.</summary>
+        <value>Der öffentliche Name für einen freigegebenen Drucker.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Printing.PrintQueue> -Objekt verfügt auch über eine schreibgeschützte <xref:System.Printing.PrintQueue.FullName%2A> -Eigenschaft und eine beschreibbare <xref:System.Printing.PrintQueue.Name%2A> Eigenschaft. Für Warteschlangen auf dem lokalen Druckserver haben diese Eigenschaften den gleichen Wert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartTimeOfDay">
+      <MemberSignature Language="C#" Value="public virtual int StartTimeOfDay { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StartTimeOfDay" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.StartTimeOfDay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die früheste Uhrzeit, ausgedrückt als die Anzahl von Minuten seit Mitternacht Coordinated Universal Time (UTC) (auch als Greenwich Mean Time [GMT]), dass der Drucker einen Auftrag gedruckt wird.</summary>
+        <value>Die Tageszeit, die der Drucker zuerst verfügbar ist, die als die Anzahl von Minuten seit Mitternacht (UTC) ausgedrückt werden. Der Maximalwert ist 1439. Bei Installation eines Druckers wird zunächst mithilfe der [!INCLUDE[TLA#tla_win](~/includes/tlasharptla-win-md.md)] Druckerinstallations-Assistenten der Drucker standardmäßig Verfügbarkeit ständig, und diese Eigenschaft gibt 0 zurück, in allen Zeitzonen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie nicht in der UTC-Zeitzone sind, müssen Sie addieren oder subtrahieren Vielfachen von 60 festgelegt oder die richtige Zeit für Ihre Zeitzone abgerufen. Z. B. Wenn Sie sich auf die Pacific Time Zone Nordamerika und Sommer-/ Winterzeit ist nicht aktiv, und dann Ihrer lokalen Uhrzeit auf 8 Stunden vor UTC ist. Festzulegende <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> um 12 Uhr der Zeitzone, Sie ihn auf einstellen 8: 00 Uhr (UTC), also 480 (= 8 * 60). Außerdem müssen Sie beachten, die Zeit auf 0 (null), nach 24 Stunden Rollover (d. h.; nach 1439th Minute). Um 18: 00 Uhr in die Zeitzone festlegen, legen Sie es auf 2: 00 Uhr (UTC), also 120 (= 2 * 60). Finden Sie unter <xref:System.TimeZone>, <xref:System.TimeSpan>, und <xref:System.DateTime> Klassen für hilfreich Zeitzone Methoden bearbeiten.  
+  
+ Wenn der Drucker immer verfügbar ist, gibt diese Eigenschaft 0 in allen Zeitzonen.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie diese Eigenschaft verwenden, um zu bestimmen, ob ein Drucker, die derzeit verfügbar ist.  
+  
+ [!code-cpp[PrinterStatusSurvey#UsingStartAndUntilTimes](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#usingstartanduntiltimes)]
+ [!code-csharp[PrinterStatusSurvey#UsingStartAndUntilTimes](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#usingstartanduntiltimes)]
+ [!code-vb[PrinterStatusSurvey#UsingStartAndUntilTimes](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#usingstartanduntiltimes)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UntilTimeOfDay">
+      <MemberSignature Language="C#" Value="public virtual int UntilTimeOfDay { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 UntilTimeOfDay" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.UntilTimeOfDay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die aktuelle Uhrzeit als die Anzahl von Minuten seit Mitternacht Coordinated Universal Time (UTC) (auch als Greenwich Mean Time [GMT]), dass der Drucker einen Auftrag gedruckt wird.</summary>
+        <value>Die Tageszeit, die der Drucker nicht mehr verfügbar ist, als die Anzahl von Minuten seit Mitternacht (UTC) ausgedrückt ist. Der Maximalwert ist 1439. Bei Installation eines Druckers wird zunächst mithilfe der [!INCLUDE[TLA#tla_win](~/includes/tlasharptla-win-md.md)] Druckerinstallations-Assistenten der Drucker standardmäßig Verfügbarkeit ständig, und diese Eigenschaft gibt 0 zurück, in allen Zeitzonen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie nicht in der UTC-Zeitzone sind, müssen Sie addieren oder subtrahieren Vielfachen von 60 festgelegt oder die richtige Zeit für Ihre Zeitzone abgerufen. Z. B. Wenn Sie sich auf die Pacific Time Zone Nordamerika und Sommer-/ Winterzeit ist nicht aktiv, und dann Ihrer lokalen Uhrzeit auf 8 Stunden vor UTC ist. Festzulegende <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> um 12 Uhr der Zeitzone, Sie ihn auf einstellen 8: 00 Uhr (UTC), also 480 (= 8 * 60). Außerdem müssen Sie daran denken, Zeit Rollover auf 0 (null), nach dem 24. Stunde (1439th Minute). Um 18: 00 Uhr in die Zeitzone festlegen, legen Sie es auf 2: 00 Uhr (UTC), also 120 (= 2 * 60). Finden Sie unter <xref:System.TimeZone>, <xref:System.TimeSpan>, und <xref:System.DateTime> Klassen für hilfreich Zeitzone Methoden bearbeiten.  
+  
+ Wenn der Drucker immer verfügbar ist, gibt diese Eigenschaft 0 in allen Zeitzonen.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie diese Eigenschaft verwenden, um zu bestimmen, ob ein Drucker, die derzeit verfügbar ist.  
+  
+ [!code-cpp[PrinterStatusSurvey#UsingStartAndUntilTimes](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#usingstartanduntiltimes)]
+ [!code-csharp[PrinterStatusSurvey#UsingStartAndUntilTimes](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#usingstartanduntiltimes)]
+ [!code-vb[PrinterStatusSurvey#UsingStartAndUntilTimes](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#usingstartanduntiltimes)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserPrintTicket">
+      <MemberSignature Language="C#" Value="public virtual System.Printing.PrintTicket UserPrintTicket { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Printing.PrintTicket UserPrintTicket" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueue.UserPrintTicket" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintTicket</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt diese fest des aktuellen Benutzers <see cref="T:System.Printing.PrintTicket" /> Objekt, das ausführliche Informationen zu den Druckauftrag enthält.</summary>
+        <value>Die <see cref="T:System.Printing.PrintTicket" /> für den aktuellen Benutzer oder <see langword="null" /> Wenn ein Benutzer <see cref="T:System.Printing.PrintTicket" /> wurde nicht angegeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jeder Benutzer kann sein eigenes Standard verfügen <xref:System.Printing.PrintTicket>.  
+  
+ Diese Eigenschaft kann `null`.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie diese Eigenschaft, die beim Zusammenführen von zwei Drucktickets verwendet wird.  
+  
+ [!code-csharp[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#usingmergeandvalidate)]
+ [!code-vb[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#usingmergeandvalidate)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

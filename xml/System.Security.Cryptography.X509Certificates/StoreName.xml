@@ -1,0 +1,260 @@
+<Type Name="StoreName" FullName="System.Security.Cryptography.X509Certificates.StoreName">
+  <TypeSignature Language="C#" Value="public enum StoreName" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed StoreName extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.X509Certificates.StoreName" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Namen des X.509-Zertifikatsspeichers an, der geöffnet werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration gibt den x. 509-Geschäftsnamen, der auch den Typ der enthaltenen Zertifikate enthält. Beispielsweise meine persönlichen Zertifikate enthält, wohingegen nicht erlaubt nur widerrufene Zertifikate enthält.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird ein x. 509-Zertifikatspeicher öffnet, fügt hinzu und löscht Zertifikate und schließt dann den Speicher. Es wird davon ausgegangen, dass Sie die drei Zertifikate hinzugefügt und daraus einen lokalen Speicher verfügen.  
+  
+ [!code-csharp[X509StoreName#1](~/samples/snippets/csharp/VS_Snippets_CLR/x509storename/cs/program.cs#1)]
+ [!code-vb[X509StoreName#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/x509storename/vb/program.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddressBook">
+      <MemberSignature Language="C#" Value="AddressBook" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.StoreName AddressBook = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.StoreName.AddressBook" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.StoreName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der x. 509-Zertifikatspeicher für andere Benutzer.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthRoot">
+      <MemberSignature Language="C#" Value="AuthRoot" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.StoreName AuthRoot = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.StoreName.AuthRoot" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.StoreName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der x. 509-Zertifikatspeicher für Drittanbieter-Zertifizierungsstellen (CAs).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CertificateAuthority">
+      <MemberSignature Language="C#" Value="CertificateAuthority" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.StoreName CertificateAuthority = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.StoreName.CertificateAuthority" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.StoreName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der x. 509-Zertifikatsspeicher für dazwischenliegenden Zertifizierungsstellen (CAs).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Disallowed">
+      <MemberSignature Language="C#" Value="Disallowed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.StoreName Disallowed = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.StoreName.Disallowed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.StoreName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die x. 509-Zertifikatspeicher für gesperrte Zertifikate.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="My">
+      <MemberSignature Language="C#" Value="My" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.StoreName My = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.StoreName.My" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.StoreName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der x. 509-Zertifikatspeicher für persönliche Zertifikate.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Root">
+      <MemberSignature Language="C#" Value="Root" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.StoreName Root = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.StoreName.Root" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.StoreName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>X. 509-Zertifikatspeicher für vertrauenswürdige Stamm-Zertifizierungsstellen (CAs).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TrustedPeople">
+      <MemberSignature Language="C#" Value="TrustedPeople" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.StoreName TrustedPeople = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.StoreName.TrustedPeople" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.StoreName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der x. 509-Zertifikatspeicher für direkt vertrauenswürdige Personen und Ressourcen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TrustedPublisher">
+      <MemberSignature Language="C#" Value="TrustedPublisher" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.StoreName TrustedPublisher = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.StoreName.TrustedPublisher" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.StoreName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der x. 509-Zertifikatspeicher für direkt vertrauenswürdige Herausgeber.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

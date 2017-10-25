@@ -1,0 +1,63 @@
+<Type Name="ViewStateModeByIdAttribute" FullName="System.Web.UI.ViewStateModeByIdAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ViewStateModeByIdAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ViewStateModeByIdAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ViewStateModeByIdAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert das Metadatenattribut, dass ASP.NET Serversteuerelemente verwenden, um anzugeben, ob sie beteiligt, beim Laden der Ansichtszustandsinformationen von sind <see cref="P:System.Web.UI.Control.ID" />. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.ViewStateModeByIdAttribute> Klasse wird verwendet, um ein Steuerelement angeben, das Laden der Ansichtszustand nach erfordert <xref:System.Web.UI.Control.ID%2A>. Das Standardverhalten der Ansichtszustand geladen ist für ASP.NET die Ansichtszustandsinformationen für ein Steuerelement zu laden, indem deren Index in der Konsolenstruktur der Seite. Leistung Kosten für das Laden von Ansichtszustandsinformationen von <xref:System.Web.UI.Control.ID%2A> da speziell vor dem Laden seiner Ansichtszustandsinformationen Struktur der Seite "-Steuerelements für das Steuerelement durchsucht.  
+  
+ Wenn die <xref:System.Web.UI.ViewStateModeByIdAttribute> Klasse dient als ein Metadatenattribut für ein benutzerdefiniertes Steuerelement-Klasse  
+  
+ die <xref:System.Web.UI.Control.LoadViewStateByID%2A> Eigenschaft des Steuerelements gibt `true`. Wenn die <xref:System.Web.UI.ViewStateModeByIdAttribute> Klasse nicht verwendet wird, die <xref:System.Web.UI.Control.LoadViewStateByID%2A> Eigenschaft des Steuerelements gibt den Standardwert `false`, was bedeutet, dass das Steuerelement nicht die Ansichtszustandsinformationen von geladen wird <xref:System.Web.UI.Control.ID%2A>.  
+  
+ Weitere Informationen zum Verwenden von Attributen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).  
+  
+ Die <xref:System.Web.UI.ViewStateModeByIdAttribute> Klasse gilt nicht für das Speichern der Ansichtszustandsinformationen für ein Steuerelement.  
+  
+ Die <xref:System.Web.UI.ViewStateModeByIdAttribute> Metadaten Klassenattribut ist nur für Klassendeklarationen gültig.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ViewStateModeByIdAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ViewStateModeByIdAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.ViewStateModeByIdAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anwenden der <xref:System.Web.UI.ViewStateModeByIdAttribute> an ein Steuerelement Klasse bedeutet, dass das Steuerelement seine Ansichtszustandsinformationen von geladen <xref:System.Web.UI.Control.ID%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,94 @@
+<Type Name="SecurityDescriptorFlagControl" FullName="System.DirectoryServices.Protocols.SecurityDescriptorFlagControl">
+  <TypeSignature Language="C#" Value="public class SecurityDescriptorFlagControl : System.DirectoryServices.Protocols.DirectoryControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SecurityDescriptorFlagControl extends System.DirectoryServices.Protocols.DirectoryControl" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.Protocols.SecurityDescriptorFlagControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.DirectoryServices.Protocols.DirectoryControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.DirectoryServices.Protocols.SecurityDescriptorFlagControl" /> Klasse dient zur Übergabe von Flags an den Server Security Descriptor Verhaltensweisen zu steuern.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityDescriptorFlagControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.SecurityDescriptorFlagControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.SecurityDescriptorFlagControl.#ctor" /> Konstruktor erstellt eine neue Instanz der dem <see cref="T:System.DirectoryServices.Protocols.SecurityDescriptorFlagControl" /> Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityDescriptorFlagControl (System.DirectoryServices.Protocols.SecurityMasks masks);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.DirectoryServices.Protocols.SecurityMasks masks) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.SecurityDescriptorFlagControl.#ctor(System.DirectoryServices.Protocols.SecurityMasks)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="masks" Type="System.DirectoryServices.Protocols.SecurityMasks" />
+      </Parameters>
+      <Docs>
+        <param name="masks">Eine Kombination von <see cref="T:System.DirectoryServices.Protocols.SecurityMasks" /> Werte, die Sicherheitsoptionen für Deskriptor angeben.</param>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.SecurityDescriptorFlagControl.#ctor(System.DirectoryServices.Protocols.SecurityMasks)" /> Konstruktor erstellt eine neue Instanz der dem <see cref="T:System.DirectoryServices.Protocols.SecurityDescriptorFlagControl" /> -Klasse unter Verwendung der angegebenen Sicherheit Masken.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public override byte[] GetValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] GetValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.SecurityDescriptorFlagControl.GetValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Die <see cref="M:System.DirectoryServices.Protocols.SecurityDescriptorFlagControl.GetValue" /> Methode gibt die Sicherheitsoptionen-Deskriptor für das genannte Steuerelement angegeben.</summary>
+        <returns>Der Deskriptor-Sicherheitsoptionen, für das genannte Steuerelement angegeben.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityMasks">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.Protocols.SecurityMasks SecurityMasks { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DirectoryServices.Protocols.SecurityMasks SecurityMasks" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.SecurityDescriptorFlagControl.SecurityMasks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.SecurityMasks</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.DirectoryServices.Protocols.SecurityDescriptorFlagControl.SecurityMasks" /> Eigenschaft enthält eine Kombination von <see cref="T:System.DirectoryServices.Protocols.SecurityMasks" /> Werte, die Sicherheitsoptionen für Deskriptor angeben.</summary>
+        <value>Eine Kombination von <see cref="T:System.DirectoryServices.Protocols.SecurityMasks" /> Werte, die Sicherheitsoptionen für Deskriptor angeben.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

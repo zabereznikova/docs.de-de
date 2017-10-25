@@ -1,0 +1,48 @@
+<Type Name="ICodeDomDesignerReload" FullName="System.ComponentModel.Design.Serialization.ICodeDomDesignerReload">
+  <TypeSignature Language="C#" Value="public interface ICodeDomDesignerReload" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICodeDomDesignerReload" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Serialization.ICodeDomDesignerReload" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Schnittstelle, die verwendet werden kann, um das erneute Laden eines Designers zu optimieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.CodeDom.Compiler.CodeDomProvider> können implementieren diese Schnittstelle für die Unterstützung optimiert Neuladen durch den Designer. Beim ein Designer eine Datei für die Anzeige neu analysiert, kann diese Schnittstelle zum Verbessern der Leistung verwenden.  
+  
+ Zur Unterstützung dieser Leistung Optimierungsmethode kann Designer übergeben einer <xref:System.CodeDom.CodeCompileUnit> , die die Dokumentieren von Code zum darstellt die <xref:System.ComponentModel.Design.Serialization.ICodeDomDesignerReload.ShouldReloadDesigner%2A> Methode. <xref:System.ComponentModel.Design.Serialization.ICodeDomDesignerReload.ShouldReloadDesigner%2A>Gibt einen Wert, der angibt, ob der Code geändert hat und in der Regel gibt an, ob der Code den Designer neu geladen werden soll. Andernfalls ist es nicht erforderlich, um eingesparten Zeit Neuladen des Designers.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ShouldReloadDesigner">
+      <MemberSignature Language="C#" Value="public bool ShouldReloadDesigner (System.CodeDom.CodeCompileUnit newTree);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ShouldReloadDesigner(class System.CodeDom.CodeCompileUnit newTree) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.ICodeDomDesignerReload.ShouldReloadDesigner(System.CodeDom.CodeCompileUnit)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newTree" Type="System.CodeDom.CodeCompileUnit" />
+      </Parameters>
+      <Docs>
+        <param name="newTree">Ein <see cref="T:System.CodeDom.CodeCompileUnit" /> mit dem Dokumentcode-Designer-.</param>
+        <summary>Gibt an, ob der Designer neu geladen wird, um die angegebene Kompilierungseinheit ordnungsgemäß zu importieren.</summary>
+        <returns>
+          <see langword="true" />Wenn der Designer neu geladen werden soll; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

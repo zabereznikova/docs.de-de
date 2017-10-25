@@ -1,0 +1,1066 @@
+<Type Name="ControlType" FullName="System.Windows.Automation.ControlType">
+  <TypeSignature Language="C#" Value="public class ControlType : System.Windows.Automation.AutomationIdentifier" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ControlType extends System.Windows.Automation.AutomationIdentifier" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.ControlType" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationTypes</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.AutomationIdentifier</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Identifiziert den Typ des ein Benutzeroberflächensteuerelement (UI).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Automation.ControlType>erbt von <xref:System.Windows.Automation.AutomationIdentifier> und wird verwendet, um den Typ eines Steuerelements dargestellte Identifizieren einer <xref:System.Windows.Automation.AutomationElement>. Der Steuerelementtyp richtet sich nach der Entwickler von Benutzeroberflächenautomatisierungs-Anbieter.  
+  
+ Diese Klasse enthält statische Felder, die ihrerseits <xref:System.Windows.Automation.ControlType> Objekte, um die Standardtypen von Steuerelementen zu identifizieren. Es gibt auch eine <xref:System.Windows.Automation.ControlType.Custom> Typ für Steuerelemente, die keiner der definierten Typen passen.  
+  
+ Der einzige Fall, in denen möglicherweise Steuerelementtyp des Steuerelements zur Laufzeit geändert, wird, in dem das Steuerelement unterstützt <xref:System.Windows.Automation.MultipleViewPattern>. Ein Beispiel ist die [!INCLUDE[TLA2#tla_win32](~/includes/tla2sharptla-win32-md.md)] Listenansicht sein kann eine <xref:System.Windows.Automation.ControlType.DataGrid> oder <xref:System.Windows.Automation.ControlType.List>, abhängig von der aktuellen Ansicht.  
+  
+ Eine 1: 1-Übereinstimmung mit Steuerelementmustern keine Steuerelementtypen. Ein Steuerelement kann nur ein Typ sein, werden jedoch möglicherweise unterstützt mehrere Muster oder keine Muster, abhängig von der spezifischen Funktionen.  
+  
+ Ausführliche Informationen zu den verschiedenen Steuerelementtypen, finden Sie unter [Steuerelementtypen der Benutzeroberflächenautomatisierung](~/docs/framework/ui-automation/ui-automation-control-types.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Button">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Button;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Button" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Button" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert ein Schaltflächen-Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Schaltflächen führen eine einzelne Aktion geklickt haben.  
+  
+ Eine Schaltfläche kann als eigenständiges Steuerelement oder als ein untergeordnetes Steuerelement in einem anderen Steuerelementtyp verwendet werden. Dropdown-Pfeil in einem Kombinationsfeld-Steuerelement ist z. B. eine Schaltfläche. Bei Verwendung als untergeordnetes Steuerelement ist eine Schaltfläche in der Steuerelementansicht der [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Struktur (nicht in der Inhaltsansicht).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Calendar">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Calendar;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Calendar" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Calendar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert ein Monatskalender-Steuerelement, z. B. eine Datumsauswahl.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckBox">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType CheckBox;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType CheckBox" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.CheckBox" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert ein Kontrollkästchen-Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Kontrollkästchen kann als eigenständiges Steuerelement oder als untergeordnetes Steuerelement in einem anderen Steuerelementtyp verwendet werden.  Beispielsweise wird ein Kontrollkästchen am Anfang einer Zeile in einem Datenraster-Steuerelement, das verwendet wird, zum Auswählen der Zeile (dient zum Bearbeiten des Inhalts) angezeigt, in der Steuerelementansicht jedoch nicht in der Inhaltsansicht. Ist jedoch das Kontrollkästchen mit einer Bezeichnung in einem Formular, das Daten darstellt, in den Ansichten Inhalt und Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComboBox">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType ComboBox;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType ComboBox" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.ComboBox" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert ein Kombinationsfeld-Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es gibt zwei Varianten des Kombinationsfeld-Steuerelemente. Ein einfaches Kombinationsfeld zeigt eine Liste, der ein Benutzer auswählen kann. Eine bearbeitbare Kombinationsfeld zeigt eine Liste mit Auswahlmöglichkeiten und verfügt auch über einen bearbeitbaren Textbereich in dem ein Benutzer eine Auswahl nicht beschränkt auf die Auswahl der Optionen in der Liste eingeben können.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Custom">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Custom;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Custom" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Custom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert ein Steuerelement, das nicht zu den definierten Steuerelementtypen zählt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Automation.ControlType.Custom> -Steuerelementtyp gibt an, ein Steuerelement, das nicht als eine der vordefinierten Steuerelementtypen angegeben ist (z. B. <xref:System.Windows.Automation.ControlType.Button> oder <xref:System.Windows.Automation.ControlType.Calendar>).  
+  
+ Entwickler von Steuerelementen müssen andere Steuerelementtypen Auschecken, bevor Sie als Steuerelement festlegen, eine <xref:System.Windows.Automation.ControlType.Custom> Steuerelementtyp, um sicherzustellen, dass das Steuerelement nicht die gleiche Funktionalität wie einer der definierten Steuerelementtypen bereitstellt.  
+  
+ Ein <xref:System.Windows.Automation.ControlType.Custom> Steuerelementtyp bedeuten einen Mehraufwand für den Anbieter implementiert [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)]. Darüber hinaus werden Benutzeroberflächenautomatisierungs-Client-Produkte nicht vorhersehen Kontrollstruktur, Tastaturinteraktion und mögliche Steuerelementmuster, die basierend auf den Steuerelementtyp des Steuerelements sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataGrid">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType DataGrid;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType DataGrid" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.DataGrid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert ein Datenraster-Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Zellen nur Text enthalten, muss der Steuerelementtyp " <xref:System.Windows.Automation.ControlType.Table>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataItem">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType DataItem;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType DataItem" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.DataItem" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert ein Datenelement-Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Automation.ControlType.DataItem> ist ein komplexes Element, das viele weitere Steuerelemente enthalten kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Document">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Document;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Document" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Document" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert ein Dokumentsteuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Dokument enthält den Textinhalt der mehr als eine Zeile.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Edit">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Edit;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Edit" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Edit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert ein Bearbeitungssteuerelement, z. B. ein Textfeld.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Automation.ControlType.Edit> -Steuerelement kann als eigenständiges Steuerelement oder als ein untergeordnetes Steuerelement in einem anderen Steuerelementtyp verwendet werden.  Der Bereich, in denen ein Benutzer, in einem Wert in einem Kombinationsfeld-Steuerelement eingeben kann, ist beispielsweise ein <xref:System.Windows.Automation.ControlType.Edit> -Steuerelement, und in diesem Fall das Steuerelement ist nicht Teil der Inhaltsansicht.  
+  
+ <xref:System.Windows.Automation.ControlType.Edit>Steuerelemente können auch Steuerelemente darstellen, die Kennwörter enthalten. Die <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsPassword%2A> -Eigenschaft ermöglicht es, Produkte, z. B. Sprachausgaben wissen, ob der Inhalt anzuzeigen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNeverSupportedPatterns">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.AutomationPattern[] GetNeverSupportedPatterns ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Automation.AutomationPattern[] GetNeverSupportedPatterns() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.ControlType.GetNeverSupportedPatterns" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationPattern[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Musterbezeichner ab, die vom Steuerelementtyp nicht unterstützt werden.</summary>
+        <returns>Ein Array von [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Musterbezeichnern.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode eignet sich für Benutzeroberflächenautomatisierungs-Clients z. B. Testframeworks für die Implementierung eines Anbieters, die alle Steuerelementmuster finden müssen, die für diesen Steuerelementtyp nicht zulässig sind.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Windows.Automation.ControlType.GetNeverSupportedPatterns%2A> für jede Art von <xref:System.Windows.Automation.ControlType> als statisches Feld in der <xref:System.Windows.Automation.ControlType> Klasse.  
+  
+ [!code-csharp[UIAControlTypePatterns_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAControlTypePatterns_snip/CSharp/GetPatternsForm.cs#101)]
+ [!code-vb[UIAControlTypePatterns_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAControlTypePatterns_snip/visualbasic/getpatternsform.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRequiredPatternSets">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.AutomationPattern[][] GetRequiredPatternSets ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Automation.AutomationPattern[][] GetRequiredPatternSets() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.ControlType.GetRequiredPatternSets" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationPattern[][]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft ein Array mit Sätzen erforderlicher Muster ab.</summary>
+        <returns>Ein Array mit Sätzen erforderlicher Muster.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jedes Element des Arrays enthält ein Array von Mustern, und jedes Element, das diesem Steuerelementtyp gibt es muss mindestens eine der folgenden Arrays unterstützen.  
+  
+ Diese Methode eignet sich für Benutzeroberflächenautomatisierungs-Clients, die alle möglichen Muster, z. B. Test-Frameworks für eine Implementierung eines Anbieters zu suchen müssen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Windows.Automation.ControlType.GetRequiredPatternSets%2A> für jede Art von <xref:System.Windows.Automation.ControlType> als statisches Feld in der <xref:System.Windows.Automation.ControlType> Klasse.  
+  
+ [!code-csharp[UIAControlTypePatterns_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAControlTypePatterns_snip/CSharp/GetPatternsForm.cs#101)]
+ [!code-vb[UIAControlTypePatterns_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAControlTypePatterns_snip/visualbasic/getpatternsform.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRequiredProperties">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.AutomationProperty[] GetRequiredProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Automation.AutomationProperty[] GetRequiredProperties() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.ControlType.GetRequiredProperties" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft ein Array der erforderlichen Eigenschaft [!INCLUDE[TLA#tla_id#plural](~/includes/tlasharptla-idsharpplural-md.md)] für diesen Steuerelementtyp.</summary>
+        <returns>Ein Array von Eigenschafts- [!INCLUDE[TLA2#tla_id#plural](~/includes/tla2sharptla-idsharpplural-md.md)].</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode eignet sich für Benutzeroberflächenautomatisierungs-Clients, die alle möglichen Eigenschaften, z. B. Test-Frameworks für eine Implementierung eines Anbieters zu suchen müssen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Group">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Group;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Group" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Group" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert ein Steuerelement, das als Container für andere Steuerelemente fungiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Gruppe ist ein Containersteuerelement, enthält die verschiedenen Steuerelementtypen und wird verwendet, um diese Kontrollen logisch zuordnen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Header">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Header;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Header" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Header" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert ein Headersteuerelement, die einen Container für die Bezeichnungen der Zeilen und Spalten mit Informationen darstellt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderItem">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType HeaderItem;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType HeaderItem" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.HeaderItem" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert ein Headerelement, das ist die Bezeichnung für eine Zeile oder Spalte mit den Informationen an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Hyperlink">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Hyperlink;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Hyperlink" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Hyperlink" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert ein Linksteuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Linksteuerelement mit einem angegebenen navigiert [!INCLUDE[TLA#tla_url](~/includes/tlasharptla-url-md.md)] ein Benutzer auf das Steuerelement klickt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Image">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Image;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Image" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Image" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert eine Image-Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Automation.ControlType.Image> Steuerelementtyp kann als eigenständiges Steuerelement oder als untergeordnetes Steuerelement in einem anderen Steuerelementtyp verwendet werden.  Z. B. können eine Schaltfläche ein Bild anstelle von Text Sie seine Funktionalität für den Benutzer angeben.  
+  
+ Wenn nur dekorativen Zwecken verwendet wird, ein Bild angezeigt wird, in der Steuerelementansicht der [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Struktur (nicht in der Inhaltsansicht).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="List">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType List;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType List" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.List" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt ein Listenfeld-Steuerelement, z. B. ein Listenfeld an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Automation.ControlType.List> ist ein Steuerelement, das enthält <xref:System.Windows.Automation.ControlType.ListItem> und (möglicherweise) <xref:System.Windows.Automation.ControlType.Group> Steuerelementtypen.  
+  
+ Ein <xref:System.Windows.Automation.ControlType.List> -Steuerelement kann als eigenständiges Steuerelement oder als ein untergeordnetes Steuerelement in einem anderen Steuerelementtyp verwendet werden. Ein Kombinationsfeld hat beispielsweise eine <xref:System.Windows.Automation.ControlType.List> Steuerelement, das Optionen enthält, die angezeigt werden, wenn der Dropdown-Schaltfläche geklickt wird. Bei Verwendung als untergeordnetes Steuerelement einer <xref:System.Windows.Automation.ControlType.List> ist nur in der Steuerelementansicht der der [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Struktur (nicht in der Inhaltsansicht angezeigt).  
+  
+ Bei Verwendung als untergeordnetes Steuerelement einer <xref:System.Windows.Automation.ControlType.List> verfügt nicht über eine `Name` -Eigenschaft zugewiesen.  
+  
+ Ein <xref:System.Windows.Automation.ControlType.List> darf <xref:System.Windows.Automation.ControlType.DataItem> Steuerelemente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListItem">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType ListItem;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType ListItem" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.ListItem" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt ein Listenelement-Steuerelement, das ein untergeordnetes Element eines Steuerelements ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Automation.ControlType.Header> kann auch ein untergeordnetes Element eines Steuerelements.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalizedControlType">
+      <MemberSignature Language="C#" Value="public string LocalizedControlType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LocalizedControlType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.ControlType.LocalizedControlType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Beschreibung des Steuerelements ab.</summary>
+        <value>Eine lokalisierte Beschreibung des Steuerelementtyps, z. B. „button“.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel werden alle Steuerelementtypen durch Reflektion, gefunden und ihre <xref:System.Windows.Automation.ControlType.LocalizedControlType%2A> Eigenschaften werden zusammen mit anderen Informationen.  
+  
+ [!code-csharp[UIAControlTypePatterns_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAControlTypePatterns_snip/CSharp/GetPatternsForm.cs#101)]
+ [!code-vb[UIAControlTypePatterns_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAControlTypePatterns_snip/visualbasic/getpatternsform.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupById">
+      <MemberSignature Language="C#" Value="public static System.Windows.Automation.ControlType LookupById (int id);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Automation.ControlType LookupById(int32 id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.ControlType.LookupById(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="id">Der Bezeichner des Steuerelementtyps.</param>
+        <summary>Ruft ab einen <see cref="T:System.Windows.Automation.ControlType" /> , das einen angegebenen numerischen Bezeichner kapselt.</summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalerweise wird der Typ eines Steuerelements durch identifiziert eine <xref:System.Windows.Automation.ControlType> Objekt. Diese Methode können Sie ein solches Objekt erstellen, wenn Sie nur der numerische Bezeichner bekannt ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Menu">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Menu;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Menu" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Menu" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert ein Steuerelement, z. B. ein Menü der obersten Ebene in einem Anwendungsfenster an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Menü ist ein Container für eine Sammlung von Menüelementen; für die Instanz, auf das Steuerelement, das unterhalb **Datei** beim Klicken auf und enthält **neu**, **öffnen**und so weiter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MenuBar">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType MenuBar;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType MenuBar" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.MenuBar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert ein Menüleisten-Steuerelement, das in der Regel eine Reihe von Menüs der obersten Ebene enthält.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Automation.ControlType.MenuBar> -Steuerelementtyp stellt den Container für die Gruppe von Menüs der obersten Ebene einer Anwendung dar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MenuItem">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType MenuItem;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType MenuItem" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.MenuItem" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert eine MenuItem-Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Automation.ControlType.MenuItem> ist ein untergeordnetes Element von einem <xref:System.Windows.Automation.ControlType.Menu> oder <xref:System.Windows.Automation.ControlType.MenuBar> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pane">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Pane;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Pane" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Pane" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert ein Steuerelement an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Automation.ControlType.Pane> wird verwendet, um den Inhalten in einem <xref:System.Windows.Automation.ControlType.Window>. Der Benutzer navigiert in der Regel zwischen Bereichen durch Drücken von TAB, F6 oder STRG + TAB, je nach Kontext.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProgressBar">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType ProgressBar;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType ProgressBar" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.ProgressBar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert eine Statusanzeige-Steuerelement, das den Fortschritt einer längeren Operation visuell an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RadioButton">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType RadioButton;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType RadioButton" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.RadioButton" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt ein Optionsfeld-Steuerelement, das ein Auswahl Mechanismus ermöglicht genau ein ausgewähltes Element in einer Gruppe ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollBar">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType ScrollBar;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType ScrollBar" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.ScrollBar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert ein Bildlaufleisten-Steuerelement, z. B. eine Bildlaufleiste in einem Anwendungsfenster an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Automation.ControlType.ScrollBar> Steuerelementtyp "enthält eine Reihe von Schaltflächen und einem Thumb-Steuerelement, mit denen einen Benutzer mit der Maus auf den Inhalt eines Fenster- oder Containers scrollen können.  
+  
+ Verwenden der <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AutomationId%2A> Eigenschaft, um die Unterscheidung zwischen den <xref:System.Windows.Automation.ControlType.Button> Elemente, die große Inkrementierung, große Dekrementierung, kleine Inkrementierung und kleine Dekrementierung Schaltflächen entsprechen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Separator">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Separator;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Separator" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Separator" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert ein Trennzeichen, das in Steuerelementen wie Menüs und Symbolleisten eine visuelle Teilung erstellt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Slider">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Slider;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Slider" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Slider" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert ein Schiebereglersteuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Automation.ControlType.Slider> Steuerelementtyp eine Reihe von Schaltflächen zugeordneten besteht aus einer <xref:System.Windows.Automation.ControlType.Edit> Steuerelement, mit denen einen Benutzer aus einem Satz von Elementen auswählen oder einen numerischen Wert von innerhalb eines Bereichs festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Spinner">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Spinner;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Spinner" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Spinner" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert ein Drehfeldsteuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Automation.ControlType.Spinner> Steuerelementtyp besteht aus einer Reihe von Schaltflächen, mit denen einen Benutzer aus einem Satz von Elementen auswählen oder einen numerischen Wert von innerhalb eines Bereichs festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SplitButton">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType SplitButton;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType SplitButton" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.SplitButton" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert eine Trennschaltfläche eine Schaltfläche ist, die eine Standardaktion ausführt und können auch erweitern, um eine Liste mit anderen möglichen Aktionen an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StatusBar">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType StatusBar;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType StatusBar" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.StatusBar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert ein Statusleisten-Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Automation.ControlType.StatusBar>Steuerelementtypen-Steuerelementtypen sind im Allgemeinen der <xref:System.Windows.Automation.ControlType.Window> Steuerelementtyp [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Elemente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tab">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Tab;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Tab" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Tab" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert ein Registerkarten-Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Automation.ControlType.Tab> ist ein Steuerelement, das mindestens eine enthält <xref:System.Windows.Automation.ControlType.TabItem> untergeordnetes Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabItem">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType TabItem;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType TabItem" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.TabItem" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert ein Registerkartenelement-Steuerelement, das eine Seite des Registerkarten-Steuerelement darstellt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Table">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Table;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Table" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Table" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert eine Tabelle an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Automation.ControlType.Table> Steuerelementtyp ähnelt einer <xref:System.Windows.Automation.ControlType.DataGrid> , enthält jedoch nur-Text. Tabellen können auch enthalten <xref:System.Windows.Automation.ControlType.Header> Steuerelementtypen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Text;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Text" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Text" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert ein Bearbeitungssteuerelement, z. B. ein Textfeld oder eine rich-Text-Feld.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Automation.ControlType.Text> -Steuerelement kann als eigenständiges Steuerelement, z. B. verwendet werden ein <xref:System.Windows.Automation.ControlType.Edit> -Steuerelement, oder als eine Unterkomponente, z. B. den Clientbereich eine <xref:System.Windows.Automation.ControlType.ComboBox> , in denen ein Benutzer einen Wert eingeben kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Thumb">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Thumb;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Thumb" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Thumb" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet das Steuerelement in einer Bildlaufleiste, die auf eine andere Position gezogen werden kann.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Automation.ControlType.Thumb> Steuerelement dient als ein untergeordnetes Steuerelement in einem <xref:System.Windows.Automation.ControlType.ScrollBar> Steuerelementtyp. Als untergeordnetes Steuerelement einer <xref:System.Windows.Automation.ControlType.Thumb> verfügt nicht über eine <xref:System.Windows.Automation.AutomationElement.NameProperty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TitleBar">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType TitleBar;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType TitleBar" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.TitleBar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die Titelleiste in einem Fenster an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolBar">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType ToolBar;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType ToolBar" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.ToolBar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert eine Symbolleiste, z. B. das Steuerelement, das einen Satz von Befehlsschaltflächen in einem Anwendungsfenster enthält.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTip">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType ToolTip;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType ToolTip" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.ToolTip" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert eine QuickInfo-Steuerelement, ein, die als Ergebnis der Mauszeiger über ein Steuerelement oder mitunter wird beim TAB-Taste auf ein Steuerelement mithilfe der Tastatur angezeigt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tree">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Tree;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Tree" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Tree" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert ein Strukturansicht-Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Automation.ControlType.Tree> -Steuerelementtyp ist ein Container für eine hierarchische Anordnung der <xref:System.Windows.Automation.ControlType.TreeItem> oder <xref:System.Windows.Automation.ControlType.DataItem> Steuerelementtypen.  
+  
+ Jeder Knoten einer Struktur kann andere Knoten enthalten.  Ein Knoten mit untergeordneten Knoten als angezeigt werden, können erweitert oder reduziert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TreeItem">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType TreeItem;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType TreeItem" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.TreeItem" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert einen Knoten in einem <see cref="F:System.Windows.Automation.ControlType.TreeItem" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Automation.ControlType.TreeItem> -Steuerelementtyp dient nur als untergeordnetes Steuerelement von einem <xref:System.Windows.Automation.ControlType.Tree> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Window">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Window;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Window" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Window" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert einen Fensterrahmen, der untergeordnete Objekte enthält.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Immer Unterstützung von Steuerelementen dieses Typs <xref:System.Windows.Automation.WindowPattern>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

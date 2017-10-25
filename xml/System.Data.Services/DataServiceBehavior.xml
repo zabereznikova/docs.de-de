@@ -1,0 +1,118 @@
+<Type Name="DataServiceBehavior" FullName="System.Data.Services.DataServiceBehavior">
+  <TypeSignature Language="C#" Value="public sealed class DataServiceBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataServiceBehavior extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.DataServiceBehavior" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fügt Einstellungen hinzu, die das Verhalten gegenüber einem benutzerdefinierten Datendienst definieren.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AcceptCountRequests">
+      <MemberSignature Language="C#" Value="public bool AcceptCountRequests { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AcceptCountRequests" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.DataServiceBehavior.AcceptCountRequests" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, ob Anforderungen mit der <see langword="$count" /> OData-Pfadsegment oder <see langword="$inlinecount" /> Abfrageoptionen werden akzeptiert.</summary>
+        <value>
+          <see langword="true" />Wenn Count-Anforderungen unterstützt werden. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptProjectionRequests">
+      <MemberSignature Language="C#" Value="public bool AcceptProjectionRequests { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AcceptProjectionRequests" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.DataServiceBehavior.AcceptProjectionRequests" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob Projektionsanforderungen akzeptiert werden sollen.</summary>
+        <value>
+          <see langword="true" />Wenn projektionsanforderungen unterstützt werden. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Projektion Anforderungen werden mithilfe der `$select` Abfrageoption.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptReplaceFunctionInQuery">
+      <MemberSignature Language="C#" Value="public bool AcceptReplaceFunctionInQuery { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AcceptReplaceFunctionInQuery" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.DataServiceBehavior.AcceptReplaceFunctionInQuery" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Lässt Ersetzungsfunktionen in der Anforderungs-URL zu.</summary>
+        <value>Gibt <see cref="T:System.Boolean" />zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeInterceptorsOnLinkDelete">
+      <MemberSignature Language="C#" Value="public bool InvokeInterceptorsOnLinkDelete { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool InvokeInterceptorsOnLinkDelete" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.DataServiceBehavior.InvokeInterceptorsOnLinkDelete" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob Change-Interceptors aufgerufen werden, wenn ein Link gelöscht wird.</summary>
+        <value>Ein <see cref="T:System.Boolean" /> Wert, der <see langword="true" /> Wenn Interceptors werden soll, andernfalls aufgerufene <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxProtocolVersion">
+      <MemberSignature Language="C#" Value="public System.Data.Services.Common.DataServiceProtocolVersion MaxProtocolVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.Services.Common.DataServiceProtocolVersion MaxProtocolVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.DataServiceBehavior.MaxProtocolVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Common.DataServiceProtocolVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Protokollversion ab, die von der vom Datendienst gesendeten Antwort unterstützt wird, oder legt sie fest.</summary>
+        <value>Ein <see cref="T:System.Data.Services.Common.DataServiceProtocolVersion" /> also die maximale Version in die Antwort zulässig.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

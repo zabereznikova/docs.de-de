@@ -1,0 +1,2433 @@
+<Type Name="AssemblyBuilder" FullName="System.Reflection.Emit.AssemblyBuilder">
+  <TypeSignature Language="C#" Value="public sealed class AssemblyBuilder : System.Reflection.Assembly, System.Runtime.InteropServices._AssemblyBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit AssemblyBuilder extends System.Reflection.Assembly implements class System.Runtime.InteropServices._AssemblyBuilder" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.Emit.AssemblyBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection.Emit</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Reflection.Assembly</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.InteropServices._AssemblyBuilder</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComDefaultInterface(typeof(System.Runtime.InteropServices._AssemblyBuilder))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert eine dynamische Assembly und stellt diese dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine dynamische Assembly handelt es sich um eine Assembly, die mit der Reflektionsausgabe Reflektions-APIs erstellt wird. Die dynamische Module in der Assembly werden gespeichert, wenn die dynamische Assembly gespeichert ist, mit der <xref:System.Reflection.Emit.AssemblyBuilder.Save%2A> Methode. Zum Generieren einer ausführbaren Datei der <xref:System.Reflection.Emit.AssemblyBuilder.SetEntryPoint%2A> Methode muss aufgerufen werden, um die Methode zu identifizieren, die den Einstiegspunkt der Assembly darstellt. Assemblys werden als DLLs werden standardmäßig gespeichert, es sei denn, die <xref:System.Reflection.Emit.AssemblyBuilder.SetEntryPoint%2A> -Methode fordert die Generierung von einer Konsolenanwendung oder eine Windows-basierte Anwendung.  
+  
+ Wenn eine dynamische Assembly mehr als ein dynamisches Modul enthält, den Namen der Assembly Manifestdatei übereinstimmen, den Modulnamen, die als erstes Argument angegeben ist die <xref:System.Reflection.Emit.AssemblyBuilder.DefineDynamicModule%2A> Methode.  
+  
+ Einige Methoden auf der Basis <xref:System.Reflection.Assembly> Klasse, z. B. `GetModules` und `GetLoadedModules`, funktionieren nicht ordnungsgemäß, beim Aufrufen durch <xref:System.Reflection.Emit.AssemblyBuilder> Objekte. Sie können das definierte dynamische Assembly zu laden und rufen die Methoden für die geladene Assembly. Aufrufen, um sicherzustellen, dass Ressourcenmodule in der zurückgegebenen Liste der Module enthalten sind, z. B. `GetModules` auf das geladene <xref:System.Reflection.Assembly> Objekt.  
+  
+ Das Signieren von eine dynamische Assembly mit <xref:System.Reflection.AssemblyName.KeyPair%2A> ist nicht wirksam, bis die Assembly gespeichert ist auf dem Datenträger. Starke Namen funktioniert daher nicht mit flüchtige dynamische Assemblys.  
+  
+ Zum Abrufen einer <xref:System.Reflection.Emit.AssemblyBuilder> -Objekts die <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType> Methode.  
+  
+## <a name="reflection-emit-dynamic-assembly-scenarios"></a>Dynamische Assembly Szenarien für die Reflektionsausgabe  
+ Im folgenden sind einige Punkte zu berücksichtigen, bei Verwendung der <xref:System.Reflection.Emit.AssemblyBuilder> Klasse zum Erstellen von dynamischen Assemblys.  
+  
+### <a name="dynamic-modules"></a>Dynamische Module  
+ Reflektionsausgabe unterstützt die Erstellung von dynamischen Modulen, die in dynamischen Assemblys definiert. Ein dynamisches Modul in eine dynamische Assembly erstellt kann vorübergehend oder dauerhaft sein.  
+  
+### <a name="restrictions-on-type-references"></a>Einschränkungen für Typverweisen  
+ Assemblys können in einer anderen Assembly definierte Typen verweisen. Eine flüchtige dynamische Assembly kann problemlos in eine andere flüchtige dynamische Assembly, eine dauerhafte dynamische Assembly oder eine statische Assembly definierte Typen verweisen. Die common Language Runtime lässt jedoch kein dauerhaftes dynamisches Modul, um auf einen Typ in ein flüchtiges dynamisches Modul zu verweisen. Dies liegt daran Wenn das dynamische Modul geladen wird, nachdem gespeichert wird, auf den Datenträger, die Common Language Runtime die Verweise auf Typen, die in der flüchtiges dynamisches Modul definierten auflösen kann.  
+  
+### <a name="restrictions-on-emitting-to-remote-application-domains"></a>Einschränkungen für das Ausgeben von remote-Anwendungsdomänen  
+ In einigen Szenarien müssen eine dynamische Assembly erstellt und in einer Remoteanwendung-Domäne ausgeführt werden. Reflektionsausgabe lässt sich nicht auf eine dynamische Assembly, die direkt an eine Remoteanwendungsdomäne ausgegeben werden. Die Lösung besteht darin, die dynamische Assembly in der aktuellen Anwendungsdomäne ausgeben, die ausgegebene dynamische Assembly auf den Datenträger zu speichern und Laden Sie die dynamische Assembly in die Anwendungsdomäne für die remote.  
+  
+### <a name="dynamic-assembly-access-modes"></a>Zugriffsmodi für die dynamische assembly  
+ Dynamische Assemblys können mit einer der folgenden Zugriffsmodi erstellt werden:  
+  
+-   <xref:System.Reflection.Emit.AssemblyBuilderAccess?displayProperty=nameWithType>  
+  
+     Die dynamische Assembly, dargestellt durch eine <xref:System.Reflection.Emit.AssemblyBuilder> Objekt ist vorübergehend. Die dynamische Assembly kann nur verwendet werden, um den ausgegebenen Code auszuführen.  
+  
+-   <xref:System.Reflection.Emit.AssemblyBuilderAccess?displayProperty=nameWithType>  
+  
+     Die dynamische Assembly, dargestellt durch eine <xref:System.Reflection.Emit.AssemblyBuilder> Objekt beibehalten wird, aber kann nicht ausgeführt werden, bis die gespeicherte PE (portable Executable)-Datei von der Festplatte geladen wurde.  
+  
+-   <xref:System.Reflection.Emit.AssemblyBuilderAccess?displayProperty=nameWithType>  
+  
+     Die dynamische Assembly, dargestellt durch eine <xref:System.Reflection.Emit.AssemblyBuilder> Objekt beibehalten wird, jedoch können auch ausgeführt werden, vor und/oder nach dem Speichern der Assembly auf dem Datenträger.  
+  
+ Der Zugriffsmodus muss angegeben werden, indem die entsprechende <xref:System.Reflection.Emit.AssemblyBuilderAccess> Wert im Aufruf der <xref:System.Reflection.Emit.AssemblyBuilder.DefineDynamicAssembly%2A?displayProperty=nameWithType> Methode, wenn die dynamische Assembly definiert ist, und später nicht geändert werden kann. Die Common Language Runtime verwendet den Zugriffsmodus einer dynamischen Assembly zum internen Darstellung für die Assembly zu optimieren.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine dynamische Assembly mit einem Modul definiert. Das Modul in der Beispielassembly enthält einen Typ `MyDynamicType`, verfügt über ein privates Feld, eine Eigenschaft, die ermittelt und definiert das private Feld, Konstruktoren, die das private Feld zu initialisieren und eine Methode, die eine vom Benutzer angegebene Zahl von privaten Feld multipliziert. Wert und gibt das Ergebnis zurück.  
+  
+ <xref:System.Reflection.Emit.AssemblyBuilderAccess?displayProperty=nameWithType>wird angegeben, wenn die Assembly erstellt wird. Der Assemblycode wird sofort verwendet werden soll, und die Assembly wird auch gespeichert, damit es mit geprüft werden auf den Datenträger [Ildasm.exe (IL-Disassembler)](~/docs/framework/tools/ildasm-exe-il-disassembler.md) oder in einem anderen Programm verwendet.  
+  
+ [!code-cpp[AssemblyBuilderClass#1](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyBuilderClass/cpp/24895.cpp#1)]
+ [!code-csharp[AssemblyBuilderClass#1](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyBuilderClass/cs/24895.cs#1)]
+ [!code-vb[AssemblyBuilderClass#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyBuilderClass/vb/24895.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssemblyBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddResourceFile">
+      <MemberSignature Language="C#" Value="public void AddResourceFile (string name, string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddResourceFile(string name, string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.AddResourceFile(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der logische Name der Ressource.</param>
+        <param name="fileName">Der Name der physischen Datei (RESOURCES-Datei), der der logische Name zugeordnet ist. Der Name darf keinen Pfad enthalten. Die Datei muss sich im selben Verzeichnis wie die Assembly befinden, der sie hinzugefügt wird.</param>
+        <summary>Fügt dieser Assembly eine vorhandene Ressourcendatei hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `fileName`nicht darf identisch, die von einem beliebigen anderen permanenten Modul, eigenständige verwaltete Ressource oder das eigenständige Manifestdatei sein werden.  
+  
+ Es wird angenommen, dass die verwalteten Ressourcen in der Datei öffentlich sein.  
+  
+ Die angegebene Ressourcendatei muss sich im Verzeichnis, in dem die Assembly gespeichert wird.  
+  
+> [!NOTE]
+>  Beginnend mit der [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], diese Member nicht mehr benötigt <xref:System.Security.Permissions.ReflectionPermission> mit der <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> Flag. (Siehe [Sicherheitsaspekte bei der Reflektionsausgabe](~/docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md).) Zur Verwendung dieser Funktionen sollte die Anwendung für [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] oder höher ausgelegt sein.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine dynamisch erstellte Assembly, die mit einer Ressourcendatei an `AddResourceFile`.  
+  
+ [!code-cpp[System.Reflection.Emit.AssemblyBuilder.AddResourceFile Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Reflection.Emit.AssemblyBuilder.AddResourceFile Example/CPP/source.cpp#1)]
+ [!code-csharp[System.Reflection.Emit.AssemblyBuilder.AddResourceFile Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Reflection.Emit.AssemblyBuilder.AddResourceFile Example/CS/source.cs#1)]
+ [!code-vb[System.Reflection.Emit.AssemblyBuilder.AddResourceFile Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Reflection.Emit.AssemblyBuilder.AddResourceFile Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> wurde bereits zuvor definiert.  
+  
+ - oder -   
+  
+ In der Assembly ist eine andere Datei mit dem Namen <paramref name="fileName" /> vorhanden.  
+  
+ - oder -   
+  
+ Die Länge von <paramref name="name" /> ist 0 (null).  
+  
+ - oder -   
+  
+ Die Länge von <paramref name="fileName" /> ist null, oder wenn <paramref name="fileName" /> einen Pfad enthält.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> oder <paramref name="fileName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Die Datei <paramref name="fileName" /> wird nicht gefunden.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Die FileIOPermissionAccess.Read-Berechtigung ist erforderlich, um die Ressourcendatei zugreifen <paramref name="resourceFileName" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="AddResourceFile">
+      <MemberSignature Language="C#" Value="public void AddResourceFile (string name, string fileName, System.Reflection.ResourceAttributes attribute);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddResourceFile(string name, string fileName, valuetype System.Reflection.ResourceAttributes attribute) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.AddResourceFile(System.String,System.String,System.Reflection.ResourceAttributes)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="attribute" Type="System.Reflection.ResourceAttributes" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der logische Name der Ressource.</param>
+        <param name="fileName">Der Name der physischen Datei (RESOURCES-Datei), der der logische Name zugeordnet ist. Der Name sollte keinen Pfad enthalten. Die Datei muss sich im selben Verzeichnis wie die Assembly befinden, der sie hinzugefügt wird.</param>
+        <param name="attribute">Die Ressourcenattribute.</param>
+        <summary>Fügt dieser Assembly eine vorhandene Ressourcendatei hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `fileName`nicht darf identisch, die von einem beliebigen anderen permanenten Modul, eigenständige verwaltete Ressource oder das eigenständige Manifestdatei sein werden.  
+  
+ Für die verwaltete Ressource können Attribute angegeben werden.  
+  
+ Die angegebene Ressourcendatei muss sich im Verzeichnis, in dem die Assembly gespeichert wird.  
+  
+> [!NOTE]
+>  Beginnend mit der [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], diese Member nicht mehr benötigt <xref:System.Security.Permissions.ReflectionPermission> mit der <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> Flag. (Siehe [Sicherheitsaspekte bei der Reflektionsausgabe](~/docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md).) Zur Verwendung dieser Funktionen sollte die Anwendung für [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] oder höher ausgelegt sein.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine dynamisch erstellte Assembly, die mit einer Ressourcendatei an `AddResourceFile`.  
+  
+ [!code-cpp[System.Reflection.Emit.AssemblyBuilder.AddResourceFile Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Reflection.Emit.AssemblyBuilder.AddResourceFile Example/CPP/source.cpp#1)]
+ [!code-csharp[System.Reflection.Emit.AssemblyBuilder.AddResourceFile Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Reflection.Emit.AssemblyBuilder.AddResourceFile Example/CS/source.cs#1)]
+ [!code-vb[System.Reflection.Emit.AssemblyBuilder.AddResourceFile Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Reflection.Emit.AssemblyBuilder.AddResourceFile Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> wurde bereits zuvor definiert.  
+  
+ - oder -   
+  
+ In der Assembly ist eine andere Datei mit dem Namen <paramref name="fileName" /> vorhanden.  
+  
+ - oder -   
+  
+ Die Länge des <paramref name="name" /> 0 (null) oder wenn die Länge des <paramref name="fileName" /> 0 (null).  
+  
+ - oder -   
+  
+ <paramref name="fileName" /> enthält einen Pfad.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> oder <paramref name="fileName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Wenn die Datei <paramref name="fileName" /> wurde nicht gefunden.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Die FileIOPermissionAccess.Read-Berechtigung ist erforderlich, um die Ressourcendatei zugreifen <paramref name="resourceFileName" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CodeBase">
+      <MemberSignature Language="C#" Value="public override string CodeBase { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CodeBase" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.AssemblyBuilder.CodeBase" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den ursprünglich angegebenen Speicherort der Assembly ab (z. B. in einem <see cref="T:System.Reflection.AssemblyName" />-Objekt).</summary>
+        <value>Der Speicherort der Assembly, der ursprünglich angegeben wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie zum Abrufen des absoluten Pfads der geladenen Datei Manifest enthält die <xref:System.Reflection.Assembly.Location%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird zurzeit nicht unterstützt.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DefinedTypes">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IEnumerable&lt;System.Reflection.TypeInfo&gt; DefinedTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class System.Reflection.TypeInfo&gt; DefinedTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.AssemblyBuilder.DefinedTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Reflection.TypeInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineDynamicAssembly">
+      <MemberSignature Language="C#" Value="public static System.Reflection.Emit.AssemblyBuilder DefineDynamicAssembly (System.Reflection.AssemblyName name, System.Reflection.Emit.AssemblyBuilderAccess access);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Reflection.Emit.AssemblyBuilder DefineDynamicAssembly(class System.Reflection.AssemblyName name, valuetype System.Reflection.Emit.AssemblyBuilderAccess access) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Reflection.Emit.AssemblyBuilderAccess)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.AssemblyBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.Reflection.AssemblyName" />
+        <Parameter Name="access" Type="System.Reflection.Emit.AssemblyBuilderAccess" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Assembly.</param>
+        <param name="access">Die Zugriffsrechte der Assembly.</param>
+        <summary>Definiert eine dynamische Assembly mit dem angegebenen Namen und den angegebenen Zugriffsrechten.</summary>
+        <returns>Ein Objekt, das die neue Assembly darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineDynamicAssembly">
+      <MemberSignature Language="C#" Value="public static System.Reflection.Emit.AssemblyBuilder DefineDynamicAssembly (System.Reflection.AssemblyName name, System.Reflection.Emit.AssemblyBuilderAccess access, System.Collections.Generic.IEnumerable&lt;System.Reflection.Emit.CustomAttributeBuilder&gt; assemblyAttributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Reflection.Emit.AssemblyBuilder DefineDynamicAssembly(class System.Reflection.AssemblyName name, valuetype System.Reflection.Emit.AssemblyBuilderAccess access, class System.Collections.Generic.IEnumerable`1&lt;class System.Reflection.Emit.CustomAttributeBuilder&gt; assemblyAttributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.DefineDynamicAssembly(System.Reflection.AssemblyName,System.Reflection.Emit.AssemblyBuilderAccess,System.Collections.Generic.IEnumerable{System.Reflection.Emit.CustomAttributeBuilder})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.AssemblyBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.Reflection.AssemblyName" />
+        <Parameter Name="access" Type="System.Reflection.Emit.AssemblyBuilderAccess" />
+        <Parameter Name="assemblyAttributes" Type="System.Collections.Generic.IEnumerable&lt;System.Reflection.Emit.CustomAttributeBuilder&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Assembly.</param>
+        <param name="access">Die Zugriffsrechte der Assembly.</param>
+        <param name="assemblyAttributes">Eine Auflistung, die die Attribute der Assembly enthält.</param>
+        <summary>Definiert eine neue Assembly mit dem angegebenen Namen sowie den angegebenen Zugriffsrechten und Attributen.</summary>
+        <returns>Ein Objekt, das die neue Assembly darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineDynamicModule">
+      <MemberSignature Language="C#" Value="public System.Reflection.Emit.ModuleBuilder DefineDynamicModule (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Reflection.Emit.ModuleBuilder DefineDynamicModule(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.DefineDynamicModule(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.ModuleBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des dynamischen Moduls. Muss kürzer als 260 Zeichen sein.</param>
+        <summary>Definiert ein benanntes flüchtiges dynamisches Modul in dieser Assembly.</summary>
+        <returns>Ein <see cref="T:System.Reflection.Emit.ModuleBuilder" />, das das definierte dynamische Modul darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist ein Fehler auf mehrere dynamische Modulen mit demselben Namen in einer Assembly zu definieren.  
+  
+ Das definierte dynamische Modul ist vorübergehend. Das dynamische Modul wird nicht gespeichert, auch wenn die übergeordnete dynamische Assembly mit erstellte <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave>.  
+  
+> [!NOTE]
+>  Um die Optimierungen beim Debuggen von dynamischer Modules zu unterdrücken, gelten die <xref:System.Diagnostics.DebuggableAttribute> -Attribut auf die dynamische Assembly vor dem Aufruf <xref:System.Reflection.Emit.AssemblyBuilder.DefineDynamicModule%2A>. Erstellen Sie eine Instanz des <xref:System.Diagnostics.DebuggableAttribute> mit der <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes.DisableOptimizations> kennzeichnen und wenden Sie sie mithilfe der <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A> Methode. Das Attribut muss auf die dynamische Assembly angewendet werden. Sie hat keine Auswirkungen, wenn auf das Modul angewendet.  
+  
+> [!NOTE]
+>  Beginnend mit der [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], diese Member nicht mehr benötigt <xref:System.Security.Permissions.ReflectionPermission> mit der <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> Flag. (Siehe [Sicherheitsaspekte bei der Reflektionsausgabe](~/docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md).) Zur Verwendung dieser Funktionen sollte die Anwendung für [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] oder höher ausgelegt sein.  
+  
+   
+  
+## Examples  
+ [Visual Basic, c#]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein flüchtiges dynamisches Modul erstellt `DefineDynamicModule`.  
+  
+ [!code-cpp[System.Reflection.Emit.AssemblyBuilder.DefineDynamicModule Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Reflection.Emit.AssemblyBuilder.DefineDynamicModule Example/CPP/source.cpp#1)]
+ [!code-csharp[System.Reflection.Emit.AssemblyBuilder.DefineDynamicModule Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Reflection.Emit.AssemblyBuilder.DefineDynamicModule Example/CS/source.cs#1)]
+ [!code-vb[System.Reflection.Emit.AssemblyBuilder.DefineDynamicModule Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Reflection.Emit.AssemblyBuilder.DefineDynamicModule Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> beginnt mit einem Leerzeichen.  
+  
+ - oder -   
+  
+ Die Länge von <paramref name="name" /> ist 0 (null).  
+  
+ - oder -   
+  
+ Die Länge von <paramref name="name" /> größer gleich 260.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <exception cref="T:System.ExecutionEngineException">Die Assembly für den Standardsymbolwriter kann nicht geladen werden.  
+  
+ - oder -   
+  
+ Der Typ, der die Schnittstelle des Standardsymbolwriters implementiert, wurde nicht gefunden.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineDynamicModule">
+      <MemberSignature Language="C#" Value="public System.Reflection.Emit.ModuleBuilder DefineDynamicModule (string name, bool emitSymbolInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Reflection.Emit.ModuleBuilder DefineDynamicModule(string name, bool emitSymbolInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.DefineDynamicModule(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.ModuleBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="emitSymbolInfo" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des dynamischen Moduls. Muss kürzer als 260 Zeichen sein.</param>
+        <param name="emitSymbolInfo">
+          <see langword="true" />, wenn Symbolinformationen ausgegeben werden sollen, andernfalls <see langword="false" />.</param>
+        <summary>Definiert ein benanntes flüchtiges dynamisches Modul in dieser Assembly und gibt an, ob Symbolinformationen ausgegeben werden sollen.</summary>
+        <returns>Ein <see cref="T:System.Reflection.Emit.ModuleBuilder" />, das das definierte dynamische Modul darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist ein Fehler auf mehrere dynamische Modulen mit demselben Namen in einer Assembly zu definieren.  
+  
+ Das dynamische Modul wird nicht gespeichert, auch wenn die übergeordnete dynamische Assembly mit erstellte <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave>.  
+  
+> [!NOTE]
+>  Um die Optimierungen beim Debuggen von dynamischer Modules zu unterdrücken, gelten die <xref:System.Diagnostics.DebuggableAttribute> -Attribut auf die dynamische Assembly vor dem Aufruf <xref:System.Reflection.Emit.AssemblyBuilder.DefineDynamicModule%2A>. Erstellen Sie eine Instanz des <xref:System.Diagnostics.DebuggableAttribute> mit der <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes.DisableOptimizations> kennzeichnen und wenden Sie sie mithilfe der <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A> Methode. Das Attribut muss auf die dynamische Assembly angewendet werden. Sie hat keine Auswirkungen, wenn auf das Modul angewendet.  
+  
+> [!NOTE]
+>  Beginnend mit der [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], diese Member nicht mehr benötigt <xref:System.Security.Permissions.ReflectionPermission> mit der <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> Flag. (Siehe [Sicherheitsaspekte bei der Reflektionsausgabe](~/docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md).) Zur Verwendung dieser Funktionen sollte die Anwendung für [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] oder höher ausgelegt sein.  
+  
+   
+  
+## Examples  
+ [Visual Basic, c#]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein flüchtiges dynamisches Modul erstellt `DefineDynamicModule`, Symbolinformationen unterdrücken.  
+  
+ [!code-cpp[System.Reflection.Emit.AssemblyBuilder.DefineDynamicModule Example#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Reflection.Emit.AssemblyBuilder.DefineDynamicModule Example/CPP/source.cpp#2)]
+ [!code-csharp[System.Reflection.Emit.AssemblyBuilder.DefineDynamicModule Example#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Reflection.Emit.AssemblyBuilder.DefineDynamicModule Example/CS/source.cs#2)]
+ [!code-vb[System.Reflection.Emit.AssemblyBuilder.DefineDynamicModule Example#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Reflection.Emit.AssemblyBuilder.DefineDynamicModule Example/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> beginnt mit einem Leerzeichen.  
+  
+ - oder -   
+  
+ Die Länge von <paramref name="name" /> ist 0 (null).  
+  
+ - oder -   
+  
+ Die Länge von <paramref name="name" /> größer gleich 260.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ExecutionEngineException">Die Assembly für den Standardsymbolwriter kann nicht geladen werden.  
+  
+ - oder -   
+  
+ Der Typ, der die Schnittstelle des Symbolwriters implementiert, wurde nicht gefunden.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineDynamicModule">
+      <MemberSignature Language="C#" Value="public System.Reflection.Emit.ModuleBuilder DefineDynamicModule (string name, string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Reflection.Emit.ModuleBuilder DefineDynamicModule(string name, string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.DefineDynamicModule(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.ModuleBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des dynamischen Moduls. Muss kürzer als 260 Zeichen sein.</param>
+        <param name="fileName">Der Name der Datei, in der das dynamische Modul gespeichert werden soll.</param>
+        <summary>Definiert ein dauerhaftes dynamisches Modul mit dem angegebenen Namen, das in der angegebenen Datei gespeichert wird. Es werden keine Symbolinformationen ausgegeben.</summary>
+        <returns>Ein <see cref="T:System.Reflection.Emit.ModuleBuilder" />-Objekt, das das definierte dynamische Modul darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um ein dauerhaftes dynamisches Modul zu definieren, dieser Assembly erstellt werden, muss die <xref:System.Reflection.Emit.AssemblyBuilderAccess.Save> oder <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave> Attribut.  
+  
+ Gegebenenfalls das Modul enthält das Assemblymanifest, `name` sollte den Namen der Assembly identisch sein (, also der <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> Eigenschaft von der <xref:System.Reflection.AssemblyName> verwendet, um die dynamische Assembly erstellen) und `fileName` sollten identisch sein der Dateiname, die Sie angeben, wenn Sie die Assembly speichern.  
+  
+ In einer Assembly mit nur ein Modul sollte dieses Modul das Assemblymanifest enthalten.  
+  
+> [!NOTE]
+>  Um die Optimierungen beim Debuggen von dynamischer Modules zu unterdrücken, gelten die <xref:System.Diagnostics.DebuggableAttribute> -Attribut auf die dynamische Assembly vor dem Aufruf <xref:System.Reflection.Emit.AssemblyBuilder.DefineDynamicModule%2A>. Erstellen Sie eine Instanz des <xref:System.Diagnostics.DebuggableAttribute> mit der <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes.DisableOptimizations> kennzeichnen und wenden Sie sie mithilfe der <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A> Methode. Das Attribut muss auf die dynamische Assembly angewendet werden. Sie hat keine Auswirkungen, wenn auf das Modul angewendet.  
+  
+> [!NOTE]
+>  Beginnend mit der [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], diese Member nicht mehr benötigt <xref:System.Security.Permissions.ReflectionPermission> mit der <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> Flag. (Siehe [Sicherheitsaspekte bei der Reflektionsausgabe](~/docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md).) Zur Verwendung dieser Funktionen sollte die Anwendung für [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] oder höher ausgelegt sein.  
+  
+   
+  
+## Examples  
+ [Visual Basic, c#]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein persistentes dynamisches Modul erstellt `DefineDynamicModule`.  
+  
+ [!code-cpp[System.Reflection.Emit.AssemblyBuilder.DefineDynamicModule Example#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Reflection.Emit.AssemblyBuilder.DefineDynamicModule Example/CPP/source.cpp#3)]
+ [!code-csharp[System.Reflection.Emit.AssemblyBuilder.DefineDynamicModule Example#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Reflection.Emit.AssemblyBuilder.DefineDynamicModule Example/CS/source.cs#3)]
+ [!code-vb[System.Reflection.Emit.AssemblyBuilder.DefineDynamicModule Example#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Reflection.Emit.AssemblyBuilder.DefineDynamicModule Example/VB/source.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> oder <paramref name="fileName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die Länge von <paramref name="name" /> oder <paramref name="fileName" /> ist 0 (null).  
+  
+ - oder -   
+  
+ Die Länge von <paramref name="name" /> ist größer oder gleich 260.  
+  
+ - oder -   
+  
+ <paramref name="fileName" /> enthält eine Pfadangabe (z. B. eine Verzeichniskomponente).  
+  
+ - oder -   
+  
+ Es liegt ein Konflikt mit dem Namen einer anderen Datei vor, die zu dieser Assembly gehört.</exception>
+        <exception cref="T:System.InvalidOperationException">Diese Assembly wurde bereits gespeichert.</exception>
+        <exception cref="T:System.NotSupportedException">Diese Assembly wurde für eine dynamische Assembly mit <see cref="F:System.Reflection.Emit.AssemblyBuilderAccess.Run" />-Attribut aufgerufen.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <exception cref="T:System.ExecutionEngineException">Die Assembly für den Standardsymbolwriter kann nicht geladen werden.  
+  
+ - oder -   
+  
+ Der Typ, der die Schnittstelle des Standardsymbolwriters implementiert, wurde nicht gefunden.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Schreiben Sie = "true" oder angefügt werden = "true" ist erforderlich, um das Modul zu speichern.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineDynamicModule">
+      <MemberSignature Language="C#" Value="public System.Reflection.Emit.ModuleBuilder DefineDynamicModule (string name, string fileName, bool emitSymbolInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Reflection.Emit.ModuleBuilder DefineDynamicModule(string name, string fileName, bool emitSymbolInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.DefineDynamicModule(System.String,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.ModuleBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="emitSymbolInfo" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des dynamischen Moduls. Muss kürzer als 260 Zeichen sein.</param>
+        <param name="fileName">Der Name der Datei, in der das dynamische Modul gespeichert werden soll.</param>
+        <param name="emitSymbolInfo">Bei <see langword="true" /> werden Symbolinformationen mithilfe des Standardsymbolwriters geschrieben.</param>
+        <summary>Definiert ein dauerhaftes dynamisches Modul, legt den Modulnamen und den Namen der Datei fest, in der das Modul gespeichert werden soll, und gibt an, ob Symbolinformationen mithilfe des Standardsymbolwriters ausgegeben werden sollen.</summary>
+        <returns>Ein <see cref="T:System.Reflection.Emit.ModuleBuilder" />-Objekt, das das definierte dynamische Modul darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um ein dauerhaftes dynamisches Modul zu definieren, dieser Assembly erstellt werden, muss die <xref:System.Reflection.Emit.AssemblyBuilderAccess.Save> oder <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave> Attribut.  
+  
+ Gegebenenfalls das Modul enthält das Assemblymanifest, `name` sollte den Namen der Assembly identisch sein (, also der <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> Eigenschaft von der <xref:System.Reflection.AssemblyName> verwendet, um die dynamische Assembly erstellen) und `fileName` sollten identisch sein der Dateiname, die Sie angeben, wenn Sie die Assembly speichern.  
+  
+ In einer Assembly mit nur ein Modul sollte dieses Modul das Assemblymanifest enthalten.  
+  
+> [!NOTE]
+>  Um die Optimierungen beim Debuggen von dynamischer Modules zu unterdrücken, gelten die <xref:System.Diagnostics.DebuggableAttribute> -Attribut auf die dynamische Assembly vor dem Aufruf <xref:System.Reflection.Emit.AssemblyBuilder.DefineDynamicModule%2A>. Erstellen Sie eine Instanz des <xref:System.Diagnostics.DebuggableAttribute> mit der <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes.DisableOptimizations> kennzeichnen und wenden Sie sie mithilfe der <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A> Methode. Das Attribut muss auf die dynamische Assembly angewendet werden. Sie hat keine Auswirkungen, wenn auf das Modul angewendet.  
+  
+> [!NOTE]
+>  Beginnend mit der [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], diese Member nicht mehr benötigt <xref:System.Security.Permissions.ReflectionPermission> mit der <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> Flag. (Siehe [Sicherheitsaspekte bei der Reflektionsausgabe](~/docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md).) Zur Verwendung dieser Funktionen sollte die Anwendung für [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] oder höher ausgelegt sein.  
+  
+   
+  
+## Examples  
+ [Visual Basic, c#]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein persistentes dynamisches Modul mit Symbol prädikatauswertung erstellen `DefineDynamicModule`.  
+  
+ [!code-cpp[System.Reflection.Emit.AssemblyBuilder.DefineDynamicModule Example#4](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Reflection.Emit.AssemblyBuilder.DefineDynamicModule Example/CPP/source.cpp#4)]
+ [!code-csharp[System.Reflection.Emit.AssemblyBuilder.DefineDynamicModule Example#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Reflection.Emit.AssemblyBuilder.DefineDynamicModule Example/CS/source.cs#4)]
+ [!code-vb[System.Reflection.Emit.AssemblyBuilder.DefineDynamicModule Example#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Reflection.Emit.AssemblyBuilder.DefineDynamicModule Example/VB/source.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> oder <paramref name="fileName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die Länge von <paramref name="name" /> oder <paramref name="fileName" /> ist 0 (null).  
+  
+ - oder -   
+  
+ Die Länge von <paramref name="name" /> ist größer oder gleich 260.  
+  
+ - oder -   
+  
+ <paramref name="fileName" /> enthält eine Pfadangabe (z. B. eine Verzeichniskomponente).  
+  
+ - oder -   
+  
+ Es liegt ein Konflikt mit dem Namen einer anderen Datei vor, die zu dieser Assembly gehört.</exception>
+        <exception cref="T:System.InvalidOperationException">Diese Assembly wurde bereits gespeichert.</exception>
+        <exception cref="T:System.NotSupportedException">Diese Assembly wurde für eine dynamische Assembly mit dem <see cref="F:System.Reflection.Emit.AssemblyBuilderAccess.Run" />-Attribut aufgerufen.</exception>
+        <exception cref="T:System.ExecutionEngineException">Die Assembly für den Standardsymbolwriter kann nicht geladen werden.  
+  
+ - oder -   
+  
+ Der Typ, der die Schnittstelle des Symbolwriters implementiert, wurde nicht gefunden.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Schreiben Sie = "true" oder angefügt werden = "true" ist erforderlich, um dieses Modul zu speichern.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineResource">
+      <MemberSignature Language="C#" Value="public System.Resources.IResourceWriter DefineResource (string name, string description, string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Resources.IResourceWriter DefineResource(string name, string description, string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.DefineResource(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Resources.IResourceWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="description" Type="System.String" />
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der logische Name der Ressource.</param>
+        <param name="description">Eine Textbeschreibung der Ressource.</param>
+        <param name="fileName">Der Name der physischen Datei (RESOURCES-Datei), der der logische Name zugeordnet ist. Dieser darf keinen Pfad enthalten.</param>
+        <summary>Definiert eine eigenständige verwaltete Ressource mit dem Standardattribut für öffentliche Ressourcen für diese Assembly.</summary>
+        <returns>Ein <see cref="T:System.Resources.ResourceWriter" />-Objekt für die angegebene Ressource.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ressourcen detailliert hinzugefügt werden können mit dem zurückgegebenen <xref:System.Resources.ResourceWriter> durch Aufrufen von <xref:System.Resources.ResourceWriter.AddResource%2A>.  
+  
+ `fileName`nicht darf identisch, die von einem beliebigen anderen permanenten Modul, eigenständige verwaltete Ressource oder die eigenständige Manifestdatei sein werden.  
+  
+ Ruft die Laufzeit die <xref:System.Resources.ResourceWriter.Close%2A> Methode, wenn die dynamische Assembly gespeichert ist.  
+  
+> [!NOTE]
+>  Beginnend mit der [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], diese Member nicht mehr benötigt <xref:System.Security.Permissions.ReflectionPermission> mit der <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> Flag. (Siehe [Sicherheitsaspekte bei der Reflektionsausgabe](~/docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md).) Zur Verwendung dieser Funktionen sollte die Anwendung für [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] oder höher ausgelegt sein.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Reflection.Emit.AssemblyBuilder.DefineResource%2A> Methode, um eine Ressourcenwriters abzurufen. Das Beispiel verwendet die Ressourcenwriters drei Ressourcenzeichenfolgen hinzuzufügen.  
+  
+ [!code-cpp[AssemblyBuilder.DefineResource Example 2#1](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyBuilder.DefineResource Example 2/CPP/assemblybuilder_defineresource.cpp#1)]
+ [!code-csharp[AssemblyBuilder.DefineResource Example 2#1](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyBuilder.DefineResource Example 2/CS/assemblybuilder_defineresource.cs#1)]
+ [!code-vb[AssemblyBuilder.DefineResource Example 2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyBuilder.DefineResource Example 2/VB/assemblybuilder_defineresource.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> wurde bereits zuvor definiert.  
+  
+ - oder -   
+  
+ In der Assembly ist eine andere Datei mit dem Namen <paramref name="fileName" /> vorhanden.  
+  
+ - oder -   
+  
+ Die Länge von <paramref name="name" /> ist 0 (null).  
+  
+ - oder -   
+  
+ Die Länge von <paramref name="fileName" /> ist 0 (null).  
+  
+ - oder -   
+  
+ <paramref name="fileName" /> enthält einen Pfad.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> oder <paramref name="fileName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Schreiben Sie = "true" oder Anfügen = "true"</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineResource">
+      <MemberSignature Language="C#" Value="public System.Resources.IResourceWriter DefineResource (string name, string description, string fileName, System.Reflection.ResourceAttributes attribute);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Resources.IResourceWriter DefineResource(string name, string description, string fileName, valuetype System.Reflection.ResourceAttributes attribute) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.DefineResource(System.String,System.String,System.String,System.Reflection.ResourceAttributes)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Resources.IResourceWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="description" Type="System.String" />
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="attribute" Type="System.Reflection.ResourceAttributes" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der logische Name der Ressource.</param>
+        <param name="description">Eine Textbeschreibung der Ressource.</param>
+        <param name="fileName">Der Name der physischen Datei (RESOURCES-Datei), der der logische Name zugeordnet ist. Dieser darf keinen Pfad enthalten.</param>
+        <param name="attribute">Die Ressourcenattribute.</param>
+        <summary>Definiert eine eigenständige verwaltete Ressource für diese Assembly. Für die verwaltete Ressource können Attribute angegeben werden.</summary>
+        <returns>Ein <see cref="T:System.Resources.ResourceWriter" />-Objekt für die angegebene Ressource.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Differenzierte Ressourcen hinzugefügt werden können mit dem zurückgegebenen <xref:System.Resources.ResourceWriter> durch Aufrufen von <xref:System.Resources.ResourceWriter.AddResource%2A>.  
+  
+ `fileName`nicht darf identisch, die von einem beliebigen anderen permanenten Modul, eigenständige verwaltete Ressource oder das eigenständige Manifestdatei sein werden.  
+  
+ Ruft die Laufzeit die <xref:System.Resources.ResourceWriter.Close%2A> Methode, wenn die dynamische Assembly gespeichert ist.  
+  
+> [!NOTE]
+>  Beginnend mit der [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], diese Member nicht mehr benötigt <xref:System.Security.Permissions.ReflectionPermission> mit der <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> Flag. (Siehe [Sicherheitsaspekte bei der Reflektionsausgabe](~/docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md).) Zur Verwendung dieser Funktionen sollte die Anwendung für [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] oder höher ausgelegt sein.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> wurde zuvor definiert, oder wenn es eine andere Datei in der Assembly mit dem Namen <paramref name="fileName" /> gibt.  
+  
+ - oder -   
+  
+ Die Länge von <paramref name="name" /> ist 0 (null).  
+  
+ - oder -   
+  
+ Die Länge von <paramref name="fileName" /> ist 0 (null).  
+  
+ - oder -   
+  
+ <paramref name="fileName" /> enthält einen Pfad.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> oder <paramref name="fileName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Schreiben Sie = "true" oder Anfügen = "true"</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineUnmanagedResource">
+      <MemberSignature Language="C#" Value="public void DefineUnmanagedResource (byte[] resource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DefineUnmanagedResource(unsigned int8[] resource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.DefineUnmanagedResource(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resource" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="resource">Das nicht transparente Blob von Bytes, das die nicht verwaltete Ressource darstellt.</param>
+        <summary>Definiert eine nicht verwaltete Ressource für diese Assembly als nicht transparentes Blob von Bytes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Assembly kann nur eine nicht verwaltete Ressource zugeordnet werden. Dies bedeutet, dass der Aufruf <xref:System.Reflection.Emit.AssemblyBuilder.DefineVersionInfoResource%2A> oder <xref:System.Reflection.Emit.AssemblyBuilder.DefineUnmanagedResource%2A> nach entweder eine der Methoden aufgerufen wurde zuvor löst die System.ArgumentException ausgelöst wird. Mehrere nicht verwaltete Ressourcen müssen mit einem Tool wie dem Microsoft ResMerge-Hilfsprogramm (nicht im Lieferumfang der common Language Runtime) zusammengeführt werden sollen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird erstellt, und fügt ein Array von Bytes, die eine nicht verwaltete Ressource darstellt, um eine dynamische Assembly, die mit `DefineUnmanagedResource`.  
+  
+ [!code-cpp[AssemblyBuilder_DefineUnmanagedResource2#1](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyBuilder_DefineUnmanagedResource2/CPP/assemblybuilder_defineunmanagedresource2.cpp#1)]
+ [!code-csharp[AssemblyBuilder_DefineUnmanagedResource2#1](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyBuilder_DefineUnmanagedResource2/CS/assemblybuilder_defineunmanagedresource2.cs#1)]
+ [!code-vb[AssemblyBuilder_DefineUnmanagedResource2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyBuilder_DefineUnmanagedResource2/VB/assemblybuilder_defineunmanagedresource2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Zuvor wurde eine nicht verwaltete Ressource definiert.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="resource" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineUnmanagedResource">
+      <MemberSignature Language="C#" Value="public void DefineUnmanagedResource (string resourceFileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DefineUnmanagedResource(string resourceFileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.DefineUnmanagedResource(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceFileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="resourceFileName">Der Name der Ressourcendatei.</param>
+        <summary>Definiert eine nicht verwaltete Ressourcendatei für diese Assembly bei gegebenem Namen der Ressourcendatei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Assembly kann nur eine nicht verwaltete Ressource zugeordnet werden. Dies bedeutet, dass der Aufruf <xref:System.Reflection.Emit.AssemblyBuilder.DefineVersionInfoResource%2A> oder <xref:System.Reflection.Emit.AssemblyBuilder.DefineUnmanagedResource%2A> nach entweder eine der Methoden aufgerufen wurde zuvor löst die System.ArgumentException. Mehrere nicht verwaltete Ressourcen müssen mit einem Tool wie dem Microsoft ResMerge-Hilfsprogramm (nicht im Lieferumfang der common Language Runtime) zusammengeführt werden sollen.  
+  
+> [!NOTE]
+>  Beginnend mit der [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], diese Member nicht mehr benötigt <xref:System.Security.Permissions.ReflectionPermission> mit der <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> Flag. (Siehe [Sicherheitsaspekte bei der Reflektionsausgabe](~/docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md).) Zur Verwendung dieser Funktionen sollte die Anwendung für [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] oder höher ausgelegt sein.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht einen Aufruf von `DefineUnmanagedResource`, übergeben eine externe Ressource-Datei.  
+  
+ [!code-cpp[AssemblyBuilder_DefineUnmanagedResource#3](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyBuilder_DefineUnmanagedResource/CPP/assemblybuilder_defineunmanagedresource.cpp#3)]
+ [!code-csharp[AssemblyBuilder_DefineUnmanagedResource#3](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyBuilder_DefineUnmanagedResource/CS/assemblybuilder_defineunmanagedresource.cs#3)]
+ [!code-vb[AssemblyBuilder_DefineUnmanagedResource#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyBuilder_DefineUnmanagedResource/VB/assemblybuilder_defineunmanagedresource.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Zuvor wurde eine nicht verwaltete Ressource definiert.  
+  
+ - oder -   
+  
+ Die Datei <paramref name="resourceFileName" /> ist nicht lesbar.  
+  
+ - oder -   
+  
+ <paramref name="resourceFileName" /> ist die leere Zeichenfolge ("").</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="resourceFileName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">
+          <paramref name="resourceFileName" /> wurde nicht gefunden.  
+  
+ - oder -   
+  
+ <paramref name="resourceFileName" /> ist ein Verzeichnis.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Die FileIOPermissionAccess.Read-Berechtigung ist erforderlich, um die Ressourcendatei zugreifen <paramref name="resourceFileName" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineVersionInfoResource">
+      <MemberSignature Language="C#" Value="public void DefineVersionInfoResource ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DefineVersionInfoResource() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.DefineVersionInfoResource" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Definiert eine nicht verwaltete Versionsinformationsressource mithilfe der im AssemblyName-Objekt der Assembly angegebenen Informationen und benutzerdefinierten Attributen der Assembly.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Assembly kann nur eine nicht verwaltete Ressource zugeordnet werden. Dies bedeutet, dass der Aufruf <xref:System.Reflection.Emit.AssemblyBuilder.DefineVersionInfoResource%2A> oder <xref:System.Reflection.Emit.AssemblyBuilder.DefineUnmanagedResource%2A> nach entweder eine der Methoden aufgerufen wurde zuvor löst die System.ArgumentException. Mehrere nicht verwaltete Ressourcen müssen mit einem Tool wie dem Microsoft ResMerge-Hilfsprogramm (nicht im Lieferumfang der common Language Runtime SDK) zusammengeführt werden sollen.  
+  
+ Leere Argumentzeichenfolgen als einzelnes Leerzeichen geschrieben. Null-Zeichen in die Argumentzeichenfolgen werden Leerzeichen durch ersetzt.  
+  
+ Die Informationen ist abgeleitet von der `AssemblyName` Objekt verwendet, um diese dynamische Assembly zu definieren. In angegebenen Informationen zu benutzerdefinierten Attribute dieser Assembly überschreiben die `AssemblyName` Objekt.  
+  
+> [!NOTE]
+>  Beginnend mit der [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], diese Member nicht mehr benötigt <xref:System.Security.Permissions.ReflectionPermission> mit der <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> Flag. (Siehe [Sicherheitsaspekte bei der Reflektionsausgabe](~/docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md).) Zur Verwendung dieser Funktionen sollte die Anwendung für [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] oder höher ausgelegt sein.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung von `DefineVersionInfoResource`.  
+  
+ [!code-cpp[AssemblyBuilder_DefineVersionInfoResource#1](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyBuilder_DefineVersionInfoResource/CPP/assemblybuilder_defineversioninforesource.cpp#1)]
+ [!code-csharp[AssemblyBuilder_DefineVersionInfoResource#1](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyBuilder_DefineVersionInfoResource/CS/assemblybuilder_defineversioninforesource.cs#1)]
+ [!code-vb[AssemblyBuilder_DefineVersionInfoResource#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyBuilder_DefineVersionInfoResource/VB/assemblybuilder_defineversioninforesource.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Eine nicht verwaltete Versionsinformationsressource wurde zuvor definiert.  
+  
+ - oder -   
+  
+ Die nicht verwalteten Versionsinformationen können nicht beibehalten werden, da sie zu umfangreich sind.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineVersionInfoResource">
+      <MemberSignature Language="C#" Value="public void DefineVersionInfoResource (string product, string productVersion, string company, string copyright, string trademark);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DefineVersionInfoResource(string product, string productVersion, string company, string copyright, string trademark) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.DefineVersionInfoResource(System.String,System.String,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="product" Type="System.String" />
+        <Parameter Name="productVersion" Type="System.String" />
+        <Parameter Name="company" Type="System.String" />
+        <Parameter Name="copyright" Type="System.String" />
+        <Parameter Name="trademark" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="product">Der Name des Produkts, mit dem diese Assembly verteilt wird.</param>
+        <param name="productVersion">Die Version des Produkts, mit dem diese Assembly verteilt wird.</param>
+        <param name="company">Der Name des Unternehmens, das diese Assembly erstellt hat.</param>
+        <param name="copyright">Beschreibt alle Copyrighthinweise, Marken und eingetragenen Marken, die diese Assembly betreffen. Dies sollte den vollständigen Text aller Hinweise, rechtliche Symbole, Copyright-Datumsangaben, Markennummern usw. umfassen. Im Deutschen sollte diese Zeichenfolge das folgende Format aufweisen: "Copyright Microsoft Corp. 1990-2001".</param>
+        <param name="trademark">Beschreibt alle Marken und eingetragenen Marken, die diese Assembly betreffen. Dies sollte den vollständigen Text aller Hinweise, rechtliche Symbole, Markennummern usw. umfassen. Im Deutschen sollte diese Zeichenfolge das folgende Format aufweisen: "Windows ist eine Marke der Microsoft Corporation".</param>
+        <summary>Definiert eine nicht verwaltete Versionsinformationsressource für diese Assembly mit den bereitgestellten Angaben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Assembly kann nur eine nicht verwaltete Ressource zugeordnet werden. Dies bedeutet, dass der Aufruf <xref:System.Reflection.Emit.AssemblyBuilder.DefineVersionInfoResource%2A> oder <xref:System.Reflection.Emit.AssemblyBuilder.DefineUnmanagedResource%2A> nach entweder eine der Methoden aufgerufen wurde zuvor löst die System.ArgumentException. Mehrere nicht verwaltete Ressourcen müssen mit einem Tool wie z. B. die Microsoft zusammenzuführenden `ResMerge` -Dienstprogramm (nicht mit der common Language Runtime SDK).  
+  
+ Leere Argumentzeichenfolgen als einzelnes Leerzeichen geschrieben. Null-Zeichen in die Argumentzeichenfolgen werden Leerzeichen durch ersetzt.  
+  
+ Die Struktur der Versionsressource enthält Daten, die die Version, Sprache und Verteilung der Datei zu identifizieren. Verwenden Sie die Funktionen in der Datei-Installation-Bibliothek (VER. Installationsprogramme (DLL) zum Abrufen der Versionsinformationsressource aus einer Datei und zum Extrahieren von den Versionsinformationsblock aus der Ressource.  
+  
+> [!NOTE]
+>  Beginnend mit der [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], diese Member nicht mehr benötigt <xref:System.Security.Permissions.ReflectionPermission> mit der <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> Flag. (Siehe [Sicherheitsaspekte bei der Reflektionsausgabe](~/docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md).) Zur Verwendung dieser Funktionen sollte die Anwendung für [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] oder höher ausgelegt sein.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung von `DefineVersionInfoResource`.  
+  
+ [!code-cpp[AssemblyBuilder_DefineVersionInfoResource#1](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyBuilder_DefineVersionInfoResource/CPP/assemblybuilder_defineversioninforesource.cpp#1)]
+ [!code-csharp[AssemblyBuilder_DefineVersionInfoResource#1](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyBuilder_DefineVersionInfoResource/CS/assemblybuilder_defineversioninforesource.cs#1)]
+ [!code-vb[AssemblyBuilder_DefineVersionInfoResource#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyBuilder_DefineVersionInfoResource/VB/assemblybuilder_defineversioninforesource.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Eine nicht verwaltete Versionsinformationsressource wurde zuvor definiert.  
+  
+ - oder -   
+  
+ Die nicht verwalteten Versionsinformationen können nicht beibehalten werden, da sie zu umfangreich sind.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="EntryPoint">
+      <MemberSignature Language="C#" Value="public override System.Reflection.MethodInfo EntryPoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MethodInfo EntryPoint" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.AssemblyBuilder.EntryPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Einstiegspunkt dieser Assembly zurück.</summary>
+        <value>Der Einstiegspunkt dieser Assembly.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Ein Objekt, das mit dieser Instanz verglichen werden soll, oder <see langword="null" />.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob diese Instanz gleich dem angegebenen Objekt ist.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="obj" /> dem Typ und dem Wert dieser Instanz entspricht, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Evidence">
+      <MemberSignature Language="C#" Value="public override System.Security.Policy.Evidence Evidence { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Policy.Evidence Evidence" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.AssemblyBuilder.Evidence" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.Evidence</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Beweis für diese Assembly ab.</summary>
+        <value>Der Beweis für diese Assembly.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullName">
+      <MemberSignature Language="C#" Value="public override string FullName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FullName" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.AssemblyBuilder.FullName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Anzeigenamen der aktuellen dynamischen Assembly ab.</summary>
+        <value>Der Anzeigename der dynamischen Assembly.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Finden Sie unter <xref:System.Reflection.AssemblyName> eine Beschreibung des Formats des Anzeigenamens einer Assembly.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public override object[] GetCustomAttributes (bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object[] GetCustomAttributes(bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.GetCustomAttributes(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="inherit">Dieses Argument wird für Objekte dieses Typs ignoriert.</param>
+        <summary>Gibt die benutzerdefinierten Attribute, die mit dem aktuellen angewendet wurden <see cref="T:System.Reflection.Emit.AssemblyBuilder" />.</summary>
+        <returns>Ein Array, das die benutzerdefinierten Attribute enthält. Das Array ist leer, wenn keine Attribute vorhanden sind.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public override object[] GetCustomAttributes (Type attributeType, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object[] GetCustomAttributes(class System.Type attributeType, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.GetCustomAttributes(System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeType" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="attributeType">Der Basistyp, von dem Attribute abgeleitet werden.</param>
+        <param name="inherit">Dieses Argument wird für Objekte dieses Typs ignoriert.</param>
+        <summary>Gibt die benutzerdefinierten Attribute, die mit dem aktuellen angewendet wurden <see cref="T:System.Reflection.Emit.AssemblyBuilder" />, und die von einem angegebenen Attributtyp abgeleitet sind.</summary>
+        <returns>Ein Array, das die benutzerdefinierten Attribute enthält, die auf jeder Ebene von abgeleitet sind <paramref name="attributeType" />; das Array ist leer, wenn keine solchen Attribute vorhanden sind.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="attributeType" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="attributeType" />ist ein <see cref="T:System.Type" /> Objekt von der Laufzeit bereitgestellt wird. Beispielsweise <paramref name="attributeType" /> ist ein <see cref="T:System.Reflection.Emit.TypeBuilder" /> Objekt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributesData">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IList&lt;System.Reflection.CustomAttributeData&gt; GetCustomAttributesData ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IList`1&lt;class System.Reflection.CustomAttributeData&gt; GetCustomAttributesData() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.GetCustomAttributesData" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Reflection.CustomAttributeData&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt <see cref="T:System.Reflection.CustomAttributeData" /> Objekte, die Informationen zu den Attributen enthalten, die mit dem aktuellen angewendet wurden <see cref="T:System.Reflection.Emit.AssemblyBuilder" />.</summary>
+        <returns>Eine generische Liste von <see cref="T:System.Reflection.CustomAttributeData" /> Objekte, die Darstellung von Daten zu den Attributen, die für das aktuelle Modul angewendet wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um die benutzerdefinierten Attribute des Codes in den ReflectionOnly Kontext, in Fällen zu untersuchen, in dem die benutzerdefinierten Attribute selbst im Code definiert werden, die in den reflektionsbezogenen Kontext geladen wird. Methoden, z. B. <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType> und <xref:System.Reflection.Assembly.GetCustomAttributes%2A?displayProperty=nameWithType> kann nicht in solchen Fällen verwendet werden, da sie Instanzen der Attribute erstellen. Code in den ReflectionOnly Kontext kann nicht ausgeführt werden. Weitere Informationen und Beispielcode, finden Sie unter der <xref:System.Reflection.CustomAttributeData> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDynamicModule">
+      <MemberSignature Language="C#" Value="public System.Reflection.Emit.ModuleBuilder GetDynamicModule (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Reflection.Emit.ModuleBuilder GetDynamicModule(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.GetDynamicModule(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.ModuleBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des angeforderten dynamischen Moduls.</param>
+        <summary>Gibt das dynamische Modul mit dem angegebenen Namen zurück.</summary>
+        <returns>Ein ModuleBuilder-Objekt, das das angeforderte dynamische Modul darstellt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die Länge von <paramref name="name" /> ist 0 (null).</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExportedTypes">
+      <MemberSignature Language="C#" Value="public override Type[] GetExportedTypes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Type[] GetExportedTypes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.GetExportedTypes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die in dieser Assembly definierten exportierten Typen ab.</summary>
+        <returns>Ein Array von <see cref="T:System.Type" /> , die in dieser Assembly definierten exportierten Typen enthält.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode ist nicht implementiert.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFile">
+      <MemberSignature Language="C#" Value="public override System.IO.FileStream GetFile (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IO.FileStream GetFile(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.GetFile(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileStream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der angegebenen Datei.</param>
+        <summary>Ruft einen <see cref="T:System.IO.FileStream" /> für die angegebene Datei in der Dateitabelle des Manifests dieser Assembly ab.</summary>
+        <returns>Ein <see cref="T:System.IO.FileStream" /> für die angegebene Datei oder <see langword="null" />, wenn die Datei nicht gefunden wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `name`der Pfad zur Datei sollte nicht enthalten.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird zurzeit nicht unterstützt.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFiles">
+      <MemberSignature Language="C#" Value="public override System.IO.FileStream[] GetFiles (bool getResourceModules);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IO.FileStream[] GetFiles(bool getResourceModules) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.GetFiles(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileStream[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="getResourceModules" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="getResourceModules">
+          <see langword="true" />, wenn Ressourcenmodule eingebunden werden sollen, andernfalls <see langword="false" />.</param>
+        <summary>Ruft die Dateien in der Dateitabelle eines Assemblymanifests ab und gibt an, ob Ressourcenmodule eingebunden werden sollen.</summary>
+        <returns>Ein Array von <see cref="T:System.IO.FileStream" />-Objekten.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird zurzeit nicht unterstützt.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese Instanz zurück.</summary>
+        <returns>Ein 32-Bit-Hashcode als ganze Zahl mit Vorzeichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLoadedModules">
+      <MemberSignature Language="C#" Value="public override System.Reflection.Module[] GetLoadedModules (bool getResourceModules);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.Module[] GetLoadedModules(bool getResourceModules) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.GetLoadedModules(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Module[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="getResourceModules" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="getResourceModules">
+          <see langword="true" />, wenn Ressourcenmodule eingebunden werden sollen, andernfalls <see langword="false" />.</param>
+        <summary>Gibt alle geladenen Module zurück, die Bestandteil dieser Assembly sind, und bindet optional Ressourcenmodule ein.</summary>
+        <returns>Die geladenen Module, die Bestandteil dieser Assembly sind.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetManifestResourceInfo">
+      <MemberSignature Language="C#" Value="public override System.Reflection.ManifestResourceInfo GetManifestResourceInfo (string resourceName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.ManifestResourceInfo GetManifestResourceInfo(string resourceName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.GetManifestResourceInfo(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.ManifestResourceInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="resourceName">Der Name der Ressource.</param>
+        <summary>Gibt Informationen darüber zurück, wie die angegebene Ressource beibehalten wurde.</summary>
+        <returns>
+          <see cref="T:System.Reflection.ManifestResourceInfo" /> mit Informationen zur Topologie der Ressource, oder <see langword="null" />, falls die Ressource nicht gefunden wurde.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird zurzeit nicht unterstützt.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetManifestResourceNames">
+      <MemberSignature Language="C#" Value="public override string[] GetManifestResourceNames ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string[] GetManifestResourceNames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.GetManifestResourceNames" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lädt die angegebene Manifestressource aus dieser Assembly.</summary>
+        <returns>Ein Array des Typs <see langword="String" />, das die Namen sämtlicher Ressourcen enthält.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird für eine dynamische Assembly nicht unterstützt. Um die Manifestressourcennamen abzurufen, verwenden Sie <see cref="M:System.Reflection.Assembly.GetManifestResourceNames" />.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetManifestResourceStream">
+      <MemberSignature Language="C#" Value="public override System.IO.Stream GetManifestResourceStream (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IO.Stream GetManifestResourceStream(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.GetManifestResourceStream(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der angeforderten Manifestressource.</param>
+        <summary>Lädt die angegebene Manifestressource aus dieser Assembly.</summary>
+        <returns>Ein <see cref="T:System.IO.Stream" />, der diese Manifestressource darstellt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird zurzeit nicht unterstützt.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetManifestResourceStream">
+      <MemberSignature Language="C#" Value="public override System.IO.Stream GetManifestResourceStream (Type type, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IO.Stream GetManifestResourceStream(class System.Type type, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.GetManifestResourceStream(System.Type,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ, dessen Namespace verwendet wird, um den Gültigkeitsbereich des Manifestressourcennamens festzulegen.</param>
+        <param name="name">Der Name der angeforderten Manifestressource.</param>
+        <summary>Lädt die angegebene Manifestressource, deren Gültigkeitsbereich durch den Namespace des angegebenen Typs festgelegt ist, aus dieser Assembly.</summary>
+        <returns>Ein <see cref="T:System.IO.Stream" />, der diese Manifestressource darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das zurückgegebene <xref:System.IO.Stream> Dateizeiger am Anfang der Ressourcenanbieters festgelegt wurde.  
+  
+   
+  
+## Examples  
+ Wenn der vollständige Name des `type` "MyNameSpace.MyClasses lautet" und `name` ist ""Dot"," `GetManifestResourceStream` Ressource MyNameSpace.dot gesucht wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird zurzeit nicht unterstützt.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetModule">
+      <MemberSignature Language="C#" Value="public override System.Reflection.Module GetModule (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.Module GetModule(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.GetModule(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Module</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des angeforderten Moduls.</param>
+        <summary>Ruft das angegebene Modul in dieser Assembly ab.</summary>
+        <returns>Das angeforderte Modul oder <see langword="null" />, wenn das Modul nicht gefunden wurde.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetModules">
+      <MemberSignature Language="C#" Value="public override System.Reflection.Module[] GetModules (bool getResourceModules);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.Module[] GetModules(bool getResourceModules) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.GetModules(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Module[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="getResourceModules" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="getResourceModules">
+          <see langword="true" />, wenn Ressourcenmodule eingebunden werden sollen, andernfalls <see langword="false" />.</param>
+        <summary>Ruft alle Module ab, die Bestandteil dieser Assembly sind, und bindet optional Ressourcenmodule ein.</summary>
+        <returns>Die Module, die Bestandteil dieser Assembly sind.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetName">
+      <MemberSignature Language="C#" Value="public override System.Reflection.AssemblyName GetName (bool copiedName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.AssemblyName GetName(bool copiedName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.GetName(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.AssemblyName</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="copiedName" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="copiedName">
+          <see langword="true" />um den Code auf den Speicherort der Assembly dahinter entitätenmengenbasis ist verborgen kopiert. <see langword="false" /> am ursprünglichen Speicherort des Codes Basis festgelegt.</param>
+        <summary>Ruft die <see cref="T:System.Reflection.AssemblyName" /> , die angegeben wurde, wenn die aktuelle dynamische Assembly erstellt wurden, und legt die Codebasis wie angegeben.</summary>
+        <returns>Der Name der dynamischen Assembly.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReferencedAssemblies">
+      <MemberSignature Language="C#" Value="public override System.Reflection.AssemblyName[] GetReferencedAssemblies ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.AssemblyName[] GetReferencedAssemblies() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.GetReferencedAssemblies" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.AssemblyName[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine unvollständige Liste von <see cref="T:System.Reflection.AssemblyName" /> Objekte für die Assemblys, auf die von diesem verweist <see cref="T:System.Reflection.Emit.AssemblyBuilder" />.</summary>
+        <returns>Ein Array der Assemblynamen für die Assemblys, auf die verwiesen wird. Dieses Array stellt keine vollständige Liste dar.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt keine vollständige Liste der referenzierten Assemblys zurück. Wenn Sie ein benutzerdefiniertes Attribut anwenden, z. B. die <xref:System.Reflection.Emit.AssemblyBuilder>, die Assembly, in dem das Attribut definiert wurde, ist in der Liste, die von dieser Methode zurückgegebene enthalten. Allerdings bei Verwendung einer <xref:System.Type> Objekt, um den Typ eines Methodenparameters, anzugeben, dass der Typ nicht enthalten ist.  
+  
+ Um eine vollständige Liste der referenzierten Assemblys zu erhalten, speichern Sie die Assembly, laden Sie es in einer anderen Anwendungsdomäne aus, und rufen die <xref:System.Reflection.Assembly.GetReferencedAssemblies%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSatelliteAssembly">
+      <MemberSignature Language="C#" Value="public override System.Reflection.Assembly GetSatelliteAssembly (System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.Assembly GetSatelliteAssembly(class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.GetSatelliteAssembly(System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Assembly</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="culture">Die angegebene Kultur.</param>
+        <summary>Ruft die Satellitenassembly für die angegebene Kultur ab.</summary>
+        <returns>Die angegebene Satellitenassembly.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Satellitenassemblys enthalten lokalisierte Ressourcen, unterscheidet der hauptanwendung Assemblys, bei die enthalten nicht lokalisierbaren ausführbaren Code sowie Ressourcen für eine bestimmte Kultur, die als Standardkultur bzw. neutrale Kultur dienen.  
+  
+ Rufen Sie diese Methode, um die aktuelle Assemblyversion zu verwenden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="culture" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Die Assembly wurde nicht gefunden.</exception>
+        <exception cref="T:System.IO.FileLoadException">Die Satellitenassembly mit einem übereinstimmenden Dateinamen wurde gefunden, aber die <see langword="CultureInfo" /> angegebenen stimmte nicht überein.</exception>
+        <exception cref="T:System.BadImageFormatException">Die Satellitenassembly ist keine gültige Assembly.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSatelliteAssembly">
+      <MemberSignature Language="C#" Value="public override System.Reflection.Assembly GetSatelliteAssembly (System.Globalization.CultureInfo culture, Version version);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.Assembly GetSatelliteAssembly(class System.Globalization.CultureInfo culture, class System.Version version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.GetSatelliteAssembly(System.Globalization.CultureInfo,System.Version)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Assembly</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="version" Type="System.Version" />
+      </Parameters>
+      <Docs>
+        <param name="culture">Die angegebene Kultur.</param>
+        <param name="version">Die Version der Satellitenassembly.</param>
+        <summary>Ruft die angegebene Version der Satellitenassembly für die angegebene Kultur ab.</summary>
+        <returns>Die angegebene Satellitenassembly.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Satellitenassemblys enthalten lokalisierte Ressourcen, unterscheidet der hauptanwendung Assemblys, bei die enthalten nicht lokalisierbaren ausführbaren Code sowie Ressourcen für eine bestimmte Kultur, die als Standardkultur bzw. neutrale Kultur dienen.  
+  
+ Rufen Sie die <xref:System.Reflection.Assembly.GetSatelliteAssembly%28System.Globalization.CultureInfo%29> Überladung mit Ihrer aktuellen Assemblyversion.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="culture" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.IO.FileLoadException">Die Satellitenassembly mit einem übereinstimmenden Dateinamen wurde gefunden, aber die <see langword="CultureInfo" /> oder die Version stimmte nicht überein angegeben.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Die Assembly wurde nicht gefunden.</exception>
+        <exception cref="T:System.BadImageFormatException">Die Satellitenassembly ist keine gültige Assembly.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetType">
+      <MemberSignature Language="C#" Value="public override Type GetType (string name, bool throwOnError, bool ignoreCase);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Type GetType(string name, bool throwOnError, bool ignoreCase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.GetType(System.String,System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="throwOnError" Type="System.Boolean" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des zu suchenden Typs.</param>
+        <param name="throwOnError">
+          <see langword="true" />eine Ausnahme auslöst, wenn der Typ nicht gefunden wird; andernfalls <see langword="false" />.</param>
+        <param name="ignoreCase">
+          <see langword="true" />Um bei der Suche die Groß-/Kleinschreibung des Typnamens zu ignorieren; andernfalls <see langword="false" />.</param>
+        <summary>Ruft den angegebenen Typ aus den Typen, die definiert, und erstellt im aktuellen <see cref="T:System.Reflection.Emit.AssemblyBuilder" />.</summary>
+        <returns>Der angegebene Typ oder <see langword="null" /> Wenn der Typ nicht gefunden wurde oder nicht erstellt wurde noch.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Typ kann nicht gefunden werden, bis er durch den Aufruf erstellt wurde die <xref:System.Reflection.Emit.TypeBuilder.CreateType%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlobalAssemblyCache">
+      <MemberSignature Language="C#" Value="public override bool GlobalAssemblyCache { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool GlobalAssemblyCache" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.AssemblyBuilder.GlobalAssemblyCache" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Assembly aus dem globalen Assemblycache geladen wurde.</summary>
+        <value>Immer <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Reflection.Emit.AssemblyBuilder>Objekte stellen immer dynamische Assemblys dar und werden daher nie aus dem globalen Assemblycache geladen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostContext">
+      <MemberSignature Language="C#" Value="public override long HostContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 HostContext" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.AssemblyBuilder.HostContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Hostkontext ab, in dem die dynamische Assembly erstellt wird.</summary>
+        <value>Ein Wert, der den Hostkontext angibt, in dem die dynamische Assembly erstellt wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageRuntimeVersion">
+      <MemberSignature Language="C#" Value="public override string ImageRuntimeVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ImageRuntimeVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.AssemblyBuilder.ImageRuntimeVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Version der Common Language Runtime ab, die in der Datei gespeichert wird, die das Manifest enthält.</summary>
+        <value>Eine Zeichenfolge, die die Version der Common Language Runtime anzeigt.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefined">
+      <MemberSignature Language="C#" Value="public override bool IsDefined (Type attributeType, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefined(class System.Type attributeType, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.IsDefined(System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeType" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="attributeType">Der Typ des zu prüfenden Attributs.</param>
+        <param name="inherit">Dieses Argument wird für Objekte dieses Typs ignoriert.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob eine oder mehrere Instanzen des angegebenen Attributtyps auf diesen Member angewendet werden.</summary>
+        <returns>
+          <see langword="true" />Wenn eine oder mehrere Instanzen des <paramref name="attributeType" /> ist für diese dynamische Assembly angewendet wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDynamic">
+      <MemberSignature Language="C#" Value="public override bool IsDynamic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDynamic" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.AssemblyBuilder.IsDynamic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, dass die aktuelle Assembly eine dynamische Assembly ist.</summary>
+        <value>Immer <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Reflection.Emit.AssemblyBuilder> Objekt immer eine dynamische Assembly darstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="public override string Location { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Location" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.AssemblyBuilder.Location" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Speicherort der geladenen Datei, die das Manifest enthält, im CodeBase-Format ab, sofern es sich nicht um eine Schattenkopie handelt.</summary>
+        <value>Der Speicherort der geladenen Datei, die das Manifest enthält. Wenn die geladene Datei Schattenkopie wurde die <see langword="Location" /> ist die Datei vor der Schattenkopie.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird zurzeit nicht unterstützt.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ManifestModule">
+      <MemberSignature Language="C#" Value="public override System.Reflection.Module ManifestModule { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.Module ManifestModule" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.AssemblyBuilder.ManifestModule" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Module</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Modul im aktuellen <see cref="T:System.Reflection.Emit.AssemblyBuilder" /> ab, das das Assemblymanifest enthält.</summary>
+        <value>Das Manifestmodul.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Modules">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IEnumerable&lt;System.Reflection.Module&gt; Modules { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class System.Reflection.Module&gt; Modules" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.AssemblyBuilder.Modules" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Reflection.Module&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PermissionSet">
+      <MemberSignature Language="C#" Value="public override System.Security.PermissionSet PermissionSet { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.PermissionSet PermissionSet" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.AssemblyBuilder.PermissionSet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.PermissionSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Berechtigungssatz der aktuellen dynamischen Assembly ab.</summary>
+        <value>Der Berechtigungssatz der aktuellen dynamischen Assembly.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.PermissionSet>-Objekte können vertraulichen Informationen wie z. B. Pfade enthalten. Aus diesem Grund wird volle Vertrauenswürdigkeit erforderlich, um diese Objekte zugreifen.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ReflectionOnly">
+      <MemberSignature Language="C#" Value="public override bool ReflectionOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReflectionOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.AssemblyBuilder.ReflectionOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob sich die dynamische Assembly im reflektionsbezogenen Kontext befindet.</summary>
+        <value>
+          <see langword="true" />Wenn die dynamische Assembly im reflektionsbezogenen Kontext befindet; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Geben Sie eine dynamische Assembly in den ReflectionOnly Kontext für das ausgeben, <xref:System.Reflection.Emit.AssemblyBuilderAccess?displayProperty=nameWithType> beim Erstellen der <xref:System.Reflection.Emit.AssemblyBuilder>. Wenn eine dynamische Assembly im reflektionsbezogenen Kontext ausgegeben wird, kann der Code ausgeführt werden.  
+  
+> [!NOTE]
+>  Nachdem Sie eine dynamische Assembly auf dem Datenträger gespeichert haben, können Sie mithilfe der <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> Methode zum Laden der abgeschlossenen Assembly in den ReflectionOnly-Kontext. Die Assembly kann jedoch nicht mehr geändert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (string assemblyFileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(string assemblyFileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.Save(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assemblyFileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="assemblyFileName">Der Dateiname der Assembly.</param>
+        <summary>Speichert diese dynamische Assembly auf dem Datenträger.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode speichert alle dauerhaften dynamische Modulen in dieser dynamischen Assembly definiert. Flüchtige dynamische Module werden nicht gespeichert. Der Dateiname der Assembly kann den Namen eines der Module identisch sein. Wenn dies der Fall ist, wird das Assemblymanifest innerhalb dieses Moduls gespeichert. `assemblyFileName`kann sich von den Namen aller innerhalb der Assembly enthaltenen Module unterscheiden. Wenn dies der Fall ist, das die Assemblydatei nur das Assemblymanifest enthält.  
+  
+ Für jede <xref:System.Resources.ResourceWriter> mittels abgerufen <xref:System.Reflection.Emit.AssemblyBuilder.DefineResource%2A>, der die RESOURCES-Datei und ruft diese Methode schreibt <xref:System.Resources.ResourceWriter.Close%2A> den Stream geschlossen.  
+  
+ Die `assemblyFileName` muss einen einfachen Dateinamen ohne eine Komponente Laufwerk oder ein Verzeichnis sein. Um eine Assembly in einem bestimmten Verzeichnis zu erstellen, gehen die <xref:System.AppDomain.DefineDynamicAssembly%2A> Methoden, die ein Argument für das Zielverzeichnis akzeptiert.  
+  
+ In .NET Framework, Version 2.0, diese Überladung von der <xref:System.Reflection.Emit.AssemblyBuilder.Save%2A> Methode entspricht dem Aufrufen der <xref:System.Reflection.Emit.AssemblyBuilder.Save%28System.String%2CSystem.Reflection.PortableExecutableKinds%2CSystem.Reflection.ImageFileMachine%29> methodenüberladung mit <xref:System.Reflection.PortableExecutableKinds.ILOnly> für die `portableExecutableKind` Parameter und <xref:System.Reflection.ImageFileMachine.I386> für die `imageFileMachine` Parameter.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine dynamische Assembly erstellt und speichert sie dann in einen lokalen Datenträger mit `Save`.  
+  
+ [!code-cpp[System.Reflection.Emit.AssemblyBuilder.Save Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Reflection.Emit.AssemblyBuilder.Save Example/CPP/source.cpp#1)]
+ [!code-csharp[System.Reflection.Emit.AssemblyBuilder.Save Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Reflection.Emit.AssemblyBuilder.Save Example/CS/source.cs#1)]
+ [!code-vb[System.Reflection.Emit.AssemblyBuilder.Save Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Reflection.Emit.AssemblyBuilder.Save Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Länge des <paramref name="assemblyFileName" /> ist 0.  
+  
+ - oder -   
+  
+ In der Assembly sind mindestens zwei Modulressourcendateien mit demselben Namen vorhanden.  
+  
+ - oder -   
+  
+ Das Zielverzeichnis der Assembly ist ungültig.  
+  
+ - oder -   
+  
+ <paramref name="assemblyFileName" />ist kein einfacher Dateiname (z. B. eine Verzeichnis- oder Laufwerkkomponente hat), oder in dieser Assembly wurden mehrere nicht verwalteter Ressourcen einschließlich einer Versionsinformationsressource definiert.  
+  
+ - oder -   
+  
+ Die <see langword="CultureInfo" /> -Zeichenfolge in <see cref="T:System.Reflection.AssemblyCultureAttribute" /> ist keine gültige Zeichenfolge und <see cref="M:System.Reflection.Emit.AssemblyBuilder.DefineVersionInfoResource(System.String,System.String,System.String,System.String,System.String)" /> vor dem Aufruf dieser Methode aufgerufen wurde.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="assemblyFileName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Diese Assembly wurde bereits zuvor gespeichert.  
+  
+ - oder -   
+  
+ Diese Assembly hat Zugriff auf<see langword="Run" /><see cref="T:System.Reflection.Emit.AssemblyBuilderAccess" /></exception>
+        <exception cref="T:System.IO.IOException">Beim Speichern tritt ein Ausgabefehler auf.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <see cref="M:System.Reflection.Emit.TypeBuilder.CreateType" />nicht für die Typen in den Modulen der zu schreibenden Assembly aufgerufen wurde auf dem Datenträger.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Schreiben Sie = "true" oder Anfügen = "true" ist erforderlich, um diese Assembly in den angegebenen Dateinamen zu speichern.</permission>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (string assemblyFileName, System.Reflection.PortableExecutableKinds portableExecutableKind, System.Reflection.ImageFileMachine imageFileMachine);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(string assemblyFileName, valuetype System.Reflection.PortableExecutableKinds portableExecutableKind, valuetype System.Reflection.ImageFileMachine imageFileMachine) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.Save(System.String,System.Reflection.PortableExecutableKinds,System.Reflection.ImageFileMachine)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assemblyFileName" Type="System.String" />
+        <Parameter Name="portableExecutableKind" Type="System.Reflection.PortableExecutableKinds" />
+        <Parameter Name="imageFileMachine" Type="System.Reflection.ImageFileMachine" />
+      </Parameters>
+      <Docs>
+        <param name="assemblyFileName">Der Dateiname der Assembly.</param>
+        <param name="portableExecutableKind">Eine bitweise Kombination der <see cref="T:System.Reflection.PortableExecutableKinds" /> Werte, die die Art des Codes angibt.</param>
+        <param name="imageFileMachine">Eines der <see cref="T:System.Reflection.ImageFileMachine" /> Werte, der die Zielplattform angibt.</param>
+        <summary>Speichert diese dynamische Assembly auf dem Datenträger und gibt die Art des Codes in den ausführbaren Dateien der Assembly und der Zielplattform an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `imageFileMachine` und `portableExecutableKind` sind inkompatibel, `imageFileMachine` hat Vorrang vor `portableExecutableKind`. Es werden keine Ausnahmen ausgelöst. Wenn Sie angeben, z. B. <xref:System.Reflection.ImageFileMachine?displayProperty=nameWithType> mit <xref:System.Reflection.PortableExecutableKinds?displayProperty=nameWithType>, <xref:System.Reflection.PortableExecutableKinds?displayProperty=nameWithType> wird ignoriert.  
+  
+ Diese Methode speichert alle dauerhaften dynamische Modulen in dieser dynamischen Assembly definiert. Flüchtige dynamische Module werden nicht gespeichert. Der Dateiname der Assembly kann den Namen einer des Moduls identisch sein. Wenn dies der Fall ist, wird das Assemblymanifest innerhalb dieses Moduls gespeichert. `assemblyFileName`kann sich von den Namen aller innerhalb der Assembly enthaltenen Module unterscheiden. Wenn dies der Fall ist, das die Assemblydatei nur das Assemblymanifest enthält.  
+  
+ Für jede <xref:System.Resources.ResourceWriter> mittels abgerufen <xref:System.Reflection.Emit.AssemblyBuilder.DefineResource%2A>, der die RESOURCES-Datei und ruft diese Methode schreibt <xref:System.Resources.ResourceWriter.Close%2A> den Stream geschlossen.  
+  
+ Die `assemblyFileName` muss einen einfachen Dateinamen ohne eine Komponente Laufwerk oder ein Verzeichnis sein. Um eine Assembly in einem bestimmten Verzeichnis zu erstellen, gehen die <xref:System.AppDomain.DefineDynamicAssembly%2A> Methoden, die ein Argument für das Zielverzeichnis akzeptiert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Länge des <paramref name="assemblyFileName" /> ist 0.  
+  
+ - oder -   
+  
+ In der Assembly sind mindestens zwei Modulressourcendateien mit demselben Namen vorhanden.  
+  
+ - oder -   
+  
+ Das Zielverzeichnis der Assembly ist ungültig.  
+  
+ - oder -   
+  
+ <paramref name="assemblyFileName" />ist kein einfacher Dateiname (z. B. eine Verzeichnis- oder Laufwerkkomponente hat), oder mehrere nicht verwalteter Ressourcen einschließlich der Informationen in dieser Assembly definiert wurde.  
+  
+ - oder -   
+  
+ Die <see langword="CultureInfo" /> -Zeichenfolge in <see cref="T:System.Reflection.AssemblyCultureAttribute" /> ist keine gültige Zeichenfolge und <see cref="M:System.Reflection.Emit.AssemblyBuilder.DefineVersionInfoResource(System.String,System.String,System.String,System.String,System.String)" /> vor dem Aufruf dieser Methode aufgerufen wurde.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="assemblyFileName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Diese Assembly wurde bereits zuvor gespeichert.  
+  
+ - oder -   
+  
+ Diese Assembly hat Zugriff auf<see langword="Run" /><see cref="T:System.Reflection.Emit.AssemblyBuilderAccess" /></exception>
+        <exception cref="T:System.IO.IOException">Beim Speichern tritt ein Ausgabefehler auf.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <see cref="M:System.Reflection.Emit.TypeBuilder.CreateType" />nicht für die Typen in den Modulen der zu schreibenden Assembly aufgerufen wurde auf dem Datenträger.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Schreiben Sie = "true" oder Anfügen = "true" ist erforderlich, um diese Assembly in den angegebenen Dateinamen zu speichern.</permission>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityRuleSet">
+      <MemberSignature Language="C#" Value="public override System.Security.SecurityRuleSet SecurityRuleSet { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.SecurityRuleSet SecurityRuleSet" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.AssemblyBuilder.SecurityRuleSet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityRuleSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, welchen Satz von Sicherheitsregeln die Common Language Runtime (CLR) für diese Assembly erzwingt.</summary>
+        <value>Der Sicherheitsregelsatz, den die CLR für diese dynamische Assembly erzwingt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] erzwingt immer Transparenz der Ebene 2 (<xref:System.Security.SecurityRuleSet?displayProperty=nameWithType>) für die dynamische Assemblys generiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCustomAttribute">
+      <MemberSignature Language="C#" Value="public void SetCustomAttribute (System.Reflection.Emit.CustomAttributeBuilder customBuilder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCustomAttribute(class System.Reflection.Emit.CustomAttributeBuilder customBuilder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute(System.Reflection.Emit.CustomAttributeBuilder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="customBuilder" Type="System.Reflection.Emit.CustomAttributeBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="customBuilder">Eine Instanz einer Hilfsklasse zum Definieren des benutzerdefinierten Attributs.</param>
+        <summary>Legt mithilfe eines benutzerdefinierten Attribut-Generators ein benutzerdefiniertes Attribut für diese Assembly fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A>kann nicht verwendet werden, um Attribute für die deklarative Sicherheit festzulegen. Verwenden Sie eine der Überladungen der <xref:System.AppDomain.DefineDynamicAssembly%2A> , nimmt, optional erforderlich, und der Berechtigungen verweigert.  
+  
+> [!NOTE]
+>  Beginnend mit der [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], diese Member nicht mehr benötigt <xref:System.Security.Permissions.ReflectionPermission> mit der <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> Flag. (Siehe [Sicherheitsaspekte bei der Reflektionsausgabe](~/docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md).) Zur Verwendung dieser Funktionen sollte die Anwendung für [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] oder höher ausgelegt sein.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von `SetCustomAttribute` in <xref:System.Reflection.Emit.AssemblyBuilder>unter Verwendung einer <xref:System.Reflection.Emit.CustomAttributeBuilder>.  
+  
+ [!code-cpp[AssemblyBuilder_SetCustomAttribute1#1](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyBuilder_SetCustomAttribute1/CPP/assemblybuilder_setcustomattribute1.cpp#1)]
+ [!code-csharp[AssemblyBuilder_SetCustomAttribute1#1](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyBuilder_SetCustomAttribute1/CS/assemblybuilder_setcustomattribute1.cs#1)]
+ [!code-vb[AssemblyBuilder_SetCustomAttribute1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyBuilder_SetCustomAttribute1/VB/assemblybuilder_setcustomattribute1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="con" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCustomAttribute">
+      <MemberSignature Language="C#" Value="public void SetCustomAttribute (System.Reflection.ConstructorInfo con, byte[] binaryAttribute);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCustomAttribute(class System.Reflection.ConstructorInfo con, unsigned int8[] binaryAttribute) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute(System.Reflection.ConstructorInfo,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="con" Type="System.Reflection.ConstructorInfo" />
+        <Parameter Name="binaryAttribute" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="con">Der Konstruktor für das benutzerdefinierte Attribut.</param>
+        <param name="binaryAttribute">Ein Byte-BLOB, das die Attribute darstellt.</param>
+        <summary>Legt mithilfe eines angegebenen benutzerdefinierten Attribut-BLOBs ein benutzerdefiniertes Attribut für diese Assembly fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Metadatenspezifikation in der ECMA Partition II-Dokumentation weitere Informationen zum format finden Sie unter `binaryAttribute`. Die Dokumentation ist online verfügbar. Sie finden sie unter [ECMA C# and Common Language Infrastructure Standards (Standards von ECMA C# und Common Language Infrastructure)](http://go.microsoft.com/fwlink/?LinkID=99212) auf MSDN und [Standard ECMA-335 - Common Language Infrastructure (CLI) (Standard ECMA-335 – Common Language Infrastructure (CLI))](http://go.microsoft.com/fwlink/?LinkID=65552) auf der Ecma International-Website.  
+  
+ `RuntimeConstructorInfo`ein besonderer Typ wird vom System generiert werden. Er leitet sich von der <xref:System.Reflection.ConstructorInfo> -Klasse, und alle <xref:System.Reflection.ConstructorInfo> Objekt durch Reflektion Erwerb ist tatsächlich eine Instanz der `RuntimeConstructorInfo`.  
+  
+> [!NOTE]
+>  <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A>kann nicht verwendet werden, um Attribute für die deklarative Sicherheit festzulegen. Verwenden Sie eine der Überladungen der <xref:System.AppDomain.DefineDynamicAssembly%2A> , nimmt, optional erforderlich, und der Berechtigungen verweigert.  
+  
+> [!NOTE]
+>  Beginnend mit der [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], diese Member nicht mehr benötigt <xref:System.Security.Permissions.ReflectionPermission> mit der <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> Flag. (Siehe [Sicherheitsaspekte bei der Reflektionsausgabe](~/docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md).) Zur Verwendung dieser Funktionen sollte die Anwendung für [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] oder höher ausgelegt sein.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von `SetCustomAttribute` eine dynamisch generierte Assembly ein benutzerdefiniertes Attribut an.  
+  
+ [!code-cpp[AssemblyBuilder_SetCustomAttribute2#1](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyBuilder_SetCustomAttribute2/CPP/assemblybuilder_setcustomattribute2.cpp#1)]
+ [!code-csharp[AssemblyBuilder_SetCustomAttribute2#1](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyBuilder_SetCustomAttribute2/CS/assemblybuilder_setcustomattribute2.cs#1)]
+ [!code-vb[AssemblyBuilder_SetCustomAttribute2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyBuilder_SetCustomAttribute2/VB/assemblybuilder_setcustomattribute2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="con" /> oder <paramref name="binaryAttribute" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="con" /> ist kein <see langword="RuntimeConstructorInfo" />-Objekt.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetEntryPoint">
+      <MemberSignature Language="C#" Value="public void SetEntryPoint (System.Reflection.MethodInfo entryMethod);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetEntryPoint(class System.Reflection.MethodInfo entryMethod) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.SetEntryPoint(System.Reflection.MethodInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entryMethod" Type="System.Reflection.MethodInfo" />
+      </Parameters>
+      <Docs>
+        <param name="entryMethod">Ein Verweis auf die Methode, die den Einstiegspunkt für diese dynamische Assembly darstellt.</param>
+        <summary>Legt den Einstiegspunkt für diese dynamische Assembly unter der Annahme fest, dass eine Konsolenanwendung erstellt wird.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="entryMethod" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="entryMethod" />ist nicht in dieser Assembly enthalten.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetEntryPoint">
+      <MemberSignature Language="C#" Value="public void SetEntryPoint (System.Reflection.MethodInfo entryMethod, System.Reflection.Emit.PEFileKinds fileKind);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetEntryPoint(class System.Reflection.MethodInfo entryMethod, valuetype System.Reflection.Emit.PEFileKinds fileKind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.SetEntryPoint(System.Reflection.MethodInfo,System.Reflection.Emit.PEFileKinds)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entryMethod" Type="System.Reflection.MethodInfo" />
+        <Parameter Name="fileKind" Type="System.Reflection.Emit.PEFileKinds" />
+      </Parameters>
+      <Docs>
+        <param name="entryMethod">Ein Verweis auf die Methode, die den Einstiegspunkt für diese dynamische Assembly darstellt.</param>
+        <param name="fileKind">Der Typ der ausführbaren Assemblydatei, die erstellt wird.</param>
+        <summary>Legt den Einstiegspunkt für diese Assembly fest und definiert den Typ der portierbaren ausführbaren Datei (PE-Datei), die erstellt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Beginnend mit der [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], diese Member nicht mehr benötigt <xref:System.Security.Permissions.ReflectionPermission> mit der <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> Flag. (Siehe [Sicherheitsaspekte bei der Reflektionsausgabe](~/docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md).) Zur Verwendung dieser Funktionen sollte die Anwendung für [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] oder höher ausgelegt sein.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="entryMethod" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="entryMethod" />ist nicht in dieser Assembly enthalten.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Beim Aufrufen spät gebundene durch Mechanismen wie z. B. <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._AssemblyBuilder.GetIDsOfNames">
+      <MemberSignature Language="C#" Value="void _AssemblyBuilder.GetIDsOfNames (ref Guid riid, IntPtr rgszNames, uint cNames, uint lcid, IntPtr rgDispId);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._AssemblyBuilder.GetIDsOfNames([in]valuetype System.Guid&amp; riid, native int rgszNames, unsigned int32 cNames, unsigned int32 lcid, native int rgDispId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.System#Runtime#InteropServices#_AssemblyBuilder#GetIDsOfNames(System.Guid@,System.IntPtr,System.UInt32,System.UInt32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="rgszNames" Type="System.IntPtr" />
+        <Parameter Name="cNames" Type="System.UInt32" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="rgDispId" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="riid">Für zukünftige Verwendung reserviert. Muss IID_NULL sein.</param>
+        <param name="rgszNames">Das übergebene Array von zuzuordnenden Namen.</param>
+        <param name="cNames">Die Anzahl der zuzuordnenden Namen.</param>
+        <param name="lcid">Der Gebietsschemakontext, in dem die Namen interpretiert werden sollen.</param>
+        <param name="rgDispId">Das vom Aufrufer zugewiesene Array, das die IDs entsprechend den Namen empfängt.</param>
+        <summary>Ordnet eine Reihe von Namen einer entsprechenden Reihe von Dispatchbezeichnern zu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::GetIDsOfNames`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Die Methode wird spät gebundenem Zugriff aufgerufen unter Verwendung des COM <c>IDispatch</c> Schnittstelle.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._AssemblyBuilder.GetTypeInfo">
+      <MemberSignature Language="C#" Value="void _AssemblyBuilder.GetTypeInfo (uint iTInfo, uint lcid, IntPtr ppTInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._AssemblyBuilder.GetTypeInfo(unsigned int32 iTInfo, unsigned int32 lcid, native int ppTInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.System#Runtime#InteropServices#_AssemblyBuilder#GetTypeInfo(System.UInt32,System.UInt32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="iTInfo" Type="System.UInt32" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="ppTInfo" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="iTInfo">Die zurückzugebenden Typinformationen.</param>
+        <param name="lcid">Der Gebietsschemabezeichner für die Typinformationen.</param>
+        <param name="ppTInfo">Empfängt einen Zeiger auf das angeforderte Objekt mit den Typinformationen.</param>
+        <summary>Ruft die Typinformationen für ein Objekt ab, die dann zum Abrufen der Typinformationen für eine Schnittstelle verwendet werden können.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::GetTypeInfo`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Die Methode wird spät gebundenem Zugriff aufgerufen unter Verwendung des COM <c>IDispatch</c> Schnittstelle.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._AssemblyBuilder.GetTypeInfoCount">
+      <MemberSignature Language="C#" Value="void _AssemblyBuilder.GetTypeInfoCount (out uint pcTInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._AssemblyBuilder.GetTypeInfoCount([out] unsigned int32&amp; pcTInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.System#Runtime#InteropServices#_AssemblyBuilder#GetTypeInfoCount(System.UInt32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pcTInfo" Type="System.UInt32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pcTInfo">Zeigt auf einen Speicherort, der die Anzahl der Schnittstellen mit Typinformationen empfängt, die vom Objekt bereitgestellt werden.</param>
+        <summary>Ruft die Anzahl der Schnittstellen mit Typinformationen ab, die von einem Objekt bereitgestellt werden (0 oder 1).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::GetTypeInfoCount`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Die Methode wird spät gebundenem Zugriff aufgerufen unter Verwendung des COM <c>IDispatch</c> Schnittstelle.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._AssemblyBuilder.Invoke">
+      <MemberSignature Language="C#" Value="void _AssemblyBuilder.Invoke (uint dispIdMember, ref Guid riid, uint lcid, short wFlags, IntPtr pDispParams, IntPtr pVarResult, IntPtr pExcepInfo, IntPtr puArgErr);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._AssemblyBuilder.Invoke(unsigned int32 dispIdMember, [in]valuetype System.Guid&amp; riid, unsigned int32 lcid, int16 wFlags, native int pDispParams, native int pVarResult, native int pExcepInfo, native int puArgErr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.AssemblyBuilder.System#Runtime#InteropServices#_AssemblyBuilder#Invoke(System.UInt32,System.Guid@,System.UInt32,System.Int16,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dispIdMember" Type="System.UInt32" />
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="wFlags" Type="System.Int16" />
+        <Parameter Name="pDispParams" Type="System.IntPtr" />
+        <Parameter Name="pVarResult" Type="System.IntPtr" />
+        <Parameter Name="pExcepInfo" Type="System.IntPtr" />
+        <Parameter Name="puArgErr" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="dispIdMember">Bezeichnet den Member.</param>
+        <param name="riid">Für zukünftige Verwendung reserviert. Muss IID_NULL sein.</param>
+        <param name="lcid">Der Gebietsschemakontext, in dem Argumente interpretiert werden sollen.</param>
+        <param name="wFlags">Flags, die den Kontext des Aufrufs beschreiben.</param>
+        <param name="pDispParams">Ein Zeiger auf eine Struktur, die ein Array von Argumenten und ein Array von Argument-DISPIDs für benannte Argumente sowie Zähler für die Anzahl der Elemente in jedem Array enthält.</param>
+        <param name="pVarResult">Ein Verweis auf den Speicherort, an dem das Ergebnis gespeichert werden soll.</param>
+        <param name="pExcepInfo">Ein Zeiger auf eine Struktur mit Ausnahmeinformationen.</param>
+        <param name="puArgErr">Der Index des ersten Arguments mit einem Fehler.</param>
+        <summary>Stellt den Zugriff auf von einem Objekt verfügbar gemachte Eigenschaften und Methoden bereit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::Invoke`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Die Methode wird spät gebundenem Zugriff aufgerufen unter Verwendung des COM <c>IDispatch</c> Schnittstelle.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

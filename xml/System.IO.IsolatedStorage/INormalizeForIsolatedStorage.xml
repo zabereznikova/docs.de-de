@@ -1,0 +1,77 @@
+<Type Name="INormalizeForIsolatedStorage" FullName="System.IO.IsolatedStorage.INormalizeForIsolatedStorage">
+  <TypeSignature Language="C#" Value="public interface INormalizeForIsolatedStorage" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract INormalizeForIsolatedStorage" />
+  <TypeSignature Language="DocId" Value="T:System.IO.IsolatedStorage.INormalizeForIsolatedStorage" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht Vergleiche zwischen einem isolierten Speicher, der eine Anwendungsdomäne und der Beweis der Assembly an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isolierte Speicherung Indizien und Spuren zu einer Assembly, damit es identifiziert und ihn mit einem eindeutigen Dateinamen Speicherort angeben. Wenn eine Assembly einen Speicher anfordert, wird seine Beweis (wie durch den Host, die sie geladen dargestellt) verarbeitet und im Vergleich mit dem Beweis verwendet, um die vorhandenen Speicher zu erstellen. Dies bestimmt, ob Sie einen neuen Speicher erstellen müssen, oder wenn eine für die betreffende Assembly bereits vorhanden ist. Aufgrund der Vergleichsmethode, die verwendet wird können Teile von Beweisen, die funktionell gleichwertig sind nicht in einem Vergleich "true" ergeben, wenn die serialisierten Formen nicht identisch sind. Beim Implementieren benutzerdefinierter Beweise, erwägen Sie, ob dies der Fall für die Beweisklasse ist, und wenn dies der Fall ist, implementieren Sie <xref:System.IO.IsolatedStorage.INormalizeForIsolatedStorage>. Nach Spuren, die diese Schnittstelle implementiert, die <xref:System.IO.IsolatedStorage.INormalizeForIsolatedStorage.Normalize%2A> Methode wird aufgerufen, und Vergleiche werden basierend auf der normalisierten Kopie des Objekts, das von dieser Methode zurückgegeben.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Implementieren Sie diese Schnittstelle, wenn Sie benutzerdefinierten Beweis implementieren und zu bestimmen, ob bereits ein Speicher benötigen. Serialisierte Objekte sollten nicht für Vergleiche in einigen Fällen, beispielsweise von Groß-/Kleinschreibung beachtet Zeichenfolgen verwendet werden. Beispielsweise www.MSN.com WWW.msn.com entspricht, und gibt zurück, eine <see langword="true" /> bei einem Vergleich. Zum Erstellen einer <see cref="T:System.IO.IsolatedStorage.INormalizeForIsolatedStorage" /> -Objekt müssen Sie zum Implementieren der <see cref="M:System.IO.IsolatedStorage.INormalizeForIsolatedStorage.Normalize" /> Methode.</para>
+    </block>
+    <block subset="none" type="usage">
+      <para>Rufen Sie die Methoden dieser Schnittstelle die Instanz zu normalisieren, bevor Speicher Vergleiche zwischen einer Assembly Beweis und den derzeit vorhandenen isoliert werden.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="Normalize">
+      <MemberSignature Language="C#" Value="public object Normalize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Normalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.IsolatedStorage.INormalizeForIsolatedStorage.Normalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse gibt eine normalisierte Kopie des Objekts, auf dem sie aufgerufen wird.</summary>
+        <returns>Eine normalisierte-Objekt, das die Instanz darstellt, auf der diese Methode aufgerufen wurde. Diese Instanz kann eine Zeichenfolge, Datenstrom oder ein beliebiges Objekt serialisierbar sein.</returns>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie diese Methode überschreiben, und das zurückgegebene Objekt ein Stream ist, wird davon ausgegangen, dass serialisiert werden und wird direkt an die serialisierte Form des Beweises zum Erstellen von vorhandenen Speicher verglichen. Wenn das zurückgegebene Objekt eine Zeichenfolge ist, wird es als den Namen des einem isolierten Speicher und im Vergleich zu den Namen der vorhandenen Speicher.</para>
+        </block>
+        <block subset="none" type="usage">
+          <para>Sie rufen diese Methode in der Regel auf, wenn Sie aus dem isolierten Speicher abgeleitete Klasse schreiben, und Sie müssen Sie überprüfen, um festzustellen, ob der isolierte Speicher für die aktuelle Assembly ist bereits vorhanden.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

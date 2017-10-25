@@ -1,0 +1,721 @@
+<Type Name="CategoryAttribute" FullName="System.ComponentModel.CategoryAttribute">
+  <TypeSignature Language="C#" Value="public class CategoryAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CategoryAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.CategoryAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.All)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt den Namen der Kategorie, in der Gruppe die Eigenschaft oder das Ereignis bei der Anzeige in einem <see cref="T:System.Windows.Forms.PropertyGrid" /> Steuerelement Modus nach Kategorien festgelegt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.ComponentModel.CategoryAttribute> gibt die Kategorie aus, um die zugeordnete Eigenschaft oder das zugeordnete Ereignis zuzuordnen beim Auflisten von Eigenschaften oder Ereignisse in einer <xref:System.Windows.Forms.PropertyGrid> ControlSet <xref:System.Windows.Forms.PropertySort.Categorized> Modus. Wenn eine <xref:System.ComponentModel.CategoryAttribute> nicht auf eine Eigenschaft oder ein Ereignis angewendet wurde die <xref:System.Windows.Forms.PropertyGrid> ordnet sie der **Verschiedenes** Kategorie. Eine neue Kategorie kann für einen beliebigen Namen erstellt werden, indem Sie den Namen der Kategorie im Konstruktor für die <xref:System.ComponentModel.CategoryAttribute>.  
+  
+ Die <xref:System.ComponentModel.CategoryAttribute.Category%2A> Eigenschaft gibt den Namen der Kategorie an, das Attribut darstellt. Die <xref:System.ComponentModel.CategoryAttribute.Category%2A> Eigenschaft ermöglicht außerdem die transparente Lokalisierung von Kategorienamen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt die `MyImage` Eigenschaft. Die Eigenschaft verfügt über zwei Attribute: eine <xref:System.ComponentModel.DescriptionAttribute> und ein <xref:System.ComponentModel.CategoryAttribute>.  
+  
+ [!code-cpp[Classic CategoryAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic CategoryAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic CategoryAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic CategoryAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic CategoryAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic CategoryAttribute Example/VB/source.vb#1)]  
+  
+ Im nächste Beispiel ruft die Kategorie für `MyImage`. Zuerst wird der Code Ruft ab einen <xref:System.ComponentModel.PropertyDescriptorCollection> mit allen Eigenschaften für das Objekt. Als Nächstes der Code indiziert, in der <xref:System.ComponentModel.PropertyDescriptorCollection> abzurufenden `MyImage`. Es gibt die Attribute für diese Eigenschaft zurück und speichert sie in der Variablen `attributes`.  
+  
+ Das Beispiel gibt dann die Kategorie aus, durch das Abrufen von <xref:System.ComponentModel.CategoryAttribute> aus der <xref:System.ComponentModel.AttributeCollection>, und sie in das Konsolenfenster geschrieben.  
+  
+ [!code-cpp[Classic CategoryAttribute Example#2](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic CategoryAttribute Example/CPP/source.cpp#2)]
+ [!code-csharp[Classic CategoryAttribute Example#2](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic CategoryAttribute Example/CS/source.cs#2)]
+ [!code-vb[Classic CategoryAttribute Example#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic CategoryAttribute Example/VB/source.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Wenn Sie die Kategorienamen abgesehen von den vordefinierten Namen verwenden und die Kategorienamen lokalisieren möchten, müssen Sie überschreiben die <see cref="M:System.ComponentModel.CategoryAttribute.GetLocalizedString(System.String)" /> Methode.  
+  
+ Die <see cref="T:System.ComponentModel.CategoryAttribute" /> Klasse definiert die folgenden allgemeinen Kategorien:  
+  
+ <list type="table"><listheader><term>Kategorie  
+  
+ </term><description>Beschreibung  
+  
+ </description></listheader><item><term><see cref="P:System.ComponentModel.CategoryAttribute.Action" /></term><description>Eigenschaften, die im Zusammenhang mit verfügbaren Aktionen.  
+  
+ </description></item><item><term><see cref="P:System.ComponentModel.CategoryAttribute.Appearance" /></term><description>Eigenschaften wie eine Entität angezeigt wird.  
+  
+ </description></item><item><term><see cref="P:System.ComponentModel.CategoryAttribute.Behavior" /></term><description>Eigenschaften in Bezug auf das Verhalten einer Entität.  
+  
+ </description></item><item><term><see cref="P:System.ComponentModel.CategoryAttribute.Data" /></term><description>Eigenschaften, die im Zusammenhang mit Daten und datenverwaltung-Quelle.  
+  
+ </description></item><item><term><see cref="P:System.ComponentModel.CategoryAttribute.Default" /></term><description>Eigenschaften, die in einer Standardkategorie gruppiert sind.  
+  
+ </description></item><item><term><see cref="P:System.ComponentModel.CategoryAttribute.Design" /></term><description>Eigenschaften, die nur zur Entwurfszeit verfügbar sind.  
+  
+ </description></item><item><term><see cref="P:System.ComponentModel.CategoryAttribute.DragDrop" /></term><description>Eigenschaften, die im Zusammenhang mit Drag und Drop-Vorgänge.  
+  
+ </description></item><item><term><see cref="P:System.ComponentModel.CategoryAttribute.Focus" /></term><description>Eigenschaften, die im Zusammenhang mit den Fokus.  
+  
+ </description></item><item><term><see cref="P:System.ComponentModel.CategoryAttribute.Format" /></term><description>Eigenschaften, die im Zusammenhang mit der Formatierung.  
+  
+ </description></item><item><term><see cref="P:System.ComponentModel.CategoryAttribute.Key" /></term><description>Eigenschaften, die im Zusammenhang mit der Tastatur.  
+  
+ </description></item><item><term><see cref="P:System.ComponentModel.CategoryAttribute.Layout" /></term><description>Eigenschaften, die im Zusammenhang mit Layout.  
+  
+ </description></item><item><term><see cref="P:System.ComponentModel.CategoryAttribute.Mouse" /></term><description>Eigenschaften, die im Zusammenhang mit der Maus.  
+  
+ </description></item><item><term><see cref="P:System.ComponentModel.CategoryAttribute.WindowStyle" /></term><description>Eigenschaften, die im Zusammenhang mit den Fensterstil Formen der obersten Ebene.  
+  
+ </description></item></list>  
+  
+ Weitere Informationen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CategoryAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.CategoryAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.CategoryAttribute" /> -Klasse unter Verwendung der Kategorie Namen Standard.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CategoryAttribute (string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.CategoryAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="category">Der Name der Kategorie.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.CategoryAttribute" /> -Klasse unter Verwendung des angegebenen Kategorie.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie den Namen für Bereitstellen der `category` Parameter ist eine der vordefinierten Kategorie, der Name wird automatisch lokalisiert werden, indem die <xref:System.ComponentModel.CategoryAttribute.Category%2A> Eigenschaft.  
+  
+ Wenn der von Ihnen angegebene Name keinen vordefinierten Kategorienamen ein, und Sie nicht überschreiben die <xref:System.ComponentModel.CategoryAttribute.GetLocalizedString%2A> Methode, um einen lokalisierten Namen, den Namen der Kategorie bereitzustellen wird nicht lokalisiert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public static System.ComponentModel.CategoryAttribute Action { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ComponentModel.CategoryAttribute Action" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.CategoryAttribute.Action" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.CategoryAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.ComponentModel.CategoryAttribute" /> , das die Kategorie Aktion darstellt.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.CategoryAttribute" /> für die Aktionskategorie.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Appearance">
+      <MemberSignature Language="C#" Value="public static System.ComponentModel.CategoryAttribute Appearance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ComponentModel.CategoryAttribute Appearance" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.CategoryAttribute.Appearance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.CategoryAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.ComponentModel.CategoryAttribute" /> , die in der Kategorie Darstellung darstellt.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.CategoryAttribute" /> für die Darstellungskategorie.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Asynchronous">
+      <MemberSignature Language="C#" Value="public static System.ComponentModel.CategoryAttribute Asynchronous { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ComponentModel.CategoryAttribute Asynchronous" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.CategoryAttribute.Asynchronous" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.CategoryAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.ComponentModel.CategoryAttribute" /> , das die Kategorie asynchron darstellt.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.CategoryAttribute" /> für die Kategorie asynchron.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Behavior">
+      <MemberSignature Language="C#" Value="public static System.ComponentModel.CategoryAttribute Behavior { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ComponentModel.CategoryAttribute Behavior" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.CategoryAttribute.Behavior" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.CategoryAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.ComponentModel.CategoryAttribute" /> , die die Verhaltenskategorie darstellt.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.CategoryAttribute" /> für die Verhaltenskategorie.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Category">
+      <MemberSignature Language="C#" Value="public string Category { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Category" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.CategoryAttribute.Category" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Kategorie für die Eigenschaft oder ein Ereignis, das dieses Attribut angewendet wird.</summary>
+        <value>Der Name der Kategorie für die Eigenschaft oder ein Ereignis, das dieses Attribut angewendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ruft <xref:System.ComponentModel.CategoryAttribute.GetLocalizedString%2A> abzurufenden der lokalisierte Name der Kategorie erstmalig darauf zugegriffen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Data">
+      <MemberSignature Language="C#" Value="public static System.ComponentModel.CategoryAttribute Data { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ComponentModel.CategoryAttribute Data" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.CategoryAttribute.Data" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.CategoryAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.ComponentModel.CategoryAttribute" /> , das die Kategorie der Daten darstellt.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.CategoryAttribute" /> für die Kategorie der Daten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static System.ComponentModel.CategoryAttribute Default { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ComponentModel.CategoryAttribute Default" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.CategoryAttribute.Default" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.CategoryAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.ComponentModel.CategoryAttribute" /> , das die Standardkategorie darstellt.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.CategoryAttribute" /> für die Standardkategorie.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Design">
+      <MemberSignature Language="C#" Value="public static System.ComponentModel.CategoryAttribute Design { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ComponentModel.CategoryAttribute Design" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.CategoryAttribute.Design" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.CategoryAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.ComponentModel.CategoryAttribute" /> , das die Kategorie Entwurf darstellt.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.CategoryAttribute" /> für die Entwurfskategorie.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DragDrop">
+      <MemberSignature Language="C#" Value="public static System.ComponentModel.CategoryAttribute DragDrop { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ComponentModel.CategoryAttribute DragDrop" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.CategoryAttribute.DragDrop" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.CategoryAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.ComponentModel.CategoryAttribute" /> , die Drag &amp; Drop-Kategorie darstellt.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.CategoryAttribute" /> für die Drag-and-Drop-Kategorie.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.CategoryAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, dessen auf Wertgleichheit geprüft.</param>
+        <summary>Gibt zurück, ob der Wert des angegebenen Objekts gleich dem aktuellen <see cref="T:System.ComponentModel.CategoryAttribute" />...</summary>
+        <returns>
+          <see langword="true" />Wenn der Wert des angegebenen Objekts gleich der aktuellen ist. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Focus">
+      <MemberSignature Language="C#" Value="public static System.ComponentModel.CategoryAttribute Focus { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ComponentModel.CategoryAttribute Focus" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.CategoryAttribute.Focus" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.CategoryAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.ComponentModel.CategoryAttribute" /> , das die Kategorie Fokus darstellt.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.CategoryAttribute" /> für die Fokuskategorie.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Format">
+      <MemberSignature Language="C#" Value="public static System.ComponentModel.CategoryAttribute Format { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ComponentModel.CategoryAttribute Format" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.CategoryAttribute.Format" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.CategoryAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.ComponentModel.CategoryAttribute" /> , das die Kategorie Format darstellt.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.CategoryAttribute" /> für die Formatkategorie.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.CategoryAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für dieses Attribut zurück.</summary>
+        <returns>Ein 32-Bit-Hashcode als ganze Zahl mit Vorzeichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLocalizedString">
+      <MemberSignature Language="C#" Value="protected virtual string GetLocalizedString (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetLocalizedString(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.CategoryAttribute.GetLocalizedString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Bezeichner für die Kategorie, die gesucht werden soll.</param>
+        <summary>Sucht den lokalisierten Namen der angegebenen Kategorie.</summary>
+        <returns>Der lokalisierte Name der Kategorie, oder <see langword="null" /> , wenn ein lokalisierter Name nicht vorhanden ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.CategoryAttribute.Category%2A> Eigenschaft ruft diese Methode beim ersten Zugriff darauf möglich ist um den lokalisierten Namen für die angegebene Kategorie zu suchen.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Überschreiben Sie diese Methode, um eine eigene lokalisierten Namen Kategorien hinzufügen. Wenn eine lokalisierte Zeichenfolge für den gegebenen Wert verfügbar ist, sollten Sie von die Methode zurück. Rufen Sie andernfalls der Basisklasse <see cref="M:System.ComponentModel.CategoryAttribute.GetLocalizedString(System.String)" /> Methode, um die Basisklasse, die die Zeichenfolge zu lokalisieren.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultAttribute">
+      <MemberSignature Language="C#" Value="public override bool IsDefaultAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefaultAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.CategoryAttribute.IsDefaultAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob dieses Attribut die Standardeinstellung ist.</summary>
+        <returns>
+          <see langword="true" />Wenn das Attribut der Standardwert für diese Attributklasse ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Key">
+      <MemberSignature Language="C#" Value="public static System.ComponentModel.CategoryAttribute Key { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ComponentModel.CategoryAttribute Key" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.CategoryAttribute.Key" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.CategoryAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.ComponentModel.CategoryAttribute" /> , das die Kategorie Schlüssel darstellt.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.CategoryAttribute" /> für die Kategorie Schlüssel.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Layout">
+      <MemberSignature Language="C#" Value="public static System.ComponentModel.CategoryAttribute Layout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ComponentModel.CategoryAttribute Layout" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.CategoryAttribute.Layout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.CategoryAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.ComponentModel.CategoryAttribute" /> , das die Kategorie Layout darstellt.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.CategoryAttribute" /> für die Layoutkategorie.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mouse">
+      <MemberSignature Language="C#" Value="public static System.ComponentModel.CategoryAttribute Mouse { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ComponentModel.CategoryAttribute Mouse" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.CategoryAttribute.Mouse" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.CategoryAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.ComponentModel.CategoryAttribute" /> , das die Kategorie Maus darstellt.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.CategoryAttribute" /> für die Mauskategorie.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WindowStyle">
+      <MemberSignature Language="C#" Value="public static System.ComponentModel.CategoryAttribute WindowStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ComponentModel.CategoryAttribute WindowStyle" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.CategoryAttribute.WindowStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.CategoryAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.ComponentModel.CategoryAttribute" /> , das die Kategorie Fensterstil darstellt.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.CategoryAttribute" /> für die Fensterstilkategorie.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

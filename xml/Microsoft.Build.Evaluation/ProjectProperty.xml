@@ -1,0 +1,309 @@
+<Type Name="ProjectProperty" FullName="Microsoft.Build.Evaluation.ProjectProperty">
+  <TypeSignature Language="C#" Value="public abstract class ProjectProperty : IEquatable&lt;Microsoft.Build.Evaluation.ProjectProperty&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ProjectProperty extends System.Object implements class System.IEquatable`1&lt;class Microsoft.Build.Evaluation.ProjectProperty&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Evaluation.ProjectProperty" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;Microsoft.Build.Evaluation.ProjectProperty&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("{Name}={EvaluatedValue} [{UnevaluatedValue}]")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine ausgewertete Entwurfszeiteigenschaft dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EvaluatedValue">
+      <MemberSignature Language="C#" Value="public string EvaluatedValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EvaluatedValue" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectProperty.EvaluatedValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den ausgewerteten Eigenschaftswert ab.</summary>
+        <value>Gibt den ausgewerteten Eigenschaftswert, der nie null ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kann nicht direkt festgelegt werden. nur der nicht ausgewertete Wert kann festgelegt werden. Der ausgewertete Wert enthält kein Escape-Zeichensequenzen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnvironmentProperty">
+      <MemberSignature Language="C#" Value="public abstract bool IsEnvironmentProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEnvironmentProperty" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectProperty.IsEnvironmentProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bestimmt, ob die Eigenschaft aus der Umgebungsvariablen stammt.</summary>
+        <value>True, wenn die Eigenschaft aus einer Umgebungsvariablen stammt. "false" andernfalls.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsGlobalProperty">
+      <MemberSignature Language="C#" Value="public abstract bool IsGlobalProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsGlobalProperty" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectProperty.IsGlobalProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bestimmt, ob die Eigenschaft eine globale Eigenschaft ist.</summary>
+        <value>True, wenn die Eigenschaft eine globale Eigenschaft ist. "false" andernfalls.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsImported">
+      <MemberSignature Language="C#" Value="public abstract bool IsImported { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsImported" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectProperty.IsImported" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bestimmt, ob die Eigenschaft aus einer importierten Datei stammt.</summary>
+        <value>Gibt "true" zurück, wenn die Eigenschaft in einer importierten Datei und nicht aus einer Umgebungsvariablen, eine globale Eigenschaft oder eine reservierte Eigenschaft stammt. Andernfalls wird False zurückgegeben.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReservedProperty">
+      <MemberSignature Language="C#" Value="public abstract bool IsReservedProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReservedProperty" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectProperty.IsReservedProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bestimmt, ob die Eigenschaft eine reservierte Eigenschaft, z. B. 'MSBuildProjectFile' ist.</summary>
+        <value>Gibt "true" zurück, wenn die Eigenschaft eine reservierte Eigenschaft ist; "false" andernfalls.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public abstract string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectProperty.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerBrowsable(System.Diagnostics.DebuggerBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Eigenschaft ab.</summary>
+        <value>Gibt den Name der Eigenschaft zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Predecessor">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Build.Evaluation.ProjectProperty Predecessor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Evaluation.ProjectProperty Predecessor" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectProperty.Predecessor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Evaluation.ProjectProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die letzte Eigenschaft, die während der Auswertung von dieser Eigenschaft überschrieben wurde.</summary>
+        <value>Gibt die letzte Eigenschaft, deren Wert während der Auswertung von dieser Eigenschaft überschrieben wurde. Gibt null zurück, wenn die Eigenschaft nicht überschrieben wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode sucht alle Eigenschaften mit dem gleichen Namen, diese Punkte oben in der logischen Projektdatei und deren Bedingungen auf "true" ausgewertet.  
+  
+ Wenn das Projekt nicht seit der letzten Änderung erneut ausgewertet wurde, kann dieser Wert falsch sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Project">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Evaluation.Project Project { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Evaluation.Project Project" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectProperty.Project" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerBrowsable(System.Diagnostics.DebuggerBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Evaluation.Project</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Projekt, das diese Eigenschaft enthält.</summary>
+        <value>Gibt das Projekt, das diese Eigenschaft enthält, die niemals null ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IEquatable&lt;Microsoft.Build.Evaluation.ProjectProperty&gt;.Equals">
+      <MemberSignature Language="C#" Value="bool IEquatable&lt;ProjectProperty&gt;.Equals (Microsoft.Build.Evaluation.ProjectProperty other);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.IEquatable&lt;Microsoft.Build.Evaluation.ProjectProperty&gt;.Equals(class Microsoft.Build.Evaluation.ProjectProperty other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectProperty.System#IEquatable&lt;Microsoft#Build#Evaluation#ProjectProperty&gt;#Equals(Microsoft.Build.Evaluation.ProjectProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="Microsoft.Build.Evaluation.ProjectProperty" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die Projekteigenschaft, mit der verglichen werden soll.</param>
+        <summary>Vergleicht diese Projekteigenschaft mit der angegebenen Projekteigenschaft auf Gleichheit.</summary>
+        <returns>Gibt „true“ zurück, wenn die Projekteigenschaften gleich sind, andernfalls „false“.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnevaluatedValue">
+      <MemberSignature Language="C#" Value="public abstract string UnevaluatedValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UnevaluatedValue" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectProperty.UnevaluatedValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den nicht ausgewerteten Eigenschaftswert fest.</summary>
+        <value>Gibt den nicht ausgewerteten Eigenschaftswert zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Setter-Methode aktualisiert den nicht ausgewerteten Wert und den ausgewerteten Wert jedoch wirkt sich etwas im Projekt nicht bis zum erneuten Auswertung.  
+  
+ Die enthaltende Projekt als geändert markiert. Nicht ausgewerteten Werte werden als enthalten Escapezeichensequenzen nach Bedarf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Xml">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Build.Construction.ProjectPropertyElement Xml { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ProjectPropertyElement Xml" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectProperty.Xml" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerBrowsable(System.Diagnostics.DebuggerBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectPropertyElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Element zugeordneten Eigenschaft ab. Sichern die XML-Eigenschaft. NULL, wenn Sie einen globalen sieht, Umgebung oder integrierte-Eigenschaft.</summary>
+        <value>Gibt das Element zugeordnete Eigenschaft zurück. Gibt null zurück, wenn dies eine globale oder reservierte Eigenschaft ist oder von einer Umgebungsvariablen stammt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

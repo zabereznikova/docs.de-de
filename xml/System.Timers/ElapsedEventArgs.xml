@@ -1,0 +1,82 @@
+<Type Name="ElapsedEventArgs" FullName="System.Timers.ElapsedEventArgs">
+  <TypeSignature Language="C#" Value="public class ElapsedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ElapsedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Timers.ElapsedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Timers.Timer.Elapsed" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel instanziiert einen <xref:System.Timers.Timer> -Objekt, das ausgelöst wird seine <xref:System.Timers.Timer.Elapsed?displayProperty=nameWithType> Ereignis alle zwei Sekunden (2000 Millisekunden), richtet einen Ereignishandler für das Ereignis und startet den Timer. Der Ereignishandler zeigt den Wert des der <xref:System.Timers.ElapsedEventArgs.SignalTime%2A?displayProperty=nameWithType> Eigenschaft jedes Mal, es wird ausgelöst.  
+  
+ [!code-cpp[System.Timers.Timer#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.timers.timer/cpp/timer1.cpp#1)]
+ [!code-csharp[System.Timers.Timer#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.timers.timer/cs/timer1.cs#1)]
+ [!code-vb[System.Timers.Timer#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.timers.timer/vb/timer1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="SignalTime">
+      <MemberSignature Language="C#" Value="public DateTime SignalTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime SignalTime" />
+      <MemberSignature Language="DocId" Value="P:System.Timers.ElapsedEventArgs.SignalTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Datum/die Uhrzeit ab, zu der das <see cref="E:System.Timers.Timer.Elapsed" />-Ereignis ausgelöst wurde.</summary>
+        <value>Die Zeit, zu der das <see cref="E:System.Timers.Timer.Elapsed" />-Ereignis ausgelöst wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Timers.Timer.Elapsed?displayProperty=nameWithType> Ereignis wird ausgelöst, auf eine <xref:System.Threading.ThreadPool> thread, damit die Methode für die Ereignisbehandlung in einem Thread gleichzeitig ausführen kann Zeit, die einen Aufruf der <xref:System.Timers.Timer.Stop%2A?displayProperty=nameWithType> Methode, die in einem anderen Thread ausgeführt wird. Dadurch kann die <xref:System.Timers.Timer.Elapsed> Ereignis wird ausgelöst, nachdem die <xref:System.Timers.Timer.Stop%2A> Methode wird aufgerufen. Diese Racebedingung kann nicht einfach durch den Vergleich verhindert werden die <xref:System.Timers.ElapsedEventArgs.SignalTime%2A> Eigenschaft mit der Zeit bei der <xref:System.Timers.Timer.Stop%2A> -Methode aufgerufen wird, da die Ereignisbehandlungsmethode bereits ausgeführt wird, wenn möglicherweise die <xref:System.Timers.Timer.Stop%2A> Methode aufgerufen wird, oder beginnen kann zwischen dem Zeitpunkt ausführen bei der <xref:System.Timers.Timer.Stop%2A> Methode wird aufgerufen, und dem Zeitpunkt, wenn die Beendigungszeit gespeichert wird. Wenn es wichtig ist, um zu verhindern, dass den Thread, die aufruft der <xref:System.Timers.Timer.Stop%2A> Methode aus wird fortgesetzt, während die Ereignisbehandlungsmethode noch ausgeführt wird, verwenden Sie einen robusteren Synchronisierungsmechanismus wie die <xref:System.Threading.Monitor> Klasse oder die <xref:System.Threading.Interlocked.CompareExchange%2A> Methode. Code, verwendet der <xref:System.Threading.Interlocked.CompareExchange%2A> Methode finden Sie im Beispiel für die <xref:System.Timers.Timer.Stop%2A?displayProperty=nameWithType> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel instanziiert einen <xref:System.Timers.Timer> -Objekt, das ausgelöst wird seine <xref:System.Timers.Timer.Elapsed?displayProperty=nameWithType> Ereignis alle zwei Sekunden (2000 Millisekunden), richtet einen Ereignishandler für das Ereignis und startet den Timer. Der Ereignishandler zeigt den Wert des der <xref:System.Timers.ElapsedEventArgs.SignalTime%2A?displayProperty=nameWithType> Eigenschaft jedes Mal, es wird ausgelöst.  
+  
+ [!code-cpp[System.Timers.Timer#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.timers.timer/cpp/timer1.cpp#1)]
+ [!code-csharp[System.Timers.Timer#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.timers.timer/cs/timer1.cs#1)]
+ [!code-vb[System.Timers.Timer#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.timers.timer/vb/timer1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

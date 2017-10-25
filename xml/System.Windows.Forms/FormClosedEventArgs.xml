@@ -1,0 +1,98 @@
+<Type Name="FormClosedEventArgs" FullName="System.Windows.Forms.FormClosedEventArgs">
+  <TypeSignature Language="C#" Value="public class FormClosedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FormClosedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.FormClosedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Forms.Form.FormClosed" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Form.FormClosed> Ereignis tritt auf, nachdem ein Formular, entweder durch den Benutzer über die Benutzeroberfläche (UI) oder programmgesteuert durch Aufrufe von Methoden wie z. B. geschlossen wurde <xref:System.Windows.Forms.Form.Close%2A> in der <xref:System.Windows.Forms.Form> Klasse oder <xref:System.Windows.Forms.Application.Exit%2A> in die <xref:System.Windows.Forms.Application> Klasse. Wenn ein Formular alle untergeordneten oder Formulare, weist eine <xref:System.Windows.Forms.Form.FormClosed> Ereignis wird auch für jede einzelne.  
+  
+ Die <xref:System.Windows.Forms.FormClosedEventArgs> Klasse stellt Daten für die <xref:System.Windows.Forms.Form.FormClosed> Ereignis. Die <xref:System.Windows.Forms.FormClosedEventArgs.CloseReason%2A> Eigenschaft ermöglicht den Grund, warum das Formular geschlossen wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Typs. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.Form.FormClosed> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.Form> mit dem Namen `Form1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.Form.FormClosed> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#395](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#395)]
+ [!code-vb[System.Windows.Forms.EventExamples#395](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#395)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FormClosedEventArgs (System.Windows.Forms.CloseReason closeReason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.CloseReason closeReason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FormClosedEventArgs.#ctor(System.Windows.Forms.CloseReason)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="closeReason" Type="System.Windows.Forms.CloseReason" />
+      </Parameters>
+      <Docs>
+        <param name="closeReason">Ein <see cref="T:System.Windows.Forms.CloseReason" /> Wert, der den Grund darstellt, warum das Formular geschlossen wurde.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.FormClosedEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `closeReason` Parameter zur Initialisierung der <xref:System.Windows.Forms.FormClosedEventArgs.CloseReason%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseReason">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.CloseReason CloseReason { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.CloseReason CloseReason" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.FormClosedEventArgs.CloseReason" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CloseReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, warum das Formular geschlossen wurde.</summary>
+        <value>Eines der <see cref="T:System.Windows.Forms.CloseReason" /> -Enumerationswerte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Forms.Form> aufgrund eine Vielzahl von Gründen Benutzerinitiierte und programmgesteuerte geschlossen werden kann. Die <xref:System.Windows.Forms.FormClosingEventArgs.CloseReason%2A> Eigenschaft gibt den Grund für den Abschluss.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.Form.FormClosed?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.Form> mit dem Namen `Form1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.Form.FormClosed?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#395](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#395)]
+ [!code-vb[System.Windows.Forms.EventExamples#395](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#395)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

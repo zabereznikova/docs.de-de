@@ -1,0 +1,126 @@
+<Type Name="LinearSizeKeyFrame" FullName="System.Windows.Media.Animation.LinearSizeKeyFrame">
+  <TypeSignature Language="C#" Value="public class LinearSizeKeyFrame : System.Windows.Media.Animation.SizeKeyFrame" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LinearSizeKeyFrame extends System.Windows.Media.Animation.SizeKeyFrame" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.LinearSizeKeyFrame" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.SizeKeyFrame</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Erstellt eine Animation über die <see cref="T:System.Windows.Size" /> -Wert des vorherigen Keyframes in seine eigene <see cref="P:System.Windows.Media.Animation.SizeKeyFrame.Value" /> unter Verwendung der linearen Interpolation.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse dient als Teil einer <xref:System.Windows.Media.Animation.SizeKeyFrameCollection> in Verbindung mit einem <xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames> zu animierende eine <xref:System.Windows.Size> Eigenschaftswert für einen Satz von Keyframes.  
+  
+ Ein Keyframe definiert einen Zeitabschnitt der <xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames> zu der er gehört. Jedem Keyframe hat ein Ziel <xref:System.Windows.Media.Animation.SizeKeyFrame.Value%2A> und ein <xref:System.Windows.Media.Animation.SizeKeyFrame.KeyTime%2A>. Die <xref:System.Windows.Media.Animation.SizeKeyFrame.KeyTime%2A> gibt an, der Zeitpunkt des Keyframes <xref:System.Windows.Media.Animation.SizeKeyFrame.Value%2A> erreicht werden soll. Ein Keyframe erstellt eine Animation über den Zielwert des vorherigen Keyframes auf einem eigenen Zielwert aus. Es beginnt, wenn die vorherige Keyframes beendet und beendet, wenn eine eigene Schlüsselzeit erreicht ist.  
+  
+ Lineare Keyframes wie <xref:System.Windows.Media.Animation.LinearSizeKeyFrame> eine glatte, lineare Interpolation zwischen Werten zu erstellen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinearSizeKeyFrame ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.LinearSizeKeyFrame.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.LinearSizeKeyFrame" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinearSizeKeyFrame (System.Windows.Size value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Size value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.LinearSizeKeyFrame.#ctor(System.Windows.Size)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Endwert (auch als „Zielwert“ bezeichnet) für den Keyframe.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.LinearSizeKeyFrame" />-Klasse mit dem angegebenen Endwert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinearSizeKeyFrame (System.Windows.Size value, System.Windows.Media.Animation.KeyTime keyTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Size value, valuetype System.Windows.Media.Animation.KeyTime keyTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.LinearSizeKeyFrame.#ctor(System.Windows.Size,System.Windows.Media.Animation.KeyTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Size" />
+        <Parameter Name="keyTime" Type="System.Windows.Media.Animation.KeyTime" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Endwert (auch als „Zielwert“ bezeichnet) für den Keyframe.</param>
+        <param name="keyTime">Die Schlüsselzeit für den Keyframe. Die Schlüsselzeit bestimmt, wann der Zielwert erreicht wird, was auch dem Ende des Keyframes entspricht.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.LinearSizeKeyFrame" />-Klasse mit dem angegebenen Endwert und der Schlüsselzeit.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.LinearSizeKeyFrame.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz von <see cref="T:System.Windows.Media.Animation.LinearSizeKeyFrame" />.</summary>
+        <returns>Eine neue <see cref="T:System.Windows.Media.Animation.LinearSizeKeyFrame" />-Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterpolateValueCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size InterpolateValueCore (System.Windows.Size baseValue, double keyFrameProgress);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size InterpolateValueCore(valuetype System.Windows.Size baseValue, float64 keyFrameProgress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.LinearSizeKeyFrame.InterpolateValueCore(System.Windows.Size,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseValue" Type="System.Windows.Size" />
+        <Parameter Name="keyFrameProgress" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="baseValue">Der Wert, von dem animiert werden soll.</param>
+        <param name="keyFrameProgress">Ein Wert zwischen 0,0 und 1,0 (einschließlich), der den Prozentsatz der verstrichenen Zeit für diesen Keyframe angibt.</param>
+        <summary>Nimmt mithilfe des angegebenen Fortschrittsinkrements eine lineare Interpolation zwischen dem vorherigen Keyframewert und dem Wert des aktuellen Keyframes vor.</summary>
+        <returns>Der Ausgabewert dieses Keyframes unter Verwendung des angegebenen Basiswerts und Fortschritts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

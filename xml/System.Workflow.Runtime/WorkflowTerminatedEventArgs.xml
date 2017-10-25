@@ -1,0 +1,85 @@
+<Type Name="WorkflowTerminatedEventArgs" FullName="System.Workflow.Runtime.WorkflowTerminatedEventArgs">
+  <TypeSignature Language="C#" Value="public class WorkflowTerminatedEventArgs : System.Workflow.Runtime.WorkflowEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WorkflowTerminatedEventArgs extends System.Workflow.Runtime.WorkflowEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.WorkflowTerminatedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.Runtime.WorkflowEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Workflow.Runtime.WorkflowRuntime.WorkflowTerminated" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Sie können eine Workflowinstanz auf drei Arten beenden: Der Host kann <xref:System.Workflow.Runtime.WorkflowInstance.Terminate%2A?displayProperty=nameWithType> aufrufen, eine <xref:System.Workflow.ComponentModel.TerminateActivity>-Aktivität kann aus der Workflowinstanz aufgerufen werden oder das Workflowlaufzeitmodul kann die Instanz aufgrund einer nicht behandelten Ausnahme beenden. Wenn die Workflowinstanz beendet wird, löst das Workflowlaufzeitmodul das <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowTerminated?displayProperty=nameWithType>-Ereignis aus. Der Host kann dieses Ereignis abonnieren, indem er <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowTerminated?displayProperty=nameWithType> einen Ereignishandler hinzufügt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt eine Ereignishandlermethode, die <xref:System.Workflow.Runtime.WorkflowTerminatedEventArgs> als Parameter erfordert. Die `OnWorkflowTerminated`-Methode wird aufgerufen, wenn das <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowTerminated>-Ereignis ausgelöst wird. Der Code verwendet die <xref:System.Workflow.Runtime.WorkflowTerminatedEventArgs.Exception%2A>-Eigenschaft zum Abrufen der Meldung, die der Ausnahme zugeordnet ist, die das Beenden des Workflows bewirkt hat.  
+  
+ Dieses Codebeispiel ist Teil des Sequential Workflow with Parameters SDK-Beispiels in der Datei Program.cs. Weitere Informationen finden Sie unter [sequenzieller Workflow mit Parametern](http://msdn.microsoft.com/en-us/17157f2d-8fed-4848-a386-e4efa381b66b).  
+  
+ [!code-csharp[WF_Samples#193](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets19.cs#193)]
+ [!code-vb[WF_Samples#193](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets19.vb#193)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public Exception Exception { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Exception" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.WorkflowTerminatedEventArgs.Exception" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ausnahme ab, die bewirkt hat, dass die Workflowinstanz beendet wird.</summary>
+        <value>Die <see cref="T:System.Exception" />, die bewirkt hat, dass die Workflowinstanz beendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Workflowinstanz aufgrund einer nicht behandelten Ausnahme beendet wird, enthält <xref:System.Workflow.Runtime.WorkflowTerminatedEventArgs.Exception%2A> die nicht behandelte Ausnahme.  
+  
+ Wenn die Workflowinstanz entweder aufgrund eines Hostaufrufs an <xref:System.Workflow.Runtime.WorkflowInstance.Terminate%2A?displayProperty=nameWithType> oder einer <xref:System.Workflow.ComponentModel.TerminateActivity>-Aktivität beendet wird, enthält die <xref:System.Workflow.Runtime.WorkflowTerminatedEventArgs.Exception%2A> eine <xref:System.Workflow.ComponentModel.WorkflowTerminatedException>, für die die <xref:System.Exception.Message%2A>-Eigenschaft auf eine Beschreibung des Grunds für die Beendigung gesetzt ist. Wenn der Host die Workflowinstanz beendet, stellt er diese Beschreibung im `string`-Parameter für <xref:System.Workflow.Runtime.WorkflowInstance.Terminate%2A?displayProperty=nameWithType> bereit. Wenn die Workflowinstanz von einer <xref:System.Workflow.ComponentModel.TerminateActivity> beendet wird, wird die Beschreibung von <xref:System.Workflow.ComponentModel.TerminateActivity.Error%2A?displayProperty=nameWithType> angegeben.  
+  
+> [!NOTE]
+>  Obwohl das Workflowlaufzeitmodul im Falle eines <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowTerminated?displayProperty=nameWithType>-Ereignisses, das nicht Folge einer nicht behandelten Ausnahme ist, eine Beschreibung des Beendigungsgrunds in die <xref:System.Exception.Message%2A>-Eigenschaft einer <xref:System.Workflow.ComponentModel.WorkflowTerminatedException> kapselt, wird diese Ausnahme nicht immer ausgelöst.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie Sie die <xref:System.Workflow.Runtime.WorkflowTerminatedEventArgs.Exception%2A>-Eigenschaft verwenden können, um Informationen zu einer Ausnahme zu erhalten, die die Beendigung eines Workflows bewirkt hat. Die `OnWorkflowTerminated`-Methode verwendet <xref:System.Workflow.Runtime.WorkflowTerminatedEventArgs> als Parameter. Diese Methode wird aufgerufen, wenn das <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowTerminated>-Ereignis ausgelöst wird. Der Code verwendet die <xref:System.Workflow.Runtime.WorkflowTerminatedEventArgs.Exception%2A>-Eigenschaft zum Abrufen der Meldung, die der Ausnahme zugeordnet ist, die das Beenden des Workflows bewirkt hat.  
+  
+ Dieses Codebeispiel ist Teil des Sequential Workflow with Parameters SDK-Beispiels in der Datei Program.cs. Weitere Informationen finden Sie unter [sequenzieller Workflow mit Parametern](http://msdn.microsoft.com/en-us/17157f2d-8fed-4848-a386-e4efa381b66b).  
+  
+ [!code-csharp[WF_Samples#193](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets19.cs#193)]
+ [!code-vb[WF_Samples#193](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets19.vb#193)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

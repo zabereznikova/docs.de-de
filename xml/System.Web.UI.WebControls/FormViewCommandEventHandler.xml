@@ -1,0 +1,61 @@
+<Type Name="FormViewCommandEventHandler" FullName="System.Web.UI.WebControls.FormViewCommandEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void FormViewCommandEventHandler(object sender, FormViewCommandEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FormViewCommandEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.FormViewCommandEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Web.UI.WebControls.FormViewCommandEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Web.UI.WebControls.FormViewCommandEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode, verarbeitet die <see cref="E:System.Web.UI.WebControls.FormView.ItemCommand" /> -Ereignis für ein <see cref="T:System.Web.UI.WebControls.FormView" /> Steuerelement. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.FormView.ItemCommand> Ereignis wird ausgelöst, wenn auf eine Schaltfläche in der <xref:System.Web.UI.WebControls.FormView> Steuerelement geklickt wird. Dadurch können Sie eine Ereignisbehandlungsmethode bereitstellen, die eine benutzerdefinierte Routine ausführt, wenn dieses Ereignis tritt auf.  
+  
+ Schaltflächen innerhalb einer <xref:System.Web.UI.WebControls.FormView> Steuerelement kann auch einige der integrierten Funktionen des Steuerelements aufrufen. Um einen dieser Vorgänge auszuführen, legen die `CommandName` Eigenschaft einer Schaltfläche auf einen der Werte in der folgenden Tabelle.  
+  
+|CommandName-Wert|Beschreibung|  
+|-----------------------|-----------------|  
+|"Cancel"|Bricht einen bearbeiten oder Insert-Vorgang ab und gibt die <xref:System.Web.UI.WebControls.FormView> Steuerelement in den Modus gemäß der <xref:System.Web.UI.WebControls.FormView.DefaultMode%2A> Eigenschaft. Löst das <xref:System.Web.UI.WebControls.FormView.ModeChanged> und <xref:System.Web.UI.WebControls.FormView.ModeChanging> Ereignisse.|  
+|"Löschen"|Löscht den aktuellen Datensatz. Löst das <xref:System.Web.UI.WebControls.FormView.ItemDeleted> und <xref:System.Web.UI.WebControls.FormView.ItemDeleting> Ereignisse.|  
+|"Bearbeiten"|Setzt die <xref:System.Web.UI.WebControls.FormView> Steuerelement im Bearbeitungsmodus befindet. Löst das <xref:System.Web.UI.WebControls.FormView.ModeChanged> und <xref:System.Web.UI.WebControls.FormView.ModeChanging> Ereignisse.|  
+|"Einfügen"|Fügt den aktuellen Datensatz in der Datenquelle an. Löst das <xref:System.Web.UI.WebControls.FormView.ItemInserted> und <xref:System.Web.UI.WebControls.FormView.ItemInserting> Ereignisse.|  
+|"New"|Setzt die <xref:System.Web.UI.WebControls.FormView> Steuerelement im Einfügemodus. Löst das <xref:System.Web.UI.WebControls.FormView.ModeChanged> und <xref:System.Web.UI.WebControls.FormView.ModeChanging> Ereignisse.|  
+|Seite """|Eine Auslagerung durchgeführt. Legen Sie die `CommandArgument` -Eigenschaft der Schaltfläche auf "First", "Last", "Weiter", "Prev" oder eine Seitenzahl zur Angabe der Pagingvorgang ausführen. Löst das <xref:System.Web.UI.WebControls.FormView.PageIndexChanged> und <xref:System.Web.UI.WebControls.FormView.PageIndexChanging> Ereignisse.|  
+|"Update"|Aktualisiert den aktuellen Datensatz in der Datenquelle. Löst das <xref:System.Web.UI.WebControls.FormView.ItemUpdated> und <xref:System.Web.UI.WebControls.FormView.ItemUpdating> Ereignisse.|  
+  
+ Obwohl die <xref:System.Web.UI.WebControls.FormView.ItemCommand> Ereignis wird ausgelöst, wenn auf eine Schaltfläche in der vorherigen Tabelle aufgeführten geklickt wird, wird empfohlen, dass Sie für den Vorgang in der Tabelle aufgeführten Ereignisse behandeln.  
+  
+ Beim Erstellen eines <xref:System.Web.UI.WebControls.FormViewCommandEventHandler>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen über Delegaten für Ereignishandler finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie programmgesteuert hinzufügen einer <xref:System.Web.UI.WebControls.FormViewCommandEventHandler> zum Delegieren der <xref:System.Web.UI.WebControls.FormView.ItemCommand> -Ereignis für eine <xref:System.Web.UI.WebControls.FormView> Steuerelement.  
+  
+ [!code-aspx-csharp[FormViewCommandEventHandler#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewCommandEventHandler/CS/formviewcommandeventhandlercs.aspx#1)]
+ [!code-aspx-vb[FormViewCommandEventHandler#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewCommandEventHandler/VB/formviewcommandeventhandlervb.aspx#1)]  
+  
+ Im folgenden Beispiel wird veranschaulicht, wie deklarativ hinzufügen eine <xref:System.Web.UI.WebControls.FormViewCommandEventHandler> zum Delegieren der <xref:System.Web.UI.WebControls.FormView.ItemCommand> -Ereignis für ein <xref:System.Web.UI.WebControls.FormView> Steuerelement.  
+  
+ [!code-aspx-csharp[FormViewCommandEventHandlerDeclarative#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewCommandEventHandlerDeclarative/CS/formviewcommandeventhandlerdeclarativecs.aspx#1)]
+ [!code-aspx-vb[FormViewCommandEventHandlerDeclarative#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewCommandEventHandlerDeclarative/VB/formviewcommandeventhandlerdeclarativevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

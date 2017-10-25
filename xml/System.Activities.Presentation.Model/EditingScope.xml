@@ -1,0 +1,145 @@
+<Type Name="EditingScope" FullName="System.Activities.Presentation.Model.EditingScope">
+  <TypeSignature Language="C#" Value="public class EditingScope : System.Activities.Presentation.Model.ModelEditingScope" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EditingScope extends System.Activities.Presentation.Model.ModelEditingScope" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.Model.EditingScope" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.Presentation.Model.ModelEditingScope</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ein Bearbeitungsbereich stellt eine Auflistung der Änderungen an der <see cref="T:System.Activities.Presentation.Model.ModelItem" />-Struktur dar, für die ein Commit oder ein Rollback als eine unteilbare Arbeitseinheit ausgeführt werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist besonders vorteilhaft für die Batchverarbeitung eines Satzes von Änderungen zu mehreren <xref:System.Activities.Presentation.Model.ModelItem>-Objekten. Zum Beispiel beeinflussen die in den ausgegebenen Dialogfeldern vorgenommenen Änderungen mehrere Eigenschaftswerte in den Messagingaktivitäten. Da jedoch alle Änderungen vom ausgegebenen Dialogfeld stammen, müssen die Änderungen als Batch betrachtet und als eine Arbeitseinheit rückgängig gemacht werden. Weitere Details zu Verwendung finden Sie im Beispiel für einen Bearbeitungsbereich.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CanComplete">
+      <MemberSignature Language="C#" Value="protected override bool CanComplete ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool CanComplete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Model.EditingScope.CanComplete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob die aktuelle Bearbeitungsbereichsinstanz abgeschlossen werden kann.</summary>
+        <returns>
+          <see langword="true" />Wenn der Bearbeitungsbereich abgeschlossen werden kann; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Changes">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;System.Activities.Presentation.Model.Change&gt; Changes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class System.Activities.Presentation.Model.Change&gt; Changes" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Model.EditingScope.Changes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Activities.Presentation.Model.Change&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste mit Änderungen ab.</summary>
+        <value>Gibt eine <see cref="T:System.Collections.Generic.List`1" /> zurück, die Änderungen enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasEffectiveChanges">
+      <MemberSignature Language="C#" Value="public bool HasEffectiveChanges { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasEffectiveChanges" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Model.EditingScope.HasEffectiveChanges" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab, der angibt, ob Änderungen für den Bearbeitungsbereich übernommen wurden.</summary>
+        <value>
+          <see langword="true" />Wenn der Bearbeitungsbereich vorgenommenen wurden; andernfalls <see langword="false" />...</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnComplete">
+      <MemberSignature Language="C#" Value="protected override void OnComplete ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnComplete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Model.EditingScope.OnComplete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löst das Ereignis zum Abschließen aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnException">
+      <MemberSignature Language="C#" Value="protected override bool OnException (Exception e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnException(class System.Exception e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Model.EditingScope.OnException(System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die zu verarbeitende Ausnahme.</param>
+        <summary>Verarbeitet die angegebene Ausnahme.</summary>
+        <returns>
+          <see langword="true" />Wenn die Ausnahme verarbeitet wird; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRevert">
+      <MemberSignature Language="C#" Value="protected override void OnRevert (bool finalizing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRevert(bool finalizing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Model.EditingScope.OnRevert(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="finalizing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="finalizing">Wird in dieser Implementierung nicht verwendet.</param>
+        <summary>Löst das Ereignis zum Zurücksetzen aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

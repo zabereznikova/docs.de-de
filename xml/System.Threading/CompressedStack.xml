@@ -1,0 +1,270 @@
+<Type Name="CompressedStack" FullName="System.Threading.CompressedStack">
+  <TypeSignature Language="C#" Value="public sealed class CompressedStack : System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit CompressedStack extends System.Object implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.CompressedStack" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Thread</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt Methoden zum Festlegen und den komprimierten Stapel für den aktuellen Thread erfasst. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der komprimierte Stapel ist eine kompakte Darstellung alle Code Access Security Informationen in der Aufrufliste, z. B. <xref:System.Security.CodeAccessPermission.Deny%2A> und <xref:System.Security.CodeAccessPermission.Assert%2A> Aktionen. Z. B. wenn ein <xref:System.Security.CodeAccessPermission.Deny%2A> Aktion wird zwei gestapelt Frames aus den aktuellen Frame und keine anderen Codezugriff sicherheitsanmerkungen zwischen vorhanden sind und den aktuellen Frame komprimierte Stapel zeichnet nur diese Informationen, ohne zum Serialisieren der gesamte Aufrufliste.  
+  
+ Die <xref:System.Threading.CompressedStack> Klasse wird intern von verwendet die <xref:System.Security.SecurityContext> Klasse. Z. B. die <xref:System.Security.SecurityContext.Capture%2A?displayProperty=nameWithType> Methode erfasst den komprimierten Stapel für die aktuelle Aufrufliste zusammen mit Informationen zu Identitätswechsel und Kultur. Die <xref:System.Security.SecurityContext> Klasse dient wiederum von der <xref:System.Threading.ExecutionContext> Klasse Kontextfluss threadübergreifend, z. B. bei der Planung von Aufgaben für Thread-Pool.  
+  
+ Diese Klasse wird nicht in der normalen anwendungsprogrammierung verwendet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Capture">
+      <MemberSignature Language="C#" Value="public static System.Threading.CompressedStack Capture ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.CompressedStack Capture() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.CompressedStack.Capture" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Thread</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.CompressedStack</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erfasst den komprimierten Stapel aus dem aktuellen Thread.</summary>
+        <returns>Ein <see cref="T:System.Threading.CompressedStack" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Code Access Security Informationen in der Aufrufliste, z. B. erfasst <xref:System.Security.CodeAccessPermission.Deny%2A> und <xref:System.Security.CodeAccessPermission.Assert%2A> Aktionen in einem komprimierten Format. Z. B. wenn ein <xref:System.Security.CodeAccessPermission.Deny%2A> Aktion wird zwei gestapelt Frames aus den aktuellen Frame und keine anderen Codezugriff sicherheitsanmerkungen zwischen vorhanden sind und den aktuellen Frame komprimierte Stapel zeichnet nur diese Informationen, ohne zum Serialisieren der gesamte Aufrufliste.  
+  
+ Der erfasste komprimierte Stapel kann an einen anderen Thread angewendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCopy">
+      <MemberSignature Language="C#" Value="public System.Threading.CompressedStack CreateCopy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.CompressedStack CreateCopy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.CompressedStack.CreateCopy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Thread</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.CompressedStack</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Kopie des aktuellen komprimierten Stapels.</summary>
+        <returns>Ein <see cref="T:System.Threading.CompressedStack" /> Objekt, das den aktuellen komprimierten Stapel darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist nützlich zum Erstellen einer Kopie des aktuellen komprimierten Stapels zu einem anderen Thread zuzuweisen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCompressedStack">
+      <MemberSignature Language="C#" Value="public static System.Threading.CompressedStack GetCompressedStack ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.CompressedStack GetCompressedStack() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.CompressedStack.GetCompressedStack" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Thread</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.CompressedStack</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den komprimierten Stapel für den aktuellen Thread ab.</summary>
+        <returns>Ein <see cref="T:System.Threading.CompressedStack" /> für den aktuellen Thread.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Sicherheit aktiviert ist, wird der aktuelle komprimierte Stapel zurückgegeben. Wenn die Sicherheit deaktiviert ist, <xref:System.Threading.CompressedStack.GetCompressedStack%2A> gibt ein leeres <xref:System.Threading.CompressedStack> Objekt.  
+  
+> [!NOTE]
+>  Diese Methode verwendet <xref:System.Security.Permissions.SecurityAction?displayProperty=nameWithType> aufgerufen aus nicht vertrauenswürdigen Code verhindert wird; nur der unmittelbaren Aufrufer muss über, <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A?displayProperty=nameWithType> Berechtigung. Für wichtige Einschränkungen zur Verwendung der `LinkDemand` Member finden Sie unter ["Demand" im Vergleich. LinkDemand](http://msdn.microsoft.com/en-us/1ab877f2-70f4-4e0d-8116-943999dfe8f5).  
+  
+> [!NOTE]
+>  Dieser Member führt auch einen Linkaufruf für den öffentlichen ECMA-Schlüssel, der keinem gültigen kryptografischen Schlüssel jedoch einen Pseudoschlüssel ist. In .NET Framework ist der Linkaufruf für den ECMA-Pseudo-Schlüssel automatisch in einen Linkaufruf für den öffentlichen Microsoft-Schlüssel konvertiert. Die Sicherheitsausnahme basiert auf den öffentlichen Schlüssel von Microsoft, nicht in den ECMA-Pseudo-Schlüssel.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Ein Aufrufer in der Aufrufkette nicht über die Berechtigung zum Zugriff auf nicht verwalteten Code.  
+  
+ - oder -   
+  
+ Die Anforderung für <see cref="T:System.Security.Permissions.StrongNameIdentityPermission" /> ist fehlgeschlagen.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.CompressedStack.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Thread</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die <see cref="T:System.Runtime.Serialization.SerializationInfo" /> Objekt, das mit Serialisierungsinformationen aufgefüllt werden.</param>
+        <param name="context">Die <see cref="T:System.Runtime.Serialization.StreamingContext" /> Struktur, die den Zielkontext der Serialisierung darstellt.</param>
+        <summary>Ruft das <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Objekt mit den logischen Kontextinformationen ab, die zum erneuten Erstellen des Ausführungskontexts erforderlich sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Threading.CompressedStack.GetObjectData%2A>Legt eine <xref:System.Runtime.Serialization.SerializationInfo> rufen Sie mit den logischen Kontextinformationen. Während der Deserialisierung wird das Kontextobjekt für die Ausführung von übertragenen der <xref:System.Runtime.Serialization.SerializationInfo> über den Stream übertragen.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Runtime.Serialization.SerializationInfo>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="info" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Run">
+      <MemberSignature Language="C#" Value="public static void Run (System.Threading.CompressedStack compressedStack, System.Threading.ContextCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Run(class System.Threading.CompressedStack compressedStack, class System.Threading.ContextCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.CompressedStack.Run(System.Threading.CompressedStack,System.Threading.ContextCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Thread</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="compressedStack" Type="System.Threading.CompressedStack" />
+        <Parameter Name="callback" Type="System.Threading.ContextCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="compressedStack">Die festzulegende <see cref="T:System.Threading.CompressedStack" />.</param>
+        <param name="callback">Ein <see cref="T:System.Threading.ContextCallback" /> zur Darstellung der Methode im angegebenen Sicherheitskontext ausgeführt werden.</param>
+        <param name="state">Das Objekt, das an die Rückrufmethode übergeben werden.</param>
+        <summary>Führt eine Methode im angegebenen komprimierten Stapel für den aktuellen Thread.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der komprimierte Stapel wird den ursprünglichen Zustand zurückgegeben, wenn die Methode abgeschlossen hat.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="compressedStack" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

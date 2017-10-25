@@ -1,0 +1,161 @@
+<Type Name="FontCapitals" FullName="System.Windows.FontCapitals">
+  <TypeSignature Language="C#" Value="public enum FontCapitals" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FontCapitals extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.FontCapitals" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Beschreibt das Format der Großbuchstabe für eine <see cref="T:System.Windows.Documents.Typography" /> Objekt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Großbuchstaben sind ein Satz typografischer Formen, bei dem Text mit Symbolen gerendert wird, die als Großbuchstaben formatiert sind. Wenn Text ausschließlich in Großbuchstaben gerendert wird, kann der Abstand zwischen den Buchstaben als zu gering, die Breite der Buchstaben als zu groß und die Proportionen der Buchstaben als zu unausgewogen erscheinen. OpenType unterstützt eine Reihe von Formaten formatieren für Kapitälchen, einschließlich Kapitälchen, kleiner Kapitälchen anspruchsvolle und Kapitälchenabstand. Mit diesen Formatierungen kann die Darstellung von Großbuchstaben gesteuert werden.  
+  
+ Der folgende Text zeigt zuerst die Standardgroßbuchstaben, gefolgt von den Buchstaben in den Formaten „SmallCaps“ und „AllSmallCaps“ für die Schriftart Pescadero. Für alle drei Wörter wird der gleiche Schriftgrad verwendet.  
+  
+ ![Text mit OpenType-Kapitälchen](~/add/media/opentypefont11.gif "Text mit OpenType-Kapitälchen")  
+Beispiel für Kapitälchen  
+  
+ Großbuchstaben für Titel sind weniger stark ausgebildet und proportioniert und sollen im Vergleich zu normalen Großbuchstaben eine elegantere Darstellungsweise sicherstellen. Großbuchstaben für Titel werden üblicherweise mit größeren Schriftgraden in Überschriften verwendet. Der folgende Text zeigt normale Großbuchstaben und Großbuchstaben für Titel für die Schriftart Pescadero. Beachten Sie die geringeren Strichstärken des Texts in der zweiten Zeile.  
+  
+ ![Text mit OpenType-Initialen](~/add/media/opentypefont20.gif "Text mit OpenType-Initialen")  
+Beispiel für Großbuchstaben und normalen  
+  
+> [!NOTE]
+>  Die meisten OpenType-Schriftarten verfügbar machen nur eine Teilmenge der insgesamt verfügbaren OpenType-Funktionen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Großbuchstaben für die Schriftart Pescadero, die mit den Eigenschaften des definiert die <xref:System.Windows.Documents.Typography> Objekt. Wenn das „SmallCaps“-Format verwendet wird, werden führende Großbuchstaben ignoriert.  
+  
+ [!code-xaml[OpenTypeFontSamples#9](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#9)]   
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Großbuchstaben für die Schriftart Pescadero, die mit den Eigenschaften des definiert die <xref:System.Windows.Documents.Typography> Objekt.  
+  
+ [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet17](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet17)]   
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllPetiteCaps">
+      <MemberSignature Language="C#" Value="AllPetiteCaps" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FontCapitals AllPetiteCaps = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FontCapitals.AllPetiteCaps" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontCapitals</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Großbuchstaben und Kleinbuchstaben werden durch ein Symbol Formular eines Großbuchstabens mit der gleichen Seitenhöhe ersetzt. Kleiner Kapitälchen sind kleiner als Kapitälchen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AllSmallCaps">
+      <MemberSignature Language="C#" Value="AllSmallCaps" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FontCapitals AllSmallCaps = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FontCapitals.AllSmallCaps" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontCapitals</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Großbuchstaben und Kleinbuchstaben werden durch ein Symbol Formular eines Großbuchstabens mit der gleichen Seitenhöhe ersetzt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FontCapitals Normal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FontCapitals.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontCapitals</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Großbuchstaben werden normal gerendert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PetiteCaps">
+      <MemberSignature Language="C#" Value="PetiteCaps" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FontCapitals PetiteCaps = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FontCapitals.PetiteCaps" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontCapitals</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Kleinbuchstaben werden durch ein Symbol Formular eines Großbuchstabens mit der gleichen Seitenhöhe ersetzt. Kleiner Kapitälchen sind kleiner als Kapitälchen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SmallCaps">
+      <MemberSignature Language="C#" Value="SmallCaps" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FontCapitals SmallCaps = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FontCapitals.SmallCaps" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontCapitals</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Kleinbuchstaben werden durch ein Symbol Formular eines Großbuchstabens mit der gleichen Seitenhöhe ersetzt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Titling">
+      <MemberSignature Language="C#" Value="Titling" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FontCapitals Titling = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FontCapitals.Titling" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontCapitals</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Symbole sind mit einem typografischen Form, die speziell für Titel ersetzt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unicase">
+      <MemberSignature Language="C#" Value="Unicase" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FontCapitals Unicase = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FontCapitals.Unicase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontCapitals</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Großbuchstaben anzeigen in unicase Unicase Schriftarten Rendern Groß- und Kleinbuchstabe Buchstaben in einer Mischung aus Groß- und Kleinbuchstaben Symbole, die vom Typdesigner bestimmt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

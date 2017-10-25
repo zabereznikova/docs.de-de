@@ -1,0 +1,114 @@
+<Type Name="RichTextBoxStreamType" FullName="System.Windows.Forms.RichTextBoxStreamType">
+  <TypeSignature Language="C#" Value="public enum RichTextBoxStreamType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RichTextBoxStreamType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.RichTextBoxStreamType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Typen von Eingabe- und Ausgabestreams zum Laden und Speichern von Daten in die <see cref="T:System.Windows.Forms.RichTextBox" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die Member dieser Enumeration, beim Aufrufen der <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> und <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> Methoden die <xref:System.Windows.Forms.RichTextBox> Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel speichert den Inhalt der <xref:System.Windows.Forms.RichTextBox> in eine ASCII-Textdatei. Im Beispiel wird die <xref:System.Windows.Forms.SaveFileDialog> Klasse zum Anzeigen eines Dialogfelds, um den Pfad und Dateinamen ein vom Benutzer anzufordern. Der Code speichert den Inhalt des Steuerelements klicken Sie dann diese Datei enthält. Im Beispiel wird diese Version von den <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> Methode, um anzugeben, dass die Datei als ASCII-Textdatei anstelle der standardmäßigen RTF-Format gespeichert werden. In diesem Beispiel wird davon ausgegangen, dass der Code sich in befindet einem <xref:System.Windows.Forms.Form> -Klasse, verfügt ein <xref:System.Windows.Forms.RichTextBox> -Steuerelement namens `richTextBox1`.  
+  
+ [!code-cpp[Classic RichTextBox.SaveFile1 Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic RichTextBox.SaveFile1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic RichTextBox.SaveFile1 Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic RichTextBox.SaveFile1 Example/CS/source.cs#1)]
+ [!code-vb[Classic RichTextBox.SaveFile1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic RichTextBox.SaveFile1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="PlainText">
+      <MemberSignature Language="C#" Value="PlainText" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.RichTextBoxStreamType PlainText = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.RichTextBoxStreamType.PlainText" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.RichTextBoxStreamType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein nur-Text-Datenstrom, der Leerzeichen an Positionen in der Object Linking and Embedding (OLE) Objekte enthält.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RichNoOleObjs">
+      <MemberSignature Language="C#" Value="RichNoOleObjs" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.RichTextBoxStreamType RichNoOleObjs = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.RichTextBoxStreamType.RichNoOleObjs" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.RichTextBoxStreamType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Rich-Text-Format (RTF) Datenstrom mit Leerzeichen anstelle von OLE-Objekten. Dieser Wert gilt nur für die Verwendung mit der <see cref="M:System.Windows.Forms.RichTextBox.SaveFile(System.String)" /> Methode der <see cref="T:System.Windows.Forms.RichTextBox" /> Steuerelement.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RichText">
+      <MemberSignature Language="C#" Value="RichText" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.RichTextBoxStreamType RichText = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.RichTextBoxStreamType.RichText" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.RichTextBoxStreamType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Rich-Text-Format (RTF)-Datenstrom.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TextTextOleObjs">
+      <MemberSignature Language="C#" Value="TextTextOleObjs" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.RichTextBoxStreamType TextTextOleObjs = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.RichTextBoxStreamType.TextTextOleObjs" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.RichTextBoxStreamType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein nur-Text-Stream mit einer Textdarstellung von OLE-Objekten. Dieser Wert gilt nur für die Verwendung mit der <see cref="M:System.Windows.Forms.RichTextBox.SaveFile(System.String)" /> Methode der <see cref="T:System.Windows.Forms.RichTextBox" /> Steuerelement.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UnicodePlainText">
+      <MemberSignature Language="C#" Value="UnicodePlainText" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.RichTextBoxStreamType UnicodePlainText = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.RichTextBoxStreamType.UnicodePlainText" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.RichTextBoxStreamType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Text-Datenstrom, der Leerzeichen anstelle von Object Linking and Embedding (OLE) Objekte enthält. Der Text wird im Unicode-Format codiert.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,764 @@
+<Type Name="UdpAnySourceMulticastClient" FullName="System.Net.Sockets.UdpAnySourceMulticastClient">
+  <TypeSignature Language="C#" Value="public class UdpAnySourceMulticastClient : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UdpAnySourceMulticastClient extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Sockets.UdpAnySourceMulticastClient" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.", true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ein Client Empfänger Multicastdatenverkehr aus beliebigen Quellen, auch bekannt als Any Quelle Multicast (ASM) oder Internet Standard Multicast (ISM).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UdpAnySourceMulticastClient (System.Net.IPAddress groupAddress, int localPort);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Net.IPAddress groupAddress, int32 localPort) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.UdpAnySourceMulticastClient.#ctor(System.Net.IPAddress,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="groupAddress" Type="System.Net.IPAddress" />
+        <Parameter Name="localPort" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="groupAddress">Die Multicastgruppenadresse, die dieser Empfänger abonnieren soll.</param>
+        <param name="localPort">Der lokale Port, an den dieser Empfänger binden soll.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Net.Sockets.UdpAnySourceMulticastClient" /> UDP-Client, der eine Gruppenadresse abonnieren und Datagramme aus beliebigen Quellen empfangen kann.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.Sockets.UdpAnySourceMulticastClient.%23ctor%2A> Konstruktor ordnet einen multicast-UDP-Socket eine Gruppenadresse und der Port, jedoch keine binden oder verwenden Sie andernfalls den Socket.  
+  
+ Die `groupAddress` Parameter ist möglicherweise ein IPv6- oder IPv4-Multicastadressen Adresse.  
+  
+ Die `localPort` Parameter muss nicht angeben, einen Port an, der kleiner als 1.024.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="groupAddress" /> ist <see langword="null" />. Verweis</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="localPort" />ist kleiner als 0 - oder - <paramref name="localPort" /> ist größer als 65.535.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginJoinGroup">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginJoinGroup (AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginJoinGroup(class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.UdpAnySourceMulticastClient.BeginJoinGroup(System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Eine Rückrufmethode, die beim Abschließen des Vorgangs aufgerufen werden soll.</param>
+        <param name="state">Optionale Zustandsinformationen, die zum Übergeben der <c>Rückruf</c> Methode für diesen Vorgang.</param>
+        <summary>Bindet den Socket und beginnt mit einem Beitrittsvorgang für die Multicastgruppe, damit Datagramme aus jeder Gruppe Teilnehmer empfangen werden können.</summary>
+        <returns>Gibt <see cref="T:System.IAsyncResult" />zurück.  
+  
+ Ein <see cref="T:System.IAsyncResult" />, das auf diesen Vorgang verweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.Sockets.UdpAnySourceMulticastClient.BeginJoinGroup%2A> Methode bindet einen multicast-UDP-Socket an einen lokalen Port und verknüpft eine Multicastgruppe, damit Datagramme von Multicastgruppe Teilnehmer empfangen werden können. Der lokale Port und die Multicastgruppenadresse werden angegeben, der <xref:System.Net.Sockets.UdpAnySourceMulticastClient.%23ctor%2A> Konstruktor.  
+  
+ Die Methode angegeben, der `callback` Parameter wird aufgerufen, wenn der Vorgang, der multicast-Gruppe beizutreten abgeschlossen wurde.  
+  
+ Bei Bedarf von der Laufzeit der <xref:System.Net.Sockets.UdpAnySourceMulticastClient.BeginJoinGroup%2A> -Methode führt auch eine richtlinienüberprüfung, um sicherzustellen, dass der Client die Multicastgruppe zugreifen darf. Wenn der Client Access, nicht zulässig ist eine <xref:System.Net.Sockets.SocketException> mit ausgelöst <xref:System.Net.Sockets.SocketError.AccessDenied>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Multicastgruppe wurde bereits zusammengeführt, oder ein Beitrittsvorgang wird derzeit ausgeführt.</exception>
+        <exception cref="T:System.ObjectDisposedException"><see cref="T:System.Net.Sockets.UdpAnySourceMulticastClient" /> wurde verworfen.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">Fehler beim Versuch, auf den Socket zuzugreifen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginReceiveFromGroup">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginReceiveFromGroup (byte[] buffer, int offset, int count, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginReceiveFromGroup(unsigned int8[] buffer, int32 offset, int32 count, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.UdpAnySourceMulticastClient.BeginReceiveFromGroup(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Der Puffer zum Speichern der empfangenen Daten.</param>
+        <param name="offset">Der Offset in Bytes vom Anfang der <c>Puffer</c> , in dem die Daten gespeichert werden sollen.</param>
+        <param name="count">Die maximale Anzahl von Bytes zum Empfangen und speichern Sie in der <c>Puffer</c>.</param>
+        <param name="callback">Die Rückrufmethode, die beim Abschließen des Vorgangs aufgerufen werden soll.</param>
+        <param name="state">Optionale Zustandsinformationen, die zum Übergeben der <c>Rückruf</c> Methode für diesen Vorgang.</param>
+        <summary>Startet das Empfangen eines Pakets von einer verknüpften Multicastgruppe und ruft den angegebenen Rückruf auf, wenn ein Paket von einem irgendeinem Absender in der Gruppe angekommen ist.</summary>
+        <returns>Gibt <see cref="T:System.IAsyncResult" />zurück.  
+  
+ Ein <see cref="T:System.IAsyncResult" />, das auf diesen Vorgang verweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.Sockets.UdpAnySourceMulticastClient.BeginReceiveFromGroup%2A> Methode startet einen Vorgang, der Empfang eines UDP-Pakets vom verknüpften Multicastgruppe von einem irgendeinem Absender. Der lokale Port und die Multicastgruppenadresse werden angegeben, der <xref:System.Net.Sockets.UdpAnySourceMulticastClient.%23ctor%2A> Konstruktor. Die multicast-Clients muss auch einen Join für die Multicastgruppe abgeschlossen haben.  
+  
+ Die Methode angegeben, der `callback` Parameter wird aufgerufen, wenn ein Paket erhalten hat.  
+  
+ Es ist möglich, dass einen Socket-Fehler schlägt bei einem Empfangsvorgang synchron, obwohl dies selten mit UDP ist. Wenn ein Socket-Fehler auftritt, eine <xref:System.Net.Sockets.SocketException> ausgelöst wird. Der Fehlercode wird angegeben, als ein Mitglied der <xref:System.Net.Sockets.SocketError> Enumeration.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> ist ein NULL-Verweis (Nothing in Visual&amp;#160;Basic).</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> ist kleiner als 0.  
+  
+ - oder -   
+  
+ <paramref name="offset" /> ist größer als die Länge von <paramref name="buffer" />.  
+  
+ - oder -   
+  
+ <paramref name="count" /> ist kleiner als 0.  
+  
+ - oder -   
+  
+ <paramref name="offset" /> plus die Anzahl ist größer als die Länge von <paramref name="buffer" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Multicastgruppe wurde noch nicht zusammengeführt.</exception>
+        <exception cref="T:System.ObjectDisposedException"><see cref="T:System.Net.Sockets.UdpAnySourceMulticastClient" /> wurde verworfen.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">Fehler beim Versuch, auf den Socket zuzugreifen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginSendTo">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginSendTo (byte[] buffer, int offset, int count, System.Net.IPEndPoint remoteEndPoint, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSendTo(unsigned int8[] buffer, int32 offset, int32 count, class System.Net.IPEndPoint remoteEndPoint, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.UdpAnySourceMulticastClient.BeginSendTo(System.Byte[],System.Int32,System.Int32,System.Net.IPEndPoint,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="remoteEndPoint" Type="System.Net.IPEndPoint" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Der Puffer, der die zu sendenden Daten enthält.</param>
+        <param name="offset">Der Offset in Bytes vom Anfang der <c>Puffer</c> zum Lesen der Daten gesendet werden.</param>
+        <param name="count">Die Anzahl der Bytes, die zum Senden von der <c>Puffer</c>.</param>
+        <param name="remoteEndPoint">Der Remoteendpunkt, an den das Paket gesendet werden soll.</param>
+        <param name="callback">Die Rückrufmethode, die beim Abschließen des Vorgangs aufgerufen werden soll.</param>
+        <param name="state">Optionale Zustandsinformationen, die zum Übergeben der <c>Rückruf</c> Methode für diesen Vorgang.</param>
+        <summary>Startet den Vorgang, bei dem ein Unicastpaket an das angegebene Ziel gesendet wird.</summary>
+        <returns>Gibt <see cref="T:System.IAsyncResult" />zurück.  
+  
+ Ein <see cref="T:System.IAsyncResult" />, das auf diesen Vorgang verweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.Sockets.UdpAnySourceMulticastClient.BeginSendTo%2A> Methode startet einen Vorgang des Sendens eines UDP-Pakets in der verknüpften Multicastgruppe.  
+  
+ Der Client muss einen Join für die Multicastgruppe abgeschlossen worden sein. Die Zieladresse, angegeben der `remoteEndPoint` Parameter muss wurden bereits gesendet ein Multicastpaket an diesen Empfänger. Einige Protokolle mithilfe dieser Informationen flusssteuerung, die Qualität des Diensts Statistiken oder Wiederherstellung Nachrichten übergeben.  
+  
+ Die Methode angegeben, der `callback` Parameter wird aufgerufen, wenn ein Paket erhalten hat.  
+  
+ Die Übertragung ist nur zulässig, wenn die Adresse, in angegeben der `remoteEndPoint` Parameter wurde bereits ein Multicastpaket an diesen Empfänger gesendet. Wenn der Client Access, nicht zulässig ist eine <xref:System.Net.Sockets.SocketException> mit ausgelöst <xref:System.Net.Sockets.SocketError.AccessDenied>.  
+  
+ Wenn in der Zielport angegeben die `remoteEndPoint` Parameter ist kleiner als 1.024, eine <xref:System.Net.Sockets.SocketException> mit ausgelöst <xref:System.Net.Sockets.SocketError.AccessDenied>.  
+  
+ Es ist möglich, dass einen Socket-Fehler schlägt bei einem Empfangsvorgang synchron, obwohl dies selten mit UDP ist. Wenn ein Socket-Fehler auftritt, eine <xref:System.Net.Sockets.SocketException> ausgelöst wird. Der Fehlercode wird angegeben, als ein Mitglied der <xref:System.Net.Sockets.SocketError> Enumeration.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> ist ein NULL-Verweis (Nothing in Visual&amp;#160;Basic).</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> ist kleiner als 0.  
+  
+ - oder -   
+  
+ <paramref name="offset" /> ist größer als die Länge von <paramref name="buffer" />.  
+  
+ - oder -   
+  
+ <paramref name="count" /> ist kleiner als 0.  
+  
+ - oder -   
+  
+ <paramref name="offset" /> plus die Anzahl ist größer als die Länge von <paramref name="buffer" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Multicastgruppe wurde noch nicht zusammengeführt.</exception>
+        <exception cref="T:System.ObjectDisposedException"><see cref="T:System.Net.Sockets.UdpAnySourceMulticastClient" /> wurde verworfen.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">Fehler beim Versuch, auf den Socket zuzugreifen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginSendToGroup">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginSendToGroup (byte[] buffer, int offset, int count, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSendToGroup(unsigned int8[] buffer, int32 offset, int32 count, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.UdpAnySourceMulticastClient.BeginSendToGroup(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Der Puffer, der die zu sendenden Daten enthält.</param>
+        <param name="offset">Der Offset in Bytes vom Anfang der <c>Puffer</c> zum Lesen der Daten gesendet werden.</param>
+        <param name="count">Die Anzahl der Bytes, die zum Senden von der <c>Puffer</c>.</param>
+        <param name="callback">Die Rückrufmethode, die beim Abschließen des Vorgangs aufgerufen werden soll.</param>
+        <param name="state">Optionale Zustandsinformationen, die zum Übergeben der <c>Rückruf</c> Methode für diesen Vorgang.</param>
+        <summary>Startet das Senden eines Pakets an eine verknüpfte Multicastgruppe und ruft den angegebenen Rückruf auf, wenn ein Paket an die Gruppe gesendet wurde.</summary>
+        <returns>Gibt <see cref="T:System.IAsyncResult" />zurück.  
+  
+ Ein <see cref="T:System.IAsyncResult" />, das auf diesen Vorgang verweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.Sockets.UdpAnySourceMulticastClient.BeginSendToGroup%2A> Methode startet einen Vorgang des Sendens eines UDP-Pakets in der verknüpften Multicastgruppe.  
+  
+ Der Client muss einen Join für die Multicastgruppe abgeschlossen worden sein.  
+  
+ Die Methode angegeben, der `callback` Parameter wird aufgerufen, wenn ein Paket erhalten hat.  
+  
+ Es ist möglich, dass einen Socket-Fehler schlägt bei einem Empfangsvorgang synchron, obwohl dies selten mit UDP ist. Wenn ein Socket-Fehler auftritt, eine <xref:System.Net.Sockets.SocketException> ausgelöst wird. Der Fehlercode wird angegeben, als ein Mitglied der <xref:System.Net.Sockets.SocketError> Enumeration.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> ist ein NULL-Verweis (Nothing in Visual&amp;#160;Basic).</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> ist kleiner als 0.  
+  
+ - oder -   
+  
+ <paramref name="offset" /> ist größer als die Länge von <paramref name="buffer" />.  
+  
+ - oder -   
+  
+ <paramref name="count" /> ist kleiner als 0.  
+  
+ - oder -   
+  
+ <paramref name="offset" /> plus die Anzahl ist größer als die Länge von <paramref name="buffer" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Multicastgruppe wurde noch nicht zusammengeführt.</exception>
+        <exception cref="T:System.ObjectDisposedException"><see cref="T:System.Net.Sockets.UdpAnySourceMulticastClient" /> wurde verworfen.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">Fehler beim Versuch, auf den Socket zuzugreifen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BlockSource">
+      <MemberSignature Language="C#" Value="public void BlockSource (System.Net.IPAddress sourceAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void BlockSource(class System.Net.IPAddress sourceAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.UdpAnySourceMulticastClient.BlockSource(System.Net.IPAddress)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceAddress" Type="System.Net.IPAddress" />
+      </Parameters>
+      <Docs>
+        <param name="sourceAddress">Die Adresse der Quelle, die blockiert werden soll.</param>
+        <summary>Blockiert eine Quelle, sodass von ihr ausgehende Multicastpakete nicht mehr empfangen werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.Sockets.UdpAnySourceMulticastClient.BlockSource%2A> Methode blockiert, von einer angegebenen Quelladresse übermittelt werden ausgehende Multicastpakete. Der Client muss einen Join für die Multicastgruppe abgeschlossen worden sein.  
+  
+ Die `sourceAddress` Parameter handelt es sich möglicherweise um eine IPv6- oder eine IPv4-Adresse, aber die `sourceAddress` Parameter übereinstimmen die Adressfamilie der multicast-Gruppe, die der Client verbunden.  
+  
+ Die Methode angegeben, der `callback` Parameter wird aufgerufen, wenn ein Paket erhalten hat.  
+  
+ Wenn ein Socket-Fehler beim Ausführen des Vorgangs Block-Quelle ist eine <xref:System.Net.Sockets.SocketException> ausgelöst wird. Der Fehlercode wird angegeben, als ein Mitglied der <xref:System.Net.Sockets.SocketError> Enumeration.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Multicastgruppe wurde noch nicht zusammengeführt.</exception>
+        <exception cref="T:System.ObjectDisposedException"><see cref="T:System.Net.Sockets.UdpAnySourceMulticastClient" /> wurde verworfen.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">Fehler beim Versuch, auf den Socket zuzugreifen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.UdpAnySourceMulticastClient.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verlässt die Multicastgruppe und gibt alle Ressourcen frei, die von der aktuellen Instanz der <see cref="T:System.Net.Sockets.UdpAnySourceMulticastClient" />-Klasse und dem zugrunde liegenden <see cref="T:System.Net.Sockets.Socket" /> verwendet wurden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Net.Sockets.UdpAnySourceMulticastClient.Dispose%2A> auf, wenn Sie <xref:System.Net.Sockets.UdpAnySourceMulticastClient> nicht mehr benötigen. Die Methode Dispose hinterlässt die <xref:System.Net.Sockets.UdpAnySourceMulticastClient> in einem nicht verwendbaren Zustand. Nach dem Aufruf <xref:System.Net.Sockets.UdpAnySourceMulticastClient.Dispose%2A>, müssen Sie alle Verweise auf Freigeben der <xref:System.Net.Sockets.UdpAnySourceMulticastClient> , damit der Garbage Collector den Arbeitsspeicher freigeben kann, die die <xref:System.Net.Sockets.UdpAnySourceMulticastClient> belegt wurde.  
+  
+ Rufen Sie immer <xref:System.Net.Sockets.UdpAnySourceMulticastClient.Dispose%2A> auf, bevor Sie den letzten Verweis auf das <xref:System.Net.Sockets.UdpAnySourceMulticastClient> freigeben. Andernfalls bleiben die verwendeten Ressourcen reserviert, bis die Garbage Collection die <xref:System.Net.Sockets.UdpAnySourceMulticastClient>-Methode des <xref:System.Object.Finalize%2A>-Objekts aufruft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndJoinGroup">
+      <MemberSignature Language="C#" Value="public void EndJoinGroup (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndJoinGroup(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.UdpAnySourceMulticastClient.EndJoinGroup(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das Ergebnis des asynchronen Beitrittsvorgangs.</param>
+        <summary>Beendet den asynchronen Beitrittsvorgang für eine Multicastgruppe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.Sockets.UdpAnySourceMulticastClient.EndJoinGroup%2A> Methode schließt einen asynchronen Binden an ein Socket und Join-Vorgang an eine Multicastgruppe.  
+  
+ Bei Bedarf von der Laufzeit der <xref:System.Net.Sockets.UdpAnySourceMulticastClient.EndJoinGroup%2A> -Methode führt auch eine richtlinienüberprüfung, um sicherzustellen, dass der Client die Multicastgruppe zugreifen darf. Wenn der Client Access, nicht zulässig ist eine <xref:System.Net.Sockets.SocketException> mit ausgelöst <xref:System.Net.Sockets.SocketError.AccessDenied>.  
+  
+ Wenn ein Socket-Fehler beim Ausführen des Vorgangs Join-Gruppe besteht eine <xref:System.Net.Sockets.SocketException> ausgelöst wird. Der Fehlercode wird angegeben, als ein Mitglied der <xref:System.Net.Sockets.SocketError> Enumeration.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="result" /> ist ein NULL-Verweis (Nothing in Visual&amp;#160;Basic).</exception>
+        <exception cref="T:System.ObjectDisposedException"><see cref="T:System.Net.Sockets.UdpAnySourceMulticastClient" /> wurde verworfen.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">Fehler beim Versuch, auf den Socket zuzugreifen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndReceiveFromGroup">
+      <MemberSignature Language="C#" Value="public int EndReceiveFromGroup (IAsyncResult result, out System.Net.IPEndPoint source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 EndReceiveFromGroup(class System.IAsyncResult result, [out] class System.Net.IPEndPoint&amp; source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.UdpAnySourceMulticastClient.EndReceiveFromGroup(System.IAsyncResult,System.Net.IPEndPoint@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+        <Parameter Name="source" Type="System.Net.IPEndPoint&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das Ergebnis des asynchronen Empfangsvorgangs.</param>
+        <param name="source">Der Quellendpunkt, von dem das Paket empfangen wurde.</param>
+        <summary>Schließt den asynchronen Empfangsvorgang des Pakets aus der verknüpften Multicastgruppe ab und stellt die empfangenen Informationen bereit.</summary>
+        <returns>Die Länge der Nachricht (in Bytes), die im Pufferparameter gespeichert wurde, der an die <see cref="M:System.Net.Sockets.UdpAnySourceMulticastClient.BeginReceiveFromGroup(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)" />-Methode übergeben wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.Sockets.UdpAnySourceMulticastClient.EndReceiveFromGroup%2A> Methode schließt einen asynchronen Vorgang zum Empfangen eines Pakets aus einer Multicastgruppe.  
+  
+ Wenn es ein Socket-Fehler beim Ausführen des Vorgangs empfangen wird eine <xref:System.Net.Sockets.SocketException> ausgelöst wird. Der Fehlercode wird angegeben, als ein Mitglied der <xref:System.Net.Sockets.SocketError> Enumeration.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="result" /> ist ein NULL-Verweis (Nothing in Visual&amp;#160;Basic).</exception>
+        <exception cref="T:System.InvalidOperationException">Die Multicastgruppe wurde noch nicht zusammengeführt.</exception>
+        <exception cref="T:System.ObjectDisposedException"><see cref="T:System.Net.Sockets.UdpAnySourceMulticastClient" /> wurde verworfen.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">Fehler beim Versuch, auf den Socket zuzugreifen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndSendTo">
+      <MemberSignature Language="C#" Value="public void EndSendTo (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndSendTo(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.UdpAnySourceMulticastClient.EndSendTo(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das Ergebnis des asynchronen Sendevorgangs.</param>
+        <summary>Schließt den Vorgang ab, bei dem ein Unicastpaket an das angegebene Ziel gesendet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.Sockets.UdpAnySourceMulticastClient.EndSendTo%2A> Methode schließt einen asynchronen Vorgang zum Senden eines Pakets an der angegebenen Zieladresse.  
+  
+ Wenn es ein Socket-Fehler beim Ausführen des Vorgangs empfangen wird eine <xref:System.Net.Sockets.SocketException> ausgelöst wird. Der Fehlercode wird angegeben, als ein Mitglied der <xref:System.Net.Sockets.SocketError> Enumeration.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="result" /> ist ein NULL-Verweis (Nothing in Visual&amp;#160;Basic).</exception>
+        <exception cref="T:System.InvalidOperationException">Die Multicastgruppe wurde noch nicht zusammengeführt.</exception>
+        <exception cref="T:System.ObjectDisposedException"><see cref="T:System.Net.Sockets.UdpAnySourceMulticastClient" /> wurde verworfen.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">Fehler beim Versuch, auf den Socket zuzugreifen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndSendToGroup">
+      <MemberSignature Language="C#" Value="public void EndSendToGroup (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndSendToGroup(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.UdpAnySourceMulticastClient.EndSendToGroup(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das Ergebnis des asynchronen Sendevorgangs.</param>
+        <summary>Schließt den Sendevorgang eines Pakets an eine Multicastgruppe ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.Sockets.UdpAnySourceMulticastClient.EndSendToGroup%2A> Methode schließt einen asynchronen Vorgang zum Senden eines Pakets an eine Multicastgruppe.  
+  
+ Wenn es ein Socket-Fehler beim Ausführen des Vorgangs empfangen wird eine <xref:System.Net.Sockets.SocketException> ausgelöst wird. Der Fehlercode wird angegeben, als ein Mitglied der <xref:System.Net.Sockets.SocketError> Enumeration.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="result" /> ist ein NULL-Verweis (Nothing in Visual&amp;#160;Basic).</exception>
+        <exception cref="T:System.InvalidOperationException">Die Multicastgruppe wurde noch nicht zusammengeführt.</exception>
+        <exception cref="T:System.ObjectDisposedException"><see cref="T:System.Net.Sockets.UdpAnySourceMulticastClient" /> wurde verworfen.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">Fehler beim Versuch, auf den Socket zuzugreifen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MulticastLoopback">
+      <MemberSignature Language="C#" Value="public bool MulticastLoopback { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MulticastLoopback" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Sockets.UdpAnySourceMulticastClient.MulticastLoopback" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob ausgehende Multicastpakete an die sendende Anwendung übermittelt werden.</summary>
+        <value>Gibt <see cref="T:System.Boolean" />zurück.  
+  
+ Ein Wert, der angibt, ob ausgehende Pakete an eine Multicastgruppe an die sendende Anwendung übermittelt werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Multicast-Datenverkehr ist eine skalierbare Methode für die m: n-Kommunikation über das Internet. Ein Prozess abonniert eine Multicastgruppe-Adresse. Anschließend werden alle Pakete von einem abonnierte Prozess gesendet werden, für der Multicastgruppe von jedem anderen Prozess abonniert die Multicastadresse empfangen. Die <xref:System.Net.Sockets.UdpAnySourceMulticastClient.MulticastLoopback%2A> Eigenschaft steuert, ob alle auf dem lokalen Computer verarbeiten Multicastpakete empfängt, die von diesem Client an der multicast-Gruppe gesendet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Multicastgruppe wurde noch nicht zusammengeführt.</exception>
+        <exception cref="T:System.ObjectDisposedException"><see cref="T:System.Net.Sockets.UdpAnySourceMulticastClient" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveBufferSize">
+      <MemberSignature Language="C#" Value="public int ReceiveBufferSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ReceiveBufferSize" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Sockets.UdpAnySourceMulticastClient.ReceiveBufferSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Größe des des Empfangspuffers in Bytes der <see cref="T:System.Net.Sockets.Socket" /> verwendet für multicastempfangsvorgänge in dieser <see cref="T:System.Net.Sockets.UdpAnySourceMulticastClient" /> Instanz.</summary>
+        <value>Gibt <see cref="T:System.Int32" />zurück.  
+  
+ Die Größe des Empfangspuffers in Bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.Sockets.UdpAnySourceMulticastClient.ReceiveBufferSize%2A> Eigenschaft ruft ab oder legt die Größe in Bytes, der dem Empfangspuffer des zugrunde liegenden <xref:System.Net.Sockets.Socket> verwendet für multicastempfangsvorgänge in dieser <xref:System.Net.Sockets.UdpAnySourceMulticastClient> Instanz. Insbesondere die <xref:System.Net.Sockets.UdpAnySourceMulticastClient.ReceiveBufferSize%2A> Eigenschaft steuert die Größe des Puffers, der vom Stapel verwendet werden, wenn ein Paket ankommt, aber die Anwendung noch nicht aufgerufen wurde. die <xref:System.Net.Sockets.UdpAnySourceMulticastClient.BeginReceiveFromGroup%2A> Methode. Wenn dieser Puffer voll ruft und Pakete, bevor Sie die Anwendung ruft stammen beibehalten die <xref:System.Net.Sockets.UdpAnySourceMulticastClient.BeginReceiveFromGroup%2A> und <xref:System.Net.Sockets.UdpAnySourceMulticastClient.EndReceiveFromGroup%2A> Methoden, alte Pakete gelöscht werden. Die Anwendung wird nie in der Lage, die alten Pakete empfangen und wird stattdessen neuere Pakete empfangen, beim Aufrufen der <xref:System.Net.Sockets.UdpAnySourceMulticastClient.BeginReceiveFromGroup%2A> Methode.  
+  
+ Die Standardgröße des Empfangspuffers unter Windows ist 8192 Bytes.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die angegebene Puffergröße ist kleiner als 0.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Multicastgruppe wurde noch nicht zusammengeführt.</exception>
+        <exception cref="T:System.ObjectDisposedException"><see cref="T:System.Net.Sockets.UdpAnySourceMulticastClient" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SendBufferSize">
+      <MemberSignature Language="C#" Value="public int SendBufferSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SendBufferSize" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Sockets.UdpAnySourceMulticastClient.SendBufferSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Größe in Bytes des Sendepuffers von der <see cref="T:System.Net.Sockets.Socket" /> verwendet für multicastsendevorgänge in dieser <see cref="T:System.Net.Sockets.UdpAnySourceMulticastClient" /> Instanz.</summary>
+        <value>Gibt <see cref="T:System.Int32" />zurück.  
+  
+ Die Größe des Sendepuffers in Byte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.Sockets.UdpAnySourceMulticastClient.SendBufferSize%2A> Eigenschaft ruft ab oder legt die Größe in Bytes des Sendepuffers für den zugrunde liegenden Socket verwendet für multicastsendevorgänge in dieser <xref:System.Net.Sockets.UdpAnySourceMulticastClient> Instanz.  
+  
+ Aufrufe von der <xref:System.Net.Sockets.UdpAnySourceMulticastClient.BeginSendToGroup%2A> oder <xref:System.Net.Sockets.UdpAnySourceMulticastClient.BeginSendTo%2A> Methoden zum Aufrufen des Rückrufs abhängig vom Wert länger dauert die <xref:System.Net.Sockets.UdpAnySourceMulticastClient.SendBufferSize%2A> Eigenschaft, wenn der Sendeport Puffer voll ist. Die <xref:System.Net.Sockets.UdpAnySourceMulticastClient.SendBufferSize%2A> Eigenschaft nur steuert, ob der Benutzer Puffer bleibt im physischen Speicher gesperrt, bis der Send-Anweisung abgeschlossen ist.  
+  
+ Die standardmäßige Größe des Sendepuffers unter Windows ist 8192 Bytes.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die angegebene Puffergröße ist kleiner als 0.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Multicastgruppe wurde noch nicht zusammengeführt.</exception>
+        <exception cref="T:System.ObjectDisposedException"><see cref="T:System.Net.Sockets.UdpAnySourceMulticastClient" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UnblockSource">
+      <MemberSignature Language="C#" Value="public void UnblockSource (System.Net.IPAddress sourceAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UnblockSource(class System.Net.IPAddress sourceAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.UdpAnySourceMulticastClient.UnblockSource(System.Net.IPAddress)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceAddress" Type="System.Net.IPAddress" />
+      </Parameters>
+      <Docs>
+        <param name="sourceAddress">Die Adresse der Quelle, für die die Blockierung aufgehoben werden soll.</param>
+        <summary>Hebt die Blockierung einer Quelle, die durch einen Aufruf von zuvor bereits blockiert wurde die <see cref="M:System.Net.Sockets.UdpAnySourceMulticastClient.BlockSource(System.Net.IPAddress)" /> Methode, damit von ihr ausgehende Multicastpakete empfangen werden können.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.Sockets.UdpAnySourceMulticastClient.UnblockSource%2A> Methode hebt die Blockierung Multicastpakete stammen von einer angegebenen Quelladresse, sodass sie empfangen werden können. Die angegebene Quelladresse muss zuvor gesperrt wurden durch einen Aufruf der <xref:System.Net.Sockets.UdpAnySourceMulticastClient.BlockSource%2A> Methode.  
+  
+ Der Client muss einen Join für die Multicastgruppe abgeschlossen worden sein.  
+  
+ Die `sourceAddress` Parameter ist möglicherweise ein IPv6- oder IPv4-Multicastadressen Adresse.  
+  
+ Wenn die angegebene in Quelladresse die `sourceAddress` Parameter durch einen Aufruf nicht zuvor bereits blockiert wurde die <xref:System.Net.Sockets.UdpAnySourceMulticastClient.BlockSource%2A> -Methode, eine <xref:System.Net.Sockets.SocketException> mit ausgelöst <xref:System.Net.Sockets.SocketError.AddressNotAvailable>.  
+  
+ Wenn ein Socket-Fehler beim Ausführen des Vorgangs zum Aufheben der Sperre-Quelle ist eine <xref:System.Net.Sockets.SocketException> ausgelöst wird. Der Fehlercode wird angegeben, als ein Mitglied der <xref:System.Net.Sockets.SocketError> Enumeration.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Multicastgruppe wurde noch nicht zusammengeführt.</exception>
+        <exception cref="T:System.ObjectDisposedException"><see cref="T:System.Net.Sockets.UdpAnySourceMulticastClient" /> wurde verworfen.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">Fehler beim Versuch, auf den Socket zuzugreifen.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

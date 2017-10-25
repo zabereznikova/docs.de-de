@@ -1,0 +1,128 @@
+<Type Name="X509IssuerSerial" FullName="System.Security.Cryptography.Xml.X509IssuerSerial">
+  <TypeSignature Language="C#" Value="public struct X509IssuerSerial" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit X509IssuerSerial extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Xml.X509IssuerSerial" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die &lt; <see langword="X509IssuerSerial" /> &gt; einer digitalen Signatur von XML-Element.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.X509IssuerSerial> Struktur stellt der `<X509IssuerSerial`>-Element der digitalen XML-Signatur durch die XML-Signatur-Spezifikation definiert. Die `<X509IssuerSerial`>-Element ist das Unterelement des der <`X509Data`>-Element, ein x. 509v3-Zertifikat des Ausstellers enthält, gekennzeichnete Paar aus Name und Seriennummer. Der distinguished Name und der Seriennummer Paar Identifizierung für ein bestimmtes x. 509v3-Zertifikat.  
+  
+ Der Aussteller eines x. 509-Zertifikats ist der Name der Zertifizierungsstelle, die das Zertifikat ausgestellt hat. Zertifizierungsstellen weisen Sie jedes Zertifikat, dass sie eine eindeutige Seriennummer für Identifikationszwecke ausgeben.  
+  
+ Verwenden der <xref:System.Security.Cryptography.Xml.X509IssuerSerial> Struktur zum Angeben eines Zertifikatausstellers Paar aus Name und Seriennummer unterschieden, bei Verwendung der <xref:System.Security.Cryptography.Xml.KeyInfoX509Data> Klasse.  Können Sie hinzufügen, eine <xref:System.Security.Cryptography.Xml.X509IssuerSerial> -Struktur in der <xref:System.Security.Cryptography.Xml.KeyInfoX509Data> -Klasse unter Verwendung der <xref:System.Security.Cryptography.Xml.KeyInfoX509Data.IssuerSerials%2A> Eigenschaft.  Alternativ können Sie Zeichenfolgenwerte, die das x. 509-Zertifikat des Ausstellers distinguished Name und der Seriennummer Paar mit darstellen Hinzufügen der <xref:System.Security.Cryptography.Xml.KeyInfoX509Data.AddIssuerSerial%2A> Methode.  
+  
+ Weitere Informationen zu den `<X509IssuerSerial`>-Element finden Sie unter der World Wide Web Consortium (W3C)-Spezifikation unter www.w3.org/TR/xmldsig-core/.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Signieren und Überprüfen eines XML-Dokuments mithilfe eines x. 509-Zertifikats aus einem Zertifikatspeicher gespeichert wird.  In diesem Beispiel speichert Schlüsselinformationen signierten Dokuments mit dem <xref:System.Security.Cryptography.Xml.X509IssuerSerial> Objekt.  
+  
+ [!code-csharp[System.Security.Cryptography.Xml.X509IssuerSerial#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.X509IssuerSerial/cs/sample.cs#1)]
+ [!code-vb[System.Security.Cryptography.Xml.X509IssuerSerial#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.X509IssuerSerial/vb/sample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IssuerName">
+      <MemberSignature Language="C#" Value="public string IssuerName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string IssuerName" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.X509IssuerSerial.IssuerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest definierten Namen für ein x. 509-Zertifikat des Ausstellers.</summary>
+        <value>Distinguished Name für ein x. 509-Zertifikat des Ausstellers.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.X509IssuerSerial.IssuerName%2A> Eigenschaft darstellt, ein x. 509-Zertifikat des Ausstellers definierten Namen angegeben, der `<X509IssuerSerial`> Element.  
+  
+ Weitere Informationen zu den `<X509IssuerSerial`>-Element finden Sie unter der World Wide Web Consortium (W3C)-Spezifikation unter www.w3.org/TR/xmldsig-core/.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Signieren und Überprüfen eines XML-Dokuments mithilfe eines x. 509-Zertifikats aus einem Zertifikatspeicher gespeichert wird.  In diesem Beispiel speichert Schlüsselinformationen signierten Dokuments mit dem <xref:System.Security.Cryptography.Xml.X509IssuerSerial> Objekt.  
+  
+ [!code-csharp[System.Security.Cryptography.Xml.X509IssuerSerial#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.X509IssuerSerial/cs/sample.cs#1)]
+ [!code-vb[System.Security.Cryptography.Xml.X509IssuerSerial#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.X509IssuerSerial/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerialNumber">
+      <MemberSignature Language="C#" Value="public string SerialNumber { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SerialNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.X509IssuerSerial.SerialNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest Seriennummer ein x. 509-Zertifikat des Ausstellers.</summary>
+        <value>Ein x. 509-Zertifikat des Ausstellers Seriennummer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.X509IssuerSerial.SerialNumber%2A> Eigenschaft darstellt, ein x. 509-Zertifikat des Herausgebers, Seriennummer, angegeben der `<X509IssuerSerial`> Element.  
+  
+ Weitere Informationen zu den `<X509IssuerSerial`>-Element finden Sie unter der World Wide Web Consortium (W3C)-Spezifikation unter www.w3.org/TR/xmldsig-core/.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Signieren und Überprüfen eines XML-Dokuments mithilfe eines x. 509-Zertifikats aus einem Zertifikatspeicher gespeichert wird.  In diesem Beispiel speichert Schlüsselinformationen signierten Dokuments mit dem <xref:System.Security.Cryptography.Xml.X509IssuerSerial> Objekt.  
+  
+ [!code-csharp[System.Security.Cryptography.Xml.X509IssuerSerial#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.X509IssuerSerial/cs/sample.cs#1)]
+ [!code-vb[System.Security.Cryptography.Xml.X509IssuerSerial#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.X509IssuerSerial/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

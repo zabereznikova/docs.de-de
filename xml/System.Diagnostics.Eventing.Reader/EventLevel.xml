@@ -1,0 +1,80 @@
+<Type Name="EventLevel" FullName="System.Diagnostics.Eventing.Reader.EventLevel">
+  <TypeSignature Language="C#" Value="public sealed class EventLevel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EventLevel extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Eventing.Reader.EventLevel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält eine Ereignisebene, die in einem Ereignisanbieter definiert ist. Die Ebene gibt den Schweregrad des Ereignisses.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse kann nicht instanziiert werden. Ein <xref:System.Diagnostics.Eventing.Reader.ProviderMetadata> -Objekt definiert eine Liste von <xref:System.Diagnostics.Eventing.Reader.EventLevel> Objekten, eines für jede Ebene im Anbieter definiert. Die Standardwerte für die Ebene und ihre Bedeutungen werden definiert, der <xref:System.Diagnostics.Eventing.Reader.StandardEventLevel> Enumeration.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public string DisplayName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventLevel.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den lokalisierten Namen für die Ereignisebene ab. Der Name beschreibt, welchen Schweregrad von Ereignissen für diese Stufe dient.</summary>
+        <value>Gibt eine Zeichenfolge, die den lokalisierten Namen für die Ereignisebene enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventLevel.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den nicht lokalisierten Namen der Ereignisebene ab.</summary>
+        <value>Gibt eine Zeichenfolge, die den nicht lokalisierten Namen der Ereignisebene enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public int Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Value" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventLevel.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den numerischen Wert der Ereignisebene ab.</summary>
+        <value>Gibt einen Ganzzahlwert zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

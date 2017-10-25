@@ -1,0 +1,290 @@
+<Type Name="HttpCacheVaryByHeaders" FullName="System.Web.HttpCacheVaryByHeaders">
+  <TypeSignature Language="C#" Value="public sealed class HttpCacheVaryByHeaders" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit HttpCacheVaryByHeaders extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpCacheVaryByHeaders" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet eine typsichere Methode, um die <see cref="P:System.Web.HttpCachePolicy.VaryByHeaders" />-Eigenschaft festzulegen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpCachePolicy.VaryByHeaders%2A> Eigenschaft identifiziert, welche Anforderung Header-Parameter, die ASP.NET verwendet, um eine Variante der Antwort eindeutig zu identifizieren, wenn mehrere zwischengespeicherte Antworten für eine Ressource vorhanden sind. Dies ist hilfreich, wenn eine Antwort auf eine Reihe von Clienteingaben, z. B. Header oder Parameter abhängt.  
+  
+ Die <xref:System.Web.HttpCacheVaryByHeaders> direkt bezieht sich nicht auf HTTP-Cache-Control-Header, jedoch wird sichergestellt, dass ein Client oder Proxy durch die angegebenen Header unterscheidet. Weitere Informationen zu `VaryByHeaders`, finden Sie unter RFC 2616: Hypertext Transfer Protocol--HTTP/1.1, das Sie auf der [Website des World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/?linkid=37125). Finden Sie im Abschnitt 14, "Header Felddefinitionen" vollständige Details.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpCacheVaryByHeaders ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCacheVaryByHeaders.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.HttpCacheVaryByHeaders" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptTypes">
+      <MemberSignature Language="C#" Value="public bool AcceptTypes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AcceptTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpCacheVaryByHeaders.AcceptTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der ASP.NET-Ausgabecache die zwischengespeicherten Antworten variiert die <see langword="Accept" /> HTTP-Header, und fügt diese an den ausgehenden <see langword="Vary" /> HTTP-Header.</summary>
+        <value>
+          <see langword="true" />Wenn der ASP.NET-Ausgabecache variiert nach der <see langword="Accept" /> Header ist, andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Vary` -Header angibt, die Anforderungsheader Felder, die der Server die Antwort vom variiert die `Accept` Feld und gibt an, dass der Server wählt die Antwort basierend auf den Medientypen zulässigen an den Client aus.  
+  
+ Weitere Informationen zu HTTP-Headern finden Sie unter RFC 2616: Hypertext Transfer Protocol--HTTP/1.1, das Sie auf der [Website des World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/?linkid=37125). Finden Sie im Abschnitt 14, "Header Felddefinitionen" vollständige Details.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Aktion ausgeführt wird nur, wenn die <xref:System.Web.HttpCacheVaryByHeaders.AcceptTypes%2A> Eigenschaft ist `true`.  
+  
+ [!code-csharp[Classic HttpCacheVaryByHeaders.AcceptTypes Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpCacheVaryByHeaders.AcceptTypes Example/cs/source.aspx#1)]
+ [!code-vb[Classic HttpCacheVaryByHeaders.AcceptTypes Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpCacheVaryByHeaders.AcceptTypes Example/vb/source.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHeaders">
+      <MemberSignature Language="C#" Value="public string[] GetHeaders ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string[] GetHeaders() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCacheVaryByHeaders.GetHeaders" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft ein Array von Werten ab, die die HTTP-Header festlegen, die zum Variieren des Caches verwendet werden sollen.</summary>
+        <returns>Ein Array von Werten, die die HTTP-Header zum Variieren des Caches enthalten.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public bool this[string header] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpCacheVaryByHeaders.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="header" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="header">Der Name des benutzerdefinierten Headers.</param>
+        <summary>Ruft ab oder legt einen benutzerdefinierten Header-Feld, dass der ASP.NET-Ausgabecache die zwischengespeicherte Antworten durch variiert und diese an den ausgehenden fügt <see langword="Vary" /> HTTP-Header.</summary>
+        <value>
+          <see langword="true" />Wenn der ASP.NET-Ausgabecache anhand des angegebenen benutzerdefinierten Felds variiert. andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Vary` -Header angibt, die Anforderungsheader Felder, die der Server die Antwort vom variiert.  
+  
+ Weitere Informationen finden Sie in RFC 2616: Hypertext Transfer Protocol--HTTP/1.1, das Sie auf der [Website des World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/?linkid=37125). Finden Sie im Abschnitt 14, "Header Felddefinitionen" vollständige Details.  
+  
+ Die <xref:System.Web.HttpCacheVaryByHeaders.VaryByUnspecifiedParameters%2A> Methode wird intern aufgerufen, wenn das angegebene `header` hat den Wert * (Sternchen).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="header" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetHeaders">
+      <MemberSignature Language="C#" Value="public void SetHeaders (string[] headers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetHeaders(string[] headers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCacheVaryByHeaders.SetHeaders(System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="headers" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="headers">Ein Array von Werten, die die HTTP-Header zum Variieren des Caches enthalten.</param>
+        <summary>Legt ein Array von Werten fest, die die HTTP-Header festlegen, die zum Variieren des Caches verwendet werden sollen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserAgent">
+      <MemberSignature Language="C#" Value="public bool UserAgent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UserAgent" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpCacheVaryByHeaders.UserAgent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der ASP.NET-Ausgabecache die zwischengespeicherten Antworten variiert die <see langword="User-Agent" /> -Header, und fügt diese an den ausgehenden <see langword="Vary" /> HTTP-Header.</summary>
+        <value>
+          <see langword="true" />Wenn ASP.NET-Ausgabecache hängt von der <see langword="User-Agent" /> -Header, und fügt es der <see langword="Vary" /> HTTP-Header an den Client gesendet, andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Vary` -Header angibt, die Anforderungsheader Felder, die der Server verwendet, um zu bestimmen, die von mehreren zwischengespeicherten Antworten als Antwort auf eine Clientanforderung gesendet wird. Die `User-Agent` Feld gibt an, dass der Server wählt die Antwort basierend auf dem Client-Benutzer-Agent-Typ aus.  
+  
+ Weitere Informationen finden Sie in RFC 2616: Hypertext Transfer Protocol--HTTP/1.1, das Sie auf der [Website des World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/?linkid=37125). Finden Sie im Abschnitt 14, "Header Felddefinitionen" vollständige Details.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Aktion ausgeführt wird nur, wenn die <xref:System.Web.HttpCacheVaryByHeaders.UserAgent%2A> Eigenschaft ist `true`.  
+  
+ [!code-csharp[Classic HttpCacheVaryByHeaders.UserAgent Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpCacheVaryByHeaders.UserAgent Example/cs/source.aspx#1)]
+ [!code-vb[Classic HttpCacheVaryByHeaders.UserAgent Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpCacheVaryByHeaders.UserAgent Example/vb/source.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserCharSet">
+      <MemberSignature Language="C#" Value="public bool UserCharSet { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UserCharSet" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpCacheVaryByHeaders.UserCharSet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der ASP.NET-Ausgabecache die zwischengespeicherten Antworten variiert die <see langword="Accept-Charset" /> -Header, und fügt diese an den ausgehenden <see langword="Vary" /> HTTP-Header.</summary>
+        <value>
+          <see langword="true" />Wenn ASP.NET-Ausgabecache hängt von der <see langword="Accept-Charset" /> Header und fügt es der <see langword="Vary" /> HTTP-Header an den Client gesendet, andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Vary` -Header angibt, die Anforderungsheader Felder, die der Server verwendet, um zu bestimmen, die von mehreren zwischengespeicherten Antworten als Antwort auf eine Clientanforderung gesendet wird. Die `Accept-CharSet` Feld gibt an, dass der Server die Antwort basierend auf den Zeichensatz des Clients auswählt.  
+  
+ Weitere Informationen finden Sie in RFC 2616: Hypertext Transfer Protocol--HTTP/1.1, das Sie auf der [Website des World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/?linkid=37125). Finden Sie im Abschnitt 14, "Header Felddefinitionen" vollständige Details.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Aktion ausgeführt wird nur, wenn die <xref:System.Web.HttpCacheVaryByHeaders.UserCharSet%2A> Eigenschaft ist `true`.  
+  
+ [!code-csharp[Classic HttpCacheVaryByHeaders.UserCharSet Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpCacheVaryByHeaders.UserCharSet Example/cs/source.aspx#1)]
+ [!code-vb[Classic HttpCacheVaryByHeaders.UserCharSet Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpCacheVaryByHeaders.UserCharSet Example/vb/source.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserLanguage">
+      <MemberSignature Language="C#" Value="public bool UserLanguage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UserLanguage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpCacheVaryByHeaders.UserLanguage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der ASP.NET-Ausgabecache die zwischengespeicherten Antworten variiert die <see langword="Accept-Language" /> -Header, und fügt diese an den ausgehenden <see langword="Vary" /> HTTP-Header.</summary>
+        <value>
+          <see langword="true" />Wenn ASP.NET-Ausgabecache variiert nach der <see langword="Accept-Language" /> Header und fügt es der <see langword="Vary" /> HTTP-Header an den Client gesendet, andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Vary` -Header angibt, die Anforderungsheader Felder, die der Server verwendet, um zu bestimmen, die von mehreren zwischengespeicherten Antworten als Antwort auf eine Clientanforderung gesendet wird. Die `Accept-Language` Feld gibt an, dass der Server die Antwort basierend auf Sprachen, die an den Client zulässigen auswählt.  
+  
+ Weitere Informationen finden Sie in RFC 2616: Hypertext Transfer Protocol--HTTP/1.1, das Sie auf der [Website des World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/?linkid=37125). Finden Sie im Abschnitt 14, "Header Felddefinitionen" vollständige Details.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Aktion ausgeführt wird nur, wenn die <xref:System.Web.HttpCacheVaryByHeaders.UserLanguage%2A> Eigenschaft ist `true`.  
+  
+ [!code-csharp[Classic HttpCacheVaryByHeaders.UserLanguage Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpCacheVaryByHeaders.UserLanguage Example/cs/source.aspx#1)]
+ [!code-vb[Classic HttpCacheVaryByHeaders.UserLanguage Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpCacheVaryByHeaders.UserLanguage Example/vb/source.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VaryByUnspecifiedParameters">
+      <MemberSignature Language="C#" Value="public void VaryByUnspecifiedParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void VaryByUnspecifiedParameters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCacheVaryByHeaders.VaryByUnspecifiedParameters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bewirkt, dass ASP.NET durch alle Header variiert, und legt die <see langword="Vary" /> HTTP-Header auf den Wert * (Sternchen). Alle anderen <see langword="Vary" /> Headerinformationen, die gelöscht werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Vary` -Header angibt, die Anforderungsheader Felder, die der Server verwendet, um zu bestimmen, die von mehreren zwischengespeicherten Antworten als Antwort auf eine Clientanforderung gesendet wird. Die * Wert gibt an, dass der Server wählt aus, die Antwort basierend auf Parametern, die nicht in der Anforderungsheader (z. B. die Netzwerkadresse des Clients) angegeben.  
+  
+ Weitere Informationen finden Sie in RFC 2616: Hypertext Transfer Protocol--HTTP/1.1, das Sie auf der [Website des World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/?linkid=37125). Finden Sie im Abschnitt 14, "Header Felddefinitionen" vollständige Details.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

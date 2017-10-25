@@ -1,0 +1,227 @@
+<Type Name="MachineKey" FullName="System.Web.Security.MachineKey">
+  <TypeSignature Language="C#" Value="public static class MachineKey" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit MachineKey extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Security.MachineKey" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Beschreibt eine Möglichkeit zum Verschlüsseln oder Hash Daten (oder beides) mit der gleichen Algorithmen und Schlüsselwerte, die für ASP.NET-Formularauthentifizierung und den Ansichtszustand verwendet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.MachineKey> Klasse enthält Methoden, die die Logik Hashing- und verschlüsselungseinstellungen verfügbar zu machen, die ASP.NET bereitstellt. Weitere Informationen zur Verschlüsselung und Hashalgorithmen ASP.NET verwendet, und die Schlüsselwerte, die mit ihnen verwendet werden, finden Sie unter [MachineKey-Element ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/4b5699a9-bc21-4c4a-85f1-8b3b8ebd2d46).  
+  
+> [!WARNING]
+>  Die <xref:System.Web.Security.MachineKey> APIs sollte nur in einer ASP.NET-Anwendung verwendet werden. Verhalten der außerhalb des Kontexts einer ASP.NET-Anwendung MachineKey-APIs ist nicht definiert  
+  
+ ]]></format>
+    </remarks>
+    <exception cref="T:System.ArgumentNullException">Die zu verschlüsselnden Hash, Daten entschlüsseln oder überprüfen ist nicht vorhanden</exception>
+  </Docs>
+  <Members>
+    <Member MemberName="Decode">
+      <MemberSignature Language="C#" Value="public static byte[] Decode (string encodedData, System.Web.Security.MachineKeyProtection protectionOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] Decode(string encodedData, valuetype System.Web.Security.MachineKeyProtection protectionOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.MachineKey.Decode(System.String,System.Web.Security.MachineKeyProtection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This method is obsolete and is only provided for compatibility with existing code. It is recommended that new code use the Protect and Unprotect methods instead.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="encodedData" Type="System.String" />
+        <Parameter Name="protectionOption" Type="System.Web.Security.MachineKeyProtection" />
+      </Parameters>
+      <Docs>
+        <param name="encodedData">Die verschlüsselten Daten entschlüsseln und/oder überprüft werden.</param>
+        <param name="protectionOption">Gibt an, ob die <c>EncodedData</c> Parameter ein Hashwert erstellt und/oder verschlüsselt werden soll.</param>
+        <summary>Decodiert und/oder überprüft Daten, die verschlüsselt oder mit einem hashbasierten Nachrichtenauthentifizierungscode (HMAC) bereitgestellt wurde.</summary>
+        <returns>Ein <see cref="T:System.Byte" /> Array, das die entschlüsselten Daten darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Informationen zur Verschlüsselung und Hashalgorithmen verwendet ASP.NET zu entschlüsseln und zu überprüfen, die Daten, die übergeben wird, finden Sie unter [MachineKey-Element ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/4b5699a9-bc21-4c4a-85f1-8b3b8ebd2d46).  
+  
+   
+  
+## Examples  
+ Ein Codebeispiel finden Sie unter der <xref:System.Web.Security.MachineKey> -Klassenübersicht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Encode">
+      <MemberSignature Language="C#" Value="public static string Encode (byte[] data, System.Web.Security.MachineKeyProtection protectionOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string Encode(unsigned int8[] data, valuetype System.Web.Security.MachineKeyProtection protectionOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.MachineKey.Encode(System.Byte[],System.Web.Security.MachineKeyProtection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This method is obsolete and is only provided for compatibility with existing code. It is recommended that new code use the Protect and Unprotect methods instead.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+        <Parameter Name="protectionOption" Type="System.Web.Security.MachineKeyProtection" />
+      </Parameters>
+      <Docs>
+        <param name="data">Die zu verschlüsselnden Daten.</param>
+        <param name="protectionOption">Gibt an, ob die <c>Daten</c> Parameter ein Hashwert erstellt und/oder verschlüsselt werden soll.</param>
+        <summary>Verschlüsselt Daten und/oder fügt einen hashbasierten Nachrichtenauthentifizierungscode (HMAC).</summary>
+        <returns>Der verschlüsselte Wert, der Eingabewert mit einem angefügten HMAC oder das Ergebnis den Eingabewert mit einem angefügten HMAC zu verschlüsseln.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Informationen zur Verschlüsselung und Hashalgorithmen verwendet ASP.NET zu entschlüsseln und zu überprüfen, die Daten, die übergeben wird, finden Sie unter [MachineKey-Element ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/4b5699a9-bc21-4c4a-85f1-8b3b8ebd2d46).  
+  
+   
+  
+## Examples  
+ Ein Codebeispiel finden Sie unter der <xref:System.Web.Security.MachineKey> -Klassenübersicht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Protect">
+      <MemberSignature Language="C#" Value="public static byte[] Protect (byte[] userData, params string[] purposes);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] Protect(unsigned int8[] userData, string[] purposes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.MachineKey.Protect(System.Byte[],System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userData" Type="System.Byte[]" />
+        <Parameter Name="purposes" Type="System.String[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="userData">Die zu schützenden Daten. Diese Daten werden als nur-Text übergeben.</param>
+        <param name="purposes">Eine Liste der Gründe für die Daten. Wenn dieser Wert angegeben wird, muss dieselbe Liste übergeben werden, um die <see cref="M:System.Web.Security.MachineKey.Unprotect(System.Byte[],System.String[])" /> Methode, um den zurückgegebenen Chiffretext zu entschlüsseln.</param>
+        <summary>Schützt die angegebenen Daten durch Verschlüsseln oder zu signieren.</summary>
+        <returns>Die verschlüsselten Daten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ersetzt die <xref:System.Web.Security.MachineKey.Encode%2A> -Methode, die erfordert, dass der Aufrufer angeben, ob die Klartextdaten signiert, verschlüsselt werden soll, oder beides. Die <xref:System.Web.Security.MachineKey.Protect%2A> Methode führt den entsprechenden Vorgang und die Daten sicher geschützt. Chiffretext-Daten nutzen, die von dieser Methode können nur von entschlüsselt werden die <xref:System.Web.Security.MachineKey.Unprotect%2A> Methode.  
+  
+ Die `purposes` Parameter ist eine optionale Liste der Gründe, die den verschlüsselten Text auf einen bestimmten Zweck sperren können. Dieser Parameter können Sie die kryptografischen Vorgänge, die von verschiedenen Subsysteme innerhalb einer Anwendung ausgeführten zu isolieren. Ein bösartiger Client sollte nicht in der Lage, Abrufen des Ergebnisses ein Subsystem <xref:System.Web.Security.MachineKey.Protect%2A> -Methode und den Feed als an ein weiteres Subsystem Eingabe <xref:System.Web.Security.MachineKey.Unprotect%2A> -Methode, die Sicherheit der Anwendung gefährden könnte. Die `purposes` Parameter wird sichergestellt, dass geschützte Daten nur von der Komponente verwendet werden können, die ursprünglich generiert hat. Anwendungen stellen Sie sicher, dass jedes Subsystem verwendet, die eine eindeutige `purposes` Liste.  
+  
+ Beispielsweise können Sie zum Schützen oder Aufheben des Schutzes ein Authentifizierungstoken, die Methode mithilfe von Code wie im folgenden Beispiel aufrufen:  
+  
+```csharp  
+MachineKey.Protect(..., "Authentication token");  
+MachineKey.Unprotect(..., "Authentication token");  
+```  
+  
+```vb  
+MachineKey.Protect(..., "Authentication token")  
+MachineKey.Unprotect(..., "Authentication token")  
+```  
+  
+ Anwendungen können dynamisch generieren die `purposes` Parameter. In diesem Fall als Präfix Benutzer bereitgestellte Werte mit einem festen Wert (z. B. "`Username:` " + *Benutzername*) zum Minimieren des Risikos der einen schädlichen Client Objekt Eingabe, die ein Token entspricht, die von einem anderen Teil des Systems verwendet wird. Beliebige Zeichenfolgen, die dynamisch generierte sollte nach dem festgelegten Zeichenfolgen stammen. Verwenden Sie zum Schützen oder Aufheben des Schutzes von einer privaten Nachricht, die mit einem bestimmten Benutzer verknüpft ist, z. B. Code wie im folgenden Beispiel:  
+  
+```csharp  
+MachineKey.Protect(..., "Private message", "Recipient: " + username);  
+MachineKey.Unprotect(..., "Private message", "Recipient: " + username);  
+```  
+  
+```vb  
+MachineKey.Protect(..., "Private message", "Recipient: " + username)  
+MachineKey.Unprotect(..., "Private message", "Recipient: " + username)  
+```  
+  
+ Bei der <xref:System.Web.Security.MachineKey.Unprotect%2A> -Methode aufgerufen wird, wird den Wert, der aus Gründen der `purposes` Parameter muss den gleichen Wert, der bereitgestellt wurde die <xref:System.Web.Security.MachineKey.Protect%2A> Methode. Andernfalls schlägt der Vorgang fehl, mit einem <xref:System.Security.Cryptography.CryptographicException> Ausnahme.  
+  
+ Die Konfigurationseinstellungen, die für erforderlich sind die <xref:System.Web.Configuration.MachineKeyCompatibilityMode?displayProperty=nameWithType> Option sind erforderlich für diese Methode, selbst wenn die <xref:System.Web.Configuration.MachineKeySection.CompatibilityMode%2A?displayProperty=nameWithType> Eigenschaft nicht festgelegt ist, um die <xref:System.Web.Configuration.MachineKeyCompatibilityMode.Framework45> Option.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="userData" /> -Parameter ist null.</exception>
+        <exception cref="T:System.ArgumentException">Das Zwecke-Array enthält mindestens ein nur-Leerzeichen-Einträge.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Unprotect">
+      <MemberSignature Language="C#" Value="public static byte[] Unprotect (byte[] protectedData, params string[] purposes);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] Unprotect(unsigned int8[] protectedData, string[] purposes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.MachineKey.Unprotect(System.Byte[],System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="protectedData" Type="System.Byte[]" />
+        <Parameter Name="purposes" Type="System.String[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="protectedData">Die verschlüsselten Daten beim Aufheben des Schutzes.</param>
+        <param name="purposes">Eine Liste von Zwecken, die beschreiben, was für die Daten vorgesehen ist. Diese Angabe muss den gleichen Wert, der zum übergeben wurde die <see cref="M:System.Web.Security.MachineKey.Protect(System.Byte[],System.String[])" /> Methode, wenn die Daten geschützt wurde.</param>
+        <summary>Hebt den Schutz für der angegebenen Daten, die durch geschützt wurde die <see cref="M:System.Web.Security.MachineKey.Protect(System.Byte[],System.String[])" /> Methode.</summary>
+        <returns>Die nur-Text-Daten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Informationen zu dieser Methode finden Sie unter der <xref:System.Web.Security.MachineKey.Protect%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="protectedData" /> -Parameter ist null.</exception>
+        <exception cref="T:System.ArgumentException">Das Zwecke-Array enthält mindestens ein nur-Leerzeichen-Einträge.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Die folgenden Ursachen sind möglich:  
+  
+-   Die geschützten Daten manipuliert wurde.  
+  
+-   Der Wert, der die <paramref name="purposes" /> Parameter ist nicht der gleiche wie der Wert, der wurde angegeben, die Daten geschützt wurde.  
+  
+-   Die Anwendung wird auf mehr als einem Server bereitgestellt und automatisch generierte Schlüssel verwendet.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

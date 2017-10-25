@@ -1,0 +1,175 @@
+<Type Name="NormalizationForm" FullName="System.Text.NormalizationForm">
+  <TypeSignature Language="C#" Value="public enum NormalizationForm" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed NormalizationForm extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Text.NormalizationForm" />
+  <AssemblyInfo>
+    <AssemblyName>System.Globalization.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert den Typ der auszuführenden Normalisierung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige Unicode-Zeichenfolgen werden als gleichwertig angesehen, da sie das gleiche Zeichen darstellen. Beispielsweise sind die folgenden als gleichwertig angesehen, da diese verwendet werden kann, um "ắ" darzustellen:  
+  
+-   "\u1EAF"  
+  
+-   "\u0103\u0301"  
+  
+-   "\u0061\u0306\u0301"  
+  
+ Jedoch Ordnungszahl, d. h. binäre, Vergleiche sollten Sie diese Sequenzen unterschiedliche, da sie unterschiedliche Unicode-Werte enthalten. Vor dem Ausführen von Ordinalvergleiche, müssen Anwendungen diese Zeichenfolgen, um sie in ihrer grundlegenden Komponenten zu zerlegen normalisieren.  
+  
+ Jedes zusammengesetztes Unicode-Zeichen ist eine weitere grundlegende Sequenz von einem oder mehreren Zeichen zugeordnet. Der Zerlegung ersetzt zusammengesetzter Zeichen in einer Zeichenfolge durch ihre weitere grundlegenden Zuordnungen. Ein vollständige Zerlegung rekursiv führt diese Ersetzung bis keines der Zeichen in der Zeichenfolge weiter zerlegt werden kann.  
+  
+ Unicode definiert zwei Typen von Zerlegung: Kompatibilität Zerlegung und kanonischen Zerlegung. In Kompatibilität Zerlegung möglicherweise Formatierungsinformationen verloren. Informationen zur Formatierung werden in kanonische Zerlegung, also eine Teilmenge der Kompatibilität Zerlegung beibehalten.  
+  
+ Zwei Sätze von Zeichen werden als kanonische Äquivalenz aufweisen, wenn ihre vollständige kanonische Zerlegung identisch sind. Ebenso werden zwei Sätze von Zeichen als Kompatibilität Äquivalenz aufweisen, wenn ihre vollständige Kompatibilität Zerlegung identisch sind.  
+  
+ Weitere Informationen zur Normalisierung, Zerlegung und Entsprechung finden Sie unter [Unicode Standard Annex #15: Unicode-Normalisierung Forms](http://unicode.org/reports/tr15/) unter unicode.org.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FormC">
+      <MemberSignature Language="C#" Value="FormC" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Text.NormalizationForm FormC = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Text.NormalizationForm.FormC" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.NormalizationForm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass eine Unicode-Zeichenfolge per vollständiger kanonischer Zerlegung normalisiert wurde und dass danach die Sequenzen, sofern möglich, durch ihre primären kombinierenden Zeichen ersetzt wurden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FormD">
+      <MemberSignature Language="C#" Value="FormD" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Text.NormalizationForm FormD = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Text.NormalizationForm.FormD" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.NormalizationForm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass eine Unicode-Zeichenfolge per vollständiger kanonischer Zerlegung normalisiert wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FormKC">
+      <MemberSignature Language="C#" Value="FormKC" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Text.NormalizationForm FormKC = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Text.NormalizationForm.FormKC" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.NormalizationForm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass eine Unicode-Zeichenfolge per vollständiger kompatibler Zerlegung normalisiert wurde und dass danach die Sequenzen, sofern möglich, durch ihre primären kombinierenden Zeichen ersetzt wurden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FormKD">
+      <MemberSignature Language="C#" Value="FormKD" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Text.NormalizationForm FormKD = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Text.NormalizationForm.FormKD" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.NormalizationForm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass eine Unicode-Zeichenfolge per vollständiger kompatibler Zerlegung normalisiert wurde.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,146 @@
+<Type Name="ClerkInfo" FullName="System.EnterpriseServices.CompensatingResourceManager.ClerkInfo">
+  <TypeSignature Language="C#" Value="public sealed class ClerkInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ClerkInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.CompensatingResourceManager.ClerkInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Informationen, die eine aktive (Compensating Resource Manager, CRM) Arbeitsspeicherclerk-Objekts beschreibt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ActivityId">
+      <MemberSignature Language="C#" Value="public string ActivityId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ActivityId" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.CompensatingResourceManager.ClerkInfo.ActivityId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Aktivitäts-ID des aktuellen Arbeitsthreads (Compensating Resource Manager, CRM).</summary>
+        <value>Ruft die Aktivitäts-ID des aktuellen Arbeitsthreads (Compensating Resource Manager, CRM).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clerk">
+      <MemberSignature Language="C#" Value="public System.EnterpriseServices.CompensatingResourceManager.Clerk Clerk { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.EnterpriseServices.CompensatingResourceManager.Clerk Clerk" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.CompensatingResourceManager.ClerkInfo.Clerk" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.CompensatingResourceManager.Clerk</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft <see cref="F:System.Runtime.InteropServices.UnmanagedType.IUnknown" /> für den aktuellen Clerk.</summary>
+        <value>
+          <see cref="F:System.Runtime.InteropServices.UnmanagedType.IUnknown" />für den aktuellen Clerk.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Compensator">
+      <MemberSignature Language="C#" Value="public string Compensator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Compensator" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.CompensatingResourceManager.ClerkInfo.Compensator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die ProgId des Kompensators (Compensating Resource Manager, CRM) für den aktuellen CRM-Clerk ab.</summary>
+        <value>Die ProgId des CRM-Kompensators für den aktuellen CRM-Clerk.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.CompensatingResourceManager.ClerkInfo.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Beschreibung des Kompensators (Compensating Resource Manager, CRM) für den aktuellen CRM-Clerk ab. Die Beschreibungszeichenfolge ist die Zeichenfolge, die vom bereitgestellt wurde die <see langword="ICrmLogControl::RegisterCompensator" /> Methode.</summary>
+        <value>Die Beschreibung des CRM-Kompensators für den aktuellen CRM-Clerk.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~ClerkInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.CompensatingResourceManager.ClerkInfo.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Ressourcen des aktuellen <see cref="T:System.EnterpriseServices.CompensatingResourceManager.ClerkInfo" /> frei, bevor dieser vom Garbage Collector wieder zugänglich gemacht wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceId">
+      <MemberSignature Language="C#" Value="public string InstanceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InstanceId" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.CompensatingResourceManager.ClerkInfo.InstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Instanzklasse-ID (CLSID) des aktuellen Clerks (Compensating Resource Manager, CRM).</summary>
+        <value>Die Instanz CLSID des aktuellen CRM-Clerk.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransactionUOW">
+      <MemberSignature Language="C#" Value="public string TransactionUOW { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TransactionUOW" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.CompensatingResourceManager.ClerkInfo.TransactionUOW" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Arbeitseinheit (UOW) der Transaktion für den aktuellen (Compensating Resource Manager, CRM) Clerk ab.</summary>
+        <value>Die UOW der Transaktion für den aktuellen CRM-Clerk.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

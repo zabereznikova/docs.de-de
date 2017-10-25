@@ -1,0 +1,6 @@
+<Namespace Name="System.Data.Common.EntitySql">
+  <Docs>
+    <summary>Die <see cref="N:System.Data.Common.EntitySql" /> -Namespace enthält die <see cref="T:System.Data.Common.EntitySql.EntitySqlParser" /> und andere Unterstützungsklassen. Diese Klassen ermöglichen es Ihnen, eine Entity SQL-Abfragezeichenfolge zu analysieren und erstellen eine Befehlsstrukturabfrage.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

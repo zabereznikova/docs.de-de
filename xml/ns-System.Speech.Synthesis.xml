@@ -1,0 +1,43 @@
+<Namespace Name="System.Speech.Synthesis">
+  <Docs>
+    <summary>Die <c>n: System.Speech.Synthesis</c> -Namespace enthält Klassen zum Initialisieren und Konfigurieren von einem sprachsynthesemodul Spracherkennung zum Erstellen von Anweisungen auf dem Bildschirm zum Generieren von Sprache, für die Reaktion auf Ereignisse, und klicken Sie zum Ändern der Sprache Merkmale.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ **Initialisieren und konfigurieren**  
+  
+ Die <xref:System.Speech.Synthesis.SpeechSynthesizer> Klasse ermöglicht den Zugriff auf die Funktionalität von einem sprachsynthesemodul Sprache, die auf dem Hostcomputer installiert ist. Installiert die Sprachsynthese Module von einer Stimme, z. B. Microsoft Anna dargestellt werden. Ein <xref:System.Speech.Synthesis.SpeechSynthesizer> Instanz initialisiert wird, um die Standard-Stimme. So konfigurieren Sie eine <xref:System.Speech.Synthesis.SpeechSynthesizer> Instanz mithilfe eines der anderen installierten stimmen, rufen die <xref:System.Speech.Synthesis.SpeechSynthesizer.SelectVoice%2A> oder <xref:System.Speech.Synthesis.SpeechSynthesizer.SelectVoiceByHints%2A> Methoden. Zum Abrufen von Informationen darüber, welche stimmen installiert sind, verwenden die <xref:System.Speech.Synthesis.SpeechSynthesizer.GetInstalledVoices%2A> Methode.  
+  
+ Können Sie die Ausgabe des Weiterleiten der <xref:System.Speech.Synthesis.SpeechSynthesizer> an einen Stream, Datei, die Standard-Audiogeräts oder mit einem null-Gerät mithilfe einer der Methoden in der <xref:System.Speech.Synthesis.SpeechSynthesizer> Klasse, deren Name beginnt mit "`SetOutputTo`".  
+  
+ **Erstellen von Abfragen**  
+  
+ Verwenden Sie eine der Methoden der <xref:System.Speech.Synthesis.PromptBuilder> Klasse, deren Name beginnt mit "`Append`" Inhalt für eingabeaufforderungen aus Text, Spracherkennung Sprachsynthese Markup Language (SSML) Dateien, die mit dem Text oder Markup SSML oder aufgezeichnete audio-Dateien erstellen.  
+  
+ Finden Sie unter [Erstellen komplexer Prompt](http://msdn.microsoft.com/en-us/552cb356-7344-473e-b0f2-7a9983f8c1a4) in der [System Spracherkennung Programmierhandbuch für .NET Framework 4.0](http://msdn.microsoft.com/en-us/610116c7-3817-40ff-857b-5d41e8511043) für Weitere Informationen und Beispiele.  
+  
+ **Generieren von Sprache**  
+  
+ Zum Generieren von Spracherkennung aus einer Zeichenfolge oder aus einer <xref:System.Speech.Synthesis.Prompt> oder <xref:System.Speech.Synthesis.PromptBuilder> -Objekts die <xref:System.Speech.Synthesis.SpeechSynthesizer.Speak%2A> oder <xref:System.Speech.Synthesis.SpeechSynthesizer.SpeakAsync%2A> Methoden. Verwenden Sie zum Generieren von Sprache aus SSML-Markup der <xref:System.Speech.Synthesis.SpeechSynthesizer.SpeakSsml%2A> oder <xref:System.Speech.Synthesis.SpeechSynthesizer.SpeakSsmlAsync%2A> Methoden. Finden Sie unter [Spracherkennung Sprachsynthese Markup Language Reference](http://msdn.microsoft.com/en-us/0c51279e-84d2-4f73-a924-8832039abf94) eine Anleitung zum SSML-Markup.  
+  
+ Führt Sie die Aussprache der Wörter mit dem <xref:System.Speech.Synthesis.PromptBuilder.AppendTextWithHint%2A> oder <xref:System.Speech.Synthesis.PromptBuilder.AppendTextWithPronunciation%2A> Methoden, und durch Hinzufügen oder Entfernen von Lexika für eine <xref:System.Speech.Synthesis.SpeechSynthesizer> -Zielinstanz aus, die <xref:System.Speech.Synthesis.SpeechSynthesizer.AddLexicon%2A> und <xref:System.Speech.Synthesis.SpeechSynthesizer.RemoveLexicon%2A> Methoden.  
+  
+ **Reagieren auf Ereignisse**  
+  
+ Die <xref:System.Speech.Synthesis.SpeechSynthesizer> Klasse enthält Ereignisse, die von einer Spracherkennung Anwendung darüber zu informieren, die die <xref:System.Speech.Synthesis.SpeechSynthesizer> gefunden ein bestimmtes Feature an einer Eingabeaufforderung von gemeldeten der <xref:System.Speech.Synthesis.SpeakProgressEventArgs>, <xref:System.Speech.Synthesis.BookmarkReachedEventArgs>, <xref:System.Speech.Synthesis.PhonemeReachedEventArgs>, und <xref:System.Speech.Synthesis.VisemeReachedEventArgs> Klassen.  
+  
+ Beim Abrufen von Informationen zu den Anfang und Ende der sprechen von einer Eingabeaufforderung von der <xref:System.Speech.Synthesis.SpeechSynthesizer>, verwenden Sie die <xref:System.Speech.Synthesis.SpeakStartedEventArgs> und <xref:System.Speech.Synthesis.SpeakCompletedEventArgs> Klassen.  
+  
+ Finden Sie unter [mit Spracherkennung Sprachsynthese Ereignissen](http://msdn.microsoft.com/en-us/09bf41e6-b88c-4ff2-9287-e42bfd38d836) in der [System Spracherkennung Programmierhandbuch für .NET Framework 4.0](http://msdn.microsoft.com/en-us/610116c7-3817-40ff-857b-5d41e8511043) für Weitere Informationen und Beispiele.  
+  
+ **Merkmale der Sprache ändern**  
+  
+ Die <xref:System.Speech.Synthesis.PromptStyle> Klasse und <xref:System.Speech.Synthesis.PromptBuilder.StartStyle%2A> und <xref:System.Speech.Synthesis.PromptBuilder.AppendText%2A> Methoden können Sie die Merkmale Ändern einer <xref:System.Speech.Synthesis.SpeechSynthesizer> voice mit <xref:System.Speech.Synthesis.PromptStyle.Emphasis%2A>, <xref:System.Speech.Synthesis.PromptStyle.Rate%2A>, und <xref:System.Speech.Synthesis.PromptStyle.Volume%2A> Parameter. Um Merkmale einer Stimme z. B. Kultur, Alter und Geschlecht zu ändern, verwenden Sie eine der der <xref:System.Speech.Synthesis.PromptBuilder.StartVoice%2A> Methoden die <xref:System.Speech.Synthesis.PromptBuilder> Klasse oder die <xref:System.Speech.Synthesis.SpeechSynthesizer.SelectVoiceByHints%2A> Methoden die <xref:System.Speech.Synthesis.SpeechSynthesizer> Klasse.  
+  
+ Finden Sie unter [Voice-Attribute steuern](http://msdn.microsoft.com/en-us/0fa3f10d-2696-4701-9735-68c59ffe4816) in der [System Spracherkennung Programmierhandbuch für .NET Framework 4.0](http://msdn.microsoft.com/en-us/610116c7-3817-40ff-857b-5d41e8511043) für Weitere Informationen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

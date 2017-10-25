@@ -1,0 +1,153 @@
+<Type Name="ITrackingHandler" FullName="System.Runtime.Remoting.Services.ITrackingHandler">
+  <TypeSignature Language="C#" Value="public interface ITrackingHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITrackingHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Services.ITrackingHandler" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass der implementierende Objekt von der Remotinginfrastruktur Marshalling, Methodeninformationen und Trennen von Objekten und Proxys benachrichtigt werden muss.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jedes Objekt, das registriert wird <xref:System.Runtime.Remoting.Services.TrackingServices> wird durch Remoting aufgerufen, wenn ein Objekt oder einen Proxy in der aktuellen <xref:System.AppDomain> gemarshallt, Marshalling oder getrennt wird.  
+  
+ Beachten Sie, dass nur Objekte getrennt werden können. Eine Ausnahme wird ausgelöst, wenn trennen für einen Proxy aufgerufen wird.  
+  
+> [!NOTE]
+>  Diese Schnittstelle macht einen Linkaufruf. SecurityException wird ausgelöst, wenn es sich bei der unmittelbaren Aufrufer führt den Aufruf durch einen Verweis auf die Schnittstelle und keine Berechtigung für die Infrastruktur. Finden Sie unter [Verknüpfungsaufrufe](~/docs/framework/misc/link-demands.md) für Weitere Informationen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie auf die Methoden implementieren die <xref:System.Runtime.Remoting.Services.ITrackingHandler> Schnittstelle zum Empfangen von Benachrichtigungen von der Infrastruktur für den Remotezugriff.  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie diese Schnittstelle implementieren.  
+  
+ [!code-csharp[System.Runtime.Remoting.Services.TrackingServices#30](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Services.TrackingServices/CS/trackinghandler.cs#30)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie diese Schnittstelle auf einem Server zu implementieren.  
+  
+ [!code-csharp[System.Runtime.Remoting.Services.TrackingServices#20](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Services.TrackingServices/CS/server.cs#20)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie auf einem Client für den Server im vorangehenden Codebeispiel wird diese Schnittstelle implementieren.  
+  
+ [!code-csharp[System.Runtime.Remoting.Services.TrackingServices#0](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Services.TrackingServices/CS/client.cs#0)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, die remote-Objekt, das vom Server und der Client verwendet wird.  
+  
+ [!code-csharp[System.Runtime.Remoting.Services.TrackingServices#10](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Services.TrackingServices/CS/remoteservice.cs#10)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName="DisconnectedObject">
+      <MemberSignature Language="C#" Value="public void DisconnectedObject (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DisconnectedObject(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Services.ITrackingHandler.DisconnectedObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das getrennte Objekt.</param>
+        <summary>Benachrichtigt die aktuelle Instanz an, dass ein Objekt von seinem Proxy getrennt wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, wie diese Methode implementiert wird. Dieses Codebeispiel ist Teil eines größeren Beispiels, die aus Gründen der <xref:System.Runtime.Remoting.Services.ITrackingHandler> Schnittstelle.  
+  
+ [!code-csharp[System.Runtime.Remoting.Services.TrackingServices#33](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Services.TrackingServices/CS/trackinghandler.cs#33)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarshaledObject">
+      <MemberSignature Language="C#" Value="public void MarshaledObject (object obj, System.Runtime.Remoting.ObjRef or);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void MarshaledObject(object obj, class System.Runtime.Remoting.ObjRef or) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Services.ITrackingHandler.MarshaledObject(System.Object,System.Runtime.Remoting.ObjRef)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="or" Type="System.Runtime.Remoting.ObjRef" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das gemarshallt wurde.</param>
+        <param name="or">Die <see cref="T:System.Runtime.Remoting.ObjRef" /> , die Ergebnisse aus dem Marshalling und das angegebene Objekt darstellt.</param>
+        <summary>Benachrichtigt, dass ein Objekt gemarshallt wurde die aktuelle Instanz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, wie diese Methode implementiert wird. Dieses Codebeispiel ist Teil eines größeren Beispiels, die aus Gründen der <xref:System.Runtime.Remoting.Services.ITrackingHandler> Schnittstelle.  
+  
+ [!code-csharp[System.Runtime.Remoting.Services.TrackingServices#31](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Services.TrackingServices/CS/trackinghandler.cs#31)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnmarshaledObject">
+      <MemberSignature Language="C#" Value="public void UnmarshaledObject (object obj, System.Runtime.Remoting.ObjRef or);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UnmarshaledObject(object obj, class System.Runtime.Remoting.ObjRef or) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Services.ITrackingHandler.UnmarshaledObject(System.Object,System.Runtime.Remoting.ObjRef)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="or" Type="System.Runtime.Remoting.ObjRef" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Marshalling-Objekt.</param>
+        <param name="or">Die <see cref="T:System.Runtime.Remoting.ObjRef" /> , die das angegebene Objekt darstellt.</param>
+        <summary>Benachrichtigt, dass ein Objekt rückgängig gemacht wurde die aktuelle Instanz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, wie diese Methode implementiert wird. Dieses Codebeispiel ist Teil eines größeren Beispiels, die aus Gründen der <xref:System.Runtime.Remoting.Services.ITrackingHandler> Schnittstelle.  
+  
+ [!code-csharp[System.Runtime.Remoting.Services.TrackingServices#32](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Services.TrackingServices/CS/trackinghandler.cs#32)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

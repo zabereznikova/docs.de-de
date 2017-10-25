@@ -1,0 +1,25 @@
+<Type Name="VisualStyleElement+TaskbarClock" FullName="System.Windows.Forms.VisualStyles.VisualStyleElement+TaskbarClock">
+  <TypeSignature Language="C#" Value="public static class VisualStyleElement.TaskbarClock" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi abstract sealed beforefieldinit VisualStyleElement/TaskbarClock extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält eine Klasse, eine ein <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> für den Hintergrund der Uhr auf der Taskleiste. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock> Klasse bietet eine Grundlage, in dem die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock.Time> Klasse definiert ist. Die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock.Time.Normal%2A> Eigenschaft dieser Klasse gibt eine <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> für den Hintergrund der Uhr auf der Taskleiste.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

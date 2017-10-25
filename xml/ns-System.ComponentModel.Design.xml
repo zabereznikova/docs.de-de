@@ -1,0 +1,61 @@
+<Namespace Name="System.ComponentModel.Design">
+  <Docs>
+    <summary>Die <see cref="N:System.ComponentModel.Design" /> -Namespace enthält Klassen, mit denen Entwickler können benutzerdefinierte Entwurfszeitverhalten für Komponenten und Benutzeroberflächen zum Konfigurieren von Komponenten zur Entwurfszeit erstellen. Der entwurfszeitumgebung bietet Systeme, mit denen Entwickler zum Anordnen von Komponenten und ihre Eigenschaften konfigurieren. Einige Komponenten erfordern möglicherweise bestimmte nur Entwurfszeitverhalten Funktion ordnungsgemäß in einer entwurfszeitumgebung. Es möglicherweise sinnvoll sein, benutzerdefinierte Benutzeroberflächen bereitzustellen, die Entwickler bei der Konfiguration von Komponenten oder die Werte der komplexen Datentypen zu unterstützen. Die Klassen und Schnittstellen, die in diesem Namespace definierten können zum Erstellen von Entwurfszeitverhalten für Komponenten, während der Entwurfszeit-Dienste verwendet werden, und implementieren angepasst Entwurfszeitkonfiguration Schnittstellen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Klassen in diesem Namespace gehören:  
+  
+-   Ein grundlegender <xref:System.ComponentModel.Design.IDesigner> Schnittstelle, die Sie verwenden können, um das Entwurfszeitverhalten für bestimmte Typen von Komponenten anzupassen.  
+  
+-   Ein <xref:System.ComponentModel.Design.ComponentDesigner> Adapterklasse, die einer komplexere Designer Basisklasse implementiert die <xref:System.ComponentModel.Design.IDesigner>, <xref:System.IDisposable>, und <xref:System.ComponentModel.Design.IDesignerFilter> Schnittstellen.  
+  
+-   Designer-Schnittstellen und Dienste, können einen Designer, um zusätzliche Funktionen zu unterstützen, einschließlich:  
+  
+    -   <xref:System.ComponentModel.Design.IComponentChangeService>  
+  
+    -   <xref:System.ComponentModel.Design.IDesignerEventService>  
+  
+    -   <xref:System.ComponentModel.Design.IDesignerFilter>  
+  
+    -   <xref:System.ComponentModel.Design.IDesignerHost>  
+  
+    -   <xref:System.ComponentModel.Design.IDesignerOptionService>  
+  
+    -   <xref:System.ComponentModel.Design.IDictionaryService>  
+  
+    -   <xref:System.ComponentModel.Design.IEventBindingService>  
+  
+    -   <xref:System.ComponentModel.Design.IExtenderListService>  
+  
+    -   <xref:System.ComponentModel.Design.IExtenderProviderService>  
+  
+    -   <xref:System.ComponentModel.Design.IHelpService>  
+  
+    -   <xref:System.ComponentModel.Design.IInheritanceService>  
+  
+    -   <xref:System.ComponentModel.Design.IMenuCommandService>  
+  
+    -   <xref:System.ComponentModel.Design.IReferenceService>  
+  
+    -   <xref:System.ComponentModel.Design.IResourceService>  
+  
+    -   <xref:System.ComponentModel.Design.IRootDesigner>  
+  
+    -   <xref:System.ComponentModel.Design.ISelectionService>  
+  
+    -   <xref:System.ComponentModel.Design.IServiceContainer>  
+  
+    -   <xref:System.ComponentModel.Design.ITypeDescriptorFilterService>  
+  
+    -   <xref:System.ComponentModel.Design.ITypeResolutionService>  
+  
+-   Klassen, die verwendet werden können, um zur Entwurfszeit anzupassen Lizenz kontextverwaltung und Serialisierung: <xref:System.ComponentModel.Design.DesigntimeLicenseContext> und <xref:System.ComponentModel.Design.DesigntimeLicenseContextSerializer>.  
+  
+-   Einfache auflistungs-Editoren, die erweitert werden können: <xref:System.ComponentModel.Design.ArrayEditor> und <xref:System.ComponentModel.Design.CollectionEditor>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

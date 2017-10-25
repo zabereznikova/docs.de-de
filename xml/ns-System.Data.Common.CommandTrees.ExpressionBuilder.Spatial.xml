@@ -1,0 +1,6 @@
+<Namespace Name="System.Data.Common.CommandTrees.ExpressionBuilder.Spatial">
+  <Docs>
+    <summary>Die <see cref="N:System.Data.Common.CommandTrees.ExpressionBuilder.Spatial" /> -Namespace enthält eine Klasse, die das Entity Data Model (EDM) Funktionen eine räumliche repräsentieren.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

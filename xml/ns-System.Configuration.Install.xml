@@ -1,0 +1,17 @@
+<Namespace Name="System.Configuration.Install">
+  <Docs>
+    <summary>Der <see cref="N:System.Configuration.Install" />-Namespace stellt Klassen bereit, mit denen benutzerdefinierte Installationsprogramme für eigene Komponenten geschrieben werden können. Die <see cref="T:System.Configuration.Install.Installer" />-Klasse ist die Basisklasse für alle benutzerdefinierten Installationsprogramme in .NET Framework.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Über die <xref:System.Configuration.Install.Installer.Installers%2A> -Eigenschaft, ein Installationsprogramm enthält eine Auflistung der Installationsprogramme, die als untergeordnete Elemente. Wenn das Installationsprogramm ausgeführt wird, durchläuft es seine untergeordneten Elemente und ruft <xref:System.Configuration.Install.Installer.Install%2A>, <xref:System.Configuration.Install.Installer.Commit%2A>, <xref:System.Configuration.Install.Installer.Rollback%2A>, oder <xref:System.Configuration.Install.Installer.Uninstall%2A>. Ein Beispiel für ein Objekt in der <xref:System.Configuration.Install.Installer.Installers%2A> Auflistung finden Sie unter <xref:System.Diagnostics.EventLogInstaller>.  
+  
+ Die <xref:System.Configuration.Install.Installer.Context%2A> Eigenschaft enthält Informationen zur Installation. Z. B. Informationen über den Speicherort der Protokolldatei für die Installation, den Speicherort der Datei, die erforderlichen Informationen speichert die <xref:System.Configuration.Install.Installer.Uninstall%2A> -Methode und die Befehlszeile, die beim Ausführen der ausführbaren Installationsdatei eingegeben wurde. Ein Beispiel für eine ausführbare Installationsdatei, finden Sie unter [Installutil.exe (Installer-Tool)](~/docs/framework/tools/installutil-exe-installer-tool.md).  
+  
+ Die <xref:System.Configuration.Install.Installer.Install%2A>, <xref:System.Configuration.Install.Installer.Commit%2A>, <xref:System.Configuration.Install.Installer.Rollback%2A>, und <xref:System.Configuration.Install.Installer.Uninstall%2A> Methoden sind nicht immer auf derselben Instanz von aufgerufen <xref:System.Configuration.Install.Installer>. Sie können z. B. Verwenden einer <xref:System.Configuration.Install.Installer> installieren commit einer Anwendung, und lassen Sie den Verweis auf dieses <xref:System.Configuration.Install.Installer>. Deinstallieren der Anwendung einen neuen Verweis auf späteren erstellt ein <xref:System.Configuration.Install.Installer>, was bedeutet, dass die <xref:System.Configuration.Install.Installer.Uninstall%2A> Methode wird aufgerufen, auf eine andere Instanz von <xref:System.Configuration.Install.Installer>. Aus diesem Grund nicht speichern Sie den Zustand eines Computers in einen Installer. Verwenden Sie stattdessen eine <xref:System.Collections.IDictionary> , die über Aufrufe hinweg beibehalten und übergeben Sie in der <xref:System.Configuration.Install.Installer.Install%2A>, <xref:System.Configuration.Install.Installer.Commit%2A>, <xref:System.Configuration.Install.Installer.Rollback%2A>, und <xref:System.Configuration.Install.Installer.Uninstall%2A> Methoden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

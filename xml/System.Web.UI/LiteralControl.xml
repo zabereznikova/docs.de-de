@@ -1,0 +1,190 @@
+<Type Name="LiteralControl" FullName="System.Web.UI.LiteralControl">
+  <TypeSignature Language="C#" Value="public class LiteralControl : System.Web.UI.Control, System.Web.UI.ITextControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LiteralControl extends System.Web.UI.Control implements class System.Web.UI.ITextControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.LiteralControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Control</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.ITextControl</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt HTML-Elemente, Text und jede andere Art von Zeichenfolge auf einer ASP.NET-Seite dar, für die keine Verarbeitung auf dem Server erforderlich ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET kompiliert alle HTML-Elemente und lesbaren Text, der keine serverseitige Verarbeitung in Instanzen dieser Klasse erforderlich ist. Z. B. ein HTML-Element, das keine enthält eine `runat="server"` Attribut/Wert-Paar im Starttag kompilierte ein <xref:System.Web.UI.LiteralControl> Objekt. <xref:System.Web.UI.LiteralControl>Objekte nicht zum Verwalten der Ansichtszustand, also den Inhalt des ein <xref:System.Web.UI.LiteralControl> Objekt muss bei jeder Anforderung neu erstellt werden.  
+  
+ Literale Steuerelemente enthalten Text sind die Urheberrechtsinhaber, d. h., Sie können Text aus dem literalen Steuerelement extrahiert und entfernen Sie das literal Steuerelement aus des übergeordneten Server-Steuerelements <xref:System.Web.UI.ControlCollection> über der übergeordnetes Auflistung <xref:System.Web.UI.Control.Controls%2A> Eigenschaft. Daher bei der Entwicklung eines benutzerdefinierten Steuerelements abgeleitet wurde. die <xref:System.Web.UI.LiteralControl> Klasse, stellen Sie sicher, dass das Steuerelement führt alle erforderlichen Schritte selbst, statt einen Aufruf von vorverarbeitung der <xref:System.Web.UI.LiteralControl.Render%2A?displayProperty=nameWithType> Methode dafür. In der Regel würden Sie diese Option, um die Reaktionszeit Ihrer Webanwendung verbessern tun.  
+  
+ Sie können Steuerelemente hinzufügen oder entfernen Literale aus einem Seiten- oder Server-Steuerelement programmgesteuert mithilfe der <xref:System.Web.UI.ControlCollection.Add%2A?displayProperty=nameWithType> oder <xref:System.Web.UI.ControlCollection.Remove%2A?displayProperty=nameWithType> -Methode, bzw..  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mit den überladenen <xref:System.Web.UI.LiteralControl.%23ctor%2A> Konstruktor zum Überschreiben der <xref:System.Web.UI.Control.CreateChildControls%2A?displayProperty=nameWithType> Methode. Der Code fügt zwei neue <xref:System.Web.UI.LiteralControl> Objekte und eine <xref:System.Web.UI.WebControls.TextBox> Webserver-Steuerelements in der aktuellen Serversteuerelements <xref:System.Web.UI.Control.Controls%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ [!code-csharp[SystemWebUILiteralControl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SystemWebUILiteralControl/CS/controlcreatechildcontrols.cs#1)]
+ [!code-vb[SystemWebUILiteralControl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SystemWebUILiteralControl/VB/controlcreatechildcontrols.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LiteralControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.LiteralControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.LiteralControl" /> Klasse enthält eine literale Zeichenfolge auf die angeforderte ASP.NET-Seite gerendert werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine Klasse, `CustLiteralControlClass`, reicht die <xref:System.Web.UI.LiteralControl> Klasse. Erstellt eine Instanz der Klasse mit dem Namen `myLiteralControlClass1` wird mit dem Konstruktor, der nicht den Text der <xref:System.Web.UI.LiteralControl> Objekt. Nachdem das Objekt erstellt wurde, die <xref:System.Web.UI.LiteralControl.Text%2A> Eigenschaft wird verwendet, um den Text selbst festgelegt, die es enthält.  
+  
+ [!code-csharp[LiteralControlSample#4](~/samples/snippets/csharp/VS_Snippets_WebNet/LiteralControlSample/CS/customliteralcontrol.cs.aspx#4)]
+ [!code-vb[LiteralControlSample#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LiteralControlSample/VB/customliteralcontrol.vb.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LiteralControl (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.LiteralControl.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der Text, auf die angeforderte Webseite gerendert werden.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.LiteralControl" />-Klasse mit dem angegebenen Text.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel erstellt zwei Instanzen der <xref:System.Web.UI.LiteralControl> -Klasse unter Verwendung der <xref:System.Web.UI.LiteralControl.%23ctor%2A> Konstruktor. Die beiden Instanzen öffnenden und schließenden Tags für ein H3-HTML-Element gerendert, und fügen innerhalb der Tags H3 anzuzeigende Text.  
+  
+ [!code-csharp[SystemWebUILiteralControl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SystemWebUILiteralControl/CS/controlcreatechildcontrols.cs#1)]
+ [!code-vb[SystemWebUILiteralControl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SystemWebUILiteralControl/VB/controlcreatechildcontrols.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateControlCollection">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.ControlCollection CreateControlCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.ControlCollection CreateControlCollection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.LiteralControl.CreateControlCollection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein <see cref="T:System.Web.UI.EmptyControlCollection" /> für die aktuelle Instanz des Objekts die <see cref="T:System.Web.UI.LiteralControl" /> Klasse.</summary>
+        <returns>Die <see cref="T:System.Web.UI.EmptyControlCollection" /> für das aktuelle Steuerelement.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig <xref:System.Web.UI.LiteralControl> Objekte enthalten, nur Text und keine untergeordneten Serversteuerelemente. Wenn Sie dieses Verhalten ändern möchten, müssen Sie diese Methode überschreiben.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel setzt die <xref:System.Web.UI.LiteralControl.CreateControlCollection%2A> Methode zum Erstellen einer Instanz von der <xref:System.Web.UI.ControlCollection> anstelle einer Instanz der Klasse die <xref:System.Web.UI.EmptyControlCollection> Klasse.  
+  
+ [!code-csharp[LiteralControlSample#2](~/samples/snippets/csharp/VS_Snippets_WebNet/LiteralControlSample/CS/customliteralcontrol.cs#2)]
+ [!code-vb[LiteralControlSample#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LiteralControlSample/VB/customliteralcontrol.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter output);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.LiteralControl.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="output" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="output">Ein <see cref="T:System.Web.UI.HtmlTextWriter" /> , rendert den Inhalt der <see cref="T:System.Web.UI.LiteralControl" /> an den anfordernden Client.</param>
+        <summary>Schreibt den Inhalt der <see cref="T:System.Web.UI.LiteralControl" /> Objekt auf der ASP.NET-Seite.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie einen benutzerdefinierten Server Steuerelement und für bestimmte HTML oder Text auf einem Client rendern möchten erstellen, können Sie die Leistung des Steuerelements verbessern, indem übergeben des Werts von der <xref:System.Web.UI.LiteralControl.Text%2A> Eigenschaft, um die <xref:System.Web.UI.Control.Render%2A?displayProperty=nameWithType> aufrufen, statt die Methode die <xref:System.Web.UI.LiteralControl.Render%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public virtual string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.LiteralControl.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text des Inhalts der <see cref="T:System.Web.UI.LiteralControl" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.String" /> , das den Textinhalt des literalen Steuerelements darstellt. Die Standardeinstellung ist <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine Klasse, `CustLiteralControlClass`, reicht die <xref:System.Web.UI.LiteralControl> Klasse. Erstellt eine Instanz der Klasse mit dem Namen `myLiteralControlClass1` wird mit dem Konstruktor, der nicht den Text der <xref:System.Web.UI.LiteralControl> Objekt. Nachdem das Objekt erstellt wurde, die <xref:System.Web.UI.LiteralControl.Text%2A> Eigenschaft wird verwendet, um den Text selbst festgelegt, die es enthält.  
+  
+ [!code-csharp[LiteralControlSample#4](~/samples/snippets/csharp/VS_Snippets_WebNet/LiteralControlSample/CS/customliteralcontrol.cs.aspx#4)]
+ [!code-vb[LiteralControlSample#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LiteralControlSample/VB/customliteralcontrol.vb.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,493 @@
+<Type Name="WebPartMenuStyle" FullName="System.Web.UI.WebControls.WebParts.WebPartMenuStyle">
+  <TypeSignature Language="C#" Value="public sealed class WebPartMenuStyle : System.Web.UI.WebControls.TableStyle, System.ComponentModel.ICustomTypeDescriptor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WebPartMenuStyle extends System.Web.UI.WebControls.TableStyle implements class System.ComponentModel.ICustomTypeDescriptor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebPartMenuStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.TableStyle</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ICustomTypeDescriptor</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Enthält Formateigenschaften für Menüs auf <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelemente. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartMenuStyle> Klasse ist im Wesentlichen eine <xref:System.Web.UI.WebControls.TableStyle> -Objekt, das Formateigenschaften anzuwendende zu Menüs auf enthält <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente.  
+  
+ Die Webparts-Steuerelementen werden mithilfe der <xref:System.Web.UI.WebControls.WebParts.WebPartMenuStyle> Objekts bestimmen, die Formateigenschaften des Menüs Verben auf eine <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement. Ein Verbmenü befindet sich in der Titelleiste jedes <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement, und es enthält verschiedene Benutzeroberfläche (UI) Benutzeraktionen (Verben), die Benutzer ausführen können, z. B. schließen, minimieren, exportieren oder Löschen eines Steuerelements,.  
+  
+> [!IMPORTANT]
+>  Stilattribute können Sie festlegen, für die <xref:System.Web.UI.WebControls.WebParts.WebPartMenuStyle> -Objekt, und daher im Verbmenü aller der <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente in einer Zone mit der <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.MenuPopupStyle%2A> Eigenschaft auf eine <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Zone.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartMenuStyle> -Klasse verfügt über zwei wichtige Eigenschaften. Die erste ist die <xref:System.Web.UI.WebControls.WebParts.WebPartMenuStyle.HorizontalAlign%2A> -Eigenschaft, die bestimmt, ob der Inhalt des Menüs auf der linken Seite der Center ausgerichtet oder der rechten Seite des Steuerelements oder die Ausrichtung ist nicht festgelegt. Die <xref:System.Web.UI.WebControls.WebParts.WebPartMenuStyle.ShadowColor%2A> Eigenschaft bestimmt die Farbe des Schattens für das Menü auf einer <xref:System.Web.UI.WebControls.WebParts.WebPart> zu steuern, wenn das Menü shadowing-Funktion, auf dem System des Benutzers aktiviert ist.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartMenuStyle> -Klasse verfügt auch über einige wichtigen Methoden. Die <xref:System.Web.UI.WebControls.WebParts.WebPartMenuStyle.CopyFrom%2A> Methode Stilelemente aus dem Stilobjekt, das an die Methode übergebenen kopiert und wendet sie auf die <xref:System.Web.UI.WebControls.WebParts.WebPartMenuStyle> Objekt Stilelemente im Prozess überschreiben. Die <xref:System.Web.UI.WebControls.WebParts.WebPartMenuStyle.MergeWith%2A> Methode auf ähnliche Weise Stilelemente aus dem Stilobjekt, das an die Methode übergeben, aber überschreibt keine vorhandenen Style-Elemente in der <xref:System.Web.UI.WebControls.WebParts.WebPartMenuStyle> Objekt. Die <xref:System.Web.UI.WebControls.WebParts.WebPartMenuStyle.Reset%2A> -Methode entfernt alle Elemente frameart aus der <xref:System.Web.UI.WebControls.WebParts.WebPartMenuStyle> objektspezifischen Zustand Eigenschaftenbehälters.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartMenuStyle> Klasse implementiert auch alle Methoden in der <xref:System.ComponentModel.ICustomTypeDescriptor> Schnittstelle. Im Allgemeinen dadurch die <xref:System.Web.UI.WebControls.WebParts.WebPartMenuStyle> Klasse auf verschiedene Typen von Menüs angewendet werden soll.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartMenuStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartMenuStyle.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.WebParts.WebPartMenuStyle" /> -Klasse mit Standardwerten-Stil.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartMenuStyle (System.Web.UI.StateBag bag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.StateBag bag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartMenuStyle.#ctor(System.Web.UI.StateBag)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="bag" Type="System.Web.UI.StateBag" />
+      </Parameters>
+      <Docs>
+        <param name="bag">Ein <see cref="T:System.Web.UI.StateBag" /> , die Stilinformationen speichert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.WebParts.WebPartMenuStyle" /> -Klasse unter Verwendung der Style-Werte aus dem angegebenen Zustand Behälter-Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyFrom">
+      <MemberSignature Language="C#" Value="public override void CopyFrom (System.Web.UI.WebControls.Style s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyFrom(class System.Web.UI.WebControls.Style s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartMenuStyle.CopyFrom(System.Web.UI.WebControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.Web.UI.WebControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="s">Ein <see cref="T:System.Web.UI.WebControls.Style" /> , das zu kopierende Stilinformationen enthält.</param>
+        <summary>Stilelemente, kopiert der <see cref="T:System.Web.UI.WebControls.WebParts.WebPartMenuStyle" /> Objekt Stilelemente im Prozess überschreiben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartMenuStyle.CopyFrom%2A> Methode kopiert die Stilinformationen aus dem angegebenen <xref:System.Web.UI.WebControls.Style> -Objekt, und es werden alle vorhandenen Style-Elemente in der <xref:System.Web.UI.WebControls.WebParts.WebPartMenuStyle> Instanz überschrieben werden.  
+  
+> [!NOTE]
+>  Ein Grund, die diese Methode überschreibt die Basismethode besteht darin, den Prozess der Zuweisen eines Werts zur Anpassen der <xref:System.Web.UI.WebControls.WebParts.WebPartMenuStyle.ShadowColor%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillStyleAttributes">
+      <MemberSignature Language="C#" Value="protected override void FillStyleAttributes (System.Web.UI.CssStyleCollection attributes, System.Web.UI.IUrlResolutionService urlResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void FillStyleAttributes(class System.Web.UI.CssStyleCollection attributes, class System.Web.UI.IUrlResolutionService urlResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartMenuStyle.FillStyleAttributes(System.Web.UI.CssStyleCollection,System.Web.UI.IUrlResolutionService)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Web.UI.CssStyleCollection" />
+        <Parameter Name="urlResolver" Type="System.Web.UI.IUrlResolutionService" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">To be added.</param>
+        <param name="urlResolver">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalAlign">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.HorizontalAlign HorizontalAlign { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.HorizontalAlign HorizontalAlign" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartMenuStyle.HorizontalAlign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.HorizontalAlign</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, welche Art von horizontale Ausrichtung für den Inhalt eines Menüs auf verwendet eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.HorizontalAlign" /> -Enumerationswert, der angibt, welche Art von Ausrichtung zu verwenden. Der Standardwert wird von der Basisklasse abgerufen <see cref="P:System.Web.UI.WebControls.TableStyle.HorizontalAlign" /> Eigenschaftswert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartMenuStyle.HorizontalAlign%2A> Eigenschaft überschreibt die Basis-Eigenschaft, um zu verhindern, dass die Ausrichtung festgelegt wird, und die Eigenschaft einige Attribute hinzu. Die Eigenschaft ruft den Wert ab, von der Basisklasse <xref:System.Web.UI.WebControls.TableStyle.HorizontalAlign%2A?displayProperty=nameWithType> Eigenschaftswert, aber keine Implementierung für den Setter, damit Sie die Ausrichtung des Menüinhalts im festlegen können, indem Sie diese Eigenschaft nicht bereitstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeWith">
+      <MemberSignature Language="C#" Value="public override void MergeWith (System.Web.UI.WebControls.Style s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void MergeWith(class System.Web.UI.WebControls.Style s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartMenuStyle.MergeWith(System.Web.UI.WebControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.Web.UI.WebControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="s">Ein <see cref="T:System.Web.UI.WebControls.Style" /> , das zu kopierende Stilinformationen enthält.</param>
+        <summary>Stilelemente, kopiert der <see cref="T:System.Web.UI.WebControls.WebParts.WebPartMenuStyle" /> -Instanz, aber überschreibt keine vorhandenen Stilelemente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartMenuStyle.MergeWith%2A> Methode ist vergleichbar mit der <xref:System.Web.UI.WebControls.WebParts.WebPartMenuStyle.CopyFrom%2A> Methode in, dass es Stilelemente aus einem angegebenen kopiert <xref:System.Web.UI.WebControls.Style> -Objekt, aber es unterscheidet sich insofern, dass sie keine vorhandenen Stilelemente in überschrieben wird die <xref:System.Web.UI.WebControls.WebParts.WebPartMenuStyle> Instanz.  
+  
+> [!NOTE]
+>  Ein Grund, die diese Methode überschreibt die Basismethode besteht darin, den Prozess der Zuweisen eines Werts zur Anpassen der <xref:System.Web.UI.WebControls.WebParts.WebPartMenuStyle.ShadowColor%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public override void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartMenuStyle.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Elemente frameart aus der <see cref="T:System.Web.UI.WebControls.WebParts.WebPartMenuStyle" /> objektspezifischen Zustand Eigenschaftenbehälters.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartMenuStyle.Reset%2A> Methode ist vergleichbar mit der Basismethode in der <xref:System.Web.UI.WebControls.TableStyle> Klasse. Nachdem einige benutzerdefinierte Behandlung für die <xref:System.Web.UI.WebControls.WebParts.WebPartMenuStyle.ShadowColor%2A> -Eigenschaft, ruft diese Methode einfach die base-Methode, um alle verbleibenden Stilelemente aus Zustand Behälter zu entfernen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShadowColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color ShadowColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ShadowColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartMenuStyle.ShadowColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.WebControls.WebColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der bestimmt, der die Schattenfarbe für ein Menü auf einer <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> , bestimmt die Farbe des Schattens. Der Standardwert ist <see cref="F:System.Drawing.Color.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartMenuStyle.ShadowColor%2A> Eigenschaft wirksam nur, wenn Benutzer die Microsoft Windows im Menü shadowing-Funktion auf ihre Systeme aktiviert haben. Wenn die Menüs aktiviert ist, die <xref:System.Web.UI.WebControls.WebParts.WebPartMenuStyle.ShadowColor%2A> Eigenschaft legt die Farbe des Schattens, die auf das Menüinhalt erstellt wird. Wenn keine Farbwert der Eigenschaft zugewiesen ist, erscheint keine Schattenkopien in Menüs, selbst wenn die Menüs auf dem System aktiviert ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetAttributes">
+      <MemberSignature Language="C#" Value="System.ComponentModel.AttributeCollection ICustomTypeDescriptor.GetAttributes ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.AttributeCollection System.ComponentModel.ICustomTypeDescriptor.GetAttributes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetAttributes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.AttributeCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Auflistung benutzerdefinierter Attribute für diese Instanz einer Komponente zurück. Implementiert die <see cref="M:System.ComponentModel.ICustomTypeDescriptor.GetAttributes" />-Methode.</summary>
+        <returns>Eine <see cref="T:System.ComponentModel.AttributeCollection" /> , die die Attribute für dieses Objekt enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetClassName">
+      <MemberSignature Language="C#" Value="string ICustomTypeDescriptor.GetClassName ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.ComponentModel.ICustomTypeDescriptor.GetClassName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetClassName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Klassennamen dieser Instanz einer Komponente zurück. Diese Methode implementiert die Methode <see cref="M:System.ComponentModel.ICustomTypeDescriptor.GetClassName" />.</summary>
+        <returns>Eine Zeichenfolge, enthält den Klassennamen des Objekts, oder <see langword="null" /> , wenn die Klasse keinen Namen hat.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetComponentName">
+      <MemberSignature Language="C#" Value="string ICustomTypeDescriptor.GetComponentName ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.ComponentModel.ICustomTypeDescriptor.GetComponentName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetComponentName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Namen dieser Instanz einer Komponente zurück. Diese Methode implementiert die Methode <see cref="M:System.ComponentModel.ICustomTypeDescriptor.GetComponentName" />.</summary>
+        <returns>Eine Zeichenfolge, die den Objektnamen enthält oder <see langword="null" /> , wenn das Objekt keinen Namen hat.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetConverter">
+      <MemberSignature Language="C#" Value="System.ComponentModel.TypeConverter ICustomTypeDescriptor.GetConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.TypeConverter System.ComponentModel.ICustomTypeDescriptor.GetConverter() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetConverter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeConverter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Typkonverter für diese Instanz einer Komponente zurück. Diese Methode implementiert die Methode <see cref="M:System.ComponentModel.ICustomTypeDescriptor.GetConverter" />.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.TypeConverter" /> für dieses Objekt verwendet oder <see langword="null" /> liegt keine <see cref="T:System.ComponentModel.TypeConverter" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetDefaultEvent">
+      <MemberSignature Language="C#" Value="System.ComponentModel.EventDescriptor ICustomTypeDescriptor.GetDefaultEvent ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.EventDescriptor System.ComponentModel.ICustomTypeDescriptor.GetDefaultEvent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetDefaultEvent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt das Standardereignis für diese Instanz einer Komponente zurück. Diese Methode implementiert die Methode <see cref="M:System.ComponentModel.ICustomTypeDescriptor.GetDefaultEvent" />.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.EventDescriptor" /> , das das Standardereignis für dieses Objekt darstellt oder <see langword="null" /> , wenn das Objekt keine Ereignisse aufweist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetDefaultProperty">
+      <MemberSignature Language="C#" Value="System.ComponentModel.PropertyDescriptor ICustomTypeDescriptor.GetDefaultProperty ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptor System.ComponentModel.ICustomTypeDescriptor.GetDefaultProperty() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetDefaultProperty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Standardeigenschaft für diese Instanz einer Komponente zurück. Diese Methode implementiert die Methode <see cref="M:System.ComponentModel.ICustomTypeDescriptor.GetDefaultProperty" />.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.PropertyDescriptor" /> , die die Standardeigenschaft für dieses Objekt darstellt oder <see langword="null" /> , wenn das Objekt keine Eigenschaften besitzt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetEditor">
+      <MemberSignature Language="C#" Value="object ICustomTypeDescriptor.GetEditor (Type editorBaseType);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ComponentModel.ICustomTypeDescriptor.GetEditor(class System.Type editorBaseType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetEditor(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editorBaseType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="editorBaseType">Ein <see cref="T:System.Type" /> , die der Editor für dieses Objekt darstellt.</param>
+        <summary>Gibt einen Editor des angegebenen Typs für diese Instanz einer Komponente zurück. Diese Methode implementiert die Methode <see cref="M:System.ComponentModel.ICustomTypeDescriptor.GetEditor(System.Type)" />.</summary>
+        <returns>Ein <see cref="T:System.Object" /> des Typs <paramref name="editorBaseType" /> , dient als Editor für dieses Objekt oder <see langword="null" /> , wenn der Editor nicht gefunden werden kann.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetEvents">
+      <MemberSignature Language="C#" Value="System.ComponentModel.EventDescriptorCollection ICustomTypeDescriptor.GetEvents ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.EventDescriptorCollection System.ComponentModel.ICustomTypeDescriptor.GetEvents() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetEvents" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Ereignisse für diese Instanz einer Komponente zurück. Diese Methode implementiert die <see cref="M:System.ComponentModel.ICustomTypeDescriptor.GetEvents" /> -methodenüberladung.</summary>
+        <returns>Eine <see cref="T:System.ComponentModel.EventDescriptorCollection" /> , die die Ereignisse für dieses Objekt darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetEvents">
+      <MemberSignature Language="C#" Value="System.ComponentModel.EventDescriptorCollection ICustomTypeDescriptor.GetEvents (Attribute[] attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.EventDescriptorCollection System.ComponentModel.ICustomTypeDescriptor.GetEvents(class System.Attribute[] attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetEvents(System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Ein Array vom Typ <see cref="T:System.Attribute" /> als Filter verwendet.</param>
+        <summary>Gibt die Ereignisse für diese Instanz einer Komponente zurück, wobei das angegebene Attributarray als Filter verwendet wird. Diese Methode implementiert die <see cref="M:System.ComponentModel.ICustomTypeDescriptor.GetEvents(System.Attribute[])" /> -methodenüberladung.</summary>
+        <returns>Eine <see cref="T:System.ComponentModel.EventDescriptorCollection" /> , die die gefilterten Ereignisse für dieses Objekt darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetProperties">
+      <MemberSignature Language="C#" Value="System.ComponentModel.PropertyDescriptorCollection ICustomTypeDescriptor.GetProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptorCollection System.ComponentModel.ICustomTypeDescriptor.GetProperties() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetProperties" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Eigenschaften für diese Instanz einer Komponente zurück. Diese Methode implementiert die <see cref="M:System.ComponentModel.ICustomTypeDescriptor.GetProperties" /> -methodenüberladung.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> , die die Eigenschaften für dieses Objekt darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetProperties">
+      <MemberSignature Language="C#" Value="System.ComponentModel.PropertyDescriptorCollection ICustomTypeDescriptor.GetProperties (Attribute[] attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptorCollection System.ComponentModel.ICustomTypeDescriptor.GetProperties(class System.Attribute[] attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetProperties(System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Ein Array vom Typ <see cref="T:System.Attribute" /> als Filter verwendet.</param>
+        <summary>Gibt die Eigenschaften für diese Instanz einer Komponente zurück, wobei das Attributarray als Filter verwendet wird. Diese Methode implementiert die <see cref="M:System.ComponentModel.ICustomTypeDescriptor.GetProperties(System.Attribute[])" /> -methodenüberladung.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> , das die gefilterten Eigenschaften für dieses Objekt darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetPropertyOwner">
+      <MemberSignature Language="C#" Value="object ICustomTypeDescriptor.GetPropertyOwner (System.ComponentModel.PropertyDescriptor pd);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ComponentModel.ICustomTypeDescriptor.GetPropertyOwner(class System.ComponentModel.PropertyDescriptor pd) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetPropertyOwner(System.ComponentModel.PropertyDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pd" Type="System.ComponentModel.PropertyDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="pd">Ein <see cref="T:System.ComponentModel.PropertyDescriptor" /> , das die Eigenschaft, deren Besitzer zu findenden darstellt.</param>
+        <summary>Gibt ein Objekt zurück, das die Eigenschaft enthält, die durch den Eigenschaftendeskriptor angegeben ist. Diese Methode implementiert die Methode <see cref="M:System.ComponentModel.ICustomTypeDescriptor.GetPropertyOwner(System.ComponentModel.PropertyDescriptor)" />.</summary>
+        <returns>Ein <see cref="T:System.Object" /> , den Besitzer der angegebenen Eigenschaft darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

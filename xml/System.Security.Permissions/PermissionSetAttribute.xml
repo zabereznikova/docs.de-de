@@ -1,0 +1,293 @@
+<Type Name="PermissionSetAttribute" FullName="System.Security.Permissions.PermissionSetAttribute">
+  <TypeSignature Language="C#" Value="public sealed class PermissionSetAttribute : System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit PermissionSetAttribute extends System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.PermissionSetAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Permissions.CodeAccessSecurityAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Constructor | System.AttributeTargets.Method, AllowMultiple=true, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht, dass Sicherheitsaktionen für einen <see cref="T:System.Security.PermissionSet" /> unter Verwendung deklarativen Sicherheit auf Code angewendet werden. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Permissions.PermissionSetAttribute> Eigenschaften <xref:System.Security.Permissions.PermissionSetAttribute.Name%2A>, <xref:System.Security.Permissions.PermissionSetAttribute.File%2A>, und <xref:System.Security.Permissions.PermissionSetAttribute.XML%2A> gegenseitig, was bedeutet, dass ein Berechtigungssatz als Updatequelle nur eines der folgenden haben kann: ein benannter Berechtigungssatz festgelegt, eine Datei mit einer XML-Darstellung einer Berechtigung oder eine Zeichenfolge, enthält eine XML-Darstellung einer Berechtigung festlegen.  
+  
+ Der Gültigkeitsbereich der Deklaration, die zulässig ist, hängt die <xref:System.Security.Permissions.SecurityAction> , der verwendet wird. Ein <xref:System.Security.Permissions.SecurityAction> nachzufolgen eine <xref:System.Security.PermissionSet> entspricht der Ausführung dieser Aktion für jedes der Berechtigungen innerhalb des Satzes.  
+  
+ Die Sicherheitsinformationen, die von einem Sicherheitsattribut deklariert wird in den Metadaten des Attributziels gespeichert und vom System zur Laufzeit erfolgt. Sicherheitsattribute werden nur für die deklarative Sicherheit verwendet. Verwenden Sie für imperative Sicherheit die entsprechende Berechtigungsklasse.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Verwendung der <xref:System.Security.Permissions.PermissionSetAttribute> Klasse.  
+  
+ [!code-csharp[System.Security.Permissions.PermissionSetAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.PermissionSetAttribute/CS/permissionsetattribute.cs#1)]
+ [!code-vb[System.Security.Permissions.PermissionSetAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.PermissionSetAttribute/VB/Form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PermissionSetAttribute (System.Security.Permissions.SecurityAction action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.SecurityAction action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.PermissionSetAttribute.#ctor(System.Security.Permissions.SecurityAction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Security.Permissions.SecurityAction" />
+      </Parameters>
+      <Docs>
+        <param name="action">Einer der Enumerationswerte, der eine Sicherheitsaktion angibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Permissions.PermissionSetAttribute" /> Klasse mit der angegebenen Aktion.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePermission">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission CreatePermission ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission CreatePermission() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.PermissionSetAttribute.CreatePermission" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Diese Methode wird nicht verwendet.</summary>
+        <returns>In allen Fällen ein NULL-Verweis (<see langword="nothing" /> in Visual Basic).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird nicht verwendet. Es dient nur zur Unterstützung der Vererbung von <xref:System.Security.Permissions.SecurityAttribute>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePermissionSet">
+      <MemberSignature Language="C#" Value="public System.Security.PermissionSet CreatePermissionSet ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.PermissionSet CreatePermissionSet() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.PermissionSetAttribute.CreatePermissionSet" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.PermissionSet</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt und gibt einen neuen Berechtigungssatz basierend auf diesem Attribut Berechtigungsobjekt.</summary>
+        <returns>Ein neuer Berechtigungssatz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode sollte nur durch das Sicherheitssystem nie vom Anwendungscode aufgerufen werden.  
+  
+ Attribute werden zum Zeitpunkt der Kompilierung verwendet, um Sicherheitsdeklarationen in serialisierter Form in Metadaten zu konvertieren. Deklarative Sicherheit von Daten in den Metadaten werden über die Berechtigungsobjekt, das diese Methode zurückgibt, erstellt die dieser Instanz entspricht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="File">
+      <MemberSignature Language="C#" Value="public string File { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string File" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.PermissionSetAttribute.File" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Datei mit der XML-Darstellung eines benutzerdefinierten Berechtigungssatzes deklariert werden.</summary>
+        <value>Legen Sie der physische Pfad zur Datei, die die XML-Darstellung der Berechtigung enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der angegebenen Datei um Unicode handelt, legen Sie die <xref:System.Security.Permissions.PermissionSetAttribute.UnicodeEncoded%2A> Eigenschaft `true`.  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt die Verwendung der <xref:System.Security.Permissions.PermissionSetAttribute.File%2A> Eigenschaft. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Permissions.PermissionSetAttribute> Klasse.  
+  
+ [!code-csharp[System.Security.Permissions.PermissionSetAttribute#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.PermissionSetAttribute/CS/permissionsetattribute.cs#2)]
+ [!code-vb[System.Security.Permissions.PermissionSetAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.PermissionSetAttribute/VB/Form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Hex">
+      <MemberSignature Language="C#" Value="public string Hex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Hex" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.PermissionSetAttribute.Hex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert die hexadezimale Darstellung der XML-codierter Berechtigungssatz.</summary>
+        <value>Die hexadezimale Darstellung des XML-codierter Berechtigungssatz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.PermissionSetAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Berechtigungssatzes.</summary>
+        <value>Der Name eines unveränderlichen <see cref="T:System.Security.NamedPermissionSet" /> (eine von mehreren Berechtigungssätzen, die in der Standardrichtlinie enthalten sind, und können nicht geändert werden).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da benannte Sätze von Computer zu Computer variieren können, ist die Verwendung von benannten Berechtigungssätze für deklarative Sicherheit auf die unveränderliche benannte Berechtigungssätze, die als Bestandteil der Standardrichtlinie beschränkt. Dadurch wird sichergestellt, dass die Berechtigungen in den Berechtigungssatz, der auf die verwiesen wird gleich bleiben, wo der Code ausgeführt wird. Ein Compilerfehler wird ausgelöst, wenn ein änderbare oder unbekannten benannten Berechtigungssatz verwendet wird.  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt die Verwendung der <xref:System.Security.Permissions.PermissionSetAttribute.Name%2A> Eigenschaft. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Security.Permissions.PermissionSetAttribute> Klasse.  
+  
+ [!code-csharp[System.Security.Permissions.PermissionSetAttribute#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.PermissionSetAttribute/CS/permissionsetattribute.cs#3)]
+ [!code-vb[System.Security.Permissions.PermissionSetAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.PermissionSetAttribute/VB/Form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnicodeEncoded">
+      <MemberSignature Language="C#" Value="public bool UnicodeEncoded { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UnicodeEncoded" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.PermissionSetAttribute.UnicodeEncoded" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Datei vom angegeben <see cref="P:System.Security.Permissions.PermissionSetAttribute.File" /> Unicode oder ASCII codiert ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Datei Unicode codiert ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft nicht festgelegt ist, wird davon ausgegangen, dass die Datei ASCII-Zeichen sein.  
+  
+ Wenn <xref:System.Security.Permissions.PermissionSetAttribute.File%2A> ist `null` diese Eigenschaft wird nicht verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XML">
+      <MemberSignature Language="C#" Value="public string XML { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XML" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.PermissionSetAttribute.XML" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die XML-Darstellung ein Berechtigungssatz.</summary>
+        <value>Legen Sie die XML-Darstellung einer Berechtigung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

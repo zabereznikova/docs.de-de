@@ -1,0 +1,17 @@
+<Namespace Name="System.Linq.Expressions">
+  <Docs>
+    <summary>Die <see cref="N:System.Linq.Expressions" /> -Namespace enthält Klassen, Schnittstellen und Enumerationen, mit denen Codeausdrücke auf Sprachebene als Objekte in Form von Ausdrucksbaumstrukturen dargestellt werden können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die abstrakte Klasse <xref:System.Linq.Expressions.Expression> stellt den Stamm einer Klassenhierarchie, die in Ausdrucksbaumstrukturen Modell verwendet.  
+  
+ Die Klassen in diesem Namespace, die davon Herleiten <xref:System.Linq.Expressions.Expression>, z. B. <xref:System.Linq.Expressions.MemberExpression> und <xref:System.Linq.Expressions.ParameterExpression>, werden verwendet, um Knoten in einer Ausdrucksbaumstruktur darstellen. Die <xref:System.Linq.Expressions.Expression> Klasse enthält `static` (`Shared` in Visual Basic) Factorymethoden zum Erstellen von Ausdrucksstrukturknoten der verschiedenen Typen.  
+  
+ Der Enumerationstyp <xref:System.Linq.Expressions.ExpressionType> gibt die eindeutige Knotentypen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

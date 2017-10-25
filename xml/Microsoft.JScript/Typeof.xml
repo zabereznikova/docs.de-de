@@ -1,0 +1,66 @@
+<Type Name="Typeof" FullName="Microsoft.JScript.Typeof">
+  <TypeSignature Language="C#" Value="public sealed class Typeof : Microsoft.JScript.UnaryOp" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Typeof extends Microsoft.JScript.UnaryOp" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.Typeof" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.JScript.UnaryOp</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bestimmt die Datentypen der Objekte an. Diese Klasse gehört zur abstract Syntax Tree Kategorie.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="JScriptTypeof">
+      <MemberSignature Language="C#" Value="public static string JScriptTypeof (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string JScriptTypeof(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.Typeof.JScriptTypeof(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Objekt, das den Typ des zu bestimmen.</param>
+        <summary>Bestimmt den Datentyp des angegebenen Objekts.</summary>
+        <returns>Der <paramref name="value" />-Typ.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Rückgabewert kann einer der folgenden Zeichenfolgenliterale sein:  
+  
+-   boolean  
+  
+-   date  
+  
+-   function  
+  
+-   number  
+  
+-   object  
+  
+-   string  
+  
+-   nicht definiert  
+  
+-   Unbekannt  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

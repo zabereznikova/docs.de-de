@@ -1,0 +1,103 @@
+<Type Name="SelectiveScrollingGrid" FullName="System.Windows.Controls.Primitives.SelectiveScrollingGrid">
+  <TypeSignature Language="C#" Value="public class SelectiveScrollingGrid : System.Windows.Controls.Grid" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SelectiveScrollingGrid extends System.Windows.Controls.Grid" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Primitives.SelectiveScrollingGrid" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Grid</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ein Bereich, der angegebene Zellen festliegen aufnehmen kann, wenn die Sicht ein Bildlauf durchgeführt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.Primitives.SelectiveScrollingGrid>Dient als Bereich für die <xref:System.Windows.Controls.DataGridRow> , das die Header, Zellen und Details enthält.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SelectiveScrollingGrid ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.SelectiveScrollingGrid.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.Primitives.SelectiveScrollingGrid" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSelectiveScrollingOrientation">
+      <MemberSignature Language="C#" Value="public static System.Windows.Controls.SelectiveScrollingOrientation GetSelectiveScrollingOrientation (System.Windows.DependencyObject obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Controls.SelectiveScrollingOrientation GetSelectiveScrollingOrientation(class System.Windows.DependencyObject obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.SelectiveScrollingGrid.GetSelectiveScrollingOrientation(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.SelectiveScrollingOrientation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, dessen Durchführen eines Bildlaufs Ausrichtung abgerufen wird.</param>
+        <summary>Ruft die Richtung, die bei einem Zellen Bildlauf mitwandern für ein angegebenes Objekt.</summary>
+        <returns>Die Richtung, die Zellen gescrollt werden können.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectiveScrollingOrientationProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SelectiveScrollingOrientationProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SelectiveScrollingOrientationProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.SelectiveScrollingGrid.SelectiveScrollingOrientationProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Primitives.SelectiveScrollingGrid.SelectiveScrollingOrientation" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSelectiveScrollingOrientation">
+      <MemberSignature Language="C#" Value="public static void SetSelectiveScrollingOrientation (System.Windows.DependencyObject obj, System.Windows.Controls.SelectiveScrollingOrientation value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetSelectiveScrollingOrientation(class System.Windows.DependencyObject obj, valuetype System.Windows.Controls.SelectiveScrollingOrientation value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.SelectiveScrollingGrid.SetSelectiveScrollingOrientation(System.Windows.DependencyObject,System.Windows.Controls.SelectiveScrollingOrientation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Windows.Controls.SelectiveScrollingOrientation" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, dessen Durchführen eines Bildlaufs Ausrichtung festgelegt ist.</param>
+        <param name="value">Das Durchführen eines Bildlaufs Ausrichtung.</param>
+        <summary>Legt die Richtung, die Zellen für ein angegebenes Objekt gescrollt werden können.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

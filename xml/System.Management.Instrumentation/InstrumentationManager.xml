@@ -1,0 +1,208 @@
+<Type Name="InstrumentationManager" FullName="System.Management.Instrumentation.InstrumentationManager">
+  <TypeSignature Language="C#" Value="public static class InstrumentationManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed InstrumentationManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Instrumentation.InstrumentationManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Instrumentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Methoden bereit, die die Lebensdauer und das Modell für entkoppelte Anbieter verwalten.  
+  
+ Hinweis: Die WMI .NET-Bibliotheken werden jetzt als abgeschlossen betrachtet, und keine weiteren Entwicklungen, Verbesserungen oder Updates werden für nicht sicherheitsrelevante Aspekte verfügbar sein, die diese Bibliotheken betreffen. Die [MI APIs](https://msdn.microsoft.com/en-us/library/jj152383%28v=vs.80%29.aspx) für alle neuen Entwicklungen verwendet werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entkoppelte Anbieter werden von einer Anwendung gehostet. Zwei Methoden können von der Anwendung verwendet werden, um Instanzen von WMI-Klassen verfügbar zu machen: Veröffentlichen/Revoke oder die Rückrufmethode. Die Rückrufmethode verwendet die <xref:System.Management.Instrumentation.InstrumentationManager.RegisterType%2A> und <xref:System.Management.Instrumentation.InstrumentationManager.UnregisterType%2A> Methoden.  
+  
+ Im Modell veröffentlichen/Revoke bietet die WMI-Infrastruktur Standardverhalten für viele der Methoden, die Sie selbst der Rückrufmethode schreiben müssen. Diese umfassen die Enumeration und Methoden zu binden. In diesem Modell die Anwendung Instanzen erstellt und veröffentlicht. Die Anwendung ist dafür verantwortlich, dass die wichtigsten Eigenschaften der Klassen eingehalten werden. Die Anwendung ist auch für das Löschen von Instanzen zuständig.  
+  
+ Die WMI-Infrastruktur erwartet in das Modell Rückruf die Anwendung von Methoden, die Enumeration, Bindung und alle anderen Methoden zum Implementieren der Funktionalität des Anbieters erforderlich behandeln. In der Anwendung für diese Funktion aufruft, und schlägt fehl, wenn er nicht vorhanden oder wurde nicht ordnungsgemäß implementiert. Die Anwendung registriert den Typ der WMI-Klassen mit der Infrastruktur, durch den Aufruf <xref:System.Management.Instrumentation.InstrumentationManager.RegisterType%2A> und gibt an, dass es nicht mehr die WMI-Klassen, die verfügbar gemacht werden, durch Aufrufen möchte <xref:System.Management.Instrumentation.InstrumentationManager.UnregisterType%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie das Veröffentlichen/Revoke-Modell zu verwenden. Zwei Instanzen der Routerklasse werden erstellt und veröffentlicht. Sie werden später widerrufen.  
+  
+```  
+public class Sample_InstanceProvider  
+{  
+public int Main (string[] args)   
+{  
+Router r_one = new Router ();  
+r_one.Name = "one";  
+InstrumentationManager.Publish(r_one);  
+Router r_two = new Router ();  
+r_two.Name = "two";  
+InstrumentationManager.Publish(r_two);  
+// ....  
+InstrumentationManager.Revoke(r_one);  
+InstrumentationManager.Revoke(r_two);  
+return 0;  
+}  
+}  
+```  
+  
+ Im nächsten Beispiel wird die Rückrufmethode der Registrierung verwendet, die RouterNew-Klasse verfügbar gemacht.  
+  
+```  
+public int MainNew(string[] args)   
+{  
+    InstrumentationManager.RegisterType(typeof(RouterNew));  
+    // ....  
+    InstrumentationManager.UnRegisterType(typeof(RouterNew));  
+    return 0;  
+}  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Publish">
+      <MemberSignature Language="C#" Value="public static void Publish (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Publish(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Instrumentation.InstrumentationManager.Publish(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Instrumentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine Instanz der Klasse, die den zu veröffentlichenden Anbieter implementiert.</param>
+        <summary>Macht eine Instanz eines Anbieters innerhalb der WMI-Infrastruktur verfügbar.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterAssembly">
+      <MemberSignature Language="C#" Value="public static void RegisterAssembly (System.Reflection.Assembly managementAssembly);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterAssembly(class System.Reflection.Assembly managementAssembly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Instrumentation.InstrumentationManager.RegisterAssembly(System.Reflection.Assembly)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Instrumentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="managementAssembly" Type="System.Reflection.Assembly" />
+      </Parameters>
+      <Docs>
+        <param name="managementAssembly">Die zu registrierende Assembly.</param>
+        <summary>Registriert eine Assembly mit der WMI-Infrastruktur.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterType">
+      <MemberSignature Language="C#" Value="public static void RegisterType (Type managementType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterType(class System.Type managementType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Instrumentation.InstrumentationManager.RegisterType(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Instrumentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="managementType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="managementType">Der Typ der Klasse.</param>
+        <summary>Registriert eine Klasse mit der WMI-Infrastruktur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+  
+```  
+static int Main(string[] args)  
+{  
+   InstrumentationManager.RegisterType(typeof(MySampleProvider));  
+   return 0;  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Revoke">
+      <MemberSignature Language="C#" Value="public static void Revoke (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Revoke(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Instrumentation.InstrumentationManager.Revoke(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Instrumentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine Instanz der Klasse, die den zurückzurufenden Anbieter implementiert.</param>
+        <summary>Akzeptiert eine Instanz eines aktuell verfügbaren Anbieters und markiert diese in der WMI-Infrastruktur als nicht verfügbar.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnregisterAssembly">
+      <MemberSignature Language="C#" Value="public static void UnregisterAssembly (System.Reflection.Assembly managementAssembly);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void UnregisterAssembly(class System.Reflection.Assembly managementAssembly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Instrumentation.InstrumentationManager.UnregisterAssembly(System.Reflection.Assembly)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Instrumentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="managementAssembly" Type="System.Reflection.Assembly" />
+      </Parameters>
+      <Docs>
+        <param name="managementAssembly">Die registrierte Assembly aufgehoben werden.</param>
+        <summary>Hebt die Registrierung einer Assembly, die zurzeit mit der WMI-Infrastruktur registriert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnregisterType">
+      <MemberSignature Language="C#" Value="public static void UnregisterType (Type managementType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void UnregisterType(class System.Type managementType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Instrumentation.InstrumentationManager.UnregisterType(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Instrumentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="managementType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="managementType">Der registrierten Typ aufgehoben werden.</param>
+        <summary>Hebt die Registrierung einer Klasse, die mit der WMI-Infrastruktur registriert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

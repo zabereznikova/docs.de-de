@@ -1,0 +1,2050 @@
+<Type Name="TreeNodeBinding" FullName="System.Web.UI.WebControls.TreeNodeBinding">
+  <TypeSignature Language="C#" Value="public sealed class TreeNodeBinding : ICloneable, System.Web.UI.IDataSourceViewSchemaAccessor, System.Web.UI.IStateManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TreeNodeBinding extends System.Object implements class System.ICloneable, class System.Web.UI.IDataSourceViewSchemaAccessor, class System.Web.UI.IStateManager" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.TreeNodeBinding" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.IDataSourceViewSchemaAccessor</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.IStateManager</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("TextField")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert die Beziehung zwischen einem Datenelement und dem Knoten, die es werden soll, die in gebunden einem <see cref="T:System.Web.UI.WebControls.TreeView" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.WebControls.TreeView> gebunden ist mit einer Datenquelle, in dem jedes Datenelement mehrere Felder (z. B. ein XML-Element mit mehreren Attributen enthält), ein Knoten zeigt den Wert an, die von zurückgegeben wird die `ToString` Methode des Datenelements in der Standardeinstellung. Im Fall einer XML-Element zeigt der Knoten der Elementname, der veranschaulicht, der zugrunde liegende Struktur des Baums, sondern ist andernfalls nicht sehr sinnvoll. Sie können die Eigenschaften eines Knotens auf ein bestimmtes Feld binden, indem Sie die Struktur der Knoten Bindungen angeben. Ein <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt definiert die Beziehung zwischen jedem Datenelement und dem Knoten, die es gebunden ist.  
+  
+ Die <xref:System.Web.UI.WebControls.TreeView> steuern speichert seine <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekte in der <xref:System.Web.UI.WebControls.TreeView.DataBindings%2A> Eigenschaft und die Bindungen angewendet, mit der Datenquelle um eine 1: 1-Beziehung zwischen der Strukturhierarchie und der Quellhierarchie Daten zu erstellen. Für jedes Datenelement in der Datenquelle die <xref:System.Web.UI.WebControls.TreeView> Steuerelement versucht, das Datenelement entsprechen einem <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt zum Erstellen der entsprechenden <xref:System.Web.UI.WebControls.TreeNode> Objekt.  
+  
+ Beim Erstellen einer <xref:System.Web.UI.WebControls.TreeNodeBinding> -Objekt, müssen Sie die Kriterien für die Bindung angeben. Die Kriterien gibt an, wenn ein Datenelement an einen Knoten gebunden werden soll. Sie können angeben, die <xref:System.Web.UI.WebControls.TreeNodeBinding.Depth%2A> oder <xref:System.Web.UI.WebControls.TreeNodeBinding.DataMember%2A> Eigenschaft oder beide Eigenschaften. Es ist eine leichte leistungsverbesserung durch beide angeben. Eine Knotentiefe gibt die Ebene des Knotens, die gebunden wird. Beispielsweise die folgenden <xref:System.Web.UI.WebControls.TreeNodeBinding> bindet die Deklaration der `Name` und `ID` Felder der Datenquelle, die <xref:System.Web.UI.WebControls.TreeNode.Text%2A> und <xref:System.Web.UI.WebControls.TreeNode.Value%2A> Eigenschaften, bzw. für alle Knoten mit einer Tiefe von 0:  
+  
+```  
+<asp:TreeNodeBinding Depth="0" TextField="Name" ValueField="ID">  
+```  
+  
+ Ein Datenmember gibt den Typ des Datenelements in der zugrunde liegenden Datenquelle, aber Sie können unterschiedliche Informationen je nach Datenquelle dar. Jedes Datenelement in einer hierarchischen Datenquelle (dargestellt durch eine <xref:System.Web.UI.IHierarchyData?displayProperty=nameWithType> Schnittstelle) macht eine <xref:System.Web.UI.IHierarchyData.Type%2A?displayProperty=nameWithType> -Eigenschaft, die den Typ des Datenelements angibt. Das Datenelement für ein XML-Element gibt z. B. den Namen des Elements. Wenn eine Datenquelle mehrere Datentypen Element enthält, das Datenelement angegeben, welche Daten Konfigurationselementtyp verwenden. Die folgenden <xref:System.Web.UI.WebControls.TreeNodeBinding> bindet die Deklaration der `<Book>` Elemente ein <xref:System.Web.UI.WebControls.XmlDataSource> Steuerelement auf allen Knoten in der Struktur, unabhängig davon, wo in der Hierarchie:  
+  
+```  
+<asp:TreeNodeBinding DataMember="Book" TextField="Title" ValueField= "ISBN">  
+```  
+  
+ Wenn die Bindungskriterien hergestellt wird, können Sie eine Eigenschaft Binden einer <xref:System.Web.UI.WebControls.TreeNode> -Objekt, das an einen Wert gebunden werden kann. Sie können auf ein Feld eines Datenelements oder in einen statischen Wert binden. Bei der Bindung an einen statischen Wert alle <xref:System.Web.UI.WebControls.TreeNode> Objekte, für die die <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt gilt weisen denselben Wert.  
+  
+> [!NOTE]
+>  Sie können eine gebundene Eigenschaft in selektiv überschreiben einer <xref:System.Web.UI.WebControls.TreeNode> Objekt, indem Sie die entsprechende Eigenschaft direkt im Knoten "" festlegen.  
+  
+ Die folgende Tabelle enthält die Eigenschaften der <xref:System.Web.UI.WebControls.TreeNodeBinding> -Klasse, die Ihnen ermöglichen, eine Eigenschaft zu binden die <xref:System.Web.UI.WebControls.TreeNode> Objekt, das ein Feld eines Datenelements.  
+  
+|Eigenschaft|Beschreibung|  
+|--------------|-----------------|  
+|<xref:System.Web.UI.WebControls.TreeNodeBinding.ImageUrlField%2A>|Das Feld zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.ImageUrl%2A> Eigenschaft von einem <xref:System.Web.UI.WebControls.TreeNode> Objekt.|  
+|<xref:System.Web.UI.WebControls.TreeNodeBinding.ImageToolTipField%2A>|Das Feld zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.ImageToolTip%2A> Eigenschaft von einem <xref:System.Web.UI.WebControls.TreeNode> Objekt.|  
+|<xref:System.Web.UI.WebControls.TreeNodeBinding.NavigateUrlField%2A>|Das Feld zum Binden an die <xref:System.Web.UI.WebControls.TreeNodeBinding.NavigateUrl%2A> Eigenschaft von einem <xref:System.Web.UI.WebControls.TreeNode> Objekt.|  
+|<xref:System.Web.UI.WebControls.TreeNodeBinding.TextField%2A>|Das Feld zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.Text%2A> Eigenschaft von einem <xref:System.Web.UI.WebControls.TreeNode> Objekt.|  
+|<xref:System.Web.UI.WebControls.TreeNodeBinding.ToolTipField%2A>|Das Feld zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.ToolTip%2A> Eigenschaft von einem <xref:System.Web.UI.WebControls.TreeNode> Objekt.|  
+|<xref:System.Web.UI.WebControls.TreeNodeBinding.ValueField%2A>|Das Feld zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.Value%2A> Eigenschaft von einem <xref:System.Web.UI.WebControls.TreeNode> Objekt.|  
+  
+ Die folgende Tabelle enthält die Eigenschaften der <xref:System.Web.UI.WebControls.TreeNodeBinding> -Klasse, die Ihnen ermöglichen, eine Eigenschaft binden die <xref:System.Web.UI.WebControls.TreeNode> Objekt in einen statischen Wert.  
+  
+|Eigenschaft|Beschreibung|  
+|--------------|-----------------|  
+|<xref:System.Web.UI.WebControls.TreeNodeBinding.ImageUrl%2A>|Der statische Wert zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.ImageUrl%2A> Eigenschaft von einem <xref:System.Web.UI.WebControls.TreeNode> Objekt.|  
+|<xref:System.Web.UI.WebControls.TreeNodeBinding.ImageToolTip%2A>|Der statische Wert zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.ImageToolTip%2A> Eigenschaft von einem <xref:System.Web.UI.WebControls.TreeNode> Objekt.|  
+|<xref:System.Web.UI.WebControls.TreeNodeBinding.NavigateUrl%2A>|Der statische Wert zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.NavigateUrl%2A> Eigenschaft von einem <xref:System.Web.UI.WebControls.TreeNode> Objekt.|  
+|<xref:System.Web.UI.WebControls.TreeNodeBinding.PopulateOnDemand%2A>|Der statische Wert zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.PopulateOnDemand%2A> Eigenschaft von einem <xref:System.Web.UI.WebControls.TreeNode> Objekt.|  
+|<xref:System.Web.UI.WebControls.TreeNodeBinding.SelectAction%2A>|Der statische Wert zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.SelectAction%2A> Eigenschaft von einem <xref:System.Web.UI.WebControls.TreeNode> Objekt.|  
+|<xref:System.Web.UI.WebControls.TreeNodeBinding.ShowCheckBox%2A>|Der statische Wert zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.ShowCheckBox%2A> Eigenschaft von einem <xref:System.Web.UI.WebControls.TreeNode> Objekt.|  
+|<xref:System.Web.UI.WebControls.TreeNodeBinding.Target%2A>|Der statische Wert zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.Target%2A> Eigenschaft von einem <xref:System.Web.UI.WebControls.TreeNode> Objekt.|  
+|<xref:System.Web.UI.WebControls.TreeNodeBinding.Text%2A>|Der statische Wert zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.Text%2A> Eigenschaft von einem <xref:System.Web.UI.WebControls.TreeNode> Objekt.|  
+|<xref:System.Web.UI.WebControls.TreeNodeBinding.ToolTip%2A>|Der statische Wert zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.ToolTip%2A> Eigenschaft von einem <xref:System.Web.UI.WebControls.TreeNode> Objekt.|  
+|<xref:System.Web.UI.WebControls.TreeNodeBinding.Value%2A>|Der statische Wert zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.Value%2A> Eigenschaft von einem <xref:System.Web.UI.WebControls.TreeNode> Objekt.|  
+  
+ Wenn in Konflikt stehende <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekte definiert sind, die <xref:System.Web.UI.WebControls.TreeView> -Steuerelement wendet die Struktur-Knoten-Bindungen in der folgenden Reihenfolge:  
+  
+1.  Die <xref:System.Web.UI.WebControls.TreeNodeBinding> -Objekt, das definiert, und entspricht der Tiefe und einen Datenmember.  
+  
+2.  Die <xref:System.Web.UI.WebControls.TreeNodeBinding> -Objekt, das definiert, und nur für den Datenmember entspricht.  
+  
+3.  Die <xref:System.Web.UI.WebControls.TreeNodeBinding> -Objekt, das nur die Tiefe definiert und zuordnet.  
+  
+4.  Die <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt, das weder die Tiefe noch den Datenmember definiert. (Diese Art von Struktur Knoten Bindung wird auf allen Knoten in der Struktur angewendet.)  
+  
+5.  Die <xref:System.Web.UI.WebControls.TreeNodeBinding> -Objekt, das nicht über eine Übereinstimmung in der Datenquelle verfügt. In diesem Fall werden die Werte, die von zurückgegeben wird das `ToString` die gebundene Methode des Datenelements klicken Sie dann auf die <xref:System.Web.UI.WebControls.TreeNode.Text%2A> und <xref:System.Web.UI.WebControls.TreeNode.Value%2A> Eigenschaften der Knoten, der die <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird.  
+  
+ Die <xref:System.Web.UI.WebControls.TreeNodeBinding> Klasse kann auch den Text zu formatieren, die in einem Knoten, indem angezeigt wird Sie die <xref:System.Web.UI.WebControls.TreeNodeBinding.FormatString%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Die folgende Tabelle zeigt einige Beispiel-Strukturknoten Bindungsdeklarationen.  
+  
+|Beispielbindung|Beschreibung|  
+|---------------------|-----------------|  
+|`<asp:TreeNodeBinding TextField="Title" ValueField= "ID"/>`|Bindet die <xref:System.Web.UI.WebControls.TreeNode.Text%2A> und <xref:System.Web.UI.WebControls.TreeNode.Value%2A> Eigenschaften aller Knoten in der Struktur nach der `Title` und `ID` Datenfelder der Datenquelle. Alle Knoten dieser Struktur Knoten Bindungsdeklaration verwenden, da die <xref:System.Web.UI.WebControls.TreeNodeBinding.DataMember%2A> und <xref:System.Web.UI.WebControls.TreeNodeBinding.Depth%2A> keine Eigenschaften festgelegt werden.|  
+|`<asp:TreeNodeBinding DataMember= "Book" TextField= "Title" ValueField= "ID"/>`|Bindet die <xref:System.Web.UI.WebControls.TreeNode.Text%2A> und <xref:System.Web.UI.WebControls.TreeNode.Value%2A> Eigenschaften aller Knoten in der Struktur nach der `Title` und `ID` Felder von der `Book` -Datenelements in der Datenquelle.|  
+|`<asp:TreeNodeBinding Depth="2" TextField= "Title" ValueField= "ID"/>`|Bindet die <xref:System.Web.UI.WebControls.TreeNode.Text%2A> und <xref:System.Web.UI.WebControls.TreeNode.Value%2A> Eigenschaften aller Knoten mit einer Tiefe von 2 in der Struktur nach der `Title` und `ID` Felder des ausgewählten Elements in der Datenquelle.|  
+|`<asp:TreeNodeBinding DataMember="Book" Depth= "2" TextField= "Title" ValueField= "ID" ImageUrl= "Image.jpg">`|Bindet die <xref:System.Web.UI.WebControls.TreeNode.Text%2A> und <xref:System.Web.UI.WebControls.TreeNode.Value%2A> Eigenschaften aller Knoten mit einer Tiefe von 2 in der Struktur nach der `Title` und `ID` Felder von der `Book` -Datenelements in der Datenquelle. Außerdem bindet das <xref:System.Web.UI.WebControls.TreeNode.ImageUrl%2A> Eigenschaft der Knoten in einen statischen Wert.|  
+  
+ Dieser Abschnitt enthält drei Codebeispiele. Im ersten Codebeispiel wird veranschaulicht, wie mit <xref:System.Web.UI.WebControls.TreeNodeBinding> deklarativ zu definieren, die Beziehung zwischen einem Knoten und ein Datenelement Objekte. Im zweiten Codebeispiel wird veranschaulicht, wie mit <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekte programmgesteuert die Beziehung zwischen einem Knoten und ein Datenelement zu definieren. Das dritte Codebeispiel stellt XML-Daten für die ersten und zweiten Codebeispiele bereit.  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mit <xref:System.Web.UI.WebControls.TreeNodeBinding> deklarativ zu definieren, die Beziehung zwischen einem Knoten und ein Datenelement Objekte. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die XML-Beispieldaten bereitgestellt, die nach diesem Codebeispiel, in eine Datei mit dem Namen Book.xml kopieren.  
+  
+ [!code-aspx-csharp[TreeViewXml#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeViewXml/CS/treeviewxmlcs.aspx#1)]
+ [!code-aspx-vb[TreeViewXml#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeViewXml/VB/treeviewxmlvb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mit <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekte programmgesteuert die Beziehung zwischen einem Knoten und ein Datenelement zu definieren. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die Beispiel-XML-Daten, die bereitgestellt wird im nächsten Codebeispiel wird in eine Datei mit dem Namen Book.xml kopieren.  
+  
+ [!code-aspx-csharp[TreeViewCtor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeViewCtor/CS/treeviewctorcs.aspx#1)]
+ [!code-aspx-vb[TreeViewCtor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeViewCtor/VB/treeviewctorvb.aspx#1)]  
+  
+ Das folgende Codebeispiel stellt XML-Daten für die vorherigen Codebeispiele bereit.  
+  
+```  
+<Book Title="Book Title">  
+    <Chapter Heading="Chapter 1">  
+        <Section Heading="Section 1">  
+        </Section>  
+        <Section Heading="Section 2">  
+        </Section>  
+    </Chapter>  
+    <Chapter Heading="Chapter 2">  
+        <Section Heading="Section 1">  
+        </Section>  
+    </Chapter>  
+</Book>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TreeNodeBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNodeBinding.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TreeNodeBinding.%23ctor%2A> Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.TreeNodeBinding> Klasse. Er wird häufig verwendet, wenn dynamisch aufgefüllt der <xref:System.Web.UI.WebControls.TreeView.DataBindings%2A> Auflistung von einem <xref:System.Web.UI.WebControls.TreeView> Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeBinding.%23ctor%2A> Konstruktors zum Hinzufügen einer <xref:System.Web.UI.WebControls.TreeNodeBinding> -Objekt dynamisch die <xref:System.Web.UI.WebControls.TreeView.DataBindings%2A> Auflistung von eine <xref:System.Web.UI.WebControls.TreeView> Steuerelement.  
+  
+ [!code-aspx-csharp[TreeViewCtor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeViewCtor/CS/treeviewctorcs.aspx#1)]
+ [!code-aspx-vb[TreeViewCtor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeViewCtor/VB/treeviewctorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataMember">
+      <MemberSignature Language="C#" Value="public string DataMember { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataMember" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNodeBinding.DataMember" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert für den Vergleich einer <see cref="P:System.Web.UI.IHierarchyData.Type" /> -Eigenschaft für ein Datenelement, um festzustellen, ob die Struktur der Knoten-Bindung.</summary>
+        <value>Der Wert für die Überprüfung des Datenelements Übereinstimmungen <see cref="P:System.Web.UI.IHierarchyData.Type" /> Eigenschaft, um festzustellen, ob die Struktur der Knoten-Bindung. Der Standardwert ist eine leere Zeichenfolge (""), gibt an, dass die <see cref="P:System.Web.UI.WebControls.TreeNodeBinding.DataMember" /> Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Datenmember gibt den Typ des Datenelements in der zugrunde liegenden Datenquelle, aber Sie können unterschiedliche Informationen je nach Datenquelle dar. Jedes Datenelement in einer hierarchischen Datenquelle (dargestellt durch eine <xref:System.Web.UI.IHierarchyData?displayProperty=nameWithType> Objekt) macht eine <xref:System.Web.UI.IHierarchyData.Type%2A?displayProperty=nameWithType> -Eigenschaft, die den Typ des Datenelements angibt. Das Datenelement für ein XML-Element gibt z. B. den Namen des Elements. Wenn eine Datenquelle mehrere Datentypen Element enthält, das Datenelement angegeben, welche Daten Konfigurationselementtyp verwenden. Die folgenden <xref:System.Web.UI.WebControls.TreeNodeBinding> bindet die Deklaration der `<Book>` Elemente ein <xref:System.Web.UI.WebControls.XmlDataSource> Steuerelement auf allen Knoten in der Struktur, unabhängig davon, wo in der Hierarchie:  
+  
+```  
+<asp:TreeNodeBinding DataMember="Book" TextField="Title" ValueField= "ISBN">  
+```  
+  
+ Beim Erstellen einer <xref:System.Web.UI.WebControls.TreeNodeBinding> -Objekt, müssen Sie die Kriterien für die Bindung angeben. Die Kriterien gibt an, wenn ein Datenelement an einen Knoten gebunden werden soll. Sie können angeben, die <xref:System.Web.UI.WebControls.TreeNodeBinding.Depth%2A> oder <xref:System.Web.UI.WebControls.TreeNodeBinding.DataMember%2A> Eigenschaft oder beide Eigenschaften. Es ist eine leichte leistungsverbesserung durch beide angeben.  
+  
+ Wenn die Bindungskriterien hergestellt wird, können Sie eine Eigenschaft Binden einer <xref:System.Web.UI.WebControls.TreeNode> -Objekt, das an einen Wert gebunden werden kann. Sie können auf ein Feld eines Datenelements oder in einen statischen Wert binden. Bei der Bindung an einen statischen Wert alle <xref:System.Web.UI.WebControls.TreeNode> Objekte, für die die <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt gilt weisen denselben Wert.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Dieser Abschnitt enthält zwei Codebeispiele. Im ersten Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeBinding.DataMember%2A> Eigenschaft, um die XML-Element zum Binden an einen Knoten anzugeben. Das zweite Codebeispiel im ersten Codebeispiel wird XML-Daten bereit.  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeBinding.DataMember%2A> Eigenschaft, um die XML-Element zum Binden an einen Knoten anzugeben. Für dieses Codebeispiel ordnungsgemäß funktioniert müssen Sie die XML-Beispieldaten bereitgestellt, die nach diesem Codebeispiel, in eine Datei mit dem Namen Book.xml kopieren.  
+  
+ [!code-aspx-csharp[TreeNodeBindingDataMember#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeBindingDataMember/CS/treenodebindingdatamembercs.aspx#1)]
+ [!code-aspx-vb[TreeNodeBindingDataMember#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeBindingDataMember/VB/treenodebindingdatamembervb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird der im vorangehenden Codebeispiel wird XML-Daten bereit.  
+  
+```  
+<Book Title="Book Title">  
+    <Chapter Heading="Chapter 1">  
+        <Section Heading="Section 1">  
+        </Section>  
+        <Section Heading="Section 2">  
+        </Section>  
+    </Chapter>  
+    <Chapter Heading="Chapter 2">  
+        <Section Heading="Section 1">  
+        </Section>  
+    </Chapter>  
+    <Appendix Heading="Appendix A">  
+    </Appendix>  
+</Book>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Depth">
+      <MemberSignature Language="C#" Value="public int Depth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Depth" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNodeBinding.Depth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(-1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Web.UI.Design.WebControls.TreeNodeBindingDepthConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt Sie die Knotentiefe, an dem die <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt angewendet wird.</summary>
+        <value>Die Knotentiefe, an dem die <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt angewendet wird. Der Standardwert ist-1 und gibt an, dass die <see cref="P:System.Web.UI.WebControls.TreeNodeBinding.Depth" /> Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Knotentiefe gibt die Ebene des Knotens, die gebunden wird. Beispielsweise die folgenden <xref:System.Web.UI.WebControls.TreeNodeBinding> bindet die Deklaration der `Name` und `ID` Felder der Datenquelle, die <xref:System.Web.UI.WebControls.TreeNode.Text%2A> und <xref:System.Web.UI.WebControls.TreeNode.Value%2A> Eigenschaften, bzw. für alle Knoten mit einer Tiefe von 0:  
+  
+```  
+<asp:TreeNodeBinding Depth="0" TextField="Name" ValueField="ID">  
+```  
+  
+ Beim Erstellen einer <xref:System.Web.UI.WebControls.TreeNodeBinding> -Objekt, müssen Sie die Kriterien für die Bindung angeben. Die Kriterien gibt an, wenn ein Datenelement an einen Knoten gebunden werden soll. Sie können angeben, die <xref:System.Web.UI.WebControls.TreeNodeBinding.Depth%2A> oder <xref:System.Web.UI.WebControls.TreeNodeBinding.DataMember%2A> Eigenschaft oder beide Eigenschaften. Es ist eine leichte leistungsverbesserung durch beide angeben.  
+  
+ Wenn die Bindungskriterien hergestellt wird, können Sie eine Eigenschaft Binden einer <xref:System.Web.UI.WebControls.TreeNode> -Objekt, das an einen Wert gebunden werden kann. Sie können auf ein Feld eines Datenelements oder in einen statischen Wert binden. Bei der Bindung an einen statischen Wert alle <xref:System.Web.UI.WebControls.TreeNode> Objekte, für die die <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt gilt weisen denselben Wert.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Dieser Abschnitt enthält zwei Codebeispiele. Im ersten Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeBinding.Depth%2A> Eigenschaft anwenden einer <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt in einer bestimmten Knotentiefe. Das zweite Codebeispiel im ersten Codebeispiel wird XML-Daten bereit.  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeBinding.Depth%2A> Eigenschaft anwenden einer <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt in einer bestimmten Knotentiefe. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die XML-Beispieldaten bereitgestellt, die nach diesem Codebeispiel, in eine Datei mit dem Namen Book.xml kopieren.  
+  
+ [!code-aspx-csharp[TreeNodeBindingDataMember#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeBindingDataMember/CS/treenodebindingdatamembercs.aspx#1)]
+ [!code-aspx-vb[TreeNodeBindingDataMember#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeBindingDataMember/VB/treenodebindingdatamembervb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird der im vorangehenden Codebeispiel wird XML-Daten bereit.  
+  
+```  
+<Book Title="Book Title">  
+    <Chapter Heading="Chapter 1">  
+        <Section Heading="Section 1">  
+        </Section>  
+        <Section Heading="Section 2">  
+        </Section>  
+    </Chapter>  
+    <Chapter Heading="Chapter 2">  
+        <Section Heading="Section 1">  
+        </Section>  
+    </Chapter>  
+    <Appendix Heading="Appendix A">  
+    </Appendix>  
+</Book>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatString">
+      <MemberSignature Language="C#" Value="public string FormatString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FormatString" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNodeBinding.FormatString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeichenfolge, die das Anzeigeformat für den Text eines Knotens, der angibt, die <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt angewendet wird.</summary>
+        <value>Eine Formatierungszeichenfolge, die das Anzeigeformat für den Text eines Knotens, der angibt, der die <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt angewendet wird. Der Standardwert ist eine leere Zeichenfolge (""), gibt an, dass die <see cref="P:System.Web.UI.WebControls.TreeNodeBinding.FormatString" /> Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.TreeNodeBinding.FormatString%2A> Eigenschaft wird verwendet, um ein benutzerdefiniertes Format für den Text eines Knotens bereitzustellen. Daten-Formatzeichenfolge besteht aus zwei Teilen, getrennt durch einen Doppelpunkt, im Format { `A` : `Bxx` }. Z. B. die Formatierungszeichenfolge `{0:F2}` zeigt eine Festkommazahl mit zwei Dezimalstellen an.  
+  
+> [!NOTE]
+>  In der geschweiften Klammern, um anzugeben, dass es auf einer Formatzeichenfolge und keine Literale Zeichenfolge ist, muss die gesamte Zeichenfolge eingeschlossen werden. Beliebiger Text außerhalb der Klammern wird als Literaltext angezeigt.  
+  
+ Der Wert vor dem Doppelpunkt (`A` im allgemeinen Beispiel) gibt an, die Parameter-Index in einer nullbasierten Liste von Parametern.  
+  
+> [!NOTE]
+>  Dieser Wert kann nur auf 0 festgelegt werden, da nur ein Wert in den einzelnen Knoten.  
+  
+ Die Zeichen nach dem Doppelpunkt (`B` im allgemeinen Beispiel) gibt das Anzeigeformat für den Wert. Die folgende Tabelle enthält die gängigen Formaten.  
+  
+|Formatzeichen|Zeigt die numerischen Werte in|  
+|----------------------|--------------------------------|  
+|`C`|Währungsformat.|  
+|`D`|Dezimalformat.|  
+|`E`|Wissenschaftlicher (exponentieller)-Format.|  
+|`F`|Festes Format.|  
+|`G`|Allgemeine Format.|  
+|`N`|Zahlenformat.|  
+|`X`|Hexadezimalformat.|  
+  
+> [!NOTE]
+>  Mit Ausnahme von `X`, das Formatzeichen ist nicht in der Groß-/Kleinschreibung beachtet. Die `X` Formatzeichen zeigt die Hexadezimalzeichen in die Groß-/Kleinschreibung, der angegeben wird.  
+  
+ Der Wert nach der Formatzeichen (`xx` im allgemeinen Beispiel) gibt die Anzahl der signifikanten Ziffern oder Dezimalstellen an.  
+  
+ Weitere Informationen zum Formatieren von Zeichenfolgen finden Sie unter [Formatierungstypen](~/docs/standard/base-types/formatting-types.md).  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+ Der Wert von der <xref:System.Web.UI.WebControls.TreeNodeBinding.FormatString%2A> -Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Dieser Abschnitt enthält zwei Codebeispiele. Im ersten Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeBinding.FormatString%2A> Eigenschaft, um ein benutzerdefiniertes Format für den Text anzugeben, die im Knoten "Root" angezeigt wird. Das zweite Codebeispiel im ersten Codebeispiel wird XML-Daten bereit.  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeBinding.FormatString%2A> Eigenschaft, um ein benutzerdefiniertes Format für den Text anzugeben, die im Knoten "Root" angezeigt wird. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die XML-Beispieldaten bereitgestellt, die nach diesem Codebeispiel, in eine Datei mit dem Namen Book.xml kopieren.  
+  
+ [!code-aspx-csharp[TreeNodeBindingFormatString#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeBindingFormatString/CS/treenodebindingformatstringcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeBindingFormatString#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeBindingFormatString/VB/treenodebindingformatstringvb.aspx#1)]  
+  
+ Im folgenden Codebeispiel ist die XML-Beispieldaten für das vorangegangene Beispiel.  
+  
+```  
+<Book Title="Book Title">  
+    <Chapter Heading="Chapter 1">  
+        <Section Heading="Section 1">  
+        </Section>  
+        <Section Heading="Section 2">  
+        </Section>  
+    </Chapter>  
+    <Chapter Heading="Chapter 2">  
+        <Section Heading="Section 1">  
+        </Section>  
+    </Chapter>  
+    <Appendix Heading="Appendix A">  
+    </Appendix>  
+</Book>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageToolTip">
+      <MemberSignature Language="C#" Value="public string ImageToolTip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ImageToolTip" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNodeBinding.ImageToolTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den QuickInfo-Text für das Bild, das neben dem Knoten angezeigt wird der <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt angewendet wird.</summary>
+        <value>Der QuickInfo-Text für das Bild, das neben dem Knoten angezeigt wird der <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt angewendet wird. Der Standardwert ist eine leere Zeichenfolge (""), was bedeutet, dass die p: System.Web.UI.WebControls.TreeNodeBinding.ImageToolTip-Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.WebControls.TreeView> Steuerelement an eine Datenquelle gebunden ist, verwenden Sie die <xref:System.Web.UI.WebControls.TreeNodeBinding.ImageToolTip%2A> Eigenschaft zum Angeben des Werts zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.ImageToolTip%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.TreeNode> Objekt. Der Text, den Sie angeben, enthält Geräte mit Hilfstechnologie mit einer Beschreibung des Abbilds, das verwendet werden kann, um das Steuerelement leichter zugänglich machen.  
+  
+ Diese Bindung Beziehung wirkt sich auf alle <xref:System.Web.UI.WebControls.TreeNode> Objekte, für die die <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Wenn ein Bild neben einem Knoten angezeigt wird, wird der QuickInfo-Text angezeigt, wenn der Mauszeiger über dem Bild positioniert ist.  
+  
+> [!NOTE]
+>  Können Sie selektiv überschreiben die <xref:System.Web.UI.WebControls.TreeNodeBinding.ImageToolTip%2A> Eigenschaft durch Festlegen der <xref:System.Web.UI.WebControls.TreeNode.ImageToolTip%2A> -Eigenschaft jedes Knotens direkt.  
+  
+ Anstelle der <xref:System.Web.UI.WebControls.TreeNodeBinding.ImageToolTip%2A> -Eigenschaft denselben QuickInfo-Text an jeden Knoten, binden Sie binden können die <xref:System.Web.UI.WebControls.TreeNode.ImageToolTip%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.TreeNode> Objekt in ein Feld einer Datenquelle durch Festlegen der <xref:System.Web.UI.WebControls.TreeNodeBinding.ImageToolTipField%2A> Eigenschaft.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Dieser Abschnitt enthält zwei Codebeispiele. Im ersten Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeBinding.ImageToolTip%2A> Eigenschaft, um den QuickInfo-Text für das Bild anzugeben, das neben dem Knoten angezeigt wird der <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Das zweite Codebeispiel im ersten Codebeispiel wird XML-Daten bereit.  
+  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeBinding.ImageToolTip%2A> Eigenschaft, um den QuickInfo-Text für das Bild anzugeben, das neben dem Knoten angezeigt wird der <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die XML-Beispieldaten bereitgestellt, die nach diesem Codebeispiel, in eine Datei mit dem Namen Booklist.xml kopieren.  
+  
+ [!code-aspx-csharp[TreeNodeBindingText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeBindingText/CS/treenodebindingtextcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeBindingText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeBindingText/VB/treenodebindingtextvb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird der im vorangehenden Codebeispiel wird XML-Daten bereit.  
+  
+```  
+<Books Text="Books List">  
+    <Book Text="Book Title One"  
+        Value="1"   
+        Image="Bookimage1.jpg"  
+        ImageToolTip="Book 1 Photo"   
+        Nav="http://www.microsoft.com"  
+        Tip="Book Title 1">  
+        <Description Text="Book Description">  
+        </Description>  
+        <Price Value="$1.99">  
+        </Price>  
+        <Author Text="Author Name"  
+            Value="LastName"   
+            Image="Authorimage1.jpg"   
+            Nav="http://www.microsoft.com"  
+            Tip="Author Name">  
+        </Author>  
+    </Book>  
+    <Book Text="Book Title Two"  
+        Value="2"   
+        Image="Bookimage2.jpg"  
+        ImageToolTip="Book 2 Photo"   
+        Nav="http://www.microsoft.com"  
+        Tip="Click Me">  
+        <Description Text="Book Description">  
+        </Description>  
+        <Price Value="$2.99">  
+        </Price>  
+        <Author Text="Author Name"  
+            Value="LastName"   
+            Image="Authorimage2.jpg"   
+            Nav="http://www.microsoft.com"  
+            Tip="Author Name">  
+        </Author>  
+    </Book>  
+</Books>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageToolTipField">
+      <MemberSignature Language="C#" Value="public string ImageToolTipField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ImageToolTipField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNodeBinding.ImageToolTipField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Web.UI.Design.DataSourceViewSchemaConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Felds aus der Datenquelle zum Binden an die <see cref="P:System.Web.UI.WebControls.TreeNode.ImageToolTip" /> Eigenschaft von einem <see cref="T:System.Web.UI.WebControls.TreeNode" /> Objekt, mit dem die <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt angewendet wird.</summary>
+        <value>Der Name des Felds zum Binden an die <see cref="P:System.Web.UI.WebControls.TreeNode.ImageToolTip" /> Eigenschaft eine <see cref="T:System.Web.UI.WebControls.TreeNode" /> Objekt, mit dem die <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt angewendet wird. Der Standardwert ist eine leere Zeichenfolge (""), gibt an, dass die <see cref="P:System.Web.UI.WebControls.TreeNodeBinding.ImageToolTipField" /> Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der <xref:System.Web.UI.WebControls.TreeView> Steuerelement an eine Datenquelle gebunden ist, verwenden Sie die <xref:System.Web.UI.WebControls.TreeNodeBinding.ImageToolTipField%2A> -Eigenschaft an den Feldnamen zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.ImageToolTip%2A> Eigenschaft ein <xref:System.Web.UI.WebControls.TreeNode> Objekt. Der Text, den Sie angeben, enthält Geräte mit Hilfstechnologie mit einer Beschreibung des Abbilds, das verwendet werden kann, um das Steuerelement leichter zugänglich machen.  
+  
+ Diese Bindung Beziehung wirkt sich auf alle <xref:System.Web.UI.WebControls.TreeNode> Objekte, für die die <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Wenn ein Bild neben einem Knoten angezeigt wird, wird der QuickInfo-Text angezeigt, wenn der Mauszeiger über dem Bild positioniert ist.  
+  
+> [!NOTE]
+>  Können Sie selektiv überschreiben die <xref:System.Web.UI.WebControls.TreeNodeBinding.ImageToolTipField%2A> Eigenschaft durch Festlegen der <xref:System.Web.UI.WebControls.TreeNode.ImageToolTip%2A> -Eigenschaft jedes Knotens direkt.  
+  
+ Anstatt die <xref:System.Web.UI.WebControls.TreeNodeBinding.ImageToolTipField%2A> zu bindende Eigenschaft der <xref:System.Web.UI.WebControls.TreeNode.ImageToolTip%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.TreeNode> -Objekt an ein Feld können Sie festlegen der <xref:System.Web.UI.WebControls.TreeNode.ImageToolTip%2A> Eigenschaft auf einen festen Wert durch Festlegen der <xref:System.Web.UI.WebControls.TreeNodeBinding.ImageToolTip%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Wenn die Datenquelle mehrere Felder enthält, müssen Sie zunächst Festlegen der <xref:System.Web.UI.WebControls.TreeNodeBinding.Depth%2A> oder <xref:System.Web.UI.WebControls.TreeNodeBinding.DataMember%2A> Eigenschaft oder beide Eigenschaften zum Binden an das entsprechende Feld.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Dieser Abschnitt enthält zwei Codebeispiele. Im ersten Codebeispiel wird veranschaulicht, wie der <xref:System.Web.UI.WebControls.TreeNodeBinding.ImageToolTipField%2A> Eigenschaft an, welches Attribut eines XML-Elements zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.ImageToolTip%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.TreeNode> Objekt, mit dem der <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Das zweite Codebeispiel im ersten Codebeispiel wird XML-Daten bereit.  
+  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeBinding.ImageToolTipField%2A> Eigenschaft an, welches Attribut eines XML-Elements zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.ImageToolTip%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.TreeNode> Objekt, mit dem die <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die XML-Beispieldaten bereitgestellt, die nach diesem Codebeispiel, in eine Datei mit dem Namen Booklist.xml kopieren.  
+  
+ [!code-aspx-csharp[TreeNodeTextField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeTextField/CS/treenodebindingtextfieldcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeTextField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeTextField/VB/treenodebindingtextfieldvb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird der im vorangehenden Codebeispiel wird XML-Daten bereit.  
+  
+```  
+<Books Text="Books List">  
+    <Book Text="Book Title One"  
+        Value="1"   
+        Image="Bookimage1.jpg"  
+        ImageToolTip="Book 1 Photo"   
+        Nav="http://www.microsoft.com"  
+        Tip="Book Title 1">  
+        <Description Text="Book Description">  
+        </Description>  
+        <Price Value="$1.99">  
+        </Price>  
+        <Author Text="Author Name"  
+            Value="LastName"   
+            Image="Authorimage1.jpg"   
+            Nav="http://www.microsoft.com"  
+            Tip="Author Name">  
+        </Author>  
+    </Book>  
+    <Book Text="Book Title Two"  
+        Value="2"   
+        Image="Bookimage2.jpg"  
+        ImageToolTip="Book 2 Photo"   
+        Nav="http://www.microsoft.com"  
+        Tip="Click Me">  
+        <Description Text="Book Description">  
+        </Description>  
+        <Price Value="$2.99">  
+        </Price>  
+        <Author Text="Author Name"  
+            Value="LastName"   
+            Image="Authorimage2.jpg"   
+            Nav="http://www.microsoft.com"  
+            Tip="Author Name">  
+        </Author>  
+    </Book>  
+</Books>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageUrl">
+      <MemberSignature Language="C#" Value="public string ImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNodeBinding.ImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL zu einem Bild, das neben dem Knoten angezeigt wird der <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt angewendet wird.</summary>
+        <value>Die URL zu einem Bild, das neben dem Knoten angezeigt wird der <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt angewendet wird. Die  
+  
+ <see cref="P:System.Web.UI.WebControls.TreeNodeBinding.ImageUrl" />Eigenschaft ist nicht festgelegt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.WebControls.TreeView> Steuerelement an eine Datenquelle gebunden ist, verwenden Sie die <xref:System.Web.UI.WebControls.TreeNodeBinding.ImageUrl%2A> -Eigenschaft an ein benutzerdefiniertes Bild zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.ImageUrl%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.TreeNode> Objekt. Diese Bindung Beziehung wirkt sich auf alle <xref:System.Web.UI.WebControls.TreeNode> Objekte, für die die <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Das Bild wird neben einem Knoten angezeigt und kann beliebiges Dateiformat aufweisen (JPG, GIF, BMP usw.) sein, solange der Clientbrowser dieses Format unterstützt.  
+  
+> [!NOTE]
+>  Sie können das Bild für einen einzelnen Knoten überschreiben, indem seine <xref:System.Web.UI.WebControls.TreeNode.ImageUrl%2A> -Eigenschaft direkt.  
+  
+ Anstatt diese Eigenschaft auf jedem Knoten des gleichen Images binden, binden Sie die <xref:System.Web.UI.WebControls.TreeNode.ImageUrl%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.TreeNode> Objekt in ein Feld einer Datenquelle durch Festlegen der <xref:System.Web.UI.WebControls.TreeNodeBinding.ImageUrlField%2A> Eigenschaft.  
+  
+ Wenn ein Bild neben einem Knoten mit Anzeigen der <xref:System.Web.UI.WebControls.TreeNodeBinding.ImageUrl%2A> -Eigenschaft, erwägen Sie auch die Einstellung der <xref:System.Web.UI.WebControls.TreeNodeBinding.ImageToolTip%2A> Eigenschaft. Der QuickInfo-Text an dem von Ihnen bietet Geräte mit Hilfstechnologie mit einer Beschreibung des Abbilds, das verwendet werden kann, um das Steuerelement leichter zugänglich machen.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Dieser Abschnitt enthält zwei Codebeispiele. Im ersten Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeBinding.Depth%2A> Eigenschaft anwenden einer <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt in einer bestimmten Knotentiefe. Das zweite Codebeispiel im ersten Codebeispiel wird XML-Daten bereit.  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeBinding.ImageUrl%2A> Eigenschaft zum Angeben eines benutzerdefinierten Abbilds für einen Knoten, der die <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die XML-Beispieldaten bereitgestellt, die nach diesem Codebeispiel, in eine Datei mit dem Namen Booklist.xml kopieren.  
+  
+ [!code-aspx-csharp[TreeNodeBindingText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeBindingText/CS/treenodebindingtextcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeBindingText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeBindingText/VB/treenodebindingtextvb.aspx#1)]  
+  
+ Das folgende Codebeispiel stellt XML-Beispieldaten für das vorangegangene Beispiel bereit.  
+  
+```  
+<Books Text="Books List">  
+    <Book Text="Book Title One"  
+        Value="1"   
+        Image="Bookimage1.jpg"  
+        ImageToolTip="Book 1 Photo"   
+        Nav="http://www.microsoft.com"  
+        Tip="Book Title 1">  
+        <Description Text="Book Description">  
+        </Description>  
+        <Price Value="$1.99">  
+        </Price>  
+        <Author Text="Author Name"  
+            Value="LastName"   
+            Image="Authorimage1.jpg"   
+            Nav="http://www.microsoft.com"  
+            Tip="Author Name">  
+        </Author>  
+    </Book>  
+    <Book Text="Book Title Two"  
+        Value="2"   
+        Image="Bookimage2.jpg"  
+        ImageToolTip="Book 2 Photo"   
+        Nav="http://www.microsoft.com"  
+        Tip="Click Me">  
+        <Description Text="Book Description">  
+        </Description>  
+        <Price Value="$2.99">  
+        </Price>  
+        <Author Text="Author Name"  
+            Value="LastName"   
+            Image="Authorimage2.jpg"   
+            Nav="http://www.microsoft.com"  
+            Tip="Author Name">  
+        </Author>  
+    </Book>  
+</Books>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageUrlField">
+      <MemberSignature Language="C#" Value="public string ImageUrlField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ImageUrlField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNodeBinding.ImageUrlField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Web.UI.Design.DataSourceViewSchemaConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Felds aus der Datenquelle zum Binden an die <see cref="P:System.Web.UI.WebControls.TreeNode.ImageUrl" /> Eigenschaft von einem <see cref="T:System.Web.UI.WebControls.TreeNode" /> Objekt, mit dem die <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt angewendet wird.</summary>
+        <value>Der Name des Felds zum Binden an die <see cref="P:System.Web.UI.WebControls.TreeNode.ImageUrl" /> Eigenschaft eine <see cref="T:System.Web.UI.WebControls.TreeNode" /> Objekt, mit dem die <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt angewendet wird. Der Standardwert ist eine leere Zeichenfolge (""), gibt an, dass die <see cref="P:System.Web.UI.WebControls.TreeNodeBinding.ImageUrlField" /> Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.WebControls.TreeView> Steuerelement an eine Datenquelle gebunden ist, verwenden Sie die <xref:System.Web.UI.WebControls.TreeNodeBinding.ImageUrlField%2A> -Eigenschaft den Namen des Felds, das zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.ImageUrl%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.TreeNode> Objekt. Diese Bindung Beziehung wirkt sich auf alle <xref:System.Web.UI.WebControls.TreeNode> Objekte, für die die <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Das Bild wird neben einem Knoten angezeigt und kann beliebiges Dateiformat aufweisen (JPG, GIF, BMP usw.) sein, solange der Clientbrowser Format unterstützt.  
+  
+> [!NOTE]
+>  Sie können das Bild für einen einzelnen Knoten überschreiben, indem seine <xref:System.Web.UI.WebControls.TreeNode.ImageUrl%2A> -Eigenschaft direkt.  
+  
+ Anstatt diese Eigenschaft um zu binden der <xref:System.Web.UI.WebControls.TreeNode.ImageUrl%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.TreeNode> -Objekt an ein Feld können Sie festlegen der <xref:System.Web.UI.WebControls.TreeNode.ImageUrl%2A> Eigenschaft auf einen festen Wert durch Festlegen der <xref:System.Web.UI.WebControls.TreeNodeBinding.ImageUrl%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Wenn die Datenquelle mehrere Felder enthält, müssen Sie zunächst Festlegen der <xref:System.Web.UI.WebControls.TreeNodeBinding.Depth%2A> oder <xref:System.Web.UI.WebControls.TreeNodeBinding.DataMember%2A> Eigenschaft oder beide Eigenschaften zum Binden an das entsprechende Feld.  
+  
+ Wenn ein Bild neben einem Knoten mit Anzeigen der <xref:System.Web.UI.WebControls.TreeNodeBinding.ImageUrlField%2A> -Eigenschaft, erwägen Sie auch die Einstellung der <xref:System.Web.UI.WebControls.TreeNodeBinding.ImageToolTipField%2A> Eigenschaft. Der QuickInfo-Text an dem von Ihnen bietet Geräte mit Hilfstechnologie mit einer Beschreibung des Abbilds, das verwendet werden kann, um das Steuerelement leichter zugänglich machen.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Dieser Abschnitt enthält zwei Codebeispiele. Im ersten Codebeispiel wird veranschaulicht, wie der <xref:System.Web.UI.WebControls.TreeNodeBinding.ImageUrlField%2A> Eigenschaft an, welches Attribut eines XML-Elements zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.ImageUrl%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.TreeNode> Objekt, mit dem der <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Das zweite Codebeispiel im ersten Codebeispiel wird XML-Daten bereit.  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie der <xref:System.Web.UI.WebControls.TreeNodeBinding.ImageUrlField%2A> Eigenschaft an, welches Attribut eines XML-Elements zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.ImageUrl%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.TreeNode> Objekt, mit dem der <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die XML-Beispieldaten bereitgestellt, die nach diesem Codebeispiel, in eine Datei mit dem Namen Booklist.xml kopieren.  
+  
+ [!code-aspx-csharp[TreeNodeTextField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeTextField/CS/treenodebindingtextfieldcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeTextField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeTextField/VB/treenodebindingtextfieldvb.aspx#1)]  
+  
+ Das folgende Codebeispiel stellt XML-Beispieldaten für das vorangegangene Beispiel bereit.  
+  
+```  
+<Books Text="Books List">  
+    <Book Text="Book Title One"  
+        Value="1"   
+        Image="Bookimage1.jpg"  
+        ImageToolTip="Book 1 Photo"   
+        Nav="http://www.microsoft.com"  
+        Tip="Book Title 1">  
+        <Description Text="Book Description">  
+        </Description>  
+        <Price Value="$1.99">  
+        </Price>  
+        <Author Text="Author Name"  
+            Value="LastName"   
+            Image="Authorimage1.jpg"   
+            Nav="http://www.microsoft.com"  
+            Tip="Author Name">  
+        </Author>  
+    </Book>  
+    <Book Text="Book Title Two"  
+        Value="2"   
+        Image="Bookimage2.jpg"  
+        ImageToolTip="Book 2 Photo"   
+        Nav="http://www.microsoft.com"  
+        Tip="Click Me">  
+        <Description Text="Book Description">  
+        </Description>  
+        <Price Value="$2.99">  
+        </Price>  
+        <Author Text="Author Name"  
+            Value="LastName"   
+            Image="Authorimage2.jpg"   
+            Nav="http://www.microsoft.com"  
+            Tip="Author Name">  
+        </Author>  
+    </Book>  
+</Books>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NavigateUrl">
+      <MemberSignature Language="C#" Value="public string NavigateUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NavigateUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNodeBinding.NavigateUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.UrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL an, wenn ein Knoten, der die <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt gilt geklickt wird.</summary>
+        <value>Die URL an, wenn ein Knoten, der die <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt gilt geklickt wird. Der Standardwert ist eine leere Zeichenfolge (""), gibt an, dass die <see cref="P:System.Web.UI.WebControls.TreeNodeBinding.NavigateUrl" /> Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der <xref:System.Web.UI.WebControls.TreeView> Steuerelement an eine Datenquelle gebunden ist, verwenden Sie die <xref:System.Web.UI.WebControls.TreeNodeBinding.NavigateUrl%2A> Eigenschaft zum Angeben der URL zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.NavigateUrl%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.TreeNode> Objekt. Diese Bindung Beziehung wirkt sich auf alle <xref:System.Web.UI.WebControls.TreeNode> Objekte, für die die <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Wenn diese Eigenschaft festgelegt ist, die <xref:System.Web.UI.WebControls.TreeView> -Steuerelement zeigt einen Link für den Text des Knotens, anstelle von nur-Text. Sie können auch optional Festlegen der <xref:System.Web.UI.WebControls.TreeNodeBinding.Target%2A> -Eigenschaft an das Fenster oder der Zielframe, in dem den verknüpften Inhalt angezeigt.  
+  
+> [!NOTE]
+>  Können Sie selektiv überschreiben die <xref:System.Web.UI.WebControls.TreeNodeBinding.NavigateUrl%2A> Eigenschaft durch Festlegen der <xref:System.Web.UI.WebControls.TreeNode.NavigateUrl%2A> -Eigenschaft jedes Knotens direkt.  
+  
+ Anstatt die <xref:System.Web.UI.WebControls.TreeNodeBinding.NavigateUrl%2A> Eigenschaft binden Sie die gleiche URL für jeden Knoten können Sie binden die <xref:System.Web.UI.WebControls.TreeNode.NavigateUrl%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.TreeNode> Objekt in ein Feld einer Datenquelle durch Festlegen der <xref:System.Web.UI.WebControls.TreeNodeBinding.NavigateUrlField%2A> Eigenschaft.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Dieser Abschnitt enthält zwei Codebeispiele. Im ersten Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeBinding.NavigateUrl%2A> -Eigenschaft an die URL an, wenn ein Knoten, der die <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt gilt geklickt wird. Das zweite Codebeispiel im ersten Codebeispiel wird XML-Daten bereit.  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeBinding.NavigateUrl%2A> -Eigenschaft an die URL an, wenn ein Knoten, der die <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt gilt geklickt wird. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die XML-Beispieldaten bereitgestellt, die nach diesem Codebeispiel, in eine Datei mit dem Namen Booklist.xml kopieren.  
+  
+ [!code-aspx-csharp[TreeNodeBindingText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeBindingText/CS/treenodebindingtextcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeBindingText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeBindingText/VB/treenodebindingtextvb.aspx#1)]  
+  
+ Das folgende Codebeispiel stellt XML-Beispieldaten für das vorangegangene Beispiel bereit.  
+  
+```  
+<Books Text="Books List">  
+    <Book Text="Book Title One"  
+        Value="1"   
+        Image="Bookimage1.jpg"  
+        ImageToolTip="Book 1 Photo"   
+        Nav="http://www.microsoft.com"  
+        Tip="Book Title 1">  
+        <Description Text="Book Description">  
+        </Description>  
+        <Price Value="$1.99">  
+        </Price>  
+        <Author Text="Author Name"  
+            Value="LastName"   
+            Image="Authorimage1.jpg"   
+            Nav="http://www.microsoft.com"  
+            Tip="Author Name">  
+        </Author>  
+    </Book>  
+    <Book Text="Book Title Two"  
+        Value="2"   
+        Image="Bookimage2.jpg"  
+        ImageToolTip="Book 2 Photo"   
+        Nav="http://www.microsoft.com"  
+        Tip="Click Me">  
+        <Description Text="Book Description">  
+        </Description>  
+        <Price Value="$2.99">  
+        </Price>  
+        <Author Text="Author Name"  
+            Value="LastName"   
+            Image="Authorimage2.jpg"   
+            Nav="http://www.microsoft.com"  
+            Tip="Author Name">  
+        </Author>  
+    </Book>  
+</Books>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NavigateUrlField">
+      <MemberSignature Language="C#" Value="public string NavigateUrlField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NavigateUrlField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNodeBinding.NavigateUrlField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Web.UI.Design.DataSourceViewSchemaConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Felds aus der Datenquelle zum Binden an die <see cref="P:System.Web.UI.WebControls.TreeNode.NavigateUrl" /> Eigenschaft von einem <see cref="T:System.Web.UI.WebControls.TreeNode" /> Objekt, mit dem die <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt angewendet wird.</summary>
+        <value>Der Name des Felds zum Binden an die <see cref="P:System.Web.UI.WebControls.TreeNode.NavigateUrl" /> Eigenschaft eine <see cref="T:System.Web.UI.WebControls.TreeNode" /> Objekt, mit dem die <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt angewendet wird. Der Standardwert ist eine leere Zeichenfolge (""), gibt an, dass die <see cref="P:System.Web.UI.WebControls.TreeNodeBinding.NavigateUrlField" /> Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der <xref:System.Web.UI.WebControls.TreeView> Steuerelement an eine Datenquelle gebunden ist, verwenden Sie die <xref:System.Web.UI.WebControls.TreeNodeBinding.NavigateUrlField%2A> -Eigenschaft an den Feldnamen zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.NavigateUrl%2A> Eigenschaft ein <xref:System.Web.UI.WebControls.TreeNode> Objekt. Diese Bindung Beziehung wirkt sich auf alle <xref:System.Web.UI.WebControls.TreeNode> Objekte, für die die <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Wenn die <xref:System.Web.UI.WebControls.TreeNodeBinding.NavigateUrlField%2A> Eigenschaft festgelegt ist, die <xref:System.Web.UI.WebControls.TreeView> -Steuerelement zeigt einen Link für den Text des Knotens, anstelle von nur-Text. Sie können auch optional Festlegen der <xref:System.Web.UI.WebControls.TreeNodeBinding.Target%2A> -Eigenschaft an das Fenster oder der Zielframe, in dem den verknüpften Inhalt angezeigt.  
+  
+> [!NOTE]
+>  Können Sie selektiv überschreiben die <xref:System.Web.UI.WebControls.TreeNodeBinding.NavigateUrlField%2A> Eigenschaft durch Festlegen der <xref:System.Web.UI.WebControls.TreeNode.NavigateUrl%2A> -Eigenschaft jedes Knotens direkt.  
+  
+ Anstatt die <xref:System.Web.UI.WebControls.TreeNodeBinding.NavigateUrlField%2A> zu bindende Eigenschaft der <xref:System.Web.UI.WebControls.TreeNode.NavigateUrl%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.TreeNode> -Objekt an ein Feld können Sie festlegen der <xref:System.Web.UI.WebControls.TreeNode.NavigateUrl%2A> Eigenschaft auf einen festen Wert durch Festlegen der <xref:System.Web.UI.WebControls.TreeNodeBinding.NavigateUrl%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Wenn die Datenquelle mehrere Felder enthält, müssen Sie zunächst Festlegen der <xref:System.Web.UI.WebControls.TreeNodeBinding.Depth%2A> oder <xref:System.Web.UI.WebControls.TreeNodeBinding.DataMember%2A> Eigenschaft oder beide Eigenschaften zum Binden an das entsprechende Feld.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Dieser Abschnitt enthält zwei Codebeispiele. Im ersten Codebeispiel wird veranschaulicht, wie der <xref:System.Web.UI.WebControls.TreeNodeBinding.NavigateUrlField%2A> Eigenschaft an, welches Attribut eines XML-Elements zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.NavigateUrl%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.TreeNode> Objekt, mit dem der <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Das zweite Codebeispiel im ersten Codebeispiel wird XML-Daten bereit.  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie der <xref:System.Web.UI.WebControls.TreeNodeBinding.NavigateUrlField%2A> Eigenschaft an, welches Attribut eines XML-Elements zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.NavigateUrl%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.TreeNode> Objekt, mit dem der <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die XML-Beispieldaten bereitgestellt, die nach diesem Codebeispiel, in eine Datei mit dem Namen Booklist.xml kopieren.  
+  
+ [!code-aspx-csharp[TreeNodeTextField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeTextField/CS/treenodebindingtextfieldcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeTextField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeTextField/VB/treenodebindingtextfieldvb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird der im vorangehenden Codebeispiel wird XML-Daten bereit.  
+  
+```  
+<Books Text="Books List">  
+    <Book Text="Book Title One"  
+        Value="1"   
+        Image="Bookimage1.jpg"  
+        ImageToolTip="Book 1 Photo"   
+        Nav="http://www.microsoft.com"  
+        Tip="Book Title 1">  
+        <Description Text="Book Description">  
+        </Description>  
+        <Price Value="$1.99">  
+        </Price>  
+        <Author Text="Author Name"  
+            Value="LastName"   
+            Image="Authorimage1.jpg"   
+            Nav="http://www.microsoft.com"  
+            Tip="Author Name">  
+        </Author>  
+    </Book>  
+    <Book Text="Book Title Two"  
+        Value="2"   
+        Image="Bookimage2.jpg"  
+        ImageToolTip="Book 2 Photo"   
+        Nav="http://www.microsoft.com"  
+        Tip="Click Me">  
+        <Description Text="Book Description">  
+        </Description>  
+        <Price Value="$2.99">  
+        </Price>  
+        <Author Text="Author Name"  
+            Value="LastName"   
+            Image="Authorimage2.jpg"   
+            Nav="http://www.microsoft.com"  
+            Tip="Author Name">  
+        </Author>  
+    </Book>  
+</Books>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PopulateOnDemand">
+      <MemberSignature Language="C#" Value="public bool PopulateOnDemand { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PopulateOnDemand" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNodeBinding.PopulateOnDemand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Knoten, die <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt angewendet wird dynamisch aufgefüllt wird.</summary>
+        <value>
+          <see langword="true" />zum Auffüllen des Knotens, die <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt angewendet wird, dynamisch ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Manchmal ist es nicht praktikabel ist, die statisch vorzudefinieren die Baumstruktur aufgrund der Größe der Daten oder benutzerdefinierten Inhalt, der auf eine Benutzereingabe abhängig ist. Aus diesem Grund die <xref:System.Web.UI.WebControls.TreeView> Steuerelement unterstützt dynamische Knoten Auffüllung. Wenn die <xref:System.Web.UI.WebControls.TreeNodeBinding.PopulateOnDemand%2A> -Eigenschaftensatz auf `true`, die untergeordneten Knoten des Knotens, der <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird aufgefüllt, die zur Laufzeit, wenn der Knoten erweitert ist.  
+  
+ Wenn datenbindungen erstellt werden, indem die <xref:System.Web.UI.WebControls.TreeView.AutoGenerateDataBindings%2A> von der <xref:System.Web.UI.WebControls.TreeView> die Steuerung an `true`, haben Sie die Bindungen, die erstellt werden die <xref:System.Web.UI.WebControls.TreeNodeBinding.PopulateOnDemand%2A> -Eigenschaftensatz auf `true`. Datenbindungen, die deklarativ erstellt werden müssen die <xref:System.Web.UI.WebControls.TreeNodeBinding.PopulateOnDemand%2A> -Eigenschaftensatz auf `false`. Verwenden deklarative Syntax können Sie zum Steuern des Verhaltens von Daten für die einzelnen Bindungen.  
+  
+> [!NOTE]
+>  Im Gegensatz zu den <xref:System.Web.UI.WebControls.TreeNode.PopulateOnDemand%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.TreeNode> -Klasse, die <xref:System.Web.UI.WebControls.TreeNodeBinding.PopulateOnDemand%2A> Eigenschaft benötigt nur eine Ereignisbehandlungsmethode für definiert werden die <xref:System.Web.UI.WebControls.TreeView.TreeNodePopulate> Ereignis, wenn Sie eine Datenquellen-Steuerelements, wie z. B. <xref:System.Web.UI.WebControls.XmlDataSource>. Stattdessen die <xref:System.Web.UI.WebControls.TreeView> Steuerelement dynamisch generiert eine Ereignisbehandlungsmethode mithilfe der Eigenschaften der <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekte in der <xref:System.Web.UI.WebControls.TreeView.DataBindings%2A> Auflistung. Können Sie weiterhin eine Ereignisbehandlungsmethode für definieren die <xref:System.Web.UI.WebControls.TreeView.TreeNodePopulate> Ereignis; es wird jedoch aufgerufen werden, nachdem die Ereignisbehandlungsmethode für den <xref:System.Web.UI.WebControls.TreeView> Steuerelement.  
+  
+ Unterstützte Browser können auch clientseitige Knoten Auffüllung nutzen. Wenn aktiviert, wird dadurch die <xref:System.Web.UI.WebControls.TreeView> Steuerelement einen Knoten dynamisch auf dem Client auffüllen, wenn der Knoten erweitert wird, keine Notwendigkeit besteht, zurück an den Server zu senden. Weitere Informationen zum Auffüllen von Client-Side-Knoten, finden Sie unter <xref:System.Web.UI.WebControls.TreeView.PopulateNodesFromClient%2A>.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Dieser Abschnitt enthält zwei Codebeispiele. Im ersten Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeBinding.ShowCheckBox%2A> Eigenschaft, um anzugeben, ob ein Kontrollkästchen für einen Knoten angezeigt wird. Das zweite Codebeispiel im ersten Codebeispiel wird XML-Daten bereit.  
+  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeBinding.ShowCheckBox%2A> Eigenschaft, um anzugeben, ob ein Kontrollkästchen für einen Knoten angezeigt wird. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die XML-Beispieldaten bereitgestellt, die nach diesem Codebeispiel, in eine Datei mit dem Namen Book.xml kopieren.  
+  
+ [!code-aspx-csharp[TreeNodeBindingPopulateOnDemand#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeBindingPopulateOnDemand/CS/treenodebindingpopulateondemandcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeBindingPopulateOnDemand#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeBindingPopulateOnDemand/VB/treenodebindingpopulateondemandvb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird der im vorangehenden Codebeispiel wird XML-Daten bereit.  
+  
+```  
+<Book Title="Book Title">  
+    <Chapter Heading="Chapter 1">  
+        <Section Heading="Section 1">  
+        </Section>  
+        <Section Heading="Section 2">  
+        </Section>  
+    </Chapter>  
+    <Chapter Heading="Chapter 2">  
+        <Section Heading="Section 1">  
+        </Section>  
+    </Chapter>  
+    <Appendix Heading="Appendix A">  
+    </Appendix>  
+</Book>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectAction">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.TreeNodeSelectAction SelectAction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.TreeNodeSelectAction SelectAction" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNodeBinding.SelectAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TreeNodeSelectAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, das Ereignis oder Ereignisse, wenn ein Knoten, der ausgelöst der <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt gilt ausgewählt ist.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.TreeNodeSelectAction" />-Werte. Die Standardeinstellung ist <see langword="TreeNodeSelectAction.Select" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.WebControls.TreeView> Steuerelement an eine Datenquelle gebunden ist, verwenden Sie die <xref:System.Web.UI.WebControls.TreeNodeBinding.SelectAction%2A> Eigenschaft zum Angeben des Werts zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.SelectAction%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.TreeNode> Objekt. Diese Bindung Beziehung wirkt sich auf alle <xref:System.Web.UI.WebControls.TreeNode> Objekte, für die die <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Die <xref:System.Web.UI.WebControls.TreeNode.SelectAction%2A> Eigenschaft wird verwendet, um anzugeben, welches Ereignis oder Ereignisse ausgelöst werden, wenn ein Knoten ausgewählt ist.  
+  
+> [!NOTE]
+>  Können Sie selektiv überschreiben die <xref:System.Web.UI.WebControls.TreeNodeBinding.SelectAction%2A> Eigenschaft durch Festlegen der <xref:System.Web.UI.WebControls.TreeNode.SelectAction%2A> -Eigenschaft jedes Knotens direkt.  
+  
+ In der folgenden Tabelle sind die verfügbaren Optionen aufgelistet.  
+  
+|`SelectAction`-Wert|Beschreibung|  
+|--------------------------|-----------------|  
+|`TreeNodeSelectAction.Expand`|Schaltet den Knoten zwischen erweiterten und reduzierten an. Löst das <xref:System.Web.UI.WebControls.TreeView.TreeNodeExpanded> Ereignis oder den <xref:System.Web.UI.WebControls.TreeView.TreeNodeCollapsed> Ereignis, nach Bedarf.|  
+|`TreeNodeSelectAction.None`|Löst keine Ereignisse aus, wenn ein Knoten ausgewählt wird.|  
+|`TreeNodeSelectAction.Select`|Löst das <xref:System.Web.UI.WebControls.TreeView.SelectedNodeChanged> Ereignis aus, wenn ein Knoten ausgewählt wird.|  
+|`TreeNodeSelectAction.SelectExpand`|Löst das <xref:System.Web.UI.WebControls.TreeView.SelectedNodeChanged> und <xref:System.Web.UI.WebControls.TreeView.TreeNodeExpanded> Ereignisse aus, wenn ein Knoten ausgewählt wird. Knoten werden nur erweitert, nie reduziert wird.|  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.TreeView.HoverNodeStyle%2A> wird nicht für einen Knoten mit gerendert seine <xref:System.Web.UI.WebControls.TreeNode.SelectAction%2A> -Eigenschaftensatz auf `TreeNodeSelectAction.None`.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Dieser Abschnitt enthält zwei Codebeispiele. Im ersten Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeBinding.SelectAction%2A> Eigenschaft, um anzugeben, welches Ereignis ausgelöst wird, wenn ein Knoten geklickt wird. Das zweite Codebeispiel im ersten Codebeispiel wird XML-Daten bereit.  
+  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeBinding.SelectAction%2A> Eigenschaft, um anzugeben, welches Ereignis ausgelöst wird, wenn ein Knoten geklickt wird. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die XML-Beispieldaten bereitgestellt, die nach diesem Codebeispiel, in eine Datei mit dem Namen Book.xml kopieren.  
+  
+ [!code-aspx-csharp[TreeNodeBindingSelectAction#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeBindingSelectAction/CS/treenodebindingselectactioncs.aspx#1)]
+ [!code-aspx-vb[TreeNodeBindingSelectAction#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeBindingSelectAction/VB/treenodebindingselectactionvb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird der im vorangehenden Codebeispiel wird XML-Daten bereit.  
+  
+```  
+<Book Title="Book Title">  
+    <Chapter Heading="Chapter 1">  
+        <Section Heading="Section 1">  
+        </Section>  
+        <Section Heading="Section 2">  
+        </Section>  
+    </Chapter>  
+    <Chapter Heading="Chapter 2">  
+        <Section Heading="Section 1">  
+        </Section>  
+    </Chapter>  
+    <Appendix Heading="Appendix A">  
+    </Appendix>  
+</Book>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowCheckBox">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; ShowCheckBox { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; ShowCheckBox" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNodeBinding.ShowCheckBox" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Nullable`1&lt;System.Boolean&gt;), "")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Kontrollkästchen neben einem Knoten angezeigt wird der <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt angewendet wird.</summary>
+        <value>
+          <see langword="true" />anzuzeigende ein Kontrollkästchen neben einem Knoten, der die <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt ist angewendet wurde, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bereitstellen der Unterstützung der Mehrfachauswahl in der <xref:System.Web.UI.WebControls.TreeView> Steuerelement Kontrollkästchen neben einem Bild in den Knoten angezeigt werden können. Wenn die <xref:System.Web.UI.WebControls.TreeView> Steuerelement an eine Datenquelle gebunden ist, verwenden Sie die <xref:System.Web.UI.WebControls.TreeNodeBinding.ShowCheckBox%2A> Eigenschaft zum Angeben des Werts zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.ShowCheckBox%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.TreeNode> Objekt. Diese Bindung Beziehung wirkt sich auf alle <xref:System.Web.UI.WebControls.TreeNode> Objekte, für die die <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Die <xref:System.Web.UI.WebControls.TreeNode.ShowCheckBox%2A> Eigenschaft wird verwendet, um ein- oder Ausblenden von das Kontrollkästchen für einen Knoten.  
+  
+> [!NOTE]
+>  Obwohl die <xref:System.Web.UI.WebControls.TreeNodeBinding.ShowCheckBox%2A> Eigenschaft kann verwendet werden, um die Kontrollkästchen angezeigt, es ist eher üblich, verwenden Sie die <xref:System.Web.UI.WebControls.TreeView.ShowCheckBoxes%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.TreeView> Steuerelement. Allerdings die <xref:System.Web.UI.WebControls.TreeView.ShowCheckBoxes%2A> Eigenschaft wirkt sich auf alle Knotentypen, die von der Eigenschaft angegeben ist daher die <xref:System.Web.UI.WebControls.TreeNodeBinding.ShowCheckBox%2A> Eigenschaft wird häufig zum Überschreiben dieser Einstellung für einen Knoten, der die <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Können Sie selektiv überschreiben die <xref:System.Web.UI.WebControls.TreeNodeBinding.ShowCheckBox%2A> Eigenschaft durch Festlegen der <xref:System.Web.UI.WebControls.TreeNode.ShowCheckBox%2A> -Eigenschaft jedes Knotens direkt.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Dieser Abschnitt enthält zwei Codebeispiele. Im ersten Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeBinding.ShowCheckBox%2A> Eigenschaft, um anzugeben, ob ein Kontrollkästchen für einen Knoten angezeigt wird. Das zweite Codebeispiel im ersten Codebeispiel wird XML-Daten bereit.  
+  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeBinding.ShowCheckBox%2A> Eigenschaft, um anzugeben, ob ein Kontrollkästchen für einen Knoten angezeigt wird. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die XML-Beispieldaten bereitgestellt, die nach diesem Codebeispiel, in eine Datei mit dem Namen Book.xml kopieren.  
+  
+ [!code-aspx-csharp[TreeNodeBindingShowCheckBox#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeBindingShowCheckBox/CS/treenodebindingshowcheckboxcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeBindingShowCheckBox#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeBindingShowCheckBox/VB/treenodebindingshowcheckboxvb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird der im vorangehenden Codebeispiel wird XML-Daten bereit.  
+  
+```  
+<Book Title="Book Title">  
+    <Chapter Heading="Chapter 1">  
+        <Section Heading="Section 1">  
+        </Section>  
+        <Section Heading="Section 2">  
+        </Section>  
+    </Chapter>  
+    <Chapter Heading="Chapter 2">  
+        <Section Heading="Section 1">  
+        </Section>  
+    </Chapter>  
+    <Appendix Heading="Appendix A">  
+    </Appendix>  
+</Book>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ICloneable.Clone">
+      <MemberSignature Language="C#" Value="object ICloneable.Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ICloneable.Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNodeBinding.System#ICloneable#Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Kopie des <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" />-Objekts.</summary>
+        <returns>Ein Objekt, das eine Kopie des <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" />-Objekts darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.TreeNodeBinding.System%23ICloneable%23Clone%2A> Methode ist eine Hilfsfunktion, die eine Kopie erstellt die <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt, aus dem die <xref:System.Web.UI.WebControls.TreeNodeBinding.System%23ICloneable%23Clone%2A> -Methode aufgerufen wird.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.TreeNodeBinding.System%23ICloneable%23Clone%2A> Methode wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IDataSourceViewSchemaAccessor.DataSourceViewSchema">
+      <MemberSignature Language="C#" Value="object System.Web.UI.IDataSourceViewSchemaAccessor.DataSourceViewSchema { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Web.UI.IDataSourceViewSchemaAccessor.DataSourceViewSchema" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNodeBinding.System#Web#UI#IDataSourceViewSchemaAccessor#DataSourceViewSchema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Web.UI.IDataSourceViewSchemaAccessor.DataSourceViewSchema" />.</summary>
+        <value>Ein Objekt, das das Schema darstellt, das zugeordnete der <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Kann verwendet werden nur, wenn die <xref:System.Web.UI.WebControls.TreeNodeBinding> Instanz umgewandelt wird die <xref:System.Web.UI.IDataSourceViewSchemaAccessor> Schnittstelle.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.IsTrackingViewState">
+      <MemberSignature Language="C#" Value="bool System.Web.UI.IStateManager.IsTrackingViewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.UI.IStateManager.IsTrackingViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNodeBinding.System#Web#UI#IStateManager#IsTrackingViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Web.UI.IStateManager.IsTrackingViewState" />.</summary>
+        <value>
+          <see langword="true" />, wenn das Steuerelement markiert ist, um dessen Status; speichern andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Kann verwendet werden nur, wenn die <xref:System.Web.UI.WebControls.TreeNodeBinding> Instanz umgewandelt wird die <xref:System.Web.UI.IStateManager> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.LoadViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.LoadViewState (object state);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.LoadViewState(object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNodeBinding.System#Web#UI#IStateManager#LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="state">Ein <see cref="T:System.Object" /> , das die gespeicherten Ansichtszustandswerte enthält.</param>
+        <summary>Lädt den zuvor gespeicherten Ansichtszustand des Knotens an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.SaveViewState">
+      <MemberSignature Language="C#" Value="object IStateManager.SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.Web.UI.IStateManager.SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNodeBinding.System#Web#UI#IStateManager#SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert die Ansicht wechselt zu einem Objekt.</summary>
+        <returns>Das Objekt, das die Ansichtszustandsänderungen enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.TrackViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNodeBinding.System#Web#UI#IStateManager#TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Weist das <see cref="T:System.Web.UI.WebControls.TreeNode" />-Objekt an, Änderungen am Ansichtszustand nachzuverfolgen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach der <xref:System.Web.UI.WebControls.TreeNodeBinding.System%23Web%23UI%23IStateManager%23TrackViewState%2A> -Methode aufgerufen wurde, auf ein Webserversteuerelement der <xref:System.Web.UI.Control.IsTrackingViewState%2A> -Eigenschaft gibt `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Target">
+      <MemberSignature Language="C#" Value="public string Target { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Target" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNodeBinding.Target" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, das Zielfenster oder der Zielframe, in dem der Webseiteninhalt angezeigt werden, die einem Knoten zugeordnet ist die <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt angewendet wird.</summary>
+        <value>Das Zielfenster oder der Zielframe, in dem der verknüpfte Webseiteninhalt angezeigt werden soll. Werte müssen mit einem Buchstaben im Bereich von A bis Z (Groß-/Kleinschreibung beachten), mit Ausnahme von speziellen Werte beginnen, die mit einem Unterstrich beginnen, wie in der folgenden Tabelle gezeigt.  
+  
+ <list type="table"><listheader><term>Zielwert  
+  
+ </term><description>Beschreibung  
+  
+ </description></listheader><item><term><see langword="_blank" /></term><description>Rendert den Inhalt in einem neuen Fenster ohne Frames.  
+  
+ </description></item><item><term><see langword="_parent" /></term><description>Rendert den Inhalt im unmittelbar übergeordneten Frameset.  
+  
+ </description></item><item><term><see langword="_search" /></term><description>Rendert den Inhalt im Suchbereich.  
+  
+ </description></item><item><term><see langword="_self" /></term><description>Rendert den Inhalt im Rahmen mit Fokus.  
+  
+ </description></item><item><term><see langword="_top" /></term><description>Rendert den Inhalt in der gesamten Fenster ohne Frames.  
+  
+ </description></item></list><block subset="none" type="note"><para>  
+ Überprüfen Sie Ihre Browserdokumentation zum bestimmen, ob die <see langword="_search" /> Wert wird unterstützt.  Beispielsweise Microsoft Internet Explorer, Version 5.0 und höher unterstützt die <see langword="_search" /> Zielwert.  
+  
+</para></block>  
+  
+ Der Standardwert ist eine leere Zeichenfolge (""), die das Fenster oder den Frame mit dem Fokus aktualisiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.WebControls.TreeView> Steuerelement an eine Datenquelle gebunden ist, verwenden Sie die <xref:System.Web.UI.WebControls.TreeNodeBinding.Target%2A> Eigenschaft zum Angeben des Werts zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.Target%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.TreeNode> Objekt. Diese Bindung Beziehung wirkt sich auf alle <xref:System.Web.UI.WebControls.TreeNode> Objekte, für die die <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Die <xref:System.Web.UI.WebControls.TreeNode.Target%2A> Eigenschaft wird verwendet, um die Fenstergröße fest oder Frame in der anzuzeigenden Webinhalte zu einem Knoten verknüpft ist, wenn auf diesem Knoten geklickt wird.  
+  
+> [!NOTE]
+>  Festlegen der <xref:System.Web.UI.WebControls.TreeNodeBinding.Target%2A> eigenschaftenüberschreibungen der <xref:System.Web.UI.WebControls.TreeView.Target%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.TreeView> Steuerelement für die Knoten, der die <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Können Sie selektiv überschreiben die <xref:System.Web.UI.WebControls.TreeNodeBinding.Target%2A> Eigenschaft durch Festlegen der <xref:System.Web.UI.WebControls.TreeNode.Target%2A> -Eigenschaft jedes Knotens direkt.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.TreeNodeBinding.Target%2A> Eigenschaft als rendert eine `target` Attribut. Die `target` -Attribut `anchor` Elemente ist in der Dokumenttypdefinition XHTML 1.1 nicht zulässig. Legen Sie nicht die <xref:System.Web.UI.WebControls.TreeNodeBinding.Target%2A> -Eigenschaft, wenn die gerenderte Ausgabe für die <xref:System.Web.UI.WebControls.TreeNodeBinding> -Steuerelement muss XHTML 1.1 kompatibel sein. Weitere Informationen finden Sie unter [XHTML-Standards in Visual Studio und ASP.NET](http://msdn.microsoft.com/library/1b78d416-66bb-43a5-ac77-c703aab55b97).  
+>   
+>  Beim Erstellen von accessible Web Pages vermeiden Sie die Verwendung der <xref:System.Web.UI.WebControls.TreeNodeBinding.Target%2A> Eigenschaft, um ein weiteres Fenster als Ziel. Weitere Informationen finden Sie unter [NIB: ASP.NET Accessibility](http://msdn.microsoft.com/en-us/9b5f3e05-e88d-4248-a5f4-9e64850fa0ae).  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Dieser Abschnitt enthält zwei Codebeispiele. Im ersten Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeBinding.Target%2A> Eigenschaft, um anzugeben, dass die Webseite, die mit dem Stammknoten anfallen in einem neuen Fenster angezeigt werden soll. Das zweite Codebeispiel im ersten Codebeispiel wird XML-Daten bereit.  
+  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeBinding.Target%2A> Eigenschaft, um anzugeben, dass die Webseite, die mit dem Stammknoten anfallen in einem neuen Fenster angezeigt werden soll. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die XML-Beispieldaten bereitgestellt, die nach diesem Codebeispiel, in eine Datei mit dem Namen Book.xml kopieren.  
+  
+ [!code-aspx-csharp[TreeNodeBindingTarget#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeBindingTarget/CS/treenodebindingtargetcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeBindingTarget#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeBindingTarget/VB/treenodebindingtargetvb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird der im vorangehenden Codebeispiel wird XML-Daten bereit.  
+  
+```  
+<Book Title="Book Title">  
+    <Chapter Heading="Chapter 1">  
+        <Section Heading="Section 1">  
+        </Section>  
+        <Section Heading="Section 2">  
+        </Section>  
+    </Chapter>  
+    <Chapter Heading="Chapter 2">  
+        <Section Heading="Section 1">  
+        </Section>  
+    </Chapter>  
+    <Appendix Heading="Appendix A">  
+    </Appendix>  
+</Book>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetField">
+      <MemberSignature Language="C#" Value="public string TargetField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNodeBinding.TargetField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Web.UI.Design.DataSourceViewSchemaConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Felds aus der Datenquelle zum Binden an die <see cref="P:System.Web.UI.WebControls.TreeNode.Target" /> Eigenschaft von einem <see cref="T:System.Web.UI.WebControls.TreeNode" /> Objekt, mit dem die <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt angewendet wird.</summary>
+        <value>Der Name des Felds zum Binden an die <see cref="P:System.Web.UI.WebControls.TreeNode.Target" /> Eigenschaft eine <see cref="T:System.Web.UI.WebControls.TreeNode" /> Objekt, mit dem die <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt angewendet wird. Der Standardwert ist eine leere Zeichenfolge (""), gibt an, dass die <see cref="P:System.Web.UI.WebControls.TreeNodeBinding.TargetField" /> Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der <xref:System.Web.UI.WebControls.TreeView> Steuerelement an eine Datenquelle gebunden ist, verwenden Sie die <xref:System.Web.UI.WebControls.TreeNodeBinding.TargetField%2A> -Eigenschaft an den Feldnamen zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.Target%2A> Eigenschaft ein <xref:System.Web.UI.WebControls.TreeNode> Objekt. Die <xref:System.Web.UI.WebControls.TreeNode.Target%2A> Eigenschaft wird verwendet, um die Fenstergröße fest oder Frame in der anzuzeigenden Webinhalte zu einem Knoten verknüpft ist, wenn auf diesem Knoten geklickt wird.  
+  
+ Diese Bindung Beziehung wirkt sich auf alle <xref:System.Web.UI.WebControls.TreeNode> Objekte, für die die <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird.  
+  
+> [!NOTE]
+>  Können Sie selektiv überschreiben die <xref:System.Web.UI.WebControls.TreeNodeBinding.TargetField%2A> Eigenschaft durch Festlegen der <xref:System.Web.UI.WebControls.TreeNode.Target%2A> -Eigenschaft jedes Knotens direkt.  
+  
+ Anstatt die <xref:System.Web.UI.WebControls.TreeNodeBinding.TargetField%2A> zu bindende Eigenschaft der <xref:System.Web.UI.WebControls.TreeNode.Target%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.TreeNode> -Objekt an ein Feld können Sie festlegen <xref:System.Web.UI.WebControls.TreeNode.Target%2A> Eigenschaft auf einen festen Wert durch Festlegen der <xref:System.Web.UI.WebControls.TreeNodeBinding.Target%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Wenn die Datenquelle mehrere Felder enthält, müssen Sie zunächst Festlegen der <xref:System.Web.UI.WebControls.TreeNodeBinding.Depth%2A> oder <xref:System.Web.UI.WebControls.TreeNodeBinding.DataMember%2A> Eigenschaft oder beide Eigenschaften zum Binden an das entsprechende Feld.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNodeBinding.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text, der für den Knoten, der angezeigt wird der <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt angewendet wird.</summary>
+        <value>Der angezeigte Text für den Knoten, der die <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt angewendet wird. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.WebControls.TreeView> Steuerelement an eine Datenquelle gebunden ist, verwenden Sie die <xref:System.Web.UI.WebControls.TreeNodeBinding.Text%2A> Eigenschaft zum Angeben des Werts zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.Text%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.TreeNode> Objekt. Diese Bindung Beziehung wirkt sich auf alle <xref:System.Web.UI.WebControls.TreeNode> Objekte, für die die <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Die <xref:System.Web.UI.WebControls.TreeNode.Text%2A> Eigenschaft wird verwendet, um einen anderen Knoten angezeigte Text anzugeben.  
+  
+> [!NOTE]
+>  Können Sie selektiv überschreiben die <xref:System.Web.UI.WebControls.TreeNodeBinding.Text%2A> Eigenschaft durch Festlegen der <xref:System.Web.UI.WebControls.TreeNode.Text%2A> -Eigenschaft jedes Knotens direkt.  
+  
+ Anstatt die <xref:System.Web.UI.WebControls.TreeNodeBinding.Text%2A> zu den gleichen Text auf die einzelnen Knoten zu bindende Eigenschaft können Sie binden die <xref:System.Web.UI.WebControls.TreeNode.Text%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.TreeNode> Objekt in ein Feld einer Datenquelle durch Festlegen der <xref:System.Web.UI.WebControls.TreeNodeBinding.TextField%2A> Eigenschaft.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Dieser Abschnitt enthält zwei Codebeispiele. Im ersten Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeBinding.Text%2A> Eigenschaft zum Angeben des Werts für die anzuzeigenden für einen Knoten, der die <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Das zweite Codebeispiel im ersten Codebeispiel wird XML-Daten bereit.  
+  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeBinding.Text%2A> Eigenschaft zum Angeben des Werts für die anzuzeigenden für einen Knoten, der die <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die XML-Beispieldaten bereitgestellt, die nach diesem Codebeispiel, in eine Datei mit dem Namen Booklist.xml kopieren.  
+  
+ [!code-aspx-csharp[TreeNodeBindingText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeBindingText/CS/treenodebindingtextcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeBindingText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeBindingText/VB/treenodebindingtextvb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird der im vorangehenden Codebeispiel wird XML-Daten bereit.  
+  
+```  
+<Books Text="Books List">  
+    <Book Text="Book Title One"  
+        Value="1"   
+        Image="Bookimage1.jpg"  
+        ImageToolTip="Book 1 Photo"   
+        Nav="http://www.microsoft.com"  
+        Tip="Book Title 1">  
+        <Description Text="Book Description">  
+        </Description>  
+        <Price Value="$1.99">  
+        </Price>  
+        <Author Text="Author Name"  
+            Value="LastName"   
+            Image="Authorimage1.jpg"   
+            Nav="http://www.microsoft.com"  
+            Tip="Author Name">  
+        </Author>  
+    </Book>  
+    <Book Text="Book Title Two"  
+        Value="2"   
+        Image="Bookimage2.jpg"  
+        ImageToolTip="Book 2 Photo"   
+        Nav="http://www.microsoft.com"  
+        Tip="Click Me">  
+        <Description Text="Book Description">  
+        </Description>  
+        <Price Value="$2.99">  
+        </Price>  
+        <Author Text="Author Name"  
+            Value="LastName"   
+            Image="Authorimage2.jpg"   
+            Nav="http://www.microsoft.com"  
+            Tip="Author Name">  
+        </Author>  
+    </Book>  
+</Books>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextField">
+      <MemberSignature Language="C#" Value="public string TextField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TextField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNodeBinding.TextField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Web.UI.Design.DataSourceViewSchemaConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Felds aus der Datenquelle zum Binden an die <see cref="P:System.Web.UI.WebControls.TreeNode.Text" /> Eigenschaft von einem <see cref="T:System.Web.UI.WebControls.TreeNode" /> Objekt, mit dem die <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt angewendet wird.</summary>
+        <value>Der Name des Felds zum Binden an die <see cref="P:System.Web.UI.WebControls.TreeNode.Text" /> Eigenschaft eine <see cref="T:System.Web.UI.WebControls.TreeNode" /> Objekt, mit dem die <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt angewendet wird. Der Standardwert ist eine leere Zeichenfolge (""), gibt an, dass die <see cref="P:System.Web.UI.WebControls.TreeNodeBinding.TextField" /> Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der <xref:System.Web.UI.WebControls.TreeView> Steuerelement an eine Datenquelle gebunden ist, verwenden Sie die <xref:System.Web.UI.WebControls.TreeNodeBinding.TextField%2A> -Eigenschaft an den Feldnamen zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.Text%2A> Eigenschaft ein <xref:System.Web.UI.WebControls.TreeNode> Objekt. Diese Bindung Beziehung wirkt sich auf alle <xref:System.Web.UI.WebControls.TreeNode> Objekte, für die die <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Die <xref:System.Web.UI.WebControls.TreeNode.Text%2A> Eigenschaft wird verwendet, um einen anderen Knoten angezeigte Text anzugeben.  
+  
+> [!NOTE]
+>  Können Sie selektiv überschreiben die <xref:System.Web.UI.WebControls.TreeNodeBinding.TextField%2A> Eigenschaft durch Festlegen der <xref:System.Web.UI.WebControls.TreeNode.Text%2A> -Eigenschaft jedes Knotens direkt.  
+  
+ Anstatt die <xref:System.Web.UI.WebControls.TreeNodeBinding.TextField%2A> zu bindende Eigenschaft der <xref:System.Web.UI.WebControls.TreeNode.Text%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.TreeNode> -Objekt an ein Feld können Sie festlegen der <xref:System.Web.UI.WebControls.TreeNode.Text%2A> Eigenschaft auf einen festen Wert durch Festlegen der <xref:System.Web.UI.WebControls.TreeNodeBinding.Text%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Wenn die Datenquelle mehrere Felder enthält, müssen Sie zunächst Festlegen der <xref:System.Web.UI.WebControls.TreeNodeBinding.Depth%2A> oder <xref:System.Web.UI.WebControls.TreeNodeBinding.DataMember%2A> Eigenschaft oder beide Eigenschaften zum Binden an das entsprechende Feld.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Dieser Abschnitt enthält zwei Codebeispiele. Im ersten Codebeispiel wird veranschaulicht, wie der <xref:System.Web.UI.WebControls.TreeNodeBinding.TextField%2A> Eigenschaft an, welches Attribut eines XML-Elements zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.Text%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.TreeNode> Objekt, mit dem der <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Das zweite Codebeispiel im ersten Codebeispiel wird XML-Daten bereit.  
+  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeBinding.TextField%2A> Eigenschaft an, welches Attribut eines XML-Elements zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.Text%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.TreeNode> Objekt, mit dem die <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die XML-Beispieldaten bereitgestellt, die nach diesem Codebeispiel, in eine Datei mit dem Namen Booklist.xml kopieren.  
+  
+ [!code-aspx-csharp[TreeNodeTextField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeTextField/CS/treenodebindingtextfieldcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeTextField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeTextField/VB/treenodebindingtextfieldvb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird der im vorangehenden Codebeispiel wird XML-Daten bereit.  
+  
+```  
+<Books Text="Books List">  
+    <Book Text="Book Title One"  
+        Value="1"   
+        Image="Bookimage1.jpg"  
+        ImageToolTip="Book 1 Photo"   
+        Nav="http://www.microsoft.com"  
+        Tip="Book Title 1">  
+        <Description Text="Book Description">  
+        </Description>  
+        <Price Value="$1.99">  
+        </Price>  
+        <Author Text="Author Name"  
+            Value="LastName"   
+            Image="Authorimage1.jpg"   
+            Nav="http://www.microsoft.com"  
+            Tip="Author Name">  
+        </Author>  
+    </Book>  
+    <Book Text="Book Title Two"  
+        Value="2"   
+        Image="Bookimage2.jpg"  
+        ImageToolTip="Book 2 Photo"   
+        Nav="http://www.microsoft.com"  
+        Tip="Click Me">  
+        <Description Text="Book Description">  
+        </Description>  
+        <Price Value="$2.99">  
+        </Price>  
+        <Author Text="Author Name"  
+            Value="LastName"   
+            Image="Authorimage2.jpg"   
+            Nav="http://www.microsoft.com"  
+            Tip="Author Name">  
+        </Author>  
+    </Book>  
+</Books>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTip">
+      <MemberSignature Language="C#" Value="public string ToolTip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolTip" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNodeBinding.ToolTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den QuickInfo-Text für einen Knoten, der die <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt angewendet wird.</summary>
+        <value>Der QuickInfo-Text für einen Knoten, der die <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt angewendet wird. Der Standardwert ist eine leere Zeichenfolge (""), gibt an, dass die <see cref="P:System.Web.UI.WebControls.TreeNodeBinding.ToolTip" /> Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.WebControls.TreeView> Steuerelement an eine Datenquelle gebunden ist, verwenden Sie die <xref:System.Web.UI.WebControls.TreeNodeBinding.ToolTip%2A> Eigenschaft zum Angeben des Werts zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.ToolTip%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.TreeNode> Objekt. Diese Bindung Beziehung wirkt sich auf alle <xref:System.Web.UI.WebControls.TreeNode> Objekte, für die die <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Der QuickInfo-Text wird angezeigt, wenn der Mauszeiger über dem Knoten positioniert ist.  
+  
+> [!NOTE]
+>  Können Sie selektiv überschreiben die <xref:System.Web.UI.WebControls.TreeNodeBinding.ToolTip%2A> Eigenschaft durch Festlegen der <xref:System.Web.UI.WebControls.TreeNode.ToolTip%2A> -Eigenschaft jedes Knotens direkt.  
+  
+ Anstatt die <xref:System.Web.UI.WebControls.TreeNodeBinding.ToolTip%2A> zu denselben QuickInfo-Text an jeden Knoten zu bindende Eigenschaft können Sie binden die <xref:System.Web.UI.WebControls.TreeNode.ToolTip%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.TreeNode> Objekt in ein Feld einer Datenquelle durch Festlegen der <xref:System.Web.UI.WebControls.TreeNodeBinding.ToolTipField%2A> Eigenschaft.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Dieser Abschnitt enthält zwei Codebeispiele. Im ersten Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeBinding.ToolTip%2A> -Eigenschaft für einen Knoten, der den QuickInfo-Text an der <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Das zweite Codebeispiel im ersten Codebeispiel wird XML-Daten bereit.  
+  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeBinding.ToolTip%2A> -Eigenschaft für einen Knoten, der den QuickInfo-Text an der <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die XML-Beispieldaten bereitgestellt, die nach diesem Codebeispiel, in eine Datei mit dem Namen Booklist.xml kopieren.  
+  
+ [!code-aspx-csharp[TreeNodeBindingText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeBindingText/CS/treenodebindingtextcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeBindingText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeBindingText/VB/treenodebindingtextvb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird der im vorangehenden Codebeispiel wird XML-Daten bereit.  
+  
+```  
+<Books Text="Books List">  
+    <Book Text="Book Title One"  
+        Value="1"   
+        Image="Bookimage1.jpg"  
+        ImageToolTip="Book 1 Photo"   
+        Nav="http://www.microsoft.com"  
+        Tip="Book Title 1">  
+        <Description Text="Book Description">  
+        </Description>  
+        <Price Value="$1.99">  
+        </Price>  
+        <Author Text="Author Name"  
+            Value="LastName"   
+            Image="Authorimage1.jpg"   
+            Nav="http://www.microsoft.com"  
+            Tip="Author Name">  
+        </Author>  
+    </Book>  
+    <Book Text="Book Title Two"  
+        Value="2"   
+        Image="Bookimage2.jpg"  
+        ImageToolTip="Book 2 Photo"   
+        Nav="http://www.microsoft.com"  
+        Tip="Click Me">  
+        <Description Text="Book Description">  
+        </Description>  
+        <Price Value="$2.99">  
+        </Price>  
+        <Author Text="Author Name"  
+            Value="LastName"   
+            Image="Authorimage2.jpg"   
+            Nav="http://www.microsoft.com"  
+            Tip="Author Name">  
+        </Author>  
+    </Book>  
+</Books>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTipField">
+      <MemberSignature Language="C#" Value="public string ToolTipField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolTipField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNodeBinding.ToolTipField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Web.UI.Design.DataSourceViewSchemaConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Felds aus der Datenquelle zum Binden an die <see cref="P:System.Web.UI.WebControls.TreeNode.ToolTip" /> Eigenschaft von einem <see cref="T:System.Web.UI.WebControls.TreeNode" /> Objekt, mit dem die <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt angewendet wird.</summary>
+        <value>Der Name des Felds zum Binden an die <see cref="P:System.Web.UI.WebControls.TreeNode.ToolTip" /> Eigenschaft eine <see cref="T:System.Web.UI.WebControls.TreeNode" /> Objekt, mit dem die <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt angewendet wird. Der Standardwert ist eine leere Zeichenfolge (""), gibt an, dass die <see cref="P:System.Web.UI.WebControls.TreeNodeBinding.ToolTipField" /> Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der <xref:System.Web.UI.WebControls.TreeView> Steuerelement an eine Datenquelle gebunden ist, verwenden Sie die <xref:System.Web.UI.WebControls.TreeNodeBinding.ToolTipField%2A> -Eigenschaft an den Feldnamen zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.ToolTip%2A> Eigenschaft ein <xref:System.Web.UI.WebControls.TreeNode> Objekt. Diese Bindung Beziehung wirkt sich auf alle <xref:System.Web.UI.WebControls.TreeNode> Objekte, für die die <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Der QuickInfo-Text wird angezeigt, wenn der Mauszeiger über dem Knoten positioniert ist.  
+  
+> [!NOTE]
+>  Können Sie selektiv überschreiben die <xref:System.Web.UI.WebControls.TreeNodeBinding.ToolTipField%2A> Eigenschaft durch Festlegen der <xref:System.Web.UI.WebControls.TreeNode.ToolTip%2A> -Eigenschaft jedes Knotens direkt.  
+  
+ Anstatt die <xref:System.Web.UI.WebControls.TreeNodeBinding.ToolTipField%2A> zu bindende Eigenschaft der <xref:System.Web.UI.WebControls.TreeNode.ToolTip%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.TreeNode> -Objekt an ein Feld können Sie festlegen der <xref:System.Web.UI.WebControls.TreeNode.ToolTip%2A> Eigenschaft auf einen festen Wert durch Festlegen der <xref:System.Web.UI.WebControls.TreeNodeBinding.ToolTip%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Wenn die Datenquelle mehrere Felder enthält, müssen Sie zunächst Festlegen der <xref:System.Web.UI.WebControls.TreeNodeBinding.Depth%2A> oder <xref:System.Web.UI.WebControls.TreeNodeBinding.DataMember%2A> Eigenschaft oder beide Eigenschaften zum Binden an das entsprechende Feld.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Dieser Abschnitt enthält zwei Codebeispiele. Im ersten Codebeispiel wird veranschaulicht, wie der <xref:System.Web.UI.WebControls.TreeNodeBinding.ToolTipField%2A> Eigenschaft an, welches Attribut eines XML-Elements zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.ToolTip%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.TreeNode> Objekt, mit dem der <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Das zweite Codebeispiel im ersten Codebeispiel wird XML-Daten bereit.  
+  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeBinding.ToolTipField%2A> Eigenschaft an, welches Attribut eines XML-Elements zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.ToolTip%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.TreeNode> Objekt, mit dem die <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die XML-Beispieldaten bereitgestellt, die nach diesem Codebeispiel, in eine Datei mit dem Namen Booklist.xml kopieren.  
+  
+ [!code-aspx-csharp[TreeNodeTextField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeTextField/CS/treenodebindingtextfieldcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeTextField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeTextField/VB/treenodebindingtextfieldvb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird der im vorangehenden Codebeispiel wird XML-Daten bereit.  
+  
+```  
+<Books Text="Books List">  
+    <Book Text="Book Title One"  
+        Value="1"   
+        Image="Bookimage1.jpg"  
+        ImageToolTip="Book 1 Photo"   
+        Nav="http://www.microsoft.com"  
+        Tip="Book Title 1">  
+        <Description Text="Book Description">  
+        </Description>  
+        <Price Value="$1.99">  
+        </Price>  
+        <Author Text="Author Name"  
+            Value="LastName"   
+            Image="Authorimage1.jpg"   
+            Nav="http://www.microsoft.com"  
+            Tip="Author Name">  
+        </Author>  
+    </Book>  
+    <Book Text="Book Title Two"  
+        Value="2"   
+        Image="Bookimage2.jpg"  
+        ImageToolTip="Book 2 Photo"   
+        Nav="http://www.microsoft.com"  
+        Tip="Click Me">  
+        <Description Text="Book Description">  
+        </Description>  
+        <Price Value="$2.99">  
+        </Price>  
+        <Author Text="Author Name"  
+            Value="LastName"   
+            Image="Authorimage2.jpg"   
+            Nav="http://www.microsoft.com"  
+            Tip="Author Name">  
+        </Author>  
+    </Book>  
+</Books>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNodeBinding.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die <see cref="P:System.Web.UI.WebControls.TreeNodeBinding.DataMember" /> Eigenschaft.</summary>
+        <returns>Gibt die <see cref="P:System.Web.UI.WebControls.TreeNodeBinding.DataMember" /> Eigenschaft. Wenn die <see cref="P:System.Web.UI.WebControls.TreeNodeBinding.DataMember" /> Eigenschaft <see langword="null" /> oder eine leere Zeichenfolge (""), **(leeren)** wird zurückgegeben.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNodeBinding.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest angezeigten Wert wird nicht angezeigt, aber wird verwendet, um zusätzlichen Daten zu einem Knoten speichern die <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt angewendet wird, z. B. Daten, die für die Behandlung von Ereignissen postback verwendet.</summary>
+        <value>Zusätzliche Daten zu einem Knoten, der die <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt angewendet wird; diese Daten werden nicht angezeigt. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.WebControls.TreeView> Steuerelement an eine Datenquelle gebunden ist, verwenden Sie die <xref:System.Web.UI.WebControls.TreeNodeBinding.Value%2A> Eigenschaft zum Angeben des Werts zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.Value%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.TreeNode> Objekt. Diese Bindung Beziehung wirkt sich auf alle <xref:System.Web.UI.WebControls.TreeNode> Objekte, für die die <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Die <xref:System.Web.UI.WebControls.TreeNode.Value%2A> Eigenschaft dient als Ergänzung zu den <xref:System.Web.UI.WebControls.TreeNode.Text%2A> synchronisierungsleistung, da zusätzlichen Daten, die dem Knoten auf die zugeordnete Eigenschaft der <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Dieser Wert wird nicht im Steuerelement angezeigt und wird häufig zum Speichern von Daten für die Behandlung von Ereignissen postback verwendet.  
+  
+> [!NOTE]
+>  Können Sie selektiv überschreiben die <xref:System.Web.UI.WebControls.TreeNodeBinding.Value%2A> Eigenschaft durch Festlegen der <xref:System.Web.UI.WebControls.TreeNode.Value%2A> -Eigenschaft jedes Knotens direkt.  
+  
+ Anstatt die <xref:System.Web.UI.WebControls.TreeNodeBinding.Value%2A> zu den gleichen Wert auf die einzelnen Knoten zu bindende Eigenschaft können Sie binden die <xref:System.Web.UI.WebControls.TreeNode.Value%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.TreeNode> Objekt in ein Feld einer Datenquelle durch Festlegen der <xref:System.Web.UI.WebControls.TreeNodeBinding.ValueField%2A> Eigenschaft.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Dieser Abschnitt enthält zwei Codebeispiele. Im ersten Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeBinding.Value%2A> -Eigenschaft zum Speichern von ergänzenden Daten zu einem Knoten, der die <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Das zweite Codebeispiel im ersten Codebeispiel wird XML-Daten bereit.  
+  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeBinding.Value%2A> -Eigenschaft zum Speichern von ergänzenden Daten zu einem Knoten, der die <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die XML-Beispieldaten bereitgestellt, die nach diesem Codebeispiel, in eine Datei mit dem Namen Booklist.xml kopieren.  
+  
+ [!code-aspx-csharp[TreeNodeBindingText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeBindingText/CS/treenodebindingtextcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeBindingText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeBindingText/VB/treenodebindingtextvb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird der im vorangehenden Codebeispiel wird XML-Daten bereit.  
+  
+```  
+<Books Text="Books List">  
+    <Book Text="Book Title One"  
+        Value="1"   
+        Image="Bookimage1.jpg"  
+        ImageToolTip="Book 1 Photo"   
+        Nav="http://www.microsoft.com"  
+        Tip="Book Title 1">  
+        <Description Text="Book Description">  
+        </Description>  
+        <Price Value="$1.99">  
+        </Price>  
+        <Author Text="Author Name"  
+            Value="LastName"   
+            Image="Authorimage1.jpg"   
+            Nav="http://www.microsoft.com"  
+            Tip="Author Name">  
+        </Author>  
+    </Book>  
+    <Book Text="Book Title Two"  
+        Value="2"   
+        Image="Bookimage2.jpg"  
+        ImageToolTip="Book 2 Photo"   
+        Nav="http://www.microsoft.com"  
+        Tip="Click Me">  
+        <Description Text="Book Description">  
+        </Description>  
+        <Price Value="$2.99">  
+        </Price>  
+        <Author Text="Author Name"  
+            Value="LastName"   
+            Image="Authorimage2.jpg"   
+            Nav="http://www.microsoft.com"  
+            Tip="Author Name">  
+        </Author>  
+    </Book>  
+</Books>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueField">
+      <MemberSignature Language="C#" Value="public string ValueField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ValueField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNodeBinding.ValueField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Web.UI.Design.DataSourceViewSchemaConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Felds aus der Datenquelle zum Binden an die <see cref="P:System.Web.UI.WebControls.TreeNode.Value" /> Eigenschaft von einem <see cref="T:System.Web.UI.WebControls.TreeNode" /> Objekt, mit dem die <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt angewendet wird.</summary>
+        <value>Der Name des Felds zum Binden an die <see cref="P:System.Web.UI.WebControls.TreeNode.Value" /> Eigenschaft eine <see cref="T:System.Web.UI.WebControls.TreeNode" /> Objekt, mit dem die <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt angewendet wird. Der Standardwert ist eine leere Zeichenfolge (""), gibt an, dass die <see cref="P:System.Web.UI.WebControls.TreeNodeBinding.ValueField" /> Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der <xref:System.Web.UI.WebControls.TreeView> Steuerelement an eine Datenquelle gebunden ist, verwenden Sie die <xref:System.Web.UI.WebControls.TreeNodeBinding.ValueField%2A> -Eigenschaft an den Feldnamen zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.Value%2A> Eigenschaft ein <xref:System.Web.UI.WebControls.TreeNode> Objekt. Diese Bindung Beziehung wirkt sich auf alle <xref:System.Web.UI.WebControls.TreeNode> Objekte, für die die <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Die <xref:System.Web.UI.WebControls.TreeNode.Value%2A> Eigenschaft dient als Ergänzung zu den <xref:System.Web.UI.WebControls.TreeNode.Text%2A> synchronisierungsleistung, da zusätzlichen Daten, die dem Knoten auf die zugeordnete Eigenschaft der <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Dieser Wert wird nicht im Steuerelement angezeigt und wird häufig zum Speichern von Daten für die Behandlung von Ereignissen postback verwendet.  
+  
+> [!NOTE]
+>  Können Sie selektiv überschreiben die <xref:System.Web.UI.WebControls.TreeNodeBinding.ValueField%2A> Eigenschaft durch Festlegen der <xref:System.Web.UI.WebControls.TreeNode.Value%2A> -Eigenschaft jedes Knotens direkt.  
+  
+ Anstatt die <xref:System.Web.UI.WebControls.TreeNodeBinding.ValueField%2A> zu bindende Eigenschaft der <xref:System.Web.UI.WebControls.TreeNode.Value%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.TreeNode> -Objekt an ein Feld können Sie festlegen der <xref:System.Web.UI.WebControls.TreeNode.Value%2A> Eigenschaft auf einen festen Wert durch Festlegen der <xref:System.Web.UI.WebControls.TreeNodeBinding.Value%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Wenn die Datenquelle mehrere Felder enthält, müssen Sie zunächst Festlegen der <xref:System.Web.UI.WebControls.TreeNodeBinding.Depth%2A> oder <xref:System.Web.UI.WebControls.TreeNodeBinding.DataMember%2A> Eigenschaft oder beide Eigenschaften zum Binden an das entsprechende Feld.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Dieser Abschnitt enthält zwei Codebeispiele. Im ersten Codebeispiel wird veranschaulicht, wie der <xref:System.Web.UI.WebControls.TreeNodeBinding.ValueField%2A> Eigenschaft an, welches Attribut eines XML-Elements zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.Value%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.TreeNode> Objekt, mit dem der <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Das zweite Codebeispiel im ersten Codebeispiel wird XML-Daten bereit.  
+  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeBinding.ValueField%2A> Eigenschaft an, welches Attribut eines XML-Elements zum Binden an die <xref:System.Web.UI.WebControls.TreeNode.Value%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.TreeNode> Objekt, mit dem die <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt angewendet wird. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die XML-Beispieldaten bereitgestellt, die nach diesem Codebeispiel, in eine Datei mit dem Namen Booklist.xml kopieren.  
+  
+ [!code-aspx-csharp[TreeNodeTextField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeTextField/CS/treenodebindingtextfieldcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeTextField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeTextField/VB/treenodebindingtextfieldvb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird der im vorangehenden Codebeispiel wird XML-Daten bereit.  
+  
+```  
+<Books Text="Books List">  
+    <Book Text="Book Title One"  
+        Value="1"   
+        Image="Bookimage1.jpg"  
+        ImageToolTip="Book 1 Photo"   
+        Nav="http://www.microsoft.com"  
+        Tip="Book Title 1">  
+        <Description Text="Book Description">  
+        </Description>  
+        <Price Value="$1.99">  
+        </Price>  
+        <Author Text="Author Name"  
+            Value="LastName"   
+            Image="Authorimage1.jpg"   
+            Nav="http://www.microsoft.com"  
+            Tip="Author Name">  
+        </Author>  
+    </Book>  
+    <Book Text="Book Title Two"  
+        Value="2"   
+        Image="Bookimage2.jpg"  
+        ImageToolTip="Book 2 Photo"   
+        Nav="http://www.microsoft.com"  
+        Tip="Click Me">  
+        <Description Text="Book Description">  
+        </Description>  
+        <Price Value="$2.99">  
+        </Price>  
+        <Author Text="Author Name"  
+            Value="LastName"   
+            Image="Authorimage2.jpg"   
+            Nav="http://www.microsoft.com"  
+            Tip="Author Name">  
+        </Author>  
+    </Book>  
+</Books>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

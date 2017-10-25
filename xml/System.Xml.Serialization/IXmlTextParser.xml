@@ -1,0 +1,104 @@
+<Type Name="IXmlTextParser" FullName="System.Xml.Serialization.IXmlTextParser">
+  <TypeSignature Language="C#" Value="public interface IXmlTextParser" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IXmlTextParser" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.IXmlTextParser" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Richtet eine <see cref="P:System.Xml.Serialization.IXmlTextParser.Normalized" /> Eigenschaft für die Verwendung durch die .NET Framework-Infrastruktur.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementieren Sie nicht die <xref:System.Xml.Serialization.IXmlTextParser> -Schnittstelle in Ihrem Code. Verwenden Sie stattdessen die <xref:System.Xml.XmlTextReader.Normalization%2A> Eigenschaft von der <xref:System.Xml.XmlTextReader> Klasse.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="Normalized">
+      <MemberSignature Language="C#" Value="public bool Normalized { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Normalized" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.IXmlTextParser.Normalized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob Leerraum und Attributwerte normalisiert werden.</summary>
+        <value>
+          <see langword="true" />Wenn Leerraum Attributwerte normalisiert werden; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementieren Sie nicht die <xref:System.Xml.Serialization.IXmlTextParser> Schnittstelle und <xref:System.Xml.Serialization.IXmlTextParser.Normalized%2A> Eigenschaft im Code. Verwenden Sie stattdessen die <xref:System.Xml.XmlTextReader.Normalization%2A> Eigenschaft von der <xref:System.Xml.XmlTextReader> Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WhitespaceHandling">
+      <MemberSignature Language="C#" Value="public System.Xml.WhitespaceHandling WhitespaceHandling { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.WhitespaceHandling WhitespaceHandling" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.IXmlTextParser.WhitespaceHandling" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.WhitespaceHandling</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, wie Leerraum behandelt wird, wenn der XML-Analyse.</summary>
+        <value>Ein Mitglied der <see cref="T:System.Xml.WhitespaceHandling" /> Enumeration, die beschreibt, wie von Leerräumen behandelt, wenn XML-Analyse.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementieren Sie nicht die <xref:System.Xml.Serialization.IXmlTextParser> Schnittstelle und <xref:System.Xml.Serialization.IXmlTextParser.Normalized%2A> Eigenschaft im Code. Verwenden Sie stattdessen die <xref:System.Xml.XmlTextReader.Normalization%2A> Eigenschaft von der <xref:System.Xml.XmlTextReader> Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

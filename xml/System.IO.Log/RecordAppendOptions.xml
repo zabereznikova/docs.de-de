@@ -1,0 +1,81 @@
+<Type Name="RecordAppendOptions" FullName="System.IO.Log.RecordAppendOptions">
+  <TypeSignature Language="C#" Value="public enum RecordAppendOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RecordAppendOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Log.RecordAppendOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Log</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, wie Datensätze angefügt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie eine Enumeration mit der <xref:System.IO.Log.LogRecordSequence.Append%2A>-Methode verwendet werden kann, um einer Sequenz einen Datensatz anzufügen.  
+  
+ [!code-csharp[S_UELogRecordSequence#5](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mylogrecordsequence.cs#5)]
+ [!code-vb[S_UELogRecordSequence#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mylogrecordsequence.vb#5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ForceAppend">
+      <MemberSignature Language="C#" Value="ForceAppend" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Log.RecordAppendOptions ForceAppend = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Log.RecordAppendOptions.ForceAppend" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.RecordAppendOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Datensatzsequenz sollte den Prozess des Leerens interner Puffer starten, nachdem dieser Datensatz angefügt wurde. Dies bedeutet nicht, dass der Satz dauerhaft geschrieben werden muss, bevor der Vorgang des Anfügens abgeschlossen ist. Um dieses Verhalten abzurufen, geben Sie das <see cref="F:System.IO.Log.RecordAppendOptions.ForceFlush" />-Flag an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ForceFlush">
+      <MemberSignature Language="C#" Value="ForceFlush" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Log.RecordAppendOptions ForceFlush = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Log.RecordAppendOptions.ForceFlush" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.RecordAppendOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Datensatzsequenz sollte alle internen Puffer leeren, nachdem dieser Datensatz angefügt wurde. Wenn der Vorgang des Anfügens abgeschlossen ist, wurde der angegebene Satz dauerhaft geschrieben.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Log.RecordAppendOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Log.RecordAppendOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.RecordAppendOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Beim Schreiben der Daten kommt es zu Verzögerungen.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

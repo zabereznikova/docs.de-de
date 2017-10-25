@@ -1,0 +1,313 @@
+<Type Name="MemberInitExpression" FullName="System.Linq.Expressions.MemberInitExpression">
+  <TypeSignature Language="C#" Value="public sealed class MemberInitExpression : System.Linq.Expressions.Expression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MemberInitExpression extends System.Linq.Expressions.Expression" />
+  <TypeSignature Language="DocId" Value="T:System.Linq.Expressions.MemberInitExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System.Linq.Expressions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Linq.Expressions.Expression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerTypeProxy(typeof(System.Linq.Expressions.Expression/MemberInitExpressionProxy))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt den Aufruf eines Konstruktors und die Initialisierung mindestens eines Members des neuen Objekts dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Linq.Expressions.Expression.MemberInit%2A> Factorymethoden zum Erstellen einer <xref:System.Linq.Expressions.MemberInitExpression>.  
+  
+ Der Wert von der <xref:System.Linq.Expressions.Expression.NodeType%2A> Eigenschaft eine <xref:System.Linq.Expressions.MemberInitExpression> ist <xref:System.Linq.Expressions.ExpressionType.MemberInit>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Linq.Expressions.MemberInitExpression> , die die Initialisierung von zwei Elementen eines neuen Objekts darstellt.  
+  
+ [!code-csharp[System.Linq.Expressions.Expression#9](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Linq.Expressions.Expression/CS/Expression.cs#9)]
+ [!code-vb[System.Linq.Expressions.Expression#9](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Linq.Expressions.Expression/VB/Expression.vb#9)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Accept">
+      <MemberSignature Language="C#" Value="protected override System.Linq.Expressions.Expression Accept (System.Linq.Expressions.ExpressionVisitor visitor);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Linq.Expressions.Expression Accept(class System.Linq.Expressions.ExpressionVisitor visitor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.Expressions.MemberInitExpression.Accept(System.Linq.Expressions.ExpressionVisitor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.Expression</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visitor" Type="System.Linq.Expressions.ExpressionVisitor" />
+      </Parameters>
+      <Docs>
+        <param name="visitor">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bindings">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Linq.Expressions.MemberBinding&gt; Bindings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Linq.Expressions.MemberBinding&gt; Bindings" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.MemberInitExpression.Bindings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Linq.Expressions.MemberBinding&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Bindungen ab, die beschreiben, wie die Elemente des neu erstellten Objekts initialisiert.</summary>
+        <value>Ein <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> der <see cref="T:System.Linq.Expressions.MemberBinding" /> Objekte, die beschreiben, wie die Member initialisiert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanReduce">
+      <MemberSignature Language="C#" Value="public override bool CanReduce { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanReduce" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.MemberInitExpression.CanReduce" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob für der Ausdrucksstrukturknoten reduziert werden kann.</summary>
+        <value>True, wenn der Knoten reduziert werden kann, andernfalls False.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewExpression">
+      <MemberSignature Language="C#" Value="public System.Linq.Expressions.NewExpression NewExpression { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Linq.Expressions.NewExpression NewExpression" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.MemberInitExpression.NewExpression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.NewExpression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Ausdruck ab, der den Konstruktoraufruf darstellt.</summary>
+        <value>Ein <see cref="T:System.Linq.Expressions.NewExpression" /> , die den Konstruktoraufruf darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeType">
+      <MemberSignature Language="C#" Value="public override sealed System.Linq.Expressions.ExpressionType NodeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Linq.Expressions.ExpressionType NodeType" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.MemberInitExpression.NodeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.ExpressionType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Knotentyp dieses Ausdrucks zurück. Erweiterungsknoten sollten zurückgeben <see cref="F:System.Linq.Expressions.ExpressionType.Extension" /> beim Überschreiben dieser Methode.</summary>
+        <value>Der <see cref="T:System.Linq.Expressions.ExpressionType" /> des Ausdrucks.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reduce">
+      <MemberSignature Language="C#" Value="public override System.Linq.Expressions.Expression Reduce ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Linq.Expressions.Expression Reduce() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.Expressions.MemberInitExpression.Reduce" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.Expression</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Reduziert die <see cref="T:System.Linq.Expressions.MemberInitExpression" /> zu einem einfacheren Ausdruck.</summary>
+        <returns>Der reduzierte Ausdruck.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `CanReduce` Methode gibt "true" zurück, die diese Methode sollte einen gültigen Ausdruck zurückgeben.  
+  
+ Diese Methode kann einen anderen Knoten zurückgeben, der selbst reduziert werden muss.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public override sealed Type Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.MemberInitExpression.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den statischen Typ des Ausdrucks ab, den dieser <see cref="T:System.Linq.Expressions.Expression" /> darstellt.</summary>
+        <value>Der <see cref="P:System.Linq.Expressions.MemberInitExpression.Type" />, der den statischen Typ des Ausdrucks darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="public System.Linq.Expressions.MemberInitExpression Update (System.Linq.Expressions.NewExpression newExpression, System.Collections.Generic.IEnumerable&lt;System.Linq.Expressions.MemberBinding&gt; bindings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Linq.Expressions.MemberInitExpression Update(class System.Linq.Expressions.NewExpression newExpression, class System.Collections.Generic.IEnumerable`1&lt;class System.Linq.Expressions.MemberBinding&gt; bindings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.Expressions.MemberInitExpression.Update(System.Linq.Expressions.NewExpression,System.Collections.Generic.IEnumerable{System.Linq.Expressions.MemberBinding})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.MemberInitExpression</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newExpression" Type="System.Linq.Expressions.NewExpression" />
+        <Parameter Name="bindings" Type="System.Collections.Generic.IEnumerable&lt;System.Linq.Expressions.MemberBinding&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="newExpression">Die <see cref="P:System.Linq.Expressions.MemberInitExpression.NewExpression" /> -Eigenschaft des Ergebnisses.</param>
+        <param name="bindings">Die <see cref="P:System.Linq.Expressions.MemberInitExpression.Bindings" /> -Eigenschaft des Ergebnisses.</param>
+        <summary>Erstellt einen neuen Ausdruck, der diesem ähnelt, verwendet jedoch die angegebenen untergeordneten Elemente. Wenn alle untergeordneten Elemente identisch sind, wird dieser Ausdruck zurückgegeben.</summary>
+        <returns>Dieser Ausdruck, wenn keine untergeordneten Elemente geändert werden, oder ein Ausdruck mit den aktualisierten untergeordneten Elementen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

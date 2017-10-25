@@ -1,0 +1,283 @@
+<Type Name="ScriptFunction" FullName="Microsoft.JScript.ScriptFunction">
+  <TypeSignature Language="C#" Value="public abstract class ScriptFunction : Microsoft.JScript.JSObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ScriptFunction extends Microsoft.JScript.JSObject" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.ScriptFunction" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.JScript.JSObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein prototypbasierten-Objekt, das von einer Konstruktorfunktion definiert wird. Die meisten der Konstruktor funktioniert Klassen, z. B. <see cref="T:Microsoft.JScript.DateConstructor" />, <see cref="T:Microsoft.JScript.NumberConstructor" />, <see cref="T:Microsoft.JScript.StringConstructor" />, und <see cref="T:Microsoft.JScript.ObjectConstructor" />, von dieser Klasse erben. Diese Klasse gehört zur Kategorie Objekte und Funktionen.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ScriptFunction (Microsoft.JScript.ScriptObject parent, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Microsoft.JScript.ScriptObject parent, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ScriptFunction.#ctor(Microsoft.JScript.ScriptObject,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="parent" Type="Microsoft.JScript.ScriptObject" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parent">Der übergeordnete Prototyp des Objekts, das diese Funktion erstellt.</param>
+        <param name="name">Der Name des Objekts, das diese Funktion erstellt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.JScript.ScriptFunction" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das übergeordnete Element ist das Objekt, fordert die Objekt-Delegaten für Eigenschaften, oder Methoden, die nicht selbst implementiert wird. Z. B. beim Erstellen einer <xref:Microsoft.JScript.NumberObject> mithilfe einer <xref:Microsoft.JScript.NumberConstructor>, das übergeordnete Element ist ein <xref:Microsoft.JScript.NumberPrototype>.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstance">
+      <MemberSignature Language="C#" Value="public object CreateInstance (params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object CreateInstance(object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ScriptFunction.CreateInstance(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasVarArgs)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="args">Die an den Konstruktor zu übergebenden Argumente.</param>
+        <summary>Erstellt eine Instanz des prototypbasierten Objekts in den angegebenen Argumenten übergeben.</summary>
+        <returns>Eine Instanz des Objekts.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetPrototypeForConstructedObject">
+      <MemberSignature Language="C#" Value="protected Microsoft.JScript.ScriptObject GetPrototypeForConstructedObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class Microsoft.JScript.ScriptObject GetPrototypeForConstructedObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ScriptFunction.GetPrototypeForConstructedObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.ScriptObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Prototype-Objekt für diesen Konstruktorfunktion ab.</summary>
+        <returns>Für diesen Konstruktorfunktion Prototype-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Prototyp ist das Objekt, fordert die Objekt-Delegaten für Eigenschaften, oder Methoden, die nicht selbst implementiert wird. Z. B. beim Erstellen einer <xref:Microsoft.JScript.NumberObject> mithilfe einer <xref:Microsoft.JScript.NumberConstructor>, der Prototyp ist ein <xref:Microsoft.JScript.NumberPrototype>.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ilength">
+      <MemberSignature Language="C#" Value="protected int ilength;" />
+      <MemberSignature Language="ILAsm" Value=".field family int32 ilength" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.ScriptFunction.ilength" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Speichert die Anzahl der Elemente in der <paramref name="args" /> Parameter von der <see cref="M:Microsoft.JScript.ScriptFunction.CreateInstance(System.Object[])" /> Methode.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public object Invoke (object thisob, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Invoke(object thisob, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ScriptFunction.Invoke(System.Object,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject | Microsoft.JScript.JSFunctionAttributeEnum.HasVarArgs)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <param name="args">Die an die Methode zu übergebenden Argumente.</param>
+        <summary>Ruft eine Methode des prototypbasierten Objekts in den angegebenen Argumenten übergeben.</summary>
+        <returns>Das Ergebnis des Aufrufs der Methode.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.JScript.ScriptFunction.Invoke%2A>häufig dient als Konstruktor oder zum Erstellen.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeMember">
+      <MemberSignature Language="C#" Value="public override object InvokeMember (string name, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, object target, object[] args, System.Reflection.ParameterModifier[] modifiers, System.Globalization.CultureInfo culture, string[] namedParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object InvokeMember(string name, valuetype System.Reflection.BindingFlags invokeAttr, class System.Reflection.Binder binder, object target, object[] args, valuetype System.Reflection.ParameterModifier[] modifiers, class System.Globalization.CultureInfo culture, string[] namedParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ScriptFunction.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="invokeAttr" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="binder" Type="System.Reflection.Binder" />
+        <Parameter Name="target" Type="System.Object" />
+        <Parameter Name="args" Type="System.Object[]" />
+        <Parameter Name="modifiers" Type="System.Reflection.ParameterModifier[]" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="namedParameters" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des aufzurufenden Members.</param>
+        <param name="invokeAttr">Eine bitweise Kombination der Enumerationswerte, die angibt, wie die Suche nach Membern mittels Reflektion durchgeführt wird.</param>
+        <param name="binder">Ein Objekt, das typkonvertierung von tatsächlicher Argumenttyp in den Typ des formalen Arguments ausführt.</param>
+        <param name="target">Das Objekt auf dem der Member aufgerufen werden soll. Diese Angabe muss das aktuelle Skriptobjekt.</param>
+        <param name="args">Ein Array von Objekten, die aufgerufen werden Anzahl, Reihenfolge und Typ der Parameter des Elements enthält. Dies ist ein leeres Array, wenn keine Parameter vorhanden sind.</param>
+        <param name="modifiers">Ein Array, das die gleiche Länge wie die <c>Args</c> Parameter. Es stellt die Argumentattribute des aufgerufenen Members in den Metadaten dar.</param>
+        <param name="culture">Enthält Informationen über eine bestimmte Kultur oder ein Gebietsschema. Zur ordnungsgemäßen Formatierung von Zahlen, Datumsangaben und Zeichenfolgen verwendet.</param>
+        <param name="namedParameters">Ein Array von Parametern.</param>
+        <summary>Ruft den angegebenen Member auf.</summary>
+        <returns>Der Rückgabewert des Aufrufs an das Element.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="length">
+      <MemberSignature Language="C#" Value="public virtual int length { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 length" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.ScriptFunction.length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Anzahl der Elemente in der <paramref name="args" /> Parameter von der <see cref="M:Microsoft.JScript.ScriptFunction.CreateInstance(System.Object[])" /> Methode.</summary>
+        <value>Die Anzahl der Elemente in der <paramref name="args" /> Parameter von der <see cref="M:Microsoft.JScript.ScriptFunction.CreateInstance(System.Object[])" /> Methode.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="prototype">
+      <MemberSignature Language="C#" Value="public object prototype { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object prototype" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.ScriptFunction.prototype" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest Prototype-Objekt für diesen Konstruktorfunktion.</summary>
+        <value>Für diesen Konstruktorfunktion Prototype-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Prototyp ist das Objekt, fordert die Objekt-Delegaten für Eigenschaften, oder Methoden, die nicht selbst implementiert wird. Z. B. beim Erstellen einer <xref:Microsoft.JScript.NumberObject> mithilfe einer <xref:Microsoft.JScript.NumberConstructor>, der Prototyp ist ein <xref:Microsoft.JScript.NumberPrototype>.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ScriptFunction.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolgendarstellung der Konstruktorfunktion zurück.</summary>
+        <returns>Eine Zeichenfolge, die den Namen der Konstruktorfunktion und einen Platzhalter für den Code enthält.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

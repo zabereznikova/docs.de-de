@@ -1,0 +1,78 @@
+<Type Name="RequestClaimCollection" FullName="System.IdentityModel.Protocols.WSTrust.RequestClaimCollection">
+  <TypeSignature Language="C#" Value="public class RequestClaimCollection : System.Collections.ObjectModel.Collection&lt;System.IdentityModel.Protocols.WSTrust.RequestClaim&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RequestClaimCollection extends System.Collections.ObjectModel.Collection`1&lt;class System.IdentityModel.Protocols.WSTrust.RequestClaim&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Protocols.WSTrust.RequestClaimCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ObjectModel.Collection&lt;System.IdentityModel.Protocols.WSTrust.RequestClaim&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="!0">System.IdentityModel.Protocols.WSTrust.RequestClaim</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Auflistung von der <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestClaim" /> -Objekten in <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Stellt den Inhalt des Elements Wst:Claims dar. Dieses optionale Element fordert der Satz an bestimmte Anspruchstypen, die vom Client angefordert werden. Die <xref:System.IdentityModel.Protocols.WSTrust.RequestClaimCollection.Dialect%2A> Eigenschaft gibt an, der Dialekt der <xref:System.IdentityModel.Protocols.WSTrust.RequestClaim> Objekte in der Auflistung.  
+  
+ Weitere Informationen über das Element, das diese Klasse darstellt, finden Sie in der Version der WS-Trust-Spezifikation, die für Ihr Szenario zutrifft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RequestClaimCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.RequestClaimCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestClaimCollection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach der Initialisierung der <xref:System.IdentityModel.Protocols.WSTrust.RequestClaimCollection> leer ist und die <xref:System.IdentityModel.Protocols.WSTrust.RequestClaimCollection.Dialect%2A> Eigenschaft auf "http://schemas.xmlsoap.org/ws/2005/05/identity" festgelegt ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dialect">
+      <MemberSignature Language="C#" Value="public string Dialect { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Dialect" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.RequestClaimCollection.Dialect" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen der Dialekt-Attribut.</summary>
+        <value>Eine Zeichenfolge, die den URI enthält, die den Dialekt identifiziert. Der Standardwert ist <see cref="F:System.IdentityModel.Protocols.WSIdentity.WSIdentityConstants.Dialect" />, gibt an, dass <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestClaim" /> Objekte in der Auflistung der Informationen für das Profil entsprechen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Stellt den Dialekt-Attribut des Elements Wst:Claims dar. Dieses erforderliche Attribut enthält einen URI, der die Syntax zur Angabe des Satzes von Ansprüchen angeforderte angibt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

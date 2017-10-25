@@ -1,0 +1,209 @@
+<Type Name="PopupEventArgs" FullName="System.Windows.Forms.PopupEventArgs">
+  <TypeSignature Language="C#" Value="public class PopupEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PopupEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.PopupEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Forms.ToolTip.Popup" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ToolTip.Popup> -Ereignis für die <xref:System.Windows.Forms.ToolTip> -Klasse wird ausgelöst, bevor eine QuickInfo angezeigt wird. Der Handler für dieses Ereignis empfängt einen Parameter vom Typ <xref:System.Windows.Forms.PopupEventArgs>. Dieser Parameter enthält Informationen über die QuickInfo und ermöglicht es Ihnen, die Größe der QuickInfo durch Ändern der <xref:System.Windows.Forms.PopupEventArgs.ToolTipSize%2A> Eigenschaft. Da <xref:System.Windows.Forms.ToolTip.Popup> leitet sich von <xref:System.ComponentModel.CancelEventArgs>, der Handler kann auch beenden, die QuickInfo angezeigt wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Typs. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ToolTip.Popup> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.ToolTip> mit dem Namen `ToolTip1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ToolTip.Popup> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#619](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#619)]
+ [!code-vb[System.Windows.Forms.EventExamples#619](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#619)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PopupEventArgs (System.Windows.Forms.IWin32Window associatedWindow, System.Windows.Forms.Control associatedControl, bool isBalloon, System.Drawing.Size size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.IWin32Window associatedWindow, class System.Windows.Forms.Control associatedControl, bool isBalloon, valuetype System.Drawing.Size size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.PopupEventArgs.#ctor(System.Windows.Forms.IWin32Window,System.Windows.Forms.Control,System.Boolean,System.Drawing.Size)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="associatedWindow" Type="System.Windows.Forms.IWin32Window" />
+        <Parameter Name="associatedControl" Type="System.Windows.Forms.Control" />
+        <Parameter Name="isBalloon" Type="System.Boolean" />
+        <Parameter Name="size" Type="System.Drawing.Size" />
+      </Parameters>
+      <Docs>
+        <param name="associatedWindow">Die <see cref="T:System.Windows.Forms.IWin32Window" /> , das die QuickInfo gebunden ist.</param>
+        <param name="associatedControl">Die <see cref="T:System.Windows.Forms.Control" /> , die für die QuickInfo erstellt wird.</param>
+        <param name="isBalloon">
+          <see langword="true" />um anzugeben, dass das zugeordnete QuickInfo-Fenster eine sprechblasenformat Darstellung hat. andernfalls <see langword="false" /> um anzugeben, dass das QuickInfo-Fenster eine standardmäßige rechteckige Darstellung hat.</param>
+        <param name="size">Die <see cref="T:System.Drawing.Size" /> der QuickInfo.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Windows.Forms.PopupEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Parameter für die <xref:System.Windows.Forms.PopupEventArgs.%23ctor%2A> Konstruktor zur Initialisierung der entsprechenden ähnlich benannten Eigenschaften verwendet werden. Die `associatedControl` Parameter möglich `null` Wenn das besitzende Fenster nicht vom Typ <xref:System.Windows.Forms.Control>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssociatedControl">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Control AssociatedControl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Control AssociatedControl" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PopupEventArgs.AssociatedControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Steuerelement ab, für die <see cref="T:System.Windows.Forms.ToolTip" /> gezeichnet wird.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.Control" /> zugeordneten der <see cref="T:System.Windows.Forms.ToolTip" />, oder <see langword="null" /> , wenn die QuickInfo nicht mit einem Steuerelement verknüpft ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da Sie zuordnen können die <xref:System.Windows.Forms.ToolTip> mit mehreren Steuerelementen über die <xref:System.Windows.Forms.ToolTip.SetToolTip%2A?displayProperty=nameWithType> Methode, die Sie verwenden können die <xref:System.Windows.Forms.PopupEventArgs.AssociatedControl%2A> Eigenschaft, um festzulegen, welche die <xref:System.Windows.Forms.ToolTip.Draw> Ereignis zugeordnet ist. Dies ist hilfreich, wenn Sie unterschiedliche QuickInfo basierend auf das zugeordnete Steuerelement durchführen möchten.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ToolTip.Popup?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.ToolTip> mit dem Namen `ToolTip1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ToolTip.Popup?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#619](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#619)]
+ [!code-vb[System.Windows.Forms.EventExamples#619](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#619)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssociatedWindow">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.IWin32Window AssociatedWindow { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.IWin32Window AssociatedWindow" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PopupEventArgs.AssociatedWindow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.IWin32Window</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Fenster an das <see cref="T:System.Windows.Forms.ToolTip" /> gebunden ist.</summary>
+        <value>Das Fenster dem Besitzer der <see cref="T:System.Windows.Forms.ToolTip" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Fenster im Besitz eines anderen Fensters ist, wird das zugehörige Fenster minimiert und mit der das besitzende Fenster geschlossen. Im Besitz befindlichen Windows werden ebenfalls nicht hinter dem Besitzerformular angezeigt. In diesem Fall gehört die QuickInfo die systemeigenen Win32-Fenster, dargestellt durch die <xref:System.Windows.Forms.DrawToolTipEventArgs.AssociatedWindow%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ToolTip.Popup?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.ToolTip> mit dem Namen `ToolTip1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ToolTip.Popup?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#619](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#619)]
+ [!code-vb[System.Windows.Forms.EventExamples#619](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#619)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBalloon">
+      <MemberSignature Language="C#" Value="public bool IsBalloon { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBalloon" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PopupEventArgs.IsBalloon" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die QuickInfo als ein Standard rechteckigen oder ein Sprechblasenfenster angezeigt wird.</summary>
+        <value>
+          <see langword="true" />Wenn die QuickInfo in ein Sprechblasenfenster angezeigt wird. andernfalls <see langword="false" /> Wenn rechteckigen Standardfensters verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Typ des verwendeten Fensters für die QuickInfo wird angegeben, der <xref:System.Windows.Forms.ToolTip.IsBalloon%2A?displayProperty=nameWithType> Methode der <xref:System.Windows.Forms.ToolTip> Klasse.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ToolTip.Popup?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.ToolTip> mit dem Namen `ToolTip1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ToolTip.Popup?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#619](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#619)]
+ [!code-vb[System.Windows.Forms.EventExamples#619](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#619)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTipSize">
+      <MemberSignature Language="C#" Value="public System.Drawing.Size ToolTipSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size ToolTipSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PopupEventArgs.ToolTipSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Größe der QuickInfo.</summary>
+        <value>Die <see cref="T:System.Drawing.Size" /> von der <see cref="T:System.Windows.Forms.ToolTip" /> Fenster.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.PopupEventArgs.ToolTipSize%2A> ermöglicht die <xref:System.Windows.Forms.ToolTip.Popup> Ereignishandler so ändern Sie die Größe des QuickInfo-Fenster. <xref:System.Windows.Forms.PopupEventArgs.ToolTipSize%2A>wird häufig in Verbindung mit den Elementen der <xref:System.Windows.Forms.DrawToolTipEventArgs> Klasse, um die Darstellung von QuickInfos anzupassen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ToolTip.Popup?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.ToolTip> mit dem Namen `ToolTip1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ToolTip.Popup?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#619](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#619)]
+ [!code-vb[System.Windows.Forms.EventExamples#619](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#619)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

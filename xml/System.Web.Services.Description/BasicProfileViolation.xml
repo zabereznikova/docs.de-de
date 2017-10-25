@@ -1,0 +1,128 @@
+<Type Name="BasicProfileViolation" FullName="System.Web.Services.Description.BasicProfileViolation">
+  <TypeSignature Language="C#" Value="public class BasicProfileViolation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BasicProfileViolation extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Description.BasicProfileViolation" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen WSDL-Verstoß gegen die Version WSI Basic Profile 1.1 dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Claims">
+      <MemberSignature Language="C#" Value="public System.Web.Services.WsiProfiles Claims { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Services.WsiProfiles Claims" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.BasicProfileViolation.Claims" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.WsiProfiles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Web.Services.WsiProfiles" /> Objekt, das angibt, ob der Webdienst deklariert, dass sie auf die Version der WSI Basic Profile 1.1 entsprechen.</summary>
+        <value>Ein <see cref="T:System.Web.Services.WsiProfiles" /> Objekt, das angibt, ob der Webdienst deklariert, dass sie auf die Version der WSI Basic Profile 1.1 entsprechen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Details">
+      <MemberSignature Language="C#" Value="public string Details { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Details" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.BasicProfileViolation.Details" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.String" /> , die eine detaillierte Beschreibung des WSDL-Verstoßes gegen die Basisprofile bereitstellt.</summary>
+        <value>Ein <see cref="T:System.String" /> , eine ausführliche Beschreibung des WSDL-Verstoßes gegen die Basisprofile bereitstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Elements">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.StringCollection Elements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.StringCollection Elements" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.BasicProfileViolation.Elements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.StringCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die WSDL-Elementen, die nicht mit der Version 1.1-Spezifikation WSI Basic Profile entsprechen.</summary>
+        <value>Ein <see cref="T:System.Collections.Specialized.StringCollection" /> , enthält die WSDL-Elemente, die nicht mit der Version 1.1-Spezifikation WSI Basic Profile entsprechen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NormativeStatement">
+      <MemberSignature Language="C#" Value="public string NormativeStatement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NormativeStatement" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.BasicProfileViolation.NormativeStatement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Bezeichner für die WSDL-Verletzung der Basic Profile Version 1.1-Spezifikation.</summary>
+        <value>Ein <see cref="T:System.String" /> , der den Bezeichner (z. B. R2038) für die WSDL-Verletzung der Basic Profile Version 1.1-Spezifikation enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Recommendation">
+      <MemberSignature Language="C#" Value="public string Recommendation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Recommendation" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.BasicProfileViolation.Recommendation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.String" /> -Objekt, das die WSDL-Verletzung der Basic Profile Version 1.1-Spezifikation beschrieben.</summary>
+        <value>Die <see cref="T:System.String" /> -Objekt, das die WSDL-Verletzung der Basic Profile Version 1.1-Spezifikation beschrieben.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.BasicProfileViolation.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.String" /> Informationen aus herausgeberzeichenfolge <see cref="P:System.Web.Services.Description.BasicProfileViolation.NormativeStatement" />, <see cref="P:System.Web.Services.Description.BasicProfileViolation.Details" />, und <see cref="P:System.Web.Services.Description.BasicProfileViolation.Elements" />.</summary>
+        <returns>Ein <see cref="T:System.String" /> Informationen aus herausgeberzeichenfolge <see cref="P:System.Web.Services.Description.BasicProfileViolation.NormativeStatement" />, <see cref="P:System.Web.Services.Description.BasicProfileViolation.Details" />, und <see cref="P:System.Web.Services.Description.BasicProfileViolation.Elements" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

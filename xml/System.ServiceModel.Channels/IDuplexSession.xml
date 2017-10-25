@@ -1,0 +1,251 @@
+<Type Name="IDuplexSession" FullName="System.ServiceModel.Channels.IDuplexSession">
+  <TypeSignature Language="C#" Value="public interface IDuplexSession : System.ServiceModel.Channels.IInputSession, System.ServiceModel.Channels.IOutputSession" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDuplexSession implements class System.ServiceModel.Channels.IInputSession, class System.ServiceModel.Channels.IOutputSession, class System.ServiceModel.Channels.ISession" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.IDuplexSession" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Channels.IInputSession</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Channels.IOutputSession</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Definiert die Schnittstelle für die auf jeder Seite einer bidirektionalen Kommunikation zwischen Messagingendpunkten implementierte Sitzung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.Channels.IDuplexSession>-Schnittstelle ist die Gesamtmenge aus der eingehenden Sitzung, die von der <xref:System.ServiceModel.Channels.IInputSession>-Schnittstelle definiert wird, und der ausgehenden Sitzung, die von der <xref:System.ServiceModel.Channels.IOutputSession>-Schnittstelle definiert wird. Sowohl die eingehende als auch die ausgehende Sitzung können unabhängig voneinander beendet werden. Die ausgehende Sitzung kann synchron durch Aufruf von <xref:System.ServiceModel.Channels.IDuplexSession.CloseOutputSession%2A> oder asynchron durch Aufruf von <xref:System.ServiceModel.Channels.IDuplexSession.BeginCloseOutputSession%2A> beendet werden.  
+  
+ Die eingehende Sitzung kann remote beendet werden. Der zur eingehenden Sitzung gehörende <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A> gibt `null` zurück, wenn diese Sitzung beendet wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginCloseOutputSession">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginCloseOutputSession (AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginCloseOutputSession(class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IDuplexSession.BeginCloseOutputSession(System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Der <see cref="T:System.AsyncCallback" />-Delegat.</param>
+        <param name="state">Ein Objekt (<see langword="object" />), das Statusinformationen für diese Anforderung enthält.</param>
+        <summary>Startet einen asynchronen Vorgang zum Beenden der ausgehenden Sitzung.</summary>
+        <returns>Der <see cref="T:System.IAsyncResult" />, der auf das asynchrone Beenden der ausgehenden Sitzung verweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Beenden der ausgehenden Sitzung hat keinen Einfluss auf die eingehende Sitzung. Daher erfolgt keine Anweisung über die Verfügbarkeit des Nachrichtenempfangs auf der zum Eingabekanal gehörenden Sitzung. Dieser Vorgang muss innerhalb eines Standardzeitintervalls abgeschlossen sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginCloseOutputSession">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginCloseOutputSession (TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginCloseOutputSession(valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IDuplexSession.BeginCloseOutputSession(System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Die <see cref="T:System.TimeSpan" />, die das Zeitintervall angibt, innerhalb dessen der Vorgang abgeschlossen werden muss.</param>
+        <param name="callback">Der <see cref="T:System.AsyncCallback" />-Delegat.</param>
+        <param name="state">Ein Objekt (<see langword="object" />), das Statusinformationen für diese Anforderung enthält.</param>
+        <summary>Startet einen asynchronen Vorgang zum Beenden der ausgehenden Sitzung mit einem festgelegten Timeout, innerhalb dessen der Vorgang abgeschlossen sein muss.</summary>
+        <returns>Der <see cref="T:System.IAsyncResult" />, der auf das asynchrone Beenden der ausgehenden Sitzung verweist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Beenden der ausgehenden Sitzung hat keinen Einfluss auf die eingehende Sitzung. Daher erfolgt keine Anweisung über die Verfügbarkeit des Nachrichtenempfangs auf der zum Eingabekanal gehörenden Sitzung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseOutputSession">
+      <MemberSignature Language="C#" Value="public void CloseOutputSession ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CloseOutputSession() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IDuplexSession.CloseOutputSession" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet die ausgehende Sitzung, wobei angegeben wird, dass keine weiteren Nachrichten mehr von diesem Endpunkt aus auf dem zur Sitzung gehörenden Kanal versendet werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen von <xref:System.ServiceModel.Channels.IDuplexSession.CloseOutputSession> Signale an die andere Seite der Sitzung, die sie zurückgeben soll `null` aus alle ausstehenden oder nachfolgende Aufrufe an <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A>. <xref:System.ServiceModel.Channels.IDuplexSession.CloseOutputSession%2A> ist idempotent, d. h., ein erneuter Aufruf hat keine Auswirkungen.  
+  
+ Ein Beenden der ausgehenden Sitzung hat keinen Einfluss auf die eingehende Sitzung. Daher erfolgt keine Anweisung über die Verfügbarkeit des Nachrichtenempfangs auf der zum Eingabekanal gehörenden Sitzung.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see cref="M:System.ServiceModel.Channels.IDuplexSession.CloseOutputSession" /> ist eine Sitzungsmethode, die mit dem <see cref="T:System.ServiceModel.Channels.IDuplexSessionChannel" /> interagieren kann, der die Sitzung besitzt. Dies ist insbesondere der Fall, wenn Ihre Sitzungsdauer zur Kanallebensdauer hinzugefügt wird (wie bei TCP, zuverlässiger Sitzung und Sicherheit):  
+  
+-   Wenn <see cref="M:System.ServiceModel.Channels.IDuplexSession.CloseOutputSession" /> aufgerufen wird, bevor <see cref="M:System.ServiceModel.ICommunicationObject.Close" /> auf dem Kanal aufgerufen wird, sollte <see cref="M:System.ServiceModel.ICommunicationObject.Close" /> warten, bis <see cref="M:System.ServiceModel.Channels.IDuplexSession.CloseOutputSession" /> beendet ist.  
+  
+-   Ist der Kanal im Status <see cref="F:System.ServiceModel.CommunicationState.Created" /> oder <see cref="F:System.ServiceModel.CommunicationState.Opening" /> im Status <see cref="M:System.ServiceModel.Channels.IDuplexSession.CloseOutputSession" />, sollte dieser eine <see cref="T:System.InvalidOperationException" /> auslösen.  
+  
+-   Ist der Kanal im Status <see cref="F:System.ServiceModel.CommunicationState.Faulted" />, sollte <see cref="M:System.ServiceModel.Channels.IDuplexSession.CloseOutputSession" /> eine <see cref="T:System.ServiceModel.CommunicationObjectFaultedException" /> auslösen.  
+  
+-   Der Kanal sollte fehlschlagen, wenn <see cref="M:System.ServiceModel.Channels.IDuplexSession.CloseOutputSession" /> ausgelöst wird.  
+  
+-   Die Implementierung von <see cref="M:System.ServiceModel.ICommunicationObject.Close" /> auf dem Kanal sollte <see cref="M:System.ServiceModel.Channels.IDuplexSession.CloseOutputSession" /> aufrufen und dann bestätigen, dass <see cref="M:System.ServiceModel.Channels.IInputChannel.Receive" /> <see langword="null" /> zurückgibt, wodurch angegeben wird, dass <see cref="M:System.ServiceModel.Channels.IDuplexSession.CloseOutputSession" /> von der anderen Seite der Sitzung aus aufgerufen wurde.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseOutputSession">
+      <MemberSignature Language="C#" Value="public void CloseOutputSession (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CloseOutputSession(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IDuplexSession.CloseOutputSession(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Die <see cref="T:System.TimeSpan" />, die das Zeitintervall angibt, innerhalb dessen der Vorgang abgeschlossen werden muss.</param>
+        <summary>Beendet die ausgehende Sitzung, wobei angegeben wird, dass innerhalb eines angegebenen Zeitintervalls keine weiteren Nachrichten mehr von diesem Endpunkt aus auf dem zur Sitzung gehörenden Kanal versendet werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen von <xref:System.ServiceModel.Channels.IDuplexSession.CloseOutputSession%28System.TimeSpan%29> Signale an die andere Seite der Sitzung, die sie zurückgeben soll `null` aus alle ausstehenden oder nachfolgende Aufrufe an <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A>. <xref:System.ServiceModel.Channels.IDuplexSession.CloseOutputSession%2A> ist idempotent, d. h., ein erneuter Aufruf hat keine Auswirkungen.  
+  
+ Ein Beenden der ausgehenden Sitzung hat keinen Einfluss auf die eingehende Sitzung. Daher erfolgt keine Anweisung über die Verfügbarkeit des Nachrichtenempfangs auf der zum Eingabekanal gehörenden Sitzung.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see cref="M:System.ServiceModel.Channels.IDuplexSession.CloseOutputSession" /> ist eine Sitzungsmethode, die mit dem <see cref="T:System.ServiceModel.Channels.IDuplexSessionChannel" /> interagieren kann, der die Sitzung besitzt. Dies ist insbesondere der Fall, wenn Ihre Sitzungsdauer zur Kanallebensdauer hinzugefügt wird (wie bei TCP, zuverlässiger Sitzung und Sicherheit):  
+  
+-   Wenn <see cref="M:System.ServiceModel.Channels.IDuplexSession.CloseOutputSession" /> aufgerufen wird, bevor <see cref="M:System.ServiceModel.ICommunicationObject.Close" /> auf dem Kanal aufgerufen wird, sollte <see cref="M:System.ServiceModel.ICommunicationObject.Close" /> warten, bis <see cref="M:System.ServiceModel.Channels.IDuplexSession.CloseOutputSession" /> beendet ist.  
+  
+-   Ist der Kanal im Status <see cref="F:System.ServiceModel.CommunicationState.Created" /> oder <see cref="F:System.ServiceModel.CommunicationState.Opening" /> im Status <see cref="M:System.ServiceModel.Channels.IDuplexSession.CloseOutputSession" />, sollte dieser eine <see cref="T:System.InvalidOperationException" /> auslösen.  
+  
+-   Ist der Kanal im Status <see cref="F:System.ServiceModel.CommunicationState.Faulted" />, sollte <see cref="M:System.ServiceModel.Channels.IDuplexSession.CloseOutputSession" /> eine <see cref="T:System.ServiceModel.CommunicationObjectFaultedException" /> auslösen.  
+  
+-   Der Kanal sollte fehlschlagen, wenn <see cref="M:System.ServiceModel.Channels.IDuplexSession.CloseOutputSession" /> ausgelöst wird.  
+  
+-   Die Implementierung von <see cref="M:System.ServiceModel.ICommunicationObject.Close" /> auf dem Kanal sollte <see cref="M:System.ServiceModel.Channels.IDuplexSession.CloseOutputSession" /> aufrufen und dann bestätigen, dass <see cref="M:System.ServiceModel.Channels.IInputChannel.Receive" /> <see langword="null" /> zurückgibt, wodurch angegeben wird, dass <see cref="M:System.ServiceModel.Channels.IDuplexSession.CloseOutputSession" /> von der anderen Seite der Sitzung aus aufgerufen wurde.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="EndCloseOutputSession">
+      <MemberSignature Language="C#" Value="public void EndCloseOutputSession (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndCloseOutputSession(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IDuplexSession.EndCloseOutputSession(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result"><see cref="T:System.IAsyncResult" />, das von einem Aufruf der <see cref="Overload:System.ServiceModel.Channels.IDuplexSession.BeginCloseOutputSession" />-Methoden zurückgegeben wurde.</param>
+        <summary>Schließt einen asynchronen Vorgang ab, der die ausgehende Sitzung beendet, wobei angegeben wird, dass keine weiteren Nachrichten mehr von diesem Endpunkt aus auf dem zur Sitzung gehörenden Kanal versendet werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Beenden der ausgehenden Sitzung hat keinen Einfluss auf die eingehende Sitzung. Daher erfolgt keine Anweisung über die Verfügbarkeit des Nachrichtenempfangs auf der zum Eingabekanal gehörenden Sitzung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

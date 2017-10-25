@@ -1,0 +1,2450 @@
+<Type Name="Message" FullName="System.Messaging.Message">
+  <TypeSignature Language="C#" Value="public class Message : System.ComponentModel.Component" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Message extends System.ComponentModel.Component" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.Message" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Component</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Messaging.Design.MessageDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bietet Zugriff auf die Eigenschaften, die erforderlich sind, definieren eine Message Queuing-Nachricht.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Messaging.Message> Klasse zum Einsehen oder Empfangen von Nachrichten aus einer Warteschlange, oder um die genaue Steuerung von Nachrichteneigenschaften beim Senden einer Nachricht an eine Warteschlange zu haben.  
+  
+ <xref:System.Messaging.MessageQueue>verwendet die <xref:System.Messaging.Message> beim eingesehen oder Nachrichten aus der empfängt Klasse, da sowohl die <xref:System.Messaging.MessageQueue.Peek%2A?displayProperty=nameWithType> und <xref:System.Messaging.MessageQueue.Receive%2A?displayProperty=nameWithType> Methoden erstellen eine neue Instanz der die <xref:System.Messaging.Message> Klasse, und legen Sie die Eigenschaften der Instanz. Die <xref:System.Messaging.Message> Klasse schreibgeschützte Eigenschaften gelten für das Abrufen von Nachrichten aus einer Warteschlange, während die Lese-/Schreibeigenschaften zum Senden und Empfangen von Nachrichten gelten. Wenn <xref:System.Messaging.MessageQueue> einsieht oder aus einer Warteschlange eine Nachricht empfängt die <xref:System.Messaging.MessageQueue.MessageReadPropertyFilter%2A> Eigenschaft bestimmt, welche Eigenschaften für die Nachricht abgerufen werden.  
+  
+ Die <xref:System.Messaging.MessageQueue> Klasse <xref:System.Messaging.MessageQueue.Send%2A> Methode ermöglicht Ihnen die Angabe für einen beliebigen Objekttyp für eine Nachricht an die Warteschlange gesendet wird. Sie können die <xref:System.Messaging.MessageQueue> Instanz <xref:System.Messaging.MessageQueue.DefaultPropertiesToSend%2A> Eigenschaft, um Einstellungen für generische an die Warteschlange gesendeten Nachrichten anzugeben. Die Einstellungen zählen Formatierer, Bezeichnung, Verschlüsselung und Authentifizierung. Sie können auch angeben, die Werte für die entsprechende <xref:System.Messaging.MessageQueue.DefaultPropertiesToSend%2A> Member, wenn Sie Ihre messaging-Anwendung so reagieren Sie auf die Bestätigungs- und Berichtsnachrichten Nachrichten koordinieren. Mithilfe einer <xref:System.Messaging.Message> Instanz zum Senden einer Nachricht an die Warteschlange bietet Ihnen die Flexibilität zum Zugreifen auf und viele dieser Eigenschaften ändern – entweder für eine einzelne Nachricht oder auf Basis von Nachricht. <xref:System.Messaging.Message>Eigenschaften haben Vorrang vor <xref:System.Messaging.MessageQueue.DefaultPropertiesToSend%2A>.  
+  
+ Nachrichtendaten befindet sich in der <xref:System.Messaging.Message.Body%2A> Eigenschaft und in geringerem Maße, die <xref:System.Messaging.Message.AppSpecific%2A> und <xref:System.Messaging.Message.Extension%2A> Eigenschaften. Wenn Nachrichtendaten verschlüsselt, serialisiert oder deserialisiert wird, nur der Inhalt des der <xref:System.Messaging.Message.Body%2A> -Eigenschaft beeinflusst werden.  
+  
+ Den Inhalt der <xref:System.Messaging.Message.Body%2A> Eigenschaft werden serialisiert, wenn die Nachricht gesendet wird, mithilfe der <xref:System.Messaging.Message.Formatter%2A> Eigenschaft, die Sie angeben. Der serialisierte Inhalt befinden sich in der <xref:System.Messaging.Message.BodyStream%2A> Eigenschaft. Sie können auch Festlegen der <xref:System.Messaging.Message.BodyStream%2A> Eigenschaft direkt, z. B. eine Datei als der Dateninhalt einer Nachricht zu senden. Sie können ändern, die <xref:System.Messaging.Message.Body%2A> oder <xref:System.Messaging.Message.Formatter%2A> Eigenschaften zu einem beliebigen Zeitpunkt vor dem Senden der Nachricht, und die Daten werden entsprechend serialisiert werden, wenn Sie aufrufen <xref:System.Messaging.MessageQueue.Send%2A>.  
+  
+ Eigenschaften, definiert durch die <xref:System.Messaging.MessageQueue.DefaultPropertiesToSend%2A?displayProperty=nameWithType> Eigenschaft gelten nur für Nachrichten, die nicht vom Typ <xref:System.Messaging.Message>. Bei Angabe der <xref:System.Messaging.MessageQueue.DefaultPropertiesToSend%2A> -Eigenschaft für eine <xref:System.Messaging.MessageQueue>, der gleichnamigen Eigenschaften eine <xref:System.Messaging.Message> Instanz gesendet, an die Warteschlange diese Standardeigenschaften ignoriert werden soll.  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Messaging.Message>, finden Sie unter der <xref:System.Messaging.Message.%23ctor%2A> Konstruktor.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Formatieren Nachrichtentexts mit <xref:System.Messaging.BinaryMessageFormatter>.  
+  
+ [!code-cpp[MessagingBinaryFormatter#1](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagingBinaryFormatter/CPP/message_binaryformatter.cpp#1)]
+ [!code-csharp[MessagingBinaryFormatter#1](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagingBinaryFormatter/CS/message_binaryformatter.cs#1)]
+ [!code-vb[MessagingBinaryFormatter#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MessagingBinaryFormatter/VB/message_binaryformatter.vb#1)]  
+  
+ Das folgende Codebeispiel veranschaulicht das Formatieren Nachrichtentexts mit <xref:System.Messaging.XmlMessageFormatter>.  
+  
+ [!code-cpp[Message.Body#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Message.Body/CPP/message_sendreceive.cpp#1)]
+ [!code-csharp[Message.Body#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Message.Body/CS/message_sendreceive.cs#1)]
+ [!code-vb[Message.Body#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Message.Body/VB/message_sendreceive.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Message ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.Message.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Messaging.Message" /> Klasse keinen Text.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Überladung, erstellen Sie eine neue Instanz der dem <xref:System.Messaging.Message> Klasse, die keinen Text verfügt.  
+  
+ Geben Sie entweder die <xref:System.Messaging.Message.Body%2A> Eigenschaft oder die <xref:System.Messaging.Message.BodyStream%2A> Eigenschaft vor dem Senden der <xref:System.Messaging.Message> Objekt. Die <xref:System.Messaging.Message.Body%2A> Eigenschaft kann jedes Objekt, das serialisiert werden kann, z. B. eine Zeichenfolge, ein Strukturobjekt, eine Klasseninstanz oder ein eingebettetes Objekt sein.  
+  
+ Es sei denn, Sie direkt an den Inhalt der Nachricht Schreiben der <xref:System.Messaging.Message.BodyStream%2A> Eigenschaftensatz, der <xref:System.Messaging.Message.Formatter%2A> Eigenschaft vor dem Senden der Nachricht. Der Nachrichtentext serialisiert wird, mit der <xref:System.Messaging.Message.Formatter%2A> Eigenschaftswert zum Zeitpunkt der <xref:System.Messaging.MessageQueue.Send%2A> Methode aufgerufen wird die <xref:System.Messaging.MessageQueue> Instanz.  
+  
+ Die <xref:System.Messaging.XmlMessageFormatter> lose verknüpft, daher ist es nicht notwendig, dass das gleiche Objekt, das auf dem Absender und Empfänger geben Sie bei Verwendung dieses Format ist. Die <xref:System.Messaging.ActiveXMessageFormatter> und <xref:System.Messaging.BinaryMessageFormatter> Serialisieren der Daten in eine binäre Darstellung. Die <xref:System.Messaging.ActiveXMessageFormatter> wird beim Senden oder Empfangen von COM-Komponenten verwendet.  
+  
+ In der folgenden Tabelle zeigt die anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Messaging.Message>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Messaging.Message.AcknowledgeType%2A>|`AcknowledgeType.None`|  
+|<xref:System.Messaging.Message.AdministrationQueue%2A>|`null`|  
+|<xref:System.Messaging.Message.AppSpecific%2A>|0|  
+|<xref:System.Messaging.Message.AttachSenderId%2A>|`true`|  
+|<xref:System.Messaging.Message.AuthenticationProviderName%2A>|Microsoft Base Cryptographic Provider Version 1.0|  
+|<xref:System.Messaging.Message.AuthenticationProviderType%2A>|`CryptoProviderType.RSA_FULL`|  
+|<xref:System.Messaging.Message.Body%2A>|`null`|  
+|<xref:System.Messaging.Message.BodyStream%2A>|`Stream.null`|  
+|<xref:System.Messaging.Message.BodyType%2A>|0|  
+|<xref:System.Messaging.Message.ConnectorType%2A>|`Guid.Empty`|  
+|<xref:System.Messaging.Message.CorrelationId%2A>|Eine leere Zeichenfolge ("")|  
+|<xref:System.Messaging.Message.DestinationSymmetricKey%2A>|Ein Bytearray mit der Länge null|  
+|<xref:System.Messaging.Message.DigitalSignature%2A>|Ein Bytearray mit der Länge null|  
+|<xref:System.Messaging.Message.EncryptionAlgorithm%2A>|`EncryptionAlgorithm.RC2`|  
+|<xref:System.Messaging.Message.Extension%2A>|Ein Bytearray mit der Länge null|  
+|<xref:System.Messaging.Message.Formatter%2A>|`XmlMessageFormatter`|  
+|<xref:System.Messaging.Message.HashAlgorithm%2A>|`HashAlgorithm.MD5`|  
+|<xref:System.Messaging.Message.Label%2A>|Eine leere Zeichenfolge ("")|  
+|<xref:System.Messaging.Message.Priority%2A>|`MessagePriority.Normal`|  
+|<xref:System.Messaging.Message.Recoverable%2A>|`false`|  
+|<xref:System.Messaging.Message.ResponseQueue%2A>|`null`|  
+|<xref:System.Messaging.Message.SenderCertificate%2A>|Ein Bytearray mit der Länge null|  
+|<xref:System.Messaging.Message.TimeToBeReceived%2A>|`Message.InfiniteTimeout`|  
+|<xref:System.Messaging.Message.TimeToReachQueue%2A>|`Message.InfiniteTimeout`|  
+|<xref:System.Messaging.Message.TransactionStatusQueue%2A>|`null`|  
+|<xref:System.Messaging.Message.UseAuthentication%2A>|`false`|  
+|<xref:System.Messaging.Message.UseDeadLetterQueue%2A>|`false`|  
+|<xref:System.Messaging.Message.UseEncryption%2A>|`false`|  
+|<xref:System.Messaging.Message.UseJournalQueue%2A>|`false`|  
+|<xref:System.Messaging.Message.UseTracing%2A>|`false`|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird zwei Nachrichten unterschiedliche Prioritäten an die Warteschlange sendet, und sie werden später abgerufen.  
+  
+ [!code-cpp[Message.DefaultPropertiesToSend#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Message.DefaultPropertiesToSend/CPP/message_defaultandpriority.cpp#1)]
+ [!code-csharp[Message.DefaultPropertiesToSend#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Message.DefaultPropertiesToSend/CS/message_defaultandpriority.cs#1)]
+ [!code-vb[Message.DefaultPropertiesToSend#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Message.DefaultPropertiesToSend/VB/message_defaultandpriority.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Message (object body);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.Message.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="body" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="body">Das Objekt, das im Text der Nachricht serialisiert werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Messaging.Message" /> -Klasse unter Verwendung der <see cref="T:System.Messaging.XmlMessageFormatter" /> zum Serialisieren des angegebenen Objekts in den Text der Nachricht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Überladung, erstellen Sie eine neue Instanz der dem <xref:System.Messaging.Message> Klasse enthält die <xref:System.Messaging.Message.Body%2A> gemäß der `body` Parameter. Die `body` Parameter kann jedes Objekt, das serialisiert werden kann, z. B. eine Zeichenfolge, ein Strukturobjekt, eine Klasseninstanz oder ein eingebettetes Objekt sein. Text serialisiert wird, mithilfe der <xref:System.Messaging.XmlMessageFormatter> es sei denn, Sie ändern die <xref:System.Messaging.Message.Formatter%2A> Eigenschaft, bevor die <xref:System.Messaging.Message> gesendet wird. Wenn Sie ändern die <xref:System.Messaging.Message.Body%2A> oder <xref:System.Messaging.Message.Formatter%2A> Eigenschaft zu einem beliebigen Zeitpunkt vor dem Aufruf <xref:System.Messaging.MessageQueue.Send%2A>, die Nachricht wird gemäß der neue Eigenschaftswert serialisiert werden.  
+  
+ Die <xref:System.Messaging.XmlMessageFormatter> lose verknüpft, daher ist es nicht notwendig, dass das gleiche Objekt, das auf dem Absender und Empfänger geben Sie bei Verwendung dieses Format ist. Die <xref:System.Messaging.ActiveXMessageFormatter> und <xref:System.Messaging.BinaryMessageFormatter> Serialisieren der Daten in eine binäre Darstellung. Die <xref:System.Messaging.ActiveXMessageFormatter> wird beim Senden oder Empfangen von COM-Komponenten verwendet.  
+  
+ In der folgenden Tabelle zeigt die anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Messaging.Message>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Messaging.Message.AcknowledgeType%2A>|`AcknowledgeType.None`|  
+|<xref:System.Messaging.Message.AdministrationQueue%2A>|`null`|  
+|<xref:System.Messaging.Message.AppSpecific%2A>|0|  
+|<xref:System.Messaging.Message.AttachSenderId%2A>|`true`|  
+|<xref:System.Messaging.Message.AuthenticationProviderName%2A>|Microsoft Base Cryptographic Provider Version 1.0|  
+|<xref:System.Messaging.Message.AuthenticationProviderType%2A>|`CryptoProviderType.RSA_FULL`|  
+|<xref:System.Messaging.Message.Body%2A>|Die `body` Parameter.|  
+|<xref:System.Messaging.Message.BodyStream%2A>|`Stream.null`|  
+|<xref:System.Messaging.Message.BodyType%2A>|0|  
+|<xref:System.Messaging.Message.ConnectorType%2A>|`Guid.Empty`|  
+|<xref:System.Messaging.Message.CorrelationId%2A>|Eine leere Zeichenfolge ("")|  
+|<xref:System.Messaging.Message.DestinationSymmetricKey%2A>|Ein Bytearray mit der Länge null|  
+|<xref:System.Messaging.Message.DigitalSignature%2A>|Ein Bytearray mit der Länge null|  
+|<xref:System.Messaging.Message.EncryptionAlgorithm%2A>|`EncryptionAlgorithm.RC2`|  
+|<xref:System.Messaging.Message.Extension%2A>|Ein Bytearray mit der Länge null|  
+|<xref:System.Messaging.Message.Formatter%2A>|`XmlMessageFormatter`|  
+|<xref:System.Messaging.Message.HashAlgorithm%2A>|`HashAlgorithm.MD5`|  
+|<xref:System.Messaging.Message.Label%2A>|Eine leere Zeichenfolge ("")|  
+|<xref:System.Messaging.Message.Priority%2A>|`MessagePriority.Normal`|  
+|<xref:System.Messaging.Message.Recoverable%2A>|`false`|  
+|<xref:System.Messaging.Message.ResponseQueue%2A>|`null`|  
+|<xref:System.Messaging.Message.SenderCertificate%2A>|Ein Bytearray mit der Länge null|  
+|<xref:System.Messaging.Message.TimeToBeReceived%2A>|`Message.InfiniteTimeout`|  
+|<xref:System.Messaging.Message.TimeToReachQueue%2A>|`Message.InfiniteTimeout`|  
+|<xref:System.Messaging.Message.TransactionStatusQueue%2A>|`null`|  
+|<xref:System.Messaging.Message.UseAuthentication%2A>|`false`|  
+|<xref:System.Messaging.Message.UseDeadLetterQueue%2A>|`false`|  
+|<xref:System.Messaging.Message.UseEncryption%2A>|`false`|  
+|<xref:System.Messaging.Message.UseJournalQueue%2A>|`false`|  
+|<xref:System.Messaging.Message.UseTracing%2A>|`false`|  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine neue Warteschlange, sendet eine Nachricht, die eine Bestellung, enthält, und klicken Sie dann abgerufen.  
+  
+ [!code-cpp[Message.Body#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Message.Body/CPP/message_sendreceive.cpp#1)]
+ [!code-csharp[Message.Body#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Message.Body/CS/message_sendreceive.cs#1)]
+ [!code-vb[Message.Body#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Message.Body/VB/message_sendreceive.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Message (object body, System.Messaging.IMessageFormatter formatter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object body, class System.Messaging.IMessageFormatter formatter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.Message.#ctor(System.Object,System.Messaging.IMessageFormatter)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="body" Type="System.Object" />
+        <Parameter Name="formatter" Type="System.Messaging.IMessageFormatter" />
+      </Parameters>
+      <Docs>
+        <param name="body">Das Objekt, das im Text der Nachricht serialisiert werden.</param>
+        <param name="formatter">Ein <see cref="T:System.Messaging.IMessageFormatter" /> gibt den Formatierer, mit denen den Nachrichtentext serialisiert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Messaging.Message" /> -Klasse unter Verwendung des angegebenen Formatierers zum Serialisieren des angegebenen Objekts in den Text der Nachricht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Überladung zum Erstellen einer neuen Instanz von der <xref:System.Messaging.Message> Klasse enthält die <xref:System.Messaging.Message.Body%2A> gemäß der `body` und einen zulässigen Formatierer verwendet, um den Text zu serialisieren. Die `body` Parameter ist jedes Objekt, das serialisiert werden kann, z. B. eine Zeichenfolge, ein Strukturobjekt, eine Klasseninstanz oder ein eingebettetes Objekt. Wenn Sie ändern die <xref:System.Messaging.Message.Body%2A> oder <xref:System.Messaging.Message.Formatter%2A> Eigenschaft zu einem beliebigen Zeitpunkt vor dem Aufruf <xref:System.Messaging.MessageQueue.Send%2A>, die Nachricht wird gemäß der neue Eigenschaftswert serialisiert werden.  
+  
+ Die <xref:System.Messaging.XmlMessageFormatter> lose verknüpft, daher ist es nicht notwendig, dass das gleiche Objekt, das auf dem Absender und Empfänger geben Sie bei Verwendung dieses Format ist. Die <xref:System.Messaging.ActiveXMessageFormatter> und <xref:System.Messaging.BinaryMessageFormatter> Serialisieren der Daten in eine binäre Darstellung. Die <xref:System.Messaging.ActiveXMessageFormatter> wird beim Senden oder Empfangen von COM-Komponenten verwendet.  
+  
+ In der folgenden Tabelle zeigt die anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Messaging.Message>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Messaging.Message.AcknowledgeType%2A>|`AcknowledgeType.None`|  
+|<xref:System.Messaging.Message.AdministrationQueue%2A>|`null`|  
+|<xref:System.Messaging.Message.AppSpecific%2A>|0|  
+|<xref:System.Messaging.Message.AttachSenderId%2A>|`true`|  
+|<xref:System.Messaging.Message.AuthenticationProviderName%2A>|Microsoft Base Cryptographic Provider Version 1.0|  
+|<xref:System.Messaging.Message.AuthenticationProviderType%2A>|`CryptoProviderType.RSA_FULL`|  
+|<xref:System.Messaging.Message.Body%2A>|Die `body` Parameter.|  
+|<xref:System.Messaging.Message.BodyStream%2A>|`Stream.null`|  
+|<xref:System.Messaging.Message.BodyType%2A>|0|  
+|<xref:System.Messaging.Message.ConnectorType%2A>|`Guid.Empty`|  
+|<xref:System.Messaging.Message.CorrelationId%2A>|Eine leere Zeichenfolge ("")|  
+|<xref:System.Messaging.Message.DestinationSymmetricKey%2A>|Ein Bytearray mit der Länge null|  
+|<xref:System.Messaging.Message.DigitalSignature%2A>|Ein Bytearray mit der Länge null|  
+|<xref:System.Messaging.Message.EncryptionAlgorithm%2A>|`EncryptionAlgorithm.RC2`|  
+|<xref:System.Messaging.Message.Extension%2A>|Ein Bytearray mit der Länge null|  
+|<xref:System.Messaging.Message.Formatter%2A>|Die `formatter` Parameter.|  
+|<xref:System.Messaging.Message.HashAlgorithm%2A>|`HashAlgorithm.MD5`|  
+|<xref:System.Messaging.Message.Label%2A>|Eine leere Zeichenfolge ("")|  
+|<xref:System.Messaging.Message.Priority%2A>|`MessagePriority.Normal`|  
+|<xref:System.Messaging.Message.Recoverable%2A>|`false`|  
+|<xref:System.Messaging.Message.ResponseQueue%2A>|`null`|  
+|<xref:System.Messaging.Message.SenderCertificate%2A>|Ein Bytearray mit der Länge null|  
+|<xref:System.Messaging.Message.TimeToBeReceived%2A>|`Message.InfiniteTimeout`|  
+|<xref:System.Messaging.Message.TimeToReachQueue%2A>|`Message.InfiniteTimeout`|  
+|<xref:System.Messaging.Message.TransactionStatusQueue%2A>|`null`|  
+|<xref:System.Messaging.Message.UseAuthentication%2A>|`false`|  
+|<xref:System.Messaging.Message.UseDeadLetterQueue%2A>|`false`|  
+|<xref:System.Messaging.Message.UseEncryption%2A>|`false`|  
+|<xref:System.Messaging.Message.UseJournalQueue%2A>|`false`|  
+|<xref:System.Messaging.Message.UseTracing%2A>|`false`|  
+  
+   
+  
+## Examples  
+ [!code-cpp[MessagingBinaryFormatter#1](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagingBinaryFormatter/CPP/message_binaryformatter.cpp#1)]
+ [!code-csharp[MessagingBinaryFormatter#1](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagingBinaryFormatter/CS/message_binaryformatter.cs#1)]
+ [!code-vb[MessagingBinaryFormatter#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MessagingBinaryFormatter/VB/message_binaryformatter.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcknowledgeType">
+      <MemberSignature Language="C#" Value="public System.Messaging.AcknowledgeTypes AcknowledgeType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Messaging.AcknowledgeTypes AcknowledgeType" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.AcknowledgeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgAcknowledgeType")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Messaging.AcknowledgeTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ der Bestätigungsnachricht an die sendende Anwendung zurückgegeben werden.</summary>
+        <value>Eines der <see cref="T:System.Messaging.AcknowledgeTypes" /> Werte, die beide die Typen von Bestätigungsnachrichten darstellen, führt das System in die Verwaltungswarteschlange und die Bedingungen, unter dem Bestätigungen an die sendende Anwendung zurückgegeben werden. Die Standardeinstellung ist <see langword="None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.AcknowledgeType%2A> Eigenschaft gibt den Typ der Bestätigungsnachricht an, die von der sendenden Anwendung angefordert. Legen Sie die <xref:System.Messaging.Message.AcknowledgeType%2A> Eigenschaft vor dem Senden der Nachricht, um Benachrichtigungen zu bestimmten Vorkommen anzufordern – z. B. eine Nachricht die Zielwarteschlange, eine Nachricht abgerufen wird oder ein Timeout, die verhindern, dass einer Nachricht erreicht wurde oder vom abgerufen wird die Zielwarteschlange.  
+  
+ Message Queuing zurück Benachrichtigung durch Senden von Bestätigungsnachrichten an die <xref:System.Messaging.Message.AdministrationQueue%2A> durch die ursprüngliche Nachricht angegebene Eigenschaft. Einer Bestätigungsnachricht <xref:System.Messaging.Message.Acknowledgment%2A> Eigenschaft gibt den Typ der Bestätigung, die es darstellt. Angenommen, eine Bestätigungsnachricht gesendet wurde, da eine Nachricht vor dem Ziel nicht erreicht hatten die <xref:System.Messaging.Message.TimeToReachQueue%2A> Intervall abgelaufen ist, die <xref:System.Messaging.Message.Acknowledgment%2A> -Eigenschaft der Bestätigungsnachricht-Zeilenwert enthält den Wert `ReachQueueTimeout`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel sendet und empfängt eine Nachricht, die eine Bestellung in und aus einer Warteschlange enthält. Eine positive Bestätigung wird ausdrücklich angefordert, wenn die ursprüngliche Nachricht erreicht wurde oder wird aus der Warteschlange abgerufen.  
+  
+ [!code-cpp[Message.Acknowledgment#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Message.Acknowledgment/CPP/message_acknowledgment.cpp#1)]
+ [!code-csharp[Message.Acknowledgment#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Message.Acknowledgment/CS/message_acknowledgment.cs#1)]
+ [!code-vb[Message.Acknowledgment#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Message.Acknowledgment/VB/message_acknowledgment.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachricht wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.AcknowledgeType" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Acknowledgment">
+      <MemberSignature Language="C#" Value="public System.Messaging.Acknowledgment Acknowledgment { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Messaging.Acknowledgment Acknowledgment" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.Acknowledgment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgAcknowledgement")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Acknowledgment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Klassifizierung der Bestätigung, die diese Nachricht darstellt.</summary>
+        <value>Einer der <see cref="T:System.Messaging.Acknowledgment" />-Enumerationswerte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie eine Nachricht von einer Verwaltungswarteschlange erhalten, lesen Sie die <xref:System.Messaging.Message.Acknowledgment%2A> Eigenschaft, um den Status der ursprünglichen Nachricht zu überprüfen.  
+  
+ Wenn eine Nachricht an die Zielwarteschlange gesendet wird, kann Message Queuing angefordert werden, um eine Bestätigungsnachricht. Eine solche Nachricht kann, z. B. angeben, ob die Nachricht angekommen ist und innerhalb der angegebenen Timeouts abgerufen wurde, oder es darauf hinweisen kann, im Fall von Zustellungsfehler Einzelheiten. Die Zielwarteschlange gibt Bestätigung Nachrichten und sendet diese an die Verwaltungswarteschlange, die in der ursprünglichen Nachricht angegebene <xref:System.Messaging.Message.AdministrationQueue%2A> Eigenschaft. Die <xref:System.Messaging.Message.Id%2A> Eigenschaft eine Bestätigungsnachricht identifiziert die Bestätigungsnachricht, nicht die ursprüngliche Nachricht. Den Bezeichner der ursprünglichen Nachricht finden Sie in der Bestätigung <xref:System.Messaging.Message> Instanz <xref:System.Messaging.Message.CorrelationId%2A> Eigenschaft.  
+  
+ Wenn diese <xref:System.Messaging.Message> Instanz steht eine Bestätigungsnachricht, die <xref:System.Messaging.Message.Acknowledgment%2A> Eigenschaft gibt den Typ der Bestätigung. Andernfalls die <xref:System.Messaging.Message.Acknowledgment%2A> -Eigenschaft enthält den Wert `Normal`.  
+  
+ Verwenden der <xref:System.Messaging.Message.AcknowledgeType%2A> -Eigenschaft der ursprünglichen Nachricht an die Umstände, unter denen Bestätigungen zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachricht wurde nicht versandt. Diese Eigenschaft kann nur für Nachrichten, die aus einer Warteschlange abgerufen gelesen werden.  
+  
+ - oder -   
+  
+ Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.MessagePropertyFilter.Acknowledgment" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AdministrationQueue">
+      <MemberSignature Language="C#" Value="public System.Messaging.MessageQueue AdministrationQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Messaging.MessageQueue AdministrationQueue" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.AdministrationQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgAdministrationQueue")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Warteschlange, die Bestätigungsnachrichten empfängt, die Message Queuing generiert.</summary>
+        <value>Die <see cref="T:System.Messaging.MessageQueue" /> , die gibt der Verwaltungswarteschlange für die vom System generierte Bestätigungsnachrichten verwendet. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Warteschlange die <xref:System.Messaging.Message.AdministrationQueue%2A> Eigenschaft kann eine nicht transaktionale Warteschlange gesendet werden. In den an die Verwaltungswarteschlange gesendeten Bestätigungsnachrichten kann angezeigt werden, ob die ursprüngliche Nachricht ihre Zielwarteschlange erreicht hat und aus der Warteschlange entfernt wurde.  
+  
+ Wenn die <xref:System.Messaging.Message.AcknowledgeType%2A> Eigenschaft verfügt über einen beliebigen Wert außer `None`, die sendende Anwendung muss die Warteschlange angeben, die als die Verwaltungswarteschlange verwendet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel sendet und empfängt eine Nachricht, die eine Bestellung in und aus einer Warteschlange enthält. Eine positive Bestätigung wird ausdrücklich angefordert, wenn die ursprüngliche Nachricht erreicht wurde oder wird aus der Warteschlange abgerufen.  
+  
+ [!code-cpp[Message.Acknowledgment#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Message.Acknowledgment/CPP/message_acknowledgment.cpp#1)]
+ [!code-csharp[Message.Acknowledgment#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Message.Acknowledgment/CS/message_acknowledgment.cs#1)]
+ [!code-vb[Message.Acknowledgment#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Message.Acknowledgment/VB/message_acknowledgment.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.AdministrationQueue" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AppSpecific">
+      <MemberSignature Language="C#" Value="public int AppSpecific { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AppSpecific" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.AppSpecific" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgAppSpecific")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt zusätzliche, anwendungsspezifische Informationen.</summary>
+        <value>Informationen, die für die Anwendung spezifisch sind. Der Standardwert ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.AppSpecific%2A> Eigenschaft enthält anwendungsspezifische Informationen, die Sie verwenden können, um verschiedene Typen von Nachrichten zu organisieren. So können beispielsweise anwendungsspezifische Indizes verwendet werden. Es ist Aufgabe der Anwendung interpretiert <xref:System.Messaging.Message.AppSpecific%2A> Eigenschaftsinformationen.  
+  
+ Nach Möglichkeit sollten Sie die Nachrichtendaten einschließen, im Text der Nachricht statt über das <xref:System.Messaging.Message.AppSpecific%2A> Eigenschaft.  
+  
+ Verwenden Sie bei der Arbeit mit fremden Warteschlangen die <xref:System.Messaging.Message.Extension%2A> Eigenschaft angeben, Message Queuing-Nachrichteneigenschaften, die nicht vorhanden sind. Wie bei der <xref:System.Messaging.Message.AppSpecific%2A> -Eigenschaft, es liegt in der Verantwortung der Anwendung zu verstehen, den Inhalt der <xref:System.Messaging.Message.Extension%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.AppSpecific" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrivedTime">
+      <MemberSignature Language="C#" Value="public DateTime ArrivedTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime ArrivedTime" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.ArrivedTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgArrivedTime")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeit ab, der die Nachricht in der Zielwarteschlange eingetroffen sind.</summary>
+        <value>Ein <see cref="T:System.DateTime" /> , Ankunftszeit in der Zielwarteschlange der Nachricht darstellt. Die Zeit ist GMT in der lokalen Zeit des Computers angepasst, auf dem sich die Zielwarteschlange befindet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Nachricht <xref:System.Messaging.Message.TimeToBeReceived%2A> Eigenschaft gibt an, wie schnell die Nachricht aus der Zielwarteschlange empfangen werden muss. Die <xref:System.Messaging.Message.TimeToBeReceived%2A> Eigenschaft beginnen, wenn die Nachricht gesendet wird, nicht verwendet werden, wenn die Nachricht in der Warteschlange eintrifft.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt den Wert einer Nachricht <xref:System.Messaging.Message.ArrivedTime%2A> Eigenschaft.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachricht wurde nicht versandt. Diese Eigenschaft kann nur für Nachrichten, die aus einer Warteschlange abgerufen gelesen werden.  
+  
+ - oder -   
+  
+ Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.ArrivedTime" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AttachSenderId">
+      <MemberSignature Language="C#" Value="public bool AttachSenderId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AttachSenderId" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.AttachSenderId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgAttachSenderId")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Absender-ID der Nachricht angefügt werden soll.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="P:System.Messaging.Message.SenderId" /> muss an die Nachricht angefügt ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.SenderId%2A> Eigenschaft ist ein Array von Bytes, die den Bezeichner des sendenden Benutzers darstellt. Die Absender-ID wird vom Message Queuing festgelegt und wird von den empfangenden Warteschlangen-Manager um zu überprüfen, ob der Absender über die Zugriffsrechte für eine Warteschlange wurde verwendet.  
+  
+ Das Fehlen des Absenders ID eine Angabe über das von der sendenden Anwendung liegt darin, dass nicht den Absender der Nachricht zu überprüfen oder des Zugriffs auf den Absender überprüfen sollte Message Queuing-Rechte für die Zielwarteschlange. Die <xref:System.Messaging.Message.SenderId%2A> vertrauenswürdig nur, wenn die Nachricht authentifiziert wurde, wenn sie die Zielwarteschlange erreicht ist. Die Nachricht wird abgelehnt, wenn sie die Zielwarteschlange erreicht, wenn die Warteschlange nur authentifizierte Nachrichten und entweder akzeptiert die <xref:System.Messaging.DefaultPropertiesToSend.UseAuthentication%2A> oder <xref:System.Messaging.DefaultPropertiesToSend.AttachSenderId%2A> Eigenschaft ist `false`.  
+  
+> [!CAUTION]
+>  Wenn eine Nachricht abgelehnt wird, wird entweder an die Dead Letter-Warteschlange gesendet (Wenn <xref:System.Messaging.Message.UseDeadLetterQueue%2A> ist `true`), oder sie wird ignoriert. Wenn eine Nachricht ein Fehler auftritt, um eine Warteschlange zu erreichen, können Sie Bestätigungen anfordern. Andernfalls gilt bei <xref:System.Messaging.Message.UseDeadLetterQueue%2A> ist `false` möglich, dass die Nachricht ohne Warnung verloren.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird ermittelt und definiert den Wert einer Nachricht <xref:System.Messaging.Message.AttachSenderId%2A> Eigenschaft.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.AttachSenderId" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Authenticated">
+      <MemberSignature Language="C#" Value="public bool Authenticated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Authenticated" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.Authenticated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgAuthenticated")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Nachricht authentifiziert wurde.</summary>
+        <value>
+          <see langword="true" />Wenn die Authentifizierung für die Nachricht angefordert wurde, wenn er die Warteschlange eingegeben andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.Authenticated%2A> Eigenschaft wird nur von der Anwendung verwendet, während die Interaktion mit der Nachricht, und versuchen, um festzustellen, ob eine Authentifizierung angefordert wurde. Wenn die Nachricht in der Warteschlange befindet, wurde die Nachricht authentifiziert. Umgekehrt, wenn die <xref:System.Messaging.Message.Authenticated%2A> Eigenschaft `true`, empfangenden Warteschlangen-Manager die Nachricht authentifiziert, wenn sie diese Nachricht empfangen.  
+  
+ Sie können nicht feststellen, ob eine Nachricht Fehler bei der Authentifizierung durch einen Blick auf ihre Eigenschaften. Message Queuing verwirft Nachrichten, die Authentifizierung fehl, bevor sie an die Warteschlange übermittelt werden. Allerdings können Sie anfordern, dass eine Bestätigungsnachricht gesendet werden, wenn ein Zustellungsfehler verhindert, dass die Nachricht in die Warteschlange eingeht.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt den Wert einer Nachricht <xref:System.Messaging.Message.Authenticated%2A> Eigenschaft.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachricht wurde nicht versandt. Diese Eigenschaft kann nur für Nachrichten, die aus einer Warteschlange abgerufen gelesen werden.  
+  
+ - oder -   
+  
+ Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.Authenticated" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationProviderName">
+      <MemberSignature Language="C#" Value="public string AuthenticationProviderName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AuthenticationProviderName" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.AuthenticationProviderName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgAuthenticationProviderName")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Kryptografieanbieters verwendet, um die digitale Signatur der Nachricht zu generieren.</summary>
+        <value>Der Name des Kryptografieanbieters verwendet, um die digitale Signatur der Nachricht zu generieren. Der Standardwert ist Microsoft Base Cryptographic Provider Version 1.0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel die <xref:System.Messaging.Message.AuthenticationProviderName%2A> bei der Arbeit mit fremden Warteschlangen. Message Queuing erfordert die Authentifizierung Anbietername und die Authentifizierungsanbietertyp des Kryptografieanbieters (Authentifizierungsanbieter) zum Überprüfen der digitalen Signaturen der an eine fremde Warteschlange gesendeten Nachrichten und Nachrichten an die Nachricht übergeben Queuing aus einer fremden Warteschlange.  
+  
+ Legen Sie beim Senden einer Nachricht immer die <xref:System.Messaging.Message.AuthenticationProviderName%2A> und <xref:System.Messaging.Message.ConnectorType%2A> Eigenschaften zusammen. Wenn die Nachricht gesendet wird, ignoriert Message Queuing-der Name des Authentifizierungsanbieters, wenn der Connectortyp nicht festgelegt wurde.  
+  
+ Die <xref:System.Messaging.Message.AuthenticationProviderName%2A> Eigenschaft darf nicht sein `null`, aber es kann eine leere Zeichenfolge ("").  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Messaging.Message.AuthenticationProviderName" /> Eigenschaft konnte nicht festgelegt werden.  
+  
+ - oder -   
+  
+ Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.AuthenticationProviderName" /> Eigenschaft.</exception>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.Messaging.Message.AuthenticationProviderName" /> wurde <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationProviderType">
+      <MemberSignature Language="C#" Value="public System.Messaging.CryptographicProviderType AuthenticationProviderType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Messaging.CryptographicProviderType AuthenticationProviderType" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.AuthenticationProviderType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgAuthenticationProviderType")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Messaging.CryptographicProviderType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ des Kryptografieanbieters, die zum Generieren der digitalen Signatur der Nachricht fest.</summary>
+        <value>Einer der <see cref="T:System.Messaging.CryptographicProviderType" />-Werte. Die Standardeinstellung ist <see langword="RSA_FULL" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel die <xref:System.Messaging.Message.AuthenticationProviderType%2A> Eigenschaft bei der Arbeit mit fremden Warteschlangen an, welcher Kryptografiedienstanbieters Nachricht zugeordnet ist. Message Queuing erfordert die Authentifizierung Anbietername und die Authentifizierungsanbietertyp des Kryptografieanbieters (Authentifizierungsanbieter) zum Überprüfen der digitalen Signaturen der an eine fremde Warteschlange gesendeten Nachrichten und Nachrichten an die Nachricht übergeben Queuing aus einer fremden Warteschlange.  
+  
+ Nur `RsaFull` mit messaging verwendet werden soll.  
+  
+ Legen Sie beim Senden einer Nachricht immer die <xref:System.Messaging.Message.AuthenticationProviderType%2A> und <xref:System.Messaging.Message.ConnectorType%2A> Eigenschaften zusammen. Wenn die Nachricht gesendet wird, ignoriert Message Queuing den Authentifizierungstyp für Anbieter, wenn der Connectortyp nicht festgelegt wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Messaging.Message.AuthenticationProviderType" /> Eigenschaft konnte nicht festgelegt werden.  
+  
+ - oder -   
+  
+ Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.AuthenticationProviderType" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Body">
+      <MemberSignature Language="C#" Value="public object Body { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Body" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.Body" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Inhalt der Nachricht ab oder legt diesen fest.</summary>
+        <value>Ein Objekt, das den Nachrichteninhalt angibt. Das Objekt kann eine Zeichenfolge, ein Datum, Währung, eine Zahl, ein Array von Bytes oder ein verwaltetes Objekt sein.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Nachricht <xref:System.Messaging.Message.Body%2A> Eigenschaft enthält in der Regel die Daten, die der Nachricht zugeordnet. Obwohl anwendungsspezifische Daten werden, in gesendet können der <xref:System.Messaging.Message.AppSpecific%2A> und <xref:System.Messaging.Message.Extension%2A> Eigenschaften, sollten Sie Nachrichtendaten in gehören die <xref:System.Messaging.Message.Body%2A> der Nachricht nach Möglichkeit. Nur die <xref:System.Messaging.Message.Body%2A> Inhalt-Eigenschaft serialisiert oder verschlüsselt sind.  
+  
+ Die <xref:System.Messaging.Message.Body%2A> Eigenschaft kann ein Objekt, dessen Größe 4 MB maximal, enthalten. Bei Verwendung von <xref:System.Messaging.MessageQueue.Send%2A?displayProperty=nameWithType> jedes Objekt zu senden, die nicht vom Typ ist <xref:System.Messaging.Message> auf die <xref:System.Messaging.MessageQueue>, dieses Objekt befinden sich der <xref:System.Messaging.Message.Body%2A> Eigenschaft von der <xref:System.Messaging.Message> zurückgegebene Instanz <xref:System.Messaging.MessageQueue.Peek%2A> oder <xref:System.Messaging.MessageQueue.Receive%2A>.  
+  
+ Das Zeichenfolgenargument in `MessageQueue.Send("hello.")` ist ein Beispiel für solches generisches Objekt.  
+  
+ Die <xref:System.Messaging.Message.BodyType%2A> Eigenschaft gibt den Typ der Informationen, die im Nachrichtentext gespeichert ist. Message Queuing verwendet diese Informationen der Identifizierung der <xref:System.Messaging.Message.Body%2A> Inhalt-Eigenschaft.  
+  
+ Geben Sie entweder die <xref:System.Messaging.Message.Body%2A> Eigenschaft oder die <xref:System.Messaging.Message.BodyStream%2A> Eigenschaft vor dem Senden der <xref:System.Messaging.Message> Objekt. Die <xref:System.Messaging.Message.Body%2A> Eigenschaft kann sein, alle serialisierbaren Objekts, z. B. eine Textzeichenfolge, Strukturobjekt, Klasseninstanz oder eingebettetes Objekt.  
+  
+ Es sei denn, Sie direkt an den Inhalt der Nachricht Schreiben der <xref:System.Messaging.Message.BodyStream%2A> Eigenschaftensatz, der <xref:System.Messaging.Message.Formatter%2A> Eigenschaft vor dem Senden der Nachricht. Wenn die <xref:System.Messaging.MessageQueue.Send%2A> Methode aufgerufen wird die <xref:System.Messaging.MessageQueue> Instanz den Text mithilfe der in enthaltenen Formatierers serialisiert wird die <xref:System.Messaging.Message.Formatter%2A> Eigenschaft. Wenn die Nachricht zu senden, ohne Angabe eines Werts für die <xref:System.Messaging.Message.Formatter%2A> -Eigenschaft, wird der Standardformatierer <xref:System.Messaging.XmlMessageFormatter>.  
+  
+> [!NOTE]
+>  Beim Festlegen der Text einer Nachricht in <xref:System.Decimal.MaxValue> führt dazu, dass eine <xref:System.OverflowException> beim der `Send` Methode der <xref:System.Messaging.MessageQueue> -Klasse aufgerufen wird und die <xref:System.Messaging.ActiveXMessageFormatter> verwendet wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird zwei Nachrichten unterschiedliche Prioritäten an die Warteschlange sendet, und sie werden später abgerufen.  
+  
+ [!code-cpp[Message.DefaultPropertiesToSend#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Message.DefaultPropertiesToSend/CPP/message_defaultandpriority.cpp#1)]
+ [!code-csharp[Message.DefaultPropertiesToSend#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Message.DefaultPropertiesToSend/CS/message_defaultandpriority.cs#1)]
+ [!code-vb[Message.DefaultPropertiesToSend#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Message.DefaultPropertiesToSend/VB/message_defaultandpriority.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Messaging.Message.Formatter" />-Eigenschaft ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.Body" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BodyStream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream BodyStream { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Stream BodyStream" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.BodyStream" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.ComponentModel.Design.BinaryEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgBodyStream")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Informationen im Text der Nachricht.</summary>
+        <value>Ein <see cref="T:System.IO.Stream" /> , die in den serialisierten Informationen enthält die <see cref="P:System.Messaging.Message.Body" /> der Nachricht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Text einer Nachricht kann einen beliebigen Typ von Informationen bestehen – z. B. eine Zeichenfolge, ein Datum, Währung, eine Zahl, ein Array von Bytes oder ein verwaltetes Objekt. Diese Informationen serialisiert eine <xref:System.IO.Stream> an die Warteschlange übergeben werden.  
+  
+ Geben Sie entweder die <xref:System.Messaging.Message.Body%2A> Eigenschaft oder die <xref:System.Messaging.Message.BodyStream%2A> Eigenschaft vor dem Senden der <xref:System.Messaging.Message> Objekt. Wenn Sie festlegen, die <xref:System.Messaging.Message.Body%2A> -Eigenschaft, die Inhalte werden serialisiert, in der <xref:System.Messaging.Message.BodyStream%2A> Eigenschaft. Sie können jedoch auswählen, zum Schreiben der <xref:System.Messaging.Message.BodyStream%2A> -Eigenschaft direkt. Dies empfiehlt sich beispielsweise, wenn Sie eine Verbindung mit einer Datei zu öffnen und seinen Inhalt als Text der Nachricht zu streamen möchten.  
+  
+ Es sei denn, Sie direkt an den Inhalt der Nachricht Schreiben der <xref:System.Messaging.Message.BodyStream%2A> Eigenschaftensatz, der <xref:System.Messaging.Message.Formatter%2A> Eigenschaft vor dem Senden der Nachricht. Wenn die <xref:System.Messaging.MessageQueue.Send%2A> Methode aufgerufen wird die <xref:System.Messaging.MessageQueue> Instanz den Text mithilfe der in enthaltenen Formatierers serialisiert wird die <xref:System.Messaging.Message.Formatter%2A> Eigenschaft. Wenn die Nachricht zu senden, ohne Angabe eines Werts für die <xref:System.Messaging.Message.Formatter%2A> -Eigenschaft, wird der Standardformatierer <xref:System.Messaging.XmlMessageFormatter>.  
+  
+ Wenn Sie festlegen, die <xref:System.Messaging.Message.UseEncryption%2A> Eigenschaft `true` für den Text dieser Meldung, die Nachricht verschlüsselt wird, wenn sie gesendet wird, nicht verwendet werden, wenn Sie festlegen, die <xref:System.Messaging.Message.Body%2A> Eigenschaft. Aus diesem Grund die <xref:System.Messaging.Message.BodyStream%2A> Eigenschaft niemals verschlüsselt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.Body" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BodyType">
+      <MemberSignature Language="C#" Value="public int BodyType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BodyType" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.BodyType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgBodyType")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ der im Nachrichtenkörper enthaltenen Daten ab oder legt diesen fest.</summary>
+        <value>Der Nachrichtentext "true" Typ, z. B. eine Zeichenfolge, ein Datum, Währung oder eine Zahl.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Message Queuing erkennt der Textinhalt als Objekt oder als serialisierten Stream. Die <xref:System.Messaging.Message.BodyType%2A> Eigenschaft gibt den Typ des Objekts innerhalb der <xref:System.Messaging.Message.Body%2A> -Eigenschaft der Nachricht.  
+  
+ Die <xref:System.Messaging.XmlMessageFormatter> führt eine Bindung zwischen systemeigenen Typen und das Objekt in einem Nachrichtentext. Bei Verwendung der <xref:System.Messaging.XmlMessageFormatter>, das Formatierungsprogramm legt die <xref:System.Messaging.Message.BodyType%2A> -Eigenschaft für Sie.  
+  
+ Andere Formatierungsprogramme bieten Bindungsfunktionalität auch, wie im folgenden C#-Code dargestellt.  
+  
+```  
+message.Formatter = new ActiveXMessageFormatter();  
+object myObject message.Body;  
+if (myObject is string) {  
+}  
+if (myObject is int) {  
+}  
+if (myObject is float) {  
+}  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt den Wert einer Nachricht <xref:System.Messaging.Message.BodyType%2A> Eigenschaft.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.Body" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectorType">
+      <MemberSignature Language="C#" Value="public Guid ConnectorType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid ConnectorType" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.ConnectorType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgConnectorType")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob einige Nachrichteneigenschaften, die von Message Queuing in der Regel legen Sie von der sendenden Anwendung festgelegt wurden.</summary>
+        <value>Ein <see cref="T:System.Guid" /> von der Anwendung definiert und in Verbindung mit Connectoranwendungen oder die nachrichtenverschlüsselung verwendet. Dies <see cref="T:System.Guid" /> ermöglicht eine empfangende Anwendung zum Interpretieren von Nachrichteneigenschaften, die von der sendenden Anwendung festgelegt wurden, aber, die in der Regel von Message Queuing festgelegt werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Message Queuing erfordert die <xref:System.Messaging.Message.ConnectorType%2A> -Eigenschaft festgelegt werden, wenn eine Anwendung eine Nachrichteneigenschaft festlegt, die von Message Queuing in der Regel festgelegt ist. Eine Anwendung in der Regel verwendet eine <xref:System.Messaging.Message.ConnectorType%2A> in den folgenden zwei Fällen:  
+  
+-   Bei jedem übergibt eine Connectoranwendung eine Meldung an. Die <xref:System.Messaging.Message.ConnectorType%2A> teilt den sendenden und empfangenden Anwendungen wie die Sicherheit und die Bestätigung der Nachricht zu interpretieren.  
+  
+-   Bei jedem verschlüsselt die sendende Anwendung, anstelle von Message Queuing eine Nachricht. Die <xref:System.Messaging.Message.ConnectorType%2A> teilt Message Queuing verwendet den <xref:System.Messaging.Message.DestinationSymmetricKey%2A> Eigenschaftswert zum Entschlüsseln der Nachricht.  
+  
+ Sie müssen festlegen, die <xref:System.Messaging.Message.ConnectorType%2A> Eigenschaft, wenn Sie die folgenden Eigenschaften festlegen (andernfalls werden diese Eigenschaften beim Senden der Nachricht von die Warteschlange ignoriert):  
+  
+-   <xref:System.Messaging.Message.AuthenticationProviderName%2A>  
+  
+-   <xref:System.Messaging.Message.AuthenticationProviderType%2A>  
+  
+-   <xref:System.Messaging.Message.DestinationSymmetricKey%2A>  
+  
+-   <xref:System.Messaging.Message.DigitalSignature%2A>  
+  
+-   <xref:System.Messaging.Message.MessageType%2A>  
+  
+-   <xref:System.Messaging.Message.SenderId%2A>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.ConnectorType" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CorrelationId">
+      <MemberSignature Language="C#" Value="public string CorrelationId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CorrelationId" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.CorrelationId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgCorrelationId")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die in Bestätigungs-, Berichts- und Antwortnachrichten für den Verweis auf die ursprüngliche Nachricht verwendete Nachrichten-ID ab oder legt diese fest.</summary>
+        <value>Die Nachrichten-ID, die gemäß der <see cref="P:System.Messaging.Message.Id" /> -Eigenschaft der ursprünglichen Nachricht. Die Korrelations-ID wird von Message Queuing, wenn es eine Bestätigungs- oder berichtsnachricht generiert, und von einer Anwendung verwendet, wenn er eine Antwortnachricht generiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Message Queuing eine Bestätigungs- oder berichtsnachricht generiert, verwendet er die Korrelations-ID-Eigenschaft, um die Nachrichten-ID der ursprünglichen Nachricht anzugeben. Auf diese Weise bindet die Korrelations-ID die Berichts- oder Bestätigungsnachricht an die ursprüngliche Nachricht.  
+  
+ Die sendende Anwendung kann dann die Bestätigung oder den Bericht mit der ursprünglichen Nachricht mit entsprechen den <xref:System.Messaging.Message.CorrelationId%2A> Eigenschaft, um der ursprünglichen Nachricht identifizieren <xref:System.Messaging.Message.Id%2A> Eigenschaft.  
+  
+ Connectoranwendungen müssen Festlegen der <xref:System.Messaging.Message.CorrelationId%2A> Eigenschaft der Bestätigungs- und Berichtsnachrichten Nachrichten, die die Nachrichten-ID der ursprünglichen Nachricht.  
+  
+ Wenn Ihre Anwendung eine Antwortnachricht an die sendende Anwendung sendet, können Sie festlegen der <xref:System.Messaging.Message.CorrelationId%2A> -Eigenschaft der Antwortnachricht an die Nachrichten-ID der ursprünglichen Nachricht. Die sendende Anwendung kann dann die Antwortnachricht an die Nachricht überein, die gesendet wurde.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel sendet und empfängt eine Nachricht, die eine Bestellung in und aus einer Warteschlange enthält. Eine positive Bestätigung wird ausdrücklich angefordert, wenn die ursprüngliche Nachricht erreicht wurde oder wird aus der Warteschlange abgerufen.  
+  
+ [!code-cpp[Message.Acknowledgment#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Message.Acknowledgment/CPP/message_acknowledgment.cpp#1)]
+ [!code-csharp[Message.Acknowledgment#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Message.Acknowledgment/CS/message_acknowledgment.cs#1)]
+ [!code-vb[Message.Acknowledgment#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Message.Acknowledgment/VB/message_acknowledgment.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.CorrelationId" /> Eigenschaft.</exception>
+        <exception cref="T:System.ArgumentException"><see cref="P:System.Messaging.Message.CorrelationId" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationQueue">
+      <MemberSignature Language="C#" Value="public System.Messaging.MessageQueue DestinationQueue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Messaging.MessageQueue DestinationQueue" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.DestinationQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgDestinationQueue")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die angegebene Zielwarteschlange für eine Nachricht an.</summary>
+        <value>Ein <see cref="T:System.Messaging.MessageQueue" /> , der die angegebene Zielwarteschlange der Nachricht angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.DestinationQueue%2A> Eigenschaft wird am häufigsten verwendet, um das ursprüngliche Ziel eine Nachricht zu ermitteln, die in einer Journalwarteschlange oder Dead Letter-Warteschlange empfangen. In der Regel müssen nicht Sie diese Eigenschaft zu überprüfen, da Sie in der Regel die Nachricht aus der Zielwarteschlange abgerufen werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt den Wert einer Nachricht <xref:System.Messaging.Message.DestinationQueue%2A> Eigenschaft.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachricht wurde nicht versandt. Diese Eigenschaft kann nur für Nachrichten, die aus einer Warteschlange abgerufen gelesen werden.  
+  
+ - oder -   
+  
+ Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.DestinationQueue" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationSymmetricKey">
+      <MemberSignature Language="C#" Value="public byte[] DestinationSymmetricKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] DestinationSymmetricKey" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.DestinationSymmetricKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgDestinationSymmetricKey")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt sie fest, der symmetrische Schlüssel zum Verschlüsseln von Nachrichten Anwendung verschlüsselt oder Nachrichten, die auf foreign Warteschlangen gesendet.</summary>
+        <value>Ein Array von Bytewerten, das Ziel symmetrischen Schlüssel zum Verschlüsseln der Nachricht angibt. Der Standardwert ist ein Array der Länge 0 (null).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zwei Szenarien müssen Sie verwenden die <xref:System.Messaging.Message.DestinationSymmetricKey%2A> Eigenschaft. Das erste ist, wenn Ihre Anwendung, anstatt Message Queuing eine Nachricht verschlüsselt. Das zweite ist beim Senden einer verschlüsselten Nachricht an eine queuing-System als Message Queuing.  
+  
+ Bevor Sie diese Eigenschaft festlegen, müssen Sie den symmetrischen Schlüssel mit dem öffentlichen Schlüssel des empfangenden Warteschlangen-Manager verschlüsseln. Wenn Sie eine Anwendung verschlüsselte Nachricht senden, verwendet der empfangende Warteschlangenmanager den symmetrischen Schlüssel zum Entschlüsseln der Nachricht vor dem Senden an die Zielwarteschlange an.  
+  
+ Wenn Sie eine Nachricht an eine fremde Warteschlange senden, wird von der entsprechenden Connector-Anwendung, die verschlüsselte Nachricht mit dem angefügten symmetrischen Schlüssel an die empfangende Anwendung weitergeleitet, zuerst die Nachricht empfangen. Es ist dann die Zuständigkeit für die empfangende Anwendung zum Entschlüsseln der Nachricht mit dem symmetrischen Schlüssel.  
+  
+ Beim Festlegen der <xref:System.Messaging.Message.DestinationSymmetricKey%2A> -Eigenschaft, müssen Sie auch Festlegen der <xref:System.Messaging.Message.ConnectorType%2A> Eigenschaft. Wenn die Nachricht gesendet wird, Message Queuing ignoriert den <xref:System.Messaging.Message.DestinationSymmetricKey%2A> Eigenschaft Wenn die <xref:System.Messaging.Message.ConnectorType%2A> Eigenschaft nicht festgelegt.  
+  
+ Die <xref:System.Messaging.Message.DestinationSymmetricKey%2A> Eigenschaft hat eine maximale Größe des Arrays 256.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.DestinationSymmetricKey" /> Eigenschaft.</exception>
+        <exception cref="T:System.ArgumentException"><see cref="P:System.Messaging.Message.DestinationSymmetricKey" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DigitalSignature">
+      <MemberSignature Language="C#" Value="public byte[] DigitalSignature { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] DigitalSignature" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.DigitalSignature" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgDigitalSignature")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die digitale Signatur, die Message Queuing zum Authentifizieren der Nachrichteninhalts verwendet.</summary>
+        <value>Ein Array von Bytewerten, Message Queuing 1.0-Signatur, die zum Authentifizieren der Nachrichteninhalts angibt. Der Standardwert ist ein Array der Länge 0 (null).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Message Queuing verwendet die digitale Signatur beim Authentifizieren von Nachrichten, die von Message Queuing, Version 1.0 gesendet wurden. In den meisten Fällen generiert Message Queuing und legt die <xref:System.Messaging.Message.DigitalSignature%2A> Eigenschaft, wenn die sendende Anwendung eine Authentifizierung anfordert. Die empfangende Anwendung verwendet diese Eigenschaft, um die digitale Signatur der Nachricht abzurufen.  
+  
+ Sie können nur die <xref:System.Messaging.Message.DigitalSignature%2A> Eigenschaft, wenn Message Queuing, Version 2.0 ausgeführt. Wenn Authentifizierung anfordert, muss die sendende Anwendung Signaturen für Message Queuing-Version 1.0 angeben. Wenn eine Signatur für Message Queuing-Version 2.0 von die sendende Anwendung gesendet wird, enthält diese Eigenschaft einen Puffer von vier Bytes, die mit dem Wert 0.  
+  
+ Die <xref:System.Messaging.Message.DigitalSignature%2A> Eigenschaft zusammen mit der <xref:System.Messaging.Message.SenderCertificate%2A> -Eigenschaft, wird auch vom Connectoranwendungen verwendet, wenn eine Nachricht gesendet wird. In diesem Szenario wird die Connector-Anwendung – anstatt Message Queuing – generiert die digitale Signatur, die sie auf das Zertifikat des Benutzers senden der Nachricht beruht.  
+  
+ Die <xref:System.Messaging.Message.DigitalSignature%2A> Eigenschaft hat eine maximale Größe des Arrays 256.  
+  
+ Beim Festlegen der <xref:System.Messaging.Message.DigitalSignature%2A> -Eigenschaft, müssen Sie auch Festlegen der <xref:System.Messaging.Message.ConnectorType%2A> Eigenschaft. Wenn eine Nachricht gesendet wird, Message Queuing ignoriert den <xref:System.Messaging.Message.DigitalSignature%2A> Eigenschaft Wenn die <xref:System.Messaging.Message.ConnectorType%2A> Eigenschaft nicht festgelegt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.DigitalSignature" /> Eigenschaft.</exception>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.Messaging.Message.DigitalSignature" />-Eigenschaft ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptionAlgorithm">
+      <MemberSignature Language="C#" Value="public System.Messaging.EncryptionAlgorithm EncryptionAlgorithm { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Messaging.EncryptionAlgorithm EncryptionAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.EncryptionAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgEncryptionAlgorithm")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Messaging.EncryptionAlgorithm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Verschlüsselungsalgorithmus verwendet, um den Nachrichtentext einer privaten Nachricht verschlüsselt.</summary>
+        <value>Einer der <see cref="T:System.Messaging.EncryptionAlgorithm" />-Enumerationswerte. Die Standardeinstellung ist <see langword="RC2" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Nachricht privat ist (verschlüsselt), wird sie verschlüsselt, bevor er gesendet und beim Empfang entschlüsselt. Die <xref:System.Messaging.Message.EncryptionAlgorithm%2A> Eigenschaft gibt an, der zum Verschlüsseln des Nachrichtentextes einer privaten Nachricht verwendeten Algorithmus.  
+  
+ Eine Warteschlange kann erfordern, eingehende Nachrichten werden verschlüsselt. Wenn eine Anwendung sendet eine unverschlüsselte (privaten)-Nachricht an eine Warteschlange, die nur private Nachrichten akzeptiert werden oder eine private Nachricht an eine Warteschlange gesendet wird, nur Nachrichten, die nicht privaten akzeptiert, lehnt die Nachricht von die Warteschlange ab. Die sendende Anwendung kann anfordern, dass eine negative Bestätigungsnachricht in einem solchen Fall zurückgegeben werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.EncryptionAlgorithm" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Extension">
+      <MemberSignature Language="C#" Value="public byte[] Extension { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Extension" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.Extension" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgExtension")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft weitere anwendungsspezifische, der Nachricht zugeordnete Informationen ab oder legt diese fest.</summary>
+        <value>Ein Array von Bytewerten, das anwendungsspezifische Informationen, die der Nachricht zugeordnete bereitstellt. Der Standardwert ist ein Array der Länge 0 (null).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.Extension%2A> Eigenschaft enthält anwendungsspezifische Informationen, z. B. ein großes binäres Objekt, das mit der Nachricht assoziiert ist. Es liegt in der Verantwortung der empfangenden Anwendung Interpretieren des Inhalts von den <xref:System.Messaging.Message.Extension%2A> Eigenschaft.  
+  
+ Wenn möglich, sollten Sie Nachrichtendaten in umfassen die <xref:System.Messaging.Message.Body%2A> -Eigenschaft der Nachricht statt über das <xref:System.Messaging.Message.Extension%2A> Eigenschaft.  
+  
+ Verwenden Sie bei der Arbeit mit fremden Warteschlangen die <xref:System.Messaging.Message.Extension%2A> Eigenschaft angeben, Message Queuing-Nachrichteneigenschaften, die nicht vorhanden sind.  
+  
+ In einem Queuing-System als Microsoft Message Queuing ist eine fremde Warteschlange vorhanden. Message Queuing kommuniziert mit solchen Warteschlangen über einen Connector-Anwendung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.Extension" /> Eigenschaft.</exception>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.Messaging.Message.Extension" />-Eigenschaft ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Formatter">
+      <MemberSignature Language="C#" Value="public System.Messaging.IMessageFormatter Formatter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Messaging.IMessageFormatter Formatter" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.Formatter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Messaging.IMessageFormatter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Formatierer, mit der ein Objekt in Serialisieren oder Deserialisieren eines Objekts aus dem Nachrichtentext.</summary>
+        <value>Die <see cref="T:System.Messaging.IMessageFormatter" /> , erzeugt einen Datenstrom zum Schreiben oder Lesen aus dem Nachrichtentext. Die Standardeinstellung ist <see cref="T:System.Messaging.XmlMessageFormatter" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Messaging.Message.Formatter%2A> Eigenschaft beim Lesen und Schreiben einer Nachricht. Wenn eine Nachricht an die Warteschlange gesendet wird, serialisiert der Formatierer die <xref:System.Messaging.Message.Body%2A> Eigenschaft in einen Stream, der an die Nachrichtenwarteschlange gesendet werden kann. Beim Lesen aus einer Warteschlange deserialisiert der Formatierer die Nachrichtendaten in das <xref:System.Messaging.Message.Body%2A> Eigenschaft.  
+  
+ Es sei denn, Sie direkt an den Inhalt der Nachricht Schreiben der <xref:System.Messaging.Message.BodyStream%2A> Eigenschaftensatz, der <xref:System.Messaging.Message.Formatter%2A> Eigenschaft vor dem Senden der Nachricht. Wenn die <xref:System.Messaging.MessageQueue.Send%2A> Methode aufgerufen wird die <xref:System.Messaging.MessageQueue> Instanz den Text mithilfe der in enthaltenen Formatierers serialisiert wird die <xref:System.Messaging.Message.Formatter%2A> Eigenschaft. Wenn die Nachricht zu senden, ohne Angabe eines Werts für die <xref:System.Messaging.Message.Formatter%2A> -Eigenschaft, wird der Standardformatierer <xref:System.Messaging.XmlMessageFormatter>.  
+  
+ Die <xref:System.Messaging.XmlMessageFormatter> lose verknüpft, daher ist es nicht notwendig, dass das gleiche Objekt, das auf dem Absender und Empfänger geben Sie bei Verwendung dieses Format ist. Die <xref:System.Messaging.ActiveXMessageFormatter> und <xref:System.Messaging.BinaryMessageFormatter> Serialisieren der Daten in eine binäre Darstellung. Die <xref:System.Messaging.ActiveXMessageFormatter> wird beim Senden oder Empfangen von COM-Komponenten verwendet.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Formatieren Nachrichtentexts mit <xref:System.Messaging.BinaryMessageFormatter>.  
+  
+ [!code-cpp[MessagingBinaryFormatter#1](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagingBinaryFormatter/CPP/message_binaryformatter.cpp#1)]
+ [!code-csharp[MessagingBinaryFormatter#1](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagingBinaryFormatter/CS/message_binaryformatter.cs#1)]
+ [!code-vb[MessagingBinaryFormatter#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MessagingBinaryFormatter/VB/message_binaryformatter.vb#1)]  
+  
+ Das folgende Codebeispiel veranschaulicht das Formatieren Nachrichtentexts mit <xref:System.Messaging.XmlMessageFormatter>.  
+  
+ [!code-cpp[Message.Body#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Message.Body/CPP/message_sendreceive.cpp#1)]
+ [!code-csharp[Message.Body#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Message.Body/CS/message_sendreceive.cs#1)]
+ [!code-vb[Message.Body#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Message.Body/VB/message_sendreceive.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.Messaging.Message.Formatter" />-Eigenschaft ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HashAlgorithm">
+      <MemberSignature Language="C#" Value="public System.Messaging.HashAlgorithm HashAlgorithm { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Messaging.HashAlgorithm HashAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.HashAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgHashAlgorithm")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Messaging.HashAlgorithm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt sie fest, Hashalgorithmus, der Message Queuing zum Authentifizieren eine Nachricht verwendet, oder erstellen eine digitale Signatur für eine Nachricht.</summary>
+        <value>Einer der <see cref="T:System.Messaging.HashAlgorithm" />-Enumerationswerte. Für Windows XP, die Standardeinstellung ist <see langword="SHA" />. Andernfalls ist <see langword="MD5" /> der Standardwert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Auf dem Quellcomputer verwendet Message Queuing den Hashalgorithmus für die Erstellung eine digitale Signatur für eine Nachricht. Das Ziel Warteschlangen-Manager verwendet dann denselben Hashalgorithmus auf um die Nachricht zu authentifizieren, wenn sie empfangen wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.HashAlgorithm" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public string Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgId")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die ID der Nachricht ab.</summary>
+        <value>Die Nachricht eindeutige Bezeichner, die von Message Queuing generiert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Message Queuing generiert eine Nachrichten-ID an, wenn die Nachricht gesendet wird. Der Bezeichner besteht aus 20 Bytes und enthält zwei Elemente: die Maschine <xref:System.Guid> des sendenden Computers und einen eindeutigen Bezeichner für die Nachricht auf dem Computer. Die Kombination beider Elemente liefert eine im Netzwerk eindeutige Nachrichten-ID.  
+  
+ Message Queuing generiert für alle Nachrichten, einschließlich Bestätigungs- und Berichtsnachrichten Nachrichten. Eine Bestätigungsnachricht wird von Message Queuing in der Regel als Reaktion auf den Eingang oder das Fehlschlagen einer ursprünglichen, gesendeten Nachricht gesendet. Finden Sie die <xref:System.Messaging.Message.Id%2A> Eigenschaftswert, der die ursprüngliche Nachricht in die <xref:System.Messaging.Message.CorrelationId%2A> Eigenschaft eine Bestätigungsnachricht.  
+  
+ Sie können auch die <xref:System.Messaging.Message.Id%2A> Eigenschaft beim Senden einer Antwortnachricht an eine Antwortwarteschlange. Um die ID der ursprünglichen Nachricht in einer Antwortnachricht einzubeziehen, legen die <xref:System.Messaging.Message.CorrelationId%2A> -Eigenschaft der Antwortnachricht an die <xref:System.Messaging.Message.Id%2A> -Eigenschaft der ursprünglichen Nachricht. Die Anwendung liest die Antwortnachricht kann dann die Korrelations-ID der Antwortnachricht verwenden, um die ursprüngliche Nachricht zu identifizieren.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel sendet und empfängt eine Nachricht, die eine Bestellung in und aus einer Warteschlange enthält. Eine positive Bestätigung wird ausdrücklich angefordert, wenn die ursprüngliche Nachricht erreicht wurde oder wird aus der Warteschlange abgerufen.  
+  
+ [!code-cpp[Message.Acknowledgment#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Message.Acknowledgment/CPP/message_acknowledgment.cpp#1)]
+ [!code-csharp[Message.Acknowledgment#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Message.Acknowledgment/CS/message_acknowledgment.cs#1)]
+ [!code-vb[Message.Acknowledgment#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Message.Acknowledgment/VB/message_acknowledgment.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachricht wurde nicht versandt. Diese Eigenschaft kann nur für Nachrichten, die aus einer Warteschlange abgerufen gelesen werden.  
+  
+ - oder -   
+  
+ Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.Id" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InfiniteTimeout">
+      <MemberSignature Language="C#" Value="public static readonly TimeSpan InfiniteTimeout;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.TimeSpan InfiniteTimeout" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.Message.InfiniteTimeout" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass kein Timeout vorhanden ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Messaging.Message.TimeToBeReceived%2A>und <xref:System.Messaging.Message.TimeToReachQueue%2A> erfordern einen Wert, der einen Timeout angibt. Für die erste der Timeout ist die maximale Zeitspanne für eine Nachricht aus der Warteschlange empfangen werden. Für die letztgenannte Aufgabe ist das Timeout die zulässige Zeit für eine Nachricht zum Erreichen der Warteschlange. In beiden Fällen können Sie das Timeout als eine Anzahl von Sekunden angeben oder <xref:System.Messaging.Message.InfiniteTimeout> , um anzugeben, dass kein Timeout vorhanden ist.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Messaging.Message.InfiniteTimeout> Feld.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFirstInTransaction">
+      <MemberSignature Language="C#" Value="public bool IsFirstInTransaction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFirstInTransaction" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.IsFirstInTransaction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgIsFirstInTransaction")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Nachricht die zuerst gesendete Nachricht in einer Transaktion war.</summary>
+        <value>
+          <see langword="true" />Wenn die Nachricht die zuerst gesendete Nachricht in einer Transaktion wurde; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Empfangen von Anwendungen verwenden die <xref:System.Messaging.Message.IsFirstInTransaction%2A> Eigenschaft, um sicherzustellen, dass eine Nachricht die zuerst gesendete Nachricht in einer einzelnen Transaktion für eine einzelne Warteschlange war.  
+  
+ Diese Eigenschaft ist nur mit Message Queuing-Version 2.0 und höher.  
+  
+ Um die Transaktionsgrenzen zu überprüfen, können Sie die <xref:System.Messaging.Message.IsFirstInTransaction%2A> Eigenschaft unterstützt zusammen mit zwei weitere Eigenschaften: <xref:System.Messaging.Message.IsLastInTransaction%2A> und <xref:System.Messaging.Message.TransactionId%2A>. Verwenden Sie die erste um zu überprüfen, ob eine Nachricht die zuletzt gesendete Nachricht in die Transaktion wurde, und verwenden Sie letztere, um den Bezeichner der Transaktion abzurufen.  
+  
+ Wenn nur eine Nachricht in einer Transaktion gesendet wird die <xref:System.Messaging.Message.IsFirstInTransaction%2A> und <xref:System.Messaging.Message.IsLastInTransaction%2A> Eigenschaften festgelegt `true`.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt den Wert einer Nachricht <xref:System.Messaging.Message.IsFirstInTransaction%2A> Eigenschaft.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachricht wurde nicht versandt. Diese Eigenschaft kann nur für Nachrichten, die aus einer Warteschlange abgerufen gelesen werden.  
+  
+ - oder -   
+  
+ Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.IsFirstInTransaction" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLastInTransaction">
+      <MemberSignature Language="C#" Value="public bool IsLastInTransaction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLastInTransaction" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.IsLastInTransaction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgIsLastInTransaction")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Nachricht die zuletzt gesendete Nachricht in einer Transaktion war.</summary>
+        <value>
+          <see langword="true" />Wenn die Nachricht die zuletzt gesendete Nachricht in einer einzelnen Transaktion wurde; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Empfangen von Anwendungen verwenden die <xref:System.Messaging.Message.IsLastInTransaction%2A> Eigenschaft, um sicherzustellen, dass eine Nachricht die zuletzt gesendete Nachricht in einer einzelnen Transaktion für eine einzelne Warteschlange war.  
+  
+ Diese Eigenschaft ist nur mit Message Queuing-Version 2.0 und höher.  
+  
+ Um die Transaktionsgrenzen zu überprüfen, können Sie die <xref:System.Messaging.Message.IsLastInTransaction%2A> Eigenschaft unterstützt zusammen mit zwei weitere Eigenschaften: <xref:System.Messaging.Message.IsFirstInTransaction%2A> und <xref:System.Messaging.Message.TransactionId%2A>. Verwenden Sie die erste um zu überprüfen, ob eine Nachricht die zuerst gesendete Nachricht in die Transaktion wurde, und verwenden Sie letztere, um den Bezeichner der Transaktion abzurufen.  
+  
+ Wenn nur eine Nachricht in einer Transaktion gesendet wird die <xref:System.Messaging.Message.IsFirstInTransaction%2A> und <xref:System.Messaging.Message.IsLastInTransaction%2A> Eigenschaften festgelegt `true`.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt den Wert einer Nachricht <xref:System.Messaging.Message.IsLastInTransaction%2A> Eigenschaft.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachricht wurde nicht versandt. Diese Eigenschaft kann nur für Nachrichten, die aus einer Warteschlange abgerufen gelesen werden.  
+  
+ - oder -   
+  
+ Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.IsLastInTransaction" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="public string Label { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Label" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.Label" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgLabel")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine von der Anwendung definierte Unicode-Zeichenfolge ab, die die Nachricht beschreibt, oder legt diese fest.</summary>
+        <value>Die Bezeichnung der Nachricht. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können eine Nachrichtenbezeichnung für mehrere Zwecke verwenden. Die Bezeichnung einer Nachricht kann beispielsweise angezeigt oder für die Verarbeitung einer von der Bezeichnung abhängigen Nachrichtenauswahl verwendet werden. Die Bezeichnung muss nicht über Nachrichten hinweg eindeutig sein.  
+  
+ Bezeichnungen für Nachrichtenwarteschlangen und Nachrichten sind Werte, die von der Anwendung definiert werden und die Identifikation einer Warteschlange oder Nachricht über eine Textbeschreibung ermöglichen. Es ist die Verantwortung der Anwendung, die den Inhalt der Beschriftung interpretieren, die für die Message Queuing-Anwendung keine systeminterne Bedeutung haben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird ermittelt und definiert den Wert einer Nachricht <xref:System.Messaging.Message.Label%2A> Eigenschaft.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.Label" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupId">
+      <MemberSignature Language="C#" Value="public long LookupId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 LookupId" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.LookupId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>In MSMQ 3.0 eingeführt. Ruft die Nachricht Nachschlage-ID ab.</summary>
+        <value>Die Nachricht Suchbezeichner wird vom Message Queuing generiert und ist eindeutig, in die Warteschlange befindet, in dem die Nachricht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.LookupId%2A> Eigenschaft ermöglicht den schreibgeschützten Zugriff auf eine Nachricht Nachschlage-ID ab. Nachschlage-ID, eingeführt in MSMQ 3.0 ist ein 64-Bit-Bezeichner, der vom Message Queuing generiert und auf die einzelnen Nachrichten zugewiesen werden, wenn die Nachricht in der Warteschlange platziert wird. Die Nachschlage-ID ist nicht identisch mit der Nachrichten-ID, die generiert wird, wenn die Nachricht gesendet wird.  
+  
+ Message Queuing generiert eine Nachschlage-ID für alle Nachrichten, die in einer beliebigen Warteschlange, einschließlich anwendungserstellte Ziel, Verwaltung und Berichtswarteschlangen sowie vom System generierte Journal unzustellbare, Connectors und die ausgehenden Warteschlangen platziert werden. Das heißt, schließt dies beiden Nachrichten, die von sendenden Anwendungen und von Message Queuing gesendet. Die Nachschlage-ID ist für die Warteschlange eindeutig und hat keine Bedeutung außerhalb der Warteschlangenobjekts.  
+  
+ Wenn eine Nachricht an verschiedene Zielwarteschlangen gesendet wird oder wenn eine Kopie einer Nachricht in einem Computerjournal oder Journalwarteschlange gespeichert ist, wird jede Kopie der Nachricht einen eigenen Nachschlage-ID haben, wenn er in der entsprechenden Warteschlange platziert wird.  
+  
+ Die <xref:System.Messaging.Message.LookupId%2A> Eigenschaft kann nur für Nachrichten, die aus einer Warteschlange abgerufen gelesen werden.  
+  
+ Nachschlage-ID wird verwendet, um eine bestimmte Nachricht in der Warteschlange gelesen. Nachdem der Nachschlage-ID der Nachricht bekannt ist, kann die empfangende Anwendung Aufrufen der <xref:System.Messaging.MessageQueue.PeekByLookupId%2A> oder <xref:System.Messaging.MessageQueue.ReceiveByLookupId%2A> Funktion, um direkt auf diese Nachricht und einsehen oder Abrufen aus der Warteschlange, im Gegensatz zu Cursor, die am Anfang der Warteschlange beginnen muss und Navigieren Sie gegen Ende der Warteschlange,  
+  
+ Abrufen von die Suche-IDs der Nachrichten in der Warteschlange liegt in der Verantwortung der Anwendung. Eine Möglichkeit für die Suche Bezeichner ermitteln, ist einen Trigger für die Zielwarteschlange erstellt, die eine Komponente aufruft, die die einzelnen Nachrichten-IDs werden zwischengespeichert, wie sie in der Warteschlange gespeichert werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.PlatformNotSupportedException">MSMQ 3.0 ist nicht installiert.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Nachricht wurde nicht versandt. Diese Eigenschaft kann nur für Nachrichten, die aus einer Warteschlange abgerufen gelesen werden.  
+  
+ - oder -   
+  
+ Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.LookupId" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageType">
+      <MemberSignature Language="C#" Value="public System.Messaging.MessageType MessageType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Messaging.MessageType MessageType" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.MessageType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgMessageType")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Nachrichtentyp ab: <see langword="Normal" />, <see langword="Acknowledgment" /> oder <see langword="Report" />.</summary>
+        <value>Einer der <see cref="P:System.Messaging.Message.MessageType" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Message Queuing wird diese Eigenschaft in der Regel, wenn er die Nachricht sendet. Eine Message Queuing-Nachricht kann als einer der folgenden Typen definiert sein:  
+  
+-   `Normal`, die ist entweder eine typische Nachricht, die von einer Anwendung an eine Warteschlange gesendet oder eine Antwortnachricht an die sendende Anwendung zurückgegeben.  
+  
+-   `Acknowledgement`, die Message Queuing generiert, wenn die sendende Anwendung anfordert. Message Queuing kann positive oder negative Nachrichten erzeugen und hierdurch anzeigen, ob die ursprüngliche Nachricht empfangen oder gelesen wurde. Message Queuing sendet die entsprechende Bestätigungsnachricht an die von der sendenden Anwendung festgelegte Verwaltungswarteschlange zurück.  
+  
+-   `Report`, die Message Queuing generiert, wenn der Quelle des Warteschlangen-Manager eine Berichtswarteschlange definiert ist. Wenn die Verfolgung aktiviert ist, sendet Message Queuing eine Berichtsnachricht an die Message Queuing-Berichtswarteschlange, sobald die ursprüngliche Nachricht von einem Message Queuing-Server empfangen oder weitergeleitet wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt den Wert einer Nachricht <xref:System.Messaging.Message.MessageType%2A> Eigenschaft.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachricht wurde nicht versandt. Diese Eigenschaft kann nur für Nachrichten, die aus einer Warteschlange abgerufen gelesen werden.  
+  
+ - oder -   
+  
+ Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.MessageType" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Priority">
+      <MemberSignature Language="C#" Value="public System.Messaging.MessagePriority Priority { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Messaging.MessagePriority Priority" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.Priority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgPriority")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessagePriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Nachrichtenpriorität ab, die die Position der Nachricht in der Warteschlange bestimmt, oder legt diese fest.</summary>
+        <value>Eines der <see cref="T:System.Messaging.MessagePriority" /> Werte, die die Prioritätsebenen der nicht transaktionale Nachrichten darstellen. Die Standardeinstellung ist <see langword="Normal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.Priority%2A> Eigenschaft wirkt sich auf wie Message Queuing die Nachricht verarbeitet, während des Routings und es sich um das Ziel erreicht. Nachrichten höherer Priorität werden beim Routing bevorzugt und gegen Anfang der Zielwarteschlange eingefügt. Nachrichten mit der gleichen Priorität werden entsprechend ihrer Ankunftszeit in der Warteschlange platziert.  
+  
+ Sie können eine sinnvolle Priorität nur für nicht transaktionale Nachrichten festlegen. Message Queuing legt automatisch die Priorität für die transaktionale Nachrichten `Lowest`, wodurch Transaktionsnachricht Priorität, ignoriert werden sollen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird zwei Nachrichten unterschiedliche Prioritäten an die Warteschlange sendet, und sie werden später abgerufen.  
+  
+ [!code-cpp[Message.DefaultPropertiesToSend#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Message.DefaultPropertiesToSend/CPP/message_defaultandpriority.cpp#1)]
+ [!code-csharp[Message.DefaultPropertiesToSend#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Message.DefaultPropertiesToSend/CS/message_defaultandpriority.cs#1)]
+ [!code-vb[Message.DefaultPropertiesToSend#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Message.DefaultPropertiesToSend/VB/message_defaultandpriority.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.Priority" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Recoverable">
+      <MemberSignature Language="C#" Value="public bool Recoverable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Recoverable" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.Recoverable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgRecoverable")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Nachricht übermittelt werden, im Falle einer Computer Computerfehlers oder Netzwerkproblems garantiert.</summary>
+        <value>
+          <see langword="true" />Wenn die Zustellung der Nachricht (über das Speichern von auf dem Datenträger während des Sendens der Nachrichteninhalts) garantiert ist; <see langword="false" /> Wenn Übermittlung nicht gewährleistet ist. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.Recoverable%2A> Eigenschaft gibt an, ob die Übermittlung einer Nachricht garantiert wird – selbst wenn ein Computer stürzt ab, während die Nachricht an die Zielwarteschlange gestellt wird.  
+  
+ Wenn Übermittlung einer Nachricht garantiert ist, wird die Nachricht lokal bei jedem Schritt entlang der Route gespeichert, bis die Nachricht erfolgreich an den nächsten Computer weitergeleitet wird. Festlegen der <xref:System.Messaging.Message.Recoverable%2A> Eigenschaft `true` kann der Durchsatz beeinträchtigt.  
+  
+ Falls die Nachricht transaktionsgebunden ist, die Nachricht automatisch als wiederherstellbar, unabhängig vom Wert der behandelt Message Queuing den <xref:System.Messaging.Message.Recoverable%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird ermittelt und definiert den Wert einer Nachricht <xref:System.Messaging.Message.Recoverable%2A> Eigenschaft.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.Recoverable" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseQueue">
+      <MemberSignature Language="C#" Value="public System.Messaging.MessageQueue ResponseQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Messaging.MessageQueue ResponseQueue" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.ResponseQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgResponseQueue")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Warteschlange ab, die von einer Anwendung generierte Antwortnachrichten empfängt, oder legt diese fest.</summary>
+        <value>Die <see cref="T:System.Messaging.MessageQueue" /> an die Anwendung generierte Antwort Nachrichten zurückgegeben werden. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.ResponseQueue%2A> Eigenschaft kennzeichnet die Warteschlange, die Anwendung generierte Antwortnachrichten empfängt, die der empfangenden Anwendung an die sendende Anwendung zurückgesendet. Die sendende Anwendung gibt die Antwortwarteschlangen beim Senden von Nachrichten an. Jede verfügbare Warteschlange kann als Antwortwarteschlange ausgewählt werden.  
+  
+ An die Antwortwarteschlange zurückgesendete Nachrichten sind anwendungsspezifisch. Die Anwendung muss sowohl den Inhalt der Nachrichten als auch die beim Empfang durchzuführenden Aktionen festlegen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird ermittelt und definiert den Wert einer Nachricht <xref:System.Messaging.Message.ResponseQueue%2A> Eigenschaft.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.ResponseQueue" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityContext">
+      <MemberSignature Language="C#" Value="public System.Messaging.SecurityContext SecurityContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Messaging.SecurityContext SecurityContext" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.SecurityContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Messaging.SecurityContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Sicherheitskontext für eine Nachricht.</summary>
+        <value>Ein <see cref="T:System.Messaging.SecurityContext" /> Objekt, das den Sicherheitskontext für eine Nachricht enthält, wenn die Eigenschaft bereits festgelegt wurde; andernfalls NULL.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SenderCertificate">
+      <MemberSignature Language="C#" Value="public byte[] SenderCertificate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] SenderCertificate" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.SenderCertificate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgSenderCertificate")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Sicherheitszertifikat, das zum Authentifizieren von Nachrichten verwendet.</summary>
+        <value>Ein Array von Bytewerten, das ein Sicherheitszertifikat, die Message Queuing verwendet darstellt, um den Absender der Nachricht überprüfen. Der Standardwert ist ein Array der Länge 0 (null).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die empfangende Anwendung verwendet die <xref:System.Messaging.Message.SenderCertificate%2A> Eigenschaft, wenn die Meldung ein externes Sicherheitszertifikat enthält.  
+  
+ Message Queuing kann einer Meldung über ein internes oder externes Sicherheitszertifikat authentifizieren. Message Queuing bietet interne Zertifikate, die verwendet werden, um die Nachrichtenintegrität sicherzustellen. Eine Zertifizierungsstelle stellt ein externes Zertifikat, die Sie über zugreifen können die <xref:System.Messaging.Message.SenderCertificate%2A> -Eigenschaft der Nachricht. Zusätzlich zu ermöglichen, Message Queuing zum Authentifizieren der Nachrichteninhalts, ermöglicht ein externes Zertifikat die empfangende Anwendung, um den Absender zu überprüfen. Ein internes Zertifikat wurde kein verwendbaren Wert an eine empfangende Anwendung.  
+  
+ Ein externes Zertifikat muss mit dem Verzeichnisdienst von den Message Queuing-System registriert sein. Ein externes Zertifikat enthält Informationen über die Zertifizierungsstelle, die dem Zertifikatsbenutzer, die Gültigkeitsdauer des Zertifikats, den öffentlichen Schlüssel aus dem Zertifikatsbenutzer und Signatur der Zertifizierungsstelle.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.SenderCertificate" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SenderId">
+      <MemberSignature Language="C#" Value="public byte[] SenderId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] SenderId" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.SenderId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgSenderId")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die ID des sendenden Benutzers ab.</summary>
+        <value>Ein Array von Bytewerten, das den Absender identifiziert. Der empfangende Warteschlangenmanager verwendet den Bezeichner an, wenn er die Nachricht an den Absender der Nachricht und der Absender über die Zugriffsrechte für die Warteschlange überprüfen authentifiziert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Messaging.Message.AttachSenderId%2A> Eigenschaft ist `false`, den absenderbezeichner, angegeben der <xref:System.Messaging.Message.SenderId%2A> Eigenschaft ist nicht an die Nachricht angefügt, wenn es gesendet wird. Dies zeigt Message Queuing, dass der Absender nicht überprüft werden soll, wenn er die Nachricht an die Zielwarteschlange sendet. Wenn die <xref:System.Messaging.Message.AttachSenderId%2A> Eigenschaft `true`, die <xref:System.Messaging.Message.SenderId%2A> Eigenschaftswert ist trustworthy nur, wenn die Nachricht authentifiziert wurde. Verwenden der <xref:System.Messaging.Message.Authenticated%2A> Eigenschaft in Verbindung mit der <xref:System.Messaging.Message.SenderId%2A> Eigenschaft, um die Zugriffsrechte des Absenders zu überprüfen.  
+  
+ Connector-Anwendung ist eine Anwendung, die Connector-Server verwendet wird, um die Kommunikation zwischen Message Queuing und anderen warteschlangensysteme bereitstellen. Message Queuing erfordert Connectoranwendungen für die Identifizierung des Absenders. Sie müssen festlegen, die <xref:System.Messaging.Message.ConnectorType%2A> Eigenschaft beim Senden einer Nachricht über einen Connector-Anwendung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachricht wurde nicht versandt. Diese Eigenschaft kann nur für Nachrichten, die aus einer Warteschlange abgerufen gelesen werden.  
+  
+ - oder -   
+  
+ Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.SenderId" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SenderVersion">
+      <MemberSignature Language="C#" Value="public long SenderVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 SenderVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.SenderVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgSenderVersion")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Version der Message Queuing zum Senden der Nachricht verwendet.</summary>
+        <value>Die Version der Message Queuing zum Senden der Nachricht verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.SenderVersion%2A> Eigenschaft ist für bestimmte Features von Bedeutung. Z. B. transaktionsverarbeitung wird nur von Message Queuing 2.0 und höher unterstützt und digitale Signaturen werden verwendet, um Nachrichten von MSMQ 1.0 zu authentifizieren.  
+  
+ Der sendende Warteschlangen-Manager legt die <xref:System.Messaging.Message.SenderVersion%2A> Eigenschaft, wenn die Nachricht gesendet wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt den Wert einer Nachricht <xref:System.Messaging.Message.SenderVersion%2A> Eigenschaft.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachricht wurde nicht versandt. Diese Eigenschaft kann nur für Nachrichten, die aus einer Warteschlange abgerufen gelesen werden.  
+  
+ - oder -   
+  
+ Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.SenderVersion" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SentTime">
+      <MemberSignature Language="C#" Value="public DateTime SentTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime SentTime" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.SentTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgSentTime")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft Datum und Uhrzeit auf dem sendenden Computer ab, zu der die Nachricht vom Quellwarteschlangen-Manager gesendet wurde.</summary>
+        <value>Ein <see cref="T:System.DateTime" /> , die die Zeit, die die Nachricht gesendet wurde darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.SentTime%2A> Eigenschaft angepasst wird, in der lokalen Zeit des Computers, auf dem diese Instanz die <xref:System.Messaging.Message> Klasse erstellt wurde. Diese Zeitzone kann sich von der Quell- und die Zielwarteschlangen sein.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt den Wert einer Nachricht <xref:System.Messaging.Message.SentTime%2A> Eigenschaft.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachricht wurde nicht versandt. Diese Eigenschaft kann nur für Nachrichten, die aus einer Warteschlange abgerufen gelesen werden.  
+  
+ - oder -   
+  
+ Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.SentTime" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceMachine">
+      <MemberSignature Language="C#" Value="public string SourceMachine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SourceMachine" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.SourceMachine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgSourceMachine")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, der Computer, von dem die Nachricht stammt.</summary>
+        <value>Der Name des Computers, von dem die Nachricht gesendet wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Format der <xref:System.Messaging.Message.SourceMachine%2A> Eigenschaft enthält keine umgekehrten Schrägstriche (\\\\). Beispielsweise `myServer` ist ein gültiger <xref:System.Messaging.Message.SourceMachine%2A>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt den Wert einer Nachricht <xref:System.Messaging.Message.SourceMachine%2A> Eigenschaft.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachricht wurde nicht versandt. Diese Eigenschaft kann nur für Nachrichten, die aus einer Warteschlange abgerufen gelesen werden.  
+  
+ - oder -   
+  
+ Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.SourceMachine" /> Eigenschaft.</exception>
+        <exception cref="T:System.Messaging.MessageQueueException">Der Computer oder den Verzeichnisdienst-Dienst konnte nicht zugegriffen werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeToBeReceived">
+      <MemberSignature Language="C#" Value="public TimeSpan TimeToBeReceived { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan TimeToBeReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.TimeToBeReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Messaging.TimeoutConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgTimeToBeReceived")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale Zeitdauer für die Nachricht aus der Zielwarteschlange empfangen werden soll.</summary>
+        <value>Die Gesamtzeit für eine gesendete Nachricht aus der Zielwarteschlange empfangen werden soll. Die Standardeinstellung ist <see cref="F:System.Messaging.Message.InfiniteTimeout" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.TimeToBeReceived%2A> Eigenschaft gibt die Gesamtzeit für eine gesendete Nachricht aus der Zielwarteschlange empfangen werden soll. Das Zeitlimit umfasst die Zeit an, der für das Aufrufen von der Zielwarteschlange und die Zeit in der Warteschlange darauf warten, bevor die Nachricht empfangen wird.  
+  
+> [!CAUTION]
+>  Bei der abhängigen Clientcomputer verwenden, achten Sie darauf, dass die Uhr auf dem Clientcomputer mit der Uhr auf dem Server synchronisiert wird, auf denen Message Queuing ausgeführt wird. Andernfalls zu einem unvorhersehbaren Verhalten unter Umständen beim Senden einer Nachricht, deren <xref:System.Messaging.Message.TimeToBeReceived%2A> Eigenschaft ist nicht <xref:System.Messaging.Message.InfiniteTimeout>.  
+  
+ Wenn das Intervall, wird angegeben die <xref:System.Messaging.Message.TimeToBeReceived%2A> Eigenschaft abläuft, bevor die Nachricht aus der Warteschlange entfernt wird, Message Queuing verwirft die Nachricht in einer von zwei Methoden. Wenn die <xref:System.Messaging.Message.UseDeadLetterQueue%2A>-Eigenschaft auf `true` festgelegt ist, wird die Nachricht an die Dead Letter-Warteschlange gesendet. Wenn <xref:System.Messaging.Message.UseDeadLetterQueue%2A> ist `false`, die Nachricht wird ignoriert.  
+  
+ Sie können festlegen, dass der Nachricht <xref:System.Messaging.Message.AcknowledgeType%2A> Eigenschaft, um anzufordern, dass eine negative Bestätigungsnachricht Message Queuing gesendet werden an die sendende Anwendung sichern, wenn die Nachricht vor Ablauf des Zeitgebers nicht abgerufen werden.  
+  
+ Wenn der Wert der <xref:System.Messaging.Message.TimeToBeReceived%2A> -Eigenschaft ist kleiner als der Wert von der <xref:System.Messaging.Message.TimeToReachQueue%2A> Eigenschaft <xref:System.Messaging.Message.TimeToBeReceived%2A> hat Vorrang vor.  
+  
+ Wenn mehrere Nachrichten in einer einzelnen Transaktion gesendet werden, verwendet Message Queuing den <xref:System.Messaging.Message.TimeToBeReceived%2A> -Eigenschaft der ersten Nachricht.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird ermittelt und definiert den Wert einer Nachricht <xref:System.Messaging.Message.TimeToBeReceived%2A> Eigenschaft.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.TimeToBeReceived" /> Eigenschaft.</exception>
+        <exception cref="T:System.ArgumentException">Der angegebene Wert für <see cref="P:System.Messaging.Message.TimeToBeReceived" /> ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeToReachQueue">
+      <MemberSignature Language="C#" Value="public TimeSpan TimeToReachQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan TimeToReachQueue" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.TimeToReachQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Messaging.TimeoutConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgTimeToReachQueue")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeitbegrenzung der Nachricht für das Erreichen der Warteschlange ab oder legt diese fest.</summary>
+        <value>Das Zeitlimit für die Nachricht in der Zielwarteschlange eintreffen kann, wird ab dem Zeitpunkt der Nachricht gesendet. Die Standardeinstellung ist <see cref="F:System.Messaging.Message.InfiniteTimeout" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Intervall, wird angegeben die <xref:System.Messaging.Message.TimeToReachQueue%2A> Eigenschaft abläuft, bevor die Nachricht das Ziel erreicht hat, Message Queuing verwirft die Nachricht in einer von zwei Methoden. Wenn die <xref:System.Messaging.Message.UseDeadLetterQueue%2A>-Eigenschaft auf `true` festgelegt ist, wird die Nachricht an die Dead Letter-Warteschlange gesendet. Wenn <xref:System.Messaging.Message.UseDeadLetterQueue%2A> ist `false`, die Nachricht wird ignoriert.  
+  
+ Sie können festlegen, He-Nachricht <xref:System.Messaging.Message.AcknowledgeType%2A> Eigenschaft, um anzufordern, dass Message Queuing eine negative Bestätigung-Nachricht zu senden an die sendende Anwendung sichern, wenn Sie die Nachricht nicht vor Ablauf des Zeitgebers.  
+  
+ Wenn der <xref:System.Messaging.Message.TimeToReachQueue%2A> Eigenschaft auf 0 Sekunden festgelegt ist, Message Queuing zum Senden der Nachricht an ihr Ziel einmal versucht, wenn die Nachricht die Warteschlange wartet. Wenn die Warteschlange lokal ist, erreicht die Nachricht immer es.  
+  
+ Wenn der Wert der <xref:System.Messaging.Message.TimeToReachQueue%2A> -Eigenschaft ist größer als der Wert von der <xref:System.Messaging.Message.TimeToBeReceived%2A> Eigenschaft <xref:System.Messaging.Message.TimeToBeReceived%2A> hat Vorrang vor.  
+  
+ Wenn mehrere Nachrichten in einer einzelnen Transaktion gesendet werden, verwendet Message Queuing den <xref:System.Messaging.Message.TimeToReachQueue%2A> -Eigenschaft der ersten Nachricht.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird ermittelt und definiert den Wert einer Nachricht <xref:System.Messaging.Message.TimeToReachQueue%2A> Eigenschaft.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.TimeToReachQueue" /> Eigenschaft.</exception>
+        <exception cref="T:System.ArgumentException">Der angegebene Wert für <see cref="P:System.Messaging.Message.TimeToReachQueue" /> ist ungültig. Es kann keine negative Zahl dargestellt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TransactionId">
+      <MemberSignature Language="C#" Value="public string TransactionId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TransactionId" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.TransactionId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgTransactionId")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Bezeichner für die Transaktion, von der die Nachricht ein Teil war.</summary>
+        <value>Der Bezeichner für die Transaktion, die der Nachricht zugeordnet werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Empfangen von Anwendungen verwenden die <xref:System.Messaging.Message.TransactionId%2A> Eigenschaft, um sicherzustellen, dass eine Nachricht als Teil einer bestimmten Transaktion gesendet wurde. Die Transaktions-ID enthält den Bezeichner des sendenden Computers (erste 16 Bits) gefolgt von einem 4-Byte-Transaktionssequenznummer.  
+  
+ Diese Eigenschaft ist nur für Message Queuing-Version 2.0 und höher verfügbar.  
+  
+ Transaktions-IDs sind nicht unbedingt eindeutig, da transaktionssequenznummern nicht dauerhaft gespeichert werden, und sie dann wieder auf 2 startet <sup>20</sup>. Message Queuing garantiert nur, dass nachfolgende Transaktionen unterschiedliche transaktionssequenznummern vorhanden sind.  
+  
+ Können Sie die <xref:System.Messaging.Message.TransactionId%2A> Eigenschaft zusammen mit der <xref:System.Messaging.Message.IsFirstInTransaction%2A> und <xref:System.Messaging.Message.IsLastInTransaction%2A> Eigenschaften Transaktionsgrenzen zu überprüfen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt den Wert einer Nachricht <xref:System.Messaging.Message.TransactionId%2A> Eigenschaft.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachricht wurde nicht versandt. Diese Eigenschaft kann nur für Nachrichten, die aus einer Warteschlange abgerufen gelesen werden.  
+  
+ - oder -   
+  
+ Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.TransactionId" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TransactionStatusQueue">
+      <MemberSignature Language="C#" Value="public System.Messaging.MessageQueue TransactionStatusQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Messaging.MessageQueue TransactionStatusQueue" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.TransactionStatusQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgTransactionStatusQueue")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Transaktionsstatus-Warteschlange auf dem Quellcomputer an.</summary>
+        <value>Die Transaktionsstatus-Warteschlange auf dem Quellcomputer, der zum Senden von Bestätigungsnachrichten zurück an die sendende Anwendung verwendet wird. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.TransactionStatusQueue%2A> Eigenschaft identifiziert, die transaktionale Warteschlange auf dem Quellcomputer, die lesen-Empfangsbestätigungen vom Connectoranwendungen empfängt. Message Queuing legt die Eigenschaft fest, und Connectoranwendungen verwenden die Eigenschaft aus, wenn Fremdschlüssel Warteschlangen gesendete Transaktionsnachrichten abrufen.  
+  
+ In einem Queuing-System als Microsoft Message Queuing ist eine fremde Warteschlange vorhanden. Message Queuing kommuniziert mit solchen Warteschlangen über einen Connector-Anwendung.  
+  
+ Die Connector-Anwendung kann die Transaktionsstatus-Warteschlange zum Senden von Bestätigungsnachrichten an die sendende Anwendung verwenden. Die Transaktionsstatus-Warteschlange sollten diese Bestätigungen erhalten, selbst wenn die sendende Anwendung keine andere Bestätigungen anfordert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt den Wert einer Nachricht <xref:System.Messaging.Message.TransactionStatusQueue%2A> Eigenschaft.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachricht wurde nicht versandt. Diese Eigenschaft kann nur für Nachrichten, die aus einer Warteschlange abgerufen gelesen werden.  
+  
+ - oder -   
+  
+ Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.TransactionStatusQueue" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UseAuthentication">
+      <MemberSignature Language="C#" Value="public bool UseAuthentication { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseAuthentication" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.UseAuthentication" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgUseAuthentication")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Nachricht wurde (oder muss) authentifiziert, bevor Sie gesendet werden.</summary>
+        <value>
+          <see langword="true" />Wenn die sendende Anwendung eine Authentifizierung für die Meldung; angefordert andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.UseAuthentication%2A> Eigenschaft gibt an, ob die Nachricht authentifiziert werden muss. Wenn die sendende Anwendung, Authentifizierung anfordert, Message Queuing eine digitale Signatur erstellt und verwendet, um die Nachricht signieren, wenn es gesendet wird und die Nachricht zu authentifizieren, wenn sie empfangen werden.  
+  
+ Wenn <xref:System.Messaging.Message.UseAuthentication%2A> ist `false` und eine Nachricht an eine Warteschlange, die nur authentifizierte Nachrichten akzeptiert werden, die Nachricht wird beim Erreichen der Warteschlange abgelehnt.  
+  
+ Sie können nicht feststellen, ob eine Nachricht Fehler bei der Authentifizierung durch einen Blick auf ihre Eigenschaften. Message Queuing werden solche Nachrichten verworfen, bevor sie an die Warteschlange übermittelt werden. Allerdings können Sie anfordern, dass eine Bestätigungsnachricht gesendet werden, wenn ein Zustellungsfehler verhindert, dass eine Nachricht in die Warteschlange eingeht.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.UseAuthentication" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UseDeadLetterQueue">
+      <MemberSignature Language="C#" Value="public bool UseDeadLetterQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseDeadLetterQueue" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.UseDeadLetterQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgUseDeadLetterQueue")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob eine Kopie der Nachricht, die nicht zugestellt werden konnte, die an eine Dead Letter-Warteschlange gesendet werden soll.</summary>
+        <value>
+          <see langword="true" />Wenn die-Nachrichtenübermittlung in eine Kopie der Nachricht an eine Warteschlange für unzustellbare; ansonsten sollten andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.UseJournalQueue%2A> und <xref:System.Messaging.Message.UseDeadLetterQueue%2A> Eigenschaften angeben, wie Message Queuing eine Nachricht protokolliert. Wenn <xref:System.Messaging.Message.UseDeadLetterQueue%2A> ist `true`, Unzustellbarkeit (eine nicht transaktionale Nachricht), wird die Nachricht an die nicht transaktionale Dead Letter-Warteschlange auf dem Computer gesendet werden, die die Nachricht nicht zustellen konnte. Zustellungsfehler kann durch eine Nachricht Zeitgeber abläuft, z. B. verursacht werden.  
+  
+ Im Fall der Zustellfehler für eine transaktionale Nachricht sendet Message Queuing die Nachricht an die transaktionale Dead Letter-Warteschlange auf dem Quellcomputer in allen Fällen von negativen und unsichere.  
+  
+ Wenn Sie in einer Warteschlange für unzustellbare Nachrichten speichern, sollten Sie deaktivieren die Warteschlange in regelmäßigen Abständen, um Nachrichten zu entfernen, die nicht mehr benötigt werden. Nachrichten in Warteschlangen für unzustellbare Anzahl für das Kontingent für den Computer, auf dem sich die Warteschlange befindet. Das Computerkontingent wird vom Administrator festgelegten und bezieht sich auf die Größe, die zum Speichern von Nachrichten auf dem gesamten Computer, nicht nur in einer einzelnen Warteschlange zugeordnet.  
+  
+ Sie keiner Journalwarteschlange oder Dead Letter-Warteschlange erstellen. Hierbei handelt es sich um Systemwarteschlangen, die Message Queuing generiert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird ermittelt und definiert den Wert einer Nachricht <xref:System.Messaging.Message.UseDeadLetterQueue%2A> Eigenschaft.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.UseDeadLetterQueue" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UseEncryption">
+      <MemberSignature Language="C#" Value="public bool UseEncryption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseEncryption" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.UseEncryption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgUseEncryption")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Nachricht als privat kennzeichnen.</summary>
+        <value>
+          <see langword="true" />Message Queuing zum Verschlüsseln der Nachricht erforderlich ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Nachricht privat ist, ist Text verschlüsselt, bevor er gesendet und entschlüsselt, wenn sie empfangen werden. Um einer privaten Nachricht senden zu können, muss die sendende Anwendung angeben, die Verschlüsselung verwendet werden und optional den Verschlüsselungsalgorithmus.  
+  
+ Beim private Nachrichten senden zu können, muss Ihre Anwendung nicht führen Sie die Verschlüsselung von Nachrichten. Message Queuing können Sie den Nachrichtentext verschlüsseln, wenn Ihre Anwendung Nachrichten in einer Microsoft Windows 2000-Unternehmen, sendet die Zugriff auf den Verzeichnisdienst verfügt. Wenn Sie private Nachrichten zu empfangen, entschlüsselt der empfangende Warteschlangenmanager immer den Nachrichtentext.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird ermittelt und definiert den Wert einer Nachricht <xref:System.Messaging.Message.UseEncryption%2A> Eigenschaft.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.UseEncryption" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UseJournalQueue">
+      <MemberSignature Language="C#" Value="public bool UseJournalQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseJournalQueue" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.UseJournalQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgUseJournalQueue")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob eine Kopie der Nachricht in einem Computerjournal auf dem Ursprungscomputer beibehalten werden soll.</summary>
+        <value>
+          <see langword="true" />dahingehend, dass eine Kopie einer Nachricht in dem ursprünglichen Computer Computerjournal gehalten werden, nachdem die Nachricht wurde erfolgreich (aus dem ursprünglichen Computer mit dem nächsten Server) übertragen; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.UseJournalQueue%2A> und <xref:System.Messaging.Message.UseDeadLetterQueue%2A> Eigenschaften angeben, wie Message Queuing eine Nachricht protokolliert. Wenn <xref:System.Messaging.Message.UseJournalQueue%2A> ist `true`, und klicken Sie dann eine Kopie in das Computerjournal auf dem ursprünglichen Computer bei jedem Schritt gehalten wird, dass eine Nachricht gesendet wird.  
+  
+ Die gesendete Nachricht wird nur in die Journalwarteschlange kopiert, wenn die Zielwarteschlange auf einem Remotecomputer ist. Wenn das Ziel auf dem lokalen Computer ist, wird die Nachricht direkt an die Warteschlange gesendet; Es gibt keine Zwischenschritte Journal erforderlich ist.  
+  
+ Beim Speichern von Nachrichten in eine Journalwarteschlange deaktivieren Sie die Warteschlange in regelmäßigen Abständen, um Nachrichten zu entfernen, die nicht mehr benötigt werden. Nachrichten in Journal Warteschlangen Anzahl für das Kontingent für den Computer, auf dem sich die Warteschlange befindet. (Das Computerkontingent wird vom Administrator festgelegt.)  
+  
+ Sie keiner Journalwarteschlange oder Dead Letter-Warteschlange erstellen. Hierbei handelt es sich um Systemwarteschlangen, die Message Queuing generiert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird ermittelt und definiert den Wert einer Nachricht <xref:System.Messaging.Message.UseJournalQueue%2A> Eigenschaft.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.UseJournalQueue" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UseTracing">
+      <MemberSignature Language="C#" Value="public bool UseTracing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseTracing" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.UseTracing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgUseTracing")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob eine Nachricht zu verfolgen, wie sie bis zur Zielwarteschlange verschoben wird.</summary>
+        <value>
+          <see langword="true" />ob jede Zwischenschritt unterwegs die ursprüngliche Nachricht, die an die Zielwarteschlange an das System Berichtswarteschlange gesendet werden meldet; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.Message.UseTracing%2A> Eigenschaft gibt an, ob die Route einer Nachricht verfolgen, wie die Weiterleitung an die Zielwarteschlange verschoben. Wenn `true`, jedes Mal, die die Nachricht eine Message Queuing-routing-Server durchläuft eine berichtsnachricht (von Message Queuing generiert) an eine Berichtswarteschlange gesendet. Die Berichtswarteschlange wird vom Quellwarteschlangen-Manager angegeben. Berichtswarteschlangen sind nicht für Berichtnachrichten, die von Message Queuing generierte beschränkt. Ihre Anwendung generierte Nachrichten können auch auf Berichtswarteschlangen gesendet werden.  
+  
+ Verwenden der Ablaufverfolgung umfasst die Active Directory einrichten und eine Berichtswarteschlange für die Message Queuing-Organisation angeben. Der Administrator konfiguriert diese Einstellungen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird ermittelt und definiert den Wert einer Nachricht <xref:System.Messaging.Message.UseTracing%2A> Eigenschaft.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Nachrichtenwarteschlange wird gefiltert, um das Ignorieren der <see cref="P:System.Messaging.Message.UseTracing" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,348 @@
+<Type Name="NamedPipeTransportBindingElement" FullName="System.ServiceModel.Channels.NamedPipeTransportBindingElement">
+  <TypeSignature Language="C#" Value="public class NamedPipeTransportBindingElement : System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NamedPipeTransportBindingElement extends System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.NamedPipeTransportBindingElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt das Bindungselement für den Named Pipe-Transport dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Transport verwendet URIs im Format "`net.pipe`://`hostname`/`path`". Andere URI-Komponenten sind optional.  
+  
+ Die <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>-Klasse stellt den Startpunkt für das Erstellen einer benutzerdefinierten Bindung dar, die das Named Pipes-Transportprotokoll implementiert. Dieser Transport wird für die [!INCLUDE[indigo1](~/includes/indigo1-md.md)]-zu-[!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Kommunikation auf dem Computer verwendet.  
+  
+ Das Dienstmodell in [!INCLUDE[indigo2](~/includes/indigo2-md.md)] erstellt mit dieser Klasse Factoryobjekte, die die <xref:System.ServiceModel.Channels.IChannelFactory>-Schnittstelle und die <xref:System.ServiceModel.Channels.IChannelListener>-Schnittstelle implementieren. Diese Factory-Objekte erstellen und akzeptieren dann die Kanäle, mit denen SOAP-Nachrichten über das Named Pipes-Protokoll übertragen werden.  
+  
+ Sie können die Factorys, die diese Klasse erstellt, durch Einrichten der Eigenschaften konfigurieren, beispielsweise: <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement.ConnectionPoolSettings%2A>.  
+  
+ Sie können auch Eigenschaften für die Basisklasse <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement> festlegen, z.&#160;B. <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxBufferSize%2A>, <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.TransferMode%2A> und <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ConnectionBufferSize%2A>. Eine vollständige Liste der Eigenschaften finden Sie unter <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>.  
+  
+ Schließlich können Sie Eigenschaften der Basisklasse von <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement> einrichten, die <xref:System.ServiceModel.Channels.TransportBindingElement> ist, wie beispielsweise <xref:System.ServiceModel.Channels.TransportBindingElement.MaxBufferPoolSize%2A>. Eine vollständige Liste der Eigenschaften finden Sie unter <xref:System.ServiceModel.Channels.TransportBindingElement>.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird veranschaulicht, wie die Klasse verwendet wird:  
+  
+ [!code-csharp[S_UENamedPipeTransportBindingElement#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenamedpipetransportbindingelement/cs/program.cs#0)]
+ [!code-vb[S_UENamedPipeTransportBindingElement#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uenamedpipetransportbindingelement/vb/module1.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NamedPipeTransportBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.NamedPipeTransportBindingElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.NamedPipeTransportBindingElement" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Dieses Beispiel zeigt die Verwendung des Standardkonstruktors:  
+  
+ [!code-csharp[S_UENamedPipeTransportBindingElement#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenamedpipetransportbindingelement/cs/program.cs#1)]
+ [!code-vb[S_UENamedPipeTransportBindingElement#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uenamedpipetransportbindingelement/vb/module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected NamedPipeTransportBindingElement (System.ServiceModel.Channels.NamedPipeTransportBindingElement elementToBeCloned);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Channels.NamedPipeTransportBindingElement elementToBeCloned) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.NamedPipeTransportBindingElement.#ctor(System.ServiceModel.Channels.NamedPipeTransportBindingElement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="elementToBeCloned" Type="System.ServiceModel.Channels.NamedPipeTransportBindingElement" />
+      </Parameters>
+      <Docs>
+        <param name="elementToBeCloned">Eine Instanz der <see cref="T:System.ServiceModel.Channels.NamedPipeTransportBindingElement" />-Klasse.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.NamedPipeTransportBindingElement" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode stellt einen Kopierkonstruktor dar, mit dem das Bindungselement geklont wird. Sie wird verfügbar gemacht, damit <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement.Clone%2A> von abgeleiteten Klassen implementiert werden kann.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel zeigt, wie eine neue Instanz der Klasse initialisiert wird:  
+  
+ [!code-csharp[S_UENamedPipeTransportBindingElement#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenamedpipetransportbindingelement/cs/program.cs#2)]
+ [!code-vb[S_UENamedPipeTransportBindingElement#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uenamedpipetransportbindingelement/vb/module1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt; BuildChannelFactory&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.IChannelFactory`1&lt;!!TChannel&gt; BuildChannelFactory&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.NamedPipeTransportBindingElement.BuildChannelFactory``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Typ der zu erstellenden Kanalfactory.</typeparam>
+        <param name="context">Member mit Beschreibungen von Bindungen, Verhaltensweisen und Verträgen sowie weiteren Informationen, die zum Erstellen der Kanalfactory erforderlich sind.</param>
+        <summary>Erstellt eine Kanalfactory des angegebenen Typs zum Erstellen von Kanälen.</summary>
+        <returns>Gibt eine Kanalfactory des angegebenen Typs zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode kann eine Kanalfactory des festgelegten Typs zum Senden von Nachrichten auf Basis der Konfiguration des Transportbindungselements erstellt werden.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird veranschaulicht, wie eine Kanalfactory des festgelegten Typs erstellt wird, mit der Kanäle erstellt werden können:  
+  
+ [!code-csharp[S_UENamedPipeTransportBindingElement#6](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenamedpipetransportbindingelement/cs/program.cs#6)]
+ [!code-vb[S_UENamedPipeTransportBindingElement#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uenamedpipetransportbindingelement/vb/module1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> darf nicht <see langword="null" /> sein.</exception>
+        <exception cref="T:System.ArgumentException">Ein ungültiges Argument wurde übergeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt; BuildChannelListener&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.IChannelListener`1&lt;!!TChannel&gt; BuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.NamedPipeTransportBindingElement.BuildChannelListener``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Typ des zu erstellenden Kanallisteners.</typeparam>
+        <param name="context">Member mit Beschreibungen von Bindungen, Verhaltensweisen und Verträgen sowie weiteren Informationen, die zum Erstellen der Kanalfactory erforderlich sind.</param>
+        <summary>Erstellt einen Kanallistener des angegebenen Typs.</summary>
+        <returns>Gibt einen Kanallistener des angegebenen Typs zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode kann ein Kanallistener des festgelegten Typs zum Empfangen von Nachrichten auf Basis der Konfiguration des Named Pipe-Bindungselements abgerufen werden.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird veranschaulicht, wie ein Kanallistener des angegebenen Typs erstellt wird:  
+  
+ [!code-csharp[S_UENamedPipeTransportBindingElement#7](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenamedpipetransportbindingelement/cs/program.cs#7)]
+ [!code-vb[S_UENamedPipeTransportBindingElement#7](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uenamedpipetransportbindingelement/vb/module1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> darf nicht <see langword="null" /> sein.</exception>
+        <exception cref="T:System.ArgumentException">Ein ungültiges Argument wurde übergeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.BindingElement Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.BindingElement Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.NamedPipeTransportBindingElement.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Kopie des aktuellen Bindungselements.</summary>
+        <returns>Gibt eine Kopie des aktuellen Bindungselements zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ In diesem Beispiel wird veranschaulicht, wie eine Kopie des aktuellen Bindungselements erstellt wird:  
+  
+ [!code-csharp[S_UENamedPipeTransportBindingElement#5](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenamedpipetransportbindingelement/cs/program.cs#5)]
+ [!code-vb[S_UENamedPipeTransportBindingElement#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uenamedpipetransportbindingelement/vb/module1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionPoolSettings">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.NamedPipeConnectionPoolSettings ConnectionPoolSettings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.NamedPipeConnectionPoolSettings ConnectionPoolSettings" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.NamedPipeTransportBindingElement.ConnectionPoolSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.NamedPipeConnectionPoolSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der Verbindungspooleinstellungen ab.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.Channels.NamedPipeConnectionPoolSettings" />-Objekt, das verschiedene Eigenschaften für das Verbindungspooling enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ In diesem Beispiel wird veranschaulicht, wie eine Auflistung von Verbindungspooleinstellungen abgerufen wird:  
+  
+ [!code-csharp[S_UENamedPipeTransportBindingElement#3](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenamedpipetransportbindingelement/cs/program.cs#3)]
+ [!code-vb[S_UENamedPipeTransportBindingElement#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uenamedpipetransportbindingelement/vb/module1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public override T GetProperty&lt;T&gt; (System.ServiceModel.Channels.BindingContext context) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!T GetProperty&lt;class T&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.NamedPipeTransportBindingElement.GetProperty``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Das Objekt, das abgerufen werden soll.</typeparam>
+        <param name="context">Ein <see cref="T:System.ServiceModel.Channels.BindingContext" />.</param>
+        <summary>Ruft ein angegebenes Objekt aus dem <see cref="T:System.ServiceModel.Channels.BindingContext" /> ab.</summary>
+        <returns>Das angegebene Objekt aus dem <see cref="T:System.ServiceModel.Channels.BindingContext" /> oder <see langword="null" />, wenn das Objekt nicht gefunden wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ruft das angegebene Objekt aus der Basisklasse oder einem der Vorgänger der Klasse ab. Das zurückgegebene Objekt stellt normalerweise eine Auflistung von Eigenschaften dar, z.&#160;B. ein Objekt, das <xref:System.ServiceModel.Channels.ISecurityCapabilities> implementiert.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird veranschaulicht, wie ein angegebenes Objekt aus dem <xref:System.ServiceModel.Channels.BindingContext> abgerufen wird:  
+  
+ [!code-csharp[S_UENamedPipeTransportBindingElement#8](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenamedpipetransportbindingelement/cs/program.cs#8)]
+ [!code-vb[S_UENamedPipeTransportBindingElement#8](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uenamedpipetransportbindingelement/vb/module1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PipeSettings">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.NamedPipeSettings PipeSettings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.NamedPipeSettings PipeSettings" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.NamedPipeTransportBindingElement.PipeSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.NamedPipeSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Pipe-Einstellungen für die named Pipe-Transport-Bindungselement.</summary>
+        <value>Die Pipe-Einstellungen für die named Pipe-Transport-Bindungselement.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scheme">
+      <MemberSignature Language="C#" Value="public override string Scheme { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Scheme" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.NamedPipeTransportBindingElement.Scheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das URI-Schema für die Übertragung zurück.</summary>
+        <value>Gibt das URI-Schema für den Transport ('net.pipe') zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird bereitgestellt, um die Bindungsprüfung mit Basisadressen zu aktivieren.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird veranschaulicht, wie das URI-Schema für den Transport abgerufen wird:  
+  
+ [!code-csharp[S_UENamedPipeTransportBindingElement#4](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenamedpipetransportbindingelement/cs/program.cs#4)]
+ [!code-vb[S_UENamedPipeTransportBindingElement#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uenamedpipetransportbindingelement/vb/module1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

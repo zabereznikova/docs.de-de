@@ -1,0 +1,96 @@
+<Type Name="IAttributeAccessor" FullName="System.Web.UI.IAttributeAccessor">
+  <TypeSignature Language="C#" Value="public interface IAttributeAccessor" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IAttributeAccessor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IAttributeAccessor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert Methoden, die von ASP.NET-Serversteuerelementen verwendet wird, um den programmgesteuerten Zugriff auf jedes Attribut im öffnenden Tag eines Serversteuerelements deklariert bereitzustellen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie ein benutzerdefiniertes Steuerelement, die Erstellen von erben die <xref:System.Web.UI.WebControls.WebControl>, <xref:System.Web.UI.HtmlControls.HtmlControl>, oder <xref:System.Web.UI.WebControls.ListItem> -Klasse, die .NET Framework automatisch ermöglicht programmgesteuerten Zugriff auf Attribute, da jede dieser Klassen von implementieren die <xref:System.Web.UI.IAttributeAccessor> -Schnittstelle.  
+  
+ Wenn Sie ein benutzerdefiniertes Steuerelement, das nicht von einer dieser Klassen erben, und planen erstellen, die programmgesteuerten Zugriff auf Attribute ermöglichen, die nicht mit stark typisierten Eigenschaften des Steuerelements entsprechen, müssen Sie implementieren die <xref:System.Web.UI.IAttributeAccessor> Schnittstelle.  
+  
+   
+  
+## Examples  
+ [!code-csharp[IAttributeAccessor_Sample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/IAttributeAccessor_Sample/CS/iattributeaccessor.cs#1)]
+ [!code-vb[IAttributeAccessor_Sample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/IAttributeAccessor_Sample/VB/iattributeaccessor.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetAttribute">
+      <MemberSignature Language="C#" Value="public string GetAttribute (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetAttribute(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IAttributeAccessor.GetAttribute(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Ein <see cref="T:System.String" /> , der den Namen des Attributs Steuerelement darstellt.</param>
+        <summary>Bei der Implementierung durch eine Klasse ruft die Eigenschaft des angegebenen Attributs aus dem Serversteuerelement ab.</summary>
+        <returns>Der Wert des angegebenen Attributs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, eine Implementierung der <xref:System.Web.UI.IAttributeAccessor.GetAttribute%2A> Methode.  
+  
+ [!code-csharp[IAttributeAccessor_Sample#3](~/samples/snippets/csharp/VS_Snippets_WebNet/IAttributeAccessor_Sample/CS/iattributeaccessor.cs#3)]
+ [!code-vb[IAttributeAccessor_Sample#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/IAttributeAccessor_Sample/VB/iattributeaccessor.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAttribute">
+      <MemberSignature Language="C#" Value="public void SetAttribute (string key, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetAttribute(string key, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IAttributeAccessor.SetAttribute(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Name des Attributs festgelegt werden.</param>
+        <param name="value">Der Wert, der dem Attribut zugewiesen ist.</param>
+        <summary>Bei der Implementierung durch eine Klasse kennzeichnet ein Attribut und seinen Wert der ASP.NET-Serversteuerelement zuweisen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht eine mögliche Implementierung der <xref:System.Web.UI.IAttributeAccessor.SetAttribute%2A> Methode.  
+  
+ [!code-csharp[IAttributeAccessor_Sample#2](~/samples/snippets/csharp/VS_Snippets_WebNet/IAttributeAccessor_Sample/CS/iattributeaccessor.cs#2)]
+ [!code-vb[IAttributeAccessor_Sample#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/IAttributeAccessor_Sample/VB/iattributeaccessor.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

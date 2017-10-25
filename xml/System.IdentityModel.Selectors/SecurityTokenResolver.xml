@@ -1,0 +1,393 @@
+<Type Name="SecurityTokenResolver" FullName="System.IdentityModel.Selectors.SecurityTokenResolver">
+  <TypeSignature Language="C#" Value="public abstract class SecurityTokenResolver" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SecurityTokenResolver extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Selectors.SecurityTokenResolver" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Dienstprogrammklasse dar, die Sicherheitstoken oder Schlüssel abrufen kann, wenn ein Schlüsselbezeichner oder eine Schlüsselbezeichnerklausel vorliegt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.IdentityModel.Selectors.SecurityTokenResolver>-Klasse, um einen Schlüssel oder ein Sicherheitstoken abzurufen, wenn ein Schlüsselbezeichner oder eine Schlüsselbezeichnerklausel vorliegt. Die <xref:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveToken%2A>-Methode und die <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveToken%2A>-Methode rufen einen Sicherheitstoken ab, wenn ein Schlüsselbezeichner oder eine Schlüsselbezeichnerklausel vorliegt. Die <xref:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveSecurityKey%2A>-Methode und die <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveSecurityKey%2A>-Methode rufen einen Schlüssel ab, sofern eine Schlüsselbezeichnerklausel vorliegt. Die Methoden mit einem `Try`-Präfix geben `false` zurück, wenn das Abrufen nicht erfolgreich ist. Die Methoden ohne einen `Try`-Präfix lösen hingegen eine Ausnahme aus.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SecurityTokenResolver ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenResolver.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Selectors.SecurityTokenResolver" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDefaultSecurityTokenResolver">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Selectors.SecurityTokenResolver CreateDefaultSecurityTokenResolver (System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Tokens.SecurityToken&gt; tokens, bool canMatchLocalId);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Selectors.SecurityTokenResolver CreateDefaultSecurityTokenResolver(class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.IdentityModel.Tokens.SecurityToken&gt; tokens, bool canMatchLocalId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenResolver.CreateDefaultSecurityTokenResolver(System.Collections.ObjectModel.ReadOnlyCollection{System.IdentityModel.Tokens.SecurityToken},System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Selectors.SecurityTokenResolver</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tokens" Type="System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Tokens.SecurityToken&gt;" />
+        <Parameter Name="canMatchLocalId" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="tokens">Eine <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> des Typs <see cref="T:System.IdentityModel.Tokens.SecurityToken" />, die die Gruppe von Sicherheitstoken enthält, für die dieser Resolver Schlüsselbezeichner und Schlüsselbezeichnerklauseln auflösen kann.</param>
+        <param name="canMatchLocalId">
+          <see langword="true" />, um die <see langword="&lt;SecurityTokenReference&gt;" />-Schlüsselbezeichnerklauseln aufzulösen, die auf einen Sicherheitsschlüssel verweisen, der an anderer Stelle in der SOAP-Nachricht enthalten ist, andernfalls <see langword="false" />.</param>
+        <summary>Erstellt einen Standard-Resolver für die angegebenen Sicherheitstoken.</summary>
+        <returns>Ein <see cref="T:System.IdentityModel.Selectors.SecurityTokenResolver" />, der Schlüsselbezeichner und Schlüsselbezeichnerklauseln auflöst, die den im <paramref name="tokens" />-Parameter angegebenen Sicherheitstoken entsprechen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Sicherheitstoken-Resolver, der von dieser Methode zurückgegeben wird, verwendet die <xref:System.IdentityModel.Tokens.SecurityToken.MatchesKeyIdentifierClause%2A>-Methode und die <xref:System.IdentityModel.Tokens.SecurityToken.ResolveKeyIdentifierClause%2A>-Methode für die angegebenen Sicherheitstoken, um Schlüsselbezeichner und Schlüsselbezeichnerklauseln aufzulösen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadCustomConfiguration">
+      <MemberSignature Language="C#" Value="public virtual void LoadCustomConfiguration (System.Xml.XmlNodeList nodelist);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LoadCustomConfiguration(class System.Xml.XmlNodeList nodelist) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenResolver.LoadCustomConfiguration(System.Xml.XmlNodeList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nodelist" Type="System.Xml.XmlNodeList" />
+      </Parameters>
+      <Docs>
+        <param name="nodelist">Die benutzerdefinierte Konfiguration-Elemente.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse lädt benutzerdefinierte Konfiguration aus XML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Löst standardmäßig eine <xref:System.NotImplementedException>. Sie können diese Methode, um die Funktionalität in einer abgeleiteten Klasse überschreiben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveSecurityKey">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityKey ResolveSecurityKey (System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IdentityModel.Tokens.SecurityKey ResolveSecurityKey(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveSecurityKey(System.IdentityModel.Tokens.SecurityKeyIdentifierClause)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifierClause">Ein <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> , den Schlüssel für abzurufen.</param>
+        <summary>Erhält den Schlüssel, auf den in der angegebenen Schlüsselbezeichnerklausel verwiesen wird.</summary>
+        <returns>Ein <see cref="T:System.IdentityModel.Tokens.SecurityKey" />, auf den in der angegebenen Schlüsselbezeichnerklausel verwiesen wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveSecurityKey%2A>-Methode und die <xref:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveSecurityKey%2A>-Methode unterscheiden sich darin, was geschieht, wenn die Schlüsselbezeichnerklausel nicht in einen Schlüssel aufgelöst werden kann. Die <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveSecurityKey%2A>-Methode gibt `false` zurück, während die <xref:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveSecurityKey%2A>-Methode eine Ausnahme auslöst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyIdentifierClause" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Ein Schlüssel konnte für die im <paramref name="keyIdentifierClause" />-Parameter angegebene Schlüsselbezeichnerklausel nicht abgerufen werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveToken">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityToken ResolveToken (System.IdentityModel.Tokens.SecurityKeyIdentifier keyIdentifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IdentityModel.Tokens.SecurityToken ResolveToken(class System.IdentityModel.Tokens.SecurityKeyIdentifier keyIdentifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveToken(System.IdentityModel.Tokens.SecurityKeyIdentifier)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifier" Type="System.IdentityModel.Tokens.SecurityKeyIdentifier" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifier">Die <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifier" /> für ein Sicherheitstoken zu erstellen.</param>
+        <summary>Ruft ein Sicherheitstoken ab, das einer der Schlüsselbezeichnerklauseln entspricht, die im angegebenen Schlüsselbezeichner enthalten sind.</summary>
+        <returns>Ein <see cref="T:System.IdentityModel.Tokens.SecurityToken" />, das den angegebenen Schlüsselbezeichner darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveToken%2A>-Methode und die <xref:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveToken%2A>-Methode unterscheiden sich darin, was geschieht, wenn der Schlüsselbezeichner nicht in ein Sicherheitstoken aufgelöst werden kann. Die <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveToken%2A>-Methode gibt `false` zurück, während die <xref:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveToken%2A>-Methode eine Ausnahme auslöst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyIdentifier" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Ein Sicherheitstoken kann nicht für den angegebenen Schlüsselbezeichner erstellt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveToken">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityToken ResolveToken (System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IdentityModel.Tokens.SecurityToken ResolveToken(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveToken(System.IdentityModel.Tokens.SecurityKeyIdentifierClause)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifierClause">Die <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> für ein Sicherheitstoken zu erstellen.</param>
+        <summary>Ruft das Sicherheitstoken ab, das der angegebenen Schlüsselbezeichnerklausel entspricht.</summary>
+        <returns>Ein <see cref="T:System.IdentityModel.Tokens.SecurityToken" />, das die angegebene Schlüsselbezeichnerklausel darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveToken%2A>-Methode und die <xref:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveToken%2A>-Methode unterscheiden sich darin, was geschieht, wenn die Schlüsselbezeichnerklausel nicht in ein Sicherheitstoken aufgelöst werden kann. Die <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveToken%2A>-Methode gibt `false` zurück, während die <xref:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveToken%2A>-Methode eine Ausnahme auslöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryResolveSecurityKey">
+      <MemberSignature Language="C#" Value="public bool TryResolveSecurityKey (System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause, out System.IdentityModel.Tokens.SecurityKey key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryResolveSecurityKey(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause, [out] class System.IdentityModel.Tokens.SecurityKey&amp; key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveSecurityKey(System.IdentityModel.Tokens.SecurityKeyIdentifierClause,System.IdentityModel.Tokens.SecurityKey@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+        <Parameter Name="key" Type="System.IdentityModel.Tokens.SecurityKey&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifierClause">Ein <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> , den Schlüssel für abzurufen.</param>
+        <param name="key">Diese Methode gibt eine <see cref="T:System.IdentityModel.Tokens.SecurityKey" /> zurück, die den Schlüssel enthält, auf den in der angegebenen Schlüsselbezeichnerklausel verwiesen wird. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Versucht, den Schlüssel abzurufen, auf den in der angegebenen Schlüsselbezeichnerklausel verwiesen wird.</summary>
+        <returns>
+          <see langword="true" />, wenn ein Schlüssel für die angegebene Schlüsselbezeichnerklausel abgerufen werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveSecurityKey%2A>-Methode und die <xref:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveSecurityKey%2A>-Methode unterscheiden sich darin, was geschieht, wenn die Schlüsselbezeichnerklausel nicht in einen Schlüssel aufgelöst werden kann. Die <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveSecurityKey%2A>-Methode gibt `false` zurück, während die <xref:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveSecurityKey%2A>-Methode eine Ausnahme auslöst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyIdentifierClause" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryResolveSecurityKeyCore">
+      <MemberSignature Language="C#" Value="protected abstract bool TryResolveSecurityKeyCore (System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause, out System.IdentityModel.Tokens.SecurityKey key);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool TryResolveSecurityKeyCore(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause, [out] class System.IdentityModel.Tokens.SecurityKey&amp; key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveSecurityKeyCore(System.IdentityModel.Tokens.SecurityKeyIdentifierClause,System.IdentityModel.Tokens.SecurityKey@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+        <Parameter Name="key" Type="System.IdentityModel.Tokens.SecurityKey&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifierClause">Ein <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> , den Schlüssel für abzurufen.</param>
+        <param name="key">Diese Methode gibt eine <see cref="T:System.IdentityModel.Tokens.SecurityKey" /> zurück, die den Schlüssel enthält, auf den in der angegebenen Schlüsselbezeichnerklausel verwiesen wird. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Versucht, den Schlüssel abzurufen, auf den in der angegebenen Schlüsselbezeichnerklausel verwiesen wird.</summary>
+        <returns>
+          <see langword="true" />, wenn ein Schlüssel für die angegebene Schlüsselbezeichnerklausel abgerufen werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveSecurityKeyCore%2A>-Methode wird von der <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveSecurityKey%2A>-Methode und der <xref:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveSecurityKey%2A>-Methode aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryResolveToken">
+      <MemberSignature Language="C#" Value="public bool TryResolveToken (System.IdentityModel.Tokens.SecurityKeyIdentifier keyIdentifier, out System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryResolveToken(class System.IdentityModel.Tokens.SecurityKeyIdentifier keyIdentifier, [out] class System.IdentityModel.Tokens.SecurityToken&amp; token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveToken(System.IdentityModel.Tokens.SecurityKeyIdentifier,System.IdentityModel.Tokens.SecurityToken@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifier" Type="System.IdentityModel.Tokens.SecurityKeyIdentifier" />
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifier">Die <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifier" /> für ein Sicherheitstoken zu erstellen.</param>
+        <param name="token">Diese Methode gibt ein <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> zurück, das den angegebenen Schlüsselbezeichner darstellt. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Versucht, das Sicherheitstoken abzurufen, das einem der Schlüsselbezeichnerklauseln entspricht, die im angegebenen Schlüsselbezeichner enthalten sind.</summary>
+        <returns>
+          <see langword="true" />, wenn ein Sicherheitstoken für den angegebenen Schlüsselbezeichner abgerufen werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveToken%2A>-Methode und die <xref:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveToken%2A>-Methode unterscheiden sich darin, was geschieht, wenn der Schlüsselbezeichner nicht in ein Sicherheitstoken aufgelöst werden kann. Die <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveToken%2A>-Methode gibt `false` zurück, während die <xref:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveToken%2A>-Methode eine Ausnahme auslöst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyIdentifier" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryResolveToken">
+      <MemberSignature Language="C#" Value="public bool TryResolveToken (System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause, out System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryResolveToken(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause, [out] class System.IdentityModel.Tokens.SecurityToken&amp; token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveToken(System.IdentityModel.Tokens.SecurityKeyIdentifierClause,System.IdentityModel.Tokens.SecurityToken@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifierClause">Die <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> für ein Sicherheitstoken zu erstellen.</param>
+        <param name="token">Diese Methode gibt ein <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> zurück, das die angegebene Schlüsselbezeichnerklausel darstellt. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Versucht, das Sicherheitstoken abzurufen, das der angegebenen Schlüsselbezeichnerklausel entspricht.</summary>
+        <returns>
+          <see langword="true" />, wenn ein Sicherheitstoken für die angegebene Schlüsselbezeichnerklausel abgerufen werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveToken%2A>-Methode und die <xref:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveToken%2A>-Methode unterscheiden sich darin, was geschieht, wenn die Schlüsselbezeichnerklausel nicht in ein Sicherheitstoken aufgelöst werden kann. Die <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveToken%2A>-Methode gibt `false` zurück, während die <xref:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveToken%2A>-Methode eine Ausnahme auslöst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyIdentifierClause" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryResolveTokenCore">
+      <MemberSignature Language="C#" Value="protected abstract bool TryResolveTokenCore (System.IdentityModel.Tokens.SecurityKeyIdentifier keyIdentifier, out System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool TryResolveTokenCore(class System.IdentityModel.Tokens.SecurityKeyIdentifier keyIdentifier, [out] class System.IdentityModel.Tokens.SecurityToken&amp; token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveTokenCore(System.IdentityModel.Tokens.SecurityKeyIdentifier,System.IdentityModel.Tokens.SecurityToken@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifier" Type="System.IdentityModel.Tokens.SecurityKeyIdentifier" />
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifier">Die <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifier" /> für ein Sicherheitstoken zu erstellen.</param>
+        <param name="token">Diese Methode gibt ein <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> zurück, das den angegebenen Schlüsselbezeichner darstellt. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Versucht, beim Überschreiben in einer abgeleiteten Klasse das Sicherheitstoken abzurufen, das mindestens einer der Schlüsselbezeichnerklauseln entspricht, die im angegebenen Schlüsselbezeichner enthalten sind.</summary>
+        <returns>
+          <see langword="true" />, wenn ein Sicherheitstoken für den angegebenen Schlüsselbezeichner abgerufen werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveTokenCore%2A>-Methode wird von der <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveToken%2A>-Methode und der <xref:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveToken%2A>-Methode aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryResolveTokenCore">
+      <MemberSignature Language="C#" Value="protected abstract bool TryResolveTokenCore (System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause, out System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool TryResolveTokenCore(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause, [out] class System.IdentityModel.Tokens.SecurityToken&amp; token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveTokenCore(System.IdentityModel.Tokens.SecurityKeyIdentifierClause,System.IdentityModel.Tokens.SecurityToken@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifierClause">Die <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> für ein Sicherheitstoken zu erstellen.</param>
+        <param name="token">Diese Methode gibt ein <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> zurück, das die angegebene Schlüsselbezeichnerklausel darstellt. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Versucht, beim Überschreiben in einer abgeleiteten Klasse das Sicherheitstoken aufzulösen, das der angegebenen Schlüsselbezeichnerklausel entspricht.</summary>
+        <returns>
+          <see langword="true" />, wenn ein Sicherheitstoken für die angegebene Schlüsselbezeichnerklausel abgerufen werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveTokenCore%2A>-Methode wird von der <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveToken%2A>-Methode und der <xref:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveToken%2A>-Methode aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

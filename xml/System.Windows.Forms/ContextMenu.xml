@@ -1,0 +1,399 @@
+<Type Name="ContextMenu" FullName="System.Windows.Forms.ContextMenu">
+  <TypeSignature Language="C#" Value="public class ContextMenu : System.Windows.Forms.Menu" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ContextMenu extends System.Windows.Forms.Menu" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ContextMenu" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Menu</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("Popup")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Kontextmenü dar. Obwohl <see cref="T:System.Windows.Forms.ContextMenuStrip" /> ersetzt und funktionell erweitert, um die <see cref="T:System.Windows.Forms.ContextMenu" /> -Steuerelement früherer Versionen <see cref="T:System.Windows.Forms.ContextMenu" /> wird für Abwärtskompatibilität und für zukünftige Verwendung beibehalten, falls gewünscht.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ContextMenu> Klasse darstellt, Kontextmenüs, die angezeigt werden, wenn der Benutzer mit die rechten Maustaste auf ein Steuerelement oder einen Bereich des Formulars klickt. Kontextmenüs sind in der Regel zum Kombinieren von anderen Menüelementen aus einem <xref:System.Windows.Forms.MainMenu> eines Formulars, das für den Benutzer mit dem angegebenen Kontext der Anwendung nützlich sind. Sie können z. B. ein Kontextmenü zugewiesene ein <xref:System.Windows.Forms.TextBox> Steuerelement Menüelemente, die für das Ändern der Schriftart des Texts, Suchen nach Text innerhalb des Steuerelements oder Zwischenablage Funktionen zum Kopieren und Einfügen von Text bereitstellen. Sie können auch neue anzeigen <xref:System.Windows.Forms.MenuItem> Objekte in ein Kontextmenü aufrufen, die nicht in einer <xref:System.Windows.Forms.MainMenu> Situation bestimmte Befehle bereitstellen, die für nicht geeignet sind die <xref:System.Windows.Forms.MainMenu> angezeigt.  
+  
+ In der Regel wird ein Kontextmenü angezeigt, wenn ein Benutzer über ein Steuerelement oder des Formulars auf die rechten Maustaste klickt. Sichtbare Steuerelemente und <xref:System.Windows.Forms.Form> haben eine <xref:System.Windows.Forms.Control.ContextMenu%2A> -Eigenschaft, die bindet die <xref:System.Windows.Forms.ContextMenu> Klasse, um das Steuerelement, das Kontextmenü anzeigt. Es können mehr als ein Steuerelement einen <xref:System.Windows.Forms.ContextMenu>. Sie können die <xref:System.Windows.Forms.ContextMenu.SourceControl%2A> -Eigenschaft können Sie bestimmen, welches Steuerelement zuletzt im Kontextmenü angezeigt, um die Aufgaben, die speziell für das Steuerelement ausführen oder ändern Sie das Kontextmenü für das Steuerelement angezeigt.  
+  
+ Möglicherweise möchten wissen, wann das Kontextmenü angezeigt wird, um Häkchen wird festgelegt, deaktivieren die Elemente und andere Menüaufgaben ausführen, bevor der Benutzer im Menü angezeigt wird. Sie können behandeln die <xref:System.Windows.Forms.ContextMenu.Popup> Ereignis, um zu bestimmen, wann das Kontextmenü angezeigt wird.  
+  
+> [!NOTE]
+>  Um wiederverwenden <xref:System.Windows.Forms.MenuItem> Objekte, die in angezeigt werden eine <xref:System.Windows.Forms.MainMenu> für die Verwendung in einer <xref:System.Windows.Forms.ContextMenu>, müssen Sie eine Kopie der Verwendung der im Menü erstellen die <xref:System.Windows.Forms.MenuItem.CloneMenu%2A> Methode der <xref:System.Windows.Forms.MenuItem> Klasse. Außerdem das Zusammenführen von Menüelementen und ihre Untermenüelemente in einem einzelnen <xref:System.Windows.Forms.MenuItem> -Objekt unter Verwendung der <xref:System.Windows.Forms.MenuItem.MergeMenu%2A> Methode der <xref:System.Windows.Forms.MenuItem> Klasse.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt einen Ereignishandler für das <xref:System.Windows.Forms.ContextMenu.Popup> -Ereignis für die <xref:System.Windows.Forms.ContextMenu>. Der Code im Ereignishandler bestimmt, welche von zwei Steuerelementen eine <xref:System.Windows.Forms.PictureBox> mit dem Namen `pictureBox1` und ein <xref:System.Windows.Forms.TextBox> mit dem Namen `textBox1` ist das Steuerelement, das Anzeigen des Kontextmenüs. Je nachdem welches Steuerelement verursacht die <xref:System.Windows.Forms.ContextMenu> um das Kontextmenü anzuzeigen, fügt das Steuerelement die entsprechenden <xref:System.Windows.Forms.MenuItem> -Objekte und die <xref:System.Windows.Forms.ContextMenu>. Dieses Beispiel benötigen Sie eine Instanz von der <xref:System.Windows.Forms.ContextMenu> Klasse, mit dem Namen `contextMenu1`im Formular definiert. In diesem Beispiel erfordert auch, dass Sie haben eine <xref:System.Windows.Forms.TextBox> und <xref:System.Windows.Forms.PictureBox> hinzugefügt werden, ein Formular und die <xref:System.Windows.Forms.Control.ContextMenu%2A> dieser Steuerelemente wird-Eigenschaftensatz auf `contextMenu1`.  
+  
+ [!code-cpp[Classic ContextMenu Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ContextMenu Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ContextMenu Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ContextMenu Example/CS/source.cs#1)]
+ [!code-vb[Classic ContextMenu Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ContextMenu Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContextMenu ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ContextMenu.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.ContextMenu" /> Klasse ohne Menüelementen angegeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nachdem Sie diese Version des Konstruktors verwendet haben, können Sie Menüelemente hinzufügen der <xref:System.Windows.Forms.ContextMenu> mithilfe der <xref:System.Windows.Forms.Menu.MenuItemCollection.Add%2A> Methode der <xref:System.Windows.Forms.Menu.MenuItemCollection> Klasse. Sie können den Zugriff auf die <xref:System.Windows.Forms.Menu.MenuItemCollection> über die <xref:System.Windows.Forms.Menu.MenuItems%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContextMenu (System.Windows.Forms.MenuItem[] menuItems);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.MenuItem[] menuItems) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ContextMenu.#ctor(System.Windows.Forms.MenuItem[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="menuItems" Type="System.Windows.Forms.MenuItem[]" />
+      </Parameters>
+      <Docs>
+        <param name="menuItems">Ein Array von <see cref="T:System.Windows.Forms.MenuItem" /> Objekte, die die Menüelemente im Kontextmenü hinzuzufügende darstellen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.ContextMenu" /> Klasse mit einem angegebenen Satz von <see cref="T:System.Windows.Forms.MenuItem" /> Objekte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Version des Konstruktors zum Erstellen einer <xref:System.Windows.Forms.ContextMenu> , die die Menüelemente, die bei der Erstellung angegeben wurde. Nachdem Sie diese Version des Konstruktors verwendet haben, können Sie zusätzliche Menüelemente hinzufügen der <xref:System.Windows.Forms.ContextMenu> mithilfe der <xref:System.Windows.Forms.Menu.MenuItemCollection.Add%2A> Methode der <xref:System.Windows.Forms.Menu.MenuItemCollection> Klasse. Sie können den Zugriff auf die <xref:System.Windows.Forms.Menu.MenuItemCollection> über die <xref:System.Windows.Forms.Menu.MenuItems%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, erstellen ein Kontextmenü aufrufen und mithilfe der <xref:System.Windows.Forms.ContextMenu.Show%2A> Methode. Fügen Sie zum Ausführen des Beispiels den folgenden Code in ein Formular mit einer Schaltfläche Button1. Stellen Sie sicher, dass alle Ereignisse ihre Ereignisbehandlungsmethoden zugeordnet sind.  
+  
+ [!code-cpp[System.Windows.Forms.ManualContextMenu#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ManualContextMenu/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ManualContextMenu#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ManualContextMenu/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ManualContextMenu#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ManualContextMenu/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Collapse">
+      <MemberSignature Language="C#" Value="public event EventHandler Collapse;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Collapse" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ContextMenu.Collapse" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn das Kontextmenü geschlossen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ContextMenu.Collapse> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.ContextMenu> mit dem Namen `ContextMenu1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ContextMenu.Collapse> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#170](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#170)]
+ [!code-vb[System.Windows.Forms.EventExamples#170](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#170)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCollapse">
+      <MemberSignature Language="C#" Value="protected virtual void OnCollapse (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void OnCollapse(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ContextMenu.OnCollapse(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.ContextMenu.Collapse" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPopup">
+      <MemberSignature Language="C#" Value="protected virtual void OnPopup (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void OnPopup(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ContextMenu.OnPopup(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.ContextMenu.Popup" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Popup">
+      <MemberSignature Language="C#" Value="public event EventHandler Popup;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Popup" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ContextMenu.Popup" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, bevor das Kontextmenü angezeigt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie dieses Ereignis zum Initialisieren der <xref:System.Windows.Forms.MenuItem> Objekte, bevor sie angezeigt werden. Angenommen, Sie verwenden eine <xref:System.Windows.Forms.ContextMenu> für drei <xref:System.Windows.Forms.TextBox> Steuerelemente, und bestimmte Menüelemente im deaktivieren möchten die <xref:System.Windows.Forms.ContextMenu> je nachdem, welche <xref:System.Windows.Forms.TextBox> wird zum Anzeigen von im Kontextmenü können Sie einen Ereignishandler für dieses Ereignis erstellen. Können Sie die <xref:System.Windows.Forms.ContextMenu.SourceControl%2A> Eigenschaft ermitteln, welche <xref:System.Windows.Forms.TextBox> angezeigt wird der <xref:System.Windows.Forms.ContextMenu> und deaktivieren Sie das entsprechende <xref:System.Windows.Forms.MenuItem> Objekte.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt einen Ereignishandler für das <xref:System.Windows.Forms.ContextMenu.Popup> -Ereignis für die <xref:System.Windows.Forms.ContextMenu>. Der Code im Ereignishandler bestimmt, welche von zwei Steuerelementen eine <xref:System.Windows.Forms.PictureBox> mit dem Namen `pictureBox1` und ein <xref:System.Windows.Forms.TextBox> mit dem Namen `textBox1` ist das Steuerelement, das Anzeigen des Kontextmenüs. Je nachdem welches Steuerelement verursacht die <xref:System.Windows.Forms.ContextMenu> um das Kontextmenü anzuzeigen, fügt das Steuerelement die entsprechenden <xref:System.Windows.Forms.MenuItem> -Objekte und die <xref:System.Windows.Forms.ContextMenu>. Dieses Beispiel benötigen Sie eine Instanz von der <xref:System.Windows.Forms.ContextMenu> Klasse, mit dem Namen `contextMenu1`im Formular definiert. In diesem Beispiel erfordert auch, dass Sie haben eine <xref:System.Windows.Forms.TextBox> und <xref:System.Windows.Forms.PictureBox> hinzugefügt werden, ein Formular und die <xref:System.Windows.Forms.Control.ContextMenu%2A> dieser Steuerelemente wird-Eigenschaftensatz auf `contextMenu1`.  
+  
+ [!code-cpp[Classic ContextMenu Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ContextMenu Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ContextMenu Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ContextMenu Example/CS/source.cs#1)]
+ [!code-vb[Classic ContextMenu Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ContextMenu Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessCmdKey">
+      <MemberSignature Language="C#" Value="protected virtual bool ProcessCmdKey (ref System.Windows.Forms.Message msg, System.Windows.Forms.Keys keyData, System.Windows.Forms.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool ProcessCmdKey(valuetype System.Windows.Forms.Message&amp; msg, valuetype System.Windows.Forms.Keys keyData, class System.Windows.Forms.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ContextMenu.ProcessCmdKey(System.Windows.Forms.Message@,System.Windows.Forms.Keys,System.Windows.Forms.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+        <Parameter Name="keyData" Type="System.Windows.Forms.Keys" />
+        <Parameter Name="control" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="msg">Eine als Verweis übergebene <see cref="T:System.Windows.Forms.Message" />, die die zu verarbeitende Fenstermeldung darstellt.</param>
+        <param name="keyData">Einer der <see cref="T:System.Windows.Forms.Keys" />-Werte, die die zu verarbeitende Taste darstellen.</param>
+        <param name="control">Das Steuerelement, auf das die Befehlstaste angewendet wird.</param>
+        <summary>Verarbeitet eine Befehlstaste.</summary>
+        <returns>
+          <see langword="true" />, wenn das Zeichen vom Steuerelement verarbeitet wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, während der Nachricht vorverarbeitung zum Befehl Schlüssel behandelt. Befehl Schlüssel sind Schlüssel, die immer Vorrang gegenüber regulären Eingabetasten besitzen. Beispiele für Befehl Schlüssel sind im Menü Tastenkombinationen und Zugriffstasten. Die Methode muss zurückgeben `true` , um anzugeben, dass die Befehlstaste verarbeitet wurde oder `false` , um anzugeben, dass der Schlüssel keine Befehlstaste. Diese Methode wird nur aufgerufen, wenn das Steuerelement in Windows Forms-Anwendung oder als ein ActiveX-Steuerelement gehostet wird.  
+  
+ Die <xref:System.Windows.Forms.ContextMenu.ProcessCmdKey%2A> Methode zunächst ermittelt, ob das Steuerelement hat eine <xref:System.Windows.Forms.ContextMenu>, und wenn dies der Fall ist, können Sie mit der <xref:System.Windows.Forms.ContextMenu> die Befehlstaste verarbeitet. Wenn die Befehlstaste keine Verknüpfung im und das Steuerelement ein übergeordnetes Element besitzt, wird der Schlüssel mit dem übergeordneten übergeben <xref:System.Windows.Forms.ContextMenu.ProcessCmdKey%2A> Methode. Im Endeffekt ist dieses Befehls mit dem Schlüssel "der Steuerelementhierarchie nach oben weitergegeben werden". Zusätzlich zu dem Schlüssel, die der Benutzer geklickt hat, die Schlüsseldaten gibt außerdem an, die ggf. auf Modifizierertasten wurden zur gleichen Zeit wie der Schlüssel. Modifizierertasten einschließen UMSCHALTTASTE, STRG und ALT-Tasten  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den unmittelbaren Aufrufer zum Aufrufen von nicht verwalteten Codes. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben der <see cref="M:System.Windows.Forms.Control.ProcessCmdKey(System.Windows.Forms.Message@,System.Windows.Forms.Keys)" /> Methode in einer abgeleiteten Klasse ein Steuerelement sollte zurückgeben <see langword="true" /> um anzugeben, dass sie die Taste verarbeitet wurde. Für Schlüssel, die vom Steuerelement, das Ergebnis des Aufrufs der Basisklasse nicht verarbeitet werden <see cref="M:System.Windows.Forms.Control.ProcessCmdKey(System.Windows.Forms.Message@,System.Windows.Forms.Keys)" /> Methode zurückgegeben werden soll. Steuerelemente nur in seltenen Fällen, müssen wenn überhaupt, diese Methode überschreiben.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RightToLeft">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.RightToLeft RightToLeft { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.RightToLeft RightToLeft" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ContextMenu.RightToLeft" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.RightToLeft</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Text vom Steuerelement von rechts nach links angezeigt wird, oder legt diesen fest.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.RightToLeft" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ermöglicht die Menüs Sprachen unterstützen, die von rechts nach links geschrieben werden. Wenn diese Eigenschaft festgelegt wird, um `RightToLeft.Yes`, der Menüelementtext wird von rechts nach links anstelle des Standardwerts von links nach rechts angezeigt.  
+  
+> [!NOTE]
+>  Weitere Informationen dazu, wie Windows Forms-Steuerelemente Ausrichtung von rechts nach Links zu aktivieren auswirkt, finden Sie unter der <xref:System.Windows.Forms.Control.RightToLeft%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der Wert der Eigenschaft zugewiesen ist nicht als gültiges Element der der <see cref="T:System.Windows.Forms.RightToLeft" /> Enumeration.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public void Show (System.Windows.Forms.Control control, System.Drawing.Point pos);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Show(class System.Windows.Forms.Control control, valuetype System.Drawing.Point pos) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ContextMenu.Show(System.Windows.Forms.Control,System.Drawing.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Windows.Forms.Control" />
+        <Parameter Name="pos" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="control">Ein <see cref="T:System.Windows.Forms.Control" /> , die angibt, dass des Steuerelements, dem dieses Kontextmenü zugeordnet ist.</param>
+        <param name="pos">Ein <see cref="T:System.Drawing.Point" /> , die angibt, dass der Koordinaten, an der Sie im Menü angezeigt. Diese Koordinaten werden relativ zu der Clientkoordinaten des Steuerelements im angegebenen angegeben die <c>Steuerelement</c> Parameter.</param>
+        <summary>Zeigt das Kontextmenü an der angegebenen Position an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel eine <xref:System.Windows.Forms.ContextMenu> wird angezeigt, wenn der Benutzer mit der rechten Maustaste auf ein Steuerelement oder einen Bereich des Formulars klickt, die die <xref:System.Windows.Forms.ContextMenu> gebunden ist. Verwenden Sie diese Methode manuell im Kontextmenü an einer bestimmten Position anzuzeigen und mit einem bestimmten Steuerelement gebunden. Diese Methode gibt keinen zurück, bis das Menü geschlossen wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, erstellen ein Kontextmenü aufrufen und mithilfe der <xref:System.Windows.Forms.ContextMenu.Show%2A> Methode. Fügen Sie zum Ausführen des Beispiels den folgenden Code in ein Formular mit einer Schaltfläche Button1. Stellen Sie sicher, dass alle Ereignisse ihre Ereignisbehandlungsmethoden zugeordnet sind.  
+  
+ [!code-cpp[System.Windows.Forms.ManualContextMenu#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ManualContextMenu/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ManualContextMenu#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ManualContextMenu/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ManualContextMenu#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ManualContextMenu/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="control" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Das Handle des Steuerelements nicht vorhanden, oder das Steuerelement ist nicht sichtbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public void Show (System.Windows.Forms.Control control, System.Drawing.Point pos, System.Windows.Forms.LeftRightAlignment alignment);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Show(class System.Windows.Forms.Control control, valuetype System.Drawing.Point pos, valuetype System.Windows.Forms.LeftRightAlignment alignment) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ContextMenu.Show(System.Windows.Forms.Control,System.Drawing.Point,System.Windows.Forms.LeftRightAlignment)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Windows.Forms.Control" />
+        <Parameter Name="pos" Type="System.Drawing.Point" />
+        <Parameter Name="alignment" Type="System.Windows.Forms.LeftRightAlignment" />
+      </Parameters>
+      <Docs>
+        <param name="control">Ein <see cref="T:System.Windows.Forms.Control" /> , die angibt, dass des Steuerelements, dem dieses Kontextmenü zugeordnet ist.</param>
+        <param name="pos">Ein <see cref="T:System.Drawing.Point" /> , die angibt, dass der Koordinaten, an der Sie im Menü angezeigt. Diese Koordinaten werden relativ zu der Clientkoordinaten des Steuerelements im angegebenen angegeben die <c>Steuerelement</c> Parameter.</param>
+        <param name="alignment">Ein <see cref="T:System.Windows.Forms.LeftRightAlignment" /> , angibt, dass die Ausrichtung des Steuerelements relativ zu den <c>pos</c> Parameter.</param>
+        <summary>Zeigt das Kontextmenü an der angegebenen Position und mit der angegebenen Ausrichtung an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceControl">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Control SourceControl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Control SourceControl" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ContextMenu.SourceControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Steuerelement ab, das das Kontextmenü anzeigt.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.Control" /> , die das Steuerelement, das das Kontextmenü anzeigt darstellt. Wenn kein Steuerelement das Kontextmenü angezeigt hat, gibt die Eigenschaft <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ermöglicht Ihnen, um zu bestimmen, welches Steuerelement derzeit zeigt das Kontextmenü in definiert die <xref:System.Windows.Forms.ContextMenu>. Wenn Sie im Kontextmenü derzeit nicht angezeigt wird, können Sie diese Eigenschaft verwenden, um zu bestimmen, welches Steuerelement zuletzt im Kontextmenü angezeigt. Sie können diese Eigenschaft in der <xref:System.Windows.Forms.ContextMenu.Popup> Ereignis, um sicherzustellen, dass das Steuerelement die richtigen Menüelemente angezeigt. Diese Eigenschaft können auch einen Verweis auf das Steuerelement an eine Methode übergeben, die die Aufgaben im Zusammenhang mit einem Menübefehl im Kontextmenü angezeigt wird. Da die <xref:System.Windows.Forms.Form> Klasse erbt von <xref:System.Windows.Forms.Control>, Sie können diese Eigenschaft auch verwenden, wenn die <xref:System.Windows.Forms.ContextMenu> eines Formulars zugeordnet ist.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt einen Ereignishandler für das <xref:System.Windows.Forms.ContextMenu.Popup> -Ereignis für die <xref:System.Windows.Forms.ContextMenu>. Der Code im Ereignishandler bestimmt, welche von zwei Steuerelementen eine <xref:System.Windows.Forms.PictureBox> mit dem Namen `pictureBox1` und ein <xref:System.Windows.Forms.TextBox> mit dem Namen `textBox1` ist das Steuerelement, das Anzeigen des Kontextmenüs. Je nachdem welches Steuerelement verursacht die <xref:System.Windows.Forms.ContextMenu> um das Kontextmenü anzuzeigen, fügt das Steuerelement die entsprechenden <xref:System.Windows.Forms.MenuItem> -Objekte und die <xref:System.Windows.Forms.ContextMenu>. Dieses Beispiel benötigen Sie eine Instanz von der <xref:System.Windows.Forms.ContextMenu> Klasse, mit dem Namen `contextMenu1`im Formular definiert. In diesem Beispiel erfordert auch, dass Sie haben eine <xref:System.Windows.Forms.TextBox> und <xref:System.Windows.Forms.PictureBox> hinzugefügt werden, ein Formular und die <xref:System.Windows.Forms.Control.ContextMenu%2A> dieser Steuerelemente wird-Eigenschaftensatz auf `contextMenu1`.  
+  
+ [!code-cpp[Classic ContextMenu Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ContextMenu Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ContextMenu Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ContextMenu Example/CS/source.cs#1)]
+ [!code-vb[Classic ContextMenu Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ContextMenu Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

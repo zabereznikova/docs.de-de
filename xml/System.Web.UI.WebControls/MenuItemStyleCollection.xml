@@ -1,0 +1,381 @@
+<Type Name="MenuItemStyleCollection" FullName="System.Web.UI.WebControls.MenuItemStyleCollection">
+  <TypeSignature Language="C#" Value="public sealed class MenuItemStyleCollection : System.Web.UI.StateManagedCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MenuItemStyleCollection extends System.Web.UI.StateManagedCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.MenuItemStyleCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.StateManagedCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Auflistung von <see cref="T:System.Web.UI.WebControls.MenuItemStyle" />-Objekten in einem <see cref="T:System.Web.UI.WebControls.Menu" />-Steuerelement dar. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.MenuItemStyleCollection> Klasse dient zum Speichern und verwalten eine Auflistung von <xref:System.Web.UI.WebControls.MenuItemStyle> Objekte in einem <xref:System.Web.UI.WebControls.Menu> Steuerelement. Die <xref:System.Web.UI.WebControls.Menu> steuern verwendet der <xref:System.Web.UI.WebControls.MenuItemStyleCollection> Klasse mit der zugrunde liegenden Datentyp, der die <xref:System.Web.UI.WebControls.Menu.LevelMenuItemStyles%2A> und <xref:System.Web.UI.WebControls.Menu.LevelSelectedStyles%2A> Eigenschaften.  
+  
+ Die <xref:System.Web.UI.WebControls.Menu.LevelMenuItemStyles%2A> und <xref:System.Web.UI.WebControls.Menu.LevelSelectedStyles%2A> Eigenschaften stellen eine Alternative zu den einzelnen Formateigenschaften (z. B. <xref:System.Web.UI.WebControls.Menu.StaticMenuItemStyle%2A>). Diese Eigenschaften werden jeweils auf reguläre Menüelemente und das ausgewählte Menüelement angewendet basierend auf das Menüelement im Menü. Das erste Format in der Auflistung entspricht das Menüelementformat für die erste Ebene des Menüs. Das zweite Format in der Auflistung entspricht das Menüelementformat für die zweite Ebene des Menüs und So weiter. Die <xref:System.Web.UI.WebControls.Menu.LevelMenuItemStyles%2A> und <xref:System.Web.UI.WebControls.Menu.LevelSelectedStyles%2A> Eigenschaften werden am häufigsten zum Generieren von Menüs, unabhängig davon, ob diese Untermenüs haben die gleiche Darstellung haben Menüelemente auf einer bestimmten Ebene.  
+  
+ Die <xref:System.Web.UI.WebControls.MenuItemStyleCollection> Klasse erbt die meisten ihrer Member aus der <xref:System.Web.UI.StateManagedCollection> Klasse. Weitere Informationen zu geerbten Membern finden Sie unter <xref:System.Web.UI.StateManagedCollection>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.MenuItemStyleCollection> Klasse an, das die formateinstellungen für die Menüelemente im ein <xref:System.Web.UI.WebControls.Menu> Steuerelement basierend auf das Menüelement. In diesem Beispiel die <xref:System.Web.UI.WebControls.Menu.LevelMenuItemStyles%2A> Eigenschaft deklarativ erstellt und eine <xref:System.Web.UI.WebControls.MenuItemStyle> Objekt entfernt wird und eine andere hinzugefügt, um die <xref:System.Web.UI.WebControls.MenuItemStyleCollection> Objekt.  
+  
+ [!code-aspx-csharp[MenuItemStyleCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemStyleCollection/CS/menuitemstylecollectioncs.aspx#1)]
+ [!code-aspx-vb[MenuItemStyleCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemStyleCollection/VB/menuitemstylecollectionvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Web.UI.WebControls.MenuItemStyle style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Web.UI.WebControls.MenuItemStyle style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemStyleCollection.Add(System.Web.UI.WebControls.MenuItemStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Web.UI.WebControls.MenuItemStyle" />
+      </Parameters>
+      <Docs>
+        <param name="style">Die <see cref="T:System.Web.UI.WebControls.MenuItemStyle" /> , an das Ende der aktuellen Auflistung angefügt werden soll.</param>
+        <summary>Fügt das angegebene <see cref="T:System.Web.UI.WebControls.MenuItemStyle" /> Objekt an das Ende der aktuellen Auflistung.</summary>
+        <returns>Der nullbasierte Index des hinzugefügten <see cref="T:System.Web.UI.WebControls.MenuItemStyle" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.MenuItemStyleCollection.Add%2A> -Methode, um den angegebenen <xref:System.Web.UI.WebControls.MenuItemStyle> Objekt an das Ende der Auflistung. Als Alternative können Sie einfügen können eine <xref:System.Web.UI.WebControls.MenuItemStyle> Objekt in der Auflistung am angegebenen Index mithilfe der <xref:System.Web.UI.WebControls.MenuItemStyleCollection.Insert%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.MenuItemStyleCollection> Klasse an, das die formateinstellungen für die Menüelemente im ein <xref:System.Web.UI.WebControls.Menu> Steuerelement basierend auf das Menüelement. In diesem Beispiel die <xref:System.Web.UI.WebControls.Menu.LevelMenuItemStyles%2A> Eigenschaft deklarativ erstellt und eine <xref:System.Web.UI.WebControls.MenuItemStyle> Objekt entfernt wird und eine andere hinzugefügt, um die <xref:System.Web.UI.WebControls.MenuItemStyleCollection> Objekt.  
+  
+ [!code-aspx-csharp[MenuItemStyleCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemStyleCollection/CS/menuitemstylecollectioncs.aspx#1)]
+ [!code-aspx-vb[MenuItemStyleCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemStyleCollection/VB/menuitemstylecollectionvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Web.UI.WebControls.MenuItemStyle style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Web.UI.WebControls.MenuItemStyle style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemStyleCollection.Contains(System.Web.UI.WebControls.MenuItemStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Web.UI.WebControls.MenuItemStyle" />
+      </Parameters>
+      <Docs>
+        <param name="style">Das zu suchende <see cref="T:System.Web.UI.WebControls.MenuItemStyle" />.</param>
+        <summary>Bestimmt, ob das angegebene <see cref="T:System.Web.UI.WebControls.MenuItemStyle" /> Objekt befindet sich in der Auflistung.</summary>
+        <returns>
+          <see langword="true" />Wenn das angegebene <see cref="T:System.Web.UI.WebControls.MenuItemStyle" /> in der Auflistung enthalten ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.MenuItemStyleCollection.Contains%2A> Methode, um zu bestimmen, ob ein <xref:System.Web.UI.WebControls.MenuItemStyle> Objekt in der Auflistung enthalten ist. Diese Methode wird häufig verwendet, um das Vorhandensein einer <xref:System.Web.UI.WebControls.MenuItemStyle> Objekt vor dem Ausführen einer Aufgabe, z. B. hinzufügen oder Entfernen einer Menüelementformat aus der Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.UI.WebControls.MenuItemStyle[] styleArray, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.UI.WebControls.MenuItemStyle[] styleArray, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemStyleCollection.CopyTo(System.Web.UI.WebControls.MenuItemStyle[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="styleArray" Type="System.Web.UI.WebControls.MenuItemStyle[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="styleArray">Ein nullbasiertes Array von <see cref="T:System.Web.UI.WebControls.MenuItemStyle" /> Objekte, die empfangen die kopierten Elemente aus der <see cref="T:System.Web.UI.WebControls.MenuItemStyleCollection" />.</param>
+        <param name="index">Die Position im Zielarray, an dem Empfang des kopierten Inhalts beginnen.</param>
+        <summary>Kopiert alle Elemente aus der <see cref="T:System.Web.UI.WebControls.MenuItemStyleCollection" /> Objekt in ein kompatibles eindimensionales Array von <see cref="T:System.Web.UI.WebControls.MenuItemStyle" /> -Objekten, beginnend am angegebenen Index im Zielarray.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.MenuItemStyleCollection.CopyTo%2A> Methode zum Kopieren der Inhalte der <xref:System.Web.UI.WebControls.MenuItemStyleCollection> Objekt in das angegebene nullbasierte Array von <xref:System.Web.UI.WebControls.MenuItemStyle> Objekte. Elemente werden kopiert, beginnend am angegebenen Index des Zielarrays. Sie können dann das Array verwenden, den Zugriff auf die Elemente in der Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateKnownType">
+      <MemberSignature Language="C#" Value="protected override object CreateKnownType (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object CreateKnownType(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemStyleCollection.CreateKnownType(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKnownTypes">
+      <MemberSignature Language="C#" Value="protected override Type[] GetKnownTypes ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Type[] GetKnownTypes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemStyleCollection.GetKnownTypes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.UI.WebControls.MenuItemStyle style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Web.UI.WebControls.MenuItemStyle style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemStyleCollection.IndexOf(System.Web.UI.WebControls.MenuItemStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Web.UI.WebControls.MenuItemStyle" />
+      </Parameters>
+      <Docs>
+        <param name="style">Die zu suchende <see cref="T:System.Web.UI.WebControls.MenuItemStyle" />.</param>
+        <summary>Bestimmt den Index des angegebenen <see cref="T:System.Web.UI.WebControls.MenuItemStyle" /> Objekt in der Auflistung.</summary>
+        <returns>Der nullbasierte Index des ersten Vorkommens des angegebenen <see cref="T:System.Web.UI.WebControls.MenuItemStyle" />, sofern gefunden, andernfalls -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.MenuItemStyleCollection.IndexOf%2A> -Methode bestimmt den nullbasierten Index des angegebenen <xref:System.Web.UI.WebControls.MenuItemStyle> Objekt in der Auflistung. Wenn der Knoten nicht in der Auflistung vorhanden ist, gibt die Methode-1 zurück.  
+  
+> [!NOTE]
+>  Wenn das angegebene <xref:System.Web.UI.WebControls.MenuItemStyle> Objekt wird mehrfach angezeigt, in der Auflistung, wird der Index des ersten Vorkommens zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Web.UI.WebControls.MenuItemStyle style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Web.UI.WebControls.MenuItemStyle style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemStyleCollection.Insert(System.Int32,System.Web.UI.WebControls.MenuItemStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="style" Type="System.Web.UI.WebControls.MenuItemStyle" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die nullbasierte Indexposition, an dem Einfügen der <see cref="T:System.Web.UI.WebControls.MenuItemStyle" />.</param>
+        <param name="style">Der einzufügende <see cref="T:System.Web.UI.WebControls.MenuItemStyle" />.</param>
+        <summary>Fügt das angegebene <see cref="T:System.Web.UI.WebControls.MenuItemStyle" /> Objekt am angegebenen Index in die Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.MenuItemStyleCollection.Insert%2A> Methode, um den angegebenen einfügen <xref:System.Web.UI.WebControls.MenuItemStyle> Objekt am angegebenen nullbasierten Index in die Auflistung.  
+  
+ Als Alternative können Sie Anfügen einer <xref:System.Web.UI.WebControls.MenuItemStyle> Objekt am Ende der Auflistung unter Verwendung der <xref:System.Web.UI.WebControls.MenuItemStyleCollection.Add%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.MenuItemStyle this[int i] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.MenuItemStyle Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemStyleCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.MenuItemStyle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Der nullbasierte Index des der <see cref="T:System.Web.UI.WebControls.MenuItemStyle" /> abgerufen.</param>
+        <summary>Ruft die <see cref="T:System.Web.UI.WebControls.MenuItemStyle" /> Objekt am angegebenen Index aus der Auflistung.</summary>
+        <value>Die <see cref="T:System.Web.UI.WebControls.MenuItemStyle" /> am angegebenen Index in der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Indexer können Zugriff auf eine <xref:System.Web.UI.WebControls.MenuItemStyle> Objekt aus der Auflistung am angegebenen Index mithilfe der Arraynotation. Indexer können Sie zugreifen, ändern oder Ersetzen einer <xref:System.Web.UI.WebControls.MenuItemStyle> Objekt in der Auflistung direkt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInsert">
+      <MemberSignature Language="C#" Value="protected override void OnInsert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnInsert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemStyleCollection.OnInsert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.UI.WebControls.MenuItemStyle style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Web.UI.WebControls.MenuItemStyle style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemStyleCollection.Remove(System.Web.UI.WebControls.MenuItemStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Web.UI.WebControls.MenuItemStyle" />
+      </Parameters>
+      <Docs>
+        <param name="style">Das zu entfernende <see cref="T:System.Web.UI.WebControls.MenuItemStyle" />-Element.</param>
+        <summary>Entfernt das angegebene <see cref="T:System.Web.UI.WebControls.MenuItemStyle" />-Objekt aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.MenuItemStyleCollection.Remove%2A> Methode entfernen Sie die angegebene <xref:System.Web.UI.WebControls.MenuItemStyle> Objekt aus der Auflistung. Alle Elemente, die diese Menüelementformat folgen, werden dann nach oben verschoben, um die leere Position auszufüllen. Auch werden die Indizes der verschobenen Elemente aktualisiert.  
+  
+ Als Alternative können Sie entfernen eine <xref:System.Web.UI.WebControls.MenuItemStyle> Objekt am angegebenen Index mithilfe der <xref:System.Web.UI.WebControls.MenuItemStyleCollection.RemoveAt%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemStyleCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die nullbasierte Indexposition des der <see cref="T:System.Web.UI.WebControls.MenuItemStyle" /> zu entfernen.</param>
+        <summary>Entfernt die <see cref="T:System.Web.UI.WebControls.MenuItemStyle" /> Objekt an der angegebenen Indexposition aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.MenuItemStyleCollection.RemoveAt%2A> -Methode zum Entfernen der <xref:System.Web.UI.WebControls.MenuItemStyle> Objekt am angegebenen nullbasierten Index Standort aus der Auflistung. Alle Elemente, die auf diesem Knoten folgen, werden dann nach oben verschoben, um leere Position auszufüllen. Auch werden die Indizes der verschobenen Elemente aktualisiert.  
+  
+ Als Alternative können Sie einen bestimmten entfernen <xref:System.Web.UI.WebControls.MenuItemStyle> Objekt mithilfe der <xref:System.Web.UI.WebControls.MenuItemStyleCollection.Remove%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.MenuItemStyleCollection> Klasse an, das die formateinstellungen für die Menüelemente im ein <xref:System.Web.UI.WebControls.Menu> Steuerelement basierend auf das Menüelement. In diesem Beispiel die <xref:System.Web.UI.WebControls.Menu.LevelMenuItemStyles%2A> Eigenschaft deklarativ erstellt und eine <xref:System.Web.UI.WebControls.MenuItemStyle> Objekt entfernt wird und eine andere hinzugefügt, um die <xref:System.Web.UI.WebControls.MenuItemStyleCollection> Objekt.  
+  
+ [!code-aspx-csharp[MenuItemStyleCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemStyleCollection/CS/menuitemstylecollectioncs.aspx#1)]
+ [!code-aspx-vb[MenuItemStyleCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemStyleCollection/VB/menuitemstylecollectionvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDirtyObject">
+      <MemberSignature Language="C#" Value="protected override void SetDirtyObject (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetDirtyObject(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemStyleCollection.SetDirtyObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

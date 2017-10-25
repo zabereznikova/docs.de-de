@@ -1,0 +1,702 @@
+<Type Name="AutomationElement+AutomationElementInformation" FullName="System.Windows.Automation.AutomationElement+AutomationElementInformation">
+  <TypeSignature Language="C#" Value="public struct AutomationElement.AutomationElementInformation" />
+  <TypeSignature Language="ILAsm" Value=".class nested public sequential ansi sealed beforefieldinit AutomationElement/AutomationElementInformation extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.AutomationElement.AutomationElementInformation" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält die Eigenschaftenaccessoren verwendet werden, indem Sie die <see cref="P:System.Windows.Automation.AutomationElement.Cached" /> oder <see cref="P:System.Windows.Automation.AutomationElement.Current" /> Eigenschaften.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Eigenschaften können direkt aus zugegriffen werden <xref:System.Windows.Automation.AutomationElement.Cached%2A> und <xref:System.Windows.Automation.AutomationElement.Current%2A>; Sie müssen nicht zum Abrufen der <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation> Struktur selbst.  
+  
+ Die Eigenschaften in dieser Struktur können auch abgerufen werden, mithilfe von <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> und <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>, mit der entsprechenden Bezeichner aus <xref:System.Windows.Automation.AutomationElement>. Z. B. die <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AcceleratorKey%2A?displayProperty=nameWithType> Eigenschaft identifizierten der <xref:System.Windows.Automation.AutomationElement.AcceleratorKeyProperty?displayProperty=nameWithType> Feld. Weitere Informationen zu den einzelnen Eigenschaften finden Sie auf den Referenzseiten für diese Bezeichner; Siehe den Link im Abschnitt "Hinweise" der einzelnen Referenzthema.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt wie die <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> Eigenschaft wird von dieser Struktur abgerufen.  
+  
+ [!code-csharp[UIAClient_snip#106](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#106)]
+ [!code-vb[UIAClient_snip#106](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#106)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AcceleratorKey">
+      <MemberSignature Language="C#" Value="public string AcceleratorKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AcceleratorKey" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.AutomationElement.AutomationElementInformation.AcceleratorKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge, enthält die Tastenkombinationen für das Element ab.</summary>
+        <value>Die Reihenfolge der Tastenkombinationen, die eine Aktion, die dem Element zugeordneten aufrufen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tastenkombinationen aufrufen eine Aktion. Z. B. STRG + O wird häufig verwendet zum Aufrufen der **Datei öffnen** (Dialogfeld). [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)]Elemente, die Eigenschaftensatz immer implementiert die <xref:System.Windows.Automation.InvokePattern> Klasse.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Automation.AutomationElement.AcceleratorKeyProperty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessKey">
+      <MemberSignature Language="C#" Value="public string AccessKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AccessKey" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.AutomationElement.AutomationElementInformation.AccessKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge, enthält das Access Key Zeichen für das Element ab.</summary>
+        <value>Das Zeichen, das ein Element, mit dem Aktivieren des Elements zugeordnet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Zugriffstaste ist ein Zeichen im Text eines Menüs, Menüelements oder Bezeichnung eines Steuerelements, z. B. eine Schaltfläche, die die angefügte Menüfunktion aktiviert. Die Buchstaben "O" wird z. B. häufig verwendet, zum Aufrufen der **öffnen** Datei Standarddialogfeld aus einer **Datei** Menü.  [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)]Elemente mit der Eigenschaftensatz für Zugriffstasten immer implementieren die <xref:System.Windows.Automation.InvokePattern> Klasse.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Automation.AutomationElement.AccessKeyProperty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutomationId">
+      <MemberSignature Language="C#" Value="public string AutomationId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AutomationId" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.AutomationElement.AutomationElementInformation.AutomationId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge mit der [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_id](~/includes/tlasharptla-id-md.md)] für das Element.</summary>
+        <value>Ein [!INCLUDE[TLA2#tla_id](~/includes/tla2sharptla-id-md.md)] für ein Element, gleichgeordneten innerhalb des Containers darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn es verfügbar ist die <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> eines Elements muss immer in einer beliebigen Instanz die Anwendung unabhängig von der lokalen Sprache identisch sein. Der Wert sollte zwischen nebengeordneten Elementen nicht unbedingt eindeutig jedoch über die gesamte Clientdesktop sein. Beispielsweise mehrere Instanzen einer Anwendung oder mehrere Ordneransichten in Microsoft Windows Explorer enthält möglicherweise Elemente mit dem gleichen <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>, z. B. "SystemMenuBar".  
+  
+ Während Unterstützung einer <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AutomationId%2A> ist immer zur besseren Prüfbarkeit empfohlen, diese Eigenschaft ist nicht zwingend erforderlich. Wo es unterstützt wird, eine <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AutomationId%2A> ist nützlich zum Erstellen testautomatisierung, die unabhängig von der Sprache der Benutzeroberfläche ausführen Skripts. Clients sollten keine Annahmen bezüglich der <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AutomationId%2A>s, die von anderen Anwendungen verfügbar gemacht werden. Ein <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AutomationId%2A> ist nicht garantiert in verschiedenen Releases stabil sein oder einer Anwendung bildet.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BoundingRectangle">
+      <MemberSignature Language="C#" Value="public System.Windows.Rect BoundingRectangle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Rect BoundingRectangle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.AutomationElement.AutomationElementInformation.BoundingRectangle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Koordinaten des Rechtecks, das vollständig das-Element umschließt ab.</summary>
+        <value>Die und Endpunktkoordinaten des umschließenden Rechtecks.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das zurückgegebene Rechteck kann Punkte enthalten, die nicht durch Klicken aktivierbaren sind. Sind Instanzen, in denen dies kann passieren, wenn die [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] Element weist eine unregelmäßige Form oder durch Klicken aktivierbaren Region oder von anderen verdeckt wird [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Elemente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClassName">
+      <MemberSignature Language="C#" Value="public string ClassName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClassName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.AutomationElement.AutomationElementInformation.ClassName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge, enthält der Klassenname des Elements als zugewiesene vom Entwickler Steuerelements ab.</summary>
+        <value>Der Klassenname, der vom Entwickler Steuerelements zugewiesen wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Eigenschaft ist implementierungsabhängig. Die Eigenschaft ist nützlich in testumgebungen.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Automation.AutomationElement.ClassNameProperty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlType">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.ControlType ControlType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Automation.ControlType ControlType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Windows.Automation.ControlType" /> des Elements ab.</summary>
+        <value>Das Interaktionsmodell für dieses Element. Der Standardwert ist <see cref="F:System.Windows.Automation.ControlType.Custom" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Steuerelementtyp beschreibt ein bekanntes Interaktionsmodell für beliebige [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Elemente ohne Rückgriff auf eine lokalisierte Steuerelementtyp oder eine Kombination von Regeln für komplexe Logik.  
+  
+ Der einzige Fall, in dem diese Eigenschaft zur Laufzeit ändern kann, für ein Steuerelement, das unterstützt wird <xref:System.Windows.Automation.MultipleViewPattern>. Ein Beispiel ist die [!INCLUDE[TLA2#tla_win32](~/includes/tla2sharptla-win32-md.md)] ListView-Steuerelement, das vom ändern können <xref:System.Windows.Automation.ControlType.DataGrid> zu <xref:System.Windows.Automation.ControlType.List>, abhängig von der aktuellen Ansicht.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FrameworkId">
+      <MemberSignature Language="C#" Value="public string FrameworkId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FrameworkId" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.AutomationElement.AutomationElementInformation.FrameworkId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des zugrunde liegenden Benutzeroberflächen-Frameworks.</summary>
+        <value>Der Name des Benutzeroberflächen-Frameworks, z. B. "Win32", "WinForm" oder "DirectUI". Der Standardwert ist eine leere Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rückgabewerte der Eigenschaft sind vom Typ <xref:System.String>. Der Standardwert ist eine leere Zeichenfolge.  
+  
+ Diese Eigenschaft ermöglicht Anwendungen Sonderfälle für die gesamte Benutzeroberflächen-Frameworks gelten.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Automation.AutomationElement.FrameworkIdProperty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasKeyboardFocus">
+      <MemberSignature Language="C#" Value="public bool HasKeyboardFocus { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasKeyboardFocus" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.AutomationElement.AutomationElementInformation.HasKeyboardFocus" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Element den Tastaturfokus verfügt.</summary>
+        <value>
+          <see langword="true" />Wenn das Element den Tastaturfokus verfügt; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Element innerhalb eines Containers den Fokus besitzt, <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.HasKeyboardFocus%2A> gilt auch für das Containerelement.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Automation.AutomationElement.HasKeyboardFocusProperty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpText">
+      <MemberSignature Language="C#" Value="public string HelpText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HelpText" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.AutomationElement.AutomationElementInformation.HelpText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den dem Element zugeordneten Hilfetext ab.</summary>
+        <value>Der QuickInfo-Hilfetext für das Element.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Automation.AutomationElement.HelpTextProperty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsContentElement">
+      <MemberSignature Language="C#" Value="public bool IsContentElement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsContentElement" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Element ein Inhaltselement ab.</summary>
+        <value>
+          <see langword="true" />Wenn das Element ein Inhaltselement; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Inhaltselement enthält Daten, die dem Benutzer angezeigt werden. Beispiele für Inhaltselemente sind die Elemente in einem Listenfeld oder eine Schaltfläche in einem Dialogfeld. Nicht-Inhalt Elemente, so genannte peripheren Elemente werden normalerweise zum Bearbeiten des Inhalts im ein zusammengesetztes Steuerelement verwendet; Beispielsweise ist die Schaltfläche in einem Dropdown-Steuerelement.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Automation.AutomationElement.IsContentElementProperty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsControlElement">
+      <MemberSignature Language="C#" Value="public bool IsControlElement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsControlElement" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Element als Steuerelement angezeigt wird.</summary>
+        <value>
+          <see langword="true" />Wenn das Element als ein Steuerelement angezeigt wird; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Automation.AutomationElement.IsControlElementProperty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnabled">
+      <MemberSignature Language="C#" Value="public bool IsEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] referenzierte der [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] -Element aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement aktiviert ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert von der <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsEnabled%2A> -Eigenschaft ändern, aufgrund der [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Interaktionen. Erhalten Sie einen aktualisierten Cache durch Aufrufen von <xref:System.Windows.Automation.AutomationElement.GetUpdatedCache%2A> Wenn der Wert der <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsEnabled%2A> Eigenschaft möglicherweise geändert haben, da Sie die cacheanforderung ausgegeben.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsKeyboardFocusable">
+      <MemberSignature Language="C#" Value="public bool IsKeyboardFocusable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsKeyboardFocusable" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsKeyboardFocusable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Element den Tastaturfokus übernehmen kann.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement den Tastaturfokus erhalten kann; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Automation.AutomationElement.IsKeyboardFocusableProperty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOffscreen">
+      <MemberSignature Language="C#" Value="public bool IsOffscreen { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOffscreen" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsOffscreen" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Element auf dem Bildschirm sichtbar ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement nicht sichtbar ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein boolescher Wert, der angibt, ob ein Element vollständig Bildlauf durchgeführt wird (z. B. ein Element in einem Listenfeld ist außerhalb des Viewports des Containerobjekts) oder reduzierter Form (z. B. ein Element in einer Strukturansicht an, die im Menü oder eines minimierten Fensters) nicht aus der Sicht.  
+  
+ Wenn das Element einen klickbaren Punkt, der es verfügt den Fokus erhält, werden verursachen kann, gilt es auf dem Bildschirm werden, selbst wenn ein Teil des Elements außerhalb des Bildschirms ist.  
+  
+ Der Wert der Eigenschaft ist nicht betroffen von okklusionsabfragen, indem Sie anderen Fenstern oder gibt an, ob das Element auf einen bestimmten Monitor angezeigt wird.  
+  
+ Wenn IsOffscreen ist `true,` ein Element, wird ein Bildlauf durchgeführt oder nicht sichtbar, reduziert wird jedoch immer noch Teil der Endbenutzer-Sicht der Benutzeroberfläche, können eingebunden werden wieder Ansicht durch einfache Bearbeitung, z. B. Durchführen eines Bildlaufs oder durch Klicken auf ein Dropdown-Steuerelement.  
+  
+ Wenn das Element, die der Endbenutzer wird nicht auf allen oder verwiesen ist als "programmgesteuert ausgeblendet" (z. B. ein Dialogfeld, das verworfen wurde, aber die Unterstreichung-Objekt ist, in dem von der Anwendung zwischengespeichert) sollte dann sie von entfernt werden Festlegen des Werts der IsOffscreen auf, anstatt die Elementstruktur `true`.  
+  
+ Wenn der Wert ist `true` für einen Container, es ist auch `true` für das Containerelement Nachfolger.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPassword">
+      <MemberSignature Language="C#" Value="public bool IsPassword { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPassword" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsPassword" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Element geschützte Inhalte enthält.</summary>
+        <value>
+          <see langword="true" />Wenn das Element geschützten Inhalte enthält. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ermöglicht Anwendungen wie z. B. die Bildschirmsprachausgabe bestimmt, ob das Textinhalt eines Steuerelements vorgelesen werden sollen.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Automation.AutomationElement.IsPasswordProperty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRequiredForForm">
+      <MemberSignature Language="C#" Value="public bool IsRequiredForForm { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRequiredForForm" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsRequiredForForm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Element ist erforderlich, um in einem Formular ausgefüllt werden.</summary>
+        <value>
+          <see langword="true" />Wenn das Element ausgefüllt werden; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Automation.AutomationElement.IsRequiredForFormProperty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemStatus">
+      <MemberSignature Language="C#" Value="public string ItemStatus { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ItemStatus" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.AutomationElement.AutomationElementInformation.ItemStatus" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Beschreibung des Status eines Elements innerhalb eines Elements ab.</summary>
+        <value>Die Beschreibung des Status.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ermöglicht einen Client zu ermitteln, ob ein Element den Status eines Elements vermittelt. Beispielsweise kann ein Element eines Kontakts in einer messaging-Anwendung zugeordnet "Ausgelastet" oder "Verbunden" sein.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Automation.AutomationElement.ItemStatusProperty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemType">
+      <MemberSignature Language="C#" Value="public string ItemType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ItemType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.AutomationElement.AutomationElementInformation.ItemType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Beschreibung des Typs eines Elements ab.</summary>
+        <value>Eine lokalisierte Zeichenfolge, die das Element beschreibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird verwendet, um Informationen zu Elementen in einer Liste, die Strukturansicht oder die Datenraster abzurufen. Ein Element in einem Verzeichnis Dateiansicht möglicherweise z. B. eine Datei"Dokument" oder einen "Ordner".  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Automation.AutomationElement.ItemTypeProperty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LabeledBy">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.AutomationElement LabeledBy { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Automation.AutomationElement LabeledBy" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.AutomationElement.AutomationElementInformation.LabeledBy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Element, das die textbezeichnung für dieses Element enthält.</summary>
+        <value>Das Element, das die Bezeichnung für dieses Element ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann verwendet werden, z. B. das Abrufen der statische textbezeichnung für das Kombinationsfeld.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Automation.AutomationElement.LabeledByProperty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalizedControlType">
+      <MemberSignature Language="C#" Value="public string LocalizedControlType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LocalizedControlType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.AutomationElement.AutomationElementInformation.LocalizedControlType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Beschreibung des Steuerelements ab.</summary>
+        <value>Eine lokalisierte Beschreibung des Steuerelementtyps, z. B. „button“.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Automation.AutomationElement.LocalizedControlTypeProperty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Elements ab.</summary>
+        <value>Der Name des der [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] Element.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Name eines Elements verwendet werden kann, Suche nach dem Element in der [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Elementstruktur, wenn die <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AutomationId%2A> Eigenschaft wird auf das Element nicht unterstützt.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Automation.AutomationElement.NameProperty>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt wie die <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> Eigenschaft abgerufen wird.  
+  
+ [!code-csharp[UIAClient_snip#106](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#106)]
+ [!code-vb[UIAClient_snip#106](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#106)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NativeWindowHandle">
+      <MemberSignature Language="C#" Value="public int NativeWindowHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NativeWindowHandle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.AutomationElement.AutomationElementInformation.NativeWindowHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Handle des Fensters für das Element ab.</summary>
+        <value>Das Handle des Fensters, falls vorhanden; andernfalls 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Automation.AutomationElement.NativeWindowHandleProperty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Orientation">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.OrientationType Orientation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.OrientationType Orientation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.AutomationElement.AutomationElementInformation.Orientation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.OrientationType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ausrichtung des Steuerelements ab.</summary>
+        <value>Die Ausrichtung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird unterstützt, von allen Steuerelementen wie Bildlaufleisten und Schieberegler, die eine vertikale oder horizontale Ausrichtung aufweisen können.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Automation.AutomationElement.OrientationProperty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessId">
+      <MemberSignature Language="C#" Value="public int ProcessId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ProcessId" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.AutomationElement.AutomationElementInformation.ProcessId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Prozess ab [!INCLUDE[TLA#tla_id](~/includes/tlasharptla-id-md.md)] dieses Elements.</summary>
+        <value>Die [!INCLUDE[TLA2#tla_id](~/includes/tla2sharptla-id-md.md)] des Prozesses, der das Element hostet. Der Standardwert für die Eigenschaft ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Prozess [!INCLUDE[TLA#tla_id](~/includes/tlasharptla-id-md.md)] vom Betriebssystem zugewiesen wird. Es im überwachungsarbeitsbereich der **PID** Spalte die **Prozesse** Registerkarte im Task-Manager.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Automation.AutomationElement.ProcessIdProperty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

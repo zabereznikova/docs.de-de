@@ -1,0 +1,188 @@
+<Type Name="ImportConventionBuilder" FullName="System.Composition.Convention.ImportConventionBuilder">
+  <TypeSignature Language="C#" Value="public sealed class ImportConventionBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ImportConventionBuilder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Composition.Convention.ImportConventionBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Composition.Convention</AssemblyName>
+    <AssemblyVersion>1.0.31.0</AssemblyVersion>
+    <AssemblyVersion>1.0.32.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Konfiguriert einen Import, der einem Teil zugeordnet ist.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddMetadataConstraint">
+      <MemberSignature Language="C#" Value="public System.Composition.Convention.ImportConventionBuilder AddMetadataConstraint (string name, Func&lt;Type,object&gt; getConstraintValueFromPartType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Convention.ImportConventionBuilder AddMetadataConstraint(string name, class System.Func`2&lt;class System.Type, object&gt; getConstraintValueFromPartType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Convention.ImportConventionBuilder.AddMetadataConstraint(System.String,System.Func{System.Type,System.Object})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Convention</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Convention.ImportConventionBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="getConstraintValueFromPartType" Type="System.Func&lt;System.Type,System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der erforderliche Metadatenname.</param>
+        <param name="getConstraintValueFromPartType">Eine Funktion, die den erforderlichen Metadatenwert bereitstellt.</param>
+        <summary>Fügt dem Import eine Einschränkung hinzu, die den angegebenen Metadatennamen wird und den Wert erfordern, die von der angegebenen Funktion auf dem Teilstyp bereitgestellt werden.</summary>
+        <returns>Ein importgenerator, der mit der Einschränkung, die weitere Konfiguration ermöglicht.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddMetadataConstraint">
+      <MemberSignature Language="C#" Value="public System.Composition.Convention.ImportConventionBuilder AddMetadataConstraint (string name, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Convention.ImportConventionBuilder AddMetadataConstraint(string name, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Convention.ImportConventionBuilder.AddMetadataConstraint(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Convention</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Convention.ImportConventionBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der erforderliche Metadatenname.</param>
+        <param name="value">Der erforderliche Metadatenwert.</param>
+        <summary>Fügt dem Import eine Einschränkung hinzu, die den angegebenen Metadatennamen und wird Wert benötigt.</summary>
+        <returns>Ein importgenerator, der mit der Einschränkung, die weitere Konfiguration ermöglicht.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowDefault">
+      <MemberSignature Language="C#" Value="public System.Composition.Convention.ImportConventionBuilder AllowDefault ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Convention.ImportConventionBuilder AllowDefault() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Convention.ImportConventionBuilder.AllowDefault" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Convention</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Convention.ImportConventionBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ermöglicht den Import das Empfangen des Standardwert für seinen Datentyp aus, wenn der Vertrag von einem anderen Teil bereitgestellt werden, kann nicht an.</summary>
+        <returns>Ein importgenerator, der Standardwerte zulässt und weiter konfiguriert werden kann.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsContractName">
+      <MemberSignature Language="C#" Value="public System.Composition.Convention.ImportConventionBuilder AsContractName (Func&lt;Type,string&gt; getContractNameFromPartType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Convention.ImportConventionBuilder AsContractName(class System.Func`2&lt;class System.Type, string&gt; getContractNameFromPartType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Convention.ImportConventionBuilder.AsContractName(System.Func{System.Type,System.String})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Convention</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Convention.ImportConventionBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="getContractNameFromPartType" Type="System.Func&lt;System.Type,System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="getContractNameFromPartType">Eine Funktion, die den Vertragsnamen des Imports angibt.</param>
+        <summary>Legt den Vertragsnamen des Imports auf den Wert fest, der von der angegebenen Funktion auf dem Teilstyp bereitgestellt wird.</summary>
+        <returns>Ein importgenerator, der Name des Vertrags enthält, die weitere Konfiguration ermöglicht.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsContractName">
+      <MemberSignature Language="C#" Value="public System.Composition.Convention.ImportConventionBuilder AsContractName (string contractName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Convention.ImportConventionBuilder AsContractName(string contractName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Convention.ImportConventionBuilder.AsContractName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Convention</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Convention.ImportConventionBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contractName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="contractName">Der Vertragsname des Imports.</param>
+        <summary>Legt den Vertragsnamen des Imports auf die angegebene Zeichenfolge fest.</summary>
+        <returns>Ein importgenerator, der Name des Vertrags enthält, die weitere Konfiguration ermöglicht.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsMany">
+      <MemberSignature Language="C#" Value="public System.Composition.Convention.ImportConventionBuilder AsMany ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Convention.ImportConventionBuilder AsMany() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Convention.ImportConventionBuilder.AsMany" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Convention</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Convention.ImportConventionBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konfiguriert den Import zum Empfangen einer Auflistung von Exporten.</summary>
+        <returns>Ein importgenerator, der eine Auflistung von empfangen kann exportiert und zur weiteren Konfiguration ermöglicht.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsMany">
+      <MemberSignature Language="C#" Value="public System.Composition.Convention.ImportConventionBuilder AsMany (bool isMany);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Convention.ImportConventionBuilder AsMany(bool isMany) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Convention.ImportConventionBuilder.AsMany(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Convention</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Convention.ImportConventionBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isMany" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="isMany">
+          <see langword="true" />Um alle verfügbaren übereinstimmenden Exporte darzustellen angeben; andernfalls <see langword="false" />.</param>
+        <summary>Konfiguriert den Import, um eine Auflistung von Exporten zu empfangen und möglicherweise alle verfügbaren übereinstimmenden Exporte darzustellen.</summary>
+        <returns>Ein importgenerator, der eine Auflistung von empfangen kann exportiert und zur weiteren Konfiguration ermöglicht.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

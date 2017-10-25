@@ -1,0 +1,535 @@
+<Type Name="GenerateManifestBase" FullName="Microsoft.Build.Tasks.GenerateManifestBase">
+  <TypeSignature Language="C#" Value="public abstract class GenerateManifestBase : Microsoft.Build.Utilities.Task" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit GenerateManifestBase extends Microsoft.Build.Utilities.Task" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.GenerateManifestBase" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Utilities.Task</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Basisklasse für alle Aufgaben der Manifestgenerierung dar.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected GenerateManifestBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.GenerateManifestBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Tasks.GenerateManifestBase" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AddAssemblyFromItem">
+      <MemberSignature Language="C#" Value="protected Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference AddAssemblyFromItem (Microsoft.Build.Framework.ITaskItem item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance class Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference AddAssemblyFromItem(class Microsoft.Build.Framework.ITaskItem item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.GenerateManifestBase.AddAssemblyFromItem(Microsoft.Build.Framework.ITaskItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="Microsoft.Build.Framework.ITaskItem" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das Element, aus dem der dem Manifest hinzuzufügende Assemblyverweis erstellt werden soll.</param>
+        <summary>Fügt dem Manifest einen Assemblyverweis auf Grundlage des angegebenen Elements hinzu.</summary>
+        <returns>Der dem Manifest hinzugefügte Assemblyverweis.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AddAssemblyNameFromItem">
+      <MemberSignature Language="C#" Value="protected Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference AddAssemblyNameFromItem (Microsoft.Build.Framework.ITaskItem item, Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceType referenceType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance class Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference AddAssemblyNameFromItem(class Microsoft.Build.Framework.ITaskItem item, valuetype Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceType referenceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.GenerateManifestBase.AddAssemblyNameFromItem(Microsoft.Build.Framework.ITaskItem,Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="Microsoft.Build.Framework.ITaskItem" />
+        <Parameter Name="referenceType" Type="Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceType" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das Element, aus dem der dem Manifest hinzuzufügende Assemblyverweis erstellt werden soll.</param>
+        <param name="referenceType">Der Assemblyverweistyp.</param>
+        <summary>Fügt dem Manifest einen Assemblyverweis auf Grundlage des angegebenen Elements und des Assemblyverweistyps hinzu.</summary>
+        <returns>Der dem Manifest hinzugefügte Assemblyverweis.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AddEntryPointFromItem">
+      <MemberSignature Language="C#" Value="protected Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference AddEntryPointFromItem (Microsoft.Build.Framework.ITaskItem item, Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceType referenceType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance class Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference AddEntryPointFromItem(class Microsoft.Build.Framework.ITaskItem item, valuetype Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceType referenceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.GenerateManifestBase.AddEntryPointFromItem(Microsoft.Build.Framework.ITaskItem,Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="Microsoft.Build.Framework.ITaskItem" />
+        <Parameter Name="referenceType" Type="Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceType" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das Element, aus dem der dem Manifest hinzuzufügende Einstiegspunktverweis erstellt werden soll.</param>
+        <param name="referenceType">Der Verweistyp der Einstiegspunktassembly.</param>
+        <summary>Fügt dem Manifest einen Verweis auf einen Einstiegspunkt auf Grundlage des angegebenen Elements und des Assemblyverweistyps hinzu.</summary>
+        <returns>Der dem Manifest hinzugefügte Einstiegspunktverweis.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AddFileFromItem">
+      <MemberSignature Language="C#" Value="protected Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference AddFileFromItem (Microsoft.Build.Framework.ITaskItem item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance class Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference AddFileFromItem(class Microsoft.Build.Framework.ITaskItem item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.GenerateManifestBase.AddFileFromItem(Microsoft.Build.Framework.ITaskItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="Microsoft.Build.Framework.ITaskItem" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das Element, aus dem der dem Manifest hinzuzufügende Dateiverweis erstellt werden soll.</param>
+        <summary>Fügt einen Dateiverweis auf das Manifest basierend auf dem angegebenen Element hinzu.</summary>
+        <returns>Der dem Manifest hinzugefügte Dateiverweis.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyName">
+      <MemberSignature Language="C#" Value="public string AssemblyName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AssemblyName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateManifestBase.AssemblyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Assembly ab oder legt ihn fest.</summary>
+        <value>Der Name der Assembly.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyVersion">
+      <MemberSignature Language="C#" Value="public string AssemblyVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AssemblyVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateManifestBase.AssemblyVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Assemblyversion ab oder legt sie fest.</summary>
+        <value>Die Assemblyversion.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateManifestBase.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen des Beschreibungstexts des Manifests.</summary>
+        <value>Der Beschreibungstext des Manifests.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="EntryPoint">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem EntryPoint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem EntryPoint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateManifestBase.EntryPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die verwaltete Assembly oder den ClickOnce-Manifestverweis ab, die bzw. der den Einstiegspunkt für das Manifest darstellt, oder legt diese fest.</summary>
+        <value>Die verwaltete Assembly oder der ClickOnce-Manifestverweis, die bzw. der den Einstiegspunkt für die Anwendung darstellt.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public override bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.GenerateManifestBase.Execute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt die <c>GenerateManifestBase</c> Aufgabe.</summary>
+        <returns>
+          <see langword="true" />, wenn die Aufgabe erfolgreich ausgeführt wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FindFileFromItem">
+      <MemberSignature Language="C#" Value="protected Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference FindFileFromItem (Microsoft.Build.Framework.ITaskItem item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance class Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference FindFileFromItem(class Microsoft.Build.Framework.ITaskItem item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.GenerateManifestBase.FindFileFromItem(Microsoft.Build.Framework.ITaskItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="Microsoft.Build.Framework.ITaskItem" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das Element, für das ein Dateiverweis abgerufen werden soll.</param>
+        <summary>Gibt den Manifestdateiverweis zurück, der dem angegebenen Element entspricht.</summary>
+        <returns>Der Manifestdateiverweis, der dem angegebenen Element entspricht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Projekt in das Manifest für das angegebene Element nicht vorhanden ist, fügt diese Methode einen Dateiverweis für dieses Element hinzu.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectType">
+      <MemberSignature Language="C#" Value="protected abstract Type GetObjectType ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Type GetObjectType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.GenerateManifestBase.GetObjectType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt bei Implementierung in einer abgeleiteten Klasse den Typ des Manifests zurück.</summary>
+        <returns>Der Manifesttyp.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="InputManifest">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem InputManifest { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem InputManifest" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateManifestBase.InputManifest" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Eingabemanifest ab oder legt es fest.</summary>
+        <value>Das Eingabemanifest.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MaxTargetPath">
+      <MemberSignature Language="C#" Value="public int MaxTargetPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxTargetPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateManifestBase.MaxTargetPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Länge des Manifestdateinamens ab oder legt diese fest.</summary>
+        <value>Die maximale Länge des Manifestdateinamens.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="OnManifestLoaded">
+      <MemberSignature Language="C#" Value="protected abstract bool OnManifestLoaded (Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest manifest);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool OnManifestLoaded(class Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest manifest) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.GenerateManifestBase.OnManifestLoaded(Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manifest" Type="Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest" />
+      </Parameters>
+      <Docs>
+        <param name="manifest">Das Manifest, für das Eigenschaften festgelegt werden sollen.</param>
+        <summary>Legt bei der Implementierung in einer abgeleiteten Klasse Manifesteigenschaften und zugehörige Abhängigkeiten fest.</summary>
+        <returns>
+          <see langword="true" />Wenn keine Fehler aufgetreten, beim Festlegen der Manifesteigenschaften sind; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="OnManifestResolved">
+      <MemberSignature Language="C#" Value="protected abstract bool OnManifestResolved (Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest manifest);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool OnManifestResolved(class Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest manifest) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.GenerateManifestBase.OnManifestResolved(Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manifest" Type="Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest" />
+      </Parameters>
+      <Docs>
+        <param name="manifest">Das Manifest, für das Eigenschaften festgelegt werden sollen.</param>
+        <summary>Legt bei der Implementierung in einer abgeleiteten Klasse aufgelöste Manifesteigenschaften fest.</summary>
+        <returns>
+          <see langword="true" />Wenn keine Fehler aufgetreten, beim Festlegen der Manifesteigenschaften sind; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beispielsweise sind die aufgelöste Manifesteigenschaften der Herausgeber und Produktname.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="OutputManifest">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem OutputManifest { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem OutputManifest" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateManifestBase.OutputManifest" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das generierte Manifest ab oder legt es fest.</summary>
+        <value>Das generierte Manifest.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Platform">
+      <MemberSignature Language="C#" Value="public string Platform { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Platform" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateManifestBase.Platform" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Manifestplattform ab oder legt diese fest.</summary>
+        <value>Die Manifestplattform.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Manifestplattform kann einen der folgenden Werte aufweisen: `x86`, `x64`, `Itanium`, oder `AnyCPU`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TargetCulture">
+      <MemberSignature Language="C#" Value="public string TargetCulture { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetCulture" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateManifestBase.TargetCulture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Code der Manifestzielkultur ab oder legt diesen fest.</summary>
+        <value>Der Code der Manifestzielkultur.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gültige Werte für die Zielkultur sind alle gültigen Werte für <xref:System.Globalization.CultureInfo>, und "neutral" oder "*" für neutrale Kulturen.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TargetFrameworkMoniker">
+      <MemberSignature Language="C#" Value="public string TargetFrameworkMoniker { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetFrameworkMoniker" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateManifestBase.TargetFrameworkMoniker" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Zielframeworkmoniker.</summary>
+        <value>Gibt den Zielframeworkmoniker an.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TargetFrameworkVersion">
+      <MemberSignature Language="C#" Value="public string TargetFrameworkVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetFrameworkVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GenerateManifestBase.TargetFrameworkVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Ziel [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Version für das Projekt.</summary>
+        <value>Eine Zeichenfolge, die stellt die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Version.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist leer, was bedeutet, dass es erfolgt kein Filtern nach Verweisen auf Grundlage des Zielframeworks.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateInputs">
+      <MemberSignature Language="C#" Value="protected virtual bool ValidateInputs ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool ValidateInputs() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.GenerateManifestBase.ValidateInputs" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überprüft die Eingaben von den <c>GenerateManifestBase</c> Aufgabe.</summary>
+        <returns>
+          <see langword="true" />Bei erfolgreicher Validierung von Benutzereingaben andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateOutput">
+      <MemberSignature Language="C#" Value="protected virtual bool ValidateOutput ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool ValidateOutput() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.GenerateManifestBase.ValidateOutput" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überprüft das generierte Manifest.</summary>
+        <returns>
+          <see langword="true" />Bei erfolgreicher Überprüfung des Manifests andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

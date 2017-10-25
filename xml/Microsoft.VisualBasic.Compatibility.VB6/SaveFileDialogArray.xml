@@ -1,0 +1,427 @@
+<Type Name="SaveFileDialogArray" FullName="Microsoft.VisualBasic.Compatibility.VB6.SaveFileDialogArray">
+  <TypeSignature Language="C#" Value="public class SaveFileDialogArray : Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray, System.ComponentModel.IExtenderProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi SaveFileDialogArray extends Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray implements class System.ComponentModel.IExtenderProvider" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Compatibility.VB6.SaveFileDialogArray" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IExtenderProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ProvideProperty("Index", typeof(System.Windows.Forms.SaveFileDialog))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Steuerelementarray von <see cref="T:System.Windows.Forms.SaveFileDialog" /> Steuerelemente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `SaveFileDialogArray` Klasse verfügt über eine Entsprechung für die Laufzeitfunktionen von einer Visual Basic 6.0 `SaveFileDialog` Array. Es bietet keine Funktionen zur Entwurfszeit von einer Visual Basic 6.0-Steuerelementarray.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SaveFileDialogArray ();" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.SaveFileDialogArray.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.SaveFileDialogArray" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Instanziieren einer <xref:Microsoft.VisualBasic.Compatibility.VB6.SaveFileDialogArray>, müssen Sie auch Aufrufen der <xref:Microsoft.VisualBasic.Compatibility.VB6.SaveFileDialogArray.SetIndex%2A> Methode, um das erste Element im Array zu erstellen.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SaveFileDialogArray (System.ComponentModel.IContainer Container);" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor(class System.ComponentModel.IContainer Container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.SaveFileDialogArray.#ctor(System.ComponentModel.IContainer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="Container" Type="System.ComponentModel.IContainer" />
+      </Parameters>
+      <Docs>
+        <param name="Container">Die <see cref="T:System.ComponentModel.IContainer" /> , in dem das Steuerelementarray gehostet wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.SaveFileDialogArray" /> -Klasse unter Angabe des Containers.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Instanziieren einer <xref:Microsoft.VisualBasic.Compatibility.VB6.SaveFileDialogArray>, müssen Sie auch Aufrufen der <xref:Microsoft.VisualBasic.Compatibility.VB6.SaveFileDialogArray.SetIndex%2A> Methode, um das erste Element im Array zu erstellen.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanExtend">
+      <MemberSignature Language="C#" Value="public bool CanExtend (object target);" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance bool CanExtend(object target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.SaveFileDialogArray.CanExtend(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="target">Ein <see cref="T:System.Windows.Forms.OpenFileDialog" />-Steuerelement.</param>
+        <summary>Ruft einen Wert, der bestimmt, ob ein Steuerelement ein Mitglied einer <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.SaveFileDialogArray" />.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="target" /> ist ein Mitglied der Steuerelementarray andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `CanExtend` Methode kann verwendet werden, um zu bestimmen, ob ein bestimmtes <xref:System.Windows.Forms.OpenFileDialog> -Steuerelement ist das Basiselement des Steuerelementarrays aus dem die anderen Elemente geklont wurden.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileOk">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.CancelEventHandler FileOk;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.CancelEventHandler FileOk" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.SaveFileDialogArray.FileOk" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.CancelEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Benutzer klickt der <see langword="Open" /> oder <see langword="Save" /> Schaltfläche eine <see cref="T:System.Windows.Forms.SaveFileDialog" /> (Dialogfeld).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetControlInstanceType">
+      <MemberSignature Language="C#" Value="protected override Type GetControlInstanceType ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Type GetControlInstanceType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.SaveFileDialogArray.GetControlInstanceType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überschreibt <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
+        <returns>Die <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.SaveFileDialogArray" /> Klasse ist die Basisklasse für alle Steuerelementarrays, die in Anwendungen, die ein Upgrade von Visual Basic 6.0 verwendet werden. Da diese Klasse nicht in der Regel zum Erstellen einer Instanz der Klasse verwendet wird dies <see langword="Protected" /> Methode wird in der Regel nicht direkt aufgerufen, sondern stattdessen durch eine abgeleitete Klasse aufgerufen wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann nicht aus den Code Ihrer Anwendung aufgerufen werden. Verwenden Sie stattdessen die <xref:System.Object.GetType%2A>-Methode.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIndex">
+      <MemberSignature Language="C#" Value="public short GetIndex (System.Windows.Forms.SaveFileDialog o);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance int16 GetIndex(class System.Windows.Forms.SaveFileDialog o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.SaveFileDialogArray.GetIndex(System.Windows.Forms.SaveFileDialog)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Windows.Forms.SaveFileDialog" />
+      </Parameters>
+      <Docs>
+        <param name="o">Ein <see cref="T:System.Windows.Forms.SaveFileDialog" /> im Steuerelementarray.</param>
+        <summary>Ruft den Index des eine <see cref="T:System.Windows.Forms.SaveFileDialog" /> in einem <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.SaveFileDialogArray" />.</summary>
+        <returns>Ein <see langword="Short" /> , die den Index des angegebenen darstellt <see cref="T:System.Windows.Forms.SaveFileDialog" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann verwendet werden, zum Abrufen des Indexes für die angegebene <xref:System.Windows.Forms.SaveFileDialog>.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpRequest">
+      <MemberSignature Language="C#" Value="public event EventHandler HelpRequest;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler HelpRequest" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.SaveFileDialogArray.HelpRequest" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Benutzer klickt auf die <see langword="Help" /> Schaltfläche eine <see cref="T:System.Windows.Forms.SaveFileDialog" /> (Dialogfeld).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HookUpControlEvents">
+      <MemberSignature Language="C#" Value="protected override void HookUpControlEvents (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void HookUpControlEvents(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.SaveFileDialogArray.HookUpControlEvents(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Eine <see cref="T:System.Object" />.</param>
+        <summary>Überschreibt <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.HookUpControlEvents(System.Object)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann nicht aus den Code Ihrer Anwendung aufgerufen werden. Verwendung `AddHandler` verknüpft, die hinzugefügt werden Ereignisse für alle Steuerelemente die <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.Load%2A> Methode.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.SaveFileDialog this[short Index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.SaveFileDialog Item(int16)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.SaveFileDialogArray.Item(System.Int16)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.SaveFileDialog</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Index" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="Index">Ein <see langword="Short" /> , der die Position eines Elements des Steuerelementarrays angibt.</param>
+        <summary>Ruft ein bestimmtes Element von einem <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.SaveFileDialogArray" /> über einen Index. Schreibgeschützt.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.SaveFileDialog" /> an der angegebenen <paramref name="Index" /> im Steuerelementarray.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Item` Eigenschaft ist die Standardeigenschaft für ein Steuerelementarray. Aus diesem Grund sind die folgenden Codezeilen gleichwertig.  
+  
+```vb  
+MsgBox(CStr(SaveFileDialogArray.Item(1).Text))  
+MsgBox(CStr(SaveFileDialogArray(1).Text))  
+```  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetIndex">
+      <MemberSignature Language="C#" Value="public void ResetIndex (System.Windows.Forms.SaveFileDialog o);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void ResetIndex(class System.Windows.Forms.SaveFileDialog o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.SaveFileDialogArray.ResetIndex(System.Windows.Forms.SaveFileDialog)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Windows.Forms.SaveFileDialog" />
+      </Parameters>
+      <Docs>
+        <param name="o">Ein <see cref="T:System.Windows.Forms.Control" />.</param>
+        <summary>Die <see langword="ResetIndex" /> Methode wird nicht unterstützt, der <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.SaveFileDialogArray" /> Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird nicht unterstützt und Aufrufen dieser löst keine Ausnahme aus.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetIndex">
+      <MemberSignature Language="C#" Value="public void SetIndex (System.Windows.Forms.SaveFileDialog o, short Index);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void SetIndex(class System.Windows.Forms.SaveFileDialog o, int16 Index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.SaveFileDialogArray.SetIndex(System.Windows.Forms.SaveFileDialog,System.Int16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Windows.Forms.SaveFileDialog" />
+        <Parameter Name="Index" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="o">Ein <see cref="T:System.Windows.Forms.SaveFileDialog" /> im Steuerelementarray.</param>
+        <param name="Index">Ein <see langword="Short" /> , die den Index des angegebenen darstellt <see cref="T:System.Windows.Forms.SaveFileDialog" />.</param>
+        <summary>Legt den Index des ersten <see cref="T:System.Windows.Forms.SaveFileDialog" /> in einem <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.SaveFileDialogArray" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `SetIndex` Methode sollte nur aufgerufen werden, wenn Sie das erste Element im Steuerelementarray erstellen. Um nachfolgende Elemente hinzuzufügen, rufen Sie die <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.Load%2A> Methode, und geben Sie die `Index`.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeIndex">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeIndex (System.Windows.Forms.SaveFileDialog o);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance bool ShouldSerializeIndex(class System.Windows.Forms.SaveFileDialog o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.SaveFileDialogArray.ShouldSerializeIndex(System.Windows.Forms.SaveFileDialog)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Windows.Forms.SaveFileDialog" />
+      </Parameters>
+      <Docs>
+        <param name="o">Ein <see cref="T:System.Windows.Forms.SaveFileDialog" /> im Steuerelementarray.</param>
+        <summary>Gibt einen Wert, der angibt, ob ein <see cref="T:System.Windows.Forms.SaveFileDialog" /> ist ein Mitglied dieser <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.SaveFileDialogArray" />.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="o" /> ist ein Mitglied dieser Steuerelementarray ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das angegebene <xref:System.Windows.Forms.SaveFileDialog> ein Member eines anderen <xref:Microsoft.VisualBasic.Compatibility.VB6.SaveFileDialogArray> ist, gibt `ShouldSerializeIndex` `false` zurück.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

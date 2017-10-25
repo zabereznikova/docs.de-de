@@ -1,0 +1,545 @@
+<Type Name="HttpSessionStateWrapper" FullName="System.Web.HttpSessionStateWrapper">
+  <TypeSignature Language="C#" Value="public class HttpSessionStateWrapper : System.Web.HttpSessionStateBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HttpSessionStateWrapper extends System.Web.HttpSessionStateBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpSessionStateWrapper" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.HttpSessionStateBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.Web.Abstractions, Version=3.5.0.0, Culture=Neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Kapselt das intrinsische HTTP-Objekt, das Zugriff auf Sitzungsstatuswerte, Einstellungen auf Sitzungsebene und Lebensdauerverwaltungsmethoden bereitstellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpSessionStateWrapper> Klasse leitet sich von der <xref:System.Web.HttpSessionStateBase> Klasse und dient als Wrapper für die <xref:System.Web.SessionState.HttpSessionState> Klasse. Diese Klasse stellt die Funktionalität von der <xref:System.Web.SessionState.HttpSessionState> -Klasse und macht die <xref:System.Web.HttpSessionStateBase> Typ. Die <xref:System.Web.HttpSessionStateBase> -Klasse können Sie die ursprüngliche Implementierung der ersetzen die <xref:System.Web.SessionState.HttpSessionState> Klasse in der Anwendung durch eine benutzerdefinierte Implementierung, z. B. beim Ausführen von Komponententests, die außerhalb der ASP.NET-Pipeline.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpSessionStateWrapper (System.Web.SessionState.HttpSessionState httpSessionState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.SessionState.HttpSessionState httpSessionState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpSessionStateWrapper.#ctor(System.Web.SessionState.HttpSessionState)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="httpSessionState" Type="System.Web.SessionState.HttpSessionState" />
+      </Parameters>
+      <Docs>
+        <param name="httpSessionState">Das Objekt, auf das diese Wrapperklasse Zugriff bietet.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.HttpSessionStateWrapper" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="httpSessionState" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Abandon">
+      <MemberSignature Language="C#" Value="public override void Abandon ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Abandon() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpSessionStateWrapper.Abandon" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bricht die aktuelle Sitzung ab.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public override void Add (string name, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Add(string name, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpSessionStateWrapper.Add(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Elements, das der Sitzungsstatusauflistung hinzugefügt werden soll.</param>
+        <param name="value">Der Wert des Elements, das der Sitzungsstatusauflistung hinzugefügt werden soll.</param>
+        <summary>Fügt ein Element zur Sitzungszustandsauflistung hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public override void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpSessionStateWrapper.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Schlüssel und Werte aus der Sitzungszustandsauflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CodePage">
+      <MemberSignature Language="C#" Value="public override int CodePage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CodePage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpSessionStateWrapper.CodePage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zeichensatzbezeichner für die aktuelle Sitzung ab oder legt diesen fest.</summary>
+        <value>Der Zeichensatzbezeichner für die aktuelle Sitzung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contents">
+      <MemberSignature Language="C#" Value="public override System.Web.HttpSessionStateBase Contents { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpSessionStateBase Contents" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpSessionStateWrapper.Contents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpSessionStateBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf das aktuelle Sitzungsstatusobjekt ab.</summary>
+        <value>Das aktuelle Sitzungszustandsobjekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CookieMode">
+      <MemberSignature Language="C#" Value="public override System.Web.HttpCookieMode CookieMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.HttpCookieMode CookieMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpSessionStateWrapper.CookieMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpCookieMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Anwendung für Sitzungen ohne Cookies konfiguriert ist.</summary>
+        <value>Einer der Cookiemoduswerte, der angibt, ob die Anwendung für Sitzungen ohne Cookies konfiguriert ist. Die Standardeinstellung ist <see cref="F:System.Web.HttpCookieMode.UseCookies" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public override void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpSessionStateWrapper.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das Array, in das Sitzungswerte kopiert werden sollen.</param>
+        <param name="index">Der nullbasierte Index im <c>Array</c> ab dem kopiert wird.</param>
+        <summary>Kopiert die Auflistung der Sitzungsstatuswerte in ein eindimensionales Array, wobei am angegebenen Index im Array begonnen wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public override int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpSessionStateWrapper.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Elemente in der Sitzungsstatusauflistung ab.</summary>
+        <value>Die Anzahl der Elemente in der Auflistung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public override System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpSessionStateWrapper.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, mit dem alle Namen der Sitzungszustandsvariablen in der aktuellen Sitzung gelesen werden können.</summary>
+        <returns>Ein Enumerator, der die Variablennamen in der Sitzungsstatusauflistung durchlaufen kann.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCookieless">
+      <MemberSignature Language="C#" Value="public override bool IsCookieless { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCookieless" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpSessionStateWrapper.IsCookieless" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Sitzungs-ID in die URL eingebettet ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Sitzungs-ID in die URL eingebettet ist andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNewSession">
+      <MemberSignature Language="C#" Value="public override bool IsNewSession { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNewSession" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpSessionStateWrapper.IsNewSession" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Sitzung während der aktuellen Angibt erstellt wurde.</summary>
+        <value>
+          <see langword="true" />Wenn die Sitzung während der aktuellen Anforderung erstellt wurde. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public override bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpSessionStateWrapper.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Sitzung schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Sitzung schreibgeschützt ist. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public override bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpSessionStateWrapper.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Zugriff auf die Auflistung von Werten des Sitzungszustands synchronisiert (threadsicher) ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Zugriff auf die Auflistung synchronisiert (threadsicher) ist andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public override object this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpSessionStateWrapper.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des Sitzungswerts.</param>
+        <summary>Ruft einen Sitzungswert mit dem angegebenen Index ab oder legt ihn fest.</summary>
+        <value>Der am angegebenen Index gespeicherte Sitzungszustandswert.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" />liegt außerhalb des gültigen Bereichs von Indizes für die Auflistung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public override object this[string name] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpSessionStateWrapper.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Schlüsselname des Sitzungswerts.</param>
+        <summary>Ruft einen Sitzungswert mit dem angegebenen Namen ab oder legt ihn fest.</summary>
+        <value>Der sitzungsstatuswert mit dem angegebenen Namen ab oder <see langword="null" /> , wenn das Element nicht vorhanden ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public override System.Collections.Specialized.NameObjectCollectionBase.KeysCollection Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.NameObjectCollectionBase/KeysCollection Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpSessionStateWrapper.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameObjectCollectionBase+KeysCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Schlüsselauflistung für alle Werte ab, die in der Sitzungsstatusauflistung gespeichert sind.</summary>
+        <value>Die Sitzungsschlüssel.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LCID">
+      <MemberSignature Language="C#" Value="public override int LCID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LCID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpSessionStateWrapper.LCID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Gebietsschemabezeichner (Locale Identifier, LCID) der aktuellen Sitzung ab oder legt ihn fest.</summary>
+        <value>Die LCID (Kultur) der aktuellen Sitzung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public override System.Web.SessionState.SessionStateMode Mode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.SessionState.SessionStateMode Mode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpSessionStateWrapper.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SessionState.SessionStateMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den aktuellen Sitzungszustandsmodus ab.</summary>
+        <value>Der Sitzungszustandsmodus.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public override void Remove (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Remove(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpSessionStateWrapper.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Elements, das aus der Sitzungszustandsauflistung gelöscht werden soll.</param>
+        <summary>Löscht ein Element aus der Sitzungszustandsauflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAll">
+      <MemberSignature Language="C#" Value="public override void RemoveAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RemoveAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpSessionStateWrapper.RemoveAll" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Schlüssel und Werte aus der Sitzungszustandsauflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode führt die gleiche Funktion wie die <xref:System.Web.HttpSessionStateWrapper.Clear%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public override void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpSessionStateWrapper.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des aus der Sitzungsstatusauflistung zu entfernenden Elements.</param>
+        <summary>Löscht das Element am angegebenen Index aus der Sitzungsstatusauflistung.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist kleiner als Null.  
+  
+ \- oder –  
+  
+ <paramref name="index" /> ist größer oder gleich <see cref="P:System.Web.SessionState.HttpSessionState.Count" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionID">
+      <MemberSignature Language="C#" Value="public override string SessionID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SessionID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpSessionStateWrapper.SessionID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den eindeutigen Bezeichner für die Sitzung ab.</summary>
+        <value>Der eindeutige Sitzungsbezeichner.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StaticObjects">
+      <MemberSignature Language="C#" Value="public override System.Web.HttpStaticObjectsCollectionBase StaticObjects { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpStaticObjectsCollectionBase StaticObjects" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpSessionStateWrapper.StaticObjects" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpStaticObjectsCollectionBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Objekten, die von deklariert werden <see langword="object" /> Elemente, die als Serversteuerelemente markiert sind und für die aktuelle Sitzung beschränkt, in die Datei "Global.asax" der Anwendung.</summary>
+        <value>Die in der Global.asax-Datei deklarierten Objekte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public override object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpSessionStateWrapper.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt ab, mit dem der Zugriff auf die Auflistung von Sitzungszustandswerten synchronisiert werden kann.</summary>
+        <value>Ein Objekt, mit dem der Zugriff auf die Auflistung synchronisiert werden kann.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Timeout">
+      <MemberSignature Language="C#" Value="public override int Timeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Timeout" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpSessionStateWrapper.Timeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeit in Minuten ab, die zwischen Anforderungen verstreichen kann, bevor die Sitzung durch den Sitzungszustandsanbieter beendet wird, oder legt die Zeit fest.</summary>
+        <value>Der Timeoutzeitraum in Minuten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

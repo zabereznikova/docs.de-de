@@ -1,0 +1,269 @@
+<Type Name="XamlMemberInvoker" FullName="System.Xaml.Schema.XamlMemberInvoker">
+  <TypeSignature Language="C#" Value="public class XamlMemberInvoker" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XamlMemberInvoker extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.Schema.XamlMemberInvoker" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Erweiterungspunkt, der über Techniken als Reflektion Membermerkmale von XAML-Member zugreifen kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Zweck der <xref:System.Xaml.Schema.XamlMemberInvoker> ist ein erweiterbares XAML-Typsystem, Schema und eine Laufzeit, die nicht als vollständig zu CLR-Funktionen wie Reflektionsinformationen über CLR-Attributen basiert funktionierende ermöglichen <xref:System.Type> und <xref:System.Reflection.MemberInfo>und so weiter. Unterklassen des <xref:System.Xaml.Schema.XamlMemberInvoker> dienen als Eingabeparameter für die alternativen Konstruktoren von XAML-Schema-Klassen wie z. B. <xref:System.Xaml.XamlMember>. Sie eine Unterklasse von <xref:System.Xaml.XamlMember> und übergeben Sie die <xref:System.Xaml.Schema.XamlMemberInvoker> über des Basiskonstruktors. Zusammen mit definieren eine <xref:System.Xaml.Schema.XamlMemberInvoker> des Konstruktors, müssen Sie auch angeben Außerkraftsetzungen für mindestens einige der `Lookup` Methoden der <xref:System.Xaml.XamlMember>.  
+  
+ <xref:System.Xaml.Schema.XamlMemberInvoker>ist eine Standardimplementierung. Die standardmäßige Implementierung folgt auf ein ähnliches Modell, um die standardmäßige Implementierung des XAML-Schematypen <xref:System.Xaml.XamlType> und <xref:System.Xaml.XamlMember>: das CLR-Typsystem wird verwendet, für die Instanziierung, Werte und Suchvorgänge, einschließlich der Verwendung von CLR-Attributen <xref:System.Type> und <xref:System.Reflection.MemberInfo>und so weiter.  
+  
+ <xref:System.Xaml.Schema.XamlMemberInvoker>Stellt Methoden für grundlegende get- und Set-Vorgänge (<xref:System.Xaml.Schema.XamlMemberInvoker.GetValue%2A>; <xref:System.Xaml.Schema.XamlMemberInvoker.SetValue%2A>). Es stellt auch die Eigenschaften <xref:System.Xaml.Schema.XamlMemberInvoker.UnderlyingGetter%2A> und <xref:System.Xaml.Schema.XamlMemberInvoker.UnderlyingSetter%2A>, aber diese sind nicht virtuell.  
+  
+> [!NOTE]
+>  Es kann möglich sein, erhalten eine <xref:System.Xaml.Schema.XamlMemberInvoker> Wert, der eine XAML-Direktive darstellt, die als private Klasse in der System.Xaml-Implementierung implementiert wird. Wenn Sie versuchen, rufen Sie <xref:System.Xaml.Schema.XamlMemberInvoker.GetValue%2A> oder <xref:System.Xaml.Schema.XamlMemberInvoker.SetValue%2A> aufzurufen, wird eine Ausnahme ausgelöst.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XamlMemberInvoker ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.Schema.XamlMemberInvoker.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xaml.Schema.XamlMemberInvoker" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardimplementierung ist leer.  
+  
+ Dieser Konstruktor wird intern aufgerufen, um einen Wert für <xref:System.Xaml.Schema.XamlMemberInvoker.UnknownInvoker%2A>. Für eine <xref:System.Xaml.Schema.XamlMemberInvoker> -Unterklasse, die es wird erwartet, dass Sie entweder die <xref:System.Xaml.Schema.XamlMemberInvoker.%23ctor%28System.Xaml.XamlMember%29> Signatur für die Konstruktion, oder geben Sie eine Außerkraftsetzung, die aufruft <xref:System.Xaml.Schema.XamlMemberInvoker.%23ctor%28System.Xaml.XamlMember%29> als Basis. Bereitstellen der <xref:System.Xaml.XamlMember> ein Standardmuster implementiert Where <xref:System.Xaml.Schema.XamlMemberInvoker> ist unveränderlich.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlMemberInvoker (System.Xaml.XamlMember member);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xaml.XamlMember member) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.Schema.XamlMemberInvoker.#ctor(System.Xaml.XamlMember)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="member" Type="System.Xaml.XamlMember" />
+      </Parameters>
+      <Docs>
+        <param name="member">Die <see cref="T:System.Xaml.XamlMember" /> Wert für den bestimmten XAML-Member, die relevant für dieses <see cref="T:System.Xaml.Schema.XamlMemberInvoker" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xaml.Schema.XamlMemberInvoker" /> -Klasse auf Grundlage eines bereitgestellten <see cref="T:System.Xaml.XamlMember" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Intern auf Grundlage dieser Konstruktor wird aufgerufen, die <xref:System.Xaml.XamlMember> , in dem die <xref:System.Xaml.Schema.XamlMemberInvoker> zur Erstellung verwendet wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="member" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public virtual object GetValue (object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetValue(object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.Schema.XamlMemberInvoker.GetValue(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Eine Instanz des Besitzertyps für das Element.</param>
+        <summary>Ruft einen Wert, der die relevante Eigenschaft aus einer Instanz ab.</summary>
+        <returns>Die angeforderte Eigenschaft-Wert.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="instance" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">Diese Methode wurde für einen <see cref="T:System.Xaml.Schema.XamlMemberInvoker" /> aufgerufen, der auf einem unbekannten <see cref="T:System.Xaml.XamlMember" /> basiert.  
+  
+ **-"oder"-**  
+  
+ Diese Methode für einen nur-schreiben Member aufgerufen.  
+  
+ **-"oder"-**  
+  
+ <see cref="P:System.Xaml.Schema.XamlMemberInvoker.UnderlyingGetter" /> ist <see langword="null" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Die grundlegende Implementierung enthält einen Aufruf an die interne Hilfsmethode <c>ThrowIfUnknown</c>. Dieses Hilfsprogramm löst immer für Fälle, in denen ein <see cref="T:System.Xaml.Schema.XamlMemberInvoker" /> basiert auf einem unbekannten <see cref="T:System.Xaml.XamlMember" />, inklusive der Fälle, in denen die <see cref="P:System.Xaml.XamlMember.UnderlyingMember" /> von der <see cref="T:System.Xaml.XamlMember" /> ist <see langword="null" />.  
+  
+ Die grundlegende Implementierung löst aus, wenn <see cref="P:System.Xaml.Schema.XamlMemberInvoker.UnderlyingGetter" /> ist <see langword="null" />.  
+  
+ Für statische Eigenschaften (<see cref="P:System.Reflection.MethodBase.IsStatic" /> ist <see langword="true" /> pro <see cref="P:System.Xaml.Schema.XamlMemberInvoker.UnderlyingGetter" />) die Standardimplementierung ruft <see cref="M:System.Reflection.MethodBase.Invoke(System.Object,System.Object[])" /> auf <see cref="P:System.Xaml.Schema.XamlMemberInvoker.UnderlyingGetter" /> übergeben <see langword="null" /> als erster Parameter und gepackte <paramref name="instance" /> in der zweiten. Für nicht statische Eigenschaften, ruft <see cref="M:System.Reflection.MethodBase.Invoke(System.Object,System.Object[])" /> und leitet die <paramref name="instance" /> als erster Parameter und ein leeres Paket als zweiten Parameter.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public virtual void SetValue (object instance, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetValue(object instance, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.Schema.XamlMemberInvoker.SetValue(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Eine Instanz des Besitzertyps für das Element.</param>
+        <param name="value">Der festzulegende Eigenschaftswert.</param>
+        <summary>Legt einen Wert, der die relevante Eigenschaft in einer Instanz.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="instance" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">Diese Methode wurde für einen <see cref="T:System.Xaml.Schema.XamlMemberInvoker" /> aufgerufen, der auf einem unbekannten <see cref="T:System.Xaml.XamlMember" /> basiert.  
+  
+ **-"oder"-**  
+  
+ Diese Methode für einen schreibgeschützten Member aufgerufen.  
+  
+ **-"oder"-**  
+  
+ <see cref="P:System.Xaml.Schema.XamlMemberInvoker.UnderlyingSetter" /> ist <see langword="null" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Die grundlegende Implementierung enthält einen Aufruf an die interne Hilfsmethode <c>ThrowIfUnknown</c>. Dieses Hilfsprogramm löst immer für Fälle, in denen ein <see cref="T:System.Xaml.Schema.XamlMemberInvoker" /> basiert auf einem unbekannten <see cref="T:System.Xaml.XamlMember" />, inklusive der Fälle, in denen die <see cref="P:System.Xaml.XamlMember.UnderlyingMember" /> von der <see cref="T:System.Xaml.XamlMember" /> ist <see langword="null" />.  
+  
+ Die grundlegende Implementierung löst aus, wenn <see cref="P:System.Xaml.Schema.XamlMemberInvoker.UnderlyingSetter" /> ist <see langword="null" />.  
+  
+ Für statische Eigenschaften (<see cref="P:System.Reflection.MethodBase.IsStatic" /> ist <see langword="true" /> pro <see cref="P:System.Xaml.Schema.XamlMemberInvoker.UnderlyingSetter" />) die Standardimplementierung ruft <see cref="M:System.Reflection.MethodBase.Invoke(System.Object,System.Object[])" /> auf <see cref="P:System.Xaml.Schema.XamlMemberInvoker.UnderlyingSetter" /> übergeben <see langword="null" /> als ersten Parameter und Verpacken <paramref name="instance" /> und <paramref name="value" /> wie die zweiter Parameter. Für nicht statische Eigenschaften, ruft <see cref="M:System.Reflection.MethodBase.Invoke(System.Object,System.Object[])" /> und leitet <paramref name="instance" /> als erster Parameter und <paramref name="value" /> als zweiter Parameter.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeValue">
+      <MemberSignature Language="C#" Value="public virtual System.Xaml.Schema.ShouldSerializeResult ShouldSerializeValue (object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Xaml.Schema.ShouldSerializeResult ShouldSerializeValue(object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.Schema.XamlMemberInvoker.ShouldSerializeValue(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.Schema.ShouldSerializeResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Die Instanz mit der Eigenschaft für den permanenten Speicher jedoch genauer untersucht werden.</param>
+        <summary>Gibt an, ob der Wert von Serialisierungsprozesse beibehalten werden muss.</summary>
+        <returns>Ein Wert aus der Enumeration.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt die standardmäßige Implementierung <xref:System.Xaml.Schema.ShouldSerializeResult.Default> ist die Verwendung von XAML-Element selbst <xref:System.Xaml.XamlMember.IsUnknown%2A>, oder wenn keine entsprechenden CLR-Reflektion `ShouldSerialize` Methode auf das zugrunde liegende Member über standardmäßige Reflektion gefunden wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnderlyingGetter">
+      <MemberSignature Language="C#" Value="public System.Reflection.MethodInfo UnderlyingGetter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MethodInfo UnderlyingGetter" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.Schema.XamlMemberInvoker.UnderlyingGetter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Reflection.MethodInfo" /> für die CLR-Methode, die Werte für die Eigenschaft abruft, ist relevant für diesen <see cref="T:System.Xaml.Schema.XamlMemberInvoker" />.</summary>
+        <value>Die <see cref="T:System.Reflection.MethodInfo" /> für die CLR-Methode, die Werte für die Eigenschaft abruft, ist relevant für diesen <see cref="T:System.Xaml.Schema.XamlMemberInvoker" />, oder <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft verwendet einen Aufruf von <xref:System.Xaml.XamlMember.LookupUnderlyingGetter%2A> auf das Erstellen von <xref:System.Xaml.XamlMember>. Für einen unbekannten <xref:System.Xaml.XamlMember>, oder in Fällen, in denen <xref:System.Xaml.XamlMember.LookupUnderlyingGetter%2A> gibt `null`, gibt diese Eigenschaft `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnderlyingSetter">
+      <MemberSignature Language="C#" Value="public System.Reflection.MethodInfo UnderlyingSetter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MethodInfo UnderlyingSetter" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.Schema.XamlMemberInvoker.UnderlyingSetter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Reflection.MethodInfo" /> für die CLR-Methode, die Werte für die Eigenschaft festlegt, ist relevant für diesen <see cref="T:System.Xaml.Schema.XamlMemberInvoker" />.</summary>
+        <value>Die <see cref="T:System.Reflection.MethodInfo" /> für die CLR-Methode, die Werte für die Eigenschaft festlegt, ist relevant für diesen <see cref="T:System.Xaml.Schema.XamlMemberInvoker" />, oder <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft verwendet einen Aufruf von <xref:System.Xaml.XamlMember.LookupUnderlyingSetter%2A> auf das Erstellen von <xref:System.Xaml.XamlMember>. Für einen unbekannten <xref:System.Xaml.XamlMember>, oder in Fällen, in denen <xref:System.Xaml.XamlMember.LookupUnderlyingSetter%2A> gibt `null`, gibt diese Eigenschaft `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnknownInvoker">
+      <MemberSignature Language="C#" Value="public static System.Xaml.Schema.XamlMemberInvoker UnknownInvoker { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xaml.Schema.XamlMemberInvoker UnknownInvoker" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.Schema.XamlMemberInvoker.UnknownInvoker" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.Schema.XamlMemberInvoker</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt einen statischen Wert an, der unbekannt, nicht vollständig implementiert <see cref="T:System.Xaml.Schema.XamlMemberInvoker" />.</summary>
+        <value>Ein statischer Wert, der unbekannt, nicht vollständig implementiert stellt <see cref="T:System.Xaml.Schema.XamlMemberInvoker" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Angabe dieses Werts für einen <xref:System.Xaml.Schema.XamlMemberInvoker> Parameter von "System.xaml" definierte API führt normalerweise dazu, dass den aufgerufenen Code zum Auslösen von Ausnahmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

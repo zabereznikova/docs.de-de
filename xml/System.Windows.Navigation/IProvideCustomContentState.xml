@@ -1,0 +1,77 @@
+<Type Name="IProvideCustomContentState" FullName="System.Windows.Navigation.IProvideCustomContentState">
+  <TypeSignature Language="C#" Value="public interface IProvideCustomContentState" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IProvideCustomContentState" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Navigation.IProvideCustomContentState" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Implementiert eine Klasse, die muss zum Eintrag für den Inhalt im Navigationsverlauf benutzerdefinierten Zustand hinzufügen, bevor der Inhalt aus dem navigiert wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Navigation.IProvideCustomContentState>können Sie einen Teil der benutzerdefinierten Zustand, als benutzerdefinierte implementiert zuordnen <xref:System.Windows.Navigation.CustomContentState> -Klasse, mit dem Eintrag im Navigationsverlauf für Inhalte, die vom navigiert.  
+  
+ Benutzerdefinierter Zustand kann auch auf diese Weise zugewiesen werden, mithilfe der folgenden:  
+  
+-   Aufrufen von **AddBackEntry**:  
+  
+    -   <xref:System.Windows.Navigation.NavigationService.AddBackEntry%2A?displayProperty=nameWithType>  
+  
+    -   <xref:System.Windows.Navigation.NavigationWindow.AddBackEntry%2A?displayProperty=nameWithType>  
+  
+    -   <xref:System.Windows.Controls.Frame.AddBackEntry%2A?displayProperty=nameWithType>.  
+  
+-   Festlegen von <xref:System.Windows.Navigation.NavigatingCancelEventArgs.Content%2A?displayProperty=nameWithType> Wenn eines der folgenden Ereignisse ausgelöst werden:  
+  
+    -   <xref:System.Windows.Navigation.NavigationService.Navigating?displayProperty=nameWithType>  
+  
+    -   <xref:System.Windows.Navigation.NavigationWindow.Navigating?displayProperty=nameWithType>  
+  
+    -   <xref:System.Windows.Controls.Frame.Navigating?displayProperty=nameWithType>  
+  
+    -   <xref:System.Windows.Navigation.NavigationWindow.Navigating?displayProperty=nameWithType>  
+  
+ Sie implementieren müssen <xref:System.Windows.Navigation.IProvideCustomContentState> Wenn Sie Hinzufügen eines benutzerdefinierten Status Navigationsverlauf durch Aufrufen von **AddBackEntry**, andernfalls Navigationsverlauf funktioniert nicht ordnungsgemäß. das bedeutet, die folgenden Schritte aus:  
+  
+1.  **AddBackEntry** wird aufgerufen, um den aktuellen Inhalt einen benutzerdefinierten Zustand zuzuordnen.  
+  
+2.  Eintrag im Navigationsverlauf navigiert wird, zurück an, und die <xref:System.Windows.Navigation.CustomContentState.Replay%2A> Methode des benutzerdefinierten Zustands wird aufgerufen, und der Status wird auf den Inhalt angewendet.  
+  
+3.  Der vorherige Inhalt wird im Navigationsverlauf navigiert.  
+  
+4.  Zurück zum Eintrag im Navigationsverlauf navigiert wird, aber der benutzerdefinierte Zustand nicht beibehalten wurde, seit der letzten Eintrag im Navigationsverlauf, denen, dem er zugewiesen wurde, die zu dem navigiert wurde.  
+  
+ Dies ist das Standardverhalten, da sich der Zustand, der ursprünglich in benutzerdefinierten Status erfasst ändern kann, nachdem es Navigationsverlauf hinzugefügt wurde. Wenn das benutzerdefinierte Statusobjekt an navigiert wird, und der Zustand angewendet wird, bevor Sie einige Aspekte zu wechselt der kann nicht, bevor der Eintrag im Navigationsverlauf navigiert wird statusänderungen in das benutzerdefinierte Statusobjekt sichtbar. Darüber hinaus <xref:System.Windows.Navigation.NavigationService.AddBackEntry%2A> nicht explizit aufgerufen werden, um ein neues benutzerdefiniertes Zustandsobjekt hinzuzufügen, die die statusänderungen wiedergibt. Folglich um sicherzustellen, dass der aktuelle Status für eine bestimmte Navigation wird immer gespeichert im Navigationsverlauf <xref:System.Windows.Navigation.IProvideCustomContentState.GetContentState%2A> aufgerufen wird.  
+  
+> [!IMPORTANT]
+>  Beim Speichern von Informationen im benutzerdefinierten keine Verweise auf die Instanz von der Seite gespeichert werden, deren Status merken sind. Dies verhindert, dass [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] die Seiteninstanz und bezwingt den Zweck des Standardverhaltens Navigation Verlauf freigibt. Wenn Sie dies tun müssen, sollten Sie verwenden <xref:System.Windows.Controls.Page.KeepAlive%2A> stattdessen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetContentState">
+      <MemberSignature Language="C#" Value="public System.Windows.Navigation.CustomContentState GetContentState ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Navigation.CustomContentState GetContentState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.IProvideCustomContentState.GetContentState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.CustomContentState</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Instanz einer benutzerdefinierten Zustand-Klasse, die mit Inhalt im Navigationsverlauf zugeordnet werden soll.</summary>
+        <returns>Eine Instanz einer benutzerdefinierten <see cref="T:System.Windows.Navigation.CustomContentState" /> -Klasse, die mit Inhalt im Navigationsverlauf zugeordnet werden soll.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

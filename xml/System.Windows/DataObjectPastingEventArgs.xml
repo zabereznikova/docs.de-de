@@ -1,0 +1,155 @@
+<Type Name="DataObjectPastingEventArgs" FullName="System.Windows.DataObjectPastingEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class DataObjectPastingEventArgs : System.Windows.DataObjectEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataObjectPastingEventArgs extends System.Windows.DataObjectEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.DataObjectPastingEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.DataObjectEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Argumente, die für die <see cref="T:System.Windows.DataObject" />.<see cref="E:System.Windows.DataObject.Pasting" /> Das Ereignis.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DataObject.Pasting> Ereignis tritt auf, wenn ein Einfügevorgang ein Datenformat als einfügen ausgewählt hat, aber bevor die Daten tatsächlich eingefügt werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataObjectPastingEventArgs (System.Windows.IDataObject dataObject, bool isDragDrop, string formatToApply);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.IDataObject dataObject, bool isDragDrop, string formatToApply) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObjectPastingEventArgs.#ctor(System.Windows.IDataObject,System.Boolean,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dataObject" Type="System.Windows.IDataObject" />
+        <Parameter Name="isDragDrop" Type="System.Boolean" />
+        <Parameter Name="formatToApply" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="dataObject">Ein <see cref="T:System.Windows.DataObject" /> , enthält die Daten eingefügt werden.</param>
+        <param name="isDragDrop">Ein <see langword="Boolean" /> Wert, der angibt, ob das Einfügen Teil eines Drag-and-Drop-Vorgangs ist. <see langword="true" />um anzugeben, dass das Einfügen Teil eines Drag-and-Drop-Vorgangs ist. andernfalls <see langword="false" />. Wenn dieser Parameter, um festgelegt wird <see langword="true" />ein <see cref="E:System.Windows.DataObject.Pasting" /> ablegen Ereignis ausgelöst wird.</param>
+        <param name="formatToApply">Eine Zeichenfolge, die das bevorzugte Format für den Einfügevorgang verwenden. Finden Sie unter der <see cref="T:System.Windows.DataFormats" /> Klasse für einen Satz vordefinierter Datenformate.</param>
+        <summary>Initialisiert eine neue Instanz von <see cref="T:System.Windows.DataObjectPastingEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.DataObjectPastingEventArgs> Objekt wird normalerweise von der Anwendung, die den Einfügevorgang initiiert, wird erstellt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wird ausgelöst, wenn <paramref name="dataObject" /> oder <paramref name="formatToApply" /> ist **null**.</exception>
+        <exception cref="T:System.ArgumentException">Wird ausgelöst, wenn <paramref name="formatToApply" /> gibt an, ein Datenformat, das nicht in das Datenobjekt, das vom angegebenen vorhanden ist <paramref name="dataObject" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DataObject">
+      <MemberSignature Language="C#" Value="public System.Windows.IDataObject DataObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.IDataObject DataObject" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DataObjectPastingEventArgs.DataObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.IDataObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen vorgeschlagenen <see cref="T:System.Windows.DataObject" /> für den Einfügevorgang verwenden.</summary>
+        <value>Das derzeit vorgeschlagene <see cref="T:System.Windows.DataObject" /> für den Einfügevorgang verwenden.  
+  
+ Beim Abrufen dieses Werts gibt das derzeit vorgeschlagene <see cref="T:System.Windows.DataObject" /> für den Einfügevorgang.  
+  
+ Das Festlegen dieses Werts wird ein neues vorgeschlagenes <see cref="T:System.Windows.DataObject" /> für den Einfügevorgang verwenden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anfänglich enthält diese Eigenschaft eine <xref:System.Windows.DataObject> , ist identisch mit dem gespeicherten der <xref:System.Windows.DataObjectPastingEventArgs.SourceDataObject%2A> Eigenschaft. Benutzerdefinierte Ereignishandler kann angeben, ein neues vorgeschlagenen <xref:System.Windows.DataObject> durch Festlegen dieser Eigenschaft einfügen.  
+  
+ Ein <xref:System.Windows.DataObject> gespeichert, die in dieser Eigenschaft muss mindestens ein Datenformat, das erste automatisch auf angewendet haben die <xref:System.Windows.DataObjectPastingEventArgs.FormatToApply%2A> Eigenschaft, wenn diese Eigenschaft festgelegt ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wird ausgelöst, wenn versucht wird, diese Eigenschaft festzulegen, um **null**.</exception>
+        <exception cref="T:System.ArgumentException">Wird ausgelöst, wenn versucht wird, diese Eigenschaft an ein Datenobjekt festzulegen, die keine Datenformate enthält.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatToApply">
+      <MemberSignature Language="C#" Value="public string FormatToApply { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FormatToApply" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DataObjectPastingEventArgs.FormatToApply" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Zeichenfolge, die die vorgeschlagene Datenformat für den Einfügevorgang angibt.</summary>
+        <value>Eine Zeichenfolge, die die vorgeschlagene Datenformat für den Einfügevorgang angeben.  
+  
+ Beim Abrufen dieses Werts gibt das derzeit vorgeschlagene Datenformat für den Einfügevorgang verwenden.  
+  
+ Das Festlegen dieses Werts gibt ein neues vorgeschlagene Datenformat für den Einfügevorgang verwenden.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Wird ausgelöst, wenn versucht wird, diese Eigenschaft festzulegen, um **null**.</exception>
+        <exception cref="T:System.ArgumentException">Wird ausgelöst, wenn versucht wird, diese Eigenschaft auf ein Datenformat festgelegt, die nicht in das Datenobjekt verweist vorhanden ist die <see cref="P:System.Windows.DataObjectPastingEventArgs.DataObject" /> Eigenschaft.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeEventHandler">
+      <MemberSignature Language="C#" Value="protected override void InvokeEventHandler (Delegate genericHandler, object genericTarget);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InvokeEventHandler(class System.Delegate genericHandler, object genericTarget) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DataObjectPastingEventArgs.InvokeEventHandler(System.Delegate,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="genericHandler" Type="System.Delegate" />
+        <Parameter Name="genericTarget" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="genericHandler">To be added.</param>
+        <param name="genericTarget">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceDataObject">
+      <MemberSignature Language="C#" Value="public System.Windows.IDataObject SourceDataObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.IDataObject SourceDataObject" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DataObjectPastingEventArgs.SourceDataObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.IDataObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Kopie des ursprünglichen Datenobjekts der Einfügevorgang zugeordnet.</summary>
+        <value>Eine Kopie des ursprünglichen Datenobjekts der Einfügevorgang zugeordnet werden soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

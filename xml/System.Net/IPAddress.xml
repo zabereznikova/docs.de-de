@@ -1,0 +1,1440 @@
+<Type Name="IPAddress" FullName="System.Net.IPAddress">
+  <TypeSignature Language="C#" Value="public class IPAddress" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit IPAddress extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.IPAddress" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Primitives</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Internetprotokolladresse (IP) bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.IPAddress> Klasse enthält die Adresse eines Computers in einem IP-Netzwerk.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, wie Abfragen ein Servers für die Familie Adressen abzurufen und die IP-Adressen unterstützt.  
+  
+ [!code-cpp[System.Net.IPAddress#1](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.IPAddress/CPP/ipaddress.cpp#1)]
+ [!code-csharp[System.Net.IPAddress#1](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.IPAddress/CS/ipaddress.cs#1)]
+ [!code-vb[System.Net.IPAddress#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.IPAddress/VB/ipaddress.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IPAddress (byte[] address);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.IPAddress.#ctor(System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="address" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="address">Der Bytearraywert der IP-Adresse.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Net.IPAddress" /> Klasse mit der Adresse, die als eine <see cref="T:System.Byte" /> Array.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.IPAddress> wird erstellt, mit der <xref:System.Net.IPAddress.Address%2A> -Eigenschaftensatz auf `address`.  
+  
+ Wenn die Länge des `address` ist 4, <xref:System.Net.IPAddress.%23ctor%28System.Byte%5B%5D%29> erstellt eine IPv4-Adresse; andernfalls wird eine IPv6-Adresse mit einem Bereich von 0 erstellt.  
+  
+ Die <xref:System.Byte> Array wird davon ausgegangen, dass in der netzwerkbyte-Reihenfolge mit dem höchstwertigen Byte zuerst in die Indexposition 0 sein.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="address" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="address" />enthält eine ungültige IP-Adresse an.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IPAddress (long newAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int64 newAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.IPAddress.#ctor(System.Int64)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="newAddress" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="newAddress">Die long-Wert der IP-Adresse. Beispielsweise wäre der Wert 0x2414188f weist im big-Endian-Format der IP-Adresse "143.24.20.36 auf".</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Net.IPAddress" /> Klasse mit der Adresse angegeben wird, als ein <see cref="T:System.Int64" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.IPAddress> Instanz wird erstellt, mit der <xref:System.Net.IPAddress.Address%2A> -Eigenschaftensatz auf `newAddress`.  
+  
+ Die <xref:System.Int64> Wert wird davon ausgegangen, dass in der netzwerkbyte-Reihenfolge geordnet werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="newAddress" />&lt; 0 oder  
+  
+ <paramref name="newAddress" />&gt; 0x00000000FFFFFFFF</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IPAddress (byte[] address, long scopeid);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] address, int64 scopeid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.IPAddress.#ctor(System.Byte[],System.Int64)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="address" Type="System.Byte[]" />
+        <Parameter Name="scopeid" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="address">Der Bytearraywert der IP-Adresse.</param>
+        <param name="scopeid">Die von der Bereichsbezeichner long-Wert.</param>
+        <summary>Initialisiert eine neue Instanz der der <see cref="T:System.Net.IPAddress" /> Klasse mit der Adresse angegeben wird, als ein <see cref="T:System.Byte" /> Array und den Bezeichner für den angegebenen Gültigkeitsbereich.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor instanziiert eine IPv6-Adresse. Die `scopeid` im Falle einer verbindungslokale Adresse eine Netzwerkschnittstelle identifiziert. Der Bereich ist nur für verbindungslokale und standortlokale Adressen gültig.  
+  
+ Die <xref:System.Byte> Array wird davon ausgegangen, dass in der netzwerkbyte-Reihenfolge mit dem höchstwertigen Byte zuerst in die Indexposition 0 sein.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="address" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="address" />enthält eine ungültige IP-Adresse an.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="scopeid" />&lt; 0 oder  
+  
+ <paramref name="scopeid" />&gt; 0x00000000FFFFFFFF</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Address">
+      <MemberSignature Language="C#" Value="public long Address { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Address" />
+      <MemberSignature Language="DocId" Value="P:System.Net.IPAddress.Address" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This property has been deprecated. It is address family dependent. Please use IPAddress.Equals method to perform comparisons. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Adresse Internetprotokoll (IP).</summary>
+        <value>Die long-Wert der IP-Adresse.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist veraltet. Verwenden Sie <xref:System.Net.IPAddress.GetAddressBytes%2A>.  
+  
+ Zu konvertierende <xref:System.Net.IPAddress.Address%2A> Punktnotation, verwenden die <xref:System.Net.IPAddress.ToString%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Net.IPAddress.Address%2A> die IP-Adresse des abzurufenden Parameters die <xref:System.Net.IPAddress> Instanz.  
+  
+ [!code-cpp[IPAddress_Address_AddressFamily#2](~/samples/snippets/cpp/VS_Snippets_Remoting/IPAddress_Address_AddressFamily/CPP/ipaddress_address_addressfamily.cpp#2)]
+ [!code-csharp[IPAddress_Address_AddressFamily#2](~/samples/snippets/csharp/VS_Snippets_Remoting/IPAddress_Address_AddressFamily/CS/ipaddress_address_addressfamily.cs#2)]
+ [!code-vb[IPAddress_Address_AddressFamily#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/IPAddress_Address_AddressFamily/VB/ipaddress_address_addressfamily.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.Sockets.SocketException">Wird von der Adressfamilie <see cref="F:System.Net.Sockets.AddressFamily.InterNetworkV6" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddressFamily">
+      <MemberSignature Language="C#" Value="public System.Net.Sockets.AddressFamily AddressFamily { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Sockets.AddressFamily AddressFamily" />
+      <MemberSignature Language="DocId" Value="P:System.Net.IPAddress.AddressFamily" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.AddressFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Adressfamilie der IP-Adresse ab.</summary>
+        <value>Gibt <see cref="F:System.Net.Sockets.AddressFamily.InterNetwork" /> für IPv4- oder <see cref="F:System.Net.Sockets.AddressFamily.InterNetworkV6" /> für IPv6.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Finden Sie im Beispiel in der <xref:System.Net.IPAddress> klassenthema.  
+  
+ [!code-cpp[System.Net.IPAddress#3](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.IPAddress/CPP/ipaddress.cpp#3)]
+ [!code-csharp[System.Net.IPAddress#3](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.IPAddress/CS/ipaddress.cs#3)]
+ [!code-vb[System.Net.IPAddress#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.IPAddress/VB/ipaddress.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Any">
+      <MemberSignature Language="C#" Value="public static readonly System.Net.IPAddress Any;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Net.IPAddress Any" />
+      <MemberSignature Language="DocId" Value="F:System.Net.IPAddress.Any" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IPAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt eine IP-Adresse, die angibt, dass der Server für die Clientaktivität an allen Netzwerkschnittstellen überwachen muss. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.Sockets.Socket.Bind%2A?displayProperty=nameWithType> -Methode verwendet die <xref:System.Net.IPAddress.Any> Feld an, dass eine <xref:System.Net.Sockets.Socket> Instanz muss Clientaktivität an allen Netzwerkschnittstellen.  
+  
+ Die <xref:System.Net.IPAddress.Any> Feld entspricht 0.0.0.0 in Punktnotation.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Broadcast">
+      <MemberSignature Language="C#" Value="public static readonly System.Net.IPAddress Broadcast;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Net.IPAddress Broadcast" />
+      <MemberSignature Language="DocId" Value="F:System.Net.IPAddress.Broadcast" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IPAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die IP-Broadcastadresse bereit. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.IPAddress.Broadcast> Feld entspricht 255.255.255.255 in Punktnotation.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Net.IPAddress.Broadcast> Adresse, an die Konsole.  
+  
+ [!code-cpp[IPAddress_Broadcast_Loopback#2](~/samples/snippets/cpp/VS_Snippets_Remoting/IPAddress_Broadcast_Loopback/CPP/ipaddress_broadcast_loopback.cpp#2)]
+ [!code-csharp[IPAddress_Broadcast_Loopback#2](~/samples/snippets/csharp/VS_Snippets_Remoting/IPAddress_Broadcast_Loopback/CS/ipaddress_broadcast_loopback.cs#2)]
+ [!code-vb[IPAddress_Broadcast_Loopback#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/IPAddress_Broadcast_Loopback/VB/ipaddress_broadcast_loopback.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object comparand);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object comparand) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.IPAddress.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="comparand" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="comparand">Ein <see cref="T:System.Net.IPAddress" /> Instanz, mit der aktuellen Instanz verglichen werden soll.</param>
+        <summary>Vergleicht zwei IP-Adressen an.</summary>
+        <returns>
+          <see langword="true" />Wenn die beiden Adressen gleich sind. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.IPAddress.Equals%2A> Methode vergleicht den aktuellen <xref:System.Net.IPAddress> -Instanz mit der `comparand` Parameter und gibt `true` , wenn die beiden Instanzen die gleiche IP-Adresse enthalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAddressBytes">
+      <MemberSignature Language="C#" Value="public byte[] GetAddressBytes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetAddressBytes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.IPAddress.GetAddressBytes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt eine Kopie der <see cref="T:System.Net.IPAddress" /> als ein Array von Bytes.</summary>
+        <returns>Ein <see cref="T:System.Byte" />-Array.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein Server im Byteformat IP-Adresse abrufen.  
+  
+ [!code-cpp[System.Net.IPAddress#2](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.IPAddress/CPP/ipaddress.cpp#2)]
+ [!code-csharp[System.Net.IPAddress#2](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.IPAddress/CS/ipaddress.cs#2)]
+ [!code-vb[System.Net.IPAddress#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.IPAddress/VB/ipaddress.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.IPAddress.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Hashwert für eine IP-Adresse zurück.</summary>
+        <returns>Ein ganzzahliger Hashwert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.IPAddress.GetHashCode%2A> Methode gibt einen Hashcode für die IP-Adresse zurück. Dieser Wert kann als Schlüssel für Hashtabellen verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostToNetworkOrder">
+      <MemberSignature Language="C#" Value="public static short HostToNetworkOrder (short host);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int16 HostToNetworkOrder(int16 host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.IPAddress.HostToNetworkOrder(System.Int16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="host" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="host">Die Anzahl der zu konvertierenden, ausgedrückt als Host-Bytereihenfolge.</param>
+        <summary>Konvertiert einen kurzen Wert aus der Host-Bytereihenfolge, in der netzwerkbyte-Reihenfolge.</summary>
+        <returns>Einem kurzen Wert, ausgedrückt in netzwerkbyte-Reihenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Unterschiedliche Computer verwenden unterschiedliche Konventionen für die Anordnung der Bytes in Ganzzahlwerten. Einige Computer platzieren zuerst das höchstwertige Byte (auch bekannt als big-Endian-Reihenfolge) und andere platzieren zuerst das unwichtigste Byte (bekannt als little-Endian-Reihenfolge). Zusammenarbeit mit Computern, die verschiedene Bytereihenfolge verwenden, werden alle ganzzahligen Werte, die über das Netzwerk gesendet werden in der netzwerkbyte-Reihenfolge gesendet, mit dem höchstwertigen Byte zuerst.  
+  
+ Die <xref:System.Net.IPAddress.HostToNetworkOrder%2A> Methode konvertiert Ganzzahlwerten, die auf dem Hostsystem aus der durch den Host, der vom Netzwerk verwendete Bytereihenfolge gespeichert sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostToNetworkOrder">
+      <MemberSignature Language="C#" Value="public static int HostToNetworkOrder (int host);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 HostToNetworkOrder(int32 host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.IPAddress.HostToNetworkOrder(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="host" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="host">Die Anzahl der zu konvertierenden, ausgedrückt als Host-Bytereihenfolge.</param>
+        <summary>Konvertiert einen ganzzahligen Wert aus der Host-Bytereihenfolge um netzwerkbyte-Reihenfolge.</summary>
+        <returns>Ein Integer-Wert, ausgedrückt in netzwerkbyte-Reihenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Unterschiedliche Computer verwenden unterschiedliche Konventionen für die Anordnung der Bytes in Ganzzahlwerten. Einige Computer platzieren zuerst das höchstwertige Byte (auch bekannt als big-Endian-Reihenfolge) und andere platzieren zuerst das unwichtigste Byte (bekannt als little-Endian-Reihenfolge). Zusammenarbeit mit Computern, die verschiedene Bytereihenfolge verwenden, werden alle ganzzahligen Werte, die über das Netzwerk gesendet werden in der netzwerkbyte-Reihenfolge gesendet, mit dem höchstwertigen Byte zuerst.  
+  
+ Die <xref:System.Net.IPAddress.HostToNetworkOrder%2A> Methode konvertiert Ganzzahlwerten, die auf dem Hostsystem aus der durch den Host, der vom Netzwerk verwendete Bytereihenfolge gespeichert sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostToNetworkOrder">
+      <MemberSignature Language="C#" Value="public static long HostToNetworkOrder (long host);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int64 HostToNetworkOrder(int64 host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.IPAddress.HostToNetworkOrder(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="host" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="host">Die Anzahl der zu konvertierenden, ausgedrückt als Host-Bytereihenfolge.</param>
+        <summary>Konvertiert einen long-Wert aus der Host-Bytereihenfolge um netzwerkbyte-Reihenfolge.</summary>
+        <returns>Ein langer Wert, ausgedrückt in netzwerkbyte-Reihenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Unterschiedliche Computer verwenden unterschiedliche Konventionen für die Anordnung der Bytes in Ganzzahlwerten. Einige Computer platzieren zuerst das höchstwertige Byte (auch bekannt als big-Endian-Reihenfolge) und andere platzieren zuerst das unwichtigste Byte (bekannt als little-Endian-Reihenfolge). Zusammenarbeit mit Computern, die verschiedene Bytereihenfolge verwenden, werden alle ganzzahligen Werte, die über das Netzwerk gesendet werden in der netzwerkbyte-Reihenfolge gesendet, mit dem höchstwertigen Byte zuerst.  
+  
+ Die <xref:System.Net.IPAddress.HostToNetworkOrder%2A> Methode konvertiert Ganzzahlwerten, die auf dem Hostsystem aus der durch den Host, der vom Netzwerk verwendete Bytereihenfolge gespeichert sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IPv6Any">
+      <MemberSignature Language="C#" Value="public static readonly System.Net.IPAddress IPv6Any;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Net.IPAddress IPv6Any" />
+      <MemberSignature Language="DocId" Value="F:System.Net.IPAddress.IPv6Any" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IPAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="M:System.Net.Sockets.Socket.Bind(System.Net.EndPoint)" /> -Methode verwendet die <see cref="F:System.Net.IPAddress.IPv6Any" /> Feld an, dass eine <see cref="T:System.Net.Sockets.Socket" /> müssen Clientaktivität an allen Netzwerkschnittstellen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.IPAddress.IPv6Any> Feld entspricht 0:0:0:0:0:0:0:0 in Hexadezimalschreibweise oder:: in kompakter Notation.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Debugger zeigt den Wert des aktuellen des Hosts einer beliebigen Adresse im Standardformat komprimierte.  
+  
+ [!code-cpp[System.Net.IPAddress.IPv6NoneAnyLoopback#2](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.IPAddress.IPv6NoneAnyLoopback/CPP/noneanyloopback.cpp#2)]
+ [!code-csharp[System.Net.IPAddress.IPv6NoneAnyLoopback#2](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.IPAddress.IPv6NoneAnyLoopback/CS/noneanyloopback.cs#2)]
+ [!code-vb[System.Net.IPAddress.IPv6NoneAnyLoopback#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.IPAddress.IPv6NoneAnyLoopback/VB/noneanyloopback.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IPv6Loopback">
+      <MemberSignature Language="C#" Value="public static readonly System.Net.IPAddress IPv6Loopback;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Net.IPAddress IPv6Loopback" />
+      <MemberSignature Language="DocId" Value="F:System.Net.IPAddress.IPv6Loopback" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IPAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die IP-Loopbackadresse bereit. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.IPAddress.IPv6Loopback> Feld entspricht 0:0:0:0:0:0:0:1 in Hexadezimalschreibweise oder:: 1 in kompakter Notation.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt den Wert der Loopback-Adresse des Hosts im komprimierten Standardformat.  
+  
+ [!code-cpp[System.Net.IPAddress.IPv6NoneAnyLoopback#1](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.IPAddress.IPv6NoneAnyLoopback/CPP/noneanyloopback.cpp#1)]
+ [!code-csharp[System.Net.IPAddress.IPv6NoneAnyLoopback#1](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.IPAddress.IPv6NoneAnyLoopback/CS/noneanyloopback.cs#1)]
+ [!code-vb[System.Net.IPAddress.IPv6NoneAnyLoopback#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.IPAddress.IPv6NoneAnyLoopback/VB/noneanyloopback.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IPv6None">
+      <MemberSignature Language="C#" Value="public static readonly System.Net.IPAddress IPv6None;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Net.IPAddress IPv6None" />
+      <MemberSignature Language="DocId" Value="F:System.Net.IPAddress.IPv6None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IPAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt eine IP-Adresse, die angibt, dass keine Netzwerkschnittstelle verwendet werden soll. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.Sockets.Socket.Bind%2A?displayProperty=nameWithType> -Methode verwendet die <xref:System.Net.IPAddress.IPv6None> Feld an, dass eine <xref:System.Net.Sockets.Socket> Clientaktivität muss nicht abhören. Die <xref:System.Net.IPAddress.IPv6None> Feld entspricht 0:0:0:0:0:0:0:0 in Hexadezimalschreibweise oder:: 0 in kompakter Notation.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel zeigt den Wert des aktuellen Hosts des keine Adresse im Standardformat komprimierte.  
+  
+ [!code-cpp[System.Net.IPAddress.IPv6NoneAnyLoopback#3](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.IPAddress.IPv6NoneAnyLoopback/CPP/noneanyloopback.cpp#3)]
+ [!code-csharp[System.Net.IPAddress.IPv6NoneAnyLoopback#3](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.IPAddress.IPv6NoneAnyLoopback/CS/noneanyloopback.cs#3)]
+ [!code-vb[System.Net.IPAddress.IPv6NoneAnyLoopback#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.IPAddress.IPv6NoneAnyLoopback/VB/noneanyloopback.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsIPv4MappedToIPv6">
+      <MemberSignature Language="C#" Value="public bool IsIPv4MappedToIPv6 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsIPv4MappedToIPv6" />
+      <MemberSignature Language="DocId" Value="P:System.Net.IPAddress.IsIPv4MappedToIPv6" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob die IP-Adresse eine IPv4-zugeordneten IPv6-Adresse ist.</summary>
+        <value>Gibt <see cref="T:System.Boolean" />zurück.  
+  
+ <see langword="true" />Wenn die IP-Adresse eine IPv4-zugeordneten IPv6-Adresse ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dual-Stack-Sockets erfordern immer, IPv6-Adressen. Die Möglichkeit für die Interaktion mit einer IPv4-Adresse erfordert die Verwendung von IPv4-zugeordneten IPv6-Adresse-Format. Alle IPv4-Adressen müssen im Format IPv4-zugeordneten IPv6-Adresse dargestellt werden dadurch eine einzige IPv6-Anwendung für die Kommunikation mit einem IPv4-Knoten. Das IPv4-zugeordneten IPv6-Adresse-Format ermöglicht die IPv4-Adresse eine IPv4-Knoten als IPv6-Adresse dargestellt werden soll. Die IPv4-Adresse in das niederwertige 32 Bits der IPv6-Adresse codiert ist, und die höherwertigen-96-Bit halten die festen Präfix 0:0:0:0:0:FFFF. Das Format der IPv4-zugeordneten IPv6-Adresse ist in RFC 4291 genauer beschrieben angegeben. Weitere Informationen finden Sie unter [www.ietf.org/rfc/rfc4291.txt](http://go.microsoft.com/fwlink/?LinkID=92231).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsIPv6LinkLocal">
+      <MemberSignature Language="C#" Value="public bool IsIPv6LinkLocal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsIPv6LinkLocal" />
+      <MemberSignature Language="DocId" Value="P:System.Net.IPAddress.IsIPv6LinkLocal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob die Adresse einer lokalen IPv6-Link-Adresse ist.</summary>
+        <value>
+          <see langword="true" />Wenn die IP-Adresse eine IPv6-Link lokale Adresse ist. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsIPv6Multicast">
+      <MemberSignature Language="C#" Value="public bool IsIPv6Multicast { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsIPv6Multicast" />
+      <MemberSignature Language="DocId" Value="P:System.Net.IPAddress.IsIPv6Multicast" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob die Adresse eines IPv6 ist global Multicastadresse.</summary>
+        <value>
+          <see langword="true" />die IP-Adresse ist eine globale IPv6-Multicastadresse Adresse; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsIPv6SiteLocal">
+      <MemberSignature Language="C#" Value="public bool IsIPv6SiteLocal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsIPv6SiteLocal" />
+      <MemberSignature Language="DocId" Value="P:System.Net.IPAddress.IsIPv6SiteLocal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob die Adresse einer lokalen IPv6-Website-Adresse ist.</summary>
+        <value>
+          <see langword="true" />Wenn die IP-Adresse eine lokale IPv6-Website-Adresse ist. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsIPv6Teredo">
+      <MemberSignature Language="C#" Value="public bool IsIPv6Teredo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsIPv6Teredo" />
+      <MemberSignature Language="DocId" Value="P:System.Net.IPAddress.IsIPv6Teredo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob die Adresse einer IPv6-Teredo-Adresse ist.</summary>
+        <value>
+          <see langword="true" />Wenn die IP-Adresse eine IPv6-Teredo-Adresse ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Teredo-Adresse ist eine IPv6-Adresse mit dem Präfix 2001:: / 32. Teredo-Adressen können aufgelistet, die als eine IPv6-Adresse einer lokale Schnittstelle zugewiesen oder über die normale DNS-namensauflösung zurückgegeben werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLoopback">
+      <MemberSignature Language="C#" Value="public static bool IsLoopback (System.Net.IPAddress address);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsLoopback(class System.Net.IPAddress address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.IPAddress.IsLoopback(System.Net.IPAddress)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="System.Net.IPAddress" />
+      </Parameters>
+      <Docs>
+        <param name="address">Eine IP-Adresse.</param>
+        <summary>Gibt an, ob die angegebene IP-Adresse die Loopback-Adresse ist.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="address" /> ist die Loopbackadresse ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.IPAddress.IsLoopback%2A> Methode vergleicht `address` auf <xref:System.Net.IPAddress.Loopback> und gibt `true` , wenn die zwei IP-Adressen identisch sind.  
+  
+ Im Fall von IPv4, die die <xref:System.Net.IPAddress.IsLoopback%2A> -Methode zurückkehrt `true` für eine beliebige IP-Adresse des Formulars 127.X.Y.Z (wobei X, Y und Z im Bereich von 0 bis 255), nicht nur <xref:System.Net.IPAddress.Loopback> (127.0.0.1).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Net.IPAddress.IsLoopback%2A> Methode, um zu bestimmen, ob die angegebene Adresse einen Loopback-Adresse ist.  
+  
+ [!code-cpp[System.Net.IPAddress.IsLoopback#1](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.IPAddress.IsLoopback/CPP/isloopback.cpp#1)]
+ [!code-csharp[System.Net.IPAddress.IsLoopback#1](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.IPAddress.IsLoopback/CS/isloopback.cs#1)]
+ [!code-vb[System.Net.IPAddress.IsLoopback#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.IPAddress.IsLoopback/VB/isloopback.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Loopback">
+      <MemberSignature Language="C#" Value="public static readonly System.Net.IPAddress Loopback;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Net.IPAddress Loopback" />
+      <MemberSignature Language="DocId" Value="F:System.Net.IPAddress.Loopback" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IPAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die IP-Loopbackadresse bereit. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.IPAddress.Loopback> Feld entspricht 127.0.0.1 in Punktnotation.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Net.IPAddress.Loopback> Adresse, an die Konsole.  
+  
+ [!code-cpp[IPAddress_Broadcast_Loopback#1](~/samples/snippets/cpp/VS_Snippets_Remoting/IPAddress_Broadcast_Loopback/CPP/ipaddress_broadcast_loopback.cpp#1)]
+ [!code-csharp[IPAddress_Broadcast_Loopback#1](~/samples/snippets/csharp/VS_Snippets_Remoting/IPAddress_Broadcast_Loopback/CS/ipaddress_broadcast_loopback.cs#1)]
+ [!code-vb[IPAddress_Broadcast_Loopback#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/IPAddress_Broadcast_Loopback/VB/ipaddress_broadcast_loopback.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MapToIPv4">
+      <MemberSignature Language="C#" Value="public System.Net.IPAddress MapToIPv4 ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.IPAddress MapToIPv4() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.IPAddress.MapToIPv4" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IPAddress</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ordnet die <see cref="T:System.Net.IPAddress" /> Objekt in eine IPv4-Adresse.</summary>
+        <returns>Gibt <see cref="T:System.Net.IPAddress" />zurück.  
+  
+ Eine IPv4-Adresse.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dual-Stack-Sockets erfordern immer, IPv6-Adressen. Die Möglichkeit für die Interaktion mit einer IPv4-Adresse erfordert die Verwendung von IPv4-zugeordneten IPv6-Adresse-Format. Alle IPv4-Adressen müssen im Format IPv4-zugeordneten IPv6-Adresse dargestellt werden dadurch eine einzige IPv6-Anwendung für die Kommunikation mit einem IPv4-Knoten. Das IPv4-zugeordneten IPv6-Adresse-Format ermöglicht die IPv4-Adresse eine IPv4-Knoten als IPv6-Adresse dargestellt werden soll. Die IPv4-Adresse in das niederwertige 32 Bits der IPv6-Adresse codiert ist, und die höherwertigen-96-Bit halten die festen Präfix 0:0:0:0:0:FFFF. Das Format der IPv4-zugeordneten IPv6-Adresse ist in RFC 4291 genauer beschrieben angegeben. Weitere Informationen finden Sie unter [www.ietf.org/rfc/rfc4291.txt](http://go.microsoft.com/fwlink/?LinkID=92231).  
+  
+ Wenn Sie verwenden möchten <xref:System.Net.IPAddress.MapToIPv4%2A> um eine IPv4-Adresse aus dem IPv6-Format in IPv4-Format zu konvertieren, zunächst müssen Sie sicherstellen, dass Sie eine IPv4-Adresse haben. Rufen Sie <xref:System.Net.IPAddress.IsIPv4MappedToIPv6%2A>, wodurch `true` ist die IP-Adresse ursprünglich IPv4, IPv6, geschrieben oder `false` andernfalls. Wenn <xref:System.Net.IPAddress.IsIPv4MappedToIPv6%2A> gibt `true`, verwenden Sie <xref:System.Net.IPAddress.MapToIPv4%2A> zur Umwandlung verwenden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MapToIPv6">
+      <MemberSignature Language="C#" Value="public System.Net.IPAddress MapToIPv6 ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.IPAddress MapToIPv6() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.IPAddress.MapToIPv6" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IPAddress</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ordnet die <see cref="T:System.Net.IPAddress" /> Objekt ein IPv6-Adresse.</summary>
+        <returns>Gibt <see cref="T:System.Net.IPAddress" />zurück.  
+  
+ Eine IPv6-Adresse.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dual-Stack-Sockets erfordern immer, IPv6-Adressen. Die Möglichkeit für die Interaktion mit einer IPv4-Adresse erfordert die Verwendung von IPv4-zugeordneten IPv6-Adresse-Format. Alle IPv4-Adressen müssen im Format IPv4-zugeordneten IPv6-Adresse dargestellt werden dadurch eine einzige IPv6-Anwendung für die Kommunikation mit einem IPv4-Knoten. Das IPv4-zugeordneten IPv6-Adresse-Format ermöglicht die IPv4-Adresse eine IPv4-Knoten als IPv6-Adresse dargestellt werden soll. Die IPv4-Adresse in das niederwertige 32 Bits der IPv6-Adresse codiert ist, und die höherwertigen-96-Bit halten die festen Präfix 0:0:0:0:0:FFFF. Das Format der IPv4-zugeordneten IPv6-Adresse ist in RFC 4291 genauer beschrieben angegeben. Weitere Informationen finden Sie unter [www.ietf.org/rfc/rfc4291.txt](http://go.microsoft.com/fwlink/?LinkID=92231).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NetworkToHostOrder">
+      <MemberSignature Language="C#" Value="public static short NetworkToHostOrder (short network);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int16 NetworkToHostOrder(int16 network) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.IPAddress.NetworkToHostOrder(System.Int16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="network" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="network">Die Anzahl der zu konvertierenden ausgedrückt netzwerkbyte-Reihenfolge.</param>
+        <summary>Konvertiert einen kurzen Wert aus der netzwerkbyte-Reihenfolge in die Host-Bytereihenfolge.</summary>
+        <returns>Ein Wert vom Typ short, der in der Host-Bytereihenfolge ausgedrückt ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Unterschiedliche Computer verwenden unterschiedliche Konventionen für die Anordnung der Bytes in Ganzzahlwerten. Einige Computer platzieren zuerst das höchstwertige Byte (auch bekannt als big-Endian-Reihenfolge) und andere platzieren zuerst das unwichtigste Byte (bekannt als little-Endian-Reihenfolge). Zusammenarbeit mit Computern, die verschiedene Bytereihenfolge verwenden, werden alle ganzzahligen Werte, die über das Netzwerk gesendet werden in der netzwerkbyte-Reihenfolge gesendet, mit dem höchstwertigen Byte zuerst.  
+  
+ Die <xref:System.Net.IPAddress.NetworkToHostOrder%2A> Methode konvertiert Ganzzahlwerten, die auf dem Hostsystem aus der vom Netzwerk auf die Bytereihenfolge verwendet vom Host verwendete Bytereihenfolge gespeichert sind.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Net.IPAddress.NetworkToHostOrder%2A> Methode, um einem kurzen Wert aus der netzwerkbyte-Reihenfolge zu Host-Bytereihenfolge konvertieren.  
+  
+ [!code-cpp[IPAddress_NetworkToHost#1](~/samples/snippets/cpp/VS_Snippets_Remoting/IPAddress_NetworkToHost/CPP/ipaddress_networktohost.cpp#1)]
+ [!code-csharp[IPAddress_NetworkToHost#1](~/samples/snippets/csharp/VS_Snippets_Remoting/IPAddress_NetworkToHost/CS/ipaddress_networktohost.cs#1)]
+ [!code-vb[IPAddress_NetworkToHost#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/IPAddress_NetworkToHost/VB/ipaddress_networktohost.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NetworkToHostOrder">
+      <MemberSignature Language="C#" Value="public static int NetworkToHostOrder (int network);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 NetworkToHostOrder(int32 network) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.IPAddress.NetworkToHostOrder(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="network" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="network">Die Anzahl der zu konvertierenden ausgedrückt netzwerkbyte-Reihenfolge.</param>
+        <summary>Konvertiert einen ganzzahligen Wert aus der netzwerkbyte-Reihenfolge zu Host-Bytereihenfolge.</summary>
+        <returns>Ein Integer-Wert, ausgedrückt in Host-Bytereihenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Unterschiedliche Computer verwenden unterschiedliche Konventionen für die Anordnung der Bytes in Ganzzahlwerten. Einige Computer platzieren zuerst das höchstwertige Byte (auch bekannt als big-Endian-Reihenfolge) und andere platzieren zuerst das unwichtigste Byte (bekannt als little-Endian-Reihenfolge). Zusammenarbeit mit Computern, die verschiedene Bytereihenfolge verwenden, werden alle ganzzahligen Werte, die über das Netzwerk gesendet werden in der netzwerkbyte-Reihenfolge gesendet, mit dem höchstwertigen Byte zuerst.  
+  
+ Die <xref:System.Net.IPAddress.NetworkToHostOrder%2A> Methode konvertiert Ganzzahlwerten, die auf dem Hostsystem aus der vom Netzwerk auf die Bytereihenfolge verwendet vom Host verwendete Bytereihenfolge gespeichert sind.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Net.IPAddress.NetworkToHostOrder%2A> Methode, um einen ganzzahligen Wert von netzwerkbyte-Reihenfolge in die Host-Bytereihenfolge konvertieren.  
+  
+ [!code-cpp[IPAddress_NetworkToHost#2](~/samples/snippets/cpp/VS_Snippets_Remoting/IPAddress_NetworkToHost/CPP/ipaddress_networktohost.cpp#2)]
+ [!code-csharp[IPAddress_NetworkToHost#2](~/samples/snippets/csharp/VS_Snippets_Remoting/IPAddress_NetworkToHost/CS/ipaddress_networktohost.cs#2)]
+ [!code-vb[IPAddress_NetworkToHost#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/IPAddress_NetworkToHost/VB/ipaddress_networktohost.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NetworkToHostOrder">
+      <MemberSignature Language="C#" Value="public static long NetworkToHostOrder (long network);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int64 NetworkToHostOrder(int64 network) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.IPAddress.NetworkToHostOrder(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="network" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="network">Die Anzahl der zu konvertierenden ausgedrückt netzwerkbyte-Reihenfolge.</param>
+        <summary>Konvertiert einen long-Wert aus der netzwerkbyte-Reihenfolge zu Host-Bytereihenfolge.</summary>
+        <returns>Ein langer Wert, ausgedrückt in Host-Bytereihenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Unterschiedliche Computer verwenden unterschiedliche Konventionen für die Anordnung der Bytes in Ganzzahlwerten. Einige Computer platzieren zuerst das höchstwertige Byte (auch bekannt als big-Endian-Reihenfolge) und andere platzieren zuerst das unwichtigste Byte (bekannt als little-Endian-Reihenfolge). Zusammenarbeit mit Computern, die verschiedene Bytereihenfolge verwenden, werden alle ganzzahligen Werte, die über das Netzwerk gesendet werden in der netzwerkbyte-Reihenfolge gesendet, mit dem höchstwertigen Byte zuerst.  
+  
+ Die <xref:System.Net.IPAddress.NetworkToHostOrder%2A> Methode konvertiert Ganzzahlwerten, die auf dem Hostsystem aus der vom Netzwerk auf die Bytereihenfolge verwendet vom Host verwendete Bytereihenfolge gespeichert sind.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Net.IPAddress.NetworkToHostOrder%2A> Methode, um einen long-Wert von netzwerkbyte-Reihenfolge zu Host-Bytereihenfolge konvertieren.  
+  
+ [!code-cpp[IPAddress_NetworkToHost#3](~/samples/snippets/cpp/VS_Snippets_Remoting/IPAddress_NetworkToHost/CPP/ipaddress_networktohost.cpp#3)]
+ [!code-csharp[IPAddress_NetworkToHost#3](~/samples/snippets/csharp/VS_Snippets_Remoting/IPAddress_NetworkToHost/CS/ipaddress_networktohost.cs#3)]
+ [!code-vb[IPAddress_NetworkToHost#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/IPAddress_NetworkToHost/VB/ipaddress_networktohost.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="public static readonly System.Net.IPAddress None;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Net.IPAddress None" />
+      <MemberSignature Language="DocId" Value="F:System.Net.IPAddress.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IPAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt eine IP-Adresse, die angibt, dass keine Netzwerkschnittstelle verwendet werden soll. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.Sockets.Socket.Bind%2A?displayProperty=nameWithType> -Methode verwendet die <xref:System.Net.IPAddress.None> Feld an, dass eine <xref:System.Net.Sockets.Socket> Clientaktivität muss nicht abhören. Die <xref:System.Net.IPAddress.None> Feld entspricht 255.255.255.255 in Punktnotation.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Net.IPAddress.None> Eigenschaft, um anzugeben, dass keine Netzwerkschnittstelle verwendet werden soll.  
+  
+ [!code-cpp[IPAddress_None#1](~/samples/snippets/cpp/VS_Snippets_Remoting/IPAddress_None/CPP/ipaddress_none.cpp#1)]
+ [!code-csharp[IPAddress_None#1](~/samples/snippets/csharp/VS_Snippets_Remoting/IPAddress_None/CS/ipaddress_none.cs#1)]
+ [!code-vb[IPAddress_None#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/IPAddress_None/VB/ipaddress_none.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static System.Net.IPAddress Parse (string ipString);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.IPAddress Parse(string ipString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.IPAddress.Parse(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IPAddress</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ipString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="ipString">Eine Zeichenfolge, die eine IP-Adresse in Punktnotation für IPv4 und in Hexadezimalschreibweise für IPv6 enthält.</param>
+        <summary>Konvertiert eine Zeichenfolge IP-Adresse, um eine <see cref="T:System.Net.IPAddress" /> Instanz.</summary>
+        <returns>Eine <see cref="T:System.Net.IPAddress" />-Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die statische <xref:System.Net.IPAddress.Parse%2A> Methode erstellt eine <xref:System.Net.IPAddress> -Instanz anhand einer IP-Adresse in Punktnotation für IPv4 und in Hexadezimalschreibweise für IPv6.  
+  
+ Die Anzahl der Teile (jedes Teil wird durch einen Punkt getrennt) im `ipString` bestimmt, wie die IP-Adresse erstellt wird. Eine Adresse ein Teil ist direkt im Adressraum Netzwerks gespeichert. Eine Adresse mit zwei Teilen, praktisch für die Angabe einer Adresse Klasse A setzt das führende Teil in das erste Byte und der nachstehende Teil in der am weitesten rechts drei Bytes der Netzwerkadresse an. Eine dreiteilige Adresse praktisch für die Angabe einer Adresse Klasse B setzt den ersten Teil in das erste Byte, der zweite Teil im zweiten Byte und dem letzten Abschnitt in der zwei Byte ganz rechts die Netzwerkadresse an. Zum Beispiel:  
+  
+|Anzahl der Teile und Beispiel`ipString`|IPv4-Adresse für die IP-Adresse|  
+|--------------------------------------------|--------------------------------|  
+|1 -- "65535"|0.0.255.255|  
+|2 -- "20.2"|20.0.0.2|  
+|2 -- "20.65535"|20.0.255.255|  
+|3 -- "128.1.2"|128.1.0.2|  
+  
+   
+  
+## Examples  
+ Der folgende Code konvertiert eine Zeichenfolge, die eine IP-Adresse in Punktnotation für IPv4- oder in Hexadezimalschreibweise für IPv6 in eine Instanz von enthält die <xref:System.Net.IPAddress> Klasse. Anschließend wird die überladene <xref:System.Net.IPAddress.ToString%2A> Methode, um die Adresse in der Standardschreibweise anzuzeigen.  
+  
+ [!code-cpp[System.Net.IPAddress.Parse#1](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.IPAddress.Parse/CPP/parse.cpp#1)]
+ [!code-csharp[System.Net.IPAddress.Parse#1](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.IPAddress.Parse/CS/parse.cs#1)]
+ [!code-vb[System.Net.IPAddress.Parse#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.IPAddress.Parse/VB/parse.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="ipString" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="ipString" />ist keine gültige IP-Adresse.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ScopeId">
+      <MemberSignature Language="C#" Value="public long ScopeId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 ScopeId" />
+      <MemberSignature Language="DocId" Value="P:System.Net.IPAddress.ScopeId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen der Bereichsbezeichner der IPv6-Adresse.</summary>
+        <value>Eine lange ganze Zahl, die den Bereich der Adresse angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Bedeutung der <xref:System.Net.IPAddress.ScopeId%2A> ändert sich je nach Kontext, in dem er verwendet wird.  
+  
+-   Verbindungslokale Adresse. Auf einem Host mit mehreren Schnittstellen, die mit separaten Links verbunden sind kann die gleiche verbindungslokale Adresse mehrere Schnittstellen zugewiesen werden. Um diese Mehrdeutigkeit zu vermeiden, wird ein Bereichsbezeichner verwendet, an die Schnittstelle, über der Nachrichten ausgetauscht werden.  
+  
+> [!NOTE]
+>  Verbindungslokalen Adressen, die durch das Format Prefix (FP) FE80 angegebene, werden von Knoten verwendet, bei der Kommunikation mit benachbarte Knoten auf derselben Verbindung.  
+  
+-   Standortlokale Adressen. Ein Host kann mit mehreren Standorten verbunden werden. In diesem Fall wird ein Bereichsbezeichner verwendet, um anzugeben, für die Kommunikation mit einen bestimmten Standort.  
+  
+> [!NOTE]
+>  Standortlokale Adressen, die durch die FEC0 Format Prefix (FP) identifiziert werden von Knoten verwendet, bei der Kommunikation auf private Intranets.  
+  
+ Die Notation, die verwendet wird, an die `ScopeId` ist mit der Adresse `Address%ScopeId`. Beispiel: `FE80::5EFE:192.168.41.30%2.`  
+  
+   
+  
+## Examples  
+ [!code-cpp[System.Net.IPAddress#3](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.IPAddress/CPP/ipaddress.cpp#3)]
+ [!code-csharp[System.Net.IPAddress#3](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.IPAddress/CS/ipaddress.cs#3)]
+ [!code-vb[System.Net.IPAddress#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.IPAddress/VB/ipaddress.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.Sockets.SocketException">
+          <see langword="AddressFamily" /> = <see langword="InterNetwork" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="scopeId" />&lt; 0  
+  
+ \- oder –  
+  
+-   <paramref name="scopeId" />&gt; 0x00000000FFFFFFFF</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.IPAddress.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine IP-Adresse konvertiert in der Standardschreibweise.</summary>
+        <returns>Eine Zeichenfolge, die IP-Adresse in punktierter-Quad entweder IPv4 oder IPv6 bei der hexadezimalen Schreibweise enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.IPAddress.ToString%2A> -Methode konvertiert die IP-Adresse, die in gespeichert ist die <xref:System.Net.IPAddress.Address%2A> Eigenschaft, um IPv4 gepunktet Quad- oder IPv6 bei der hexadezimalen Schreibweise.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.Sockets.SocketException">Wird von der Adressfamilie <see cref="F:System.Net.Sockets.AddressFamily.InterNetworkV6" /> und die Adresse ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParse">
+      <MemberSignature Language="C#" Value="public static bool TryParse (string ipString, out System.Net.IPAddress address);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryParse(string ipString, [out] class System.Net.IPAddress&amp; address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.IPAddress.TryParse(System.String,System.Net.IPAddress@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ipString" Type="System.String" />
+        <Parameter Name="address" Type="System.Net.IPAddress&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="ipString">Die zu überprüfende Zeichenfolge.</param>
+        <param name="address">Die <see cref="T:System.Net.IPAddress" />-Version der Zeichenfolge.</param>
+        <summary>Ermittelt, ob eine Zeichenfolge eine gültige IP-Adresse ist.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="ipString" /> konnte analysierte als eine IP-Adresse ist, andernfalls werden <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beachten Sie, dass diese Methode als gültigen einen IpString Wert akzeptiert, die als analysiert werden kann ein <xref:System.Int64>, und klicken Sie dann, Int64 behandelt, als eine IP-Adresse im Netzwerk Bytereihenfolge, ähnlich wie bei der long-Wert, der <xref:System.Net.IPAddress.%23ctor%2A> Konstruktor verfügt. Dies bedeutet, dass diese Methode "true", wenn der Int64-Wert rückkonvertiert werden kann, gibt auch wenn es sich um eine Adresse darstellt, die nicht auf eine gültige IP-Adresse ist. Z. B. wenn IpString "1" ist, gibt diese Methode "true", obwohl "1" (oder 0.0.0.1) ist nicht auf eine gültige IP-Adresse ein, und Sie diese Methode erwarten können "false" zurückgibt. Beheben diesen Fehler wird die vorhandene apps unterbrochen werden, damit das aktuelle Verhalten nicht geändert werden. Code kann dieses Verhalten vermeiden, indem Sie sicherstellen, dass sie nur diese Methode verwendet, um IP-Adressen in punktierter Dezimalschreibweise zu analysieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,66 @@
+<Type Name="ArrayWrapper" FullName="Microsoft.JScript.ArrayWrapper">
+  <TypeSignature Language="C#" Value="public class ArrayWrapper : Microsoft.JScript.ArrayObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ArrayWrapper extends Microsoft.JScript.ArrayObject" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.ArrayWrapper" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.JScript.ArrayObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Dient als Wrapper für ein Array zum Erstellen einer JScript <see cref="T:Microsoft.JScript.ArrayObject" />. Diese Klasse dient als Wrapper für entweder eine .NET Framework <see cref="T:System.Array" /> Objekt oder eine JScript <see cref="T:Microsoft.JScript.ArrayObject" /> Objekt.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="GetType">
+      <MemberSignature Language="C#" Value="public Type GetType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Type GetType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ArrayWrapper.GetType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Typ des Arrays ab.</summary>
+        <returns>Der Typ des <see cref="T:System.Array" /> oder <see cref="T:Microsoft.JScript.ArrayObject" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="length">
+      <MemberSignature Language="C#" Value="public override object length { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object length" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.ArrayWrapper.length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Länge des Arrays ab.</summary>
+        <value>Die Länge des Arrays.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft löst eine <xref:Microsoft.JScript.JSError.AssignmentToReadOnly> -Ausnahme aus, wenn Sie versuchen, sie festzulegen.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

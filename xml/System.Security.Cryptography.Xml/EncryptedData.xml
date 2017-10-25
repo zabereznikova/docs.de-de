@@ -1,0 +1,145 @@
+<Type Name="EncryptedData" FullName="System.Security.Cryptography.Xml.EncryptedData">
+  <TypeSignature Language="C#" Value="public sealed class EncryptedData : System.Security.Cryptography.Xml.EncryptedType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EncryptedData extends System.Security.Cryptography.Xml.EncryptedType" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Xml.EncryptedData" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.Xml.EncryptedType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die <see langword="&lt;EncryptedData&gt;" /> Element im XML-Verschlüsselung. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse dient zur Darstellung der `<EncryptedData>` Element im XML-Verschlüsselung. Dieses Element ist das Grundelement in XML-Verschlüsselung. Das untergeordnete Element `<CipherData>`, verschlüsselte Daten enthält. Die `<EncryptedData>` Element ersetzt ein verschlüsseltes Element oder dient als neue Dokumentstamm.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie zum Verschlüsseln und Entschlüsseln von XML-Element mithilfe der <xref:System.Security.Cryptography.Xml.EncryptedData> Klasse. In diesem Beispiel zeigt dann die verschiedenen Eigenschaften der <xref:System.Security.Cryptography.Xml.EncryptedData> Klasse an die Konsole.  
+  
+ [!code-csharp[Cryptography.XML.EncryptedData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.EncryptedData/cs/sample.cs#1)]
+ [!code-vb[Cryptography.XML.EncryptedData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.EncryptedData/vb/sample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EncryptedData ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptedData.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.Xml.EncryptedData" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt eine neue Instanz der dem <xref:System.Security.Cryptography.Xml.EncryptedData> Klasse. Weitere Informationen zu XML-Verschlüsselungsstandards finden Sie unter "XML Encryption Syntax and Processing" Dokument unter http://www.w3.org/TR/xmlenc-core/.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie zum Verschlüsseln und Entschlüsseln von XML-Element mithilfe der <xref:System.Security.Cryptography.Xml.EncryptedData> Klasse. In diesem Beispiel zeigt dann die verschiedenen Eigenschaften der <xref:System.Security.Cryptography.Xml.EncryptedData> Klasse an die Konsole.  
+  
+ [!code-csharp[Cryptography.XML.EncryptedData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.EncryptedData/cs/sample.cs#1)]
+ [!code-vb[Cryptography.XML.EncryptedData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.EncryptedData/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXml">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlElement GetXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Xml.XmlElement GetXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptedData.GetXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die XML-Darstellung der <see cref="T:System.Security.Cryptography.Xml.EncryptedData" /> Objekt.</summary>
+        <returns>Ein <see cref="T:System.Xml.XmlElement" /> darstellt, die die <see langword="&lt;EncryptedData&gt;" /> Element im XML-Verschlüsselung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode können Sie die Ausgabe der `<EncryptedData>` Element.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Der <see cref="T:System.Security.Cryptography.Xml.EncryptedData" />-Wert ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadXml">
+      <MemberSignature Language="C#" Value="public override void LoadXml (System.Xml.XmlElement value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void LoadXml(class System.Xml.XmlElement value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptedData.LoadXml(System.Xml.XmlElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Xml.XmlElement" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.Xml.XmlElement" /> Objekt, das ein XML-Element mit darstellt der <see langword="&lt;EncryptedData&gt;" /> Element.</param>
+        <summary>Lädt XML-Informationen in den <see langword="&lt;EncryptedData&gt;" /> Element im XML-Verschlüsselung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Laden eines vorhandenen XML-Elements in der `<EncryptedData>` Element dargestellt wird, indem Sie die <xref:System.Security.Cryptography.Xml.EncryptedData> Objekt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Verschlüsseln und Entschlüsseln von XML-Element mithilfe der <xref:System.Security.Cryptography.Xml.EncryptedData> Klasse. In diesem Beispiel zeigt dann die verschiedenen Eigenschaften der <xref:System.Security.Cryptography.Xml.EncryptedData> Klasse an die Konsole.  
+  
+ [!code-csharp[Cryptography.XML.EncryptedData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.EncryptedData/cs/sample.cs#1)]
+ [!code-vb[Cryptography.XML.EncryptedData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.EncryptedData/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="value" /> bereitgestellt ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Die <paramref name="value" /> Parameter enthält keine &lt; <see langword="CypherData" /> &gt; Knoten.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

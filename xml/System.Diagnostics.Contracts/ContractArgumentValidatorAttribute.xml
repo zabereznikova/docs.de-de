@@ -1,0 +1,95 @@
+<Type Name="ContractArgumentValidatorAttribute" FullName="System.Diagnostics.Contracts.ContractArgumentValidatorAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ContractArgumentValidatorAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ContractArgumentValidatorAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Contracts.ContractArgumentValidatorAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, AllowMultiple=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.Conditional("CONTRACTS_FULL")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht die Verarbeitung von Legacy <see langword="if-then-throw" /> code in separate Methoden zur Wiederverwendung und die vollständige Kontrolle über ausgelösten Ausnahmen und Argumenten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Ihr Code verwendet, die explizite `if-then-throw` code zum Überprüfen der Parameter, die Sie möglicherweise werden Dokumentationssatzes Hilfsmethoden, die Durchführung von Überprüfungen und bestimmte Ausnahmen bei einem Fehler, wie im folgenden Beispiel gezeigt.  
+  
+ [!code-csharp[System.Diagnostics.Contracts.ContractArgumentValidatorAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.diagnostics.contracts.contractargumentvalidatorattribute/cs/ifthenthrow1.cs#1)]
+ [!code-vb[System.Diagnostics.Contracts.ContractArgumentValidatorAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.diagnostics.contracts.contractargumentvalidatorattribute/vb/ifthenthrow1.vb#1)]  
+  
+ In diesem Beispiel `Execute` weist eine optionale Vorbedingung gibt an, dass der Parameterwert nicht sein sollte `null`. So aktivieren Sie die vertragstools erkennen, die den Aufruf von `ValidationHelper.NotNull` stellt einen Vertrag dar, markieren Sie die aufgerufene Methode mit dem <xref:System.Diagnostics.Contracts.ContractArgumentValidatorAttribute> Attribut. Die <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A?displayProperty=nameWithType> Methodenaufruf sollte verwendet werden, um die Tools zum Extrahieren von der richtigen Spezifikationen für dokumentgenerierung und statische Überprüfung wie folgt zu aktivieren.  
+  
+ [!code-csharp[System.Diagnostics.Contracts.ContractArgumentValidatorAttribute#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.diagnostics.contracts.contractargumentvalidatorattribute/cs/ifthenthrow2.cs#2)]
+ [!code-vb[System.Diagnostics.Contracts.ContractArgumentValidatorAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.diagnostics.contracts.contractargumentvalidatorattribute/vb/ifthenthrow2.vb#2)]  
+  
+ Zusätzlich zu `if-then-throw` Abschnitt Vertrag, der Methoden des Dienstvertrags Validierungssteuerelement-Anweisungen können Aufrufe an andere Methoden des Dienstvertrags Validierungssteuerelement enthalten. Allerdings keine anderen Verträge (z. B. <xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=nameWithType>, oder <xref:System.Diagnostics.Contracts.Contract.Ensures%2A?displayProperty=nameWithType>) sind zulässig. Der folgende Code die <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A?displayProperty=nameWithType> Aufruf wird von allen vertragstools ignoriert.  
+  
+ Das folgende Beispiel zeigt ein Argument im Hinblick auf eine vorhandene geschrieben Validierungssteuerelements `NotNull` Validierungssteuerelement-Methode.  
+  
+ [!code-csharp[System.Diagnostics.Contracts.ContractArgumentValidatorAttribute#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.diagnostics.contracts.contractargumentvalidatorattribute/cs/ifthenthrow3.cs#3)]
+ [!code-vb[System.Diagnostics.Contracts.ContractArgumentValidatorAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.diagnostics.contracts.contractargumentvalidatorattribute/vb/ifthenthrow3.vb#3)]  
+  
+ Aus Sicht des eine Spezifikation der `Execute` Methode hat die folgenden drei Verträge:  
+  
+```  
+Contract.Requires<ArgumentNullException>(data != null);  
+Contract.Requires<ArgumentOutOfRangeException>(position >= 0);  
+Contract.Requires<ArgumentOutOfRangeException>(position < data.Length);  
+  
+```  
+  
+ In Standardmethoden, Aufrufe von Methoden Validierungssteuerelement Vertrag können kostenlos kombiniert werden mit anderen Verträge wie z. B. <xref:System.Diagnostics.Contracts.Contract.Ensures%2A?displayProperty=nameWithType> oder <xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContractArgumentValidatorAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Contracts.ContractArgumentValidatorAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Diagnostics.Contracts.ContractArgumentValidatorAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

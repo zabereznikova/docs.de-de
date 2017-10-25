@@ -1,0 +1,166 @@
+<Type Name="Rss20ItemFormatter&lt;TSyndicationItem&gt;" FullName="System.ServiceModel.Syndication.Rss20ItemFormatter&lt;TSyndicationItem&gt;">
+  <TypeSignature Language="C#" Value="public class Rss20ItemFormatter&lt;TSyndicationItem&gt; : System.ServiceModel.Syndication.Rss20ItemFormatter where TSyndicationItem : SyndicationItemnew()" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Rss20ItemFormatter`1&lt;.ctor (class System.ServiceModel.Syndication.SyndicationItem) TSyndicationItem&gt; extends System.ServiceModel.Syndication.Rss20ItemFormatter" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Syndication.Rss20ItemFormatter`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TSyndicationItem">
+      <Constraints>
+        <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+        <BaseTypeName>System.ServiceModel.Syndication.SyndicationItem</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Syndication.Rss20ItemFormatter</BaseTypeName>
+  </Base>
+  <Interfaces>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Xml.Serialization.XmlRoot("item", Namespace="")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <typeparam name="TSyndicationItem">Der zu serialisierende von <see cref="T:System.ServiceModel.Syndication.SyndicationItem" /> abgeleitete Typ.</typeparam>
+    <summary>Eine Klasse, die von <see cref="T:System.ServiceModel.Syndication.SyndicationItem" /> abgeleitete Klassen in das und aus dem RSS&amp;#160;2.0-Format serialisiert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Klasse, um Instanzen der von <xref:System.ServiceModel.Syndication.SyndicationItem> abgeleiteten Klassen zu serialisieren und um Instanzen der von <xref:System.ServiceModel.Syndication.SyndicationFeed> abgeleiteten Klassen aus XML-Dokumenten zu erstellen, die RSS&#160;2.0-Elemente darstellen. Wenn Sie eine <xref:System.ServiceModel.Syndication.SyndicationItem>-Instanz serialisieren müssen, verwenden Sie das <xref:System.ServiceModel.Syndication.Rss20ItemFormatter>-Formatierungsprogramm.  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt die Erstellung einer aus <xref:System.ServiceModel.Syndication.SyndicationItem> abgeleiteten Klasse und deren Serialisierung in RSS&#160;2.0.  
+  
+ [!code-csharp[RssFormatter#10](~/samples/snippets/csharp/VS_Snippets_CFX/rssformatter/cs/snippets.cs#10)]
+ [!code-vb[RssFormatter#10](~/samples/snippets/visualbasic/VS_Snippets_CFX/rssformatter/vb/snippets.vb#10)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Rss20ItemFormatter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.Rss20ItemFormatter`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.ServiceModel.Syndication.Rss20ItemFormatter`1" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Rss20ItemFormatter (TSyndicationItem itemToWrite);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!TSyndicationItem itemToWrite) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.Rss20ItemFormatter`1.#ctor(`0)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="itemToWrite" Type="TSyndicationItem" />
+      </Parameters>
+      <Docs>
+        <param name="itemToWrite">Das <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />, das serialisiert werden soll.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.ServiceModel.Syndication.Rss20ItemFormatter`1" />-Klasse mit der angegebenen, von <see cref="T:System.ServiceModel.Syndication.SyndicationItem" /> abgeleiteten Instanz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird der Aufruf dieses Konstruktors veranschaulicht.  
+  
+ [!code-csharp[RssFormatter#11](~/samples/snippets/csharp/VS_Snippets_CFX/rssformatter/cs/snippets.cs#11)]
+ [!code-vb[RssFormatter#11](~/samples/snippets/visualbasic/VS_Snippets_CFX/rssformatter/vb/snippets.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Rss20ItemFormatter (TSyndicationItem itemToWrite, bool serializeExtensionsAsAtom);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!TSyndicationItem itemToWrite, bool serializeExtensionsAsAtom) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.Rss20ItemFormatter`1.#ctor(`0,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="itemToWrite" Type="TSyndicationItem" />
+        <Parameter Name="serializeExtensionsAsAtom" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="itemToWrite">Das <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />, das serialisiert werden soll.</param>
+        <param name="serializeExtensionsAsAtom">Ein Wert, der angibt, ob die in der Spezifikation Atom&amp;#160;1.0, nicht jedoch in der Spezifikation RSS&amp;#160;2.0 angegebenen Elemente serialisiert werden sollen. Der Standardwert ist <see langword="true" />.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.ServiceModel.Syndication.Rss20ItemFormatter`1" />-Klasse mit der angegebenen, von <see cref="T:System.ServiceModel.Syndication.SyndicationItem" /> abgeleiteten Instanz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weist der `serializeExtensionsAsAtom`-Parameter den Wert `true` auf, werden alle in der Spezifikation Atom&#160;1.0, nicht jedoch in der Spezifikation RSS&#160;2.0 definierten Elemente mit dem Atom&#160;1.0-Namespace serialisiert.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird der Aufruf dieses Konstruktors veranschaulicht.  
+  
+ [!code-csharp[RssFormatter#12](~/samples/snippets/csharp/VS_Snippets_CFX/rssformatter/cs/snippets.cs#12)]
+ [!code-vb[RssFormatter#12](~/samples/snippets/visualbasic/VS_Snippets_CFX/rssformatter/vb/snippets.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateItemInstance">
+      <MemberSignature Language="C#" Value="protected override System.ServiceModel.Syndication.SyndicationItem CreateItemInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.ServiceModel.Syndication.SyndicationItem CreateItemInstance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.Rss20ItemFormatter`1.CreateItemInstance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.SyndicationItem</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der aus <see cref="T:System.ServiceModel.Syndication.SyndicationItem" /> abgeleiteten Klasse.</summary>
+        <returns>Eine neue Instanz der <see cref="T:System.ServiceModel.Syndication.SyndicationItem" />-Klasse.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

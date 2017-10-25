@@ -1,0 +1,285 @@
+<Type Name="SupportingTokenParameters" FullName="System.ServiceModel.Security.Tokens.SupportingTokenParameters">
+  <TypeSignature Language="C#" Value="public class SupportingTokenParameters" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SupportingTokenParameters extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.Tokens.SupportingTokenParameters" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Security</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Parameter für die Unterstützung von Sicherheitstoken dar, die vom Sicherheitsbindungselement angefordert werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse ist eine Auflistung von Tokeneigenschaften und –methoden und wird für die Erstellung von Bindungselementen und Token verwendet. Unterstützende Token geben Verschlüsselungs- und Signierungsanforderungen an.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SupportingTokenParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.SupportingTokenParameters.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Security</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Security.Tokens.SupportingTokenParameters" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die neuen Instanzeigenschaftswerte werden auf ihre Standardwerte festgelegt:  
+  
+-   Für <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InclusionMode%2A> ist <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode.AlwaysToRecipient> festgelegt.  
+  
+-   Für <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.ReferenceStyle%2A> ist <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle.Internal> festgelegt.  
+  
+-   Für <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.RequireDerivedKeys%2A> ist `true` festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.Tokens.SupportingTokenParameters Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Security.Tokens.SupportingTokenParameters Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.SupportingTokenParameters.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Security</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.Tokens.SupportingTokenParameters</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Klont eine andere Instanz dieser Klasseninstanz.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.Security.Tokens.SupportingTokenParameters" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCore">
+      <MemberSignature Language="C#" Value="protected virtual System.ServiceModel.Security.Tokens.SupportingTokenParameters CloneCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.ServiceModel.Security.Tokens.SupportingTokenParameters CloneCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.SupportingTokenParameters.CloneCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.Tokens.SupportingTokenParameters</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Klont eine andere Instanz dieser Klasseninstanz.</summary>
+        <returns>Eine neue Instanz der <see cref="T:System.ServiceModel.Security.Tokens.SupportingTokenParameters" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Endorsing">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Security.Tokens.SecurityTokenParameters&gt; Endorsing { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Security.Tokens.SecurityTokenParameters&gt; Endorsing" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.SupportingTokenParameters.Endorsing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Security</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Security.Tokens.SecurityTokenParameters&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der Sicherheitstokenparameter für unterzeichnende und unterstützende Token ab, die vom Sicherheitsbindungselement angefordert werden.</summary>
+        <value>Eine Auflistung von <see cref="T:System.ServiceModel.Security.Tokens.SecurityTokenParameters" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Nachrichtensignatur wird von unterzeichnenden Token signiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetKeyDerivation">
+      <MemberSignature Language="C#" Value="public void SetKeyDerivation (bool requireDerivedKeys);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetKeyDerivation(bool requireDerivedKeys) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.SupportingTokenParameters.SetKeyDerivation(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requireDerivedKeys" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="requireDerivedKeys"><see cref="T:System.Boolean" />, der bestimmt, ob Parameter abgeleitete Schlüssel erfordern.</param>
+        <summary>Legt einen Wert fest, der angibt, ob alle unterzeichnenden oder signierten unterzeichnenden Tokenparameter abgeleitete Schlüssel erfordern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters>-Eigenschaft jedes <xref:System.ServiceModel.Security.Tokens.SupportingTokenParameters.Endorsing%2A> in <xref:System.ServiceModel.Security.Tokens.SupportingTokenParameters.SignedEndorsing%2A> oder in <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.RequireDerivedKeys%2A> ist auf `requireDerivedKeys` festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Signed">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Security.Tokens.SecurityTokenParameters&gt; Signed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Security.Tokens.SecurityTokenParameters&gt; Signed" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.SupportingTokenParameters.Signed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Security.Tokens.SecurityTokenParameters&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der Sicherheitstokenparameter für signierte unterstützende Token, die vom Sicherheitsbindungselement angefordert.</summary>
+        <value>Eine Auflistung von <see cref="T:System.ServiceModel.Security.Tokens.SecurityTokenParameters" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Signierte Token sind in der Nachrichtensignatur enthalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignedEncrypted">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Security.Tokens.SecurityTokenParameters&gt; SignedEncrypted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Security.Tokens.SecurityTokenParameters&gt; SignedEncrypted" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.SupportingTokenParameters.SignedEncrypted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Security</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Security.Tokens.SecurityTokenParameters&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der Sicherheitstokenparameter für signierte und verschlüsselte unterstützende Token ab, die vom Sicherheitsbindungselement angefordert werden.</summary>
+        <value>Eine Auflistung von <see cref="T:System.ServiceModel.Security.Tokens.SecurityTokenParameters" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Signierte Token sind in der Nachrichtensignatur enthalten und verschlüsselt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignedEndorsing">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Security.Tokens.SecurityTokenParameters&gt; SignedEndorsing { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Security.Tokens.SecurityTokenParameters&gt; SignedEndorsing" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.SupportingTokenParameters.SignedEndorsing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Security.Tokens.SecurityTokenParameters&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der Sicherheitstokenparameter für signierte und unterzeichnende unterstützende Token ab, die vom Sicherheitsbindungselement angefordert werden.</summary>
+        <value>Eine Auflistung von <see cref="T:System.ServiceModel.Security.Tokens.SecurityTokenParameters" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Signierte unterzeichnende Token signieren das Nachrichtensignaturtoken und werden selbst von der Nachrichtensignatur signiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.SupportingTokenParameters.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Zeigt eine Textdarstellung dieser Instanz der Klasse an.</summary>
+        <returns>Eine Textdarstellung dieser Instanz der Klasse.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Ausgabezeichenfolge zeigt das Ergebnis der Ausführung der `ToString()`-Methode für die Token in <xref:System.ServiceModel.Security.Tokens.SupportingTokenParameters.Endorsing%2A>, <xref:System.ServiceModel.Security.Tokens.SupportingTokenParameters.Signed%2A>, <xref:System.ServiceModel.Security.Tokens.SupportingTokenParameters.SignedEncrypted%2A> und <xref:System.ServiceModel.Security.Tokens.SupportingTokenParameters.SignedEndorsing%2A> an.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

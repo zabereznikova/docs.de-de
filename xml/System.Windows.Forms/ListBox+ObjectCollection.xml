@@ -1,0 +1,708 @@
+<Type Name="ListBox+ObjectCollection" FullName="System.Windows.Forms.ListBox+ObjectCollection">
+  <TypeSignature Language="C#" Value="public class ListBox.ObjectCollection : System.Collections.IList" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit ListBox/ObjectCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ListBox.ObjectCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ListBindable(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Auflistung von Elementen in einem <see cref="T:System.Windows.Forms.ListBox" /> dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ListBox.ObjectCollection> Klasse speichert die Elemente angezeigt, der <xref:System.Windows.Forms.ListBox>. Es gibt zwei Auflistungen, die definiert, die innerhalb der <xref:System.Windows.Forms.ListBox> Klasse, mit denen Sie bestimmen, welche Elemente in dieser Sammlung ausgewählt sind. Die <xref:System.Windows.Forms.ListBox.SelectedObjectCollection> Klasse enthält Eigenschaften und Methoden zum Bestimmen der ausgewählten Elemente innerhalb der <xref:System.Windows.Forms.ListBox.ObjectCollection>, während die <xref:System.Windows.Forms.ListBox.SelectedIndexCollection> -Klasse ermöglicht es Ihnen zu bestimmen, was innerhalb indiziert die <xref:System.Windows.Forms.ListBox.ObjectCollection> ausgewählt werden.  
+  
+ Es gibt eine Reihe von Möglichkeiten, um der Auflistung Elemente hinzuzufügen. Die <xref:System.Windows.Forms.ListBox.ObjectCollection.Add%2A> Methode bietet die Möglichkeit, ein einzelnes Objekt der Auflistung hinzufügen. Um eine Reihe von Objekten zur Auflistung hinzuzufügen, erstellen Sie ein Array von Elementen, und weisen sie Sie der <xref:System.Windows.Forms.ListBox.ObjectCollection.AddRange%2A> Methode. Wenn Sie an einer bestimmten Position in der Auflistung ein Objekt einfügen möchten, können Sie mithilfe der <xref:System.Windows.Forms.ListBox.ObjectCollection.Insert%2A> Methode. Um Elemente zu entfernen, verwenden Sie entweder die <xref:System.Windows.Forms.ListBox.ObjectCollection.Remove%2A> Methode oder die <xref:System.Windows.Forms.ListBox.ObjectCollection.RemoveAt%2A> Methode, wenn Sie wissen, wo sich das Element in der Auflistung befindet. Die <xref:System.Windows.Forms.ListBox.ObjectCollection.Clear%2A> Methode ermöglicht es Ihnen so entfernen Sie alle Elemente aus der Auflistung anstelle der <xref:System.Windows.Forms.ListBox.ObjectCollection.Remove%2A> Methode, um ein einzelnes Element zu einem Zeitpunkt zu entfernen.  
+  
+ Können Sie auch die Elemente der Bearbeiten einer <xref:System.Windows.Forms.ListBox> mithilfe der <xref:System.Windows.Forms.ListControl.DataSource%2A> Eigenschaft. Bei Verwendung der <xref:System.Windows.Forms.ListControl.DataSource%2A> Eigenschaft Elemente hinzufügen eine <xref:System.Windows.Forms.ListBox>, sehen Sie die Elemente in der <xref:System.Windows.Forms.ListBox> mithilfe der <xref:System.Windows.Forms.ListBox.Items%2A> Eigenschaft jedoch nicht hinzufügen oder Entfernen von Elementen aus der Liste mit den Methoden der der <xref:System.Windows.Forms.ListBox.ObjectCollection>.  
+  
+ Zusätzlich zu den Methoden und Eigenschaften zum Hinzufügen und Entfernen von Elementen die <xref:System.Windows.Forms.ListBox.ObjectCollection> stellt auch Methoden zum Suchen von Elementen in der Auflistung bereit. Die <xref:System.Windows.Forms.ListBox.ObjectCollection.Contains%2A> Methode können Sie bestimmen, ob ein Objekt ein Element der Auflistung ist. Wenn Sie wissen, dass das Element in der Auflistung befindet, können Sie die <xref:System.Windows.Forms.ListBox.ObjectCollection.IndexOf%2A> Methode, um zu bestimmen, wo sich das Element in der Auflistung befindet.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht ein vom Besitzer gezeichnetes <xref:System.Windows.Forms.ListBox> durch Festlegen der <xref:System.Windows.Forms.ListBox.DrawMode%2A> Eigenschaft, um die `OwnerDrawVariable` Wert und Behandlung der <xref:System.Windows.Forms.ListBox.DrawItem> und <xref:System.Windows.Forms.ListBox.MeasureItem> Ereignisse. Außerdem zeigt es die Einstellung der <xref:System.Windows.Forms.ListBox.BorderStyle%2A> und <xref:System.Windows.Forms.ListBox.ScrollAlwaysVisible%2A> Eigenschaften als auch mithilfe der <xref:System.Windows.Forms.ListBox.ObjectCollection.AddRange%2A> Methode.  
+  
+ Um dieses Beispiel auszuführen, fügen Sie ihn in ein leeres Formular, das importiert die <xref:System.Drawing> Namespace und die <xref:System.Windows.Forms> Namespace. Rufen Sie `InitializeOwnerDrawnListBox` aus den Konstruktor des Formulars oder `Load` Methode.  
+  
+ [!code-cpp[System.Windows.Forms.ListBoxExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListBoxExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ListBoxExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListBoxExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ListBoxExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListBoxExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectCollection (System.Windows.Forms.ListBox owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.ListBox owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBox.ObjectCollection.#ctor(System.Windows.Forms.ListBox)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.ListBox" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Die <see cref="T:System.Windows.Forms.ListBox" /> , die die Auflistung besitzt.</param>
+        <summary>Initialisiert eine neue Instanz von <see cref="T:System.Windows.Forms.ListBox.ObjectCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz dieser Klasse kann nicht erstellt werden, ohne Zuordnung zu einem <xref:System.Windows.Forms.ListBox> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectCollection (System.Windows.Forms.ListBox owner, object[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.ListBox owner, object[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBox.ObjectCollection.#ctor(System.Windows.Forms.ListBox,System.Object[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.ListBox" />
+        <Parameter Name="value" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Die <see cref="T:System.Windows.Forms.ListBox" /> , die die Auflistung besitzt.</param>
+        <param name="value">Ein Array von Objekten, die der Auflistung hinzugefügt werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.ListBox.ObjectCollection" /> , die ein Array von Objekten enthält.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz dieser Klasse kann nicht erstellt werden, ohne Zuordnung zu einem <xref:System.Windows.Forms.ListBox> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectCollection (System.Windows.Forms.ListBox owner, System.Windows.Forms.ListBox.ObjectCollection value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.ListBox owner, class System.Windows.Forms.ListBox/ObjectCollection value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBox.ObjectCollection.#ctor(System.Windows.Forms.ListBox,System.Windows.Forms.ListBox.ObjectCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.ListBox" />
+        <Parameter Name="value" Type="System.Windows.Forms.ListBox+ObjectCollection" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Die <see cref="T:System.Windows.Forms.ListBox" /> , die die Auflistung besitzt.</param>
+        <param name="value">Ein <see cref="T:System.Windows.Forms.ListBox.ObjectCollection" /> aus, die den Inhalt dieser Auflistung kopiert werden.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.ListBox.ObjectCollection" /> basierend auf einem anderen <see cref="T:System.Windows.Forms.ListBox.ObjectCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz dieser Klasse kann nicht erstellt werden, ohne Zuordnung zu einem <xref:System.Windows.Forms.ListBox> Steuerelement. Diese Version des Konstruktors können Sie die Elemente in einer vorhandenen Instanz des angegebenen verwenden die <xref:System.Windows.Forms.ListBox.ObjectCollection> Klasse zum Hinzufügen von Elementen auf die Auflistung während der Erstellung. Verwenden Sie diesen Konstruktor, der Elemente in einer anderen angegebenen <xref:System.Windows.Forms.ListBox> -Steuerelement mit dieser Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBox.ObjectCollection.Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">Ein Objekt, das der Auflistung hinzuzufügende Element darstellt.</param>
+        <summary>Fügt ein Element der Liste der Elemente für eine <see cref="T:System.Windows.Forms.ListBox" />.</summary>
+        <returns>Der nullbasierte Index des Elements in der Auflistung oder -1, wenn <see cref="M:System.Windows.Forms.ListBox.BeginUpdate" /> aufgerufen wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.ListBox.Sorted%2A> Eigenschaft von der <xref:System.Windows.Forms.ListBox> auf festgelegt ist `true`, das Element in die Liste alphabetisch eingefügt wird. Anderenfalls wird das Element am Ende der Liste eingefügt. Um ein Element in das Listenfeld an einer bestimmten Position einzufügen, verwenden die <xref:System.Windows.Forms.ListBox.ObjectCollection.Insert%2A> Methode. Um eine Gruppe von Elementen im Listenfeld in einem einzigen Vorgang hinzuzufügen, verwenden Sie die <xref:System.Windows.Forms.ListBox.ObjectCollection.AddRange%2A> Methode. Wenn Sie verwenden möchten die <xref:System.Windows.Forms.ListBox.ObjectCollection.Add%2A> Methode um eine große Anzahl von Elementen der Liste hinzuzufügen, verwenden Sie die <xref:System.Windows.Forms.ListBox.BeginUpdate%2A> und <xref:System.Windows.Forms.ListBox.EndUpdate%2A> Methoden, um zu verhindern, dass die <xref:System.Windows.Forms.ListBox> jedes Mal aktualisiert wird ein Element der Liste hinzugefügt, bis alle Elemente der Liste hinzugefügt werden. Beim Hinzufügen von Elementen zu einer <xref:System.Windows.Forms.ListBox>, es ist jedoch effizienter, zu den Elementen am Anfang sortieren und dann neue Elemente hinzuzufügen.  
+  
+ Wenn ein Objekt der Auflistung hinzugefügt wird die <xref:System.Windows.Forms.ListBox> zuerst überprüft, ob die <xref:System.Windows.Forms.ListControl.DisplayMember%2A> Eigenschaft von der <xref:System.Windows.Forms.ListControl> Klasse trägt den Namen eines Elements aus dem Objekt zu verweisen angegeben wird, wenn Sie den Elementtext abrufen. Wenn die <xref:System.Windows.Forms.ListControl.DisplayMember%2A> Eigenschaft weist kein Mitglied angegeben wird, auf die <xref:System.Windows.Forms.ListBox> ruft dann die <xref:System.Object.ToString%2A> -Methode des Objekts zum Abrufen des Texts in der Liste angezeigt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Windows.Forms.ListBox> Steuerelement, das mehrere Elemente in Spalten angezeigt und kann mehr als ein Element in der Liste das Steuerelement ausgewählt haben. Der Code für das Beispiel fügt 50 Elemente der <xref:System.Windows.Forms.ListBox> mithilfe der <xref:System.Windows.Forms.ListBox.ObjectCollection.Add%2A> Methode der <xref:System.Windows.Forms.ListBox.ObjectCollection> Klasse und wählt dann drei Elemente aus der Liste mithilfe der <xref:System.Windows.Forms.ListBox.SetSelected%2A> Methode. Zeigt der Code dann Werte aus den <xref:System.Windows.Forms.ListBox.SelectedObjectCollection> Auflistung (über die <xref:System.Windows.Forms.ListBox.SelectedItems%2A> Eigenschaft) und die <xref:System.Windows.Forms.ListBox.SelectedIndexCollection> (über die <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> Eigenschaft). Dieses Beispiel benötigen Sie, dass der Code befindet sich im und aufgerufen wird eine <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[Classic ListBox Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ListBox Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ListBox Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ListBox Example/CS/source.cs#1)]
+ [!code-vb[Classic ListBox Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ListBox Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.SystemException">Es ist nicht genügend Speicherplatz zur Verfügung, um das neue Element der Liste hinzuzufügen.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="item" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (object[] items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(object[] items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBox.ObjectCollection.AddRange(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="items" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="items">Ein Array von Objekten, die der Liste hinzugefügt.</param>
+        <summary>Fügt ein Array von Elementen der Liste der Elemente für eine <see cref="T:System.Windows.Forms.ListBox" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.ListBox.Sorted%2A> Eigenschaft von der <xref:System.Windows.Forms.ListBox> auf festgelegt ist `true`, die Elemente werden in alphabetischer Reihenfolge in die Liste eingefügt. Andernfalls werden die Elemente in der Reihenfolge eingefügt, Auftretens innerhalb des Arrays. Diese Methode wird in der Regel ein Array von übergeben <xref:System.String> Objekte, aber ein Array eines beliebigen Typs des Objekts an diese Methode übergeben werden kann. Wenn ein Objekt der Auflistung hinzugefügt wird die <xref:System.Windows.Forms.ListBox> zuerst überprüft, ob die <xref:System.Windows.Forms.ListControl.DisplayMember%2A> Eigenschaft von der <xref:System.Windows.Forms.ListControl> Klasse trägt den Namen eines Elements aus dem Objekt zu verweisen angegeben wird, wenn Sie den Elementtext abrufen. Wenn die <xref:System.Windows.Forms.ListControl.DisplayMember%2A> Eigenschaft weist kein Mitglied angegeben wird, auf die <xref:System.Windows.Forms.ListBox> ruft dann die <xref:System.Object.ToString%2A> -Methode des Objekts zum Abrufen des Texts in der Liste angezeigt. Bei Verwendung dieser Methode zum Hinzufügen von Elementen zu den <xref:System.Windows.Forms.ListBox>, müssen Sie nicht Aufrufen der <xref:System.Windows.Forms.ListBox.BeginUpdate%2A> und <xref:System.Windows.Forms.ListBox.EndUpdate%2A> Methoden zum Optimieren der Leistung. Beim Hinzufügen von Elementen zu einer <xref:System.Windows.Forms.ListBox>, es ist jedoch effizienter, zu den Elementen am Anfang sortieren und dann neue Elemente hinzuzufügen. Sie können diese Methode verwenden, um eine Gruppe von Elementen zur Liste hinzuzufügen oder die Elemente in einer anderen gespeicherten wiederverwenden <xref:System.Windows.Forms.ListBox>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht ein vom Besitzer gezeichnetes <xref:System.Windows.Forms.ListBox> durch Festlegen der <xref:System.Windows.Forms.ListBox.DrawMode%2A> Eigenschaft, um die `OwnerDrawVariable` Wert und Behandlung der <xref:System.Windows.Forms.ListBox.DrawItem> und <xref:System.Windows.Forms.ListBox.MeasureItem> Ereignisse. Außerdem zeigt es die Einstellung der <xref:System.Windows.Forms.ListBox.BorderStyle%2A> und <xref:System.Windows.Forms.ListBox.ScrollAlwaysVisible%2A> Eigenschaften als auch mithilfe der <xref:System.Windows.Forms.ListBox.ObjectCollection.AddRange%2A> Methode.  
+  
+ Um dieses Beispiel auszuführen, fügen Sie ihn in ein leeres Formular, das importiert die <xref:System.Drawing> Namespace und die <xref:System.Windows.Forms> Namespace. Rufen Sie `InitializeOwnerDrawnListBox` aus den Konstruktor des Formulars oder `Load` Methode.  
+  
+ [!code-cpp[System.Windows.Forms.ListBoxExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListBoxExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ListBoxExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListBoxExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ListBoxExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListBoxExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.Windows.Forms.ListBox.ObjectCollection value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.Windows.Forms.ListBox/ObjectCollection value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBox.ObjectCollection.AddRange(System.Windows.Forms.ListBox.ObjectCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Forms.ListBox+ObjectCollection" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.Windows.Forms.ListBox.ObjectCollection" /> zum Laden von in dieser Auflistung.</param>
+        <summary>Fügt die Elemente einer vorhandenen <see cref="T:System.Windows.Forms.ListBox.ObjectCollection" /> zur Liste der Elemente in einem <see cref="T:System.Windows.Forms.ListBox" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.ListBox.Sorted%2A> Eigenschaft von der <xref:System.Windows.Forms.ListBox> auf festgelegt ist `true`, die Elemente werden in alphabetischer Reihenfolge in die Liste eingefügt. Andernfalls werden die Elemente in der Reihenfolge eingefügt, Auftretens innerhalb des Arrays. Diese Methode wird in der Regel ein Array von übergeben <xref:System.String> Objekte, aber ein Array eines beliebigen Typs des Objekts an diese Methode übergeben werden kann. Wenn ein Objekt der Auflistung hinzugefügt wird die <xref:System.Windows.Forms.ListBox> zuerst überprüft, ob die <xref:System.Windows.Forms.ListControl.DisplayMember%2A> Eigenschaft von der <xref:System.Windows.Forms.ListControl> Klasse trägt den Namen eines Elements aus dem Objekt zu verweisen angegeben wird, wenn Sie den Elementtext abrufen. Wenn die <xref:System.Windows.Forms.ListControl.DisplayMember%2A> Eigenschaft weist kein Mitglied angegeben wird, auf die <xref:System.Windows.Forms.ListBox> ruft dann die <xref:System.Object.ToString%2A> -Methode des Objekts zum Abrufen des Texts in der Liste angezeigt.  
+  
+ Bei Verwendung dieser Methode zum Hinzufügen von Elementen zu den <xref:System.Windows.Forms.ListBox>, müssen Sie nicht Aufrufen der <xref:System.Windows.Forms.ListBox.BeginUpdate%2A> und <xref:System.Windows.Forms.ListBox.EndUpdate%2A> Methoden zum Optimieren der Leistung. Beim Hinzufügen von Elementen zu einer <xref:System.Windows.Forms.ListBox>, es ist jedoch effizienter, zu den Elementen am Anfang sortieren und dann neue Elemente hinzuzufügen. Sie können diese Methode verwenden, um die Elemente in einer anderen gespeicherten wiederverwenden <xref:System.Windows.Forms.ListBox>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public virtual void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBox.ObjectCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Elemente aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie Elemente aus der Liste entfernen, wird alle Informationen über die gelöschten Elemente verloren. So entfernen Sie ein einzelnes Element aus der <xref:System.Windows.Forms.ListBox>, verwenden Sie die <xref:System.Windows.Forms.ListBox.ObjectCollection.Remove%2A> oder <xref:System.Windows.Forms.ListBox.ObjectCollection.RemoveAt%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBox.ObjectCollection.Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Objekt, das in der Auflistung zu suchende Element darstellt.</param>
+        <summary>Bestimmt, ob das angegebene Element in der Auflistung befindet.</summary>
+        <returns>
+          <see langword="true" />Wenn das Element in der Auflistung befindet; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ListBox.ObjectCollection.Contains%2A> Methode können Sie bestimmen, ob ein Objekt ein Element der Auflistung ist. Wenn Sie wissen, dass das Element in der Auflistung befindet, können Sie die <xref:System.Windows.Forms.ListBox.ObjectCollection.IndexOf%2A> Methode, um zu bestimmen, wo sich das Element in der Auflistung befindet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (object[] destination, int arrayIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(object[] destination, int32 arrayIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBox.ObjectCollection.CopyTo(System.Object[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destination" Type="System.Object[]" />
+        <Parameter Name="arrayIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="destination">Das Objektarray, in dem die Elemente aus der Auflistung in kopiert werden.</param>
+        <param name="arrayIndex">Die Position im Zielarray, um die Elemente aus der Auflistung zu kopieren.</param>
+        <summary>Kopiert die gesamte Auflistung in ein vorhandenes Array von Objekten an einer angegebenen Position innerhalb des Arrays.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Methode verwenden, kombiniert die Elemente aus mehreren Sammlungen in ein einzelnes Array. Dann können Sie dieses Array den Inhalt eines anderen füllen <xref:System.Windows.Forms.ListBox> steuern Sie mithilfe der <xref:System.Windows.Forms.ListBox.ObjectCollection.AddRange%2A> Methode der <xref:System.Windows.Forms.ListBox.ObjectCollection> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListBox.ObjectCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Elemente in der Auflistung ab.</summary>
+        <value>Anzahl der Elemente in der Auflistung</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Eigenschaft können Sie bestimmen die Anzahl der Elemente in der <xref:System.Windows.Forms.ListBox>. Sie können dann diesen Wert verwenden, müssen Sie eine Anzahl von Iterationen der Schleife bereitstellen, wenn Sie die Werte der Auflistung durchlaufen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBox.ObjectCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zum Durchlaufen der Auflistung verwendet.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" /> , das die Elementauflistung darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOf(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBox.ObjectCollection.IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Objekt, das in der Auflistung zu suchende Element darstellt.</param>
+        <summary>Gibt den Index in der Auflistung des angegebenen Elements zurück.</summary>
+        <returns>Der nullbasierte Index, in dem das Element in der Auflistung befindet; andernfalls minus eins (1).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ListBox.ObjectCollection.IndexOf%2A> Methode können Sie bestimmen, wo ein Element in der Auflistung gefunden wird. Um zu bestimmen, ob ein Element in der Auflistung vor dem Aufrufen dieser Methode ist, verwenden die <xref:System.Windows.Forms.ListBox.ObjectCollection.Contains%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="value" /> -Parameter ist null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, object item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Insert(int32 index, object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBox.ObjectCollection.Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Indexspeicherort, in den das Element eingefügt wird.</param>
+        <param name="item">Ein Objekt, das das einzufügende Element repräsentiert.</param>
+        <summary>Fügt ein Element am angegebenen Index in das Listenfeld ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ermöglicht das Einfügen eines Elements an einer bestimmten Position innerhalb der <xref:System.Windows.Forms.ListBox>. Wenn die <xref:System.Windows.Forms.ListBox.Sorted%2A> Eigenschaft von der <xref:System.Windows.Forms.ListBox> auf festgelegt ist "true" wird das Element hinzugefügt, in der richtigen Position in der sortierten Liste unabhängig von den im angegebenen Werten der `index` Parameter. Wenn ein Objekt der Auflistung hinzugefügt wird die <xref:System.Windows.Forms.ListBox> zuerst überprüft, ob die <xref:System.Windows.Forms.ListControl.DisplayMember%2A> Eigenschaft von der <xref:System.Windows.Forms.ListControl> Klasse trägt den Namen eines Elements aus dem Objekt zu verweisen angegeben wird, wenn Sie den Elementtext abrufen. Wenn die <xref:System.Windows.Forms.ListControl.DisplayMember%2A> Eigenschaft weist kein Mitglied angegeben wird, auf die <xref:System.Windows.Forms.ListBox> ruft dann die <xref:System.Object.ToString%2A> -Methode des Objekts zum Abrufen des Texts in der Liste angezeigt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der <paramref name="index" />-Parameter ist kleiner als 0 (null) oder größer als der Wert der <see cref="P:System.Windows.Forms.ListBox.ObjectCollection.Count" />-Eigenschaft der <see cref="T:System.Windows.Forms.ListBox.ObjectCollection" />-Klasse.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="item" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListBox.ObjectCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Auflistung schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" />Wenn diese Auflistung schreibgeschützt ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist immer `false` für diese Sammlung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual object this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListBox.ObjectCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des Elements in der Auflistung zum Abrufen oder festlegen.</param>
+        <summary>Ruft ab oder legt das Element am angegebenen Index in der Auflistung.</summary>
+        <value>Ein Objekt, das das Element am angegebenen Index in der Auflistung darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Abrufen der <xref:System.Windows.Forms.ListBox> Element an einer bestimmten Position in der Auflistung gespeichert. Um den Index eines bestimmten Elements in der Auflistung zu bestimmen, verwenden die <xref:System.Windows.Forms.ListBox.ObjectCollection.IndexOf%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="index" /> -Parameter ist kleiner als 0 (null) oder größer als oder gleich dem Wert von der <see cref="P:System.Windows.Forms.ListBox.ObjectCollection.Count" /> Eigenschaft von der <see cref="T:System.Windows.Forms.ListBox.ObjectCollection" /> Klasse.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBox.ObjectCollection.Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Objekt, das die aus der Auflistung zu entfernenden Elements darstellt.</param>
+        <summary>Entfernt das angegebene Objekt aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie ein Element aus der Liste entfernen, ändern die Indizes für die folgenden Elemente in der Liste aus. Alle Informationen über das entfernte Element wird gelöscht. Sie können diese Methode verwenden, auf um ein bestimmtes Element aus der Liste zu entfernen, durch die Angabe des tatsächlichen Elements aus der Liste zu entfernen. Verwenden Sie zum Angeben des Indexes des Elements, das statt des Elements selbst Entfernen der <xref:System.Windows.Forms.ListBox.ObjectCollection.RemoveAt%2A> Methode. Um alle Elemente aus der Liste zu entfernen, verwenden Sie die <xref:System.Windows.Forms.ListBox.ObjectCollection.Clear%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBox.ObjectCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des zu entfernenden Elements.</param>
+        <summary>Entfernt das Element am angegebenen Index in der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie ein Element aus der Liste entfernen, ändern die Indizes für die folgenden Elemente in der Liste aus. Alle Informationen über das entfernte Element wird gelöscht. Sie können diese Methode verwenden, um ein bestimmtes Element aus der Liste zu entfernen, durch Angeben des Indexes des Elements, das aus der Liste entfernen. Verwenden Sie zum Angeben der das zu entfernende anstelle der Index des Elements die <xref:System.Windows.Forms.ListBox.ObjectCollection.Remove%2A> Methode. Um alle Elemente aus der Liste zu entfernen, verwenden Sie die <xref:System.Windows.Forms.ListBox.ObjectCollection.Clear%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> Eigenschaft mit der <xref:System.Windows.Forms.ListBox.TopIndex%2A> Eigenschaft, um das aktuell ausgewählte Element an den Anfang der Liste der Elemente in den Anzeigebereich des Verschieben der <xref:System.Windows.Forms.ListBox>. Das Beispiel veranschaulicht, wie Entfernen von Elementen, die mit der <xref:System.Windows.Forms.ListBox.ObjectCollection.RemoveAt%2A> Methode der <xref:System.Windows.Forms.ListBox.ObjectCollection?displayProperty=nameWithType> Klasse sowie zum Deaktivieren Sie alle Artikel Formatauswahl mithilfe der <xref:System.Windows.Forms.ListBox.ClearSelected%2A> Methode. Der Code wird zuerst das aktuell ausgewählte Element verschoben, der <xref:System.Windows.Forms.ListBox> an den Anfang der Liste. Der Code entfernt alle Elemente, bevor Sie das aktuell ausgewählte Element, und löscht die Auswahl aller Optionen in der <xref:System.Windows.Forms.ListBox>. Dieses Beispiel erfordert, dass eine <xref:System.Windows.Forms.ListBox> mit Elementen zu einem Formular hinzugefügt und ausgewählt, dass ein Element aktuell die <xref:System.Windows.Forms.ListBox>.  
+  
+ [!code-cpp[ListBox.SelectedIndex#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ListBox.SelectedIndex/CPP/form1.cpp#1)]
+ [!code-csharp[ListBox.SelectedIndex#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ListBox.SelectedIndex/CS/form1.cs#1)]
+ [!code-vb[ListBox.SelectedIndex#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ListBox.SelectedIndex/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="index" /> -Parameter ist kleiner als 0 (null) oder größer als oder gleich dem Wert von der <see cref="P:System.Windows.Forms.ListBox.ObjectCollection.Count" /> Eigenschaft von der <see cref="T:System.Windows.Forms.ListBox.ObjectCollection" /> Klasse.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array destination, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array destination, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBox.ObjectCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destination" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="destination">Das eindimensionale Array, das das Ziel der aus der <see cref="T:System.Collections.ICollection" /> kopierten Elemente darstellt. Für das Array muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="index">Der nullbasierte Index im Array, ab dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die Elemente der Auflistung in ein Array, wobei an einem bestimmten Arrayindex begonnen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.ListBox.ObjectCollection>-Instanz in eine <xref:System.Collections.ICollection>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArrayTypeMismatchException">Der Arraytyp ist nicht kompatibel mit den Elementen in der <see cref="T:System.Windows.Forms.ListBox.ObjectCollection" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListBox.ObjectCollection.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Collections.ICollection.IsSynchronized" />.</summary>
+        <value>
+          <see langword="false" /> in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.ListBox.ObjectCollection>-Instanz in eine <xref:System.Collections.ICollection>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListBox.ObjectCollection.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Collections.ICollection.SyncRoot" />.</summary>
+        <value>Ein Objekt, mit dem der Zugriff auf die <see cref="T:System.Windows.Forms.ListBox.ObjectCollection" /> synchronisiert werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.ListBox.ObjectCollection>-Instanz in eine <xref:System.Collections.ICollection>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Add">
+      <MemberSignature Language="C#" Value="int IList.Add (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.Add(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListBox.ObjectCollection.System#Collections#IList#Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das dem <see cref="T:System.Windows.Forms.ListBox" /> hinzuzufügende Objekt.</param>
+        <summary>Fügt ein Objekt, das die <see cref="T:System.Windows.Forms.ListBox" /> Klasse.</summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.ListBox.ObjectCollection>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="item" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die aktuelle <see cref="T:System.Windows.Forms.ListBox" /> verfügt über eine Datenquelle.</exception>
+        <exception cref="T:System.SystemException">Es ist nicht genügend Speicherplatz zum Speichern des neuen Elements.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListBox.ObjectCollection.System#Collections#IList#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Collections.IList.IsFixedSize" />.</summary>
+        <value>
+          <see langword="true" /> in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Forms.ListBox.ObjectCollection>-Instanz in eine <xref:System.Collections.IList>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

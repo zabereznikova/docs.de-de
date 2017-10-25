@@ -1,0 +1,496 @@
+<Type Name="ResourceType" FullName="System.Data.Services.Providers.ResourceType">
+  <TypeSignature Language="C#" Value="public class ResourceType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ResourceType extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.Providers.ResourceType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("{Name}: {InstanceType}, {ResourceTypeKind}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen primitiven, komplexen oder Entitätstyp eines Datendiensts dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Geschachtelte Typen werden als Ressourcentypen nicht unterstützt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResourceType (Type instanceType, System.Data.Services.Providers.ResourceTypeKind resourceTypeKind, System.Data.Services.Providers.ResourceType baseType, string namespaceName, string name, bool isAbstract);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type instanceType, valuetype System.Data.Services.Providers.ResourceTypeKind resourceTypeKind, class System.Data.Services.Providers.ResourceType baseType, string namespaceName, string name, bool isAbstract) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.ResourceType.#ctor(System.Type,System.Data.Services.Providers.ResourceTypeKind,System.Data.Services.Providers.ResourceType,System.String,System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="instanceType" Type="System.Type" />
+        <Parameter Name="resourceTypeKind" Type="System.Data.Services.Providers.ResourceTypeKind" />
+        <Parameter Name="baseType" Type="System.Data.Services.Providers.ResourceType" />
+        <Parameter Name="namespaceName" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="isAbstract" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="instanceType">CLR-Typ, der das Format in die [!INCLUDE[ssAstoria](~/includes/ssastoria-md.md)] Common Language Runtime.</param>
+        <param name="resourceTypeKind">
+          <see cref="T:System.Data.Services.Providers.ResourceTypeKind" /> des Ressourcentyps.</param>
+        <param name="baseType">Basistyp des Ressourcentyps als Zeichenfolge.</param>
+        <param name="namespaceName">Namespacename des Ressourcentyps als Zeichenfolge.</param>
+        <param name="name">Name des angegebenen Ressourcentyps als Zeichenfolge.</param>
+        <param name="isAbstract">Boolescher Wert, der angibt, ob der Ressourcentyp ein abstrakter Typ ist.</param>
+        <summary>Erstellt eine <see cref="T:System.Data.Services.Providers.ResourceType" />-Instanz für einen Datendienst.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddEntityPropertyMappingAttribute">
+      <MemberSignature Language="C#" Value="public void AddEntityPropertyMappingAttribute (System.Data.Services.Common.EntityPropertyMappingAttribute attribute);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddEntityPropertyMappingAttribute(class System.Data.Services.Common.EntityPropertyMappingAttribute attribute) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.ResourceType.AddEntityPropertyMappingAttribute(System.Data.Services.Common.EntityPropertyMappingAttribute)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attribute" Type="System.Data.Services.Common.EntityPropertyMappingAttribute" />
+      </Parameters>
+      <Docs>
+        <param name="attribute">Das hinzuzufügende <see cref="T:System.Data.Services.Common.EntityPropertyMappingAttribute" />.</param>
+        <summary>Fügt ein <see cref="T:System.Data.Services.Common.EntityPropertyMappingAttribute" /> für den Ressourcentyp hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddProperty">
+      <MemberSignature Language="C#" Value="public void AddProperty (System.Data.Services.Providers.ResourceProperty property);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddProperty(class System.Data.Services.Providers.ResourceProperty property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.ResourceType.AddProperty(System.Data.Services.Providers.ResourceProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="property" Type="System.Data.Services.Providers.ResourceProperty" />
+      </Parameters>
+      <Docs>
+        <param name="property">
+          <see cref="T:System.Data.Services.Providers.ResourceProperty" />Eigenschaft, die hinzugefügt werden soll.</param>
+        <summary>Fügt dem Typ die vom <paramref name="resourceProperty" />-Parameter angegebene Eigenschaft hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseType">
+      <MemberSignature Language="C#" Value="public System.Data.Services.Providers.ResourceType BaseType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Services.Providers.ResourceType BaseType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Providers.ResourceType.BaseType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Providers.ResourceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf den Basisressourcentyp ab, sofern vorhanden.</summary>
+        <value>
+          <see cref="T:System.Data.Services.Providers.ResourceType" />der Basistyp.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanReflectOnInstanceType">
+      <MemberSignature Language="C#" Value="public bool CanReflectOnInstanceType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanReflectOnInstanceType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Providers.ResourceType.CanReflectOnInstanceType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erhalten Sie, ob der Typ der entsprechenden CLR-Typ, der diese Entität darstellt.</summary>
+        <value>
+          <see langword="true" />Wenn der Typ der CLR-Typ darstellt; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomState">
+      <MemberSignature Language="C#" Value="public object CustomState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object CustomState" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Providers.ResourceType.CustomState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Platzhalter für vom Entwickler definierte benutzerdefinierte Zustandsinformationen zu einem Ressourcentyp ab oder legt diesen fest.</summary>
+        <value>Vom Entwickler definierte benutzerdefinierte Zustandsinformationen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ETagProperties">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Services.Providers.ResourceProperty&gt; ETagProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Data.Services.Providers.ResourceProperty&gt; ETagProperties" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Providers.ResourceType.ETagProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Services.Providers.ResourceProperty&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Liste von Eigenschaften für diesen Typ ab.</summary>
+        <value>
+          <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" />der <see cref="T:System.Data.Services.Providers.ResourceType" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullName">
+      <MemberSignature Language="C#" Value="public string FullName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FullName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Providers.ResourceType.FullName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den vollständigen Namen der Ressource ab.</summary>
+        <value>Der vollständige Name des Ressourcentyps als Zeichenfolge.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPrimitiveResourceType">
+      <MemberSignature Language="C#" Value="public static System.Data.Services.Providers.ResourceType GetPrimitiveResourceType (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.Services.Providers.ResourceType GetPrimitiveResourceType(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.ResourceType.GetPrimitiveResourceType(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Providers.ResourceType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">
+          <see cref="T:System.Type" />Geben Sie die beim Abrufen des primitiven Typs.</param>
+        <summary>Ruft einen Ressourcentyp ab, der einen primitiven Typ darstellt, wenn ein <see cref="T:System.Type" />-Objekt übergeben wird.</summary>
+        <returns>Der Ressourcentyp.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceType">
+      <MemberSignature Language="C#" Value="public Type InstanceType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type InstanceType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Providers.ResourceType.InstanceType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verweis auf den CLR-Typ, den diese Ressource darstellt.</summary>
+        <value>Der Instanztyp als <see cref="T:System.Data.Services.Providers.ResourceType" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAbstract">
+      <MemberSignature Language="C#" Value="public bool IsAbstract { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAbstract" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Providers.ResourceType.IsAbstract" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab, der angibt, ob dies ein abstrakter Typ ist.</summary>
+        <value>True, wenn <see cref="T:System.Data.Services.Providers.ResourceType" /> ist abstrakt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMediaLinkEntry">
+      <MemberSignature Language="C#" Value="public bool IsMediaLinkEntry { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsMediaLinkEntry" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Providers.ResourceType.IsMediaLinkEntry" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab, der true ist, wenn der Ressourcentyp einen Standarddatenstrom enthält, oder legt ihn fest.</summary>
+        <value>Ein boolescher Wert, der true, wenn der Ressourcentyp einen Standarddatenstrom enthält ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOpenType">
+      <MemberSignature Language="C#" Value="public bool IsOpenType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOpenType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Providers.ResourceType.IsOpenType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob der Ressourcentyp über offene Eigenschaften verfügt.</summary>
+        <value>
+          <see langword="true" />Wenn der Ressourcentyp über offene Eigenschaften definiert verfügt; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Providers.ResourceType.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab, der true ist, wenn dieser Ressourcentyp als schreibgeschützt festgelegt wurde.</summary>
+        <value>True, wenn dieser Ressourcentyp wurde auf schreibgeschützt festgelegt; andernfalls "false".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyProperties">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Services.Providers.ResourceProperty&gt; KeyProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Data.Services.Providers.ResourceProperty&gt; KeyProperties" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Providers.ResourceType.KeyProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Services.Providers.ResourceProperty&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste von Schlüsseleigenschaften für diesen Typ ab.</summary>
+        <value>
+          <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" />der <see cref="T:System.Data.Services.Providers.ResourceProperty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadPropertiesDeclaredOnThisType">
+      <MemberSignature Language="C#" Value="protected virtual System.Collections.Generic.IEnumerable&lt;System.Data.Services.Providers.ResourceProperty&gt; LoadPropertiesDeclaredOnThisType ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Data.Services.Providers.ResourceProperty&gt; LoadPropertiesDeclaredOnThisType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.ResourceType.LoadPropertiesDeclaredOnThisType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Data.Services.Providers.ResourceProperty&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Liste der von diesem Ressourcentyp deklarierten Eigenschaften zurück.</summary>
+        <returns>Liste von Eigenschaften, die für diesen Typ deklariert sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Services.Providers.ResourceType.LoadPropertiesDeclaredOnThisType%2A>-Methode ermöglicht es Ihnen, das Laden der Eigenschaften eines Ressourcentyps zu verzögern. Diese <xref:System.Data.Services.Providers.ResourceType.LoadPropertiesDeclaredOnThisType%2A>-Methode wird nur einmal aufgerufen, wenn auf <xref:System.Data.Services.Providers.ResourceType.Properties%2A>- oder <xref:System.Data.Services.Providers.ResourceType.PropertiesDeclaredOnThisType%2A>-Eigenschaften zugegriffen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Providers.ResourceType.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Ressourcentyps ab.</summary>
+        <value>Der Name des Ressourcentyps als Zeichenfolge.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public string Namespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Providers.ResourceType.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namespace des Ressourcentyps ab.</summary>
+        <value>Der Namespace des Ressourcentyps als Zeichenfolge.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Services.Providers.ResourceProperty&gt; Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Data.Services.Providers.ResourceProperty&gt; Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Providers.ResourceType.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Services.Providers.ResourceProperty&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste der Eigenschaften des Typs, der nur für den Typ nicht im Basistyp definierte Eigenschaften enthält, deklariert.</summary>
+        <value>
+          <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" />der <see cref="T:System.Data.Services.Providers.ResourceProperty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertiesDeclaredOnThisType">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Services.Providers.ResourceProperty&gt; PropertiesDeclaredOnThisType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Data.Services.Providers.ResourceProperty&gt; PropertiesDeclaredOnThisType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Providers.ResourceType.PropertiesDeclaredOnThisType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Services.Providers.ResourceProperty&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Liste der deklarierten Eigenschaften für diesen Typ.</summary>
+        <value>
+          <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" />der <see cref="T:System.Data.Services.Providers.ResourceProperty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResourceTypeKind">
+      <MemberSignature Language="C#" Value="public System.Data.Services.Providers.ResourceTypeKind ResourceTypeKind { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.Services.Providers.ResourceTypeKind ResourceTypeKind" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Providers.ResourceType.ResourceTypeKind" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Providers.ResourceTypeKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Data.Services.Providers.ResourceTypeKind" /> für den Typ ab.</summary>
+        <value>
+          <see cref="T:System.Data.Services.Providers.ResourceTypeKind" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetReadOnly">
+      <MemberSignature Language="C#" Value="public void SetReadOnly ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetReadOnly() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.ResourceType.SetReadOnly" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt den Ressourcentyp als schreibgeschützt fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,165 @@
+<Type Name="IInstanceProvider" FullName="System.ServiceModel.Dispatcher.IInstanceProvider">
+  <TypeSignature Language="C#" Value="public interface IInstanceProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IInstanceProvider" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.IInstanceProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Deklariert Methoden, die ein Dienstobjekt bereitstellen oder wiederverwenden eines Dienstobjekts für einen Windows Communication Foundation (WCF)-Dienst.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementieren Sie die <xref:System.ServiceModel.Dispatcher.IInstanceProvider>-Schnittstelle, um die Erstellung und Wiederverwendung von Dienstobjekten zu steuern, die von einem <xref:System.ServiceModel.InstanceContext>-Objekt angefordert oder freigegeben werden.  
+  
+ Nachdem Sie die <xref:System.ServiceModel.Dispatcher.IInstanceProvider>-Schnittstelle implementiert haben, müssen Sie das benutzerdefinierte Instanzanbieterobjekt der <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>-Schnittstelle zuordnen, indem Sie entweder ein Endpunktverhalten (ein <xref:System.ServiceModel.Description.IEndpointBehavior>-Objekt) oder ein Vertragsverhalten (ein <xref:System.ServiceModel.Description.IContractBehavior>-Objekt) verwenden.  
+  
+ Wenn Sie als Einfügemechanismus ein Endpunktverhalten verwenden, können Sie auch ein <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>-Objekt implementieren, das Ihr benutzerdefiniertes Verhalten mithilfe einer Konfigurationsdatei einfügt. Wenn Sie ein Vertragsverhalten verwenden, können Sie das Verhalten vor dem Öffnen des Diensthosts programmgesteuert einfügen oder ein benutzerdefiniertes Attribut implementieren. (Ein Beispiel für den Vertragsverhaltensansatz finden Sie im Abschnitt "Beispiel".)  
+  
+ <xref:System.ServiceModel.Dispatcher.IInstanceProvider> verfügt über zwei Methoden, <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> und <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>. Diese Methoden werden in der Regel implementiert, um Dienstobjekte mit einem nicht standardmäßigen Konstruktor zu erstellen oder um einen Zustand der Objektlebensdauer zu initialisieren oder freizugeben. Ein Beispiel für die Funktionalität des benutzerdefinierten <xref:System.ServiceModel.Dispatcher.IInstanceProvider> ist das Dienstobjektpooling.  
+  
+ Normalerweise ruft der <xref:System.ServiceModel.InstanceContext> den <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> auf, wenn der <xref:System.ServiceModel.InstanceContext> erstellt wird, und ruft die <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>-Methode auf, wenn der <xref:System.ServiceModel.InstanceContext> geschlossen wird.  
+  
+ Es gibt zwei Möglichkeiten, zu veranlassen, dass ein <xref:System.ServiceModel.InstanceContext>-Objekt ein Dienstobjekt freigibt, bevor der <xref:System.ServiceModel.InstanceContext> geschlossen wird. Die erste Möglichkeit besteht darin, <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A> auf <xref:System.ServiceModel.ReleaseInstanceMode.AfterCall> oder <xref:System.ServiceModel.ReleaseInstanceMode.BeforeAndAfterCall> zu setzen. Die zweite Möglichkeit besteht darin, die <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A>-Methode aufzurufen. In diesem Fall ruft der <xref:System.ServiceModel.InstanceContext> die Methode <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A> auf dem Instanzanbieter des Verteilers auf. Wenn nach der Freigabe der Instanz eine neue Nachricht eingeht, erstellt [!INCLUDE[indigo2](~/includes/indigo2-md.md)] eine neue Instanz mit der <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>-Methode.  
+  
+> [!NOTE]
+>  Wenn der <xref:System.ServiceModel.InstanceContextMode> des Dienstes <xref:System.ServiceModel.InstanceContextMode.Single> ist, ruft das System weder die <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>-Methode noch die <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>-Methode auf, auch wenn kein bekanntes Dienstobjekt vom Benutzer bereitgestellt wurde, es sei denn, der Benutzer ruft <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A> direkt und dann <xref:System.ServiceModel.InstanceContext.GetServiceInstance%2A> auf.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie <xref:System.ServiceModel.Dispatcher.IInstanceProvider> mit "Singleton"-Verhalten implementiert wird: Es wird immer die gleiche Dienstinstanz zurückgegeben, und diese wird nicht wiederverwendet.  
+  
+ [!code-csharp[IContractBehavior#1](~/samples/snippets/csharp/VS_Snippets_CFX/icontractbehavior/cs/objectproviderbehavior.cs#1)]
+ [!code-vb[IContractBehavior#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/icontractbehavior/vb/objectproviderbehavior.vb#1)]  
+  
+ Das folgende Codebeispiel zeigt, wie ein benutzerdefiniertes Attribut implementiert wird, das <xref:System.ServiceModel.Description.IContractBehavior> zum Einfügen des benutzerdefinierten Dienstinstanzanbieters implementiert. Es implementiert auch <xref:System.ServiceModel.Description.IContractBehaviorAttribute>, wodurch die Verwendung an einen bestimmten Vertrag gebunden wird.  
+  
+ [!code-csharp[IContractBehavior#2](~/samples/snippets/csharp/VS_Snippets_CFX/icontractbehavior/cs/objectproviderbehavior.cs#2)]
+ [!code-vb[IContractBehavior#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/icontractbehavior/vb/objectproviderbehavior.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetInstance">
+      <MemberSignature Language="C#" Value="public object GetInstance (System.ServiceModel.InstanceContext instanceContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetInstance(class System.ServiceModel.InstanceContext instanceContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance(System.ServiceModel.InstanceContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceContext" Type="System.ServiceModel.InstanceContext" />
+      </Parameters>
+      <Docs>
+        <param name="instanceContext">Das aktuelle <see cref="T:System.ServiceModel.InstanceContext" />-Objekt.</param>
+        <summary>Gibt ein Dienstobjekt unter Berücksichtigung des angegebenen <see cref="T:System.ServiceModel.InstanceContext" />-Objekts zurück.</summary>
+        <returns>Ein benutzerdefiniertes Dienstobjekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die Methode <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%29>, um das Dienstobjekt genau zu steuern, das ein [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Dienst empfängt, wenn er versucht, ein neues Objekt zu erstellen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie <xref:System.ServiceModel.Dispatcher.IInstanceProvider> mit "Singleton"-Verhalten implementiert wird: Es wird immer die gleiche Dienstinstanz zurückgegeben, und diese wird nicht wiederverwendet.  
+  
+ [!code-csharp[IContractBehavior#1](~/samples/snippets/csharp/VS_Snippets_CFX/icontractbehavior/cs/objectproviderbehavior.cs#1)]
+ [!code-vb[IContractBehavior#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/icontractbehavior/vb/objectproviderbehavior.vb#1)]  
+  
+ Das folgende Codebeispiel zeigt, wie ein benutzerdefiniertes Attribut implementiert wird, das <xref:System.ServiceModel.Description.IContractBehavior> zum Einfügen des benutzerdefinierten Dienstinstanzanbieters implementiert. Es implementiert auch <xref:System.ServiceModel.Description.IContractBehaviorAttribute>, wodurch die Verwendung an einen bestimmten Vertrag gebunden wird.  
+  
+ [!code-csharp[IContractBehavior#2](~/samples/snippets/csharp/VS_Snippets_CFX/icontractbehavior/cs/objectproviderbehavior.cs#2)]
+ [!code-vb[IContractBehavior#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/icontractbehavior/vb/objectproviderbehavior.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInstance">
+      <MemberSignature Language="C#" Value="public object GetInstance (System.ServiceModel.InstanceContext instanceContext, System.ServiceModel.Channels.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetInstance(class System.ServiceModel.InstanceContext instanceContext, class System.ServiceModel.Channels.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance(System.ServiceModel.InstanceContext,System.ServiceModel.Channels.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceContext" Type="System.ServiceModel.InstanceContext" />
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+      </Parameters>
+      <Docs>
+        <param name="instanceContext">Das aktuelle <see cref="T:System.ServiceModel.InstanceContext" />-Objekt.</param>
+        <param name="message">Die Nachricht, die die Erstellung eines Dienstobjekts ausgelöst hat.</param>
+        <summary>Gibt ein Dienstobjekt unter Berücksichtigung des angegebenen <see cref="T:System.ServiceModel.InstanceContext" />-Objekts zurück.</summary>
+        <returns>Das Dienstobjekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die Methode <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>, um das Dienstobjekt genau zu steuern, das ein [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Dienst empfängt, wenn er versucht, ein neues Objekt zu erstellen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt, wie <xref:System.ServiceModel.Dispatcher.IInstanceProvider> mit "Singleton"-Verhalten implementiert wird: Es wird immer die gleiche Dienstinstanz zurückgegeben, und diese wird nicht wiederverwendet.  
+  
+ [!code-csharp[IContractBehavior#1](~/samples/snippets/csharp/VS_Snippets_CFX/icontractbehavior/cs/objectproviderbehavior.cs#1)]
+ [!code-vb[IContractBehavior#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/icontractbehavior/vb/objectproviderbehavior.vb#1)]  
+  
+ Das folgende Codebeispiel zeigt, wie ein benutzerdefiniertes Attribut implementiert wird, das <xref:System.ServiceModel.Description.IContractBehavior> zum Einfügen des benutzerdefinierten Dienstinstanzanbieters implementiert. Es implementiert auch <xref:System.ServiceModel.Description.IContractBehaviorAttribute>, wodurch die Verwendung an einen bestimmten Vertrag gebunden wird.  
+  
+ [!code-csharp[IContractBehavior#2](~/samples/snippets/csharp/VS_Snippets_CFX/icontractbehavior/cs/objectproviderbehavior.cs#2)]
+ [!code-vb[IContractBehavior#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/icontractbehavior/vb/objectproviderbehavior.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseInstance">
+      <MemberSignature Language="C#" Value="public void ReleaseInstance (System.ServiceModel.InstanceContext instanceContext, object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReleaseInstance(class System.ServiceModel.InstanceContext instanceContext, object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance(System.ServiceModel.InstanceContext,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceContext" Type="System.ServiceModel.InstanceContext" />
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instanceContext">Der Instanzkontext des Dienstes.</param>
+        <param name="instance">Das Dienstobjekt, das wiederverwendet werden soll.</param>
+        <summary>Wird aufgerufen, wenn ein <see cref="T:System.ServiceModel.InstanceContext" />-Objekt ein Dienstobjekt wiederverwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die Methode <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>, um eine benutzerdefinierte Ressourcenfreigabe oder eine andere Anpassung der Wiederverwendung durchzuführen, wenn ein Dienst ein Dienstobjekt wiederverwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

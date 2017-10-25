@@ -1,0 +1,103 @@
+<Type Name="XmlnsPrefixAttribute" FullName="System.Windows.Markup.XmlnsPrefixAttribute">
+  <TypeSignature Language="C#" Value="public sealed class XmlnsPrefixAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit XmlnsPrefixAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.XmlnsPrefixAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly, AllowMultiple=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Identifiziert ein empfohlenes Präfix, das einem XAML-Namespace zur XAML-Verwendung zugeordnet werden soll, wenn Elemente und Attribute in eine XAML-Datei (Serialisierung) geschrieben werden oder wenn mit einer Entwurfsumgebung interagiert wird, die XAML-Bearbeitungsfunktionen hat.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ XAML-Prozessoren oder Frameworks, die XAML integrieren, oder jeder Prozess, der XAML-Serialisierung führt sollte im Allgemeinen das empfohlene Präfix berücksichtigt. Das Präfix ist möglicherweise notwendig, in jedem Fall, in dem Präfixe aus bestimmten Zuordnungen in der ursprünglichen XAML-Quelle aus irgendeinem Grund nicht in der Common Language Runtime-Objektdiagramm beibehalten oder andernfalls gespeichert sind von einem Framework oder Technologie. Ein Framework möglicherweise bestimmte Voreinstellungen zum Serialisieren von eigenen Typen, die das empfohlene Präfix aus eigenen Assemblys zu ignorieren; Dies kann erfolgen, um einen XAML-Standardnamespace konsistent zu erzielen. Solches Framework sollten jedoch weiterhin empfohlene Präfixe für mögliche Verwendungen für Drittanbieter- und Tool der Verwendung von XAML-Typen bereitstellen. Siehe Abschnitt "Bewährte Methoden für die Verwendung von XAML-Designer-Unterstützung oder allgemeine Serialisierung" weiter unten.  
+  
+ Eine allgemeine Empfehlung für Präfixe ist die Verwendung von kurzen Zeichenfolgen, da das Präfix in der Regel auf alle serialisierten Elemente angewendet wird, die von der Verwendung von XAML-Namespace stammen. Die Präfixlänge für die Zeichenfolge kann eine spürbare Auswirkung auf die Größe der serialisierten XAML-Ausgabe haben.  
+  
+ Wenn ein Präfix, das angefordert wird bereits von einem anderen bereits aufgetreten/serialisiert XAML-Namespacebezeichner verwendet wird, ist das Verhalten undefiniert (Verhalten wird auf jede einzelne Implementierung der XAML-Prozessor).  
+  
+ In den meisten Fällen, die Sie anwenden <xref:System.Windows.Markup.XmlnsPrefixAttribute> nur, wenn Sie auch mindestens eine angewendet haben <xref:System.Windows.Markup.XmlnsDefinitionAttribute> in der Assembly für den gleichen XAML-Namespace.  
+  
+ In früheren Versionen von .NET Framework war diese Klasse in der WPF-spezifischen Assembly WindowsBase. In [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], <xref:System.Windows.Markup.XmlnsPrefixAttribute> befindet sich in der System.Xaml-Assembly. Weitere Informationen finden Sie unter [aus WPF zu System.Xaml migrierte Typen](~/docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md).  
+  
+## <a name="best-practice-for-xaml-designer-support-or-general-serialization"></a>Bewährte Methode für die Verwendung von XAML-Designer-Unterstützung oder allgemeine Serialisierung  
+ Auch wenn Sie beabsichtigen die die zugeordneten XAML-Namespace der XAML-Standardnamespace in den meisten Fällen von Verwendungsdaten für das Framework oder der Bibliothek werden, sollten Sie immer noch eine nicht leere Zeichenfolge als das empfohlene Präfix für einen XAML-Namespace angeben. Verwendung von XAML-Namespace-Standardinformationen wird in einzelne XAML-Dateien und XAML-Knotenstreams übertragen. Dem XAML-Standardnamespace und wie sie in einem bestimmten XAML-Quelle definiert ist können problemlos für die Serialisierung pro Fall ohne aufrechterhalten <xref:System.Windows.Markup.XmlnsPrefixAttribute>. Allerdings die <xref:System.Windows.Markup.XmlnsPrefixAttribute> eignet sich für Fälle, in denen die Verwendung von XAML-Autor etwas anderes den XAML-Standardnamespace zugeordnet entschieden hat. In diesem Szenario ein XAML-Text-Editor in einen Entwurf eingebettet Umgebung können <xref:System.Windows.Markup.XmlnsPrefixAttribute> als Hinweis für einen anfänglichen XAML-Namespace `xmlns` Zuordnung. Oder eine entwurfsumgebung kann Just-in-Time-Zuordnungen in die unterstützende XAML für Entwurf Metaphern z. B. das Ziehen von Objekten aus einer Toolbox und in eine visuelle Entwurfsoberfläche hinzufügen. Darüber hinaus ist es denkbar, dass ein Designer gleichzeitig mehrere Aktivieren der Verwendung von XAML-Frameworks unterstützen konnte und eine allgemeine XAML-Serialisierungsprogramm, die auf .NET Framework XAML Services statt frameworkspezifisch Serialisierung beruht. Angeben einer <xref:System.Windows.Markup.XmlnsPrefixAttribute> für diese Szenarien sichergestellt, die XAML-Verwendung für die Typen portable und robuster, wenn das XAML zwischen Entwurfstools ausgetauscht wird, oder einen Roundtrip zwischen XAML-Editoren und andere Consumern, z. B. Markupcompiler gedacht vollzieht oder andere Serialisierung.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlnsPrefixAttribute (string xmlNamespace, string prefix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string xmlNamespace, string prefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XmlnsPrefixAttribute.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="xmlNamespace" Type="System.String" />
+        <Parameter Name="prefix" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xmlNamespace">Der Bezeichner für den XAML-Namespace.</param>
+        <param name="prefix">Die empfohlene Präfixzeichenfolge.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Markup.XmlnsPrefixAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="xmlNamespace" /> oder <paramref name="prefix" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Prefix">
+      <MemberSignature Language="C#" Value="public string Prefix { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Prefix" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.XmlnsPrefixAttribute.Prefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das diesem Attribut zugeordnete empfohlene Präfix ab.</summary>
+        <value>Die empfohlene Präfixzeichenfolge.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlNamespace">
+      <MemberSignature Language="C#" Value="public string XmlNamespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlNamespace" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.XmlnsPrefixAttribute.XmlNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den diesem Attribut zugeordneten XAML-Namespacebezeichner ab.</summary>
+        <value>Der Bezeichner für den XAML-Namespace.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,98 @@
+<Type Name="SettingsGroupNameAttribute" FullName="System.Configuration.SettingsGroupNameAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SettingsGroupNameAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SettingsGroupNameAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.SettingsGroupNameAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt einen Namen für die Anwendungsgruppe Settings-Eigenschaft. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Anwendung Settings-Klasse abgeleitet <xref:System.Configuration.ApplicationSettingsBase>, definiert eine oder mehrere Eigenschaften, die zur gleichen Einstellungen Eigenschaft Anwendungsgruppe gehören. Standardmäßig wird die Gruppe den Namen der Settings-Klasse zugewiesen. Allerdings <xref:System.Configuration.SettingsGroupNameAttribute> können verwendet werden, um einen Namen für die Eigenschaftsgruppe explizit angeben. Dieser Name kann Verwalten großer Sätze von Eigenschaften, um Unterstützung zu erhalten, in Programmiertools zur Entwurfszeit und Laufzeit-Verwaltung, hilfreich sein, und so weiter. Der zugeordnete Einstellungsanbieter möglicherweise auch diesen Namen verwenden, zum Organisieren von Einstellungen im Datenspeicher.  
+  
+ Die <xref:System.Configuration.SettingsGroupNameAttribute> kann nur auf Klassenebene angewendet werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SettingsGroupNameAttribute (string groupName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string groupName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.SettingsGroupNameAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="groupName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="groupName">Ein <see cref="T:System.String" /> mit dem Namen der Anwendungsgruppe Settings-Eigenschaft.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.SettingsGroupNameAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Obwohl die theoretische maximale Länge von der `groupName` Parameter durch die oberen Grenzen der eingeschränkt wird ein <xref:System.Int32>, praktische Grenzen, die bestimmt, indem Fehler bezüglich Verwendbarkeit und Kontingentgrenzen durch den Einstellungsanbieter auferlegt werden deutlich kleiner.  
+  
+> [!NOTE]
+>  Der einstellungsgruppenname muss nicht eindeutig sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GroupName">
+      <MemberSignature Language="C#" Value="public string GroupName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string GroupName" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsGroupNameAttribute.GroupName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Anwendungsgruppe Einstellungen Eigenschaft ab.</summary>
+        <value>Ein <see cref="T:System.String" /> mit dem Namen der Anwendungsgruppe Settings-Eigenschaft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.SettingsGroupNameAttribute.GroupName%2A> -Eigenschaftswert festgelegt ist, durch die <xref:System.Configuration.SettingsGroupNameAttribute.%23ctor%2A> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

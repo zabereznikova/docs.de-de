@@ -1,0 +1,68 @@
+<Type Name="ConnectivityStatus" FullName="System.Web.ClientServices.ConnectivityStatus">
+  <TypeSignature Language="C#" Value="public static class ConnectivityStatus" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ConnectivityStatus extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.ClientServices.ConnectivityStatus" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt den Status einer Anwendung Netzwerkverbindung dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.Web.ClientServices.ConnectivityStatus> Klasse, um die Netzwerkkonnektivität des Windows-basierten Anwendungen anzugeben, die von Clientanwendungsdiensten verwenden. Beim Festlegen der <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A> Eigenschaft `true`, die Client-Anbieter verwenden im Offlinecache anstatt zu versuchen, auf die entsprechenden Webdienste zuzugreifen. Der offline-Status wird auf Grundlage Erweiterungen pro Benutzer und pro Anwendung gespeichert. Weitere Informationen finden Sie unter [Vorgehensweise: Offline arbeiten mit Clientanwendungsdiensten](http://msdn.microsoft.com/en-us/f792cb16-8520-4a0f-9dc9-07bfbc454e38).  
+  
+   
+  
+## Examples  
+ Der folgende Beispielcode veranschaulicht, wie diese Klasse verwenden, um die offline-Status je nach Wert eines Kontrollkästchens zu aktualisieren. In diesem Beispiel wird eine <xref:System.Windows.Forms.CheckBox.CheckedChanged> -Ereignishandler aktualisiert, den offline-Status. Wenn der Benutzer die Anwendung in den Onlinemodus versetzt festlegt, versucht der Ereignishandler den Benutzer erneut zu überprüfen. Wenn die Authentication-Server nicht verfügbar ist, gibt der Ereignishandler jedoch die Anwendung im offline-Status zurück.  
+  
+ [!code-csharp[ClientApplicationServices#315](~/samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#315)]
+ [!code-vb[ClientApplicationServices#315](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#315)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsOffline">
+      <MemberSignature Language="C#" Value="public static bool IsOffline { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool IsOffline" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ClientServices.ConnectivityStatus.IsOffline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob eine Anwendung im Offlinemodus befindet.</summary>
+        <value>
+          <see langword="true" />Wenn die Anwendung im offline-Modus ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Festlegen der <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A> -Eigenschaft, die <xref:System.Web.ClientServices.ConnectivityStatus> Klasse speichert den Wert in das lokale Dateisystem. Die Client-Anbieter in der <xref:System.Web.ClientServices.Providers> Namespace Überprüfen dieser Wert bestimmt, ob der offline-Datencache verwendet anstelle von versuchen, auf die zugeordnete [!INCLUDE[ajax_current_short](~/includes/ajax-current-short-md.md)] Authentifizierung, Rollen und Profildienste.  
+  
+   
+  
+## Examples  
+ Der folgende Beispielcode veranschaulicht, wie diese Eigenschaft verwenden, um die offline-Status je nach Wert eines Kontrollkästchens zu aktualisieren. In diesem Beispiel wird eine <xref:System.Windows.Forms.CheckBox.CheckedChanged> -Ereignishandler aktualisiert, den offline-Status. Wenn der Benutzer die Anwendung in den Onlinemodus versetzt festlegt, versucht der Ereignishandler den Benutzer erneut zu überprüfen. Wenn die Authentication-Server nicht verfügbar ist, gibt der Ereignishandler jedoch die Anwendung im offline-Status zurück.  
+  
+ [!code-csharp[ClientApplicationServices#315](~/samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#315)]
+ [!code-vb[ClientApplicationServices#315](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#315)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

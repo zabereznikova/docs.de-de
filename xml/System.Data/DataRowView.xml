@@ -1,0 +1,1250 @@
+<Type Name="DataRowView" FullName="System.Data.DataRowView">
+  <TypeSignature Language="C#" Value="public class DataRowView : System.ComponentModel.ICustomTypeDescriptor, System.ComponentModel.IDataErrorInfo, System.ComponentModel.IEditableObject, System.ComponentModel.INotifyPropertyChanged" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataRowView extends System.Object implements class System.ComponentModel.ICustomTypeDescriptor, class System.ComponentModel.IDataErrorInfo, class System.ComponentModel.IEditableObject, class System.ComponentModel.INotifyPropertyChanged" />
+  <TypeSignature Language="DocId" Value="T:System.Data.DataRowView" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ICustomTypeDescriptor</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IDataErrorInfo</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IEditableObject</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.INotifyPropertyChanged</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine benutzerdefinierte Ansicht einer <see cref="T:System.Data.DataRow" /> dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Daten angezeigt werden, z. B. in einem <xref:System.Windows.Forms.DataGrid> Steuerelement nur eine Version der einzelnen Zeilen angezeigt werden kann. Die angezeigte Zeile ist eine <xref:System.Data.DataRowView>.  
+  
+ Ein <xref:System.Data.DataRowView> kann einen der vier verschiedene Version Zustände aufweisen: `Default`, `Original`, `Current`, und `Proposed`.  
+  
+ Nach dem Aufrufen <xref:System.Data.DataRow.BeginEdit%2A> auf eine <xref:System.Data.DataRow>, ausnahmslos bearbeitete wird der `Proposed` Wert. Bis <xref:System.Data.DataRowView.CancelEdit%2A> oder <xref:System.Data.DataRowView.EndEdit%2A> wird aufgerufen, die Zeile verfügt über eine `Original` und eine `Proposed` Version. Wenn <xref:System.Data.DataRowView.CancelEdit%2A> wird aufgerufen, die vorläufige Version verworfen, und der Wert wird auf zurückgesetzt `Original`. Wenn <xref:System.Data.DataRowView.EndEdit%2A> aufgerufen wird, die <xref:System.Data.DataRowView> verfügt nicht mehr über eine `Proposed` Version; stattdessen wird der vorgeschlagene Wert für den aktuellen Wert. Standardwerte sind nur für Zeilen, die Spalten mit definierten Standardwerte haben verfügbar.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.DataRowView.RowVersion%2A> Eigenschaft zum Ermitteln des Status einer Zeile in der <xref:System.Data.DataRowView>. (Siehe <xref:System.Data.DataView.RowFilter%2A> für die Verwendung von einem anderen Beispiel <xref:System.Data.DataRowView>.)  
+  
+ [!code-csharp[DataWorks DataRowView.RowVersion1#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataRowView.RowVersion1/CS/source.cs#1)]
+ [!code-vb[DataWorks DataRowView.RowVersion1#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataRowView.RowVersion1/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Dieser Typ ist für schreibgeschützte Vorgänge mit mehreren Threads sicher. Sie müssen alle Schreibvorgänge synchronisieren.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginEdit">
+      <MemberSignature Language="C#" Value="public void BeginEdit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginEdit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowView.BeginEdit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beginnt eine Bearbeitungsprozedur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendung <xref:System.Data.DataView.AddNew%2A> Hinzufügen einer <xref:System.Data.DataRowView>.  
+  
+ Die <xref:System.Data.DataRowView.BeginEdit%2A> -Methode ist identisch mit der <xref:System.Data.DataRow.BeginEdit%2A?displayProperty=nameWithType> Methode der <xref:System.Data.DataRow>. Nach dem Aufruf <xref:System.Data.DataRowView.BeginEdit%2A>, alle Änderungen an der <xref:System.Data.DataRowView> können rückgängig gemacht werden, durch den Aufruf <xref:System.Data.DataRow.CancelEdit%2A>. Rufen Sie die <xref:System.Data.DataRowView.BeginEdit%2A> -Methode auf, bevor es den Benutzern, um Zeilenwerte zu ändern. Nachdem die Werte geändert wurden, nicht abrufen Sie die neuen Werte durch Festlegen der <xref:System.Data.DataRowView.RowVersion%2A> auf `DataRowVersion.Proposed`. Überprüfen Sie die Werte mit einer Geschäftsregel und Rollback für die Änderungen aus, bei Bedarf durch den Aufruf <xref:System.Data.DataRowView.CancelEdit%2A>, oder rufen Sie <xref:System.Data.DataRowView.EndEdit%2A> um die Änderungen zu übernehmen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Zeile in bearbeitet eine <xref:System.Data.DataRowView>. Aufrufen der <xref:System.Data.DataRowView.BeginEdit%2A> vor, und <xref:System.Data.DataRowView.EndEdit%2A> danach.  
+  
+ [!code-csharp[Classic WebData DataRowView.BeginEdit Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRowView.BeginEdit Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRowView.BeginEdit Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRowView.BeginEdit Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelEdit">
+      <MemberSignature Language="C#" Value="public void CancelEdit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CancelEdit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowView.CancelEdit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bricht eine Bearbeitungsprozedur ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach dem Aufruf <xref:System.Data.DataRowView.CancelEdit%2A>, ein Rollback aller Änderungen in der Zeile. Sie können auch Zurücksetzen von Änderungen durch Aufrufen von <xref:System.Data.DataTable.RejectChanges%2A> für die übergeordnete <xref:System.Data.DataTable>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Zeile in bearbeitet eine <xref:System.Data.DataView>. Die <xref:System.Data.DataRowView.CancelEdit%2A> Methode wird aufgerufen, um die Änderungen Abbrechen, wenn die Validierung fehlschlägt.  
+  
+ [!code-csharp[Classic WebData DataRowView.BeginEdit Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRowView.BeginEdit Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRowView.BeginEdit Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRowView.BeginEdit Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateChildView">
+      <MemberSignature Language="C#" Value="public System.Data.DataView CreateChildView (System.Data.DataRelation relation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataView CreateChildView(class System.Data.DataRelation relation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowView.CreateChildView(System.Data.DataRelation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relation" Type="System.Data.DataRelation" />
+      </Parameters>
+      <Docs>
+        <param name="relation">Das <see cref="T:System.Data.DataRelation" />-Objekt.</param>
+        <summary>Gibt eine <see cref="T:System.Data.DataView" /> für das untergeordnete Element <see cref="T:System.Data.DataTable" /> mit der angegebenen untergeordneten <see cref="T:System.Data.DataRelation" />.</summary>
+        <returns>Ein <see cref="T:System.Data.DataView" /> für das untergeordnete Element <see cref="T:System.Data.DataTable" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateChildView">
+      <MemberSignature Language="C#" Value="public System.Data.DataView CreateChildView (string relationName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataView CreateChildView(string relationName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowView.CreateChildView(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relationName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="relationName">Eine Zeichenfolge mit der <see cref="T:System.Data.DataRelation" /> Name.</param>
+        <summary>Gibt eine <see cref="T:System.Data.DataView" /> für das untergeordnete Element <see cref="T:System.Data.DataTable" /> mit der angegebenen untergeordneten <see cref="T:System.Data.DataRelation" /> Name.</summary>
+        <returns>Ein <see cref="T:System.Data.DataView" /> für das untergeordnete Element <see cref="T:System.Data.DataTable" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateChildView">
+      <MemberSignature Language="C#" Value="public System.Data.DataView CreateChildView (System.Data.DataRelation relation, bool followParent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataView CreateChildView(class System.Data.DataRelation relation, bool followParent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowView.CreateChildView(System.Data.DataRelation,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relation" Type="System.Data.DataRelation" />
+        <Parameter Name="followParent" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="relation">Das <see cref="T:System.Data.DataRelation" />-Objekt.</param>
+        <param name="followParent">Das übergeordnete Objekt.</param>
+        <summary>Gibt eine <see cref="T:System.Data.DataView" /> für das untergeordnete Element <see cref="T:System.Data.DataTable" /> mit dem angegebenen <see cref="T:System.Data.DataRelation" /> und dasselbe übergeordnete Element...</summary>
+        <returns>Ein <see cref="T:System.Data.DataView" /> für das untergeordnete Element <see cref="T:System.Data.DataTable" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateChildView">
+      <MemberSignature Language="C#" Value="public System.Data.DataView CreateChildView (string relationName, bool followParent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataView CreateChildView(string relationName, bool followParent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowView.CreateChildView(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relationName" Type="System.String" />
+        <Parameter Name="followParent" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="relationName">Eine Zeichenfolge mit der <see cref="T:System.Data.DataRelation" /> Name.</param>
+        <param name="followParent">Das übergeordnete Element</param>
+        <summary>Gibt eine <see cref="T:System.Data.DataView" /> für das untergeordnete Element <see cref="T:System.Data.DataTable" /> mit dem angegebenen <see cref="T:System.Data.DataRelation" /> Namen und das übergeordnete Element.</summary>
+        <returns>Ein <see cref="T:System.Data.DataView" /> für das untergeordnete Element <see cref="T:System.Data.DataTable" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataView">
+      <MemberSignature Language="C#" Value="public System.Data.DataView DataView { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.DataView DataView" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataRowView.DataView" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataView</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Data.DataView" /> zu dem diese Zeile gehört.</summary>
+        <value>Die <see langword="DataView" /> zu dem diese Zeile gehört.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel gibt die <xref:System.Data.DataView> des angegebenen <xref:System.Data.DataRowView>.  
+  
+ [!code-csharp[Classic WebData DataRowView.DataView Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRowView.DataView Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRowView.DataView Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRowView.DataView Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public void Delete ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Delete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowView.Delete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht eine Zeile an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Zeile bis nicht endgültig gelöscht <xref:System.Data.DataTable.AcceptChanges%2A> wird aufgerufen, auf die <xref:System.Data.DataTable> , zu der die Zeile gehört.  
+  
+> [!NOTE]
+>  Ein <xref:System.Data.DataRowView> möglicherweise ungültig Wenn eine `DataRow` aus der zugrunde liegenden Tabelle gelöscht wird. Wenn die <xref:System.Data.DataRowView> ungültig wird, Vorgänge, die Zugriff auf Werte zugeordnet <xref:System.Data.DataRowView>, wie z. B. <xref:System.Data.DataRowView.Delete%2A>, lösen eine Ausnahme aus.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.DataRowView.Delete%2A> Methode in einer Zeile.  
+  
+ [!code-csharp[Classic WebData DataRowView.Delete Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRowView.Delete Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRowView.Delete Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRowView.Delete Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndEdit">
+      <MemberSignature Language="C#" Value="public void EndEdit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndEdit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowView.EndEdit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt einen Commit für Änderungen auf die zugrunde liegende <see cref="T:System.Data.DataRow" /> aus und beendet die bearbeitungssitzung, die mit begonnen wurde <see cref="M:System.Data.DataRowView.BeginEdit" />.  Verwendung <see cref="M:System.Data.DataRowView.CancelEdit" /> zum Verwerfen der Änderungen an der <see cref="T:System.Data.DataRow" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird eine Zeile in bearbeitet eine <xref:System.Data.DataView>. Aufrufen der <xref:System.Data.DataRowView.BeginEdit%2A> vor, und <xref:System.Data.DataRowView.EndEdit%2A> danach.  
+  
+ [!code-vb[Classic WebData DataRowView.EndEdit Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRowView.EndEdit Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowView.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="other">Ein <see cref="T:System.Object" /> verglichen werden soll.</param>
+        <summary>Ruft einen Wert, der angibt, ob die aktuelle <see cref="T:System.Data.DataRowView" /> mit dem angegebenen Objekt identisch ist.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="object" /> ist ein <see cref="T:System.Data.DataRowView" /> und gibt dieselbe Zeile wie die aktuelle <see cref="T:System.Data.DataRowView" />andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowView.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für die <see cref="T:System.Data.DataRow" /> Objekt.</summary>
+        <returns>Ein 32-Bit-Ganzzahl mit Vorzeichen Hashcode 1, Boolean dar <see langword="true" /> ist der Wert dieser Instanz ungleich NULL ist; andernfalls die ganze Zahl 0 (null), Boolesch stellt <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEdit">
+      <MemberSignature Language="C#" Value="public bool IsEdit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEdit" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataRowView.IsEdit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob die Zeile im Bearbeitungsmodus befindet.</summary>
+        <value>
+          <see langword="true" />Wenn die Zeile im Bearbeitungsmodus befindet; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNew">
+      <MemberSignature Language="C#" Value="public bool IsNew { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNew" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataRowView.IsNew" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob eine <see cref="T:System.Data.DataRowView" /> ist neu.</summary>
+        <value>
+          <see langword="true" />Wenn die Zeile neu ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach dem Aufruf aufrufen <xref:System.Data.DataView.AddNew%2A>, <xref:System.Data.DataRowView.IsNew%2A> "true" für das zurückgegebene <xref:System.Data.DataRowView>. <xref:System.Data.DataRowView.IsNew%2A>wird "true" werden, bis entweder <xref:System.Data.DataRowView.EndEdit%2A> aufgerufen wird, auf die <xref:System.Data.DataRowView>, oder <xref:System.Data.DataView.AddNew%2A> erneut aufgerufen wird. (Es ist nur eine neue Zeile.)  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[int ndx] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataRowView.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ndx" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ndx">Die angegebene Spalte.</param>
+        <summary>Ruft ab oder legt einen Wert in einer angegebenen Spalte.</summary>
+        <value>Der Wert der Spalte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt den Wert in jedem Element der einzelnen <xref:System.Data.DataRowView> in einem <xref:System.Data.DataView>.  
+  
+ [!code-csharp[Classic WebData DataRowView.this2 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRowView.this2 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRowView.this2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRowView.this2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[string property] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataRowView.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="property" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="property">Eine Zeichenfolge, die die angegebene Spalte enthält.</param>
+        <summary>Ruft ab oder legt einen Wert in einer angegebenen Spalte.</summary>
+        <value>Der Wert der Spalte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel fügt Text an den Wert einer Spalte in jede geänderte Zeile von einem <xref:System.Data.DataView>.  
+  
+ [!code-csharp[Classic WebData DataRowView.this Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRowView.this Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRowView.this Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRowView.this Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyChanged">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.PropertyChangedEventHandler PropertyChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Data.DataRowView.PropertyChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ereignis wird ausgelöst, wenn eine <see cref="T:System.Data.DataRowView" /> -Eigenschaft geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn der Wert der Spalte zugeordnete der <xref:System.Data.DataRowView> ändert. Diese Änderung nicht dazu, dass die zugeordnete Indexposition des der <xref:System.Data.DataRowView> geändert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Row">
+      <MemberSignature Language="C#" Value="public System.Data.DataRow Row { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.DataRow Row" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataRowView.Row" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRow</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Data.DataRow" /> angezeigt wird.</summary>
+        <value>Die <see cref="T:System.Data.DataRow" /> angezeigt werden, indem die <see cref="T:System.Data.DataRowView" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.DataRowView.Row%2A> Eigenschaft so drucken Sie den Wert der dritten Spalte in jede geänderte Zeile von einem <xref:System.Data.DataView>.  
+  
+ [!code-csharp[Classic WebData DataRowView.Row Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRowView.Row Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRowView.Row Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRowView.Row Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowVersion">
+      <MemberSignature Language="C#" Value="public System.Data.DataRowVersion RowVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.DataRowVersion RowVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataRowView.RowVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRowVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuelle versionsbeschreibung der <see cref="T:System.Data.DataRow" />.</summary>
+        <value>Einer der <see cref="T:System.Data.DataRowVersion" />-Werte. Mögliche Werte für die <see cref="P:System.Data.DataRowView.RowVersion" /> -Eigenschaft sind <see langword="Default" />, <see langword="Original" />, <see langword="Current" />, und <see langword="Proposed" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.DataView.RowStateFilter%2A> Eigenschaft gibt an, sowohl <xref:System.Data.DataRowState> und <xref:System.Data.DataRowVersion> Einstellungen. Weitere Informationen finden Sie unter <xref:System.Data.DataRowState>, <xref:System.Data.DataRowVersion> und <xref:System.Data.DataViewRowState>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.DataRowView.RowVersion%2A> Eigenschaft zum Anzeigen der <xref:System.Data.DataRowVersion>.  
+  
+ [!code-csharp[DataWorks DataRowView.RowVersion1#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataRowView.RowVersion1/CS/source.cs#1)]
+ [!code-vb[DataWorks DataRowView.RowVersion1#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataRowView.RowVersion1/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetAttributes">
+      <MemberSignature Language="C#" Value="System.ComponentModel.AttributeCollection ICustomTypeDescriptor.GetAttributes ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.AttributeCollection System.ComponentModel.ICustomTypeDescriptor.GetAttributes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowView.System#ComponentModel#ICustomTypeDescriptor#GetAttributes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.AttributeCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Auflistung benutzerdefinierter Attribute für diese Instanz einer Komponente zurück.</summary>
+        <returns>Eine AttributeCollection, die die Attribute für dieses Objekt enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataRowView>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetClassName">
+      <MemberSignature Language="C#" Value="string ICustomTypeDescriptor.GetClassName ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.ComponentModel.ICustomTypeDescriptor.GetClassName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowView.System#ComponentModel#ICustomTypeDescriptor#GetClassName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Klassennamen dieser Instanz einer Komponente zurück.</summary>
+        <returns>Der Klassenname dieser Instanz einer Komponente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataRowView>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetComponentName">
+      <MemberSignature Language="C#" Value="string ICustomTypeDescriptor.GetComponentName ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.ComponentModel.ICustomTypeDescriptor.GetComponentName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowView.System#ComponentModel#ICustomTypeDescriptor#GetComponentName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Namen dieser Instanz einer Komponente zurück.</summary>
+        <returns>Der Name dieser Instanz einer Komponente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataRowView>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetConverter">
+      <MemberSignature Language="C#" Value="System.ComponentModel.TypeConverter ICustomTypeDescriptor.GetConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.TypeConverter System.ComponentModel.ICustomTypeDescriptor.GetConverter() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowView.System#ComponentModel#ICustomTypeDescriptor#GetConverter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeConverter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Typkonverter für diese Instanz einer Komponente zurück.</summary>
+        <returns>Der Typkonverter für diese Instanz einer Komponente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataRowView>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetDefaultEvent">
+      <MemberSignature Language="C#" Value="System.ComponentModel.EventDescriptor ICustomTypeDescriptor.GetDefaultEvent ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.EventDescriptor System.ComponentModel.ICustomTypeDescriptor.GetDefaultEvent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowView.System#ComponentModel#ICustomTypeDescriptor#GetDefaultEvent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt das Standardereignis für diese Instanz einer Komponente zurück.</summary>
+        <returns>Das Standardereignis für diese Instanz einer Komponente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataRowView>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetDefaultProperty">
+      <MemberSignature Language="C#" Value="System.ComponentModel.PropertyDescriptor ICustomTypeDescriptor.GetDefaultProperty ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptor System.ComponentModel.ICustomTypeDescriptor.GetDefaultProperty() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowView.System#ComponentModel#ICustomTypeDescriptor#GetDefaultProperty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Standardeigenschaft für diese Instanz einer Komponente zurück.</summary>
+        <returns>Die Standardeigenschaft für diese Instanz einer Komponente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataRowView>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetEditor">
+      <MemberSignature Language="C#" Value="object ICustomTypeDescriptor.GetEditor (Type editorBaseType);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ComponentModel.ICustomTypeDescriptor.GetEditor(class System.Type editorBaseType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowView.System#ComponentModel#ICustomTypeDescriptor#GetEditor(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editorBaseType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="editorBaseType">Ein <see cref="T:System.Type" /> , die der Editor für dieses Objekt darstellt.</param>
+        <summary>Gibt einen Editor des angegebenen Typs für diese Instanz einer Komponente zurück.</summary>
+        <returns>Ein <see cref="T:System.Object" /> des angegebenen Typs, das den Editor für dieses Objekt ist oder <see langword="null" /> , wenn der Editor nicht gefunden werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataRowView>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="System.ComponentModel.ICustomTypeDescriptor.GetEvents">
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gibt die Ereignisse für diese Instanz einer Komponente zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataRowView>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetEvents">
+      <MemberSignature Language="C#" Value="System.ComponentModel.EventDescriptorCollection ICustomTypeDescriptor.GetEvents ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.EventDescriptorCollection System.ComponentModel.ICustomTypeDescriptor.GetEvents() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowView.System#ComponentModel#ICustomTypeDescriptor#GetEvents" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Ereignisse für diese Instanz einer Komponente zurück.</summary>
+        <returns>Die Ereignisse für diese Instanz einer Komponente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataRowView>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetEvents">
+      <MemberSignature Language="C#" Value="System.ComponentModel.EventDescriptorCollection ICustomTypeDescriptor.GetEvents (Attribute[] attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.EventDescriptorCollection System.ComponentModel.ICustomTypeDescriptor.GetEvents(class System.Attribute[] attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowView.System#ComponentModel#ICustomTypeDescriptor#GetEvents(System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Die Attribute</param>
+        <summary>Gibt die Ereignisse für diese Instanz einer Komponente mit den angegebenen Attributen.</summary>
+        <returns>Die Ereignisse für diese Instanz einer Komponente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataRowView>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="System.ComponentModel.ICustomTypeDescriptor.GetProperties">
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gibt die Eigenschaften für diese Instanz einer Komponente zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataRowView>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetProperties">
+      <MemberSignature Language="C#" Value="System.ComponentModel.PropertyDescriptorCollection ICustomTypeDescriptor.GetProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptorCollection System.ComponentModel.ICustomTypeDescriptor.GetProperties() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowView.System#ComponentModel#ICustomTypeDescriptor#GetProperties" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Eigenschaften für diese Instanz einer Komponente zurück.</summary>
+        <returns>Die Eigenschaften für diese Instanz einer Komponente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataRowView>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetProperties">
+      <MemberSignature Language="C#" Value="System.ComponentModel.PropertyDescriptorCollection ICustomTypeDescriptor.GetProperties (Attribute[] attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptorCollection System.ComponentModel.ICustomTypeDescriptor.GetProperties(class System.Attribute[] attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowView.System#ComponentModel#ICustomTypeDescriptor#GetProperties(System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Die Attribute.</param>
+        <summary>Die Eigenschaften für diese Instanz einer Komponente mit den angegebenen Attributen zurückgegeben.</summary>
+        <returns>Die Eigenschaften für diese Instanz einer Komponente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataRowView>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetPropertyOwner">
+      <MemberSignature Language="C#" Value="object ICustomTypeDescriptor.GetPropertyOwner (System.ComponentModel.PropertyDescriptor pd);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ComponentModel.ICustomTypeDescriptor.GetPropertyOwner(class System.ComponentModel.PropertyDescriptor pd) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowView.System#ComponentModel#ICustomTypeDescriptor#GetPropertyOwner(System.ComponentModel.PropertyDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pd" Type="System.ComponentModel.PropertyDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="pd">Ein <see cref="T:System.ComponentModel.PropertyDescriptor" /> , das die Eigenschaft, deren Besitzer zu findenden darstellt.</param>
+        <summary>Gibt ein Objekt zurück, das die Eigenschaft enthält, die durch den Eigenschaftendeskriptor angegeben ist.</summary>
+        <returns>Ein <see cref="T:System.Object" /> , den Besitzer der angegebenen Eigenschaft darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataRowView>-Instanz in eine <xref:System.ComponentModel.ICustomTypeDescriptor>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IDataErrorInfo.Error">
+      <MemberSignature Language="C#" Value="string System.ComponentModel.IDataErrorInfo.Error { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string System.ComponentModel.IDataErrorInfo.Error" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataRowView.System#ComponentModel#IDataErrorInfo#Error" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Meldung, die Validierungsfehler für das Objekt beschreibt.</summary>
+        <value>Die Validierungsfehler für das Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataRowView>-Instanz in eine <xref:System.ComponentModel.IDataErrorInfo>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IDataErrorInfo.Item">
+      <MemberSignature Language="C#" Value="string System.ComponentModel.IDataErrorInfo.Item[string colName] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string System.ComponentModel.IDataErrorInfo.Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataRowView.System#ComponentModel#IDataErrorInfo#Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="colName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="colName">Der Name der Eigenschaft, dessen Fehlermeldung abgerufen, werden soll.</param>
+        <summary>Ruft die Fehlermeldung für die Eigenschaft mit dem angegebenen Namen ab.</summary>
+        <value>Die Fehlermeldung für die Eigenschaft. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Data.DataRowView>-Instanz in eine <xref:System.ComponentModel.IDataErrorInfo>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

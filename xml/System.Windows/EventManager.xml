@@ -1,0 +1,212 @@
+<Type Name="EventManager" FullName="System.Windows.EventManager">
+  <TypeSignature Language="C#" Value="public static class EventManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit EventManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.EventManager" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ereignisbezogene Hilfsprogrammmethoden bereit, die Routingereignisse für Klassenbesitzer registrieren und Klassenhandler hinzufügen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse wird am häufigsten verwendet, um ein neues Routingereignis beim Registrieren <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>.  
+  
+ Die zweite am häufigsten vorkommen [!INCLUDE[TLA2#tla_api](~/includes/tla2sharptla-api-md.md)] Auslastung ist <xref:System.Windows.EventManager.RegisterClassHandler%2A>. Sie können diese Methode verwenden, um eine Klassenbehandlung für ein Routingereignis für die Klasse oder ein angefügtes Ereignis zu aktivieren. Weitere Informationen finden Sie unter [Routingereignisse als bearbeitete sowie die Behandlung von Klasse markieren](~/docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie diese Klasse verwenden, um ein neues Routingereignis als Klassenmember, zusammen mit der Routingereignis "Wrapper" Technik, überschreiben die hinzufügen zu registrieren und Entfernen von Implementierungen für eine [!INCLUDE[TLA2#tla_clr](~/includes/tla2sharptla-clr-md.md)] Ereignis.  
+  
+ [!code-csharp[DPCustom#EventManagerClass](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCustom/CSharp/default.xaml.cs#eventmanagerclass)]
+ [!code-vb[DPCustom#EventManagerClass](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCustom/visualbasic/default.xaml.vb#eventmanagerclass)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetRoutedEvents">
+      <MemberSignature Language="C#" Value="public static System.Windows.RoutedEvent[] GetRoutedEvents ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.RoutedEvent[] GetRoutedEvents() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.EventManager.GetRoutedEvents" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Bezeichner für Routingereignisse, die registriert wurden an das Ereignissystem zurück.</summary>
+        <returns>Ein Array vom Typ <see cref="T:System.Windows.RoutedEvent" /> , die die registrierte Objekte enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere <xref:System.Windows.RoutedEvent> Objekte später registriert werden können. Diese Methode wird eine Momentaufnahme erstellt, und die Auflistung der Routingereignisse kann in der gesamten Lebensdauer einer Anwendung geschrieben werden. Die zurückgegebene Auflistung möglicherweise sehr groß sein. Zählen auch nur die Ereignisse, die Teil der [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](~/includes/tla2sharptla-apisharpplural-md.md)], der sammlungsanzahl in hundert ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRoutedEventsForOwner">
+      <MemberSignature Language="C#" Value="public static System.Windows.RoutedEvent[] GetRoutedEventsForOwner (Type ownerType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.RoutedEvent[] GetRoutedEventsForOwner(class System.Type ownerType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.EventManager.GetRoutedEventsForOwner(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ownerType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="ownerType">Der Typ der Suche begonnen werden soll. Basisklassen werden in der Suche enthalten.</param>
+        <summary>Sucht alle Routingereignisbezeichner für Ereignisse, die mit den bereitgestellten Besitzertyp registriert sind.</summary>
+        <returns>Ein Array von übereinstimmenden Bezeichner für Routingereignisse, wenn Übereinstimmung gefunden wird. andernfalls <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterClassHandler">
+      <MemberSignature Language="C#" Value="public static void RegisterClassHandler (Type classType, System.Windows.RoutedEvent routedEvent, Delegate handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterClassHandler(class System.Type classType, class System.Windows.RoutedEvent routedEvent, class System.Delegate handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.EventManager.RegisterClassHandler(System.Type,System.Windows.RoutedEvent,System.Delegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="classType" Type="System.Type" />
+        <Parameter Name="routedEvent" Type="System.Windows.RoutedEvent" />
+        <Parameter Name="handler" Type="System.Delegate" />
+      </Parameters>
+      <Docs>
+        <param name="classType">Der Typ der Klasse, die Klassenbehandlung deklariert ist.</param>
+        <param name="routedEvent">Der Bezeichner des Routingereignisses, der das Ereignis behandelt werden soll.</param>
+        <param name="handler">Ein Verweis auf die Klassenhandlerimplementierung.</param>
+        <summary>Registriert einen Klassenhandler für ein bestimmtes Routingereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Klassenbehandlung ist ein Feature, das für Routingereignisse, einschließlich angefügte Ereignisse, die implementiert werden, mit Routingereignis Sicherung verfügbar ist. Ein Klassenhandler ist wie ein statischer Handler, der für alle Instanzen der Klasse vorhanden ist. Da der Handler statisch sind, Instanzeigenschaften direkt mit einem Klassenhandler kann nicht geändert werden, aber Sie die Instanzen über erreichen die `sender` Parameter und/oder die Ereignisdaten.  
+  
+ Klassenhandler werden vor den Handlern Instanz aufgerufen. Sie können einen Klassenhandler implementieren, der das Verhalten der das Ereignis als behandelt markiert wurde. Aus diesem Grund werden Instanzhandler für ein Ereignis Klasse behandelt nicht aufgerufen, es sei denn, der den Handler für die behandelten Ereignisse registrieren.  
+  
+ Anzahl der [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Basiselement Ereignisse bieten eine Klassenbehandlung virtuelle Methoden. Durch das Überschreiben dieser Methoden in Klassen, die die Basisklassen erben, können Sie eine Klassenbehandlung ohne Aufruf implementieren <xref:System.Windows.EventManager.RegisterClassHandler%2A> in statischen Konstruktoren. Methoden dieser Klasse wird in der Regel für die Eingabeereignisse vorhanden sind, und haben Namen, die mit "On" beginnen und enden mit dem Namen des Ereignisses Klasse behandelt wird.  
+  
+ Weitere Informationen zur Klassenbehandlung finden Sie unter [Routingereignisse als bearbeitete sowie die Behandlung von Klasse markieren](~/docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md).  
+  
+ Mithilfe dieser Signatur werden Klassenhandler registriert werden, um nur als Reaktion auf Ereignisse ohne Behandlung aufzurufen. Sie können auch registrieren Klassenhandler aufrufen, auch wenn die Ereignisargumente behandelt,, mithilfe markiert sind der <xref:System.Windows.EventManager.RegisterClassHandler%28System.Type%2CSystem.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> Signatur, mit `handledEventsToo` festgelegt `true`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel fügt einen Handler für <xref:System.Windows.UIElement.PreviewMouseLeftButtonDown>Aufrufen <xref:System.Windows.EventManager.RegisterClassHandler%2A>.  
+  
+ [!code-csharp[ClassHandling#StaticAndRegisterClassHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/ClassHandling/CSharp/SDKSampleLibrary/class1.cs#staticandregisterclasshandler)]
+ [!code-vb[ClassHandling#StaticAndRegisterClassHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ClassHandling/visualbasic/sdksamplelibrary/class1.vb#staticandregisterclasshandler)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterClassHandler">
+      <MemberSignature Language="C#" Value="public static void RegisterClassHandler (Type classType, System.Windows.RoutedEvent routedEvent, Delegate handler, bool handledEventsToo);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterClassHandler(class System.Type classType, class System.Windows.RoutedEvent routedEvent, class System.Delegate handler, bool handledEventsToo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.EventManager.RegisterClassHandler(System.Type,System.Windows.RoutedEvent,System.Delegate,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="classType" Type="System.Type" />
+        <Parameter Name="routedEvent" Type="System.Windows.RoutedEvent" />
+        <Parameter Name="handler" Type="System.Delegate" />
+        <Parameter Name="handledEventsToo" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="classType">Der Typ der Klasse, die Klassenbehandlung deklariert ist.</param>
+        <param name="routedEvent">Der Bezeichner des Routingereignisses, der das Ereignis behandelt werden soll.</param>
+        <param name="handler">Ein Verweis auf die Klassenhandlerimplementierung.</param>
+        <param name="handledEventsToo">
+          <see langword="true" />Diese Klassenhandler wird aufgerufen, auch wenn Argumente des Routingereignisses als behandelt markiert wurden; <see langword="false" /> das Standardverhalten des Aufrufs einer des Handlers für jedes Ereignis gekennzeichnet behandelt nicht beibehalten werden sollen.</param>
+        <summary>Registriert einen Klassenhandler für ein bestimmtes Routingereignis mit der Option zum Behandeln von Ereignissen, die behandelt werden, in dem Ereignisdaten bereits gekennzeichnet ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Klassenbehandlung ist ein Feature, das für Routingereignisse, einschließlich angefügte Ereignisse, die implementiert werden, mit Routingereignis Sicherung verfügbar ist. Ein Klassenhandler ist wie ein statischer Handler, der für alle Instanzen der Klasse vorhanden ist. Da der Handler statisch sind, Instanzeigenschaften direkt mit einem Klassenhandler kann nicht geändert werden, aber Sie die Instanzen über erreichen die `sender` Parameter und/oder die Ereignisdaten.  
+  
+ Klassenhandler werden vor den Handlern Instanz aufgerufen. Sie können einen Klassenhandler implementieren, der das Verhalten der das Ereignis als behandelt markiert wurde. Aus diesem Grund werden Instanzhandler für ein Ereignis Klasse behandelt nicht aufgerufen, es sei denn, der den Handler für die behandelten Ereignisse registrieren.  
+  
+ Anzahl der [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Basiselement Ereignisse bieten eine Klassenbehandlung virtuelle Methoden. Durch das Überschreiben dieser Methoden in Klassen, die die Basisklassen erben, können Sie eine Klassenbehandlung ohne Aufruf implementieren <xref:System.Windows.EventManager.RegisterClassHandler%2A> in statischen Konstruktoren. Methoden dieser Klasse wird in der Regel für die Eingabeereignisse vorhanden sind, und haben Namen, die mit "On" beginnen und enden mit dem Namen des Ereignisses Klasse behandelt wird.  
+  
+ Weitere Informationen zur Klassenbehandlung finden Sie unter [Routingereignisse als bearbeitete sowie die Behandlung von Klasse markieren](~/docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md).  
+  
+ Mithilfe dieser Signatur Klassenhandler können registriert werden, um bei behandelten Ereignisse durch Festlegen von aufgerufen `handledEventsToo` festgelegt `true`. Im Allgemeinen sollten Sie dies tun, nur dann, wenn ein bekannter Behandlungsproblem zu umgehen, z. B. der Eingabesystem Behandlung von Ereignissen der Maus oder Tastatur ausführen möchten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterRoutedEvent">
+      <MemberSignature Language="C#" Value="public static System.Windows.RoutedEvent RegisterRoutedEvent (string name, System.Windows.RoutingStrategy routingStrategy, Type handlerType, Type ownerType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.RoutedEvent RegisterRoutedEvent(string name, valuetype System.Windows.RoutingStrategy routingStrategy, class System.Type handlerType, class System.Type ownerType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.EventManager.RegisterRoutedEvent(System.String,System.Windows.RoutingStrategy,System.Type,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="routingStrategy" Type="System.Windows.RoutingStrategy" />
+        <Parameter Name="handlerType" Type="System.Type" />
+        <Parameter Name="ownerType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Routingereignisses. Der Name muss im Besitzertyp eindeutig sein und darf nicht sein <see langword="null" /> oder eine leere Zeichenfolge.</param>
+        <param name="routingStrategy">Die Routingstrategie des Ereignisses als Wert der Enumeration.</param>
+        <param name="handlerType">Der Typ des Ereignishandlers. Dies muss ein Delegattyp sein und darf nicht <see langword="null" />.</param>
+        <param name="ownerType">Der Besitzerklassentyp des Routingereignisses. Dies kann nicht <see langword="null" />.</param>
+        <summary>Registriert ein neues Routingereignis mit der [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Ereignissystem.</summary>
+        <returns>Der Bezeichner für das neu registrierte Routingereignis. Dieses Bezeichnerobjekt kann jetzt als statisches Feld in einer Klasse gespeichert und dann als Parameter für Methoden verwendet werden, die Handler an das Ereignis anfügen. Der Routingereignisbezeichner wird auch für andere Ereignissystems verwendet [!INCLUDE[TLA2#tla_api#plural](~/includes/tla2sharptla-apisharpplural-md.md)].</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Den Rückgabewert dieser Methode verwenden, erstellen Sie die statische Deklaration für eine eindeutige <xref:System.Windows.RoutedEvent> Bezeichnerfeld. Dieses Feld sollte im Besitzertyp gespeichert werden.  
+  
+ Es gibt zahlreiche Konventionen und best Practices in Verbindung mit Routingereignissen sollte mit dem Namen, registriert und in einer Klasse verfügbar gemacht werden. Weitere Informationen finden Sie unter [Ereignisübersicht weitergeleitet](~/docs/framework/wpf/advanced/routed-events-overview.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

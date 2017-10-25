@@ -1,0 +1,316 @@
+<Type Name="VBCodeProvider" FullName="Microsoft.VisualBasic.VBCodeProvider">
+  <TypeSignature Language="C#" Value="public class VBCodeProvider : System.CodeDom.Compiler.CodeDomProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit VBCodeProvider extends System.CodeDom.Compiler.CodeDomProvider" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.VBCodeProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.Compiler.CodeDomProvider</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt den Zugriff auf Instanzen des Visual Basic-Code-Generators und des Visual Basic-Codecompilers bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse enthält Methoden, die zum Abrufen von Instanzen der Visual Basic verwendet werden können <xref:System.CodeDom.Compiler.ICodeGenerator> und <xref:System.CodeDom.Compiler.ICodeCompiler> Implementierungen.  
+  
+> [!NOTE]
+>  Diese Klasse enthält einen Linkaufruf und einer vererbungsanforderung auf Klassenebene, die für alle Member gilt. Ein <xref:System.Security.SecurityException> wird ausgelöst, wenn nicht für den unmittelbaren Aufrufer oder die abgeleitete Klasse volle Vertrauenswürdigkeit verfügt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird der C#- oder Visual Basic-Code-Anbieters, um eine Quelldatei zu kompilieren. Im Beispiel wird die Erweiterung der Eingabedatei überprüft und verwendet den entsprechenden <xref:Microsoft.CSharp.CSharpCodeProvider> oder <xref:Microsoft.VisualBasic.VBCodeProvider> für die Kompilierung.  Die Eingabedatei wird in eine ausführbare Datei kompiliert, und alle Kompilierungsfehler werden in der Konsole angezeigt.  
+  
+ [!code-csharp[CodeDom_CodeProviders#2](~/samples/snippets/csharp/VS_Snippets_CLR/CodeDom_CodeProviders/CS/source.cs#2)]
+ [!code-vb[CodeDom_CodeProviders#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeDom_CodeProviders/VB/source.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Diese Klasse kann nicht von teilweise vertrauenswürdigem Code verwendet werden.</permission>
+    <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für erben. Diese Klasse kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public VBCodeProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.VBCodeProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.VisualBasic.VBCodeProvider" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Diese Klasse kann nicht von teilweise vertrauenswürdigem Code verwendet werden.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für erben. Diese Klasse kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public VBCodeProvider (System.Collections.Generic.IDictionary&lt;string,string&gt; providerOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IDictionary`2&lt;string, string&gt; providerOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.VBCodeProvider.#ctor(System.Collections.Generic.IDictionary{System.String,System.String})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="providerOptions" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="providerOptions">Ein <see cref="T:System.Collections.Generic.IDictionary`2" />-Objekt, das die Anbieteroptionen aus der Konfigurationsdatei enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.VisualBasic.VBCodeProvider" />-Klasse mit den angegebenen Anbieteroptionen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert für `providerOptions` aus dem Element in der Konfigurationsdatei abgerufen wird. Bestimmen Sie die Version von der <xref:Microsoft.VisualBasic.VBCodeProvider> durch Angabe verwenden möchten die `<providerOption>` Elements "CompilerVersion" als Optionsnamen angeben und die Versionsnummer (z. B. "v3. 5") als Wert der Option angeben. Sie müssen die Versionsnummer mit einem Kleinbuchstaben "V" voranstellen.  
+  
+   
+  
+## Examples  
+ Im folgenden Konfigurationsbeispiel Datei wird veranschaulicht, wie an dieser Version 3.5 von der Visual Basic Codeanbieter sollte verwendet werden.  
+  
+```  
+<configuration>  
+  <system.codedom>  
+    <compilers>  
+      <!-- zero or more compiler elements -->  
+      <compiler  
+          language="vb;VisualBasic"  
+          extension=".vb"  
+          type="Microsoft.VisualBasic.VBCodeProvider, System,   
+          Version=2.0.3600.0, Culture=neutral,   
+          PublicKeyToken=b77a5c561934e089"  
+          compilerOptions="/optimize"  
+          warningLevel="1" >  
+          <providerOption  
+            name="CompilerVersion"  
+            value="v3.5" />  
+        </compiler>  
+    </compilers>  
+  </system.codedom>  
+</configuration>  
+```  
+  
+ Im folgende Beispiel wird gezeigt, wie die Compilerversion beim Erstellen einer neuen Instanz von der <xref:Microsoft.VisualBasic.VBCodeProvider> Klasse.  
+  
+ [!code-vb[VBProvider.ProviderOptions#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/vbprovider.provideroptions/vb/program.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="providerOptions" /> ist <see langword="null" />.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCompiler">
+      <MemberSignature Language="C#" Value="public override System.CodeDom.Compiler.ICodeCompiler CreateCompiler ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.CodeDom.Compiler.ICodeCompiler CreateCompiler() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.VBCodeProvider.CreateCompiler" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use CodeDomProvider class")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.ICodeCompiler</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Instanz des Visual Basic-Codecompilers ab.</summary>
+        <returns>Eine Instanz der Visual Basic-Implementierung von <see cref="T:System.CodeDom.Compiler.ICodeCompiler" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateGenerator">
+      <MemberSignature Language="C#" Value="public override System.CodeDom.Compiler.ICodeGenerator CreateGenerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.CodeDom.Compiler.ICodeGenerator CreateGenerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.VBCodeProvider.CreateGenerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use CodeDomProvider class")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.ICodeGenerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Instanz des Visual Basic-Code-Generators ab.</summary>
+        <returns>Eine Instanz der Visual Basic-Implementierung von <see cref="T:System.CodeDom.Compiler.ICodeGenerator" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileExtension">
+      <MemberSignature Language="C#" Value="public override string FileExtension { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FileExtension" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.VBCodeProvider.FileExtension" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die beim Erstellen von Quellcodedateien zu verwendende Dateierweiterung ab.</summary>
+        <value>Die für generierte Quellcodedateien zu verwendende Dateierweiterung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Erweiterung ist normalerweise die Erweiterung von Quellcodedateien für die Sprache verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateCodeFromMember">
+      <MemberSignature Language="C#" Value="public override void GenerateCodeFromMember (System.CodeDom.CodeTypeMember member, System.IO.TextWriter writer, System.CodeDom.Compiler.CodeGeneratorOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GenerateCodeFromMember(class System.CodeDom.CodeTypeMember member, class System.IO.TextWriter writer, class System.CodeDom.Compiler.CodeGeneratorOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.VBCodeProvider.GenerateCodeFromMember(System.CodeDom.CodeTypeMember,System.IO.TextWriter,System.CodeDom.Compiler.CodeGeneratorOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="member" Type="System.CodeDom.CodeTypeMember" />
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+        <Parameter Name="options" Type="System.CodeDom.Compiler.CodeGeneratorOptions" />
+      </Parameters>
+      <Docs>
+        <param name="member">Ein <see cref="T:System.CodeDom.CodeTypeMember" />, für den Code generiert werden soll.</param>
+        <param name="writer">Der <see cref="T:System.IO.TextWriter" />, in den geschrieben werden soll.</param>
+        <param name="options">Der beim Generieren von Code zu verwendende <see cref="T:System.CodeDom.Compiler.CodeGeneratorOptions" />.</param>
+        <summary>Generiert Code für den angegebenen Klassenmember unter Verwendung der angegebenen TextWriter- und Code-Generator-Optionen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mitglieder sind unterschiedlich je nach Kontext generiert. Beispielsweise wird eine Methode in einer Schnittstelle oder ein Feld in einer Enumeration anders als eine Methode oder ein Feld für eine Klasse generiert.  Diese Implementierung generiert Code für ein Element im Klassenkontext.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:Microsoft.VisualBasic.VBCodeProvider.GenerateCodeFromMember%2A> Methode zum Erstellen einer Codefragment in ein CodeDOM-Diagramms verwendet werden. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromMember%2A> Methode der <xref:System.CodeDom.Compiler.CodeDomProvider> Klasse.  
+  
+ [!code-csharp[CodeDom_GenerateCodeFromMember#3](~/samples/snippets/csharp/VS_Snippets_CLR/CodeDom_GenerateCodeFromMember/cs/program.cs#3)]
+ [!code-vb[CodeDom_GenerateCodeFromMember#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeDom_GenerateCodeFromMember/vb/module1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetConverter">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.TypeConverter GetConverter (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ComponentModel.TypeConverter GetConverter(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.VBCodeProvider.GetConverter(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeConverter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Objekttyp, für den ein Typkonverter abgerufen werden soll.</param>
+        <summary>Ruft einen <see cref="T:System.ComponentModel.TypeConverter" /> für den angegebenen Objekttyp ab.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.TypeConverter" /> für den angegebenen Typ.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine abgeleitete Klasse überschreiben, kann diese Methode, um bestimmte Arten von den Einsatz von Typkonvertern für bestimmte Datentypen bereitzustellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LanguageOptions">
+      <MemberSignature Language="C#" Value="public override System.CodeDom.Compiler.LanguageOptions LanguageOptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.CodeDom.Compiler.LanguageOptions LanguageOptions" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.VBCodeProvider.LanguageOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.LanguageOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Bezeichner für Sprachfunktionen ab.</summary>
+        <value><see cref="T:System.CodeDom.Compiler.LanguageOptions" />, die bestimmte Features der Sprache angeben.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

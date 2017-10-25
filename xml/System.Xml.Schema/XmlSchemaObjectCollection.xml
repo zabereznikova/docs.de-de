@@ -1,0 +1,554 @@
+<Type Name="XmlSchemaObjectCollection" FullName="System.Xml.Schema.XmlSchemaObjectCollection">
+  <TypeSignature Language="C#" Value="public class XmlSchemaObjectCollection : System.Collections.CollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlSchemaObjectCollection extends System.Collections.CollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Schema.XmlSchemaObjectCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.CollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Eine Auflistung von <see cref="T:System.Xml.Schema.XmlSchemaObject" />en.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Finden Sie unter <xref:System.Xml.Schema.XmlSchemaObject> für ein Beispiel für die Verwendung dieser Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSchemaObjectCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaObjectCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see langword="XmlSchemaObjectCollection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSchemaObjectCollection (System.Xml.Schema.XmlSchemaObject parent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Schema.XmlSchemaObject parent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaObjectCollection.#ctor(System.Xml.Schema.XmlSchemaObject)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Xml.Schema.XmlSchemaObject" />
+      </Parameters>
+      <Docs>
+        <param name="parent">Die <see cref="T:System.Xml.Schema.XmlSchemaObject" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see langword="XmlSchemaObjectCollection" /> -Klasse, akzeptiert eine <see cref="T:System.Xml.Schema.XmlSchemaObject" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Xml.Schema.XmlSchemaObject item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Xml.Schema.XmlSchemaObject item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaObjectCollection.Add(System.Xml.Schema.XmlSchemaObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Xml.Schema.XmlSchemaObject" />
+      </Parameters>
+      <Docs>
+        <param name="item">Die <see cref="T:System.Xml.Schema.XmlSchemaObject" />.</param>
+        <summary>Fügt dem <see cref="T:System.Xml.Schema.XmlSchemaObject" /> eine <see langword="XmlSchemaObjectCollection" /> hinzu.</summary>
+        <returns>Der Index, an dem das Element hinzugefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `Count` bereits die Kapazität entspricht, wird die Kapazität der Liste verdoppelt, durch die automatische Neuzuordnen des internen Arrays und die vorhandenen Elemente in das neue Array kopiert, bevor das neue Element hinzugefügt wird.  
+  
+ Wenn `Count` ist kleiner als die Kapazität, ist diese Methode ein 0(1)-Vorgang. Wenn die Kapazität für das neue Element erhöht werden muss, wird diese Methode einen 0(n)-Vorgang, wobei n ist `Count`.  
+  
+ Die <xref:System.Xml.Schema.XmlSchemaObjectCollection.Add%2A> Methode erwartet nur <xref:System.Xml.Schema.XmlSchemaExternal> und die abgeleiteten Typen (<xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude>, und <xref:System.Xml.Schema.XmlSchemaRedefine>) als Parameter. Das folgende Beispiel veranschaulicht das Hinzufügen von einem Schema enthalten, um die <xref:System.Xml.Schema.XmlSchema.Includes%2A> einer vorhandenen Auflistung <xref:System.Xml.Schema.XmlSchema> Objekt.  
+  
+```vb  
+Dim schema As XmlSchema = New XmlSchema()  
+  
+Dim textReader As XmlTextReader = New XmlTextReader("include.xsd")  
+Dim includeSchema As XmlSchema = XmlSchema.Read(textReader, null)  
+  
+Dim include As XmlSchemaInclude = New XmlSchemaInclude()  
+include.Schema = includeSchema;  
+schema.Includes.Add(include);  
+```  
+  
+```csharp  
+XmlSchema schema = new XmlSchema();  
+  
+XmlTextReader textReader = new XmlTextReader("include.xsd");  
+XmlSchema includeSchema = XmlSchema.Read(textReader, null);  
+  
+XmlSchemaInclude include = new XmlSchemaInclude();  
+include.Schema = includeSchema;  
+schema.Includes.Add(include);  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ <paramref name="index" /> ist größer als <see langword="Count" />.</exception>
+        <exception cref="T:System.InvalidCastException">Die <see cref="T:System.Xml.Schema.XmlSchemaObject" /> angegebene Parameter ist nicht vom Typ <see cref="T:System.Xml.Schema.XmlSchemaExternal" /> oder davon abgeleiteten Typen <see cref="T:System.Xml.Schema.XmlSchemaImport" />, <see cref="T:System.Xml.Schema.XmlSchemaInclude" />, und <see cref="T:System.Xml.Schema.XmlSchemaRedefine" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Xml.Schema.XmlSchemaObject item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Xml.Schema.XmlSchemaObject item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaObjectCollection.Contains(System.Xml.Schema.XmlSchemaObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Xml.Schema.XmlSchemaObject" />
+      </Parameters>
+      <Docs>
+        <param name="item">Die <see cref="T:System.Xml.Schema.XmlSchemaObject" />.</param>
+        <summary>Gibt an, ob das angegebene <see cref="T:System.Xml.Schema.XmlSchemaObject" /> befindet sich in der <see langword="XmlSchemaObjectCollection" />.</summary>
+        <returns>
+          <see langword="true" />Wenn der angegebene qualifizierte Namen in der Auflistung ist; andernfalls gibt <see langword="false" />. Wenn Null angegeben wird, <see langword="false" /> wird zurückgegeben, da kein gekennzeichneter Name mit einem null-Namen vorhanden ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Xml.Schema.XmlSchemaObject[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Xml.Schema.XmlSchemaObject[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaObjectCollection.CopyTo(System.Xml.Schema.XmlSchemaObject[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Xml.Schema.XmlSchemaObject[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale Array, das das Ziel der aus <see langword="XmlSchemaObjectCollection" /> kopierten Elemente ist. Für das Array muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="index">Der nullbasierte Index im Array, ab dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert alle die <see cref="T:System.Xml.Schema.XmlSchemaObject" />s aus der Auflistung in das angegebene Array, beginnend am angegebenen Index.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das angegebene Array muss einen kompatiblen Typ aufweisen.  
+  
+ Diese Methode verwendet <xref:System.Array.Copy%2A> die Elemente kopiert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist kleiner als Null.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" />ist mehrdimensional.  
+  
+ \- oder –  
+  
+ Der <paramref name="index" /> ist größer oder gleich der Länge von <paramref name="array" />.  
+  
+ \- oder –  
+  
+ Die Anzahl der Elemente in der Quell-<see cref="T:System.Xml.Schema.XmlSchemaObject" /> ist größer als der verfügbare Platz vom Index bis zum Ende des Zielarrays.</exception>
+        <exception cref="T:System.InvalidCastException">Der Typ der Quelle <see cref="T:System.Xml.Schema.XmlSchemaObject" /> kann nicht automatisch in den Typ des Zielarrays umgewandelt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaObjectEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.Schema.XmlSchemaObjectEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaObjectCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaObjectEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zum Durchlaufen der <see langword="XmlSchemaObjects" /> enthalten sind, der <see langword="XmlSchemaObjectCollection" />.</summary>
+        <returns>Der Iterator zurückgibt <see cref="T:System.Xml.Schema.XmlSchemaObjectEnumerator" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Xml.Schema.XmlSchemaObject item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Xml.Schema.XmlSchemaObject item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaObjectCollection.IndexOf(System.Xml.Schema.XmlSchemaObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Xml.Schema.XmlSchemaObject" />
+      </Parameters>
+      <Docs>
+        <param name="item">Die <see cref="T:System.Xml.Schema.XmlSchemaObject" /> , dessen Index zurückgegeben werden soll.</param>
+        <summary>Ruft ab, der angegebenen Auflistungsindex <see cref="T:System.Xml.Schema.XmlSchemaObject" />.</summary>
+        <returns>Der Index der angegebenen <see cref="T:System.Xml.Schema.XmlSchemaObject" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Xml.Schema.XmlSchemaObject item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Xml.Schema.XmlSchemaObject item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaObjectCollection.Insert(System.Int32,System.Xml.Schema.XmlSchemaObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.Xml.Schema.XmlSchemaObject" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem ein Element eingefügt werden soll.</param>
+        <param name="item">Der einzufügende <see cref="T:System.Xml.Schema.XmlSchemaObject" />.</param>
+        <summary>Fügt eine <see cref="T:System.Xml.Schema.XmlSchemaObject" /> auf die <see langword="XmlSchemaObjectCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `Count` bereits die Kapazität entspricht, die Kapazität der Liste wird durch die automatisch das interne Array erneut zugewiesen werden, bevor das neue Element eingefügt wird verdoppelt.  
+  
+ Wenn `index` gleich `Count`, `value` wird am Ende hinzugefügt `XmlSchemaObjectCollection`.  
+  
+ Die Elemente, die von der Einfügemarke nach unten, um das neue Element aufzunehmen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ <paramref name="index" /> ist größer als <see langword="Count" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.Schema.XmlSchemaObject this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaObject Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaObjectCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des <see cref="T:System.Xml.Schema.XmlSchemaObject" />.</param>
+        <summary>Ruft den <see cref="T:System.Xml.Schema.XmlSchemaObject" /> am angegebenen Index ab.</summary>
+        <value>Der <see cref="T:System.Xml.Schema.XmlSchemaObject" /> am angegebenen Index.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClear">
+      <MemberSignature Language="C#" Value="protected override void OnClear ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaObjectCollection.OnClear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+          <see langword="OnClear" />wird aufgerufen, bevor Sie den Standard <see langword="Clear" /> Verhalten. Weitere Informationen finden Sie unter OnClear-Methode für <see cref="T:System.Collections.CollectionBase" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInsert">
+      <MemberSignature Language="C#" Value="protected override void OnInsert (int index, object item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnInsert(int32 index, object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaObjectCollection.OnInsert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des <see cref="T:System.Xml.Schema.XmlSchemaObject" />.</param>
+        <param name="item">Das Element.</param>
+        <summary>
+          <see langword="OnInsert" />wird aufgerufen, bevor Sie den Standard <see langword="Insert" /> Verhalten. Weitere Informationen finden Sie unter <see langword="OnInsert" /> Methode <see cref="T:System.Collections.CollectionBase" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRemove">
+      <MemberSignature Language="C#" Value="protected override void OnRemove (int index, object item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRemove(int32 index, object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaObjectCollection.OnRemove(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des <see cref="T:System.Xml.Schema.XmlSchemaObject" />.</param>
+        <param name="item">Das Element.</param>
+        <summary>
+          <see langword="OnRemove" />wird aufgerufen, bevor Sie den Standard <see langword="Remove" /> Verhalten. Weitere Informationen finden Sie unter der <see langword="OnRemove" /> Methode zum <see cref="T:System.Collections.CollectionBase" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSet">
+      <MemberSignature Language="C#" Value="protected override void OnSet (int index, object oldValue, object newValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnSet(int32 index, object oldValue, object newValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaObjectCollection.OnSet(System.Int32,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="oldValue" Type="System.Object" />
+        <Parameter Name="newValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des <see cref="T:System.Xml.Schema.XmlSchemaObject" />.</param>
+        <param name="oldValue">Der alte Wert.</param>
+        <param name="newValue">Der neue Wert.</param>
+        <summary>
+          <see langword="OnSet" />wird aufgerufen, bevor Sie den Standard <see langword="Set" /> Verhalten. Weitere Informationen finden Sie unter der Methode ein Zustand eingetreten <see cref="T:System.Collections.CollectionBase" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Xml.Schema.XmlSchemaObject item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Xml.Schema.XmlSchemaObject item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaObjectCollection.Remove(System.Xml.Schema.XmlSchemaObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Xml.Schema.XmlSchemaObject" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das zu entfernende <see cref="T:System.Xml.Schema.XmlSchemaObject" />-Element.</param>
+        <summary>Entfernt ein <see cref="T:System.Xml.Schema.XmlSchemaObject" /> aus der <see langword="XmlSchemaObjectCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode führt eine lineare Suche. aus diesem Grund ist die durchschnittliche Ausführungszeit proportional zur <xref:System.Collections.CollectionBase.Count%2A>. Diese Methode ist, also eine O (`n`)-Vorgang, in dem `n` ist <xref:System.Collections.CollectionBase.Count%2A>.  
+  
+ Diese Methode bestimmt die Gleichheit durch Aufrufen von <xref:System.Object.Equals%2A>.  
+  
+ Die Elemente, die auf das entfernte Element folgen, werden nach oben verschoben, um die frei gewordene Stelle einzunehmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

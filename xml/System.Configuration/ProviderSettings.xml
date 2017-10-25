@@ -1,0 +1,388 @@
+<Type Name="ProviderSettings" FullName="System.Configuration.ProviderSettings">
+  <TypeSignature Language="C#" Value="public sealed class ProviderSettings : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ProviderSettings extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.ProviderSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Elemente der Konfiguration eines Anbieters zugeordnet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET verwendet Anbieter, um bestimmte Dienste erforderlich, die für eine Funktion auszuführen. Die Mitgliedschaftsfunktion verwendet beispielsweise einen Anbieter um die Persistenz von Daten der Benutzergruppenmitgliedschaft in einer Datenbank zu koordinieren.  
+  
+ In einer Konfigurationsdatei angegeben und einzelne Anbieter hinzugefügt werden ein `providers` Element innerhalb eines bestimmten Featureabschnitts.  
+  
+ Die <xref:System.Configuration.ProviderSettings> Klasse stellt eine bestimmte Gruppe von Einstellungen, die hinzugefügt werden, die `providers` Element in einem Konfigurationsabschnitt. In der Regel die Konfigurationsattribute gemäß der `add` -Direktive enthalten, einen Namen, Typ und andere Eigenschaften.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Configuration.ProviderSettings>.  
+  
+ [!code-csharp[System.Configuration.ProviderSettings#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ProviderSettings/CS/ProviderSettings.cs#1)]
+ [!code-vb[System.Configuration.ProviderSettings#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ProviderSettings/VB/ProviderSettings.vb#1)]  
+  
+ Im folgenden ist ein Auszug aus der Konfigurationsdatei, die im obigen Beispiel verwendet.  
+  
+```  
+<?xml version="1.0" encoding="utf-8" ?>  
+<configuration>  
+  
+  <configProtectedData>  
+  
+    <providers>  
+      <clear />  
+      <add  
+         name="TripleDESProtectedConfigurationProvider"   
+         type="Samples.Aspnet.TripleDESProtectedConfigurationProvider, protectedconfigurationproviderlib, Version=1.0.0.0, Culture=neutral,   
+PublicKeyToken=79e01ae0f5cfc66f, processorArchitecture=MSIL" />  
+  
+    </providers>  
+  
+  </configProtectedData>  
+  
+</configuration>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.ProviderSettings" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor zum Erstellen eines neuen <xref:System.Configuration.ProviderSettings> Instanz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProviderSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ProviderSettings.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.ProviderSettings" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Initialisiert eine neue Instanz der <xref:System.Configuration.ProviderSettings>-Klasse.  
+  
+ Verwenden Sie diesen Konstruktor zum Erstellen eines neuen <xref:System.Configuration.ProviderSettings> Instanz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProviderSettings (string name, string type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ProviderSettings.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="type" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Anbieters konfigurieren.</param>
+        <param name="type">Der Typ des Anbieters konfigurieren.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Configuration.ProviderSettings" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor zum Erstellen eines neuen <xref:System.Configuration.ProviderSettings> -Instanz mit dem angegebenen Namen und Typ.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsModified">
+      <MemberSignature Language="C#" Value="protected override bool IsModified ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance bool IsModified() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ProviderSettings.IsModified" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ProviderSettings.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("name", Options=System.Configuration.ConfigurationPropertyOptions.IsRequired | System.Configuration.ConfigurationPropertyOptions.IsKey)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Anbieters konfiguriert, die von dieser Klasse fest.</summary>
+        <value>Der Name des Anbieters.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert der <xref:System.Configuration.ProviderSettings.Name%2A> Eigenschaft ist identisch mit dem Wert für die `name` -Attribut, das im Konfigurationsabschnitt für den Anbieter angezeigt wird, die vom konfiguriert wird die <xref:System.Configuration.ProviderSettings> Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Zugriff auf die <xref:System.Configuration.ProviderSettings.Name%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Configuration.ProviderSettings#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ProviderSettings/CS/ProviderSettings.cs#2)]
+ [!code-vb[System.Configuration.ProviderSettings#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ProviderSettings/VB/ProviderSettings.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDeserializeUnrecognizedAttribute">
+      <MemberSignature Language="C#" Value="protected override bool OnDeserializeUnrecognizedAttribute (string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnDeserializeUnrecognizedAttribute(string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ProviderSettings.OnDeserializeUnrecognizedAttribute(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.NameValueCollection Parameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.NameValueCollection Parameters" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ProviderSettings.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der benutzerdefinierten Parameter für den Anbieter ab.</summary>
+        <value>Ein <see cref="T:System.Collections.Specialized.NameValueCollection" /> von Parametern für den Anbieter.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Configuration.ProviderSettings.Parameters%2A> aufzurufende Eigenschaft der <xref:System.Collections.Specialized.NameValueCollection> Parameter für diesen <xref:System.Configuration.ProviderSettings> Objekt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Zugriff auf die <xref:System.Configuration.ProviderSettings.Parameters%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Configuration.ProviderSettings#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ProviderSettings/CS/ProviderSettings.cs#4)]
+ [!code-vb[System.Configuration.ProviderSettings#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ProviderSettings/VB/ProviderSettings.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ProviderSettings.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="protected override void Reset (System.Configuration.ConfigurationElement parentElement);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Reset(class System.Configuration.ConfigurationElement parentElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ProviderSettings.Reset(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parentElement" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="parentElement">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public string Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Type" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ProviderSettings.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("type", Options=System.Configuration.ConfigurationPropertyOptions.IsRequired)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ des Anbieters konfiguriert, die von dieser Klasse fest.</summary>
+        <value>Der vollqualifizierte Namespace- und Klassennamen Name für den Typ des Anbieters, die von diesem konfiguriert <see cref="T:System.Configuration.ProviderSettings" /> Instanz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.ProviderSettings.Type%2A> Eigenschaft enthält den vollqualifizierten Namespace- und Klassennamen Namen für den Anbieter konfiguriert, indem die <xref:System.Configuration.ProviderSettings> Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Zugriff auf die <xref:System.Configuration.ProviderSettings.Type%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Configuration.ProviderSettings#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ProviderSettings/CS/ProviderSettings.cs#3)]
+ [!code-vb[System.Configuration.ProviderSettings#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ProviderSettings/VB/ProviderSettings.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unmerge">
+      <MemberSignature Language="C#" Value="protected override void Unmerge (System.Configuration.ConfigurationElement source, System.Configuration.ConfigurationElement parent, System.Configuration.ConfigurationSaveMode updateMode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Unmerge(class System.Configuration.ConfigurationElement source, class System.Configuration.ConfigurationElement parent, valuetype System.Configuration.ConfigurationSaveMode updateMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ProviderSettings.Unmerge(System.Configuration.ConfigurationElement,System.Configuration.ConfigurationElement,System.Configuration.ConfigurationSaveMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceElement" Type="System.Configuration.ConfigurationElement" />
+        <Parameter Name="parentElement" Type="System.Configuration.ConfigurationElement" />
+        <Parameter Name="saveMode" Type="System.Configuration.ConfigurationSaveMode" />
+      </Parameters>
+      <Docs>
+        <param name="source">To be added.</param>
+        <param name="parent">To be added.</param>
+        <param name="updateMode">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

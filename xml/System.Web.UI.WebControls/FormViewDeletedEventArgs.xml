@@ -1,0 +1,274 @@
+<Type Name="FormViewDeletedEventArgs" FullName="System.Web.UI.WebControls.FormViewDeletedEventArgs">
+  <TypeSignature Language="C#" Value="public class FormViewDeletedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FormViewDeletedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.FormViewDeletedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Web.UI.WebControls.FormView.ItemDeleted" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.FormView> -Steuerelement löst die <xref:System.Web.UI.WebControls.FormView.ItemDeleted> Ereignis aus, wenn eine Schaltfläche "löschen" (eine Schaltfläche mit seiner `CommandName` -Eigenschaft auf "Löschen") innerhalb des Steuerelements geklickt wird, aber nachdem die <xref:System.Web.UI.WebControls.FormView> Steuerelement löscht den Datensatz. Dadurch können Sie eine Ereignisbehandlungsmethode bereitstellen, die eine benutzerdefinierte Routine ausführt, z. B. Überprüfen der Ergebnisse einer Delete-Vorgang aus, wenn dieses Ereignis tritt auf.  
+  
+ Ein <xref:System.Web.UI.WebControls.FormViewDeletedEventArgs> Ereignisbehandlungsmethode, wodurch Sie zum Bestimmen der Anzahl der betroffenen Datensätze und alle Ausnahmen, die möglicherweise aufgetreten-Objekt übergeben wird. Die Anzahl der Datensätze, die durch den Löschvorgang betroffen ermitteln Sie mithilfe der <xref:System.Web.UI.WebControls.FormViewDeletedEventArgs.AffectedRows%2A> Eigenschaft. Verwenden der <xref:System.Web.UI.WebControls.FormViewDeletedEventArgs.Exception%2A> Eigenschaft, um zu bestimmen, ob Ausnahmen aufgetreten sind. Sie können auch angeben, ob die Ausnahme in der Ereignisbehandlungsmethode, indem behandelt wurde die <xref:System.Web.UI.WebControls.FormViewDeletedEventArgs.ExceptionHandled%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Wenn eine Ausnahme während der Delete-Vorgang auftritt und die <xref:System.Web.UI.WebControls.FormViewDeletedEventArgs.ExceptionHandled%2A> -Eigenschaftensatz auf `false`die <xref:System.Web.UI.WebControls.FormView> Steuerelement löst die Ausnahme erneut aus.  
+  
+ Wenn Sie die Name-Wert-Paare der Schlüsselfelder und nichtschlüsselfelder des gelöschten Datensatzes zugreifen möchten, verwenden Sie die <xref:System.Web.UI.WebControls.FormViewDeletedEventArgs.Keys%2A> und <xref:System.Web.UI.WebControls.FormViewDeletedEventArgs.Values%2A> Eigenschaften bzw..  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.FormViewDeletedEventArgs> -Objekt übergeben, um die Ereignisbehandlungsmethode für den <xref:System.Web.UI.WebControls.FormView.ItemDeleted> Ereignis, um zu bestimmen, ob eine Ausnahme während eines Delete-Vorgangs aufgetreten sind.  
+  
+ [!code-aspx-csharp[FormViewDeletedEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewDeletedEventArgs/CS/formviewdeletedeventargscs.aspx#1)]
+ [!code-aspx-vb[FormViewDeletedEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewDeletedEventArgs/VB/formviewdeletedeventargsvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FormViewDeletedEventArgs (int affectedRows, Exception e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 affectedRows, class System.Exception e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FormViewDeletedEventArgs.#ctor(System.Int32,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="affectedRows" Type="System.Int32" />
+        <Parameter Name="e" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="affectedRows">Die Anzahl der Zeilen, die durch den Löschvorgang betroffen.</param>
+        <param name="e">Eine <see cref="T:System.Exception" /> , die die Ausnahme ausgelöst, wenn der Löschvorgang ausgeführt wurde darstellt. Wenn keine Ausnahme ausgelöst wird, verwenden Sie <see langword="null" /> für diesen Parameter.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.FormViewDeletedEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.FormViewDeletedEventArgs> Klasse.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.Web.UI.WebControls.FormViewDeletedEventArgs>-Instanz aufgeführt.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.FormViewDeletedEventArgs.AffectedRows%2A>|Der Wert des `affectedRows`-Parameters.|  
+|<xref:System.Web.UI.WebControls.FormViewDeletedEventArgs.Exception%2A>|Die <xref:System.Exception?displayProperty=nameWithType> Objekt in der `e` Parameter.|  
+|<xref:System.Web.UI.WebControls.FormViewDeletedEventArgs.ExceptionHandled%2A>|Initialisiert auf `false`.|  
+  
+> [!NOTE]
+>  Dieser Konstruktor wird hauptsächlich von Steuerelemententwicklern verwendet, beim Auslösen von Ereignissen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AffectedRows">
+      <MemberSignature Language="C#" Value="public int AffectedRows { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AffectedRows" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FormViewDeletedEventArgs.AffectedRows" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Zeilen, die durch den Löschvorgang betroffen.</summary>
+        <value>Die Anzahl der Zeilen, die durch den Löschvorgang betroffen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.FormViewDeletedEventArgs.AffectedRows%2A> -Eigenschaft können Sie bestimmen die Anzahl der Datensätze, die durch den Löschvorgang betroffen. Diese Eigenschaft wird häufig verwendet, um sicherzustellen, dass die richtige Anzahl von Datensätzen in den folgenden Situationen gelöscht wurde:  
+  
+-   Stellen Sie sicher, dass nur ein einzelner Datensatz gelöscht wurde. In einigen Fällen kann eine falsch geschriebene Delete-Anweisung mehrere Datensätze löschen.  
+  
+-   Stellen Sie sicher, dass ein Datensatz gelöscht wurde, wenn während der Delete-Vorgang ein Fehler auftritt, der keine Ausnahme auslöst.  
+  
+-   Stellen Sie sicher, dass ein Datensatz gelöscht wurde, wenn ein Datenquellen-Steuerelement, die konflikterkennung (vollständige Parallelität), z. B. unterstützt die <xref:System.Web.UI.WebControls.SqlDataSource> und <xref:System.Web.UI.WebControls.ObjectDataSource> steuert, hat die <xref:System.Web.UI.WebControls.SqlDataSource.ConflictDetection%2A> -Eigenschaftensatz auf die `ConflictOptions.CompareAllValues` Enumerationswert. Bei dieser Einstellung kann ein Datensatz, der gleichzeitig von einem anderen Benutzer geändert wurde nicht gelöscht werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.FormViewDeletedEventArgs.AffectedRows%2A> Eigenschaft, um sicherzustellen, dass ein Datensatz während des Löschvorgangs gelöscht wurde.  
+  
+ [!code-aspx-csharp[FormViewDeletedEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewDeletedEventArgs/CS/formviewdeletedeventargscs.aspx#1)]
+ [!code-aspx-vb[FormViewDeletedEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewDeletedEventArgs/VB/formviewdeletedeventargsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public Exception Exception { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Exception" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FormViewDeletedEventArgs.Exception" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ausnahme (falls vorhanden), die während der Delete-Vorgang ausgelöst wurde.</summary>
+        <value>Eine <see cref="T:System.Exception" /> , die die Ausnahme, die während der Delete-Vorgang ausgelöst wurde darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.FormViewDeletedEventArgs.Exception%2A> Eigenschaft, um die Ausnahme (sofern vorhanden) zu bestimmen, die während der Delete-Vorgang ausgelöst wurde. Wenn keine Ausnahmen ausgelöst wurden, gibt diese Eigenschaft `null`.  
+  
+> [!NOTE]
+>  Wenn eine Ausnahme ausgelöst wurde und Sie zur Behandlung von Ausnahmen im Ereignishandler entscheiden, müssen Sie festlegen der <xref:System.Web.UI.WebControls.FormViewDeletedEventArgs.ExceptionHandled%2A> Eigenschaft `true`ist, andernfalls der <xref:System.Web.UI.WebControls.FormView> Steuerelement löst die Ausnahme erneut aus.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.FormViewDeletedEventArgs.Exception%2A> Eigenschaft, um zu bestimmen, ob eine Ausnahme während eines Delete-Vorgangs aufgetreten sind.  
+  
+ [!code-aspx-csharp[FormViewDeletedEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewDeletedEventArgs/CS/formviewdeletedeventargscs.aspx#1)]
+ [!code-aspx-vb[FormViewDeletedEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewDeletedEventArgs/VB/formviewdeletedeventargsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExceptionHandled">
+      <MemberSignature Language="C#" Value="public bool ExceptionHandled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ExceptionHandled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FormViewDeletedEventArgs.ExceptionHandled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob eine Ausnahme, die während der Delete-Vorgang ausgelöst wurde im Ereignishandler behandelt wurde.</summary>
+        <value>
+          <see langword="true" />Wenn die Ausnahme im Ereignishandler behandelt wurde; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Ausnahme während der Delete-Vorgang ausgelöst wird, verwenden Sie die <xref:System.Web.UI.WebControls.FormViewDeletedEventArgs.ExceptionHandled%2A> Eigenschaft, um anzugeben, ob die Ausnahme im Ereignishandler behandelt wurde. Wenn diese Eigenschaft festgelegt wird, um `true`, gilt die Ausnahme behandelt und nicht erneut ausgelöst. Wenn diese Eigenschaft, um festgelegt wird `false`die <xref:System.Web.UI.WebControls.FormView> Steuerelement löst die Ausnahme erneut aus. Um zu bestimmen, welche Ausnahme ausgelöst wurde, verwenden die <xref:System.Web.UI.WebControls.FormViewDeletedEventArgs.Exception%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.FormViewDeletedEventArgs.ExceptionHandled%2A> Eigenschaft, um anzugeben, dass die Ausnahme im Ereignishandler behandelt wurde.  
+  
+ [!code-aspx-csharp[FormViewDeletedEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewDeletedEventArgs/CS/formviewdeletedeventargscs.aspx#1)]
+ [!code-aspx-vb[FormViewDeletedEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewDeletedEventArgs/VB/formviewdeletedeventargsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FormViewDeletedEventArgs.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein sortiertes Wörterbuch mit Schlüsselfeld Name/Wert-Paare für den gelöschten Datensatz ab.</summary>
+        <value>Ein <see cref="T:System.Collections.Specialized.OrderedDictionary" /> Schlüsselfeld Name/Wert-Paare für den gelöschten Datensatz enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.FormViewDeletedEventArgs.Keys%2A> Eigenschaft enthält die Werte der Schlüsselfelder aufgeführt, die der <xref:System.Web.UI.WebControls.FormView.DataKeyNames%2A> Eigenschaft ein <xref:System.Web.UI.WebControls.FormView> Steuerelement. Verwenden der <xref:System.Web.UI.WebControls.FormViewDeletedEventArgs.Keys%2A> Eigenschaft, um den Zugriff auf die Werte der Schlüsselfelder (gemäß der <xref:System.Web.UI.WebControls.FormView.DataKeyNames%2A> Eigenschaft) für einen gelöschten Datensatz. Diese Werte können Sie z. B. eine gelöschte Datensätze protokollieren.  
+  
+> [!NOTE]
+>  Diese Eigenschaft enthält nur die Schlüsselfelder im angegebenen die <xref:System.Web.UI.WebControls.FormView.DataKeyNames%2A> Eigenschaft. Verwenden Sie die nichtschlüsselfelder für den Zugriff auf die <xref:System.Web.UI.WebControls.FormViewDeletedEventArgs.Values%2A> Eigenschaft.  
+  
+ Die <xref:System.Web.UI.WebControls.FormViewDeletedEventArgs.Keys%2A> -Eigenschaft gibt ein <xref:System.Collections.Specialized.OrderedDictionary> Objekt, implementiert die <xref:System.Collections.Specialized.IOrderedDictionary?displayProperty=nameWithType> Schnittstelle. Die <xref:System.Collections.Specialized.OrderedDictionary> Objekt enthält <xref:System.Collections.DictionaryEntry?displayProperty=nameWithType> Objekte, die die Schlüsselfeldern des gelöschten Datensatz darstellen. Verwenden Sie für den Zugriff auf den Feldnamen, die <xref:System.Collections.Specialized.OrderedDictionary.Keys%2A> Eigenschaft von der <xref:System.Collections.Specialized.OrderedDictionary> Objekt. Auf ähnliche Weise können Sie die Feldwerte zugreifen, mithilfe der <xref:System.Collections.Specialized.OrderedDictionary.Values%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Abzukürzen, können Sie auch den Indexer, der die <xref:System.Collections.Specialized.OrderedDictionary> Objekt, das Zugriff auf das Schlüsselfeld-Werte. Der Vorteil der Verwendung des Indexers ist, dass sie wichtige Feldwerte direkt zurückgibt. Datenquellen-Steuerelementen, die abhängig von der Reihenfolge der Felder (z. B. <xref:System.Web.UI.WebControls.AccessDataSource>) können nur über einen Index auf Schlüsselfeldwerte zugreifen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.FormViewDeletedEventArgs.Keys%2A> Eigenschaft, um die Werte der Schlüsselfelder für einen gelöschten Datensatz zugreifen.  
+  
+ [!code-aspx-csharp[FormViewDeletedEventArgsKeys#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewDeletedEventArgsKeys/CS/formviewdeletedeventargskeyscs.aspx#1)]
+ [!code-aspx-vb[FormViewDeletedEventArgsKeys#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewDeletedEventArgsKeys/VB/formviewdeletedeventargskeysvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary Values" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FormViewDeletedEventArgs.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Wörterbuch der Schlüsselfelder Name/Wert-Paare für den gelöschten Datensatz ab.</summary>
+        <value>Eine <see cref="T:System.Collections.Specialized.OrderedDictionary" /> , die ein Wörterbuch der Schlüsselfelder Name/Wert-Paare für den gelöschten Datensatz enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.FormViewDeletedEventArgs.Values%2A> Eigenschaft, um die Werte der Felder keine Schlüsselspalte auf einen gelöschten Datensatz zugreifen. Diese Werte können Sie z. B. eine gelöschte Datensätze protokollieren.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.FormViewDeletedEventArgs.Values%2A> Eigenschaft wird nur aufgefüllt, wenn in der Elementvorlage bidirektionale Bindungsausdrücke verwendet werden. Weitere Informationen zu Ausdrücken bidirektionale Bindung finden Sie unter [Binden an Datenbanken](http://msdn.microsoft.com/en-us/ab7b2846-975b-4057-a948-45527497c742).  
+  
+ Die <xref:System.Web.UI.WebControls.FormViewDeletedEventArgs.Values%2A> -Eigenschaft gibt ein <xref:System.Collections.Specialized.OrderedDictionary> Objekt, implementiert die <xref:System.Collections.Specialized.IOrderedDictionary?displayProperty=nameWithType> Schnittstelle. Die <xref:System.Collections.Specialized.OrderedDictionary> Objekt enthält <xref:System.Collections.DictionaryEntry?displayProperty=nameWithType> Objekte, die nicht-Schlüsselfelder der gelöschte Datensatz darstellen. Verwenden Sie für den Zugriff auf den Feldnamen, die <xref:System.Collections.Specialized.OrderedDictionary.Keys%2A> Eigenschaft von der <xref:System.Collections.Specialized.OrderedDictionary> Objekt. Auf ähnliche Weise können Sie die Feldwerte zugreifen, mithilfe der <xref:System.Collections.Specialized.OrderedDictionary.Values%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Abzukürzen, können Sie auch den Indexer, der die <xref:System.Collections.Specialized.OrderedDictionary> Objekt, das die Feldwerte zugreifen. Der Vorteil der Verwendung des Indexers ist, dass es Feldwerte direkt zurückgibt. Datenquellen-Steuerelementen, die abhängig von der Reihenfolge der Felder (z. B. <xref:System.Web.UI.WebControls.AccessDataSource>) können nur über einen Index auf Feldwerte zugreifen.  
+  
+ Diese Eigenschaft enthält keine Schlüsselfelder (gemäß der <xref:System.Web.UI.WebControls.FormView.DataKeyNames%2A> Eigenschaft) für den gelöschten Datensatz. Verwenden Sie die Schlüsselfelder für den Zugriff auf die <xref:System.Web.UI.WebControls.FormViewDeletedEventArgs.Keys%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.FormViewDeletedEventArgs.Values%2A> Eigenschaft, um die Werte der Felder keine Schlüsselspalte auf einen gelöschten Datensatz zugreifen.  
+  
+ [!code-aspx-csharp[FormViewDeletedEventArgsKeys#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewDeletedEventArgsKeys/CS/formviewdeletedeventargskeyscs.aspx#1)]
+ [!code-aspx-vb[FormViewDeletedEventArgsKeys#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewDeletedEventArgsKeys/VB/formviewdeletedeventargskeysvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

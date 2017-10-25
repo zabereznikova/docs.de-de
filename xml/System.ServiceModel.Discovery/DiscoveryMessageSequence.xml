@@ -1,0 +1,286 @@
+<Type Name="DiscoveryMessageSequence" FullName="System.ServiceModel.Discovery.DiscoveryMessageSequence">
+  <TypeSignature Language="C#" Value="public class DiscoveryMessageSequence : IComparable&lt;System.ServiceModel.Discovery.DiscoveryMessageSequence&gt;, IEquatable&lt;System.ServiceModel.Discovery.DiscoveryMessageSequence&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DiscoveryMessageSequence extends System.Object implements class System.IComparable`1&lt;class System.ServiceModel.Discovery.DiscoveryMessageSequence&gt;, class System.IEquatable`1&lt;class System.ServiceModel.Discovery.DiscoveryMessageSequence&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Discovery.DiscoveryMessageSequence" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IComparable&lt;System.ServiceModel.Discovery.DiscoveryMessageSequence&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.ServiceModel.Discovery.DiscoveryMessageSequence&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt den im WS-Discovery-Protokoll definierten AppSequence-Header dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse ermöglicht es, dass ein Ermittlungsmeldungsempfänger diese Meldungen auch dann in der richtigen Reihenfolge verarbeiten kann, wenn diese in der falschen Reihenfolge empfangen wurden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CanCompareTo">
+      <MemberSignature Language="C#" Value="public bool CanCompareTo (System.ServiceModel.Discovery.DiscoveryMessageSequence other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool CanCompareTo(class System.ServiceModel.Discovery.DiscoveryMessageSequence other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.DiscoveryMessageSequence.CanCompareTo(System.ServiceModel.Discovery.DiscoveryMessageSequence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.ServiceModel.Discovery.DiscoveryMessageSequence" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die zu vergleichende Suchmeldungssequenz.</param>
+        <summary>Ruft einen Wert ab, der angibt, ob die angegebene <see cref="T:System.ServiceModel.Discovery.DiscoveryMessageSequence" />-Instanz mit der aktuellen <see cref="T:System.ServiceModel.Discovery.DiscoveryMessageSequence" />-Instanz vergleichbar ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die zwei suchmeldungssequenzen vergleichbar sind. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareTo">
+      <MemberSignature Language="C#" Value="public int CompareTo (System.ServiceModel.Discovery.DiscoveryMessageSequence other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 CompareTo(class System.ServiceModel.Discovery.DiscoveryMessageSequence other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.DiscoveryMessageSequence.CompareTo(System.ServiceModel.Discovery.DiscoveryMessageSequence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.ServiceModel.Discovery.DiscoveryMessageSequence" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die zu vergleichende Suchmeldungssequenz.</param>
+        <summary>Vergleicht die angegebene <see cref="T:System.ServiceModel.Discovery.DiscoveryMessageSequence" />-Instanz mit der aktuellen <see cref="T:System.ServiceModel.Discovery.DiscoveryMessageSequence" />-Instanz.</summary>
+        <returns>0, wenn die zwei Suchmeldungssequenzen gleich sind; eine negative Zahl, wenn die Meldungsnummer von <paramref name="other" /> größer ist als die Meldungsnummer der aktuellen Ermittlungssequenz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.DiscoveryMessageSequence.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das zu vergleichende Objekt.</param>
+        <summary>Ermittelt, ob das angegebene Objekt mit der aktuellen <see cref="T:System.ServiceModel.Discovery.DiscoveryMessageSequence" />-Instanz identisch ist.</summary>
+        <returns>true, wenn das angegebene Objekt gleich der aktuellen Ermittlungsmeldungssequenz ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.ServiceModel.Discovery.DiscoveryMessageSequence other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class System.ServiceModel.Discovery.DiscoveryMessageSequence other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.DiscoveryMessageSequence.Equals(System.ServiceModel.Discovery.DiscoveryMessageSequence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.ServiceModel.Discovery.DiscoveryMessageSequence" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die zu vergleichende Suchmeldungssequenz.</param>
+        <summary>Ermittelt, ob die angegebene <see cref="T:System.ServiceModel.Discovery.DiscoveryMessageSequence" />-Instanz mit der aktuellen <see cref="T:System.ServiceModel.Discovery.DiscoveryMessageSequence" />-Instanz vergleichbar ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die zwei suchmeldungssequenzen vergleichbar sind. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.DiscoveryMessageSequence.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Hashcode für die aktuelle <see cref="T:System.ServiceModel.Discovery.DiscoveryMessageSequence" />-Instanz ab.</summary>
+        <returns>Ein Hashcodewert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceId">
+      <MemberSignature Language="C#" Value="public long InstanceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 InstanceId" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.DiscoveryMessageSequence.InstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Instanz-ID ab.</summary>
+        <value>Die Instanz-ID.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert wird jedes Mal inkrementiert, wenn der Dienst geschlossen wird oder den Status verliert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageNumber">
+      <MemberSignature Language="C#" Value="public long MessageNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MessageNumber" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.DiscoveryMessageSequence.MessageNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Meldungsnummer ab.</summary>
+        <value>Die Meldungsnummer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert identifiziert eine Meldung innerhalb des Kontexts eines Sequenz- und Instanzbezeichners.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.ServiceModel.Discovery.DiscoveryMessageSequence messageSequence1, System.ServiceModel.Discovery.DiscoveryMessageSequence messageSequence2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class System.ServiceModel.Discovery.DiscoveryMessageSequence messageSequence1, class System.ServiceModel.Discovery.DiscoveryMessageSequence messageSequence2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.DiscoveryMessageSequence.op_Equality(System.ServiceModel.Discovery.DiscoveryMessageSequence,System.ServiceModel.Discovery.DiscoveryMessageSequence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageSequence1" Type="System.ServiceModel.Discovery.DiscoveryMessageSequence" />
+        <Parameter Name="messageSequence2" Type="System.ServiceModel.Discovery.DiscoveryMessageSequence" />
+      </Parameters>
+      <Docs>
+        <param name="messageSequence1">Eine Ermittlungsmeldungssequenz.</param>
+        <param name="messageSequence2">Eine Ermittlungsmeldungssequenz.</param>
+        <summary>Ermittelt, ob zwei angegebene Instanzen der <see cref="T:System.ServiceModel.Discovery.DiscoveryMessageSequence" /> gleich sind.</summary>
+        <returns>
+          <see langword="true" />Wenn die zwei Discovery Sequenz Nachrichteninstanzen gleich sind. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.ServiceModel.Discovery.DiscoveryMessageSequence messageSequence1, System.ServiceModel.Discovery.DiscoveryMessageSequence messageSequence2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.ServiceModel.Discovery.DiscoveryMessageSequence messageSequence1, class System.ServiceModel.Discovery.DiscoveryMessageSequence messageSequence2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.DiscoveryMessageSequence.op_Inequality(System.ServiceModel.Discovery.DiscoveryMessageSequence,System.ServiceModel.Discovery.DiscoveryMessageSequence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageSequence1" Type="System.ServiceModel.Discovery.DiscoveryMessageSequence" />
+        <Parameter Name="messageSequence2" Type="System.ServiceModel.Discovery.DiscoveryMessageSequence" />
+      </Parameters>
+      <Docs>
+        <param name="messageSequence1">Eine Ermittlungsmeldungssequenz.</param>
+        <param name="messageSequence2">Eine Ermittlungsmeldungssequenz.</param>
+        <summary>Ermittelt, ob zwei angegebene Instanzen der <see cref="T:System.ServiceModel.Discovery.DiscoveryMessageSequence" /> ungleich sind.</summary>
+        <returns>
+          <see langword="true" />Wenn die zwei Discovery Sequenz Nachrichteninstanzen nicht gleich sind; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SequenceId">
+      <MemberSignature Language="C#" Value="public Uri SequenceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri SequenceId" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.DiscoveryMessageSequence.SequenceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Seqeunz-ID ab.</summary>
+        <value>Die Sequenz-ID.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert identifiziert eine Sequenz innerhalb des Kontexts eines Instanzbezeichners.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.DiscoveryMessageSequence.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Zeichenfolgendarstellung der <see cref="T:System.ServiceModel.Discovery.DiscoveryMessageSequence" />-Instanz.</summary>
+        <returns>Die Ermittlungsmeldungssequenz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

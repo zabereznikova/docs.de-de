@@ -1,0 +1,276 @@
+<Type Name="ScrollProperties" FullName="System.Windows.Forms.ScrollProperties">
+  <TypeSignature Language="C#" Value="public abstract class ScrollProperties" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ScrollProperties extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ScrollProperties" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Kapselt die Eigenschaften in Bezug auf das Durchführen eines Bildlaufs.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist eine abstrakte Klasse. Die eigentlichen abgeleiteten Klassen, die direkt von Windows Forms verwendet werden <xref:System.Windows.Forms.HScrollProperties> und <xref:System.Windows.Forms.VScrollProperties>, die von zurückgegeben werden die <xref:System.Windows.Forms.ScrollableControl.HorizontalScroll%2A> und <xref:System.Windows.Forms.ScrollableControl.VerticalScroll%2A> Eigenschaften des <xref:System.Windows.Forms.ScrollableControl>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ScrollProperties (System.Windows.Forms.ScrollableControl container);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.ScrollableControl container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollProperties.#ctor(System.Windows.Forms.ScrollableControl)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="container" Type="System.Windows.Forms.ScrollableControl" />
+      </Parameters>
+      <Docs>
+        <param name="container">Die <see cref="T:System.Windows.Forms.ScrollableControl" /> , dessen Bildlaufeigenschaften dieses Objekt beschreibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.ScrollProperties" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse kann nicht direkt instanziiert werden, da sie abstrakt ist. Sie müssen einer ihrer abgeleiteten Klassen instanziieren stattdessen, wie z. B. <xref:System.Windows.Forms.HScrollProperties> oder <xref:System.Windows.Forms.VScrollProperties>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollProperties.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob die Bildlaufleiste für den Container verwendet werden kann.</summary>
+        <value>
+          <see langword="true" />Wenn die Bildlaufleiste verwendet werden kann. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LargeChange">
+      <MemberSignature Language="C#" Value="public int LargeChange { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LargeChange" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollProperties.LargeChange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(10)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Abstand zum Verschieben einer Bildlaufleiste als Antwort auf einen großen Bildlauf-Befehl.</summary>
+        <value>Ein <see cref="T:System.Int32" /> beschreiben, wie weit in Pixel, um die Bildlaufleiste als Antwort auf eine umfangreiche Änderung zu verschieben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.ScrollProperties.LargeChange%2A>wird verwendet, um zu bestimmen, wie weit die Bildlaufleiste verschoben wird, als Antwort auf eine Anforderung zum Verschieben einer erheblichen Entfernung, z. B. wenn der Benutzer die Bild-auf oder Bild-ab-Taste drückt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <see cref="P:System.Windows.Forms.ScrollProperties.LargeChange" /> darf nicht kleiner 0 (Null) sein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Maximum">
+      <MemberSignature Language="C#" Value="public int Maximum { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Maximum" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollProperties.Maximum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(100)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Obergrenze des bildlauffähigen Bereichs fest.</summary>
+        <value>Eine <see cref="T:System.Int32" /> , die den maximalen Bereich der Schiebeleiste darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der neue Wert des <xref:System.Windows.Forms.ScrollProperties.Maximum%2A> ist kleiner als <xref:System.Windows.Forms.ScrollProperties.Minimum%2A>, klicken Sie dann <xref:System.Windows.Forms.ScrollProperties.Minimum%2A> gleich festgelegt ist <xref:System.Windows.Forms.ScrollProperties.Maximum%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Minimum">
+      <MemberSignature Language="C#" Value="public int Minimum { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Minimum" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollProperties.Minimum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Untergrenze des bildlauffähigen Bereichs.</summary>
+        <value>Ein <see cref="T:System.Int32" /> , das den unteren Bereich der Schiebeleiste darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der neue Wert des <xref:System.Windows.Forms.ScrollProperties.Minimum%2A> ist größer als <xref:System.Windows.Forms.ScrollProperties.Maximum%2A>, klicken Sie dann <xref:System.Windows.Forms.ScrollProperties.Maximum%2A> gleich festgelegt ist <xref:System.Windows.Forms.ScrollProperties.Minimum%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <see cref="P:System.Windows.Forms.ScrollProperties.Minimum" /> darf nicht kleiner 0 (Null) sein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentControl">
+      <MemberSignature Language="C#" Value="protected System.Windows.Forms.ScrollableControl ParentControl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ScrollableControl ParentControl" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollProperties.ParentControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ScrollableControl</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Steuerelement diese Scroll-Informationen gilt ab.</summary>
+        <value>Das Steuerelement diese Scroll-Informationen gilt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SmallChange">
+      <MemberSignature Language="C#" Value="public int SmallChange { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SmallChange" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollProperties.SmallChange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Abstand zum Verschieben einer Bildlaufleiste als Antwort auf einen kleinen Bildlauf-Befehl.</summary>
+        <value>Ein <see cref="T:System.Int32" /> darstellen, wie weit in Pixel, um die Bildlaufleiste verschieben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.ScrollProperties.SmallChange%2A>wird verwendet, wie weit die Bildlaufleiste als Reaktion auf das auf ein Pfeil mit einem Klick auf eine Bildlaufleisten verschieben zu berechnen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public int Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollProperties.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen numerischen Wert, der die aktuelle Position des Bildlauffelds Leiste darstellt.</summary>
+        <value>Eine <see cref="T:System.Int32" /> , die die Position des Bildlauffelds Leiste in Pixel darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="public bool Visible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visible" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollProperties.Visible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, ob die Bildlaufleiste vom Benutzer angezeigt werden kann.</summary>
+        <value>
+          <see langword="true" />Wenn sie gesehen werden kann; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

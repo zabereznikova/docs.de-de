@@ -1,0 +1,34 @@
+<Type Name="TypeValidationEventHandler" FullName="System.Windows.Forms.TypeValidationEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void TypeValidationEventHandler(object sender, TypeValidationEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TypeValidationEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TypeValidationEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Forms.TypeValidationEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Windows.Forms.TypeValidationEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode für die Behandlung der <see cref="E:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted" /> -Ereignis für die <see cref="T:System.Windows.Forms.MaskedTextBox" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> -Ereignis für die <xref:System.Windows.Forms.MaskedTextBox> Klasse ist ein optionales Ereignis, das ausgelöst wird, nur dann, wenn die <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> -Eigenschaft auf einen Typ nicht explizit festgelegt `null`.  
+  
+ In der Regel einen Handler für das <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> -Ereignis implementiert, um die Maske-spezifische und typspezifische überprüfungsverarbeitung ausführen. Im Gegensatz dazu allgemeine Validierung in der Regel erfolgt im Standard <xref:System.Windows.Forms.Control.Validating> Ereignisses definiert, der <xref:System.Windows.Forms.Control> Basisklasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

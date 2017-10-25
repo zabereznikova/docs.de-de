@@ -1,0 +1,301 @@
+<Type Name="ClientSponsor" FullName="System.Runtime.Remoting.Lifetime.ClientSponsor">
+  <TypeSignature Language="C#" Value="public class ClientSponsor : MarshalByRefObject, System.Runtime.Remoting.Lifetime.ISponsor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ClientSponsor extends System.MarshalByRefObject implements class System.Runtime.Remoting.Lifetime.ISponsor" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Lifetime.ClientSponsor" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.MarshalByRefObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Lifetime.ISponsor</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Standardimplementierung für eine Lebensdauer Sponsor-Klasse bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der aktuellen Implementierung kann verwendet werden, Objekte, die durch Angabe der erforderlichen Erneuerung Sponsor <xref:System.TimeSpan>.  
+  
+> [!NOTE]
+>  Diese Klasse stellt einen Linkaufruf und einer vererbungsanforderung auf Klassenebene. Ein <xref:System.Security.SecurityException> wird ausgelöst, wenn nicht für den unmittelbaren Aufrufer oder die abgeleitete Klasse Berechtigung für die Infrastruktur verfügt. Weitere Informationen zu sicherheitsforderungen, finden Sie unter [Verknüpfungsaufrufe](~/docs/framework/misc/link-demands.md) und [Vererbungsanforderungen](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die ClientSponsor-Klasse, um die Lebensdauer einer Klasse aktivierten Remoteobjekt verlängern.  
+  
+ [!code-cpp[ClientSponsor_Register#1](~/samples/snippets/cpp/VS_Snippets_Remoting/ClientSponsor_Register/CPP/clientsponsor_client.cpp#1)]
+ [!code-csharp[ClientSponsor_Register#1](~/samples/snippets/csharp/VS_Snippets_Remoting/ClientSponsor_Register/CS/clientsponsor_client.cs#1)]
+ [!code-vb[ClientSponsor_Register#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ClientSponsor_Register/VB/clientsponsor_client.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClientSponsor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Lifetime.ClientSponsor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Remoting.Lifetime.ClientSponsor" />-Klasse mit Standardwerten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardzeit, mit der die Lebensdauer eines Objekts mit Sponsor erhöht wird, wenn die Erneuerung auf 2 Minuten angefordert wird. Weitere Informationen zu den Erneuerungszeitraum, finden Sie unter der <xref:System.Runtime.Remoting.Lifetime.LifetimeServices.RenewOnCallTime%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClientSponsor (TimeSpan renewalTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.TimeSpan renewalTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Lifetime.ClientSponsor.#ctor(System.TimeSpan)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="renewalTime" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="renewalTime">Die <see cref="T:System.TimeSpan" /> , um die Lebensdauer der Objekte mit Sponsor erhöht, wenn Verlängerung angefordert wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.Remoting.Lifetime.ClientSponsor" /> Klasse mit der Erneuerungszeit des gesponserten-Objekts.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Lifetime.ClientSponsor.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>List-Objekte mit dem aktuellen registriert leeren <see cref="T:System.Runtime.Remoting.Lifetime.ClientSponsor" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[ClientSponsor_Register#2](~/samples/snippets/cpp/VS_Snippets_Remoting/ClientSponsor_Register/CPP/clientsponsor_client.cpp#2)]
+ [!code-csharp[ClientSponsor_Register#2](~/samples/snippets/csharp/VS_Snippets_Remoting/ClientSponsor_Register/CS/clientsponsor_client.cs#2)]
+ [!code-vb[ClientSponsor_Register#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ClientSponsor_Register/VB/clientsponsor_client.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~ClientSponsor ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Lifetime.ClientSponsor.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Ressourcen des aktuellen <see cref="T:System.Runtime.Remoting.Lifetime.ClientSponsor" /> vor der Garbage Collector freigegeben.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeLifetimeService">
+      <MemberSignature Language="C#" Value="public override object InitializeLifetimeService ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object InitializeLifetimeService() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Lifetime.ClientSponsor.InitializeLifetimeService" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Remoting.Lifetime.ClientSponsor" />, die eine Lease für das aktuelle Objekt.</summary>
+        <returns>Ein <see cref="T:System.Runtime.Remoting.Lifetime.ILease" /> für das aktuelle Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter <xref:System.MarshalByRefObject.InitializeLifetimeService%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ [!code-cpp[ClientSponsor_Register#2](~/samples/snippets/cpp/VS_Snippets_Remoting/ClientSponsor_Register/CPP/clientsponsor_client.cpp#2)]
+ [!code-csharp[ClientSponsor_Register#2](~/samples/snippets/csharp/VS_Snippets_Remoting/ClientSponsor_Register/CS/clientsponsor_client.cs#2)]
+ [!code-vb[ClientSponsor_Register#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ClientSponsor_Register/VB/clientsponsor_client.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Register">
+      <MemberSignature Language="C#" Value="public bool Register (MarshalByRefObject obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Register(class System.MarshalByRefObject obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Lifetime.ClientSponsor.Register(System.MarshalByRefObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.MarshalByRefObject" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das für Sponsorship mit registriert die <see cref="T:System.Runtime.Remoting.Lifetime.ClientSponsor" />.</param>
+        <summary>Registriert das angegebene <see cref="T:System.MarshalByRefObject" /> für Sponsorship.</summary>
+        <returns>
+          <see langword="true" />Bei erfolgreicher Registrierung andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[ClientSponsor_Register#2](~/samples/snippets/cpp/VS_Snippets_Remoting/ClientSponsor_Register/CPP/clientsponsor_client.cpp#2)]
+ [!code-csharp[ClientSponsor_Register#2](~/samples/snippets/csharp/VS_Snippets_Remoting/ClientSponsor_Register/CS/clientsponsor_client.cs#2)]
+ [!code-vb[ClientSponsor_Register#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ClientSponsor_Register/VB/clientsponsor_client.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Renewal">
+      <MemberSignature Language="C#" Value="public TimeSpan Renewal (System.Runtime.Remoting.Lifetime.ILease lease);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.TimeSpan Renewal(class System.Runtime.Remoting.Lifetime.ILease lease) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Lifetime.ClientSponsor.Renewal(System.Runtime.Remoting.Lifetime.ILease)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lease" Type="System.Runtime.Remoting.Lifetime.ILease" />
+      </Parameters>
+      <Docs>
+        <param name="lease">Die Lebensdauer-Leasedauer des Objekts, die Lease-Erneuerung erforderlich sind.</param>
+        <summary>Fordert einen Sponsoren Client die Lease für das angegebene Objekt zu.</summary>
+        <returns>Die zusätzlichen Leasedauer für das angegebene Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Remoting.Lifetime.ISponsor.Renewal%2A> Methode wird vom verteilten Garbage Collector Erneuerung der Lease für das angegebene Objekt aufgerufen.  
+  
+   
+  
+## Examples  
+ [!code-cpp[ClientSponsor_Register#2](~/samples/snippets/cpp/VS_Snippets_Remoting/ClientSponsor_Register/CPP/clientsponsor_client.cpp#2)]
+ [!code-csharp[ClientSponsor_Register#2](~/samples/snippets/csharp/VS_Snippets_Remoting/ClientSponsor_Register/CS/clientsponsor_client.cs#2)]
+ [!code-vb[ClientSponsor_Register#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ClientSponsor_Register/VB/clientsponsor_client.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenewalTime">
+      <MemberSignature Language="C#" Value="public TimeSpan RenewalTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan RenewalTime" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Lifetime.ClientSponsor.RenewalTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.TimeSpan" /> , um die Lebensdauer der Objekte mit Sponsor erhöht, wenn Verlängerung angefordert wird.</summary>
+        <value>Die <see cref="T:System.TimeSpan" /> , um die Lebensdauer der Objekte mit Sponsor erhöht, wenn Verlängerung angefordert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[ClientSponsor_Register#2](~/samples/snippets/cpp/VS_Snippets_Remoting/ClientSponsor_Register/CPP/clientsponsor_client.cpp#2)]
+ [!code-csharp[ClientSponsor_Register#2](~/samples/snippets/csharp/VS_Snippets_Remoting/ClientSponsor_Register/CS/clientsponsor_client.cs#2)]
+ [!code-vb[ClientSponsor_Register#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ClientSponsor_Register/VB/clientsponsor_client.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unregister">
+      <MemberSignature Language="C#" Value="public void Unregister (MarshalByRefObject obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Unregister(class System.MarshalByRefObject obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Lifetime.ClientSponsor.Unregister(System.MarshalByRefObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.MarshalByRefObject" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das Aufheben der Registrierung.</param>
+        <summary>Hebt die Registrierung der angegebenen <see cref="T:System.MarshalByRefObject" /> aus der Liste der Objekte, die vom aktuellen gesponserten <see cref="T:System.Runtime.Remoting.Lifetime.ClientSponsor" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[ClientSponsor_Register#2](~/samples/snippets/cpp/VS_Snippets_Remoting/ClientSponsor_Register/CPP/clientsponsor_client.cpp#2)]
+ [!code-csharp[ClientSponsor_Register#2](~/samples/snippets/csharp/VS_Snippets_Remoting/ClientSponsor_Register/CS/clientsponsor_client.cs#2)]
+ [!code-vb[ClientSponsor_Register#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ClientSponsor_Register/VB/clientsponsor_client.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

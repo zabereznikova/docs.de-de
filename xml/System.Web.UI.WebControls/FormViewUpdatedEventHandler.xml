@@ -1,0 +1,47 @@
+<Type Name="FormViewUpdatedEventHandler" FullName="System.Web.UI.WebControls.FormViewUpdatedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void FormViewUpdatedEventHandler(object sender, FormViewUpdatedEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FormViewUpdatedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.FormViewUpdatedEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Web.UI.WebControls.FormViewUpdatedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Web.UI.WebControls.FormViewUpdatedEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode, verarbeitet die <see cref="E:System.Web.UI.WebControls.FormView.ItemUpdated" /> -Ereignis für ein <see cref="T:System.Web.UI.WebControls.FormView" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.FormView> -Steuerelement löst die <xref:System.Web.UI.WebControls.FormView.ItemUpdated> Ereignis aus, wenn eine Schaltfläche "Aktualisieren" (eine Schaltfläche mit seiner `CommandName` -Eigenschaft auf "Update" festgelegt) innerhalb des Steuerelements geklickt wird, aber nachdem die <xref:System.Web.UI.WebControls.FormView> Steuerelement aktualisiert den Datensatz. Dadurch können Sie eine Ereignisbehandlungsmethode bereitstellen, die eine benutzerdefinierte Routine ausführt, z. B. Überprüfen der Ergebnisse einer Update-Vorgang aus, wenn dieses Ereignis tritt auf.  
+  
+ Beim Erstellen eines <xref:System.Web.UI.WebControls.FormViewUpdatedEventHandler>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen über Delegaten für Ereignishandler finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie programmgesteuert hinzufügen einer <xref:System.Web.UI.WebControls.FormViewUpdatedEventHandler> zum Delegieren der <xref:System.Web.UI.WebControls.FormView.ItemUpdated> -Ereignis für eine <xref:System.Web.UI.WebControls.FormView> Steuerelement.  
+  
+ [!code-aspx-csharp[FormViewUpdatedEventHandler#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewUpdatedEventHandler/CS/formviewupdatedeventhandlercs.aspx#1)]
+ [!code-aspx-vb[FormViewUpdatedEventHandler#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewUpdatedEventHandler/VB/formviewupdatedeventhandlervb.aspx#1)]  
+  
+ Im folgenden Beispiel wird veranschaulicht, wie deklarativ hinzufügen eine <xref:System.Web.UI.WebControls.FormViewUpdatedEventHandler> zum Delegieren der <xref:System.Web.UI.WebControls.FormView.ItemUpdated> -Ereignis für ein <xref:System.Web.UI.WebControls.FormView> Steuerelement.  
+  
+ [!code-aspx-csharp[FormViewUpdatedEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewUpdatedEventArgs/CS/formviewupdatedeventargscs.aspx#1)]
+ [!code-aspx-vb[FormViewUpdatedEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewUpdatedEventArgs/VB/formviewupdatedeventargsvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

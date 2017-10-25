@@ -1,0 +1,6 @@
+<Namespace Name="System.Reflection.Metadata">
+  <Docs>
+    <summary>Die <see cref="N:System.Reflection.Metadata" /> -Namespace enthält Typen, die Metadateninformationen über Assemblys, Module, Member, Parameter und andere Entitäten in verwaltetem Code darstellen.</summary>
+    <remarks></remarks>
+  </Docs>
+</Namespace>

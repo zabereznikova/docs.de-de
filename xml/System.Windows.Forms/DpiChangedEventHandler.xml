@@ -1,0 +1,25 @@
+<Type Name="DpiChangedEventHandler" FullName="System.Windows.Forms.DpiChangedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void DpiChangedEventHandler(object sender, DpiChangedEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DpiChangedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DpiChangedEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Forms.DpiChangedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Windows.Forms.DpiChangedEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode dar, die ein DpiChanged-Ereignis eines Formulars oder Steuerelements behandelt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

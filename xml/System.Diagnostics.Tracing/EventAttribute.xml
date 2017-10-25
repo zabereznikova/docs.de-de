@@ -1,0 +1,510 @@
+<Type Name="EventAttribute" FullName="System.Diagnostics.Tracing.EventAttribute">
+  <TypeSignature Language="C#" Value="public sealed class EventAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EventAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Tracing.EventAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt zusätzliche Ereignisschema-Informationen für ein Ereignis an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie dieses Attribut anwenden, um eine ETW-Ereignismethode definiert, die auf eine <xref:System.Diagnostics.Tracing.EventSource>-abgeleitete Klasse, rufen Sie die <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> Methode für die Basisklasse, übergeben die Ereignis-ID, gefolgt von den gleichen Argumenten, wie der definierte Methode übergeben wird. Befolgen Sie die Muster in den folgenden Beispielen gezeigt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Diagnostics.Tracing.EventAttribute> Klasse, um eine Vielzahl von Ereignissen definieren. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.Tracing.EventSource> Klasse.  
+  
+ [!code-csharp[ETWTrace#5](~/samples/snippets/csharp/VS_Snippets_CLR/etwtrace/cs/program.cs#5)]
+ [!code-vb[ETWTrace#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/etwtrace/vb/program.vb#5)]  
+  
+ [!code-csharp[ETWTrace#6](~/samples/snippets/csharp/VS_Snippets_CLR/etwtrace/cs/program.cs#6)]
+ [!code-vb[ETWTrace#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/etwtrace/vb/program.vb#6)]  
+  
+ [!code-csharp[ETWTrace#7](~/samples/snippets/csharp/VS_Snippets_CLR/etwtrace/cs/program.cs#7)]
+ [!code-vb[ETWTrace#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/etwtrace/vb/program.vb#7)]  
+  
+ [!code-csharp[ETWTrace#8](~/samples/snippets/csharp/VS_Snippets_CLR/etwtrace/cs/program.cs#8)]
+ [!code-vb[ETWTrace#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/etwtrace/vb/program.vb#8)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventAttribute (int eventId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 eventId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventAttribute.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="eventId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="eventId">Der Ereignisbezeichner für das Ereignis.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Diagnostics.Tracing.EventAttribute" />-Klasse mit den angegebenen Ereignisbezeichneranbietern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Diagnostics.Tracing.EventAttribute.%23ctor%2A> Konstruktor, um Ereignisse anzugeben. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.Tracing.EventSource> Klasse.  
+  
+ [!code-csharp[ETWTrace#1](~/samples/snippets/csharp/VS_Snippets_CLR/etwtrace/cs/program.cs#1)]
+ [!code-vb[ETWTrace#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/etwtrace/vb/program.vb#1)]  
+  
+ [!code-csharp[ETWTrace#2](~/samples/snippets/csharp/VS_Snippets_CLR/etwtrace/cs/program.cs#2)]
+ [!code-vb[ETWTrace#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/etwtrace/vb/program.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActivityOptions">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.Tracing.EventActivityOptions ActivityOptions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.Tracing.EventActivityOptions ActivityOptions" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Tracing.EventAttribute.ActivityOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Tracing.EventActivityOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das Verhalten der Ereignisse starten und Beenden einer Aktivität. Eine Aktivität ist die Region Zeit in einer app zwischen den Start- und Stop.</summary>
+        <value>Gibt <see cref="T:System.Diagnostics.Tracing.EventActivityOptions" />zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Channel">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.Tracing.EventChannel Channel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.Tracing.EventChannel Channel" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Tracing.EventAttribute.Channel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Tracing.EventChannel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein zusätzliches Ereignisprotokoll ab, in das das Ereignis geschrieben werden soll, oder legt dieses fest.</summary>
+        <value>Ein zusätzliches Ereignisprotokoll, in das das Ereignis geschrieben werden soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventId">
+      <MemberSignature Language="C#" Value="public int EventId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EventId" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Tracing.EventAttribute.EventId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Bezeichner des Ereignisses ab oder legt ihn fest.</summary>
+        <value>Der Ereignisbezeichner. Dieser Wert muss zwischen 0 und 65535 liegen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Diagnostics.Tracing.EventAttribute.EventId%2A>muss größer als 0 oder kleiner als 65535 sein oder es treten bei einer Ablaufverfolgung. Wenn Fehler auftreten, können Sie weitere Informationen zur Quelle des Fehlers abrufen, durch Überprüfen der Ausgabedatenstrom des Debuggers, wenn Sie einen Debugger an den Prozess, der Auslösen von Ereignissen angefügt haben. Sie können auch in den Stream ETW-Ereignis gemeldeten Fehler suchen, wenn Sie einen ETW-Listener für die Ereignisquelle verfügen, in dem der Fehler auftritt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keywords">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.Tracing.EventKeywords Keywords { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.Tracing.EventKeywords Keywords" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Tracing.EventAttribute.Keywords" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Tracing.EventKeywords</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Schlüsselwörter für das Ereignis ab oder legt diese fest.</summary>
+        <value>Eine bitweise Kombination der Enumerationswerte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Diagnostics.Tracing.EventAttribute.Keywords%2A> Eigenschaft, um die Ereignis-Schlüsselwörter definieren. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.Tracing.EventSource> Klasse.  
+  
+ [!code-csharp[ETWTrace#3](~/samples/snippets/csharp/VS_Snippets_CLR/etwtrace/cs/program.cs#3)]
+ [!code-vb[ETWTrace#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/etwtrace/vb/program.vb#3)]  
+  
+ [!code-csharp[ETWTrace#5](~/samples/snippets/csharp/VS_Snippets_CLR/etwtrace/cs/program.cs#5)]
+ [!code-vb[ETWTrace#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/etwtrace/vb/program.vb#5)]  
+  
+ [!code-csharp[ETWTrace#6](~/samples/snippets/csharp/VS_Snippets_CLR/etwtrace/cs/program.cs#6)]
+ [!code-vb[ETWTrace#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/etwtrace/vb/program.vb#6)]  
+  
+ [!code-csharp[ETWTrace#7](~/samples/snippets/csharp/VS_Snippets_CLR/etwtrace/cs/program.cs#7)]
+ [!code-vb[ETWTrace#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/etwtrace/vb/program.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Level">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.Tracing.EventLevel Level { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.Tracing.EventLevel Level" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Tracing.EventAttribute.Level" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Tracing.EventLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Grad des Ereignisses ab oder legt ihn fest.</summary>
+        <value>Einer der Enumerationswerte, der den Grad des Ereignisses angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Diagnostics.Tracing.EventAttribute.Level%2A> -Eigenschaft Ereignisebenen an. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.Tracing.EventSource> Klasse.  
+  
+ [!code-csharp[ETWTrace#5](~/samples/snippets/csharp/VS_Snippets_CLR/etwtrace/cs/program.cs#5)]
+ [!code-vb[ETWTrace#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/etwtrace/vb/program.vb#5)]  
+  
+ [!code-csharp[ETWTrace#6](~/samples/snippets/csharp/VS_Snippets_CLR/etwtrace/cs/program.cs#6)]
+ [!code-vb[ETWTrace#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/etwtrace/vb/program.vb#6)]  
+  
+ [!code-csharp[ETWTrace#11](~/samples/snippets/csharp/VS_Snippets_CLR/etwtrace/cs/program.cs#11)]
+ [!code-vb[ETWTrace#11](~/samples/snippets/visualbasic/VS_Snippets_CLR/etwtrace/vb/program.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public string Message { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Tracing.EventAttribute.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Meldung für das Ereignis ab oder legt sie fest.</summary>
+        <value>Die Meldung für das Ereignis.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können .NET Framework Ersetzung Standardoperatoren (z. B. \ {1\}) in der Zeichenfolge verwenden). Sie werden durch die Zeichenfolgendarstellung des entsprechenden Teils der Ereignisnutzlast ersetzt.  
+  
+```  
+[Event(1, Message = "Application Falure: {0}", Level = EventLevel.Error, Keywords = Keywords.Diagnostic)]  
+        public void Failure(string message) { WriteEvent(1, message); }  
+  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Diagnostics.Tracing.EventAttribute.Message%2A> -Eigenschaft ereignismeldungen an. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.Tracing.EventSource> Klasse.  
+  
+ [!code-csharp[ETWTrace#5](~/samples/snippets/csharp/VS_Snippets_CLR/etwtrace/cs/program.cs#5)]
+ [!code-vb[ETWTrace#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/etwtrace/vb/program.vb#5)]  
+  
+ [!code-csharp[ETWTrace#6](~/samples/snippets/csharp/VS_Snippets_CLR/etwtrace/cs/program.cs#6)]
+ [!code-vb[ETWTrace#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/etwtrace/vb/program.vb#6)]  
+  
+ [!code-csharp[ETWTrace#7](~/samples/snippets/csharp/VS_Snippets_CLR/etwtrace/cs/program.cs#7)]
+ [!code-vb[ETWTrace#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/etwtrace/vb/program.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Opcode">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.Tracing.EventOpcode Opcode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.Tracing.EventOpcode Opcode" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Tracing.EventAttribute.Opcode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Tracing.EventOpcode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Vorgangscode zu dem Ereignis ab oder legt diesen fest.</summary>
+        <value>Einer der Enumerationswerte, der den Vorgangscode angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Diagnostics.Tracing.EventAttribute.Opcode%2A> -Eigenschaft Operationscodes an. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.Tracing.EventSource> Klasse.  
+  
+ [!code-csharp[ETWTrace#8](~/samples/snippets/csharp/VS_Snippets_CLR/etwtrace/cs/program.cs#8)]
+ [!code-vb[ETWTrace#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/etwtrace/vb/program.vb#8)]  
+  
+ [!code-csharp[ETWTrace#9](~/samples/snippets/csharp/VS_Snippets_CLR/etwtrace/cs/program.cs#9)]
+ [!code-vb[ETWTrace#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/etwtrace/vb/program.vb#9)]  
+  
+ [!code-csharp[ETWTrace#10](~/samples/snippets/csharp/VS_Snippets_CLR/etwtrace/cs/program.cs#10)]
+ [!code-vb[ETWTrace#10](~/samples/snippets/visualbasic/VS_Snippets_CLR/etwtrace/vb/program.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tags">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.Tracing.EventTags Tags { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.Tracing.EventTags Tags" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Tracing.EventAttribute.Tags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Tracing.EventTags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt und definiert die <see cref="T:System.Diagnostics.Tracing.EventTags" /> Wert für diesen <see cref="T:System.Diagnostics.Tracing.EventAttribute" /> Objekt. Ereignistag ist ein benutzerdefiniertes-Wert, der über übergeben wird, wenn das Ereignis protokolliert wird.</summary>
+        <value>Gibt die <see cref="T:System.Diagnostics.Tracing.EventTags" /> Wert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Task">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.Tracing.EventTask Task { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.Tracing.EventTask Task" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Tracing.EventAttribute.Task" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Tracing.EventTask</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Übernimmt oder bestimmt die Aufgabe für das Ereignis.</summary>
+        <value>Die Aufgabe für das Ereignis.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Diagnostics.Tracing.EventAttribute.Task%2A> Eigenschaft Ereignis definieren. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.Tracing.EventSource> Klasse.  
+  
+ [!code-csharp[ETWTrace#4](~/samples/snippets/csharp/VS_Snippets_CLR/etwtrace/cs/program.cs#4)]
+ [!code-vb[ETWTrace#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/etwtrace/vb/program.vb#4)]  
+  
+ [!code-csharp[ETWTrace#8](~/samples/snippets/csharp/VS_Snippets_CLR/etwtrace/cs/program.cs#8)]
+ [!code-vb[ETWTrace#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/etwtrace/vb/program.vb#8)]  
+  
+ [!code-csharp[ETWTrace#9](~/samples/snippets/csharp/VS_Snippets_CLR/etwtrace/cs/program.cs#9)]
+ [!code-vb[ETWTrace#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/etwtrace/vb/program.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public byte Version { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Version" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Tracing.EventAttribute.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Übernimmt oder bestimmt die Version des Ereignisses.</summary>
+        <value>Die Version des Ereignisses.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

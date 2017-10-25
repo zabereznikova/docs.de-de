@@ -1,0 +1,153 @@
+<Type Name="AttributeMetadata" FullName="System.DirectoryServices.ActiveDirectory.AttributeMetadata">
+  <TypeSignature Language="C#" Value="public class AttributeMetadata" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AttributeMetadata extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ActiveDirectory.AttributeMetadata" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.DirectoryServices.ActiveDirectory.AttributeMetadata" /> Klasse wird verwendet, um die Replikationsmetadaten für ein Active Directory-Domänendienste-Attribut enthalten.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="LastOriginatingChangeTime">
+      <MemberSignature Language="C#" Value="public DateTime LastOriginatingChangeTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime LastOriginatingChangeTime" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.AttributeMetadata.LastOriginatingChangeTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zeitpunkt die letzte Änderung des ursprüngliche mit diesem Attribut erfolgte.</summary>
+        <value>Ein <see cref="T:System.DateTime" /> Objekt, das letzte ursprünglichen enthält die Zeit für dieses Attribut ändern.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastOriginatingInvocationId">
+      <MemberSignature Language="C#" Value="public Guid LastOriginatingInvocationId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid LastOriginatingInvocationId" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.AttributeMetadata.LastOriginatingInvocationId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Aufruf-ID des Servers, auf dem die letzte Änderung, mit diesem Attribut vorgenommen wurde, ab.</summary>
+        <value>Ein <see cref="T:System.Guid" /> -Struktur, die den Bezeichner enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalChangeUsn">
+      <MemberSignature Language="C#" Value="public long LocalChangeUsn { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 LocalChangeUsn" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.AttributeMetadata.LocalChangeUsn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Updatesequenznummer (USN) auf dem Zielserver, an dem die letzte Änderung dieses Attribut angewendet wurde.</summary>
+        <value>Ein <see cref="T:System.Int64" /> Wert, der die USN enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.AttributeMetadata.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Attributs ab.</summary>
+        <value>Der LDAP-Anzeigename des Attributs.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OriginatingChangeUsn">
+      <MemberSignature Language="C#" Value="public long OriginatingChangeUsn { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 OriginatingChangeUsn" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.AttributeMetadata.OriginatingChangeUsn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Updatesequenznummer (USN) auf dem ursprünglichen Server, an dem dieses Attribut die letzte Änderung vorgenommen wurde.</summary>
+        <value>Ein <see cref="T:System.Int64" /> Wert, der die USN enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OriginatingServer">
+      <MemberSignature Language="C#" Value="public string OriginatingServer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OriginatingServer" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.AttributeMetadata.OriginatingServer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des ursprünglichen Servers ab.</summary>
+        <value>Der distinguished Name des ursprünglichen Servers.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public int Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Version" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.AttributeMetadata.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Versionsnummer dieses Attributs ab.</summary>
+        <value>Die Versionsnummer dieses Attributs. Jede ursprünglichen Änderung des Attributs wird dieser Wert um eins erhöht.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

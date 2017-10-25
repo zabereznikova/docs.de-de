@@ -1,0 +1,217 @@
+<Type Name="ActivityPreviewDesignerTheme" FullName="System.Workflow.ComponentModel.Design.ActivityPreviewDesignerTheme">
+  <TypeSignature Language="C#" Value="public class ActivityPreviewDesignerTheme : System.Workflow.ComponentModel.Design.CompositeDesignerTheme" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ActivityPreviewDesignerTheme extends System.Workflow.ComponentModel.Design.CompositeDesignerTheme" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesignerTheme" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.ComponentModel.Design.CompositeDesignerTheme</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Designeinstellungen für Aktivitätsdesigner bereit, die einen Vorschaumodus auf der Workflowentwurfsoberfläche verwenden. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Aktivitätsdesigner, die mit einem Vorschaumodus auf der Workflowentwurfsoberfläche arbeiten, können speziell für den Vorschauanzeigebereich geltende Designeinstellungen verwenden. Das <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesignerTheme> enthält die Eigenschaften, die die spezifischen Einstellungen für den Vorschaubereich bereitstellen.  
+  
+ Aktivitäten, die einen Vorschaumodus bereitstellen, wenn sie der Workflowentwurfsoberfläche hinzugefügt werden, enthalten <xref:System.Workflow.Activities.ConditionedActivityGroup> und <xref:System.Workflow.Activities.EventHandlersActivity>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityPreviewDesignerTheme (System.Workflow.ComponentModel.Design.WorkflowTheme theme);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Workflow.ComponentModel.Design.WorkflowTheme theme) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityPreviewDesignerTheme.#ctor(System.Workflow.ComponentModel.Design.WorkflowTheme)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="theme" Type="System.Workflow.ComponentModel.Design.WorkflowTheme" />
+      </Parameters>
+      <Docs>
+        <param name="theme">Das <see cref="T:System.Workflow.ComponentModel.Design.WorkflowTheme" />, das <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesignerTheme" /> zugeordnet ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesignerTheme" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityPreviewDesignerTheme.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesignerTheme" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityPreviewDesignerTheme.Initialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt alle zusätzlichen Initialisierungsaufgaben für <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesignerTheme" /> aus, die nicht von <see cref="M:System.Workflow.ComponentModel.Design.ActivityPreviewDesignerTheme.#ctor(System.Workflow.ComponentModel.Design.WorkflowTheme)" /> ausgeführt werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Workflow.ComponentModel.Design.AmbientTheme.UseOperatingSystemSettings%2A> auf `true` gesetzt ist, legt <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesignerTheme.Initialize%2A> alle <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesignerTheme>-Eigenschaften entsprechend den Stileinstellungen des Betriebssystems fest, auf dem Windows Workflow Foundation installiert ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAmbientPropertyChanged">
+      <MemberSignature Language="C#" Value="public override void OnAmbientPropertyChanged (System.Workflow.ComponentModel.Design.AmbientProperty ambientProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnAmbientPropertyChanged(valuetype System.Workflow.ComponentModel.Design.AmbientProperty ambientProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityPreviewDesignerTheme.OnAmbientPropertyChanged(System.Workflow.ComponentModel.Design.AmbientProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ambientProperty" Type="System.Workflow.ComponentModel.Design.AmbientProperty" />
+      </Parameters>
+      <Docs>
+        <param name="ambientProperty">Der <see cref="T:System.Workflow.ComponentModel.Design.AmbientProperty" />-Enumerationswert, den das Aktivitätsvorschaudesigner-Design jetzt verwenden soll.</param>
+        <summary>Benachrichtigt <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesignerTheme" />, dass sich die Ambient-Eigenschafteneinstellungen für den Designer geändert haben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesignerTheme.OnAmbientPropertyChanged%2A> überprüft den an `ambientProperty` übergebenen Wert und wendet die entsprechenden Ambient-Designeinstellungen basierend auf diesem Wert an. Wenn der Wert <xref:System.Workflow.ComponentModel.Design.AmbientProperty.DesignerSize> lautet, werden die vom Designer bereitgestellten Ambient-Stile angewendet. Lautet der Wert <xref:System.Workflow.ComponentModel.Design.AmbientProperty.OperatingSystemSetting>, werden die vom Betriebssystem bereitgestellten Ambient-Stile angewendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewBackColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color PreviewBackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color PreviewBackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityPreviewDesignerTheme.PreviewBackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor(typeof(System.Workflow.ComponentModel.Design.ColorPickerEditor), typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Workflow.ComponentModel.Design.ColorPickerConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(14)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Farbsatz ab, der dem Hintergrund des Aktivitätsvorschauabschnitts des Designers zugeordnet werden soll, oder legt den Farbsatz fest.</summary>
+        <value>Die <see cref="T:System.Drawing.Color" />, die dem Hintergrund des Aktivitätsvorschauabschnitts des Designers zugeordnet werden soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewBorderColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color PreviewBorderColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color PreviewBorderColor" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityPreviewDesignerTheme.PreviewBorderColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor(typeof(System.Workflow.ComponentModel.Design.ColorPickerEditor), typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Workflow.ComponentModel.Design.ColorPickerConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(15)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Farbsatz ab, der dem Rahmen des Aktivitätsvorschauabschnitts des Designers zugeordnet werden soll, oder legt den Farbsatz fest.</summary>
+        <value>Die <see cref="T:System.Drawing.Color" />, die dem Rahmen des Aktivitätsvorschauabschnitts des Designers zugeordnet werden soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewForeColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color PreviewForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color PreviewForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityPreviewDesignerTheme.PreviewForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor(typeof(System.Workflow.ComponentModel.Design.ColorPickerEditor), typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Workflow.ComponentModel.Design.ColorPickerConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(13)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Farbsatz ab, der dem Vordergrund des Aktivitätsvorschauabschnitts des Designers zugeordnet werden soll, oder legt den Farbsatz fest.</summary>
+        <value>Die <see cref="T:System.Drawing.Color" />, die dem Vordergrund des Aktivitätsvorschauabschnitts des Designers zugeordnet werden soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

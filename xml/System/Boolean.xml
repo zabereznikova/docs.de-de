@@ -1,0 +1,1435 @@
+<Type Name="Boolean" FullName="System.Boolean">
+  <TypeSignature Language="C#" Value="public struct Boolean : IComparable, IComparable&lt;bool&gt;, IConvertible, IEquatable&lt;bool&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit bool extends System.ValueType implements class System.IComparable, class System.IComparable`1&lt;bool&gt;, class System.IConvertible, class System.IEquatable`1&lt;bool&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Boolean" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IComparable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IComparable&lt;System.Boolean&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IConvertible</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Boolean&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen booleschen Wert dar (<see langword="true" /> oder <see langword="false" />).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Boolean> Instanzen können eine der beiden Werte aufweisen: `true`, oder `false`.  
+  
+ Die <xref:System.Boolean> Struktur bietet Methoden, die die folgenden Aufgaben unterstützen:  
+  
+-   Konvertieren von booleschen Werten in Zeichenfolgen:<xref:System.Boolean.ToString%2A>  
+  
+-   Analysieren von Zeichenfolgen, um sie in boolesche Werte konvertieren: <xref:System.Boolean.Parse%2A> und<xref:System.Boolean.TryParse%2A>  
+  
+-   Vergleichen von Werten: <xref:System.Boolean.CompareTo%2A> und<xref:System.Boolean.Equals%2A>  
+  
+ Den folgenden Abschnitten werden diese Aufgaben und anderen Nutzungsdetails:  
+  
+ [Formatieren von booleschen Werten](#Formatting)   
+ [Konvertieren von booleschen Werten](#Converting)   
+ [Analysieren von booleschen Werten](#Parsing)   
+ [Vergleichen von booleschen Werten](#Comparing)   
+ [Arbeiten mit booleschen Werten als binäre Werte](#Binary)   
+ [Ausführen von Vorgängen mit booleschen Werten](#Operations)   
+ [Boolesche Werte und Interop](#Interop)  
+  
+<a name="Formatting"></a>   
+## <a name="formatting-boolean-values"></a>Formatieren von booleschen Werten  
+ Die angegebene Zeichenfolgendarstellung einer <xref:System.Boolean> ist entweder "True" für eine `true` Wert oder "False" für eine `false` Wert. Die angegebene Zeichenfolgendarstellung einer <xref:System.Boolean> Wert wird durch die schreibgeschützte definiert <xref:System.Boolean.TrueString> und <xref:System.Boolean.FalseString> Felder.  
+  
+ Verwenden Sie die <xref:System.Boolean.ToString%2A> Methode, um boolesche Werte in Zeichenfolgen zu konvertieren. Boolean-Struktur enthält zwei <xref:System.Boolean.ToString%2A> Überladungen: die parameterlose <xref:System.Boolean.ToString> Methode und die <xref:System.Boolean.ToString%28System.IFormatProvider%29> -Methode, die einen Parameter enthält, die Formatierung steuert. Da dieser Parameter ignoriert wird, erzeugen die zwei Überladungen jedoch identische Zeichenfolgen. Die <xref:System.Boolean.ToString%28System.IFormatProvider%29> Methode nicht kulturabhängige Formatierung unterstützt.  
+  
+ Das folgende Beispiel veranschaulicht die Formatierung mit der <xref:System.Boolean.ToString%2A> Methode. Hinweis, der im Beispiel wird die [kombinierte Formatierung](~/docs/standard/base-types/composite-formatting.md) Funktion, sodass der <xref:System.Boolean.ToString%2A> Methode wird implizit aufgerufen.  
+  
+ [!code-csharp[System.Boolean.Structure#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.boolean.structure/cs/tostring1.cs#3)]
+ [!code-vb[System.Boolean.Structure#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.boolean.structure/vb/tostring1.vb#3)]  
+  
+ Da die <xref:System.Boolean> Struktur kann nur zwei Werte aufweisen, es ist einfach, benutzerdefinierte Formatierung hinzufügen. Für einfache benutzerdefinierte Formatierung in die andere Zeichenfolge Literale für "True" und "False" ersetzt werden, können Sie eine beliebige bedingten Auswertung-Funktion, die von Ihrer Sprache unterstützt, z. B. die [Bedingungsoperator](~/docs/csharp/language-reference/operators/conditional-operator.md) in c# oder der [Wenn Operator](~/docs/visual-basic/language-reference/operators/if-operator.md) in Visual Basic. Im folgenden Beispiel wird diese Technik zum Formatieren <xref:System.Boolean> Werte als "Yes" und "No" anstatt "True" und "False".  
+  
+ [!code-csharp[System.Boolean.Structure#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.boolean.structure/cs/tostring2.cs#4)]
+ [!code-vb[System.Boolean.Structure#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.boolean.structure/vb/tostring2.vb#4)]  
+  
+ Für komplexere benutzerdefinierte Formatierung Dienstvorgänge, einschließlich kulturabhängige Formatierung, rufen Sie die <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> Methode, und geben Sie eine <xref:System.ICustomFormatter> Implementierung. Das folgende Beispiel implementiert die <xref:System.ICustomFormatter> und <xref:System.IFormatProvider> Schnittstellen, um kulturabhängige booleschen Zeichenfolgen für Englisch (Vereinigte Staaten), Französisch (Frankreich) und Russisch (Russische Föderation) Kulturen bereitzustellen.  
+  
+ [!code-csharp[System.Boolean.Structure#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.boolean.structure/cs/format3.cs#5)]
+ [!code-vb[System.Boolean.Structure#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.boolean.structure/vb/format3.vb#5)]  
+  
+ Optional können Sie [Ressourcendateien](http://msdn.microsoft.com/library/8ad495d4-2941-40cf-bf64-e82e85825890) kulturspezifische booleschen Zeichenfolgen zu definieren.  
+  
+<a name="Converting"></a>   
+## <a name="converting-to-and-from-boolean-values"></a>Konvertieren von booleschen Werten  
+ Die <xref:System.Boolean> Struktur implementiert die <xref:System.IConvertible> Schnittstelle.  Folglich können Sie die <xref:System.Convert> Klasse zum Durchführen von Konvertierungen zwischen einer <xref:System.Boolean> Wert und alle anderen primitiven Typen in .NET Framework, oder Sie können Aufrufen der <xref:System.Boolean> -Struktur explizite Implementierungen. Allerdings Konvertierungen zwischen einer <xref:System.Boolean> und die folgenden Typen werden nicht unterstützt, damit die entsprechenden Konvertierungsmethoden Auslösen einer <xref:System.InvalidCastException> Ausnahme:  
+  
+-   Konvertierung zwischen <xref:System.Boolean> und <xref:System.Char> (die <xref:System.Convert.ToBoolean%28System.Char%29?displayProperty=nameWithType> und <xref:System.Convert.ToChar%28System.Boolean%29?displayProperty=nameWithType> Methoden)  
+  
+-   Konvertierung zwischen <xref:System.Boolean> und <xref:System.DateTime> (die <xref:System.Convert.ToBoolean%28System.DateTime%29?displayProperty=nameWithType> und <xref:System.Convert.ToDateTime%28System.Boolean%29?displayProperty=nameWithType> Methoden)  
+  
+ Alle Konvertierungen von ganzzahligen oder Gleitkomma-Zahlen, boolesche Werte konvertieren Werte ungleich NULL `true` und Nullwerte zu `false`.  Das folgende Beispiel veranschaulicht dies durch Aufrufen der ausgewählten Überladungen der <xref:System.Convert.ToBoolean%2A?displayProperty=nameWithType> Klasse.  
+  
+ [!code-csharp[System.Boolean.Structure#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.boolean.structure/cs/conversion1.cs#6)]
+ [!code-vb[System.Boolean.Structure#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.boolean.structure/vb/conversion1.vb#6)]  
+  
+ Beim Konvertieren von Gleitkommazahlen-Punktwerte in boolesche Werte führen Sie die Konvertierungsmethoden einen genauen Vergleich mit 0 (null). Wenn der Gleitkommawert mit einfacher Genauigkeit verloren hat, kann das Ergebnis nicht erwartet werden. Dies wird im folgenden Beispiel, in dem veranschaulicht eine <xref:System.Double> Variable, deren Wert muss 0 (null) wird in einen booleschen Wert konvertiert. Wie das Beispiel zeigt, ist das Ergebnis `true` da wiederholt Ergänzungen von 0,2 in einem Genauigkeitsverlust zurückzuführen sein.  
+  
+ Beim Konvertieren in numerischen Werten, die Methoden für die Konvertierung von booleschen Wert der <xref:System.Convert> Klasse Convert `true` auf 1 und `false` auf 0. Visual Basic-Konvertierungsfunktionen jedoch konvertieren `true` entweder 255 (für Konvertierungen in <xref:System.Byte> Werte) oder -1 (für alle anderen numerischen Konvertierungen). Das folgende Beispiel konvertiert `true` in numerische Werte mit einer <xref:System.Convert> -Methode, wenn es sich um die Visual Basic-Beispiel mithilfe des Visual Basic-Sprache des eigenen Konvertierungsoperators.  
+  
+ [!code-csharp[System.Boolean.Structure#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.boolean.structure/cs/conversion3.cs#8)]
+ [!code-vb[System.Boolean.Structure#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.boolean.structure/vb/conversion3.vb#8)]  
+  
+ Für Konvertierungen von <xref:System.Boolean> Zeichenfolgenwerte, finden Sie unter der [boolesche Werte Formatierung](#Formatting) Abschnitt. Für Konvertierungen von Zeichenfolgen in <xref:System.Boolean> -Werte finden Sie in der [boolesche Werte Analyse](#Parsing) Abschnitt.  
+  
+<a name="Parsing"></a>   
+## <a name="parsing-boolean-values"></a>Analysieren von booleschen Werten  
+ Die <xref:System.Boolean> Struktur umfasst zwei statische Analysemethoden <xref:System.Boolean.Parse%2A> und <xref:System.Boolean.TryParse%2A>, eine Zeichenfolge in einen booleschen Wert konvertiert werden. Die angegebene Zeichenfolgendarstellung eines booleschen Werts wird durch die Groß-/Kleinschreibung Entsprechungen der Werte von definiert die <xref:System.Boolean.TrueString> und <xref:System.Boolean.FalseString> Felder, die "True" und "Falsch", bzw.. Das heißt, sind nur Zeichenfolgen, die erfolgreich analysiert "True", "False", "True", "False", oder einige Entsprechung gemischter Groß-. Numerische Zeichenfolgen wie z. B. "0" oder "1" kann nicht erfolgreich analysiert werden. Führende oder nachfolgende Leerzeichen werden bei der Zeichenfolgenvergleich durch, nicht beachtet.  
+  
+ Im folgenden Beispiel wird die <xref:System.Boolean.Parse%2A> und <xref:System.Boolean.TryParse%2A> Methoden zum Analysieren einer Zahl von Zeichenfolgen. Beachten Sie, dass nur die Groß-/Kleinschreibung Entsprechungen der "True" und "False" erfolgreich analysiert werden können.  
+  
+ [!code-csharp[System.Boolean.Structure#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.boolean.structure/cs/parse2.cs#2)]
+ [!code-vb[System.Boolean.Structure#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.boolean.structure/vb/parse2.vb#2)]  
+  
+ Wenn Sie in Visual Basic programmieren, können Sie mithilfe der `CBool` Funktion, um die Zeichenfolgendarstellung einer Zahl in einen booleschen Wert konvertiert. "0" wird konvertiert, um `false`, und konvertiert die Zeichenfolgendarstellung für einen beliebigen Wert ungleich NULL `true`. Wenn Sie nicht in Visual Basic programmieren, müssen Sie die numerische Zeichenfolge in eine Zahl konvertieren, vor der Konvertierung in einen booleschen Wert. Das folgende Beispiel veranschaulicht dies, indem Sie ein Array von Ganzzahlen in boolesche Werte konvertieren.  
+  
+ [!code-csharp[System.Boolean.Structure#9](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.boolean.structure/cs/parse3.cs#9)]
+ [!code-vb[System.Boolean.Structure#9](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.boolean.structure/vb/parse3.vb#9)]  
+  
+<a name="Comparing"></a>   
+## <a name="comparing-boolean-values"></a>Vergleichen von booleschen Werten  
+ Da boolesche Werte entweder sind `true` oder `false`, es ist ratsam explizit aufrufen, die <xref:System.Boolean.CompareTo%2A> Methode, die angibt, ob eine Instanz größer als, kleiner ist, oder mit einem angegebenen Wert übereinstimmt. Um zwei boolesche Variablen zu vergleichen, rufen Sie in der Regel die <xref:System.Boolean.Equals%2A> Methode, oder verwenden Sie Ihre Sprache Gleichheitsoperator.  
+  
+ Jedoch, wenn Sie eine boolesche Variable mit dem literal booleschen Wert vergleichen möchten `true` oder `false`, es ist nicht notwendig, einen expliziten Vergleich führen, da das Ergebnis der Auswertung eines booleschen Werts, boolescher Wert ist. Angenommen, die Ausdrücke  
+  
+ [!code-csharp[System.Boolean.Structure#12](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.boolean.structure/cs/operations1.cs#12)]
+ [!code-vb[System.Boolean.Structure#12](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.boolean.structure/vb/operations1.vb#12)]  
+  
+ und  
+  
+ [!code-csharp[System.Boolean.Structure#13](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.boolean.structure/cs/operations2.cs#13)]
+ [!code-vb[System.Boolean.Structure#13](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.boolean.structure/vb/operations2.vb#13)]  
+  
+ äquivalent sind, aber die zweite ist kompakter. Beide Verfahren bietet jedoch vergleichbare Leistung.  
+  
+<a name="Binary"></a>   
+## <a name="working-with-booleans-as-binary-values"></a>Arbeiten mit booleschen Werten als binäre Werte  
+ Ein boolescher Wert nimmt ein Byte des Arbeitsspeichers, wie im folgenden C#-Beispiel gezeigt. Das Beispiel kompiliert werden muss, mit der `/unsafe` wechseln.  
+  
+ [!code-csharp[System.Boolean.Structure#14](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.boolean.structure/cs/size1.cs#14)]  
+  
+ Das Byte niederwertige Bit wird verwendet, um seinen Wert darzustellen. Der Wert 1 gibt `true`; ein Wert von 0 stellt `false`.  
+  
+> [!WARNING]
+>  Sie können die <xref:System.Collections.Specialized.BitVector32?displayProperty=nameWithType> Struktur, die mit booleschen Werten arbeiten.  
+  
+ Sie können einen booleschen Wert in die binäre Darstellung konvertiert, durch Aufrufen der <xref:System.BitConverter.GetBytes%28System.Boolean%29?displayProperty=nameWithType> Methode. Die Methode gibt ein Bytearray mit einem einzelnen Element zurück. Um einen booleschen Wert aus der binären Darstellung wiederherzustellen, rufen Sie die <xref:System.BitConverter.ToBoolean%28System.Byte%5B%5D%2CSystem.Int32%29?displayProperty=nameWithType> Methode.  
+  
+ Im folgenden Beispiel wird die <xref:System.BitConverter.GetBytes%2A?displayProperty=nameWithType> Methode, einen booleschen Wert in seine binäre Darstellung und zeigt die einzelnen Bits der Wert ein, und klicken Sie dann Aufrufe konvertieren die <xref:System.BitConverter.ToBoolean%2A?displayProperty=nameWithType> Methode, um den Wert aus der binären Darstellung wiederherzustellen.  
+  
+ [!code-csharp[System.Boolean.Structure#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.boolean.structure/cs/binary1.cs#1)]
+ [!code-vb[System.Boolean.Structure#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.boolean.structure/vb/binary1.vb#1)]  
+  
+<a name="Operations"></a>   
+## <a name="performing-operations-with-boolean-values"></a>Ausführen von Vorgängen mit booleschen Werten  
+ In diesem Abschnitt wird veranschaulicht, wie boolesche Werte werden in apps verwendet. Der erste Abschnitt erläutert die Verwendung als ein Flag an. Die zweite veranschaulicht Verwendungsmöglichkeiten für arithmetische Operationen.  
+  
+### <a name="boolean-values-as-flags"></a>Boolesche Werte als flags  
+ Boolesche Variablen werden als Flags, die am häufigsten verwendet, um das Vorhandensein oder fehlen einer Bedingung zu signalisieren. Z. B. in der <xref:System.String.Compare%28System.String%2CSystem.String%2CSystem.Boolean%29?displayProperty=nameWithType> -Methode, der letzte Parameter, `ignoreCase`, ist ein Flag, das angibt, ob der Vergleich zweier Zeichenfolgen die Groß-/Kleinschreibung ist (`ignoreCase` ist `true`) oder die Groß-/Kleinschreibung (`ignoreCase` ist `false`). Der Wert des Flags kann dann in einer bedingten Anweisung ausgewertet werden.  
+  
+ Im folgenden Beispiel wird eine einfache Konsolenanwendung veranschaulicht die Verwendung von booleschen Variablen als Flags. Die app akzeptiert Befehlszeilenparameter, mit denen Ausgabe an eine angegebene Datei umgeleitet werden können (die `/f` wechseln), und die Ausgabe in einer angegebenen Datei und in der Konsole an aktivieren (die `/b` wechseln). Die app definiert ein Flag, mit dem Namen `isRedirected` , um anzugeben, ob die Ausgabe an eine Datei gesendet werden, und ein Kennzeichen mit der Bezeichnung `isBoth` um anzugeben, dass die Ausgabe an die Konsole gesendet werden soll.  
+  
+ [!code-csharp[System.Boolean.Structure#10](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.boolean.structure/cs/operations1.cs#10)]
+ [!code-vb[System.Boolean.Structure#10](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.boolean.structure/vb/operations1.vb#10)]  
+  
+### <a name="booleans-and-arithmetic-operations"></a>Boolesche Werte und arithmetische Operationen  
+ Ein boolescher Wert wird manchmal verwendet, um das Vorhandensein einer Bedingung anzuzeigen, der eine mathematische Berechnung auslöst. Z. B. eine `hasShippingCharge` Variable möglicherweise dienen als ein Flag zur Angabe, ob ein Rechnungsbetrag Versandkosten hinzugefügt.  
+  
+ Da ein Vorgang mit einem `false` Wert hat keine Auswirkungen auf das Ergebnis eines Vorgangs, ist es nicht notwendig, konvertiert der boolesche Wert in einen ganzzahligen Wert in der mathematischen Vorgang verwendet. Stattdessen können Sie bedingten Logik verwenden.  
+  
+ Das folgende Beispiel berechnet einen Anteil, der ein Teilergebnis eine Versandgebühr und eine optionale Zuschlag besteht. Die `hasServiceCharge` Variable wird bestimmt, ob der Dienst kostenlos angewendet wird. Anstatt das Konvertieren von `hasServiceCharge` einen numerischen Wert und die Menge an den Dienst kostenlos multipliziert, im Beispiel wird bedingten Logik die Gebühren Menge hinzufügen, wenn es gilt.  
+  
+ [!code-csharp[System.Boolean.Structure#13](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.boolean.structure/cs/operations2.cs#13)]
+ [!code-vb[System.Boolean.Structure#13](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.boolean.structure/vb/operations2.vb#13)]  
+  
+<a name="Interop"></a>   
+### <a name="booleans-and-interop"></a>Boolesche Werte und interop  
+ Beim Marshalling Basisdatentypen für COM in der Regel einfach ist, ist die <xref:System.Boolean> -Datentyp ist eine Ausnahme. Können Sie anwenden der <xref:System.Runtime.InteropServices.MarshalAsAttribute> Attribut zum Marshallen der <xref:System.Boolean> Typ auf eines der folgenden Darstellung:  
+  
+|Enumerationstyp|Nicht verwalteten Formats|  
+|----------------------|----------------------|  
+|<xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=nameWithType>|Eine 4-Byte-Ganzzahl-Wert, wobei ein Wert ungleich NULL `true` und 0 stellt `false`. Dies ist das Standardformat für eine <xref:System.Boolean> Feld in einer Struktur und des eine <xref:System.Boolean> Parameter im Platform invoke-Aufrufe.|  
+|<xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=nameWithType>|Einen 1-Byte-Ganzzahl-Wert, wobei 1 `true` und 0 stellt `false`.|  
+|<xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=nameWithType>|Eine 2-Byte-Ganzzahl-Wert, wobei-1 `true` und 0 stellt `false`. Dies ist das Standardformat von einem <xref:System.Boolean> Parameter in COM-Interop-aufrufen.|  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Alle Member dieses Typs sind threadsicher. Elemente, die angezeigt werden, so ändern Sie den Zustand der Instanz zurückgeben tatsächlich eine neue Instanz mit dem neuen Wert initialisiert. Als müssen mit einem beliebigen anderen Typ Lesen und Schreiben in eine freigegebene Variable, die eine Instanz dieses Typs enthält durch ein Schloss auf Threadsicherheit geschützt werden.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="CompareTo">
+      <MemberSignature Language="C#" Value="public int CompareTo (bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 CompareTo(bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Boolean.CompareTo(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein mit dieser Instanz zu vergleichendes <see cref="T:System.Boolean" />-Objekt.</param>
+        <summary>Vergleicht diese Instanz mit einem angegebenen <see cref="T:System.Boolean" />-Objekt und gibt eine ganze Zahl zurück, die ihre Beziehung untereinander angibt.</summary>
+        <returns>Eine Ganzzahl mit Vorzeichen, die die relativen Werte dieser Instanz und <paramref name="value" /> angibt.  
+  
+ <list type="table"><listheader><term>Rückgabewert  
+  
+ </term><description>Bedingung  
+  
+ </description></listheader><item><term>Kleiner als 0 (null)  
+  
+ </term><description>Diese Instanz ist <see langword="false" /> und <paramref name="value" /> ist <see langword="true" />.  
+  
+ </description></item><item><term>0 (null)  
+  
+ </term><description>Diese Instanz und <paramref name="value" /> gleich sind (entweder beide sind <see langword="true" /> bzw. beide sind <see langword="false" />).  
+  
+ </description></item><item><term>Größer als 0 (null)  
+  
+ </term><description>Diese Instanz ist <see langword="true" /> und <paramref name="value" /> ist <see langword="false" />.  
+  
+ </description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode implementiert die <xref:System.IComparable%601?displayProperty=nameWithType> Schnittstelle und führt etwas bessere Leistung als die <xref:System.Boolean.CompareTo%2A?displayProperty=nameWithType> Methode, da sie keinen konvertieren die `value` Parameter für ein Objekt.  
+  
+ Wenn `value` weniger Bits aufweist (schmaler ist) als den Instanztyp aus, führen einige Programmiersprachen eine implizite erweiternde Konvertierung, die den Wert des Parameters in einen Wert mit mehr Bits transformiert.  
+  
+ Nehmen wir beispielsweise an, die der Typ ist <xref:System.Int32> und der Parametertyp ist <xref:System.Byte>. Microsoft C#-Compiler generiert Anweisungen, um die Darstellung des Werts des Parameters als ein <xref:System.Int32> -Objekt, und generiert dann eine <xref:System.Int32.CompareTo%2A?displayProperty=nameWithType> Methode zum Vergleichen der <xref:System.Int32> Instanz und die Parameter-Darstellung.  
+  
+ Ihre Programmiersprache Dokumentation, um festzustellen, ob der Compiler implizite erweiternde Konvertierungen für numerische Typen ausführt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, generische und nicht generische Versionen der <xref:System.Boolean.CompareTo%2A> Methode für verschiedene Wert- und Referenztypen.  
+  
+ [!code-cpp[T.CompareTo#1](~/samples/snippets/cpp/VS_Snippets_CLR/T.CompareTo/CPP/cat.cpp#1)]
+ [!code-csharp[T.CompareTo#1](~/samples/snippets/csharp/VS_Snippets_CLR/T.CompareTo/CS/cat.cs#1)]
+ [!code-vb[T.CompareTo#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/T.CompareTo/VB/cat.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareTo">
+      <MemberSignature Language="C#" Value="public int CompareTo (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 CompareTo(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Boolean.CompareTo(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Ein Objekt, das mit dieser Instanz verglichen werden soll, oder <see langword="null" />.</param>
+        <summary>Vergleicht diese Instanz mit einem angegebenen Objekt und gibt eine ganze Zahl zurück, die ihre Beziehung untereinander angibt.</summary>
+        <returns>Eine Ganzzahl mit Vorzeichen, die die relative Reihenfolge dieser Instanz und <paramref name="obj" /> angibt.  
+  
+ <list type="table"><listheader><term>Rückgabewert  
+  
+ </term><description>Bedingung  
+  
+ </description></listheader><item><term>Kleiner als 0 (null)  
+  
+ </term><description>Diese Instanz ist <see langword="false" /> und <paramref name="obj" /> ist <see langword="true" />.  
+  
+ </description></item><item><term>0 (null)  
+  
+ </term><description>Diese Instanz und <paramref name="obj" /> gleich sind (entweder beide sind <see langword="true" /> bzw. beide sind <see langword="false" />).  
+  
+ </description></item><item><term>Größer als 0 (null)  
+  
+ </term><description>Diese Instanz ist <see langword="true" /> und <paramref name="obj" /> ist <see langword="false" />.  
+  
+ - oder -   
+  
+ <paramref name="obj" /> ist <see langword="null" />.  
+  
+ </description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `obj`muss `null` oder einer Instanz von `Boolean`ist, andernfalls wird eine Ausnahme ausgelöst.  
+  
+ Diese Methode implementiert die <xref:System.IComparable> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="obj" /> ist keine <see cref="T:System.Boolean" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (bool obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(bool obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Boolean.Equals(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Ein mit dieser Instanz zu vergleichender <see cref="T:System.Boolean" />-Wert.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einem angegebenen <see cref="T:System.Boolean" />-Objekt ist.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="obj" /> über denselben Wert wie diese Instanz verfügt, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode implementiert die <xref:System.IEquatable%601?displayProperty=nameWithType> Schnittstelle, und führt etwas bessere Leistung als <xref:System.Boolean.Equals%2A> , da sie keinen konvertieren die `obj` Parameter für ein Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Boolean.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Ein mit dieser Instanz zu vergleichendes Objekt.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einem angegebenen Objekt ist.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="obj" /> ein <see cref="T:System.Boolean" /> ist und denselben Wert wie diese Instanz hat, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt <xref:System.Object.Equals%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FalseString">
+      <MemberSignature Language="C#" Value="public static readonly string FalseString;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string FalseString" />
+      <MemberSignature Language="DocId" Value="F:System.Boolean.FalseString" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den booleschen Wert <see langword="false" /> als eine Zeichenfolge dar. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Feld ist gleich der Zeichenfolge "False".  
+  
+ Die <xref:System.Boolean.FalseString> Eigenschaft definiert die angegebene Zeichenfolgendarstellung einer `False` <xref:System.Boolean> Wert formatieren und Analysieren von Operations.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Boolean.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese Instanz zurück.</summary>
+        <returns>Ein Hashcode für die aktuelle <see cref="T:System.Boolean" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Boolean> -Klasse implementiert `true` als die ganze Zahl ein, und `false` als die ganze Zahl Null. Jedoch möglicherweise eine bestimmte Programmiersprache Laufwerke `true` und `false` mit anderen Werten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypeCode">
+      <MemberSignature Language="C#" Value="public TypeCode GetTypeCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.TypeCode GetTypeCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Boolean.GetTypeCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TypeCode</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Typcode für den <see cref="T:System.Boolean" /> Werttyp.</summary>
+        <returns>Die Enumerationskonstante <see cref="F:System.TypeCode.Boolean" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static bool Parse (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Parse(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Boolean.Parse(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine Zeichenfolge, die den zu konvertierenden Wert enthält.</param>
+        <summary>Konvertiert die angegebene Zeichenfolgendarstellung eines logischen Werts in seine <see cref="T:System.Boolean" />-Entsprechung.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="value" /> dem Wert <see cref="F:System.Boolean.TrueString" /> entspricht; <see langword="false" />, wenn <paramref name="value" /> dem Wert <see cref="F:System.Boolean.FalseString" /> entspricht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `value` Parameter optional vorangestellt oder eingeschlossen, die durch ein Leerzeichen, muss entweder enthalten <xref:System.Boolean.TrueString> oder <xref:System.Boolean.FalseString>ist, andernfalls wird eine Ausnahme ausgelöst. Der Vergleich wird die Groß-/Kleinschreibung.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von <xref:System.Boolean.Parse%2A> Methode.  
+  
+ [!code-cpp[System.Boolean#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Boolean/CPP/booleanmembers.cpp#2)]
+ [!code-csharp[System.Boolean#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Boolean/CS/booleanmembers.cs#2)]
+ [!code-vb[System.Boolean#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Boolean/VB/booleanmembers.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="value" /> entspricht nicht <see cref="F:System.Boolean.TrueString" /> oder <see cref="F:System.Boolean.FalseString" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IComparable.CompareTo">
+      <MemberSignature Language="C#" Value="int IComparable.CompareTo (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.IComparable.CompareTo(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Boolean.System#IComparable#CompareTo(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.GetTypeCode">
+      <MemberSignature Language="C#" Value="TypeCode IConvertible.GetTypeCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance valuetype System.TypeCode System.IConvertible.GetTypeCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Boolean.System#IConvertible#GetTypeCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TypeCode</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToBoolean">
+      <MemberSignature Language="C#" Value="bool IConvertible.ToBoolean (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.IConvertible.ToBoolean(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Boolean.System#IConvertible#ToBoolean(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Dieser Parameter wird ignoriert.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.IConvertible.ToBoolean(System.IFormatProvider)" />.</summary>
+        <returns>
+          <see langword="true" /> oder <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Boolean>-Instanz in eine <xref:System.IConvertible>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToByte">
+      <MemberSignature Language="C#" Value="byte IConvertible.ToByte (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance unsigned int8 System.IConvertible.ToByte(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Boolean.System#IConvertible#ToByte(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Dieser Parameter wird ignoriert.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.IConvertible.ToByte(System.IFormatProvider)" />.</summary>
+        <returns>1, wenn der Wert dieser Instanz <see langword="true" /> ist, andernfalls 0.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Boolean>-Instanz in eine <xref:System.IConvertible>-Schnittstelle umgewandelt wird. Die empfohlene Alternative ist das Aufrufen der <xref:System.Convert.ToByte%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToChar">
+      <MemberSignature Language="C#" Value="char IConvertible.ToChar (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance char System.IConvertible.ToChar(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Boolean.System#IConvertible#ToChar(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Dieser Parameter wird ignoriert.</param>
+        <summary>Diese Konvertierung wird nicht unterstützt. Bei dem Versuch der Verwendung dieser Methode wird eine <see cref="T:System.InvalidCastException" /> ausgelöst.</summary>
+        <returns>Diese Konvertierung wird nicht unterstützt. Es wird kein Wert zurückgegeben.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidCastException">Sie versuchen, konvertieren Sie eine <see cref="T:System.Boolean" /> -Wert in einen <see cref="T:System.Char" /> Wert. Diese Konvertierung wird nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToDateTime">
+      <MemberSignature Language="C#" Value="DateTime IConvertible.ToDateTime (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance valuetype System.DateTime System.IConvertible.ToDateTime(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Boolean.System#IConvertible#ToDateTime(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Dieser Parameter wird ignoriert.</param>
+        <summary>Diese Konvertierung wird nicht unterstützt. Bei dem Versuch der Verwendung dieser Methode wird eine <see cref="T:System.InvalidCastException" /> ausgelöst.</summary>
+        <returns>Diese Konvertierung wird nicht unterstützt. Es wird kein Wert zurückgegeben.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidCastException">Sie versuchen, konvertieren Sie eine <see cref="T:System.Boolean" /> -Wert in einen <see cref="T:System.DateTime" /> Wert. Diese Konvertierung wird nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToDecimal">
+      <MemberSignature Language="C#" Value="decimal IConvertible.ToDecimal (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance valuetype System.Decimal System.IConvertible.ToDecimal(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Boolean.System#IConvertible#ToDecimal(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Decimal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Dieser Parameter wird ignoriert.</param>
+        <summary>Eine Beschreibung dieses Members finden Sie unter <see cref="M:System.IConvertible.ToDecimal(System.IFormatProvider)" />.</summary>
+        <returns>1, wenn diese Instanz <see langword="true" /> ist, andernfalls 0.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Boolean>-Instanz in eine <xref:System.IConvertible>-Schnittstelle umgewandelt wird. Die empfohlene Alternative ist das Aufrufen der <xref:System.Convert.ToDecimal%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToDouble">
+      <MemberSignature Language="C#" Value="double IConvertible.ToDouble (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance float64 System.IConvertible.ToDouble(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Boolean.System#IConvertible#ToDouble(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Dieser Parameter wird ignoriert.</param>
+        <summary>Eine Beschreibung dieses Members finden Sie unter <see cref="M:System.IConvertible.ToDouble(System.IFormatProvider)" />.</summary>
+        <returns>1, wenn diese Instanz <see langword="true" /> ist, andernfalls 0.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Boolean>-Instanz in eine <xref:System.IConvertible>-Schnittstelle umgewandelt wird. Die empfohlene Alternative ist das Aufrufen der <xref:System.Convert.ToDouble%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToInt16">
+      <MemberSignature Language="C#" Value="short IConvertible.ToInt16 (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int16 System.IConvertible.ToInt16(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Boolean.System#IConvertible#ToInt16(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Dieser Parameter wird ignoriert.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.IConvertible.ToInt16(System.IFormatProvider)" />.</summary>
+        <returns>1, wenn diese Instanz <see langword="true" /> ist, andernfalls 0.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Boolean>-Instanz in eine <xref:System.IConvertible>-Schnittstelle umgewandelt wird. Die empfohlene Alternative ist das Aufrufen der <xref:System.Convert.ToInt16%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToInt32">
+      <MemberSignature Language="C#" Value="int IConvertible.ToInt32 (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.IConvertible.ToInt32(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Boolean.System#IConvertible#ToInt32(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Dieser Parameter wird ignoriert.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.IConvertible.ToInt32(System.IFormatProvider)" />.</summary>
+        <returns>1, wenn diese Instanz <see langword="true" /> ist, andernfalls 0.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Boolean>-Instanz in eine <xref:System.IConvertible>-Schnittstelle umgewandelt wird. Die empfohlene Alternative ist das Aufrufen der <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToInt64">
+      <MemberSignature Language="C#" Value="long IConvertible.ToInt64 (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int64 System.IConvertible.ToInt64(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Boolean.System#IConvertible#ToInt64(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Dieser Parameter wird ignoriert.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.IConvertible.ToInt64(System.IFormatProvider)" />.</summary>
+        <returns>1, wenn diese Instanz <see langword="true" /> ist, andernfalls 0.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Boolean>-Instanz in eine <xref:System.IConvertible>-Schnittstelle umgewandelt wird. Die empfohlene Alternative ist das Aufrufen der <xref:System.Convert.ToInt64%28System.Boolean%29?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToSByte">
+      <MemberSignature Language="C#" Value="sbyte IConvertible.ToSByte (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int8 System.IConvertible.ToSByte(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Boolean.System#IConvertible#ToSByte(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.SByte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Dieser Parameter wird ignoriert.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.IConvertible.ToSByte(System.IFormatProvider)" />.</summary>
+        <returns>1, wenn diese Instanz <see langword="true" /> ist, andernfalls 0.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Boolean>-Instanz in eine <xref:System.IConvertible>-Schnittstelle umgewandelt wird. Die empfohlene Alternative ist das Aufrufen der <xref:System.Convert.ToSByte%28System.Boolean%29?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToSingle">
+      <MemberSignature Language="C#" Value="float IConvertible.ToSingle (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance float32 System.IConvertible.ToSingle(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Boolean.System#IConvertible#ToSingle(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Dieser Parameter wird ignoriert.</param>
+        <summary>Eine Beschreibung dieses Members finden Sie unter <see cref="M:System.IConvertible.ToSingle(System.IFormatProvider)" />.</summary>
+        <returns>1, wenn diese Instanz <see langword="true" /> ist, andernfalls 0.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Boolean>-Instanz in eine <xref:System.IConvertible>-Schnittstelle umgewandelt wird. Die empfohlene Alternative ist das Aufrufen der <xref:System.Convert.ToSingle%28System.Boolean%29?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToString">
+      <MemberSignature Language="C#" Value="string IConvertible.ToString (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.IConvertible.ToString(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Boolean.System#IConvertible#ToString(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToType">
+      <MemberSignature Language="C#" Value="object IConvertible.ToType (Type type, IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.IConvertible.ToType(class System.Type type, class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Boolean.System#IConvertible#ToType(System.Type,System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der gewünschte Typ.</param>
+        <param name="provider">Eine <see cref="T:System.IFormatProvider" />-Implementierung, die kulturspezifische Informationen zum Format des zurückgegebenen Werts bereitstellt.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.IConvertible.ToType(System.Type,System.IFormatProvider)" />.</summary>
+        <returns>Ein Objekt des angegebenen Typs mit einem Wert, der dem Wert dieses <see langword="Boolean" />-Objekts entspricht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Boolean>-Instanz in eine <xref:System.IConvertible>-Schnittstelle umgewandelt wird. Die empfohlene Alternative ist das Aufrufen der <xref:System.Convert.ChangeType%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidCastException">Die angeforderte Typkonvertierung wird nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToUInt16">
+      <MemberSignature Language="C#" Value="ushort IConvertible.ToUInt16 (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance unsigned int16 System.IConvertible.ToUInt16(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Boolean.System#IConvertible#ToUInt16(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Dieser Parameter wird ignoriert.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.IConvertible.ToUInt16(System.IFormatProvider)" />.</summary>
+        <returns>1, wenn diese Instanz <see langword="true" /> ist, andernfalls 0.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Boolean>-Instanz in eine <xref:System.IConvertible>-Schnittstelle umgewandelt wird. Die empfohlene Alternative ist das Aufrufen der <xref:System.Convert.ToUInt16%28System.Boolean%29?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToUInt32">
+      <MemberSignature Language="C#" Value="uint IConvertible.ToUInt32 (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance unsigned int32 System.IConvertible.ToUInt32(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Boolean.System#IConvertible#ToUInt32(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Dieser Parameter wird ignoriert.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.IConvertible.ToUInt32(System.IFormatProvider)" />.</summary>
+        <returns>1, wenn diese Instanz <see langword="true" /> ist, andernfalls 0.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Boolean>-Instanz in eine <xref:System.IConvertible>-Schnittstelle umgewandelt wird. Die empfohlene Alternative ist das Aufrufen der <xref:System.Convert.ToUInt32%28System.Boolean%29?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToUInt64">
+      <MemberSignature Language="C#" Value="ulong IConvertible.ToUInt64 (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance unsigned int64 System.IConvertible.ToUInt64(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Boolean.System#IConvertible#ToUInt64(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Dieser Parameter wird ignoriert.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.IConvertible.ToUInt64(System.IFormatProvider)" />.</summary>
+        <returns>1, wenn diese Instanz <see langword="true" /> ist, andernfalls 0.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Boolean>-Instanz in eine <xref:System.IConvertible>-Schnittstelle umgewandelt wird. Die empfohlene Alternative ist das Aufrufen der <xref:System.Convert.ToUInt64%28System.Boolean%29?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Boolean.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert den Wert dieser Instanz in die entsprechende Zeichenfolgendarstellung (entweder „True“ oder „False“).</summary>
+        <returns>„True“ (der Wert der <see cref="F:System.Boolean.TrueString" />-Eigenschaft), wenn der Wert dieser Instanz <see langword="true" /> ist, oder „False“ (der Wert der <see cref="F:System.Boolean.FalseString" />-Eigenschaft), wenn der Wert dieser Instanz <see langword="false" /> ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt die Konstanten "True" oder "False" zurück.  
+  
+ Beachten Sie, dass XML Groß-/Kleinschreibung beachtet wird und die XML-Spezifikation "true" und "False" als gültige boolesche Werte erkennt. Wenn die Zeichenfolge, durch zurückgegeben die <xref:System.Boolean.ToString> Methode besteht darin, eine XML-Datei geschrieben werden seine <xref:System.String.ToLowerInvariant%2A?displayProperty=nameWithType> Methode sollte zuerst aufgerufen werden, um sie in Kleinbuchstaben zu konvertieren.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die <xref:System.Boolean.ToString%2A> Methode.  
+  
+ [!code-cpp[System.Boolean#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Boolean/CPP/booleanmembers.cpp#1)]
+ [!code-csharp[System.Boolean#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Boolean/CS/booleanmembers.cs#1)]
+ [!code-vb[System.Boolean#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Boolean/VB/booleanmembers.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ToString(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Boolean.ToString(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">(Reserviert) Ein <see cref="T:System.IFormatProvider" />-Objekt.</param>
+        <summary>Konvertiert den Wert dieser Instanz in die entsprechende Zeichenfolgendarstellung (entweder „True“ oder „False“).</summary>
+        <returns>
+          <see cref="F:System.Boolean.TrueString" />, wenn der Wert dieser Instanz <see langword="true" /> ist, und <see cref="F:System.Boolean.FalseString" />, wenn der Wert dieser Instanz <see langword="false" /> ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `provider` Parameter ist reserviert. Er wird bei der Ausführung dieser Methode nicht berücksichtigt. Dies bedeutet, dass die <xref:System.Boolean.ToString%28System.IFormatProvider%29?displayProperty=nameWithType> -Methode, im Gegensatz zu den meisten Methoden mit einem `provider` Parameter reflektiert keinen kulturspezifische Einstellungen.  
+  
+ Diese Methode gibt die Konstanten "True" oder "False" zurück. Beachten Sie, dass XML Groß-/Kleinschreibung beachtet wird und die XML-Spezifikation "true" und "False" als gültige boolesche Werte erkennt. Wenn die <xref:System.String> zurückgegebenes Objekt die <xref:System.Boolean.ToString%28System.IFormatProvider%29> Methode besteht darin, eine XML-Datei geschrieben werden seine <xref:System.String.ToLowerInvariant%2A?displayProperty=nameWithType> Methode sollte zuerst aufgerufen werden, um sie in Kleinbuchstaben zu konvertieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrueString">
+      <MemberSignature Language="C#" Value="public static readonly string TrueString;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string TrueString" />
+      <MemberSignature Language="DocId" Value="F:System.Boolean.TrueString" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt den booleschen Wert <see langword="true" /> als eine Zeichenfolge dar. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Feld ist gleich der Zeichenfolge "True".  
+  
+ Die <xref:System.Boolean.TrueString> Eigenschaft definiert die angegebene Zeichenfolgendarstellung einer `True` <xref:System.Boolean> Wert formatieren und Analysieren von Operations.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParse">
+      <MemberSignature Language="C#" Value="public static bool TryParse (string value, out bool result);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryParse(string value, [out] bool&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Boolean.TryParse(System.String,System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="result" Type="System.Boolean&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine Zeichenfolge, die den zu konvertierenden Wert enthält.</param>
+        <param name="result">Bei erfolgreicher Konvertierung nach der Rückgabe dieser Methode enthält <see langword="true" /> Wenn <c>Wert</c> gleich <see cref="F:System.Boolean.TrueString" /> oder <see langword="false" /> Wenn <c>Wert</c> gleich <see cref="F:System.Boolean.FalseString" />. Enthält <see langword="false" />, wenn bei der Konvertierung ein Fehler aufgetreten ist. Die Konvertierung schlägt fehl, wenn <c>Wert</c> ist <see langword="null" /> oder stimmt nicht mit dem Wert des Felds der <see cref="F:System.Boolean.TrueString" /> oder <see cref="F:System.Boolean.FalseString" /> Feld.</param>
+        <summary>Versucht, die angegebene Zeichenfolgendarstellung eines logischen Werts in die <see cref="T:System.Boolean" />-Entsprechung zu konvertieren. Ein Rückgabewert gibt an, ob die Konvertierung erfolgreich war oder nicht.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="value" /> erfolgreich konvertiert wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Boolean.TryParse%2A> Methode entspricht der <xref:System.Boolean.Parse%2A> -Methode, mit Ausnahme der <xref:System.Boolean.TryParse%2A> Methode löst keine Ausnahme aus, wenn die Konvertierung fehlschlägt.  
+  
+ Die `value` Parameter vorangestellt oder durch ein Leerzeichen gefolgt werden kann. Der Vergleich ist ordinal und Groß-/Kleinschreibung.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Boolean.TryParse%2A> Methode, um ein Array von Zeichenfolgen zu analysieren. Hinweis, der der Analysevorgang erfolgreich ist, nur, wenn die zu analysierende Zeichenfolge "True" ist (der Wert des der <xref:System.Boolean.TrueString> Feld) oder "False" (der Wert des der <xref:System.Boolean.FalseString> Feld) in Groß-und Kleinschreibung unterschieden.  
+  
+ [!code-csharp[System.Boolean.TryParse#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.boolean.tryparse/cs/tryparseex.cs#1)]
+ [!code-vb[System.Boolean.TryParse#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.boolean.tryparse/vb/tryparseex.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

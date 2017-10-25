@@ -1,0 +1,296 @@
+<Type Name="TimerEventSubscriptionCollection" FullName="System.Workflow.Runtime.TimerEventSubscriptionCollection">
+  <TypeSignature Language="C#" Value="public class TimerEventSubscriptionCollection : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit TimerEventSubscriptionCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.TimerEventSubscriptionCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine geordnete Liste von <see cref="T:System.Workflow.Runtime.TimerEventSubscription" />-Objekten dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Eine <xref:System.Workflow.Runtime.TimerEventSubscriptionCollection> stellt die Warteschlange von <xref:System.Workflow.Runtime.TimerEventSubscription>-Objekten dar, die einer Workflowinstanz zugeordnet sind, und stellt Methoden zum Verwalten dieser Warteschlange bereit. Abonnements sind in der Warteschlange basierend auf ihren <xref:System.Workflow.Runtime.TimerEventSubscription.ExpiresAt%2A>-Werten geordnet. Abonnements mit niedrigeren <xref:System.Workflow.Runtime.TimerEventSubscription.ExpiresAt%2A>-Werten sind vor Abonnements mit höheren <xref:System.Workflow.Runtime.TimerEventSubscription.ExpiresAt%2A>-Werten angeordnet. Sie können die von dieser Klasse bereitgestellten Methoden verwenden, um die Auflistung von aktiven Zeitgeberereignisabonnements zu verwalten, die von <xref:System.Workflow.Runtime.TimerEventSubscriptionCollection.TimerCollectionProperty> für die einzelnen Workflowinstanzen offengelegt werden. Sie können <xref:System.Workflow.Runtime.TimerEventSubscriptionCollection.Add%2A> oder <xref:System.Workflow.Runtime.TimerEventSubscriptionCollection.Remove%2A> verwenden, um Abonnements der Zeitgeberwarteschlange hinzuzufügen oder daraus zu entfernen. Wenn sich das erste Element in der Zeitgeberwarteschlange ändert, wird jeweils der <xref:System.Workflow.Runtime.Hosting.WorkflowSchedulerService> aufgerufen, um das Zeitgeberereignis zu beenden, das sich vorher am Anfang der Warteschlange befunden hat, und um das neue Zeitgeberereignis zu planen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Workflow.Runtime.TimerEventSubscription item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Workflow.Runtime.TimerEventSubscription item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.TimerEventSubscriptionCollection.Add(System.Workflow.Runtime.TimerEventSubscription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Workflow.Runtime.TimerEventSubscription" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das <see cref="T:System.Workflow.Runtime.TimerEventSubscription" />, das der Zeitgeberwarteschlange hinzugefügt werden soll.</param>
+        <summary>Fügt der Zeitgeberwarteschlange ein <see cref="T:System.Workflow.Runtime.TimerEventSubscription" /> hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fügt das <xref:System.Workflow.Runtime.TimerEventSubscription> der Zeitgeberwarteschlange hinzu. Abonnements sind in der Warteschlange basierend auf ihren <xref:System.Workflow.Runtime.TimerEventSubscription.ExpiresAt%2A?displayProperty=nameWithType>-Werten geordnet. Abonnements mit niedrigeren Werten sind vor Abonnements mit höheren Werten angeordnet. Wenn das neue Abonnement am Anfang der Warteschlange hinzugefügt wird, wird <xref:System.Workflow.Runtime.Hosting.WorkflowSchedulerService.Cancel%2A?displayProperty=nameWithType> aufgerufen, um das Zeitgeberereignis abzubrechen, das sich vorher am Anfang der Warteschlange befunden hat, und <xref:System.Workflow.Runtime.Hosting.WorkflowSchedulerService.Schedule%28System.Threading.WaitCallback%2CSystem.Guid%2CSystem.DateTime%2CSystem.Guid%29?displayProperty=nameWithType> wird aufgerufen, um das neue Zeitgeberereignis zu planen. <xref:System.Workflow.Runtime.TimerEventSubscriptionCollection.Add%2A> sperrt die <xref:System.Workflow.Runtime.TimerEventSubscriptionCollection>, bevor das neue Abonnement hinzugefügt wird. Daher ist dieser Vorgang threadsicher.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="item" /> ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.TimerEventSubscriptionCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale <see cref="T:System.Array" />, das das Ziel der aus der <see cref="T:System.Workflow.Runtime.TimerEventSubscriptionCollection" /> kopierten Elemente ist. Für das <see cref="T:System.Array" /> muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="index">Der nullbasierte Index im <c>Array</c> an dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die <see cref="T:System.Workflow.Runtime.TimerEventSubscriptionCollection" />-Elemente in ein vorhandenes eindimensionales <see cref="T:System.Array" />, beginnend beim angegebenen Arrayindex.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.TimerEventSubscriptionCollection.CopyTo%2A> ist threadsicher.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.TimerEventSubscriptionCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der <see cref="T:System.Workflow.Runtime.TimerEventSubscription" />-Objekte ab, die sich in der Zeitgeberwarteschlange befinden.</summary>
+        <value>Die Anzahl der <see cref="T:System.Workflow.Runtime.TimerEventSubscription" />-Objekte in der Warteschlange.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.TimerEventSubscriptionCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der die <see cref="T:System.Workflow.Runtime.TimerEventSubscriptionCollection" /> durchläuft.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" /> für das <see cref="T:System.Workflow.Runtime.TimerEventSubscriptionCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Zugriff auf die <xref:System.Workflow.Runtime.TimerEventSubscriptionCollection> ist synchronisiert. Die Enumeration einer Auflistung ist systemintern jedoch keine threadsichere Prozedur. Ein Enumerator bleibt gültig, solange die Auflistung unverändert ist. Werden an der Auflistung Änderungen wie z. B. Hinzufügen, Bearbeiten oder Entfernen von Elementen vorgenommen, verliert der Enumerator unwiederbringlich seine Gültigkeit und sein Verhalten ist nicht definiert. Der Enumerator hat keinen exklusiven Zugriff auf die Auflistung. Daher ist die Enumeration einer Auflistung systemintern keine threadsichere Prozedur. Um Threadsicherheit während der Enumeration zu gewährleisten, können Sie die <xref:System.Workflow.Runtime.TimerEventSubscriptionCollection> während der gesamten Enumeration sperren, indem Sie <xref:System.Workflow.Runtime.TimerEventSubscriptionCollection.SyncRoot%2A> verwenden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.TimerEventSubscriptionCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Zugriff auf die <see cref="T:System.Workflow.Runtime.TimerEventSubscriptionCollection" /> synchronisiert (threadsicher) ist.</summary>
+        <value>Gibt immer <see langword="true" /> zurück. Dies gibt an, dass der Zugriff auf die <see cref="T:System.Workflow.Runtime.TimerEventSubscriptionCollection" /> synchronisiert (threadsicher) ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Zugriff auf die <xref:System.Workflow.Runtime.TimerEventSubscriptionCollection> ist synchronisiert. Die Enumeration einer Auflistung ist systemintern jedoch keine threadsichere Prozedur. Selbst wenn eine Auflistung synchronisiert wird, besteht die Möglichkeit, dass andere Threads sie ändern. Dies führt dazu, dass der Enumerator eine Ausnahme auslöst. Um während der Enumeration Threadsicherheit zu gewährleisten, können Sie entweder die Auflistung während der gesamten Enumeration sperren oder die Ausnahmen, die aus von anderen Threads stammenden Änderungen resultieren, abfangen. <xref:System.Workflow.Runtime.TimerEventSubscriptionCollection.SyncRoot%2A> gibt ein Objekt zurück, mit dem der Zugriff auf <xref:System.Workflow.Runtime.TimerEventSubscriptionCollection> synchronisiert werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Peek">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.TimerEventSubscription Peek ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Workflow.Runtime.TimerEventSubscription Peek() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.TimerEventSubscriptionCollection.Peek" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.TimerEventSubscription</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt das <see cref="T:System.Workflow.Runtime.TimerEventSubscription" /> am Anfang der Zeitgeberwarteschlange zurück, ohne es zu entfernen.</summary>
+        <returns>Das <see cref="T:System.Workflow.Runtime.TimerEventSubscription" /> am Anfang der Zeitgeberwarteschlange oder ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic), wenn die Zeitgeberwarteschlange leer ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.TimerEventSubscriptionCollection.Peek%2A> ist threadsicher.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (Guid timerSubscriptionId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(valuetype System.Guid timerSubscriptionId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.TimerEventSubscriptionCollection.Remove(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timerSubscriptionId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="timerSubscriptionId">Die <see cref="T:System.Guid" /> des zu entfernenden <see cref="T:System.Workflow.Runtime.TimerEventSubscription" />.</param>
+        <summary>Entfernt das <see cref="T:System.Workflow.Runtime.TimerEventSubscription" />, das über die angegebene Abonnement-ID der Zeitgeberwarteschlange verfügt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entfernt das <xref:System.Workflow.Runtime.TimerEventSubscription> mit der angegebenen Abonnement-ID aus der Zeitgeberwarteschlange. Abonnements sind in der Warteschlange basierend auf ihren <xref:System.Workflow.Runtime.TimerEventSubscription.ExpiresAt%2A?displayProperty=nameWithType>-Werten geordnet. Abonnements mit niedrigeren Werten sind vor Abonnements mit höheren Werten angeordnet. Wenn das entfernte Abonnement sich am Anfang der Warteschlange befunden hat, wird <xref:System.Workflow.Runtime.Hosting.WorkflowSchedulerService.Cancel%2A?displayProperty=nameWithType> aufgerufen, um das Zeitgeberereignis abzubrechen, das dem Abonnement zugeordnet ist, und <xref:System.Workflow.Runtime.Hosting.WorkflowSchedulerService.Schedule%28System.Threading.WaitCallback%2CSystem.Guid%2CSystem.DateTime%2CSystem.Guid%29?displayProperty=nameWithType> wird aufgerufen, um ein Zeitgeberereignis für das Abonnement zu planen, das sich jetzt am Anfang der Warteschlange befindet. <xref:System.Workflow.Runtime.TimerEventSubscriptionCollection.Remove%28System.Guid%29> ist threadsicher.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Workflow.Runtime.TimerEventSubscription item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Workflow.Runtime.TimerEventSubscription item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.TimerEventSubscriptionCollection.Remove(System.Workflow.Runtime.TimerEventSubscription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Workflow.Runtime.TimerEventSubscription" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das <see cref="T:System.Workflow.Runtime.TimerEventSubscription" />, das aus der Zeitgeberwarteschlange entfernt werden soll.</param>
+        <summary>Entfernt das <see cref="T:System.Workflow.Runtime.TimerEventSubscription" /> aus der Zeitgeberwarteschlange.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entfernt das <xref:System.Workflow.Runtime.TimerEventSubscription> aus der Zeitgeberwarteschlange. Abonnements sind in der Warteschlange basierend auf ihren <xref:System.Workflow.Runtime.TimerEventSubscription.ExpiresAt%2A?displayProperty=nameWithType>-Werten geordnet. Abonnements mit niedrigeren Werten sind vor Abonnements mit höheren Werten angeordnet. Wenn das entfernte Abonnement sich am Anfang der Warteschlange befunden hat, wird <xref:System.Workflow.Runtime.Hosting.WorkflowSchedulerService.Cancel%2A?displayProperty=nameWithType> aufgerufen, um das Zeitgeberereignis abzubrechen, das dem Abonnement zugeordnet ist, und <xref:System.Workflow.Runtime.Hosting.WorkflowSchedulerService.Schedule%28System.Threading.WaitCallback%2CSystem.Guid%2CSystem.DateTime%2CSystem.Guid%29?displayProperty=nameWithType> wird aufgerufen, um ein Zeitgeberereignis für das Abonnement zu planen, das sich jetzt am Anfang der Warteschlange befindet. <xref:System.Workflow.Runtime.TimerEventSubscriptionCollection.Remove%28System.Guid%29> ist threadsicher.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="item" /> ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.TimerEventSubscriptionCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt ab, mit dem der Zugriff auf <see cref="T:System.Workflow.Runtime.TimerEventSubscriptionCollection" /> synchronisiert werden kann.</summary>
+        <value>Ein Objekt, mit dem der Zugriff auf die <see cref="T:System.Workflow.Runtime.TimerEventSubscriptionCollection" /> synchronisiert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.TimerEventSubscriptionCollection.SyncRoot%2A> gibt ein Objekt zurück, mit dem der Zugriff auf <xref:System.Workflow.Runtime.TimerEventSubscriptionCollection> synchronisiert werden kann.  
+  
+ Der Zugriff auf die <xref:System.Workflow.Runtime.TimerEventSubscriptionCollection> ist synchronisiert. Die Enumeration einer Auflistung ist systemintern jedoch keine threadsichere Prozedur. Selbst wenn eine Auflistung synchronisiert wird, besteht die Möglichkeit, dass andere Threads sie ändern. Dies führt dazu, dass der Enumerator eine Ausnahme auslöst. Um während der Enumeration Threadsicherheit zu gewährleisten, können Sie entweder die <xref:System.Workflow.Runtime.TimerEventSubscriptionCollection> während der gesamten Enumeration sperren, indem Sie <xref:System.Workflow.Runtime.TimerEventSubscriptionCollection.SyncRoot%2A> verwenden, oder Sie können die durch andere Threads aufgrund von Änderungen ausgelösten Ausnahmen abfangen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimerCollectionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Workflow.ComponentModel.DependencyProperty TimerCollectionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Workflow.ComponentModel.DependencyProperty TimerCollectionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.Runtime.TimerEventSubscriptionCollection.TimerCollectionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Timerwarteschlange, die einer Workflowinstanz zugeordnet ist. Diese Warteschlange enthält nach Zeit geordnete <see cref="T:System.Workflow.Runtime.TimerEventSubscription" />-Objekte für einen Workflow.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,129 @@
+<Type Name="FlatStyle" FullName="System.Windows.Forms.FlatStyle">
+  <TypeSignature Language="C#" Value="public enum FlatStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FlatStyle extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.FlatStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Darstellung eines Steuerelements.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird von Elementen verwendet, z. B. <xref:System.Windows.Forms.ButtonBase.FlatStyle%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.GroupBox.FlatStyle%2A?displayProperty=nameWithType>, und <xref:System.Windows.Forms.Label.FlatStyle%2A?displayProperty=nameWithType>.  
+  
+ Im Fall der Popup-Schaltfläche steuert diese Enumeration einige Verhalten sowie die Darstellung. Das Popup-Stil-Steuerelement wird zunächst der Flatfile angezeigt, bis der Mauszeiger darüber bewegt wird. Wenn der Mauszeiger über dem Popup-Steuerelement bewegt wird, wird es als ein Standard-Stil-Steuerelement angezeigt, bis der Mauszeiger die Form von es verschoben wird, erneut aus.  
+  
+ Wenn das System-Format wird verwendet, die Darstellung des Steuerelements vom Betriebssystem des Benutzers bestimmt wird und die folgenden Eigenschaftenwerte werden ignoriert: <xref:System.Windows.Forms.Control.BackgroundImage%2A?displayProperty=nameWithType>, `ImageAlign`, `Image`, `ImageIndex`, `ImageList`, und `TextAlign`. Darüber hinaus die <xref:System.Windows.Forms.Control.BackColor%2A?displayProperty=nameWithType> für Schaltflächen-Steuerelemente Eigenschaft ignoriert werden. Wenn unterstützt, können Benutzer die Darstellung der Steuerelemente ändern, indem die darstellungseinstellungen des Betriebssystems anpassen.  
+  
+> [!NOTE]
+>  Wenn die <xref:System.Windows.Forms.ButtonBase.FlatStyle%2A> Eigenschaft von der <xref:System.Windows.Forms.RadioButton> und <xref:System.Windows.Forms.CheckBox> Klassen System festgelegt ist, das Steuerelement wird vom Betriebssystem des Benutzers gezeichnet und die Ausrichtung des Kontrollkästchens basiert auf der `CheckAlign` und <xref:System.Windows.Forms.ButtonBase.TextAlign%2A?displayProperty=nameWithType> Eigenschaftswerte. Die `CheckAlign` Eigenschaftswert wird nicht geändert, jedoch kann die Darstellung des Steuerelements beeinflusst werden. Das Kontrollkästchen mit der linken oder rechten Rands des Steuerelements (eine Ausrichtung nach links oder Center erscheint links ausgerichtete, rechts bleibt unverändert), horizontal ausgerichtet ist und identisch mit den beschreibenden Text vertikal ausgerichtet. Angenommen, Sie haben eine <xref:System.Windows.Forms.CheckBox> steuern mit eine `CheckAlign` Eigenschaftswert <xref:System.Drawing.ContentAlignment?displayProperty=nameWithType> und ein <xref:System.Windows.Forms.ButtonBase.TextAlign%2A> Eigenschaftswert <xref:System.Drawing.ContentAlignment?displayProperty=nameWithType>, und die <xref:System.Windows.Forms.ButtonBase.FlatStyle%2A> Eigenschaftswert auf System festgelegt ist, wird die Ausrichtung für Kontrollkästchen werden angezeigt <xref:System.Drawing.ContentAlignment?displayProperty=nameWithType> während die Ausrichtung des Texts unverändert bleibt.  
+  
+> [!CAUTION]
+>  Festlegen der `FlatStyle` Eigenschaft System ist nicht empfehlenswert, Sie müssen zum Anzeigen eines Bilds für ein Steuerelement, zeigen Sie ein Bild als Hintergrund des Steuerelements oder bei präzise textausrichtung.  
+  
+   
+  
+## Examples  
+ Im folgenden ist ein Beispiel für ein Manifest, um Ihre Anwendung die visuellen Stile in Windows XP verfügbaren unterstützen bei Verwendung von Version 1.0 von .NET Framework zu ermöglichen. Das Manifest kann die Anwendung als eine Ressource oder als eigenständige Textdatei hinzugefügt werden. Die Manifestdatei befindet sich im gleichen Verzeichnis wie die ausführbare Datei, und der Name der Textdatei muss den vollständigen Namen der ausführbaren Datei mit einer zusätzlichen Datei Namen Erweiterung of.manifest sein. Beispielsweise wäre die Manifestdatei für MyApp.exe MyApp.exe.manifest. In diesem Beispiel wird vorausgesetzt, dass die `FlatStyle` Eigenschaften der Steuerelemente in der Anwendung auf System festgelegt werden.  
+  
+```  
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
+ <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
+ <assemblyIdentity  
+     version="1.0.0.0"  
+     processorArchitecture="X86"  
+     name="CompanyName.ProductName.YourApplication"  
+     type="win32"  
+ />  
+ <description>Your application description here.</description>  
+ <dependency>  
+     <dependentAssembly>  
+         <assemblyIdentity  
+             type="win32"  
+             name="Microsoft.Windows.Common-Controls"  
+             version="6.0.0.0"  
+             processorArchitecture="X86"  
+             publicKeyToken="6595b64144ccf1df"  
+             language="*"  
+         />  
+     </dependentAssembly>  
+ </dependency>  
+ </assembly>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Flat">
+      <MemberSignature Language="C#" Value="Flat" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.FlatStyle Flat = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.FlatStyle.Flat" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FlatStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Steuerelement wird flach dargestellt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Popup">
+      <MemberSignature Language="C#" Value="Popup" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.FlatStyle Popup = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.FlatStyle.Popup" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FlatStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Steuerelement wird flach dargestellt, bis der Mauszeiger darüber bewegt wird an diesem Punkt wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Standard">
+      <MemberSignature Language="C#" Value="Standard" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.FlatStyle Standard = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.FlatStyle.Standard" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FlatStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Steuerelement wird dreidimensional angezeigt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="System">
+      <MemberSignature Language="C#" Value="System" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.FlatStyle System = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.FlatStyle.System" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FlatStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Darstellung des Steuerelements wird vom Betriebssystem des Benutzers bestimmt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

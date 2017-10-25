@@ -1,0 +1,158 @@
+<Type Name="DragEventArgs" FullName="System.Windows.DragEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class DragEventArgs : System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DragEventArgs extends System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.DragEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.RoutedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Argumente, die relevant für alle Ereignisse für Drag &amp; Drop (<see cref="E:System.Windows.DragDrop.DragEnter" />, <see cref="E:System.Windows.DragDrop.DragLeave" />, <see cref="E:System.Windows.DragDrop.DragOver" />, und <see cref="E:System.Windows.DragDrop.Drop" />).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllowedEffects">
+      <MemberSignature Language="C#" Value="public System.Windows.DragDropEffects AllowedEffects { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.DragDropEffects AllowedEffects" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DragEventArgs.AllowedEffects" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DragDropEffects</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Mitglied der <see cref="T:System.Windows.DragDropEffects" /> -Enumeration, der angibt, welche Vorgänge durch den Ersteller des Ziehereignisses zulässig sind.</summary>
+        <value>Ein Mitglied der <see cref="T:System.Windows.DragDropEffects" /> -Enumeration, der angibt, welche Vorgänge durch den Ersteller des Ziehereignisses zulässig sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Drag & Drop-Vorgang initiiert wird, durch Aufrufen der <xref:System.Windows.DragDrop.DoDragDrop%2A> -Methode, zulässige Vorgänge sind angegeben, mit einem Mitglied der <xref:System.Windows.DragDropEffects> Enumeration. Z. B. beim Ziehen einer schreibgeschützten Datei herausstellt der Ziehvorgang, dass die Datei kopiert, jedoch nicht verschoben werden kann.  Untersuchen Sie bevor Sie versuchen, einen Vorgang auf die gezogenen Daten auszuführen diese Eigenschaft, um sicherzustellen, dass der Vorgang zulässig ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Data">
+      <MemberSignature Language="C#" Value="public System.Windows.IDataObject Data { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.IDataObject Data" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DragEventArgs.Data" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.IDataObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt, das die entsprechenden Drag-Ereignis zugeordneten Daten enthält.</summary>
+        <value>Ein Objekt, das die entsprechenden Drag-Ereignis zugeordneten Daten enthält...</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Effects">
+      <MemberSignature Language="C#" Value="public System.Windows.DragDropEffects Effects { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.DragDropEffects Effects" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DragEventArgs.Effects" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DragDropEffects</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Ziel-Drag &amp; Drop-Vorgang.</summary>
+        <value>Ein Mitglied der <see cref="T:System.Windows.DragDropEffects" /> -Enumeration, die Ziel-Drag &amp; Drop-Vorgang angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig bestimmt, die in dieser Eigenschaft angegebenen den Mauszeiger für das Ziel eines Drag-and-Drop-Vorgangs. Dies ist nützlich zum Bereitstellen von Feedback für den Benutzer für den Vorgang, der auftritt, wenn das entsprechende Objekt gelöscht wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPosition">
+      <MemberSignature Language="C#" Value="public System.Windows.Point GetPosition (System.Windows.IInputElement relativeTo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Point GetPosition(class System.Windows.IInputElement relativeTo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragEventArgs.GetPosition(System.Windows.IInputElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relativeTo" Type="System.Windows.IInputElement" />
+      </Parameters>
+      <Docs>
+        <param name="relativeTo">Ein <see cref="T:System.Windows.IInputElement" /> Objekt für die eine relative Ablagepunkt abgerufen.</param>
+        <summary>Gibt einen Dropdownliste an, mit einem angegebenen relativen <see cref="T:System.Windows.IInputElement" />.</summary>
+        <returns>Eine, die relativ zum Element im angegebenen Ablagepunkt <paramref name="relativeTo" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Wird ausgelöst, wenn <paramref name="relativeTo" /> ist **null**.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeEventHandler">
+      <MemberSignature Language="C#" Value="protected override void InvokeEventHandler (Delegate genericHandler, object genericTarget);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InvokeEventHandler(class System.Delegate genericHandler, object genericTarget) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragEventArgs.InvokeEventHandler(System.Delegate,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="genericHandler" Type="System.Delegate" />
+        <Parameter Name="genericTarget" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="genericHandler">To be added.</param>
+        <param name="genericTarget">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyStates">
+      <MemberSignature Language="C#" Value="public System.Windows.DragDropKeyStates KeyStates { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.DragDropKeyStates KeyStates" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DragEventArgs.KeyStates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DragDropKeyStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Flagenumeration, der angibt, dem aktuellen Pufferzustand die UMSCHALTTASTE, STRG und ALT sowie den Zustand der Maustasten ab.</summary>
+        <value>Mindestens ein Mitglied der <see cref="T:System.Windows.DragDropKeyStates" /> Flagenumeration.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abhängig vom Status eines bestimmten Schlüssels kann die Auswirkungen eines Drag-and-Drop-Vorgangs angepasst werden. Z. B. werden abhängig davon, ob die Tasten STRG oder UMSCHALT während des Drag-and-Drop-Vorgangs gedrückt werden Daten entweder kopiert oder verschoben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

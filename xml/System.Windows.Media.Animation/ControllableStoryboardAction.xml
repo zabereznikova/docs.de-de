@@ -1,0 +1,51 @@
+<Type Name="ControllableStoryboardAction" FullName="System.Windows.Media.Animation.ControllableStoryboardAction">
+  <TypeSignature Language="C#" Value="public abstract class ControllableStoryboardAction : System.Windows.TriggerAction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ControllableStoryboardAction extends System.Windows.TriggerAction" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.ControllableStoryboardAction" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.TriggerAction</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bearbeitet ein <see cref="T:System.Windows.Media.Animation.Storyboard" />, das durch eine <see cref="T:System.Windows.Media.Animation.BeginStoryboard" />-Aktion angewendet wurde.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="pause-resume-stop-or-otherwise-control-a-storyboard-interactively"></a>Anhalten, fortsetzen, beenden oder ein Storyboard interaktiv steuern  
+ Zum Anhalten der Lage, fortsetzen oder steuern eine <xref:System.Windows.Media.Animation.BeginStoryboard.Storyboard%2A> interaktiv verwenden, legen Sie die <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> Eigenschaft seine <xref:System.Windows.Media.Animation.BeginStoryboard> und verwenden eine <xref:System.Windows.Media.Animation.ControllableStoryboardAction> Objekt (z. B. <xref:System.Windows.Media.Animation.PauseStoryboard>, <xref:System.Windows.Media.Animation.ResumeStoryboard>, oder <xref:System.Windows.Media.Animation.StopStoryboard>) steuern, indem sie Verweisen auf die <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A>. Wenn die <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> von <xref:System.Windows.Media.Animation.BeginStoryboard> ist nicht vorgegeben, die <xref:System.Windows.Media.Animation.BeginStoryboard.Storyboard%2A> nicht interaktiv gesteuert werden, nachdem es gestartet wurde. Finden Sie unter [wie: Verwenden von Ereignistriggern zur Steuerung einer Storyboard nach Beginn](~/docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md) für Weitere Informationen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginStoryboardName">
+      <MemberSignature Language="C#" Value="public string BeginStoryboardName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BeginStoryboardName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.ControllableStoryboardAction.BeginStoryboardName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <see cref="P:System.Windows.Media.Animation.BeginStoryboard.Name" /> von der <see cref="T:System.Windows.Media.Animation.BeginStoryboard" /> , beginnt die <see cref="T:System.Windows.Media.Animation.Storyboard" /> Sie interaktiv steuern möchten.</summary>
+        <value>Die <see cref="P:System.Windows.Media.Animation.BeginStoryboard.Name" /> von der <see cref="T:System.Windows.Media.Animation.BeginStoryboard" /> , beginnt die <see cref="T:System.Windows.Media.Animation.Storyboard" /> Sie interaktiv steuern möchten. Der Standardwert ist <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

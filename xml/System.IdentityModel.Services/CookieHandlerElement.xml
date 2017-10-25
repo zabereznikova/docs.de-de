@@ -1,0 +1,363 @@
+<Type Name="CookieHandlerElement" FullName="System.IdentityModel.Services.CookieHandlerElement">
+  <TypeSignature Language="C#" Value="public class CookieHandlerElement : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CookieHandlerElement extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Services.CookieHandlerElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die <see langword="&lt;cookieHandler&gt;" /> Konfigurationselement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `<cookieHandler>` Element ist ein untergeordnetes Element von der `<federatedAuthentication>` Element; das <xref:System.IdentityModel.Services.Configuration.FederationConfiguration.CookieHandler%2A?displayProperty=nameWithType> Eigenschaftensatz mit einer Instanz von der <xref:System.IdentityModel.Services.CookieHandlerElement> Klasse. Die `<cookieHandler>` Element dient zum Konfigurieren des Cookie-Handlers verwendet, von der Sitzung Authentifizierung Modul (SAM), der dargestellt wird, indem Sie die <xref:System.IdentityModel.Services.SessionAuthenticationModule> Klasse.  
+  
+ Ein Cookie-Handler kann in einem der folgenden Arten konfiguriert werden:  
+  
+-   Um einen Handler aufgeteilte Cookie zu konfigurieren, legen die <xref:System.IdentityModel.Services.CookieHandlerElement.Mode%2A> -Eigenschaft entweder <xref:System.IdentityModel.Services.CookieHandlerMode.Default> oder <xref:System.IdentityModel.Services.CookieHandlerMode.Chunked> und legen Sie die <xref:System.IdentityModel.Services.CookieHandlerElement.ChunkedCookieHandler%2A> Eigenschaft mit dem das Konfigurationselement für den Handler aufgeteilte Cookie. Die <xref:System.IdentityModel.Services.CookieHandlerElement.CustomCookieHandler%2A> Eigenschaft sollte nicht festgelegt werden.  
+  
+-   Um einen Handler aufgeteilte Cookie mit die Standardblockgröße konfigurieren, können Sie festlegen der <xref:System.IdentityModel.Services.CookieHandlerElement.Mode%2A> Eigenschaft wie bereits erwähnt, die beide, jedoch nicht die <xref:System.IdentityModel.Services.CookieHandlerElement.ChunkedCookieHandler%2A> und <xref:System.IdentityModel.Services.CookieHandlerElement.CustomCookieHandler%2A> nicht festgelegte Eigenschaften.  
+  
+-   Um einen benutzerdefinierten Cookie-Handler zu konfigurieren, legen die <xref:System.IdentityModel.Services.CookieHandlerElement.Mode%2A> Eigenschaft <xref:System.IdentityModel.Services.CookieHandlerMode.Custom> und legen Sie die <xref:System.IdentityModel.Services.CookieHandlerElement.CustomCookieHandler%2A> Eigenschaft mit dem Konfigurationselement, das den Typ des benutzerdefinierten Cookie Handler identifiziert. Dieser Typ leiten sich aus der <xref:System.IdentityModel.Services.CookieHandler> Klasse. Die <xref:System.IdentityModel.Services.CookieHandlerElement.ChunkedCookieHandler%2A> Eigenschaft sollte nicht festgelegt werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CookieHandlerElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.CookieHandlerElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Services.CookieHandlerElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChunkedCookieHandler">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Services.ChunkedCookieHandlerElement ChunkedCookieHandler { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Services.ChunkedCookieHandlerElement ChunkedCookieHandler" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.CookieHandlerElement.ChunkedCookieHandler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("chunkedCookieHandler", IsRequired=false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Services.ChunkedCookieHandlerElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt einen aufgeteilte Cookie-Handler.</summary>
+        <value>Ein <see cref="T:System.IdentityModel.Services.ChunkedCookieHandlerElement" /> , der weitere Konfiguration für den Handler aufgeteilte Cookie bereitstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist identisch mit der `<chunkedCookieHandler>` untergeordnetes Element von der `<cookieHandler>` Element. Es gibt einen aufgeteilte Cookie-Handler einer Instanz von der <xref:System.IdentityModel.Services.ChunkedCookieHandler> -Klasse zu verwenden. Wenn sie festgelegt ist, die <xref:System.IdentityModel.Services.CookieHandlerElement.Mode%2A> Eigenschaft sollte festgelegt werden entweder <xref:System.IdentityModel.Services.CookieHandlerMode.Default> oder <xref:System.IdentityModel.Services.CookieHandlerMode.Chunked>. Wenn die <xref:System.IdentityModel.Services.CookieHandlerElement.Mode%2A> Eigenschaft auf einen der folgenden Werte festgelegt ist, aber die <xref:System.IdentityModel.Services.CookieHandlerElement.ChunkedCookieHandler%2A> Eigenschaft nicht festgelegt ist, wird eine aufgeteilte Cookie-Ereignishandler durch die Standardblockgröße (<xref:System.IdentityModel.Services.ChunkedCookieHandler.DefaultChunkSize?displayProperty=nameWithType>) konfiguriert ist.  
+  
+ Entweder die <xref:System.IdentityModel.Services.CookieHandlerElement.ChunkedCookieHandler%2A> Eigenschaft oder die <xref:System.IdentityModel.Services.CookieHandlerElement.CustomCookieHandler%2A> Eigenschaft möglicherweise Satz, aber nicht beides.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomCookieHandler">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Configuration.CustomTypeElement CustomCookieHandler { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Configuration.CustomTypeElement CustomCookieHandler" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.CookieHandlerElement.CustomCookieHandler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("customCookieHandler", IsRequired=false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Configuration.CustomTypeElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt diese fest benutzerdefinierten cookiehandlertyp. Diese Eigenschaft muss festgelegt werden, wenn Sie ein benutzerdefinierten Cookie-Handler konfiguriert wird.</summary>
+        <value>Ein <see cref="T:System.IdentityModel.Configuration.CustomTypeElement" /> , der die benutzerdefinierte cookiehandlertyp definiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist identisch mit der `<customCookieHandler>` untergeordnetes Element von der `<cookieHandler>` Element. Es gibt benutzerdefinierte cookiehandlertyp verwenden. Wenn diese Eigenschaft festgelegt ist, die <xref:System.IdentityModel.Services.CookieHandlerElement.Mode%2A> Eigenschaft muss festgelegt werden, um <xref:System.IdentityModel.Services.CookieHandlerMode.Custom>. Der benutzerdefinierte Typ, der von dieser Eigenschaft angegebenen abgeleitet werden muss die <xref:System.IdentityModel.Services.CookieHandler> Klasse.  
+  
+ Entweder die <xref:System.IdentityModel.Services.CookieHandlerElement.ChunkedCookieHandler%2A> Eigenschaft oder die <xref:System.IdentityModel.Services.CookieHandlerElement.CustomCookieHandler%2A> Eigenschaft möglicherweise Satz, aber nicht beides.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Domain">
+      <MemberSignature Language="C#" Value="public string Domain { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Domain" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.CookieHandlerElement.Domain" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("domain", IsRequired=false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt die Domänenwert für Cookies, die vom Handler geschrieben.</summary>
+        <value>Der Domänenwert. Der Standardwert ist eine leere Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Stellt die `domain` Attribut von der [ &lt;"cookiehandler"&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md) Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetConfiguredCookieHandler">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Services.CookieHandler GetConfiguredCookieHandler ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IdentityModel.Services.CookieHandler GetConfiguredCookieHandler() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.CookieHandlerElement.GetConfiguredCookieHandler" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Services.CookieHandler</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen neuen Cookie-Ereignishandler auf Basis der Konfigurationseigenschaften ab.</summary>
+        <returns>Der Cookie-Handler. Dies ist eine Instanz von wird <see cref="T:System.IdentityModel.Services.CookieHandler" /> oder <see cref="T:System.IdentityModel.Services.ChunkedCookieHandler" /> je nach Art der Handler, der durch die Eigenschaften der aktuellen Instanz konfiguriert ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt einen Cookie-Handler, der mit der Konfiguration konsistent ist. Der Cookie-Handler zurückgegeben werden, einen Handler aufgeteilte Cookie oder einen benutzerdefinierten Cookie Handler abhängig davon, wie die Konfigurationseigenschaften festgelegt werden. Weitere Informationen finden Sie unter <xref:System.IdentityModel.Services.CookieHandlerElement>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">Ein Cookie-Handler kann nicht aus den Eigenschaften der aktuellen Instanz nicht erstellt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HideFromScript">
+      <MemberSignature Language="C#" Value="public bool HideFromScript { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HideFromScript" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.CookieHandlerElement.HideFromScript" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("hideFromScript", DefaultValue=Mono.Cecil.CustomAttributeArgument, IsRequired=false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see langword="httpOnly" /> Eigenschaft Cookies geschrieben, die von diesem Handler sollte festgelegt werden.</summary>
+        <value>
+          <see langword="true" />Wenn die <see langword="httpOnly" /> Eigenschaft muss festgelegt wurde, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Steuert, ob das Flag "HttpOnly" für Cookies geschrieben ausgegeben wird. Bestimmte Webbrowsern Auswirkungen dieses Flag durch Speicherung der Zugriff auf den Cookiewert Skriptdatei auf Clientseite.  
+  
+ Stellt die `hideFromScript` Attribut von der [ &lt;"cookiehandler"&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md) Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Services.CookieHandlerMode Mode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IdentityModel.Services.CookieHandlerMode Mode" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.CookieHandlerElement.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("mode", DefaultValue=Mono.Cecil.CustomAttributeArgument, IsRequired=false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Services.CookieHandlerMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Handler Cookiemodus.</summary>
+        <value>Ein gültiger <see cref="T:System.IdentityModel.Services.CookieHandlerMode" /> -Wert, der die Art der Cookie-Handler gibt an, die konfiguriert wird. Der Standardwert ist <see cref="F:System.IdentityModel.Services.CookieHandlerMode.Default" />, gibt einen Handler aufgeteilte Cookie an.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für aufgeteilte Cookie Handler (den <xref:System.IdentityModel.Services.CookieHandlerElement.ChunkedCookieHandler%2A> festgelegt wird), der Modus sollte festgelegt werden entweder <xref:System.IdentityModel.Services.CookieHandlerMode.Chunked> oder <xref:System.IdentityModel.Services.CookieHandlerMode.Default>. Für einen benutzerdefinierten Cookie-Handler (den <xref:System.IdentityModel.Services.CookieHandlerElement.CustomCookieHandler%2A> festgelegt wird), der Modus sollte festgelegt werden, um <xref:System.IdentityModel.Services.CookieHandlerMode.Custom>.  
+  
+ Stellt die `mode` Attribut von der [ &lt;"cookiehandler"&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md) Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.CookieHandlerElement.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("name", IsRequired=false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Basisnamen für alle Cookies vom Handler geschrieben.</summary>
+        <value>Der Basisname für die Cookies. Der Standardwert ist "FedAuth".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Stellt die `name` Attribut von der [ &lt;"cookiehandler"&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md) Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.CookieHandlerElement.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("path", IsRequired=false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt der Pfadwert für Cookies, die vom Handler geschrieben.</summary>
+        <value>Eine Zeichenfolge, die den Pfad enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn kein Pfad definiert ist, wird der Pfad von definiert die <xref:System.Web.HttpRuntime.AppDomainAppVirtualPath%2A> Eigenschaft wird verwendet.  
+  
+ Stellt die `path` Attribut von der [ &lt;"cookiehandler"&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md) Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistentSessionLifetime">
+      <MemberSignature Language="C#" Value="public TimeSpan PersistentSessionLifetime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan PersistentSessionLifetime" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.CookieHandlerElement.PersistentSessionLifetime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("persistentSessionLifetime", DefaultValue=Mono.Cecil.CustomAttributeArgument, IsRequired=false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.TimeSpanValidator(MaxValueString="365.0:0:0", MinValueString="0:0:0")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Lebensdauer von Cookies, die vom Handler ausgegeben.</summary>
+        <value>Ein <see cref="T:System.TimeSpan" /> , die die Lebensdauer des Cookies darstellt. Der Standardwert ist 0 Tage ("0.0:0:0"). Der Wert muss ein Wert zwischen 0 ("0.0:0:0") und 365 Tagen für ("365.0:0:0") sein.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Stellt die `persistentSessionLifetime` Attribut von der [ &lt;"cookiehandler"&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md) Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequireSsl">
+      <MemberSignature Language="C#" Value="public bool RequireSsl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequireSsl" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.CookieHandlerElement.RequireSsl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("requireSsl", DefaultValue=Mono.Cecil.CustomAttributeArgument, IsRequired=false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Cookie nur mit SSL verwendet werden soll.</summary>
+        <value>
+          <see langword="true" />Wenn das Cookie nur über eine SSL-Verbindung verwendet werden soll; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Steuert, ob das Kennzeichen "Secure" für Cookies geschrieben ausgegeben werden. Wenn dieser Wert ist `true`, die Anmeldeseite Sitzungscookies stehen nur zur Verfügung über HTTPS.  
+  
+ Stellt die `requireSSL` Attribut von der [ &lt;"cookiehandler"&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md) Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

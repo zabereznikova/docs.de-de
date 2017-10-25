@@ -1,0 +1,427 @@
+<Type Name="DebuggerVisualizerAttribute" FullName="System.Diagnostics.DebuggerVisualizerAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DebuggerVisualizerAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DebuggerVisualizerAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.DebuggerVisualizerAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Struct, AllowMultiple=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass der Typ eine Schnellansicht. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Attribut kann auf Assemblyebene verwendet werden. Der Attributkonstruktoren dauern in der Regel zwei Arten.  Die beiden Typen sind eine Schnellansicht und eine Schnellansicht-Objektquelle, angegeben als Datentypen oder als Typ für den vollqualifizierten Assemblynamen. Die zweite Option bereitgestellt wird, muss die Schnellansicht-Assembly nicht von der Assembly mit verwiesen wird, die <xref:System.Diagnostics.DebuggerVisualizerAttribute>. Dadurch wird einen Komponentenersteller so liefern Sie die Schnellansicht in einer DLL nur beim Debuggen aufgerufen werden. Die <xref:System.Diagnostics.DebuggerVisualizerAttribute.Description%2A> Eigenschaft gibt die Schnellansicht-Beschreibung, die im Dropdown-Feld angezeigt wird. Der Zielparameter geben den Typ, der das Ziel der Schnellansicht ist. Weitere Informationen zu Schnellansichten, finden Sie unter [erstellen benutzerdefinierte Schnellansichten](http://msdn.microsoft.com/library/c24c006f-f2ac-429f-89db-677fc0c6e1ea).  
+  
+> [!NOTE]
+>  Schnellansicht und Schnellansicht Objekt Source-Implementierung der hosting-Debugger abhängig ist.  Weitere Informationen zum Erstellen einer Schnellansicht für [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)], finden Sie unter [wie: Schreiben einer Schnellansicht](http://msdn.microsoft.com/library/625a0d4f-abcc-43f2-9f8c-31c131a4378e).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DebuggerVisualizerAttribute (string visualizerTypeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string visualizerTypeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DebuggerVisualizerAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="visualizerTypeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="visualizerTypeName">Der vollqualifizierte Typname der Schnellansicht.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.DebuggerVisualizerAttribute" /> -Klasse und gibt den Typnamen der Schnellansicht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.DebuggerVisualizerAttribute> auf Assemblys, Klassen und Strukturen angewendet werden können. Informationen zur Verwendung dieses Attributs finden Sie unter [wie: Schreiben einer Schnellansicht](http://msdn.microsoft.com/library/625a0d4f-abcc-43f2-9f8c-31c131a4378e).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DebuggerVisualizerAttribute (Type visualizer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type visualizer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DebuggerVisualizerAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="visualizer" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="visualizer">Der Typ der Schnellansicht.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Diagnostics.DebuggerVisualizerAttribute" />-Klasse unter Angabe des Schnellansichtstyps.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.DebuggerVisualizerAttribute> auf Assemblys, Klassen und Strukturen angewendet werden können. Informationen zur Verwendung dieses Attributs finden Sie unter [wie: Schreiben einer Schnellansicht](http://msdn.microsoft.com/library/625a0d4f-abcc-43f2-9f8c-31c131a4378e).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="visualizer" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DebuggerVisualizerAttribute (string visualizerTypeName, string visualizerObjectSourceTypeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string visualizerTypeName, string visualizerObjectSourceTypeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DebuggerVisualizerAttribute.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="visualizerTypeName" Type="System.String" />
+        <Parameter Name="visualizerObjectSourceTypeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="visualizerTypeName">Der vollqualifizierte Typname der Schnellansicht.</param>
+        <param name="visualizerObjectSourceTypeName">Der vollqualifizierte Typname der Schnellansicht-Objektquelle.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.DebuggerVisualizerAttribute" /> -Klasse unter Angabe des Typnamens der Schnellansicht und den Typnamen der Schnellansicht-Objektquelle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.DebuggerVisualizerAttribute> auf Assemblys, Klassen und Strukturen angewendet werden können. Informationen zur Verwendung dieses Attributs finden Sie unter [wie: Schreiben einer Schnellansicht](http://msdn.microsoft.com/library/625a0d4f-abcc-43f2-9f8c-31c131a4378e).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DebuggerVisualizerAttribute (string visualizerTypeName, Type visualizerObjectSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string visualizerTypeName, class System.Type visualizerObjectSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DebuggerVisualizerAttribute.#ctor(System.String,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="visualizerTypeName" Type="System.String" />
+        <Parameter Name="visualizerObjectSource" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="visualizerTypeName">Der vollqualifizierte Typname der Schnellansicht.</param>
+        <param name="visualizerObjectSource">Der Typ der Schnellansicht-Objektquelle.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.DebuggerVisualizerAttribute" /> -Klasse unter Angabe der Typname der Schnellansicht und den Typ der Schnellansicht-Objektquelle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.DebuggerVisualizerAttribute> auf Assemblys, Klassen und Strukturen angewendet werden können. Informationen zur Verwendung dieses Attributs finden Sie unter [wie: Schreiben einer Schnellansicht](http://msdn.microsoft.com/library/625a0d4f-abcc-43f2-9f8c-31c131a4378e).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="visualizerObjectSource" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DebuggerVisualizerAttribute (Type visualizer, string visualizerObjectSourceTypeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type visualizer, string visualizerObjectSourceTypeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DebuggerVisualizerAttribute.#ctor(System.Type,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="visualizer" Type="System.Type" />
+        <Parameter Name="visualizerObjectSourceTypeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="visualizer">Der Typ der Schnellansicht.</param>
+        <param name="visualizerObjectSourceTypeName">Der vollqualifizierte Typname der Schnellansicht-Objektquelle.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Diagnostics.DebuggerVisualizerAttribute" />-Klasse und gibt den Typ der Schnellansicht und den Typnamen der Schnellansicht-Objektquelle zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.DebuggerVisualizerAttribute> auf Assemblys, Klassen und Strukturen angewendet werden können. Informationen zur Verwendung dieses Attributs finden Sie unter [wie: Schreiben einer Schnellansicht](http://msdn.microsoft.com/library/625a0d4f-abcc-43f2-9f8c-31c131a4378e).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="visualizer" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DebuggerVisualizerAttribute (Type visualizer, Type visualizerObjectSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type visualizer, class System.Type visualizerObjectSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DebuggerVisualizerAttribute.#ctor(System.Type,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="visualizer" Type="System.Type" />
+        <Parameter Name="visualizerObjectSource" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="visualizer">Der Typ der Schnellansicht.</param>
+        <param name="visualizerObjectSource">Der Typ der Schnellansicht-Objektquelle.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Diagnostics.DebuggerVisualizerAttribute" />-Klasse und gibt den Typ der Schnellansicht und den Typ der Schnellansicht-Objektquelle zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.DebuggerVisualizerAttribute> auf Assemblys, Klassen und Strukturen angewendet werden können. Informationen zur Verwendung dieses Attributs finden Sie unter [wie: Schreiben einer Schnellansicht](http://msdn.microsoft.com/library/625a0d4f-abcc-43f2-9f8c-31c131a4378e).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="visualizerObjectSource" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.DebuggerVisualizerAttribute.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Beschreibung der Schnellansicht.</summary>
+        <value>Die Beschreibung der Schnellansicht.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Target">
+      <MemberSignature Language="C#" Value="public Type Target { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Target" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.DebuggerVisualizerAttribute.Target" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Zieltyp aus, wenn das Attribut auf Assemblyebene angewendet wird.</summary>
+        <value>Der Typ, der das Ziel der Schnellansicht ist.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert kann nicht festgelegt werden, da es sich handelt <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetTypeName">
+      <MemberSignature Language="C#" Value="public string TargetTypeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.DebuggerVisualizerAttribute.TargetTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den vollqualifizierten Typnamen fest, wenn das Attribut auf Assemblyebene angewendet wird.</summary>
+        <value>Der vollqualifizierte Typname des Zieltyps.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Name zurückgegeben wird, wenn das Ziel nach Typ (anstatt nach dem Typennamen) angegeben wurde, die <xref:System.Type.AssemblyQualifiedName%2A> Eigenschaft des Zieltyps.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisualizerObjectSourceTypeName">
+      <MemberSignature Language="C#" Value="public string VisualizerObjectSourceTypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VisualizerObjectSourceTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.DebuggerVisualizerAttribute.VisualizerObjectSourceTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den voll qualifizierten Typnamen der Schnellansicht-Objektquelle zurück.</summary>
+        <value>Der vollqualifizierte Typname der Schnellansicht-Objektquelle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Schnellansicht-Objektquelle anhand des Typs angegeben wurde, ist der zurückgegebene Wert den <xref:System.Type.AssemblyQualifiedName%2A> Eigenschaft des Typs der Schnellansicht.  
+  
+ Für eine Schnellansicht-Objektquelle erstellt [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)] sollten erben von der [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Klasse `VisualizerObjectSource` Klasse. Informationen zum Erstellen einer Schnellansicht finden Sie unter [wie: Schreiben einer Schnellansicht](http://msdn.microsoft.com/library/625a0d4f-abcc-43f2-9f8c-31c131a4378e).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisualizerTypeName">
+      <MemberSignature Language="C#" Value="public string VisualizerTypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VisualizerTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.DebuggerVisualizerAttribute.VisualizerTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den voll qualifizierten Typnamen der Schnellansicht ab.</summary>
+        <value>Der Name des vollqualifizierten Schnellansicht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Schnellansicht anhand des Typs angegeben wurde, ist der zurückgegebene Wert den <xref:System.Type.AssemblyQualifiedName%2A> Eigenschaft für den Schnellansichttyp.  
+  
+ Informationen zum Erstellen einer Schnellansicht finden Sie unter [wie: Schreiben einer Schnellansicht](http://msdn.microsoft.com/library/625a0d4f-abcc-43f2-9f8c-31c131a4378e).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

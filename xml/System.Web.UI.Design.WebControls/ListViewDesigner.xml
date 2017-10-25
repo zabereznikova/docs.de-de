@@ -1,0 +1,340 @@
+<Type Name="ListViewDesigner" FullName="System.Web.UI.Design.WebControls.ListViewDesigner">
+  <TypeSignature Language="C#" Value="public class ListViewDesigner : System.Web.UI.Design.WebControls.DataBoundControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ListViewDesigner extends System.Web.UI.Design.WebControls.DataBoundControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.ListViewDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.WebControls.DataBoundControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Entwurfszeitunterstützung in einem visuellen Designer für das <see cref="T:System.Web.UI.WebControls.ListView" />-Steuerelement bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einem visuellen Designer, wenn Sie eine Sicht-Designers wechseln (z. B. **Entwurf** anzeigen in [!INCLUDE[vs_current_short](~/includes/vs-current-short-md.md)]), wird die <xref:System.Web.UI.WebControls.ListView> Steuerelementmarkup analysiert wird. Auf der Entwurfsoberfläche wird eine Entwurfszeitversion des Steuerelements erstellt. Wenn Sie zur Quellansicht wechseln, wird das Steuerelement zur Entwurfszeit als Markup für die Webseite beibehalten.  
+  
+ Die Eigenschaften der <xref:System.Web.UI.Design.WebControls.ListViewDesigner> Klasse bieten die folgenden Funktionen:  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.ListViewDesigner.ActionLists%2A> Eigenschaft gibt eine Liste von Elementen, die verwendet werden, um einen Smarttagbereich zu erstellen.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.ListViewDesigner.SampleRowCount%2A> Eigenschaft gibt der Anzahl der Datensätze, die die <xref:System.Web.UI.WebControls.ListView> Steuerelement angezeigt wird, auf der Entwurfsoberfläche angezeigt.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.ListViewDesigner.UsePreviewControl%2A> -Eigenschaft gibt immer `true`, was bedeutet, dass der Designer eine temporäre Kopie des zugeordneten erstellt <xref:System.Web.UI.WebControls.ListView> Markup zur Entwurfszeit zu generieren.  
+  
+ Die Methoden der <xref:System.Web.UI.Design.WebControls.ListViewDesigner> Klasse bieten die folgenden Funktionen:  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.ListViewDesigner.GetDesignTimeHtml%2A> und <xref:System.Web.UI.Design.WebControls.ListViewDesigner.GetEmptyDesignTimeHtml%2A> Methoden zurück, das HTML-Markup ab, das Rendering des zugeordneten <xref:System.Web.UI.WebControls.ListView> -Steuerelements zur Entwurfszeit.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.ListViewDesigner.GetEditableDesignerRegionContent%2A> und <xref:System.Web.UI.Design.WebControls.ListViewDesigner.SetEditableDesignerRegionContent%2A> Methoden bieten Unterstützung für bearbeitbare Bereiche zur Entwurfszeit.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.ListViewDesigner.Initialize%2A> Methode bereitet den Designer zum Anzeigen, bearbeiten und Entwerfen des zugeordneten <xref:System.Web.UI.WebControls.ListView> Steuerelement.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListViewDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.ListViewDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.WebControls.ListViewDesigner" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] intern erstellt eine neue Instanz der dem <xref:System.Web.UI.Design.WebControls.ListViewDesigner> Klasse bei der Erstellung der zugeordneten <xref:System.Web.UI.WebControls.ListView> Steuerelement oder eine Kopie des Steuerelements auf der Entwurfsoberfläche angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActionLists">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.Design.DesignerActionListCollection ActionLists { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.DesignerActionListCollection ActionLists" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.ListViewDesigner.ActionLists" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerActionListCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Liste der Elemente, die dient zum Erstellen eines Smarttagbereichs für die <see cref="T:System.Web.UI.WebControls.ListView" /> Steuerelement.</summary>
+        <value>Die <see cref="T:System.ComponentModel.Design.DesignerActionListCollection" /> -Objekt, das diesem Designer zugeordnet ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.ListViewDesigner.GetDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Generiert das HTML-Markup ab, das Rendering des zugeordneten <see cref="T:System.Web.UI.WebControls.ListView" /> -Steuerelements zur Entwurfszeit.</summary>
+        <returns>Das HTML-Markup ab, das Rendering des zugeordneten <see cref="T:System.Web.UI.WebControls.ListView" /> -Steuerelements zur Entwurfszeit.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die beiden Vorlagen für erforderlichen die <xref:System.Web.UI.WebControls.ListView> Steuerelement (<xref:System.Web.UI.WebControls.ListView.LayoutTemplate%2A?displayProperty=nameWithType> und <xref:System.Web.UI.WebControls.ListView.ItemTemplate%2A?displayProperty=nameWithType>) nicht definiert sind, die <xref:System.Web.UI.Design.WebControls.ListViewDesigner.GetDesignTimeHtml> Methodenaufrufe der <xref:System.Web.UI.Design.WebControls.ListViewDesigner.GetEmptyDesignTimeHtml%2A> Methode, um das HTML-Markup generieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml (System.Web.UI.Design.DesignerRegionCollection regions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml(class System.Web.UI.Design.DesignerRegionCollection regions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.ListViewDesigner.GetDesignTimeHtml(System.Web.UI.Design.DesignerRegionCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="regions" Type="System.Web.UI.Design.DesignerRegionCollection" />
+      </Parameters>
+      <Docs>
+        <param name="regions">Eine Auflistung von Designerbereichen für den zugeordneten <see cref="T:System.Web.UI.WebControls.ListView" /> Steuerelement.</param>
+        <summary>Generiert das HTML-Markup ab, das Rendering des zugeordneten <see cref="T:System.Web.UI.WebControls.ListView" /> zur Entwurfszeit steuern und füllt die angegebene Auflistung mit den aktuell ausgewählten Bereich des Designers.</summary>
+        <returns>Das HTML-Markup ab, das Rendering des zugeordneten <see cref="T:System.Web.UI.WebControls.ListView" /> -Steuerelements zur Entwurfszeit.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEditableDesignerRegionContent">
+      <MemberSignature Language="C#" Value="public override string GetEditableDesignerRegionContent (System.Web.UI.Design.EditableDesignerRegion region);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetEditableDesignerRegionContent(class System.Web.UI.Design.EditableDesignerRegion region) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.ListViewDesigner.GetEditableDesignerRegionContent(System.Web.UI.Design.EditableDesignerRegion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="region" Type="System.Web.UI.Design.EditableDesignerRegion" />
+      </Parameters>
+      <Docs>
+        <param name="region">Die Region, in der Inhalt abgerufen werden soll.</param>
+        <summary>Gibt den Inhalt der angegebenen bearbeitbaren Bereich der Entwurfszeitansicht des zugeordneten <see cref="T:System.Web.UI.WebControls.ListView" /> Steuerelement.</summary>
+        <returns>Das HTML-Markup für die Region.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.ListViewDesigner.GetEditableDesignerRegionContent%2A> Methode überschreibt die standardmäßige Implementierung datenbereichsbasierte Bearbeitung auf der Entwurfsoberfläche unterstützen und um den Inhalt eines angegebenen Bereichs zurückzugeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEmptyDesignTimeHtml">
+      <MemberSignature Language="C#" Value="protected override string GetEmptyDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetEmptyDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.ListViewDesigner.GetEmptyDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Generiert das HTML-Markup, das darstellt eine <see cref="T:System.Web.UI.WebControls.ListView" /> -Steuerelements zur Entwurfszeit, die zur Laufzeit keine visuelle Darstellung hat.</summary>
+        <returns>Das HTML-Markup, das stellt einen <see cref="T:System.Web.UI.WebControls.ListView" /> -Steuerelements zur Entwurfszeit.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.ListViewDesigner.GetEmptyDesignTimeHtml%2A> Methode wird vom Designer zum Rendern der <xref:System.Web.UI.WebControls.ListView> zur Entwurfszeit zu steuern, wenn die beiden Vorlagen für erforderlichen die <xref:System.Web.UI.WebControls.ListView> Steuerelement (<xref:System.Web.UI.WebControls.ListView.LayoutTemplate%2A?displayProperty=nameWithType> und <xref:System.Web.UI.WebControls.ListView.ItemTemplate%2A?displayProperty=nameWithType>) sind nicht definiert. Die <xref:System.Web.UI.Design.WebControls.ListViewDesigner.GetEmptyDesignTimeHtml%2A> Methodenaufrufe der <xref:System.Web.UI.Design.ControlDesigner.CreatePlaceHolderDesignTimeHtml%28System.String%29> Methode, um einen Platzhalter zu erstellen, die den Typ und die ID des Steuerelements, und zusätzliche Anweisungen für den Benutzer anzeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.ListViewDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Das Steuerelement, das entworfen wird.</param>
+        <summary>Initialisiert den Steuerelementdesigner und lädt das angegebene Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Designerhost ruft die <xref:System.Web.UI.Design.WebControls.ListViewDesigner.Initialize%2A> Methode, wenn es der Designer zum Rendern verwenden kann die <xref:System.Web.UI.WebControls.ListView> Steuerelement. Die <xref:System.Web.UI.Design.WebControls.ListViewDesigner.Initialize%2A> -Methode und ihre Basismethoden Eigenschaften konfigurieren und Verbinden mit Ereignissen, die für den Designer erforderlich sind.  
+  
+ Die `component` Parameter ist der <xref:System.Web.UI.WebControls.ListView> Steuerelement, das diesem Designer zugeordnet, oder eine Kopie des der <xref:System.Web.UI.WebControls.ListView> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnComponentChanged">
+      <MemberSignature Language="C#" Value="public override void OnComponentChanged (object sender, System.ComponentModel.Design.ComponentChangedEventArgs ce);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnComponentChanged(object sender, class System.ComponentModel.Design.ComponentChangedEventArgs ce) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.ListViewDesigner.OnComponentChanged(System.Object,System.ComponentModel.Design.ComponentChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="ce" Type="System.ComponentModel.Design.ComponentChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Die Quelle des Ereignisses.</param>
+        <param name="ce">Die Ereignisdaten.</param>
+        <summary>Tritt auf, wenn das zugeordnete Steuerelement geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.ListViewDesigner.OnComponentChanged%2A> Methode überschreibt die basisimplementierung zum änderungsbenachrichtigungen ignoriert werden, während Sie eine Vorlage-Inhalt im Markup Seite beibehalten.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie außer Kraft setzen <see cref="M:System.Web.UI.Design.WebControls.ListViewDesigner.OnComponentChanged(System.Object,System.ComponentModel.Design.ComponentChangedEventArgs)" /> in einer abgeleiteten Klasse sicher, dass Sie der Basisklasse aufrufen, <see cref="M:System.Web.UI.Design.WebControls.ListViewDesigner.OnComponentChanged(System.Object,System.ComponentModel.Design.ComponentChangedEventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSchemaRefreshed">
+      <MemberSignature Language="C#" Value="protected override void OnSchemaRefreshed ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnSchemaRefreshed() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.ListViewDesigner.OnSchemaRefreshed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verhindert, dass die <see cref="T:System.Web.UI.WebControls.ListView" /> Steuerelement aktualisiert, wenn das Schema der Datenquellensicht im HTML-Designer aktualisiert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.ListViewDesigner.OnSchemaRefreshed%2A> -Methode benachrichtigt den Designer Steuerelementobjekt für die <xref:System.Web.UI.WebControls.ListView> Steuerelement, das an die zugeordnete Datenquelle gebunden ist, die die Felder im Schema geändert haben. Wenn diese Methode aufgerufen wird, verhindert die <xref:System.Web.UI.WebControls.ListView> Steuerelement selbst aktualisieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SampleRowCount">
+      <MemberSignature Language="C#" Value="protected override int SampleRowCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SampleRowCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.ListViewDesigner.SampleRowCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft der Anzahl der Datensätze, die die <see cref="T:System.Web.UI.WebControls.ListView" /> Steuerelement angezeigt wird, auf der Entwurfsoberfläche angezeigt.</summary>
+        <value>Die Anzahl der Datensätze, die <see cref="T:System.Web.UI.WebControls.ListView" /> Steuerelement angezeigt wird, auf der Entwurfsoberfläche angezeigt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.ListViewDesigner.SampleRowCount%2A> Eigenschaft gibt immer 21 zurück. Dies bewirkt, dass 21 Datensätze in der Entwurfsoberfläche angezeigt wird der <xref:System.Web.UI.WebControls.ListView> Steuerelement. Es wird eine Ausnahme ist ein <xref:System.Web.UI.WebControls.DataPager> -Steuerelement innerhalb der <xref:System.Web.UI.WebControls.ListView.LayoutTemplate%2A?displayProperty=nameWithType> Vorlage und die <xref:System.Web.UI.WebControls.DataPager.PageSize%2A?displayProperty=nameWithType> Eigenschaft auf einen Wert kleiner als 21 festgelegt ist. In diesem Fall wird die Anzahl der anzuzeigenden Datensätze den Wert des der <xref:System.Web.UI.WebControls.DataPager.PageSize%2A?displayProperty=nameWithType> Eigenschaft. Die maximale Anzahl der Datensätze, die <xref:System.Web.UI.WebControls.ListView> Steuerelement zeigt im Designer Oberfläche ist 21 Datensätze.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetEditableDesignerRegionContent">
+      <MemberSignature Language="C#" Value="public override void SetEditableDesignerRegionContent (System.Web.UI.Design.EditableDesignerRegion region, string content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetEditableDesignerRegionContent(class System.Web.UI.Design.EditableDesignerRegion region, string content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.ListViewDesigner.SetEditableDesignerRegionContent(System.Web.UI.Design.EditableDesignerRegion,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="region" Type="System.Web.UI.Design.EditableDesignerRegion" />
+        <Parameter Name="content" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="region">Eine bearbeitbare Design-Region, die in enthalten ist das <see cref="T:System.Web.UI.WebControls.ListView" /> Steuerelement.</param>
+        <param name="content">Der Inhalt für bearbeitbaren Entwurfsbereichs zuweisen.</param>
+        <summary>Gibt den Inhalt für einen bearbeitbaren Bereich der der <see cref="T:System.Web.UI.WebControls.ListView" /> -Steuerelements zur Entwurfszeit.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsePreviewControl">
+      <MemberSignature Language="C#" Value="protected override bool UsePreviewControl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UsePreviewControl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.ListViewDesigner.UsePreviewControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Designer eine temporäre Kopie, anstelle des tatsächlichen verwenden soll <see cref="T:System.Web.UI.WebControls.ListView" /> Steuerelement, das dem Designer zugeordnet ist, um das Markup zur Entwurfszeit zu generieren.</summary>
+        <value>
+          <see langword="true" /> in allen Fällen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

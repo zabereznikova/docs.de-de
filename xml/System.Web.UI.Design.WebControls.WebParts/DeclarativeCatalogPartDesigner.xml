@@ -1,0 +1,142 @@
+<Type Name="DeclarativeCatalogPartDesigner" FullName="System.Web.UI.Design.WebControls.WebParts.DeclarativeCatalogPartDesigner">
+  <TypeSignature Language="C#" Value="public class DeclarativeCatalogPartDesigner : System.Web.UI.Design.WebControls.WebParts.CatalogPartDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DeclarativeCatalogPartDesigner extends System.Web.UI.Design.WebControls.WebParts.CatalogPartDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.WebParts.DeclarativeCatalogPartDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.WebControls.WebParts.CatalogPartDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet zur Entwurfszeit Unterstützung für <see cref="T:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart" />-Steuerelemente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.UI.Design.WebControls.WebParts.DeclarativeCatalogPartDesigner>bietet zur Entwurfszeit Unterstützung für <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> Steuerelemente. Es erweitert übergeordneten Klasse <xref:System.Web.UI.Design.WebControls.WebParts.CatalogPartDesigner>, durch Hinzufügen einer steuerelementspezifische <xref:System.Web.UI.Design.TemplateGroup> auf die <xref:System.Web.UI.Design.WebControls.WebParts.DeclarativeCatalogPartDesigner.TemplateGroups%2A> Auflistung. <xref:System.Web.UI.Design.WebControls.WebParts.DeclarativeCatalogPartDesigner>rendert nicht zugeordneten <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> Steuerelement auf der Entwurfsoberfläche angezeigt.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Das zugeordnete Steuerelement <see cref="T:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart" />, ist eine <see langword="sealed" /> Klasse und kann nicht vererbt werden. Deshalb geringem Wert im abgeleitet ist <see cref="T:System.Web.UI.Design.WebControls.WebParts.DeclarativeCatalogPartDesigner" /> , da sie überschrieben werden, um auf jedem anderen Steuerelement anzuwenden.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DeclarativeCatalogPartDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WebParts.DeclarativeCatalogPartDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.WebControls.WebParts.DeclarativeCatalogPartDesigner" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WebParts.DeclarativeCatalogPartDesigner.GetDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überschreibt die übergeordnete-Methode, um zu verhindern, dass bei der Wiedergabe des Steuerelements an.</summary>
+        <returns>Entweder eine leere Zeichenfolge ("") oder den Wert des <see cref="M:System.Web.UI.Design.WebControls.WebParts.DeclarativeCatalogPartDesigner.GetEmptyDesignTimeHtml" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist keine <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.WebPartsTemplate%2A> mit dem Steuerelement verknüpfte, zeigt der Designer das graue Standardfeld mit dem Klassennamen und den Instanznamen des Steuerelements. Andernfalls nicht zur Entwurfszeit gerendert erfolgt gar, da die Kontrollkästchen und Titel des Webparts von gerendert werden die <xref:System.Web.UI.WebControls.WebParts.CatalogPartChrome> statt der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> selbst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEmptyDesignTimeHtml">
+      <MemberSignature Language="C#" Value="protected override string GetEmptyDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetEmptyDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WebParts.DeclarativeCatalogPartDesigner.GetEmptyDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das Markup zum Darstellen von eines leeren Steuerelements auf der Entwurfsoberfläche ab.</summary>
+        <returns>Eine leere Markupzeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang rendert das Steuerelement als graues Feld angezeigt wird, den Klassennamen und den Instanznamen an.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WebParts.DeclarativeCatalogPartDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die <see cref="T:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart" /> dem Designer zugeordnete Steuerelement.</param>
+        <summary>Bindet den Designer an die zugeordnete <see cref="T:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart" /> -Steuerelement und stellt die <see cref="F:System.Web.UI.Design.ViewFlags.TemplateEditing" /> Flag zum Anzeigen <see langword="true" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TemplateGroups">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.Design.TemplateGroupCollection TemplateGroups { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.TemplateGroupCollection TemplateGroups" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.WebParts.DeclarativeCatalogPartDesigner.TemplateGroups" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.TemplateGroupCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung vom Vorlagengruppen ab, die jeweils eine oder mehrere Definitionen enthalten.</summary>
+        <value>Die angefügten <see cref="T:System.Web.UI.Design.TemplateGroupCollection" /> dieser Klasse zugeordnet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.WebParts.DeclarativeCatalogPartDesigner.TemplateGroups%2A> Eigenschaft überschreibt die basisimplementierung zum Hinzufügen einer <xref:System.Web.UI.Design.TemplateGroup> -Objekt, das speziell für diese Klasse ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

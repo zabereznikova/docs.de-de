@@ -1,0 +1,130 @@
+<Type Name="IChannelFactory&lt;TChannel&gt;" FullName="System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt;">
+  <TypeSignature Language="C#" Value="public interface IChannelFactory&lt;TChannel&gt; : System.ServiceModel.Channels.IChannelFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IChannelFactory`1&lt;TChannel&gt; implements class System.ServiceModel.Channels.IChannelFactory, class System.ServiceModel.ICommunicationObject" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.IChannelFactory`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TChannel" />
+  </TypeParameters>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Channels.IChannelFactory</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="TChannel">Der Kanaltyp, der von der Kanalfactory erstellt wird.</typeparam>
+    <summary>Definiert die Schnittstelle, die von Kanalfactorys implementiert werden muss, mit denen typspezifische Kanäle erstellt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Implementierung des <xref:System.ServiceModel.Channels.IChannelFactory%601>-Vertrags ermöglicht es Benutzern, mehrere Kanäle eines bestimmten Typs zu erstellen, ohne jedes Mal den Kanaltyp angeben zu müssen. Anders gesagt, durch Definieren des Kanaltyps als generischer Parameter für die Kanalfactory, die die <xref:System.ServiceModel.Channels.IChannelFactory%601>-Schnittstelle implementiert, ist das Übergeben des Typs an die <xref:System.ServiceModel.Channels.IChannelFactory%601.CreateChannel%2A>-Methoden nicht erforderlich. Wenn Sie unterschiedliche Kanaltypen erstellen möchten, können Sie zusätzliche Kanalfactorys für jeden erforderlichen Kanaltyp erstellen. Mit der <xref:System.ServiceModel.Channels.IChannelFactory%601.CreateChannel%28System.ServiceModel.EndpointAddress%2CSystem.Uri%29>-Überladung kann die Adresse, an die die Nachricht zuerst gesendet wird, von der endgültigen Zieladresse unterschieden werden. Eine Erläuterung der Adressierung, finden Sie unter der [Adressen](~/docs/framework/wcf/feature-details/endpoint-addresses.md) Thema.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName="CreateChannel">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Erstellt einen Kanal eines angegebenen Typs für eine angegebene Endpunktadresse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit der <xref:System.ServiceModel.Channels.IChannelFactory%601.CreateChannel%28System.ServiceModel.EndpointAddress%2CSystem.Uri%29>-Überladung kann die Adresse, an die die Nachricht zuerst gesendet wird, beim manuellen Routing von der endgültigen Zieladresse unterschieden werden. Alle Kanäle, die von dieser Kanalfactory erstellt werden, werden beim Schließen der Kanalfactory ebenfalls geschlossen. Eine Erläuterung der Adressierung, finden Sie unter der [Adressen](~/docs/framework/wcf/feature-details/endpoint-addresses.md) Thema.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="CreateChannel">
+      <MemberSignature Language="C#" Value="public TChannel CreateChannel (System.ServiceModel.EndpointAddress to);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TChannel CreateChannel(class System.ServiceModel.EndpointAddress to) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IChannelFactory`1.CreateChannel(System.ServiceModel.EndpointAddress)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TChannel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="to" Type="System.ServiceModel.EndpointAddress" />
+      </Parameters>
+      <Docs>
+        <param name="to">Die <see cref="T:System.ServiceModel.EndpointAddress" />, die den Speicherort des Diensts bereitstellt.</param>
+        <summary>Erstellt einen Kanal eines angegebenen Typs für eine angegebene Endpunktadresse.</summary>
+        <returns>Ein Kanal vom Typ <paramref name="TChannel" /> für die angegebene Endpunktadresse.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit der <xref:System.ServiceModel.Channels.IChannelFactory%601.CreateChannel%28System.ServiceModel.EndpointAddress%2CSystem.Uri%29>-Überladung kann die Adresse, an die die Nachricht zuerst gesendet wird, beim manuellen Routing von der endgültigen Zieladresse unterschieden werden. Alle Kanäle, die von dieser Kanalfactory erstellt werden, werden beim Schließen der Kanalfactory ebenfalls geschlossen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateChannel">
+      <MemberSignature Language="C#" Value="public TChannel CreateChannel (System.ServiceModel.EndpointAddress to, Uri via);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TChannel CreateChannel(class System.ServiceModel.EndpointAddress to, class System.Uri via) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IChannelFactory`1.CreateChannel(System.ServiceModel.EndpointAddress,System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TChannel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="to" Type="System.ServiceModel.EndpointAddress" />
+        <Parameter Name="via" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="to">Die <see cref="T:System.ServiceModel.EndpointAddress" />, die den Speicherort des Diensts bereitstellt.</param>
+        <param name="via">Der <see cref="T:System.Uri" />, der die Transportadresse enthält, an die die Nachricht gesendet wird.</param>
+        <summary>Erstellt einen Kanal des angegebenen Typs für eine angegebene Endpunktadresse sowie für eine Transportadresse, an die die Nachrichten gesendet werden.</summary>
+        <returns>Ein Kanal vom Typ <paramref name="TChannel" /> für die angegebene Endpunktadresse und die angegebene Transportadresse.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nachrichten sollten zunächst an die Transportadresse gesendet werden, die von `via` angegeben wird, bevor sie an eine andere Remoteadresse gesendet werden, die von `to` angegeben wird und an der sich der Dienst befindet. In aller Regel entspricht der `via`-URI dem <xref:System.ServiceModel.EndpointAddress.Uri%2A> der endgültigen `to`-Adresse des Diensts. Eine Unterscheidung zwischen den beiden Adressen ist nur beim manuellen Routing erforderlich. Alle Kanäle, die von dieser Kanalfactory erstellt werden, werden beim Schließen der Kanalfactory ebenfalls geschlossen. Eine Erläuterung der Adressierung, finden Sie unter der [Adressen](~/docs/framework/wcf/feature-details/endpoint-addresses.md) Thema.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

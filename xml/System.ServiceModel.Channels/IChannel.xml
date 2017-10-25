@@ -1,0 +1,98 @@
+<Type Name="IChannel" FullName="System.ServiceModel.Channels.IChannel">
+  <TypeSignature Language="C#" Value="public interface IChannel : System.ServiceModel.ICommunicationObject" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IChannel implements class System.ServiceModel.ICommunicationObject" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.IChannel" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.ICommunicationObject</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Definiert die grundlegende Schnittstelle, die von allen Kanalobjekten implementiert werden muss. Voraussetzung hierfür ist die Implementierung der Statuscomputerschnittelle, die von allen Kommunikationsobjekten verwendet wird, sowie einer Methode zum Abrufen von Objekten aus dem Kanalstapel.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Kanäle müssen den Vertrag eines Statuscomputers gemäß der <xref:System.ServiceModel.ICommunicationObject>-Schnittstelle erfüllen.  
+  
+ Mit der <xref:System.ServiceModel.Channels.IChannel>-Schnittstelle  
+  
+ wird die <xref:System.ServiceModel.Channels.IChannel.GetProperty%2A>-Methode der <xref:System.ServiceModel.ICommunicationObject>-Schnittstelle hinzugefügt. Diese Methode stellt einen Mechanismus zum Abrufen von Eigenschaften vom Kanalstapel unabhängig von der Position der Eigenschaften im Stapel bereit. Der Begriff "property" im Name der Methode bezieht sich auf die Information eines Kanals im Stapel. Der CLR-Typ für diese Eigenschaft wird von `T` bestimmt. Diese Abrufmethode wird auch für Kanalfactorys und Kanallistener verwendet.  
+  
+ `IChannel` wird von den Kanalschnittstellen geerbt, die mit den grundlegenden Mustern zum Nachrichtenaustausch verknüpft sind:  
+  
+-   <xref:System.ServiceModel.Channels.IInputChannel> für das Empfangen von Nachrichten.  
+  
+-   <xref:System.ServiceModel.Channels.IOutputChannel> für das Senden von Nachrichten.  
+  
+-   <xref:System.ServiceModel.Channels.IRequestChannel> für das Senden einer Anforderung.  
+  
+-   <xref:System.ServiceModel.Channels.IReplyChannel> für das Senden einer Antwort.  
+  
+-   <xref:System.ServiceModel.Channels.IDuplexChannel> für bidirektionales Messaging.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetProperty&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T GetProperty&lt;T&gt; () where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !!T GetProperty&lt;class T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IChannel.GetProperty``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">Das typisierte Objekt, das von der Methode abgefragt wird.</typeparam>
+        <summary>Gibt ggf. ein angefordertes typisiertes Objekt von der entsprechenden Ebene im Kanalstapel zurück.</summary>
+        <returns>Das von <paramref name="T" /> angeforderte typisierte Objekt, oder <see langword="null" />, falls das Objekt nicht vorhanden ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Anforderung können Sie typisierte Objekte wie eine Schnittstelle für das Festlegen von Eigenschaften oder für das Abrufen des Status aus der entsprechenden Ebene im Kanalstapel abfragen. Wenn eine Ebene das Zurückgeben des angeforderten Objekts unterstützt, wird der Vorgang ausgeführt. Andernfalls wird der Aufruf an die nächst tiefere Ebene im Stapel delegiert. Wenn die letzte Ebene erreicht ist und das angeforderte Objekt von keiner Kanalebene unterstützt wird, gibt die Methode `null` zurück.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie diese Eigenschaft von einem Kanal implementiert werden kann, die den Aufruf der Stapel mit delegiert eine`InnerChannel` Eigenschaft, die den inneren Kanal für diesen Kanal abruft.  
+  
+ [!code-csharp[S_UEIChannel#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueichannel/cs/generatedclient.cs#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

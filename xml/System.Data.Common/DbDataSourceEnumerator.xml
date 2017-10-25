@@ -1,0 +1,109 @@
+<Type Name="DbDataSourceEnumerator" FullName="System.Data.Common.DbDataSourceEnumerator">
+  <TypeSignature Language="C#" Value="public abstract class DbDataSourceEnumerator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DbDataSourceEnumerator extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Common.DbDataSourceEnumerator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet einen Mechanismus für das Auflisten aller verfügbaren Instanzen von Datenbankservern innerhalb des lokalen Netzwerks.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse ermöglicht, dass die Basis für andere Data Source-Enumeratoren stark typisiert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DbDataSourceEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbDataSourceEnumerator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Data.Common.DbDataSourceEnumerator" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Common.DbDataSourceEnumerator> Klasse bildet die Grundlage für stark typisierte Enumeratoren wie z. B. <xref:System.Data.Sql.SqlDataSourceEnumerator>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataSources">
+      <MemberSignature Language="C#" Value="public abstract System.Data.DataTable GetDataSources ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Data.DataTable GetDataSources() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbDataSourceEnumerator.GetDataSources" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft ab einen <see cref="T:System.Data.DataTable" /> mit Informationen über alle sichtbaren Instanzen des Servers durch die stark typisierte Instanz dieser Klasse dargestellt wird.</summary>
+        <returns>Gibt eine <see cref="T:System.Data.DataTable" /> , das Informationen über die sichtbaren Instanzen der zugeordneten Datenquelle enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die von dieser Methode zurückgegebene Tabelle enthält die folgenden Spalten, die Zeichenfolgen enthalten. Einzelne Anbieter können zusätzliche Spalten hinzufügen.  
+  
+|Spaltenordinalzahl|Spalte|Beschreibung|  
+|--------------------|------------|-----------------|  
+|0|**ServerName**|Name des Servers.|  
+|1|**Instanzname**|Name der Serverinstanz. Je nach Anbieter können mehrere Instanzen auf einem einzelnen Server vorhanden sein.|  
+|2|**IsClustered**|Gibt an, ob der Server Teil eines Clusters ist.|  
+|3|**Version**|Serverversion. Genaue Format hängt vom Anbieter ab.|  
+|4|**FactoryName**|Name des entsprechenden Anbieterfactory.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

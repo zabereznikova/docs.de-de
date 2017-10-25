@@ -1,0 +1,979 @@
+<Type Name="EventSourceCreationData" FullName="System.Diagnostics.EventSourceCreationData">
+  <TypeSignature Language="C#" Value="public class EventSourceCreationData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EventSourceCreationData extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.EventSourceCreationData" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Konfigurationseinstellungen verwendet, um ein Ereignisprotokoll-Quelle auf dem lokalen Computer oder einem Remotecomputer zu erstellen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Diagnostics.EventSourceCreationData> Klasse eine neue Datenquelle zum Schreiben lokalisierter Einträge in ein Ereignisprotokoll konfigurieren. Es ist nicht notwendig, diese Klasse zum Lesen aus einem Ereignisprotokoll zu verwenden.  
+  
+ Diese Klasse definiert die Konfigurationseinstellungen für eine neue Ereignisquelle und das zugeordnete Ereignisprotokoll. Das zugeordnete Ereignisprotokoll kann auf dem lokalen Computer oder einem Remotecomputer sein. Um eine neue Datenquelle für ein neues oder vorhandenes Ereignisprotokoll auf dem lokalen Computer zu erstellen, legen die <xref:System.Diagnostics.EventSourceCreationData.LogName%2A> und <xref:System.Diagnostics.EventSourceCreationData.Source%2A> Eigenschaften einer <xref:System.Diagnostics.EventSourceCreationData> , und rufen Sie die <xref:System.Diagnostics.EventLog.CreateEventSource%28System.Diagnostics.EventSourceCreationData%29?displayProperty=nameWithType> Methode. Diese Methode erstellt die Ereignisquelle, die Sie, in angeben der <xref:System.Diagnostics.EventSourceCreationData.Source%2A> Eigenschaft und Register für das Ereignisprotokoll in angegeben <xref:System.Diagnostics.EventSourceCreationData.LogName%2A>. Dieses Verhalten ist vergleichbar mit dem mithilfe der <xref:System.Diagnostics.EventLogInstaller> Klasse, um eine Ereignisquelle für ein Ereignisprotokoll registriert.  
+  
+ Verwenden der <xref:System.Diagnostics.EventLog.WriteEvent%2A> und <xref:System.Diagnostics.EventLog.WriteEntry%2A> Methoden, Ereignisse in ein Ereignisprotokoll schreiben. Sie müssen eine Ereignisquelle zum Schreiben von Ereignissen angeben. Sie müssen erstellen und konfigurieren die Ereignisquelle vor dem Schreiben des ersten Eintrags mit der Quelle.  
+  
+ Erstellen Sie die neue Ereignisquelle während der Installation der Anwendung. Dadurch wird die Zeit für das Betriebssystem, um die Liste der registrierten Ereignisquellen und ihre Konfigurationen zu aktualisieren. Wenn das Betriebssystem hat seine Liste der Ereignisquellen nicht aktualisiert, und Sie versuchen, ein Ereignis mit der neuen Datenquelle zu schreiben, der Schreibvorgang fehl. Sie können konfigurieren, eine neue Datenquelle mit einer <xref:System.Diagnostics.EventLogInstaller>, oder mithilfe der <xref:System.Diagnostics.EventLog.CreateEventSource%2A> Methode. Sie benötigen Administratorrechte auf dem Computer eine neue Ereignisquelle erstellen.  
+  
+ Sie können eine Ereignisquelle für ein vorhandenes Ereignisprotokoll oder ein neues Ereignisprotokoll erstellen. Wenn Sie eine neue Datenquelle für ein neues Ereignisprotokoll erstellen, registriert das System die Quelle für das Protokoll geschrieben, aber das Protokoll wird nicht erstellt werden, bis der erste Eintrag darin geschrieben wird.  
+  
+ Jede Quelle kann jeweils nur ein Ereignisprotokoll schreiben. Allerdings kann Ihre Anwendung mehreren Quellen verwenden, um mehrere Ereignisprotokolle geschrieben. Z. B. möglicherweise Ihre Anwendung mehrere Quellen für unterschiedliche Ereignisprotokolle oder Ressourcendateien konfiguriert.  
+  
+ Um die Einzelheiten der Konfiguration einer vorhandenen Datenquelle zu ändern, müssen Sie der Quelle löschen und dann mit die neue Konfiguration erstellen. Wenn andere Anwendungen oder Komponenten die vorhandene Quelle verwenden, erstellen Sie eine neue Datenquelle mit der aktualisierten Konfiguration an, anstatt durch das Löschen der vorhandenen Quelle.  
+  
+ Sie können die Ereignisquelle mit lokalisierten Ressourcen für die Ereignis-Zeichenfolgen für Eigenschaftenkategorien und Nachricht registrieren. Schreiben der Anwendung kann Einträge im Ereignisprotokoll mithilfe der Ressourcen-IDs, anstatt die tatsächliche Zeichenfolge anzugeben. Die Ereignisanzeige verwendet den Ressourcenbezeichner suchen und Anzeigen der entsprechenden Zeichenfolge aus der lokalisierten Ressourcendatei basierend auf der aktuellen spracheinstellungen. Sie können eine separate Datei für Ereigniskategorien, Nachrichten und Einfügung Parameterzeichenfolgen registrieren, oder Sie können die gleichen Ressourcendatei für alle drei Typen von Zeichenfolgen. Verwenden der <xref:System.Diagnostics.EventSourceCreationData.CategoryCount%2A>, <xref:System.Diagnostics.EventSourceCreationData.CategoryResourceFile%2A>, <xref:System.Diagnostics.EventSourceCreationData.MessageResourceFile%2A>, und <xref:System.Diagnostics.EventSourceCreationData.ParameterResourceFile%2A> Eigenschaften zur Konfiguration der Quelle zum Schreiben lokalisierter Einträge in das Ereignisprotokoll geschrieben. Wenn Ihre Anwendung Zeichenfolgenwerte direkt in das Ereignisprotokoll schreibt, müssen Sie nicht zum Festlegen dieser Eigenschaften.  
+  
+ Die Quelle muss zum Schreiben lokalisierter Einträge oder zum Schreiben direkter Zeichenfolgen konfiguriert werden. Die <xref:System.Diagnostics.EventLog.WriteEntry%2A> -Methode schreibt die angegebene Zeichenfolge direkt in das Ereignisprotokoll schreiben; eine lokalisierbare Meldungsressourcendatei werden nicht verwendet. Verwenden der <xref:System.Diagnostics.EventLog.WriteEvent%2A> Methode zum Schreiben von Ereignissen, die mit der eine lokalisierte Meldungsressourcendatei.  
+  
+ Wenn Ihre Anwendung Einträge mithilfe der Ressourcen-IDs und Zeichenfolgenwerte schreibt, müssen Sie zwei separate Quellen registrieren. Z. B. eine Quelle mit Ressourcendateien konfigurieren und verwenden Sie diese Quelle in die <xref:System.Diagnostics.EventLog.WriteEvent%2A> Methode, um die Einträge mithilfe der Ressourcen-IDs in das Ereignisprotokoll zu schreiben. Klicken Sie dann eine andere Quelle ohne Ressourcendateien erstellen und verwenden Sie diese Quelle in die <xref:System.Diagnostics.EventLog.WriteEntry%2A> Methode zum Schreiben von Zeichenfolgen direkt in das Ereignisprotokoll, die mit dieser Quelle.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel legt die Konfigurationseigenschaften für eine Ereignisquelle aus Befehlszeilenargumente. Input-Argumente angeben, der Name der Ereignisquelle, Ereignisprotokollname Computernamen und Ereignismeldungsdatei Ressource. Im Codebeispiel wird überprüft, ob die Quelle keine Konflikte mit vorhandenen Ereignisquelle, und klicken Sie dann die neue Ereignisquelle für das angegebene Ereignisprotokoll erstellt.  
+  
+ [!code-cpp[EventLog_EventSourceCreation_Properties#1](~/samples/snippets/cpp/VS_Snippets_CLR/EventLog_EventSourceCreation_Properties/CPP/source.cpp#1)]
+ [!code-csharp[EventLog_EventSourceCreation_Properties#1](~/samples/snippets/csharp/VS_Snippets_CLR/EventLog_EventSourceCreation_Properties/CS/source.cs#1)]
+ [!code-vb[EventLog_EventSourceCreation_Properties#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/EventLog_EventSourceCreation_Properties/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.SecurityPermission">zum Aufrufen von einem beliebigen Mitglied der <see cref="T:System.Diagnostics.EventSourceCreationData" /> mit vollständiger Vertrauenswürdigkeit. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventSourceCreationData (string source, string logName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string source, string logName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventSourceCreationData.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="logName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="source">Der Name, der im Ereignisprotokoll als Quelle für Einträge zu registrieren.</param>
+        <param name="logName">Der Name des Protokolls in den Einträgen aus der Quelle geschrieben werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.EventSourceCreationData" /> Klasse mit einer angegebenen Quelle und das Ereignisprotokoll Ereignisname.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um Einträge in ein Ereignisprotokoll schreiben zu können, müssen Sie zuerst eine Ereignisquelle für das Ereignisprotokoll erstellen. Zum Registrieren einer neuen Quelle Initialisieren einer <xref:System.Diagnostics.EventSourceCreationData> Instanz ist, konfigurieren Sie die Instanzeigenschaften für Ihre Anwendung, und rufen die <xref:System.Diagnostics.EventLog.CreateEventSource%28System.Diagnostics.EventSourceCreationData%29?displayProperty=nameWithType> Methode. Nachdem die Quelle registriert ist, Schreiben Sie Einträge aus der Datenquelle mit dem <xref:System.Diagnostics.EventLog.WriteEvent%2A> oder <xref:System.Diagnostics.EventLog.WriteEntry%2A> Methoden.  
+  
+ Sie können die Ereignisquelle mit lokalisierten Ressourcen für die Ereignis-Zeichenfolgen für Eigenschaftenkategorien und Nachricht registrieren. Schreiben der Anwendung kann Einträge im Ereignisprotokoll mithilfe der Ressourcen-IDs, anstatt die tatsächliche Zeichenfolge anzugeben. Die Ereignisanzeige verwendet den Ressourcenbezeichner suchen und Anzeigen der entsprechenden Zeichenfolge aus der lokalisierten Ressourcendatei basierend auf der aktuellen spracheinstellungen. Sie können eine separate Datei für Ereigniskategorien, Nachrichten und Einfügung Parameterzeichenfolgen registrieren, oder Sie können die gleichen Ressourcendatei für alle drei Typen von Zeichenfolgen. Verwenden der <xref:System.Diagnostics.EventSourceCreationData.CategoryCount%2A>, <xref:System.Diagnostics.EventSourceCreationData.CategoryResourceFile%2A>, <xref:System.Diagnostics.EventSourceCreationData.MessageResourceFile%2A>, und <xref:System.Diagnostics.EventSourceCreationData.ParameterResourceFile%2A> Eigenschaften zur Konfiguration der Quelle zum Schreiben lokalisierter Einträge in das Ereignisprotokoll geschrieben. Wenn Ihre Anwendung Zeichenfolgenwerte direkt in das Ereignisprotokoll schreibt, müssen Sie nicht zum Festlegen dieser Eigenschaften.  
+  
+ Die Quelle muss zum Schreiben lokalisierter Einträge oder zum Schreiben direkter Zeichenfolgen konfiguriert werden. Wenn Ihre Anwendung Einträge mithilfe der Ressourcen-IDs und Zeichenfolgenwerte schreibt, müssen Sie zwei separate Quellen registrieren. Z. B. eine Quelle mit Ressourcendateien konfigurieren und verwenden Sie diese Quelle in die <xref:System.Diagnostics.EventLog.WriteEvent%2A> Methode, um die Einträge mithilfe der Ressourcen-IDs in das Ereignisprotokoll zu schreiben. Klicken Sie dann eine andere Quelle ohne Ressourcendateien erstellen und verwenden Sie diese Quelle in die <xref:System.Diagnostics.EventLog.WriteEntry%2A> Methode, um Zeichenfolgen direkt in das Ereignisprotokoll zu schreiben.  
+  
+ In der folgenden Tabelle werden anfängliche Eigenschaftswerte für eine <xref:System.Diagnostics.EventSourceCreationData>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Diagnostics.EventSourceCreationData.Source%2A>|Die `source` Parameter.|  
+|<xref:System.Diagnostics.EventSourceCreationData.LogName%2A>|Die `logName` Parameter.|  
+|<xref:System.Diagnostics.EventSourceCreationData.MachineName%2A>|Der lokale Computer (".").|  
+|<xref:System.Diagnostics.EventSourceCreationData.CategoryCount%2A>|Zero|  
+|<xref:System.Diagnostics.EventSourceCreationData.CategoryResourceFile%2A>|`null` (`Nothing` in Visual Basic).|  
+|<xref:System.Diagnostics.EventSourceCreationData.MessageResourceFile%2A>|`null` (`Nothing` in Visual Basic).|  
+|<xref:System.Diagnostics.EventSourceCreationData.ParameterResourceFile%2A>|`null` (`Nothing` in Visual Basic).|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird bestimmt, ob die Ereignisquelle benannt `SampleApplicationSource` auf dem lokalen Computer registriert ist. Wenn die Ereignisquelle nicht vorhanden ist, wird im Beispiel legt die Nachricht Ressourcendatei für die Quelle und die neue Ereignisquelle erstellt. Im Codebeispiel wird schließlich den lokalisierten Anzeigenamen für das Ereignisprotokoll, wobei die Ressourcen-ID-Wert in `DisplayNameMsgId` und den Pfad der Ressource in `messageFile`.  
+  
+ [!code-cpp[EventLog_WriteEvent#6](~/samples/snippets/cpp/VS_Snippets_CLR/eventlog_WriteEvent/CPP/source.cpp#6)]
+ [!code-csharp[EventLog_WriteEvent#6](~/samples/snippets/csharp/VS_Snippets_CLR/eventlog_WriteEvent/CS/source.cs#6)]
+ [!code-vb[EventLog_WriteEvent#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventlog_WriteEvent/VB/source.vb#6)]  
+  
+ Das Codebeispiel verwendet die folgende Meldungstextdatei, in die Ressourcenbibliothek EventLogMsgs.dll integriert. Eine Nachricht Textdatei handelt es sich um die Quelle aus der der Meldungsressourcendatei erstellt wird. Die Nachricht Text-Datei definiert die Ressourcen-IDs und der Text für die Kategorie, die in der ereignismeldung wird und die Parameter einfügen-Zeichenfolgen.  
+  
+```  
+; // EventLogMsgs.mc  
+; // ********************************************************  
+  
+; // Use the following commands to build this file:  
+  
+; //   mc -s EventLogMsgs.mc  
+; //   rc EventLogMsgs.rc  
+; //   link /DLL /SUBSYSTEM:WINDOWS /NOENTRY /MACHINE:x86 EventLogMsgs.Res   
+; // ********************************************************  
+  
+; // - Event categories -  
+; // Categories must be numbered consecutively starting at 1.  
+; // ********************************************************  
+  
+MessageId=0x1  
+Severity=Success  
+SymbolicName=INSTALL_CATEGORY  
+Language=English  
+Installation  
+.  
+  
+MessageId=0x2  
+Severity=Success  
+SymbolicName=QUERY_CATEGORY  
+Language=English  
+Database Query  
+.  
+  
+MessageId=0x3  
+Severity=Success  
+SymbolicName=REFRESH_CATEGORY  
+Language=English  
+Data Refresh  
+.  
+  
+; // - Event messages -  
+; // *********************************  
+  
+MessageId = 1000  
+Severity = Success  
+Facility = Application  
+SymbolicName = AUDIT_SUCCESS_MESSAGE_ID_1000  
+Language=English  
+My application message text, in English, for message id 1000, called from %1.  
+.  
+  
+MessageId = 1001  
+Severity = Warning  
+Facility = Application  
+SymbolicName = AUDIT_FAILED_MESSAGE_ID_1001  
+Language=English  
+My application message text, in English, for message id 1001, called from %1.  
+.  
+  
+MessageId = 1002  
+Severity = Success  
+Facility = Application  
+SymbolicName = GENERIC_INFO_MESSAGE_ID_1002  
+Language=English  
+My generic information message in English, for message id 1002.  
+.  
+  
+MessageId = 1003  
+Severity = Warning  
+Facility = Application  
+SymbolicName = GENERIC_WARNING_MESSAGE_ID_1003  
+Language=English  
+My generic warning message in English, for message id 1003, called from %1.  
+.  
+  
+MessageId = 1004  
+Severity = Success  
+Facility = Application  
+SymbolicName = UPDATE_CYCLE_COMPLETE_MESSAGE_ID_1004  
+Language=English  
+The update cycle is complete for %%5002.  
+.  
+  
+MessageId = 1005  
+Severity = Warning  
+Facility = Application  
+SymbolicName = SERVER_CONNECTION_DOWN_MESSAGE_ID_1005  
+Language=English  
+The refresh operation did not complete because the connection to server %1 could not be established.  
+.  
+  
+; // - Event log display name -  
+; // ********************************************************  
+  
+MessageId = 5001  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_DISPLAY_NAME_MSGID  
+Language=English  
+Sample Event Log  
+.  
+  
+; // - Event message parameters -  
+; //   Language independent insertion strings  
+; // ********************************************************  
+  
+MessageId = 5002  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_SERVICE_NAME_MSGID  
+Language=English  
+SVC_UPDATE.EXE  
+.  
+```  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">zum Aufrufen von einem beliebigen Mitglied der <see cref="T:System.Diagnostics.EventSourceCreationData" /> mit vollständiger Vertrauenswürdigkeit. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CategoryCount">
+      <MemberSignature Language="C#" Value="public int CategoryCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CategoryCount" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventSourceCreationData.CategoryCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Anzahl der Kategorien in der Kategorie-Ressourcendatei.</summary>
+        <value>Die Anzahl der Kategorien in der Kategorie-Ressourcendatei. Der Standardwert ist 0 (null).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Diagnostics.EventSourceCreationData.CategoryCount%2A> und <xref:System.Diagnostics.EventSourceCreationData.CategoryResourceFile%2A> Eigenschaften zum Schreiben von Ereignissen mit lokalisierte Kategoriezeichenfolgen. Die Ereignisanzeige werden die Kategorie für einen Eintrag des Ereignisses angezeigt, wenn Sie eine Kategorie angeben, wenn Sie das Ereignis schreiben. Ereignisprotokoll-Kategorien sind anwendungsdefinierte Zeichenfolgen, die Hilfe Ereignisse gefiltert oder bieten weitere Informationen für das Ereignis. Beispielsweise kann die Anwendung separate Kategorien für unterschiedliche Komponenten oder verschiedene Vorgänge definieren.  
+  
+ Ereigniskategorien sind optional. Wenn Ihre Anwendung keine Kategorien verwendet werden, legen Sie keine der <xref:System.Diagnostics.EventSourceCreationData.CategoryCount%2A> und <xref:System.Diagnostics.EventSourceCreationData.CategoryResourceFile%2A> Eigenschaften.  
+  
+ Details zum Definieren von ereignismeldungen und Erstellen von Ressourcendateien Ereignis, finden Sie unter dem Thema "Meldungscompiler" in der Platform SDK-Dokumentation unter [http://msdn.microsoft.com](http://msdn.microsoft.com/).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird bestimmt, ob die Ereignisquelle benannt `SampleApplicationSource` auf dem lokalen Computer registriert ist. Wenn die Ereignisquelle nicht vorhanden ist, wird im Beispiel legt die Nachricht Ressourcendatei für die Quelle und die neue Ereignisquelle erstellt. Im Codebeispiel wird schließlich den lokalisierten Anzeigenamen für das Ereignisprotokoll, wobei die Ressourcen-ID-Wert in `DisplayNameMsgId` und den Pfad der Ressource in `messageFile`.  
+  
+ [!code-cpp[EventLog_WriteEvent#6](~/samples/snippets/cpp/VS_Snippets_CLR/eventlog_WriteEvent/CPP/source.cpp#6)]
+ [!code-csharp[EventLog_WriteEvent#6](~/samples/snippets/csharp/VS_Snippets_CLR/eventlog_WriteEvent/CS/source.cs#6)]
+ [!code-vb[EventLog_WriteEvent#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventlog_WriteEvent/VB/source.vb#6)]  
+  
+ Das Codebeispiel verwendet die folgende Meldungstextdatei, in die Ressourcenbibliothek EventLogMsgs.dll integriert. Eine Nachricht Textdatei handelt es sich um die Quelle aus der der Meldungsressourcendatei erstellt wird. Die Nachricht Text-Datei definiert die Ressourcen-IDs und der Text für die Kategorie, die in der ereignismeldung wird und die Parameter einfügen-Zeichenfolgen.  
+  
+```  
+; // EventLogMsgs.mc  
+; // ********************************************************  
+  
+; // Use the following commands to build this file:  
+  
+; //   mc -s EventLogMsgs.mc  
+; //   rc EventLogMsgs.rc  
+; //   link /DLL /SUBSYSTEM:WINDOWS /NOENTRY /MACHINE:x86 EventLogMsgs.Res   
+; // ********************************************************  
+  
+; // - Event categories -  
+; // Categories must be numbered consecutively starting at 1.  
+; // ********************************************************  
+  
+MessageId=0x1  
+Severity=Success  
+SymbolicName=INSTALL_CATEGORY  
+Language=English  
+Installation  
+.  
+  
+MessageId=0x2  
+Severity=Success  
+SymbolicName=QUERY_CATEGORY  
+Language=English  
+Database Query  
+.  
+  
+MessageId=0x3  
+Severity=Success  
+SymbolicName=REFRESH_CATEGORY  
+Language=English  
+Data Refresh  
+.  
+  
+; // - Event messages -  
+; // *********************************  
+  
+MessageId = 1000  
+Severity = Success  
+Facility = Application  
+SymbolicName = AUDIT_SUCCESS_MESSAGE_ID_1000  
+Language=English  
+My application message text, in English, for message id 1000, called from %1.  
+.  
+  
+MessageId = 1001  
+Severity = Warning  
+Facility = Application  
+SymbolicName = AUDIT_FAILED_MESSAGE_ID_1001  
+Language=English  
+My application message text, in English, for message id 1001, called from %1.  
+.  
+  
+MessageId = 1002  
+Severity = Success  
+Facility = Application  
+SymbolicName = GENERIC_INFO_MESSAGE_ID_1002  
+Language=English  
+My generic information message in English, for message id 1002.  
+.  
+  
+MessageId = 1003  
+Severity = Warning  
+Facility = Application  
+SymbolicName = GENERIC_WARNING_MESSAGE_ID_1003  
+Language=English  
+My generic warning message in English, for message id 1003, called from %1.  
+.  
+  
+MessageId = 1004  
+Severity = Success  
+Facility = Application  
+SymbolicName = UPDATE_CYCLE_COMPLETE_MESSAGE_ID_1004  
+Language=English  
+The update cycle is complete for %%5002.  
+.  
+  
+MessageId = 1005  
+Severity = Warning  
+Facility = Application  
+SymbolicName = SERVER_CONNECTION_DOWN_MESSAGE_ID_1005  
+Language=English  
+The refresh operation did not complete because the connection to server %1 could not be established.  
+.  
+  
+; // - Event log display name -  
+; // ********************************************************  
+  
+MessageId = 5001  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_DISPLAY_NAME_MSGID  
+Language=English  
+Sample Event Log  
+.  
+  
+; // - Event message parameters -  
+; //   Language independent insertion strings  
+; // ********************************************************  
+  
+MessageId = 5002  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_SERVICE_NAME_MSGID  
+Language=English  
+SVC_UPDATE.EXE  
+.  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Eigenschaft wird festgelegt auf einen negativen Wert oder einen Wert größer als <see cref="F:System.UInt16.MaxValue" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">zum Aufrufen von einem beliebigen Mitglied der <see cref="T:System.Diagnostics.EventSourceCreationData" /> mit vollständiger Vertrauenswürdigkeit. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CategoryResourceFile">
+      <MemberSignature Language="C#" Value="public string CategoryResourceFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CategoryResourceFile" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventSourceCreationData.CategoryResourceFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Pfad der Ressourcendatei, die Kategoriezeichenfolgen für die Quelle enthält.</summary>
+        <value>Der Pfad der Kategorieressourcendatei. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Diagnostics.EventSourceCreationData.CategoryCount%2A> und <xref:System.Diagnostics.EventSourceCreationData.CategoryResourceFile%2A> Eigenschaften zum Schreiben von Ereignissen mit lokalisierte Kategoriezeichenfolgen. Die Ereignisanzeige werden die Kategorie für einen Eintrag des Ereignisses angezeigt, wenn Sie eine Kategorie angeben, wenn Sie das Ereignis schreiben. Ereignisprotokoll-Kategorien sind anwendungsdefinierte Zeichenfolgen, die Hilfe Ereignisse gefiltert oder bieten weitere Informationen für das Ereignis. Beispielsweise kann die Anwendung separate Kategorien für unterschiedliche Komponenten oder verschiedene Vorgänge definieren.  
+  
+ Ereigniskategorien sind optional. Wenn Ihre Anwendung keine Kategorien verwendet werden, legen Sie keine der <xref:System.Diagnostics.EventSourceCreationData.CategoryCount%2A> und <xref:System.Diagnostics.EventSourceCreationData.CategoryResourceFile%2A> Eigenschaften.  
+  
+ Details zum Definieren von ereignismeldungen und Erstellen von Ressourcendateien Ereignis, finden Sie unter dem Thema "Meldungscompiler" in der Platform SDK-Dokumentation unter [http://msdn.microsoft.com](http://msdn.microsoft.com/).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird bestimmt, ob die Ereignisquelle benannt `SampleApplicationSource` auf dem lokalen Computer registriert ist. Wenn die Ereignisquelle nicht vorhanden ist, wird im Beispiel legt die Nachricht Ressourcendatei für die Quelle und die neue Ereignisquelle erstellt. Im Codebeispiel wird schließlich den lokalisierten Anzeigenamen für das Ereignisprotokoll, wobei die Ressourcen-ID-Wert in `DisplayNameMsgId` und den Pfad der Ressource in `messageFile`.  
+  
+ [!code-cpp[EventLog_WriteEvent#6](~/samples/snippets/cpp/VS_Snippets_CLR/eventlog_WriteEvent/CPP/source.cpp#6)]
+ [!code-csharp[EventLog_WriteEvent#6](~/samples/snippets/csharp/VS_Snippets_CLR/eventlog_WriteEvent/CS/source.cs#6)]
+ [!code-vb[EventLog_WriteEvent#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventlog_WriteEvent/VB/source.vb#6)]  
+  
+ Das Codebeispiel verwendet die folgende Meldungstextdatei, in die Ressourcenbibliothek EventLogMsgs.dll integriert. Eine Nachricht Textdatei handelt es sich um die Quelle aus der der Meldungsressourcendatei erstellt wird. Die Nachricht Text-Datei definiert die Ressourcen-IDs und der Text für die Kategorie, die in der ereignismeldung wird und die Parameter einfügen-Zeichenfolgen.  
+  
+```  
+; // EventLogMsgs.mc  
+; // ********************************************************  
+  
+; // Use the following commands to build this file:  
+  
+; //   mc -s EventLogMsgs.mc  
+; //   rc EventLogMsgs.rc  
+; //   link /DLL /SUBSYSTEM:WINDOWS /NOENTRY /MACHINE:x86 EventLogMsgs.Res   
+; // ********************************************************  
+  
+; // - Event categories -  
+; // Categories must be numbered consecutively starting at 1.  
+; // ********************************************************  
+  
+MessageId=0x1  
+Severity=Success  
+SymbolicName=INSTALL_CATEGORY  
+Language=English  
+Installation  
+.  
+  
+MessageId=0x2  
+Severity=Success  
+SymbolicName=QUERY_CATEGORY  
+Language=English  
+Database Query  
+.  
+  
+MessageId=0x3  
+Severity=Success  
+SymbolicName=REFRESH_CATEGORY  
+Language=English  
+Data Refresh  
+.  
+  
+; // - Event messages -  
+; // *********************************  
+  
+MessageId = 1000  
+Severity = Success  
+Facility = Application  
+SymbolicName = AUDIT_SUCCESS_MESSAGE_ID_1000  
+Language=English  
+My application message text, in English, for message id 1000, called from %1.  
+.  
+  
+MessageId = 1001  
+Severity = Warning  
+Facility = Application  
+SymbolicName = AUDIT_FAILED_MESSAGE_ID_1001  
+Language=English  
+My application message text, in English, for message id 1001, called from %1.  
+.  
+  
+MessageId = 1002  
+Severity = Success  
+Facility = Application  
+SymbolicName = GENERIC_INFO_MESSAGE_ID_1002  
+Language=English  
+My generic information message in English, for message id 1002.  
+.  
+  
+MessageId = 1003  
+Severity = Warning  
+Facility = Application  
+SymbolicName = GENERIC_WARNING_MESSAGE_ID_1003  
+Language=English  
+My generic warning message in English, for message id 1003, called from %1.  
+.  
+  
+MessageId = 1004  
+Severity = Success  
+Facility = Application  
+SymbolicName = UPDATE_CYCLE_COMPLETE_MESSAGE_ID_1004  
+Language=English  
+The update cycle is complete for %%5002.  
+.  
+  
+MessageId = 1005  
+Severity = Warning  
+Facility = Application  
+SymbolicName = SERVER_CONNECTION_DOWN_MESSAGE_ID_1005  
+Language=English  
+The refresh operation did not complete because the connection to server %1 could not be established.  
+.  
+  
+; // - Event log display name -  
+; // ********************************************************  
+  
+MessageId = 5001  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_DISPLAY_NAME_MSGID  
+Language=English  
+Sample Event Log  
+.  
+  
+; // - Event message parameters -  
+; //   Language independent insertion strings  
+; // ********************************************************  
+  
+MessageId = 5002  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_SERVICE_NAME_MSGID  
+Language=English  
+SVC_UPDATE.EXE  
+.  
+```  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">zum Aufrufen von einem beliebigen Mitglied der <see cref="T:System.Diagnostics.EventSourceCreationData" /> mit vollständiger Vertrauenswürdigkeit. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="LogName">
+      <MemberSignature Language="C#" Value="public string LogName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LogName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventSourceCreationData.LogName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Ereignisprotokolls, in die die Quelle Einträge schreibt.</summary>
+        <value>Der Name des Ereignisprotokolls. Dies kann die Anwendung bzw. Systemprotokoll oder ein benutzerdefinierter Protokollname sein. Der Standardwert ist "Application".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Diagnostics.EventSourceCreationData.LogName%2A> Eigenschaft, um das Ereignisprotokoll, dass Ihre Anwendung Einträge schreibt, um mithilfe der neuen Datenquelle zu identifizieren. Das Ereignisprotokoll kann es sich um ein neues Protokoll oder ein vorhandenes Protokoll sein. Anwendungen und Dienste sollten auf Windows-Anwendungsprotokoll oder ein benutzerdefiniertes Protokoll schreiben. Gerätetreiber sollten im Systemprotokoll schreiben. Wenn Sie nicht explizit festlegen der <xref:System.Diagnostics.EventSourceCreationData.LogName%2A> -Eigenschaft, das Ereignisprotokoll verwendet standardmäßig Windows-Anwendungsprotokoll.  
+  
+> [!NOTE]
+>  Das Sicherheitsprotokoll ist schreibgeschützt.  
+  
+ Um ein vorhandenes Protokoll für die neue Quelle abzielen möchten, legen Sie die <xref:System.Diagnostics.EventSourceCreationData.LogName%2A> Eigenschaft mit dem vorhandenen Namen des Ereignisprotokolls. Um ein neues Ereignisprotokoll für die Quelle zu erstellen, legen Sie die <xref:System.Diagnostics.EventSourceCreationData.LogName%2A> Eigenschaft. Ereignisprotokollnamen müssen aus druckbaren Zeichen bestehen und darf die Zeichen nicht enthalten ' * ','?', oder "\\". Der Name des Ereignisprotokolls die ersten 8 Zeichen müssen aus den ersten 8 Zeichen der Ereignisprotokolle auf dem angegebenen Computer vorhandenen Namen abweichen.  
+  
+ Das Betriebssystem speichert Ereignisprotokolle als Dateien. Bei Verwendung von <xref:System.Diagnostics.EventLogInstaller> oder die <xref:System.Diagnostics.EventLog.CreateEventSource%2A> -Methode erstellt ein neues Ereignisprotokoll, die zugehörige Datei im Verzeichnis %SystemRoot%\System32\Config auf dem angegebenen Computer gespeichert ist. Der Dateiname wird festgelegt, durch die ersten 8 Zeichen Anhängen der <xref:System.Diagnostics.EventSourceCreationData.LogName%2A> Eigenschaft mit der Dateinamenerweiterung ".evt".  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel legt die Konfigurationseigenschaften für eine Ereignisquelle aus Befehlszeilenargumente. Input-Argumente angeben, der Name der Ereignisquelle, Ereignisprotokollname Computernamen und Ereignismeldungsdatei Ressource. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.EventSourceCreationData> Klasse.  
+  
+ [!code-cpp[EventLog_EventSourceCreation_Properties#2](~/samples/snippets/cpp/VS_Snippets_CLR/EventLog_EventSourceCreation_Properties/CPP/source.cpp#2)]
+ [!code-csharp[EventLog_EventSourceCreation_Properties#2](~/samples/snippets/csharp/VS_Snippets_CLR/EventLog_EventSourceCreation_Properties/CS/source.cs#2)]
+ [!code-vb[EventLog_EventSourceCreation_Properties#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/EventLog_EventSourceCreation_Properties/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">zum Aufrufen von einem beliebigen Mitglied der <see cref="T:System.Diagnostics.EventSourceCreationData" /> mit vollständiger Vertrauenswürdigkeit. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="MachineName">
+      <MemberSignature Language="C#" Value="public string MachineName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MachineName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventSourceCreationData.MachineName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Computers, auf dem die Ereignisquelle registriert werden.</summary>
+        <value>Der Name des Systems, auf dem die Ereignisquelle registriert werden. Der Standardwert ist der lokale Computer (".").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.EventSourceCreationData.MachineName%2A> Wert darf keine leere Zeichenfolge sein. Wenn der Computername nicht explizit festgelegt ist, wird standardmäßig auf dem lokalen Computer (".").  
+  
+ Wenn Sie eine Quelle auf einem Remotecomputer zu registrieren, benötigen Sie Administratorrechte auf diesem Computer die Registrierungswerte mit ausreichenden Berechtigungen schreiben.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel legt die Konfigurationseigenschaften für eine Ereignisquelle aus Befehlszeilenargumente. Input-Argumente angeben, der Name der Ereignisquelle, Ereignisprotokollname Computernamen und Ereignismeldungsdatei Ressource. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.EventSourceCreationData> Klasse.  
+  
+ [!code-cpp[EventLog_EventSourceCreation_Properties#2](~/samples/snippets/cpp/VS_Snippets_CLR/EventLog_EventSourceCreation_Properties/CPP/source.cpp#2)]
+ [!code-csharp[EventLog_EventSourceCreation_Properties#2](~/samples/snippets/csharp/VS_Snippets_CLR/EventLog_EventSourceCreation_Properties/CS/source.cs#2)]
+ [!code-vb[EventLog_EventSourceCreation_Properties#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/EventLog_EventSourceCreation_Properties/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der Computername ist ungültig.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">zum Aufrufen von einem beliebigen Mitglied der <see cref="T:System.Diagnostics.EventSourceCreationData" /> mit vollständiger Vertrauenswürdigkeit. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageResourceFile">
+      <MemberSignature Language="C#" Value="public string MessageResourceFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MessageResourceFile" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventSourceCreationData.MessageResourceFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Pfad der Datei der Ressource, die Nachricht Formatieren von Zeichenfolgen für die Quelle enthält.</summary>
+        <value>Der Pfad der Datei der Ressource. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Diagnostics.EventSourceCreationData.MessageResourceFile%2A> Eigenschaft so konfigurieren Sie eine Ereignisprotokoll-Quelle zum Schreiben lokalisierter ereignismeldungen. -Ereignismeldungen sind anwendungsdefinierte Zeichenfolgen, die das Ereignis an den Benutzer zu beschreiben.  
+  
+ Die Anwendung kann mit Ressourcenbezeichner Einträge im Ereignisprotokoll schreiben. Ein Ressourcenbezeichner indiziert eine Nachricht befindet sich in der <xref:System.Diagnostics.EventSourceCreationData.MessageResourceFile%2A>. Die Ereignisanzeige verwendet den Ressourcenbezeichner suchen und Anzeigen der entsprechenden Zeichenfolge aus der Ressourcendatei lokalisierte Meldung basierend auf der aktuellen spracheinstellungen.  
+  
+ Die Ereignisquelle muss zum Schreiben lokalisierter Einträge oder zum Schreiben direkter Zeichenfolgen konfiguriert werden. Verwenden der <xref:System.Diagnostics.EventLog.WriteEvent%2A> Methode zum Schreiben lokalisierter Einträge für eine Datenquelle mit einer Meldungsressourcendatei konfiguriert.  
+  
+ Wenn Ihre Anwendung Meldungs-Ereignis direkt, schreibt anstatt mit einem Ressourcenbezeichner in einer lokalisierten Ressourcendatei legen Sie keine der <xref:System.Diagnostics.EventSourceCreationData.MessageResourceFile%2A> Eigenschaft.  
+  
+ Details zum Definieren von ereignismeldungen und Erstellen von Ressourcendateien Ereignis, finden Sie unter dem Thema "Meldungscompiler" in der Platform SDK-Dokumentation unter [http://msdn.microsoft.com](http://msdn.microsoft.com/).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird bestimmt, ob die Ereignisquelle benannt `SampleApplicationSource` auf dem lokalen Computer registriert ist. Wenn die Ereignisquelle nicht vorhanden ist, wird im Beispiel legt die Nachricht Ressourcendatei für die Quelle und die neue Ereignisquelle erstellt. Im Codebeispiel wird schließlich den lokalisierten Anzeigenamen für das Ereignisprotokoll, wobei die Ressourcen-ID-Wert in `DisplayNameMsgId` und den Pfad der Ressource in `messageFile`.  
+  
+ [!code-cpp[EventLog_WriteEvent#6](~/samples/snippets/cpp/VS_Snippets_CLR/eventlog_WriteEvent/CPP/source.cpp#6)]
+ [!code-csharp[EventLog_WriteEvent#6](~/samples/snippets/csharp/VS_Snippets_CLR/eventlog_WriteEvent/CS/source.cs#6)]
+ [!code-vb[EventLog_WriteEvent#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventlog_WriteEvent/VB/source.vb#6)]  
+  
+ Das Codebeispiel verwendet die folgende Meldungstextdatei, in die Ressourcenbibliothek EventLogMsgs.dll integriert. Eine Nachricht Textdatei handelt es sich um die Quelle aus der der Meldungsressourcendatei erstellt wird. Die Nachricht Text-Datei definiert die Ressourcen-IDs und der Text für die Kategorie, die in der ereignismeldung wird und die Parameter einfügen-Zeichenfolgen.  
+  
+```  
+; // EventLogMsgs.mc  
+; // ********************************************************  
+  
+; // Use the following commands to build this file:  
+  
+; //   mc -s EventLogMsgs.mc  
+; //   rc EventLogMsgs.rc  
+; //   link /DLL /SUBSYSTEM:WINDOWS /NOENTRY /MACHINE:x86 EventLogMsgs.Res   
+; // ********************************************************  
+  
+; // - Event categories -  
+; // Categories must be numbered consecutively starting at 1.  
+; // ********************************************************  
+  
+MessageId=0x1  
+Severity=Success  
+SymbolicName=INSTALL_CATEGORY  
+Language=English  
+Installation  
+.  
+  
+MessageId=0x2  
+Severity=Success  
+SymbolicName=QUERY_CATEGORY  
+Language=English  
+Database Query  
+.  
+  
+MessageId=0x3  
+Severity=Success  
+SymbolicName=REFRESH_CATEGORY  
+Language=English  
+Data Refresh  
+.  
+  
+; // - Event messages -  
+; // *********************************  
+  
+MessageId = 1000  
+Severity = Success  
+Facility = Application  
+SymbolicName = AUDIT_SUCCESS_MESSAGE_ID_1000  
+Language=English  
+My application message text, in English, for message id 1000, called from %1.  
+.  
+  
+MessageId = 1001  
+Severity = Warning  
+Facility = Application  
+SymbolicName = AUDIT_FAILED_MESSAGE_ID_1001  
+Language=English  
+My application message text, in English, for message id 1001, called from %1.  
+.  
+  
+MessageId = 1002  
+Severity = Success  
+Facility = Application  
+SymbolicName = GENERIC_INFO_MESSAGE_ID_1002  
+Language=English  
+My generic information message in English, for message id 1002.  
+.  
+  
+MessageId = 1003  
+Severity = Warning  
+Facility = Application  
+SymbolicName = GENERIC_WARNING_MESSAGE_ID_1003  
+Language=English  
+My generic warning message in English, for message id 1003, called from %1.  
+.  
+  
+MessageId = 1004  
+Severity = Success  
+Facility = Application  
+SymbolicName = UPDATE_CYCLE_COMPLETE_MESSAGE_ID_1004  
+Language=English  
+The update cycle is complete for %%5002.  
+.  
+  
+MessageId = 1005  
+Severity = Warning  
+Facility = Application  
+SymbolicName = SERVER_CONNECTION_DOWN_MESSAGE_ID_1005  
+Language=English  
+The refresh operation did not complete because the connection to server %1 could not be established.  
+.  
+  
+; // - Event log display name -  
+; // ********************************************************  
+  
+MessageId = 5001  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_DISPLAY_NAME_MSGID  
+Language=English  
+Sample Event Log  
+.  
+  
+; // - Event message parameters -  
+; //   Language independent insertion strings  
+; // ********************************************************  
+  
+MessageId = 5002  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_SERVICE_NAME_MSGID  
+Language=English  
+SVC_UPDATE.EXE  
+.  
+```  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">zum Aufrufen von einem beliebigen Mitglied der <see cref="T:System.Diagnostics.EventSourceCreationData" /> mit vollständiger Vertrauenswürdigkeit. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterResourceFile">
+      <MemberSignature Language="C#" Value="public string ParameterResourceFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ParameterResourceFile" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventSourceCreationData.ParameterResourceFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Pfad der Ressourcendatei, die Nachricht Parameterzeichenfolgen für die Quelle enthält.</summary>
+        <value>Der Pfad der Parameterressourcendatei. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Diagnostics.EventSourceCreationData.ParameterResourceFile%2A> Eigenschaft so konfigurieren Sie eine Ereignisprotokoll-Quelle zum Schreiben lokalisierter ereignismeldungen mit eingefügten Parameterzeichenfolgen. Jede lokalisierte ereignismeldung angegeben, der <xref:System.Diagnostics.EventSourceCreationData.MessageResourceFile%2A> Eigenschaft kann Platzhalter für den einfügen-Zeichenfolgen enthalten. Diese Platzhalter werden verwendet, um die Position und den Ressourcenbezeichner für eine sprachunabhängige-Zeichenfolge in der ereignismeldung wird angegeben. Die Ereignisanzeige füllt die Platzhalter mit den entsprechenden Zeichenfolgen aus dem <xref:System.Diagnostics.EventSourceCreationData.ParameterResourceFile%2A> und formatiert die Meldung im Ereignisprotokoll für den lokalisierten Ereigniseintrag.  
+  
+ Im folgende Abschnitt einer Textdatei Nachricht definiert z. B. eine Zeichenfolge mit einem Parameterplatzhalter für:  
+  
+```  
+  
+MessageId = 1501  
+Severity = Success  
+Facility = Application  
+SymbolicName = COMPONENT_STARTING  
+Language=English  
+Component %%6050 is starting.  
+.  
+```  
+  
+ In der Parameterressourcendatei muss der Einfügezeichenfolge mit den Ressourcenbezeichner, der den Platzhalter, entspricht definiert werden, wie unten dargestellt:  
+  
+```  
+MessageId = 6050  
+Severity = Success  
+Facility = Application  
+SymbolicName = COMPONENT_NAME_MSGID  
+Language=English  
+TRIGGER.EXE  
+.  
+```  
+  
+ Die Ereignisquelle muss zum Schreiben lokalisierter Einträge oder zum Schreiben direkter Zeichenfolgen konfiguriert werden. Verwenden der <xref:System.Diagnostics.EventLog.WriteEvent%2A> Methode zum Schreiben lokalisierter Einträge für eine Datenquelle mit einer Meldungsressourcendatei konfiguriert.  
+  
+ Wenn die Anwendung die Nachricht Ereigniszeichenfolgen direkt in das Ereignisprotokoll schreibt, oder wenn Ihre <xref:System.Diagnostics.EventSourceCreationData.MessageResourceFile%2A> Eigenschaft keine Nachrichten mithilfe von Parameterplatzhaltern-einfügen, legen Sie nicht die <xref:System.Diagnostics.EventSourceCreationData.ParameterResourceFile%2A> Eigenschaft.  
+  
+ Details zum Definieren von ereignismeldungen und Erstellen von Ressourcendateien Ereignis, finden Sie unter dem Thema "Meldungscompiler" in der Platform SDK-Dokumentation unter [http://msdn.microsoft.com](http://msdn.microsoft.com/).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird bestimmt, ob die Ereignisquelle benannt `SampleApplicationSource` auf dem lokalen Computer registriert ist. Wenn die Ereignisquelle nicht vorhanden ist, wird im Beispiel legt die Nachricht Ressourcendatei für die Quelle und die neue Ereignisquelle erstellt. Im Codebeispiel wird schließlich den lokalisierten Anzeigenamen für das Ereignisprotokoll, wobei die Ressourcen-ID-Wert in `DisplayNameMsgId` und den Pfad der Ressource in `messageFile`.  
+  
+ [!code-cpp[EventLog_WriteEvent#6](~/samples/snippets/cpp/VS_Snippets_CLR/eventlog_WriteEvent/CPP/source.cpp#6)]
+ [!code-csharp[EventLog_WriteEvent#6](~/samples/snippets/csharp/VS_Snippets_CLR/eventlog_WriteEvent/CS/source.cs#6)]
+ [!code-vb[EventLog_WriteEvent#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventlog_WriteEvent/VB/source.vb#6)]  
+  
+ Das Codebeispiel verwendet die folgende Meldungstextdatei, in die Ressourcenbibliothek EventLogMsgs.dll integriert. Eine Nachricht Textdatei handelt es sich um die Quelle aus der der Meldungsressourcendatei erstellt wird. Die Nachricht Text-Datei definiert die Ressourcen-IDs und der Text für die Kategorie, die in der ereignismeldung wird und die Parameter einfügen-Zeichenfolgen. Insbesondere verwendet die Nachricht, die für den Ressourcenbezeichner 1004 definiert einen Platzhalter für eine Parameterzeichenfolge für Ressourcenbezeichner 5002 definiert.  
+  
+```  
+; // EventLogMsgs.mc  
+; // ********************************************************  
+  
+; // Use the following commands to build this file:  
+  
+; //   mc -s EventLogMsgs.mc  
+; //   rc EventLogMsgs.rc  
+; //   link /DLL /SUBSYSTEM:WINDOWS /NOENTRY /MACHINE:x86 EventLogMsgs.Res   
+; // ********************************************************  
+  
+; // - Event categories -  
+; // Categories must be numbered consecutively starting at 1.  
+; // ********************************************************  
+  
+MessageId=0x1  
+Severity=Success  
+SymbolicName=INSTALL_CATEGORY  
+Language=English  
+Installation  
+.  
+  
+MessageId=0x2  
+Severity=Success  
+SymbolicName=QUERY_CATEGORY  
+Language=English  
+Database Query  
+.  
+  
+MessageId=0x3  
+Severity=Success  
+SymbolicName=REFRESH_CATEGORY  
+Language=English  
+Data Refresh  
+.  
+  
+; // - Event messages -  
+; // *********************************  
+  
+MessageId = 1000  
+Severity = Success  
+Facility = Application  
+SymbolicName = AUDIT_SUCCESS_MESSAGE_ID_1000  
+Language=English  
+My application message text, in English, for message id 1000, called from %1.  
+.  
+  
+MessageId = 1001  
+Severity = Warning  
+Facility = Application  
+SymbolicName = AUDIT_FAILED_MESSAGE_ID_1001  
+Language=English  
+My application message text, in English, for message id 1001, called from %1.  
+.  
+  
+MessageId = 1002  
+Severity = Success  
+Facility = Application  
+SymbolicName = GENERIC_INFO_MESSAGE_ID_1002  
+Language=English  
+My generic information message in English, for message id 1002.  
+.  
+  
+MessageId = 1003  
+Severity = Warning  
+Facility = Application  
+SymbolicName = GENERIC_WARNING_MESSAGE_ID_1003  
+Language=English  
+My generic warning message in English, for message id 1003, called from %1.  
+.  
+  
+MessageId = 1004  
+Severity = Success  
+Facility = Application  
+SymbolicName = UPDATE_CYCLE_COMPLETE_MESSAGE_ID_1004  
+Language=English  
+The update cycle is complete for %%5002.  
+.  
+  
+MessageId = 1005  
+Severity = Warning  
+Facility = Application  
+SymbolicName = SERVER_CONNECTION_DOWN_MESSAGE_ID_1005  
+Language=English  
+The refresh operation did not complete because the connection to server %1 could not be established.  
+.  
+  
+; // - Event log display name -  
+; // ********************************************************  
+  
+MessageId = 5001  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_DISPLAY_NAME_MSGID  
+Language=English  
+Sample Event Log  
+.  
+  
+; // - Event message parameters -  
+; //   Language independent insertion strings  
+; // ********************************************************  
+  
+MessageId = 5002  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_SERVICE_NAME_MSGID  
+Language=English  
+SVC_UPDATE.EXE  
+.  
+```  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">zum Aufrufen von einem beliebigen Mitglied der <see cref="T:System.Diagnostics.EventSourceCreationData" /> mit vollständiger Vertrauenswürdigkeit. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public string Source { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Source" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventSourceCreationData.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der im Ereignisprotokoll als Ereignisquelle zu registrieren.</summary>
+        <value>Der Name, der im Ereignisprotokoll als Quelle für Einträge zu registrieren. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Quellname ist häufig der Name der Anwendung oder den Namen einer Komponente innerhalb einer großen Anwendung. Die <xref:System.Diagnostics.EventLog.CreateEventSource%28System.Diagnostics.EventSourceCreationData%29?displayProperty=nameWithType> -Methode verwendet die <xref:System.Diagnostics.EventSourceCreationData.Source%2A>, <xref:System.Diagnostics.EventSourceCreationData.LogName%2A>, und <xref:System.Diagnostics.EventSourceCreationData.MachineName%2A> Eigenschaften Registrierungswerte auf dem Zielcomputer für die neue Quelle und das zugeordnete Ereignisprotokoll erstellen. Ein neuen Quellennamen kann nicht mit den Datenquellennamen einer vorhandenen oder einen vorhandenen Ereignisprotokollnamen auf dem Zielcomputer übereinstimmen.  
+  
+ Nachdem die Registrierungswerte für die Datenquelle erstellt wurden, kann Ihre Anwendung die Quelle verwenden, um Einträge in das konfigurierte Ereignisprotokoll schreiben.  
+  
+ Jede Quelle kann jeweils nur ein Ereignisprotokoll schreiben. Allerdings kann Ihre Anwendung mehreren Quellen verwenden, um mehrere Ereignisprotokolle geschrieben. Ihre Anwendung erfordert z. B. möglicherweise mehrere Quellen für unterschiedliche Ereignisprotokolle oder Ressourcendateien konfiguriert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel legt die Konfigurationseigenschaften für eine Ereignisquelle aus Befehlszeilenargumente. Input-Argumente angeben, der Name der Ereignisquelle, Ereignisprotokollname Computernamen und Ereignismeldungsdatei Ressource. In diesem Beispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.EventSourceCreationData> Klasse.  
+  
+ [!code-cpp[EventLog_EventSourceCreation_Properties#2](~/samples/snippets/cpp/VS_Snippets_CLR/EventLog_EventSourceCreation_Properties/CPP/source.cpp#2)]
+ [!code-csharp[EventLog_EventSourceCreation_Properties#2](~/samples/snippets/csharp/VS_Snippets_CLR/EventLog_EventSourceCreation_Properties/CS/source.cs#2)]
+ [!code-vb[EventLog_EventSourceCreation_Properties#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/EventLog_EventSourceCreation_Properties/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">zum Aufrufen von einem beliebigen Mitglied der <see cref="T:System.Diagnostics.EventSourceCreationData" /> mit vollständiger Vertrauenswürdigkeit. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

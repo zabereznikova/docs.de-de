@@ -1,0 +1,369 @@
+<Type Name="CommonDialog" FullName="System.Windows.Forms.CommonDialog">
+  <TypeSignature Language="C#" Value="public abstract class CommonDialog : System.ComponentModel.Component" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CommonDialog extends System.ComponentModel.Component" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.CommonDialog" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Component</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItemFilter("System.Windows.Forms")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die für die Bildschirmanzeige von Dialogfeldern verwendete Basisklasse an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Geerbte Klassen sind erforderlich, um implementieren <xref:System.Windows.Forms.CommonDialog.RunDialog%2A> durch den Aufruf <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> zu einem bestimmten Standarddialogfeld erstellen. Geerbte Klassen können optional außer Kraft setzen <xref:System.Windows.Forms.CommonDialog.HookProc%2A> bestimmte Hookfunktionen implementieren.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.ColorDialog> Implementierung von <xref:System.Windows.Forms.CommonDialog> und erstellen und Anzeigen eines Dialogfelds veranschaulicht. Dieses Beispiel benötigen Sie, dass die Methode aus einem vorhandenen Formular bezeichnet und verfügt über eine <xref:System.Windows.Forms.TextBox> und <xref:System.Windows.Forms.Button> platziert sind.  
+  
+ [!code-cpp[Classic ColorDialog Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ColorDialog Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ColorDialog Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ColorDialog Example/CS/source.cs#1)]
+ [!code-vb[Classic ColorDialog Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ColorDialog Example/VB/Form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CommonDialog ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CommonDialog.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.CommonDialog" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpRequest">
+      <MemberSignature Language="C#" Value="public event EventHandler HelpRequest;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler HelpRequest" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.CommonDialog.HelpRequest" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der Benutzer in einem Standarddialogfeld auf die Hilfeschaltfläche klickt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Informationen zur Behandlung von Ereignissen finden Sie unter [behandeln und Auslösen von Ereignissen](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Initialisieren einer <xref:System.Windows.Forms.ColorDialog> objekteinstellung der <xref:System.Windows.Forms.ColorDialog.AnyColor%2A>, <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A> Eigenschaften. Die <xref:System.Windows.Forms.ColorDialog> Objekt lässt sich nicht auf des Benutzers eine benutzerdefinierte Farbe festlegen, aber es ermöglicht den vollständigen Satz von Grundfarben angezeigt werden. Durch Festlegen der <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A> -Eigenschaft auf "false", können Sie die Darstellung von Farben, die Kombinationen aus anderen Farben auf Systemen mit 256 oder weniger Farben. Das Beispiel zeigt auch die Einstellung der <xref:System.Windows.Forms.ColorDialog.ShowHelp%2A> -Eigenschaft und die Behandlung einer <xref:System.Windows.Forms.CommonDialog.HelpRequest> -Ereignis für ein Dialogfeld. Um das Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular, und rufen die `InitializeColorDialog` -Methode im Konstruktor des Formulars oder `Load` Methode. Dieses Beispiel erfordert, dass die `Click` -Ereignis der Schaltfläche an den Ereignishandler, die im Beispiel definierte verbunden ist.  
+  
+ [!code-cpp[System.Windows.Forms.ColorDialogHelp#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ColorDialogHelp/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ColorDialogHelp#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ColorDialogHelp/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ColorDialogHelp#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ColorDialogHelp/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HookProc">
+      <MemberSignature Language="C#" Value="protected virtual IntPtr HookProc (IntPtr hWnd, int msg, IntPtr wparam, IntPtr lparam);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance native int HookProc(native int hWnd, int32 msg, native int wparam, native int lparam) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CommonDialog.HookProc(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hWnd" Type="System.IntPtr" />
+        <Parameter Name="msg" Type="System.Int32" />
+        <Parameter Name="wparam" Type="System.IntPtr" />
+        <Parameter Name="lparam" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="hWnd">Das Handle für das Dialogfeld.</param>
+        <param name="msg">Die Meldung empfangen wird.</param>
+        <param name="wparam">Zusätzliche Informationen über die Nachricht.</param>
+        <param name="lparam">Zusätzliche Informationen über die Nachricht.</param>
+        <summary>Definiert die Hookprozedur für Standarddialogfelder, die überschrieben wird, um einem Standarddialogfeld spezifische Funktionen hinzuzufügen.</summary>
+        <returns>Ein Wert von 0, wenn die Meldung von der Prozedur für Standarddialogfelder verarbeitet wird. Ein Wert ungleich 0, wenn die Meldung von dieser Prozedur ignoriert wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Hookprozedur ist ein Mechanismus, mit dem eine Funktion Ereignisse abfangen kann, bevor sie eine Anwendung nicht erreichen. Beim Überschreiben der <xref:System.Windows.Forms.CommonDialog.HookProc%2A> Methode für eine <xref:System.Windows.Forms.CommonDialog> -Klasse, wird das Betriebssystem die Außerkraftsetzung der Funktion zum Betriebssystem-Nachrichten an das Fenster aufgerufen.  
+  
+ Standardmäßig zentriert die Hookprozedur das Dialogfeld auf dem Bildschirm als Antwort auf eine WM_INITDIALOG-Meldung.  
+  
+> [!NOTE]
+>  Diese Methode verwendet <xref:System.Security.Permissions.SecurityAction?displayProperty=nameWithType> aufgerufen aus nicht vertrauenswürdigen Code verhindert wird; nur der unmittelbaren Aufrufer muss über, <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A?displayProperty=nameWithType> Berechtigung. Wenn Code aus teilweise vertrauenswürdigem Code aufgerufen werden kann, übergeben Sie Benutzereingaben an <xref:System.Runtime.InteropServices.Marshal> -Klassenmethoden ohne Überprüfung. Für wichtige Einschränkungen zur Verwendung der `LinkDemand` Member finden Sie unter ["Demand" im Vergleich. LinkDemand](http://msdn.microsoft.com/en-us/1ab877f2-70f4-4e0d-8116-943999dfe8f5).  
+  
+ Diese Eigenschaft auch verwendet die <xref:System.Security.Permissions.SecurityAction?displayProperty=nameWithType> Sicherheitsattribut; bei diesem Member überschreiben die abgeleitete Klasse benötigen die `CustomPermission` Berechtigung.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Windows.Forms.CommonDialog.HookProc%2A> Methode. Das Beispiel besteht aus einer Klasse, erbt die <xref:System.Windows.Forms.CommonDialog> Klasse. In der Klasse <xref:System.Windows.Forms.CommonDialog.HookProc%2A> "Override", "im Beispiel ergibt der Methode `msg` Parameter für konstante Werte für bestimmte Windows-Nachrichten. Wenn die `msg` Parameter gleich die angegebene Konstante ist, schreibt das Beispiel Ablaufverfolgungsausgabe identifizieren die Windows-Meldung, die übergeben wurde, die <xref:System.Windows.Forms.CommonDialog.HookProc%2A> Methode. In diesem Beispiel wird vorausgesetzt, dass die Klasse, in der die <xref:System.Windows.Forms.CommonDialog.HookProc%2A> -Methode deklariert ist, erbt die <xref:System.Windows.Forms.CommonDialog> Klasse.  
+  
+ [!code-cpp[HookProc Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/HookProc Example/CPP/fontdialogoverride.cpp#1)]
+ [!code-csharp[HookProc Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/HookProc Example/CS/fontdialogoverride.cs#1)]
+ [!code-vb[HookProc Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/HookProc Example/VB/fontdialogoverride.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den unmittelbaren Aufrufer zum Aufrufen von nicht verwalteten Codes. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+        <block subset="none" type="overrides">
+          <para>Erbende Klassen kann überschreiben Sie diese Methode, um einem Standarddialogfeld spezifische Funktionen hinzuzufügen. Zum Überschreiben <see cref="M:System.Windows.Forms.CommonDialog.HookProc(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.CommonDialog.HookProc(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr)" /> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnHelpRequest">
+      <MemberSignature Language="C#" Value="protected virtual void OnHelpRequest (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnHelpRequest(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CommonDialog.OnHelpRequest(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.HelpEventArgs" /> , das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.CommonDialog.HelpRequest" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn auf die Schaltfläche "Hilfe" geklickt wird. Erbende Klassen kann diese Methode, um die Behandlung des Ereignisses überschreiben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerWndProc">
+      <MemberSignature Language="C#" Value="protected virtual IntPtr OwnerWndProc (IntPtr hWnd, int msg, IntPtr wparam, IntPtr lparam);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance native int OwnerWndProc(native int hWnd, int32 msg, native int wparam, native int lparam) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CommonDialog.OwnerWndProc(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hWnd" Type="System.IntPtr" />
+        <Parameter Name="msg" Type="System.Int32" />
+        <Parameter Name="wparam" Type="System.IntPtr" />
+        <Parameter Name="lparam" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="hWnd">Das Fensterhandle der Nachricht zu senden.</param>
+        <param name="msg">Die Win32-Meldung zu senden.</param>
+        <param name="wparam">Die <c>Wparam</c> mit der Nachricht zu senden.</param>
+        <param name="lparam">Die <c>Lparam</c> mit der Nachricht zu senden.</param>
+        <summary>Definiert die Prozedur des Besitzerfensters, die überschrieben wird, um einem Standarddialogfeld spezifische Funktionen hinzuzufügen.</summary>
+        <returns>Das Ergebnis der Nachrichtenverarbeitung, das von der gesendeten Nachricht abhängt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird hier die Steuerung beim Senden von Nachrichten an das Besitzerfenster für das Standarddialogfeld. Erbende Klassen kann überschreiben Sie diese Methode, um einem Standarddialogfeld spezifische Funktionen hinzuzufügen.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den unmittelbaren Aufrufer zum Aufrufen von nicht verwalteten Codes. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public abstract void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CommonDialog.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wenn dies in einer abgeleiteten Klasse überschrieben wird, werden hierdurch die Eigenschaften eines Standarddialogfelds auf die Standardwerte zurückgesetzt.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für nicht verwalteten Code zum Aufrufen dieser Methode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+        <block subset="none" type="overrides">
+          <para>Erbende Klassen kann diese Methode, um ihre Eigenschaften zurückgesetzt überschreiben.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RunDialog">
+      <MemberSignature Language="C#" Value="protected abstract bool RunDialog (IntPtr hwndOwner);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool RunDialog(native int hwndOwner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CommonDialog.RunDialog(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hwndOwner" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="hwndOwner">Ein Wert, der das Fensterhandle des Besitzerfensters für das Standarddialogfeld darstellt.</param>
+        <summary>Wenn dies in einer abgeleiteten Klasse überschrieben wird, wird hierdurch ein Standarddialogfeld angegeben.</summary>
+        <returns>
+          <see langword="true" />, wenn das Dialogfeld erfolgreich ausgeführt wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn der Benutzer ein häufig verwendetes Dialogfeld aufruft <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>, und es muss überschrieben werden, von der geerbten Klassen <xref:System.Windows.Forms.CommonDialog> zu einem bestimmten Standarddialogfeld implementieren.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für nicht verwalteten Code zum Aufrufen dieser Methode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowDialog">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DialogResult ShowDialog ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Forms.DialogResult ShowDialog() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CommonDialog.ShowDialog" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt ein Standarddialogfeld mit einem Standardbesitzer aus.</summary>
+        <returns>
+          <see cref="F:System.Windows.Forms.DialogResult.OK" />Wenn der Benutzer im Dialogfeld auf OK klickt; andernfalls <see cref="F:System.Windows.Forms.DialogResult.Cancel" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode implementiert <xref:System.Windows.Forms.CommonDialog.RunDialog%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.ColorDialog> Implementierung von <xref:System.Windows.Forms.CommonDialog> und erstellen und Anzeigen eines Dialogfelds veranschaulicht. Dieses Beispiel benötigen Sie, dass die Methode aus einem vorhandenen Formular bezeichnet und verfügt über eine <xref:System.Windows.Forms.TextBox> und <xref:System.Windows.Forms.Button> platziert sind.  
+  
+ [!code-cpp[Classic ColorDialog Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ColorDialog Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ColorDialog Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ColorDialog Example/CS/source.cs#1)]
+ [!code-vb[Classic ColorDialog Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ColorDialog Example/VB/Form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Drawing.Printing.PrintingPermission">So drucken Sie über eine <see cref="T:System.Windows.Forms.PrintDialog" />. Zugeordnete Enumeration:<see cref="F:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting" /></permission>
+        <permission cref="T:System.Security.Permissions.UIPermission">für sichere untergeordnete Fenster zum Aufrufen dieser Methode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowDialog">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DialogResult ShowDialog (System.Windows.Forms.IWin32Window owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Forms.DialogResult ShowDialog(class System.Windows.Forms.IWin32Window owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CommonDialog.ShowDialog(System.Windows.Forms.IWin32Window)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.IWin32Window" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Ein beliebiges Objekt, das <see cref="T:System.Windows.Forms.IWin32Window" /> implementiert, das das Fenster der obersten Ebene und damit den Besitzer des modalen Dialogfelds darstellt.</param>
+        <summary>Führt ein Standarddialogfeld mit dem angegebenen Besitzer aus.</summary>
+        <returns>
+          <see cref="F:System.Windows.Forms.DialogResult.OK" />Wenn der Benutzer klickt **OK** im Dialogfeld; anderenfalls <see cref="F:System.Windows.Forms.DialogResult.Cancel" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Version von den <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> Methode ermöglicht Ihnen die Angabe eines bestimmten Formulars oder Steuerelements, das das Dialogfeld besitzen soll, das angezeigt wird. Wenn Sie die Version dieser Methode, die keine Parameter aufweist verwenden, würde das Dialogfeld angezeigt wird das aktuell aktive Fenster der Anwendung automatisch Besitz.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Drawing.Printing.PrintingPermission">So drucken Sie über eine <see cref="T:System.Windows.Forms.PrintDialog" />. Zugeordnete Enumeration:<see cref="F:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting" /></permission>
+        <permission cref="T:System.Security.Permissions.UIPermission">für sichere untergeordnete Fenster zum Aufrufen dieser Methode. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Tag">
+      <MemberSignature Language="C#" Value="public object Tag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Tag" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CommonDialog.Tag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.StringConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Objekt, das Daten über das Steuerelement enthält.</summary>
+        <value>Das Objekt, das Daten enthält, zu der <see cref="T:System.Windows.Forms.CommonDialog" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um beliebige Informationen über das Steuerelement zu speichern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,159 @@
+<Type Name="TextViewElement" FullName="System.Web.UI.MobileControls.TextViewElement">
+  <TypeSignature Language="C#" Value="public class TextViewElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TextViewElement extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.TextViewElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Text für ein <see cref="T:System.Web.UI.MobileControls.TextView" /> Objekt. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.TextViewElement> -Klasse unterstützt die <xref:System.Web.UI.MobileControls.TextView> die Texteigenschaft des Aufteilen der <xref:System.Web.UI.MobileControls.TextView> Objekt in die logischen Kernelemente. Jedes Element wird dann mithilfe des Paginierungsmechanismus von verwendet die <xref:System.Web.UI.MobileControls.TextView> Objekt. Es handelt sich die Klasse, die die <xref:System.Web.UI.MobileControls.TextView> mobile-Steuerelements verwendet wird, um sicherzustellen, dass Seitenumbrüche keine aufgabenauflistung Links oder andere Elemente, die nicht zwischen Seiten geteilt werden soll.  
+  
+ Wenn abgeleitet werden sollen die <xref:System.Web.UI.MobileControls.TextView> mobile-Steuerelements oder eine erstellen einen neuen Adapter, werden Sie wahrscheinlich möchten diese Klasse ohne Änderungen verwenden können.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName="BreakAfter">
+      <MemberSignature Language="C#" Value="public bool BreakAfter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BreakAfter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.TextViewElement.BreakAfter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Legt fest oder gibt eine Eigenschaft, die bestimmt, ob ein zusätzlicher Umbruch nach dem Steuerelement gerendert wird. Dieser Umbruch bewirkt, dass nachfolgender Inhalt in der nächsten Zeile beginnt. Die Standardeinstellung ist <see langword="true" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>
+          <see langword="true" />, wenn ein zusätzlicher Umbruch nach dem Steuerelement gerendert wird, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird von allen Steuerelementen ignoriert, für die ein Umbruch nicht geeignet ist. Die folgende Tabelle enthält die Steuerelemente, die Unterstützung der <xref:System.Web.UI.MobileControls.MobileControl.BreakAfter%2A> -Eigenschaft für bestimmte Arten von Geräten verwenden.  
+  
+|Steuerelement|Gerät mit HTML-Browser|Gerät mit WML-Browser|Gerät mit WML/Browser|  
+|-------------|------------------------------|-----------------------------|---------------------------------|  
+|AdRotator||||  
+|Kalender|J|||  
+|Befehl|J|J||  
+|Bild|J|J|J|  
+|Bezeichnung|J|J|J|  
+|Link|J|J||  
+|Liste||||  
+|%ObjectList|Y (es sei denn, der Browser des Geräts Tabellen verarbeiten kann)|||  
+|Bereich (der Standardwert ist "false")|J|J|J|  
+|Telefonanruf|J|J||  
+|SelectionList|Y (es sei denn, Browser Tabellen verarbeiten kann)|J||  
+|TextBox|J|J||  
+|TextView|J|J||  
+|TextViewElement|J|J||  
+|systemintegritätsprüfungspunkt|J|J|J|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBold">
+      <MemberSignature Language="C#" Value="public bool IsBold { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBold" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.TextViewElement.IsBold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt <see langword="true" /> , wenn der Text fett formatiert ist. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>
+          <see langword="true" />Wenn der Text fett formatiert ist. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsItalic">
+      <MemberSignature Language="C#" Value="public bool IsItalic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsItalic" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.TextViewElement.IsItalic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt <see langword="true" /> , wenn der Text kursiv formatiert ist. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>
+          <see langword="true" />Wenn Text kursiv formatiert ist. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.TextViewElement.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Legt fest oder gibt den Text für das Steuerelement zurück. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Der Text für das Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.TextViewElement.Text%2A> -Eigenschaft kann angegeben werden, mithilfe der `Text` -Attribut, oder als innerer Text. Wenn die <xref:System.Web.UI.MobileControls.TextViewElement.Text%2A> in beide Richtungen angegeben wird, der innere Text hat immer Vorrang vor. Jedoch, wenn die <xref:System.Web.UI.MobileControls.TextViewElement.Text%2A> programmgesteuert festgelegt wird, wird der innere Text automatisch entfernt und neu festgelegte Eigenschaft hat Vorrang vor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Url">
+      <MemberSignature Language="C#" Value="public string Url { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Url" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.TextViewElement.Url" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die URL des Texts zurück. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die URL des Texts.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

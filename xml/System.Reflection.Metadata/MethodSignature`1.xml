@@ -1,0 +1,159 @@
+<Type Name="MethodSignature&lt;TType&gt;" FullName="System.Reflection.Metadata.MethodSignature&lt;TType&gt;">
+  <TypeSignature Language="C#" Value="public struct MethodSignature&lt;TType&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit MethodSignature`1&lt;TType&gt; extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.Metadata.MethodSignature`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection.Metadata</AssemblyName>
+    <AssemblyVersion>1.4.1.0</AssemblyVersion>
+    <AssemblyVersion>1.4.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TType" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TType">Der Methodentyp.</typeparam>
+    <summary>Stellt eine Methode (-Definition, Verweis oder eigenständig) oder die Signatur der Eigenschaft. Im Fall von Eigenschaften, mit der Signatur übereinstimmt, die der Getter für eine mit einem Unterscheidung <see cref="T:System.Reflection.Metadata.SignatureHeader" />.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MethodSignature (System.Reflection.Metadata.SignatureHeader header, TType returnType, int requiredParameterCount, int genericParameterCount, System.Collections.Immutable.ImmutableArray&lt;TType&gt; parameterTypes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Reflection.Metadata.SignatureHeader header, !TType returnType, int32 requiredParameterCount, int32 genericParameterCount, valuetype System.Collections.Immutable.ImmutableArray`1&lt;!TType&gt; parameterTypes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Metadata.MethodSignature`1.#ctor(System.Reflection.Metadata.SignatureHeader,`0,System.Int32,System.Int32,System.Collections.Immutable.ImmutableArray{`0})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Metadata</AssemblyName>
+        <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.4.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="header" Type="System.Reflection.Metadata.SignatureHeader" />
+        <Parameter Name="returnType" Type="TType" />
+        <Parameter Name="requiredParameterCount" Type="System.Int32" />
+        <Parameter Name="genericParameterCount" Type="System.Int32" />
+        <Parameter Name="parameterTypes" Type="System.Collections.Immutable.ImmutableArray&lt;TType&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="header">Die Informationen in das führende Byte der Signatur (Art, die Aufrufkonvention, Flags).</param>
+        <param name="returnType">Der Rückgabetyp der Methode</param>
+        <param name="requiredParameterCount">Die Anzahl der erforderlichen Parameter.</param>
+        <param name="genericParameterCount">Die Anzahl der generischen Typparameter.</param>
+        <param name="parameterTypes">Die Parametertypen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Reflection.Metadata.MethodSignature`1" /> -Struktur mit den angegebenen Header, den Rückgabetyp und die Parameterinformationen.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenericParameterCount">
+      <MemberSignature Language="C#" Value="public int GenericParameterCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 GenericParameterCount" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Metadata.MethodSignature`1.GenericParameterCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Metadata</AssemblyName>
+        <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.4.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl von generischen Typparametern für die Methode ab.</summary>
+        <value>Die Anzahl der generischen Typparameter, oder 0 für nicht generische Methoden.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Header">
+      <MemberSignature Language="C#" Value="public System.Reflection.Metadata.SignatureHeader Header { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.Metadata.SignatureHeader Header" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Metadata.MethodSignature`1.Header" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Metadata</AssemblyName>
+        <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.4.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Metadata.SignatureHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Informationen in das führende Byte der Signatur (Art, die Aufrufkonvention, Flags) ab.</summary>
+        <value>Die Headersignatur.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterTypes">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.ImmutableArray&lt;TType&gt; ParameterTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Immutable.ImmutableArray`1&lt;!TType&gt; ParameterTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Metadata.MethodSignature`1.ParameterTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Metadata</AssemblyName>
+        <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.4.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;TType&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Parametertypen der Methode ab.</summary>
+        <value>Eine unveränderliche Auflistung von Parametertypen.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiredParameterCount">
+      <MemberSignature Language="C#" Value="public int RequiredParameterCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RequiredParameterCount" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Metadata.MethodSignature`1.RequiredParameterCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Metadata</AssemblyName>
+        <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.4.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl von Parametern, die für die Methode erforderlich sind.</summary>
+        <value>Die Anzahl der erforderlichen Parameter.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert ist gleich der Länge der < xref:System.Reflection.Metadata.MethodSignature`1.ParameterTypes> property, unless this method signature represents the standalone call site of a `Vararg` method, in which case, the extra entries in <xref:System.Reflection.Metadata.MethodSignature`1. ParameterTypes > sind die Typen, die für die optionalen Parameter verwendet.
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnType">
+      <MemberSignature Language="C#" Value="public TType ReturnType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !TType ReturnType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Metadata.MethodSignature`1.ReturnType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Metadata</AssemblyName>
+        <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.4.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Rückgabetyp der Methode ab.</summary>
+        <value>Der Rückgabetyp.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

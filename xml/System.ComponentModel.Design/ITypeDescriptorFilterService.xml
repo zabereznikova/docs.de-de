@@ -1,0 +1,192 @@
+<Type Name="ITypeDescriptorFilterService" FullName="System.ComponentModel.Design.ITypeDescriptorFilterService">
+  <TypeSignature Language="C#" Value="public interface ITypeDescriptorFilterService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITypeDescriptorFilterService" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.ITypeDescriptorFilterService" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Schnittstelle bereit, mit der der Satz der Memberdeskriptoren für eine Komponente im Entwurfsmodus bearbeitet werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.ITypeDescriptorFilterService> Schnittstelle bietet eine Schnittstelle, die Änderung der Eigenschaften, Ereignisse und Attribute auf Klassenebene einer Komponente zur Entwurfszeit ermöglicht. Diese Änderung wird durch den Satz von Deskriptoren, die durch eine Komponente bietet eine <xref:System.ComponentModel.TypeDescriptor>. Fragt der Typdeskriptor Website eine Komponente, für die <xref:System.ComponentModel.Design.ITypeDescriptorFilterService> service und, falls vorhanden, wird der Typdeskriptor alle Metadaten, die sie gesammelt wurden, auf diesen Dienst übergeben. Der Dienst kann dann die Metadaten ändern, durch Hinzufügen, entfernen und Ändern von vorhandenen Eigenschaften der Komponente.  
+  
+ Beispielsweise können die Eigenschaften einer Komponente geändert werden, durch einen Aufruf der <xref:System.ComponentModel.Design.ITypeDescriptorFilterService.FilterProperties%2A> Methode. Der Filterdienst ruft ein Wörterbuch mit Eigenschaftennamen und ihre Eigenschaftendeskriptoren vom Typ <xref:System.ComponentModel.PropertyDescriptor>. Die Änderungen werden mithilfe der folgenden Logik implementiert.  
+  
+|Änderung|Implementierung|  
+|------------------|--------------------|  
+|Entfernen|Löschen Sie den entsprechenden Eintrag im Wörterbuch.|  
+|Addition|Fügen Sie den entsprechenden Eintrag im Wörterbuch.|  
+|Der Typ der Änderung|Rufen Sie vorhandene Eigenschaft Deskriptor Methoden auf, ersetzen Sie die zugeordnete Eigenschaft Beschreibungseintrag oder Ersetzen Sie das gesamte Schlüssel/Wert-Paar im Wörterbuch.|  
+  
+ Der Rückgabewert der <xref:System.ComponentModel.Design.ITypeDescriptorFilterService.FilterProperties%2A> bestimmt, ob dieser Satz Eigenschaften behoben wurde. Wenn diese Methode zurückgibt `true`die <xref:System.ComponentModel.TypeDescriptor> für diese Komponente die Ergebnisse zwischenspeichern kann. Dieser Cache wird beibehalten, bis entweder die Komponente Garbage Collection ist oder die <xref:System.ComponentModel.TypeDescriptor.Refresh%2A> -Methode des Typdeskriptors aufgerufen wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, einen Designer, verwendet der <xref:System.ComponentModel.Design.ITypeDescriptorFilterService> zum Filtern der attributauflistung der neue oder vorhandene <xref:System.Windows.Forms.Button> einem Designerattribut für einen neuen Designer vor dem Laden oder das erneute Laden der Designers für die Schaltfläche hinzufügen.  
+  
+ Verwenden Sie das Beispiel, fügen Sie den Code in ein Windows Forms-Projekt, und Laden Sie die Komponenten aus der Klassenbibliothek in der Toolbox.  
+  
+ Siehe auch [Exemplarische Vorgehensweise: Automatisches Füllen der Toolbox mit benutzerdefinierten Komponenten](http://msdn.microsoft.com/library/fw694kde\(v=vs.110\).aspx).  
+  
+ Fügen Sie dem Formular einige Schaltflächen hinzu. Hinzufügen einer `ButtonDesignerFilterComponent` in Ihr Formular auf der Komponentenleiste angezeigt wird. Die `ButtonDesignerFilterComponent` fügen eine `ButtonDesignerFilterService`, implementiert <xref:System.ComponentModel.Design.ITypeDescriptorFilterService>, als eine Entwurfsmodus-Dienstanbieter. Vorhandenen oder neuen <xref:System.Windows.Forms.Button> Objekte auf dem Formular Farbe, die nach der Zyklus beginnt die `ButtonDesignerFilterService` ersetzt den Designer für jede vorhandene und neue Schaltfläche mit einem `ColorCycleButtonDesigner`. Die Farbe der Schaltflächen Zyklus beim Bewegen Sie des Mauszeigers über, und klicken Sie alternativ der Zyklus fortgesetzt oder Zurücksetzen der Farben Hintergrund- und Vordergrundfarben auf `MouseLeave` Ereignisse. Neue <xref:System.Windows.Forms.Button> Objekte erhält die `ColorCycleButtonDesigner` über die <xref:System.ComponentModel.Design.ITypeDescriptorFilterService.FilterAttributes%2A> Methode der `ButtonDesignerFilterService` , wurde geladen, bis die `ButtonDesignerFilterComponent` freigegeben wird und ersetzt die ursprüngliche <xref:System.ComponentModel.Design.ITypeDescriptorFilterService>. Die `ColorCycleButton` Klasse in diesem Beispiel wird eine <xref:System.Windows.Forms.Button> zugeordneten eine `ColorCycleButtonDesigner`.  
+  
+ [!code-cpp[ITypeDescriptorFilterService#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ITypeDescriptorFilterService/CPP/source.cpp#1)]
+ [!code-csharp[ITypeDescriptorFilterService#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ITypeDescriptorFilterService/CS/source.cs#1)]
+ [!code-vb[ITypeDescriptorFilterService#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ITypeDescriptorFilterService/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Zum Filtern der Memberdeskriptoren verfügbar gemacht werden, indem eine <see cref="T:System.ComponentModel.TypeDescriptor" />, implementieren Sie diese Schnittstelle für eine Komponente, und überschreiben die <see cref="M:System.ComponentModel.Design.ITypeDescriptorFilterService.FilterAttributes(System.ComponentModel.IComponent,System.Collections.IDictionary)" />, <see cref="M:System.ComponentModel.Design.ITypeDescriptorFilterService.FilterEvents(System.ComponentModel.IComponent,System.Collections.IDictionary)" />, oder <see cref="M:System.ComponentModel.Design.ITypeDescriptorFilterService.FilterProperties(System.ComponentModel.IComponent,System.Collections.IDictionary)" /> Methoden dieser Klasse, die Attribute, Ereignisse oder Eigenschaften zu filtern.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="FilterAttributes">
+      <MemberSignature Language="C#" Value="public bool FilterAttributes (System.ComponentModel.IComponent component, System.Collections.IDictionary attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool FilterAttributes(class System.ComponentModel.IComponent component, class System.Collections.IDictionary attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ITypeDescriptorFilterService.FilterAttributes(System.ComponentModel.IComponent,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+        <Parameter Name="attributes" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die Komponente, deren Attribute gefiltert werden sollen.</param>
+        <param name="attributes">Ein Attributwörterbuch, das geändert werden kann.</param>
+        <summary>Filtert die Attribute, die eine Komponente über einen <see cref="T:System.ComponentModel.TypeDescriptor" /> verfügbar macht.</summary>
+        <returns>
+          <see langword="true" />, wenn der Satz von gefilterten Attributen zwischengespeichert werden soll; <see langword="false" />, wenn der Filterdienst eine weitere Abfrage ausführen muss.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn ein Benutzer einen Satz von Attributen für eine Komponente anfordert. Die Attribute werden hinzugefügt, um das Wörterbuch mit des Attributs <xref:System.Attribute.TypeId%2A> als Schlüssel und dem eigentlichen Attribut als Wert. Implementierer dieses Diensts können hinzufügen, entfernen oder Ändern von vorhandenen Attributeinträge im Wörterbuch.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zurückgeben <see langword="false" /> nur, wenn erforderlich, da wiederholt Abfragen mit dem Typ Deskriptor Filter-Dienst können die Leistung reduzieren.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="FilterEvents">
+      <MemberSignature Language="C#" Value="public bool FilterEvents (System.ComponentModel.IComponent component, System.Collections.IDictionary events);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool FilterEvents(class System.ComponentModel.IComponent component, class System.Collections.IDictionary events) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ITypeDescriptorFilterService.FilterEvents(System.ComponentModel.IComponent,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+        <Parameter Name="events" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die Komponente, deren Ereignisse gefiltert werden sollen.</param>
+        <param name="events">Ein Ereigniswörterbuch, das geändert werden kann.</param>
+        <summary>Filtert die Ereignisse, die eine Komponente über einen <see cref="T:System.ComponentModel.TypeDescriptor" /> verfügbar macht.</summary>
+        <returns>
+          <see langword="true" />, wenn der Satz von gefilterten Ereignissen zwischengespeichert werden soll; <see langword="false" />, wenn der Filterdienst eine neue Abfrage ausführen muss.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn ein Benutzer einen Satz von Ereignissen für eine Komponente anfordert. Die Ereignisse werden auf das Wörterbuch mit den Ereignisnamen hinzugefügt, als Schlüssel und den entsprechenden <xref:System.ComponentModel.EventDescriptor> Objekte als Werte. Implementierer dieses Diensts können hinzufügen, entfernen oder alter Event Einträge im Wörterbuch.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zurückgeben <see langword="false" /> nur, wenn erforderlich, da wiederholt Abfragen mit dem Typ Deskriptor Filter-Dienst können die Leistung reduzieren.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="FilterProperties">
+      <MemberSignature Language="C#" Value="public bool FilterProperties (System.ComponentModel.IComponent component, System.Collections.IDictionary properties);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool FilterProperties(class System.ComponentModel.IComponent component, class System.Collections.IDictionary properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ITypeDescriptorFilterService.FilterProperties(System.ComponentModel.IComponent,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die Komponente, deren Eigenschaften gefiltert werden sollen.</param>
+        <param name="properties">Ein Eigenschaftenwörterbuch, das geändert werden kann.</param>
+        <summary>Filtert die Eigenschaften, die eine Komponente über einen <see cref="T:System.ComponentModel.TypeDescriptor" /> verfügbar macht.</summary>
+        <returns>
+          <see langword="true" />, wenn der Satz von gefilterten Eigenschaften zwischengespeichert werden soll; <see langword="false" />, wenn der Filterdienst eine neue Abfrage ausführen muss.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn ein Benutzer einen Satz von Eigenschaften für eine Komponente anfordert. Die Eigenschaften werden auf das Wörterbuch mit den Eigenschaftennamen als Schlüssel und den entsprechenden hinzugefügt <xref:System.ComponentModel.PropertyDescriptor> Objekte als Werte. Implementierer dieses Diensts können hinzufügen, entfernen oder ändern die Eigenschafteneinträge im Wörterbuch.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zurückgeben <see langword="false" /> nur, wenn erforderlich, da wiederholt Abfragen mit dem Typ Deskriptor Filter-Dienst können die Leistung reduzieren.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,134 @@
+<Type Name="PrintSystemObjectPropertiesChangedEventArgs" FullName="System.Printing.PrintSystemObjectPropertiesChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class PrintSystemObjectPropertiesChangedEventArgs : EventArgs, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PrintSystemObjectPropertiesChangedEventArgs extends System.EventArgs implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.PrintSystemObjectPropertiesChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Printing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt Daten für ein PropertiesChanged-Ereignis, das Sie erstellen müssen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  Klassen, die innerhalb der <xref:System.Printing> Namespace werden nicht für die Verwendung innerhalb einer Windows-Dienst oder der ASP.NET-Anwendung oder der Dienst unterstützt. Unerwartete Probleme erzeugen versucht, diese Klassen von innerhalb einer dieser Anwendungstypen zu verwenden, wie z. B. wirkte-service-Leistung und zur Laufzeit Ausnahmen.  
+  
+ Wenn Sie aus einer Windows Forms-Anwendung drucken möchten, finden Sie unter der <xref:System.Drawing.Printing> Namespace.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintSystemObjectPropertiesChangedEventArgs (System.Collections.Specialized.StringCollection events);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Specialized.StringCollection events) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintSystemObjectPropertiesChangedEventArgs.#ctor(System.Collections.Specialized.StringCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="events" Type="System.Collections.Specialized.StringCollection" />
+      </Parameters>
+      <Docs>
+        <param name="events">Eine Auflistung von Zeichenfolgen, von die jede eine geänderte Eigenschaft angibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Printing.PrintSystemObjectPropertiesChangedEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public override sealed void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintSystemObjectPropertiesChangedEventArgs.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle vom <see cref="T:System.Printing.PrintSystemObjectPropertiesChangedEventArgs" />-Objekt verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Printing.PrintSystemObjectPropertiesChangedEventArgs.Dispose> auf, wenn Sie <xref:System.Printing.PrintSystemObjectPropertiesChangedEventArgs> nicht mehr benötigen. Die <xref:System.Printing.PrintSystemObjectPropertiesChangedEventArgs.Dispose>-Methode bewirkt, dass <xref:System.Printing.PrintSystemObjectPropertiesChangedEventArgs> nicht mehr verwendet werden kann. Nach dem Aufruf <xref:System.Printing.PrintSystemObjectPropertiesChangedEventArgs.Dispose>, müssen Sie alle Verweise auf Freigeben der <xref:System.Printing.PrintSystemObjectPropertiesChangedEventArgs> , damit der Garbage Collector den Arbeitsspeicher freigeben kann, die die <xref:System.Printing.PrintSystemObjectPropertiesChangedEventArgs> belegt wurde. Weitere Informationen finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Rufen Sie immer <xref:System.Printing.PrintSystemObjectPropertiesChangedEventArgs.Dispose> auf, bevor Sie den letzten Verweis auf das <xref:System.Printing.PrintSystemObjectPropertiesChangedEventArgs> freigeben. Die verwendeten Ressourcen werden hingegen nicht reserviert, bis die Garbage collection Ruft die `Finalize` Methode der <xref:System.Printing.PrintSystemObjectPropertiesChangedEventArgs> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool A_0);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool A_0) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintSystemObjectPropertiesChangedEventArgs.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="A_0" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="A_0">To be added.</param>
+        <summary>Gibt die vom <see cref="T:System.Printing.PrintSystemObjectPropertiesChangedEventArgs" />-Objekt verwendeten nicht verwalteten Ressourcen und optional auch die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, indem Sie die <xref:System.Object.Finalize%2A> Methode. `Dispose()`Ruft die geschützte `Dispose(Boolean)` Methode mit den unbenannten booleschen Parametersatz hinzu `true`. <xref:System.Object.Finalize%2A>Ruft `Dispose` mit den Parametersatz hinzu `false`.  
+  
+ Wenn der boolesche Parameter ist `true`, gibt diese Methode alle Ressourcen, die für verwaltete Objekte reserviert sind, die von diesem <xref:System.Printing.PrintSystemObjectPropertiesChangedEventArgs> Verweise. Diese Methode ruft die `Dispose()`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Zum Überschreiben <see langword="Dispose(Boolean)" />müssen Sie darauf achten, nicht auf Objekte verweisen, die einen früheren Aufruf freigegeben wurden <see langword="Dispose" />. Weitere Informationen zum Implementieren <see langword="Dispose(Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see langword="Dispose" /> und <see cref="M:System.Object.Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertiesNames">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.StringCollection PropertiesNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.StringCollection PropertiesNames" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintSystemObjectPropertiesChangedEventArgs.PropertiesNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.StringCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung mit den Namen der geänderten Eigenschaften ab.</summary>
+        <value>Ein <see cref="T:System.Collections.Specialized.StringCollection" /> von Eigenschaftsnamen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

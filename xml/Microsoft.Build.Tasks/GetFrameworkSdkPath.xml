@@ -1,0 +1,184 @@
+<Type Name="GetFrameworkSdkPath" FullName="Microsoft.Build.Tasks.GetFrameworkSdkPath">
+  <TypeSignature Language="C#" Value="public class GetFrameworkSdkPath : Microsoft.Build.Tasks.TaskExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GetFrameworkSdkPath extends Microsoft.Build.Tasks.TaskExtension" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.GetFrameworkSdkPath" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Tasks.TaskExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementiert die <c>GetFrameworkSdkPath</c> Aufgabe. Verwenden der <c>GetFrameworkSdkPath</c> Element in der Projektdatei erstellen und Ausführen dieser Aufgabe. Weitere Informationen zu Verwendung und Parametern finden Sie unter [GetFrameworkSdkPath-Aufgabe](http://msdn.microsoft.com/library/2ef82b98-02b6-40cf-a9b5-f0e882fb5064).</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GetFrameworkSdkPath ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.GetFrameworkSdkPath.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Tasks.GetFrameworkSdkPath" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public override bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.GetFrameworkSdkPath.Execute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt immer <see langword="true" /> zurück.</summary>
+        <returns>
+          <see langword="true" /> in allen Fällen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nicht überlappend ausgeführt, der stattfindet, für die `GetFrameworkSdkPath` Aufgabe stattdessen der Task unterstützt nur abrufen und Festlegen von Eigenschaften.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FrameworkSdkVersion20Path">
+      <MemberSignature Language="C#" Value="public string FrameworkSdkVersion20Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FrameworkSdkVersion20Path" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GetFrameworkSdkPath.FrameworkSdkVersion20Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Pfad fest, um die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 2.0 SDK.</summary>
+        <value>Der Pfad zu der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 2.0 SDK.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FrameworkSdkVersion35Path">
+      <MemberSignature Language="C#" Value="public string FrameworkSdkVersion35Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FrameworkSdkVersion35Path" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GetFrameworkSdkPath.FrameworkSdkVersion35Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Pfad fest, um die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 3.5 SDK.</summary>
+        <value>Der Pfad zu der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 3.5 SDK.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FrameworkSdkVersion40Path">
+      <MemberSignature Language="C#" Value="public string FrameworkSdkVersion40Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FrameworkSdkVersion40Path" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GetFrameworkSdkPath.FrameworkSdkVersion40Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Pfad zu der v4. 0-.NET SDK, wenn es gefunden wurde. Es wird "String.Empty" sein, wenn das SDK nicht gefunden wurde.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FrameworkSdkVersion45Path">
+      <MemberSignature Language="C#" Value="public string FrameworkSdkVersion45Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FrameworkSdkVersion45Path" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GetFrameworkSdkPath.FrameworkSdkVersion45Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Pfad zu der v4. 5 .NET SDK, wenn es gefunden wurde. Es wird "String.Empty" sein, wenn das SDK nicht gefunden wurde.</summary>
+        <value>Gibt <see cref="T:System.String" />zurück.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GetFrameworkSdkPath.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Pfad fest, auf die neueste Version von den [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SDK.</summary>
+        <value>Der Pfad auf die neueste Version von den [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SDK.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1267 @@
+<Type Name="FlowDocumentPageViewer" FullName="System.Windows.Controls.FlowDocumentPageViewer">
+  <TypeSignature Language="C#" Value="public class FlowDocumentPageViewer : System.Windows.Controls.Primitives.DocumentViewerBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi FlowDocumentPageViewer extends System.Windows.Controls.Primitives.DocumentViewerBase" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.FlowDocumentPageViewer" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Primitives.DocumentViewerBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_FindToolBarHost", Type=typeof(System.Windows.Controls.Decorator))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Steuerelement zum Anzeigen von fortlaufendem Inhalt in einen festen Anzeigemodus, der Inhalt einer Seite zu einem Zeitpunkt anzeigt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.FlowDocumentPageViewer>kann nur eines <xref:System.Windows.Documents.FlowDocument> als untergeordnetes Element.  
+  
+ <xref:System.Windows.Controls.FlowDocumentPageViewer>Zeigt den Inhalt in einen Anzeigemodus mit jeweils einer Seite an. Ein ähnliches Steuerelement <xref:System.Windows.Controls.FlowDocumentScrollViewer>, zeigt den Inhalt im fortlaufenden Modus aus durchführen eines Bildlaufs. Beide <xref:System.Windows.Controls.FlowDocumentPageViewer> und <xref:System.Windows.Controls.FlowDocumentScrollViewer> werden so repariert, einen bestimmten Anzeigemodus. Andererseits, <xref:System.Windows.Controls.FlowDocumentReader> enthält Features, die dem Benutzer ermöglichen, die dynamisch zwischen verschiedenen Anzeigemodi auswählen (gemäß der <xref:System.Windows.Controls.FlowDocumentReaderViewingMode> Enumeration), wird die Leistung geringer als <xref:System.Windows.Controls.FlowDocumentPageViewer> oder <xref:System.Windows.Controls.FlowDocumentScrollViewer>.  
+  
+ Die folgende Abbildung zeigt eine <xref:System.Windows.Controls.FlowDocumentPageViewer> -Steuerelement mit dem Standardwert [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)].  
+  
+ ![Bildschirmabbildung: FlowDocumentPageViewer](~/add/media/flowdocpageviewer-main.png "Bildschirmabbildung: FlowDocumentPageViewer")  
+  
+-   **Inhaltsbereich** -Inhaltsbereichs zeigt den Inhalt des der <xref:System.Windows.Documents.FlowDocument> gemäß der <xref:System.Windows.Controls.Primitives.DocumentViewerBase.Document%2A> Eigenschaft.  
+  
+-   **Symbolleiste** -die Standardsymbolleiste wird unterhalb des Inhaltsbereichs angedockt und Steuerelemente für die Navigation von Seiten, und ändern die Zoomstufe hostet.  
+  
+    -   **Steuerelemente für die Seitennavigation** -Steuerelemente für die Seitennavigation umfassen eine Schaltfläche zum Wechseln zur nächsten Seite (Pfeil nach unten) oder vorherige Seite (Pfeil nach oben) sowie Indikatoren für die aktuelle Seitenzahl und Gesamtseitenzahl.  
+  
+    -   **Zoomsteuerelemente** -die Zoomsteuerelemente bzw. dem Benutzer zu erhöhen oder verringern Sie die Zoomstufe, indem Sie auf das Pluszeichen oder Minusschaltfläche, ermöglichen. Die Zoomsteuerelemente umfassen zudem einen Schieberegler zum Anpassen der Zoomstufe. Weitere Informationen finden Sie unter <xref:System.Windows.Controls.FlowDocumentReader.Zoom%2A>.  
+  
+    -   **Suche** : Benutzer können die Tastenkombination STRG + F oder können <xref:System.Windows.Controls.FlowDocumentPageViewer.Find%2A> ein Suchtextfeld verwendet wird, um den Inhalt als Zeichenfolgen zu suchen. Weitere Informationen finden Sie unter <xref:System.Windows.Controls.FlowDocumentPageViewer.Find%2A>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel definiert die <xref:System.Windows.Controls.FlowDocumentPageViewer> in der obigen Abbildung gezeigt.  
+  
+ [!code-xaml[FloaterFigureSnippets#_FlowDocumentPageViewerXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FloaterFigureSnippets/CSharp/Window1.xaml#_flowdocumentpageviewerxaml)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FlowDocumentPageViewer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentPageViewer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.FlowDocumentPageViewer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanDecreaseZoom">
+      <MemberSignature Language="C#" Value="public virtual bool CanDecreaseZoom { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanDecreaseZoom" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.FlowDocumentPageViewer.CanDecreaseZoom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="P:System.Windows.Controls.FlowDocumentPageViewer.Zoom" /> Ebene kann verringert werden.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="P:System.Windows.Controls.FlowDocumentPageViewer.Zoom" /> Ebene kann eine verringerte ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen der <xref:System.Windows.Controls.FlowDocumentPageViewer.DecreaseZoom%2A> -Methode verringert die <xref:System.Windows.Controls.FlowDocumentPageViewer.Zoom%2A> Ebene durch den angegebenen Betrag der <xref:System.Windows.Controls.FlowDocumentPageViewer.ZoomIncrement%2A> Eigenschaft. Der Wert dieser Eigenschaft unterliegt den Wert von der <xref:System.Windows.Controls.FlowDocumentPageViewer.MinZoom%2A> Eigenschaft.  
+  
+<a name="dependencyPropertyInfo_CanDecreaseZoom"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.FlowDocumentPageViewer.CanDecreaseZoomProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanDecreaseZoomProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CanDecreaseZoomProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CanDecreaseZoomProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.FlowDocumentPageViewer.CanDecreaseZoomProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.FlowDocumentPageViewer.CanDecreaseZoom" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanDecreaseZoomPropertyKey">
+      <MemberSignature Language="C#" Value="protected static readonly System.Windows.DependencyPropertyKey CanDecreaseZoomPropertyKey;" />
+      <MemberSignature Language="ILAsm" Value=".field family static initonly class System.Windows.DependencyPropertyKey CanDecreaseZoomPropertyKey" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.FlowDocumentPageViewer.CanDecreaseZoomPropertyKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyPropertyKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.FlowDocumentPageViewer.CanDecreaseZoom" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ableiten von <xref:System.Windows.Controls.FlowDocumentPageViewer>, Sie benötigen diesen Schlüssel, um den Wert festlegen die <xref:System.Windows.Controls.FlowDocumentPageViewer.CanDecreaseZoom%2A> Abhängigkeitseigenschaft. Rufen Sie <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyPropertyKey%2CSystem.Object%29>, und übergeben Sie <xref:System.Windows.Controls.FlowDocumentPageViewer.CanDecreaseZoomPropertyKey> als die `key` Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanIncreaseZoom">
+      <MemberSignature Language="C#" Value="public virtual bool CanIncreaseZoom { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanIncreaseZoom" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.FlowDocumentPageViewer.CanIncreaseZoom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="P:System.Windows.Controls.FlowDocumentPageViewer.Zoom" /> Ebene erhöht werden kann.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="P:System.Windows.Controls.FlowDocumentPageViewer.Zoom" /> Stufe kann mehr ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen der <xref:System.Windows.Controls.FlowDocumentPageViewer.IncreaseZoom%2A> Methode erhöht die <xref:System.Windows.Controls.FlowDocumentPageViewer.Zoom%2A> Ebene durch den angegebenen Betrag der <xref:System.Windows.Controls.FlowDocumentPageViewer.ZoomIncrement%2A> Eigenschaft. Der Wert dieser Eigenschaft unterliegt den Wert von der <xref:System.Windows.Controls.FlowDocumentPageViewer.MaxZoom%2A> Eigenschaft.  
+  
+<a name="dependencyPropertyInfo_CanIncreaseZoom"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.FlowDocumentPageViewer.CanIncreaseZoomProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanIncreaseZoomProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CanIncreaseZoomProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CanIncreaseZoomProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.FlowDocumentPageViewer.CanIncreaseZoomProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.FlowDocumentPageViewer.CanIncreaseZoom" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanIncreaseZoomPropertyKey">
+      <MemberSignature Language="C#" Value="protected static readonly System.Windows.DependencyPropertyKey CanIncreaseZoomPropertyKey;" />
+      <MemberSignature Language="ILAsm" Value=".field family static initonly class System.Windows.DependencyPropertyKey CanIncreaseZoomPropertyKey" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.FlowDocumentPageViewer.CanIncreaseZoomPropertyKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyPropertyKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.FlowDocumentPageViewer.CanIncreaseZoom" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ableiten von <xref:System.Windows.Controls.FlowDocumentPageViewer>, Sie benötigen diesen Schlüssel, um den Wert festlegen die <xref:System.Windows.Controls.FlowDocumentPageViewer.CanIncreaseZoom%2A> Abhängigkeitseigenschaft. Rufen Sie <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyPropertyKey%2CSystem.Object%29>, und übergeben Sie <xref:System.Windows.Controls.FlowDocumentPageViewer.CanIncreaseZoomPropertyKey> als die `key` Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecreaseZoom">
+      <MemberSignature Language="C#" Value="public void DecreaseZoom ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DecreaseZoom() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentPageViewer.DecreaseZoom" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt die <see cref="P:System.Windows.Input.NavigationCommands.DecreaseZoom" /> Befehl weitergeleitet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode verringert die aktuelle <xref:System.Windows.Controls.FlowDocumentPageViewer.Zoom%2A> Ebene durch den Wert von der <xref:System.Windows.Controls.FlowDocumentPageViewer.ZoomIncrement%2A> Eigenschaft.  
+  
+ Standard <xref:System.Windows.Controls.FlowDocumentPageViewer> [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] enthält eine Schaltfläche, um den Zoomfaktor zu verringern.  
+  
+ Beim Aufrufen dieser Methode hat keine Auswirkung, wenn die <xref:System.Windows.Controls.FlowDocumentPageViewer.CanDecreaseZoom%2A> -Eigenschaft gibt `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Find">
+      <MemberSignature Language="C#" Value="public void Find ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Find() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentPageViewer.Find" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schaltet die **suchen** Dialogfeld.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ STRG + F bietet standardmäßig eine Tastenkombination für das Umschalten der **suchen** Dialogfeld. Die folgende Abbildung zeigt die **suchen** -Dialogfeld auf eine <xref:System.Windows.Controls.FlowDocumentPageViewer> mit Standard-Benutzeroberfläche.  
+  
+ ![Bildschirmabbildung: FlowDocumentPageViewer Dialogfeld Suchen](~/add/media/flowdocpageviewer-find.png "Bildschirmabbildung: FlowDocumentPageViewer Dialogfeld "Suchen"")  
+  
+ Die Standardeinstellung **suchen** Dialogfeld enthält ein Feld für das Eingeben von Suchtext, sowie Schaltflächen zum **Weitersuchen**, **Vorheriges suchen**, und **Optionen**. Die folgenden **suchen** Optionen werden standardmäßig bereitgestellt:  
+  
+-   Nur ganzes Wort suchen  
+  
+-   Groß-/Kleinschreibung beachten  
+  
+-   Übereinstimmung diakritisches Zeichen  
+  
+-   Übereinstimmung kashida  
+  
+-   Übereinstimmung Alef hamza  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncreaseZoom">
+      <MemberSignature Language="C#" Value="public void IncreaseZoom ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void IncreaseZoom() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentPageViewer.IncreaseZoom" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt die <see cref="P:System.Windows.Input.NavigationCommands.IncreaseZoom" /> Befehl weitergeleitet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erhöht die aktuelle <xref:System.Windows.Controls.FlowDocumentPageViewer.Zoom%2A> Ebene durch den Wert von der <xref:System.Windows.Controls.FlowDocumentPageViewer.ZoomIncrement%2A> Eigenschaft.  
+  
+ Standard <xref:System.Windows.Controls.FlowDocumentPageViewer> [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] enthält eine Schaltfläche, um den Zoomfaktor zu erhöhen.  
+  
+ Beim Aufrufen dieser Methode hat keine Auswirkung, wenn die <xref:System.Windows.Controls.FlowDocumentPageViewer.CanIncreaseZoom%2A> -Eigenschaft gibt `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInactiveSelectionHighlightEnabled">
+      <MemberSignature Language="C#" Value="public bool IsInactiveSelectionHighlightEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInactiveSelectionHighlightEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.FlowDocumentPageViewer.IsInactiveSelectionHighlightEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob <see cref="T:System.Windows.Controls.FlowDocumentPageViewer" /> ausgewählten Text angezeigt, wenn das Steuerelement nicht den Fokus besitzt.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Controls.FlowDocumentPageViewer" /> markierten Text zeigt bei der <see cref="T:System.Windows.Controls.FlowDocumentPageViewer" /> verfügt nicht über den Fokus ist, andernfalls <see langword="false" />.  
+  
+ Der registrierte Standardwert ist <see langword="false" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter [Dependency Property Value Precedence](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_IsInactiveSelectionHighlightEnabled"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.FlowDocumentPageViewer.IsInactiveSelectionHighlightEnabledProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInactiveSelectionHighlightEnabledProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsInactiveSelectionHighlightEnabledProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsInactiveSelectionHighlightEnabledProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.FlowDocumentPageViewer.IsInactiveSelectionHighlightEnabledProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.FlowDocumentPageViewer.IsInactiveSelectionHighlightEnabled" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSelectionActive">
+      <MemberSignature Language="C#" Value="public bool IsSelectionActive { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSelectionActive" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.FlowDocumentPageViewer.IsSelectionActive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Windows.Controls.FlowDocumentPageViewer" /> verfügt über den Fokus und markierten Text.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Controls.FlowDocumentPageViewer" /> markierten Text zeigt an, wenn das Textfeld nicht den Fokus besitzt, andernfalls <see langword="false" />.  
+  
+ Der registrierte Standardwert ist <see langword="false" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter [Dependency Property Value Precedence](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_IsSelectionActive"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.FlowDocumentPageViewer.IsSelectionActiveProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSelectionActiveProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsSelectionActiveProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsSelectionActiveProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.FlowDocumentPageViewer.IsSelectionActiveProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.FlowDocumentPageViewer.IsSelectionActive" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxZoom">
+      <MemberSignature Language="C#" Value="public double MaxZoom { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 MaxZoom" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.FlowDocumentPageViewer.MaxZoom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximal zulässige <see cref="P:System.Windows.Controls.FlowDocumentPageViewer.Zoom" /> Ebene für die <see cref="T:System.Windows.Controls.FlowDocumentPageViewer" />.</summary>
+        <value>Die maximale zulässige Zoomstufe für die <see cref="T:System.Windows.Controls.FlowDocumentPageViewer" />, als Prozentsatz interpretiert. Der Standardwert ist 200,0 (maximaler Zoom von 200 %).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardeinstellung <xref:System.Windows.Controls.FlowDocumentPageViewer> [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] umfasst einen Schieberegler, die verwendet werden kann, zum Anpassen der <xref:System.Windows.Controls.FlowDocumentPageViewer.Zoom%2A> Ebene. Diese Eigenschaft gibt den Wert der oberen Grenze für den Schieberegler.  
+  
+<a name="dependencyPropertyInfo_MaxZoom"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.FlowDocumentPageViewer.MaxZoomProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie diese Eigenschaft verwendet wird.  
+  
+ [!code-xaml[FlowDocumentSnippets#_FlowDocumentPageViewerXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_flowdocumentpageviewerxaml)]  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentPageViewer](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentpageviewer)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentPageViewer](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentpageviewer)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxZoomProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MaxZoomProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MaxZoomProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.FlowDocumentPageViewer.MaxZoomProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.FlowDocumentPageViewer.MaxZoom" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinZoom">
+      <MemberSignature Language="C#" Value="public double MinZoom { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 MinZoom" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.FlowDocumentPageViewer.MinZoom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die minimale zulässige <see cref="P:System.Windows.Controls.FlowDocumentPageViewer.Zoom" /> Ebene für die <see cref="T:System.Windows.Controls.FlowDocumentPageViewer" />.</summary>
+        <value>Die minimale zulässige Zoomstufe für die <see cref="T:System.Windows.Controls.FlowDocumentPageViewer" />, als Prozentsatz interpretiert. Der Standardwert ist 80,0 (minimale Zoom von 80 %).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardeinstellung <xref:System.Windows.Controls.FlowDocumentPageViewer> [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] umfasst einen Schieberegler, die verwendet werden kann, zum Anpassen der <xref:System.Windows.Controls.FlowDocumentPageViewer.Zoom%2A> Ebene. Diese Eigenschaft gibt den Wert der untere Grenzwert für den Schieberegler.  
+  
+<a name="dependencyPropertyInfo_MinZoom"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.FlowDocumentPageViewer.MinZoomProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie diese Eigenschaft verwendet wird.  
+  
+ [!code-xaml[FlowDocumentSnippets#_FlowDocumentPageViewerXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_flowdocumentpageviewerxaml)]  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentPageViewer](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentpageviewer)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentPageViewer](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentpageviewer)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinZoomProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MinZoomProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MinZoomProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.FlowDocumentPageViewer.MinZoomProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.FlowDocumentPageViewer.MinZoom" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnApplyTemplate">
+      <MemberSignature Language="C#" Value="public override void OnApplyTemplate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnApplyTemplate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentPageViewer.OnApplyTemplate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt die visuelle Struktur für die <see cref="T:System.Windows.Controls.FlowDocumentPageViewer" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn <xref:System.Windows.FrameworkElement.ApplyTemplate%2A> aufgerufen wird.  
+  
+ Diese Methode überschreibt <xref:System.Windows.FrameworkElement.OnApplyTemplate%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCancelPrintCommand">
+      <MemberSignature Language="C#" Value="protected override void OnCancelPrintCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnCancelPrintCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentPageViewer.OnCancelPrintCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Behandelt die <see cref="P:System.Windows.Input.ApplicationCommands.CancelPrint" /> Befehl weitergeleitet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn die <xref:System.Windows.Input.ApplicationCommands.CancelPrint%2A> -Befehl aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnContextMenuOpening">
+      <MemberSignature Language="C#" Value="protected override void OnContextMenuOpening (System.Windows.Controls.ContextMenuEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnContextMenuOpening(class System.Windows.Controls.ContextMenuEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentPageViewer.OnContextMenuOpening(System.Windows.Controls.ContextMenuEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Controls.ContextMenuEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Argumente des Ereignisses.</param>
+        <summary>Wird aufgerufen, sobald ein nicht behandeltes <see cref="E:System.Windows.FrameworkElement.ContextMenuOpening" /> Routingereignis beim Durchlauf, erreicht dieser Klasse in seiner Route. Implementieren Sie diese Methode, um eine Klassenbehandlung für dieses Ereignis hinzuzufügen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode hat keine Standardimplementierung. Für den Fall, dass eine Zwischenklasse in der Vererbung diese Methode implementiert hat, sollten Sie dennoch die basisimplementierung aufrufen.  
+  
+ Der Zweck dieser Methode ist zumindest ähneln [!INCLUDE[TLA#tla_clr](~/includes/tlasharptla-clr-md.md)] -Ereignismuster auf * Methoden: DSC bietet die Möglichkeit zum Behandeln des übereinstimmenden Ereignis von abgeleiteten Klassen mit einem Klassenhandler statt einem Instanzhandler. In diesem Fall wird das übereinstimmende Ereignis ein Routingereignis. Das Implementierungsmuster der On * Methoden unterscheidet sich für Routingereignisse da das Routingereignis von einem untergeordneten Element, nicht unbedingt das Element ausgelöst worden sein könnte, die Handler aufgerufen wird, damit die Implementierung der Ereignisargumente durchführen muss Datenquelleneigenschaften berücksichtigt (und sollten nicht versuchen, erneut Auslösen des Ereignisses in den meisten Fällen). Unterklassen des <xref:System.Windows.Controls.FlowDocumentPageViewer> private Klasse Ereignishandlermethoden konnte aufgerufen wird, wenn das Ereignis entlang der Route empfangen wird. Eine mögliche Szenario besteht darin die Argumente des Ereignisses und das Ereignis absichtlich als behandelt markiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentPageViewer.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt eine geeignete <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> Implementierung für dieses Steuerelement als Teil der [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Automatisierungsinfrastruktur.</summary>
+        <returns>Die entsprechende <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> Implementierung für dieses Steuerelement.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDecreaseZoomCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnDecreaseZoomCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDecreaseZoomCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentPageViewer.OnDecreaseZoomCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Behandelt die <see cref="P:System.Windows.Input.NavigationCommands.DecreaseZoom" /> Befehl weitergeleitet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn die <xref:System.Windows.Input.NavigationCommands.DecreaseZoom%2A> -Befehl aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDocumentChanged">
+      <MemberSignature Language="C#" Value="protected override void OnDocumentChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDocumentChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentPageViewer.OnDocumentChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, wenn die <see cref="P:System.Windows.Controls.Primitives.DocumentViewerBase.Document" /> -Eigenschaft geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt <xref:System.Windows.Controls.Primitives.DocumentViewerBase.OnDocumentChanged%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFindCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnFindCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnFindCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentPageViewer.OnFindCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Behandelt die <see cref="P:System.Windows.Input.ApplicationCommands.Find" /> Befehl weitergeleitet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn die <xref:System.Windows.Input.ApplicationCommands.Find%2A> -Befehl aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFirstPageCommand">
+      <MemberSignature Language="C#" Value="protected override void OnFirstPageCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnFirstPageCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentPageViewer.OnFirstPageCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Behandelt die <see cref="P:System.Windows.Input.NavigationCommands.FirstPage" /> Befehl weitergeleitet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn die <xref:System.Windows.Input.NavigationCommands.FirstPage%2A> -Befehl aufgerufen wird.  
+  
+ Diese Methode überschreibt <xref:System.Windows.Controls.Primitives.DocumentViewerBase.OnFirstPageCommand%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnGoToPageCommand">
+      <MemberSignature Language="C#" Value="protected override void OnGoToPageCommand (int pageNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnGoToPageCommand(int32 pageNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentPageViewer.OnGoToPageCommand(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pageNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pageNumber">Die Seitenzahl zu wechseln.</param>
+        <summary>Behandelt die <see cref="P:System.Windows.Input.NavigationCommands.GoToPage" /> Befehl weitergeleitet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn die <xref:System.Windows.Input.NavigationCommands.GoToPage%2A> -Befehl aufgerufen wird.  
+  
+ Diese Methode überschreibt <xref:System.Windows.Controls.Primitives.DocumentViewerBase.OnGoToPageCommand%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnIncreaseZoomCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnIncreaseZoomCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnIncreaseZoomCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentPageViewer.OnIncreaseZoomCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Behandelt die <see cref="P:System.Windows.Input.NavigationCommands.IncreaseZoom" /> Befehl weitergeleitet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn die <xref:System.Windows.Input.NavigationCommands.IncreaseZoom%2A> -Befehl aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyDown">
+      <MemberSignature Language="C#" Value="protected override void OnKeyDown (System.Windows.Input.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyDown(class System.Windows.Input.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentPageViewer.OnKeyDown(System.Windows.Input.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Input.KeyEventArgs" /> Objekt, das die zugeordneten Argumente enthält die <see cref="E:System.Windows.UIElement.KeyDown" /> Routingereignis.</param>
+        <summary>Behandelt die <see cref="E:System.Windows.UIElement.KeyDown" /> Routingereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt <xref:System.Windows.UIElement.OnKeyDown%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLastPageCommand">
+      <MemberSignature Language="C#" Value="protected override void OnLastPageCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnLastPageCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentPageViewer.OnLastPageCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Behandelt die <see cref="P:System.Windows.Input.NavigationCommands.LastPage" /> Befehl weitergeleitet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn die <xref:System.Windows.Input.NavigationCommands.LastPage%2A> -Befehl aufgerufen wird.  
+  
+ Diese Methode überschreibt <xref:System.Windows.Controls.Primitives.DocumentViewerBase.OnLastPageCommand%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseWheel">
+      <MemberSignature Language="C#" Value="protected override void OnMouseWheel (System.Windows.Input.MouseWheelEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseWheel(class System.Windows.Input.MouseWheelEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentPageViewer.OnMouseWheel(System.Windows.Input.MouseWheelEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseWheelEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Input.MouseWheelEventArgs" /> Objekt zugeordneten Argumente mit den <see cref="E:System.Windows.UIElement.MouseWheel" /> Routingereignis.</param>
+        <summary>Behandelt die <see cref="E:System.Windows.UIElement.MouseWheel" /> Routingereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn die <xref:System.Windows.UIElement.MouseWheel> Routingereignis ausgelöst wird.  
+  
+ Diese Methode überschreibt <xref:System.Windows.UIElement.OnMouseWheel%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnNextPageCommand">
+      <MemberSignature Language="C#" Value="protected override void OnNextPageCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnNextPageCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentPageViewer.OnNextPageCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Behandelt die <see cref="P:System.Windows.Input.NavigationCommands.NextPage" /> Befehl weitergeleitet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn die <xref:System.Windows.Input.NavigationCommands.NextPage%2A> -Befehl aufgerufen wird.  
+  
+ Diese Methode überschreibt <xref:System.Windows.Controls.Primitives.DocumentViewerBase.OnNextPageCommand%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPageViewsChanged">
+      <MemberSignature Language="C#" Value="protected override void OnPageViewsChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPageViewsChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentPageViewer.OnPageViewsChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Behandelt die <see cref="E:System.Windows.Controls.Primitives.DocumentViewerBase.PageViewsChanged" /> Routingereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn die <xref:System.Windows.Controls.Primitives.DocumentViewerBase.PageViewsChanged> Routingereignis ausgelöst wird.  
+  
+ Diese Methode überschreibt <xref:System.Windows.Controls.Primitives.DocumentViewerBase.OnPageViewsChanged%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreviousPageCommand">
+      <MemberSignature Language="C#" Value="protected override void OnPreviousPageCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPreviousPageCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentPageViewer.OnPreviousPageCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Behandelt die <see cref="P:System.Windows.Input.NavigationCommands.PreviousPage" /> Befehl weitergeleitet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn die <xref:System.Windows.Input.NavigationCommands.PreviousPage%2A> -Befehl aufgerufen wird.  
+  
+ Diese Methode überschreibt <xref:System.Windows.Controls.Primitives.DocumentViewerBase.OnPreviousPageCommand%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPrintCommand">
+      <MemberSignature Language="C#" Value="protected override void OnPrintCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPrintCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentPageViewer.OnPrintCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Behandelt die <see cref="P:System.Windows.Input.ApplicationCommands.Print" /> Befehl weitergeleitet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn die <xref:System.Windows.Input.ApplicationCommands.Print%2A> -Befehl aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPrintCompleted">
+      <MemberSignature Language="C#" Value="protected virtual void OnPrintCompleted ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnPrintCompleted() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentPageViewer.OnPrintCompleted" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, wenn ein Druckauftrag abgeschlossen wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Selection">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.TextSelection Selection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.TextSelection Selection" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.FlowDocumentPageViewer.Selection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.TextSelection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den ausgewählten Inhalt, der die <see cref="T:System.Windows.Controls.FlowDocumentPageViewer" />.</summary>
+        <value>Der ausgewählte Inhalt von der <see cref="T:System.Windows.Controls.FlowDocumentPageViewer" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.FlowDocumentPageViewer.Selection%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie beim Abrufen des Texts, die ein Benutzer, in ausgewählt hat der <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
+  
+ [!code-xaml[FlowDocSelection#1](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocSelection/CSharp/Window1.xaml#1)]  
+[!code-csharp[FlowDocSelection#2](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocSelection/CSharp/Window1.xaml.cs#2)]
+[!code-vb[FlowDocSelection#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocSelection/VisualBasic/Window1.xaml.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionBrush">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush SelectionBrush { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush SelectionBrush" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.FlowDocumentPageViewer.SelectionBrush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Pinsel, der den ausgewählten Text hervorgehoben.</summary>
+        <value>Ein Pinsel, der den ausgewählten Text hervorgehoben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können angeben, dass den Pinsel, der ausgewählte in einem Text eine <xref:System.Windows.Controls.FlowDocumentPageViewer> durch Festlegen der <xref:System.Windows.Controls.FlowDocumentPageViewer.SelectionBrush%2A> und die <xref:System.Windows.Controls.FlowDocumentPageViewer.SelectionOpacity%2A> Eigenschaften...  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Controls.FlowDocumentPageViewer>, legt der <xref:System.Windows.Controls.FlowDocumentPageViewer.SelectionBrush%2A> Eigenschaft Folgendes ein: rosa und legt die <xref:System.Windows.Controls.FlowDocumentPageViewer.SelectionOpacity%2A> Eigenschaft 0,7.  
+  
+ [!code-xaml[FlowDocPgVwSelBrushSnippet#SelectionBrush](~/samples/snippets/csharp/VS_Snippets_Wpf/flowdocpgvwselbrushsnippet/CS/window1.xaml#selectionbrush)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionBrushProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SelectionBrushProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SelectionBrushProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.FlowDocumentPageViewer.SelectionBrushProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.FlowDocumentPageViewer.SelectionBrush" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionOpacity">
+      <MemberSignature Language="C#" Value="public double SelectionOpacity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 SelectionOpacity" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.FlowDocumentPageViewer.SelectionOpacity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Deckkraft der <see cref="P:System.Windows.Controls.FlowDocumentPageViewer.SelectionBrush" />.</summary>
+        <value>Die Deckkraft der <see cref="P:System.Windows.Controls.FlowDocumentPageViewer.SelectionBrush" />. Der Standardwert ist 0,4.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie festlegen, die <xref:System.Windows.Controls.FlowDocumentPageViewer.SelectionOpacity%2A> auf 0, die <xref:System.Windows.Controls.FlowDocumentPageViewer.SelectionBrush%2A> transparent ist und nicht sichtbar ist. Wenn Sie festlegen, die <xref:System.Windows.Controls.FlowDocumentPageViewer.SelectionOpacity%2A> 1.0 oder höher, die <xref:System.Windows.Controls.FlowDocumentPageViewer.SelectionBrush%2A> ist nicht transparent und dem ausgewählten Text ist nicht sichtbar.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Controls.FlowDocumentPageViewer>, legt der <xref:System.Windows.Controls.FlowDocumentPageViewer.SelectionBrush%2A> Eigenschaft Folgendes ein: rosa und legt die <xref:System.Windows.Controls.FlowDocumentPageViewer.SelectionOpacity%2A> Eigenschaft 0,7.  
+  
+ [!code-xaml[FlowDocPgVwSelBrushSnippet#SelectionBrush](~/samples/snippets/csharp/VS_Snippets_Wpf/flowdocpgvwselbrushsnippet/CS/window1.xaml#selectionbrush)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionOpacityProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SelectionOpacityProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SelectionOpacityProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.FlowDocumentPageViewer.SelectionOpacityProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.FlowDocumentPageViewer.SelectionOpacity" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Zoom">
+      <MemberSignature Language="C#" Value="public double Zoom { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Zoom" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.FlowDocumentPageViewer.Zoom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den aktuellen Zoomfaktor für die <see cref="T:System.Windows.Controls.FlowDocumentPageViewer" />.</summary>
+        <value>Die aktuelle Zoomstufe, als Prozentsatz interpretiert. Der Standardwert ist 100,0 (Zoomstufe 100 %).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Zoomstufe mithilfe der Werte der beschränkt die <xref:System.Windows.Controls.FlowDocumentPageViewer.MinZoom%2A> und <xref:System.Windows.Controls.FlowDocumentPageViewer.MaxZoom%2A> Eigenschaften.  
+  
+<a name="dependencyPropertyInfo_Zoom"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.FlowDocumentPageViewer.ZoomProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie diese Eigenschaft verwendet wird.  
+  
+ [!code-xaml[FlowDocumentSnippets#_FlowDocumentPageViewerXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_flowdocumentpageviewerxaml)]  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentPageViewer](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentpageviewer)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentPageViewer](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentpageviewer)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ZoomIncrement">
+      <MemberSignature Language="C#" Value="public double ZoomIncrement { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ZoomIncrement" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.FlowDocumentPageViewer.ZoomIncrement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Zoom-Inkrement.</summary>
+        <value>Das aktuelle Zoom-Inkrement, die als Prozentsatz interpretiert. Der Standardwert ist 10,0 (Zoom Schritten von 10 %).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Inkrement Zoom ist der Prozentsatz, der <xref:System.Windows.Controls.FlowDocumentPageViewer.Zoom%2A> Ebene erhöht oder verringert wird, wenn die <xref:System.Windows.Input.NavigationCommands.IncreaseZoom%2A> oder <xref:System.Windows.Input.NavigationCommands.DecreaseZoom%2A> Befehle ausgeführt werden.  
+  
+<a name="dependencyPropertyInfo_ZoomIncrement"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.FlowDocumentPageViewer.ZoomIncrementProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie diese Eigenschaft verwendet wird.  
+  
+ [!code-xaml[FlowDocumentSnippets#_FlowDocumentPageViewerXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_flowdocumentpageviewerxaml)]  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentPageViewer](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentpageviewer)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentPageViewer](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentpageviewer)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ZoomIncrementProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ZoomIncrementProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ZoomIncrementProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.FlowDocumentPageViewer.ZoomIncrementProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.FlowDocumentPageViewer.ZoomIncrement" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ZoomProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ZoomProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ZoomProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.FlowDocumentPageViewer.ZoomProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.FlowDocumentPageViewer.Zoom" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

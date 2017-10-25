@@ -1,0 +1,98 @@
+<Type Name="WebScriptServiceHostFactory" FullName="System.ServiceModel.Activation.WebScriptServiceHostFactory">
+  <TypeSignature Language="C#" Value="public class WebScriptServiceHostFactory : System.ServiceModel.Activation.ServiceHostFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebScriptServiceHostFactory extends System.ServiceModel.Activation.ServiceHostFactory" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activation.WebScriptServiceHostFactory" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Activation.ServiceHostFactory</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fügt einem Dienst in einer verwalteten Hostumgebung, die Hostinstanzen für den Dienst als Reaktion auf eingehende Nachrichten dynamisch aktiviert, automatisch einen ASP.NET AJAX-Endpunkt hinzu, ohne eine Konfiguration zu erfordern.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Factory bietet eine Möglichkeit, einem Dienst einen ASP.NET AJAX-Endpunkt ohne erforderliche Konfiguration hinzuzufügen. Der Endpunkt wird allen anderen in der Konfiguration definierten Endpunkten hinzugefügt, sofern vorhanden. Bei den verwalteten Hostumgebungen, die diese Art der dynamischen Hostaktivierung unterstützen, handelt es sich um Internet Information Services (IIS) und Windows Process Activation Services (WAS).  
+  
+ Um diese Factory zu verwenden, geben die <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> in der `Factory` Attribut von der [ @ServiceHost ](~/docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) Richtlinie.  
+  
+ Der durch diese Factory erstellte ASP.NET AJAX-Endpunkt wird mit der <xref:System.ServiceModel.WebHttpBinding> und der <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> mit allen Standardeinstellungen konfiguriert. Der Endpunkt wird relativ zur SVC-Datei an einer leeren Adresse erstellt. Definiert die Dienstkonfiguration bereits einen Endpunkt an dieser Adresse, wird eine <xref:System.InvalidOperationException> ausgelöst, und der Dienst kann nicht gestartet werden.  
+  
+   
+  
+## Examples  
+ Geben Sie die <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> für den Wert des der `Factory` Attribut in der [ @ServiceHost ](~/docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) Richtlinie zum Aktivieren von ASP.NET AJAX-Endpunkt für die `MyService` service wie im folgenden Beispiel gezeigt.  
+  
+```  
+<% @ServiceHost   
+Service="MyService"  
+Language="C#"  
+Debug="true"  
+Factory="WebScriptServiceHostFactory"  
+%>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebScriptServiceHostFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activation.WebScriptServiceHostFactory.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Activation.WebScriptServiceHostFactory" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel wird dieser Konstruktor automatisch im Rahmen der Dienstaktivierung von [!INCLUDE[indigo1](~/includes/indigo1-md.md)] aufgerufen. Es ist nicht erforderlich, diese Methode manuell aufzurufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateServiceHost">
+      <MemberSignature Language="C#" Value="protected override System.ServiceModel.ServiceHost CreateServiceHost (Type serviceType, Uri[] baseAddresses);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.ServiceModel.ServiceHost CreateServiceHost(class System.Type serviceType, class System.Uri[] baseAddresses) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activation.WebScriptServiceHostFactory.CreateServiceHost(System.Type,System.Uri[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ServiceHost</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+        <Parameter Name="baseAddresses" Type="System.Uri[]" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">Der Typ des zu hostenden Dienstes.</param>
+        <param name="baseAddresses">Das <see cref="T:System.Array" /> vom Typ <see cref="T:System.Uri" />, das die Basisadressen für den gehosteten Dienst enthält.</param>
+        <summary>Erstellt eine abgeleitete Klasse von <see cref="T:System.ServiceModel.ServiceHost" /> für einen angegebenen Diensttyp mit einer bestimmten Basisadresse, die verwendet werden kann, um ASP.NET AJAX-Endpunkte in bestimmten Szenarios automatisch zu aktivieren.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.ServiceHost" /> für den mit der angegebenen Basisadresse angegebenen Diensttyp.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel wird diese Methode automatisch im Rahmen der Dienstaktivierung von [!INCLUDE[indigo1](~/includes/indigo1-md.md)] aufgerufen. Es ist nicht erforderlich, diese Methode manuell aufzurufen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Ein anderer Dienst verwendet dieselbe Basisadresse, oder ein anderer Endpunkt verwendet dieselbe Adresse wie der ASP.NET AJAX-Endpunkt, den diese Factory zu erstellen versucht.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

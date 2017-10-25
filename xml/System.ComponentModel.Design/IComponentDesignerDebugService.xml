@@ -1,0 +1,155 @@
+<Type Name="IComponentDesignerDebugService" FullName="System.ComponentModel.Design.IComponentDesignerDebugService">
+  <TypeSignature Language="C#" Value="public interface IComponentDesignerDebugService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IComponentDesignerDebugService" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.IComponentDesignerDebugService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Debugdienste in einer entwurfszeitumgebung bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Assert">
+      <MemberSignature Language="C#" Value="public void Assert (bool condition, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Assert(bool condition, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IComponentDesignerDebugService.Assert(System.Boolean,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="condition">
+          <see langword="true" />um zu verhindern, dass <c>Nachricht</c> wird angezeigt, andernfalls <see langword="false" />.</param>
+        <param name="message">Die anzuzeigende Meldung.</param>
+        <summary>Überprüft eine Bedingung in einer Umgebung zur Entwurfszeit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.IComponentDesignerDebugService.Assert%2A> Methode ermöglicht einem Designer, die auf eine Bedingung in einer Umgebung zur Entwurfszeit zu bestätigen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fail">
+      <MemberSignature Language="C#" Value="public void Fail (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Fail(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IComponentDesignerDebugService.Fail(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die zu protokollierende Meldung.</param>
+        <summary>Protokolliert eine Fehlermeldung in einer entwurfszeitumgebung an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.IComponentDesignerDebugService.Fail%2A> Methode ermöglicht einem Designer, Fehler Nachrichten innerhalb einer Umgebung zur Entwurfszeit zu protokollieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndentLevel">
+      <MemberSignature Language="C#" Value="public int IndentLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 IndentLevel" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.IComponentDesignerDebugService.IndentLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Einzugsebene für die Debugausgabe.</summary>
+        <value>Die Einzugebene für die Debugausgabe.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.IComponentDesignerDebugService.IndentLevel%2A> -Eigenschaft ermöglicht es einen Designer, die Einzugsebene für die Debugausgabe zu ändern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Listeners">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.TraceListenerCollection Listeners { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Diagnostics.TraceListenerCollection Listeners" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.IComponentDesignerDebugService.Listeners" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.TraceListenerCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der Ablaufverfolgungslistener für die Überwachung zur Entwurfszeit Ausgabe Debuggen.</summary>
+        <value>Eine Auflistung der Ablaufverfolgungslistener</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.IComponentDesignerDebugService.Listeners%2A> -Eigenschaft ermöglicht es Objekten, die zur Entwurfszeit Debugausgabe überwachen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Trace">
+      <MemberSignature Language="C#" Value="public void Trace (string message, string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Trace(string message, string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IComponentDesignerDebugService.Trace(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die zu protokollierende Meldung.</param>
+        <param name="category">Die Kategorie der <c>Nachricht</c>.</param>
+        <summary>Protokolliert eine Debugmeldung innerhalb einer Umgebung zur Entwurfszeit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.IComponentDesignerDebugService.Trace%2A> Methode ermöglicht einem Designer, Debug-Nachrichten in einer Umgebung zur Entwurfszeit zu protokollieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

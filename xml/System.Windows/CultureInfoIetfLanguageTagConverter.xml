@@ -1,0 +1,154 @@
+<Type Name="CultureInfoIetfLanguageTagConverter" FullName="System.Windows.CultureInfoIetfLanguageTagConverter">
+  <TypeSignature Language="C#" Value="public class CultureInfoIetfLanguageTagConverter : System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CultureInfoIetfLanguageTagConverter extends System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.CultureInfoIetfLanguageTagConverter" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.TypeConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Konvertiert Instanzen <see cref="T:System.Globalization.CultureInfo" /> in und aus anderen Datentypen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse unterscheidet sich in zwei verschiedene Arten von <xref:System.ComponentModel.CultureInfoConverter>, den Standard-Typkonverter für das <xref:System.Globalization.CultureInfo> Klasse.  
+  
+-   Verwendet eine Zeichenfolgendarstellung basierend auf den <xref:System.Globalization.CultureInfo.IetfLanguageTag%2A> Eigenschaft anstelle der <xref:System.Globalization.CultureInfo.Name%2A> Eigenschaft (d. h. RFC 3066 anstelle von RFC 1766).  
+  
+-   Bei der Konvertierung aus einer Zeichenfolge, die Eigenschaften des resultierenden <xref:System.Globalization.CultureInfo> Objekt abhängig sind, nur auf die Zeichenfolge ist und nicht auf Benutzer überschreibt, festlegen in der Systemsteuerung. Dadurch möglich, Dokumente, die die Darstellung der hängen nicht lokale Einstellungen zu erstellen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CultureInfoIetfLanguageTagConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.CultureInfoIetfLanguageTagConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.CultureInfoIetfLanguageTagConverter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFrom">
+      <MemberSignature Language="C#" Value="public override bool CanConvertFrom (System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, Type sourceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFrom(class System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, class System.Type sourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.CultureInfoIetfLanguageTagConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeDescriptorContext" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="sourceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="typeDescriptorContext">Der <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Wert.</param>
+        <param name="sourceType">Die <see cref="T:System.Type" /> , die zur Unterstützung der Konvertierung abgefragt wird.</param>
+        <summary>Bestimmt, ob <see cref="T:System.Windows.CultureInfoIetfLanguageTagConverter" /> aus einem angegebenen Typ konvertieren kann.</summary>
+        <returns>
+          <see langword="true" />Wenn <see cref="T:System.Windows.CultureInfoIetfLanguageTagConverter" /> konvertieren können; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertTo">
+      <MemberSignature Language="C#" Value="public override bool CanConvertTo (System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertTo(class System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.CultureInfoIetfLanguageTagConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeDescriptorContext" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="typeDescriptorContext">Der <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Wert.</param>
+        <param name="destinationType">Die <see cref="T:System.Type" /> , die zur Unterstützung der Konvertierung abgefragt wird.</param>
+        <summary>Bestimmt, ob <see cref="T:System.Windows.CultureInfoIetfLanguageTagConverter" /> in einen angegebenen Typ konvertieren kann.</summary>
+        <returns>
+          <see langword="true" />Wenn <see cref="T:System.Windows.CultureInfoIetfLanguageTagConverter" /> konvertieren können; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, System.Globalization.CultureInfo cultureInfo, object source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, class System.Globalization.CultureInfo cultureInfo, object source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.CultureInfoIetfLanguageTagConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeDescriptorContext" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="cultureInfo" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="source" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="typeDescriptorContext">Der <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Wert.</param>
+        <param name="cultureInfo">Die <see cref="T:System.Globalization.CultureInfo" /> -Objekt, dessen Wert bei der Konvertierung berücksichtigt wird.</param>
+        <param name="source">Das <see cref="T:System.Type" />, das konvertiert wird.</param>
+        <summary>Konvertiert einen angegebenen Objekttyp um eine <see cref="T:System.Globalization.CultureInfo" /> Objekt.</summary>
+        <returns>Ein <see cref="T:System.Globalization.CultureInfo" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public override object ConvertTo (System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, System.Globalization.CultureInfo cultureInfo, object value, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(class System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, class System.Globalization.CultureInfo cultureInfo, object value, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.CultureInfoIetfLanguageTagConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeDescriptorContext" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="cultureInfo" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="typeDescriptorContext">Der <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Wert.</param>
+        <param name="cultureInfo">Die <see cref="T:System.Globalization.CultureInfo" /> -Objekt, dessen Wert bei der Konvertierung berücksichtigt wird.</param>
+        <param name="value">Das Objekt, das stellt die <see cref="T:System.Globalization.CultureInfo" /> konvertieren.</param>
+        <param name="destinationType">Die <see cref="T:System.Type" /> des zurückgegebenen konvertierten Objekts.</param>
+        <summary>Konvertiert eine <see cref="T:System.Globalization.CultureInfo" /> Objekt, das einen bestimmten Objekttyp.</summary>
+        <returns>Ein konvertierte CultureInfo-Objekt, das einem bestimmten Objekttyp.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

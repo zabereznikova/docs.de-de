@@ -1,0 +1,227 @@
+<Type Name="ProviderConnectionPoint" FullName="System.Web.UI.WebControls.WebParts.ProviderConnectionPoint">
+  <TypeSignature Language="C#" Value="public class ProviderConnectionPoint : System.Web.UI.WebControls.WebParts.ConnectionPoint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi ProviderConnectionPoint extends System.Web.UI.WebControls.WebParts.ConnectionPoint" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebParts.ConnectionPoint</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert ein Objekt, das als Anbieter herstellen eine Verbindung mit einem Consumer fungiert Serversteuerelement ermöglicht.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In jeder Webparts-Verbindung zwischen zwei Serversteuerelemente, jedes Steuerelement benötigen (neben anderen die Anforderungen) einer zugeordneten Verbindungspunktobjekt, die zum Herstellen von Verbindungen der Steuerelements und zum Bereitstellen oder nutzen von Daten, je nachdem, ob ermöglicht das Steuerelement ist als der Anbieter oder Consumer für die Verbindung festgelegt werden. Ein <xref:System.Web.UI.WebControls.WebParts.ConnectionPoint> Objekt in der Regel enthält die Details für die wie ein Steuerelement eine Verbindung herstellen kann, ein anderes Steuerelement und den Typ der Daten, die gemeinsam verwendet werden kann. Für ein Steuerelement, das in einer Verbindung als Anbieter fungiert, der Verbindungspunkt muss eine <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> Objekt. Details-Webparts-Verbindungen und Verbindungspunkte finden Sie unter den Themen im Abschnitt Siehe auch weiter unten aufgeführt.  
+  
+ Zum Erstellen einer <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> -Objekt sind mehrere Schritte erforderlich:  
+  
+1.  Erstellen Sie eine Schnittstelle. Wenn ein Anbieter Freigaben Daten mit einem Consumer, geschieht dies durch das Abrufen einer Instanz einer Schnittstelle, und diese Instanz mit einem Consumer zurückgeben.  
+  
+2.  Implementieren Sie die Schnittstelle in einem Anbieter. Ein <xref:System.Web.UI.WebControls.WebParts.WebPart> oder einem anderen Serversteuerelement (jeder Typ von Serversteuerelement in einer <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Zone verwendet werden kann), werden der Anbieter muss die im ersten Schritt erstellte Schnittstelle implementieren.  
+  
+3.  Identifizieren Sie eine Rückrufmethode. Eine Methode im Anbieter muss als die Rückrufmethode zum Herstellen einer Verbindung identifiziert werden. Diese Methode gibt eine Instanz der implementierten Schnittstelle für einen Consumer zurück. Besteht im Hinzufügen der Webparts-Ansatz zur Identifizierung einer Rückrufmethode im Anbieter eine `ConnectionProvider` Metadatenattribut (definiert durch die <xref:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute> Klasse) an die Methode, die die Schnittstelleninstanz zurückgibt. Wenn das Attribut hinzugefügt wird, ist der einzige erforderliche Parameter einen Anzeigenamen für den Anbieterverbindungspunkt an verwenden. Optionale Parameter können z. B. eine ID für den Verbindungspunkt auch hinzugefügt werden.  
+  
+ Nachdem Sie ein Steuerelement ausgestattet wurde, als Anbieter zu fungieren, kann das Steuerelement teilnehmen Verbindungen (vorausgesetzt, dass ein Consumer-Steuerelement entsprechend ausgestattet und verfügbar ist). Um einen statischen, deklarativen Verbindung im Markup einer Webseite zu erstellen, können Entwickler die `<asp:webpartconnection>` Element. Wenn die `ConnectionProvider` Attribut in den Quellcode des Anbieters, der die Rückrufmethode identifiziert gibt eine ID für den Verbindungspunkt, und klicken Sie dann diesen Wert zugewiesen werden, die `ProviderConnectionPointID` Attribut in der `<asp:webpartconnection>` Element auf einer Seite. Ein Grund für die ein Entwickler eine ID für einen Anbieterverbindungspunkt angegeben werden kann, ist treten mehrere Verbindungspunkte im Anbietersteuerelement. Wenn eine ID für den Anbieterverbindungspunkt an das Anbieter-Steuerelement nicht angegeben wird, ein Wert muss nicht zugewiesen werden die `ProviderConnectionPointID` -Attribut in der Seite entweder, weil die Verbindung mit einem Standardwert abgerufenes erstellt werden die <xref:System.Web.UI.WebControls.WebParts.ConnectionPoint.DefaultID> Feld.  
+  
+ Um eine Verbindung im Code zu erstellen, müssen Entwickler ein neues erstellen <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> Objekt durch Aufrufen der <xref:System.Web.UI.WebControls.WebParts.WebPartManager.GetProviderConnectionPoints%2A> -Methode und die ID des Anbietersteuerelements zusammen mit der ID oder den Index des definierten an sie übergibt <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> Objekt in das Anbietersteuerelement. Das zurückgegebene <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> -Objekt zusammen mit einem Verweis auf das Anbietersteuerelement, einen Verweis auf das Consumer-Steuerelement und einer entsprechenden <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> Objekt, werden alle zum Übergeben der <xref:System.Web.UI.WebControls.WebParts.WebPartManager.ConnectWebParts%2A> Methode zum Erstellen eines neuen <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> Objekt.  
+  
+ Obwohl Entwickler Anbieterverbindungspunkte im Rahmen des deklarativ oder programmgesteuert herstellen von Verbindungen verwenden können, können Benutzer auch mit Anbieterverbindungspunkte zum Herstellen von Verbindungen über die Benutzeroberfläche (UI) interagieren. Wenn Entwickler Deklarieren einer <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> Steuerelement auf einer Webseite, bietet es eine Laufzeit-Benutzeroberfläche für Benutzer zum Erstellen von Verbindungen. Wenn Benutzer das Consumer-Steuerelement, als Ausgangspunkt auswählen für das Herstellen der Verbindung durch Klicken auf die verbinden-Verb (sie können auch den Anbieter auswählen, besteht kein Unterschied in der resultierenden Verbindung), in der Benutzeroberfläche sehen sie ein Dropdown-Listenfeld-Steuerelement mit der der Anzeigename der verfügbaren Anbieter Verbindung Punkt (oder Punkte, wenn mehrere Sitzungen vorhanden sind). Benutzer müssen einen Anbieterverbindungspunkt So erstellen Sie eine Verbindung auswählen.  
+  
+ Ein <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> Objekt zuordnet, die direkt mit einem bestimmten Anbietersteuerelement, und speichert Informationen zu einer Verbindung in den Eigenschaften, die sie von der Basisklasse erbt <xref:System.Web.UI.WebControls.WebParts.ConnectionPoint> Klasse. Beispielsweise ist in die geerbte <xref:System.Web.UI.WebControls.WebParts.ConnectionPoint.InterfaceType%2A> -Eigenschaft, ein Anbieterverbindungspunkt behält den Typ der Schnittstelle, die vom Anbieter zurückgegeben. Wenn der Anbieter und der Consumer eine Verbindung sowohl mit dem gleichen arbeiten Schnittstellentyp, sind die Steuerelemente kompatibel und in der Lage, eine direkte Verbindung zu bilden. Wenn der Anbieter und der Consumer mit dem gleichen Schnittstellentyp arbeiten können, sind sie nicht kompatibel und muss ein <xref:System.Web.UI.WebControls.WebParts.WebPartTransformer> Objekt, das des Anbieterverbindungspunkts übersetzen <xref:System.Web.UI.WebControls.WebParts.ConnectionPoint.InterfaceType%2A> Wert in einen Typ, die der Consumer verwenden können. Eine andere wichtige geerbte Eigenschaft ist die <xref:System.Web.UI.WebControls.WebParts.ConnectionPoint.DisplayName%2A> -Eigenschaft, die stellt einen Anzeigenamen für die anzuzeigenden in der Benutzeroberfläche für eine anbieterverbindung auszuwählen, zeigen Sie beim Erstellen von Verbindungen. Der angezeigte Name ist der erforderliche Parameter, wenn Entwickler Hinzufügen einer `ConnectionProvider` Attribut an die Rückrufmethode in einem Anbietersteuerelement. Die geerbte <xref:System.Web.UI.WebControls.WebParts.ConnectionPoint.ID%2A> Eigenschaft eignet sich auch, wie oben angegeben werden, da sie einen eindeutigen Bezeichner für einen Anbieterverbindungspunkt bereitstellt, wenn ein Anbieter mehrere Verbindungspunkte verfügt. Ein Anbieter kann mehrere verfügen <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> Objekte darin und in diesem Fall definiert, wenn Entwickler Hinzufügen der `ConnectionProvider` Attribut an eine Methode sollten sie einen ID-Wert zur Unterscheidung der einzelnen Verbindungspunkt angeben. Eine andere wichtige geerbte Eigenschaft ist die <xref:System.Web.UI.WebControls.WebParts.ConnectionPoint.AllowsMultipleConnections%2A> -Eigenschaft, die angibt, ob ein Anbieterverbindungspunkt gleichzeitig an mehrere Consumer eine Verbindung herstellen kann. Dieser Eigenschaftswert `true` standardmäßig für Anbieter-Verbindungspunkte (während es standardmäßig `false` für Consumer-Verbindungspunkte).  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> Klasse fügt mehrere eindeutige Methoden auf die Member erbt von der <xref:System.Web.UI.WebControls.WebParts.ConnectionPoint> Klasse. Die <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint.GetObject%2A> Methode ruft eine Instanz der Schnittstelle, die die Rückrufmethode für Consumer zurückgegeben wird. Die <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint.GetSecondaryInterfaces%2A> Methode ruft zusätzliche Verbraucherrechte-Schnittstellen, die Teil einer vorhandenen Verbindung ab, aber nicht die Schnittstellen zum Herstellen der Verbindung verwendet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird gezeigt, auf einfache Weise erstellen eine Verbindung deklarativ, programmgesteuert oder über die Benutzeroberfläche verwenden, der einen Anbieterverbindungspunkt an.  
+  
+ Das Beispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, das Ihnen ermöglicht, ändern Sie die Webparts-Anzeigemodus auf einer Seite.  
+  
+-   Quellcode für eine Schnittstelle und die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert fungieren als der Anbieter und der Consumer für eine Verbindung.  
+  
+-   Eine Webseite auf alle Steuerelemente zu hosten, und führen das Codebeispiel.  
+  
+-   Eine Erläuterung zum Ausführen der Beispielseite.  
+  
+ Der erste Teil dieses Codebeispiel ist das Benutzersteuerelement, das Benutzern ermöglicht, Anzeigemodi auf einer Webseite zu ändern. Speichern Sie den folgenden Quellcode in einer ASCX-Datei Übergabe der Dateiname, der zugewiesen ist die `Src` Attribut des der `Register` Richtlinie für dieses Benutzersteuerelement, also im oberen Bereich der Website hosten. Informationen zu Modi und eine Beschreibung des Quellcodes in diesem Steuerelement finden Sie unter [Exemplarische Vorgehensweise: Ändern des Anzeigemodus auf einer Webparts-Seite](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_ConnectionPoint_Overview#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ConnectionPoint_Overview/CS/displaymodemenucs.ascx#6)]
+ [!code-aspx-vb[WebParts_ConnectionPoint_Overview#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ConnectionPoint_Overview/VB/DisplayModeMenuVB.ascx#6)]  
+  
+ Der zweite Teil des Codebeispiels wird der Quellcode für die Schnittstelle und Steuerelemente. Die Quelldatei enthält eine einfache Oberfläche, die mit dem Namen `IZipCode`. Es gibt auch eine <xref:System.Web.UI.WebControls.WebParts.WebPart> Klasse mit dem Namen `ZipCodeWebPart` , die die Schnittstelle implementiert und fungiert als das Anbietersteuerelement. Die `ProvideIZipCode` Methode ist die Rückrufmethode, die nur Schnittstellenmember implementiert. Die Methode gibt einfach eine Instanz der Schnittstelle. Beachten Sie, die die Methode mit einem `ConnectionProvider` Attribut in seinen Metadaten. Dies ist der Mechanismus zum Identifizieren der Methodennamens als die Rückrufmethode für den Anbieterverbindungspunkt an. Die andere <xref:System.Web.UI.WebControls.WebParts.WebPart> Klasse heißt `WeatherWebPart`, und sie verhält sich der Consumer für die Verbindung. Diese Klasse verfügt über eine Methode namens `GetZipCode` , die eine Instanz des ab der `IZipCode` Schnittstelle aus dem Anbietersteuerelement. Beachten Sie, dass diese Methode markiert ist, als der Consumer Connection Point-Methode mit einem `ConnectionConsumer` Attribut in seinen Metadaten. Dies ist der Mechanismus zum Identifizieren der Verbindung Point-Methode in der Consumer-Steuerelement.  
+  
+ Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Dieses Codebeispiel verwendet die dynamische Kompilierung. Eine exemplarische Vorgehensweise zum Kompilieren, veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_ConnectionPoint_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ConnectionPoint_Overview/CS/ZipCodeComponent.cs#2)]
+ [!code-vb[WebParts_ConnectionPoint_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ConnectionPoint_Overview/VB/ZipCodeComponent.vb#2)]  
+  
+ Der dritte Teil des Codebeispiels wird die Webseite. Im oberen Bereich werden `Register` Direktiven zu registrieren, die benutzerdefinierten Steuerelemente, die die Verbindung zu bilden, und das Benutzersteuerelement, das Benutzern ermöglicht, ändern Sie die Anzeigemodi auf der Seite. Die Verbindung selbst wird deklarativ in erstellt die `<staticconnections>` Element auf der Seite. Dies beweist, dass eine Möglichkeit zum Herstellen eine Verbindung – Beachten Sie die `ProviderConnectionPointID` Attribut in der `<asp:webpartconnection>` Element. Sie können die Verbindung auch programmgesteuert erstellen. der Code für die auf diese Weise wird die `Button1_Click` Methode. In diesem Fall eine <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> Objekt erstellt und dann an eine Methode, die die tatsächliche Verbindung erstellt übergeben. Ob die Verbindung deklarativ oder programmgesteuert erstellt wird, müssen die Verbindungspunkte immer für den Anbieter und der Consumer angegeben werden. Die `Button2_Click` Methode greift auf die <xref:System.Web.UI.WebControls.WebParts.ConnectionPoint> von Objekten für die der Anbieter und der Consumer und schreibt Sie einige ihrer Eigenschaftswerte zu einer Bezeichnung auf der Seite.  
+  
+ [!code-aspx-csharp[WebParts_ConnectionPoint_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ConnectionPoint_Overview/CS/connectionPointCS.aspx#1)]
+ [!code-aspx-vb[WebParts_ConnectionPoint_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ConnectionPoint_Overview/VB/connectionPointVB.aspx#1)]  
+  
+ Nachdem Sie die Seite in einem Browser zu laden, klicken Sie auf die **Punkt Verbindungsdetails** Schaltfläche. Informationen über die Verbindungspunkte Anbieter- und in der deklarativen Verbindung hergestellt wird. Verwenden Sie als Nächstes die **Anzeigemodus** Verbindungsmodus für Dropdown-Steuerelement auf der Seite "in" zu wechseln. Im Verbmenü des der **ZIP Code Consumer** <xref:System.Web.UI.WebControls.WebParts.WebPart> (dargestellt durch einen Pfeil in der Titelleiste), klicken Sie auf der Connect-Verb. Die Verbindung, die Benutzeroberfläche angezeigt wird, erstellt automatisch von der `<asp:connectionszone>` -Steuerelement deklariert wird, auf der Seite. Dies ist eine weitere Möglichkeit zum Herstellen eine Verbindung (über die Benutzeroberfläche), zusammen mit den zuvor erläuterten deklarativen und programmgesteuerten-Methoden. Klicken Sie auf die **trennen** Schaltfläche, um die vorhandene statische Verbindung zu beenden. Klicken Sie auf die **erstellen Sie eine Verbindung zu einem Anbieter** Link. Die Benutzeroberfläche zeigt jetzt ein Dropdown-Steuerelement, das die Anzeigenamen der Anbieter auflistet. Wählen Sie den Verbindungspunkt in der Dropdown-Liste aus, und klicken Sie dann auf **verbinden** zum Herstellen die Verbindung. Klicken Sie anschließend auf **trennen** erneut aus. Klicken Sie auf die **dynamische Verbindung** um programmgesteuert eine Verbindung zu erstellen. Verwenden der **Anzeigemodus** Steuerelement in den Durchsuchen-Modus zurück. Klicken Sie auf die **Verbindungsdetails zeigen** erneut auf die Schaltfläche, um Details zu den Anbieter Verbindungspunktobjekt einmal anzugeben.  
+  
+ Im Beispiel wurde gezeigt, eine Verbindung herstellen und einen Anbieterverbindungspunkt auf drei Arten verwenden: eine statische Verbindung deklariert im Markup Webseite; eine Verbindung erstellt wird, im Code, mit denen eine <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> Objekt und eine Verbindung von einem Benutzer über die Verbindung UI erstellt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProviderConnectionPoint (System.Reflection.MethodInfo callbackMethod, Type interfaceType, Type controlType, string displayName, string id, bool allowsMultipleConnections);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Reflection.MethodInfo callbackMethod, class System.Type interfaceType, class System.Type controlType, string displayName, string id, bool allowsMultipleConnections) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint.#ctor(System.Reflection.MethodInfo,System.Type,System.Type,System.String,System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="callbackMethod" Type="System.Reflection.MethodInfo" />
+        <Parameter Name="interfaceType" Type="System.Type" />
+        <Parameter Name="controlType" Type="System.Type" />
+        <Parameter Name="displayName" Type="System.String" />
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="allowsMultipleConnections" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="callbackMethod">Die Methode im Anbietersteuerelement, das eine Schnittstelleninstanz für Consumer zum Herstellen einer Verbindung zurückgibt.</param>
+        <param name="interfaceType">Die <see cref="T:System.Type" /> der Schnittstelle, die der Anbieter für Consumer bereitstellt.</param>
+        <param name="controlType">Die <see cref="T:System.Type" /> des Anbietersteuerelements, der der Anbieterverbindungspunkt zugeordnet ist.</param>
+        <param name="displayName">Ein Anzeigename für den Anbieterverbindungspunkt an, der für Benutzer in der Verbindungs-Benutzeroberfläche (UI) angezeigt wird.</param>
+        <param name="id">Ein eindeutiger Bezeichner für den Anbieterverbindungspunkt an.</param>
+        <param name="allowsMultipleConnections">Ein boolescher Wert, der angibt, ob der Anbieterverbindungspunkt mehrere gleichzeitige Verbindungen mit Consumern aufweisen kann.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint.%23ctor%2A> Konstruktor für die <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> Klasse einfach Basiskonstruktor, übergibt Sie an die verschiedenen Parametern und initialisieren die Basisklasse aufruft.  
+  
+ Der Konstruktor der Basisklasse überprüft eine Anzahl von Parametern für einen Verbindungspunkt und kann verschiedene Ausnahmen auslösen. Eine Liste mit möglichen Ausnahmen finden Sie in Abschnitt für Ausnahmen.  
+  
+ Sie erreichen die <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint.%23ctor%2A> Konstruktor zur Erstellung Ihrer eigenen Instanz von der <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> Klasse. In Fällen, in denen Sie einfach eine Verbindung herstellen und die Klasse nicht erweitern, Sie sollten jedoch aufrufen, die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.GetProviderConnectionPoints%2A> Methode, um ein vorhandenes Verbindungsobjekt Punkt von einem Anbieter zurückzugeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Ableitung der <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> Klasse, um einen benutzerdefinierten Anbieterverbindungspunkt zu erstellen.  
+  
+ Das Codebeispiel besteht aus drei Teilen:  
+  
+-   Eine Quelldatei, die einen Anbieter enthält <xref:System.Web.UI.WebControls.WebParts.WebPart> zu steuern, einen Consumer <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement und ein benutzerdefiniertes <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> Objekt.  
+  
+-   Eine Webseite, die die Steuerelemente in einer statischen Verbindung hostet.  
+  
+-   Eine Erläuterung, wie Sie den Beispielcode auszuführen.  
+  
+ Der erste Teil des Codebeispiels wird die Quelle für den Anbieter und der Consumer <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente und eine benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> Klasse, mit dem Namen `TableProviderConnectionPoint`. Beachten Sie, dass der Konstruktor, der die `TableProviderConnectionPoint` Klasse ruft Basiskonstruktor, und übergeben sie die erforderlichen Parameter wie im Abschnitt Parameter angegeben. Beachten Sie, dass in der `TableProviderWebPart` -Klasse, die `GetConnectionInterface` -Methode wird angegeben, wie die Rückrufmethode für Verbindungen, und die `ConnectionProvider` -Attribut deklariert, die benutzerdefinierte `TableProviderConnectionPoint` als Parameter. Dies veranschaulicht, wie ein benutzerdefinierter Anbieter Connection Point zu erstellen und verknüpfen diese dann mit einem Anbietersteuerelement. In diesem Beispiel wird davon ausgegangen, dass der Quellcode dynamisch kompiliert wird, damit Sie die Quellcodedatei im ein Unterordner "App_Code" Ihrer Webanwendung ablegen soll.  
+  
+ [!code-csharp[UI.WebControls.WebParts.ProviderConnectionPoint#1](~/samples/snippets/csharp/VS_Snippets_WebNet/UI.WebControls.WebParts.ProviderConnectionPoint/CS/connectionControls.cs#1)]  
+  
+ Der zweite Teil des Codebeispiels wird die Webseite, die die benutzerdefinierten Steuerelemente in einer statischen Webparts-Verbindung gehostet. Am oberen Rand der Seite ist eine `Register` Richtlinie, um ein Präfix und den Namespace für die benutzerdefinierten Steuerelemente zu deklarieren. Die Verbindung deklariert wird, indem ein `<asp:webpartconnection>` -Element, und die Anbieter-und Consumer deklariert ein `<asp:webpartzone>` Element.  
+  
+ [!code-aspx-csharp[UI.WebControls.WebParts.ProviderConnectionPoint#3](~/samples/snippets/csharp/VS_Snippets_WebNet/UI.WebControls.WebParts.ProviderConnectionPoint/CS/defaultcs.aspx#3)]  
+  
+ Laden Sie die Seite in einem Browser. Die Verbindung zwischen den Steuerelementen bereits vorhanden ist, und der Consumer zeigt die Daten des Anbieters, da die Verbindung als statische Verbindung auf der Seite deklariert wurde.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="callbackMethod" /> ist <see langword="null" />.  
+  
+ \- oder –  
+  
+ <paramref name="interfaceType" /> ist <see langword="null" />.  
+  
+ \- oder –  
+  
+ <paramref name="controlType" /> ist <see langword="null" />.  
+  
+ \- oder –  
+  
+ <paramref name="displayName" /> ist <see langword="null" /> oder eine leere Zeichenfolge ("").</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="controlType" />ist nicht denselben Typ wie das Anbietersteuerelement (oder eine gültige Klasse abgeleitet).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObject">
+      <MemberSignature Language="C#" Value="public virtual object GetObject (System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetObject(class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint.GetObject(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="control">Das Steuerelement, das in einer Webparts-Verbindung als Anbieter fungiert.</param>
+        <summary>Ruft die Rückrufmethode in einem Anbietersteuerelement, das eine Schnittstelleninstanz für Consumer zurückzugebende abruft.</summary>
+        <returns>Ein <see cref="T:System.Object" /> , ist eine Instanz der Schnittstelle einen Anbieter für Consumer zum Herstellen einer Verbindung zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt ein Objekt zurück, aus dem Anbietersteuerelement, das eine Instanz der Schnittstelle, die zum Herstellen einer Verbindung verwendet wird. Der Typ des Objekts wird der Typ der implementierten Schnittstelle sein. Beispielsweise zwei Schnittstellen, die implementiert werden, für Verbindungen im Webparts-Steuerelementsatz sind <xref:System.Web.UI.WebControls.WebParts.IWebPartField> und <xref:System.Web.UI.WebControls.WebParts.IWebPartRow>. Wenn die <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint.GetObject%2A> Methode aufgerufen wird ein <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> -Objekt, wenn der zugeordnete Anbieter einer dieser Schnittstellen implementiert, wird das zurückgegebene Objekt desselben Typs sein.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint.GetObject%2A> Methode wird aufgerufen, indem Sie <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> Objekte, wenn eine Verbindung aktiviert wird. Dies ist ein wichtiger Schritt, der tatsächlich stellt eine Verbindung her und startet den Prozess, der zwei Steuerelemente Daten gemeinsam nutzen kann.  
+  
+ Der Consumer-Steuerelement in einer Verbindung muss mit den gleichen Typ der Schnittstelle als Anbieter arbeiten können. Die Steuerelemente sind nicht kompatibel, wenn er nicht der Fall ist, und ein <xref:System.Web.UI.WebControls.WebParts.WebPartTransformer> Objekt muss zum Herstellen einer Verbindung verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="control" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSecondaryInterfaces">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection GetSecondaryInterfaces (System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection GetSecondaryInterfaces(class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint.GetSecondaryInterfaces(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="control">Das Steuerelement, das in einer Webparts-Verbindung als Anbieter fungiert.</param>
+        <summary>Ruft eine optionale Auflistung von sekundären Schnittstellen, die von einem Anbieterverbindungspunkt unterstützt werden können.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection" /> von zusätzlichen Schnittstellen bereitgestellt, die vom Steuerelement als Anbieter fungiert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Anbieter Verbindungspunktobjekt verfügt immer über eine Standardschnittstelle an, die zum Herstellen einer Verbindung mit Consumern verwendet wird. Eine Instanz der Standardschnittstelle wird abgerufen, durch Aufrufen der <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint.GetObject%2A> Methode auf eine <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> Objekt.  
+  
+ Einige Anbietersteuerelemente implementieren jedoch mehrere Schnittstellen für Consumer als Teil einer Verbindung bereitstellt. Diese Schnittstellen, die nicht die Standardfarben verwendet zum Herstellen einer Verbindung sind, werden als sekundäre Schnittstellen bezeichnet. Die <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint.GetSecondaryInterfaces%2A> Methode bietet eine Möglichkeit zum Zurückgeben von einer Auflistung von Verweisen auf die sekundären Schnittstellen, ebenso wie die <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint.GetObject%2A> Methode gibt einen Verweis auf die Standard-Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Die <see cref="M:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint.GetSecondaryInterfaces(System.Web.UI.Control)" /> Methode in der <see cref="T:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint" /> Klasse enthält keine Implementierung; es gibt eine leere Auflistung von sekundären Schnittstellen zurück. Um diese Methode implementieren, müssen Sie erben von der <see cref="T:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint" /> Klasse, und überschreiben Sie diese Methode, die daraus eine bestimmte Gruppe von sekundären Schnittstellen zurückgeben.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

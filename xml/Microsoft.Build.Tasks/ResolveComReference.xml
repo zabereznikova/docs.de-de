@@ -1,0 +1,432 @@
+<Type Name="ResolveComReference" FullName="Microsoft.Build.Tasks.ResolveComReference">
+  <TypeSignature Language="C#" Value="public sealed class ResolveComReference : Microsoft.Build.Tasks.AppDomainIsolatedTaskExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ResolveComReference extends Microsoft.Build.Tasks.AppDomainIsolatedTaskExtension" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.ResolveComReference" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Tasks.AppDomainIsolatedTaskExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementiert die <c>ResolveComReference</c> Aufgabe. Verwenden der <c>ResolveComReference</c> Element in der Projektdatei erstellen und Ausführen dieser Aufgabe. Weitere Informationen zu Verwendung und Parametern finden Sie unter [ResolveComReference-Aufgabe](http://msdn.microsoft.com/library/c9bf5fcf-6453-40ea-b50f-a212adc3e9b5).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Auf einem 64-Bit-Computer Framework64 /\<Version > / Msbuild kann nicht aufgelöst werden COM-Objekte, die als 32-Bit-Komponenten registriert. Angenommen, wenn Sie ein COM-Objekt mit "regsvr32" registrieren, und wiederholen Sie dann zum Erstellen eines Projekts für die X86-Plattform mit Framework64 /\<Version > / Msbuild, der der Build ist nicht das COM-Objekt auflösen kann. Wenn stattdessen mit Framework erstellt /\<Version > / Msbuild, der der Build ist das COM-Objekt auflösen.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResolveComReference ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.ResolveComReference.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Tasks.ResolveComReference" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DelaySign">
+      <MemberSignature Language="C#" Value="public bool DelaySign { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DelaySign" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveComReference.DelaySign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert, der angibt, ob die <c>ResolveComReference</c> -Aufgabe den öffentlichen Schlüssel in der Assembly platziert (<see langword="true" />) oder die Assembly vollständig signiert (<see langword="false" />).</summary>
+        <value>
+          <see langword="true" />Wenn die <c>ResolveComReference</c> -Aufgabe den öffentlichen Schlüssel in der Assembly platziert <see langword="false" /> Wenn die <c>ResolveComReference</c> -Aufgabe die Assembly vollständig signiert.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="EnvironmentVariables">
+      <MemberSignature Language="C#" Value="public string[] EnvironmentVariables { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] EnvironmentVariables" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveComReference.EnvironmentVariables" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Array von Name / Wert-Paaren von Umgebungsvariablen, die an die erzeugten tlbimp.exe und aximp.exe zusätzlich zu übergeben (oder zum ausgewählten überschreiben) der regulären Umgebungsblock werden sollen.</summary>
+        <value>Gibt ein Array von Name / Wert-Paaren von Umgebungsvariablen zurück.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public override bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.ResolveComReference.Execute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt die <c>ResolveComReference</c> Aufgabe.</summary>
+        <returns>
+          <see langword="true" />, wenn die Aufgabe erfolgreich ausgeführt wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteAsTool">
+      <MemberSignature Language="C#" Value="public bool ExecuteAsTool { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ExecuteAsTool" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveComReference.ExecuteAsTool" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>-Eigenschaft zur Festlegung von Zielversionen von ResolveComReferences: Wenn "true" tlbimp.exe "und" aximp.exe vom entsprechenden Zielframework Out-of-Proc zum Generieren der erforderlichen Wrapperassemblys ausgeführt werden.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IncludeVersionInInteropName">
+      <MemberSignature Language="C#" Value="public bool IncludeVersionInInteropName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IncludeVersionInInteropName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveComReference.IncludeVersionInInteropName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Beim Festlegen auf "true", die Typbibliothekversion in den Wrappernamen eingeschlossen werden sollen. Standardwert ist "false".</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="KeyContainer">
+      <MemberSignature Language="C#" Value="public string KeyContainer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyContainer" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveComReference.KeyContainer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Container ab, der ein Schlüsselpaar enthält, oder legt ihn fest.</summary>
+        <value>Ein Container, der ein Schlüsselpaar enthält.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="KeyFile">
+      <MemberSignature Language="C#" Value="public string KeyFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveComReference.KeyFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Element ab oder legt dieses fest, das ein Schlüsselpaar enthält.</summary>
+        <value>Ein Element, das ein Schlüsselpaar enthält.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="NoClassMembers">
+      <MemberSignature Language="C#" Value="public bool NoClassMembers { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NoClassMembers" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveComReference.NoClassMembers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert, der angibt, ob übergeben der <see cref="F:System.Runtime.InteropServices.TypeLibImporterFlags.PreventClassMembers" /> -Kennzeichen an die TLB-Wrappergenerierung.</summary>
+        <value>
+          <see langword="true" />Wenn die Aufgabe übergeben, sollte die <see cref="F:System.Runtime.InteropServices.TypeLibImporterFlags.PreventClassMembers" /> -Kennzeichen an die TLB-Wrappergenerierung hingegen <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ResolvedAssemblyReferences">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] ResolvedAssemblyReferences { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] ResolvedAssemblyReferences" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveComReference.ResolvedAssemblyReferences" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft aufgelösten Assemblyverweise ab oder legt sie fest.</summary>
+        <value>Die aufgelösten Assemblyverweise.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ResolvedFiles">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] ResolvedFiles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] ResolvedFiles" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveComReference.ResolvedFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die vollqualifizierten Dateien auf Datenträger ab, die den physischen Speicherorten der Typbibliotheken entsprechen, die für diese Aufgabe als Eingabe bereitgestellt wurden, oder legt diese Dateien fest.</summary>
+        <value>Die vollqualifizierten Dateien auf Datenträger, die den physischen Speicherorten der Typbibliotheken entsprechen, die für diese Aufgabe als Eingabe bereitgestellt wurden.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ResolvedModules">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] ResolvedModules { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] ResolvedModules" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveComReference.ResolvedModules" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Pfade zu den Modulen ab, die gefunden wurden, oder legt diese Pfade fest.</summary>
+        <value>Die Pfade zu den Modulen, die gefunden wurden.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SdkToolsPath">
+      <MemberSignature Language="C#" Value="public string SdkToolsPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SdkToolsPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveComReference.SdkToolsPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wenn ExecuteAsTool gleich true ist, muss dies auf den Pfad des SDK-Tools für die Framework-Zielversion festgelegt werden.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Silent">
+      <MemberSignature Language="C#" Value="public bool Silent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Silent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveComReference.Silent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Flag, das angibt, ob Nachrichten oder Warnungen protokolliert werden. Standardmäßig wird <see langword="false" />, Meldungen und Warnungen werden protokolliert.</summary>
+        <value>Gibt das Flag zurück.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StateFile">
+      <MemberSignature Language="C#" Value="public string StateFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StateFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveComReference.StateFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Cachedatei für die Zeitstempel von COM-Komponenten ab oder legt sie fest.</summary>
+        <value>Die Cachedatei für die Zeitstempel von COM-Komponenten.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TargetFrameworkVersion">
+      <MemberSignature Language="C#" Value="public string TargetFrameworkVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetFrameworkVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveComReference.TargetFrameworkVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Zielframework-Version des Projekts. Standardmäßig ist leer. d. h., es werden keine Filterung für den Verweis auf ihre Zielframework basiert.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TargetProcessorArchitecture">
+      <MemberSignature Language="C#" Value="public string TargetProcessorArchitecture { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetProcessorArchitecture" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveComReference.TargetProcessorArchitecture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der die bevorzugte Zielprozessorarchitektur, die zum Flag "/ Machine" tlbimp.exe nach der Übersetzung übergeben wird, z. B. X86 "," ia64 "," amd64 "oder" Msil.</summary>
+        <value>Gibt den Namen der bevorzugten Zielprozessorarchitektur zurück.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TypeLibFiles">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] TypeLibFiles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] TypeLibFiles" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveComReference.TypeLibFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typbibliothek-Dateipfad zu COM-Verweisen ab oder legt ihn fest.</summary>
+        <value>Der Typbibliothek-Dateipfad zu COM-Verweisen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft möglicherweise Elementmetadaten enthalten. Weitere Informationen finden Sie im Abschnitt "Elementmetadaten TypeLibFiles" in [ResolveComReference-Aufgabe](http://msdn.microsoft.com/library/c9bf5fcf-6453-40ea-b50f-a212adc3e9b5).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TypeLibNames">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] TypeLibNames { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] TypeLibNames" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveComReference.TypeLibNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aufzulösenden Typbibliotheksnamen ab oder legt diese fest.</summary>
+        <value>Die aufzulösenden Typbibliotheksnamen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft möglicherweise Elementmetadaten enthalten. Weitere Informationen finden Sie im Abschnitt "Elementmetadaten TypeLibFiles" in [ResolveComReference-Aufgabe](http://msdn.microsoft.com/library/c9bf5fcf-6453-40ea-b50f-a212adc3e9b5).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WrapperOutputDirectory">
+      <MemberSignature Language="C#" Value="public string WrapperOutputDirectory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string WrapperOutputDirectory" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveComReference.WrapperOutputDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Speicherort auf dem Datenträger für die generierte Interop-Assembly ab oder legt ihn fest.</summary>
+        <value>Der Speicherort auf dem Datenträger für die generierte Interop-Assembly.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

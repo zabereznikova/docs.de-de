@@ -1,0 +1,482 @@
+<Type Name="Transform" FullName="System.Security.Cryptography.Xml.Transform">
+  <TypeSignature Language="C#" Value="public abstract class Transform" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Transform extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Xml.Transform" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die abstrakte Basisklasse dar, von der alle <see langword="&lt;Transform&gt;" /> -Elemente abgeleitet werden, die in eine digitale Signatur verwendet werden können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Ausführen von XML-Signaturen und Überprüfung der <`Transform`>-Element beschreibt, wie der Unterzeichner das Datenobjekt transformiert, die signiert wurden.  Klicken Sie dann die Überprüfung eines Dokuments verwendet das <`Transform`> Element, um die signierten Daten auf die gleiche Weise zu transformieren.  Wenn die Überprüfung auf die gleiche Weise die signierten Daten transformiert werden kann, kann das Dokument nicht überprüft werden.  
+  
+ Verwenden Sie eine Klasse, die von abgeleitet ist die <xref:System.Security.Cryptography.Xml.Transform> -Klasse auf, wenn eine oder mehrere Transformieren von Objekten in eine verschlüsselte XML-Dokument oder ein signiertes XML-Dokument hinzugefügt werden müssen.  
+  
+ Weitere Informationen zu den `<Transform>` -Element finden Sie in der XMLDSIG-Spezifikation, die über das World Wide Web Consortium (W3C) unter www.w3.org/TR/xmldsig-core/ verfügbar ist, oder der XML-Verschlüsselung-Spezifikation, die von der W3C unter www.w3.org verfügbar ist / TR/Xmlenc-Core /.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Transform ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.Transform.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.Xml.Transform" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Algorithm">
+      <MemberSignature Language="C#" Value="public string Algorithm { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Algorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.Transform.Algorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert den Uniform Resource Identifier (URI), die die von der aktuellen Transformation ausgeführten Algorithmus identifiziert.</summary>
+        <value>Der URI, den Algorithmus, der ausgeführt wird, von der aktuellen identifiziert <see cref="T:System.Security.Cryptography.Xml.Transform" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft entspricht der <xref:System.Security.Cryptography.Xml.Transform.Algorithm%2A> Attribut von einem `<Transform>` Element in einer XMLDSIG-Signatur. Beispielsweise wird der Algorithmus-URI für die Base64-Decodierung-Transformation in der XMLDSIG-Spezifikation (Abschnitt 6.6.2) als http://www.w3.org/2000/09/xmldsig#base64 definiert.  
+  
+ Sie können bequem legen Sie diesen Wert mit einem der zugeordneten die statischen Felder der <xref:System.Security.Cryptography.Xml.SignedXml> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlElement Context { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlElement Context" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.Transform.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest ein <see cref="T:System.Xml.XmlElement" /> -Objekt, das den Dokumentenkontext, unter dem darstellt aktuellen <see cref="T:System.Security.Cryptography.Xml.Transform" /> Objekt ausgeführt wird.</summary>
+        <value>Ein <see cref="T:System.Xml.XmlElement" /> -Objekt, das den Dokumentenkontext, unter dem darstellt aktuellen <see cref="T:System.Security.Cryptography.Xml.Transform" /> Objekt ausgeführt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Signieren eines Dokuments der <xref:System.Security.Cryptography.Xml.Transform.Context%2A> Eigenschaft darstellt, den an übergebenen Wert den <xref:System.Security.Cryptography.Xml.SignedXml> Konstruktor.  Beim Überprüfen eines Dokuments der <xref:System.Security.Cryptography.Xml.Transform.Context%2A> steht <xref:System.Security.Cryptography.Xml.Signature> Objekt.  
+  
+ Die <xref:System.Security.Cryptography.Xml.Transform.Context%2A> Eigenschaft wird automatisch festgelegt, während der Berechnung der Signatur und überprüft, aber bevor Transformationen aufgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDigestedOutput">
+      <MemberSignature Language="C#" Value="public virtual byte[] GetDigestedOutput (System.Security.Cryptography.HashAlgorithm hash);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] GetDigestedOutput(class System.Security.Cryptography.HashAlgorithm hash) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.Transform.GetDigestedOutput(System.Security.Cryptography.HashAlgorithm)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hash" Type="System.Security.Cryptography.HashAlgorithm" />
+      </Parameters>
+      <Docs>
+        <param name="hash">Die <see cref="T:System.Security.Cryptography.HashAlgorithm" /> Objekt verwendet, um einen Nachrichtenhash zu erstellen.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse gibt die zugeordneten Digest ein <see cref="T:System.Security.Cryptography.Xml.Transform" /> Objekt.</summary>
+        <returns>Zugeordnete Digest ein <see cref="T:System.Security.Cryptography.Xml.Transform" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInnerXml">
+      <MemberSignature Language="C#" Value="protected abstract System.Xml.XmlNodeList GetInnerXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Xml.XmlNodeList GetInnerXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.Transform.GetInnerXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeList</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse gibt eine XML-Darstellung der Parameter für die <see cref="T:System.Security.Cryptography.Xml.Transform" /> -Objekt, das als Unterelemente des XMLDSIG einzuschließenden geeignet sind <see langword="&lt;Transform&gt;" /> Element.</summary>
+        <returns>Eine Liste der XML-Knoten, die den transformationsspezifischen Inhalt erforderlich, um die aktuelle beschreiben darstellen <see cref="T:System.Security.Cryptography.Xml.Transform" /> Objekt in ein XMLDSIG <see langword="&lt;Transform&gt;" /> Element.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Wenn eine <xref:System.Security.Cryptography.Xml.Transform> Objekt stellt eine XPath-Transformation, die mit dem XPath-Ausdruck `self::text()`, einen Aufruf von <xref:System.Security.Cryptography.Xml.Transform.GetInnerXml%2A> führt zu einer <xref:System.Xml.XmlNodeList> -Objekt, das folgende XML-Element darstellt:  
+  
+```  
+<XPath>   
+  self::text()   
+</XPath>  
+```  
+  
+ Dieses Element entspricht dem transformationsspezifischen Inhalt der `<Transform>` Element wie in Abschnitt 4.3.3.4 der XMLDSIG-Spezifikation definiert. Für die oben stehende XPath-Transformation, die gesamte `<Transform>` Element lautet wie folgt:  
+  
+```  
+<Transform Algorithm="http://www.w3.org/TR/1999/REC-xpath-19991116">   
+  <XPath>   
+    self::text()   
+  </XPath>   
+</Transform>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOutput">
+      <MemberSignature Language="C#" Value="public abstract object GetOutput ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetOutput() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.Transform.GetOutput" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse gibt die Ausgabe des aktuellen <see cref="T:System.Security.Cryptography.Xml.Transform" /> Objekt.</summary>
+        <returns>Die Ausgabe des aktuellen <see cref="T:System.Security.Cryptography.Xml.Transform" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOutput">
+      <MemberSignature Language="C#" Value="public abstract object GetOutput (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetOutput(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.Transform.GetOutput(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ der Ausgabe zurückgegeben. Diese Angabe muss einer der Typen in der <see cref="P:System.Security.Cryptography.Xml.Transform.OutputTypes" /> Eigenschaft.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse gibt die Ausgabe des aktuellen <see cref="T:System.Security.Cryptography.Xml.Transform" /> Objekt des angegebenen Typs.</summary>
+        <returns>Die Ausgabe des aktuellen <see cref="T:System.Security.Cryptography.Xml.Transform" /> Objekt als ein Objekt des angegebenen Typs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.Transform.GetOutput%2A> Methodenrückgabe die Ausgabe der aktuellen Transformation nach der Ausführung auf dem Wert, der zuvor durch einen Aufruf zum Festlegen der <xref:System.Security.Cryptography.Xml.Transform.LoadInput%2A> Methode.  
+  
+ Der Typ des zurückgegebenen Objekts muss entweder die Type-Objekten in der <xref:System.Security.Cryptography.Xml.Transform.OutputTypes%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXml">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlElement GetXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XmlElement GetXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.Transform.GetXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die XML-Darstellung des aktuellen <see cref="T:System.Security.Cryptography.Xml.Transform" /> Objekt.</summary>
+        <returns>Die XML-Darstellung des aktuellen <see cref="T:System.Security.Cryptography.Xml.Transform" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.XmlElement> von dieser Methode zurückgegebene Objekt entspricht dem XML-Schema für die `<Transform>` in Abschnitt 4.3.3.4 der XMLDSIG-Spezifikation definierten Elemente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputTypes">
+      <MemberSignature Language="C#" Value="public abstract Type[] InputTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type[] InputTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.Transform.InputTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft ein Array von Typen, die gültige Eingaben sind die <see cref="M:System.Security.Cryptography.Xml.Transform.LoadInput(System.Object)" /> Methode des aktuellen <see cref="T:System.Security.Cryptography.Xml.Transform" /> Objekt.</summary>
+        <value>Ein Array von gültigen Eingabetypen für die aktuelle <see cref="T:System.Security.Cryptography.Xml.Transform" /> Objekt; Sie können nur Objekte von einem dieser Typen zum Übergeben der <see cref="M:System.Security.Cryptography.Xml.Transform.LoadInput(System.Object)" /> Methode des aktuellen <see cref="T:System.Security.Cryptography.Xml.Transform" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das zurückgegebene Array die <xref:System.Security.Cryptography.Xml.Transform.InputTypes%2A> Eigenschaft muss mindestens ein Element enthalten, da jede <xref:System.Security.Cryptography.Xml.Transform> Objekt muss mindestens einen Typ als gültige Eingabe akzeptieren.  
+  
+ Ein <xref:System.Security.Cryptography.Xml.Transform> Objekt in der Regel eine oder mehrere der folgenden Typen als Eingabe akzeptiert: <xref:System.IO.Stream>, <xref:System.Xml.XmlDocument>, oder <xref:System.Xml.XmlNodeList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadInnerXml">
+      <MemberSignature Language="C#" Value="public abstract void LoadInnerXml (System.Xml.XmlNodeList nodeList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LoadInnerXml(class System.Xml.XmlNodeList nodeList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.Transform.LoadInnerXml(System.Xml.XmlNodeList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nodeList" Type="System.Xml.XmlNodeList" />
+      </Parameters>
+      <Docs>
+        <param name="nodeList">Ein <see cref="T:System.Xml.XmlNodeList" /> -Objekt, das transformationsspezifischen Inhalt für den aktuellen gibt <see cref="T:System.Security.Cryptography.Xml.Transform" /> Objekt.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse analysiert die angegebene <see cref="T:System.Xml.XmlNodeList" /> Objekt als Inhalt transformationsspezifischen eine <see langword="&lt;Transform&gt;" /> Element und konfiguriert den internen Zustand des aktuellen <see cref="T:System.Security.Cryptography.Xml.Transform" /> Objekt entsprechend der <see langword="&lt;Transform&gt;" /> Element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird zum Verarbeiten von Unterelementen verwendet eine `<Transform>` Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadInput">
+      <MemberSignature Language="C#" Value="public abstract void LoadInput (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LoadInput(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.Transform.LoadInput(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Die Eingabe für das Laden in das aktuelle <see cref="T:System.Security.Cryptography.Xml.Transform" /> Objekt.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse lädt die angegebene Eingabe in das aktuelle <see cref="T:System.Security.Cryptography.Xml.Transform" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Typ des Eingabeobjekts muss einer der Typen in der <xref:System.Security.Cryptography.Xml.Transform.InputTypes%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputTypes">
+      <MemberSignature Language="C#" Value="public abstract Type[] OutputTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type[] OutputTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.Transform.OutputTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft ein Array von Typen, die mögliche Ausgaben sind der <see cref="M:System.Security.Cryptography.Xml.Transform.GetOutput" /> Methoden des aktuellen <see cref="T:System.Security.Cryptography.Xml.Transform" /> Objekt.</summary>
+        <value>Ein Array von gültigen Ausgabetypen für die aktuelle <see cref="T:System.Security.Cryptography.Xml.Transform" /> Objekt, und nur Objekte von einem der folgenden Typen werden zurückgegeben, aus der <see cref="M:System.Security.Cryptography.Xml.Transform.GetOutput" /> Methoden des aktuellen <see cref="T:System.Security.Cryptography.Xml.Transform" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das zurückgegebene Array die <xref:System.Security.Cryptography.Xml.Transform.OutputTypes%2A> Eigenschaft muss mindestens ein Element enthalten, da jede Transformation mindestens einen Typ als Ausgabe generieren muss.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropagatedNamespaces">
+      <MemberSignature Language="C#" Value="public System.Collections.Hashtable PropagatedNamespaces { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Hashtable PropagatedNamespaces" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.Transform.PropagatedNamespaces" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Hashtable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen <see cref="T:System.Collections.Hashtable" /> Objekt, das die Namespaces enthält, die in der Signatur weitergegeben werden.</summary>
+        <value>Ein <see cref="T:System.Collections.Hashtable" /> Objekt, das die Namespaces enthält, die in der Signatur weitergegeben werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ XML-Namespaces werden verwendet, um verschiedene Elemente in einem Dokument zu unterscheiden, die den gleichen Namen haben.  
+  
+ Die <xref:System.Collections.Hashtable> Schlüssel, der die <xref:System.Security.Cryptography.Xml.Transform.PropagatedNamespaces%2A> -Eigenschaft sind die Namespacepräfixe und die <xref:System.Collections.Hashtable> Werte sind der Namespace Uniform Resource Identifiers (URIs).  
+  
+ Die <xref:System.Security.Cryptography.Xml.Transform.PropagatedNamespaces%2A> Eigenschaft wird automatisch festgelegt, während der Berechnung der Signatur und überprüft, aber bevor Transformationen aufgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <see cref="P:System.Security.Cryptography.Xml.Transform.PropagatedNamespaces" /> -Eigenschaft wurde festgelegt, um <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Resolver">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlResolver Resolver { set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlResolver Resolver" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.Transform.Resolver" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlResolver</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Legt das aktuelle <see cref="T:System.Xml.XmlResolver" /> Objekt.</summary>
+        <value>Das aktuelle <see cref="T:System.Xml.XmlResolver" />-Objekt. Der Standardwert dieser Eigenschaft ist ein <see cref="T:System.Xml.XmlSecureResolver" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.XmlResolver> Klasse löst externe XML-Ressourcen, die mit dem Namen durch ein Uniform Resource Identifier (URI). Wenn Sie die Quelle der XML-Datei nicht vertrauen, sollten Sie nicht die XML-Datei mit dem Namen, die durch den URI Computerressourcen zugreifen können. Die <xref:System.Security.Cryptography.Xml.Transform.Resolver%2A> -Eigenschaft können Sie die Zugriffsebene steuern, auf die XML-Dateien Computerressourcen durch Angabe eines anderen <xref:System.Xml.XmlResolver> Objekte. Wenn Sie nicht, um Zugriff zu ermöglichen möchten, können Sie diese Eigenschaft festlegen, um `null` (`Nothing` in Visual Basic).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

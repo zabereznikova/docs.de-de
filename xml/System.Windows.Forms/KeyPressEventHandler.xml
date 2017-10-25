@@ -1,0 +1,45 @@
+<Type Name="KeyPressEventHandler" FullName="System.Windows.Forms.KeyPressEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void KeyPressEventHandler(object sender, KeyPressEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed KeyPressEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.KeyPressEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Forms.KeyPressEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Windows.Forms.KeyPressEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode zur Behandlung des <see cref="E:System.Windows.Forms.Control.KeyPress" />-Ereignisses eines <see cref="T:System.Windows.Forms.Control" />-Objekts dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legen Sie <xref:System.Windows.Forms.KeyPressEventArgs.Handled%2A?displayProperty=nameWithType> auf `true` zum Abbrechen der `KeyPress` Ereignis. Dadurch wird verhindert, dass das Steuerelement Drücken der Taste verarbeitet.  
+  
+ Beim Erstellen eines <xref:System.Windows.Forms.KeyPressEventHandler>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen zur Behandlung von Ereignissen mit Delegaten finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ [!code-cpp[KeyPressEventArgs#1](~/samples/snippets/cpp/VS_Snippets_Winforms/KeyPressEventArgs/CPP/form1.cpp#1)]
+ [!code-csharp[KeyPressEventArgs#1](~/samples/snippets/csharp/VS_Snippets_Winforms/KeyPressEventArgs/CS/form1.cs#1)]
+ [!code-vb[KeyPressEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/KeyPressEventArgs/VB/form1.vb#1)]  
+  
+ [!code-cpp[Control.KeyDown#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Control.KeyDown/CPP/form1.cpp#1)]
+ [!code-csharp[Control.KeyDown#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Control.KeyDown/CS/form1.cs#1)]
+ [!code-vb[Control.KeyDown#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Control.KeyDown/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

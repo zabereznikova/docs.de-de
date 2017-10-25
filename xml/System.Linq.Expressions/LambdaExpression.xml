@@ -1,0 +1,418 @@
+<Type Name="LambdaExpression" FullName="System.Linq.Expressions.LambdaExpression">
+  <TypeSignature Language="C#" Value="public abstract class LambdaExpression : System.Linq.Expressions.Expression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit LambdaExpression extends System.Linq.Expressions.Expression" />
+  <TypeSignature Language="DocId" Value="T:System.Linq.Expressions.LambdaExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System.Linq.Expressions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Linq.Expressions.Expression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerTypeProxy(typeof(System.Linq.Expressions.Expression/LambdaExpressionProxy))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Beschreibt einen Lambdaausdruck. Dadurch wird ein mit einem .NET-Methodentext vergleichbarer Codeblock erfasst.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Linq.Expressions.LambdaExpression> Typ stellt einen Lambda-Ausdruck in Form einer Ausdrucksbaumstruktur dar. Die <xref:System.Linq.Expressions.Expression%601> Typ, abgeleitet von <xref:System.Linq.Expressions.LambdaExpression> ab und zeichnet den Typ des Lambda-Ausdrucks mehrere explizit auch verwendet werden kann, einen Lambda-Ausdruck darstellen. Zur Laufzeit ein Knoten der Ausdrucksbaumstruktur, die einen Lambdaausdruck darstellt, ist immer vom Typ <xref:System.Linq.Expressions.Expression%601>.  
+  
+ Der Wert von der <xref:System.Linq.Expressions.Expression.NodeType%2A> Eigenschaft eine <xref:System.Linq.Expressions.LambdaExpression> ist <xref:System.Linq.Expressions.ExpressionType.Lambda>.  
+  
+ Verwenden der <xref:System.Linq.Expressions.Expression.Lambda%2A> Factorymethoden zum Erstellen einer <xref:System.Linq.Expressions.LambdaExpression> Objekt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie einen Ausdruck zu erstellen, die einen Lambdaausdruck, das das übergebene Argument 1 hinzufügt darstellt, mit der <xref:System.Linq.Expressions.Expression.Lambda%2A> Methode.  
+  
+ [!code-csharp[System.Linq.Expressions.ExpressionDev10#42](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.linq.expressions.expressiondev10/cs/program.cs#42)]
+ [!code-vb[System.Linq.Expressions.ExpressionDev10#42](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.linq.expressions.expressiondev10/vb/module1.vb#42)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Body">
+      <MemberSignature Language="C#" Value="public System.Linq.Expressions.Expression Body { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Linq.Expressions.Expression Body" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.LambdaExpression.Body" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.Expression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Text des Lambda-Ausdrucks ab.</summary>
+        <value>Eine <see cref="T:System.Linq.Expressions.Expression" /> , die den Text des Lambda-Ausdrucks darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Compile">
+      <MemberSignature Language="C#" Value="public Delegate Compile ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Delegate Compile() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.Expressions.LambdaExpression.Compile" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Delegate</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen Delegaten, der Lambda-Ausdruck darstellt.</summary>
+        <returns>Ein <see cref="T:System.Delegate" /> , der die kompilierte Version des Lambda-Ausdrucks enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> Methode kann verwendet werden, um das Konvertieren einer <xref:System.Linq.Expressions.LambdaExpression> Ausdrucksbaumstruktur in den Delegaten, die es darstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Compile">
+      <MemberSignature Language="C#" Value="public Delegate Compile (bool preferInterpretation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Delegate Compile(bool preferInterpretation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.Expressions.LambdaExpression.Compile(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Delegate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="preferInterpretation" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="preferInterpretation"><see langword="true" />, um anzugeben, dass der Ausdruck in ein interpretiertes Format kompiliert werden muss, sofern verfügbar; andernfalls <see langword="false" />.</param>
+        <summary>Erzeugt einen interpretierten oder kompilierten Delegat, der den Lambdaausdruck darstellt.</summary>
+        <returns>Ein Delegat, der den kompilierten Lambdaausdruck darstellt, der durch das <see cref="T:System.Linq.Expressions.LambdaExpression" />-Objekt beschrieben wird.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Compile">
+      <MemberSignature Language="C#" Value="public Delegate Compile (System.Runtime.CompilerServices.DebugInfoGenerator debugInfoGenerator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Delegate Compile(class System.Runtime.CompilerServices.DebugInfoGenerator debugInfoGenerator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.Expressions.LambdaExpression.Compile(System.Runtime.CompilerServices.DebugInfoGenerator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Delegate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="debugInfoGenerator" Type="System.Runtime.CompilerServices.DebugInfoGenerator" />
+      </Parameters>
+      <Docs>
+        <param name="debugInfoGenerator">Debuggen von Informationen Generator Sequenzpunkte markieren und kommentieren lokale Variablen vom Compiler verwendet.</param>
+        <summary>Erstellt einen Delegaten, der Lambda-Ausdruck darstellt.</summary>
+        <returns>Ein Delegat, der die kompilierte Version des Lambda-Ausdrucks enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompileToMethod">
+      <MemberSignature Language="C#" Value="public void CompileToMethod (System.Reflection.Emit.MethodBuilder method);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CompileToMethod(class System.Reflection.Emit.MethodBuilder method) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.Expressions.LambdaExpression.CompileToMethod(System.Reflection.Emit.MethodBuilder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="method" Type="System.Reflection.Emit.MethodBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="method">Ein <see cref="T:System.Reflection.Emit.MethodBuilder" /> zum Speichern der IL der Lambda-Ausdruck verwendet wird.</param>
+        <summary>Der Lambda-Ausdruck kompiliert in eine Methodendefinition.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompileToMethod">
+      <MemberSignature Language="C#" Value="public void CompileToMethod (System.Reflection.Emit.MethodBuilder method, System.Runtime.CompilerServices.DebugInfoGenerator debugInfoGenerator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CompileToMethod(class System.Reflection.Emit.MethodBuilder method, class System.Runtime.CompilerServices.DebugInfoGenerator debugInfoGenerator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.Expressions.LambdaExpression.CompileToMethod(System.Reflection.Emit.MethodBuilder,System.Runtime.CompilerServices.DebugInfoGenerator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="method" Type="System.Reflection.Emit.MethodBuilder" />
+        <Parameter Name="debugInfoGenerator" Type="System.Runtime.CompilerServices.DebugInfoGenerator" />
+      </Parameters>
+      <Docs>
+        <param name="method">Ein <see cref="T:System.Reflection.Emit.MethodBuilder" /> zum Speichern der IL der Lambda-Ausdruck verwendet wird.</param>
+        <param name="debugInfoGenerator">Debuggen von Informationen Generator Sequenzpunkte markieren und kommentieren lokale Variablen vom Compiler verwendet.</param>
+        <summary>Der Lambda-Ausdruck kompiliert in eine Methodendefinition und benutzerdefinierte Debuginformationen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.LambdaExpression.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Lambda-Ausdrucks ab.</summary>
+        <value>Der Name des Lambdaausdrucks.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Debuggen verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeType">
+      <MemberSignature Language="C#" Value="public override sealed System.Linq.Expressions.ExpressionType NodeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Linq.Expressions.ExpressionType NodeType" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.LambdaExpression.NodeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.ExpressionType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Knotentyp dieses <see cref="T:System.Linq.Expressions.Expression" />.</summary>
+        <value>Die <see cref="T:System.Linq.Expressions.ExpressionType" /> , die diesen Ausdruck darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Linq.Expressions.ParameterExpression&gt; Parameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Linq.Expressions.ParameterExpression&gt; Parameters" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.LambdaExpression.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Linq.Expressions.ParameterExpression&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Parameter des Lambda-Ausdrucks ab.</summary>
+        <value>Ein <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> der <see cref="T:System.Linq.Expressions.ParameterExpression" /> Objekte, die die Parameter des Lambdaausdrucks darstellen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnType">
+      <MemberSignature Language="C#" Value="public Type ReturnType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ReturnType" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.LambdaExpression.ReturnType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Rückgabetyp des Lambda-Ausdrucks ab.</summary>
+        <value>Die <see cref="T:System.Type" /> Objekt, das den Typ des Lambda-Ausdrucks darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TailCall">
+      <MemberSignature Language="C#" Value="public bool TailCall { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TailCall" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.LambdaExpression.TailCall" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert, der angibt, ob der Lambda-Ausdruck mit der endeaufrufoptimierung kompiliert wird.</summary>
+        <value>"True", wenn der Lambda-Ausdruck mit der endeaufrufoptimierung andernfalls "false" kompiliert wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public override sealed Type Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.LambdaExpression.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den statischen Typ des Ausdrucks ab, den dieser <see cref="T:System.Linq.Expressions.Expression" /> darstellt.</summary>
+        <value>Der <see cref="P:System.Linq.Expressions.LambdaExpression.Type" />, der den statischen Typ des Ausdrucks darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

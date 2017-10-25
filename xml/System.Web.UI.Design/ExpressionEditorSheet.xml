@@ -1,0 +1,183 @@
+<Type Name="ExpressionEditorSheet" FullName="System.Web.UI.Design.ExpressionEditorSheet">
+  <TypeSignature Language="C#" Value="public abstract class ExpressionEditorSheet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ExpressionEditorSheet extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.ExpressionEditorSheet" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Editorblatt zur Entwurfszeit-für einen benutzerdefinierten Ausdruck dar. Die Klasse muss geerbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein benutzerdefinierter Ausdrucks-Editor-Blatt kann Entwickler Eigenschaften für einen benutzerdefinierten Ausdruck zur Entwurfszeit festgelegt werden. Steuerelementwerte-Eigenschaft können mithilfe von Ausdruckszeichenfolgen festgelegt werden. die Ausdruckszeichenfolgen werden zur Laufzeit durch einen Ausdrucks-Generator und zur Entwurfszeit durch einen Ausdrucks-Editor ausgewertet.  
+  
+ Beim Durchsuchen der <xref:System.Web.UI.Design.HtmlControlDesigner.Expressions%2A> Eigenschaft für ein Steuerelement zur Entwurfszeit Eigenschaftenraster, zeigt der visuelle Designer ein Dialogfeld zum Festlegen von Ausdrücken, die den Wert für eine Steuerelementeigenschaft bereitstellen. Sie können den Typ des Ausdrucks basierend auf eine Liste mit Ausdruckspräfixen auswählen. Wenn Sie ein Ausdruckspräfix aus der Liste auswählen, verwendet der visuelle Designer zugeordneten <xref:System.Web.UI.Design.ExpressionEditor> und <xref:System.Web.UI.Design.ExpressionEditorSheet> Objekte ausgewertet, und konvertieren die Ausdruckszeichenfolge aufgrund der Syntax für diesen Typ des Ausdrucks. Der visuelle Designer werden Sie Eigenschaften des Ausdrucks-Editor Blatt für eine oder mehrere Zeichenfolgen, die in die benutzerdefinierte Ausdruckszeichenfolge kombinieren.  
+  
+ Normalerweise zum Bereitstellen eines neuen Ausdruckstyp zur Entwurfszeit ein eindeutiger Ausdruckspräfix definieren und Bereitstellen von benutzerdefinierten <xref:System.Web.Compilation.ExpressionBuilder> und <xref:System.Web.UI.Design.ExpressionEditor> Implementierungen. Optional können Sie angeben, ein benutzerdefiniertes <xref:System.Web.UI.Design.ExpressionEditorSheet> Implementierung, die die Eigenschaften, die verwendet werden definiert, um den Ausdruck zu bilden. Um einen Ausdrucks-Generator und einen Ausdrucks-Editor ein Ausdruckspräfix zuzuordnen, gelten die <xref:System.Web.Compilation.ExpressionEditorAttribute> Attribut und ein <xref:System.Web.Compilation.ExpressionPrefixAttribute> -Attribut auf die benutzerdefinierte <xref:System.Web.Configuration.ExpressionBuilder> Klasse, und konfigurieren Sie dann das Ausdruckspräfix für einen Ausdrucks-Generator die `expressionBuilders` Element in der Webkonfigurationsdatei.  
+  
+ Die standardmäßige Implementierung des der <xref:System.Web.UI.Design.ExpressionEditor.GetExpressionEditorSheet%2A> Methodenrückgabe eine einfachen Editor-Tabelle, die eine einzelne Eingabezeichenfolge verwendet, um den Ausdruck zu bilden. Benutzerdefinierte Ausdrucks-Editoren, die abgeleitet sind die <xref:System.Web.UI.Design.ExpressionEditor> können außer Kraft setzen die <xref:System.Web.UI.Design.ExpressionEditor.GetExpressionEditorSheet%2A> Methode, um einen benutzerdefinierten Editor Blatt Implementierung zurückzugeben. In der Regel enthält einen benutzerdefinierten Editorblatt mehrere Eigenschaften, die zum Erstellen der Zeichenfolge des Ausdrucks verwendet werden. Die <xref:System.Web.UI.Design.ExpressionEditorSheet.GetExpression%2A> Methode gibt die resultierende Ausdruckszeichenfolge basierend auf den aktuellen Ausdruckseigenschaften zurück.  
+  
+ Z. B. die <xref:System.Web.UI.Design.ResourceExpressionEditor> Klasse leitet sich von der <xref:System.Web.UI.Design.ExpressionEditor> -Klasse und stellt eine Implementierung für das Auswerten und Zuordnen eines Eigenschaft eines Steuerelements zur Entwurfszeit einen Ressourcenverweis-Zeichenfolge. Die <xref:System.Web.Compilation.ResourceExpressionBuilder> Klasse bezieht sich auf das Ausdruckspräfix `Resources` und <xref:System.Web.UI.Design.ResourceExpressionEditor> Implementierung. Die <xref:System.Web.UI.Design.ResourceExpressionEditor.GetExpressionEditorSheet%2A> Methode gibt ein <xref:System.Web.UI.Design.ResourceExpressionEditorSheet>, der definiert, dass der einzelnen Eigenschaften, die einen Ressource Verweisausdruck bilden.  
+  
+ Beim Erben von der <xref:System.Web.UI.Design.ExpressionEditorSheet> -Klasse, müssen Sie die folgenden Member überschreiben:  
+  
+-   Die <xref:System.Web.UI.Design.ExpressionEditor.GetExpressionEditorSheet%2A> Methode, um einen benutzerdefinierten Editor Blatt Implementierung zurückzugeben.  
+  
+-   Die <xref:System.Web.UI.Design.ExpressionEditorSheet.%23ctor%2A> Konstruktor, um die angepasste Initialisierung von Aktionen für die Implementierung des Ausdrucks-Editor Blatt zu implementieren.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Leiten Sie ein benutzerdefinierter Ausdrucks-Editorblatt aus der <see cref="T:System.Web.UI.Design.ExpressionEditorSheet" /> -Klasse, wenn Sie einen neuen Ausdruckstyp für Werte von Steuerelementeigenschaften definieren und die Ausdruckszeichenfolge erstellt werden soll, anhand von mehreren Ausdruck-Eigenschaftswerte. Die Implementierung einer abgeleiteten Klasse sollte Folgendes enthalten:  
+  
+-   Eine öffentliche Eigenschaft für jeden eindeutigen Wert in der Zeichenfolge des Ausdrucks, die zur Entwurfszeit festgelegt werden kann.  
+  
+-   Eine Implementierung der <see cref="M:System.Web.UI.Design.ExpressionEditorSheet.GetExpression" /> Methode, die die benutzerdefinierte Ausdruckszeichenfolge aus den Eigenschaftswerten des Editor-Blatt bildet.  
+  
+-   Optional ein Konstruktorimplementierung, die die Anfangswerte des Editors Blatteigenschaften festlegt.  
+  
+ Die zugeordneten benutzerdefinierten Ausdrucks-Editor-Klasse erstellt eine Instanz der abgeleiteten Editor-Tabelle in der <see cref="M:System.Web.UI.Design.ExpressionEditor.GetExpressionEditorSheet(System.String,System.IServiceProvider)" /> -Methode, initialisiert diese Instanz mit der aktuellen Ausdruckszeichenfolge für die Eigenschaft "" festgelegt, und gibt die Instanz zum visuellen Designer zurück. Der visuelle Designer können Sie den Ausdruck Stylesheet-Eigenschaften festlegen, und ruft dann die <see cref="M:System.Web.UI.Design.ExpressionEditorSheet.GetExpression" /> Methode, um die Ausdruckszeichenfolge aus den Eigenschaftswerten des Eingabeausdrucks Blatt bilden.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ExpressionEditorSheet (IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ExpressionEditorSheet.#ctor(System.IServiceProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Eine Implementierung von Service Provider bereitgestellten vom Designerhost verwendet, um zusätzliche Entwurfszeitdienste abzurufen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.ExpressionEditorSheet" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da die <xref:System.Web.UI.Design.ExpressionEditorSheet> Klasse ist abstrakt, können Sie eine Instanz von erstellen eine <xref:System.Web.UI.Design.ExpressionEditorSheet> direkt mit der <xref:System.Web.UI.Design.ExpressionEditorSheet.%23ctor%2A> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Ableiten von der <see cref="T:System.Web.UI.Design.ExpressionEditorSheet" /> -Klasse außer Kraft, indem die <see cref="M:System.Web.UI.Design.ExpressionEditorSheet.#ctor(System.IServiceProvider)" /> Konstruktor, um die angepasste Initialisierung von Aktionen für die Implementierung des Ausdrucks-Editor Blatt zu implementieren.  
+  
+ Beispielsweise kann eine benutzerdefinierter Ausdrucks-Editor Sheet-Klasse, die zusätzliche Ausdruckseigenschaften implementiert die Standardwerte für die Ausdruckseigenschaften im Definieren der <see cref="M:System.Web.UI.Design.ExpressionEditorSheet.#ctor(System.IServiceProvider)" /> Konstruktor. Eine benutzerdefinierter Ausdrucks-Editor Sheet-Klasse kann zusätzliche Öffentliche Konstruktorüberladungen definieren, die Werte der Eingabeparameter zu verwenden, um die Anfangswerte für die Ausdruckseigenschaften festzulegen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExpression">
+      <MemberSignature Language="C#" Value="public abstract string GetExpression ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetExpression() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ExpressionEditorSheet.GetExpression" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse gibt die Ausdruckszeichenfolge, die durch die Eigenschaftswerte des Ausdrucks-Editor Blatt gebildet wird.</summary>
+        <returns>Die benutzerdefinierte Ausdruckszeichenfolge für die aktuellen Eigenschaftswerte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein benutzerdefinierter Ausdrucks-Editor-Blatt enthält während der Entwurfszeit-Einstellungen für mehrere Ausdruckseigenschaften, die kombiniert werden, um eine Ausdruckszeichenfolge zu bilden. Steuerelementwerte-Eigenschaft können mithilfe von Ausdruckszeichenfolgen festgelegt werden. die Ausdruckszeichenfolgen werden zur Laufzeit durch einen Ausdrucks-Generator ausgewertet.  
+  
+ Die <xref:System.Web.UI.Design.ExpressionEditorSheet.GetExpression%2A> Methodenrückgabe eine Ausdruckszeichenfolge, die erstellt wird, über die aktuellen Ausdruckseigenschaften. Der visuelle Designer können Sie den Ausdruck Stylesheet-Eigenschaften festlegen, und ruft dann die <xref:System.Web.UI.Design.ExpressionEditorSheet.GetExpression%2A> Methode, um die Ausdruckszeichenfolge abzurufen, und legen Sie den Wert der Steuerelementeigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Leiten Sie ein benutzerdefinierter Ausdrucks-Editorblatt aus der <see cref="T:System.Web.UI.Design.ExpressionEditorSheet" /> -Klasse, wenn Sie einen neuen Ausdruckstyp für Werte von Steuerelementeigenschaften definieren und die Ausdruckszeichenfolge erstellt werden soll, anhand von mehreren Ausdruck-Eigenschaftswerte. Die Implementierung einer abgeleiteten Klasse sollte Folgendes enthalten:  
+  
+-   Eine öffentliche Eigenschaft für jeden eindeutigen Wert in der Zeichenfolge des Ausdrucks, die zur Entwurfszeit festgelegt werden kann.  
+  
+-   Eine Implementierung der <see cref="M:System.Web.UI.Design.ExpressionEditorSheet.GetExpression" /> Methode, die die benutzerdefinierte Ausdruckszeichenfolge aus den Eigenschaftswerten des Editor-Blatt bildet.  
+  
+-   Optional ein Konstruktorimplementierung, die die Anfangswerte des Editors Blatteigenschaften festlegt.  
+  
+ Die zugeordneten benutzerdefinierten Ausdrucks-Editor-Klasse erstellt eine Instanz der abgeleiteten Editor-Tabelle in der <see cref="M:System.Web.UI.Design.ExpressionEditor.GetExpressionEditorSheet(System.String,System.IServiceProvider)" /> -Methode, initialisiert diese Instanz mit der aktuellen Ausdruckszeichenfolge für die Eigenschaft "" festgelegt, und klicken Sie dann auf das visuelle Element gibt die Instanz Designer. Der visuelle Designer können Sie den Ausdruck Stylesheet-Eigenschaften festlegen, und ruft dann die <see cref="M:System.Web.UI.Design.ExpressionEditorSheet.GetExpression" /> Methode, um die Ausdruckszeichenfolge aus den Eigenschaftswerten des Eingabeausdrucks Blatt bilden.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValid">
+      <MemberSignature Language="C#" Value="public virtual bool IsValid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsValid" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ExpressionEditorSheet.IsValid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Ausdruckszeichenfolge gültig ist.</summary>
+        <value>
+          <see langword="true" />, wenn die Ausdruckszeichenfolge gültig ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt diese basisimplementierung immer `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceProvider">
+      <MemberSignature Language="C#" Value="public IServiceProvider ServiceProvider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IServiceProvider ServiceProvider" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ExpressionEditorSheet.ServiceProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IServiceProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Implementierung von Service Provider, die von der Ausdrucks-Editor-Stylesheet verwendet wird.</summary>
+        <value>Ein <see cref="T:System.IServiceProvider" />, der in der Regel vom Entwurfshost, die zum Abrufen von zusätzlichen Entwurfszeitdienste verwendet werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.Design.ExpressionEditorSheet.%23ctor%2A> Konstruktor hat, legen Sie die <xref:System.Web.UI.Design.ExpressionEditorSheet.ServiceProvider%2A> Implementierung für ein benutzerdefinierter Ausdrucks-Editor ein.  
+  
+ Die <xref:System.Web.UI.Design.ExpressionEditorSheet.ServiceProvider%2A> Eigenschaft kann verwendet werden, um Zugriff auf Dienste, die vom Designerhost bereitgestellt werden. Beispielsweise rufen Sie die <xref:System.IServiceProvider.GetService%2A> Methode mit der <xref:System.Web.UI.Design.IWebApplication> Schnittstelle, um Zugriff-Projektelemente, Dokumente oder Informationen in der Konfigurationsdatei, die über den visuellen Designer bereitgestellt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

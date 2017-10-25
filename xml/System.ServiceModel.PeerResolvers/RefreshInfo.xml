@@ -1,0 +1,125 @@
+<Type Name="RefreshInfo" FullName="System.ServiceModel.PeerResolvers.RefreshInfo">
+  <TypeSignature Language="C#" Value="public class RefreshInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RefreshInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.PeerResolvers.RefreshInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ServiceModel.MessageContract(IsWrapped=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert die Informationen zur Aktualisierung eines Registrierungseintrags von einem Peerresolverdienst.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Aktualisierung eines Eintrags durch einen Peerresolverdienst wird ein neuer Ablauf für diesen Eintrag festgelegt. Eine Instanz dieses Objekts muss für jeden Peerknoten, dessen Ablauf aktualisiert werden soll, an den Peerresolverdienst übergeben werden. Andernfalls wird der Eintrag als veraltet markiert und nach Ablauf eines bestimmten Intervalls für die Bereinigung gelöscht.  
+  
+ Instanzen dieser Klasse werden vorwiegend zur Übergabe von Informationen vom Netzwerkclient dieses Diensts an den Resolverdienst verwendet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RefreshInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.RefreshInfo.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Standardinstanz der <see cref="T:System.ServiceModel.PeerResolvers.RefreshInfo" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RefreshInfo (string meshId, Guid regId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string meshId, valuetype System.Guid regId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.RefreshInfo.#ctor(System.String,System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="meshId" Type="System.String" />
+        <Parameter Name="regId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="meshId">Eine <see cref="T:System.String" />, die das Netz identifiziert, an dem der Peerknoten teilnimmt.</param>
+        <param name="regId">Eine <see cref="T:System.Guid" />, die den Registrierungseintrag für den Peerknoten eindeutig identifiziert.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.PeerResolvers.RefreshInfo" />-Klasse mit der bereitgestellten Netz-ID und der eindeutigen Registrierungs-ID.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasBody">
+      <MemberSignature Language="C#" Value="public bool HasBody ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HasBody() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.RefreshInfo.HasBody" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob der Text der Nachricht, die eine serialisierte Instanz dieses Typs enthält, richtig formatiert ist.</summary>
+        <returns>True, wenn der Aktualisierungs-Informationsnachrichtentext vom Absender (dem Dienstclient) richtig formatiert wurde, False, wenn dies nicht der Fall ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeshId">
+      <MemberSignature Language="C#" Value="public string MeshId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MeshId" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerResolvers.RefreshInfo.MeshId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Netz-ID des zu aktualisierenden Registrierungseintrags ab.</summary>
+        <value>
+          <see cref="T:System.String" />, die die Netz-ID des in der Suchtabelle der Peerresolverregistrierung zu aktualisierenden Registrierungseintrags enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegistrationId">
+      <MemberSignature Language="C#" Value="public Guid RegistrationId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid RegistrationId" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerResolvers.RefreshInfo.RegistrationId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die eindeutige Registrierungs-ID des zu aktualisierenden Registrierungseintrags ab.</summary>
+        <value>
+          <see cref="T:System.Guid" />, die die Registrierungs-ID des in der Suchtabelle der Peerresolverregistrierung zu aktualisierenden Peerknoteneintrags enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

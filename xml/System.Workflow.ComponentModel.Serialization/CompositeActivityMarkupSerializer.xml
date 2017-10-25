@@ -1,0 +1,50 @@
+<Type Name="CompositeActivityMarkupSerializer" FullName="System.Workflow.ComponentModel.Serialization.CompositeActivityMarkupSerializer">
+  <TypeSignature Language="C#" Value="public class CompositeActivityMarkupSerializer : System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CompositeActivityMarkupSerializer extends System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Serialization.CompositeActivityMarkupSerializer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt XAML-Serialisierungsdienste (extensible Application Markup Language) für eine <see cref="T:System.Workflow.ComponentModel.CompositeActivity" /> bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ <xref:System.Workflow.ComponentModel.Serialization.CompositeActivityMarkupSerializer> führt alle erforderlichen Serialisierungen für zusammengesetzte Aktivitäten durch, die in einer XAML-Datei dargestellt werden sollen, die einem Workflowdesigner zugeordnet ist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompositeActivityMarkupSerializer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.CompositeActivityMarkupSerializer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.ComponentModel.Serialization.CompositeActivityMarkupSerializer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

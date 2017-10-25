@@ -1,0 +1,177 @@
+<Type Name="HatchBrush" FullName="System.Drawing.Drawing2D.HatchBrush">
+  <TypeSignature Language="C#" Value="public sealed class HatchBrush : System.Drawing.Brush" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit HatchBrush extends System.Drawing.Brush" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Drawing2D.HatchBrush" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Drawing.Brush</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert einen rechteckigen Pinsel mit einer Schraffurart, eine Vordergrundfarbe und Hintergrundfarbe. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Schraffur besteht aus zwei Farben: von der <xref:System.Drawing.Drawing2D.HatchBrush.BackgroundColor%2A>, Hintergrund und eine für die Zeilen, die das Muster über dem Hintergrund durch definierten Formular füllt die <xref:System.Drawing.Drawing2D.HatchBrush.ForegroundColor%2A> Eigenschaft. Die <xref:System.Drawing.Drawing2D.HatchBrush.HatchStyle%2A> Eigenschaft definiert, welche Art von Muster der Pinsel hat und kann einen beliebigen Wert zwischen der <xref:System.Drawing.Drawing2D.HatchStyle> Enumeration. Es gibt mehr als 50 Elemente in der <xref:System.Drawing.Drawing2D.HatchStyle> Enumeration.  
+  
+ Die folgende Abbildung zeigt eine Ellipse, die mit einer horizontalen Schraffur gefüllt.  
+  
+ ![Muster Schraffieren](~/add/media/hatch1.png "Schraffieren Muster")  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen der <xref:System.Drawing.Drawing2D.HatchBrush> in der vorherigen Abbildung dargestellt.  
+  
+ [!code-csharp[System.Drawing.UsingABrush#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#41)]
+ [!code-vb[System.Drawing.UsingABrush#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#41)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HatchBrush (System.Drawing.Drawing2D.HatchStyle hatchstyle, System.Drawing.Color foreColor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.Drawing2D.HatchStyle hatchstyle, valuetype System.Drawing.Color foreColor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.HatchBrush.#ctor(System.Drawing.Drawing2D.HatchStyle,System.Drawing.Color)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="hatchstyle" Type="System.Drawing.Drawing2D.HatchStyle" />
+        <Parameter Name="foreColor" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="hatchstyle">Eines der <see cref="T:System.Drawing.Drawing2D.HatchStyle" /> Werte, die das Muster, die von diesem gezeichnet darstellen <see cref="T:System.Drawing.Drawing2D.HatchBrush" />.</param>
+        <param name="foreColor">Die <see cref="T:System.Drawing.Color" /> -Struktur, die Farbe des von diesem gezeichneten Linien darstellt <see cref="T:System.Drawing.Drawing2D.HatchBrush" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Drawing.Drawing2D.HatchBrush" /> Klasse mit dem angegebenen <see cref="T:System.Drawing.Drawing2D.HatchStyle" /> Enumeration und die Vordergrundfarbe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Hintergrundfarbe wird in schwarz initialisiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HatchBrush (System.Drawing.Drawing2D.HatchStyle hatchstyle, System.Drawing.Color foreColor, System.Drawing.Color backColor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.Drawing2D.HatchStyle hatchstyle, valuetype System.Drawing.Color foreColor, valuetype System.Drawing.Color backColor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.HatchBrush.#ctor(System.Drawing.Drawing2D.HatchStyle,System.Drawing.Color,System.Drawing.Color)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="hatchstyle" Type="System.Drawing.Drawing2D.HatchStyle" />
+        <Parameter Name="foreColor" Type="System.Drawing.Color" />
+        <Parameter Name="backColor" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="hatchstyle">Eines der <see cref="T:System.Drawing.Drawing2D.HatchStyle" /> Werte, die das Muster, die von diesem gezeichnet darstellen <see cref="T:System.Drawing.Drawing2D.HatchBrush" />.</param>
+        <param name="foreColor">Die <see cref="T:System.Drawing.Color" /> -Struktur, die Farbe des von diesem gezeichneten Linien darstellt <see cref="T:System.Drawing.Drawing2D.HatchBrush" />.</param>
+        <param name="backColor">Die <see cref="T:System.Drawing.Color" /> -Struktur, die Farbe von Leerzeichen zwischen der von diesem gezeichneten Linien darstellt <see cref="T:System.Drawing.Drawing2D.HatchBrush" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Drawing.Drawing2D.HatchBrush" /> Klasse mit dem angegebenen <see cref="T:System.Drawing.Drawing2D.HatchStyle" /> -Enumeration, Vordergrund- und Hintergrundfarbe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Abbildung zeigt eine Ellipse, die mit einer horizontalen Schraffur gefüllt.  
+  
+ ![Muster Schraffieren](~/add/media/hatch1.png "Schraffieren Muster")  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Drawing.Drawing2D.HatchBrush.%23ctor%2A> zum Erstellen der <xref:System.Drawing.Drawing2D.HatchBrush> in der vorherigen Abbildung dargestellt.  
+  
+ [!code-csharp[System.Drawing.UsingABrush#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#41)]
+ [!code-vb[System.Drawing.UsingABrush#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#41)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color BackgroundColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackgroundColor" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.HatchBrush.BackgroundColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Farbe von Leerzeichen zwischen der von diesem gezeichneten Linien verwendet Schraffur <see cref="T:System.Drawing.Drawing2D.HatchBrush" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> -Struktur, die die Hintergrundfarbe für diesen <see cref="T:System.Drawing.Drawing2D.HatchBrush" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.HatchBrush.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine genaue Kopie dieses <see cref="T:System.Drawing.Drawing2D.HatchBrush" />-Objekts.</summary>
+        <returns>Das von dieser Methode erstellte <see cref="T:System.Drawing.Drawing2D.HatchBrush" />, umgewandelt in ein Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForegroundColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color ForegroundColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ForegroundColor" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.HatchBrush.ForegroundColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Farbe des schraffierte Linien gezeichnet, die von diesem <see cref="T:System.Drawing.Drawing2D.HatchBrush" /> Objekt.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> Struktur, die die Vordergrundfarbe für diesen darstellt <see cref="T:System.Drawing.Drawing2D.HatchBrush" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HatchStyle">
+      <MemberSignature Language="C#" Value="public System.Drawing.Drawing2D.HatchStyle HatchStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Drawing2D.HatchStyle HatchStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.HatchBrush.HatchStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.HatchStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Schraffurart dieses <see cref="T:System.Drawing.Drawing2D.HatchBrush" /> Objekt.</summary>
+        <value>Eines der <see cref="T:System.Drawing.Drawing2D.HatchStyle" /> Werte, die das Muster dieser darstellen <see cref="T:System.Drawing.Drawing2D.HatchBrush" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,411 @@
+<Type Name="AppContext" FullName="System.AppContext">
+  <TypeSignature Language="C#" Value="public static class AppContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit AppContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.AppContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.AppContext</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Member zum Festlegen und Abrufen von Daten für einen Anwendungskontext bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.AppContext> Klasse ermöglicht es Bibliotheksautoren ihren Benutzern einen einheitlichen abwahlmechanismus für neue Funktionalitäten bereitzustellen. Sie richtet einen lose gekoppelten Vertrag zwischen den Komponenten ein, um eine Anforderung zur Abwahl zu übermitteln. Diese Möglichkeit ist in der Regel wichtig, wenn vorhandene Funktionalitäten verändert werden. Im Gegensatz dazu existiert bereits eine implizite Auswahloption für neue Funktionalitäten.  
+  
+## <a name="appcontext-for-library-developers"></a>AppContext für Entwickler von Bibliotheken  
+ Verwenden von Bibliotheken die <xref:System.AppContext> Klasse zum Definieren und Verfügbarmachen von Kompatibilität gewechselt wird, während der Bibliothek Benutzer diese Optionen beeinflussen das Verhalten der Bibliothek festlegen können. Standardmäßig stellen Bibliotheken die neue Funktionalität bereit. Nur wenn die Option festgelegt ist, stellen sie die vorherige Funktionalität bereit.  Dadurch können Bibliotheken, neues Verhalten für eine vorhandene API Aufrufer zu unterstützen, auf das vorherige Verhalten angewiesenen, Mitarbeitern weiterhin bereitzustellen.  
+  
+### <a name="defining-the-switch-name"></a>Definieren den Namen des Switches  
+ Die gängigste Methode zum Consumer Ihrer Bibliothek, eine Änderung des Verhalten abzuwählen zulassen besteht darin einen benannten Switch definieren.  Die `value` Element ist ein Name/Wert-Paar des Namens eines Schalters und die zugehörige <xref:System.Boolean> Wert.  Wird standardmäßig die Option ist immer implizit `false`, bietet das neue Verhalten (und das neue Verhalten opt-in in der Standardeinstellung). Festlegen der Option auf `true` ermöglicht, die die Legacyverhalten bereitstellt. Explizites Festlegen der Option zum `false` wird auch das neue Verhalten aktiviert.  
+  
+ Es ist auch hilfreich, ein konsistentes Format für Switch-Namen verwenden, da es sich um eine formellen Vertrag verfügbar gemacht werden, indem Sie eine Bibliothek sind. Das folgende Beispiel zeigt zwei offensichtliche Formate.  
+  
+-   *Switch*.*namespace*.*switchname*  
+  
+-   *Switch*.*library*.*switchname*  
+  
+ Nachdem Sie definieren und den Switch dokumentieren, Aufrufer können Sie sie mithilfe der Registrierungs durch Hinzufügen einer `AppContextSwitchOverrides` Element der Konfigurationsdatei ihrer Anwendung oder durch Aufrufen der <xref:System.AppContext.SetSwitch%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> Methode programmgesteuert. Finden Sie unter der [AppContext für Bibliotheksconsumer](#ForConsumers) Abschnitt, um weitere Informationen darüber, wie Aufrufer verwenden, und legen Sie den Wert der <xref:System.AppContext> Konfigurationsschalter.  
+  
+ Wenn die common Language Runtime eine Anwendung ausgeführt wird, wird automatisch liest die Registrierung von kompatibilitätseinstellungen und die Anwendungskonfigurationsdatei zum Auffüllen der Anwendungsverzeichnis lädt <xref:System.AppContext> Instanz. Da die <xref:System.AppContext> Instanz wird entweder programmgesteuert vom Aufrufer oder von der Laufzeit aufgefüllt, Sie müssen keinen ergreifen wie ein Aufruf der <xref:System.AppContext.SetSwitch%2A> Methode, die zum Konfigurieren der <xref:System.AppContext> Instanz.  
+  
+### <a name="checking-the-setting"></a>Überprüfen die Einstellung  
+ Sie können dann prüfen, wenn ein Consumer den Wert des Switches und Act ordnungsgemäß durch den Aufruf deklariert hat die <xref:System.AppContext.TryGetSwitch%2A?displayProperty=nameWithType> Methode. Gibt die Methode `true` Wenn die `switchName` Argument gefunden wird, und wenn die Methode zurückgegeben, dessen `isEnabled` Argument gibt den Wert des Schalters.  Andernfalls gibt diese Methode `false` zurück.  
+  
+### <a name="an-example"></a>Ein Beispiel für  
+ Das folgende Beispiel veranschaulicht die Verwendung der <xref:System.AppContext> Klasse, um den Kunden an, das ursprüngliche Verhalten einer Bibliothek Methode auswählen können.   Im folgenden finden Sie eine Bibliothek mit dem Namen, Version 1.0 `StringLibrary`. Definiert eine `SubstringStartsAt` Methode, um zu bestimmen, der Startindex einer Teilzeichenfolge innerhalb einer größeren Zeichenfolge einen ordinalen Vergleich ausführt.  
+  
+ [!code-csharp[System.AppContext.Class#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.AppContext.Class/cs/Example4.cs#4)]
+ [!code-vb[System.AppContext.Class#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.AppContext.Class/vb/Example4.vb#4)]  
+  
+ Im folgenden Beispiel wird dann die Bibliothek den Anfangsindex der Teilzeichenfolge "Archæ" in "Archaeologist" gefunden. Da die Methode einen Ordinalvergleich ausführt, kann die Teilzeichenfolge nicht gefunden werden.  
+  
+ [!code-csharp[System.AppContext.Class#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.AppContext.Class/cs/Example4.cs#5)]
+ [!code-vb[System.AppContext.Class#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.AppContext.Class/vb/Example4.vb#5)]  
+  
+ 2-Version der Bibliothek, ändert sich jedoch die `SubstringStartsAt` Methode, um kulturabhängige Vergleich verwenden.  
+  
+ [!code-csharp[System.AppContext.Class#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.AppContext.Class/cs/Example6.cs#6)]
+ [!code-vb[System.AppContext.Class#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.AppContext.Class/vb/Example6.vb#6)]  
+  
+ Wenn die app neu kompiliert wird, für die neue Version der Bibliothek auszuführen, meldet er jetzt, dass die Teilzeichenfolge "Archæ" Index "4" in "Archaeologist" gefunden wird.  
+  
+ [!code-csharp[System.AppContext.Class#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.AppContext.Class/cs/Example6.cs#7)]
+ [!code-vb[System.AppContext.Class#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.AppContext.Class/vb/Example6.vb#7)]  
+  
+ Diese Änderung kann verhindert werden, die Anwendungen, die das ursprüngliche Verhalten durch die Definition abhängig sind wichtige ein `AppContextSwitchOverrides` wechseln. In diesem Fall heißt der Switch `StringLibrary.DoNotUseCultureSensitiveComparison`. Der Standardwert `false`, gibt an, dass die Bibliothek der Version 2.0 kulturabhängigen Vergleich durchführen soll. `true`Gibt an, dass die Bibliothek der Version 1.0-Ordinalvergleich ausführen sollten.  Eine leichte Änderung der obige Code ermöglicht es Bibliothek, legen Sie die Option, die Art des Vergleichs wird ermittelt, wie die Methode ausführt.  
+  
+ [!code-csharp[System.AppContext.Class#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.AppContext.Class/cs/Example8.cs#8)]
+ [!code-vb[System.AppContext.Class#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.AppContext.Class/vb/Example8.vb#8)]  
+  
+ Wenn eine Anwendung kann die folgende Konfigurationsdatei verwenden, um das Verhalten der Version 1.0 wiederherzustellen.  
+  
+```xml  
+  
+<configuration>  
+   <runtime>  
+      <AppContextSwitchOverrides value="StringLibrary.DoNotUseCultureSensitiveComparison=true" />   
+   </runtime>  
+</configuration>  
+  
+```  
+  
+ Wenn die Anwendung mit der Konfigurationsdatei vorhanden ausgeführt wird, erzeugt es die folgende Ausgabe:  
+  
+```  
+'archæ' not found in 'The archaeologist'  
+```  
+  
+<a name="ForConsumers"></a>   
+## <a name="appcontext-for-library-consumers"></a>AppContext für Bibliotheksconsumer  
+ Wenn Sie der Consumer einer Bibliothek sind die <xref:System.AppContext> -Klasse ermöglicht es Ihnen, eine Bibliothek oder Bibliotheksmethode abwahlmechanismus für neue Funktionen nutzen.   Bestimmte Schalter die aktivieren oder deaktivieren ein neues Verhalten definieren, einzelne Methoden für die Klassenbibliothek, die Sie aufrufen. Der Wert des Schalters ist ein boolescher Wert. Ist er `false`der i. d. r. der Standardwert, wird das neue Verhalten aktiviert ist; wenn es sich handelt `true`, die das neue Verhalten ist deaktiviert und das Element verhält sich wie zuvor.  
+  
+ Sie können den Wert eines Schalters auf drei Arten festlegen:  
+  
+-   Durch Aufrufen der <xref:System.AppContext.SetSwitch%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> Methode im Code.  Die `switchName` Argument definiert den Namen des Switches, und die `isEnabled` Eigenschaft definiert den Wert des Schalters. Da <xref:System.AppContext> ist eine statische Klasse steht auf der Basis eines pro Anwendungsdomäne.  
+  
+     Aufrufen der <xref:System.AppContext.SetSwitch%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> hat Anwendungsbereich; d. h., sie wirkt sich auf nur die Anwendung.  
+  
+-   Durch Hinzufügen einer `<AppContextSwitchOverrides>` Element auf der [ \<Runtime >](~/docs/framework/configure-apps/file-schema/runtime/runtime-element.md) -Abschnitt Ihrer "App.config"-Datei. Der Switch verfügt über ein einzelnes Attribut `value`, dessen Wert ist eine Zeichenfolge, die eine Schlüssel-/Wertepaar, enthält den Namen des Switches und seinen Wert darstellt.  
+  
+     Trennen Sie mehrere Optionen zu definieren, jeder Switch-Schlüssel/Wert-Paar in der `<AppContextSwitchOverrides>` des Elements `value` Attribut mit einem Semikolon. In diesem Fall die `<AppContextSwitchOverrides>` Element weist das folgende Format:  
+  
+    ```xml  
+    <AppContextSwitchOverrides value="switchName1=value1;switchName2=value2" />  
+    ```  
+  
+     Mithilfe der `<AppContextSwitchOverrides>` -Elements definieren Sie eine Konfigurationseinstellung hat Anwendungsbereich; d. h., sie wirkt sich auf nur die Anwendung.  
+
+    > [!NOTE]    
+    > Informationen auf den Switches, die von .NET Framework definiert werden, finden Sie unter der [ \<AppContextSwitchOverrides >-Element](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md).
+
+-   Durch Hinzufügen eines Zeichenfolgenwerts, deren Name der Name des Schalters ist, der `HKLM\SOFTWARE\Microsoft\.NETFramework\AppContext` -Schlüssel in der Registrierung. Muss sein Wert die angegebene Zeichenfolgendarstellung einer <xref:System.Boolean> , die analysiert werden kann, indem Sie die <xref:System.Boolean.Parse%2A?displayProperty=nameWithType> -Methode, d. h., er muss "True", "true", "False" oder "false". Wenn die Laufzeit einen anderer Wert trifft, wird die Option ignoriert.  
+  
+     Verwenden die Registrierung zum Definieren einer <xref:System.AppContext> Switch verfügt über Computer Bereich; d. h., sie wirkt sich auf jede Anwendung, die auf dem Computer ausgeführt.  
+  
+ Wenn Sie den gleichen Switch in mehr als eine Weise festlegen, wird die Reihenfolge zu bestimmen, welche Einstellung überschreibt die anderen:  
+  
+1.  Die programmgesteuerte Einstellung.  
+  
+2.  Die Einstellung in der Datei "App.config".  
+  
+3.  Die registrierungseinstellung "".  
+  
+ Im folgenden finden Sie eine einfache Anwendung, die einen Datei-URI zu übergeben, die <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> Methode.  Wenn unter .NET Framework 4.6 ausgeführt werden, löst ein <xref:System.ArgumentException> da `file://` ist nicht mehr einem gültigen Teil einen Dateipfad an.  
+  
+ [!code-csharp[System.AppContext.Class#10](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.AppContext.Class/cs/ForConsumers1.cs#10)]
+ [!code-vb[System.AppContext.Class#10](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.AppContext.Class/vb/ForConsumers1.vb#10)]  
+  
+ Um die Methode, vorherige Verhalten wiederherstellen, und verhindern, dass die Ausnahme, fügen Sie der `Switch.System.IO.UseLegacyPathHandling` wechseln Sie in der Anwendungskonfigurationsdatei für das Beispiel:  
+  
+```xml  
+<configuration>  
+    <runtime>  
+        <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=true" />    
+    </runtime>  
+</configuration>  
+```  
+## <a name="see-also"></a>Siehe auch
+[AppContext switch](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)
+
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BaseDirectory">
+      <MemberSignature Language="C#" Value="public static string BaseDirectory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string BaseDirectory" />
+      <MemberSignature Language="DocId" Value="P:System.AppContext.BaseDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AppContext</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Pfadnamen des Basisverzeichnisses ab, das der Assemblyresolver für die Suche nach Assemblys verwendet.</summary>
+        <value>Der Pfadname des Basisverzeichnisses, das der Assemblyresolver für die Suche nach Assemblys verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist eine pro Anwendungsdomäneneigenschaft. Der Wert entspricht der <xref:System.AppDomain.BaseDirectory%2A?displayProperty=nameWithType> Eigenschaft der aktuellen Anwendungsdomäne.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetData">
+      <MemberSignature Language="C#" Value="public static object GetData (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetData(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AppContext.GetData(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AppContext</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Datenelements.</param>
+        <summary>Gibt den Wert des benannten Datenelements zurück, das der aktuellen Anwendungsdomäne zugewiesen ist.</summary>
+        <returns>Der Wert von <paramref name="name" />, wenn <paramref name="name" /> einen benannten Wert bezeichnet, andernfalls <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSwitch">
+      <MemberSignature Language="C#" Value="public static void SetSwitch (string switchName, bool isEnabled);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetSwitch(string switchName, bool isEnabled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AppContext.SetSwitch(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AppContext</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="switchName" Type="System.String" />
+        <Parameter Name="isEnabled" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="switchName">Der Name des Schalters.</param>
+        <param name="isEnabled">Der Wert des Schalters.</param>
+        <summary>Legt den Wert eines Schalters fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.AppContext> Klasse ermöglicht es Bibliotheksautoren ihren Benutzern einen einheitlichen abwahlmechanismus für neue Funktionalitäten bereitzustellen. Sie richtet einen lose gekoppelten Vertrag zwischen den Komponenten ein, um eine Anforderung zur Abwahl zu übermitteln. Diese Möglichkeit ist in der Regel wichtig, wenn vorhandene Funktionalitäten verändert werden. Im Gegensatz dazu existiert bereits eine implizite Auswahloption für neue Funktionalitäten.  
+  
+ Die <xref:System.AppContext.SetSwitch%2A> Methode wird aufgerufen, indem einer Anwendung (oder eine Bibliothek), um den Wert einer Option deklarieren (also immer ein <xref:System.Boolean> Wert), die von einer abhängige Bibliothek definiert. Die Option ist immer implizit `false`, stellt das neue Verhalten aktiviert. Festlegen der Option auf `true` ermöglicht, die die Legacyverhalten bereitstellt. Explizites Festlegen der Option zum `false` wird auch das neue Verhalten aktiviert. Die abhängige Bibliothek kann dann überprüfen Sie den Wert des Schalters durch Aufrufen der <xref:System.AppContext.TryGetSwitch%2A> Methode.  
+  
+> [!NOTE]
+>  Es ist auch hilfreich, ein konsistentes Format für Switch-Namen verwenden, da es sich um eine formellen Vertrag verfügbar gemacht werden, indem Sie eine Bibliothek sind. Das folgende Beispiel zeigt zwei offensichtliche Formate.  
+>   
+>  -   *Switch*.*namespace*.*switchname*  
+> -   *Switch*.*library*.*switchname*  
+  
+ Zusätzlich zu den Wert eines Schalters programmgesteuert festzulegen, können sie auch festgelegt werden:  
+  
+-   durch Hinzufügen der Switchnamen und Wert der `<AppContextSwitchOverrides>` Element in der [ \<Runtime >](~/docs/framework/configure-apps/file-schema/runtime/runtime-element.md) Teil einer Anwendungskonfigurationsdatei. Die folgenden definiert z. B. einen Switch namens `Libraries.FPLibrary.UseExactFloatingPointComparison` , dessen Wert `False`.  
+  
+    ```xml  
+  
+    <configuration>  
+       <runtime>  
+          <AppContextSwitchOverrides value="Libraries.FPLibrary.UseExactFloatingPointComparison=false" />   
+       </runtime>  
+    </configuration>  
+  
+    ```  
+  
+-   Durch Hinzufügen eines Zeichenfolgenwerts, deren Name der Name des Schalters ist, der `HKLM\SOFTWARE\Microsoft\.NETFramework\AppContext` -Schlüssel in der Registrierung. Muss sein Wert die angegebene Zeichenfolgendarstellung einer <xref:System.Boolean> , die analysiert werden kann, indem Sie die <xref:System.Boolean.Parse%2A?displayProperty=nameWithType> -Methode, d. h., er muss "True", "true", "False" oder "false".  
+  
+ Wenn `switchName` bereits vorhanden ist, seinen Wert wird überschrieben, indem die `isEnabled` Argument.  D. h., die den letzten Aufruf der <xref:System.AppContext.SetSwitch%2A> Methode überschreibt den Wert in der Registrierung in einer app-Konfigurationsdatei oder vorherigen Aufrufe von definiert die <xref:System.AppContext.SetSwitch%2A> Methode.  
+  
+   
+  
+## Examples  
+ Die folgende Codezeile legt einen Switch mit dem Namen `Switch.AmazingLib.ThrowOnException` zu `true`, wodurch eine Legacyverhalten. Die Bibliothek kann dann überprüfen Sie, ob ein Consumer Bibliothek der Wert des Schalters durch den Aufruf festgelegt hat die <xref:System.AppContext.TryGetSwitch%2A> Methode.  
+  
+ [!code-csharp[System.AppContext.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.AppContext.Class/cs/TestValue1.cs#1)]
+ [!code-vb[System.AppContext.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.AppContext.Class/vb/TestValue1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="switchName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="switchName" /> ist <see cref="F:System.String.Empty" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetFrameworkName">
+      <MemberSignature Language="C#" Value="public static string TargetFrameworkName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string TargetFrameworkName" />
+      <MemberSignature Language="DocId" Value="P:System.AppContext.TargetFrameworkName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AppContext</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Frameworkversion ab, auf die die aktuelle Anwendung abzielt.</summary>
+        <value>Der Name der Frameworkversion, auf die die aktuelle Anwendung abzielt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Name der Framework-Zielversion entspricht dem Wert, der die <xref:System.Runtime.Versioning.TargetFrameworkAttribute.FrameworkName%2A?displayProperty=nameWithType> Eigenschaft. Eine Liste der Framework-Zielnamen für .NET Framework, finden Sie unter der [ &lt;SupportedRuntime&gt; Element](~/docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetSwitch">
+      <MemberSignature Language="C#" Value="public static bool TryGetSwitch (string switchName, out bool isEnabled);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryGetSwitch(string switchName, [out] bool&amp; isEnabled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AppContext.TryGetSwitch(System.String,System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AppContext</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="switchName" Type="System.String" />
+        <Parameter Name="isEnabled" Type="System.Boolean&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="switchName">Der Name des Schalters.</param>
+        <param name="isEnabled">Rückkehr dieser Methode enthält Sie den Wert des <c>"SwitchName" ausgeführt</c> Wenn <c>SwitchName</c> gefunden wurde, oder <see langword="false" /> Wenn <c>SwitchName</c> wurde nicht gefunden. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Versucht, den Wert eines Schalters abzurufen.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="switchName" /> festgelegt wurde und das <paramref name="isEnabled" />-Argument den Wert des Schalters enthält, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.AppContext> Klasse ermöglicht es Bibliotheksautoren ihren Benutzern einen einheitlichen abwahlmechanismus für neue Funktionalitäten bereitzustellen. Sie richtet einen lose gekoppelten Vertrag zwischen den Komponenten ein, um eine Anforderung zur Abwahl zu übermitteln. Diese Möglichkeit ist in der Regel wichtig, wenn vorhandene Funktionalitäten verändert werden. Im Gegensatz dazu existiert bereits eine implizite Auswahloption für neue Funktionalitäten.  
+  
+ Die common Language Runtime füllt automatisch die Schalter zugewiesene ein <xref:System.AppContext> -Instanz durch Lesen der Registrierung und die Konfigurationsdatei der Anwendung. Der Wert dieser Schalter kann dann überschrieben werden, und neue Optionen hinzugefügt, durch Aufrufen der <xref:System.AppContext.SetSwitch%2A> Methode.  
+  
+ Ruft eine Bibliothek der <xref:System.AppContext.TryGetSwitch%2A> -Methode überprüft, ob der Consumer den Wert des Schalters deklariert und anschließend darauf entsprechend Aktionen.  Wenn der Schalter nicht definiert ist, wird standardmäßig die neue Funktionen aktiviert... Wenn der Schalter definiert ist und ihr Wert ist `false`, die neue Funktionen ebenfalls aktiviert. Wenn der Wert `true`, die Legacyverhalten aktiviert ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird bestimmt, ob ein Consumer Bibliothek einen Switch namens festgelegt hat `Switch.AmazingLib.ThrowOnException`.  
+  
+ [!code-csharp[System.AppContext.Class#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.AppContext.Class/cs/TestValue1.cs#2)]
+ [!code-vb[System.AppContext.Class#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.AppContext.Class/vb/TestValue1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="switchName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="switchName" /> ist <see cref="F:System.String.Empty" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

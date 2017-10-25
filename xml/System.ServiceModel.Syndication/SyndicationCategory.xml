@@ -1,0 +1,508 @@
+<Type Name="SyndicationCategory" FullName="System.ServiceModel.Syndication.SyndicationCategory">
+  <TypeSignature Language="C#" Value="public class SyndicationCategory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SyndicationCategory extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Syndication.SyndicationCategory" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Eine Klasse, die die Kategorie eines Syndication-Feeds darstellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Kategorie, die die Zuweisung von einem oder mehreren Schlüsselworten für die Suche nach Informationen ermöglicht.  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt die Erstellung eines <xref:System.ServiceModel.Syndication.SyndicationFeed> sowie das Hinzufügen eines <xref:System.ServiceModel.Syndication.SyndicationItem> mit einer <xref:System.ServiceModel.Syndication.SyndicationCategory>.  
+  
+ [!code-csharp[SyndicationCategory#0](~/samples/snippets/csharp/VS_Snippets_CFX/syndicationcategory/cs/program.cs#0)]
+ [!code-vb[SyndicationCategory#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/syndicationcategory/vb/program.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SyndicationCategory ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationCategory.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Syndication.SyndicationCategory" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SyndicationCategory (System.ServiceModel.Syndication.SyndicationCategory source);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Syndication.SyndicationCategory source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationCategory.#ctor(System.ServiceModel.Syndication.SyndicationCategory)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="source" Type="System.ServiceModel.Syndication.SyndicationCategory" />
+      </Parameters>
+      <Docs>
+        <param name="source">Die <see cref="T:System.ServiceModel.Syndication.SyndicationCategory" />-Instanz zur Initialisierung der neuen <see cref="T:System.ServiceModel.Syndication.SyndicationCategory" />-Instanz.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Syndication.SyndicationCategory" />-Klasse mit der angegebenen <see cref="T:System.ServiceModel.Syndication.SyndicationCategory" />-Instanz.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SyndicationCategory (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationCategory.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Kategorie.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Syndication.SyndicationCategory" />-Klasse mit dem angegebenen Namen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Der folgende Code zeigt die Erstellung eines <xref:System.ServiceModel.Syndication.SyndicationFeed> sowie das Hinzufügen eines <xref:System.ServiceModel.Syndication.SyndicationItem> mit einer <xref:System.ServiceModel.Syndication.SyndicationCategory>.  
+  
+ [!code-csharp[SyndicationCategory#0](~/samples/snippets/csharp/VS_Snippets_CFX/syndicationcategory/cs/program.cs#0)]
+ [!code-vb[SyndicationCategory#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/syndicationcategory/vb/program.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SyndicationCategory (string name, string scheme, string label);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string scheme, string label) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationCategory.#ctor(System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="scheme" Type="System.String" />
+        <Parameter Name="label" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Kategorie.</param>
+        <param name="scheme">Ein Uniform Resource Identifier (URI), der das Kategorisierungsschema darstellt, zu dem diese Kategorie gehört.</param>
+        <param name="label">Ruft ein Klarzeichenattribut auf, das die Kategorie beschreibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Syndication.SyndicationCategory" />-Klasse mit dem angegebenen Namen, Schema und der betreffenden Kennzeichnung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Code wird das Aufrufen dieses Konstruktors veranschaulicht.  
+  
+ [!code-csharp[SyndicationCategory#2](~/samples/snippets/csharp/VS_Snippets_CFX/syndicationcategory/cs/snippets.cs#2)]
+ [!code-vb[SyndicationCategory#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/syndicationcategory/vb/snippets.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttributeExtensions">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;System.Xml.XmlQualifiedName,string&gt; AttributeExtensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;class System.Xml.XmlQualifiedName, string&gt; AttributeExtensions" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.SyndicationCategory.AttributeExtensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.Xml.XmlQualifiedName,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Attributerweiterungen für diese Kategorie ab.</summary>
+        <value>Die Attributerweiterungen für diese Kategorie.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Syndication-Objektmodell ermöglicht es Ihnen, benutzerdefinierte Attribute einer <xref:System.ServiceModel.Syndication.SyndicationCategory>-Instanz hinzuzufügen. Attributerweiterungen sind benutzerdefinierte Attribute, die nicht von den Spezifikationen Atom&#160;1.0 oder RSS&#160;2.0 definiert werden. Sie werden als Attribut des Elements `<category>` serialisiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public virtual System.ServiceModel.Syndication.SyndicationCategory Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Syndication.SyndicationCategory Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationCategory.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.SyndicationCategory</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Kopie einer <see cref="T:System.ServiceModel.Syndication.SyndicationCategory" />-Instanz.</summary>
+        <returns>Eine neue <see cref="T:System.ServiceModel.Syndication.SyndicationCategory" />-Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementExtensions">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Syndication.SyndicationElementExtensionCollection ElementExtensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Syndication.SyndicationElementExtensionCollection ElementExtensions" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.SyndicationCategory.ElementExtensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.SyndicationElementExtensionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Elementerweiterungen für diese Kategorie ab.</summary>
+        <value>Eine Auflistung der Erweiterungen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Elementerweiterungen sind gültige XML-Elemente, die nicht in der Spezifikation Atom 1.0 oder RSS 2.0 definiert werden. Sie können jedes gültige XML-Element als Erweiterung hinzufügen, sofern sich dessen Namespace vom übergeordneten Namespace unterscheidet.  
+  
+   
+  
+## Examples  
+ Das folgende XML-Beispiel zeigt die Serialisierung eines <xref:System.ServiceModel.Syndication.SyndicationCategory> mit einem benutzerdefinierten Element zu Atom 1.0.  
+  
+```  
+<category customAttribute="value" term="FeedCategory" label="CategoryLabel" scheme="CategoryScheme">  
+    <customCategoryElement xmlns="">Some text</customCategoryElement>  
+</category>  
+```  
+  
+> [!NOTE]
+>  Benutzerdefinierte Elemente innerhalb <xref:System.ServiceModel.Syndication.SyndicationCategory>-Instanzen werden nicht in RSS 2.0 serialisiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="public string Label { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Label" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.SyndicationCategory.Label" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Bezeichnung der Kategorie ab und legt diese fest.</summary>
+        <value>Die Bezeichnung der Kategorie.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Serialisierung zu Atom 1.0 wird die <xref:System.ServiceModel.Syndication.SyndicationCategory.Label%2A> bezieht sich auf die `label` Attribut des der <`category`> Element. <xref:System.ServiceModel.Syndication.SyndicationCategory.Label%2A> wird nicht in RSS  2.0 serialisiert.  
+  
+   
+  
+## Examples  
+ Das folgende XML-Beispiel zeigt, wie die Eigenschaft <xref:System.ServiceModel.Syndication.SyndicationCategory.Label%2A> zu Atom 1.0 serialisiert wird.  
+  
+```  
+<category customAttribute="value" term="FeedCategory" label="CategoryLabel" scheme="CategoryScheme"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.SyndicationCategory.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Kategorie ab und legt diesen fest.</summary>
+        <value>Der Name der Kategorie.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Serialisierung zu Atom 1.0 wird die <xref:System.ServiceModel.Syndication.SyndicationCategory.Name%2A> bezieht sich auf die `term` Attribut des der <`category`> Element. <xref:System.ServiceModel.Syndication.SyndicationCategory.Label%2A> wird nicht in RSS  2.0 serialisiert.  
+  
+   
+  
+## Examples  
+ Das folgende XML-Beispiel zeigt, wie die Eigenschaft <xref:System.ServiceModel.Syndication.SyndicationCategory.Name%2A> zu Atom 1.0 serialisiert wird.  
+  
+```  
+<category customAttribute="value" term="FeedCategory" label="CategoryLabel" scheme="CategoryScheme"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scheme">
+      <MemberSignature Language="C#" Value="public string Scheme { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Scheme" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.SyndicationCategory.Scheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Schema der Kategorie ab und legt dieses fest.</summary>
+        <value>Das Schema der Kategorie.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Serialisierung zu Atom 1.0 wird die <xref:System.ServiceModel.Syndication.SyndicationCategory.Scheme%2A> Eigenschaft bezieht sich auf die `scheme` Attribut von der <`category`> Element.  
+  
+ Bei der Serialisierung zu RSS 2.0 die <xref:System.ServiceModel.Syndication.SyndicationCategory.Scheme%2A> Eigenschaft bezieht sich auf die `domain` Attribut von der <`category`> Element.  
+  
+   
+  
+## Examples  
+ Das folgende XML-Beispiel zeigt, wie die Eigenschaft <xref:System.ServiceModel.Syndication.SyndicationCategory.Scheme%2A> zu Atom 1.0 serialisiert wird.  
+  
+```  
+<category customAttribute="value" term="FeedCategory" label="CategoryLabel" scheme="CategoryScheme"/>  
+```  
+  
+ Das folgende XML-Beispiel zeigt, wie die <xref:System.ServiceModel.Syndication.SyndicationCategory.Scheme%2A>-Eigenschaft zu RSS 2.0 serialisiert wird.  
+  
+```  
+<category customAttribute="value" domain="CategoryScheme">FeedCategory</category>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParseAttribute">
+      <MemberSignature Language="C#" Value="protected virtual bool TryParseAttribute (string name, string ns, string value, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool TryParseAttribute(string name, string ns, string value, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationCategory.TryParseAttribute(System.String,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Elements.</param>
+        <param name="ns">Der Namespace des Elements.</param>
+        <param name="value">Das zu analysierende Attribut.</param>
+        <param name="version">Die für die Analyse zu verwendende Syndication-Version.</param>
+        <summary>Versucht, eine Attributerweiterung zu analysieren.</summary>
+        <returns>Ein Wert, der angibt, ob die Attributerweiterung erfolgreich analysiert wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Attributerweiterungen sind benutzerdefinierte Attribute, die nicht von den Spezifikationen Atom&#160;1.0 oder RSS&#160;2.0 definiert werden. Sie werden als Attribut des Elements `<category>` serialisiert. Diese Methode ist ein Erweiterungspunkt, der Ihnen ermöglicht, die Deserialisierung von benutzerdefinierten Attributerweiterungen zu behandeln. Leiten Sie hierzu eine Klasse von <xref:System.ServiceModel.Syndication.SyndicationCategory> ab, und setzen Sie diese Methode außer Kraft. Diese Methode wird zu allen nicht erkannten Attributerweiterungen aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.XmlException">Ungültige XML-Daten während des Lesens erkannt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParseElement">
+      <MemberSignature Language="C#" Value="protected virtual bool TryParseElement (System.Xml.XmlReader reader, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool TryParseElement(class System.Xml.XmlReader reader, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationCategory.TryParseElement(System.Xml.XmlReader,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der <see cref="T:System.Xml.XmlReader" />, aus dem gelesen werden soll.</param>
+        <param name="version">Die für die Analyse zu verwendende Syndication-Version.</param>
+        <summary>Versucht, eine Elementerweiterung zu analysieren.</summary>
+        <returns>Ein Wert, der angibt, ob die Elementerweiterung erfolgreich analysiert wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Elementerweiterungen sind gültige XML-Elemente, die nicht in der Spezifikation Atom 1.0 oder RSS 2.0 definiert werden. Sie können jedes gültige XML-Element als Erweiterung hinzufügen, sofern sich dessen Namespace vom übergeordneten Namespace unterscheidet. Diese Methode ist ein Erweiterungspunkt, der Ihnen ermöglicht, die Deserialisierung von benutzerdefinierten Elementerweiterungen zu behandeln. Leiten Sie hierzu eine Klasse von <xref:System.ServiceModel.Syndication.SyndicationCategory> ab, und setzen Sie diese Methode außer Kraft. Diese Methode wird zu allen nicht erkannten Attributerweiterungen aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.XmlException">Ungültige XML-Daten während des Lesens erkannt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAttributeExtensions">
+      <MemberSignature Language="C#" Value="protected virtual void WriteAttributeExtensions (System.Xml.XmlWriter writer, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void WriteAttributeExtensions(class System.Xml.XmlWriter writer, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationCategory.WriteAttributeExtensions(System.Xml.XmlWriter,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Xml.XmlWriter" />, in den geschrieben werden soll.</param>
+        <param name="version">Die für das Schreiben zu verwendende Syndication-Version.</param>
+        <summary>Schreibt die Attributerweiterungen in den angegebenen Writer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Attributerweiterungen sind benutzerdefinierte Attribute, die nicht von den Spezifikationen Atom&#160;1.0 oder RSS&#160;2.0 definiert werden. Sie werden als Attribut des Elements `<category>` serialisiert. Diese Methode ist ein Erweiterungspunkt, der Ihnen ermöglicht, die Serialisierung von benutzerdefinierten Attributerweiterungen zu behandeln. Leiten Sie hierzu eine Klasse von <xref:System.ServiceModel.Syndication.SyndicationCategory> ab, und setzen Sie diese Methode außer Kraft. Diese Methode wird zu allen nicht erkannten Attributerweiterungen aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteElementExtensions">
+      <MemberSignature Language="C#" Value="protected virtual void WriteElementExtensions (System.Xml.XmlWriter writer, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void WriteElementExtensions(class System.Xml.XmlWriter writer, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationCategory.WriteElementExtensions(System.Xml.XmlWriter,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Xml.XmlWriter" />, in den geschrieben werden soll.</param>
+        <param name="version">Die für das Schreiben zu verwendende Syndication-Version.</param>
+        <summary>Schreibt die Elementerweiterungen in den angegebenen Writer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Elementerweiterungen sind gültige XML-Elemente, die nicht in der Spezifikation Atom 1.0 oder RSS 2.0 definiert werden. Sie können jedes gültige XML-Element als Erweiterung hinzufügen, sofern sich dessen Namespace vom übergeordneten Namespace unterscheidet. Diese Methode ist ein Erweiterungspunkt, der Ihnen ermöglicht, die Serialisierung von benutzerdefinierten Elementerweiterungen zu behandeln. Leiten Sie hierzu eine Klasse von <xref:System.ServiceModel.Syndication.SyndicationCategory> ab, und setzen Sie diese Methode außer Kraft. Diese Methode wird für alle nicht erkannten Elementerweiterungen aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

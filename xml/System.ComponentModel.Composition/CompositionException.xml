@@ -1,0 +1,159 @@
+<Type Name="CompositionException" FullName="System.ComponentModel.Composition.CompositionException">
+  <TypeSignature Language="C#" Value="public class CompositionException : Exception" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CompositionException extends System.Exception" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Composition.CompositionException" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("{Message}")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerTypeProxy(typeof(System.ComponentModel.Composition.CompositionExceptionDebuggerProxy))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Ausnahme dar, die ausgelöst wird, wenn mindestens ein Fehler, während der Komposition in auftreten einem <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> Objekt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompositionException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.CompositionException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Composition.CompositionException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompositionException (System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.CompositionError&gt; errors);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;class System.ComponentModel.Composition.CompositionError&gt; errors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.CompositionException.#ctor(System.Collections.Generic.IEnumerable{System.ComponentModel.Composition.CompositionError})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="errors" Type="System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.CompositionError&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="errors">Eine Auflistung von <see cref="T:System.ComponentModel.Composition.CompositionError" /> Objekte, die Probleme während der Komposition darstellen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Composition.CompositionException" /> -Klasse mit der angegebenen Auflistung von Kompositionsfehlern.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompositionException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.CompositionException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Meldung, beschreibt der <see cref="T:System.ComponentModel.Composition.CompositionException" /> oder <see langword="null" /> festzulegende der <see cref="P:System.Exception.Message" /> Eigenschaft auf den Standardwert.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Composition.CompositionException" />-Klasse mit der angegebenen Fehlermeldung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompositionException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.CompositionException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Eine Meldung, beschreibt der <see cref="T:System.ComponentModel.Composition.CompositionException" /> oder <see langword="null" /> festzulegende der <see cref="P:System.Exception.Message" /> Eigenschaft auf den Standardwert.</param>
+        <param name="innerException">Dazu führen, dass die Ausnahme, die die zugrunde liegende wird von der <see cref="T:System.ComponentModel.Composition.CompositionException" /> oder <see langword="null" /> festzulegende der <see cref="P:System.Exception.InnerException" /> Eigenschaft <see langword="null" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Composition.CompositionException" /> Klasse mit der angegebenen Fehlermeldung und der Ausnahme, die diese Ausnahme ausgelöst hat.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Errors">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.ComponentModel.Composition.CompositionError&gt; Errors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.ComponentModel.Composition.CompositionError&gt; Errors" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.CompositionException.Errors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.ComponentModel.Composition.CompositionError&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Auflistung von <see cref="T:System.ComponentModel.Composition.CompositionError" /> Objekte, die beschreiben, die Fehler im Zusammenhang mit der <see cref="T:System.ComponentModel.Composition.CompositionException" />.</summary>
+        <value>Eine Auflistung von <see cref="T:System.ComponentModel.Composition.CompositionError" /> Objekte, die beschreiben, die Fehler im Zusammenhang mit der <see cref="T:System.ComponentModel.Composition.CompositionException" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public override string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.CompositionException.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Meldung, die die Ausnahme beschreibt.</summary>
+        <value>Eine Meldung, beschreibt die <see cref="T:System.ComponentModel.Composition.CompositionException" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RootCauses">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;Exception&gt; RootCauses { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Exception&gt; RootCauses" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.CompositionException.RootCauses" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Exception&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung, die die anfängliche Quellen für diese Ausnahme enthält.</summary>
+        <value>Eine Auflistung, die die anfängliche Quellen für diese Ausnahme enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

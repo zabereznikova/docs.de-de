@@ -1,0 +1,692 @@
+<Type Name="TreeWalker" FullName="System.Windows.Automation.TreeWalker">
+  <TypeSignature Language="C#" Value="public sealed class TreeWalker" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TreeWalker extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.TreeWalker" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Methoden und Eigenschaften zum Navigieren der Benutzeroberflächenautomatisierungs-Struktur.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Benutzeroberflächenautomatisierungs-Clients Anzeigen der [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] auf dem Desktop als Satz von <xref:System.Windows.Automation.AutomationElement> Objekte, die in einer Baumstruktur angeordnet sind.  
+  
+ Mithilfe der <xref:System.Windows.Automation.TreeWalker> kann navigieren, Klasse, eine Clientanwendung die [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Struktur nach einer Ansicht der Struktur auswählen und eine schrittweise <xref:System.Windows.Automation.AutomationElement> in eine andere in einer angegebenen Richtung mit der <xref:System.Windows.Automation.TreeWalker.GetFirstChild%2A>, <xref:System.Windows.Automation.TreeWalker.GetLastChild%2A>, <xref:System.Windows.Automation.TreeWalker.GetPreviousSibling%2A>, <xref:System.Windows.Automation.TreeWalker.GetNextSibling%2A>, und <xref:System.Windows.Automation.TreeWalker.GetParent%2A> Methoden.  
+  
+ Navigieren in der [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] -Struktur mit der <xref:System.Windows.Automation.TreeWalker> zu prozessübergreifenden Aufrufen führen und ist nicht so effizient wie die Suche nach einem Element mit dem <xref:System.Windows.Automation.AutomationElement.FindAll%2A> oder <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> Methoden.  
+  
+ Wenn Ihre Clientanwendung nach Elementen in der eigenen Benutzeroberfläche suchen versuchen kann, müssen Sie alle, [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] in einem separaten Thread aufgerufen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TreeWalker (System.Windows.Automation.Condition condition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Automation.Condition condition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.TreeWalker.#ctor(System.Windows.Automation.Condition)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Windows.Automation.Condition" />
+      </Parameters>
+      <Docs>
+        <param name="condition">Die Ansicht der [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Elementstruktur, <see cref="T:System.Windows.Automation.TreeWalker" /> , wechseln Sie automatisch.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Automation.TreeWalker" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)]Elemente, die nicht übereinstimmen `condition` werden ausgelassen, wenn <xref:System.Windows.Automation.TreeWalker> wird verwendet, um die Elementstruktur navigieren.  
+  
+ Wenn Ihre Clientanwendung nach Elementen in der eigenen Benutzeroberfläche suchen versuchen kann, müssen Sie alle, [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] in einem separaten Thread aufgerufen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie konstruieren können eine <xref:System.Windows.Automation.TreeWalker> , die nur für die aktivierten Elemente navigiert.  
+  
+ [!code-csharp[UIAClient_snip#174](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#174)]
+ [!code-vb[UIAClient_snip#174](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#174)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Condition">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Condition Condition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Automation.Condition Condition" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.TreeWalker.Condition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Condition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt, das die Sicht für definiert die <see cref="T:System.Windows.Automation.TreeWalker" /> Objekt.</summary>
+        <value>Die Bedingung, die die Sicht definiert. Dies ist der Wert, der an den Konstruktor übergeben wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentViewWalker">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.TreeWalker ContentViewWalker;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.TreeWalker ContentViewWalker" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TreeWalker.ContentViewWalker" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.TreeWalker</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt eine vordefinierte <see cref="T:System.Windows.Automation.TreeWalker" /> , enthält einen Überblick über die Elemente in der Struktur, die als Inhaltssteuerelemente gekennzeichnet sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Ihre Clientanwendung nach Elementen in der eigenen Benutzeroberfläche suchen versuchen kann, müssen Sie alle, [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] in einem separaten Thread aufgerufen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt <xref:System.Windows.Automation.TreeWalker.ControlViewWalker> verwendet wird, um eine Strukturansicht der Elemente in einer Teilstruktur erstellen. Für die Verwendung <xref:System.Windows.Automation.TreeWalker.ContentViewWalker> identisch ist.  
+  
+ [!code-csharp[UIAClient_snip#171](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#171)]
+ [!code-vb[UIAClient_snip#171](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#171)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlViewWalker">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.TreeWalker ControlViewWalker;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.TreeWalker ControlViewWalker" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TreeWalker.ControlViewWalker" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.TreeWalker</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt eine vordefinierte <see cref="T:System.Windows.Automation.TreeWalker" /> , enthält einen Überblick über die Elemente in der Struktur, die als Steuerelemente gekennzeichnet sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Ihre Clientanwendung nach Elementen in der eigenen Benutzeroberfläche suchen versuchen kann, müssen Sie alle, [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] in einem separaten Thread aufgerufen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt <xref:System.Windows.Automation.TreeWalker.ControlViewWalker> verwendet wird, um eine Strukturansicht der Elemente in einer Teilstruktur erstellen.  
+  
+ [!code-csharp[UIAClient_snip#171](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#171)]
+ [!code-vb[UIAClient_snip#171](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#171)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetFirstChild">
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Ruft das erste untergeordnete Element des angegebenen <see cref="T:System.Windows.Automation.AutomationElement" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Automation.AutomationElement> zusätzliche untergeordnete Elemente, die Bedingung für die aktuelle Ansicht stimmen nicht überein und daher beim Navigieren in der Elementstruktur nicht zurückgegeben werden können.  
+  
+ Die Struktur der <xref:System.Windows.Automation.AutomationElement> Struktur ändert sich, wenn die sichtbaren [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] Elemente auf dem desktop geändert. Es ist nicht sichergestellt, dass ein Element zurückgegeben wird, wie das erste untergeordnete Element auf nachfolgende übergibt das erste untergeordnete Element zurückgegeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetFirstChild">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.AutomationElement GetFirstChild (System.Windows.Automation.AutomationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Automation.AutomationElement GetFirstChild(class System.Windows.Automation.AutomationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.TreeWalker.GetFirstChild(System.Windows.Automation.AutomationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.Automation.AutomationElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, von dem das erste untergeordnete Element abgerufen werden soll.</param>
+        <summary>Ruft das erste untergeordnete Element des angegebenen <see cref="T:System.Windows.Automation.AutomationElement" />.</summary>
+        <returns>Das erste untergeordnete Element oder ein null-Verweis (<see langword="Nothing" /> in [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]), wenn kein solches Element vorhanden ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Automation.AutomationElement> zusätzliche untergeordnete Elemente, die Bedingung für die aktuelle Ansicht stimmen nicht überein und daher beim Navigieren in der Elementstruktur nicht zurückgegeben werden können.  
+  
+ Die Struktur der <xref:System.Windows.Automation.AutomationElement> Struktur ändert sich, wenn die sichtbaren [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] Elemente auf dem desktop geändert. Es ist nicht sichergestellt, dass ein Element zurückgegeben wird, wie das erste untergeordnete Element auf nachfolgende übergibt das erste untergeordnete Element zurückgegeben wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt <xref:System.Windows.Automation.TreeWalker.GetFirstChild%2A> verwendet wird, um eine Strukturansicht der Elemente in einer Teilstruktur erstellen.  
+  
+ [!code-csharp[UIAClient_snip#171](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#171)]
+ [!code-vb[UIAClient_snip#171](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#171)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFirstChild">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.AutomationElement GetFirstChild (System.Windows.Automation.AutomationElement element, System.Windows.Automation.CacheRequest request);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Automation.AutomationElement GetFirstChild(class System.Windows.Automation.AutomationElement element, class System.Windows.Automation.CacheRequest request) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.TreeWalker.GetFirstChild(System.Windows.Automation.AutomationElement,System.Windows.Automation.CacheRequest)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.Automation.AutomationElement" />
+        <Parameter Name="request" Type="System.Windows.Automation.CacheRequest" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, von dem das erste untergeordnete Element abgerufen werden soll.</param>
+        <param name="request">Ein Anforderung-Cacheobjekt, die Angabe von Eigenschaften und Muster für das zurückgegebene <see cref="T:System.Windows.Automation.AutomationElement" /> Cache.</param>
+        <summary>Ruft das erste untergeordnete Element des angegebenen <see cref="T:System.Windows.Automation.AutomationElement" /> und speichert Sie zwischen Eigenschaften und Muster.</summary>
+        <returns>Das erste untergeordnete Element oder ein null-Verweis (<see langword="Nothing" /> in [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]), wenn kein solches Element vorhanden ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Automation.AutomationElement> zusätzliche untergeordnete Elemente, die Bedingung für die aktuelle Ansicht stimmen nicht überein und daher beim Navigieren in der Elementstruktur nicht zurückgegeben werden können.  
+  
+ Die Struktur der <xref:System.Windows.Automation.AutomationElement> Struktur ändert sich, wenn die sichtbaren [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] Elemente auf dem desktop geändert. Es ist nicht sichergestellt, dass ein Element zurückgegeben wird, wie das erste untergeordnete Element auf nachfolgende übergibt das erste untergeordnete Element zurückgegeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetLastChild">
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Ruft das letzte untergeordnete Element des angegebenen <see cref="T:System.Windows.Automation.AutomationElement" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Automation.AutomationElement> zusätzliche untergeordnete Elemente, die Bedingung für die aktuelle Ansicht stimmen nicht überein und daher beim Navigieren in der Elementstruktur nicht zurückgegeben werden können.  
+  
+ Die Struktur der <xref:System.Windows.Automation.AutomationElement> Struktur ändert sich, wenn die sichtbaren [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] Elemente auf dem desktop geändert. Es ist nicht sichergestellt, dass ein Element zurückgegeben wird, wie das letzte untergeordnete Element auf nachfolgende übergibt das letzte untergeordnete Element zurückgegeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetLastChild">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.AutomationElement GetLastChild (System.Windows.Automation.AutomationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Automation.AutomationElement GetLastChild(class System.Windows.Automation.AutomationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.TreeWalker.GetLastChild(System.Windows.Automation.AutomationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.Automation.AutomationElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, aus denen das letzte untergeordnete Element abgerufen werden soll.</param>
+        <summary>Ruft das letzte untergeordnete Element des angegebenen <see cref="T:System.Windows.Automation.AutomationElement" />.</summary>
+        <returns>Die <see cref="T:System.Windows.Automation.AutomationElement" /> also das letzte untergeordnete Element oder ein null-Verweis (<see langword="Nothing" /> in [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]), wenn kein solches Element vorhanden ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Automation.AutomationElement> zusätzliche untergeordnete Elemente, die Bedingung für die aktuelle Ansicht stimmen nicht überein und daher beim Navigieren in der Elementstruktur nicht zurückgegeben werden können.  
+  
+ Die Struktur der <xref:System.Windows.Automation.AutomationElement> Struktur ändert sich, wenn die sichtbaren [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] Elemente auf dem desktop geändert. Es ist nicht sichergestellt, dass ein Element zurückgegeben wird, wie das letzte untergeordnete Element auf nachfolgende übergibt das letzte untergeordnete Element zurückgegeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLastChild">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.AutomationElement GetLastChild (System.Windows.Automation.AutomationElement element, System.Windows.Automation.CacheRequest request);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Automation.AutomationElement GetLastChild(class System.Windows.Automation.AutomationElement element, class System.Windows.Automation.CacheRequest request) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.TreeWalker.GetLastChild(System.Windows.Automation.AutomationElement,System.Windows.Automation.CacheRequest)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.Automation.AutomationElement" />
+        <Parameter Name="request" Type="System.Windows.Automation.CacheRequest" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, aus denen das letzte untergeordnete Element abgerufen werden soll.</param>
+        <param name="request">Ein Anforderung-Cacheobjekt, die Angabe von Eigenschaften und Muster für das zurückgegebene <see cref="T:System.Windows.Automation.AutomationElement" /> Cache.</param>
+        <summary>Ruft das letzte untergeordnete Element des angegebenen <see cref="T:System.Windows.Automation.AutomationElement" /> und speichert Sie zwischen Eigenschaften und Muster.</summary>
+        <returns>Das letzte Element oder ein null-Verweis (<see langword="Nothing" /> in [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]), wenn kein solches Element vorhanden ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Automation.AutomationElement> zusätzliche untergeordnete Elemente, die Bedingung für die aktuelle Ansicht stimmen nicht überein und daher beim Navigieren in der Elementstruktur nicht zurückgegeben werden können.  
+  
+ Die Struktur der <xref:System.Windows.Automation.AutomationElement> Struktur ändert sich, wenn die sichtbaren [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] Elemente auf dem desktop geändert. Es ist nicht sichergestellt, dass ein Element zurückgegeben wird, wie das letzte untergeordnete Element auf nachfolgende übergibt das letzte untergeordnete Element zurückgegeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetNextSibling">
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Ruft das nächste nebengeordnete Element des angegebenen <see cref="T:System.Windows.Automation.AutomationElement" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Automation.AutomationElement> zusätzliche gleichgeordnete Elemente, die Bedingung für die aktuelle Ansicht stimmen nicht überein und daher beim Navigieren in der Elementstruktur nicht zurückgegeben werden können.  
+  
+ Die Struktur der <xref:System.Windows.Automation.AutomationElement> Struktur ändert sich, wenn die sichtbaren [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] Elemente auf dem desktop geändert. Es ist nicht sichergestellt, dass ein Element zurückgegeben wird, wie das nächste nebengeordnete Element auf nachfolgende übergibt das nächste gleichgeordnete Element zurückgegeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetNextSibling">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.AutomationElement GetNextSibling (System.Windows.Automation.AutomationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Automation.AutomationElement GetNextSibling(class System.Windows.Automation.AutomationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.TreeWalker.GetNextSibling(System.Windows.Automation.AutomationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.Automation.AutomationElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Die <see cref="T:System.Windows.Automation.AutomationElement" /> aus der nächsten nebengeordneten Elements abgerufen.</param>
+        <summary>Ruft das nächste nebengeordnete Element des angegebenen <see cref="T:System.Windows.Automation.AutomationElement" />.</summary>
+        <returns>Das nächste nebengeordnete Element oder ein null-Verweis (<see langword="Nothing" /> in [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]), wenn kein solches Element vorhanden ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Automation.AutomationElement> zusätzliche gleichgeordnete Elemente, die Bedingung für die aktuelle Ansicht stimmen nicht überein und daher beim Navigieren in der Elementstruktur nicht zurückgegeben werden können.  
+  
+ Die Struktur der <xref:System.Windows.Automation.AutomationElement> Struktur ändert sich, wenn die sichtbaren [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] Elemente auf dem desktop geändert. Es ist nicht sichergestellt, dass ein Element zurückgegeben wird, wie das nächste nebengeordnete Element auf nachfolgende übergibt das nächste gleichgeordnete Element zurückgegeben wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt <xref:System.Windows.Automation.TreeWalker.GetNextSibling%2A> verwendet wird, um eine Strukturansicht der Elemente in einer Teilstruktur erstellen.  
+  
+ [!code-csharp[UIAClient_snip#171](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#171)]
+ [!code-vb[UIAClient_snip#171](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#171)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNextSibling">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.AutomationElement GetNextSibling (System.Windows.Automation.AutomationElement element, System.Windows.Automation.CacheRequest request);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Automation.AutomationElement GetNextSibling(class System.Windows.Automation.AutomationElement element, class System.Windows.Automation.CacheRequest request) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.TreeWalker.GetNextSibling(System.Windows.Automation.AutomationElement,System.Windows.Automation.CacheRequest)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.Automation.AutomationElement" />
+        <Parameter Name="request" Type="System.Windows.Automation.CacheRequest" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, von dem das nächste gleichgeordnete Element abgerufen werden soll.</param>
+        <param name="request">Ein Anforderung-Cacheobjekt, die Angabe von Eigenschaften und Muster für das zurückgegebene <see cref="T:System.Windows.Automation.AutomationElement" /> Cache.</param>
+        <summary>Ruft das nächste nebengeordnete Element des angegebenen <see cref="T:System.Windows.Automation.AutomationElement" /> und speichert Sie zwischen Eigenschaften und Muster.</summary>
+        <returns>Das nächste nebengeordnete Element oder ein null-Verweis (<see langword="Nothing" /> in [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]), wenn kein solches Element vorhanden ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Automation.AutomationElement> zusätzliche gleichgeordnete Elemente, die Bedingung für die aktuelle Ansicht stimmen nicht überein und daher beim Navigieren in der Elementstruktur nicht zurückgegeben werden können.  
+  
+ Die Struktur der <xref:System.Windows.Automation.AutomationElement> Struktur ändert sich, wenn die sichtbaren [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] Elemente auf dem desktop geändert. Es ist nicht sichergestellt, dass ein Element zurückgegeben wird, wie das nächste nebengeordnete Element auf nachfolgende übergibt das nächste gleichgeordnete Element zurückgegeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetParent">
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Ruft das übergeordnete Element des angegebenen <see cref="T:System.Windows.Automation.AutomationElement" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Struktur der <xref:System.Windows.Automation.AutomationElement> Struktur ändert sich, wenn die sichtbaren [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] Elemente auf dem desktop geändert. Es ist nicht sichergestellt, dass ein Element zurückgegeben wird, wie das übergeordnete Element als übergeordnetes Element auf nachfolgende übergibt zurückgegeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetParent">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.AutomationElement GetParent (System.Windows.Automation.AutomationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Automation.AutomationElement GetParent(class System.Windows.Automation.AutomationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.TreeWalker.GetParent(System.Windows.Automation.AutomationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.Automation.AutomationElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, dessen übergeordnetes Element zurückgegeben werden.</param>
+        <summary>Ruft das übergeordnete Element des angegebenen <see cref="T:System.Windows.Automation.AutomationElement" />.</summary>
+        <returns>Das übergeordnete Element oder ein null-Verweis (<see langword="Nothing" /> in [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]) Wenn das angegebene Element das Stammelement in der Struktur ist, oder wenn das übergeordnete Element nicht in der aktuellen Ansicht angezeigt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt <xref:System.Windows.Automation.TreeWalker.GetParent%2A> verwendet wird, um das Fensterelement zu finden, die ein angegebenes Element enthält.  
+  
+ [!code-csharp[UIAFocusTracker_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAFocusTracker_snip/CSharp/FocusTracker.cs#102)]
+ [!code-vb[UIAFocusTracker_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFocusTracker_snip/VisualBasic/FocusTracker.vb#102)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParent">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.AutomationElement GetParent (System.Windows.Automation.AutomationElement element, System.Windows.Automation.CacheRequest request);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Automation.AutomationElement GetParent(class System.Windows.Automation.AutomationElement element, class System.Windows.Automation.CacheRequest request) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.TreeWalker.GetParent(System.Windows.Automation.AutomationElement,System.Windows.Automation.CacheRequest)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.Automation.AutomationElement" />
+        <Parameter Name="request" Type="System.Windows.Automation.CacheRequest" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, dessen übergeordnetes Element zurückgegeben werden.</param>
+        <param name="request">Eine Angabe von Membern zurückgegebenen Cache-Anforderungsobjekt <see cref="T:System.Windows.Automation.AutomationElement" /> Cache.</param>
+        <summary>Ruft das übergeordnete Element des angegebenen <see cref="T:System.Windows.Automation.AutomationElement" /> und speichert Sie zwischen Eigenschaften und Muster.</summary>
+        <returns>Das übergeordnete Element oder ein null-Verweis (<see langword="Nothing" /> in [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]) Wenn das angegebene Element das Stammelement in der Struktur ist oder das übergeordnete Element nicht in dieser Sicht angezeigt ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Struktur der <xref:System.Windows.Automation.AutomationElement> Struktur ändert sich, wenn die sichtbaren [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] Elemente auf dem desktop geändert. Es ist nicht sichergestellt, dass ein Element zurückgegeben wird, wie das übergeordnete Element als übergeordnetes Element auf nachfolgende übergibt zurückgegeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetPreviousSibling">
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Ruft das vorherige gleichgeordnete Element des angegebenen <see cref="T:System.Windows.Automation.AutomationElement" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Automation.AutomationElement> zusätzliche gleichgeordnete Elemente, die Bedingung für die aktuelle Ansicht stimmen nicht überein und daher beim Navigieren in der Elementstruktur nicht zurückgegeben werden können.  
+  
+ Die Struktur der <xref:System.Windows.Automation.AutomationElement> Struktur ändert sich, wenn die sichtbaren [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] Elemente auf dem desktop geändert. Es ist nicht sichergestellt, dass ein Element zurückgegeben wird, wie das vorherige gleichgeordnete Element auf nachfolgende übergibt als das vorherige gleichgeordnete Element zurückgegeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetPreviousSibling">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.AutomationElement GetPreviousSibling (System.Windows.Automation.AutomationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Automation.AutomationElement GetPreviousSibling(class System.Windows.Automation.AutomationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.TreeWalker.GetPreviousSibling(System.Windows.Automation.AutomationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.Automation.AutomationElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element aus der vorhergehenden gleichgeordneten abgerufen werden soll.</param>
+        <summary>Ruft das vorherige gleichgeordnete Element des angegebenen <see cref="T:System.Windows.Automation.AutomationElement" />.</summary>
+        <returns>Das vorherige gleichgeordnete Element oder ein null-Verweis (<see langword="Nothing" /> in [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]), wenn kein solches Element vorhanden ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Automation.AutomationElement> zusätzliche gleichgeordnete Elemente, die Bedingung für die aktuelle Ansicht stimmen nicht überein und daher beim Navigieren in der Elementstruktur nicht zurückgegeben werden können.  
+  
+ Die Struktur der <xref:System.Windows.Automation.AutomationElement> Struktur ändert sich, wenn die sichtbaren [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] Elemente auf dem desktop geändert. Es ist nicht sichergestellt, dass ein Element zurückgegeben wird, wie das vorherige gleichgeordnete Element auf nachfolgende übergibt als das vorherige gleichgeordnete Element zurückgegeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPreviousSibling">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.AutomationElement GetPreviousSibling (System.Windows.Automation.AutomationElement element, System.Windows.Automation.CacheRequest request);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Automation.AutomationElement GetPreviousSibling(class System.Windows.Automation.AutomationElement element, class System.Windows.Automation.CacheRequest request) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.TreeWalker.GetPreviousSibling(System.Windows.Automation.AutomationElement,System.Windows.Automation.CacheRequest)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.Automation.AutomationElement" />
+        <Parameter Name="request" Type="System.Windows.Automation.CacheRequest" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element aus der vorhergehenden gleichgeordneten abgerufen werden soll.</param>
+        <param name="request">Ein Anforderung-Cacheobjekt, die Angabe von Eigenschaften und Muster für das zurückgegebene <see cref="T:System.Windows.Automation.AutomationElement" /> Cache.</param>
+        <summary>Ruft das vorherige gleichgeordnete Element des angegebenen <see cref="T:System.Windows.Automation.AutomationElement" /> und speichert Sie zwischen Eigenschaften und Muster.</summary>
+        <returns>Das vorherige gleichgeordnete Element oder ein null-Verweis (<see langword="Nothing" /> in [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]), wenn kein solches Element vorhanden ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Automation.AutomationElement> zusätzliche gleichgeordnete Elemente, die Bedingung für die aktuelle Ansicht stimmen nicht überein und daher beim Navigieren in der Elementstruktur nicht zurückgegeben werden können.  
+  
+ Die Struktur der <xref:System.Windows.Automation.AutomationElement> Struktur ändert sich, wenn die sichtbaren [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] Elemente auf dem desktop geändert. Es ist nicht sichergestellt, dass ein Element zurückgegeben wird, wie das vorherige gleichgeordnete Element auf nachfolgende übergibt als das vorherige gleichgeordnete Element zurückgegeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Normalize">
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Ruft das übergeordnete Element am nächsten liegt und der angegebenen <see cref="T:System.Windows.Automation.AutomationElement" /> in der Strukturansicht, die von dieser Instanz der <see cref="T:System.Windows.Automation.TreeWalker" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Element wird normalisiert, indem Sie die Kette Vorgänger in der Struktur navigieren, bis ein Element, das erfüllt die Bedingung für die Ansicht für die <xref:System.Windows.Automation.TreeWalker> Objekt erreicht ist. Wenn das Stammelement erreicht wird, ist das Stammelement zurückgegeben, auch wenn sie die Ansicht Bedingung nicht erfüllt.  
+  
+ Diese Methode ist nützlich für Anwendungen, die Verweise auf abrufen [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Elemente durch Treffertests. Die Anwendung möglicherweise nur mit bestimmten Typen von Elementen arbeiten möchten, und können <xref:System.Windows.Automation.TreeWalker.Normalize%2A> sicherstellen, dass unabhängig davon, welches Element anfänglich abgerufen wird (z. B. wenn eine Bildlaufleiste den Eingabefokus erhält), nur das Element von Interesse sind (z. B. ein Inhalt -Element), wird letztendlich abgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Normalize">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.AutomationElement Normalize (System.Windows.Automation.AutomationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Automation.AutomationElement Normalize(class System.Windows.Automation.AutomationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.TreeWalker.Normalize(System.Windows.Automation.AutomationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.Automation.AutomationElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element aus dem die Normalisierung zu beginnen.</param>
+        <summary>Ruft den Knoten selbst ab, sofern es erfüllt die <see cref="P:System.Windows.Automation.TreeWalker.Condition" />, oder den nächsten übergeordneten Knoten, die erfüllt die <see cref="P:System.Windows.Automation.TreeWalker.Condition" />.</summary>
+        <returns>Die nächste <see cref="T:System.Windows.Automation.AutomationElement" /> in der aktuellen Ansicht. Wenn die Navigation der übergeordneten Kette des Stammelements erreicht, wird das Stammelement zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Element wird normalisiert, indem Sie die Kette Vorgänger in der Struktur navigieren, bis ein Element, das erfüllt die Bedingung für die Ansicht für die <xref:System.Windows.Automation.TreeWalker> Objekt erreicht ist. Wenn das Stammelement erreicht wird, ist das Stammelement zurückgegeben, auch wenn sie die Ansicht Bedingung nicht erfüllt.  
+  
+ Diese Methode ist nützlich für Anwendungen, die Verweise auf abrufen [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Elemente durch Treffertests. Die Anwendung möglicherweise nur mit bestimmten Typen von Elementen arbeiten möchten, und können <xref:System.Windows.Automation.TreeWalker.Normalize%2A> sicherstellen, dass unabhängig davon, welches Element anfänglich abgerufen wird (z. B. wenn eine Bildlaufleiste den Eingabefokus erhält), nur das Element von Interesse sind (z. B. ein Inhalt -Element), wird letztendlich abgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Normalize">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.AutomationElement Normalize (System.Windows.Automation.AutomationElement element, System.Windows.Automation.CacheRequest request);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Automation.AutomationElement Normalize(class System.Windows.Automation.AutomationElement element, class System.Windows.Automation.CacheRequest request) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.TreeWalker.Normalize(System.Windows.Automation.AutomationElement,System.Windows.Automation.CacheRequest)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.Automation.AutomationElement" />
+        <Parameter Name="request" Type="System.Windows.Automation.CacheRequest" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element aus dem die Normalisierung zu beginnen.</param>
+        <param name="request">Ein Anforderung-Cacheobjekt, die Angabe von Eigenschaften und Muster für das zurückgegebene <see cref="T:System.Windows.Automation.AutomationElement" /> Cache.</param>
+        <summary>Ruft den Knoten selbst ab, sofern es erfüllt die <see cref="P:System.Windows.Automation.TreeWalker.Condition" />, oder den nächsten übergeordneten Knoten, die erfüllt die <see cref="P:System.Windows.Automation.TreeWalker.Condition" />, und speichert Sie zwischen Eigenschaften und Muster.</summary>
+        <returns>Die nächste <see cref="T:System.Windows.Automation.AutomationElement" /> in der aktuellen Ansicht. Wenn die Navigation der übergeordneten Kette des Stammelements erreicht, wird das Stammelement zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Element wird normalisiert, indem Sie die Kette Vorgänger in der Struktur navigieren, bis ein Element, das erfüllt die Bedingung für die Ansicht für die <xref:System.Windows.Automation.TreeWalker> Objekt erreicht ist. Wenn das Stammelement erreicht wird, ist das Stammelement zurückgegeben, auch wenn sie die Ansicht Bedingung nicht erfüllt.  
+  
+ Diese Methode ist nützlich für Anwendungen, die Verweise auf abrufen [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Elemente durch Treffertests. Die Anwendung möglicherweise nur mit bestimmten Typen von Elementen arbeiten möchten, und können <xref:System.Windows.Automation.TreeWalker.Normalize%2A> sicherstellen, dass unabhängig davon, welches Element anfänglich abgerufen wird (z. B. wenn eine Bildlaufleiste den Eingabefokus erhält), nur das Element von Interesse sind (z. B. ein Inhalt -Element), wird letztendlich abgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RawViewWalker">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.TreeWalker RawViewWalker;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.TreeWalker RawViewWalker" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TreeWalker.RawViewWalker" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.TreeWalker</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt eine vordefinierte <see cref="T:System.Windows.Automation.TreeWalker" /> , enthält einen Überblick über alle Elemente in der Struktur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Ihre Clientanwendung nach Elementen in der eigenen Benutzeroberfläche suchen versuchen kann, müssen Sie alle, [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] in einem separaten Thread aufgerufen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt <xref:System.Windows.Automation.TreeWalker.ControlViewWalker> verwendet wird, um eine Strukturansicht der Elemente in einer Teilstruktur erstellen. Für die Verwendung <xref:System.Windows.Automation.TreeWalker.RawViewWalker> identisch ist.  
+  
+ [!code-csharp[UIAClient_snip#171](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#171)]
+ [!code-vb[UIAClient_snip#171](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#171)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

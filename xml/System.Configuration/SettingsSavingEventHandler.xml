@@ -1,0 +1,36 @@
+<Type Name="SettingsSavingEventHandler" FullName="System.Configuration.SettingsSavingEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void SettingsSavingEventHandler(object sender, CancelEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SettingsSavingEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.SettingsSavingEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.ComponentModel.CancelEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses, in der Regel einen Container oder datengebundenen-Auflistung.</param>
+    <param name="e">Ein <see cref="T:System.ComponentModel.CancelEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode zur Behandlung des <see cref="E:System.Configuration.ApplicationSettingsBase.SettingsSaving" />-Ereignisses dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> Ereignis tritt auf, unmittelbar bevor eine Gruppe von Anwendungseinstellungen werden beibehalten, in der Regel während der Ausführung der <xref:System.Configuration.ApplicationSettingsBase.Save%2A> Methode eine Wrapperklasse abgeleitet <xref:System.Configuration.ApplicationSettingsBase>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

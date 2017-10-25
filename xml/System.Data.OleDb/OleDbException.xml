@@ -1,0 +1,132 @@
+<Type Name="OleDbException" FullName="System.Data.OleDb.OleDbException">
+  <TypeSignature Language="C#" Value="public sealed class OleDbException : System.Data.Common.DbException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit OleDbException extends System.Data.Common.DbException" />
+  <TypeSignature Language="DocId" Value="T:System.Data.OleDb.OleDbException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.DbException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die Ausnahme, die ausgelöst wird, wenn die zugrunde liegende Anbieter eine Warnung oder ein Fehler für eine OLE DB-Datenquelle zurückgibt. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse wird erstellt, wenn der .NET Framework-Datenanbieter für OLE DB einen vom Server generierten Fehler trifft. (Clientseitige Fehler werden als standard common Language Runtime-Ausnahmen ausgelöst.) <xref:System.Data.OleDb.OleDbException> enthält immer mindestens eine Instanz von <xref:System.Data.OleDb.OleDbError>.  
+  
+ Wenn die Auswirkungen des Fehlers zu schwerwiegend sind, trennt der Server möglicherweise die <xref:System.Data.OleDb.OleDbConnection>. Die Benutzer können die Verbindung aber erneut öffnen und fortfahren.  
+  
+ Allgemeine Informationen zur Behandlung von Ausnahmen für einen .NET Framework-Datenanbieter finden Sie unter <xref:System.Data.SqlClient.SqlException>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein <xref:System.Data.OleDb.OleDbException> aufgrund einer fehlenden Datenquelle, und klicken Sie dann die Ausnahme angezeigt.  
+  
+ [!code-csharp[Classic WebData OleDbException Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbException Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbException Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbException Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ErrorCode">
+      <MemberSignature Language="C#" Value="public override int ErrorCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ErrorCode" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbException.ErrorCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Data.OleDb.OleDbException/ErrorCodeConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das HRESULT des Fehlers ab.</summary>
+        <value>Das HRESULT des Fehlers.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Errors">
+      <MemberSignature Language="C#" Value="public System.Data.OleDb.OleDbErrorCollection Errors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.OleDb.OleDbErrorCollection Errors" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbException.Errors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbErrorCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung einer oder mehrerer <see cref="T:System.Data.OleDb.OleDbError" /> Objekte, mit denen erhalten detaillierte Informationen zu Ausnahmen, die von der .NET Framework-Datenanbieter für OLE DB generiert.</summary>
+        <value>Die gesammelten Instanzen der dem <see cref="T:System.Data.OleDb.OleDbError" /> Klasse.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.OleDb.OleDbErrorCollection> Klasse enthält immer mindestens eine Instanz von der <xref:System.Data.OleDb.OleDbError> Klasse.  
+  
+ Dies ist ein Wrapper für die <xref:System.Data.OleDb.OleDbErrorCollection> Auflistung.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt jede <xref:System.Data.OleDb.OleDbError> innerhalb der <xref:System.Data.OleDb.OleDbErrorCollection> Auflistung.  
+  
+ [!code-csharp[Classic WebData OleDbError.Message Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbError.Message Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbError.Message Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbError.Message Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo si, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo si, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="si" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="si">Die <see cref="T:System.Runtime.Serialization.SerializationInfo" />, die die serialisierten Objektdaten für die ausgelöste Ausnahme enthält.</param>
+        <param name="context">Der <see cref="T:System.Runtime.Serialization.StreamingContext" />, der die Kontextinformationen über die Quelle oder das Ziel enthält.</param>
+        <summary>Dieser Member überschreibt <see cref="M:System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Odbc.OdbcException.GetObjectData%2A> legt die <xref:System.Runtime.Serialization.SerializationInfo> mit allen Daten für das Ausnahmeobjekt fest, das für die Serialisierung vorgesehen ist. Während der Deserialisierung wird die Ausnahme aus der über den Stream übertragenen <xref:System.Runtime.Serialization.SerializationInfo> wiederhergestellt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="si" /> Parameter ist ein null-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

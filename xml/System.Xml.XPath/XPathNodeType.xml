@@ -1,0 +1,321 @@
+<Type Name="XPathNodeType" FullName="System.Xml.XPath.XPathNodeType">
+  <TypeSignature Language="C#" Value="public enum XPathNodeType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed XPathNodeType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.XPath.XPathNodeType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XPath</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Definiert die XPath-Knotentypen, die von zurückgegeben werden, können die <see cref="T:System.Xml.XPath.XPathNavigator" /> Klasse.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="All" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.XPath.XPathNodeType All = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.XPath.XPathNodeType.All" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Keines der <see cref="T:System.Xml.XPath.XPathNodeType" /> Knotentypen aufgeführt sind.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Attribute">
+      <MemberSignature Language="C#" Value="Attribute" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.XPath.XPathNodeType Attribute = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.XPath.XPathNodeType.Attribute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Attribut, z. B. <c>Id = '123'</c>.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Comment">
+      <MemberSignature Language="C#" Value="Comment" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.XPath.XPathNodeType Comment = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.XPath.XPathNodeType.Comment" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Kommentar, z. B. <c> &lt;!--Kommentars--&gt;</c></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Element">
+      <MemberSignature Language="C#" Value="Element" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.XPath.XPathNodeType Element = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.XPath.XPathNodeType.Element" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Element, z. B. <c> &lt;Element&gt;</c>.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="Namespace" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.XPath.XPathNodeType Namespace = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.XPath.XPathNodeType.Namespace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Namespace z. B. <c>Xmlns = "Namespace"</c>.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessingInstruction">
+      <MemberSignature Language="C#" Value="ProcessingInstruction" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.XPath.XPathNodeType ProcessingInstruction = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.XPath.XPathNodeType.ProcessingInstruction" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine verarbeitungsanweisung, wie z. B. <c> &lt;? Pi Test?&gt; </c>. Dies schließt nicht die XML-Deklarationen, die nicht sichtbar, sind die <see cref="T:System.Xml.XPath.XPathNavigator" /> Klasse.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Root">
+      <MemberSignature Language="C#" Value="Root" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.XPath.XPathNodeType Root = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.XPath.XPathNodeType.Root" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Stammknoten der XML-Dokument oder die Knoten der Struktur.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SignificantWhitespace">
+      <MemberSignature Language="C#" Value="SignificantWhitespace" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.XPath.XPathNodeType SignificantWhitespace = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.XPath.XPathNodeType.SignificantWhitespace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Knoten mit Leerzeichen und <c>XML: Space</c> festgelegt <c>beibehalten</c>.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="Text" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.XPath.XPathNodeType Text = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.XPath.XPathNodeType.Text" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Textinhalt eines Knotens. Die Typen (DOKUMENTOBJEKTMODELL) Text und CDATA-Knoten entspricht. Enthält mindestens ein Zeichen an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Whitespace">
+      <MemberSignature Language="C#" Value="Whitespace" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.XPath.XPathNodeType Whitespace = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.XPath.XPathNodeType.Whitespace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Knoten mit nur Leerzeichen und keine signifikanten Leerraum. Leerzeichen sind <c>#x20</c>, <c>#x9</c>, <c>#xD</c>, oder <c>#xA</c>.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

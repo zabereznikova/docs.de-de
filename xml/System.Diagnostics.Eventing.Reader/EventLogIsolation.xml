@@ -1,0 +1,66 @@
+<Type Name="EventLogIsolation" FullName="System.Diagnostics.Eventing.Reader.EventLogIsolation">
+  <TypeSignature Language="C#" Value="public enum EventLogIsolation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EventLogIsolation extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Eventing.Reader.EventLogIsolation" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Definiert die Standardzugriffsberechtigungen für das Ereignisprotokoll. Die Anwendungs- und Werte geben an, dass das Protokoll die Zugriffssteuerungsliste (ACL) und den entsprechenden Windows-Anwendungsprotokoll (die Ereignisprotokolle Anwendung oder dem System) und die Freigabe der Sitzung Ereignis Ereignisablaufverfolgung für Windows (ETW) mit anderen Protokollen vom gleichen Isolationstyp gemeinsam verwendet wird. Alle Kanäle mit benutzerdefinierter Isolation verwenden Sie eine private ETW-Sitzung.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Application">
+      <MemberSignature Language="C#" Value="Application" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.Eventing.Reader.EventLogIsolation Application = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.Eventing.Reader.EventLogIsolation.Application" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Eventing.Reader.EventLogIsolation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Protokoll gibt die Zugriffssteuerungsliste für das Anwendungsereignisprotokoll frei und teilt die ETW-Sitzung mit anderen Protokollen, die das Isolieren von Webanwendungen verfügen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Custom">
+      <MemberSignature Language="C#" Value="Custom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.Eventing.Reader.EventLogIsolation Custom = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.Eventing.Reader.EventLogIsolation.Custom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Eventing.Reader.EventLogIsolation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Ereignisprotokoll ist ein benutzerdefiniertes Ereignisprotokoll, das eine eigenen private ETW-Sitzung verwendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="System">
+      <MemberSignature Language="C#" Value="System" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.Eventing.Reader.EventLogIsolation System = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.Eventing.Reader.EventLogIsolation.System" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Eventing.Reader.EventLogIsolation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Protokoll gibt die Zugriffssteuerungsliste für das Systemereignisprotokoll frei und teilt die ETW-Sitzung mit anderen Protokollen, die Isolation System haben.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

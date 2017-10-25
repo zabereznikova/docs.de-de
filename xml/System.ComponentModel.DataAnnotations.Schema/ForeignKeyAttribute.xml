@@ -1,0 +1,78 @@
+<Type Name="ForeignKeyAttribute" FullName="System.ComponentModel.DataAnnotations.Schema.ForeignKeyAttribute">
+  <TypeSignature Language="C#" Value="public class ForeignKeyAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ForeignKeyAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.DataAnnotations.Schema.ForeignKeyAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bezeichnet eine Eigenschaft, die in einer Beziehung als Fremdschlüssel verwendet wird. Die Anmerkung kann in die Fremdschlüsseleigenschaft eingefügt werden und den Namen der zugeordneten Navigationseigenschaft angeben, oder sie kann in die Navigationseigenschaft eingefügt werden und den Namen des zugeordneten Fremdschlüssels angeben.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ForeignKeyAttribute (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.Schema.ForeignKeyAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Wenn Sie das Fremdschlüsselattribut zur Fremdschlüsseleigenschaft hinzufügen, sollten Sie den Namen der zugeordneten Navigationseigenschaft angeben. Wenn Sie das Fremdschlüsselattribut zur Navigationseigenschaft hinzufügen, sollten Sie den Namen der zugeordneten Fremdschlüssel angeben. Wenn eine Navigationseigenschaft über mehrere Fremdschlüssel verfügt, verwenden Sie Kommas zur Trennung der Liste mit Fremdschlüsselnamen. Weitere Informationen finden Sie unter [erste Datenanmerkungen Code](http://msdn.microsoft.com/data/jj591583#relationships).</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.DataAnnotations.Schema.ForeignKeyAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.Schema.ForeignKeyAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wenn Sie das Fremdschlüsselattribut zur Fremdschlüsseleigenschaft hinzufügen, sollten Sie den Namen der zugeordneten Navigationseigenschaft angeben. Wenn Sie das Fremdschlüsselattribut zur Navigationseigenschaft hinzufügen, sollten Sie den Namen der zugeordneten Fremdschlüssel angeben. Wenn eine Navigationseigenschaft über mehrere Fremdschlüssel verfügt, verwenden Sie Kommas zur Trennung der Liste mit Fremdschlüsselnamen. Weitere Informationen finden Sie unter [erste Datenanmerkungen Code](http://msdn.microsoft.com/data/jj591583#relationships).</summary>
+        <value>Der Name der zugeordneten Navigationseigenschaft oder der zugeordneten Fremdschlüsseleigenschaft.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

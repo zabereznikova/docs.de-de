@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Media.Converters">
+  <Docs>
+    <summary>Enthält Klassen, mit denen, die <see cref="T:System.Windows.Markup.Primitives.MarkupWriter" /> für die Serialisierung der Extensible Application Markup Language (XAML).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

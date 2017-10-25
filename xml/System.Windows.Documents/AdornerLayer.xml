@@ -1,0 +1,337 @@
+<Type Name="AdornerLayer" FullName="System.Windows.Documents.AdornerLayer">
+  <TypeSignature Language="C#" Value="public class AdornerLayer : System.Windows.FrameworkElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AdornerLayer extends System.Windows.FrameworkElement" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.AdornerLayer" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.FrameworkElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Oberfläche zum Rendern von Adornern dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Adornerebene ist garantiert auf einer höheren Z-Reihenfolge als die Elemente, die das gestaltet wird, sodass Adorner immer über das erweiterte Element gerendert werden.  
+  
+> [!NOTE]
+>  Das übergeordnete Element des ein <xref:System.Windows.Documents.Adorner> ist die <xref:System.Windows.Documents.AdornerLayer> , rendert die **Adorner**, nicht das Element, das gestaltet wird.  
+  
+> [!NOTE]
+>  Sämtliche Elemente auf der Adorner-Ebene werden vor allen anderen Stilen gerendert, die Sie festgelegt haben. Anders gesagt, befinden sich Adorner visuell stets im Vordergrund und können in der Z-Reihenfolge nicht überschrieben werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Windows.Documents.Adorner adorner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Windows.Documents.Adorner adorner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.AdornerLayer.Add(System.Windows.Documents.Adorner)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="adorner" Type="System.Windows.Documents.Adorner" />
+      </Parameters>
+      <Docs>
+        <param name="adorner">Der hinzuzufügende Adorner.</param>
+        <summary>Fügt der Adornerebene einen Adorner hinzu.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Wird ausgelöst, wenn *Adorner* ist **null**.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AdornerHitTest">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.AdornerHitTestResult AdornerHitTest (System.Windows.Point point);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.AdornerHitTestResult AdornerHitTest(valuetype System.Windows.Point point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.AdornerLayer.AdornerHitTest(System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.AdornerHitTestResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="point">Der Punkt, Treffertest ausgeführt werden soll.</param>
+        <summary>Ruft eine <see cref="T:System.Windows.Media.AdornerHitTestResult" /> für einen angegebenen Punkt.</summary>
+        <returns>Ein <see cref="T:System.Windows.Media.AdornerHitTestResult" /> für den angegebenen Punkt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Media.AdornerHitTestResult> enthält die <xref:System.Windows.Media.Visual> wurde erreicht wird, und die Funktionsindikator, den das visuelle Element gehört.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrangeOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size ArrangeOverride (System.Windows.Size finalSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size ArrangeOverride(valuetype System.Windows.Size finalSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.AdornerLayer.ArrangeOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="finalSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="finalSize">Die Größe von seinem übergeordneten Element für dieses Element reserviert.</param>
+        <summary>Positioniert untergeordnete Elemente und bestimmt eine Größe für die <see cref="T:System.Windows.Documents.AdornerLayer" />.</summary>
+        <returns>Die tatsächlich vom Element benötigte Größe.  Dieser Rückgabewert ist in der Regel identisch mit der an übergebene Wert *FinalSize*.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAdornerLayer">
+      <MemberSignature Language="C#" Value="public static System.Windows.Documents.AdornerLayer GetAdornerLayer (System.Windows.Media.Visual visual);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Documents.AdornerLayer GetAdornerLayer(class System.Windows.Media.Visual visual) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.AdornerLayer.GetAdornerLayer(System.Windows.Media.Visual)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.AdornerLayer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visual" Type="System.Windows.Media.Visual" />
+      </Parameters>
+      <Docs>
+        <param name="visual">Das visuelle Element, für das eine Adornerebene gesucht werden soll.</param>
+        <summary>Gibt die erste Adornerebene in der visuellen Struktur über einem angegebenen <see cref="T:System.Windows.Media.Visual" />.</summary>
+        <returns>Eine Adornerebene für das angegebene visuelle Element oder **null** , wenn keine Adornerebene gefunden werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies `static` Methode durchläuft die visuelle Struktur, die beginnend am angegebenen <xref:System.Windows.Media.Visual> und gibt die erste Adornerebene gefunden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wird ausgelöst, wenn *visual* ist **null**.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAdorners">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.Adorner[] GetAdorners (System.Windows.UIElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Documents.Adorner[] GetAdorners(class System.Windows.UIElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.AdornerLayer.GetAdorners(System.Windows.UIElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.Adorner[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Die <see cref="T:System.Windows.UIElement" /> ein Array von Adornern abgerufen.</param>
+        <summary>Gibt ein Array von Adornern, die gebunden sind in den angegebenen <see cref="T:System.Windows.UIElement" />.</summary>
+        <returns>Ein Array von Adornern, die den angegebenen ergänzen <see cref="T:System.Windows.UIElement" />, oder **null** , wenn es keine Adorner an das angegebene Element gebunden sind.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVisualChild">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Media.Visual GetVisualChild (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Media.Visual GetVisualChild(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.AdornerLayer.GetVisualChild(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Visual</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Indexposition des gewünschten <see cref="T:System.Windows.Media.Visual" /> untergeordneten.</param>
+        <summary>Ruft eine <see cref="T:System.Windows.Media.Visual" /> an der angegebenen untergeordneten <paramref name="index" /> Position.</summary>
+        <returns>Ein <see cref="T:System.Windows.Media.Visual" /> untergeordnetes Element eines übergeordneten Elements <see cref="T:System.Windows.Documents.AdornerLayer" /> Element.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine abgeleitete Klasse muss diese Methode zur Unterstützung implementieren <xref:System.Windows.Media.Visual> untergeordneten Elemente. Die Methode muss das untergeordnete Element am angegebenen Index zurück. Der Index muss zwischen `0` und (<xref:System.Windows.Documents.AdornerLayer.VisualChildrenCount%2A>`-1`).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogicalChildren">
+      <MemberSignature Language="C#" Value="protected override System.Collections.IEnumerator LogicalChildren { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerator LogicalChildren" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.AdornerLayer.LogicalChildren" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der die logischen untergeordneten Elemente dieses durchlaufen kann <see cref="T:System.Windows.Documents.AdornerLayer" /> Element.</summary>
+        <value>Eine <see cref="T:System.Collections.IEnumerator" />. Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size MeasureOverride (System.Windows.Size constraint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size MeasureOverride(valuetype System.Windows.Size constraint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.AdornerLayer.MeasureOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constraint" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="constraint">Nicht verwendet.</param>
+        <summary>Misst die untergeordneten Elemente erforderliche Größe und bestimmt eine Größe für die <see cref="T:System.Windows.Documents.AdornerLayer" />.</summary>
+        <returns>Diese Methode gibt immer eine <see cref="T:System.Windows.Size" /> (0,0).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Documents.AdornerLayer> sollten die gleiche Größe wie das übergeordnete Objekt und keine Layoutbereich nutzen.  
+  
+ Diese Methode überschreibt <xref:System.Windows.FrameworkElement.MeasureOverride%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Windows.Documents.Adorner adorner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Windows.Documents.Adorner adorner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.AdornerLayer.Remove(System.Windows.Documents.Adorner)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="adorner" Type="System.Windows.Documents.Adorner" />
+      </Parameters>
+      <Docs>
+        <param name="adorner">Das zu entfernende <see cref="T:System.Windows.Documents.Adorner" />-Element.</param>
+        <summary>Entfernt das angegebene <see cref="T:System.Windows.Documents.Adorner" /> aus der Adornerebene.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt einfach auf, wenn der angegebene Adorner nicht vorhanden ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wird ausgelöst, wenn *Adorner* ist **null**.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="public void Update ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Update() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.AdornerLayer.Update" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aktualisiert das Layout und zeichnet alle Adorner in der Adornerebene neu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="public void Update (System.Windows.UIElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Update(class System.Windows.UIElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.AdornerLayer.Update(System.Windows.UIElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Die <see cref="T:System.Windows.UIElement" /> den zu aktualisierenden Adornern zugeordnet.</param>
+        <summary>Aktualisiert das Layout und zeichnet alle Adorner in der Adornerebene, die gebunden sind neu in den angegebenen <see cref="T:System.Windows.UIElement" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Wird ausgelöst, wenn *Element* ist **null**.</exception>
+        <exception cref="T:System.InvalidOperationException">Wird ausgelöst, wenn das angegebene Element nicht gefunden werden kann.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VisualChildrenCount">
+      <MemberSignature Language="C#" Value="protected override int VisualChildrenCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 VisualChildrenCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.AdornerLayer.VisualChildrenCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der untergeordneten <see cref="T:System.Windows.Media.Visual" /> Objekte in dieser Instanz von <see cref="T:System.Windows.Documents.AdornerLayer" />.</summary>
+        <value>Die Anzahl der untergeordneten <see cref="T:System.Windows.Media.Visual" /> Objekte in dieser Instanz von <see cref="T:System.Windows.Documents.AdornerLayer" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Klassen überschreiben diese Eigenschaft, um die visualisierungscodes beim Auflisten der untergeordneten visuellen Elemente aktivieren. Abgeleitete Klassen müssen von dieser Methode die Anzahl der untergeordneten Elemente zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

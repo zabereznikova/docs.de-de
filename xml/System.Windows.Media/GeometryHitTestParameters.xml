@@ -1,0 +1,90 @@
+<Type Name="GeometryHitTestParameters" FullName="System.Windows.Media.GeometryHitTestParameters">
+  <TypeSignature Language="C#" Value="public class GeometryHitTestParameters : System.Windows.Media.HitTestParameters" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GeometryHitTestParameters extends System.Windows.Media.HitTestParameters" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.GeometryHitTestParameters" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.HitTestParameters</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt eine <see cref="T:System.Windows.Media.Geometry" /> als Parameter für Treffertests bei einer visuellen Struktur verwendet werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit der <xref:System.Windows.Media.GeometryHitTestParameters> -Klasse, die Sie verwenden eine <xref:System.Windows.Media.Geometry> für Treffertests, um festzustellen, ob alle visuellen Objekts überschneidet Wert der <xref:System.Windows.Media.Geometry> Wert.  
+  
+ Sie können auch Treffertest mit einer <xref:System.Windows.Point> Wert durch das Erstellen einer <xref:System.Windows.Media.PointHitTestParameters> Objekt.  
+  
+> [!NOTE]
+>  [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]Treffertests berücksichtigt nur die gefärbten Bereich einer Geometrie während eines Treffertests. Wenn Sie eine Punkt-erstellen <xref:System.Windows.Media.Geometry>, den der Treffertest keine Überschneidung, da ein Punkt keinen Bereich aufweist.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie ein Treffertest mit eingerichtet <xref:System.Windows.Media.GeometryHitTestParameters> für die <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> Methode. Die <xref:System.Windows.Point> -Wert, der übergeben wird die `OnMouseDown` Methode dient zum Erstellen einer <xref:System.Windows.Media.Geometry> Objekt, um den Bereich des Treffertests zu erweitern.  
+  
+ [!code-csharp[HitTestingOverview#HitTestingOverviewSnippet10](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/GeometryHitTest.cs#hittestingoverviewsnippet10)]
+ [!code-vb[HitTestingOverview#HitTestingOverviewSnippet10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/geometryhittest.vb#hittestingoverviewsnippet10)]  
+  
+ Die <xref:System.Windows.Media.GeometryHitTestResult.IntersectionDetail%2A> Eigenschaft <xref:System.Windows.Media.GeometryHitTestResult> enthält Informationen über die Ergebnisse eines Treffertests verwendet eine <xref:System.Windows.Media.Geometry> Parameter als Treffer zu testen. Die folgende Abbildung zeigt die Beziehung zwischen der Treffertestgeometrie (der blaue Kreis) und dem Zielobjekt (das rote Quadrat).  
+  
+ ![Diagramm von IntersectionDetail bei Treffertests](~/add/media/intersectiondetail01.png "Diagramm von IntersectionDetail bei Treffertests")  
+Schnittmenge zwischen Treffertest Geometrie- und Ziel-Objekt  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GeometryHitTestParameters (System.Windows.Media.Geometry geometry);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Media.Geometry geometry) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GeometryHitTestParameters.#ctor(System.Windows.Media.Geometry)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="geometry" Type="System.Windows.Media.Geometry" />
+      </Parameters>
+      <Docs>
+        <param name="geometry">Die <see cref="T:System.Windows.Media.Geometry" /> Wert, der für die Treffertestgeometrie verwendet.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Media.GeometryHitTestParameters" /> -Klasse mit dem angegebenen <see cref="T:System.Windows.Media.Geometry" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie ein Treffertest mit einrichten <xref:System.Windows.Media.GeometryHitTestParameters> für die <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> Methode. Ein <xref:System.Windows.Point> Wert dient zum Erstellen einer <xref:System.Windows.Media.Geometry> Objekt, das den Bereich des Treffertests über einen größeren Anzeigebereich zu erweitern.  
+  
+ [!code-csharp[HitTestingOverview#HitTestingOverviewSnippet12](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/GeometryHitTest.cs#hittestingoverviewsnippet12)]
+ [!code-vb[HitTestingOverview#HitTestingOverviewSnippet12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/geometryhittest.vb#hittestingoverviewsnippet12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HitGeometry">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Geometry HitGeometry { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Geometry HitGeometry" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GeometryHitTestParameters.HitGeometry" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Geometry</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Media.Geometry" /> , definiert die Treffertestgeometrie für diese <see cref="T:System.Windows.Media.GeometryHitTestParameters" /> Instanz.</summary>
+        <value>Die <see cref="T:System.Windows.Media.Geometry" /> , die den treffertestbereich definiert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

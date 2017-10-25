@@ -1,0 +1,13 @@
+<Namespace Name="System.Runtime.Remoting.Services">
+  <Docs>
+    <summary>Die <see cref="N:System.Runtime.Remoting.Services" /> Dienstklassen, die die Funktionalität für .NET Framework-Namespace enthält. Einer der wichtigsten Klassen dieses Namespaces ist die <see cref="T:System.Runtime.Remoting.Services.TrackingServices" /> Klasse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Remoting.Services.TrackingServices> Klasse bietet einen Überwachungsdienst mit austauschbaren Handler, die erkennen können, wenn Objekte gemarshallt und Marshalling sind. Austauschbare Handler können erstellt werden, durch die Implementierung der <xref:System.Runtime.Remoting.Services.ITrackingHandler> Schnittstelle. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Runtime.InteropServices.Marshal>-Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

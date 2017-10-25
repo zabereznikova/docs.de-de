@@ -1,0 +1,584 @@
+<Type Name="XPathItem" FullName="System.Xml.XPath.XPathItem">
+  <TypeSignature Language="C#" Value="public abstract class XPathItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit XPathItem extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.XPath.XPathItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XPath</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Element in der XQuery 1.0 und XPath 2.0-Datenmodells.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Element ist ein Knoten oder ein atomarer Wert.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Beim Erben von der <see cref="T:System.Xml.XPath.XPathItem" /> -Klasse, müssen Sie die folgenden Member überschreiben: <see cref="P:System.Xml.XPath.XPathItem.IsNode" />:  
+  
+-   <see cref="P:System.Xml.XPath.XPathItem.TypedValue" />  
+  
+-   <see cref="P:System.Xml.XPath.XPathItem.Value" />  
+  
+-   <see cref="M:System.Xml.XPath.XPathItem.ValueAs(System.Type,System.Xml.IXmlNamespaceResolver)" />  
+  
+-   <see cref="P:System.Xml.XPath.XPathItem.ValueAsBoolean" />  
+  
+-   <see cref="P:System.Xml.XPath.XPathItem.ValueAsDateTime" />  
+  
+-   <see cref="P:System.Xml.XPath.XPathItem.ValueAsDouble" />  
+  
+-   <see cref="P:System.Xml.XPath.XPathItem.ValueAsInt" />  
+  
+-   <see cref="P:System.Xml.XPath.XPathItem.ValueAsLong" />  
+  
+-   <see cref="P:System.Xml.XPath.XPathItem.ValueType" />  
+  
+-   <see cref="P:System.Xml.XPath.XPathItem.XmlType" /></para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XPathItem ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathItem.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.XPath.XPathItem" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird von abgeleiteten Klassenkonstruktoren Zustand bei dieser Art initialisiert aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNode">
+      <MemberSignature Language="C#" Value="public abstract bool IsNode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNode" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathItem.IsNode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft einen Wert, der angibt, ob das Element einen XPath-Knoten darstellt, oder ein atomarer Wert.</summary>
+        <value>
+          <see langword="true" />Wenn das Element einen XPath-Knoten darstellt; <see langword="false" /> , wenn das Element einen atomaren Wert darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypedValue">
+      <MemberSignature Language="C#" Value="public abstract object TypedValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object TypedValue" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathItem.TypedValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse das aktuelle Element als ein geschachteltes Objekt vom am besten geeigneten ab [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)] Typ entsprechend seiner Schematyp.</summary>
+        <value>Das aktuelle Element als ein geschachteltes Objekt vom am besten geeigneten [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Typ.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Geben Sie, wenn der Wert des Elements nicht gemäß dem angegebenen Schema gültig ist, den Wert von der <xref:System.Xml.XPath.XPathItem.TypedValue%2A> Eigenschaft entspricht dem Wert des der <xref:System.Xml.XPath.XPathItem.Value%2A> Eigenschaft.  
+  
+ Weitere Informationen zum Typ unterstützen, der <xref:System.Xml?displayProperty=nameWithType> Namespace finden Sie unter [Typ in den System.Xml-Klassen unterstützen](~/docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public abstract string Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathItem.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse die <see langword="string" /> Wert des Elements.</summary>
+        <value>Die <see langword="string" /> Wert des Elements.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueAs">
+      <MemberSignature Language="C#" Value="public virtual object ValueAs (Type returnType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object ValueAs(class System.Type returnType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathItem.ValueAs(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="returnType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="returnType">Der Typ, der Wert des Elements zurück.</param>
+        <summary>Gibt den Wert des Elements als den angegebenen Typ zurück.</summary>
+        <returns>Der Wert des Elements als angeforderten Typ.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ruft beim Überschreiben in einer abgeleiteten Klasse die <xref:System.Xml.XPath.XPathItem.ValueAs%2A> Methode versucht, den Wert des Elements, das Konvertieren der [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)] angegebenen Typ.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.FormatException">Der Wert des Elements ist nicht im richtigen Format für den Zieltyp.</exception>
+        <exception cref="T:System.InvalidCastException">Die versuchte Umwandlung ist ungültig.</exception>
+        <exception cref="T:System.OverflowException">Die versuchte Typumwandlung führte zu einem Überlauf.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueAs">
+      <MemberSignature Language="C#" Value="public abstract object ValueAs (Type returnType, System.Xml.IXmlNamespaceResolver nsResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object ValueAs(class System.Type returnType, class System.Xml.IXmlNamespaceResolver nsResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathItem.ValueAs(System.Type,System.Xml.IXmlNamespaceResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="returnType" Type="System.Type" />
+        <Parameter Name="nsResolver" Type="System.Xml.IXmlNamespaceResolver" />
+      </Parameters>
+      <Docs>
+        <param name="returnType">Der Typ, der den Wert des Elements als zurückgegeben werden soll.</param>
+        <param name="nsResolver">Das zum Auflösen von Namespacepräfixen verwendete <see cref="T:System.Xml.IXmlNamespaceResolver" />-Objekt.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse gibt den Wert des Elements den angegebenen Typ unter Verwendung der <see cref="T:System.Xml.IXmlNamespaceResolver" /> angegebene-Objekt zum Auflösen von Namespacepräfixen verwendet.</summary>
+        <returns>Der Wert des Elements als angeforderten Typ.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ruft beim Überschreiben in einer abgeleiteten Klasse die <xref:System.Xml.XPath.XPathItem.ValueAs%2A> Methode versucht, den Wert des Elements, das Konvertieren der [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)] angegebenen Typ.  
+  
+ Die <xref:System.Xml.IXmlNamespaceResolver> Objekt wird zum Auflösen von Namespacepräfixen im Zusammenhang mit der typkonvertierungen verwendet. Z. B. beim Konvertieren einer `xs:QName` auf eine `xs:string`.  
+  
+ Weitere Informationen zum Typ unterstützen, der <xref:System.Xml?displayProperty=nameWithType> Namespace finden Sie unter [Typ in den System.Xml-Klassen unterstützen](~/docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.FormatException">Der Wert des Elements ist nicht im richtigen Format für den Zieltyp.</exception>
+        <exception cref="T:System.InvalidCastException">Die versuchte Umwandlung ist ungültig.</exception>
+        <exception cref="T:System.OverflowException">Die versuchte Typumwandlung führte zu einem Überlauf.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueAsBoolean">
+      <MemberSignature Language="C#" Value="public abstract bool ValueAsBoolean { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ValueAsBoolean" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathItem.ValueAsBoolean" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft den Wert des Elements als eine <see cref="T:System.Boolean" />.</summary>
+        <value>Der Wert des Elements als eine <see cref="T:System.Boolean" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.XPath.XPathItem.ValueAsDateTime%2A> Eigenschaft versucht, den Wert des Elements, das Konvertieren der [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)] <xref:System.Boolean> Typ gemäß den XPath 2.0-Regeln für die Typumwandlung des Elements.  
+  
+ Weitere Informationen zum Typ unterstützen, der <xref:System.Xml?displayProperty=nameWithType> Namespace finden Sie unter [Typ in den System.Xml-Klassen unterstützen](~/docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.FormatException">Der Wert des Elements ist nicht im richtigen Format für die <see cref="T:System.Boolean" /> Typ.</exception>
+        <exception cref="T:System.InvalidCastException">Die versuchte Typumwandlung in <see cref="T:System.Boolean" /> ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueAsDateTime">
+      <MemberSignature Language="C#" Value="public abstract DateTime ValueAsDateTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime ValueAsDateTime" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathItem.ValueAsDateTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft den Wert des Elements als eine <see cref="T:System.DateTime" />.</summary>
+        <value>Der Wert des Elements als eine <see cref="T:System.DateTime" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.XPath.XPathItem.ValueAsDateTime%2A> Eigenschaft versucht, den Wert des Elements, das Konvertieren der [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)] <xref:System.DateTime> Typ gemäß den XPath 2.0-Regeln für die Typumwandlung des Elements.  
+  
+ Weitere Informationen zum Typ unterstützen, der <xref:System.Xml?displayProperty=nameWithType> Namespace finden Sie unter [Typ in den System.Xml-Klassen unterstützen](~/docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.FormatException">Der Wert des Elements ist nicht im richtigen Format für die <see cref="T:System.DateTime" /> Typ.</exception>
+        <exception cref="T:System.InvalidCastException">Die versuchte Typumwandlung in <see cref="T:System.DateTime" /> ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueAsDouble">
+      <MemberSignature Language="C#" Value="public abstract double ValueAsDouble { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ValueAsDouble" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathItem.ValueAsDouble" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft den Wert des Elements als eine <see cref="T:System.Double" />.</summary>
+        <value>Der Wert des Elements als eine <see cref="T:System.Double" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.XPath.XPathItem.ValueAsDouble%2A> Eigenschaft versucht, den Wert des Elements, das Konvertieren der [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)] <xref:System.Double> Typ gemäß den XPath 2.0-Regeln für die Typumwandlung des Elements.  
+  
+ Weitere Informationen zum Typ unterstützen, der <xref:System.Xml?displayProperty=nameWithType> Namespace finden Sie unter [Typ in den System.Xml-Klassen unterstützen](~/docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.FormatException">Der Wert des Elements ist nicht im richtigen Format für die <see cref="T:System.Double" /> Typ.</exception>
+        <exception cref="T:System.InvalidCastException">Die versuchte Typumwandlung in <see cref="T:System.Double" /> ist ungültig.</exception>
+        <exception cref="T:System.OverflowException">Die versuchte Typumwandlung führte zu einem Überlauf.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueAsInt">
+      <MemberSignature Language="C#" Value="public abstract int ValueAsInt { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ValueAsInt" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathItem.ValueAsInt" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft den Wert des Elements als ein <see cref="T:System.Int32" />.</summary>
+        <value>Der Wert des Elements als ein <see cref="T:System.Int32" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.XPath.XPathItem.ValueAsInt%2A> Eigenschaft versucht, den Wert des Elements, das Konvertieren der [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)] <xref:System.Int32> Typ gemäß den XPath 2.0-Regeln für die Typumwandlung des Elements.  
+  
+ Weitere Informationen zum Typ unterstützen, der <xref:System.Xml?displayProperty=nameWithType> Namespace finden Sie unter [Typ in den System.Xml-Klassen unterstützen](~/docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.FormatException">Der Wert des Elements ist nicht im richtigen Format für die <see cref="T:System.Int32" /> Typ.</exception>
+        <exception cref="T:System.InvalidCastException">Die versuchte Typumwandlung in <see cref="T:System.Int32" /> ist ungültig.</exception>
+        <exception cref="T:System.OverflowException">Die versuchte Typumwandlung führte zu einem Überlauf.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueAsLong">
+      <MemberSignature Language="C#" Value="public abstract long ValueAsLong { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 ValueAsLong" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathItem.ValueAsLong" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft den Wert des Elements als ein <see cref="T:System.Int64" />.</summary>
+        <value>Der Wert des Elements als ein <see cref="T:System.Int64" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.XPath.XPathItem.ValueAsLong%2A> Eigenschaft versucht, den Wert des Elements, das Konvertieren der [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)] <xref:System.Int64> Typ gemäß den XPath 2.0-Regeln für die Typumwandlung des Elements.  
+  
+ Weitere Informationen zum Typ unterstützen, der <xref:System.Xml?displayProperty=nameWithType> Namespace finden Sie unter [Typ in den System.Xml-Klassen unterstützen](~/docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.FormatException">Der Wert des Elements ist nicht im richtigen Format für die <see cref="T:System.Int64" /> Typ.</exception>
+        <exception cref="T:System.InvalidCastException">Die versuchte Typumwandlung in <see cref="T:System.Int64" /> ist ungültig.</exception>
+        <exception cref="T:System.OverflowException">Die versuchte Typumwandlung führte zu einem Überlauf.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueType">
+      <MemberSignature Language="C#" Value="public abstract Type ValueType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ValueType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathItem.ValueType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse die [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)] Typ des Elements.</summary>
+        <value>Die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Typ des Elements. Der Standardwert ist <see cref="T:System.String" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ruft beim Überschreiben in einer abgeleiteten Klasse die <xref:System.Xml.XPath.XPathItem.ValueType%2A> -Eigenschaft ruft die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Typ des typisierten Werts des Elements.  
+  
+ Angenommen, ein Element des Typs `xs:int` müsste eine <xref:System.Xml.XPath.XPathItem.ValueType%2A> von <xref:System.Int32> standardmäßig. Allerdings die <xref:System.Xml.XPath.XPathItem.ValueType%2A> ist möglicherweise eine der gültigen Datentypen, die zugeordnet werden können `xs:int`, wie z. B. <xref:System.Int16> oder <xref:System.Double>.  
+  
+ Weitere Informationen zum Typ unterstützen, der <xref:System.Xml?displayProperty=nameWithType> Namespace finden Sie unter [Typ in den System.Xml-Klassen unterstützen](~/docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Alle Implementierer bereitstellen müssen eine <see cref="P:System.Xml.XPath.XPathItem.ValueType" /> -Eigenschaft für jedes Element, auch wenn es nur <see cref="T:System.String" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlType">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.Schema.XmlSchemaType XmlType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaType XmlType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathItem.XmlType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse die <see cref="T:System.Xml.Schema.XmlSchemaType" /> für das Element.</summary>
+        <value>Die <see cref="T:System.Xml.Schema.XmlSchemaType" /> für das Element.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ruft beim Überschreiben in einer abgeleiteten Klasse die <xref:System.Xml.XPath.XPathItem.XmlType%2A> -Eigenschaft ruft die <xref:System.Xml.Schema.XmlSchemaType> für das Element. Z. B. die <xref:System.Xml.Schema.XmlSchemaSimpleType> oder <xref:System.Xml.Schema.XmlSchemaComplexType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

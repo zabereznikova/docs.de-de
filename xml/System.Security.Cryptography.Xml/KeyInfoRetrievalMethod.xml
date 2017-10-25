@@ -1,0 +1,211 @@
+<Type Name="KeyInfoRetrievalMethod" FullName="System.Security.Cryptography.Xml.KeyInfoRetrievalMethod">
+  <TypeSignature Language="C#" Value="public class KeyInfoRetrievalMethod : System.Security.Cryptography.Xml.KeyInfoClause" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit KeyInfoRetrievalMethod extends System.Security.Cryptography.Xml.KeyInfoClause" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Xml.KeyInfoRetrievalMethod" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.Xml.KeyInfoClause</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Verweise <see cref="T:System.Security.Cryptography.Xml.KeyInfo" /> Objekte, die an einem anderen Speicherort gespeichert werden, wenn XMLDSIG oder XML-Verschlüsselung verwendet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.KeyInfoRetrievalMethod> -Klasse stellt die `<RetrievalMethod>` für XML-Verschlüsselung und digitale Signaturen von XML-Element.  
+  
+ Verwenden der <xref:System.Security.Cryptography.Xml.KeyInfoRetrievalMethod> Klasse, um die gleiche verweisen <xref:System.Security.Cryptography.Xml.KeyInfo> in mehreren XMLDSIG-Signaturen oder eine verschlüsselte XML-Dokumente, insbesondere wenn die referenzierte Informationen groß ist. Z. B. eine `<RetrievalMethod>` Unterelement kann verwendet werden, zu verweisen eine <xref:System.Security.Cryptography.Xml.KeyInfoX509Data> Objekt, das eine Kette x. 509v3-Zertifikat enthält, die den Signaturschlüssel validiert.  
+  
+ Weitere Informationen zu den `<RetrievalMethod>` Element, finden Sie im Abschnitt 4.4.3 XMLDSIG-Spezifikation, die über das World Wide Web Consortium (W3C) unter www.w3.org/TR/xmldsig-core/ verfügbar ist, oder finden Sie in der XML-Verschlüsselung-Spezifikation, die verfügbar ist das W3C am www.w3.org/TR/xmlenc-core/.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyInfoRetrievalMethod ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.KeyInfoRetrievalMethod.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.Xml.KeyInfoRetrievalMethod" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyInfoRetrievalMethod (string strUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string strUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.KeyInfoRetrievalMethod.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="strUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="strUri">Der Uniform Resource Identifier (URI) der Informationen durch die neue Instanz der Verweise auf <see cref="T:System.Security.Cryptography.Xml.KeyInfoRetrievalMethod" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Cryptography.Xml.KeyInfoRetrievalMethod" /> Klasse mit dem angegebenen Uniform Resource Identifier (URI) verweist auf die verwiesen wird <see cref="T:System.Security.Cryptography.Xml.KeyInfo" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyInfoRetrievalMethod (string strUri, string strType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string strUri, string strType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.KeyInfoRetrievalMethod.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="strUri" Type="System.String" />
+        <Parameter Name="typeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="strUri">Der Uniform Resource Identifier (URI) der Informationen durch die neue Instanz der Verweise auf <see cref="T:System.Security.Cryptography.Xml.KeyInfoRetrievalMethod" />.</param>
+        <param name="strType">To be added.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Cryptography.Xml.KeyInfoRetrievalMethod" /> Klasse mit dem angegebenen Uniform Resource Identifier (URI) verweist auf die verwiesen wird <see cref="T:System.Security.Cryptography.Xml.KeyInfo" /> Objekt und der URI, der den Typ des abzurufenden Daten beschreibt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXml">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlElement GetXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Xml.XmlElement GetXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.KeyInfoRetrievalMethod.GetXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die XML-Darstellung der <see cref="T:System.Security.Cryptography.Xml.KeyInfoRetrievalMethod" /> Objekt.</summary>
+        <returns>Die XML-Darstellung der <see cref="T:System.Security.Cryptography.Xml.KeyInfoRetrievalMethod" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.XmlElement> von dieser Methode zurückgegebene Objekt ist für die Verwendung als Unterelement des ein XMLDSIG oder XML-Verschlüsselung geeignet `<KeyInfo>` Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadXml">
+      <MemberSignature Language="C#" Value="public override void LoadXml (System.Xml.XmlElement value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void LoadXml(class System.Xml.XmlElement value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.KeyInfoRetrievalMethod.LoadXml(System.Xml.XmlElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Xml.XmlElement" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das XML-Element, die den Status der gibt an, die <see cref="T:System.Security.Cryptography.Xml.KeyInfoRetrievalMethod" /> Objekt.</param>
+        <summary>Die Eingabe analysiert <see cref="T:System.Xml.XmlElement" /> -Objekt und konfiguriert den internen Zustand des der <see cref="T:System.Security.Cryptography.Xml.KeyInfoRetrievalMethod" /> -Objekts auf.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird normalerweise verwendet, den Prozess ein `<RetrievalMethod>` Unterelement des ein `<KeyInfo>` Element.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="value" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public string Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Type" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.KeyInfoRetrievalMethod.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert einen Uniform Resource Identifier (URI), die den Typ der Daten abgerufen werden sollen.</summary>
+        <value>Ein Uniform Resource Identifier (URI), die den Typ der Daten abgerufen werden sollen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public string Uri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Uri" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.KeyInfoRetrievalMethod.Uri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Uniform Resource Identifier (URI) von der <see cref="T:System.Security.Cryptography.Xml.KeyInfoRetrievalMethod" /> Objekt.</summary>
+        <value>Der Uniform Resource Identifier (URI) von der <see cref="T:System.Security.Cryptography.Xml.KeyInfoRetrievalMethod" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

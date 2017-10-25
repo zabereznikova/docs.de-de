@@ -1,0 +1,328 @@
+<Type Name="BindingCompleteEventArgs" FullName="System.Windows.Forms.BindingCompleteEventArgs">
+  <TypeSignature Language="C#" Value="public class BindingCompleteEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BindingCompleteEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.BindingCompleteEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Forms.Binding.BindingComplete" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.BindingCompleteEventArgs> enthält Informationen zu Ausnahmen oder Fehler, die während eines Bindungsprozesses aufgetreten sind.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Behandlung der <xref:System.Windows.Forms.Binding.BindingComplete> Ereignis. Um diesen Code auszuführen, fügen Sie ihn in einer leeren Codedatei.  
+  
+ [!code-cpp[System.Windows.Forms.DataConnectorBindingComplete#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorBindingComplete/CPP/form1.cpp#3)]
+ [!code-csharp[System.Windows.Forms.DataConnectorBindingComplete#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorBindingComplete/CS/form1.cs#3)]
+ [!code-vb[System.Windows.Forms.DataConnectorBindingComplete#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorBindingComplete/VB/form1.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BindingCompleteEventArgs (System.Windows.Forms.Binding binding, System.Windows.Forms.BindingCompleteState state, System.Windows.Forms.BindingCompleteContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.Binding binding, valuetype System.Windows.Forms.BindingCompleteState state, valuetype System.Windows.Forms.BindingCompleteContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingCompleteEventArgs.#ctor(System.Windows.Forms.Binding,System.Windows.Forms.BindingCompleteState,System.Windows.Forms.BindingCompleteContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="binding" Type="System.Windows.Forms.Binding" />
+        <Parameter Name="state" Type="System.Windows.Forms.BindingCompleteState" />
+        <Parameter Name="context" Type="System.Windows.Forms.BindingCompleteContext" />
+      </Parameters>
+      <Docs>
+        <param name="binding">Die Bindung zugeordneten dieses Vorkommen von einem <see cref="E:System.Windows.Forms.Binding.BindingComplete" /> Ereignis.</param>
+        <param name="state">Einer der <see cref="T:System.Windows.Forms.BindingCompleteState" />-Werte.</param>
+        <param name="context">Einer der <see cref="T:System.Windows.Forms.BindingCompleteContext" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.BindingCompleteEventArgs" /> Klasse mit der angegebenen Bindung, Status "Fehler" und Bindungskontext verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `state`Gibt an, ob die Bindung erfolgreich war oder ein Fehler bzw. eine Ausnahme aufgetreten ist. `context`Gibt an, ob der Fehler aufgetreten ist, wenn das gebundene Steuerelement oder die Datenquelle zu aktualisieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BindingCompleteEventArgs (System.Windows.Forms.Binding binding, System.Windows.Forms.BindingCompleteState state, System.Windows.Forms.BindingCompleteContext context, string errorText);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.Binding binding, valuetype System.Windows.Forms.BindingCompleteState state, valuetype System.Windows.Forms.BindingCompleteContext context, string errorText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingCompleteEventArgs.#ctor(System.Windows.Forms.Binding,System.Windows.Forms.BindingCompleteState,System.Windows.Forms.BindingCompleteContext,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="binding" Type="System.Windows.Forms.Binding" />
+        <Parameter Name="state" Type="System.Windows.Forms.BindingCompleteState" />
+        <Parameter Name="context" Type="System.Windows.Forms.BindingCompleteContext" />
+        <Parameter Name="errorText" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="binding">Die Bindung zugeordneten dieses Vorkommen von einem <see cref="E:System.Windows.Forms.Binding.BindingComplete" /> Ereignis.</param>
+        <param name="state">Einer der <see cref="T:System.Windows.Forms.BindingCompleteState" />-Werte.</param>
+        <param name="context">Einer der <see cref="T:System.Windows.Forms.BindingCompleteContext" />-Werte.</param>
+        <param name="errorText">Der Text "oder" Ausnahme Fehlermeldung aufgetretene während der Bindung Fehler.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.BindingCompleteEventArgs" /> -Klasse mit der angegebenen Bindung, Status "Fehler" und Text und Bindungskontext verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `state`Gibt an, ob die Bindung erfolgreich war oder ein Fehler bzw. eine Ausnahme aufgetreten ist. `context`Gibt an, ob der Fehler aufgetreten ist, wenn das gebundene Steuerelement oder die Datenquelle zu aktualisieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BindingCompleteEventArgs (System.Windows.Forms.Binding binding, System.Windows.Forms.BindingCompleteState state, System.Windows.Forms.BindingCompleteContext context, string errorText, Exception exception);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.Binding binding, valuetype System.Windows.Forms.BindingCompleteState state, valuetype System.Windows.Forms.BindingCompleteContext context, string errorText, class System.Exception exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingCompleteEventArgs.#ctor(System.Windows.Forms.Binding,System.Windows.Forms.BindingCompleteState,System.Windows.Forms.BindingCompleteContext,System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="binding" Type="System.Windows.Forms.Binding" />
+        <Parameter Name="state" Type="System.Windows.Forms.BindingCompleteState" />
+        <Parameter Name="context" Type="System.Windows.Forms.BindingCompleteContext" />
+        <Parameter Name="errorText" Type="System.String" />
+        <Parameter Name="exception" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="binding">Die Bindung zugeordneten dieses Vorkommen von einem <see cref="E:System.Windows.Forms.Binding.BindingComplete" /> Ereignis.</param>
+        <param name="state">Einer der <see cref="T:System.Windows.Forms.BindingCompleteState" />-Werte.</param>
+        <param name="context">Einer der <see cref="T:System.Windows.Forms.BindingCompleteContext" />-Werte.</param>
+        <param name="errorText">Der Text "oder" Ausnahme Fehlermeldung aufgetretene während der Bindung Fehler.</param>
+        <param name="exception">Die <see cref="T:System.Exception" /> , die während der Bindung aufgetreten ist.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.BindingCompleteEventArgs" /> -Klasse mit der angegebenen Bindung, Status "Fehler" und Text, Bindungskontext und Ausnahme.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `state`Gibt an, ob die Bindung erfolgreich war oder ein Fehler bzw. eine Ausnahme aufgetreten ist. `context`Gibt an, ob der Fehler aufgetreten ist, wenn das gebundene Steuerelement oder die Datenquelle zu aktualisieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BindingCompleteEventArgs (System.Windows.Forms.Binding binding, System.Windows.Forms.BindingCompleteState state, System.Windows.Forms.BindingCompleteContext context, string errorText, Exception exception, bool cancel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.Binding binding, valuetype System.Windows.Forms.BindingCompleteState state, valuetype System.Windows.Forms.BindingCompleteContext context, string errorText, class System.Exception exception, bool cancel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingCompleteEventArgs.#ctor(System.Windows.Forms.Binding,System.Windows.Forms.BindingCompleteState,System.Windows.Forms.BindingCompleteContext,System.String,System.Exception,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="binding" Type="System.Windows.Forms.Binding" />
+        <Parameter Name="state" Type="System.Windows.Forms.BindingCompleteState" />
+        <Parameter Name="context" Type="System.Windows.Forms.BindingCompleteContext" />
+        <Parameter Name="errorText" Type="System.String" />
+        <Parameter Name="exception" Type="System.Exception" />
+        <Parameter Name="cancel" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="binding">Die Bindung zugeordneten dieses Vorkommen von einem <see cref="E:System.Windows.Forms.Binding.BindingComplete" /> Ereignis.</param>
+        <param name="state">Einer der <see cref="T:System.Windows.Forms.BindingCompleteState" />-Werte.</param>
+        <param name="context">Einer der <see cref="T:System.Windows.Forms.BindingCompleteContext" />-Werte.</param>
+        <param name="errorText">Der Text "oder" Ausnahme Fehlermeldung aufgetretene während der Bindung Fehler.</param>
+        <param name="exception">Die <see cref="T:System.Exception" /> , die während der Bindung aufgetreten ist.</param>
+        <param name="cancel">
+          <see langword="true" />zum Abbrechen der Bindungsnamens und den Fokus auf das aktuelle Steuerelement beibehalten; <see langword="false" /> ermöglichen den Fokus auf ein anderes Steuerelement zu verschieben.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.BindingCompleteEventArgs" /> Klasse mit der angegebenen Bindung, Status "Fehler" und Text, Bindungskontext, Ausnahme, und gibt an, ob die Bindung abgebrochen werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `state`Gibt an, ob die Bindung erfolgreich war oder ein Fehler bzw. eine Ausnahme aufgetreten ist. `context`Gibt an, ob der Fehler aufgetreten ist, wenn das gebundene Steuerelement oder die Datenquelle zu aktualisieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Binding">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Binding Binding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Binding Binding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.BindingCompleteEventArgs.Binding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Binding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Bindung zugeordneten dieses Vorkommen von einem <see cref="E:System.Windows.Forms.Binding.BindingComplete" /> Ereignis.</summary>
+        <value>Das dieser <see cref="T:System.Windows.Forms.Binding" /> zugeordnete <see cref="T:System.Windows.Forms.BindingCompleteEventArgs" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.BindingCompleteEventArgs.Binding%2A> möglicherweise auch zugeordnet werden die <xref:System.Windows.Forms.BindingSource.BindingComplete> -Ereignis für ein <xref:System.Windows.Forms.BindingSource> oder einer Klasse, die von erben <xref:System.Windows.Forms.BindingManagerBase>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie behandelt die <xref:System.Windows.Forms.BindingManagerBase.BindingComplete> Ereignisses und verwenden Sie die <xref:System.Windows.Forms.BindingCompleteEventArgs> um sicherzustellen, dass mehrere an die gleiche Datenquelle gebundenen Steuerelemente synchronisiert bleiben, wenn einer der Steuerelementwerte geändert wird. Um dieses Beispiel auszuführen, fügen Sie den Code in einem Windows Form, und rufen die `InitializeControlsAndData` Methode aus den Konstruktor des Formulars oder <xref:System.Windows.Forms.Form.Load> Ereignisbehandlungsmethode.  
+  
+ [!code-csharp[System.Windows.Forms.BindingSourceMultipleControls#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/CS/Form1.cs#11)]
+ [!code-vb[System.Windows.Forms.BindingSourceMultipleControls#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/VB/Form1.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingCompleteContext">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.BindingCompleteContext BindingCompleteContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.BindingCompleteContext BindingCompleteContext" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.BindingCompleteEventArgs.BindingCompleteContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.BindingCompleteContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Richtung des Bindungsvorgangs.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.BindingCompleteContext" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie behandelt die <xref:System.Windows.Forms.BindingManagerBase.BindingComplete> Ereignisses und verwenden Sie die <xref:System.Windows.Forms.BindingCompleteEventArgs> um sicherzustellen, dass mehrere an die gleiche Datenquelle gebundenen Steuerelemente synchronisiert bleiben, wenn einer der Steuerelementwerte geändert wird. Um dieses Beispiel auszuführen, fügen Sie den Code in einem Windows Form, und rufen die `InitializeControlsAndData` Methode aus den Konstruktor des Formulars oder <xref:System.Windows.Forms.Form.Load> Ereignisbehandlungsmethode.  
+  
+ [!code-csharp[System.Windows.Forms.BindingSourceMultipleControls#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/CS/Form1.cs#11)]
+ [!code-vb[System.Windows.Forms.BindingSourceMultipleControls#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/VB/Form1.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingCompleteState">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.BindingCompleteState BindingCompleteState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.BindingCompleteState BindingCompleteState" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.BindingCompleteEventArgs.BindingCompleteState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.BindingCompleteState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Abschlusszustand des Bindungsvorgangs.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.BindingCompleteState" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.BindingCompleteEventArgs.BindingCompleteState%2A> zu bestimmen, ob die Bindung erfolgreich war oder ein Fehler bzw. eine Ausnahme aufgetreten ist.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.Binding.BindingComplete?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.Binding> mit dem Namen `Binding1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.Binding.BindingComplete?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#77](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#77)]
+ [!code-vb[System.Windows.Forms.EventExamples#77](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#77)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorText">
+      <MemberSignature Language="C#" Value="public string ErrorText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ErrorText" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.BindingCompleteEventArgs.ErrorText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die textbeschreibung des Fehlers, der während des Bindungsvorgangs aufgetreten sind.</summary>
+        <value>Die Beschreibung des Fehlers, der während des Bindungsvorgangs aufgetreten sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt eine leere Zeichenfolge zurück, wenn während des Bindungsvorgangs kein Fehler aufgetreten ist. Der Wert zurück, der <xref:System.Exception.Message%2A?displayProperty=nameWithType> Eigenschaft, wenn eine Ausnahme auftritt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.Binding.BindingComplete?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.Binding> mit dem Namen `Binding1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.Binding.BindingComplete?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#77](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#77)]
+ [!code-vb[System.Windows.Forms.EventExamples#77](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#77)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public Exception Exception { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Exception" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.BindingCompleteEventArgs.Exception" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ausnahme, die während des Bindungsvorgangs aufgetreten sind.</summary>
+        <value>Die <see cref="T:System.Exception" /> , die während des Bindungsvorgangs aufgetreten ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt `null` , wenn eine Ausnahme während des Bindungsvorgangs nicht aufgetreten ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie behandelt die <xref:System.Windows.Forms.BindingManagerBase.BindingComplete> Ereignisses und verwenden Sie die <xref:System.Windows.Forms.BindingCompleteEventArgs> um sicherzustellen, dass mehrere an die gleiche Datenquelle gebundenen Steuerelemente synchronisiert bleiben, wenn einer der Steuerelementwerte geändert wird. Um dieses Beispiel auszuführen, fügen Sie den Code in einem Windows Form, und rufen die `InitializeControlsAndData` Methode aus den Konstruktor des Formulars oder <xref:System.Windows.Forms.Form.Load> Ereignisbehandlungsmethode.  
+  
+ [!code-csharp[System.Windows.Forms.BindingSourceMultipleControls#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/CS/Form1.cs#11)]
+ [!code-vb[System.Windows.Forms.BindingSourceMultipleControls#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/VB/Form1.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

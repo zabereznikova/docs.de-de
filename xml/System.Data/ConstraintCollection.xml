@@ -1,0 +1,933 @@
+<Type Name="ConstraintCollection" FullName="System.Data.ConstraintCollection">
+  <TypeSignature Language="C#" Value="public sealed class ConstraintCollection : System.Data.InternalDataCollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ConstraintCollection extends System.Data.InternalDataCollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Data.ConstraintCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.InternalDataCollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("CollectionChanged")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Editor("Microsoft.VSDesigner.Data.Design.ConstraintsCollectionEditor, Microsoft.VSDesigner, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Auflistung von Einschränkungen für einen <see cref="T:System.Data.DataTable" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.ConstraintCollection> erfolgt über die <xref:System.Data.DataTable.Constraints%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Die <xref:System.Data.ConstraintCollection> können enthalten beide <xref:System.Data.UniqueConstraint> und <xref:System.Data.ForeignKeyConstraint> von Objekten für die <xref:System.Data.DataTable>. Ein <xref:System.Data.UniqueConstraint> Objekt stellt sicher, dass Daten in einer bestimmten Spalte immer die Integrität der Daten erhalten bleiben eindeutig ist. Die <xref:System.Data.ForeignKeyConstraint> bestimmt, was im zugehörigen erfolgt Benutzertabellen nach Daten in der <xref:System.Data.DataTable> entweder aktualisiert oder gelöscht. Wenn eine Zeile gelöscht wird, z. B. die <xref:System.Data.ForeignKeyConstraint> wird bestimmt, ob auch die zugehörigen Zeilen werden gelöscht (Cascade) oder eine andere Vorgehensweise.  
+  
+> [!NOTE]
+>  Beim Hinzufügen einer <xref:System.Data.DataRelation> , erstellt eine Beziehung zwischen zwei Tabellen, um eine <xref:System.Data.DataSet>, die beide eine <xref:System.Data.ForeignKeyConstraint> und ein <xref:System.Data.UniqueConstraint> werden automatisch erstellt. Die <xref:System.Data.UniqueConstraint> angewendet wird, um die Primärschlüsselspalte in der übergeordneten Tabelle <xref:System.Data.DataTable>, und die Einschränkung wird auf diese Tabelle hinzugefügt <xref:System.Data.ConstraintCollection>. Die <xref:System.Data.ForeignKeyConstraint> auf die Primärschlüsselspalte und die Fremdschlüsselspalte angewendet, und die Einschränkung wird hinzugefügt, zu der untergeordneten Tabelle <xref:System.Data.ConstraintCollection>.  
+  
+ Die <xref:System.Data.ConstraintCollection> verwendet standardmäßige Erfassungsmethoden, z. B. <xref:System.Data.ConstraintCollection.Add%2A>, <xref:System.Data.ConstraintCollection.Clear%2A>, und <xref:System.Data.ConstraintCollection.Remove%2A>. Darüber hinaus die <xref:System.Data.ConstraintCollection.Contains%2A> Methode kann verwendet werden, das Vorhandensein einer bestimmten Einschränkung in der Auflistung gesucht werden soll.  
+  
+ Ein <xref:System.Data.UniqueConstraint> wird erstellt, wenn eine <xref:System.Data.DataColumn> mit seiner <xref:System.Data.DataColumn.Unique%2A> -Eigenschaftensatz auf `true` hinzugefügt wird eine <xref:System.Data.DataTable> des Objekts <xref:System.Data.DataColumnCollection>.  
+  
+ Ein <xref:System.Data.ForeignKeyConstraint> wird erstellt, wenn eine <xref:System.Data.DataRelation> wird hinzugefügt, um eine <xref:System.Data.DataSet> des Objekts <xref:System.Data.DataRelationCollection>.  
+  
+   
+  
+## Examples  
+ Im erste Beispiel erstellt eine <xref:System.Data.DataTable>, und fügt eine <xref:System.Data.DataColumn> (mit seiner <xref:System.Data.DataColumn.Unique%2A> -Eigenschaftensatz auf `true`) auf die <xref:System.Data.DataColumnCollection>. Im zweite Beispiel erstellt eine <xref:System.Data.DataSet>, zwei <xref:System.Data.DataTable> Objekte, vier Spalten und eine <xref:System.Data.DataRelation>. Die Anzahl der Einschränkungen wird dann ausgegeben, um anzugeben, dass eine <xref:System.Data.ForeignKeyConstraint> und ein <xref:System.Data.UniqueConstraint> werden erstellt, wenn eine <xref:System.Data.DataRelation> hinzugefügt wird die <xref:System.Data.DataSet> des Objekts <xref:System.Data.DataRelationCollection.%23ctor%2A>.  
+  
+ [!code-csharp[Classic WebData ConstraintCollection Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData ConstraintCollection Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData ConstraintCollection Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData ConstraintCollection Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Dieser Typ ist für schreibgeschützte Vorgänge mit mehreren Threads sicher. Sie müssen alle Schreibvorgänge synchronisieren.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Data.Constraint constraint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Data.Constraint constraint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.ConstraintCollection.Add(System.Data.Constraint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constraint" Type="System.Data.Constraint" />
+      </Parameters>
+      <Docs>
+        <param name="constraint">Das hinzuzufügende <see langword="Constraint" />.</param>
+        <summary>Fügt der Auflistung das angegebene <see cref="T:System.Data.Constraint" />-Objekt hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Auflistung erfolgreich geändert wurde, durch Hinzufügen oder Entfernen von Einschränkungen, die <xref:System.Data.ConstraintCollection.CollectionChanged> Ereignis auftritt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine <xref:System.Data.UniqueConstraint> auf die <xref:System.Data.ConstraintCollection> von einer <xref:System.Data.DataTable>.  
+  
+ [!code-csharp[Classic WebData ConstraintCollection.Add Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData ConstraintCollection.Add Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData ConstraintCollection.Add Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData ConstraintCollection.Add Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="constraint" />-Argument ist null.</exception>
+        <exception cref="T:System.ArgumentException">Die Einschränkung gehört bereits zu dieser oder einer anderen Sammlung.</exception>
+        <exception cref="T:System.Data.DuplicateNameException">Die Sammlung enthält bereits eine Einschränkung gleichen Namens. (Beim Vergleich wird die Groß-/Kleinschreibung nicht berücksichtigt.)</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.Constraint Add (string name, System.Data.DataColumn column, bool primaryKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Constraint Add(string name, class System.Data.DataColumn column, bool primaryKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.ConstraintCollection.Add(System.String,System.Data.DataColumn,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Constraint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="column" Type="System.Data.DataColumn" />
+        <Parameter Name="primaryKey" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des <see langword="UniqueConstraint" />.</param>
+        <param name="column">Die <see cref="T:System.Data.DataColumn" /> , für den die Einschränkung gilt.</param>
+        <param name="primaryKey">Gibt an, ob die Spalte der Primärschlüssel sein soll. Wenn <see langword="true" />, die Spalte wird eine Primärschlüsselspalte ist.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Data.UniqueConstraint" /> mit dem angegebenen Namen <see cref="T:System.Data.DataColumn" />, und der Wert, der angibt, ob die Spalte ein Primärschlüssel ist und der Auflistung hinzugefügt.</summary>
+        <returns>Ein neuer <see langword="UniqueConstraint" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.ConstraintCollection.CollectionChanged> Ereignis tritt auf, wenn die Einschränkung erfolgreich hinzugefügt wurde.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.ConstraintCollection.Add%2A> Methode zum Erstellen und fügen Sie einen neuen <xref:System.Data.UniqueConstraint> zu einem <xref:System.Data.ConstraintCollection>.  
+  
+ [!code-csharp[Classic WebData ConstraintCollection.Add2 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData ConstraintCollection.Add2 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData ConstraintCollection.Add2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData ConstraintCollection.Add2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Einschränkung gehört bereits zu dieser Auflistung.  
+  
+ – oder –  
+  
+ Die Einschränkung gehört zu einer anderen Auflistung.</exception>
+        <exception cref="T:System.Data.DuplicateNameException">Die Auflistung enthält bereits eine Einschränkung mit dem angegebenen Namen. (Beim Vergleich wird die Groß-/Kleinschreibung nicht berücksichtigt.)</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.Constraint Add (string name, System.Data.DataColumn primaryKeyColumn, System.Data.DataColumn foreignKeyColumn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Constraint Add(string name, class System.Data.DataColumn primaryKeyColumn, class System.Data.DataColumn foreignKeyColumn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.ConstraintCollection.Add(System.String,System.Data.DataColumn,System.Data.DataColumn)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Constraint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="primaryKeyColumn" Type="System.Data.DataColumn" />
+        <Parameter Name="foreignKeyColumn" Type="System.Data.DataColumn" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des <see cref="T:System.Data.ForeignKeyConstraint" />.</param>
+        <param name="primaryKeyColumn">Die primary key- oder übergeordneten <see cref="T:System.Data.DataColumn" />.</param>
+        <param name="foreignKeyColumn">Der Fremdschlüssel (oder untergeordnete) <see cref="T:System.Data.DataColumn" />.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Data.ForeignKeyConstraint" /> mit dem angegebenen Namen, übergeordnete und untergeordnete Spalte und fügt die Einschränkung der Auflistung hinzu.</summary>
+        <returns>Ein neuer <see langword="ForeignKeyConstraint" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.ConstraintCollection.CollectionChanged> Ereignis tritt auf, wenn die Einschränkung erfolgreich hinzugefügt wurde.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird ein neues <xref:System.Data.ForeignKeyConstraint> auf die <xref:System.Data.ConstraintCollection> von einem <xref:System.Data.DataTable>.  
+  
+ [!code-csharp[Classic WebData ConstraintCollection.Add3 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData ConstraintCollection.Add3 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData ConstraintCollection.Add3 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData ConstraintCollection.Add3 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.Constraint Add (string name, System.Data.DataColumn[] columns, bool primaryKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Constraint Add(string name, class System.Data.DataColumn[] columns, bool primaryKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.ConstraintCollection.Add(System.String,System.Data.DataColumn[],System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Constraint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="columns" Type="System.Data.DataColumn[]" />
+        <Parameter Name="primaryKey" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des <see cref="T:System.Data.UniqueConstraint" />.</param>
+        <param name="columns">Ein Array von <see cref="T:System.Data.DataColumn" /> -Objekten, die die Einschränkung angewendet wird.</param>
+        <param name="primaryKey">Gibt an, ob die Spalte der Primärschlüssel sein soll. Wenn <see langword="true" />, die Spalte wird eine Primärschlüsselspalte ist.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Data.UniqueConstraint" /> mit dem angegebenen Namen, einem Array von <see cref="T:System.Data.DataColumn" /> Objekte und gibt an, ob die Spalte ein Primärschlüssel ist und der Auflistung hinzugefügt.</summary>
+        <returns>Ein neuer <see langword="UniqueConstraint" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.ConstraintCollection.CollectionChanged> Ereignis tritt auf, wenn die Einschränkung erfolgreich hinzugefügt wurde.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt ein Array von <xref:System.Data.DataColumn> Objekte, die verwendet werden, zum Erstellen eines neuen <xref:System.Data.UniqueConstraint> in einer bestimmten <xref:System.Data.DataTable>.  
+  
+ [!code-csharp[Classic WebData ConstraintCollection.Add1 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData ConstraintCollection.Add1 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData ConstraintCollection.Add1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData ConstraintCollection.Add1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Einschränkung gehört bereits zu dieser Auflistung.  
+  
+ – oder –  
+  
+ Die Einschränkung gehört zu einer anderen Auflistung.</exception>
+        <exception cref="T:System.Data.DuplicateNameException">Die Auflistung enthält bereits eine Einschränkung mit dem angegebenen Namen. (Beim Vergleich wird die Groß-/Kleinschreibung nicht berücksichtigt.)</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.Constraint Add (string name, System.Data.DataColumn[] primaryKeyColumns, System.Data.DataColumn[] foreignKeyColumns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Constraint Add(string name, class System.Data.DataColumn[] primaryKeyColumns, class System.Data.DataColumn[] foreignKeyColumns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.ConstraintCollection.Add(System.String,System.Data.DataColumn[],System.Data.DataColumn[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Constraint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="primaryKeyColumns" Type="System.Data.DataColumn[]" />
+        <Parameter Name="foreignKeyColumns" Type="System.Data.DataColumn[]" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des <see cref="T:System.Data.ForeignKeyConstraint" />.</param>
+        <param name="primaryKeyColumns">Ein Array von <see cref="T:System.Data.DataColumn" /> -Objekten, die die primary key- oder übergeordneten Spalten befinden.</param>
+        <param name="foreignKeyColumns">Ein Array von <see cref="T:System.Data.DataColumn" /> Objekte, die den Fremdschlüssel oder untergeordneten Spalten sind.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Data.ForeignKeyConstraint" />, mit den angegebenen Arrays von übergeordneten und untergeordneten Spalten und fügt die Einschränkung der Auflistung hinzu.</summary>
+        <returns>Ein neuer <see langword="ForeignKeyConstraint" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.ConstraintCollection.CollectionChanged> Ereignis tritt auf, wenn die Einschränkung erfolgreich hinzugefügt wurde.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt zwei Arrays <xref:System.Data.DataColumn> Objekte und erstellt dann zwei <xref:System.Data.ForeignKeyConstraint> Beziehungen zwischen zwei Tabellen in einem Dataset.  
+  
+ [!code-csharp[Classic WebData ConstraintCollection.Add4 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData ConstraintCollection.Add4 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData ConstraintCollection.Add4 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData ConstraintCollection.Add4 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.Data.Constraint[] constraints);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.Data.Constraint[] constraints) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.ConstraintCollection.AddRange(System.Data.Constraint[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constraints" Type="System.Data.Constraint[]" />
+      </Parameters>
+      <Docs>
+        <param name="constraints">Ein Array von <see cref="T:System.Data.ConstraintCollection" />-Objekten, die der Auflistung hinzugefügt werden sollen.</param>
+        <summary>Kopiert die Elemente des angegebenen <see cref="T:System.Data.ConstraintCollection" /> Array an das Ende der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Data.DataTable.BeginInit%2A> aufgerufen wurde, `AddRange` werden keine Objekte auf die Auflistung erst hinzugefügt <xref:System.Data.DataTable.EndInit%2A> aufgerufen wird. Zum Zeitpunkt, `EndInit` wird aufgerufen, die Auflistung wird aufgefüllt werden mit den Elementen, die in den letzten Aufruf angegebenen `AddRange`. Wenn `AddRange` mehrmals aufgerufen wird, innerhalb einer `BeginInit`  /  `EndInit` sequenzieren, nur die Elemente, die in den letzten Aufruf angegebenen `AddRange` hinzugefügt werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die primäre und foreign Key-Einschränkungen erstellt und hinzugefügt der <xref:System.Data.ConstraintCollection>.  
+  
+ [!code-csharp[Classic WebData ConstraintCollection.AddRange Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData ConstraintCollection.AddRange Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData ConstraintCollection.AddRange Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData ConstraintCollection.AddRange Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRemove">
+      <MemberSignature Language="C#" Value="public bool CanRemove (System.Data.Constraint constraint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool CanRemove(class System.Data.Constraint constraint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.ConstraintCollection.CanRemove(System.Data.Constraint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constraint" Type="System.Data.Constraint" />
+      </Parameters>
+      <Docs>
+        <param name="constraint">Die <see cref="T:System.Data.Constraint" /> zum Entfernen aus der Auflistung getestet werden.</param>
+        <summary>Gibt an, ob eine <see cref="T:System.Data.Constraint" /> entfernt werden kann.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Data.Constraint" /> kann aus der Auflistung entfernt wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Standardverhalten immer ein <xref:System.Data.DataRelation> hinzugefügt wird eine <xref:System.Data.DataSet>, besteht im Hinzufügen einer <xref:System.Data.ForeignKeyConstraint> mit der übergeordneten Tabelle und eine <xref:System.Data.UniqueConstraint> zur untergeordneten Tabelle. Die <xref:System.Data.UniqueConstraint> auf die Primärschlüsselspalte der übergeordneten Tabelle angewendet wird und die <xref:System.Data.ForeignKeyConstraint> auf die Fremdschlüsselspalte der untergeordneten Tabelle angewendet wird. Da entfernen möchten die <xref:System.Data.UniqueConstraint> vor dem Entfernen der <xref:System.Data.ForeignKeyConstraint> löst eine Ausnahme ausgelöst wird, sollten Sie immer verwenden die <xref:System.Data.ConstraintCollection.CanRemove%2A> Methode vor dem Aufrufen von entfernen, um sicherzustellen, dass die <xref:System.Data.UniqueConstraint> entfernt werden kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.ConstraintCollection.CanRemove%2A> Methode, um zu bestimmen, ob eine <xref:System.Data.Constraint> entfernt werden kann, bevor Sie versuchen, ihn zu entfernen.  
+  
+ [!code-csharp[Classic WebData ConstraintCollection.CanRemove Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData ConstraintCollection.CanRemove Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData ConstraintCollection.CanRemove Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData ConstraintCollection.CanRemove Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.ConstraintCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht die Auflistung aller <see cref="T:System.Data.Constraint" /> Objekte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.ConstraintCollection.CollectionChanged> Ereignis tritt auf, wenn diese Aktion erfolgreich ist.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel löscht alle Einschränkungen aus der <xref:System.Data.ConstraintCollection>.  
+  
+ [!code-csharp[Classic WebData ConstraintCollection.Clear Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData ConstraintCollection.Clear Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData ConstraintCollection.Clear Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData ConstraintCollection.Clear Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CollectionChanged">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.CollectionChangeEventHandler CollectionChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.CollectionChangeEventHandler CollectionChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Data.ConstraintCollection.CollectionChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.CollectionChangeEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die <see cref="T:System.Data.ConstraintCollection" /> geändert wird, aufgrund der <see cref="T:System.Data.Constraint" /> Objekte hinzugefügt oder entfernt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Data.ConstraintCollection.CollectionChanged> Ereignis.  
+  
+ [!code-csharp[Classic WebData ConstraintCollection.CollectionChanged Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData ConstraintCollection.CollectionChanged Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData ConstraintCollection.CollectionChanged Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData ConstraintCollection.CollectionChanged Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.ConstraintCollection.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Die <see cref="P:System.Data.Constraint.ConstraintName" /> der Einschränkung.</param>
+        <summary>Gibt an, ob die <see cref="T:System.Data.Constraint" /> namentlich angegebene Objekt in der Auflistung vorhanden ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die Auflistung die angegebene Einschränkung enthält; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Data.ConstraintCollection.Contains%2A> Methode, um zu bestimmen, ob das angegebene <xref:System.Data.Constraint> vorhanden ist, bevor Sie versuchen, aus der Auflistung zu entfernen. Sie können auch die <xref:System.Data.ConstraintCollection.CanRemove%2A> Methode, um zu bestimmen, ob eine <xref:System.Data.Constraint> entfernt werden kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ermittelt, ob das angegebene <xref:System.Data.Constraint> vorhanden ist, der <xref:System.Data.ConstraintCollection> vor dem Löschen.  
+  
+ [!code-csharp[Classic WebData ConstraintCollection.Contains Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData ConstraintCollection.Contains Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData ConstraintCollection.Contains Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData ConstraintCollection.Contains Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Data.Constraint[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Data.Constraint[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.ConstraintCollection.CopyTo(System.Data.Constraint[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Data.Constraint[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale <see cref="T:System.Array" /> , die das Ziel der aus der Auflistung kopierten Werte ist.</param>
+        <param name="index">Der Index im Array, ab dem begonnen werden soll.</param>
+        <summary>Kopiert die Auflistungsobjekte in ein eindimensionales <see cref="T:System.Array" /> Instanz am angegebenen Index ab.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Data.Constraint constraint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Data.Constraint constraint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.ConstraintCollection.IndexOf(System.Data.Constraint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constraint" Type="System.Data.Constraint" />
+      </Parameters>
+      <Docs>
+        <param name="constraint">Die zu suchende <see cref="T:System.Data.Constraint" />.</param>
+        <summary>Ruft den Index des angegebenen <see cref="T:System.Data.Constraint" />.</summary>
+        <returns>Der nullbasierte Index des der <see cref="T:System.Data.Constraint" /> ist in der Auflistung befindet, andernfalls -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Data.ConstraintCollection.IndexOf%2A> Methode, um einen Index mit entweder zu verwendende zurückzugeben der <xref:System.Data.ConstraintCollection.Contains%2A> oder <xref:System.Data.ConstraintCollection.Remove%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.ConstraintCollection.IndexOf%2A> Methode den Index des zurückzugebenden eine <xref:System.Data.Constraint>. Der Index wird zum Übergeben der <xref:System.Data.ConstraintCollection.Contains%2A> -Methode, bevor sie entfernt wird, um festzustellen, ob die Auflistung die Einschränkung enthält.  
+  
+ [!code-csharp[Classic WebData ConstraintCollection.IndexOf1 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData ConstraintCollection.IndexOf1 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData ConstraintCollection.IndexOf1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData ConstraintCollection.IndexOf1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (string constraintName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(string constraintName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.ConstraintCollection.IndexOf(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constraintName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="constraintName">Der Name des <see cref="T:System.Data.Constraint" />.</param>
+        <summary>Ruft den Index des der <see cref="T:System.Data.Constraint" /> namentlich angegebene.</summary>
+        <returns>Der Index des der <see cref="T:System.Data.Constraint" /> ist in der Auflistung befindet, andernfalls -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Data.ConstraintCollection.IndexOf%2A> Methode, um einen Index mit entweder zu verwendende zurückzugeben der <xref:System.Data.ConstraintCollection.Contains%2A> oder <xref:System.Data.ConstraintCollection.Remove%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.ConstraintCollection.IndexOf%2A> Methode den Index des zurückzugebenden eine <xref:System.Data.Constraint>. Der Index wird zum Übergeben der <xref:System.Data.ConstraintCollection.Contains%2A> Methode, um zu bestimmen, ob die Auflistung die Einschränkung enthält, bevor Sie ihn entfernen.  
+  
+ [!code-csharp[Classic WebData ConstraintCollection.IndexOf Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData ConstraintCollection.IndexOf Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData ConstraintCollection.IndexOf Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData ConstraintCollection.IndexOf Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Data.Constraint this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Constraint Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.ConstraintCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Constraint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des zurückzugebenden Einschränkung.</param>
+        <summary>Ruft die <see cref="T:System.Data.Constraint" /> aus der Auflistung am angegebenen Index.</summary>
+        <value>Der <see cref="T:System.Data.Constraint" /> am angegebenen Index.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Data.ConstraintCollection.Contains%2A> Methode, um das Vorhandensein einer bestimmten Einschränkung testen.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel ruft jede <xref:System.Data.Constraint> aus der <xref:System.Data.ConstraintCollection>.  
+  
+ [!code-csharp[Classic WebData ConstraintCollection.this Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData ConstraintCollection.this Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData ConstraintCollection.this Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData ConstraintCollection.this Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Der Indexwert ist größer als die Anzahl der Elemente in der Auflistung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Data.Constraint this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Constraint Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.ConstraintCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Constraint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Die <see cref="P:System.Data.Constraint.ConstraintName" /> der Einschränkung zurückgegeben.</param>
+        <summary>Ruft die <see cref="T:System.Data.Constraint" /> mit dem angegebenen Namen aus der Auflistung.</summary>
+        <value>Die <see cref="T:System.Data.Constraint" /> mit dem angegebenen Namen ist; andernfalls eine Null-Wert, wenn die <see cref="T:System.Data.Constraint" /> ist nicht vorhanden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Data.ConstraintCollection.Contains%2A> Methode, um das Vorhandensein einer bestimmten Einschränkung testen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die benannte <xref:System.Data.Constraint>.  
+  
+ [!code-csharp[Classic WebData ConstraintCollection.this1 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData ConstraintCollection.this1 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData ConstraintCollection.this1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData ConstraintCollection.this1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="List">
+      <MemberSignature Language="C#" Value="protected override System.Collections.ArrayList List { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ArrayList List" />
+      <MemberSignature Language="DocId" Value="P:System.Data.ConstraintCollection.List" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ArrayList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Data.Constraint constraint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Data.Constraint constraint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.ConstraintCollection.Remove(System.Data.Constraint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constraint" Type="System.Data.Constraint" />
+      </Parameters>
+      <Docs>
+        <param name="constraint">Das zu entfernende <see cref="T:System.Data.Constraint" />-Element.</param>
+        <summary>Entfernt den angegebenen <see cref="T:System.Data.Constraint" /> aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vor der Verwendung der `Remove` -Methode, die Sie verwenden die <xref:System.Data.ConstraintCollection.Contains%2A> Methode, um zu bestimmen, ob die Auflistung das Ziel enthält <xref:System.Data.Constraint>, und die <xref:System.Data.ConstraintCollection.CanRemove%2A> Methode, um zu bestimmen, ob eine <xref:System.Data.Constraint> entfernt werden kann.  
+  
+ Die <xref:System.Data.ConstraintCollection.CollectionChanged> Ereignis tritt auf, wenn die Einschränkung erfolgreich entfernt wird.  
+  
+   
+  
+## Examples  
+ [!code-csharp[Classic WebData ConstraintCollection.Remove Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData ConstraintCollection.Remove Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData ConstraintCollection.Remove Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData ConstraintCollection.Remove Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="constraint" />-Argument lautet <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die Einschränkung gehört nicht zu der Auflistung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.ConstraintCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des zu entfernenden <see cref="T:System.Data.Constraint" />.</param>
+        <summary>Entfernt die <see cref="T:System.Data.Constraint" /> Objekt angegebenen Namen aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vor der Verwendung der `Remove` -Methode, die Sie verwenden die <xref:System.Data.ConstraintCollection.Contains%2A> Methode, um zu bestimmen, ob die Auflistung das Ziel enthält <xref:System.Data.Constraint>, und die <xref:System.Data.ConstraintCollection.CanRemove%2A> Methode, um zu bestimmen, ob eine <xref:System.Data.Constraint> entfernt werden kann.  
+  
+ Die <xref:System.Data.ConstraintCollection.CollectionChanged> Ereignis tritt auf, wenn die Einschränkung erfolgreich entfernt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine <xref:System.Data.Constraint> aus einer <xref:System.Data.ConstraintCollection> nach-Funktionsaufruf mit Tests der <xref:System.Data.ConstraintCollection.Contains%2A> -Methode, und gibt an, ob sie mit entfernt werden kann die <xref:System.Data.ConstraintCollection.CanRemove%2A> Methode.  
+  
+ [!code-csharp[Classic WebData ConstraintCollection.Remove1 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData ConstraintCollection.Remove1 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData ConstraintCollection.Remove1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData ConstraintCollection.Remove1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.ConstraintCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des der <see cref="T:System.Data.Constraint" /> zu entfernen.</param>
+        <summary>Entfernt die <see cref="T:System.Data.Constraint" /> Objekt am angegebenen Index aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.ConstraintCollection.IndexOf%2A> -Methode gibt den Index eines bestimmten <xref:System.Data.Constraint>.  
+  
+ Vor der Verwendung der `RemoveAt` -Methode, die Sie verwenden die <xref:System.Data.ConstraintCollection.Contains%2A> Methode, um zu bestimmen, ob die Auflistung das Ziel enthält <xref:System.Data.Constraint>, und die <xref:System.Data.ConstraintCollection.CanRemove%2A> Methode, um zu bestimmen, ob eine <xref:System.Data.Constraint> entfernt werden kann.  
+  
+ Die <xref:System.Data.ConstraintCollection.CollectionChanged> Ereignis tritt auf, wenn die Einschränkung erfolgreich entfernt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Data.ConstraintCollection.IndexOf%2A> -Methode zusammen mit der <xref:System.Data.ConstraintCollection.RemoveAt%2A> -Methode zum Entfernen einer Einschränkung aus der <xref:System.Data.ConstraintCollection>.  
+  
+ [!code-csharp[Classic WebData ConstraintCollection.RemoveAt Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData ConstraintCollection.RemoveAt Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData ConstraintCollection.RemoveAt Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData ConstraintCollection.RemoveAt Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Die Auflistung muss eine Einschränkung nicht für diesen Index.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

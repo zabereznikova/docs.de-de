@@ -1,0 +1,76 @@
+<Type Name="IDesignerSerializationProvider" FullName="System.ComponentModel.Design.Serialization.IDesignerSerializationProvider">
+  <TypeSignature Language="C#" Value="public interface IDesignerSerializationProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDesignerSerializationProvider" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Serialization.IDesignerSerializationProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Schnittstelle, die Zugriff auf ein Serialisierungsprogramm ermöglicht.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle verfügt über nur eine Methode, <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationProvider.GetSerializer%2A>, und keine Eigenschaften oder die Ereignisse. Diese Schnittstelle und diese Methode vorhanden sein, damit der Serialisierungs-Manager und andere Objekte ein Serialisierungsprogramm für einen bestimmten Objekttyp abrufen können.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetSerializer">
+      <MemberSignature Language="C#" Value="public object GetSerializer (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object currentSerializer, Type objectType, Type serializerType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetSerializer(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object currentSerializer, class System.Type objectType, class System.Type serializerType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.IDesignerSerializationProvider.GetSerializer(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.Object,System.Type,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="currentSerializer" Type="System.Object" />
+        <Parameter Name="objectType" Type="System.Type" />
+        <Parameter Name="serializerType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="manager">Der Serialisierungs-Manager, die das Serialisierungsprogramm anfordern.</param>
+        <param name="currentSerializer">Eine Instanz der dem aktuellen Serialisierungsprogramm des angegebenen Typs. Dies ist möglich <see langword="null" /> , wenn kein Serialisierungsprogramm des angegebenen Typs vorhanden ist.</param>
+        <param name="objectType">Der Datentyp, der das zu serialisierende Objekt.</param>
+        <param name="serializerType">Der Datentyp des Serialisierungsprogramms, das erstellen.</param>
+        <summary>Ruft ein Serialisierungsprogramm, das mit den angegebenen Attributen ab.</summary>
+        <returns>Eine Instanz von ein Serialisierungsprogramm des angeforderten Typs oder <see langword="null" /> , wenn die Anforderung nicht erfüllt werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Serialisierungs-Manager ruft diese Methode auf, wenn er versucht, ein Serialisierungsprogramm für einen Objekttyp zu suchen. Wenn dieser Serialisierungsprovider ein Serialisierungsprogramm des richtigen Typs bereitstellen kann, von diesem Anbieter wird zurückgegeben. Andernfalls wird zurückgegeben `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

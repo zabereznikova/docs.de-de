@@ -1,0 +1,91 @@
+<Type Name="UpDownEventArgs" FullName="System.Windows.Forms.UpDownEventArgs">
+  <TypeSignature Language="C#" Value="public class UpDownEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UpDownEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.UpDownEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für Steuerelemente, die Ableitung der <see cref="T:System.Windows.Forms.UpDownBase" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.UpDownEventArgs> wird verwendet, wenn der Benutzer auf eine Schaltfläche auf einem Steuerelement, das klickt von abgeleitet ist die <xref:System.Windows.Forms.UpDownBase> Steuerelement. Die <xref:System.Windows.Forms.UpDownEventArgs> enthält Informationen, die auf die Schaltfläche geklickt wurde.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UpDownEventArgs (int buttonPushed);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 buttonPushed) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.UpDownEventArgs.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="buttonPushed" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buttonPushed">Die Schaltfläche, die auf per Mausklick den <see cref="T:System.Windows.Forms.UpDownBase" /> Steuerelement.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.UpDownEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle beschreibt die gültigen Werte für `buttonPushed`.  
+  
+|Wert|Beschreibung|  
+|-----------|-----------------|  
+|0|Weder Schaltfläche geklickt wurde.|  
+|1|Schaltfläche geklickt wurde.|  
+|2|Die nach-unten-Schaltfläche geklickt wurde.|  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonID">
+      <MemberSignature Language="C#" Value="public int ButtonID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ButtonID" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.UpDownEventArgs.ButtonID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, den darstellt, die welche Schaltfläche ein Benutzer geklickt hat.</summary>
+        <value>Ein Wert, den darstellt, die welche Schaltfläche ein Benutzer geklickt hat.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der folgenden Tabelle werden die Werte beschrieben, die die <xref:System.Windows.Forms.UpDownEventArgs.ButtonID%2A> zurückgibt.  
+  
+|Wert|Beschreibung|  
+|-----------|-----------------|  
+|0|Weder Schaltfläche geklickt wurde.|  
+|1|Schaltfläche geklickt wurde.|  
+|2|Die nach-unten-Schaltfläche geklickt wurde.|  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,213 @@
+<Type Name="LinqDesignerDataSourceView" FullName="System.Web.UI.Design.WebControls.LinqDesignerDataSourceView">
+  <TypeSignature Language="C#" Value="public class LinqDesignerDataSourceView : System.Web.UI.Design.DesignerDataSourceView" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LinqDesignerDataSourceView extends System.Web.UI.Design.DesignerDataSourceView" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.LinqDesignerDataSourceView" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.DesignerDataSourceView</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine während der Entwurfszeit-Ansicht der Daten für die <see cref="T:System.Web.UI.Design.WebControls.LinqDataSourceDesigner" /> Klasse.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinqDesignerDataSourceView (System.Web.UI.Design.WebControls.LinqDataSourceDesigner owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.Design.WebControls.LinqDataSourceDesigner owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.LinqDesignerDataSourceView.#ctor(System.Web.UI.Design.WebControls.LinqDataSourceDesigner)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Web.UI.Design.WebControls.LinqDataSourceDesigner" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Das übergeordnete Element <see cref="T:System.Web.UI.Design.WebControls.LinqDataSourceDesigner" /> Objekt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.Design.WebControls.LinqDesignerDataSourceView" /> Klasse mit dem bereitgestellten Daten Datenquellen-Designer und Sicht.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanDelete">
+      <MemberSignature Language="C#" Value="public override bool CanDelete { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanDelete" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.LinqDesignerDataSourceView.CanDelete" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.LinqDataSourceView" /> -Objekt, das mit dem aktuellen anfallen <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> -Steuerelement unterstützt die <see cref="M:System.Web.UI.DataSourceView.ExecuteDelete(System.Collections.IDictionary,System.Collections.IDictionary)" /> Methode.</summary>
+        <value>
+          <see langword="true" />, wenn die <see cref="M:System.Web.UI.WebControls.LinqDataSourceView.ExecuteDelete(System.Collections.IDictionary,System.Collections.IDictionary)" />-Methode unterstützt wird, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanInsert">
+      <MemberSignature Language="C#" Value="public override bool CanInsert { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanInsert" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.LinqDesignerDataSourceView.CanInsert" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.LinqDataSourceView" /> -Objekt, das mit dem aktuellen anfallen <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> -Steuerelement unterstützt die <see cref="M:System.Web.UI.DataSourceView.ExecuteInsert(System.Collections.IDictionary)" /> Methode.</summary>
+        <value>
+          <see langword="true" />, wenn die <see cref="M:System.Web.UI.WebControls.LinqDataSourceView.ExecuteInsert(System.Collections.IDictionary)" />-Methode unterstützt wird, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanPage">
+      <MemberSignature Language="C#" Value="public override bool CanPage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanPage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.LinqDesignerDataSourceView.CanPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der <see cref="T:System.Web.UI.WebControls.LinqDataSourceView" /> -Objekt, das mit dem aktuellen anfallen <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> -Steuerelement unterstützt das Paging durch die Daten, die von abgerufen werden die <see cref="M:System.Web.UI.WebControls.LinqDataSourceView.ExecuteSelect(System.Web.UI.DataSourceSelectArguments)" /> Methode.</summary>
+        <value>
+          <see langword="true" />Wenn das paging durch die Daten, die von abgerufen wird die <see cref="M:System.Web.UI.WebControls.LinqDataSourceView.ExecuteSelect(System.Web.UI.DataSourceSelectArguments)" /> Methode ist, unterstützt wird; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanSort">
+      <MemberSignature Language="C#" Value="public override bool CanSort { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanSort" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.LinqDesignerDataSourceView.CanSort" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.LinqDataSourceView" /> -Objekt, das mit dem aktuellen anfallen <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> Steuerelement eine sortierte Ansicht der zugrunde liegenden Datenquelle unterstützt.</summary>
+        <value>
+          <see langword="true" />Wenn eine sortierte Ansicht der zugrunde liegenden Datenquelle unterstützt wird. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanUpdate">
+      <MemberSignature Language="C#" Value="public override bool CanUpdate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanUpdate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.LinqDesignerDataSourceView.CanUpdate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.LinqDataSourceView" /> -Objekt, das mit dem aktuellen anfallen <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> -Steuerelement unterstützt die <see cref="M:System.Web.UI.WebControls.LinqDataSourceView.ExecuteUpdate(System.Collections.IDictionary,System.Collections.IDictionary,System.Collections.IDictionary)" /> Methode.</summary>
+        <value>
+          <see langword="true" />, wenn die <see cref="M:System.Web.UI.WebControls.LinqDataSourceView.ExecuteUpdate(System.Collections.IDictionary,System.Collections.IDictionary,System.Collections.IDictionary)" />-Methode unterstützt wird, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeData">
+      <MemberSignature Language="C#" Value="public override System.Collections.IEnumerable GetDesignTimeData (int minimumRows, out bool isSampleData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.IEnumerable GetDesignTimeData(int32 minimumRows, [out] bool&amp; isSampleData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.LinqDesignerDataSourceView.GetDesignTimeData(System.Int32,System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="minimumRows" Type="System.Int32" />
+        <Parameter Name="isSampleData" Type="System.Boolean&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="minimumRows">Die minimale Anzahl der zurückzugebenden Zeilen.</param>
+        <param name="isSampleData">
+          <see langword="true" />um anzugeben, dass die zurückgegebenen Daten Beispieldaten sind. <see langword="false" /> um anzugeben, dass die zurückgegebenen Daten um Livedaten handelt.</param>
+        <summary>Ruft die zur Entwurfszeit-Daten, die das Schema des zugeordneten Datenquellen-Steuerelements entsprechen, mit die angegebene Anzahl von Zeilen ab. Gibt einen Wert, der angibt, ob die Daten Beispieldaten oder echte Daten handelt.</summary>
+        <returns>Die Daten, die zur Entwurfszeit angezeigt werden soll.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDataContext">
+      <MemberSignature Language="C#" Value="public bool IsDataContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDataContext" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.LinqDesignerDataSourceView.IsDataContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="P:System.Web.UI.WebControls.LinqDataSourceView.ContextType" /> -Eigenschaft enthält ein Objekt, das von abgeleitet ist <see cref="T:System.Data.Linq.DataContext" />.</summary>
+        <value>
+          <see langword="true" />Wenn das Objekt in der <see cref="P:System.Web.UI.WebControls.LinqDataSourceView.ContextType" /> Eigenschaft abgeleitet <see cref="T:System.Data.Linq.DataContext" />ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTableTypeTable">
+      <MemberSignature Language="C#" Value="public bool IsTableTypeTable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTableTypeTable" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.LinqDesignerDataSourceView.IsTableTypeTable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="P:System.Web.UI.WebControls.LinqDataSourceView.TableName" /> Eigenschaft gibt eine <see cref="T:System.Data.Linq.Table`1" /> Typ.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="P:System.Web.UI.WebControls.LinqDataSourceView.TableName" /> Eigenschaft gibt eine <see cref="T:System.Data.Linq.Table`1" /> geben; anderenfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Schema">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.Design.IDataSourceViewSchema Schema { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.IDataSourceViewSchema Schema" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.LinqDesignerDataSourceView.Schema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.IDataSourceViewSchema</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Schema, das die Datenquellensicht beschreibt, die durch das aktuelle Ansichtsobjekt dargestellt wird.</summary>
+        <value>Ein Objekt, das das Schema darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

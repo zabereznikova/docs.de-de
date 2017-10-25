@@ -1,0 +1,306 @@
+<Type Name="SamlSecurityTokenAuthenticator" FullName="System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator">
+  <TypeSignature Language="C#" Value="public class SamlSecurityTokenAuthenticator : System.IdentityModel.Selectors.SecurityTokenAuthenticator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SamlSecurityTokenAuthenticator extends System.IdentityModel.Selectors.SecurityTokenAuthenticator" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Selectors.SecurityTokenAuthenticator</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Authentifiziert ein <see cref="T:System.IdentityModel.Tokens.SamlSecurityToken" />-Sicherheitstoken.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>-Klasse, um <xref:System.IdentityModel.Tokens.SamlSecurityToken>-Sicherheitstoken zu authentifizieren.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SamlSecurityTokenAuthenticator (System.Collections.Generic.IList&lt;System.IdentityModel.Selectors.SecurityTokenAuthenticator&gt; supportingAuthenticators);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IList`1&lt;class System.IdentityModel.Selectors.SecurityTokenAuthenticator&gt; supportingAuthenticators) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.#ctor(System.Collections.Generic.IList{System.IdentityModel.Selectors.SecurityTokenAuthenticator})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="supportingAuthenticators" Type="System.Collections.Generic.IList&lt;System.IdentityModel.Selectors.SecurityTokenAuthenticator&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="supportingAuthenticators">Ein <see cref="T:System.Collections.Generic.IList`1" />-Objekt vom Typ <see cref="T:System.IdentityModel.Selectors.SecurityTokenAuthenticator" />, das die Authentifizierer für die Authentifizierung der <see cref="T:System.IdentityModel.Tokens.SecurityToken" />-Sicherheitstoken des Ausstellers enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator" />-Klasse unter Verwendung des angegebenen Satzes von Authentifizierern.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SamlSecurityTokenAuthenticator (System.Collections.Generic.IList&lt;System.IdentityModel.Selectors.SecurityTokenAuthenticator&gt; supportingAuthenticators, TimeSpan maxClockSkew);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IList`1&lt;class System.IdentityModel.Selectors.SecurityTokenAuthenticator&gt; supportingAuthenticators, valuetype System.TimeSpan maxClockSkew) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.#ctor(System.Collections.Generic.IList{System.IdentityModel.Selectors.SecurityTokenAuthenticator},System.TimeSpan)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="supportingAuthenticators" Type="System.Collections.Generic.IList&lt;System.IdentityModel.Selectors.SecurityTokenAuthenticator&gt;" />
+        <Parameter Name="maxClockSkew" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="supportingAuthenticators">Ein <see cref="T:System.Collections.Generic.IList`1" />-Objekt vom Typ <see cref="T:System.IdentityModel.Selectors.SecurityTokenAuthenticator" />, das die Authentifizierer für die Authentifizierung der <see cref="T:System.IdentityModel.Tokens.SecurityToken" />-Sicherheitstoken des Ausstellers enthält.</param>
+        <param name="maxClockSkew">Ein <see cref="T:System.TimeSpan" />-Objekt, das den maximal zulässigen Unterschied zwischen den Systemuhren des Senders und Empfängers darstellt.</param>
+        <summary>Initiiert eine neue Instanz der <see cref="T:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator" />-Klasse unter Verwendung des angegebenen Satzes von Authentifizierern und des maximal zulässigen Unterschieds zwischen den Uhren von Sender und Empfänger.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowedAudienceUris">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;string&gt; AllowedAudienceUris { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;string&gt; AllowedAudienceUris" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Satz von Ziel-URIs ab, für die das <see cref="T:System.IdentityModel.Tokens.SamlSecurityToken" />-Sicherheitstoken verwendet werden kann, damit diese von einer <see cref="T:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator" />-Instanz als gültig eingestuft werden.</summary>
+        <value>Ein <see cref="T:System.Collections.Generic.IList`1" />-Objekt vom Typ <see cref="T:System.String" />, das die Ziel-URIs enthält, für die das <see cref="T:System.IdentityModel.Tokens.SamlSecurityToken" />-Sicherheitstoken verwendet werden kann, so dass diese von dem Sicherheitstokenauthentifizierer als gültig eingestuft werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>-Eigenschaft in einer Verbundanwendung, die einen Sicherheitstokendienst (Security Token Service, STS) nutzt, der <xref:System.IdentityModel.Tokens.SamlSecurityToken>-Sicherheitstoken ausstellt. Wenn der STS das Sicherheitstoken ausstellt, kann er den URI des Webdiensts angeben, für den das Sicherheitstoken verwendet werden soll, indem <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition> dem Sicherheitstoken hinzugefügt wird. Der <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> für den Webdienst kann so überprüfen, ob das ausgestellte Sicherheitstoken für diesen Webdienst ausgelegt ist, indem diese Überprüfung durchgeführt wird. Führen Sie hierzu die folgenden Schritte aus:  
+  
+-   Legen Sie für die <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>-Eigenschaft <xref:System.IdentityModel.Selectors.AudienceUriMode.Always> oder <xref:System.IdentityModel.Selectors.AudienceUriMode.BearerKeyOnly> fest.  
+  
+-   Geben Sie den Satz gültiger URIs an, indem Sie die URIs der <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>-Auflistung hinzufügen.  
+  
+-   Überschreiben Sie optional die <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.ValidateAudienceRestriction%2A>-Methode, um den Validierungsalgorithmus für den zulässigen URI anzugeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AudienceUriMode">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Selectors.AudienceUriMode AudienceUriMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IdentityModel.Selectors.AudienceUriMode AudienceUriMode" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Selectors.AudienceUriMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft <see cref="T:System.IdentityModel.Selectors.AudienceUriMode" /> ab oder legt den Modus fest, der angibt ob <see cref="T:System.IdentityModel.Tokens.SamlSecurityToken" /> für das <see cref="T:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition" />-Sicherheitstoken validiert werden soll.</summary>
+        <value>Ein <see cref="T:System.IdentityModel.Selectors.AudienceUriMode" />-Objekt, das angibt, ob <see cref="T:System.IdentityModel.Tokens.SamlSecurityToken" /> für das <see cref="T:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition" />-Sicherheitstoken validiert werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>-Eigenschaft in einer Verbundanwendung, die einen Sicherheitstokendienst (Security Token Service, STS) nutzt, der <xref:System.IdentityModel.Tokens.SamlSecurityToken>-Sicherheitstoken ausstellt. Wenn der STS das Sicherheitstoken ausstellt, kann er den URI des Webdiensts angeben, für den das Sicherheitstoken verwendet werden soll, indem <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition> dem Sicherheitstoken hinzugefügt wird. Der <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> für den Webdienst kann so überprüfen, ob das ausgestellte Sicherheitstoken für diesen Webdienst ausgelegt ist, indem diese Überprüfung durchgeführt wird. Führen Sie hierzu die folgenden Schritte aus:  
+  
+-   Legen Sie für die <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>-Eigenschaft <xref:System.IdentityModel.Selectors.AudienceUriMode.Always> oder <xref:System.IdentityModel.Selectors.AudienceUriMode.BearerKeyOnly> fest.  
+  
+-   Geben Sie den Satz gültiger URIs an, indem Sie die URIs der <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>-Auflistung hinzufügen.  
+  
+> [!NOTE]
+>  Wenn für die <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>-Eigenschaft <xref:System.IdentityModel.Selectors.AudienceUriMode.BearerKeyOnly> festgelegt ist, muss ein eingehendes, nicht unterzeichnendes <xref:System.IdentityModel.Tokens.SamlSecurityToken> eine <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition> enthalten, und die <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition.Audiences%2A>-Auflistung muss einen URI enthalten, der den in der <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>-Auflistung angegebenen gültigen URIs entspricht. Ein nicht unterzeichnendes bzw. Bearer-Token ist ein Sicherheitstoken, das in der Nachricht enthalten ist und nicht zum Unterzeichnen eines Nachrichtenteils verwendet wird.  
+  
+-   Überschreiben Sie optional die <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.ValidateAudienceRestriction%2A>-Methode, um den Validierungsalgorithmus für den zulässigen URI anzugeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanValidateTokenCore">
+      <MemberSignature Language="C#" Value="protected override bool CanValidateTokenCore (System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool CanValidateTokenCore(class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.CanValidateTokenCore(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">Die zu validierende <see cref="T:System.IdentityModel.Tokens.SecurityToken" />.</param>
+        <summary>Ruft einen Wert ab, der angibt, ob das angegebene Sicherheitstoken von diesem Sicherheitstoken-Authentifikator überprüft werden kann.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="token" /> ein <see cref="T:System.IdentityModel.Tokens.SamlSecurityToken" />-Sicherheitstoken ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.CanValidateTokenCore%2A>-Methode authentifiziert das Sicherheitstoken nicht. Dies wird von der <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.ValidateTokenCore%2A>-Methode durchgeführt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveClaimSet">
+      <MemberSignature Language="C#" Value="public virtual System.IdentityModel.Claims.ClaimSet ResolveClaimSet (System.IdentityModel.Tokens.SecurityKeyIdentifier keyIdentifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IdentityModel.Claims.ClaimSet ResolveClaimSet(class System.IdentityModel.Tokens.SecurityKeyIdentifier keyIdentifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.ResolveClaimSet(System.IdentityModel.Tokens.SecurityKeyIdentifier)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Claims.ClaimSet</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifier" Type="System.IdentityModel.Tokens.SecurityKeyIdentifier" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifier"><see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifier" />, dessen ID abgerufen werden soll.</param>
+        <summary>Löst die mit dem angegebenen Schlüsselbezeichner verknüpfte ID mithilfe der unterstützenden Sicherheitstokenauthentifizierer auf, die beim Erstellen der <see cref="T:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator" />-Instanz angegeben wurden, und gibt die ID als <see cref="T:System.IdentityModel.Claims.ClaimSet" /> zurück.</summary>
+        <returns>Ein <see cref="T:System.IdentityModel.Claims.ClaimSet" />-Objekt, das die ID des angegebenen Schlüsselbezeichners darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveClaimSet">
+      <MemberSignature Language="C#" Value="public virtual System.IdentityModel.Claims.ClaimSet ResolveClaimSet (System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IdentityModel.Claims.ClaimSet ResolveClaimSet(class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.ResolveClaimSet(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Claims.ClaimSet</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="token"><see cref="T:System.IdentityModel.Tokens.SecurityToken" />, dessen ID abgerufen werden soll.</param>
+        <summary>Löst die mit dem angegebenen Sicherheitstoken verknüpfte ID mithilfe der unterstützenden Sicherheitstokenauthentifizierer auf, die beim Erstellen der <see cref="T:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator" />-Instanz angegeben wurden, und gibt die ID als <see cref="T:System.IdentityModel.Claims.ClaimSet" /> zurück.</summary>
+        <returns>Ein <see cref="T:System.IdentityModel.Claims.ClaimSet" />-Objekt, das die ID des angegebenen Sicherheitstokens darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveIdentity">
+      <MemberSignature Language="C#" Value="public virtual System.Security.Principal.IIdentity ResolveIdentity (System.IdentityModel.Tokens.SecurityKeyIdentifier keyIdentifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.Principal.IIdentity ResolveIdentity(class System.IdentityModel.Tokens.SecurityKeyIdentifier keyIdentifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.ResolveIdentity(System.IdentityModel.Tokens.SecurityKeyIdentifier)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.IIdentity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifier" Type="System.IdentityModel.Tokens.SecurityKeyIdentifier" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifier"><see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifier" />, dessen ID abgerufen werden soll.</param>
+        <summary>Löst die mit dem Sicherheitsschlüsselbezeichner verknüpfte ID mithilfe der unterstützenden Sicherheitstokenauthentifizierer auf, die beim Erstellen der <see cref="T:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator" />-Instanz angegeben wurden, und gibt die ID als <see cref="T:System.Security.Principal.IIdentity" /> zurück.</summary>
+        <returns>Ein <see cref="T:System.Security.Principal.IIdentity" />-Objekt, das die ID des angegebenen Schlüsselbezeichners darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IdentityModel.Tokens.SamlSecurityToken>-Sicherheitstoken werden unter Verwendung des Schlüsselbezeichners zwischengespeichert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveIdentity">
+      <MemberSignature Language="C#" Value="public virtual System.Security.Principal.IIdentity ResolveIdentity (System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.Principal.IIdentity ResolveIdentity(class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.ResolveIdentity(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.IIdentity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="token"><see cref="T:System.IdentityModel.Tokens.SecurityToken" />, dessen ID abgerufen werden soll.</param>
+        <summary>Löst die mit dem angegebenen Sicherheitstoken verknüpfte ID mithilfe der unterstützenden Sicherheitstokenauthentifizierer auf, die beim Erstellen der <see cref="T:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator" />-Instanz angegeben wurden, und gibt die ID als <see cref="T:System.Security.Principal.IIdentity" /> zurück.</summary>
+        <returns>Ein <see cref="T:System.Security.Principal.IIdentity" />-Objekt, das die ID des angegebenen Sicherheitstokens darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateAudienceRestriction">
+      <MemberSignature Language="C#" Value="protected virtual bool ValidateAudienceRestriction (System.IdentityModel.Tokens.SamlAudienceRestrictionCondition audienceRestrictionCondition);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool ValidateAudienceRestriction(class System.IdentityModel.Tokens.SamlAudienceRestrictionCondition audienceRestrictionCondition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.ValidateAudienceRestriction(System.IdentityModel.Tokens.SamlAudienceRestrictionCondition)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="audienceRestrictionCondition" Type="System.IdentityModel.Tokens.SamlAudienceRestrictionCondition" />
+      </Parameters>
+      <Docs>
+        <param name="audienceRestrictionCondition">Ein <see cref="T:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition" />-Objekt, dass den Satz der Zielwebdienste angibt, für die das <see cref="T:System.IdentityModel.Tokens.SamlSecurityToken" />-Sicherheitstoken bestimmt ist.</param>
+        <summary>Überprüft, ob das <see cref="T:System.IdentityModel.Tokens.SamlSecurityToken" />-Sicherheitstoken für diesen Webdienst bestimmt war.</summary>
+        <returns>
+          <see langword="true" />, wenn die <see cref="P:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition.Audiences" />-Eigenschaft des Parameters <paramref name="audienceRestrictionCondition" /> in der <see cref="P:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris" />-Auflistung enthalten ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.ValidateAudienceRestriction%2A>-Methode wird von der <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.ValidateTokenCore%2A>-Methode aufgerufen, wenn für die <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>-Eigenschaft <xref:System.IdentityModel.Selectors.AudienceUriMode.Always> oder <xref:System.IdentityModel.Selectors.AudienceUriMode.BearerKeyOnly> festgelegt ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateTokenCore">
+      <MemberSignature Language="C#" Value="protected override System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Policy.IAuthorizationPolicy&gt; ValidateTokenCore (System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.IdentityModel.Policy.IAuthorizationPolicy&gt; ValidateTokenCore(class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.ValidateTokenCore(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Policy.IAuthorizationPolicy&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">Die zu validierende <see cref="T:System.IdentityModel.Tokens.SecurityToken" />.</param>
+        <summary>Authentifiziert das angegebene Sicherheitstoken und gibt den Satz von Autorisierungsrichtlinien für das Sicherheitstoken zurück.</summary>
+        <returns>Eine <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> vom Typ <see cref="T:System.IdentityModel.Policy.IAuthorizationPolicy" />, das den Satz Autorisierungsrichtlinien enthält, die sich aus der Sicherheitstokenauthentifizierung ergeben.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

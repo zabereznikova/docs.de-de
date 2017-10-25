@@ -1,0 +1,155 @@
+<Type Name="Toolset" FullName="Microsoft.Build.BuildEngine.Toolset">
+  <TypeSignature Language="C#" Value="public class Toolset" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Toolset extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.BuildEngine.Toolset" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Toolset in MSBuild. Weitere Informationen zu Toolsets finden Sie unter [Standard- und benutzerdefinierte Toolsetkonfigurationen](http://msdn.microsoft.com/library/15a048c8-5ad3-448e-b6e9-e3c5d7147ed2).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:Microsoft.Build.BuildEngine.Toolset> Objekt verfügt über eine entsprechende `ToolsVersion` -Wert, der den Wert darstellt der `ToolsVersion` -Attribut auf die [Project-Element (MSBuild)](http://msdn.microsoft.com/library/d1cda56a-dbef-4109-9201-39e962e3f653) sowie ein `ToolsPath` Wert, der angibt, in dem das Toolset gespeichert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Toolset (string toolsVersion, string toolsPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string toolsVersion, string toolsPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Toolset.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="toolsVersion" Type="System.String" />
+        <Parameter Name="toolsPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="toolsVersion">Eine Zeichenfolge, die die Version der <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> aktuell in Verwendung.</param>
+        <param name="toolsPath">Eine Zeichenfolge, die den Pfad zu der <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> aktuell in Verwendung.</param>
+        <summary>Erstellt ein <see cref="T:Microsoft.Build.BuildEngine.Toolset" />-Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein **ArgumentNullException** Fehler wird ausgelöst, wenn entweder der Wert ist `null`. Ein **ArgumentException** Fehler ausgelöst ungültige Argumentwerte, z. B. leere Zeichenfolgen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Toolset (string toolsVersion, string toolsPath, Microsoft.Build.BuildEngine.BuildPropertyGroup buildProperties);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string toolsVersion, string toolsPath, class Microsoft.Build.BuildEngine.BuildPropertyGroup buildProperties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Toolset.#ctor(System.String,System.String,Microsoft.Build.BuildEngine.BuildPropertyGroup)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="toolsVersion" Type="System.String" />
+        <Parameter Name="toolsPath" Type="System.String" />
+        <Parameter Name="buildProperties" Type="Microsoft.Build.BuildEngine.BuildPropertyGroup" />
+      </Parameters>
+      <Docs>
+        <param name="toolsVersion">Eine Zeichenfolge, die die Version der <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> aktuell in Verwendung.</param>
+        <param name="toolsPath">Eine Zeichenfolge, die den Pfad zu der <see cref="T:Microsoft.Build.BuildEngine.Toolset" /> aktuell in Verwendung.</param>
+        <param name="buildProperties">Eine Zeichenfolge, die <see cref="T:Microsoft.Build.BuildEngine.Toolset" />-bestimmte benutzerdefinierte Eigenschaften.</param>
+        <summary>Erstellt ein <see cref="T:Microsoft.Build.BuildEngine.Toolset" />-Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein **ArgumentNullException** Fehler wird ausgelöst, wenn die Parameterwerte sind `null`. Ein **ArgumentException** Fehler ausgelöst ungültige Argumentwerte, z. B. leere Zeichenfolgen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildProperties">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.BuildEngine.BuildPropertyGroup BuildProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.BuildEngine.BuildPropertyGroup BuildProperties" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Toolset.BuildProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.BuildEngine.BuildPropertyGroup</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" /> dient außerdem zur festgelegt <see cref="T:Microsoft.Build.BuildEngine.Toolset" />-bestimmte benutzerdefinierte Eigenschaften.</summary>
+        <value>Ein <see cref="T:Microsoft.Build.BuildEngine.BuildPropertyGroup" />-Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.BuildEngine.Toolset Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.BuildEngine.Toolset Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Toolset.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.BuildEngine.Toolset</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Kopie des angegebenen <see cref="T:Microsoft.Build.BuildEngine.Toolset" />.</summary>
+        <returns>Ein <see cref="T:Microsoft.Build.BuildEngine.Toolset" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolsPath">
+      <MemberSignature Language="C#" Value="public string ToolsPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolsPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Toolset.ToolsPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Pfad zu dem angegebenen <see cref="T:Microsoft.Build.BuildEngine.Toolset" />.</summary>
+        <value>Eine Zeichenfolge, die den Pfad zu der <see cref="T:Microsoft.Build.BuildEngine.Toolset" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolsVersion">
+      <MemberSignature Language="C#" Value="public string ToolsVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolsVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Toolset.ToolsVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Version des angegebenen <see cref="T:Microsoft.Build.BuildEngine.Toolset" />.</summary>
+        <value>Eine Zeichenfolge, die die Version der <see cref="T:Microsoft.Build.BuildEngine.Toolset" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

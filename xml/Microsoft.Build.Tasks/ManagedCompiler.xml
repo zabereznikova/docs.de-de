@@ -1,0 +1,990 @@
+<Type Name="ManagedCompiler" FullName="Microsoft.Build.Tasks.ManagedCompiler">
+  <TypeSignature Language="C#" Value="public abstract class ManagedCompiler : Microsoft.Build.Tasks.ToolTaskExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ManagedCompiler extends Microsoft.Build.Tasks.ToolTaskExtension" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.ManagedCompiler" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Tasks.ToolTaskExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die Eigenschaften und Methoden, die für alle verwalteten Compileraufgaben gelten.</summary>
+    <remarks>To be added.</remarks>
+    <block subset="none" type="overrides">
+      <para>Diese Klasse verwendet die <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> Attribut, und kann nicht vererbt werden.</para>
+    </block>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ManagedCompiler ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.ManagedCompiler.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Tasks.ManagedCompiler" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Klasse verwendet die <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> Attribut, und kann nicht vererbt werden.</para>
+        </block>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AddCommandLineCommands">
+      <MemberSignature Language="C#" Value="protected override void AddCommandLineCommands (Microsoft.Build.Tasks.CommandLineBuilderExtension commandLine);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void AddCommandLineCommands(class Microsoft.Build.Tasks.CommandLineBuilderExtension commandLine) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.ManagedCompiler.AddCommandLineCommands(Microsoft.Build.Tasks.CommandLineBuilderExtension)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandLine" Type="Microsoft.Build.Tasks.CommandLineBuilderExtension" />
+      </Parameters>
+      <Docs>
+        <param name="commandLine">Befehlszeilen-Generator, dem Argumente hinzugefügt werden sollen.</param>
+        <summary>Generiert Befehlszeilenargumente, die vom Befehlszeilentool direkt in der Befehlszeile und nicht aus einer Antwortdatei ausgeführt werden müssen.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Klasse verwendet die <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> Attribut, und kann nicht vererbt werden.</para>
+        </block>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AdditionalLibPaths">
+      <MemberSignature Language="C#" Value="public string[] AdditionalLibPaths { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] AdditionalLibPaths" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ManagedCompiler.AdditionalLibPaths" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die zusätzlichen Ordner ab oder legt diese fest, in denen Assemblys gesucht werden sollen.</summary>
+        <value>Die zusätzlichen Ordner, in denen Assemblys gesucht werden sollen.</value>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Klasse verwendet die <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> Attribut, und kann nicht vererbt werden.</para>
+        </block>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AddModules">
+      <MemberSignature Language="C#" Value="public string[] AddModules { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] AddModules" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ManagedCompiler.AddModules" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Compilermodule ab, die für das kompilierte Projekt zur Verfügung stehen sollen, oder legt sie fest.</summary>
+        <value>Die Compilermodule, die für das kompilierte Projekt zur Verfügung stehen sollen.</value>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Klasse verwendet die <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> Attribut, und kann nicht vererbt werden.</para>
+        </block>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AddResponseFileCommands">
+      <MemberSignature Language="C#" Value="protected override void AddResponseFileCommands (Microsoft.Build.Tasks.CommandLineBuilderExtension commandLine);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void AddResponseFileCommands(class Microsoft.Build.Tasks.CommandLineBuilderExtension commandLine) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.ManagedCompiler.AddResponseFileCommands(Microsoft.Build.Tasks.CommandLineBuilderExtension)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandLine" Type="Microsoft.Build.Tasks.CommandLineBuilderExtension" />
+      </Parameters>
+      <Docs>
+        <param name="commandLine">Befehlszeilen-Generator, dem Argumente hinzugefügt werden sollen.</param>
+        <summary>Füllt den angegebenen <paramref name="commandLine" />-Parameter mit den Schaltern und anderen Informationen, die in eine Antwortdatei aufgenommen werden können.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Klasse verwendet die <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> Attribut, und kann nicht vererbt werden.</para>
+        </block>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CheckAllReferencesExistOnDisk">
+      <MemberSignature Language="C#" Value="protected bool CheckAllReferencesExistOnDisk ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool CheckAllReferencesExistOnDisk() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.ManagedCompiler.CheckAllReferencesExistOnDisk" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überprüft, ob alle angegebenen Verweise auf dem Datenträger vorhanden sind.</summary>
+        <returns>
+          <see langword="true" />, wenn alle Verweise auf dem Datenträger vorhanden sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Klasse verwendet die <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> Attribut, und kann nicht vererbt werden.</para>
+        </block>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CheckHostObjectSupport">
+      <MemberSignature Language="C#" Value="protected void CheckHostObjectSupport (string parameterName, bool resultFromHostObjectSetOperation);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CheckHostObjectSupport(string parameterName, bool resultFromHostObjectSetOperation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.ManagedCompiler.CheckHostObjectSupport(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="resultFromHostObjectSetOperation" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">Der Name des Parameters, der auf dem Hostcompiler festgelegt werden soll.</param>
+        <param name="resultFromHostObjectSetOperation">
+          <see langword="true" />Wenn der Hostcompiler unterstützt <c>ParameterName</c>ist, andernfalls<see langword="false" /></param>
+        <summary>Protokolliert eine Meldung, wenn der angegebene Parameter vom Hostcompiler nicht unterstützt wird.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Klasse verwendet die <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> Attribut, und kann nicht vererbt werden.</para>
+        </block>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CodePage">
+      <MemberSignature Language="C#" Value="public int CodePage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CodePage" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ManagedCompiler.CodePage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen einer für alle Quellcodedateien in der Kompilierung zu verwendenden Codepage.</summary>
+        <value>Die für alle Quellcodedateien in der Kompilierung zu verwendende Codepage.</value>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Klasse verwendet die <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> Attribut, und kann nicht vererbt werden.</para>
+        </block>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DebugType">
+      <MemberSignature Language="C#" Value="public string DebugType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DebugType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ManagedCompiler.DebugType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Debugtyp ab oder legt ihn fest.</summary>
+        <value>Der Debugtyp.</value>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Klasse verwendet die <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> Attribut, und kann nicht vererbt werden.</para>
+        </block>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DefineConstants">
+      <MemberSignature Language="C#" Value="public string DefineConstants { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefineConstants" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ManagedCompiler.DefineConstants" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Konstanten für die bedingte Kompilierung ab oder legt diese fest.</summary>
+        <value>Die Konstanten für die bedingte Kompilierung.</value>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Klasse verwendet die <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> Attribut, und kann nicht vererbt werden.</para>
+        </block>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DelaySign">
+      <MemberSignature Language="C#" Value="public bool DelaySign { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DelaySign" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ManagedCompiler.DelaySign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen eines Werts, der angibt, ob der öffentliche Schlüssel in der Assembly platziert wird.</summary>
+        <value>
+          <see langword="true" />, wenn der öffentliche Schlüssel in der Assembly platziert wird. <see langword="false" />, wenn die Assembly vollständig signiert ist.</value>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Klasse verwendet die <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> Attribut, und kann nicht vererbt werden.</para>
+        </block>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="EmitDebugInformation">
+      <MemberSignature Language="C#" Value="public bool EmitDebugInformation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EmitDebugInformation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ManagedCompiler.EmitDebugInformation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt deisen fest, der angibt, ob der Compiler Debuginformationen generiert.</summary>
+        <value>
+          <see langword="true" />, wenn Debuginformationen generiert werden, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Klasse verwendet die <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> Attribut, und kann nicht vererbt werden.</para>
+        </block>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FileAlignment">
+      <MemberSignature Language="C#" Value="public int FileAlignment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 FileAlignment" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ManagedCompiler.FileAlignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt ihn fest, der anzeigt, wo die Abschnitte der Ausgabedatei ausgerichtet werden.</summary>
+        <value>Ein Wert, der anzeigt, wo die Abschnitte der Ausgabedatei ausgerichtet werden.</value>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Klasse verwendet die <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> Attribut, und kann nicht vererbt werden.</para>
+        </block>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="HandleTaskExecutionErrors">
+      <MemberSignature Language="C#" Value="protected override bool HandleTaskExecutionErrors ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool HandleTaskExecutionErrors() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.ManagedCompiler.HandleTaskExecutionErrors" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verarbeitet den Rückgabecode des Compilers.</summary>
+        <returns>
+          <see langword="true" />Wenn der Rückgabecode erfolgreich verarbeitet wurde; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt immer `false` zurück.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Klasse verwendet die <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> Attribut, und kann nicht vererbt werden.</para>
+        </block>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="HighEntropyVA">
+      <MemberSignature Language="C#" Value="public bool HighEntropyVA { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HighEntropyVA" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ManagedCompiler.HighEntropyVA" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das HighEntropyVA-Attribut.</summary>
+        <value>Gibt die HighEntropyVA-Attribut zurück.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="HostCompilerSupportsAllParameters">
+      <MemberSignature Language="C#" Value="protected bool HostCompilerSupportsAllParameters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HostCompilerSupportsAllParameters" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ManagedCompiler.HostCompilerSupportsAllParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Hostcompiler alle Aufgabenparameter unterstützt, oder legt ihn fest.</summary>
+        <value>
+          <see langword="true" />, wenn der Hostcompiler alle Aufgabenparameter unterstützt, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Klasse verwendet die <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> Attribut, und kann nicht vererbt werden.</para>
+        </block>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="KeyContainer">
+      <MemberSignature Language="C#" Value="public string KeyContainer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyContainer" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ManagedCompiler.KeyContainer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des kryptografischen Schlüsselcontainers ab oder legt diesen fest.</summary>
+        <value>Der Name des kryptografischen Schlüsselcontainers.</value>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Klasse verwendet die <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> Attribut, und kann nicht vererbt werden.</para>
+        </block>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="KeyFile">
+      <MemberSignature Language="C#" Value="public string KeyFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ManagedCompiler.KeyFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Dateinamen mit dem kryptografischen Schlüssel an oder legt diesen fest.</summary>
+        <value>Der Name der Datei mit dem kryptografischen Schlüssel.</value>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Klasse verwendet die <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> Attribut, und kann nicht vererbt werden.</para>
+        </block>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="LinkResources">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] LinkResources { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] LinkResources" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ManagedCompiler.LinkResources" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Ressourcendateien, die mit der Ausgabedatei verknüpft.</summary>
+        <value>Die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Ressourcendateien, die mit der Ausgabedatei verknüpft.</value>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Klasse verwendet die <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> Attribut, und kann nicht vererbt werden.</para>
+        </block>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ListHasNoDuplicateItems">
+      <MemberSignature Language="C#" Value="protected bool ListHasNoDuplicateItems (Microsoft.Build.Framework.ITaskItem[] itemList, string parameterName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool ListHasNoDuplicateItems(class Microsoft.Build.Framework.ITaskItem[] itemList, string parameterName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.ManagedCompiler.ListHasNoDuplicateItems(Microsoft.Build.Framework.ITaskItem[],System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemList" Type="Microsoft.Build.Framework.ITaskItem[]" />
+        <Parameter Name="parameterName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="itemList">Die Liste der Elemente, die auf Duplikate untersucht werden soll.</param>
+        <param name="parameterName">Der Name des Parameters, der enthält die <c>ItemList</c>.</param>
+        <summary>Bestimmt, ob doppelte Elemente im angegebenen Aufgabenparameter vorhanden sind.</summary>
+        <returns>
+          <see langword="true" />Wenn die Elementliste keine Duplikate enthält; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Klasse verwendet die <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> Attribut, und kann nicht vererbt werden.</para>
+        </block>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MainEntryPoint">
+      <MemberSignature Language="C#" Value="public string MainEntryPoint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MainEntryPoint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ManagedCompiler.MainEntryPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Klasse oder das Modul ab oder legt diese bzw. dieses fest, die bzw. das den Haupteinstiegspunkt enthält.</summary>
+        <value>Die Klasse oder das Modul, die bzw. das den Haupteinstiegspunkt enthält.</value>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Klasse verwendet die <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> Attribut, und kann nicht vererbt werden.</para>
+        </block>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="NoConfig">
+      <MemberSignature Language="C#" Value="public bool NoConfig { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NoConfig" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ManagedCompiler.NoConfig" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Compiler die Standardantwortdatei verwenden soll, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />Wenn der Compiler die Standardantwortdatei nicht verwendet wird; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Klasse verwendet die <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> Attribut, und kann nicht vererbt werden.</para>
+        </block>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="NoLogo">
+      <MemberSignature Language="C#" Value="public bool NoLogo { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NoLogo" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ManagedCompiler.NoLogo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Compilerbannerinformationen unterdrückt werden sollen, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />um die Compilerbannerinformationen zu unterdrücken. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Klasse verwendet die <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> Attribut, und kann nicht vererbt werden.</para>
+        </block>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="NoWin32Manifest">
+      <MemberSignature Language="C#" Value="public bool NoWin32Manifest { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NoWin32Manifest" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ManagedCompiler.NoWin32Manifest" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert, der angibt, ob ein externes UAC-Manifest für die Anwendung generiert wird.</summary>
+        <value>
+          <see langword="true" />Wenn ein externes UAC-Manifest für die Anwendung generiert wird. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Optimize">
+      <MemberSignature Language="C#" Value="public bool Optimize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Optimize" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ManagedCompiler.Optimize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob Compileroptimierungen aktiviert werden sollen, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />Um compileroptimierungen zu aktivieren; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Klasse verwendet die <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> Attribut, und kann nicht vererbt werden.</para>
+        </block>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="OutputAssembly">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem OutputAssembly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem OutputAssembly" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ManagedCompiler.OutputAssembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Ausgabedatei ab oder legt ihn fest.</summary>
+        <value>Der Name der Ausgabedatei.</value>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Klasse verwendet die <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> Attribut, und kann nicht vererbt werden.</para>
+        </block>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Platform">
+      <MemberSignature Language="C#" Value="public string Platform { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Platform" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ManagedCompiler.Platform" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Plattform-Attribut.</summary>
+        <value>Gibt die Plattform-Attribut zurück.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Prefer32Bit">
+      <MemberSignature Language="C#" Value="public bool Prefer32Bit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Prefer32Bit" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ManagedCompiler.Prefer32Bit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Prefer32Bit-Attribut.</summary>
+        <value>Gibt die Prefer32Bit-Attribut.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="References">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] References { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] References" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ManagedCompiler.References" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Elemente ab, aus denen der Compiler öffentliche Typinformationen importiert, oder legt diese fest.</summary>
+        <value>Die Elemente, aus denen der Compiler öffentliche Typinformationen importiert.</value>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Klasse verwendet die <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> Attribut, und kann nicht vererbt werden.</para>
+        </block>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Resources">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] Resources { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] Resources" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ManagedCompiler.Resources" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Ressourcen in die Ausgabedatei eingebettet werden sollen.</summary>
+        <value>Die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Ressourcen in die Ausgabedatei eingebettet werden sollen.</value>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Klasse verwendet die <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> Attribut, und kann nicht vererbt werden.</para>
+        </block>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseFiles">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] ResponseFiles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] ResponseFiles" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ManagedCompiler.ResponseFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Antwortdateien ab oder legt diese fest, die Befehle für die Aufgabe enthalten.</summary>
+        <value>Die Antwortdateien, die Befehle für die Aufgabe enthalten.</value>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Klasse verwendet die <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> Attribut, und kann nicht vererbt werden.</para>
+        </block>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Sources">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] Sources { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] Sources" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ManagedCompiler.Sources" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die zu kompilierenden Quelldateien ab oder legt sie fest.</summary>
+        <value>Die zu kompilierenden Quelldateien.</value>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Klasse verwendet die <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> Attribut, und kann nicht vererbt werden.</para>
+        </block>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StandardOutputEncoding">
+      <MemberSignature Language="C#" Value="protected override System.Text.Encoding StandardOutputEncoding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding StandardOutputEncoding" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ManagedCompiler.StandardOutputEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Codierung des standardmäßigen Ausgabedatenstroms der erfassten Aufgabe ab, oder legt sie fest.</summary>
+        <value>Die Codierung des standardmäßigen Ausgabedatenstroms der erfassten Aufgabe.</value>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Klasse verwendet die <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> Attribut, und kann nicht vererbt werden.</para>
+        </block>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SubsystemVersion">
+      <MemberSignature Language="C#" Value="public string SubsystemVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SubsystemVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ManagedCompiler.SubsystemVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert der SubsystemVersion-Attribut.</summary>
+        <value>Gibt die Version des Subsystems.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TargetType">
+      <MemberSignature Language="C#" Value="public string TargetType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ManagedCompiler.TargetType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Dateiformat der Ausgabedatei ab oder legt dieses fest.</summary>
+        <value>Das Dateiformat der Ausgabedatei.</value>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Klasse verwendet die <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> Attribut, und kann nicht vererbt werden.</para>
+        </block>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TreatWarningsAsErrors">
+      <MemberSignature Language="C#" Value="public bool TreatWarningsAsErrors { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TreatWarningsAsErrors" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ManagedCompiler.TreatWarningsAsErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob Warnungen als Fehler behandelt werden sollen, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />Wenn Warnungen als Fehler behandelt werden. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Klasse verwendet die <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> Attribut, und kann nicht vererbt werden.</para>
+        </block>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="UseAlternateCommandLineToolToExecute">
+      <MemberSignature Language="C#" Value="protected virtual bool UseAlternateCommandLineToolToExecute ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool UseAlternateCommandLineToolToExecute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.ManagedCompiler.UseAlternateCommandLineToolToExecute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wenn ein Name des alternativen Tools oder Toolpfad in der Projektdatei angegeben wurde, wird dieses Tool verwendet, anstatt der Hostcompiler für integrierte Entwicklungsumgebung (IDE) erstellt.</summary>
+        <returns>
+          <see langword="false" />Wenn der Hostcompiler verwendet werden soll. andernfalls <see langword="true" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="UsedCommandLineTool">
+      <MemberSignature Language="C#" Value="protected bool UsedCommandLineTool { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UsedCommandLineTool" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ManagedCompiler.UsedCommandLineTool" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob der Compiler über die Befehlszeile, anstelle der Hostcompiler-Objekt aufgerufen wurde.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Utf8Output">
+      <MemberSignature Language="C#" Value="public bool Utf8Output { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Utf8Output" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ManagedCompiler.Utf8Output" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Compilerausgabe mit UTF-8-Codierung protokolliert wird, oder legt ihn fest.</summary>
+        <value>
+          <see langword="true" />Wenn die Compilerausgabe mit UTF-8-Codierung protokolliert wird. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Klasse verwendet die <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> Attribut, und kann nicht vererbt werden.</para>
+        </block>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateParameters">
+      <MemberSignature Language="C#" Value="protected override bool ValidateParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ValidateParameters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.ManagedCompiler.ValidateParameters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überprüft die Aufgabenparameter.</summary>
+        <returns>
+          <see langword="true" />Wenn alle Parameter gültig sind. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Klasse verwendet die <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> Attribut, und kann nicht vererbt werden.</para>
+        </block>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Win32Icon">
+      <MemberSignature Language="C#" Value="public string Win32Icon { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Win32Icon" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ManagedCompiler.Win32Icon" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Dateinamen des Symbols ab oder legt diesen fest.</summary>
+        <value>Der Dateiname des Symbols.</value>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Klasse verwendet die <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> Attribut, und kann nicht vererbt werden.</para>
+        </block>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Win32Manifest">
+      <MemberSignature Language="C#" Value="public string Win32Manifest { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Win32Manifest" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ManagedCompiler.Win32Manifest" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Win32-Manifest.</summary>
+        <value>Das Win32-Manifest.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Win32Resource">
+      <MemberSignature Language="C#" Value="public string Win32Resource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Win32Resource" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ManagedCompiler.Win32Resource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Win32-Ressourcendatei (RES-Datei) ab, die in die Ausgabedatei eingefügt werden soll, oder legt diese fest.</summary>
+        <value>Die Win32-Ressourcendatei (RES-Datei), die in die Ausgabedatei eingefügt werden soll.</value>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Klasse verwendet die <see cref="T:System.Security.Permissions.StrongNameIdentityPermissionAttribute" /> Attribut, und kann nicht vererbt werden.</para>
+        </block>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1165 @@
+<Type Name="XmlAttribute" FullName="System.Xml.XmlAttribute">
+  <TypeSignature Language="C#" Value="public class XmlAttribute : System.Xml.XmlNode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlAttribute extends System.Xml.XmlNode" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.XmlAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.XmlNode</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein XML-Attribut dar. Gültige Werte und Standardwerte für das Attribut werden in einer Dokumenttypdefinition (DTD) oder ein Schema definiert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Attribute können einem Element zugeordnet werden. Verwenden der <xref:System.Xml.XmlAttribute.OwnerElement%2A> Eigenschaft, um die <xref:System.Xml.XmlElement> zu dem das Attribut gehört.  
+  
+ Die `XmlElement` -Klasse verfügt über mehrere Methoden, die Ihnen ermöglichen, Attributknoten zugreifen (<xref:System.Xml.XmlElement.GetAttribute%2A?displayProperty=nameWithType>, <xref:System.Xml.XmlElement.SetAttribute%2A?displayProperty=nameWithType>, <xref:System.Xml.XmlElement.RemoveAttribute%2A?displayProperty=nameWithType>usw.). Darüber hinaus können Sie rufen die <xref:System.Xml.XmlElement.Attributes%2A?displayProperty=nameWithType> -Eigenschaft, die zurückgibt, eine <xref:System.Xml.XmlAttributeCollection> aktivieren Sie die Attribute nach Name oder Index aus der Auflistung zugegriffen werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XmlAttribute (string prefix, string localName, string namespaceURI, System.Xml.XmlDocument doc);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(string prefix, string localName, string namespaceURI, class System.Xml.XmlDocument doc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlAttribute.#ctor(System.String,System.String,System.String,System.Xml.XmlDocument)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+        <Parameter Name="localName" Type="System.String" />
+        <Parameter Name="namespaceURI" Type="System.String" />
+        <Parameter Name="doc" Type="System.Xml.XmlDocument" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">Das Namespacepräfix.</param>
+        <param name="localName">Der lokale Name des Attributs.</param>
+        <param name="namespaceURI">Den Namespace uniform Resource Identifier (URI).</param>
+        <param name="doc">Das übergeordnete XML-Dokument.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.XmlAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Instanziieren Sie keine <xref:System.Xml.XmlAttribute> direkt; stattdessen verwenden Sie Methoden wie <xref:System.Xml.XmlDocument.CreateAttribute%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendChild">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlNode AppendChild (System.Xml.XmlNode newChild);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Xml.XmlNode AppendChild(class System.Xml.XmlNode newChild) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlAttribute.AppendChild(System.Xml.XmlNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newChild" Type="System.Xml.XmlNode" />
+      </Parameters>
+      <Docs>
+        <param name="newChild">Das hinzuzufügende <see cref="T:System.Xml.XmlNode" />.</param>
+        <summary>Fügt den angegebenen Knoten am Ende der Liste der untergeordneten Knoten dieses Knotens hinzu.</summary>
+        <returns>Die <see cref="T:System.Xml.XmlNode" /> hinzugefügt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `newChild` ist bereits in der Struktur es zuerst entfernt.  
+  
+ Wenn der eingefügte Knoten aus einem anderen Dokument erstellt wurde, können Sie <xref:System.Xml.XmlDocument.ImportNode%2A?displayProperty=nameWithType> So importieren Sie den Knoten in das aktuelle Dokument. Des importierten Knotens kann dann in das aktuelle Dokument eingefügt werden.  
+  
+   
+  
+## Examples  
+ Ein Beispiel für die <xref:System.Xml.XmlAttribute.AppendChild%2A> -Methode finden Sie unter der <xref:System.Xml.XmlNode.AppendChild%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Dieser Knoten ist ein Typ, die keine untergeordneten Knoten des Typs der zu der <paramref name="newChild" /> Knoten.  
+  
+ Die <paramref name="newChild" /> ist ein Vorgänger dieses Knotens.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="newChild" /> erstellt wurde, aus einem anderen Dokument als dasjenige, das diesen Knoten erstellt.  
+  
+ Dieser Knoten ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseURI">
+      <MemberSignature Language="C#" Value="public override string BaseURI { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BaseURI" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlAttribute.BaseURI" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Basis Uniform Resource Identifier (URI) des Knotens ab.</summary>
+        <value>Die Position, aus der der Knoten geladen wurde oder String.Empty, wenn der Knoten über keinen Basis-URI verfügt. Attributknoten haben den gleichen Basis-URI als Besitzerelement an. Wenn ein Attributknoten kein Besitzerelement <see langword="BaseURI" /> gibt String.Empty zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Netzwerk-XML-Dokument besteht aus Segmenten der Daten unter Verwendung verschiedener World Wide Web Consortium (W3C) standard aggregiert und enthält daher Knoten, die aus verschiedenen Quellen stammen. Die `BaseURI` gibt Aufschluss darüber, woher diese Knoten stammen.  
+  
+ Weitere Informationen zu `BaseURI` und mit anderen Knotentypen Verhalten, finden Sie unter <xref:System.Xml.XmlNode.BaseURI%2A?displayProperty=nameWithType>.  
+  
+ Diese Eigenschaft ist eine Microsoft-Erweiterung des Dokumentobjektmodells (DOM).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt Informationen auf den Attributknoten, einschließlich des Basis-URI.  
+  
+ [!code-cpp[Classic WebData XmlAttribute.BaseURI Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlAttribute.BaseURI Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlAttribute.BaseURI Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlAttribute.BaseURI Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlAttribute.BaseURI Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlAttribute.BaseURI Example/VB/source.vb#1)]  
+  
+ Das Beispiel verwendet die Datei `baseuri.xml`als Eingabe.  
+  
+ [!code-xml[Classic WebData XmlAttribute.BaseURI Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlAttribute.BaseURI Example/XML/source.xml#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneNode">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlNode CloneNode (bool deep);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Xml.XmlNode CloneNode(bool deep) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlAttribute.CloneNode(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="deep" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="deep">
+          <see langword="true" />die Teilstruktur unter dem angegebenen Knoten rekursiv geklont; <see langword="false" /> , nur der Knoten selbst geklont</param>
+        <summary>Erstellt ein Duplikat dieses Knotens.</summary>
+        <returns>Das Knotenduplikat.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode dient als einen Kopierkonstruktor für Knoten. Der geklonte Knoten weist kein übergeordnetes Element (<xref:System.Xml.XmlAttribute.ParentNode%2A> gibt `null`).  
+  
+ Beim Klonen eines nicht angegebenen Attributs gibt ein angegebenes Attribut (<xref:System.Xml.XmlAttribute.Specified%2A> gibt `true`).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird `CloneNode` zwei unterschiedliche Elementknoten ein Attribut hinzu.  
+  
+ [!code-cpp[Classic WebData XmlAttribute.CloneNode Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlAttribute.CloneNode Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlAttribute.CloneNode Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlAttribute.CloneNode Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlAttribute.CloneNode Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlAttribute.CloneNode Example/VB/source.vb#1)]  
+  
+ Im Beispiel wird die Datei `2elems.xml`als Eingabe.  
+  
+ [!code-xml[Classic WebData XmlAttribute.CloneNode Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlAttribute.CloneNode Example/XML/source.xml#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerText">
+      <MemberSignature Language="C#" Value="public override string InnerText { set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InnerText" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlAttribute.InnerText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Legt die verketteten Werte des Knotens und aller diesem untergeordneten Elemente.</summary>
+        <value>Die verketteten Werte des Knotens und aller diesem untergeordneten Elemente. Bei Attributknoten, diese Eigenschaft hat die gleiche Funktionalität wie die <see cref="P:System.Xml.XmlAttribute.Value" /> Eigenschaft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Festlegen dieser Eigenschaft werden alle untergeordneten Elemente mit den analysierten Inhalt der angegebenen Zeichenfolge ersetzt.  
+  
+ Diese Eigenschaft ist eine Microsoft-Erweiterung des Dokumentobjektmodells (DOM).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerXml">
+      <MemberSignature Language="C#" Value="public override string InnerXml { set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InnerXml" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlAttribute.InnerXml" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Legt den Wert des Attributs.</summary>
+        <value>Der Attributwert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist eine Microsoft-Erweiterung des Dokumentobjektmodells (DOM).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.XmlException">Der beim Festlegen dieser Eigenschaft angegebene XML-Code ist nicht ordnungsgemäß formatiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertAfter">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlNode InsertAfter (System.Xml.XmlNode newChild, System.Xml.XmlNode refChild);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Xml.XmlNode InsertAfter(class System.Xml.XmlNode newChild, class System.Xml.XmlNode refChild) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlAttribute.InsertAfter(System.Xml.XmlNode,System.Xml.XmlNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newChild" Type="System.Xml.XmlNode" />
+        <Parameter Name="refChild" Type="System.Xml.XmlNode" />
+      </Parameters>
+      <Docs>
+        <param name="newChild">Der einzufügende <see cref="T:System.Xml.XmlNode" />.</param>
+        <param name="refChild">Der <see cref="T:System.Xml.XmlNode" />, der der Verweisknoten ist. Die <c>NewChild</c> befindet sich nach der <c>RefChild</c>.</param>
+        <summary>Fügt den angegebenen Knoten unmittelbar hinter dem angegebenen Verweisknoten ein.</summary>
+        <returns>Die <see cref="T:System.Xml.XmlNode" /> eingefügt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `refChild` ist `null`, einfügen `newChild` am Anfang der Liste mit untergeordneten Knoten. Wenn `newChild` ist ein <xref:System.Xml.XmlDocumentFragment> -Objekt, dessen untergeordnete Knoten werden eingefügt, in der gleichen Reihenfolge nach `refChild`. Wenn die `newChild` ist bereits in der Struktur es zuerst entfernt.  
+  
+ Wenn der eingefügte Knoten aus einem anderen Dokument erstellt wurde, können Sie <xref:System.Xml.XmlDocument.ImportNode%2A?displayProperty=nameWithType> So importieren Sie den Knoten in das aktuelle Dokument. Des importierten Knotens kann dann in das aktuelle Dokument eingefügt werden.  
+  
+ Diese Methode ist eine Microsoft-Erweiterung, die (DOKUMENTOBJEKTMODELL).  
+  
+   
+  
+## Examples  
+ Ein Beispiel für die <xref:System.Xml.XmlAttribute.InsertAfter%2A> Methode finden Sie unter der <xref:System.Xml.XmlNode.InsertAfter%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Dieser Knoten ist ein Typ, die keine untergeordneten Knoten des Typs der zu der <paramref name="newChild" /> Knoten.  
+  
+ Die <paramref name="newChild" /> ist ein Vorgänger dieses Knotens.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="newChild" /> erstellt wurde, aus einem anderen Dokument als dasjenige, das diesen Knoten erstellt.  
+  
+ Die <paramref name="refChild" /> ist kein untergeordnetes Element dieses Knotens.  
+  
+ Dieser Knoten ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertBefore">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlNode InsertBefore (System.Xml.XmlNode newChild, System.Xml.XmlNode refChild);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Xml.XmlNode InsertBefore(class System.Xml.XmlNode newChild, class System.Xml.XmlNode refChild) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlAttribute.InsertBefore(System.Xml.XmlNode,System.Xml.XmlNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newChild" Type="System.Xml.XmlNode" />
+        <Parameter Name="refChild" Type="System.Xml.XmlNode" />
+      </Parameters>
+      <Docs>
+        <param name="newChild">Der einzufügende <see cref="T:System.Xml.XmlNode" />.</param>
+        <param name="refChild">Der <see cref="T:System.Xml.XmlNode" />, der der Verweisknoten ist. Die <c>NewChild</c> vor diesem Knoten platziert wird.</param>
+        <summary>Fügt den angegebenen Knoten direkt vor dem angegebenen Verweisknoten ein.</summary>
+        <returns>Die <see cref="T:System.Xml.XmlNode" /> eingefügt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `refChild` ist `null`, einfügen `newChild` am Ende der Liste der untergeordneten Knoten. Wenn `newChild` ist ein <xref:System.Xml.XmlDocumentFragment> -Objekt, dessen untergeordnete Knoten eingefügt, in der gleichen Reihenfolge vor `refChild`. Wenn die `newChild` ist bereits in der Struktur es zuerst entfernt.  
+  
+ Wenn der eingefügte Knoten aus einem anderen Dokument erstellt wurde, können Sie <xref:System.Xml.XmlDocument.ImportNode%2A?displayProperty=nameWithType> So importieren Sie den Knoten in das aktuelle Dokument. Des importierten Knotens kann dann in das aktuelle Dokument eingefügt werden.  
+  
+   
+  
+## Examples  
+ Ein Beispiel für die <xref:System.Xml.XmlAttribute.InsertBefore%2A> -Methode finden Sie unter der <xref:System.Xml.XmlNode.InsertBefore%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der aktuelle Knoten ist ein Typ, der keine untergeordneten Knoten des Typs der zu der <paramref name="newChild" /> Knoten.  
+  
+ Die <paramref name="newChild" /> ist ein Vorgänger dieses Knotens.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="newChild" /> erstellt wurde, aus einem anderen Dokument als dasjenige, das diesen Knoten erstellt.  
+  
+ Die <paramref name="refChild" /> ist kein untergeordnetes Element dieses Knotens.  
+  
+ Dieser Knoten ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalName">
+      <MemberSignature Language="C#" Value="public override string LocalName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LocalName" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlAttribute.LocalName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den lokalen Namen des Knotens ab.</summary>
+        <value>Der Name des Attributknotens mit dem Präfix, das entfernt werden soll. Im folgenden Beispiel &lt;book bk: Genre = "Novel"&gt;, <see langword="LocalName" /> des Attributs ist <see langword="genre" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Knoten kein Präfix `LocalName` ist identisch mit <xref:System.Xml.XmlAttribute.Name%2A>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt Informationen auf jedem Knoten in der attributauflistung.  
+  
+ [!code-cpp[Classic WebData XmlAttribute.NamespaceURI Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlAttribute.NamespaceURI Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlAttribute.NamespaceURI Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlAttribute.NamespaceURI Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlAttribute.NamespaceURI Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlAttribute.NamespaceURI Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den qualifizierten Namen des Knotens ab.</summary>
+        <value>Der qualifizierte Name des Attributknotens.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt Informationen auf jedem Knoten in der attributauflistung.  
+  
+ [!code-cpp[Classic WebData XmlAttribute.Name Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlAttribute.Name Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlAttribute.Name Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlAttribute.Name Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlAttribute.Name Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlAttribute.Name Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NamespaceURI">
+      <MemberSignature Language="C#" Value="public override string NamespaceURI { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NamespaceURI" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlAttribute.NamespaceURI" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namespace-URI dieses Knotens ab.</summary>
+        <value>Der Namespace-URI dieses Knotens. Wenn das Attribut nicht explizit einen Namespace angegeben ist, gibt diese Eigenschaft String.Empty zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Attribut erbt nicht dessen Namespace vom Element, das es angefügt ist. Wenn ein Attribut nicht explizit ein Namespace angegeben wird, gilt der Namespace-URI "String.Empty" sein.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt Informationen auf jedem Knoten in der attributauflistung.  
+  
+ [!code-cpp[Classic WebData XmlAttribute.NamespaceURI Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlAttribute.NamespaceURI Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlAttribute.NamespaceURI Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlAttribute.NamespaceURI Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlAttribute.NamespaceURI Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlAttribute.NamespaceURI Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeType">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlNodeType NodeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.XmlNodeType NodeType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlAttribute.NodeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des aktuellen Knotens ab.</summary>
+        <value>Der Knotentyp für <see langword="XmlAttribute" /> -Knoten ist XmlNodeType.Attribute.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerDocument">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlDocument OwnerDocument { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlDocument OwnerDocument" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlAttribute.OwnerDocument" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDocument</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.Xml.XmlDocument" /> ab, zu dem dieser Knoten gehört.</summary>
+        <value>Ein XML-Dokument, zu dem dieser Knoten gehört.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird ein Attribut erstellt und zeigt seine `OwnerDocument`.  
+  
+ [!code-cpp[Classic WebData XmlAttribute.OwnerDocument Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlAttribute.OwnerDocument Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlAttribute.OwnerDocument Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlAttribute.OwnerDocument Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlAttribute.OwnerDocument Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlAttribute.OwnerDocument Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerElement">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.XmlElement OwnerElement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlElement OwnerElement" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlAttribute.OwnerElement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Xml.XmlElement" /> zu dem das Attribut gehört.</summary>
+        <value>Die <see langword="XmlElement" /> , zu der das Attribut gehört oder <see langword="null" /> dieses Attribut ist nicht Teil einer <see langword="XmlElement" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird ein Attribut erstellt und zeigt die `OwnerElement` des Attributs.  
+  
+ [!code-cpp[Classic WebData XmlAttribute.OwnerElement Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlAttribute.OwnerElement Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlAttribute.OwnerElement Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlAttribute.OwnerElement Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlAttribute.OwnerElement Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlAttribute.OwnerElement Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentNode">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlNode ParentNode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlNode ParentNode" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlAttribute.ParentNode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das übergeordnete Element dieses Knotens ab. Für <see langword="XmlAttribute" /> Knoten, gibt diese Eigenschaft immer <see langword="null" />.</summary>
+        <value>Für <see langword="XmlAttribute" /> Knoten, gibt diese Eigenschaft immer <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Xml.XmlAttribute.OwnerElement%2A> Eigenschaft, um die <xref:System.Xml.XmlElement> zu dem das Attribut gehört.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prefix">
+      <MemberSignature Language="C#" Value="public override string Prefix { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Prefix" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlAttribute.Prefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Namespacepräfix dieses Knotens ab oder legt dieses fest.</summary>
+        <value>Das Namespacepräfix dieses Knotens. Wenn kein Präfix vorhanden ist, gibt diese Eigenschaft String.Empty zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da das Präfix eines Attributs ändern dessen Namespace-URI nicht geändert wird, erstellt ändern das Präfix eines Attributs, die bekannt ist, dass Sie keinen Standardwert haben ein neues Attribut mit dem Standardwert und dem ursprünglichen Präfix nicht.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt Informationen auf jedem Knoten in der attributauflistung.  
+  
+ [!code-cpp[Classic WebData XmlAttribute.NamespaceURI Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlAttribute.NamespaceURI Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlAttribute.NamespaceURI Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlAttribute.NamespaceURI Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlAttribute.NamespaceURI Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlAttribute.NamespaceURI Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Dieser Knoten ist schreibgeschützt.</exception>
+        <exception cref="T:System.Xml.XmlException">Das angegebene Präfix enthält ein ungültiges Zeichen.  
+  
+ Das angegebene Präfix ist falsch formatiert.  
+  
+ Der namespaceURI dieses Knotens <see langword="null" />.  
+  
+ Das angegebene Präfix ist "Xml", und der NamespaceURI dieses Knotens unterscheidet sich von "http://www.w3.org/XML/1998/namespace".  
+  
+ Dieser Knoten ist ein Attribut, das angegebene Präfix "Xmlns" ist, und der NamespaceURI dieses Knotens unterscheidet sich von "http://www.w3.org/2000/xmlns/".  
+  
+ Dieser Knoten ist ein Attribut, und der QualifiedName dieses Knotens ist "Xmlns" [Namespaces].</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PrependChild">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlNode PrependChild (System.Xml.XmlNode newChild);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Xml.XmlNode PrependChild(class System.Xml.XmlNode newChild) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlAttribute.PrependChild(System.Xml.XmlNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newChild" Type="System.Xml.XmlNode" />
+      </Parameters>
+      <Docs>
+        <param name="newChild">Das hinzuzufügende <see cref="T:System.Xml.XmlNode" />. Es ist ein <see cref="T:System.Xml.XmlDocumentFragment" />, den gesamten Inhalt des Dokumentfragments in Liste der untergeordneten Elemente dieses Knotens verschoben werden.</param>
+        <summary>Fügt den angegebenen Knoten am Anfang der Liste der untergeordneten Knoten dieses Knotens hinzu.</summary>
+        <returns>Die <see cref="T:System.Xml.XmlNode" /> hinzugefügt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `newChild` ist bereits in der Struktur es zuerst entfernt.  
+  
+ Wenn der eingefügte Knoten aus einem anderen Dokument erstellt wurde, können Sie <xref:System.Xml.XmlDocument.ImportNode%2A?displayProperty=nameWithType> So importieren Sie den Knoten in das aktuelle Dokument. Des importierten Knotens kann dann in das aktuelle Dokument eingefügt werden.  
+  
+ Diese Methode ist eine Microsoft-Erweiterung, die (DOKUMENTOBJEKTMODELL).  
+  
+   
+  
+## Examples  
+ Ein Beispiel für die <xref:System.Xml.XmlAttribute.PrependChild%2A> -Methode finden Sie unter der <xref:System.Xml.XmlNode.PrependChild%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Dieser Knoten ist ein Typ, die keine untergeordneten Knoten des Typs der zu der <paramref name="newChild" /> Knoten.  
+  
+ Die <paramref name="newChild" /> ist ein Vorgänger dieses Knotens.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="newChild" /> erstellt wurde, aus einem anderen Dokument als dasjenige, das diesen Knoten erstellt.  
+  
+ Dieser Knoten ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveChild">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlNode RemoveChild (System.Xml.XmlNode oldChild);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Xml.XmlNode RemoveChild(class System.Xml.XmlNode oldChild) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlAttribute.RemoveChild(System.Xml.XmlNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldChild" Type="System.Xml.XmlNode" />
+      </Parameters>
+      <Docs>
+        <param name="oldChild">Das zu entfernende <see cref="T:System.Xml.XmlNode" />-Element.</param>
+        <summary>Entfernt den angegebenen untergeordneten Knoten.</summary>
+        <returns>Die <see cref="T:System.Xml.XmlNode" /> entfernt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Ein Beispiel für die <xref:System.Xml.XmlAttribute.RemoveChild%2A> -Methode finden Sie unter der <xref:System.Xml.XmlNode.RemoveChild%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="oldChild" /> ist kein untergeordnetes Element dieses Knotens. Oder dieser Knoten ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplaceChild">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlNode ReplaceChild (System.Xml.XmlNode newChild, System.Xml.XmlNode oldChild);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Xml.XmlNode ReplaceChild(class System.Xml.XmlNode newChild, class System.Xml.XmlNode oldChild) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlAttribute.ReplaceChild(System.Xml.XmlNode,System.Xml.XmlNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newChild" Type="System.Xml.XmlNode" />
+        <Parameter Name="oldChild" Type="System.Xml.XmlNode" />
+      </Parameters>
+      <Docs>
+        <param name="newChild">Das neue untergeordnete <see cref="T:System.Xml.XmlNode" />.</param>
+        <param name="oldChild">Die <see cref="T:System.Xml.XmlNode" /> zu ersetzen.</param>
+        <summary>Ersetzt den untergeordneten Knoten mit den angegebenen neuen untergeordneten Knoten angegeben.</summary>
+        <returns>Die <see cref="T:System.Xml.XmlNode" /> ersetzt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `newChild` ist bereits in der Struktur es zuerst entfernt.  
+  
+ Wenn die `newChild` erstellt wurde aus einem anderen Dokument können Sie <xref:System.Xml.XmlDocument.ImportNode%2A?displayProperty=nameWithType> So importieren Sie den Knoten in das aktuelle Dokument.  
+  
+   
+  
+## Examples  
+ Ein Beispiel für die <xref:System.Xml.XmlAttribute.ReplaceChild%2A> -Methode finden Sie unter der <xref:System.Xml.XmlNode.ReplaceChild%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Dieser Knoten ist ein Typ, die keine untergeordneten Knoten des Typs der zu der <paramref name="newChild" /> Knoten.  
+  
+ Die <paramref name="newChild" /> ist ein Vorgänger dieses Knotens.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="newChild" /> erstellt wurde, aus einem anderen Dokument als dasjenige, das diesen Knoten erstellt.  
+  
+ Dieser Knoten ist schreibgeschützt.  
+  
+ Die <paramref name="oldChild" /> ist kein untergeordnetes Element dieses Knotens.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SchemaInfo">
+      <MemberSignature Language="C#" Value="public override System.Xml.Schema.IXmlSchemaInfo SchemaInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.IXmlSchemaInfo SchemaInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlAttribute.SchemaInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.IXmlSchemaInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das post-schema-Validation-Infoset, der diesem Knoten nach der schemavalidierung zugewiesen wurde.</summary>
+        <value>Ein <see cref="T:System.Xml.Schema.IXmlSchemaInfo" /> , das das post-schema-Validation-Infoset dieses Knotens enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.XmlAttribute.SchemaInfo%2A> -Eigenschaft wird festgelegt, wenn dieser Knoten validiert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Specified">
+      <MemberSignature Language="C#" Value="public virtual bool Specified { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Specified" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlAttribute.Specified" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Attributwert explizit festgelegt wurde.</summary>
+        <value>
+          <see langword="true" />Wenn dieses Attribut explizit ein Wert in der ursprünglichen Instanzdokument; zugewiesen wurde andernfalls <see langword="false" />. Der Wert <see langword="false" /> gibt an, dass der Wert des Attributs aus der DTD stammt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Implementierung ist für diese Eigenschaft wird nicht für den Benutzer. Wenn der Benutzer ändert den Wert des Attributs (selbst wenn diese endet, und dass Sie den gleichen Wert wie der standardmäßige/fixed-Wert), klicken Sie dann das angegebene Flag automatisch umgekehrt, `true`. Um das Attribut erneut dem Standard/fixed-Wert aus der DTD angeben, muss der Benutzer das Attribut löschen. Klicken Sie dann die Implementierung stellt ein neues Attribut, die zur Verfügung, mit der angegebenen Menge `false` und Standard/fixed-Wert (falls vorhanden).  
+  
+ Zusammenfassung:  
+  
+1.  Wenn das Attribut einen Wert zugewiesen in das Dokument hat `Specified` ist `true`, und der Wert ist der zugewiesene Wert.  
+  
+2.  Wenn das Attribut keinen zugewiesenen Wert im Dokument hat und verfügt über einen Standardwert/festen Wert in der DTD `Specified` ist `false`, und der Wert ist der Standard/fixed-Wert in der DTD.  
+  
+3.  Andernfalls wird das Attribut nicht im Strukturmodell des Dokuments angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public override string Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlAttribute.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert des Knotens ab oder legt diesen fest.</summary>
+        <value>Der zurückgegebene Wert hängt vom <see cref="P:System.Xml.XmlNode.NodeType" /> des Knotens ab. Für <see langword="XmlAttribute" /> -Knoten ist diese Eigenschaft ist der Wert des Attributs.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt Informationen auf jedem Knoten in der attributauflistung.  
+  
+ [!code-cpp[Classic WebData XmlAttribute.NamespaceURI Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlAttribute.NamespaceURI Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlAttribute.NamespaceURI Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlAttribute.NamespaceURI Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlAttribute.NamespaceURI Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlAttribute.NamespaceURI Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der Knoten schreibgeschützt ist, und ein Set-Vorgang aufgerufen wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteContentTo">
+      <MemberSignature Language="C#" Value="public override void WriteContentTo (System.Xml.XmlWriter w);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteContentTo(class System.Xml.XmlWriter w) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlAttribute.WriteContentTo(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="w" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="w">Der <see langword="XmlWriter" />, in dem gespeichert werden soll.</param>
+        <summary>Speichert alle untergeordneten Elemente des Knotens im angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist eine Microsoft-Erweiterung, die (DOKUMENTOBJEKTMODELL). Es ist funktionell gleichwertig mit der <xref:System.Xml.XmlAttribute.InnerXml%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteTo">
+      <MemberSignature Language="C#" Value="public override void WriteTo (System.Xml.XmlWriter w);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteTo(class System.Xml.XmlWriter w) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlAttribute.WriteTo(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="w" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="w">Der <see langword="XmlWriter" />, in dem gespeichert werden soll.</param>
+        <summary>Speichert den Knoten im angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist eine Microsoft-Erweiterung, die (DOKUMENTOBJEKTMODELL). Es ist funktionell gleichwertig mit der <xref:System.Xml.XmlNode.OuterXml%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

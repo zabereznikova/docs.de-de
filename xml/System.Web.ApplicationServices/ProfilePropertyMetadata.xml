@@ -1,0 +1,254 @@
+<Type Name="ProfilePropertyMetadata" FullName="System.Web.ApplicationServices.ProfilePropertyMetadata">
+  <TypeSignature Language="C#" Value="public class ProfilePropertyMetadata : System.Runtime.Serialization.IExtensibleDataObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProfilePropertyMetadata extends System.Object implements class System.Runtime.Serialization.IExtensibleDataObject" />
+  <TypeSignature Language="DocId" Value="T:System.Web.ApplicationServices.ProfilePropertyMetadata" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.IExtensibleDataObject</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Auflistung von Werten, die eine Profileigenschaft beschreiben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.Web.ApplicationServices.ProfilePropertyMetadata> Klasse Informationen über eine Profileigenschaft abgerufen, wenn Sie Profile, die über Zugriff auf die <xref:System.Web.ApplicationServices.ProfileService> Klasse. Sie können den Namen und Typ der Eigenschaft, die abgerufen werden, ob sie schreibgeschützt ist, ob darauf zugegriffen werden kann, vom Benutzer nicht authentifiziert wurde und der Standardwert. Eine Anwendung, dauert die entsprechenden Aktionen basierend auf diesen Werten, z. B. nicht versucht, eine schreibgeschützte Eigenschaft festzulegen.  
+  
+ Für den Zugriff auf die <xref:System.Web.ApplicationServices.ProfilePropertyMetadata> Objekt aus einer Anwendung, die kompatibel mit der Windows Communication Framework (WCF), verwenden die <xref:System.Web.ApplicationServices.ProfileService.GetPropertiesMetadata%2A> Methode der <xref:System.Web.ApplicationServices.ProfileService> Klasse. Der Benutzer verfügt nicht über angemeldet sein, zum Abrufen der <xref:System.Web.ApplicationServices.ProfilePropertyMetadata> Objekt, da die Metadaten für Profileigenschaften nicht für einen Benutzer Profileigenschaftswerte spezifisch sind.  
+  
+ Die Werte in der <xref:System.Web.ApplicationServices.ProfilePropertyMetadata> "Class" in der Datei "Web.config" im Element des Abschnitts festgelegt werden, wenn die Eigenschaft definiert ist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProfilePropertyMetadata ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ApplicationServices.ProfilePropertyMetadata.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.ApplicationServices.ProfilePropertyMetadata" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowAnonymousAccess">
+      <MemberSignature Language="C#" Value="public bool AllowAnonymousAccess { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowAnonymousAccess" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ApplicationServices.ProfilePropertyMetadata.AllowAnonymousAccess" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.DataMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Eigenschaft nicht authentifizierten Benutzern zur Verfügung steht.</summary>
+        <value>
+          <see langword="true" />Wenn die Eigenschaft für nicht authentifizierte Benutzer verfügbar ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie anonyme Identifikation mit Einstellungen im Element aktivieren, können Sie festlegen, welche Profileigenschaften für anonyme Benutzer verfügbar sind. Sie legen die <xref:System.Web.ApplicationServices.ProfilePropertyMetadata.AllowAnonymousAccess%2A> Eigenschaft im Element der im Abschnitt der Datei "Web.config", wenn die Eigenschaft definiert ist. Verwenden Sie von der Clientanwendung die <xref:System.Web.ApplicationServices.ProfilePropertyMetadata.AllowAnonymousAccess%2A> Eigenschaft, um zu bestimmen, ob eine Profileigenschaft für einen anonymen Benutzer festgelegt werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultValue">
+      <MemberSignature Language="C#" Value="public string DefaultValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultValue" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ApplicationServices.ProfilePropertyMetadata.DefaultValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.DataMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Standardwert der Eigenschaft fest.</summary>
+        <value>Eine serialisierte Darstellung des Standardwerts für die Eigenschaft, wenn ein Standardwert in der Datei "Web.config" definiert ist; andernfalls die Zeichenfolge "(Null)".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das serialisierte Format des der <xref:System.Web.ApplicationServices.ProfilePropertyMetadata.DefaultValue%2A> Eigenschaft richtet sich nach der <xref:System.Web.ApplicationServices.ProfilePropertyMetadata.SerializeAs%2A> Eigenschaft von der <xref:System.Web.ApplicationServices.ProfilePropertyMetadata> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtensionData">
+      <MemberSignature Language="C#" Value="public System.Runtime.Serialization.ExtensionDataObject ExtensionData { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Serialization.ExtensionDataObject ExtensionData" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ApplicationServices.ProfilePropertyMetadata.ExtensionData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.ExtensionDataObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Verweis auf ein <see cref="T:System.Runtime.Serialization.ExtensionDataObject" /> Instanz.</summary>
+        <value>Ein Verweis auf ein Objekt, das die erweiterte Daten während der Deserialisierung Vorgänge speichert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ApplicationServices.ProfilePropertyMetadata.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.DataMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob eine Profileigenschaft schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Profileigenschaft schreibgeschützt ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie legen die <xref:System.Web.ApplicationServices.ProfilePropertyMetadata.IsReadOnly%2A> Eigenschaft im Element der im Abschnitt der Datei "Web.config", wenn die Eigenschaft definiert ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyName">
+      <MemberSignature Language="C#" Value="public string PropertyName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PropertyName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ApplicationServices.ProfilePropertyMetadata.PropertyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.DataMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Profileigenschaft fest.</summary>
+        <value>Der Name der Profileigenschaft gemäß Definition in der Datei "Web.config".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie legen die <xref:System.Web.ApplicationServices.ProfilePropertyMetadata.PropertyName%2A> Eigenschaft im Element der im Abschnitt der Datei "Web.config", wenn die Eigenschaft definiert ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializeAs">
+      <MemberSignature Language="C#" Value="public int SerializeAs { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SerializeAs" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ApplicationServices.ProfilePropertyMetadata.SerializeAs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.DataMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der zum Serialisieren des Werts der Eigenschaft angibt.</summary>
+        <value>Der Wert der Enumeration.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie legen die <xref:System.Web.ApplicationServices.ProfilePropertyMetadata.SerializeAs%2A> Eigenschaft im Element der im Abschnitt der Datei "Web.config", wenn die Eigenschaft definiert ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeName">
+      <MemberSignature Language="C#" Value="public string TypeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ApplicationServices.ProfilePropertyMetadata.TypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.DataMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Assembly qualifizierte Name des Profileigenschaftentyps.</summary>
+        <value>Die Assembly bezeichnete Name des Profileigenschaftentyps.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie legen die <xref:System.Web.ApplicationServices.ProfilePropertyMetadata.TypeName%2A> Eigenschaft im Element der im Abschnitt der Datei "Web.config", wenn die Eigenschaft definiert ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

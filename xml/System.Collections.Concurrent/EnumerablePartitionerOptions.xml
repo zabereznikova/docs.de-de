@@ -1,0 +1,95 @@
+<Type Name="EnumerablePartitionerOptions" FullName="System.Collections.Concurrent.EnumerablePartitionerOptions">
+  <TypeSignature Language="C#" Value="public enum EnumerablePartitionerOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed EnumerablePartitionerOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Concurrent.EnumerablePartitionerOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections.Concurrent</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.14.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt Optionen zum steuern das Verhaltens des Pufferung eines Partitionierers</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vorgefertigte Partitionierer werden mit einem Satz von Standardverhaltensweisen erstellt. Beispielsweise standardmäßig eine Art von Pufferung und Segmentierung verwendet werden, in dem gängigen Szenario optimale Leistung zu erzielen, in denen ein <xref:System.Collections.Generic.IEnumerable%601> Implementierung ist schnell und nicht blockierend. Diese Verhaltensweisen können durch diese Enumeration überschrieben werden, mithilfe der <xref:System.Collections.Concurrent.Partitioner.Create%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="NoBuffering">
+      <MemberSignature Language="C#" Value="NoBuffering" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Collections.Concurrent.EnumerablePartitionerOptions NoBuffering = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Collections.Concurrent.EnumerablePartitionerOptions.NoBuffering" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Concurrent.EnumerablePartitionerOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erstellen Sie einen Partitionierer, der die Elemente aus der Quelldatenbank aufzählbare einzeln nacheinander und verwendet nicht zwischenspeichern, die effizienter durch mehrere Threads zugegriffen werden kann. Diese Option bietet Unterstützung für geringe Latenz (Elemente werden verarbeitet, sobald sie von der Quelle verfügbar sind) und bietet teilweise Unterstützung für die Abhängigkeiten zwischen Elementen (ein Thread kann nicht zu einem deadlock warten auf ein Element für die der Thread selbst verantwortlich ist. die Verarbeitung).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Collections.Concurrent.EnumerablePartitionerOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Collections.Concurrent.EnumerablePartitionerOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Concurrent.EnumerablePartitionerOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden Sie das Standardverhalten, also verwenden Sie Pufferung, um optimale Leistung zu erzielen.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

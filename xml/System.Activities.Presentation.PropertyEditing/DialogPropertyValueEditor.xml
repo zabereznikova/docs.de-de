@@ -1,0 +1,129 @@
+<Type Name="DialogPropertyValueEditor" FullName="System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor">
+  <TypeSignature Language="C#" Value="public class DialogPropertyValueEditor : System.Activities.Presentation.PropertyEditing.PropertyValueEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DialogPropertyValueEditor extends System.Activities.Presentation.PropertyEditing.PropertyValueEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.Presentation.PropertyEditing.PropertyValueEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Container für die gesamte Logik der Dialogfeldbearbeitung für <see cref="P:System.Activities.Presentation.PropertyEditing.PropertyContainer.PropertyEntry" />-Objekte.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor>-Klasse, um einen Inline-Editor anzuzeigen, der einen zugeordneten Dialogfeld-Editor aufweisen kann.  
+  
+ Die <xref:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor>-Klasse kann eine <xref:System.Windows.DataTemplate> für einen Dialogfeld-Editor oder benutzerdefinierte Logik enthalten, die aufgerufen wird, wenn das Dialogfeld aufgerufen wird.  
+  
+ Verwenden Sie die <xref:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton> in der <xref:System.Windows.DataTemplate>, um die benutzerdefinierte <xref:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor>-Klasse aufzurufen.  
+  
+ Sie können eine <xref:System.Windows.DataTemplate> bereitstellen, der in einem Hostdialogfeld angezeigt wird, oder Sie können die <xref:System.Windows.Forms.Form.ShowDialog>-Methode überschreiben, die die Wiederverwendung von vorhandenen oder Systemdialogfeldern ermöglicht.  
+  
+ Die folgende Liste zeigt die Regeln an, mit denen bestimmt wird, ob die <xref:System.Windows.DataTemplate>-Methode oder die <xref:System.Windows.Forms.Form.ShowDialog>-Methode verwendet wird.  
+  
+ Wenn die <xref:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor.DialogEditorTemplate%2A>-Eigenschaft kein [!INCLUDE[null](~/includes/null-md.md)]-Verweis ist ("Nothing" in Visual Basic), wird diese <xref:System.Windows.DataTemplate> in einem hostspezifischen Dialogfeld gehostet, das Hostformatierung bereitstellt. <xref:System.Windows.Forms.Form.ShowDialog> wird nicht aufgerufen.  
+  
+ Wenn die <xref:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor.DialogEditorTemplate%2A>-Eigenschaft ein [!INCLUDE[null](~/includes/null-md.md)]-Verweis ist ("Nothing" in Visual Basic), wird die virtuelle <xref:System.Windows.Forms.Form.ShowDialog>-Methode aufgerufen, und Sie können diese Methode überschreiben, um ein Dialogfeld anzuzeigen.  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DialogPropertyValueEditor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor" />-Klasse ohne bestimmte Vorlagen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DialogPropertyValueEditor (System.Windows.DataTemplate dialogEditorTemplate, System.Windows.DataTemplate inlineEditorTemplate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.DataTemplate dialogEditorTemplate, class System.Windows.DataTemplate inlineEditorTemplate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor.#ctor(System.Windows.DataTemplate,System.Windows.DataTemplate)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dialogEditorTemplate" Type="System.Windows.DataTemplate" />
+        <Parameter Name="inlineEditorTemplate" Type="System.Windows.DataTemplate" />
+      </Parameters>
+      <Docs>
+        <param name="dialogEditorTemplate">Eine <see cref="T:System.Window.DataTemplate" />, die in einem hostspezifischen Dialogfeldchrom gehostet wird und deren <see cref="P:System.Activities.ActivityContext.DataContext" /> auf den <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyValue" /> festgelegt ist, der der bearbeiteten Eigenschaft entspricht.</param>
+        <param name="inlineEditorTemplate">Eine <see cref="T:System.Windows.DataTemplate" />, die für die Benutzeroberfläche den Inline-Editors verwendet wird. Wenn sie verwendet wird, wird der <see cref="P:System.Activities.ActivityContext.DataContext" /> auf den <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyValue" /> festgelegt, der der bearbeiteten Eigenschaft entspricht.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.Design.PropertyEditing.DialogPropertyValueEditor" />-Klasse mit dem angegebenen Dialog-Editor und Inline-Editorvorlagen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DialogEditorTemplate">
+      <MemberSignature Language="C#" Value="public System.Windows.DataTemplate DialogEditorTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DataTemplate DialogEditorTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor.DialogEditorTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DataTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.DataTemplate" /> ab oder legt sie fest, die von einem hostspezifischen Dialogfeld gehostet wird und deren <see cref="P:System.Activities.ActivityContext.DataContext" /> auf einen <see cref="P:System.Activities.Presentation.PropertyEditing.PropertyEntry.PropertyValue" /> festgelegt wurde.</summary>
+        <value>Die <see cref="T:System.Windows.DataTemplate" /> -Objekt, das von einem hostspezifischen Dialogfeld gehostet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft gibt `null`die <xref:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor.ShowDialog%2A> -Methode erfolgt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowDialog">
+      <MemberSignature Language="C#" Value="public virtual void ShowDialog (System.Activities.Presentation.PropertyEditing.PropertyValue propertyValue, System.Windows.IInputElement commandSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ShowDialog(class System.Activities.Presentation.PropertyEditing.PropertyValue propertyValue, class System.Windows.IInputElement commandSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor.ShowDialog(System.Activities.Presentation.PropertyEditing.PropertyValue,System.Windows.IInputElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyValue" Type="System.Activities.Presentation.PropertyEditing.PropertyValue" />
+        <Parameter Name="commandSource" Type="System.Windows.IInputElement" />
+      </Parameters>
+      <Docs>
+        <param name="propertyValue">Der <see cref="P:System.Activities.Presentation.PropertyEditing.PropertyEntry.PropertyValue" /> für die bearbeitete Eigenschaft.</param>
+        <param name="commandSource">Das <see cref="T:System.Windows.IinputElement" />, das als Quelle für die Ausführung von <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyValueEditorCommands" /> verwendet werden kann.</param>
+        <summary>Wird aufgerufen, wenn die <see cref="P:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor.DialogEditorTemplate" /> NULL ist und ein Dialogfeld vom Benutzer aufgerufen wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da die Befehle vom Host verarbeitet werden und da benutzerdefinierte Dialogfelder kein Teil dieser visuellen Struktur sein werden, macht `commandSource` ein <xref:System.Windows.IInputElement> verfügbar, das Teil der visuellen Struktur des Hosts ist und daher verwendet werden kann, um Eigenschaftenbearbeitungsbefehle so auszuführen, dass sie ordnungsgemäß verarbeitet werden können. Durch das Überschreiben dieser Methode können Sie eine benutzerdefinierte Dialogfeldlogik implementieren, z. B. das Aufrufen vorhandener Systemdialogfelder.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

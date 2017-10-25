@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.Build.Tasks.Hosting">
+  <Docs>
+    <summary>Die <see cref="N:Microsoft.Build.Tasks.Hosting" /> -Namespace enthält Klassen, die intern von MSBuild verwendet.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

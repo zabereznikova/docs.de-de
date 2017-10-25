@@ -1,0 +1,347 @@
+<Type Name="CssStyleCollection" FullName="System.Web.UI.CssStyleCollection">
+  <TypeSignature Language="C#" Value="public sealed class CssStyleCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CssStyleCollection extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.CssStyleCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die HTML-cascading Style Sheets (CSS) Inline-Stilattribute für einen angegebenen HTML-Steuerelement enthält. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede Formatvorlage, die für ein bestimmtes HTML-Steuerelement deklariert wird auf die Auflistung hinzugefügt, wenn die enthaltende Web Forms-Seite analysiert wird. Automatisch analysiert, und die CSS-Eigenschaften über ein Wörterbuchmuster API verfügbar gemacht. Sie können eine CSS-Eigenschaft auf ein Webserversteuerelement über Bearbeiten der <xref:System.Web.UI.HtmlControls.HtmlControl.Style%2A> Eigenschaft. Verwenden Sie einfach Schlüssel und Wert der CSS-Eigenschaft in der indizierten Auflistung.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel durchläuft die <xref:System.Web.UI.CssStyleCollection> -Objekt für ein <xref:System.Web.UI.HtmlControls.HtmlInputText> -Steuerelement. Die <xref:System.Web.UI.CssStyleCollection.Keys%2A> Eigenschaft wird verwendet, um zu bestimmen, welche Stilattribute für das Serversteuerelement deklariert wurden, und klicken Sie dann bindet das Attribut benennt und-Werte an ein <xref:System.Web.UI.WebControls.DataList> -Objekts auf Web Forms-Seite.  
+  
+ [!code-aspx-csharp[System.Web.UI.CssStyleCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.CssStyleCollection/CS/css1.cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.CssStyleCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.CssStyleCollection/VB/css1.vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.CssStyleCollection.Add(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Name des neuen Formatattributs, das der Auflistung hinzugefügt werden soll.</param>
+        <param name="value">Der Wert des Formatattributs, das der Auflistung hinzugefügt werden soll.</param>
+        <summary>Fügt ein Formatelement, das die <see cref="T:System.Web.UI.CssStyleCollection" /> eines Steuerelements mithilfe der angegebene Name/Wert-Paar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ggf. das hinzuzufügende Element Stil in die <xref:System.Web.UI.HtmlTextWriterStyle> -Enumeration, verwenden Sie die Überladung von der <xref:System.Web.UI.CssStyleCollection.Add%2A> Methode, eine <xref:System.Web.UI.HtmlTextWriterStyle> Parameter, da es stark typisiert ist. Dies bedeutet, dass Elemente, die hinzugefügt werden eingeschlossen beim Anzeigen von Elementen mit dem Get-Accessor, der werden die <xref:System.Web.UI.CssStyleCollection.Item%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie beide Überladungen der Verwendung der <xref:System.Web.UI.CssStyleCollection.Add%2A> Methode, um ein cascading Stylesheet zum Hinzufügen ein <xref:System.Web.UI.HtmlControls.HtmlSelect>, <xref:System.Web.UI.HtmlControls.HtmlInputSubmit>, und ein <xref:System.Web.UI.WebControls.Label> programmgesteuert zu steuern.  
+  
+ [!code-aspx-csharp[Classic CssStyleCollection.Add Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic CssStyleCollection.Add Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic CssStyleCollection.Add Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic CssStyleCollection.Add Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Web.UI.HtmlTextWriterStyle key, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(valuetype System.Web.UI.HtmlTextWriterStyle key, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.CssStyleCollection.Add(System.Web.UI.HtmlTextWriterStyle,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Web.UI.HtmlTextWriterStyle" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Die <see cref="T:System.Web.UI.HtmlTextWriterStyle" /> Enumerationswert in der Auflistung hinzu.</param>
+        <param name="value">Der Wert des Formatattributs, das der Auflistung hinzugefügt werden soll.</param>
+        <summary>Fügt ein Formatelement, das die <see cref="T:System.Web.UI.CssStyleCollection" /> Auflistung eines Steuerelements unter Verwendung des angegebenen <see cref="T:System.Web.UI.HtmlTextWriterStyle" /> Enumerationswert und zugehörigen Werte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ggf. das hinzuzufügende Element Stil in die <xref:System.Web.UI.HtmlTextWriterStyle> -Enumeration, verwenden Sie diese <xref:System.Web.UI.CssStyleCollection.Add%2A> Überladung der der <xref:System.Web.UI.CssStyleCollection.Add%2A> die Überladung, nicht verwendet wird, statt die Methode eine <xref:System.Web.UI.HtmlTextWriterStyle> Parameter.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie beide Überladungen der Verwendung der <xref:System.Web.UI.CssStyleCollection.Add%2A> Methode, um ein cascading Stylesheet zum Hinzufügen ein <xref:System.Web.UI.HtmlControls.HtmlSelect>, <xref:System.Web.UI.HtmlControls.HtmlInputSubmit>, und ein <xref:System.Web.UI.WebControls.Label> programmgesteuert zu steuern.  
+  
+ [!code-aspx-csharp[Classic CssStyleCollection.Add Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic CssStyleCollection.Add Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic CssStyleCollection.Add Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic CssStyleCollection.Add Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.CssStyleCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Elemente aus der <see cref="T:System.Web.UI.CssStyleCollection" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.CssStyleCollection.Clear%2A> Methode, um programmgesteuert löschen Sie alle CSS-Formatvorlagen aus einem <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement.  
+  
+ [!code-aspx-csharp[Classic CssStyleCollection.Clear Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic CssStyleCollection.Clear Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic CssStyleCollection.Clear Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic CssStyleCollection.Clear Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.CssStyleCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Elemente in der <see cref="T:System.Web.UI.CssStyleCollection" /> Objekt.</summary>
+        <value>Die Anzahl der Elemente in der <see cref="T:System.Web.UI.CssStyleCollection" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine `CountStyleFunc` -Funktion, die den aktuellen Wert der erhält die <xref:System.Web.UI.CssStyleCollection.Count%2A> -Eigenschaft für eine <xref:System.Web.UI.HtmlControls.HtmlInputText> Serversteuerelement und zeigt ihn auf einer ASP.NET-Seite.  
+  
+ [!code-aspx-csharp[CssStyleCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CssStyleCollection/CS/cssstylecollection_4.cs.aspx#1)]
+ [!code-aspx-vb[CssStyleCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CssStyleCollection/VB/cssstylecollection_4.vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public string this[string key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.CssStyleCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Index des CSS-Attributs.</param>
+        <summary>Ruft ab oder legt den angegebenen CSS-Wert für das HTML-Steuerelement fest.</summary>
+        <value>Der Wert von <paramref name="key" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Web.UI.CssStyleCollection.Item%2A> Eigenschaft, um den Wert eines Stils zurückzugeben, die auf festgelegt ist ein <xref:System.Web.UI.HtmlControls.HtmlInputText> Steuerelement.  
+  
+ [!code-aspx-csharp[Classic CssStyleCollection.this Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic CssStyleCollection.this Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic CssStyleCollection.this Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic CssStyleCollection.this Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public string this[System.Web.UI.HtmlTextWriterStyle key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Item(valuetype System.Web.UI.HtmlTextWriterStyle)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.CssStyleCollection.Item(System.Web.UI.HtmlTextWriterStyle)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Web.UI.HtmlTextWriterStyle" />
+      </Parameters>
+      <Docs>
+        <param name="key">Eine <see cref="T:System.Web.UI.HtmlTextWriterStyle" />.</param>
+        <summary>Ruft ab oder legt den angegebenen <see cref="T:System.Web.UI.HtmlTextWriterStyle" /> Wert für das HTML-Steuerelement.</summary>
+        <value>Der Wert <paramref name="key" />ist, andernfalls <see langword="null" />, wenn <paramref name="key" /> befindet sich nicht in das Webserversteuerelement-Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Formatieren von Elementen, die programmgesteuert hinzugefügt werden eine <xref:System.Web.UI.CssStyleCollection> Auflistung für ein Steuerelement mit der <xref:System.Web.UI.CssStyleCollection.Item%2A> Eigenschaft oder die <xref:System.Web.UI.CssStyleCollection.Add%2A> Methode, die eine <xref:System.Web.UI.HtmlTextWriterStyle> Enumerationswert als Eingabe in die Anzahl der Elemente, die enthalten sind zurückgegeben wird, mit der <xref:System.Web.UI.CssStyleCollection.Count%2A> Eigenschaft und sind enthalten, mit dem Zeichenfolgenliteral, das mit zurückgegeben wird die <xref:System.Web.UI.CssStyleCollection.Value%2A> Eigenschaft. Diese Attribute sind stark typisiert. Die cascading Stylesheet-Attributs, das Sie ein Steuerelement hinzufügen möchten ggf. in der <xref:System.Web.UI.HtmlTextWriterStyle> -Enumeration, verwenden Sie diese Methoden mit starker Typisierung. Wenn das Attribut, das Sie hinzufügen möchten, nicht in vorhanden ist die <xref:System.Web.UI.HtmlTextWriterStyle> -Enumeration, mit der <xref:System.Web.UI.CssStyleCollection.Item%2A> Eigenschaft oder die <xref:System.Web.UI.CssStyleCollection.Add%2A> Methode.  
+  
+ Den Zugriff auf eine <xref:System.Web.UI.HtmlTextWriterStyle> Enumerationswert in der <xref:System.Web.UI.CssStyleCollection> eines Steuerelements, die nicht hinzugefügt wurde oder ein CSS-Attribut, das mit hinzugefügt wurde, den Zugriff auf die <xref:System.Web.UI.CssStyleCollection.Item%2A> Eigenschaft oder die <xref:System.Web.UI.CssStyleCollection.Add%2A> Methodenrückgabe, `null` mithilfe der <xref:System.Web.UI.CssStyleCollection.Item%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Web.UI.CssStyleCollection.Item%2A> Eigenschaft, um den Wert eines Stils zurückzugeben, die auf festgelegt ist ein <xref:System.Web.UI.HtmlControls.HtmlInputText> Steuerelement.  
+  
+ [!code-aspx-csharp[Classic CssStyleCollection.this Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic CssStyleCollection.this Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic CssStyleCollection.this Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic CssStyleCollection.this Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.CssStyleCollection.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Schlüsseln für alle Formate in der <see cref="T:System.Web.UI.CssStyleCollection" /> -Objekt für eine bestimmte HTML-Serversteuerelemente.</summary>
+        <value>Eine Auflistung von Schlüsseln, die innerhalb der <see cref="T:System.Web.UI.CssStyleCollection" /> für das angegebene HTML-Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Durchlaufen der <xref:System.Web.UI.CssStyleCollection> Auflistung für einen <xref:System.Web.UI.HtmlControls.HtmlInputText> Serversteuerelement. Die <xref:System.Web.UI.CssStyleCollection.Keys%2A> Eigenschaft wird verwendet, um zu bestimmen, welche Formatattributs für das Serversteuerelement deklariert wurde und bindet die Attributnamen und-Werte an ein <xref:System.Web.UI.WebControls.DataList> -Objekts auf Web Forms-Seite.  
+  
+ [!code-aspx-csharp[System.Web.UI.CssStyleCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.CssStyleCollection/CS/css1.cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.CssStyleCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.CssStyleCollection/VB/css1.vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.CssStyleCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Das Zeichenfolgenliteral des zu entfernenden Elements Stil.</param>
+        <summary>Entfernt ein Formatelement aus der <see cref="T:System.Web.UI.CssStyleCollection" /> eines Steuerelements mit dem Schlüssel des angegebenen Formats.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.CssStyleCollection.Remove%2A> Methode, um programmgesteuert löschen Sie eine CSS-Formats mit einem <xref:System.Web.UI.HtmlControls.HtmlSelect> Steuerelement.  
+  
+ [!code-aspx-csharp[Classic CssStyleCollection.Remove Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic CssStyleCollection.Remove Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic CssStyleCollection.Remove Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic CssStyleCollection.Remove Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.UI.HtmlTextWriterStyle key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(valuetype System.Web.UI.HtmlTextWriterStyle key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.CssStyleCollection.Remove(System.Web.UI.HtmlTextWriterStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Web.UI.HtmlTextWriterStyle" />
+      </Parameters>
+      <Docs>
+        <param name="key">Die <see cref="T:System.Web.UI.HtmlTextWriterStyle" /> Enumerationswert zu entfernen.</param>
+        <summary>Entfernt ein Formatelement aus der <see cref="T:System.Web.UI.CssStyleCollection" /> Auflistung eines Steuerelements unter Verwendung des angegebenen <see cref="T:System.Web.UI.HtmlTextWriterStyle" /> -Enumerationswert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.CssStyleCollection.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert für die <see langword="style" /> Attribut des HTML-Steuerelements.</summary>
+        <value>Das Formatzeichenfolgenliteral.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.CssStyleCollection.Value%2A> Eigenschaft, um das Formatattribut der Liste eine <xref:System.Web.UI.HtmlControls.HtmlSelect> steuern, wenn der Benutzer eine Schaltfläche "Absenden" klickt.  
+  
+ [!code-aspx-csharp[Classic CssStyleCollection.Add Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic CssStyleCollection.Add Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic CssStyleCollection.Add Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic CssStyleCollection.Add Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

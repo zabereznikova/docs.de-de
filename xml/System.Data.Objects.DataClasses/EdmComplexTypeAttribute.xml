@@ -1,0 +1,48 @@
+<Type Name="EdmComplexTypeAttribute" FullName="System.Data.Objects.DataClasses.EdmComplexTypeAttribute">
+  <TypeSignature Language="C#" Value="public sealed class EdmComplexTypeAttribute : System.Data.Objects.DataClasses.EdmTypeAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EdmComplexTypeAttribute extends System.Data.Objects.DataClasses.EdmTypeAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Objects.DataClasses.EdmComplexTypeAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Objects.DataClasses.EdmTypeAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Attribut, das angibt, dass die Klasse einen komplexen Typ darstellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Objects.DataClasses.EdmComplexTypeAttribute> verknüpft eine Klasse in einen komplexen Typ im konzeptionellen Modell definiert.  
+  
+ Dieses Attribut erhalten Klassen, die komplexe Typen darstellen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EdmComplexTypeAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.EdmComplexTypeAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Data.Objects.DataClasses.EdmComplexTypeAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

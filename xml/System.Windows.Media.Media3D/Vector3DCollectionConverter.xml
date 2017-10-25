@@ -1,0 +1,138 @@
+<Type Name="Vector3DCollectionConverter" FullName="System.Windows.Media.Media3D.Vector3DCollectionConverter">
+  <TypeSignature Language="C#" Value="public sealed class Vector3DCollectionConverter : System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Vector3DCollectionConverter extends System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Media3D.Vector3DCollectionConverter" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.TypeConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Konvertiert Instanzen anderer Typen in und aus Instanzen von <see cref="T:System.Windows.Media.Media3D.Vector3DCollection" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Vector3DCollectionConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Vector3DCollectionConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Windows.Media.Media3D.Vector3DCollectionConverter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFrom">
+      <MemberSignature Language="C#" Value="public override bool CanConvertFrom (System.ComponentModel.ITypeDescriptorContext context, Type sourceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Type sourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Vector3DCollectionConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="sourceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">ITypeDescriptorContext für diesen Aufruf.</param>
+        <param name="sourceType">Geben Sie an, für die Unterstützung abgefragt wird.</param>
+        <summary>Gibt einen Wert, der angibt, ob dieser Konverter aus einem angegebenen Typ konvertieren kann.</summary>
+        <returns>True, wenn dieser Konverter aus dem angegebenen Typ konvertieren kann. "false" andernfalls.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertTo">
+      <MemberSignature Language="C#" Value="public override bool CanConvertTo (System.ComponentModel.ITypeDescriptorContext context, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Vector3DCollectionConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der ITypeDescriptorContext für diesen Aufruf.</param>
+        <param name="destinationType">Der Typ, der für die Unterstützung abgefragt wird.</param>
+        <summary>Ruft einen Wert, der angibt, ob dieser Typkonverter für den angegebenen Typ konvertieren kann.</summary>
+        <returns>True, wenn dieser Konverter auf den angegebenen Typ konvertieren kann. "false", wenn nicht.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Vector3DCollectionConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der ITypeDescriptorContext für diesen Aufruf.</param>
+        <param name="culture">Die CultureInfo, die beim Konvertieren berücksichtigt wird.</param>
+        <param name="value">Das Objekt mit einer Instanz von Vector3DCollection konvertiert werden soll.</param>
+        <summary>Versucht, die zum Konvertieren einer <see cref="T:System.Windows.Media.Media3D.Vector3DCollection" /> aus dem angegebenen Objekt.</summary>
+        <returns>Vector3DCollection, die erstellt wurde.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">NotSupportedException wird ausgelöst, wenn das Beispielobjekt null ist oder ist kein gültiger Typ, der in eine Vector3DCollection konvertiert werden kann.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public override object ConvertTo (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Vector3DCollectionConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der ITypeDescriptorContext für diesen Aufruf.</param>
+        <param name="culture">Die CultureInfo, die beim Konvertieren berücksichtigt wird.</param>
+        <param name="value">Das Objekt, das mit einer Instanz von konvertieren <c>DestinationType</c>.</param>
+        <param name="destinationType">Der Typ, den die Matrix3D-Instanz konvertiert wird.</param>
+        <summary>Versucht, eine Instanz der <see cref="T:System.Windows.Media.Media3D.Vector3DCollection" /> für den angegebenen Typ.</summary>
+        <returns>Das Objekt, das erstellt wurde.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Löst NotSupportedException aus, wenn das Beispielobjekt ist null oder keine Vector3DCollection, oder wenn die DestinationType eines gültigen Zieltypen ist.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

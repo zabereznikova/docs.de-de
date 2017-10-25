@@ -1,0 +1,487 @@
+<Type Name="EventLogTraceListener" FullName="System.Diagnostics.EventLogTraceListener">
+  <TypeSignature Language="C#" Value="public sealed class EventLogTraceListener : System.Diagnostics.TraceListener" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EventLogTraceListener extends System.Diagnostics.TraceListener" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.EventLogTraceListener" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Diagnostics.TraceListener</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen einfachen Listener, die leitet Ablaufverfolgungs- oder debuggingausgabe an einen <see cref="T:System.Diagnostics.EventLog" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz dieses <xref:System.Diagnostics.EventLogTraceListener> hinzugefügt werden können die <xref:System.Diagnostics.Debug.Listeners%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType>, oder <xref:System.Diagnostics.TraceSource.Listeners%2A?displayProperty=nameWithType> Auflistungen zum Senden der Ausgabe von Ablaufverfolgungs- oder zum Debuggen einer <xref:System.Diagnostics.EventLog>. Sie können die Instanz im Code hinzufügen oder es in der Anwendungskonfigurationsdatei angeben. Hinzufügen einer <xref:System.Diagnostics.EventLogTraceListener> mithilfe einer Anwendungskonfigurationsdatei bearbeiten Sie die Datei, die den Namen der Anwendung entspricht oder der Datei "App.config" in einem [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)] Projekt. In dieser Datei fügen Sie ein Element für eine <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> Typ.  
+  
+ Im folgenden Beispiel wird eine <xref:System.Diagnostics.EventLogTraceListener> Objekt mit dem Namen `myListener` auf die <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> Auflistung. Die `initializeData` Parameter gibt den Namen des Ereignisprotokoll-Quelle, die übergeben werden die <xref:System.Diagnostics.EventLogTraceListener.%23ctor%28System.String%29> Konstruktor.  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <trace autoflush="false" indentsize="4">  
+      <listeners>  
+        <add name="myListener"  
+          type="System.Diagnostics.EventLogTraceListener"  
+          initializeData="TraceListenerLog" />  
+      </listeners>  
+    </trace>  
+  </system.diagnostics>  
+</configuration>  
+```  
+  
+ Weitere Informationen zur Vorgehensweise beim Hinzufügen der Ablaufverfolgungslistener in der Anwendungskonfigurationsdatei finden Sie unter oder.  
+  
+> [!NOTE]
+>  Wenn die <xref:System.Diagnostics.EventLog.Source%2A> für das Ereignisprotokoll zugeordnet ist, die die <xref:System.Diagnostics.EventLogTraceListener> Instanz ist nicht vorhanden, wird eine neue Ereignisquelle erstellt. Um eine Ereignisquelle in Windows Vista, Windows XP Professional oder Windows Server 2003 zu erstellen, müssen Sie über Administratorrechte verfügen.  
+>   
+>  Der Grund für diese Anforderung ist, dass alle Ereignisprotokolle, einschließlich Sicherheit, durchsucht werden müssen, um zu bestimmen, ob die Ereignisquelle eindeutig ist. Unter Windows Vista verfügen Benutzer nicht über eine Zugriffsberechtigung für das Sicherheitsprotokoll; aus diesem Grund eine <xref:System.Security.SecurityException> ausgelöst wird.  
+>   
+>  Unter Windows Vista werden die Berechtigungen eines Benutzers über die Benutzerkontensteuerung (User Account Control, UAC) bestimmt. Als Mitglied der integrierten Administratorgruppe sind Ihnen zwei Zugriffstoken für die Laufzeit zugewiesen: ein Standardbenutzertoken und ein Administratorzugriffstoken. Standardmäßig verwenden Sie die Standardbenutzerrolle. Um den Code auszuführen, der auf das Sicherheitsprotokoll zugreift, müssen Sie zuerst Ihre Berechtigungen von Standardbenutzer auf Administrator erhöhen. Dazu starten Sie eine Anwendung, indem Sie mit der rechten Maustaste auf das Anwendungssymbol klicken und angeben, dass Sie die Anwendung als Administrator ausführen möchten.   
+  
+ Die Klasse stellt die <xref:System.Diagnostics.EventLogTraceListener.EventLog%2A> Eigenschaft zum Abrufen oder Festlegen der im Ereignisprotokoll, die die Ablaufverfolgung oder debuggingausgabe, empfängt und die <xref:System.Diagnostics.EventLogTraceListener.Name%2A> Eigenschaft, um den Namen der enthält die <xref:System.Diagnostics.EventLogTraceListener>.  
+  
+ Die <xref:System.Diagnostics.EventLogTraceListener.Close%2A> Methode schließt das Ereignisprotokoll, damit es nicht mehr empfängt, Ablaufverfolgungs- oder debuggingausgabe. Die <xref:System.Diagnostics.EventLogTraceListener.Write%2A> und <xref:System.Diagnostics.EventLogTraceListener.WriteLine%2A> Methoden schreiben eine Meldung in das Ereignisprotokoll geschrieben.  
+  
+> [!NOTE]
+>  Vermeiden Sie die Möglichkeit, große Mengen von Daten in das Ereignisprotokoll schreiben der <xref:System.Diagnostics.EventLogTraceListener> Ausgabe ist nicht die optionale Ablaufverfolgungsdaten gemäß der <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt einen Ablaufverfolgungslistener, der Ausgabe an ein Ereignisprotokoll gesendet. Der Code erstellt zunächst ein neues <xref:System.Diagnostics.EventLogTraceListener> , verwendet die Quelle `myEventLogSource`. Als Nächstes `myTraceListener` wird hinzugefügt, um die <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> Auflistung. Im Beispiel wird schließlich eine Zeile der Ausgabe an die <xref:System.Diagnostics.Trace.Listeners%2A> Objekt.  
+  
+ [!code-cpp[Classic EventLogTraceListener Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic EventLogTraceListener Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic EventLogTraceListener Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic EventLogTraceListener Example/CS/source.cs#1)]
+ [!code-vb[Classic EventLogTraceListener Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic EventLogTraceListener Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Dieser Typ ist threadsicher.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventLogTraceListener ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogTraceListener.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.EventLogTraceListener" /> Klasse ohne einen Ablaufverfolgungslistener.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventLogTraceListener (System.Diagnostics.EventLog eventLog);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Diagnostics.EventLog eventLog) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogTraceListener.#ctor(System.Diagnostics.EventLog)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="eventLog" Type="System.Diagnostics.EventLog" />
+      </Parameters>
+      <Docs>
+        <param name="eventLog">Das Ereignisprotokoll zu schreiben.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.EventLogTraceListener" /> -Klasse unter Verwendung der angegebenen Ereignisprotokolls.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventLogTraceListener (string source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogTraceListener.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="source" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="source">Der Name einer vorhandenen Ereignisprotokoll-Quelle.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.EventLogTraceListener" /> -Klasse unter Verwendung der angegebenen Quelle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public override void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogTraceListener.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt das Ereignisprotokoll, sodass es Ablaufverfolgungs-oder Debugausgaben mehr empfängt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogTraceListener.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventLog">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.EventLog EventLog { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Diagnostics.EventLog EventLog" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogTraceListener.EventLog" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.EventLog</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Ereignisprotokoll zu schreiben.</summary>
+        <value>Das Ereignisprotokoll zu schreiben.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogTraceListener.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen dieses <see cref="T:System.Diagnostics.EventLogTraceListener" />.</summary>
+        <value>Der Name des Ablaufverfolgungslisteners.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert dieser Eigenschaft ist auf den Quellnamen des Ereignisprotokolls.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceData">
+      <MemberSignature Language="C#" Value="public override void TraceData (System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TraceData(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogTraceListener.TraceData(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="severity" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Ein Objekt, das den aktuellen Prozess-ID, thread-ID und Stapelüberwachungsinformationen.</param>
+        <param name="source">Ein Name verwendet, um die Ausgabe zu bezeichnen. i. d. r. der Name der Anwendung, die das Ablaufverfolgungsereignis generiert hat.</param>
+        <param name="eventType">To be added.</param>
+        <param name="id">Ein numerischer Bezeichner für das Ereignis. Die Kombination von <c>Quelle</c> und <c>Id</c> eindeutig bezeichnet ein Ereignis.</param>
+        <param name="data">Ein Datenobjekt, das zum Schreiben in die Ausgabedatei oder den Stream.</param>
+        <summary>Schreibt Ablaufverfolgungsinformationen, ein Datenobjekt und Ereignisinformationen in das Ereignisprotokoll geschrieben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Die <xref:System.Diagnostics.EventLogTraceListener.TraceData%2A> Methoden dürfen nicht von Anwendungscode aufgerufen werden. Sie werden aufgerufen, durch die Methoden der der <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, und <xref:System.Diagnostics.TraceSource> -Klassen, um die Ausgabe von Ablaufverfolgungsdaten.  
+  
+ Die <xref:System.Diagnostics.EventLogTraceListener.TraceData%2A> Methode, z. B. die <xref:System.Diagnostics.EventLogTraceListener.TraceEvent%2A> Methode richtet sich automatisierten Tools, sondern ermöglicht auch das Anfügen von Objekten, z. B. ein Ausnahmeinstanz, auf die Ablaufverfolgung.  
+  
+ Die `eventCache` und `source` Parameter werden verwendet, um zu bestimmen, ob das Ereignis nachverfolgt werden sollen. `id`Dient zum Erstellen einer <xref:System.Diagnostics.EventInstance> Objekt und die <xref:System.Diagnostics.TraceEventType> gleichgesetzt auf eine <xref:System.Diagnostics.EventLogEntryType> für die <xref:System.Diagnostics.EventInstance.EntryType%2A> Eigenschaft. Die <xref:System.Diagnostics.EventInstance> wird geschrieben, in das Ereignisprotokoll mit der `data` Objekt, das als Zeichenfolge formatiert mithilfe der <xref:System.Diagnostics.EventLog.WriteEvent%2A> Methode.  
+  
+> [!NOTE]
+>  Der Maximalwert der der `id` Parameter ist 65.535. Wenn die `id` angegebene Wert ist größer als 65.535, wird der maximale Wert verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="source" />ist nicht angegeben.  
+  
+ - oder -   
+  
+ Die Zeichenfolge für den Protokolleintrag überschreitet 32.766 Zeichen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceData">
+      <MemberSignature Language="C#" Value="public override void TraceData (System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, params object[] data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TraceData(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, object[] data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogTraceListener.TraceData(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="severity" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="data" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Ein Objekt, das den aktuellen Prozess-ID, thread-ID und Stapelüberwachungsinformationen.</param>
+        <param name="source">Ein Name verwendet, um die Ausgabe zu bezeichnen. i. d. r. der Name der Anwendung, die das Ablaufverfolgungsereignis generiert hat.</param>
+        <param name="eventType">To be added.</param>
+        <param name="id">Ein numerischer Bezeichner für das Ereignis. Die Kombination von <c>Quelle</c> und <c>Id</c> eindeutig bezeichnet ein Ereignis.</param>
+        <param name="data">Ein Array von Datenobjekten.</param>
+        <summary>Schreibt Ablaufverfolgungsinformationen, ein Array von Datenobjekten und Ereignisinformationen in das Ereignisprotokoll geschrieben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Die <xref:System.Diagnostics.EventLogTraceListener.TraceData%2A> Methoden dürfen nicht von Anwendungscode aufgerufen werden. Sie werden aufgerufen, durch die Methoden der der <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, und <xref:System.Diagnostics.TraceSource> -Klassen, um die Ausgabe von Ablaufverfolgungsdaten.  
+  
+ Die <xref:System.Diagnostics.EventLogTraceListener.TraceData%2A> Methode, z. B. die <xref:System.Diagnostics.EventLogTraceListener.TraceEvent%2A> Methode richtet sich automatisierten Tools, sondern ermöglicht auch das Anfügen von Objekten, z. B. ein Ausnahmeinstanz, auf die Ablaufverfolgung.  
+  
+ Die `severity` und `id` Parameterdaten dient zum Erstellen einer <xref:System.Diagnostics.EventInstance> -Objekt, das in das Ereignisprotokoll mit den Daten aus dem Array von Datenobjekten geschrieben wird.  
+  
+ Die `eventCache` und `source` Parameter werden verwendet, um zu bestimmen, ob das Ereignis nachverfolgt werden sollen. `id`Dient zum Erstellen einer <xref:System.Diagnostics.EventInstance> Objekt und die <xref:System.Diagnostics.TraceEventType> gleichgesetzt auf eine <xref:System.Diagnostics.EventLogEntryType> für die <xref:System.Diagnostics.EventInstance.EntryType%2A> Eigenschaft. Die <xref:System.Diagnostics.EventInstance> wird geschrieben, in das Ereignisprotokoll mit der `data` Objektarray, formatiert als ein Array von Zeichenfolgen, mit der <xref:System.Diagnostics.EventLog.WriteEvent%2A> Methode.  
+  
+> [!NOTE]
+>  Der Maximalwert der der `id` Parameter ist 65.535. Wenn die `id` angegebene Wert ist größer als 65.535, wird der maximale Wert verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="source" />ist nicht angegeben.  
+  
+ - oder -   
+  
+ Die Zeichenfolge für den Protokolleintrag überschreitet 32.766 Zeichen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceEvent">
+      <MemberSignature Language="C#" Value="public override void TraceEvent (System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TraceEvent(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogTraceListener.TraceEvent(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="severity" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Ein Objekt, das den aktuellen Prozess-ID, thread-ID und Stapelüberwachungsinformationen.</param>
+        <param name="source">Ein Name verwendet, um die Ausgabe zu bezeichnen. i. d. r. der Name der Anwendung, die das Ablaufverfolgungsereignis generiert hat.</param>
+        <param name="eventType">To be added.</param>
+        <param name="id">Ein numerischer Bezeichner für das Ereignis. Die Kombination von <c>Quelle</c> und <c>Id</c> eindeutig bezeichnet ein Ereignis.</param>
+        <param name="message">Die Ablaufverfolgungsmeldung.</param>
+        <summary>Schreibt Ablaufverfolgungsinformationen, eine Meldung und Ereignisinformationen in das Ereignisprotokoll geschrieben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Die <xref:System.Diagnostics.EventLogTraceListener.TraceEvent%2A> Methoden dürfen nicht von Anwendungscode aufgerufen werden. Diese Methoden werden aufgerufen, durch die Methoden der der <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, und <xref:System.Diagnostics.TraceSource> Klassen zum Schreiben von Ablaufverfolgungsdaten.  
+  
+ Die <xref:System.Diagnostics.EventLogTraceListener.TraceEvent%2A> -Methode dient zum Verfolgen von Ereignissen, die automatisch von Tools verarbeitet werden können. Überwachungstools kann z. B. einen Administrator benachrichtigen, wenn ein bestimmtes Ereignis von einer bestimmten Quelle nachverfolgt wird.  
+  
+ Die `eventCache` und `source` Parameter werden verwendet, um zu bestimmen, ob das Ereignis nachverfolgt werden sollen. `id`Dient zum Erstellen einer <xref:System.Diagnostics.EventInstance> Objekt und die <xref:System.Diagnostics.TraceEventType> gleichgesetzt auf eine <xref:System.Diagnostics.EventLogEntryType> für die <xref:System.Diagnostics.EventInstance.EntryType%2A> Eigenschaft. Die <xref:System.Diagnostics.EventInstance> wird geschrieben, in das Ereignisprotokoll mit der `message` Daten mithilfe der <xref:System.Diagnostics.EventLog.WriteEvent%2A> Methode.  
+  
+> [!NOTE]
+>  Der Maximalwert der der `id` Parameter ist 65.535. Wenn die `id` angegebene Wert ist größer als 65.535, wird der maximale Wert verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="source" />ist nicht angegeben.  
+  
+ - oder -   
+  
+ Die Zeichenfolge für den Protokolleintrag überschreitet 32.766 Zeichen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceEvent">
+      <MemberSignature Language="C#" Value="public override void TraceEvent (System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, string format, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TraceEvent(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, string format, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogTraceListener.TraceEvent(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="severity" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Ein Objekt, das den aktuellen Prozess-ID, thread-ID und Stapelüberwachungsinformationen.</param>
+        <param name="source">Ein Name verwendet, um die Ausgabe zu bezeichnen. i. d. r. der Name der Anwendung, die das Ablaufverfolgungsereignis generiert hat.</param>
+        <param name="eventType">To be added.</param>
+        <param name="id">Ein numerischer Bezeichner für das Ereignis. Die Kombination von <c>Quelle</c> und <c>Id</c> eindeutig bezeichnet ein Ereignis.</param>
+        <param name="format">Eine Formatzeichenfolge mit 0 (null) oder mehr Formatelementen, die Objekten im entsprechen den <c>Args</c> Array.</param>
+        <param name="args">Ein <see langword="object" />-Array mit 0 oder mehr zu formatierenden Objekten.</param>
+        <summary>Schreibt Ablaufverfolgungsinformationen, ein formatiertes Array von Objekten und Ereignisinformationen in das Ereignisprotokoll geschrieben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Die <xref:System.Diagnostics.EventLogTraceListener.TraceEvent%2A> Methoden dürfen nicht von Anwendungscode aufgerufen werden. Diese Methoden werden aufgerufen, durch die Methoden der der <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, und <xref:System.Diagnostics.TraceSource> Klassen zum Schreiben von Ablaufverfolgungsdaten.  
+  
+ Die <xref:System.Diagnostics.EventLogTraceListener.TraceEvent%2A> -Methode dient zum Verfolgen von Ereignissen, die automatisch von Tools verarbeitet werden können. Überwachungstools kann z. B. einen Administrator benachrichtigen, wenn ein bestimmtes Ereignis von einer bestimmten Quelle nachverfolgt wird.  
+  
+ Die `eventCache` und `source` Parameter werden verwendet, um zu bestimmen, ob das Ereignis nachverfolgt werden sollen. `id`Dient zum Erstellen einer <xref:System.Diagnostics.EventInstance> Objekt und die <xref:System.Diagnostics.TraceEventType> gleichgesetzt auf eine <xref:System.Diagnostics.EventLogEntryType> für die <xref:System.Diagnostics.EventInstance.EntryType%2A> Eigenschaft. Der <xref:System.Diagnostics.EventInstance> in das Ereignisprotokoll geschrieben wird mithilfe der <xref:System.Diagnostics.EventLog.WriteEvent%2A> Methode, mit der Meldung abgerufenes der `format` und `args` Parameter. Die `args` Objektarray wird konvertiert in eine Zeichenfolge mit der <xref:System.String.Format%2A> -Methode auf und übergibt die `format` Zeichenfolge und `args` Array zur Formatierung der Zeichenfolge als Meldung für das Ereignisprotokoll.  
+  
+> [!NOTE]
+>  Der Maximalwert der der `id` Parameter ist 65.535. Wenn die `id` angegebene Wert ist größer als 65.535, wird der maximale Wert verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="source" />ist nicht angegeben.  
+  
+ - oder -   
+  
+ Die Zeichenfolge für den Protokolleintrag überschreitet 32.766 Zeichen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogTraceListener.Write(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die zu schreibende Meldung.</param>
+        <summary>Schreibt eine Meldung in das Ereignisprotokoll für diese Instanz an.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="message" />32.766 Zeichen überschritten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogTraceListener.WriteLine(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die zu schreibende Meldung.</param>
+        <summary>Schreibt eine Meldung in das Ereignisprotokoll für diese Instanz an.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="message" />32.766 Zeichen überschritten.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,39 @@
+<Type Name="HitTestResultCallback" FullName="System.Windows.Media.HitTestResultCallback">
+  <TypeSignature Language="C#" Value="public delegate System.Windows.Media.HitTestResultBehavior HitTestResultCallback(HitTestResult result);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HitTestResultCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.HitTestResultCallback" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="result" Type="System.Windows.Media.HitTestResult" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Windows.Media.HitTestResultBehavior</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="result">Die <see cref="T:System.Windows.Media.HitTestResult" /> Wert, der ein visuelles Objekt darstellt, die von einem Treffertest zurückgegeben wird.</param>
+    <summary>Stellt einen Rückruf dar, der zum Anpassen von Treffertests verwendet wird. WPF ruft die <see cref="T:System.Windows.Media.HitTestResultCallback" /> für den Benutzer die Treffertest-Schnittpunkte zu melden.</summary>
+    <returns>Ein <see cref="T:System.Windows.Media.HitTestFilterBehavior" />, das die Aktion darstellt, die sich aus dem Treffertest ergibt .</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Treffertest-Rückrufmethode definiert die Aktionen, die Sie ausführen, wenn ein Treffertest für ein bestimmtes visuelles Objekt in der visuellen Struktur identifiziert wird. Nach dem Durchführen der Aktionen des Rückrufs zurückzugebenden muss ein <xref:System.Windows.Media.HitTestResultBehavior> Wert, der bestimmt, ob die visuelle Struktur für alle anderen visuellen Objekten durchlaufen fortgesetzt.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie aufzurufenden <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> mithilfe einer <xref:System.Windows.Media.HitTestResultCallback> Wert. Außerdem wird die entsprechende Treffertest-Rückrufmethode definiert.  
+  
+ [!code-csharp[DrawingVisualSample#103](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#103)]
+ [!code-vb[DrawingVisualSample#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#103)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

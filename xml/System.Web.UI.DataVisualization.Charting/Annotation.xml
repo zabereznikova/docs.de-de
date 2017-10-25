@@ -1,0 +1,1638 @@
+<Type Name="Annotation" FullName="System.Web.UI.DataVisualization.Charting.Annotation">
+  <TypeSignature Language="C#" Value="public abstract class Annotation : System.Web.UI.DataVisualization.Charting.ChartNamedElement, System.Web.UI.DataVisualization.Charting.IChartMapArea" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Annotation extends System.Web.UI.DataVisualization.Charting.ChartNamedElement implements class System.Web.UI.DataVisualization.Charting.IChartMapArea" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.Annotation" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.DataVisualization.Charting.ChartNamedElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.DataVisualization.Charting.IChartMapArea</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Name")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert Eigenschaften und Methoden, die allgemeine aller Anmerkungen. Dies ist eine abstrakte Klasse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anmerkungen werden häufig zum Kommentieren oder Details auf Diagrammelemente, z. B. von Datenpunkten. Anmerkungen können auch verwendet werden, um benutzerdefinierte Formen zu zeichnen.  
+  
+ Standardmäßig werden Anmerkungen positioniert mit relativen Koordinaten (0,0) für die linke obere Ecke und (100,100), der unteren rechten Ecke des Diagrammbilds darstellt. Es ist auch möglich, aus dieser relativen Koordinatensystem auf einer Hardwaresystem, die Achsenwerte für die verwendet. Mit einer Achse Koordinatensystem X und Y, die die Position der linken oberen Ecke einer Anmerkung darstellen, festgelegt werden, werden X Achse und Y-Axis-Werte anstelle von Werten, die zwischen 0 und 100 liegen.  
+  
+ Es gibt zwei Möglichkeiten, Achsenwerten verwenden, wenn Sie die Position und Größe einer Anmerkung angeben:  
+  
+-   Legen Sie die <xref:System.Web.UI.DataVisualization.Charting.Annotation.AxisX%2A>, <xref:System.Web.UI.DataVisualization.Charting.Annotation.AxisY%2A> oder beider Anmerkungseigenschaften auf die <xref:System.Web.UI.DataVisualization.Charting.ChartArea.AxisX%2A> und <xref:System.Web.UI.DataVisualization.Charting.ChartArea.AxisY%2A> Eigenschaftswerte des eine <xref:System.Web.UI.DataVisualization.Charting.Series.ChartArea%2A> Objekt.  
+  
+-   Verwenden der <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorDataPoint%2A> Eigenschaft, um die Anmerkung an einem Datenpunkt verankern. In diesem Fall wird die Positionierung automatisch berechnet.  
+  
+ Alle Anmerkungen abgeleitet sind die <xref:System.Web.UI.DataVisualization.Charting.Annotation> -Klasse, die verwendet werden kann, um Attribute für alle common festzulegen <xref:System.Web.UI.DataVisualization.Charting.Annotation> Objekte, z. B. Farbe, zu positionieren, Verankern und so weiter.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Annotation ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.Annotation.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.DataVisualization.Charting.Annotation" />-Klasse. Dies ist der Standardkonstruktor und sollte nicht verwendet werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.UI.DataVisualization.Charting.Annotation>ist eine abstrakte Klasse und kann nicht direkt erstellt werden. Verwenden Sie zum Erstellen eines neuen Anmerkungsobjekt Konstruktoren von Klassen wie z. B. <xref:System.Web.UI.DataVisualization.Charting.LineAnnotation> oder <xref:System.Web.UI.DataVisualization.Charting.RectangleAnnotation>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Alignment">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.ContentAlignment Alignment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.ContentAlignment Alignment" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.Alignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.ContentAlignment), "MiddleCenter")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.ContentAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die inhaltsausrichtung einer Anmerkung.</summary>
+        <value>Ein <see cref="T:System.Drawing.ContentAlignment" /> -Enumerationswert ab, der die Ausrichtung des Inhalte darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird verwendet, um Text für die <xref:System.Web.UI.DataVisualization.Charting.Annotation.Alignment%2A> Eigenschaft zum Ausrichten von Text für <xref:System.Web.UI.DataVisualization.Charting.TextAnnotation>, <xref:System.Web.UI.DataVisualization.Charting.RectangleAnnotation>, <xref:System.Web.UI.DataVisualization.Charting.EllipseAnnotation> und <xref:System.Web.UI.DataVisualization.Charting.CalloutAnnotation> Objekte, und richten Sie ein Bild nicht skaliert innerhalb einer <xref:System.Web.UI.DataVisualization.Charting.ImageAnnotation> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnchorAlignment">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.ContentAlignment AnchorAlignment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.ContentAlignment AnchorAlignment" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.AnchorAlignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.ContentAlignment), "BottomCenter")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.ContentAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Ausrichtung der Position einer Anmerkung auf den Ankerpunkt fest.</summary>
+        <value>Ein <see cref="T:System.Drawing.ContentAlignment" /> -Enumerationswert ab, der die Ausrichtung der zu den Ankerpunkt Anmerkung darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Anmerkung muss verankert werden, indem Sie entweder die <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorDataPoint%2A> Eigenschaft oder durch Festlegen der <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorX%2A> und <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorY%2A> Eigenschaften. Die <xref:System.Web.UI.DataVisualization.Charting.Annotation.X%2A> und <xref:System.Web.UI.DataVisualization.Charting.Annotation.Y%2A> Eigenschaften müssen festgelegt werden, um <xref:System.Double.NaN>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnchorDataPoint">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.DataVisualization.Charting.DataPoint AnchorDataPoint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataVisualization.Charting.DataPoint AnchorDataPoint" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.AnchorDataPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.AnchorPointUITypeEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.DataVisualization.Charting.AnchorPointValueConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.DataPoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zeigen Sie die Daten an dem eine Anmerkung verankert ist, ruft ab oder legt ihn fest.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.DataPoint" /> Objekt, an dem eine Anmerkung verankert ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Anmerkung wird auf die X- und Y-Werte des angegebenen Datenpunkts verankert und verwendet automatisch die gleichen Achsenkoordinaten wie der Datenpunkt.  
+  
+ Um die Anmerkung relativ zu den Ankerpunkt automatisch positionieren zu können, stellen Sie sicher, dass seine <xref:System.Web.UI.DataVisualization.Charting.Annotation.X%2A> und <xref:System.Web.UI.DataVisualization.Charting.Annotation.Y%2A> Eigenschaften werden festgelegt, um <xref:System.Double.NaN>. Die <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorAlignment%2A> Eigenschaft kann verwendet werden, um die positionale automatische Ausrichtung in den Ankerpunkt zu ändern. Die <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorOffsetX%2A> und <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorOffsetY%2A> Eigenschaften können verwendet werden, um einen zusätzlichen Abstand hinzuzufügen.  
+  
+ Wenn Sie diese Eigenschaft verwenden, stellen Sie sicher, dass die <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorX%2A> und <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorY%2A> Eigenschaften werden festgelegt, um <xref:System.Double.NaN>, wie diese Vorrang haben.  
+  
+ Legen Sie diesen Wert auf `null` So deaktivieren Sie die Anmerkung an einem Datenpunkt verankern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnchorDataPointName">
+      <MemberSignature Language="C#" Value="public virtual string AnchorDataPointName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AnchorDataPointName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.AnchorDataPointName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt der Namen eines zeigen Sie auf dem eine Anmerkung verankert ist.</summary>
+        <value>Ein <see langword="string" /> Wert, der den Namen der Daten darstellt, zeigen Sie, dass eine Anmerkung verankert ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnchorOffsetX">
+      <MemberSignature Language="C#" Value="public virtual double AnchorOffsetX { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 AnchorOffsetX" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.AnchorOffsetX" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Offset vom Ankerpunkt für die X-Position einer Anmerkung fest.</summary>
+        <value>Ein <see langword="double" /> Wert, der den Offset der X-Position vom Ankerpunkt darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Anmerkung muss verankert werden, indem entweder die <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorDataPoint%2A> oder <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorX%2A> -Eigenschaft, und die zugehörige <xref:System.Web.UI.DataVisualization.Charting.Annotation.X%2A> Eigenschaft muss festgelegt werden, um <xref:System.Double.NaN>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnchorOffsetY">
+      <MemberSignature Language="C#" Value="public virtual double AnchorOffsetY { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 AnchorOffsetY" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.AnchorOffsetY" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Offset vom Ankerpunkt für die Y-Position einer Anmerkung fest.</summary>
+        <value>Ein <see langword="double" /> Wert, der den Offset der Y-Position vom Ankerpunkt darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Anmerkung muss verankert werden, indem entweder die <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorDataPoint%2A> oder <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorY%2A> -Eigenschaft, und die zugehörige <xref:System.Web.UI.DataVisualization.Charting.Annotation.Y%2A> Eigenschaft muss festgelegt werden, um <xref:System.Double.NaN>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnchorX">
+      <MemberSignature Language="C#" Value="public virtual double AnchorX { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 AnchorX" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.AnchorX" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(NaN)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.DataVisualization.Charting.DoubleNanValueConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die X-Koordinate, an der die Anmerkung verankert ist.</summary>
+        <value>Ein <see langword="double" /> Wert, der die X-Koordinate darstellt, an dem eine Anmerkung verankert ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Anmerkung verankert wird das "X" zu koordinieren und in relativen Diagramm angegeben oder Achsenkoordinaten, abhängig von der <xref:System.Web.UI.DataVisualization.Charting.Annotation.AxisX%2A> Eigenschaftswert.  
+  
+ Um eine Anmerkung relativ zu einem Ankerpunkt automatisch positionieren zu können, stellen Sie sicher, dass seine <xref:System.Web.UI.DataVisualization.Charting.Annotation.X%2A> -Eigenschaftensatz auf <xref:System.Double.NaN>. Die <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorAlignment%2A> Eigenschaft kann verwendet werden, um die Ausrichtung automatische Position der Anmerkung in den Ankerpunkt zu ändern. Die <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorOffsetX%2A> und <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorOffsetY%2A> Eigenschaften können verwendet werden, um einen zusätzlichen Abstand hinzufügen.  
+  
+ Diese Eigenschaft hat eine höhere Priorität als die <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorDataPoint%2A> Eigenschaft.  
+  
+ Legen Sie diesen Wert auf <xref:System.Double.NaN> Anmerkung, die auf den Wert Verankerung zu deaktivieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnchorY">
+      <MemberSignature Language="C#" Value="public virtual double AnchorY { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 AnchorY" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.AnchorY" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(NaN)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.DataVisualization.Charting.DoubleNanValueConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Y-Koordinate, an der die Anmerkung verankert ist.</summary>
+        <value>Ein <see langword="double" /> Wert, der die Y-Koordinate darstellt, eine Anmerkung verankert ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Anmerkung verankert wird Y koordinieren und in relativen Diagramm angegeben ist oder Achsenkoordinaten, abhängig von der <xref:System.Web.UI.DataVisualization.Charting.Annotation.AxisX%2A> Eigenschaftswert.  
+  
+ Um eine Anmerkung relativ zum Anker automatisch positionieren Punkt stellen Sie sicher seine <xref:System.Web.UI.DataVisualization.Charting.Annotation.Y%2A> -Eigenschaftensatz auf <xref:System.Double.NaN>. Die <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorAlignment%2A> Eigenschaft kann verwendet werden, um die Ausrichtung automatische Position der Anmerkung in den Ankerpunkt zu ändern. Die <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorOffsetX%2A> und <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorOffsetY%2A> Eigenschaften können verwendet werden, um einen zusätzlichen Abstand hinzufügen.  
+  
+ Diese Eigenschaft hat eine höhere Priorität als die <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorDataPoint%2A> Eigenschaft.  
+  
+ Legen Sie diesen Wert auf <xref:System.Double.NaN> Anmerkung, die auf den Wert Verankerung zu deaktivieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnotationGroup">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.AnnotationGroup AnnotationGroup { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataVisualization.Charting.AnnotationGroup AnnotationGroup" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.AnnotationGroup" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.AnnotationGroup</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Gruppe ab, sofern vorhanden, in dem die Anmerkung gehört.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.AnnotationGroup" /> Objekt, in dem die Anmerkung gehört.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnotationType">
+      <MemberSignature Language="C#" Value="public abstract string AnnotationType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AnnotationType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.AnnotationType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typnamen einer Anmerkung.</summary>
+        <value>Der Typname der Anmerkung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird verwendet, um den Namen jedes Annotation-Typs, z. B. Linie, Rechteck, Ellipse usw. abrufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AxisX">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.DataVisualization.Charting.Axis AxisX { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataVisualization.Charting.Axis AxisX" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.AxisX" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.AnnotationAxisUITypeEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.DataVisualization.Charting.AnnotationAxisValueConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.Axis</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder festlegen die x-Achse an die eine Anmerkung angefügt ist.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.Axis" /> -Objekt, das die Anmerkung angefügt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Anmerkung an einer Achse angefügt ist, wird die X-Position immer in Achsenkoordinaten angegeben. Um die Größe einer Anmerkung auch in Achsenkoordinaten zu definieren, stellen Sie sicher, dass die <xref:System.Web.UI.DataVisualization.Charting.Annotation.IsSizeAlwaysRelative%2A> -Eigenschaftensatz auf `false`.  
+  
+ Legen Sie diesen Wert auf `null` Anlage an die Achse zu deaktivieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AxisXName">
+      <MemberSignature Language="C#" Value="public virtual string AxisXName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AxisXName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.AxisXName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der x-Achse an die eine Anmerkung angefügt ist.</summary>
+        <value>Ein <see langword="string" /> Wert, der den Namen der x-Achse darstellt, bei dem eine Anmerkung angefügt ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AxisY">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.DataVisualization.Charting.Axis AxisY { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataVisualization.Charting.Axis AxisY" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.AxisY" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.AnnotationAxisUITypeEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.DataVisualization.Charting.AnnotationAxisValueConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.Axis</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Y-Achse an die eine Anmerkung angefügt ist.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.Axis" /> Objekt, das diese Anmerkung angefügt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Anmerkung an einer Achse angefügt ist, wird die Y-Position immer in Achsenkoordinaten angegeben. Um die Größe einer Anmerkung auch in Achsenkoordinaten zu definieren, stellen Sie sicher, dass die <xref:System.Web.UI.DataVisualization.Charting.Annotation.IsSizeAlwaysRelative%2A> -Eigenschaftensatz auf `false`.  
+  
+ Legen Sie auf `null` Anmerkung Anlage an einer Achse zu deaktivieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AxisYName">
+      <MemberSignature Language="C#" Value="public virtual string AxisYName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AxisYName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.AxisYName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der y-Achse, an die eine Anmerkung angefügt ist.</summary>
+        <value>Ein <see langword="string" /> Wert, der den Namen der y-Achse darstellt, die eine Anmerkung angefügt ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColor">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color BackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.BackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Farbe von Hintergrund einer Anmerkung fest.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> Wert, der den Hintergrund einer Anmerkung zu zeichnen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gilt nicht für Anmerkungen-Diagramm nach der Zeile, Image Anmerkungen und textanmerkungen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackGradientStyle">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.DataVisualization.Charting.GradientStyle BackGradientStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.GradientStyle BackGradientStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.BackGradientStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.GradientEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.GradientStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Art des Farbverlaufs, der den Hintergrund einer Anmerkung.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.GradientStyle" /> Wert, der den Hintergrund einer Anmerkung zu zeichnen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zwei Farben werden verwendet, um die Farbverläufe zeichnen <xref:System.Web.UI.DataVisualization.Charting.Annotation.BackColor%2A> und <xref:System.Web.UI.DataVisualization.Charting.Annotation.BackSecondaryColor%2A>.  
+  
+ Diese Eigenschaft gilt nicht für Anmerkungen-Diagramm nach der Zeile, Image Anmerkungen und textanmerkungen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackHatchStyle">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.DataVisualization.Charting.ChartHatchStyle BackHatchStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.ChartHatchStyle BackHatchStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.BackHatchStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.HatchStyleEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.ChartHatchStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Schraffurart für den Hintergrund einer Anmerkung.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.ChartHatchStyle" /> Wert, der zum Zeichnen des Hintergrunds verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zwei Farben werden verwendet, um die Schraffur <xref:System.Web.UI.DataVisualization.Charting.Annotation.BackColor%2A> und <xref:System.Web.UI.DataVisualization.Charting.Annotation.BackSecondaryColor%2A>.  
+  
+ Diese Eigenschaft gilt nicht für Anmerkungen-Diagramm nach der Zeile, Image Anmerkungen und textanmerkungen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackSecondaryColor">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color BackSecondaryColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackSecondaryColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.BackSecondaryColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Sekundärfarbe der Hintergrund einer Anmerkung.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> Wert, der den Hintergrund einer Anmerkung mit Schraffur oder graduelle Füllung gezeichnet werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die sekundäre Farbe wird verwendet, mit der <xref:System.Web.UI.DataVisualization.Charting.Annotation.BackColor%2A> Wenn <xref:System.Web.UI.DataVisualization.Charting.Annotation.BackHatchStyle%2A> oder <xref:System.Web.UI.DataVisualization.Charting.Annotation.BackGradientStyle%2A> verwendet wird.  
+  
+ Diese Eigenschaft gilt nicht für Anmerkungen-Diagramm nach der Zeile, Image Anmerkungen und textanmerkungen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bottom">
+      <MemberSignature Language="C#" Value="public virtual double Bottom { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Bottom" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.Bottom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(NaN)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.DataVisualization.Charting.DoubleNanValueConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die untere Begrenzung der Position einer Anmerkung.</summary>
+        <value>Ein <see langword="double" /> Wert, der die Position der die untere Begrenzung einer Anmerkung darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verankern Sie um Achsenkoordinaten zu verwenden, eine Anmerkung, die einer Punkt unter Verwendung der <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorDataPoint%2A> Eigenschaft oder eine Gruppe die Anmerkung axes mithilfe der <xref:System.Web.UI.DataVisualization.Charting.Annotation.AxisX%2A> und <xref:System.Web.UI.DataVisualization.Charting.Annotation.AxisY%2A> Eigenschaften und legen die <xref:System.Web.UI.DataVisualization.Charting.Annotation.IsSizeAlwaysRelative%2A> Eigenschaft `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BringToFront">
+      <MemberSignature Language="C#" Value="public virtual void BringToFront ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BringToFront() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.Annotation.BringToFront" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Zeigt eine Anmerkung im Vordergrund aller Anmerkungen an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClipToChartArea">
+      <MemberSignature Language="C#" Value="public virtual string ClipToChartArea { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClipToChartArea" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.ClipToChartArea" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("NotSet")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.DataVisualization.Charting.LegendAreaNameConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Diagrammfläche eine Anmerkung zugeschnitten wird.</summary>
+        <value>Ein <see langword="string" /> , der den Namen des vorhandenen Diagrammbereichs darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Name der Diagrammfläche angegeben wird, wird eine Anmerkung nur innerhalb des Zeichnungsbereichs des Diagrammbereichs angegeben gezeichnet werden. Alle Teile der Anmerkung außerhalb der Zeichnungsfläche werden abgeschnitten.  
+  
+ Um die Diagrammfläche zu deaktivieren, legen Sie die Eigenschaft auf <xref:System.String.Empty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.Annotation.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben. <see langword="false" /> um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt nicht verwaltete Ressourcen und optional auch die verwalteten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Font">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Font Font { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Font Font" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.Font" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Font), "Microsoft Sans Serif, 8pt")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Schriftart für den Text einer Anmerkung zu verwenden.</summary>
+        <value>Ein <see cref="T:System.Drawing.Font" /> Objekt, das zum Zeichnen des Anmerkungstexts verwendet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColor">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.ForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "Black")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Textfarbe einer Anmerkung fest.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> Wert, der für die Textfarbe einer Anmerkung verwendet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public virtual double Height { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Height" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(NaN)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.DataVisualization.Charting.DoubleNanValueConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Höhe einer Anmerkung fest.</summary>
+        <value>Ein <see langword="double" /> Wert, der die Höhe einer Anmerkung darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Höhe einer Anmerkung kann ein negativer Wert sein, in dem Fall die Anmerkung Ausrichtung gewechselt wird.  
+  
+ Anmerkung Höhe möglich in relativen Diagrammkoordinaten oder Achsenkoordinaten. Standardmäßig werden die relative Diagrammkoordinaten verwendet.  
+  
+ Verankern Sie um Achsenkoordinaten zu verwenden, eine Anmerkung, die einer Punkt unter Verwendung der <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorDataPoint%2A> Eigenschaft oder eine Gruppe die Anmerkung axes mithilfe der <xref:System.Web.UI.DataVisualization.Charting.Annotation.AxisX%2A> oder <xref:System.Web.UI.DataVisualization.Charting.Annotation.AxisY%2A> Eigenschaften und legen die <xref:System.Web.UI.DataVisualization.Charting.Annotation.IsSizeAlwaysRelative%2A> Eigenschaft `false`.  
+  
+ Legen Sie die Höhe auf <xref:System.Double.NaN> auf die automatische größenberechnung für Anmerkungen mit Text. Die Größe wird automatisch basierend auf der Größe der pfeilanmerkung Text und Schriftart berechnet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSelected">
+      <MemberSignature Language="C#" Value="public virtual bool IsSelected { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSelected" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.IsSelected" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Flag, das bestimmt, ob eine Anmerkung ausgewählt ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Anmerkung ausgewählt ist. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSizeAlwaysRelative">
+      <MemberSignature Language="C#" Value="public virtual bool IsSizeAlwaysRelative { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSizeAlwaysRelative" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.IsSizeAlwaysRelative" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Flag, das angibt, ob die Größe einer Anmerkung stets in relativen Diagrammkoordinaten definiert wird.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="P:System.Web.UI.DataVisualization.Charting.Annotation.Width" /> und <see cref="P:System.Web.UI.DataVisualization.Charting.Annotation.Height" /> einer Anmerkung werden stets in relativen Diagrammkoordinaten angegeben ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Höhe und Breite einer Anmerkung können in relativen Diagramm- oder Achsenkoordinaten festgelegt werden. Relativen Diagrammkoordinaten werden standardmäßig verwendet.  
+  
+ Um die Größe einer Anmerkung in Achsenkoordinaten auszudrücken, legen Sie die <xref:System.Web.UI.DataVisualization.Charting.Annotation.IsSizeAlwaysRelative%2A> Eigenschaft `false`. Klicken Sie dann die Anmerkung an einem Datenpunkt verankern, oder legen die <xref:System.Web.UI.DataVisualization.Charting.Annotation.AxisX%2A> und <xref:System.Web.UI.DataVisualization.Charting.Annotation.AxisY%2A> Eigenschaften.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineColor">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color LineColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color LineColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.LineColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "Black")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Linienfarbe einer Anmerkung.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> Wert verwendet, um eine Anmerkung Linie zu zeichnen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineDashStyle">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.DataVisualization.Charting.ChartDashStyle LineDashStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.ChartDashStyle LineDashStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.LineDashStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.ChartDashStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Linienart einer Anmerkung.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.ChartDashStyle" /> Wert verwendet, um die Linienart einer Anmerkung zu zeichnen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineWidth">
+      <MemberSignature Language="C#" Value="public virtual int LineWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LineWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.LineWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Breite einer Anmerkung.</summary>
+        <value>Ein <see langword="integer" /> Wert, der die Linienstärke in Pixel einer Anmerkung definiert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MapAreaAttributes">
+      <MemberSignature Language="C#" Value="public virtual string MapAreaAttributes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MapAreaAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.MapAreaAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zuordnung strukturbereichattribute einer Anmerkung.</summary>
+        <value>Ein <see langword="string" /> Wert, der die Zuordnung strukturbereichattribute einer Anmerkung darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies `string` werden hinzugefügt werden, um die Attribute der für die Anmerkung generierten ImageMap.  
+  
+ Spezielle Schlüsselwörter können verwendet werden, wenn eine Anmerkung verankert ist, in einen Punkt mit der <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorDataPoint%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ParenthesizePropertyName(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den eindeutigen Namen einer Anmerkung.</summary>
+        <value>Ein <see langword="string" /> , die den eindeutigen Namen der Anmerkung darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostBackValue">
+      <MemberSignature Language="C#" Value="public string PostBackValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PostBackValue" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.PostBackValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Postbackwert, die auf verarbeitet werden kann die <see cref="E:System.Web.UI.DataVisualization.Charting.Chart.Click" /> Ereignis.</summary>
+        <value>Ein <see langword="string" /> -Wert, der an die <see cref="E:System.Web.UI.DataVisualization.Charting.Chart.Click" /> Ereignis.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResizeToContent">
+      <MemberSignature Language="C#" Value="public virtual void ResizeToContent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ResizeToContent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.Annotation.ResizeToContent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ändert die Größe einer Anmerkung entsprechend der Größe ihres Inhalts.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legt die Anmerkungsbreite und Höhe an den angegebenen Text an.  
+  
+ Diese Methode gilt für <xref:System.Web.UI.DataVisualization.Charting.TextAnnotation>, <xref:System.Web.UI.DataVisualization.Charting.RectangleAnnotation>, <xref:System.Web.UI.DataVisualization.Charting.EllipseAnnotation> und <xref:System.Web.UI.DataVisualization.Charting.CalloutAnnotation> nur für die Objekte.  
+  
+> [!NOTE]
+>  Diese Methode erfordert, dass die Anmerkung hinzugefügt werden die <xref:System.Web.UI.DataVisualization.Charting.AnnotationCollection> ordnungsgemäß funktionieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="public virtual double Right { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Right" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.Right" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(NaN)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.DataVisualization.Charting.DoubleNanValueConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die rechte Begrenzung-Position einer Anmerkung fest.</summary>
+        <value>Ein <see langword="double" /> Wert, der die Position der rechte Begrenzung einer Anmerkung darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verankern Sie um Achsenkoordinaten zu verwenden, eine Anmerkung, die einer Punkt unter Verwendung der <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorDataPoint%2A> Eigenschaft oder eine Gruppe die Anmerkung axes mithilfe der <xref:System.Web.UI.DataVisualization.Charting.Annotation.AxisX%2A> oder <xref:System.Web.UI.DataVisualization.Charting.Annotation.AxisY%2A> Eigenschaften und legen die <xref:System.Web.UI.DataVisualization.Charting.Annotation.IsSizeAlwaysRelative%2A> Eigenschaft `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendToBack">
+      <MemberSignature Language="C#" Value="public virtual void SendToBack ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SendToBack() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.Annotation.SendToBack" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Sendet eine Anmerkung in den Hintergrund aller Anmerkungen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAnchor">
+      <MemberSignature Language="C#" Value="public void SetAnchor (System.Web.UI.DataVisualization.Charting.DataPoint dataPoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAnchor(class System.Web.UI.DataVisualization.Charting.DataPoint dataPoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.Annotation.SetAnchor(System.Web.UI.DataVisualization.Charting.DataPoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataPoint" Type="System.Web.UI.DataVisualization.Charting.DataPoint" />
+      </Parameters>
+      <Docs>
+        <param name="dataPoint">Die <see cref="T:System.Web.UI.DataVisualization.Charting.DataPoint" /> an dem die Anmerkung verankert werden wird.</param>
+        <summary>Verankert eine Anmerkung, die den angegebenen Datenpunkt an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAnchor">
+      <MemberSignature Language="C#" Value="public void SetAnchor (System.Web.UI.DataVisualization.Charting.DataPoint dataPoint1, System.Web.UI.DataVisualization.Charting.DataPoint dataPoint2);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAnchor(class System.Web.UI.DataVisualization.Charting.DataPoint dataPoint1, class System.Web.UI.DataVisualization.Charting.DataPoint dataPoint2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.Annotation.SetAnchor(System.Web.UI.DataVisualization.Charting.DataPoint,System.Web.UI.DataVisualization.Charting.DataPoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataPoint1" Type="System.Web.UI.DataVisualization.Charting.DataPoint" />
+        <Parameter Name="dataPoint2" Type="System.Web.UI.DataVisualization.Charting.DataPoint" />
+      </Parameters>
+      <Docs>
+        <param name="dataPoint1">Der erste Anker <see cref="T:System.Web.UI.DataVisualization.Charting.DataPoint" />.</param>
+        <param name="dataPoint2">Der zweite Anker <see cref="T:System.Web.UI.DataVisualization.Charting.DataPoint" />.</param>
+        <summary>Verankert eine Anmerkung, die zwei Datenpunkte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verankert eine Anmerkung oberen linken und unteren rechten Ecke Ecken der angegebenen Datenpunkte an.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShadowColor">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ShadowColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ShadowColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.ShadowColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "128,0,0,0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Farbe des Schattens einer Anmerkung ab.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> Wert, der zum Zeichnen des Anmerkungsschattens verwendet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShadowOffset">
+      <MemberSignature Language="C#" Value="public virtual int ShadowOffset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ShadowOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.ShadowOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Größe des Schattens einer Anmerkung ab.</summary>
+        <value>Ein <see langword="integer" /> Wert, der die Größe des Schattens darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SmartLabelStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.AnnotationSmartLabelStyle SmartLabelStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataVisualization.Charting.AnnotationSmartLabelStyle SmartLabelStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.SmartLabelStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.AnnotationSmartLabelStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die intelligente Bezeichnung Format einer Anmerkung.</summary>
+        <value>Ein <see cref="T:System.Web.UI.DataVisualization.Charting.AnnotationSmartLabelStyle" /> Stileigenschaften "Bezeichnungen" Objekt, das eine Anmerkung Smartcard darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ SmartLabels werden verwendet, um zu verhindern, dass eine Anmerkung aus überlappende datenpunktbezeichnungen und andere Anmerkungen.  
+  
+> [!NOTE]
+>  Zeigen Sie datenpunktbezeichnungen müssen auch über aktivierte SmartLabels verfügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextStyle">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.DataVisualization.Charting.TextStyle TextStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.TextStyle TextStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.TextStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Web.UI.DataVisualization.Charting.TextStyle), "Default")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.TextStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Textart einer Anmerkung.</summary>
+        <value>Ein <see cref="P:System.Web.UI.DataVisualization.Charting.Annotation.TextStyle" /> Wert, der zum Zeichnen des Texts einer Anmerkung verwendet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTip">
+      <MemberSignature Language="C#" Value="public virtual string ToolTip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolTip" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.ToolTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den QuickInfo-Text für eine Anmerkung.</summary>
+        <value>Ein <see langword="string" /> Wert, der den QuickInfo-Text für eine Anmerkung darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Spezielle Schlüsselwörter können im Text verwendet werden, wenn eine Anmerkung verankert ist, in einen Punkt mit der <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorDataPoint%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Url">
+      <MemberSignature Language="C#" Value="public virtual string Url { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Url" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.Url" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL einer Anmerkung fest.</summary>
+        <value>Ein <see langword="string" /> Wert, der die URL einer Anmerkung darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Spezielle Schlüsselwörter können verwendet werden, wenn eine Anmerkung verankert ist, in einen Punkt mit der <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorDataPoint%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="public virtual bool Visible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visible" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.Visible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ParenthesizePropertyName(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Flag, das angibt, ob eine Anmerkung sichtbar ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Anmerkung sichtbar ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public virtual double Width { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Width" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(NaN)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.DataVisualization.Charting.DoubleNanValueConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Breite in Pixel, der eine Anmerkung.</summary>
+        <value>Ein <see langword="double" /> Wert, der einen Prozentsatz der Breite des Diagramms enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter der <xref:System.Web.UI.DataVisualization.Charting.Annotation.Height%2A> Beschreibung der Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="X">
+      <MemberSignature Language="C#" Value="public virtual double X { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 X" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.X" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(NaN)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.DataVisualization.Charting.DoubleNanValueConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die X-Koordinate der Anmerkung.</summary>
+        <value>Ein <see langword="double" /> Wert, der die X-Koordinate-Position der Anmerkung darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die X-Koordinate einer Anmerkung wird in relativen Diagrammkoordinaten oder Achsenkoordinaten angegeben. Standardmäßig werden die relativen Diagrammkoordinaten verwendet.  
+  
+ Verankern Sie um Achsenkoordinaten zu verwenden, eine Anmerkung, die einer Punkt unter Verwendung der <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorDataPoint%2A> Eigenschaft oder eine Gruppe die Anmerkung axes mithilfe der <xref:System.Web.UI.DataVisualization.Charting.Annotation.AxisX%2A> und <xref:System.Web.UI.DataVisualization.Charting.Annotation.AxisY%2A> Eigenschaften.  
+  
+ Festlegen der <xref:System.Web.UI.DataVisualization.Charting.Annotation.X%2A> positionieren <xref:System.Double.NaN> Position automatisch zu berechnen, wenn die Anmerkung verankert wurde mithilfe der <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorDataPoint%2A> Eigenschaft oder die <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorX%2A> und <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorY%2A> Eigenschaften.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Y">
+      <MemberSignature Language="C#" Value="public virtual double Y { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Y" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.Y" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(NaN)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.DataVisualization.Charting.DoubleNanValueConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Y-Koordinate der Anmerkung.</summary>
+        <value>Ein <see langword="double" /> Wert, der die Koordinate Y-Position der Anmerkung darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Y-Koordinate einer Anmerkung wird in relativen Diagrammkoordinaten oder Achsenkoordinaten angegeben. Standardmäßig werden die relativen Diagrammkoordinaten verwendet.  
+  
+ Verankern Sie um Achsenkoordinaten zu verwenden, eine Anmerkung, die einer Punkt unter Verwendung der <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorDataPoint%2A> Eigenschaft oder eine Gruppe die Anmerkung axes mithilfe der <xref:System.Web.UI.DataVisualization.Charting.Annotation.AxisX%2A> oder <xref:System.Web.UI.DataVisualization.Charting.Annotation.AxisY%2A> Eigenschaften.  
+  
+ Festlegen der <xref:System.Web.UI.DataVisualization.Charting.Annotation.Y%2A> positionieren Sie <xref:System.Double.NaN> die Position automatisch zu berechnen, wenn die Anmerkung verankert wurde mithilfe der <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorDataPoint%2A> Eigenschaft oder die <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorX%2A> und <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorY%2A> Eigenschaften.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="YAxisName">
+      <MemberSignature Language="C#" Value="public virtual string YAxisName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string YAxisName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Annotation.YAxisName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der y-Achse, an die eine Anmerkung angefügt ist.</summary>
+        <value>Ein <see langword="string" /> Wert, der den Namen der y-Achse darstellt, bei dem eine Anmerkung angefügt ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

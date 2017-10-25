@@ -1,0 +1,338 @@
+<Type Name="ServiceContractGenerator" FullName="System.ServiceModel.Description.ServiceContractGenerator">
+  <TypeSignature Language="C#" Value="public class ServiceContractGenerator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ServiceContractGenerator extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.ServiceContractGenerator" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Der <see cref="T:System.ServiceModel.Description.ServiceContractGenerator" />-Typ generiert einen Dienstvertragscode und Bindungskonfigurationen von <see cref="T:System.ServiceModel.Description.ServiceEndpoint" />-Beschreibungsobjekten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie <xref:System.ServiceModel.Description.ServiceContractGenerator>, um Tools zu erstellen oder den Standard-Vertragsgenerierungsprozess mit einer <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> zu ändern.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung von <xref:System.ServiceModel.Description.ServiceContractGenerator> gezeigt, um heruntergeladene Metadaten in Code zu konvertieren.  
+  
+ [!code-csharp[C_CustomWSDLExtensions#8](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/client.cs#8)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceContractGenerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.ServiceContractGenerator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Description.ServiceContractGenerator" />-Klasse mit einer neuen <see cref="T:System.CodeDom.CodeCompileUnit" />-Instanz.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceContractGenerator (System.CodeDom.CodeCompileUnit targetCompileUnit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeCompileUnit targetCompileUnit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.ServiceContractGenerator.#ctor(System.CodeDom.CodeCompileUnit)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="targetCompileUnit" Type="System.CodeDom.CodeCompileUnit" />
+      </Parameters>
+      <Docs>
+        <param name="targetCompileUnit">Die <see cref="T:System.CodeDom.CodeCompileUnit" />-Instanz, mit der Code generiert werden kann.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Description.ServiceContractGenerator" />-Klasse mit der angegebenen <see cref="T:System.CodeDom.CodeCompileUnit" />-Instanz.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceContractGenerator (System.Configuration.Configuration targetConfig);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Configuration.Configuration targetConfig) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.ServiceContractGenerator.#ctor(System.Configuration.Configuration)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="targetConfig" Type="System.Configuration.Configuration" />
+      </Parameters>
+      <Docs>
+        <param name="targetConfig">Die <see cref="T:System.Configuration.Configuration" />-Instanz, mit der Bindungskonfigurationen generiert werden können.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Description.ServiceContractGenerator" />-Klasse mit der angegebenen <see cref="T:System.Configuration.Configuration" />-Instanz.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceContractGenerator (System.CodeDom.CodeCompileUnit targetCompileUnit, System.Configuration.Configuration targetConfig);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeCompileUnit targetCompileUnit, class System.Configuration.Configuration targetConfig) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.ServiceContractGenerator.#ctor(System.CodeDom.CodeCompileUnit,System.Configuration.Configuration)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="targetCompileUnit" Type="System.CodeDom.CodeCompileUnit" />
+        <Parameter Name="targetConfig" Type="System.Configuration.Configuration" />
+      </Parameters>
+      <Docs>
+        <param name="targetCompileUnit">Die <see cref="T:System.CodeDom.CodeCompileUnit" />-Instanz, mit der Code generiert werden kann.</param>
+        <param name="targetConfig">Die <see cref="T:System.Configuration.Configuration" />-Instanz, mit der Bindungskonfigurationen generiert werden können.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Description.ServiceContractGenerator" />-Klasse mit der angegebenen <see cref="T:System.CodeDom.CodeCompileUnit" />-Instanz und der angegebenen <see cref="T:System.Configuration.Configuration" />-Instanz.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Configuration">
+      <MemberSignature Language="C#" Value="public System.Configuration.Configuration Configuration { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.Configuration Configuration" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceContractGenerator.Configuration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Configuration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Configuration.Configuration" />-Instanz ab, die die generierten Bindungskonfigurationen enthält.</summary>
+        <value>Eine <see cref="T:System.Configuration.Configuration" />-Instanz, die die generierten Endpunktkonfigurationen enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Errors">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.MetadataConversionError&gt; Errors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Description.MetadataConversionError&gt; Errors" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceContractGenerator.Errors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.MetadataConversionError&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von <see cref="T:System.ServiceModel.Description.MetadataConversionError" />-Objekten ab, die beim Generieren des Dienstvertragscodes und der Endpunktkonfigurationen generiert werden.</summary>
+        <value>Eine Auflistung von <see cref="T:System.ServiceModel.Description.MetadataConversionError" />-Objekten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Fehler und Warnmeldungen können von Tools verwendet werden, um Benutzern Debuginformationen anzuzeigen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateBinding">
+      <MemberSignature Language="C#" Value="public void GenerateBinding (System.ServiceModel.Channels.Binding binding, out string bindingSectionName, out string configurationName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void GenerateBinding(class System.ServiceModel.Channels.Binding binding, [out] string&amp; bindingSectionName, [out] string&amp; configurationName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.ServiceContractGenerator.GenerateBinding(System.ServiceModel.Channels.Binding,System.String@,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+        <Parameter Name="bindingSectionName" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="configurationName" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="binding">Die <see cref="T:System.ServiceModel.Channels.Binding" />, die zum Generieren der Bindungskonfiguration verwendet werden soll.</param>
+        <param name="bindingSectionName">Der Name des generierten Bindungsabschnitts.</param>
+        <param name="configurationName">Der Name der generierten Bindungskonfiguration.</param>
+        <summary>Generiert eine Bindungskonfiguration für die angegebene <see cref="T:System.ServiceModel.Channels.Binding" />-Instanz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Konfigurationsname für die Bindung wird von der <xref:System.ServiceModel.Channels.Binding.Name%2A>-Eigenschaft abgerufen. Bindungskonfigurationsnamen werden als eindeutig festgelegt, indem dem Bindungskonfigurationsnamen ganze Zahlen hinzugefügt werden.  
+  
+ Der Bindungsabschnittname ist der Name des Bindungskonfigurationsabschnitts, dem die Bindungskonfiguration hinzugefügt wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateServiceContractType">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeTypeReference GenerateServiceContractType (System.ServiceModel.Description.ContractDescription contractDescription);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.CodeDom.CodeTypeReference GenerateServiceContractType(class System.ServiceModel.Description.ContractDescription contractDescription) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.ServiceContractGenerator.GenerateServiceContractType(System.ServiceModel.Description.ContractDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeReference</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contractDescription" Type="System.ServiceModel.Description.ContractDescription" />
+      </Parameters>
+      <Docs>
+        <param name="contractDescription">Der <see cref="T:System.ServiceModel.Description.ContractDescription" />, der zum Generieren des Vertragstyps verwendet werden soll.</param>
+        <summary>Generiert einen Dienstvertragstyp von der angegebenen <see cref="T:System.ServiceModel.Description.ContractDescription" />-Instanz.</summary>
+        <returns>Eine <see cref="T:System.CodeDom.CodeTypeReference" />-Instanz für den generierten Vertragstyp.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Andere Codeartefakte werden möglicherweise auch generiert, wie durch Verwendung der <xref:System.ServiceModel.Description.ServiceContractGenerator.Options%2A?displayProperty=nameWithType>-Eigenschaft angegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateServiceEndpoint">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeTypeReference GenerateServiceEndpoint (System.ServiceModel.Description.ServiceEndpoint endpoint, out System.ServiceModel.Configuration.ChannelEndpointElement channelElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.CodeDom.CodeTypeReference GenerateServiceEndpoint(class System.ServiceModel.Description.ServiceEndpoint endpoint, [out] class System.ServiceModel.Configuration.ChannelEndpointElement&amp; channelElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.ServiceContractGenerator.GenerateServiceEndpoint(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Configuration.ChannelEndpointElement@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeReference</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="channelElement" Type="System.ServiceModel.Configuration.ChannelEndpointElement&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">Der <see cref="T:System.ServiceModel.Description.ServiceEndpoint" />, der zum Generieren des Vertragstyps verwendet werden soll.</param>
+        <param name="channelElement">Die generierte Endpunktkonfiguration.</param>
+        <summary>Generiert einen Dienstvertragstyp und eine Endpunktkonfiguration von der angegebenen <see cref="T:System.ServiceModel.Description.ServiceEndpoint" />-Instanz.</summary>
+        <returns>Eine <see cref="T:System.CodeDom.CodeTypeReference" />-Instanz für den generierten Vertragstyp.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Andere Codeartefakte werden möglicherweise auch generiert, wie durch Verwendung der <xref:System.ServiceModel.Description.ServiceContractGenerator.Options%2A?displayProperty=nameWithType>-Eigenschaft angegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NamespaceMappings">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;string,string&gt; NamespaceMappings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;string, string&gt; NamespaceMappings" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceContractGenerator.NamespaceMappings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft aus Vertragsbeschreibungsnamespaces eine Zuordnung zu verwalteten Namespaces ab, die beim Generieren von Code verwendet wird.</summary>
+        <value>Eine Zuordnung von Vertragsbeschreibungsnamespaces zu verwalteten Namespaces.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um einen Vertragsbeschreibungsnamespace einem verwalteten Namespace zuzuordnen, der beim Generieren von Code verwendet wird.  
+  
+ Sie können den Platzhalter "*" als Wörterbuchschlüssel verwenden, um einen verwalteten Namespace anzugeben, der für alle Beschreibungsnamespaces verwendet werden soll, die nicht explizit einem verwalteten Namespace zugeordnet sind.  
+  
+ Der verwaltete Standardnamespace wird verwendet, wenn keine Namespacezuordnung für einen bestimmten Beschreibungsnamespace angegeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Options">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ServiceContractGenerationOptions Options { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.Description.ServiceContractGenerationOptions Options" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceContractGenerator.Options" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceContractGenerationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft Optionen zum Generieren des Dienstvertragscodes ab oder legt sie fest.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.Description.ServiceContractGenerationOptions" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um verschiedene Optionen zur Codegenerierung anzugeben. Diese Enumeration verfügt über ein <xref:System.FlagsAttribute?displayProperty=nameWithType>-Attribut, das die bitweise Kombination der Memberwerte zulässt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReferencedTypes">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;System.ServiceModel.Description.ContractDescription,Type&gt; ReferencedTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;class System.ServiceModel.Description.ContractDescription, class System.Type&gt; ReferencedTypes" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceContractGenerator.ReferencedTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.ServiceModel.Description.ContractDescription,System.Type&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zuordnung von Vertragsbeschreibungen zu referenzierten Vertragstypen ab.</summary>
+        <value>Eine Zuordnung von Vertragsbeschreibungen zu referenzierten Vertragstypen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Code wird nicht für referenzierte Vertragstypen generiert. Stattdessen wird der referenzierte Typ verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetCompileUnit">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeCompileUnit TargetCompileUnit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeCompileUnit TargetCompileUnit" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceContractGenerator.TargetCompileUnit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeCompileUnit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Ziel-<see cref="T:System.CodeDom.CodeCompileUnit" />-Objekt ab, um Dienstvertragscode zu generieren.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeCompileUnit" />-Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

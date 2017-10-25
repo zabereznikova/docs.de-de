@@ -1,0 +1,36 @@
+<Type Name="NativeObjectSecurity+ExceptionFromErrorCode" FullName="System.Security.AccessControl.NativeObjectSecurity+ExceptionFromErrorCode">
+  <TypeSignature Language="C#" Value="protected delegate Exception NativeObjectSecurity.ExceptionFromErrorCode(int errorCode, string name, SafeHandle handle, object context);" />
+  <TypeSignature Language="ILAsm" Value=".class nested protected auto ansi sealed NativeObjectSecurity/ExceptionFromErrorCode extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Security.AccessControl.NativeObjectSecurity.ExceptionFromErrorCode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.AccessControl</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="errorCode" Type="System.Int32" />
+    <Parameter Name="name" Type="System.String" />
+    <Parameter Name="handle" Type="System.Runtime.InteropServices.SafeHandle" />
+    <Parameter Name="context" Type="System.Object" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Exception</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="errorCode">Der numerische Fehlercode.</param>
+    <param name="name">Der Name des sicherungsfähigen Objekts, mit denen die <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> -Objekt zugeordnet ist.</param>
+    <param name="handle">Das Handle des sicherungsfähigen Objekts, mit denen die <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> -Objekt zugeordnet ist.</param>
+    <param name="context">Ein Objekt, das Kontextinformationen zur Quelle oder zum Ziel der Ausnahme enthält.</param>
+    <summary>Bietet eine Möglichkeit für Integratoren spezifischen Ausnahmen numerische Fehlercodes zuzuordnen, die sie erstellen.</summary>
+    <returns>Die <see cref="T:System.Exception" /> dieser Delegat erstellt.</returns>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

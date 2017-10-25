@@ -1,0 +1,1515 @@
+<Type Name="XhtmlMobileTextWriter" FullName="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter">
+  <TypeSignature Language="C#" Value="public class XhtmlMobileTextWriter : System.Web.UI.MobileControls.Adapters.MobileTextWriter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XhtmlMobileTextWriter extends System.Web.UI.MobileControls.Adapters.MobileTextWriter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.MobileControls.Adapters.MobileTextWriter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt TextWriter-Funktionen für Geräte, die das Ziel der XHTML-Adaptergruppe, einschließlich Extensible Hypertext Markup Language (XHTML), XHTML Mobile und Wireless Markup Language (WML) bereit. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ XHTML ist eine XML-kompatiblen Markup, das basiert auf HTML-4.1 und ermöglicht Ihnen die Erstellung von Websites für mehrere Gerätetypen geeignet ist. Er führt des HTML-Bedienung des XML-strict Element Richtlinien zum Erstellen einer Markupsprache, mit einer Vielzahl von Format- und Stilattributen Optionen zusammen und Markup Tag Mehrdeutigkeit reduziert. Diese Klasse stellt Formatierungsfunktionen bereit, die ASP.NET-Serversteuerelemente beim Rendern von XHTML-Inhalt auf Clients verwendet verwenden. Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter> rendert das Markup, das den drei verschiedene Typen von XHTML-Doc-Standards entspricht: XHTML Basic, das eingeschränkte Stil und einem Format Elemente unterstützt XHTML Mobile Profile, die Inline-Stylesheets unterstützt; und WML 2.0 basiert auf XHTML 1.1 und cascading Stylesheets unterstützt.  
+  
+ Diese Klasse wird hauptsächlich von Entwicklern benutzerdefinierter mobiler Seiten- und Steuerelementadapter verwendet.  
+  
+ Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter> Klasse kann alle HTML-Elemente, Attribute, rendern und Stilattribute, aber im Gegensatz zu den <xref:System.Web.UI.HtmlTextWriter> Klasse, lässt keine Titel Groß-/Kleinschreibung eines dieser Markupelemente.  
+  
+ Ein <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter> instanziiert ein <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter> und initialisiert Sie abhängig von den Funktionen des Zielgeräts, eine Reihe von Eigenschaften, z. B. <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SupportsNoWrapStyle%2A>, <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SuppressNewLine%2A>, und <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.UseDivsForBreaks%2A>, die bei der der TextWriter Rendern der Seite und die zugehörige Steuerelemente.  
+  
+ Der Adapter können eine Vielzahl von Methoden zum Anwenden von Formatvorlagen und Formatierung des Steuerelements:  
+  
+-   <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.EnterStyle%2A>und <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.ExitStyle%2A>,  
+  
+-   <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.EnterLayout%2A>und <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.ExitLayout%2A>, und  
+  
+-   <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.EnterFormat%2A> und <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.ExitFormat%2A>.  
+  
+    > [!NOTE]
+    >  Diese Klasse leitet sich von der <xref:System.Web.UI.MobileControls.Adapters.MobileTextWriter> -Klasse, die wiederum von abgeleitet ist die <xref:System.Web.UI.MobileControls.Adapters.MultiPartWriter> Klasse sowie der Großteil des seine Funktionalität wird durch diese Basisklassen bereitgestellt.  
+  
+ Können Sie die Member dieser Klasse und keine Mitglieder, die Vererbung erfolgt von der <xref:System.Web.UI.MobileControls.Adapters.MobileTextWriter> -Klasse, zum Erstellen von benutzerdefinierten Textwriter an, in eine benutzerdefinierte XHTML-Seite oder in der Klasse Adapter verwenden. Sie können auch neue abgeleitete Klassen, die das Standardverhalten überschreiben erstellen die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter> Klasse.  
+  
+ Filtern von Geräten ist erforderlich, um einen bestimmten Adapter oder TextWriter nach einem Serversteuerelement zu verwenden. Weitere Informationen zum Filtern finden Sie unter [architektonische Overview of Adaptive Control Behavior](http://msdn.microsoft.com/library/4ff05ae9-4109-4352-929e-ad893895dbff) und [Device Filtern Overview](http://msdn.microsoft.com/library/bdfeaa58-dedd-4c0d-8610-988aac0eff19).  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XhtmlMobileTextWriter (System.IO.TextWriter writer, System.Web.Mobile.MobileCapabilities device);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.TextWriter writer, class System.Web.Mobile.MobileCapabilities device) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.#ctor(System.IO.TextWriter,System.Web.Mobile.MobileCapabilities)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+        <Parameter Name="device" Type="System.Web.Mobile.MobileCapabilities" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die Basis-Writer-Objekt in der Regel ein <see cref="T:System.Web.UI.HtmlTextWriter" /> Objekt.</param>
+        <param name="device">Ein Objekt vom <see cref="T:System.Web.Mobile.MobileCapabilities" /> Klasse, die Informationen über die Funktionen für das Zielgerät bereitstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.MobileControls.Adapters.ChtmlMobileTextWriter" /> Klasse für das angegebene Gerät mit der <paramref name="writer" /> Parameter als Basis Writer-Objekt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ TextWriter werden instanziiert, indem eine entsprechende Seitenadapter für ein bestimmtes Ziel-Gerät, und dann von der Seite "-Adapter und die Adapter für jedes Steuerelement auf der Seite verwendet.  
+  
+ Diese Klasse wird hauptsächlich von Entwicklern benutzerdefinierter mobiler Seiten- und Steuerelementadapter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnEnterForwardSetVar">
+      <MemberSignature Language="C#" Value="public virtual void AddOnEnterForwardSetVar (string var);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddOnEnterForwardSetVar(string var) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.AddOnEnterForwardSetVar(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="var" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="var">Der Name einer Variablen, die auf einer Seite eingebettet werden.</param>
+        <summary>Fügt einen angegebenen Variablen-Name auf eine Liste von Variablen, die in Seiten für WML-Geräten eingebettet werden. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bestimmte WML-Geräte erfordern ein `<wml:onevent>` Element, um Informationen für Postback bereitzustellen.  
+  
+ WML-Geräte bieten eingeschränkten Funktionalität für die Navigation und Postbacks und erfordern WML-Befehle und Variablen, damit Sie auf der Seite geschrieben werden.  
+  
+ Diese Methode wird hauptsächlich von Entwicklern benutzerdefinierter mobiler Seiten- und Steuerelementadapter verwendet.  
+  
+   
+  
+## Examples  
+ Beim Rendern der Seite die folgenden `<wml:onevent>` Struktur kann in das Markup der Seite eingeschlossen werden:  
+  
+ `<wml:onevent type="onenterforward">`  
+  
+ `<wml:refresh>`  
+  
+ `<wmlsetvar name="buttonSaveClicked" />`  
+  
+ `<wmlsetvar name="nextPage" value="3" />`  
+  
+ `</wml:refresh>`  
+  
+ `</wml:onevent>`  
+  
+ Abhängig von den Aktionen eines Benutzers können die Werte von Skripts auf der Seite die folgende Struktur auf Postback zurückgeben geändert werden:  
+  
+ `<wml:onevent type="onenterforward">`  
+  
+ `<wml:refresh>`  
+  
+ `<wmlsetvar name="buttonSaveClicked" value="true" />`  
+  
+ `<wmlsetvar name="nextPage" value="9" />`  
+  
+ `</wml:refresh>`  
+  
+ `</wml:onevent>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnEnterForwardSetVar">
+      <MemberSignature Language="C#" Value="public virtual void AddOnEnterForwardSetVar (string var, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddOnEnterForwardSetVar(string var, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.AddOnEnterForwardSetVar(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="var" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="var">Der Name der Variablen.</param>
+        <param name="value">Der Wert für die Variable.</param>
+        <summary>Fügt eine angegebene Variable-Name und Wert auf eine Liste von Variablen, die in Seiten für WML-Geräten eingebettet werden. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bestimmte WML 2.0-Geräte erfordern ein WML `<wml:onevent>` Element, um Informationen für Postback bereitzustellen.  
+  
+ WML-Geräte bieten eingeschränkten Funktionalität für die Navigation und Postbacks und erfordern WML-Befehle und Variablen, damit Sie auf der Seite geschrieben werden.  
+  
+ Diese Methode wird hauptsächlich von Entwicklern benutzerdefinierter mobiler Seiten- und Steuerelementadapter verwendet.  
+  
+   
+  
+## Examples  
+ Beim Rendern der Seite die folgenden `<wml:onevent>` Struktur kann in das Markup der Seite eingeschlossen werden:  
+  
+ `<wml:onevent type="onenterforward">`  
+  
+ `<wml:refresh>`  
+  
+ `<wmlsetvar name="buttonSaveClicked" />`  
+  
+ `<wmlsetvar name="nextPage" value="3" />`  
+  
+ `</wml:refresh>`  
+  
+ `</wml:onevent>`  
+  
+ Abhängig von den Aktionen eines Benutzers können die Werte von Skripts auf der Seite die folgende Struktur auf Postback zurückgeben geändert werden:  
+  
+ `<wml:onevent type="onenterforward">`  
+  
+ `<wml:refresh>`  
+  
+ `<wmlsetvar name="buttonSaveClicked" value="true" />`  
+  
+ `<wmlsetvar name="nextPage" value="9" />`  
+  
+ `</wml:refresh>`  
+  
+ `</wml:onevent>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginCachedRendering">
+      <MemberSignature Language="C#" Value="public virtual void BeginCachedRendering ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginCachedRendering() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.BeginCachedRendering" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Weist die <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" /> Objekt, das alle gerenderten Markups bis geschrieben in seiner Gesamtheit durch Speichern der <see cref="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.EndCachedRendering" /> Methode. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich von Entwicklern benutzerdefinierter mobiler Seiten- und Steuerelementadapter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheKey">
+      <MemberSignature Language="C#" Value="public virtual string CacheKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CacheKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.CacheKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den eindeutigen Schlüssel zum Abrufen von Elementen aus der <see cref="P:System.Web.HttpContext.Cache" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Ein <see langword="string" /> , die einen eindeutigen Schlüssel enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige Geräte Inlineformatvorlagen in Elementen nicht zulässig, erfordern jedoch Formatinformationen aus einem verknüpften Stylesheet bereitgestellt werden. Wenn das verknüpfte Stylesheet, in gespeichert ist der <xref:System.Web.Caching.Cache>, die URL enthält einen eindeutigen <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.CacheKey%2A> , identifiziert das Stylesheet zurückgegeben. Für diese Zielgeräte der <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter> wechselt Formatinformationen aus gerenderten Steuerelementen ein Stylesheet für das caching.  
+  
+ Ein Seitenadapter kann anweisen, die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter> , speichern Sie das Stylesheet in der <xref:System.Web.Caching.Cache> mit <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SetCacheKey%2A>, oder in der <xref:System.Web.HttpContext.Session%2A> mit <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SetSessionKey%2A> vor dem Rendern der Seite.  
+  
+ Diese Eigenschaft wird hauptsächlich von Entwicklern benutzerdefinierter mobiler Seiten- und Steuerelementadapter verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Die <see cref="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SetCacheKey(System.Web.Caching.Cache)" /> Methode nicht aufgerufen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearPendingBreak">
+      <MemberSignature Language="C#" Value="public virtual void ClearPendingBreak ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ClearPendingBreak() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.ClearPendingBreak" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt eine Unterbrechung, die gerendert werden soll, nachdem das aktuelle Element in den Ausgabestream geschrieben wurde. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich von Entwicklern benutzerdefinierter mobiler Seiten- und Steuerelementadapter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomBodyStyles">
+      <MemberSignature Language="C#" Value="public string CustomBodyStyles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CustomBodyStyles" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.CustomBodyStyles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt und definiert die Einstellungen der benutzerdefinierten Stil für den Text der Seite. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Ein <see langword="string" /> , Stylesheet Informationen enthält, wenn die Eigenschaft festgelegt, andernfalls wurde <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird hauptsächlich von Entwicklern benutzerdefinierter mobiler Seiten- und Steuerelementadapter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndCachedRendering">
+      <MemberSignature Language="C#" Value="public virtual void EndCachedRendering ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndCachedRendering() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.EndCachedRendering" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schreibt das zwischengespeicherte Markup und weist die <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" /> nicht um gerenderten Markups zu speichern. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich von Entwicklern benutzerdefinierter mobiler Seiten- und Steuerelementadapter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnterFormat">
+      <MemberSignature Language="C#" Value="public override void EnterFormat (System.Web.UI.MobileControls.Style style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void EnterFormat(class System.Web.UI.MobileControls.Style style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.EnterFormat(System.Web.UI.MobileControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Web.UI.MobileControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="style">Ein <see cref="T:System.Web.UI.MobileControls.Style" /> Objekt, das Formatierungsinformationen enthält.</param>
+        <summary>Legt das angegebene Format als aktuelle Formatierung, wenn die <see cref="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.BeginCachedRendering" /> -Methode aufgerufen wurde. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.BeginCachedRendering%2A> aufgerufen wurde, die `style` festgelegt ist, als das aktuelle Format, und ein `<span>` Element, das das Format implementiert, wird in den Ausgabestream geschrieben.  
+  
+ Diese Methode wird hauptsächlich von Entwicklern benutzerdefinierter mobiler Seiten- und Steuerelementadapter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnterLayout">
+      <MemberSignature Language="C#" Value="public override void EnterLayout (System.Web.UI.MobileControls.Style style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void EnterLayout(class System.Web.UI.MobileControls.Style style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.EnterLayout(System.Web.UI.MobileControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Web.UI.MobileControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="style">Ein <see cref="T:System.Web.UI.MobileControls.Style" /> Objekt, das Formatierungsinformationen enthält.</param>
+        <summary>Legt das angegebene Format als das aktuelle Layoutformat, wenn die <see cref="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.BeginCachedRendering" /> -Methode aufgerufen wurde. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.BeginCachedRendering%2A> aufgerufen wurde, die `style` festgelegt ist, als das aktuelle Format, und ein `<span>` Element, das das Format implementiert, wird in den Ausgabestream geschrieben.  
+  
+ Diese Methode wird hauptsächlich von Entwicklern benutzerdefinierter mobiler Seiten- und Steuerelementadapter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnterStyle">
+      <MemberSignature Language="C#" Value="public void EnterStyle (System.Web.UI.MobileControls.Style style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EnterStyle(class System.Web.UI.MobileControls.Style style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.EnterStyle(System.Web.UI.MobileControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Web.UI.MobileControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="style">Ein <see cref="T:System.Web.UI.MobileControls.Style" /> Objekt, das Formatierungsinformationen enthält.</param>
+        <summary>Legt das angegebene Format als das aktuelle Format, wenn die <see cref="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.BeginCachedRendering" /> -Methode aufgerufen wurde. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.BeginCachedRendering%2A> aufgerufen wurde, `style` festgelegt ist, als das aktuelle Format, und ein `<span>` Element, das das Format implementiert, wird in den Ausgabestream geschrieben.  
+  
+ Diese Methode wird hauptsächlich von Entwicklern benutzerdefinierter mobiler Seiten- und Steuerelementadapter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExitFormat">
+      <MemberSignature Language="C#" Value="public override void ExitFormat (System.Web.UI.MobileControls.Style style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ExitFormat(class System.Web.UI.MobileControls.Style style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.ExitFormat(System.Web.UI.MobileControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Web.UI.MobileControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="style">Die <see cref="T:System.Web.UI.MobileControls.Style" /> zu beenden.</param>
+        <summary>Entfernt das aktuelle Format, das vorherige Format wiederhergestellt, als die aktuelle Formatierung fest und ruft die <see cref="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.WriteEndTag(System.String)" /> Methode, um das aktuelle Element zu schließen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich von Entwicklern benutzerdefinierter mobiler Seiten- und Steuerelementadapter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExitFormat">
+      <MemberSignature Language="C#" Value="public override void ExitFormat (System.Web.UI.MobileControls.Style style, bool breakafter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ExitFormat(class System.Web.UI.MobileControls.Style style, bool breakafter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.ExitFormat(System.Web.UI.MobileControls.Style,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Web.UI.MobileControls.Style" />
+        <Parameter Name="breakafter" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="style">Ein <see cref="T:System.Web.UI.MobileControls.Style" /> Objekt, das beendet.</param>
+        <param name="breakafter">Ein <see langword="Boolean" /> Wert, der angibt, ob einen Umbruch nach dem aktuellen Element zu erzwingen, wenn das Element kein Block-Element ist.</param>
+        <summary>Entfernt das aktuelle Format, das vorherige Format wiederhergestellt, als die aktuelle Formatierung fest und ruft die <see cref="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.WriteEndTag(System.String)" /> Methode, um das aktuelle Element zu schließen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich von Entwicklern benutzerdefinierter mobiler Seiten- und Steuerelementadapter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExitLayout">
+      <MemberSignature Language="C#" Value="public override void ExitLayout (System.Web.UI.MobileControls.Style style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ExitLayout(class System.Web.UI.MobileControls.Style style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.ExitLayout(System.Web.UI.MobileControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Web.UI.MobileControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="style">Ein <see cref="T:System.Web.UI.MobileControls.Style" /> Objekt, das die Formatierung zum Beenden von enthält.</param>
+        <summary>Entfernt das aktuelle Format, das frühere Format wiederhergestellt, als die aktuelle Layoutstil und ruft die <see cref="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.WriteEndTag(System.String)" /> Methode, um das aktuelle Element zu schließen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich von Entwicklern benutzerdefinierter mobiler Seiten- und Steuerelementadapter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExitLayout">
+      <MemberSignature Language="C#" Value="public override void ExitLayout (System.Web.UI.MobileControls.Style style, bool breakafter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ExitLayout(class System.Web.UI.MobileControls.Style style, bool breakafter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.ExitLayout(System.Web.UI.MobileControls.Style,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Web.UI.MobileControls.Style" />
+        <Parameter Name="breakafter" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="style">Ein <see cref="T:System.Web.UI.MobileControls.Style" /> Objekt, das das Layout zu beendende enthält.</param>
+        <param name="breakafter">Ein <see langword="Boolean" /> Wert, der angibt, ob einen Umbruch nach dem aktuellen Element zu erzwingen, wenn das Element kein Block-Element ist.</param>
+        <summary>Entfernt das aktuelle Format, das frühere Format wiederhergestellt, als die aktuelle Layoutstil und ruft die <see cref="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.WriteEndTag(System.String)" /> Methode, um das aktuelle Element zu schließen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich von Entwicklern benutzerdefinierter mobiler Seiten- und Steuerelementadapter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExitStyle">
+      <MemberSignature Language="C#" Value="public void ExitStyle (System.Web.UI.MobileControls.Style style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ExitStyle(class System.Web.UI.MobileControls.Style style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.ExitStyle(System.Web.UI.MobileControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Web.UI.MobileControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="style">Ein <see cref="T:System.Web.UI.MobileControls.Style" />-Objekt.</param>
+        <summary>Entfernt das aktuelle Format, stellt den vorherigen Stil als den aktuellen Stil, und ruft die <see cref="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.WriteEndTag(System.String)" /> Methode, um das aktuelle Element zu schließen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich von Entwicklern benutzerdefinierter mobiler Seiten- und Steuerelementadapter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsStyleSheetEmpty">
+      <MemberSignature Language="C#" Value="public virtual bool IsStyleSheetEmpty ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsStyleSheetEmpty() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.IsStyleSheetEmpty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert, der angibt, ob ein Format festgelegt wurde. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>
+          <see langword="true" />Wenn ein Stil festgelegt wurde; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarkWmlOnEventLocation">
+      <MemberSignature Language="C#" Value="public virtual void MarkWmlOnEventLocation ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void MarkWmlOnEventLocation() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.MarkWmlOnEventLocation" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Markiert die Position im Ausgabestream Einfügen der <see langword="&lt;wml:onevent&gt;" /> Element. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird vom Seitenadapter während des Rendervorgangs aufgerufen.  
+  
+ Diese Methode wird hauptsächlich von Entwicklern benutzerdefinierter mobiler Seiten- und Steuerelementadapter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionKey">
+      <MemberSignature Language="C#" Value="public virtual string SessionKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SessionKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SessionKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Schlüssel zum Abrufen von Elementen aus der <see cref="P:System.Web.HttpContext.Session" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Ein <see langword="string" /> mit dem Schlüssel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige Geräte Inlineformatvorlagen in Elementen nicht zulässig, erfordern jedoch Formatinformationen aus einem verknüpften Stylesheet bereitgestellt werden. Wenn das verknüpfte Stylesheet, in gespeichert ist der <xref:System.Web.HttpContext.Session%2A>, die URL enthält einen eindeutigen <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SessionKey%2A> , identifiziert das Stylesheet zurückgegeben. Für diese Zielgeräte der <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter> wechselt Formatinformationen aus gerenderten Steuerelementen ein Stylesheet für das caching in den <xref:System.Web.HttpContext.Session%2A>.  
+  
+ Ein Seitenadapter kann anweisen, die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter> , speichern Sie das Stylesheet in der <xref:System.Web.HttpContext.Session%2A> mit <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SetSessionKey%2A>, oder in der <xref:System.Web.Caching.Cache> mit <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SetCacheKey%2A> vor dem Rendern der Seite.  
+  
+ Diese Eigenschaft wird hauptsächlich von Entwicklern benutzerdefinierter mobiler Seiten- und Steuerelementadapter verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Die <see cref="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SetSessionKey(System.Web.SessionState.HttpSessionState)" /> Methode nicht aufgerufen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBodyStyle">
+      <MemberSignature Language="C#" Value="public virtual void SetBodyStyle (System.Web.UI.MobileControls.Style style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetBodyStyle(class System.Web.UI.MobileControls.Style style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SetBodyStyle(System.Web.UI.MobileControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Web.UI.MobileControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="style">Ein <see cref="T:System.Web.UI.MobileControls.Style" />-Objekt.</param>
+        <summary>Legt das angegebene Format als Format für die <see langword="&lt;body&gt;" /> Element von der Seite "sowie das Standardformat für seine untergeordneten Steuerelemente. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich von Entwicklern benutzerdefinierter mobiler Seiten- und Steuerelementadapter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCacheKey">
+      <MemberSignature Language="C#" Value="public virtual void SetCacheKey (System.Web.Caching.Cache cache);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetCacheKey(class System.Web.Caching.Cache cache) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SetCacheKey(System.Web.Caching.Cache)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cache" Type="System.Web.Caching.Cache" />
+      </Parameters>
+      <Docs>
+        <param name="cache">Das aktuelle <see cref="T:System.Web.Caching.Cache" />-Objekt.</param>
+        <summary>Erstellt einen eindeutigen <see langword="string" /> zu verwendende Stylesheet aus dem Cache abrufen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich von Entwicklern benutzerdefinierter mobiler Seiten- und Steuerelementadapter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPendingBreak">
+      <MemberSignature Language="C#" Value="public virtual void SetPendingBreak ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetPendingBreak() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SetPendingBreak" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt einen Zeilenumbruch nach dem Rendern des aktuellen Elements aus, wenn es sich nicht um ein Block-Element ist und gerendert werden die <see cref="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SuppressNewLine" /> Eigenschaft ist <see langword="false" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich von Entwicklern benutzerdefinierter mobiler Seiten- und Steuerelementadapter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSessionKey">
+      <MemberSignature Language="C#" Value="public virtual void SetSessionKey (System.Web.SessionState.HttpSessionState session);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetSessionKey(class System.Web.SessionState.HttpSessionState session) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SetSessionKey(System.Web.SessionState.HttpSessionState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="session" Type="System.Web.SessionState.HttpSessionState" />
+      </Parameters>
+      <Docs>
+        <param name="session">Das aktuelle <see cref="P:System.Web.HttpContext.Session" />-Objekt.</param>
+        <summary>Erstellt eine eindeutige Zeichenfolge für einen Client zum Abrufen eines Stylesheets aus der <see cref="P:System.Web.HttpContext.Session" /> Objekt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich von Entwicklern benutzerdefinierter mobiler Seiten- und Steuerelementadapter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsNoWrapStyle">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsNoWrapStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsNoWrapStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SupportsNoWrapStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob das Zielgerät unterstützt den "White-Space: Nowrap;" Stylesheet Attribut. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>
+          <see langword="true" />Wenn das Gerät unterstützt die "White-Space: Nowrap;" Stylesheet-Attribut andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft muss vom Seitenadapter initialisiert werden und wird hauptsächlich von Entwicklern benutzerdefinierter mobiler Seiten- und Steuerelementadapter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuppressNewLine">
+      <MemberSignature Language="C#" Value="public bool SuppressNewLine { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SuppressNewLine" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SuppressNewLine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob die <see cref="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.WriteLine" /> Methode sollte eine Zeichenfolge für den Zeilenabschluss in den Ausgabestream schreiben. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>
+          <see langword="true" />Zeichenfolge für den Zeilenabschluss, unterdrückt oder <see langword="false" /> Zeichenfolge für den Zeilenabschluss in die Ausgabe zu schreiben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft muss vom Seitenadapter initialisiert werden und wird hauptsächlich von Entwicklern benutzerdefinierter mobiler Seiten- und Steuerelementadapter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseDivsForBreaks">
+      <MemberSignature Language="C#" Value="public bool UseDivsForBreaks { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseDivsForBreaks" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.UseDivsForBreaks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob verwenden <see langword="&lt;div&gt;" /> Tags für Zeilenumbrüche statt <see langword="&lt;br/&gt;" /> Tags beim Schreiben von Zeile Abschlusszeichen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>
+          <see langword="false" />Wenn das Gerät nicht mit erfordert <see langword="&lt;div&gt;" /> Tags für Zeilenumbrüche; anderenfalls <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft muss vom Seitenadapter initialisiert werden und wird hauptsächlich von Entwicklern benutzerdefinierter mobiler Seiten- und Steuerelementadapter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAttribute">
+      <MemberSignature Language="C#" Value="public override void WriteAttribute (string attribute, string value, bool encode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteAttribute(string attribute, string value, bool encode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.WriteAttribute(System.String,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attribute" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="encode" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="attribute">Der Name des Attributs.</param>
+        <param name="value">Der Wert für das Attribut.</param>
+        <param name="encode">Wenn <see langword="true" />, der Wert vor dem geschriebenen codiert ist.</param>
+        <summary>Schreibt ein Attribut und seinen Wert auf das aktuelle Element mithilfe des angegebenen Attributs und den Wert und den Wert codiert, falls angegeben. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Wert `null` oder eine leere Zeichenfolge, kein Attribut geschrieben, da XHTML erfordert, dass alle Attribute über Werte verfügen.  
+  
+ Diese Methode wird hauptsächlich von Entwicklern benutzerdefinierter mobiler Seiten- und Steuerelementadapter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteBeginTag">
+      <MemberSignature Language="C#" Value="public override void WriteBeginTag (string tag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteBeginTag(string tag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.WriteBeginTag(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tag" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="tag">Das Markupelement, in den Ausgabestream geschrieben werden soll.</param>
+        <summary>Schreibt alle Tabstopps und des öffnenden Tags des angegebenen Markupelements in den Ausgabestream an. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sollte eine ausstehende unterbrochen, <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SuppressNewLine%2A> ist `false`, und das angegebene Tag ist kein Blockelement (z. B. `<p>`, `<div>`, `<ol>`, oder `<table>`), die automatisch unterbrechen, vor und nach dem Element, das <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.WritePendingBreak%2A>Methode wird vor dem Schreiben des öffnenden Tags aufgerufen.  
+  
+ Diese Methode wird hauptsächlich von Entwicklern benutzerdefinierter mobiler Seiten- und Steuerelementadapter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteBreak">
+      <MemberSignature Language="C#" Value="public virtual void WriteBreak ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteBreak() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.WriteBreak" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wenn <see cref="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SuppressNewLine" /> ist <see langword="false" />, schreibt eine Markupelement, das den Ausgabestream eine neue Zeile hinzufügt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abhängig vom Wert der <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.UseDivsForBreaks%2A>, das Markup für die neue Zeile kann entweder ein `<br/>` Tag oder eine `</div><div>` Struktur.  
+  
+ Diese Methode wird hauptsächlich von Entwicklern benutzerdefinierter mobiler Seiten- und Steuerelementadapter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteCachedMarkup">
+      <MemberSignature Language="C#" Value="public virtual void WriteCachedMarkup ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteCachedMarkup() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.WriteCachedMarkup" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schreibt das gesamte Markup zwischengespeichert, die seit dem Aufrufen der <see cref="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.BeginCachedRendering" /> Methode. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich von Entwicklern benutzerdefinierter mobiler Seiten- und Steuerelementadapter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteDoctypeDeclaration">
+      <MemberSignature Language="C#" Value="public virtual void WriteDoctypeDeclaration (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.Doctype type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteDoctypeDeclaration(valuetype System.Web.UI.MobileControls.Adapters.XhtmlAdapters.Doctype type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.WriteDoctypeDeclaration(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.Doctype)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.Doctype" />
+      </Parameters>
+      <Docs>
+        <param name="type">Ein <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.Doctype" /> Wert, der angibt, der des Typs der zu schreibenden Deklaration.</param>
+        <summary>Schreibt eine <see langword="&lt;!DOCTYPE&gt;" /> Deklaration, die an die Zielgeräte dargestellt wird, vom bereitgestellten eindeutig ist <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.Doctype" /> Wert. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ruft diese Methode auf der Seite "-Adapter und je nach den `type`, schreibt die folgenden Dokumenttypdeklarationen:  
+  
+|Typ|Beschreibung|  
+|----------|-----------------|  
+|<xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.Doctype.XhtmlBasic>|\<\!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 grundlegende / / EN" "http://www.w3.org/TR/xhtml-basic/xhtml-basic10.dtd" >|  
+|<xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.Doctype.XhtmlMobileProfile>|\<\!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0 / / EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd" >|  
+|<xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.Doctype.Wml20>|\<\!DOCTYPE html PUBLIC "-//WAPFORUM//DTD WML 2.0 / / EN" "http://www.wapforum.org/dtd/wml20.dtd" >|  
+  
+ Diese Methode wird hauptsächlich von Entwicklern benutzerdefinierter mobiler Seiten- und Steuerelementadapter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEncodedAttributeValue">
+      <MemberSignature Language="C#" Value="public virtual void WriteEncodedAttributeValue (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteEncodedAttributeValue(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.WriteEncodedAttributeValue(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Attributwert auf codiert und geschrieben werden.</param>
+        <summary>Codiert und schreibt den angegebenen Wert in den Ausgabestream. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich von Entwicklern benutzerdefinierter mobiler Seiten- und Steuerelementadapter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEndTag">
+      <MemberSignature Language="C#" Value="public override void WriteEndTag (string tag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteEndTag(string tag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.WriteEndTag(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tag" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="tag">Das Markupelement zu schließen.</param>
+        <summary>Schreibt alle Tabstopps und das Endtag des Markupelements angegebenen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Tag keinem Blockelement z. B. ist `<p>`, `<div>`, `<table>`, `<ol>`, die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.WritePendingBreak%2A> Methode wird vor dem Schreiben des öffnenden Tags aufgerufen.  
+  
+ Diese Methode wird hauptsächlich von Entwicklern benutzerdefinierter mobiler Seiten- und Steuerelementadapter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteFullBeginTag">
+      <MemberSignature Language="C#" Value="public override void WriteFullBeginTag (string tag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteFullBeginTag(string tag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.WriteFullBeginTag(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tag" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="tag">Das Markupelement, in den Ausgabestream geschrieben werden soll.</param>
+        <summary>Schreibt alle Tabstopps und das vollständige Starttag des Markupelements angegebenen in den Ausgabestream an. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Tag keinem Blockelement z. B. ist `<p>`, `<div>`, `<table>`, `<ol>`, die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.WritePendingBreak%2A> Methode wird vor dem Schreiben des öffnenden Tags aufgerufen.  
+  
+ Diese Methode wird hauptsächlich von Entwicklern benutzerdefinierter mobiler Seiten- und Steuerelementadapter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteHiddenField">
+      <MemberSignature Language="C#" Value="public virtual void WriteHiddenField (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteHiddenField(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.WriteHiddenField(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des ausgeblendeten Felds.</param>
+        <summary>Schreibt das Markup für ein ausgeblendetes Feld in den Ausgabestream, der mit dem angegebenen Namen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.WriteHiddenField%2A> Methode eignet sich für Seiten, in dem clientseitigen Code hinzufügen und ändern Sie den Wert dieses Felds für Postback, da kein Anfangswert bereitgestellt wird.  
+  
+ Diese Methode wird hauptsächlich von Entwicklern benutzerdefinierter mobiler Seiten- und Steuerelementadapter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteHiddenField">
+      <MemberSignature Language="C#" Value="public virtual void WriteHiddenField (string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteHiddenField(string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.WriteHiddenField(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des ausgeblendeten Felds.</param>
+        <param name="value">Der Wert des ausgeblendeten Felds.</param>
+        <summary>Schreibt das Markup für ein ausgeblendetes Feld in den Ausgabestream, der mit dem angegebenen Namen und Wert. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.WriteLine" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Zeichenfolge für den Zeilenabschluss in den Ausgabestream geschrieben werden, wenn <see cref="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SuppressNewLine" /> ist <see langword="false" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine (bool v);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(bool v) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.WriteLine(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="v" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="v">Der boolesche Wert in den Ausgabestream geschrieben werden soll.</param>
+        <summary>Schreibt alle ausstehenden Tabstopps und die Textdarstellung einer <see langword="Boolean" /> Wert zu verwenden, klicken Sie dann Wenn <see cref="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SuppressNewLine" /> ist <see langword="false" />, schreibt eine Zeichenfolge für den Zeilenabschluss in den Ausgabestream. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine (char v);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(char v) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.WriteLine(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="v" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="v">Das Zeichen in den Ausgabestream geschrieben werden soll.</param>
+        <summary>Schreibt alle ausstehenden Tabstopps und ein Unicode-Zeichen, und wenn <see cref="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SuppressNewLine" /> ist <see langword="false" />, schreibt eine Zeichenfolge für den Zeilenabschluss in den Ausgabestream. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine (char[] v);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(char[] v) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.WriteLine(System.Char[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="v" Type="System.Char[]" />
+      </Parameters>
+      <Docs>
+        <param name="v">Das Array von Zeichen, das in den Ausgabestream.</param>
+        <summary>Schreibt alle ausstehenden Tabstopps und ein Array von Unicode-Zeichen, und wenn <see cref="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SuppressNewLine" /> ist <see langword="false" />, schreibt eine Zeichenfolge für den Zeilenabschluss in den Ausgabestream. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine (double v);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(float64 v) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.WriteLine(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="v" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="v">Die Gleitkommazahl in den Ausgabestream geschrieben werden soll.</param>
+        <summary>Schreibt alle ausstehenden Tabstopps und die Textdarstellung einer Gleitkommazahl mit doppelter Genauigkeit, und wenn <see cref="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SuppressNewLine" /> ist <see langword="false" />, schreibt eine Zeichenfolge für den Zeilenabschluss in den Ausgabestream. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine (int v);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(int32 v) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.WriteLine(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="v" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="v">Die ganze Zahl, die in den Ausgabestream geschrieben werden soll.</param>
+        <summary>Schreibt alle ausstehenden Tabstopps und die Textdarstellung einer 32-Byte-signiert <see langword="integer" />, und wenn <see cref="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SuppressNewLine" /> ist <see langword="false" />, schreibt eine Zeichenfolge für den Zeilenabschluss in den Ausgabestream. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine (long v);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(int64 v) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.WriteLine(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="v" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="v">Die ganze Zahl, die in den Ausgabestream geschrieben werden soll.</param>
+        <summary>Schreibt alle ausstehenden Tabstopps und die Textdarstellung einer 64-Byte-signiert <see langword="integer" />, und wenn <see cref="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SuppressNewLine" /> ist <see langword="false" />, schreibt eine Zeichenfolge für den Zeilenabschluss in den Ausgabestream. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine (object v);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(object v) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.WriteLine(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="v" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="v">Das Objekt, in den Ausgabestream geschrieben werden soll.</param>
+        <summary>Schreibt alle ausstehenden Tabstopps und die Textdarstellung eines Objekts und, wenn <see cref="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SuppressNewLine" /> ist <see langword="false" />, schreibt eine Zeichenfolge für den Zeilenabschluss in den Ausgabestream. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine (float v);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(float32 v) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.WriteLine(System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="v" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="v">Die Gleitkommazahl in den Ausgabestream geschrieben werden soll.</param>
+        <summary>Schreibt alle ausstehenden Tabstopps und die Textdarstellung einer Gleitkommazahl mit einfacher Genauigkeit, und wenn <see cref="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SuppressNewLine" /> ist <see langword="false" />, schreibt eine Zeichenfolge für den Zeilenabschluss in den Ausgabestream. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.WriteLine(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die Zeichenfolge in den Ausgabestream geschrieben werden soll.</param>
+        <summary>Schreibt alle ausstehenden Tabstopps und einer Textzeichenfolge zurück, und wenn <see cref="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SuppressNewLine" /> ist <see langword="false" />, schreibt eine Zeichenfolge für den Zeilenabschluss in den Ausgabestream. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine (string format, object arg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(string format, object arg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.WriteLine(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="arg" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="format">Eine Zeichenfolge aus null oder mehr Formatelementen.</param>
+        <param name="arg">Das zu formatierende Objekt.</param>
+        <summary>Schreibt alle ausstehenden Tabstopps und eine formatierte Zeichenfolge, enthält die Textdarstellung eines Objekts und, wenn <see cref="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SuppressNewLine" /> ist <see langword="false" />, schreibt eine Zeichenfolge für den Zeilenabschluss in den Ausgabestream. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine (string format, params object[] arg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(string format, object[] arg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.WriteLine(System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="arg" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="format">Eine Zeichenfolge aus null oder mehr Formatelementen.</param>
+        <param name="arg">Ein Array mit 0 oder mehr zu formatierenden Objekten.</param>
+        <summary>Schreibt alle ausstehenden Tabstopps und eine formatierte Zeichenfolge, die die Textdarstellung eines Objektarrays, enthält und wenn <see cref="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SuppressNewLine" /> ist <see langword="false" />, schreibt eine Zeichenfolge für den Zeilenabschluss in den Ausgabestream. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine (char[] buffer, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(char[] buffer, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.WriteLine(System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Char[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Ein Array mit den Zeichendaten in den Ausgabestream geschrieben.</param>
+        <param name="index">Die Position im Array, das die Ausgabe zu starten.</param>
+        <param name="count">Die Anzahl der Zeichen, die in den Ausgabestream geschrieben werden soll.</param>
+        <summary>Schreibt alle ausstehenden Tabstopps und ein Unterarray von Unicode-Zeichen, und wenn <see cref="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SuppressNewLine" /> ist <see langword="false" />, schreibt eine Zeichenfolge für den Zeilenabschluss in den Ausgabestream. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine (string format, object arg0, object arg1);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(string format, object arg0, object arg1) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.WriteLine(System.String,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="arg0" Type="System.Object" />
+        <Parameter Name="arg1" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="format">Eine Zeichenfolge aus null oder mehr Formatelementen.</param>
+        <param name="arg0">In den Ausgabestream anstelle der ersten Format Platzhalter zu schreibende Objekt.</param>
+        <param name="arg1">In den Ausgabestream anstelle der zweiten Format Platzhalter zu schreibende Objekt.</param>
+        <summary>Schreibt alle ausstehenden Tabstopps und eine formatierte Zeichenfolge, die die Textdarstellung von zwei Objekten enthält und wenn <see cref="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SuppressNewLine" /> ist <see langword="false" />, schreibt eine Zeichenfolge für den Zeilenabschluss in den Ausgabestream. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WritePendingBreak">
+      <MemberSignature Language="C#" Value="public virtual void WritePendingBreak ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WritePendingBreak() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.WritePendingBreak" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Einer Zeichenfolge für den Zeilenabschluss in den Ausgabestream geschrieben werden, wenn das aktuelle Element nicht wie z. B. einem Blockelement ist <see langword="&lt;p&gt;" />, <see langword="&lt;div&gt;" />, <see langword="&lt;ul&gt;" />, <see langword="&lt;table&gt;" />, und <see cref="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SuppressNewLine" /> ist <see langword="false" />, und es gibt ausstehende unterbrochen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteUrlParameter">
+      <MemberSignature Language="C#" Value="public virtual void WriteUrlParameter (string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteUrlParameter(string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.WriteUrlParameter(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Eine Zeichenfolge mit dem Namen des URL-Parameter.</param>
+        <param name="value">Eine Zeichenfolge, die mit dem Wert von der URL-Parameter.</param>
+        <summary>Schreibt eine codierte URL, die Abfragezeichenfolgen-Parameter enthält, in den Ausgabestream an. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sowohl der Name des Parameters und der URL-Wert codiert sind, und ein Gleichheitszeichen (=) dazwischen eingefügt. "Speicherplätze" unter der `name` oder `value` Zeichenfolgen werden als Pluszeichen (+) codiert und Gleichheitszeichen (=) werden als % codiert 3d.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteXmlDeclaration">
+      <MemberSignature Language="C#" Value="public virtual void WriteXmlDeclaration ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteXmlDeclaration() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.WriteXmlDeclaration" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schreibt eine XML-Deklaration zusammen mit der aktuellen Codierungswert des Dokuments. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die aktuelle Codierung UTF-8 ist, würde die Deklaration ausgegeben werden:  
+  
+ `<?xml version="1.0" encoding="UTF-8"?>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

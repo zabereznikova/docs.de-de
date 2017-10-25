@@ -1,0 +1,305 @@
+<Type Name="IDesignerFilter" FullName="System.ComponentModel.Design.IDesignerFilter">
+  <TypeSignature Language="C#" Value="public interface IDesignerFilter" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDesignerFilter" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.IDesignerFilter" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Schnittstelle, die einen Designer zugreifen und die Wörterbüchern Filtern ermöglicht eine <see cref="T:System.ComponentModel.TypeDescriptor" /> , speichert die Eigenschaft, Attribut- und Ereignis-Deskriptoren, die ein Komponenten-Designer zur Entwurfszeit Umgebung verfügbar gemacht werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.Design.IDesignerFilter>ermöglicht es dem Designer, um den Satz der Eigenschaft, Attribut- und Ereignis Deskriptoren filtern, die über die zugeordnete Komponente verfügbar macht eine <xref:System.ComponentModel.TypeDescriptor>. Die Methoden dieser Schnittstelle, deren Namen beginnen mit `Pre` werden aufgerufen, unmittelbar bevor die Methoden, deren Namen beginnen mit `Post`.  
+  
+ Wenn Sie Attribut, Ereignisses oder Eigenschaftendeskriptoren hinzufügen möchten, verwenden Sie eine <xref:System.ComponentModel.Design.IDesignerFilter.PreFilterAttributes%2A>, <xref:System.ComponentModel.Design.IDesignerFilter.PreFilterEvents%2A>, oder <xref:System.ComponentModel.Design.IDesignerFilter.PreFilterProperties%2A> Methode.  
+  
+ Wenn Sie verwenden möchten, ändern oder Entfernen von Attribut-, Ereignis- oder Eigenschaftsdeskriptoren verwenden eine <xref:System.ComponentModel.Design.IDesignerFilter.PostFilterAttributes%2A>, <xref:System.ComponentModel.Design.IDesignerFilter.PostFilterEvents%2A>, oder <xref:System.ComponentModel.Design.IDesignerFilter.PostFilterProperties%2A> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Überschreiben der <xref:System.ComponentModel.Design.IDesignerFilter.PreFilterProperties%2A> , eine Eigenschaft des Designers zum Eigenschaftenfenster addiert, wenn das Steuerelement des Designers zur Entwurfszeit ausgewählt ist. Siehe das Beispiel für die <xref:System.Windows.Forms.Design.ControlDesigner> Klasse für ein vollständiges-Designer-Beispiel, verwendet die <xref:System.ComponentModel.Design.IDesignerFilter> Schnittstelle.  
+  
+ [!code-cpp[ControlDesignerExample#2](~/samples/snippets/cpp/VS_Snippets_Winforms/ControlDesignerExample/CPP/controldesignerexample.cpp#2)]
+ [!code-csharp[ControlDesignerExample#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ControlDesignerExample/CS/controldesignerexample.cs#2)]
+ [!code-vb[ControlDesignerExample#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ControlDesignerExample/VB/controldesignerexample.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="PostFilterAttributes">
+      <MemberSignature Language="C#" Value="public void PostFilterAttributes (System.Collections.IDictionary attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PostFilterAttributes(class System.Collections.IDictionary attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IDesignerFilter.PostFilterAttributes(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Die <see cref="T:System.Attribute" /> Objekte für die Klasse der Komponente. Die Schlüssel im Wörterbuch Attribute sind die <see cref="P:System.Attribute.TypeId" /> Werte der Attribute.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ermöglicht es einem Designer zu ändern oder Entfernen von Elementen aus dem Satz von Attributen, die über macht eine <see cref="T:System.ComponentModel.TypeDescriptor" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bietet eine Möglichkeit, ändern oder Entfernen von Elementen im Wörterbuch mit Attributen, die über die zugeordnete Komponente des Designers implementiert diese Schnittstelle verfügbar macht eine <xref:System.ComponentModel.TypeDescriptor>.  
+  
+ Der Schlüssel im Wörterbuch Attribute sind die Typ-IDs der Attribute. Die Objekte sind vom Typ <xref:System.Attribute>. Diese Methode wird aufgerufen, unmittelbar nach <xref:System.ComponentModel.Design.IDesignerFilter.PreFilterAttributes%2A>.  
+  
+ Die Typ-ID eines Attributs kann jedes Objekt sein. Standardmäßig <xref:System.Attribute> gibt seine <xref:System.Type> als Wert für die <xref:System.Attribute.TypeId%2A> Eigenschaft. Sehen Sie sich die <xref:System.Attribute.TypeId%2A> eines Attributs im Wörterbuch auf Äquivalenz mit einem bekannten <xref:System.Attribute.TypeId%2A> für ein Attribut, das es identifiziert werden, oder verwenden Sie <xref:System.Reflection> zum Identifizieren der Attribute-Objekt selbst.  
+  
+ Wenn ein Attribut mit dem gleichen <xref:System.Attribute.TypeId%2A> wie ein vorhandenes oder geerbtes Attribut an eine Komponente hinzugefügt wird, ersetzt das neue Attribut das alte Attribut. Für viele Attribute wird ein neues Attribut des gleichen Typs alle vorherigen Attribut des Typs zu ersetzen. Allerdings einige Typen von Attributen Zurückgeben einer <xref:System.Attribute.TypeId%2A> , die das Attribut selektiv unterscheidet. Beispielsweise um verschiedene Typen von gleichzeitig aktiven Designern für einen Typ bereitstellen, z. B. ein <xref:System.ComponentModel.Design.IRootDesigner> und ein <xref:System.ComponentModel.Design.IDesigner>, <xref:System.ComponentModel.DesignerAttribute> -Klasse zurückgegeben wird ein <xref:System.Attribute.TypeId%2A> , eindeutig identifiziert, das Attribut und die Basis-Designer Geben Sie ein. Die <xref:System.ComponentModel.DesignerAttribute> Konstruktor können Sie den Designer Basistyp des Designers zusätzlich zu den spezifischen Anwendungstyp angeben und <xref:System.ComponentModel.DesignerAttribute> gibt eine <xref:System.Attribute.TypeId%2A> , die dies wiedergibt. Daher beim Hinzufügen einer neuen <xref:System.ComponentModel.DesignerAttribute> mit dem Designer Basistyp des gleichen Typs wie der Designer Basistyp einer vorhandenen <xref:System.ComponentModel.DesignerAttribute>, das alte Attribut wird durch das neue Attribut ersetzt.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie können das Wörterbuch, das über den möglich ist direkt filtern die <paramref name="attributes" /> annimmt, oder Sie können diese unverändert belassen. Wenn Sie diese Methode außer Kraft gesetzt werden, rufen Sie die basisimplementierung auf, nachdem Sie Ihren eigenen Filtern ausführen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PostFilterEvents">
+      <MemberSignature Language="C#" Value="public void PostFilterEvents (System.Collections.IDictionary events);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PostFilterEvents(class System.Collections.IDictionary events) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IDesignerFilter.PostFilterEvents(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="events" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="events">Die <see cref="T:System.ComponentModel.EventDescriptor" /> Objekte, die die Ereignisse der Klasse der Komponente darstellen. Die Schlüssel im Wörterbuch von Ereignissen sind Ereignisnamen.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ermöglicht es einem Designer zu ändern oder Entfernen von Elementen aus dem Satz von Ereignissen, die über macht eine <see cref="T:System.ComponentModel.TypeDescriptor" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bietet eine Möglichkeit, ändern oder Entfernen von Elementen im Wörterbuch von Ereignissen, die durch verfügbar gemacht werden eine <xref:System.ComponentModel.TypeDescriptor>.  
+  
+ Der Schlüssel im Wörterbuch von Ereignissen sind die Namen der Ereignisse. Die Objekte sind vom Typ <xref:System.ComponentModel.EventDescriptor>. Diese Methode wird aufgerufen, unmittelbar nach <xref:System.ComponentModel.Design.IDesignerFilter.PreFilterEvents%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie können das Wörterbuch, das über den möglich ist direkt filtern die <paramref name="events" /> annimmt, oder Sie können diese unverändert belassen. Wenn Sie diese Methode außer Kraft gesetzt werden, rufen Sie die basisimplementierung auf, nachdem Sie Ihren eigenen Filtern ausführen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PostFilterProperties">
+      <MemberSignature Language="C#" Value="public void PostFilterProperties (System.Collections.IDictionary properties);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PostFilterProperties(class System.Collections.IDictionary properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IDesignerFilter.PostFilterProperties(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Die <see cref="T:System.ComponentModel.PropertyDescriptor" /> Objekte, die die Eigenschaften der Klasse der Komponente darstellen. Die Schlüssel im Wörterbuch von Eigenschaften sind Eigenschaftennamen.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ermöglicht es einem Designer zu ändern oder Entfernen von Elementen aus dem Satz von Eigenschaften, die über macht eine <see cref="T:System.ComponentModel.TypeDescriptor" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bietet eine Möglichkeit, ändern oder Entfernen von Elementen im Wörterbuch von Eigenschaften, die durch verfügbar gemacht werden eine <xref:System.ComponentModel.TypeDescriptor>.  
+  
+ Der Schlüssel im Wörterbuch Eigenschaften sind die Namen der Eigenschaften. Die Objekte sind vom Typ <xref:System.ComponentModel.PropertyDescriptor>. Diese Methode wird aufgerufen, unmittelbar nach <xref:System.ComponentModel.Design.IDesignerFilter.PreFilterProperties%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie können das Wörterbuch, das über den möglich ist direkt filtern die <paramref name="properties" /> annimmt, oder Sie können diese unverändert belassen. Wenn Sie diese Methode außer Kraft gesetzt werden, rufen Sie die basisimplementierung auf, nachdem Sie Ihren eigenen Filtern ausführen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PreFilterAttributes">
+      <MemberSignature Language="C#" Value="public void PreFilterAttributes (System.Collections.IDictionary attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PreFilterAttributes(class System.Collections.IDictionary attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IDesignerFilter.PreFilterAttributes(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Die <see cref="T:System.Attribute" /> Objekte für die Klasse der Komponente. Die Schlüssel im Wörterbuch Attribute sind die <see cref="P:System.Attribute.TypeId" /> Werte der Attribute.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ermöglicht es einem Designer, um den Satz von Attributen Elemente hinzuzufügen, das sie, über offenlegt eine <see cref="T:System.ComponentModel.TypeDescriptor" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bietet eine Möglichkeit, Elemente, die dem Wörterbuch von Attributen hinzufügen, die über die zugeordnete Komponente des Designers implementiert diese Schnittstelle verfügbar macht eine <xref:System.ComponentModel.TypeDescriptor>.  
+  
+ Der Schlüssel im Wörterbuch Attribute sind die Typ-IDs der Attribute. Die Objekte sind vom Typ <xref:System.Attribute>. Diese Methode wird aufgerufen, unmittelbar bevor <xref:System.ComponentModel.Design.IDesignerFilter.PostFilterAttributes%2A>.  
+  
+ Die Typ-ID eines Attributs kann jedes Objekt sein. Standardmäßig <xref:System.Attribute> gibt seine <xref:System.Type> als Wert für die <xref:System.Attribute.TypeId%2A> Eigenschaft. Sehen Sie sich die <xref:System.Attribute.TypeId%2A> eines Attributs im Wörterbuch auf Äquivalenz mit einem bekannten <xref:System.Attribute.TypeId%2A> für ein Attribut, das es identifiziert werden, oder verwenden Sie <xref:System.Reflection> zum Identifizieren der Attribute-Objekt selbst.  
+  
+ Wenn ein Attribut mit dem gleichen <xref:System.Attribute.TypeId%2A> wie ein vorhandenes oder geerbtes Attribut an eine Komponente hinzugefügt wird, ersetzt das neue Attribut das alte Attribut. Für viele Attribute wird ein neues Attribut des gleichen Typs alle vorherigen Attribut des Typs zu ersetzen. Allerdings einige Typen von Attributen Zurückgeben einer <xref:System.Attribute.TypeId%2A> , die das Attribut selektiv unterscheidet. Beispielsweise um verschiedene Typen von gleichzeitig aktiven Designern für einen Typ bereitstellen, z. B. ein <xref:System.ComponentModel.Design.IRootDesigner> und ein <xref:System.ComponentModel.Design.IDesigner>, <xref:System.ComponentModel.DesignerAttribute> -Klasse zurückgegeben wird ein <xref:System.Attribute.TypeId%2A> , eindeutig identifiziert, das Attribut und die Basis-Designer Geben Sie ein. Die <xref:System.ComponentModel.DesignerAttribute> Konstruktor können Sie den Designer Basistyp des Designers zusätzlich zu den spezifischen Anwendungstyp angeben und <xref:System.ComponentModel.DesignerAttribute> gibt eine <xref:System.Attribute.TypeId%2A> , die dies wiedergibt. Daher beim Hinzufügen einer neuen <xref:System.ComponentModel.DesignerAttribute> mit dem Designer Basistyp des gleichen Typs wie der Designer Basistyp einer vorhandenen <xref:System.ComponentModel.DesignerAttribute>, das alte Attribut wird durch das neue Attribut ersetzt.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie können das Wörterbuch, das über den möglich ist direkt filtern die <paramref name="attributes" /> annimmt, oder Sie können diese unverändert belassen. Wenn Sie diese Methode außer Kraft gesetzt werden, rufen Sie die basisimplementierung auf, nachdem Sie Ihren eigenen Filtern ausführen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PreFilterEvents">
+      <MemberSignature Language="C#" Value="public void PreFilterEvents (System.Collections.IDictionary events);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PreFilterEvents(class System.Collections.IDictionary events) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IDesignerFilter.PreFilterEvents(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="events" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="events">Die <see cref="T:System.ComponentModel.EventDescriptor" /> Objekte, die die Ereignisse der Klasse der Komponente darstellen. Die Schlüssel im Wörterbuch von Ereignissen sind Ereignisnamen.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ermöglicht es einem Designer, um den Satz von Ereignissen Elemente hinzuzufügen, das sie, über offenlegt eine <see cref="T:System.ComponentModel.TypeDescriptor" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bietet eine Möglichkeit, Elemente, die dem Wörterbuch von Ereignissen hinzufügen, die über ein Designer verfügbar macht eine <xref:System.ComponentModel.TypeDescriptor>.  
+  
+ Der Schlüssel im Wörterbuch von Ereignissen sind die Namen der Ereignisse. Die Objekte sind vom Typ <xref:System.ComponentModel.EventDescriptor>. Diese Methode wird aufgerufen, unmittelbar bevor <xref:System.ComponentModel.Design.IDesignerFilter.PostFilterEvents%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie können das Wörterbuch, das über den möglich ist direkt ändern die <paramref name="events" /> annimmt, oder Sie können diese unverändert belassen. Wenn Sie diese Methode außer Kraft gesetzt werden, rufen Sie die basisimplementierung auf, bevor Sie eine eigene Filtern ausführen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PreFilterProperties">
+      <MemberSignature Language="C#" Value="public void PreFilterProperties (System.Collections.IDictionary properties);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PreFilterProperties(class System.Collections.IDictionary properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IDesignerFilter.PreFilterProperties(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Die <see cref="T:System.ComponentModel.PropertyDescriptor" /> Objekte, die die Eigenschaften der Klasse der Komponente darstellen. Die Schlüssel im Wörterbuch von Eigenschaften sind Eigenschaftennamen.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ermöglicht es einem Designer, um den Satz von Eigenschaften Elemente hinzuzufügen, das sie, über offenlegt eine <see cref="T:System.ComponentModel.TypeDescriptor" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bietet eine Möglichkeit, Elemente, die dem Wörterbuch von Eigenschaften hinzufügen, die über ein Designer verfügbar macht eine <xref:System.ComponentModel.TypeDescriptor>.  
+  
+ Der Schlüssel im Wörterbuch Eigenschaften sind die Namen der Eigenschaften. Die Objekte sind vom Typ <xref:System.ComponentModel.PropertyDescriptor>. Diese Methode wird aufgerufen, unmittelbar bevor <xref:System.ComponentModel.Design.IDesignerFilter.PostFilterProperties%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie können das Wörterbuch, das über den möglich ist direkt ändern die <paramref name="properties" /> annimmt, oder Sie können diese unverändert belassen. Wenn Sie diese Methode außer Kraft gesetzt werden, rufen Sie die basisimplementierung auf, bevor Sie eine eigene Filtern ausführen.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

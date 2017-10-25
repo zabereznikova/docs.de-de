@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.Build.Construction">
+  <Docs>
+    <summary>Enthält Typen, die das MSBuild-Objektmodell verwendet, um Projektstämme mit nicht ausgewerteten Werte zu erstellen. Jedes Stammelement Projekt entspricht einer Projekts oder der Targets-Datei. Informationen finden Sie unter <see href="https://docs.microsoft.com/visualstudio/msbuild/">MSBuild</see>.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

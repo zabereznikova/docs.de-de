@@ -1,0 +1,1216 @@
+<Type Name="OracleLob" FullName="System.Data.OracleClient.OracleLob">
+  <TypeSignature Language="C#" Value="public sealed class OracleLob : System.IO.Stream, ICloneable, System.Data.SqlTypes.INullable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OracleLob extends System.IO.Stream implements class System.Data.SqlTypes.INullable, class System.ICloneable, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.OracleClient.OracleLob" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.OracleClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IO.Stream</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Data.SqlTypes.INullable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt ein binary large Object (<see langword="LOB" />) auf einem Oracle-Server gespeicherten Datentyp. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Data.OracleClient.OracleLob> unterscheidet sich von einer <xref:System.Data.OracleClient.OracleBFile> darin, dass die Daten auf dem Server statt in einer physischen Datei im Betriebssystem gespeichert ist. Sie können auch ein Objekt mit Lese-/ Schreibzugriff sein, im Gegensatz zu einer <xref:System.Data.OracleClient.OracleBFile>, die immer schreibgeschützt ist.  
+  
+ Ein <xref:System.Data.OracleClient.OracleLob> möglicherweise eine der folgenden <xref:System.Data.OracleClient.OracleType> -Datentypen.  
+  
+|OracleType-Datentyp|Beschreibung|  
+|--------------------------|-----------------|  
+|`Blob`|Ein Oracle `BLOB` -Datentyp, der Binärdaten mit einer maximalen Größe von 4 Gigabyte (GB) enthält. Dies ordnet eine <xref:System.Array> vom Typ <xref:System.Byte>.|  
+|`Clob`|Ein Oracle `CLOB` -Datentyp, Zeichendaten, basierend auf den Standardzeichen enthält, die auf dem Server, mit einer maximalen Größe von 4 GB festgelegt. Entspricht dem <xref:System.String>.|  
+|`NClob`|Ein Oracle `NCLOB` -Datentyp, Zeichendaten enthält, auf Grundlage des nationalen Zeichensatzes auf dem Server mit einer maximalen Größe von 4 GB. Entspricht dem <xref:System.String>.|  
+  
+ Ein .NET Anwendungsentwickler kann die Oracle abrufen `LOB` wie z. B. von Datumswerten in .NET Grunddatentypen <xref:System.Array> des Typs <xref:System.Byte> und <xref:System.String>, oder die spezielle <xref:System.Data.OracleClient.OracleLob> -Datentyp. Die <xref:System.Data.OracleClient.OracleLob> Klasse unterstützt das Lesen von Daten aus und Schreiben in die Oracle `LOB` in der Oracle-Datenbank.  
+  
+ Im folgenden werden die Hauptmerkmale ein <xref:System.Data.OracleClient.OracleLob> -Datentyp, der von .NET Grunddatentypen zu unterscheiden:  
+  
+-   Nachdem Sie die Oracle abrufen `LOB` Wert aus der Oracle-Datenbank in der <xref:System.Data.OracleClient.OracleLob> -Klasse, die Sie ändern die `LOB` Daten in einer geöffneten Transaktion und die Änderungen werden direkt reflektiert, um die Datenbank. Wenn Sie die Oracle abrufen `LOB` Wert in einer <xref:System.Array> des Typs <xref:System.Byte> oder <xref:System.String> und aktualisieren diese Arrays Ihre Änderungen werden nicht reflektiert, um die Datenbank.  
+  
+-   Bei Verwendung der <xref:System.Data.OracleClient.OracleLob> Klasse ein Teils der Zugriff auf eine `LOB` Wert nur dieser Ausschnitt wird aus der Oracle-Datenbank an den Client übergeben. Bei Verwendung der <xref:System.Data.OracleClient.OracleDataReader.GetChars%2A> Methode ein Teils der Zugriff auf eine `LOB` Wert, der gesamte Inhalt des Werts aus der Oracle-Datenbank übergeben werden, an den Client.  
+  
+ Zum Abrufen einer <xref:System.Data.OracleClient.OracleLob> -Objekt, rufen Sie die <xref:System.Data.OracleClient.OracleDataReader.GetOracleLob%2A> Methode.  
+  
+ Konstruieren Sie ein <xref:System.Data.OracleClient.OracleLob> ist NULL, die mit diesem Format:  
+  
+```  
+OracleLob myLob = OracleLob.Null;  
+```  
+  
+ Dieses Verfahren dient in erster Linie zum Testen, ob eine `LOB` vom Server zurückgegebenen NULL ist, wie dieses Beispiel veranschaulicht:  
+  
+```  
+If(myLob == OracleLob.Null)  
+```  
+  
+ Ein NULL-Wert `LOB` verhält sich ähnlich wie eine 0 (null) Bytes bestehende `LOB` , <xref:System.Data.OracleClient.OracleLob.Read%2A> erfolgreich ist, und gibt immer 0 (null) Bytes zurück.  
+  
+ Auswählen einer `LOB` Spalte mit einem null-Wert gibt <xref:System.Data.OracleClient.OracleLob.Null>.  
+  
+ Sie müssen eine Transaktion, bevor Sie einen temporären beginnen `LOB`. Andernfalls die <xref:System.Data.OracleClient.OracleDataReader> möglicherweise zum Abrufen von Daten zu einem späteren Zeitpunkt.  
+  
+ Sie können auch eine temporäre öffnen `LOB` in Oracle, indem Sie die DBMS_LOB. CREATETEMPORARY aufrufen Prozedur und die Bindung einer `LOB` output-Parameter. Auf der Clientseite eine temporäre `LOB` verhält sich wie ein tabellenbasierte `LOB`. Beispielsweise, um die temporären aktualisieren `LOB`, muss das Argument in eine Transaktion eingeschlossen werden.  
+  
+ Im folgenden C#-Beispiel veranschaulicht, wie eine temporäre öffnen `LOB`.  
+  
+```  
+OracleConnection connection = new OracleConnection("server=MyServer; integrated security=yes;");  
+connection.Open();  
+OracleTransaction transaction = connection.BeginTransaction();  
+OracleCommand command = connection.CreateCommand();  
+command.Transaction = transaction;  
+command.CommandText = "declare xx blob; begin dbms_lob.createtemporary(xx, false, 0); :tempblob := xx; end;";  
+command.Parameters.Add(new OracleParameter("tempblob", OracleType.Blob)).Direction = ParameterDirection.Output;  
+command.ExecuteNonQuery();  
+OracleLob tempLob = (OracleLob)command.Parameters[0].Value;  
+byte[] tempbuff = new byte[10000];  
+tempLob.BeginBatch(OracleLobOpenMode.ReadWrite);  
+tempLob.Write(tempbuff,0,tempbuff.Length);  
+tempLob.EndBatch();  
+command.Parameters.Clear();  
+command.CommandText = "MyTable.MyProc";  
+command.CommandType = CommandType.StoredProcedure;    
+command.Parameters.Add(new OracleParameter("ImportDoc", OracleType.Blob)).Value = tempLob;  
+command.ExecuteNonQuery();  
+transaction.Commit();  
+connection.Close  
+```  
+  
+> [!NOTE]
+>  Die geerbte <xref:System.IO.Stream.WriteByte%2A> Methode schlägt fehl, wenn mit Zeichendaten verwendet und ein <xref:System.InvalidOperationException> ausgelöst wird. Verwenden Sie stattdessen die <xref:System.Data.OracleClient.OracleLob.Write%2A>-Methode.  
+>   
+>  Temporäre `LOB`s werden nur geschlossen, wenn die Verbindung geschlossen wird, mit pooling und unter Last temporäre `LOB`s jedoch nicht geschlossen. Dies kann aufgelöst werden, indem die temporäre verworfen `LOB`, durch den Aufruf `tempLob.Dispose()`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Append">
+      <MemberSignature Language="C#" Value="public void Append (System.Data.OracleClient.OracleLob source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Append(class System.Data.OracleClient.OracleLob source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleLob.Append(System.Data.OracleClient.OracleLob)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Data.OracleClient.OracleLob" />
+      </Parameters>
+      <Docs>
+        <param name="source">Die <see langword="LOB" /> aus dem Daten angefügt werden sollen.</param>
+        <summary>Fügt Daten aus dem angegebenen <see langword="LOB" /> mit dem aktuellen <see langword="LOB" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Schreiben in die `LOB`, müssen Sie abgerufen haben die `LOB` mit der FOR UPDATE-Klausel in der SQL SELECT-Anweisung, und Sie müssen eine lokale Transaktion begonnen haben.  
+  
+ Alle Daten aus der Quelle `LOB` angefügt ist, an das Ende des aktuellen `LOB`. Die Position des weder `LOB` ausgewertet wird oder während dieses Vorgangs geändert.  
+  
+ Die zugrunde liegenden Datentypen müssen immer identisch sein. Angenommen, Sie aus einem Anfügen einer <xref:System.Data.OracleClient.OracleType.NClob>, das Ziel <xref:System.Data.OracleClient.OracleLob> zudem muss eine <xref:System.Data.OracleClient.OracleType.NClob>.  
+  
+> [!NOTE]
+>  In dieser Version, die ein Schreibvorgang für ein schreibgeschütztes `LOB` möglicherweise erfolgreich, aber nicht mehr aktualisiert die `LOB` auf dem Server. In diesem Fall jedoch die lokale Kopie der `LOB` wird aktualisiert. Aus diesem Grund später Lesevorgänge auf die <xref:System.Data.OracleClient.OracleLob> Objekt möglicherweise die Ergebnisse des Schreibvorgangs zurück.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die Quelle <see cref="T:System.Data.OracleClient.OracleLob" /> ist null.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Quelle <see cref="T:System.Data.OracleClient.OracleLob" /> ist null, oder die Verbindung geschlossen wird.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die Quelle <see cref="T:System.Data.OracleClient.OracleLob" /> Objekt wurde geschlossen oder verworfen.</exception>
+        <exception cref="T:System.Data.OracleClient.OracleException">Ein Oracle-Fehler aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginBatch">
+      <MemberSignature Language="C#" Value="public void BeginBatch ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void BeginBatch() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleLob.BeginBatch" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Auslösen von Ereignissen beim Ausführen mehrerer Lesevorgänge verhindert serverseitige Trigger.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Öffnet die `LOB` in <xref:System.Data.OracleClient.OracleLobOpenMode.ReadOnly> Modus daher die `LOB` können nur aus gelesen werden, nicht geschrieben, bis die entsprechenden Aufruf <xref:System.Data.OracleClient.OracleLob.EndBatch%2A>. Zum Ausführen von Batch-Schreibvorgänge in die `LOB`, rufen Sie <xref:System.Data.OracleClient.OracleLob.BeginBatch%2A> mit <xref:System.Data.OracleClient.OracleLobOpenMode.ReadWrite>.  
+  
+ Aufrufen von <xref:System.Data.OracleClient.OracleLob.BeginBatch%2A> mehr als einmal innerhalb derselben Transaktion derzeit löst die Oracle "ORA-22293: LOB wurde bereits in derselben Transaktion geöffnet" Fehler. Darüber hinaus, wenn Sie erhalten die `LOB` unter Verwendung einer anderen <xref:System.Data.OracleClient.OracleDataReader>, und der ursprüngliche Aufrufer nicht aufgerufen der <xref:System.Data.OracleClient.OracleLob.EndBatch%2A> -Methode, der gleiche Fehler wird generiert. Aus diesem Grund müssen Sie Aufrufen der <xref:System.Data.OracleClient.OracleLob.EndBatch%2A> Methode, wenn Sie fertig sind mit den <xref:System.Data.OracleClient.OracleLob>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Verbindung ist geschlossen.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde geschlossen oder verworfen.</exception>
+        <exception cref="T:System.Data.OracleClient.OracleException">Ein Oracle-Fehler aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginBatch">
+      <MemberSignature Language="C#" Value="public void BeginBatch (System.Data.OracleClient.OracleLobOpenMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void BeginBatch(valuetype System.Data.OracleClient.OracleLobOpenMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleLob.BeginBatch(System.Data.OracleClient.OracleLobOpenMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mode" Type="System.Data.OracleClient.OracleLobOpenMode" />
+      </Parameters>
+      <Docs>
+        <param name="mode">Modus (eines der <see cref="T:System.Data.OracleClient.OracleLobOpenMode" /> Werte) in dem die <see langword="LOB" /> zwischen diesem zugegriffen werden kann <see cref="M:System.Data.OracleClient.OracleLob.BeginBatch(System.Data.OracleClient.OracleLobOpenMode)" /> aufrufen und den entsprechenden <see cref="M:System.Data.OracleClient.OracleLob.EndBatch" /> aufrufen.</param>
+        <summary>Ausgelöst werden, während mehrere Lese- und Schreibvorgänge in den angegebenen Werten für Zugriffsmodus verhindert serverseitige Trigger.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Schreiben in die `LOB`, müssen Sie abgerufen haben die `LOB` mit der FOR UPDATE-Klausel in der SQL SELECT-Anweisung, und Sie müssen eine lokale Transaktion begonnen haben.  
+  
+ Aufrufen von <xref:System.Data.OracleClient.OracleLob.BeginBatch%2A> mehr als einmal innerhalb derselben Transaktion derzeit löst die Oracle "ORA-22293: LOB wurde bereits in derselben Transaktion geöffnet" Fehler. Darüber hinaus, wenn Sie erhalten die `LOB` unter Verwendung einer anderen <xref:System.Data.OracleClient.OracleDataReader>, und der ursprüngliche Aufrufer nicht aufgerufen der <xref:System.Data.OracleClient.OracleLob.EndBatch%2A> -Methode, der gleiche Fehler wird generiert. Aus diesem Grund müssen Sie Aufrufen der <xref:System.Data.OracleClient.OracleLob.EndBatch%2A> Methode, wenn Sie fertig sind mit den <xref:System.Data.OracleClient.OracleLob>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Verbindung ist geschlossen.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde geschlossen oder verworfen.</exception>
+        <exception cref="T:System.Data.OracleClient.OracleException">Ein Oracle-Fehler aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRead">
+      <MemberSignature Language="C#" Value="public override bool CanRead { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanRead" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleLob.CanRead" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see langword="LOB" /> Stream gelesen werden kann.</summary>
+        <value>
+          <see langword="true" />Wenn die <see langword="LOB" /> Stream Lesevorgänge unterstützt, andernfalls <see langword="false" /> Wenn eine <see langword="LOB" /> geschlossen oder verworfen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanSeek">
+      <MemberSignature Language="C#" Value="public override bool CanSeek { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanSeek" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleLob.CanSeek" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob Suchvorgänge vorwärts und rückwärts ausgeführt werden können.</summary>
+        <value>
+          <see langword="false" />Wenn eine <see langword="LOB" /> geschlossen oder freigegeben ist, andernfalls <see langword="true" />. Immer <see langword="true" /> für <see cref="F:System.Data.OracleClient.OracleLob.Null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanWrite">
+      <MemberSignature Language="C#" Value="public override bool CanWrite { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanWrite" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleLob.CanWrite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt immer "true", unabhängig davon, ob die <see langword="LOB" /> Schreibvorgänge unterstützt.</summary>
+        <value>Gibt immer <see langword="true" />, unabhängig davon, ob ein geöffnetes oder freigegebenes <see langword="LOB" /> unterstützt das Schreiben von or not <see langword="false" /> Wenn eine <see langword="LOB" /> geschlossen oder verworfen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Schreiben in die `LOB`, müssen Sie abgerufen haben die `LOB` mit der FOR UPDATE-Klausel in der SQL SELECT-Anweisung, und Sie müssen eine lokale Transaktion gestartet haben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChunkSize">
+      <MemberSignature Language="C#" Value="public int ChunkSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ChunkSize" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleLob.ChunkSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, der minimalen Anzahl von Bytes, die abgerufen oder während eines Lese-/Schreibzugriff-Vorgangs an den Server senden.</summary>
+        <value>Die Mindestanzahl abzurufender oder zu sendender Bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der zurückgegebene Wert den <xref:System.Data.OracleClient.OracleLob.ChunkSize%2A> Eigenschaft ist nicht die Einstellung der .NET Framework-Datenanbieter für Oracle. Stattdessen wird der Wert, den der Oracle aufrufen-Schnittstelle (OCI) bei der Kommunikation mit dem Server verwendet. Verwendung <xref:System.Data.OracleClient.OracleLob.ChunkSize%2A> um sicherzustellen, dass die clientseitige Blöcke die gleiche Größe aufweisen. Lesen oder Schreiben in kleineren Blöcken keine Daten zwischengespeichert, und führt zu einen Roundtrip weniger optimiert, mit dem Server, da eine vollständige Paket nicht empfangen oder gesendet wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Verbindung ist geschlossen.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde geschlossen oder verworfen.</exception>
+        <exception cref="T:System.Data.OracleClient.OracleException">Ein Oracle-Fehler aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleLob.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues <see cref="T:System.Data.OracleClient.OracleLob" /> Objekt, das die gleiche Oracle verweist <see langword="LOB" /> wie beim ursprünglichen <see cref="T:System.Data.OracleClient.OracleLob" /> Objekt.</summary>
+        <returns>Ein neues <see cref="T:System.Data.OracleClient.OracleLob" /> Objekt, das die gleiche Oracle verweist <see langword="LOB" /> wie beim ursprünglichen <see cref="T:System.Data.OracleClient.OracleLob" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Eigenschaften der neuen <xref:System.Data.OracleClient.OracleLob> Objekt ursprünglich haben die gleichen Werte wie das ursprüngliche Objekt. Allerdings nach der <xref:System.Data.OracleClient.OracleLob.Clone%2A> abgeschlossen ist, jede <xref:System.Data.OracleClient.OracleLob> Objekt wird unabhängig von den anderen. Z. B. Ändern des Werts der <xref:System.Data.OracleClient.OracleLob.Position%2A> Eigenschaft auf die ursprüngliche <xref:System.Data.OracleClient.OracleLob> ändert sich nicht auf den Wert des <xref:System.Data.OracleClient.OracleLob.Position%2A> auf die Kopie.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Verbindung ist geschlossen.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde geschlossen oder verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Connection">
+      <MemberSignature Language="C#" Value="public System.Data.OracleClient.OracleConnection Connection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.OracleClient.OracleConnection Connection" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleLob.Connection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleConnection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Data.OracleClient.OracleConnection" /> von dieser Instanz verwendet die <see cref="T:System.Data.OracleClient.OracleLob" />.</summary>
+        <value>Die Verbindung mit einer Datenquelle.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde geschlossen oder verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public long CopyTo (System.Data.OracleClient.OracleLob destination);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int64 CopyTo(class System.Data.OracleClient.OracleLob destination) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleLob.CopyTo(System.Data.OracleClient.OracleLob)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destination" Type="System.Data.OracleClient.OracleLob" />
+      </Parameters>
+      <Docs>
+        <param name="destination">Der Ziel-<see cref="T:System.Data.OracleClient.OracleLob" />.</param>
+        <summary>Kopien von diesem <see cref="T:System.Data.OracleClient.OracleLob" /> an ein Ziel <see cref="T:System.Data.OracleClient.OracleLob" />.</summary>
+        <returns>Die Anzahl der kopierten Bytes. Dies schließt alle Bytes mit Nullen aufgefüllten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zugrunde liegenden Datentypen müssen immer identisch sein. Angenommen, Sie kopieren aus einer <xref:System.Data.OracleClient.OracleType.NClob>, das Ziel <xref:System.Data.OracleClient.OracleLob> muss auch ein <xref:System.Data.OracleClient.OracleType.NClob>.  
+  
+ Wenn das Ziel-Offset hinter dem Ende des Ziels ist `LOB`, die `LOB` erweitert, die die Daten kopiert werden. Der Abstand zwischen dem Ende der `LOB` und der Zieloffset jenseits des Endes wird mit Nullen aufgefüllt `BLOB` Datentypen und Leerzeichen für `CLOB` und `NCLOB` -Datentypen.  
+  
+ Zum Schreiben in die `LOB`, müssen Sie abgerufen haben die `LOB` mit der FOR UPDATE-Klausel in der SQL SELECT-Anweisung, und Sie müssen eine lokale Transaktion begonnen haben.  
+  
+> [!NOTE]
+>  In dieser Version, die ein Schreibvorgang für ein schreibgeschütztes `LOB` möglicherweise erfolgreich, aber nicht aktualisiert die `LOB` auf dem Server. In diesem Fall jedoch die lokale Kopie der `LOB` wird aktualisiert. Aus diesem Grund später Lesevorgänge auf die <xref:System.Data.OracleClient.OracleLob> Objekt möglicherweise die Ergebnisse des Schreibvorgangs zurück.  
+>   
+>  Die `CopyTo` Methode löscht den Inhalt des Ziels keinen `OracleLob` vor dem Ausführen des Kopiervorgangs.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <see cref="T:System.Data.OracleClient.OracleLob" /> angegebenen, in der <paramref name="destination" /> -Parameter ist null.</exception>
+        <exception cref="T:System.InvalidOperationException">Der Vorgang ist nicht innerhalb einer Transaktion, die <see cref="T:System.Data.OracleClient.OracleLob" /> Objekt ist null, oder die Verbindung geschlossen wird.</exception>
+        <exception cref="T:System.Data.OracleClient.OracleException">Ein Oracle-Fehler aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public long CopyTo (System.Data.OracleClient.OracleLob destination, long destinationOffset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int64 CopyTo(class System.Data.OracleClient.OracleLob destination, int64 destinationOffset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleLob.CopyTo(System.Data.OracleClient.OracleLob,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destination" Type="System.Data.OracleClient.OracleLob" />
+        <Parameter Name="destinationOffset" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="destination">Das Ziel<see cref="T:System.Data.OracleClient.OracleLob" /></param>
+        <param name="destinationOffset">Der Offset, in das kopiert werden soll. Für <see langword="CLOB" /> und <see langword="NCLOB" /> Datentypen, dies muss eine gerade Anzahl von Bytes sein.</param>
+        <summary>Kopien von diesem <see cref="T:System.Data.OracleClient.OracleLob" /> an ein Ziel <see cref="T:System.Data.OracleClient.OracleLob" /> über den angegebenen Daten.</summary>
+        <returns>Die Anzahl der kopierten Bytes. Dies schließt alle Bytes mit Nullen aufgefüllten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zugrunde liegenden Datentypen müssen immer identisch sein. Angenommen, Sie kopieren aus einer <xref:System.Data.OracleClient.OracleType.NClob>, das Ziel <xref:System.Data.OracleClient.OracleLob> muss auch ein <xref:System.Data.OracleClient.OracleType.NClob>.  
+  
+ Wenn das Ziel-Offset hinter dem Ende des Ziels ist `LOB`, die `LOB` erweitert, die die Daten kopiert werden. Der Abstand zwischen dem Ende des `LOB` und Ziel-Offset jenseits des Endes wird mit Nullen aufgefüllt `BLOB` Datentypen und Leerzeichen für `CLOB` und `NCLOB` -Datentypen.  
+  
+ Zum Schreiben in die `LOB`, müssen Sie abgerufen haben die `LOB` mit der FOR UPDATE-Klausel in der SQL SELECT-Anweisung, und Sie müssen eine lokale Transaktion begonnen haben.  
+  
+> [!NOTE]
+>  In dieser Version, die ein Schreibvorgang für ein schreibgeschütztes `LOB` möglicherweise erfolgreich, aber nicht mehr aktualisiert die `LOB` auf dem Server. In diesem Fall jedoch die lokale Kopie der `LOB` wird aktualisiert. Aus diesem Grund später Lesevorgänge auf die <xref:System.Data.OracleClient.OracleLob> Objekt möglicherweise die Ergebnisse des Schreibvorgangs zurück.  
+>   
+>  Die `CopyTo` Methode löscht den Inhalt des Ziels keinen `OracleLob` vor dem Ausführen des Kopiervorgangs.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <see cref="T:System.Data.OracleClient.OracleLob" /> angegebenen, in der <paramref name="destination" /> Parameter ist voll.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Ein Wert angegeben, der <paramref name="destinationOffset" /> -Parameter ist kleiner als 0 (null) oder größer als 4 GB.  
+  
+ - oder -   
+  
+ Ein Wert angegeben, der <paramref name="destinationOffset" /> -Parameter für eine <see langword="CLOB" /> oder <see langword="NCLOB" /> Datentyp ist nicht selbst.  
+  
+ - oder -   
+  
+ Sie müssen angeben, <see langword="CLOB" /> und <see langword="NCLOB" /> Datentypen als eine gerade Anzahl von Bytes.</exception>
+        <exception cref="T:System.InvalidOperationException">Der Vorgang ist nicht innerhalb einer Transaktion, die <see cref="T:System.Data.OracleClient.OracleLob" /> Objekt ist null, oder die Verbindung geschlossen wird.</exception>
+        <exception cref="T:System.Data.OracleClient.OracleException">Ein Oracle-Fehler aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public long CopyTo (long sourceOffset, System.Data.OracleClient.OracleLob destination, long destinationOffset, long amount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int64 CopyTo(int64 sourceOffset, class System.Data.OracleClient.OracleLob destination, int64 destinationOffset, int64 amount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleLob.CopyTo(System.Int64,System.Data.OracleClient.OracleLob,System.Int64,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceOffset" Type="System.Int64" />
+        <Parameter Name="destination" Type="System.Data.OracleClient.OracleLob" />
+        <Parameter Name="destinationOffset" Type="System.Int64" />
+        <Parameter Name="amount" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="sourceOffset">Der Offset aus dem kopiert werden soll. Für <see langword="CLOB" /> und <see langword="NCLOB" /> Datentypen, dies muss eine gerade Zahl sein.</param>
+        <param name="destination">Das Ziel <see langword="OracleLob" /> <see cref="N:System.Data.OracleClient" />.</param>
+        <param name="destinationOffset">Der Zieloffset, in das kopiert werden soll. Für <see langword="CLOB" /> und <see langword="NCLOB" /> Datentypen, dies muss eine gerade Zahl sein.</param>
+        <param name="amount">Die Menge der Daten in der zu kopierenden Bytes. Für <see langword="CLOB" /> und <see langword="NCLOB" /> Datentypen, dies muss eine gerade Zahl sein.</param>
+        <summary>Kopien von diesem <see cref="T:System.Data.OracleClient.OracleLob" /> an ein Ziel <see cref="T:System.Data.OracleClient.OracleLob" /> mit der angegebenen Menge an Daten und das Quell-Offset.</summary>
+        <returns>Die Anzahl der kopierten Bytes. Dies schließt alle Bytes mit Nullen aufgefüllten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zugrunde liegenden Datentypen müssen immer identisch sein. Angenommen, Sie kopieren aus einer <xref:System.Data.OracleClient.OracleType.NClob>, das Ziel <xref:System.Data.OracleClient.OracleLob> muss auch ein <xref:System.Data.OracleClient.OracleType.NClob>.  
+  
+ Wenn das Ziel-Offset hinter dem Ende des Ziels ist `LOB`, die `LOB` erweitert, die die Daten kopiert werden. Der Abstand zwischen dem Ende des `LOB` und Ziel-Offset jenseits des Endes wird mit Nullen aufgefüllt `BLOB` Datentypen und Leerzeichen für `CLOB` und `NCLOB` -Datentypen.  
+  
+ Zum Schreiben in die `LOB`, müssen Sie abgerufen haben die `LOB` mit der FOR UPDATE-Klausel in der SQL SELECT-Anweisung, und Sie müssen eine lokale Transaktion begonnen haben.  
+  
+> [!NOTE]
+>  In dieser Version, die ein Schreibvorgang für ein schreibgeschütztes `LOB` möglicherweise erfolgreich, aber nicht mehr aktualisiert die `LOB` auf dem Server. In diesem Fall jedoch die lokale Kopie der `LOB` wird aktualisiert. Aus diesem Grund später Lesevorgänge auf die <xref:System.Data.OracleClient.OracleLob> Objekt möglicherweise die Ergebnisse des Schreibvorgangs zurück.  
+>   
+>  Die `CopyTo` Methode löscht den Inhalt des Ziels keinen `OracleLob` vor dem Ausführen des Kopiervorgangs.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <see cref="T:System.Data.OracleClient.OracleLob" /> angegebenen, in der <paramref name="destination" /> Parameter ist voll.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Ein Wert angegeben, der <paramref name="amount" />, <paramref name="sourceOffset" />, oder <paramref name="destinationOffset" /> -Parameter ist kleiner als 0 (null) oder größer als 4 GB.  
+  
+ - oder -   
+  
+ Ein Wert angegeben, der <paramref name="amount" />, <paramref name="sourceOffset" />, oder <paramref name="destinationOffset" /> -Parameter für eine <see langword="CLOB" /> oder <see langword="NCLOB" /> Datentyp ist nicht selbst.</exception>
+        <exception cref="T:System.InvalidOperationException">Der Vorgang ist nicht innerhalb einer Transaktion, die <see cref="T:System.Data.OracleClient.OracleLob" /> Objekt ist null, oder die Verbindung geschlossen wird.</exception>
+        <exception cref="T:System.Data.OracleClient.OracleException">Ein Oracle-Fehler aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleLob.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndBatch">
+      <MemberSignature Language="C#" Value="public void EndBatch ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndBatch() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleLob.EndBatch" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ermöglicht das serverseitige Trigger zum Auslösen von Ereignissen nach der Durchführung von mehreren Schreibvorgänge fortsetzen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie die <xref:System.Data.OracleClient.OracleLob.BeginBatch%2A> Methode vor dem Beginn Ausführen von Schreibvorgängen auf die <xref:System.Data.OracleClient.OracleLob>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Verbindung ist geschlossen.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde geschlossen oder verworfen.</exception>
+        <exception cref="T:System.Data.OracleClient.OracleException">Ein Oracle-Fehler aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Erase">
+      <MemberSignature Language="C#" Value="public long Erase ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int64 Erase() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleLob.Erase" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht alle Daten aus diesem <see cref="T:System.Data.OracleClient.OracleLob" />.</summary>
+        <returns>Die Anzahl der Bytes, die gelöscht werden soll.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OracleClient.OracleLob.Erase%2A>Daten werden nicht abgeschnitten werden. Die `LOB` Länge unverändert für eine `BLOB` -Datentyp und die gelöschten Daten durch 0 x 00 ersetzt. `CLOB`und `NCLOB` Datentypen werden durch Leerzeichen ersetzt.  
+  
+ Zum Schreiben in die `LOB`, müssen Sie abgerufen haben die `LOB` mit der FOR UPDATE-Klausel in der SQL SELECT-Anweisung, und Sie müssen eine lokale Transaktion begonnen haben.  
+  
+> [!NOTE]
+>  In dieser Version, die ein Schreibvorgang für ein schreibgeschütztes `LOB` möglicherweise erfolgreich, aber nicht mehr aktualisiert die `LOB` auf dem Server. In diesem Fall jedoch die lokale Kopie der `LOB` wird aktualisiert. Aus diesem Grund später Lesevorgänge auf die <xref:System.Data.OracleClient.OracleLob> Objekt möglicherweise die Ergebnisse des Schreibvorgangs zurück.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Vorgang ist nicht innerhalb einer Transaktion, die <see cref="T:System.Data.OracleClient.OracleLob" /> Objekt ist null, oder die Verbindung geschlossen wird.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde geschlossen oder verworfen.</exception>
+        <exception cref="T:System.Data.OracleClient.OracleException">Ein Oracle-Fehler aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Erase">
+      <MemberSignature Language="C#" Value="public long Erase (long offset, long amount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int64 Erase(int64 offset, int64 amount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleLob.Erase(System.Int64,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Int64" />
+        <Parameter Name="amount" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="offset">Der Offset aus dem gelöscht. Für <see langword="CLOB" /> und <see langword="NCLOB" /> Datentypen, dies muss eine gerade Zahl sein.</param>
+        <param name="amount">Die Menge der Daten in Bytes, die Sie löschen. Für <see langword="CLOB" /> und <see langword="NCLOB" /> Datentypen, dies muss eine gerade Zahl sein.</param>
+        <summary>Löscht die angegebene Menge der Daten aus dieser <see cref="T:System.Data.OracleClient.OracleLob" />.</summary>
+        <returns>Die Anzahl der Bytes, die gelöscht werden soll.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Summe der Werte in der `offset` und `amount` Parameter können größer sein als die Größe des der <xref:System.Data.OracleClient.OracleLob>. Aus diesem Grund Angabe eines Werts, der größer als die von der zurückgegebene der <xref:System.Data.OracleClient.OracleLob.Length%2A> Eigenschaft erfolgreich ausgeführt wird, jedoch <xref:System.Data.OracleClient.OracleLob.Erase%2A> löscht nur bis zum Ende der <xref:System.Data.OracleClient.OracleLob>. (Auf ähnliche Weise verwendet werden, wenn ein negativer Wert, um übergeben wird `offset`, <xref:System.Data.OracleClient.OracleLob.Erase%2A> erfolgreich ausgeführt wird, aber nur gelöscht werden, beginnend ab dem Anfang der <xref:System.Data.OracleClient.OracleLob>.) Dieses Verhalten unterscheidet sich von denen für die <xref:System.Data.OracleClient.OracleLob.Read%2A> und <xref:System.Data.OracleClient.OracleLob.Write%2A> Methoden und bietet den Vorteil, dass alle Daten aus dem Wert löschen können gemäß `offset` ohne einen zusätzlichen Roundtrip zum Server, überprüfen Sie, ob die tatsächliche Größe.  
+  
+ <xref:System.Data.OracleClient.OracleLob.Erase%2A>Daten werden nicht abgeschnitten werden. Die `LOB` Länge unverändert für eine `BLOB` -Datentyp und die gelöschten Daten durch 0 x 00 ersetzt. `CLOB`und `NCLOB` Datentypen werden durch Leerzeichen ersetzt.  
+  
+ Zum Schreiben in die `LOB`, müssen Sie abgerufen haben die `LOB` mit der FOR UPDATE-Klausel in der SQL SELECT-Anweisung, und Sie müssen eine lokale Transaktion begonnen haben.  
+  
+> [!NOTE]
+>  In dieser Version, die ein Schreibvorgang für ein schreibgeschütztes `LOB` möglicherweise erfolgreich, aber nicht mehr aktualisiert die `LOB` auf dem Server. In diesem Fall jedoch die lokale Kopie der `LOB` wird aktualisiert. Aus diesem Grund später Lesevorgänge auf die <xref:System.Data.OracleClient.OracleLob> Objekt möglicherweise die Ergebnisse des Schreibvorgangs zurück.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Vorgang ist nicht innerhalb einer Transaktion, die <see cref="T:System.Data.OracleClient.OracleLob" /> Objekt ist null, oder die Verbindung geschlossen wird.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde geschlossen oder verworfen.</exception>
+        <exception cref="T:System.Data.OracleClient.OracleException">Ein Oracle-Fehler aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public override void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleLob.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird derzeit nicht unterstützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist in dieser Version nicht funktionsfähig.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBatched">
+      <MemberSignature Language="C#" Value="public bool IsBatched { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBatched" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleLob.IsBatched" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob in einer Anwendung namens der <see cref="M:System.Data.OracleClient.OracleLob.BeginBatch" /> Methode.</summary>
+        <value>
+          <see langword="true" />Wenn die Anwendung wird aufgerufen, die <see cref="M:System.Data.OracleClient.OracleLob.BeginBatch" /> Methode, die andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Verwendung eines Oracle 8.0.5-Servers einen Oracle "ORA-00600: Interner Fehlercode" wird ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.OracleClient.OracleException">Ein Oracle-Fehler aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNull">
+      <MemberSignature Language="C#" Value="public bool IsNull { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNull" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleLob.IsNull" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Data.OracleClient.OracleLob" /> ist eine <see cref="F:System.Data.OracleClient.OracleBFile.Null" /> Stream.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Data.OracleClient.OracleLob" /> ist ein <see cref="F:System.Data.OracleClient.OracleBFile.Null" /> Stream ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTemporary">
+      <MemberSignature Language="C#" Value="public bool IsTemporary { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTemporary" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleLob.IsTemporary" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Data.OracleClient.OracleLob" /> temporär <see langword="LOB" />.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Data.OracleClient.OracleLob" /> temporär <see langword="LOB" />, da andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im folgenden Beispiel wird veranschaulicht, wie eine temporäre `LOB`.  
+  
+```  
+OracleConnection connection = new OracleConnection("server=MyServer; integrated security=yes;");  
+connection.Open();  
+OracleTransaction transaction = connection.BeginTransaction();  
+OracleCommand command = connection.CreateCommand();  
+command.Transaction = transaction;  
+command.CommandText = "declare xx blob; begin dbms_lob.createtemporary(xx, false, 0); :tempblob := xx; end;";  
+command.Parameters.Add(new OracleParameter("tempblob", OracleType.Blob)).Direction = ParameterDirection.Output;  
+command.ExecuteNonQuery();  
+OracleLob tempLob = (OracleLob)command.Parameters[0].Value;  
+tempLob.BeginBatch(OracleLobOpenMode.ReadWrite);  
+tempLob.Write(tempbuff,0,tempbuff.Length);  
+tempLob.EndBatch();  
+command.Parameters.Clear();  
+command.CommandText = "MyTable.MyProc";  
+command.CommandType = CommandType.StoredProcedure;    
+command.Parameters.Add(new OracleParameter("ImportDoc", OracleType.Blob)).Value = tempLob;  
+command.ExecuteNonQuery();  
+transaction.Commit();  
+connection.Close  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Verbindung ist geschlossen.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde geschlossen oder verworfen.</exception>
+        <exception cref="T:System.Data.OracleClient.OracleException">Ein Oracle-Fehler aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public override long Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Length" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleLob.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der die Größe der ab dem <see cref="T:System.Data.OracleClient.OracleLob" />.</summary>
+        <value>Die Größe der <see cref="T:System.Data.OracleClient.OracleLob" /> in Bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Größe der <xref:System.Data.OracleClient.OracleLob> wird immer in Bytes für alle Datentypen zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Verbindung ist geschlossen.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde geschlossen oder verworfen.</exception>
+        <exception cref="T:System.Data.OracleClient.OracleException">Ein Oracle-Fehler aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LobType">
+      <MemberSignature Language="C#" Value="public System.Data.OracleClient.OracleType LobType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.OracleClient.OracleType LobType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleLob.LobType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert zurückgibt, die die <see langword="LOB" /> -Datentyp.</summary>
+        <value>Eines der <see cref="T:System.Data.OracleClient.OracleType" /> <see langword="LOB" /> Datentypen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Data.OracleClient.OracleLob> möglicherweise einen der folgenden <xref:System.Data.OracleClient.OracleType> -Datentypen.  
+  
+|OracleType-Datentyp|Beschreibung|  
+|--------------------------|-----------------|  
+|`Blob`|Ein Oracle `BLOB` -Datentyp, der Binärdaten mit einer maximalen Größe von 4 Gigabyte enthält. Dies ordnet eine <xref:System.Array> vom Typ <xref:System.Byte>.|  
+|`Clob`|Ein Oracle `CLOB` -Datentyp, Zeichendaten, basierend auf den Standardzeichen enthält, die auf dem Server, mit einer maximalen Größe von 4 Gigabyte festgelegt. Entspricht dem <xref:System.String>.|  
+|`NClob`|Ein Oracle `NCLOB` -Datentyp, Zeichendaten enthält, auf Grundlage des nationalen Zeichensatzes auf dem Server mit einer maximalen Größe von 4 Gigabyte. Entspricht dem <xref:System.String>.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Null">
+      <MemberSignature Language="C#" Value="public static readonly System.Data.OracleClient.OracleLob Null;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Data.OracleClient.OracleLob Null" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OracleClient.OracleLob.Null" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleLob</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt einen NULL-Wert <see cref="T:System.Data.OracleClient.OracleLob" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Konstruieren Sie ein <xref:System.Data.OracleClient.OracleLob> ist NULL, die mit diesem Format:  
+  
+```  
+OracleLob myLob = OracleLOB.Null;  
+```  
+  
+ Dieses Verfahren dient in erster Linie zum Testen, ob eine `LOB` vom Server zurückgegebenen NULL ist, wie dieses Beispiel veranschaulicht:  
+  
+```  
+If(myLob == OracleLob.Null)  
+```  
+  
+ Ein NULL-Wert `LOB` verhält sich wie eine NULL Byte `LOB` , <xref:System.Data.OracleClient.OracleLob.Read%2A> erfolgreich ist, und gibt immer 0 (null) Bytes zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Position">
+      <MemberSignature Language="C#" Value="public override long Position { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Position" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleLob.Position" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuelle Leseposition in die <see cref="T:System.Data.OracleClient.OracleLob" /> Stream.</summary>
+        <value>Die aktuelle Position innerhalb der <see cref="T:System.Data.OracleClient.OracleLob" /> Stream.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Datenstrom muss Suchvorgänge zum Abrufen oder Festlegen der Position unterstützt. Verwenden der <xref:System.Data.OracleClient.OracleLob.CanSeek%2A> Eigenschaft, um zu bestimmen, ob der Stream Suchvorgänge unterstützt.  
+  
+ Suchvorgänge, die an einem beliebigen Speicherort überschreitet die Länge des Streams wird unterstützt. Auf eine ungerade Position für Suchvorgänge `CLOB` und `NCLOB` Datentypen wird ebenfalls unterstützt. Weitere Informationen finden Sie im Abschnitt "Hinweise" der <xref:System.Data.OracleClient.OracleLob.Read%2A> Eigenschaft.  
+  
+ Die <xref:System.Data.OracleClient.OracleLob.Position%2A> Eigenschaft ist nicht behalten Sie den Überblick über der Anzahl von Bytes aus der Datenstrom, der verarbeitet wurden übersprungen, oder beides.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Verbindung ist geschlossen.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde geschlossen oder verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public override int Read (byte[] buffer, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 Read(unsigned int8[] buffer, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleLob.Read(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Ein Bytearray. Wenn diese Methode zurückgibt, enthält der Puffer das angegebene Bytearray mit den Werten zwischen <c>Offset</c> und (<c>Offset</c> + <c>Anzahl</c>) durch die Bytes ersetzt aus der aktuellen Quelle gelesenen.</param>
+        <param name="offset">Der nullbasierte Byteoffset im <c>Puffer</c> ab dem aus dem aktuellen Stream gelesenen Daten gespeichert. Für <see langword="CLOB" /> und <see langword="NCLOB" /> Datentypen, dies muss eine gerade Zahl sein.</param>
+        <param name="count">Die maximale Anzahl an Bytes, die aus dem aktuellen Stream gelesen werden sollen. Für <see langword="CLOB" /> und <see langword="NCLOB" /> Datentypen, dies muss eine gerade Zahl sein.</param>
+        <summary>Liest eine Folge von Bytes aus dem aktuellen <see cref="T:System.Data.OracleClient.OracleLob" /> Stream und erhöht die Position im Stream um die Anzahl der Bytes gelesen.</summary>
+        <returns>Die Gesamtanzahl der in den Puffer gelesenen Bytes. Dies ist möglicherweise kleiner als die Anzahl der Bytes angeforderten, wenn viele Bytes zurzeit nicht verfügbar sind, oder NULL (0), wenn das Ende des Datenstroms erreicht wurde wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.OracleClient.OracleLob.Read%2A> Methode liest ein Maximum von `count` Bytes aus dem aktuellen stream und speichert sie in `buffer` beginnend `offset`. Die aktuelle Position im Stream wird durch die Anzahl der gelesenen Bytes erweitert; Wenn eine Ausnahme auftritt, bleibt die aktuelle Position im Stream jedoch unverändert. <xref:System.Data.OracleClient.OracleLob.Read%2A>Gibt die Anzahl der gelesenen Bytes zurück. Der Rückgabewert ist 0 (null) nur, wenn die aktuelle Position am Ende des Streams ist. <xref:System.Data.OracleClient.OracleLob.Read%2A>wird blockiert, bis mindestens 1 Byte Daten gelesen werden kann, dass keine Daten verfügbar sind. <xref:System.Data.OracleClient.OracleLob.Read%2A> gibt 0 zurück, wenn Sie versuchen, das Lesen aus einer `LOB` Wenn ist die aktuelle Position am Ende des `LOB`. <xref:System.Data.OracleClient.OracleLob.Read%2A>kann weniger Bytes als angefordert zurückgeben, selbst wenn das Ende des Streams nicht erreicht wurde.  
+  
+ Die .NET Framework-Datenanbieter für Oracle behandelt alle `CLOB` und `NCLOB` Daten im Unicode-Format. Deshalb beim Zugriff auf `CLOB` und `NCLOB` Datentypen, Sie sind immer Umgang mit der Anzahl von Bytes, wobei jedes Zeichen 2 Bytes ist. Angenommen, eine Zeichenfolge mit drei Zeichen als gespeichert wird ein `NCLOB` auf einem Oracle-Server, auf dem der Zeichensatz ist 4 Bytes pro Zeichen und führen Sie, eine `Read` Vorgang, geben Sie die Länge der Zeichenfolge als 6 Bytes an, obwohl es ist auf dem Server als 12 Bytes gespeichert.  
+  
+ Im folgenden C#-Beispiel wird veranschaulicht, wie gelesen <xref:System.Data.OracleClient.OracleLob> Objekte.  
+  
+```  
+public static void ReadLobExample(OracleCommand command)  
+{  
+   int actual = 0;  
+  
+   //Select some data.  
+   // Table Schema:  
+   //  "CREATE TABLE TableWithLobs (a int, b BLOB, c CLOB, d NCLOB)";  
+   //  "INSERT INTO TableWithLobs values (1, 'AA', 'AAA', N'AAAA')";  
+   command.CommandText = "SELECT * FROM TableWithLobs";  
+   OracleDataReader reader = command.ExecuteReader();  
+   using(reader)  
+   {  
+      //Obtain the first row of data.  
+      reader.Read();  
+      //Obtain the LOBs (all 3 varieties).  
+      OracleLob BLOB = reader.GetOracleLob(1);  
+      OracleLob CLOB  = reader.GetOracleLob(2);  
+      OracleLob NCLOB = reader.GetOracleLob(3);  
+  
+      //Example - Reading binary data (in chunks).  
+      byte[] buffer = new byte[100];  
+      while((actual = BLOB.Read(buffer, 0, buffer.Length)) >0)  
+         Console.WriteLine(BLOB.LobType + ".Read(" + buffer + ", " + buffer.Length + ") => " + actual);  
+  
+      //Example - Reading CLOB/NCLOB data (in chunks).  
+      //Note: You can read character data as raw Unicode bytes (using OracleLob.Read as in the above example).  
+      //However, because the OracleLob object inherits directly from the.NET stream object,   
+      //all the existing classes that manipluate streams can also be used. For example, the   
+      //.NET StreamReader makes converting the raw bytes into actual characters easier.  
+      StreamReader streamreader = new StreamReader(CLOB, Encoding.Unicode);  
+      char[] cbuffer = new char[100];  
+      while((actual = streamreader.Read(cbuffer, 0, cbuffer.Length)) >0)  
+         Console.WriteLine(CLOB.LobType + ".Read(" + new string(cbuffer, 0, actual) + ", " + cbuffer.Length + ") => " + actual);  
+  
+      //Example - Reading data (all at once).  
+      //You could use StreamReader.ReadToEnd to obtain all the string data,or simply  
+      //call OracleLob.Value to obtain a contiguous allocation of all the data.  
+      Console.WriteLine(NCLOB.LobType + ".Value => " + NCLOB.Value);  
+   }  
+}  
+```  
+  
+ Konstruieren Sie ein <xref:System.Data.OracleClient.OracleLob> ist NULL, die mit diesem Format:  
+  
+```  
+OracleLob myLob = OracleLob.Null;  
+```  
+  
+ Dieses Verfahren dient in erster Linie zum Testen, ob eine `LOB` vom Server zurückgegebene Wert NULL aufweist, wie im folgenden Beispiel veranschaulicht.  
+  
+```  
+If(myLob == OracleLob.Null)  
+```  
+  
+ Ein NULL-Wert `LOB` verhält sich wie eine NULL Byte `LOB` , <xref:System.Data.OracleClient.OracleLob.Read%2A> erfolgreich ist, und gibt immer 0 (null) Bytes zurück.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="buffer" /> ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Ein Wert in der <paramref name="offset" /> oder <paramref name="count" /> -Parameter positiv ist.  
+  
+ - oder -   
+  
+ Die Summe der Parameter Offset und Anzahl ist größer als die Pufferlänge.  
+  
+ - oder -   
+  
+ Ein Wert angegeben, der <paramref name="amount" /> oder <paramref name="offset" /> -Parameter ist kleiner als 0 (null) oder größer als 4 GB.</exception>
+        <exception cref="T:System.InvalidOperationException">Der Vorgang ist nicht innerhalb einer Transaktion, die <see cref="T:System.Data.OracleClient.OracleLob" /> Objekt ist null, oder die Verbindung geschlossen wird.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde geschlossen oder verworfen.</exception>
+        <exception cref="T:System.Data.OracleClient.OracleException">Ein Oracle-Fehler aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Seek">
+      <MemberSignature Language="C#" Value="public override long Seek (long offset, System.IO.SeekOrigin origin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int64 Seek(int64 offset, valuetype System.IO.SeekOrigin origin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleLob.Seek(System.Int64,System.IO.SeekOrigin)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Int64" />
+        <Parameter Name="origin" Type="System.IO.SeekOrigin" />
+      </Parameters>
+      <Docs>
+        <param name="offset">Ein Byteoffset relativ zum Ursprung. Wenn <c>Offset</c> ist negativ ist, steht die neue Position vor der angegebenen Position <c>Ursprung</c> durch die Anzahl der Bytes, die vom angegebenen <c>Offset</c>. Wenn <c>Offset</c> NULL ist, wird die neue Position ist von der angegebenen Position <c>Ursprung</c>. Wenn <c>Offset</c> positiv ist, wird die neue Position hinter dem durch <c>Ursprung</c> durch die Anzahl der Bytes, die vom angegebenen <c>Offset</c>.</param>
+        <param name="origin">Ein Wert vom Typ <see cref="T:System.IO.SeekOrigin" />, der den Bezugspunkt angibt, von dem aus die neue Position ermittelt wird.</param>
+        <summary>Legt die Position fest, mit dem aktuellen <see cref="T:System.Data.OracleClient.OracleLob" /> Stream.</summary>
+        <returns>Die neue Position innerhalb des aktuellen Streams.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `offset` ist negativ ist, die neue Position der angegebenen Position vorausgehen muss `origin` durch die Anzahl der Bytes, die vom angegebenen `offset`. Wenn `offset` NULL ist, muss die neue Position der angegebenen Position `origin`. Wenn `offset` positiv ist, wird die neue Position muss der angegebenen Position folgen `origin` durch die Anzahl der Bytes, die vom angegebenen `offset`.  
+  
+ Suchvorgänge, die an einem beliebigen Speicherort überschreitet die Länge des Streams wird unterstützt. Auf eine ungerade Position für Suchvorgänge `CLOB` und `NCLOB` Datentypen wird ebenfalls unterstützt. Weitere Informationen finden Sie im Abschnitt "Hinweise" der <xref:System.Data.OracleClient.OracleLob.Read%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="origin" /> Parameter enthält keinen gültigen Wert.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die resultierende Position ist überschreitet die Länge des Werts.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die <see cref="T:System.Data.OracleClient.OracleLob" /> Objekt wurde geschlossen oder verworfen.</exception>
+        <exception cref="T:System.Data.OracleClient.OracleException">Ein Oracle-Fehler aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLength">
+      <MemberSignature Language="C#" Value="public override void SetLength (long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetLength(int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleLob.SetLength(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die gewünschte Länge des aktuellen <see cref="T:System.Data.OracleClient.OracleLob" /> Streams in Bytes. Für <see langword="CLOB" /> und <see langword="NCLOB" /> Datentypen, dies muss eine gerade Zahl sein.</param>
+        <summary>Legt die Länge der <see cref="T:System.Data.OracleClient.OracleLob" /> Stream auf einen Wert kleiner als die aktuelle Länge.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Versuch, erhöhen Sie die Länge des der <xref:System.Data.OracleClient.OracleLob> Stream schlägt fehl, und gibt "Meldung: ORA-22926: angegebene trim Länge ist größer als die Länge des aktuellen LOB-Werts" aus dem Oracle-Server.  
+  
+ Ein Stream muss Schreib- und Suchvorgänge für unterstützen <xref:System.Data.OracleClient.OracleLob.SetLength%2A> -Funktion.  
+  
+ Die .NET Framework-Datenanbieter für Oracle behandelt alle `CLOB` und `NCLOB` Daten im Unicode-Format. Deshalb beim Zugriff auf `CLOB` und `NCLOB` Datentypen, Sie sind immer Umgang mit der Anzahl von Bytes, wobei jedes Zeichen 2 Bytes ist. Angenommen, eine Zeichenfolge mit drei Zeichen als gespeichert wird ein `NCLOB` auf einem Oracle-Server, auf dem der Zeichensatz ist 4 Bytes pro Zeichen und führen Sie, eine `SetLength` Vorgang, geben Sie die Länge der Zeichenfolge als 6 Bytes an, obwohl es ist auf dem Server als 12 Bytes gespeichert.  
+  
+ Zum Schreiben in die `LOB`, müssen Sie abgerufen haben die `LOB` mit der FOR UPDATE-Klausel in der SQL SELECT-Anweisung, und Sie müssen eine lokale Transaktion begonnen haben.  
+  
+> [!NOTE]
+>  Ein Schreibvorgang für ein schreibgeschütztes `LOB` möglicherweise erfolgreich, aber nicht mehr aktualisiert die `LOB` auf dem Server. In diesem Fall jedoch die lokale Kopie der `LOB` wird aktualisiert. Aus diesem Grund später Lesevorgänge auf die <xref:System.Data.OracleClient.OracleLob> Objekt möglicherweise die Ergebnisse des Schreibvorgangs zurück.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Ein Wert angegeben, der <paramref name="value" /> -Parameter für eine <see langword="CLOB" /> oder <see langword="NCLOB" /> Datentyp ist nicht selbst.  
+  
+ - oder -   
+  
+ Ein Wert angegeben, der <paramref name="value" /> -Parameter ist kleiner als 0 (null) oder größer als 4 GB.</exception>
+        <exception cref="T:System.InvalidOperationException">Der Vorgang ist nicht innerhalb einer Transaktion, die <see cref="T:System.Data.OracleClient.OracleLob" /> Objekt ist null, oder die Verbindung geschlossen wird.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde geschlossen oder verworfen.</exception>
+        <exception cref="T:System.Data.OracleClient.OracleException">Ein Oracle-Fehler aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleLob.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die common Language Runtime-Datenstromwert des zugrunde liegenden Werts entspricht.</summary>
+        <value>Für <see cref="F:System.Data.OracleClient.OracleType.Blob" />, ein Array vom Typ <see langword="Byte[]" />. Für <see cref="F:System.Data.OracleClient.OracleType.Clob" /> und <see cref="F:System.Data.OracleClient.OracleType.NClob" />ein <see langword="String" />. Bei null-Daten <see cref="T:System.DBNull" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für <xref:System.Data.OracleClient.OracleType.Blob> Datentypen <xref:System.Data.OracleClient.OracleLob.Value%2A> gibt die gesamten zugrunde liegenden Daten als Array vom Typ zusammenhängenden `Byte[]`. Für <xref:System.Data.OracleClient.OracleType.Clob> und <xref:System.Data.OracleClient.OracleType.NClob> Datentypen <xref:System.Data.OracleClient.OracleLob.Value%2A> gibt die Daten als ein `String` -Datentyp. Bei null-Daten <xref:System.Data.OracleClient.OracleLob.Value%2A> gibt <xref:System.DBNull>. Durch Vergleichen der Werte zurückgegeben, Sie unterscheiden zwischen leeren Daten, null-Daten und Daten.  
+  
+> [!NOTE]
+>  Ein Vorteil der Verwendung von `LOB` Datentypen ist deren Fähigkeit, große Mengen von Daten in Segmenten an den Client abgerufen. Allerdings bei Verwendung <xref:System.Data.OracleClient.OracleLob.Value%2A>, rufen Sie alle Daten für die `LOB` Spalte als ein zusammenhängendes Segment Aufwand der Anwendung erheblich erhöhen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde geschlossen oder verworfen.</exception>
+        <exception cref="T:System.Data.OracleClient.OracleException">Ein Oracle-Fehler aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (byte[] buffer, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(unsigned int8[] buffer, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleLob.Write(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Ein Bytearray. Diese Methode kopiert die angegebene Anzahl von Bytes in <c>Anzahl</c> aus <c>Puffer</c> in den aktuellen Stream.</param>
+        <param name="offset">Der nullbasierte Byteoffset im <c>Puffer</c> ab dem Bytes in den aktuellen Stream kopiert werden sollen. Für <see langword="CLOB" /> und <see langword="NCLOB" /> Datentypen, dies muss eine gerade Zahl sein.</param>
+        <param name="count">Die Anzahl an Bytes, die in den aktuellen Stream geschrieben werden sollen. Für <see langword="CLOB" /> und <see langword="NCLOB" /> Datentypen, dies muss eine gerade Zahl sein.</param>
+        <summary>Schreibt eine Folge von Bytes auf den aktuellen <see cref="T:System.Data.OracleClient.OracleLob" /> stream und erhöht die aktuelle Position im Stream um die Anzahl der geschriebenen Bytes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Schreibvorgang erfolgreich ist, setzt die Position im Stream um die Anzahl der geschriebenen Bytes. Wenn eine Ausnahme auftritt, bleibt die Position im Stream unverändert.  
+  
+ Schreiben hinter dem Ende `LOB` zulässig ist, und vergrößert die `LOB` durch die Anzahl der geschriebenen Bytes.  
+  
+ Die .NET Framework-Datenanbieter für Oracle behandelt alle `CLOB` und `NCLOB` Daten im Unicode-Format. Deshalb beim Zugriff auf `CLOB` und `NCLOB` Datentypen, Sie sind immer Umgang mit der Anzahl von Bytes, wobei jedes Zeichen 2 Bytes ist. Angenommen, eine Zeichenfolge mit drei Zeichen als gespeichert wird ein `NCLOB` auf einem Oracle-Server, auf dem der Zeichensatz ist 4 Bytes pro Zeichen und führen Sie, eine `Write` Vorgang, geben Sie die Länge der Zeichenfolge als 6 Bytes an, obwohl es ist auf dem Server als 12 Bytes gespeichert.  
+  
+ Zum Schreiben in die `LOB`, müssen Sie abgerufen haben die `LOB` mit der FOR UPDATE-Klausel in der SQL SELECT-Anweisung, und Sie müssen eine lokale Transaktion begonnen haben.  
+  
+ Im folgenden C#-Beispiel veranschaulicht das Schreiben in <xref:System.Data.OracleClient.OracleLob> Objekte.  
+  
+```  
+public static void WriteLobExample(OracleCommand command)  
+{  
+   //Note: Updating LOB data requires a transaction.  
+   command.Transaction = command.Connection.BeginTransaction();  
+   //Select some data.  
+   //    Table Schema:  
+   //        "CREATE TABLE tablewithlobs (a int, b BLOB, c BLOB)";  
+   //        "INSERT INTO tablewithlobs values (1, 'AA', 'AAA')";  
+   command.CommandText = "SELECT * FROM TableWithLobs FOR UPDATE";  
+   OracleDataReader reader = command.ExecuteReader();  
+   using(reader)  
+   {  
+      //Obtain the first row of data.  
+      reader.Read();  
+      //Obtain both LOBs.  
+      OracleLob BLOB1    = reader.GetOracleLob(1);  
+      OracleLob BLOB2    = reader.GetOracleLob(2);  
+      //Perform any desired operations on the LOB, (read, position, and so on).  
+      //...  
+      //Example - Writing binary data (directly to the backend).  
+      //To write, you can use any of the stream classes, or write raw binary data using   
+      //the OracleLob write method. Writing character vs. binary is the same;  
+      //however note that character is always in terms of Unicode byte counts  
+      //(for example: even number of bytes - 2 bytes for every Unicode character).  
+      byte[] buffer = new byte[100];  
+      buffer[0] = 0xCC;  
+      buffer[1] = 0xDD;  
+      BLOB1.Write(buffer, 0, 2);  
+      BLOB1.Position = 0;  
+      Console.WriteLine(BLOB1.LobType + ".Write(" + buffer + ", 0, 2) => " + BLOB1.Value);  
+  
+      //Example - Copying data into another LOB.  
+      long actual = BLOB1.CopyTo(BLOB2);  
+      Console.WriteLine(BLOB1.LobType + ".CopyTo(" + BLOB2.Value + ") => " + actual);  
+  
+      //Commit the transaction now that everything succeeded.  
+      //Note: On error, Transaction.Dispose is called (from the using statement)  
+      //and will automatically roll-back the pending transaction.  
+      command.Transaction.Commit();  
+   }  
+}  
+```  
+  
+> [!NOTE]
+>  Ein Schreibvorgang für ein schreibgeschütztes `LOB` möglicherweise erfolgreich, aber nicht mehr aktualisiert die `LOB` auf dem Server. In diesem Fall jedoch die lokale Kopie der `LOB` wird aktualisiert. Aus diesem Grund später Lesevorgänge auf die <xref:System.Data.OracleClient.OracleLob> Objekt möglicherweise die Ergebnisse des Schreibvorgangs zurück.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="buffer" /> Parameter ist ein null-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Ein Wert in der <paramref name="offset" /> oder <paramref name="count" /> -Parameter positiv ist.  
+  
+ - oder -   
+  
+ Die Summe der <paramref name="offset" /> und <paramref name="count" /> Parameter ist größer als die <paramref name="buffer" /> Länge.  
+  
+ - oder -   
+  
+ Ein Wert angegeben, der <paramref name="count" /> oder <paramref name="offset" /> -Parameter ist kleiner als 0 (null) oder größer als 4 GB.  
+  
+ - oder -   
+  
+ Sie müssen angeben, <see langword="CLOB" /> und <see langword="NCLOB" /> Datentypen als eine gerade Anzahl von Bytes.</exception>
+        <exception cref="T:System.InvalidOperationException">Der Vorgang ist nicht innerhalb einer Transaktion, die <see cref="T:System.Data.OracleClient.OracleLob" /> Objekt ist null, oder die Verbindung geschlossen wird.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde geschlossen oder verworfen.</exception>
+        <exception cref="T:System.Data.OracleClient.OracleException">Ein Oracle-Fehler aufgetreten.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteByte">
+      <MemberSignature Language="C#" Value="public override void WriteByte (byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteByte(unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleLob.WriteByte(System.Byte)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Byte, das in den Stream geschrieben werden soll.</param>
+        <summary>Schreibt ein Byte an die aktuelle Position in der <see cref="T:System.Data.OracleClient.OracleLob" /> stream und erhöht die Position im Stream um ein Byte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Schreibvorgang erfolgreich ist, erhöht die Position im Stream um ein Byte. Wenn eine Ausnahme auftritt, bleibt die Position im Stream unverändert.  
+  
+ Schreiben hinter dem Ende der `LOB` zulässig ist, und vergrößert die `LOB` um ein Byte.  
+  
+ Zum Schreiben in die `LOB`, müssen Sie abgerufen haben die `LOB` mit der FOR UPDATE-Klausel in der SQL SELECT-Anweisung, und Sie müssen eine lokale Transaktion begonnen haben.  
+  
+> [!NOTE]
+>  Ein Schreibvorgang für ein schreibgeschütztes `LOB` möglicherweise erfolgreich, aber nicht mehr aktualisiert die `LOB` auf dem Server. In diesem Fall jedoch die lokale Kopie der `LOB` wird aktualisiert. Aus diesem Grund später Lesevorgänge auf die <xref:System.Data.OracleClient.OracleLob> Objekt möglicherweise die Ergebnisse des Schreibvorgangs zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

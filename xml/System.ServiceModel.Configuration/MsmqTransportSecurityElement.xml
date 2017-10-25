@@ -1,0 +1,172 @@
+<Type Name="MsmqTransportSecurityElement" FullName="System.ServiceModel.Configuration.MsmqTransportSecurityElement">
+  <TypeSignature Language="C#" Value="public sealed class MsmqTransportSecurityElement : System.ServiceModel.Configuration.ServiceModelConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MsmqTransportSecurityElement extends System.ServiceModel.Configuration.ServiceModelConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.MsmqTransportSecurityElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Configuration.ServiceModelConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.ServiceModel.Configuration.MsmqTransportSecurityElement" />-Klasse kapselt die Transportsicherheitseinstellungen für in der Warteschlange stehende Transporte ein.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MsmqTransportSecurityElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.MsmqTransportSecurityElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Configuration.MsmqTransportSecurityElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MsmqAuthenticationMode">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.MsmqAuthenticationMode MsmqAuthenticationMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.MsmqAuthenticationMode MsmqAuthenticationMode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.MsmqTransportSecurityElement.MsmqAuthenticationMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("msmqAuthenticationMode", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.MsmqAuthenticationMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.ServiceModel.MsmqAuthenticationMode" /> ab oder legt ihn fest, der dieser Instanz der <see cref="T:System.ServiceModel.MsmqTransportSecurity" />-Klasse zugeordnet ist.</summary>
+        <value>Der <see cref="T:System.ServiceModel.MsmqAuthenticationMode" />, der dieser Instanz der <see cref="T:System.ServiceModel.MsmqTransportSecurity" />-Klasse zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Message Queuing (MSMQ) kann Meldungen authentifizieren, die an Meldungswarteschlangen gesendet werden, die Authentifizierung erfordern oder die eine Authentifizierung explizit anfordern können. Der Standardauthentifizierungsmodus ist <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MsmqEncryptionAlgorithm">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.MsmqEncryptionAlgorithm MsmqEncryptionAlgorithm { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.MsmqEncryptionAlgorithm MsmqEncryptionAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.MsmqTransportSecurityElement.MsmqEncryptionAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("msmqEncryptionAlgorithm", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.MsmqEncryptionAlgorithm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.ServiceModel.MsmqEncryptionAlgorithm" /> ab oder legt ihn fest, der dieser Instanz der <see cref="T:System.ServiceModel.MsmqTransportSecurity" />-Klasse zugeordnet ist.</summary>
+        <value>Der <see cref="T:System.ServiceModel.MsmqEncryptionAlgorithm" />, der dieser Instanz der <see cref="T:System.ServiceModel.MsmqTransportSecurity" />-Klasse zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Message Queuing (MSMQ) kann Meldungen verschlüsseln, wenn es Meldungen zwischen Meldungswarteschlangen-Managern überträgt. Der Standardverschlüsselungsalgorithmus ist <xref:System.ServiceModel.MsmqEncryptionAlgorithm.RC4Stream>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MsmqProtectionLevel">
+      <MemberSignature Language="C#" Value="public System.Net.Security.ProtectionLevel MsmqProtectionLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Security.ProtectionLevel MsmqProtectionLevel" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.MsmqTransportSecurityElement.MsmqProtectionLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("msmqProtectionLevel", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.Security.ProtectionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Net.Security.ProtectionLevel" /> ab oder legt ihn fest, der dieser Instanz der <see cref="T:System.ServiceModel.Configuration.MsmqTransportSecurityElement" />-Klasse zugeordnet ist.</summary>
+        <value>Der <see cref="T:System.Net.Security.ProtectionLevel" />, der dieser Instanz der <see cref="T:System.ServiceModel.MsmqTransportSecurity" />-Klasse zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardschutzebene ist <xref:System.Net.Security.ProtectionLevel.Sign>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MsmqSecureHashAlgorithm">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.MsmqSecureHashAlgorithm MsmqSecureHashAlgorithm { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.MsmqSecureHashAlgorithm MsmqSecureHashAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.MsmqTransportSecurityElement.MsmqSecureHashAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("msmqSecureHashAlgorithm", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.MsmqSecureHashAlgorithm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.ServiceModel.MsmqSecureHashAlgorithm" /> ab oder legt ihn fest, der dieser Instanz der <see cref="T:System.ServiceModel.Configuration.MsmqTransportSecurityElement" />-Klasse zugeordnet ist.</summary>
+        <value>Der <see cref="T:System.ServiceModel.MsmqSecureHashAlgorithm" />, der dieser Instanz der <see cref="T:System.ServiceModel.MsmqTransportSecurity" />-Klasse zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardhashalgorithmus ist <xref:System.ServiceModel.MsmqSecureHashAlgorithm>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.MsmqTransportSecurityElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

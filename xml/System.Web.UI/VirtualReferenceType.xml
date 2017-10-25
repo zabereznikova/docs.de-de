@@ -1,0 +1,107 @@
+<Type Name="VirtualReferenceType" FullName="System.Web.UI.VirtualReferenceType">
+  <TypeSignature Language="C#" Value="public enum VirtualReferenceType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed VirtualReferenceType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.VirtualReferenceType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Typ der Ressource, die durch einen analysierten virtuellen Pfad verwiesen wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.VirtualReferenceType> Enumeration beschreibt den Typ der Ressource, die durch einen virtuellen Pfad verwiesen wird. Die <xref:System.Web.UI.VirtualReferenceType> wird von der analysierten Erweiterung der Ressource bestimmt.  
+  
+ Seiten- und Entwickler verwenden Sie nicht die <xref:System.Web.UI.VirtualReferenceType> Enumeration direkt. Erweiterbarkeit-Entwickler können die <xref:System.Web.UI.VirtualReferenceType> Enumeration, die beim Erweitern der <xref:System.Web.UI.PageParserFilter> -Klasse und überschreiben die <xref:System.Web.UI.PageParserFilter.AllowVirtualReference%2A> Methode.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Master">
+      <MemberSignature Language="C#" Value="Master" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.VirtualReferenceType Master = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.VirtualReferenceType.Master" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.VirtualReferenceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der analysierte virtuelle Pfad verweist auf eine Masterseitendatei.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Other">
+      <MemberSignature Language="C#" Value="Other" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.VirtualReferenceType Other = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.VirtualReferenceType.Other" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.VirtualReferenceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der analysierte virtuelle Pfad verweist auf eine Ressource, die nicht ASP.NET Seite, Seite "master", Benutzersteuerelement oder sprachspezifische Code-Datei ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Page">
+      <MemberSignature Language="C#" Value="Page" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.VirtualReferenceType Page = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.VirtualReferenceType.Page" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.VirtualReferenceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der analysierte virtuelle Pfad verweist auf einer ASP.NET-Seite.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceFile">
+      <MemberSignature Language="C#" Value="SourceFile" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.VirtualReferenceType SourceFile = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.VirtualReferenceType.SourceFile" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.VirtualReferenceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der analysierte virtuelle Pfad verweist auf eine Codedatei, die mit einem speziellen Sprach-Compiler kompiliert wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UserControl">
+      <MemberSignature Language="C#" Value="UserControl" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.VirtualReferenceType UserControl = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.VirtualReferenceType.UserControl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.VirtualReferenceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der analysierte virtuelle Pfad verweist auf ein ASP.NET-Benutzersteuerelement.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

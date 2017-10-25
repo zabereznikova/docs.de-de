@@ -1,0 +1,124 @@
+<Type Name="ViewEvent" FullName="System.Web.UI.Design.ViewEvent">
+  <TypeSignature Language="C#" Value="public sealed class ViewEvent" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ViewEvent extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.ViewEvent" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Art des Ereignisses, das für eine Sicht eines Steuerelements zur Entwurfszeit aufgetreten ist. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Web.UI.Design.ViewEvent> -Objekt bereitgestellt, um die Designer-Komponente vom Entwurfshost, z. B. [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)], die beim Auslösen eines Ereignisses durch bestimmte Benutzeraktionen in der Entwurfszeitansicht eines Steuerelements verursacht. Die <xref:System.Web.UI.Design.IControlDesignerView.ViewEvent?displayProperty=nameWithType> Ereignis erfolgt durch eine <xref:System.Web.UI.Design.ViewEventHandler> Delegatenmethode nimmt eine <xref:System.Web.UI.Design.ViewEventArgs> -Objekt als Parameter. Die <xref:System.Web.UI.Design.ViewEventArgs.EventType%2A> Eigenschaft von der <xref:System.Web.UI.Design.ViewEventArgs> Klasse ist eine <xref:System.Web.UI.Design.ViewEvent> Objekt. Die <xref:System.Web.UI.Design.ViewEventHandler> delegieren-Methode vergleicht die <xref:System.Web.UI.Design.ViewEventArgs.EventType%2A> der statischen Eigenschaft <xref:System.Web.UI.Design.ViewEvent> Felder, um zu bestimmen, welche Art von Aktion das Ereignis ausgelöst hat. Beispielsweise wird ein Ereignis in den folgenden Situationen ausgelöst:  
+  
+-   Klicken Sie auf eine Region auf der Entwurfsoberfläche angezeigt.  
+  
+-   Der Designer zeichnet ein Steuerelement auf der Entwurfsoberfläche angezeigt.  
+  
+-   Sie geben oder Vorlagenbearbeitungsmodus für ein Steuerelement zu beenden.  
+  
+ Die <xref:System.Web.UI.Design.ControlDesigner> -Klasse stellt ein Delegat standardmäßig behandelt der <xref:System.Web.UI.Design.IControlDesignerView.ViewEvent?displayProperty=nameWithType> Ereignis. Benutzerdefiniertes Steuerelement-Designer überschreiben die <xref:System.Web.UI.Design.ControlDesigner.OnClick%2A>, <xref:System.Web.UI.Design.ControlDesigner.OnPaint%2A>, und <xref:System.Web.UI.Design.TemplatedControlDesigner.OnTemplateModeChanged%2A> Methoden für die Verarbeitung dieser Ereignisse für das Steuerelement auf der Entwurfsoberfläche angezeigt.  
+  
+ Initialisiert den Designerhost eine <xref:System.Web.UI.Design.ViewEventArgs> -Objekt für den Typ der Aktion auf der Entwurfsoberfläche, und übergibt dann das Objekt, das die <xref:System.Web.UI.Design.ViewEventHandler> delegieren. Die <xref:System.Web.UI.Design.ViewEventArgs.EventType%2A> Eigenschaft von der <xref:System.Web.UI.Design.ViewEventArgs> Objekt gibt an, welche Art von Aktion:  
+  
+-   Ein <xref:System.Web.UI.Design.ViewEvent.Click> Ereignis.  
+  
+-   Ein <xref:System.Web.UI.Design.ViewEvent.Paint> Ereignis.  
+  
+-   Ein <xref:System.Web.UI.Design.ViewEvent.TemplateModeChanged> Ereignis.  
+  
+ Die <xref:System.Web.UI.Design.ViewEventArgs.EventArgs%2A> Eigenschaft stellt die Ereignisargumente, die für den Typ der Aktion spezifisch sind.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Click">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.Design.ViewEvent Click;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.Design.ViewEvent Click" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.Design.ViewEvent.Click" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.ViewEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass ein sichtereignis für mit einem Klick auf eine Designerbereich ausgelöst wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Web.UI.Design.ViewEventHandler> delegieren-Methode vergleicht die <xref:System.Web.UI.Design.ViewEventArgs.EventType%2A> der statischen Eigenschaft <xref:System.Web.UI.Design.ViewEvent> Felder, um zu bestimmen, welche Art von Aktion das Ereignis ausgelöst hat. Ein <xref:System.Web.UI.Design.ViewEvent> Objekt gleich <xref:System.Web.UI.Design.ViewEvent.Click> um anzugeben, dass Sie eine Region auf der Entwurfsoberfläche geklickt haben.  
+  
+ Die <xref:System.Web.UI.Design.ControlDesigner> -Klasse stellt den Standardwert <xref:System.Web.UI.Design.ViewEventHandler> delegieren. Wenn der Ereignistyp ist <xref:System.Web.UI.Design.ViewEvent.Click>, ruft der Delegat die <xref:System.Web.UI.Design.ControlDesigner.OnClick%2A> Methode. Klassen, die von der <xref:System.Web.UI.Design.ControlDesigner> -Klasse überschreiben die <xref:System.Web.UI.Design.ControlDesigner.OnClick%2A> Methode zum Behandeln click-Ereignisse auf einen Bereich zur Entwurfszeit. Die Ereignisargumente Geben Sie an der Bereich des Designers geklickt wurde, sofern vorhanden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Paint">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.Design.ViewEvent Paint;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.Design.ViewEvent Paint" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.Design.ViewEvent.Paint" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.ViewEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass ein sichtereignis ausgelöst wurde, für das Zeichnen eines Steuerelements auf der Entwurfsoberfläche angezeigt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Web.UI.Design.ViewEventHandler> delegieren-Methode vergleicht die <xref:System.Web.UI.Design.ViewEventArgs.EventType%2A> der statischen Eigenschaft <xref:System.Web.UI.Design.ViewEvent> Felder, um zu bestimmen, welche Art von Aktion das Ereignis ausgelöst hat. Ein <xref:System.Web.UI.Design.ViewEvent> Objekt gleich <xref:System.Web.UI.Design.ViewEvent.Paint> an, dass eine Paint-Ereignis für das Steuerelement auf der Entwurfsoberfläche angezeigt.  
+  
+ Die <xref:System.Web.UI.Design.ControlDesigner> -Klasse stellt den Standardwert <xref:System.Web.UI.Design.ViewEventHandler> delegieren. Wenn der Ereignistyp ist <xref:System.Web.UI.Design.ViewEvent.Paint>, ruft der Delegat die <xref:System.Web.UI.Design.ControlDesigner.OnPaint%2A> Methode. Klassen, die von der <xref:System.Web.UI.Design.ControlDesigner> -Klasse überschreiben die <xref:System.Web.UI.Design.ControlDesigner.OnPaint%2A> Methode zum Behandeln click-Ereignisse auf einen Bereich zur Entwurfszeit.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TemplateModeChanged">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.Design.ViewEvent TemplateModeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.Design.ViewEvent TemplateModeChanged" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.Design.ViewEvent.TemplateModeChanged" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.ViewEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass ein sichtereignis ausgelöst wurde, für die Vorlage von einem Steuerelement-Designer ändern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Web.UI.Design.ViewEventHandler> delegieren-Methode vergleicht die <xref:System.Web.UI.Design.ViewEventArgs.EventType%2A> der statischen Eigenschaft <xref:System.Web.UI.Design.ViewEvent> Felder, um zu bestimmen, welche Art von Aktion das Ereignis ausgelöst hat. Ein <xref:System.Web.UI.Design.ViewEvent> Objekt gleich <xref:System.Web.UI.Design.ViewEvent.TemplateModeChanged> , um anzugeben, dass der Vorlagenbearbeitungsmodus für ein Steuerelement auf der Entwurfsoberfläche geändert.  
+  
+ Die <xref:System.Web.UI.Design.ControlDesigner> -Klasse stellt den Standardwert <xref:System.Web.UI.Design.ViewEventHandler> delegieren. Wenn der Ereignistyp ist <xref:System.Web.UI.Design.ViewEvent.TemplateModeChanged>, der Delegat wird der Wert für die <xref:System.Web.UI.Design.ControlDesigner.InTemplateMode%2A> Eigenschaft.  
+  
+ Benutzerdefinierte Designer zur Verfügung, die abgeleitet sind die <xref:System.Web.UI.Design.TemplatedControlDesigner> -Klasse überschreiben die <xref:System.Web.UI.Design.TemplatedControlDesigner.OnTemplateModeChanged%2A> Methode, um zusätzliche Verarbeitung aus, wenn die Vorlage bearbeiten modusänderung für ein Steuerelement auf der Entwurfsoberfläche ausführen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

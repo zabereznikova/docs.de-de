@@ -1,0 +1,698 @@
+<Type Name="ForeignKeyConstraint" FullName="System.Data.ForeignKeyConstraint">
+  <TypeSignature Language="C#" Value="public class ForeignKeyConstraint : System.Data.Constraint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ForeignKeyConstraint extends System.Data.Constraint" />
+  <TypeSignature Language="DocId" Value="T:System.Data.ForeignKeyConstraint" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Constraint</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("ConstraintName")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Editor("Microsoft.VSDesigner.Data.Design.ForeignKeyConstraintEditor, Microsoft.VSDesigner, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Aktion-Einschränkung für eine Gruppe von Spalten in einem Primärschlüssel/Fremdschlüssel-Beziehung erzwungen wird, wenn ein Wert oder eine Zeile gelöscht oder aktualisiert wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Data.ForeignKeyConstraint> schränkt die Aktion ausgeführt, wenn ein Wert in einer Spalte (oder Spalten) entweder gelöscht oder aktualisiert wird. Eine solche Einschränkung soll mit den Schlüsselspalten verwendet werden. In einer über-/unterordnungsbeziehung zwischen zwei Tabellen kann einen Wert aus der übergeordneten Tabelle gelöscht untergeordneten Zeilen in einem der folgenden Arten wirken sich auf.  
+  
+-   Das untergeordnete Element, Zeilen, auch sein können, gelöscht (eine kaskadierende Aktion).  
+  
+-   Die Werte in die untergeordnete Spalte (oder Spalten) können auf null-Werte festgelegt werden.  
+  
+-   Die Werte in die untergeordnete Spalte (oder Spalten) können auf Standardwerte festgelegt werden.  
+  
+-   Eine Ausnahme kann ausgelöst werden.  
+  
+ <xref:System.Data.ForeignKeyConstraint>Objekte sind enthalten die <xref:System.Data.ConstraintCollection> von einer <xref:System.Data.DataTable>, die erfolgt über die <xref:System.Data.DataTable.Constraints%2A> Eigenschaft.  
+  
+ Einschränkungen werden nicht angewendet, es sei denn, die <xref:System.Data.DataSet.EnforceConstraints%2A> -Eigenschaftensatz auf `true`.  
+  
+ Die <xref:System.Data.ForeignKeyConstraint.AcceptRejectRule%2A> wird erzwungen, wenn eine <xref:System.Data.DataTable> des Objekts <xref:System.Data.DataTable.AcceptChanges%2A> Methode aufgerufen wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.ForeignKeyConstraint>, einige seiner Eigenschaften festgelegt und fügt es einer <xref:System.Data.DataTable> des Objekts <xref:System.Data.ConstraintCollection>.  
+  
+ [!code-vb[Classic WebData ForeignKeyConstraint Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData ForeignKeyConstraint Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Dieser Typ ist für schreibgeschützte Vorgänge mit mehreren Threads sicher. Sie müssen alle Schreibvorgänge synchronisieren.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ForeignKeyConstraint (System.Data.DataColumn parentColumn, System.Data.DataColumn childColumn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.DataColumn parentColumn, class System.Data.DataColumn childColumn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.ForeignKeyConstraint.#ctor(System.Data.DataColumn,System.Data.DataColumn)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="parentColumn" Type="System.Data.DataColumn" />
+        <Parameter Name="childColumn" Type="System.Data.DataColumn" />
+      </Parameters>
+      <Docs>
+        <param name="parentColumn">Das übergeordnete Element <see cref="T:System.Data.DataColumn" /> in der Einschränkung.</param>
+        <param name="childColumn">Das untergeordnete Element <see cref="T:System.Data.DataColumn" /> in der Einschränkung.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.ForeignKeyConstraint" /> Klasse mit dem angegebenen übergeordneten und untergeordneten <see cref="T:System.Data.DataColumn" /> Objekte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt ein neues <xref:System.Data.ForeignKeyConstraint>, einige seiner Eigenschaften festgelegt und fügt es einer <xref:System.Data.DataTable> des Objekts <xref:System.Data.ConstraintCollection>.  
+  
+ [!code-vb[Classic WebData ForeignKeyConstraint.ForeignKeyConstraint Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData ForeignKeyConstraint.ForeignKeyConstraint Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Mindestens eine der Spalten ist <see langword="null" />.</exception>
+        <exception cref="T:System.Data.InvalidConstraintException">Die Spalten haben unterschiedliche Datentypen.  
+  
+ -"Oder"-  
+  
+ Die Tabellen gehören nicht zu dem <see cref="T:System.Data.DataSet" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ForeignKeyConstraint (System.Data.DataColumn[] parentColumns, System.Data.DataColumn[] childColumns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.DataColumn[] parentColumns, class System.Data.DataColumn[] childColumns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.ForeignKeyConstraint.#ctor(System.Data.DataColumn[],System.Data.DataColumn[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="parentColumns" Type="System.Data.DataColumn[]" />
+        <Parameter Name="childColumns" Type="System.Data.DataColumn[]" />
+      </Parameters>
+      <Docs>
+        <param name="parentColumns">Ein Array von übergeordneten <see cref="T:System.Data.DataColumn" /> in der Einschränkung.</param>
+        <param name="childColumns">Ein Array des untergeordneten <see cref="T:System.Data.DataColumn" /> in der Einschränkung.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.ForeignKeyConstraint" /> -Klasse mit den angegebenen Arrays von übergeordneten und untergeordneten <see cref="T:System.Data.DataColumn" /> Objekte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt ein neues <xref:System.Data.ForeignKeyConstraint>, einige seiner Eigenschaften festgelegt und fügt es einer <xref:System.Data.DataTable> des Objekts <xref:System.Data.ConstraintCollection>.  
+  
+ [!code-vb[Classic WebData ForeignKeyConstraint.ForeignKeyConstraint2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData ForeignKeyConstraint.ForeignKeyConstraint2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Mindestens eine der Spalten ist <see langword="null" />.</exception>
+        <exception cref="T:System.Data.InvalidConstraintException">Die Spalten haben unterschiedliche Datentypen.  
+  
+ -"Oder"-  
+  
+ Die Tabellen gehören nicht zu dem <see cref="T:System.Data.DataSet" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ForeignKeyConstraint (string constraintName, System.Data.DataColumn parentColumn, System.Data.DataColumn childColumn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string constraintName, class System.Data.DataColumn parentColumn, class System.Data.DataColumn childColumn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.ForeignKeyConstraint.#ctor(System.String,System.Data.DataColumn,System.Data.DataColumn)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="constraintName" Type="System.String" />
+        <Parameter Name="parentColumn" Type="System.Data.DataColumn" />
+        <Parameter Name="childColumn" Type="System.Data.DataColumn" />
+      </Parameters>
+      <Docs>
+        <param name="constraintName">Der Name der Einschränkung.</param>
+        <param name="parentColumn">Das übergeordnete Element <see cref="T:System.Data.DataColumn" /> in der Einschränkung.</param>
+        <param name="childColumn">Das untergeordnete Element <see cref="T:System.Data.DataColumn" /> in der Einschränkung.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.ForeignKeyConstraint" /> Klasse mit dem angegebenen Namen, die übergeordneten und untergeordneten <see cref="T:System.Data.DataColumn" /> Objekte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt ein neues <xref:System.Data.ForeignKeyConstraint>, einige seiner Eigenschaften festgelegt und fügt es einer <xref:System.Data.DataTable> des Objekts <xref:System.Data.ConstraintCollection>.  
+  
+ [!code-vb[Classic WebData ForeignKeyConstraint.ForeignKeyConstraint1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData ForeignKeyConstraint.ForeignKeyConstraint1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Mindestens eine der Spalten ist <see langword="null" />.</exception>
+        <exception cref="T:System.Data.InvalidConstraintException">Die Spalten haben unterschiedliche Datentypen.  
+  
+ -"Oder"-  
+  
+ Die Tabellen gehören nicht zu dem <see cref="T:System.Data.DataSet" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ForeignKeyConstraint (string constraintName, System.Data.DataColumn[] parentColumns, System.Data.DataColumn[] childColumns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string constraintName, class System.Data.DataColumn[] parentColumns, class System.Data.DataColumn[] childColumns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.ForeignKeyConstraint.#ctor(System.String,System.Data.DataColumn[],System.Data.DataColumn[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="constraintName" Type="System.String" />
+        <Parameter Name="parentColumns" Type="System.Data.DataColumn[]" />
+        <Parameter Name="childColumns" Type="System.Data.DataColumn[]" />
+      </Parameters>
+      <Docs>
+        <param name="constraintName">Der Name des <see cref="T:System.Data.ForeignKeyConstraint" />. Wenn <see langword="null" /> oder leere Zeichenfolge ist, ein Standardnamen erhält die Constraints-Auflistung hinzugefügt.</param>
+        <param name="parentColumns">Ein Array von übergeordneten <see cref="T:System.Data.DataColumn" /> in der Einschränkung.</param>
+        <param name="childColumns">Ein Array des untergeordneten <see cref="T:System.Data.DataColumn" /> in der Einschränkung.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Data.ForeignKeyConstraint" /> Klasse mit dem angegebenen Namen und Arrays von übergeordneten und untergeordneten <see cref="T:System.Data.DataColumn" /> Objekte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt ein neues <xref:System.Data.ForeignKeyConstraint>, einige seiner Eigenschaften festgelegt und fügt es einer <xref:System.Data.DataTable> des Objekts <xref:System.Data.ConstraintCollection>.  
+  
+ [!code-vb[Classic WebData ForeignKeyConstraint.ForeignKeyConstraint3 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData ForeignKeyConstraint.ForeignKeyConstraint3 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Mindestens eine der Spalten ist <see langword="null" />.</exception>
+        <exception cref="T:System.Data.InvalidConstraintException">Die Spalten haben unterschiedliche Datentypen.  
+  
+ -"Oder"-  
+  
+ Die Tabellen gehören nicht zu dem <see cref="T:System.Data.DataSet" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ForeignKeyConstraint (string constraintName, string parentTableName, string[] parentColumnNames, string[] childColumnNames, System.Data.AcceptRejectRule acceptRejectRule, System.Data.Rule deleteRule, System.Data.Rule updateRule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string constraintName, string parentTableName, string[] parentColumnNames, string[] childColumnNames, valuetype System.Data.AcceptRejectRule acceptRejectRule, valuetype System.Data.Rule deleteRule, valuetype System.Data.Rule updateRule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.ForeignKeyConstraint.#ctor(System.String,System.String,System.String[],System.String[],System.Data.AcceptRejectRule,System.Data.Rule,System.Data.Rule)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="constraintName" Type="System.String" />
+        <Parameter Name="parentTableName" Type="System.String" />
+        <Parameter Name="parentColumnNames" Type="System.String[]" />
+        <Parameter Name="childColumnNames" Type="System.String[]" />
+        <Parameter Name="acceptRejectRule" Type="System.Data.AcceptRejectRule" />
+        <Parameter Name="deleteRule" Type="System.Data.Rule" />
+        <Parameter Name="updateRule" Type="System.Data.Rule" />
+      </Parameters>
+      <Docs>
+        <param name="constraintName">Der Name der Einschränkung.</param>
+        <param name="parentTableName">Der Name des übergeordneten Elements <see cref="T:System.Data.DataTable" /> enthält übergeordnete <see cref="T:System.Data.DataColumn" /> Objekte in der Einschränkung.</param>
+        <param name="parentColumnNames">Ein Array mit den Namen der übergeordneten <see cref="T:System.Data.DataColumn" /> Objekte in der Einschränkung.</param>
+        <param name="childColumnNames">Ein Array mit den Namen der untergeordneten <see cref="T:System.Data.DataColumn" /> Objekte in der Einschränkung.</param>
+        <param name="acceptRejectRule">Einer der <see cref="T:System.Data.AcceptRejectRule" />-Werte. Mögliche Werte sind: <see langword="None" />, <see langword="Cascade" />, und <see langword="Default" />.</param>
+        <param name="deleteRule">Eines der <see cref="T:System.Data.Rule" /> Werte zu verwenden, wenn eine Zeile gelöscht wird. Die Standardeinstellung ist <see langword="Cascade" />. Folgende Werte sind möglich: <see langword="None" />, <see langword="Cascade" />, <see langword="SetNull" />, <see langword="SetDefault" />, und <see langword="Default" />.</param>
+        <param name="updateRule">Eines der <see cref="T:System.Data.Rule" /> Werte zu verwenden, wenn eine Zeile aktualisiert wird. Die Standardeinstellung ist <see langword="Cascade" />. Folgende Werte sind möglich: <see langword="None" />, <see langword="Cascade" />, <see langword="SetNull" />, <see langword="SetDefault" />, und <see langword="Default" />.</param>
+        <summary>Dieser Konstruktor wird für die entwurfszeitunterstützung in Visual Studio-Umgebung bereitgestellt. <see cref="T:System.Data.ForeignKeyConstraint" />mit diesem Konstruktor erstellten Objekte müssen anschließend hinzugefügt werden, auf die Auflistung über <see cref="M:System.Data.ConstraintCollection.AddRange(System.Data.Constraint[])" />. Tabellen und Spalten mit den angegebenen Namen müssen vorhanden sein, die zum Zeitpunkt der-Methode aufgerufen wird, oder wenn <see cref="M:System.Data.DataTable.BeginInit" /> vor dem Aufruf dieses Konstruktors, die Tabellen und Spalten mit den angegebenen Namen vorhanden, die zum Zeitpunkt sein müssen aufgerufen wurde, <see cref="M:System.Data.DataTable.EndInit" /> aufgerufen wird.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Mindestens eine der Spalten ist <see langword="null" />.</exception>
+        <exception cref="T:System.Data.InvalidConstraintException">Die Spalten haben unterschiedliche Datentypen.  
+  
+ -"Oder"-  
+  
+ Die Tabellen gehören nicht zu dem <see cref="T:System.Data.DataSet" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ForeignKeyConstraint (string constraintName, string parentTableName, string parentTableNamespace, string[] parentColumnNames, string[] childColumnNames, System.Data.AcceptRejectRule acceptRejectRule, System.Data.Rule deleteRule, System.Data.Rule updateRule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string constraintName, string parentTableName, string parentTableNamespace, string[] parentColumnNames, string[] childColumnNames, valuetype System.Data.AcceptRejectRule acceptRejectRule, valuetype System.Data.Rule deleteRule, valuetype System.Data.Rule updateRule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.ForeignKeyConstraint.#ctor(System.String,System.String,System.String,System.String[],System.String[],System.Data.AcceptRejectRule,System.Data.Rule,System.Data.Rule)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="constraintName" Type="System.String" />
+        <Parameter Name="parentTableName" Type="System.String" />
+        <Parameter Name="parentTableNamespace" Type="System.String" />
+        <Parameter Name="parentColumnNames" Type="System.String[]" />
+        <Parameter Name="childColumnNames" Type="System.String[]" />
+        <Parameter Name="acceptRejectRule" Type="System.Data.AcceptRejectRule" />
+        <Parameter Name="deleteRule" Type="System.Data.Rule" />
+        <Parameter Name="updateRule" Type="System.Data.Rule" />
+      </Parameters>
+      <Docs>
+        <param name="constraintName">Der Name der Einschränkung.</param>
+        <param name="parentTableName">Der Name des übergeordneten Elements <see cref="T:System.Data.DataTable" /> enthält übergeordnete <see cref="T:System.Data.DataColumn" /> Objekte in der Einschränkung.</param>
+        <param name="parentTableNamespace">Der Name des <see cref="P:System.Data.DataTable.Namespace" />.</param>
+        <param name="parentColumnNames">Ein Array mit den Namen der übergeordneten <see cref="T:System.Data.DataColumn" /> Objekte in der Einschränkung.</param>
+        <param name="childColumnNames">Ein Array mit den Namen der untergeordneten <see cref="T:System.Data.DataColumn" /> Objekte in der Einschränkung.</param>
+        <param name="acceptRejectRule">Einer der <see cref="T:System.Data.AcceptRejectRule" />-Werte. Mögliche Werte sind: <see langword="None" />, <see langword="Cascade" />, und <see langword="Default" />.</param>
+        <param name="deleteRule">Eines der <see cref="T:System.Data.Rule" /> Werte zu verwenden, wenn eine Zeile gelöscht wird. Die Standardeinstellung ist <see langword="Cascade" />. Folgende Werte sind möglich: <see langword="None" />, <see langword="Cascade" />, <see langword="SetNull" />, <see langword="SetDefault" />, und <see langword="Default" />.</param>
+        <param name="updateRule">Eines der <see cref="T:System.Data.Rule" /> Werte zu verwenden, wenn eine Zeile aktualisiert wird. Die Standardeinstellung ist <see langword="Cascade" />. Folgende Werte sind möglich: <see langword="None" />, <see langword="Cascade" />, <see langword="SetNull" />, <see langword="SetDefault" />, und <see langword="Default" />.</param>
+        <summary>Dieser Konstruktor wird für die entwurfszeitunterstützung in Visual Studio-Umgebung bereitgestellt. <see cref="T:System.Data.ForeignKeyConstraint" />mit diesem Konstruktor erstellten Objekte müssen anschließend hinzugefügt werden, auf die Auflistung über <see cref="M:System.Data.ConstraintCollection.AddRange(System.Data.Constraint[])" />. Tabellen und Spalten mit den angegebenen Namen müssen vorhanden sein, die zum Zeitpunkt der-Methode aufgerufen wird, oder wenn <see cref="M:System.Data.DataTable.BeginInit" /> vor dem Aufruf dieses Konstruktors, die Tabellen und Spalten mit den angegebenen Namen vorhanden, die zum Zeitpunkt sein müssen aufgerufen wurde, <see cref="M:System.Data.DataTable.EndInit" /> aufgerufen wird.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Mindestens eine der Spalten ist <see langword="null" />.</exception>
+        <exception cref="T:System.Data.InvalidConstraintException">Die Spalten haben unterschiedliche Datentypen.  
+  
+ -"Oder"-  
+  
+ Die Tabellen gehören nicht zu dem <see cref="T:System.Data.DataSet" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptRejectRule">
+      <MemberSignature Language="C#" Value="public virtual System.Data.AcceptRejectRule AcceptRejectRule { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.AcceptRejectRule AcceptRejectRule" />
+      <MemberSignature Language="DocId" Value="P:System.Data.ForeignKeyConstraint.AcceptRejectRule" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.AcceptRejectRule</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Aktion an, die für diese Einschränkung erfolgen sollte beim <see cref="M:System.Data.DataTable.AcceptChanges" /> aufgerufen wird.</summary>
+        <value>Einer der <see cref="T:System.Data.AcceptRejectRule" />-Werte. Mögliche Werte sind: <see langword="None" />, und <see langword="Cascade" />. Die Standardeinstellung ist <see langword="None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Änderungen an einer <xref:System.Data.DataRow> oder <xref:System.Data.DataTable> ist nicht endgültig bis die `AcceptChanges` Methode aufgerufen wird. An diesem Punkt wird die <xref:System.Data.ForeignKeyConstraint.AcceptRejectRule%2A> bestimmt, welche Aktion für alle Werte, die geändert oder gelöscht wurden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.ForeignKeyConstraint>, legt dessen <xref:System.Data.ForeignKeyConstraint.AcceptRejectRule%2A>, und fügt die Einschränkung auf eine <xref:System.Data.DataTable> des Objekts <xref:System.Data.ConstraintCollection>.  
+  
+ [!code-vb[Classic WebData ForeignKeyConstraint.DeleteRule Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData ForeignKeyConstraint.DeleteRule Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Columns">
+      <MemberSignature Language="C#" Value="public virtual System.Data.DataColumn[] Columns { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.DataColumn[] Columns" />
+      <MemberSignature Language="DocId" Value="P:System.Data.ForeignKeyConstraint.Columns" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.DataColumn[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die untergeordneten Spalten dieser Einschränkung ab.</summary>
+        <value>Ein Array von <see cref="T:System.Data.DataColumn" /> Objekte, die die untergeordneten Spalten der Einschränkung sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel gibt ein Array von <xref:System.Data.DataColumn> Objekte über die <xref:System.Data.ForeignKeyConstraint.Columns%2A> Eigenschaft.  
+  
+ [!code-vb[Classic WebData ForeignKeyConstraint.Columns Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData ForeignKeyConstraint.Columns Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteRule">
+      <MemberSignature Language="C#" Value="public virtual System.Data.Rule DeleteRule { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.Rule DeleteRule" />
+      <MemberSignature Language="DocId" Value="P:System.Data.ForeignKeyConstraint.DeleteRule" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.Rule</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, die Aktion, die über diese Einschränkung tritt auf, wenn eine Zeile gelöscht wird.</summary>
+        <value>Einer der <see cref="T:System.Data.Rule" />-Werte. Die Standardeinstellung ist <see langword="Cascade" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Zeile aus einer übergeordneten Tabelle gelöscht wird die <xref:System.Data.ForeignKeyConstraint.DeleteRule%2A> bestimmt, was in den Spalten der untergeordneten Tabelle (oder Tabellen) ausgeführt wird. Wenn die Regel, um festgelegt ist `Cascade`, untergeordneten Zeilen gelöscht werden.  
+  
+ Wenn auf festgelegt `SetNull`ein `DBnull` wird in den entsprechenden Spalten der betroffenen Zeilen eingefügt werden. Je nach Datenquelle ein null-Wert möglicherweise oder sind möglicherweise nicht in einer Spalte zulässig sein. SQLServer kann z. B. mehrere null-Werte in eine Primärschlüsselspalte vorhanden, selbst wenn sie nicht eindeutig sind. In eine <xref:System.Data.DataTable>jedoch, wenn eine <xref:System.Data.DataColumn> des Objekts <xref:System.Data.DataColumn.Unique%2A> -Eigenschaftensatz auf `true`, mehrere null-Werte sind in Primärschlüsselspalten nicht zulässig.  
+  
+ Wenn auf festgelegt `SetDefault`, der Standardwert für die Spalte zugewiesen ist.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird eine ForeignKeyConstraint erstellt, verschiedene Eigenschaften festgelegt und hinzugefügt eine <xref:System.Data.DataTable> des Objekts <xref:System.Data.ConstraintCollection>.  
+  
+ [!code-vb[Classic WebData ForeignKeyConstraint.DeleteRule Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData ForeignKeyConstraint.DeleteRule Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.ForeignKeyConstraint.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">Das Objekt, das dieses <see cref="T:System.Data.ForeignKeyConstraint" /> verglichen wird. Zwei <see cref="T:System.Data.ForeignKeyConstraint" /> sind gleich, wenn sie dieselben Spalten einschränken.</param>
+        <summary>Ruft einen Wert, der angibt, ob die aktuelle <see cref="T:System.Data.ForeignKeyConstraint" /> mit dem angegebenen Objekt identisch ist.</summary>
+        <returns>
+          <see langword="true" />, wenn die Objekte identisch sind; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt ein neues <xref:System.Data.ForeignKeyConstraint> und vergleicht es mit anderen Member der Auflistung mit den <xref:System.Data.ForeignKeyConstraint.Equals%2A> -Methode vor dem Hinzufügen zu einer <xref:System.Data.ConstraintCollection>.  
+  
+ [!code-csharp[Classic WebData ForeignKeyConstraint.Equals Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData ForeignKeyConstraint.Equals Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData ForeignKeyConstraint.Equals Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData ForeignKeyConstraint.Equals Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.ForeignKeyConstraint.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Hashcode für diese Instanz die <see cref="T:System.Data.ForeignKeyConstraint" /> Objekt.</summary>
+        <returns>Ein 32-Bit-Hashcode als ganze Zahl mit Vorzeichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelatedColumns">
+      <MemberSignature Language="C#" Value="public virtual System.Data.DataColumn[] RelatedColumns { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.DataColumn[] RelatedColumns" />
+      <MemberSignature Language="DocId" Value="P:System.Data.ForeignKeyConstraint.RelatedColumns" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.DataColumn[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die übergeordneten Spalten dieser Einschränkung.</summary>
+        <value>Ein Array von <see cref="T:System.Data.DataColumn" /> Objekte, die die übergeordneten Spalten der Einschränkung sind.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelatedTable">
+      <MemberSignature Language="C#" Value="public virtual System.Data.DataTable RelatedTable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.DataTable RelatedTable" />
+      <MemberSignature Language="DocId" Value="P:System.Data.ForeignKeyConstraint.RelatedTable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die übergeordnete Tabelle dieser Einschränkung ab.</summary>
+        <value>Das übergeordnete Element <see cref="T:System.Data.DataTable" /> dieser Einschränkung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Table">
+      <MemberSignature Language="C#" Value="public override System.Data.DataTable Table { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.DataTable Table" />
+      <MemberSignature Language="DocId" Value="P:System.Data.ForeignKeyConstraint.Table" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die untergeordnete Tabelle dieser Einschränkung ab.</summary>
+        <value>Ein <see cref="T:System.Data.DataTable" /> , die die untergeordnete Tabelle in der Einschränkung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-vb[Classic WebData ForeignKeyConstraint.Table Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData ForeignKeyConstraint.Table Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateRule">
+      <MemberSignature Language="C#" Value="public virtual System.Data.Rule UpdateRule { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.Rule UpdateRule" />
+      <MemberSignature Language="DocId" Value="P:System.Data.ForeignKeyConstraint.UpdateRule" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.Rule</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, die Aktion, die über diese Einschränkung auf tritt auf, wenn eine Zeile aktualisiert wird.</summary>
+        <value>Einer der <see cref="T:System.Data.Rule" />-Werte. Die Standardeinstellung ist <see langword="Cascade" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Data.ForeignKeyConstraint>, verschiedene Eigenschaften festgelegt und fügt es einer <xref:System.Data.DataTable> des Objekts <xref:System.Data.ConstraintCollection>.  
+  
+ [!code-vb[Classic WebData ForeignKeyConstraint.DeleteRule Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData ForeignKeyConstraint.DeleteRule Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

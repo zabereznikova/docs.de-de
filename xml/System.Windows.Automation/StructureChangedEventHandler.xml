@@ -1,0 +1,40 @@
+<Type Name="StructureChangedEventHandler" FullName="System.Windows.Automation.StructureChangedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void StructureChangedEventHandler(object sender, StructureChangedEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed StructureChangedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.StructureChangedEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationTypes</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Automation.StructureChangedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Das Objekt, das das Ereignis ausgelöst hat.</param>
+    <param name="e">Informationen zum Ereignis.</param>
+    <summary>Stellt die Methode implementiert, die von der Clientanwendung zum Behandeln des Ereignisses ausgelöst, wenn der Benutzeroberflächenautomatisierungs-Struktur geändert wurde.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle beschreibt die Informationen im Ereignisprotokoll durch den Delegaten für die andere Strukturänderungen empfangen.  
+  
+|`e.structureChangeType`|`sender`|`e.runtimeId`|  
+|-----------------------------|--------------|-------------------|  
+|<xref:System.Windows.Automation.StructureChangeType.ChildAdded>|Das untergeordnete Element, das hinzugefügt wurde.|Das untergeordnete Element, das hinzugefügt wurde.|  
+|<xref:System.Windows.Automation.StructureChangeType.ChildRemoved>|Das übergeordnete Element des untergeordneten Elements, das entfernt wurde.|Das untergeordnete Element, das entfernt wurde.|  
+|<xref:System.Windows.Automation.StructureChangeType.ChildrenBulkAdded>|Das übergeordnete Element der untergeordneten Elemente, die hinzugefügt wurden.|Das übergeordnete Element der untergeordneten Elemente, die hinzugefügt wurden.|  
+|<xref:System.Windows.Automation.StructureChangeType.ChildrenBulkRemoved>|Das übergeordnete Element der untergeordneten Elemente, die entfernt wurden.|Das übergeordnete Element der untergeordneten Elemente, die entfernt wurden.|  
+|<xref:System.Windows.Automation.StructureChangeType.ChildrenInvalidated>|Das übergeordnete Element der untergeordneten Elemente, die für ungültig erklärt wurden.|Das übergeordnete Element der untergeordneten Elemente, die für ungültig erklärt wurden|  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

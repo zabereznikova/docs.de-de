@@ -1,0 +1,742 @@
+<Type Name="X509ChainStatusFlags" FullName="System.Security.Cryptography.X509Certificates.X509ChainStatusFlags">
+  <TypeSignature Language="C#" Value="public enum X509ChainStatusFlags" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed X509ChainStatusFlags extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.X509Certificates.X509ChainStatusFlags" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert den Status einer X.509-Kette.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird verwendet, in Verbindung mit der <xref:System.Security.Cryptography.X509Certificates.X509ChainStatus> Struktur und die <xref:System.Security.Cryptography.X509Certificates.X509Chain.ChainStatus%2A> Eigenschaft.  
+  
+ Die Flags ExplicitDistrust, HasNotSupportedCriticalExtension und HasWeakSignature wurden eingeführt, mit der [!INCLUDE[net_v461](~/includes/net-v461-md.md)].  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CtlNotSignatureValid">
+      <MemberSignature Language="C#" Value="CtlNotSignatureValid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509ChainStatusFlags CtlNotSignatureValid = int32(262144)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509ChainStatusFlags.CtlNotSignatureValid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509ChainStatusFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Zertifikatsvertrauensliste eine ungültige Signatur enthält.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CtlNotTimeValid">
+      <MemberSignature Language="C#" Value="CtlNotTimeValid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509ChainStatusFlags CtlNotTimeValid = int32(131072)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509ChainStatusFlags.CtlNotTimeValid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509ChainStatusFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Zertifikatsvertrauensliste aufgrund eines ungültigen Zeitwerts, der z. B. angibt, dass die Zertifikatsvertrauensliste abgelaufen ist, nicht gültig ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CtlNotValidForUsage">
+      <MemberSignature Language="C#" Value="CtlNotValidForUsage" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509ChainStatusFlags CtlNotValidForUsage = int32(524288)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509ChainStatusFlags.CtlNotValidForUsage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509ChainStatusFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Zertifikatsvertrauensliste für diesen Zweck ungültig ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Cyclic">
+      <MemberSignature Language="C#" Value="Cyclic" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509ChainStatusFlags Cyclic = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509ChainStatusFlags.Cyclic" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509ChainStatusFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die X.509-Kette nicht erstellt werden konnte.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ExplicitDistrust">
+      <MemberSignature Language="C#" Value="ExplicitDistrust" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509ChainStatusFlags ExplicitDistrust = int32(67108864)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509ChainStatusFlags.ExplicitDistrust" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509ChainStatusFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass das Zertifikat explizit nicht vertrauenswürdig ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HasExcludedNameConstraint">
+      <MemberSignature Language="C#" Value="HasExcludedNameConstraint" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509ChainStatusFlags HasExcludedNameConstraint = int32(32768)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509ChainStatusFlags.HasExcludedNameConstraint" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509ChainStatusFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die X. 509 Kette ungültig ist, da ein Zertifikat eine Namenseinschränkung ausgeschlossen hat.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HasNotDefinedNameConstraint">
+      <MemberSignature Language="C#" Value="HasNotDefinedNameConstraint" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509ChainStatusFlags HasNotDefinedNameConstraint = int32(8192)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509ChainStatusFlags.HasNotDefinedNameConstraint" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509ChainStatusFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass das Zertifikat eine nicht definierte Namenseinschränkung hat.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HasNotPermittedNameConstraint">
+      <MemberSignature Language="C#" Value="HasNotPermittedNameConstraint" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509ChainStatusFlags HasNotPermittedNameConstraint = int32(16384)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509ChainStatusFlags.HasNotPermittedNameConstraint" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509ChainStatusFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass das Zertifikat eine unzulässige Namenseinschränkung hat.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HasNotSupportedCriticalExtension">
+      <MemberSignature Language="C#" Value="HasNotSupportedCriticalExtension" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509ChainStatusFlags HasNotSupportedCriticalExtension = int32(134217728)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509ChainStatusFlags.HasNotSupportedCriticalExtension" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509ChainStatusFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass das Zertifikat eine kritische Erweiterung nicht unterstützt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HasNotSupportedNameConstraint">
+      <MemberSignature Language="C#" Value="HasNotSupportedNameConstraint" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509ChainStatusFlags HasNotSupportedNameConstraint = int32(4096)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509ChainStatusFlags.HasNotSupportedNameConstraint" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509ChainStatusFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass das Zertifikat keine unterstützte Namenseinschränkung bzw. eine Namenseinschränkung hat, die nicht unterstützt wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HasWeakSignature">
+      <MemberSignature Language="C#" Value="HasWeakSignature" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509ChainStatusFlags HasWeakSignature = int32(1048576)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509ChainStatusFlags.HasWeakSignature" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509ChainStatusFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass das Zertifikat nicht sicher signiert wurde. In der Regel bedeutet dies, dass die Hashalgorithmen MD2 oder MD5 verwendet wurden, um einen Hashwert des Zertifikats zu erstellen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidBasicConstraints">
+      <MemberSignature Language="C#" Value="InvalidBasicConstraints" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509ChainStatusFlags InvalidBasicConstraints = int32(1024)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509ChainStatusFlags.InvalidBasicConstraints" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509ChainStatusFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die X.509-Kette aufgrund ungültiger Standardeinschränkungen ungültig ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidExtension">
+      <MemberSignature Language="C#" Value="InvalidExtension" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509ChainStatusFlags InvalidExtension = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509ChainStatusFlags.InvalidExtension" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509ChainStatusFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die X.509-Kette aufgrund einer ungültigen Erweiterung ungültig ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidNameConstraints">
+      <MemberSignature Language="C#" Value="InvalidNameConstraints" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509ChainStatusFlags InvalidNameConstraints = int32(2048)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509ChainStatusFlags.InvalidNameConstraints" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509ChainStatusFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die X.509-Kette aufgrund ungültiger Namenseinschränkungen ungültig ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidPolicyConstraints">
+      <MemberSignature Language="C#" Value="InvalidPolicyConstraints" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509ChainStatusFlags InvalidPolicyConstraints = int32(512)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509ChainStatusFlags.InvalidPolicyConstraints" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509ChainStatusFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die X.509-Kette aufgrund ungültiger Richtlinieneinschränkungen ungültig ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoError">
+      <MemberSignature Language="C#" Value="NoError" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509ChainStatusFlags NoError = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509ChainStatusFlags.NoError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509ChainStatusFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die X.509-Kette keine Fehler aufweist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoIssuanceChainPolicy">
+      <MemberSignature Language="C#" Value="NoIssuanceChainPolicy" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509ChainStatusFlags NoIssuanceChainPolicy = int32(33554432)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509ChainStatusFlags.NoIssuanceChainPolicy" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509ChainStatusFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass im Zertifikat keine Zertifikatrichtlinienerweiterung vorhanden ist. Dieser Fehler tritt auf, wenn eine Gruppenrichtlinie angibt, dass alle Zertifikate eine Zertifikatsrichtlinie enthalten müssen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotSignatureValid">
+      <MemberSignature Language="C#" Value="NotSignatureValid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509ChainStatusFlags NotSignatureValid = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509ChainStatusFlags.NotSignatureValid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509ChainStatusFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die X.509-Kette aufgrund einer ungültigen Zertifikatsignatur ungültig ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotTimeNested">
+      <MemberSignature Language="C#" Value="NotTimeNested" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509ChainStatusFlags NotTimeNested = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509ChainStatusFlags.NotTimeNested" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509ChainStatusFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Veraltet. Gibt an, dass das Zertifikat der Zertifizierungsstelle und das ausgestellte Zertifikat Gültigkeitszeiträume haben, die nicht geschachtelt sind. Das Zertifikat der Zertifizierungsstelle kann z. B. vom 01.01. bis zum 01.12. und das ausgestellte Zertifikat vom 02.01. bis zum 02.12. gültig sein, was bedeutet, dass die Gültigkeitszeiträume nicht geschachtelt sind.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotTimeValid">
+      <MemberSignature Language="C#" Value="NotTimeValid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509ChainStatusFlags NotTimeValid = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509ChainStatusFlags.NotTimeValid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509ChainStatusFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die X.509-Kette aufgrund eines ungültigen Zeitwerts ungültig ist. Dies kann ein Wert sein, der ein abgelaufenes Zertifikat angibt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotValidForUsage">
+      <MemberSignature Language="C#" Value="NotValidForUsage" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509ChainStatusFlags NotValidForUsage = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509ChainStatusFlags.NotValidForUsage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509ChainStatusFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Schlüsselverwendung nicht gültig ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OfflineRevocation">
+      <MemberSignature Language="C#" Value="OfflineRevocation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509ChainStatusFlags OfflineRevocation = int32(16777216)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509ChainStatusFlags.OfflineRevocation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509ChainStatusFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Online-Zertifikatssperrliste, auf der die X.509-Kette beruht, gerade offline ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PartialChain">
+      <MemberSignature Language="C#" Value="PartialChain" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509ChainStatusFlags PartialChain = int32(65536)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509ChainStatusFlags.PartialChain" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509ChainStatusFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die X.509-Kette nicht bis zum Stammzertifikat erstellt werden konnte.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RevocationStatusUnknown">
+      <MemberSignature Language="C#" Value="RevocationStatusUnknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509ChainStatusFlags RevocationStatusUnknown = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509ChainStatusFlags.RevocationStatusUnknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509ChainStatusFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass nicht bestimmt werden kann, ob das Zertifikat gesperrt wurde. Ein möglicher Grund ist, dass die Zertifikatsperrliste offline oder nicht verfügbar ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Revoked">
+      <MemberSignature Language="C#" Value="Revoked" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509ChainStatusFlags Revoked = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509ChainStatusFlags.Revoked" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509ChainStatusFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die X.509-Kette aufgrund eines gesperrten Zertifikats ungültig ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UntrustedRoot">
+      <MemberSignature Language="C#" Value="UntrustedRoot" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509ChainStatusFlags UntrustedRoot = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509ChainStatusFlags.UntrustedRoot" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509ChainStatusFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die X.509-Kette aufgrund eines nicht vertrauenswürdigen Stammzertifikats ungültig ist.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

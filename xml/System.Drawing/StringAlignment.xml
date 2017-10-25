@@ -1,0 +1,82 @@
+<Type Name="StringAlignment" FullName="System.Drawing.StringAlignment">
+  <TypeSignature Language="C#" Value="public enum StringAlignment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed StringAlignment extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.StringAlignment" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Ausrichtung einer Textzeichenfolge relativ zu dessen Layoutrechtecks.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Verwendung mit der <xref:System.Drawing.StringFormat.LineAlignment%2A> -Eigenschaft, die mit dieser Enumeration wird der vertikalen Ausrichtung für eine gezeichnete Zeichenfolge. Bei Verwendung mit der <xref:System.Drawing.StringFormat.Alignment%2A> -Eigenschaft, die mit dieser Enumeration wird der horizontalen Ausrichtung.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Drawing.StringFormat.LineAlignment%2A> und <xref:System.Drawing.StringFormat.Alignment%2A> Eigenschaften und die <xref:System.Drawing.StringAlignment> Enumeration zum Ausrichten von Zeichenfolgen. In diesem Beispiel dient, die mit Windows Forms verwendet werden. Fügen Sie den Code in ein Formular, und rufen die `ShowLineAndAlignment` Methode beim Verarbeiten des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis, und übergeben Sie `e` als <xref:System.Windows.Forms.PaintEventArgs> .  
+  
+ [!code-cpp[System.Drawing.Misc2#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Misc2/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.Misc2#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Misc2/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.Misc2#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc2/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Center">
+      <MemberSignature Language="C#" Value="Center" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.StringAlignment Center = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.StringAlignment.Center" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.StringAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass Text in der Mitte des Layoutrechtecks ausgerichtet ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Far">
+      <MemberSignature Language="C#" Value="Far" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.StringAlignment Far = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.StringAlignment.Far" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.StringAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass Text zurückgelegt die Position des Ursprungs des Layoutrechtecks ausgerichtet ist. In einem links-nach-rechts-Layout ist die entfernte Position geeignet. In einem Layout mit rechts-nach-links wird die Position des entfernte belassen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Near">
+      <MemberSignature Language="C#" Value="Near" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.StringAlignment Near = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.StringAlignment.Near" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.StringAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, der Text in der Nähe des Layouts ausgerichtet sein. In einem links-nach-rechts-Layout bleibt die near Position. In einem Layout mit rechts-nach-links für die near Position geeignet ist.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,6 @@
+<Namespace Name="System.ServiceModel.Routing">
+  <Docs>
+    <summary>Dieser Namespace enthält Klassen, mit denen der WCF-<see cref="T:System.ServiceModel.Routing.RoutingService" /> konfiguriert und verwaltet wird.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

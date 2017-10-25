@@ -1,0 +1,433 @@
+<Type Name="DrawToolTipEventArgs" FullName="System.Windows.Forms.DrawToolTipEventArgs">
+  <TypeSignature Language="C#" Value="public class DrawToolTipEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DrawToolTipEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DrawToolTipEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Forms.ToolTip.Draw" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ToolTip.Draw?displayProperty=nameWithType> Ereignis wird ausgelöst, durch die <xref:System.Windows.Forms.ToolTip> Klasse an, wenn die <xref:System.Windows.Forms.ToolTip> gezeichnet und die <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A?displayProperty=nameWithType> Eigenschaftswert ist `true`. Der Handler für dieses Ereignis empfängt einen Parameter vom Typ <xref:System.Windows.Forms.DrawToolTipEventArgs>. Die <xref:System.Windows.Forms.DrawToolTipEventArgs> Klasse enthält alle Informationen, die zum Zeichnen der <xref:System.Windows.Forms.ToolTip>, einschließlich der <xref:System.Windows.Forms.ToolTip> Text, der <xref:System.Drawing.Rectangle>, und die <xref:System.Drawing.Graphics> -Objekt, auf dem gezeichnet werden soll. Verwenden Sie zum Anpassen der Darstellung der QuickInfo der <xref:System.Drawing.Rectangle> um die Grenzen der QuickInfo zu bestimmen und die <xref:System.Drawing.Graphics> Objekt, das Ihre benutzerdefinierte Zeichnung zu erstellen. Sie können die Grenzen des der <xref:System.Windows.Forms.ToolTip> vor dem durch Behandeln der <xref:System.Windows.Forms.ToolTip.Popup> Ereignis.  
+  
+ <xref:System.Windows.Forms.DrawToolTipEventArgs>unterstützt auch die partielle Anpassung durch das <xref:System.Windows.Forms.DrawToolTipEventArgs.DrawBackground%2A>, <xref:System.Windows.Forms.DrawToolTipEventArgs.DrawText%2A> und <xref:System.Windows.Forms.DrawToolTipEventArgs.DrawBorder%2A> Methoden. Mithilfe dieser Methoden können Sie Besitzer gezeichneten Teile der QuickInfo lassen Sie die anderen Teile, die auf die übliche Weise gezeichnet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum benutzerdefinierten Zeichnen die <xref:System.Windows.Forms.ToolTip>. Das Beispiel erstellt eine <xref:System.Windows.Forms.ToolTip> und ordnet es drei <xref:System.Windows.Forms.Button> Steuerelemente befindet sich auf die <xref:System.Windows.Forms.Form>. Im Beispiel wird die <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A> -Eigenschaft auf "true" und behandelt die <xref:System.Windows.Forms.ToolTip.Draw> Ereignis. In der <xref:System.Windows.Forms.ToolTip.Draw> Ereignishandler, d. h. die <xref:System.Windows.Forms.ToolTip> benutzerdefinierte je nachdem welche Schaltfläche gezeichnet wird die <xref:System.Windows.Forms.ToolTip> angezeigt wird durch die <xref:System.Windows.Forms.DrawToolTipEventArgs.AssociatedControl%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ [!code-cpp[System.Windows.Forms.ToolTip.OwnerDraw#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ToolTip.OwnerDraw#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolTip.OwnerDraw#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DrawToolTipEventArgs (System.Drawing.Graphics graphics, System.Windows.Forms.IWin32Window associatedWindow, System.Windows.Forms.Control associatedControl, System.Drawing.Rectangle bounds, string toolTipText, System.Drawing.Color backColor, System.Drawing.Color foreColor, System.Drawing.Font font);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Graphics graphics, class System.Windows.Forms.IWin32Window associatedWindow, class System.Windows.Forms.Control associatedControl, valuetype System.Drawing.Rectangle bounds, string toolTipText, valuetype System.Drawing.Color backColor, valuetype System.Drawing.Color foreColor, class System.Drawing.Font font) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DrawToolTipEventArgs.#ctor(System.Drawing.Graphics,System.Windows.Forms.IWin32Window,System.Windows.Forms.Control,System.Drawing.Rectangle,System.String,System.Drawing.Color,System.Drawing.Color,System.Drawing.Font)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="associatedWindow" Type="System.Windows.Forms.IWin32Window" />
+        <Parameter Name="associatedControl" Type="System.Windows.Forms.Control" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="toolTipText" Type="System.String" />
+        <Parameter Name="backColor" Type="System.Drawing.Color" />
+        <Parameter Name="foreColor" Type="System.Drawing.Color" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> Kontext verwendet, um die QuickInfo zu zeichnen.</param>
+        <param name="associatedWindow">Die <see cref="T:System.Windows.Forms.IWin32Window" /> , das die QuickInfo gebunden ist.</param>
+        <param name="associatedControl">Die <see cref="T:System.Windows.Forms.Control" /> , die für die QuickInfo erstellt wird.</param>
+        <param name="bounds">Ein <see cref="T:System.Drawing.Rectangle" /> , das den Umriss des Bereichs, in dem die QuickInfo wird angezeigt werden.</param>
+        <param name="toolTipText">Ein <see cref="T:System.String" /> mit dem Text für die QuickInfo.</param>
+        <param name="backColor">Die <see cref="T:System.Drawing.Color" /> des QuickInfo-Hintergrunds.</param>
+        <param name="foreColor">Die <see cref="T:System.Drawing.Color" /> des QuickInfo-Text.</param>
+        <param name="font">Die <see cref="T:System.Drawing.Font" /> verwendet, um den QuickInfo-Text zu zeichnen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.DrawToolTipEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DrawToolTipEventArgs.%23ctor%2A> Konstruktor verwendet den `graphics`, `associatedControl`, `associatedWindow`, `bounds`, `font` und `toolTipText` ähnlich benannten Parameter initialisiert werden, die entsprechenden Eigenschaften. Die `backColor` und `foreColor` Parameter werden verwendet, indem Sie die <xref:System.Windows.Forms.DrawToolTipEventArgs.DrawBackground%2A> und <xref:System.Windows.Forms.DrawToolTipEventArgs.DrawText%2A> Methoden bzw..  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssociatedControl">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Control AssociatedControl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Control AssociatedControl" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawToolTipEventArgs.AssociatedControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Steuerelement ab, für die <see cref="T:System.Windows.Forms.ToolTip" /> gezeichnet wird.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.Control" /> zugeordneten der <see cref="T:System.Windows.Forms.ToolTip" /> bei der <see cref="E:System.Windows.Forms.ToolTip.Draw" /> Ereignis tritt auf. Der zurückgegebene Wert <see langword="null" /> , wenn die QuickInfo nicht mit einem Steuerelement verknüpft ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da die <xref:System.Windows.Forms.ToolTip> kann mehrere Steuerelemente über zugeordnet werden die <xref:System.Windows.Forms.ToolTip.SetToolTip%2A?displayProperty=nameWithType> -Methode, die <xref:System.Windows.Forms.DrawToolTipEventArgs.AssociatedControl%2A> Eigenschaft kann verwendet werden, um festzulegen, welche die <xref:System.Windows.Forms.ToolTip.Draw> Ereignis zugeordnet ist. Dies ist hilfreich, wenn Sie unterschiedliche QuickInfo basierend auf das zugeordnete Steuerelement durchführen möchten.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum benutzerdefinierten Zeichnen die <xref:System.Windows.Forms.ToolTip>. Das Beispiel erstellt eine <xref:System.Windows.Forms.ToolTip> und ordnet es drei <xref:System.Windows.Forms.Button> Steuerelemente befindet sich auf die <xref:System.Windows.Forms.Form>. Im Beispiel wird die <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A> Eigenschaft `true` und behandelt die <xref:System.Windows.Forms.ToolTip.Draw> Ereignis. In der <xref:System.Windows.Forms.ToolTip.Draw> Ereignishandler, d. h. die <xref:System.Windows.Forms.ToolTip> benutzerdefinierte je nachdem welche Schaltfläche gezeichnet wird die <xref:System.Windows.Forms.ToolTip> angezeigt wird durch die <xref:System.Windows.Forms.DrawToolTipEventArgs.AssociatedControl%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Im folgenden Codebeispiel wird veranschaulicht die Verwendung der <xref:System.Windows.Forms.DrawToolTipEventArgs.AssociatedControl%2A> Eigenschaft. Finden Sie unter der <xref:System.Windows.Forms.DrawToolTipEventArgs> Übersicht über die Klasse für das gesamte Codebeispiel dargestellt.  
+  
+ [!code-cpp[System.Windows.Forms.ToolTip.OwnerDraw#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/CPP/form1.cpp#5)]
+ [!code-csharp[System.Windows.Forms.ToolTip.OwnerDraw#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/CS/form1.cs#5)]
+ [!code-vb[System.Windows.Forms.ToolTip.OwnerDraw#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/VB/form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssociatedWindow">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.IWin32Window AssociatedWindow { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.IWin32Window AssociatedWindow" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawToolTipEventArgs.AssociatedWindow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.IWin32Window</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Fenster an das <see cref="T:System.Windows.Forms.ToolTip" /> gebunden ist.</summary>
+        <value>Das Fenster dem Besitzer der <see cref="T:System.Windows.Forms.ToolTip" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Fenster im Besitz eines anderen Fensters ist, wird das zugehörige Fenster minimiert und mit der das besitzende Fenster geschlossen. Im Besitz befindlichen Windows werden ebenfalls nicht hinter dem Besitzerformular angezeigt. Hier die QuickInfo ist im Besitz der systemeigenen Win32-Fensters, dargestellt durch die <xref:System.Windows.Forms.DrawToolTipEventArgs.AssociatedWindow%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ToolTip.Draw?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.ToolTip> mit dem Namen `ToolTip1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ToolTip.Draw?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#618](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#618)]
+ [!code-vb[System.Windows.Forms.EventExamples#618](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#618)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bounds">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle Bounds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle Bounds" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawToolTipEventArgs.Bounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe und Position von der <see cref="T:System.Windows.Forms.ToolTip" /> gezeichnet werden soll.</summary>
+        <value>Ein <see cref="T:System.Drawing.Rectangle" /> , die die Grenzen des darstellt die <see cref="T:System.Windows.Forms.ToolTip" /> gezeichnet werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig werden die Grenzen vom Betriebssystem basierend auf Systemeinstellungen festgelegt und der <xref:System.Windows.Forms.ToolTip> Text. Sie können die Grenzen des der <xref:System.Windows.Forms.ToolTip> vor dem durch Behandeln der <xref:System.Windows.Forms.ToolTip.Popup> <xref:System.Windows.Forms.ToolTip.Popup> -Ereignis der <xref:System.Windows.Forms.ToolTip> Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum benutzerdefinierten Zeichnen die <xref:System.Windows.Forms.ToolTip>. Das Beispiel erstellt eine <xref:System.Windows.Forms.ToolTip> und ordnet es drei <xref:System.Windows.Forms.Button> Steuerelemente befindet sich auf die <xref:System.Windows.Forms.Form>. Im Beispiel wird die <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A> -Eigenschaft auf "true" und behandelt die <xref:System.Windows.Forms.ToolTip.Draw> Ereignis. In der <xref:System.Windows.Forms.ToolTip.Draw> Ereignishandler, d. h. die <xref:System.Windows.Forms.ToolTip> benutzerdefinierte je nachdem welche Schaltfläche gezeichnet wird die <xref:System.Windows.Forms.ToolTip> angezeigt wird durch die <xref:System.Windows.Forms.DrawToolTipEventArgs.AssociatedControl%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Im folgenden Codeauszug veranschaulicht die Verwendung der <xref:System.Windows.Forms.DrawToolTipEventArgs.DrawBorder%2A> -Methode und der Verwendung der <xref:System.Windows.Forms.DrawToolTipEventArgs.Bounds%2A>, <xref:System.Windows.Forms.DrawToolTipEventArgs.ToolTipText%2A>, und <xref:System.Windows.Forms.DrawToolTipEventArgs.Graphics%2A> Eigenschaften. Finden Sie unter der <xref:System.Windows.Forms.DrawToolTipEventArgs> Übersicht über die Klasse für das gesamte Codebeispiel dargestellt.  
+  
+ [!code-cpp[System.Windows.Forms.ToolTip.OwnerDraw#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/CPP/form1.cpp#3)]
+ [!code-csharp[System.Windows.Forms.ToolTip.OwnerDraw#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/CS/form1.cs#3)]
+ [!code-vb[System.Windows.Forms.ToolTip.OwnerDraw#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawBackground">
+      <MemberSignature Language="C#" Value="public void DrawBackground ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawBackground() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DrawToolTipEventArgs.DrawBackground" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Zeichnet den Hintergrund der <see cref="T:System.Windows.Forms.ToolTip" /> mit der System-Hintergrundfarbe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie bestimmte visual Aspekte des anpassen möchten, verwenden Sie diese Methode die <xref:System.Windows.Forms.ToolTip>, jedoch soll einen standardmäßigen QuickInfo-Hintergrund gezeichnet, die Sie mit den aktuellen Wert der <xref:System.Drawing.SystemColors.Info%2A?displayProperty=nameWithType>. Der Hintergrund gezeichnet wird, um den vom angegebenen Bereich zu füllen die <xref:System.Windows.Forms.DrawToolTipEventArgs.Bounds%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum benutzerdefinierten Zeichnen die <xref:System.Windows.Forms.ToolTip>. Das Beispiel erstellt eine <xref:System.Windows.Forms.ToolTip> und ordnet es drei <xref:System.Windows.Forms.Button> Steuerelemente befindet sich auf die <xref:System.Windows.Forms.Form>. Im Beispiel wird die <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A> -Eigenschaft auf "true" und behandelt die <xref:System.Windows.Forms.ToolTip.Draw> Ereignis. In der <xref:System.Windows.Forms.ToolTip.Draw> Ereignishandler, d. h. die <xref:System.Windows.Forms.ToolTip> benutzerdefinierte je nachdem welche Schaltfläche gezeichnet wird die <xref:System.Windows.Forms.ToolTip> angezeigt wird durch die <xref:System.Windows.Forms.DrawToolTipEventArgs.AssociatedControl%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Im folgenden Codeauszug veranschaulicht die Verwendung der <xref:System.Windows.Forms.DrawToolTipEventArgs.DrawBorder%2A>, <xref:System.Windows.Forms.DrawToolTipEventArgs.DrawBackground%2A>, und <xref:System.Windows.Forms.DrawToolTipEventArgs.DrawText%2A> Methoden. Finden Sie unter der <xref:System.Windows.Forms.DrawToolTipEventArgs> Übersicht über die Klasse für das gesamte Codebeispiel dargestellt.  
+  
+ [!code-cpp[System.Windows.Forms.ToolTip.OwnerDraw#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/CPP/form1.cpp#4)]
+ [!code-csharp[System.Windows.Forms.ToolTip.OwnerDraw#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/CS/form1.cs#4)]
+ [!code-vb[System.Windows.Forms.ToolTip.OwnerDraw#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawBorder">
+      <MemberSignature Language="C#" Value="public void DrawBorder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawBorder() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DrawToolTipEventArgs.DrawBorder" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Zeichnet den Rahmen der <see cref="T:System.Windows.Forms.ToolTip" /> die Rahmenfarbe des Systems verwenden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, wenn Sie bestimmte visual Aspekte des anpassen möchten eine <xref:System.Windows.Forms.ToolTip>, jedoch soll einen standardmäßigen QuickInfo-Rahmen gezeichnet, die Sie mit den aktuellen Wert der <xref:System.Drawing.SystemColors.WindowFrame%2A?displayProperty=nameWithType>. Der Rahmen gezeichnet wird, auf die Größe, die gemäß der <xref:System.Windows.Forms.DrawToolTipEventArgs.Bounds%2A> Eigenschaft. Sie können die Grenzen des der <xref:System.Windows.Forms.ToolTip> vor dem durch Behandeln der <xref:System.Windows.Forms.ToolTip.Popup> Ereignis.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum benutzerdefinierten Zeichnen die <xref:System.Windows.Forms.ToolTip>. Das Beispiel erstellt eine <xref:System.Windows.Forms.ToolTip> und ordnet es drei <xref:System.Windows.Forms.Button> Steuerelemente befindet sich auf die <xref:System.Windows.Forms.Form>. Im Beispiel wird die <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A> -Eigenschaft auf "true" und behandelt die <xref:System.Windows.Forms.ToolTip.Draw> Ereignis. In der <xref:System.Windows.Forms.ToolTip.Draw> Ereignishandler, d. h. die <xref:System.Windows.Forms.ToolTip> benutzerdefinierte je nachdem welche Schaltfläche gezeichnet wird die <xref:System.Windows.Forms.ToolTip> angezeigt wird durch die <xref:System.Windows.Forms.DrawToolTipEventArgs.AssociatedControl%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Im folgenden Codeauszug veranschaulicht die Verwendung der <xref:System.Windows.Forms.DrawToolTipEventArgs.DrawBorder%2A>, <xref:System.Windows.Forms.DrawToolTipEventArgs.DrawBackground%2A>, und <xref:System.Windows.Forms.DrawToolTipEventArgs.DrawText%2A> Methoden. Finden Sie unter der <xref:System.Windows.Forms.DrawToolTipEventArgs> Übersicht über die Klasse für das gesamte Codebeispiel dargestellt.  
+  
+ [!code-cpp[System.Windows.Forms.ToolTip.OwnerDraw#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/CPP/form1.cpp#4)]
+ [!code-csharp[System.Windows.Forms.ToolTip.OwnerDraw#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/CS/form1.cs#4)]
+ [!code-vb[System.Windows.Forms.ToolTip.OwnerDraw#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawText">
+      <MemberSignature Language="C#" Value="public void DrawText ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DrawToolTipEventArgs.DrawText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Zeichnet den Text von der <see cref="T:System.Windows.Forms.ToolTip" /> mit dem System Textfarbe und Schriftart.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DrawToolTipEventArgs.DrawText> Methode darstellt, die Standardmethode zum Anzeigen von einem <xref:System.Windows.Forms.ToolTip>. Diese Methode verwendet, die vom System angegebenen Schriftart und der aktuelle Wert der <xref:System.Drawing.SystemColors.InfoText%2A?displayProperty=nameWithType> für die Schriftfarbe. Der Text gezeichnet wird, als einzelne Zeile innerhalb des Rechtecks gemäß horizontal und vertikal zentriert die <xref:System.Windows.Forms.DrawToolTipEventArgs.Bounds%2A> Eigenschaft; Dies ist äquivalent zum folgenden Aufruf an die überladene Version der <xref:System.Windows.Forms.DrawToolTipEventArgs.DrawText%28System.Windows.Forms.TextFormatFlags%29>:  
+  
+ `DrawText(TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter | TextFormatFlags.SingleLine | TextFormatFlags.HidePrefix)`  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum benutzerdefinierten Zeichnen die <xref:System.Windows.Forms.ToolTip>. Das Beispiel erstellt eine <xref:System.Windows.Forms.ToolTip> und ordnet es drei <xref:System.Windows.Forms.Button> Steuerelemente befindet sich auf die <xref:System.Windows.Forms.Form>. Im Beispiel wird die <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A> -Eigenschaft auf "true" und behandelt die <xref:System.Windows.Forms.ToolTip.Draw> Ereignis. In der <xref:System.Windows.Forms.ToolTip.Draw> Ereignishandler, d. h. die <xref:System.Windows.Forms.ToolTip> benutzerdefinierte je nachdem welche Schaltfläche gezeichnet wird die <xref:System.Windows.Forms.ToolTip> angezeigt wird durch die <xref:System.Windows.Forms.DrawToolTipEventArgs.AssociatedControl%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Im folgenden Codeauszug veranschaulicht die Verwendung der <xref:System.Windows.Forms.DrawToolTipEventArgs.DrawBorder%2A>, <xref:System.Windows.Forms.DrawToolTipEventArgs.DrawBackground%2A>, und <xref:System.Windows.Forms.DrawToolTipEventArgs.DrawText%2A> Methoden. Finden Sie unter der <xref:System.Windows.Forms.DrawToolTipEventArgs> Übersicht über die Klasse für das gesamte Codebeispiel dargestellt.  
+  
+ [!code-cpp[System.Windows.Forms.ToolTip.OwnerDraw#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/CPP/form1.cpp#4)]
+ [!code-csharp[System.Windows.Forms.ToolTip.OwnerDraw#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/CS/form1.cs#4)]
+ [!code-vb[System.Windows.Forms.ToolTip.OwnerDraw#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawText">
+      <MemberSignature Language="C#" Value="public void DrawText (System.Windows.Forms.TextFormatFlags flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawText(valuetype System.Windows.Forms.TextFormatFlags flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DrawToolTipEventArgs.DrawText(System.Windows.Forms.TextFormatFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="flags" Type="System.Windows.Forms.TextFormatFlags" />
+      </Parameters>
+      <Docs>
+        <param name="flags">Ein <see cref="T:System.Windows.Forms.TextFormatFlags" /> , enthält eine bitweise Kombination der Werte, der angibt, die Anzeige und das Layout für die <see cref="P:System.Windows.Forms.DrawToolTipEventArgs.ToolTipText" />.</param>
+        <summary>Zeichnet den Text, der die <see cref="T:System.Windows.Forms.ToolTip" /> mit die Systemfarbe für Text und Schriftart und das Layout des angegebenen Text.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DrawToolTipEventArgs.DrawText%28System.Windows.Forms.TextFormatFlags%29> Methode wird verwendet, um bestimmte visuelle Aspekte des Anpassen einer <xref:System.Windows.Forms.ToolTip>, einschließlich des Layouts des QuickInfo-Text. Diese Methode verwendet, die vom System angegebenen Schriftart und der aktuelle Wert der <xref:System.Drawing.SystemColors.InfoText%2A?displayProperty=nameWithType> für die Schriftfarbe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Font">
+      <MemberSignature Language="C#" Value="public System.Drawing.Font Font { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Font Font" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawToolTipEventArgs.Font" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Schriftart, die zum Zeichnen der <see cref="T:System.Windows.Forms.ToolTip" />.</summary>
+        <value>Ein <see cref="T:System.Drawing.Font" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.Windows.Forms.DrawToolTipEventArgs.Font%2A> Eigenschaft, wenn Sie benutzerdefinierte sind Zeichnen einer <xref:System.Windows.Forms.ToolTip> , sollte die Windows-Standardschriftart verwenden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum benutzerdefinierten Zeichnen die <xref:System.Windows.Forms.ToolTip>. Das Beispiel erstellt eine <xref:System.Windows.Forms.ToolTip> und ordnet es drei <xref:System.Windows.Forms.Button> Steuerelemente befindet sich auf die <xref:System.Windows.Forms.Form>. Im Beispiel wird die <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A> -Eigenschaft auf "true" und behandelt die <xref:System.Windows.Forms.ToolTip.Draw> Ereignis. In der <xref:System.Windows.Forms.ToolTip.Draw> Ereignishandler, d. h. die <xref:System.Windows.Forms.ToolTip> benutzerdefinierte je nachdem welche Schaltfläche gezeichnet wird die <xref:System.Windows.Forms.ToolTip> angezeigt wird durch die <xref:System.Windows.Forms.DrawToolTipEventArgs.AssociatedControl%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Im folgenden Codeauszug veranschaulicht die Verwendung der <xref:System.Windows.Forms.DrawToolTipEventArgs.DrawBorder%2A>, <xref:System.Windows.Forms.DrawToolTipEventArgs.DrawBackground%2A>, und <xref:System.Windows.Forms.DrawToolTipEventArgs.DrawText%2A> Methoden. Finden Sie unter der <xref:System.Windows.Forms.DrawToolTipEventArgs> Übersicht über die Klasse für das gesamte Codebeispiel dargestellt.  
+  
+ [!code-cpp[System.Windows.Forms.ToolTip.OwnerDraw#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/CPP/form1.cpp#4)]
+ [!code-csharp[System.Windows.Forms.ToolTip.OwnerDraw#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/CS/form1.cs#4)]
+ [!code-vb[System.Windows.Forms.ToolTip.OwnerDraw#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Graphics">
+      <MemberSignature Language="C#" Value="public System.Drawing.Graphics Graphics { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Graphics Graphics" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawToolTipEventArgs.Graphics" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Graphics</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die zum Zeichnen verwendete Grafikoberfläche ab der <see cref="T:System.Windows.Forms.ToolTip" />.</summary>
+        <value>Die <see cref="T:System.Drawing.Graphics" /> für das Zeichnen der <see cref="T:System.Windows.Forms.ToolTip" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.Drawing.Graphics> Objekt zum Anpassen der Zeichnung von bestimmten visuellen Aspekte einer <xref:System.Windows.Forms.ToolTip>. Sie können z. B. einen eigenen QuickInfo-Hintergrund zeichnen, mithilfe der <xref:System.Drawing.Graphics.FillRectangle%2A?displayProperty=nameWithType> Methode.  
+  
+ Benutzerdefinierte Zeichnung erfolgt außerhalb das Rechteck, angegeben durch die <xref:System.Windows.Forms.DrawToolTipEventArgs.Bounds%2A> Eigenschaft wird nicht angezeigt. Sie können die Grenzen des der <xref:System.Windows.Forms.ToolTip> vor dem durch Behandeln der `ToolTip.Popup` Ereignis.  
+  
+ Die <xref:System.Windows.Forms.DrawToolTipEventArgs> -Klasse stellt außerdem die <xref:System.Windows.Forms.DrawToolTipEventArgs.DrawBackground%2A>, <xref:System.Windows.Forms.DrawToolTipEventArgs.DrawText%2A> und <xref:System.Windows.Forms.DrawToolTipEventArgs.DrawBorder%2A> Methoden zum Zeichnen der einzelnen Teile der <xref:System.Windows.Forms.ToolTip> auf die übliche Weise, die vom Betriebssystem verwendet. Sie können diese Methoden verwenden, zusammen mit den <xref:System.Drawing.Graphics> Objekt Methoden, um einige Teile der QuickInfo standard, stellen Sie beim Anpassen von anderen Teilen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum benutzerdefinierten Zeichnen die <xref:System.Windows.Forms.ToolTip>. Das Beispiel erstellt eine <xref:System.Windows.Forms.ToolTip> und ordnet es drei <xref:System.Windows.Forms.Button> Steuerelemente befindet sich auf die <xref:System.Windows.Forms.Form>. Im Beispiel wird die <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A> -Eigenschaft auf "true" und behandelt die <xref:System.Windows.Forms.ToolTip.Draw> Ereignis. In der <xref:System.Windows.Forms.ToolTip.Draw> Ereignishandler, d. h. die <xref:System.Windows.Forms.ToolTip> benutzerdefinierte je nachdem welche Schaltfläche gezeichnet wird die <xref:System.Windows.Forms.ToolTip> angezeigt wird durch die <xref:System.Windows.Forms.DrawToolTipEventArgs.AssociatedControl%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Im folgenden Codeauszug veranschaulicht die Verwendung der <xref:System.Windows.Forms.DrawToolTipEventArgs.DrawText%2A> und <xref:System.Windows.Forms.DrawToolTipEventArgs.DrawBackground%2A> Methoden und mithilfe der <xref:System.Windows.Forms.DrawToolTipEventArgs.Graphics%2A> Eigenschaft. Finden Sie unter der <xref:System.Windows.Forms.DrawToolTipEventArgs> Übersicht über die Klasse für das gesamte Codebeispiel dargestellt.  
+  
+ [!code-cpp[System.Windows.Forms.ToolTip.OwnerDraw#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/CPP/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.ToolTip.OwnerDraw#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.ToolTip.OwnerDraw#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTipText">
+      <MemberSignature Language="C#" Value="public string ToolTipText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolTipText" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawToolTipEventArgs.ToolTipText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Text für die <see cref="T:System.Windows.Forms.ToolTip" /> , die gezeichnet wird.</summary>
+        <value>Der Text, der zugeordnet ist die <see cref="T:System.Windows.Forms.ToolTip" /> beim der <see cref="E:System.Windows.Forms.ToolTip.Draw" /> Ereignis auftritt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalerweise verwenden Sie die <xref:System.Windows.Forms.DrawToolTipEventArgs.ToolTipText%2A> -Eigenschaft können Sie bestimmen, was der QuickInfo-Text ist, wenn Sie benutzerdefinierte Zeichnung QuickInfo sind. Sie können die <xref:System.Drawing.Graphics.DrawString%2A?displayProperty=nameWithType> Methode zum Anpassen der Zeichnung des QuickInfo-Text. Wenn Sie möchten den QuickInfo-Text mit dem angegebenen System gezeichnet formatieren, verwenden Sie die <xref:System.Windows.Forms.DrawToolTipEventArgs.DrawText%2A> Methode. Der Textwert stammt aus der an übergebene Wert den <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> Methode der <xref:System.Windows.Forms.ToolTip> Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum benutzerdefinierten Zeichnen die <xref:System.Windows.Forms.ToolTip>. Das Beispiel erstellt eine <xref:System.Windows.Forms.ToolTip> und ordnet es drei <xref:System.Windows.Forms.Button> Steuerelemente befindet sich auf die <xref:System.Windows.Forms.Form>. Im Beispiel wird die <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A> -Eigenschaft auf "true" und behandelt die <xref:System.Windows.Forms.ToolTip.Draw> Ereignis. In der <xref:System.Windows.Forms.ToolTip.Draw> Ereignishandler, d. h. die <xref:System.Windows.Forms.ToolTip> benutzerdefinierte je nachdem welche Schaltfläche gezeichnet wird die <xref:System.Windows.Forms.ToolTip> angezeigt wird durch die <xref:System.Windows.Forms.DrawToolTipEventArgs.AssociatedControl%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Im folgenden Codeauszug veranschaulicht die Verwendung der <xref:System.Windows.Forms.DrawToolTipEventArgs.DrawBorder%2A> -Methode und der Verwendung der <xref:System.Windows.Forms.DrawToolTipEventArgs.Bounds%2A>, <xref:System.Windows.Forms.DrawToolTipEventArgs.ToolTipText%2A>, und <xref:System.Windows.Forms.DrawToolTipEventArgs.Graphics%2A> Eigenschaften. Finden Sie unter der <xref:System.Windows.Forms.DrawToolTipEventArgs> Übersicht über die Klasse für das gesamte Codebeispiel dargestellt.  
+  
+ [!code-cpp[System.Windows.Forms.ToolTip.OwnerDraw#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/CPP/form1.cpp#3)]
+ [!code-csharp[System.Windows.Forms.ToolTip.OwnerDraw#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/CS/form1.cs#3)]
+ [!code-vb[System.Windows.Forms.ToolTip.OwnerDraw#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

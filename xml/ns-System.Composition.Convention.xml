@@ -1,0 +1,6 @@
+<Namespace Name="System.Composition.Convention">
+  <Docs>
+    <summary>Die <see cref="N:System.Composition.Convention" /> -Namespace enthält Klassen, die Konvention-Generatoren für die Erstellung von Regeln, die zum Konfigurieren von CLR-Objekten als MEF-Komponenten darstellen.</summary>
+    <remarks></remarks>
+  </Docs>
+</Namespace>

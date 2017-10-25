@@ -1,0 +1,431 @@
+<Type Name="PresentationSource" FullName="System.Windows.PresentationSource">
+  <TypeSignature Language="C#" Value="public abstract class PresentationSource : System.Windows.Threading.DispatcherObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract PresentationSource extends System.Windows.Threading.DispatcherObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.PresentationSource" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Threading.DispatcherObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine abstrakte Basisklasse für Klassen, die Inhalte von einem anderen Technologie als Teil eines Interoperationsszenarios vorhanden sind. Diese Klasse bietet darüber hinaus statische Methoden zum Arbeiten mit diesen Datenquellen als auch die grundlegende Darstellung eines visuellen Layers-Architektur.</summary>
+    <remarks>To be added.</remarks>
+    <permission cref="T:System.Security.Permissions.UIPermission">von dieser Klasse abgeleitet werden. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PresentationSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.PresentationSource.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Stellt die Initialisierung für Basisklassenwerte beim Aufruf durch den Konstruktor einer abgeleiteten Klasse bereit.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddSource">
+      <MemberSignature Language="C#" Value="protected void AddSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void AddSource() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.PresentationSource.AddSource" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fügt eine <see cref="T:System.Windows.PresentationSource" /> Klasseninstanz zur Liste der bekannten Präsentationsquellen abgeleitet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode sollte aufgerufen werden, von abgeleiteten Klassen, um anzugeben, dass sie verfolgt werden müssen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddSourceChangedHandler">
+      <MemberSignature Language="C#" Value="public static void AddSourceChangedHandler (System.Windows.IInputElement element, System.Windows.SourceChangedEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddSourceChangedHandler(class System.Windows.IInputElement element, class System.Windows.SourceChangedEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.PresentationSource.AddSourceChangedHandler(System.Windows.IInputElement,System.Windows.SourceChangedEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.IInputElement" />
+        <Parameter Name="handler" Type="System.Windows.SourceChangedEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, dem der Handler hinzugefügt.</param>
+        <param name="handler">Die hinzuzufügende Geschäftslogikhandler-Implementierung.</param>
+        <summary>Fügt einen Handler für das <see langword="SourceChanged" /> Ereignis an das bereitgestellte Element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Trotz, was die Syntaxblock-für dieses Ereignis gibt an, es gibt keine zulässige [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] Verwendung für angefügte Eigenschaft. Sie sollten nicht versuchen, fügen Ereignishandler in [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)], und der Handler im Code sollte nur für Objekte, die als Hosts für die Präsentation dienen platziert werden (<xref:System.Windows.PresentationSource> ) Inhalt. Solche Handler nur während der objektinitialisierung angefügt werden soll, und in einer Dispose-Methode oder die Bereinigung der gleichwertigen Objekte explizit entfernt werden soll.  
+  
+ Obwohl dies ein Routingereignis ist, bestehen spezielle Einschränkungen für dieses Ereignis, die sich von normalen Routingereignisverhalten, aufgrund einer relativ kleinen Anzahl von Elementen in ein typisches Anwendungsszenario, die selbst betreffen würden unterscheiden, mit der Verarbeitung dieser das Ereignis.  
+  
+-   Sie können keine der <xref:System.Windows.UIElement> oder <xref:System.Windows.ContentElement> <xref:System.Windows.UIElement.AddHandler%2A> Methoden, um Ereignishandler hinzuzufügen. Verwenden Sie <xref:System.Windows.PresentationSource.AddSourceChangedHandler%2A>.  
+  
+-   Die [!INCLUDE[TLA#tla_cshrp](~/includes/tlasharptla-cshrp-md.md)] `+=` und `-=` Ereignishandlersyntax und verwandte sprachspezifische Handlersyntax werden nicht unterstützt, da das Ereignis selbst nicht als öffentlich verfügbar gemacht wird. Nur die <xref:System.Windows.PresentationSource> Utility-Methoden zum Hinzufügen und entfernen die Handler direkt unterstützt werden.  
+  
+-   Klassenhandler sind nicht zulässig. Insbesondere können nicht aufgerufen werden <xref:System.Windows.EventManager.RegisterClassHandler%2A> für dieses Ereignis in einem Klassenkonstruktor da zwar einem Bezeichnerfeld für "SourceChanged" vorhanden ist, der Bezeichner nicht öffentlich ist.  
+  
+-   Alle registrierten Handler werden das Ereignis "SourceChanged" erhalten, selbst wenn einer der Handler versucht, die Argumente als behandelt markiert werden.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">aufrufen, oder implementieren Sie diese Methode. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearContentRenderedListeners">
+      <MemberSignature Language="C#" Value="protected void ClearContentRenderedListeners ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ClearContentRenderedListeners() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.PresentationSource.ClearContentRenderedListeners" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt die Liste der Listener für die <see cref="E:System.Windows.PresentationSource.ContentRendered" /> Ereignis <see langword="null" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompositionTarget">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.CompositionTarget CompositionTarget { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.CompositionTarget CompositionTarget" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.PresentationSource.CompositionTarget" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.CompositionTarget</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das visuelle Ziel für die visuellen Elemente angezeigt wird, in der Quelle ab.</summary>
+        <value>Ein visuelles Ziel (Instanz von einem <see cref="T:System.Windows.Media.CompositionTarget" /> abgeleitete Klasse).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Rückgabe von dieser Eigenschaft basiert, bei der Implementierung der <xref:System.Windows.PresentationSource.GetCompositionTargetCore%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Abgeleitete Klassen können diese Eigenschaft, um einen typspezifischen Wert bieten überschatten.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentRendered">
+      <MemberSignature Language="C#" Value="public event EventHandler ContentRendered;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ContentRendered" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.PresentationSource.ContentRendered" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Inhalt gerendert wurde und für Benutzerinteraktionen bereit ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentSources">
+      <MemberSignature Language="C#" Value="public static System.Collections.IEnumerable CurrentSources { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Collections.IEnumerable CurrentSources" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.PresentationSource.CurrentSources" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine Liste der Datenquellen zurück.</summary>
+        <value>Eine Liste der schwache Verweise.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebene Liste unterstützt einen Enumerator über eine schreibgeschützte threadsichere Kopie der Liste der Datenquellen, wie mit hinzugefügt <xref:System.Windows.PresentationSource.AddSource%2A>.  
+  
+ Der Enumerator überspringt Warteschlange für unzustellbare Nachrichten schwache Verweise in der Liste.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">Quellen abrufen. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="FromDependencyObject">
+      <MemberSignature Language="C#" Value="public static System.Windows.PresentationSource FromDependencyObject (System.Windows.DependencyObject dependencyObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.PresentationSource FromDependencyObject(class System.Windows.DependencyObject dependencyObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.PresentationSource.FromDependencyObject(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.PresentationSource</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dependencyObject" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="dependencyObject">Die <see cref="T:System.Windows.DependencyObject" /> für die Quelle gesucht.</param>
+        <summary>Gibt die Quelle zurück, in dem ein bereitgestelltes <see cref="T:System.Windows.DependencyObject" /> erhält.</summary>
+        <returns>Die <see cref="T:System.Windows.PresentationSource" /> in der das Dependency-Objekt präsentiert wird.</returns>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">aufrufen, oder implementieren Sie diese Methode. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="FromVisual">
+      <MemberSignature Language="C#" Value="public static System.Windows.PresentationSource FromVisual (System.Windows.Media.Visual visual);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.PresentationSource FromVisual(class System.Windows.Media.Visual visual) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.PresentationSource.FromVisual(System.Windows.Media.Visual)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.PresentationSource</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visual" Type="System.Windows.Media.Visual" />
+      </Parameters>
+      <Docs>
+        <param name="visual">Die <see cref="T:System.Windows.Media.Visual" /> für die Quelle gesucht.</param>
+        <summary>Gibt die Quelle zurück, in dem ein bereitgestelltes <see cref="T:System.Windows.Media.Visual" /> erhält.</summary>
+        <returns>Die <see cref="T:System.Windows.PresentationSource" /> in der das visuelle Element präsentiert wird, oder <see langword="null" /> Wenn <paramref name="visual" /> verworfen wird.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="visual" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">aufrufen, oder implementieren Sie diese Methode. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCompositionTargetCore">
+      <MemberSignature Language="C#" Value="protected abstract System.Windows.Media.CompositionTarget GetCompositionTargetCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Windows.Media.CompositionTarget GetCompositionTargetCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.PresentationSource.GetCompositionTargetCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.CompositionTarget</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse gibt ein visuelles Ziel für die angegebene Quelle zurück.</summary>
+        <returns>Gibt eine <see cref="T:System.Windows.Media.CompositionTarget" /> Ziel für das Rendern des visuellen Objekts.</returns>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Überschreiben Sie diese Methode, um den Wert zu deklarieren, die die <see cref="P:System.Windows.PresentationSource.CompositionTarget" /> schreibgeschützte Eigenschaft zurück.  
+  
+ Die Außerkraftsetzung typspezifische Instanzen sollten zurückgeben, die <see cref="T:System.Windows.Media.CompositionTarget" /> abgeleiteten Klassentyp, der für Ihr Szenario interoperation verwendet wird.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDisposed">
+      <MemberSignature Language="C#" Value="public abstract bool IsDisposed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDisposed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.PresentationSource.IsDisposed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft einen Wert, der bestimmt, ob das Objekt freigegeben wurde.</summary>
+        <value>
+          <see langword="true" />Wenn das Objekt freigegeben wurde; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Abgeleitete Klassen implementieren voraussichtlich <see cref="T:System.IDisposable" /> oder ein gleichwertiges Verhalten bereitzustellen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveSource">
+      <MemberSignature Language="C#" Value="protected void RemoveSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RemoveSource() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.PresentationSource.RemoveSource" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt eine <see cref="T:System.Windows.PresentationSource" /> Klasseninstanz aus der Liste der bekannten Präsentationsquellen abgeleitet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveSourceChangedHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveSourceChangedHandler (System.Windows.IInputElement e, System.Windows.SourceChangedEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveSourceChangedHandler(class System.Windows.IInputElement e, class System.Windows.SourceChangedEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.PresentationSource.RemoveSourceChangedHandler(System.Windows.IInputElement,System.Windows.SourceChangedEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.IInputElement" />
+        <Parameter Name="handler" Type="System.Windows.SourceChangedEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="e">Das Element, das der Handler aus entfernt.</param>
+        <param name="handler">Die Handlerimplementierung, entfernt.</param>
+        <summary>Entfernt einen Handler für das <see langword="SourceChanged" /> Ereignis aus dem bereitgestellten Element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Obwohl dies ein Routingereignis ist, bestehen spezielle Einschränkungen für dieses Ereignis, die sich von normalen Routingereignisverhalten, aufgrund einer relativ kleinen Anzahl von Elementen in ein typisches Anwendungsszenario, die selbst betreffen würden unterscheiden, mit der Verarbeitung dieser das Ereignis.  
+  
+-   Sie können keine der <xref:System.Windows.UIElement> oder <xref:System.Windows.ContentElement> <xref:System.Windows.UIElement.RemoveHandler%2A> Methoden, um die Handler zu entfernen. Verwenden Sie <xref:System.Windows.PresentationSource.RemoveSourceChangedHandler%2A>.  
+  
+-   Die [!INCLUDE[TLA#tla_cshrp](~/includes/tlasharptla-cshrp-md.md)] `+=` und `-=` Ereignishandlersyntax und andere sprachspezifische Handlersyntax werden nicht unterstützt, da das Ereignis selbst nicht als öffentlich verfügbar gemacht wird. Nur die <xref:System.Windows.PresentationSource> Utility-Methoden zum Hinzufügen und entfernen die Handler direkt unterstützt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RootChanged">
+      <MemberSignature Language="C#" Value="protected void RootChanged (System.Windows.Media.Visual oldRoot, System.Windows.Media.Visual newRoot);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RootChanged(class System.Windows.Media.Visual oldRoot, class System.Windows.Media.Visual newRoot) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.PresentationSource.RootChanged(System.Windows.Media.Visual,System.Windows.Media.Visual)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldRoot" Type="System.Windows.Media.Visual" />
+        <Parameter Name="newRoot" Type="System.Windows.Media.Visual" />
+      </Parameters>
+      <Docs>
+        <param name="oldRoot">Das alte Stammelement <see cref="T:System.Windows.Media.Visual" />.</param>
+        <param name="newRoot">Die neuen Stamm <see cref="T:System.Windows.Media.Visual" />.</param>
+        <summary>Stellt eine Benachrichtigung bereit, die den Stamm <see cref="T:System.Windows.Media.Visual" /> hat sich geändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Klassen müssen diese Methode, um anzugeben, dass ihre Stamm Aufrufen <xref:System.Windows.Media.Visual> hat sich geändert.  
+  
+ Beim Aufrufen dieser Methode bewirkt, dass zwei Lebensdauer Objektereignisse für den angegebenen Stammelementen ausgelöst, wenn sind von die Stammelementen <xref:System.Windows.FrameworkElement> abgeleitete Klassen.  
+  
+-   Das alte visuelle Stammelement löst die <xref:System.Windows.FrameworkElement.Unloaded> Ereignisses und seiner Struktur von Elementen senden über das dieses Ereignis an jedes untergeordnete Element nach unten, verarbeitet.  
+  
+-   Das neue visuelle Stammelement löst die <xref:System.Windows.FrameworkElement.Loaded> Ereignisses und seiner Struktur von Elementen senden über das dieses Ereignis an jedes untergeordnete Element nach unten, verarbeitet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RootVisual">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Media.Visual RootVisual { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Visual RootVisual" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.PresentationSource.RootVisual" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Visual</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft, oder legt den Stamm visual in der Quelle angezeigt wird.</summary>
+        <value>Das Stammelement.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">zum Überschreiben der Eigenschaft (<see langword="InheritanceDemand" />). Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" />.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

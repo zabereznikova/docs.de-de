@@ -1,0 +1,206 @@
+<Type Name="BamlLocalizableResourceKey" FullName="System.Windows.Markup.Localizer.BamlLocalizableResourceKey">
+  <TypeSignature Language="C#" Value="public class BamlLocalizableResourceKey" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BamlLocalizableResourceKey extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.Localizer.BamlLocalizableResourceKey" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Schlüssel ab, das in lokalisierbare Ressourcen identifiziert eine <see cref="T:System.Windows.Markup.Localizer.BamlLocalizationDictionary" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse stellt einen Schlüssel, der einen lokalisierbaren Wert in eindeutig identifiziert werden kann [!INCLUDE[TLA#tla_baml](~/includes/tlasharptla-baml-md.md)]. Es stellt eine Kombination von einem <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>, den Klassennamen und Eigenschaftsnamen.  
+  
+ Der <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> Wert muss hinzugefügt werden, um die Quelle [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] Datei entweder mithilfe der `updateuid` [!INCLUDE[TLA#tla_msbuild](~/includes/tlasharptla-msbuild-md.md)] Ziel (z. B. `msbuild /t:updateuid myproj.proj`), oder manuell im Markup. [!INCLUDE[TLA2#tla_baml](~/includes/tla2sharptla-baml-md.md)]ohne eine <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> nicht lokalisiert werden. Der Klassenname ist der Typname des Elements, das die lokalisierbare Eigenschaft enthält. Den Namen der Eigenschaft bezieht sich auf die Eigenschaft, die den lokalisierbaren Wert hat. Eine spezielle Eigenschaft mit dem Namen "`$Content`" wird verwendet, um Werte darzustellen, die die Initialisierungseigenschaft Text oder den Inhalt eines Elements zu werden. Z. B. die `$Content` Eigenschaftsname gelten für die Initialisierungstext `Click` in den folgenden XAML-Code:  
+  
+ `<TextBlock x:Uid="myBlock">Click </TextBlock>`  
+  
+<a name="xamlTextUsage_BamlLocalizableResourceKey"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie eine <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey>.  
+  
+ [!code-csharp[GrabBaml#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GrabBaml/CSharp/GrabBaml.cs#1)]
+ [!code-vb[GrabBaml#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GrabBaml/visualbasic/grabbaml.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BamlLocalizableResourceKey (string uid, string className, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string uid, string className, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.#ctor(System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="uid" Type="System.String" />
+        <Parameter Name="className" Type="System.String" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="uid">Die Uid eines Elements, das einer lokalisierbaren Ressource.</param>
+        <param name="className">Der Klassenname des Ressource in lokalisierbare [!INCLUDE[TLA#tla_baml](~/includes/tlasharptla-baml-md.md)].</param>
+        <param name="propertyName">Den Eigenschaftennamen der Ressource in lokalisierbare [!INCLUDE[TLA2#tla_baml](~/includes/tla2sharptla-baml-md.md)].</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Markup.Localizer.BamlLocalizableResourceKey" /> Klasse mit der angegebenen Uid, den Klassennamen und den Eigenschaftsnamen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyName">
+      <MemberSignature Language="C#" Value="public string AssemblyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AssemblyName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.AssemblyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Assembly, die den Typ der lokalisierbaren Ressource gemäß der Deklaration durch definiert seine <see cref="P:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.ClassName" />.</summary>
+        <value>Der Name der Assembly.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Name der Assembly ist nicht erforderlich, zur eindeutigen Identifizierung eine Ressource in [!INCLUDE[TLA2#tla_baml](~/includes/tla2sharptla-baml-md.md)] ist jedoch enthalten hier zur Vereinfachung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClassName">
+      <MemberSignature Language="C#" Value="public string ClassName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClassName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.ClassName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Klasse Namenskomponente dieses <see cref="T:System.Windows.Markup.Localizer.BamlLocalizableResourceKey" />.</summary>
+        <value>Die Namenskomponente Klasse dieses <see cref="T:System.Windows.Markup.Localizer.BamlLocalizableResourceKey" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="other">Das Objekt auf Gleichheit verglichen werden soll.</param>
+        <summary>Vergleicht ein Objekt mit einer Instanz von <see cref="T:System.Windows.Markup.Localizer.BamlLocalizableResourceKey" /> auf Gleichheit.</summary>
+        <returns>
+          <see langword="true" />, wenn die beiden Instanzen gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Windows.Markup.Localizer.BamlLocalizableResourceKey other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(class System.Windows.Markup.Localizer.BamlLocalizableResourceKey other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Equals(System.Windows.Markup.Localizer.BamlLocalizableResourceKey)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Windows.Markup.Localizer.BamlLocalizableResourceKey" />
+      </Parameters>
+      <Docs>
+        <param name="other">Der anderen Instanz von <see cref="T:System.Windows.Markup.Localizer.BamlLocalizableResourceKey" /> auf Gleichheit verglichen werden soll.</param>
+        <summary>Vergleicht zwei Instanzen von <see cref="T:System.Windows.Markup.Localizer.BamlLocalizableResourceKey" /> auf Gleichheit.</summary>
+        <returns>
+          <see langword="true" />, wenn die beiden Instanzen gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Hashcode als ganze Zahl, die dieser Instanz darstellt.</summary>
+        <returns>Ein Hashcode als ganze Zahl.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyName">
+      <MemberSignature Language="C#" Value="public string PropertyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PropertyName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.PropertyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Eigenschaft dieser Komponente <see cref="T:System.Windows.Markup.Localizer.BamlLocalizableResourceKey" />.</summary>
+        <value>Die Namenskomponente Eigenschaft dieses <see cref="T:System.Windows.Markup.Localizer.BamlLocalizableResourceKey" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uid">
+      <MemberSignature Language="C#" Value="public string Uid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Uid" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Uid-Komponente dieses <see cref="T:System.Windows.Markup.Localizer.BamlLocalizableResourceKey" />.</summary>
+        <value>Die Uid-Komponente dieses <see cref="T:System.Windows.Markup.Localizer.BamlLocalizableResourceKey" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

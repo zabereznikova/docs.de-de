@@ -1,0 +1,81 @@
+<Type Name="DirectiveRegex" FullName="System.Web.RegularExpressions.DirectiveRegex">
+  <TypeSignature Language="C#" Value="public class DirectiveRegex : System.Text.RegularExpressions.Regex" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi DirectiveRegex extends System.Text.RegularExpressions.Regex" />
+  <TypeSignature Language="DocId" Value="T:System.Web.RegularExpressions.DirectiveRegex" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.RegularExpressions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Text.RegularExpressions.Regex</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen regulären Ausdruck, um eine Richtlinie für ASP.NET zu analysieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.RegularExpressions.DirectiveRegex> Klasse bietet einen kompilierten regulären Ausdruck zum Analysieren von ASP.NET-Direktive (`<%@` ... `%>`) angezeigt wird.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.RegularExpressions> Klassen werden von .NET Framework intern verwendet, um ASP.NET-Seiten zu analysieren.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectiveRegex ();" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.RegularExpressions.DirectiveRegex.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.RegularExpressions.DirectiveRegex" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor instanziiert einen kompilierten regulären Ausdruck, dessen vordefinierte reguläre Ausdrucksmuster der folgende Code ist:  
+  
+ `\G<%\s*@(\s*(?<attrname>\w[\w:]*(?=\W))(\s*(?<equal>=)\s*"(?<attrval>[^"]*)"|\s*(?<equal>=)\s*'(?<attrval>[^']*)'|\s*(?<equal>=)\s*(?<attrval>[^\s%>]*)|(?<equal>)(?<attrval>\s*?)))*\s*?%>`  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectiveRegex (TimeSpan A_1);" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor(valuetype System.TimeSpan A_1) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.RegularExpressions.DirectiveRegex.#ctor(System.TimeSpan)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="A_1" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="A_1">Ein Timeoutintervall oder <see cref="F:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout" /> Wenn Vorgänge entsprechender sollte kein Timeout.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.RegularExpressions.DirectiveRegex" /> -Klasse mit einem angegebenen Timeoutwert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `A_1` Parameter darstellt, das maximale Zeitintervall, das dem Modul für reguläre Ausdrücke keine Übereinstimmung gefunden wird, bevor der Vorgang ein Timeout eintritt und eine versucht <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> Ausdruck ausgelöst wird.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

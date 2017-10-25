@@ -1,0 +1,125 @@
+<Type Name="LogExtent" FullName="System.IO.Log.LogExtent">
+  <TypeSignature Language="C#" Value="public sealed class LogExtent" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LogExtent extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Log.LogExtent" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Log</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Datenträgerwertebereich dar, der Protokolldaten enthält.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine <xref:System.IO.Log.LogStore>-Instanz speichert ihre Daten in einer Auflistung von Datenträgerwertebereichen, die durch <xref:System.IO.Log.LogExtent>-Instanzen dargestellt wird. Ein bestimmter <xref:System.IO.Log.LogExtent> ist genau einem <xref:System.IO.Log.LogStore> zugeordnet, und <xref:System.IO.Log.LogExtent>-Objekte im selben <xref:System.IO.Log.LogStore> weisen dieselbe Größe auf. Speicherplatz wird in Wertebereichsschritten einer <xref:System.IO.Log.LogStore>-Instanz hinzugefügt und daraus entfernt.  
+  
+ Obwohl <xref:System.IO.Log.LogExtent>-Objekte als Dateien auf dem Datenträger dargestellt werden, dürfen sie nicht wie normale Dateien verschoben oder gelöscht werden. Um eine <xref:System.IO.Log.LogExtent>-Instanz zu löschen, entfernen Sie sie aus der <xref:System.IO.Log.LogExtentCollection>, die sie enthält.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird veranschaulicht, wie die <xref:System.IO.Log.LogExtent>-Klasse verwendet wird, um Wertebereiche in einer Protokollsequenz hinzuzufügen und zu emulieren.  
+  
+ [!code-csharp[S_UELogRecordSequence#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mylogrecordsequence.cs#0)]
+ [!code-vb[S_UELogRecordSequence#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mylogrecordsequence.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogExtent.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den vollqualifizierten Pfad für diese <see cref="T:System.IO.Log.LogExtent" />-Instanz ab.</summary>
+        <value>Der vollqualifizierte Pfad für diese <see cref="T:System.IO.Log.LogExtent" />-Instanz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Obwohl <xref:System.IO.Log.LogExtent>-Objekte als Dateien auf dem Datenträger dargestellt werden, dürfen sie nicht wie normale Dateien verschoben oder gelöscht werden. Um eine <xref:System.IO.Log.LogExtent>-Instanz zu löschen, entfernen Sie sie aus der <xref:System.IO.Log.LogExtentCollection>, die sie enthält.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird veranschaulicht, wie die <xref:System.IO.Log.LogExtent>-Klasse verwendet wird, um Wertebereiche in einer Protokollsequenz hinzuzufügen und zu emulieren.  
+  
+ [!code-csharp[S_UELogRecordSequence#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mylogrecordsequence.cs#0)]
+ [!code-vb[S_UELogRecordSequence#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mylogrecordsequence.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public long Size { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Size" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogExtent.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe dieser <see cref="T:System.IO.Log.LogExtent" />-Instanz in Byte ab.</summary>
+        <value>Die Größe dieser <see cref="T:System.IO.Log.LogExtent" />-Instanz in Byte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ In diesem Beispiel wird veranschaulicht, wie die <xref:System.IO.Log.LogExtent>-Klasse verwendet wird, um Wertebereiche in einer Protokollsequenz hinzuzufügen und zu emulieren.  
+  
+ [!code-csharp[S_UELogRecordSequence#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mylogrecordsequence.cs#0)]
+ [!code-vb[S_UELogRecordSequence#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mylogrecordsequence.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public System.IO.Log.LogExtentState State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.Log.LogExtentState State" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogExtent.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.LogExtentState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zustand dieser <see cref="T:System.IO.Log.LogExtent" />-Instanz ab.</summary>
+        <value>Der Zustand dieser <see cref="T:System.IO.Log.LogExtent" />-Instanz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ In diesem Beispiel wird veranschaulicht, wie die <xref:System.IO.Log.LogExtent>-Klasse verwendet wird, um Wertebereiche in einer Protokollsequenz hinzuzufügen und zu emulieren.  
+  
+ [!code-csharp[S_UELogRecordSequence#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mylogrecordsequence.cs#0)]
+ [!code-vb[S_UELogRecordSequence#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mylogrecordsequence.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

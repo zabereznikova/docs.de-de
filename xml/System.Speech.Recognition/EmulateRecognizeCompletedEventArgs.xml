@@ -1,0 +1,91 @@
+<Type Name="EmulateRecognizeCompletedEventArgs" FullName="System.Speech.Recognition.EmulateRecognizeCompletedEventArgs">
+  <TypeSignature Language="C#" Value="public class EmulateRecognizeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EmulateRecognizeCompletedEventArgs extends System.ComponentModel.AsyncCompletedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.EmulateRecognizeCompletedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.AsyncCompletedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für die <see langword="EmulateRecognizeCompleted" /> -Ereignis für die <see cref="T:System.Speech.Recognition.SpeechRecognizer" /> und <see cref="T:System.Speech.Recognition.SpeechRecognitionEngine" /> Klassen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz von <xref:System.Speech.Recognition.EmulateRecognizeCompletedEventArgs> wird erstellt, wenn die <xref:System.Speech.Recognition.SpeechRecognitionEngine> -Objekt löst die <xref:System.Speech.Recognition.SpeechRecognitionEngine.EmulateRecognizeCompleted> Ereignis. Um Informationen über das Ergebnis der Erkennung zu erhalten, Zugriff auf die <xref:System.Speech.Recognition.EmulateRecognizeCompletedEventArgs.Result%2A> Eigenschaft im Handler für das Ereignis.  
+  
+ Emulation versteht man das nach dem Text, anstelle von Audio, die Eingabe für eine Spracherkennungsmoduls ist. Umgehen der Audioeingänge für eine <xref:System.Speech.Recognition.SpeechRecognitionEngine> Objekts während der Emulation, verwenden die <xref:System.Speech.Recognition.SpeechRecognitionEngine.SetInputToNull%2A> Methode.  
+  
+ Wenn die Spracherkennungsmoduls beim Auftreten einer Ausnahme während der Erkennungsvorgang der <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> Eigenschaftensatz auf die Ausnahme und die <xref:System.Speech.Recognition.EmulateRecognizeCompletedEventArgs.Result%2A> -Eigenschaftensatz auf `null`.  
+  
+ <xref:System.Speech.Recognition.EmulateRecognizeCompletedEventArgs> wird von <xref:System.ComponentModel.AsyncCompletedEventArgs> abgeleitet.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel fügt einen Ereignishandler für das <xref:System.Speech.Recognition.SpeechRecognitionEngine.EmulateRecognizeCompleted> Ereignis, um eine <xref:System.Speech.Recognition.SpeechRecognitionEngine>. Der Handler Ruft den erkannten Text aus der <xref:System.Speech.Recognition.EmulateRecognizeCompletedEventArgs.Result%2A> Eigenschaft.  
+  
+```csharp  
+  
+private SpeechRecognitionEngine sre;  
+  
+// Initialize the speech recognition engine.   
+private void Initialize()  
+{  
+  sre = new SpeechRecognitionEngine();  
+  
+  // Add a handler for the EmulateRecognizeCompleted event.  
+  sre.EmulateRecognizeCompleted += new EventHandler<EmulateRecognizeCompletedEventArgs>(sre_EmulateRecognizeCompleted);  
+  
+  // Add other initialization code here.  
+}  
+  
+// Handle the EmulateRecognizeCompleted event.   
+void sre_EmulateRecognizeCompleted(object sender, EmulateRecognizeCompletedEventArgs e)  
+{  
+  if (e.Result == null) return;  
+  
+  string phrase = e.Result.Text;  
+  
+  // Add event handler code here.  
+}  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Result">
+      <MemberSignature Language="C#" Value="public System.Speech.Recognition.RecognitionResult Result { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Speech.Recognition.RecognitionResult Result" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.EmulateRecognizeCompletedEventArgs.Result" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.RecognitionResult</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ergebnisse der emulierten Anerkennung ab.</summary>
+        <value>Ausführliche Informationen zu den Ergebnissen der Deaktivierung oder <see langword="null" /> bei einem Fehler.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Speech.Recognition.RecognitionResult> Objekt abgeleitet <xref:System.Speech.Recognition.RecognizedPhrase> und enthält vollständige Informationen zu einem Satz von eines Erkennungsvorgangs zurückgegeben. Sie erhalten eine Liste deaktiviert die Erkennung Kandidaten aus der <xref:System.Speech.Recognition.RecognitionResult.Alternates%2A> Eigenschaft.  
+  
+ Wurde eine Ausnahme während der Erkennungsvorgang findet die <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> Eigenschaftensatz auf die Ausnahme und die <xref:System.Speech.Recognition.EmulateRecognizeCompletedEventArgs.Result%2A> -Eigenschaftensatz auf `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

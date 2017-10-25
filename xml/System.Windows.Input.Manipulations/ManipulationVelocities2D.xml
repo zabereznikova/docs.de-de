@@ -1,0 +1,133 @@
+<Type Name="ManipulationVelocities2D" FullName="System.Windows.Input.Manipulations.ManipulationVelocities2D">
+  <TypeSignature Language="C#" Value="public class ManipulationVelocities2D" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ManipulationVelocities2D extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.Manipulations.ManipulationVelocities2D" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Reihe von Geschwindigkeiten berechnet, indem die Manipulations- und Trägheitsprozessoren Prozessoren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Input.Manipulations.ManipulationVelocities2D> Objekt wird in der Ereignisargumente verwendet <xref:System.Windows.Input.Manipulations.Manipulation2DDeltaEventArgs> und <xref:System.Windows.Input.Manipulations.Manipulation2DCompletedEventArgs> des ereignishandlers von der Geschwindigkeiten informiert die Manipulation beteiligt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AngularVelocity">
+      <MemberSignature Language="C#" Value="public float AngularVelocity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 AngularVelocity" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.ManipulationVelocities2D.AngularVelocity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Geschwindigkeit Angular im Bogenmaß pro Millisekunde.</summary>
+        <value>Die Geschwindigkeit des Angular im Bogenmaß pro Millisekunde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpansionVelocityX">
+      <MemberSignature Language="C#" Value="public float ExpansionVelocityX { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 ExpansionVelocityX" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.ManipulationVelocities2D.ExpansionVelocityX" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Erweiterung Geschwindigkeit entlang der x-Achse in-Koordinate Einheiten pro Millisekunde.</summary>
+        <value>Die Erweiterung Geschwindigkeit entlang der x-Achse, in-Koordinate Einheiten pro Millisekunde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpansionVelocityY">
+      <MemberSignature Language="C#" Value="public float ExpansionVelocityY { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 ExpansionVelocityY" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.ManipulationVelocities2D.ExpansionVelocityY" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Erweiterung Geschwindigkeit entlang der y-Achse in-Koordinate Einheiten pro Millisekunde.</summary>
+        <value>Die Erweiterung Geschwindigkeit entlang der y-Achse, in-Koordinate Einheiten pro Millisekunde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinearVelocityX">
+      <MemberSignature Language="C#" Value="public float LinearVelocityX { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 LinearVelocityX" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.ManipulationVelocities2D.LinearVelocityX" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Geschwindigkeit entlang der x-Achse in-Koordinate Einheiten pro Millisekunde.</summary>
+        <value>Die Geschwindigkeit entlang der x-Achse in-Koordinate Einheiten pro Millisekunde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinearVelocityY">
+      <MemberSignature Language="C#" Value="public float LinearVelocityY { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 LinearVelocityY" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.ManipulationVelocities2D.LinearVelocityY" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Geschwindigkeit entlang der y-Achse in-Koordinate Einheiten pro Millisekunde.</summary>
+        <value>Die Geschwindigkeit entlang der y-Achse in-Koordinate Einheiten pro Millisekunde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Zero">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Input.Manipulations.ManipulationVelocities2D Zero;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Input.Manipulations.ManipulationVelocities2D Zero" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.Manipulations.ManipulationVelocities2D.Zero" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Manipulations.ManipulationVelocities2D</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Input.Manipulations.ManipulationVelocities2D" /> mit allen Geschwindigkeiten auf 0 (null) festgelegt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

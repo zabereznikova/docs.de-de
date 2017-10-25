@@ -1,0 +1,194 @@
+<Type Name="JsonQueryStringConverter" FullName="System.ServiceModel.Dispatcher.JsonQueryStringConverter">
+  <TypeSignature Language="C#" Value="public class JsonQueryStringConverter : System.ServiceModel.Dispatcher.QueryStringConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit JsonQueryStringConverter extends System.ServiceModel.Dispatcher.QueryStringConverter" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.JsonQueryStringConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Web</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Dispatcher.QueryStringConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Diese Klasse konvertiert einen Parameterwert in eine bzw. aus einer JSON-Zeichenfolge (JavaScript Object Notation).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Parameter können in einer JSON-Abfragezeichenfolge in einem URL angegeben werden. Diese Klasse steuert, wie JSON-Abfragezeichenfolgenparameter den Parametern eines Dienstvorgangs zugeordnet werden, wenn <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> zur Verarbeitung von HTTP-Anfragen von browserbasierten ASP.NET-AJAX-Clients verwendet wird.  
+  
+ Diese Klasse wird intern von der [!INCLUDE[indigo1](~/includes/indigo1-md.md)]<xref:System.ServiceModel.Description.WebScriptEnablingBehavior>-Klasse für Endpunkte verwendet, die HTTP-GET-/POST-Anforderungen mit Parametern in der URI-Abfragezeichenfolge akzeptieren. Diese Klasse wird für die Konvertierung zwischen CLR-Objekten und den einzelnen Parameterwerten der Vorgangsanforderung in der URI-Abfragezeichenfolge verwendet. Im Gegensatz zu ihrem Basistyp unterstützt diese Klasse sowohl Werte von primitiven als auch Werte von komplexen Typen.  
+  
+ <xref:System.ServiceModel.Dispatcher.JsonQueryStringConverter> wird von <xref:System.ServiceModel.Dispatcher.QueryStringConverter> abgeleitet und unterstützt die folgenden Typen:  
+  
+-   <xref:System.Byte>  
+  
+-   <xref:System.SByte>  
+  
+-   <xref:System.Int16>  
+  
+-   <xref:System.Int32>  
+  
+-   <xref:System.Int64>  
+  
+-   <xref:System.UInt16>  
+  
+-   <xref:System.UInt32>  
+  
+-   <xref:System.UInt64>  
+  
+-   <xref:System.Single>  
+  
+-   <xref:System.Double>  
+  
+-   <xref:System.Char>  
+  
+-   <xref:System.Decimal>  
+  
+-   <xref:System.Boolean>  
+  
+-   <xref:System.String>  
+  
+-   <xref:System.DateTime>  
+  
+-   <xref:System.TimeSpan>  
+  
+-   <xref:System.Guid>  
+  
+-   Ein <xref:System.Array> vom Typ <xref:System.Byte>.  
+  
+-   <xref:System.Uri>  
+  
+-   <xref:System.Object>  
+  
+ Im Gegensatz zu seinem Basistyp unterstützt dieser Konverter alle Typen, die dem Datenvertragsmodell entsprechen. Der Konverter überschreibt <xref:System.ServiceModel.Dispatcher.QueryStringConverter.ConvertValueToString%28System.Object%2CSystem.Type%29>, sodass die einzelnen Parameter unter Verwendung des standardmäßigen <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> und einem für die UTF-8-Codierung konfigurierten JSON-XML-Writer in JSON serialisiert werden. `null`Parameter werden als zurückgegeben `null`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JsonQueryStringConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.JsonQueryStringConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Dispatcher.JsonQueryStringConverter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvert">
+      <MemberSignature Language="C#" Value="public override bool CanConvert (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvert(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.JsonQueryStringConverter.CanConvert(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die zu überprüfende <see cref="T:System.Type" />.</param>
+        <summary>Ruft einen Wert ab, der angibt, ob es sich bei einem angegebenen Common Language Runtime (CLR)-Typ um einen bekannten Typ handelt, der serialisiert bzw. deserialisiert werden kann.</summary>
+        <returns>
+          <see langword="true" />, wenn der Typ serialisiert werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Hiermit wird überprüft, ob ein CLR-Typ in einer JSON-Abfragezeichenfolge verwendet werden kann. CLR-Typen, die in einer solchen Zeichenfolge verwendet werden können, werden von <xref:System.Runtime.Serialization.DataContractSerializer> unterstützt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="type" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertStringToValue">
+      <MemberSignature Language="C#" Value="public override object ConvertStringToValue (string parameter, Type parameterType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertStringToValue(string parameter, class System.Type parameterType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.JsonQueryStringConverter.ConvertStringToValue(System.String,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameter" Type="System.String" />
+        <Parameter Name="parameterType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="parameter">Die JSON-Form des Parameterwerts.</param>
+        <param name="parameterType">Der <see cref="T:System.Type" />, in den der Parameter deserialisiert werden soll.</param>
+        <summary>Deserialisiert einen JSON-Abfragezeichenfolgenparameter in einen angegebenen CLR-Typ.</summary>
+        <returns>Eine Instanz des CLR-Typs, in den der Parameterwert konvertiert wurde.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertValueToString">
+      <MemberSignature Language="C#" Value="public override string ConvertValueToString (object parameter, Type parameterType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ConvertValueToString(object parameter, class System.Type parameterType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.JsonQueryStringConverter.ConvertValueToString(System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameter" Type="System.Object" />
+        <Parameter Name="parameterType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="parameter">Der zu konvertierende Parameterwert.</param>
+        <param name="parameterType">Der <see cref="T:System.Type" /> des Parameters, der serialisiert werden soll.</param>
+        <summary>Serialisiert einen CLR-Parametertyp in eine JSON-Darstellung.</summary>
+        <returns>Die Serialisierung des JSON-Abfragezeichenfolgenparameters des CLR-Typs. <see langword="null" />wird zurückgegeben, wenn der Parameter ist <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Konverter überschreibt <xref:System.ServiceModel.Dispatcher.QueryStringConverter.ConvertValueToString%28System.Object%2CSystem.Type%29>, sodass die einzelnen Parameter unter Verwendung des standardmäßigen <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> und einem für die UTF-8-Codierung konfigurierten JSON-XML-Writer in JSON serialisiert werden. Im Gegensatz zu seinem Basistyp unterstützt dieser Konverter alle Typen, die dem Datenvertragsmodell entsprechen.  
+  
+   
+  
+## Examples  
+ Betrachten Sie den folgenden Vorgang.  
+  
+```  
+[WebGet]  
+[OperationContract] public int GetOptionQuote(string ticker, DateTime dte, Option opt);  
+```  
+  
+ Bei diesem Vorgang wird ein URL erstellt, bei dem es sich um die URL-Version von Folgendem handelt.  
+  
+```  
+http://localhost/quote.svc/GetOptionQuote?ticker="MSFT"&dte="\/Date(50067823)\/"&opt={"type":"call","strikePrice":"35"}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

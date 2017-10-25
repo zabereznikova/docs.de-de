@@ -1,0 +1,41 @@
+<Type Name="ICorrelationDataSource" FullName="System.ServiceModel.Channels.ICorrelationDataSource">
+  <TypeSignature Language="C#" Value="public interface ICorrelationDataSource" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICorrelationDataSource" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.ICorrelationDataSource" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Eigenschaft bereit, die eine Beschreibung aller Korrelationsdaten zurückgibt, die ein Kanal angeben kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch die Implementierung dieser Schnittstelle gibt ein Kanal an, dass sie registriert wird, um Korrelationsdaten bereitzustellen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DataSources">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;System.ServiceModel.Channels.CorrelationDataDescription&gt; DataSources { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class System.ServiceModel.Channels.CorrelationDataDescription&gt; DataSources" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ICorrelationDataSource.DataSources" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.ServiceModel.Channels.CorrelationDataDescription&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung ab, die eine Beschreibung aller Korrelationsdaten zurückgibt, die ein Kanal liefern kann.</summary>
+        <value>Korrelationsdatenbeschreibungen</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

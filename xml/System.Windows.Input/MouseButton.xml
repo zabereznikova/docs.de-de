@@ -1,0 +1,108 @@
+<Type Name="MouseButton" FullName="System.Windows.Input.MouseButton">
+  <TypeSignature Language="C#" Value="public enum MouseButton" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MouseButton extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.MouseButton" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Definiert Werte, die die Schaltflächen auf einem Mausgerät angeben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Input.Mouse.MouseDown> Ereignishandler mithilfe der <xref:System.Windows.Input.MouseButton> Enumeration, um zu bestimmen, welches Steuerelement die Schaltfläche gedrückt wurde. Je nachdem, welches Steuerelement die Schaltfläche gedrückt wurde wird der Hintergrund des Steuerelements, das das Ereignis ausgelöst wird, geändert.  
+  
+ [!code-csharp[mousesnippetsample#MouseEventArgsChangedButton](~/samples/snippets/csharp/VS_Snippets_Wpf/MouseSnippetSample/CSharp/Window1.xaml.cs#mouseeventargschangedbutton)]
+ [!code-vb[mousesnippetsample#MouseEventArgsChangedButton](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MouseSnippetSample/visualbasic/window1.xaml.vb#mouseeventargschangedbutton)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="Left" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.MouseButton Left = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.MouseButton.Left" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.MouseButton</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die linke Maustaste gedrückt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Middle">
+      <MemberSignature Language="C#" Value="Middle" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.MouseButton Middle = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.MouseButton.Middle" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.MouseButton</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die mittlere Maustaste los.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="Right" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.MouseButton Right = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.MouseButton.Right" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.MouseButton</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die rechte Maustaste gedrückt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="XButton1">
+      <MemberSignature Language="C#" Value="XButton1" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.MouseButton XButton1 = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.MouseButton.XButton1" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.MouseButton</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der ersten erweiterten Maustaste.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="XButton2">
+      <MemberSignature Language="C#" Value="XButton2" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.MouseButton XButton2 = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.MouseButton.XButton2" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.MouseButton</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der zweiten erweiterten Maustaste.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

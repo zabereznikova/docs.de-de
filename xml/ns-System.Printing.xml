@@ -1,0 +1,32 @@
+<Namespace Name="System.Printing">
+  <Docs>
+    <summary>Stellt Klassen bereit, mit denen Sie die Verwaltung von Druckservern, Druckwarteschlangen und Druckaufträgen automatisieren können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Namespace enthält die folgenden Hauptklassen:  
+  
+-   Die <xref:System.Printing.PrintSystemObject> Klasse, die die Basisklasse für die anderen drucken Core-Klassen ist.  
+  
+-   Die <xref:System.Printing.PrintServer> Klasse, die einen tatsächlichen Druckserver, in der Regel auf einem Computer darstellt.  
+  
+-   Die <xref:System.Printing.PrintQueue> Klasse, die eine tatsächliche Druckerwarteschlange und ihren Drucker darstellt.  
+  
+-   Die <xref:System.Printing.PrintSystemJobInfo> Klasse, die einen bestimmten Druckauftrag darstellt.  
+  
+-   Die <xref:System.Printing.PrintTicket> -Klasse, die Drucker angewiesen, wie einen Druckauftrag verarbeitet werden soll.  
+  
+ Abgeleitete Klassen aus der <xref:System.Printing.PrintSystemObject> jede Klasse haben eine <xref:System.Printing.PrintSystemObject.Commit%2A> und eine <xref:System.Printing.PrintSystemObject.Refresh%2A> Methode. Sie müssen diese Methoden verwenden, um sicherzustellen, dass Instanzen der Klassen mit den Hardware- oder Softwarefehler Komponenten synchronisiert werden, die sie darstellen.  
+  
+ Die <xref:System.Printing> Namespace enthält auch viele Enumerationen, die Druckerfunktionen, die beschreiben, wie z. B. Ausgabe gibt an, ob ein Drucker erzeugen kann sortiert werden, und angeben, dass Anweisungen und Druckern, z. B. das Papierformat für einen Druckauftrag verwendet.  
+  
+ Dieser Namespace ist Teil der verbesserten Druckdienste Lieferumfang [!INCLUDE[TLA#tla_wpf](~/includes/tlasharptla-wpf-md.md)]. Entwickler von verwaltetem Code mit [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] verwenden, muss die [!INCLUDE[TLA#tla_api](~/includes/tlasharptla-api-md.md)] in die <xref:System.Drawing.Printing> Namespace.  
+  
+> [!CAUTION]
+>  Klassen, die innerhalb der <xref:System.Printing> Namespace werden nicht für die Verwendung innerhalb einer Windows-Dienst oder der ASP.NET-Anwendung oder der Dienst unterstützt. Unerwartete Probleme erzeugen versucht, diese Klassen von innerhalb einer dieser Anwendungstypen zu verwenden, wie z. B. wirkte-service-Leistung und zur Laufzeit Ausnahmen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

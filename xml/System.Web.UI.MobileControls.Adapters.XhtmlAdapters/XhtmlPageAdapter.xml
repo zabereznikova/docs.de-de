@@ -1,0 +1,474 @@
+<Type Name="XhtmlPageAdapter" FullName="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter">
+  <TypeSignature Language="C#" Value="public class XhtmlPageAdapter : System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter, System.Web.UI.MobileControls.IPageAdapter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XhtmlPageAdapter extends System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter implements class System.Web.UI.MobileControls.IControlAdapter, class System.Web.UI.MobileControls.IPageAdapter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.MobileControls.IPageAdapter</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Seitenadapter für die XHTML-Adaptergruppe bereit. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter> Klasse erbt die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter> -Klasse und implementiert die <xref:System.Web.UI.MobileControls.IPageAdapter> Klasse.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für das zur Ladezeit, die von die Klasse abgeleitet überprüfen <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter" /> besitzen diese Berechtigung. Zugeordnete Enumerationen: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />, <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XhtmlPageAdapter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter" />-Klasse. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheVaryByHeaders">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.IList CacheVaryByHeaders { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IList CacheVaryByHeaders" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter.CacheVaryByHeaders" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste der zusätzlichen HTTP-Header mit dem Zwischenspeichern variiert wird. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Ein <see cref="T:System.Collections.IList" /> Objekt zusätzliche HTTP-Header.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter> Klasse erbt die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter.CacheVaryByHeaders%2A> Eigenschaft aus der <xref:System.Web.UI.MobileControls.IPageAdapter> -Schnittstelle und gibt immer `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CookielessDataDictionary">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionary CookielessDataDictionary { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary CookielessDataDictionary" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter.CookielessDataDictionary" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den aktuellen cookieless <see cref="P:System.Web.UI.Page.Session" /> Eigenschaftendaten, sofern vorhanden. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Ein <see cref="T:System.Collections.IDictionary" /> mit Schlüssel/Wert-Paare für den aktuellen cookieless <see cref="P:System.Web.HttpContext.Session" /> Daten, falls vorhanden; andernfalls <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter.CookielessDataDictionary%2A> Eigenschaft wird aufgefüllt, wenn ein gültiger <xref:System.Collections.IDictionary> Schnittstelle wird als ein Attribut des konfiguriert die <xref:System.Web.UI.MobileControls.MobileControlsSection> Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTextWriter">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.HtmlTextWriter CreateTextWriter (System.IO.TextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.HtmlTextWriter CreateTextWriter(class System.IO.TextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter.CreateTextWriter(System.IO.TextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.IO.TextWriter" /> Objekt oder ein Objekt geerbt werden, von der <see cref="T:System.IO.TextWriter" />.</param>
+        <summary>Erstellt und gibt einen TextWriter, der für das Zielgerät geeignet ist. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Ein neues <see cref="T:System.Web.UI.XhtmlTextWriter" /> Objekt auf Grundlage der bereitgestellten <see cref="T:System.IO.TextWriter" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeterminePostBackMode">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Specialized.NameValueCollection DeterminePostBackMode (System.Web.HttpRequest request, string postEventSourceID, string postEventArgumentID, System.Collections.Specialized.NameValueCollection baseCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Specialized.NameValueCollection DeterminePostBackMode(class System.Web.HttpRequest request, string postEventSourceID, string postEventArgumentID, class System.Collections.Specialized.NameValueCollection baseCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter.DeterminePostBackMode(System.Web.HttpRequest,System.String,System.String,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.Web.HttpRequest" />
+        <Parameter Name="postEventSourceID" Type="System.String" />
+        <Parameter Name="postEventArgumentID" Type="System.String" />
+        <Parameter Name="baseCollection" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="request">Die <see cref="T:System.Web.HttpRequest" /> Objekt, das Anforderungsinformationen enthält.</param>
+        <param name="postEventSourceID">Der Quellenbezeichner für das Ereignis.</param>
+        <param name="postEventArgumentID">Einer der Argumentbezeichner für das Ereignis.</param>
+        <param name="baseCollection">Die Auflistung von Postbackdaten aus dem Anforderungsobjekt.</param>
+        <summary>Gibt die Postbackdatensammlung zurück. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Ein <see cref="T:System.Collections.Specialized.NameValueCollection" /> Objekt, das enthält alle Abfrageparameter Abfragezeichenfolge und Formularbereitstellungsparameter und Werte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da einige Geräte Postback anders als andere, behandeln die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter.DeterminePostBackMode%2A> Methode kann der Adapter zum Ändern der Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceQualifies">
+      <MemberSignature Language="C#" Value="public static bool DeviceQualifies (System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool DeviceQualifies(class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter.DeviceQualifies(System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Die <see cref="T:System.Web.HttpContext" /> Objekt für die aktuelle Anforderung.</param>
+        <summary>Gibt an, ob der festgelegte Geräteadapter für die angegebene Anforderung gilt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="P:System.Web.Configuration.HttpCapabilitiesBase.PreferredRenderingType" /> für der Browser eines der folgenden Elemente der ist der <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.Doctype" /> Objekt: <see cref="F:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.Doctype.XhtmlBasic" />, <see cref="F:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.Doctype.XhtmlMobileProfile" />, oder <see cref="F:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.Doctype.Wml20" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventArgumentKey">
+      <MemberSignature Language="C#" Value="public virtual string EventArgumentKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EventArgumentKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter.EventArgumentKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Schlüssel zum Senden des Ereignisarguments ab. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Eine Zeichenfolge, die den Schlüssel darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine erbende Adapter überschreibt die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter.EventArgumentKey%2A> -Eigenschaft, er muss auch überschreiben, die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter.DeterminePostBackMode%2A> Methode, um das Postback zu verarbeiten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventSourceKey">
+      <MemberSignature Language="C#" Value="public virtual string EventSourceKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EventSourceKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter.EventSourceKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Schlüssel zum Senden der Ereignisquelle ab. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Eine Zeichenfolge, die den Schlüssel darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine erbende Adapter überschreibt die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter.EventSourceKey%2A> -Eigenschaft, er muss auch überschreiben, die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter.DeterminePostBackMode%2A> Methode, um das Postback zu verarbeiten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleError">
+      <MemberSignature Language="C#" Value="public virtual bool HandleError (Exception e, System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool HandleError(class System.Exception e, class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter.HandleError(System.Exception,System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Exception" />
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Exception" />-Objekt.</param>
+        <param name="writer">Ein <see cref="T:System.Web.UI.HtmlTextWriter" />-Objekt.</param>
+        <summary>Wird aufgerufen, wenn auf der Seite ein nicht behandelter Fehler auftritt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>
+          <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Adapter kann auswählen, um den Fehler behandeln und eine Fehlermeldung angezeigt. Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter> Klasse hat keine Auswirkung, und gibt `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandlePagePostBackEvent">
+      <MemberSignature Language="C#" Value="public virtual bool HandlePagePostBackEvent (string eventSource, string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool HandlePagePostBackEvent(string eventSource, string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter.HandlePagePostBackEvent(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSource" Type="System.String" />
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventSource">Der Quellenbezeichner für das Ereignis.</param>
+        <param name="eventArgument">Der Name des Ereignisses.</param>
+        <summary>Gibt an, ob der Adapter das Postbackereignis behandelt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>
+          <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter.HandlePagePostBackEvent%2A> Methode wird aufgerufen, während Postbacks. Ein Adapter kann auswählen, für die Ereignisbehandlung. Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter> Klasse behandelt das Postbackereignis nicht und gibt immer `false`.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben der <see cref="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter.HandlePagePostBackEvent(System.String,System.String)" /> -Methode in einer abgeleiteten Klasse zurück, wenn die Seitenadapter das Postbackereignis behandelt werden sollen <see langword="true" /> nach der Behandlung des Ereignisses.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="InitWriterState">
+      <MemberSignature Language="C#" Value="protected virtual void InitWriterState (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void InitWriterState(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter.InitWriterState(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />-Objekt.</param>
+        <summary>Konfiguriert die <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" /> Objekt für das Zielgerät. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter.InitWriterState%2A> Methode wird aufgerufen, bevor die Seite gerendert. Diese Methode legt die folgenden Eigenschaften auf `writer` für das Zielgerät:  
+  
+-   <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.UseDivsForBreaks%2A>  
+  
+-   <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SuppressNewLine%2A>  
+  
+-   <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SupportsNoWrapStyle%2A>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="public override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die <see cref="T:System.EventArgs" /> -Objekt für die <see cref="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter.OnPreRender(System.EventArgs)" /> Methode.</param>
+        <summary>Legt die bedingte Paginierung für die Seite fest. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter.OnPreRender%2A> -Methode überprüft die <xref:System.Web.UI.MobileControls.MobilePage.ActiveForm%2A> Eigenschaft für die Seite. Wenn die <xref:System.Web.UI.MobileControls.Form.Action%2A> Eigenschaft ist nicht leer ist, die <xref:System.Web.UI.MobileControls.Panel.Paginate%2A> für das aktive Formular ist-Eigenschaftensatz auf `false`. Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter.OnPreRender%2A> Methode ruft die <xref:System.Web.UI.MobileControls.Adapters.ControlAdapter.OnPreRender%2A> Methode vor dem Beenden.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.MobileControls.MobileControl.Form%2A?displayProperty=nameWithType> Eigenschaft erbt von der <xref:System.Web.UI.MobileControls.Panel?displayProperty=nameWithType> -Klasse, die bietet die <xref:System.Web.UI.MobileControls.Panel.Paginate%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben der <see cref="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter.OnPreRender(System.EventArgs)" /> Methode in einer abgeleiteten Klasse werden die Basismethode aufrufen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OptimumPageWeight">
+      <MemberSignature Language="C#" Value="public virtual int OptimumPageWeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 OptimumPageWeight" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter.OptimumPageWeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Seite Gewichtung, die für das Zielgerät geeignet ist.  Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Eine ganze Zahl, die die optimale Anzahl von Bytes für eine Seite auf dem Zielgerät darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Page">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.MobileControls.MobilePage Page { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.MobilePage Page" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter.Page" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.MobilePage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Seite ab oder legt diese fest, der Adapter angefügt ist. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Ein <see cref="T:System.Web.UI.MobileControls.MobilePage" />-Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistCookielessData">
+      <MemberSignature Language="C#" Value="public bool PersistCookielessData { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PersistCookielessData" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter.PersistCookielessData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert, der angibt, ob Elemente aus der <see cref="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter.CookielessDataDictionary" /> -Eigenschaft in der Abfragezeichenfolge beibehalten werden. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>
+          <see langword="true" />Wenn die <see langword="CookielessDataDictionaryType" /> in der <see langword="MobileControls" /> Konfigurationsabschnitt der Datei "Web.config" auf einen gültigen Wörterbuchtyp; festgelegt ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="public override void Render (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Render(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter.Render(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" /> -Objekt, das den Inhalt an den Clientbrowser schreibt.</param>
+        <summary>Sendet den Inhalt der Seite an ein bereitgestelltes <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />, die den Inhalt an dem Client rendert. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderUrlPostBackEvent">
+      <MemberSignature Language="C#" Value="public virtual void RenderUrlPostBackEvent (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, string target, string argument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RenderUrlPostBackEvent(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, string target, string argument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter.RenderUrlPostBackEvent(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+        <Parameter Name="target" Type="System.String" />
+        <Parameter Name="argument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" /> -Objekt, das den Link schreibt.</param>
+        <param name="target">Die Ziel-URL für Postback.</param>
+        <param name="argument">Der Name des Ereignisses, für die der Link steht.</param>
+        <summary>Erstellt einen Link auf der aktuellen Seite, um Postback auf Geräten zu ermöglichen, die keine postback Ereignisse unterstützen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige Geräte werden kann ein Postbackereignis auf einen Link oder eine Schaltfläche nur ausgeführt. Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter.RenderUrlPostBackEvent%2A> -Methode schreibt eine Verknüpfung mit einer URL, die alle Informationen enthält, die zum Verarbeiten des Formulars und zum Aktualisieren und Anzeigen der Seite erforderlich ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

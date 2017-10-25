@@ -1,0 +1,173 @@
+<Type Name="InternalBufferOverflowException" FullName="System.IO.InternalBufferOverflowException">
+  <TypeSignature Language="C#" Value="public class InternalBufferOverflowException : SystemException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit InternalBufferOverflowException extends System.SystemException" />
+  <TypeSignature Language="DocId" Value="T:System.IO.InternalBufferOverflowException" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.IO.FileSystem.Watcher</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.SystemException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die Ausnahme, die ausgelöst wird, wenn der interne Puffer überläuft.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einem <xref:System.IO.FileSystemWatcher>, wenn Sie benachrichtigt werden, der Datei ändert, die Systemspeicher diese Änderungen in einem Puffer der Komponente erstellt und an die Anwendungsprogrammierschnittstellen (APIs) übergeben. Wenn in kurzer Zeit viele Änderungen vorhanden sind, kann der Puffer problemlos überlaufen, wodurch eine Ausnahme ausgelöst wird, die im Wesentlichen alle Änderungen verloren gehen. Um den Puffer nicht überläuft, verwenden die <xref:System.IO.FileSystemWatcher.NotifyFilter%2A?displayProperty=nameWithType> und <xref:System.IO.FileSystemWatcher.IncludeSubdirectories%2A?displayProperty=nameWithType> Eigenschaften, die unerwünschte änderungsbenachrichtigungen herauszufiltern. Sie können Größe des internen Puffers auch mit der <xref:System.IO.FileSystemWatcher.InternalBufferSize%2A?displayProperty=nameWithType>-Eigenschaft vergrößern. Allerdings durch Erhöhen der Größe des Puffers ist teuer, also den Puffer so klein wie möglich halten.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen von FileSystemWatcher zum Überwachen von Änderungen der Datenbankdatei (erstellt, löscht, wird umbenannt, geändert wird), die auf einem Laufwerk auftreten. Im Beispiel wird auch die ordnungsgemäß empfangen der fehlerbenachrichtigungen veranschaulicht.  
+  
+ [!code-csharp[FileSystemWatcher#1](~/samples/snippets/csharp/VS_Snippets_CLR/FileSystemWatcher/cs/filesystemwatcher.cs#1)]
+ [!code-vb[FileSystemWatcher#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FileSystemWatcher/VB/FileSystemWatcher.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InternalBufferOverflowException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.InternalBufferOverflowException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Watcher</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Standardinstanz der <see cref="T:System.IO.InternalBufferOverflowException" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Konstruktoren werden von der Komponente verwendet, um einen Fehler anzugeben. Verwenden sie nur, wenn die Klasse oder .NET Framework zu erweitern. Diese Ausnahme anzeigt, ist ein interner Puffer übergelaufen und Benutzer sollten entsprechende Schritte in ihrem Code, um sicherzustellen, dass er ordnungsgemäß wiederhergestellt wird. Die Ursache für den Überlauf ist häufig zu viele Änderungen in einer kurzen Zeitspanne den internen Benachrichtigung Puffer einen Überlauf verursacht. Verwenden Sie zum Beheben dieses Problems die <xref:System.IO.FileSystemWatcher.NotifyFilter%2A?displayProperty=nameWithType> und <xref:System.IO.FileSystemWatcher.IncludeSubdirectories%2A?displayProperty=nameWithType> Eigenschaft filtern, die unerwünschte änderungsbenachrichtigungen. Sie können Größe des internen Puffers auch mit der <xref:System.IO.FileSystemWatcher.InternalBufferSize%2A?displayProperty=nameWithType>-Eigenschaft vergrößern. Allerdings durch Erhöhen der Größe des Puffers ist teuer, also den Puffer so klein wie möglich halten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InternalBufferOverflowException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.InternalBufferOverflowException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Watcher</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Meldung für die Ausnahme gewährt werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IO.InternalBufferOverflowException" /> angegebenen Klasse mit der Fehlermeldung angezeigt werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Konstruktoren werden von der Komponente verwendet, um einen Fehler anzugeben. Verwenden sie nur, wenn die Klasse oder .NET Framework zu erweitern. Diese Ausnahme anzeigt, ist ein interner Puffer übergelaufen und Benutzer sollten entsprechende Schritte in ihrem Code, um sicherzustellen, dass er ordnungsgemäß wiederhergestellt wird. Die Ursache für den Überlauf ist häufig zu viele Änderungen in einer kurzen Zeitspanne den internen Benachrichtigung Puffer einen Überlauf verursacht. Verwenden Sie zum Beheben dieses Problems die <xref:System.IO.FileSystemWatcher.NotifyFilter%2A?displayProperty=nameWithType> und <xref:System.IO.FileSystemWatcher.IncludeSubdirectories%2A?displayProperty=nameWithType> Eigenschaft filtern, die unerwünschte änderungsbenachrichtigungen. Sie können Größe des internen Puffers auch mit der <xref:System.IO.FileSystemWatcher.InternalBufferSize%2A?displayProperty=nameWithType>-Eigenschaft vergrößern. Allerdings durch Erhöhen der Größe des Puffers ist teuer, also den Puffer so klein wie möglich halten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected InternalBufferOverflowException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.InternalBufferOverflowException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Watcher</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die zum Serialisieren des System.IO.InternalBufferOverflowException-Objekts erforderlichen Informationen.</param>
+        <param name="context">Die Quelle und Ziel des serialisierten Streams, der dem System.IO.InternalBufferOverflowException-Objekt zugeordnet.</param>
+        <summary>Initialisiert eine neue leere Instanz der <see cref="T:System.IO.InternalBufferOverflowException" />-Klasse, die serialisierbar ist, wobei die angegebenen <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Objekte und die angegebenen <see cref="T:System.Runtime.Serialization.StreamingContext" />-Objekte verwendet werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InternalBufferOverflowException (string message, Exception inner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception inner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.InternalBufferOverflowException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Watcher</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="inner" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Meldung für die Ausnahme gewährt werden.</param>
+        <param name="inner">Die innere Ausnahme.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IO.InternalBufferOverflowException" /> Klasse mit der Meldung, die angezeigt werden und die generierte innere Ausnahme angegeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Konstruktoren werden von der Komponente verwendet, um einen Fehler anzugeben. Verwenden sie nur, wenn die Klasse oder .NET Framework zu erweitern. Diese Ausnahme anzeigt, ist ein interner Puffer übergelaufen und Benutzer sollten entsprechende Schritte in ihrem Code, um sicherzustellen, dass er ordnungsgemäß wiederhergestellt wird. Die Ursache für den Überlauf ist häufig zu viele Änderungen in einer kurzen Zeitspanne den internen Benachrichtigung Puffer einen Überlauf verursacht. Verwenden Sie zum Beheben dieses Problems die <xref:System.IO.FileSystemWatcher.NotifyFilter%2A?displayProperty=nameWithType> und <xref:System.IO.FileSystemWatcher.IncludeSubdirectories%2A?displayProperty=nameWithType> Eigenschaft filtern, die unerwünschte änderungsbenachrichtigungen. Sie können Größe des internen Puffers auch mit der <xref:System.IO.FileSystemWatcher.InternalBufferSize%2A?displayProperty=nameWithType>-Eigenschaft vergrößern. Allerdings durch Erhöhen der Größe des Puffers ist teuer, also den Puffer so klein wie möglich halten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

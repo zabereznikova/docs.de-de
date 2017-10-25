@@ -1,0 +1,101 @@
+<Type Name="XmlSchemaSearchPattern" FullName="System.Web.Services.Discovery.XmlSchemaSearchPattern">
+  <TypeSignature Language="C#" Value="public sealed class XmlSchemaSearchPattern : System.Web.Services.Discovery.DiscoverySearchPattern" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit XmlSchemaSearchPattern extends System.Web.Services.Discovery.DiscoverySearchPattern" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Discovery.XmlSchemaSearchPattern" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Services.Discovery.DiscoverySearchPattern</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ruft die Speicherorte von XML-Schemadokumenten zum Füllen Sie ein Web Services Discovery-Dokument ab. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Services.Discovery.XmlSchemaSearchPattern> Klasse erbt von der abstrakten <xref:System.Web.Services.Discovery.DiscoverySearchPattern> -Klasse und wird von der <xref:System.Web.Services.Discovery.DiscoveryRequestHandler> Klasse <xref:System.Web.Services.Discovery.DiscoveryRequestHandler.ProcessRequest%2A> -Methode, die eine HTTP-Anforderung für ein Discovery-Dokument verarbeitet. Keines dieser Klassen müssen in der Regel wird direkt von einem Entwickler verwendet werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSchemaSearchPattern ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Discovery.XmlSchemaSearchPattern.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Services.Discovery.XmlSchemaSearchPattern" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDiscoveryReference">
+      <MemberSignature Language="C#" Value="public override System.Web.Services.Discovery.DiscoveryReference GetDiscoveryReference (string filename);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.Services.Discovery.DiscoveryReference GetDiscoveryReference(string filename) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Discovery.XmlSchemaSearchPattern.GetDiscoveryReference(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Discovery.DiscoveryReference</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filename">Der Dateisystempfad für das XML-Schema-Dokument.</param>
+        <summary>Gibt die <see cref="T:System.Web.Services.Discovery.SchemaReference" /> Objekt für ein angegebenes Discovery-Dokument.</summary>
+        <returns>Ein <see cref="T:System.Web.Services.Discovery.SchemaReference" /> Objekt, das den Dateinamen für ein XML-Schemadokument angibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die konkrete <xref:System.Web.Services.Discovery.SchemaReference> Klasse erbt von der abstrakten <xref:System.Web.Services.Discovery.DiscoveryReference> Klasse.  
+  
+ Ein <xref:System.Web.Services.Discovery.SchemaReference> Instanz den Speicherort der XSD-Datei enthält.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pattern">
+      <MemberSignature Language="C#" Value="public override string Pattern { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Pattern" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Discovery.XmlSchemaSearchPattern.Pattern" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Muster des Dateinamens, als Ziel für die Suche verwenden.</summary>
+        <value>Das Zeichenfolgenliteral "*.xsd".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Muster "*.xsd" gibt eine XML-Schema-Dokument-Erweiterung an.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.UI.Design.MobileControls.Converters">
+  <Docs>
+    <summary>Die <see cref="N:System.Web.UI.Design.MobileControls.Converters" /> -Namespace enthält Klassen, die zur Entwurfszeit Unterstützung für Daten den Einsatz von Typkonvertern in mobile-Steuerelemente zu ermöglichen. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der <see href="http://go.microsoft.com/fwlink/?LinkID=182900">www.asp.net/mobile</see> Website.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,961 @@
+<Type Name="SqlDbType" FullName="System.Data.SqlDbType">
+  <TypeSignature Language="C#" Value="public enum SqlDbType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SqlDbType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.SqlDbType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.SqlClient</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, SQL Server-spezifische Datentyp eines Felds, einer Eigenschaft, für die Verwendung in einem <see cref="T:System.Data.SqlClient.SqlParameter" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Befehlsparameter, der zum Einstellen der <xref:System.Data.SqlDbType> und <xref:System.Data.DbType> verknüpft sind. Daher ist das Festlegen der `DbType` Änderungen der `SqlDbType` zu unterstützenden `SqlDbType`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BigInt">
+      <MemberSignature Language="C#" Value="BigInt" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlDbType BigInt = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlDbType.BigInt" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlDbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="T:System.Int64" />. Eine 64-Bit-Ganzzahl mit Vorzeichen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Binary">
+      <MemberSignature Language="C#" Value="Binary" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlDbType Binary = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlDbType.Binary" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlDbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="T:System.Array" />Der Typ <see cref="T:System.Byte" />. Ein fester Länge Datenstrom von Binärdaten in einem Bereich zwischen 1 und 8.000 Bytes.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Bit">
+      <MemberSignature Language="C#" Value="Bit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlDbType Bit = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlDbType.Bit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlDbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="T:System.Boolean" />. Ein numerischer Wert ohne Vorzeichen, die 0 (null) sein können 1 oder <see langword="null" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Char">
+      <MemberSignature Language="C#" Value="Char" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlDbType Char = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlDbType.Char" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlDbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="T:System.String" />. Ein fester Länge Datenstrom von nicht-Unicode-Zeichen im Bereich zwischen 1 und 8.000 Zeichen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Date">
+      <MemberSignature Language="C#" Value="Date" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlDbType Date = int32(31)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlDbType.Date" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlDbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Im Bereich von Januar Datumsdaten 1,1 AD und dem 31. Dezember 9999.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DateTime">
+      <MemberSignature Language="C#" Value="DateTime" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlDbType DateTime = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlDbType.DateTime" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlDbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="T:System.DateTime" />. Datum und Uhrzeit der Daten im Bereich von 1. Januar 1753 bis zum 31. Dezember 9999 mit bis zu einer Genauigkeit von 3,33 Millisekunden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DateTime2">
+      <MemberSignature Language="C#" Value="DateTime2" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlDbType DateTime2 = int32(33)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlDbType.DateTime2" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlDbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Datums- und Zeitdaten. Datumsbereich der Wert wird vom Januar 1,1 AD und dem 31. Dezember 9999. Bereich für den Zeitwert ist 00:00:00 bis 23:59:59.9999999 mit einer Genauigkeit von 100 Nanosekunden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DateTimeOffset">
+      <MemberSignature Language="C#" Value="DateTimeOffset" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlDbType DateTimeOffset = int32(34)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlDbType.DateTimeOffset" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlDbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Datum und Uhrzeit Daten mit Zeitzonen. Datumsbereich der Wert wird vom Januar 1,1 AD und dem 31. Dezember 9999. Bereich für den Zeitwert ist 00:00:00 bis 23:59:59.9999999 mit einer Genauigkeit von 100 Nanosekunden. Zeitzone Wertebereich liegt zwischen-14: 00 bis + 14:00.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Decimal">
+      <MemberSignature Language="C#" Value="Decimal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlDbType Decimal = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlDbType.Decimal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlDbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="T:System.Decimal" />. Eine feste Genauigkeit und Dezimalstellenanzahl numerischen Wert zwischen-10 <sup>38</sup> -1 und 10 <sup>38</sup> -1 zurück.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Float">
+      <MemberSignature Language="C#" Value="Float" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlDbType Float = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlDbType.Float" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlDbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="T:System.Double" />. Eine Gleitkommazahl im Bereich von - 1,79E + 308 bis 1,79E + 308.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Image">
+      <MemberSignature Language="C#" Value="Image" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlDbType Image = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlDbType.Image" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlDbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="T:System.Array" />Der Typ <see cref="T:System.Byte" />. Ein variabler Länge Strom von Binärdaten, die im Bereich von 0 bis 2 <sup>31</sup> -1 (bzw. 2.147.483.647) Bytes.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Int">
+      <MemberSignature Language="C#" Value="Int" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlDbType Int = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlDbType.Int" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlDbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="T:System.Int32" />. Eine 32-Bit-Ganzzahl mit Vorzeichen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Money">
+      <MemberSignature Language="C#" Value="Money" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlDbType Money = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlDbType.Money" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlDbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="T:System.Decimal" />. Ein Währungswert im Bereich von-2 <sup>63</sup> (oder -9.223.372.036.854.775.808) auf 2 <sup>63</sup> -1 (bzw. + 922.337.203.685.477,5807) mit einer Genauigkeit von einem Zehntausendstel einer Währungseinheit.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NChar">
+      <MemberSignature Language="C#" Value="NChar" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlDbType NChar = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlDbType.NChar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlDbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="T:System.String" />. Ein fester Länge Stream von Unicode-Zeichen im Bereich zwischen 1 und 4.000 Zeichen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NText">
+      <MemberSignature Language="C#" Value="NText" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlDbType NText = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlDbType.NText" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlDbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="T:System.String" />. Ein Stream variabler Länge mit Unicode-Daten mit einer maximalen Länge von 2 <sup>30</sup> -1 (bzw. 1.073.741.823) Zeichen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NVarChar">
+      <MemberSignature Language="C#" Value="NVarChar" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlDbType NVarChar = int32(12)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlDbType.NVarChar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlDbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="T:System.String" />. Ein variabler Länge Stream von Unicode-Zeichen im Bereich zwischen 1 und 4.000 Zeichen. Implizite Konvertierung schlägt fehl, wenn die Zeichenfolge länger als 4.000 Zeichen ist. Festlegen Sie das Objekt explizit, bei der Arbeit mit Zeichenfolgen, die länger als 4.000 Zeichen. Verwendung <see cref="F:System.Data.SqlDbType.NVarChar" /> Wenn die Datenbankspalte ist <see langword="nvarchar(max)" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Real">
+      <MemberSignature Language="C#" Value="Real" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlDbType Real = int32(13)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlDbType.Real" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlDbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="T:System.Single" />. Eine Gleitkommazahl im Bereich von - 3,40E + 38 bis 3,40E + 38.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SmallDateTime">
+      <MemberSignature Language="C#" Value="SmallDateTime" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlDbType SmallDateTime = int32(15)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlDbType.SmallDateTime" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlDbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="T:System.DateTime" />. Datum und Uhrzeit der Daten im Bereich vom 1. Januar 1900 bis 6. Juni 2079 mit bis zu einer Genauigkeit von einer Minute.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SmallInt">
+      <MemberSignature Language="C#" Value="SmallInt" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlDbType SmallInt = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlDbType.SmallInt" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlDbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="T:System.Int16" />. Eine 16-Bit-Ganzzahl mit Vorzeichen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SmallMoney">
+      <MemberSignature Language="C#" Value="SmallMoney" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlDbType SmallMoney = int32(17)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlDbType.SmallMoney" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlDbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="T:System.Decimal" />. Ein Währungswert im Bereich von-214.748,3648 bis + 214.748,3647 mit einer Genauigkeit von einem Zehntausendstel einer Währungseinheit.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Structured">
+      <MemberSignature Language="C#" Value="Structured" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlDbType Structured = int32(30)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlDbType.Structured" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlDbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein spezieller Datentyp für strukturierte Daten in Tabellenwertparameter angeben.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="Text" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlDbType Text = int32(18)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlDbType.Text" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlDbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="T:System.String" />. Ein Stream variabler Länge von nicht-Unicode-Daten mit einer maximalen Länge von 2 <sup>31</sup> -1 (bzw. 2.147.483.647) Zeichen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Time">
+      <MemberSignature Language="C#" Value="Time" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlDbType Time = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlDbType.Time" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlDbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zeitdaten basierend auf dem 24-Stunden-Format. Bereich für den Zeitwert ist 00:00:00 bis 23:59:59.9999999 mit einer Genauigkeit von 100 Nanosekunden. Entspricht einem SQL Server <see langword="time" /> Wert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Timestamp">
+      <MemberSignature Language="C#" Value="Timestamp" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlDbType Timestamp = int32(19)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlDbType.Timestamp" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlDbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="T:System.Array" />Der Typ <see cref="T:System.Byte" />. Automatisch generierte binäre Zahlen, die garantiert innerhalb einer Datenbank eindeutig sein. <see langword="timestamp" />wird normalerweise als Mechanismus für die versionskennung von Tabellenzeilen verwendet. Die Speichergröße beträgt 8 Byte.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TinyInt">
+      <MemberSignature Language="C#" Value="TinyInt" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlDbType TinyInt = int32(20)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlDbType.TinyInt" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlDbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="T:System.Byte" />. Eine 8-Bit-Ganzzahl ohne Vorzeichen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Udt">
+      <MemberSignature Language="C#" Value="Udt" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlDbType Udt = int32(29)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlDbType.Udt" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlDbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein [!INCLUDE[ssNoVersion](~/includes/ssnoversion-md.md)] den benutzerdefinierten Typ (UDT).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UniqueIdentifier">
+      <MemberSignature Language="C#" Value="UniqueIdentifier" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlDbType UniqueIdentifier = int32(14)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlDbType.UniqueIdentifier" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlDbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="T:System.Guid" />. Ein global eindeutiger Bezeichner (oder GUID).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="VarBinary">
+      <MemberSignature Language="C#" Value="VarBinary" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlDbType VarBinary = int32(21)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlDbType.VarBinary" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlDbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="T:System.Array" />Der Typ <see cref="T:System.Byte" />. Ein variabler Länge Datenstrom von Binärdaten in einem Bereich zwischen 1 und 8.000 Bytes. Implizite Konvertierung schlägt fehl, wenn das Bytearray größer als 8.000 Byte ist. Festlegen Sie das Objekt explizit, bei der Arbeit mit Bytearrays mit mehr als 8.000 Byte.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="VarChar">
+      <MemberSignature Language="C#" Value="VarChar" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlDbType VarChar = int32(22)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlDbType.VarChar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlDbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="T:System.String" />. Ein Stream variabler Länge von nicht-Unicode-Zeichen im Bereich zwischen 1 und 8.000 Zeichen. Verwendung <see cref="F:System.Data.SqlDbType.VarChar" /> Wenn die Datenbankspalte ist <see langword="varchar(max)" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Variant">
+      <MemberSignature Language="C#" Value="Variant" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlDbType Variant = int32(23)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlDbType.Variant" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlDbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="T:System.Object" />. Ein spezieller Datentyp, der numerische enthalten kann, String, Binary oder Datumsdaten als auch die Datenwerte von SQL Server leer, und Null, dem wird vorausgesetzt, wenn kein anderer Typ deklariert wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Xml">
+      <MemberSignature Language="C#" Value="Xml" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlDbType Xml = int32(25)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlDbType.Xml" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlDbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein XML-Wert. Abrufen der XML-Daten als eine Zeichenfolge mit der <see cref="M:System.Data.SqlClient.SqlDataReader.GetValue(System.Int32)" /> Methode oder <see cref="P:System.Data.SqlTypes.SqlXml.Value" /> -Eigenschaft, oder als ein <see cref="T:System.Xml.XmlReader" /> durch Aufrufen der <see cref="M:System.Data.SqlTypes.SqlXml.CreateReader" /> Methode.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

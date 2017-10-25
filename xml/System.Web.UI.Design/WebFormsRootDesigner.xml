@@ -1,0 +1,1088 @@
+<Type Name="WebFormsRootDesigner" FullName="System.Web.UI.Design.WebFormsRootDesigner">
+  <TypeSignature Language="C#" Value="public abstract class WebFormsRootDesigner : IDisposable, System.ComponentModel.Design.IDesignerFilter, System.ComponentModel.Design.IRootDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit WebFormsRootDesigner extends System.Object implements class System.ComponentModel.Design.IDesigner, class System.ComponentModel.Design.IDesignerFilter, class System.ComponentModel.Design.IRootDesigner, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebFormsRootDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.Design.IDesignerFilter</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.Design.IRootDesigner</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Basisklasse für die Entwurfszeitfunktionalität einer Web Forms-Seite dar und ermöglicht den Zugriff auf und die Bearbeitung von Komponenten und Steuerelementen, die zur Entwurfszeit auf der Web Forms-Seite enthalten sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Entwurfshost, z. B. [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)], müssen eine eigenen abgeleitete Version dieser Bereitstellen der <xref:System.Web.UI.Design.WebFormsRootDesigner> Klasse, um die Steuerelement-Designer über die <xref:System.Web.UI.Design.ControlDesigner.RootDesigner%2A> -Eigenschaft des Designers. Steuerelement-Designer verwenden die <xref:System.Web.UI.Design.ControlDesigner.RootDesigner%2A> Eigenschaft zugreifen, und bearbeiten die enthaltende Web Forms-Seite zur Entwurfszeit.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Beim Erben von der <see cref="T:System.Web.UI.Design.WebFormsRootDesigner" /> -Klasse, müssen Sie die folgenden Member überschreiben:  
+  
+-   Die <see cref="P:System.Web.UI.Design.WebFormsRootDesigner.DocumentUrl" />, <see cref="P:System.Web.UI.Design.WebFormsRootDesigner.IsDesignerViewLocked" />, <see cref="P:System.Web.UI.Design.WebFormsRootDesigner.IsLoading" />, <see cref="P:System.Web.UI.Design.WebFormsRootDesigner.ReferenceManager" />, <see cref="P:System.Web.UI.Design.WebFormsRootDesigner.SupportedTechnologies" />, und <see cref="P:System.Web.UI.Design.WebFormsRootDesigner.Verbs" /> Eigenschaften.  
+  
+-   Die <see cref="M:System.Web.UI.Design.WebFormsRootDesigner.AddClientScriptToDocument(System.Web.UI.Design.ClientScriptItem)" />, <see cref="M:System.Web.UI.Design.WebFormsRootDesigner.AddControlToDocument(System.Web.UI.Control,System.Web.UI.Control,System.Web.UI.Design.ControlLocation)" />, <see cref="M:System.Web.UI.Design.WebFormsRootDesigner.GetClientScriptsInDocument" />, <see cref="M:System.Web.UI.Design.WebFormsRootDesigner.GetControlViewAndTag(System.Web.UI.Control,System.Web.UI.Design.IControlDesignerView@,System.Web.UI.Design.IControlDesignerTag@)" />, und <see cref="M:System.Web.UI.Design.WebFormsRootDesigner.RemoveControlFromDocument(System.Web.UI.Control)" /> Methoden.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WebFormsRootDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsRootDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.WebFormsRootDesigner" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddClientScriptToDocument">
+      <MemberSignature Language="C#" Value="public abstract void AddClientScriptToDocument (System.Web.UI.Design.ClientScriptItem scriptItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddClientScriptToDocument(class System.Web.UI.Design.ClientScriptItem scriptItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsRootDesigner.AddClientScriptToDocument(System.Web.UI.Design.ClientScriptItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scriptItem" Type="System.Web.UI.Design.ClientScriptItem" />
+      </Parameters>
+      <Docs>
+        <param name="scriptItem">Ein <see cref="T:System.Web.UI.Design.ClientScriptItem" /> Web Forms-Seite hinzu.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse wird die aktuelle Web Forms-Seite ein Client-Script-Element hinzugefügt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddControlToDocument">
+      <MemberSignature Language="C#" Value="public abstract string AddControlToDocument (System.Web.UI.Control newControl, System.Web.UI.Control referenceControl, System.Web.UI.Design.ControlLocation location);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string AddControlToDocument(class System.Web.UI.Control newControl, class System.Web.UI.Control referenceControl, valuetype System.Web.UI.Design.ControlLocation location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsRootDesigner.AddControlToDocument(System.Web.UI.Control,System.Web.UI.Control,System.Web.UI.Design.ControlLocation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newControl" Type="System.Web.UI.Control" />
+        <Parameter Name="referenceControl" Type="System.Web.UI.Control" />
+        <Parameter Name="location" Type="System.Web.UI.Design.ControlLocation" />
+      </Parameters>
+      <Docs>
+        <param name="newControl">Das Steuerelement, das Web Forms-Seite hinzufügen.</param>
+        <param name="referenceControl">Das Steuerelement relativ zu dem <c>NewControl</c> hinzugefügt wird.</param>
+        <param name="location">Ein <see cref="T:System.Web.UI.Design.ControlLocation" /> Wert, der den Speicherort für angibt <c>NewControl</c> relativ zum <c>ReferenceControl</c>.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse wird die Web Forms-Seite ein Webserversteuerelement hinzugefügt.</summary>
+        <returns>Die ID des Steuerelements, das hinzugefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Obwohl ein Steuerelement bereits eine ID zugewiesen, besitzen möglicherweise, wenn bereits ein Steuerelement in Web Forms-Seite mit der gleichen ID vorhanden ist, wird eine neue ID zugewiesen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Component">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.IComponent Component { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.IComponent Component" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebFormsRootDesigner.Component" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IComponent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Komponente, die diesem Designer entworfen wird.</summary>
+        <value>Die Komponente, die vom Designer verwaltet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebFormsRootDesigner.Component%2A> Eigenschaft wird festgelegt, indem die <xref:System.Web.UI.Design.WebFormsRootDesigner.Initialize%28System.ComponentModel.IComponent%29?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDesignerActionService">
+      <MemberSignature Language="C#" Value="protected virtual System.ComponentModel.Design.DesignerActionService CreateDesignerActionService (IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.ComponentModel.Design.DesignerActionService CreateDesignerActionService(class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsRootDesigner.CreateDesignerActionService(System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerActionService</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Ein Entwurfshost, z. B. [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)], umgewandelt als ein <see cref="T:System.IServiceProvider" />.</param>
+        <summary>Gibt eine zur Entwurfszeit <see cref="T:System.ComponentModel.Design.DesignerActionService" /> Objekt.</summary>
+        <returns>Ein Dienstobjekt designeraktion zur Entwurfszeit.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebFormsRootDesigner.CreateDesignerActionService%2A> Methode wird von einem Steuerelement-Designer aufgerufen und bietet eine Möglichkeit Aktionselemente für den Steuerelement-Designer in der Web Forms-Seite über einem Entwurfshost implementiert werden, z. B. [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateUrlResolutionService">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.IUrlResolutionService CreateUrlResolutionService ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.IUrlResolutionService CreateUrlResolutionService() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsRootDesigner.CreateUrlResolutionService" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.IUrlResolutionService</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.Web.UI.IUrlResolutionService" /> , relative URLs auflöst.</summary>
+        <returns>Ein Objekt, das relative URLs auflöst.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentCulture">
+      <MemberSignature Language="C#" Value="public System.Globalization.CultureInfo CurrentCulture { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Globalization.CultureInfo CurrentCulture" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebFormsRootDesigner.CurrentCulture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die kulturinformationen für den aktuellen Thread ab.</summary>
+        <value>Die kulturinformationen für den aktuellen Thread.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsRootDesigner.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.Web.UI.Design.WebFormsRootDesigner" /> verwendeten nicht verwalteten Ressourcen und optional auch die verwalteten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DocumentUrl">
+      <MemberSignature Language="C#" Value="public abstract string DocumentUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DocumentUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebFormsRootDesigner.DocumentUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft die URL, an dem sich die Web Forms-Seite befindet.</summary>
+        <value>Die URL, an dem sich die Web Forms-Seite befindet; andernfalls <see langword="null" />, wenn die Web Forms-Seite keine URL zugeordnet ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~WebFormsRootDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsRootDesigner.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Ressourcen des aktuellen <see cref="T:System.Web.UI.Design.WebFormsRootDesigner" /> -Objekt, bevor es vom Garbage Collector freigegeben wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateEmptyDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public virtual string GenerateEmptyDesignTimeHtml (System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GenerateEmptyDesignTimeHtml(class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsRootDesigner.GenerateEmptyDesignTimeHtml(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="control">Das Steuerelement, das HTML-Markup generieren.</param>
+        <summary>Generiert leeres HTML-Markup für ein Steuerelement zur Entwurfszeit.</summary>
+        <returns>HTML-Markup für ein leeres Steuerelement.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebFormsRootDesigner.GenerateEmptyDesignTimeHtml%2A> Methode ermöglicht eine konsistente Anzeige von leeren Steuerelementen zur Entwurfszeit.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateErrorDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public virtual string GenerateErrorDesignTimeHtml (System.Web.UI.Control control, Exception e, string errorMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GenerateErrorDesignTimeHtml(class System.Web.UI.Control control, class System.Exception e, string errorMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsRootDesigner.GenerateErrorDesignTimeHtml(System.Web.UI.Control,System.Exception,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+        <Parameter Name="e" Type="System.Exception" />
+        <Parameter Name="errorMessage" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="control">Das Steuerelement, das die Ausnahme ausgelöst hat.  
+  
+ - oder -   
+  
+ <see langword="null" />.</param>
+        <param name="e">Die Ausnahme.  
+  
+ - oder -   
+  
+ <see langword="null" />.</param>
+        <param name="errorMessage">Eine Meldung, in der Ausnahmemeldung hinzufügen.  
+  
+ - oder -   
+  
+ Eine leere Zeichenfolge ("").</param>
+        <summary>HTML-Markup ab, das zur Entwurfszeit eine Fehlermeldung angezeigt, mit dem angegebenen Steuerelement, die Ausnahme und die Nachricht wird generiert.</summary>
+        <returns>HTML-Markup für ein Steuerelement und Ausnahme.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClientScriptsInDocument">
+      <MemberSignature Language="C#" Value="public abstract System.Web.UI.Design.ClientScriptItemCollection GetClientScriptsInDocument ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.Design.ClientScriptItemCollection GetClientScriptsInDocument() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsRootDesigner.GetClientScriptsInDocument" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.ClientScriptItemCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt beim Überschreiben in einer abgeleiteten Klasse eine <see cref="T:System.Web.UI.Design.ClientScriptItemCollection" /> -Objekt, das alle Elemente der Client-Skript enthält, die auf der Seite befinden.</summary>
+        <returns>Ein Objekt, das alle Elemente der Client-Skript enthält, die auf der Seite befinden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetControlViewAndTag">
+      <MemberSignature Language="C#" Value="protected abstract void GetControlViewAndTag (System.Web.UI.Control control, out System.Web.UI.Design.IControlDesignerView view, out System.Web.UI.Design.IControlDesignerTag tag);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void GetControlViewAndTag(class System.Web.UI.Control control, [out] class System.Web.UI.Design.IControlDesignerView&amp; view, [out] class System.Web.UI.Design.IControlDesignerTag&amp; tag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsRootDesigner.GetControlViewAndTag(System.Web.UI.Control,System.Web.UI.Design.IControlDesignerView@,System.Web.UI.Design.IControlDesignerTag@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+        <Parameter Name="view" Type="System.Web.UI.Design.IControlDesignerView&amp;" RefType="out" />
+        <Parameter Name="tag" Type="System.Web.UI.Design.IControlDesignerTag&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="control">Das Steuerelement, das die Ansicht und das Tag bereitgestellt.</param>
+        <param name="view">Wenn die <see cref="M:System.Web.UI.Design.WebFormsRootDesigner.GetControlViewAndTag(System.Web.UI.Control,System.Web.UI.Design.IControlDesignerView@,System.Web.UI.Design.IControlDesignerTag@)" /> Methode zurückgegeben wird, <c>Ansicht</c> enthält ein <see langword="IControlDesignerView" /> Objekt, das Zugriff auf die visuelle Darstellung und Inhalt eines Steuerelements zur Entwurfszeit bereitstellt. <c>Ansicht</c> wird nicht initialisiert übergeben.</param>
+        <param name="tag">Wenn die <see cref="M:System.Web.UI.Design.WebFormsRootDesigner.GetControlViewAndTag(System.Web.UI.Control,System.Web.UI.Design.IControlDesignerView@,System.Web.UI.Design.IControlDesignerTag@)" /> Methode zurückgegeben wird, <c>Tag</c> enthält ein <see langword="IControlDesignerTag" /> Objekt, das Zugriff auf das HTML-Element für das Steuerelement-Steuerelement-Designer bereitstellt. <c>Tag</c> wird nicht initialisiert übergeben.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse gibt die aktuelle Entwurfszeitansicht und das HTML-Markup für das angegebene Steuerelement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetService">
+      <MemberSignature Language="C#" Value="protected virtual object GetService (Type serviceType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance object GetService(class System.Type serviceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsRootDesigner.GetService(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">Der Typ des abzurufenden Diensts.</param>
+        <summary>Gibt den angeforderten Dienst zurück.</summary>
+        <returns>Der angeforderte Dienst; andernfalls <see langword="null" />, wenn der Dienst nicht aufgelöst werden kann.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetView">
+      <MemberSignature Language="C#" Value="protected object GetView (System.ComponentModel.Design.ViewTechnology viewTechnology);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object GetView(valuetype System.ComponentModel.Design.ViewTechnology viewTechnology) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsRootDesigner.GetView(System.ComponentModel.Design.ViewTechnology)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="viewTechnology" Type="System.ComponentModel.Design.ViewTechnology" />
+      </Parameters>
+      <Docs>
+        <param name="viewTechnology">Ein <see cref="T:System.ComponentModel.Design.ViewTechnology" /> abgerufenes der <see cref="P:System.Web.UI.Design.WebFormsRootDesigner.SupportedTechnologies" /> Eigenschaft.</param>
+        <summary>Gibt zurück, die eine Sicht Objekt, d. h. ermittelt wird, vom bereitgestellten <see cref="T:System.ComponentModel.Design.ViewTechnology" /> Objekt.</summary>
+        <returns>Ein Objekt, das die aktuelle Ansicht der Komponente enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public virtual void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsRootDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die Komponente, die diesem Designer entworfen wird.</param>
+        <summary>Initialisiert die <see cref="T:System.Web.UI.Design.WebFormsRootDesigner" /> -Objekt unter Verwendung der angegebenen Komponente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDesignerViewLocked">
+      <MemberSignature Language="C#" Value="public abstract bool IsDesignerViewLocked { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDesignerViewLocked" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebFormsRootDesigner.IsDesignerViewLocked" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft einen Wert ab, ob die Designeransicht gesperrt ist.</summary>
+        <value>
+          <see langword="true" />, wenn die Designeransicht gesperrt ist. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLoading">
+      <MemberSignature Language="C#" Value="public abstract bool IsLoading { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLoading" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebFormsRootDesigner.IsLoading" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft einen Wert, der angibt, ob die Web Forms-Seite noch geladen wird.</summary>
+        <value>
+          <see langword="true" />, wenn die Web Forms-Seite geladen wird; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadComplete">
+      <MemberSignature Language="C#" Value="public event EventHandler LoadComplete;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler LoadComplete" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.Design.WebFormsRootDesigner.LoadComplete" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Designer abgeschlossen ist, beim Laden der Web Forms-Seite.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLoadComplete">
+      <MemberSignature Language="C#" Value="protected virtual void OnLoadComplete (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnLoadComplete(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsRootDesigner.OnLoadComplete(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Eine <see cref="T:System.EventArgs" />.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Design.WebFormsRootDesigner.LoadComplete" /> Ereignis aus, wenn die Web Forms-Seite vollständig geladen ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostFilterAttributes">
+      <MemberSignature Language="C#" Value="protected virtual void PostFilterAttributes (System.Collections.IDictionary attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void PostFilterAttributes(class System.Collections.IDictionary attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsRootDesigner.PostFilterAttributes(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Die Attribute für die Klasse der Komponente.</param>
+        <summary>Ermöglicht einem Designer zu ändern oder Entfernen von Elementen aus dem Satz von Attributen, die über der Designer verfügbar macht eine <see cref="T:System.ComponentModel.TypeDescriptor" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostFilterEvents">
+      <MemberSignature Language="C#" Value="protected virtual void PostFilterEvents (System.Collections.IDictionary events);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void PostFilterEvents(class System.Collections.IDictionary events) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsRootDesigner.PostFilterEvents(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="events" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="events">Die Ereignisse für die Klasse der Komponente.</param>
+        <summary>Ermöglicht einem Designer zu ändern oder Entfernen von Elementen aus dem Satz von Ereignissen, die der Designer verfügbar, über macht eine <see cref="T:System.ComponentModel.TypeDescriptor" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostFilterProperties">
+      <MemberSignature Language="C#" Value="protected virtual void PostFilterProperties (System.Collections.IDictionary properties);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void PostFilterProperties(class System.Collections.IDictionary properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsRootDesigner.PostFilterProperties(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Die Eigenschaften für die Klasse der Komponente.</param>
+        <summary>Ermöglicht einem Designer zu ändern oder Entfernen von Elementen aus dem Satz von Eigenschaften, die der Designer verfügbar, über macht eine <see cref="T:System.ComponentModel.TypeDescriptor" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreFilterAttributes">
+      <MemberSignature Language="C#" Value="protected virtual void PreFilterAttributes (System.Collections.IDictionary attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void PreFilterAttributes(class System.Collections.IDictionary attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsRootDesigner.PreFilterAttributes(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Die Attribute für die Klasse der Komponente.</param>
+        <summary>Ermöglicht einem Designer, um den Satz von Attributen hinzufügen, die über der Designer verfügbar macht eine <see cref="T:System.ComponentModel.TypeDescriptor" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreFilterEvents">
+      <MemberSignature Language="C#" Value="protected virtual void PreFilterEvents (System.Collections.IDictionary events);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void PreFilterEvents(class System.Collections.IDictionary events) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsRootDesigner.PreFilterEvents(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="events" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="events">Die Ereignisse für die Klasse der Komponente.</param>
+        <summary>Ermöglicht einem Designer, um den Satz von Ereignissen, die über der Designer verfügbar macht, Elemente hinzuzufügen, eine <see cref="T:System.ComponentModel.TypeDescriptor" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreFilterProperties">
+      <MemberSignature Language="C#" Value="protected virtual void PreFilterProperties (System.Collections.IDictionary properties);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void PreFilterProperties(class System.Collections.IDictionary properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsRootDesigner.PreFilterProperties(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Die Eigenschaften für die Klasse der Komponente.</param>
+        <summary>Ermöglicht einem Designer, um den Satz von Eigenschaften, die über der Designer verfügbar macht, Elemente hinzuzufügen, eine <see cref="T:System.ComponentModel.TypeDescriptor" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReferenceManager">
+      <MemberSignature Language="C#" Value="public abstract System.Web.UI.Design.WebFormsReferenceManager ReferenceManager { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.WebFormsReferenceManager ReferenceManager" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebFormsRootDesigner.ReferenceManager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.WebFormsReferenceManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse eine <see cref="T:System.Web.UI.Design.WebFormsReferenceManager" /> -Objekt, das Informationen über die aktuellen Web Forms-Seite verfügt.</summary>
+        <value>Ein <see cref="T:System.Web.UI.Design.WebFormsReferenceManager" /> mit Informationen über die aktuellen Web Forms-Seite.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveClientScriptFromDocument">
+      <MemberSignature Language="C#" Value="public abstract void RemoveClientScriptFromDocument (string clientScriptId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveClientScriptFromDocument(string clientScriptId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsRootDesigner.RemoveClientScriptFromDocument(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="clientScriptId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="clientScriptId">Der Bezeichner für die zuvor registrierten Clientskripts.</param>
+        <summary>Entfernt das angegebene Client-Skript aus dem Dokument zur Entwurfszeit.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveControlFromDocument">
+      <MemberSignature Language="C#" Value="public abstract void RemoveControlFromDocument (System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveControlFromDocument(class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsRootDesigner.RemoveControlFromDocument(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="control">Das Steuerelement, das aus der Web Forms-Seite zu entfernen.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse entfernt das angegebene Steuerelement aus der Web Forms-Seite.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveUrl">
+      <MemberSignature Language="C#" Value="public string ResolveUrl (string relativeUrl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ResolveUrl(string relativeUrl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsRootDesigner.ResolveUrl(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relativeUrl" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="relativeUrl">Eine relative URL für eine Ressource auf der Website.</param>
+        <summary>Konvertiert eine relative URL in eine vollqualifizierte URL.</summary>
+        <returns>Durch eine vollqualifizierte URL aufgelöst <paramref name="relativeUrl" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="relativeUrl" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetControlID">
+      <MemberSignature Language="C#" Value="public virtual void SetControlID (System.Web.UI.Control control, string id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetControlID(class System.Web.UI.Control control, string id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsRootDesigner.SetControlID(System.Web.UI.Control,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="control">Das Steuerelement für das die ID festgelegt.</param>
+        <param name="id">Die Zeichenfolge mit der ID für das Steuerelement festlegen.</param>
+        <summary>Legt die <see langword="ID" /> Eigenschaft des angegebenen Steuerelements mit der angegebenen Zeichenfolge.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportedTechnologies">
+      <MemberSignature Language="C#" Value="protected System.ComponentModel.Design.ViewTechnology[] SupportedTechnologies { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ComponentModel.Design.ViewTechnology[] SupportedTechnologies" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebFormsRootDesigner.SupportedTechnologies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.ViewTechnology[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Array von Technologien, die Designer-Komponente für die Anzeige unterstützen kann.</summary>
+        <value>Ein Array unterstützter <see cref="T:System.ComponentModel.Design.ViewTechnology" /> Werte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.IDesigner.DoDefaultAction">
+      <MemberSignature Language="C#" Value="void IDesigner.DoDefaultAction ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.Design.IDesigner.DoDefaultAction() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsRootDesigner.System#ComponentModel#Design#IDesigner#DoDefaultAction" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ComponentModel.Design.IDesigner.DoDefaultAction" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.Design.WebFormsRootDesigner>-Instanz in eine <xref:System.ComponentModel.Design.IDesigner>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.IDesigner.Verbs">
+      <MemberSignature Language="C#" Value="System.ComponentModel.Design.DesignerVerbCollection System.ComponentModel.Design.IDesigner.Verbs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.DesignerVerbCollection System.ComponentModel.Design.IDesigner.Verbs" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebFormsRootDesigner.System#ComponentModel#Design#IDesigner#Verbs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerVerbCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest-Entwurfszeit-Verben, die vom Designer unterstützt werden. Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.ComponentModel.Design.IDesigner.Verbs" />.</summary>
+        <value>Die während der Entwurfszeit-Verben, die vom Designer unterstützt werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.Design.WebFormsRootDesigner>-Instanz in eine <xref:System.ComponentModel.Design.IDesigner>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.IDesignerFilter.PostFilterAttributes">
+      <MemberSignature Language="C#" Value="void IDesignerFilter.PostFilterAttributes (System.Collections.IDictionary attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.Design.IDesignerFilter.PostFilterAttributes(class System.Collections.IDictionary attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsRootDesigner.System#ComponentModel#Design#IDesignerFilter#PostFilterAttributes(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Die Attributobjekte für die Klasse der Komponente.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ComponentModel.Design.IDesignerFilter.PostFilterAttributes(System.Collections.IDictionary)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.Design.WebFormsRootDesigner>-Instanz in eine <xref:System.ComponentModel.Design.IDesignerFilter>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.IDesignerFilter.PostFilterEvents">
+      <MemberSignature Language="C#" Value="void IDesignerFilter.PostFilterEvents (System.Collections.IDictionary events);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.Design.IDesignerFilter.PostFilterEvents(class System.Collections.IDictionary events) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsRootDesigner.System#ComponentModel#Design#IDesignerFilter#PostFilterEvents(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="events" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="events">Der Deskriptor Ereignisobjekten, die die Ereignisse der Klasse der Komponente darstellen. Die Schlüssel im Wörterbuch von Ereignissen sind Ereignisnamen.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ComponentModel.Design.IDesignerFilter.PostFilterEvents(System.Collections.IDictionary)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.Design.WebFormsRootDesigner>-Instanz in eine <xref:System.ComponentModel.Design.IDesignerFilter>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.IDesignerFilter.PostFilterProperties">
+      <MemberSignature Language="C#" Value="void IDesignerFilter.PostFilterProperties (System.Collections.IDictionary properties);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.Design.IDesignerFilter.PostFilterProperties(class System.Collections.IDictionary properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsRootDesigner.System#ComponentModel#Design#IDesignerFilter#PostFilterProperties(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Die Eigenschaft Deskriptor-Objekte, die die Eigenschaften der Klasse der Komponente darstellen. Die Schlüssel im Wörterbuch von Eigenschaften sind Eigenschaftennamen.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ComponentModel.Design.IDesignerFilter.PostFilterProperties(System.Collections.IDictionary)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.Design.WebFormsRootDesigner>-Instanz in eine <xref:System.ComponentModel.Design.IDesignerFilter>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.IDesignerFilter.PreFilterAttributes">
+      <MemberSignature Language="C#" Value="void IDesignerFilter.PreFilterAttributes (System.Collections.IDictionary attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.Design.IDesignerFilter.PreFilterAttributes(class System.Collections.IDictionary attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsRootDesigner.System#ComponentModel#Design#IDesignerFilter#PreFilterAttributes(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Die Attributobjekte für die Klasse der Komponente.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ComponentModel.Design.IDesignerFilter.PreFilterAttributes(System.Collections.IDictionary)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.Design.WebFormsRootDesigner>-Instanz in eine <xref:System.ComponentModel.Design.IDesignerFilter>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.IDesignerFilter.PreFilterEvents">
+      <MemberSignature Language="C#" Value="void IDesignerFilter.PreFilterEvents (System.Collections.IDictionary events);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.Design.IDesignerFilter.PreFilterEvents(class System.Collections.IDictionary events) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsRootDesigner.System#ComponentModel#Design#IDesignerFilter#PreFilterEvents(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="events" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="events">Der Deskriptor Ereignisobjekten, die die Ereignisse der Klasse der Komponente darstellen. Die Schlüssel im Wörterbuch von Ereignissen sind Ereignisnamen.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ComponentModel.Design.IDesignerFilter.PreFilterEvents(System.Collections.IDictionary)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.Design.WebFormsRootDesigner>-Instanz in eine <xref:System.ComponentModel.Design.IDesignerFilter>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.IDesignerFilter.PreFilterProperties">
+      <MemberSignature Language="C#" Value="void IDesignerFilter.PreFilterProperties (System.Collections.IDictionary properties);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.Design.IDesignerFilter.PreFilterProperties(class System.Collections.IDictionary properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsRootDesigner.System#ComponentModel#Design#IDesignerFilter#PreFilterProperties(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Die Eigenschaft Deskriptor-Objekte, die die Eigenschaften der Klasse der Komponente darstellen. Die Schlüssel im Wörterbuch von Eigenschaften sind Eigenschaftennamen.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ComponentModel.Design.IDesignerFilter.PreFilterProperties(System.Collections.IDictionary)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.Design.WebFormsRootDesigner>-Instanz in eine <xref:System.ComponentModel.Design.IDesignerFilter>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.IRootDesigner.GetView">
+      <MemberSignature Language="C#" Value="object IRootDesigner.GetView (System.ComponentModel.Design.ViewTechnology viewTechnology);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ComponentModel.Design.IRootDesigner.GetView(valuetype System.ComponentModel.Design.ViewTechnology viewTechnology) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsRootDesigner.System#ComponentModel#Design#IRootDesigner#GetView(System.ComponentModel.Design.ViewTechnology)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="viewTechnology" Type="System.ComponentModel.Design.ViewTechnology" />
+      </Parameters>
+      <Docs>
+        <param name="viewTechnology">Die Ansicht-Technologie.</param>
+        <summary>Ruft ein Objekt für die angegebene ansichtstechnologie ab. Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.ComponentModel.Design.IRootDesigner.GetView(System.ComponentModel.Design.ViewTechnology)" />.</summary>
+        <returns>Das Ansichtsobjekt für die angegebene ansichtstechnologie.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.Design.WebFormsRootDesigner>-Instanz in eine <xref:System.ComponentModel.Design.IRootDesigner>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.IRootDesigner.SupportedTechnologies">
+      <MemberSignature Language="C#" Value="System.ComponentModel.Design.ViewTechnology[] System.ComponentModel.Design.IRootDesigner.SupportedTechnologies { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ComponentModel.Design.ViewTechnology[] System.ComponentModel.Design.IRootDesigner.SupportedTechnologies" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebFormsRootDesigner.System#ComponentModel#Design#IRootDesigner#SupportedTechnologies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.ViewTechnology[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Array von Technologien, die Designer-Komponente für die Anzeige unterstützen kann. Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.ComponentModel.Design.IRootDesigner.SupportedTechnologies" />.</summary>
+        <value>Ein Array von Technologien, die Designer-Komponente für die Anzeige unterstützen kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.Design.WebFormsRootDesigner>-Instanz in eine <xref:System.ComponentModel.Design.IRootDesigner>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IDisposable.Dispose">
+      <MemberSignature Language="C#" Value="void IDisposable.Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.IDisposable.Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsRootDesigner.System#IDisposable#Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.IDisposable.Dispose" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.Design.WebFormsRootDesigner>-Instanz in eine <xref:System.IDisposable>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Verbs">
+      <MemberSignature Language="C#" Value="protected System.ComponentModel.Design.DesignerVerbCollection Verbs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.DesignerVerbCollection Verbs" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebFormsRootDesigner.Verbs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerVerbCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, die während der Entwurfszeit-Verben, die vom Designer unterstützt werden.</summary>
+        <value>Ein Array von <see cref="T:System.ComponentModel.Design.DesignerVerb" /> Objekte vom Designer unterstützt wird; andernfalls <see langword="null" />, wenn die Komponente keine Verben besitzt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  In der Regel eine Umgebung zur Entwurfszeit stellt ein **Eigenschaften** Befehl im Kontextmenü für eine Komponente. Fügen Sie daher einen ähnlichen Eintrag nicht in die Auflistung der Verben Designer angegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,141 @@
+<Type Name="NetNamedPipeSecurity" FullName="System.ServiceModel.NetNamedPipeSecurity">
+  <TypeSignature Language="C#" Value="public sealed class NetNamedPipeSecurity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit NetNamedPipeSecurity extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.NetNamedPipeSecurity" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Zugriff auf die Sicherheitseinstellungen für mit der benannten Pipebindung konfigurierte Endpunkte bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie einer <xref:System.ServiceModel.NetNamedPipeSecurity>-Instanz ein <xref:System.ServiceModel.NetNamedPipeBinding>-Objekt hinzugefügt wird.  
+  
+ [!code-csharp[S_UENetNamedPipeSecurity#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenetnamedpipesecurity/cs/service.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NetNamedPipeSecurity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.NetNamedPipeSecurity.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.NetNamedPipeSecurity" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.NetNamedPipeSecurityMode Mode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.NetNamedPipeSecurityMode Mode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.NetNamedPipeSecurity.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.NetNamedPipeSecurityMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Sicherheitsmodus für die benannte Pipebindung fest.</summary>
+        <value>Der Wert des <see cref="T:System.ServiceModel.NetNamedPipeSecurityMode" /> für die benannte Pipebindung. Der Standardwert ist <see cref="F:System.ServiceModel.NetNamedPipeSecurityMode.Transport" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gültige Werte für diese Eigenschaft sind:  
+  
+-   Transport - Verwenden Sie transportbasierte Sicherheit. Die Standardeinstellung verwendet NTLM, das keine Serverauthentifizierung bereitstellt.  
+  
+-   Keine - Verwenden Sie keine Sicherheit.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.ServiceModel.NetNamedPipeSecurity.Mode%2A>-Eigenschaft festgelegt wird:  
+  
+ [!code-csharp[S_UENetNamedPipeSecurity#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenetnamedpipesecurity/cs/service.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeTransport">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeTransport ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeTransport() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.NetNamedPipeSecurity.ShouldSerializeTransport" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert zurück, der angibt, ob die <see cref="P:System.ServiceModel.NetNamedPipeSecurity.Transport" />-Eigenschaft ihren Standardwert geändert hat und serialisiert werden soll. Dies wird von WCF für die XAML-Integration verwendet.</summary>
+        <returns>
+          <see langword="true" />, wenn der <see cref="P:System.ServiceModel.NetNamedPipeSecurity.Transport" />-Eigenschaftswert serialisiert werden soll, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transport">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.NamedPipeTransportSecurity Transport { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.NamedPipeTransportSecurity Transport" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.NetNamedPipeSecurity.Transport" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.NamedPipeTransportSecurity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Transportsicherheit für die benannte Pipebindung ab.</summary>
+        <value>Der Wert des <see cref="T:System.ServiceModel.NamedPipeTransportSecurity" /> für die benannte Pipebindung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gewährt Zugriff auf den <xref:System.Net.Security.ProtectionLevel> für den benannten Pipetransport durch <xref:System.ServiceModel.NamedPipeTransportSecurity.ProtectionLevel%2A>.  
+  
+   
+  
+## Examples  
+ Der folgende Code zeigt, wie auf die <xref:System.ServiceModel.NetNamedPipeSecurity.Transport%2A>-Eigenschaft zugegriffen wird:  
+  
+ [!code-csharp[S_UENetNamedPipeSecurity#3](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenetnamedpipesecurity/cs/service.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

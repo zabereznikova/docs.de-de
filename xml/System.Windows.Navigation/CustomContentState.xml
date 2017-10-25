@@ -1,0 +1,151 @@
+<Type Name="CustomContentState" FullName="System.Windows.Navigation.CustomContentState">
+  <TypeSignature Language="C#" Value="public abstract class CustomContentState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit CustomContentState extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Navigation.CustomContentState" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+      <see cref="T:System.Windows.Navigation.CustomContentState" />bietet die Möglichkeit, über die verschiedenen Zustände eines einzelnen Datenelements Quellinhalt navigieren, ohne dass Quellinhalts für jede nachfolgende Navigation.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig <xref:System.Windows.Navigation.NavigationService> keine Instanz eines Objekts mit Inhalt im Navigationsverlauf gespeichert. Stattdessen <xref:System.Windows.Navigation.NavigationService> erstellt eine neue Instanz des Inhaltsobjekts jedes Mal, um mithilfe von Navigationsverlauf navigiert wird. Dieses Verhalten wurde entworfen, um eine zu hohe speicherauslastung zu vermeiden, wenn eine große Anzahl und große Teile des Inhalts zu dem navigiert werden. Daher wird der Status des Inhalts nicht zur nächsten ein Navigationsmenü gespeichert. Allerdings [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] bietet die Möglichkeit, den Navigationsverlauf für ein Inhaltselement einen Teil benutzerdefinierter Zustand zugeordnet werden soll.  
+  
+ Benutzerdefinierter Zustand, der einem Eintrag im Navigationsverlauf zugeordnet ist, muss eine Klasse, die abgeleitet <xref:System.Windows.Navigation.CustomContentState>. Ordnen Sie einem <xref:System.Windows.Navigation.CustomContentState> Objekt mit einem Eintrag im Navigationsverlauf mithilfe einer der folgenden Methoden:  
+  
+-   Aufrufen von **AddBackEntry**:  
+  
+    -   <xref:System.Windows.Navigation.NavigationService.AddBackEntry%2A?displayProperty=nameWithType>  
+  
+    -   <xref:System.Windows.Navigation.NavigationWindow.AddBackEntry%2A?displayProperty=nameWithType>  
+  
+    -   <xref:System.Windows.Controls.Frame.AddBackEntry%2A?displayProperty=nameWithType>.  
+  
+-   Festlegen von <xref:System.Windows.Navigation.NavigatingCancelEventArgs.Content%2A?displayProperty=nameWithType> Wenn eines der folgenden Ereignisse ausgelöst werden:  
+  
+    -   <xref:System.Windows.Navigation.NavigationService.Navigating?displayProperty=nameWithType>  
+  
+    -   <xref:System.Windows.Navigation.NavigationWindow.Navigating?displayProperty=nameWithType>  
+  
+    -   <xref:System.Windows.Controls.Frame.Navigating?displayProperty=nameWithType>  
+  
+    -   <xref:System.Windows.Navigation.NavigationWindow.Navigating?displayProperty=nameWithType>  
+  
+-   Durch die Implementierung <xref:System.Windows.Navigation.IProvideCustomContentState> auf die Klasse, die benutzerdefinierte Zustand zugeordnet werden soll.  
+  
+> [!NOTE]
+>  Beim Aufrufen der **AddBackEntry** -Methode, die Sie behandeln müssen die **Navigating** Ereignis oder implementieren <xref:System.Windows.Navigation.IProvideCustomContentState>.  
+  
+ Wenn der Eintrag im Navigationsverlauf navigiert wird [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] überprüft, ob eine benutzerdefinierte <xref:System.Windows.Navigation.CustomContentState> Objekt zugeordnet ist. Wenn dies der Fall ist, es ruft <xref:System.Windows.Navigation.CustomContentState.Replay%2A> das benutzerdefinierte <xref:System.Windows.Navigation.CustomContentState> Objekt, das den Zustand angewendet, es aus der vorherigen Navigation gespeichert.  
+  
+ Eine benutzerdefinierte <xref:System.Windows.Navigation.CustomContentState> -Klasse überschreiben <xref:System.Windows.Navigation.CustomContentState.JournalEntryName%2A> zum Ändern des Namens, der für den Eintrag im Navigationsverlauf, der angezeigt wird der <xref:System.Windows.Navigation.CustomContentState> -Objekt zugeordnet ist. Der Wert, der <xref:System.Windows.Navigation.CustomContentState.JournalEntryName%2A> gibt wird angezeigt, bei der Navigation [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] der verschiedenen Navigatoren ([!INCLUDE[TLA2#tla_ie7](~/includes/tla2sharptla-ie7-md.md)], <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>).  
+  
+ Eine Klasse, die abgeleitet <xref:System.Windows.Navigation.CustomContentState> muss serialisierbar sein, d. h. muss mit mindestens erweitert werden <xref:System.SerializableAttribute>, und implementieren Sie optional <xref:System.Runtime.Serialization.ISerializable>.  
+  
+> [!IMPORTANT]
+>  Beim Speichern von Informationen in benutzerdefinierten Inhalt Zustand nicht Sie gespeichert, alle Verweise auf die Instanz von der Seite "Sie für den Zustand merken sind, wenn nicht der Inhalt im Arbeitsspeicher beibehalten werden soll. Dies verhindert, dass [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] die Seiteninstanz und bezwingt den Zweck des Standardverhaltens Navigation Verlauf freigibt. Wenn Sie dies tun müssen, sollten Sie verwenden <xref:System.Windows.Controls.Page.KeepAlive%2A> stattdessen.  
+  
+   
+  
+## Examples  
+ Im folgenden ist ein Beispiel für eine <xref:System.Windows.Navigation.CustomContentState> Implementierung, die überschreibt <xref:System.Windows.Navigation.CustomContentState.JournalEntryName%2A>.  
+  
+ [!code-csharp[CustomContentStateSnippets#MyCustomContentStateCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomContentStateSnippets/CSharp/MyCustomContentState.cs#mycustomcontentstatecode)]
+ [!code-vb[CustomContentStateSnippets#MyCustomContentStateCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomContentStateSnippets/visualbasic/mycustomcontentstate.vb#mycustomcontentstatecode)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CustomContentState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.CustomContentState.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Navigation.CustomContentState" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="JournalEntryName">
+      <MemberSignature Language="C#" Value="public virtual string JournalEntryName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string JournalEntryName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.CustomContentState.JournalEntryName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Name für den Inhalt, der im Navigationsverlauf gespeichert ist. Der Wert der <see cref="P:System.Windows.Navigation.CustomContentState.JournalEntryName" /> angezeigten stammen aus <see cref="T:System.Windows.Navigation.NavigationWindow" />, <see cref="T:System.Windows.Controls.Frame" />, und [!INCLUDE[TLA#tla_ie7](~/includes/tlasharptla-ie7-md.md)] Navigation [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)].</summary>
+        <value>Die <see cref="T:System.String" /> Name des Inhalts, der im Navigationsverlauf gespeichert ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einträge in Back und Verlauf der Vorwärtsnavigation gespeicherten stehen in der Regel über die zurück- und Vorwärts Dropdown-Schaltflächen auf der Navigationsleiste [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] des Host-Navigator, einschließlich <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>, oder [!INCLUDE[TLA#tla_ie7](~/includes/tlasharptla-ie7-md.md)].  
+  
+ <xref:System.Windows.Navigation.CustomContentState.JournalEntryName%2A>ist der <xref:System.String> -Wert, der in einer Dropdownliste des Verlauf angezeigt wird.  
+  
+ <xref:System.Windows.Navigation.CustomContentState.JournalEntryName%2A>muss nicht überschrieben werden; die folgenden Teile der Daten werden verwendet, um den Name eines Eintrags in der Rangfolge Navigation automatisch erstellt, wenn dies nicht der Fall ist:  
+  
+-   <xref:System.Windows.Controls.Page.Title%2A>.  
+  
+-   <xref:System.Windows.Controls.Page.WindowTitle%2A>und die [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] für die aktuelle Seite  
+  
+-   Die [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] für die aktuelle Seite.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Replay">
+      <MemberSignature Language="C#" Value="public abstract void Replay (System.Windows.Navigation.NavigationService navigationService, System.Windows.Navigation.NavigationMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Replay(class System.Windows.Navigation.NavigationService navigationService, valuetype System.Windows.Navigation.NavigationMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.CustomContentState.Replay(System.Windows.Navigation.NavigationService,System.Windows.Navigation.NavigationMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="navigationService" Type="System.Windows.Navigation.NavigationService" />
+        <Parameter Name="mode" Type="System.Windows.Navigation.NavigationMode" />
+      </Parameters>
+      <Docs>
+        <param name="navigationService">Die <see cref="T:System.Windows.Navigation.NavigationService" /> im Besitz des Navigators, die Verantwortung für den Inhalt an das <see cref="T:System.Windows.Navigation.CustomContentState" /> angewendet wird.</param>
+        <param name="mode">Ein <see cref="T:System.Windows.Navigation.NavigationMode" /> , die angibt, wie der Inhalt, der die <see cref="T:System.Windows.Navigation.CustomContentState" /> ist navigiert wurde angewendet wird.</param>
+        <summary>Wird aufgerufen, um ein Inhaltselement Zustand zuzuweisen, wenn die Navigation erfolgt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Navigation.CustomContentState.Replay%2A>wird aufgerufen, wenn ein Element im Navigationsverlauf, die einem zugeordneten <xref:System.Windows.Navigation.CustomContentState> Objekt navigiert wird.  
+  
+ Beim Ableiten von der abstrakten <xref:System.Windows.Navigation.CustomContentState> -Klasse, <xref:System.Windows.Navigation.CustomContentState.Replay%2A> muss überschrieben werden, obwohl die überschreibungsimplementierung nur das Aufrufen des Basis-muss <xref:System.Windows.Navigation.CustomContentState.Replay%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

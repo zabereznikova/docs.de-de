@@ -1,0 +1,36 @@
+<Type Name="CompilerMarshalOverride" FullName="System.Runtime.CompilerServices.CompilerMarshalOverride">
+  <TypeSignature Language="C#" Value="public static class CompilerMarshalOverride" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit CompilerMarshalOverride extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.CompilerServices.CompilerMarshalOverride" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.CompilerServices.VisualC</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt an, dass die geänderte Instanz einer Variablen vom Datentyp "true" unterscheidet sich beim Marshallen. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.CompilerServices.CompilerMarshalOverride> Klasse ermöglicht die common Language Runtime gemarshallt wird, verwenden die richtige Größe.  
+  
+ Einige Verhaltensweisen von der common Language Runtime sind inkompatibel mit bestimmten Sprachen. Z. B. C++ behandelt boolesche Variablen als einzelbytewerte, während die common Language Runtime diese als 4-Byte-Werte marshallt entsprechend den `BOOLEAN` Typs, der von der Microsoft Win32-API definiert.  Um solche Probleme zu umgehen, der C++-Compiler gibt dieser Modifizierer für jedes beliebige `wchar_t` oder `bool` Parameter oder Funktionsrückgabe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

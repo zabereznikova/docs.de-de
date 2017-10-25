@@ -1,0 +1,192 @@
+<Type Name="SmtpSection" FullName="System.Net.Configuration.SmtpSection">
+  <TypeSignature Language="C#" Value="public sealed class SmtpSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SmtpSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Configuration.SmtpSection" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die SMTP-Abschnitt in der <see langword="System.Net" /> Konfigurationsdatei.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse ermöglicht den programmgesteuerten Zugriff auf Informationen, die in Konfigurationsdateien gespeichert werden kann, die von Klassen verwendet werden, die SMTP-Dienst in unterstützen die <xref:System.Net.Mail> Namespace.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SmtpSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Configuration.SmtpSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.Configuration.SmtpSection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeliveryFormat">
+      <MemberSignature Language="C#" Value="public System.Net.Mail.SmtpDeliveryFormat DeliveryFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Mail.SmtpDeliveryFormat DeliveryFormat" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.SmtpSection.DeliveryFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("deliveryFormat", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.Mail.SmtpDeliveryFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das übermittlungsformat für das Senden von e-Mails, die mit dem Transport Protocol SMTP (Simple Mail) verwendet.</summary>
+        <value>Gibt <see cref="T:System.Net.Mail.SmtpDeliveryFormat" />zurück.  
+  
+ Das übermittlungsformat zum Senden ausgehender e-Mails mithilfe von SMTP.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeliveryMethod">
+      <MemberSignature Language="C#" Value="public System.Net.Mail.SmtpDeliveryMethod DeliveryMethod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Mail.SmtpDeliveryMethod DeliveryMethod" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.SmtpSection.DeliveryMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("deliveryMethod", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.Mail.SmtpDeliveryMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Übermittlungsmethode (SMTP, Simple Mail Transport Protocol). Die Standardmethode für die Übermittlung ist <see cref="F:System.Net.Mail.SmtpDeliveryMethod.Network" />.</summary>
+        <value>Eine Zeichenfolge, die SMTP-Übermittlungsmethode darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gültige Werte für diese Eigenschaft sind <xref:System.Net.Mail.SmtpDeliveryMethod.Network>, <xref:System.Net.Mail.SmtpDeliveryMethod.PickupDirectoryFromIis>, und <xref:System.Net.Mail.SmtpDeliveryMethod.SpecifiedPickupDirectory>. Diese Werte verfügen über konfigurierbare Unterelemente und einen entsprechenden Abschnitt in der `System.Net` Konfigurationsdatei. Alle Abschnitte werden in Kamel-Schreibweise, die Benutzer die Übermittlungsmethode mit dem entsprechenden Abschnittsnamen übereinstimmen darf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="From">
+      <MemberSignature Language="C#" Value="public string From { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string From" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.SmtpSection.From" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("from")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Standardwert, der angibt, der die e-Mail-Nachricht aus.</summary>
+        <value>Eine Zeichenfolge darstellt, den Standardwert, der angibt, wer eine e-Mail-Nachricht stammt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Network">
+      <MemberSignature Language="C#" Value="public System.Net.Configuration.SmtpNetworkElement Network { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Configuration.SmtpNetworkElement Network" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.SmtpSection.Network" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("network")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.Configuration.SmtpNetworkElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Konfigurationselement ab, das steuert, die Einstellungen des Netzwerks durch den Transport Protocol SMTP (Simple Mail) verwendet. die Datei. <see cref="T:System.Net.Configuration.SmtpNetworkElement" />.</summary>
+        <value>Ein <see cref="T:System.Net.Configuration.SmtpNetworkElement" />-Objekt.  
+  
+ Das Konfigurationselement, das steuert die Netzwerkeinstellungen vom SMTP-Dienst verwendet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.SmtpSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpecifiedPickupDirectory">
+      <MemberSignature Language="C#" Value="public System.Net.Configuration.SmtpSpecifiedPickupDirectoryElement SpecifiedPickupDirectory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Configuration.SmtpSpecifiedPickupDirectoryElement SpecifiedPickupDirectory" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.SmtpSection.SpecifiedPickupDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("specifiedPickupDirectory")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.Configuration.SmtpSpecifiedPickupDirectoryElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das pickup-Verzeichnis, das durch den SMPT-Client verwendet wird.</summary>
+        <value>Ein <see cref="T:System.Net.Configuration.SmtpSpecifiedPickupDirectoryElement" /> Objekt, das das pickup-Verzeichnis angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt an, vom angegebenen Verzeichnis <xref:System.Net.Mail.SmtpClient.PickupDirectoryLocation%2A> wird der SMTP-Abholverzeichnis verwendet werden. Wenn der SMTP-Client kann nicht zum Schreiben in das pickup-Verzeichnis ist e/a-Ausnahme von <xref:System.Net.Mail.SmtpClient.Send%2A>. Das Verzeichnis wird nicht erstellt werden, wenn er nicht vorhanden ist. Auf das Verzeichnis zugreifen, werden die Anmeldeinformationen des derzeit ausgeführten Prozess oder Thread verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

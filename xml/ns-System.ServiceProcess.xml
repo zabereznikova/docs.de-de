@@ -1,0 +1,15 @@
+<Namespace Name="System.ServiceProcess">
+  <Docs>
+    <summary>Die <see cref="N:System.ServiceProcess" /> Namespace enthält Klassen, die Sie implementieren können, installieren und Steuerung von Windows-dienstanwendungen. Dienste sind lang andauernde ausführbare Dateien, die ohne Benutzeroberfläche ausgeführt werden. Implementieren einen Dienst umfasst das erben von der <see cref="T:System.ServiceProcess.ServiceBase" /> Klasse und definieren Sie bestimmte Verhalten, dass beim Verarbeiten von starten, beenden, Anhalten und fortsetzen Befehle übergeben, sowie benutzerdefinierte Verhalten und die Aktionen an, wenn das System heruntergefahren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dienste werden mit einem Installationsprogramm, z. B. InstallUtil.exe installiert. Die <xref:System.ServiceProcess> -Namespace stellt Installationsklassen, die Dienstinformationen in die Registrierung geschrieben. Die <xref:System.ServiceProcess.ServiceProcessInstaller> -Klasse stellt eine umfassende der gemeinsamen Komponenten zu allen Diensten in einer Installation installiert wird. Für jeden Dienst, die Sie Erstellen einer Instanz von der <xref:System.ServiceProcess.ServiceInstaller> Klasse dienstspezifischen Funktionen zu installieren.  
+  
+ Die <xref:System.ServiceProcess.ServiceController> -Klasse ermöglicht es Ihnen, einen vorhandenen Dienst herstellen und ihn zu verändern oder Informationen über ihn abzurufen. Diese Klasse wird üblicherweise in Verwaltungsebene verwendet und ermöglicht es Ihnen, starten, beenden, anhalten, fortsetzen oder Ausführen von benutzerdefinierten Befehlen für einen Dienst. In dem die <xref:System.ServiceProcess.ServiceBase> Klasse definiert die Verarbeitung ein Diensts führt, tritt ein Befehl, der <xref:System.ServiceProcess.ServiceController> wird der Agent, der Ihnen ermöglicht, diese Befehle für den Dienst aufzurufen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

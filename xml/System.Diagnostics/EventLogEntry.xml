@@ -1,0 +1,579 @@
+<Type Name="EventLogEntry" FullName="System.Diagnostics.EventLogEntry">
+  <TypeSignature Language="C#" Value="public sealed class EventLogEntry : System.ComponentModel.Component, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit EventLogEntry extends System.ComponentModel.Component implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.EventLogEntry" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Component</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DesignTimeVisible(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Kapselt einen einzigen Datensatz im Ereignisprotokoll. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel nicht erstellen Sie Instanzen von <xref:System.Diagnostics.EventLogEntry> direkt bei der Arbeit mit der <xref:System.Diagnostics.EventLog> Klasse. Die <xref:System.Diagnostics.EventLog.Entries%2A> Mitglied der <xref:System.Diagnostics.EventLog> Klasse enthält eine Auflistung von <xref:System.Diagnostics.EventLogEntry> -Instanzen, die Sie beim Lesen von mit durchlaufen die <xref:System.Diagnostics.EventLogEntryCollection.Item%2A?displayProperty=nameWithType> Index-Klassenmember.  
+  
+> [!IMPORTANT]
+>  Dieser Typ implementiert die <xref:System.IDisposable> Schnittstelle. Wenn Sie mithilfe des Typs abgeschlossen haben, sollten Sie es entweder direkt oder indirekt freigeben. Aufrufen, um den Typ direkt zu verwerfen, dessen <xref:System.IDisposable.Dispose%2A> Methode in einer `try` / `catch` Block. Um es indirekt freizugeben, verwenden Sie ein Sprachkonstrukt z. B. `using` (in c#) oder `Using` (in Visual Basic). Weitere Informationen finden Sie im Abschnitt "Verwenden eines Objekts, implementiert IDisposable" in der <xref:System.IDisposable> Thema zur Schnittstelle.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Diagnostics.EventLogEntry> Klasse. In diesem Beispiel wird eine `switch` -Anweisung verwendet die Konsoleneingabe um zu suchende Einträge im Ereignisprotokoll für den angegebenen Ereignistyp.  Wenn eine Übereinstimmung gefunden wird, wird die Datenquelle die Informationen zu Protokolleinträgen in der Konsole angezeigt.  
+  
+ [!code-cpp[EventLogEntry_Source#1](~/samples/snippets/cpp/VS_Snippets_CLR/EventLogEntry_Source/CPP/eventlogentry_source.cpp#1)]
+ [!code-csharp[EventLogEntry_Source#1](~/samples/snippets/csharp/VS_Snippets_CLR/EventLogEntry_Source/CS/eventlogentry_source.cs#1)]
+ [!code-vb[EventLogEntry_Source#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/EventLogEntry_Source/VB/eventlogentry_source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Category">
+      <MemberSignature Language="C#" Value="public string Category { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Category" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogEntry.Category" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("The category of this event entry.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den der <see cref="P:System.Diagnostics.EventLogEntry.CategoryNumber" />-Eigenschaft für diesen Eintrag zugeordneten Text ab.</summary>
+        <value>Der anwendungsspezifische Kategorietext.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede Anwendung (Ereignisquelle) kann definieren, eine eigene nummerierte Kategorien und die Textzeichenfolgen, die sie zugeordnet sind. Der Ereignisanzeige können die Kategorie zu Filtern von Ereignissen im Protokoll.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Der Speicherplatz konnte nicht für eine der einfügen-Zeichenfolgen, die der Kategorie zugeordnet zugeordnet werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CategoryNumber">
+      <MemberSignature Language="C#" Value="public short CategoryNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int16 CategoryNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogEntry.CategoryNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("An ID for the category of this event entry.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Kategorienummer des Ereignisprotokolleintrags ab.</summary>
+        <value>Die anwendungsspezifische Kategorienummer für diesen Eintrag.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede Anwendung (Ereignisquelle) kann definieren, eine eigene nummerierte Kategorien und die Textzeichenfolgen, die sie zugeordnet sind. Der Ereignisanzeige können die Kategorie zu Filtern von Ereignissen im Protokoll. Die Kategorien müssen fortlaufend nummeriert werden, beginnend mit der Zahl 1. Die Nummer der Auftragskategorie wird angegeben, indem die <xref:System.Diagnostics.EventInstance.CategoryId%2A?displayProperty=nameWithType> Eigenschaft. Der Ereignisanzeige können die Kategorie einen numerischen Wert anzeigen können, oder es die Kategorie als eine Ressourcen-ID um eine lokalisierte Kategoriezeichenfolge anzuzeigen. Weitere Informationen finden Sie unter <xref:System.Diagnostics.EventInstance>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Data">
+      <MemberSignature Language="C#" Value="public byte[] Data { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Data" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogEntry.Data" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("Binary data associated with this event entry.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die dem Eintrag zugeordneten Binärdaten ab.</summary>
+        <value>Ein Bytearray mit den dem Eintrag zugeordneten Binärdaten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Abrufen dieser Eigenschaft erstellt ein Array, das eine Kopie der Eintrag ereignisspezifische Binärdaten, enthält der Ereignisanzeige im kombinierten Hexadezimal- und Text-Format angezeigt. Ereignisspezifische Daten werden manchmal verwendet, um Informationen zu speichern, die die Anwendung unabhängig von der Ereignisanzeige, z. B. verarbeitet, um Berichte aus der Protokolldatei.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntryType">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.EventLogEntryType EntryType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.EventLogEntryType EntryType" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogEntry.EntryType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("The type of this event entry.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.EventLogEntryType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Ereignistyp dieses Eintrags ab.</summary>
+        <value>Der Ereignistyp, der dem Ereignisprotokolleintrag zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Ereignistypen klar definierte gemeinsame Daten und können optional ereignisspezifische Daten enthalten. Jedes Ereignis ist eines einzelnen Typs an, womit die Anwendung beim Melden des Ereignisses. Die Ereignisanzeige verwendet den Ereignistyp, um zu bestimmen, welches Symbol in der Listenansicht des Ereignisprotokolls angezeigt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Diagnostics.EventLogEntry.EntryType%2A> Eigenschaft. In diesem Beispiel wird eine `switch` -Anweisung verwendet die Konsoleneingabe um zu suchende Einträge im Ereignisprotokoll für den angegebenen <xref:System.Diagnostics.EventLogEntry.EntryType%2A>.  Wenn eine Übereinstimmung gefunden wird, wird die Datenquelle die Informationen zu Protokolleinträgen in der Konsole angezeigt.  
+  
+ [!code-cpp[EventLogEntry_Source#1](~/samples/snippets/cpp/VS_Snippets_CLR/EventLogEntry_Source/CPP/eventlogentry_source.cpp#1)]
+ [!code-csharp[EventLogEntry_Source#1](~/samples/snippets/csharp/VS_Snippets_CLR/EventLogEntry_Source/CS/eventlogentry_source.cs#1)]
+ [!code-vb[EventLogEntry_Source#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/EventLogEntry_Source/VB/eventlogentry_source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Diagnostics.EventLogEntry otherEntry);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(class System.Diagnostics.EventLogEntry otherEntry) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogEntry.Equals(System.Diagnostics.EventLogEntry)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="otherEntry" Type="System.Diagnostics.EventLogEntry" />
+      </Parameters>
+      <Docs>
+        <param name="otherEntry">Der zu vergleichende <see cref="T:System.Diagnostics.EventLogEntry" />.</param>
+        <summary>Führt einen Vergleich zweier Ereignisprotokolleinträge durch.</summary>
+        <returns>
+          <see langword="true" />, wenn die <see cref="T:System.Diagnostics.EventLogEntry" />-Objekte identisch sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode führt einen Byte-pro-Byte-Vergleich zwischen den beiden Objekten. Es wird nicht bestimmt, ob die beiden <xref:System.Diagnostics.EventLogEntry> Instanzen auf dasselbe Objekt verweisen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventID">
+      <MemberSignature Language="C#" Value="public int EventID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EventID" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogEntry.EventID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("An ID number for this event entry.")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use InstanceId")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den anwendungsspezifischen Ereignisbezeichner für den aktuellen Ereigniseintrag ab.</summary>
+        <value>Der anwendungsspezifische Bezeichner für die Ereignismeldung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert stellt den Ereignisbezeichner für den Eintrag im Ereignisprotokoll Protokoll, mit den beiden obersten Bits nicht maskiert. Die <xref:System.Diagnostics.EventLogEntry.InstanceId%2A> -Eigenschaft für ein Ereignisprotokolleintrag darstellt, die 32-Bit-Ressourcenbezeichner für das Ereignis in der Meldungsressourcendatei der Ereignisquelle. Zwei Einträge im Ereignisprotokoll aus der gleichen Quelle übereinstimmende aufweisen können <xref:System.Diagnostics.EventLogEntry.EventID%2A> Werte, bieten jedoch unterschiedliche <xref:System.Diagnostics.EventLogEntry.InstanceId%2A> Werte aufgrund von Unterschieden in den oberen beiden Bits der Ereignisbezeichner.  
+  
+ Wenn die Anwendung den Ereigniseintrag mithilfe eines geschrieben hat die <xref:System.Diagnostics.EventLog.WriteEntry%2A> Methoden, die <xref:System.Diagnostics.EventLogEntry.EventID%2A> Eigenschaft entspricht es dem optionalen `eventId` Parameter. Wenn die Anwendung geschrieben das Ereignis mithilfe hat <xref:System.Diagnostics.EventLog.WriteEvent%2A> oder die Win32-API `ReportEvent`die <xref:System.Diagnostics.EventLogEntry.EventID%2A> Eigenschaft entspricht den Ressourcenbezeichner für das Ereignis mit den beiden obersten Bits nicht maskiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Index">
+      <MemberSignature Language="C#" Value="public int Index { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Index" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogEntry.Index" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("Sequence numer of this event entry.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index dieses Eintrags im Ereignisprotokoll ab.</summary>
+        <value>Der Index dieses Eintrags im Ereignisprotokoll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Anzahl ist nicht notwendigerweise nullbasiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceId">
+      <MemberSignature Language="C#" Value="public long InstanceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 InstanceId" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogEntry.InstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("The instance ID for this event entry.")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Ressourcenbezeichner ab, der den Nachrichtentext des Ereigniseintrags bezeichnet.</summary>
+        <value>Ein Ressourcenbezeichner, der mit einer Zeichenfolgendefinition in der Meldungsressourcendatei der Ereignisquelle übereinstimmt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.EventLogEntry.InstanceId%2A> Eigenschaft identifiziert eindeutig einen Ereigniseintrag für eine konfigurierte Ereignisquelle. Die <xref:System.Diagnostics.EventLogEntry.InstanceId%2A> für ein Ereignisprotokoll Eintrag den 32-Bit-Ressourcenbezeichner für das Ereignis in der Meldungsressourcendatei der Ereignisquelle darstellt. Die <xref:System.Diagnostics.EventLogEntry.EventID%2A> -Eigenschaft gleich der <xref:System.Diagnostics.EventLogEntry.InstanceId%2A> mit den beiden obersten Bits nicht maskiert. Zwei Einträge im Ereignisprotokoll aus der gleichen Quelle übereinstimmende aufweisen können <xref:System.Diagnostics.EventLogEntry.EventID%2A> Werte, bieten jedoch unterschiedliche <xref:System.Diagnostics.EventLogEntry.InstanceId%2A> Werte aufgrund von Unterschieden in den oberen beiden Bits der Ressourcenbezeichner.  
+  
+ Wenn die Anwendung den Ereigniseintrag mithilfe eines geschrieben hat die <xref:System.Diagnostics.EventLog.WriteEntry%2A> Methoden, die <xref:System.Diagnostics.EventLogEntry.InstanceId%2A> Eigenschaft entspricht es dem optionalen `eventId` Parameter. Wenn die Anwendung geschrieben das Ereignis mithilfe hat <xref:System.Diagnostics.EventLog.WriteEvent%2A>, die <xref:System.Diagnostics.EventLogEntry.InstanceId%2A> Eigenschaft entspricht den Ressourcenbezeichner, der im angegebenen der <xref:System.Diagnostics.EventInstance.InstanceId%2A> von der `instance` Parameter. Wenn die Anwendung das Ereignis mit der Win32-API geschrieben hat `ReportEvent`, die <xref:System.Diagnostics.EventLogEntry.InstanceId%2A> Eigenschaft entspricht den Ressourcenbezeichner, angegeben der `dwEventID` Parameter.  
+  
+ Informationen zum Definieren von ereignismeldungen und Erstellen von Ressourcendateien für das Ereignisprotokoll, finden Sie unter dem Thema "Meldungscompiler" in der Platform SDK-Dokumentation unter [http://msdn.microsoft.com](http://msdn.microsoft.com/). Weitere Informationen zu Ereignisprotokoll-IDs finden Sie im Thema "Ereignis-IDs" in der Platform SDK.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird durchsucht ein Ereignisprotokoll nach Einträgen mit einer bestimmten Ressourcen-ID an. Das Codebeispiel zeigt die ereignismeldung für jeden übereinstimmenden Eintrag und zählt die Gesamtzahl der übereinstimmenden Einträge im Protokoll. Der Meldungstext für jeden Eintrag, vielleicht aber nicht identisch sein; Jede ereignismeldung hängt davon ab, die Ereignismeldungsdatei für die Quelle, die einfügen-Zeichenfolgen und die Parameter verwendet, wenn die Datei geschrieben wurde.  
+  
+ [!code-cpp[EventLog_WriteEvent#10](~/samples/snippets/cpp/VS_Snippets_CLR/eventlog_WriteEvent/CPP/source.cpp#10)]
+ [!code-csharp[EventLog_WriteEvent#10](~/samples/snippets/csharp/VS_Snippets_CLR/eventlog_WriteEvent/CS/source.cs#10)]
+ [!code-vb[EventLog_WriteEvent#10](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventlog_WriteEvent/VB/source.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MachineName">
+      <MemberSignature Language="C#" Value="public string MachineName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MachineName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogEntry.MachineName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("The Computer on which this event entry occured.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Computers ab, auf dem dieser Eintrag generiert wurde.</summary>
+        <value>Der Name des Computers mit dem Ereignisprotokoll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogEntry.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.ComponentModel.Design.BinaryEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("The message of this event entry.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die lokalisierte Nachricht ab, die diesem Ereigniseintrag zugeordnet ist.</summary>
+        <value>Der formatierte lokalisierte Text der Nachricht. Dazu zählen zugeordnete Ersatzzeichenfolgen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Abrufen dieser Eigenschaft wird geöffnet, die Registrierung, um den Dateinamen der DLL-Datei zu bestimmen, die den lokalisierten Text enthält. Wenn Sie eine Registrierung beim Testen des Quellcodes Fehlermeldung, stellen Sie sicher, dass die DLL-Datei auf dem Computer vorhanden ist. Wenn einfügen-Zeichenfolgen in der Nachricht enthalten sind, fangen Sie Fehler in ihrer Zuordnung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Der Speicherplatz konnte nicht für eine der einfügen-Zeichenfolgen, die der Nachricht zugeordnete belegt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplacementStrings">
+      <MemberSignature Language="C#" Value="public string[] ReplacementStrings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] ReplacementStrings" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogEntry.ReplacementStrings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("Application strings for this event entry.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die dem Ereignisprotokolleintrag zugeordneten Ersatzzeichenfolgen ab.</summary>
+        <value>Ein Array, das die im Ereigniseintrag gespeicherten Ersatzzeichenfolgen enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ruft nur die Ersatzzeichenfolgen für den Eintrag ab. Rufen Sie die vollständige Meldung Lesen der <xref:System.Diagnostics.EventLogEntry.Message%2A> Eigenschaft.  
+  
+ Die <xref:System.Diagnostics.EventLogEntry.ReplacementStrings%2A> Eigenschaft enthält die lokalisierten Versionen von Ersetzungszeichenfolgen, die in der Eintrag im Ereignisprotokoll verwendet werden. Wenn Sie Ressourcendateien, die Zeichenfolgen in jeder Zielsprache für Ihre Anwendung enthalten bereitstellen, können Sie sich Ereignisprotokollnachrichten in der Sprache ausgeben, die auf diesem Computer verwendet wird. Zu diesem Zweck erstellen Sie eine Instanz von der <xref:System.Resources.ResourceManager> Klasse für die Ressourcenassembly, die die Ersetzungszeichenfolgen enthält. Der erste Parameter der <xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%29> Konstruktor identifiziert die Ressourcenassembly verwendet werden. Verwenden der <xref:System.Resources.ResourceManager.GetString%2A> -Methode dieser Instanz um lokalisierte Meldungen für Protokollereignisse bereitzustellen. Der folgende Code legt die Nachricht automatisch auf die Sprache für die aktuelle Kultur fest.  
+  
+```  
+ResourceManager LocRM = new ResourceManager("ReplacementStrings.TestStrings",   
+      typeof(Program).Assembly);  
+EventLog e1 = new EventLog("LocTest", "MyMachine", "LocTest");  
+// Get the string associated with the current culture.  
+e1.WriteEntry(LocRM.GetString("strMessage"),  
+   EventLogEntryType.Information);  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public string Source { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Source" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogEntry.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("The source application of this event entry.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Anwendung ab, die dieses Ereignis generiert hat.</summary>
+        <value>Der Name, der im Ereignisprotokoll als Quelle dieses Eintrags registriert ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Ereignisquelle gibt an, was das Ereignis protokolliert. Es ist häufig der Name der Anwendung oder den Namen der Unterkomponente der Anwendung, wenn die Anwendung sehr groß ist. Anwendungen und Dienste in der Regel zum Schreiben (und daher sind die Quellen für) Windows-Anwendungsprotokoll oder ein benutzerdefiniertes Protokoll. Gerätetreiber werden in der Regel im Systemprotokoll schreiben.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Diagnostics.EventLogEntry.Source%2A> Eigenschaft. In diesem Beispiel wird eine `switch` -Anweisung verwendet die Konsoleneingabe um zu suchende Einträge im Ereignisprotokoll für den angegebenen <xref:System.Diagnostics.EventLogEntry.EntryType%2A>.  Wenn eine Übereinstimmung gefunden wird, die <xref:System.Diagnostics.EventLogEntry.Source%2A> Eigenschaftsinformationen wird in der Konsole angezeigt.  
+  
+ [!code-cpp[EventLogEntry_Source#1](~/samples/snippets/cpp/VS_Snippets_CLR/EventLogEntry_Source/CPP/eventlogentry_source.cpp#1)]
+ [!code-csharp[EventLogEntry_Source#1](~/samples/snippets/csharp/VS_Snippets_CLR/EventLogEntry_Source/CS/eventlogentry_source.cs#1)]
+ [!code-vb[EventLogEntry_Source#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/EventLogEntry_Source/VB/eventlogentry_source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogEntry.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Needs serialization support")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die mit Daten zu füllende <see cref="T:System.Runtime.Serialization.SerializationInfo" />.</param>
+        <param name="context">Das Ziel (siehe <see cref="T:System.Runtime.Serialization.StreamingContext" />) dieser Serialisierung.</param>
+        <summary>Füllt eine <see cref="T:System.Runtime.Serialization.SerializationInfo" /> mit den Daten auf, die zum Serialisieren des Zielobjekts erforderlich sind.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeGenerated">
+      <MemberSignature Language="C#" Value="public DateTime TimeGenerated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime TimeGenerated" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogEntry.TimeGenerated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("Generation time of this event entry.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ortszeit ab, zu der dieses Ereignis generiert wurde.</summary>
+        <value>Ortszeit, zu der dieses Ereignis generiert wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Element enthält die Zeit, die ein Ereignis generiert wurde. Dies nicht identisch mit der Zeit möglicherweise wann die Ereignisinformationen in das Ereignisprotokoll geschrieben wurde. Die letztgenannte Aufgabe finden Sie unter der <xref:System.Diagnostics.EventLogEntry.TimeWritten%2A> Eigenschaft.  
+  
+ Es ist in der Regel eine Verzögerung zwischen dem Zeitpunkt, die ein Ereignis generiert wird und die Uhrzeit, an die sie angemeldet ist. Es ist wichtiger, zu wissen, wann das Ereignis generiert wurde, es sei denn, Sie möchten, um festzustellen, ob es eine erhebliche Verzögerung bei der Protokollierung. Das kann geschehen, wenn die Protokolldateien befinden sich auf einem anderen Server und einen Engpass auftreten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeWritten">
+      <MemberSignature Language="C#" Value="public DateTime TimeWritten { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime TimeWritten" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogEntry.TimeWritten" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("The time at which this event entry was written to the logfile.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ortszeit ab, zu der dieses Ereignis in das Protokoll geschrieben wurde.</summary>
+        <value>Ortszeit, zu der dieses Ereignis in das Protokoll geschrieben wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Element enthält die Zeit, die Informationen für ein Ereignis in das Ereignisprotokoll geschrieben wird. Dies möglicherweise nicht zur gleichen Zeit wie das Ereignis generiert wurde. Die letztgenannte Aufgabe finden Sie unter der <xref:System.Diagnostics.EventLogEntry.TimeGenerated%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserName">
+      <MemberSignature Language="C#" Value="public string UserName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogEntry.UserName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("The name of a user associated with this event entry.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Benutzers ab, der für dieses Ereignis verantwortlich ist.</summary>
+        <value>Die Sicherheits-ID (SID), die einen Benutzer oder eine Gruppe eindeutig bezeichnet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist häufig für Ereignisse in Protokollen als das Sicherheitsprotokoll leer.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.SystemException">Kontoinformationen konnten nicht für die SID des Benutzers abgerufen werden.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

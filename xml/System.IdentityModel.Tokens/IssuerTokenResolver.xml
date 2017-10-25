@@ -1,0 +1,186 @@
+<Type Name="IssuerTokenResolver" FullName="System.IdentityModel.Tokens.IssuerTokenResolver">
+  <TypeSignature Language="C#" Value="public class IssuerTokenResolver : System.IdentityModel.Selectors.SecurityTokenResolver" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit IssuerTokenResolver extends System.IdentityModel.Selectors.SecurityTokenResolver" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.IssuerTokenResolver" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Selectors.SecurityTokenResolver</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Löst ausstellertoken erhaltene Servicepartner ab.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IssuerTokenResolver ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.IssuerTokenResolver.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Tokens.IssuerTokenResolver" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig wird mit die neue Instanz initialisiert ein <xref:System.IdentityModel.Tokens.X509CertificateStoreTokenResolver> , verwendet den Standardspeicher (LM. TrustedPeople).        //  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IssuerTokenResolver (System.IdentityModel.Selectors.SecurityTokenResolver wrappedTokenResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Selectors.SecurityTokenResolver wrappedTokenResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.IssuerTokenResolver.#ctor(System.IdentityModel.Selectors.SecurityTokenResolver)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="wrappedTokenResolver" Type="System.IdentityModel.Selectors.SecurityTokenResolver" />
+      </Parameters>
+      <Docs>
+        <param name="wrappedTokenResolver">Der sicherheitstokenresolver, die von dieser Instanz umschlossen werden. Legt die <see cref="P:System.IdentityModel.Tokens.IssuerTokenResolver.WrappedTokenResolver" /> Eigenschaft in der neuen Instanz.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Tokens.IssuerTokenResolver" /> Klasse mit dem angegebenen token Resolver.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultStoreLocation">
+      <MemberSignature Language="C#" Value="public static readonly System.Security.Cryptography.X509Certificates.StoreLocation DefaultStoreLocation;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Security.Cryptography.X509Certificates.StoreLocation DefaultStoreLocation" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Tokens.IssuerTokenResolver.DefaultStoreLocation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.StoreLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der standardmäßige Speicherort zum Auflösen von x. 509-Zertifikate.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultStoreName">
+      <MemberSignature Language="C#" Value="public static readonly System.Security.Cryptography.X509Certificates.StoreName DefaultStoreName;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Security.Cryptography.X509Certificates.StoreName DefaultStoreName" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Tokens.IssuerTokenResolver.DefaultStoreName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.StoreName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Standardspeicher für die Auflösung von x. 509-Zertifikate.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryResolveSecurityKeyCore">
+      <MemberSignature Language="C#" Value="protected override bool TryResolveSecurityKeyCore (System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause, out System.IdentityModel.Tokens.SecurityKey key);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool TryResolveSecurityKeyCore(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause, [out] class System.IdentityModel.Tokens.SecurityKey&amp; key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.IssuerTokenResolver.TryResolveSecurityKeyCore(System.IdentityModel.Tokens.SecurityKeyIdentifierClause,System.IdentityModel.Tokens.SecurityKey@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+        <Parameter Name="key" Type="System.IdentityModel.Tokens.SecurityKey&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifierClause">Eine schlüsselbezeichnerklausel, der Schlüssel abgerufen werden soll.</param>
+        <param name="key">Bei der Rückgabe dieser Methode enthält den Schlüssel, der in der angegebenen schlüsselbezeichnerklausel verwiesen wird. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Versucht, den Schlüssel abzurufen, auf den in der angegebenen Schlüsselbezeichnerklausel verwiesen wird. (Überschreibt die Basisklassenmethode.)</summary>
+        <returns>
+          <see langword="true" />, wenn ein Schlüssel für die angegebene Schlüsselbezeichnerklausel abgerufen werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryResolveTokenCore">
+      <MemberSignature Language="C#" Value="protected override bool TryResolveTokenCore (System.IdentityModel.Tokens.SecurityKeyIdentifier keyIdentifier, out System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool TryResolveTokenCore(class System.IdentityModel.Tokens.SecurityKeyIdentifier keyIdentifier, [out] class System.IdentityModel.Tokens.SecurityToken&amp; token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.IssuerTokenResolver.TryResolveTokenCore(System.IdentityModel.Tokens.SecurityKeyIdentifier,System.IdentityModel.Tokens.SecurityToken@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifier" Type="System.IdentityModel.Tokens.SecurityKeyIdentifier" />
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifier">Der Schlüsselbezeichner für ein Sicherheitstoken zu erstellen.</param>
+        <param name="token">Diese Methode gibt ein <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> zurück, das den angegebenen Schlüsselbezeichner darstellt. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Versucht, das Sicherheitstoken abzurufen, das mindestens eine der schlüsselbezeichnerklauseln im angegebenen Schlüsselbezeichner enthalten entspricht. (Überschreibt die Basisklassenmethode.)</summary>
+        <returns>
+          <see langword="true" />Wenn ein Sicherheitstoken für den angegebenen Schlüsselbezeichner abgerufen werden kann. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryResolveTokenCore">
+      <MemberSignature Language="C#" Value="protected override bool TryResolveTokenCore (System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause, out System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool TryResolveTokenCore(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause, [out] class System.IdentityModel.Tokens.SecurityToken&amp; token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.IssuerTokenResolver.TryResolveTokenCore(System.IdentityModel.Tokens.SecurityKeyIdentifierClause,System.IdentityModel.Tokens.SecurityToken@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifierClause">Die schlüsselbezeichnerklausel für ein Sicherheitstoken zu erstellen.</param>
+        <param name="token">Diese Methode gibt ein <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> zurück, das die angegebene Schlüsselbezeichnerklausel darstellt. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Versucht, beim Überschreiben in einer abgeleiteten Klasse das Sicherheitstoken aufzulösen, das der angegebenen Schlüsselbezeichnerklausel entspricht. (Überschreibt die Basisklassenmethode.)</summary>
+        <returns>
+          <see langword="true" />Wenn ein Sicherheitstoken für die angegebene schlüsselbezeichnerklausel abgerufen werden kann. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WrappedTokenResolver">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Selectors.SecurityTokenResolver WrappedTokenResolver { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Selectors.SecurityTokenResolver WrappedTokenResolver" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.IssuerTokenResolver.WrappedTokenResolver" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Selectors.SecurityTokenResolver</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, der Sicherheitstoken-Resolver umschlossen, die von dieser Instanz.</summary>
+        <value>Der umschlossene tokenresolver.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,214 @@
+<Type Name="UCOMIPersistFile" FullName="System.Runtime.InteropServices.UCOMIPersistFile">
+  <TypeSignature Language="C#" Value="public interface UCOMIPersistFile" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract UCOMIPersistFile" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.UCOMIPersistFile" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("0000010b-0000-0000-c000-000000000046")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Verwenden Sie stattdessen <see cref="T:System.Runtime.InteropServices.ComTypes.IPersistFile" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter der vorhandenen Dokumentation für `IPersistFile` und `IPersist` im Unterordner "com" der MSDN Library.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetClassID">
+      <MemberSignature Language="C#" Value="public void GetClassID (out Guid pClassID);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetClassID([out] valuetype System.Guid&amp; pClassID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIPersistFile.GetClassID(System.Guid@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pClassID" Type="System.Guid&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pClassID">Bei erfolgreicher Rückgabe einen Verweis auf die CLSID.</param>
+        <summary>Ruft den Klassenbezeichner (CLSID) eines Objekts ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter der vorhandenen Dokumentation für `IPersist::GetClassID` in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurFile">
+      <MemberSignature Language="C#" Value="public void GetCurFile (out string ppszFileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetCurFile([out] string&amp; ppszFileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIPersistFile.GetCurFile(System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ppszFileName" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="ppszFileName">Die Adresse eines Zeigers auf eine NULL-terminierte Zeichenfolge, die mit dem Pfad für die aktuelle Datei oder die Standard-Filename-Eingabeaufforderung (z. B. *.txt).</param>
+        <summary>Ruft den absoluten Pfad zum aktuellen Arbeitsdatei des Objekts, oder es ist keine aktuelle Arbeit-Datei, die standardmäßige Filename Aufforderung des Objekts.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter der vorhandenen Dokumentation für `IPersistFile::GetCurFile` in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDirty">
+      <MemberSignature Language="C#" Value="public int IsDirty ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IsDirty() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIPersistFile.IsDirty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überprüft ein Objekt geändert, seit der letzten Speicherung auf die aktuelle Datei.</summary>
+        <returns>
+          <see langword="S_OK" />Wenn sich die Datei seit ihrer letzten Speicherung geändert hat <see langword="S_FALSE" /> , wenn die Datei seit ihrer letzten Speicherung nicht geändert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter der vorhandenen Dokumentation für `IPersistFile::IsDirty` in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public void Load (string pszFileName, int dwMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Load(string pszFileName, int32 dwMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIPersistFile.Load(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pszFileName" Type="System.String" />
+        <Parameter Name="dwMode" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pszFileName">Eine mit NULL endende Zeichenfolge mit dem absoluten Pfad der Datei zu öffnen.</param>
+        <param name="dwMode">Eine Kombination von Werten aus der <see langword="STGM" /> Enumeration an, dass der Zugriffsmodus für das Öffnen <c>PszFileName</c>.</param>
+        <summary>Öffnet die angegebene Datei und initialisiert ein Objekt aus den Inhalt der Datei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `STGM` Enumeration ist nicht Teil von .NET Framework, jedoch in der MSDN Library beschrieben.  
+  
+ Weitere Informationen finden Sie unter der vorhandenen Dokumentation für `IPersistFile::Load` in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (string pszFileName, bool fRemember);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Save(string pszFileName, bool fRemember) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIPersistFile.Save(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pszFileName" Type="System.String" />
+        <Parameter Name="fRemember" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="pszFileName">Eine auf NULL endende Zeichenfolge mit dem absoluten Pfad der Datei, in der das Objekt gespeichert wird.</param>
+        <param name="fRemember">Gibt an, ob <c>PszFileName</c> als aktuelle Arbeitsdatei verwendet werden soll.</param>
+        <summary>Speichert eine Kopie des Objekts in der angegebenen Datei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter der vorhandenen Dokumentation für `IPersistFile::Save` in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveCompleted">
+      <MemberSignature Language="C#" Value="public void SaveCompleted (string pszFileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SaveCompleted(string pszFileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIPersistFile.SaveCompleted(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pszFileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="pszFileName">Der absolute Pfad der Datei, in dem das Objekt zuvor gespeichert wurde.</param>
+        <summary>Benachrichtigt das Objekt, das sie in der Datei schreiben kann.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter der vorhandenen Dokumentation für `IPersistFile::SaveCompleted` in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

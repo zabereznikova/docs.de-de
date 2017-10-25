@@ -1,0 +1,88 @@
+<Type Name="LiteralMode" FullName="System.Web.UI.WebControls.LiteralMode">
+  <TypeSignature Language="C#" Value="public enum LiteralMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LiteralMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.LiteralMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wie der Inhalt in einem <see cref="T:System.Web.UI.WebControls.Literal" /> Steuerelement gerendert wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.LiteralMode> Enumeration stellt die Modi, die Sie, wie angeben können der Inhalt einer <xref:System.Web.UI.WebControls.Literal> Steuerelement gerendert wird. Die <xref:System.Web.UI.WebControls.Literal.Mode%2A> Eigenschaft diese Enumerationswerte verwendet, um das Verhalten des Inhalts festgelegt die <xref:System.Web.UI.WebControls.Literal.Text%2A> Eigenschaft in einem <xref:System.Web.UI.WebControls.Literal> Steuerelement.  
+  
+ Bei Angabe von `PassThrough`, den gesamten Inhalt der <xref:System.Web.UI.WebControls.Literal.Text%2A> Eigenschaft an das Gerät bzw. Ihren Browser ohne Änderungen übergeben werden. Z. B. wenn die <xref:System.Web.UI.WebControls.Literal.Text%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.Literal> Steuerelement enthält eine `<hr>` -Tag, wird dieser an alle Geräte und Browser, unabhängig davon, ob es unterstützt wird gesendet.  
+  
+ Bei Angabe von `Encode`, den Inhalt für die <xref:System.Web.UI.WebControls.Literal.Text%2A> Eigenschaft in eine HTML-codierte Zeichenfolge vor dem Rendern konvertiert werden. Z. B. wenn die <xref:System.Web.UI.WebControls.Literal.Text%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.Literal> Steuerelement enthält eine `<hr>` Tag, erfolgt eine Konvertierung zu `&lt;hr&gt;` und an das Gerät oder den Browser gesendet.  
+  
+ Bei Angabe von `Transform`, das Renderingverhalten der der <xref:System.Web.UI.WebControls.Literal.Text%2A> Eigenschaft hängt vom Typ des gerenderten Markups. Wenn die <xref:System.Web.UI.WebControls.Literal> Steuerelement gerendert wird, für ein Gerät oder Browser mit Unterstützung von HTML oder XHTML, Angeben der Transformation erzeugt das gleiche Verhalten wie Pass-Through-angeben. Alle Markuptags und Elemente für die <xref:System.Web.UI.WebControls.Literal.Text%2A> Eigenschaft für den anfordernden Browser gerendert werden.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.LiteralMode.PassThrough> für eine Markupsprache als HTML oder XHTML, z. B. WML oder cHTML Steuerelement gerendert wird, können Sie den Wert für die Zieltransformation nicht unterstützte Markupelemente entfernen. In diesem Fall von Markupsprache-Elementen, der die <xref:System.Web.UI.WebControls.Literal.Text%2A> -Eigenschaft, die in die entsprechenden Markupsprache nicht unterstützt werden, werden nicht für das Steuerelement gerendert. Z. B. wenn die <xref:System.Web.UI.WebControls.Literal.Text%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.LiteralMode.Transform> Steuerelement enthält eine `<hr>` Tag, das Tag wird entfernt, bevor der Inhalt auf einem WML-Gerät gesendet wird. Wenn ein nicht unterstütztes Tag-Inhalt enthält, wird nur die Tags entfernt, und der Inhalt wird an das Gerät oder den Browser gesendet. Z. B. wenn die <xref:System.Web.UI.WebControls.Literal.Text%2A> Eigenschaft enthält den Inhalt `<XYZ>Test</XYZ>`, `<XYZ>` und `</XYZ>` Tags entfernt, während der Text `Test` an das Gerät oder den Browser gesendet wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Festlegen einer <xref:System.Web.UI.WebControls.Literal.Text%2A> des Steuerelements <xref:System.Web.UI.WebControls.Literal.Mode%2A> Eigenschaft. Die <xref:System.Web.UI.WebControls.Literal.Mode%2A> -Eigenschaftensatz ist anfänglich auf `Encode` in die deklarative Syntax für das Steuerelement. Der Benutzer kann nach dem Laden der Seite klicken einer Schaltfläche zum Festlegen der <xref:System.Web.UI.WebControls.Literal.Mode%2A> Eigenschaft `PassThrough`. Dies bewirkt, dass der Inhalt der <xref:System.Web.UI.WebControls.Literal.Text%2A> -Eigenschaft anders gerendert.  
+  
+ [!code-aspx-vb[Literal.Mode#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Literal.Mode/VB/literal.modevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Encode">
+      <MemberSignature Language="C#" Value="Encode" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.LiteralMode Encode = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.LiteralMode.Encode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.LiteralMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Inhalt des Steuerelements Literale sind HTML-codiert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PassThrough">
+      <MemberSignature Language="C#" Value="PassThrough" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.LiteralMode PassThrough = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.LiteralMode.PassThrough" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.LiteralMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Den literalen Inhalt des Steuerelements werden nicht geändert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="Transform" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.LiteralMode Transform = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.LiteralMode.Transform" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.LiteralMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das literal Steuerelement nicht unterstützte Markupsprache Elemente werden entfernt. Wenn das literale-Steuerelement in einem Browser, der HTML oder XHTML unterstützt gerendert wird, werden der Inhalt des Steuerelements nicht geändert werden.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

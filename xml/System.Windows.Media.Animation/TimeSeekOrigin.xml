@@ -1,0 +1,50 @@
+<Type Name="TimeSeekOrigin" FullName="System.Windows.Media.Animation.TimeSeekOrigin">
+  <TypeSignature Language="C#" Value="public enum TimeSeekOrigin" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TimeSeekOrigin extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.TimeSeekOrigin" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, den Ursprung des Suchvorgangs. Der Offset des Suchvorgangs ist relativ zu diesem Ursprung.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginTime">
+      <MemberSignature Language="C#" Value="BeginTime" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Animation.TimeSeekOrigin BeginTime = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.TimeSeekOrigin.BeginTime" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.TimeSeekOrigin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Offset ist relativ zum Anfang des Aktivierungszeitraums, der <see cref="T:System.Windows.Media.Animation.Timeline" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Duration">
+      <MemberSignature Language="C#" Value="Duration" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Animation.TimeSeekOrigin Duration = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.TimeSeekOrigin.Duration" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.TimeSeekOrigin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Offset ist relativ zu den <see cref="P:System.Windows.Media.Animation.Timeline.Duration" /> von der <see cref="T:System.Windows.Media.Animation.Timeline" />, die Länge einer einzelnen Iteration. Dieser Wert hat keine Bedeutung, wenn die <see cref="P:System.Windows.Media.Animation.Timeline.Duration" /> von der <see cref="T:System.Windows.Media.Animation.Timeline" /> nicht aufgelöst wird.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

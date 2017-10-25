@@ -1,0 +1,281 @@
+<Type Name="ListViewUpdatedEventArgs" FullName="System.Web.UI.WebControls.ListViewUpdatedEventArgs">
+  <TypeSignature Language="C#" Value="public class ListViewUpdatedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ListViewUpdatedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ListViewUpdatedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Web.UI.WebControls.ListView.ItemUpdated" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ListView> -Steuerelement löst die <xref:System.Web.UI.WebControls.ListView.ItemUpdated> Ereignis bei der <xref:System.Web.UI.WebControls.ListView.UpdateItem%2A> Methode aufgerufen wird oder wenn eine Schaltfläche "Aktualisieren" in das Steuerelement geklickt wird, aber nachdem die <xref:System.Web.UI.WebControls.ListView> Steuerelement das Element aktualisiert. (Eine Schaltfläche "Aktualisieren" ist eine Schaltfläche, deren `CommandName` Eigenschaft auf "Update" festgelegt ist.) Dadurch können Sie eine Ereignisbehandlungsmethode bereitstellen, die eine benutzerdefinierte Routine ausführt, wenn dieses Ereignis tritt auf, z. B. Überprüfen der Ergebnisse eines Updatevorgangs.  
+  
+ Ein <xref:System.Web.UI.WebControls.ListViewUpdatedEventArgs> Objekt wird an die Ereignisbehandlungsmethode übergeben. Dieses Objekt können Sie die Anzahl der aktualisierten Elemente zu ermitteln und zum Abrufen von alle Ausnahmen, die möglicherweise aufgetreten. Verwenden Sie zum Ermitteln der Anzahl von Elementen, die von der Update-Vorgang betroffen sind, die <xref:System.Web.UI.WebControls.ListViewUpdatedEventArgs.AffectedRows%2A> Eigenschaft. Um zu bestimmen, ob Ausnahmen aufgetreten sind, verwenden die <xref:System.Web.UI.WebControls.ListViewUpdatedEventArgs.Exception%2A> Eigenschaft. Sie können angeben, ob die Ausnahme in der Ereignisbehandlungsmethode, indem behandelt wurde die <xref:System.Web.UI.WebControls.ListViewUpdatedEventArgs.ExceptionHandled%2A> Eigenschaft. Sie können die ursprünglichen Feldwerte zugreifen, mithilfe der <xref:System.Web.UI.WebControls.ListViewUpdatedEventArgs.OldValues%2A> Eigenschaft. Sie können aktualisierte Feldwerte zugreifen, mithilfe der <xref:System.Web.UI.WebControls.ListViewUpdatedEventArgs.NewValues%2A> Eigenschaft.  
+  
+ Wird standardmäßig die <xref:System.Web.UI.WebControls.ListView> Element zurückgibt, nur-Lese-Modus nach einem Updatevorgang. Wenn Sie eine Ausnahme, die während des Aktualisierungsvorgangs aufgetreten sind behandelt, können Sie behalten die <xref:System.Web.UI.WebControls.ListView> Element in den Bearbeitungsmodus wechseln, indem Sie festlegen der <xref:System.Web.UI.WebControls.ListViewUpdatedEventArgs.KeepInEditMode%2A> Eigenschaft `true`.  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz der <xref:System.Web.UI.WebControls.ListViewUpdatedEventArgs>-Klasse finden Sie im <xref:System.Web.UI.WebControls.ListViewUpdatedEventArgs.%23ctor%2A>-Konstruktor.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.ListViewUpdatedEventArgs> bestimmt, ob eine Ausnahme während eines Updatevorgangs aufgetreten sind.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ListView.ItemUpdated#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemUpdated/CS/ListViewItemUpdatedCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ListView.ItemUpdated#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemUpdated/VB/ListViewItemUpdatedVB.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListViewUpdatedEventArgs (int affectedRows, Exception exception);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 affectedRows, class System.Exception exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListViewUpdatedEventArgs.#ctor(System.Int32,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="affectedRows" Type="System.Int32" />
+        <Parameter Name="exception" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="affectedRows">Die Anzahl der Zeilen, die von der Update-Vorgang betroffen sind.</param>
+        <param name="exception">Die Ausnahme, die ausgelöst wurde, wenn der Update-Vorgang ausgeführt wurde, sofern vorhanden. Wenn keine Ausnahme ausgelöst wird, verwenden Sie <see langword="null" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.ListViewUpdatedEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.ListViewUpdatedEventArgs> Klasse.  
+  
+> [!NOTE]
+>  Dieser Konstruktor wird hauptsächlich von Steuerelemententwicklern verwendet, beim Auslösen von Ereignissen.  
+  
+ In der folgenden Tabelle werden anfängliche Eigenschaftswerte für eine Instanz der <xref:System.Web.UI.WebControls.ListViewUpdatedEventArgs>-Klasse aufgeführt.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.ListViewUpdatedEventArgs.AffectedRows%2A>|Der Wert des `affectedRows`-Parameters.|  
+|<xref:System.Web.UI.WebControls.ListViewUpdatedEventArgs.Exception%2A>|Die <xref:System.Exception?displayProperty=nameWithType> in enthaltene Objekt die `e` Parameter.|  
+|<xref:System.Web.UI.WebControls.ListViewUpdatedEventArgs.ExceptionHandled%2A>|`false`.|  
+|<xref:System.Web.UI.WebControls.ListViewUpdatedEventArgs.KeepInEditMode%2A>|`false`.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AffectedRows">
+      <MemberSignature Language="C#" Value="public int AffectedRows { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AffectedRows" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewUpdatedEventArgs.AffectedRows" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Zeilen, die von der Update-Vorgang betroffen sind.</summary>
+        <value>Die Anzahl der Zeilen, die von der Update-Vorgang betroffen sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.ListViewUpdatedEventArgs.AffectedRows%2A> -Eigenschaft können Sie bestimmen die Anzahl der Zeilen, die von der Update-Vorgang betroffen sind, wie Sie von der Datenquelle zurückgegeben. Da in der Regel nur ein Element aktualisiert wird, enthält diese Eigenschaft in der Regel den Wert 0 oder 1.  
+  
+ In einigen Fällen während des Updatevorgangs kann ein Fehler auftreten, die keine Ausnahme auslöst. In diesem Fall die <xref:System.Web.UI.WebControls.ListViewUpdatedEventArgs.AffectedRows%2A> Eigenschaft kann verwendet werden, um sicherzustellen, dass ein Element aktualisiert wurde.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.ListViewUpdatedEventArgs.AffectedRows%2A> Eigenschaft, um festzustellen, ob ein Element aktualisiert wurde. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.WebControls.ListViewUpdatedEventArgs> Klasse.  
+  
+ [!code-csharp[System.Web.UI.WebControls.ListView.ItemUpdated#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemUpdated/CS/ListViewItemUpdatedCS.aspx#2)]
+ [!code-vb[System.Web.UI.WebControls.ListView.ItemUpdated#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemUpdated/VB/ListViewItemUpdatedVB.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public Exception Exception { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Exception" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewUpdatedEventArgs.Exception" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ausnahme ab, falls vorhanden, die während des Aktualisierungsvorgangs ausgelöst wurde.</summary>
+        <value>Die Ausnahme, die während des Aktualisierungsvorgangs ausgelöst wurde, falls vorhanden; Wenn keine Ausnahme ausgelöst wurde, <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.ListViewUpdatedEventArgs.Exception%2A> Eigenschaft, um die Ausnahme (sofern vorhanden) zu bestimmen, die während des Aktualisierungsvorgangs ausgelöst wurde. Wenn keine Ausnahme ausgelöst wurde, gibt diese Eigenschaft `null`.  
+  
+> [!NOTE]
+>  Wenn eine Ausnahme ausgelöst wurde, und die Ausnahme behandeln, im Ereignisprotokoll Handler festlegen, die <xref:System.Web.UI.WebControls.ListViewUpdatedEventArgs.ExceptionHandled%2A> Eigenschaft `true`. Andernfalls die <xref:System.Web.UI.WebControls.ListView> Steuerelement löst die Ausnahme erneut aus.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.ListViewUpdatedEventArgs.Exception%2A> Eigenschaft, um zu bestimmen, ob eine Ausnahme während eines Updatevorgangs aufgetreten sind. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.WebControls.ListViewUpdatedEventArgs> Klasse.  
+  
+ [!code-csharp[System.Web.UI.WebControls.ListView.ItemUpdated#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemUpdated/CS/ListViewItemUpdatedCS.aspx#2)]
+ [!code-vb[System.Web.UI.WebControls.ListView.ItemUpdated#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemUpdated/VB/ListViewItemUpdatedVB.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExceptionHandled">
+      <MemberSignature Language="C#" Value="public bool ExceptionHandled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ExceptionHandled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewUpdatedEventArgs.ExceptionHandled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob eine Ausnahme, die während des Aktualisierungsvorgangs ausgelöst wurde, während das Ereignis behandelt wurde.</summary>
+        <value>
+          <see langword="true" />Wenn die Ausnahme im Ereignishandler behandelt wurde; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn während des Aktualisierungsvorgangs eine Ausnahme ausgelöst wird, verwenden Sie die <xref:System.Web.UI.WebControls.ListViewUpdatedEventArgs.ExceptionHandled%2A> Eigenschaft, um anzugeben, ob Sie die Ausnahme während des Ereignisses behandelt haben. Wenn diese Eigenschaft, um festgelegt wird `true`, gilt die Ausnahme behandelt und wird erneut ausgelöst, wenn durch die <xref:System.Web.UI.WebControls.ListView> Steuerelement. Wenn diese Eigenschaft, um festgelegt wird `false`die <xref:System.Web.UI.WebControls.ListView> Steuerelement löst die Ausnahme erneut aus. Um zu bestimmen, welche Ausnahme ausgelöst wurde, verwenden die <xref:System.Web.UI.WebControls.ListViewUpdatedEventArgs.Exception%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.ListViewUpdatedEventArgs.ExceptionHandled%2A> Eigenschaft, um anzugeben, dass die Ausnahme im Ereignishandler behandelt wurde. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.WebControls.ListViewUpdatedEventArgs> Klasse.  
+  
+ [!code-csharp[System.Web.UI.WebControls.ListView.ItemUpdated#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemUpdated/CS/ListViewItemUpdatedCS.aspx#2)]
+ [!code-vb[System.Web.UI.WebControls.ListView.ItemUpdated#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemUpdated/VB/ListViewItemUpdatedVB.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeepInEditMode">
+      <MemberSignature Language="C#" Value="public bool KeepInEditMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool KeepInEditMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewUpdatedEventArgs.KeepInEditMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.ListView" /> -Steuerelement nach einem Updatevorgang im Bearbeitungsmodus bleiben soll.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement nach einem Updatevorgang im Bearbeitungsmodus befinden soll; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird standardmäßig die <xref:System.Web.UI.WebControls.ListView> steuerelementrückgabe nach einem Updatevorgang in den schreibgeschützten Modus. Festlegen der <xref:System.Web.UI.WebControls.ListViewUpdatedEventArgs.KeepInEditMode%2A> Eigenschaft `true` angeben, dass der <xref:System.Web.UI.WebControls.ListView> -Steuerelement im Bearbeitungsmodus bleiben soll. Dadurch werden auch beibehalten, die Werte, die der Benutzer eingegeben hat.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.ListViewUpdatedEventArgs.KeepInEditMode%2A> Eigenschaft zu einer <xref:System.Web.UI.WebControls.ListView> -Steuerelement in den Bearbeitungsmodus wechseln, wenn eine Ausnahme auftritt. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.WebControls.ListViewUpdatedEventArgs> Klasse.  
+  
+ [!code-csharp[System.Web.UI.WebControls.ListView.ItemUpdated#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemUpdated/CS/ListViewItemUpdatedCS.aspx#2)]
+ [!code-vb[System.Web.UI.WebControls.ListView.ItemUpdated#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemUpdated/VB/ListViewItemUpdatedVB.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewValues">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary NewValues { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary NewValues" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewUpdatedEventArgs.NewValues" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Wörterbuch, das die neuen Werte für das aktualisierte Element enthält.</summary>
+        <value>Die neuen Werte für das aktualisierte Element.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.ListViewUpdatedEventArgs.NewValues%2A> Eigenschaft, um die neuen Feldwerte für das aktualisierte Element zuzugreifen. Diese Werte können Sie z. B. ein Protokoll der aktualisierten Elemente beibehalten.  
+  
+ Die <xref:System.Web.UI.WebControls.ListViewUpdatedEventArgs.NewValues%2A> Eigenschaft gibt ein Objekt, implementiert die <xref:System.Collections.Specialized.IOrderedDictionary> Schnittstelle. Das Objekt enthält <xref:System.Collections.DictionaryEntry> Objekte, die die Felder des aktualisierten Elements darstellen.  
+  
+> [!NOTE]
+>  Abzukürzen, können Sie den Indexer, der die <xref:System.Collections.Specialized.IOrderedDictionary> Objekt Zugriff auf das Feld Werte direkt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OldValues">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary OldValues { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary OldValues" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewUpdatedEventArgs.OldValues" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Wörterbuch, das die ursprünglichen Werte für das aktualisierte Element enthält.</summary>
+        <value>Die ursprünglichen Werte für das aktualisierte Element.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.ListViewUpdatedEventArgs.OldValues%2A> Eigenschaft, um die ursprünglichen Feldwerte für das aktualisierte Element zuzugreifen. Diese Werte können Sie z. B. ein Protokoll der aktualisierten Elemente beibehalten.  
+  
+ Die <xref:System.Web.UI.WebControls.ListViewUpdatedEventArgs.OldValues%2A> Eigenschaft gibt ein Objekt, implementiert die <xref:System.Collections.Specialized.IOrderedDictionary> Schnittstelle. Das Objekt enthält <xref:System.Collections.DictionaryEntry> Objekte, die die Felder des aktualisierten Elements darstellen.  
+  
+> [!NOTE]
+>  Abzukürzen, können Sie den Indexer, der die <xref:System.Collections.Specialized.IOrderedDictionary> Objekt Zugriff auf das Feld Werte direkt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

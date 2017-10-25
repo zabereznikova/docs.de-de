@@ -1,0 +1,74 @@
+<Type Name="Separator" FullName="System.Windows.Controls.Separator">
+  <TypeSignature Language="C#" Value="public class Separator : System.Windows.Controls.Control" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi Separator extends System.Windows.Controls.Control" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Separator" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Control</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Steuerelement, das zur Trennung der Elemente in Elementsteuerelementen verwendet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Controls.Separator> Steuerelement zeichnet eine Linie, horizontale oder vertikale zwischen Elementen in Steuerelementen, wie z. B. <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.Menu>, und <xref:System.Windows.Controls.ToolBar>. <xref:System.Windows.Controls.Separator>-Steuerelemente reagieren auf Tastatur, Maus, Mausrad oder Tablet und kann nicht aktiviert werden oder ausgewählt. <xref:System.Windows.Controls.Separator>Steuerelemente innerhalb <xref:System.Windows.Controls.Menu> Elemente werden anders angezeigt als <xref:System.Windows.Controls.Separator> steuert außerhalb einer <xref:System.Windows.Controls.Menu>. Beim Erstellen einer <xref:System.Windows.Controls.Menu> mit einer <xref:System.Windows.Controls.Separator>, wendet das Steuerelement automatisch die <xref:System.Windows.Style> identifizierte die <xref:System.Windows.Controls.MenuItem.SeparatorStyleKey%2A?displayProperty=nameWithType> Eigenschaft. Stile werden im Ressourcenverzeichnis platziert und anhand ihrer Schlüssel gesucht werden. So ändern Sie die <xref:System.Windows.Style> des eine <xref:System.Windows.Controls.Separator> innerhalb einer <xref:System.Windows.Controls.Menu>, verwenden Sie die <xref:System.Windows.Controls.MenuItem.SeparatorStyleKey%2A?displayProperty=nameWithType> Eigenschaft zum Erstellen der neuen <xref:System.Windows.Style>. Ein Beispiel finden Sie die <xref:System.Windows.Controls.MenuItem.SeparatorStyleKey%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Abhängigkeitseigenschaften für dieses Steuerelement können vom Standardformat für das Steuerelement festgelegt werden.  Wenn eine Eigenschaft von einem Standardformat festgelegt ist, kann die Eigenschaft von seinem Standardwert ändern, wenn das Steuerelement in der Anwendung angezeigt wird. Das Standardformat wird bestimmt, welche desktop Design verwendet wird, wenn die Anwendung ausgeführt wird.  Weitere Informationen finden Sie unter [Standard-WPF-Designs](http://go.microsoft.com/fwlink/?LinkID=158252).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie <xref:System.Windows.Controls.Separator> Steuerelemente in einem <xref:System.Windows.Controls.ToolBar>.  
+  
+ [!code-xaml[ToolBarExample#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolBarExample/CS/Pane1.xaml#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Separator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Separator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.Separator" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Separator.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt eine geeignete <see cref="T:System.Windows.Automation.Peers.SeparatorAutomationPeer" /> Implementierung für dieses Steuerelement als Teil der [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Automatisierungsinfrastruktur.</summary>
+        <returns>Die typspezifische <see cref="T:System.Windows.Automation.Peers.AutomationPeer" />-Implementierung.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

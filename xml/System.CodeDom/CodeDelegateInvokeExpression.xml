@@ -1,0 +1,164 @@
+<Type Name="CodeDelegateInvokeExpression" FullName="System.CodeDom.CodeDelegateInvokeExpression">
+  <TypeSignature Language="C#" Value="public class CodeDelegateInvokeExpression : System.CodeDom.CodeExpression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeDelegateInvokeExpression extends System.CodeDom.CodeExpression" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeDelegateInvokeExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeExpression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Ausdruck, der ein Ereignis auslöst.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.CodeDelegateInvokeExpression>kann verwendet werden, Code dargestellt, die ein Ereignis aufruft. Ein Ereignis aufgerufen, ruft alle Delegaten, die mit dem Ereignis mit den angegebenen Parametern registriert sind.  
+  
+ Die <xref:System.CodeDom.CodeDelegateInvokeExpression.TargetObject%2A> Eigenschaft gibt an, die aufzurufende Ereignis. Die <xref:System.CodeDom.CodeDelegateInvokeExpression.Parameters%2A> Eigenschaft gibt an, für das Ereignis an den Delegaten zu übergebenden Parameter.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Verwendung von einem <xref:System.CodeDom.CodeDelegateInvokeExpression> aufzurufenden ein Ereignis namens `TestEvent`.  
+  
+ [!code-cpp[CodeDelegateInvokeExpressionExample#3](~/samples/snippets/cpp/VS_Snippets_CLR/CodeDelegateInvokeExpressionExample/CPP/codedelegateinvokeexpressionexample.cpp#3)]
+ [!code-csharp[CodeDelegateInvokeExpressionExample#3](~/samples/snippets/csharp/VS_Snippets_CLR/CodeDelegateInvokeExpressionExample/CS/codedelegateinvokeexpressionexample.cs#3)]
+ [!code-vb[CodeDelegateInvokeExpressionExample#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeDelegateInvokeExpressionExample/VB/codedelegateinvokeexpressionexample.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeDelegateInvokeExpression ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeDelegateInvokeExpression.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.CodeDom.CodeDelegateInvokeExpression" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeDelegateInvokeExpression (System.CodeDom.CodeExpression targetObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeExpression targetObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeDelegateInvokeExpression.#ctor(System.CodeDom.CodeExpression)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="targetObject" Type="System.CodeDom.CodeExpression" />
+      </Parameters>
+      <Docs>
+        <param name="targetObject">Ein <see cref="T:System.CodeDom.CodeExpression" /> , die das Zielobjekt angibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.CodeDelegateInvokeExpression" /> -Klasse unter Verwendung des angegebenen Zielobjekts.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeDelegateInvokeExpression (System.CodeDom.CodeExpression targetObject, params System.CodeDom.CodeExpression[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeExpression targetObject, class System.CodeDom.CodeExpression[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeDelegateInvokeExpression.#ctor(System.CodeDom.CodeExpression,System.CodeDom.CodeExpression[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="targetObject" Type="System.CodeDom.CodeExpression" />
+        <Parameter Name="parameters" Type="System.CodeDom.CodeExpression[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="targetObject">Ein <see cref="T:System.CodeDom.CodeExpression" /> , die das Zielobjekt angibt.</param>
+        <param name="parameters">Ein Array von <see cref="T:System.CodeDom.CodeExpression" /> -Objekten, die die Parameter an.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.CodeDelegateInvokeExpression" /> -Klasse unter Verwendung des angegebenen Zielobjekts und Parameter.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeExpressionCollection Parameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeExpressionCollection Parameters" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeDelegateInvokeExpression.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeExpressionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest, auf das Ereignis angefügten Ereignisbehandlungsmethoden zu übergebenden Parameter.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeExpression" /> , der auf das Ereignis, das das Ereignis angefügten Ereignisbehandlungsmethoden zu übergebenden Parameter angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetObject">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeExpression TargetObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeExpression TargetObject" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeDelegateInvokeExpression.TargetObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeExpression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die aufzurufende Ereignis.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeExpression" /> , der das aufzurufende Ereignis angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,84 @@
+<Type Name="ExpandSegmentCollection" FullName="System.Data.Services.ExpandSegmentCollection">
+  <TypeSignature Language="C#" Value="public class ExpandSegmentCollection : System.Collections.Generic.List&lt;System.Data.Services.ExpandSegment&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ExpandSegmentCollection extends System.Collections.Generic.List`1&lt;class System.Data.Services.ExpandSegment&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.ExpandSegmentCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.Generic.List&lt;System.Data.Services.ExpandSegment&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="!0">System.Data.Services.ExpandSegment</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die Segmente einer Abfrage, die von erweitert werden können, die <c>$expand-</c> -Klausel, die einer Abfrage folgt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein `$expand` -Klausel zeigt an, dass jede erweitern Element vollständig erweitert werden soll. Beispielsweise den Wert `OrderLines.Product.Image` mit `$expand` bewirkt, dass `OrderLines`, die `Product` jedes Elements im `OrderLines`, und die `Image` von der `Product` jedes Elements im `OrderLines` erweitert werden.  
+  
+ Die am weitesten links Ressourceneigenschaft in eine `$expand` -Klausel muss eine Eigenschaft der Entität vom Typ innerhalb der Entitätenmenge, die durch das letzte Pfadsegment in der Anforderungs-URI identifiziert werden.  
+  
+ Redundante `$expand` Klausel Regeln werden ignoriert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExpandSegmentCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.ExpandSegmentCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Auflistung von Expand-Segmente für eine Abfrage an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExpandSegmentCollection (int capacity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 capacity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.ExpandSegmentCollection.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="capacity" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="capacity">Die Anzahl der Segmente erweitern, die die neue Auflistung anfänglich speichern kann.</param>
+        <summary>Initialisiert eine neue Auflistung der Segmente erweitern, die leer ist und die angegebene Anfangskapazität aufweist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasFilter">
+      <MemberSignature Language="C#" Value="public bool HasFilter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasFilter" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.ExpandSegmentCollection.HasFilter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Boolescher Wert, der angibt, ob die zu erweiternde Segmente eine Filter-Klausel enthalten.</summary>
+        <value>Boolescher Wert, der angibt, ob die zu erweiternde Segmente eine Filter-Klausel enthalten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

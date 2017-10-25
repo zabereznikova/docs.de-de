@@ -1,0 +1,624 @@
+<Type Name="IScrollInfo" FullName="System.Windows.Controls.Primitives.IScrollInfo">
+  <TypeSignature Language="C#" Value="public interface IScrollInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IScrollInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Primitives.IScrollInfo" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt den hauptsächlichen bildlauffähigen Bereich in einem <see cref="T:System.Windows.Controls.ScrollViewer" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.Primitives.IScrollInfo> Schnittstelle verfügbar macht, den Zugriff auf Methoden, mit denen logische Bildläufe von untergeordnetem Inhalt sowie zum Berechnen, welche untergeordneten Elemente sichtbar sind. Darüber hinaus wird verwendete, um die bildlauffähigen Bereichs definieren Eigenschaften definiert.  
+  
+ Logische Bildläufe ermöglichen einen Bildlauf zum nächsten Element in der logischen Struktur durchführen. Physischen Bildlauf scrollt im Gegensatz dazu Inhalt mit einer definierten messbaren Erhöhung in einer angegebenen Richtung. Wenn Sie statt logischer Bildläufe physische Bildläufe benötigen, umschließen Sie den Host <xref:System.Windows.Controls.Panel> Element in eine <xref:System.Windows.Controls.ScrollViewer> und legen Sie den Wert des seine <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> Eigenschaft `false`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CanHorizontallyScroll">
+      <MemberSignature Language="C#" Value="public bool CanHorizontallyScroll { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanHorizontallyScroll" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.IScrollInfo.CanHorizontallyScroll" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob Scrollen auf der horizontalen Achse möglich ist, oder legt ihn fest.</summary>
+        <value>
+          <see langword="true" />, wenn Scrollen möglich ist, andernfalls <see langword="false" />. Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Controls.Primitives.IScrollInfo.CanHorizontallyScroll%2A> -Eigenschaft mithilfe von prozeduralem Code.  
+  
+ [!code-csharp[IScrollInfoMethods#4](~/samples/snippets/csharp/VS_Snippets_Wpf/IScrollInfoMethods/CSharp/Window1.xaml.cs#4)]
+ [!code-vb[IScrollInfoMethods#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/IScrollInfoMethods/VisualBasic/Window1.xaml.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanVerticallyScroll">
+      <MemberSignature Language="C#" Value="public bool CanVerticallyScroll { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanVerticallyScroll" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.IScrollInfo.CanVerticallyScroll" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen eines Werts, der angibt, ob das Scrollen auf der vertikalen Achse möglich ist.</summary>
+        <value>
+          <see langword="true" />, wenn Scrollen möglich ist, andernfalls <see langword="false" />. Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Controls.Primitives.IScrollInfo.CanVerticallyScroll%2A> -Eigenschaft mithilfe von prozeduralem Code.  
+  
+ [!code-csharp[IScrollInfoMethods#4](~/samples/snippets/csharp/VS_Snippets_Wpf/IScrollInfoMethods/CSharp/Window1.xaml.cs#4)]
+ [!code-vb[IScrollInfoMethods#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/IScrollInfoMethods/VisualBasic/Window1.xaml.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtentHeight">
+      <MemberSignature Language="C#" Value="public double ExtentHeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ExtentHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.IScrollInfo.ExtentHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die vertikale Größe des Wertebereichs ab.</summary>
+        <value>Ein <see cref="T:System.Double" />-Wert, der in geräteunabhängigen Pixeln die vertikale Größe des Wertebereichs darstellt.  
+  
+ Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtentWidth">
+      <MemberSignature Language="C#" Value="public double ExtentWidth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ExtentWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.IScrollInfo.ExtentWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die horizontale Größe des Wertebereichs ab.</summary>
+        <value>Ein <see cref="T:System.Double" />-Wert, der in geräteunabhängigen Pixeln die horizontale Größe des Wertebereichs darstellt. Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalOffset">
+      <MemberSignature Language="C#" Value="public double HorizontalOffset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 HorizontalOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.IScrollInfo.HorizontalOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den horizontalen Offset des gescrollten Inhalts ab.</summary>
+        <value>Ein <see cref="T:System.Double" /> , der in geräteunabhängigen Pixeln den horizontalen Offset darstellt. Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gültige Werte liegen zwischen 0 (null) und die <xref:System.Windows.Controls.Primitives.IScrollInfo.ExtentWidth%2A> minus der <xref:System.Windows.Controls.Primitives.IScrollInfo.ViewportWidth%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineDown">
+      <MemberSignature Language="C#" Value="public void LineDown ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LineDown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.IScrollInfo.LineDown" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Scrollt im Inhalt um eine logische Einheit nach unten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineLeft">
+      <MemberSignature Language="C#" Value="public void LineLeft ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LineLeft() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.IScrollInfo.LineLeft" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Scrollt im Inhalt um eine logische Einheit nach links.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Controls.Primitives.IScrollInfo.LineLeft%2A> Methode in prozeduralem Code.  
+  
+ [!code-csharp[IScrollInfoMethods#6](~/samples/snippets/csharp/VS_Snippets_Wpf/IScrollInfoMethods/CSharp/Window1.xaml.cs#6)]
+ [!code-vb[IScrollInfoMethods#6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/IScrollInfoMethods/VisualBasic/Window1.xaml.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineRight">
+      <MemberSignature Language="C#" Value="public void LineRight ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LineRight() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.IScrollInfo.LineRight" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Scrollt im Inhalt um eine logische Einheit nach rechts.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Controls.Primitives.IScrollInfo.LineRight%2A> Methode in prozeduralem Code.  
+  
+ [!code-csharp[IScrollInfoMethods#5](~/samples/snippets/csharp/VS_Snippets_Wpf/IScrollInfoMethods/CSharp/Window1.xaml.cs#5)]
+ [!code-vb[IScrollInfoMethods#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/IScrollInfoMethods/VisualBasic/Window1.xaml.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineUp">
+      <MemberSignature Language="C#" Value="public void LineUp ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LineUp() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.IScrollInfo.LineUp" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Scrollt im Inhalt um eine logische Einheit nach oben.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MakeVisible">
+      <MemberSignature Language="C#" Value="public System.Windows.Rect MakeVisible (System.Windows.Media.Visual visual, System.Windows.Rect rectangle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Windows.Rect MakeVisible(class System.Windows.Media.Visual visual, valuetype System.Windows.Rect rectangle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.IScrollInfo.MakeVisible(System.Windows.Media.Visual,System.Windows.Rect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visual" Type="System.Windows.Media.Visual" />
+        <Parameter Name="rectangle" Type="System.Windows.Rect" />
+      </Parameters>
+      <Docs>
+        <param name="visual">Ein <see cref="T:System.Windows.Media.Visual" /> , das sichtbar wird.</param>
+        <param name="rectangle">Ein umgebendes Rechteck, das den sichtbar zu machenden Koordinatenbereich bezeichnet.</param>
+        <summary>Erzwingt, bis der Koordinatenbereich Scrollen im Inhalt einer <see cref="T:System.Windows.Media.Visual" /> -Objekts sichtbar ist.</summary>
+        <returns>Ein <see cref="T:System.Windows.Rect" /> , das sichtbar ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In den meisten Fällen ist das zurückgegebene Rechteck eine transformierte Version des Rechtecks Eingabe. In einigen Fällen, z. B. wenn die Eingabe Rechteck vollständig innerhalb des Viewports passt kann nicht kann der Rückgabewert kleiner sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseWheelDown">
+      <MemberSignature Language="C#" Value="public void MouseWheelDown ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void MouseWheelDown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.IScrollInfo.MouseWheelDown" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Scrollt im Inhalt nach unten, nachdem ein Benutzer mit der Radtaste einer Maus geklickt hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Controls.Primitives.IScrollInfo.MouseWheelDown%2A> Methode in prozeduralem Code.  
+  
+ [!code-csharp[IScrollInfoMethods#11](~/samples/snippets/csharp/VS_Snippets_Wpf/IScrollInfoMethods/CSharp/Window1.xaml.cs#11)]
+ [!code-vb[IScrollInfoMethods#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/IScrollInfoMethods/VisualBasic/Window1.xaml.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseWheelLeft">
+      <MemberSignature Language="C#" Value="public void MouseWheelLeft ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void MouseWheelLeft() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.IScrollInfo.MouseWheelLeft" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt einen Bildlauf nach links im Inhalt aus, nachdem ein Benutzer mit der Radtaste einer Maus geklickt hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Controls.Primitives.IScrollInfo.MouseWheelLeft%2A> Methode in prozeduralem Code.  
+  
+ [!code-csharp[IScrollInfoMethods#13](~/samples/snippets/csharp/VS_Snippets_Wpf/IScrollInfoMethods/CSharp/Window1.xaml.cs#13)]
+ [!code-vb[IScrollInfoMethods#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/IScrollInfoMethods/VisualBasic/Window1.xaml.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseWheelRight">
+      <MemberSignature Language="C#" Value="public void MouseWheelRight ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void MouseWheelRight() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.IScrollInfo.MouseWheelRight" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Scrollt im Inhalt nach rechts, nachdem ein Benutzer mit der Radtaste einer Maus geklickt hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Controls.Primitives.IScrollInfo.MouseWheelRight%2A> Methode in prozeduralem Code.  
+  
+ [!code-csharp[IScrollInfoMethods#14](~/samples/snippets/csharp/VS_Snippets_Wpf/IScrollInfoMethods/CSharp/Window1.xaml.cs#14)]
+ [!code-vb[IScrollInfoMethods#14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/IScrollInfoMethods/VisualBasic/Window1.xaml.vb#14)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseWheelUp">
+      <MemberSignature Language="C#" Value="public void MouseWheelUp ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void MouseWheelUp() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.IScrollInfo.MouseWheelUp" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Scrollt im Inhalt nach oben, nachdem ein Benutzer mit der Radtaste einer Maus geklickt hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Controls.Primitives.IScrollInfo.MouseWheelUp%2A> Methode in prozeduralem Code.  
+  
+ [!code-csharp[IScrollInfoMethods#12](~/samples/snippets/csharp/VS_Snippets_Wpf/IScrollInfoMethods/CSharp/Window1.xaml.cs#12)]
+ [!code-vb[IScrollInfoMethods#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/IScrollInfoMethods/VisualBasic/Window1.xaml.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageDown">
+      <MemberSignature Language="C#" Value="public void PageDown ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PageDown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.IScrollInfo.PageDown" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Scrollt im Inhalt um eine Seite nach unten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Controls.Primitives.IScrollInfo.PageDown%2A> Methode in prozeduralem Code.  
+  
+ [!code-csharp[IScrollInfoMethods#8](~/samples/snippets/csharp/VS_Snippets_Wpf/IScrollInfoMethods/CSharp/Window1.xaml.cs#8)]
+ [!code-vb[IScrollInfoMethods#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/IScrollInfoMethods/VisualBasic/Window1.xaml.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageLeft">
+      <MemberSignature Language="C#" Value="public void PageLeft ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PageLeft() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.IScrollInfo.PageLeft" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Scrollt im Inhalt um eine Seite nach links.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Controls.Primitives.IScrollInfo.PageLeft%2A> Methode in prozeduralem Code.  
+  
+ [!code-csharp[IScrollInfoMethods#10](~/samples/snippets/csharp/VS_Snippets_Wpf/IScrollInfoMethods/CSharp/Window1.xaml.cs#10)]
+ [!code-vb[IScrollInfoMethods#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/IScrollInfoMethods/VisualBasic/Window1.xaml.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageRight">
+      <MemberSignature Language="C#" Value="public void PageRight ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PageRight() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.IScrollInfo.PageRight" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Scrollt im Inhalt um eine Seite nach rechts.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Controls.Primitives.IScrollInfo.PageRight%2A> Methode in prozeduralem Code.  
+  
+ [!code-csharp[IScrollInfoMethods#9](~/samples/snippets/csharp/VS_Snippets_Wpf/IScrollInfoMethods/CSharp/Window1.xaml.cs#9)]
+ [!code-vb[IScrollInfoMethods#9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/IScrollInfoMethods/VisualBasic/Window1.xaml.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageUp">
+      <MemberSignature Language="C#" Value="public void PageUp ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PageUp() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.IScrollInfo.PageUp" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Scrollt im Inhalt um eine Seite nach oben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Controls.Primitives.IScrollInfo.MouseWheelLeft%2A> Methode in prozeduralem Code.  
+  
+ [!code-csharp[IScrollInfoMethods#7](~/samples/snippets/csharp/VS_Snippets_Wpf/IScrollInfoMethods/CSharp/Window1.xaml.cs#7)]
+ [!code-vb[IScrollInfoMethods#7](~/samples/snippets/visualbasic/VS_Snippets_Wpf/IScrollInfoMethods/VisualBasic/Window1.xaml.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollOwner">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.ScrollViewer ScrollOwner { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.ScrollViewer ScrollOwner" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.IScrollInfo.ScrollOwner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ScrollViewer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen <see cref="T:System.Windows.Controls.ScrollViewer" /> Element, das Scrollverhalten steuert.</summary>
+        <value>Ein <see cref="T:System.Windows.Controls.ScrollViewer" /> Element, das Scrollverhalten steuert. Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Klassen, in denen <xref:System.Windows.Controls.Primitives.IScrollInfo> müssen Aufrufen <xref:System.Windows.Controls.ScrollViewer.InvalidateScrollInfo%2A> für dieses Objekt Eigenschaften zu ändern.  
+  
+ Logische Bildläufe ermöglichen einen Bildlauf zum nächsten Element in der logischen Struktur durchführen. Physischen Bildlauf scrollt im Gegensatz dazu Inhalt mit einer definierten messbaren Erhöhung in einer angegebenen Richtung. Wenn Sie statt logischer Bildläufe physische Bildläufe benötigen, umschließen Sie den Host <xref:System.Windows.Controls.Panel> Element in eine <xref:System.Windows.Controls.ScrollViewer> und legen Sie den Wert des seine <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> Eigenschaft `false`.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Controls.Primitives.IScrollInfo.ScrollOwner%2A> -Eigenschaft mithilfe von prozeduralem Code.  
+  
+ [!code-csharp[IScrollInfoMethods#4](~/samples/snippets/csharp/VS_Snippets_Wpf/IScrollInfoMethods/CSharp/Window1.xaml.cs#4)]
+ [!code-vb[IScrollInfoMethods#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/IScrollInfoMethods/VisualBasic/Window1.xaml.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetHorizontalOffset">
+      <MemberSignature Language="C#" Value="public void SetHorizontalOffset (double offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetHorizontalOffset(float64 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.IScrollInfo.SetHorizontalOffset(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="offset">Gibt den Grad des horizontalen Offsets von Inhalt zum enthaltenden Viewport an.</param>
+        <summary>Legt den horizontalen Offset fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetVerticalOffset">
+      <MemberSignature Language="C#" Value="public void SetVerticalOffset (double offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetVerticalOffset(float64 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.IScrollInfo.SetVerticalOffset(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="offset">Gibt den Grad des vertikalen Offsets vom Inhalt zum enthaltenden Viewport an.</param>
+        <summary>Legt den vertikalen Offset fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalOffset">
+      <MemberSignature Language="C#" Value="public double VerticalOffset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 VerticalOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.IScrollInfo.VerticalOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den vertikalen Offset des gescrollten Inhalts ab.</summary>
+        <value>Ein <see cref="T:System.Double" /> , der in geräteunabhängigen Pixeln den vertikalen Offset des gescrollten Inhalts darstellt. Gültige Werte liegen zwischen 0 (null) und die <see cref="P:System.Windows.Controls.Primitives.IScrollInfo.ExtentHeight" /> minus der <see cref="P:System.Windows.Controls.Primitives.IScrollInfo.ViewportHeight" />. Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewportHeight">
+      <MemberSignature Language="C#" Value="public double ViewportHeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ViewportHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.IScrollInfo.ViewportHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die vertikale Größe des Viewports für diesen Inhalt ab.</summary>
+        <value>Ein <see cref="T:System.Double" /> , der in geräteunabhängigen Pixeln die vertikale Größe des Viewports für diesen Inhalt darstellt. Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewportWidth">
+      <MemberSignature Language="C#" Value="public double ViewportWidth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ViewportWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.IScrollInfo.ViewportWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die horizontale Größe des Viewports für diesen Inhalt ab.</summary>
+        <value>Ein <see cref="T:System.Double" /> , der in geräteunabhängigen Pixeln die horizontale Größe des Viewports für diesen Inhalt darstellt. Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

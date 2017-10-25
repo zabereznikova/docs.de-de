@@ -1,0 +1,218 @@
+<Type Name="RawStylusInput" FullName="System.Windows.Input.StylusPlugIns.RawStylusInput">
+  <TypeSignature Language="C#" Value="public class RawStylusInput" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RawStylusInput extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.StylusPlugIns.RawStylusInput" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Informationen über Eingaben aus einer <see cref="T:System.Windows.Input.StylusDevice" /> auf eine <see cref="T:System.Windows.Input.StylusPlugIns.StylusPlugIn" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Input.StylusPlugIns.RawStylusInput> beim Abrufen von Informationen über die Eingabe der <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> empfängt, wenn der Benutzer den Tablettstift bewegt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> , die überprüft, ob die <xref:System.Windows.Ink.ApplicationGesture.Down> Bewegung. Die <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Aufrufe <xref:System.Windows.Input.StylusPlugIns.RawStylusInput.NotifyWhenProcessed%2A> in <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusUp%2A> zum Abonnieren der <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusUpProcessed%2A> Methode, die vom Thread Anwendung aufgerufen wird.  
+  
+ [!code-csharp[StylusPluginSamples#12](~/samples/snippets/csharp/VS_Snippets_Wpf/StylusPluginSamples/CSharp/RecognizerPlugin.cs#12)]
+ [!code-vb[StylusPluginSamples#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StylusPluginSamples/VisualBasic/RecognizerPlugin.vb#12)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetStylusPoints">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.StylusPointCollection GetStylusPoints ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Input.StylusPointCollection GetStylusPoints() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPlugIns.RawStylusInput.GetStylusPoints" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusPointCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Tablettstift Punkten, die die vom Tablettstift erfasst werden.</summary>
+        <returns>Der Tablettstiftpunkte, die die vom Tablettstift erfasst werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die Tablettstift Positionen im Ändern der <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusDown%2A> Methode. Zum Erstellen einer <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> , die Freihandeingaben auf einen bestimmten Bereich einschränkt, finden Sie unter der <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> (Übersicht).  
+  
+ [!code-csharp[StylusPluginSamples#8](~/samples/snippets/csharp/VS_Snippets_Wpf/StylusPluginSamples/CSharp/FilterPlugin.cs#8)]
+ [!code-vb[StylusPluginSamples#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StylusPluginSamples/VisualBasic/FilterPlugin.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotifyWhenProcessed">
+      <MemberSignature Language="C#" Value="public void NotifyWhenProcessed (object callbackData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void NotifyWhenProcessed(object callbackData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPlugIns.RawStylusInput.NotifyWhenProcessed(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callbackData" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callbackData">Die Daten für die Übergabe an den Anwendungsthread.</param>
+        <summary>Der Anwendungsthread entsprechenden Tablettstiftmethoden abonniert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Eingabe des Stifts wird auf ein Element weitergeleitet <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> für den Stiftthread. Da der genaue Treffertests für den Stiftthread ausgeführt werden kann, möglicherweise einige Elemente gelegentlich Tablettstift Eingabetyp für andere Elemente empfangen. Wenn Sie sicherstellen müssen, dass die Eingabe vor dem Ausführen eines Vorgangs ordnungsgemäß weitergeleitet wurde, rufen Sie die <xref:System.Windows.Input.StylusPlugIns.RawStylusInput.NotifyWhenProcessed%2A> -Methode in der Methode, die an den Stiftthread auftritt. Die folgende Tabelle enthält, wo Sie rufen <xref:System.Windows.Input.StylusPlugIns.RawStylusInput.NotifyWhenProcessed%2A> zum Abonnieren der Anwendungsthread-Methode.  
+  
+|Rufen Sie <xref:System.Windows.Input.StylusPlugIns.RawStylusInput.NotifyWhenProcessed%2A> in dieser Methode|Diese Methode abonnieren|  
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------|  
+|<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusDown%2A>|<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusDownProcessed%2A>|  
+|<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusMove%2A>|<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusMoveProcessed%2A>|  
+|<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusUp%2A>|<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusUpProcessed%2A>|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> , die überprüft, ob die <xref:System.Windows.Ink.ApplicationGesture.Down> Bewegung. Die <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Aufrufe <xref:System.Windows.Input.StylusPlugIns.RawStylusInput.NotifyWhenProcessed%2A> in <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusUp%2A> zum Abonnieren der <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusUpProcessed%2A> Methode, die vom Thread Anwendung aufgerufen wird.  
+  
+ [!code-csharp[StylusPluginSamples#12](~/samples/snippets/csharp/VS_Snippets_Wpf/StylusPluginSamples/CSharp/RecognizerPlugin.cs#12)]
+ [!code-vb[StylusPluginSamples#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StylusPluginSamples/VisualBasic/RecognizerPlugin.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetStylusPoints">
+      <MemberSignature Language="C#" Value="public void SetStylusPoints (System.Windows.Input.StylusPointCollection stylusPoints);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetStylusPoints(class System.Windows.Input.StylusPointCollection stylusPoints) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPlugIns.RawStylusInput.SetStylusPoints(System.Windows.Input.StylusPointCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stylusPoints" Type="System.Windows.Input.StylusPointCollection" />
+      </Parameters>
+      <Docs>
+        <param name="stylusPoints">Der Tablettstiftpunkte für die Übergabe an den Anwendungsthread.</param>
+        <summary>Legt die Tablettstift Punkten, die an den Anwendungsthread übergeben werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ereignisse, z. B. <xref:System.Windows.UIElement.StylusDown> und <xref:System.Windows.UIElement.StylusMove>, erhalten die <xref:System.Windows.Input.StylusPointCollection> festlegen, indem <xref:System.Windows.Input.StylusPlugIns.RawStylusInput.SetStylusPoints%2A> durch Aufrufen der <xref:System.Windows.Input.StylusEventArgs.GetStylusPoints%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die Tablettstift Positionen im Ändern der <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusDown%2A> Methode. Zum Erstellen einer <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> , die Freihandeingaben auf einen bestimmten Bereich einschränkt, finden Sie unter der <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> (Übersicht).  
+  
+ [!code-csharp[StylusPluginSamples#8](~/samples/snippets/csharp/VS_Snippets_Wpf/StylusPluginSamples/CSharp/FilterPlugin.cs#8)]
+ [!code-vb[StylusPluginSamples#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StylusPluginSamples/VisualBasic/FilterPlugin.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">zum Festlegen der Tablettstiftpunkte. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="StylusDeviceId">
+      <MemberSignature Language="C#" Value="public int StylusDeviceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StylusDeviceId" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.StylusPlugIns.RawStylusInput.StylusDeviceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Bezeichner des aktuellen Tablettstiftgeräts ab.</summary>
+        <value>Der Bezeichner des aktuellen <see cref="T:System.Windows.Input.StylusDevice" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel stellt sicher, dass die Tablettstiftpunkte erfasst aus derselben <xref:System.Windows.Input.StylusDevice>. In diesem Beispiel ist Teil der größeren Beispiels in der <xref:System.Windows.Input.StylusPlugIns.RawStylusInput> -Klassenübersicht.  
+  
+ [!code-csharp[StylusPluginSamples#15](~/samples/snippets/csharp/VS_Snippets_Wpf/StylusPluginSamples/CSharp/RecognizerPlugin.cs#15)]
+ [!code-vb[StylusPluginSamples#15](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StylusPluginSamples/VisualBasic/RecognizerPlugin.vb#15)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabletDeviceId">
+      <MemberSignature Language="C#" Value="public int TabletDeviceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TabletDeviceId" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.StylusPlugIns.RawStylusInput.TabletDeviceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Bezeichner des aktuellen Tablettgeräts ab.</summary>
+        <value>Der Bezeichner des aktuellen <see cref="T:System.Windows.Input.TabletDevice" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Timestamp">
+      <MemberSignature Language="C#" Value="public int Timestamp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Timestamp" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.StylusPlugIns.RawStylusInput.Timestamp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zeitpunkt, zu dem die Eingabe aufgetreten ist.</summary>
+        <value>Der Zeitpunkt, zu der die Eingabe aufgetreten ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert des der <xref:System.Windows.Input.StylusPlugIns.RawStylusInput.Timestamp%2A> Eigenschaft ist der Wert des der <xref:System.Environment.TickCount%2A?displayProperty=nameWithType> Eigenschaft, die an dem der Tablettstiftereignis aufgetreten ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

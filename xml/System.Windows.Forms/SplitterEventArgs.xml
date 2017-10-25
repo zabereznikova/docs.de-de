@@ -1,0 +1,205 @@
+<Type Name="SplitterEventArgs" FullName="System.Windows.Forms.SplitterEventArgs">
+  <TypeSignature Language="C#" Value="public class SplitterEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SplitterEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.SplitterEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Daten für <see cref="E:System.Windows.Forms.Splitter.SplitterMoving" /> und <see cref="E:System.Windows.Forms.Splitter.SplitterMoved" /> Ereignisse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Splitter.SplitterMoving> Ereignis tritt auf, wenn der Benutzer verschieben ist die <xref:System.Windows.Forms.Splitter> Steuerelement. Die <xref:System.Windows.Forms.Splitter.SplitterMoved> Ereignis tritt auf, wenn der Benutzer verschieben beendet die <xref:System.Windows.Forms.Splitter> Steuerelement. Die <xref:System.Windows.Forms.SplitterEventArgs> Klasse gibt die Position des Mauszeigers und die Position der linken oberen Ecke des der <xref:System.Windows.Forms.Splitter> Steuerelement.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Typs. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.SplitContainer.SplitterMoved> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.SplitContainer> mit dem Namen `SplitContainer1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.SplitContainer.SplitterMoved> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#548](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#548)]
+ [!code-vb[System.Windows.Forms.EventExamples#548](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#548)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SplitterEventArgs (int x, int y, int splitX, int splitY);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 x, int32 y, int32 splitX, int32 splitY) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.SplitterEventArgs.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="splitX" Type="System.Int32" />
+        <Parameter Name="splitY" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die X-Koordinate des Mauszeigers (in Clientkoordinaten).</param>
+        <param name="y">Die y-Koordinate des Mauszeigers (in Clientkoordinaten).</param>
+        <param name="splitX">Die X-Koordinate der oberen linken Ecke des der <see cref="T:System.Windows.Forms.Splitter" /> (in Clientkoordinaten).</param>
+        <param name="splitY">Die y-Koordinate der oberen linken Ecke des der <see cref="T:System.Windows.Forms.Splitter" /> (in Clientkoordinaten).</param>
+        <summary>Initialisiert eine Instanz von der <see cref="T:System.Windows.Forms.SplitterEventArgs" /> Klasse mit den angegebenen Koordinaten des Mauszeigers und die Koordinaten der oberen linken Ecke des der <see cref="T:System.Windows.Forms.Splitter" /> Steuerelement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SplitX">
+      <MemberSignature Language="C#" Value="public int SplitX { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SplitX" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.SplitterEventArgs.SplitX" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die X-Koordinate der oberen linken Ecke des der <see cref="T:System.Windows.Forms.Splitter" /> (in Clientkoordinaten).</summary>
+        <value>Die X-Koordinate der oberen linken Ecke des Steuerelements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie diese Eigenschaft zusammen mit der <xref:System.Windows.Forms.SplitterEventArgs.SplitY%2A> Eigenschaft dieser Klasse, die die Position feststellen der <xref:System.Windows.Forms.Splitter> steuern, wann die <xref:System.Windows.Forms.Splitter.SplitterMoving> und <xref:System.Windows.Forms.Splitter.SplitterMoved> Ereignisse ausgelöst werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.SplitContainer.SplitterMoved?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.SplitContainer> mit dem Namen `SplitContainer1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.SplitContainer.SplitterMoved?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#548](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#548)]
+ [!code-vb[System.Windows.Forms.EventExamples#548](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#548)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SplitY">
+      <MemberSignature Language="C#" Value="public int SplitY { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SplitY" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.SplitterEventArgs.SplitY" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die y-Koordinate der oberen linken Ecke des der <see cref="T:System.Windows.Forms.Splitter" /> (in Clientkoordinaten).</summary>
+        <value>Die y-Koordinate der oberen linken Ecke des Steuerelements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie diese Eigenschaft zusammen mit der <xref:System.Windows.Forms.SplitterEventArgs.SplitX%2A> Eigenschaft dieser Klasse, die die Position feststellen der <xref:System.Windows.Forms.Splitter> steuern, wann die <xref:System.Windows.Forms.Splitter.SplitterMoving> und <xref:System.Windows.Forms.Splitter.SplitterMoved> Ereignisse ausgelöst werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.SplitContainer.SplitterMoved?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.SplitContainer> mit dem Namen `SplitContainer1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.SplitContainer.SplitterMoved?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#548](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#548)]
+ [!code-vb[System.Windows.Forms.EventExamples#548](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#548)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="X">
+      <MemberSignature Language="C#" Value="public int X { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 X" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.SplitterEventArgs.X" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die X-Koordinate des Mauszeigers (in Clientkoordinaten).</summary>
+        <value>Die X-Koordinate des Mauszeigers.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie diese Eigenschaft zusammen mit der <xref:System.Windows.Forms.SplitterEventArgs.Y%2A> Eigenschaft dieser Klasse, die die aktuelle Position des Mauszeigers zu bestimmen bei der <xref:System.Windows.Forms.Splitter.SplitterMoving> und <xref:System.Windows.Forms.Splitter.SplitterMoved> Ereignisse ausgelöst werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.SplitContainer.SplitterMoved?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.SplitContainer> mit dem Namen `SplitContainer1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.SplitContainer.SplitterMoved?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#548](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#548)]
+ [!code-vb[System.Windows.Forms.EventExamples#548](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#548)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Y">
+      <MemberSignature Language="C#" Value="public int Y { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Y" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.SplitterEventArgs.Y" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die y-Koordinate des Mauszeigers (in Clientkoordinaten).</summary>
+        <value>Die y-Koordinate des Mauszeigers.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie diese Eigenschaft zusammen mit der <xref:System.Windows.Forms.SplitterEventArgs.X%2A> Eigenschaft dieser Klasse, die die aktuelle Position des Mauszeigers zu bestimmen bei der <xref:System.Windows.Forms.Splitter.SplitterMoving> und <xref:System.Windows.Forms.Splitter.SplitterMoved> Ereignisse ausgelöst werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.SplitContainer.SplitterMoved?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.SplitContainer> mit dem Namen `SplitContainer1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.SplitContainer.SplitterMoved?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#548](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#548)]
+ [!code-vb[System.Windows.Forms.EventExamples#548](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#548)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

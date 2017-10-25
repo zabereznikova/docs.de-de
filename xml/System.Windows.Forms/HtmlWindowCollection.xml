@@ -1,0 +1,222 @@
+<Type Name="HtmlWindowCollection" FullName="System.Windows.Forms.HtmlWindowCollection">
+  <TypeSignature Language="C#" Value="public class HtmlWindowCollection : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HtmlWindowCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.HtmlWindowCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt den enthaltenen innerhalb einer anderen Windows <see cref="T:System.Windows.Forms.HtmlWindow" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein HTML-Dokument besteht möglicherweise aus einem `FRAMESET` , definiert mehrere festgelegte `FRAME` Objekte, von denen jede eine eigene HTML-Seite enthält. Alternativ kann ein Dokument enthalten eine Reihe von `IFRAME` Objekte, die Dokumente in anderen Dokumenten nach dem Zufallsprinzip positionieren können. `FRAME`Objekte und `IFRAME` -Objekte dargestellt werden, auf ihre oberste Ebene durch eine <xref:System.Windows.Forms.HtmlWindowCollection>, die Elemente des Typs enthält <xref:System.Windows.Forms.HtmlWindow>.  
+  
+ <xref:System.Windows.Forms.HtmlWindowCollection>unterstützt die <xref:System.Collections.IEnumerator> Schnittstelle, damit sie in der Schleifenkonstrukte verwendet werden kann. Es definiert auch eine Item-Methode, die Zugriff auf die Elemente der Auflistung entweder über ein Methodenaufruf oder standard-Array-Syntax verwenden kann.  
+  
+ Bei der Erstellung neuer Windows mit der <xref:System.Windows.Forms.HtmlWindow.Open%2A> oder <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A> Methoden und die Dokumente von diesen Fenstern gehosteten enthalten `FRAME` oder `IFRAME` -Elemente, die diese Elemente, in angezeigt werden der <xref:System.Windows.Forms.HtmlWindowCollection> der übergeordneten Seite.  
+  
+ Weitere Informationen zu Rahmen finden Sie in der Dokumentation für die <xref:System.Windows.Forms.HtmlWindow.Frames%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird überprüft jedes Dokument innerhalb einer Seite, die Frames enthält und eine Tabelle aller ausgehenden Links aus jeder Seite für die zukünftige Überprüfung erstellt.  
+  
+ [!code-csharp[System.Windows.Forms.HtmlWindow#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/CS/Form1.cs#2)]
+ [!code-vb[System.Windows.Forms.HtmlWindow#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/VB/Form1.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlWindowCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Elemente in der Auflistung ab.</summary>
+        <value>Die Anzahl der <see cref="T:System.Windows.Forms.HtmlWindow" /> Objekte in der aktuellen <see cref="T:System.Windows.Forms.HtmlWindowCollection" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlWindowCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator, der alle Elemente in durchlaufen kann die <see cref="T:System.Windows.Forms.HtmlWindowCollection" />.</summary>
+        <returns>Die <see cref="T:System.Collections.IEnumerator" /> , die ermöglicht das Aufzählen der Elemente dieser Auflistung.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Item">
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Ruft ein Element ab, entweder durch seine <see langword="name" /> Eigenschaft oder seine Position in der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.HtmlWindowCollection.Item%2A>ermöglicht den Zugriff auf die Elemente der Auflistung mithilfe der Arraysyntax.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlWindow this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.HtmlWindow Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlWindowCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlWindow</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Position der <see cref="T:System.Windows.Forms.HtmlWindow" /> innerhalb der Auflistung.</param>
+        <summary>Ruft ein Framefenster durch Angabe des Frames Position in der Auflistung ab.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.HtmlWindow" /> entspricht dem angeforderten Rahmen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.HtmlWindowCollection>ist nullbasiert. Treten *N* Elemente in der Auflistung, die gültigen Argumente für <xref:System.Windows.Forms.HtmlWindowCollection.Item%2A> sind die ganze Zahlen von 0 bis *N*-1.  
+  
+ Windows werden nicht angeordnet <xref:System.Windows.Forms.HtmlWindowCollection> in einer vordefinierten Reihenfolge.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" />ist größer als die Anzahl der Elemente in der Auflistung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlWindow this[string windowId] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.HtmlWindow Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlWindowCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlWindow</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="windowId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="windowId">Der Name der abzurufenden <see cref="T:System.Windows.Forms.HtmlWindow" />.</param>
+        <summary>Ruft ein Framefenster durch Angabe der Name des Rahmens ab.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.HtmlWindow" /> Element, das dem angegebenen Namen entspricht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.HtmlWindowCollection.Item%2A>Gibt ein einzelnes Element zurück, dessen <xref:System.Windows.Forms.HtmlElement.Name%2A> -Eigenschaft entspricht `elementId`. Wenn das Dokument mehrere Elemente mit dem gleichen Namen enthalten <xref:System.Windows.Forms.HtmlWindowCollection.Item%2A> nur das erste Element in der Auflistung zurück. Wenn alle Elemente mit abgerufen werden müssen eine <xref:System.Windows.Forms.HtmlElement.Name%2A> Eigenschaft `windowId`, verwenden die <xref:System.Windows.Forms.HtmlElementCollection.GetElementsByName%2A> Methode stattdessen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="windowId" />ist nicht der Name des ein <see langword="Frame" /> Objekt im aktuellen Dokument oder in einer seiner untergeordneten Elemente.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array dest, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array dest, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlWindowCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dest" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="dest">Das eindimensionale <see cref="T:System.Array" /> , die das Ziel der aus der Auflistung kopierten Elemente ist. Für das <see cref="T:System.Array" /> muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="index">Der nullbasierte Index im <see langword="Array" />, bei dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die Elemente der Auflistung in ein <see cref="T:System.Array" />, beginnend bei einem bestimmten <see cref="T:System.Array" />-Index.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlWindowCollection.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Zugriff auf die Auflistung synchronisiert ist (threadsicher).</summary>
+        <value>
+          <see langword="false" /> in allen Fällen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlWindowCollection.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt ab, mit dem der Zugriff auf die Auflistung synchronisiert werden kann.</summary>
+        <value>Ein Objekt, mit dem der Zugriff auf die Auflistung synchronisiert werden kann.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

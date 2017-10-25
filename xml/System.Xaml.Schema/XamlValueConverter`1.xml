@@ -1,0 +1,354 @@
+<Type Name="XamlValueConverter&lt;TConverterBase&gt;" FullName="System.Xaml.Schema.XamlValueConverter&lt;TConverterBase&gt;">
+  <TypeSignature Language="C#" Value="public class XamlValueConverter&lt;TConverterBase&gt; : IEquatable&lt;System.Xaml.Schema.XamlValueConverter&lt;TConverterBase&gt;&gt; where TConverterBase : class" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XamlValueConverter`1&lt;class TConverterBase&gt; extends System.Object implements class System.IEquatable`1&lt;class System.Xaml.Schema.XamlValueConverter`1&lt;!TConverterBase&gt;&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.Schema.XamlValueConverter`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TConverterBase">
+      <Constraints>
+        <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Xaml.Schema.XamlValueConverter&lt;TConverterBase&gt;&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="TConverterBase">Die CLR-Basisklasse für den bestimmten Konverter, die von diesem <see cref="T:System.Xaml.Schema.XamlValueConverter`1" /> darstellt. Dies ist normalerweise eine der folgenden: <see cref="T:System.ComponentModel.TypeConverter" />; <see cref="T:System.Windows.Markup.MarkupExtension" />; <see cref="T:System.Windows.Markup.ValueSerializer" />;</typeparam>
+    <summary>Bietet eine allgemeine API-Oberfläche für Techniken, die Werte für die Initialisierung oder der Serialisierung für XAML-basierte bei der Eingabe als den endgültigen Zieltyp zu generieren. Dies schließt Markup und -Typkonverter.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Instanzen dieses Typs werden durch die Verwendung von XAML-Schema-API-Methoden zurückgegeben, wie z. B. <xref:System.Xaml.XamlType.LookupTypeConverter%2A>. Die generische Implementierung <xref:System.Xaml.Schema.XamlValueConverter%601> Dereferenzierung für die Assembly "System.xaml" bietet, sodass die grundlegende Verwendung von XAML-Schema und das Typsystem keine Abhängigkeiten von anderen Wert Konvertierungstechniken nutzen, die in der Regel in anderen Implementierungen sind Assemblys.  
+  
+ Ein <xref:System.Xaml.Schema.XamlValueConverter%601> konstruiert werden kann, mit einem null-Implementierungstyp, aber z. B. eine <xref:System.Xaml.Schema.XamlValueConverter%601> zurück `null` für <xref:System.Xaml.Schema.XamlValueConverter%601.CreateInstance%2A>.  
+  
+ Konstruktorsignaturen für <xref:System.Xaml.Schema.XamlValueConverter%601> verwenden eine `converterType` Parameter, der den spezifischen Typ verweist, die das Konvertierungsverhalten implementiert. Für einen ordnungsgemäß funktionierenden <xref:System.Xaml.Schema.XamlValueConverter%601> (Kennzeichnung einer ungleich NULL <xref:System.Xaml.Schema.XamlValueConverter%601.ConverterInstance%2A>), die `converterType` wird erwartet, umwandelbare werden die `TConverterBase` Einschränkung. Eine Nichtübereinstimmung Bedingung wird von Konstruktoren nicht erzwungen, aber ergibt möglicherweise ein <xref:System.InvalidCastException> zur Laufzeit.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlValueConverter (Type converterType, System.Xaml.XamlType targetType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type converterType, class System.Xaml.XamlType targetType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.Schema.XamlValueConverter`1.#ctor(System.Type,System.Xaml.XamlType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="converterType" Type="System.Type" />
+        <Parameter Name="targetType" Type="System.Xaml.XamlType" />
+      </Parameters>
+      <Docs>
+        <param name="converterType">Die <see cref="T:System.Type" /> , der der Konverterverhalten implementiert.</param>
+        <param name="targetType">Das Ziel <see cref="T:System.Xaml.XamlType" /> von der <see cref="T:System.Xaml.Schema.XamlValueConverter`1" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xaml.Schema.XamlValueConverter`1" /> -Klasse auf Grundlage einer Konverter implementieren <see cref="T:System.Type" /> und dem Ziel/Typ des der <see cref="T:System.Xaml.Schema.XamlValueConverter`1" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlValueConverter (Type converterType, System.Xaml.XamlType targetType, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type converterType, class System.Xaml.XamlType targetType, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.Schema.XamlValueConverter`1.#ctor(System.Type,System.Xaml.XamlType,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="converterType" Type="System.Type" />
+        <Parameter Name="targetType" Type="System.Xaml.XamlType" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="converterType">Die <see cref="T:System.Type" /> , der der Konverterverhalten implementiert.</param>
+        <param name="targetType">Das Ziel <see cref="T:System.Xaml.XamlType" /> von der <see cref="T:System.Xaml.Schema.XamlValueConverter`1" />.</param>
+        <param name="name">Der Name der Zeichenfolge.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xaml.Schema.XamlValueConverter`1" /> -Klasse auf Grundlage einer Konverter implementieren <see cref="T:System.Type" /> das Ziel/Typ des der <see cref="T:System.Xaml.Schema.XamlValueConverter`1" />, und einem Zeichenfolgennamen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `name` dient als `null`, ein Standardname wird basierend auf entweder generiert `converterType` oder `targetType`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Alle drei Parameter sind <see langword="null" /> (mindestens ein erforderliches ist ungleich Null sein).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConverterInstance">
+      <MemberSignature Language="C#" Value="public TConverterBase ConverterInstance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !TConverterBase ConverterInstance" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.Schema.XamlValueConverter`1.ConverterInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TConverterBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine erstellte Instanz der Typkonverter-Implementierung.</summary>
+        <value>Eine erstellte Instanz der Typkonverter-Implementierung oder <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Xaml.Schema.XamlValueConverter%601.ConverterInstance%2A>Ruft die geschützte standardmäßige Implementierung des <xref:System.Xaml.Schema.XamlValueConverter%601.CreateInstance%2A> den Wert abrufen (und möglicherweise auf einen gespeicherten Wert zugreifen werden, wenn <xref:System.Xaml.Schema.XamlValueConverter%601.ConverterInstance%2A> wurde bereits für dieses einmal aufgerufen <xref:System.Xaml.Schema.XamlValueConverter%601>.  
+  
+ Ein <xref:System.Xaml.Schema.XamlValueConverter%601> konstruiert werden kann, mit einem null-Implementierungstyp, aber z. B. eine <xref:System.Xaml.Schema.XamlValueConverter%601> zurück `null` für <xref:System.Xaml.Schema.XamlValueConverter%601.ConverterInstance%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConverterType">
+      <MemberSignature Language="C#" Value="public Type ConverterType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ConverterType" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.Schema.XamlValueConverter`1.ConverterType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Type" /> für die Klasse, die der Konverterverhalten implementiert.</summary>
+        <value>Die <see cref="T:System.Type" /> für die Klasse, die der Konverterverhalten implementiert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstance">
+      <MemberSignature Language="C#" Value="protected virtual TConverterBase CreateInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance !TConverterBase CreateInstance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.Schema.XamlValueConverter`1.CreateInstance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TConverterBase</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Instanz des Typenkonverter-Implementierung.</summary>
+        <returns>Eine Instanz von der Implementierung der Konverter oder <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Xaml.Schema.XamlValueConverter%601.CreateInstance%2A>ist geschützt. Um einer Konverterinstanz mit einer öffentlichen API zu erhalten, rufen Sie den Wert des <xref:System.Xaml.Schema.XamlValueConverter%601.ConverterInstance%2A>.  
+  
+ Ein <xref:System.Xaml.Schema.XamlValueConverter%601> konstruiert werden kann, mit einem null-Implementierungstyp, aber z. B. eine <xref:System.Xaml.Schema.XamlValueConverter%601> zurück `null` für <xref:System.Xaml.Schema.XamlValueConverter%601.CreateInstance%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xaml.XamlSchemaException">Konverter ist den richtige Basistyp nicht implementiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.Schema.XamlValueConverter`1.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das zu vergleichende Objekt.</param>
+        <summary>Bestimmt, ob diese Instanz von <see cref="T:System.Xaml.Schema.XamlValueConverter`1" /> und ein angegebenes Objekt, das ebenfalls sein muss ein <see cref="T:System.Xaml.Schema.XamlValueConverter`1" /> Objekt, das den gleichen Wert aufweisen.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="obj" /> ein <see cref="T:System.Xaml.Schema.XamlValueConverter`1" /> ist und denselben Wert wie diese Instanz hat; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Xaml.Schema.XamlValueConverter&lt;TConverterBase&gt; other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class System.Xaml.Schema.XamlValueConverter`1&lt;!TConverterBase&gt; other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.Schema.XamlValueConverter`1.Equals(System.Xaml.Schema.XamlValueConverter{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Xaml.Schema.XamlValueConverter&lt;TConverterBase&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="other">Der zu vergleichende <see cref="T:System.Xaml.Schema.XamlValueConverter`1" />.</param>
+        <summary>Bestimmt, ob diese Instanz von <see cref="T:System.Xaml.Schema.XamlValueConverter`1" /> und eine andere <see cref="T:System.Xaml.Schema.XamlValueConverter`1" /> Objekt denselben Wert haben.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="other" /> ein <see cref="T:System.Xaml.Schema.XamlValueConverter`1" /> ist und denselben Wert wie diese Instanz hat; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.Schema.XamlValueConverter`1.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diesen <see cref="T:System.Xaml.Schema.XamlValueConverter`1" /> zurück.</summary>
+        <returns>Ein Hashcode als ganze Zahl.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.Schema.XamlValueConverter`1.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Zeichenfolgennamen für diesen <see cref="T:System.Xaml.Schema.XamlValueConverter`1" />.</summary>
+        <value>Ein Zeichenfolgenname für diesen <see cref="T:System.Xaml.Schema.XamlValueConverter`1" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Eigenschaft wird durch eine der folgenden angezeigt:  
+  
+-   Konstruktorparameter (siehe <xref:System.Xaml.Schema.XamlValueConverter%601.%23ctor%2A?displayProperty=nameWithType>).  
+  
+-   Interne Logik, der andere Konstruktoreingaben verarbeitet und eine Zeichenfolge bildet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Xaml.Schema.XamlValueConverter&lt;TConverterBase&gt; converter1, System.Xaml.Schema.XamlValueConverter&lt;TConverterBase&gt; converter2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class System.Xaml.Schema.XamlValueConverter`1&lt;!TConverterBase&gt; converter1, class System.Xaml.Schema.XamlValueConverter`1&lt;!TConverterBase&gt; converter2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.Schema.XamlValueConverter`1.op_Equality(System.Xaml.Schema.XamlValueConverter{`0},System.Xaml.Schema.XamlValueConverter{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="converter1" Type="System.Xaml.Schema.XamlValueConverter&lt;TConverterBase&gt;" />
+        <Parameter Name="converter2" Type="System.Xaml.Schema.XamlValueConverter&lt;TConverterBase&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="converter1"><see cref="T:System.Xaml.Schema.XamlValueConverter`1" />, oder <see langword="null" />.</param>
+        <param name="converter2"><see cref="T:System.Xaml.Schema.XamlValueConverter`1" />, oder <see langword="null" />.</param>
+        <summary>Bestimmt, ob zwei angegebene <see cref="T:System.Xaml.Schema.XamlValueConverter`1" />-Objekte denselben Wert haben.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="converter1" /> und <paramref name="converter2" /> denselben Wert haben, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Xaml.Schema.XamlValueConverter&lt;TConverterBase&gt; converter1, System.Xaml.Schema.XamlValueConverter&lt;TConverterBase&gt; converter2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.Xaml.Schema.XamlValueConverter`1&lt;!TConverterBase&gt; converter1, class System.Xaml.Schema.XamlValueConverter`1&lt;!TConverterBase&gt; converter2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.Schema.XamlValueConverter`1.op_Inequality(System.Xaml.Schema.XamlValueConverter{`0},System.Xaml.Schema.XamlValueConverter{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="converter1" Type="System.Xaml.Schema.XamlValueConverter&lt;TConverterBase&gt;" />
+        <Parameter Name="converter2" Type="System.Xaml.Schema.XamlValueConverter&lt;TConverterBase&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="converter1"><see cref="T:System.Xaml.Schema.XamlValueConverter`1" />, oder <see langword="null" />.</param>
+        <param name="converter2"><see cref="T:System.Xaml.Schema.XamlValueConverter`1" />, oder <see langword="null" />.</param>
+        <summary>Bestimmt, ob zwei angegebene <see cref="T:System.Xaml.Schema.XamlValueConverter`1" /> -Objekte verschiedene Werte haben.</summary>
+        <returns>
+          <see langword="true" />Wenn der Wert der <paramref name="converter1" /> unterscheidet sich der Wert der <paramref name="converter2" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetType">
+      <MemberSignature Language="C#" Value="public System.Xaml.XamlType TargetType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.XamlType TargetType" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.Schema.XamlValueConverter`1.TargetType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Ziel <see cref="T:System.Xaml.XamlType" /> von der <see cref="T:System.Xaml.Schema.XamlValueConverter`1" />.</summary>
+        <value>Das Ziel <see cref="T:System.Xaml.XamlType" /> von der <see cref="T:System.Xaml.Schema.XamlValueConverter`1" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.Schema.XamlValueConverter`1.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.String" /> , darstellt, dies <see cref="T:System.Xaml.Schema.XamlValueConverter`1" />.</summary>
+        <returns>Ein <see cref="T:System.String" />, der diesen <see cref="T:System.Xaml.Schema.XamlValueConverter`1" /> darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xaml.Schema.XamlValueConverter%601.ToString%2A> Wert basiert auf <xref:System.Xaml.Schema.XamlValueConverter%601.Name%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

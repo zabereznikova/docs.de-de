@@ -1,0 +1,1418 @@
+<Type Name="VisualStyleRenderer" FullName="System.Windows.Forms.VisualStyles.VisualStyleRenderer">
+  <TypeSignature Language="C#" Value="public sealed class VisualStyleRenderer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed VisualStyleRenderer extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.VisualStyleRenderer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Methoden zum Zeichnen und Abrufen von Informationen zu einem <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" />. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> Namespace macht <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> Objekte, die alle Steuerelemente und Benutzer darstellen Benutzeroberflächenelemente (UI), die durch visuelle Stile unterstützt werden. Zum Zeichnen oder Abrufen von Informationen über ein bestimmtes Element, legen Sie eine <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> auf das Element, das Sie von Interesse sind. Ein <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> wird automatisch mit einem angegebenen festgelegt <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> in der <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.%23ctor%2A> Konstruktor, aber Sie können auch festlegen einer vorhandenen <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> auf ein anderes Element durch Aufrufen der <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.SetParameters%2A> Methode.  
+  
+ Um ein Element zu zeichnen, verwenden die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.DrawBackground%2A> Methode. Die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> Klasse enthält auch Methoden, wie z. B. <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetColor%2A> und <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetEnumValue%2A>, die Aufschluss darüber geben wie ein Element durch den aktuellen visuellen Stil definiert wird.  
+  
+ Die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.%23ctor%2A> Konstruktor und viele der <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> Methoden Ausnahmen auslösen, wenn visuelle Stile im Betriebssystem aktiviert sind und für den Clientbereich des Anwendungsfenster übernommen werden. Um für diese Bedingungen zu überprüfen, verwenden Sie die `static` <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.IsSupported%2A> Eigenschaft.  
+  
+ Die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> Klasse dient als Wrapper für die Funktionalität der visuelle Stile (UxTheme) API aus der Windows-Shell-Teil der Windows-Plattform-SDK. Weitere Informationen zu visuellen Stilen finden Sie unter "Using Windows XP Visual Styles" in der Platform SDK-Teil der MSDN Library unter [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library/).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> Klasse, um ein benutzerdefiniertes Steuerelement implementieren, die einige der grundlegenden Benutzeroberfläche einschließlich Ziehen der Titelleiste, Ändern der Größe mit den Ziehpunkt, und Schließen eines Fensters simuliert. In diesem Beispiel wird mithilfe mehrerer <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> Objekte, die darstellen Standardteile eines Fensters, einschließlich der Elemente, die verfügbar gemacht werden, indem Sie die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Window.Caption>, <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Window.CloseButton>, und <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Status.Gripper> Klassen.  
+  
+ [!code-cpp[System.Windows.Forms.VisualStyles.VisualStyleRenderer#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer/cpp/form1.cpp#0)]
+ [!code-csharp[System.Windows.Forms.VisualStyles.VisualStyleRenderer#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer/CS/form1.cs#0)]
+ [!code-vb[System.Windows.Forms.VisualStyles.VisualStyleRenderer#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer/VB/form1.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public VisualStyleRenderer (System.Windows.Forms.VisualStyles.VisualStyleElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.VisualStyles.VisualStyleElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.VisualStyles.VisualStyleRenderer.#ctor(System.Windows.Forms.VisualStyles.VisualStyleElement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.Forms.VisualStyles.VisualStyleElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Ein <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> , die von diesem <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleRenderer" /> dar.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleRenderer" /> -Klasse unter Verwendung der angegebenen <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor verwendet den <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ClassName%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Part%2A?displayProperty=nameWithType>, und <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.State%2A?displayProperty=nameWithType> Eigenschaften der `element` Parameter initialisiert werden, die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.Class%2A>, <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.Part%2A>, und <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.State%2A> Eigenschaften.  
+  
+ Bevor Sie diesen Konstruktor verwenden, sollten Sie Aufrufen der `static` <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.IsElementDefined%2A> -Methode zu überprüfen, ob der aktuelle visuelle Stil eine Definition für das angegebene Element enthält die `element` Parameter.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.%23ctor%28System.Windows.Forms.VisualStyles.VisualStyleElement%29> Konstruktor zur Erstellung einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels, das sich für die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> -Klassenübersicht.  
+  
+ [!code-cpp[System.Windows.Forms.VisualStyles.VisualStyleRenderer#40](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer/cpp/form1.cpp#40)]
+ [!code-csharp[System.Windows.Forms.VisualStyles.VisualStyleRenderer#40](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer/CS/form1.cs#40)]
+ [!code-vb[System.Windows.Forms.VisualStyles.VisualStyleRenderer#40](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer/VB/form1.vb#40)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Betriebssystem unterstützt keine visuelle Stile.  
+  
+ - oder -   
+  
+ Visuelle Stile sind vom Benutzer im Betriebssystem deaktiviert.  
+  
+ - oder -   
+  
+ Visuelle Stile werden nicht auf den Clientbereich des Anwendungsfenster angewendet.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="element" />wird durch den aktuellen visuellen Stil nicht definiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public VisualStyleRenderer (string className, int part, int state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string className, int32 part, int32 state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.VisualStyles.VisualStyleRenderer.#ctor(System.String,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="className" Type="System.String" />
+        <Parameter Name="part" Type="System.Int32" />
+        <Parameter Name="state" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="className">Der Klassenname des Elements, die von diesem <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleRenderer" /> dar.</param>
+        <param name="part">Der Teil des Elements, die von diesem <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleRenderer" /> dar.</param>
+        <param name="state">Der Zustand des Elements, die von diesem <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleRenderer" /> dar.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleRenderer" /> -Klasse unter Verwendung der angegebenen Klasse, Teil und Statuswerte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor verwendet den `className`, `part`, und `state` Parameter zum Initialisieren der <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.Class%2A>, <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.Part%2A>, und <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.State%2A> Eigenschaften.  
+  
+ Bevor Sie diesen Konstruktor verwenden, sollten Sie Aufrufen der `static` <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.IsElementDefined%2A> -Methode zu überprüfen, ob der aktuelle visuelle Stil eine Definition für das angegebene Element enthält die `className`, `part`, und `state` Parameter.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Betriebssystem unterstützt keine visuelle Stile.  
+  
+ - oder -   
+  
+ Visuelle Stile sind vom Benutzer im Betriebssystem deaktiviert.  
+  
+ - oder -   
+  
+ Visuelle Stile werden nicht auf den Clientbereich des Anwendungsfenster angewendet.</exception>
+        <exception cref="T:System.ArgumentException">Die Kombination von <paramref name="className" />, <paramref name="part" />, und <paramref name="state" /> wird durch den aktuellen visuellen Stil nicht definiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Class">
+      <MemberSignature Language="C#" Value="public string Class { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Class" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleRenderer.Class" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Klassennamen des aktuellen visuellen Stilelements ab.</summary>
+        <value>Eine Zeichenfolge, die Klasse des aktuellen visuellen Stilelements angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kennzeichnet eine Gruppe von verwandten Steuerelementen oder Elemente der Benutzeroberfläche (UI). Weitere Informationen über die Klasse, Teil und Zustand eines visuellen Stilelements finden Sie unter der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawBackground">
+      <MemberSignature Language="C#" Value="public void DrawBackground (System.Drawing.IDeviceContext dc, System.Drawing.Rectangle bounds);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawBackground(class System.Drawing.IDeviceContext dc, valuetype System.Drawing.Rectangle bounds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.VisualStyles.VisualStyleRenderer.DrawBackground(System.Drawing.IDeviceContext,System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dc" Type="System.Drawing.IDeviceContext" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="dc">Die <see cref="T:System.Drawing.IDeviceContext" /> verwendet, um das Hintergrundbild gezeichnet werden soll.</param>
+        <param name="bounds">Ein <see cref="T:System.Drawing.Rectangle" /> in dem das Hintergrundbild gezeichnet wird.</param>
+        <summary>Zeichnet das Hintergrundbild des aktuellen visuellen Stilelements innerhalb des angegebenen umschließenden Rechtecks an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode zeichnet den Hintergrund des aktuellen visuellen Stilelements gemäß der <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.Class%2A>, <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.Part%2A>, und <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.State%2A> Eigenschaften.  
+  
+ Wenn die <xref:System.Drawing.Rectangle.Width%2A> oder <xref:System.Drawing.Rectangle.Height%2A> des Rechtecks gemäß der `bounds` -Parameter kleiner als 0 ist, ist die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.DrawBackground%2A> Methode kehrt zurück, ohne den Hintergrund zeichnen.  
+  
+ Der Hintergrund eines visuellen Stilelements kann es sich um eine Bitmap-Datei oder ein ausgefüllter Rahmen sein. Um den Hintergrund zu bestimmen, rufen Sie die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetEnumValue%2A> Methode mit dem Argumentwert <xref:System.Windows.Forms.VisualStyles.EnumProperty?displayProperty=nameWithType>. Um zu bestimmen, ob der Hintergrund des Elements an der angegebenen Grenzen skaliert werden, rufen Sie die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetEnumValue%2A> Methode mit dem Argumentwert <xref:System.Windows.Forms.VisualStyles.EnumProperty?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.DrawBackground%28System.Drawing.IDeviceContext%2CSystem.Drawing.Rectangle%29> Methode, um ein Zeichnen-Befehl eine <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> in eines benutzerdefinierten Steuerelements <xref:System.Windows.Forms.Control.OnPaint%2A> Methode. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> -Klassenübersicht.  
+  
+ [!code-cpp[System.Windows.Forms.VisualStyles.VisualStyleRenderer#20](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer/cpp/form1.cpp#20)]
+ [!code-csharp[System.Windows.Forms.VisualStyles.VisualStyleRenderer#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer/CS/form1.cs#20)]
+ [!code-vb[System.Windows.Forms.VisualStyles.VisualStyleRenderer#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer/VB/form1.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dc" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawBackground">
+      <MemberSignature Language="C#" Value="public void DrawBackground (System.Drawing.IDeviceContext dc, System.Drawing.Rectangle bounds, System.Drawing.Rectangle clipRectangle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawBackground(class System.Drawing.IDeviceContext dc, valuetype System.Drawing.Rectangle bounds, valuetype System.Drawing.Rectangle clipRectangle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.VisualStyles.VisualStyleRenderer.DrawBackground(System.Drawing.IDeviceContext,System.Drawing.Rectangle,System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dc" Type="System.Drawing.IDeviceContext" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="clipRectangle" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="dc">Die <see cref="T:System.Drawing.IDeviceContext" /> verwendet, um das Hintergrundbild gezeichnet werden soll.</param>
+        <param name="bounds">Ein <see cref="T:System.Drawing.Rectangle" /> in dem das Hintergrundbild gezeichnet wird.</param>
+        <param name="clipRectangle">Ein <see cref="T:System.Drawing.Rectangle" /> , der eine das Auswahlrechteck für den Zeichenvorgang definiert.</param>
+        <summary>Zeichnet das Hintergrundbild des aktuellen visuellen Stilelements innerhalb des angegebenen umschließenden Rechtecks und abgeschnitten auf den angegebenen Clippingrechteck an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode zeichnet den Hintergrund des aktuellen visuellen Stilelements gemäß der <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.Class%2A>, <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.Part%2A>, und <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.State%2A> Eigenschaften. Hintergrund abgeschnitten, die vom angegebenen Bereich der `clipRectangle` Parameter.  
+  
+ Wenn die <xref:System.Drawing.Rectangle.Width%2A> oder <xref:System.Drawing.Rectangle.Height%2A> des Rechtecks angegeben werden, indem Sie entweder die `bounds` oder `clipRectangle` Parameter ist kleiner als 0 (null) der <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.DrawBackground%2A> Methode kehrt zurück, ohne den Hintergrund zeichnen.  
+  
+ Der Hintergrund eines visuellen Stilelements kann es sich um eine Bitmap-Datei oder ein ausgefüllter Rahmen sein. Um den Hintergrund zu bestimmen, rufen Sie die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetEnumValue%2A> Methode mit dem Argumentwert <xref:System.Windows.Forms.VisualStyles.EnumProperty?displayProperty=nameWithType>. Um zu bestimmen, ob der Hintergrund des Elements an der angegebenen Grenzen skaliert werden, rufen Sie die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetEnumValue%2A> Methode mit dem Argumentwert <xref:System.Windows.Forms.VisualStyles.EnumProperty?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dc" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawEdge">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle DrawEdge (System.Drawing.IDeviceContext dc, System.Drawing.Rectangle bounds, System.Windows.Forms.VisualStyles.Edges edges, System.Windows.Forms.VisualStyles.EdgeStyle style, System.Windows.Forms.VisualStyles.EdgeEffects effects);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Drawing.Rectangle DrawEdge(class System.Drawing.IDeviceContext dc, valuetype System.Drawing.Rectangle bounds, valuetype System.Windows.Forms.VisualStyles.Edges edges, valuetype System.Windows.Forms.VisualStyles.EdgeStyle style, valuetype System.Windows.Forms.VisualStyles.EdgeEffects effects) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.VisualStyles.VisualStyleRenderer.DrawEdge(System.Drawing.IDeviceContext,System.Drawing.Rectangle,System.Windows.Forms.VisualStyles.Edges,System.Windows.Forms.VisualStyles.EdgeStyle,System.Windows.Forms.VisualStyles.EdgeEffects)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dc" Type="System.Drawing.IDeviceContext" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="edges" Type="System.Windows.Forms.VisualStyles.Edges" />
+        <Parameter Name="style" Type="System.Windows.Forms.VisualStyles.EdgeStyle" />
+        <Parameter Name="effects" Type="System.Windows.Forms.VisualStyles.EdgeEffects" />
+      </Parameters>
+      <Docs>
+        <param name="dc">Die <see cref="T:System.Drawing.IDeviceContext" /> verwendet, um die Ränder gezeichnet werden soll.</param>
+        <param name="bounds">Die <see cref="T:System.Drawing.Rectangle" /> , deren Grenzen definieren die Kanten gezeichnet werden soll.</param>
+        <param name="edges">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.VisualStyles.Edges" />-Werte.</param>
+        <param name="style">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.VisualStyles.EdgeStyle" />-Werte.</param>
+        <param name="effects">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.VisualStyles.EdgeEffects" />-Werte.</param>
+        <summary>Zeichnet eine oder mehrere Ränder des angegebenen umschließenden Rechtecks an.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Rectangle" /> , die das Innere eines darstellt der <paramref name="bounds" /> minus der gezeichneten Ränder-Parameter.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dc" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawImage">
+      <MemberSignature Language="C#" Value="public void DrawImage (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, System.Drawing.Image image);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawImage(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, class System.Drawing.Image image) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.VisualStyles.VisualStyleRenderer.DrawImage(System.Drawing.Graphics,System.Drawing.Rectangle,System.Drawing.Image)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="image" Type="System.Drawing.Image" />
+      </Parameters>
+      <Docs>
+        <param name="g">Die <see cref="T:System.Drawing.Graphics" /> verwendet, um das Bild gezeichnet werden soll.</param>
+        <param name="bounds">Ein <see cref="T:System.Drawing.Rectangle" /> in dem das Bild gezeichnet wird.</param>
+        <param name="image">Das zu zeichnende <see cref="T:System.Drawing.Image" />.</param>
+        <summary>Zeichnet das angegebene Bild innerhalb der angegebenen Begrenzungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einer der vom angegebenen Effekte trifft der visuelle Stil der <xref:System.Windows.Forms.VisualStyles.IconEffect?displayProperty=nameWithType> Werte für das aktuelle Element, diese Methode gilt die Auswirkungen auf das gezeichnete Bild.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="g" /> oder <paramref name="image" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawImage">
+      <MemberSignature Language="C#" Value="public void DrawImage (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, System.Windows.Forms.ImageList imageList, int imageIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawImage(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, class System.Windows.Forms.ImageList imageList, int32 imageIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.VisualStyles.VisualStyleRenderer.DrawImage(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.ImageList,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="imageList" Type="System.Windows.Forms.ImageList" />
+        <Parameter Name="imageIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="g">Die <see cref="T:System.Drawing.Graphics" /> verwendet, um das Bild gezeichnet werden soll.</param>
+        <param name="bounds">Ein <see cref="T:System.Drawing.Rectangle" /> in dem das Bild gezeichnet wird.</param>
+        <param name="imageList">Ein <see cref="T:System.Windows.Forms.ImageList" /> , enthält die <see cref="T:System.Drawing.Image" /> gezeichnet werden soll.</param>
+        <param name="imageIndex">Der Index des der <see cref="T:System.Drawing.Image" /> in <c>ImageList</c> gezeichnet werden soll.</param>
+        <summary>Zeichnet das Bild aus dem angegebenen <see cref="T:System.Windows.Forms.ImageList" /> innerhalb der angegebenen Begrenzungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einer der vom angegebenen Effekte trifft der visuelle Stil der <xref:System.Windows.Forms.VisualStyles.IconEffect?displayProperty=nameWithType> Werte für das aktuelle Element, diese Methode gilt die Auswirkungen auf das gezeichnete Bild.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="g" /> oder <paramref name="image" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="imageIndex" />ist kleiner als 0 oder größer als oder gleich der Anzahl von Bildern in <paramref name="imageList" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawParentBackground">
+      <MemberSignature Language="C#" Value="public void DrawParentBackground (System.Drawing.IDeviceContext dc, System.Drawing.Rectangle bounds, System.Windows.Forms.Control childControl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawParentBackground(class System.Drawing.IDeviceContext dc, valuetype System.Drawing.Rectangle bounds, class System.Windows.Forms.Control childControl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.VisualStyles.VisualStyleRenderer.DrawParentBackground(System.Drawing.IDeviceContext,System.Drawing.Rectangle,System.Windows.Forms.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dc" Type="System.Drawing.IDeviceContext" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="childControl" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="dc">Die <see cref="T:System.Drawing.IDeviceContext" /> zum Zeichnen des Hintergrunds für das übergeordnete Element des <c>ChildControl</c>. Dieses Objekt gehört in der Regel auf das untergeordnete Steuerelement.</param>
+        <param name="bounds">Ein <see cref="T:System.Drawing.Rectangle" /> in der Hintergrund des übergeordneten Steuerelements gezeichnet werden soll. Dieses Rechteck sollte innerhalb der Grenzen des untergeordneten Steuerelements.</param>
+        <param name="childControl">Das Steuerelement, dessen übergeordneten Hintergrund gezeichnet wird.</param>
+        <summary>Zeichnet den Hintergrund des übergeordneten Elements eines Steuerelements im angegebenen Bereich.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dc" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawText">
+      <MemberSignature Language="C#" Value="public void DrawText (System.Drawing.IDeviceContext dc, System.Drawing.Rectangle bounds, string textToDraw);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawText(class System.Drawing.IDeviceContext dc, valuetype System.Drawing.Rectangle bounds, string textToDraw) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.VisualStyles.VisualStyleRenderer.DrawText(System.Drawing.IDeviceContext,System.Drawing.Rectangle,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dc" Type="System.Drawing.IDeviceContext" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="textToDraw" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="dc">Die <see cref="T:System.Drawing.IDeviceContext" /> zum Zeichnen des Texts verwendet.</param>
+        <param name="bounds">Ein <see cref="T:System.Drawing.Rectangle" /> in der den Text gezeichnet werden soll.</param>
+        <param name="textToDraw">Der zu zeichnende Text.</param>
+        <summary>Zeichnet Text innerhalb der Begrenzung des angegebenen standardformatierung an.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dc" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawText">
+      <MemberSignature Language="C#" Value="public void DrawText (System.Drawing.IDeviceContext dc, System.Drawing.Rectangle bounds, string textToDraw, bool drawDisabled);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawText(class System.Drawing.IDeviceContext dc, valuetype System.Drawing.Rectangle bounds, string textToDraw, bool drawDisabled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.VisualStyles.VisualStyleRenderer.DrawText(System.Drawing.IDeviceContext,System.Drawing.Rectangle,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dc" Type="System.Drawing.IDeviceContext" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="textToDraw" Type="System.String" />
+        <Parameter Name="drawDisabled" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="dc">Die <see cref="T:System.Drawing.IDeviceContext" /> zum Zeichnen des Texts verwendet.</param>
+        <param name="bounds">Ein <see cref="T:System.Drawing.Rectangle" /> in der den Text gezeichnet werden soll.</param>
+        <param name="textToDraw">Der zu zeichnende Text.</param>
+        <param name="drawDisabled">
+          <see langword="true" />ausgegrautes Text gezeichnet werden soll; andernfalls <see langword="false" />.</param>
+        <summary>Zeichnet Text in den angegebenen Grenzen mit der Option zum Anzeigen von deaktiviertem Text.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dc" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawText">
+      <MemberSignature Language="C#" Value="public void DrawText (System.Drawing.IDeviceContext dc, System.Drawing.Rectangle bounds, string textToDraw, bool drawDisabled, System.Windows.Forms.TextFormatFlags flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawText(class System.Drawing.IDeviceContext dc, valuetype System.Drawing.Rectangle bounds, string textToDraw, bool drawDisabled, valuetype System.Windows.Forms.TextFormatFlags flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.VisualStyles.VisualStyleRenderer.DrawText(System.Drawing.IDeviceContext,System.Drawing.Rectangle,System.String,System.Boolean,System.Windows.Forms.TextFormatFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dc" Type="System.Drawing.IDeviceContext" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="textToDraw" Type="System.String" />
+        <Parameter Name="drawDisabled" Type="System.Boolean" />
+        <Parameter Name="flags" Type="System.Windows.Forms.TextFormatFlags" />
+      </Parameters>
+      <Docs>
+        <param name="dc">Die <see cref="T:System.Drawing.IDeviceContext" /> zum Zeichnen des Texts verwendet.</param>
+        <param name="bounds">Ein <see cref="T:System.Drawing.Rectangle" /> in der den Text gezeichnet werden soll.</param>
+        <param name="textToDraw">Der zu zeichnende Text.</param>
+        <param name="drawDisabled">
+          <see langword="true" />ausgegrautes Text gezeichnet werden soll; andernfalls <see langword="false" />.</param>
+        <param name="flags">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.TextFormatFlags" />-Werte.</param>
+        <summary>Zeichnet Text in das angegebene umgebende Rechteck mit der Option zum Anzeigen von deaktiviert Text und anderen textformatierung anwenden.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dc" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBackgroundContentRectangle">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle GetBackgroundContentRectangle (System.Drawing.IDeviceContext dc, System.Drawing.Rectangle bounds);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Drawing.Rectangle GetBackgroundContentRectangle(class System.Drawing.IDeviceContext dc, valuetype System.Drawing.Rectangle bounds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetBackgroundContentRectangle(System.Drawing.IDeviceContext,System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dc" Type="System.Drawing.IDeviceContext" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="dc">Die <see cref="T:System.Drawing.IDeviceContext" /> dieser Vorgang verwendet wird.</param>
+        <param name="bounds">Ein <see cref="T:System.Drawing.Rectangle" /> , die den gesamten Hintergrundbereich des aktuellen visuellen Stilelements enthält.</param>
+        <summary>Gibt den Inhaltsbereich für den Hintergrund des aktuellen visuellen Stilelements zurück.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Rectangle" /> , das den Inhaltsbereich für den Hintergrund des aktuellen visuellen Stilelements enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein visueller Stil kann einen Inhaltsbereich innerhalb jedes Hintergrundbilds definieren. Dies ist ein Bereich, in welcher Inhalt, z. B. Text und Symbole ohne Hintergrundrahmen platziert werden können. Diese Methode verwendet den angegebenen Hintergrundbereich, um den Inhaltsbereich für das aktuelle Element der visuellen Stil zu berechnen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dc" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBackgroundExtent">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle GetBackgroundExtent (System.Drawing.IDeviceContext dc, System.Drawing.Rectangle contentBounds);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Drawing.Rectangle GetBackgroundExtent(class System.Drawing.IDeviceContext dc, valuetype System.Drawing.Rectangle contentBounds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetBackgroundExtent(System.Drawing.IDeviceContext,System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dc" Type="System.Drawing.IDeviceContext" />
+        <Parameter Name="contentBounds" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="dc">Die <see cref="T:System.Drawing.IDeviceContext" /> dieser Vorgang verwendet wird.</param>
+        <param name="contentBounds">Ein <see cref="T:System.Drawing.Rectangle" /> , das den Inhaltsbereich des aktuellen visuellen Stilelements enthält.</param>
+        <summary>Gibt den gesamten Hintergrundbereich für das aktuelle Element der visuellen Stil zurück.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Rectangle" /> , die den gesamten Hintergrundbereich des aktuellen visuellen Stilelements enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein visueller Stil kann einen Inhaltsbereich innerhalb jedes Hintergrundbilds definieren. Dies ist ein Bereich, in welcher Inhalt, z. B. Text und Symbole ohne Hintergrundrahmen platziert werden können. Diese Methode verwendet den angegebenen Inhaltsbereich um den gesamten Hintergrundbereich für das aktuelle Element der visuellen Stil zu berechnen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dc" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBackgroundRegion">
+      <MemberSignature Language="C#" Value="public System.Drawing.Region GetBackgroundRegion (System.Drawing.IDeviceContext dc, System.Drawing.Rectangle bounds);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Drawing.Region GetBackgroundRegion(class System.Drawing.IDeviceContext dc, valuetype System.Drawing.Rectangle bounds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetBackgroundRegion(System.Drawing.IDeviceContext,System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SuppressUnmanagedCodeSecurity</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Region</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dc" Type="System.Drawing.IDeviceContext" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="dc">Die <see cref="T:System.Drawing.IDeviceContext" /> dieser Vorgang verwendet wird.</param>
+        <param name="bounds">Ein <see cref="T:System.Drawing.Rectangle" /> , die den gesamten Hintergrundbereich des aktuellen visuellen Stilelements enthält.</param>
+        <summary>Gibt den Bereich für den Hintergrund des aktuellen visuellen Stilelements zurück.</summary>
+        <returns>Die <see cref="T:System.Drawing.Region" /> , der den Hintergrund des aktuellen visuellen Stilelements enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann verwendet werden, zum Abrufen der <xref:System.Drawing.Region> von eines visuellen Stilelements, die teilweise transparente oder mit Alphablending Teilen im Hintergrund besteht.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetBackgroundRegion%2A> -Methode in ein benutzerdefiniertes Steuerelement. Dieses Beispiel verwendet <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetBackgroundRegion%2A> zum Abrufen der <xref:System.Drawing.Region> der das von zurückgegebene Fenster-Title-Element der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Window.Caption.Active%2A?displayProperty=nameWithType> Eigenschaft. Dies <xref:System.Drawing.Region> dient zum Festlegen der <xref:System.Windows.Forms.Control.Region%2A?displayProperty=nameWithType> Eigenschaft des Steuerelements, sodass die Titelleiste des Fensters mit den durch den standardmäßigen visuellen Windows XP-Stil definiert abgerundeten Ecken angezeigt werden. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> -Klassenübersicht.  
+  
+ [!code-cpp[System.Windows.Forms.VisualStyles.VisualStyleRenderer#30](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer/cpp/form1.cpp#30)]
+ [!code-csharp[System.Windows.Forms.VisualStyles.VisualStyleRenderer#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer/CS/form1.cs#30)]
+ [!code-vb[System.Windows.Forms.VisualStyles.VisualStyleRenderer#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer/VB/form1.vb#30)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dc" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBoolean">
+      <MemberSignature Language="C#" Value="public bool GetBoolean (System.Windows.Forms.VisualStyles.BooleanProperty prop);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool GetBoolean(valuetype System.Windows.Forms.VisualStyles.BooleanProperty prop) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetBoolean(System.Windows.Forms.VisualStyles.BooleanProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prop" Type="System.Windows.Forms.VisualStyles.BooleanProperty" />
+      </Parameters>
+      <Docs>
+        <param name="prop">Eines der <see cref="T:System.Windows.Forms.VisualStyles.BooleanProperty" /> Werte, der angibt, dessen Eigenschaftswert für das aktuelle Element der visuellen Stil abgerufen.</param>
+        <summary>Gibt den Wert, der die angegebene boolesche Eigenschaft für das aktuelle Element der visuellen Stil.</summary>
+        <returns>
+          <see langword="true" />Wenn die Eigenschaft, wird angegeben die <paramref name="prop" /> Parameter ist <see langword="true" /> für das aktuelle Element der visuellen Stil; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visuelle Stile mithilfe eines Satzes von booleschen Werten, um einige Eigenschaften der durch einen Stil definierten Elemente zu beschreiben. Diese Eigenschaften sind gekapselt, durch die <xref:System.Windows.Forms.VisualStyles.BooleanProperty> Werte.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="prop" /> entspricht keinem der <see cref="T:System.Windows.Forms.VisualStyles.BooleanProperty" />-Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color GetColor (System.Windows.Forms.VisualStyles.ColorProperty prop);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Drawing.Color GetColor(valuetype System.Windows.Forms.VisualStyles.ColorProperty prop) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetColor(System.Windows.Forms.VisualStyles.ColorProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prop" Type="System.Windows.Forms.VisualStyles.ColorProperty" />
+      </Parameters>
+      <Docs>
+        <param name="prop">Eines der <see cref="T:System.Windows.Forms.VisualStyles.ColorProperty" /> Werte, der angibt, dessen Eigenschaftswert für das aktuelle Element der visuellen Stil abgerufen.</param>
+        <summary>Gibt den Wert der angegebenen Farbeigenschaft für das aktuelle Element der visuellen Stil.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Color" /> , den Wert des durch die angegebene Eigenschaft enthält die <paramref name="prop" /> -Parameter für das aktuelle Element der visuellen Stil.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visuelle Stile mithilfe eines Satzes von Farbwerten einige Eigenschaften der durch einen Stil definierten Elemente zu beschreiben. Diese Eigenschaften sind gekapselt, durch die <xref:System.Windows.Forms.VisualStyles.ColorProperty> Werte.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="prop" /> entspricht keinem der <see cref="T:System.Windows.Forms.VisualStyles.ColorProperty" />-Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumValue">
+      <MemberSignature Language="C#" Value="public int GetEnumValue (System.Windows.Forms.VisualStyles.EnumProperty prop);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetEnumValue(valuetype System.Windows.Forms.VisualStyles.EnumProperty prop) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetEnumValue(System.Windows.Forms.VisualStyles.EnumProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prop" Type="System.Windows.Forms.VisualStyles.EnumProperty" />
+      </Parameters>
+      <Docs>
+        <param name="prop">Eines der <see cref="T:System.Windows.Forms.VisualStyles.EnumProperty" /> Werte, der angibt, dessen Eigenschaftswert für das aktuelle Element der visuellen Stil abgerufen.</param>
+        <summary>Gibt den Wert der Eigenschaft für das aktuelle Element der visuellen Stil angegebenen Enumerationstyps zurück.</summary>
+        <returns>Der ganzzahlige Wert der Eigenschaft gemäß der <paramref name="prop" /> -Parameter für das aktuelle Element der visuellen Stil.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visuelle Stile mithilfe eines Satzes von Enumerationstypen, um einige Eigenschaften der durch einen Stil definierten Elemente zu beschreiben. Diese Enumerationstypen gekapselt sind, durch die <xref:System.Windows.Forms.VisualStyles.EnumProperty> Werte.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="prop" /> entspricht keinem der <see cref="T:System.Windows.Forms.VisualStyles.EnumProperty" />-Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFilename">
+      <MemberSignature Language="C#" Value="public string GetFilename (System.Windows.Forms.VisualStyles.FilenameProperty prop);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetFilename(valuetype System.Windows.Forms.VisualStyles.FilenameProperty prop) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetFilename(System.Windows.Forms.VisualStyles.FilenameProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prop" Type="System.Windows.Forms.VisualStyles.FilenameProperty" />
+      </Parameters>
+      <Docs>
+        <param name="prop">Eines der <see cref="T:System.Windows.Forms.VisualStyles.FilenameProperty" /> Werte, der angibt, dessen Eigenschaftswert für das aktuelle Element der visuellen Stil abgerufen.</param>
+        <summary>Gibt den Wert der angegebenen Datei Name-Eigenschaft für das aktuelle Element der visuellen Stil.</summary>
+        <returns>Ein <see cref="T:System.String" /> , den Wert des durch die angegebene Eigenschaft enthält die <paramref name="prop" /> -Parameter für das aktuelle Element der visuellen Stil.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visuelle Stile können die Namen der Dateien des quellstartabbilds angeben, die verwendet werden, um ein bestimmtes Element in verschiedenen Größen und Auflösungen zu zeichnen. Diese Dateinamen werden gekapselt, durch die <xref:System.Windows.Forms.VisualStyles.FilenameProperty> Werte.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="prop" /> entspricht keinem der <see cref="T:System.Windows.Forms.VisualStyles.FilenameProperty" />-Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFont">
+      <MemberSignature Language="C#" Value="public System.Drawing.Font GetFont (System.Drawing.IDeviceContext dc, System.Windows.Forms.VisualStyles.FontProperty prop);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Drawing.Font GetFont(class System.Drawing.IDeviceContext dc, valuetype System.Windows.Forms.VisualStyles.FontProperty prop) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetFont(System.Drawing.IDeviceContext,System.Windows.Forms.VisualStyles.FontProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dc" Type="System.Drawing.IDeviceContext" />
+        <Parameter Name="prop" Type="System.Windows.Forms.VisualStyles.FontProperty" />
+      </Parameters>
+      <Docs>
+        <param name="dc">Die <see cref="T:System.Drawing.IDeviceContext" /> dieser Vorgang verwendet wird.</param>
+        <param name="prop">Eines der <see cref="T:System.Windows.Forms.VisualStyles.FontProperty" /> Werte, der angibt, dessen Eigenschaftswert für das aktuelle Element der visuellen Stil abgerufen.</param>
+        <summary>Gibt den Wert der angegebenen Eigenschaft für das aktuelle Element der visuellen Stil.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Font" /> , den Wert des durch die angegebene Eigenschaft enthält die <paramref name="prop" /> -Parameter für das aktuelle Element der visuellen Stil.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visuelle Stile verwenden einen Satz von Schriftartwerten, um einige Eigenschaften der durch einen Stil definierten Elemente beschreiben. Diese Eigenschaften sind gekapselt, durch die <xref:System.Windows.Forms.VisualStyles.FontProperty> Werte.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dc" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="prop" /> entspricht keinem der <see cref="T:System.Windows.Forms.VisualStyles.FontProperty" />-Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInteger">
+      <MemberSignature Language="C#" Value="public int GetInteger (System.Windows.Forms.VisualStyles.IntegerProperty prop);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetInteger(valuetype System.Windows.Forms.VisualStyles.IntegerProperty prop) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetInteger(System.Windows.Forms.VisualStyles.IntegerProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prop" Type="System.Windows.Forms.VisualStyles.IntegerProperty" />
+      </Parameters>
+      <Docs>
+        <param name="prop">Eines der <see cref="T:System.Windows.Forms.VisualStyles.IntegerProperty" /> Werte, der angibt, dessen Eigenschaftswert für das aktuelle Element der visuellen Stil abgerufen.</param>
+        <summary>Gibt den Wert der angegebenen Integer-Eigenschaft für das aktuelle Element der visuellen Stil.</summary>
+        <returns>Der ganzzahlige Wert der Eigenschaft gemäß der <paramref name="prop" /> -Parameter für das aktuelle Element der visuellen Stil.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visuelle Stile mithilfe eines Satzes von ganzzahligen Werten, um einige Eigenschaften der durch einen Stil definierten Elemente zu beschreiben. Diese Eigenschaften sind gekapselt, durch die <xref:System.Windows.Forms.VisualStyles.IntegerProperty> Werte.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="prop" /> entspricht keinem der <see cref="T:System.Windows.Forms.VisualStyles.IntegerProperty" />-Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMargins">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Padding GetMargins (System.Drawing.IDeviceContext dc, System.Windows.Forms.VisualStyles.MarginProperty prop);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Forms.Padding GetMargins(class System.Drawing.IDeviceContext dc, valuetype System.Windows.Forms.VisualStyles.MarginProperty prop) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetMargins(System.Drawing.IDeviceContext,System.Windows.Forms.VisualStyles.MarginProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Padding</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dc" Type="System.Drawing.IDeviceContext" />
+        <Parameter Name="prop" Type="System.Windows.Forms.VisualStyles.MarginProperty" />
+      </Parameters>
+      <Docs>
+        <param name="dc">Die <see cref="T:System.Drawing.IDeviceContext" /> dieser Vorgang verwendet wird.</param>
+        <param name="prop">Eines der <see cref="T:System.Windows.Forms.VisualStyles.MarginProperty" /> Werte, der angibt, dessen Eigenschaftswert für das aktuelle Element der visuellen Stil abgerufen.</param>
+        <summary>Gibt den Wert der angegebenen Rändereigenschaft für das aktuelle Element der visuellen Stil.</summary>
+        <returns>Ein <see cref="T:System.Windows.Forms.Padding" /> , den Wert des durch die angegebene Eigenschaft enthält die <paramref name="prop" /> -Parameter für das aktuelle Element der visuellen Stil.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visuelle Stile mithilfe eines Satzes von Randwerte, um einige Eigenschaften der durch einen Stil definierten Elemente zu beschreiben. Diese Eigenschaften sind gekapselt, durch die <xref:System.Windows.Forms.VisualStyles.MarginProperty> Werte.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dc" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="prop" /> entspricht keinem der <see cref="T:System.Windows.Forms.VisualStyles.MarginProperty" />-Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPartSize">
+      <MemberSignature Language="C#" Value="public System.Drawing.Size GetPartSize (System.Drawing.IDeviceContext dc, System.Windows.Forms.VisualStyles.ThemeSizeType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Drawing.Size GetPartSize(class System.Drawing.IDeviceContext dc, valuetype System.Windows.Forms.VisualStyles.ThemeSizeType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetPartSize(System.Drawing.IDeviceContext,System.Windows.Forms.VisualStyles.ThemeSizeType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dc" Type="System.Drawing.IDeviceContext" />
+        <Parameter Name="type" Type="System.Windows.Forms.VisualStyles.ThemeSizeType" />
+      </Parameters>
+      <Docs>
+        <param name="dc">Die <see cref="T:System.Drawing.IDeviceContext" /> dieser Vorgang verwendet wird.</param>
+        <param name="type">Eines der <see cref="T:System.Windows.Forms.VisualStyles.ThemeSizeType" /> Werte, der angibt, welche Größenwert für den Teil abgerufen.</param>
+        <summary>Gibt den Wert der Eigenschaft angegebene Größe des aktuellen visuellen Stil Teils.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Size" /> , enthält die Größe, die gemäß der <paramref name="type" /> -Parameter für das aktuelle visuelle Stilteil.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel nur die <xref:System.Windows.Forms.VisualStyles.ThemeSizeType.True> und <xref:System.Windows.Forms.VisualStyles.ThemeSizeType.Minimum> Werte verwendet werden soll, für die `type` Parameter dieser Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetPartSize%28System.Drawing.IDeviceContext%2CSystem.Windows.Forms.VisualStyles.ThemeSizeType%29> -Methode in ein benutzerdefiniertes Steuerelement die Größe einer Fenstertitelleiste abzurufenden **schließen** Schaltfläche, Rahmen und Ziehpunkt, die durch den visuellen Stil angegeben. Diese Größen werden verwendet, um die Größen der Berechnung der <xref:System.Drawing.Rectangle> Objekte, die zum Zeichnen verwendete der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> Objekte, die diese Fensterteile darstellen. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> -Klassenübersicht.  
+  
+ [!code-cpp[System.Windows.Forms.VisualStyles.VisualStyleRenderer#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer/cpp/form1.cpp#10)]
+ [!code-csharp[System.Windows.Forms.VisualStyles.VisualStyleRenderer#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer/CS/form1.cs#10)]
+ [!code-vb[System.Windows.Forms.VisualStyles.VisualStyleRenderer#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer/VB/form1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dc" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="prop" /> entspricht keinem der <see cref="T:System.Windows.Forms.VisualStyles.ThemeSizeType" />-Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPartSize">
+      <MemberSignature Language="C#" Value="public System.Drawing.Size GetPartSize (System.Drawing.IDeviceContext dc, System.Drawing.Rectangle bounds, System.Windows.Forms.VisualStyles.ThemeSizeType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Drawing.Size GetPartSize(class System.Drawing.IDeviceContext dc, valuetype System.Drawing.Rectangle bounds, valuetype System.Windows.Forms.VisualStyles.ThemeSizeType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetPartSize(System.Drawing.IDeviceContext,System.Drawing.Rectangle,System.Windows.Forms.VisualStyles.ThemeSizeType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dc" Type="System.Drawing.IDeviceContext" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="type" Type="System.Windows.Forms.VisualStyles.ThemeSizeType" />
+      </Parameters>
+      <Docs>
+        <param name="dc">Die <see cref="T:System.Drawing.IDeviceContext" /> dieser Vorgang verwendet wird.</param>
+        <param name="bounds">Ein <see cref="T:System.Drawing.Rectangle" /> , enthält den Bereich, in dem der Rahmen gezeichnet werden.</param>
+        <param name="type">Eines der <see cref="T:System.Windows.Forms.VisualStyles.ThemeSizeType" /> Werte, der angibt, welche Größenwert für den Teil abgerufen.</param>
+        <summary>Gibt den Wert der Eigenschaft angegebene Größe des aktuellen visuellen Stil Teils mithilfe der angegebenen zeichnen Grenzen.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Size" /> , enthält die Größe, die gemäß der <paramref name="type" /> -Parameter für das aktuelle visuelle Stilteil.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dc" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="prop" /> entspricht keinem der <see cref="T:System.Windows.Forms.VisualStyles.ThemeSizeType" />-Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPoint">
+      <MemberSignature Language="C#" Value="public System.Drawing.Point GetPoint (System.Windows.Forms.VisualStyles.PointProperty prop);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Drawing.Point GetPoint(valuetype System.Windows.Forms.VisualStyles.PointProperty prop) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetPoint(System.Windows.Forms.VisualStyles.PointProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Point</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prop" Type="System.Windows.Forms.VisualStyles.PointProperty" />
+      </Parameters>
+      <Docs>
+        <param name="prop">Eines der <see cref="T:System.Windows.Forms.VisualStyles.PointProperty" /> Werte, der angibt, dessen Eigenschaftswert für das aktuelle Element der visuellen Stil abgerufen.</param>
+        <summary>Gibt den Wert der Eigenschaft für das aktuelle Element der visuellen Stil angegebenen Punkt zurück.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Point" /> , den Wert des durch die angegebene Eigenschaft enthält die <paramref name="prop" /> -Parameter für das aktuelle Element der visuellen Stil.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visuelle Stile mithilfe eines Satzes von Punktwerten einige Eigenschaften der durch einen Stil definierten Elemente zu beschreiben. Diese Eigenschaften sind gekapselt, durch die <xref:System.Windows.Forms.VisualStyles.PointProperty> Werte.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetPoint%2A> -Methode in ein benutzerdefiniertes Steuerelement zum Abrufen des Offsets des Fensters **schließen** Schaltfläche in Bezug auf der oberen rechten Ecke der Titelleiste. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> -Klassenübersicht.  
+  
+ [!code-cpp[System.Windows.Forms.VisualStyles.VisualStyleRenderer#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer/cpp/form1.cpp#10)]
+ [!code-csharp[System.Windows.Forms.VisualStyles.VisualStyleRenderer#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer/CS/form1.cs#10)]
+ [!code-vb[System.Windows.Forms.VisualStyles.VisualStyleRenderer#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer/VB/form1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="prop" /> entspricht keinem der <see cref="T:System.Windows.Forms.VisualStyles.PointProperty" />-Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetString">
+      <MemberSignature Language="C#" Value="public string GetString (System.Windows.Forms.VisualStyles.StringProperty prop);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetString(valuetype System.Windows.Forms.VisualStyles.StringProperty prop) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetString(System.Windows.Forms.VisualStyles.StringProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prop" Type="System.Windows.Forms.VisualStyles.StringProperty" />
+      </Parameters>
+      <Docs>
+        <param name="prop">Eines der <see cref="T:System.Windows.Forms.VisualStyles.StringProperty" /> Werte, der angibt, dessen Eigenschaftswert für das aktuelle Element der visuellen Stil abgerufen.</param>
+        <summary>Gibt den Wert der angegebenen Zeichenfolgeneigenschaft für das aktuelle Element der visuellen Stil.</summary>
+        <returns>Ein <see cref="T:System.String" /> , den Wert des durch die angegebene Eigenschaft enthält die <paramref name="prop" /> -Parameter für das aktuelle Element der visuellen Stil.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visuelle Stile mithilfe eines Satzes von Zeichenfolgenwerten, um einige Eigenschaften der durch einen Stil definierten Elemente zu beschreiben. Diese Eigenschaften sind gekapselt, durch die <xref:System.Windows.Forms.VisualStyles.StringProperty> Werte.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="prop" /> entspricht keinem der <see cref="T:System.Windows.Forms.VisualStyles.StringProperty" />-Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTextExtent">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle GetTextExtent (System.Drawing.IDeviceContext dc, string textToDraw, System.Windows.Forms.TextFormatFlags flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Drawing.Rectangle GetTextExtent(class System.Drawing.IDeviceContext dc, string textToDraw, valuetype System.Windows.Forms.TextFormatFlags flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetTextExtent(System.Drawing.IDeviceContext,System.String,System.Windows.Forms.TextFormatFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dc" Type="System.Drawing.IDeviceContext" />
+        <Parameter Name="textToDraw" Type="System.String" />
+        <Parameter Name="flags" Type="System.Windows.Forms.TextFormatFlags" />
+      </Parameters>
+      <Docs>
+        <param name="dc">Die <see cref="T:System.Drawing.IDeviceContext" /> dieser Vorgang verwendet wird.</param>
+        <param name="textToDraw">Die zu messende Zeichenfolge.</param>
+        <param name="flags">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.TextFormatFlags" />-Werte.</param>
+        <summary>Gibt die Größe und Position der angegebenen Zeichenfolge, wenn Sie mit der Schriftart des aktuellen visuellen Stilelements gezeichnet.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Rectangle" /> , enthält den Bereich erforderlich, um den gerenderten Text anpassen.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dc" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTextExtent">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle GetTextExtent (System.Drawing.IDeviceContext dc, System.Drawing.Rectangle bounds, string textToDraw, System.Windows.Forms.TextFormatFlags flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Drawing.Rectangle GetTextExtent(class System.Drawing.IDeviceContext dc, valuetype System.Drawing.Rectangle bounds, string textToDraw, valuetype System.Windows.Forms.TextFormatFlags flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetTextExtent(System.Drawing.IDeviceContext,System.Drawing.Rectangle,System.String,System.Windows.Forms.TextFormatFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dc" Type="System.Drawing.IDeviceContext" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="textToDraw" Type="System.String" />
+        <Parameter Name="flags" Type="System.Windows.Forms.TextFormatFlags" />
+      </Parameters>
+      <Docs>
+        <param name="dc">Die <see cref="T:System.Drawing.IDeviceContext" /> dieser Vorgang verwendet wird.</param>
+        <param name="bounds">Ein <see cref="T:System.Drawing.Rectangle" /> verwendet, um den Nachrichtenfluss und die Einbindung des Texts zu steuern.</param>
+        <param name="textToDraw">Die zu messende Zeichenfolge.</param>
+        <param name="flags">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.TextFormatFlags" />-Werte.</param>
+        <summary>Gibt die Größe und Position der angegebenen Zeichenfolge, wenn mit der Schriftart des aktuellen visuellen Stilelements innerhalb der angegebenen anfänglichen umschließenden Rechteck gezeichnet.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Rectangle" /> , enthält den Bereich erforderlich, um den gerenderten Text anpassen.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dc" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTextMetrics">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.VisualStyles.TextMetrics GetTextMetrics (System.Drawing.IDeviceContext dc);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Forms.VisualStyles.TextMetrics GetTextMetrics(class System.Drawing.IDeviceContext dc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetTextMetrics(System.Drawing.IDeviceContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.TextMetrics</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dc" Type="System.Drawing.IDeviceContext" />
+      </Parameters>
+      <Docs>
+        <param name="dc">Die <see cref="T:System.Drawing.IDeviceContext" /> dieser Vorgang verwendet wird.</param>
+        <summary>Ruft Informationen zu der vom aktuellen visuellen Stilelements angegebenen Schriftart ab.</summary>
+        <returns>Ein <see cref="T:System.Windows.Forms.VisualStyles.TextMetrics" /> , Informationen zu der vom aktuellen visuellen Stilelements angegebenen Schriftart bereitstellt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dc" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Handle">
+      <MemberSignature Language="C#" Value="public IntPtr Handle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int Handle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleRenderer.Handle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen eindeutigen Bezeichner für die aktuelle Klasse der visuelle Stilelemente ab.</summary>
+        <value>Ein <see cref="T:System.IntPtr" /> , die einen Satz von Daten, die die Klasse der angegebenen Elemente durch definiert identifiziert <see cref="P:System.Windows.Forms.VisualStyles.VisualStyleRenderer.Class" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird intern von verwendet die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> Methoden. Wenn die Klasse von Elementen, wird angegeben die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.Class%2A> Eigenschaft durch den aktuellen visuellen Stil nicht definiert ist, wird diese Eigenschaft gibt <xref:System.IntPtr.Zero?displayProperty=nameWithType>.  
+  
+ Dieser Eigenschaftswert ist ungültig, wenn der visuelle Stil des Betriebssystems geändert werden oder wenn der Benutzer visuelle Stile deaktiviert. Sollten Sie diese Eigenschaft direkt zugreifen, sollte diese Eigenschaft erneut aus, um ein neues Abrufen von Ihrem Code Abfragen verarbeiten, wenn die <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged?displayProperty=nameWithType> Ereignis wird ausgelöst, mit der <xref:Microsoft.Win32.UserPreferenceChangedEventArgs.Category%2A?displayProperty=nameWithType> Eigenschaftswert <xref:Microsoft.Win32.UserPreferenceCategory?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Betriebssystem unterstützt keine visuelle Stile.  
+  
+ - oder -   
+  
+ Visuelle Stile sind vom Benutzer im Betriebssystem deaktiviert.  
+  
+ - oder -   
+  
+ Visuelle Stile werden nicht auf den Clientbereich des Anwendungsfenster angewendet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HitTestBackground">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.VisualStyles.HitTestCode HitTestBackground (System.Drawing.IDeviceContext dc, System.Drawing.Rectangle backgroundRectangle, System.Drawing.Point pt, System.Windows.Forms.VisualStyles.HitTestOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Forms.VisualStyles.HitTestCode HitTestBackground(class System.Drawing.IDeviceContext dc, valuetype System.Drawing.Rectangle backgroundRectangle, valuetype System.Drawing.Point pt, valuetype System.Windows.Forms.VisualStyles.HitTestOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.VisualStyles.VisualStyleRenderer.HitTestBackground(System.Drawing.IDeviceContext,System.Drawing.Rectangle,System.Drawing.Point,System.Windows.Forms.VisualStyles.HitTestOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.HitTestCode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dc" Type="System.Drawing.IDeviceContext" />
+        <Parameter Name="backgroundRectangle" Type="System.Drawing.Rectangle" />
+        <Parameter Name="pt" Type="System.Drawing.Point" />
+        <Parameter Name="options" Type="System.Windows.Forms.VisualStyles.HitTestOptions" />
+      </Parameters>
+      <Docs>
+        <param name="dc">Die <see cref="T:System.Drawing.IDeviceContext" /> dieser Vorgang verwendet wird.</param>
+        <param name="backgroundRectangle">Ein <see cref="T:System.Drawing.Rectangle" /> , der den Hintergrund des aktuellen visuellen Stilelements enthält.</param>
+        <param name="pt">Der zu überprüfende <see cref="T:System.Drawing.Point" />.</param>
+        <param name="options">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.VisualStyles.HitTestOptions" />-Werte.</param>
+        <summary>Gibt einen Treffertest-Code, der angibt, ob ein Punkt im Hintergrund des aktuellen visuellen Stilelements enthalten ist.</summary>
+        <returns>Ein <see cref="T:System.Windows.Forms.VisualStyles.HitTestCode" /> , die beschreibt, wo <paramref name="pt" /> befindet sich im Hintergrund des aktuellen visuellen Stilelements.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dc" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HitTestBackground">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.VisualStyles.HitTestCode HitTestBackground (System.Drawing.Graphics g, System.Drawing.Rectangle backgroundRectangle, System.Drawing.Region region, System.Drawing.Point pt, System.Windows.Forms.VisualStyles.HitTestOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Forms.VisualStyles.HitTestCode HitTestBackground(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle backgroundRectangle, class System.Drawing.Region region, valuetype System.Drawing.Point pt, valuetype System.Windows.Forms.VisualStyles.HitTestOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.VisualStyles.VisualStyleRenderer.HitTestBackground(System.Drawing.Graphics,System.Drawing.Rectangle,System.Drawing.Region,System.Drawing.Point,System.Windows.Forms.VisualStyles.HitTestOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.HitTestCode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="backgroundRectangle" Type="System.Drawing.Rectangle" />
+        <Parameter Name="region" Type="System.Drawing.Region" />
+        <Parameter Name="pt" Type="System.Drawing.Point" />
+        <Parameter Name="options" Type="System.Windows.Forms.VisualStyles.HitTestOptions" />
+      </Parameters>
+      <Docs>
+        <param name="g">Die <see cref="T:System.Drawing.Graphics" /> dieser Vorgang verwendet wird.</param>
+        <param name="backgroundRectangle">Ein <see cref="T:System.Drawing.Rectangle" /> , der den Hintergrund des aktuellen visuellen Stilelements enthält.</param>
+        <param name="region">Ein <see cref="T:System.Drawing.Region" /> , die die Begrenzungen des Bereichs Treffertest im Hintergrund angibt.</param>
+        <param name="pt">Der zu überprüfende <see cref="T:System.Drawing.Point" />.</param>
+        <param name="options">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.VisualStyles.HitTestOptions" />-Werte.</param>
+        <summary>Gibt einen Treffertest-Code, der angibt, ob der Punkt im Hintergrund des aktuellen visuellen Stilelements und innerhalb der angegebenen Grenzen enthalten ist.</summary>
+        <returns>Ein <see cref="T:System.Windows.Forms.VisualStyles.HitTestCode" /> , die beschreibt, wo <paramref name="pt" /> befindet sich in den Hintergrund des aktuellen visuellen Stilelements, wenn überhaupt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="g" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HitTestBackground">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.VisualStyles.HitTestCode HitTestBackground (System.Drawing.IDeviceContext dc, System.Drawing.Rectangle backgroundRectangle, IntPtr hRgn, System.Drawing.Point pt, System.Windows.Forms.VisualStyles.HitTestOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Forms.VisualStyles.HitTestCode HitTestBackground(class System.Drawing.IDeviceContext dc, valuetype System.Drawing.Rectangle backgroundRectangle, native int hRgn, valuetype System.Drawing.Point pt, valuetype System.Windows.Forms.VisualStyles.HitTestOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.VisualStyles.VisualStyleRenderer.HitTestBackground(System.Drawing.IDeviceContext,System.Drawing.Rectangle,System.IntPtr,System.Drawing.Point,System.Windows.Forms.VisualStyles.HitTestOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.HitTestCode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dc" Type="System.Drawing.IDeviceContext" />
+        <Parameter Name="backgroundRectangle" Type="System.Drawing.Rectangle" />
+        <Parameter Name="hRgn" Type="System.IntPtr" />
+        <Parameter Name="pt" Type="System.Drawing.Point" />
+        <Parameter Name="options" Type="System.Windows.Forms.VisualStyles.HitTestOptions" />
+      </Parameters>
+      <Docs>
+        <param name="dc">Die <see cref="T:System.Drawing.IDeviceContext" /> dieser Vorgang verwendet wird.</param>
+        <param name="backgroundRectangle">Ein <see cref="T:System.Drawing.Rectangle" /> , der den Hintergrund des aktuellen visuellen Stilelements enthält.</param>
+        <param name="hRgn">Ein Windows-Handle für eine <see cref="T:System.Drawing.Region" /> , die die Begrenzungen des Bereichs Treffertest im Hintergrund angibt.</param>
+        <param name="pt">Der zu überprüfende <see cref="T:System.Drawing.Point" />.</param>
+        <param name="options">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.VisualStyles.HitTestOptions" />-Werte.</param>
+        <summary>Gibt einen Treffertest-Code, der angibt, ob der Punkt im Hintergrund des aktuellen visuellen Stilelements und innerhalb der angegebenen Region befindet.</summary>
+        <returns>Ein <see cref="T:System.Windows.Forms.VisualStyles.HitTestCode" /> , die beschreibt, wo <paramref name="pt" /> befindet sich im Hintergrund des aktuellen visuellen Stilelements.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dc" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBackgroundPartiallyTransparent">
+      <MemberSignature Language="C#" Value="public bool IsBackgroundPartiallyTransparent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsBackgroundPartiallyTransparent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.VisualStyles.VisualStyleRenderer.IsBackgroundPartiallyTransparent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt an, ob der Hintergrund des aktuellen visuellen Stilelements halbtransparente Bereiche oder Alphablending aufweist.</summary>
+        <returns>
+          <see langword="true" />Wenn der Hintergrund des aktuellen visuellen Stilelements halbtransparente Bereiche oder Alphablending aufweist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsElementDefined">
+      <MemberSignature Language="C#" Value="public static bool IsElementDefined (System.Windows.Forms.VisualStyles.VisualStyleElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsElementDefined(class System.Windows.Forms.VisualStyles.VisualStyleElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.VisualStyles.VisualStyleRenderer.IsElementDefined(System.Windows.Forms.VisualStyles.VisualStyleElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.Forms.VisualStyles.VisualStyleElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Ein <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> , deren Kombination Klasse und den Teil werden überprüft.</param>
+        <summary>Bestimmt, ob die angegebenen visuellen Stilelements durch den aktuellen visuellen Stil definiert wird.</summary>
+        <returns>
+          <see langword="true" />Wenn die Kombination der <see cref="P:System.Windows.Forms.VisualStyles.VisualStyleElement.ClassName" /> und <see cref="P:System.Windows.Forms.VisualStyles.VisualStyleElement.Part" /> Eigenschaften des <paramref name="element" /> definiert; andernfalls werden <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überprüft den Wert, der die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.IsSupported%2A> Eigenschaft intern.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.IsElementDefined%2A> Methode, um zu ermitteln, ob initialisieren eine <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> zu einer angegebenen <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> -Klassenübersicht.  
+  
+ [!code-cpp[System.Windows.Forms.VisualStyles.VisualStyleRenderer#40](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer/cpp/form1.cpp#40)]
+ [!code-csharp[System.Windows.Forms.VisualStyles.VisualStyleRenderer#40](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer/CS/form1.cs#40)]
+ [!code-vb[System.Windows.Forms.VisualStyles.VisualStyleRenderer#40](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer/VB/form1.vb#40)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Betriebssystem unterstützt keine visuelle Stile.  
+  
+ - oder -   
+  
+ Visuelle Stile sind vom Benutzer im Betriebssystem deaktiviert.  
+  
+ - oder -   
+  
+ Visuelle Stile werden nicht auf den Clientbereich des Anwendungsfenster angewendet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSupported">
+      <MemberSignature Language="C#" Value="public static bool IsSupported { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool IsSupported" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleRenderer.IsSupported" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Betriebssystem visuelle Stile verwendet wird, um Steuerelemente zu zeichnen.</summary>
+        <value>
+          <see langword="true" />Wenn das Betriebssystem visuelle Stile unterstützt, der Benutzer hat visuelle Stile im Betriebssystem aktiviert und visuelle Stile werden auf den Clientbereich des Anwendungsfenster angewendet; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der folgenden Tabelle wird beschrieben, wie einzeln für jede der drei Bedingungen zu überprüfen, die für vorhanden sind, muss die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.IsSupported%2A> -Eigenschaft zum Zurückgeben von `true`.  
+  
+|Bedingung|Separat zu bestimmen|  
+|---------------|---------------------------------|  
+|Das Betriebssystem unterstützt visuelle Stile.|Überprüfen Sie, ob die <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation.IsSupportedByOS%2A> Eigenschaft von der <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation> Klasse ist `true`.|  
+|Der Benutzer hat visuelle Stile auf seinem Betriebssystem aktiviert.|Überprüfen Sie, ob die <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation.IsEnabledByUser%2A> Eigenschaft von der <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation> Klasse ist `true`.|  
+|Visuelle Stile werden dazu verwendet, den Clientbereich von Anwendungsfenstern zu zeichnen.|Überprüfen Sie, ob die <xref:System.Windows.Forms.Application.VisualStyleState%2A> Eigenschaft von der <xref:System.Windows.Forms.Application> -Klasse verfügt über den Wert <xref:System.Windows.Forms.VisualStyles.VisualStyleState?displayProperty=nameWithType> oder <xref:System.Windows.Forms.VisualStyles.VisualStyleState?displayProperty=nameWithType>.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastHResult">
+      <MemberSignature Language="C#" Value="public int LastHResult { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LastHResult" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleRenderer.LastHResult" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den letzten Fehlercode zurückgegeben, die für die systemeigene visuelle Stile (UxTheme) API-Methoden von der <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleRenderer" /> Klasse.</summary>
+        <value>Ein Wert, der den letzten Fehlercode von API-Methoden, die diese Klasse kapselt für systemeigene visuelle Stile zurückgegeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ruft den HRESULT-Wert, der von der letzten aufgerufen, die von einem Mitglied der systemeigene visuelle Stile API-Methode zurückgegeben wurde die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> Klasse. Weitere Informationen zu den systemeigenen API mit visuellen Stilen finden Sie unter "Using Windows XP Visual Styles" in der Platform SDK-Teil der MSDN Library unter [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library/).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Part">
+      <MemberSignature Language="C#" Value="public int Part { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Part" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleRenderer.Part" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Teil des aktuellen visuellen Stilelements ab.</summary>
+        <value>Ein Wert, der den Teil des aktuellen visuellen Stilelements angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kennzeichnet eine bestimmte Spezialisierung einer Klasse. Weitere Informationen über die Klasse, Teil und Zustand eines visuellen Stilelements finden Sie unter der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetParameters">
+      <MemberSignature Language="C#" Value="public void SetParameters (System.Windows.Forms.VisualStyles.VisualStyleElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetParameters(class System.Windows.Forms.VisualStyles.VisualStyleElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.VisualStyles.VisualStyleRenderer.SetParameters(System.Windows.Forms.VisualStyles.VisualStyleElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.Forms.VisualStyles.VisualStyleElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Ein <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> , angibt, dass die neuen Werte von der <see cref="P:System.Windows.Forms.VisualStyles.VisualStyleRenderer.Class" />, <see cref="P:System.Windows.Forms.VisualStyles.VisualStyleRenderer.Part" />, und <see cref="P:System.Windows.Forms.VisualStyles.VisualStyleRenderer.State" /> Eigenschaften.</param>
+        <summary>Hiermit <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleRenderer" /> , dargestellt durch das angegebene visuellen Stilelements <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überprüft den Wert, der die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.IsSupported%2A> Eigenschaft intern. Sie sollten vor dem Aufrufen dieser Methode aufrufen der <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.IsElementDefined%2A> Methode, um sicherzustellen, dass der aktuelle visuelle Stil eine Definition für das angegebene Element enthält die `element` Parameter.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.SetParameters%28System.Windows.Forms.VisualStyles.VisualStyleElement%29> -Methode zum Festlegen einer <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> in ein neues <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> -Klassenübersicht.  
+  
+ [!code-cpp[System.Windows.Forms.VisualStyles.VisualStyleRenderer#40](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer/cpp/form1.cpp#40)]
+ [!code-csharp[System.Windows.Forms.VisualStyles.VisualStyleRenderer#40](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer/CS/form1.cs#40)]
+ [!code-vb[System.Windows.Forms.VisualStyles.VisualStyleRenderer#40](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer/VB/form1.vb#40)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="element" />wird durch den aktuellen visuellen Stil nicht definiert.</exception>
+        <exception cref="T:System.InvalidOperationException">Das Betriebssystem unterstützt keine visuelle Stile.  
+  
+ - oder -   
+  
+ Visuelle Stile sind vom Benutzer im Betriebssystem deaktiviert.  
+  
+ - oder -   
+  
+ Visuelle Stile werden nicht auf den Clientbereich des Anwendungsfenster angewendet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetParameters">
+      <MemberSignature Language="C#" Value="public void SetParameters (string className, int part, int state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetParameters(string className, int32 part, int32 state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.VisualStyles.VisualStyleRenderer.SetParameters(System.String,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="className" Type="System.String" />
+        <Parameter Name="part" Type="System.Int32" />
+        <Parameter Name="state" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="className">Der neue Wert der <see cref="P:System.Windows.Forms.VisualStyles.VisualStyleRenderer.Class" />-Eigenschaft.</param>
+        <param name="part">Der neue Wert der <see cref="P:System.Windows.Forms.VisualStyles.VisualStyleRenderer.Part" />-Eigenschaft.</param>
+        <param name="state">Der neue Wert der <see cref="P:System.Windows.Forms.VisualStyles.VisualStyleRenderer.State" />-Eigenschaft.</param>
+        <summary>Hiermit <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleRenderer" /> , durch die angegebene Klasse, Teil und Statuswerte dargestellten visuellen Stilelements.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überprüft den Wert, der die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.IsSupported%2A> Eigenschaft intern. Sie sollten vor dem Aufrufen dieser Methode aufrufen der <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.IsElementDefined%2A> Methode, um sicherzustellen, dass der aktuelle visuelle Stil eine Definition für das angegebene Element enthält die `className`, `part`, und `state` Parameter.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Kombination von <paramref name="className" />, <paramref name="part" />, und <paramref name="state" /> wird durch den aktuellen visuellen Stil nicht definiert.</exception>
+        <exception cref="T:System.InvalidOperationException">Das Betriebssystem unterstützt keine visuelle Stile.  
+  
+ - oder -   
+  
+ Visuelle Stile sind vom Benutzer im Betriebssystem deaktiviert.  
+  
+ - oder -   
+  
+ Visuelle Stile werden nicht auf den Clientbereich des Anwendungsfenster angewendet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public int State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 State" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleRenderer.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zustand des aktuellen visuellen Stilelements ab.</summary>
+        <value>Ein Wert, der den Zustand der aktuellen visuellen Stilelements bezeichnet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kennzeichnet den aktuellen visuellen Status des Elements, das vom aktuellen identifiziert <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.Class%2A> und <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.Part%2A> Eigenschaftswerte. Weitere Informationen über die Klasse, Teil und Zustand eines visuellen Stilelements finden Sie unter der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

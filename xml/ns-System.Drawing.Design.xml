@@ -1,0 +1,16 @@
+<Namespace Name="System.Drawing.Design">
+  <Docs>
+    <summary>Die <see cref="N:System.Drawing.Design" /> -Namespace enthält Klassen, die Entwurfszeit-Benutzeroberfläche (UI) Logik- und Zeichenfunktionen erweitern.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Klassen in diesem Namespace können verwendet werden, benutzerdefinierten Toolboxelementen typspezifischen Wert-Editoren zu erstellen, bearbeiten und Werte von den unterstützten Typen und den Einsatz von Typkonvertern, die Werte zwischen bestimmten Typen konvertieren können grafisch darstellen können. Dieser Namespace stellt die grundlegende-Frameworks für die Entwicklung von Erweiterungen, die während der Entwurfszeit-Benutzeroberfläche.  
+  
+> [!CAUTION]
+>  Klassen, die innerhalb der <xref:System.Drawing.Design> Namespace werden nicht unterstützt, für die Verwendung innerhalb eines Diensts Windows- oder ASP.NET. Unerwartete Probleme erzeugen versucht, diese Klassen von innerhalb einer dieser Anwendungstypen zu verwenden, wie z. B. wirkte-service-Leistung und zur Laufzeit Ausnahmen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

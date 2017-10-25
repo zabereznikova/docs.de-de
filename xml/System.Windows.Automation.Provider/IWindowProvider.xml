@@ -1,0 +1,232 @@
+<Type Name="IWindowProvider" FullName="System.Windows.Automation.Provider.IWindowProvider">
+  <TypeSignature Language="C#" Value="public interface IWindowProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IWindowProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Provider.IWindowProvider" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationProvider</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("987df77b-db06-4d77-8f8a-86a9c3bb90b9")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Macht Methoden und Eigenschaften zur Unterstützung von Benutzeroberflächenautomatisierungs-Clientzugriffs auf Steuerelemente, die grundlegende fensterbasierte Funktionen innerhalb einer herkömmlichen grafischen Benutzeroberfläche (GUI) bereitstellen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementiert ein Benutzeroberflächenautomatisierungs-Anbieter, die unterstützen, muss die <xref:System.Windows.Automation.WindowPattern> -Steuerelementmuster.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.IWindowProvider.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Versucht, das Fenster zu schließen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>muss sofort ohne Blockierung zurückgeben.  
+  
+ Durch <xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A> wird das <xref:System.Windows.Automation.WindowPatternIdentifiers.WindowClosedEvent>-Ereignis ausgelöst. Wenn möglich, sollte das Ereignis ausgelöst werden, nachdem das Steuerelement seine zugehörige Aktion abgeschlossen wurde.  
+  
+ Bei einem Aufruf in einer Split-Bereichssteuerelement, wird diese Methode schließen Sie den Bereich und die zugehörige Teilung entfernen. Diese Methode möglicherweise auch alle anderen Bereiche, je nach Implementierung geschlossen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Wenn das Steuerelement die angeforderte Aktion nicht ausführen kann.</exception>
+        <exception cref="T:System.Windows.Automation.ElementNotAvailableException">Wenn das Zielelement nicht mehr verfügbar ist (weil z.B. das Fenster geschlossen wurde).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InteractionState">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.WindowInteractionState InteractionState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.WindowInteractionState InteractionState" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IWindowProvider.InteractionState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.WindowInteractionState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Interaktionszustand des Fensters ab.</summary>
+        <value>Der <see cref="T:System.Windows.Automation.WindowInteractionState" /> des Steuerelements.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsModal">
+      <MemberSignature Language="C#" Value="public bool IsModal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsModal" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IWindowProvider.IsModal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Fenster modal ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Fenster modal ist. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTopmost">
+      <MemberSignature Language="C#" Value="public bool IsTopmost { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTopmost" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IWindowProvider.IsTopmost" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das Fenster das oberste Element in der Z-Reihenfolge ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Fenster auf oberster Ebene handelt; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Maximizable">
+      <MemberSignature Language="C#" Value="public bool Maximizable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Maximizable" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IWindowProvider.Maximizable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Fenster maximiert werden kann.</summary>
+        <value>
+          <see langword="true" />Wenn das Fenster maximiert werden kann; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Minimizable">
+      <MemberSignature Language="C#" Value="public bool Minimizable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Minimizable" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IWindowProvider.Minimizable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Fenster minimiert werden kann.</summary>
+        <value>
+          <see langword="true" />Wenn das Fenster minimiert werden kann. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetVisualState">
+      <MemberSignature Language="C#" Value="public void SetVisualState (System.Windows.Automation.WindowVisualState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetVisualState(valuetype System.Windows.Automation.WindowVisualState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.IWindowProvider.SetVisualState(System.Windows.Automation.WindowVisualState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Windows.Automation.WindowVisualState" />
+      </Parameters>
+      <Docs>
+        <param name="state">Der angeforderte visuelle Zustand des Fensters.</param>
+        <summary>Ändert den visuellen Zustand des Fensters. Beispiel: Minimieren oder Maximieren.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Wenn das Steuerelement das geforderte Verhalten nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VisualState">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.WindowVisualState VisualState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.WindowVisualState VisualState" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IWindowProvider.VisualState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.WindowVisualState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den visuellen Status des Fensters ab.</summary>
+        <value>Den visuellen Status des Fensters.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitForInputIdle">
+      <MemberSignature Language="C#" Value="public bool WaitForInputIdle (int milliseconds);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool WaitForInputIdle(int32 milliseconds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="milliseconds" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="milliseconds">Die Zeitspanne in Millisekunden, während der gewartet werden soll, dass der zugeordnete Prozess in den Leerlauf wechselt. Der Höchstwert beträgt <see cref="F:System.Int32.MaxValue" />.</param>
+        <summary>Bewirkt, dass der aufrufende Code für die angegebene Zeitspanne oder solange blockiert wird, bis der zugeordnete Prozess in den Leerlauf wechselt, je nachdem, was zuerst zutrifft.</summary>
+        <returns>
+          <see langword="true" />Wenn das Fenster den Leerlaufzustand eingegeben hat; <see langword="false" /> , wenn das Timeout aufgetreten ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird in der Regel in Verbindung mit der Behandlung von verwendet eine <xref:System.Windows.Automation.WindowPatternIdentifiers.WindowOpenedEvent>.  
+  
+ Die Implementierung ist abhängig von der zugrunde liegenden Anwendungsframework; Diese Methode könnte daher einige Zeit, nachdem das Fenster für Benutzereingaben bereit ist, zurück. Der aufrufende Code sollten nicht verlassen, der bei dieser Methode zu ermitteln, genau, wenn das Fenster im Leerlauf befindet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Wenn der übergebene Parameter ist keine gültige Zahl.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

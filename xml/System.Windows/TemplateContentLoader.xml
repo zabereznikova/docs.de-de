@@ -1,0 +1,109 @@
+<Type Name="TemplateContentLoader" FullName="System.Windows.TemplateContentLoader">
+  <TypeSignature Language="C#" Value="public class TemplateContentLoader : System.Xaml.XamlDeferringLoader" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TemplateContentLoader extends System.Xaml.XamlDeferringLoader" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.TemplateContentLoader" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xaml.XamlDeferringLoader</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementiert <see cref="T:System.Xaml.XamlDeferringLoader" /> zum Laden der XAML-Inhalt zu verzögern, die für eine Vorlage in WPF-XAML definiert wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_TemplateContentLoader"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TemplateContentLoader ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.TemplateContentLoader.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.TemplateContentLoader" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public override object Load (System.Xaml.XamlReader xamlReader, IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Load(class System.Xaml.XamlReader xamlReader, class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.TemplateContentLoader.Load(System.Xaml.XamlReader,System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xamlReader" Type="System.Xaml.XamlReader" />
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="xamlReader">Der initiierende Reader, der dann bei Aufrufen zurückgegeben wird <see cref="M:System.Windows.TemplateContentLoader.Save(System.Object,System.IServiceProvider)" />.</param>
+        <param name="serviceProvider">Der Dienstanbieter für erforderliche Dienste.</param>
+        <summary>Lädt XAML-Inhalt in einem Verzögerungsmodus, basierend auf einer <see cref="T:System.Xaml.XamlReader" /> und bestimmte erforderlichen Dienste von einem Dienstanbieter.</summary>
+        <returns>Das Stammobjekt für den Knotenstream der Eingabe <see cref="T:System.Xaml.XamlReader" />. Dabei handelt es sich eine <see cref="T:System.Windows.TemplateContent" /> Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Xaml.IXamlObjectWriterFactory>ist ein erforderlicher Dienst muss auf dem übergebenen verfügbar sein, `serviceProvider`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="xamlReader" /> oder <paramref name="serviceProvider" /> sind <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="serviceProvider" />einen erforderlichen Dienst bietet nicht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public override System.Xaml.XamlReader Save (object value, IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Xaml.XamlReader Save(object value, class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.TemplateContentLoader.Save(System.Object,System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Eingabewert in einen commit für verzögertes Laden.</param>
+        <param name="serviceProvider">Der Dienstanbieter für erforderliche Dienste.</param>
+        <summary>Verwenden Sie nicht. löst immer eine Ausnahme aus.</summary>
+        <returns>Löst immer eine Ausnahme aus.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Zweck der <xref:System.Windows.TemplateContentLoader> zum Laden des XAML-Codes und Aufrufen von einem Objekt Factory Metapher ist ein `Save` Pfad gehört nicht zu den beabsichtigten Entwurf. Die <xref:System.Xaml.IXamlObjectWriterFactory> übergeben, die als Dienst für <xref:System.Windows.TemplateContentLoader.Load%2A> bietet Unterstützung für alle weiteren Operationen mit XAML und der Vorlage.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Wird ausgelöst, in allen Fällen.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

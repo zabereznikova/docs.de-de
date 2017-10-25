@@ -1,0 +1,99 @@
+<Type Name="Func&lt;T,TResult&gt;" FullName="System.Func&lt;T,TResult&gt;">
+  <TypeSignature Language="C#" Value="public delegate TResult Func&lt;in T,out TResult&gt;(T arg);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Func`2&lt;- T, + TResult&gt; extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Func`2" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="TResult">
+      <Constraints>
+        <ParameterAttribute>Covariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.Core, Version=3.5.0.0, Culture=Neutral, PublicKeyToken=b77a5c561934e089")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters>
+    <Parameter Name="arg" Type="T" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>TResult</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <typeparam name="T">Der Typ des Parameters der Methode, die dieser Delegat kapselt.</typeparam>
+    <typeparam name="TResult">Der Typ des Rückgabewerts der Methode, die dieser Delegat kapselt.</typeparam>
+    <param name="arg">Der Parameter der Methode, die dieser Delegat kapselt.</param>
+    <summary>Kapselt eine Methode, die über einen Parameter verfügt und gibt einen Wert des Typs gemäß den <paramref name="TResult" /> Parameter.</summary>
+    <returns>Der Rückgabewert der Methode, die dieser Delegat kapselt.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die .NET Framework-Quellcodes für diesen Typ finden Sie unter der [Verweisquelle](http://referencesource.microsoft.com/#mscorlib/system/action.cs#7a86aba051da82dd). Sie können den Quellcode online Durchsuchen, Referenz für die Offlineanzeige herunterladen und schrittweise durchlaufen (inklusive Patches und Updates) während des Debuggens; finden Sie unter [Anweisungen](http://referencesource.microsoft.com/).  
+  
+ Dieser Delegat können Sie eine Methode darstellen, die als Parameter übergeben werden kann, ohne explizit einen benutzerdefinierten Delegaten zu deklarieren. Die gekapselte Methode muss der Methodensignatur entsprechen, die von diesem Delegaten definiert ist. Dies bedeutet, dass die gekapselte Methode über einen Parameter verfügen muss, die als Wert übergeben wird und sie einen Wert zurückgeben muss.  
+  
+> [!NOTE]
+>  Auf eine Methode zu verweisen, die über einen Parameter verfügt und gibt `void` (oder in Visual Basic deklariert wird als eine `Sub` sondern als eine `Function`), die generische <xref:System.Action%601> stattdessen delegieren.  
+  
+ Bei Verwendung der <xref:System.Func%602> Delegaten, Sie müssen nicht explizit einen Delegaten definieren, die eine Methode mit einem einzelnen Parameter kapselt. Der folgende Code deklariert z. B. explizit einen Delegaten, mit dem Namen `ConvertMethod` und weist einen Verweis auf die `UppercaseString` Methode, um eine Delegatinstanz.  
+  
+ [!code-csharp[System.Func~2#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Func~2/cs/Delegate.cs#1)]
+ [!code-vb[System.Func~2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Func~2/vb/Delegate.vb#1)]  
+  
+ Im folgende Beispiel wird dieser Code vereinfacht, durch die Instanziierung der <xref:System.Func%602> Delegaten explizit einen neuen Delegaten definieren und eine benannte Methode zuweisen.  
+  
+ [!code-csharp[System.Func~2#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Func~2/cs/Func2_1.cs#2)]
+ [!code-vb[System.Func~2#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Func~2/vb/Func2_1.vb#2)]  
+  
+ Sie können auch die <xref:System.Func%602> delegieren mit anonymen Methoden in C# geschrieben, wie im folgenden Beispiel veranschaulicht. (Eine Einführung für anonyme Methoden finden Sie unter [anonyme Methoden](~/docs/csharp/programming-guide/statements-expressions-operators/anonymous-methods.md).)  
+  
+ [!code-csharp[System.Func~2#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Func~2/cs/Anon.cs#3)]  
+  
+ Sie können auch einen Lambda-Ausdruck zum Zuweisen einer <xref:System.Func%602> zu delegieren, wie im folgenden Beispiel veranschaulicht. (Eine Einführung in Lambda-Ausdrücke finden Sie unter [Lambda-Ausdrücke](~/docs/visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) und [Lambda-Ausdrücke](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).)  
+  
+ [!code-csharp[System.Func~2#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Func~2/cs/Lambda.cs#4)]
+ [!code-vb[System.Func~2#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Func~2/vb/Lambda.vb#4)]  
+  
+ Der zugrunde liegende Typ eines Lambda-Ausdrucks ist eine der generischen `Func` Delegaten. Dadurch möglich, einen Lambda-Ausdruck als Parameter zu übergeben, ohne explizit einem Delegaten zuzuweisen. Insbesondere, da viele Methoden von Typen in der <xref:System.Linq> Namespace haben <xref:System.Func%602> Parameter können übergeben dieser Methoden einen Lambda-Ausdruck ohne explizit Instanziieren einer <xref:System.Func%602> delegieren.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie deklarieren und Verwenden einer <xref:System.Func%602> delegieren. Dieses Beispiel deklariert eine <xref:System.Func%602> Variable und weist ihm einen Lambdaausdruck, der die Zeichen in einer Zeichenfolge in Großbuchstaben konvertiert. Der Delegat, der diese Methode kapselt wird anschließend zum Übergeben der <xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType> Methode, um die Zeichenfolgen in ein Array von Zeichenfolgen in Großschreibung ändern.  
+  
+ [!code-csharp[System.Func~2#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Func~2/cs/Example.cs#5)]
+ [!code-vb[System.Func~2#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Func~2/vb/Example.vb#5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

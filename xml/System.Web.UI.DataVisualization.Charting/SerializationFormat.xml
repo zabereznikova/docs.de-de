@@ -1,0 +1,57 @@
+<Type Name="SerializationFormat" FullName="System.Web.UI.DataVisualization.Charting.SerializationFormat">
+  <TypeSignature Language="C#" Value="public enum SerializationFormat" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SerializationFormat extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.SerializationFormat" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Stellt die Formatierung zu verwendenden Typ, wenn das Diagramm serialisiert wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataVisualization.Charting.SerializationFormat> Enumeration in Verbindung mit der Format-Eigenschaft verwendet wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Binary">
+      <MemberSignature Language="C#" Value="Binary" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SerializationFormat Binary = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SerializationFormat.Binary" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SerializationFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diagrammdaten werden in einem binären Format serialisiert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Xml">
+      <MemberSignature Language="C#" Value="Xml" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SerializationFormat Xml = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SerializationFormat.Xml" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SerializationFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diagrammdaten werden mit wohlgeformtem XML serialisiert werden.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

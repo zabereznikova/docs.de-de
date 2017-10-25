@@ -1,0 +1,108 @@
+<Type Name="XpsDigSigPartAlteringRestrictions" FullName="System.Windows.Xps.Packaging.XpsDigSigPartAlteringRestrictions">
+  <TypeSignature Language="C#" Value="public enum XpsDigSigPartAlteringRestrictions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed XpsDigSigPartAlteringRestrictions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Xps.Packaging.XpsDigSigPartAlteringRestrictions" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Teile der XPS <see cref="T:System.IO.Packaging.Package" /> , die aus dem Bereich einer digitalen Signatur ausgeschlossen werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration verfügt über ein FlagsAttribute, das eine bitweise Kombination der Memberwerte zulässt.  
+  
+ Teile, die als aus der digitalen Signatur ausgeschlossen angegeben sind, können geändert werden, ohne die Signatur ungültig.  Beispielsweise ist ein Dokument von mehreren Personen signiert werden soll, muss das SignatureOrigin Teil, aus der Signatur ausgeschlossen werden sollen, wenn das Dokument zuerst signiert wird.  (Ausschlüsse werden angegeben, der `restrictions` Parameter des Aufrufs von <xref:System.Windows.Xps.Packaging.XpsDocument.SignDigitally%2A>.)  Wenn das Webpart SignatureOrigin nicht ausgeschlossen wird, ungültig alle weiteren Signaturen die Signatur des ersten Signaturgebers.  
+  
+ Weitere Informationen zu digitalen Signaturen finden Sie im MSDN-Artikel *Digital signieren Framework von der Open Packaging Conventions* unter [http://go.microsoft.com/fwlink/?LinkId=74494](http://go.microsoft.com/fwlink/?LinkId=74494).  
+  
+ Weitere Informationen zu den Core-Eigenschaften und die Signatur Ursprung Teile finden Sie in Kapitel 3 der *Open Packaging Conventions* Spezifikation zum Download verfügbar unter [http://go.microsoft.com/fwlink/?LinkID=71255](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie mit dieser Enumeration zum digitalen Signieren einer [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] Dokument.  
+  
+ [!code-csharp[XpsReadWriteSign#SignXpsDocument](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsReadWriteSign/CSharp/SignatureDefinitionsAndSigning.cs#signxpsdocument)]
+ [!code-vb[XpsReadWriteSign#SignXpsDocument](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsReadWriteSign/visualbasic/signaturedefinitionsandsigning.vb#signxpsdocument)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Annotations">
+      <MemberSignature Language="C#" Value="Annotations" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Xps.Packaging.XpsDigSigPartAlteringRestrictions Annotations = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Xps.Packaging.XpsDigSigPartAlteringRestrictions.Annotations" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.XpsDigSigPartAlteringRestrictions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Anmerkungen Teil wird ausgeschlossen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CoreMetadata">
+      <MemberSignature Language="C#" Value="CoreMetadata" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Xps.Packaging.XpsDigSigPartAlteringRestrictions CoreMetadata = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Xps.Packaging.XpsDigSigPartAlteringRestrictions.CoreMetadata" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.XpsDigSigPartAlteringRestrictions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Kerneigenschaften Teil wird ausgeschlossen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Xps.Packaging.XpsDigSigPartAlteringRestrictions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Xps.Packaging.XpsDigSigPartAlteringRestrictions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.XpsDigSigPartAlteringRestrictions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Keine Teile werden ausgeschlossen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SignatureOrigin">
+      <MemberSignature Language="C#" Value="SignatureOrigin" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Xps.Packaging.XpsDigSigPartAlteringRestrictions SignatureOrigin = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Xps.Packaging.XpsDigSigPartAlteringRestrictions.SignatureOrigin" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.XpsDigSigPartAlteringRestrictions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Ursprung der Signatur Teil wird ausgeschlossen.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

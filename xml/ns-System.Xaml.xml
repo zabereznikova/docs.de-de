@@ -1,0 +1,6 @@
+<Namespace Name="System.Xaml">
+  <Docs>
+    <summary>Enthält Typen, die mit XAML-Readern und XAML-Writern in Zusammenhang stehen. Dies schließt die standardmäßigen Implementierungen von .NET Framework-XAML-Dienste und die XAML-Readern und XAML-Writern. Enthält auch Typen, die relevant für die Verwendung von XAML-Typsystem und andere Unterstützungstypen, die im Zusammenhang mit XAML und .NET Framework XAML Services-Konzepte.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

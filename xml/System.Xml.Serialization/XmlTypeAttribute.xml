@@ -1,0 +1,299 @@
+<Type Name="XmlTypeAttribute" FullName="System.Xml.Serialization.XmlTypeAttribute">
+  <TypeSignature Language="C#" Value="public class XmlTypeAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlTypeAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.XmlTypeAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Enum | System.AttributeTargets.Interface)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Steuert das XML-Schema, das generiert wird, wenn das Attributziel vom serialisiert wird die <see cref="T:System.Xml.Serialization.XmlSerializer" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Serialization.XmlTypeAttribute> gehört zu einer Familie von Attributen, die steuert, wie die <xref:System.Xml.Serialization.XmlSerializer> Serialisieren oder Deserialisieren eines Objekts. Eine vollständige Liste ähnlicher Attribute finden Sie unter [Attribute, XML-Serialisierung](~/docs/standard/serialization/attributes-that-control-xml-serialization.md).  
+  
+ Sie können Anwenden der <xref:System.Xml.Serialization.XmlTypeAttribute> auf eine Klasse, Struktur, Enumeration oder Schnittstellendeklaration.  
+  
+ Anwenden der <xref:System.Xml.Serialization.XmlTypeAttribute> auf eine Klasse an, der XML-Datentyp-Namespace, den Namen der XML-Typ und angibt, ob den Typ der XML-Schema-Dokument einschließt. Um die Ergebnisse der Festlegen der Eigenschaften finden Sie unter der <xref:System.Xml.Serialization.XmlTypeAttribute> Klasse, die Anwendung als eine ausführbare Datei oder DLL kompilieren und übergeben Sie die resultierende Datei an die [XML-Schemadefinitionstools (Xsd.exe)](~/docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md). Das Tool schreibt das Schema, einschließlich der Typdefinition.  
+  
+> [!NOTE]
+>  Wenn Sie festlegen, die <xref:System.Xml.Serialization.XmlTypeAttribute.IncludeInSchema%2A> Eigenschaft `false`, die [XML-Schemadefinitionstools (Xsd.exe)](~/docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md) schließt nicht den Typ im Schema. Standardmäßig wird für jede öffentliche Klasse das XSD-Tool generiert eine `complexType` und ein Element dieses Typs.  
+  
+ Weitere Informationen zum Verwenden von Attributen finden Sie unter [Attribute](http://msdn.microsoft.com/library/30386922-1e00-4602-9ebf-526b271a8b87).  
+  
+> [!NOTE]
+>  Sie können das Wort `XmlType` im Code anstelle des längeren <xref:System.Xml.Serialization.XmlTypeAttribute>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt zwei Klassen, die die <xref:System.Xml.Serialization.XmlTypeAttribute> angewendet wurde.  
+  
+ [!code-cpp[Classic XmlTypeAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlTypeAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlTypeAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlTypeAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlTypeAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlTypeAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlTypeAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlTypeAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.Serialization.XmlTypeAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt zwei Instanzen der <xref:System.Xml.Serialization.XmlTypeAttribute> Klasse, die verwendet werden, um die Serialisierung von zwei Klassen zu überschreiben.  
+  
+ [!code-cpp[XMLTypeAttribute1_2#2](~/samples/snippets/cpp/VS_Snippets_Remoting/XMLTypeAttribute1_2/CPP/xmltypeattribute1_2.cpp#2)]
+ [!code-csharp[XMLTypeAttribute1_2#2](~/samples/snippets/csharp/VS_Snippets_Remoting/XMLTypeAttribute1_2/CS/xmltypeattribute1_2.cs#2)]
+ [!code-vb[XMLTypeAttribute1_2#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/XMLTypeAttribute1_2/VB/xmltypeattribute1_2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlTypeAttribute (string typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlTypeAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">Geben Sie der Namen der XML, die die <see cref="T:System.Xml.Serialization.XmlSerializer" /> generiert, wenn sie die Klasseninstanz serialisiert (und erkennt, wenn es beim Deserialisieren der Klasseninstanz).</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xml.Serialization.XmlTypeAttribute" /> -Klasse und gibt den Namen des XML-Typs.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anwenden der <xref:System.Xml.Serialization.XmlTypeAttribute> auf eine Klasse an, der XML-Datentyp-Namespace, den Namen der XML-Typ und angibt, ob den Typ der XML-Schema-Dokument einschließt. Um die Ergebnisse der Festlegen der Eigenschaften finden Sie unter der <xref:System.Xml.Serialization.XmlTypeAttribute> Klasse, die Anwendung als eine ausführbare Datei oder DLL kompilieren und übergeben Sie die resultierende Datei an die [XML-Schemadefinitionstools (Xsd.exe)](~/docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md). Das Tool schreibt das Schema, einschließlich der Typdefinition.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt zwei Instanzen der <xref:System.Xml.Serialization.XmlTypeAttribute> Klasse, die verwendet werden, um die Serialisierung von zwei Klassen zu überschreiben.  
+  
+ [!code-cpp[XMLTypeAttribute1_2#2](~/samples/snippets/cpp/VS_Snippets_Remoting/XMLTypeAttribute1_2/CPP/xmltypeattribute1_2.cpp#2)]
+ [!code-csharp[XMLTypeAttribute1_2#2](~/samples/snippets/csharp/VS_Snippets_Remoting/XMLTypeAttribute1_2/CS/xmltypeattribute1_2.cs#2)]
+ [!code-vb[XMLTypeAttribute1_2#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/XMLTypeAttribute1_2/VB/xmltypeattribute1_2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnonymousType">
+      <MemberSignature Language="C#" Value="public bool AnonymousType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AnonymousType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlTypeAttribute.AnonymousType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der bestimmt, ob der resultierende Schematyp ein anonymer XSD-Typ ist.</summary>
+        <value>
+          <see langword="true" />, wenn die resultierende Schematyp ein anonymer XSD-Typ ist andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncludeInSchema">
+      <MemberSignature Language="C#" Value="public bool IncludeInSchema { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IncludeInSchema" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlTypeAttribute.IncludeInSchema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Typ in XML-Schemadokumente enthalten.</summary>
+        <value>
+          <see langword="true" />den Typ in XML-Schemadokumente aufgenommen werden; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anwenden der <xref:System.Xml.Serialization.XmlTypeAttribute> auf eine Klasse an, der XML-Datentyp-Namespace, den Namen der XML-Typ und angibt, ob den Typ der XML-Schema-Dokument einschließt. Um die Ergebnisse der Festlegen der Eigenschaften finden Sie unter der <xref:System.Xml.Serialization.XmlTypeAttribute> -Klasse, kompilieren Sie die Anwendung als eine ausführbare Datei oder DLL, und übergeben Sie die resultierende Datei für das XML Schema Definition-Tool (XSD.exe). Das Tool schreibt das Schema, einschließlich der Typdefinition.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel wendet die <xref:System.Xml.Serialization.XmlTypeAttribute> auf der `ExtraneousInfo` Klasse, indem die <xref:System.Xml.Serialization.XmlTypeAttribute.IncludeInSchema%2A> Eigenschaft `false`.  
+  
+ [!code-cpp[Classic XmlTypeAttribute.IncludeInSchema Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlTypeAttribute.IncludeInSchema Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlTypeAttribute.IncludeInSchema Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlTypeAttribute.IncludeInSchema Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlTypeAttribute.IncludeInSchema Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlTypeAttribute.IncludeInSchema Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public string Namespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlTypeAttribute.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namespace des XML-Typs.</summary>
+        <value>Der Namespace des XML-Typs.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel wendet die <xref:System.Xml.Serialization.XmlTypeAttribute> auf eine Klasse beim Festlegen der <xref:System.Xml.Serialization.XmlTypeAttribute.Namespace%2A> Eigenschaft.  
+  
+ [!code-cpp[Classic XmlTypeAttribute.Namespace Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlTypeAttribute.Namespace Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlTypeAttribute.Namespace Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlTypeAttribute.Namespace Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlTypeAttribute.Namespace Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlTypeAttribute.Namespace Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeName">
+      <MemberSignature Language="C#" Value="public string TypeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlTypeAttribute.TypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des XML-Typs.</summary>
+        <value>Der Name des XML-Typs.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anwenden der <xref:System.Xml.Serialization.XmlTypeAttribute> auf eine Klasse an, der XML-Datentyp-Namespace, den Namen der XML-Typ und angibt, ob den Typ der XML-Schema-Dokument einschließt. Um die Ergebnisse der Festlegen der Eigenschaften finden Sie unter der <xref:System.Xml.Serialization.XmlTypeAttribute> Klasse, die Anwendung als eine ausführbare Datei oder DLL kompilieren und übergeben Sie die resultierende Datei an die [XML-Schemadefinitionstools (Xsd.exe)](~/docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md). Das Tool schreibt das Schema, einschließlich der Typdefinition.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel wendet die <xref:System.Xml.Serialization.XmlTypeAttribute> auf die `Person` und `Job` Klassen. Wenn Sie kompilieren Sie die Klasse und die resultierende ausführbare Datei an das XML Schema Definition-Tool übergeben, wird das Schema im ausgabeabschnitt angezeigt.  
+  
+ [!code-cpp[Classic XmlTypeAttribute.TypeName Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlTypeAttribute.TypeName Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlTypeAttribute.TypeName Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlTypeAttribute.TypeName Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlTypeAttribute.TypeName Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlTypeAttribute.TypeName Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1461 @@
+<Type Name="FlowDocumentScrollViewer" FullName="System.Windows.Controls.FlowDocumentScrollViewer">
+  <TypeSignature Language="C#" Value="public class FlowDocumentScrollViewer : System.Windows.Controls.Control, IServiceProvider, System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi FlowDocumentScrollViewer extends System.Windows.Controls.Control implements class System.IServiceProvider, class System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.FlowDocumentScrollViewer" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Control</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IServiceProvider</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Windows.Markup.IAddChild</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Document")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_ContentHost", Type=typeof(System.Windows.Controls.ScrollViewer))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_FindToolBarHost", Type=typeof(System.Windows.Controls.Decorator))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_ToolBarHost", Type=typeof(System.Windows.Controls.Decorator))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Steuerelement zum Anzeigen von fortlaufendem Inhalt in einem fortlaufenden Bildlaufmodus bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.FlowDocumentScrollViewer>Zeigt den Inhalt im fortlaufenden Modus aus durchführen eines Bildlaufs.  Ein ähnliches Steuerelement <xref:System.Windows.Controls.FlowDocumentPageViewer>, zeigt den Inhalt in einen Anzeigemodus mit jeweils einer Seite an.  Beide <xref:System.Windows.Controls.FlowDocumentPageViewer> und <xref:System.Windows.Controls.FlowDocumentScrollViewer> werden so repariert, einen bestimmten Anzeigemodus.  Andererseits, <xref:System.Windows.Controls.FlowDocumentReader> enthält Features, die dem Benutzer ermöglichen, die dynamisch zwischen verschiedenen Anzeigemodi auswählen (gemäß der <xref:System.Windows.Controls.FlowDocumentReaderViewingMode> Enumeration), aber schwerer als <xref:System.Windows.Controls.FlowDocumentPageViewer> oder <xref:System.Windows.Controls.FlowDocumentScrollViewer>.  
+  
+ Die folgende Abbildung zeigt eine <xref:System.Windows.Controls.FlowDocumentScrollViewer> -Steuerelement mit dem Standardwert [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)].  
+  
+ ![Bildschirmabbildung: Allgemeiner FlowDocumentScrollViewer](~/add/media/flowdocscrollviewer-main.png "Screenshot: Allgemeiner FlowDocumentScrollViewer")  
+  
+ Eine vertikale Scrollleiste wird standardmäßig immer angezeigt, eine horizontale Scrollleiste nur nach Bedarf.  Die Standardeinstellung [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] für <xref:System.Windows.Controls.FlowDocumentScrollViewer> enthält keine Symbolleiste, aber die <xref:System.Windows.Controls.FlowDocumentScrollViewer.IsToolBarVisible%2A> Eigenschaft kann verwendet werden, um eine integrierte Symbolleiste aktivieren.  
+  
+ <xref:System.Windows.Documents.FlowDocument>ist das einzige zulässige untergeordnete Element für eine <xref:System.Windows.Controls.FlowDocumentScrollViewer>.  Ein <xref:System.Windows.Controls.FlowDocumentScrollViewer> Element kann mehr als eine hosten <xref:System.Windows.Documents.FlowDocument>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel definiert die <xref:System.Windows.Controls.FlowDocumentScrollViewer> in der obigen Abbildung gezeigt.  
+  
+ [!code-xaml[FloaterFigureSnippets#_FlowDocumentScrollViewerXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FloaterFigureSnippets/CSharp/Window1.xaml#_flowdocumentscrollviewerxaml)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FlowDocumentScrollViewer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentScrollViewer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.FlowDocumentScrollViewer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelPrint">
+      <MemberSignature Language="C#" Value="public void CancelPrint ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CancelPrint() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentScrollViewer.CancelPrint" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bricht alle aktuellen Druckaufträge ab.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanDecreaseZoom">
+      <MemberSignature Language="C#" Value="public bool CanDecreaseZoom { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanDecreaseZoom" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.FlowDocumentScrollViewer.CanDecreaseZoom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="P:System.Windows.Controls.FlowDocumentScrollViewer.Zoom" /> Ebene kann verringert werden.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="P:System.Windows.Controls.FlowDocumentScrollViewer.Zoom" /> Ebene kann eine verringerte ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen der <xref:System.Windows.Controls.FlowDocumentScrollViewer.DecreaseZoom%2A> -Methode verringert die <xref:System.Windows.Controls.FlowDocumentScrollViewer.Zoom%2A> Ebene durch den angegebenen Betrag der <xref:System.Windows.Controls.FlowDocumentScrollViewer.ZoomIncrement%2A> Eigenschaft.  Der Wert dieser Eigenschaft unterliegt den Wert von der <xref:System.Windows.Controls.FlowDocumentScrollViewer.MinZoom%2A> Eigenschaft.  
+  
+<a name="dependencyPropertyInfo_CanDecreaseZoom"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.FlowDocumentScrollViewer.CanDecreaseZoomProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanDecreaseZoomProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CanDecreaseZoomProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CanDecreaseZoomProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.FlowDocumentScrollViewer.CanDecreaseZoomProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.FlowDocumentScrollViewer.CanDecreaseZoom" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanIncreaseZoom">
+      <MemberSignature Language="C#" Value="public bool CanIncreaseZoom { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanIncreaseZoom" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.FlowDocumentScrollViewer.CanIncreaseZoom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="P:System.Windows.Controls.FlowDocumentScrollViewer.Zoom" /> Ebene erhöht werden kann.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="P:System.Windows.Controls.FlowDocumentScrollViewer.Zoom" /> Stufe kann mehr ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aufrufen der <xref:System.Windows.Controls.FlowDocumentScrollViewer.IncreaseZoom%2A> Methode erhöht die <xref:System.Windows.Controls.FlowDocumentScrollViewer.Zoom%2A> Ebene durch den angegebenen Betrag der <xref:System.Windows.Controls.FlowDocumentScrollViewer.ZoomIncrement%2A> Eigenschaft.  Der Wert dieser Eigenschaft unterliegt den Wert von der <xref:System.Windows.Controls.FlowDocumentScrollViewer.MaxZoom%2A> Eigenschaft.  
+  
+<a name="dependencyPropertyInfo_CanIncreaseZoom"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.FlowDocumentScrollViewer.CanIncreaseZoomProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanIncreaseZoomProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CanIncreaseZoomProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CanIncreaseZoomProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.FlowDocumentScrollViewer.CanIncreaseZoomProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="F:System.Windows.Controls.FlowDocumentScrollViewer.CanDecreaseZoomProperty" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecreaseZoom">
+      <MemberSignature Language="C#" Value="public void DecreaseZoom ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DecreaseZoom() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentScrollViewer.DecreaseZoom" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt die <see cref="P:System.Windows.Input.NavigationCommands.DecreaseZoom" /> Befehl weitergeleitet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.FlowDocumentScrollViewer.DecreaseZoom%2A> Methode verringert die aktuelle <xref:System.Windows.Controls.FlowDocumentScrollViewer.Zoom%2A> Ebene durch den Wert von der <xref:System.Windows.Controls.FlowDocumentScrollViewer.ZoomIncrement%2A> Eigenschaft.  
+  
+ Beim Aufrufen dieser Methode hat keine Auswirkung, wenn die <xref:System.Windows.Controls.FlowDocumentScrollViewer.CanDecreaseZoom%2A> -Eigenschaft gibt `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Document">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.FlowDocument Document { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.FlowDocument Document" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.FlowDocumentScrollViewer.Document" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.FlowDocument</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Windows.Documents.FlowDocument" /> ab, das die vom <see cref="T:System.Windows.Controls.FlowDocumentScrollViewer" /> anzuzeigenden Inhalte enthält, oder legt es fest.</summary>
+        <value>Ein <see cref="T:System.Windows.Documents.FlowDocument" />, das die vom <see cref="T:System.Windows.Controls.FlowDocumentScrollViewer" /> anzuzeigenden Inhalte enthält. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DocumentProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DocumentProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DocumentProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.FlowDocumentScrollViewer.DocumentProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.FlowDocumentScrollViewer.Document" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Find">
+      <MemberSignature Language="C#" Value="public void Find ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Find() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentScrollViewer.Find" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schaltet die **suchen** Dialogfeld.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ STRG + F bietet standardmäßig eine Tastenkombination für das Umschalten der **suchen** Dialogfeld.  Die folgende Abbildung zeigt die **suchen** -Dialogfeld auf eine <xref:System.Windows.Controls.FlowDocumentScrollViewer> mit Standard-Benutzeroberfläche.  
+  
+ ![Bildschirmabbildung: FlowDocumentScrollViewer Dialogfeld Suchen](~/add/media/flowdocscrollviewer-find.png "Bildschirmabbildung: FlowDocumentScrollViewer, Dialogfeld "Suchen"")  
+  
+ Die Standardeinstellung **suchen** Dialogfeld enthält ein Feld für das Eingeben von Suchtext, sowie Schaltflächen zum **Weitersuchen**, **Vorheriges suchen**, und **Optionen**.  Die folgenden **suchen** Optionen werden standardmäßig bereitgestellt:  
+  
+-   Nur ganzes Wort suchen  
+  
+-   Groß-/Kleinschreibung beachten  
+  
+-   Übereinstimmung diakritisches Zeichen  
+  
+-   Übereinstimmung kashida  
+  
+-   Übereinstimmung Alef hamza  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalScrollBarVisibility">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.ScrollBarVisibility HorizontalScrollBarVisibility { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.ScrollBarVisibility HorizontalScrollBarVisibility" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.FlowDocumentScrollViewer.HorizontalScrollBarVisibility" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ScrollBarVisibility</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob eine horizontale Bildlaufleiste angezeigt wird.</summary>
+        <value>Einer der <see cref="T:System.Windows.Controls.ScrollBarVisibility" />-Werte. Die Standardeinstellung ist <see cref="F:System.Windows.Controls.ScrollBarVisibility.Auto" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_HorizontalScrollBarVisibility"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.FlowDocumentScrollViewer.HorizontalScrollBarVisibilityProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Controls.FlowDocumentScrollViewer.HorizontalScrollBarVisibility%2A> Attribut.  
+  
+ [!code-xaml[FlowDocumentSnippets#_FlowDocumentScrollViewerXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_flowdocumentscrollviewerxaml)]  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Controls.FlowDocumentScrollViewer.HorizontalScrollBarVisibility%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentScrollViewer](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentscrollviewer)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentScrollViewer](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentscrollviewer)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalScrollBarVisibilityProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HorizontalScrollBarVisibilityProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HorizontalScrollBarVisibilityProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.FlowDocumentScrollViewer.HorizontalScrollBarVisibilityProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.FlowDocumentScrollViewer.HorizontalScrollBarVisibility" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncreaseZoom">
+      <MemberSignature Language="C#" Value="public void IncreaseZoom ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void IncreaseZoom() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentScrollViewer.IncreaseZoom" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt die <see cref="P:System.Windows.Input.NavigationCommands.IncreaseZoom" /> Befehl weitergeleitet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.FlowDocumentScrollViewer.IncreaseZoom%2A> Methode erhöht die aktuelle <xref:System.Windows.Controls.FlowDocumentScrollViewer.Zoom%2A> Ebene durch den Wert von der <xref:System.Windows.Controls.FlowDocumentScrollViewer.ZoomIncrement%2A> Eigenschaft.  
+  
+ Beim Aufrufen dieser Methode hat keine Auswirkung, wenn die <xref:System.Windows.Controls.FlowDocumentScrollViewer.CanIncreaseZoom%2A> Eigenschaft  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInactiveSelectionHighlightEnabled">
+      <MemberSignature Language="C#" Value="public bool IsInactiveSelectionHighlightEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInactiveSelectionHighlightEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.FlowDocumentScrollViewer.IsInactiveSelectionHighlightEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob <see cref="T:System.Windows.Controls.FlowDocumentScrollViewer" /> ausgewählten Text angezeigt, wenn das Steuerelement nicht den Fokus besitzt.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Controls.FlowDocumentScrollViewer" /> markierten Text zeigt bei der <see cref="T:System.Windows.Controls.FlowDocumentScrollViewer" /> verfügt nicht über den Fokus ist, andernfalls <see langword="false" />.  
+  
+ Der registrierte Standardwert ist <see langword="false" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter [Dependency Property Value Precedence](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_IsInactiveSelectionHighlightEnabled"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.FlowDocumentScrollViewer.IsInactiveSelectionHighlightEnabledProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInactiveSelectionHighlightEnabledProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsInactiveSelectionHighlightEnabledProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsInactiveSelectionHighlightEnabledProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.FlowDocumentScrollViewer.IsInactiveSelectionHighlightEnabledProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.FlowDocumentScrollViewer.IsInactiveSelectionHighlightEnabled" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSelectionActive">
+      <MemberSignature Language="C#" Value="public bool IsSelectionActive { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSelectionActive" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.FlowDocumentScrollViewer.IsSelectionActive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Windows.Controls.FlowDocumentScrollViewer" /> verfügt über den Fokus und markierten Text.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Controls.FlowDocumentScrollViewer" /> markierten Text zeigt an, wenn das Textfeld nicht den Fokus besitzt, andernfalls <see langword="false" />.  
+  
+ Der registrierte Standardwert ist <see langword="false" />. Weitere Informationen dazu, was den Wert beeinflussen können, finden Sie unter [Dependency Property Value Precedence](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_IsSelectionActive"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.FlowDocumentScrollViewer.IsSelectionActiveProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSelectionActiveProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsSelectionActiveProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsSelectionActiveProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.FlowDocumentScrollViewer.IsSelectionActiveProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.FlowDocumentScrollViewer.IsSelectionActive" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSelectionEnabled">
+      <MemberSignature Language="C#" Value="public bool IsSelectionEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSelectionEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.FlowDocumentScrollViewer.IsSelectionEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Auswahl von Inhalten innerhalb der <see cref="T:System.Windows.Controls.FlowDocumentScrollViewer" /> aktiviert ist.</summary>
+        <value>
+          <see langword="true" />um anzugeben, dass die Auswahl aktiviert ist. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_IsSelectionEnabled"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.FlowDocumentScrollViewer.IsSelectionEnabledProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Controls.FlowDocumentScrollViewer.IsSelectionEnabled%2A> Attribut.  
+  
+ [!code-xaml[FlowDocumentSnippets#_FlowDocumentScrollViewerXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_flowdocumentscrollviewerxaml)]  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Controls.FlowDocumentScrollViewer.IsSelectionEnabled%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentScrollViewer](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentscrollviewer)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentScrollViewer](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentscrollviewer)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSelectionEnabledProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsSelectionEnabledProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsSelectionEnabledProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.FlowDocumentScrollViewer.IsSelectionEnabledProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.FlowDocumentScrollViewer.IsSelectionEnabled" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsToolBarVisible">
+      <MemberSignature Language="C#" Value="public bool IsToolBarVisible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsToolBarVisible" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.FlowDocumentScrollViewer.IsToolBarVisible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Windows.Controls.FlowDocumentScrollViewer" /> Symbolleiste sichtbar ist.</summary>
+        <value>
+          <see langword="true" />um anzugeben, dass die Symbolleiste angezeigt wird. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Abbildung zeigt die <xref:System.Windows.Controls.FlowDocumentScrollViewer> Symbolleiste.  
+  
+ ![Bildschirmabbildung: FlowDocumentScrollViewer-Symbolleiste](~/add/media/flowdocscrollviewer-toolbar.png "Bildschirmabbildung: FlowDocumentScrollViewer-Symbolleiste")  
+  
+ Standardmäßig wird diese Symbolleiste nicht angezeigt.  
+  
+<a name="dependencyPropertyInfo_IsToolBarVisible"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.FlowDocumentScrollViewer.IsToolBarVisibleProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Controls.FlowDocumentScrollViewer.IsToolBarVisible%2A> Attribut.  
+  
+ [!code-xaml[FlowDocumentSnippets#_FlowDocumentScrollViewerXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_flowdocumentscrollviewerxaml)]  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Controls.FlowDocumentScrollViewer.IsToolBarVisible%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentScrollViewer](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentscrollviewer)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentScrollViewer](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentscrollviewer)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsToolBarVisibleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsToolBarVisibleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsToolBarVisibleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.FlowDocumentScrollViewer.IsToolBarVisibleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.FlowDocumentScrollViewer.IsToolBarVisible" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogicalChildren">
+      <MemberSignature Language="C#" Value="protected override System.Collections.IEnumerator LogicalChildren { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerator LogicalChildren" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.FlowDocumentScrollViewer.LogicalChildren" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der die logischen untergeordneten Elemente durchlaufen, kann die <see cref="T:System.Windows.Controls.FlowDocumentScrollViewer" />.</summary>
+        <value>Ein Enumerator für die logischen untergeordneten Elemente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxZoom">
+      <MemberSignature Language="C#" Value="public double MaxZoom { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 MaxZoom" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.FlowDocumentScrollViewer.MaxZoom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximal zulässige <see cref="P:System.Windows.Controls.FlowDocumentScrollViewer.Zoom" /> Ebene für die <see cref="T:System.Windows.Controls.FlowDocumentScrollViewer" />.</summary>
+        <value>Die maximal zulässige Größe <see cref="P:System.Windows.Controls.FlowDocumentScrollViewer.Zoom" /> Ebene für die <see cref="T:System.Windows.Controls.FlowDocumentScrollViewer" />, als Prozentsatz interpretiert. Der Standardwert ist 200,0 (maximaler Zoom von 200 %).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_MaxZoom"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.FlowDocumentScrollViewer.MaxZoomProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Controls.FlowDocumentScrollViewer.MaxZoom%2A> Attribut.  
+  
+ [!code-xaml[FlowDocumentSnippets#_FlowDocumentScrollViewerXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_flowdocumentscrollviewerxaml)]  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Controls.FlowDocumentScrollViewer.MaxZoom%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentScrollViewer](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentscrollviewer)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentScrollViewer](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentscrollviewer)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxZoomProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MaxZoomProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MaxZoomProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.FlowDocumentScrollViewer.MaxZoomProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.FlowDocumentScrollViewer.MaxZoom" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinZoom">
+      <MemberSignature Language="C#" Value="public double MinZoom { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 MinZoom" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.FlowDocumentScrollViewer.MinZoom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die minimale zulässige <see cref="P:System.Windows.Controls.FlowDocumentScrollViewer.Zoom" /> Ebene für die <see cref="T:System.Windows.Controls.FlowDocumentScrollViewer" />.</summary>
+        <value>Der zulässige Mindestwert <see cref="P:System.Windows.Controls.FlowDocumentScrollViewer.Zoom" /> Ebene für die <see cref="T:System.Windows.Controls.FlowDocumentScrollViewer" />, als Prozentsatz interpretiert. Der Standardwert ist 80,0 (minimale Zoom von 80 %).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_MinZoom"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.FlowDocumentScrollViewer.MinZoomProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Controls.FlowDocumentScrollViewer.MinZoom%2A> Attribut.  
+  
+ [!code-xaml[FlowDocumentSnippets#_FlowDocumentScrollViewerXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_flowdocumentscrollviewerxaml)]  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Controls.FlowDocumentScrollViewer.MinZoom%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentScrollViewer](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentscrollviewer)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentScrollViewer](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentscrollviewer)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinZoomProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MinZoomProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MinZoomProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.FlowDocumentScrollViewer.MinZoomProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.FlowDocumentScrollViewer.MinZoom" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnApplyTemplate">
+      <MemberSignature Language="C#" Value="public override void OnApplyTemplate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnApplyTemplate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentScrollViewer.OnApplyTemplate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt die visuelle Struktur für die <see cref="T:System.Windows.Controls.FlowDocumentScrollViewer" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn <xref:System.Windows.FrameworkElement.ApplyTemplate%2A> aufgerufen wird.  
+  
+ Diese Methode überschreibt <xref:System.Windows.FrameworkElement.OnApplyTemplate%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCancelPrintCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnCancelPrintCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnCancelPrintCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentScrollViewer.OnCancelPrintCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Behandelt die <see cref="P:System.Windows.Input.ApplicationCommands.CancelPrint" /> Befehl weitergeleitet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn die <xref:System.Windows.Input.ApplicationCommands.CancelPrint%2A> Befehl aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnContextMenuOpening">
+      <MemberSignature Language="C#" Value="protected override void OnContextMenuOpening (System.Windows.Controls.ContextMenuEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnContextMenuOpening(class System.Windows.Controls.ContextMenuEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentScrollViewer.OnContextMenuOpening(System.Windows.Controls.ContextMenuEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Controls.ContextMenuEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Argumente des Ereignisses.</param>
+        <summary>Wird aufgerufen, wenn ein nicht behandeltes <see cref="E:System.Windows.FrameworkElement.ContextMenuOpening" /> Routingereignis beim Durchlauf, erreicht dieser Klasse in seiner Route. Implementieren Sie diese Methode, um eine Klassenbehandlung für dieses Ereignis hinzuzufügen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode hat keine Standardimplementierung. Für den Fall, dass eine Zwischenklasse in der Vererbung diese Methode implementiert hat, sollten Sie dennoch die basisimplementierung aufrufen.  
+  
+ Der Zweck dieser Methode ist zumindest ähneln [!INCLUDE[TLA#tla_clr](~/includes/tlasharptla-clr-md.md)] -Ereignismuster auf * Methoden: DSC bietet die Möglichkeit zum Behandeln des übereinstimmenden Ereignis von abgeleiteten Klassen mit einem Klassenhandler statt einem Instanzhandler. In diesem Fall wird das übereinstimmende Ereignis ein Routingereignis. Das Implementierungsmuster der On * Methoden unterscheidet sich für Routingereignisse, da das Routingereignis von einem untergeordneten Element, nicht unbedingt das Element ausgelöst worden sein kann, die Handler aufgerufen wird, damit die Implementierung die Ereignisargumente Quelle durchführen müssen Eigenschaften berücksichtigt (und sollten nicht versuchen, erneut Auslösen des Ereignisses in den meisten Fällen). Unterklassen des <xref:System.Windows.Controls.FlowDocumentScrollViewer> wählen Sie mit der konnte Ereignishandlermethoden private Klasse aufgerufen werden, wenn das Ereignis entlang der Route empfangen wird. Eine mögliche Szenario besteht darin die Argumente des Ereignisses und das Ereignis absichtlich als behandelt markiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentScrollViewer.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt und gibt eine <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> für dieses Objekt <see cref="T:System.Windows.Controls.FlowDocumentScrollViewer" />.</summary>
+        <returns>Ein <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> für dieses Objekt <see cref="T:System.Windows.Controls.FlowDocumentScrollViewer" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt <xref:System.Windows.ContentElement.OnCreateAutomationPeer%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDecreaseZoomCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnDecreaseZoomCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDecreaseZoomCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentScrollViewer.OnDecreaseZoomCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Behandelt die <see cref="P:System.Windows.Input.NavigationCommands.DecreaseZoom" /> Befehl weitergeleitet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn die <xref:System.Windows.Input.NavigationCommands.DecreaseZoom%2A> Befehl aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFindCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnFindCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnFindCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentScrollViewer.OnFindCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Behandelt die <see cref="P:System.Windows.Input.ApplicationCommands.Find" /> Befehl weitergeleitet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn die <xref:System.Windows.Input.ApplicationCommands.Find%2A> Befehl aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnIncreaseZoomCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnIncreaseZoomCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnIncreaseZoomCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentScrollViewer.OnIncreaseZoomCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Behandelt die <see cref="P:System.Windows.Input.NavigationCommands.IncreaseZoom" /> Befehl weitergeleitet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn die <xref:System.Windows.Input.NavigationCommands.IncreaseZoom%2A> Befehl aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyDown">
+      <MemberSignature Language="C#" Value="protected override void OnKeyDown (System.Windows.Input.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyDown(class System.Windows.Input.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentScrollViewer.OnKeyDown(System.Windows.Input.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Input.KeyEventArgs" /> Objekt, das die zugeordneten Argumente enthält die <see cref="E:System.Windows.UIElement.KeyDown" /> Routingereignis.</param>
+        <summary>Behandelt die <see cref="E:System.Windows.UIElement.KeyDown" /> Routingereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt <xref:System.Windows.UIElement.OnKeyDown%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseWheel">
+      <MemberSignature Language="C#" Value="protected override void OnMouseWheel (System.Windows.Input.MouseWheelEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseWheel(class System.Windows.Input.MouseWheelEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentScrollViewer.OnMouseWheel(System.Windows.Input.MouseWheelEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseWheelEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Input.MouseWheelEventArgs" /> Objekt zugeordneten Argumente mit den <see cref="E:System.Windows.UIElement.MouseWheel" /> Routingereignis.</param>
+        <summary>Behandelt die <see cref="E:System.Windows.UIElement.MouseWheel" /> Routingereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn die <xref:System.Windows.UIElement.MouseWheel> Routingereignis ausgelöst wird.  
+  
+ Diese Methode überschreibt <xref:System.Windows.UIElement.OnMouseWheel%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPrintCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnPrintCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnPrintCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentScrollViewer.OnPrintCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Behandelt die <see cref="P:System.Windows.Input.ApplicationCommands.Print" /> Befehl weitergeleitet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn die <xref:System.Windows.Input.ApplicationCommands.Print%2A> Befehl aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPrintCompleted">
+      <MemberSignature Language="C#" Value="protected virtual void OnPrintCompleted ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnPrintCompleted() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentScrollViewer.OnPrintCompleted" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, wenn ein Druckauftrag abgeschlossen wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Print">
+      <MemberSignature Language="C#" Value="public void Print ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Print() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentScrollViewer.Print" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft ein Standarddialogfeld **Drucken** Dialogfeld zum Drucken des Inhalts verwendet werden kann die <see cref="T:System.Windows.Controls.FlowDocumentScrollViewer" /> und Druckeigenschaften zu konfigurieren.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardeinstellung <xref:System.Windows.Controls.FlowDocumentScrollViewer> [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] bietet eine **Drucken** Schaltfläche.  
+  
+ Die folgende Abbildung zeigt ein Beispiel für einen Standard **Drucken** Dialogfeld.  Beachten Sie, dass die bestimmte Darstellung der **Drucken** Dialogfeld variieren je nach Konfiguration des Hostcomputers.  
+  
+ ![Bildschirmabbildung: Drucken-Dialogfeld](~/add/media/flowdocrdr-print.png "Bildschirmabbildung: Dialogfeld Drucken")  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Selection">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.TextSelection Selection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.TextSelection Selection" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.FlowDocumentScrollViewer.Selection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.TextSelection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den ausgewählten Inhalt, der die <see cref="T:System.Windows.Controls.FlowDocumentScrollViewer" />.</summary>
+        <value>Der ausgewählte Inhalt von der <see cref="T:System.Windows.Controls.FlowDocumentScrollViewer" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.FlowDocumentScrollViewer.Selection%2A>wird in .NET Framework, Version 3.5 eingeführt.  Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie beim Abrufen des Texts, die ein Benutzer, in ausgewählt hat der <xref:System.Windows.Controls.FlowDocumentScrollViewer>.  
+  
+ [!code-xaml[FlowDocSelection#3](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocSelection/CSharp/Window2.xaml#3)]  
+[!code-csharp[FlowDocSelection#4](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocSelection/CSharp/Window2.xaml.cs#4)]
+[!code-vb[FlowDocSelection#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocSelection/VisualBasic/Window2.xaml.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionBrush">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush SelectionBrush { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush SelectionBrush" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.FlowDocumentScrollViewer.SelectionBrush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Pinsel, der den ausgewählten Text hervorgehoben.</summary>
+        <value>Ein Pinsel, der den ausgewählten Text hervorgehoben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können angeben, dass den Pinsel, der ausgewähltem in Text eine <xref:System.Windows.Controls.FlowDocumentScrollViewer> durch Festlegen der <xref:System.Windows.Controls.FlowDocumentScrollViewer.SelectionBrush%2A> und <xref:System.Windows.Controls.FlowDocumentScrollViewer.SelectionOpacity%2A> Eigenschaften.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Controls.FlowDocumentScrollViewer>, legt der <xref:System.Windows.Controls.FlowDocumentScrollViewer.SelectionBrush%2A> Eigenschaft Folgendes ein: rosa und legt die <xref:System.Windows.Controls.FlowDocumentScrollViewer.SelectionOpacity%2A> Eigenschaft 0,7.  
+  
+ [!code-xaml[FlowDocScrollVwSelBrushSnippet#SelectionBrush](~/samples/snippets/csharp/VS_Snippets_Wpf/flowdocscrollvwselbrushsnippet/CS/window1.xaml#selectionbrush)]
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionBrushProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SelectionBrushProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SelectionBrushProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.FlowDocumentScrollViewer.SelectionBrushProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.FlowDocumentScrollViewer.SelectionBrush" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionOpacity">
+      <MemberSignature Language="C#" Value="public double SelectionOpacity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 SelectionOpacity" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.FlowDocumentScrollViewer.SelectionOpacity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Deckkraft der <see cref="P:System.Windows.Controls.FlowDocumentScrollViewer.SelectionBrush" />.</summary>
+        <value>Die Deckkraft der <see cref="P:System.Windows.Controls.FlowDocumentScrollViewer.SelectionBrush" />. Der Standardwert ist 0,4.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie festlegen, die <xref:System.Windows.Controls.FlowDocumentScrollViewer.SelectionOpacity%2A> auf 0, die <xref:System.Windows.Controls.FlowDocumentScrollViewer.SelectionBrush%2A> transparent ist und nicht sichtbar ist. Wenn Sie festlegen, die <xref:System.Windows.Controls.FlowDocumentScrollViewer.SelectionOpacity%2A> zu 1.0 wird die <xref:System.Windows.Controls.FlowDocumentScrollViewer.SelectionBrush%2A> ist nicht transparent ist und die ausgewählte Text ist nicht sichtbar.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Controls.FlowDocumentScrollViewer>, legt der <xref:System.Windows.Controls.FlowDocumentScrollViewer.SelectionBrush%2A> Eigenschaft Folgendes ein: rosa und legt die <xref:System.Windows.Controls.FlowDocumentScrollViewer.SelectionOpacity%2A> Eigenschaft 0,7.  
+  
+ [!code-xaml[FlowDocScrollVwSelBrushSnippet#SelectionBrush](~/samples/snippets/csharp/VS_Snippets_Wpf/flowdocscrollvwselbrushsnippet/CS/window1.xaml#selectionbrush)]
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionOpacityProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SelectionOpacityProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SelectionOpacityProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.FlowDocumentScrollViewer.SelectionOpacityProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.FlowDocumentScrollViewer.SelectionOpacity" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IServiceProvider.GetService">
+      <MemberSignature Language="C#" Value="object IServiceProvider.GetService (Type serviceType);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.IServiceProvider.GetService(class System.Type serviceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentScrollViewer.System#IServiceProvider#GetService(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">Ein Objekt, das den Typ des abzurufenden Dienstobjekts angibt.</param>
+        <summary>Dieser Typ oder Member unterstützt die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <returns>Ein Dienstobjekt vom Typ <paramref name="serviceType" />, oder <see langword="null" /> es ist kein Dienstobjekt vom Typ <paramref name="serviceType" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddChild">
+      <MemberSignature Language="C#" Value="void IAddChild.AddChild (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddChild(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentScrollViewer.System#Windows#Markup#IAddChild#AddChild(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Objekt, das als untergeordnetes Element hinzufügen.</param>
+        <summary>Dieser Typ oder Member unterstützt die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen. Verwenden der <see cref="P:System.Windows.Controls.FlowDocumentScrollViewer.Document" /> hinzuzufügenden Eigenschaft eine <see cref="T:System.Windows.Documents.FlowDocument" /> als untergeordnetes Inhaltselement für die <see cref="T:System.Windows.Controls.FlowDocumentScrollViewer" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddText">
+      <MemberSignature Language="C#" Value="void IAddChild.AddText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.FlowDocumentScrollViewer.System#Windows#Markup#IAddChild#AddText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Eine Zeichenfolge, die das Objekt hinzugefügt werden soll.</param>
+        <summary>Dieser Typ oder Member unterstützt die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalScrollBarVisibility">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.ScrollBarVisibility VerticalScrollBarVisibility { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.ScrollBarVisibility VerticalScrollBarVisibility" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.FlowDocumentScrollViewer.VerticalScrollBarVisibility" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ScrollBarVisibility</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob eine vertikale Bildlaufleiste sichtbar ist, oder legt ihn fest.</summary>
+        <value>Einer der <see cref="T:System.Windows.Controls.ScrollBarVisibility" />-Werte. Die Standardeinstellung ist <see cref="F:System.Windows.Controls.ScrollBarVisibility.Visible" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_VerticalScrollBarVisibility"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.FlowDocumentScrollViewer.VerticalScrollBarVisibilityProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Controls.FlowDocumentScrollViewer.VerticalScrollBarVisibility%2A> Attribut.  
+  
+ [!code-xaml[FlowDocumentSnippets#_FlowDocumentScrollViewerXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_flowdocumentscrollviewerxaml)]  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Controls.FlowDocumentScrollViewer.VerticalScrollBarVisibility%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentScrollViewer](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentscrollviewer)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentScrollViewer](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentscrollviewer)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalScrollBarVisibilityProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty VerticalScrollBarVisibilityProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty VerticalScrollBarVisibilityProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.FlowDocumentScrollViewer.VerticalScrollBarVisibilityProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.FlowDocumentScrollViewer.VerticalScrollBarVisibility" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Zoom">
+      <MemberSignature Language="C#" Value="public double Zoom { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Zoom" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.FlowDocumentScrollViewer.Zoom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den aktuellen Zoomfaktor ab oder legt diesen fest.</summary>
+        <value>Die aktuelle Zoomstufe, als Prozentsatz interpretiert. Der Standardwert ist 100,0 (Zoomstufe 100 %).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Zoomstufe mithilfe der Werte der beschränkt die <xref:System.Windows.Controls.FlowDocumentScrollViewer.MinZoom%2A> und <xref:System.Windows.Controls.FlowDocumentScrollViewer.MaxZoom%2A> Eigenschaften.  
+  
+<a name="dependencyPropertyInfo_Zoom"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.FlowDocumentScrollViewer.ZoomProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Controls.FlowDocumentScrollViewer.Zoom%2A> Attribut.  
+  
+ [!code-xaml[FlowDocumentSnippets#_FlowDocumentScrollViewerXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_flowdocumentscrollviewerxaml)]  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Controls.FlowDocumentScrollViewer.Zoom%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentScrollViewer](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentscrollviewer)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentScrollViewer](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentscrollviewer)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ZoomIncrement">
+      <MemberSignature Language="C#" Value="public double ZoomIncrement { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ZoomIncrement" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.FlowDocumentScrollViewer.ZoomIncrement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Zoom-Inkrement.</summary>
+        <value>Das aktuelle Zoom-Inkrement, die als Prozentsatz interpretiert. Der Standardwert ist 10,0 (Zoom Schritten von 10 %).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Inkrement Zoom ist der Prozentsatz, der <xref:System.Windows.Controls.FlowDocumentScrollViewer.Zoom%2A> Ebene erhöht oder verringert wird, wenn die <xref:System.Windows.Input.NavigationCommands.IncreaseZoom%2A> oder <xref:System.Windows.Input.NavigationCommands.DecreaseZoom%2A> Befehle ausgeführt werden.  
+  
+<a name="dependencyPropertyInfo_ZoomIncrement"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.FlowDocumentScrollViewer.ZoomIncrementProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Controls.FlowDocumentScrollViewer.ZoomIncrement%2A> Attribut.  
+  
+ [!code-xaml[FlowDocumentSnippets#_FlowDocumentScrollViewerXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_flowdocumentscrollviewerxaml)]  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Controls.FlowDocumentScrollViewer.ZoomIncrement%2A> Eigenschaft programmgesteuert.  
+  
+ [!code-csharp[FlowDocumentSnippets#_FlowDocumentScrollViewer](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_flowdocumentscrollviewer)]
+ [!code-vb[FlowDocumentSnippets#_FlowDocumentScrollViewer](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentscrollviewer)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ZoomIncrementProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ZoomIncrementProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ZoomIncrementProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.FlowDocumentScrollViewer.ZoomIncrementProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.FlowDocumentScrollViewer.ZoomIncrement" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ZoomProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ZoomProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ZoomProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.FlowDocumentScrollViewer.ZoomProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.FlowDocumentScrollViewer.Zoom" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

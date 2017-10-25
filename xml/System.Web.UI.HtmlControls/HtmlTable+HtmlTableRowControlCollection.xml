@@ -1,0 +1,108 @@
+<Type Name="HtmlTable+HtmlTableRowControlCollection" FullName="System.Web.UI.HtmlControls.HtmlTable+HtmlTableRowControlCollection">
+  <TypeSignature Language="C#" Value="protected class HtmlTable.HtmlTableRowControlCollection : System.Web.UI.ControlCollection" />
+  <TypeSignature Language="ILAsm" Value=".class nested protected auto ansi beforefieldinit HtmlTable/HtmlTableRowControlCollection extends System.Web.UI.ControlCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.HtmlControls.HtmlTable.HtmlTableRowControlCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.ControlCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Auflistung von <see cref="T:System.Web.UI.HtmlControls.HtmlTableRow" /> Objekte, die die Zeilen sind ein <see cref="T:System.Web.UI.HtmlControls.HtmlTable" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlTable.HtmlTableRowControlCollection> Klasse stellt eine Auflistung von <xref:System.Web.UI.HtmlControls.HtmlTableRow> von Objekten für die ein <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement. Steuerelemente können hinzugefügt werden, am Ende der Auflistung mit den <xref:System.Web.UI.HtmlControls.HtmlTable.HtmlTableRowControlCollection.Add%2A> -Methode, oder an einer angegebenen Indexposition in der Auflistung mit den <xref:System.Web.UI.HtmlControls.HtmlTable.HtmlTableRowControlCollection.AddAt%2A> Methode. Nur die Steuerelemente des Typs <xref:System.Web.UI.HtmlControls.HtmlTableRow> hinzugefügt werden können, um die <xref:System.Web.UI.HtmlControls.HtmlTable.HtmlTableRowControlCollection> Auflistung.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine benutzerdefinierte <xref:System.Web.UI.HtmlControls.HtmlTable.HtmlTableRowControlCollection> überschreibt die <xref:System.Web.UI.HtmlControls.HtmlTable.HtmlTableRowControlCollection.Add%2A> Methode so, dass bei einer Tabelle Zeilen hinzugefügt werden, sind sie immer hinzugefügt am Anfang der zeilenauflistung der Tabelle.  
+  
+ [!code-aspx-csharp[CustomHtmlTable.HtmlTableRowControlCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomHtmlTable.HtmlTableRowControlCollection/CS/custom_htmltable_htmltablerowcontrolcollectioncs.aspx#1)]
+ [!code-aspx-vb[CustomHtmlTable.HtmlTableRowControlCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomHtmlTable.HtmlTableRowControlCollection/VB/custom_htmltable_htmltablerowcontrolcollectionvb.aspx#1)]  
+  
+ [!code-csharp[CustomHtmlTable.HtmlTableRowControlCollection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomHtmlTable.HtmlTableRowControlCollection/CS/custom_htmltable_htmltablerowcontrolcollection.cs#2)]
+ [!code-vb[CustomHtmlTable.HtmlTableRowControlCollection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomHtmlTable.HtmlTableRowControlCollection/VB/custom_htmltable_htmltablerowcontrolcollection.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public override void Add (System.Web.UI.Control child);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Add(class System.Web.UI.Control child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlTable.HtmlTableRowControlCollection.Add(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="child" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="child">Der der Auflistung hinzuzufügende <see cref="T:System.Web.UI.Control" />.</param>
+        <summary>Fügt der Auflistung das angegebene <see cref="T:System.Web.UI.Control" />-Objekt hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das hinzugefügte Steuerelement kann nur ein <xref:System.Web.UI.HtmlControls.HtmlTableRow> steuern; hingegen ein <xref:System.ArgumentException> Ausnahme wird ausgelöst.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine benutzerdefinierte <xref:System.Web.UI.HtmlControls.HtmlTable.HtmlTableRowControlCollection> -Auflistung, die überschreibt die <xref:System.Web.UI.HtmlControls.HtmlTable.HtmlTableRowControlCollection.Add%2A> Methode so, dass bei einer Tabelle Zeilen hinzugefügt werden, sind sie immer hinzugefügt am Anfang der zeilenauflistung der Tabelle. Beachten Sie, dass wie das benutzerdefinierte <xref:System.Web.UI.HtmlControls.HtmlTable.HtmlTableRowControlCollection.Add%2A> Methode ruft der Basisklasse <xref:System.Web.UI.HtmlControls.HtmlTable.HtmlTableRowControlCollection.AddAt%2A> Methode mit dem `index` Parameter gleich 0.  
+  
+ [!code-aspx-csharp[CustomHtmlTable.HtmlTableRowControlCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomHtmlTable.HtmlTableRowControlCollection/CS/custom_htmltable_htmltablerowcontrolcollectioncs.aspx#1)]
+ [!code-aspx-vb[CustomHtmlTable.HtmlTableRowControlCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomHtmlTable.HtmlTableRowControlCollection/VB/custom_htmltable_htmltablerowcontrolcollectionvb.aspx#1)]  
+  
+ [!code-csharp[CustomHtmlTable.HtmlTableRowControlCollection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomHtmlTable.HtmlTableRowControlCollection/CS/custom_htmltable_htmltablerowcontrolcollection.cs#2)]
+ [!code-vb[CustomHtmlTable.HtmlTableRowControlCollection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomHtmlTable.HtmlTableRowControlCollection/VB/custom_htmltable_htmltablerowcontrolcollection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Das hinzugefügte Steuerelement muss vom Typ <see cref="T:System.Web.UI.HtmlControls.HtmlTableRow" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAt">
+      <MemberSignature Language="C#" Value="public override void AddAt (int index, System.Web.UI.Control child);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AddAt(int32 index, class System.Web.UI.Control child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlTable.HtmlTableRowControlCollection.AddAt(System.Int32,System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="child" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Position im Array, an dem das untergeordnete Steuerelement hinzugefügt werden soll.</param>
+        <param name="child">Der der Auflistung hinzuzufügende <see cref="T:System.Web.UI.Control" />.</param>
+        <summary>Fügt der Auflistung das angegebene <see cref="T:System.Web.UI.Control" />-Objekt hinzu. Das neue Steuerelement wird in das Array an der angegebenen Indexposition hinzugefügt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das hinzugefügte Steuerelement kann nur ein <xref:System.Web.UI.HtmlControls.HtmlTableRow> steuern; andernfalls ein <xref:System.ArgumentException> ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Das hinzugefügte Steuerelement muss vom Typ <see cref="T:System.Web.UI.HtmlControls.HtmlTableRow" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,484 @@
+<Type Name="LicenseManager" FullName="System.ComponentModel.LicenseManager">
+  <TypeSignature Language="C#" Value="public sealed class LicenseManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LicenseManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.LicenseManager" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Eigenschaften und Methoden zur Verfügung, um eine Lizenz zu einer Komponente hinzuzufügen und einen <see cref="T:System.ComponentModel.LicenseProvider" /> zu verwalten. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.LicenseManager> Klasse bietet folgende `static` Eigenschaften: <xref:System.ComponentModel.LicenseManager.CurrentContext%2A> und <xref:System.ComponentModel.LicenseManager.UsageMode%2A>. Die Klasse bietet auch folgende `static` Methoden: <xref:System.ComponentModel.LicenseManager.CreateWithContext%2A>, <xref:System.ComponentModel.LicenseManager.IsValid%2A>, und <xref:System.ComponentModel.LicenseManager.Validate%2A>.  
+  
+ Wenn Sie eine Komponente, die Sie lizenzieren möchten erstellen, müssen Sie Folgendes ausführen:  
+  
+1.  Geben Sie die <xref:System.ComponentModel.LicenseProvider> durch die Komponente mit einem <xref:System.ComponentModel.LicenseProviderAttribute>.  
+  
+2.  Rufen Sie <xref:System.ComponentModel.LicenseManager.Validate%2A> oder <xref:System.ComponentModel.LicenseManager.IsValid%2A> im Konstruktor der Komponente. <xref:System.ComponentModel.LicenseManager.Validate%2A>Löst ein <xref:System.ComponentModel.LicenseException> wenn er versucht, eine Instanz ohne gültige Lizenz zu erstellen. <xref:System.ComponentModel.LicenseManager.IsValid%2A>löst keine Ausnahme.  
+  
+3.  Rufen Sie <xref:System.ComponentModel.License.Dispose%2A> auf keinerlei Lizenzrechte an, die gewährt wird, wenn die Komponente freigegeben oder beendet wird.  
+  
+ Weitere Informationen zur Lizenzierung finden Sie unter [Vorgehensweise: Lizenz-Komponenten und Steuerelementen](http://msdn.microsoft.com/library/8e66c1ed-a445-4b26-8185-990b6e2bbd57).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt ein lizenziertes Steuerelement mit der <xref:System.ComponentModel.LicenseManager.Validate%2A> Methode. Er verwendet ein <xref:System.ComponentModel.LicenseProvider> , implementiert wird, indem die <xref:System.ComponentModel.LicFileLicenseProvider> Klasse.  
+  
+ [!code-cpp[Classic LicenseManager Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic LicenseManager Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic LicenseManager Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic LicenseManager Example/CS/source.cs#1)]
+ [!code-vb[Classic LicenseManager Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic LicenseManager Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateWithContext">
+      <MemberSignature Language="C#" Value="public static object CreateWithContext (Type type, System.ComponentModel.LicenseContext creationContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object CreateWithContext(class System.Type type, class System.ComponentModel.LicenseContext creationContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.LicenseManager.CreateWithContext(System.Type,System.ComponentModel.LicenseContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="creationContext" Type="System.ComponentModel.LicenseContext" />
+      </Parameters>
+      <Docs>
+        <param name="type">Ein <see cref="T:System.Type" /> , den zu erstellende Typ darstellt.</param>
+        <param name="creationContext">Ein <see cref="T:System.ComponentModel.LicenseContext" /> , der angibt, wann Sie die lizenzierte Instanz verwenden können.</param>
+        <summary>Erstellt eine Instanz des angegebenen Typs, wenn ein Kontext, in dem Sie die lizenzierte Instanz verwenden können.</summary>
+        <returns>Eine Instanz des angegebenen Typs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.LicenseContext> Sie angeben, wie die `creationContext` Parameter wird verwendet, als die <xref:System.ComponentModel.LicenseManager.CurrentContext%2A> für die Lebensdauer dieses <xref:System.ComponentModel.License>. Die <xref:System.ComponentModel.LicenseManager.CreateWithContext%2A> Methode blockiert, alle anderen Threads in der <xref:System.AppDomain> Ändern der <xref:System.ComponentModel.LicenseManager.CurrentContext%2A>, sodass <xref:System.ComponentModel.LicenseManager.CreateWithContext%2A> Verhalten einer atomaren Operation.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">für den Zugriff auf private Klassenmember und Metadaten. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateWithContext">
+      <MemberSignature Language="C#" Value="public static object CreateWithContext (Type type, System.ComponentModel.LicenseContext creationContext, object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object CreateWithContext(class System.Type type, class System.ComponentModel.LicenseContext creationContext, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.LicenseManager.CreateWithContext(System.Type,System.ComponentModel.LicenseContext,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="creationContext" Type="System.ComponentModel.LicenseContext" />
+        <Parameter Name="args" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="type">Ein <see cref="T:System.Type" /> , den zu erstellende Typ darstellt.</param>
+        <param name="creationContext">Ein <see cref="T:System.ComponentModel.LicenseContext" /> , der angibt, wann Sie die lizenzierte Instanz verwenden können.</param>
+        <param name="args">Ein Array vom Typ <see cref="T:System.Object" /> , die die Argumente für den Typ darstellt.</param>
+        <summary>Erstellt eine Instanz des angegebenen Typs mit den angegebenen Argumenten aus, wenn ein Kontext, in dem Sie die lizenzierte Instanz verwenden können.</summary>
+        <returns>Eine Instanz des angegebenen Typs mit dem angegebenen Array von Argumenten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.LicenseContext> Sie angeben, wie die `creationContext` Parameter wird verwendet, als die <xref:System.ComponentModel.LicenseManager.CurrentContext%2A> für die Lebensdauer dieses <xref:System.ComponentModel.License>. Diese Methode blockiert, alle anderen Threads in der <xref:System.AppDomain> abhält, das <xref:System.ComponentModel.LicenseManager.CurrentContext%2A>, sodass <xref:System.ComponentModel.LicenseManager.CreateWithContext%2A> Verhalten einer atomaren Operation.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentContext">
+      <MemberSignature Language="C#" Value="public static System.ComponentModel.LicenseContext CurrentContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ComponentModel.LicenseContext CurrentContext" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.LicenseManager.CurrentContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.LicenseContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den aktuellen <see cref="T:System.ComponentModel.LicenseContext" />, der angibt, wann Sie das lizenzierte Objekt verwenden können.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.LicenseContext" /> , der angibt, wann Sie das lizenzierte Objekt verwenden können.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Benutzer eine gültige anfordert <xref:System.ComponentModel.License>, muss der Benutzer den Kontext erteilen, in dem die <xref:System.ComponentModel.License> ist zulässig, die <xref:System.ComponentModel.LicenseProvider.GetLicense%2A?displayProperty=nameWithType> Methode. Die <xref:System.ComponentModel.LicenseContext> zurückgegeben, die von dieser Eigenschaft sollte auf alle übergeben <xref:System.ComponentModel.LicenseProvider> Klassen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.ComponentModel.LicenseManager.CurrentContext" /> Eigenschaft ist derzeit gesperrt und kann nicht geändert werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLicensed">
+      <MemberSignature Language="C#" Value="public static bool IsLicensed (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsLicensed(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.LicenseManager.IsLicensed(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die <see cref="T:System.Type" /> eine gültige Lizenz für gefunden.</param>
+        <summary>Gibt zurück, ob der angegebene Typ eine gültige Lizenz verfügt.</summary>
+        <returns>
+          <see langword="true" />Wenn der angegebene Typ lizenziert ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValid">
+      <MemberSignature Language="C#" Value="public static bool IsValid (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsValid(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.LicenseManager.IsValid(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Ein <see cref="T:System.Type" /> , die den Typ des Objekts, die Anforderungen darstellt der <see cref="T:System.ComponentModel.License" />.</param>
+        <summary>Bestimmt, ob eine gültige Lizenz für den angegebenen Typ erteilt werden kann.</summary>
+        <returns>
+          <see langword="true" />Wenn Sie eine gültige Lizenz gewährt werden kann. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.LicenseManager.IsValid%2A> -Methode zurückkehrt `true` Wenn der Typ ist entweder nicht lizenziert, oder eine lizenziert wird und die Lizenz ist ungültig.  
+  
+ Diese Methode löst eine <xref:System.ComponentModel.LicenseException> Wenn sie eine gültige erteilen kann nicht <xref:System.ComponentModel.License>. Die <xref:System.ComponentModel.LicenseManager.Validate%2A> -Methode Ausnahmen auslöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValid">
+      <MemberSignature Language="C#" Value="public static bool IsValid (Type type, object instance, out System.ComponentModel.License license);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsValid(class System.Type type, object instance, [out] class System.ComponentModel.License&amp; license) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.LicenseManager.IsValid(System.Type,System.Object,System.ComponentModel.License@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="instance" Type="System.Object" />
+        <Parameter Name="license" Type="System.ComponentModel.License&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="type">Ein <see cref="T:System.Type" /> , der den Typ des Objekts, von dem die Lizenz angefordert darstellt.</param>
+        <param name="instance">Ein Objekt vom angegebenen Typ oder einen angegebenen Typ abgeleitet wurde.</param>
+        <param name="license">Ein <see cref="T:System.ComponentModel.License" /> also eine gültige Lizenz oder <see langword="null" /> Wenn eine gültige Lizenz gewährt werden kann.</param>
+        <summary>Bestimmt, ob für die angegebene Instanz des Typs eine gültige Lizenz gewährt werden kann. Diese Methode erstellt eine gültige <see cref="T:System.ComponentModel.License" />.</summary>
+        <returns>
+          <see langword="true" />Wenn Sie eine gültige <see cref="T:System.ComponentModel.License" /> gewährt wurde, andernfalls kann <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.LicenseManager.IsValid%2A> -Methode zurückkehrt `true` bei der `type` Parameter ist nicht lizenziert, oder wenn er lizenziert und die `license` Parameter ist ungültig.  
+  
+ Diese Methode löst eine <xref:System.ComponentModel.LicenseException> Wenn sie eine gültige erteilen kann nicht <xref:System.ComponentModel.License>. Die <xref:System.ComponentModel.LicenseManager.Validate%2A> -Methode Ausnahmen auslöst.  
+  
+ Wenn die `license` -Parameter ist kein `null` nach dem Aufruf wird das Objekt, das für eine <xref:System.ComponentModel.License> durch Aufrufen der Lizenz freigeben müssen die <xref:System.ComponentModel.License.Dispose%2A> Methode, wenn das Objekt verworfen oder freigegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LockContext">
+      <MemberSignature Language="C#" Value="public static void LockContext (object contextUser);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void LockContext(object contextUser) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.LicenseManager.LockContext(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contextUser" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="contextUser">Das Objekt, dessen aktuellen Kontext, die Sie sperren möchten.</param>
+        <summary>Verhindert, dass Änderungen an der aktuellen <see cref="T:System.ComponentModel.LicenseContext" /> des angegebenen Objekts.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.ComponentModel.LicenseContext> zum Abrufen der <xref:System.ComponentModel.License> eines Objekts. Diese Methode sperrt die <xref:System.ComponentModel.LicenseContext>, verhindern, dass die <xref:System.ComponentModel.License> abgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Kontext ist bereits gesperrt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UnlockContext">
+      <MemberSignature Language="C#" Value="public static void UnlockContext (object contextUser);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void UnlockContext(object contextUser) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.LicenseManager.UnlockContext(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contextUser" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="contextUser">Das Objekt, dessen aktuellen Kontext, die Sie entsperren möchten.</param>
+        <summary>Zum vornehmen von Änderungen auf den aktuellen werden <see cref="T:System.ComponentModel.LicenseContext" /> des angegebenen Objekts.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.ComponentModel.LicenseContext> zum Abrufen der <xref:System.ComponentModel.License> eines Objekts. Diese Methode entsperrt die <xref:System.ComponentModel.LicenseContext>, sodass die <xref:System.ComponentModel.License> abgerufen werden sollen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="contextUser" />Stellt einen anderen Benutzer als die angegebene in einem vorherigen Aufruf von <see cref="M:System.ComponentModel.LicenseManager.LockContext(System.Object)" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UsageMode">
+      <MemberSignature Language="C#" Value="public static System.ComponentModel.LicenseUsageMode UsageMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.ComponentModel.LicenseUsageMode UsageMode" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.LicenseManager.UsageMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.LicenseUsageMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.ComponentModel.LicenseUsageMode" /> gibt Verwendung das lizenzierte Objekt für die <see cref="P:System.ComponentModel.LicenseManager.CurrentContext" />.</summary>
+        <value>Eines der <see cref="T:System.ComponentModel.LicenseUsageMode" /> Werte entsprechend den Angaben in der <see cref="P:System.ComponentModel.LicenseManager.CurrentContext" /> Eigenschaft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft nicht finden kann eine <xref:System.ComponentModel.LicenseManager.CurrentContext%2A> Wert gibt <xref:System.ComponentModel.LicenseUsageMode.Runtime>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public static void Validate (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Validate(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.LicenseManager.Validate(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Ein <see cref="T:System.Type" /> , der den Typ des Objekts, von dem die Lizenz angefordert darstellt.</param>
+        <summary>Bestimmt, ob eine Lizenz für den angegebenen Typ erteilt werden kann.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode löst eine <xref:System.ComponentModel.LicenseException> Wenn ein gültiger <xref:System.ComponentModel.License> können nicht gewährt werden. Die <xref:System.ComponentModel.LicenseManager.IsValid%2A> Methode löst keine Ausnahme.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.LicenseException">Ein <see cref="T:System.ComponentModel.License" /> kann nicht gewährt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public static System.ComponentModel.License Validate (Type type, object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ComponentModel.License Validate(class System.Type type, object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.LicenseManager.Validate(System.Type,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.License</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="type">Ein <see cref="T:System.Type" /> , der den Typ des Objekts, von dem die Lizenz angefordert darstellt.</param>
+        <param name="instance">Ein <see cref="T:System.Object" /> vom angegebenen Typ oder einen Typ vom angegebenen Typ abgeleitet.</param>
+        <summary>Bestimmt, ob eine Lizenz für die Instanz des angegebenen Typs erteilt werden kann.</summary>
+        <returns>Ein gültiges <see cref="T:System.ComponentModel.License" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode löst eine <xref:System.ComponentModel.LicenseException> Wenn ein gültiger <xref:System.ComponentModel.License> können nicht gewährt werden. Die <xref:System.ComponentModel.LicenseManager.IsValid%2A> Methode löst keine Ausnahme.  
+  
+ Alle Objekte, die für eine <xref:System.ComponentModel.License> der Lizenz freigeben müssen, die durch Aufrufen der <xref:System.ComponentModel.License.Dispose%2A> Methode, wenn das Objekt verworfen oder freigegeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.LicenseException">Der Typ ist lizenziert, aber ein <see cref="T:System.ComponentModel.License" /> können nicht gewährt werden.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

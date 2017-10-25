@@ -1,0 +1,75 @@
+<Type Name="LegendCellCollection" FullName="System.Windows.Forms.DataVisualization.Charting.LegendCellCollection">
+  <TypeSignature Language="C#" Value="public class LegendCellCollection : System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection&lt;System.Windows.Forms.DataVisualization.Charting.LegendCell&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LegendCellCollection extends System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection`1&lt;class System.Windows.Forms.DataVisualization.Charting.LegendCell&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.LegendCellCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection&lt;System.Windows.Forms.DataVisualization.Charting.LegendCell&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="T">System.Windows.Forms.DataVisualization.Charting.LegendCell</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Speichert Legendenzellen in einem <see cref="T:System.Windows.Forms.DataVisualization.Charting.LegendCellCollection" /> Objekt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Windows.Forms.DataVisualization.Charting.LegendCellType cellType, string text, System.Drawing.ContentAlignment alignment);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(valuetype System.Windows.Forms.DataVisualization.Charting.LegendCellType cellType, string text, valuetype System.Drawing.ContentAlignment alignment) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.LegendCellCollection.Add(System.Windows.Forms.DataVisualization.Charting.LegendCellType,System.String,System.Drawing.ContentAlignment)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cellType" Type="System.Windows.Forms.DataVisualization.Charting.LegendCellType" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="alignment" Type="System.Drawing.ContentAlignment" />
+      </Parameters>
+      <Docs>
+        <param name="cellType">Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.LegendCellType" /> Wert, der den Zellentyp darstellt.</param>
+        <param name="text">Ein <see langword="string" /> -Wert, der den Zellentext oder seine ImageName, abhängig vom Wert der <c>CellType</c> Parameter.</param>
+        <param name="alignment">Ein <see cref="T:System.Drawing.ContentAlignment" /> Wert, der die Ausrichtung der Zelle darstellt.</param>
+        <summary>Fügt eine Legendenzelle mit dem angegebenen Zellentyp, Text und Ausrichtung an das Ende der Auflistung.</summary>
+        <returns>Ein <see langword="integer" /> Wert, der den Index der neu hinzugefügten Legendenzelle in der Auflistung darstellt. Der Index ist nullbasiert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Windows.Forms.DataVisualization.Charting.LegendCellType cellType, string text, System.Drawing.ContentAlignment alignment);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, valuetype System.Windows.Forms.DataVisualization.Charting.LegendCellType cellType, string text, valuetype System.Drawing.ContentAlignment alignment) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.LegendCellCollection.Insert(System.Int32,System.Windows.Forms.DataVisualization.Charting.LegendCellType,System.String,System.Drawing.ContentAlignment)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="cellType" Type="System.Windows.Forms.DataVisualization.Charting.LegendCellType" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="alignment" Type="System.Drawing.ContentAlignment" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index der Position, an das Objekt eingefügt.</param>
+        <param name="cellType">Ein <see cref="T:System.Windows.Forms.DataVisualization.Charting.LegendCellType" /> Wert, der den Zellentyp darstellt.</param>
+        <param name="text">Ein <see langword="string" /> -Wert, der den Zellentext oder seine ImageName, abhängig vom Wert der <c>CellType</c> Parameter.</param>
+        <param name="alignment">Ein <see cref="T:System.Drawing.ContentAlignment" /> -Enumerationswert ab, der die Ausrichtung des Legendenzelleninhalts darstellt.</param>
+        <summary>Fügt eine Legendenzelle mit dem angegebenen Zellentyp, Text und Ausrichtung an eine angegebene Position in die Auflistung ein.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

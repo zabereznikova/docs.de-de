@@ -1,0 +1,124 @@
+<Type Name="CompareMethod" FullName="System.Web.UI.DataVisualization.Charting.CompareMethod">
+  <TypeSignature Language="C#" Value="public enum CompareMethod" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CompareMethod extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.CompareMethod" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Typ des Vergleichs beim Filtern von Daten verwendet werden soll. Diese Enumeration wird verwendet, durch die <c>Filter</c> Methodendefinitionen in der <see cref="T:System.Web.UI.DataVisualization.Charting.DataManipulator" /> Klasse, die <paramref name="CompareMethod" /> Argument.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataVisualization.Charting.CompareMethod> -Enumeration stellt einen Vergleichstyp für bestimmte Filteroperationen dar.  
+  
+> [!NOTE]
+>  Standardmäßig Wenn die Filterkriterien erfüllt sind, ist ein Datenpunkt entweder entfernt oder als leer markiert. Allerdings Datenpunkte gefiltert werden können, selbst wenn sie hierfür nicht über die Filterkriterien übereinstimmen der <xref:System.Web.UI.DataVisualization.Charting.DataManipulator.FilterMatchedPoints%2A> Eigenschaft `false`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EqualTo">
+      <MemberSignature Language="C#" Value="EqualTo" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.CompareMethod EqualTo = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.CompareMethod.EqualTo" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.CompareMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wenn der Wert des Datenpunkts der verglichene Wert gleich ist, wird der Punkt gefiltert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LessThan">
+      <MemberSignature Language="C#" Value="LessThan" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.CompareMethod LessThan = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.CompareMethod.LessThan" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.CompareMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wenn der Wert des Datenpunkts kleiner als der verglichene Wert ist, wird der Punkt gefiltert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LessThanOrEqualTo">
+      <MemberSignature Language="C#" Value="LessThanOrEqualTo" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.CompareMethod LessThanOrEqualTo = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.CompareMethod.LessThanOrEqualTo" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.CompareMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wenn der Wert des Datenpunkts kleiner als oder gleich dem Wert verglichen wird, wird der Punkt gefiltert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MoreThan">
+      <MemberSignature Language="C#" Value="MoreThan" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.CompareMethod MoreThan = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.CompareMethod.MoreThan" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.CompareMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wenn der Wert des Datenpunkts größer als der verglichene Wert ist, wird der Punkt gefiltert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MoreThanOrEqualTo">
+      <MemberSignature Language="C#" Value="MoreThanOrEqualTo" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.CompareMethod MoreThanOrEqualTo = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.CompareMethod.MoreThanOrEqualTo" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.CompareMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wenn der Wert größer oder gleich der verglichene Wert Datenpunktwert, ist der Punkt gefiltert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotEqualTo">
+      <MemberSignature Language="C#" Value="NotEqualTo" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.CompareMethod NotEqualTo = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.CompareMethod.NotEqualTo" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.CompareMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wenn der Datenpunktwert nicht gleich dem Wert verglichen wird, wird der Punkt gefiltert.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

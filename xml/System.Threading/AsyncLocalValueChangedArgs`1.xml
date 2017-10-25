@@ -1,0 +1,132 @@
+<Type Name="AsyncLocalValueChangedArgs&lt;T&gt;" FullName="System.Threading.AsyncLocalValueChangedArgs&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public struct AsyncLocalValueChangedArgs&lt;T&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit AsyncLocalValueChangedArgs`1&lt;T&gt; extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.AsyncLocalValueChangedArgs`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="T">Der Typ der Daten.</typeparam>
+    <summary>Die Klasse, die <see cref="T:System.Threading.AsyncLocal`1" />-Instanzen, die sich für Änderungsbenachrichtigungen registrieren, Informationen über Datenänderungen zur Verfügung stellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Threading.AsyncLocal%601> Datenbankobjekte empfängt änderungsbenachrichtigungen aus, wenn er durch den Aufruf instanziiert wird seine <xref:System.Threading.AsyncLocal%601.%23ctor%28System.Action%7BSystem.Threading.AsyncLocalValueChangedArgs%7B%600%7D%7D%29> Konstruktor.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CurrentValue">
+      <MemberSignature Language="C#" Value="public T CurrentValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !T CurrentValue" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.AsyncLocalValueChangedArgs`1.CurrentValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den aktuellen Wert der Daten ab.</summary>
+        <value>Der aktuelle Wert der Daten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousValue">
+      <MemberSignature Language="C#" Value="public T PreviousValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !T PreviousValue" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.AsyncLocalValueChangedArgs`1.PreviousValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den vorherigen Wert der Daten ab.</summary>
+        <value>Der vorherige Wert der Daten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThreadContextChanged">
+      <MemberSignature Language="C#" Value="public bool ThreadContextChanged { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ThreadContextChanged" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.AsyncLocalValueChangedArgs`1.ThreadContextChanged" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen Wert zurück, der angibt, ob sich der Wert aufgrund einer Änderung des Ausführungskontexts ändert.</summary>
+        <value>
+          <see langword="true" />, wenn sich der Wert aufgrund einer Änderung des Ausführungstexts ändert, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Eigenschaftswert ist `false` Wenn die <xref:System.Threading.AsyncLocal%601.Value%2A?displayProperty=nameWithType> -Eigenschaft explizit geändert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

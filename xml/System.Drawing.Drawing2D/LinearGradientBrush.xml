@@ -1,0 +1,983 @@
+<Type Name="LinearGradientBrush" FullName="System.Drawing.Drawing2D.LinearGradientBrush">
+  <TypeSignature Language="C#" Value="public sealed class LinearGradientBrush : System.Drawing.Brush" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LinearGradientBrush extends System.Drawing.Brush" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Drawing2D.LinearGradientBrush" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Drawing.Brush</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Kapselt eine <see cref="T:System.Drawing.Brush" /> mit einem linearen Farbverlauf. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse kapselt Farbverläufe mit zwei Farben und Farbverläufe für benutzerdefinierte mit mehreren Farben.  
+  
+ Alle lineare Farbverläufe sind entlang einer Linie angegeben werden, indem Sie die Breite eines Rechtecks oder zwei Punkten definiert.  
+  
+ Standardmäßig wird ein linearer Farbverlauf mit zwei Farben ein auch horizontale lineare Übergang von der Anfangsfarbe zur Endfarbe entlang der angegebenen Zeile an. Anpassen der Muster für den Verbund mit der <xref:System.Drawing.Drawing2D.Blend> -Klasse, die <xref:System.Drawing.Drawing2D.LinearGradientBrush.SetSigmaBellShape%2A> Methoden, oder die <xref:System.Drawing.Drawing2D.LinearGradientBrush.SetBlendTriangularShape%2A> Methoden. Passen Sie die Richtung des Farbverlaufs durch Angabe der <xref:System.Drawing.Drawing2D.LinearGradientMode> Aufzählung oder der der Winkel im Konstruktor.  
+  
+ Verwenden der <xref:System.Drawing.Drawing2D.LinearGradientBrush.InterpolationColors%2A> Eigenschaft zum Erstellen eines Farbverlaufs.  
+  
+ Die <xref:System.Drawing.Drawing2D.LinearGradientBrush.Transform%2A> Eigenschaft gibt eine lokale geometrische Transformation, die auf den Farbverlauf angewendet.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine horizontale <xref:System.Drawing.Drawing2D.LinearGradientBrush>; die Farbkomponenten ändern linear beim Wechseln von einer horizontale Koordinate von 0 bis zu einer horizontalen Koordinate 200. Beispielsweise wird ein Punkt, dessen erste Koordinate in der Mitte zwischen 0 und 200 ist, eine blaue Komponente aufweisen, in der Mitte zwischen 0 und 255 ist. Dieses Beispiel ist für die Verwendung mit Windows Forms konzipiert. Im folgenden Codebeispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert die <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter des <xref:System.Windows.Forms.PaintEventHandler>.  
+  
+ [!code-csharp[System.Drawing.UsingaGradientBrush#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#21)]
+ [!code-vb[System.Drawing.UsingaGradientBrush#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#21)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinearGradientBrush (System.Drawing.Point point1, System.Drawing.Point point2, System.Drawing.Color color1, System.Drawing.Color color2);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.Point point1, valuetype System.Drawing.Point point2, valuetype System.Drawing.Color color1, valuetype System.Drawing.Color color2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.#ctor(System.Drawing.Point,System.Drawing.Point,System.Drawing.Color,System.Drawing.Color)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="point1" Type="System.Drawing.Point" />
+        <Parameter Name="point2" Type="System.Drawing.Point" />
+        <Parameter Name="color1" Type="System.Drawing.Color" />
+        <Parameter Name="color2" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="point1">Ein <see cref="T:System.Drawing.Point" /> -Struktur, die den Anfangspunkt des linearen Farbverlaufs darstellt.</param>
+        <param name="point2">Ein <see cref="T:System.Drawing.Point" /> -Struktur, die den Endpunkt des linearen Farbverlaufs darstellt.</param>
+        <param name="color1">Ein <see cref="T:System.Drawing.Color" /> Struktur, die die Startfarbe des linearen Farbverlaufs darstellt.</param>
+        <param name="color2">Ein <see cref="T:System.Drawing.Color" /> Struktur, die die Endfarbe des linearen Farbverlaufs darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" /> -Klasse mit den angegebenen Punkten und Farben.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinearGradientBrush (System.Drawing.PointF point1, System.Drawing.PointF point2, System.Drawing.Color color1, System.Drawing.Color color2);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.PointF point1, valuetype System.Drawing.PointF point2, valuetype System.Drawing.Color color1, valuetype System.Drawing.Color color2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.#ctor(System.Drawing.PointF,System.Drawing.PointF,System.Drawing.Color,System.Drawing.Color)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="point1" Type="System.Drawing.PointF" />
+        <Parameter Name="point2" Type="System.Drawing.PointF" />
+        <Parameter Name="color1" Type="System.Drawing.Color" />
+        <Parameter Name="color2" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="point1">Ein <see cref="T:System.Drawing.PointF" /> -Struktur, die den Anfangspunkt des linearen Farbverlaufs darstellt.</param>
+        <param name="point2">Ein <see cref="T:System.Drawing.PointF" /> -Struktur, die den Endpunkt des linearen Farbverlaufs darstellt.</param>
+        <param name="color1">Ein <see cref="T:System.Drawing.Color" /> Struktur, die die Startfarbe des linearen Farbverlaufs darstellt.</param>
+        <param name="color2">Ein <see cref="T:System.Drawing.Color" /> Struktur, die die Endfarbe des linearen Farbverlaufs darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" /> -Klasse mit den angegebenen Punkten und Farben.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinearGradientBrush (System.Drawing.Rectangle rect, System.Drawing.Color color1, System.Drawing.Color color2, System.Drawing.Drawing2D.LinearGradientMode linearGradientMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.Rectangle rect, valuetype System.Drawing.Color color1, valuetype System.Drawing.Color color2, valuetype System.Drawing.Drawing2D.LinearGradientMode linearGradientMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.#ctor(System.Drawing.Rectangle,System.Drawing.Color,System.Drawing.Color,System.Drawing.Drawing2D.LinearGradientMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.Rectangle" />
+        <Parameter Name="color1" Type="System.Drawing.Color" />
+        <Parameter Name="color2" Type="System.Drawing.Color" />
+        <Parameter Name="linearGradientMode" Type="System.Drawing.Drawing2D.LinearGradientMode" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Ein <see cref="T:System.Drawing.Rectangle" /> -Struktur, die Grenzen des linearen Farbverlaufs angibt.</param>
+        <param name="color1">Ein <see cref="T:System.Drawing.Color" /> Struktur, die die Startfarbe des Farbverlaufs darstellt.</param>
+        <param name="color2">Ein <see cref="T:System.Drawing.Color" /> Struktur, die die Endfarbe des Farbverlaufs darstellt.</param>
+        <param name="linearGradientMode">Ein <see cref="T:System.Drawing.Drawing2D.LinearGradientMode" /> Enumerationselement ist, der die Ausrichtung des Farbverlaufs angibt. Die Ausrichtung bestimmt den Start- und Enddatum des Farbverlaufs. Beispielsweise <see langword="LinearGradientMode.ForwardDiagonal" /> gibt an, dass der Startpunkt der oberen linken Ecke des Rechtecks und der Endpunkt der unteren rechten Ecke des Rechtecks ist.</param>
+        <summary>Erstellt eine neue Instanz der dem <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" /> -Klasse auf Grundlage eines Rechtecks beginnt und endet, Farben und Ausrichtung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinearGradientBrush (System.Drawing.Rectangle rect, System.Drawing.Color color1, System.Drawing.Color color2, float angle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.Rectangle rect, valuetype System.Drawing.Color color1, valuetype System.Drawing.Color color2, float32 angle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.#ctor(System.Drawing.Rectangle,System.Drawing.Color,System.Drawing.Color,System.Single)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.Rectangle" />
+        <Parameter Name="color1" Type="System.Drawing.Color" />
+        <Parameter Name="color2" Type="System.Drawing.Color" />
+        <Parameter Name="angle" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Ein <see cref="T:System.Drawing.Rectangle" /> -Struktur, die Grenzen des linearen Farbverlaufs angibt.</param>
+        <param name="color1">Ein <see cref="T:System.Drawing.Color" /> Struktur, die die Startfarbe des Farbverlaufs darstellt.</param>
+        <param name="color2">Ein <see cref="T:System.Drawing.Color" /> Struktur, die die Endfarbe des Farbverlaufs darstellt.</param>
+        <param name="angle">Der Winkel in Grad gegen den Uhrzeigersinn von der x-Achse der Ausrichtungslinie des Farbverlaufs.</param>
+        <summary>Erstellt eine neue Instanz der dem <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" /> -Klasse auf Grundlage eines Rechtecks beginnt und endet, Farben und einen Winkel Ausrichtung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Punkte auf einer Linie senkrecht zur Ausrichtung Zeile werden die gleiche Farbe.  
+  
+ Die Anfangszeile senkrecht zur Ausrichtung Zeile und einer der Ecken des Rechtecks durchläuft. Alle Punkte in der Startzeile sind die Startfarbe an. Klicken Sie dann die Endzeile senkrecht zur Ausrichtung Zeile und einer der Ecken des Rechtecks durchläuft. Alle Punkte in die Endzeile sind die Endfarbe.  
+  
+ Der Winkel der Ausrichtungslinie bestimmt die Ecken der Anfangs- und Endzeilen durchlaufen. Beispielsweise ist der Winkel zwischen 0 und 90 Grad, die Anfangszeile durchläuft der oberen linken Ecke und die Endzeile durchläuft der unteren rechten Ecke.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinearGradientBrush (System.Drawing.RectangleF rect, System.Drawing.Color color1, System.Drawing.Color color2, System.Drawing.Drawing2D.LinearGradientMode linearGradientMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.RectangleF rect, valuetype System.Drawing.Color color1, valuetype System.Drawing.Color color2, valuetype System.Drawing.Drawing2D.LinearGradientMode linearGradientMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.#ctor(System.Drawing.RectangleF,System.Drawing.Color,System.Drawing.Color,System.Drawing.Drawing2D.LinearGradientMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.RectangleF" />
+        <Parameter Name="color1" Type="System.Drawing.Color" />
+        <Parameter Name="color2" Type="System.Drawing.Color" />
+        <Parameter Name="linearGradientMode" Type="System.Drawing.Drawing2D.LinearGradientMode" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Ein <see cref="T:System.Drawing.RectangleF" /> -Struktur, die Grenzen des linearen Farbverlaufs angibt.</param>
+        <param name="color1">Ein <see cref="T:System.Drawing.Color" /> Struktur, die die Startfarbe des Farbverlaufs darstellt.</param>
+        <param name="color2">Ein <see cref="T:System.Drawing.Color" /> Struktur, die die Endfarbe des Farbverlaufs darstellt.</param>
+        <param name="linearGradientMode">Ein <see cref="T:System.Drawing.Drawing2D.LinearGradientMode" /> Enumerationselement ist, der die Ausrichtung des Farbverlaufs angibt. Die Ausrichtung bestimmt den Start- und Enddatum des Farbverlaufs. Beispielsweise <see langword="LinearGradientMode.ForwardDiagonal" /> gibt an, dass der Startpunkt der oberen linken Ecke des Rechtecks und der Endpunkt der unteren rechten Ecke des Rechtecks ist.</param>
+        <summary>Erstellt eine neue Instanz der dem <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" /> anhand eines Rechtecks, das Starten und Beenden von Farben und Ausrichtungsmodus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinearGradientBrush (System.Drawing.RectangleF rect, System.Drawing.Color color1, System.Drawing.Color color2, float angle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.RectangleF rect, valuetype System.Drawing.Color color1, valuetype System.Drawing.Color color2, float32 angle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.#ctor(System.Drawing.RectangleF,System.Drawing.Color,System.Drawing.Color,System.Single)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.RectangleF" />
+        <Parameter Name="color1" Type="System.Drawing.Color" />
+        <Parameter Name="color2" Type="System.Drawing.Color" />
+        <Parameter Name="angle" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Ein <see cref="T:System.Drawing.RectangleF" /> -Struktur, die Grenzen des linearen Farbverlaufs angibt.</param>
+        <param name="color1">Ein <see cref="T:System.Drawing.Color" /> Struktur, die die Startfarbe des Farbverlaufs darstellt.</param>
+        <param name="color2">Ein <see cref="T:System.Drawing.Color" /> Struktur, die die Endfarbe des Farbverlaufs darstellt.</param>
+        <param name="angle">Der Winkel in Grad gegen den Uhrzeigersinn von der x-Achse der Ausrichtungslinie des Farbverlaufs.</param>
+        <summary>Erstellt eine neue Instanz der dem <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" /> -Klasse auf Grundlage eines Rechtecks beginnt und endet, Farben und einen Winkel Ausrichtung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Punkte auf einer Linie senkrecht zur Ausrichtung Zeile werden die gleiche Farbe.  
+  
+ Die Anfangszeile senkrecht zur Ausrichtung Zeile und einer der Ecken des Rechtecks durchläuft. Alle Punkte in der Startzeile sind die Startfarbe an. Klicken Sie dann die Endzeile senkrecht zur Ausrichtung Zeile und einer der Ecken des Rechtecks durchläuft. Alle Punkte in die Endzeile sind die Endfarbe.  
+  
+ Der Winkel der Ausrichtungslinie bestimmt die Ecken der Anfangs- und Endzeilen durchlaufen. Beispielsweise ist der Winkel zwischen 0 und 90 Grad, die Anfangszeile durchläuft der oberen linken Ecke und die Endzeile durchläuft der unteren rechten Ecke.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinearGradientBrush (System.Drawing.Rectangle rect, System.Drawing.Color color1, System.Drawing.Color color2, float angle, bool isAngleScaleable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.Rectangle rect, valuetype System.Drawing.Color color1, valuetype System.Drawing.Color color2, float32 angle, bool isAngleScaleable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.#ctor(System.Drawing.Rectangle,System.Drawing.Color,System.Drawing.Color,System.Single,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.Rectangle" />
+        <Parameter Name="color1" Type="System.Drawing.Color" />
+        <Parameter Name="color2" Type="System.Drawing.Color" />
+        <Parameter Name="angle" Type="System.Single" />
+        <Parameter Name="isAngleScaleable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Ein <see cref="T:System.Drawing.Rectangle" /> -Struktur, die Grenzen des linearen Farbverlaufs angibt.</param>
+        <param name="color1">Ein <see cref="T:System.Drawing.Color" /> Struktur, die die Startfarbe des Farbverlaufs darstellt.</param>
+        <param name="color2">Ein <see cref="T:System.Drawing.Color" /> Struktur, die die Endfarbe des Farbverlaufs darstellt.</param>
+        <param name="angle">Der Winkel in Grad gegen den Uhrzeigersinn von der x-Achse der Ausrichtungslinie des Farbverlaufs.</param>
+        <param name="isAngleScaleable">Legen Sie auf <see langword="true" /> um anzugeben, dass die Transformation mit diesem verknüpft ist der Winkel betroffen ist <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" />ist, andernfalls <see langword="false" />.</param>
+        <summary>Erstellt eine neue Instanz der dem <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" /> -Klasse auf Grundlage eines Rechtecks beginnt und endet, Farben und einen Winkel Ausrichtung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Punkte auf einer Linie senkrecht zur Ausrichtung Zeile werden die gleiche Farbe.  
+  
+ Die Anfangszeile senkrecht zur Ausrichtung Zeile und einer der Ecken des Rechtecks durchläuft. Alle Punkte in der Startzeile sind die Startfarbe an. Klicken Sie dann die Endzeile senkrecht zur Ausrichtung Zeile und einer der Ecken des Rechtecks durchläuft. Alle Punkte in die Endzeile sind die Endfarbe.  
+  
+ Der Winkel der Ausrichtungslinie bestimmt die Ecken der Anfangs- und Endzeilen durchlaufen. Beispielsweise ist der Winkel zwischen 0 und 90 Grad, die Anfangszeile durchläuft der oberen linken Ecke und die Endzeile durchläuft der unteren rechten Ecke.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinearGradientBrush (System.Drawing.RectangleF rect, System.Drawing.Color color1, System.Drawing.Color color2, float angle, bool isAngleScaleable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.RectangleF rect, valuetype System.Drawing.Color color1, valuetype System.Drawing.Color color2, float32 angle, bool isAngleScaleable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.#ctor(System.Drawing.RectangleF,System.Drawing.Color,System.Drawing.Color,System.Single,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.RectangleF" />
+        <Parameter Name="color1" Type="System.Drawing.Color" />
+        <Parameter Name="color2" Type="System.Drawing.Color" />
+        <Parameter Name="angle" Type="System.Single" />
+        <Parameter Name="isAngleScaleable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Ein <see cref="T:System.Drawing.RectangleF" /> -Struktur, die Grenzen des linearen Farbverlaufs angibt.</param>
+        <param name="color1">Ein <see cref="T:System.Drawing.Color" /> Struktur, die die Startfarbe des Farbverlaufs darstellt.</param>
+        <param name="color2">Ein <see cref="T:System.Drawing.Color" /> Struktur, die die Endfarbe des Farbverlaufs darstellt.</param>
+        <param name="angle">Der Winkel in Grad gegen den Uhrzeigersinn von der x-Achse der Ausrichtungslinie des Farbverlaufs.</param>
+        <param name="isAngleScaleable">Legen Sie auf <see langword="true" /> um anzugeben, dass die Transformation mit diesem verknüpft ist der Winkel betroffen ist <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" />ist, andernfalls <see langword="false" />.</param>
+        <summary>Erstellt eine neue Instanz der dem <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" /> -Klasse auf Grundlage eines Rechtecks beginnt und endet, Farben und einen Winkel Ausrichtung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Punkte auf einer Linie senkrecht zur Ausrichtung Zeile werden die gleiche Farbe.  
+  
+ Die Anfangszeile senkrecht zur Ausrichtung Zeile und einer der Ecken des Rechtecks durchläuft. Alle Punkte in der Startzeile sind die Startfarbe an. Klicken Sie dann die Endzeile senkrecht zur Ausrichtung Zeile und einer der Ecken des Rechtecks durchläuft. Alle Punkte in die Endzeile sind die Endfarbe.  
+  
+ Der Winkel der Ausrichtungslinie bestimmt die Ecken der Anfangs- und Endzeilen durchlaufen. Beispielsweise ist der Winkel zwischen 0 und 90 Grad, die Anfangszeile durchläuft der oberen linken Ecke und die Endzeile durchläuft der unteren rechten Ecke.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Blend">
+      <MemberSignature Language="C#" Value="public System.Drawing.Drawing2D.Blend Blend { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Drawing2D.Blend Blend" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.LinearGradientBrush.Blend" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.Blend</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen <see cref="T:System.Drawing.Drawing2D.Blend" /> Positionen und Faktoren, die eine benutzerdefinierte Farbverlaufs definieren, die angibt.</summary>
+        <value>Ein <see cref="T:System.Drawing.Drawing2D.Blend" /> , eine benutzerdefinierte Farbverlaufs darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Drawing.Drawing2D.Blend> enthält entsprechende Arrays von Blend-Faktoren und Positionen. Die Blend-Faktoren Geben Sie die Prozentsätze der Anfangsfarbe und Endfarbe an der entsprechenden Position verwenden. Die Positionen werden als Prozentsatz der Entfernung entlang der Farbverlaufslinie angegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine genaue Kopie von dieser <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" />.</summary>
+        <returns>Das von dieser Methode erstellte <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" />, umgewandelt in ein Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einem <xref:System.Windows.Forms.Form.OnPaint%2A> Ereignisobjekt. Der Code führt die folgenden Aktionen aus:  
+  
+-   Erstellt einen neuen <xref:System.Drawing.Drawing2D.LinearGradientBrush>.  
+  
+-   Zeichnet eine Ellipse, die mit diesem Pinsel auf dem Bildschirm an.  
+  
+-   Klont die <xref:System.Drawing.Drawing2D.LinearGradientBrush> (`clonedLGBrush`).  
+  
+-   Zeichnet eine Ellipse direkt unter die erste Ellipse, die mit dem geklonten Pinsel auf den Bildschirm an.  
+  
+ [!code-cpp[System.Drawing.Drawing2D.ClassicLinearGradientBrush#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.Drawing2D.ClassicLinearGradientBrush#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.Drawing2D.ClassicLinearGradientBrush#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GammaCorrection">
+      <MemberSignature Language="C#" Value="public bool GammaCorrection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool GammaCorrection" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Gammakorrektur für dieses aktiviert ist <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" />.</summary>
+        <value>Der Wert ist <see langword="true" /> aktivierte von Gammakorrektur für diesen <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" />ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterpolationColors">
+      <MemberSignature Language="C#" Value="public System.Drawing.Drawing2D.ColorBlend InterpolationColors { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Drawing2D.ColorBlend InterpolationColors" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.LinearGradientBrush.InterpolationColors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.ColorBlend</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen <see cref="T:System.Drawing.Drawing2D.ColorBlend" /> , ein lineares Farbverlaufs definiert.</summary>
+        <value>Ein <see cref="T:System.Drawing.Drawing2D.ColorBlend" /> , ein lineares Farbverlaufs definiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Drawing.Drawing2D.ColorBlend> enthält entsprechende Arrays von Farben und Positionen. Die Positionen sind Werte von 0 bis 1, die den Prozentsatz der dem Abstand entlang der Farbverlaufslinie angeben, wo sich die entsprechende Farbe befindet.  
+  
+ Durch Festlegen dieser Eigenschaft erstellt einen Farbverlauf mit einer Farbe an jede Position entlang der Farbverlaufslinie. Durch Festlegen dieser Eigenschaft hebt alle vorherige Farbe, Position und Farbe Einstellungen für diesen <xref:System.Drawing.Drawing2D.LinearGradientBrush>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinearColors">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color[] LinearColors { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color[] LinearColors" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.LinearGradientBrush.LinearColors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert die Farben Start- und Enddatum des Farbverlaufs.</summary>
+        <value>Ein Array mit zwei <see cref="T:System.Drawing.Color" /> Strukturen, die Start- und Endfarbe des Farbverlaufs darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MultiplyTransform">
+      <MemberSignature Language="C#" Value="public void MultiplyTransform (System.Drawing.Drawing2D.Matrix matrix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MultiplyTransform(class System.Drawing.Drawing2D.Matrix matrix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.MultiplyTransform(System.Drawing.Drawing2D.Matrix)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matrix" Type="System.Drawing.Drawing2D.Matrix" />
+      </Parameters>
+      <Docs>
+        <param name="matrix">Die <see cref="T:System.Drawing.Drawing2D.Matrix" /> , mit der die geometrische Transformation multipliziert.</param>
+        <summary>Multipliziert die <see cref="T:System.Drawing.Drawing2D.Matrix" /> , die die lokale geometrische Transformation dieses darstellt <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" /> durch das angegebene <see cref="T:System.Drawing.Drawing2D.Matrix" /> vorangestellt angegebenen <see cref="T:System.Drawing.Drawing2D.Matrix" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Ein Beispiel finden Sie unter <xref:System.Drawing.Drawing2D.LinearGradientBrush.MultiplyTransform%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MultiplyTransform">
+      <MemberSignature Language="C#" Value="public void MultiplyTransform (System.Drawing.Drawing2D.Matrix matrix, System.Drawing.Drawing2D.MatrixOrder order);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MultiplyTransform(class System.Drawing.Drawing2D.Matrix matrix, valuetype System.Drawing.Drawing2D.MatrixOrder order) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.MultiplyTransform(System.Drawing.Drawing2D.Matrix,System.Drawing.Drawing2D.MatrixOrder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matrix" Type="System.Drawing.Drawing2D.Matrix" />
+        <Parameter Name="order" Type="System.Drawing.Drawing2D.MatrixOrder" />
+      </Parameters>
+      <Docs>
+        <param name="matrix">Die <see cref="T:System.Drawing.Drawing2D.Matrix" /> , mit der die geometrische Transformation multipliziert.</param>
+        <param name="order">Ein <see cref="T:System.Drawing.Drawing2D.MatrixOrder" /> , der angibt, in welcher Reihenfolge die beiden Matrizen multipliziert.</param>
+        <summary>Multipliziert die <see cref="T:System.Drawing.Drawing2D.Matrix" /> , die die lokale geometrische Transformation dieses darstellt <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" /> durch das angegebene <see cref="T:System.Drawing.Drawing2D.Matrix" /> in der angegebenen Reihenfolge.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einem <xref:System.Windows.Forms.Form.OnPaint%2A> Ereignisobjekt. Der Code führt die folgenden Aktionen aus:  
+  
+-   Erstellt einen neuen <xref:System.Drawing.Drawing2D.LinearGradientBrush>.  
+  
+-   Zeichnet eine Ellipse, die mit diesem Pinsel auf dem Bildschirm an.  
+  
+-   Ruft die <xref:System.Drawing.Drawing2D.LinearGradientBrush.MultiplyTransform%2A> -Methode zum Transformieren der <xref:System.Drawing.Drawing2D.LinearGradientBrush>.  
+  
+-   Zeichnet eine Ellipse direkt unter die erste Ellipse, die mit den transformierten Pinsel auf den Bildschirm an.  
+  
+ Beachten Sie, dass die untere Ellipse in horizontaler Richtung verzerrt wird, und der Farbverlauf gestreckt wird, um die neue Form entsprechen.  
+  
+ [!code-cpp[System.Drawing.Drawing2D.ClassicLinearGradientBrush#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/CPP/form1.cpp#2)]
+ [!code-csharp[System.Drawing.Drawing2D.ClassicLinearGradientBrush#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/CS/form1.cs#2)]
+ [!code-vb[System.Drawing.Drawing2D.ClassicLinearGradientBrush#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rectangle">
+      <MemberSignature Language="C#" Value="public System.Drawing.RectangleF Rectangle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.RectangleF Rectangle" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.LinearGradientBrush.Rectangle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.RectangleF</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen rechteckigen Bereich, der die Start- und Enddatum Punkte des Farbverlaufs definiert.</summary>
+        <value>Ein <see cref="T:System.Drawing.RectangleF" /> -Struktur, die Start- und Endpunkt des Farbverlaufs angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der linken Seite des Rechtecks gibt den Ausgangspunkt des linearen Farbverlaufs und der rechten Seite des Rechtecks gibt den Endpunkt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetTransform">
+      <MemberSignature Language="C#" Value="public void ResetTransform ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetTransform() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.ResetTransform" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt die <see cref="P:System.Drawing.Drawing2D.LinearGradientBrush.Transform" /> Eigenschaft Identity.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einem <xref:System.Windows.Forms.Form.OnPaint%2A> Ereignisobjekt. Der Code führt die folgenden Aktionen aus:  
+  
+-   Erstellt einen neuen <xref:System.Drawing.Drawing2D.LinearGradientBrush>.  
+  
+-   Zeichnet eine Ellipse, die mit diesem Pinsel auf dem Bildschirm an.  
+  
+-   Ruft die <xref:System.Drawing.Drawing2D.LinearGradientBrush.MultiplyTransform%2A> -Methode zum Transformieren der <xref:System.Drawing.Drawing2D.LinearGradientBrush>.  
+  
+-   Zeichnet eine Ellipse direkt unter die erste Ellipse, die mit den transformierten Pinsel auf den Bildschirm an.  
+  
+-   Setzt die Transformation an.  
+  
+-   Zeichnet eine dritte Ellipse unter die ersten beiden auf den Bildschirm an.  
+  
+ Beachten Sie, dass die niedrigsten Ellipse gezeichnet wird dieselbe Größe wie das erste und die Fälligkeitsdatum für den Aufruf der <xref:System.Drawing.Drawing2D.LinearGradientBrush.ResetTransform%2A> Farbverlauf-Methode wurde entsprechend reduziert.  
+  
+ [!code-cpp[System.Drawing.Drawing2D.ClassicLinearGradientBrush#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/CPP/form1.cpp#3)]
+ [!code-csharp[System.Drawing.Drawing2D.ClassicLinearGradientBrush#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/CS/form1.cs#3)]
+ [!code-vb[System.Drawing.Drawing2D.ClassicLinearGradientBrush#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RotateTransform">
+      <MemberSignature Language="C#" Value="public void RotateTransform (float angle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RotateTransform(float32 angle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.RotateTransform(System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="angle" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="angle">Der Rotationswinkel.</param>
+        <summary>Dreht die lokale geometrische Transformation um den angegebenen Betrag an. Diese Methode stellt der Transformation die Drehung voran.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Ein Beispiel finden Sie unter <xref:System.Drawing.Drawing2D.LinearGradientBrush.RotateTransform%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RotateTransform">
+      <MemberSignature Language="C#" Value="public void RotateTransform (float angle, System.Drawing.Drawing2D.MatrixOrder order);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RotateTransform(float32 angle, valuetype System.Drawing.Drawing2D.MatrixOrder order) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.RotateTransform(System.Single,System.Drawing.Drawing2D.MatrixOrder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="angle" Type="System.Single" />
+        <Parameter Name="order" Type="System.Drawing.Drawing2D.MatrixOrder" />
+      </Parameters>
+      <Docs>
+        <param name="angle">Der Rotationswinkel.</param>
+        <param name="order">Eine <see cref="T:System.Drawing.Drawing2D.MatrixOrder" />, die angibt, ob die Rotationsmatrix vorangestellt oder angefügt werden soll.</param>
+        <summary>Dreht die lokale geometrische Transformation um den angegebenen Betrag in der angegebenen Reihenfolge an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einem <xref:System.Windows.Forms.Form.OnPaint%2A> Ereignisobjekt. Der code  
+  
+-   Erstellt einen neuen <xref:System.Drawing.Drawing2D.LinearGradientBrush>.  
+  
+-   Zeichnet eine Ellipse, die mit diesem Pinsel auf dem Bildschirm an.  
+  
+-   Dreht die <xref:System.Drawing.Drawing2D.LinearGradientBrush> 45 Grad durch Aufrufen der <xref:System.Drawing.Drawing2D.LinearGradientBrush.RotateTransform%2A> Methode.  
+  
+-   Zeichnet eine Ellipse direkt unter die erste Ellipse, die mit dem gedrehten Pinsel auf den Bildschirm an.  
+  
+ Beachten Sie, dass der Farbverlauf des unteren Ellipse in einem 45-Grad-Winkel auf der x-Achse der Ellipse, die oben. Beachten Sie auch, dass ein Aufruf der <xref:System.Drawing.Drawing2D.LinearGradientBrush.TranslateTransform%2A> Methode wird verwendet, um dem linken Rand der Verlaufsfläche am linken Rand der unteren Ellipse zu rechtfertigen.  
+  
+ [!code-cpp[System.Drawing.Drawing2D.ClassicLinearGradientBrush#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/CPP/form1.cpp#4)]
+ [!code-csharp[System.Drawing.Drawing2D.ClassicLinearGradientBrush#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/CS/form1.cs#4)]
+ [!code-vb[System.Drawing.Drawing2D.ClassicLinearGradientBrush#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScaleTransform">
+      <MemberSignature Language="C#" Value="public void ScaleTransform (float sx, float sy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ScaleTransform(float32 sx, float32 sy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.ScaleTransform(System.Single,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sx" Type="System.Single" />
+        <Parameter Name="sy" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="sx">Der Betrag, um die Transformation in Richtung der x-Achse skaliert werden soll.</param>
+        <param name="sy">Der Betrag, um die Transformation in Richtung der y-Achse skaliert werden soll.</param>
+        <summary>Skaliert die lokale geometrische Transformation um die angegebenen Beträge. Diese Methode stellt der Transformation die Skalierungsmatrix voran.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Ein Beispiel finden Sie unter <xref:System.Drawing.Drawing2D.LinearGradientBrush.ScaleTransform%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScaleTransform">
+      <MemberSignature Language="C#" Value="public void ScaleTransform (float sx, float sy, System.Drawing.Drawing2D.MatrixOrder order);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ScaleTransform(float32 sx, float32 sy, valuetype System.Drawing.Drawing2D.MatrixOrder order) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.ScaleTransform(System.Single,System.Single,System.Drawing.Drawing2D.MatrixOrder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sx" Type="System.Single" />
+        <Parameter Name="sy" Type="System.Single" />
+        <Parameter Name="order" Type="System.Drawing.Drawing2D.MatrixOrder" />
+      </Parameters>
+      <Docs>
+        <param name="sx">Der Betrag, um die Transformation in Richtung der x-Achse skaliert werden soll.</param>
+        <param name="sy">Der Betrag, um die Transformation in Richtung der y-Achse skaliert werden soll.</param>
+        <param name="order">Eine <see cref="T:System.Drawing.Drawing2D.MatrixOrder" />, die angibt, ob die Skalierungsmatrix vorangestellt oder angefügt werden soll.</param>
+        <summary>Skaliert die lokale geometrische Transformation die angegebenen Werte in der angegebenen Reihenfolge.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einem <xref:System.Windows.Forms.Form.OnPaint%2A> Ereignisobjekt. Der Code führt die folgenden Aktionen aus:  
+  
+-   Erstellt einen neuen <xref:System.Drawing.Drawing2D.LinearGradientBrush>.  
+  
+-   Zeichnen einer Ellipse, die mit diesem Pinsel auf dem Bildschirm an.  
+  
+-   Skaliert die <xref:System.Drawing.Drawing2D.LinearGradientBrush> mit einem Faktor von zwei auf der x-Achse.  
+  
+-   Zeichnet eine Ellipse direkt unter die erste Ellipse, die mit dem skalierten Pinsel auf den Bildschirm an.  
+  
+ Beachten Sie, dass der Farbverlauf des unteren Ellipse mit einem Faktor von zwei verzerrt wird. Beachten Sie auch, dass ein Aufruf der <xref:System.Drawing.Drawing2D.LinearGradientBrush.TranslateTransform%2A> Methode wird verwendet, um dem linken Rand der Verlaufsfläche mit dem linken Rand des Ellipse zu rechtfertigen.  
+  
+ [!code-cpp[System.Drawing.Drawing2D.ClassicLinearGradientBrush#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/CPP/form1.cpp#5)]
+ [!code-csharp[System.Drawing.Drawing2D.ClassicLinearGradientBrush#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/CS/form1.cs#5)]
+ [!code-vb[System.Drawing.Drawing2D.ClassicLinearGradientBrush#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/VB/form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBlendTriangularShape">
+      <MemberSignature Language="C#" Value="public void SetBlendTriangularShape (float focus);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetBlendTriangularShape(float32 focus) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.SetBlendTriangularShape(System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="focus" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="focus">Ein Wert zwischen 0 und 1, der angibt, die Mitte des Verlaufs (der Punkt, in dem der Farbverlauf besteht, nur die Farbe am Ende).</param>
+        <summary>Erstellt einen linearen Farbverlauf mit einer Farbe in der Mitte und einem linearen Übergang in eine einzelne Farbe an beiden Enden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt ein `focus`, dies ist der Punkt, in denen der Verlauf besteht, nur aus der Endfarbe. Die `focus` -Parameter stellt eine Position im Verhältnis zur Entfernung entlang der Farbverlaufslinie dar. Die Startfarbe linear auf beiden Seiten fragt Farbverlauf deaktiviert.  
+  
+   
+  
+## Examples  
+ Ein Beispiel finden Sie unter <xref:System.Drawing.Drawing2D.LinearGradientBrush.SetBlendTriangularShape%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBlendTriangularShape">
+      <MemberSignature Language="C#" Value="public void SetBlendTriangularShape (float focus, float scale);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetBlendTriangularShape(float32 focus, float32 scale) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.SetBlendTriangularShape(System.Single,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="focus" Type="System.Single" />
+        <Parameter Name="scale" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="focus">Ein Wert zwischen 0 und 1, der angibt, die Mitte des Verlaufs (der Punkt, in dem der Farbverlauf besteht, nur die Farbe am Ende).</param>
+        <param name="scale">Ein Wert von 0 through1, der angibt, wie schnell die Farbe von der Anfangsfarbe zum <c>Fokus</c> (Endfarbe)</param>
+        <summary>Erstellt einen linearen Farbverlauf mit einer Farbe in der Mitte und einem linearen Übergang in eine einzelne Farbe an beiden Enden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt ein `focus`, dies ist der Punkt, in denen der Verlauf besteht, nur aus der Endfarbe. Die `focus` -Parameter stellt eine Position im Verhältnis zur Entfernung entlang der Farbverlaufslinie dar. Die Startfarbe linear auf beiden Seiten fragt Farbverlauf deaktiviert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einem <xref:System.Windows.Forms.Form.OnPaint%2A> Ereignisobjekt. Der Code führt die folgenden Aktionen aus:  
+  
+-   Erstellt einen neuen <xref:System.Drawing.Drawing2D.LinearGradientBrush>.  
+  
+-   Verwendet diesen Pinsel eine Ellipse, die auf dem Bildschirm gezeichnet werden soll, die einen linearen links-nach-rechts-von Farben Übergang an.  
+  
+-   Transformiert die <xref:System.Drawing.Drawing2D.LinearGradientBrush> in einem Dreieck mit der Spitze in der Mitte.  
+  
+-   Zeichnet eine Ellipse, die zweite mit den transformierten Pinsel auf dem Bildschirm an.  
+  
+ Beachten Sie, dass der Farbverlauf der unteren Ellipse von Blau nach Rot und dann wieder nach Blau übergeht.  
+  
+ [!code-cpp[System.Drawing.Drawing2D.ClassicLinearGradientBrush#6](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/CPP/form1.cpp#6)]
+ [!code-csharp[System.Drawing.Drawing2D.ClassicLinearGradientBrush#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/CS/form1.cs#6)]
+ [!code-vb[System.Drawing.Drawing2D.ClassicLinearGradientBrush#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/VB/form1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSigmaBellShape">
+      <MemberSignature Language="C#" Value="public void SetSigmaBellShape (float focus);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetSigmaBellShape(float32 focus) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.SetSigmaBellShape(System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="focus" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="focus">Ein Wert zwischen 0 und 1, der angibt, die Mitte des Verlaufs (der Punkt, an dem die Anfangsfarbe und Endfarbe gleichermaßen gemischt werden).</param>
+        <summary>Erstellt einen Farbverlauf, basierend auf einer Glockenkurve.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt ein `focus`, dies ist der Punkt, in denen der Verlauf besteht, nur aus der Endfarbe. Die `focus` -Parameter stellt eine Position im Verhältnis zur Entfernung entlang der Farbverlaufslinie dar. Die Startfarbe basierend auf einer Bell Kurvenform (normalverteilung) auf beiden Seiten fragt Farbverlauf deaktiviert.  
+  
+   
+  
+## Examples  
+ Ein Beispiel finden Sie unter<xref:System.Drawing.Drawing2D.LinearGradientBrush.SetSigmaBellShape%2A>`.`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSigmaBellShape">
+      <MemberSignature Language="C#" Value="public void SetSigmaBellShape (float focus, float scale);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetSigmaBellShape(float32 focus, float32 scale) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.SetSigmaBellShape(System.Single,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="focus" Type="System.Single" />
+        <Parameter Name="scale" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="focus">Ein Wert zwischen 0 und 1, der angibt, die Mitte des Verlaufs (der Punkt, in dem der Farbverlauf besteht, nur die Farbe am Ende).</param>
+        <param name="scale">Ein Wert zwischen 0 und 1, der angibt, wie schnell eine Farbe aus der <c>Fokus</c>.</param>
+        <summary>Erstellt einen Farbverlauf, basierend auf einer Glockenkurve.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt ein `focus`, dies ist der Punkt, in denen der Verlauf besteht, nur aus der Endfarbe. Die `focus` -Parameter stellt eine Position im Verhältnis zur Entfernung entlang der Farbverlaufslinie dar. Die Startfarbe basierend auf einer Bell Kurvenform (normalverteilung) auf beiden Seiten fragt Farbverlauf deaktiviert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einem <xref:System.Windows.Forms.Form.OnPaint%2A> Ereignisobjekt. Der Code führt die folgenden Aktionen aus:  
+  
+-   Erstellt einen neuen <xref:System.Drawing.Drawing2D.LinearGradientBrush>.  
+  
+-   Verwendet diesen Pinsel eine Ellipse, die auf dem Bildschirm gezeichnet werden soll, die einen linearen links-nach-rechts-von Farben Übergang an.  
+  
+-   Transformiert die <xref:System.Drawing.Drawing2D.LinearGradientBrush> eine Glockenkurve mit der Spitze in der Mitte haben.  
+  
+-   Zeichnet eine Ellipse, die zweite auf dem Bildschirm mit dem Pinsel Bell strukturiert.  
+  
+ Beachten Sie, dass der Farbverlauf der unteren Ellipse von Blau nach Rot und dann wieder nach Blau übergeht.  
+  
+ [!code-cpp[System.Drawing.Drawing2D.ClassicLinearGradientBrush#7](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/CPP/form1.cpp#7)]
+ [!code-csharp[System.Drawing.Drawing2D.ClassicLinearGradientBrush#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/CS/form1.cs#7)]
+ [!code-vb[System.Drawing.Drawing2D.ClassicLinearGradientBrush#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/VB/form1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public System.Drawing.Drawing2D.Matrix Transform { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Drawing2D.Matrix Transform" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.LinearGradientBrush.Transform" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.Matrix</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Kopie <see cref="T:System.Drawing.Drawing2D.Matrix" /> , definiert eine lokale geometrische Transformation für diesen <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" />.</summary>
+        <value>Eine Kopie der <see cref="T:System.Drawing.Drawing2D.Matrix" /> , definiert eine geometrische Transformation, die gilt nur für mit diesem gezeichneten <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine geometrische Transformation kann zu übersetzen, zu skalieren, drehen oder neigen Verlaufsfläche verwendet werden. Da die Matrix zurückgegeben und durch die <xref:System.Drawing.Drawing2D.LinearGradientBrush.Transform%2A> Eigenschaft ist eine Kopie der geometrischen Transformation des Pinsels, sollten Sie die Matrix freigeben, wenn Sie nicht mehr benötigen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TranslateTransform">
+      <MemberSignature Language="C#" Value="public void TranslateTransform (float dx, float dy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TranslateTransform(float32 dx, float32 dy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.TranslateTransform(System.Single,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dx" Type="System.Single" />
+        <Parameter Name="dy" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="dx">Der Wert der Verschiebung in x-Richtung.</param>
+        <param name="dy">Der Wert der Verschiebung in y-Richtung.</param>
+        <summary>Übersetzt die lokale geometrische Transformation um die angegebenen Abmessungen. Diese Methode stellt der Transformation die Verschiebung voran.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Ein Beispiel finden Sie unter <xref:System.Drawing.Drawing2D.LinearGradientBrush.TranslateTransform%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TranslateTransform">
+      <MemberSignature Language="C#" Value="public void TranslateTransform (float dx, float dy, System.Drawing.Drawing2D.MatrixOrder order);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TranslateTransform(float32 dx, float32 dy, valuetype System.Drawing.Drawing2D.MatrixOrder order) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.TranslateTransform(System.Single,System.Single,System.Drawing.Drawing2D.MatrixOrder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dx" Type="System.Single" />
+        <Parameter Name="dy" Type="System.Single" />
+        <Parameter Name="order" Type="System.Drawing.Drawing2D.MatrixOrder" />
+      </Parameters>
+      <Docs>
+        <param name="dx">Der Wert der Verschiebung in x-Richtung.</param>
+        <param name="dy">Der Wert der Verschiebung in y-Richtung.</param>
+        <param name="order">Die Reihenfolge (vorangestellt oder angefügt), in der die Schiebung angewendet wird.</param>
+        <summary>Übersetzt die lokale geometrische Transformation um die angegebenen Abmessungen in der angegebenen Reihenfolge an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einem <xref:System.Windows.Forms.Form.OnPaint%2A> Ereignisobjekt. Der Code führt die folgenden Aktionen aus:  
+  
+-   Erstellt einen neuen <xref:System.Drawing.Drawing2D.LinearGradientBrush>.  
+  
+-   Verwendet diesen Pinsel ein Rechteck auf dem Bildschirm gezeichnet werden soll, die einen linearen links-nach-rechts-von Farben Übergang an.  
+  
+-   Dreht die <xref:System.Drawing.Drawing2D.LinearGradientBrush> um 90 Grad und skaliert Farbverlauf.  
+  
+-   Zeichnet ein Rechteck mit dem Verlauf gedreht und skalierte auf dem Bildschirm.  
+  
+-   Übersetzt das Rechteck einen linearen Farbverlauf von oben nach unten ausgeführt.  
+  
+-   Zeichnet das verschobene Rechteck auf dem Bildschirm an.  
+  
+ Beachten Sie, dass drei Rechtecke angezeigt mit Links-nach-rechts Hintergrundfarbverlauf an, die mittleren eine gedrehte und skalierte Farbverlauf und dem unteren Rand eines für die endgültige, übersetzte Farbverlauf.  
+  
+ [!code-cpp[System.Drawing.Drawing2D.ClassicLinearGradientBrush#8](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/CPP/form1.cpp#8)]
+ [!code-csharp[System.Drawing.Drawing2D.ClassicLinearGradientBrush#8](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/CS/form1.cs#8)]
+ [!code-vb[System.Drawing.Drawing2D.ClassicLinearGradientBrush#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/VB/form1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WrapMode">
+      <MemberSignature Language="C#" Value="public System.Drawing.Drawing2D.WrapMode WrapMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Drawing2D.WrapMode WrapMode" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.LinearGradientBrush.WrapMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.WrapMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen <see cref="T:System.Drawing.Drawing2D.WrapMode" /> Enumeration, der den Umbruchmodus dafür angibt <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" />.</summary>
+        <value>Ein <see cref="T:System.Drawing.Drawing2D.WrapMode" /> , die angibt, wie mit diesem gezeichneten <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" /> nebeneinander angeordnet sind.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

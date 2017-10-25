@@ -1,0 +1,172 @@
+<Type Name="Pkcs9SigningTime" FullName="System.Security.Cryptography.Pkcs.Pkcs9SigningTime">
+  <TypeSignature Language="C#" Value="public sealed class Pkcs9SigningTime : System.Security.Cryptography.Pkcs.Pkcs9AttributeObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Pkcs9SigningTime extends System.Security.Cryptography.Pkcs.Pkcs9AttributeObject" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Pkcs.Pkcs9SigningTime" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.Pkcs.Pkcs9AttributeObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.Security.Cryptography.Pkcs.Pkcs9SigningTime" />-Klasse definiert das Datum und die Uhrzeit einer Signatur. Ein <see cref="T:System.Security.Cryptography.Pkcs.Pkcs9SigningTime" /> Objekt kann als authentifiziertes Attribut verwendet werden eine <see cref="T:System.Security.Cryptography.Pkcs.CmsSigner" /> Objekts, wenn Sie einen authentifizierten Datum und Uhrzeit, die eine digitale Signatur begleitet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Signaturzertifikat Zeit-Attribut ist auch in CAPICOM verfügbar.  Finden Sie unter [CAPICOM_ATTRIBUTE](https://msdn.microsoft.com/library/aa375631.aspx).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Pkcs9SigningTime ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.Pkcs9SigningTime.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Der <see cref="M:System.Security.Cryptography.Pkcs.Pkcs9SigningTime.#ctor" />-Konstruktor erstellt eine Instanz der <see cref="T:System.Security.Cryptography.Pkcs.Pkcs9SigningTime" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Pkcs.Pkcs9SigningTime> -Klasse verfügt über die folgenden Standardwerte für die Eigenschaft.  
+  
+|Eigenschaft|Standardwert|  
+|--------------|-------------------|  
+|<xref:System.Security.Cryptography.Pkcs.Pkcs9SigningTime.SigningTime%2A>|Das aktuelle Datum und die Uhrzeit|  
+  
+ Wenn Sie verwenden möchten, geben Sie ein bestimmtes Datum und eine Uhrzeit für die <xref:System.Security.Cryptography.Pkcs.Pkcs9SigningTime> -Objekts die <xref:System.Security.Cryptography.Pkcs.Pkcs9SigningTime.%23ctor%28System.DateTime%29> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Pkcs9SigningTime (byte[] encodedSigningTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] encodedSigningTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.Pkcs9SigningTime.#ctor(System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="encodedSigningTime" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="encodedSigningTime">Ein Array von Bytewerten, das das codierte Datum und die codierte Uhrzeit der Signatur der CMS/PKCS #7-Meldung angibt.</param>
+        <summary>Der <see cref="M:System.Security.Cryptography.Pkcs.Pkcs9SigningTime.#ctor(System.Byte[])" />-Konstruktor erstellt eine Instanz der <see cref="T:System.Security.Cryptography.Pkcs.Pkcs9SigningTime" />-Klasse und verwendet dazu das angegebene Array von Bytewerten als codiertes Datum und codierte Uhrzeit der Signatur des Inhalts einer CMS/PKCS #7-Meldung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Pkcs9SigningTime (DateTime signingTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.DateTime signingTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.Pkcs9SigningTime.#ctor(System.DateTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="signingTime" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="signingTime">Ein <see cref="T:System.DateTime" /> Struktur, die das Datum und die Uhrzeit der Signatur darstellt.</param>
+        <summary>Der <see cref="M:System.Security.Cryptography.Pkcs.Pkcs9SigningTime.#ctor(System.DateTime)" />-Konstruktor erstellt mithilfe des angegebenen Datums und der angegebenen Uhrzeit der Signatur eine Instanz der <see cref="T:System.Security.Cryptography.Pkcs.Pkcs9SigningTime" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyFrom">
+      <MemberSignature Language="C#" Value="public override void CopyFrom (System.Security.Cryptography.AsnEncodedData asnEncodedData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyFrom(class System.Security.Cryptography.AsnEncodedData asnEncodedData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.Pkcs9SigningTime.CopyFrom(System.Security.Cryptography.AsnEncodedData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asnEncodedData" Type="System.Security.Cryptography.AsnEncodedData" />
+      </Parameters>
+      <Docs>
+        <param name="asnEncodedData">Das <see cref="T:System.Security.Cryptography.AsnEncodedData" />-Objekt, aus dem Informationen kopiert werden sollen.</param>
+        <summary>Kopiert Informationen aus einem <see cref="T:System.Security.Cryptography.AsnEncodedData" />-Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ersetzt die aktuelle <xref:System.Security.Cryptography.Pkcs.Pkcs9SigningTime> Objekt mit dem angegebenen <xref:System.Security.Cryptography.AsnEncodedData> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SigningTime">
+      <MemberSignature Language="C#" Value="public DateTime SigningTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime SigningTime" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.Pkcs9SigningTime.SigningTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="P:System.Security.Cryptography.Pkcs.Pkcs9SigningTime.SigningTime" />-Eigenschaft ruft eine <see cref="T:System.DateTime" />-Struktur ab, die das Datum und die Uhrzeit der Signatur der Meldung darstellt.</summary>
+        <value>Eine <see cref="T:System.DateTime" />-Struktur, die das Datum und die Uhrzeit der Signatur des Dokuments enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

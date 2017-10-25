@@ -1,0 +1,721 @@
+<Type Name="CancellationToken" FullName="System.Threading.CancellationToken">
+  <TypeSignature Language="C#" Value="public struct CancellationToken" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit CancellationToken extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.CancellationToken" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Tasks</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("IsCancellationRequested = {IsCancellationRequested}")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt eine Benachrichtigung darüber weiter, dass Vorgänge abgebrochen werden sollen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Threading.CancellationToken> ermöglicht einen kooperativen Abbruch zwischen Threads, Thread-Pool von Arbeitselementen oder <xref:System.Threading.Tasks.Task> Objekte. Sie erstellen ein Abbruchtoken, das durch die Instanziierung einer <xref:System.Threading.CancellationTokenSource> -Objekt, das Abbruchtoken verwaltet entnommen seine <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> Eigenschaft. Übergeben Sie dann das Abbruchtoken, das an eine beliebige Anzahl von Threads, Aufgaben oder Vorgänge, die Nachricht vom Abbruch erhalten soll. Das Token kann nicht verwendet werden, um den Abbruch zu initiieren. Wenn das besitzende Objekt aufruft <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType>, die <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> auf jede Kopie des Abbruchtokens wird-Eigenschaftensatz auf `true`. Die Objekte, die die Benachrichtigung empfangen können Antworten Verfolgungsinformationen geeignet ist.  
+  
+ Weitere Informationen und Codebeispiele finden Sie unter [Abbruch in verwalteten Threads](~/docs/standard/threading/cancellation-in-managed-threads.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Zufallszahlen-Generators um zu eine Auflistung datenanwendung zu emulieren, die 10 ganzzahlige Werten aus elf Instrumente liest. Der Wert 0 (null) gibt an, dass die Maßeinheit für ein Instrument fehlgeschlagen ist in diesem Fall der Vorgang abgebrochen werden soll und keine allgemeinen Mittelwert berechnet werden soll.  
+  
+ Um die möglichen Abbruch des Vorgangs zu behandeln, die im Beispiel wird instanziiert einen <xref:System.Threading.CancellationTokenSource> -Objekt, das ein Abbruchtoken übergeben werden, generiert eine <xref:System.Threading.Tasks.TaskFactory> Objekt. Die <xref:System.Threading.Tasks.TaskFactory> Objekt wiederum übergibt das Abbruchtoken, das an jede dieser Aufgaben zuständig für das Sammeln von Messwerte für ein bestimmtes Gerät. Die <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%60%602%28System.Threading.Tasks.Task%7B%60%600%7D%5B%5D%2CSystem.Func%7BSystem.Threading.Tasks.Task%7B%60%600%7D%5B%5D%2C%60%601%7D%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> Methode wird aufgerufen, um sicherzustellen, dass der Mittelwert berechnet wird, nachdem alle Messwerte erfolgreich erfasst wurden. Wenn eine Aufgabe verfügt, nicht verwendet werden, da es abgebrochen wurde, der Aufruf der <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> Methode löst eine Ausnahme aus.  
+  
+ [!code-csharp[System.Threading.CancellationTokenSource.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.cancellationtokensource.class/cs/cancel1.cs#1)]
+ [!code-vb[System.Threading.CancellationTokenSource.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.cancellationtokensource.class/vb/cancel1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Alle öffentlichen und geschützten Member der <see cref="T:System.Threading.CancellationToken" /> sind threadsicher und können von mehreren Threads gleichzeitig verwendet werden.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CancellationToken (bool canceled);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool canceled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.CancellationToken.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="canceled" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="canceled">Der Zustand "abgebrochen" für das Token.</param>
+        <summary>Initialisiert das <see cref="T:System.Threading.CancellationToken" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Konstruktor erstellte Token verbleiben im Zustand "abgebrochen" gemäß der `canceled` Parameter. Wenn `canceled` ist `false`, beide <xref:System.Threading.CancellationToken.CanBeCanceled%2A> und <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> werden `false`.  
+  
+ Wenn `canceled` ist `true`, beide <xref:System.Threading.CancellationToken.CanBeCanceled%2A> und <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> werden `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBeCanceled">
+      <MemberSignature Language="C#" Value="public bool CanBeCanceled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanBeCanceled" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.CancellationToken.CanBeCanceled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Zustand "abgebrochen" von diesem Token unterstützt wird.</summary>
+        <value>
+          <see langword="true" />, wenn sich dieses Token im abgebrochenen Zustand befinden kann, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Threading.CancellationToken.CanBeCanceled%2A> gibt `false`, es ist sichergestellt, dass das Token nie in einem abgebrochenen Zustand übergehen, d. h. <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> nie zurück `true`. Ein Abbruchtoken, das nicht abgebrochen werden kann, wird von der statischen zurückgegeben <xref:System.Threading.CancellationToken.None%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Optional können Sie diese Eigenschaft verwenden, um zu bestimmen, ob ein Abbruchtoken sein kann abgebrochen, bevor Examing den Wert der <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> Eigenschaft, um zu bestimmen, ob er abgebrochen wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.CancellationToken.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="other">Das andere Objekt, mit dem diese Instanz verglichen werden soll.</param>
+        <summary>Ermittelt, ob die aktuelle <see cref="T:System.Threading.CancellationToken" />-Instanz und die angegebene <see cref="T:System.Object" />-Instanz gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="other" /> ein <see cref="T:System.Threading.CancellationToken" /> ist und die beiden Instanzen gleich sind, andernfalls <see langword="false" />. Zwei Token sind gleich, wenn sie derselben <see cref="T:System.Threading.CancellationTokenSource" /> zugeordnet sind oder beide aus öffentlichen <see cref="T:System.Threading.CancellationToken" />-Konstruktoren erstellt wurden und ihre <see cref="P:System.Threading.CancellationToken.IsCancellationRequested" />-Werte gleich sind.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Eine zugeordnete <see cref="T:System.Threading.CancellationTokenSource" /> wurde gelöscht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Threading.CancellationToken other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(valuetype System.Threading.CancellationToken other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.CancellationToken.Equals(System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="other">Das andere <see cref="T:System.Threading.CancellationToken" />, mit dem diese Instanz verglichen werden soll.</param>
+        <summary>Ermittelt, ob die aktuelle <see cref="T:System.Threading.CancellationToken" />-Instanz gleich dem angegebenen Token ist.</summary>
+        <returns>
+          <see langword="true" />, wenn die Instanzen gleich sind, andernfalls <see langword="false" />. Zwei Token sind gleich, wenn sie derselben <see cref="T:System.Threading.CancellationTokenSource" /> zugeordnet sind oder beide aus öffentlichen <see cref="T:System.Threading.CancellationToken" />-Konstruktoren erstellt wurden und ihre <see cref="P:System.Threading.CancellationToken.IsCancellationRequested" />-Werte gleich sind.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.CancellationToken.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dient als Hashfunktion für eine <see cref="T:System.Threading.CancellationToken" />.</summary>
+        <returns>Ein Hashcode für die aktuelle <see cref="T:System.Threading.CancellationToken" />-Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCancellationRequested">
+      <MemberSignature Language="C#" Value="public bool IsCancellationRequested { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCancellationRequested" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.CancellationToken.IsCancellationRequested" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob für dieses Token ein Abbruch angefordert wurde.</summary>
+        <value>
+          <see langword="true" />verfügt der Abbruch wurde für dieses Token angefordert; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt an, ob der Abbruch für dieses Token, entweder über das Token erstmalig erstellt wird, im Zustand "abgebrochen" oder durch Aufrufen angefordert wurde <xref:System.Threading.CancellationTokenSource.Cancel%2A> auf das Token dem zugeordneten <xref:System.Threading.CancellationTokenSource>.  
+  
+ Wenn diese Eigenschaft ist `true`, es wird lediglich sichergestellt, dass der Abbruch angefordert wurde. Es ist nicht sichergestellt, dass alle registrierter Handler für die Ausführung beendet hat, noch abbruchanforderungen Weitergabe an alle registrierten Handler abgeschlossen haben. Zusätzliche Synchronisierung kann besonders in Situationen erforderlich sein, in dem verwandte Objekte gleichzeitig abgebrochen werden.  
+  
+   
+  
+## Examples  
+ Folgender Ausdruck ist ein einfaches Beispiel, die eine Serverprozess bis führt die <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> -Eigenschaft gibt `true`.  
+  
+ [!code-csharp[System.Threading.Tasks.CancellationToken.IsCancellationRequested#12](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.Threading.Tasks.CancellationToken.IsCancellationRequested/cs/cancellation.cs#12)]
+ [!code-vb[System.Threading.Tasks.CancellationToken.IsCancellationRequested#12](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.Threading.Tasks.CancellationToken.IsCancellationRequested/vb/cancelthreads.vb#12)]  
+  
+ Im Beispiel wird instanziiert einen <xref:System.Threading.CancellationTokenSource> -Objekt, das Zugriff auf das Abbruchtoken, das kontrolliert. Klicken Sie dann definiert zwei Threadprozeduren. Die erste ist definiert als Lambda-Ausdruck, der pools der Tastatur und, wenn die "C"-Taste gedrückt wird, ruft <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> das Abbruchtoken, das auf den Status "abgebrochen" festgelegt. Das zweite ist eine parametrisierte Methode `ServerClass.StaticMethod`, ausführt, eine Schleife, bis die <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> Eigenschaft ist `true`.  
+  
+ Der Hauptthread startet dann die zwei Threads und blockiert bis der Thread, der ausgeführt wird die `ServerClass.StaticMethod` Methode beendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="public static System.Threading.CancellationToken None { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Threading.CancellationToken None" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.CancellationToken.None" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.CancellationToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen leeren <see cref="T:System.Threading.CancellationToken" />-Wert zurück.</summary>
+        <value>Ein leeres Abbruchtoken.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Abbruchtoken, das von dieser Eigenschaft zurückgegebene kann nicht abgebrochen werden; d. h. seine <xref:System.Threading.CancellationToken.CanBeCanceled%2A> Eigenschaft ist `false`.  
+  
+ Sie können auch die C#- [default(CancellationToken)](~/docs/csharp/language-reference/keywords/default.md) -Anweisung erstellt ein leeres Abbruchtoken.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Threading.CancellationToken left, System.Threading.CancellationToken right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Threading.CancellationToken left, valuetype System.Threading.CancellationToken right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.CancellationToken.op_Equality(System.Threading.CancellationToken,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Threading.CancellationToken" />
+        <Parameter Name="right" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="left">Die erste Instanz.</param>
+        <param name="right">Die zweite Instanz.</param>
+        <summary>Stellt fest, ob zwei <see cref="T:System.Threading.CancellationToken" />-Instanzen gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn die Instanzen gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Eine zugeordnete <see cref="T:System.Threading.CancellationTokenSource" /> wurde gelöscht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Threading.CancellationToken left, System.Threading.CancellationToken right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Threading.CancellationToken left, valuetype System.Threading.CancellationToken right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.CancellationToken.op_Inequality(System.Threading.CancellationToken,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Threading.CancellationToken" />
+        <Parameter Name="right" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="left">Die erste Instanz.</param>
+        <param name="right">Die zweite Instanz.</param>
+        <summary>Ermittelt, ob zwei <see cref="T:System.Threading.CancellationToken" />-Instanzen ungleich sind.</summary>
+        <returns>
+          <see langword="true" />Wenn die Instanzen ungleich sind; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Eine zugeordnete <see cref="T:System.Threading.CancellationTokenSource" /> wurde gelöscht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Register">
+      <MemberSignature Language="C#" Value="public System.Threading.CancellationTokenRegistration Register (Action callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Threading.CancellationTokenRegistration Register(class System.Action callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.CancellationToken.Register(System.Action)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.CancellationTokenRegistration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Action" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Der Delegat, der ausgeführt wird, wenn das <see cref="T:System.Threading.CancellationToken" />-Objekt abgebrochen wird.</param>
+        <summary>Registriert einen Delegaten, der aufgerufen wird, wenn dieses <see cref="T:System.Threading.CancellationToken" /> abgebrochen wird.</summary>
+        <returns>Die <see cref="T:System.Threading.CancellationTokenRegistration" />-Instanz, die verwendet werden kann, um die Registrierung des Rückrufs aufzuheben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn dieses Token bereits im Zustand "abgebrochen" ist, wird der Delegat sofort und synchron ausgeführt. Jede Ausnahme, die der Delegat generiert, wird dieser Methodenaufruf weitergegeben.  
+  
+ Die aktuelle <xref:System.Threading.ExecutionContext>, sofern vorhanden, werden zusammen mit den Delegaten erfasst werden und wird verwendet, wenn er ausführt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Die zugeordnete <see cref="T:System.Threading.CancellationTokenSource" /> wurde verworfen.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="callback" /> ist NULL.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Register">
+      <MemberSignature Language="C#" Value="public System.Threading.CancellationTokenRegistration Register (Action callback, bool useSynchronizationContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Threading.CancellationTokenRegistration Register(class System.Action callback, bool useSynchronizationContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.CancellationToken.Register(System.Action,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.CancellationTokenRegistration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Action" />
+        <Parameter Name="useSynchronizationContext" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Der Delegat, der ausgeführt wird, wenn das <see cref="T:System.Threading.CancellationToken" />-Objekt abgebrochen wird.</param>
+        <param name="useSynchronizationContext">Ein Wert, der angibt, ob das aktuelle erfassen <see cref="T:System.Threading.SynchronizationContext" /> und beim Aufrufen der <c>Rückruf</c>.</param>
+        <summary>Registriert einen Delegaten, der aufgerufen wird, wenn dieses <see cref="T:System.Threading.CancellationToken" /> abgebrochen wird.</summary>
+        <returns>Die <see cref="T:System.Threading.CancellationTokenRegistration" />-Instanz, die verwendet werden kann, um die Registrierung des Rückrufs aufzuheben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn dieses Token bereits im Zustand "abgebrochen" ist, wird der Delegat sofort und synchron ausgeführt. Jede Ausnahme, die der Delegat generiert wird dieser Methodenaufruf weitergegeben werden.  
+  
+ Wenn `useSynchronizationContext` ist `true`, den aktuellen <xref:System.Threading.ExecutionContext>, sofern vorhanden, werden zusammen mit den Delegaten erfasst werden und wird verwendet, wenn er ausführt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Die zugeordnete <see cref="T:System.Threading.CancellationTokenSource" /> wurde verworfen.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="callback" /> ist NULL.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Register">
+      <MemberSignature Language="C#" Value="public System.Threading.CancellationTokenRegistration Register (Action&lt;object&gt; callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Threading.CancellationTokenRegistration Register(class System.Action`1&lt;object&gt; callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.CancellationToken.Register(System.Action{System.Object},System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.CancellationTokenRegistration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Action&lt;System.Object&gt;" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Der Delegat, der ausgeführt wird, wenn das <see cref="T:System.Threading.CancellationToken" />-Objekt abgebrochen wird.</param>
+        <param name="state">Der Status für die Übergabe an die <c>Rückruf</c> beim Aufrufen des Delegaten. Dies kann NULL sein.</param>
+        <summary>Registriert einen Delegaten, der aufgerufen wird, wenn dieses <see cref="T:System.Threading.CancellationToken" /> abgebrochen wird.</summary>
+        <returns>Die <see cref="T:System.Threading.CancellationTokenRegistration" />-Instanz, die verwendet werden kann, um die Registrierung des Rückrufs aufzuheben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn dieses Token bereits im Zustand "abgebrochen" ist, wird der Delegat sofort und synchron ausgeführt. Jede Ausnahme, die der Delegat generiert wird dieser Methodenaufruf weitergegeben werden.  
+  
+ Die aktuelle <xref:System.Threading.ExecutionContext>, sofern vorhanden, werden zusammen mit den Delegaten erfasst werden und wird verwendet, wenn er ausführt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Die zugeordnete <see cref="T:System.Threading.CancellationTokenSource" /> wurde verworfen.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="callback" /> ist NULL.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Register">
+      <MemberSignature Language="C#" Value="public System.Threading.CancellationTokenRegistration Register (Action&lt;object&gt; callback, object state, bool useSynchronizationContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Threading.CancellationTokenRegistration Register(class System.Action`1&lt;object&gt; callback, object state, bool useSynchronizationContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.CancellationToken.Register(System.Action{System.Object},System.Object,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.CancellationTokenRegistration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Action&lt;System.Object&gt;" />
+        <Parameter Name="state" Type="System.Object" />
+        <Parameter Name="useSynchronizationContext" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Der Delegat, der ausgeführt wird, wenn das <see cref="T:System.Threading.CancellationToken" />-Objekt abgebrochen wird.</param>
+        <param name="state">Der Status für die Übergabe an die <c>Rückruf</c> beim Aufrufen des Delegaten. Dies kann NULL sein.</param>
+        <param name="useSynchronizationContext">Ein boolescher Wert, der angibt, ob das aktuelle erfassen <see cref="T:System.Threading.SynchronizationContext" /> und beim Aufrufen der <c>Rückruf</c>.</param>
+        <summary>Registriert einen Delegaten, der aufgerufen wird, wenn dieses <see cref="T:System.Threading.CancellationToken" /> abgebrochen wird.</summary>
+        <returns>Die <see cref="T:System.Threading.CancellationTokenRegistration" />-Instanz, die verwendet werden kann, um die Registrierung des Rückrufs aufzuheben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn dieses Token bereits im Zustand "abgebrochen" ist, wird der Delegat sofort und synchron ausgeführt. Jede Ausnahme, die der Delegat generiert wird dieser Methodenaufruf weitergegeben werden.  
+  
+ Die aktuelle <xref:System.Threading.ExecutionContext>, sofern vorhanden, werden zusammen mit den Delegaten erfasst werden und wird verwendet, wenn er ausführt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Die zugeordnete <see cref="T:System.Threading.CancellationTokenSource" /> wurde verworfen.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="callback" /> ist NULL.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ThrowIfCancellationRequested">
+      <MemberSignature Language="C#" Value="public void ThrowIfCancellationRequested ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ThrowIfCancellationRequested() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.CancellationToken.ThrowIfCancellationRequested" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löst eine <see cref="T:System.OperationCanceledException" /> aus, wenn für dieses Token ein Abbruch angefordert wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bietet Funktionen, die äquivalent zu:  
+  
+ C#  
+  
+```  
+if (token.IsCancellationRequested)   
+    throw new OperationCanceledException(token);  
+```  
+  
+```vb  
+If token.IsCancellationRequested Then  
+    Throw New OperationCanceledException(token)  
+End If  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.OperationCanceledException">Das Token, für das der Abbruch angefordert wurde.</exception>
+        <exception cref="T:System.ObjectDisposedException">Die zugeordnete <see cref="T:System.Threading.CancellationTokenSource" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitHandle">
+      <MemberSignature Language="C#" Value="public System.Threading.WaitHandle WaitHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Threading.WaitHandle WaitHandle" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.CancellationToken.WaitHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.WaitHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Threading.WaitHandle" /> ab, das signalisiert wird, wenn das Token abgebrochen wird.</summary>
+        <value>Ein <see cref="T:System.Threading.WaitHandle" />, das signalisiert wird, wenn das Token abgebrochen wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bewirkt, dass der Zugriff auf diese Eigenschaft eine <xref:System.Threading.WaitHandle> instanziiert werden. Es wird empfohlen, nur diese Eigenschaft bei Bedarf verwenden, und klicken Sie dann die zugeordnete dispose <xref:System.Threading.CancellationTokenSource> Instanz bei nächstmöglicher Gelegenheit (disposing der Quelle dieses zugeordnete Handle freigegeben wird). Das Handle werden nicht geschlossen oder direkt freigegeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Die zugeordnete <see cref="T:System.Threading.CancellationTokenSource" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

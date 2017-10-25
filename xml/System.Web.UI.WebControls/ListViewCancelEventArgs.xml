@@ -1,0 +1,146 @@
+<Type Name="ListViewCancelEventArgs" FullName="System.Web.UI.WebControls.ListViewCancelEventArgs">
+  <TypeSignature Language="C#" Value="public class ListViewCancelEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ListViewCancelEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ListViewCancelEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Web.UI.WebControls.ListView.ItemCanceling" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ListView> -Steuerelement löst die <xref:System.Web.UI.WebControls.ListView.ItemCanceling> Ereignis, wenn die Schaltfläche "Abbrechen" geklickt wurde, aber vor dem Beenden einfügen oder Bearbeitungsmodus befindet. (Eine Schaltfläche "Abbrechen" ist eine Schaltfläche, deren `CommandName` Eigenschaft auf "Cancel" festgelegt ist) Dadurch können Sie eine Ereignisbehandlungsmethode bereitstellen, die eine benutzerdefinierte Routine ausführt, wenn dieses Ereignis tritt auf, z. B. das Beenden der Vorgang "Abbrechen", wenn das Element in einen unerwünschten gelangen würde, Status.  
+  
+ Ein <xref:System.Web.UI.WebControls.ListViewCancelEventArgs> Objekt wird an die Ereignisbehandlungsmethode übergeben. Dieses Objekt können Sie den Index des Elements zu ermitteln, die die Schaltfläche "Abbrechen" enthält, die das Ereignis ausgelöst hat. Sie können auch bestimmen, welcher Vorgang abgebrochen wurde. Um den Vorgang "Abbrechen" zu beenden, legen Sie die <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft `true`.  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz der <xref:System.Web.UI.WebControls.ListViewCancelEventArgs>-Klasse finden Sie im <xref:System.Web.UI.WebControls.ListViewCancelEventArgs.%23ctor%2A>-Konstruktor.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.ListViewCancelEventArgs> Objekt, das eine Meldung angezeigt wird, wenn der Benutzer in der INSERT- oder Update-Vorgang abbricht ein <xref:System.Web.UI.WebControls.ListView> Steuerelement. Die <xref:System.Web.UI.WebControls.ListViewCancelEventArgs> Objekt übergeben wird, um die Ereignisbehandlungsmethode für den <xref:System.Web.UI.WebControls.ListView.ItemCanceling> Ereignis.  
+  
+> [!IMPORTANT]
+>  In diesem Beispiel enthält ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles darstellen Sicherheitsrisiko. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ListView.ItemCanceling#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemCanceling/CS/ListViewItemCancelingCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ListView.ItemCanceling#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemCanceling/VB/ListViewItemCancelingVB.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListViewCancelEventArgs (int itemIndex, System.Web.UI.WebControls.ListViewCancelMode cancelMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 itemIndex, valuetype System.Web.UI.WebControls.ListViewCancelMode cancelMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListViewCancelEventArgs.#ctor(System.Int32,System.Web.UI.WebControls.ListViewCancelMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="itemIndex" Type="System.Int32" />
+        <Parameter Name="cancelMode" Type="System.Web.UI.WebControls.ListViewCancelMode" />
+      </Parameters>
+      <Docs>
+        <param name="itemIndex">Der Index des Elements mit der Schaltfläche "Abbrechen", die das Ereignis ausgelöst hat.</param>
+        <param name="cancelMode">Eines der <see cref="T:System.Web.UI.WebControls.ListViewCancelMode" /> Werte, angibt, welcher Vorgang, wurde vom Benutzer abgebrochen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.ListViewCancelEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.ListViewCancelEventArgs> Klasse.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftswerte für eine Instanz der <xref:System.Web.UI.WebControls.ListViewCancelEventArgs>-Klasse angezeigt.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.ListViewCancelEventArgs.CancelMode%2A>|Der Wert des `cancelMode`-Parameters.|  
+|<xref:System.Web.UI.WebControls.ListViewCancelEventArgs.ItemIndex%2A>|Der Wert des `itemIndex`-Parameters.|  
+  
+> [!NOTE]
+>  Dieser Konstruktor wird hauptsächlich von Steuerelemententwicklern verwendet, beim Auslösen von Ereignissen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelMode">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.ListViewCancelMode CancelMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.ListViewCancelMode CancelMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewCancelEventArgs.CancelMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ListViewCancelMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Dateneingabe Modus ab, die die <see cref="T:System.Web.UI.WebControls.ListView" /> Steuerelement wurde auf, wenn die Schaltfläche "Abbrechen" geklickt wurde.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.ListViewCancelMode" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.ListViewCancelEventArgs.CancelMode%2A> -Eigenschaft können Sie bestimmen, ob die <xref:System.Web.UI.WebControls.ListView> Steuerelement wurde bearbeiten oder im Einfügemodus, wenn die Schaltfläche "Abbrechen" geklickt wurde.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.ListViewCancelEventArgs.CancelMode%2A> Eigenschaft, um den Modus für die Dateneingabe zu bestimmen, die die <xref:System.Web.UI.WebControls.ListView> Steuerelement wurde auf, wenn der Benutzer auf die Schaltfläche "Abbrechen" geklickt. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.WebControls.ListViewCancelEventArgs> Klasse.  
+  
+ [!code-csharp[System.Web.UI.WebControls.ListView.ItemCanceling#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemCanceling/CS/ListViewItemCancelingCS.aspx#2)]
+ [!code-vb[System.Web.UI.WebControls.ListView.ItemCanceling#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemCanceling/VB/ListViewItemCancelingVB.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemIndex">
+      <MemberSignature Language="C#" Value="public int ItemIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ItemIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewCancelEventArgs.ItemIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index des Elements mit der Schaltfläche "Abbrechen", die das Ereignis ausgelöst hat.</summary>
+        <value>Der nullbasierte Index des Elements mit der Schaltfläche "Abbrechen", die das Ereignis ausgelöst hat.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.ListViewCancelEventArgs.ItemIndex%2A> -Eigenschaft können Sie den Index des Elements bestimmen, die die Schaltfläche "Abbrechen" enthält der Benutzer geklickt hat. Der Elementindex wird häufig zum Abrufen des Elements aus der <xref:System.Web.UI.WebControls.ListView.Items%2A> Auflistung von der <xref:System.Web.UI.WebControls.ListView> -Steuerelement, das Sie auf die Eigenschaften des Elements zugreifen kann.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.ListViewCancelEventArgs.CancelMode%2A> -Eigenschaftensatz auf `ListViewCancelMode.CancelingInsert`, den Wert des der <xref:System.Web.UI.WebControls.ListViewCancelEventArgs.ItemIndex%2A> Eigenschaft beträgt immer-1.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.ListViewCancelEventArgs.ItemIndex%2A> Methode, um den Index des Bearbeitungselements festzulegen, mit der Schaltfläche "Abbrechen", die vom Benutzer auf die geklickt wurde. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.WebControls.ListViewCancelEventArgs> Klasse.  
+  
+ [!code-csharp[System.Web.UI.WebControls.ListView.ItemCanceling#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemCanceling/CS/ListViewItemCancelingCS.aspx#2)]
+ [!code-vb[System.Web.UI.WebControls.ListView.ItemCanceling#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemCanceling/VB/ListViewItemCancelingVB.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

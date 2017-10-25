@@ -1,0 +1,92 @@
+<Type Name="ToolStripDropDownClosingEventArgs" FullName="System.Windows.Forms.ToolStripDropDownClosingEventArgs">
+  <TypeSignature Language="C#" Value="public class ToolStripDropDownClosingEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ToolStripDropDownClosingEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolStripDropDownClosingEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Forms.ToolStripDropDown.Closing" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie Daten aus der <xref:System.Windows.Forms.ToolStripDropDownClosingEventArgs> Klasse, um zu bestimmen, welche Aktionen durchgeführt werden, wenn der Benutzer die Dropdownliste schließt, aber vor dem Schließen der Liste.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Typs. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ToolStripDropDown.Closing> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.ToolStripDropDown> mit dem Namen `ToolStripDropDown1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ToolStripDropDown.Closing> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#178](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#178)]
+ [!code-vb[System.Windows.Forms.EventExamples#178](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#178)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolStripDropDownClosingEventArgs (System.Windows.Forms.ToolStripDropDownCloseReason reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.ToolStripDropDownCloseReason reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripDropDownClosingEventArgs.#ctor(System.Windows.Forms.ToolStripDropDownCloseReason)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="reason" Type="System.Windows.Forms.ToolStripDropDownCloseReason" />
+      </Parameters>
+      <Docs>
+        <param name="reason">Einer der <see cref="T:System.Windows.Forms.ToolStripDropDownCloseReason" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.ToolStripDropDownClosingEventArgs" /> Klasse mit dem angegebenen Grund zum Schließen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie Daten aus der <xref:System.Windows.Forms.ToolStripDropDownClosingEventArgs> Klasse, um zu bestimmen, welche Aktionen durchgeführt werden, wenn der Benutzer die Dropdownliste schließt, aber vor dem Schließen der Liste.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">für alle Fenster für erbende Klassen zum Aufrufen dieser Methode. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /> Wert <see cref="T:System.Security.Permissions.UIPermissionWindow" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseReason">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ToolStripDropDownCloseReason CloseReason { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ToolStripDropDownCloseReason CloseReason" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripDropDownClosingEventArgs.CloseReason" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripDropDownCloseReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Grund ab, die die <see cref="T:System.Windows.Forms.ToolStripDropDown" /> wird geschlossen.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.ToolStripDropDownCloseReason" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ToolStripDropDown.Closing?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.ToolStripDropDown> mit dem Namen `ToolStripDropDown1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ToolStripDropDown.Closing?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#178](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#178)]
+ [!code-vb[System.Windows.Forms.EventExamples#178](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#178)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

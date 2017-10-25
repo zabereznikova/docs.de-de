@@ -1,0 +1,657 @@
+<Type Name="GCHandle" FullName="System.Runtime.InteropServices.GCHandle">
+  <TypeSignature Language="C#" Value="public struct GCHandle" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit GCHandle extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.GCHandle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bietet die Möglichkeit, aus nicht verwaltetem Speicher auf ein verwaltetes Objekt zuzugreifen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.InteropServices.GCHandle> -Struktur wird verwendet, mit der <xref:System.Runtime.InteropServices.GCHandleType> Enumeration, um ein Handle für ein verwaltetes Objekt zu erstellen. Dieses Handle kann einer der vier Typen sein: `Weak`, `WeakTrackResurrection`, `Normal`, oder `Pinned`. Wenn das Handle zugeordnet wurde, können Sie es verwenden, um zu verhindern, dass das verwaltete Objekt vom Garbage Collector erfasst wird, wenn ein nicht verwalteter Client den einzigen Verweis enthält. Ohne ein solches Handle kann das Objekt vom Garbage Collector erfasst werden, vor dem Abschließen der Arbeit im Auftrag des nicht verwalteten Clients.  
+  
+ Sie können auch <xref:System.Runtime.InteropServices.GCHandle> ein fixiertes Objekt zu erstellen, die eine Speicheradresse, um zu verhindern, dass der Garbage Collector das Objekt im Arbeitsspeicher verschieben zurückgibt.  
+  
+ Wenn das Handle den Gültigkeitsbereich verlässt Sie müssen explizit freigeben, es durch Aufrufen der <xref:System.Runtime.InteropServices.GCHandle.Free%2A> Methode; andernfalls Arbeitsspeicher prüfen auf Speicherverluste auftreten. Wenn Sie ein fixiertes Handle freigeben, wird das zugeordnete Objekt gelöst werden und werden für die Garbagecollection geeignet, wenn keine weiteren Verweise auf ihn vorhanden sind.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine `App` -Klasse, erstellt ein Handle für ein verwaltetes Objekt mit, der `GCHandle.Alloc` -Methode, die verhindert, dass das verwaltete Objekt erfasst wird. Ein Aufruf der `EnumWindows` Methode übergibt einen Delegaten, und ein verwaltetes Objekt (sowohl als verwaltete Typen deklariert, jedoch nicht angezeigt), und wandelt das Handle für ein <xref:System.IntPtr>. Die nicht verwaltete Funktion übergibt den Typ zurück an dem Aufrufer als Parameter der Rückruffunktion an.  
+  
+ [!code-csharp[System.Runtime.InteropServices.GCHandle#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Runtime.InteropServices.GCHandle/cs/sample.cs#1)]
+ [!code-vb[System.Runtime.InteropServices.GCHandle#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Runtime.InteropServices.GCHandle/vb/sample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddrOfPinnedObject">
+      <MemberSignature Language="C#" Value="public IntPtr AddrOfPinnedObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance native int AddrOfPinnedObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.GCHandle.AddrOfPinnedObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Adresse eines Objekts in einem <see cref="F:System.Runtime.InteropServices.GCHandleType.Pinned" /> behandeln.</summary>
+        <returns>Die Adresse des angehefteten-Objekts als ein <see cref="T:System.IntPtr" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um einen stabilen Zeiger auf das Objekt. Anheften eines Objekts wird verhindert, dass der Garbage Collector im Arbeitsspeicher, gesenkt und die Effizienz der Garbage Collection verschoben wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Handle ist jeder Typ außer <see cref="F:System.Runtime.InteropServices.GCHandleType.Pinned" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Alloc">
+      <MemberSignature Language="C#" Value="public static System.Runtime.InteropServices.GCHandle Alloc (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Runtime.InteropServices.GCHandle Alloc(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.GCHandle.Alloc(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.GCHandle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Objekt, mit der <see cref="T:System.Runtime.InteropServices.GCHandle" />.</param>
+        <summary>Ordnet eine <see cref="F:System.Runtime.InteropServices.GCHandleType.Normal" /> -handle für das angegebene Objekt.</summary>
+        <returns>Ein neues <see cref="T:System.Runtime.InteropServices.GCHandle" /> schützt, die das Objekt, von der Garbagecollection. Dies <see cref="T:System.Runtime.InteropServices.GCHandle" /> müssen freigegeben werden, mit <see cref="M:System.Runtime.InteropServices.GCHandle.Free" /> wenn er nicht mehr benötigt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Runtime.InteropServices.GCHandleType.Normal>Handles sind nicht transparent, was bedeutet, dass Sie die Adresse des Objekts nicht beheben können, die sie über das Handle enthält.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine `App` -Klasse, erstellt ein Handle für ein verwaltetes Objekt mit, der `GCHandle.Alloc` -Methode, die verhindert, dass das verwaltete Objekt erfasst wird. Ein Aufruf der `EnumWindows` Methode übergibt einen Delegaten, und ein verwaltetes Objekt (sowohl als verwaltete Typen deklariert, jedoch nicht angezeigt), und wandelt das Handle für ein <xref:System.IntPtr>. Die nicht verwaltete Funktion übergibt den Typ zurück an dem Aufrufer als Parameter der Rückruffunktion an.  
+  
+ [!code-csharp[System.Runtime.InteropServices.GCHandle#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Runtime.InteropServices.GCHandle/cs/sample.cs#1)]
+ [!code-vb[System.Runtime.InteropServices.GCHandle#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Runtime.InteropServices.GCHandle/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Eine Instanz mit nicht primitiven (blitfähige) Member kann nicht angeheftet werden.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Alloc">
+      <MemberSignature Language="C#" Value="public static System.Runtime.InteropServices.GCHandle Alloc (object value, System.Runtime.InteropServices.GCHandleType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Runtime.InteropServices.GCHandle Alloc(object value, valuetype System.Runtime.InteropServices.GCHandleType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.GCHandle.Alloc(System.Object,System.Runtime.InteropServices.GCHandleType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.GCHandle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="type" Type="System.Runtime.InteropServices.GCHandleType" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Objekt, mit der <see cref="T:System.Runtime.InteropServices.GCHandle" />.</param>
+        <param name="type">Eines der <see cref="T:System.Runtime.InteropServices.GCHandleType" /> Werte, der den Typ des <see cref="T:System.Runtime.InteropServices.GCHandle" /> zu erstellen.</param>
+        <summary>Reserviert ein Handle vom angegebenen Typ für das angegebene Objekt.</summary>
+        <returns>Ein neues <see cref="T:System.Runtime.InteropServices.GCHandle" /> des angegebenen Typs. Dies <see cref="T:System.Runtime.InteropServices.GCHandle" /> müssen freigegeben werden, mit <see cref="M:System.Runtime.InteropServices.GCHandle.Free" /> wenn er nicht mehr benötigt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Eine Instanz mit nicht primitiven (blitfähige) Member kann nicht angeheftet werden.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.GCHandle.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Das <see cref="T:System.Runtime.InteropServices.GCHandle" />-Objekt, das mit dem aktuellen <see cref="T:System.Runtime.InteropServices.GCHandle" />-Objekt verglichen werden soll.</param>
+        <summary>Bestimmt, ob das angegebene <see cref="T:System.Runtime.InteropServices.GCHandle" /> Objekt gleich der aktuellen <see cref="T:System.Runtime.InteropServices.GCHandle" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />Wenn das angegebene <see cref="T:System.Runtime.InteropServices.GCHandle" /> Objekt gleich der aktuellen <see cref="T:System.Runtime.InteropServices.GCHandle" /> Objekt; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zwei <xref:System.Runtime.InteropServices.GCHandle> Objekte sind gleich, wenn sie auf das gleiche Speicherhandle verweisen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Free">
+      <MemberSignature Language="C#" Value="public void Free ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Free() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.GCHandle.Free" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Versionen einer <see cref="T:System.Runtime.InteropServices.GCHandle" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Aufrufer muss sicherstellen, dass für ein bestimmtes Handle <xref:System.Runtime.InteropServices.GCHandle.Free%2A> nur einmal aufgerufen wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine `App` -Klasse, erstellt ein Handle für ein verwaltetes Objekt mit, der `GCHandle.Alloc` -Methode, die verhindert, dass das verwaltete Objekt erfasst wird. Ein Aufruf der `EnumWindows` Methode übergibt einen Delegaten, und ein verwaltetes Objekt (sowohl als verwaltete Typen deklariert, jedoch nicht angezeigt), und wandelt das Handle für ein <xref:System.IntPtr>. Die nicht verwaltete Funktion übergibt den Typ zurück an dem Aufrufer als Parameter der Rückruffunktion an.  
+  
+ [!code-csharp[System.Runtime.InteropServices.GCHandle#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Runtime.InteropServices.GCHandle/cs/sample.cs#1)]
+ [!code-vb[System.Runtime.InteropServices.GCHandle#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Runtime.InteropServices.GCHandle/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Handle wurde freigegeben oder nie initialisiert.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="FromIntPtr">
+      <MemberSignature Language="C#" Value="public static System.Runtime.InteropServices.GCHandle FromIntPtr (IntPtr value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Runtime.InteropServices.GCHandle FromIntPtr(native int value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.GCHandle.FromIntPtr(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.GCHandle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.IntPtr" /> handle für ein verwaltetes Objekt zum Erstellen einer <see cref="T:System.Runtime.InteropServices.GCHandle" /> -Objekt aus.</param>
+        <summary>Gibt eine neue <see cref="T:System.Runtime.InteropServices.GCHandle" /> Objekt aus einem Handle für ein verwaltetes Objekt erstellt.</summary>
+        <returns>Ein neues <see cref="T:System.Runtime.InteropServices.GCHandle" /> -Objekt, das den Value-Parameter entspricht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel zeigt eine `App` -Klasse, erstellt ein Handle für ein verwaltetes Objekt mit, der `GCHandle.Alloc` -Methode, die verhindert, dass das verwaltete Objekt erfasst wird. Ein Aufruf der `EnumWindows` Methode übergibt einen Delegaten, und ein verwaltetes Objekt (sowohl als verwaltete Typen deklariert, jedoch nicht angezeigt), und wandelt das Handle für ein <xref:System.IntPtr> Objekt. Die nicht verwaltete Funktion übergibt den Typ zurück an dem Aufrufer als Parameter der Rückruffunktion an.  
+  
+ [!code-csharp[System.Runtime.InteropServices.GCHandle#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Runtime.InteropServices.GCHandle/cs/sample.cs#1)]
+ [!code-vb[System.Runtime.InteropServices.GCHandle#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Runtime.InteropServices.GCHandle/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Wert des <paramref name="value" />-Parameters ist <see cref="F:System.IntPtr.Zero" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.GCHandle.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Bezeichner für die aktuelle <see cref="T:System.Runtime.InteropServices.GCHandle" /> Objekt.</summary>
+        <returns>Ein Bezeichner für die aktuelle <see cref="T:System.Runtime.InteropServices.GCHandle" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.InteropServices.GCHandle.GetHashCode%2A> Methodenrückgabe eine Integer-Darstellung des internen Speichers Handles gekapselt durch den <xref:System.Runtime.InteropServices.GCHandle> Struktur.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAllocated">
+      <MemberSignature Language="C#" Value="public bool IsAllocated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAllocated" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.GCHandle.IsAllocated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das Handle reserviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Handle reserviert ist. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft bei Verwendung <xref:System.Runtime.InteropServices.GCHandleType.Weak> Handles zum bestimmen, ob die <xref:System.Runtime.InteropServices.GCHandle> ist weiterhin verfügbar. Wenn der Garbage Collector das Objekt erfasst die <xref:System.Runtime.InteropServices.GCHandleType.Weak> Handle kann im Finalizer wieder zugänglich gemacht werden. In diesem Fall das Handle nicht reserviert (es geht verloren, wenn der Garbage Collector versucht, das Objekt zu erfassen), selbst wenn das Zielobjekt gültig ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Runtime.InteropServices.GCHandle a, System.Runtime.InteropServices.GCHandle b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Runtime.InteropServices.GCHandle a, valuetype System.Runtime.InteropServices.GCHandle b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.GCHandle.op_Equality(System.Runtime.InteropServices.GCHandle,System.Runtime.InteropServices.GCHandle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Runtime.InteropServices.GCHandle" />
+        <Parameter Name="b" Type="System.Runtime.InteropServices.GCHandle" />
+      </Parameters>
+      <Docs>
+        <param name="a">Ein <see cref="T:System.Runtime.InteropServices.GCHandle" /> Objekt für den Vergleich mit der <c>b</c> Parameter.</param>
+        <param name="b">Ein <see cref="T:System.Runtime.InteropServices.GCHandle" /> Objekt für den Vergleich mit der <c>eine</c> Parameter.</param>
+        <summary>Gibt einen Wert, der angibt, ob zwei <see cref="T:System.Runtime.InteropServices.GCHandle" /> -Objekte gleich sind.</summary>
+        <returns>
+          <see langword="true" />Wenn die <paramref name="a" /> und <paramref name="b" /> Parameter gleich sind; andernfalls, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist <xref:System.Runtime.InteropServices.GCHandle.Equals%2A?displayProperty=nameWithType>.]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator System.Runtime.InteropServices.GCHandle (IntPtr value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Runtime.InteropServices.GCHandle op_Explicit(native int value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.GCHandle.op_Explicit(System.IntPtr)~System.Runtime.InteropServices.GCHandle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.GCHandle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator IntPtr (System.Runtime.InteropServices.GCHandle value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname native int op_Explicit(valuetype System.Runtime.InteropServices.GCHandle value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.GCHandle.op_Explicit(System.Runtime.InteropServices.GCHandle)~System.IntPtr" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Runtime.InteropServices.GCHandle" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Runtime.InteropServices.GCHandle a, System.Runtime.InteropServices.GCHandle b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Runtime.InteropServices.GCHandle a, valuetype System.Runtime.InteropServices.GCHandle b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.GCHandle.op_Inequality(System.Runtime.InteropServices.GCHandle,System.Runtime.InteropServices.GCHandle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Runtime.InteropServices.GCHandle" />
+        <Parameter Name="b" Type="System.Runtime.InteropServices.GCHandle" />
+      </Parameters>
+      <Docs>
+        <param name="a">Ein <see cref="T:System.Runtime.InteropServices.GCHandle" /> Objekt für den Vergleich mit der <c>b</c> Parameter.</param>
+        <param name="b">Ein <see cref="T:System.Runtime.InteropServices.GCHandle" /> Objekt für den Vergleich mit der <c>eine</c> Parameter.</param>
+        <summary>Gibt einen Wert, der angibt, ob zwei <see cref="T:System.Runtime.InteropServices.GCHandle" /> -Objekte ungleich sind.</summary>
+        <returns>
+          <see langword="true" />Wenn die <paramref name="a" /> und <paramref name="b" /> Parameter sind nicht gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist <xref:System.Runtime.InteropServices.GCHandle.Equals%2A?displayProperty=nameWithType>.]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Target">
+      <MemberSignature Language="C#" Value="public object Target { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Target" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.GCHandle.Target" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt ab, das von diesem Handle dargestellt wird, oder legt dieses fest.</summary>
+        <value>Das Objekt, das von diesem Handle dargestellt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt eine `App` -Klasse, erstellt ein Handle für ein verwaltetes Objekt mit, der `GCHandle.Alloc` -Methode, die verhindert, dass das verwaltete Objekt erfasst wird. Ein Aufruf der `EnumWindows` Methode übergibt einen Delegaten, und ein verwaltetes Objekt (sowohl als verwaltete Typen deklariert, jedoch nicht angezeigt), und wandelt das Handle für ein <xref:System.IntPtr>. Die nicht verwaltete Funktion übergibt den Typ zurück an dem Aufrufer als Parameter der Rückruffunktion an.  
+  
+ [!code-csharp[System.Runtime.InteropServices.GCHandle#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Runtime.InteropServices.GCHandle/cs/sample.cs#1)]
+ [!code-vb[System.Runtime.InteropServices.GCHandle#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Runtime.InteropServices.GCHandle/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Handle war freigegeben, oder nie initialisiert.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ToIntPtr">
+      <MemberSignature Language="C#" Value="public static IntPtr ToIntPtr (System.Runtime.InteropServices.GCHandle value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig native int ToIntPtr(valuetype System.Runtime.InteropServices.GCHandle value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.GCHandle.ToIntPtr(System.Runtime.InteropServices.GCHandle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Runtime.InteropServices.GCHandle" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.Runtime.InteropServices.GCHandle" /> eine interne ganzzahlige Darstellung von abzurufenden Objekts.</param>
+        <summary>Gibt die interne ganzzahlige Darstellung einer <see cref="T:System.Runtime.InteropServices.GCHandle" /> Objekt.</summary>
+        <returns>Ein <see cref="T:System.IntPtr" /> -Objekt, das stellt einen <see cref="T:System.Runtime.InteropServices.GCHandle" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel zeigt eine `App` -Klasse, erstellt ein Handle für ein verwaltetes Objekt mit, der `GCHandle.Alloc` -Methode, die verhindert, dass das verwaltete Objekt erfasst wird. Ein Aufruf der `EnumWindows` Methode übergibt einen Delegaten, und ein verwaltetes Objekt (sowohl als verwaltete Typen deklariert, jedoch nicht angezeigt), und wandelt das Handle für ein <xref:System.IntPtr> Objekt. Die nicht verwaltete Funktion übergibt den Typ zurück an dem Aufrufer als Parameter der Rückruffunktion an.  
+  
+ [!code-csharp[System.Runtime.InteropServices.GCHandle#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Runtime.InteropServices.GCHandle/cs/sample.cs#1)]
+ [!code-vb[System.Runtime.InteropServices.GCHandle#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Runtime.InteropServices.GCHandle/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

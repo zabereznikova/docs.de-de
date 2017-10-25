@@ -1,0 +1,104 @@
+<Type Name="ITreeDesigner" FullName="System.ComponentModel.Design.ITreeDesigner">
+  <TypeSignature Language="C#" Value="public interface ITreeDesigner : IDisposable, System.ComponentModel.Design.IDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITreeDesigner implements class System.ComponentModel.Design.IDesigner, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.ITreeDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.Design.IDesigner</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Bietet Unterstützung für einen Satz von verknüpften benutzerdefinierten Designer erstellen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.ITreeDesigner> Schnittstelle leitet sich von der <xref:System.ComponentModel.Design.IDesigner> Schnittstelle, und bietet Unterstützung für flexible Navigieren in einer Hierarchie von verwandten Designern. Mit dieser Schnittstelle kann Programmierer eine Anzahl von Designern für die Komponente mit dem entsprechenden Element dynamisch bestimmt angeben.  
+  
+ Diese Schnittstelle ist eine einfache Erweiterung ihrer Basisklasse nur zwei Eigenschaften zum Navigieren in einer Strukturhierarchie: <xref:System.ComponentModel.Design.ITreeDesigner.Children%2A> und <xref:System.ComponentModel.Design.ITreeDesigner.Parent%2A>.  
+  
+ Einen Überblick über das Erstellen von Entwurfskomponenten finden Sie unter [Erweitern der Entwurfszeitunterstützung](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Children">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection Children { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Children" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.ITreeDesigner.Children" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von untergeordneten Designer ab.</summary>
+        <value>Ein <see cref="T:System.Collections.ICollection" />, mit der Auflistung der <see cref="T:System.ComponentModel.Design.IDesigner" /> untergeordneten Objekte des aktuellen Designer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.ITreeDesigner.Children%2A> Eigenschaft gibt eine leere Auflistung zurück, wenn die <xref:System.ComponentModel.Design.ITreeDesigner> weist keine untergeordneten Objekte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Design.IDesigner Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.IDesigner Parent" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.ITreeDesigner.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.IDesigner</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den übergeordneten Designer ab.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.Design.IDesigner" /> für den übergeordneten Designer oder <see langword="null" /> , wenn kein übergeordnetes Element.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

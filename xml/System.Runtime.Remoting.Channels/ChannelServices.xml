@@ -1,0 +1,438 @@
+<Type Name="ChannelServices" FullName="System.Runtime.Remoting.Channels.ChannelServices">
+  <TypeSignature Language="C#" Value="public sealed class ChannelServices" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ChannelServices extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Channels.ChannelServices" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt statische Methoden, um mit der Registrierung von Remoting, Auflösung und URL-Ermittlung zu unterstützen. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kanäle transport Nachrichten zwischen Anwendungen solche Remotegrenzen hinweg wie Anwendungsdomänen, Prozessen und Computern. Diese überschneidungen können ein- und ausgehende sein. Ein Kanal kann für einen Endpunkt für eingehende Nachrichten überwachen, an einen Endpunkt für ausgehende Nachrichten oder für beides senden. Dies bietet einen Erweiterungspunkt in der Common Language Runtime eine Vielzahl von Protokollen einbinden, obwohl die Common Language Runtime möglicherweise nicht am anderen Ende des Kanals. Laufzeit-Objekte können verwendet werden, um eine Breite Palette von Semantiken und Entitäten verfügbar zu machen. Der Kanal stellt den Erweiterungspunkt zum Konvertieren von Nachrichten in und aus die spezifischen Protokolle bereit.  
+  
+ Kanäle verfügbar machen müssen die <xref:System.Runtime.Remoting.Channels.IChannel> -Schnittstelle, die informative Eigenschaften, z. B. bereitstellt die <xref:System.Runtime.Remoting.Channels.IChannel.ChannelName%2A> und <xref:System.Runtime.Remoting.Channels.IChannel.ChannelPriority%2A>. Kanäle werden mit registriert die <xref:System.Runtime.Remoting.Channels.ChannelServices.RegisterChannel%2A?displayProperty=nameWithType> Methode. Kanäle können auch aus der Remotekonfiguration geladen werden. (Finden Sie unter [ \<Kanal >-Element (Vorlage)](http://msdn.microsoft.com/en-us/73399d48-f0fd-46e9-828b-6cdafde5ffce) für Details.)  
+  
+ Auf der Clientseite Nachrichten werden ermittelt der Client-Channelsenkenkette, nachdem sie den Client durchlaufen <xref:System.Runtime.Remoting.Contexts.Context> Kette. Die ersten Kanal Senke ist in der Regel eine <xref:System.Runtime.Remoting.Channels.IClientFormatterSink>, die serialisiert die Nachricht in einen Stream, der an die Client-Transport-Senke entlang der Senkenkette Kanal übergeben wird. Anschließend wird dieser Stream durch die Transportsenken des Clients zur Übertragung geschrieben.  
+  
+ Auf dem Server die Server-Transport-Senke Anforderungen aus dem Netzwerk gelesen und übergibt den Anforderungsstream Channelsenkenkette für den Server. Die Server Formatierungssenke am Ende dieser Kette deserialisiert die Anforderung in eine Nachricht. Es wird dann leiten diese Nachricht an den Remotinginfrastruktur, die mit dem Server verschicken <xref:System.Runtime.Remoting.Contexts.Context> Kette.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AsyncDispatchMessage">
+      <MemberSignature Language="C#" Value="public static System.Runtime.Remoting.Messaging.IMessageCtrl AsyncDispatchMessage (System.Runtime.Remoting.Messaging.IMessage msg, System.Runtime.Remoting.Messaging.IMessageSink replySink);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.Remoting.Messaging.IMessageCtrl AsyncDispatchMessage(class System.Runtime.Remoting.Messaging.IMessage msg, class System.Runtime.Remoting.Messaging.IMessageSink replySink) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.ChannelServices.AsyncDispatchMessage(System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Messaging.IMessageSink)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Messaging.IMessageCtrl</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Runtime.Remoting.Messaging.IMessage" />
+        <Parameter Name="replySink" Type="System.Runtime.Remoting.Messaging.IMessageSink" />
+      </Parameters>
+      <Docs>
+        <param name="msg">Die zu sendende Meldung.</param>
+        <param name="replySink">Die Senke, die die Antwortnachricht verarbeitet wird, ist er nicht <see langword="null" />.</param>
+        <summary>Sendet asynchron an die serverseitigen Ketten basierend auf den URI die angegebene Nachricht in der Meldung eingebettete.</summary>
+        <returns>Ein <see cref="T:System.Runtime.Remoting.Messaging.IMessageCtrl" /> Objekt, mit dem die asynchron gesendete Nachricht zu steuern.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle Methode gibt sofort zurück, ob der Server die angegebene Nachricht oder nicht verarbeitet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="msg" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateServerChannelSinkChain">
+      <MemberSignature Language="C#" Value="public static System.Runtime.Remoting.Channels.IServerChannelSink CreateServerChannelSinkChain (System.Runtime.Remoting.Channels.IServerChannelSinkProvider provider, System.Runtime.Remoting.Channels.IChannelReceiver channel);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.Remoting.Channels.IServerChannelSink CreateServerChannelSinkChain(class System.Runtime.Remoting.Channels.IServerChannelSinkProvider provider, class System.Runtime.Remoting.Channels.IChannelReceiver channel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.ChannelServices.CreateServerChannelSinkChain(System.Runtime.Remoting.Channels.IServerChannelSinkProvider,System.Runtime.Remoting.Channels.IChannelReceiver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Channels.IServerChannelSink</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.Runtime.Remoting.Channels.IServerChannelSinkProvider" />
+        <Parameter Name="channel" Type="System.Runtime.Remoting.Channels.IChannelReceiver" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Der erste Anbieter in der Kette der Senkenanbieter, die die Channelsenkenkette erstellt wird.</param>
+        <param name="channel">Die <see cref="T:System.Runtime.Remoting.Channels.IChannelReceiver" /> für den die Channelsenkenkette erstellt.</param>
+        <summary>Erstellt eine Channelsenkenkette für den angegebenen Kanal an.</summary>
+        <returns>Eine neue Channelsenkenkette für den angegebenen Kanal.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DispatchMessage">
+      <MemberSignature Language="C#" Value="public static System.Runtime.Remoting.Channels.ServerProcessing DispatchMessage (System.Runtime.Remoting.Channels.IServerChannelSinkStack sinkStack, System.Runtime.Remoting.Messaging.IMessage msg, out System.Runtime.Remoting.Messaging.IMessage replyMsg);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Runtime.Remoting.Channels.ServerProcessing DispatchMessage(class System.Runtime.Remoting.Channels.IServerChannelSinkStack sinkStack, class System.Runtime.Remoting.Messaging.IMessage msg, [out] class System.Runtime.Remoting.Messaging.IMessage&amp; replyMsg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.ChannelServices.DispatchMessage(System.Runtime.Remoting.Channels.IServerChannelSinkStack,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Messaging.IMessage@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Channels.ServerProcessing</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sinkStack" Type="System.Runtime.Remoting.Channels.IServerChannelSinkStack" />
+        <Parameter Name="msg" Type="System.Runtime.Remoting.Messaging.IMessage" />
+        <Parameter Name="replyMsg" Type="System.Runtime.Remoting.Messaging.IMessage&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="sinkStack">Der Stapel von Serverchannel senken, dass die Nachricht bereits durchlaufen hat.</param>
+        <param name="msg">Die zu sendende Meldung.</param>
+        <param name="replyMsg">Enthält bei Rückgabe dieser Methode eine <see cref="T:System.Runtime.Remoting.Messaging.IMessage" /> , enthält die Antwort vom Server an die Nachricht, die in enthalten ist das <c>msg</c> Parameter. Dieser Parameter wird nicht initialisiert übergeben.</param>
+        <summary>Leitet eingehende Remoteaufrufe an.</summary>
+        <returns>Ein <see cref="T:System.Runtime.Remoting.Channels.ServerProcessing" /> , durch den Status der Verarbeitung der Nachricht erhalten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird von Kanälen verwendet, um eingehende Remoteaufrufe zuzuteilen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="msg" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChannel">
+      <MemberSignature Language="C#" Value="public static System.Runtime.Remoting.Channels.IChannel GetChannel (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.Remoting.Channels.IChannel GetChannel(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.ChannelServices.GetChannel(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Channels.IChannel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Kanalname.</param>
+        <summary>Gibt einen registrierten Kanal mit dem angegebenen Namen zurück.</summary>
+        <returns>Eine Schnittstelle zu einem registrierten Kanal oder <see langword="null" /> , wenn der Kanal nicht registriert ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[ChannelServices_GetChannel#1](~/samples/snippets/cpp/VS_Snippets_Remoting/ChannelServices_GetChannel/CPP/channelservices_getchannel_client.cpp#1)]
+ [!code-csharp[ChannelServices_GetChannel#1](~/samples/snippets/csharp/VS_Snippets_Remoting/ChannelServices_GetChannel/CS/channelservices_getchannel_client.cs#1)]
+ [!code-vb[ChannelServices_GetChannel#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ChannelServices_GetChannel/VB/channelservices_getchannel_client.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChannelSinkProperties">
+      <MemberSignature Language="C#" Value="public static System.Collections.IDictionary GetChannelSinkProperties (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.IDictionary GetChannelSinkProperties(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.ChannelServices.GetChannelSinkProperties(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Der Proxy für Eigenschaften abgerufen werden.</param>
+        <summary>Gibt eine <see cref="T:System.Collections.IDictionary" /> von Eigenschaften für einen angegebenen Proxy.</summary>
+        <returns>Eine Schnittstelle, die dem Wörterbuch von Eigenschaften oder <see langword="null" /> , wenn keine Eigenschaften gefunden wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[ChannelServices_GetChannel#2](~/samples/snippets/cpp/VS_Snippets_Remoting/ChannelServices_GetChannel/CPP/channelservices_getchannel_client.cpp#2)]
+ [!code-csharp[ChannelServices_GetChannel#2](~/samples/snippets/csharp/VS_Snippets_Remoting/ChannelServices_GetChannel/CS/channelservices_getchannel_client.cs#2)]
+ [!code-vb[ChannelServices_GetChannel#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ChannelServices_GetChannel/VB/channelservices_getchannel_client.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Verfügt über mindestens einer der Aufrufer, die in der Aufrufliste höher ist nicht über die Berechtigung zum Remotetypen und Kanäle konfigurieren.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Konfiguration der Infrastruktur für den Remotezugriff. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUrlsForObject">
+      <MemberSignature Language="C#" Value="public static string[] GetUrlsForObject (MarshalByRefObject obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string[] GetUrlsForObject(class System.MarshalByRefObject obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.ChannelServices.GetUrlsForObject(System.MarshalByRefObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.MarshalByRefObject" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das URL-Array abgerufen werden soll.</param>
+        <summary>Gibt ein Array aller URLs, die zum Erreichen des angegebenen Objekts verwendet werden kann.</summary>
+        <returns>Ein Array von Zeichenfolgen, die URLs, die verwendet werden kann enthält, um das Objekt remote zu identifizieren oder <see langword="null" /> Wenn keiner gefunden wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[ChannelServices_RegisteredChannels#4](~/samples/snippets/cpp/VS_Snippets_Remoting/ChannelServices_RegisteredChannels/CPP/channelservices_registeredchannels_client.cpp#4)]
+ [!code-csharp[ChannelServices_RegisteredChannels#4](~/samples/snippets/csharp/VS_Snippets_Remoting/ChannelServices_RegisteredChannels/CS/channelservices_registeredchannels_client.cs#4)]
+ [!code-vb[ChannelServices_RegisteredChannels#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ChannelServices_RegisteredChannels/VB/channelservices_registeredchannels_client.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterChannel">
+      <MemberSignature Language="C#" Value="public static void RegisterChannel (System.Runtime.Remoting.Channels.IChannel chnl);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterChannel(class System.Runtime.Remoting.Channels.IChannel chnl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.ChannelServices.RegisterChannel(System.Runtime.Remoting.Channels.IChannel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use RegisterChannel(IChannel,Boolean)")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="chnl" Type="System.Runtime.Remoting.Channels.IChannel" />
+      </Parameters>
+      <Docs>
+        <param name="chnl">Der Kanal zu registrieren.</param>
+        <summary>Registriert einen Kanal mit den Diensten Kanal. <see cref="M:System.Runtime.Remoting.Channels.ChannelServices.RegisterChannel(System.Runtime.Remoting.Channels.IChannel)" /> ist veraltet. Verwenden Sie stattdessen <see cref="M:System.Runtime.Remoting.Channels.ChannelServices.RegisterChannel(System.Runtime.Remoting.Channels.IChannel,System.Boolean)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  <xref:System.Runtime.Remoting.Channels.ChannelServices.RegisterChannel%28System.Runtime.Remoting.Channels.IChannel%29> ist veraltet. Verwenden Sie stattdessen <xref:System.Runtime.Remoting.Channels.ChannelServices.RegisterChannel%28System.Runtime.Remoting.Channels.IChannel%2CSystem.Boolean%29>.  
+  
+ Die <xref:System.Runtime.Remoting.Channels.ChannelServices.RegisterChannel%2A> -Methode übernimmt die <xref:System.Runtime.Remoting.Channels.IChannel> Schnittstelle aus einem Kanal-Objekt. Des Kanals <xref:System.Runtime.Remoting.Channels.IChannel.ChannelName%2A> muss eindeutig sein, oder der Kanal muss anonym sein. Ein Kanal ist anonym Wenn die <xref:System.Runtime.Remoting.Channels.IChannel.ChannelName%2A?displayProperty=nameWithType> wird `null` oder <xref:System.String.Empty> mithilfe der `name` Konfigurationseigenschaft.  
+  
+ Sie können nicht zwei Kanäle registrieren, mit dem gleichen Namen in einem <xref:System.AppDomain>. Wird standardmäßig der Name des eine <xref:System.Runtime.Remoting.Channels.Http.HttpChannel> wird "http" und der Name des eine <xref:System.Runtime.Remoting.Channels.Tcp.TcpChannel> ist "Tcp". Wenn Sie zwei Kanäle des gleichen Typs registrieren möchten, müssen Sie daher einen anderen Namen für diese über den Konfigurationseigenschaften angeben.  
+  
+ Weitere Informationen zu den Konfigurationseigenschaften für Channel, finden Sie unter <xref:System.Runtime.Remoting.Channels.Http.HttpChannel>, und [ \<Kanal >-Element (Vorlage)](http://msdn.microsoft.com/en-us/73399d48-f0fd-46e9-828b-6cdafde5ffce).  
+  
+   
+  
+## Examples  
+ [!code-cpp[HttpChannel#1](~/samples/snippets/cpp/VS_Snippets_Remoting/HttpChannel/CPP/server.cpp#1)]
+ [!code-csharp[HttpChannel#1](~/samples/snippets/csharp/VS_Snippets_Remoting/HttpChannel/CS/server.cs#1)]
+ [!code-vb[HttpChannel#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/HttpChannel/VB/server.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="chnl" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Remoting.RemotingException">Der Kanal wurde bereits registriert.</exception>
+        <exception cref="T:System.Security.SecurityException">Verfügt über mindestens eines der Aufrufern einer höheren Ebene in der Aufrufliste nicht über die Berechtigung zum Remotetypen und Kanäle konfigurieren.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Konfiguration der Infrastruktur für den Remotezugriff. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterChannel">
+      <MemberSignature Language="C#" Value="public static void RegisterChannel (System.Runtime.Remoting.Channels.IChannel chnl, bool ensureSecurity);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterChannel(class System.Runtime.Remoting.Channels.IChannel chnl, bool ensureSecurity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.ChannelServices.RegisterChannel(System.Runtime.Remoting.Channels.IChannel,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="chnl" Type="System.Runtime.Remoting.Channels.IChannel" />
+        <Parameter Name="ensureSecurity" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="chnl">Der Kanal zu registrieren.</param>
+        <param name="ensureSecurity">
+          <see langword="true" />Stellt sicher, dass die Sicherheit aktiviert ist. andernfalls <see langword="false" />. Festlegen des Werts auf <see langword="false" /> hat keine Auswirkungen auf die sicherheitseinstellung auf TCP oder IPC-Kanal.</param>
+        <summary>Registriert einen Kanal mit den Diensten Kanal.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Remoting.Channels.ChannelServices.RegisterChannel%28System.Runtime.Remoting.Channels.IChannel%2CSystem.Boolean%29> Methode empfängt die <xref:System.Runtime.Remoting.Channels.IChannel> Schnittstelle aus einem Kanal-Objekt. Des Kanals <xref:System.Runtime.Remoting.Channels.IChannel.ChannelName%2A> muss eindeutig sein, oder der Kanal muss anonym sein. Ein Kanal ist anonym Wenn die <xref:System.Runtime.Remoting.Channels.IChannel.ChannelName%2A?displayProperty=nameWithType> wird `null` oder <xref:System.String.Empty> mithilfe der `name` Konfigurationseigenschaft.  
+  
+ Sie können nicht zwei Kanäle registrieren, mit dem gleichen Namen in einem <xref:System.AppDomain>. Wird standardmäßig der Name des eine <xref:System.Runtime.Remoting.Channels.Http.HttpChannel> wird "http" und der Name des eine <xref:System.Runtime.Remoting.Channels.Tcp.TcpChannel> ist "Tcp". Wenn Sie zwei Kanäle des gleichen Typs registrieren möchten, müssen Sie daher einen anderen Namen für diese über den Konfigurationseigenschaften angeben.  
+  
+ Weitere Informationen zu den Konfigurationseigenschaften für Channel, finden Sie unter [Kanal- und Formatierer Konfigurationseigenschaften](http://msdn.microsoft.com/en-us/226ecf74-ebbd-4ea0-a701-dcf4441deefe) und [ \<Kanal >-Element (Vorlage)](http://msdn.microsoft.com/en-us/73399d48-f0fd-46e9-828b-6cdafde5ffce).  
+  
+ Wenn die `ensureSecurity` Parametersatz auf `true`, den Remotingsystem bestimmt, ob der Kanal implementiert <xref:System.Runtime.Remoting.Channels.ISecurableChannel>, und wenn dies der Fall ist, ermöglicht die Ver- und digitale Signaturen. Eine Ausnahme wird ausgelöst, wenn der Kanal nicht implementiert <xref:System.Runtime.Remoting.Channels.ISecurableChannel>.  
+  
+> [!NOTE]
+>  Festlegen `ensureSecurity` auf `true` löst eine <xref:System.Runtime.Remoting.RemotingException> für die <xref:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel> unter Windows 98 (da sichere TCP-Kanäle für Windows 9 nicht unterstützt werden X), und für die <xref:System.Runtime.Remoting.Channels.Http.HttpServerChannel> auf allen Plattformen (Sie müssen den Dienst in IIS hosten, wenn Sie verwenden möchten eine sichere HTTP-Kanal).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="chnl" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Remoting.RemotingException">Der Kanal wurde bereits registriert.</exception>
+        <exception cref="T:System.Security.SecurityException">Verfügt über mindestens eine der Aufrufern einer höheren Ebene in der Aufrufliste nicht über die Berechtigung zum Remotetypen und Kanäle konfigurieren.</exception>
+        <exception cref="T:System.NotSupportedException">Nicht unterstützt, die unter Windows 98 für <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel" /> und auf allen Plattformen für <see cref="T:System.Runtime.Remoting.Channels.Http.HttpServerChannel" />. Hosten Sie den Dienst, der Internetinformationsdienste (Internet Information Services, IIS) verwenden, wenn Sie einen sichere HTTP-Kanal erfordern.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Konfiguration der Infrastruktur für den Remotezugriff. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisteredChannels">
+      <MemberSignature Language="C#" Value="public static System.Runtime.Remoting.Channels.IChannel[] RegisteredChannels { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Runtime.Remoting.Channels.IChannel[] RegisteredChannels" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.ChannelServices.RegisteredChannels" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Channels.IChannel[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste der derzeit registrierten Kanäle.</summary>
+        <value>Ein Array von die aktuell registrierte Kanäle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[ChannelServices_RegisteredChannels#2](~/samples/snippets/cpp/VS_Snippets_Remoting/ChannelServices_RegisteredChannels/CPP/channelservices_registeredchannels_server.cpp#2)]
+ [!code-csharp[ChannelServices_RegisteredChannels#2](~/samples/snippets/csharp/VS_Snippets_Remoting/ChannelServices_RegisteredChannels/CS/channelservices_registeredchannels_server.cs#2)]
+ [!code-vb[ChannelServices_RegisteredChannels#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ChannelServices_RegisteredChannels/VB/channelservices_registeredchannels_server.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncDispatchMessage">
+      <MemberSignature Language="C#" Value="public static System.Runtime.Remoting.Messaging.IMessage SyncDispatchMessage (System.Runtime.Remoting.Messaging.IMessage msg);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.Remoting.Messaging.IMessage SyncDispatchMessage(class System.Runtime.Remoting.Messaging.IMessage msg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.ChannelServices.SyncDispatchMessage(System.Runtime.Remoting.Messaging.IMessage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Messaging.IMessage</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Runtime.Remoting.Messaging.IMessage" />
+      </Parameters>
+      <Docs>
+        <param name="msg">Die zu sendende Meldung.</param>
+        <summary>Sendet synchron an die serverseitigen Ketten basierend auf dem URI die eingehende Nachricht in der Meldung eingebettete.</summary>
+        <returns>Durch den Aufruf der serverseitigen Kette wird eine Antwortnachricht zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[ChannelServices_SyncDispatchMessage#1](~/samples/snippets/cpp/VS_Snippets_Remoting/ChannelServices_SyncDispatchMessage/CPP/channelservices_syncdispatchmessage_client.cpp#1)]
+ [!code-csharp[ChannelServices_SyncDispatchMessage#1](~/samples/snippets/csharp/VS_Snippets_Remoting/ChannelServices_SyncDispatchMessage/CS/channelservices_syncdispatchmessage_client.cs#1)]
+ [!code-vb[ChannelServices_SyncDispatchMessage#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ChannelServices_SyncDispatchMessage/VB/channelservices_syncdispatchmessage_client.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="msg" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">Der unmittelbaren Aufrufer keine Berechtigung für die Infrastruktur.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="UnregisterChannel">
+      <MemberSignature Language="C#" Value="public static void UnregisterChannel (System.Runtime.Remoting.Channels.IChannel chnl);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void UnregisterChannel(class System.Runtime.Remoting.Channels.IChannel chnl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.ChannelServices.UnregisterChannel(System.Runtime.Remoting.Channels.IChannel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="chnl" Type="System.Runtime.Remoting.Channels.IChannel" />
+      </Parameters>
+      <Docs>
+        <param name="chnl">Der Kanal beim Aufheben der Registrierung.</param>
+        <summary>Hebt die Registrierung auf einem bestimmten Kanal aus der Liste der registrierten Kanäle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[ChannelServices_RegisteredChannels#3](~/samples/snippets/cpp/VS_Snippets_Remoting/ChannelServices_RegisteredChannels/CPP/channelservices_registeredchannels_server.cpp#3)]
+ [!code-csharp[ChannelServices_RegisteredChannels#3](~/samples/snippets/csharp/VS_Snippets_Remoting/ChannelServices_RegisteredChannels/CS/channelservices_registeredchannels_server.cs#3)]
+ [!code-vb[ChannelServices_RegisteredChannels#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ChannelServices_RegisteredChannels/VB/channelservices_registeredchannels_server.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="chnl" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Der Kanal ist nicht registriert.</exception>
+        <exception cref="T:System.Security.SecurityException">Verfügt über mindestens eines der Aufrufern einer höheren Ebene in der Aufrufliste nicht über die Berechtigung zum Remotetypen und Kanäle konfigurieren.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für die Konfiguration der Infrastruktur für den Remotezugriff. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

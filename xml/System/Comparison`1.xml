@@ -1,0 +1,90 @@
+<Type Name="Comparison&lt;T&gt;" FullName="System.Comparison&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public delegate int Comparison&lt;in T&gt;(T x, T y);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Comparison`1&lt;- T&gt; extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Comparison`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="x" Type="T" />
+    <Parameter Name="y" Type="T" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Int32</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <typeparam name="T">Der Typ des zu vergleichenden Objekte.</typeparam>
+    <param name="x">Das erste zu vergleichende Objekt.</param>
+    <param name="y">Das zweite zu vergleichende Objekt.</param>
+    <summary>Stellt die Methode dar, die zwei Objekte des gleichen Typs vergleicht.</summary>
+    <returns>Eine ganze Zahl mit Vorzeichen, die die relativen Werte von <paramref name="x" /> und <paramref name="y" /> angibt, wie in der folgenden Tabelle veranschaulicht.  
+  
+ <list type="table"><listheader><term>Wert  
+  
+ </term><description>Bedeutung  
+  
+ </description></listheader><item><term>Kleiner als 0  
+  
+ </term><description><paramref name="x" /> ist kleiner als <paramref name="y" />.  
+  
+ </description></item><item><term> 0  
+  
+ </term><description><paramref name="x" /> ist gleich <paramref name="y" />.  
+  
+ </description></item><item><term>Größer als 0  
+  
+ </term><description><paramref name="x" /> ist größer als <paramref name="y" />.  
+  
+ </description></item></list></returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Delegat wird verwendet, indem Sie die <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Comparison%7B%60%600%7D%29> methodenüberladung der <xref:System.Array> Klasse und die <xref:System.Collections.Generic.List%601.Sort%28System.Comparison%7B%600%7D%29> methodenüberladung der die <xref:System.Collections.Generic.List%601> Klasse die Elemente eines Arrays oder einer Liste sortiert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Comparison%601> mit Delegieren der <xref:System.Collections.Generic.List%601.Sort%28System.Comparison%7B%600%7D%29> -methodenüberladung.  
+  
+ Das Codebeispiel definiert eine alternative Vergleichsmethode für Zeichenfolgen, die mit dem Namen `CompareDinosByLength`. Diese Methode funktioniert wie folgt: zunächst der verglichenen Elemente getestet werden `null`, und ein null-Verweis als kleiner als ein Wert ungleich Null behandelt wird. Zweitens die Zeichenfolgenlängen verglichen werden, und die Zeichenfolge längere ist als größer werden. Wenn die Länge gleich sind, wird im dritten gewöhnliche Zeichenfolgenvergleich verwendet.  
+  
+ Ein <xref:System.Collections.Generic.List%601> von Zeichenfolgen erstellt und mit vier Zeichenfolgen, ohne bestimmte Reihenfolge gefüllt ist. Die Liste enthält auch eine leere Zeichenfolge und ein null-Verweis. Die Liste wird angezeigt, sortiert, mit einem <xref:System.Comparison%601> generischer Delegat darstellt der `CompareDinosByLength` -Methode, und erneut angezeigt.  
+  
+ [!code-cpp[List\`1_SortComparison#1](~/samples/snippets/cpp/VS_Snippets_CLR/List`1_SortComparison/cpp/source.cpp#1)]
+ [!code-csharp[List\`1_SortComparison#1](~/samples/snippets/csharp/VS_Snippets_CLR/List`1_SortComparison/cs/source.cs#1)]
+ [!code-vb[List\`1_SortComparison#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/List`1_SortComparison/vb/source.vb#1)]  
+  
+ Im folgenden Beispiel wird die <xref:System.Comparison%601> Delegaten zum Sortieren der Elemente einer Auflistung von `CityInfo` Objekte. `CityInfo`ist eine anwendungsdefinierte Klasse, die Informationen über einen Orts- und seiner Einwohnerzahl enthält. Im Beispiel definiert drei Methoden `CompareByName`, `CompareByPopulation`, und `CompareByNames`, bieten drei verschiedene Möglichkeiten zum Sortieren der `CityInfo` Objekte. Jede Methode zugewiesen ist die `comparison` Argument der <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Comparison%7B%60%600%7D%29?displayProperty=nameWithType> Methode.  
+  
+ [!code-csharp[System.Comparison\`1#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.comparison`1/cs/comparisont1.cs#1)]
+ [!code-vb[System.Comparison\`1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.comparison`1/vb/comparisont1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

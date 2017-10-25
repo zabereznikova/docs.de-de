@@ -1,0 +1,238 @@
+<Type Name="ITypeDescriptorContext" FullName="System.ComponentModel.ITypeDescriptorContext">
+  <TypeSignature Language="C#" Value="public interface ITypeDescriptorContext : IServiceProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITypeDescriptorContext implements class System.IServiceProvider" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.ITypeDescriptorContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IServiceProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Kontextinformationen über eine Komponente, z. B. den zugehörigen Container und Eigenschaftendeskriptor.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.ITypeDescriptorContext> Schnittstelle stellt Kontextinformationen über eine Komponente bereit. <xref:System.ComponentModel.ITypeDescriptorContext>wird normalerweise zur Entwurfszeit verwendet, um Informationen zu einem Container zur Entwurfszeit bereitzustellen. Diese Schnittstelle wird häufig in typkonvertierung verwendet. Ausführliche Informationen finden Sie unter <xref:System.ComponentModel.TypeConverter>.  
+  
+> [!NOTE]
+>  Verlassen Sie sich nicht auf das Vorhandensein dieser Schnittstelle, wenn Sie einen Typkonverter entwerfen. Wenn es sich bei einer bestimmten Schnittstelle, Eigenschaft oder einem Dienst erforderlich, aber nicht verfügbar ist, wird der Typkonverter zurückgegeben `null` anstatt eine Ausnahme auslöst. Die Eigenschaften dieser Schnittstelle können zurückgeben `null` zu einem beliebigen Zeitpunkt und Planen Sie für diese.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.ComponentModel.ITypeDescriptorContext> -Schnittstelle zur Unterstützung der Konvertierung vom Typ.  
+  
+ [!code-cpp[InstanceDescriptorSample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/InstanceDescriptorSample/CPP/instancedescriptor.cpp#1)]
+ [!code-csharp[InstanceDescriptorSample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/InstanceDescriptorSample/CS/instancedescriptor.cs#1)]
+ [!code-vb[InstanceDescriptorSample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/InstanceDescriptorSample/VB/instancedescriptor.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Container">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.IContainer Container { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.IContainer Container" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.ITypeDescriptorContext.Container" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IContainer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Container darstellt, dies <see cref="T:System.ComponentModel.TypeDescriptor" /> Anforderung.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.IContainer" /> mit dem Satz von Objekten für diesen <see cref="T:System.ComponentModel.TypeDescriptor" />ist, andernfalls <see langword="null" /> Wenn kein Container vorhanden ist oder wenn die <see cref="T:System.ComponentModel.TypeDescriptor" /> außerhalb Objekte nicht verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.ITypeDescriptorContext.Container%2A> Eigenschaft ruft den logischen Container der Komponente den Typdeskriptor zugeordnet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Instance">
+      <MemberSignature Language="C#" Value="public object Instance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Instance" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.ITypeDescriptorContext.Instance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt, das mit diesem Typ Deskriptor Anforderung verbunden ist.</summary>
+        <value>Das Objekt, das auf die Methode ruft die <see cref="T:System.ComponentModel.TypeDescriptor" />ist, andernfalls <see langword="null" /> Wenn es kein Objekt für den Aufruf verantwortlich ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.ITypeDescriptorContext.Instance%2A> Eigenschaft ruft das Objekt, das aufrufen, wird die <xref:System.ComponentModel.ITypeDescriptorContext> Schnittstelle. Angenommen, ein Typkonverter eine <xref:System.Drawing.Color> zu konvertierenden <xref:System.ComponentModel.ITypeDescriptorContext.Instance%2A> gibt die tatsächliche Instanz des Steuerelements, das verwendet wird die <xref:System.Drawing.Color>. Sie können anschließend das Steuerelement für Weitere Informationen über ihre Dienste Abfragen und die zugehörige <xref:System.ComponentModel.ITypeDescriptorContext.Container%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnComponentChanged">
+      <MemberSignature Language="C#" Value="public void OnComponentChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnComponentChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ITypeDescriptorContext.OnComponentChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löst das <see cref="E:System.ComponentModel.Design.IComponentChangeService.ComponentChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.ComponentModel.ITypeDescriptorContext.OnComponentChanged%2A> Methode, um die Benachrichtigung senden, die eine Instanz eines Objekts geändert wurde.  
+  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.ComponentModel.ITypeDescriptorContext.OnComponentChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.ComponentModel.ITypeDescriptorContext.OnComponentChanged" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.ComponentModel.ITypeDescriptorContext.OnComponentChanged" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnComponentChanging">
+      <MemberSignature Language="C#" Value="public bool OnComponentChanging ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool OnComponentChanging() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ITypeDescriptorContext.OnComponentChanging" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löst das <see cref="E:System.ComponentModel.Design.IComponentChangeService.ComponentChanging" />-Ereignis aus.</summary>
+        <returns>
+          <see langword="true" />Wenn dieses Objekt nicht geändert werden kann; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.ComponentModel.ITypeDescriptorContext.OnComponentChanging%2A> Methode beim Senden der Benachrichtigung, die eine Instanz eines Objekts geändert werden. Diese Methode gibt auch einen Wert, der angibt, ob dieses Objekt geändert werden kann. Wenn `false` wird zurückgegeben, verändern sich nicht auf das Objekt.  
+  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.ComponentModel.ITypeDescriptorContext.OnComponentChanging%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.ComponentModel.ITypeDescriptorContext.OnComponentChanging" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.ComponentModel.ITypeDescriptorContext.OnComponentChanging" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyDescriptor">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.PropertyDescriptor PropertyDescriptor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.PropertyDescriptor PropertyDescriptor" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.ITypeDescriptorContext.PropertyDescriptor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.ComponentModel.PropertyDescriptor" /> , die mit dem angegebenen Kontextelement verknüpft ist.</summary>
+        <value>Der <see cref="T:System.ComponentModel.PropertyDescriptor" /> , der den angegebenen Kontext, andernfalls beschreibt <see langword="null" /> liegt keine <see cref="T:System.ComponentModel.PropertyDescriptor" /> für den Aufruf verantwortlich.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

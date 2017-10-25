@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Resources">
+  <Docs>
+    <summary>Enthält Klassen auf niedriger Ebene, die das Ressourcenmodell Windows Presentation Foundation (WPF) und die Ressourcen unterstützen Aktion erstellen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

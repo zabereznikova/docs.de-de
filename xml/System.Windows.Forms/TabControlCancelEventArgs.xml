@@ -1,0 +1,164 @@
+<Type Name="TabControlCancelEventArgs" FullName="System.Windows.Forms.TabControlCancelEventArgs">
+  <TypeSignature Language="C#" Value="public class TabControlCancelEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TabControlCancelEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TabControlCancelEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für die <see cref="E:System.Windows.Forms.TabControl.Selecting" /> und <see cref="E:System.Windows.Forms.TabControl.Deselecting" /> Ereignisse von einem <see cref="T:System.Windows.Forms.TabControl" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.TabControlCancelEventArgs.Action%2A> -Eigenschaft können Sie bestimmen, welches Ereignis eintritt. Dies ermöglicht es, mehrere Ereignistypen mit einem Ereignishandler zu behandeln.  
+  
+ Verwenden der <xref:System.Windows.Forms.TabControlCancelEventArgs.TabPage%2A> und <xref:System.Windows.Forms.TabControlCancelEventArgs.TabPageIndex%2A> zu ermitteln, welche Eigenschaften <xref:System.Windows.Forms.TabPage> für das Ereignis eintritt.  
+  
+ Um eine Änderung in der Registerkarte "Abbrechen" eine <xref:System.Windows.Forms.TabControl>legen die <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft `true`.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Typs. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.TabControl.Selecting> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.TabControl> mit dem Namen `TabControl1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.TabControl.Selecting> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#557](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#557)]
+ [!code-vb[System.Windows.Forms.EventExamples#557](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#557)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TabControlCancelEventArgs (System.Windows.Forms.TabPage tabPage, int tabPageIndex, bool cancel, System.Windows.Forms.TabControlAction action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.TabPage tabPage, int32 tabPageIndex, bool cancel, valuetype System.Windows.Forms.TabControlAction action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TabControlCancelEventArgs.#ctor(System.Windows.Forms.TabPage,System.Int32,System.Boolean,System.Windows.Forms.TabControlAction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tabPage" Type="System.Windows.Forms.TabPage" />
+        <Parameter Name="tabPageIndex" Type="System.Int32" />
+        <Parameter Name="cancel" Type="System.Boolean" />
+        <Parameter Name="action" Type="System.Windows.Forms.TabControlAction" />
+      </Parameters>
+      <Docs>
+        <param name="tabPage">Die <see cref="T:System.Windows.Forms.TabPage" /> für das Ereignis eintritt.</param>
+        <param name="tabPageIndex">Der nullbasierte Index des <c>TabPage</c> in der <see cref="P:System.Windows.Forms.TabControl.TabPages" /> Auflistung.</param>
+        <param name="cancel">
+          <see langword="true" />um die Änderung der Registerkarte standardmäßig abzubrechen; andernfalls <see langword="false" />.</param>
+        <param name="action">Einer der <see cref="T:System.Windows.Forms.TabControlAction" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.TabControlCancelEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Eigenschaftswerte der neu erstellte Instanz werden mit den angegebenen Parameterwerten initialisiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TabControlAction Action { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.TabControlAction Action" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TabControlCancelEventArgs.Action" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TabControlAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, welches Ereignis eintritt.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.TabControlAction" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.TabControl.Selecting?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.TabControl> mit dem Namen `TabControl1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.TabControl.Selecting?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#557](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#557)]
+ [!code-vb[System.Windows.Forms.EventExamples#557](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#557)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabPage">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TabPage TabPage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.TabPage TabPage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TabControlCancelEventArgs.TabPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TabPage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Forms.TabPage" /> für das Ereignis eintritt.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.TabPage" /> für das Ereignis eintritt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.TabControl.Selecting?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.TabControl> mit dem Namen `TabControl1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.TabControl.Selecting?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#557](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#557)]
+ [!code-vb[System.Windows.Forms.EventExamples#557](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#557)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabPageIndex">
+      <MemberSignature Language="C#" Value="public int TabPageIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TabPageIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TabControlCancelEventArgs.TabPageIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den nullbasierten Index des der <see cref="P:System.Windows.Forms.TabControlCancelEventArgs.TabPage" /> in der <see cref="P:System.Windows.Forms.TabControl.TabPages" /> Auflistung.</summary>
+        <value>Der nullbasierte Index, der die <see cref="P:System.Windows.Forms.TabControlCancelEventArgs.TabPage" /> in der <see cref="P:System.Windows.Forms.TabControl.TabPages" /> Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.TabControl.Selecting?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.TabControl> mit dem Namen `TabControl1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.TabControl.Selecting?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#557](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#557)]
+ [!code-vb[System.Windows.Forms.EventExamples#557](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#557)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,401 @@
+<Type Name="CustomBinding" FullName="System.ServiceModel.Channels.CustomBinding">
+  <TypeSignature Language="C#" Value="public class CustomBinding : System.ServiceModel.Channels.Binding" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CustomBinding extends System.ServiceModel.Channels.Binding" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.CustomBinding" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.Binding</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert eine Bindung aus einer Liste mit Bindungselementen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie eine benutzerdefinierte Bindung, wenn eine der vom System bereitgestellten Bindungen die Anforderungen für Ihren Dienst nicht erfüllt. Eine benutzerdefinierte Bindung kann beispielsweise verwendet werden, um die Nutzung eines neuen Transports oder eines neuen Encoders an einem Dienstendpunkt zu aktivieren.  
+  
+ Eine benutzerdefinierte Bindung wird durch Verwendung einer der <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> aus einer Sammlung an Bindungselementen erstellt, die in einer spezifischen Reihenfolge "gestapelt" sind:  
+  
+-   Oben ist ein optionales <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>, das einen Transaktionsfluss ermöglicht.  
+  
+-   Darauf folgt ein optionales <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>, das eine Sitzung und einen Sortiermechanismus bereitstellt, wie es in der WS-ReliableMessaging-Spezifikation definiert ist. Dieses Konzept einer Sitzung kann SOAP und Transportvermittler überqueren.  
+  
+-   Darauf folgt ein optionales Sicherheitsbindungselement, das Sicherheitsfunktionen wie Autorisierung, Authentifizierung, Schutz und Vertraulichkeit bereitstellt. Die folgenden Sicherheitsbindungselemente werden von [!INCLUDE[indigo1](~/includes/indigo1-md.md)] bereitgestellt:  
+  
+    -   <xref:System.ServiceModel.Channels.SecurityBindingElement>  
+  
+    -   <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>  
+  
+    -   <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>  
+  
+    -   <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
+  
+-   Darauf folgen die optionalen Nachrichtenmuster, die von den Bindungselementen spezifiziert werden:  
+  
+-   <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>  
+  
+-   Darauf folgen die optionalen Transport-Upgrades/unterstützenden Bindungselemente:  
+  
+    -   <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>  
+  
+    -   <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
+  
+    -   <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
+  
+-   Darauf wiederum folgt ein erforderliches, Nachrichten codierendes Bindungselement. Sie können einen eigenen Transport verwenden oder die folgenden Nachrichten codierenden Bindungen:  
+  
+    -   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
+  
+    -   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>  
+  
+    -   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
+  
+-   Am Ende befindet sich ein erforderliches Transportelement. Sie können einen eigenen Transport verwenden oder eines der Transportbindungselemente von [!INCLUDE[indigo1](~/includes/indigo1-md.md)]:  
+  
+    -   <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
+  
+    -   <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
+  
+    -   <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
+  
+    -   <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
+  
+    -   <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>  
+  
+    -   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>  
+  
+    -   <xref:System.ServiceModel.Channels.PeerTransportBindingElement>  
+  
+ In der folgenden Tabelle werden die Optionen für jede Ebene zusammengefasst.  
+  
+|Ebene|Optionen|Erforderlich|  
+|-----------|-------------|--------------|  
+|Transaktionsfluss|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|Nein|  
+|Zuverlässigkeit|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|Nein|  
+|Sicherheit|Symmetrisch, asymmetrisch, auf Transportebene|Nein|  
+|Formänderung|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>|Nein|  
+|Transport-Upgrades|SSL-Stream, Windows-Stream, Peerresolver|Nein|  
+|Codierung|Text, Binärdatei, MTOM, benutzerdefiniert|Ja|  
+|Transport|TCP, Named Pipes, HTTP, HTTPS, Typen der MSMQ, benutzerdefiniert|Ja|  
+  
+ Zusätzlich können Sie Ihre eigenen Bindungselemente definieren und diese zwischen den vorangehenden definierten Ebenen einsetzen.  
+  
+ Eine Erläuterung zum Verwenden einer benutzerdefiniertes Bindung für eine vom System bereitgestellte Bindung zu ändern, finden Sie unter [wie: Anpassen einer Bindung sicherheitsbindungsarten](~/docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
+  
+> [!NOTE]
+>  Beim Aufrufen eines mit .Net Framework 4.0 erstellten [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Diensts aus einer WCF-Clientanwendung, die mit [!INCLUDE[netfx35_short](~/includes/netfx35-short-md.md)] oder früher erstellt wurde, enthält die von svcutil.exe generierte Konfigurationsdatei oder ein hinzugefügter Dienstverweis aus [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] das Gültigkeitsattribut in der Bindungskonfiguration. Dieses Attribut wird nicht von der [!INCLUDE[netfx35_short](~/includes/netfx35-short-md.md)]-Laufzeit erkannt, und die Anwendung löst eine <xref:System.Configuration.ConfigurationErrorsException> mit der Meldung, dass ein nicht erkanntes Gültigkeitsattribut vorliegt. Zur Umgehung dieses Problems, entfernen Sie das Gültigkeitsattribut aus der Bindungskonfiguration.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie man ein <xref:System.ServiceModel.Channels.CustomBinding>-Objekt unter Verwendung von <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> und <xref:System.ServiceModel.Channels.HttpTransportBindingElement> erstellt.  
+  
+ [!code-csharp[S_Imperative#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_imperative/cs/service.cs#1)]
+ [!code-vb[S_Imperative#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_imperative/vb/service.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CustomBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.CustomBinding.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.CustomBinding" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung des Standardkonstruktors veranschaulicht.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CustomBinding (System.Collections.Generic.IEnumerable&lt;System.ServiceModel.Channels.BindingElement&gt; bindingElementsInTopDownChannelStackOrder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;class System.ServiceModel.Channels.BindingElement&gt; bindingElementsInTopDownChannelStackOrder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.CustomBinding.#ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.BindingElement})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="bindingElementsInTopDownChannelStackOrder" Type="System.Collections.Generic.IEnumerable&lt;System.ServiceModel.Channels.BindingElement&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="bindingElementsInTopDownChannelStackOrder"><see cref="T:System.Collections.Generic.IEnumerable`1" /> vom Typ <see cref="T:System.ServiceModel.Channels.BindingElement" />, der die Bindungselemente des Kanalstapels in der Reihenfolge von oben nach unten enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.CustomBinding" />-Klasse mit den Bindungselementen aus einem vollständigen Kanalstapel.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_Imperative#4](~/samples/snippets/csharp/VS_Snippets_CFX/s_imperative/cs/servicesnippets.cs#4)]
+ [!code-vb[S_Imperative#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_imperative/vb/servicesnippets.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="bindingElementsInTopDownChannelStackOrder" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CustomBinding (System.ServiceModel.Channels.Binding binding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Channels.Binding binding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.CustomBinding.#ctor(System.ServiceModel.Channels.Binding)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+      </Parameters>
+      <Docs>
+        <param name="binding"><see cref="T:System.ServiceModel.Channels.Binding" />, der verwendet wird, um eine benutzerdefinierte Bindung zu initialisieren.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.CustomBinding" />-Klasse aus den Werten einer angegebenen Bindung.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="binding" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CustomBinding (params System.ServiceModel.Channels.BindingElement[] bindingElementsInTopDownChannelStackOrder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Channels.BindingElement[] bindingElementsInTopDownChannelStackOrder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.CustomBinding.#ctor(System.ServiceModel.Channels.BindingElement[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="bindingElementsInTopDownChannelStackOrder" Type="System.ServiceModel.Channels.BindingElement[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="bindingElementsInTopDownChannelStackOrder">Der <see cref="T:System.Array" /> des Typs <see cref="T:System.ServiceModel.Channels.BindingElement" />, der verwendet wird, um die benutzerdefinierte Bindung zu initialisieren.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.CustomBinding" />-Klasse aus einem Array von Bindungselementen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_Imperative#3](~/samples/snippets/csharp/VS_Snippets_CFX/s_imperative/cs/servicesnippets.cs#3)]
+ [!code-vb[S_Imperative#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_imperative/vb/servicesnippets.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="bindingElementsInTopDownChannelStackOrder" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CustomBinding (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.CustomBinding.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="configurationName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.CustomBinding" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Bindungselement, benannt von  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Das Bindungselement, das vom <paramref name="name" /> identifiziert wird, ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CustomBinding (string name, string ns, params System.ServiceModel.Channels.BindingElement[] bindingElementsInTopDownChannelStackOrder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string ns, class System.ServiceModel.Channels.BindingElement[] bindingElementsInTopDownChannelStackOrder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.CustomBinding.#ctor(System.String,System.String,System.ServiceModel.Channels.BindingElement[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="bindingElementsInTopDownChannelStackOrder" Type="System.ServiceModel.Channels.BindingElement[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Bindung.</param>
+        <param name="ns">Der Namespace der Bindung.</param>
+        <param name="bindingElementsInTopDownChannelStackOrder">Der <see cref="T:System.Array" /> des Typs <see cref="T:System.ServiceModel.Channels.BindingElement" />, der verwendet wird, um die benutzerdefinierte Bindung zu initialisieren.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.CustomBinding" />-Klasse aus einem Array an Bindungselementen mit einem spezifischen Namen und Namespace.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_Imperative#5](~/samples/snippets/csharp/VS_Snippets_CFX/s_imperative/cs/servicesnippets.cs#5)]
+ [!code-vb[S_Imperative#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_imperative/vb/servicesnippets.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="bindingElementsInTopDownChannelStackOrder" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBindingElements">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.BindingElementCollection CreateBindingElements ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.BindingElementCollection CreateBindingElements() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.CustomBinding.CreateBindingElements" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingElementCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine generische Auflistung der Bindungselemente von der benutzerdefinierten Bindung zurück.</summary>
+        <returns>Ein <see cref="T:System.Collections.Generic.ICollection`1" />-Objekt vom Typ <see cref="T:System.ServiceModel.Channels.BindingElement" />, das die Bindungselemente aus der benutzerdefinierten Bindung enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Elements">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.BindingElementCollection Elements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.BindingElementCollection Elements" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.CustomBinding.Elements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingElementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Bindungselemente aus der benutzerdefinierten Bindung ab.</summary>
+        <value>Der <see cref="T:System.ServiceModel.Channels.BindingElementCollection" />, der die Bindungselemente von der benutzerdefinierten Bindung enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scheme">
+      <MemberSignature Language="C#" Value="public override string Scheme { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Scheme" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.CustomBinding.Scheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das URI-Schema für den Transport ab, das von der benutzerdefinierten Bindung verwendet wird.</summary>
+        <value>Das URI-Schema für den Transport, das von der benutzerdefinierten Bindung verwendet wird, oder eine leere Zeichenfolge, wenn kein Transport verfügbar ist (<see cref="T:System.ServiceModel.Channels.TransportBindingElement" /> ist <see langword="null" />).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird bereitgestellt, um Bindungsvalidierung gegen Basisadressen zu aktivieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

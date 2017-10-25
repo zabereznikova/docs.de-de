@@ -1,0 +1,302 @@
+<Type Name="CodeMemberProperty" FullName="System.CodeDom.CodeMemberProperty">
+  <TypeSignature Language="C#" Value="public class CodeMemberProperty : System.CodeDom.CodeTypeMember" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeMemberProperty extends System.CodeDom.CodeTypeMember" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeMemberProperty" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeTypeMember</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Deklaration für eine Eigenschaft eines Typs dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.CodeMemberProperty>kann verwendet werden, um die Deklaration für eine Eigenschaft eines Typs darstellen.  
+  
+ Die <xref:System.CodeDom.CodeMemberProperty.Type%2A> Eigenschaft gibt den Datentyp der Eigenschaft. Die <xref:System.CodeDom.CodeMemberProperty.GetStatements%2A> Eigenschaft enthält alle Methoden des Get-Anweisung für die Eigenschaft. Die <xref:System.CodeDom.CodeMemberProperty.SetStatements%2A> Eigenschaft enthält alle Methoden mit Set-Anweisung für die Eigenschaft. Die <xref:System.CodeDom.CodeMemberProperty.Parameters%2A> -Eigenschaft gibt alle Parameter für die Eigenschaft, z. B. für eine Indexereigenschaft erforderlich sind.  
+  
+   
+  
+## Examples  
+ Der folgende Beispielcode veranschaulicht die Verwendung von einer <xref:System.CodeDom.CodeMemberProperty> zum Definieren einer `string` Eigenschaft mit dem `get` und `set` Accessoren.  
+  
+ [!code-cpp[CodeMemberPropertyExample#3](~/samples/snippets/cpp/VS_Snippets_CLR/CodeMemberPropertyExample/CPP/codememberpropertyexample.cpp#3)]
+ [!code-csharp[CodeMemberPropertyExample#3](~/samples/snippets/csharp/VS_Snippets_CLR/CodeMemberPropertyExample/CS/codememberpropertyexample.cs#3)]
+ [!code-vb[CodeMemberPropertyExample#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeMemberPropertyExample/VB/codememberpropertyexample.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeMemberProperty ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeMemberProperty.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.CodeDom.CodeMemberProperty" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStatements">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeStatementCollection GetStatements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeStatementCollection GetStatements" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeMemberProperty.GetStatements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeStatementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der <see langword="get" /> Anweisungen für die Eigenschaft.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeStatementCollection" /> , enthält die <see langword="get" /> -Anweisungen für die Member-Eigenschaft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einer der Anweisungen in diesem <xref:System.CodeDom.CodeStatementCollection> sollte den Wert für die Elementeigenschaft zurück. Verwenden einer <xref:System.CodeDom.CodeMethodReturnStatement> einen Wert, der den Datentyp der Eigenschaft zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasGet">
+      <MemberSignature Language="C#" Value="public bool HasGet { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasGet" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeMemberProperty.HasGet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Eigenschaft besitzt einen <see langword="get" /> Accessor-Methode.</summary>
+        <value>
+          <see langword="true" />Wenn die <see langword="Count" /> Eigenschaft von der <see cref="P:System.CodeDom.CodeMemberProperty.GetStatements" /> Auflistung ist ungleich NULL ist, oder wenn der Wert dieser Eigenschaft, um festgelegt wurde <see langword="true" />ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Wenn diese Eigenschaft auf `false` löscht die <xref:System.CodeDom.CodeMemberProperty.GetStatements%2A> Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasSet">
+      <MemberSignature Language="C#" Value="public bool HasSet { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasSet" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeMemberProperty.HasSet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Eigenschaft besitzt einen <see langword="set" /> Accessor-Methode.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="P:System.Collections.CollectionBase.Count" /> Eigenschaft von der <see cref="P:System.CodeDom.CodeMemberProperty.SetStatements" /> Auflistung ist nicht 0 (null) ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.CodeMemberProperty.HasSet%2A>Gibt zurück, `false` , wenn die Eigenschaft schreibgeschützt ist.  
+  
+> [!NOTE]
+>  Wenn diese Eigenschaft auf `false` werden gelöscht, die die <xref:System.CodeDom.CodeMemberProperty.SetStatements%2A> Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImplementationTypes">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeTypeReferenceCollection ImplementationTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeTypeReferenceCollection ImplementationTypes" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeMemberProperty.ImplementationTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeReferenceCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, die die Datentypen für alle Schnittstellen, die die Eigenschaft implementiert.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeTypeReferenceCollection" /> , der angibt, die Datentypen der Eigenschaft implementiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Typen, die dieser Sammlung verweist, müssen von Schnittstellen bestehen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeParameterDeclarationExpressionCollection Parameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeParameterDeclarationExpressionCollection Parameters" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeMemberProperty.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeParameterDeclarationExpressionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Deklarationsausdrücke für die Eigenschaft ab.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeParameterDeclarationExpressionCollection" /> , der die Deklarationsausdrücke für die Eigenschaft angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Eigenschaften müssen im Allgemeinen nicht über Parameter. CodeDom unterstützt eine Ausnahme. Für eine Eigenschaft mit dem speziellen Namen "Item" und einen oder mehrere Parameter, wird eine Indexereigenschaft für die Klasse deklariert werden. Nicht alle Sprachen unterstützen jedoch die Deklaration von Indexern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrivateImplementationType">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeTypeReference PrivateImplementationType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeTypeReference PrivateImplementationType" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeMemberProperty.PrivateImplementationType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeReference</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Datentyp der Schnittstelle fest, wenn vorhanden, diese Eigenschaft, wenn private implementiert wird.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeTypeReference" /> , der den Datentyp der Schnittstelle angibt, wenn vorhanden, die Eigenschaft, wenn private implementiert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Typ, auf die von dieser Eigenschaft muss eine Schnittstelle sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetStatements">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeStatementCollection SetStatements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeStatementCollection SetStatements" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeMemberProperty.SetStatements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeStatementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der <see langword="set" /> Anweisungen für die Eigenschaft.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeStatementCollection" /> , enthält die <see langword="set" /> -Anweisungen für die Member-Eigenschaft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einer der Anweisungen in dieser Auflistung legt in der Regel einen Wert für die Eigenschaft fest. Häufig, führen Sie die Anweisungen in einem Set-Accessor-Methode wird überprüft, um zu bestimmen, ob festlegen oder den angegebenen Wert für die Eigenschaft zu übersetzen. Ein <xref:System.CodeDom.CodePropertySetValueReferenceExpression> stellt ein Verweis auf das Objekt an die Set-Methode übergeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeTypeReference Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeTypeReference Type" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeMemberProperty.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeReference</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Datentyp der Eigenschaft fest.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeTypeReference" /> , der den Datentyp der Eigenschaft angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

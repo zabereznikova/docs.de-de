@@ -1,0 +1,275 @@
+<Type Name="WrappedKeySecurityToken" FullName="System.ServiceModel.Security.Tokens.WrappedKeySecurityToken">
+  <TypeSignature Language="C#" Value="public class WrappedKeySecurityToken : System.IdentityModel.Tokens.SecurityToken" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WrappedKeySecurityToken extends System.IdentityModel.Tokens.SecurityToken" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.Tokens.WrappedKeySecurityToken" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Tokens.SecurityToken</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Sicherheitstoken dar, dessen Schlüssel in ein anderes Token eingebunden ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse stellt einen verschlüsselten Schlüssel dar, der über die Verbindung gesendet wird. Bei dem verschlüsselten Schlüssel handelt es sich um einen symmetrischen Schlüssel, der mithilfe des öffentlichen Schlüssels des Empfängers für diesen verschlüsselt wird. Wenn dieser Schlüssel empfangen wird, wird das Sicherheitstoken des Empfängers aufgelöst, der symmetrische Schlüssel entschlüsselt und eine Instanz dieser Klasse erstellt, die zwei Informationen enthält.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WrappedKeySecurityToken (string id, byte[] keyToWrap, string wrappingAlgorithm, System.IdentityModel.Tokens.SecurityToken wrappingToken, System.IdentityModel.Tokens.SecurityKeyIdentifier wrappingTokenReference);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string id, unsigned int8[] keyToWrap, string wrappingAlgorithm, class System.IdentityModel.Tokens.SecurityToken wrappingToken, class System.IdentityModel.Tokens.SecurityKeyIdentifier wrappingTokenReference) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.WrappedKeySecurityToken.#ctor(System.String,System.Byte[],System.String,System.IdentityModel.Tokens.SecurityToken,System.IdentityModel.Tokens.SecurityKeyIdentifier)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="keyToWrap" Type="System.Byte[]" />
+        <Parameter Name="wrappingAlgorithm" Type="System.String" />
+        <Parameter Name="wrappingToken" Type="System.IdentityModel.Tokens.SecurityToken" />
+        <Parameter Name="wrappingTokenReference" Type="System.IdentityModel.Tokens.SecurityKeyIdentifier" />
+      </Parameters>
+      <Docs>
+        <param name="id">Die ID des Schlüsseltokens.</param>
+        <param name="keyToWrap">Der einzubindende Schlüssel.</param>
+        <param name="wrappingAlgorithm">Der Algorithmus für die Einbindung.</param>
+        <param name="wrappingToken">Ein <see cref="T:System.IdentityModel.Tokens.SecurityToken" />, das das Token für die Einbindung darstellt.</param>
+        <param name="wrappingTokenReference">Ein <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifier" />, der einen Verweis auf das Token für die Einbindung darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Security.Tokens.WrappedKeySecurityToken" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanCreateKeyIdentifierClause&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public override bool CanCreateKeyIdentifierClause&lt;T&gt; () where T : System.IdentityModel.Tokens.SecurityKeyIdentifierClause;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanCreateKeyIdentifierClause&lt;(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause) T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.WrappedKeySecurityToken.CanCreateKeyIdentifierClause``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">Der Typ des <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />.</typeparam>
+        <summary>Ruft einen Wert ab, der angibt, ob das Token eine Schlüsselbezeichnerklausel erstellen kann.</summary>
+        <returns>
+          <see langword="true" />, wenn das Token eine Schlüsselbezeichnerklausel erstellen kann, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateKeyIdentifierClause&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public override T CreateKeyIdentifierClause&lt;T&gt; () where T : System.IdentityModel.Tokens.SecurityKeyIdentifierClause;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!T CreateKeyIdentifierClause&lt;(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause) T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.WrappedKeySecurityToken.CreateKeyIdentifierClause``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">Der Typ des <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />.</typeparam>
+        <summary>Erstellen Sie eine Schlüsselbezeichnerklausel.</summary>
+        <returns>Der Typ des <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWrappedKey">
+      <MemberSignature Language="C#" Value="public byte[] GetWrappedKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetWrappedKey() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.WrappedKeySecurityToken.GetWrappedKey" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den eingebundenen Schlüssel ab.</summary>
+        <returns>Der eingebundene Schlüssel.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public override string Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.WrappedKeySecurityToken.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Token-ID ab.</summary>
+        <value>Die Token-ID.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MatchesKeyIdentifierClause">
+      <MemberSignature Language="C#" Value="public override bool MatchesKeyIdentifierClause (System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool MatchesKeyIdentifierClause(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.WrappedKeySecurityToken.MatchesKeyIdentifierClause(System.IdentityModel.Tokens.SecurityKeyIdentifierClause)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifierClause">Die angegebene Sicherheitsschlüssel-Bezeichnerklausel.</param>
+        <summary>Vergleicht die aktuelle Sicherheitsschlüssel-Bezeichnerklausel mit einer anderen angegebenen Klausel.</summary>
+        <returns>
+          <see langword="true" />, wenn die aktuelle Sicherheitsschlüssel-Bezeichnerklausel der angegebenen Klausel entspricht, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityKeys">
+      <MemberSignature Language="C#" Value="public override System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Tokens.SecurityKey&gt; SecurityKeys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.IdentityModel.Tokens.SecurityKey&gt; SecurityKeys" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.WrappedKeySecurityToken.SecurityKeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Tokens.SecurityKey&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der Sicherheitsschlüssel ab.</summary>
+        <value>Eine Auflistung von <see cref="T:System.IdentityModel.Tokens.SecurityKey" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidFrom">
+      <MemberSignature Language="C#" Value="public override DateTime ValidFrom { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime ValidFrom" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.WrappedKeySecurityToken.ValidFrom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das effektive Startdatum des Tokens ab.</summary>
+        <value>Ein <see cref="T:System.DateTime" />, das das effektive Startdatum des Tokens darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidTo">
+      <MemberSignature Language="C#" Value="public override DateTime ValidTo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime ValidTo" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.WrappedKeySecurityToken.ValidTo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Tokenablaufdatum ab.</summary>
+        <value>Ein <see cref="T:System.DateTime" />, das das Ablaufdatum des Tokens darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WrappingAlgorithm">
+      <MemberSignature Language="C#" Value="public string WrappingAlgorithm { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string WrappingAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.WrappedKeySecurityToken.WrappingAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Einbindungsalgorithmus ab.</summary>
+        <value>Eine <see cref="T:System.String" />, die den Einbindungsalgorithmus oder den Algorithmus für die Verschlüsselung des symmetrischen Schlüssels angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WrappingToken">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityToken WrappingToken { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SecurityToken WrappingToken" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.WrappedKeySecurityToken.WrappingToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Token für die Einbindung ab.</summary>
+        <value>Ein <see cref="T:System.IdentityModel.Tokens.SecurityToken" />, das das Token für die Einbindung darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WrappingTokenReference">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityKeyIdentifier WrappingTokenReference { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SecurityKeyIdentifier WrappingTokenReference" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.WrappedKeySecurityToken.WrappingTokenReference" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKeyIdentifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Verweis auf den Token für die Einbindung ab.</summary>
+        <value>Ein <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifier" />, der einen Verweis auf das Token für die Einbindung darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

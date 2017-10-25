@@ -1,0 +1,57 @@
+<Type Name="DetailsViewPagerRow" FullName="System.Web.UI.WebControls.DetailsViewPagerRow">
+  <TypeSignature Language="C#" Value="public class DetailsViewPagerRow : System.Web.UI.WebControls.DetailsViewRow" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DetailsViewPagerRow extends System.Web.UI.WebControls.DetailsViewRow implements class System.Web.UI.INamingContainer" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DetailsViewPagerRow" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.DetailsViewRow</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Pagerzeile in einem <see cref="T:System.Web.UI.WebControls.DetailsView" />-Steuerelement dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz von der <xref:System.Web.UI.WebControls.DetailsViewPagerRow> wird erstellt, um die Pager-Steuerelemente in einem <xref:System.Web.UI.WebControls.DetailsView> Steuerelement. Die <xref:System.Web.UI.INamingContainer> -Schnittstelle ist ein Marker, der angibt, die <xref:System.Web.UI.WebControls.DetailsViewPagerRow> ist Teil von der <xref:System.Web.UI.Page> Hierarchie des Objekts.  
+  
+ Diese Klasse wird hauptsächlich von Steuerelemententwicklern verwendet. Entwickler von Steuerelementen können außer Kraft setzen der <xref:System.Web.UI.WebControls.DetailsViewPagerRow.%23ctor%2A> Konstruktor und die <xref:System.Web.UI.WebControls.DetailsView.CreateRow%2A> und <xref:System.Web.UI.WebControls.DetailsView.InitializePager%2A> Methoden der <xref:System.Web.UI.WebControls.DetailsView> Klasse zum Erstellen einer benutzerdefinierten Pagerzeile.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DetailsViewPagerRow (int rowIndex, System.Web.UI.WebControls.DataControlRowType rowType, System.Web.UI.WebControls.DataControlRowState rowState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 rowIndex, valuetype System.Web.UI.WebControls.DataControlRowType rowType, valuetype System.Web.UI.WebControls.DataControlRowState rowState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DetailsViewPagerRow.#ctor(System.Int32,System.Web.UI.WebControls.DataControlRowType,System.Web.UI.WebControls.DataControlRowState)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rowIndex" Type="System.Int32" />
+        <Parameter Name="rowType" Type="System.Web.UI.WebControls.DataControlRowType" />
+        <Parameter Name="rowState" Type="System.Web.UI.WebControls.DataControlRowState" />
+      </Parameters>
+      <Docs>
+        <param name="rowIndex">Der Index der Zeile in der <see cref="P:System.Web.UI.WebControls.DetailsView.Rows" /> Auflistung von der <see cref="T:System.Web.UI.WebControls.DetailsView" /> Steuerelement.</param>
+        <param name="rowType">Einer der <see cref="T:System.Web.UI.WebControls.DataControlRowType" />-Enumerationswerte.</param>
+        <param name="rowState">Einer der <see cref="T:System.Web.UI.WebControls.DataControlRowState" />-Enumerationswerte.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.DetailsViewPagerRow" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DetailsViewPagerRow.%23ctor%2A> Konstruktor ruft den Basisklassenkonstruktor <xref:System.Web.UI.WebControls.DetailsViewRow.%23ctor%2A>, mit den angegebenen Parametern. Für eine <xref:System.Web.UI.WebControls.DetailsViewPagerRow> -Steuerelement in einem <xref:System.Web.UI.WebControls.DetailsView> -Steuerelement, erfolgt der Aufruf mit `rowIndex` gleich-1, `rowType` gleich <xref:System.Web.UI.WebControls.DataControlRowType.Pager>, und `rowState` gleich <xref:System.Web.UI.WebControls.DataControlRowState.Normal>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

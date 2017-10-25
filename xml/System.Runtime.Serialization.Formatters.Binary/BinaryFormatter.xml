@@ -1,0 +1,735 @@
+<Type Name="BinaryFormatter" FullName="System.Runtime.Serialization.Formatters.Binary.BinaryFormatter">
+  <TypeSignature Language="C#" Value="public sealed class BinaryFormatter : System.Runtime.Remoting.Messaging.IRemotingFormatter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit BinaryFormatter extends System.Object implements class System.Runtime.Remoting.Messaging.IRemotingFormatter, class System.Runtime.Serialization.IFormatter" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Messaging.IRemotingFormatter</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Serialisiert und deserialisiert ein Objekt oder ein ganzes Diagramm verbundener Objekte im binären Format.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> und <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Klassen implementieren die <xref:System.Runtime.Remoting.Messaging.IRemotingFormatter> -Schnittstelle zur Unterstützung von Remoteprozeduraufrufen (RPCs), und die <xref:System.Runtime.Serialization.IFormatter> Schnittstelle (geerbt von der <xref:System.Runtime.Remoting.Messaging.IRemotingFormatter>) zur Unterstützung der Serialisierung eines Diagramms von Objekten. Die <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> -Klasse unterstützt auch RPCs mit <xref:System.Runtime.Serialization.Formatters.ISoapMessage> Objekte, ohne die <xref:System.Runtime.Remoting.Messaging.IRemotingFormatter> Funktionalität.  
+  
+ Bei RPCs die <xref:System.Runtime.Remoting.Messaging.IRemotingFormatter> Schnittstelle ermöglicht die Angabe von zwei separaten Objektdiagrammen: das Diagramm von zu serialisierenden Objekten sowie ein weiteres Diagramm, das ein Array von Headerobjekten enthält, die Informationen zu den remote-Funktionsaufruf (für vermitteln b. Transaktions-ID oder Signatur einer Methode).  
+  
+ RPCs, mit denen die <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> in zwei Teile: Methodenaufrufe, die mit dem remote-Objekt an den Server, die die aufgerufene Methode enthält gesendet werden, und die Methodenantworten, die vom Server, an den Client mit dem Status gesendet werden und die Antwort Informationen über die aufgerufene Methode.  
+  
+ Während der Serialisierung eines Methodenaufrufs muss das erste Objekt des Objektdiagramms unterstützen die <xref:System.Runtime.Remoting.Messaging.IMethodCallMessage> Schnittstelle. Um einen Methodenaufruf zu deserialisieren, verwenden die <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A> Methode mit dem <xref:System.Runtime.Remoting.Messaging.HeaderHandler> Parameter. Infrastruktur für den Remotezugriff verwendet die <xref:System.Runtime.Remoting.Messaging.HeaderHandler> Delegaten, der auf ein Objekt zu erstellen, die unterstützt die <xref:System.Runtime.Serialization.ISerializable> Schnittstelle. Wenn die <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Ruft die <xref:System.Runtime.Remoting.Messaging.HeaderHandler> Delegaten, gibt er den URI des Remoteobjekts mit der Methode, die aufgerufen wird. Das erste Objekt im Diagramm zurückgegeben unterstützt die <xref:System.Runtime.Remoting.Messaging.IMethodCallMessage> Schnittstelle.  
+  
+ Die Serialisierung-Prozedur für eine Methodenantwort ist identisch mit dem Aufruf einer Methode, außer das erste Objekt des Objekts muss Graph unterstützt die <xref:System.Runtime.Remoting.Messaging.IMethodReturnMessage> Schnittstelle. Verwenden Sie eine Methodenantwort zu deserialisieren, der <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.DeserializeMethodResponse%2A> Methode. Um Zeit zu sparen, werden die Details zum Objekt Aufrufer nicht auf das Remoteobjekt während des Methodenaufrufs gesendet. Diese Details werden stattdessen vom ursprünglichen Aufruf Methode, die übergeben werden abgerufen der <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.DeserializeMethodResponse%2A> Methode in der <xref:System.Runtime.Remoting.Messaging.IMethodCallMessage> Parameter. Das erste Objekt in das Diagramm zurückgegebenes der <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.DeserializeMethodResponse%2A> -Methode unterstützt die <xref:System.Runtime.Remoting.Messaging.IMethodReturnMessage> Schnittstelle.  
+  
+> [!IMPORTANT]
+>  Mit binärer Serialisierung, Deserialisierung nicht vertrauenswürdige Daten kann zu Sicherheitsrisiken führen. Weitere Informationen finden Sie unter [Sicherheitsrisiken für nicht vertrauenswürdige Daten](http://go.microsoft.com/fwlink/?LinkId=330378).  
+  
+## <a name="unpaired-surrogates"></a>Ungepaarte Ersatzzeichen  
+ Alle ungepaarten Ersatzzeichen in binäre Serialisierung verloren gehen. Deutet, enthält die folgende Zeichenfolge ein hohes Ersatzzeichen Unicode-Zeichen `(\ud800`) zwischen den beiden `Test` Wörter:  
+  
+ `Test\ud800Test`  
+  
+ Vor der Serialisierung ist das Bytearray der Zeichenfolge wie folgt:  
+  
+|Bytearraywert|Zeichen|  
+|----------------------|---------------|  
+|84|T|  
+|101|e|  
+|115|s|  
+|116|t|  
+|55296|\ud800|  
+|84|T|  
+|101|e|  
+|115|s|  
+|116|t|  
+  
+ Nach der Deserialisierung ist das hohe Ersatzzeichen Unicode-Zeichen verloren:  
+  
+|Bytearraywert|Zeichen|  
+|----------------------|---------------|  
+|84|T|  
+|101|e|  
+|115|s|  
+|116|t|  
+|84|T|  
+|101|e|  
+|115|s|  
+|116|t|  
+  
+   
+  
+## Examples  
+ [!code-cpp[BinaryFormatterClass Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/BinaryFormatterClass Example/CPP/binaryformatter.cpp#1)]
+ [!code-csharp[BinaryFormatterClass Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/BinaryFormatterClass Example/CS/binaryformatter.cs#1)]
+ [!code-vb[BinaryFormatterClass Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/BinaryFormatterClass Example/VB/binaryformatter.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BinaryFormatter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter" />-Klasse mit Standardwerten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor legt die Eigenschaften der <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Objekt wie folgt:  
+  
+|Eigenschaftentyp|Bedingung|  
+|-------------------|---------------|  
+|<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.SurrogateSelector%2A>|`null`|  
+|<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Context%2A>|Ein <xref:System.Runtime.Serialization.StreamingContext> mit einem Wert, der angibt, dass die serialisierte Daten übertragen oder von einem beliebigen anderen Kontexte empfangen werden können. (<xref:System.Runtime.Serialization.StreamingContextStates?displayProperty=nameWithType>)|  
+  
+   
+  
+## Examples  
+ [!code-cpp[BinaryFormatterClass Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/BinaryFormatterClass Example/CPP/binaryformatter.cpp#1)]
+ [!code-csharp[BinaryFormatterClass Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/BinaryFormatterClass Example/CS/binaryformatter.cs#1)]
+ [!code-vb[BinaryFormatterClass Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/BinaryFormatterClass Example/VB/binaryformatter.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BinaryFormatter (System.Runtime.Serialization.ISurrogateSelector selector, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.ISurrogateSelector selector, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.#ctor(System.Runtime.Serialization.ISurrogateSelector,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="selector" Type="System.Runtime.Serialization.ISurrogateSelector" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="selector">Der zu verwendende <see cref="T:System.Runtime.Serialization.ISurrogateSelector" />. Kann <see langword="null" />.</param>
+        <param name="context">Die Quelle und Ziel für den serialisierten Daten.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter" /> -Klasse mit einer angegebenen Ersatzselektor und Streamingkontext.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Initialisiert eine neue `BinaryFormatter` für die Serialisierung oder Deserialisierung von Objekten aus dem angegebenen <xref:System.IO.Stream>.  
+  
+ Die Serialisierung oder Deserialisierung verwendet den angegebenen <xref:System.Runtime.Serialization.ISurrogateSelector> für die Suche nach Ersatzzeichen, die registriert sind, für die Objekttypen deserialisiert werden soll. Ersatzzeichen sind beim Serialisieren und Deserialisieren von Objekten bestimmter Klassen. Die Standardeinstellung <xref:System.Runtime.Serialization.ISurrogateSelector> kann nicht verarbeitet die Serialisierung von Objekten, die Ableitung der <xref:System.MarshalByRefObject> Remoting Zwecken. In einer angegebenen Remoting-Situation <xref:System.Runtime.Serialization.ISurrogateSelector> ersetzt das Objekt abgeleitet wurde. <xref:System.MarshalByRefObject> mit einem <xref:System.Runtime.Remoting.ObjRef> -Objekt, das durch den angegebenen Ersatzselektor serialisiert wird. Legen Sie daher, wenn Sie Remoteobjekte verwenden möchten, die `selector` Parameter mit einer Instanz von <xref:System.Runtime.Remoting.Messaging.RemotingSurrogateSelector>. Wenn Sie keine Surrogate benötigen, legen Sie die `selector` Parameter `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyFormat">
+      <MemberSignature Language="C#" Value="public System.Runtime.Serialization.Formatters.FormatterAssemblyStyle AssemblyFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.Serialization.Formatters.FormatterAssemblyStyle AssemblyFormat" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.AssemblyFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.Formatters.FormatterAssemblyStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Verhalten von das Deserialisierungsprogramm im Hinblick auf das Suchen und Laden von Assemblys fest.</summary>
+        <value>Eines der <see cref="T:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle" /> Werte, die das Deserialisierungsprogramm Verhalten angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Binder">
+      <MemberSignature Language="C#" Value="public System.Runtime.Serialization.SerializationBinder Binder { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Serialization.SerializationBinder Binder" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Binder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.SerializationBinder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Objekt des Typs <see cref="T:System.Runtime.Serialization.SerializationBinder" /> , steuert die Bindung eines serialisierten Objekts an einen Typ.</summary>
+        <value>Die Serialisierungsbinder für die Verwendung mit diesem Formatierer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[SerializationBinder Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SerializationBinder Example/CPP/serializationbinder.cpp#1)]
+ [!code-csharp[SerializationBinder Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SerializationBinder Example/CS/serializationbinder.cs#1)]
+ [!code-vb[SerializationBinder Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SerializationBinder Example/VB/serializationbinder.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public System.Runtime.Serialization.StreamingContext Context { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.Serialization.StreamingContext Context" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.StreamingContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Runtime.Serialization.StreamingContext" /> für diesen Formatierer.</summary>
+        <value>Der Streamingkontext für die Verwendung mit diesem Formatierer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Serialization.StreamingContext> stellt eine Enumeration, beschreibt die Quelle und das Ziel eines angegebenen serialisierten Streams sowie eine Möglichkeit für die Serialisierung dieser Kontext und einen zusätzlichen aufruferdefinierten Kontext beizubehalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Deserialize">
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Deserialisiert einen Datenstrom in einem Objektdiagramm.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Beim Aufrufen dieser Methode mit nicht vertrauenswürdigen Daten stellt ein Sicherheitsrisiko dar. Rufen Sie diese Methode nur mit vertrauenswürdigen Daten. Weitere Informationen finden Sie unter [Sicherheitsrisiken für nicht vertrauenswürdige Daten](http://go.microsoft.com/fwlink/?LinkId=330378).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Deserialize">
+      <MemberSignature Language="C#" Value="public object Deserialize (System.IO.Stream serializationStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Deserialize(class System.IO.Stream serializationStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationStream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="serializationStream">Der Stream, aus dem Objektdiagramm deserialisiert werden soll.</param>
+        <summary>Deserialisiert den angegebenen Stream in einem Objektdiagramm.</summary>
+        <returns>Am Anfang (Stamm) Objektdiagramm enthalten sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für eine erfolgreiche Deserialisierung muss die aktuelle Position im Stream am Anfang des Objektdiagramms sein.  
+  
+> [!IMPORTANT]
+>  Beim Aufrufen dieser Methode mit nicht vertrauenswürdigen Daten stellt ein Sicherheitsrisiko dar. Rufen Sie diese Methode nur mit vertrauenswürdigen Daten. Weitere Informationen finden Sie unter [Sicherheitsrisiken für nicht vertrauenswürdige Daten](http://go.microsoft.com/fwlink/?LinkId=330378).  
+  
+   
+  
+## Examples  
+ [!code-cpp[BinaryFormatterClass Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/BinaryFormatterClass Example/CPP/binaryformatter.cpp#1)]
+ [!code-csharp[BinaryFormatterClass Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/BinaryFormatterClass Example/CS/binaryformatter.cs#1)]
+ [!code-vb[BinaryFormatterClass Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/BinaryFormatterClass Example/VB/binaryformatter.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="serializationStream" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Die <paramref name="serializationStream" /> Suchvorgänge unterstützt, aber seine Länge ist 0.  
+  
+ - oder -   
+  
+ Der Zieltyp ist eine <see cref="T:System.Decimal" />, aber der Wert liegt außerhalb des Bereichs von der <see cref="T:System.Decimal" /> Typ.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Zum Bereitstellen von Serialisierungsdiensten. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Deserialize">
+      <MemberSignature Language="C#" Value="public object Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Deserialize(class System.IO.Stream serializationStream, class System.Runtime.Remoting.Messaging.HeaderHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(System.IO.Stream,System.Runtime.Remoting.Messaging.HeaderHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationStream" Type="System.IO.Stream" />
+        <Parameter Name="handler" Type="System.Runtime.Remoting.Messaging.HeaderHandler" />
+      </Parameters>
+      <Docs>
+        <param name="serializationStream">Der Stream, aus dem Objektdiagramm deserialisiert werden soll.</param>
+        <param name="handler">Die <see cref="T:System.Runtime.Remoting.Messaging.HeaderHandler" /> , verarbeitet alle Header in der <c>SerializationStream</c>. Kann <see langword="null" />.</param>
+        <summary>Deserialisiert den angegebenen Stream in einem Objektdiagramm. Der bereitgestellte <see cref="T:System.Runtime.Remoting.Messaging.HeaderHandler" /> behandelt alle Header in diesem Datenstrom.</summary>
+        <returns>Das deserialisierte Objekt oder das oberste Objekt (Stamm) des Objektdiagramms.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Header werden nur für bestimmte Remoteanwendungen verwendet.  
+  
+ In der Reihenfolge für die Deserialisierung erfolgreich muss die aktuelle Position im Stream am Anfang des Objektdiagramms sein.  
+  
+> [!IMPORTANT]
+>  Beim Aufrufen dieser Methode mit nicht vertrauenswürdigen Daten stellt ein Sicherheitsrisiko dar. Rufen Sie diese Methode nur mit vertrauenswürdigen Daten. Weitere Informationen finden Sie unter [Sicherheitsrisiken für nicht vertrauenswürdige Daten](http://go.microsoft.com/fwlink/?LinkId=330378).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="serializationStream" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Die <paramref name="serializationStream" /> Suchvorgänge unterstützt, aber seine Länge ist 0.  
+  
+ - oder -   
+  
+ Der Zieltyp ist eine <see cref="T:System.Decimal" />, aber der Wert liegt außerhalb des Bereichs von der <see cref="T:System.Decimal" /> Typ.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Zum Bereitstellen von Serialisierungsdiensten. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DeserializeMethodResponse">
+      <MemberSignature Language="C#" Value="public object DeserializeMethodResponse (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object DeserializeMethodResponse(class System.IO.Stream serializationStream, class System.Runtime.Remoting.Messaging.HeaderHandler handler, class System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.DeserializeMethodResponse(System.IO.Stream,System.Runtime.Remoting.Messaging.HeaderHandler,System.Runtime.Remoting.Messaging.IMethodCallMessage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationStream" Type="System.IO.Stream" />
+        <Parameter Name="handler" Type="System.Runtime.Remoting.Messaging.HeaderHandler" />
+        <Parameter Name="methodCallMessage" Type="System.Runtime.Remoting.Messaging.IMethodCallMessage" />
+      </Parameters>
+      <Docs>
+        <param name="serializationStream">Der Stream, aus dem Objektdiagramm deserialisiert werden soll.</param>
+        <param name="handler">Die <see cref="T:System.Runtime.Remoting.Messaging.HeaderHandler" /> , verarbeitet alle Header in der <c>SerializationStream</c>. Kann <see langword="null" />.</param>
+        <param name="methodCallMessage">Die <see cref="T:System.Runtime.Remoting.Messaging.IMethodCallMessage" /> enthält Details zu, in dem der Aufruf stammt.</param>
+        <summary>Deserialisiert eine Antwort auf einen Remotemethodenaufruf aus dem bereitgestellten <see cref="T:System.IO.Stream" />.</summary>
+        <returns>Die deserialisierte Antwort an den remote-Methodenaufruf.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Details zum Objekt Aufrufer werden während des Methodenaufrufs nicht auf das Remoteobjekt gesendet. Stattdessen werden diese Details aus der ursprünglichen Methodenaufruf, der in der aktuellen Methode übergeben wird abgerufen der `methodCallMessage` Parameter.  
+  
+ In der Reihenfolge für die Deserialisierung erfolgreich muss die aktuelle Position im Stream am Anfang des Objektdiagramms sein.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="serializationStream" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Die <paramref name="serializationStream" /> Suchvorgänge unterstützt, aber seine Länge ist 0.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Zum Bereitstellen von Serialisierungsdiensten. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="FilterLevel">
+      <MemberSignature Language="C#" Value="public System.Runtime.Serialization.Formatters.TypeFilterLevel FilterLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.Serialization.Formatters.TypeFilterLevel FilterLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.FilterLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.Formatters.TypeFilterLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Runtime.Serialization.Formatters.TypeFilterLevel" /> der automatischen Deserialisierung der <see cref="T:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter" /> führt.</summary>
+        <value>Die <see cref="T:System.Runtime.Serialization.Formatters.TypeFilterLevel" /> , die die aktuelle Ebene der automatischen Deserialisierung darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Unterstützte Werte sind <xref:System.Runtime.Serialization.Formatters.TypeFilterLevel.Low> und <xref:System.Runtime.Serialization.Formatters.TypeFilterLevel.Full> (Standard). Einzelheiten zur Deserialisierungsebenen finden Sie unter [&#91;\< Topic://cpconAutomaticDeserializationInNETRemoting > &#93; ](http://msdn.microsoft.com/en-us/313a0e88-5b2b-4a17-8391-0ddf9f7a787b).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public void Serialize (System.IO.Stream serializationStream, object graph);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Serialize(class System.IO.Stream serializationStream, object graph) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(System.IO.Stream,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationStream" Type="System.IO.Stream" />
+        <Parameter Name="graph" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="serializationStream">Der Datenstrom, für die das Diagramm wird serialisiert werden.</param>
+        <param name="graph">Das Objekt im Stammverzeichnis des Diagramms zu serialisieren.</param>
+        <summary>Serialisiert das Objekt oder Objektdiagramm mit dem angegebenen Anfang (Stamm) in den angegebenen Stream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[BinaryFormatterClass Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/BinaryFormatterClass Example/CPP/binaryformatter.cpp#1)]
+ [!code-csharp[BinaryFormatterClass Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/BinaryFormatterClass Example/CS/binaryformatter.cs#1)]
+ [!code-vb[BinaryFormatterClass Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/BinaryFormatterClass Example/VB/binaryformatter.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="serializationStream" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Die <paramref name="graph" /> ist null.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Fehler während der Serialisierung, z. B. wenn ein Objekt in der <paramref name="graph" /> Parameter nicht als serialisierbar markiert ist.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Zum Bereitstellen von Serialisierungsdiensten. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public void Serialize (System.IO.Stream serializationStream, object graph, System.Runtime.Remoting.Messaging.Header[] headers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Serialize(class System.IO.Stream serializationStream, object graph, class System.Runtime.Remoting.Messaging.Header[] headers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(System.IO.Stream,System.Object,System.Runtime.Remoting.Messaging.Header[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationStream" Type="System.IO.Stream" />
+        <Parameter Name="graph" Type="System.Object" />
+        <Parameter Name="headers" Type="System.Runtime.Remoting.Messaging.Header[]" />
+      </Parameters>
+      <Docs>
+        <param name="serializationStream">Der Stream, zu dem das Objekt serialisiert werden.</param>
+        <param name="graph">Das Objekt im Stammverzeichnis des Diagramms zu serialisieren.</param>
+        <param name="headers">Remoting-Header in die Serialisierung eingeschlossen werden sollen. Kann <see langword="null" />.</param>
+        <summary>Serialisiert das Objekt oder Objektdiagramm mit dem angegebenen Anfang (Stamm) in den angegebenen Stream, der den angegebenen Header anfügen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Serialisierungsprozess enthält die Informationen in den `headers` Parameter am Anfang des serialisierten Streams.  
+  
+ Header werden nur für bestimmte Remoteanwendungen verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="serializationStream" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Fehler während der Serialisierung, z. B. wenn ein Objekt in der <paramref name="graph" /> Parameter nicht als serialisierbar markiert ist.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Zum Bereitstellen von Serialisierungsdiensten. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SurrogateSelector">
+      <MemberSignature Language="C#" Value="public System.Runtime.Serialization.ISurrogateSelector SurrogateSelector { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Serialization.ISurrogateSelector SurrogateSelector" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.SurrogateSelector" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.ISurrogateSelector</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine <see cref="T:System.Runtime.Serialization.ISurrogateSelector" /> , Steuerelemente während der Serialisierung und Deserialisierung Ersetzung eingeben.</summary>
+        <value>Den Ersatzselektor für die Verwendung mit diesem Formatierer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Ersatzselektor werden vom <xref:System.Runtime.Remoting> generieren <xref:System.Runtime.Remoting.ObjRef> Instanzen für Objekte, die davon Herleiten <xref:System.MarshalByRefObject>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeFormat">
+      <MemberSignature Language="C#" Value="public System.Runtime.Serialization.Formatters.FormatterTypeStyle TypeFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.Serialization.Formatters.FormatterTypeStyle TypeFormat" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.TypeFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.Formatters.FormatterTypeStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Format, in dem Typ Beschreibungen in einem serialisierten Datenstrom angelegt werden.</summary>
+        <value>Die Art des Typs Layouts verwenden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnsafeDeserialize">
+      <MemberSignature Language="C#" Value="public object UnsafeDeserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object UnsafeDeserialize(class System.IO.Stream serializationStream, class System.Runtime.Remoting.Messaging.HeaderHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.UnsafeDeserialize(System.IO.Stream,System.Runtime.Remoting.Messaging.HeaderHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationStream" Type="System.IO.Stream" />
+        <Parameter Name="handler" Type="System.Runtime.Remoting.Messaging.HeaderHandler" />
+      </Parameters>
+      <Docs>
+        <param name="serializationStream">Der Stream, aus dem Objektdiagramm deserialisiert werden soll.</param>
+        <param name="handler">Die <see cref="T:System.Runtime.Remoting.Messaging.HeaderHandler" /> , verarbeitet alle Header in der <c>SerializationStream</c>. Kann <see langword="null" />.</param>
+        <summary>Deserialisiert den angegebenen Stream in einem Objektdiagramm. Der bereitgestellte <see cref="T:System.Runtime.Remoting.Messaging.HeaderHandler" /> behandelt alle Header in diesem Datenstrom.</summary>
+        <returns>Das deserialisierte Objekt oder das oberste Objekt (Stamm) des Objektdiagramms.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Header werden nur für bestimmte Remoteanwendungen verwendet.  
+  
+ Diese Methode verwendet <xref:System.Security.Permissions.SecurityAction?displayProperty=nameWithType> aufgerufen aus nicht vertrauenswürdigen Code verhindert wird; nur der unmittelbaren Aufrufer muss über, <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType> Berechtigung. Verwenden Sie diese Methode nicht, wenn der Code aus teilweise vertrauenswürdigem Code aufgerufen werden kann. In teilweise vertrauenswürdigen Szenarien verwenden <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A> stattdessen. In Szenarios mit voller Vertrauenswürdigkeit <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.UnsafeDeserialize%2A> bietet eine bessere Leistung als <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A>.  
+  
+ Für eine erfolgreiche Deserialisierung muss die aktuelle Position im Stream am Anfang des Objektdiagramms sein.  
+  
+> [!IMPORTANT]
+>  Beim Aufrufen dieser Methode mit nicht vertrauenswürdigen Daten stellt ein Sicherheitsrisiko dar. Rufen Sie diese Methode nur mit vertrauenswürdigen Daten. Weitere Informationen finden Sie unter [Sicherheitsrisiken für nicht vertrauenswürdige Daten](http://go.microsoft.com/fwlink/?LinkId=330378).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="serializationStream" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Die <paramref name="serializationStream" /> Suchvorgänge unterstützt, aber seine Länge ist 0.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Zum Bereitstellen von Serialisierungsdiensten. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="UnsafeDeserializeMethodResponse">
+      <MemberSignature Language="C#" Value="public object UnsafeDeserializeMethodResponse (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object UnsafeDeserializeMethodResponse(class System.IO.Stream serializationStream, class System.Runtime.Remoting.Messaging.HeaderHandler handler, class System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.UnsafeDeserializeMethodResponse(System.IO.Stream,System.Runtime.Remoting.Messaging.HeaderHandler,System.Runtime.Remoting.Messaging.IMethodCallMessage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationStream" Type="System.IO.Stream" />
+        <Parameter Name="handler" Type="System.Runtime.Remoting.Messaging.HeaderHandler" />
+        <Parameter Name="methodCallMessage" Type="System.Runtime.Remoting.Messaging.IMethodCallMessage" />
+      </Parameters>
+      <Docs>
+        <param name="serializationStream">Der Stream, aus dem Objektdiagramm deserialisiert werden soll.</param>
+        <param name="handler">Die <see cref="T:System.Runtime.Remoting.Messaging.HeaderHandler" /> , verarbeitet alle Header in der <c>SerializationStream</c>. Kann <see langword="null" />.</param>
+        <param name="methodCallMessage">Die <see cref="T:System.Runtime.Remoting.Messaging.IMethodCallMessage" /> enthält Details zu, in dem der Aufruf stammt.</param>
+        <summary>Deserialisiert eine Antwort auf einen Remotemethodenaufruf aus dem bereitgestellten <see cref="T:System.IO.Stream" />.</summary>
+        <returns>Die deserialisierte Antwort an den remote-Methodenaufruf.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Details zum Objekt Aufrufer werden während des Methodenaufrufs nicht auf das Remoteobjekt gesendet. Stattdessen werden diese Details aus der ursprünglichen Methodenaufruf, der in der aktuellen Methode übergeben wird abgerufen der `methodCallMessage` Parameter.  
+  
+ Diese Methode verwendet <xref:System.Security.Permissions.SecurityAction?displayProperty=nameWithType> aufgerufen aus nicht vertrauenswürdigen Code verhindert wird; nur der unmittelbaren Aufrufer muss über, <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType> Berechtigung. Verwenden Sie diese Methode nicht, wenn der Code aus teilweise vertrauenswürdigem Code aufgerufen werden kann. In teilweise vertrauenswürdigen Szenarien verwenden <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.DeserializeMethodResponse%2A> stattdessen. In Szenarios mit voller Vertrauenswürdigkeit <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.UnsafeDeserializeMethodResponse%2A> bietet eine bessere Leistung als <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.DeserializeMethodResponse%2A>.  
+  
+ Für eine erfolgreiche Deserialisierung muss die aktuelle Position im Stream am Anfang des Objektdiagramms sein.  
+  
+> [!IMPORTANT]
+>  Beim Aufrufen dieser Methode mit nicht vertrauenswürdigen Daten stellt ein Sicherheitsrisiko dar. Rufen Sie diese Methode nur mit vertrauenswürdigen Daten. Weitere Informationen finden Sie unter [Sicherheitsrisiken für nicht vertrauenswürdige Daten](http://go.microsoft.com/fwlink/?LinkId=330378).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="serializationStream" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Die <paramref name="serializationStream" /> Suchvorgänge unterstützt, aber seine Länge ist 0.</exception>
+        <exception cref="T:System.Security.SecurityException">Der Aufrufer verfügt nicht über die erforderliche Berechtigung.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Zum Bereitstellen von Serialisierungsdiensten. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" />.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

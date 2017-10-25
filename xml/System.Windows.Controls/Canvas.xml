@@ -1,0 +1,408 @@
+<Type Name="Canvas" FullName="System.Windows.Controls.Canvas">
+  <TypeSignature Language="C#" Value="public class Canvas : System.Windows.Controls.Panel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi Canvas extends System.Windows.Controls.Panel" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Canvas" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Panel</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert einen Bereich, in dem Sie mithilfe von Koordinaten, die relativ zum <see cref="T:System.Windows.Controls.Canvas" />-Bereich sind, explizit untergeordnete Elemente positionieren können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Controls.Canvas> enthält eine Auflistung von <xref:System.Windows.UIElement> Objekte, die in der <xref:System.Windows.Controls.Panel.Children%2A> Eigenschaft.  
+  
+ <xref:System.Windows.Controls.Canvas>ist der einzige Bereichselement, das keine inhärenten Layouteigenschaften verfügt. Ein <xref:System.Windows.Controls.Canvas> hat Standardwert <xref:System.Windows.FrameworkElement.Height%2A> und <xref:System.Windows.FrameworkElement.Width%2A> Eigenschaften von 0 (null), wenn sie das untergeordnete Element eines Elements ist, das automatisch Größen der untergeordneten Elemente. Untergeordnete Elemente von einer <xref:System.Windows.Controls.Canvas> werden nie geändert wird, sie werden lediglich positioniert an ihre angegebenen Koordinaten. Dies bietet Flexibilität für Situationen, in dem inhärenten Sizing Einschränkungen oder die Ausrichtung sind nicht erforderlich oder gewünscht ist. Für Fälle, in der untergeordneter Inhalt automatisch angepasst und ausgerichtet werden sollen, in der Regel am besten geeignet, wird eine <xref:System.Windows.Controls.Grid> Element.  
+  
+ Die <xref:System.Windows.Controls.Panel.ZIndex%2A> -Eigenschaft bestimmt die Reihenfolge, in der untergeordneten Elemente, die demselben Koordinatenbereich angezeigt werden. Eine höhere <xref:System.Windows.Controls.Panel.ZIndex%2A> Wert für ein untergeordnetes Element gibt an, dass dieses Element über ein untergeordnetes Element angezeigt wird, die einen niedrigeren Wert aufweist.  
+  
+ Wenn Sie diese, angefügten Eigenschaften festlegen, <xref:System.Windows.Controls.Canvas.Top%2A?displayProperty=nameWithType> oder <xref:System.Windows.Controls.Canvas.Left%2A?displayProperty=nameWithType> haben Vorrang vor den <xref:System.Windows.Controls.Canvas.Bottom%2A?displayProperty=nameWithType> oder <xref:System.Windows.Controls.Canvas.Right%2A?displayProperty=nameWithType> Eigenschaften.  
+  
+ Untergeordnete Elemente von einem <xref:System.Windows.Controls.Canvas> erhalten immer die vollständige Größe, die sie erhalten möchten. Folglich vertikale Ausrichtung und die horizontale Ausrichtung wirken sich nicht innerhalb einer <xref:System.Windows.Controls.Canvas>.  
+  
+ <xref:System.Windows.Controls.Canvas>ist ein auf oberster Ebene Layoutsteuerelement, die Sie für die absolute Positionierung des untergeordneten Inhalts verwenden können. Für Zeichen- und zeichnen Sie Pinsel verwenden und müssen keine verwenden eine <xref:System.Windows.Controls.Canvas>. Weitere Informationen finden Sie unter [Zeichnen mit Volltonfarben und Farbverläufen (Übersicht)](~/docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md).  
+  
+ Standardmäßig werden Bereichselemente nicht den Fokus erhalten. Um benutzerbestätigung durch ein Bereichselement den Fokus erhalten, legen Sie die <xref:System.Windows.UIElement.Focusable%2A> Eigenschaft `true`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel führt drei <xref:System.Windows.Shapes.Rectangle> Elemente, die jedes Element 100 Pixel. Die erste <xref:System.Windows.Shapes.Rectangle> ist rot, und die obere linke (*X, y*) als Position angegeben ist (0, 0). Die zweite <xref:System.Windows.Shapes.Rectangle> ist Grün, und die linke obere Position ist (100, 100), d. h. direkt unter und rechts neben dem ersten Quadrat. Das dritte <xref:System.Windows.Shapes.Rectangle> ist Blau, und die linke obere Position ist (50, 50). Daher das dritte <xref:System.Windows.Shapes.Rectangle> deckt der Quadrant "rechts" des ersten <xref:System.Windows.Shapes.Rectangle> und der Quadrant "oben links" des zweiten. Da die dritte <xref:System.Windows.Shapes.Rectangle> angeordnet letzten, werden zusätzlich zu den beiden anderen Rechtecken offenbar – überdeckt angenommen, also die Farbe des dritten <xref:System.Windows.Shapes.Rectangle>.  
+  
+ [!code-csharp[CanvasOvwSample#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CanvasOvwSample/CSharp/Canvas_Ovw_Sample.cs#1)]
+ [!code-vb[CanvasOvwSample#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CanvasOvwSample/VisualBasic/canvas_vb.vb#1)]
+ [!code-xaml[CanvasOvwSample#1](~/samples/snippets/xaml/VS_Snippets_Wpf/CanvasOvwSample/XAML/default.xaml#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Canvas ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Canvas.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.Canvas" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrangeOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size ArrangeOverride (System.Windows.Size arrangeSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size ArrangeOverride(valuetype System.Windows.Size arrangeSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Canvas.ArrangeOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arrangeSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="arrangeSize">Die Größe, die von diesem <see cref="T:System.Windows.Controls.Canvas" /> Element sollte verwenden, um die untergeordneten Elemente anzuordnen.</param>
+        <summary>Ordnet den Inhalt einer <see cref="T:System.Windows.Controls.Canvas" /> Element.</summary>
+        <returns>Ein <see cref="T:System.Windows.Size" /> , die die angeordnete Größe dieses darstellt <see cref="T:System.Windows.Controls.Canvas" /> Element und seine Nachfolger.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BottomProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BottomProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BottomProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Canvas.BottomProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Controls.Canvas.Bottom" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBottom">
+      <MemberSignature Language="C#" Value="public static double GetBottom (System.Windows.UIElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 GetBottom(class System.Windows.UIElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Canvas.GetBottom(System.Windows.UIElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Windows.LengthConverter, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, Custom=null")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForChildren</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, aus dem der Eigenschaftswert gelesen wird.</param>
+        <summary>Gibt den Wert der <see cref="P:System.Windows.Controls.Canvas.Bottom" /> angefügte Eigenschaft für ein angegebenes Abhängigkeitsobjekt.</summary>
+        <returns>Die <see cref="P:System.Windows.Controls.Canvas.Bottom" /> -Koordinate des angegebenen Elements.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLayoutClip">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Media.Geometry GetLayoutClip (System.Windows.Size layoutSlotSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Media.Geometry GetLayoutClip(valuetype System.Windows.Size layoutSlotSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Canvas.GetLayoutClip(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Geometry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="layoutSlotSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="layoutSlotSize">Die verfügbare Größe des Elements.</param>
+        <summary>Gibt eine Clippinggeometrie zurück, der den Bereich angibt, die Wenn abgeschnitten werden, wird die <see cref="P:System.Windows.UIElement.ClipToBounds" /> -Eigenschaftensatz auf <see langword="true" />.</summary>
+        <returns>Ein <see cref="T:System.Windows.Media.Geometry" /> , die den Bereich, der abgeschnitten wird, wenn darstellt <see cref="P:System.Windows.UIElement.ClipToBounds" /> ist <see langword="true" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLeft">
+      <MemberSignature Language="C#" Value="public static double GetLeft (System.Windows.UIElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 GetLeft(class System.Windows.UIElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Canvas.GetLeft(System.Windows.UIElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Windows.LengthConverter, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, Custom=null")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForChildren</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, aus dem der Eigenschaftswert gelesen wird.</param>
+        <summary>Ruft den Wert der <see cref="P:System.Windows.Controls.Canvas.Left" /> angefügte Eigenschaft für ein angegebenes Abhängigkeitsobjekt.</summary>
+        <returns>Die <see cref="P:System.Windows.Controls.Canvas.Left" /> -Koordinate des angegebenen Elements.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRight">
+      <MemberSignature Language="C#" Value="public static double GetRight (System.Windows.UIElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 GetRight(class System.Windows.UIElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Canvas.GetRight(System.Windows.UIElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Windows.LengthConverter, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, Custom=null")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForChildren</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, aus dem der Eigenschaftswert gelesen wird.</param>
+        <summary>Ruft den Wert der <see cref="P:System.Windows.Controls.Canvas.Right" /> angefügte Eigenschaft für ein angegebenes Abhängigkeitsobjekt.</summary>
+        <returns>Die <see cref="P:System.Windows.Controls.Canvas.Right" /> -Koordinate des angegebenen Elements.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTop">
+      <MemberSignature Language="C#" Value="public static double GetTop (System.Windows.UIElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 GetTop(class System.Windows.UIElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Canvas.GetTop(System.Windows.UIElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Windows.LengthConverter, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, Custom=null")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForChildren</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, aus dem der Eigenschaftswert gelesen wird.</param>
+        <summary>Ruft den Wert der <see cref="P:System.Windows.Controls.Canvas.Top" /> angefügte Eigenschaft für ein angegebenes Abhängigkeitsobjekt.</summary>
+        <returns>Die <see cref="P:System.Windows.Controls.Canvas.Top" /> -Koordinate des angegebenen Elements.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LeftProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty LeftProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty LeftProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Canvas.LeftProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Controls.Canvas.Left" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size MeasureOverride (System.Windows.Size constraint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size MeasureOverride(valuetype System.Windows.Size constraint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Canvas.MeasureOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constraint" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="constraint">Eine Obergrenze <see cref="T:System.Windows.Size" /> nicht überschritten werden darf.</param>
+        <summary>Misst die untergeordneten Elemente von einem <see cref="T:System.Windows.Controls.Canvas" /> in Vorwegnahme ihrer Anordnung während der <see cref="M:System.Windows.Controls.Canvas.ArrangeOverride(System.Windows.Size)" /> übergeben.</summary>
+        <returns>Ein <see cref="T:System.Windows.Size" /> , die die Größe, die zum Anordnen des untergeordneten Inhalts erforderlich ist darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RightProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty RightProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty RightProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Canvas.RightProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Controls.Canvas.Right" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBottom">
+      <MemberSignature Language="C#" Value="public static void SetBottom (System.Windows.UIElement element, double length);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetBottom(class System.Windows.UIElement element, float64 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Canvas.SetBottom(System.Windows.UIElement,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+        <Parameter Name="length" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, in das der Wert der Eigenschaft geschrieben wird.</param>
+        <param name="length">Legt die <see cref="P:System.Windows.Controls.Canvas.Bottom" /> -Koordinate des angegebenen Elements.</param>
+        <summary>Legt den Wert für die <see cref="P:System.Windows.Controls.Canvas.Bottom" /> angefügte Eigenschaft für ein angegebenes Abhängigkeitsobjekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLeft">
+      <MemberSignature Language="C#" Value="public static void SetLeft (System.Windows.UIElement element, double length);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetLeft(class System.Windows.UIElement element, float64 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Canvas.SetLeft(System.Windows.UIElement,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+        <Parameter Name="length" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, in das der Wert der Eigenschaft geschrieben wird.</param>
+        <param name="length">Legt die <see cref="P:System.Windows.Controls.Canvas.Left" /> -Koordinate des angegebenen Elements.</param>
+        <summary>Legt den Wert für die <see cref="P:System.Windows.Controls.Canvas.Left" /> angefügte Eigenschaft für ein angegebenes Abhängigkeitsobjekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetRight">
+      <MemberSignature Language="C#" Value="public static void SetRight (System.Windows.UIElement element, double length);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetRight(class System.Windows.UIElement element, float64 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Canvas.SetRight(System.Windows.UIElement,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+        <Parameter Name="length" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, in das der Wert der Eigenschaft geschrieben wird.</param>
+        <param name="length">Legt die <see cref="P:System.Windows.Controls.Canvas.Right" /> -Koordinate des angegebenen Elements.</param>
+        <summary>Legt den Wert für die <see cref="P:System.Windows.Controls.Canvas.Right" /> angefügte Eigenschaft für ein angegebenes Abhängigkeitsobjekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetTop">
+      <MemberSignature Language="C#" Value="public static void SetTop (System.Windows.UIElement element, double length);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetTop(class System.Windows.UIElement element, float64 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Canvas.SetTop(System.Windows.UIElement,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+        <Parameter Name="length" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, in das der Wert der Eigenschaft geschrieben wird.</param>
+        <param name="length">Legt die <see cref="P:System.Windows.Controls.Canvas.Top" /> -Koordinate des angegebenen Elements.</param>
+        <summary>Legt den Wert für die <see cref="P:System.Windows.Controls.Canvas.Top" /> angefügte Eigenschaft für ein angegebenes Abhängigkeitsobjekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TopProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TopProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TopProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Canvas.TopProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Controls.Canvas.Top" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

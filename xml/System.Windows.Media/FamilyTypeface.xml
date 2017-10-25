@@ -1,0 +1,369 @@
+<Type Name="FamilyTypeface" FullName="System.Windows.Media.FamilyTypeface">
+  <TypeSignature Language="C#" Value="public class FamilyTypeface" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FamilyTypeface extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.FamilyTypeface" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt die Details für eine einzelne Schriftart unterstützt durch eine <see cref="T:System.Windows.Media.FontFamily" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es gibt so viele <xref:System.Windows.Media.FamilyTypeface> Objekte wie Schriftarten, die vom System unterstützte vorhanden sind.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FamilyTypeface ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FamilyTypeface.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.FamilyTypeface" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdjustedFaceNames">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;System.Windows.Markup.XmlLanguage,string&gt; AdjustedFaceNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;class System.Windows.Markup.XmlLanguage, string&gt; AdjustedFaceNames" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FamilyTypeface.AdjustedFaceNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Windows.Markup.XmlLanguage,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von lokalisierten Schriftartnamen durch das Unterscheidungsmerkmal Schriftart angepasst.</summary>
+        <value>Ein Array vom Typ <see cref="T:System.Collections.Generic.IDictionary`2" /> , die die lokalisierten Schriftartnamen darstellen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CapsHeight">
+      <MemberSignature Language="C#" Value="public double CapsHeight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 CapsHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FamilyTypeface.CapsHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Abstand gegenüber der Basislinie, am oberen Rand eines englischen Großbuchstabens relativ zur Geviertgröße fest.</summary>
+        <value>Ein Wert vom Typ <see cref="T:System.Double" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceFontCharacterMetrics">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.CharacterMetricsDictionary DeviceFontCharacterMetrics { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.CharacterMetricsDictionary DeviceFontCharacterMetrics" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FamilyTypeface.DeviceFontCharacterMetrics" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.CharacterMetricsDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Zeichenmetriken für eine Schriftfamilie Gerät ab.</summary>
+        <value>Ein Wert vom Typ <see cref="T:System.Windows.Media.CharacterMetricsDictionary" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceFontName">
+      <MemberSignature Language="C#" Value="public string DeviceFontName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DeviceFontName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FamilyTypeface.DeviceFontName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen oder den eindeutigen Bezeichner für ein Gerät Schriftfamilie.</summary>
+        <value>Ein Wert vom Typ <see cref="T:System.String" /> , die den Namen der Geräteschriftart darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FamilyTypeface.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Die <see cref="T:System.Object" /> -Wert, der die zu vergleichende Schriftart darstellt.</param>
+        <summary>Vergleicht zwei Schriftartfamilien Schriftart auf Gleichheit.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="typeface" /> ist nicht null und verfügt über die gleichen Eigenschaften wie diese Schriftart; anderenfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Windows.Media.FamilyTypeface typeface);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(class System.Windows.Media.FamilyTypeface typeface) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FamilyTypeface.Equals(System.Windows.Media.FamilyTypeface)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeface" Type="System.Windows.Media.FamilyTypeface" />
+      </Parameters>
+      <Docs>
+        <param name="typeface">Die <see cref="T:System.Windows.Media.FamilyTypeface" /> zu vergleichende Wert.</param>
+        <summary>Vergleicht zwei Schriftartfamilien Schriftart auf Gleichheit.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="typeface" /> ist nicht null und verfügt über die gleichen Eigenschaften wie diese Schriftfamilie; anderenfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FamilyTypeface.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dient als Hashfunktion für einen <see cref="T:System.Windows.Media.FamilyTypeface" /> Objekt. Die <see cref="M:System.Windows.Media.FamilyTypeface.GetHashCode" /> Methode eignet sich für die Verwendung in Hashalgorithmen und Datenstrukturen wie Hashtabellen.</summary>
+        <returns>Ein Wert vom Typ <see cref="T:System.Int32" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Hashwert wird berechnet, mit der <xref:System.Windows.Media.FamilyTypeface.Style%2A>, <xref:System.Windows.Media.FamilyTypeface.Weight%2A>, und <xref:System.Windows.Media.FamilyTypeface.Stretch%2A> Eigenschaften der <xref:System.Windows.Media.FamilyTypeface> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stretch">
+      <MemberSignature Language="C#" Value="public System.Windows.FontStretch Stretch { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FontStretch Stretch" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FamilyTypeface.Stretch" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontStretch</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen der entworfenen Stretch für die Schriftfamilie.</summary>
+        <value>Ein Wert vom Typ <see cref="T:System.Windows.FontStretch" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.FamilyTypeface.Stretch%2A> Wert beschreibt den Grad, der die Schriftart gestreckt wurden, im Vergleich zu normale Größenverhältnis der Schriftart.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrikethroughPosition">
+      <MemberSignature Language="C#" Value="public double StrikethroughPosition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 StrikethroughPosition" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FamilyTypeface.StrikethroughPosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Position der durchgestrichen-Wert in Bezug auf die Basislinie fest. Der Wert ist außerdem relativ zur Geviertgröße.</summary>
+        <value>Ein Wert vom Typ <see cref="T:System.Double" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert des <xref:System.Windows.Media.FamilyTypeface.StrikethroughPosition%2A> ist normalerweise positiv ist, um die durchgestrichen über der Basislinie zu platzieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrikethroughThickness">
+      <MemberSignature Language="C#" Value="public double StrikethroughThickness { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 StrikethroughThickness" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FamilyTypeface.StrikethroughThickness" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Strichstärke der durchgestrichen relativ zur Geviertgröße.</summary>
+        <value>Ein Wert vom Typ <see cref="T:System.Double" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Style">
+      <MemberSignature Language="C#" Value="public System.Windows.FontStyle Style { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FontStyle Style" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FamilyTypeface.Style" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Stil des Entwurfs der Schriftfamilie Schriftart fest.</summary>
+        <value>Ein Wert vom Typ <see cref="T:System.Windows.FontStyle" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beschreibt das Format einer Schriftart, z. B. Normal, kursiv oder schräg.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnderlinePosition">
+      <MemberSignature Language="C#" Value="public double UnderlinePosition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 UnderlinePosition" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FamilyTypeface.UnderlinePosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Position der Unterstreichung Wert in Bezug auf die Baseline fest. Der Wert ist außerdem relativ zur Geviertgröße.</summary>
+        <value>Ein Wert vom Typ <see cref="T:System.Double" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert des <xref:System.Windows.Media.FamilyTypeface.UnderlinePosition%2A> ist in der Regel negativ ist, um die Unterstreichung unterhalb der Basislinie zu platzieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnderlineThickness">
+      <MemberSignature Language="C#" Value="public double UnderlineThickness { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 UnderlineThickness" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FamilyTypeface.UnderlineThickness" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Stärke des Unterstrichs relativ zur Geviertgröße.</summary>
+        <value>Ein Wert vom Typ <see cref="T:System.Double" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Weight">
+      <MemberSignature Language="C#" Value="public System.Windows.FontWeight Weight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FontWeight Weight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FamilyTypeface.Weight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontWeight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die entworfene Breite der Schriftart der Schriftfamilie.</summary>
+        <value>Ein Wert vom Typ <see cref="T:System.Windows.FontWeight" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.FamilyTypeface.Weight%2A> Wert beschreibt die relative Gewichtung von einer bestimmten Schriftart. Unterschiede werden in der Regel von einem verstärkten Strich oder ein angegebenes Zeichen in einer Schriftart im Vergleich zu einem "normale" Zeichen in der gleichen Schriftart zugeordnete Stärke unterschieden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XHeight">
+      <MemberSignature Language="C#" Value="public double XHeight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 XHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FamilyTypeface.XHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen der westlichen x-Höhe relativ zur Geviertgröße wird.</summary>
+        <value>Ein Wert vom Typ <see cref="T:System.Double" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

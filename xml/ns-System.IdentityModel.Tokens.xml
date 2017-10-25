@@ -1,0 +1,6 @@
+<Namespace Name="System.IdentityModel.Tokens">
+  <Docs>
+    <summary>Die <see cref="N:System.IdentityModel.Tokens" /> -Namespace enthält Klassen, die Sicherheitstoken, Sicherheitstokenhandler und andere Artefakte, die bei der Generierung von Tokens und Verarbeitung verwendet schlüsselbezeichnerklauseln darstellen. Der Namespace enthält die Basisklassen wie z. B. <see cref="T:System.IdentityModel.Tokens.SecurityToken" />, <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandler" />, und <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />, sowie Klassen, die von diesen Klassen abgeleitet werden und mehrere Typen von Sicherheitstoken, Artefakte und Handler für die Darstellung der Windows Identity Foundation (WIF) verfügt über integrierte Unterstützung. Dies beinhaltet Klassen, die Unterstützung für SAML v1. 1 und v2. 0-Token, wie z. B. enthalten: <see cref="T:System.IdentityModel.Tokens.SamlSecurityToken" />, <see cref="T:System.IdentityModel.Tokens.SamlSecurityTokenHandler" />, <see cref="T:System.IdentityModel.Tokens.Saml2SecurityToken" />, und <see cref="T:System.IdentityModel.Tokens.Saml2SecurityTokenHandler" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

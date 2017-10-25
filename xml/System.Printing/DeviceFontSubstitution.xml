@@ -1,0 +1,94 @@
+<Type Name="DeviceFontSubstitution" FullName="System.Printing.DeviceFontSubstitution">
+  <TypeSignature Language="C#" Value="public enum DeviceFontSubstitution" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DeviceFontSubstitution extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.DeviceFontSubstitution" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, ob auf einem Drucker schriftartersetzung Gerät aktiviert ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Drucken ist schneller, wenn nur der Text und nicht die Schriftart, den an den Drucker gesendet wird. Einige-Drucker haben Schriftarten, die dauerhaft im Speicher gespeichert sind. Diese Drucker können Benutzer eine Druckerschriftart residenten für jede Schriftart zu ersetzen, die von der Anwendung zum Drucken verwendet wird.  
+  
+ Die Werte dieses Typs sind hauptsächlich für folgende Zwecke verwendet:  
+  
+-   Als Mitglied der <xref:System.Printing.PrintCapabilities.DeviceFontSubstitutionCapability%2A> -Auflistung, die eine Eigenschaft des <xref:System.Printing.PrintCapabilities>, sie die Druckerfunktionen darstellen.  
+  
+-   Als Wert für die <xref:System.Printing.PrintTicket.DeviceFontSubstitution%2A> Eigenschaft eine <xref:System.Printing.PrintTicket>, weisen Sie den Drucker aktivieren oder deaktivieren Schriftarten für den Druckauftrag Gerät.  
+  
+ Der Unknown-Wert wird in den Eigenschaften der nie verwendet <xref:System.Printing.PrintCapabilities> Objekte.  
+  
+ Sie sollten niemals Festlegen einer <xref:System.Printing.PrintTicket> Eigenschaft UNKNOWN. Wenn eine andere <xref:System.Printing.PrintTicket> , erzeugt die Anwendung eine PrintTicket-Dokument erstellt hat, der das Gerät Schriftart Ersatz-Funktion auf eine unbekannte Option festlegt (d. h. eine Option, die nicht in definiert ist die [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397)), klicken Sie dann eine <xref:System.Printing.PrintTicket> Objekten in der Anwendung, die mit diesem Dokument erstellt wird als Wert des unbekannt müssen die <xref:System.Printing.PrintTicket.DeviceFontSubstitution%2A> Eigenschaft.  
+  
+ Obwohl die <xref:System.Printing.PrintTicket> und <xref:System.Printing.PrintCapabilities> Klassen können nicht vererbt werden, können Sie erweitern die [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397) Druckgerät Funktionen zu erkennen, die nicht in berücksichtigt werden die <xref:System.Printing.PrintTicket.DeviceFontSubstitution%2A> oder <xref:System.Printing.PrintCapabilities> Klassen. Weitere Informationen finden Sie unter [nicht im Build: Vorgehensweise: Erweitern der Druckschema und Erstellen von neuen Druckserver Systemklassen](http://msdn.microsoft.com/en-us/a3600218-1ea5-478a-9853-6560464f2885).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Druckerfunktionen ermitteln und konfigurieren den Druckauftrag aus, um diese nutzen.  
+  
+ [!code-cpp[XpsCreate#PrinterCapabilities](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#printercapabilities)]
+ [!code-csharp[XpsCreate#PrinterCapabilities](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#printercapabilities)]
+ [!code-vb[XpsCreate#PrinterCapabilities](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#printercapabilities)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Off">
+      <MemberSignature Language="C#" Value="Off" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.DeviceFontSubstitution Off = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.DeviceFontSubstitution.Off" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.DeviceFontSubstitution</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gerät schriftartersetzung ist deaktiviert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="On">
+      <MemberSignature Language="C#" Value="On" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.DeviceFontSubstitution On = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.DeviceFontSubstitution.On" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.DeviceFontSubstitution</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Schriftarten Gerät aktiviert ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.DeviceFontSubstitution Unknown = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.DeviceFontSubstitution.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.DeviceFontSubstitution</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Funktion (deren Optionen durch diese Enumeration dargestellt werden) ist eine Option festgelegt, nicht definiert, der [Druckschema](http://go.microsoft.com/fwlink/?LinkId=186397).</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

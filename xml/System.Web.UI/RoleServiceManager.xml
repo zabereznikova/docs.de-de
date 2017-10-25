@@ -1,0 +1,157 @@
+<Type Name="RoleServiceManager" FullName="System.Web.UI.RoleServiceManager">
+  <TypeSignature Language="C#" Value="public class RoleServiceManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RoleServiceManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.RoleServiceManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Path")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.EmptyStringExpandableObjectConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Konfiguriert den Speicherort einer benutzerdefinierten Implementierung des Rollendiensts.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.RoleServiceManager> Klasse entspricht der <xref:System.Web.UI.ScriptManager.RoleService%2A> Eigenschaft von der <xref:System.Web.UI.ScriptManager> oder <xref:System.Web.UI.ScriptManagerProxy> Steuerelement.  
+  
+ Die Rolle "Webdienst" wird von AJAX-fähigen Anwendungen verwendet, um Rolleninformationen für den aktuellen authentifizierten Benutzer mithilfe von einem asynchronen Aufruf des Webdiensts abzurufen. Sie können <xref:System.Web.UI.RoleServiceManager> , den Pfad einer alternativen Implementierung der Webdienst anstelle des integrierten Webdiensts-Rolle bereitzustellen.  
+  
+ Um den Rollendienst in der Anwendung zu verwenden, müssen Sie in der Konfigurationsdatei zu aktivieren und deklarieren Sie es auf der Seite. Wenn Sie die integrierte Rolle Webdienst verwenden, müssen Sie es aktivieren, aber Sie müssen nicht explizit die Rolle "" ServiceManager auf der Seite deklarieren.  
+  
+ Um einen benutzerdefinierten Rollendienst erstellen zu können, müssen Sie einen Webdienst, der über zwei Methoden implementieren: `GetRolesForCurrentUser` und `IsCurrentUserInRole`. Diese Methoden müssen die gleiche Signatur wie die entsprechenden Methoden für die Rolle "integrierte" Webdienst haben.  
+  
+ Das folgende Beispiel zeigt die grundlegende Klassenstruktur, die in einer benutzerdefinierten Rolle Web Service-Klasse implementiert werden muss.  
+  
+  
+  
+ Um eine benutzerdefinierte Sicherheitsrolle Webdienst verwenden, können Sie den Dienst deklarativ im Markup hinzufügen, indem Einfügen einer `RoleService` Element innerhalb der <xref:System.Web.UI.ScriptManager> zu steuern, wie im folgenden Beispiel gezeigt.  
+  
+```  
+<asp:ScriptManager ID="SM1" runat="server">  
+  <RoleService Path="MyRoleService.asmx" LoadRoles="true" />  
+</asp:ScriptManager>  
+```  
+  
+ Sie können auch programmgesteuert festlegen der <xref:System.Web.UI.RoleServiceManager.Path%2A> Eigenschaft, die eine benutzerdefinierte Sicherheitsrolle Webdienst verwendet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RoleServiceManager ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.RoleServiceManager.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.RoleServiceManager" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadRoles">
+      <MemberSignature Language="C#" Value="public bool LoadRoles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool LoadRoles" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.RoleServiceManager.LoadRoles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Liste der Rollen für den gegenwärtig angemeldeten Benutzer abgerufen werden muss.</summary>
+        <value>
+          <see langword="true" />Wenn die Liste der Rollen abgerufen werden sollen; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.RoleServiceManager.LoadRoles%2A> -Eigenschaftensatz auf `true`, wird die Liste der Rollen abgerufen, indem die <xref:System.Web.UI.RoleServiceManager> Klasse, indem die <xref:System.Web.Security.Roles.GetRolesForUser%2A?displayProperty=nameWithType> Methode. Die Liste wird dann in das Seitenmarkup serialisiert.  
+  
+> [!NOTE]
+>  Wenn <xref:System.Web.UI.RoleServiceManager.LoadRoles%2A> ist `true`, alle Rollen, zu der der aktuelle authentifizierte Benutzer gehört, an den Browser gesendet werden. Da Benutzer möglicherweise die Rolleninformationen sehen können, kann dies ein Sicherheitsproblem sein.  
+  
+ Die <xref:System.Web.UI.RoleServiceManager.LoadRoles%2A> -Eigenschaft kann angegeben werden, der <xref:System.Web.UI.ScriptManager> Steuerelement oder einem zugeordneten <xref:System.Web.UI.ScriptManagerProxy> Steuerelement. Wenn <xref:System.Web.UI.RoleServiceManager.LoadRoles%2A> festgelegt ist, um `true` für eine Proxyinstanz, die Liste der Rollen abgerufen und der Seite hinzugefügt. Wenn <xref:System.Web.UI.RoleServiceManager.LoadRoles%2A> ist `false`, die Rollen werden nicht in das Seitenmarkup eingefügt. In diesem Fall können Sie die Methode verwenden, um Rolleninformationen im Arbeitsspeicher in den Browser zu speichern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.RoleServiceManager.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Pfad des Rollendiensts fest.</summary>
+        <value>Der Pfad der benutzerdefinierten Rolle Webdienst.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.RoleServiceManager.Path%2A> Eigenschaft nicht festgelegt ist, ist des Rückgabewerts <xref:System.String?displayProperty=nameWithType>. In diesem Fall ASP.NET verwendet die integrierte Authentifizierung Webdienst, der auf den folgenden internen Standardpfad entspricht: ~ / RolesService.svc. Das gleiche Verhalten tritt auf, wenn Sie festlegen, <xref:System.Web.UI.RoleServiceManager.Path%2A> auf eine leere Zeichenfolge oder auf `null`.  
+  
+ <xref:System.Web.UI.RoleServiceManager.Path%2A>kann angegeben werden, der <xref:System.Web.UI.ScriptManager> Steuerelement oder einem zugeordneten <xref:System.Web.UI.ScriptManagerProxy> Steuerelement. Wenn <xref:System.Web.UI.RoleServiceManager.Path%2A> in einer der <xref:System.Web.UI.ScriptManagerProxy> Ebene, die folgenden Bedingungen erfüllt sind:  
+  
+-   Wenn mehrere Proxyobjekte vorhanden, in der Steuerelementhierarchie sind <xref:System.Web.UI.RoleServiceManager.Path%2A> muss nicht für jede Proxyinstanz festgelegt werden.  
+  
+-   Wenn <xref:System.Web.UI.RoleServiceManager.Path%2A> explizit für ein Proxyobjekt festgelegt, der Wert muss identisch sein, für alle anderen Proxy-Objekten, die für diese Eigenschaft festgelegt ist. Wenn Sie unterschiedliche Pfade für die anderen Proxy-Objekte in der Steuerelementhierarchie Festlegen einer <xref:System.ArgumentException> Ausnahme wird ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Mehr als ein eindeutiger Pfad wurde in der Steuerelementhierarchie festgelegt.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

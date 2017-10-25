@@ -1,0 +1,41 @@
+<Type Name="MouseEventHandler" FullName="System.Windows.Forms.MouseEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void MouseEventHandler(object sender, MouseEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MouseEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.MouseEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Forms.MouseEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Windows.Forms.MouseEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode für die Behandlung der <see langword="MouseDown" />, <see langword="MouseUp" />, oder <see langword="MouseMove" /> -Ereignis für ein Formular, Steuerelement oder andere Komponente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen eines <xref:System.Windows.Forms.MouseEventHandler>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen zur Behandlung von Ereignissen mit Delegaten finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von verschiedene Mausereignisse, zeichnen Sie den Pfad der Maus auf einen <xref:System.Windows.Forms.Panel>. Liniensegment wird hinzugefügt, um die <xref:System.Drawing.Drawing2D.GraphicsPath> für jede <xref:System.Windows.Forms.Control.MouseMove> und <xref:System.Windows.Forms.Control.MouseDown> Ereignisse, die auftreten. Zum Aktualisieren der Grafik die <xref:System.Windows.Forms.Control.Invalidate%2A> Methode wird aufgerufen, für die <xref:System.Windows.Forms.Panel> auf jedem `MouseDown` und `MouseUp` Ereignis. Darüber hinaus den Grafikpfad wird durch einen Bildlauf nach oben oder unten, wenn die <xref:System.Windows.Forms.Control.MouseWheel> Ereignis auftritt. Zusätzliche Mausereignisse, z. B. <xref:System.Windows.Forms.Control.MouseHover>, auf dem Bildschirm ebenfalls identifiziert werden. Auch auf dem Bildschirm angezeigt werden, zusätzliche Informationen über die Maus über die <xref:System.Windows.Forms.SystemInformation> Klasse.  
+  
+ [!code-cpp[System.Windows.Forms.MouseEvent#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MouseEvent/CPP/mouseeventexample.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MouseEvent#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MouseEvent/CS/mouseeventexample.cs#1)]
+ [!code-vb[System.Windows.Forms.MouseEvent#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MouseEvent/VB/mouseeventexample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

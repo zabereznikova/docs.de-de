@@ -1,0 +1,494 @@
+<Type Name="ScrollPattern" FullName="System.Windows.Automation.ScrollPattern">
+  <TypeSignature Language="C#" Value="public class ScrollPattern : System.Windows.Automation.BasePattern" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ScrollPattern extends System.Windows.Automation.BasePattern" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.ScrollPattern" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.BasePattern</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Steuerelemente dar, die als scrollbare Container für eine Auflistung untergeordneter Elemente dienen. Die untergeordneten Elemente dieses Elements unterstützen <see cref="T:System.Windows.Automation.ScrollItemPattern" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Finden Sie unter [Zuordnen von Steuerelementmustern für Benutzeroberflächenautomatisierungs-Clients](~/docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md) Beispiele für Steuerelemente, die dieses Steuerelementmuster implementieren können.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cached">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.ScrollPattern.ScrollPatternInformation Cached { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.ScrollPattern/ScrollPatternInformation Cached" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.ScrollPattern.Cached" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ScrollPattern+ScrollPatternInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die zwischengespeicherten [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)]-Eigenschaftswerte für dieses <see cref="T:System.Windows.Automation.ScrollPattern" /> ab.</summary>
+        <value>Eine Struktur, die die zwischengespeicherten [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)]-Eigenschaftswerte für das Steuerelementmuster enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zwischengespeicherte Eigenschaftswerte müssen zuvor angefordert wurden mit einer <xref:System.Windows.Automation.CacheRequest>. Verwendung <xref:System.Windows.Automation.ScrollPattern.Current%2A> auf den aktuellen Wert einer Eigenschaft abzurufen.  
+  
+ Informationen zu den verfügbaren Eigenschaften und deren Verwendung finden Sie unter <xref:System.Windows.Automation.ScrollPattern.ScrollPatternInformation>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die angeforderte Eigenschaft befindet sich nicht im Cache.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.ScrollPattern.ScrollPatternInformation Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.ScrollPattern/ScrollPatternInformation Current" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.ScrollPattern.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ScrollPattern+ScrollPatternInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuellen [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)]-Eigenschaftswerte für dieses <see cref="T:System.Windows.Automation.ScrollPattern" /> ab.</summary>
+        <value>Eine Struktur, die die aktuellen [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)]-Eigenschaftswerte für das Steuerelementmuster enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Muster muss aus einer <xref:System.Windows.Automation.AutomationElement> mit einer <xref:System.Windows.Automation.AutomationElementMode.Full> Verweis, um die aktuellen Werte zu erhalten. Wenn die <xref:System.Windows.Automation.AutomationElement> abgerufen wurde, mithilfe von <xref:System.Windows.Automation.AutomationElementMode.None>, enthält es nur zwischengespeicherte Daten, und beim Versuch, den aktuellen Wert einer beliebigen Eigenschaft abzurufen, wird eine Ausnahme ausgelöst. Verwendung <xref:System.Windows.Automation.ScrollPattern.Cached%2A> um den zwischengespeicherten Wert einer Eigenschaft abzurufen, die zuvor angegeben wurde mit einem <xref:System.Windows.Automation.CacheRequest>.  
+  
+ Informationen zu den verfügbaren Eigenschaften und deren Verwendung finden Sie unter <xref:System.Windows.Automation.ScrollPattern.ScrollPatternInformation>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontallyScrollableProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty HorizontallyScrollableProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty HorizontallyScrollableProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ScrollPattern.HorizontallyScrollableProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die <see cref="P:System.Windows.Automation.ScrollPattern.ScrollPatternInformation.HorizontallyScrollable" />-Eigenschaft an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Bezeichner wird durch Benutzeroberflächenautomatisierungs-Clientanwendungen verwendet. Benutzeroberflächenautomatisierungs-Anbietern zu verwendende das entsprechende Feld im <xref:System.Windows.Automation.ScrollPatternIdentifiers>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Stammelement an eine Funktion, die eine Auflistung von zurückgibt übergeben [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Elementen, die abhängigen Elemente des Stamms und einen Satz von eigenschaftsbedingungen erfüllen.  
+  
+ [!code-csharp[UIAScrollPattern_snip#100](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAScrollPattern_snip/CSharp/UIAScrollPattern_snippets.cs#100)]
+ [!code-vb[UIAScrollPattern_snip#100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAScrollPattern_snip/VisualBasic/UIAScrollPattern_snippets.vb#100)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalScrollPercentProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty HorizontalScrollPercentProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty HorizontalScrollPercentProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die <see cref="P:System.Windows.Automation.ScrollPattern.ScrollPatternInformation.HorizontalScrollPercent" />-Eigenschaft an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Bezeichner wird durch Benutzeroberflächenautomatisierungs-Clientanwendungen verwendet. Benutzeroberflächenautomatisierungs-Anbietern zu verwendende das entsprechende Feld im <xref:System.Windows.Automation.ScrollPatternIdentifiers>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Stammelement an eine Funktion übergeben, die die aktuelle horizontale und vertikale Bildlaufleisten Prozentsätze des sichtbaren Bereichs innerhalb des Inhaltsbereichs zurückgibt.  
+  
+ [!code-csharp[UIAScrollPattern_snip#104](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAScrollPattern_snip/CSharp/UIAScrollPattern_snippets.cs#104)]
+ [!code-vb[UIAScrollPattern_snip#104](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAScrollPattern_snip/VisualBasic/UIAScrollPattern_snippets.vb#104)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalViewSizeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty HorizontalViewSizeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty HorizontalViewSizeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ScrollPattern.HorizontalViewSizeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die <see cref="P:System.Windows.Automation.ScrollPattern.ScrollPatternInformation.HorizontalViewSize" />-Eigenschaft an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Bezeichner wird durch Benutzeroberflächenautomatisierungs-Clientanwendungen verwendet. Benutzeroberflächenautomatisierungs-Anbietern zu verwendende das entsprechende Feld im <xref:System.Windows.Automation.ScrollPatternIdentifiers>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Stammelement an eine Funktion übergeben, die die aktuelle vertikale und horizontale Größe des sichtbaren Bereichs als Prozentsatz des gesamten Inhaltsbereichs zurückgibt.  
+  
+ [!code-csharp[UIAScrollPattern_snip#105](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAScrollPattern_snip/CSharp/UIAScrollPattern_snippets.cs#105)]
+ [!code-vb[UIAScrollPattern_snip#105](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAScrollPattern_snip/VisualBasic/UIAScrollPattern_snippets.vb#105)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoScroll">
+      <MemberSignature Language="C#" Value="public const double NoScroll = -1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal float64 NoScroll = (-1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ScrollPattern.NoScroll" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <MemberValue>-1</MemberValue>
+      <Docs>
+        <summary>Gibt an, dass kein Bildlauf ausgeführt werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Bezeichner wird durch Benutzeroberflächenautomatisierungs-Clientanwendungen verwendet. Benutzeroberflächenautomatisierungs-Anbietern zu verwendende das entsprechende Feld im <xref:System.Windows.Automation.ScrollPatternIdentifiers>.  
+  
+ Der Wert-1 ersetzt werden kann, für die <xref:System.Windows.Automation.ScrollPattern.NoScroll> Feld.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.ScrollPattern> Steuerelementmuster abgerufenes ein <xref:System.Windows.Automation.AutomationElement> und wird dann verwendet werden, um einen Bildlauf bis zum oberen Rand des Inhaltsbereichs.  
+  
+ [!code-csharp[UIAScrollPattern_snip#103](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAScrollPattern_snip/CSharp/UIAScrollPattern_snippets.cs#103)]
+ [!code-vb[UIAScrollPattern_snip#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAScrollPattern_snip/VisualBasic/UIAScrollPattern_snippets.vb#103)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pattern">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationPattern Pattern;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationPattern Pattern" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ScrollPattern.Pattern" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationPattern</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet das <see cref="T:System.Windows.Automation.ScrollPattern" />-Steuerelementmuster.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Bezeichner wird durch Benutzeroberflächenautomatisierungs-Clientanwendungen verwendet. Benutzeroberflächenautomatisierungs-Anbietern zu verwendende das entsprechende Feld im <xref:System.Windows.Automation.ScrollPatternIdentifiers>.  
+  
+ Der Musterbezeichner wird an Methoden übergeben, z. B. <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> zum Abrufen der Steuerelementmuster aus dem angegebenen <xref:System.Windows.Automation.AutomationElement>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.ScrollPattern> Steuerelementmuster abgerufenes ein <xref:System.Windows.Automation.AutomationElement>.  
+  
+ [!code-csharp[UIAScrollPattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAScrollPattern_snip/CSharp/UIAScrollPattern_snippets.cs#101)]
+ [!code-vb[UIAScrollPattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAScrollPattern_snip/VisualBasic/UIAScrollPattern_snippets.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scroll">
+      <MemberSignature Language="C#" Value="public void Scroll (System.Windows.Automation.ScrollAmount horizontalAmount, System.Windows.Automation.ScrollAmount verticalAmount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Scroll(valuetype System.Windows.Automation.ScrollAmount horizontalAmount, valuetype System.Windows.Automation.ScrollAmount verticalAmount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.ScrollPattern.Scroll(System.Windows.Automation.ScrollAmount,System.Windows.Automation.ScrollAmount)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="horizontalAmount" Type="System.Windows.Automation.ScrollAmount" />
+        <Parameter Name="verticalAmount" Type="System.Windows.Automation.ScrollAmount" />
+      </Parameters>
+      <Docs>
+        <param name="horizontalAmount">Das horizontale Inkrement, das speziell für das Steuerelement gilt. <see cref="F:System.Windows.Automation.ScrollPattern.NoScroll" /> sollte übergeben werden, wenn das Steuerelement in diese Richtung nicht gescrollt werden kann.</param>
+        <param name="verticalAmount">Das vertikale Inkrement, das speziell für das Steuerelement gilt. <see cref="F:System.Windows.Automation.ScrollPattern.NoScroll" /> sollte übergeben werden, wenn das Steuerelement in diese Richtung nicht gescrollt werden kann.</param>
+        <summary>Scrollt den sichtbaren Bereich des Inhaltsbereichs horizontal und vertikal.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.ScrollPattern> Steuerelementmuster abgerufenes ein <xref:System.Windows.Automation.AutomationElement> und wird dann verwendet werden, um das Element eine angeforderte Menge entweder horizontal oder vertikal gescrollt werden.  
+  
+ [!code-csharp[UIAScrollPattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAScrollPattern_snip/CSharp/UIAScrollPattern_snippets.cs#101)]
+ [!code-vb[UIAScrollPattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAScrollPattern_snip/VisualBasic/UIAScrollPattern_snippets.vb#101)]  
+[!code-csharp[UIAScrollPattern_snip#106](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAScrollPattern_snip/CSharp/UIAScrollPattern_snippets.cs#106)]
+[!code-vb[UIAScrollPattern_snip#106](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAScrollPattern_snip/VisualBasic/UIAScrollPattern_snippets.vb#106)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Ein Steuerelement unterstützt <see cref="F:System.Windows.Automation.ScrollAmount.SmallIncrement" /> -Werte ausschließlich für horizontales oder vertikales scrollen, aber eine <see cref="F:System.Windows.Automation.ScrollAmount.LargeIncrement" /> -Wert übergeben wurde.</exception>
+        <exception cref="T:System.InvalidOperationException">Es wird versucht, in eine nicht unterstützte Richtung zu scrollen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollHorizontal">
+      <MemberSignature Language="C#" Value="public void ScrollHorizontal (System.Windows.Automation.ScrollAmount amount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ScrollHorizontal(valuetype System.Windows.Automation.ScrollAmount amount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.ScrollPattern.ScrollHorizontal(System.Windows.Automation.ScrollAmount)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="amount" Type="System.Windows.Automation.ScrollAmount" />
+      </Parameters>
+      <Docs>
+        <param name="amount">Die horizontale <see cref="T:System.Windows.Automation.ScrollAmount" /> Inkrement, das speziell für das Steuerelement.</param>
+        <summary>Scrollt durch den aktuell sichtbaren Bereich des Inhaltsbereichs horizontal, dem angegebenen <see cref="T:System.Windows.Automation.ScrollAmount" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.ScrollPattern> Steuerelementmuster abgerufenes ein <xref:System.Windows.Automation.AutomationElement> und wird dann verwendet werden, um das Element eine angeforderte Menge einen horizontalen Bildlauf ausführen.  
+  
+ [!code-csharp[UIAScrollPattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAScrollPattern_snip/CSharp/UIAScrollPattern_snippets.cs#101)]
+ [!code-vb[UIAScrollPattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAScrollPattern_snip/VisualBasic/UIAScrollPattern_snippets.vb#101)]  
+[!code-csharp[UIAScrollPattern_snip#107](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAScrollPattern_snip/CSharp/UIAScrollPattern_snippets.cs#107)]
+[!code-vb[UIAScrollPattern_snip#107](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAScrollPattern_snip/VisualBasic/UIAScrollPattern_snippets.vb#107)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Wenn ein Steuerelement <see cref="F:System.Windows.Automation.ScrollAmount.SmallIncrement" />-Werte ausschließlich für horizontales oder vertikales Scrollen unterstützt, aber ein <see cref="F:System.Windows.Automation.ScrollAmount.LargeIncrement" />-Wert übergeben wurde.</exception>
+        <exception cref="T:System.InvalidOperationException">Es wird versucht, in eine nicht unterstützte Richtung zu scrollen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollVertical">
+      <MemberSignature Language="C#" Value="public void ScrollVertical (System.Windows.Automation.ScrollAmount amount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ScrollVertical(valuetype System.Windows.Automation.ScrollAmount amount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.ScrollPattern.ScrollVertical(System.Windows.Automation.ScrollAmount)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="amount" Type="System.Windows.Automation.ScrollAmount" />
+      </Parameters>
+      <Docs>
+        <param name="amount">Die vertikale <see cref="T:System.Windows.Automation.ScrollAmount" /> Inkrement, das speziell für das Steuerelement.</param>
+        <summary>Scrollt durch den aktuell sichtbaren Bereich des Inhaltsbereichs vertikal, dem angegebenen <see cref="T:System.Windows.Automation.ScrollAmount" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.ScrollPattern> Steuerelementmuster abgerufenes ein <xref:System.Windows.Automation.AutomationElement> und wird dann vertikaler Bildlauf durchgeführt wird das Element eine angeforderte Menge verwendet.  
+  
+ [!code-csharp[UIAScrollPattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAScrollPattern_snip/CSharp/UIAScrollPattern_snippets.cs#101)]
+ [!code-vb[UIAScrollPattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAScrollPattern_snip/VisualBasic/UIAScrollPattern_snippets.vb#101)]  
+[!code-csharp[UIAScrollPattern_snip#108](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAScrollPattern_snip/CSharp/UIAScrollPattern_snippets.cs#108)]
+[!code-vb[UIAScrollPattern_snip#108](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAScrollPattern_snip/VisualBasic/UIAScrollPattern_snippets.vb#108)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Wenn ein Steuerelement <see cref="F:System.Windows.Automation.ScrollAmount.SmallIncrement" />-Werte ausschließlich für horizontales oder vertikales Scrollen unterstützt, aber ein <see cref="F:System.Windows.Automation.ScrollAmount.LargeIncrement" />-Wert übergeben wurde.</exception>
+        <exception cref="T:System.InvalidOperationException">Es wird versucht, in eine nicht unterstützte Richtung zu scrollen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetScrollPercent">
+      <MemberSignature Language="C#" Value="public void SetScrollPercent (double horizontalPercent, double verticalPercent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetScrollPercent(float64 horizontalPercent, float64 verticalPercent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.ScrollPattern.SetScrollPercent(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="horizontalPercent" Type="System.Double" />
+        <Parameter Name="verticalPercent" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="horizontalPercent">Der Prozentsatz des gesamten horizontalen Inhaltsbereichs. <see cref="F:System.Windows.Automation.ScrollPattern.NoScroll" /> sollte übergeben werden, wenn das Steuerelement in diese Richtung nicht gescrollt werden kann.</param>
+        <param name="verticalPercent">Der Prozentsatz des gesamten vertikalen Inhaltsbereichs. <see cref="F:System.Windows.Automation.ScrollPattern.NoScroll" /> sollte übergeben werden, wenn das Steuerelement in diese Richtung nicht gescrollt werden kann.</param>
+        <summary>Legt die horizontale bzw. vertikale Bildlaufposition als Prozentsatz des gesamten Inhaltsbereichs der <see cref="T:System.Windows.Automation.AutomationElement" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist nur nützlich, wenn der Inhaltsbereich des Steuerelements den sichtbaren Bereich überschreitet.  
+  
+ Durch Übergeben des Werts <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll> gibt an, dass kein Bildlauf in der angegebenen Richtung.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.ScrollPattern> Steuerelementmuster abgerufenes ein <xref:System.Windows.Automation.AutomationElement> und wird dann verwendet werden, um einen Bildlauf im Anzeigebereich auf der obersten Position der linken "home" des Inhaltsbereichs.  
+  
+ [!code-csharp[UIAScrollPattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAScrollPattern_snip/CSharp/UIAScrollPattern_snippets.cs#101)]
+ [!code-vb[UIAScrollPattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAScrollPattern_snip/VisualBasic/UIAScrollPattern_snippets.vb#101)]  
+[!code-csharp[UIAScrollPattern_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAScrollPattern_snip/CSharp/UIAScrollPattern_snippets.cs#102)]
+[!code-vb[UIAScrollPattern_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAScrollPattern_snip/VisualBasic/UIAScrollPattern_snippets.vb#102)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Ein Wert, der nicht in einen Double-Wert konvertiert werden kann, wird übergeben.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Ein Wert größer als 100 oder kleiner als 0 wird übergeben (mit Ausnahme von -1, was <see cref="F:System.Windows.Automation.ScrollPattern.NoScroll" /> entspricht). Die <see cref="P:System.Windows.Automation.ScrollPattern.ScrollPatternInformation.HorizontalScrollPercent" /> und <see cref="P:System.Windows.Automation.ScrollPattern.ScrollPatternInformation.VerticalScrollPercent" /> Werte auf 0 % oder 100 % normalisiert werden.</exception>
+        <exception cref="T:System.InvalidOperationException">Es wird versucht, in eine nicht unterstützte Richtung zu scrollen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticallyScrollableProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty VerticallyScrollableProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty VerticallyScrollableProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ScrollPattern.VerticallyScrollableProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die <see cref="P:System.Windows.Automation.ScrollPattern.ScrollPatternInformation.VerticallyScrollable" />-Eigenschaft an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Bezeichner wird durch Benutzeroberflächenautomatisierungs-Clientanwendungen verwendet. Benutzeroberflächenautomatisierungs-Anbietern zu verwendende das entsprechende Feld im <xref:System.Windows.Automation.ScrollPatternIdentifiers>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Stammelement an eine Funktion, die eine Auflistung von zurückgibt übergeben <xref:System.Windows.Automation.AutomationElement>s, die abhängigen Elemente des Stamms und einen Satz von eigenschaftsbedingungen erfüllen.  
+  
+ [!code-csharp[UIAScrollPattern_snip#100](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAScrollPattern_snip/CSharp/UIAScrollPattern_snippets.cs#100)]
+ [!code-vb[UIAScrollPattern_snip#100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAScrollPattern_snip/VisualBasic/UIAScrollPattern_snippets.vb#100)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalScrollPercentProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty VerticalScrollPercentProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty VerticalScrollPercentProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die <see cref="P:System.Windows.Automation.ScrollPattern.ScrollPatternInformation.VerticalScrollPercent" />-Eigenschaft an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Bezeichner wird durch Benutzeroberflächenautomatisierungs-Clientanwendungen verwendet. Benutzeroberflächenautomatisierungs-Anbietern zu verwendende das entsprechende Feld im <xref:System.Windows.Automation.ScrollPatternIdentifiers>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Stammelement an eine Funktion übergeben, die die aktuellen Scroll Prozentsätze des sichtbaren Bereichs innerhalb des Inhaltsbereichs zurückgibt.  
+  
+ [!code-csharp[UIAScrollPattern_snip#104](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAScrollPattern_snip/CSharp/UIAScrollPattern_snippets.cs#104)]
+ [!code-vb[UIAScrollPattern_snip#104](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAScrollPattern_snip/VisualBasic/UIAScrollPattern_snippets.vb#104)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalViewSizeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty VerticalViewSizeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty VerticalViewSizeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ScrollPattern.VerticalViewSizeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die <see cref="P:System.Windows.Automation.ScrollPattern.ScrollPatternInformation.VerticalViewSize" />-Eigenschaft an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Bezeichner wird durch Benutzeroberflächenautomatisierungs-Clientanwendungen verwendet. Benutzeroberflächenautomatisierungs-Anbietern zu verwendende das entsprechende Feld im <xref:System.Windows.Automation.ScrollPatternIdentifiers>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Stammelement an eine Funktion übergeben, die die aktuelle vertikale und horizontale Größe des sichtbaren Bereichs als Prozentsatz des gesamten Inhaltsbereichs zurückgibt.  
+  
+ [!code-csharp[UIAScrollPattern_snip#105](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAScrollPattern_snip/CSharp/UIAScrollPattern_snippets.cs#105)]
+ [!code-vb[UIAScrollPattern_snip#105](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAScrollPattern_snip/VisualBasic/UIAScrollPattern_snippets.vb#105)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,135 @@
+<Type Name="SineEase" FullName="System.Windows.Media.Animation.SineEase">
+  <TypeSignature Language="C#" Value="public class SineEase : System.Windows.Media.Animation.EasingFunctionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SineEase extends System.Windows.Media.Animation.EasingFunctionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.SineEase" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.EasingFunctionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Beschleunigungsfunktion, die eine Animation erstellt, die beschleunigt und/oder verlangsamt wird mit einer Sinusformel dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können steuern, wann die Animation beschleunigt, verlangsamt oder beidem durch Angabe der <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>. Das folgende Diagramm veranschaulicht die unterschiedlichen Werte von <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> , in denen *f*(*t*) den Animationsstatus und *t* Uhrzeit darstellt.  
+  
+ ![SineEase für andere EasingMode-Werte](~/add/media/sineease-graph.png "SineEase für andere EasingMode-Werte")  
+  
+ Die Formel für diese Funktion verwendet, lautet wie folgt.  
+  
+ ![Formel für SineEase](~/add/media/sine-formula.png "Formel für SineEase")  
+  
+ Es gibt mehrere andere Beschleunigungsfunktionen neben <xref:System.Windows.Media.Animation.SineEase> die Sie mit dem folgenden Silverlight-Beispiel untersuchen können.  
+  
+ [Dieses Beispiel ausführen](http://go.microsoft.com/fwlink/?LinkId=139798&sref=easing_functions_gallery)  
+  
+> [!NOTE]
+>  Sie können <xref:System.Windows.Media.Animation.PowerEase> So erstellen das gleiche Verhalten wie <xref:System.Windows.Media.Animation.CubicEase>, <xref:System.Windows.Media.Animation.QuadraticEase>, <xref:System.Windows.Media.Animation.QuarticEase>, und <xref:System.Windows.Media.Animation.QuinticEase> mithilfe der <xref:System.Windows.Media.Animation.PowerEase.Power%2A> Eigenschaft. Angenommen, Sie verwenden möchten <xref:System.Windows.Media.Animation.PowerEase> als Ersatz für <xref:System.Windows.Media.Animation.CubicEase>, geben Sie einen <xref:System.Windows.Media.Animation.PowerEase.Power%2A> Wert 3.  
+  
+ Zusätzlich zur Verwendung der in der Laufzeit enthaltenen Beschleunigungsfunktionen, können Sie eigene benutzerdefinierten Beschleunigungsfunktionen erstellen, durch Vererben von <xref:System.Windows.Media.Animation.EasingFunctionBase>.  
+  
+<a name="xamlObjectElementUsage_SineEase"></a>   
+## <a name="xaml-object-element-usage"></a>Verwendung von XAML-Objektelementen  
+  
+```  
+<SineEase .../>  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel wendet eine <xref:System.Windows.Media.Animation.SineEase> Beschleunigungsfunktionen-Funktion, um eine <xref:System.Windows.Media.Animation.DoubleAnimation> zum Erstellen einer Animation verlangsamt wird.  
+  
+ [!code-xaml[SineEase#SineEase](~/samples/snippets/csharp/VS_Snippets_Wpf/sineease/CS/window1.xaml#sineease)]   
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SineEase ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.SineEase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.SineEase" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.SineEase.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der aus <see cref="T:System.Windows.Freezable" /> abgeleiteten Klasse. Beim Erstellen einer abgeleiteten Klasse muss diese Methode überschrieben werden.</summary>
+        <returns>Die neue Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Animation-Klassen erben indirekt von <xref:System.Windows.Freezable>. Aus diesem Grund müssen Sie überschreiben die <xref:System.Windows.Media.Animation.BackEase.CreateInstanceCore%2A> Methode zum Erstellen einer benutzerdefinierten Animation-Objekt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine typische Implementierung der <xref:System.Windows.Freezable.CreateInstanceCore%2A>.  
+  
+ [!code-csharp[freezablesample_procedural#CreateInstanceCoreExample](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#createinstancecoreexample)]
+ [!code-vb[freezablesample_procedural#CreateInstanceCoreExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#createinstancecoreexample)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseInCore">
+      <MemberSignature Language="C#" Value="protected override double EaseInCore (double normalizedTime);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance float64 EaseInCore(float64 normalizedTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.SineEase.EaseInCore(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="normalizedTime" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="normalizedTime">Die normalisierte Zeit (Fortschritt) der Animation.</param>
+        <summary>Stellt die Logik der Beschleunigungsfunktion bereit, die überschrieben werden kann, um den <see cref="F:System.Windows.Media.Animation.EasingMode.EaseIn" />-Modus der benutzerdefinierten Beschleunigungsfunktion zu erzeugen.</summary>
+        <returns>Ein Double-Wert, der den transformierten Fortschritt darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode transformiert die normalisierte Zeit zu steuern, der die Geschwindigkeit der Animation für die <xref:System.Windows.Media.Animation.EasingMode.EaseIn> der Groß-/Kleinschreibung <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>.  
+  
+ Müssen nur die Beschleunigungsfunktion für angeben der <xref:System.Windows.Media.Animation.EasingMode.EaseIn> Fall, da die Implementierung der <xref:System.Windows.Media.Animation.EasingFunctionBase.Ease%2A> Methode Transformationen `normalizedTime` für die <xref:System.Windows.Media.Animation.EasingMode.EaseOut> und <xref:System.Windows.Media.Animation.EasingMode.EaseInOut> Fällen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,498 @@
+<Type Name="SecurityPermissionFlag" FullName="System.Security.Permissions.SecurityPermissionFlag">
+  <TypeSignature Language="C#" Value="public enum SecurityPermissionFlag" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed SecurityPermissionFlag extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.SecurityPermissionFlag" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt Zugriffsflags an den für das Sicherheitsobjekt-Berechtigung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration verfügt über ein <xref:System.FlagsAttribute>-Attribut, das die bitweise Kombination der Memberwerte zulässt.  
+  
+ Diese Enumeration wird verwendet, indem Sie <xref:System.Security.Permissions.SecurityPermission>.  
+  
+> [!CAUTION]
+>  Viele dieser Flags sind leistungsstark und sollte nur für hoch vertrauenswürdigen Code erteilt werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Security.Permissions.SecurityPermissionFlag> verweigert und die Sicherheitsberechtigungen "demand"-Enumeration.  
+  
+ [!code-cpp[System.Security.Permissions.SecurityPermissionAttribute#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.SecurityPermissionAttribute/CPP/securitypermissionattribute.cpp#1)]
+ [!code-csharp[System.Security.Permissions.SecurityPermissionAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.SecurityPermissionAttribute/CS/securitypermissionattribute.cs#1)]
+ [!code-vb[System.Security.Permissions.SecurityPermissionAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.SecurityPermissionAttribute/VB/securitypermissionattribute.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllFlags">
+      <MemberSignature Language="C#" Value="AllFlags" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.SecurityPermissionFlag AllFlags = int32(16383)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.SecurityPermissionFlag.AllFlags" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.SecurityPermissionFlag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der uneingeschränkten Zustand der Berechtigung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Assertion">
+      <MemberSignature Language="C#" Value="Assertion" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.SecurityPermissionFlag Assertion = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.SecurityPermissionFlag.Assertion" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.SecurityPermissionFlag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Fähigkeit zu bestätigen, dass alle dieser Aufrufer des Codes über die erforderliche Berechtigung für den Vorgang verfügen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingRedirects">
+      <MemberSignature Language="C#" Value="BindingRedirects" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.SecurityPermissionFlag BindingRedirects = int32(8192)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.SecurityPermissionFlag.BindingRedirects" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.SecurityPermissionFlag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Berechtigung zum Ausführen von expliziten bindungsumleitung in der Anwendungskonfigurationsdatei. Dies umfasst die Umleitung von .NET Framework-Assemblys sowie anderen außerhalb von .NET Framework-Assemblys vereinheitlicht wurden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlAppDomain">
+      <MemberSignature Language="C#" Value="ControlAppDomain" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.SecurityPermissionFlag ControlAppDomain = int32(1024)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.SecurityPermissionFlag.ControlAppDomain" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.SecurityPermissionFlag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Möglichkeit zum Erstellen und Bearbeiten einer <see cref="T:System.AppDomain" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlDomainPolicy">
+      <MemberSignature Language="C#" Value="ControlDomainPolicy" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.SecurityPermissionFlag ControlDomainPolicy = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.SecurityPermissionFlag.ControlDomainPolicy" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.SecurityPermissionFlag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Möglichkeit, Domänenrichtlinie anzugeben.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlEvidence">
+      <MemberSignature Language="C#" Value="ControlEvidence" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.SecurityPermissionFlag ControlEvidence = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.SecurityPermissionFlag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Fähigkeit zum Bereitstellen von Beweisen, einschließlich der Möglichkeit, die von der common Language Runtime bereitgestellten Beweisen zu ändern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist eine leistungsstarke Berechtigung, die nur für hoch vertrauenswürdigen Code erteilt werden sollte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlPolicy">
+      <MemberSignature Language="C#" Value="ControlPolicy" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.SecurityPermissionFlag ControlPolicy = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.SecurityPermissionFlag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Möglichkeit zum Anzeigen und Ändern von Richtlinien.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist eine leistungsstarke Berechtigung, die nur für hoch vertrauenswürdigen Code erteilt werden sollte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlPrincipal">
+      <MemberSignature Language="C#" Value="ControlPrincipal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.SecurityPermissionFlag ControlPrincipal = int32(512)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.SecurityPermissionFlag.ControlPrincipal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.SecurityPermissionFlag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fähigkeit zum Bearbeiten des Hauptobjekts.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlThread">
+      <MemberSignature Language="C#" Value="ControlThread" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.SecurityPermissionFlag ControlThread = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.SecurityPermissionFlag.ControlThread" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.SecurityPermissionFlag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fähigkeit, einige erweiterte Vorgänge in Threads verwenden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Execution">
+      <MemberSignature Language="C#" Value="Execution" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.SecurityPermissionFlag Execution = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.SecurityPermissionFlag.Execution" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.SecurityPermissionFlag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Berechtigung für den Code ausführen. Ohne diese Berechtigung wird verwalteter Code nicht ausgeführt werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Flag hat keine Auswirkungen, bei der Verwendung dynamisch mit Stapel Modifizierer wie z. B. <xref:System.Security.CodeAccessPermission.Deny%2A>, <xref:System.Security.CodeAccessPermission.Assert%2A>, und <xref:System.Security.CodeAccessPermission.PermitOnly%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Infrastructure">
+      <MemberSignature Language="C#" Value="Infrastructure" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.SecurityPermissionFlag Infrastructure = int32(4096)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.SecurityPermissionFlag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Berechtigung für Code in der common Language Runtime-Infrastruktur, z. B. das Hinzufügen von Remotekontextsenken, Botensenken und dynamischen senken eingebunden werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoFlags">
+      <MemberSignature Language="C#" Value="NoFlags" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.SecurityPermissionFlag NoFlags = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.SecurityPermissionFlag.NoFlags" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.SecurityPermissionFlag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Keine Sicherheitszugriff.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RemotingConfiguration">
+      <MemberSignature Language="C#" Value="RemotingConfiguration" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.SecurityPermissionFlag RemotingConfiguration = int32(2048)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.SecurityPermissionFlag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Berechtigung zum Remotetypen und Kanäle konfigurieren.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializationFormatter">
+      <MemberSignature Language="C#" Value="SerializationFormatter" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.SecurityPermissionFlag SerializationFormatter = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.SecurityPermissionFlag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fähigkeit zum Bereitstellen von Serialisierungsdiensten. Von Formatierungsprogramme für die Serialisierung verwendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SkipVerification">
+      <MemberSignature Language="C#" Value="SkipVerification" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.SecurityPermissionFlag SkipVerification = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.SecurityPermissionFlag.SkipVerification" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.SecurityPermissionFlag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fähigkeit zum Überspringen der Überprüfung von Code in dieser Assembly. Nicht überprüfbarer Code kann ausgeführt werden, wenn diese Berechtigung erteilt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist eine leistungsstarke Berechtigung, die nur für hoch vertrauenswürdigen Code erteilt werden sollte.  
+  
+ Dieses Flag hat keine Auswirkungen, bei der Verwendung dynamisch mit Stapel Modifizierer wie z. B. <xref:System.Security.CodeAccessPermission.Deny%2A>, <xref:System.Security.CodeAccessPermission.Assert%2A>, und <xref:System.Security.CodeAccessPermission.PermitOnly%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnmanagedCode">
+      <MemberSignature Language="C#" Value="UnmanagedCode" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.SecurityPermissionFlag UnmanagedCode = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.SecurityPermissionFlag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Fähigkeit zum Aufrufen von nicht verwalteten Codes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da nicht verwalteter Code möglicherweise andere Berechtigungen umgangen werden ermöglicht, ist dies einen gefährlichen Berechtigung, die nur für hoch vertrauenswürdigen Code erteilt werden sollte. Sie wird für solche Anwendungen als Aufrufen von systemeigenem Code, die Verwendung von PInvoke oder COM-Interop verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

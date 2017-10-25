@@ -1,0 +1,1397 @@
+<Type Name="Stroke" FullName="System.Windows.Ink.Stroke">
+  <TypeSignature Language="C#" Value="public class Stroke : System.ComponentModel.INotifyPropertyChanged" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Stroke extends System.Object implements class System.ComponentModel.INotifyPropertyChanged" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Ink.Stroke" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.INotifyPropertyChanged</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt einen einzelnen Freihandstrich dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Ink.Stroke> wird das Datenobjekt, das von einem Zeigegerät, z. B. einem Tablettstift oder eine Maus gesammelt werden. Die <xref:System.Windows.Ink.Stroke> erstellt und programmgesteuert bearbeitet werden können und visuell dargestellt werden für ein Element Freihandeingaben wie z. B. die <xref:System.Windows.Controls.InkCanvas>. Ein <xref:System.Windows.Ink.Stroke> enthält Informationen über seine Position und die Darstellung. Die <xref:System.Windows.Ink.Stroke.StylusPoints%2A> Eigenschaft ist eine Sammlung von <xref:System.Windows.Input.StylusPoint> Objekte, die die Position des gibt die <xref:System.Windows.Ink.Stroke>. Die <xref:System.Windows.Ink.DrawingAttributes> Eigenschaft gibt die Darstellung des Strichs an.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Stroke (System.Windows.Input.StylusPointCollection stylusPoints);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Input.StylusPointCollection stylusPoints) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.Stroke.#ctor(System.Windows.Input.StylusPointCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stylusPoints" Type="System.Windows.Input.StylusPointCollection" />
+      </Parameters>
+      <Docs>
+        <param name="stylusPoints">Ein <see cref="T:System.Windows.Input.StylusPointCollection" /> darstellt, die die <see cref="T:System.Windows.Ink.Stroke" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Ink.Stroke" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie eine <xref:System.Windows.Ink.Stroke> aus einem <xref:System.Windows.Input.StylusPointCollection> und <xref:System.Windows.Ink.DrawingAttributes> Objekt. In diesem Beispiel wird davon ausgegangen, dass es ist ein <xref:System.Windows.Controls.InkPresenter> aufgerufen `myInkPresenter`.  
+  
+ [!code-csharp[StrokeSnippets#2](~/samples/snippets/csharp/VS_Snippets_Wpf/StrokeSnippets/CSharp/MyBorder.cs#2)]
+ [!code-vb[StrokeSnippets#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StrokeSnippets/VisualBasic/MyBorder.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stylusPoints" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="stylusPoints" />ist leer...</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Stroke (System.Windows.Input.StylusPointCollection stylusPoints, System.Windows.Ink.DrawingAttributes drawingAttributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Input.StylusPointCollection stylusPoints, class System.Windows.Ink.DrawingAttributes drawingAttributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.Stroke.#ctor(System.Windows.Input.StylusPointCollection,System.Windows.Ink.DrawingAttributes)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stylusPoints" Type="System.Windows.Input.StylusPointCollection" />
+        <Parameter Name="drawingAttributes" Type="System.Windows.Ink.DrawingAttributes" />
+      </Parameters>
+      <Docs>
+        <param name="stylusPoints">Ein <see cref="T:System.Windows.Input.StylusPointCollection" /> darstellt, die die <see cref="T:System.Windows.Ink.Stroke" />.</param>
+        <param name="drawingAttributes">Ein <see cref="T:System.Windows.Ink.DrawingAttributes" /> -Objekt, das die Darstellung der gibt an, die <see cref="T:System.Windows.Ink.Stroke" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Ink.Stroke" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie eine <xref:System.Windows.Ink.Stroke> aus einem <xref:System.Windows.Input.StylusPointCollection> und <xref:System.Windows.Ink.DrawingAttributes> Objekt.  In diesem Beispiel wird davon ausgegangen, dass es ist ein <xref:System.Windows.Controls.InkPresenter> aufgerufen `myInkPresenter`.  
+  
+ [!code-csharp[StrokeSnippets#2](~/samples/snippets/csharp/VS_Snippets_Wpf/StrokeSnippets/CSharp/MyBorder.cs#2)]
+ [!code-vb[StrokeSnippets#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StrokeSnippets/VisualBasic/MyBorder.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stylusPoints" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="drawingAtrributes" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="stylusPoints" /> ist leer.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPropertyData">
+      <MemberSignature Language="C#" Value="public void AddPropertyData (Guid propertyDataId, object propertyData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddPropertyData(valuetype System.Guid propertyDataId, object propertyData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.Stroke.AddPropertyData(System.Guid,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyDataId" Type="System.Guid" />
+        <Parameter Name="propertyData" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="propertyDataId">Der eindeutige Bezeichner für die Eigenschaft.</param>
+        <param name="propertyData">Der Wert der benutzerdefinierten Eigenschaft. <c>PropertyData</c> muss vom Typ <see cref="T:System.Char" />, <see cref="T:System.Byte" />, <see cref="T:System.Int16" />, <see cref="T:System.UInt16" />, <see cref="T:System.Int32" />, <see cref="T:System.UInt32" />, <see cref="T:System.Int64" />, <see cref="T:System.UInt64" />, <see cref="T:System.Single" />, <see cref="T:System.Double" />, <see cref="T:System.DateTime" />, <see cref="T:System.Boolean" />, <see cref="T:System.String" />, <see cref="T:System.Decimal" /> oder ein Array dieser Datentypen mit Ausnahme von <see cref="T:System.String" />, dies ist nicht zulässig.</param>
+        <summary>Fügt eine benutzerdefinierte Eigenschaft, die <see cref="T:System.Windows.Ink.Stroke" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist nützlich, wenn Sie zusätzliche Informationen speichern müssen die <xref:System.Windows.Ink.Stroke>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Hinzufügen eine benutzerdefinierte Eigenschaft eine <xref:System.Windows.Ink.Stroke> Objekt.  
+  
+ [!code-csharp[StrokeSnippets#3](~/samples/snippets/csharp/VS_Snippets_Wpf/StrokeSnippets/CSharp/MyBorder.cs#3)]
+ [!code-vb[StrokeSnippets#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StrokeSnippets/VisualBasic/MyBorder.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="propertyData" /> Argument ist keiner der zulässigen Datentypen aufgeführt, die der <see langword="Parameters" /> Abschnitt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Ink.Stroke Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Ink.Stroke Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.Stroke.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Ink.Stroke</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine tiefe Kopie des vorhandenen <see cref="T:System.Windows.Ink.Stroke" /> Objekt.</summary>
+        <returns>Das neue <see cref="T:System.Windows.Ink.Stroke" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Eigenschaften eines Objekts, das eine tiefe Kopie eines anderen Objekts ist, haben die gleichen Werte wie die Eigenschaften des ursprünglichen Objekts.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie eine Kopie des aktuellen <xref:System.Windows.Ink.Stroke> Objekt.  
+  
+ [!code-csharp[StrokeSnippets#5](~/samples/snippets/csharp/VS_Snippets_Wpf/StrokeSnippets/CSharp/MyBorder.cs#5)]
+ [!code-vb[StrokeSnippets#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StrokeSnippets/VisualBasic/MyBorder.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsPropertyData">
+      <MemberSignature Language="C#" Value="public bool ContainsPropertyData (Guid propertyDataId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ContainsPropertyData(valuetype System.Guid propertyDataId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.Stroke.ContainsPropertyData(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyDataId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="propertyDataId">Der eindeutige Bezeichner für die Eigenschaft.</param>
+        <summary>Gibt einen Wert, der angibt, ob die <see cref="T:System.Windows.Ink.Stroke" /> Objekt enthält die angegebene benutzerdefinierte Eigenschaft.</summary>
+        <returns>Gibt <see langword="true" /> , wenn die benutzerdefinierte Eigenschaft vorhanden ist; andernfalls wird <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, um zu bestimmen, ob ein <xref:System.Windows.Ink.Stroke> Objekt verfügt über eine benutzerdefinierte Eigenschaft.  
+  
+ [!code-csharp[StrokeSnippets#3](~/samples/snippets/csharp/VS_Snippets_Wpf/StrokeSnippets/CSharp/MyBorder.cs#3)]
+ [!code-vb[StrokeSnippets#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StrokeSnippets/VisualBasic/MyBorder.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Draw">
+      <MemberSignature Language="C#" Value="public void Draw (System.Windows.Media.DrawingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Draw(class System.Windows.Media.DrawingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.Stroke.Draw(System.Windows.Media.DrawingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Windows.Media.DrawingContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Das <see cref="T:System.Windows.Media.DrawingContext" />-Objekt, in dem der Strich gerendert wird.</param>
+        <summary>Rendert das <see cref="T:System.Windows.Ink.Stroke" />-Objekt basierend auf dem angegebenen <see cref="T:System.Windows.Media.DrawingContext" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie Zeichnen einer <xref:System.Windows.Ink.Stroke> -Objekt mithilfe einer <xref:System.Windows.Media.DrawingContext>.  
+  
+ [!code-csharp[DrawTransform#1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawTransform/CSharp/Program.cs#1)]
+ [!code-vb[DrawTransform#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DrawTransform/VisualBasic/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Draw">
+      <MemberSignature Language="C#" Value="public void Draw (System.Windows.Media.DrawingContext drawingContext, System.Windows.Ink.DrawingAttributes drawingAttributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Draw(class System.Windows.Media.DrawingContext drawingContext, class System.Windows.Ink.DrawingAttributes drawingAttributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.Stroke.Draw(System.Windows.Media.DrawingContext,System.Windows.Ink.DrawingAttributes)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="drawingContext" Type="System.Windows.Media.DrawingContext" />
+        <Parameter Name="drawingAttributes" Type="System.Windows.Ink.DrawingAttributes" />
+      </Parameters>
+      <Docs>
+        <param name="drawingContext">Das <see cref="T:System.Windows.Media.DrawingContext" />-Objekt, in dem der Strich gerendert wird.</param>
+        <param name="drawingAttributes">Die <see cref="T:System.Windows.Ink.DrawingAttributes" /> Objekt definieren Sie die Attribute der Kontur, die gezeichnet wird.</param>
+        <summary>Rendert die <see cref="T:System.Windows.Ink.Stroke" /> Objekt auf Grundlage des angegebenen <see cref="T:System.Windows.Media.DrawingContext" /> und <see cref="T:System.Windows.Ink.DrawingAttributes" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie Zeichnen einer <xref:System.Windows.Ink.Stroke> -Objekt mithilfe einer <xref:System.Windows.Media.DrawingContext> und <xref:System.Windows.Ink.DrawingAttributes>.  
+  
+ [!code-csharp[DrawTransform#2](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawTransform/CSharp/Program.cs#2)]
+ [!code-vb[DrawTransform#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DrawTransform/VisualBasic/Module1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawCore">
+      <MemberSignature Language="C#" Value="protected virtual void DrawCore (System.Windows.Media.DrawingContext drawingContext, System.Windows.Ink.DrawingAttributes drawingAttributes);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void DrawCore(class System.Windows.Media.DrawingContext drawingContext, class System.Windows.Ink.DrawingAttributes drawingAttributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.Stroke.DrawCore(System.Windows.Media.DrawingContext,System.Windows.Ink.DrawingAttributes)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="drawingContext" Type="System.Windows.Media.DrawingContext" />
+        <Parameter Name="drawingAttributes" Type="System.Windows.Ink.DrawingAttributes" />
+      </Parameters>
+      <Docs>
+        <param name="drawingContext">Das <see cref="T:System.Windows.Media.DrawingContext" />-Objekt, in dem der Strich gerendert wird.</param>
+        <param name="drawingAttributes">Die <see cref="T:System.Windows.Ink.DrawingAttributes" /> Objekt definieren Sie die Attribute der Kontur, die gezeichnet wird.</param>
+        <summary>Rendert die <see cref="T:System.Windows.Ink.Stroke" /> auf dem angegebenen <see cref="T:System.Windows.Media.DrawingContext" /> unter Verwendung des angegebenen <see cref="T:System.Windows.Ink.DrawingAttributes" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überschreiben Sie die <xref:System.Windows.Ink.Stroke.DrawCore%2A> Methode, um benutzerdefinierte Zeichnung zu erstellen, wenn Sie Vererben der <xref:System.Windows.Ink.Stroke> Klasse.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Zeichnen eines Kreises an jedem <xref:System.Windows.Input.StylusPoint> von einem <xref:System.Windows.Ink.Stroke>. Wenn die <xref:System.Windows.Ink.DrawingAttributes.FitToCurve%2A> -Eigenschaftensatz auf `true`, die <xref:System.Windows.Ink.Stroke.GetBezierStylusPoints%2A> wird verwendet, um den Tablettstift Punkten zu erhalten. Andernfalls die <xref:System.Windows.Ink.Stroke.StylusPoints%2A> Eigenschaft wird verwendet.  
+  
+ [!code-csharp[StrokeSnippets#23](~/samples/snippets/csharp/VS_Snippets_Wpf/StrokeSnippets/CSharp/MyStroke.cs#23)]
+ [!code-vb[StrokeSnippets#23](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StrokeSnippets/VisualBasic/MyStroke.vb#23)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawingAttributes">
+      <MemberSignature Language="C#" Value="public System.Windows.Ink.DrawingAttributes DrawingAttributes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Ink.DrawingAttributes DrawingAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Ink.Stroke.DrawingAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Ink.DrawingAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.Ink.DrawingAttributes" /> für die <see cref="T:System.Windows.Ink.Stroke" /> Objekt.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Attribute, z. B. Farbe und Breite, gelten für die <xref:System.Windows.Ink.Stroke> Objekt, wie es gezeichnet wird.  
+  
+ Ändern von <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> bewirkt, dass die <xref:System.Windows.Ink.Stroke.DrawingAttributesChanged> Ereignis ausgelöst.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> , ein Strich grün dargestellt.  
+  
+ [!code-csharp[StrokeSnippets#7](~/samples/snippets/csharp/VS_Snippets_Wpf/StrokeSnippets/CSharp/MyBorder.cs#7)]
+ [!code-vb[StrokeSnippets#7](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StrokeSnippets/VisualBasic/MyBorder.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der festgelegte Wert ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawingAttributesChanged">
+      <MemberSignature Language="C#" Value="public event System.Windows.Ink.PropertyDataChangedEventHandler DrawingAttributesChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Ink.PropertyDataChangedEventHandler DrawingAttributesChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Ink.Stroke.DrawingAttributesChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Ink.PropertyDataChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die <see cref="P:System.Windows.Ink.Stroke.DrawingAttributes" /> zugeordneten der <see cref="T:System.Windows.Ink.Stroke" /> -Objekt ändern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Ink.PropertyDataChangedEventArgs> enthält Informationen über die geänderte Eigenschaft. Sie vergleichen, können die <xref:System.Windows.Ink.PropertyDataChangedEventArgs.PropertyGuid%2A> Eigenschaft für die Mitglieder der <xref:System.Windows.Ink.DrawingAttributeIds> um festzustellen, welcher Wert geändert wurde.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht einen Handler für dieses Ereignis hinzuzufügen.  
+  
+ [!code-csharp[StrokeSnippets#8](~/samples/snippets/csharp/VS_Snippets_Wpf/StrokeSnippets/CSharp/MyBorder.cs#8)]
+ [!code-vb[StrokeSnippets#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StrokeSnippets/VisualBasic/MyBorder.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawingAttributesReplaced">
+      <MemberSignature Language="C#" Value="public event System.Windows.Ink.DrawingAttributesReplacedEventHandler DrawingAttributesReplaced;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Ink.DrawingAttributesReplacedEventHandler DrawingAttributesReplaced" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Ink.Stroke.DrawingAttributesReplaced" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Ink.DrawingAttributesReplacedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Zeichnungsattribute eines ein <see cref="T:System.Windows.Ink.Stroke" /> Objekt ersetzt werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht einen Handler für dieses Ereignis hinzuzufügen.  
+  
+ [!code-csharp[StrokeSnippets#9](~/samples/snippets/csharp/VS_Snippets_Wpf/StrokeSnippets/CSharp/MyBorder.cs#9)]
+ [!code-vb[StrokeSnippets#9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StrokeSnippets/VisualBasic/MyBorder.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBezierStylusPoints">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.StylusPointCollection GetBezierStylusPoints ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Input.StylusPointCollection GetBezierStylusPoints() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.Stroke.GetBezierStylusPoints" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusPointCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Tablettstift Punkten der <see cref="T:System.Windows.Ink.Stroke" /> verwendet, wenn <see cref="P:System.Windows.Ink.DrawingAttributes.FitToCurve" /> ist <see langword="true" />.</summary>
+        <returns>Ein <see cref="T:System.Windows.Input.StylusPointCollection" /> , enthält die Tablettstiftpunkte entlang der Achse eines eine <see cref="T:System.Windows.Ink.Stroke" /> Wenn <see cref="P:System.Windows.Ink.DrawingAttributes.FitToCurve" /> ist<see langword="true" /></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Ink.Stroke.GetBezierStylusPoints%2A> Methode gibt ein neues <xref:System.Windows.Input.StylusPointCollection> , enthält den Tablettstift verweist, die die <xref:System.Windows.Ink.Stroke> verwendet, wenn die <xref:System.Windows.Ink.DrawingAttributes.FitToCurve%2A> Eigenschaft auf die <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> -Eigenschaftensatz auf `true`.  Der Tablettstiftpunkte zu erzielen, die verwendet wird, wenn <xref:System.Windows.Ink.DrawingAttributes.FitToCurve%2A> auf festgelegt ist `false`, verwenden Sie die <xref:System.Windows.Ink.Stroke.StylusPoints%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Zeichnen eines Kreises an jedem <xref:System.Windows.Input.StylusPoint> von einem <xref:System.Windows.Ink.Stroke>. Wenn die <xref:System.Windows.Ink.DrawingAttributes.FitToCurve%2A> -Eigenschaftensatz auf `true`, die <xref:System.Windows.Ink.Stroke.GetBezierStylusPoints%2A> wird verwendet, um den Tablettstift Punkten zu erhalten. Andernfalls die <xref:System.Windows.Ink.Stroke.StylusPoints%2A> Eigenschaft wird verwendet.  
+  
+ [!code-csharp[StrokeSnippets#23](~/samples/snippets/csharp/VS_Snippets_Wpf/StrokeSnippets/CSharp/MyStroke.cs#23)]
+ [!code-vb[StrokeSnippets#23](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StrokeSnippets/VisualBasic/MyStroke.vb#23)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBounds">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Rect GetBounds ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Windows.Rect GetBounds() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.Stroke.GetBounds" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das umgebende Feld für die <see cref="T:System.Windows.Ink.Stroke" /> Objekt.</summary>
+        <returns>Ein <see cref="T:System.Windows.Rect" /> Struktur definieren, das umgebende Feld für die <see cref="T:System.Windows.Ink.Stroke" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie das Begrenzungsrechteck für Abrufen einer <xref:System.Windows.Ink.Stroke> Objekt.  
+  
+ [!code-csharp[StrokeSnippets#11](~/samples/snippets/csharp/VS_Snippets_Wpf/StrokeSnippets/CSharp/MyBorder.cs#11)]
+ [!code-vb[StrokeSnippets#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StrokeSnippets/VisualBasic/MyBorder.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClipResult">
+      <MemberSignature Language="C#" Value="public System.Windows.Ink.StrokeCollection GetClipResult (System.Collections.Generic.IEnumerable&lt;System.Windows.Point&gt; lassoPoints);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Ink.StrokeCollection GetClipResult(class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Windows.Point&gt; lassoPoints) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.Stroke.GetClipResult(System.Collections.Generic.IEnumerable{System.Windows.Point})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Ink.StrokeCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lassoPoints" Type="System.Collections.Generic.IEnumerable&lt;System.Windows.Point&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="lassoPoints">Die Punkte, die die Zeile an, die definiert, wo Sie zugeschnitten werden soll.</param>
+        <summary>Gibt die Segmente des aktuellen <see cref="T:System.Windows.Ink.Stroke" /> , die innerhalb der angegebenen Grenzen sind.</summary>
+        <returns>Ein <see cref="T:System.Windows.Ink.StrokeCollection" /> , die Kopien der Segmente des aktuellen enthält <see cref="T:System.Windows.Ink.Stroke" /> , die innerhalb der angegebenen Grenzen sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Ink.Stroke.GetClipResult%2A> Methode gibt ein <xref:System.Windows.Ink.StrokeCollection> , Striche, die die Segmente des darstellen enthält die <xref:System.Windows.Ink.Stroke> , der sich im `lassoPoints`. <xref:System.Windows.Ink.Stroke.GetClipResult%2A>ändert sich nicht auf die ursprüngliche <xref:System.Windows.Ink.Stroke>.  
+  
+ Die <xref:System.Windows.Ink.Stroke.GetClipResult%2A> Methode verbindet die erste und letzte Punkt in `lassoPoints` Lasso zu erstellen.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird die Freihandeingabe entfernt, die außerhalb der angegebenen Grenzen liegt.  
+  
+ [!code-csharp[HitTestSample#6](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestSample/CSharp/Program.cs#6)]
+ [!code-vb[HitTestSample#6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestSample/VisualBasic/Module1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClipResult">
+      <MemberSignature Language="C#" Value="public System.Windows.Ink.StrokeCollection GetClipResult (System.Windows.Rect bounds);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Ink.StrokeCollection GetClipResult(valuetype System.Windows.Rect bounds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.Stroke.GetClipResult(System.Windows.Rect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Ink.StrokeCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bounds" Type="System.Windows.Rect" />
+      </Parameters>
+      <Docs>
+        <param name="bounds">Ein <see cref="T:System.Windows.Rect" /> , das den Bereich Clip angibt.</param>
+        <summary>Gibt die Segmente des aktuellen <see cref="T:System.Windows.Ink.Stroke" /> , die innerhalb des angegebenen Rechtecks sind.</summary>
+        <returns>Ein <see cref="T:System.Windows.Ink.StrokeCollection" /> , die Kopien der Segmente des aktuellen enthält <see cref="T:System.Windows.Ink.Stroke" /> , die innerhalb der Grenzen sind <paramref name="bounds" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Ink.Stroke.GetClipResult%2A> Methode gibt ein <xref:System.Windows.Ink.StrokeCollection> , Striche, die die Segmente des darstellen enthält die <xref:System.Windows.Ink.Stroke> , der sich im `bounds`. <xref:System.Windows.Ink.Stroke.GetClipResult%2A>ändert sich nicht auf die ursprüngliche <xref:System.Windows.Ink.Stroke>.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird die Freihandeingabe entfernt, die außerhalb der angegebenen Grenzen liegt.  
+  
+ [!code-csharp[HitTestSample#5](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestSample/CSharp/Program.cs#5)]
+ [!code-vb[HitTestSample#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestSample/VisualBasic/Module1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEraseResult">
+      <MemberSignature Language="C#" Value="public System.Windows.Ink.StrokeCollection GetEraseResult (System.Collections.Generic.IEnumerable&lt;System.Windows.Point&gt; lassoPoints);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Ink.StrokeCollection GetEraseResult(class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Windows.Point&gt; lassoPoints) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.Stroke.GetEraseResult(System.Collections.Generic.IEnumerable{System.Windows.Point})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Ink.StrokeCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lassoPoints" Type="System.Collections.Generic.IEnumerable&lt;System.Windows.Point&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="lassoPoints">Ein Array vom Typ <see cref="T:System.Windows.Point" /> , die zu löschenden Bereich angibt.</param>
+        <summary>Gibt die Segmente des aktuellen <see cref="T:System.Windows.Ink.Stroke" /> , die sich außerhalb der angegebenen Grenzen.</summary>
+        <returns>Ein <see cref="T:System.Windows.Ink.StrokeCollection" /> , enthält die Segmente des aktuellen <see cref="T:System.Windows.Ink.Stroke" /> , die sich außerhalb der angegebenen Grenzen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Ink.Stroke.GetEraseResult%2A> Methode gibt ein <xref:System.Windows.Ink.StrokeCollection> , Striche, die die Segmente des darstellen enthält die <xref:System.Windows.Ink.Stroke> , sind außerhalb des `lassoPoints`. <xref:System.Windows.Ink.Stroke.GetEraseResult%2A>ändert sich nicht auf die ursprüngliche <xref:System.Windows.Ink.Stroke>.  
+  
+ Die <xref:System.Windows.Ink.Stroke.GetClipResult%2A> Methode verbindet die erste und letzte Punkt in `lassoPoints` Lasso zu erstellen.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird die Freihandeingabe entfernt, die innerhalb der angegebenen Grenzen liegt.  
+  
+ [!code-csharp[HitTestSample#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestSample/CSharp/Program.cs#1)]
+ [!code-vb[HitTestSample#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestSample/VisualBasic/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEraseResult">
+      <MemberSignature Language="C#" Value="public System.Windows.Ink.StrokeCollection GetEraseResult (System.Windows.Rect bounds);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Ink.StrokeCollection GetEraseResult(valuetype System.Windows.Rect bounds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.Stroke.GetEraseResult(System.Windows.Rect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Ink.StrokeCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bounds" Type="System.Windows.Rect" />
+      </Parameters>
+      <Docs>
+        <param name="bounds">Ein <see cref="T:System.Windows.Rect" /> , die zu löschenden Bereich angibt.</param>
+        <summary>Gibt die Segmente des aktuellen <see cref="T:System.Windows.Ink.Stroke" /> , die sich außerhalb des angegebenen Rechtecks.</summary>
+        <returns>Ein <see cref="T:System.Windows.Ink.StrokeCollection" /> , enthält die Segmente des aktuellen <see cref="T:System.Windows.Ink.Stroke" /> , die sich außerhalb der Grenzen des angegebenen <see cref="T:System.Windows.Rect" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Ink.Stroke.GetEraseResult%2A> Methode gibt ein <xref:System.Windows.Ink.StrokeCollection> , Striche, die die Segmente des darstellen enthält die <xref:System.Windows.Ink.Stroke> , sind außerhalb des `bounds`. <xref:System.Windows.Ink.Stroke.GetEraseResult%2A>ändert sich nicht auf die ursprüngliche <xref:System.Windows.Ink.Stroke>.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird die Freihandeingabe entfernt, die innerhalb der angegebenen Grenzen liegt.  
+  
+ [!code-csharp[HitTestSample#4](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestSample/CSharp/Program.cs#4)]
+ [!code-vb[HitTestSample#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestSample/VisualBasic/Module1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEraseResult">
+      <MemberSignature Language="C#" Value="public System.Windows.Ink.StrokeCollection GetEraseResult (System.Collections.Generic.IEnumerable&lt;System.Windows.Point&gt; eraserPath, System.Windows.Ink.StylusShape eraserShape);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Ink.StrokeCollection GetEraseResult(class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Windows.Point&gt; eraserPath, class System.Windows.Ink.StylusShape eraserShape) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.Stroke.GetEraseResult(System.Collections.Generic.IEnumerable{System.Windows.Point},System.Windows.Ink.StylusShape)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Ink.StrokeCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eraserPath" Type="System.Collections.Generic.IEnumerable&lt;System.Windows.Point&gt;" />
+        <Parameter Name="eraserShape" Type="System.Windows.Ink.StylusShape" />
+      </Parameters>
+      <Docs>
+        <param name="eraserPath">Ein Array vom Typ <see cref="T:System.Windows.Point" /> , die den Pfad, der den überschneidet gibt die <see cref="T:System.Windows.Ink.Stroke" />.</param>
+        <param name="eraserShape">Ein <see cref="T:System.Windows.Ink.StylusShape" /> , die die Form des Radierer angibt.</param>
+        <summary>Gibt die Segmente des aktuellen <see cref="T:System.Windows.Ink.Stroke" /> nachdem er mit dem angegebenen Pfad, unter Verwendung des angegebenen geschnitten wurde <see cref="T:System.Windows.Ink.StylusShape" />.</summary>
+        <returns>Ein <see cref="T:System.Windows.Ink.StrokeCollection" /> , die Kopien der Segmente des aktuellen enthält <see cref="T:System.Windows.Ink.Stroke" /> nachdem er mit dem angegebenen Pfad geschnitten wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Ink.Stroke.GetEraseResult%2A> -Methode verwendet `eraserShape` drückt, testen Sie den Strich am `eraserPath` und gibt eine <xref:System.Windows.Ink.StrokeCollection> geschnittene Segmente darstellt. <xref:System.Windows.Ink.Stroke.GetEraseResult%2A>ändert sich nicht auf die ursprüngliche <xref:System.Windows.Ink.Stroke>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie Freihand gelöscht wird, die einen angegebenen Pfad überschneidet.  
+  
+ [!code-csharp[HitTestSample#2](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestSample/CSharp/Program.cs#2)]
+ [!code-vb[HitTestSample#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestSample/VisualBasic/Module1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGeometry">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Geometry GetGeometry ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Geometry GetGeometry() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.Stroke.GetGeometry" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Geometry</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft <see cref="T:System.Windows.Media.Geometry" /> für die aktuelle <see cref="T:System.Windows.Ink.Stroke" /> ab.</summary>
+        <returns>Ein <see cref="T:System.Windows.Media.Geometry" /> darstellt, die die <see cref="T:System.Windows.Ink.Stroke" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Ink.Stroke.GetGeometry%2A> Methode zum Abrufen einer <xref:System.Windows.Media.PathGeometry> die Form des Anpassen der <xref:System.Windows.Ink.Stroke>. Zwischenspeichern der <xref:System.Windows.Media.Geometry> zur Vermeidung von Aufrufen <xref:System.Windows.Ink.Stroke.GetGeometry%2A> mehrmals, kann die Leistung beeinträchtigen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGeometry">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Geometry GetGeometry (System.Windows.Ink.DrawingAttributes drawingAttributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Geometry GetGeometry(class System.Windows.Ink.DrawingAttributes drawingAttributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.Stroke.GetGeometry(System.Windows.Ink.DrawingAttributes)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Geometry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="drawingAttributes" Type="System.Windows.Ink.DrawingAttributes" />
+      </Parameters>
+      <Docs>
+        <param name="drawingAttributes">Die <see cref="T:System.Windows.Ink.DrawingAttributes" /> , bestimmt die <see cref="T:System.Windows.Media.Geometry" /> von der <see cref="T:System.Windows.Ink.Stroke" />.</param>
+        <summary>Ruft die <see cref="T:System.Windows.Media.Geometry" /> des aktuellen <see cref="T:System.Windows.Ink.Stroke" /> unter Verwendung des angegebenen <see cref="T:System.Windows.Ink.DrawingAttributes" />.</summary>
+        <returns>Ein <see cref="T:System.Windows.Media.Geometry" /> darstellt, die die <see cref="T:System.Windows.Ink.Stroke" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Ink.Stroke.GetGeometry%2A> -Methode verwendet die <xref:System.Windows.Ink.DrawingAttributes.Width%2A>, <xref:System.Windows.Ink.DrawingAttributes.Height%2A>, <xref:System.Windows.Ink.DrawingAttributes.FitToCurve%2A>, <xref:System.Windows.Ink.DrawingAttributes.StylusTip%2A> und <xref:System.Windows.Ink.DrawingAttributes.StylusTipTransform%2A> Eigenschaften des `drawingAttributes` bestimmen die <xref:System.Windows.Media.Geometry>. Zwischenspeichern der <xref:System.Windows.Media.Geometry> zur Vermeidung von Aufrufen <xref:System.Windows.Ink.Stroke.GetGeometry%2A> mehrmals, kann die Leistung beeinträchtigen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Zeichnen eines Kreises an jedem <xref:System.Windows.Input.StylusPoint> von einem <xref:System.Windows.Ink.Stroke>. Wenn die <xref:System.Windows.Ink.DrawingAttributes.FitToCurve%2A> -Eigenschaftensatz auf `true`, die <xref:System.Windows.Ink.Stroke.GetBezierStylusPoints%2A> wird verwendet, um den Tablettstift Punkten zu erhalten. Andernfalls die <xref:System.Windows.Ink.Stroke.StylusPoints%2A> Eigenschaft wird verwendet.  
+  
+ [!code-csharp[StrokeSnippets#23](~/samples/snippets/csharp/VS_Snippets_Wpf/StrokeSnippets/CSharp/MyStroke.cs#23)]
+ [!code-vb[StrokeSnippets#23](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StrokeSnippets/VisualBasic/MyStroke.vb#23)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyData">
+      <MemberSignature Language="C#" Value="public object GetPropertyData (Guid propertyDataId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetPropertyData(valuetype System.Guid propertyDataId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.Stroke.GetPropertyData(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyDataId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="propertyDataId">Der eindeutige Bezeichner für die Eigenschaft.</param>
+        <summary>Ruft die Daten für die angegebene GUID ab.</summary>
+        <returns>Eine <see langword="object" /> , die die Daten enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie eine benutzerdefinierte Eigenschaft Abrufen einer <xref:System.Windows.Ink.Stroke> Objekt.  
+  
+ [!code-csharp[StrokeSnippets#3](~/samples/snippets/csharp/VS_Snippets_Wpf/StrokeSnippets/CSharp/MyBorder.cs#3)]
+ [!code-vb[StrokeSnippets#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StrokeSnippets/VisualBasic/MyBorder.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="propertyDataId" />ist nicht mit einer benutzerdefinierten Eigenschaft verknüpft die <see cref="T:System.Windows.Ink.Stroke" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyDataIds">
+      <MemberSignature Language="C#" Value="public Guid[] GetPropertyDataIds ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Guid[] GetPropertyDataIds() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.Stroke.GetPropertyDataIds" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die GUIDs der zugeordneten benutzerdefinierten Eigenschaften der <see cref="T:System.Windows.Ink.Stroke" /> Objekt.</summary>
+        <returns>Ein Array von <see cref="T:System.Guid" />-Objekten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die GUIDs der benutzerdefinierten Eigenschaften eines Strichs abgerufen wird.  
+  
+ [!code-csharp[DrawTransform#3](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawTransform/CSharp/Program.cs#3)]
+ [!code-vb[DrawTransform#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DrawTransform/VisualBasic/Module1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="HitTest">
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gibt zurück, ob die <see cref="T:System.Windows.Ink.Stroke" /> überschneidet oder innerhalb eines bestimmten Bereichs liegt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die <xref:System.Windows.Ink.Stroke.HitTest%2A> Methoden, um zu bestimmen, ob eine <xref:System.Windows.Ink.Stroke> einen bestimmten Punkt schneidet oder liegt innerhalb der angegebenen Grenzen.  
+  
+ Die folgenden Methoden überprüfen, ob die <xref:System.Windows.Ink.Stroke> geschnitten wird.  
+  
+-   <xref:System.Windows.Ink.Stroke.HitTest%28System.Windows.Point%29?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Ink.Stroke.HitTest%28System.Windows.Point%2CSystem.Double%29?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Ink.Stroke.HitTest%28System.Collections.Generic.IEnumerable%7BSystem.Windows.Point%7D%2CSystem.Windows.Ink.StylusShape%29?displayProperty=nameWithType>  
+  
+ Die folgenden Methoden überprüfen, ob die <xref:System.Windows.Ink.Stroke> umgeben ist.  
+  
+-   <xref:System.Windows.Ink.Stroke.HitTest%28System.Collections.Generic.IEnumerable%7BSystem.Windows.Point%7D%2CSystem.Int32%29?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Ink.Stroke.HitTest%28System.Windows.Rect%2CSystem.Int32%29?displayProperty=nameWithType>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="HitTest">
+      <MemberSignature Language="C#" Value="public bool HitTest (System.Windows.Point point);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HitTest(valuetype System.Windows.Point point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.Stroke.HitTest(System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="point">Das <see cref="T:System.Windows.Point" />-Element, für das ein Treffertest durchgeführt werden soll.</param>
+        <summary>Gibt einen Wert, der angibt, ob der aktuelle <see cref="T:System.Windows.Ink.Stroke" /> den angegebenen Punkt überschneidet.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="point" /> den aktuellen Strich überschneidet, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode verhält sich genauso wie die überladene <xref:System.Windows.Ink.Stroke.HitTest%28System.Windows.Point%2CSystem.Double%29> Methode hat beim `diameter` ist 1.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel ändert sich die Farbe einer <xref:System.Windows.Ink.Stroke> , wenn es sich um einen bestimmten Bereich überschneidet.  
+  
+ [!code-csharp[HitTestSample#3](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestSample/CSharp/Program.cs#3)]
+ [!code-vb[HitTestSample#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestSample/VisualBasic/Module1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HitTest">
+      <MemberSignature Language="C#" Value="public bool HitTest (System.Collections.Generic.IEnumerable&lt;System.Windows.Point&gt; lassoPoints, int percentageWithinLasso);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HitTest(class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Windows.Point&gt; lassoPoints, int32 percentageWithinLasso) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.Stroke.HitTest(System.Collections.Generic.IEnumerable{System.Windows.Point},System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lassoPoints" Type="System.Collections.Generic.IEnumerable&lt;System.Windows.Point&gt;" />
+        <Parameter Name="percentageWithinLasso" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="lassoPoints">Ein Array vom Typ <see cref="T:System.Windows.Point" /> die Begrenzung des Bereichs, den ein Treffertest darstellt.</param>
+        <param name="percentageWithinLasso">Der Prozentsatz der Länge der <see cref="T:System.Windows.Ink.Stroke" />, in sein muss <c>LassoPoints</c> für die <see cref="T:System.Windows.Ink.Stroke" /> Treffer angesehen.</param>
+        <summary>Gibt einen Wert, der angibt, ob die aktuelle <see cref="T:System.Windows.Ink.Stroke" /> innerhalb der angegebenen Grenzen liegt.</summary>
+        <returns>
+          <see langword="true" />Wenn der aktuelle Strich innerhalb der angegebenen Grenzen befindet; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Ink.Stroke.HitTest%2A> Methode verbindet die erste und letzte Punkt in `lassoPoints` Lasso zu erstellen.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird einen Strich violett gerendert, ist mindestens 80 % des Strichs innerhalb der Grenzen des `myPoints`.  
+  
+ [!code-csharp[HitTestSample#7](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestSample/CSharp/Program.cs#7)]
+ [!code-vb[HitTestSample#7](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestSample/VisualBasic/Module1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HitTest">
+      <MemberSignature Language="C#" Value="public bool HitTest (System.Collections.Generic.IEnumerable&lt;System.Windows.Point&gt; path, System.Windows.Ink.StylusShape stylusShape);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HitTest(class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Windows.Point&gt; path, class System.Windows.Ink.StylusShape stylusShape) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.Stroke.HitTest(System.Collections.Generic.IEnumerable{System.Windows.Point},System.Windows.Ink.StylusShape)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.Collections.Generic.IEnumerable&lt;System.Windows.Point&gt;" />
+        <Parameter Name="stylusShape" Type="System.Windows.Ink.StylusShape" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Pfad, <c>StylusShape</c> folgt für Treffertests</param>
+        <param name="stylusShape">Die Form des <c>Pfad</c> mit dem ein Treffertest ausgeführt.</param>
+        <summary>Gibt zurück, ob der angegebene Pfad schneidet die <see cref="T:System.Windows.Ink.Stroke" /> unter Verwendung des angegebenen <see cref="T:System.Windows.Ink.StylusShape" />.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="stylusShape" /> den aktuellen Strich überschneidet, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Ink.Stroke.HitTest%2A> -Methode verwendet `stylusShape` drückt, testen Sie den Strich am `eraserPath`.  
+  
+   
+  
+## Examples  
+ Der folgende Code wird einen Strich violett gerendert, wenn die Kontur den Pfad der überschneidet `myPoints`.  
+  
+ [!code-csharp[HitTestSample#9](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestSample/CSharp/Program.cs#9)]
+ [!code-vb[HitTestSample#9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestSample/VisualBasic/Module1.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HitTest">
+      <MemberSignature Language="C#" Value="public bool HitTest (System.Windows.Point point, double diameter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HitTest(valuetype System.Windows.Point point, float64 diameter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.Stroke.HitTest(System.Windows.Point,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Point" />
+        <Parameter Name="diameter" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="point">Die <see cref="T:System.Windows.Point" /> , definiert die Mitte des Bereichs für den ein Treffertest ausgeführt.</param>
+        <param name="diameter">Der Durchmesser des Bereichs für den ein Treffertest ausgeführt werden soll.</param>
+        <summary>Gibt einen Wert, der angibt, ob der aktuelle <see cref="T:System.Windows.Ink.Stroke" /> den angegebenen Bereich überschneidet.</summary>
+        <returns>
+          <see langword="true" />Wenn der angegebene Bereich den aktuellen Strich überschneidet; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel ändert sich die Farbe einer <xref:System.Windows.Ink.Stroke> , wenn es sich um einen bestimmten Bereich überschneidet.  
+  
+ [!code-csharp[HitTestSample#3](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestSample/CSharp/Program.cs#3)]
+ [!code-vb[HitTestSample#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestSample/VisualBasic/Module1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HitTest">
+      <MemberSignature Language="C#" Value="public bool HitTest (System.Windows.Rect bounds, int percentageWithinBounds);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HitTest(valuetype System.Windows.Rect bounds, int32 percentageWithinBounds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.Stroke.HitTest(System.Windows.Rect,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bounds" Type="System.Windows.Rect" />
+        <Parameter Name="percentageWithinBounds" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="bounds">Ein <see cref="T:System.Windows.Rect" />, das die Begrenzungen des Treffertestbereichs darstellt.</param>
+        <param name="percentageWithinBounds">Der Prozentsatz der Länge der <see cref="T:System.Windows.Ink.Stroke" />, in sein muss <c>PercentageWithinBounds</c> für die <see cref="T:System.Windows.Ink.Stroke" /> Treffer angesehen...</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob der <see cref="T:System.Windows.Ink.Stroke" /> innerhalb der Grenzen des angegebenen Rechtecks liegt.</summary>
+        <returns>
+          <see langword="true" />, wenn der aktuelle Strich innerhalb der Grenzen der <paramref name="bounds" /> liegt; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird einen Strich violett gerendert, ist mindestens 80 % des Strichs innerhalb der <xref:System.Windows.Rect>.  
+  
+ [!code-csharp[HitTestSample#8](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestSample/CSharp/Program.cs#8)]
+ [!code-vb[HitTestSample#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestSample/VisualBasic/Module1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invalidated">
+      <MemberSignature Language="C#" Value="public event EventHandler Invalidated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Invalidated" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Ink.Stroke.Invalidated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Darstellung der <see cref="T:System.Windows.Ink.Stroke" /> Änderungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.InkPresenter> behandelt die <xref:System.Windows.Ink.Stroke.Invalidated> -Ereignis aus und ruft die <xref:System.Windows.Ink.Stroke.DrawCore%2A> Methode. Erben von der <xref:System.Windows.Ink.Stroke> Klasse und die Darstellung des Strichs basiert auf einem benutzerdefinierten Zustand, rufen Sie die <xref:System.Windows.Ink.Stroke.OnInvalidated%2A> Methode zum Auslösen der <xref:System.Windows.Ink.Stroke.Invalidated> Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDrawingAttributesChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnDrawingAttributesChanged (System.Windows.Ink.PropertyDataChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDrawingAttributesChanged(class System.Windows.Ink.PropertyDataChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.Stroke.OnDrawingAttributesChanged(System.Windows.Ink.PropertyDataChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Ink.PropertyDataChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die <see cref="T:System.Windows.Ink.PropertyDataChangedEventArgs" /> Objekt, das die Ereignisdaten enthält.</param>
+        <summary>Ermöglicht es abgeleiteten Klassen so ändern Sie das Standardverhalten der <see cref="E:System.Windows.Ink.Stroke.DrawingAttributesChanged" /> Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Methode in einer abgeleiteten Klasse überschreiben, rufen Sie die <xref:System.Windows.Ink.Stroke.OnDrawingAttributesChanged%2A> -Methode der Basisklasse, damit Delegaten registrierte das Ereignis empfangen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDrawingAttributesReplaced">
+      <MemberSignature Language="C#" Value="protected virtual void OnDrawingAttributesReplaced (System.Windows.Ink.DrawingAttributesReplacedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDrawingAttributesReplaced(class System.Windows.Ink.DrawingAttributesReplacedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.Stroke.OnDrawingAttributesReplaced(System.Windows.Ink.DrawingAttributesReplacedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Ink.DrawingAttributesReplacedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die <see cref="T:System.Windows.Ink.DrawingAttributesReplacedEventArgs" /> Objekt, das die Ereignisdaten enthält.</param>
+        <summary>Ermöglicht es abgeleiteten Klassen so ändern Sie das Standardverhalten der <see cref="E:System.Windows.Ink.Stroke.DrawingAttributesReplaced" /> Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Methode in einer abgeleiteten Klasse überschreiben, rufen Sie die <xref:System.Windows.Ink.Stroke.OnDrawingAttributesReplaced%2A> -Methode der Basisklasse, damit Delegaten registrierte das Ereignis empfangen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInvalidated">
+      <MemberSignature Language="C#" Value="protected virtual void OnInvalidated (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnInvalidated(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.Stroke.OnInvalidated(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Ink.Stroke.Invalidated" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erben von der <xref:System.Windows.Ink.Stroke> Klasse und die Darstellung des Strichs basiert auf einem benutzerdefinierten Zustand, rufen Sie die <xref:System.Windows.Ink.Stroke.OnInvalidated%2A> Methode zum Auslösen der <xref:System.Windows.Ink.Stroke.Invalidated> Ereignis. Die <xref:System.Windows.Controls.InkPresenter> behandelt die <xref:System.Windows.Ink.Stroke.Invalidated> -Ereignis aus und ruft die <xref:System.Windows.Ink.Stroke.DrawCore%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine <xref:System.Windows.Ink.Stroke> als durchgezogene Strich oder als eine Reihe von <xref:System.Windows.Input.StylusPoint> Objekte, abhängig von der `Mode` Eigenschaft. Im Beispiel wird die <xref:System.Windows.Ink.Stroke.OnInvalidated%2A> Methode, die ihrerseits die <xref:System.Windows.Ink.Stroke.DrawCore%2A> , in dem der Strich gezeichnet wird.  
+  
+ [!code-csharp[StrokeSnippets#24](~/samples/snippets/csharp/VS_Snippets_Wpf/StrokeSnippets/CSharp/CustomRenderedStroke.cs#24)]
+ [!code-vb[StrokeSnippets#24](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StrokeSnippets/VisualBasic/CustomRenderedStroke.vb#24)]  
+[!code-csharp[StrokeSnippets#25](~/samples/snippets/csharp/VS_Snippets_Wpf/StrokeSnippets/CSharp/CustomRenderedStroke.cs#25)]
+[!code-vb[StrokeSnippets#25](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StrokeSnippets/VisualBasic/CustomRenderedStroke.vb#25)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPropertyChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnPropertyChanged (System.ComponentModel.PropertyChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnPropertyChanged(class System.ComponentModel.PropertyChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.Stroke.OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.ComponentModel.PropertyChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten, die die geänderte Eigenschaft beschreibt, sowie die alten und neuen Werte.</param>
+        <summary>Tritt auf, wenn alle <see cref="T:System.Windows.Ink.Stroke" /> -Eigenschaft ändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPropertyDataChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnPropertyDataChanged (System.Windows.Ink.PropertyDataChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnPropertyDataChanged(class System.Windows.Ink.PropertyDataChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.Stroke.OnPropertyDataChanged(System.Windows.Ink.PropertyDataChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Ink.PropertyDataChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die <see cref="T:System.Windows.Ink.PropertyDataChangedEventArgs" /> Objekt, das die Ereignisdaten enthält.</param>
+        <summary>Ermöglicht es abgeleiteten Klassen so ändern Sie das Standardverhalten der <see cref="E:System.Windows.Ink.Stroke.PropertyDataChanged" /> Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Methode in einer abgeleiteten Klasse überschreiben, rufen Sie die <xref:System.Windows.Ink.Stroke.OnPropertyDataChanged%2A> -Methode der Basisklasse, damit Delegaten registrierte das Ereignis empfangen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStylusPointsChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnStylusPointsChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnStylusPointsChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.Stroke.OnStylusPointsChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Ink.Stroke.StylusPointsChanged" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStylusPointsReplaced">
+      <MemberSignature Language="C#" Value="protected virtual void OnStylusPointsReplaced (System.Windows.Ink.StylusPointsReplacedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnStylusPointsReplaced(class System.Windows.Ink.StylusPointsReplacedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.Stroke.OnStylusPointsReplaced(System.Windows.Ink.StylusPointsReplacedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Ink.StylusPointsReplacedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Ink.StylusPointsReplacedEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Ink.Stroke.StylusPointsReplaced" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyDataChanged">
+      <MemberSignature Language="C#" Value="public event System.Windows.Ink.PropertyDataChangedEventHandler PropertyDataChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Ink.PropertyDataChangedEventHandler PropertyDataChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Ink.Stroke.PropertyDataChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Ink.PropertyDataChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die benutzerdefinierten Eigenschaften auf eine <see cref="T:System.Windows.Ink.Stroke" /> Objekts ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht einen Handler für dieses Ereignis hinzuzufügen.  
+  
+ [!code-csharp[StrokeSnippets#20](~/samples/snippets/csharp/VS_Snippets_Wpf/StrokeSnippets/CSharp/MyBorder.cs#20)]
+ [!code-vb[StrokeSnippets#20](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StrokeSnippets/VisualBasic/MyBorder.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePropertyData">
+      <MemberSignature Language="C#" Value="public void RemovePropertyData (Guid propertyDataId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemovePropertyData(valuetype System.Guid propertyDataId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.Stroke.RemovePropertyData(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyDataId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="propertyDataId">Der eindeutige Bezeichner für die Eigenschaft.</param>
+        <summary>Löscht eine benutzerdefinierte Eigenschaft aus der <see cref="T:System.Windows.Ink.Stroke" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie eine benutzerdefinierte Eigenschaft Löschen einer <xref:System.Windows.Ink.Stroke> Objekt.  
+  
+ [!code-csharp[StrokeSnippets#30](~/samples/snippets/csharp/VS_Snippets_Wpf/StrokeSnippets/CSharp/MyBorder.cs#30)]
+ [!code-vb[StrokeSnippets#30](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StrokeSnippets/VisualBasic/MyBorder.vb#30)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylusPoints">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.StylusPointCollection StylusPoints { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.StylusPointCollection StylusPoints" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Ink.Stroke.StylusPoints" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusPointCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Tablettstift Punkten von der <see cref="T:System.Windows.Ink.Stroke" />.</summary>
+        <value>Die <see cref="T:System.Windows.Input.StylusPointCollection" /> , enthält der Tablettstiftpunkte, die das aktuelle darstellen <see cref="T:System.Windows.Ink.Stroke" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Tablettstiftpunkte zu erzielen, die verwendet wird, wenn der <xref:System.Windows.Ink.DrawingAttributes.FitToCurve%2A> Eigenschaft auf die <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> -Eigenschaftensatz auf `true`, verwenden die <xref:System.Windows.Ink.Stroke.GetBezierStylusPoints%2A> Methode.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Input.StylusPointCollection> zugewiesene der <xref:System.Windows.Ink.Stroke.StylusPoints%2A> Eigenschaft muss verfügen über mindestens einen <xref:System.Windows.Input.StylusPoint> darin.  Wenn Sie versuchen, eine leere zuzuweisen <xref:System.Windows.Input.StylusPointCollection> auf <xref:System.Windows.Ink.Stroke.StylusPoints%2A>, oder entfernen Sie alle der <xref:System.Windows.Input.StylusPoint> Objekte aus <xref:System.Windows.Ink.Stroke.StylusPoints%2A>, eine Ausnahme auftritt.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird eine überschriebene Teil <xref:System.Windows.Ink.Stroke> , zeichnet einen Kreis an jedem <xref:System.Windows.Input.StylusPoint>. Wenn die <xref:System.Windows.Ink.DrawingAttributes.FitToCurve%2A> -Eigenschaftensatz auf `true`, die <xref:System.Windows.Ink.Stroke.GetBezierStylusPoints%2A> wird verwendet, um den Tablettstift Punkten zu erhalten. Andernfalls die <xref:System.Windows.Ink.Stroke.StylusPoints%2A> Eigenschaft wird verwendet.  
+  
+ [!code-csharp[StrokeSnippets#23](~/samples/snippets/csharp/VS_Snippets_Wpf/StrokeSnippets/CSharp/MyStroke.cs#23)]
+ [!code-vb[StrokeSnippets#23](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StrokeSnippets/VisualBasic/MyStroke.vb#23)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylusPointsChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler StylusPointsChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler StylusPointsChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Ink.Stroke.StylusPointsChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich die <see cref="P:System.Windows.Ink.Stroke.StylusPoints" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Behandeln der <xref:System.Windows.Ink.Stroke.StylusPointsChanged> Ereignis.  
+  
+ [!code-csharp[StrokeSnippets#28](~/samples/snippets/csharp/VS_Snippets_Wpf/StrokeSnippets/CSharp/MyBorder.cs#28)]
+ [!code-vb[StrokeSnippets#28](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StrokeSnippets/VisualBasic/MyBorder.vb#28)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylusPointsReplaced">
+      <MemberSignature Language="C#" Value="public event System.Windows.Ink.StylusPointsReplacedEventHandler StylusPointsReplaced;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Ink.StylusPointsReplacedEventHandler StylusPointsReplaced" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Ink.Stroke.StylusPointsReplaced" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Ink.StylusPointsReplacedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die <see cref="P:System.Windows.Ink.Stroke.StylusPoints" /> Eigenschaft zugewiesen ist, ein neues <see cref="T:System.Windows.Input.StylusPointCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Behandeln der <xref:System.Windows.Ink.Stroke.StylusPointsReplaced> Ereignis.  
+  
+ [!code-csharp[StrokeSnippets#29](~/samples/snippets/csharp/VS_Snippets_Wpf/StrokeSnippets/CSharp/MyBorder.cs#29)]
+ [!code-vb[StrokeSnippets#29](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StrokeSnippets/VisualBasic/MyBorder.vb#29)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public virtual void Transform (System.Windows.Media.Matrix transformMatrix, bool applyToStylusTip);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Transform(valuetype System.Windows.Media.Matrix transformMatrix, bool applyToStylusTip) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.Stroke.Transform(System.Windows.Media.Matrix,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transformMatrix" Type="System.Windows.Media.Matrix" />
+        <Parameter Name="applyToStylusTip" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="transformMatrix">Die <see cref="T:System.Windows.Media.Matrix" /> Objekt, das die Transformation definiert.</param>
+        <param name="applyToStylusTip">
+          <see langword="true" />die Transformation an der Spitze des Tablettstifts angewendet; andernfalls <see langword="false" />.</param>
+        <summary>Führt eine Transformation auf Grundlage des angegebenen <see cref="T:System.Windows.Media.Matrix" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.Matrix> Objekt stellt eine 3 x 3-Matrix für Transformationen im zweidimensionalen Raum verwendet. Jeder Punkt des Stroke-Objekts wird mit der angegebenen Matrix transformiert. Z. B. wenn der ursprüngliche Point.X Wert 100 ist, wird der ursprüngliche Point.Y-Wert ist, 55, und die Transformation Matrix.Scale (0,5, 0,5), der neue Point.X Wert lautet "50" und des neue Point.Y Werts 27,5.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie zum Transformieren einer <xref:System.Windows.Ink.Stroke> Objekt.  
+  
+ [!code-csharp[DrawTransform#1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawTransform/CSharp/Program.cs#1)]
+ [!code-vb[DrawTransform#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DrawTransform/VisualBasic/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

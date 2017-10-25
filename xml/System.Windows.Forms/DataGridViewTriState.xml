@@ -1,0 +1,81 @@
+<Type Name="DataGridViewTriState" FullName="System.Windows.Forms.DataGridViewTriState">
+  <TypeSignature Language="C#" Value="public enum DataGridViewTriState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataGridViewTriState extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewTriState" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Definiert Werte für einen von drei mögliche Zustände angibt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataGridViewTriState> Enumeration ist nützlich, wenn ein dritter Zustand zusätzlich zu den zwei Zustände der benötigt wird die <xref:System.Boolean> Typ. Z. B. die <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A?displayProperty=nameWithType> -Eigenschaft ist vom Typ <xref:System.Windows.Forms.DataGridViewTriState> , damit eine <xref:System.Windows.Forms.DataGridViewCellStyle> Objekt kann keine Einstellung im Hinblick auf einen Zellenwert des Textumbruchs angeben und kann stattdessen angeben, die die <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A> Wert eines anderen <xref:System.Windows.Forms.DataGridViewCellStyle> Objekt sollte verwendet werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Typs.  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewMisc#074](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#074)]
+ [!code-vb[System.Windows.Forms.DataGridViewMisc#074](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#074)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="False">
+      <MemberSignature Language="C#" Value="False" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewTriState False = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewTriState.False" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewTriState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zustand der Eigenschaft ist <see langword="false" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotSet">
+      <MemberSignature Language="C#" Value="NotSet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewTriState NotSet = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewTriState.NotSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewTriState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Eigenschaft nicht festgelegt ist und verhält sich in einem Standardweise.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="True">
+      <MemberSignature Language="C#" Value="True" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewTriState True = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewTriState.True" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewTriState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zustand der Eigenschaft ist <see langword="true" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,91 @@
+<Type Name="TableLayoutStyle" FullName="System.Windows.Forms.TableLayoutStyle">
+  <TypeSignature Language="C#" Value="public abstract class TableLayoutStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TableLayoutStyle extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TableLayoutStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.TableLayoutSettings/StyleConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementiert die Grundfunktionen, die das Aussehen und Verhalten von einem Tabellenlayout darstellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TableLayoutStyle> Klasse ist eine allgemeine Basisklasse für die <xref:System.Windows.Forms.ColumnStyle> und <xref:System.Windows.Forms.RowStyle> Klassen, die das Aussehen und Verhalten von Zeilen und Spalten zu beschreiben, bzw. in einem <xref:System.Windows.Forms.TableLayoutPanel>.  
+  
+ Die Reihe von Formaten, die den aktuellen Spalten und Zeilen im aktuellen Tabellenlayout darstellen, werden aggregiert eine <xref:System.Windows.Forms.TableLayoutColumnStyleCollection> und <xref:System.Windows.Forms.TableLayoutRowStyleCollection>zugeordnet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TableLayoutStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutStyle.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.TableLayoutStyle" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist der Standardkonstruktor für die <xref:System.Windows.Forms.TableLayoutStyle> Klasse. Dabei wird tatsächlich festgelegt die <xref:System.Windows.Forms.SizeType> Eigenschaft <xref:System.Windows.Forms.SizeType.AutoSize>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SizeType">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.SizeType SizeType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.SizeType SizeType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TableLayoutStyle.SizeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.SizeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Flag fest, der angibt, wie eine Zeile oder Spalte relativ zum enthaltenden Tabelle angepasst werden soll.</summary>
+        <value>Eines der <see cref="T:System.Windows.Forms.SizeType" /> Werte, der angibt, wie Zeilen oder Spalten des Benutzers Benutzeroberflächenelemente (UI)-Schnittstelle relativ zu ihrem Container vergrößert werden soll. Die Standardeinstellung ist <see cref="F:System.Windows.Forms.SizeType.AutoSize" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Tabellenlayoutmodul Größe einer Zeile oder Spalte in einem der folgenden Methoden:  
+  
+-   Als absolute Anzahl von Pixeln (<xref:System.Windows.Forms.SizeType.Absolute>).  
+  
+-   Als Prozentsatz des übergeordneten Containers (<xref:System.Windows.Forms.SizeType.Percent>).  
+  
+-   Peers gleich Speicherplatz freigeben (<xref:System.Windows.Forms.SizeType.AutoSize>).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

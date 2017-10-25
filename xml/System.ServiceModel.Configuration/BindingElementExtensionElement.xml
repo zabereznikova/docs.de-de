@@ -1,0 +1,131 @@
+<Type Name="BindingElementExtensionElement" FullName="System.ServiceModel.Configuration.BindingElementExtensionElement">
+  <TypeSignature Language="C#" Value="public abstract class BindingElementExtensionElement : System.ServiceModel.Configuration.ServiceModelExtensionElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BindingElementExtensionElement extends System.ServiceModel.Configuration.ServiceModelExtensionElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.BindingElementExtensionElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Configuration.ServiceModelExtensionElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Aktiviert die Verwendung einer benutzerdefinierten <see cref="T:System.ServiceModel.Channels.BindingElement" />-Implementierung für einen Computer oder eine Anwendungskonfigurationsdatei.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es wird empfohlen, eine Ableitung von der <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>-Klasse durchzuführen, um eine benutzerdefinierte <xref:System.ServiceModel.Channels.BindingElement>-Implementierung der Konfigurationsdatei eines Computers oder einer Anwendung zu verwenden.  
+  
+ Nachdem eine <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>-Instanz erstellt wurde, wird ein benutzerdefiniertes Bindungselement zurückgegeben. Können Sie dies in einer Anwendungskonfigurationsdatei mithilfe der <`add`>-Element und der Einstellungstyp-Attribut auf die <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> Klasse und das Name-Attribut, das benutzerdefinierte Bindungselement.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BindingElementExtensionElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.BindingElementExtensionElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Configuration.BindingElementExtensionElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyConfiguration">
+      <MemberSignature Language="C#" Value="public virtual void ApplyConfiguration (System.ServiceModel.Channels.BindingElement bindingElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ApplyConfiguration(class System.ServiceModel.Channels.BindingElement bindingElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration(System.ServiceModel.Channels.BindingElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingElement" Type="System.ServiceModel.Channels.BindingElement" />
+      </Parameters>
+      <Docs>
+        <param name="bindingElement">Ein Bindungselement.</param>
+        <summary>Übernimmt den Inhalt eines angegebenen Bindungselements für dieses Bindungskonfigurationselement.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="bindingElement" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingElementType">
+      <MemberSignature Language="C#" Value="public abstract Type BindingElementType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type BindingElementType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.BindingElementExtensionElement.BindingElementType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse das <see cref="T:System.Type" />-Objekt ab, das das benutzerdefinierte Bindungselement darstellt.</summary>
+        <value>Ein <see cref="T:System.Type" />-Objekt, das den benutzerdefinierten Bindungstyp darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überschreiben und implementieren Sie die <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.BindingElementType%2A>-Eigenschaft, um den Typ des benutzerdefinierten Bindungselements zurückzugeben, der dem Konfigurationssystem von diesem <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> zugeordnet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBindingElement">
+      <MemberSignature Language="C#" Value="protected abstract System.ServiceModel.Channels.BindingElement CreateBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.ServiceModel.Channels.BindingElement CreateBindingElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt beim Überschreiben in einer abgeleiteten Klasse ein benutzerdefiniertes Bindungselementobjekt zurück.</summary>
+        <returns>Ein benutzerdefiniertes <see cref="T:System.ServiceModel.Channels.BindingElement" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeFrom">
+      <MemberSignature Language="C#" Value="protected virtual void InitializeFrom (System.ServiceModel.Channels.BindingElement bindingElement);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void InitializeFrom(class System.ServiceModel.Channels.BindingElement bindingElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.BindingElementExtensionElement.InitializeFrom(System.ServiceModel.Channels.BindingElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingElement" Type="System.ServiceModel.Channels.BindingElement" />
+      </Parameters>
+      <Docs>
+        <param name="bindingElement">Ein Bindungselement.</param>
+        <summary>Initialisiert den Bindungskonfigurationsabschnitt mit dem Inhalt des angegebenen Bindungselements.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

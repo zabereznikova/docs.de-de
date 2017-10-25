@@ -1,0 +1,170 @@
+<Type Name="JavaScriptConverter" FullName="System.Web.Script.Serialization.JavaScriptConverter">
+  <TypeSignature Language="C#" Value="public abstract class JavaScriptConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit JavaScriptConverter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Script.Serialization.JavaScriptConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine abstrakte Basisklasse für einen benutzerdefinierten Typkonverter bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Script.Serialization.JavaScriptConverter> -Klasse ermöglicht es Ihnen, implementieren die Serialisierung und Deserialisierung der Prozesse für verwaltete Typen, die keine systemeigene Unterstützung der <xref:System.Web.Script.Serialization.JavaScriptSerializer> Klasse. Sie können auch <xref:System.Web.Script.Serialization.JavaScriptConverter> Wenn Sie mehr Kontrolle über die Serialisierung und Deserialisierung benötigen.  
+  
+ Die <xref:System.Web.Script.Serialization.JavaScriptConverter.SupportedTypes%2A> -Eigenschaft gibt die Typen, die für den benutzerdefinierter Konverter Konverterdienste bereitstellt.  
+  
+ Um anzugeben, dass ein benutzerdefinierter Konverter von verwendet werden, muss die <xref:System.Web.Script.Serialization.JavaScriptSerializer> Instanz müssen Sie den Konverter bei der Instanz registrieren. Bei Verwendung der <xref:System.Web.Script.Serialization.JavaScriptSerializer> -Klasse direkt verwendet, sollten Sie mit der <xref:System.Web.Script.Serialization.JavaScriptSerializer.RegisterConverters%2A> Methode, um den Konverter zu registrieren. Andernfalls, wenn Sie Webmethoden von ECMAScript (JavaScript) aufrufen, und Sie den benutzerdefinierten Konverter verwenden möchten, können Sie ihn registrieren durch Hinzufügen einer `converters` Element in der Konfigurationsdatei. Weitere Informationen finden Sie unter [Vorgehensweise: Konfigurieren von ASP.NET Services in Microsoft Ajax](http://msdn.microsoft.com/library/ea4fb56e-bc1d-405a-9877-00cf5e552a30).  
+  
+ Wenn die <xref:System.Web.Script.Serialization.JavaScriptSerializer> serialisieren Instanz ein Typs für die, die es einen benutzerdefinierten Konverter registriert besitzt, ruft das Serialisierungsprogramm die <xref:System.Web.Script.Serialization.JavaScriptConverter.Serialize%2A> Methode. Auf ähnliche Weise, wenn die <xref:System.Web.Script.Serialization.JavaScriptSerializer> Instanz deserialisiert eine Zeichenfolge JavaScript Object Notation (JSON) und erkennt, dass ein Typ in der JSON-Zeichenfolge einen benutzerdefinierten Konverter zugeordnet, ruft das Serialisierungsprogramm hat die <xref:System.Web.Script.Serialization.JavaScriptConverter.Deserialize%2A> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie einen benutzerdefinierten Konverter zum Erstellen der <xref:System.Web.UI.WebControls.ListItemCollection> Klasse.  
+  
+ [!code-csharp[System.Web.Script.Serialization#2](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.Script.Serialization/CS/App_Code/ListItemCollectionConverter.cs#2)]
+ [!code-vb[System.Web.Script.Serialization#2](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.Script.Serialization/VB/App_Code/ListItemCollectionConverter.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Beim Erben von <see cref="T:System.Web.Script.Serialization.JavaScriptConverter" />, müssen Sie die folgenden Member überschreiben:  
+  
+-   <see cref="M:System.Web.Script.Serialization.JavaScriptConverter.Deserialize(System.Collections.Generic.IDictionary{System.String,System.Object},System.Type,System.Web.Script.Serialization.JavaScriptSerializer)" />  
+  
+-   <see cref="M:System.Web.Script.Serialization.JavaScriptConverter.Serialize(System.Object,System.Web.Script.Serialization.JavaScriptSerializer)" />  
+  
+-   <see cref="P:System.Web.Script.Serialization.JavaScriptConverter.SupportedTypes" /><see cref="T:System.Web.Script.Serialization.JavaScriptSerializer" />Stellt die <see cref="M:System.Web.Script.Serialization.JavaScriptSerializer.ConvertToType``1(System.Object)" /> -Methode, die verwendeten Implementierer <see cref="T:System.Web.Script.Serialization.JavaScriptConverter" />. Konvertercode muss einen Wert annehmen, der im Wörterbuch enthalten ist, die das Serialisierungsprogramm an sie übergibt, und konvertieren Sie diesen Wert in ein Objekt vom Typ <paramref name="T" />. Statt den Code benutzerdefinierte Konvertierung zu diesem Zweck neu zu implementieren, rufen Sie die <see cref="M:System.Web.Script.Serialization.JavaScriptSerializer.ConvertToType``1(System.Object)" /> Methode.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected JavaScriptConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Script.Serialization.JavaScriptConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Script.Serialization.JavaScriptConverter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deserialize">
+      <MemberSignature Language="C#" Value="public abstract object Deserialize (System.Collections.Generic.IDictionary&lt;string,object&gt; dictionary, Type type, System.Web.Script.Serialization.JavaScriptSerializer serializer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Deserialize(class System.Collections.Generic.IDictionary`2&lt;string, object&gt; dictionary, class System.Type type, class System.Web.Script.Serialization.JavaScriptSerializer serializer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Script.Serialization.JavaScriptConverter.Deserialize(System.Collections.Generic.IDictionary{System.String,System.Object},System.Type,System.Web.Script.Serialization.JavaScriptSerializer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dictionary" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="serializer" Type="System.Web.Script.Serialization.JavaScriptSerializer" />
+      </Parameters>
+      <Docs>
+        <param name="dictionary">Ein <see cref="T:System.Collections.Generic.IDictionary`2" /> Eigenschaft Dateninstanz, die als Name/Wert-Paare gespeichert.</param>
+        <param name="type">Der Typ des resultierenden Objekts.</param>
+        <param name="serializer">Die <see cref="T:System.Web.Script.Serialization.JavaScriptSerializer" />-Instanz.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse konvertiert das angegebene Wörterbuch in ein Objekt des angegebenen Typs.</summary>
+        <returns>Das deserialisierte Objekt.</returns>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Die <see cref="M:System.Web.Script.Serialization.JavaScriptConverter.Deserialize(System.Collections.Generic.IDictionary{System.String,System.Object},System.Type,System.Web.Script.Serialization.JavaScriptSerializer)" /> Methode durchläuft die Werte in der <paramref name="dictionary" /> Parameter So erstellen Sie eine Instanz des Typs im angeforderten der <paramref name="type" /> Parameter. Ein Konverter kann Werte direkt verwenden <paramref name="dictionary" />, es wird empfohlen, dass die Implementierung des Konverters verwenden die <see cref="M:System.Web.Script.Serialization.JavaScriptSerializer.ConvertToType``1(System.Object)" /> Methode stattdessen. Der Konverter sollten diese Methode aufrufen, die <see cref="T:System.Web.Script.Serialization.JavaScriptSerializer" /> Instanz, die von der <paramref name="serializer" /> Parameter.  
+  
+ Die <see cref="M:System.Web.Script.Serialization.JavaScriptSerializer.ConvertToType``1(System.Object)" /> Methode ermöglicht Konverter übergeben Sie einen Eigenschaftswert aus <paramref name="dictionary" />, und klicken Sie dann den Wert der erwartete Typ zurück. In einigen Fällen möglicherweise ein Konverter für einen benutzerdefinierten Typ mit Eigenschaften, die selbst Konverter registriert haben arbeiten (z. B. Geben Sie einen verfügt über eine Eigenschaft vom Typ B und Typ B ist auch einen benutzerdefinierten Konverter zugeordnet). In diesem Fall aufrufen <see cref="M:System.Web.Script.Serialization.JavaScriptSerializer.ConvertToType``1(System.Object)" /> wird sichergestellt, dass benutzerdefinierte Konverter können rekursiv aufgerufen werden, für die Daten, die im Wörterbuch enthalten ist. Wenn Sie alle Einträge im Wörterbuch vom Konverter durchlaufen hat, wird eine konstruierte Instanz des Zieltyps zurückgegeben.  
+  
+ Wenn der Konverter während der Deserialisierung ein Problem auftritt, lösen sie eine <see cref="T:System.InvalidOperationException" /> Fehler, der das Problem beschreibt.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IDictionary&lt;string,object&gt; Serialize (object obj, System.Web.Script.Serialization.JavaScriptSerializer serializer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; Serialize(object obj, class System.Web.Script.Serialization.JavaScriptSerializer serializer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Script.Serialization.JavaScriptConverter.Serialize(System.Object,System.Web.Script.Serialization.JavaScriptSerializer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="serializer" Type="System.Web.Script.Serialization.JavaScriptSerializer" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das zu serialisierende Objekt.</param>
+        <param name="serializer">Das Objekt, das für die Serialisierung verantwortlich ist.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse erstellt ein Wörterbuch von Name/Wert-Paaren.</summary>
+        <returns>Ein Objekt, das Schlüssel/Wert-Paare enthält, die Daten für das Objekt darstellen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Serialisieren eines Typs, für den benutzerdefinierter Konverter registriert ist, die <xref:System.Web.Script.Serialization.JavaScriptSerializer> Instanz ruft die <xref:System.Web.Script.Serialization.JavaScriptConverter.Serialize%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Der Rückgabewert der <see cref="M:System.Web.Script.Serialization.JavaScriptConverter.Serialize(System.Object,System.Web.Script.Serialization.JavaScriptSerializer)" /> muss ein <see cref="T:System.Collections.Generic.IDictionary`2" /> -Instanz mit NULL oder mehr Name/Wert-Paare, die darstellen, die Daten eines Objekts in JSON konvertiert werden. Der Konverter selbst ist Daten nicht als JSON serialisiert werden. Stattdessen erstellt der Konverter ein Wörterbuch von Name/Wert-Paaren, das die Eigenschaftennamen (für das Wörterbuch der Zeichenfolgenschlüssel ") und die entsprechende Eigenschaft enthalten, Werte (die Objektwert im Wörterbuch). Die <see cref="T:System.Web.Script.Serialization.JavaScriptSerializer" /> Instanz anschließend diese in JSON konvertiert.  
+  
+ Wenn der Konverter eine Ausnahme auftritt, lösen sie eine <see cref="T:System.InvalidOperationException" /> Fehler, der das Problem beschreibt.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportedTypes">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IEnumerable&lt;Type&gt; SupportedTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class System.Type&gt; SupportedTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Script.Serialization.JavaScriptConverter.SupportedTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Type&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft eine Auflistung der unterstützten Typen ab.</summary>
+        <value>Ein Objekt, das implementiert <see cref="T:System.Collections.Generic.IEnumerable`1" /> , die vom Konverter unterstützten Typen darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Script.Serialization.JavaScriptConverter.SupportedTypes%2A> Eigenschaft führt die Objekttypen auf, die vom Konverter unterstützt werden. Zur Laufzeit eine <xref:System.Web.Script.Serialization.JavaScriptSerializer> Instanz verwendet diese Eigenschaft, um die Zuordnung von verwalteten Typen an den entsprechenden benutzerdefinierten Konvertern zu bestimmen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Überschreiben der <xref:System.Web.Script.Serialization.JavaScriptConverter.SupportedTypes%2A> Eigenschaft in einer abgeleiteten Klasse. In diesem Beispiel wird der Konverter unterstützt nur die <xref:System.Web.UI.WebControls.ListItemCollection> Typ. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.Script.Serialization.JavaScriptConverter> Klasse.  
+  
+ [!code-csharp[System.Web.Script.Serialization#3](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.Script.Serialization/CS/App_Code/ListItemCollectionConverter.cs#3)]
+ [!code-vb[System.Web.Script.Serialization#3](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.Script.Serialization/VB/App_Code/ListItemCollectionConverter.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see cref="P:System.Web.Script.Serialization.JavaScriptConverter.SupportedTypes" />muss immer zurückgeben, eine Auflistung und der Sammlung muss mindestens einen Eintrag enthalten.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

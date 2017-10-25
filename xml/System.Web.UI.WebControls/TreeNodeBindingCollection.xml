@@ -1,0 +1,592 @@
+<Type Name="TreeNodeBindingCollection" FullName="System.Web.UI.WebControls.TreeNodeBindingCollection">
+  <TypeSignature Language="C#" Value="public sealed class TreeNodeBindingCollection : System.Web.UI.StateManagedCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TreeNodeBindingCollection extends System.Web.UI.StateManagedCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.TreeNodeBindingCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.StateManagedCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Auflistung von <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekte in der <see cref="T:System.Web.UI.WebControls.TreeView" /> Steuerelement. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.TreeNodeBindingCollection> Klasse dient zum Speichern und verwalten eine Auflistung von <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekte in der <xref:System.Web.UI.WebControls.TreeView> Steuerelement. Die <xref:System.Web.UI.WebControls.TreeView> steuern verwendet der <xref:System.Web.UI.WebControls.TreeNodeBindingCollection> -Klasse für die <xref:System.Web.UI.WebControls.TreeView.DataBindings%2A> Eigenschaft.  
+  
+ Die <xref:System.Web.UI.WebControls.TreeView.DataBindings%2A> Eigenschaft enthält <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekten, definieren die Beziehung zwischen einem Datenelement und dem Knoten, die es gebunden ist. Beim Binden an eine Datenquelle, in dem jedes Datenelement enthält mehrere Eigenschaften (z. B. ein XML-Element mit mehreren Attributen), eines Knotens zeigt den Wert an, die von zurückgegeben wird die `ToString` Methode des Datenelements in der Standardeinstellung. Im Fall einer XML-Element zeigt der Knoten der Elementname, die die zugrunde liegende Struktur der Struktur zeigt, aber ist andernfalls nicht sehr sinnvoll. Sie können einen Knoten für eine bestimmte Daten Item-Eigenschaft binden, indem Sie die Struktur Knoten Bindungen angeben. Obwohl die <xref:System.Web.UI.WebControls.TreeView.DataBindings%2A> Auflistung programmgesteuert gefüllt werden kann, in der Regel deklarativ festgelegt.  
+  
+ Die Struktur der Knoten Bindungen festlegen deklarativ:  
+  
+1.  Öffnende und schließende schachteln `<DataBindings>` zwischen dem Start- und Endtag des Tags der <xref:System.Web.UI.WebControls.TreeView> Steuerelement.  
+  
+2.  Ort `<asp:TreeNodeBinding>` Elemente zwischen den öffnenden und schließenden `<DataBindings>` Tags für jede Struktur Knoten Bindung, die Sie angeben möchten.  
+  
+ Sie können programmgesteuert verwaltet eine <xref:System.Web.UI.WebControls.TreeNodeBindingCollection> durch Hinzufügen und Entfernen von <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekte. Hinzufügen einer <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt zur Auflistung wird unter Verwendung der <xref:System.Web.UI.WebControls.TreeNodeBindingCollection.Add%2A> oder <xref:System.Web.UI.WebControls.TreeNodeBindingCollection.Insert%2A> Methode. Verwenden Sie zum Entfernen von Knoten aus der Auflistung der <xref:System.Web.UI.WebControls.TreeNodeBindingCollection.Remove%2A>, <xref:System.Web.UI.WebControls.TreeNodeBindingCollection.RemoveAt%2A>, oder <xref:System.Web.UI.StateManagedCollection.Clear%2A?displayProperty=nameWithType> Methode.  
+  
+ Die <xref:System.Web.UI.WebControls.TreeNodeBindingCollection> -Klasse unterstützt mehrere Möglichkeiten, auf die Elemente in der Auflistung zuzugreifen:  
+  
+-   Verwenden der <xref:System.Web.UI.WebControls.TreeNodeBindingCollection.Item%2A> Indexer zum Abrufen einer <xref:System.Web.UI.WebControls.TreeNode> Objekt direkt am angegebenen nullbasierten Index.  
+  
+-   Verwenden der <xref:System.Web.UI.StateManagedCollection.GetEnumerator%2A?displayProperty=nameWithType> Methode zum Erstellen eines Enumerators, der zum Durchlaufen der Auflistung verwendet werden kann.  
+  
+   
+  
+## Examples  
+ Dieser Abschnitt enthält zwei Codebeispiele. Im ersten Codebeispiel wird veranschaulicht, wie zum Auffüllen einer <xref:System.Web.UI.WebControls.TreeNodeBindingCollection> deklarativ-Objekt. Im zweiten Codebeispiel wird veranschaulicht, wie zum Auffüllen einer <xref:System.Web.UI.WebControls.TreeNodeBindingCollection> -Objekt programmgesteuert.  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Auffüllen einer <xref:System.Web.UI.WebControls.TreeNodeBindingCollection> deklarativ-Objekt. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die XML-Daten kopieren, die sich am Ende dieses Abschnitts in einer Datei namens Book.xml befindet.  
+  
+ [!code-aspx-csharp[TreeViewXml#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeViewXml/CS/treeviewxmlcs.aspx#1)]
+ [!code-aspx-vb[TreeViewXml#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeViewXml/VB/treeviewxmlvb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Auffüllen einer <xref:System.Web.UI.WebControls.TreeNodeBindingCollection> -Objekt programmgesteuert. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die Beispiel-XML-Daten kopieren, die sich am Ende dieses Abschnitts in einer Datei namens Book.xml befindet.  
+  
+ [!code-aspx-csharp[TreeViewCtor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeViewCtor/CS/treeviewctorcs.aspx#1)]
+ [!code-aspx-vb[TreeViewCtor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeViewCtor/VB/treeviewctorvb.aspx#1)]  
+  
+ Im folgenden finden die XML-Daten für die vorherigen Codebeispiele.  
+  
+```  
+<Book Title="Book Title">  
+    <Chapter Heading="Chapter 1">  
+       <Section Heading="Section 1">  
+       </Section>  
+       <Section Heading="Section 2">  
+       </Section>  
+    </Chapter>  
+    <Chapter Heading="Chapter 2">  
+        <Section Heading="Section 1">  
+        </Section>  
+    </Chapter>  
+</Book>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Web.UI.WebControls.TreeNodeBinding binding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Web.UI.WebControls.TreeNodeBinding binding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNodeBindingCollection.Add(System.Web.UI.WebControls.TreeNodeBinding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binding" Type="System.Web.UI.WebControls.TreeNodeBinding" />
+      </Parameters>
+      <Docs>
+        <param name="binding">Die <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> , angefügt werden soll.</param>
+        <summary>Fügt das angegebene <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt an das Ende der <see cref="T:System.Web.UI.WebControls.TreeNodeBindingCollection" /> Objekt.</summary>
+        <returns>Der nullbasierte Index der Position des hinzugefügten <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> in der <see cref="T:System.Web.UI.WebControls.TreeNodeBindingCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TreeNodeBindingCollection.Add%2A> -Methode, um den angegebenen <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt an das Ende der <xref:System.Web.UI.WebControls.TreeNodeBindingCollection> Objekt.  
+  
+ Als Alternative können Sie einfügen können eine <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt in der <xref:System.Web.UI.WebControls.TreeNodeBindingCollection> an einem bestimmten Index mithilfe der <xref:System.Web.UI.WebControls.TreeNodeBindingCollection.Insert%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeBindingCollection.Add%2A> Methode zum Hinzufügen einer neuen <xref:System.Web.UI.WebControls.TreeNodeBinding> -Objekt programmgesteuert ein <xref:System.Web.UI.WebControls.TreeNodeBindingCollection> Objekt. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die XML-Daten kopieren, die sich am Ende dieses Abschnitts in einer Datei namens Book.xml befindet.  
+  
+ [!code-aspx-csharp[TreeNodeBindingCollectionAdd#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeBindingCollectionAdd/CS/treenodebindingcollectionaddcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeBindingCollectionAdd#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeBindingCollectionAdd/VB/treenodebindingcollectionaddvb.aspx#1)]  
+  
+ Im folgenden finden die XML-Daten für das vorhergehende Codebeispiel.  
+  
+```  
+<Book Title="Book Title">  
+    <Chapter Heading="Chapter 1">  
+        <Section Heading="Section 1"  
+            Subject="Subject 1">  
+        </Section>  
+        <Section Heading="Section 2"  
+            Subject="Subject 1">  
+        </Section>  
+    </Chapter>  
+    <Chapter Heading="Chapter 2">  
+        <Section Heading="Section 1"  
+            Subject="Subject 1">  
+        </Section>  
+    </Chapter>  
+</Book>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Web.UI.WebControls.TreeNodeBinding binding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Web.UI.WebControls.TreeNodeBinding binding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNodeBindingCollection.Contains(System.Web.UI.WebControls.TreeNodeBinding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binding" Type="System.Web.UI.WebControls.TreeNodeBinding" />
+      </Parameters>
+      <Docs>
+        <param name="binding">Das zu suchende <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" />.</param>
+        <summary>Bestimmt, ob das angegebene <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt befindet sich in der Auflistung.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> befindet sich in der Auflistung befindet, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TreeNodeBindingCollection.Contains%2A> Methode, um zu bestimmen, ob eine <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt befindet sich der <xref:System.Web.UI.WebControls.TreeNodeBindingCollection> Objekt. Diese Methode wird häufig verwendet, um das Vorhandensein einer <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt vor dem Ausführen einer Aufgabe, wie das Hinzufügen oder Entfernen einer <xref:System.Web.UI.WebControls.TreeNodeBinding> aus der Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.UI.WebControls.TreeNodeBinding[] bindingArray, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.UI.WebControls.TreeNodeBinding[] bindingArray, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNodeBindingCollection.CopyTo(System.Web.UI.WebControls.TreeNodeBinding[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingArray" Type="System.Web.UI.WebControls.TreeNodeBinding[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="bindingArray">Ein nullbasiertes Array von <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekten, empfängt die kopierten Elemente aus, der <see cref="T:System.Web.UI.WebControls.TreeNodeBindingCollection" />.</param>
+        <param name="index">Die Position im <c>BindingArray</c> an dem Empfang des kopierten Inhalts beginnen.</param>
+        <summary>Kopiert alle Elemente aus der <see cref="T:System.Web.UI.WebControls.TreeNodeBindingCollection" /> Objekt in ein kompatibles eindimensionales Array von <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> -Objekten, beginnend am angegebenen Index im Zielarray.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TreeNodeBindingCollection.CopyTo%2A> Methode zum Kopieren der Inhalte der <xref:System.Web.UI.WebControls.TreeNodeBindingCollection> -Objekt in `bindingArray`. Elemente werden kopiert, beginnend am `index`. Das Array können dann die Elemente zugreifen kann, in der Auflistung.  
+  
+ Als Alternative können Sie die <xref:System.Web.UI.StateManagedCollection.GetEnumerator%2A> Methode, um einen Enumerator zu erstellen, die Zugriff auf die Elemente in der Auflistung verwendet werden kann.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeBindingCollection.CopyTo%2A> Methode zum Kopieren der Inhalte der <xref:System.Web.UI.WebControls.TreeView.DataBindings%2A> -Auflistung in ein Array.  
+  
+ [!code-aspx-csharp[TreeNodeBindingCollectionCopyTo#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeBindingCollectionCopyTo/CS/treenodebindingcollectioncopytocs.aspx#1)]
+ [!code-aspx-vb[TreeNodeBindingCollectionCopyTo#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeBindingCollectionCopyTo/VB/treenodebindingcollectioncopytovb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateKnownType">
+      <MemberSignature Language="C#" Value="protected override object CreateKnownType (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object CreateKnownType(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNodeBindingCollection.CreateKnownType(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKnownTypes">
+      <MemberSignature Language="C#" Value="protected override Type[] GetKnownTypes ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Type[] GetKnownTypes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNodeBindingCollection.GetKnownTypes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.UI.WebControls.TreeNodeBinding binding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Web.UI.WebControls.TreeNodeBinding binding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNodeBindingCollection.IndexOf(System.Web.UI.WebControls.TreeNodeBinding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binding" Type="System.Web.UI.WebControls.TreeNodeBinding" />
+      </Parameters>
+      <Docs>
+        <param name="binding">Die zu suchende <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" />.</param>
+        <summary>Bestimmt den Index des angegebenen <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt in der Auflistung.</summary>
+        <returns>Der nullbasierte Index des ersten Vorkommens des <paramref name="binding" /> innerhalb der <see cref="T:System.Web.UI.WebControls.TreeNodeBindingCollection" />, sofern gefunden, andernfalls -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TreeNodeBindingCollection.IndexOf%2A> -Methode bestimmt den nullbasierten Index des angegebenen <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt in der <xref:System.Web.UI.WebControls.TreeNodeBindingCollection> Objekt. Wenn der Knoten nicht in der Auflistung vorhanden ist, gibt die Methode-1 zurück.  
+  
+> [!NOTE]
+>  Wenn das angegebene <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt wird mehrfach angezeigt, in der Auflistung, wird der Index des ersten Vorkommens zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Web.UI.WebControls.TreeNodeBinding binding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Web.UI.WebControls.TreeNodeBinding binding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNodeBindingCollection.Insert(System.Int32,System.Web.UI.WebControls.TreeNodeBinding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="binding" Type="System.Web.UI.WebControls.TreeNodeBinding" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die nullbasierte Indexposition, an dem Einfügen der <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" />.</param>
+        <param name="binding">Der einzufügende <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" />.</param>
+        <summary>Fügt das angegebene <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> -Objekt in der <see cref="T:System.Web.UI.WebControls.TreeNodeBindingCollection" /> Objekt an der angegebenen Indexposition.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TreeNodeBindingCollection.Insert%2A> Methode, um den angegebenen einfügen <xref:System.Web.UI.WebControls.TreeNodeBinding> -Objekt in der <xref:System.Web.UI.WebControls.TreeNodeBindingCollection> am Objekt `index`.  
+  
+ Als Alternative können Sie Anfügen einer <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt an das Ende der <xref:System.Web.UI.WebControls.TreeNodeBindingCollection> mithilfe der <xref:System.Web.UI.WebControls.TreeNodeBindingCollection.Add%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeBindingCollection.Insert%2A> aufzurufende Methode fügen Sie eine neue <xref:System.Web.UI.WebControls.TreeNodeBinding> -Objekt programmgesteuert in einem <xref:System.Web.UI.WebControls.TreeNodeBindingCollection> Objekt. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die XML-Daten kopieren, die sich am Ende dieses Abschnitts in einer Datei namens Book.xml befindet.  
+  
+ [!code-aspx-csharp[TreeNodeBindingCollectionInsert#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeBindingCollectionInsert/CS/treenodebindingcollectioninsertcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeBindingCollectionInsert#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeBindingCollectionInsert/VB/treenodebindingcollectioninsertvb.aspx#1)]  
+  
+ Im folgenden finden die XML-Daten für das vorhergehende Codebeispiel.  
+  
+```  
+<Book Title="Book Title">  
+    <Chapter Heading="Chapter 1">  
+        <Section Heading="Section 1"  
+            Subject="Subject 1">  
+        </Section>  
+        <Section Heading="Section 2"  
+            Subject="Subject 1">  
+        </Section>  
+    </Chapter>  
+    <Chapter Heading="Chapter 2">  
+        <Section Heading="Section 1"  
+            Subject="Subject 1">  
+        </Section>  
+    </Chapter>  
+</Book>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.TreeNodeBinding this[int i] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.TreeNodeBinding Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNodeBindingCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TreeNodeBinding</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">Der nullbasierte Index des der <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> abgerufen.</param>
+        <summary>Ruft ab oder legt die <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt am angegebenen Index in die <see cref="T:System.Web.UI.WebControls.TreeNodeBindingCollection" /> Objekt.</summary>
+        <value>Die <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> am angegebenen Index in die <see cref="T:System.Web.UI.WebControls.TreeNodeBindingCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TreeNodeBindingCollection.Item%2A> Indexer auf eine <xref:System.Web.UI.WebControls.TreeNodeBinding> -Objekt aus der <xref:System.Web.UI.WebControls.TreeNodeBindingCollection> -Objekt am `i` mithilfe der Arraynotation. Die <xref:System.Web.UI.WebControls.TreeNodeBindingCollection.Item%2A> Indexer können Sie zum Ändern oder Ersetzen einer <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt in der Auflistung direkt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeBindingCollection.Item%2A> Indexer für die Elemente Zugriff auf die in einem <xref:System.Web.UI.WebControls.TreeNodeBindingCollection> Objekt. Die <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt für die Knoten der dritten Ebene wird programmgesteuert mit neuen Werten aktualisiert. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die XML-Daten kopieren, die sich am Ende dieses Abschnitts in einer Datei namens Book.xml befindet.  
+  
+ [!code-aspx-csharp[TreeNodeBindingCollectionIndexer#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeBindingCollectionIndexer/CS/treenodebindingcollectionindexercs.aspx#1)]
+ [!code-aspx-vb[TreeNodeBindingCollectionIndexer#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeBindingCollectionIndexer/VB/treenodebindingcollectionindexervb.aspx#1)]  
+  
+ Im folgenden finden die XML-Daten für das vorhergehende Codebeispiel.  
+  
+```  
+<Book Title="Book Title">  
+    <Chapter Heading="Chapter 1">  
+        <Section Heading="Section 1"  
+            Subject="Subject 1">  
+        </Section>  
+        <Section Heading="Section 2"  
+            Subject="Subject 1">  
+        </Section>  
+    </Chapter>  
+    <Chapter Heading="Chapter 2">  
+        <Section Heading="Section 1"  
+            Subject="Subject 1">  
+        </Section>  
+    </Chapter>  
+</Book>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClear">
+      <MemberSignature Language="C#" Value="protected override void OnClear ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNodeBindingCollection.OnClear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRemoveComplete">
+      <MemberSignature Language="C#" Value="protected override void OnRemoveComplete (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRemoveComplete(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNodeBindingCollection.OnRemoveComplete(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnValidate">
+      <MemberSignature Language="C#" Value="protected override void OnValidate (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnValidate(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNodeBindingCollection.OnValidate(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.UI.WebControls.TreeNodeBinding binding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Web.UI.WebControls.TreeNodeBinding binding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNodeBindingCollection.Remove(System.Web.UI.WebControls.TreeNodeBinding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binding" Type="System.Web.UI.WebControls.TreeNodeBinding" />
+      </Parameters>
+      <Docs>
+        <param name="binding">Das zu entfernende <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" />-Element.</param>
+        <summary>Entfernt das angegebene <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> -Objekt aus der <see cref="T:System.Web.UI.WebControls.TreeNodeBindingCollection" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TreeNodeBindingCollection.Remove%2A> Methode entfernen Sie die angegebene <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt aus der Auflistung. Alle Elemente, die auf diesem Knoten folgen, werden dann nach oben verschoben, um leere Position auszufüllen. Auch werden die Indizes der verschobenen Elemente aktualisiert.  
+  
+ Als Alternative können Sie einen Knoten an einem bestimmten Index mit Entfernen der <xref:System.Web.UI.WebControls.TreeNodeBindingCollection.RemoveAt%2A> Methode. Sie können auch jeder Knoten entfernen, in der Auflistung mit den <xref:System.Web.UI.StateManagedCollection.Clear%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeBindingCollection.Remove%2A> -Methode zum Entfernen einer <xref:System.Web.UI.WebControls.TreeNodeBinding> -Objekt programmgesteuert aus einem <xref:System.Web.UI.WebControls.TreeNodeBindingCollection> Objekt. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die XML-Daten kopieren, die sich am Ende dieses Abschnitts in einer Datei namens Book.xml befindet.  
+  
+ [!code-aspx-csharp[TreeNodeBindingCollectionAdd#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeBindingCollectionAdd/CS/treenodebindingcollectionaddcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeBindingCollectionAdd#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeBindingCollectionAdd/VB/treenodebindingcollectionaddvb.aspx#1)]  
+  
+ Im folgenden finden die XML-Daten für das vorhergehende Codebeispiel.  
+  
+```  
+<Book Title="Book Title">  
+    <Chapter Heading="Chapter 1">  
+        <Section Heading="Section 1"  
+            Subject="Subject 1">  
+        </Section>  
+        <Section Heading="Section 2"  
+            Subject="Subject 1">  
+        </Section>  
+    </Chapter>  
+    <Chapter Heading="Chapter 2">  
+        <Section Heading="Section 1"  
+            Subject="Subject 1">  
+        </Section>  
+    </Chapter>  
+</Book>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNodeBindingCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die nullbasierte Indexposition des der <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> zu entfernen.</param>
+        <summary>Entfernt die <see cref="T:System.Web.UI.WebControls.TreeNodeBinding" /> Objekt an der angegebenen Indexposition aus der <see cref="T:System.Web.UI.WebControls.TreeNodeBindingCollection" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TreeNodeBindingCollection.RemoveAt%2A> -Methode zum Entfernen der <xref:System.Web.UI.WebControls.TreeNodeBinding> -Objekt am `index` aus einem <xref:System.Web.UI.WebControls.TreeNodeBindingCollection> Objekt. Alle Elemente, die auf diesem Knoten folgen, werden dann nach oben verschoben, um leere Position auszufüllen. Auch werden die Indizes der verschobenen Elemente aktualisiert.  
+  
+ Als Alternative können Sie einen bestimmten entfernen <xref:System.Web.UI.WebControls.TreeNodeBinding> Objekt mithilfe der <xref:System.Web.UI.WebControls.TreeNodeBindingCollection.Remove%2A> Methode. Sie können auch jeder Knoten in der Auflistung entfernen, mit der <xref:System.Web.UI.StateManagedCollection.Clear%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TreeNodeBindingCollection.RemoveAt%2A> -Methode zum Entfernen einer <xref:System.Web.UI.WebControls.TreeNodeBinding> -Objekt programmgesteuert aus einem <xref:System.Web.UI.WebControls.TreeNodeBindingCollection> Objekt. Für dieses Beispiel ordnungsgemäß funktioniert müssen Sie die XML-Daten kopieren, die sich am Ende dieses Abschnitts in einer Datei namens Book.xml befindet.  
+  
+ [!code-aspx-csharp[TreeNodeBindingCollectionInsert#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeNodeBindingCollectionInsert/CS/treenodebindingcollectioninsertcs.aspx#1)]
+ [!code-aspx-vb[TreeNodeBindingCollectionInsert#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeNodeBindingCollectionInsert/VB/treenodebindingcollectioninsertvb.aspx#1)]  
+  
+ Im folgenden finden die XML-Daten für das vorhergehende Codebeispiel.  
+  
+```  
+<Book Title="Book Title">  
+    <Chapter Heading="Chapter 1">  
+        <Section Heading="Section 1"  
+            Subject="Subject 1">  
+        </Section>  
+        <Section Heading="Section 2"  
+            Subject="Subject 1">  
+        </Section>  
+    </Chapter>  
+    <Chapter Heading="Chapter 2">  
+        <Section Heading="Section 1"  
+            Subject="Subject 1">  
+        </Section>  
+    </Chapter>  
+</Book>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDirtyObject">
+      <MemberSignature Language="C#" Value="protected override void SetDirtyObject (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetDirtyObject(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNodeBindingCollection.SetDirtyObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

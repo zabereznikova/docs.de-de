@@ -1,0 +1,1548 @@
+<Type Name="XhtmlControlAdapter" FullName="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter">
+  <TypeSignature Language="C#" Value="public class XhtmlControlAdapter : System.Web.UI.MobileControls.Adapters.ControlAdapter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XhtmlControlAdapter extends System.Web.UI.MobileControls.Adapters.ControlAdapter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.MobileControls.Adapters.ControlAdapter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Steuerelement-Standardadapter für mobile Rendern von Steuerelementen in XHTML-Markup bereit. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse stellt einen Basissteuerelement mobile-Adapter, der ein Steuerelement und alle untergeordneten Elemente im XHTML-Markup für mobile Geräte rendert. Darüber hinaus Hilfsmethoden und allgemeine Eigenschaften für abgeleitete mobile XHTML-Steuerelementadapter.  
+  
+ Steuerelementadapter sind Komponenten, die bestimmte überschreiben <xref:System.Web.UI.Control> Klasse, Methoden und Ereignisse, um Browser oder Markup-spezifische Behandlung zu ermöglichen. Ein Großteil der Renderingverhaltens gekapselt ist, der <xref:System.Web.UI.XhtmlTextWriter> Klasse. Wenn Sie, ob Sie Ihren eigenen Steuerelementadapter erstellen möchten, sollten Sie bedenken, die ein einzelner Adapter kann verwendet, um eine Reihe von Verhaltensweisen für Browser-Klasse zu überschreiben. Alternativ dazu den gewünschten Anpassungsfähigkeit in einer abgeleiteten Klasse die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter> Klasse möglicherweise entfällt der Bedarf einen Steuerelementadapter verwenden.  
+  
+ Ein Adapter für eine bestimmte Steuerelementklasse gilt für alle Steuerelemente, die von dieser Klasse erben, wenn spezialisierter Adapter vorhanden sind. Z. B. die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlValidatorAdapter> Klasse wird verwendet, um alle mobilen Steuerelemente für Geräte überprüfen, die erforderlich ist, oder XHTML-Markup anzeigen können.  
+  
+ Während der Verarbeitung fängt .NET Framework Aufrufe der Methoden eines Steuerelements, die für das aktuelle Ziel spezifisch sind. Wenn ein Steuerelementadapter dem Steuerelement zugeordnet ist, ruft der .NET Framework die zugeordnete Adapter-Methoden.  
+  
+ Einige Eigenschaften eines Steuerelements steuern die Möglichkeit, die auf mehreren sekundären Seiten für ein mobiles Gerät angezeigt. Diese Seite werden zusammenfassend als bezeichnet *sekundären Benutzeroberfläche*. Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.SecondaryUIMode%2A> Eigenschaft kann verwendet werden, um die definieren, welche Seite angezeigt wird. Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.ExitSecondaryUIMode%2A> Methode kann verwendet werden, um alle Einstellungen für die sekundären UI entfernen.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+    <block subset="none" type="overrides">
+      <para>Beim Erben von der <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter" /> Klasse, benennen Sie den Adapter für ein bestimmtes Steuerelement und eine angegebene Markupsprache im Muster <paramref name="MarkupControlType" /> <see langword="Adapter" /> (z. B. <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlTextBoxAdapter" />). Adapter für ein Steuerelement, stellt der XHTML-Markup, sollte implementiert werden, der <see cref="N:System.Web.UI.MobileControls.Adapters.XhtmlAdapters" /> Namespace.  
+  
+ Bei speziellen Adaptern sollte für die spezielle Steuerelement unter jedem der Geräteknoten in den Browser-Konfigurationsdateien definiert werden.  
+  
+ Ein Steuerelement ordnungsgemäß implementiertes sollten nicht davon ausgehen, dass ein Adapter angefügt ist oder der angefügte Adapter eine bestimmte Schnittstelle implementiert. Stattdessen sollten sie für diese Bedingungen überprüfen.  
+  
+ Eine Reihe von bedingten Renderingmethoden ermöglichen nach solchen Bedingungen als sekundäre Benutzeroberfläche und für Anzeigegeräte, die Zeilenumbrüche nach jedem Block oder nach jedem Steuerelement Inline erfordern. Beispiele für bedingte Methoden sind <see cref="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.ConditionalSetPendingBreak(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter)" /> und <see cref="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.ConditionalEnterLayout(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter,System.Web.UI.MobileControls.Style)" />. Diese Methoden funktionieren für ein bestimmtes Gerät unabhängig von der das Steuerelement gerendert wird. Es ist unwahrscheinlich, dass Sie diese Methoden überschreiben, wenn einen neue Steuerelementadapter basierend auf dieser Klasse erstellen müssen. Zumindest müssen Sie überschreiben die <see cref="Overload:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.Render" /> Methoden.  
+  
+ Filtern von Geräten ist erforderlich, um ein bestimmter Adapter nach einem Serversteuerelement verwendet wird. Weitere Informationen zum Filtern finden Sie unter [architektonische Overview of Adaptive Control Behavior](http://msdn.microsoft.com/library/4ff05ae9-4109-4352-929e-ad893895dbff) und [Device Filtern Overview](http://msdn.microsoft.com/library/bdfeaa58-dedd-4c0d-8610-988aac0eff19).</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XhtmlControlAdapter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter" />-Klasse. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearPendingBreakIfDeviceBreaksOnBlockLevel">
+      <MemberSignature Language="C#" Value="protected virtual void ClearPendingBreakIfDeviceBreaksOnBlockLevel (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ClearPendingBreakIfDeviceBreaksOnBlockLevel(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.ClearPendingBreakIfDeviceBreaksOnBlockLevel(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />-Objekt, mit dem der Inhalt des Serversteuerelements im Browser des Clients gerendert wird.</param>
+        <summary>Löscht einen anstehenden Umbruch, wenn das Zielgerät auf Blockelemente unterbricht. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Zielgerät Umbrüche auf Block-Level-Elementen wie z. B. erfordert `<div>`, der vom angegebenen TextWriter `writer` legt einen anstehenden Umbruch beim Rendern des Elements ab, und automatisch rendert eine Unterbrechung (`<br />`) am Ende des Elements. Wenn der Inhalt des Elements über eine logische Seite auf dem Gerät hinausgeht, löscht der Adapter den anstehenden Umbruch am Ende der Seite.  
+  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConditionalClearCachedEndTag">
+      <MemberSignature Language="C#" Value="protected virtual void ConditionalClearCachedEndTag (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, string s);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ConditionalClearCachedEndTag(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.ConditionalClearCachedEndTag(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />-Objekt, mit dem der Inhalt des Serversteuerelements im Browser des Clients gerendert wird.</param>
+        <param name="s">Der Name des Tags, die Sie löschen möchten. der Wert kann <see langword="null" /> oder eine leere Zeichenfolge ("").</param>
+        <summary>Löscht den angegebenen TextWriter aktuelle Endtag, wenn bestimmte Bedingungen erfüllt sind. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Funktionalität ist nur in sehr seltenen Fall einem Zielgerät erforderlich, in dem ein ausgewähltes Element in einer Tabelle auftreten kann. Wenn die `s` -Parameter bereitgestellt wird, das zwischengespeicherte Endtag wird gelöscht. Den TextWriter zum Einfügen von Inhalt, wenn das Gerät nicht unterstützt werden dadurch `<select>` Elemente unmittelbar nach dem Ende einer Tabelle.  
+  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConditionalClearPendingBreak">
+      <MemberSignature Language="C#" Value="protected virtual void ConditionalClearPendingBreak (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ConditionalClearPendingBreak(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.ConditionalClearPendingBreak(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />-Objekt, mit dem der Inhalt des Serversteuerelements im Browser des Clients gerendert wird.</param>
+        <summary>Löscht einen anstehenden Umbruch in das Zielgerät an, wenn bestimmte Bedingungen erfüllt sind. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode löscht einen anstehenden Umbruch, wenn das Ziel <xref:System.Web.UI.MobileControls.Adapters.ControlAdapter.Device%2A> Pausen Inlineelementen erfordert.  
+  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConditionalEnterFormat">
+      <MemberSignature Language="C#" Value="protected virtual void ConditionalEnterFormat (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, System.Web.UI.MobileControls.Style style);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ConditionalEnterFormat(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, class System.Web.UI.MobileControls.Style style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.ConditionalEnterFormat(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter,System.Web.UI.MobileControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+        <Parameter Name="style" Type="System.Web.UI.MobileControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />-Objekt, mit dem der Inhalt des Serversteuerelements im Browser des Clients gerendert wird.</param>
+        <param name="style">Ein <see cref="P:System.Web.UI.MobileControls.MobileControl.Style" />-Objekt.</param>
+        <summary>Startet einen Abschnitt mit dem öffnenden Tag und die Attribute, die die Formate für das angegebene Format zu implementieren, wenn bestimmte Bedingungen erfüllt sind. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode schreibt das öffnende Tag und des Stils Attribute für den Abschnitt aus, wenn die folgenden Bedingungen erfüllt sind:  
+  
+-   Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.CssLocation%2A> Eigenschaft stellt keine physische Datei dar.  
+  
+-   Das Ziel <xref:System.Web.UI.MobileControls.Adapters.ControlAdapter.Device%2A> erfordert keine Unterdrückung von cascading Stylesheet-Formate.  
+  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConditionalEnterLayout">
+      <MemberSignature Language="C#" Value="protected virtual void ConditionalEnterLayout (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, System.Web.UI.MobileControls.Style style);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ConditionalEnterLayout(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, class System.Web.UI.MobileControls.Style style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.ConditionalEnterLayout(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter,System.Web.UI.MobileControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+        <Parameter Name="style" Type="System.Web.UI.MobileControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />-Objekt, mit dem der Inhalt des Serversteuerelements im Browser des Clients gerendert wird.</param>
+        <param name="style">Ein <see cref="P:System.Web.UI.MobileControls.MobileControl.Style" />-Objekt.</param>
+        <summary>Startet einen Abschnitt mit dem öffnenden Tag und die Attribute, die das Layout des angegebenen Schriftschnitts implementieren, wenn bestimmte Bedingungen erfüllt sind. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode schreibt das öffnende Tag und das Layout Stilattribute für den Abschnitt, wenn die folgenden Bedingungen erfüllt sind:  
+  
+-   Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.CssLocation%2A> Eigenschaft stellt keine physische Datei dar.  
+  
+-   Das Zielgerät erfordert keine Unterdrückung von cascading Stylesheet-Formate.  
+  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConditionalEnterStyle">
+      <MemberSignature Language="C#" Value="protected virtual void ConditionalEnterStyle (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, System.Web.UI.MobileControls.Style style);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ConditionalEnterStyle(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, class System.Web.UI.MobileControls.Style style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.ConditionalEnterStyle(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter,System.Web.UI.MobileControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+        <Parameter Name="style" Type="System.Web.UI.MobileControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />-Objekt, mit dem der Inhalt des Serversteuerelements im Browser des Clients gerendert wird.</param>
+        <param name="style">Ein <see cref="P:System.Web.UI.MobileControls.MobileControl.Style" />-Objekt.</param>
+        <summary>Schreibt das öffnende Tag für ein <see langword="&lt;span&gt;" /> Abschnitt sowie Attribute, die das Layout und die Formatierung des angegebenen Schriftschnitts implementieren, wenn bestimmte Bedingungen erfüllt sind. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode schreibt ein öffnendes `<span>` Elements und des Stils Attribute aus, wenn die folgenden Bedingungen erfüllt sind:  
+  
+-   Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.CssLocation%2A> Eigenschaft stellt keine physische Datei dar.  
+  
+-   Das Ziel <xref:System.Web.UI.MobileControls.Adapters.ControlAdapter.Device%2A> erfordert keine Unterdrückung von cascading Stylesheet-Formate.  
+  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConditionalEnterStyle">
+      <MemberSignature Language="C#" Value="protected virtual void ConditionalEnterStyle (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, System.Web.UI.MobileControls.Style style, string tag);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ConditionalEnterStyle(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, class System.Web.UI.MobileControls.Style style, string tag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.ConditionalEnterStyle(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter,System.Web.UI.MobileControls.Style,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+        <Parameter Name="style" Type="System.Web.UI.MobileControls.Style" />
+        <Parameter Name="tag" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />-Objekt, mit dem der Inhalt des Serversteuerelements im Browser des Clients gerendert wird.</param>
+        <param name="style">Ein <see cref="P:System.Web.UI.MobileControls.MobileControl.Style" />-Objekt.</param>
+        <param name="tag">Der Tagname des Elements.</param>
+        <summary>Schreibt das öffnende Tag des angegebenen Elements, zusammen mit Attributen, die das Layout und die Formatierung des angegebenen Schriftschnitts implementieren, wenn bestimmte Bedingungen erfüllt sind. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.ConditionalEnterStyle%2A> -Methode schreibt das öffnende Tag und den Stil-Attribute an, sofern die folgenden Bedingungen erfüllt sind:  
+  
+-   Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.CssLocation%2A> Eigenschaft stellt keine physische Datei dar.  
+  
+-   Das Ziel <xref:System.Web.UI.MobileControls.Adapters.ControlAdapter.Device%2A> erfordert keine Unterdrückung von cascading Stylesheet-Formate.  
+  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConditionalExitFormat">
+      <MemberSignature Language="C#" Value="protected virtual void ConditionalExitFormat (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, System.Web.UI.MobileControls.Style style);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ConditionalExitFormat(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, class System.Web.UI.MobileControls.Style style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.ConditionalExitFormat(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter,System.Web.UI.MobileControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+        <Parameter Name="style" Type="System.Web.UI.MobileControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />-Objekt, mit dem der Inhalt des Serversteuerelements im Browser des Clients gerendert wird.</param>
+        <param name="style">Ein <see cref="P:System.Web.UI.MobileControls.MobileControl.Style" />-Objekt.</param>
+        <summary>Beendet einen Block, der die zeichenformatierung aus einer angegebenen Formatvorlage verwendet hat, wenn bestimmte Bedingungen erfüllt sind. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.ConditionalExitFormat%2A> Methode den aktuellen Block beendet, wenn die folgenden Bedingungen erfüllt sind:  
+  
+-   Ein entsprechender `ConditionalEnterFormat` Methodenaufruf Verzeichnisdiensts zeichenformatierung angewendet wird.  
+  
+-   Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.CssLocation%2A> Eigenschaft stellt keine physische Datei dar.  
+  
+-   Das Ziel <xref:System.Web.UI.MobileControls.Adapters.ControlAdapter.Device%2A> erfordert keine Unterdrückung von cascading Stylesheet-Formate.  
+  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConditionalExitLayout">
+      <MemberSignature Language="C#" Value="protected virtual void ConditionalExitLayout (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, System.Web.UI.MobileControls.Style style);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ConditionalExitLayout(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, class System.Web.UI.MobileControls.Style style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.ConditionalExitLayout(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter,System.Web.UI.MobileControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+        <Parameter Name="style" Type="System.Web.UI.MobileControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />-Objekt, mit dem der Inhalt des Serversteuerelements im Browser des Clients gerendert wird.</param>
+        <param name="style">Ein <see cref="P:System.Web.UI.MobileControls.MobileControl.Style" />-Objekt.</param>
+        <summary>Beendet einen Block, der das Layout, die Formatierung eines angegebenen Formats verwendet hat, wenn bestimmte Bedingungen erfüllt sind. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.ConditionalExitLayout%2A> Methode beendet einen Block aus, wenn die folgenden Bedingungen erfüllt sind:  
+  
+-   Ein Aufruf von der <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.ConditionalEnterFormat%2A> Methode bewirkt, dass Zeichen Formatierung angewendet werden.  
+  
+-   Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.CssLocation%2A> Eigenschaft stellt keine physische Datei dar.  
+  
+-   Das Ziel <xref:System.Web.UI.MobileControls.Adapters.ControlAdapter.Device%2A> erfordert keine Unterdrückung von cascading Stylesheet-Formate.  
+  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConditionalExitStyle">
+      <MemberSignature Language="C#" Value="protected virtual void ConditionalExitStyle (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, System.Web.UI.MobileControls.Style style);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ConditionalExitStyle(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, class System.Web.UI.MobileControls.Style style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.ConditionalExitStyle(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter,System.Web.UI.MobileControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+        <Parameter Name="style" Type="System.Web.UI.MobileControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />-Objekt, mit dem der Inhalt des Serversteuerelements im Browser des Clients gerendert wird.</param>
+        <param name="style">Ein <see cref="P:System.Web.UI.MobileControls.MobileControl.Style" />-Objekt.</param>
+        <summary>Beendet eine <see langword="&lt;/span&gt;" /> Element, das das Layout und die zeichenformatierung aus einer angegebenen Formatvorlage verwendet hat, wenn bestimmte Bedingungen erfüllt sind. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.ConditionalExitStyle%2A> Methode rendert eine schließende `</span>` Element, das verwendet hat, das Layout und die zeichenformatierung aus einer angegebenen Formatvorlage, wenn die folgenden Bedingungen erfüllt sind:  
+  
+-   Ein Aufruf von <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.ConditionalEnterFormat%2A> bewirkt, dass Zeichen Formatierung angewendet werden.  
+  
+-   Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.CssLocation%2A> Eigenschaft stellt keine physische Datei dar.  
+  
+-   Das Ziel <xref:System.Web.UI.MobileControls.Adapters.ControlAdapter.Device%2A> erfordert keine Unterdrückung von cascading Stylesheet-Formate.  
+  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConditionalPopPhysicalCssClass">
+      <MemberSignature Language="C#" Value="protected virtual void ConditionalPopPhysicalCssClass (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ConditionalPopPhysicalCssClass(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.ConditionalPopPhysicalCssClass(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />-Objekt, mit dem der Inhalt des Serversteuerelements im Browser des Clients gerendert wird.</param>
+        <summary>Entfernt den Namen der aktuellen Cascading Stylesheet-Klasse aus dem <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />-Objekt, wenn bestimmte Bedingungen erfüllt sind. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Text `writer` behält eine <xref:System.Collections.Stack> Objekt der Klasse Attributnamen, und wann die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter> rendert ein Klassenattribut wird signalisiert, dass den Text `writer` betätigen Sie den Wert des Attributs auf die <xref:System.Collections.Stack> Objekt. Der Name der Top-Klasse wird mit dem aktuellen Attribut Klassennamen behandelt. Diese Methode entfernt die aktuelle Klassenattributnamen aus der <xref:System.Collections.Stack> , wenn ein physisches cascading Stylesheet angewendet wird.  
+  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConditionalRenderClassAttribute">
+      <MemberSignature Language="C#" Value="protected virtual void ConditionalRenderClassAttribute (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ConditionalRenderClassAttribute(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.ConditionalRenderClassAttribute(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />-Objekt, mit dem der Inhalt des Serversteuerelements im Browser des Clients gerendert wird.</param>
+        <summary>Ein Class-Name-Attribut versetzt auf das nächste Element gerendert wird, wenn bestimmte Bedingungen erfüllt sind. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode rendert ein cascading Stylesheet Klassenattribut auf das nächste Element aus, wenn die folgenden Bedingungen erfüllt sind:  
+  
+-   Die <xref:System.Web.UI.MobileControls.Adapters.ControlAdapter.Device%2A> erfordert keine Unterdrückung von cascading Stylesheet-Formate.  
+  
+-   Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.CssLocation%2A> Eigenschaft stellt eine physische Datei dar.  
+  
+-   Die aktuelle <xref:System.Web.UI.Adapters.ControlAdapter.Control%2A> weist einen nicht leeren <xref:System.Web.UI.WebControls.WebControl.CssClass%2A> Attributnamen an, der vom Namen aktuellen Klasse unterscheidet.  
+  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConditionalRenderClosingDivElement">
+      <MemberSignature Language="C#" Value="protected virtual void ConditionalRenderClosingDivElement (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ConditionalRenderClosingDivElement(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.ConditionalRenderClosingDivElement(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />-Objekt, mit dem der Inhalt des Serversteuerelements im Browser des Clients gerendert wird.</param>
+        <summary>Rendert eine schließende <see langword="&lt;/div&gt;" /> tag, wenn bestimmte Bedingungen erfüllt sind. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.ConditionalRenderClosingDivElement%2A> Methode rendert eine schließende `</div>` Element, oder wenn die <xref:System.Web.UI.MobileControls.Adapters.ControlAdapter.Device%2A> erforderlich ist, eine schließende `</p>` Element, wenn die folgenden Bedingungen erfüllt sind:  
+  
+-   Die <xref:System.Web.UI.MobileControls.Adapters.ControlAdapter.Device%2A> erfordert keine Unterdrückung von cascading Stylesheet-Formate.  
+  
+-   Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.CssLocation%2A> Eigenschaft stellt eine physische Datei dar.  
+  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConditionalRenderClosingSpanElement">
+      <MemberSignature Language="C#" Value="protected virtual void ConditionalRenderClosingSpanElement (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ConditionalRenderClosingSpanElement(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.ConditionalRenderClosingSpanElement(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />-Objekt, mit dem der Inhalt des Serversteuerelements im Browser des Clients gerendert wird.</param>
+        <summary>Rendert eine schließende <see langword="&lt;/span&gt;" /> Element, wenn bestimmte Bedingungen erfüllt sind. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist ein offenes `<span>` Element, das <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.ConditionalRenderClosingSpanElement%2A> Methode rendert eine schließende `</span>` Element- und bricht die aktuelle cascading Stylesheet-Klasse zu benennen, wenn die folgenden Bedingungen erfüllt sind:  
+  
+-   Die <xref:System.Web.UI.MobileControls.Adapters.ControlAdapter.Device%2A> erfordert keine Unterdrückung von cascading Stylesheet-Formate.  
+  
+-   Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.CssLocation%2A> Eigenschaft stellt eine physische Datei dar.  
+  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConditionalRenderCustomAttribute">
+      <MemberSignature Language="C#" Value="protected virtual void ConditionalRenderCustomAttribute (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, string attributeName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ConditionalRenderCustomAttribute(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, string attributeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.ConditionalRenderCustomAttribute(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+        <Parameter Name="attributeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />-Objekt, mit dem der Inhalt des Serversteuerelements im Browser des Clients gerendert wird.</param>
+        <param name="attributeName">Der Name des Attributs.</param>
+        <summary>Ruft den Wert des Attributs mit dem angegebenen Namen des zugeordneten Steuerelements ab und rendert ihn auf das nächste Element mit dem angegebenen Namen, wenn bestimmte Bedingungen erfüllt sind. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Attribut wird gerendert, wenn der Attributname nicht um eine leere Zeichenfolge ist ("") und das Steuerelement hat das angegebene Attribut.  
+  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConditionalRenderCustomAttribute">
+      <MemberSignature Language="C#" Value="protected virtual void ConditionalRenderCustomAttribute (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, string attributeName, string markupAttributeName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ConditionalRenderCustomAttribute(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, string attributeName, string markupAttributeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.ConditionalRenderCustomAttribute(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+        <Parameter Name="attributeName" Type="System.String" />
+        <Parameter Name="markupAttributeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />-Objekt, mit dem der Inhalt des Serversteuerelements im Browser des Clients gerendert wird.</param>
+        <param name="attributeName">Der Name des Attributs.</param>
+        <param name="markupAttributeName">Der XHTML-Markup-Name des Attributs.</param>
+        <summary>Enthält ein benutzerdefiniertes Attribut mit dem angegebenen Namen und Wert in das nächste Element gerendert werden soll, wenn bestimmte Bedingungen erfüllt sind. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Attribut wird gerendert, wenn beide die `attributeName` und `markupAttributeName` sind nicht leere Zeichenfolgen ("") und das Steuerelement hat das angegebene Attribut. Verwenden Sie diese Methode, um ein Markupattribut in der gerenderten Elements bereitzustellen, die sich vom Namen Attributs oder der Eigenschaft, die im Steuerelement verwendet wird.  
+  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConditionalRenderOpeningDivElement">
+      <MemberSignature Language="C#" Value="protected virtual void ConditionalRenderOpeningDivElement (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ConditionalRenderOpeningDivElement(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.ConditionalRenderOpeningDivElement(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />-Objekt, mit dem der Inhalt des Serversteuerelements im Browser des Clients gerendert wird.</param>
+        <summary>Rendert ein öffnendes-Tag für eine <see langword="&lt;div&gt;" /> Element, wenn bestimmte Bedingungen erfüllt sind. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Bedarf durch die <xref:System.Web.UI.MobileControls.Adapters.ControlAdapter.Device%2A>, diese Methode rendert das Anfangstag des eine `<p>` -Element anstelle des ein `<div>` Element. Die aktuelle cascading Stylesheet-Klassennamen, ist gegebenenfalls auch im Tag enthalten.  
+  
+ Das öffnende Tag wird gerendert, wenn die folgenden Bedingungen erfüllt sind:  
+  
+-   Die <xref:System.Web.UI.MobileControls.Adapters.ControlAdapter.Device%2A> erfordert keine Unterdrückung von cascading Stylesheet-Formate.  
+  
+-   Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.CssLocation%2A> Eigenschaft stellt eine physische Datei dar.  
+  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConditionalRenderOpeningSpanElement">
+      <MemberSignature Language="C#" Value="protected virtual void ConditionalRenderOpeningSpanElement (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ConditionalRenderOpeningSpanElement(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.ConditionalRenderOpeningSpanElement(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />-Objekt, mit dem der Inhalt des Serversteuerelements im Browser des Clients gerendert wird.</param>
+        <summary>Rendert ein öffnendes-Tag für eine <see langword="&lt;span&gt;" /> Element, wenn bestimmte Bedingungen erfüllt sind. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode schreibt das öffnende `<span>` Element, sofern die folgenden Bedingungen erfüllt sind:  
+  
+-   Die <xref:System.Web.UI.MobileControls.Adapters.ControlAdapter.Device%2A> erfordert keine Unterdrückung von cascading Stylesheet-Formate.  
+  
+-   Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.CssLocation%2A> Eigenschaft stellt eine physische Datei dar.  
+  
+-   Der kursattributwert für das aktuelle Steuerelement unterscheidet sich von der Klasse-Attributwert für das vorherige Steuerelement.  
+  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConditionalSetPendingBreak">
+      <MemberSignature Language="C#" Value="protected virtual void ConditionalSetPendingBreak (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ConditionalSetPendingBreak(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.ConditionalSetPendingBreak(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />-Objekt, mit dem der Inhalt des Serversteuerelements im Browser des Clients gerendert wird.</param>
+        <summary>Legt einen anstehenden Umbruch, wenn bestimmte Bedingungen erfüllt sind. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode legt einen anstehenden Umbruch die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter> , wenn das Gerät einen Umbruch nach dieser Art von Steuerelement erfordert.  
+  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConditionalSetPendingBreakAfterInline">
+      <MemberSignature Language="C#" Value="protected virtual void ConditionalSetPendingBreakAfterInline (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ConditionalSetPendingBreakAfterInline(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.ConditionalSetPendingBreakAfterInline(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />-Objekt, mit dem der Inhalt des Serversteuerelements im Browser des Clients gerendert wird.</param>
+        <summary>Legt einen anstehenden Umbruch nach Inlineelemente, wenn bestimmte Bedingungen erfüllt sind. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode legt einen anstehenden Umbruch, wenn die folgenden Bedingungen erfüllt sind:  
+  
+-   Die <xref:System.Web.UI.MobileControls.Adapters.ControlAdapter.Device%2A> erfordert einen Umbruch nach Inlineelemente.  
+  
+-   Die <xref:System.Web.UI.Adapters.ControlAdapter.Control%2A> erfordert einen Umbruch nach sich selbst.  
+  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CssLocation">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.MobileControls.Adapters.XhtmlAdapters.StyleSheetLocation CssLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.MobileControls.Adapters.XhtmlAdapters.StyleSheetLocation CssLocation" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.CssLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.Adapters.XhtmlAdapters.StyleSheetLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob das Stylesheet als externe physische Datei befindet, für die aktuelle Seite intern ist, in dem aktuellen Sitzungsstatus gespeichert oder in der Anwendungscache gespeichert. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Ein <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.StyleSheetLocation" />-Wert. Die Standardeinstellung ist <see cref="F:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.StyleSheetLocation.NotSet" />, was bedeutet, dass der Speicherort noch nicht ermittelt wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DocumentType">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.MobileControls.Adapters.XhtmlAdapters.Doctype DocumentType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.MobileControls.Adapters.XhtmlAdapters.Doctype DocumentType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.DocumentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.Adapters.XhtmlAdapters.Doctype</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Typ der XHTML-Markup zum Rendern des aktuellen Dokuments verwendet wird. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Ein <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.Doctype" />-Wert. Die Standardeinstellung ist <see cref="F:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.Doctype.NotSet" />, was bedeutet, dass der Dokumenttyp wurde noch nicht ermittelt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExitSecondaryUIMode">
+      <MemberSignature Language="C#" Value="protected virtual void ExitSecondaryUIMode ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ExitSecondaryUIMode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.ExitSecondaryUIMode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beendet alle sekundären Benutzeroberflächen-Modus für das Steuerelement an. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode entspricht dem Festlegen der <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.SecondaryUIMode%2A> Eigenschaft, um die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.NotSecondaryUI> Wert.  
+  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributeValue">
+      <MemberSignature Language="C#" Value="protected virtual string GetCustomAttributeValue (string attributeName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetCustomAttributeValue(string attributeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.GetCustomAttributeValue(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="attributeName">Der Name des Attributs.</param>
+        <summary>Ruft den Wert des angegebenen Attributs aus dem Markup des zugeordneten Steuerelements ab. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Eine Zeichenfolge mit dem Wert des angegebenen benutzerdefinierten Attributs.  
+  
+ Diese Methode wird hauptsächlich von Entwicklern von benutzerdefinierten Adaptern verwendet werden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributeValue">
+      <MemberSignature Language="C#" Value="protected virtual string GetCustomAttributeValue (System.Web.UI.MobileControls.MobileControl control, string attributeName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetCustomAttributeValue(class System.Web.UI.MobileControls.MobileControl control, string attributeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.GetCustomAttributeValue(System.Web.UI.MobileControls.MobileControl,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.MobileControls.MobileControl" />
+        <Parameter Name="attributeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="control">Die mobile-Steuerelement aus dem Wert des Attributs abgerufen.</param>
+        <param name="attributeName">Der Name des Attributs.</param>
+        <summary>Ruft den Wert des angegebenen Attributs aus einem bestimmten Steuerelement ab. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Eine Zeichenfolge mit dem Wert des angegebenen benutzerdefinierten Attributs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich von Entwicklern von benutzerdefinierten Adaptern verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadAdapterState">
+      <MemberSignature Language="C#" Value="public override void LoadAdapterState (object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void LoadAdapterState(object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.LoadAdapterState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="state">Der aktuelle Ansichtszustand des Adapters.</param>
+        <summary>Lädt Anzeigezustandsdaten speziell für diesen Adapter. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `state` ist `null`, diese Methode hat keine Auswirkungen.  
+  
+ Diese Methode wird hauptsächlich von Entwicklern von benutzerdefinierten Adaptern verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Die grundlegende Implementierung der <see cref="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.LoadAdapterState(System.Object)" /> lädt die aktuellen sekundären Benutzeroberflächen-Modus aus dem Ansichtszustand. Sie können überschreiben, um bestimmten andere Daten aus dem Ansichtszustand zu laden, achten Sie darauf, dass Sie auch die Basismethode aufrufen, damit die Benutzeroberfläche der Modus für die sekundäre anforderungsübergreifend beibehalten. Weitere Informationen zum Verwalten des Ansichtszustands finden Sie unter [ASP.NET State Management Overview](http://msdn.microsoft.com/library/0218d965-5d30-445b-b6a6-8870e70e63ce).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="NotSecondaryUI">
+      <MemberSignature Language="C#" Value="protected static readonly int NotSecondaryUI;" />
+      <MemberSignature Language="ILAsm" Value=".field family static initonly int32 NotSecondaryUI" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.NotSecondaryUI" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein Rückgabewert von der <see cref="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.SecondaryUIMode" /> Eigenschaft gibt an, dass der Adapter nicht im sekundären Benutzeroberflächen-Modus ist. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageAdapter">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter PageAdapter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter PageAdapter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.PageAdapter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Seitenadapter für die Seite, auf der sich das zugeordnete Steuerelement befindet. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Ein <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlPageAdapter" /> Grafikkarte Seite für die aktuelle Seite darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreprocessQueryString">
+      <MemberSignature Language="C#" Value="protected string PreprocessQueryString (string queryString);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string PreprocessQueryString(string queryString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.PreprocessQueryString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="queryString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="queryString">Die Abfragezeichenfolge aus der <see cref="P:System.Web.HttpRequest.QueryString" />.</param>
+        <summary>Ruft den Teil der angegebenen Abfragezeichenfolge, die Parameter für die Verarbeitung der Anforderung enthält. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Eine Zeichenfolge, die die verarbeitete Abfragezeichenfolge enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um die Abfragezeichenfolge auf die grundlegenden Parameter zu reduzieren, indem Sie die folgenden Informationen entfernen:  
+  
+-   Der Name und Pfad Dateiinformationen.  
+  
+-   Angeben den aktuellen Parameter <xref:System.Web.Security.FormsAuthentication.FormsCookieName%2A>.  
+  
+-   Ein Parameter mit dem Namen "X-Up-Descharset" gibt den aktuellen Zeichensatz.  
+  
+ Die Seitenadapter verwendet die zurückgegebene Abfragezeichenfolge zum Erstellen einer <xref:System.Collections.Specialized.NameValueCollection> Objekt, das Zugriff auf die verbleibenden Parameter und ihre Werte.  
+  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="public override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Web.UI.HtmlTextWriter" />-Objekt.</param>
+        <summary>Zeigt das zugeordnete Steuerelement und alle zu ihm gehörenden untergeordneten Steuerelemente auf dem Client an. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlTextWriter> dient als Basis für eine <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter> -Objekt, das seinerseits das Steuerelement und alle seine untergeordneten Steuerelemente an dem Client rendert.  
+  
+ Diese Methode wird hauptsächlich von Entwicklern von benutzerdefinierten Adaptern verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Methode wird in der Regel in benutzerdefinierten Adaptern überschrieben und wird von .NET Framework aufgerufen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="public virtual void Render (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Render(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.Render(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />-Objekt, mit dem der Inhalt des Serversteuerelements im Browser des Clients gerendert wird.</param>
+        <summary>Zeigt das zugeordnete Steuerelement und alle zu ihm gehörenden untergeordneten Steuerelemente auf dem Client an. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich von Entwicklern von benutzerdefinierten Adaptern verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Methode wird in der Regel in benutzerdefinierten Adaptern überschrieben und wird von .NET Framework aufgerufen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderAsHiddenInputField">
+      <MemberSignature Language="C#" Value="protected virtual void RenderAsHiddenInputField (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RenderAsHiddenInputField(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.RenderAsHiddenInputField(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />-Objekt, mit dem der Inhalt des Serversteuerelements im Browser des Clients gerendert wird.</param>
+        <summary>Rendert ein ausgeblendetes Feldtext für ein Steuerelement. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderBeginLink">
+      <MemberSignature Language="C#" Value="protected virtual void RenderBeginLink (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, string target);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RenderBeginLink(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, string target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.RenderBeginLink(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+        <Parameter Name="target" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />-Objekt, mit dem der Inhalt des Serversteuerelements im Browser des Clients gerendert wird.</param>
+        <param name="target">Der Name des Zielformulars oder eine URL.</param>
+        <summary>Rendert das öffnende Tag eines Links mit den angegebenen <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" /> und Ziel. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode sucht automatisch nach den Typ des Links und rendert das entsprechende Markup. Das angegebene Ziel kann es sich um eine andere URL oder zu einem Formular auf derselben Seite beziehen.  
+  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderBeginLink">
+      <MemberSignature Language="C#" Value="protected virtual void RenderBeginLink (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, string target, string accessKey, System.Web.UI.MobileControls.Style style, string cssClass);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RenderBeginLink(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, string target, string accessKey, class System.Web.UI.MobileControls.Style style, string cssClass) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.RenderBeginLink(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter,System.String,System.String,System.Web.UI.MobileControls.Style,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+        <Parameter Name="target" Type="System.String" />
+        <Parameter Name="accessKey" Type="System.String" />
+        <Parameter Name="style" Type="System.Web.UI.MobileControls.Style" />
+        <Parameter Name="cssClass" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />-Objekt, mit dem der Inhalt des Serversteuerelements im Browser des Clients gerendert wird.</param>
+        <param name="target">Der Ziel-Format oder die URL.</param>
+        <param name="accessKey">Ein Zeichen, die als die Tastenkombination verwendet werden soll.</param>
+        <param name="style">Ein <see cref="T:System.Web.UI.MobileControls.Style" />-Objekt.</param>
+        <param name="cssClass">Ein cascading Stylesheet-Klassennamen.</param>
+        <summary>Rendert das öffnende Tag eines Links mit den angegebenen <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" /> und Ziel sowie den angegebenen Formaten oder der angegebenen cascading Stylesheet-Klassenname. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode sucht automatisch nach den Typ des Links und rendert das entsprechende Markup. Das angegebene Ziel kann es sich um eine andere URL oder zu einem Formular auf derselben Seite beziehen. Wenn `style` nicht `null`, die auf den Link angewendet werden. Wenn `cssClass` ist eine leere Zeichenfolge ("") und `style` ist `null`, wird die Verknüpfung mit einem Klassenattribut gerendert.  
+  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderBeginLink">
+      <MemberSignature Language="C#" Value="protected virtual void RenderBeginLink (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, string target, string accessKey, System.Web.UI.MobileControls.Style style, string cssClass, string title);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RenderBeginLink(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, string target, string accessKey, class System.Web.UI.MobileControls.Style style, string cssClass, string title) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.RenderBeginLink(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter,System.String,System.String,System.Web.UI.MobileControls.Style,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+        <Parameter Name="target" Type="System.String" />
+        <Parameter Name="accessKey" Type="System.String" />
+        <Parameter Name="style" Type="System.Web.UI.MobileControls.Style" />
+        <Parameter Name="cssClass" Type="System.String" />
+        <Parameter Name="title" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />-Objekt, mit dem der Inhalt des Serversteuerelements im Browser des Clients gerendert wird.</param>
+        <param name="target">Der Ziel-Format oder die URL.</param>
+        <param name="accessKey">Ein Zeichen, die als die Tastenkombination verwendet werden soll.</param>
+        <param name="style">Ein <see cref="T:System.Web.UI.MobileControls.Style" />-Objekt.</param>
+        <param name="cssClass">Ein cascading Stylesheet-Klassennamen.</param>
+        <param name="title">Der Text für die <see langword="title" /> -Attribut des Links.</param>
+        <summary>Rendert das öffnende Tag eines Links mit den angegebenen <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" /> und Ziel, sowie entweder den angegebenen Formaten oder der angegebenen cascading Stylesheet-Klassenname, den Zugriffsschlüssel und den Titeltext. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderClosingListTag">
+      <MemberSignature Language="C#" Value="protected virtual void RenderClosingListTag (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, string tagName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RenderClosingListTag(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, string tagName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.RenderClosingListTag(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+        <Parameter Name="tagName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />-Objekt, mit dem der Inhalt des Serversteuerelements im Browser des Clients gerendert wird.</param>
+        <param name="tagName">Der Tagname des Elements zu schließen.</param>
+        <summary>Rendert ein Endtag für ein Element in der angegebenen Liste. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderEndLink">
+      <MemberSignature Language="C#" Value="protected virtual void RenderEndLink (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RenderEndLink(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.RenderEndLink(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />-Objekt, mit dem der Inhalt des Serversteuerelements im Browser des Clients gerendert wird.</param>
+        <summary>Rendert ein Endtag (<see langword="&lt;/a&gt;" />) für eine Link-Element. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderOffPageVariables">
+      <MemberSignature Language="C#" Value="protected void RenderOffPageVariables (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, System.Web.UI.Control control, int page);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RenderOffPageVariables(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, class System.Web.UI.Control control, int32 page) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.RenderOffPageVariables(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter,System.Web.UI.Control,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+        <Parameter Name="page" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />-Objekt, mit dem der Inhalt des Serversteuerelements im Browser des Clients gerendert wird.</param>
+        <param name="control">Das Steuerelement, in denen postback Variablen gesucht werden soll.</param>
+        <param name="page">Die aktuelle Seitenzahl.</param>
+        <summary>Rendert ausgeblendete postback-Variablen für die untergeordneten Steuerelemente, die nicht aufgrund der Paginierung oder sekundäre Benutzeroberfläche sichtbar sind. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.RenderOffPageVariables%2A> -Methode untersucht dann das Steuerelement und alle untergeordneten Steuerelemente. Wenn das untergeordnete Objekt implementiert <xref:System.Web.UI.IPostBackDataHandler>, die Methode verwendet das untergeordnete Steuerelement des Adapters <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.RenderAsHiddenInputField%2A> Methode, um die Variablen, die die aktuelle Seite zu rendern.  
+  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderOpeningListTag">
+      <MemberSignature Language="C#" Value="protected virtual void RenderOpeningListTag (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, string tagName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RenderOpeningListTag(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, string tagName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.RenderOpeningListTag(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+        <Parameter Name="tagName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />-Objekt, mit dem der Inhalt des Serversteuerelements im Browser des Clients gerendert wird.</param>
+        <param name="tagName">Der Name des Tags, die für die gerenderte Liste verwendet werden soll.</param>
+        <summary>Rendert ein öffnendes-Tag für den angegebenen Tagnamen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ausstehende unterbrochen ist, wird die Unterbrechung vor der öffnenden gerendert Tag zu verknüpfen. Wenn die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.CssLocation%2A> Eigenschaft stellt eine physische Datei und das Zielgerät erfordert keine Unterdrückung von cascading Stylesheet-Formate, ist der aktuelle Klassenname beim Rendern enthalten. Wenn die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.CssLocation%2A> Eigenschaft des Stylesheets stellt keine physische Datei dar, stileinstellungen aus dem Steuerelement, sind geeignet, für die `tagName` im öffnenden Tag angewendet werden.  
+  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderPostBackEventAsAnchor">
+      <MemberSignature Language="C#" Value="protected virtual void RenderPostBackEventAsAnchor (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, string argument, string linkText);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RenderPostBackEventAsAnchor(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, string argument, string linkText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.RenderPostBackEventAsAnchor(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+        <Parameter Name="argument" Type="System.String" />
+        <Parameter Name="linkText" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />-Objekt, mit dem der Inhalt des Serversteuerelements im Browser des Clients gerendert wird.</param>
+        <param name="argument">Eine Zeichenfolge, enthält das Argument, das Sie für das Ereignis bereitstellen möchten.</param>
+        <param name="linkText">Eine Zeichenfolge mit dem Text, der im Link angezeigt werden soll.</param>
+        <summary>Rendert ein Postbackereignis als Link mit dem angegebenen Argument und Text. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderPostBackEventAsAnchor">
+      <MemberSignature Language="C#" Value="protected virtual void RenderPostBackEventAsAnchor (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, string argument, string linkText, string accessKey);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RenderPostBackEventAsAnchor(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, string argument, string linkText, string accessKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.RenderPostBackEventAsAnchor(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+        <Parameter Name="argument" Type="System.String" />
+        <Parameter Name="linkText" Type="System.String" />
+        <Parameter Name="accessKey" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />-Objekt, mit dem der Inhalt des Serversteuerelements im Browser des Clients gerendert wird.</param>
+        <param name="argument">Das Argument, das an das Ereignis übergeben werden sollen.</param>
+        <param name="linkText">Der Text im Link angezeigt werden.</param>
+        <param name="accessKey">Ein Zeichen, die als die Tastenkombination verwendet werden soll.</param>
+        <summary>Rendert ein Postbackereignis als Link mit dem angegebenen Argument, die Text und den Zugriffsschlüssel an. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderPostBackEventAsAnchor">
+      <MemberSignature Language="C#" Value="protected virtual void RenderPostBackEventAsAnchor (System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, string argument, string linkText, string accessKey, System.Web.UI.MobileControls.Style style, string cssClass);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RenderPostBackEventAsAnchor(class System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter writer, string argument, string linkText, string accessKey, class System.Web.UI.MobileControls.Style style, string cssClass) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.RenderPostBackEventAsAnchor(System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter,System.String,System.String,System.String,System.Web.UI.MobileControls.Style,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />
+        <Parameter Name="argument" Type="System.String" />
+        <Parameter Name="linkText" Type="System.String" />
+        <Parameter Name="accessKey" Type="System.String" />
+        <Parameter Name="style" Type="System.Web.UI.MobileControls.Style" />
+        <Parameter Name="cssClass" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Das <see cref="T:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter" />-Objekt, mit dem der Inhalt des Serversteuerelements im Browser des Clients gerendert wird.</param>
+        <param name="argument">Die an das Ereignis zu übergebende Argument.</param>
+        <param name="linkText">Der Text, der in den Link angezeigt werden soll.</param>
+        <param name="accessKey">Ein Zeichen, die als die Tastenkombination verwendet werden soll.</param>
+        <param name="style">Ein <see cref="T:System.Web.UI.MobileControls.Style" />-Objekt.</param>
+        <param name="cssClass">Der Name einer Klasse in der aktuellen cascading Stylesheet.</param>
+        <summary>Rendert ein Postbackereignis als Link mit dem angegebenen Argument, Text und Zugriffsschlüssel, sowie der angegebenen Formate oder der angegebenen cascading Stylesheet-Klassenname. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveAdapterState">
+      <MemberSignature Language="C#" Value="public override object SaveAdapterState ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object SaveAdapterState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.SaveAdapterState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dieser Adapter speichert spezifische Daten auf dem Ansichtszustand. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>
+          <see cref="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.SecondaryUIMode" />Wenn der Wert der <see cref="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.SecondaryUIMode" /> Einstellung ist nicht gleich <see cref="F:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.NotSecondaryUI" />: andernfalls <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich von Entwicklern von benutzerdefinierten Adaptern verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Die grundlegende Implementierung der <see cref="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.SaveAdapterState" /> der aktuellen sekundären Benutzeroberflächen-Modus im Ansichtszustand speichert. Sie können außer Kraft setzen, um bestimmten andere Daten aus dem Ansichtszustand zu speichern, achten Sie darauf, dass Sie den aktuellen Status von der Basisklasse abgerufen und dann mit Ihrem Status steuerelementspezifische kombinieren, um den sekundären Benutzeroberflächenmodus anforderungsübergreifend beibehalten. Weitere Informationen zum Verwalten des Ansichtszustands finden Sie unter [ASP.NET State Management Overview](http://msdn.microsoft.com/library/0218d965-5d30-445b-b6a6-8870e70e63ce).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="SecondaryUIMode">
+      <MemberSignature Language="C#" Value="protected virtual int SecondaryUIMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SecondaryUIMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.SecondaryUIMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den aktuellen sekundären Benutzeroberflächenmodus ab. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Eine Zahl, der angibt, die aktuellen sekundären Benutzeroberflächen-Modus, als durch die Form, in dem es enthalten ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sekundäre Benutzeroberfläche wird von Steuerelementen verwendet, die zusätzliche eine Benutzeroberfläche anzeigen. Um eine sekundäre Benutzeroberfläche zu verwenden, führt ein Steuerelementadapter die folgenden Schritte aus:  
+  
+1.  Während ein Postbackereignis der Steuerelementadapter legt die <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.SecondaryUIMode%2A> Eigenschaft in der <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter> Basisklasse.  
+  
+2.  Beim Rendern werden das Steuerelement sekundären Benutzeroberflächen-Modus überprüft und rendert die entsprechende sekundäre Benutzeroberfläche.  
+  
+3.  Reaktion auf eine Benutzerinteraktion in der sekundären Benutzeroberfläche der Steuerelementadapter sekundären Benutzeroberflächen-Modus in einen anderen Wert ändern kann, oder Beenden der sekundären Benutzeroberflächen-Modus nicht durch Aufrufen der <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.ExitSecondaryUIMode%2A> Methode.  
+  
+ Diese Eigenschaft wird hauptsächlich von Entwicklern von benutzerdefinierten Adaptern verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StyleSheetLocationAttributeValue">
+      <MemberSignature Language="C#" Value="protected virtual string StyleSheetLocationAttributeValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StyleSheetLocationAttributeValue" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.StyleSheetLocationAttributeValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der <see langword="CssLocation" /> -Attributs, wenn es aus dem Formular vorhanden ist, in dem es enthalten ist. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Eine Zeichenfolge, enthält der Pfad und Dateiname der ein cascading Stylesheet, wenn das Attribut vorhanden ist. andernfalls <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StyleSheetStorageApplicationSetting">
+      <MemberSignature Language="C#" Value="protected virtual string StyleSheetStorageApplicationSetting { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StyleSheetStorageApplicationSetting" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter.StyleSheetStorageApplicationSetting" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der <see langword="XhtmlCssState" /> -Konfigurationseinstellung in der <see langword="appSettings" /> Abschnitt der Datei "Web.config". Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Eine Zeichenfolge, enthält der Pfad und Dateiname der ein cascading Stylesheet ggf. die Konfigurationseinstellung. andernfalls <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird hauptsächlich intern von .NET Framework verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

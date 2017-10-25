@@ -1,0 +1,6 @@
+<Namespace Name="System.Reflection">
+  <Docs>
+    <summary>Die <see cref="N:System.Reflection" /> -Namespace enthält Typen, die Informationen über Assemblys, Module, Member, Parameter und andere Entitäten in verwaltetem Code abrufen, indem Sie die zugehörigen Metadaten untersuchen. Diese Typen können auch verwendet werden, um Instanzen von geladenen Typen, z. B. zum Einbinden von Ereignissen oder zum Aufrufen von Methoden zu bearbeiten. Um Typen dynamisch zu erstellen, verwenden die <see cref="N:System.Reflection.Emit" /> Namespace.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

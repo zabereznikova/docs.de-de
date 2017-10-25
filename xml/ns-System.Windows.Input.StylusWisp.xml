@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Input.StylusWisp">
+  <Docs>
+    <summary>Stellt Klassen zur Verfügung, die das Bearbeiten von Daten mit dem Stift eines WISP-Tablets auf der Windows Presentation Foundation-Plattform (WPF) unterstützen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

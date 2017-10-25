@@ -1,0 +1,151 @@
+<Type Name="ContextOptions" FullName="System.DirectoryServices.AccountManagement.ContextOptions">
+  <TypeSignature Language="C#" Value="public enum ContextOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ContextOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.AccountManagement.ContextOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Optionen, die für die Bindung an den Server verwendet werden. Die Anwendung kann mehrere Optionen festlegen, die mit einer bitweisen OR-Operation verknüpft sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Kontextoptionen nicht von der Anwendung angegeben werden, verwendet die Konto-API die folgende Kombination von Optionen an:  
+  
+-   ContextOptions.Negotiate &#124; ContextOptions.Signing &#124; ContextOptions.Sealing  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Negotiate">
+      <MemberSignature Language="C#" Value="Negotiate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.AccountManagement.ContextOptions Negotiate = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.AccountManagement.ContextOptions.Negotiate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.AccountManagement.ContextOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Client wird mithilfe von Kerberos oder NTLM authentifiziert. Wenn Sie den Benutzernamen und das Kennwort nicht enthalten sind, bindet die Konto-API auf das Objekt durch mithilfe des Sicherheitskontexts des aufrufenden Threads, der entweder den Sicherheitskontext des Benutzerkontos ein, unter dem die Anwendung ausgeführt wird oder der Clientbenutzer Konto, das der aufrufende Thread darstellt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Sealing">
+      <MemberSignature Language="C#" Value="Sealing" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.AccountManagement.ContextOptions Sealing = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.AccountManagement.ContextOptions.Sealing" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.AccountManagement.ContextOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Daten werden mithilfe von Kerberos verschlüsselt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Flag kann nur mit dem Negotiate-Context-Option verwendet werden und ist nicht mit der Option für die einfache Bindung verfügbar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecureSocketLayer">
+      <MemberSignature Language="C#" Value="SecureSocketLayer" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.AccountManagement.ContextOptions SecureSocketLayer = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.AccountManagement.ContextOptions.SecureSocketLayer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.AccountManagement.ContextOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Kanal wird mithilfe von Secure Sockets Layer (SSL) verschlüsselt. Active Directory erfordert, dass die Zertifikatdienste installiert werden, um SSL zu unterstützen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerBind">
+      <MemberSignature Language="C#" Value="ServerBind" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.AccountManagement.ContextOptions ServerBind = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.AccountManagement.ContextOptions.ServerBind" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.AccountManagement.ContextOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Geben Sie dieses Flag an, wenn den Kontext Domänentyp verwenden, wenn die Anwendung eine Bindung an den Namen eines bestimmten Servers ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Signing">
+      <MemberSignature Language="C#" Value="Signing" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.AccountManagement.ContextOptions Signing = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.AccountManagement.ContextOptions.Signing" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.AccountManagement.ContextOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Integrität der Daten wird überprüft. Dieses Flag kann nur mit dem Negotiate-Context-Option verwendet werden und ist nicht mit der Option für die einfache Bindung verfügbar.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SimpleBind">
+      <MemberSignature Language="C#" Value="SimpleBind" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.AccountManagement.ContextOptions SimpleBind = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.AccountManagement.ContextOptions.SimpleBind" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.AccountManagement.ContextOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Client wird mithilfe der Standardauthentifizierung authentifiziert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ **Vorsicht** Kommunikation möglicherweise werden über das Internet in Klartext gesendet, wenn die Option ' SecureSocketsLayer ' nicht mit einer einfachen Bindung angegeben ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

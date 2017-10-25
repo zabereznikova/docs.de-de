@@ -1,0 +1,100 @@
+<Type Name="ITask" FullName="Microsoft.Build.Framework.ITask">
+  <TypeSignature Language="C#" Value="public interface ITask" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITask" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.ITask" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert einen Task, der eine Einheit von ausführbarem Code, die von MSBuild zum Ausführen von Buildvorgängen verwendet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Klassen müssen diese Schnittstelle in das Buildmodul erkannt werden implementieren. Anstelle von implementieren diese Schnittstelle direkt, Sie können auch leiten Sie eine Klasse von der Hilfsklasse <xref:Microsoft.Build.Utilities.Task>, stellt standardimplementierungen einiger <xref:Microsoft.Build.Framework.ITask> Elemente.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Code aus der Implementierung einer Aufgabe abschließen.  
+  
+ [!code-csharp[msbuild_MakeDirTask#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_MakeDirTask/CS/msbuild_MakeDirTask.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BuildEngine">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.IBuildEngine BuildEngine { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.IBuildEngine BuildEngine" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.ITask.BuildEngine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.IBuildEngine</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert das Buildmodul für diese Aufgabe.</summary>
+        <value>Das Buildmodul für diese Aufgabe.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.ITask.Execute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Aufgabe ausgeführt.</summary>
+        <returns>
+          <see langword="true" />Wenn die Aufgabe erfolgreich ausgeführt wurde andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird durch das Buildmodul zum Ausführen einer Aufgabe aufgerufen. Nach dem Beenden dieser Methode sollte eine Aufgabe angeben, wenn die Ausführung erfolgreich war. Wenn eine Aufgabe eine Ausnahme von dieser Methode ausgelöst wird, wird das Modul davon ausgegangen, dass der Vorgang fehlgeschlagen ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostObject">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskHost HostObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskHost HostObject" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.ITask.HostObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskHost</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert Hostobjekt, das der Aufgabe zugeordnet ist.</summary>
+        <value>Das Hostobjekt, das der Aufgabe zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann ein null-Verweis sein (`Nothing` in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

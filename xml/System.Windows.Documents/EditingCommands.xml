@@ -1,0 +1,2786 @@
+<Type Name="EditingCommands" FullName="System.Windows.Documents.EditingCommands">
+  <TypeSignature Language="C#" Value="public static class EditingCommands" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit EditingCommands extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.EditingCommands" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet einen Standardsatz von verwandter Befehle bearbeiten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle zeigt die Befehle zum Bearbeiten und die zugeordneten Schlüssel Gesten (mit Schlüsselnamen aus dem <xref:System.Windows.Input.Key> und <xref:System.Windows.Input.ModifierKeys> Enumerationen).  
+  
+|Befehl Bearbeiten|Standardmäßige Tastenkombination|  
+|---------------------|-------------------------|  
+|<xref:System.Windows.Documents.EditingCommands.AlignCenter%2A>|`Ctrl`+`E`|  
+|<xref:System.Windows.Documents.EditingCommands.AlignJustify%2A>|`Ctrl`+`J`|  
+|<xref:System.Windows.Documents.EditingCommands.AlignLeft%2A>|`Ctrl`+`L`|  
+|<xref:System.Windows.Documents.EditingCommands.AlignRight%2A>|`Ctrl`+`R`|  
+|<xref:System.Windows.Documents.EditingCommands.Backspace%2A>|`Backspace`|  
+|<xref:System.Windows.Documents.EditingCommands.CorrectSpellingError%2A>|keine Standardtastenkombination|  
+|<xref:System.Windows.Documents.EditingCommands.DecreaseFontSize%2A>|`Ctrl`+`OemOpenBrackets`|  
+|<xref:System.Windows.Documents.EditingCommands.DecreaseIndentation%2A>|`Ctrl`+`Shift`+`T`|  
+|<xref:System.Windows.Documents.EditingCommands.Delete%2A>|`Delete`|  
+|<xref:System.Windows.Documents.EditingCommands.DeleteNextWord%2A>|`Ctrl`+`Delete`|  
+|<xref:System.Windows.Documents.EditingCommands.DeletePreviousWord%2A>|`Ctrl`+`Backspace`|  
+|<xref:System.Windows.Documents.EditingCommands.EnterLineBreak%2A>|`Shift`+`Enter`|  
+|<xref:System.Windows.Documents.EditingCommands.EnterParagraphBreak%2A>|`Enter`|  
+|<xref:System.Windows.Documents.EditingCommands.IgnoreSpellingError%2A>|keine Standardtastenkombination|  
+|<xref:System.Windows.Documents.EditingCommands.IncreaseFontSize%2A>|`Ctrl`+`OemCloseBrackets`|  
+|<xref:System.Windows.Documents.EditingCommands.IncreaseIndentation%2A>|`Ctrl`+`T`|  
+|<xref:System.Windows.Documents.EditingCommands.MoveDownByLine%2A>|`Down`|  
+|<xref:System.Windows.Documents.EditingCommands.MoveDownByPage%2A>|`PageDown`|  
+|<xref:System.Windows.Documents.EditingCommands.MoveDownByParagraph%2A>|`Ctrl`+`Down`|  
+|<xref:System.Windows.Documents.EditingCommands.MoveLeftByCharacter%2A>|`Left`|  
+|<xref:System.Windows.Documents.EditingCommands.MoveLeftByWord%2A>|`Ctrl`+`Left`|  
+|<xref:System.Windows.Documents.EditingCommands.MoveRightByCharacter%2A>|`Right`|  
+|<xref:System.Windows.Documents.EditingCommands.MoveRightByWord%2A>|`Ctrl`+`Right`|  
+|<xref:System.Windows.Documents.EditingCommands.MoveToDocumentEnd%2A>|`Ctrl`+`End`|  
+|<xref:System.Windows.Documents.EditingCommands.MoveToDocumentStart%2A>|`Ctrl`+`Home`|  
+|<xref:System.Windows.Documents.EditingCommands.MoveToLineEnd%2A>|`End`|  
+|<xref:System.Windows.Documents.EditingCommands.MoveToLineStart%2A>|`Home`|  
+|<xref:System.Windows.Documents.EditingCommands.MoveUpByLine%2A>|`Up`|  
+|<xref:System.Windows.Documents.EditingCommands.MoveUpByPage%2A>|`PageUp`|  
+|<xref:System.Windows.Documents.EditingCommands.MoveUpByParagraph%2A>|`Ctrl`+`Up`|  
+|<xref:System.Windows.Documents.EditingCommands.SelectDownByLine%2A>|`Shift`+`Down`|  
+|<xref:System.Windows.Documents.EditingCommands.SelectDownByPage%2A>|`Shift`+`PageDown`|  
+|<xref:System.Windows.Documents.EditingCommands.SelectDownByParagraph%2A>|`Ctrl`+`Shift`+`Down`|  
+|<xref:System.Windows.Documents.EditingCommands.SelectLeftByCharacter%2A>|`Shift`+`Left`|  
+|<xref:System.Windows.Documents.EditingCommands.SelectLeftByWord%2A>|`Ctrl`+`Shift`+`Left`|  
+|<xref:System.Windows.Documents.EditingCommands.SelectRightByCharacter%2A>|`Shift`+`Right`|  
+|<xref:System.Windows.Documents.EditingCommands.SelectRightByWord%2A>|`Ctrl`+`Shift`+`Right`|  
+|<xref:System.Windows.Documents.EditingCommands.SelectToDocumentEnd%2A>|`Ctrl`+`Shift`+`End`|  
+|<xref:System.Windows.Documents.EditingCommands.SelectToDocumentStart%2A>|`Ctrl`+`Shift`+`Home`|  
+|<xref:System.Windows.Documents.EditingCommands.SelectToLineEnd%2A>|`Shift`+`End`|  
+|<xref:System.Windows.Documents.EditingCommands.SelectToLineStart%2A>|`Shift`+`Home`|  
+|<xref:System.Windows.Documents.EditingCommands.SelectUpByLine%2A>|`Shift`+`Up`|  
+|<xref:System.Windows.Documents.EditingCommands.SelectUpByPage%2A>|`Shift`+`PageUp`|  
+|<xref:System.Windows.Documents.EditingCommands.SelectUpByParagraph%2A>|`Ctrl`+`Shift`+`Up`|  
+|<xref:System.Windows.Documents.EditingCommands.TabBackward%2A>|`Shift`+`Tab`|  
+|<xref:System.Windows.Documents.EditingCommands.TabForward%2A>|`Tab`|  
+|<xref:System.Windows.Documents.EditingCommands.ToggleBold%2A>|`Ctrl`+`B`|  
+|<xref:System.Windows.Documents.EditingCommands.ToggleBullets%2A>|`Ctrl`+`Shift`+`L`|  
+|<xref:System.Windows.Documents.EditingCommands.ToggleInsert%2A>|`Insert`|  
+|<xref:System.Windows.Documents.EditingCommands.ToggleItalic%2A>|`Ctrl`+`I`|  
+|<xref:System.Windows.Documents.EditingCommands.ToggleNumbering%2A>|`Ctrl`+`Shift`+`N`|  
+|<xref:System.Windows.Documents.EditingCommands.ToggleSubscript%2A>|`Ctrl`+`OemPlus`|  
+|<xref:System.Windows.Documents.EditingCommands.ToggleSuperscript%2A>|`Ctrl`+`Shift+OemPlus`|  
+|<xref:System.Windows.Documents.EditingCommands.ToggleUnderline%2A>|`Ctrl`+`U`|  
+  
+ Befehle zum Verschieben der Einfügemarke und Erweitern der Auswahl verwenden einen gemeinsamen Satz von Standardtastenkombinationen, die allgemeine Differenz wird das Hinzufügen der <xref:System.Windows.Input.ModifierKeys.Shift> -Taste, um die Auswahl von Befehlen aus Befehle zum Verschieben der Einfügemarke zu unterscheiden.  Z. B. die <xref:System.Windows.Documents.EditingCommands.MoveLeftByCharacter%2A> Befehl verfügt über eine Standardtastenkombination <xref:System.Windows.Input.Key.Left>, und die entsprechende <xref:System.Windows.Documents.EditingCommands.SelectLeftByCharacter%2A> Befehl verfügt über eine Standardtastenkombination <xref:System.Windows.Input.ModifierKeys.Shift> + <xref:System.Windows.Input.Key.Left>.  
+  
+ Im Allgemeinen die Befehlsdefinitionen bereitgestellt, von der <xref:System.Windows.Documents.EditingCommands> Klasse nehmen Sie keine Befehlsparameter (der `parameter` Parameter erwartet, indem Sie die <xref:System.Windows.Input.ICommand.Execute%2A> Methode).  
+  
+ Weitere Informationen über Befehle und die Befehle finden Sie unter [Input Overview](~/docs/framework/wpf/advanced/input-overview.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AlignCenter">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand AlignCenter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand AlignCenter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.AlignCenter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.AlignCenter" /> Befehl, der erfordert, dass der aktuelle Absatz oder eine Auswahl von Absätzen zentriert werden soll.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Ctrl" /> + <see langword="E" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Befehl bezieht sich immer nur die <xref:System.Windows.Documents.Paragraph> Ebene.  Wenn dieser Befehl aufgerufen wird, für einen ausgewählten Teil des Inhalts innerhalb eines Absatzes (einschließlich eine leere Auswahl, in dem sich die Einfügemarke innerhalb eines Absatzes wird), wird die angeforderte Auswirkungen auf den gesamten Absatz angewendet.  Wenn Sie diesen Befehl für eine Auswahl aufgerufen wird, die mehrere Absätze umfasst, wird die Auswirkung auf den gesamten Inhalt der einzelnen Absätze angewendet, die in der Auswahl beteiligt ist.  
+  
+ Die folgende Abbildung zeigt ein Beispiel für zentrierten Inhalt.  
+  
+ ![Bildschirmabbildung: TextAlign-Eigenschaftswert Center](~/add/media/flowdoc-textalign-center.png "Bildschirmabbildung: TextAlign-Eigenschaftswert Center")  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>.  
+  
+<a name="xamlAttributeUsage_AlignCenter"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="AlignCenter"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlignJustify">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand AlignJustify { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand AlignJustify" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.AlignJustify" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.AlignJustify" /> Befehl, der erfordert, dass der aktuelle Absatz oder eine Auswahl von Absätzen ausgerichtet wird.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Ctrl" /> + <see langword="J" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Befehl bezieht sich immer nur die <xref:System.Windows.Documents.Paragraph> Ebene.  Wenn dieser Befehl aufgerufen wird, für einen ausgewählten Teil des Inhalts innerhalb eines Absatzes (einschließlich eine leere Auswahl, in dem sich die Einfügemarke innerhalb eines Absatzes wird), wird die angeforderte Auswirkungen auf den gesamten Absatz angewendet.  Wenn dieser Befehl für eine Auswahl, die mehrere Absätze umfasst aufgerufen wird, ist die Auswirkung auf die Absätze in der Auswahl angewendet.  
+  
+ Wenn Inhalt ausgerichtet ist, wird der horizontale Abstand innerhalb jeder Zeile des Inhalts angepasst, damit, dass die Zeilen gleich oder in der Nähe von gleicher Breite aufweisen.  Inhalt ist in der Regel gerechtfertigt, zum Glätten auf den Seiten des Inhalts zu erstellen.  
+  
+ Da es häufig kürzer als die übrigen Daten handelt, kann die letzte Zeile in einem Absatz nicht ausgerichtet bleiben, nachdem dieser Befehl aufgerufen wird.  
+  
+ Die folgende Abbildung zeigt nicht ausgerichtet (linksbündig) Inhalt.  
+  
+ ![Bildschirmabbildung: Inhalt ist nicht ausgerichtet](~/add/media/content-unjustified.png "Screenshot: Inhalt ist nicht ausgerichtet")  
+  
+ Die folgende Abbildung zeigt den gleichen Inhalt aus, nachdem es begründet.  
+  
+ ![Screenshot des Inhalts gerechtfertigt Text](~/add/media/content-justified.png "Screenshot des Inhalts gerechtfertigt Text")  
+  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>.  
+  
+<a name="xamlAttributeUsage_AlignJustify"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="AlignJustify"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlignLeft">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand AlignLeft { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand AlignLeft" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.AlignLeft" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.AlignLeft" /> Befehl, der Anforderungen, eine Auswahl von Inhalt nach links ausgerichtet werden.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Ctrl" /> + <see langword="L" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Befehl bezieht sich immer nur die <xref:System.Windows.Documents.Paragraph> Ebene.  Wenn dieser Befehl aufgerufen wird, für einen ausgewählten Teil des Inhalts innerhalb eines Absatzes (einschließlich eine leere Auswahl, in dem sich die Einfügemarke innerhalb eines Absatzes wird), wird die angeforderte Auswirkungen auf den gesamten Absatz angewendet.  Wenn Sie diesen Befehl für eine Auswahl aufgerufen wird, die mehrere Absätze umfasst, wird die Auswirkung auf den gesamten Inhalt der einzelnen Absätze angewendet, die in der Auswahl beteiligt ist.  
+  
+ Die folgende Abbildung zeigt ein Beispiel des Inhalts linksbündig ausgerichtet.  
+  
+ ![Bildschirmabbildung: TextAlign-Eigenschaftswert Left](~/add/media/flowdoc-textalign-left.png "Bildschirmabbildung: TextAlign-Eigenschaftswert Left")  
+  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>.  
+  
+<a name="xamlAttributeUsage_AlignLeft"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="AlignLeft"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlignRight">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand AlignRight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand AlignRight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.AlignRight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.AlignRight" /> Befehl, der Anforderungen, eine Auswahl von Inhalt nach rechts ausgerichtet werden.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Ctrl" /> + <see langword="R" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Befehl bezieht sich immer nur die <xref:System.Windows.Documents.Paragraph> Ebene.  Wenn dieser Befehl aufgerufen wird, für einen ausgewählten Teil des Inhalts innerhalb eines Absatzes (einschließlich eine leere Auswahl, in dem sich die Einfügemarke innerhalb eines Absatzes wird), wird die angeforderte Auswirkungen auf den gesamten Absatz angewendet.  Wenn Sie diesen Befehl für eine Auswahl aufgerufen wird, die mehrere Absätze umfasst, wird die Auswirkung auf den gesamten Inhalt der einzelnen Absätze angewendet, die in der Auswahl beteiligt ist.  
+  
+ Die folgende Abbildung zeigt ein Beispiel des Inhalts rechtsbündig ausgerichtet.  
+  
+ ![Bildschirmabbildung: TextAlign-Wert rechts](~/add/media/flowdoc-textalign-right.png "Bildschirmabbildung: TextAlign-Wert, der rechts")  
+  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>.  
+  
+<a name="xamlAttributeUsage_AlignRight"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="AlignRight"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Backspace">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Backspace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Backspace" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.Backspace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.Backspace" /> Befehl, der erfordert, dass eine RÜCKTASTE an der aktuellen Position oder über die aktuelle Auswahl eingegeben werden.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl ist <see langword="Backspace" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn auf eine leere Auswahl aufgerufen wird, werden mit diesem Befehl das Zeichen oder Absatztrennzeichen vor der Einfügemarke gelöscht. Wenn auf eine nicht leere Auswahl aufgerufen wird, löscht mit diesem Befehl die Auswahl auf.  
+  
+ Mit diesem Befehl behält die Formatierung aus der gelöschten Auswahl für den Inhalt sofort an derselben Position eingefügt, nachdem dieser Befehl aufgerufen wird.  Im Gegensatz dazu die <xref:System.Windows.Documents.EditingCommands.Delete%2A> Befehl, der keine vorherige Formatierung beibehalten.  
+  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, und <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_Backspace"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="Backspace"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CorrectSpellingError">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand CorrectSpellingError { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand CorrectSpellingError" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.CorrectSpellingError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.CorrectSpellingError" /> Befehl, der anfordert, dass jedes falsch geschriebene Wort an der aktuellen Position korrigiert wird.</summary>
+        <value>Der angeforderte Befehl.  Dieser Befehl hat keine standardmäßige Tastenkombination.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_CorrectSpellingError"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="CorrectSpellingError"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecreaseFontSize">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand DecreaseFontSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand DecreaseFontSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.DecreaseFontSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.DecreaseFontSize" /> Befehl, der Anforderungen, der Schriftgrad für die aktuelle Auswahl um 1 Punkt verringert werden.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Ctrl" /> + <see langword="OemOpenBrackets" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn dieser Befehl für eine leere Auswahl aufgerufen wird, in dem sich die Einfügemarke innerhalb eines Worts ist, wird die Auswahl automatisch erweitert, um den Befehl für das ganze Wort gelten.  
+  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>.  
+  
+<a name="xamlAttributeUsage_DecreaseFontSize"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="DecreaseFontSize"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecreaseIndentation">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand DecreaseIndentation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand DecreaseIndentation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.DecreaseIndentation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.DecreaseIndentation" /> Befehl dem angefordert wird, dass der Einzug des aktuellen Absatzes um einen Tabstopp verringert werden.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Ctrl" /> + <see langword="Shift" /> + <see langword="T" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>.  
+  
+> [!IMPORTANT]
+>  Dieser Befehl hat keine Auswirkungen auf ein Textelement, es sei denn, die <xref:System.Windows.Controls.Primitives.TextBoxBase.AcceptsTab%2A> des Textelements ist-Eigenschaftensatz auf `true`.  
+  
+<a name="xamlAttributeUsage_DecreaseIndentation"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="DecreaseIndentation"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Delete { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Delete" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.Delete" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.Delete" /> Befehl, der fordert, dass die aktuelle Auswahl gelöscht werden.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl ist <see langword="Delete" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl verwirft alle Formatierungen aus der gelöschten Auswahl.  Im Gegensatz dazu die <xref:System.Windows.Documents.EditingCommands.Backspace%2A> Befehl, der behält die Formatierung aus der gelöschten Auswahl für den Inhalt sofort an derselben Position eingefügt, nachdem dieser Befehl aufgerufen wird.  
+  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, und <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_Delete"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="Delete"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteNextWord">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand DeleteNextWord { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand DeleteNextWord" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.DeleteNextWord" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.DeleteNextWord" /> Befehl, der erfordert, dass das nächste Wort (relativ zur aktuellen Position) gelöscht werden.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Ctrl" /> + <see langword="Delete" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Einfügemarke innerhalb eines Worts ist, wird der Rest des Worts zwischen der aktuellen Position und dem Ende des Worts gelöscht.  
+  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, und <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_DeleteNextWord"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="DeleteNextWord"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeletePreviousWord">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand DeletePreviousWord { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand DeletePreviousWord" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.DeletePreviousWord" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.DeletePreviousWord" /> Befehl, der fordert, dass das vorherige Wort (relativ zur aktuellen Position) gelöscht werden.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Ctrl" /> + <see langword="Backspace" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Einfügemarke innerhalb eines Worts befindet, wird der Rest des Worts zwischen der aktuellen Position und die Wortanfang gelöscht.  
+  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, und <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_DeletePreviousWord"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="DeletePreviousWord"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnterLineBreak">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand EnterLineBreak { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand EnterLineBreak" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.EnterLineBreak" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.EnterLineBreak" /> Befehl, der fordert, dass ein Zeilenumbruch eingefügt werden, an der aktuellen Position oder über die aktuelle Auswahl.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Shift" /> + <see langword="Enter" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Editoren, in denen fortlaufendem Inhalt, z. B. unterstützen <xref:System.Windows.Controls.RichTextBox>, gibt diese Ursachen Befehl eine <xref:System.Windows.Documents.LineBreak> Element an der aktuellen Position eingefügt werden.  
+  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox> und <xref:System.Windows.Controls.TextBox>.  
+  
+<a name="xamlAttributeUsage_EnterLineBreak"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="EnterLineBreak"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnterParagraphBreak">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand EnterParagraphBreak { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand EnterParagraphBreak" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.EnterParagraphBreak" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.EnterParagraphBreak" /> Befehl, der erfordert, dass eine Absatzmarke an der aktuellen Position oder über die aktuelle Auswahl eingefügt werden.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl ist <see langword="Enter" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl entspricht der Benutzer die EINGABETASTE drücken.  
+  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox> und <xref:System.Windows.Controls.TextBox> (wenn die <xref:System.Windows.Controls.Primitives.TextBoxBase.AcceptsReturn%2A> Eigenschaft ist `true`).  
+  
+> [!IMPORTANT]
+>  Dieser Befehl hat keine Auswirkungen auf ein Textelement, es sei denn, die <xref:System.Windows.Controls.Primitives.TextBoxBase.AcceptsReturn%2A> des Textelements ist-Eigenschaftensatz auf `true`.  
+  
+<a name="xamlAttributeUsage_EnterParagraphBreak"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="EnterParagraphBreak"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreSpellingError">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand IgnoreSpellingError { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand IgnoreSpellingError" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.IgnoreSpellingError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.IgnoreSpellingError" /> Befehl, der fordert, dass alle Instanzen von falsch geschriebene Wörter, die an der aktuellen Position oder in der aktuellen Auswahl ignoriert werden.</summary>
+        <value>Der angeforderte Befehl.  Dieser Befehl hat keine standardmäßige Tastenkombination.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_IgnoreSpellingError"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="IgnoreSpellingError"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncreaseFontSize">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand IncreaseFontSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand IncreaseFontSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.IncreaseFontSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.IncreaseFontSize" /> Befehl, der Anforderungen, der Schriftgrad für die aktuelle Auswahl um 1 Punkt erhöht werden.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Ctrl" /> + <see langword="OemCloseBrackets" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn dieser Befehl für eine leere Auswahl aufgerufen wird, in dem sich die Einfügemarke innerhalb eines Worts ist, wird die Auswahl erweitert, um den Befehl für das ganze Wort gelten.  
+  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>.  
+  
+<a name="xamlAttributeUsage_IncreaseFontSize"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="IncreaseFontSize"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncreaseIndentation">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand IncreaseIndentation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand IncreaseIndentation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.IncreaseIndentation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.IncreaseIndentation" /> Befehl dem angefordert wird, dass der Einzug des aktuellen Absatzes um einen Tabstopp erhöht werden.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Ctrl" /> + <see langword="T" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>.  
+  
+> [!IMPORTANT]
+>  Dieser Befehl hat keine Auswirkungen auf ein Textelement, es sei denn, die <xref:System.Windows.Controls.Primitives.TextBoxBase.AcceptsTab%2A> des Textelements ist-Eigenschaftensatz auf `true`.  
+  
+<a name="xamlAttributeUsage_IncreaseIndentation"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="IncreaseIndentation"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveDownByLine">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveDownByLine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveDownByLine" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.MoveDownByLine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.MoveDownByLine" /> Befehl, der erfordert, dass die Einfügemarke um eine Zeile nach unten zu verschieben.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl ist <see langword="Down" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox> und <xref:System.Windows.Controls.TextBox>.  
+  
+<a name="xamlAttributeUsage_MoveDownByLine"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="MoveDownByLine"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveDownByPage">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveDownByPage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveDownByPage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.MoveDownByPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.MoveDownByPage" /> Befehl, der erfordert, dass die Einfügemarke um eine Seite nach unten zu verschieben.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl ist <see langword="PageDown" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox> und <xref:System.Windows.Controls.TextBox>.  
+  
+<a name="xamlAttributeUsage_MoveDownByPage"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="MoveDownByPage"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveDownByParagraph">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveDownByParagraph { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveDownByParagraph" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.MoveDownByParagraph" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.MoveDownByParagraph" /> Befehl, der erfordert, dass die Einfügemarke um einen Absatz nach unten zu verschieben.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Ctrl" /> + <see langword="Down" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Befehl positioniert die Einfügemarke am Anfang des nächsten Absatzes an.  
+  
+ Dieser Befehl verhält sich wie <xref:System.Windows.Documents.EditingCommands.MoveToDocumentEnd%2A> beim Aufrufen einer <xref:System.Windows.Controls.TextBox>.  
+  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox> und <xref:System.Windows.Controls.TextBox>.  
+  
+<a name="xamlAttributeUsage_MoveDownByParagraph"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="MoveDownByParagraph"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveLeftByCharacter">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveLeftByCharacter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveLeftByCharacter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.MoveLeftByCharacter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.MoveLeftByCharacter" /> Befehl, der erfordert, dass der Einfügemarke ein Zeichen nach links verschoben.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl ist <see langword="Left" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, und <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_MoveLeftByCharacter"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="MoveLeftByCharacter"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveLeftByWord">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveLeftByWord { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveLeftByWord" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.MoveLeftByWord" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.MoveLeftByWord" /> Befehl, der erfordert, dass die Einfügemarke ein Wort nach links verschieben.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Ctrl" /> + <see langword="Left" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Einfügemarke innerhalb eines Worts ist, verschiebt mit diesem Befehl die Einfügemarke an den Anfang des Begriffs an.  Andernfalls: mit diesem Befehl verschiebt die Einfügemarke an den Anfang des vorherigen Worts.  
+  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, und <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_MoveLeftByWord"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="MoveLeftByWord"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveRightByCharacter">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveRightByCharacter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveRightByCharacter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.MoveRightByCharacter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.MoveRightByCharacter" /> Befehl, der erfordert, dass der Einfügemarke ein Zeichen nach rechts verschoben.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl ist <see langword="Right" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, und <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_MoveRightByCharacter"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="MoveRightByCharacter"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveRightByWord">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveRightByWord { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveRightByWord" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.MoveRightByWord" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.MoveRightByWord" /> Befehl, der erfordert, dass die Einfügemarke um ein Wort nach rechts verschoben.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Ctrl" /> + <see langword="Right" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Einfügemarke innerhalb eines Worts ist, verschiebt mit diesem Befehl die Einfügemarke bis zum Ende des Worts an.  Andernfalls: mit diesem Befehl verschiebt die Einfügemarke an den Anfang des nächsten Worts.  
+  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, und <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_MoveRightByWord"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="MoveRightByWord"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToDocumentEnd">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveToDocumentEnd { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveToDocumentEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.MoveToDocumentEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.MoveToDocumentEnd" /> Befehl, der erfordert, dass die Einfügemarke an das Ende des Inhalts verschoben.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Ctrl" /> + <see langword="End" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein *Textcontainer* ist das Element, das den äußeren Rahmen für den Inhalt zur hand bildet.  <xref:System.Windows.Controls.TextBlock>und <xref:System.Windows.Documents.FlowDocument> sind Beispiele für Textcontainer.  Der Inhalt zusammen in einem Textcontainer wird als bezeichnet eine *Dokument*.  
+  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, und <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_MoveToDocumentEnd"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="MoveToDocumentEnd"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToDocumentStart">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveToDocumentStart { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveToDocumentStart" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.MoveToDocumentStart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.MoveToDocumentStart" /> Befehl, der erfordert, dass die Einfügemarke an den Anfang des Inhalts verschoben.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Ctrl" /> + <see langword="Home" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein *Textcontainer* ist das Element, das den äußeren Rahmen für den Inhalt zur hand bildet.  <xref:System.Windows.Controls.TextBlock>und <xref:System.Windows.Documents.FlowDocument> sind Beispiele für Textcontainer.  Der Inhalt zusammen in einem Textcontainer wird als bezeichnet eine *Dokument*.  
+  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, und <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_MoveToDocumentStart"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="MoveToDocumentStart"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToLineEnd">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveToLineEnd { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveToLineEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.MoveToLineEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.MoveToLineEnd" /> Befehl, der erfordert, dass die Einfügemarke an das Ende der aktuellen Zeile verschoben.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl ist <see langword="End" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, und <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_MoveToLineEnd"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="MoveToLineEnd"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToLineStart">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveToLineStart { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveToLineStart" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.MoveToLineStart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.MoveToLineStart" /> Befehl, der erfordert, dass die Einfügemarke an den Anfang der aktuellen Zeile verschoben.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl ist <see langword="Home" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, und <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_MoveToLineStart"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="MoveToLineStart"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveUpByLine">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveUpByLine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveUpByLine" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.MoveUpByLine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.MoveUpByLine" /> Befehl, der erfordert, dass die Einfügemarke um eine Zeile nach oben zu verschieben.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl ist <see langword="Up" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox> und <xref:System.Windows.Controls.TextBox>.  
+  
+<a name="xamlAttributeUsage_MoveUpByLine"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="MoveUpByLine"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveUpByPage">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveUpByPage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveUpByPage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.MoveUpByPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.MoveUpByPage" /> Befehl, der erfordert, dass die Einfügemarke um eine Seite nach oben zu verschieben.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl ist <see langword="PageUp" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox> und <xref:System.Windows.Controls.TextBox>.  
+  
+<a name="xamlAttributeUsage_MoveUpByPage"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="MoveUpByPage"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveUpByParagraph">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveUpByParagraph { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveUpByParagraph" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.MoveUpByParagraph" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.MoveUpByParagraph" /> Befehl, der erfordert, dass die Einfügemarke um einen Absatz nach oben zu verschieben.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Ctrl" /> + <see langword="Up" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Befehl positioniert die Einfügemarke am Anfang des nächsten Absatzes an.  
+  
+ Dieser Befehl verhält sich wie <xref:System.Windows.Documents.EditingCommands.MoveToDocumentStart%2A> beim Aufrufen einer <xref:System.Windows.Controls.TextBox>.  
+  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox> und <xref:System.Windows.Controls.TextBox>.  
+  
+<a name="xamlAttributeUsage_MoveUpByParagraph"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="MoveUpByParagraph"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectDownByLine">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectDownByLine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectDownByLine" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.SelectDownByLine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.SelectDownByLine" /> Befehl, der erfordert, dass die aktuelle Auswahl um eine Zeile nach unten erweitert werden.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Shift" /> + <see langword="Down" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, und <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_SelectDownByLine"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="SelectDownByLine"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectDownByPage">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectDownByPage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectDownByPage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.SelectDownByPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.SelectDownByPage" /> Befehl, der erfordert, dass die aktuelle Auswahl um eine Seite nach unten erweitert werden.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Shift" /> + <see langword="PageDown" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, und <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_SelectDownByPage"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="SelectDownByPage"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectDownByParagraph">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectDownByParagraph { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectDownByParagraph" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.SelectDownByParagraph" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.SelectDownByParagraph" /> Befehl, der erfordert, dass die aktuelle Auswahl um einen Absatz nach unten erweitert werden.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Ctrl" /> + <see langword="Shift" /> + <see langword="Down" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Befehl wird die Auswahl auf den Anfang des nächsten Absatzes erweitert.  Andernfalls wird mit diesem Befehl die Auswahl bis zum Ende des aktuellen Absatzes erweitert.  Die erweiterte Auswahl schließt die Absatzmarke, die das Ende des Absatzes markiert.  
+  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, und <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_SelectDownByParagraph"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="SelectDownByParagraph"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectLeftByCharacter">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectLeftByCharacter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectLeftByCharacter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.SelectLeftByCharacter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.SelectLeftByCharacter" /> Befehl, der erfordert, dass die aktuelle Auswahl um ein Zeichen nach links erweitert werden.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Shift" /> + <see langword="Left" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, und <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_SelectLeftByCharacter"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="SelectLeftByCharacter"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectLeftByWord">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectLeftByWord { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectLeftByWord" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.SelectLeftByWord" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.SelectLeftByWord" /> Befehl, der erfordert, dass die aktuelle Auswahl um ein Wort nach links erweitert werden.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Ctrl" /> + <see langword="Shift" /> + <see langword="Left" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Einfügemarke innerhalb eines Worts ist, wird mit diesem Befehl die Auswahl auf den Anfang des Begriffs erweitert.  Andernfalls wird mit diesem Befehl die Auswahl auf den Anfang des vorherigen Worts erweitert.  
+  
+ Die erweiterte Auswahl umfasst nicht das Word-Trennzeichen.  Im Gegensatz dazu <xref:System.Windows.Documents.EditingCommands.SelectRightByWord%2A>, das Word-Trennzeichen in der erweiterten Auswahl eingeschlossen.  
+  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, und <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_SelectLeftByWord"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="SelectLeftByWord"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectRightByCharacter">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectRightByCharacter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectRightByCharacter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.SelectRightByCharacter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.SelectRightByCharacter" /> Befehl, der erfordert, dass die aktuelle Auswahl um ein Zeichen nach rechts erweitert werden.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Shift" /> + <see langword="Right" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, und <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_SelectRightByCharacter"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="SelectRightByCharacter"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectRightByWord">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectRightByWord { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectRightByWord" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.SelectRightByWord" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.SelectRightByWord" /> Befehl, der erfordert, dass die aktuelle Auswahl um ein Wort nach rechts erweitert werden.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Ctrl" /> + <see langword="Shift" /> + <see langword="Right" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Einfügemarke innerhalb eines Worts ist, wird mit diesem Befehl die Auswahl bis zum Ende des Begriffs erweitert.  Andernfalls wird mit diesem Befehl die Auswahl bis zum Ende des Worts weiter erweitert.  
+  
+ Die erweiterte Auswahl schließt das Word-Trennzeichen.  Im Gegensatz dazu <xref:System.Windows.Documents.EditingCommands.SelectLeftByWord%2A> , das Word-Trennzeichen in der erweiterten Auswahl nicht eingeschlossen.  
+  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, und <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_SelectRightByWord"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="SelectRightByWord"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectToDocumentEnd">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectToDocumentEnd { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectToDocumentEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.SelectToDocumentEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.SelectToDocumentEnd" /> Befehl, der erfordert, dass die aktuelle Auswahl an das Ende des Inhalts erweitert werden.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Ctrl" /> + <see langword="Shift" /> + <see langword="End" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein *Textcontainer* ist das Element, das den äußeren Rahmen für den Inhalt zur hand bildet.  <xref:System.Windows.Controls.TextBlock>und <xref:System.Windows.Documents.FlowDocument> sind Beispiele für Textcontainer.  Der Inhalt zusammen in einem Textcontainer wird als bezeichnet eine *Dokument*.  
+  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, und <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_SelectToDocumentEnd"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="SelectToDocumentEnd"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectToDocumentStart">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectToDocumentStart { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectToDocumentStart" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.SelectToDocumentStart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.SelectToDocumentStart" /> Befehl, der erfordert, dass die aktuelle Auswahl ganz am Anfang des Inhalts erweitert werden.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Ctrl" /> + <see langword="Shift" /> + <see langword="Home" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein *Textcontainer* ist das Element, das den äußeren Rahmen für den Inhalt zur hand bildet.  <xref:System.Windows.Controls.TextBlock>und <xref:System.Windows.Documents.FlowDocument> sind Beispiele für Textcontainer.  Der Inhalt zusammen in einem Textcontainer wird als bezeichnet eine *Dokument*.  
+  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, und <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_SelectToDocumentStart"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="SelectToDocumentStart"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectToLineEnd">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectToLineEnd { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectToLineEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.SelectToLineEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.SelectToLineEnd" /> Befehl, der erfordert, dass die aktuelle Auswahl bis zum Ende der aktuellen Zeile erweitert werden.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Shift" /> + <see langword="End" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, und <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_SelectToLineEnd"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="SelectToLineEnd"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectToLineStart">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectToLineStart { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectToLineStart" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.SelectToLineStart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.SelectToLineStart" /> Befehl, der erfordert, dass die aktuelle Auswahl an den Anfang der aktuellen Zeile erweitert werden.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Shift" /> + <see langword="Home" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, und <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_SelectToLineStart"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="SelectToLineStart"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectUpByLine">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectUpByLine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectUpByLine" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.SelectUpByLine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.SelectUpByLine" /> Befehl, der erfordert, dass die aktuelle Auswahl um eine Zeile nach oben erweitert werden.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Shift" /> + <see langword="Up" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, und <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_SelectUpByLine"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="SelectUpByLine"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectUpByPage">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectUpByPage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectUpByPage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.SelectUpByPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.SelectUpByPage" /> Befehl, der erfordert, dass die aktuelle Auswahl um eine Seite nach oben erweitert werden.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Shift" /> + <see langword="PageUp" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, und <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_SelectUpByPage"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="SelectUpByPage"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectUpByParagraph">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectUpByParagraph { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectUpByParagraph" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.SelectUpByParagraph" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.SelectUpByParagraph" /> Befehl, der erfordert, dass die aktuelle Auswahl nach oben um einen Absatz erweitert werden.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Ctrl" /> + <see langword="Shift" /> + <see langword="Up" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Einfügemarke am Anfang eines Absatzes ist, wird mit diesem Befehl die Auswahl an den Anfang des vorhergehenden Absatzes erweitert.  Andernfalls wird mit diesem Befehl die Auswahl auf den Anfang des aktuellen Absatzes erweitert.  
+  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, und <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_SelectUpByParagraph"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="SelectUpByParagraph"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabBackward">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand TabBackward { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand TabBackward" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.TabBackward" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.TabBackward" /> Befehl.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Shift" /> + <see langword="Tab" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Verhalten für diesen Befehl hängt von der aktuellen Auswahl ab. Wenn die Auswahl nicht leer ist, entspricht dieser Befehl <xref:System.Windows.Documents.EditingCommands.DecreaseIndentation%2A>. Wenn die Einfügemarke in eine Tabellenzelle wird (dargestellt durch die <xref:System.Windows.Documents.TableCell> Element), mit diesem Befehl verschiebt die Einfügemarke in die vorherige Zelle. Anderenfalls wird ein Tabstoppzeichen in der aktuellen Position eingefügt.  
+  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox> und <xref:System.Windows.Controls.TextBox> (wenn die <xref:System.Windows.Controls.Primitives.TextBoxBase.AcceptsTab%2A> Eigenschaft ist `true`).  
+  
+<a name="xamlAttributeUsage_TabBackward"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="TabBackward"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+```csharp  
+RichTextBox rTB = new RichTextBox();  
+  
+EditingCommands.ToggleInsert.Execute(null, rTB);  
+  
+```  
+  
+```vb  
+            Dim rTB As New RichTextBox()  
+  
+            EditingCommands.ToggleInsert.Execute(Nothing, rTB)  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabForward">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand TabForward { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand TabForward" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.TabForward" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.TabForward" /> Befehl.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl ist <see langword="Tab" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Verhalten für diesen Befehl hängt von der aktuellen Auswahl ab. Wenn die Auswahl nicht leer ist, oder wenn die Auswahl leer ist, und der aktuellen Position der Einfügemarke befindet sich am Anfang eines Absatzes, dieser Befehl entspricht <xref:System.Windows.Documents.EditingCommands.IncreaseIndentation%2A>. Wenn die Einfügemarke in eine Tabellenzelle wird (dargestellt durch die <xref:System.Windows.Documents.TableCell> Element), mit diesem Befehl verschiebt die Einfügemarke in die nächste Zelle. Wenn die Einfügemarke in der letzten Zelle einer Tabelle ist, bewirkt, dass dieser Befehl eine neue Zeile, die Tabelle mit der Einfügemarke in der ersten Zelle der neuen Zeile positioniert angefügt werden soll.  Anderenfalls wird ein Tabstoppzeichen in der aktuellen Position eingefügt.  
+  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox> und <xref:System.Windows.Controls.TextBox> (wenn die <xref:System.Windows.Controls.Primitives.TextBoxBase.AcceptsTab%2A> Eigenschaft ist `true`).  
+  
+<a name="xamlAttributeUsage_TabForward"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="TabForward"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+```csharp  
+RichTextBox rTB = new RichTextBox();  
+  
+EditingCommands.ToggleInsert.Execute(null, rTB);  
+  
+```  
+  
+```vb  
+            Dim rTB As New RichTextBox()  
+  
+            EditingCommands.ToggleInsert.Execute(Nothing, rTB)  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToggleBold">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ToggleBold { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ToggleBold" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.ToggleBold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.ToggleBold" /> Befehl, der Anforderungen, die <see cref="T:System.Windows.Documents.Bold" /> Formatierung für die aktuelle Auswahl umgeschaltet werden.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Ctrl" /> + <see langword="B" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.FontWeight> für die aktuelle Auswahl im Bereich von <xref:System.Windows.FontWeights.Thin%2A> auf <xref:System.Windows.FontWeights.SemiBold%2A>, <xref:System.Windows.FontWeights.Bold%2A> auf die aktuelle Auswahl angewendet wird.  Andernfalls <xref:System.Windows.FontWeights.Normal%2A> angewendet wird.  Für eine vergleichende Übersicht <xref:System.Windows.FontWeight> -Werte finden Sie in <xref:System.Windows.FontWeights>.  
+  
+ Wenn die Auswahl leer ist, und die Einfügemarke innerhalb eines Worts angezeigt wird, wird die Auswahl erweitert, um das ganze Wort enthalten.  
+  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>.  
+  
+<a name="xamlAttributeUsage_ToggleBold"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="ToggleBold"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToggleBullets">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ToggleBullets { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ToggleBullets" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.ToggleBullets" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.ToggleBullets" /> Befehl, der erfordert, dass die Formatierung ungeordnete Liste (auch als Aufzählung bezeichnet) für die aktuelle Auswahl ein-/ausgeschaltet werden.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Ctrl" /> + <see langword="Shift" /> + <see langword="L" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Befehl bezieht sich immer nur die <xref:System.Windows.Documents.Paragraph> Ebene.  Wenn dieser Befehl aufgerufen wird, für einen ausgewählten Teil des Inhalts innerhalb eines Absatzes (einschließlich eine leere Auswahl, in dem sich die Einfügemarke innerhalb eines Absatzes wird), wird die angeforderte Auswirkungen auf den gesamten Absatz angewendet.  Wenn Sie diesen Befehl für eine Auswahl aufgerufen wird, die mehrere Absätze umfasst, wird die Auswirkung auf den gesamten Inhalt der einzelnen Absätze angewendet, die in der Auswahl beteiligt ist.  
+  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>.  
+  
+<a name="xamlAttributeUsage_ToggleBullets"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="ToggleBullets"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToggleInsert">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ToggleInsert { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ToggleInsert" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.ToggleInsert" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.ToggleInsert" /> Befehl, der der Eingabemodus zwischen einfügen und Überschreiben umgeschaltet wird.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl ist <see langword="Insert" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, und <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_ToggleInsert"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="ToggleInsert"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToggleItalic">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ToggleItalic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ToggleItalic" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.ToggleItalic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.ToggleItalic" /> Befehl, der Anforderungen, die <see cref="T:System.Windows.Documents.Italic" /> Formatierung für die aktuelle Auswahl umgeschaltet werden.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Ctrl" /> + <see langword="I" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.FontStyle> für die aktuelle Auswahl ist <xref:System.Windows.FontStyles.Normal%2A>, <xref:System.Windows.FontStyles.Italic%2A> auf die aktuelle Auswahl angewendet wird.  Andernfalls <xref:System.Windows.FontStyles.Normal%2A> angewendet wird.  
+  
+ Wenn die Auswahl leer ist, und die Einfügemarke innerhalb eines Worts angezeigt wird, wird die Auswahl erweitert, um das ganze Wort enthalten.  
+  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>.  
+  
+<a name="xamlAttributeUsage_ToggleItalic"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="ToggleItalic"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToggleNumbering">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ToggleNumbering { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ToggleNumbering" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.ToggleNumbering" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.ToggleNumbering" /> Befehl, der erfordert, dass die Formatierung der geordneten Liste (auch als nummerierte Liste bezeichnet) für die aktuelle Auswahl ein-/ausgeschaltet werden.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Ctrl" /> + <see langword="Shift" /> + <see langword="N" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Befehl bezieht sich immer nur die <xref:System.Windows.Documents.Paragraph> Ebene.  Wenn dieser Befehl aufgerufen wird, für einen ausgewählten Teil des Inhalts innerhalb eines Absatzes (einschließlich eine leere Auswahl, in dem sich die Einfügemarke innerhalb eines Absatzes wird), wird die angeforderte Auswirkungen auf den gesamten Absatz angewendet.  Wenn Sie diesen Befehl für eine Auswahl aufgerufen wird, die mehrere Absätze umfasst, wird die Auswirkung auf den gesamten Inhalt der einzelnen Absätze angewendet, die in der Auswahl beteiligt ist.  
+  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>.  
+  
+<a name="xamlAttributeUsage_ToggleNumbering"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="ToggleNumbering"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToggleSubscript">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ToggleSubscript { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ToggleSubscript" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.ToggleSubscript" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.ToggleSubscript" /> Befehl, der erfordert, dass subscript Formatierung für die aktuelle Auswahl umgeschaltet wird.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Ctrl" /> + <see langword="OemPlus" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_ToggleSubscript"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="ToggleSubscript"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToggleSuperscript">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ToggleSuperscript { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ToggleSuperscript" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.ToggleSuperscript" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.ToggleSuperscript" /> Befehl, der erfordert, dass hochgestellte Formatierung für die aktuelle Auswahl ein-/ausgeschaltet werden.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Ctrl" /> + <see langword="Shift" /> + <see langword="OemPlus" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+<a name="xamlAttributeUsage_ToggleSuperscript"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="ToggleSuperscript"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToggleUnderline">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ToggleUnderline { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ToggleUnderline" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.ToggleUnderline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="P:System.Windows.Documents.EditingCommands.ToggleUnderline" /> Befehl, der Anforderungen, die <see cref="T:System.Windows.Documents.Underline" /> Formatierung für die aktuelle Auswahl umgeschaltet werden.</summary>
+        <value>Der angeforderte Befehl.  Die standardmäßige Tastenkombination für diesen Befehl wird <see langword="Ctrl" /> + <see langword="U" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Auswahl leer ist, und die Einfügemarke innerhalb eines Worts angezeigt wird, wird die Auswahl erweitert, um das ganze Wort enthalten.  
+  
+ Es ist nicht notwendigerweise eine tatsächliche Implementierung, die für diesen Befehl für ein angegebenes Objekt reagiert. in vielen Fällen ist die Implementierung, die an einen Befehl antwortet der Verantwortung des Anwendungs-Writer.  
+  
+ Mit diesem Befehl wird eine systemeigene Unterstützung durch <xref:System.Windows.Controls.RichTextBox>.  
+  
+<a name="xamlAttributeUsage_ToggleUnderline"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="ToggleUnderline"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie auf einen Befehl für ein Objekt aufrufen, die der Befehl unterstützt wird.  
+  
+ In diesem Beispiel eine <xref:System.Windows.Controls.RichTextBox> dient als das Befehlsziel.  Beachten Sie, dass <xref:System.Windows.Controls.RichTextBox> implementiert die <xref:System.Windows.IInputElement> Schnittstelle (geerbt von <xref:System.Windows.FrameworkElement>), und bietet systemeigene Unterstützung für viele Bearbeitungsbefehle.  
+  
+ Das erste Argument für die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode ist ein Befehlsparameter.  Die meisten Befehle ignorieren Befehlsparameter. Dieser Parameter sollte im allgemeinen `null` für Bearbeitungsbefehle.  
+  
+ Das zweite Argument gibt das Objekt, an dem der Befehl weitergeleitet werden.  Dieses Objekt muss implementieren die <xref:System.Windows.IInputElement> Schnittstelle, und sollte einen Handler für den angegebenen Befehl einschließen.  Im Allgemeinen wird ein Befehl ignoriert, wenn für ein Objekt aufgerufen, die den Befehl nicht behandelt.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

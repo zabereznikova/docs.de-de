@@ -1,0 +1,56 @@
+<Type Name="IForwardingLogger" FullName="Microsoft.Build.Framework.IForwardingLogger">
+  <TypeSignature Language="C#" Value="public interface IForwardingLogger : Microsoft.Build.Framework.INodeLogger" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IForwardingLogger implements class Microsoft.Build.Framework.ILogger, class Microsoft.Build.Framework.INodeLogger" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.IForwardingLogger" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Framework.INodeLogger</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Erweitert die <see cref="T:Microsoft.Build.Framework.ILogger" /> Schnittstelle, um Eigenschaften zum Weiterleiten von Ereignissen an eine Protokollierung in einem anderen Prozess bereitzustellen. Es kann auch verwendet werden Filtern Protokollierungen erstellen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BuildEventRedirector">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.IEventRedirector BuildEventRedirector { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.IEventRedirector BuildEventRedirector" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.IForwardingLogger.BuildEventRedirector" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.IEventRedirector</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen von das Buildmodul zu Knoten Protokollierungen zum Weiterleiten von Nachrichten an die zentrale Protokollierung zulassen.</summary>
+        <value>Ein <see cref="T:Microsoft.Build.Framework.IEventRedirector" /> , das das Ereignis Redirector zum Weiterleiten von Nachrichten an darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeId">
+      <MemberSignature Language="C#" Value="public int NodeId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NodeId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.IForwardingLogger.NodeId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen Sie oder festlegen Sie vom Buildmodul oder Knoten, um die weiterleitungsprotokollierung zu informieren, die Knoten, auf dem er ausgeführt wird.</summary>
+        <value>Eine ganze Zahl, die auf dem das Buildmodul ausgeführt wird die Knoten-ID darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

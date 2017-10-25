@@ -1,0 +1,205 @@
+<Type Name="WorkflowHostingEndpoint" FullName="System.ServiceModel.Activities.WorkflowHostingEndpoint">
+  <TypeSignature Language="C#" Value="public abstract class WorkflowHostingEndpoint : System.ServiceModel.Description.ServiceEndpoint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit WorkflowHostingEndpoint extends System.ServiceModel.Description.ServiceEndpoint" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activities.WorkflowHostingEndpoint" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Description.ServiceEndpoint</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Eine abstrakte Implementierung von <see cref="T:System.ServiceModel.Description.ServiceEndpoint" />. Durch Ableiten von dieser Klasse werden Verträge verfügbar, die die Workflowerstellung und die Wiederaufnahme von Lesezeichen unterstützen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie eine Klasse von der <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>-Klasse abgeleitet wird.  
+  
+ [!code-csharp[CreationEndpoint2#2](~/samples/snippets/csharp/VS_Snippets_Misc/CreationEndpoint2/CS/CreationEndpoint.cs#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WorkflowHostingEndpoint (Type contractType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Type contractType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowHostingEndpoint.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contractType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="contractType">Der Typ des Vertrags, der die grundlegenden Nachrichtenaustauschmuster für einen Workflowhostingvorgang definiert.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.ServiceModel.Activities.WorkflowHostingEndpoint" />-Klasse mit dem angegebenen Vertragstyp.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WorkflowHostingEndpoint (Type contractType, System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress address);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Type contractType, class System.ServiceModel.Channels.Binding binding, class System.ServiceModel.EndpointAddress address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowHostingEndpoint.#ctor(System.Type,System.ServiceModel.Channels.Binding,System.ServiceModel.EndpointAddress)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contractType" Type="System.Type" />
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+        <Parameter Name="address" Type="System.ServiceModel.EndpointAddress" />
+      </Parameters>
+      <Docs>
+        <param name="contractType">Der Dienstvertrag für den Endpunkt.</param>
+        <param name="binding">Die Bindung für den Endpunkt.</param>
+        <param name="address">Die Adresse des Endpunkts.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.ServiceModel.Activities.WorkflowHostingEndpoint" />-Klasse mit dem angegebenen Vertragstyp, der Bindung und der Endpunktadresse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CorrelationQueries">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.ServiceModel.CorrelationQuery&gt; CorrelationQueries { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.CorrelationQuery&gt; CorrelationQueries" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.WorkflowHostingEndpoint.CorrelationQueries" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.ServiceModel.CorrelationQuery&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von <see cref="T:System.ServiceModel.CorrelationQuery" />-Instanzen ab.</summary>
+        <value>Eine Auflistung der Korrelationsabfragen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Füllen Sie diese Auflistung mit Abfragen auf, die ausgeführt werden, wenn eine Meldung auf dem Endpunkt ankommt, um zu bestimmen, an welche Workflowinstanz die Meldung gesendet werden soll. Diese Eigenschaft muss nicht verwendet werden, wenn benutzerdefinierte Instanzauflösung bereitgestellt wird, indem <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetInstanceId%2A> überschrieben wird  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnGetCreationContext">
+      <MemberSignature Language="C#" Value="protected virtual System.ServiceModel.Activities.WorkflowCreationContext OnGetCreationContext (object[] inputs, System.ServiceModel.OperationContext operationContext, Guid instanceId, System.ServiceModel.Activities.WorkflowHostingResponseContext responseContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.ServiceModel.Activities.WorkflowCreationContext OnGetCreationContext(object[] inputs, class System.ServiceModel.OperationContext operationContext, valuetype System.Guid instanceId, class System.ServiceModel.Activities.WorkflowHostingResponseContext responseContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetCreationContext(System.Object[],System.ServiceModel.OperationContext,System.Guid,System.ServiceModel.Activities.WorkflowHostingResponseContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Activities.WorkflowCreationContext</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputs" Type="System.Object[]" />
+        <Parameter Name="operationContext" Type="System.ServiceModel.OperationContext" />
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="responseContext" Type="System.ServiceModel.Activities.WorkflowHostingResponseContext" />
+      </Parameters>
+      <Docs>
+        <param name="inputs">Die Eingaben zum Dienstvorgang.</param>
+        <param name="operationContext">Stellt den Ausführungskontext des aufgerufenen Dienstvorgangs bereit.</param>
+        <param name="instanceId">Die Instanz-ID der erstellten Workflowinstanz.</param>
+        <param name="responseContext">Das <see cref="T:System.ServiceModel.Activities.WorkflowHostingEndpointResponseContext" />-Objekt, das verwendet werden kann, um Antworten an die Meldungsquelle für einen Anforderung-Antwort-Vertrag zurückzusenden.</param>
+        <summary>Außerkraftsetzung zum Erstellen eines neuen <see cref="T:System.ServiceModel.Activities.WorkflowCreationContext" /> Instanz.</summary>
+        <returns>Ein Workflowerstellungskontextobjekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Implementierung der <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetCreationContext%2A>-Methode veranschaulicht.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnGetInstanceId">
+      <MemberSignature Language="C#" Value="protected virtual Guid OnGetInstanceId (object[] inputs, System.ServiceModel.OperationContext operationContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance valuetype System.Guid OnGetInstanceId(object[] inputs, class System.ServiceModel.OperationContext operationContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetInstanceId(System.Object[],System.ServiceModel.OperationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputs" Type="System.Object[]" />
+        <Parameter Name="operationContext" Type="System.ServiceModel.OperationContext" />
+      </Parameters>
+      <Docs>
+        <param name="inputs">Die Eingaben zum Dienstvorgang.</param>
+        <param name="operationContext">Der Vorgangskontext des Dienstvorgangs.</param>
+        <summary>Überschreiben, um die Instanz-ID für die erstellte Workflowinstanz zurückzugeben.</summary>
+        <returns>Die Instanz-ID für die neu erstellte Workflowinstanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Geben Sie NULL zurück, um anzugeben, dass eine Instanz-ID automatisch generiert werden soll.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Implementierung der <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetInstanceId%2A>-Methode veranschaulicht.  
+  
+ [!code-csharp[CreationEndpoint#0](~/samples/snippets/csharp/VS_Snippets_CFX/creationendpoint/cs/creationendpoint.cs#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnResolveBookmark">
+      <MemberSignature Language="C#" Value="protected virtual System.Activities.Bookmark OnResolveBookmark (object[] inputs, System.ServiceModel.OperationContext operationContext, System.ServiceModel.Activities.WorkflowHostingResponseContext responseContext, out object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.Activities.Bookmark OnResolveBookmark(object[] inputs, class System.ServiceModel.OperationContext operationContext, class System.ServiceModel.Activities.WorkflowHostingResponseContext responseContext, [out] object&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnResolveBookmark(System.Object[],System.ServiceModel.OperationContext,System.ServiceModel.Activities.WorkflowHostingResponseContext,System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Bookmark</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputs" Type="System.Object[]" />
+        <Parameter Name="operationContext" Type="System.ServiceModel.OperationContext" />
+        <Parameter Name="responseContext" Type="System.ServiceModel.Activities.WorkflowHostingResponseContext" />
+        <Parameter Name="value" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="inputs">Die Eingaben zum Dienstvorgang.</param>
+        <param name="operationContext">Der Ausführungskontext des aufgerufenen Dienstvorgangs.</param>
+        <param name="responseContext">Das <see cref="T:System.ServiceModel.Activities.WorkflowHostingResponseContext" />-Objekt, das verwendet werden kann, um Antworten an die Meldungsquelle für einen Anforderung-Antwort-Vertrag zurückzusenden.</param>
+        <param name="value">Ein Wert, der an die Workflowinstanz zurückgegeben werden soll, wenn das Lesezeichen fortgesetzt wird</param>
+        <summary>Überschreiben, um ein Lesezeichen zurückzugeben, das auf der Workflowinstanz fortgesetzt werden soll.</summary>
+        <returns>Ein Lesezeichen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Implementierung der <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnResolveBookmark%2A>-Methode veranschaulicht.  
+  
+ [!code-csharp[ResumeBookmarkEndpoint#0](~/samples/snippets/csharp/VS_Snippets_CFX/resumebookmarkendpoint/cs/resumebookmarkendpoint.cs#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

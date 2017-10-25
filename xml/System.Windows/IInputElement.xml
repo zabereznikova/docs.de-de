@@ -1,0 +1,1686 @@
+<Type Name="IInputElement" FullName="System.Windows.IInputElement">
+  <TypeSignature Language="C#" Value="public interface IInputElement" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IInputElement" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.IInputElement" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Richtet die aufgetretenen Ereignisse und die Ereignis-bezogenen Eigenschaften und Methoden für die grundlegende Eingabe, die Verarbeitung von Windows Presentation Foundation (WPF)-Elemente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Obwohl diese Schnittstelle öffentlich ist, dient er nicht in einer Anwendung oder Framework-Erstellung Szenarios implementiert werden. Diese Schnittstelle ist öffentlich, aufgrund der Vererbung von Anforderungen für die Verbindung der [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] core die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Framework. Sie können diese Schnittstelle auch als Umwandlungsmechanismus für die verwenden, erzwingen, dass die Eingabeereignisse und die Eigenschaften entweder stammen eine <xref:System.Windows.FrameworkElement> oder <xref:System.Windows.FrameworkContentElement>, die in der gleichen Eingabemodell behandelt werden. Weitere Informationen finden Sie unter [WPF-Architektur](~/docs/framework/wpf/advanced/wpf-architecture.md) und Lesen Sie auch [Base Elemente Overview](~/docs/framework/wpf/advanced/base-elements-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddHandler">
+      <MemberSignature Language="C#" Value="public void AddHandler (System.Windows.RoutedEvent routedEvent, Delegate handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddHandler(class System.Windows.RoutedEvent routedEvent, class System.Delegate handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.IInputElement.AddHandler(System.Windows.RoutedEvent,System.Delegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="routedEvent" Type="System.Windows.RoutedEvent" />
+        <Parameter Name="handler" Type="System.Delegate" />
+      </Parameters>
+      <Docs>
+        <param name="routedEvent">Der Bezeichner für das behandelte Routingereignis.</param>
+        <param name="handler">Ein Verweis auf die Handlerimplementierung.</param>
+        <summary>Fügt einen Routingereignishandler für ein bestimmtes Routingereignis zu einem Element hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CaptureMouse">
+      <MemberSignature Language="C#" Value="public bool CaptureMouse ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CaptureMouse() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.IInputElement.CaptureMouse" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Versucht, das Erfassen der Maus für dieses Element zu erzwingen.</summary>
+        <returns>
+          <see langword="true" />Wenn die Maus erfolgreich erfasst wird; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CaptureStylus">
+      <MemberSignature Language="C#" Value="public bool CaptureStylus ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CaptureStylus() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.IInputElement.CaptureStylus" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Versucht, die Erfassung der Tablettstift für dieses Element zu erzwingen.</summary>
+        <returns>
+          <see langword="true" />Wenn der Tablettstift erfolgreich erfasst wird; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Focus">
+      <MemberSignature Language="C#" Value="public bool Focus ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Focus() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.IInputElement.Focus" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Versucht, den Tastaturfokus auf dieses Element.</summary>
+        <returns>
+          <see langword="true" />Wenn über den Tastaturfokus zu diesem Element verschoben wird oder wurde bereits für dieses Element. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Focusable">
+      <MemberSignature Language="C#" Value="public bool Focusable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Focusable" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.IInputElement.Focusable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Fokus auf dieses Element festgelegt werden kann, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />Wenn das Element den Fokus festgelegt haben, kann; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ In vorhandenen Implementierungen der [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Core (finden Sie unter <xref:System.Windows.ContentElement.Focusable%2A?displayProperty=nameWithType> und <xref:System.Windows.UIElement.Focusable%2A?displayProperty=nameWithType>) diese Eigenschaft als Abhängigkeitseigenschaft herzustellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GotKeyboardFocus">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.KeyboardFocusChangedEventHandler GotKeyboardFocus;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.KeyboardFocusChangedEventHandler GotKeyboardFocus" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.GotKeyboardFocus" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.KeyboardFocusChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Fokus der Tastatur auf diesem Element befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GotMouseCapture">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.MouseEventHandler GotMouseCapture;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.MouseEventHandler GotMouseCapture" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.GotMouseCapture" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn das Element die Maus erfasst.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ Wenn ein Element die Maus erfasst hat, empfängt das Element Mauseingabe, selbst wenn der Cursor außerhalb seiner Grenzen befindet. Die Maus ist in der Regel nur während der Drag-and-Drop-Vorgänge auf diese Weise erfasst und behält die Aufzeichnung, bis die Drop-Aktion den Drag & Drop-Vorgang auftritt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GotStylusCapture">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.StylusEventHandler GotStylusCapture;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.StylusEventHandler GotStylusCapture" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.GotStylusCapture" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn das Element die Stiftauswahl erhält.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ Wenn ein Element die Stiftauswahl erhält, empfängt das Element Stifteingabe, selbst wenn der Cursor außerhalb seiner Grenzen befindet. Der Tablettstift wird nur während der Drag-and-Drop-Vorgänge in der Regel auf diese Weise erfasst und behält die Aufzeichnung, bis die Drop-Aktion den Drag & Drop-Vorgang auftritt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnabled">
+      <MemberSignature Language="C#" Value="public bool IsEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.IInputElement.IsEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob dieses Element, in aktiviert ist der [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)].</summary>
+        <value>
+          <see langword="true" />Wenn das Element aktiviert ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ In vorhandenen Implementierungen der [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Core (finden Sie unter <xref:System.Windows.ContentElement.IsEnabled%2A?displayProperty=nameWithType> und <xref:System.Windows.UIElement.IsEnabled%2A?displayProperty=nameWithType>) stellen Sie diese Eigenschaft Lese-/Schreib- und diese Eigenschaft als Abhängigkeitseigenschaft herzustellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsKeyboardFocused">
+      <MemberSignature Language="C#" Value="public bool IsKeyboardFocused { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsKeyboardFocused" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.IInputElement.IsKeyboardFocused" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob dieses Element über den Tastaturfokus verfügt.</summary>
+        <value>
+          <see langword="true" />Wenn dieses Element den Tastaturfokus verfügt; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ In vorhandenen Implementierungen der [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Core (finden Sie unter <xref:System.Windows.ContentElement.IsKeyboardFocused%2A?displayProperty=nameWithType> und <xref:System.Windows.UIElement.IsKeyboardFocused%2A?displayProperty=nameWithType>) diese Eigenschaft als Abhängigkeitseigenschaft herzustellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsKeyboardFocusWithin">
+      <MemberSignature Language="C#" Value="public bool IsKeyboardFocusWithin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsKeyboardFocusWithin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.IInputElement.IsKeyboardFocusWithin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der anzeigt, ob sich der Tastaturfokus innerhalb der Grenzen des Elements befindet. Dies bezieht die Situation ein, dass sich der Tastaturfokus innerhalb der Grenzen eines beliebigen visuellen untergeordneten Elements befindet.</summary>
+        <value>
+          <see langword="true" />Wenn Sie über den Tastaturfokus auf das Element oder seinen untergeordneten Elementen befindet; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ In vorhandenen Implementierungen der [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Core (finden Sie unter <xref:System.Windows.ContentElement.IsKeyboardFocusWithin%2A?displayProperty=nameWithType> und <xref:System.Windows.UIElement.IsKeyboardFocusWithin%2A?displayProperty=nameWithType>) diese Eigenschaft als Abhängigkeitseigenschaft herzustellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMouseCaptured">
+      <MemberSignature Language="C#" Value="public bool IsMouseCaptured { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsMouseCaptured" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.IInputElement.IsMouseCaptured" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der anzeigt, ob die Maus für dieses Element erfasst wird.</summary>
+        <value>
+          <see langword="true" />Wenn das Element die mausaufzeichnung verfügen; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ In vorhandenen Implementierungen der [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Core (finden Sie unter <xref:System.Windows.ContentElement.IsMouseCaptured%2A?displayProperty=nameWithType> und <xref:System.Windows.UIElement.IsMouseCaptured%2A?displayProperty=nameWithType>) diese Eigenschaft als Abhängigkeitseigenschaft herzustellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMouseDirectlyOver">
+      <MemberSignature Language="C#" Value="public bool IsMouseDirectlyOver { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsMouseDirectlyOver" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.IInputElement.IsMouseDirectlyOver" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob sich der Mauszeiger im engsten Sinn des Treffertests über diesem Element befindet.</summary>
+        <value>
+          <see langword="true" />Wenn der Mauszeiger über diesem Element befindet; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ In vorhandenen Implementierungen der [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Core (finden Sie unter <xref:System.Windows.ContentElement.IsMouseDirectlyOver%2A?displayProperty=nameWithType> und <xref:System.Windows.UIElement.IsMouseDirectlyOver%2A?displayProperty=nameWithType>) diese Eigenschaft als Abhängigkeitseigenschaft herzustellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMouseOver">
+      <MemberSignature Language="C#" Value="public bool IsMouseOver { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsMouseOver" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.IInputElement.IsMouseOver" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob sich der Mauszeiger sich über diesem Element befindet (einschließlich untergeordneter visueller Elemente innerhalb seiner Grenzen).</summary>
+        <value>
+          <see langword="true" />Wenn der Mauszeiger über dem Element oder seinen untergeordneten Elementen befindet; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ In vorhandenen Implementierungen der [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Core (finden Sie unter <xref:System.Windows.ContentElement.IsMouseOver%2A?displayProperty=nameWithType> und <xref:System.Windows.UIElement.IsMouseOver%2A?displayProperty=nameWithType>) diese Eigenschaft als Abhängigkeitseigenschaft herzustellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsStylusCaptured">
+      <MemberSignature Language="C#" Value="public bool IsStylusCaptured { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsStylusCaptured" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.IInputElement.IsStylusCaptured" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Tablettstift für dieses Element erfasst wird.</summary>
+        <value>
+          <see langword="true" />Wenn das Element die Stiftauswahl verfügt; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ In vorhandenen Implementierungen der [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Core (finden Sie unter <xref:System.Windows.ContentElement.IsStylusCaptured%2A?displayProperty=nameWithType> und <xref:System.Windows.UIElement.IsStylusCaptured%2A?displayProperty=nameWithType>) diese Eigenschaft als Abhängigkeitseigenschaft herzustellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsStylusDirectlyOver">
+      <MemberSignature Language="C#" Value="public bool IsStylusDirectlyOver { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsStylusDirectlyOver" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.IInputElement.IsStylusDirectlyOver" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob sich der Tablettstift im engsten Sinn des Treffertests über diesem Element befindet.</summary>
+        <value>
+          <see langword="true" />Wenn der Tablettstift über dem Element ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ In vorhandenen Implementierungen der [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Core (finden Sie unter <xref:System.Windows.ContentElement.IsStylusDirectlyOver%2A?displayProperty=nameWithType> und <xref:System.Windows.UIElement.IsStylusDirectlyOver%2A?displayProperty=nameWithType>) diese Eigenschaft als Abhängigkeitseigenschaft herzustellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsStylusOver">
+      <MemberSignature Language="C#" Value="public bool IsStylusOver { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsStylusOver" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.IInputElement.IsStylusOver" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob sich der Tablettstift über diesem Element (oder untergeordneten visuellen Elementen innerhalb seiner Grenzen) befindet.</summary>
+        <value>
+          <see langword="true" />Wenn sich der Tablettstiftcursor über dem Element oder seinen untergeordneten Elementen befindet; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ Einige wichtigsten Klassen implementiert, <xref:System.Windows.IInputElement>, wie z. B. <xref:System.Windows.UIElement>, implementieren Sie auch ein Ereignis, das Änderungen an dieser Eigenschaft nachverfolgt. Allerdings umfasst diese Schnittstelle nicht als Teil des Vertrags ein solchen Ereignisses.  
+  
+ In vorhandenen Implementierungen der [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Core (finden Sie unter <xref:System.Windows.ContentElement.IsStylusOver%2A?displayProperty=nameWithType> und <xref:System.Windows.UIElement.IsStylusOver%2A?displayProperty=nameWithType>) diese Eigenschaft als Abhängigkeitseigenschaft herzustellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyDown">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.KeyEventHandler KeyDown;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.KeyEventHandler KeyDown" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.KeyDown" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.KeyEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine Taste gedrückt wird, während sich der Fokus der Tastatur auf diesem Element befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyUp">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.KeyEventHandler KeyUp;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.KeyEventHandler KeyUp" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.KeyUp" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.KeyEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine Taste losgelassen wird, während sich der Fokus der Tastatur auf diesem Element befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LostKeyboardFocus">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.KeyboardFocusChangedEventHandler LostKeyboardFocus;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.KeyboardFocusChangedEventHandler LostKeyboardFocus" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.LostKeyboardFocus" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.KeyboardFocusChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Fokus der Tastatur nicht mehr auf diesem Element befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LostMouseCapture">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.MouseEventHandler LostMouseCapture;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.MouseEventHandler LostMouseCapture" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.LostMouseCapture" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn dieses Element die Mausauswahl verliert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ Wenn ein Element die Maus erfasst hat, empfängt es Mauseingabe, auch wenn der Cursor außerhalb seiner Grenzen befindet. Die Maus ist in der Regel nur während der Drag-and-Drop-Vorgänge erfasst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LostStylusCapture">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.StylusEventHandler LostStylusCapture;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.StylusEventHandler LostStylusCapture" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.LostStylusCapture" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn dieses Element die Stiftauswahl verliert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ Wenn ein Element die Stiftauswahl erhält, erhält sie Stifteingabe, selbst wenn der Cursor außerhalb seiner Grenzen befindet. Der Tablettstift wird in der Regel nur während der Drag-and-Drop-Vorgänge erfasst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseEnter">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.MouseEventHandler MouseEnter;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.MouseEventHandler MouseEnter" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.MouseEnter" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Mauszeiger in den Bereich dieses Elements eintritt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseLeave">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.MouseEventHandler MouseLeave;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.MouseEventHandler MouseLeave" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.MouseLeave" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Mauszeiger den Bereich dieses Elements verlässt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseLeftButtonDown">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.MouseButtonEventHandler MouseLeftButtonDown;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.MouseButtonEventHandler MouseLeftButtonDown" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.MouseLeftButtonDown" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.MouseButtonEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die linke Maustaste gedrückt wird, während der Mauszeiger über dem Element befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseLeftButtonUp">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.MouseButtonEventHandler MouseLeftButtonUp;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.MouseButtonEventHandler MouseLeftButtonUp" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.MouseLeftButtonUp" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.MouseButtonEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die linke Maustaste losgelassen wird, während sich der Mauszeiger über dem Element befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseMove">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.MouseEventHandler MouseMove;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.MouseEventHandler MouseMove" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.MouseMove" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Mauszeiger bewegt wird, während sich der Mauszeiger über dem Element befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseRightButtonDown">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.MouseButtonEventHandler MouseRightButtonDown;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.MouseButtonEventHandler MouseRightButtonDown" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.MouseRightButtonDown" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.MouseButtonEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die rechte Maustaste gedrückt wird, während der Mauszeiger über dem Element befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseRightButtonUp">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.MouseButtonEventHandler MouseRightButtonUp;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.MouseButtonEventHandler MouseRightButtonUp" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.MouseRightButtonUp" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.MouseButtonEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die rechte Maustaste losgelassen wird, während sich der Mauszeiger über dem Element befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseWheel">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.MouseWheelEventHandler MouseWheel;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.MouseWheelEventHandler MouseWheel" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.MouseWheel" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.MouseWheelEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn das Mausrad bewegt wird, während der Mauszeiger über diesem Element befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewGotKeyboardFocus">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.KeyboardFocusChangedEventHandler PreviewGotKeyboardFocus;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.KeyboardFocusChangedEventHandler PreviewGotKeyboardFocus" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.PreviewGotKeyboardFocus" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.KeyboardFocusChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Fokus der Tastatur auf diesem Element befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewKeyDown">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.KeyEventHandler PreviewKeyDown;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.KeyEventHandler PreviewKeyDown" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.PreviewKeyDown" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.KeyEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine Taste gedrückt wird, während sich der Fokus der Tastatur auf diesem Element befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewKeyUp">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.KeyEventHandler PreviewKeyUp;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.KeyEventHandler PreviewKeyUp" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.PreviewKeyUp" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.KeyEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine Taste losgelassen wird, während sich der Fokus der Tastatur auf diesem Element befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewLostKeyboardFocus">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.KeyboardFocusChangedEventHandler PreviewLostKeyboardFocus;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.KeyboardFocusChangedEventHandler PreviewLostKeyboardFocus" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.PreviewLostKeyboardFocus" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.KeyboardFocusChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Fokus der Tastatur nicht mehr auf diesem Element befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewMouseLeftButtonDown">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.MouseButtonEventHandler PreviewMouseLeftButtonDown;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.MouseButtonEventHandler PreviewMouseLeftButtonDown" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.PreviewMouseLeftButtonDown" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.MouseButtonEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die linke Maustaste gedrückt wird, während der Mauszeiger über dem Element befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewMouseLeftButtonUp">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.MouseButtonEventHandler PreviewMouseLeftButtonUp;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.MouseButtonEventHandler PreviewMouseLeftButtonUp" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.PreviewMouseLeftButtonUp" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.MouseButtonEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die linke Maustaste losgelassen wird, während sich der Mauszeiger über dem Element befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewMouseMove">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.MouseEventHandler PreviewMouseMove;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.MouseEventHandler PreviewMouseMove" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.PreviewMouseMove" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Mauszeiger bewegt wird, während sich der Mauszeiger über dem Element befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewMouseRightButtonDown">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.MouseButtonEventHandler PreviewMouseRightButtonDown;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.MouseButtonEventHandler PreviewMouseRightButtonDown" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.PreviewMouseRightButtonDown" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.MouseButtonEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die rechte Maustaste gedrückt wird, während der Mauszeiger über dem Element befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewMouseRightButtonUp">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.MouseButtonEventHandler PreviewMouseRightButtonUp;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.MouseButtonEventHandler PreviewMouseRightButtonUp" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.PreviewMouseRightButtonUp" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.MouseButtonEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die rechte Maustaste losgelassen wird, während sich der Mauszeiger über dem Element befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewMouseWheel">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.MouseWheelEventHandler PreviewMouseWheel;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.MouseWheelEventHandler PreviewMouseWheel" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.PreviewMouseWheel" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.MouseWheelEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn das Mausrad bewegt wird, während der Mauszeiger über diesem Element befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewStylusButtonDown">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.StylusButtonEventHandler PreviewStylusButtonDown;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.StylusButtonEventHandler PreviewStylusButtonDown" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.PreviewStylusButtonDown" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusButtonEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Stifttaste gedrückt wird, während sich der Stift über diesem Element befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewStylusButtonUp">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.StylusButtonEventHandler PreviewStylusButtonUp;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.StylusButtonEventHandler PreviewStylusButtonUp" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.PreviewStylusButtonUp" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusButtonEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Stifttaste losgelassen wird, während sich der Stift über diesem Element befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewStylusDown">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.StylusDownEventHandler PreviewStylusDown;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.StylusDownEventHandler PreviewStylusDown" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.PreviewStylusDown" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusDownEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Stift den Digitizer berührt, während er sich über diesem Element befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewStylusInAirMove">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.StylusEventHandler PreviewStylusInAirMove;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.StylusEventHandler PreviewStylusInAirMove" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.PreviewStylusInAirMove" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Tablettstift über ein Element bewegt wird, jedoch ohne den Digitizer zu berühren.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewStylusInRange">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.StylusEventHandler PreviewStylusInRange;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.StylusEventHandler PreviewStylusInRange" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.PreviewStylusInRange" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Stift nah genug am Digitizer befindet, um erkannt zu werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewStylusMove">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.StylusEventHandler PreviewStylusMove;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.StylusEventHandler PreviewStylusMove" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.PreviewStylusMove" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Stift bewegt, während sich der Tablettstift über dem Element befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewStylusOutOfRange">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.StylusEventHandler PreviewStylusOutOfRange;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.StylusEventHandler PreviewStylusOutOfRange" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.PreviewStylusOutOfRange" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Stift zu weit vom Digitizer entfernt befindet, um erkannt zu werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewStylusSystemGesture">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.StylusSystemGestureEventHandler PreviewStylusSystemGesture;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.StylusSystemGestureEventHandler PreviewStylusSystemGesture" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.PreviewStylusSystemGesture" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusSystemGestureEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine von mehreren Gesten erkannt werden, z. B. <see cref="F:System.Windows.Input.SystemGesture.Tap" /> oder <see cref="F:System.Windows.Input.SystemGesture.Drag" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewStylusUp">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.StylusEventHandler PreviewStylusUp;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.StylusEventHandler PreviewStylusUp" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.PreviewStylusUp" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Stift vom Digitizer entfernt wird, während er sich über diesem Element befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewTextInput">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.TextCompositionEventHandler PreviewTextInput;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.TextCompositionEventHandler PreviewTextInput" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.PreviewTextInput" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.TextCompositionEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn dieses Element Text geräteunabhängig empfängt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseEvent">
+      <MemberSignature Language="C#" Value="public void RaiseEvent (System.Windows.RoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RaiseEvent(class System.Windows.RoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.IInputElement.RaiseEvent(System.Windows.RoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.RoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Eine Instanz von der <see cref="T:System.Windows.RoutedEventArgs" /> -Klasse, die den Bezeichner für das auszulösende Ereignis enthält.</param>
+        <summary>Löst das Routingereignis angegeben wird, die die <see cref="P:System.Windows.RoutedEventArgs.RoutedEvent" /> Eigenschaft innerhalb der bereitgestellten <see cref="T:System.Windows.RoutedEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseMouseCapture">
+      <MemberSignature Language="C#" Value="public void ReleaseMouseCapture ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReleaseMouseCapture() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.IInputElement.ReleaseMouseCapture" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt das Erfassen von Mauseingaben frei, wenn dieses Element die Erfassung enthält.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseStylusCapture">
+      <MemberSignature Language="C#" Value="public void ReleaseStylusCapture ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReleaseStylusCapture() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.IInputElement.ReleaseStylusCapture" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Tablettstift frei, wenn dieses Element die Erfassung enthält.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveHandler">
+      <MemberSignature Language="C#" Value="public void RemoveHandler (System.Windows.RoutedEvent routedEvent, Delegate handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveHandler(class System.Windows.RoutedEvent routedEvent, class System.Delegate handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.IInputElement.RemoveHandler(System.Windows.RoutedEvent,System.Delegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="routedEvent" Type="System.Windows.RoutedEvent" />
+        <Parameter Name="handler" Type="System.Delegate" />
+      </Parameters>
+      <Docs>
+        <param name="routedEvent">Der Bezeichner des Routingereignisses, dem der Handler zugeordnet ist.</param>
+        <param name="handler">Die spezielle Handlerimplementierung, die aus der Ereignishandlerauflistung dieses Elements entfernt werden soll.</param>
+        <summary>Entfernt alle Instanzen des angegebenen Routingereignishandlers aus diesem Element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylusButtonDown">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.StylusButtonEventHandler StylusButtonDown;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.StylusButtonEventHandler StylusButtonDown" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.StylusButtonDown" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusButtonEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Stifttaste gedrückt wird, während der Stift über diesem Element befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylusButtonUp">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.StylusButtonEventHandler StylusButtonUp;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.StylusButtonEventHandler StylusButtonUp" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.StylusButtonUp" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusButtonEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Stifttaste losgelassen wird, während sich der Stift über diesem Element befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylusDown">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.StylusDownEventHandler StylusDown;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.StylusDownEventHandler StylusDown" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.StylusDown" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusDownEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Stift den Digitizer berührt, während er sich über diesem Element befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylusEnter">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.StylusEventHandler StylusEnter;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.StylusEventHandler StylusEnter" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.StylusEnter" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Stiftcursor den Bereich des Elements eintritt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylusInAirMove">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.StylusEventHandler StylusInAirMove;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.StylusEventHandler StylusInAirMove" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.StylusInAirMove" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Tablettstift über ein Element bewegt wird, jedoch ohne den Digitizer zu berühren.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylusInRange">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.StylusEventHandler StylusInRange;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.StylusEventHandler StylusInRange" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.StylusInRange" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Stift nah genug am Digitizer befindet, um erkannt zu werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylusLeave">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.StylusEventHandler StylusLeave;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.StylusEventHandler StylusLeave" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.StylusLeave" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Stiftcursor den Bereich des Elements verlässt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylusMove">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.StylusEventHandler StylusMove;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.StylusEventHandler StylusMove" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.StylusMove" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Stiftcursor über dem Steuerelement bewegt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylusOutOfRange">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.StylusEventHandler StylusOutOfRange;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.StylusEventHandler StylusOutOfRange" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.StylusOutOfRange" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Stift zu weit vom Digitizer entfernt befindet, um erkannt zu werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylusSystemGesture">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.StylusSystemGestureEventHandler StylusSystemGesture;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.StylusSystemGestureEventHandler StylusSystemGesture" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.StylusSystemGesture" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusSystemGestureEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine von mehreren Gesten erkannt werden, z. B. <see cref="F:System.Windows.Input.SystemGesture.Tap" /> oder <see cref="F:System.Windows.Input.SystemGesture.Drag" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylusUp">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.StylusEventHandler StylusUp;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.StylusEventHandler StylusUp" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.StylusUp" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Stift vom Digitizer entfernt wird, während er sich über diesem Element befindet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextInput">
+      <MemberSignature Language="C#" Value="public event System.Windows.Input.TextCompositionEventHandler TextInput;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Input.TextCompositionEventHandler TextInput" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.IInputElement.TextInput" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.TextCompositionEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn dieses Element Text geräteunabhängig empfängt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle ist nicht für die öffentliche Implementierung vorgesehen. Weitere Informationen finden Sie unter "Hinweise" für die <xref:System.Windows.IInputElement> Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

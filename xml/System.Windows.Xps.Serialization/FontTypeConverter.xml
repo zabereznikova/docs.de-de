@@ -1,0 +1,244 @@
+<Type Name="FontTypeConverter" FullName="System.Windows.Xps.Serialization.FontTypeConverter">
+  <TypeSignature Language="C#" Value="public class FontTypeConverter : System.ComponentModel.ExpandableObjectConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FontTypeConverter extends System.ComponentModel.ExpandableObjectConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Xps.Serialization.FontTypeConverter" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.ExpandableObjectConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Typkonverter zum Konvertieren von <see cref="T:System.Windows.Media.GlyphRun" />-Objekten zu und aus Objekten anderer Typen bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse nur über Zugriff die <xref:System.ComponentModel.TypeDescriptor.GetConverter%2A> Methode. Finden Sie unter den Basisklassen <xref:System.ComponentModel.TypeConverter> und <xref:System.ComponentModel.ExpandableObjectConverter> für andere wichtige Verwendungshinweise.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FontTypeConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.FontTypeConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Xps.Serialization.FontTypeConverter" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse nur über Zugriff die <xref:System.ComponentModel.TypeDescriptor.GetConverter%2A> Methode. Finden Sie unter den Basisklassen <xref:System.ComponentModel.TypeConverter> und <xref:System.ComponentModel.ExpandableObjectConverter> für andere wichtige Verwendungshinweise.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFrom">
+      <MemberSignature Language="C#" Value="public override bool CanConvertFrom (System.ComponentModel.ITypeDescriptorContext context, Type sourceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Type sourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.FontTypeConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="sourceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein Objekt, das Kontextinformationen bereitstellt.</param>
+        <param name="sourceType">Der Typ der zu konvertierende Objekt.</param>
+        <summary>Gibt einen Wert, der angibt, ob dieser Konverter eine Instanz eines angegebenen Typs zu konvertieren, kann ein <see cref="T:System.Windows.Media.GlyphRun" />.</summary>
+        <returns>
+          <see langword="true" />Wenn Objekte des angegebenen Typs konvertiert werden können. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wie in dieser Klasse implementiert wird, gibt diese Methode `true` nur, wenn `sourceType` ist <xref:System.Uri>.  
+  
+ Die `context` Parameter wird nicht verwendet. Siehe Hinweise zur Vererbung.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Überschreiben Sie diese Methode, um eigene Konvertierungsanforderungen anzugeben. Über den <paramref name="context" />-Parameter können zusätzliche Informationen über die Umgebung extrahiert werden, aus der dieser Konverter aufgerufen wurde. Dieser Parameter kann <see langword="null" />daher immer überprüft. Auch Eigenschaften des <paramref name="context" />-Objekts können einen NULL-Verweis zurückgeben (<see langword="Nothing" />).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertTo">
+      <MemberSignature Language="C#" Value="public override bool CanConvertTo (System.ComponentModel.ITypeDescriptorContext context, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.FontTypeConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein Objekt, das Kontextinformationen bereitstellt.</param>
+        <param name="destinationType">Der Typ des Objekts, das Sie ein Symbol, Ausführen bis zum konvertieren möchten.</param>
+        <summary>Gibt einen Wert, der angibt, ob dies <see cref="T:System.Windows.Xps.Serialization.FontTypeConverter" /> können Konvertieren einer <see cref="T:System.Windows.Media.GlyphRun" /> mit einer Instanz eines angegebenen Typs.</summary>
+        <returns>
+          <see langword="true" />Wenn die Konvertierung möglich ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wie in dieser Klasse implementiert wird, gibt diese Methode `true` nur, wenn `destinationType` ist <xref:System.Uri>.  
+  
+ Die `context` Parameter wird nicht verwendet. Siehe Hinweise zur Vererbung.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Überschreiben Sie diese Methode, um eigene Konvertierungsanforderungen anzugeben. Über den <paramref name="context" />-Parameter können zusätzliche Informationen über die Umgebung extrahiert werden, aus der dieser Konverter aufgerufen wurde. Dieser Parameter kann <see langword="null" />daher immer überprüft. Auch Eigenschaften des <paramref name="context" />-Objekts können einen NULL-Verweis zurückgeben (<see langword="Nothing" />).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.FontTypeConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein Objekt, das Kontextinformationen bereitstellt.</param>
+        <param name="culture">Die Sprache und Kultur, die bei der Konvertierung verwendet werden.</param>
+        <param name="value">Das Objekt, das konvertiert wird.</param>
+        <summary>Konvertiert ein angegebenes Objekt in eine <see cref="T:System.Windows.Media.GlyphRun" />.</summary>
+        <returns>Das neue <see cref="T:System.Windows.Media.GlyphRun" />-Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird in dieser Klasse nicht implementiert – es sei denn, die Ausnahmen auslösen. Siehe Hinweise zur Vererbung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Diese Methode wird von dieser Klasse anstelle von einer abgeleiteten Klasse aufgerufen.</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="value" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">Die <paramref name="value" /> ist kein Typ, der konvertiert werden kann.</exception>
+        <block subset="none" type="overrides">
+          <para>Überschreiben Sie diese Methode, um eine Konvertierungsmethode anzugeben. Über den <paramref name="context" />-Parameter können zusätzliche Informationen über die Umgebung extrahiert werden, aus der dieser Konverter aufgerufen wurde. Verwenden der <paramref name="culture" /> Parameter, um Informationen zu der Sprache oder Kultur bereitzustellen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public override object ConvertTo (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.FontTypeConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein Objekt, das Kontextinformationen bereitstellt.</param>
+        <param name="culture">Die Sprache und Kultur, die bei der Konvertierung verwendet werden.</param>
+        <param name="value">Das Objekt, das Sie konvertieren möchten.</param>
+        <param name="destinationType">Der Typ des <c>Wert</c> konvertiert.</param>
+        <summary>Konvertiert eine <see cref="T:System.Windows.Media.GlyphRun" /> auf ein Objekt des angegebenen Typs.</summary>
+        <returns>Die neue <see cref="T:System.Object" /> des angegebenen Typs. Wie in dieser Klasse implementiert, muss dies ein <see cref="T:System.Uri" />. Er drückt die [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] der Schriftartteilmenge, die von verwendet wird, die <paramref name="value" /> Parameter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wie in dieser Klasse implementiert `value` muss eine <xref:System.Windows.Media.GlyphRun>.  
+  
+ Wie in dieser Klasse implementiert `destinationType` muss ein <xref:System.Uri> oder <xref:System.NotSupportedException> ausgelöst wird.  
+  
+ Die `culture` Parameter wird nicht verwendet. Siehe Hinweise zur Vererbung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die <paramref name="destinationType" /> ist kein Typ, <paramref name="value" /> konvertiert werden kann.</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="context" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException"><paramref name="value" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Windows.Xps.XpsSerializationException">Ein Fehler tritt auf, wenn die Symbol-Ausführung zu serialisieren.</exception>
+        <block subset="none" type="overrides">
+          <para>Überschreiben Sie diese Methode, um Ihre eigene Konvertierung anzugeben. Verwenden der <paramref name="culture" /> Parameter zum Angeben der Sprache und Kultur. Über den <paramref name="context" />-Parameter können zusätzliche Informationen über die Umgebung extrahiert werden, aus der dieser Konverter aufgerufen wurde. Dieser Parameter kann <see langword="null" />daher immer überprüft. Auch Eigenschaften des <paramref name="context" />-Objekts können einen NULL-Verweis zurückgeben (<see langword="Nothing" />).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperties">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.PropertyDescriptorCollection GetProperties (System.ComponentModel.ITypeDescriptorContext context, object value, Attribute[] attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ComponentModel.PropertyDescriptorCollection GetProperties(class System.ComponentModel.ITypeDescriptorContext context, object value, class System.Attribute[] attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.FontTypeConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object,System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="attributes" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein Objekt, das Kontextinformationen bereitstellt.</param>
+        <param name="value">Ein Objekt, das Sie eigenschaftsbeschreibungen für benötigen.</param>
+        <param name="attributes">Ein Array von Attributen, die die zurückgegebene Auflistung zu filtern, um irrelevante Eigenschaften auszuschließen.</param>
+        <summary>Ruft eine Auflistung von eigenschaftsbeschreibungen für den angegebenen Typ ab.</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> , enthält die Beschreibungen der Eigenschaften, die für die Komponente verwenden; verfügbar gemacht werden oder <see langword="null" /> Wenn keine Beschreibungen der Eigenschaften zurückgegeben werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist nicht in dieser Klasse implementiert, außer zum Auslösen der Ausnahme. Siehe Hinweise zur Vererbung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Diese Methode wird von dieser Klasse anstelle von einer abgeleiteten Klasse aufgerufen.</exception>
+        <block subset="none" type="overrides">
+          <para>Überschreiben Sie diese Methode, um eine Methode zum Abrufen ausgewählter bereitzustellen <see cref="T:System.ComponentModel.PropertyDescriptor" /> Objekte oder Typen. Über den <paramref name="context" />-Parameter können zusätzliche Informationen über die Umgebung extrahiert werden, aus der dieser Konverter aufgerufen wurde. Verwenden der <paramref name="attributes" /> Array, das die einschließen oder ausschließen Eigenschaften festzulegen.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

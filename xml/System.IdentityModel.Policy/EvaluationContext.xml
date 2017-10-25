@@ -1,0 +1,182 @@
+<Type Name="EvaluationContext" FullName="System.IdentityModel.Policy.EvaluationContext">
+  <TypeSignature Language="C#" Value="public abstract class EvaluationContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit EvaluationContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Policy.EvaluationContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt, wenn in einer abgeleiteten Klasse überschrieben, die Ergebnisse von den Autorisierungsrichtlinien dar, die ausgewertet wurden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einem <xref:System.IdentityModel.Policy.EvaluationContext> werden Ansprüche von Autorisierungsrichtlinien hinzugefügt. Eine Autorisierungsrichtlinie fügt einem Satz von Ansprüchen, beispielsweise den in einem Sicherheitstoken gefundenen Ansprüchen, auf Grundlage des aktuellen Satzes weitere Ansprüche hinzu. Eine Autorisierungsrichtlinie wertet beispielsweise einen Anspruch aus, der das Geburtsdatum enthält, fügt einen Anspruch hinzu, der bestätigt, dass der Benutzer über 21 Jahre alt ist, und fügt einen Over21-Anspruch zu <xref:System.IdentityModel.Policy.EvaluationContext> hinzu.  
+  
+ Klassen, die die <xref:System.IdentityModel.Policy.IAuthorizationPolicy>-Schnittstelle implementieren, autorisieren keine Benutzer, befähigen jedoch die <xref:System.ServiceModel.ServiceAuthorizationManager>-Klasse dazu. Der <xref:System.ServiceModel.ServiceAuthorizationManager> ruft die <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>-Methode praktisch für jede Autorisierungsrichtlinie auf. Die <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>-Methode bestimmt, ob zusätzliche Ansprüche für den Benutzer basierend auf den aktuellen Ansprüchen hinzugefügt werden sollen. Die <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>-Methode einer Autorisierungsrichtlinie kann mehrfach aufgerufen werden, da Ansprüche von anderen Autorisierungsrichtlinien zum <xref:System.IdentityModel.Policy.EvaluationContext> hinzugefügt werden. Wenn alle Autorisierungsrichtlinien praktisch abgeschlossen sind, trifft die <xref:System.ServiceModel.ServiceAuthorizationManager>-Klasse Autorisierungsentscheidungen auf der Grundlage des endgültigen Satzes von Ansprüchen. Die <xref:System.ServiceModel.ServiceAuthorizationManager>-Klasse erstellt anschließend einen <xref:System.IdentityModel.Policy.AuthorizationContext>, der einen unveränderlichen Satz von Ansprüchen enthält, die diesen Autorisierungsentscheidungen entsprechen.  
+  
+ Ein Evaluierungskontext enthält eine Gruppe von <xref:System.IdentityModel.Claims.ClaimSet>-Objekten: eine Ablaufzeit, die den Gültigkeitszeitraum des Evaluierungskontexts angibt, und einen eindeutigen Bezeichner.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected EvaluationContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Policy.EvaluationContext.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Policy.EvaluationContext" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddClaimSet">
+      <MemberSignature Language="C#" Value="public abstract void AddClaimSet (System.IdentityModel.Policy.IAuthorizationPolicy authorizationPolicy, System.IdentityModel.Claims.ClaimSet claimSet);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddClaimSet(class System.IdentityModel.Policy.IAuthorizationPolicy authorizationPolicy, class System.IdentityModel.Claims.ClaimSet claimSet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Policy.EvaluationContext.AddClaimSet(System.IdentityModel.Policy.IAuthorizationPolicy,System.IdentityModel.Claims.ClaimSet)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="policy" Type="System.IdentityModel.Policy.IAuthorizationPolicy" />
+        <Parameter Name="claimSet" Type="System.IdentityModel.Claims.ClaimSet" />
+      </Parameters>
+      <Docs>
+        <param name="authorizationPolicy">To be added.</param>
+        <param name="claimSet">Ein <see cref="T:System.IdentityModel.Claims.ClaimSet" />, der einen Satz von Ansprüchen enthält.</param>
+        <summary>Fügt einen Satz von Ansprüchen zum Evaluierungskontext hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Ansprüche werden dem in der <xref:System.IdentityModel.Policy.EvaluationContext.ClaimSets%2A>-Eigenschaft enthaltenen Satz von Ansprüchen hinzugefügt.  
+  
+ Bei jedem Aufruf der <xref:System.IdentityModel.Policy.EvaluationContext.AddClaimSet%2A>-Methode zum Hinzufügen von Ansprüchen zum Evaluierungskontext wird die <xref:System.IdentityModel.Policy.EvaluationContext.Generation%2A>-Eigenschaft inkrementiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClaimSets">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Claims.ClaimSet&gt; ClaimSets { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.IdentityModel.Claims.ClaimSet&gt; ClaimSets" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Policy.EvaluationContext.ClaimSets" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Claims.ClaimSet&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine schreibgeschützte Auflistung von <see cref="T:System.IdentityModel.Claims.ClaimSet" />-Objekten ab, die die Ansprüche enthalten, die von ausgewerteten Autorisierungsrichtlinien hinzugefügt werden.</summary>
+        <value>Ein <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" />-Objekt, das die Ansprüche enthält, die von ausgewerteten Autorisierungsrichtlinien hinzugefügt werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um Ansprüche dieser Auflistung, z. B. von einer Autorisierungsrichtlinie, hinzuzufügen, verwenden Sie die <xref:System.IdentityModel.Policy.EvaluationContext.AddClaimSet%2A>-Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Generation">
+      <MemberSignature Language="C#" Value="public abstract int Generation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Generation" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Policy.EvaluationContext.Generation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl ab, wie oft Ansprüche zum Evaluierungskontext hinzugefügt wurden.</summary>
+        <value>Die Anzahl, wie oft Ansprüche zum Evaluierungskontext hinzugefügt wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.ServiceAuthorizationManager>-Klasse verwendet die zu bestimmende <xref:System.IdentityModel.Policy.EvaluationContext.Generation%2A>-Eigenschaft, wenn eine andere Evaluierungsrunde erforderlich ist. Bei jedem Aufruf der `AddToTarget`-Methode durch eine Autorisierungsrichtlinie zum Hinzufügen von Ansprüchen zum Evaluierungskontext wird die <xref:System.IdentityModel.Policy.EvaluationContext.Generation%2A>-Eigenschaft inkrementiert.  
+  
+ Die <xref:System.ServiceModel.ServiceAuthorizationManager>-Klasse untersucht die <xref:System.IdentityModel.Policy.EvaluationContext.Generation%2A>-Eigenschaft, nachdem sie wieder die <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>-Methode für alle Autorisierungsrichtlinien aufgerufen hat. Wenn die <xref:System.IdentityModel.Policy.EvaluationContext.Generation%2A>-Eigenschaft bei der Evaluierung inkrementiert wurde, ruft die <xref:System.ServiceModel.ServiceAuthorizationManager>-Klasse die <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>-Methode für Autorisierungsrichtlinien auf, die beim letzten Aufruf der `false`-Methode für die Autorisierungsrichtlinie <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> war.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IDictionary&lt;string,object&gt; Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; Properties" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Policy.EvaluationContext.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der diesem <see cref="T:System.IdentityModel.Policy.EvaluationContext" /> zugeordneten Nicht-Ansprucheigenschaften ab.</summary>
+        <value>Eine <see cref="T:System.Collections.Generic.Dictionary`2" />, die eine Auflistung der Nicht-Ansprucheigenschaften angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Klassen im <xref:System.IdentityModel.Selectors>-Namespace, die die <xref:System.IdentityModel.Policy.IAuthorizationPolicy>-Schnittstelle (Autorisierungsrichtlinien) implementieren, fügen eine Eigenschaft mit dem Namen `Identities` zur <xref:System.IdentityModel.Policy.AuthorizationContext.Properties%2A>-Auflistung hinzu. Die `Identities`-Eigenschaft enthält ein Objekt des Typs <xref:System.Collections.Generic.IList%601>, das mindestens eine <xref:System.Security.Principal.IIdentity>-Instanz umfasst, die von den Autorisierungsrichtlinien bereitgestellte Identitätsinformationen darstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RecordExpirationTime">
+      <MemberSignature Language="C#" Value="public abstract void RecordExpirationTime (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RecordExpirationTime(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Policy.EvaluationContext.RecordExpirationTime(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expirationTime" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">To be added.</param>
+        <summary>Legt das Datum und die Zeit fest, ab wann dieser <see cref="T:System.IdentityModel.Policy.EvaluationContext" /> nicht mehr gültig ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das mehrfache Aufrufen der <xref:System.IdentityModel.Policy.EvaluationContext.RecordExpirationTime%2A>-Methode hat nur Auswirkungen, wenn der `expirationTime`-Parameter einen Wert enthält, der vor dem zuvor angegebenen Wert liegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

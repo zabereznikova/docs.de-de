@@ -1,0 +1,225 @@
+<Type Name="FilterElementCollection" FullName="System.ServiceModel.Routing.Configuration.FilterElementCollection">
+  <TypeSignature Language="C#" Value="public class FilterElementCollection : System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FilterElementCollection extends System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Routing.Configuration.FilterElementCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElementCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Configuration.ConfigurationCollection(typeof(System.ServiceModel.Routing.Configuration.FilterElement), AddItemName="filter")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Auflistung von <see cref="T:System.ServiceModel.Routing.Configuration.FilterElement" />-Instanzen dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FilterElementCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Routing.Configuration.FilterElementCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Routing.Configuration.FilterElementCollection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.ServiceModel.Routing.Configuration.FilterElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.ServiceModel.Routing.Configuration.FilterElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Routing.Configuration.FilterElementCollection.Add(System.ServiceModel.Routing.Configuration.FilterElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.ServiceModel.Routing.Configuration.FilterElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das hinzuzufügende Filterelement.</param>
+        <summary>Fügt der Auflistung eine neue <see cref="T:System.ServiceModel.Routing.Configuration.FilterElement" />-Instanz hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Routing.Configuration.FilterElementCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Elemente aus der Auflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNewElement">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationElement CreateNewElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Configuration.ConfigurationElement CreateNewElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Routing.Configuration.FilterElementCollection.CreateNewElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen neuen <see cref="T:System.Configuration.ConfigurationElement" />.</summary>
+        <returns>Ein neues Konfigurationselement.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetElementKey">
+      <MemberSignature Language="C#" Value="protected override object GetElementKey (System.Configuration.ConfigurationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetElementKey(class System.Configuration.ConfigurationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Routing.Configuration.FilterElementCollection.GetElementKey(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Konfigurationselement, für das der Schlüssel zurückzugeben ist.</param>
+        <summary>Gibt den Schlüssel des angegebenen <see cref="T:System.Configuration.ConfigurationElement" />-Elements in der Auflistung zurück.</summary>
+        <returns>Der Schlüssel für das angegebene Konfigurationselement.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsElementRemovable">
+      <MemberSignature Language="C#" Value="protected override bool IsElementRemovable (System.Configuration.ConfigurationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsElementRemovable(class System.Configuration.ConfigurationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Routing.Configuration.FilterElementCollection.IsElementRemovable(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Konfigurationselement, dessen Entfernbarkeit überprüft werden soll.</param>
+        <summary>Ruft einen Wert ab, der angibt, ob das Element entfernt werden kann.</summary>
+        <returns>**"true"** , wenn das Element entfernt wurde, andernfalls werden kann **"false"**.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public override bool IsReadOnly ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsReadOnly() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Routing.Configuration.FilterElementCollection.IsReadOnly" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das Element schreibgeschützt ist.</summary>
+        <returns>**"true"** Wenn das Element schreibgeschützt ist, andernfalls **"false"**.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Routing.Configuration.FilterElement this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Routing.Configuration.FilterElement Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Routing.Configuration.FilterElementCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Routing.Configuration.FilterElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des Elements, das aus der Auflistung abgerufen werden soll.</param>
+        <summary>Ruft ein Element mit einem angegebenen Index aus der Auflistung ab.</summary>
+        <value>Das Element mit dem angegebenen Index in der Auflistung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Routing.Configuration.FilterElement this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Routing.Configuration.FilterElement Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Routing.Configuration.FilterElementCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Routing.Configuration.FilterElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Schlüssel des Elements, das aus der Auflistung abgerufen werden soll.</param>
+        <summary>Ruft ein Element mit einem angegebenen Schlüssel aus der Auflistung ab.</summary>
+        <value>Das Element in der Auflistung, das mit dem angegebenen Schlüssel übereinstimmt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.ServiceModel.Routing.Configuration.FilterElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.ServiceModel.Routing.Configuration.FilterElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Routing.Configuration.FilterElementCollection.Remove(System.ServiceModel.Routing.Configuration.FilterElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.ServiceModel.Routing.Configuration.FilterElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, das aus der Auflistung entfernt werden soll.</param>
+        <summary>Entfernt das erste Vorkommen des angegebenen <see cref="T:System.ServiceModel.Routing.Configuration.FilterElement" /> aus der Auflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

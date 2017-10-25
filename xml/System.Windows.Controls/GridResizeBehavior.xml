@@ -1,0 +1,115 @@
+<Type Name="GridResizeBehavior" FullName="System.Windows.Controls.GridResizeBehavior">
+  <TypeSignature Language="C#" Value="public enum GridResizeBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed GridResizeBehavior extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.GridResizeBehavior" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, die Zeilen oder Spalten, dessen Größe, indem angepasst werden, eine <see cref="T:System.Windows.Controls.GridSplitter" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird zum Festlegen des Werts der <xref:System.Windows.Controls.GridSplitter.ResizeBehavior%2A> Eigenschaft von einem <xref:System.Windows.Controls.GridSplitter>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BasedOnAlignment">
+      <MemberSignature Language="C#" Value="BasedOnAlignment" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.GridResizeBehavior BasedOnAlignment = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.GridResizeBehavior.BasedOnAlignment" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.GridResizeBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Leerraum wird anhand des Werts, der die <see cref="P:System.Windows.FrameworkElement.HorizontalAlignment" /> und <see cref="P:System.Windows.FrameworkElement.VerticalAlignment" /> Eigenschaften.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Wert, der die <xref:System.Windows.Controls.GridSplitter.ResizeDirection%2A> Eigenschaft gibt an, dass Leerraum zwischen Zeilen, die Verteilung diesen Richtlinien folgt:  
+  
+-   Wenn die <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> -Eigenschaftensatz auf <xref:System.Windows.VerticalAlignment.Top>, Leerraum zwischen der Zeile, die für angegeben wird die <xref:System.Windows.Controls.GridSplitter> und die Zeile, die oberhalb dieser Zeile befindet.  
+  
+-   Wenn die <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> -Eigenschaftensatz auf <xref:System.Windows.VerticalAlignment.Bottom>, Leerraum zwischen der Zeile, die für angegeben wird die <xref:System.Windows.Controls.GridSplitter> und die Zeile, die darunter liegenden Zeile.  
+  
+-   Wenn die <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> -Eigenschaftensatz auf <xref:System.Windows.VerticalAlignment.Center>, wird der Leerraum zwischen der Zeile, die über und die Zeile, die unter der Zeile, die für angegeben wird die <xref:System.Windows.Controls.GridSplitter>.  
+  
+-   Wenn die <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> -Eigenschaftensatz auf <xref:System.Windows.VerticalAlignment.Stretch>, wird der Leerraum zwischen der Zeile, die über und die Zeile, die unter der Zeile, die für angegeben wird die <xref:System.Windows.Controls.GridSplitter>.  
+  
+ Wenn der Wert, der die <xref:System.Windows.Controls.GridSplitter.ResizeDirection%2A> Eigenschaft gibt an, dass Leerraum zwischen den Spalten, die Verteilung diesen Richtlinien folgt:  
+  
+-   Wenn die <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> -Eigenschaftensatz auf <xref:System.Windows.HorizontalAlignment.Left>, Leerraum zwischen der Spalte, die für angegeben wird die <xref:System.Windows.Controls.GridSplitter> und die Spalte, die auf der linken Seite.  
+  
+-   Wenn die <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> -Eigenschaftensatz auf <xref:System.Windows.HorizontalAlignment.Right>, Leerraum zwischen der Spalte, die für angegeben wird die <xref:System.Windows.Controls.GridSplitter> und die Spalte, die auf der rechten Seite.  
+  
+-   Wenn die <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> -Eigenschaftensatz auf <xref:System.Windows.HorizontalAlignment.Center>, wird der Leerraum zwischen den Spalten, die Links und rechts neben der Spalte, die für angegeben wird die <xref:System.Windows.Controls.GridSplitter>.  
+  
+-   Wenn die <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> -Eigenschaftensatz auf <xref:System.Windows.VerticalAlignment.Stretch>, wird der Leerraum zwischen den Spalten, die Links und rechts neben der Spalte, die für angegeben wird die <xref:System.Windows.Controls.GridSplitter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentAndNext">
+      <MemberSignature Language="C#" Value="CurrentAndNext" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.GridResizeBehavior CurrentAndNext = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.GridResizeBehavior.CurrentAndNext" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.GridResizeBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bei einem horizontalen <see cref="T:System.Windows.Controls.GridSplitter" />, wird der Leerraum zwischen der Zeile, die für angegeben wird die <see cref="T:System.Windows.Controls.GridSplitter" /> und die nächste Zeile, die darunter liegenden ist. Bei einem vertikalen <see cref="T:System.Windows.Controls.GridSplitter" />, wird der Leerraum zwischen der Spalte, die für angegeben wird die <see cref="T:System.Windows.Controls.GridSplitter" /> und die nächste Spalte, die auf der rechten Seite ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousAndCurrent">
+      <MemberSignature Language="C#" Value="PreviousAndCurrent" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.GridResizeBehavior PreviousAndCurrent = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.GridResizeBehavior.PreviousAndCurrent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.GridResizeBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bei einem horizontalen <see cref="T:System.Windows.Controls.GridSplitter" />, wird der Leerraum zwischen der Zeile, die für angegeben wird die <see cref="T:System.Windows.Controls.GridSplitter" /> und die nächste Zeile, die jeweils darüber liegt. Bei einem vertikalen <see cref="T:System.Windows.Controls.GridSplitter" />, wird der Leerraum zwischen der Spalte, die für angegeben wird die <see cref="T:System.Windows.Controls.GridSplitter" /> und die nächste Spalte, die auf der linken Seite.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousAndNext">
+      <MemberSignature Language="C#" Value="PreviousAndNext" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.GridResizeBehavior PreviousAndNext = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.GridResizeBehavior.PreviousAndNext" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.GridResizeBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bei einem horizontalen <see cref="T:System.Windows.Controls.GridSplitter" />, wird der Leerraum zwischen den Zeilen, die oberhalb und unterhalb der Zeile, die für angegeben wird die <see cref="T:System.Windows.Controls.GridSplitter" />. Bei einem vertikalen <see cref="T:System.Windows.Controls.GridSplitter" />, wird der Leerraum zwischen den Spalten, die Links und rechts neben der Spalte, die für angegeben wird die <see cref="T:System.Windows.Controls.GridSplitter" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

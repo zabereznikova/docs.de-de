@@ -1,0 +1,1192 @@
+<Type Name="WebBrowserArray" FullName="Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray">
+  <TypeSignature Language="C#" Value="public class WebBrowserArray : Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray, System.ComponentModel.IExtenderProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi WebBrowserArray extends Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray implements class System.ComponentModel.IExtenderProvider" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IExtenderProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ProvideProperty("Index", typeof(System.Windows.Forms.WebBrowser))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Steuerelementarray von <see cref="T:System.Windows.Forms.WebBrowser" /> Steuerelemente</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `WebBrowserArray` Klasse verfügt über eine Entsprechung für die Laufzeitfunktionen von einer Visual Basic 6.0 `WebBrowser` Array. Es bietet keine Funktionen zur Entwurfszeit von einer Visual Basic 6.0-Steuerelementarray.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebBrowserArray ();" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Instanziieren einer <xref:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray>, müssen Sie auch Aufrufen der <xref:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.SetIndex%2A> Methode, um das erste Element im Array zu erstellen.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebBrowserArray (System.ComponentModel.IContainer Container);" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor(class System.ComponentModel.IContainer Container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.#ctor(System.ComponentModel.IContainer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="Container" Type="System.ComponentModel.IContainer" />
+      </Parameters>
+      <Docs>
+        <param name="Container">Die <see cref="T:System.ComponentModel.IContainer" /> , in dem das Steuerelementarray gehostet wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray" /> -Klasse unter Angabe des Containers.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Instanziieren einer <xref:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray>, müssen Sie auch Aufrufen der <xref:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.SetIndex%2A> Methode, um das erste Element im Array zu erstellen.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanExtend">
+      <MemberSignature Language="C#" Value="public bool CanExtend (object target);" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance bool CanExtend(object target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.CanExtend(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="target">Ein <see cref="T:System.Windows.Forms.WebBrowser" />-Steuerelement.</param>
+        <summary>Ruft einen Wert, der bestimmt, ob ein Steuerelement ein Mitglied einer <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray" />.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="target" /> ist ein Mitglied der Steuerelementarray andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `CanExtend` Methode kann verwendet werden, um zu bestimmen, ob ein bestimmtes <xref:System.Windows.Forms.WebBrowser> -Steuerelement ist das Basiselement des Steuerelementarrays aus dem die anderen Elemente geklont wurden.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CausesValidationChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler CausesValidationChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler CausesValidationChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.CausesValidationChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.Control.CausesValidation" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Windows.Forms.Control.CausesValidation%2A> -Eigenschaft entweder durch eine programmgesteuerte Änderung oder eine Benutzerinteraktion geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientSizeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ClientSizeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ClientSizeChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.ClientSizeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.Control.ClientSize" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Windows.Forms.Control.ClientSize%2A> -Eigenschaft entweder durch eine programmgesteuerte Änderung oder eine Benutzerinteraktion geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ContextMenuChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ContextMenuChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.ContextMenuChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.Control.ContextMenu" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Windows.Forms.Control.ContextMenu%2A> -Eigenschaft entweder durch eine programmgesteuerte Änderung oder eine Benutzerinteraktion geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuStripChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ContextMenuStripChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ContextMenuStripChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.ContextMenuStripChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.Control.ContextMenuStrip" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> -Eigenschaft entweder durch eine programmgesteuerte Änderung oder eine Benutzerinteraktion geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlAdded">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ControlEventHandler ControlAdded;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ControlEventHandler ControlAdded" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.ControlAdded" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ControlEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray" /> ein neues Steuerelement hinzugefügt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlRemoved">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ControlEventHandler ControlRemoved;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ControlEventHandler ControlRemoved" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.ControlRemoved" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ControlEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt beim Entfernen des Steuerelements aus der <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray" /> ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DockChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler DockChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DockChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.DockChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.Control.Dock" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Windows.Forms.Control.Dock%2A> -Eigenschaft entweder durch eine programmgesteuerte Änderung oder eine Benutzerinteraktion geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DocumentCompleted">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.WebBrowserDocumentCompletedEventHandler DocumentCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.WebBrowserDocumentCompletedEventHandler DocumentCompleted" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.DocumentCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.WebBrowserDocumentCompletedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn das <see cref="T:System.Windows.Forms.WebBrowser" />-Steuerelement das Laden eines Dokuments beendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.WebBrowser> -Steuerelement zu einem neuen Dokument navigiert, wenn eine der folgenden Eigenschaften festgelegt ist, oder Methoden aufgerufen wird:  
+  
+-   <xref:System.Windows.Forms.WebBrowser.Url%2A>  
+  
+-   <xref:System.Windows.Forms.WebBrowser.DocumentText%2A>  
+  
+-   <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A>  
+  
+-   <xref:System.Windows.Forms.WebBrowser.Navigate%2A>  
+  
+-   <xref:System.Windows.Forms.WebBrowser.GoBack%2A>  
+  
+-   <xref:System.Windows.Forms.WebBrowser.GoForward%2A>  
+  
+-   <xref:System.Windows.Forms.WebBrowser.GoHome%2A>  
+  
+-   <xref:System.Windows.Forms.WebBrowser.GoSearch%2A>  
+  
+ Behandeln der `DocumentCompleted` Ereignis, um die Benachrichtigung erhalten, wenn das neue Dokument Laden abgeschlossen ist. Wenn die `DocumentCompleted` Ereignis auftritt, das neue Dokument vollständig geladen ist, d. h. Sie können seinen Inhalt über zugreifen der <xref:System.Windows.Forms.WebBrowser.Document%2A>, <xref:System.Windows.Forms.WebBrowser.DocumentText%2A>, oder <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> Eigenschaft.  
+  
+ Um benachrichtigt zu werden, vor Beginn der Navigation, behandeln die <xref:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.Navigating> Ereignis. Behandlung dieses Ereignisses können Sie die Navigation Abbrechen, wenn bestimmte Bedingungen nicht, z. B. erfüllt wurden, wenn der Benutzer ein Formular nicht vollständig aufgefüllt wurde. Behandeln der <xref:System.Windows.Forms.WebBrowser.Navigated> Ereignis benachrichtigt werden soll bei der <xref:System.Windows.Forms.WebBrowser> Steuerelement Navigation beendet, und laden das Dokument am neuen Speicherort begonnen wurde.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileDownload">
+      <MemberSignature Language="C#" Value="public event EventHandler FileDownload;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler FileDownload" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.FileDownload" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn das <see cref="T:System.Windows.Forms.WebBrowser" />-Steuerelement eine Datei herunterlädt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetControlInstanceType">
+      <MemberSignature Language="C#" Value="protected override Type GetControlInstanceType ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Type GetControlInstanceType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.GetControlInstanceType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überschreibt <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.GetControlInstanceType" />.</summary>
+        <returns>Der Typ eines Steuerelements in einem Steuerelementarray.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann nicht aus den Code Ihrer Anwendung aufgerufen werden. Verwenden Sie stattdessen die <xref:System.Object.GetType%2A>-Methode.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIndex">
+      <MemberSignature Language="C#" Value="public short GetIndex (System.Windows.Forms.WebBrowser o);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance int16 GetIndex(class System.Windows.Forms.WebBrowser o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.GetIndex(System.Windows.Forms.WebBrowser)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Windows.Forms.WebBrowser" />
+      </Parameters>
+      <Docs>
+        <param name="o">Ein <see cref="T:System.Windows.Forms.WebBrowser" /> im Steuerelementarray.</param>
+        <summary>Ruft den Index des eine <see cref="T:System.Windows.Forms.WebBrowser" /> in einem <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray" />.</summary>
+        <returns>Ein <see langword="Short" /> , die den Index des angegebenen darstellt <see cref="T:System.Windows.Forms.WebBrowser" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann verwendet werden, zum Abrufen des Indexes für die angegebene <xref:System.Windows.Forms.WebBrowser>.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HookUpControlEvents">
+      <MemberSignature Language="C#" Value="protected override void HookUpControlEvents (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void HookUpControlEvents(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.HookUpControlEvents(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Eine <see cref="T:System.Object" />.</param>
+        <summary>Überschreibt <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.HookUpControlEvents(System.Object)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann nicht aus den Code Ihrer Anwendung aufgerufen werden. Verwendung `AddHandler` verknüpft, die hinzugefügt werden Ereignisse für alle Steuerelemente die <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.Load%2A> Methode.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.WebBrowser this[short Index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.WebBrowser Item(int16)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.Item(System.Int16)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.WebBrowser</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Index" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="Index">Ein <see langword="Short" /> , der die Position eines Elements des Steuerelementarrays angibt.</param>
+        <summary>Ruft ein bestimmtes Element von einem <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray" /> über einen Index. Schreibgeschützt.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.WebBrowser" /> an der angegebenen <paramref name="Index" /> im Steuerelementarray.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Item` Eigenschaft ist die Standardeigenschaft für ein Steuerelementarray. Aus diesem Grund sind die folgenden Codezeilen gleichwertig.  
+  
+```vb  
+MsgBox(CStr(WebBrowserArray.Item(1).Text))  
+MsgBox(CStr(WebBrowserArray(1).Text))  
+```  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocationChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler LocationChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler LocationChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.LocationChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.Control.Location" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Windows.Forms.Control.Location%2A> -Eigenschaft entweder durch eine programmgesteuerte Änderung oder eine Benutzerinteraktion geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarginChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler MarginChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler MarginChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.MarginChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.Control.Margin" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Windows.Forms.Control.Margin%2A> -Eigenschaft entweder durch eine programmgesteuerte Änderung oder eine Benutzerinteraktion geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Move">
+      <MemberSignature Language="C#" Value="public event EventHandler Move;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Move" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.Move" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt beim Verschieben des Steuerelements ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Navigated">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.WebBrowserNavigatedEventHandler Navigated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.WebBrowserNavigatedEventHandler Navigated" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.Navigated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.WebBrowserNavigatedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn das <see cref="T:System.Windows.Forms.WebBrowser" />-Steuerelement zu einem neuen Dokument navigiert ist und mit dem Laden des Dokuments begonnen hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.WebBrowser> -Steuerelement zu einem neuen Dokument navigiert, wenn eine der folgenden Eigenschaften festgelegt ist, oder Methoden aufgerufen wird:  
+  
+-   <xref:System.Windows.Forms.WebBrowser.Url%2A>  
+  
+-   <xref:System.Windows.Forms.WebBrowser.DocumentText%2A>  
+  
+-   <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A>  
+  
+-   <xref:System.Windows.Forms.WebBrowser.Navigate%2A>  
+  
+-   <xref:System.Windows.Forms.WebBrowser.GoBack%2A>  
+  
+-   <xref:System.Windows.Forms.WebBrowser.GoForward%2A>  
+  
+-   <xref:System.Windows.Forms.WebBrowser.GoHome%2A>  
+  
+-   <xref:System.Windows.Forms.WebBrowser.GoSearch%2A>  
+  
+ Behandeln der `Navigated` Ereignis benachrichtigt werden soll bei der <xref:System.Windows.Forms.WebBrowser> Steuerelement zu einem neuen Dokument navigiert. Wenn die `Navigated` Ereignis auftritt, das neue Dokument begonnen wurde geladen, d. h., Sie erreichen den geladenen Inhalt über die <xref:System.Windows.Forms.WebBrowser.Document%2A>, <xref:System.Windows.Forms.WebBrowser.DocumentText%2A>, und <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> Eigenschaften. Behandeln der <xref:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.DocumentCompleted> Ereignis benachrichtigt werden soll bei der <xref:System.Windows.Forms.WebBrowser> -Steuerelement das Laden des neuen Dokuments beendet.  
+  
+ Sie können auch eine Benachrichtigung empfangen vor Beginn der Navigation durch Behandeln der <xref:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.Navigating> Ereignis. Behandlung dieses Ereignisses können Sie die Navigation Abbrechen, wenn bestimmte Bedingungen nicht erfüllt wurden, z. B. der Benutzer hat kein Formular ausfüllt.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Navigating">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.WebBrowserNavigatingEventHandler Navigating;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.WebBrowserNavigatingEventHandler Navigating" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.Navigating" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.WebBrowserNavigatingEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, bevor das <see cref="T:System.Windows.Forms.WebBrowser" />-Steuerelement zu einem neuen Dokument navigiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.WebBrowser> -Steuerelement zu einem neuen Dokument navigiert, wenn eine der folgenden Eigenschaften festgelegt ist, oder Methoden aufgerufen wird:  
+  
+-   <xref:System.Windows.Forms.WebBrowser.Url%2A>  
+  
+-   <xref:System.Windows.Forms.WebBrowser.DocumentText%2A>  
+  
+-   <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A>  
+  
+-   <xref:System.Windows.Forms.WebBrowser.Navigate%2A>  
+  
+-   <xref:System.Windows.Forms.WebBrowser.GoBack%2A>  
+  
+-   <xref:System.Windows.Forms.WebBrowser.GoForward%2A>  
+  
+-   <xref:System.Windows.Forms.WebBrowser.GoHome%2A>  
+  
+-   <xref:System.Windows.Forms.WebBrowser.GoSearch%2A>  
+  
+-  
+  
+ Sie können behandeln die `Navigating` Ereignis, um die Navigation Abbrechen, wenn bestimmte Bedingungen nicht, z. B. erfüllt wurden, wenn der Benutzer ein Formular nicht vollständig aufgefüllt wurde. Legen Sie zum Abbrechen der Navigation die `Cancel` Eigenschaft von der <xref:System.Windows.Forms.WebBrowserNavigatingEventArgs> an den Ereignishandler übergebene Objekt `true`. Sie können dieses Objekt auch verwenden, die URL des neuen Dokuments durch Abrufen der <xref:System.Windows.Forms.WebBrowserNavigatingEventArgs.Url%2A> Eigenschaft. Wenn das neue Dokument in einem Frame Webseite angezeigt wird, können Sie den Namen des Frames durch Abrufen der <xref:System.Windows.Forms.WebBrowserNavigatingEventArgs.TargetFrameName%2A> Eigenschaft.  
+  
+ Behandeln der <xref:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.Navigated> Ereignis benachrichtigt werden soll bei der <xref:System.Windows.Forms.WebBrowser> Steuerelement Navigation beendet, und laden das Dokument am neuen Speicherort begonnen wurde. Behandeln der <xref:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.DocumentCompleted> Ereignis benachrichtigt werden soll bei der <xref:System.Windows.Forms.WebBrowser> -Steuerelement das Laden des neuen Dokuments beendet.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewWindow">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.CancelEventHandler NewWindow;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.CancelEventHandler NewWindow" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.NewWindow" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.CancelEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt vor dem Öffnen eines neuen Browserfensters ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.WebBrowser> -Steuerelement geöffnet wird, ein separates Browserfenster beim die entsprechende Überladung der der <xref:System.Windows.Forms.WebBrowser.Navigate%2A> Methode aufgerufen wird oder wenn der Benutzer klickt **in neuem Fenster öffnen** im Kontextmenü Browser, wenn der Mauszeiger über bewegt wird. ein Link. Sie können das Kontextmenü deaktivieren, indem die <xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A> Eigenschaft `false`.  
+  
+ Die `NewWindow` Ereignis tritt auf, bevor die neuen Browserfenster geöffnet wird. Sie können dieses Ereignis behandeln, um zu verhindern, dass das Fenster geöffnet wird, wenn bestimmte Bedingungen nicht erfüllt wurden.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ParentChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ParentChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.ParentChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn des Steuerelements <see cref="P:System.Windows.Forms.Control.Parent" /> -Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Windows.Forms.Control.Parent%2A> -Eigenschaft entweder durch eine programmgesteuerte Änderung oder eine Benutzerinteraktion geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProgressChanged">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.WebBrowserProgressChangedEventHandler ProgressChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.WebBrowserProgressChangedEventHandler ProgressChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.ProgressChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.WebBrowserProgressChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die <see cref="T:System.Windows.Forms.WebBrowser" /> Steuerelement wurde aktualisiert, dass Informationen über den Downloadstatus eines Dokuments, das es gegenwärtig navigiert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einen Handler für dieses Ereignis können Sie um eine Status-Navigationsleiste, die mit dem Umwandlungsoperator in Internet Explorer zu implementieren. Verwenden der <xref:System.Windows.Forms.WebBrowserProgressChangedEventArgs.CurrentProgress%2A> -Eigenschaft können Sie die Anzahl der Bytes zu bestimmen, die erfolgreich heruntergeladen wurden. Verwenden der <xref:System.Windows.Forms.WebBrowserProgressChangedEventArgs.MaximumProgress%2A> -Eigenschaft zum Bestimmen der Gesamtanzahl der Bytes, die als Download zur Verfügung.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegionChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler RegionChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler RegionChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.RegionChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn sich der Wert der <see cref="P:System.Windows.Forms.Control.Region" />-Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Windows.Forms.Control.Region%2A> -Eigenschaft entweder durch eine programmgesteuerte Änderung oder eine Benutzerinteraktion geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetIndex">
+      <MemberSignature Language="C#" Value="public void ResetIndex (System.Windows.Forms.WebBrowser o);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void ResetIndex(class System.Windows.Forms.WebBrowser o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.ResetIndex(System.Windows.Forms.WebBrowser)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Windows.Forms.WebBrowser" />
+      </Parameters>
+      <Docs>
+        <param name="o">Ein <see cref="T:System.Windows.Forms.Control" />.</param>
+        <summary>Die <see langword="ResetIndex" /> Methode wird nicht unterstützt, der <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray" /> Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird nicht unterstützt und Aufrufen dieser löst keine Ausnahme aus.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resize">
+      <MemberSignature Language="C#" Value="public event EventHandler Resize;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Resize" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.Resize" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt beim Ändern der Größe des Steuerelements ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um zu bestimmen, der <xref:System.Windows.Forms.Control.Size%2A> des Steuerelements dessen Größe geändert wurde, können Sie eine Umwandlung der `sender` Parameter von der <xref:System.EventArgs> Daten an eine <xref:System.Windows.Forms.Control> und Abrufen seiner <xref:System.Windows.Forms.Control.Size%2A> Eigenschaft (oder <xref:System.Windows.Forms.Control.Height%2A> und <xref:System.Windows.Forms.Control.Width%2A> Eigenschaften einzeln).  
+  
+ Um benutzerdefinierte Layouts zu behandeln, verwenden die <xref:System.Windows.Forms.WebBrowserBase.Layout> Ereignis anstelle von der `Resize` Ereignis. Die <xref:System.Windows.Forms.WebBrowserBase.Layout> Ereignis wird ausgelöst, als Antwort auf eine `Resize` Ereignis, sondern auch als Reaktion auf andere Änderungen, die das Layout des Steuerelements beeinflussen.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetIndex">
+      <MemberSignature Language="C#" Value="public void SetIndex (System.Windows.Forms.WebBrowser o, short Index);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void SetIndex(class System.Windows.Forms.WebBrowser o, int16 Index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.SetIndex(System.Windows.Forms.WebBrowser,System.Int16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Windows.Forms.WebBrowser" />
+        <Parameter Name="Index" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="o">Ein <see cref="T:System.Windows.Forms.WebBrowser" /> im Steuerelementarray.</param>
+        <param name="Index">Ein <see langword="Short" /> , die den Index des angegebenen darstellt <see cref="T:System.Windows.Forms.WebBrowser" />.</param>
+        <summary>Legt den Index des ersten <see cref="T:System.Windows.Forms.WebBrowser" /> in einem <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `SetIndex` Methode sollte nur aufgerufen werden, wenn Sie das erste Element im Steuerelementarray erstellen. Um nachfolgende Elemente hinzuzufügen, rufen Sie die <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.Load%2A> Methode, und geben Sie die `Index`.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeIndex">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeIndex (System.Windows.Forms.WebBrowser o);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance bool ShouldSerializeIndex(class System.Windows.Forms.WebBrowser o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.ShouldSerializeIndex(System.Windows.Forms.WebBrowser)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Windows.Forms.WebBrowser" />
+      </Parameters>
+      <Docs>
+        <param name="o">Ein <see cref="T:System.Windows.Forms.WebBrowser" /> im Steuerelementarray.</param>
+        <summary>Gibt einen Wert, der angibt, ob ein <see cref="T:System.Windows.Forms.WebBrowser" /> ist ein Mitglied dieser <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray" />.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="o" /> ist ein Mitglied dieser Steuerelementarray ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das angegebene <xref:System.Windows.Forms.WebBrowser> ein Member eines anderen <xref:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray> ist, gibt `ShouldSerializeIndex` `false` zurück.  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SizeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler SizeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler SizeChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.SizeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der <see cref="P:System.Windows.Forms.Control.Size" />-Eigenschaftswert geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Windows.Forms.Control.Size%2A> -Eigenschaft entweder durch eine programmgesteuerte Änderung oder eine Benutzerinteraktion geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemColorsChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler SystemColorsChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler SystemColorsChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.SystemColorsChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich die Systemfarben ändern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Drawing.SystemColors> durch eine programmgesteuerte Änderung oder die Interaktion des Benutzers geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validated">
+      <MemberSignature Language="C#" Value="public event EventHandler Validated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Validated" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.Validated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn das Steuerelement die Überprüfung abgeschlossen hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie den Fokus ändern, indem Sie mithilfe der Tastatur (Registerkarte, UMSCHALT + TAB usw.), durch Aufrufen der <xref:System.Windows.Forms.Control.Select%2A> oder <xref:System.Windows.Forms.Control.SelectNextControl%2A> Methoden, oder durch Festlegen der <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> Eigenschaft auf das aktuelle Formular den Fokusereignisse auftreten, in der folgenden Reihenfolge:  
+  
+ <xref:System.Windows.Forms.Control.Enter>  
+  
+ <xref:System.Windows.Forms.Control.GotFocus>  
+  
+ <xref:System.Windows.Forms.Control.Leave>  
+  
+ <xref:System.Windows.Forms.Control.Validating>  
+  
+ `Validated`  
+  
+ <xref:System.Windows.Forms.Control.LostFocus>  
+  
+ Wenn Sie den Fokus ändern, mit der Maus oder durch Aufrufen der <xref:System.Windows.Forms.Control.Focus%2A> -Methode, den Fokusereignisse auftreten, in der folgenden Reihenfolge:  
+  
+ <xref:System.Windows.Forms.Control.Enter>  
+  
+ <xref:System.Windows.Forms.Control.GotFocus>  
+  
+ <xref:System.Windows.Forms.Control.LostFocus>  
+  
+ <xref:System.Windows.Forms.Control.Leave>  
+  
+ <xref:System.Windows.Forms.Control.Validating>  
+  
+ `Validated`  
+  
+ Wenn die <xref:System.Windows.Forms.Control.CausesValidation%2A> -Eigenschaftensatz auf `false`, <xref:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.Validating> und `Validated` Ereignisse werden unterdrückt.  
+  
+ Wenn der <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft von der <xref:System.ComponentModel.CancelEventArgs> auf festgelegt ist `true` in der <xref:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.Validating> Ereignisdelegaten, der alle Ereignisse, die in der Regel nach dem auftreten würden die <xref:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.Validating> Ereignis werden unterdrückt.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validating">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.CancelEventHandler Validating;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.CancelEventHandler Validating" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.Validating" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.CancelEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn das Steuerelement eine Validierung ausführt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie den Fokus ändern, indem Sie mithilfe der Tastatur (Registerkarte, UMSCHALT + TAB usw.), durch Aufrufen der <xref:System.Windows.Forms.Control.Select%2A> oder <xref:System.Windows.Forms.Control.SelectNextControl%2A> Methoden, oder durch Festlegen der <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> Eigenschaft auf das aktuelle Formular den Fokusereignisse auftreten, in der folgenden Reihenfolge:  
+  
+ <xref:System.Windows.Forms.Control.Enter>  
+  
+ <xref:System.Windows.Forms.Control.GotFocus>  
+  
+ <xref:System.Windows.Forms.Control.Leave>  
+  
+ `Validating`  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.Validated>  
+  
+ <xref:System.Windows.Forms.Control.LostFocus>  
+  
+ Wenn Sie den Fokus ändern, mit der Maus oder durch Aufrufen der <xref:System.Windows.Forms.Control.Focus%2A> -Methode, den Fokusereignisse auftreten, in der folgenden Reihenfolge:  
+  
+ <xref:System.Windows.Forms.Control.Enter>  
+  
+ <xref:System.Windows.Forms.Control.GotFocus>  
+  
+ <xref:System.Windows.Forms.Control.LostFocus>  
+  
+ <xref:System.Windows.Forms.Control.Leave>  
+  
+ `Validating`  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.Validated>  
+  
+ Wenn die <xref:System.Windows.Forms.Control.CausesValidation%2A> -Eigenschaftensatz auf `false`, <xref:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.Validating> und <xref:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.Validated> Ereignisse werden unterdrückt.  
+  
+ Wenn der <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft von der <xref:System.ComponentModel.CancelEventArgs> auf festgelegt ist `true` in der <xref:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.Validating> Ereignisdelegaten, der alle Ereignisse, die in der Regel nach dem auftreten würden die <xref:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.Validating> Ereignis werden unterdrückt.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisibleChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler VisibleChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler VisibleChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.WebBrowserArray.VisibleChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn der <see cref="P:System.Windows.Forms.Control.Visible" />-Eigenschaftswert geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Windows.Forms.Control.Visible%2A> -Eigenschaft entweder durch eine programmgesteuerte Änderung oder eine Benutzerinteraktion geändert wird.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+> [!NOTE]
+>  Funktionen und Objekte der <xref:Microsoft.VisualBasic.Compatibility.VB6> Namespace dienen zur Verwendung von den Tools zur Aktualisierung von Visual Basic 6.0 auf [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. In den meisten Fällen duplizieren diese Funktionen und Objekte Funktionen, die in anderen Namespaces Sie finden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Diese sind notwendig, nur wenn das Visual Basic 6.0-Codemodell sich maßgeblich von unterscheidet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

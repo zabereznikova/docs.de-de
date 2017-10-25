@@ -1,0 +1,247 @@
+<Type Name="AppSettingsExpressionBuilder" FullName="System.Web.Compilation.AppSettingsExpressionBuilder">
+  <TypeSignature Language="C#" Value="public class AppSettingsExpressionBuilder : System.Web.Compilation.ExpressionBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AppSettingsExpressionBuilder extends System.Web.Compilation.ExpressionBuilder" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Compilation.AppSettingsExpressionBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Compilation.ExpressionBuilder</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.Compilation.ExpressionEditor("System.Web.UI.Design.AppSettingsExpressionEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.Compilation.ExpressionPrefix("AppSettings")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ruft die Werte, entsprechend den Angaben in einem deklarativen Ausdruck ab, aus der <see langword="&lt;appSettings&gt;" /> Abschnitt der Datei "Web.config".</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Compilation.AppSettingsExpressionBuilder> Klasse ermöglicht den Zugriff auf Werte in der `<appSettings>` Abschnitt der Datei "Web.config". Die `<appSettings>` Abschnitt der Datei "Web.config" enthält anwendungsspezifische Werte in Schlüssel-/Wertpaaren.  
+  
+ Ein Anwendungswert wird abgerufen, indem ein Ausdruck der form  
+  
+ `<%$ AppSettings: appSettingsKey %>`  
+  
+ Um eine Eigenschaft in einem Steuerelementdeklaration. Der Teil des Ausdrucks vor dem Doppelpunkt (:)) kennzeichnet den Typ des Ausdrucks abgerufen werden sollen, und der Teil nach der Doppelpunkt gibt den Schlüssel an. Der vorangehende Ausdruck würde den folgenden Wert aus der Datei "Web.config" abgerufen werden.  
+  
+ `<appSettings>`  
+  
+ `<add key="appSettingsKey" value="appSettingsValue"/>`  
+  
+ `</appSettings>`  
+  
+ Wenn der Parser einen Ausdruck mit trifft die `AppSettings` Präfix, erstellt er eine Instanz von der <xref:System.Web.Compilation.AppSettingsExpressionBuilder> Klasse, um den Ausdruck zu verarbeiten.  
+  
+ Wenn der Ausdruck in eine Seite gefunden wird, die kompiliert werden, die <xref:System.Web.Compilation.AppSettingsExpressionBuilder> Objekt erzeugt Code, um den angegebenen Wert aus der Datei "Web.config" abzurufen. Dieser Code wird während der Ausführung der generierten Seitenklasse ausgeführt. Wenn der Ausdruck in eine Seite gefunden wird, die nicht kompiliert werden, die <xref:System.Web.Compilation.AppSettingsExpressionBuilder> Objekt den Wert aus der Datei "Web.config" zurückgibt, wenn die Seite analysiert und ausgeführt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie einen Anwendungswert-Einstellungen auf einer Seite abgerufen, die nicht kompiliert wird.  
+  
+ [!code-aspx-csharp[System.Web.Compilation.AppSettingsExpressionBuilder#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Compilation.AppSettingsExpressionBuilder/CS/Default.aspx#1)]
+ [!code-aspx-vb[System.Web.Compilation.AppSettingsExpressionBuilder#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Compilation.AppSettingsExpressionBuilder/VB/Default.aspx#1)]
+  
+ Dieser Code ruft der folgende Ausdruck aus der Datei "Web.config" ab.  
+  
+ `<configuration xmlns="http://schemas.microsoft.com/.NetConfiguration/v2.0">`  
+  
+ `<appSettings>`  
+  
+ `<add key="thisSeason" value="Fall"/>`  
+  
+ `</appSettings>`  
+  
+ `</configuration>`  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AppSettingsExpressionBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.AppSettingsExpressionBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Compilation.AppSettingsExpressionBuilder" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluateExpression">
+      <MemberSignature Language="C#" Value="public override object EvaluateExpression (object target, System.Web.UI.BoundPropertyEntry entry, object parsedData, System.Web.Compilation.ExpressionBuilderContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object EvaluateExpression(object target, class System.Web.UI.BoundPropertyEntry entry, object parsedData, class System.Web.Compilation.ExpressionBuilderContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.AppSettingsExpressionBuilder.EvaluateExpression(System.Object,System.Web.UI.BoundPropertyEntry,System.Object,System.Web.Compilation.ExpressionBuilderContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Object" />
+        <Parameter Name="entry" Type="System.Web.UI.BoundPropertyEntry" />
+        <Parameter Name="parsedData" Type="System.Object" />
+        <Parameter Name="context" Type="System.Web.Compilation.ExpressionBuilderContext" />
+      </Parameters>
+      <Docs>
+        <param name="target">Das Objekt, das den Eigenschafteneintrag enthält.</param>
+        <param name="entry">Die Eigenschaft, an die der Ausdruck gebunden ist...</param>
+        <param name="parsedData">Das Objekt, das darstellt analysiert Daten wie vom <see cref="M:System.Web.Compilation.ExpressionBuilder.ParseExpression(System.String,System.Type,System.Web.Compilation.ExpressionBuilderContext)" />.</param>
+        <param name="context">Eigenschaften für das Steuerelement oder die Seite.</param>
+        <summary>Gibt einen Wert aus der <see langword="&lt;appSettings&gt;" /> Abschnitt der Datei "Web.config".</summary>
+        <returns>Die <see cref="T:System.Object" /> verknüpft sind mit einem Schlüssel in der <see langword="&lt;appSettings&gt;" /> Abschnitt der Datei "Web.config".</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn ein Ausdruck der Form `<%$ AppSettings: someApplicationSetting %>` in eine Seite ohne Kompilierung festgestellt wird. Ruft den entsprechenden Wert ab, aus Schlüssel/Wert-Paare in der `<appSettings>` Abschnitt der Datei "Web.config". Diese Methode überschreibt <xref:System.Web.Compilation.ExpressionBuilder.EvaluateExpression%2A> durch Aufrufen der <xref:System.Web.Compilation.AppSettingsExpressionBuilder.GetAppSetting%2A> Methode mit der <xref:System.Web.UI.BoundPropertyEntry.Expression%2A> -Eigenschaft der `key` Parameter, der <xref:System.Web.UI.PropertyEntry.Name%2A> Eigenschaft auf der <xref:System.Web.UI.PropertyEntry.PropertyInfo%2A?displayProperty=nameWithType> -Eigenschaft der `propertyName` Parameter aus, und die <xref:System.Type> von der `target` Parameter als die `targetType` Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAppSetting">
+      <MemberSignature Language="C#" Value="public static object GetAppSetting (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetAppSetting(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.AppSettingsExpressionBuilder.GetAppSetting(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel für den Wert aus der Konfigurationsdatei abgerufen werden sollen.</param>
+        <summary>Gibt einen Wert aus der <see langword="&lt;appSettings&gt;" /> Abschnitt der Datei "Web.config".</summary>
+        <returns>Die <see cref="T:System.Object" /> dem Schlüssel in der <see langword="&lt;appSettings&gt;" /> Abschnitt der Datei "Web.config".</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ruft den entsprechenden Wert ab, aus Schlüssel/Wert-Paare in der `<appSettings>` Abschnitt der Datei "Web.config". Er ruft den Wert ab, durch Abrufen der <xref:System.Configuration.ConfigurationManager.AppSettings%2A> Eigenschaft mit dem Schlüssel als Index. Die <xref:System.Object> zurückgegeben hat den Typ <xref:System.String>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Schlüssel wird in "Web.config" nicht gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAppSetting">
+      <MemberSignature Language="C#" Value="public static object GetAppSetting (string key, Type targetType, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetAppSetting(string key, class System.Type targetType, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.AppSettingsExpressionBuilder.GetAppSetting(System.String,System.Type,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="targetType" Type="System.Type" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel für einen Wert aus der Konfigurationsdatei abgerufen werden sollen.</param>
+        <param name="targetType">Der Typ des Objekts, das den Eigenschafteneintrag enthält.</param>
+        <param name="propertyName">Der Name der Eigenschaft, die an die der Ausdruck gebunden ist.</param>
+        <summary>Gibt einen Wert aus der <see langword="&lt;appSettings&gt;" /> Abschnitt der Datei "Web.config" mit dem Wert in einen Zieltyp konvertiert.</summary>
+        <returns>Die <see cref="T:System.Object" /> dem Schlüssel in der <see langword="&lt;appSettings&gt;" /> Abschnitt der Datei "Web.config".</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ruft den entsprechenden Wert ab, aus Schlüssel/Wert-Paare in der `<appSettings>` Abschnitt der Datei "Web.config". Der Wert wird abgerufen, durch Abrufen der <xref:System.Configuration.ConfigurationManager.AppSettings%2A> Eigenschaft mit dem Schlüssel als Index. Der resultierende Zeichenfolgenwert wird konvertiert in einen neuen Typ, der basierend auf den `targetType` und `propertyName` Parameter.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Schlüssel wird in "Web.config" nicht gefunden.  
+  
+ \- oder –  
+  
+ Der Rückgabewert konnte nicht konvertiert werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCodeExpression">
+      <MemberSignature Language="C#" Value="public override System.CodeDom.CodeExpression GetCodeExpression (System.Web.UI.BoundPropertyEntry entry, object parsedData, System.Web.Compilation.ExpressionBuilderContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.CodeDom.CodeExpression GetCodeExpression(class System.Web.UI.BoundPropertyEntry entry, object parsedData, class System.Web.Compilation.ExpressionBuilderContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.AppSettingsExpressionBuilder.GetCodeExpression(System.Web.UI.BoundPropertyEntry,System.Object,System.Web.Compilation.ExpressionBuilderContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeExpression</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entry" Type="System.Web.UI.BoundPropertyEntry" />
+        <Parameter Name="parsedData" Type="System.Object" />
+        <Parameter Name="context" Type="System.Web.Compilation.ExpressionBuilderContext" />
+      </Parameters>
+      <Docs>
+        <param name="entry">Die Eigenschaft, an die der Ausdruck gebunden ist.</param>
+        <param name="parsedData">Das Objekt, das darstellt analysiert Daten wie vom <see cref="M:System.Web.Compilation.ExpressionBuilder.ParseExpression(System.String,System.Type,System.Web.Compilation.ExpressionBuilderContext)" />.</param>
+        <param name="context">Eigenschaften für das Steuerelement oder die Seite.</param>
+        <summary>Gibt einen Codeausdruck, der verwendet wird, um die eigenschaftenzuweisung in der generierten Seitenklasse ausführen.</summary>
+        <returns>Ein <see cref="T:System.CodeDom.CodeExpression" /> , die in der eigenschaftenzuweisung verwendet wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird während der Erstellung eines CodeDOM für eine Seite oder ein Steuerelement aufgerufen. Das zurückgegebene <xref:System.CodeDom.CodeExpression> Objekt stellt den Codeausdruck, der der Eigenschaft die Zuweisung in der generierten Page-Klasse hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsEvaluate">
+      <MemberSignature Language="C#" Value="public override bool SupportsEvaluate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsEvaluate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.AppSettingsExpressionBuilder.SupportsEvaluate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen Wert, der angibt, ob ein Ausdruck in einer Seite ausgewertet werden kann, die nicht kompiliert wird.</summary>
+        <value>
+          <see langword="true" /> in allen Fällen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Compilation.AppSettingsExpressionBuilder.SupportsEvaluate%2A> Eigenschaft gibt an, ob die <xref:System.Web.Compilation.AppSettingsExpressionBuilder.EvaluateExpression%2A> Methode in der Klasse implementiert wurde und einen Wert für den Ausdruck zurückgeben kann. <xref:System.Web.Compilation.AppSettingsExpressionBuilder.EvaluateExpression%2A>muss implementiert werden, in einem Ausdrucksgenerator für einen Ausdruck in einer Seite ausgewertet werden, die nicht kompiliert wird. Die <xref:System.Web.Compilation.AppSettingsExpressionBuilder> Klasse unterstützt die automatische Auswertung von anwendungseinstellung in eine Seite, die nicht kompiliert wird, sodass immer zurückgegeben `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

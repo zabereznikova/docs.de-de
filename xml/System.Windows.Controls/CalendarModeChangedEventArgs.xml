@@ -1,0 +1,75 @@
+<Type Name="CalendarModeChangedEventArgs" FullName="System.Windows.Controls.CalendarModeChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class CalendarModeChangedEventArgs : System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CalendarModeChangedEventArgs extends System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.CalendarModeChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.RoutedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Controls.Calendar.DisplayModeChanged" />-Ereignis bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CalendarModeChangedEventArgs (System.Windows.Controls.CalendarMode oldMode, System.Windows.Controls.CalendarMode newMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Controls.CalendarMode oldMode, valuetype System.Windows.Controls.CalendarMode newMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.CalendarModeChangedEventArgs.#ctor(System.Windows.Controls.CalendarMode,System.Windows.Controls.CalendarMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="oldMode" Type="System.Windows.Controls.CalendarMode" />
+        <Parameter Name="newMode" Type="System.Windows.Controls.CalendarMode" />
+      </Parameters>
+      <Docs>
+        <param name="oldMode">Der vorherige Modus.</param>
+        <param name="newMode">Der neue Modus.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.CalendarModeChangedEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.CalendarMode NewMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.CalendarMode NewMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.CalendarModeChangedEventArgs.NewMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.CalendarMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den neuen Modus der ab dem <see cref="T:System.Windows.Controls.Calendar" />.</summary>
+        <value>Ein <see cref="T:System.Windows.Controls.CalendarMode" /> , den neuen Modus darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OldMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.CalendarMode OldMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.CalendarMode OldMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.CalendarModeChangedEventArgs.OldMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.CalendarMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den vorherigen Modus, der die <see cref="T:System.Windows.Controls.Calendar" />.</summary>
+        <value>Ein <see cref="T:System.Windows.Controls.CalendarMode" /> , die den alten Modus darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

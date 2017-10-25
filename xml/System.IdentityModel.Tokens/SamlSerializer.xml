@@ -1,0 +1,379 @@
+<Type Name="SamlSerializer" FullName="System.IdentityModel.Tokens.SamlSerializer">
+  <TypeSignature Language="C#" Value="public class SamlSerializer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SamlSerializer extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.SamlSerializer" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Serialisiert und deserialisiert <see cref="T:System.IdentityModel.Tokens.SamlSecurityToken" />-Objekte in und aus XML-Dokumente(n).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die XML-Serialisierung ist die Konvertierung der öffentlichen Eigenschaften und Felder eines Objekts in ein serielles Format (in diesem Fall XML) zum Zweck der Speicherung und Übermittlung. Die Deserialisierung erstellt das Objekt aus der XML in seinem ursprünglichen Zustand erneut.  
+  
+ Die <xref:System.IdentityModel.Tokens.SamlSerializer>-Klasse serialisiert und deserialisiert SAML-Sicherheitstoken, die ein erweiterbares Format aufweisen. Im Gegensatz zu vielen anderen Sicherheitstoken weisen die <xref:System.IdentityModel.Tokens.SamlSecurityToken>-Sicherheitstoken XML-Elemente und Attribute auf, die an die Erfordernisse bestimmter Anwendungen angepasst werden können. Einige der Erweiterungspunkte für eine SAML-Assertion weisen die folgenden Elemente auf: `<saml:Advice>`, `<saml:Condition>` und `<saml:Statement>`. Einzelheiten zum Überschreiben der Weise, auf die diese Elemente gelesen werden, finden Sie in den Beschreibungen zu den Methoden <xref:System.IdentityModel.Tokens.SamlSerializer.LoadAdvice%28System.Xml.XmlDictionaryReader%2CSystem.IdentityModel.Selectors.SecurityTokenSerializer%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29>, <xref:System.IdentityModel.Tokens.SamlSerializer.LoadCondition%28System.Xml.XmlDictionaryReader%2CSystem.IdentityModel.Selectors.SecurityTokenSerializer%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29> und <xref:System.IdentityModel.Tokens.SamlSerializer.LoadStatement%28System.Xml.XmlDictionaryReader%2CSystem.IdentityModel.Selectors.SecurityTokenSerializer%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SamlSerializer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlSerializer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Tokens.SamlSerializer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadAdvice">
+      <MemberSignature Language="C#" Value="public virtual System.IdentityModel.Tokens.SamlAdvice LoadAdvice (System.Xml.XmlDictionaryReader reader, System.IdentityModel.Selectors.SecurityTokenSerializer tokenSerializer, System.IdentityModel.Selectors.SecurityTokenResolver tokenResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IdentityModel.Tokens.SamlAdvice LoadAdvice(class System.Xml.XmlDictionaryReader reader, class System.IdentityModel.Selectors.SecurityTokenSerializer tokenSerializer, class System.IdentityModel.Selectors.SecurityTokenResolver tokenResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlSerializer.LoadAdvice(System.Xml.XmlDictionaryReader,System.IdentityModel.Selectors.SecurityTokenSerializer,System.IdentityModel.Selectors.SecurityTokenResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SamlAdvice</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlDictionaryReader" />
+        <Parameter Name="keyInfoSerializer" Type="System.IdentityModel.Selectors.SecurityTokenSerializer" />
+        <Parameter Name="outOfBandTokenResolver" Type="System.IdentityModel.Selectors.SecurityTokenResolver" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Ein <see cref="T:System.Xml.XmlDictionaryReader" /> zum Lesen weiterer von der SAML-Behörde zur Verfügung gestellter Informationen.</param>
+        <param name="tokenSerializer">To be added.</param>
+        <param name="tokenResolver">To be added.</param>
+        <summary>Liest die zusätzliche Informationen bereitgestellt, die durch die SAML-Behörde in Form einer <see langword="&lt;saml:Advice&gt;" /> Elements einer SAML-Assertion, die mit dem angegebenen XML-Reader.</summary>
+        <returns>Ein <see cref="T:System.IdentityModel.Tokens.SamlAdvice" /> enthält zusätzliche Informationen von der SAML-Behörde in Form einer <see langword="&lt;saml:Advice&gt;" /> Elements einer SAML-Assertion.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das `<saml:Advice>`-Element innerhalb einer SAML-Assertion ist ein Erweiterungspunkt für SAML-Token. Leiten Sie zum Erstellen eines Serialisierungsprogramms, das die benutzerdefinierten Attribute lesen kann, eine Klasse vom <xref:System.IdentityModel.Tokens.SamlSerializer> ab, und überschreiben Sie die <xref:System.IdentityModel.Tokens.SamlSerializer.LoadAdvice%28System.Xml.XmlDictionaryReader%2CSystem.IdentityModel.Selectors.SecurityTokenSerializer%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29>-Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> ist gleich <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadAssertion">
+      <MemberSignature Language="C#" Value="public virtual System.IdentityModel.Tokens.SamlAssertion LoadAssertion (System.Xml.XmlDictionaryReader reader, System.IdentityModel.Selectors.SecurityTokenSerializer tokenSerializer, System.IdentityModel.Selectors.SecurityTokenResolver tokenResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IdentityModel.Tokens.SamlAssertion LoadAssertion(class System.Xml.XmlDictionaryReader reader, class System.IdentityModel.Selectors.SecurityTokenSerializer tokenSerializer, class System.IdentityModel.Selectors.SecurityTokenResolver tokenResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlSerializer.LoadAssertion(System.Xml.XmlDictionaryReader,System.IdentityModel.Selectors.SecurityTokenSerializer,System.IdentityModel.Selectors.SecurityTokenResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SamlAssertion</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlDictionaryReader" />
+        <Parameter Name="keyInfoSerializer" Type="System.IdentityModel.Selectors.SecurityTokenSerializer" />
+        <Parameter Name="outOfBandTokenResolver" Type="System.IdentityModel.Selectors.SecurityTokenResolver" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Ein <see cref="T:System.Xml.XmlDictionaryReader" /> zum Lesen der SAML-Assertion.</param>
+        <param name="tokenSerializer">To be added.</param>
+        <param name="tokenResolver">To be added.</param>
+        <summary>Liest eine SAML-Assertion aus dem angegebenen XML-Reader.</summary>
+        <returns>Ein <see cref="T:System.IdentityModel.Tokens.SamlAssertion" />, der die SAML-Assertion darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine SAML-Assertion ist in einem `<saml:Assertion>`-Element enthalten.  
+  
+ Die <xref:System.IdentityModel.Tokens.SamlSerializer.ReadToken%28System.Xml.XmlReader%2CSystem.IdentityModel.Selectors.SecurityTokenSerializer%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29>-Methode ruft die <xref:System.IdentityModel.Tokens.SamlSerializer.LoadAssertion%28System.Xml.XmlDictionaryReader%2CSystem.IdentityModel.Selectors.SecurityTokenSerializer%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29>-Methode zum Lesen der SAML-Assertion auf.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> ist gleich <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadAttribute">
+      <MemberSignature Language="C#" Value="public virtual System.IdentityModel.Tokens.SamlAttribute LoadAttribute (System.Xml.XmlDictionaryReader reader, System.IdentityModel.Selectors.SecurityTokenSerializer tokenSerializer, System.IdentityModel.Selectors.SecurityTokenResolver tokenResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IdentityModel.Tokens.SamlAttribute LoadAttribute(class System.Xml.XmlDictionaryReader reader, class System.IdentityModel.Selectors.SecurityTokenSerializer tokenSerializer, class System.IdentityModel.Selectors.SecurityTokenResolver tokenResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlSerializer.LoadAttribute(System.Xml.XmlDictionaryReader,System.IdentityModel.Selectors.SecurityTokenSerializer,System.IdentityModel.Selectors.SecurityTokenResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SamlAttribute</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlDictionaryReader" />
+        <Parameter Name="keyInfoSerializer" Type="System.IdentityModel.Selectors.SecurityTokenSerializer" />
+        <Parameter Name="outOfBandTokenResolver" Type="System.IdentityModel.Selectors.SecurityTokenResolver" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Ein <see cref="T:System.Xml.XmlDictionaryReader" /> zum Lesen der Attribute.</param>
+        <param name="tokenSerializer">To be added.</param>
+        <param name="tokenResolver">To be added.</param>
+        <summary>Liest ein Attribut des Subjekts eines SAML-Sicherheitstokens unter Verwendung des angegebenen XML-Readers.</summary>
+        <returns>Ein <see cref="T:System.IdentityModel.Tokens.SamlAttribute" />, der einen Anspruch darstellt, der ein Attribut des Subjekts eines SAML-Sicherheitstokens ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Anwendung einen eigenen Attributsatz definiert (das ist möglich, da SAML-Attribute einen Erweiterungspunkt darstellen), wird ein Serialisierungsprogramm benötigt, das diese Attribute lesen kann. Ein SAML-Attribut unterscheidet sich von einem XML-Attribut. Ein SAML-Attribut ist in einem `<saml:Attribute>`-Element enthalten und kann neben Attributen jedes beliebige wohlgeformte XML-Element enthalten. Leiten Sie zum Erstellen eines Serialisierungsprogramms, das die benutzerdefinierten Attribute lesen kann, eine Klasse vom <xref:System.IdentityModel.Tokens.SamlSerializer> ab, und überschreiben Sie die <xref:System.IdentityModel.Tokens.SamlSerializer.LoadAttribute%28System.Xml.XmlDictionaryReader%2CSystem.IdentityModel.Selectors.SecurityTokenSerializer%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29>-Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadCondition">
+      <MemberSignature Language="C#" Value="public virtual System.IdentityModel.Tokens.SamlCondition LoadCondition (System.Xml.XmlDictionaryReader reader, System.IdentityModel.Selectors.SecurityTokenSerializer tokenSerializer, System.IdentityModel.Selectors.SecurityTokenResolver tokenResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IdentityModel.Tokens.SamlCondition LoadCondition(class System.Xml.XmlDictionaryReader reader, class System.IdentityModel.Selectors.SecurityTokenSerializer tokenSerializer, class System.IdentityModel.Selectors.SecurityTokenResolver tokenResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlSerializer.LoadCondition(System.Xml.XmlDictionaryReader,System.IdentityModel.Selectors.SecurityTokenSerializer,System.IdentityModel.Selectors.SecurityTokenResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SamlCondition</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlDictionaryReader" />
+        <Parameter Name="keyInfoSerializer" Type="System.IdentityModel.Selectors.SecurityTokenSerializer" />
+        <Parameter Name="outOfBandTokenResolver" Type="System.IdentityModel.Selectors.SecurityTokenResolver" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Ein <see cref="T:System.Xml.XmlDictionaryReader" /> zum Lesen der SAML-Bedingung.</param>
+        <param name="tokenSerializer">To be added.</param>
+        <param name="tokenResolver">To be added.</param>
+        <summary>Liest eine Bedingung, die bei der Bewertung der Gültigkeit einer SAML-Assertion unter Verwendung des angegebenen XML-Readers in Erwägung gezogen werden muss.</summary>
+        <returns>Eine <see cref="T:System.IdentityModel.Tokens.SamlCondition" />, die eine Bedingung angibt, die bei der Bewertung der Gültigkeit einer SAML-Assertion berücksichtigt werden muss.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Anwendung einen eigenen Satz an Bedingungen definiert (das ist möglich, da `<saml:Condition>`-Element einen Erweiterungspunkt darstellen), wird ein Serialisierungsprogramm benötigt, das diese Bedingungen lesen kann. Leiten Sie zum Erstellen eines Serialisierungsprogramms, das die benutzerdefinierten Attribute lesen kann, eine Klasse vom <xref:System.IdentityModel.Tokens.SamlSerializer> ab, und überschreiben Sie die <xref:System.IdentityModel.Tokens.SamlSerializer.LoadCondition%28System.Xml.XmlDictionaryReader%2CSystem.IdentityModel.Selectors.SecurityTokenSerializer%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29>-Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadConditions">
+      <MemberSignature Language="C#" Value="public virtual System.IdentityModel.Tokens.SamlConditions LoadConditions (System.Xml.XmlDictionaryReader reader, System.IdentityModel.Selectors.SecurityTokenSerializer tokenSerializer, System.IdentityModel.Selectors.SecurityTokenResolver tokenResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IdentityModel.Tokens.SamlConditions LoadConditions(class System.Xml.XmlDictionaryReader reader, class System.IdentityModel.Selectors.SecurityTokenSerializer tokenSerializer, class System.IdentityModel.Selectors.SecurityTokenResolver tokenResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlSerializer.LoadConditions(System.Xml.XmlDictionaryReader,System.IdentityModel.Selectors.SecurityTokenSerializer,System.IdentityModel.Selectors.SecurityTokenResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SamlConditions</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlDictionaryReader" />
+        <Parameter Name="keyInfoSerializer" Type="System.IdentityModel.Selectors.SecurityTokenSerializer" />
+        <Parameter Name="outOfBandTokenResolver" Type="System.IdentityModel.Selectors.SecurityTokenResolver" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Ein <see cref="T:System.Xml.XmlDictionaryReader" /> zum Lesen der SAML-Bedingungen.</param>
+        <param name="tokenSerializer">To be added.</param>
+        <param name="tokenResolver">To be added.</param>
+        <summary>Liest einen Satz von Bedingungen, die bei der Bewertung der Gültigkeit einer SAML-Assertion unter Verwendung des angegebenen XML-Readers in Erwägung gezogen werden müssen.</summary>
+        <returns>Eine <see cref="T:System.IdentityModel.Tokens.SamlConditions" />, die einen Satz von Bedingungen angibt, die bei der Bewertung der Gültigkeit einer SAML-Assertion in Erwägung gezogen werden müssen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.SamlSerializer.LoadConditions%2A>-Methode liest den Inhalt eines `<saml:Conditions>`-Elements.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadStatement">
+      <MemberSignature Language="C#" Value="public virtual System.IdentityModel.Tokens.SamlStatement LoadStatement (System.Xml.XmlDictionaryReader reader, System.IdentityModel.Selectors.SecurityTokenSerializer tokenSerializer, System.IdentityModel.Selectors.SecurityTokenResolver tokenResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IdentityModel.Tokens.SamlStatement LoadStatement(class System.Xml.XmlDictionaryReader reader, class System.IdentityModel.Selectors.SecurityTokenSerializer tokenSerializer, class System.IdentityModel.Selectors.SecurityTokenResolver tokenResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlSerializer.LoadStatement(System.Xml.XmlDictionaryReader,System.IdentityModel.Selectors.SecurityTokenSerializer,System.IdentityModel.Selectors.SecurityTokenResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SamlStatement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlDictionaryReader" />
+        <Parameter Name="keyInfoSerializer" Type="System.IdentityModel.Selectors.SecurityTokenSerializer" />
+        <Parameter Name="outOfBandTokenResolver" Type="System.IdentityModel.Selectors.SecurityTokenResolver" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Ein <see cref="T:System.Xml.XmlDictionaryReader" /> zum Lesen der SAML-Anweisung.</param>
+        <param name="tokenSerializer">To be added.</param>
+        <param name="tokenResolver">To be added.</param>
+        <summary>Liest eine SAML-Anweisung unter Verwendung des angegebenen XML-Readers.</summary>
+        <returns>Eine <see cref="T:System.IdentityModel.Tokens.SamlStatement" />, die die SAML-Anweisung darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IdentityModel.Tokens.SamlSecurityToken>-Sicherheitstoken geben ihre Ansprüche mit SAML-Assertionen an, wobei die Details der Ansprüche in den SAML-Anweisungen angegeben werden. Die SAML-Spezifikation definiert die folgenden Anweisungstypen:  
+  
+-   <xref:System.IdentityModel.Tokens.SamlAttributeStatement>  
+  
+-   <xref:System.IdentityModel.Tokens.SamlAuthenticationStatement>  
+  
+-   <xref:System.IdentityModel.Tokens.SamlAuthorizationDecisionStatement>  
+  
+-   <xref:System.IdentityModel.Tokens.SamlSubjectStatement>  
+  
+ Die <xref:System.IdentityModel.Tokens.SamlSerializer.LoadStatement%28System.Xml.XmlDictionaryReader%2CSystem.IdentityModel.Selectors.SecurityTokenSerializer%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29>-Methode liest die zuvor aufgelisteten SAML-Anweisungen. Wenn spezifische Anweisungen durch eine Anwendung definiert und verwendet werden, müssen Sie ein Serialisierungsprogramm zum Lesen der jeweiligen Inhalte erstellen. Leiten Sie zum Erstellen des benutzerdefinierten Serialisierungsprogramms eine Klasse von <xref:System.IdentityModel.Tokens.SamlSerializer> ab, und überschreiben Sie die <xref:System.IdentityModel.Tokens.SamlSerializer.LoadStatement%28System.Xml.XmlDictionaryReader%2CSystem.IdentityModel.Selectors.SecurityTokenSerializer%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29>-Methode. Benutzerdefinierte SAML-Anweisungen sind innerhalb eines `<saml:Statement>`-Elements enthalten.  
+  
+   
+  
+## Examples  
+ <xref:System.IdentityModel.Tokens.SamlAttributeStatement>  
+  
+ <xref:System.IdentityModel.Tokens.SamlAuthenticationStatement>  
+  
+ <xref:System.IdentityModel.Tokens.SamlAuthorizationDecisionStatement>  
+  
+ <xref:System.IdentityModel.Tokens.SamlSubjectStatement>  
+  
+ <xref:System.IdentityModel.Tokens.SamlStatement>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PopulateDictionary">
+      <MemberSignature Language="C#" Value="public void PopulateDictionary (System.Xml.IXmlDictionary dictionary);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PopulateDictionary(class System.Xml.IXmlDictionary dictionary) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlSerializer.PopulateDictionary(System.Xml.IXmlDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dictionary" Type="System.Xml.IXmlDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="dictionary">Ein <see cref="T:System.Xml.IXmlDictionary" />, der den Satz von XML-Elementen und -Attributen enthält.</param>
+        <summary>Ersetzt den Standardsatz von XML-Elementen und -Attributen, die durch dieses Serialisierungsprogramm erkannt wurden, durch das angegebene Wörterbuch an Elementen und Attributen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.IdentityModel.Tokens.SamlSerializer.PopulateDictionary%2A>-Methode, wenn ein benutzerdefinierter Satz von XML-Elementen für einen der Erweiterungspunkte einer SAML-Assertion erstellt wird. Erweiterungspunkte für eine SAML-Assertion weisen die folgenden Elemente auf: `<saml:Advice>`, `<saml:Condition>` und `<saml:Statement>`. Einzelheiten zum Überschreiben der Weise, auf die diese Elemente gelesen werden, finden Sie in den Beschreibungen zu den Methoden <xref:System.IdentityModel.Tokens.SamlSerializer.LoadAdvice%28System.Xml.XmlDictionaryReader%2CSystem.IdentityModel.Selectors.SecurityTokenSerializer%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29>, <xref:System.IdentityModel.Tokens.SamlSerializer.LoadCondition%28System.Xml.XmlDictionaryReader%2CSystem.IdentityModel.Selectors.SecurityTokenSerializer%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29> und <xref:System.IdentityModel.Tokens.SamlSerializer.LoadStatement%28System.Xml.XmlDictionaryReader%2CSystem.IdentityModel.Selectors.SecurityTokenSerializer%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadToken">
+      <MemberSignature Language="C#" Value="public virtual System.IdentityModel.Tokens.SamlSecurityToken ReadToken (System.Xml.XmlReader reader, System.IdentityModel.Selectors.SecurityTokenSerializer tokenSerializer, System.IdentityModel.Selectors.SecurityTokenResolver tokenResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IdentityModel.Tokens.SamlSecurityToken ReadToken(class System.Xml.XmlReader reader, class System.IdentityModel.Selectors.SecurityTokenSerializer tokenSerializer, class System.IdentityModel.Selectors.SecurityTokenResolver tokenResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlSerializer.ReadToken(System.Xml.XmlReader,System.IdentityModel.Selectors.SecurityTokenSerializer,System.IdentityModel.Selectors.SecurityTokenResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SamlSecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="keyInfoSerializer" Type="System.IdentityModel.Selectors.SecurityTokenSerializer" />
+        <Parameter Name="outOfBandTokenResolver" Type="System.IdentityModel.Selectors.SecurityTokenResolver" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Ein <see cref="T:System.Xml.XmlDictionaryReader" /> zum Lesen des <see cref="T:System.IdentityModel.Tokens.SamlSecurityToken" />-Sicherheitstokens.</param>
+        <param name="tokenSerializer">To be added.</param>
+        <param name="tokenResolver">To be added.</param>
+        <summary>Liest ein SAML-Sicherheitstoken aus dem angegebenen XML-Reader.</summary>
+        <returns>Ein <see cref="T:System.IdentityModel.Tokens.SamlSecurityToken" />-Sicherheitstoken.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.SamlSerializer.ReadToken%28System.Xml.XmlReader%2CSystem.IdentityModel.Selectors.SecurityTokenSerializer%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29>-Methode ruft die <xref:System.IdentityModel.Tokens.SamlSerializer.LoadAssertion%28System.Xml.XmlDictionaryReader%2CSystem.IdentityModel.Selectors.SecurityTokenSerializer%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29>-Methode zum Lesen der SAML-Assertion auf.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> ist gleich <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">
+          <paramref name="reader" /> verweist auf ein XML-Element, das keine digitale Signatur aufweist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteToken">
+      <MemberSignature Language="C#" Value="public virtual void WriteToken (System.IdentityModel.Tokens.SamlSecurityToken token, System.Xml.XmlWriter writer, System.IdentityModel.Selectors.SecurityTokenSerializer keyInfoSerializer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteToken(class System.IdentityModel.Tokens.SamlSecurityToken token, class System.Xml.XmlWriter writer, class System.IdentityModel.Selectors.SecurityTokenSerializer keyInfoSerializer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlSerializer.WriteToken(System.IdentityModel.Tokens.SamlSecurityToken,System.Xml.XmlWriter,System.IdentityModel.Selectors.SecurityTokenSerializer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SamlSecurityToken" />
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="keyInfoSerializer" Type="System.IdentityModel.Selectors.SecurityTokenSerializer" />
+      </Parameters>
+      <Docs>
+        <param name="token">Das zu schreibende <see cref="T:System.IdentityModel.Tokens.SamlSecurityToken" />.</param>
+        <param name="writer">Ein <see cref="T:System.Xml.XmlDictionaryWriter" /> zum Schreiben der SAML-Autorisierungsanweisung.</param>
+        <param name="keyInfoSerializer">Ein <see cref="T:System.IdentityModel.Selectors.SecurityTokenSerializer" />, der <see langword="KeyInfo" />-Klauseln schreiben kann.</param>
+        <summary>Schreibt das angegebene SAML-Sicherheitstoken in das angegebene XML-Serialisierungsprogramm.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die <xref:System.IdentityModel.Tokens.SamlSerializer.WriteToken%28System.IdentityModel.Tokens.SamlSecurityToken%2CSystem.Xml.XmlWriter%2CSystem.IdentityModel.Selectors.SecurityTokenSerializer%29>-Methode zum Serialisieren eines <xref:System.IdentityModel.Tokens.SamlSecurityToken>-Sicherheitstokens. Verwenden Sie zum Deserialisieren eines <xref:System.IdentityModel.Tokens.SamlSecurityToken> die <xref:System.IdentityModel.Tokens.SamlSerializer.ReadToken%28System.Xml.XmlReader%2CSystem.IdentityModel.Selectors.SecurityTokenSerializer%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29>-Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" /> ist gleich <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="token" /> ist gleich <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

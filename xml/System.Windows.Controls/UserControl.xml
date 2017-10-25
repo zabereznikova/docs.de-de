@@ -1,0 +1,80 @@
+<Type Name="UserControl" FullName="System.Windows.Controls.UserControl">
+  <TypeSignature Language="C#" Value="public class UserControl : System.Windows.Controls.ContentControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi UserControl extends System.Windows.Controls.ContentControl" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.UserControl" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.ContentControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet eine einfache Möglichkeit, ein Steuerelement zu erstellen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Steuerelemente in [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] umfangreiche Inhalte, Stile, Trigger und Vorlagen zu unterstützen. In vielen Fällen können mit diesen Funktionen Erfahrungen benutzerdefinierte und konsistente zu erstellen, ohne ein neues Steuerelement erstellen zu müssen. Weitere Informationen finden Sie unter [Erstellen von Formaten und Vorlagen](~/docs/framework/wpf/controls/styling-and-templating.md).  
+  
+ Wenn Sie ein neues Steuerelement erstellen müssen, ist die einfachste Möglichkeit zum Erstellen einer Klasse, die abgeleitet <xref:System.Windows.Controls.UserControl>. Bevor Sie dies tun, sollten berücksichtigen Sie, dass das Steuerelement nicht Vorlagen unterstützen und komplexe Anpassung wird nicht unterstützt. Allerdings Ableiten von <xref:System.Windows.Controls.UserControl> ist geeignet, wenn Sie das Steuerelement erstellen, durch die vorhandene Elemente hinzugefügt wird, ähnlich wie eine Anwendung erstellen möchten, und wenn Sie nicht benötigen, um komplexe Anpassung zu unterstützen. (Wenn Sie Vorlagen mit dem Steuerelement verwenden möchten, leiten Sie von <xref:System.Windows.Controls.Control> stattdessen.) Weitere Informationen über die verschiedenen Modelle zum Erstellen von Steuerelementen finden Sie unter [Steuerelement Dokumenterstellung (Übersicht)](~/docs/framework/wpf/controls/control-authoring-overview.md).  
+  
+ Ein <xref:System.Windows.Controls.UserControl> ist eine <xref:System.Windows.Controls.ContentControl>, was bedeutet, dass es ein einzelnes Objekt eines beliebigen Typs (z. B. eine Zeichenfolge, ein Bild oder ein Bereich) enthalten kann. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Windows.Controls.ContentControl>-Klasse.  
+  
+ Abhängigkeitseigenschaften für dieses Steuerelement können vom Standardformat für das Steuerelement festgelegt werden.  Wenn eine Eigenschaft von einem Standardformat festgelegt ist, kann die Eigenschaft von seinem Standardwert ändern, wenn das Steuerelement in der Anwendung angezeigt wird. Das Standardformat wird bestimmt, welche desktop Design verwendet wird, wenn die Anwendung ausgeführt wird.  Weitere Informationen finden Sie unter [Standard-WPF-Designs](http://go.microsoft.com/fwlink/?LinkID=158252).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht die Erstellung eines einfachen `NumericUpDown` <xref:System.Windows.Controls.UserControl>.  
+  
+ [!code-xaml[UserControlNumericUpDown#Markup](~/samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml#markup)]  
+  
+ Das folgende Beispiel zeigt die Logik dieses <xref:System.Windows.Controls.UserControl>:  
+  
+ [!code-csharp[UserControlNumericUpDown#CodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml.cs#codebehind)]
+ [!code-vb[UserControlNumericUpDown#CodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDown/visualbasic/numericupdown.xaml.vb#codebehind)]  
+  
+ Weitere Informationen finden Sie unter [Übersicht über das Erstellen von Steuerelementen](~/docs/framework/wpf/controls/control-authoring-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UserControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.UserControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.UserControl" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.UserControl.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt und gibt eine <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> dafür <see cref="T:System.Windows.Controls.UserControl" />.</summary>
+        <returns>Ein neues <see cref="T:System.Windows.Automation.Peers.UserControlAutomationPeer" /> dafür <see cref="T:System.Windows.Controls.UserControl" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

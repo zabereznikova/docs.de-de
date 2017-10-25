@@ -1,0 +1,204 @@
+<Type Name="MutexRights" FullName="System.Security.AccessControl.MutexRights">
+  <TypeSignature Language="C#" Value="public enum MutexRights" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MutexRights extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.AccessControl.MutexRights" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.AccessControl</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, die Zugriffsrechte für das Steuerelement angewendet werden können, die mit dem Namen System mutexobjekten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Security.AccessControl.MutexRights> Rechte Enumeration an die Zugriffssteuerung, bei der Erstellung <xref:System.Security.AccessControl.MutexSecurity> Objekte. Verwenden Sie zum Anwenden der Zugriffsrechte für einen benannten Systemmutex <xref:System.Security.AccessControl.MutexSecurity> Objekte mit der <xref:System.Threading.Mutex.%23ctor%28System.Boolean%2CSystem.String%2CSystem.Boolean%40%2CSystem.Security.AccessControl.MutexSecurity%29> Konstruktor und die <xref:System.Threading.Mutex.SetAccessControl%2A?displayProperty=nameWithType> Methode.  
+  
+> [!NOTE]
+>  Sicherheit auf Synchronisierungsobjekte ist Windows 98 oder Windows Millennium Edition nicht unterstützt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von <xref:System.Security.AccessControl.MutexRights> Werte beim Erstellen und Verwenden von <xref:System.Security.AccessControl.MutexAccessRule> Objekte. Das Beispiel erstellt eine <xref:System.Security.AccessControl.MutexSecurity> -Objekt, fügt die Regeln, die zulassen und verweigern verschiedene Rechte für den aktuellen Benutzer hinzu und zeigt das resultierende Paar von Regeln. Anschließend können Sie neue Rechte für den aktuellen Benutzer und das Ergebnis wird angezeigt, dass der neuen Rechte mit dem vorhandenen zusammengeführt werden <xref:System.Security.AccessControl.AccessControlType?displayProperty=nameWithType> Regel.  
+  
+> [!NOTE]
+>  In diesem Beispiel wird das Sicherheitsobjekt, nicht angefügt eine <xref:System.Threading.Mutex> Objekt; finden Sie unter <xref:System.Security.AccessControl.MutexSecurity>, <xref:System.Threading.Mutex.GetAccessControl%2A?displayProperty=nameWithType> -Methode und <xref:System.Threading.Mutex.SetAccessControl%2A?displayProperty=nameWithType>.  
+  
+ [!code-csharp[System.Security.AccessControl.MutexSecurity.AddAccessRule#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.AccessControl.MutexSecurity.AddAccessRule/CS/source.cs#1)]
+ [!code-vb[System.Security.AccessControl.MutexSecurity.AddAccessRule#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.AccessControl.MutexSecurity.AddAccessRule/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ChangePermissions">
+      <MemberSignature Language="C#" Value="ChangePermissions" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.MutexRights ChangePermissions = int32(262144)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.MutexRights.ChangePermissions" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.MutexRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht zum Ändern der Sicherheits und Überwachungsregeln, die einen benannten Mutex zugeordnet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="Delete" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.MutexRights Delete = int32(65536)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.MutexRights.Delete" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.MutexRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht, einen benannten Mutex zu löschen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FullControl">
+      <MemberSignature Language="C#" Value="FullControl" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.MutexRights FullControl = int32(2031617)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.MutexRights.FullControl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.MutexRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht, die vollständige Kontrolle über einen benannten Mutex auszuüben, ändern seine Zugriffsregeln und Überwachungsregeln.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Modify">
+      <MemberSignature Language="C#" Value="Modify" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.MutexRights Modify = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.MutexRights.Modify" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.MutexRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht, einen benannten Mutex freizugeben.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadPermissions">
+      <MemberSignature Language="C#" Value="ReadPermissions" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.MutexRights ReadPermissions = int32(131072)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.MutexRights.ReadPermissions" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.MutexRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht zum Öffnen und die Zugriffsregeln kopieren und Überwachen von Regeln für einen benannten Mutex.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Synchronize">
+      <MemberSignature Language="C#" Value="Synchronize" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.MutexRights Synchronize = int32(1048576)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.MutexRights.Synchronize" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.MutexRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht, auf einen benannten Mutex zu warten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TakeOwnership">
+      <MemberSignature Language="C#" Value="TakeOwnership" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.MutexRights TakeOwnership = int32(524288)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.MutexRights.TakeOwnership" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.MutexRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht zum Ändern des Besitzers eines benannten Mutex.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

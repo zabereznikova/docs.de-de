@@ -1,0 +1,118 @@
+<Type Name="DigitShapes" FullName="System.Globalization.DigitShapes">
+  <TypeSignature Language="C#" Value="public enum DigitShapes" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed DigitShapes extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Globalization.DigitShapes" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die kulturspezifische Anzeige von Ziffern an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Globalization.DigitShapes> Wert gibt an, dass für Unicode-Eingaben keine Ziffernform ersetzt wird, eine Ziffernform basierend auf den Kontext ersetzt wird oder ein national für die Eingabe Ziffernform ist.  
+  
+ Die Sprachen arabische, indische und thailändische haben klassische Formen für Zahlen, die sich von den Ziffern 0 bis 9 (Unicode U + 0030 bis U + 0039), sind die am häufigsten auf Computern verwendet werden. Die Anwendung verwendet die <xref:System.Globalization.DigitShapes> Enumeration mit den <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A> Eigenschaft, um anzugeben, wie Ziffern U + 0030 bis U + 0039 in Abwesenheit andere Formatierungsinformationen anzuzeigen.  
+  
+ Die <xref:System.Globalization.DigitShapes> Enumeration dient in erster Linie von Anwendungen, die für die Kulturen, die bidirektionalen Skripts verwenden vorgesehen. Beispielsweise ist die Lesefolge von arabischen und indischen Skripts bidirektional.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="Context" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.DigitShapes Context = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.DigitShapes.Context" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.DigitShapes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Ziffernform hängt von den vorherigen Text zur selben Ausgabe ab. Europäische Ziffern folgen lateinischen Skripts; Arabisch-indische Ziffern folgen arabischen Text. und Thai Ziffern folgen Thai-Text.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NativeNational">
+      <MemberSignature Language="C#" Value="NativeNational" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.DigitShapes NativeNational = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.DigitShapes.NativeNational" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.DigitShapes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Ziffernform ist das systemeigene Äquivalent der Ziffern von 0 bis 9. ASCII-Ziffern von 0 bis 9 werden durch entsprechende systemeigene nationalen Ziffern ersetzt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.DigitShapes None = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.DigitShapes.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.DigitShapes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Ziffernform wird nicht geändert. Vollständige Unicode-Kompatibilität wird beibehalten.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,105 @@
+<Type Name="IReceivableSourceBlock&lt;TOutput&gt;" FullName="System.Threading.Tasks.Dataflow.IReceivableSourceBlock&lt;TOutput&gt;">
+  <TypeSignature Language="C#" Value="public interface IReceivableSourceBlock&lt;TOutput&gt; : System.Threading.Tasks.Dataflow.ISourceBlock&lt;TOutput&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IReceivableSourceBlock`1&lt;TOutput&gt; implements class System.Threading.Tasks.Dataflow.IDataflowBlock, class System.Threading.Tasks.Dataflow.ISourceBlock`1&lt;!TOutput&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.Tasks.Dataflow.IReceivableSourceBlock`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+    <AssemblyVersion>4.6.0.0</AssemblyVersion>
+    <AssemblyVersion>4.6.1.0</AssemblyVersion>
+    <AssemblyVersion>4.6.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TOutput" />
+  </TypeParameters>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Threading.Tasks.Dataflow.ISourceBlock&lt;TOutput&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="TOutput">Gibt den Typ des von angegebenen Daten den <see cref="T:System.Threading.Tasks.Dataflow.IReceivableSourceBlock`1" />.</typeparam>
+    <summary>Stellt einen Datenflussblock dar, der das Empfangen von Meldungen unterstützt, ohne zu verknüpfen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die TPL-Datenflussbibliothek (<xref:System.Threading.Tasks.Dataflow>-Namespace) ist nicht in [!INCLUDE[net_v45](~/includes/net-v45-md.md)] enthalten. So installieren Sie die <xref:System.Threading.Tasks.Dataflow> -Namespace öffnen Sie das Projekt in [!INCLUDE[vs_dev11_long](~/includes/vs-dev11-long-md.md)], wählen Sie **NuGet-Pakete verwalten** aus der Menüs "Projekt", und suchen Sie online nach der `Microsoft.Tpl.Dataflow` Paket.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="TryReceive">
+      <MemberSignature Language="C#" Value="public bool TryReceive (Predicate&lt;TOutput&gt; filter, out TOutput item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryReceive(class System.Predicate`1&lt;!TOutput&gt; filter, [out] !TOutput&amp; item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.IReceivableSourceBlock`1.TryReceive(System.Predicate{`0},`0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filter" Type="System.Predicate&lt;TOutput&gt;" />
+        <Parameter Name="item" Type="TOutput&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="filter">Die Prädikatwert muss in der Reihenfolge, damit sie empfangen werden erfolgreich übergeben.  <c>Filter</c> möglicherweise <see langword="null" />, alle Elemente in diesem Fall übergibt.</param>
+        <param name="item">Das Element aus der Quelle empfangen.</param>
+        <summary>Versucht, ein Element verfügbare Ausgabe synchron empfangen die <see cref="T:System.Threading.Tasks.Dataflow.IReceivableSourceBlock`1" />.</summary>
+        <returns>
+          <see langword="true" />Wenn ein Element empfangen werden konnte; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird wartet auf die Quelle zum Bereitstellen von ein Element nicht blockiert werden.  
+  
+ Es wird nach der Überprüfung nach einem Element zurückgegeben, und zwar unabhängig davon, ob ein Element verfügbar war.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryReceiveAll">
+      <MemberSignature Language="C#" Value="public bool TryReceiveAll (out System.Collections.Generic.IList&lt;TOutput&gt; items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryReceiveAll([out] class System.Collections.Generic.IList`1&lt;!TOutput&gt;&amp; items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.IReceivableSourceBlock`1.TryReceiveAll(System.Collections.Generic.IList{`0}@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="items" Type="System.Collections.Generic.IList&lt;TOutput&gt;&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="items">Die Elemente aus der Quelle empfangen.</param>
+        <summary>Versucht, alle verfügbaren Elemente synchron empfangen die <see cref="T:System.Threading.Tasks.Dataflow.IReceivableSourceBlock`1" />.</summary>
+        <returns>
+          <see langword="true" />Wenn ein oder mehrere Elemente empfangen werden konnte; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird wartet auf die Quelle zum Bereitstellen von ein Element nicht blockiert werden.  
+  
+ Es wird nach der Überprüfung für Elemente zurückgegeben, und zwar unabhängig davon, ob ein Element verfügbar war.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

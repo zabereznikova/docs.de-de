@@ -1,0 +1,125 @@
+<Type Name="GenericXmlSecurityKeyIdentifierClause" FullName="System.IdentityModel.Tokens.GenericXmlSecurityKeyIdentifierClause">
+  <TypeSignature Language="C#" Value="public class GenericXmlSecurityKeyIdentifierClause : System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GenericXmlSecurityKeyIdentifierClause extends System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.GenericXmlSecurityKeyIdentifierClause" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine schlüsselbezeichnerklausel, die auf XML basiert.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GenericXmlSecurityKeyIdentifierClause (System.Xml.XmlElement referenceXml);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlElement referenceXml) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.GenericXmlSecurityKeyIdentifierClause.#ctor(System.Xml.XmlElement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="referenceXml" Type="System.Xml.XmlElement" />
+      </Parameters>
+      <Docs>
+        <param name="referenceXml">Das XML-Element, das die schlüsselbezeichnerklausel darstellt. Legt den Wert der <see cref="P:System.IdentityModel.Tokens.GenericXmlSecurityKeyIdentifierClause.ReferenceXml" />-Eigenschaft fest.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Tokens.GenericXmlSecurityKeyIdentifierClause" /> Klasse, indem das angegebene XML-Element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.ClauseType%2A> -Eigenschaft wird mit initialisiert `null` und <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.DerivationLength%2A> Eigenschaft in der neuen Instanz auf NULL initialisiert wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="referenceXML" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GenericXmlSecurityKeyIdentifierClause (System.Xml.XmlElement referenceXml, byte[] derivationNonce, int derivationLength);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlElement referenceXml, unsigned int8[] derivationNonce, int32 derivationLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.GenericXmlSecurityKeyIdentifierClause.#ctor(System.Xml.XmlElement,System.Byte[],System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="referenceXml" Type="System.Xml.XmlElement" />
+        <Parameter Name="derivationNonce" Type="System.Byte[]" />
+        <Parameter Name="derivationLength" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="referenceXml">Das XML-Element, das die schlüsselbezeichnerklausel darstellt. Legt den Wert der <see cref="P:System.IdentityModel.Tokens.GenericXmlSecurityKeyIdentifierClause.ReferenceXml" />-Eigenschaft fest.</param>
+        <param name="derivationNonce">Ein <see cref="T:System.Byte" />-Array, das die Nonce enthält, die zur Erstellung eines abgeleiteten Schlüssels verwendet wurde. Legt den Wert fest, der von der <see cref="M:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.GetDerivationNonce" />-Methode zurückgegeben wird.</param>
+        <param name="derivationLength">Die Größe des abgeleiteten Schlüssels. Legt den Wert der <see cref="P:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.DerivationLength" />-Eigenschaft fest.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Tokens.GenericXmlSecurityKeyIdentifierClause" /> -Klasse unter Verwendung der angegebenen XML-Element, der Nonce und der Ableitung der angegebenen Länge.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.ClauseType%2A> -Eigenschaft wird mit initialisiert `null` in der neuen Instanz.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="referenceXML" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Matches">
+      <MemberSignature Language="C#" Value="public override bool Matches (System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Matches(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.GenericXmlSecurityKeyIdentifierClause.Matches(System.IdentityModel.Tokens.SecurityKeyIdentifierClause)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifierClause">Die schlüsselbezeichnerklausel zu der aktuellen Instanz verglichen werden soll.</param>
+        <summary>Gibt einen Wert, der angibt, ob die angegebene schlüsselbezeichnerklausel mit der aktuellen Instanz übereinstimmt.</summary>
+        <returns>
+          <see langword="true" />Wenn die angegebene schlüsselbezeichnerklausel der aktuellen Instanz übereinstimmt; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Damit die Übereinstimmung erfolgreich ist, muss die angegebene schlüsselbezeichnerklausel von sein <xref:System.IdentityModel.Tokens.GenericXmlSecurityKeyIdentifierClause> und seine Markup (XML) muss übereinstimmen, die dieser Instanz. (Die <xref:System.Xml.XmlNode.OuterXml%2A> -Eigenschaft des Elements gemäß der <xref:System.IdentityModel.Tokens.GenericXmlSecurityKeyIdentifierClause.ReferenceXml%2A> Eigenschaft für die beiden Instanzen verglichen wird.)  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReferenceXml">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlElement ReferenceXml { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlElement ReferenceXml" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.GenericXmlSecurityKeyIdentifierClause.ReferenceXml" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das XML-Element, das die schlüsselbezeichnerklausel darstellt.</summary>
+        <value>Das XML-Element, das die schlüsselbezeichnerklausel darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

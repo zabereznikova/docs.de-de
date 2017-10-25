@@ -1,0 +1,1392 @@
+<Type Name="DeclarativeCatalogPart" FullName="System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart">
+  <TypeSignature Language="C#" Value="public sealed class DeclarativeCatalogPart : System.Web.UI.WebControls.WebParts.CatalogPart" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DeclarativeCatalogPart extends System.Web.UI.WebControls.WebParts.CatalogPart" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebParts.CatalogPart</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.WebParts.DeclarativeCatalogPartDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht es Entwicklern, einen Katalog mit <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> oder andere Serversteuerelemente zu einer Webseite im deklarativen Seitenspeicherungsformat hinzuzufügen. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ So fest, wie in der Webparts-Steuerelementsatz Tool-orientierten Zonen vorhanden sind (Einzelheiten finden Sie in der <xref:System.Web.UI.WebControls.WebParts.ToolZone> klassenüberblick), stehen Tool-orientierte <xref:System.Web.UI.WebControls.WebParts.Part> Steuerelemente und jedes dieser Steuerelemente in einem bestimmten Typ von ToolZone befinden müssen. Tool-orientierte Teilsteuerelemente im Webparts-Steuerelementsatz haben zwei charakteristische Merkmalen:  
+  
+-   Sie sind Hilfssteuerelemente, die Endbenutzer zum Personalisieren der Steuerelemente auf einer Webparts-Seite zu ermöglichen.  
+  
+-   Sie sind nur in bestimmten Anzeigemodi sichtbar.  
+  
+ <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart>ist ein Teilsteuerelement, das in befinden muss eine <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> Geben Sie der Zone, z. B. die <xref:System.Web.UI.WebControls.WebParts.CatalogZone> Zone enthaltene Webparts-Steuerelementsatzes. Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> Steuerelement wird nur, wenn eine Webseite im Kataloganzeigemodus ist sichtbar.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> Steuerelement stellt eine Möglichkeit für Entwickler, die einen Satz von Serversteuerelementen deklarativ zu einem Katalog auf einer Webseite hinzufügen. Ein Katalog, in dem Webparts-Steuerelementsatz ist lediglich eine Liste von <xref:System.Web.UI.WebControls.WebParts.WebPart> oder andere Serversteuerelemente, die angezeigt wird, wenn eine Seite im Katalog Anzeigemodus. Ein Benutzer kann Steuerelemente aus der Liste auswählen und die Webseite, was die startwertsequenz Benutzern die Möglichkeit zum Ändern der Gruppe von Steuerelementen und die Funktionen auf einer Seite hinzugefügt werden.  
+  
+> [!NOTE]
+>  Benutzer können mehrere Instanzen des gleichen Steuerelements in einem Katalog zu einer Webseite hinzufügen.  
+  
+ Ein Vorteil der Verwendung einer <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> Steuerelement zum Erstellen eines Katalogs von Serversteuerelementen ist, dass keine Codierung erforderlich ist. Seite "-Entwickler können mit dem Steuerelement vollständig im deklarativen (oder die Seite Persistenz) arbeiten zu formatieren, daher der Name des Steuerelements.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> Steuerelement verfügt über eine nützliche Eigenschaft, mit dem Entwickler einen Katalog von Steuerelementen einrichten, die in einer gesamten Website verwendet werden können. Statt einzelne Serversteuerelemente in Deklarieren einer <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> -Steuerelement, ein Entwickler kann Festlegen der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.WebPartsListUserControlPath%2A> Eigenschaftswert auf den Pfad eines Benutzersteuerelements, das die Liste der Serversteuerelemente enthält, die im Katalog werden sollen. Zur Laufzeit werden die Serversteuerelemente im Benutzersteuerelement verwiesen im Katalog geladen. Auf diese Weise können mehrere Seiten oder Sites desselben Benutzersteuerelements zum Erstellen eines Katalogs verweisen. Wenn das Benutzersteuerelement Liste von Serversteuerelementen aktualisiert wird, würde es alle Kataloge basierend auf das Benutzersteuerelement aktualisieren.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> -Klasse verfügt über eine Reihe von öffentlichen Eigenschaften, die das Überschreiben von geerbten Eigenschaften. Die meisten dieser Eigenschaften werden nicht tatsächlich für das Rendern des Steuerelements verwendet. Sie werden überschrieben, so dass spezieller CodeAttribute für sie können, zum Ausblenden von Entwurfstools wie festgelegt werden [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)]. Wie sie keine Auswirkungen auf das Rendering haben, sollten Sie nicht diese ausgeblendeten Eigenschaften verwenden. Die Tatsache, dass sie von IntelliSense und den Bereich "Eigenschaften" in Visual Studio ausgeblendet sind kann Entwickler, die zu vermeiden, versehentlich verwendet. Alle ausgeblendeten Eigenschaften werden in den jeweiligen Hilfethemen als solche gekennzeichnet.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> -Klasse verfügt auch über mehrere Methoden. Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.GetAvailableWebPartDescriptions%2A> Methode ruft eine <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> -Objekt für jedes <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement im Katalog, wodurch eine <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> -Steuerelement zum Anzeigen von Informationen über jedes Steuerelement ohne eine Instanz erstellen zu müssen. Eine andere Methode ist die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.GetWebPart%2A> Methode. Diese Methode ruft eine Instanz eines bestimmten <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement, basierend auf der Beschreibung, die an die Methode übergeben.  
+  
+> [!NOTE]
+>  Barrierefreiheit, verbessern die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> Steuerelement gerendert wird, innerhalb einer `<fieldset>` Element. Die `<fieldset>` Element gruppiert verbundenen Satz von Steuerelementen zur Bearbeitung im, verwendet der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> -Steuerelement, und es Registerkartennavigation zwischen diesen Steuerelementen für visueller Benutzer-Agents (z. B. normale Webbrowser) und Speech-orientierte Benutzer-Agents ( z. B. eine Software des Lesens von RFID-Bildschirm).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> Steuerelement deklarativ auf einer Webseite. Das Beispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, das Ihnen ermöglicht, ändern Sie die Anzeigemodi auf einer Webparts-Seite.  
+  
+-   Eine Webseite mit einem <xref:System.Web.UI.WebControls.WebParts.CatalogZone> Steuerelement und ein <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> Steuerelement.  
+  
+-   Eine Quellcodedatei, die zwei benutzerdefinierte enthält <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente.  
+  
+-   Eine Erläuterung der Funktionsweise des Beispiels an, wenn Sie die Seite in einem Browser zu laden.  
+  
+ Der erste Teil dieses Codebeispiel ist das Benutzersteuerelement, das Sie Anzeigemodi auf der Seite ändern kann. Informationen zu Modi und eine Beschreibung des Quellcodes in diesem Steuerelement finden Sie unter [Exemplarische Vorgehensweise: Ändern des Anzeigemodus auf einer Webparts-Seite](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_DeclarativeCatalogPart_Overview#7](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_DeclarativeCatalogPart_Overview/CS/DisplayModeMenuCS.ascx#7)]
+ [!code-aspx-vb[WebParts_DeclarativeCatalogPart_Overview#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_DeclarativeCatalogPart_Overview/VB/DisplayModeMenuVB.ascx#7)]  
+  
+ Der zweite Teil des Codebeispiels wird die Webseite. Am oberen Rand der Seite "sind zwei `Register` Direktiven enthalten, von denen eine für das Benutzersteuerelement und eine für die kompilierte Komponente, die die beiden benutzerdefinierten enthält <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente. Beachten Sie, dass die Seite einen deklarative Verweis auf die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> -Steuerelement, in der richtigen Hierarchie von deklarativen Elementen geschachtelt werden, wie im Abschnitt "Hinweise" in diesem Thema beschrieben. Die `<asp:declarativecatalogpart>` Element enthält eine `<webpartstemplate>` -Element, das wiederum Verweise für eine standardmäßige ASP.NET enthält <xref:System.Web.UI.WebControls.Calendar> -Steuerelement und zwei benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert; Hierbei handelt es sich um die Steuerelemente, die Benutzer aus dem Katalog auswählen können. Die Seite enthält außerdem Bearbeitungsfunktionen, mit einem <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> Steuerelement auf der Seite deklariert. Dieses Steuerelement ermöglicht Benutzern das Bearbeiten von bestimmte Eigenschaften für die benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPart> gesteuert werden, nachdem sie auf der Seite hinzugefügt wurden, und der Benutzer die Seite, um den Bearbeitungsmodus gewechselt wurde.  
+  
+ [!code-aspx-csharp[WebParts_DeclarativeCatalogPart_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_DeclarativeCatalogPart_Overview/CS/declarativeCatalogPartCS.aspx#1)]
+ [!code-aspx-vb[WebParts_DeclarativeCatalogPart_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_DeclarativeCatalogPart_Overview/VB/declarativeCatalogPartVB.aspx#1)]  
+  
+ Der dritte Teil des Codebeispiels wird der Quellcode für die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente. Beachten Sie, die einige Eigenschaften in diesen Steuerelementen markiert sind, mit der `WebBrowsable` Attribut. Dies ermöglicht die <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> Steuerelement die Benutzeroberfläche (UI) für einen Benutzer, diese Eigenschaften zu bearbeiten, wenn die Steuerelemente im Bearbeitungsmodus sind dynamisch zu generieren. Die Eigenschaften werden ebenfalls mit markiert ein `WebDisplayName` -Attribut, um den Text der Bezeichnung anzugeben, die neben jedes Steuerelement in der Benutzeroberfläche zum Bearbeiten angezeigt wird.  
+  
+ Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Eine exemplarische Vorgehensweise, die beide Methoden der Kompilierung veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_DeclarativeCatalogPart_Overview#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_DeclarativeCatalogPart_Overview/CS/userinfowebpart.cs#6)]
+ [!code-vb[WebParts_DeclarativeCatalogPart_Overview#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_DeclarativeCatalogPart_Overview/VB/userinfowebpart.vb#6)]  
+  
+ Wenn Sie die Seite in einem Browser zu laden, wählen Sie **Katalogmodus** in der **Anzeigemodus** Dropdownlisten-Steuerelement in Catalog-Modus wechseln. Im Katalogmodus sehen Sie die Steuerelemente, die auf der Seite hinzugefügt werden, verfügbar sind. Fügen Sie alle drei Steuerelemente hinzu, und verwenden Sie dann die **Anzeigemodus** Dropdown-Liste aus, um die Seite, um den Durchsuchen-Modus zurück. Die drei Steuerelemente auf der Seite angezeigt. Bei Verwendung der **Anzeigemodus** Dropdown-Liste und Switches die Seite in den Bearbeitungsmodus, können Sie Verbmenü (Pfeil nach unten) in der Titelleiste des Klicken die **Benutzer Informationen WebPart** Steuerelement, und klicken Sie auf **Bearbeiten** auf das Steuerelement zu bearbeiten. Wenn die Benutzeroberfläche zum bearbeitende angezeigt wird, sehen Sie die <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> Steuerelement. Beachten Sie, die ein Steuerelement, für die einzelnen Eigenschaften gerendert wird der `UserInfoWebPart` Klasse, die mit der `WebBrowsable` Attribut. Wenn Sie in der Bearbeitung Benutzeroberfläche und auf einige Änderungen vornehmen der **übernehmen** Schaltfläche können Sie die **Anzeigemodus** Dropdown-Liste, um die Seite, um die Durchsuchen-Modus und die vollständige Auswirkung von der Bearbeitung feststellen, zurückzugeben.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DeclarativeCatalogPart ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.%23ctor%2A> Konstruktor ist ein Standard ist kein Konstruktor deklariert, der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> Klasse und daher keine besonderen Aufgaben durchgeführt werden, wenn eine neue Instanz der Klasse erstellt wird. Den Konstruktor wird von .NET Framework verwendet, zum Erstellen einer Instanz der Klasse.  
+  
+ Es ist möglich, aber eher unwahrscheinlich ist, müssen Sie verwenden die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.%23ctor%2A> Konstruktor programmgesteuert in Ihrem eigenen Code. Die beabsichtigte Verwendung des Steuerelements ist für Seitenentwickler, um es zu einer Seite deklarativ zur Entwurfszeit hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessKey">
+      <MemberSignature Language="C#" Value="public override string AccessKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AccessKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.AccessKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese geerbte Eigenschaft wird nicht verwendet, durch die Webparts-Steuerelementsatz, beim Rendern einer <see cref="T:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart" /> Steuerelement. Die Eigenschaft wird nur aus, um zu verhindern, dass Sie im angezeigten überschrieben [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)] Designertools.</summary>
+        <value>Eine Zeichenfolge, die eine Taste auf der Tastatur zum schnellen Tastaturnavigation an ein Steuerelement darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.AccessKey%2A> Eigenschaft als Mitglied der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> steuern, die nicht an einer beliebigen Stelle innerhalb der Webparts-Steuerelementsatz zum Rendern des Steuerelements verwendet. Aus diesem Grund sollten Sie diese Eigenschaft nicht verwenden. Einstellung hat keine Auswirkungen auf das Rendering.  
+  
+ Um zu verhindern, dass Entwickler diese Eigenschaft verwenden, werden Codeattributen darauf festgelegt, um ihn auszublenden, klicken Sie in Visual Studio. Beim Arbeiten mit einem <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> -Steuerelement in Visual Studio die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.AccessKey%2A> Eigenschaft wird nicht im Bereich "Eigenschaften" oder IntelliSense angezeigt.  
+  
+ Wenn Sie diese Eigenschaft verwenden möchten, müssen Sie eine benutzerdefinierte Klasse zu erstellen, die von erben die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Klasse. Die benutzerdefinierte Klasse können entweder die geerbte <xref:System.Web.UI.WebControls.WebControl.AccessKey%2A> -Eigenschaft ist, oder überschreiben und ihr Verhalten ändern.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColor">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Color BackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.BackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese geerbte Eigenschaft wird nicht verwendet, durch die <see cref="T:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart" /> Steuerelement. Die Eigenschaft wird nur aus, um zu verhindern, dass Sie im angezeigten überschrieben [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)] Designertools.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> , die für die Hintergrundfarbe des Steuerelements verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.BackColor%2A> Eigenschaft als Mitglied der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> steuern, die nicht an einer beliebigen Stelle innerhalb der Webparts-Steuerelementsatz zum Rendern des Steuerelements verwendet. Aus diesem Grund sollten Sie diese Eigenschaft nicht verwenden. Einstellung hat keine Auswirkungen auf das Rendering.  
+  
+ Um zu verhindern, dass Entwickler diese Eigenschaft verwenden, werden Codeattributen darauf festgelegt, um ihn auszublenden, klicken Sie in Visual Studio. Beim Arbeiten mit einem <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> -Steuerelement in Visual Studio die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.BackColor%2A> Eigenschaft wird nicht im Bereich "Eigenschaften" oder IntelliSense angezeigt.  
+  
+ Wenn Sie diese Eigenschaft verwenden möchten, müssen Sie eine benutzerdefinierte Klasse zu erstellen, die von erben die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Klasse. Die benutzerdefinierte Klasse können entweder die geerbte <xref:System.Web.UI.WebControls.WebControl.BackColor%2A> -Eigenschaft ist, oder überschreiben und ihr Verhalten ändern.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackImageUrl">
+      <MemberSignature Language="C#" Value="public override string BackImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BackImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.BackImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese geerbte Eigenschaft wird nicht verwendet, durch die Webparts-Steuerelementsatz, beim Rendern einer <see cref="T:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart" /> Steuerelement. Die Eigenschaft wird nur aus, um zu verhindern, dass Sie im angezeigten überschrieben [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)] Designertools.</summary>
+        <value>Eine Zeichenfolge, die die URL zu einem Bild, als Hintergrund für ein Steuerelement enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.BackImageUrl%2A> Eigenschaft als Mitglied der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> steuern, die nicht an einer beliebigen Stelle innerhalb der Webparts-Steuerelementsatz zum Rendern des Steuerelements verwendet. Aus diesem Grund sollten Sie diese Eigenschaft nicht verwenden. Einstellung hat keine Auswirkungen auf das Rendering.  
+  
+ Um zu verhindern, dass Entwickler diese Eigenschaft verwenden, werden Codeattributen darauf festgelegt, um ihn auszublenden, klicken Sie in Visual Studio. Beim Arbeiten mit einem <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> -Steuerelement in Visual Studio die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.BackImageUrl%2A> Eigenschaft wird nicht im Bereich "Eigenschaften" oder IntelliSense angezeigt.  
+  
+ Wenn Sie diese Eigenschaft verwenden möchten, müssen Sie eine benutzerdefinierte Klasse zu erstellen, die von erben die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Klasse. Die benutzerdefinierte Klasse können entweder die geerbte <xref:System.Web.UI.WebControls.Panel.BackImageUrl%2A> -Eigenschaft ist, oder überschreiben und ihr Verhalten ändern.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderColor">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Color BorderColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BorderColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.BorderColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese geerbte Eigenschaft wird nicht verwendet, durch die <see cref="T:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart" /> Steuerelement. Die Eigenschaft wird nur aus, um zu verhindern, dass Sie im angezeigten überschrieben [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)] Designertools.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> , wie die Farbe des Rahmens um ein Steuerelement verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.BorderColor%2A> Eigenschaft als Mitglied der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> steuern, die nicht an einer beliebigen Stelle innerhalb der Webparts-Steuerelementsatz zum Rendern des Steuerelements verwendet. Aus diesem Grund sollten Sie diese Eigenschaft nicht verwenden. Einstellung hat keine Auswirkungen auf das Rendering.  
+  
+ Um zu verhindern, dass Entwickler diese Eigenschaft verwenden, werden Codeattributen darauf festgelegt, um ihn auszublenden, klicken Sie in Visual Studio. Beim Arbeiten mit einem <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> -Steuerelement in Visual Studio die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.BorderColor%2A> Eigenschaft wird nicht im Bereich "Eigenschaften" oder IntelliSense angezeigt.  
+  
+ Wenn Sie diese Eigenschaft verwenden möchten, müssen Sie eine benutzerdefinierte Klasse zu erstellen, die von erben die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Klasse. Die benutzerdefinierte Klasse können entweder die geerbte <xref:System.Web.UI.WebControls.WebControl.BorderColor%2A> -Eigenschaft ist, oder überschreiben und ihr Verhalten ändern.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderStyle">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.BorderStyle BorderStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.BorderStyle BorderStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.BorderStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.BorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese geerbte Eigenschaft wird nicht verwendet, durch die <see cref="T:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart" /> Steuerelement. Die Eigenschaft wird nur aus, um zu verhindern, dass Sie im angezeigten überschrieben [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)] Designertools.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.BorderStyle" /> bestimmt die Art der Anzeige von Rahmen und einen Titel für ein Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.BorderStyle%2A> Eigenschaft als Mitglied der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> steuern, die nicht an einer beliebigen Stelle innerhalb der Webparts-Steuerelementsatz zum Rendern des Steuerelements verwendet. Aus diesem Grund sollten Sie diese Eigenschaft nicht verwenden. Einstellung hat keine Auswirkungen auf das Rendering.  
+  
+ Um zu verhindern, dass Entwickler diese Eigenschaft verwenden, werden Codeattributen darauf festgelegt, um ihn auszublenden, klicken Sie in Visual Studio. Beim Arbeiten mit einem <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> -Steuerelement in Visual Studio die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.BorderStyle%2A> Eigenschaft wird nicht im Bereich "Eigenschaften" oder IntelliSense angezeigt.  
+  
+ Wenn Sie diese Eigenschaft verwenden möchten, müssen Sie eine benutzerdefinierte Klasse zu erstellen, die von erben die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Klasse. Die benutzerdefinierte Klasse können entweder die geerbte <xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A> -Eigenschaft ist, oder überschreiben und ihr Verhalten ändern.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderWidth">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.Unit BorderWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.Unit BorderWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.BorderWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Unit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese geerbte Eigenschaft wird nicht verwendet, durch die <see cref="T:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart" /> Steuerelement. Die Eigenschaft wird nur aus, um zu verhindern, dass Sie im angezeigten überschrieben [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)] Designertools.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.Unit" /> , bestimmt die Breite des Rahmens um ein Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.BorderWidth%2A> Eigenschaft als Mitglied der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> steuern, die nicht an einer beliebigen Stelle innerhalb der Webparts-Steuerelementsatz zum Rendern des Steuerelements verwendet. Aus diesem Grund sollten Sie diese Eigenschaft nicht verwenden. Einstellung hat keine Auswirkungen auf das Rendering.  
+  
+ Um zu verhindern, dass Entwickler diese Eigenschaft verwenden, werden Codeattributen darauf festgelegt, um ihn auszublenden, klicken Sie in Visual Studio. Beim Arbeiten mit einem <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> -Steuerelement in Visual Studio die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.BorderWidth%2A> Eigenschaft wird nicht im Bereich "Eigenschaften" oder IntelliSense angezeigt.  
+  
+ Wenn Sie diese Eigenschaft verwenden möchten, müssen Sie eine benutzerdefinierte Klasse zu erstellen, die von erben die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Klasse. Die benutzerdefinierte Klasse können entweder die geerbte <xref:System.Web.UI.WebControls.WebControl.BorderWidth%2A> -Eigenschaft ist, oder überschreiben und ihr Verhalten ändern.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CssClass">
+      <MemberSignature Language="C#" Value="public override string CssClass { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CssClass" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.CssClass" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.CssClassProperty</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese geerbte Eigenschaft wird nicht verwendet, durch die <see cref="T:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart" /> Steuerelement. Die Eigenschaft wird nur aus, um zu verhindern, dass Sie im angezeigten überschrieben [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)] Designertools.</summary>
+        <value>Eine Zeichenfolge, die den Namen einer Klasse cascading Stylesheet (CSS) verwendet, um ein Steuerelement Formateigenschaften zuweisen enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.CssClass%2A> Eigenschaft als Mitglied der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> steuern, die nicht an einer beliebigen Stelle innerhalb der Webparts-Steuerelementsatz zum Rendern des Steuerelements verwendet. Aus diesem Grund sollten Sie diese Eigenschaft nicht verwenden. Einstellung hat keine Auswirkungen auf das Rendering.  
+  
+ Um zu verhindern, dass Entwickler diese Eigenschaft verwenden, werden Codeattributen darauf festgelegt, um ihn auszublenden, klicken Sie in Visual Studio. Beim Arbeiten mit einem <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> -Steuerelement in Visual Studio die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.CssClass%2A> Eigenschaft wird nicht im Bereich "Eigenschaften" oder IntelliSense angezeigt.  
+  
+ Wenn Sie diese Eigenschaft verwenden möchten, müssen Sie eine benutzerdefinierte Klasse zu erstellen, die von erben die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Klasse. Die benutzerdefinierte Klasse können entweder die geerbte <xref:System.Web.UI.WebControls.WebControl.CssClass%2A> -Eigenschaft ist, oder überschreiben und ihr Verhalten ändern.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultButton">
+      <MemberSignature Language="C#" Value="public override string DefaultButton { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultButton" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.DefaultButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese geerbte Eigenschaft wird nicht verwendet, durch die <see cref="T:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart" /> Steuerelement. Die Eigenschaft wird nur aus, um zu verhindern, dass Sie im angezeigten überschrieben [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)] Designertools.</summary>
+        <value>Eine Zeichenfolge, die die ID des enthält ein <see cref="T:System.Web.UI.WebControls.Button" /> Steuerelement, das als Standardschaltfläche im ein Steuerelement dient.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.DefaultButton%2A> Eigenschaft als Mitglied der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> steuern, die nicht an einer beliebigen Stelle innerhalb der Webparts-Steuerelementsatz zum Rendern des Steuerelements verwendet. Aus diesem Grund sollten Sie diese Eigenschaft nicht verwenden. Einstellung hat keine Auswirkungen auf das Rendering.  
+  
+ Um zu verhindern, dass Entwickler diese Eigenschaft verwenden, werden Codeattributen darauf festgelegt, um ihn auszublenden, klicken Sie in Visual Studio. Beim Arbeiten mit einem <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> -Steuerelement in Visual Studio die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.DefaultButton%2A> Eigenschaft wird nicht im Bereich "Eigenschaften" oder IntelliSense angezeigt.  
+  
+ Wenn Sie diese Eigenschaft verwenden möchten, müssen Sie eine benutzerdefinierte Klasse zu erstellen, die von erben die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Klasse. Die benutzerdefinierte Klasse können entweder die geerbte <xref:System.Web.UI.WebControls.Panel.DefaultButton%2A> -Eigenschaft ist, oder überschreiben und ihr Verhalten ändern.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Direction">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.ContentDirection Direction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.ContentDirection Direction" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.Direction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ContentDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese geerbte Eigenschaft wird nicht verwendet, durch die <see cref="T:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart" /> Steuerelement. Die Eigenschaft wird nur aus, um zu verhindern, dass Sie im angezeigten überschrieben [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)] Designertools.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.ContentDirection" /> , der die Richtung, in dem der Inhalt in einem Steuerelement fließt, angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.Direction%2A> Eigenschaft als Mitglied der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> steuern, die nicht an einer beliebigen Stelle innerhalb der Webparts-Steuerelementsatz zum Rendern des Steuerelements verwendet. Aus diesem Grund sollten Sie diese Eigenschaft nicht verwenden. Einstellung hat keine Auswirkungen auf das Rendering.  
+  
+ Um zu verhindern, dass Entwickler diese Eigenschaft verwenden, werden Codeattributen darauf festgelegt, um ihn auszublenden, klicken Sie in Visual Studio. Beim Arbeiten mit einem <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> -Steuerelement in Visual Studio die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.Direction%2A> Eigenschaft wird nicht im Bereich "Eigenschaften" oder IntelliSense angezeigt.  
+  
+ Wenn Sie diese Eigenschaft verwenden möchten, müssen Sie eine benutzerdefinierte Klasse zu erstellen, die von erben die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Klasse. Die benutzerdefinierte Klasse können entweder die geerbte <xref:System.Web.UI.WebControls.Panel.Direction%2A> -Eigenschaft ist, oder überschreiben und ihr Verhalten ändern.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public override bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese geerbte Eigenschaft wird nicht verwendet, durch die <see cref="T:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart" /> Steuerelement. Die Eigenschaft wird nur aus, um zu verhindern, dass Sie im angezeigten überschrieben [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)] Designertools.</summary>
+        <value>Ein boolescher Wert, der angibt, ob ein Steuerelement derzeit aktiviert oder deaktiviert ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.Enabled%2A> Eigenschaft als Mitglied der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> steuern, die nicht an einer beliebigen Stelle innerhalb der Webparts-Steuerelementsatz zum Rendern des Steuerelements verwendet. Aus diesem Grund sollten Sie diese Eigenschaft nicht verwenden. Einstellung hat keine Auswirkungen auf das Rendering.  
+  
+ Um zu verhindern, dass Entwickler diese Eigenschaft verwenden, werden Codeattributen darauf festgelegt, um ihn auszublenden, klicken Sie in Visual Studio. Beim Arbeiten mit einem <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> -Steuerelement in Visual Studio die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.Enabled%2A> Eigenschaft wird nicht im Bereich "Eigenschaften" oder IntelliSense angezeigt.  
+  
+ Wenn Sie diese Eigenschaft verwenden möchten, müssen Sie eine benutzerdefinierte Klasse zu erstellen, die von erben die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Klasse. Die benutzerdefinierte Klasse können entweder die geerbte <xref:System.Web.UI.WebControls.WebControl.Enabled%2A> -Eigenschaft ist, oder überschreiben und ihr Verhalten ändern.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableTheming">
+      <MemberSignature Language="C#" Value="public override bool EnableTheming { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableTheming" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.EnableTheming" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese geerbte Eigenschaft wird nicht verwendet, durch die <see cref="T:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart" /> Steuerelement. Die Eigenschaft wird nur aus, um zu verhindern, dass Sie im angezeigten überschrieben [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)] Designertools.</summary>
+        <value>Ein boolescher Wert, der angibt, ob Designs für ein Steuerelement verwendet werden können.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.EnableTheming%2A> Eigenschaft als Mitglied der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> steuern, die nicht an einer beliebigen Stelle innerhalb der Webparts-Steuerelementsatz zum Rendern des Steuerelements verwendet. Aus diesem Grund sollten Sie diese Eigenschaft nicht verwenden. Einstellung hat keine Auswirkungen auf das Rendering.  
+  
+ Um zu verhindern, dass Entwickler diese Eigenschaft verwenden, werden Codeattributen darauf festgelegt, um ihn auszublenden, klicken Sie in Visual Studio. Beim Arbeiten mit einem <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> -Steuerelement in Visual Studio die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.EnableTheming%2A> Eigenschaft wird nicht im Bereich "Eigenschaften" oder IntelliSense angezeigt.  
+  
+ Wenn Sie diese Eigenschaft verwenden möchten, müssen Sie eine benutzerdefinierte Klasse zu erstellen, die von erben die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Klasse. Die benutzerdefinierte Klasse können entweder die geerbte <xref:System.Web.UI.WebControls.WebControl.EnableTheming%2A> -Eigenschaft ist, oder überschreiben und ihr Verhalten ändern.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Es wurde versucht, die Eigenschaft festgelegt wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Font">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.FontInfo Font { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.FontInfo Font" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.Font" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FontInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese geerbte Eigenschaft wird nicht verwendet, durch die <see cref="T:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart" /> Steuerelement. Die Eigenschaft wird nur aus, um zu verhindern, dass Sie im angezeigten überschrieben [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)] Designertools.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.FontInfo" /> , der die Schriftart für den Inhalt des Steuerelements angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.Font%2A> Eigenschaft als Mitglied der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> steuern, die nicht an einer beliebigen Stelle innerhalb der Webparts-Steuerelementsatz zum Rendern des Steuerelements verwendet. Aus diesem Grund sollten Sie diese Eigenschaft nicht verwenden. Einstellung hat keine Auswirkungen auf das Rendering.  
+  
+ Um zu verhindern, dass Entwickler diese Eigenschaft verwenden, werden Codeattributen darauf festgelegt, um ihn auszublenden, klicken Sie in Visual Studio. Beim Arbeiten mit einem <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> -Steuerelement in Visual Studio die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.Font%2A> Eigenschaft wird nicht im Bereich "Eigenschaften" oder IntelliSense angezeigt.  
+  
+ Wenn Sie diese Eigenschaft verwenden möchten, müssen Sie eine benutzerdefinierte Klasse zu erstellen, die von erben die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Klasse. Die benutzerdefinierte Klasse können entweder die geerbte <xref:System.Web.UI.WebControls.WebControl.Font%2A> -Eigenschaft ist, oder überschreiben und ihr Verhalten ändern.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColor">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Color ForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.ForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese geerbte Eigenschaft wird nicht verwendet, durch die <see cref="T:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart" /> Steuerelement. Die Eigenschaft wird nur aus, um zu verhindern, dass Sie im angezeigten überschrieben [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)] Designertools.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> , der die Vordergrundfarbe für ein Steuerelement bestimmt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.ForeColor%2A> Eigenschaft als Mitglied der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> steuern, die nicht an einer beliebigen Stelle innerhalb der Webparts-Steuerelementsatz zum Rendern des Steuerelements verwendet. Aus diesem Grund sollten Sie diese Eigenschaft nicht verwenden. Einstellung hat keine Auswirkungen auf das Rendering.  
+  
+ Um zu verhindern, dass Entwickler diese Eigenschaft verwenden, werden Codeattributen darauf festgelegt, um ihn auszublenden, klicken Sie in Visual Studio. Beim Arbeiten mit einem <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> -Steuerelement in Visual Studio die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.ForeColor%2A> Eigenschaft wird nicht im Bereich "Eigenschaften" oder IntelliSense angezeigt.  
+  
+ Wenn Sie diese Eigenschaft verwenden möchten, müssen Sie eine benutzerdefinierte Klasse zu erstellen, die von erben die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Klasse. Die benutzerdefinierte Klasse können entweder die geerbte <xref:System.Web.UI.WebControls.WebControl.ForeColor%2A> -Eigenschaft ist, oder überschreiben und ihr Verhalten ändern.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAvailableWebPartDescriptions">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection GetAvailableWebPartDescriptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection GetAvailableWebPartDescriptions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.GetAvailableWebPartDescriptions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Auflistung der Beschreibungen der verfügbaren <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelemente in einem Katalog.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection" /> , enthält eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" /> für jedes Steuerelement in einem Katalog.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.GetAvailableWebPartDescriptions%2A> Methode stellt eine Implementierung für die abstrakte Basisklasse Methode deklariert die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Klasse. Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.GetAvailableWebPartDescriptions%2A> Methodenrückgabe Beschreibungsinformationen für jedes Steuerelement in einem Katalog. Ein <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> Objekt ist ein Objekt, das enthält wichtige Informationen zu einem <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement, darunter seine ID, einen Objektverweis auf das Steuerelement und die Werte für mehrere wichtige Eigenschaften, die vom geerbt werden die <xref:System.Web.UI.WebControls.WebParts.Part> Klasse, z. B. <xref:System.Web.UI.WebControls.WebParts.Part.Title%2A> und <xref:System.Web.UI.WebControls.WebParts.Part.Description%2A>.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.GetAvailableWebPartDescriptions%2A> Methode verbessert die Leistung. Wenn ein Katalog erstellt wird, benötigt er einige Informationen über jedes Steuerelement darin enthaltenen z. B. einen Titel, eine Beschreibung, ein Symbol (falls vorhanden) und einer ID, Zum Erstellen einer Instanz jedes Steuerelements auf diese Informationen abzurufen, anstatt eine <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> Zone, die einen Katalog Aufrufe erstellt die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.GetAvailableWebPartDescriptions%2A> Methodenrückgabe für jedes Steuerelement, die in den Katalog, und der Aufruf werden nur die beschreibende Informationen für die -Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.GetAvailableWebPartDescriptions%2A>-Methode veranschaulicht. In diesem Beispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, das Ihnen ermöglicht, ändern Sie die Anzeigemodi auf einer Webparts-Seite.  
+  
+-   Eine Quellcodedatei, die zwei benutzerdefinierte enthält <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente.  
+  
+-   Eine Webseite mit einem <xref:System.Web.UI.WebControls.WebParts.CatalogZone> Steuerelement und ein <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> Steuerelement, das mehrere Serversteuerelemente verweist. Die Seite enthält auch den Ereignisbehandlungscode, die Aufrufe der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.GetAvailableWebPartDescriptions%2A> Methode.  
+  
+-   Eine Erläuterung der Funktionsweise des Beispiels an, wenn Sie die Seite in einem Browser zu laden.  
+  
+ Der erste Teil dieses Codebeispiel ist das Benutzersteuerelement, das Benutzern ermöglicht, Anzeigemodi auf einer Webseite zu ändern. Informationen zu Modi und eine Beschreibung des Quellcodes in diesem Steuerelement finden Sie unter [Exemplarische Vorgehensweise: Ändern des Anzeigemodus auf einer Webparts-Seite](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_DeclarativeCatalogPart_Get#7](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_DeclarativeCatalogPart_Get/CS/DisplayModeMenuCS.ascx#7)]
+ [!code-aspx-vb[WebParts_DeclarativeCatalogPart_Get#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_DeclarativeCatalogPart_Get/VB/DisplayModeMenuVB.ascx#7)]  
+  
+ Der zweite Teil des Codebeispiels wird der Quellcode für die beiden benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente. Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Eine exemplarische Vorgehensweise, die beide Methoden der Kompilierung veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_DeclarativeCatalogPart_Get#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_DeclarativeCatalogPart_Get/CS/userinfowebpart.cs#6)]
+ [!code-vb[WebParts_DeclarativeCatalogPart_Get#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_DeclarativeCatalogPart_Get/VB/userinfowebpart.vb#6)]  
+  
+ Der dritte Teil des Beispiels wird die Webseite mit den <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> Steuerelement. Beachten Sie, dass die `Button1_Click` Methodenaufrufe der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.GetAvailableWebPartDescriptions%2A> -Methode ruft die Beschreibungen der der <xref:System.Web.UI.WebControls.WebParts.WebPart> im Katalog steuert und schreibt die Details zu einer Bezeichnung.  
+  
+ [!code-aspx-csharp[WebParts_DeclarativeCatalogPart_Get#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_DeclarativeCatalogPart_Get/CS/declarativeCatalogPart_GetCS.aspx#1)]
+ [!code-aspx-vb[WebParts_DeclarativeCatalogPart_Get#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_DeclarativeCatalogPart_Get/VB/declarativeCatalogPart_GetVB.aspx#1)]  
+  
+ Wenn Sie die Seite in einem Browser zu laden, wählen Sie **Katalogmodus** in der **Anzeigemodus** Dropdownlisten-Steuerelement in Catalog-Modus wechseln. Im Katalogmodus sehen Sie die Steuerelemente, die auf der Seite hinzugefügt werden, verfügbar sind. Klicken Sie auf die **Anzeige WebPart Beschreibungen** Schaltfläche, um die Details zu den Steuerelementen im Katalog an die Bezeichnung zu schreiben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWebPart">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.WebParts.WebPart GetWebPart (System.Web.UI.WebControls.WebParts.WebPartDescription description);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.UI.WebControls.WebParts.WebPart GetWebPart(class System.Web.UI.WebControls.WebParts.WebPartDescription description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.GetWebPart(System.Web.UI.WebControls.WebParts.WebPartDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPart</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="description" Type="System.Web.UI.WebControls.WebParts.WebPartDescription" />
+      </Parameters>
+      <Docs>
+        <param name="description">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" /> , das Details zum Steuerelement enthält.</param>
+        <summary>Gibt einen Verweis auf eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement basierend auf dem Wert der Beschreibung, die an die Methode übergeben.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement, dessen Beschreibung den Werten in entsprechen <paramref name="description" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.GetWebPart%2A> Methode gibt einen Verweis auf eine <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement, dessen Beschreibung Informationen den Werten der entsprechen, der <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> Objekt an die Methode übergeben. Diese Methode wird in der Regel verwendet, zusammen mit der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.GetAvailableWebPartDescriptions%2A> -Methode, die zum Abrufen der Beschreibungen aller Steuerelemente, die im Katalog verwendet wird. Einzelne <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente können dann abgerufen oder bearbeitet werden, je nach Bedarf vom Übergabe einzelner <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> -Objekte und die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.GetWebPart%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.GetWebPart%2A>-Methode veranschaulicht. In diesem Beispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, das Ihnen ermöglicht, ändern Sie die Anzeigemodi auf einer Webparts-Seite.  
+  
+-   Eine Quellcodedatei, die zwei benutzerdefinierte enthält <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente.  
+  
+-   Eine Webseite mit einem <xref:System.Web.UI.WebControls.WebParts.CatalogZone> Steuerelement und ein <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> Steuerelement, das mehrere Serversteuerelemente verweist. Die Seite enthält auch den Ereignisbehandlungscode, die Aufrufe der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.GetWebPart%2A> Methode.  
+  
+-   Eine Erläuterung der Funktionsweise des Beispiels an, wenn Sie die Seite in einem Browser zu laden.  
+  
+ Der erste Teil dieses Codebeispiel ist das Benutzersteuerelement, das Benutzern ermöglicht, Anzeigemodi auf einer Webseite zu ändern. Informationen zu Modi und eine Beschreibung des Quellcodes in diesem Steuerelement finden Sie unter [Exemplarische Vorgehensweise: Ändern des Anzeigemodus auf einer Webparts-Seite](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_DeclarativeCatalogPart_Get#7](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_DeclarativeCatalogPart_Get/CS/DisplayModeMenuCS.ascx#7)]
+ [!code-aspx-vb[WebParts_DeclarativeCatalogPart_Get#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_DeclarativeCatalogPart_Get/VB/DisplayModeMenuVB.ascx#7)]  
+  
+ Der zweite Teil des Codebeispiels wird der Quellcode für die beiden benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente. Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Eine exemplarische Vorgehensweise, die beide Methoden der Kompilierung veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_DeclarativeCatalogPart_Get#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_DeclarativeCatalogPart_Get/CS/userinfowebpart.cs#6)]
+ [!code-vb[WebParts_DeclarativeCatalogPart_Get#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_DeclarativeCatalogPart_Get/VB/userinfowebpart.vb#6)]  
+  
+ Der dritte Teil des Beispiels wird die Webseite mit den <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> Steuerelement. Beachten Sie, dass die `Button2_Click` Methode ruft die Beschreibungen der der <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente im Katalog, ruft die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.GetWebPart%2A> Methode, um ein Steuerelement abzurufen, die die Beschreibung des dritten Steuerelements in der Auflistung entspricht, und fügt dann das Steuerelement die Seite.  
+  
+ [!code-aspx-csharp[WebParts_DeclarativeCatalogPart_Get#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_DeclarativeCatalogPart_Get/CS/declarativeCatalogPart_GetCS.aspx#1)]
+ [!code-aspx-vb[WebParts_DeclarativeCatalogPart_Get#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_DeclarativeCatalogPart_Get/VB/declarativeCatalogPart_GetVB.aspx#1)]  
+  
+ Wenn Sie die Seite in einem Browser zu laden, wählen Sie **Katalogmodus** in der **Anzeigemodus** Dropdownlisten-Steuerelement in Catalog-Modus wechseln. Im Katalogmodus sehen Sie die Steuerelemente, die auf der Seite hinzugefügt werden, verfügbar sind. Wenn Sie auf die **TextDisplayWebPart hinzufügen** Schaltfläche des Steuerelements wird auf der Seite hinzugefügt, ohne dass sie über die normale Katalog-Benutzeroberfläche (UI) hinzuzufügen. Verwenden der **Anzeigemodus** Dropdown-Liste in den normalen Durchsuchen-Modus zurück; das Steuerelement, das Sie hinzugefügt haben, wird auf der Seite angezeigt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="Description" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Description" />ist kein verfügbarer <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" /> Instanz.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GroupingText">
+      <MemberSignature Language="C#" Value="public override string GroupingText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string GroupingText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.GroupingText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese geerbte Eigenschaft wird nicht verwendet, durch die <see cref="T:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart" /> Steuerelement. Die Eigenschaft wird nur aus, um zu verhindern, dass Sie im angezeigten überschrieben [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)] Designertools.</summary>
+        <value>Eine Zeichenfolge, die den Text am Anfang eines Abschnitts gruppierten untergeordneten Steuerelemente innerhalb des Steuerelements enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.GroupingText%2A> Eigenschaft als Mitglied der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> steuern, die nicht an einer beliebigen Stelle innerhalb der Webparts-Steuerelementsatz zum Rendern des Steuerelements verwendet. Aus diesem Grund sollten Sie diese Eigenschaft nicht verwenden. Einstellung hat keine Auswirkungen auf das Rendering.  
+  
+ Um zu verhindern, dass Entwickler diese Eigenschaft verwenden, werden Codeattributen darauf festgelegt, um ihn auszublenden, klicken Sie in Visual Studio. Beim Arbeiten mit einem <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> -Steuerelement in Visual Studio die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.GroupingText%2A> Eigenschaft wird nicht im Bereich "Eigenschaften" oder IntelliSense angezeigt.  
+  
+ Wenn Sie diese Eigenschaft verwenden möchten, müssen Sie eine benutzerdefinierte Klasse zu erstellen, die von erben die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Klasse. Die benutzerdefinierte Klasse können entweder die geerbte <xref:System.Web.UI.WebControls.Panel.GroupingText%2A> -Eigenschaft ist, oder überschreiben und ihr Verhalten ändern.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.Unit Height { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.Unit Height" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Unit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese geerbte Eigenschaft wird nicht verwendet, durch die <see cref="T:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart" /> Steuerelement. Die Eigenschaft wird nur aus, um zu verhindern, dass Sie im angezeigten überschrieben [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)] Designertools.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.Unit" /> Wert, der die Höhe des Steuerelements angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.Height%2A> Eigenschaft als Mitglied der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> steuern, die nicht an einer beliebigen Stelle innerhalb der Webparts-Steuerelementsatz zum Rendern des Steuerelements verwendet. Aus diesem Grund sollten Sie diese Eigenschaft nicht verwenden. Einstellung hat keine Auswirkungen auf das Rendering.  
+  
+ Um zu verhindern, dass Entwickler diese Eigenschaft verwenden, werden Codeattributen darauf festgelegt, um ihn auszublenden, klicken Sie in Visual Studio. Beim Arbeiten mit einem <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> -Steuerelement in Visual Studio die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.Height%2A> Eigenschaft wird nicht im Bereich "Eigenschaften" oder IntelliSense angezeigt.  
+  
+ Wenn Sie diese Eigenschaft verwenden möchten, müssen Sie eine benutzerdefinierte Klasse zu erstellen, die von erben die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Klasse. Die benutzerdefinierte Klasse können entweder die geerbte <xref:System.Web.UI.WebControls.WebControl.Height%2A> -Eigenschaft ist, oder überschreiben und ihr Verhalten ändern.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalAlign">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.HorizontalAlign HorizontalAlign { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.HorizontalAlign HorizontalAlign" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.HorizontalAlign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.HorizontalAlign</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese geerbte Eigenschaft wird nicht verwendet, durch die <see cref="T:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart" /> Steuerelement. Die Eigenschaft wird nur aus, um zu verhindern, dass Sie im angezeigten überschrieben [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)] Designertools.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.HorizontalAlign" /> Wert vom Typ der horizontalen Ausrichtung in Rendern des Steuerelements verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.HorizontalAlign%2A> Eigenschaft als Mitglied der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> steuern, die nicht an einer beliebigen Stelle innerhalb der Webparts-Steuerelementsatz zum Rendern des Steuerelements verwendet. Aus diesem Grund sollten Sie diese Eigenschaft nicht verwenden. Einstellung hat keine Auswirkungen auf das Rendering.  
+  
+ Um zu verhindern, dass Entwickler diese Eigenschaft verwenden, werden Codeattributen darauf festgelegt, um ihn auszublenden, klicken Sie in Visual Studio. Beim Arbeiten mit einem <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> -Steuerelement in Visual Studio die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.HorizontalAlign%2A> Eigenschaft wird nicht im Bereich "Eigenschaften" oder IntelliSense angezeigt.  
+  
+ Wenn Sie diese Eigenschaft verwenden möchten, müssen Sie eine benutzerdefinierte Klasse zu erstellen, die von erben die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Klasse. Die benutzerdefinierte Klasse können entweder die geerbte <xref:System.Web.UI.WebControls.Panel.HorizontalAlign%2A> -Eigenschaft ist, oder überschreiben und ihr Verhalten ändern.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollBars">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.ScrollBars ScrollBars { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.ScrollBars ScrollBars" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.ScrollBars" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ScrollBars</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese geerbte Eigenschaft wird nicht verwendet, durch die <see cref="T:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart" /> Steuerelement. Die Eigenschaft wird nur aus, um zu verhindern, dass Sie im angezeigten überschrieben [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)] Designertools.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.ScrollBars" /> , die ggf. im Steuerelement verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.ScrollBars%2A> Eigenschaft als Mitglied der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> steuern, die nicht an einer beliebigen Stelle innerhalb der Webparts-Steuerelementsatz zum Rendern des Steuerelements verwendet. Aus diesem Grund sollten Sie diese Eigenschaft nicht verwenden. Einstellung hat keine Auswirkungen auf das Rendering.  
+  
+ Um zu verhindern, dass Entwickler diese Eigenschaft verwenden, werden Codeattributen darauf festgelegt, um ihn auszublenden, klicken Sie in Visual Studio. Beim Arbeiten mit einem <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> -Steuerelement in Visual Studio die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.ScrollBars%2A> Eigenschaft wird nicht im Bereich "Eigenschaften" oder IntelliSense angezeigt.  
+  
+ Wenn Sie diese Eigenschaft verwenden möchten, müssen Sie eine benutzerdefinierte Klasse zu erstellen, die von erben die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Klasse. Die benutzerdefinierte Klasse können entweder die geerbte <xref:System.Web.UI.WebControls.Panel.ScrollBars%2A> -Eigenschaft ist, oder überschreiben und ihr Verhalten ändern.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SkinID">
+      <MemberSignature Language="C#" Value="public override string SkinID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SkinID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.SkinID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese geerbte Eigenschaft wird nicht verwendet, durch die <see cref="T:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart" /> Steuerelement. Die Eigenschaft wird nur aus, um zu verhindern, dass Sie im angezeigten überschrieben [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)] Designertools.</summary>
+        <value>Eine Zeichenfolge, die die ID des ein Design für das Steuerelement enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.SkinID%2A> Eigenschaft als Mitglied der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> steuern, die nicht an einer beliebigen Stelle innerhalb der Webparts-Steuerelementsatz zum Rendern des Steuerelements verwendet. Aus diesem Grund sollten Sie diese Eigenschaft nicht verwenden. Einstellung hat keine Auswirkungen auf das Rendering.  
+  
+ Um zu verhindern, dass Entwickler diese Eigenschaft verwenden, werden Codeattributen darauf festgelegt, um ihn auszublenden, klicken Sie in Visual Studio. Beim Arbeiten mit einem <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> -Steuerelement in Visual Studio die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.SkinID%2A> Eigenschaft wird nicht im Bereich "Eigenschaften" oder IntelliSense angezeigt.  
+  
+ Wenn Sie diese Eigenschaft verwenden möchten, müssen Sie eine benutzerdefinierte Klasse zu erstellen, die von erben die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Klasse. Die benutzerdefinierte Klasse können entweder die geerbte <xref:System.Web.UI.WebControls.WebControl.SkinID%2A> -Eigenschaft ist, oder überschreiben und ihr Verhalten ändern.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Es wurde versucht, die Eigenschaft festgelegt wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TabIndex">
+      <MemberSignature Language="C#" Value="public override short TabIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int16 TabIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.TabIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese geerbte Eigenschaft wird nicht verwendet, durch die <see cref="T:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart" /> Steuerelement. Die Eigenschaft wird nur aus, um zu verhindern, dass Sie im angezeigten überschrieben [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)] Designertools.</summary>
+        <value>Eine kurze Zahl, die als der Index des Steuerelements in der Aktivierreihenfolge dient.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.TabIndex%2A> Eigenschaft als Mitglied der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> steuern, die nicht an einer beliebigen Stelle innerhalb der Webparts-Steuerelementsatz zum Rendern des Steuerelements verwendet. Aus diesem Grund sollten Sie diese Eigenschaft nicht verwenden. Einstellung hat keine Auswirkungen auf das Rendering.  
+  
+ Um zu verhindern, dass Entwickler diese Eigenschaft verwenden, werden Codeattributen darauf festgelegt, um ihn auszublenden, klicken Sie in Visual Studio. Beim Arbeiten mit einem <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> -Steuerelement in Visual Studio die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.TabIndex%2A> Eigenschaft wird nicht im Bereich "Eigenschaften" oder IntelliSense angezeigt.  
+  
+ Wenn Sie diese Eigenschaft verwenden möchten, müssen Sie eine benutzerdefinierte Klasse zu erstellen, die von erben die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Klasse. Die benutzerdefinierte Klasse können entweder die geerbte <xref:System.Web.UI.WebControls.WebControl.TabIndex%2A> -Eigenschaft ist, oder überschreiben und ihr Verhalten ändern.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="public override string Title { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Title" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.Title" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt angezeigt, in der Titelleiste des Steuerelements.</summary>
+        <value>Eine Zeichenfolge, die als Titel des Steuerelements verwendet wird. Der Standardwert ist eine vom Webparts-Steuerelementsatz bereitgestellte Name des berechneten Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.Title%2A> Eigenschaftswert wird angezeigt, in der Titelleiste des eine <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> steuern, wenn das Steuerelement im Katalogmodus sichtbar ist. Wenn das Steuerelement auf einer Seite deklariert wird, können Sie einen Wert für die Eigenschaft festlegen, mit der `Title` Attribut. Wenn Sie einen Wert für den Titel nicht angeben, wird ein kulturspezifische Standardwert verwendet, um die Art der Eigenschaften beschreiben, die dieses Steuerelement ermöglicht Benutzern das bearbeiten es.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die deklarative Verwendung des der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.Title%2A> Eigenschaft. Den vollständigen Code zum Ausführen des Beispiels erforderlich sind, finden Sie im Beispielabschnitt von der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> -Klassenübersicht.  
+  
+ In diesem Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.Title%2A> Eigenschaft des Steuerelements in deklarativem Markup. Wenn Sie die Eigenschaft nicht festlegen oder Sie weisen Sie eine leere Zeichenfolge (""), ein Standardtitel angegeben wird.  
+  
+ [!code-aspx-csharp[WebParts_DeclarativeCatalogPart_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_DeclarativeCatalogPart_Overview/CS/declarativeCatalogPartCS.aspx#2)]
+ [!code-aspx-vb[WebParts_DeclarativeCatalogPart_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_DeclarativeCatalogPart_Overview/VB/declarativeCatalogPartVB.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTip">
+      <MemberSignature Language="C#" Value="public override string ToolTip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolTip" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.ToolTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese geerbte Eigenschaft wird nicht verwendet, durch die <see cref="T:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart" /> Steuerelement. Die Eigenschaft wird nur aus, um zu verhindern, dass Sie im angezeigten überschrieben [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)] Designertools.</summary>
+        <value>Eine Zeichenfolge, die den Inhalt einer QuickInfo enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.ToolTip%2A> Eigenschaft als Mitglied der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> steuern, die nicht an einer beliebigen Stelle innerhalb der Webparts-Steuerelementsatz zum Rendern des Steuerelements verwendet. Aus diesem Grund sollten Sie diese Eigenschaft nicht verwenden. Einstellung hat keine Auswirkungen auf das Rendering.  
+  
+ Um zu verhindern, dass Entwickler diese Eigenschaft verwenden, werden Codeattributen darauf festgelegt, um ihn auszublenden, klicken Sie in Visual Studio. Beim Arbeiten mit einem <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> -Steuerelement in Visual Studio die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.ToolTip%2A> Eigenschaft wird nicht im Bereich "Eigenschaften" oder IntelliSense angezeigt.  
+  
+ Wenn Sie diese Eigenschaft verwenden möchten, müssen Sie eine benutzerdefinierte Klasse zu erstellen, die von erben die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Klasse. Die benutzerdefinierte Klasse können entweder die geerbte <xref:System.Web.UI.WebControls.WebControl.ToolTip%2A> -Eigenschaft ist, oder überschreiben und ihr Verhalten ändern.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="public override bool Visible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visible" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.Visible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese geerbte Eigenschaft wird nicht verwendet, durch die <see cref="T:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart" /> Steuerelement. Die Eigenschaft wird nur aus, um zu verhindern, dass Sie im angezeigten überschrieben [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)] Designertools.</summary>
+        <value>Ein boolescher Wert, der angibt, ob das Steuerelement sichtbar ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.Visible%2A> Eigenschaft als Mitglied der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> steuern, die nicht an einer beliebigen Stelle innerhalb der Webparts-Steuerelementsatz zum Rendern des Steuerelements verwendet. Aus diesem Grund sollten Sie diese Eigenschaft nicht verwenden. Einstellung hat keine Auswirkungen auf das Rendering.  
+  
+ Um zu verhindern, dass Entwickler diese Eigenschaft verwenden, werden Codeattributen darauf festgelegt, um ihn auszublenden, klicken Sie in Visual Studio. Beim Arbeiten mit einem <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> -Steuerelement in Visual Studio die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.Visible%2A> Eigenschaft wird nicht im Bereich "Eigenschaften" oder IntelliSense angezeigt.  
+  
+ Wenn Sie diese Eigenschaft verwenden möchten, müssen Sie eine benutzerdefinierte Klasse zu erstellen, die von erben die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Klasse. Die benutzerdefinierte Klasse können entweder die geerbte <xref:System.Web.UI.Control.Visible%2A> -Eigenschaft ist, oder überschreiben und ihr Verhalten ändern.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebPartsListUserControlPath">
+      <MemberSignature Language="C#" Value="public string WebPartsListUserControlPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string WebPartsListUserControlPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.WebPartsListUserControlPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.UserControlFileEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Pfad zu einem Benutzersteuerelement, das eine Liste der enthält <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> oder andere Serversteuerelemente für den Katalog.</summary>
+        <value>Eine Zeichenfolge mit dem Pfad zu einem Benutzersteuerelement, das einen Satz von enthält <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> oder Serversteuerelemente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.WebPartsListUserControlPath%2A> -Eigenschaft ermöglicht es Entwicklern, den Pfad zu einem Benutzersteuerelement anzugeben, die einen Satz von enthält <xref:System.Web.UI.WebControls.WebParts.WebPart> oder andere Serversteuerelemente, die hinzugefügt werden, können, eine <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Zone. Wenn diese Eigenschaft ein gültiger Pfad für ein benutzerdefiniertes Steuerelement zugewiesen ist, werden die Steuerelemente zum Zeitpunkt der Kompilierung automatisch in den Katalog hinzugefügt.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.WebPartsListUserControlPath%2A> Eigenschaft kann nützlich sein, da er bietet eine Möglichkeit zum Packen und einen Satz der verfügbaren Steuerelemente auf verschiedenen Seiten oder Sites wiederzuverwenden. Anstatt jedes Steuerelement in einem Katalog für jede Seite, die einen Katalog bereitstellen möchte manuell zu deklarieren, können Entwickler diese Eigenschaft verwenden, um auf ein benutzerdefiniertes Steuerelement zeigen, die auf einen ganzen Satz von verweist <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente. Darüber hinaus die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.WebPartsListUserControlPath%2A> Eigenschaft kann verwendet werden, zusammen mit <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente, die explizit deklariert werden ein `<asp:declarativecatalogpart>` Element auf einer Webseite.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.WebPartsListUserControlPath%2A> Eigenschaft deklarativ und programmgesteuert. In diesem Beispiel besteht aus fünf Teilen:  
+  
+-   Ein Benutzersteuerelement, das Ihnen ermöglicht, ändern Sie die Anzeigemodi auf einer Webparts-Seite.  
+  
+-   Eine Quellcodedatei, die zwei benutzerdefinierte enthält <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente.  
+  
+-   Ein anderes Benutzersteuerelement, das Verweise auf die benutzerdefinierte enthält <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert und verweist auf die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.WebPartsListUserControlPath%2A> Eigenschaft auf der Webseite.  
+  
+-   Eine Webseite mit einer <xref:System.Web.UI.WebControls.WebParts.CatalogZone> Steuerelement und ein <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> Steuerelement, das das Benutzersteuerelement, das die benutzerdefinierten Steuerelemente enthält verweist.  
+  
+-   Eine Erläuterung der Funktionsweise des Beispiels an, wenn Sie die Seite in einem Browser zu laden.  
+  
+ Der erste Teil dieses Codebeispiel ist das Benutzersteuerelement, das Benutzern ermöglicht, Anzeigemodi auf einer Webseite zu ändern. Informationen zu Modi und eine Beschreibung des Quellcodes in diesem Steuerelement finden Sie unter [Exemplarische Vorgehensweise: Ändern des Anzeigemodus auf einer Webparts-Seite](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_DeclarativeCatalogPart_WebPartsList#7](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_DeclarativeCatalogPart_WebPartsList/CS/DisplayModeMenuCS.ascx#7)]
+ [!code-aspx-vb[WebParts_DeclarativeCatalogPart_WebPartsList#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_DeclarativeCatalogPart_WebPartsList/VB/DisplayModeMenuVB.ascx#7)]  
+  
+ Der zweite Teil des Codebeispiels wird der Quellcode für die beiden benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente. Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Eine exemplarische Vorgehensweise, die beide Methoden der Kompilierung veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_DeclarativeCatalogPart_WebPartsList#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_DeclarativeCatalogPart_WebPartsList/CS/userinfowebpart.cs#6)]
+ [!code-vb[WebParts_DeclarativeCatalogPart_WebPartsList#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_DeclarativeCatalogPart_WebPartsList/VB/userinfowebpart.vb#6)]  
+  
+ Der dritte Teil des Codebeispiels wird das Benutzersteuerelement, das die benutzerdefinierte enthält <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert und verweist auf die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.WebPartsListUserControlPath%2A> Eigenschaft.  
+  
+ [!code-aspx-csharp[WebParts_DeclarativeCatalogPart_WebPartsList#5](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_DeclarativeCatalogPart_WebPartsList/CS/WebUserControlCS.ascx#5)]
+ [!code-aspx-vb[WebParts_DeclarativeCatalogPart_WebPartsList#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_DeclarativeCatalogPart_WebPartsList/VB/WebUserControlVB.ascx#5)]  
+  
+ Der vierte Teil des Beispiels wird die Webseite mit den <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> Steuerelement. Beachten Sie, dass die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.WebPartsListUserControlPath%2A> Eigenschaft im Markup der Seite deklarativ festgelegt ist; der Eigenschaftswert kann auch programmgesteuert festgelegt werden, wenn der Benutzer eine Schaltfläche, die verfügbar gemacht wird klickt, wenn die Seite im Kataloganzeigemodus befindet.  
+  
+ [!code-aspx-csharp[WebParts_DeclarativeCatalogPart_WebPartsList#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_DeclarativeCatalogPart_WebPartsList/CS/declarativeCatalogPart_UserControlListCS.aspx#1)]
+ [!code-aspx-vb[WebParts_DeclarativeCatalogPart_WebPartsList#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_DeclarativeCatalogPart_WebPartsList/VB/declarativeCatalogPart_UserControlListVB.aspx#1)]  
+  
+ Wenn Sie die Seite in einem Browser zu laden, wählen Sie **Katalogmodus** in der **Anzeigemodus** Dropdownlisten-Steuerelement in Catalog-Modus wechseln. Im Katalogmodus sehen Sie die Steuerelemente, die auf der Seite hinzugefügt werden, verfügbar sind. Klicken Sie auf die **WebPartsListUserControlPath-Eigenschaft** Schaltfläche, ohne einen Wert in das Textfeld eingeben zu müssen. Beachten Sie, dass mit einer leeren Zeichenfolge ("") der Eigenschaft zugewiesen, wird der Katalog aktualisiert wird und nur das Steuerelement, das auf der Seite explizit deklariert wird, verbleibt im Katalog. Wenn Sie den Namen des Benutzersteuerelements eingeben, enthält die <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente in das Textfeld ein, und klicken Sie auf die **WebPartsListUserControlPath-Eigenschaft** erneut, die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.WebPartsListUserControlPath%2A> -Eigenschaft zeigt jetzt auf das Benutzersteuerelement erneut, und die zusätzlichen <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente wieder im Katalog angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebPartsTemplate">
+      <MemberSignature Language="C#" Value="public System.Web.UI.ITemplate WebPartsTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ITemplate WebPartsTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.WebPartsTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.TemplateContainer(typeof(System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Verweis auf eine Vorlage mit der <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelemente in einem Katalog deklariert.</summary>
+        <value>Eine <see cref="T:System.Web.UI.ITemplate" /> , die in einem Katalog deklarierte Steuerelemente enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.WebPartsTemplate%2A> -Eigenschaft verweist auf die Vorlage, die Steuerelemente enthält, die als Teil eines Katalogs auf einer Webseite deklariert. In der Hierarchie der deklarativen Elemente in einer <xref:System.Web.UI.WebControls.WebParts.CatalogZone> Zone, die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.WebPartsTemplate%2A> dargestellte Eigenschaft der `<webpartstemplate>` -Element, das ein untergeordnetes Element von der `<asp:declarativecatalogpart>` -Element, und enthält alle explizit deklarierten Serversteuerelemente in eine Catalog.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die deklarative Verwendung des der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.WebPartsTemplate%2A> Eigenschaft. Den vollständigen Code zum Ausführen des Beispiels erforderlich sind, finden Sie im Beispielabschnitt von der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> -Klassenübersicht.  
+  
+ Dieser Code zeigt, wie zum Einfügen der `<webpartstemplate>` Element innerhalb einer `<asp:declarativecatalogpart>` Element im deklarativen Markup.  
+  
+ [!code-aspx-csharp[WebParts_DeclarativeCatalogPart_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_DeclarativeCatalogPart_Overview/CS/declarativeCatalogPartCS.aspx#2)]
+ [!code-aspx-vb[WebParts_DeclarativeCatalogPart_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_DeclarativeCatalogPart_Overview/VB/declarativeCatalogPartVB.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.Unit Width { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.Unit Width" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Unit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese geerbte Eigenschaft wird nicht verwendet, durch die <see cref="T:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart" /> Steuerelement. Die Eigenschaft wird nur aus, um zu verhindern, dass Sie im angezeigten überschrieben [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)] Designertools.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.Unit" /> , der die Breite des Steuerelements angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.Width%2A> Eigenschaft als Mitglied der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> steuern, die nicht an einer beliebigen Stelle innerhalb der Webparts-Steuerelementsatz zum Rendern des Steuerelements verwendet. Aus diesem Grund sollten Sie diese Eigenschaft nicht verwenden. Einstellung hat keine Auswirkungen auf das Rendering.  
+  
+ Um zu verhindern, dass Entwickler diese Eigenschaft verwenden, werden Codeattributen darauf festgelegt, um ihn auszublenden, klicken Sie in Visual Studio. Beim Arbeiten mit einem <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> -Steuerelement in Visual Studio die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.Width%2A> Eigenschaft wird nicht im Bereich "Eigenschaften" oder IntelliSense angezeigt.  
+  
+ Wenn Sie diese Eigenschaft verwenden möchten, müssen Sie eine benutzerdefinierte Klasse zu erstellen, die von erben die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Klasse. Die benutzerdefinierte Klasse können entweder die geerbte <xref:System.Web.UI.WebControls.WebControl.Width%2A> -Eigenschaft ist, oder überschreiben und ihr Verhalten ändern.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Wrap">
+      <MemberSignature Language="C#" Value="public override bool Wrap { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Wrap" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.Wrap" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese geerbte Eigenschaft wird nicht verwendet, durch die <see cref="T:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart" /> Steuerelement. Die Eigenschaft wird nur aus, um zu verhindern, dass Sie im angezeigten überschrieben [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)] Designertools.</summary>
+        <value>Ein boolescher Wert, der angibt, ob lange Zeilen im Steuerelement umgebrochen werden können.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.Wrap%2A> Eigenschaft als Mitglied der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> steuern, die nicht an einer beliebigen Stelle innerhalb der Webparts-Steuerelementsatz zum Rendern des Steuerelements verwendet. Aus diesem Grund sollten Sie diese Eigenschaft nicht verwenden. Einstellung hat keine Auswirkungen auf das Rendering.  
+  
+ Um zu verhindern, dass Entwickler diese Eigenschaft verwenden, werden Codeattributen darauf festgelegt, um ihn auszublenden, klicken Sie in Visual Studio. Beim Arbeiten mit einem <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> -Steuerelement in Visual Studio die <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.Wrap%2A> Eigenschaft wird nicht im Bereich "Eigenschaften" oder IntelliSense angezeigt.  
+  
+ Wenn Sie diese Eigenschaft verwenden möchten, müssen Sie eine benutzerdefinierte Klasse zu erstellen, die von erben die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Klasse. Die benutzerdefinierte Klasse können entweder die geerbte <xref:System.Web.UI.WebControls.Panel.Wrap%2A> -Eigenschaft ist, oder überschreiben und ihr Verhalten ändern.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

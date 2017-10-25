@@ -1,0 +1,290 @@
+<Type Name="SoapServerMethod" FullName="System.Web.Services.Protocols.SoapServerMethod">
+  <TypeSignature Language="C#" Value="public sealed class SoapServerMethod" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SoapServerMethod extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.SoapServerMethod" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Attribute und Metadaten für eine XML-Webdienstmethode. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapServerMethod ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapServerMethod.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen neuen <see cref="T:System.Web.Services.Protocols.SoapServerMethod" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapServerMethod (Type serverType, System.Web.Services.Protocols.LogicalMethodInfo methodInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type serverType, class System.Web.Services.Protocols.LogicalMethodInfo methodInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapServerMethod.#ctor(System.Type,System.Web.Services.Protocols.LogicalMethodInfo)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serverType" Type="System.Type" />
+        <Parameter Name="methodInfo" Type="System.Web.Services.Protocols.LogicalMethodInfo" />
+      </Parameters>
+      <Docs>
+        <param name="serverType">Die <see cref="T:System.Type" /> zu dem diese Methode gehört.</param>
+        <param name="methodInfo">Die <see cref="T:System.Web.Services.Protocols.LogicalMethodInfo" /> mit dem Initialisieren dieses <see cref="T:System.Web.Services.Protocols.SoapServerMethod" />.</param>
+        <summary>Erstellt einen neuen <see cref="T:System.Web.Services.Protocols.SoapServerMethod" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public string Action { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Action" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapServerMethod.Action" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see langword="SOAPAction" /> -HTTP-Headerfeld der SOAP-Anforderungen, die an diese XML-Webdienstmethode gesendet werden.</summary>
+        <value>Ein <see cref="T:System.String" /> , enthält die <see langword="SOAPAction" /> -HTTP-Headerfeld der SOAP-Anforderungen, die an diese XML-Webdienstmethode gesendet werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingUse">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.SoapBindingUse BindingUse { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Services.Description.SoapBindingUse BindingUse" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapServerMethod.BindingUse" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.SoapBindingUse</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Web.Services.Description.SoapBindingUse" /> Wert, der angibt, ob die Teile von SOAP-Nachrichten an diese XML-Webdienstmethode gesendet als abstrakte Typdefinitionen oder konkrete Schemadefinitionen codiert sind.</summary>
+        <value>Ein <see cref="T:System.Web.Services.Description.SoapBindingUse" /> Wert, der angibt, ob die Teile von SOAP-Nachrichten an diese XML-Webdienstmethode gesendet als abstrakte Typdefinitionen oder konkrete Schemadefinitionen codiert sind.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InHeaderMappings">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Protocols.SoapHeaderMapping[] InHeaderMappings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Protocols.SoapHeaderMapping[] InHeaderMappings" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapServerMethod.InHeaderMappings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.SoapHeaderMapping[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Xml.Serialization.XmlMembersMapping" /> mit SOAP-Anforderungen an diese Webdienstmethode verwendet.</summary>
+        <value>Die <see cref="T:System.Xml.Serialization.XmlMembersMapping" /> mit SOAP-Anforderungen an diese Webdienstmethode verwendet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InHeaderSerializer">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlSerializer InHeaderSerializer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.XmlSerializer InHeaderSerializer" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapServerMethod.InHeaderSerializer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlSerializer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Xml.Serialization.XmlSerializer" /> mit SOAP-Anforderungen an diese Webdienstmethode verwendet.</summary>
+        <value>Die <see cref="T:System.Xml.Serialization.XmlSerializer" /> mit SOAP-Anforderungen an diese Webdienstmethode verwendet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodInfo">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Protocols.LogicalMethodInfo MethodInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Protocols.LogicalMethodInfo MethodInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapServerMethod.MethodInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.LogicalMethodInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.Services.Protocols.LogicalMethodInfo" /> dieser XML-Webdienstmethode zugeordnet.</summary>
+        <value>Die <see cref="T:System.Web.Services.Protocols.LogicalMethodInfo" /> dieser XML-Webdienstmethode zugeordnet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OneWay">
+      <MemberSignature Language="C#" Value="public bool OneWay { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OneWay" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapServerMethod.OneWay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Boolean" /> , der angibt, ob ein XML-Webdienstclient auf dem Webserver zum Abschließen der Verarbeitung dieser XML-Webdienstmethode wartet.</summary>
+        <value>
+          <see langword="true" />Wenn der XML-Webdienstclient nicht auf dem Webserver vollständig verarbeitet werden diese XML-Webdienstmethode wartet; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutHeaderMappings">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Protocols.SoapHeaderMapping[] OutHeaderMappings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Protocols.SoapHeaderMapping[] OutHeaderMappings" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapServerMethod.OutHeaderMappings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.SoapHeaderMapping[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Xml.Serialization.XmlMembersMapping" /> mit SOAP-Antworten an diese Webdienstmethode verwendet.</summary>
+        <value>Die <see cref="T:System.Xml.Serialization.XmlMembersMapping" /> mit SOAP-Antworten an diese Webdienstmethode verwendet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutHeaderSerializer">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlSerializer OutHeaderSerializer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.XmlSerializer OutHeaderSerializer" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapServerMethod.OutHeaderSerializer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlSerializer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Xml.Serialization.XmlSerializer" /> mit SOAP-Antworten an diese Webdienstmethode verwendet.</summary>
+        <value>Die <see cref="T:System.Xml.Serialization.XmlSerializer" /> mit SOAP-Antworten an diese Webdienstmethode verwendet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterSerializer">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlSerializer ParameterSerializer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.XmlSerializer ParameterSerializer" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapServerMethod.ParameterSerializer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlSerializer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Xml.Serialization.XmlSerializer" /> verwendet, die mit Parametern, die an dieser Webdienstmethode übergeben werden.</summary>
+        <value>Die <see cref="T:System.Xml.Serialization.XmlSerializer" /> verwendet, die mit Parametern, die an dieser Webdienstmethode übergeben werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterStyle">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Protocols.SoapParameterStyle ParameterStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Services.Protocols.SoapParameterStyle ParameterStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapServerMethod.ParameterStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.SoapParameterStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Web.Services.Protocols.SoapParameterStyle" /> Objekt, das angibt, wie Parameter in SOAP-Nachrichten an diese XML-Webdienstmethode gesendet formatiert werden.</summary>
+        <value>Ein <see cref="T:System.Web.Services.Protocols.SoapParameterStyle" /> , der angibt, wie Parameter in SOAP-Nachrichten an diese XML-Webdienstmethode gesendet formatiert werden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnSerializer">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlSerializer ReturnSerializer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.XmlSerializer ReturnSerializer" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapServerMethod.ReturnSerializer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlSerializer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Xml.Serialization.XmlSerializer" /> mit Rückgabewerte von dieser Webdienstmethode verwendet.</summary>
+        <value>Die <see cref="T:System.Xml.Serialization.XmlSerializer" /> mit Rückgabewerte von dieser Webdienstmethode verwendet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rpc">
+      <MemberSignature Language="C#" Value="public bool Rpc { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Rpc" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapServerMethod.Rpc" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Boolean" /> , der angibt, ob SOAP-Nachrichten an und von dieser XML-Webdienstmethode gesendet RPC-Formatierung verwendet werden.</summary>
+        <value>
+          <see langword="true" />Wenn SOAP-Nachrichten an und von dieser XML-Webdienstmethode gesendet RPC-Formatierung; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WsiClaims">
+      <MemberSignature Language="C#" Value="public System.Web.Services.WsiProfiles WsiClaims { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Services.WsiProfiles WsiClaims" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapServerMethod.WsiClaims" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.WsiProfiles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Web.Services.WsiProfiles" /> -Wert, der die Spezifikation (Web Services Interoperability, WSI) gibt an, der diesen Webdienst Ansprüche entsprechen.</summary>
+        <value>Ein <see cref="T:System.Web.Services.WsiProfiles" /> Wert, der die Spezifikation (Web Services Interoperability, WSI) gibt an, der diesen Webdienst Ansprüche entsprechen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

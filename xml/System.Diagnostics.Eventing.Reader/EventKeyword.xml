@@ -1,0 +1,89 @@
+<Type Name="EventKeyword" FullName="System.Diagnostics.Eventing.Reader.EventKeyword">
+  <TypeSignature Language="C#" Value="public sealed class EventKeyword" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EventKeyword extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Eventing.Reader.EventKeyword" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Schlüsselwort für ein Ereignis dar. Schlüsselwörter werden in einem Ereignisanbieter definiert und werden verwendet, um das Ereignis mit ähnlichen Ereignissen (basierend auf der Nutzung der Ereignisse) zu gruppieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse kann nicht instanziiert werden. Ein <xref:System.Diagnostics.Eventing.Reader.ProviderMetadata> -Objekt definiert eine Liste von <xref:System.Diagnostics.Eventing.Reader.EventKeyword> Objekten, eines für jedes Schlüsselwort mithilfe der vom Anbieterereignisse verwendet. Jedes Schlüsselwort stellt ein bit in einer 64-Bit-Maske. Vordefinierte Bitwerte und reservierten Bits belegen die oberen 16 Positionen dieser Maske, die das Manifest, um alle Bits zwischen 0 x 0000000000000001 und 0 x 0000800000000000 verwenden lassen.  
+  
+ Die standard-Ereignis-Schlüsselwörter werden definiert, der <xref:System.Diagnostics.Eventing.Reader.StandardEventKeywords> Enumeration.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public string DisplayName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventKeyword.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den lokalisierten Namen des Schlüsselworts.</summary>
+        <value>Gibt eine Zeichenfolge, die einen lokalisierten Namen für dieses Schlüsselwort enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventKeyword.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den nicht lokalisierten Namen des Schlüsselworts.</summary>
+        <value>Gibt eine Zeichenfolge, die den nicht lokalisierten Namen für dieses Schlüsselwort enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public long Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Value" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventKeyword.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den numerischen Wert mit dem Schlüsselwort verknüpft sind.</summary>
+        <value>Gibt einen <see langword="long" />-Wert zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jedes Schlüsselwort stellt ein bit in einer 64-Bit-Maske. Vordefinierte Bitwerte und reservierten Bits belegen die oberen 16 Positionen dieser Maske, die das Manifest, um alle Bits zwischen 0 x 0000000000000001 und 0 x 0000800000000000 verwenden lassen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

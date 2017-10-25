@@ -1,0 +1,65 @@
+<Type Name="DownloadApplicationCompletedEventArgs" FullName="System.Deployment.Application.DownloadApplicationCompletedEventArgs">
+  <TypeSignature Language="C#" Value="public class DownloadApplicationCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DownloadApplicationCompletedEventArgs extends System.ComponentModel.AsyncCompletedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Deployment.Application.DownloadApplicationCompletedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Deployment</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.AsyncCompletedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Deployment.Application.InPlaceHostingManager.DownloadApplicationCompleted" />-Ereignis bereit.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="LogFilePath">
+      <MemberSignature Language="C#" Value="public string LogFilePath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LogFilePath" />
+      <MemberSignature Language="DocId" Value="P:System.Deployment.Application.DownloadApplicationCompletedEventArgs.LogFilePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Deployment</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Pfad der ClickOnce-Protokolldatei.</summary>
+        <value>Der Pfad der ClickOnce-Protokolldatei.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ShortcutAppId">
+      <MemberSignature Language="C#" Value="public string ShortcutAppId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ShortcutAppId" />
+      <MemberSignature Language="DocId" Value="P:System.Deployment.Application.DownloadApplicationCompletedEventArgs.ShortcutAppId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Deployment</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Inhalt einer .appref-ms-Datei, die diese ClickOnce-Anwendung starten können.</summary>
+        <value>Der Inhalt einer .appref-ms-Datei.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft enthält den Text ein benutzerdefiniertes Installers kann Schreiben in eine appref-ms-Datei, um diese ClickOnce-Anwendung zu starten. ClickOnce erstellt diese Startdatei Sie beim Installieren einer ClickOnce-Anwendung, die offline verfügbar, mit Ausnahme von Anwendungen ist, die implizit enthalten die `<customUX>` Element. Ein benutzerdefiniertes Installationsprogramm kann erstellen Sie eine Verknüpfung, um eine ClickOnce-Anwendung zu starten, die enthält eine `<customUX>` Element durch das Schreiben des Texts in dieser Eigenschaft in eine neue appref-ms-Datei im Unicode-Format. Weitere Informationen finden Sie unter [ &lt;EntryPoint&gt; Element](http://msdn.microsoft.com/library/10ad3083-10c1-4189-a870-9bba2eab244f) und [Exemplarische Vorgehensweise: erstellen ein benutzerdefiniertes Installationsprogramm für eine ClickOnce-Anwendung](http://msdn.microsoft.com/library/fb222cc5-8aeb-4b94-8c49-b93e342f5f69).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

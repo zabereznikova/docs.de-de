@@ -1,0 +1,72 @@
+<Type Name="Eval" FullName="Microsoft.JScript.Eval">
+  <TypeSignature Language="C#" Value="public sealed class Eval : Microsoft.JScript.AST" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Eval extends Microsoft.JScript.AST" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.Eval" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.JScript.AST</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Wertet JScript-Code. Diese Klasse gehört zur abstract Syntax Tree Kategorie.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="JScriptEvaluate">
+      <MemberSignature Language="C#" Value="public static object JScriptEvaluate (object source, Microsoft.JScript.Vsa.VsaEngine engine);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object JScriptEvaluate(object source, class Microsoft.JScript.Vsa.VsaEngine engine) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.Eval.JScriptEvaluate(System.Object,Microsoft.JScript.Vsa.VsaEngine)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="engine" Type="Microsoft.JScript.Vsa.VsaEngine" />
+      </Parameters>
+      <Docs>
+        <param name="source">Der Code zum Auswerten.</param>
+        <param name="engine">Ein Verweis auf das Skriptmodul zu verwenden, um auszuwerten <c>Quelle</c>.</param>
+        <summary>Wertet den angegebenen JScript-Code durch Verwendung des angegebenen Moduls.</summary>
+        <returns>Das Ergebnis der Auswertung. Wenn <paramref name="source" /> ist keine Zeichenfolge, Rückgabewert <paramref name="source" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="JScriptEvaluate">
+      <MemberSignature Language="C#" Value="public static object JScriptEvaluate (object source, object unsafeOption, Microsoft.JScript.Vsa.VsaEngine engine);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object JScriptEvaluate(object source, object unsafeOption, class Microsoft.JScript.Vsa.VsaEngine engine) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.Eval.JScriptEvaluate(System.Object,System.Object,Microsoft.JScript.Vsa.VsaEngine)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="unsafeOption" Type="System.Object" />
+        <Parameter Name="engine" Type="Microsoft.JScript.Vsa.VsaEngine" />
+      </Parameters>
+      <Docs>
+        <param name="source">Der Code zum Auswerten.</param>
+        <param name="unsafeOption">Das Zeichenfolgenliteral <c>unsafe</c> unsafe Auswertung zu aktivieren, andernfalls <see langword="false" />.</param>
+        <param name="engine">Ein Verweis auf das Skriptmodul zu verwenden, um auszuwerten <c>Quelle</c>.</param>
+        <summary>Wertet den angegebenen JScript-Code unter Verwendung des angegebenen Moduls und die Option Safety an.</summary>
+        <returns>Das Ergebnis der Auswertung. Wenn <paramref name="source" /> ist keine Zeichenfolge, Rückgabewert <paramref name="source" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,387 @@
+<Type Name="SiteMapDataSourceDesigner" FullName="System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner">
+  <TypeSignature Language="C#" Value="public class SiteMapDataSourceDesigner : System.Web.UI.Design.HierarchicalDataSourceDesigner, System.Web.UI.Design.IDataSourceDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SiteMapDataSourceDesigner extends System.Web.UI.Design.HierarchicalDataSourceDesigner implements class System.Web.UI.Design.IDataSourceDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.HierarchicalDataSourceDesigner</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.Design.IDataSourceDesigner</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt Entwurfszeitunterstützung in einem visuellen Designer für das <see cref="T:System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner" />-Steuerelement bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SiteMapDataSourceDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Instanz der <see cref="T:System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRefreshSchema">
+      <MemberSignature Language="C#" Value="public override bool CanRefreshSchema { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanRefreshSchema" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner.CanRefreshSchema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Schema aktualisiert werden kann.</summary>
+        <value>Diese Implementierung gibt immer <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetView">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.Design.DesignerHierarchicalDataSourceView GetView (string viewPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.UI.Design.DesignerHierarchicalDataSourceView GetView(string viewPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner.GetView(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.DesignerHierarchicalDataSourceView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="viewPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="viewPath">Die XPath-Abfrage für den Teil der Datenquelle abgerufen werden soll.</param>
+        <summary>Ruft die <see cref="T:System.Web.UI.Design.DesignerHierarchicalDataSourceView" /> für die angegebene Ansicht.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.Design.DesignerHierarchicalDataSourceView" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetViewNames">
+      <MemberSignature Language="C#" Value="public virtual string[] GetViewNames ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string[] GetViewNames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner.GetViewNames" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft ein Array von Namen darstellt, die mit dem Namen Ansichten in der Datenquelle ab.</summary>
+        <returns>Diese Implementierung immer gibt ein leeres Zeichenfolgenarray zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Benannte Sichten werden in dieser Datenquellen-Designer nicht implementiert. Sichten werden basierend auf einer XPath-Abfrage verwenden, anstatt die Namen abgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die Komponente.</param>
+        <summary>Initialisiert den Designer, und lädt die angegebene Komponente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnComponentChanged">
+      <MemberSignature Language="C#" Value="public override void OnComponentChanged (object sender, System.ComponentModel.Design.ComponentChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnComponentChanged(object sender, class System.ComponentModel.Design.ComponentChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner.OnComponentChanged(System.Object,System.ComponentModel.Design.ComponentChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="System.ComponentModel.Design.ComponentChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Das Objekt, das das Ereignis ausgelöst hat.</param>
+        <param name="e">Ein <see cref="T:System.ComponentModel.Design.ComponentChangedEventArgs" />-Objekt, das Informationen zum Ereignis enthält.</param>
+        <summary>Wird aufgerufen, wenn der zugeordnete Komponente geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner.OnComponentChanged%2A> ruft auch die <xref:System.Web.UI.Design.ControlDesigner.OnComponentChanged%2A> -Methode, die löst die <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanged> Ereignis und außerdem Aufrufe der <xref:System.Web.UI.Design.HierarchicalDataSourceDesigner.OnDataSourceChanged%2A> Methode löst die <xref:System.Web.UI.Design.HierarchicalDataSourceDesigner.DataSourceChanged> Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RefreshSchema">
+      <MemberSignature Language="C#" Value="public override void RefreshSchema (bool preferSilent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RefreshSchema(bool preferSilent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner.RefreshSchema(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="preferSilent" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="preferSilent">
+          <see langword="true" />Vorgang wurde von Datenquellenereignisse unterdrückt, bis die Aktualisierung abgeschlossen werden; andernfalls <see langword="false" />.</param>
+        <summary>Aufgerufen vom Designerhost an das Schema der zugrunde liegenden Datenquelle aktualisiert werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.Design.IDataSourceDesigner.CanConfigure">
+      <MemberSignature Language="C#" Value="bool System.Web.UI.Design.IDataSourceDesigner.CanConfigure { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.UI.Design.IDataSourceDesigner.CanConfigure" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner.System#Web#UI#Design#IDataSourceDesigner#CanConfigure" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Web.UI.Design.IDataSourceDesigner.CanConfigure" />.</summary>
+        <value>
+          <see langword="true" />Wenn die zugrunde liegenden Datenquelle verfügt über einen Konfigurations-Assistenten, die mit gestartet werden kann die <see langword="Configure" /> Methode ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner>-Instanz in eine <xref:System.Web.UI.Design.IDataSourceDesigner>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.Design.IDataSourceDesigner.CanRefreshSchema">
+      <MemberSignature Language="C#" Value="bool System.Web.UI.Design.IDataSourceDesigner.CanRefreshSchema { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.UI.Design.IDataSourceDesigner.CanRefreshSchema" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner.System#Web#UI#Design#IDataSourceDesigner#CanRefreshSchema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="P:System.Web.UI.Design.IDataSourceDesigner.CanRefreshSchema" />.</summary>
+        <value>Immer <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner>-Instanz in eine <xref:System.Web.UI.Design.IDataSourceDesigner>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.Design.IDataSourceDesigner.Configure">
+      <MemberSignature Language="C#" Value="void IDataSourceDesigner.Configure ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.Design.IDataSourceDesigner.Configure() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner.System#Web#UI#Design#IDataSourceDesigner#Configure" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Web.UI.Design.IDataSourceDesigner.Configure" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner>-Instanz in eine <xref:System.Web.UI.Design.IDataSourceDesigner>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.Design.IDataSourceDesigner.GetView">
+      <MemberSignature Language="C#" Value="System.Web.UI.Design.DesignerDataSourceView IDataSourceDesigner.GetView (string viewName);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Web.UI.Design.DesignerDataSourceView System.Web.UI.Design.IDataSourceDesigner.GetView(string viewName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner.System#Web#UI#Design#IDataSourceDesigner#GetView(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.DesignerDataSourceView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="viewName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="viewName">Der Name der abzurufenden Ansicht.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Web.UI.Design.IDataSourceDesigner.GetView(System.String)" />.</summary>
+        <returns>Eine Datenquellen-Designer-Ansicht, die Informationen über die angegebene Ansicht enthält oder <see langword="null" /> Wenn eine Sicht mit dem angegebenen Namen nicht gefunden wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner>-Instanz in eine <xref:System.Web.UI.Design.IDataSourceDesigner>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.Design.IDataSourceDesigner.GetViewNames">
+      <MemberSignature Language="C#" Value="string[] IDataSourceDesigner.GetViewNames ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string[] System.Web.UI.Design.IDataSourceDesigner.GetViewNames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner.System#Web#UI#Design#IDataSourceDesigner#GetViewNames" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Web.UI.Design.IDataSourceDesigner.GetViewNames" />.</summary>
+        <returns>Die Namen von Ansichten in der zugrunde liegenden Datenquelle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner>-Instanz in eine <xref:System.Web.UI.Design.IDataSourceDesigner>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.Design.IDataSourceDesigner.RefreshSchema">
+      <MemberSignature Language="C#" Value="void IDataSourceDesigner.RefreshSchema (bool preferSilent);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.Design.IDataSourceDesigner.RefreshSchema(bool preferSilent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner.System#Web#UI#Design#IDataSourceDesigner#RefreshSchema(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="preferSilent" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="preferSilent">
+          <see langword="true" />unterdrückt Datenquellenereignisse, bis die Aktualisierung abgeschlossen ist.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Web.UI.Design.IDataSourceDesigner.RefreshSchema(System.Boolean)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner>-Instanz in eine <xref:System.Web.UI.Design.IDataSourceDesigner>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.Design.IDataSourceDesigner.ResumeDataSourceEvents">
+      <MemberSignature Language="C#" Value="void IDataSourceDesigner.ResumeDataSourceEvents ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.Design.IDataSourceDesigner.ResumeDataSourceEvents() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner.System#Web#UI#Design#IDataSourceDesigner#ResumeDataSourceEvents" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter<see cref="M:System.Web.UI.Design.IDataSourceDesigner.ResumeDataSourceEvents" /></summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner>-Instanz in eine <xref:System.Web.UI.Design.IDataSourceDesigner>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.Design.IDataSourceDesigner.SuppressDataSourceEvents">
+      <MemberSignature Language="C#" Value="void IDataSourceDesigner.SuppressDataSourceEvents ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.Design.IDataSourceDesigner.SuppressDataSourceEvents() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner.System#Web#UI#Design#IDataSourceDesigner#SuppressDataSourceEvents" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.Web.UI.Design.IDataSourceDesigner.SuppressDataSourceEvents" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner>-Instanz in eine <xref:System.Web.UI.Design.IDataSourceDesigner>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

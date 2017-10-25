@@ -1,0 +1,1262 @@
+<Type Name="XmlSchema" FullName="System.Xml.Schema.XmlSchema">
+  <TypeSignature Language="C#" Value="public class XmlSchema : System.Xml.Schema.XmlSchemaObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlSchema extends System.Xml.Schema.XmlSchemaObject" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Schema.XmlSchema" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-4.5">System.Xml.Schema.XmlSchemaObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Xml.Serialization.XmlRoot("schema", Namespace="http://www.w3.org/2001/XMLSchema")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Eine speicherinterne Darstellung eines XML-Schemas, entsprechend den Angaben im World Wide Web Consortium (W3C) [XML Schema Part 1: Strukturen](http://www.w3.org/TR/xmlschema-1/) und [XML Schema Part 2: Datatypes](http://www.w3.org/TR/xmlschema-2/) Spezifikationen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  -   Verwenden Sie keine Schemata aus unbekannten oder nicht vertrauenswürdigen Quellen oder Speicherorte. Auf diese Weise gefährdet die Sicherheit des Codes.  
+> -   XML-Schemas (auch Inlineschemas) sind von Natur aus anfällig für DOS-Angriffe. Akzeptieren Sie diese nicht in nicht vertrauenswürdigen Szenarien.  
+> -   Ausnahmen, die ausgelöst wird, als Ergebnis der Verwendung der <xref:System.Xml.Schema.XmlSchema> Klasse, z. B. die <xref:System.Xml.Schema.XmlSchemaException> Klasse, die möglicherweise vertraulichen Informationen, die in nicht vertrauenswürdigen Szenarien nicht verfügbar gemacht werden soll. Z. B. die <xref:System.Xml.Schema.XmlSchemaException.SourceUri%2A> Eigenschaft ein <xref:System.Xml.Schema.XmlSchemaException> gibt den URI-Pfad der Schemadatei, die die Ausnahme verursacht hat. Die <xref:System.Xml.Schema.XmlSchemaException.SourceUri%2A> Eigenschaft sollte in nicht vertrauenswürdigen Szenarien nicht verfügbar gemacht werden. Ausnahmen sollten ordnungsgemäß behandelt werden, damit diese vertraulichen Informationen in nicht vertrauenswürdigen Szenarien nicht verfügbar gemacht wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine Schemadefinition.  
+  
+ [!code-cpp[Classic WebData XmlSchema Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlSchema Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlSchema Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlSchema Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlSchema Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlSchema Example/VB/source.vb#1)]  
+  
+ Für das vorhergehende Codebeispiel wird die folgende XML-Datei generiert.  
+  
+ [!code-xml[Classic WebData XmlSchema Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlSchema Example/XML/source.xml#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSchema ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchema.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.Schema.XmlSchema" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttributeFormDefault">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaForm AttributeFormDefault { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.Schema.XmlSchemaForm AttributeFormDefault" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchema.AttributeFormDefault" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("attributeFormDefault")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaForm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Form der Attribute ab, die im Zielnamespace des Schemas deklariert sind, oder legt dieses fest.</summary>
+        <value>Die <see cref="T:System.Xml.Schema.XmlSchemaForm" /> -Wert, der angibt, ob Attribute aus dem Zielnamespace erforderlich sind, mit dem Namespacepräfix qualifiziert werden. Die Standardeinstellung ist <see cref="F:System.Xml.Schema.XmlSchemaForm.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert muss entweder der <xref:System.Xml.Schema.XmlSchemaForm> Werte, die in der folgenden Tabelle gezeigt.  
+  
+|<xref:System.Xml.Schema.XmlSchemaForm>-Wert|Beschreibung|  
+|----------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|  
+|<xref:System.Xml.Schema.XmlSchemaForm.None>|Das Attributformular ist nicht im Schema angegeben.|  
+|<xref:System.Xml.Schema.XmlSchemaForm.Qualified>|Attribute aus dem Zielnamespace müssen mit dem Namespacepräfix qualifiziert werden.|  
+|<xref:System.Xml.Schema.XmlSchemaForm.Unqualified>|Attribute aus dem Zielnamespace sind nicht erforderlich, mit dem Namespacepräfix qualifiziert werden.|  
+  
+ Dieser Wert ist der globale Standardwert für alle im Zielnamespace deklarierten Attribute. Einzelne Attribute können diese Einstellung für den lokalen Gültigkeitsbereich mit überschreiben die `form` Attribut.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttributeGroups">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaObjectTable AttributeGroups { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaObjectTable AttributeGroups" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchema.AttributeGroups" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaObjectTable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert nach der Schemakompilierung aller globalen Attributgruppen im Schema ab.</summary>
+        <value>Eine <see cref="T:System.Xml.Schema.XmlSchemaObjectTable" /> Auflistung aller globalen Attributgruppen im Schema.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaObjectTable Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaObjectTable Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchema.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaObjectTable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert nach der Schemakompilierung für alle Attribute im Schema ab.</summary>
+        <value>Eine <see cref="T:System.Xml.Schema.XmlSchemaObjectTable" /> Auflistung aller Attribute im Schema.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BlockDefault">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaDerivationMethod BlockDefault { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.Schema.XmlSchemaDerivationMethod BlockDefault" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchema.BlockDefault" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("blockDefault")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaDerivationMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <see langword="blockDefault" /> -Typattribut den Standardwert legt der <see langword="block" /> Attribut für Element und komplexe Typen in der <see langword="targetNamespace" /> des Schemas.</summary>
+        <value>Ein <see cref="T:System.Xml.Schema.XmlSchemaDerivationMethod" /> Wert, der die verschiedenen Methoden zum Verhindern von Ableitung darstellt. Der Standardwert ist <see langword="XmlSchemaDerivationMethod.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `block` Attribut wird verhindert, dass eine `complexType` oder Element mit den angegebenen Typ der Ableitung von der verwendeten anstelle von der geerbten `complexType` oder Element. Der Wert dieses Attributs kann entweder eine Leerraum getrennte Liste der Einschränkung, Erweiterung und das Ersetzen oder der Wert darf `#all` oder eine Liste, die eine Teilmenge der Erweiterung, Einschränkung oder Ersetzung ist.  
+  
+ Die folgende Tabelle enthält die möglichen Werte der <xref:System.Xml.Schema.XmlSchemaDerivationMethod>.  
+  
+|Wert|Beschreibung|  
+|-----------|-----------------|  
+|`None`|Standardmäßig gibt es keine Einschränkungen für ableitungen im Schema.|  
+|`Empty`|Überschreibt die Standardmethode für die Ableitung und typableitungen im Schema ermöglicht.|  
+|`Extension`|Standardmäßig können Elemente in diesem Schema durch Erweiterung abgeleitet werden. Gilt nur für Element- und Elemente komplexen Typs.|  
+|`Restriction`|Standardmäßig können Elemente in diesem Schema durch Einschränkung abgeleitet werden.|  
+|`Union`|Standardmäßig können Elemente in diesem Schema durch Union abgeleitet werden. Gilt nur für einfache Typen.|  
+|`List`|Standardmäßig können Elemente in diesem Schema durch Liste abgeleitet werden. Gilt nur für einfache Typen.|  
+|`All`|`#all`. Standardmäßig können Elemente in diesem Schema durch keine Methode abgeleitet werden.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Compile">
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Kompiliert das XML-Schema-Objektmodell (SOM) für die Validierung in Schemainformationen. Wird zur Validierung der syntaktischen und semantischen Struktur des programmgesteuert erstellten SOM verwendet. Semantische Validierung wird während der Kompilierung durchgeführt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Die <xref:System.Xml.Schema.XmlSchema.Compile%2A> Methode ist in Microsoft .NET Framework, Version 2.0, veraltet und wurde ersetzt durch die <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Compile">
+      <MemberSignature Language="C#" Value="public void Compile (System.Xml.Schema.ValidationEventHandler validationEventHandler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Compile(class System.Xml.Schema.ValidationEventHandler validationEventHandler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchema.Compile(System.Xml.Schema.ValidationEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use System.Xml.Schema.XmlSchemaSet for schema compilation and validation. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="validationEventHandler" Type="System.Xml.Schema.ValidationEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="validationEventHandler">Der Ereignishandler für die Validierung, der Informationen zu XML-Schema-Validierungsfehler erhält.</param>
+        <summary>Kompiliert das XML-Schema-Objektmodell (SOM) für die Validierung in Schemainformationen. Wird zur Validierung der syntaktischen und semantischen Struktur des programmgesteuert erstellten SOM verwendet. Semantische Validierung wird während der Kompilierung durchgeführt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Die <xref:System.Xml.Schema.XmlSchema.Compile%2A> Methode ist in Microsoft .NET Framework, Version 2.0, veraltet und wurde ersetzt durch die <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Compile">
+      <MemberSignature Language="C#" Value="public void Compile (System.Xml.Schema.ValidationEventHandler validationEventHandler, System.Xml.XmlResolver resolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Compile(class System.Xml.Schema.ValidationEventHandler validationEventHandler, class System.Xml.XmlResolver resolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchema.Compile(System.Xml.Schema.ValidationEventHandler,System.Xml.XmlResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use System.Xml.Schema.XmlSchemaSet for schema compilation and validation. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="validationEventHandler" Type="System.Xml.Schema.ValidationEventHandler" />
+        <Parameter Name="resolver" Type="System.Xml.XmlResolver" />
+      </Parameters>
+      <Docs>
+        <param name="validationEventHandler">Der Ereignishandler für die Validierung, der Informationen über die XML-Schema-Validierungsfehler erhält.</param>
+        <param name="resolver">Die <see langword="XmlResolver" /> verwendet zum Auflösen von Namespaces verwiesen wird, im <see langword="include" /> und <see langword="import" /> Elemente.</param>
+        <summary>Kompiliert das XML-Schema-Objektmodell (SOM) für die Validierung in Schemainformationen. Wird zur Validierung der syntaktischen und semantischen Struktur des programmgesteuert erstellten SOM verwendet. Semantische Validierung wird während der Kompilierung durchgeführt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das SOM andere Namespaces, die über verweist auf die `import` oder `include` Elemente, die `XmlResolver` wird verwendet, um diese Verweise aufzulösen. Wenn der Konfliktlöser auf `null`, dies bedeutet, dass der Benutzer nicht über das Beheben von ignoriert `import` oder `include` Elemente. In diesem Fall werden die Verweise nicht aufgelöst werden. Der Konfliktlöser wird nicht zwischengespeichert, nach der `Compile` Methode abgeschlossen wird.  
+  
+> [!IMPORTANT]
+>  Die <xref:System.Xml.Schema.XmlSchema.Compile%2A> Methode ist in Microsoft .NET Framework, Version 2.0, veraltet und wurde ersetzt durch die <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A?displayProperty=nameWithType> Methode.  
+  
+> [!IMPORTANT]
+>  Die <xref:System.Xml.Schema.XmlSchema.Compile%2A> -Methode verwendet die <xref:System.Xml.XmlUrlResolver> Klasse externe Schemata in verwiesen wird, importieren Sie aufzunehmende oder Elemente standardmäßig aufgelöst. Sie können die Auflösung externer Schemas deaktivieren, indem bei Übergabe von null als der <xref:System.Xml.XmlResolver> Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementFormDefault">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaForm ElementFormDefault { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.Schema.XmlSchemaForm ElementFormDefault" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchema.ElementFormDefault" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("elementFormDefault")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaForm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Form der Elemente ab, die im Zielnamespace des Schemas deklariert sind, oder legt dieses fest.</summary>
+        <value>Die <see cref="T:System.Xml.Schema.XmlSchemaForm" /> -Wert, der angibt, ob Elemente aus dem Zielnamespace erforderlich sind, mit dem Namespacepräfix qualifiziert werden. Die Standardeinstellung ist <see cref="F:System.Xml.Schema.XmlSchemaForm.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert muss entweder der <xref:System.Xml.Schema.XmlSchemaForm> Werte, die in der folgenden Tabelle gezeigt.  
+  
+|<xref:System.Xml.Schema.XmlSchemaForm>-Wert|Beschreibung|  
+|----------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|  
+|<xref:System.Xml.Schema.XmlSchemaForm.None>|Das Formular Element ist nicht im Schema angegeben.|  
+|<xref:System.Xml.Schema.XmlSchemaForm.Qualified>|Elemente aus dem Zielnamespace müssen mit dem Namespacepräfix qualifiziert werden.|  
+|<xref:System.Xml.Schema.XmlSchemaForm.Unqualified>|Elemente aus dem Zielnamespace sind nicht erforderlich, mit dem Namespacepräfix qualifiziert werden.|  
+  
+ Dieser Wert ist der globale Standardwert für alle im Zielnamespace deklarierten Elemente. Einzelne Elemente können diese Einstellung für einen lokalen Gültigkeitsbereich überschreiben, indem die `form` Attribut.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Elements">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaObjectTable Elements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaObjectTable Elements" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchema.Elements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaObjectTable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert nach der Schemakompilierung für alle Elemente im Schema ab.</summary>
+        <value>Eine <see cref="T:System.Xml.Schema.XmlSchemaObjectTable" /> Auflistung aller Elemente im Schema.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FinalDefault">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaDerivationMethod FinalDefault { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.Schema.XmlSchemaDerivationMethod FinalDefault" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchema.FinalDefault" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("finalDefault")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaDerivationMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <see langword="finalDefault" /> -Typattribut den Standardwert legt der <see langword="final" /> Attribut für Elemente und komplexe Typen im Zielnamespace des Schemas.</summary>
+        <value>Ein <see cref="T:System.Xml.Schema.XmlSchemaDerivationMethod" /> Wert, der die verschiedenen Methoden zum Verhindern von Ableitung darstellt. Der Standardwert ist <see langword="XmlSchemaDerivationMethod.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `final` Attribut wird verhindert, dass der angegebene Typ der Ableitung eines Elements oder komplexen Typ. Dieser Wert darf `#all` oder eine Liste, die eine Teilmenge der Erweiterung oder eines Einschränkungstyps ist.  
+  
+ Die folgende Tabelle enthält die möglichen Werte der <xref:System.Xml.Schema.XmlSchemaDerivationMethod>.  
+  
+|Wert|Beschreibung|  
+|-----------|-----------------|  
+|`None`|Standardmäßig gibt es keine Einschränkungen für ableitungen im Schema.|  
+|`Empty`|Überschreibt die Standardmethode für die Ableitung und typableitungen im Schema ermöglicht.|  
+|`Extension`|Standardmäßig können Elemente in diesem Schema durch Erweiterung abgeleitet werden. Gilt nur für Element- und Elemente komplexen Typs.|  
+|`Restriction`|Standardmäßig können Elemente in diesem Schema durch Einschränkung abgeleitet werden.|  
+|`Union`|Standardmäßig können Elemente in diesem Schema durch Union abgeleitet werden. Gilt nur für einfache Typen.|  
+|`List`|Standardmäßig können Elemente in diesem Schema durch Liste abgeleitet werden. Gilt nur für einfache Typen.|  
+|`All`|`#all`. Standardmäßig können Elemente in diesem Schema durch keine Methode abgeleitet werden.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Groups">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaObjectTable Groups { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaObjectTable Groups" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchema.Groups" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaObjectTable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert nach der Schemakompilierung für alle Gruppen im Schema ab.</summary>
+        <value>Eine <see cref="T:System.Xml.Schema.XmlSchemaObjectTable" /> Auflistung aller Gruppen im Schema.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public string Id { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchema.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("id", DataType="ID")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeichenfolgen-ID ab oder legt diese fest.</summary>
+        <value>Die ID der Zeichenfolge. Der Standardwert ist <see langword="String.Empty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Includes">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaObjectCollection Includes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaObjectCollection Includes" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchema.Includes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("include", typeof(System.Xml.Schema.XmlSchemaInclude))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("import", typeof(System.Xml.Schema.XmlSchemaImport))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("redefine", typeof(System.Xml.Schema.XmlSchemaRedefine))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaObjectCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von enthaltenen und importierten Schemas ab.</summary>
+        <value>Ein <see cref="T:System.Xml.Schema.XmlSchemaObjectCollection" /> enthaltenen und importierten Schemas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Schema.XmlSchemaObjectCollection.Add%2A> Methode erwartet nur <xref:System.Xml.Schema.XmlSchemaExternal> und die abgeleiteten Typen (<xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude>, und <xref:System.Xml.Schema.XmlSchemaRedefine>) als Parameter. Das folgende Beispiel veranschaulicht das Hinzufügen von einem Schema enthalten, um die <xref:System.Xml.Schema.XmlSchema.Includes%2A> einer vorhandenen Auflistung <xref:System.Xml.Schema.XmlSchema> Objekt.  
+  
+```vb  
+Dim schema As XmlSchema = New XmlSchema()  
+  
+Dim textReader As XmlTextReader = New XmlTextReader("include.xsd")  
+Dim includeSchema As XmlSchema = XmlSchema.Read(textReader, null)  
+  
+Dim include As XmlSchemaInclude = New XmlSchemaInclude()  
+include.Schema = includeSchema;  
+schema.Includes.Add(include);  
+```  
+  
+```csharp  
+XmlSchema schema = new XmlSchema();  
+  
+XmlTextReader textReader = new XmlTextReader("include.xsd");  
+XmlSchema includeSchema = XmlSchema.Read(textReader, null);  
+  
+XmlSchemaInclude include = new XmlSchemaInclude();  
+include.Schema = includeSchema;  
+schema.Includes.Add(include);  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceNamespace">
+      <MemberSignature Language="C#" Value="public const string InstanceNamespace;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string InstanceNamespace" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Schema.XmlSchema.InstanceNamespace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Namespace der XML Schema-Instanz. Dieses Feld ist konstant.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCompiled">
+      <MemberSignature Language="C#" Value="public bool IsCompiled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCompiled" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchema.IsCompiled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob das Schema kompiliert wurde.</summary>
+        <value>
+          <see langword="true" />Wenn das Schema kompiliert wurde, andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Items">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaObjectCollection Items { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaObjectCollection Items" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchema.Items" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("annotation", typeof(System.Xml.Schema.XmlSchemaAnnotation))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("attribute", typeof(System.Xml.Schema.XmlSchemaAttribute))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("attributeGroup", typeof(System.Xml.Schema.XmlSchemaAttributeGroup))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("complexType", typeof(System.Xml.Schema.XmlSchemaComplexType))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("simpleType", typeof(System.Xml.Schema.XmlSchemaSimpleType))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("element", typeof(System.Xml.Schema.XmlSchemaElement))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("group", typeof(System.Xml.Schema.XmlSchemaGroup))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("notation", typeof(System.Xml.Schema.XmlSchemaNotation))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaObjectCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Schema-Elemente im Schema und dient zum Hinzufügen von neuen Elementtypen auf die <see langword="schema" /> datenelementebene.</summary>
+        <value>Ein <see cref="T:System.Xml.Schema.XmlSchemaObjectCollection" /> des Schema-Elemente im Schema.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Auflistung der <xref:System.Xml.Schema.XmlSchemaAnnotation>, <xref:System.Xml.Schema.XmlSchemaAttribute>, <xref:System.Xml.Schema.XmlSchemaAttributeGroup>, <xref:System.Xml.Schema.XmlSchemaComplexType>, <xref:System.Xml.Schema.XmlSchemaSimpleType>, <xref:System.Xml.Schema.XmlSchemaElement>, <xref:System.Xml.Schema.XmlSchemaGroup>, oder <xref:System.Xml.Schema.XmlSchemaNotation>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public const string Namespace;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string Namespace" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Schema.XmlSchema.Namespace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der XML Schema-Namespace. Dieses Feld ist konstant.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Notations">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaObjectTable Notations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaObjectTable Notations" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchema.Notations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaObjectTable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert nach der Schemakompilierung für alle Notationen im Schema ab.</summary>
+        <value>Eine <see cref="T:System.Xml.Schema.XmlSchemaObjectTable" /> Auflistung aller Notationen im Schema.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public static System.Xml.Schema.XmlSchema Read (System.IO.Stream stream, System.Xml.Schema.ValidationEventHandler validationEventHandler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.Schema.XmlSchema Read(class System.IO.Stream stream, class System.Xml.Schema.ValidationEventHandler validationEventHandler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchema.Read(System.IO.Stream,System.Xml.Schema.ValidationEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchema</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="validationEventHandler" Type="System.Xml.Schema.ValidationEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der angegebene Datenstrom.</param>
+        <param name="validationEventHandler">Der Ereignishandler für die Validierung, der Informationen zu XML-Schema-Syntaxfehler empfängt.</param>
+        <summary>Liest ein XML-Schema aus dem bereitgestellten Stream.</summary>
+        <returns>Die <see cref="T:System.Xml.Schema.XmlSchema" /> Objekt, das das XML-Schema darstellt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Xml.Schema.XmlSchemaException">Ein <see cref="T:System.Xml.Schema.XmlSchemaException" /> wird ausgelöst, wenn keine <see cref="T:System.Xml.Schema.ValidationEventHandler" /> angegeben ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public static System.Xml.Schema.XmlSchema Read (System.IO.TextReader reader, System.Xml.Schema.ValidationEventHandler validationEventHandler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.Schema.XmlSchema Read(class System.IO.TextReader reader, class System.Xml.Schema.ValidationEventHandler validationEventHandler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchema.Read(System.IO.TextReader,System.Xml.Schema.ValidationEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchema</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.IO.TextReader" />
+        <Parameter Name="validationEventHandler" Type="System.Xml.Schema.ValidationEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Die <see langword="TextReader" /> mit dem XML-Schema, zu lesen.</param>
+        <param name="validationEventHandler">Der Ereignishandler für die Validierung, der Informationen über die XML-Schema-Syntaxfehler empfängt.</param>
+        <summary>Liest ein XML-Schema aus dem bereitgestellten <see cref="T:System.IO.TextReader" />.</summary>
+        <returns>Die <see cref="T:System.Xml.Schema.XmlSchema" /> Objekt, das das XML-Schema darstellt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Xml.Schema.XmlSchemaException">Ein <see cref="T:System.Xml.Schema.XmlSchemaException" /> wird ausgelöst, wenn keine <see cref="T:System.Xml.Schema.ValidationEventHandler" /> angegeben ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public static System.Xml.Schema.XmlSchema Read (System.Xml.XmlReader reader, System.Xml.Schema.ValidationEventHandler validationEventHandler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.Schema.XmlSchema Read(class System.Xml.XmlReader reader, class System.Xml.Schema.ValidationEventHandler validationEventHandler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchema.Read(System.Xml.XmlReader,System.Xml.Schema.ValidationEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchema</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="validationEventHandler" Type="System.Xml.Schema.ValidationEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Die <see langword="XmlReader" /> mit dem XML-Schema, zu lesen.</param>
+        <param name="validationEventHandler">Der Ereignishandler für die Validierung, der Informationen über die XML-Schema-Syntaxfehler empfängt.</param>
+        <summary>Liest ein XML-Schema aus dem bereitgestellten <see cref="T:System.Xml.XmlReader" />.</summary>
+        <returns>Die <see cref="T:System.Xml.Schema.XmlSchema" /> Objekt, das das XML-Schema darstellt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Xml.Schema.XmlSchemaException">Ein <see cref="T:System.Xml.Schema.XmlSchemaException" /> wird ausgelöst, wenn keine <see cref="T:System.Xml.Schema.ValidationEventHandler" /> angegeben ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SchemaTypes">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaObjectTable SchemaTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaObjectTable SchemaTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchema.SchemaTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaObjectTable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert nach der Schemakompilierung für alle Schematypen im Schema ab.</summary>
+        <value>Ein <see cref="T:System.Xml.Schema.XmlSchemaObjectCollection" /> für alle Schematypen im Schema.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetNamespace">
+      <MemberSignature Language="C#" Value="public string TargetNamespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetNamespace" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchema.TargetNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("targetNamespace", DataType="anyURI")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den URI (Uniform Resource Identifier) des Zielnamespaces des Schemas ab oder legt diesen fest.</summary>
+        <value>Der Zielnamespace des Schemas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Schema.XmlSchema.TargetNamespace%2A> ist der Namespace, der alle Schemakomponenten in diesem Schema als auch für jedes Schema enthalten, mit der `include` Element. Enthaltenen Schemas müssen Sie den gleichen Zielnamespace wie das enthaltende Schema haben oder keinen Zielnamespace angegeben haben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnhandledAttributes">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlAttribute[] UnhandledAttributes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlAttribute[] UnhandledAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchema.UnhandledAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAnyAttribute</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlAttribute[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die qualifizierten Attribute ab, die nicht zum Zielnamespace des Schemas gehören, oder legt diese fest.</summary>
+        <value>Ein Array von qualifizierten <see cref="T:System.Xml.XmlAttribute" /> Zielnamespace für Objekte, die nicht dem Schema gehören.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public string Version { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Version" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchema.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("version", DataType="token")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Version des Schemas ab oder legt diese fest.</summary>
+        <value>Die Version des Schemas. Der Standardwert ist <see langword="String.Empty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchema.Write(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der angegebene Datenstrom.</param>
+        <summary>Schreibt das XML-Schema in den bereitgestellten Datenstream.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (System.IO.TextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(class System.IO.TextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchema.Write(System.IO.TextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.IO.TextWriter" />, in den geschrieben werden soll.</param>
+        <summary>Schreibt das XML-Schema in das angegebene <see cref="T:System.IO.TextWriter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchema.Write(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Xml.XmlWriter" />, in den geschrieben werden soll.</param>
+        <summary>Schreibt das XML-Schema in das angegebene <see cref="T:System.Xml.XmlWriter" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="writer" /> -Parameter ist null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (System.IO.Stream stream, System.Xml.XmlNamespaceManager namespaceManager);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(class System.IO.Stream stream, class System.Xml.XmlNamespaceManager namespaceManager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchema.Write(System.IO.Stream,System.Xml.XmlNamespaceManager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="namespaceManager" Type="System.Xml.XmlNamespaceManager" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der angegebene Datenstrom.</param>
+        <param name="namespaceManager">Die <see cref="T:System.Xml.XmlNamespaceManager" />.</param>
+        <summary>Schreibt das XML-Schema in das angegebene <see cref="T:System.IO.Stream" /> mithilfe der <see cref="T:System.Xml.XmlNamespaceManager" /> angegebenen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Angeben einer <xref:System.Xml.XmlNamespaceManager> deaktiviert die automatische Namespace-Präfix-Zuordnung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (System.IO.TextWriter writer, System.Xml.XmlNamespaceManager namespaceManager);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(class System.IO.TextWriter writer, class System.Xml.XmlNamespaceManager namespaceManager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchema.Write(System.IO.TextWriter,System.Xml.XmlNamespaceManager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+        <Parameter Name="namespaceManager" Type="System.Xml.XmlNamespaceManager" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.IO.TextWriter" />, in den geschrieben werden soll.</param>
+        <param name="namespaceManager">Die <see cref="T:System.Xml.XmlNamespaceManager" />.</param>
+        <summary>Schreibt das XML-Schema in das angegebene <see cref="T:System.IO.TextWriter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Angeben einer <xref:System.Xml.XmlNamespaceManager> deaktiviert die automatische Namespace-Präfix-Zuordnung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (System.Xml.XmlWriter writer, System.Xml.XmlNamespaceManager namespaceManager);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(class System.Xml.XmlWriter writer, class System.Xml.XmlNamespaceManager namespaceManager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchema.Write(System.Xml.XmlWriter,System.Xml.XmlNamespaceManager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="namespaceManager" Type="System.Xml.XmlNamespaceManager" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Xml.XmlWriter" />, in den geschrieben werden soll.</param>
+        <param name="namespaceManager">Die <see cref="T:System.Xml.XmlNamespaceManager" />.</param>
+        <summary>Schreibt das XML-Schema in das angegebene <see cref="T:System.Xml.XmlWriter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Angeben einer <xref:System.Xml.XmlNamespaceManager> deaktiviert die automatische Namespace-Präfix-Zuordnung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

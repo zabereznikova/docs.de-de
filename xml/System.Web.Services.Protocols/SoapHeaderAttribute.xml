@@ -1,0 +1,190 @@
+<Type Name="SoapHeaderAttribute" FullName="System.Web.Services.Protocols.SoapHeaderAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SoapHeaderAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SoapHeaderAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.SoapHeaderAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, AllowMultiple=true, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Dieses Attribut wird angewendet, um eine XML-Webdienstmethode oder einen XML-Webdienstclient einen SOAP-Header angeben, den die XML-Webdienstmethode oder XML-Webdienstclient verarbeiten kann. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die grundlegenden Schritte zum Empfangen und verarbeiten ein SOAP-Headers sind:  
+  
+1.  Erstellen Sie eine Klasse ableiten von <xref:System.Web.Services.Protocols.SoapHeader> Darstellung der Daten in den SOAP-Header übergeben.  
+  
+2.  Fügen Sie ein Element der XML-Webdienste-Dienstklasse oder XML Web Service-Clientproxyklasse des Typs, der in Schritt 1 erstellt haben.  
+  
+3.  Anwenden einer <xref:System.Web.Services.Protocols.SoapHeaderAttribute> angeben von XML-Webdienstmethode oder die entsprechende Methode in der Proxyklasse, das in Schritt 2 erstellte Element der <xref:System.Web.Services.Protocols.SoapHeaderAttribute.MemberName%2A> Eigenschaft.  
+  
+4.  Im XML-Webdienstmethode oder XML Web Service-Clientcode, Zugriff auf die <xref:System.Web.Services.Protocols.SoapHeaderAttribute.MemberName%2A> Eigenschaft zum Verarbeiten der Daten in den SOAP-Header gesendet wurden.  
+  
+ Weitere Informationen finden Sie unter der <xref:System.Web.Services.Protocols.SoapHeaderAttribute.MemberName%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Die folgenden `MyWebService` XML-Webdienst definiert eine <xref:System.Web.Services.Protocols.SoapHeader> vom Typ `MyHeader`. Die `Hello` XML-Webdienstmethode erfordert, dass der Client zum Aufrufen der XML-Webdienstmethode mit diesem <xref:System.Web.Services.Protocols.SoapHeader>. Die `Hello` XML-Webdienst fängt darüber hinaus alle SOAP-Header außer `MyHeader`.  
+  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapHeaderAttribute (string memberName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string memberName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapHeaderAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="memberName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="memberName">Das Element der XML-Webdienstklasse, die den Inhalt des SOAP-Headers darstellt. Die <see cref="P:System.Web.Services.Protocols.SoapHeaderAttribute.MemberName" /> Eigenschaft wird auf den Wert dieses Parameters festgelegt werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Services.Protocols.SoapHeaderAttribute" /> Klasse, indem das Element der XML-Webdienstklasse, die den Inhalt des SOAP-Headers darstellt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein XML-Webdienstclient oder XML-Webdienst angeben kann die SOAP-Header, die sie verarbeiten, für bestimmte XML-Webdienstmethoden möchte durch Anwenden einer <xref:System.Web.Services.Protocols.SoapHeaderAttribute> an die XML-Webdienstmethode in der XML-Webdienstklasse oder die entsprechende Methode in der Proxyklasse. In der Reihenfolge für die XML-Webdienstmethode den Inhalt des SOAP-Headers empfängt, ist ein Mitglied hinzugefügt, auf die XML-Webdienste-Dienstklasse der eine <xref:System.Type> abgeleitet <xref:System.Web.Services.Protocols.SoapHeader>. Entsprechend fügt XML-Webdienstclient ein Mitglied auf die Proxyklasse ableiten <xref:System.Web.Services.Protocols.SoapHeader>. <xref:System.Type> Abgeleitete <xref:System.Web.Services.Protocols.SoapHeader> stellt den Inhalt des SOAP-Headers dar und wird erstellt, indem der Entwickler der XML-Webdienst oder XML-Webdienstclient, der den SOAP-Header empfangen möchte. Sobald die Klasse erstellt wird, eine <xref:System.Web.Services.Protocols.SoapHeaderAttribute> kann angewendet werden, um die XML-Webdienstmethode oder die entsprechende Methode in der XML-Web Service Client Proxy angibt, die das Element zum Empfangen des SOAP-Headers mit den Inhalt der `memberName` Parameter für diesen Konstruktor oder die <xref:System.Web.Services.Protocols.SoapHeaderAttribute.MemberName%2A> Eigenschaft.  
+  
+ Eine XML-Webdienstmethode kann mehrere SOAP-Header empfangen, indem die XML-Webdienste-Dienstklasse oder den XML-Webdienst-Proxyklasse mehrere Elemente hinzugefügt und wiederum Anwenden mehrerer <xref:System.Web.Services.Protocols.SoapHeaderAttribute> -Attribute verwenden, um die XML-Webdienstmethode.  
+  
+ Geben Sie zum Empfangen und Verarbeiten von unbekannten SOAP-Header zum Zeitpunkt der XML-Webdienst wird geschrieben, die <xref:System.Type> des Elements entweder <xref:System.Web.Services.Protocols.SoapUnknownHeader>, <xref:System.Web.Services.Protocols.SoapHeader> oder ein Array der Klasse.  
+  
+   
+  
+## Examples  
+ Die folgenden `MyWebService` XML-Webdienst definiert eine <xref:System.Web.Services.Protocols.SoapHeader> vom Typ `MyHeader`. Die `Hello` XML-Webdienstmethode gibt an, die `myHeader` Element als der <xref:System.Web.Services.Protocols.SoapHeaderAttribute.MemberName%2A> Eigenschaft, um den Inhalt des empfängt `MyHeader` SOAP-Header in der XML-Webdienstmethode übergeben.  
+  
+ [!code-cpp[Classic SoapHeaderAttribute.MemberName Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic SoapHeaderAttribute.MemberName Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic SoapHeaderAttribute.MemberName Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic SoapHeaderAttribute.MemberName Example/CS/source.cs#1)]
+ [!code-vb[Classic SoapHeaderAttribute.MemberName Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic SoapHeaderAttribute.MemberName Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Direction">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Protocols.SoapHeaderDirection Direction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Services.Protocols.SoapHeaderDirection Direction" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapHeaderAttribute.Direction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.SoapHeaderDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob der SOAP-Header für den XML-Webdienst oder XML-Webdienstclient oder beides vorgesehen ist.</summary>
+        <value>Der beabsichtigte Empfänger des SOAP-Headers. Die Standardeinstellung ist <see cref="F:System.Web.Services.Protocols.SoapHeaderDirection.In" />, was bedeutet, dass den vorgesehenen Empfänger ist nur der XML-Webdienst.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Die folgenden `MyWebService` XML-Webdienst definiert eine <xref:System.Web.Services.Protocols.SoapHeader> vom Typ `MyHeader`. Die `Hello` XML-Webdienstmethode gibt an, dass `MyHeader` müssen für die XML-Webdienstmethode und den Client an die XML-Webdienste-Webdienstmethode gesendet werden.  
+  
+ [!code-cpp[Classic SoapHeaderAttribute.MemberName Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic SoapHeaderAttribute.MemberName Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic SoapHeaderAttribute.MemberName Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic SoapHeaderAttribute.MemberName Example/CS/source.cs#1)]
+ [!code-vb[Classic SoapHeaderAttribute.MemberName Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic SoapHeaderAttribute.MemberName Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberName">
+      <MemberSignature Language="C#" Value="public string MemberName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MemberName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapHeaderAttribute.MemberName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Element der XML-Webdienstklasse, die den Inhalt des SOAP-Headers darstellt.</summary>
+        <value>Das Element der XML-Webdienstklasse, die den Inhalt des SOAP-Headers darstellt. Es ist kein Standardwert vorhanden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein XML-Webdienst oder XML-Webdienstclient festlegbaren die SOAP-Header, die sie durch Anwenden von verarbeiten möchte eine <xref:System.Web.Services.Protocols.SoapHeaderAttribute> an die XML-Webdienstmethode in der XML-Webdienstklasse oder die entsprechende Methode in der Proxyklasse. In der Reihenfolge für die XML-Webdienstmethode den Inhalt des SOAP-Headers empfängt, ist ein Mitglied hinzugefügt, auf die XML-Webdienste-Dienstklasse von einem Typ abgeleitet wurde. <xref:System.Web.Services.Protocols.SoapHeader>. Entsprechend fügt XML-Webdienstclient ein Mitglied auf die Proxyklasse ableiten <xref:System.Web.Services.Protocols.SoapHeader>. Die <xref:System.Type> abgeleitete <xref:System.Web.Services.Protocols.SoapHeader> stellt den Inhalt des SOAP-Headers dar und wird erstellt, indem der Entwickler der XML-Webdienst oder XML-Webdienstclient, der den SOAP-Header empfangen möchte. Sobald die Klasse erstellt wird, eine <xref:System.Web.Services.Protocols.SoapHeaderAttribute> angewendet werden können, auf die XML-Webdienstmethode oder die entsprechende Methode in der XML-Webdienste-Dienst-Client-Proxyklasse angeben der Element, um den Inhalt des SOAP-Headers mit empfangen die <xref:System.Web.Services.Protocols.SoapHeaderAttribute.MemberName%2A> Eigenschaft.  
+  
+ Eine XML-Webdienstmethode kann mehrere SOAP-Header empfangen, indem die XML-Webdienste-Dienstklasse oder den XML-Webdienst-Proxyklasse mehrere Elemente hinzugefügt und wiederum Anwenden mehrerer <xref:System.Web.Services.Protocols.SoapHeaderAttribute> -Attribute verwenden, um die XML-Webdienstmethode.  
+  
+ Geben Sie zum Empfangen und Verarbeiten von unbekannten SOAP-Header zum Zeitpunkt der XML-Webdienst wird geschrieben, den Typ des Elements entweder <xref:System.Web.Services.Protocols.SoapUnknownHeader>, <xref:System.Web.Services.Protocols.SoapHeader> oder ein Array der Klasse.  
+  
+   
+  
+## Examples  
+ Die folgenden `MyWebService` XML-Webdienst definiert eine <xref:System.Web.Services.Protocols.SoapHeader> vom Typ `MyHeader`. Die `Hello` XML-Webdienstmethode gibt an, die `myHeader` Element als der <xref:System.Web.Services.Protocols.SoapHeaderAttribute.MemberName%2A> Eigenschaft, um den Inhalt des empfängt `MyHeader` SOAP-Header in der XML-Webdienstmethode übergeben.  
+  
+ [!code-cpp[Classic SoapHeaderAttribute.MemberName Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic SoapHeaderAttribute.MemberName Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic SoapHeaderAttribute.MemberName Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic SoapHeaderAttribute.MemberName Example/CS/source.cs#1)]
+ [!code-vb[Classic SoapHeaderAttribute.MemberName Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic SoapHeaderAttribute.MemberName Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Required">
+      <MemberSignature Language="C#" Value="public bool Required { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Required" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapHeaderAttribute.Required" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This property will be removed from a future version. The presence of a particular header in a SOAP message is no longer enforced", false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Member ist veraltet und hat keine Funktion.</summary>
+        <value>Ein <see cref="T:System.Boolean" />-Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um sicherzustellen, dass ein SOAP-Header an einen XML-Webdienst gesendet wird, vergewissern Sie sich, dass das Element im angegebenen der <xref:System.Web.Services.Protocols.SoapHeaderAttribute.MemberName%2A> Eigenschaft ist `null`. Ist er `null`, der SOAP-Header wurde nicht gesendet.  
+  
+ In .NET Framework SDK, Version 1.0 der <xref:System.Web.Services.Protocols.SoapHeaderAttribute.Required%2A> Eigenschaft gibt an, ob ein SOAP-Header erkannt und vom XML-Webdienst oder XML-Webdienstclient verarbeitet werden muss. Wenn ein Empfänger den SOAP-Header nicht verarbeitet, wurde eine Ausnahme ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,74 @@
+<Type Name="PreviousTrackingServiceAttribute" FullName="System.Workflow.Runtime.Tracking.PreviousTrackingServiceAttribute">
+  <TypeSignature Language="C#" Value="public sealed class PreviousTrackingServiceAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PreviousTrackingServiceAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Tracking.PreviousTrackingServiceAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt den Typ des <see cref="T:System.Workflow.Runtime.Tracking.TrackingService" /> an, der vor der aktuellen Version verwendet wurde.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Wenn eine Assembly, die eine neue Version einer <xref:System.Workflow.Runtime.Tracking.TrackingService>-Implementierung enthält, bereitgestellt wird, wird dieses Attribut für die neue Version der Überwachungsdienstklasse übernommen, um die Assembly der früheren Version zu identifizieren. Dies ermöglicht es der Laufzeit, den neueren Überwachungsdienst für Workflows zu verwenden, die beim Verwenden der früheren Version des Überwachungsdiensts beibehalten, nach der Implementierung der neuen Version aber fortgesetzt werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PreviousTrackingServiceAttribute (string assemblyQualifiedName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string assemblyQualifiedName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.PreviousTrackingServiceAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="assemblyQualifiedName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="assemblyQualifiedName">Ein <see cref="T:System.String" />, der einen vollqualifizierten Assemblynamen enthält, der die frühere Version des Überwachungsdiensts identifiziert.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Workflow.Runtime.Tracking.PreviousTrackingServiceAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyQualifiedName">
+      <MemberSignature Language="C#" Value="public string AssemblyQualifiedName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AssemblyQualifiedName" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.PreviousTrackingServiceAttribute.AssemblyQualifiedName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den vollqualifizierten Assemblynamen des früheren Versionsüberwachungsdiensts ab, den diese Version ersetzt.</summary>
+        <value>Ein <see cref="T:System.String" />, der den vollqualifizierten Assemblynamen enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

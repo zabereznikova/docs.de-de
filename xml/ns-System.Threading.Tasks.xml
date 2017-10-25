@@ -1,0 +1,6 @@
+<Namespace Name="System.Threading.Tasks">
+  <Docs>
+    <summary>Die <see langword="System.Threading.Tasks" /> Namespace enthält Typen, die das Schreiben von gleichzeitigem und asynchronem Code vereinfachen. Die wichtigsten Typen sind <see cref="T:System.Threading.Tasks.Task" /> der einen asynchronen Vorgang, der auf die gewartet werden kann und die abgebrochen wird, darstellt und <see cref="T:System.Threading.Tasks.Task`1" />, dies ist eine Aufgabe, die einen Wert zurückgeben kann. Die <see cref="T:System.Threading.Tasks.TaskFactory" /> -Klasse stellt statische Methoden zum Erstellen und Starten von Aufgaben, und die <see cref="T:System.Threading.Tasks.TaskScheduler" /> Klasse enthält die Planung der Infrastruktur des standardthreads.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

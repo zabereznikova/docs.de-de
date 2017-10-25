@@ -1,0 +1,53 @@
+<Type Name="IsConst" FullName="System.Runtime.CompilerServices.IsConst">
+  <TypeSignature Language="C#" Value="public static class IsConst" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit IsConst extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.CompilerServices.IsConst" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt an, dass der geänderte Typ hat einen <see langword="const" /> Modifizierer. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Microsoft C++-Compiler gibt diesen Modifizierer aus, in Metadaten für die einzelnen Parameter Rückgabetyp oder als Objektdeklaration deklariert `const` im Quellcode.  
+  
+ Compiler geben benutzerdefinierte Modifizierer innerhalb der Metadaten zum Ändern der Darstellungsweise der Just-in-Time-Compiler (JIT)-Werte behandelt, wenn das Standardverhalten nicht zulässig ist.  Stößt der JIT-Compiler einen benutzerdefinierten Modifizierer, behandelt den Wert, der angibt, der Modifizierer wie.  Compiler können Anwenden von benutzerdefinierten Modifizierer auf Methoden, Parameter und Rückgabewerte.  Der JIT-Compiler, erforderlichen Modifizierern reagieren muss jedoch optionale Modifizierer ignorieren kann.  
+  
+ Sie können benutzerdefinierte Modifizierer in Metadaten, die mit einer der folgenden Methoden ausgeben:  
+  
+-   Mithilfe der Methoden in der <xref:System.Reflection.Emit.TypeBuilder> -Klasse wie z. B. <xref:System.Reflection.Emit.TypeBuilder.DefineMethod%2A>, <xref:System.Reflection.Emit.TypeBuilder.DefineField%2A>, <xref:System.Reflection.Emit.TypeBuilder.DefineConstructor%2A>, und <xref:System.Reflection.Emit.TypeBuilder.DefineProperty%2A>.  
+  
+-   Generieren eine Anweisungsdatei Microsoft intermediate Language (MSIL), die Aufrufe enthält `modopt` und `modreq`, und Assemblieren der Datei mit den [Ilasm.exe (IL-Assembler)](~/docs/framework/tools/ilasm-exe-il-assembler.md).  
+  
+-   Verwenden die nicht verwaltete Reflektions-API.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie zum Ausgeben einer <xref:System.Runtime.CompilerServices.IsConst> Objekt in eine Assembly über Reflektion ermöglicht.  
+  
+ [!code-cpp[Runtime.CompilerServices.IsConst#1](~/samples/snippets/cpp/VS_Snippets_CLR/Runtime.CompilerServices.IsConst/cpp/sample.cpp#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

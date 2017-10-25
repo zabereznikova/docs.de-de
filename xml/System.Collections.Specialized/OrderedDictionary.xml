@@ -1,0 +1,1211 @@
+<Type Name="OrderedDictionary" FullName="System.Collections.Specialized.OrderedDictionary">
+  <TypeSignature Language="C#" Value="public class OrderedDictionary : System.Collections.IDictionary, System.Collections.Specialized.IOrderedDictionary, System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit OrderedDictionary extends System.Object implements class System.Collections.ICollection, class System.Collections.IDictionary, class System.Collections.IEnumerable, class System.Collections.Specialized.IOrderedDictionary, class System.Runtime.Serialization.IDeserializationCallback, class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Specialized.OrderedDictionary" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections.Specialized</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IDictionary</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Specialized.IOrderedDictionary</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.IDeserializationCallback</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Auflistung von Schlüssel-Wert-Paaren dar, auf die nach Schlüssel oder Index zugegriffen werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jedes Element ist ein Schlüssel/Wert-Paar in gespeicherten ein <xref:System.Collections.DictionaryEntry> Objekt. Ein Schlüssel kann nicht `null`, aber ein Wert sein kann.  
+  
+ Die Elemente eines ein <xref:System.Collections.Specialized.OrderedDictionary> nicht sortiert sind, nach dem Schlüssel im Gegensatz zu den Elementen von einer <xref:System.Collections.Generic.SortedDictionary%602> Klasse. Sie können Elemente zugreifen, durch den Schlüssel oder über den Index.  
+  
+ Die `foreach` -Anweisung der Programmiersprache c# (`For Each` in Visual Basic) zurück-Objekte, die den Typ jedes Elements in der Auflistung. Da jedes Element von der <xref:System.Collections.Specialized.OrderedDictionary> Auflistung ist ein Schlüssel/Wert-Paar, der Elementtyp nicht den Typ des Schlüssels oder den Typ des Werts. Stattdessen der Elementtyp ist <xref:System.Collections.DictionaryEntry>. Der folgende Code zeigt, c#, Visual Basic und C++-Syntax.  
+  
+ [!code-cpp[System.Collections.Specialized.OrderedDictionary1#06](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/cpp/source2.cpp#06)]
+ [!code-csharp[System.Collections.Specialized.OrderedDictionary1#06](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/CS/source2.cs#06)]
+ [!code-vb[System.Collections.Specialized.OrderedDictionary1#06](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/VB/source2.vb#06)]  
+  
+ Die `foreach` Anweisung ist ein Wrapper um den Enumerator, der nur das Lesen aus nicht das Schreiben auf die Auflistung zulässt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, die Erstellung, Auffüllung und Änderung von ein <xref:System.Collections.Specialized.OrderedDictionary> Auflistung sowie zwei Techniken, mit denen Anzeige der Inhalte des der <xref:System.Collections.Specialized.OrderedDictionary>: einer mit der <xref:System.Collections.Specialized.OrderedDictionary.Keys%2A> und <xref:System.Collections.Specialized.OrderedDictionary.Values%2A> Eigenschaften und die andere Erstellen eines Enumerators durch den <xref:System.Collections.Specialized.OrderedDictionary.GetEnumerator%2A> Methode.  
+  
+ [!code-cpp[System.Collections.Specialized.OrderedDictionary1#00](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/cpp/ordereddictionary1.cpp#00)]
+ [!code-csharp[System.Collections.Specialized.OrderedDictionary1#00](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/CS/OrderedDictionary1.cs#00)]
+ [!code-vb[System.Collections.Specialized.OrderedDictionary1#00](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/VB/OrderedDictionary1.vb#00)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OrderedDictionary ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.OrderedDictionary.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Collections.Specialized.OrderedDictionary" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Vergleich bestimmt, ob zwei Schlüssel gleich sind. Jeder Schlüssel im einem <xref:System.Collections.Specialized.OrderedDictionary> Auflistung muss eindeutig sein. Ist der Standardvergleich-Implementierung eines Schlüssels <xref:System.Object.Equals%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Erstellen und Auffüllen von einer <xref:System.Collections.Specialized.OrderedDictionary> Auflistung. Dieser Code ist Teil eines umfangreicheren Beispiels, die am angezeigt werden können <xref:System.Collections.Specialized.OrderedDictionary>.  
+  
+ [!code-cpp[System.Collections.Specialized.OrderedDictionary1#01](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/cpp/ordereddictionary1.cpp#01)]
+ [!code-csharp[System.Collections.Specialized.OrderedDictionary1#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/CS/OrderedDictionary1.cs#01)]
+ [!code-vb[System.Collections.Specialized.OrderedDictionary1#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/VB/OrderedDictionary1.vb#01)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OrderedDictionary (System.Collections.IEqualityComparer comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.IEqualityComparer comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.OrderedDictionary.#ctor(System.Collections.IEqualityComparer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="comparer" Type="System.Collections.IEqualityComparer" />
+      </Parameters>
+      <Docs>
+        <param name="comparer">Der <see cref="T:System.Collections.IComparer" />, mit dem ermittelt wird, ob zwei Schlüssel gleich sind.  
+  
+ - oder -   
+  
+ <see langword="null" />, wenn der Standardcomparer verwendet werden soll. Dies ist die jeweilige <see cref="M:System.Object.Equals(System.Object)" />-Implementierung eines Schlüssels.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Collections.Specialized.OrderedDictionary" />-Klasse anhand des angegebenen Vergleichs.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Vergleich bestimmt, ob zwei Schlüssel gleich sind. Jeder Schlüssel im einem <xref:System.Collections.Specialized.OrderedDictionary> Auflistung muss eindeutig sein. Ist der Standardvergleich-Implementierung eines Schlüssels <xref:System.Object.Equals%2A?displayProperty=nameWithType>.  
+  
+ Der benutzerdefinierte Vergleich ermöglicht Szenarien wie Suchvorgänge mit der Groß-/ Kleinschreibung durchführen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OrderedDictionary (int capacity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 capacity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.OrderedDictionary.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="capacity" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="capacity">Die anfängliche Anzahl von Elementen, die die <see cref="T:System.Collections.Specialized.OrderedDictionary" />-Auflistung enthalten kann.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Collections.Specialized.OrderedDictionary" />-Klasse anhand der angegebenen Anfangskapazität.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Vergleich bestimmt, ob zwei Schlüssel gleich sind. Jeder Schlüssel im einem <xref:System.Collections.Specialized.OrderedDictionary> Auflistung muss eindeutig sein. Ist der Standardvergleich-Implementierung eines Schlüssels <xref:System.Object.Equals%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OrderedDictionary (int capacity, System.Collections.IEqualityComparer comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 capacity, class System.Collections.IEqualityComparer comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.OrderedDictionary.#ctor(System.Int32,System.Collections.IEqualityComparer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="capacity" Type="System.Int32" />
+        <Parameter Name="comparer" Type="System.Collections.IEqualityComparer" />
+      </Parameters>
+      <Docs>
+        <param name="capacity">Die anfängliche Anzahl von Elementen, die die <see cref="T:System.Collections.Specialized.OrderedDictionary" />-Auflistung enthalten kann.</param>
+        <param name="comparer">Der <see cref="T:System.Collections.IComparer" />, mit dem ermittelt wird, ob zwei Schlüssel gleich sind.  
+  
+ - oder -   
+  
+ <see langword="null" />, wenn der Standardcomparer verwendet werden soll. Dies ist die jeweilige <see cref="M:System.Object.Equals(System.Object)" />-Implementierung eines Schlüssels.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Collections.Specialized.OrderedDictionary" />-Klasse anhand der angegebenen Anfangskapazität und des angegebenen Comparers.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Vergleich bestimmt, ob zwei Schlüssel gleich sind. Jeder Schlüssel im einem <xref:System.Collections.Specialized.OrderedDictionary> Auflistung muss eindeutig sein. Ist der Standardvergleich-Implementierung eines Schlüssels <xref:System.Object.Equals%2A?displayProperty=nameWithType>.  
+  
+ Der benutzerdefinierte Vergleich ermöglicht Szenarien wie Suchvorgänge mit der Groß-/ Kleinschreibung durchführen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected OrderedDictionary (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.OrderedDictionary.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Ein <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Objekt mit den zum Serialisieren der <see cref="T:System.Collections.Specialized.OrderedDictionary" />-Auflistung erforderlichen Informationen.</param>
+        <param name="context">Ein <see cref="T:System.Runtime.Serialization.StreamingContext" />-Objekt mit der Quelle und dem Ziel des entsprechenden serialisierten Streams für <see cref="T:System.Collections.Specialized.OrderedDictionary" />.</param>
+        <summary>Initialisiert eine neue Instanz der serialisierbaren <see cref="T:System.Collections.Specialized.OrderedDictionary" />-Klasse anhand des angegebenen <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Objekts und <see cref="T:System.Runtime.Serialization.StreamingContext" />-Objektes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Vergleich bestimmt, ob zwei Schlüssel gleich sind. Jeder Schlüssel im einem <xref:System.Collections.Specialized.OrderedDictionary> Auflistung muss eindeutig sein. Ist der Standardvergleich-Implementierung eines Schlüssels <xref:System.Object.Equals%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (object key, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(object key, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.OrderedDictionary.Add(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel des hinzuzufügenden Eintrags.</param>
+        <param name="value">Der Wert des hinzuzufügenden Eintrags. Dieser Wert kann <see langword="null" /> sein.</param>
+        <summary>Fügt der <see cref="T:System.Collections.Specialized.OrderedDictionary" />-Auflistung am kleinsten verfügbaren Index einen Eintrag mit dem angegebenen Schlüssel und Wert hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Schlüssel kann nicht `null`, aber ein Wert sein kann.  
+  
+ Können Sie auch die <xref:System.Collections.Specialized.OrderedDictionary.Item%2A> zum Hinzufügen neuer Elemente durch Festlegen des Werts eines Schlüssels, die Eigenschaft ist nicht vorhanden, der <xref:System.Collections.Specialized.OrderedDictionary> Auflistung jedoch, wenn der angegebene Schlüssel bereits vorhanden ist die <xref:System.Collections.Specialized.OrderedDictionary>wird durch das Festlegen der <xref:System.Collections.Specialized.OrderedDictionary.Item%2A> Eigenschaft überschreibt der alte Wert. Im Gegensatz dazu die <xref:System.Collections.Specialized.OrderedDictionary.Add%2A> Methode vorhandene Elemente nicht geändert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Erstellen und Auffüllen von einer <xref:System.Collections.Specialized.OrderedDictionary> Auflistung. Dieser Code ist Teil eines umfangreicheren Beispiels, die am angezeigt werden können <xref:System.Collections.Specialized.OrderedDictionary>.  
+  
+ [!code-cpp[System.Collections.Specialized.OrderedDictionary1#01](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/cpp/ordereddictionary1.cpp#01)]
+ [!code-csharp[System.Collections.Specialized.OrderedDictionary1#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/CS/OrderedDictionary1.cs#01)]
+ [!code-vb[System.Collections.Specialized.OrderedDictionary1#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/VB/OrderedDictionary1.vb#01)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die <see cref="T:System.Collections.Specialized.OrderedDictionary" /> Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AsReadOnly">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.OrderedDictionary AsReadOnly ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Specialized.OrderedDictionary AsReadOnly() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.OrderedDictionary.AsReadOnly" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.OrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine schreibgeschützte Kopie der aktuellen <see cref="T:System.Collections.Specialized.OrderedDictionary" />-Auflistung zurück.</summary>
+        <returns>Eine schreibgeschützte Kopie der aktuellen <see cref="T:System.Collections.Specialized.OrderedDictionary" />-Auflistung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Collections.Specialized.OrderedDictionary.AsReadOnly%2A> Methode erstellt einen schreibgeschützten Wrapper um die aktuelle <xref:System.Collections.Specialized.OrderedDictionary> Auflistung. Änderungen an der <xref:System.Collections.Specialized.OrderedDictionary> Auflistung werden in die schreibgeschützte Kopie wiedergegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.OrderedDictionary.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Elemente aus der <see cref="T:System.Collections.Specialized.OrderedDictionary" />-Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach dem Aufruf der <xref:System.Collections.Specialized.OrderedDictionary.Clear%2A> -Methode, die <xref:System.Collections.Specialized.OrderedDictionary.Count%2A> Eigenschaft auf 0 (null) festgelegt ist, und Verweise auf andere Objekte von Elementen in der Auflistung werden ebenfalls freigegeben. Die Kapazität wird als Ergebnis beim Aufrufen dieser Methode nicht geändert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, die Änderung von einer <xref:System.Collections.Specialized.OrderedDictionary> Auflistung. In diesem Beispiel die <xref:System.Collections.Specialized.OrderedDictionary.Clear%2A> Methode dient zum Leeren der <xref:System.Collections.Specialized.OrderedDictionary>, und klicken Sie dann die <xref:System.Collections.Specialized.OrderedDictionary> neu aufgefüllt wird. Dieser Code ist Teil eines umfangreicheren Beispiels, die am angezeigt werden können <xref:System.Collections.Specialized.OrderedDictionary>.  
+  
+ [!code-cpp[System.Collections.Specialized.OrderedDictionary1#03](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/cpp/ordereddictionary1.cpp#03)]
+ [!code-csharp[System.Collections.Specialized.OrderedDictionary1#03](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/CS/OrderedDictionary1.cs#03)]
+ [!code-vb[System.Collections.Specialized.OrderedDictionary1#03](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/VB/OrderedDictionary1.vb#03)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die <see cref="T:System.Collections.Specialized.OrderedDictionary" /> Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (object key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.OrderedDictionary.Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der in der <see cref="T:System.Collections.Specialized.OrderedDictionary" />-Auflistung zu suchende Schlüssel.</param>
+        <summary>Bestimmt, ob die <see cref="T:System.Collections.Specialized.OrderedDictionary" />-Auflistung einen bestimmten Schlüssel enthält.</summary>
+        <returns>
+          <see langword="true" />, wenn die <see cref="T:System.Collections.Specialized.OrderedDictionary" />-Auflistung ein Element mit dem angegebenen Schlüssel enthält, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mithilfe der <xref:System.Collections.Specialized.OrderedDictionary.Item%2A> Eigenschaft kann einen null-Wert zurück, wenn der Schlüssel nicht vorhanden ist oder wenn der Schlüssel `null`. Verwenden der <xref:System.Collections.Specialized.OrderedDictionary.Contains%2A> Methode, um zu bestimmen, ob in ein bestimmten Schlüssel vorhanden ist die <xref:System.Collections.Specialized.OrderedDictionary> Auflistung.  
+  
+ Beginnend mit .NET Framework 2.0, verwendet diese Methode Objekte in der Auflistung <xref:System.Object.Equals%2A> und <xref:System.IComparable.CompareTo%2A> Methoden auf `item` um zu bestimmen, ob `item` vorhanden ist. In früheren Versionen von .NET Framework-diese Entscheidung wurde versucht, mithilfe der <xref:System.Object.Equals%2A> und <xref:System.IComparable.CompareTo%2A> Methoden der `item` Parameter für die Objekte in der Auflistung.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, die Änderung von einer <xref:System.Collections.Specialized.OrderedDictionary> Auflistung. In diesem Beispiel wird die <xref:System.Collections.Specialized.OrderedDictionary.Contains%2A> Methode wird verwendet, um zu bestimmen, ob ein Eintrag vorhanden ist, bevor Sie versuchen, ihn zu entfernen. Dieser Code ist Teil eines umfangreicheren Beispiels, die am angezeigt werden können <xref:System.Collections.Specialized.OrderedDictionary>.  
+  
+ [!code-cpp[System.Collections.Specialized.OrderedDictionary1#02](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/cpp/ordereddictionary1.cpp#02)]
+ [!code-csharp[System.Collections.Specialized.OrderedDictionary1#02](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/CS/OrderedDictionary1.cs#02)]
+ [!code-vb[System.Collections.Specialized.OrderedDictionary1#02](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/VB/OrderedDictionary1.vb#02)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.OrderedDictionary.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale <see cref="T:System.Array" />-Objekt, das das Ziel der aus der <see cref="T:System.Collections.DictionaryEntry" />-Auflistung kopierten <see cref="T:System.Collections.Specialized.OrderedDictionary" />-Objekte ist. Für das <see cref="T:System.Array" /> muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="index">Der nullbasierte Index im <c>Array</c> an dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die <see cref="T:System.Collections.Specialized.OrderedDictionary" />-Elemente am angegebenen Index in ein eindimensionales <see cref="T:System.Array" />-Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Collections.Specialized.OrderedDictionary.CopyTo%2A> Methode nicht notwendigerweise die Reihenfolge der Elemente im beibehalten der <xref:System.Collections.Specialized.OrderedDictionary> Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Specialized.OrderedDictionary.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Schlüssel-Wert-Paare in der <see cref="T:System.Collections.Specialized.OrderedDictionary" />-Auflistung ab.</summary>
+        <value>Die Anzahl der Schlüssel-Wert-Paare in der <see cref="T:System.Collections.Specialized.OrderedDictionary" />-Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, die Änderung von einer <xref:System.Collections.Specialized.OrderedDictionary> Auflistung. In diesem Beispiel wird die <xref:System.Collections.Specialized.OrderedDictionary.Count%2A> Eigenschaft wird verwendet, um das letzte Element im Entfernen der <xref:System.Collections.Specialized.OrderedDictionary>. Dieser Code ist Teil eines umfangreicheren Beispiels, die am angezeigt werden können <xref:System.Collections.Specialized.OrderedDictionary>.  
+  
+ [!code-cpp[System.Collections.Specialized.OrderedDictionary1#02](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/cpp/ordereddictionary1.cpp#02)]
+ [!code-csharp[System.Collections.Specialized.OrderedDictionary1#02](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/CS/OrderedDictionary1.cs#02)]
+ [!code-vb[System.Collections.Specialized.OrderedDictionary1#02](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/VB/OrderedDictionary1.vb#02)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.IDictionaryEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IDictionaryEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.OrderedDictionary.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionaryEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein <see cref="T:System.Collections.IDictionaryEnumerator" />-Objekt zurück, das die <see cref="T:System.Collections.Specialized.OrderedDictionary" />-Auflistung durchläuft.</summary>
+        <returns>Ein <see cref="T:System.Collections.IDictionaryEnumerator" />-Objekt für die <see cref="T:System.Collections.Specialized.OrderedDictionary" />-Auflistung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [Visual Basic, c#]  
+  
+ Die `foreach`-Anweisung der Programmiersprache C# (`for each` in Visual Basic) verbirgt die Komplexität der Enumeratoren.  Verwenden Sie deshalb `foreach` wird direkt und den Enumerator nicht empfohlen.  
+  
+ Mit Enumeratoren können die Daten in der Auflistung zwar gelesen, jedoch nicht zum Ändern der zugrunde liegenden Auflistung verwendet werden.  
+  
+ Zu Beginn wird der Enumerator vor das erste Element in der Auflistung positioniert.  
+  
+ Ein Enumerator bleibt gültig, solange die Auflistung unverändert ist. Werden an der Auflistung Änderungen wie z. B. Hinzufügen, Bearbeiten oder Entfernen von Elementen vorgenommen, verliert der Enumerator unwiederbringlich seine Gültigkeit und sein Verhalten ist nicht definiert.  
+  
+ Der Enumerator hat keinen exklusiven Zugriff auf die Auflistung; daher ist die Enumeration einer Auflistung systembedingt kein threadsicheres Verfahren.  Um während der Enumeration Threadsicherheit zu garantieren, können Sie die Auflistung während der gesamten Enumeration sperren.  Um den Lese- und Schreibzugriff auf diese Auflistung durch mehrere Threads zuzulassen, müssen Sie eine eigene Synchronisierung implementieren.  
+  
+ Diese Methode ist ein o(1)-Vorgang.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Collections.Specialized.OrderedDictionary.GetEnumerator%2A> Methode zur Anzeige der Inhalte von den <xref:System.Collections.Specialized.OrderedDictionary> Auflistung zur Konsole. In diesem Beispiel wird die <xref:System.Collections.Specialized.OrderedDictionary.GetEnumerator%2A> Methode wird zum Abrufen einer <xref:System.Collections.IDictionaryEnumerator> -Objekt, das an eine Methode übergeben wird, die den Inhalt anzeigt. Dieser Code ist Teil eines umfangreicheren Beispiels, die am angezeigt werden können <xref:System.Collections.Specialized.OrderedDictionary>.  
+  
+ [!code-cpp[System.Collections.Specialized.OrderedDictionary1#03](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/cpp/ordereddictionary1.cpp#03)]
+ [!code-csharp[System.Collections.Specialized.OrderedDictionary1#03](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/CS/OrderedDictionary1.cs#03)]
+ [!code-vb[System.Collections.Specialized.OrderedDictionary1#03](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/VB/OrderedDictionary1.vb#03)]  
+  
+ [!code-cpp[System.Collections.Specialized.OrderedDictionary1#05](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/cpp/ordereddictionary1.cpp#05)]
+ [!code-csharp[System.Collections.Specialized.OrderedDictionary1#05](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/CS/OrderedDictionary1.cs#05)]
+ [!code-vb[System.Collections.Specialized.OrderedDictionary1#05](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/VB/OrderedDictionary1.vb#05)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public virtual void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.OrderedDictionary.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Ein <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Objekt mit den zum Serialisieren der <see cref="T:System.Collections.Specialized.OrderedDictionary" />-Auflistung erforderlichen Informationen.</param>
+        <param name="context">Ein <see cref="T:System.Runtime.Serialization.StreamingContext" />-Objekt mit der Quelle und dem Ziel des entsprechenden serialisierten Streams für <see cref="T:System.Collections.Specialized.OrderedDictionary" />.</param>
+        <summary>Implementiert die <see cref="T:System.Runtime.Serialization.ISerializable" />-Schnittstelle und gibt die zum Serialisieren der <see cref="T:System.Collections.Specialized.OrderedDictionary" />-Auflistung erforderlichen Daten zurück.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="info" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" /> Sicherheitsaktion: Verknüpfungsaufruf für eine Berechtigung zum Verknüpfen mit dieser Klasse.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, object key, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Insert(int32 index, object key, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.OrderedDictionary.Insert(System.Int32,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="key" Type="System.Object" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem das Element eingefügt werden soll.</param>
+        <param name="key">Der Schlüssel des hinzuzufügenden Eintrags.</param>
+        <param name="value">Der Wert des hinzuzufügenden Eintrags. Der Wert kann <see langword="null" /> sein.</param>
+        <summary>Fügt am angegebenen Index einen neuen Eintrag mit dem angegebenen Schlüssel und Wert in die <see cref="T:System.Collections.Specialized.OrderedDictionary" />-Auflistung ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `index` Parameter entspricht der Anzahl der Einträge in der <xref:System.Collections.Specialized.OrderedDictionary> -Auflistung, die `key` und `value` Parameter an das Ende der Auflistung angefügt werden.  
+  
+ Einträge, die von der Einfügemarke nach unten, um den neuen Eintrag aufzunehmen, und die Indizes der verschobenen Einträge werden ebenfalls aktualisiert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, die Änderung von einer <xref:System.Collections.Specialized.OrderedDictionary> Auflistung. In diesem Beispiel die <xref:System.Collections.Specialized.OrderedDictionary.Insert%2A> Methode wird verwendet, um einen neuen Eintrag hinzuzufügen, auf den Anfang der <xref:System.Collections.Specialized.OrderedDictionary>, und die übrigen Einträge nach unten verschoben. Dieser Code ist Teil eines umfangreicheren Beispiels, die am angezeigt werden können <xref:System.Collections.Specialized.OrderedDictionary>.  
+  
+ [!code-cpp[System.Collections.Specialized.OrderedDictionary1#02](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/cpp/ordereddictionary1.cpp#02)]
+ [!code-csharp[System.Collections.Specialized.OrderedDictionary1#02](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/CS/OrderedDictionary1.cs#02)]
+ [!code-vb[System.Collections.Specialized.OrderedDictionary1#02](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/VB/OrderedDictionary1.vb#02)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> liegt außerhalb des Bereichs.</exception>
+        <exception cref="T:System.NotSupportedException">Die Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Specialized.OrderedDictionary.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die <see cref="T:System.Collections.Specialized.OrderedDictionary" />-Auflistung schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" />, wenn die <see cref="T:System.Collections.Specialized.OrderedDictionary" />-Auflistung schreibgeschützt ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine schreibgeschützte Auflistung gestattet nach dem Erstellen der Auflistung weder das Hinzufügen noch das Ändern oder Entfernen von Elementen.  
+  
+ Eine Auflistung mit einem Wrapper, der verhindert, die Änderung der Auflistung dass ist eine Auflistung, die schreibgeschützt ist; Wenn Änderungen an der zugrunde liegenden Auflistung vorgenommen werden, spiegelt die schreibgeschützte Auflistung daher diese Änderungen wider.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, die Änderung von einer <xref:System.Collections.Specialized.OrderedDictionary> Auflistung. In diesem Beispiel wird die <xref:System.Collections.Specialized.OrderedDictionary.IsReadOnly%2A> Eigenschaft wird verwendet, um zu bestimmen, ob die <xref:System.Collections.Specialized.OrderedDictionary> kann geändert werden. Dieser Code ist Teil eines umfangreicheren Beispiels, die am angezeigt werden können <xref:System.Collections.Specialized.OrderedDictionary>.  
+  
+ [!code-cpp[System.Collections.Specialized.OrderedDictionary1#02](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/cpp/ordereddictionary1.cpp#02)]
+ [!code-csharp[System.Collections.Specialized.OrderedDictionary1#02](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/CS/OrderedDictionary1.cs#02)]
+ [!code-vb[System.Collections.Specialized.OrderedDictionary1#02](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/VB/OrderedDictionary1.vb#02)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Specialized.OrderedDictionary.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des Werts, der abgerufen oder festgelegt werden soll.</param>
+        <summary>Ruft den Wert am angegebenen Index ab oder legt diesen fest.</summary>
+        <value>Der Wert des Elements am angegebenen Index.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft können Sie auf ein bestimmtes Element in der Auflistung mithilfe folgenden Syntax: `myCollection[index]`.  
+  
+ Die Programmiersprache c# verwendet das Schlüsselwort der Indexer definieren die <xref:System.Collections.Specialized.OrderedDictionary.Item%2A> Eigenschaft. Visual Basic implementiert <xref:System.Collections.Specialized.OrderedDictionary.Item%2A> als Standardeigenschaft und stellt auf diese Weise dieselbe Indizierungsfunktionalität bereit.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die Eigenschaft festgelegt ist und die <see cref="T:System.Collections.Specialized.OrderedDictionary" /> Auflistung ist schreibgeschützt.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ <paramref name="index" /> ist größer oder gleich <see cref="P:System.Collections.Specialized.OrderedDictionary.Count" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[object key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(object)" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Specialized.OrderedDictionary.Item(System.Object)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel des abzurufenden oder festzulegenden Werts.</param>
+        <summary>Ruft den Wert mit dem angegebenen Schlüssel ab oder legt diesen fest.</summary>
+        <value>Der dem angegebenen Schlüssel zugeordnete Wert. Wenn der angegebene Schlüssel nicht gefunden werden kann, wird beim Abrufen dieses Schlüssels <see langword="null" /> zurückgegeben. Beim Festlegen wird ein neues Element mit dem angegebenen Schlüssel erstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft können Sie auf ein bestimmtes Element in der Auflistung mithilfe folgenden Syntax: `myCollection[key]`.  
+  
+ Sie können auch die <xref:System.Collections.Specialized.OrderedDictionary.Item%2A> zum Hinzufügen neuer Elemente durch Festlegen des Werts eines Schlüssels, die Eigenschaft ist nicht vorhanden, der <xref:System.Collections.Specialized.OrderedDictionary> Auflistung (z. B. `myCollection["myNonexistentKey"] = myValue`). Jedoch, wenn der angegebene Schlüssel bereits vorhanden ist die <xref:System.Collections.Specialized.OrderedDictionary>wird durch das Festlegen der <xref:System.Collections.Specialized.OrderedDictionary.Item%2A> Eigenschaft überschreibt den alten Wert. Im Gegensatz dazu die <xref:System.Collections.Specialized.OrderedDictionary.Add%2A> Methode vorhandene Elemente nicht geändert.  
+  
+ Ein Schlüssel kann nicht `null`, aber ein Wert sein kann. Zur Unterscheidung `null` zurückgegeben wird, weil der angegebene Schlüssel nicht gefunden wird und `null` zurückgegeben wird, weil der Wert des angegebenen Schlüssels ist `null`, verwenden die <xref:System.Collections.Hashtable.Contains%2A> Methode, um zu bestimmen, ob der Schlüssel vorhanden, in der ist<xref:System.Collections.Specialized.OrderedDictionary>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, die Änderung von einer <xref:System.Collections.Specialized.OrderedDictionary> Auflistung. In diesem Beispiel wird die <xref:System.Collections.Specialized.OrderedDictionary.Item%2A> Eigenschaft wird verwendet, um den Wörterbucheintrag mit dem Schlüssel ändern `"testKey2"`. Dieser Code ist Teil eines umfangreicheren Beispiels, die am angezeigt werden können <xref:System.Collections.Specialized.OrderedDictionary>.  
+  
+ [!code-cpp[System.Collections.Specialized.OrderedDictionary1#02](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/cpp/ordereddictionary1.cpp#02)]
+ [!code-csharp[System.Collections.Specialized.OrderedDictionary1#02](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/CS/OrderedDictionary1.cs#02)]
+ [!code-vb[System.Collections.Specialized.OrderedDictionary1#02](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/VB/OrderedDictionary1.vb#02)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die Eigenschaft festgelegt ist und die <see cref="T:System.Collections.Specialized.OrderedDictionary" /> Auflistung ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Specialized.OrderedDictionary.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Collections.ICollection" />-Objekt ab, das die Schlüssel der <see cref="T:System.Collections.Specialized.OrderedDictionary" />-Auflistung enthält.</summary>
+        <value>Ein <see cref="T:System.Collections.ICollection" />-Objekt, das die Schlüssel in der <see cref="T:System.Collections.Specialized.OrderedDictionary" />-Auflistung enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das zurückgegebene <xref:System.Collections.ICollection> Objekt ist keine statische Kopie; stattdessen die <xref:System.Collections.ICollection> verweist auf die Schlüssel in der ursprünglichen <xref:System.Collections.Specialized.OrderedDictionary> Auflistung. Daher ändert sich in der <xref:System.Collections.Specialized.OrderedDictionary> im berücksichtigt werden weiterhin die <xref:System.Collections.ICollection>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Erstellen und Auffüllen von einer <xref:System.Collections.Specialized.OrderedDictionary> Auflistung, und klicken Sie dann druckt den Inhalt in die Konsole. In diesem Beispiel wird die <xref:System.Collections.Specialized.OrderedDictionary.Keys%2A> und <xref:System.Collections.Specialized.OrderedDictionary.Values%2A> übergebenen Eigenschaften sind eine Methode, die den Inhalt anzeigt. Dieser Code ist Teil eines umfangreicheren Beispiels, die am angezeigt werden können <xref:System.Collections.Specialized.OrderedDictionary>.  
+  
+ [!code-cpp[System.Collections.Specialized.OrderedDictionary1#01](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/cpp/ordereddictionary1.cpp#01)]
+ [!code-csharp[System.Collections.Specialized.OrderedDictionary1#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/CS/OrderedDictionary1.cs#01)]
+ [!code-vb[System.Collections.Specialized.OrderedDictionary1#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/VB/OrderedDictionary1.vb#01)]  
+  
+ [!code-cpp[System.Collections.Specialized.OrderedDictionary1#04](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/cpp/ordereddictionary1.cpp#04)]
+ [!code-csharp[System.Collections.Specialized.OrderedDictionary1#04](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/CS/OrderedDictionary1.cs#04)]
+ [!code-vb[System.Collections.Specialized.OrderedDictionary1#04](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/VB/OrderedDictionary1.vb#04)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDeserialization">
+      <MemberSignature Language="C#" Value="protected virtual void OnDeserialization (object sender);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDeserialization(object sender) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.OrderedDictionary.OnDeserialization(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Die Quelle des Deserialisierungsereignisses.</param>
+        <summary>Implementiert die <see cref="T:System.Runtime.Serialization.ISerializable" />-Schnittstelle und wird nach Abschluss der Deserialisierung durch das Deserialisierungsereignis aufgerufen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann überschrieben werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Die <see cref="T:System.Runtime.Serialization.SerializationInfo" /> Objekt zugewiesen ist, mit dem aktuellen <see cref="T:System.Collections.Specialized.OrderedDictionary" /> Auflistung ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (object key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.OrderedDictionary.Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel des zu entfernenden Eintrags.</param>
+        <summary>Entfernt der Eintrag mit dem angegebenen Schlüssel aus der <see cref="T:System.Collections.Specialized.OrderedDictionary" />-Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Einträge, die den entfernten Eintrag folgen verschieben bis zu den freien Platz einzunehmen, und die Indizes der Einträge, mit dessen Hilfe werden ebenfalls aktualisiert.  
+  
+ Wenn die <xref:System.Collections.Specialized.OrderedDictionary> Sammlung enthält einen Eintrag mit dem angegebenen Schlüssel nicht die <xref:System.Collections.Specialized.OrderedDictionary> bleiben unverändert, und es wird keine Ausnahme ausgelöst.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, die Änderung von einer <xref:System.Collections.Specialized.OrderedDictionary> Auflistung. In diesem Beispiel wird die <xref:System.Collections.Specialized.OrderedDictionary.Remove%2A> Methode wird verwendet, um den Eintrag zu entfernen, mit dem Schlüssel `"keyToDelete"` aus der <xref:System.Collections.Specialized.OrderedDictionary>. Dieser Code ist Teil eines umfangreicheren Beispiels, die am angezeigt werden können <xref:System.Collections.Specialized.OrderedDictionary>.  
+  
+ [!code-cpp[System.Collections.Specialized.OrderedDictionary1#02](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/cpp/ordereddictionary1.cpp#02)]
+ [!code-csharp[System.Collections.Specialized.OrderedDictionary1#02](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/CS/OrderedDictionary1.cs#02)]
+ [!code-vb[System.Collections.Specialized.OrderedDictionary1#02](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/VB/OrderedDictionary1.vb#02)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die <see cref="T:System.Collections.Specialized.OrderedDictionary" /> Auflistung ist schreibgeschützt.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.OrderedDictionary.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des Eintrags, der entfernt werden soll.</param>
+        <summary>Entfernt den Eintrag am angegebenen Index aus der <see cref="T:System.Collections.Specialized.OrderedDictionary" />-Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Einträge, die den entfernten Eintrag folgen verschieben bis zu den freien Platz einzunehmen, und die Indizes der Einträge, mit dessen Hilfe werden ebenfalls aktualisiert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, die Änderung von einer <xref:System.Collections.Specialized.OrderedDictionary> Auflistung. In diesem Beispiel wird die <xref:System.Collections.Specialized.OrderedDictionary.RemoveAt%2A> Methode wird verwendet, mit der <xref:System.Collections.Specialized.OrderedDictionary.Count%2A> Eigenschaft so entfernen Sie den letzten Eintrag aus der <xref:System.Collections.Specialized.OrderedDictionary>. Dieser Code ist Teil eines umfangreicheren Beispiels, die am angezeigt werden können <xref:System.Collections.Specialized.OrderedDictionary>.  
+  
+ [!code-cpp[System.Collections.Specialized.OrderedDictionary1#02](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/cpp/ordereddictionary1.cpp#02)]
+ [!code-csharp[System.Collections.Specialized.OrderedDictionary1#02](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/CS/OrderedDictionary1.cs#02)]
+ [!code-vb[System.Collections.Specialized.OrderedDictionary1#02](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/VB/OrderedDictionary1.vb#02)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die <see cref="T:System.Collections.Specialized.OrderedDictionary" /> Auflistung ist schreibgeschützt.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist kleiner als Null.  
+  
+ \- oder –  
+  
+ <paramref name="index" /> ist größer oder gleich <see cref="P:System.Collections.Specialized.OrderedDictionary.Count" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Specialized.OrderedDictionary.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Zugriff auf das <see cref="T:System.Collections.Specialized.OrderedDictionary" />-Objekt synchronisiert (threadsicher) ist.</summary>
+        <value>Diese Methode gibt immer <see langword="false" /> zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Specialized.OrderedDictionary.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt ab, mit dem der Zugriff auf das <see cref="T:System.Collections.Specialized.OrderedDictionary" />-Objekt synchronisiert werden kann.</summary>
+        <value>Ein Objekt, mit dem der Zugriff auf das <see cref="T:System.Collections.Specialized.OrderedDictionary" />-Objekt synchronisiert werden kann.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IDictionary.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IDictionary.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Specialized.OrderedDictionary.System#Collections#IDictionary#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Collections.Specialized.OrderedDictionary" /> eine feste Größe aufweist.</summary>
+        <value>
+          <see langword="true" />, wenn das <see cref="T:System.Collections.Specialized.OrderedDictionary" /> eine feste Größe aufweist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.OrderedDictionary.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein <see cref="T:System.Collections.IDictionaryEnumerator" />-Objekt zurück, das die <see cref="T:System.Collections.Specialized.OrderedDictionary" />-Auflistung durchläuft.</summary>
+        <returns>Ein <see cref="T:System.Collections.IDictionaryEnumerator" />-Objekt für die <see cref="T:System.Collections.Specialized.OrderedDictionary" />-Auflistung.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.IDeserializationCallback.OnDeserialization">
+      <MemberSignature Language="C#" Value="void IDeserializationCallback.OnDeserialization (object sender);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.IDeserializationCallback.OnDeserialization(object sender) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.OrderedDictionary.System#Runtime#Serialization#IDeserializationCallback#OnDeserialization(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Die Quelle des Deserialisierungsereignisses.</param>
+        <summary>Implementiert die <see cref="T:System.Runtime.Serialization.ISerializable" />-Schnittstelle und wird nach Abschluss der Deserialisierung durch das Deserialisierungsereignis aufgerufen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Values" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Specialized.OrderedDictionary.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein <see cref="T:System.Collections.ICollection" />-Objekt ab, das die Werte der <see cref="T:System.Collections.Specialized.OrderedDictionary" />-Auflistung enthält.</summary>
+        <value>Ein <see cref="T:System.Collections.ICollection" />-Objekt, das die Werte der <see cref="T:System.Collections.Specialized.OrderedDictionary" />-Auflistung enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das zurückgegebene <xref:System.Collections.ICollection> Objekt ist keine statische Kopie; stattdessen die <xref:System.Collections.ICollection> verweist auf die Werte in der ursprünglichen <xref:System.Collections.Specialized.OrderedDictionary> Auflistung. Daher ändert sich in der <xref:System.Collections.Specialized.OrderedDictionary> im berücksichtigt werden weiterhin die <xref:System.Collections.ICollection>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Erstellen und Auffüllen von einer <xref:System.Collections.Specialized.OrderedDictionary> Auflistung, und klicken Sie dann druckt den Inhalt in die Konsole. In diesem Beispiel wird die <xref:System.Collections.Specialized.OrderedDictionary.Keys%2A> und <xref:System.Collections.Specialized.OrderedDictionary.Values%2A> übergebenen Eigenschaften sind eine Methode, die den Inhalt anzeigt. Dieser Code ist Teil eines umfangreicheren Beispiels, die am angezeigt werden können <xref:System.Collections.Specialized.OrderedDictionary>.  
+  
+ [!code-cpp[System.Collections.Specialized.OrderedDictionary1#01](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/cpp/ordereddictionary1.cpp#01)]
+ [!code-csharp[System.Collections.Specialized.OrderedDictionary1#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/CS/OrderedDictionary1.cs#01)]
+ [!code-vb[System.Collections.Specialized.OrderedDictionary1#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/VB/OrderedDictionary1.vb#01)]  
+  
+ [!code-cpp[System.Collections.Specialized.OrderedDictionary1#04](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/cpp/ordereddictionary1.cpp#04)]
+ [!code-csharp[System.Collections.Specialized.OrderedDictionary1#04](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/CS/OrderedDictionary1.cs#04)]
+ [!code-vb[System.Collections.Specialized.OrderedDictionary1#04](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.OrderedDictionary1/VB/OrderedDictionary1.vb#04)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

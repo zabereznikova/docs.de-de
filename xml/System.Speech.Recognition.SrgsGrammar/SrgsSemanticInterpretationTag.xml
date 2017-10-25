@@ -1,0 +1,228 @@
+<Type Name="SrgsSemanticInterpretationTag" FullName="System.Speech.Recognition.SrgsGrammar.SrgsSemanticInterpretationTag">
+  <TypeSignature Language="C#" Value="public class SrgsSemanticInterpretationTag : System.Speech.Recognition.SrgsGrammar.SrgsElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit SrgsSemanticInterpretationTag extends System.Speech.Recognition.SrgsGrammar.SrgsElement" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.SrgsGrammar.SrgsSemanticInterpretationTag" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Speech.Recognition.SrgsGrammar.SrgsElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("{DebuggerDisplayString ()}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Tag, das enthält [ECMAScript](http://www.ecma-international.org/publications/standards/Ecma-327.htm) ausgeführt wird, wenn die Regel abgeglichen wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die semantischen-Standardformats für System.Speech entspricht dem W3C [semantische Interpretation für Spracherkennung Recognition (SISR) Version 1.0](http://go.microsoft.com/fwlink/?LinkId=201765), wobei das Format für `tag` Elemente, die Skript enthalten ist `semantics/1.0`. Geben Sie das Skript für <xref:System.Speech.Recognition.SrgsGrammar.SrgsSemanticInterpretationTag> Objekte mit diesem Format. In der Syntax der `semantics/1.0`:  
+  
+-   Die Regel Variablen des enthaltenden Elements Regel wird durch "Out" gekennzeichnet.  
+  
+-   Der Name des Objekts, das Zugriff auf die Regel Variable Regelelemente außerhalb des enthaltenden Elements der Regel hat, wird durch "Regeln" identifiziert.  
+  
+-   Das Ergebnis aus der neuesten verwiesen wird, die die Aussprache entspricht, kann durch "rules.latest()" dargestellt werden.  
+  
+ Sie können auch einen semantische Wert mit einem Ausdruck in einer Grammatik zuordnen, ohne Verwendung eines Skripts mithilfe der <xref:System.Speech.Recognition.SrgsGrammar.SrgsNameValueTag> Objekt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine Grammatik für die Orte für ein Flug auswählen. Im Beispiel wird <xref:System.Speech.Recognition.SrgsGrammar.SrgsSemanticInterpretationTag> semantische Wert zuweisen jeder Stadt, den Code für die Stadt Flughafen. Das Beispiel verwendet außerdem <xref:System.Speech.Recognition.SrgsGrammar.SrgsSemanticInterpretationTag> einen separaten semantische Schlüssel für jeden der zwei Verweise von vorgenommenen Zuweisen der <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef> Objekt mit dem Namen `cityRef` auf der <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> Objekt mit dem Namen `cities`. Die semantischen Schlüssel identifizieren eine erkannte Stadt als Anfangspunkt Stadt oder den Ort der Ankunft des Flugs. Der Handler für das <xref:System.Speech.Recognition.SpeechRecognitionEngine.SpeechRecognized> Ereignis verwendet die Schlüssel, um die Semantik aus dem Erkennungsergebnis abzurufen.  
+  
+ Im Codebeispiel wird "Out" bezieht sich auf die Regel Variable der enthaltenden <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule>. Der Ausdruck "Out. LeavingFrom"bezieht sich auf die Eigenschaft mit dem Namen `LeavingFrom` der Regel Variablen in der Regel mit dem Namen `bookFlight`.  
+  
+ Der Ausdruck "rules.flightCities" verweist auf die Regel Variablen in der Regel, deren <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule.Id%2A> ist `flightCities`, und dies ist das Ziel einen Verweis auf eine Regel. Im Beispiel wird der Ausdruck "Out. LeavingFrom=rules.flightCities;"weist den Wert aus der Regel, deren <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule.Id%2A> ist `flightCities` für die Eigenschaft mit dem Namen `LeavingFrom` der Regel Variablen in der Regel mit dem Namen `bookFlight`. Finden Sie unter [semantische Ergebnisse Content](http://msdn.microsoft.com/en-us/622291af-615c-4a15-9014-2933aa3f89fe), [Grammatik Regel Namen verweisen auf](http://msdn.microsoft.com/en-us/0777e975-8665-4cc3-957b-752743cb1bb9), und [Grammatik Regel Verweis verweisen auf](http://msdn.microsoft.com/en-us/dec3a809-9aa2-4139-893f-3a549ca1e03e) für Weitere Informationen.  
+  
+```  
+using System;  
+using System.Speech.Recognition;  
+using System.Speech.Recognition.SrgsGrammar;  
+  
+namespace SampleRecognition  
+{  
+  class Program  
+  {  
+    static void Main(string[] args)  
+  
+    // Initialize a SpeechRecognitionEngine object.  
+    {  
+      using (SpeechRecognitionEngine recognizer =  
+         new SpeechRecognitionEngine(new System.Globalization.CultureInfo("en-US")))  
+      {  
+  
+        // Create a rule for the cities, assign a semantic value to each city.  
+        SrgsRule cities = new SrgsRule("flightCities");  
+        SrgsItem chi = new SrgsItem("Chicago");  
+        chi.Add(new SrgsSemanticInterpretationTag("out = \"ORD\";"));  
+        SrgsItem bos = new SrgsItem("Boston");  
+        bos.Add(new SrgsSemanticInterpretationTag("out = \"BOS\";"));  
+        SrgsItem mia = new SrgsItem("Miami");  
+        mia.Add(new SrgsSemanticInterpretationTag("out = \"MIA\";"));  
+        SrgsItem dal = new SrgsItem("Dallas");  
+        dal.Add(new SrgsSemanticInterpretationTag("out = \"DFW\";"));  
+  
+        SrgsOneOf airports = new SrgsOneOf(chi, bos, mia, dal);  
+        cities.Add(airports);  
+        cities.Scope = SrgsRuleScope.Private;  
+  
+        // Create a rule reference to the rule for cities.  
+        SrgsRuleRef cityRef = new SrgsRuleRef(cities);  
+  
+        // Create the root rule for the grammar.  
+        SrgsRule bookFlight = new SrgsRule("flightBooker");  
+        bookFlight.Add(new SrgsItem("I want to fly from"));  
+        bookFlight.Add(cityRef);  
+        bookFlight.Add(new SrgsSemanticInterpretationTag("out.LeavingFrom=rules.flightCities;"));  
+        bookFlight.Add(new SrgsItem("to"));  
+        bookFlight.Add(cityRef);  
+        bookFlight.Add(new SrgsSemanticInterpretationTag("out.GoingTo=rules.flightCities;"));  
+        bookFlight.Scope = SrgsRuleScope.Public;  
+  
+        // Initialize the SrgsDocument, set the root rule, add rules to the collection.  
+        SrgsDocument itinerary = new SrgsDocument(bookFlight);  
+        itinerary.Rules.Add(cities);  
+  
+        // Create a Grammar object and load it to the recognizer.  
+        Grammar g = new Grammar(itinerary);  
+        g.Name = ("City Chooser");  
+        recognizer.LoadGrammarAsync(g);  
+  
+        // Configure recognizer input.                  
+        recognizer.SetInputToDefaultAudioDevice();  
+  
+        // Attach a handler for the SpeechRecognized event.  
+        recognizer.SpeechRecognized +=  
+          new EventHandler<SpeechRecognizedEventArgs>(recognizer_SpeechRecognized);  
+  
+        // Start recognition.  
+        recognizer.RecognizeAsync();  
+        Console.WriteLine("Starting asynchronous recognition...");  
+  
+        // Keep the console window open.  
+        Console.ReadLine();  
+      }  
+    }  
+  
+    // Write to the console the text and the semantics from the recognition result.  
+    static void recognizer_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)  
+    {  
+      Console.WriteLine("Speech recognized: " + e.Result.Text);  
+      Console.WriteLine();  
+      Console.WriteLine("Semantic results:");  
+      Console.WriteLine("  The departure city is: " + e.Result.Semantics["LeavingFrom"].Value);  
+      Console.WriteLine("  The arrival city is: " + e.Result.Semantics["GoingTo"].Value);  
+    }  
+  }  
+}  
+  
+```  
+  
+ Im folgenden finden die XML-Form der Grammatik vom Code im Beispiel oben.  
+  
+```xml  
+<?xml version="1.0" encoding="utf-8"?>  
+<grammar xml:lang="en-US" root="flightBooker" tag-format="semantics/1.0"   
+version="1.0" xmlns="http://www.w3.org/2001/06/grammar">  
+  
+  <rule id="flightBooker" scope="public">  
+    <item> I want to fly from </item>  
+    <ruleref uri="#flightCities" />   
+    <tag> out.LeavingFrom=rules.flightCities; </tag>  
+    <item> to </item>  
+    <ruleref uri="#flightCities" />   
+    <tag> out.GoingTo=rules.flightCities; </tag>  
+  </rule>  
+  
+  <rule id="flightCities" scope="private">  
+    <one-of>  
+      <item> Chicago <tag> out="ORD"; </tag></item>  
+      <item> Boston <tag> out="BOS"; </tag></item>  
+      <item> Miami <tag> out="MIA"; </tag></item>  
+      <item> Dallas <tag> out="DFW"; </tag></item>  
+    </one-of>  
+  </rule>  
+  
+</grammar>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SrgsSemanticInterpretationTag ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SrgsGrammar.SrgsSemanticInterpretationTag.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Instanz der <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsSemanticInterpretationTag" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt eine semantische Interpretation zu kennzeichnen, deren <xref:System.Speech.Recognition.SrgsGrammar.SrgsSemanticInterpretationTag.Script%2A> Eigenschaft eine leere Zeichenfolge enthält.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SrgsSemanticInterpretationTag (string script);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string script) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SrgsGrammar.SrgsSemanticInterpretationTag.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="script" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="script">Eine Zeichenfolge, enthält die [ECMAScript](http://www.ecma-international.org/publications/standards/Ecma-327.htm) für das Tag.</param>
+        <summary>Erstellt eine Instanz der <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsSemanticInterpretationTag" /> -Klasse und gibt den Inhalt des Skripts des Tags.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt eine semantische Interpretation zu kennzeichnen, deren <xref:System.Speech.Recognition.SrgsGrammar.SrgsSemanticInterpretationTag.Script%2A> Eigenschaftensatz wird auf den Wert in `script`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="script" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Script">
+      <MemberSignature Language="C#" Value="public string Script { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Script" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SrgsGrammar.SrgsSemanticInterpretationTag.Script" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die [ECMAScript](http://www.ecma-international.org/publications/standards/Ecma-327.htm) für das Tag.</summary>
+        <value>Eine Zeichenfolge, die das semantische Interpretation-Skript für das Tag enthält.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Es wird versucht, festzulegende **Skript** auf <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

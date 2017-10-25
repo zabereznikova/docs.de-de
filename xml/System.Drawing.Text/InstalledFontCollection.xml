@@ -1,0 +1,53 @@
+<Type Name="InstalledFontCollection" FullName="System.Drawing.Text.InstalledFontCollection">
+  <TypeSignature Language="C#" Value="public sealed class InstalledFontCollection : System.Drawing.Text.FontCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit InstalledFontCollection extends System.Drawing.Text.FontCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Text.InstalledFontCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Drawing.Text.FontCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die auf dem System installierten Schriftarten dar. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Drawing.Text.InstalledFontCollection> können Sie eine Liste der Schriftfamilien abzurufen, die auf dem Computer mit der Anwendung installiert sind seine <xref:System.Drawing.Text.FontCollection.Families%2A> Eigenschaft. Weitere Informationen zu Schriftarten und Text, einschließlich Beispielcode finden Sie unter [Verwenden von Schriftarten und Text](~/docs/framework/winforms/advanced/using-fonts-and-text.md).  
+  
+ Verwenden Sie nicht die <xref:System.Drawing.Text.InstalledFontCollection> Klasse, um eine Schriftart in Windows zu installieren. Verwenden Sie stattdessen die [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)] `AddFontResource` Funktion. Ein <xref:System.Drawing.Text.InstalledFontCollection> Objekt erkennt nur Schriftarten, die unter Windows installiert werden, bevor das Objekt erstellt wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie eine Liste von Schriftarten abrufen, die die regulären unterstützen <xref:System.Drawing.FontStyle>.  
+  
+ Im folgenden Codebeispiel wird für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler.  
+  
+ [!code-csharp[System.Drawing.Misc3#InstalledFonts](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Misc3/CS/Form1.cs#installedfonts)]
+ [!code-vb[System.Drawing.Misc3#InstalledFonts](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc3/VB/Form1.vb#installedfonts)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstalledFontCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Text.InstalledFontCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Drawing.Text.InstalledFontCollection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

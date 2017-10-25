@@ -1,0 +1,178 @@
+<Type Name="TextSource" FullName="System.Windows.Media.TextFormatting.TextSource">
+  <TypeSignature Language="C#" Value="public abstract class TextSource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TextSource extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.TextFormatting.TextSource" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine abstrakte Klasse zum Angeben von Zeichendaten und Formatierungseigenschaften von verwendet die <see cref="T:System.Windows.Media.TextFormatting.TextFormatter" /> Objekt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei allen Zugriffen auf den Text in der <xref:System.Windows.Media.TextFormatting.TextSource> Objekt wird durch die <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A>, die wurde entwickelt, um Text in keiner Weise zu virtualisieren, er wählt, die Textlayout-Clients zu ermöglichen.  
+  
+ <xref:System.Windows.Media.TextFormatting.TextFormatter>ist der [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Textmodul, das zum Formatieren von Text und Umbrechen von Textzeilen bereitstellt. <xref:System.Windows.Media.TextFormatting.TextFormatter>Zeichenformate verschiedenen Text- und Absatzformatvorlagen behandeln können, und bietet Unterstützung für internationale TextLayout. Im Gegensatz zu herkömmlichen Text [!INCLUDE[TLA#tla_api](~/includes/tlasharptla-api-md.md)]die <xref:System.Windows.Media.TextFormatting.TextFormatter> interagiert mit einer Textlayout-Clients über eine Reihe von Rückrufmethoden. Es muss der Client diese Methoden in einer Implementierung von der <xref:System.Windows.Media.TextFormatting.TextSource> Klasse. Die folgende Liste beschreibt die drei Elemente, die Sie überschreiben müssen:  
+  
+-   <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A>: Ruft eine <xref:System.Windows.Media.TextFormatting.TextRun> ab einer angegebenen <xref:System.Windows.Media.TextFormatting.TextSource> Position.  
+  
+-   <xref:System.Windows.Media.TextFormatting.TextSource.GetPrecedingText%2A>: Ruft den Textabschnitt unmittelbar vor dem angegebenen <xref:System.Windows.Media.TextFormatting.TextSource> Position.  
+  
+-   <xref:System.Windows.Media.TextFormatting.TextSource.GetTextEffectCharacterIndexFromTextSourceCharacterIndex%2A>: Ruft einen Wert, der zugeordnet einer <xref:System.Windows.Media.TextFormatting.TextSource> Zeichenindex an eine <xref:System.Windows.Media.TextEffect> Zeichenindex.  
+  
+> [!NOTE]
+>  Für ein umfassendes Codebeispiel, das zeigt, wie eine abgeleitete implementiert <xref:System.Windows.Media.TextFormatting.TextSource> Klasse, finden Sie unter [Advanced Text Formatting Sample](http://go.microsoft.com/fwlink/?LinkID=159965) .  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TextSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.TextSource.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.TextFormatting.TextSource" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPrecedingText">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Media.TextFormatting.TextSpan&lt;System.Windows.Media.TextFormatting.CultureSpecificCharacterBufferRange&gt; GetPrecedingText (int textSourceCharacterIndexLimit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Media.TextFormatting.TextSpan`1&lt;class System.Windows.Media.TextFormatting.CultureSpecificCharacterBufferRange&gt; GetPrecedingText(int32 textSourceCharacterIndexLimit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.TextSource.GetPrecedingText(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.TextFormatting.TextSpan&lt;System.Windows.Media.TextFormatting.CultureSpecificCharacterBufferRange&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textSourceCharacterIndexLimit" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="textSourceCharacterIndexLimit">Ein <see cref="T:System.Int32" /> Wert, der die Indexposition des Zeichens angibt, in dem Abrufen von Text wird beendet.</param>
+        <summary>Ruft den Textabschnitt unmittelbar vor dem angegebenen ab <see cref="T:System.Windows.Media.TextFormatting.TextSource" /> Position.</summary>
+        <returns>Ein <see cref="T:System.Windows.Media.TextFormatting.CultureSpecificCharacterBufferRange" /> Wert, der unmittelbar vor dem Ausführen des Textabschnitts darstellt <paramref name="textSourceCharacterIndexLimit" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.TextFormatting.TextSource.GetPrecedingText%2A> Methode gibt ein leeres <xref:System.Windows.Media.TextFormatting.CultureSpecificCharacterBufferRange> Wenn unmittelbar vor der Text umfassen `textSourceCharacterIndexLimit` enthält keinen Text enthält, z. B. Inlineobjekt oder eine verborgene ausführen.  
+  
+ Diese Methode gibt einen Textabschnitt der Länge 0 (null) zurück, wenn es keine Werte vor `textSourceCharacterIndexLimit`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTextEffectCharacterIndexFromTextSourceCharacterIndex">
+      <MemberSignature Language="C#" Value="public abstract int GetTextEffectCharacterIndexFromTextSourceCharacterIndex (int textSourceCharacterIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetTextEffectCharacterIndexFromTextSourceCharacterIndex(int32 textSourceCharacterIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.TextSource.GetTextEffectCharacterIndexFromTextSourceCharacterIndex(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textSourceCharacterIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="textSourceCharacterIndex">Ein <see cref="T:System.Int32" /> Wert, der angibt, die <see cref="T:System.Windows.Media.TextFormatting.TextSource" /> Zeichenindex zugeordnet.</param>
+        <summary>Ruft einen Wert, der zugeordnet einer <see cref="T:System.Windows.Media.TextFormatting.TextSource" /> Zeichenindex an eine <see cref="T:System.Windows.Media.TextEffect" /> Zeichenindex.</summary>
+        <returns>Ein <see cref="T:System.Int32" /> Wert darstellt, der die <see cref="T:System.Windows.Media.TextEffect" /> Zeichenindex.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTextRun">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Media.TextFormatting.TextRun GetTextRun (int textSourceCharacterIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Media.TextFormatting.TextRun GetTextRun(int32 textSourceCharacterIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.TextSource.GetTextRun(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.TextFormatting.TextRun</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textSourceCharacterIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="textSourceCharacterIndex">Gibt die Zeichenposition des Index in der <see cref="T:System.Windows.Media.TextFormatting.TextSource" /> , in denen die <see cref="T:System.Windows.Media.TextFormatting.TextRun" /> abgerufen wird.</param>
+        <summary>Ruft eine <see cref="T:System.Windows.Media.TextFormatting.TextRun" /> ab einer angegebenen <see cref="T:System.Windows.Media.TextFormatting.TextSource" /> Position.</summary>
+        <returns>Ein Wert, steht eine <see cref="T:System.Windows.Media.TextFormatting.TextRun" />, oder ein Objekt abgeleitet <see cref="T:System.Windows.Media.TextFormatting.TextRun" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine textausführung ist eine Folge von Zeichen, die Freigabe eines einzigen Eigenschaftensatz. Jede Änderung in das Format, z. B. Schriftfamilie, Schriftschnitt, Vordergrundfarbe, Text-Decoration oder andere Formatierung unwirksam, unterbricht den Lauftext. Die <xref:System.Windows.Media.TextFormatting.TextRun> Klasse ist der Stamm einer Typhierarchie mehrere Typen von Textinhalten von verarbeiteten darstellt <xref:System.Windows.Media.TextFormatting.TextFormatter>. Jede Klasse, die abgeleitet ist <xref:System.Windows.Media.TextFormatting.TextRun> einen unterschiedlichen Typ von Textinhalt darstellt.  
+  
+|Klasse|Beschreibung|  
+|-----------|-----------------|  
+|<xref:System.Windows.Media.TextFormatting.TextRun>|Der Stamm der Hierarchie. Definiert eine Gruppe von Zeichen, die den gleichen Satz von Zeicheneigenschaften gemeinsam nutzen.|  
+|<xref:System.Windows.Media.TextFormatting.TextCharacters>|Definiert eine Auflistung von Symbolen von Zeichen aus einer eindeutigen physischen Schriftart an.|  
+|<xref:System.Windows.Media.TextFormatting.TextEmbeddedObject>|Definiert einen Typ von Textinhalt, in welche messen, Treffertests, und Zeichnen des gesamten Inhalts erfolgt als eine eindeutige Entität. Ein Beispiel für diese Art von Inhalt ist eine Schaltfläche in der Mitte der Zeile des Texts.|  
+|<xref:System.Windows.Media.TextFormatting.TextEndOfLine>|Definiert einen Zeilenumbruch Zeichencode.|  
+|<xref:System.Windows.Media.TextFormatting.TextEndOfParagraph>|Definiert einen Absatzmarke Zeichencode. Wird von <xref:System.Windows.Media.TextFormatting.TextEndOfLine> abgeleitet.|  
+|<xref:System.Windows.Media.TextFormatting.TextEndOfSegment>|Definiert einen Segment Break-Marker.|  
+|<xref:System.Windows.Media.TextFormatting.TextHidden>|Definiert einen Bereich von Zeichen nicht sichtbar.|  
+|<xref:System.Windows.Media.TextFormatting.TextModifier>|Definiert den Anfang eines Änderungsbereichs.|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel eine Außerkraftsetzung für die <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> Methode implementiert wird.  
+  
+ [!code-csharp[TextFormattingSnippets#TextFormattingSnippet4](~/samples/snippets/csharp/VS_Snippets_Wpf/TextFormattingSnippets/CSharp/CustomTextClasses.cs#textformattingsnippet4)]
+ [!code-vb[TextFormattingSnippets#TextFormattingSnippet4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextFormattingSnippets/visualbasic/customtextclasses.vb#textformattingsnippet4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PixelsPerDip">
+      <MemberSignature Language="C#" Value="public double PixelsPerDip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 PixelsPerDip" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextSource.PixelsPerDip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die PixelsPerDip ab, wo der Text gerendert werden soll, oder legt sie fest.</summary>
+        <value>Der aktuelle <see cref="P:System.Windows.Media.TextFormatting.TextSource.PixelsPerDip" />-Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede Klasse, die erweitert <xref:System.Windows.Media.TextFormatting.TextSource> sollten aktualisieren <xref:System.Windows.Media.TextFormatting.TextSource.PixelsPerDip%2A> sobald sich der DPI-Wert für eine Anwendung pro Monitor DPI bewusst ändert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

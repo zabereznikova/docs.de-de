@@ -1,0 +1,300 @@
+<Type Name="ControlPersister" FullName="System.Web.UI.Design.ControlPersister">
+  <TypeSignature Language="C#" Value="public sealed class ControlPersister" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ControlPersister extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.ControlPersister" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Methoden zum Beibehalten von Webserver-Steuerelementen zur Entwurfszeit bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.ControlPersister> Klasse enthält Methoden, die beibehalten werden, können eine <xref:System.Web.UI.Control> Steuerelement oder ein <xref:System.Web.UI.ITemplate> schnittstellenimplementierung als Zeichenfolge von ASPX-Code. Die Implementierung dieser Methoden wird von Metadatenattributen, gesteuert, wie z. B. die <xref:System.ComponentModel.DefaultValueAttribute>, <xref:System.Web.UI.PersistenceModeAttribute>, und <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>.  
+  
+> [!NOTE]
+>  Der Web Forms-Seite-Designer unterstützt nicht die <code> Reset <em> PropertyName </em> </code> -Methode, die von Microsoft Windows Forms-Steuerelementen für die Beständigkeit optional verfügbar gemacht wird.  
+  
+ Zum Erstellen einer <xref:System.Web.UI.Control> Objekt oder ein <xref:System.Web.UI.ITemplate> -Schnittstelle durch Analysieren einer Zeichenfolge des Steuerelements oder Vorlage persistenzdaten der <xref:System.Web.UI.Design.ControlParser> -Klassenmethoden.  
+  
+   
+  
+## Examples  
+ [!code-cpp[ControlParserPersisterExample#1](~/samples/snippets/cpp/VS_Snippets_WebNet/ControlParserPersisterExample/CPP/webcustomcontrol1.cpp#1)]
+ [!code-csharp[ControlParserPersisterExample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlParserPersisterExample/CS/webcustomcontrol1.cs#1)]
+ [!code-vb[ControlParserPersisterExample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlParserPersisterExample/VB/webcustomcontrol1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="PersistControl">
+      <MemberSignature Language="C#" Value="public static string PersistControl (System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string PersistControl(class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlPersister.PersistControl(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="control">Die <see cref="T:System.Web.UI.Control" /> beibehalten werden.</param>
+        <summary>Ruft eine Zeichenfolge von Daten, die das persistente Formular des angegebenen Steuerelements darstellt.</summary>
+        <returns>Eine Zeichenfolge, die das persistente Formular des Steuerelements darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erfordert eine <xref:System.ComponentModel.Design.IDesignerHost> Implementierung ordnungsgemäß funktioniert. Diese Methode verwendet die <xref:System.Web.UI.Control.Site%2A> des angegebenen Steuerelements Designerhost abgerufen.  
+  
+   
+  
+## Examples  
+ [!code-cpp[ControlParserPersisterExample#3](~/samples/snippets/cpp/VS_Snippets_WebNet/ControlParserPersisterExample/CPP/webcustomcontrol1.cpp#3)]
+ [!code-csharp[ControlParserPersisterExample#3](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlParserPersisterExample/CS/webcustomcontrol1.cs#3)]
+ [!code-vb[ControlParserPersisterExample#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlParserPersisterExample/VB/webcustomcontrol1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistControl">
+      <MemberSignature Language="C#" Value="public static void PersistControl (System.IO.TextWriter sw, System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PersistControl(class System.IO.TextWriter sw, class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlPersister.PersistControl(System.IO.TextWriter,System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sw" Type="System.IO.TextWriter" />
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="sw">Die <see cref="T:System.IO.TextWriter" /> zur Ausgabe von der beibehaltenen Steuerelementdaten an.</param>
+        <param name="control">Die <see cref="T:System.Web.UI.Control" /> beibehalten werden.</param>
+        <summary>Gibt eine Zeichenfolge von Daten, die das persistente Formular des angegebenen Steuerelements im angegebenen darstellen <see cref="T:System.IO.TextWriter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erfordert eine <xref:System.ComponentModel.Design.IDesignerHost> Implementierung ordnungsgemäß funktioniert. Diese Methode verwendet die <xref:System.Web.UI.Control.Site%2A> des angegebenen Steuerelements Designerhost abgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistControl">
+      <MemberSignature Language="C#" Value="public static string PersistControl (System.Web.UI.Control control, System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string PersistControl(class System.Web.UI.Control control, class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlPersister.PersistControl(System.Web.UI.Control,System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="control">Die <see cref="T:System.Web.UI.Control" /> beibehalten werden.</param>
+        <param name="host">Ein <see cref="T:System.ComponentModel.Design.IDesignerHost" /> also dem Designerhost für das Steuerelement.</param>
+        <summary>Ruft eine Zeichenfolge von Daten, die das persistente Formular des angegebenen Steuerelements mithilfe des angegebenen Designerhosts darstellt.</summary>
+        <returns>Eine Zeichenfolge, die das persistente Formular des Steuerelements darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erfordert eine <xref:System.ComponentModel.Design.IDesignerHost> Implementierung ordnungsgemäß funktioniert.  
+  
+   
+  
+## Examples  
+ [!code-cpp[ControlParserPersisterExample#3](~/samples/snippets/cpp/VS_Snippets_WebNet/ControlParserPersisterExample/CPP/webcustomcontrol1.cpp#3)]
+ [!code-csharp[ControlParserPersisterExample#3](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlParserPersisterExample/CS/webcustomcontrol1.cs#3)]
+ [!code-vb[ControlParserPersisterExample#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlParserPersisterExample/VB/webcustomcontrol1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistControl">
+      <MemberSignature Language="C#" Value="public static void PersistControl (System.IO.TextWriter sw, System.Web.UI.Control control, System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PersistControl(class System.IO.TextWriter sw, class System.Web.UI.Control control, class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlPersister.PersistControl(System.IO.TextWriter,System.Web.UI.Control,System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sw" Type="System.IO.TextWriter" />
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="sw">Die <see cref="T:System.IO.TextWriter" /> zur Ausgabe von der beibehaltenen Steuerelementdaten an.</param>
+        <param name="control">Die <see cref="T:System.Web.UI.Control" /> beibehalten werden.</param>
+        <param name="host">Ein <see cref="T:System.ComponentModel.Design.IDesignerHost" /> also dem Designerhost für das Steuerelement.</param>
+        <summary>Gibt eine Zeichenfolge von Daten, die das persistente Formular des angegebenen Steuerelements im angegebenen darstellen <see cref="T:System.IO.TextWriter" />, mithilfe des angegebenen Designerhosts.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erfordert eine <xref:System.ComponentModel.Design.IDesignerHost> Implementierung ordnungsgemäß funktioniert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistInnerProperties">
+      <MemberSignature Language="C#" Value="public static string PersistInnerProperties (object component, System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string PersistInnerProperties(object component, class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlPersister.PersistInnerProperties(System.Object,System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die Komponente, für die internen Eigenschaften des beibehalten werden soll.</param>
+        <param name="host">Ein <see cref="T:System.ComponentModel.Design.IDesignerHost" /> also dem Designerhost für das Steuerelement.</param>
+        <summary>Ruft eine Zeichenfolge mit Daten, die internen Eigenschaften des angegebenen Steuerelements beibehalten können.</summary>
+        <returns>Eine Zeichenfolge, die Informationen zum Beibehalten der internen Eigenschaften des Steuerelements enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erfordert eine <xref:System.ComponentModel.Design.IDesignerHost> Implementierung ordnungsgemäß funktioniert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistInnerProperties">
+      <MemberSignature Language="C#" Value="public static void PersistInnerProperties (System.IO.TextWriter sw, object component, System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PersistInnerProperties(class System.IO.TextWriter sw, object component, class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlPersister.PersistInnerProperties(System.IO.TextWriter,System.Object,System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sw" Type="System.IO.TextWriter" />
+        <Parameter Name="component" Type="System.Object" />
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="sw">Der zu verwendende <see cref="T:System.IO.TextWriter" />.</param>
+        <param name="component">Die Komponente, die beibehalten werden sollen.</param>
+        <param name="host">Ein <see cref="T:System.ComponentModel.Design.IDesignerHost" /> also dem Designerhost für das Steuerelement.</param>
+        <summary>Gibt eine Zeichenfolge mit Daten, die internen Eigenschaften des angegebenen Steuerelements im angegebenen beibehalten können <see cref="T:System.IO.TextWriter" />, mithilfe des angegebenen Designerhosts.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erfordert eine <xref:System.ComponentModel.Design.IDesignerHost> Implementierung ordnungsgemäß funktioniert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistTemplate">
+      <MemberSignature Language="C#" Value="public static string PersistTemplate (System.Web.UI.ITemplate template, System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string PersistTemplate(class System.Web.UI.ITemplate template, class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlPersister.PersistTemplate(System.Web.UI.ITemplate,System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="template" Type="System.Web.UI.ITemplate" />
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="template">Die Vorlage, die beibehalten werden.</param>
+        <param name="host">Ein <see cref="T:System.ComponentModel.Design.IDesignerHost" /> also dem Designerhost für das Steuerelement.</param>
+        <summary>Ruft eine Zeichenfolge von Daten, die das Persistenzformat der angegebenen Vorlage darstellt.</summary>
+        <returns>Eine Zeichenfolge, die das Persistenzformat der Vorlage darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.ControlPersister.PersistTemplate%2A> Methode erfordert eine <xref:System.ComponentModel.Design.IDesignerHost> -schnittstellenimplementierung, um ordnungsgemäß zu funktionieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistTemplate">
+      <MemberSignature Language="C#" Value="public static void PersistTemplate (System.IO.TextWriter writer, System.Web.UI.ITemplate template, System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PersistTemplate(class System.IO.TextWriter writer, class System.Web.UI.ITemplate template, class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlPersister.PersistTemplate(System.IO.TextWriter,System.Web.UI.ITemplate,System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+        <Parameter Name="template" Type="System.Web.UI.ITemplate" />
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.IO.TextWriter" /> auf die für persistente Vorlagendaten geschrieben werden sollen.</param>
+        <param name="template">Die Vorlage, die beibehalten werden.</param>
+        <param name="host">Ein <see cref="T:System.ComponentModel.Design.IDesignerHost" /> also dem Designerhost für das Steuerelement.</param>
+        <summary>Schreibt eine Zeichenfolge von Daten, das Persistenzformat der angegebenen Vorlage, mit dem angegebenen darstellt <see cref="T:System.IO.TextWriter" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.ControlPersister.PersistTemplate%2A> Methode erfordert eine <xref:System.ComponentModel.Design.IDesignerHost> -schnittstellenimplementierung, um ordnungsgemäß zu funktionieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

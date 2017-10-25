@@ -1,0 +1,160 @@
+<Type Name="DynamicFilterExpression" FullName="System.Web.DynamicData.DynamicFilterExpression">
+  <TypeSignature Language="C#" Value="public class DynamicFilterExpression : System.Web.UI.WebControls.Expressions.DataSourceExpression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DynamicFilterExpression extends System.Web.UI.WebControls.Expressions.DataSourceExpression" />
+  <TypeSignature Language="DocId" Value="T:System.Web.DynamicData.DynamicFilterExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DynamicData</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.Expressions.DataSourceExpression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ändert eine Datenbankabfrage mithilfe eines Werts aus einem angegebenen Filtersteuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.DynamicData.DynamicFilterExpression> -Klasse ermöglicht es Ihnen so ändern Sie eine Datenbankabfrage mithilfe der Werte, die zugeordnet sind ein <xref:System.Web.DynamicData.DynamicFilter> Steuerelement. Dieses Steuerelement delegiert die Aufgabe der Erstellung von der <xref:System.Linq.IQueryable> Abfragen an eine spezielle Steuerelement wie z. B. <xref:System.Web.DynamicData.QueryableFilterRepeater> Steuerelement oder <xref:System.Web.DynamicData.DynamicFilter> Steuerelement.  
+  
+ Die Filtersteuerelementen delegieren wiederum die Erstellung der Abfrage, die die Filtervorlage, auf die verwiesen wird. Die Abfrage wird dann ausgeführt, durch das Datenquellensteuerelement, das vom verwiesen wird die <xref:System.Web.UI.WebControls.QueryExtender> Steuerelement.  
+  
+ Verwenden der <xref:System.Web.DynamicData.DynamicFilterExpression> Klasse in einer Seite, Sie gehen Sie folgendermaßen vor:  
+  
+-   Hinzufügen einer <xref:System.Web.UI.WebControls.QueryExtender> Steuerelement auf der Seite.  
+  
+-   Festlegen der `TargetControlID` Eigenschaft von der <xref:System.Web.UI.WebControls.QueryExtender> Steuerelement in den Datenquellen-Steuerelements zu verweisen.  
+  
+-   Hinzufügen einer <xref:System.Web.DynamicData.DynamicFilterExpression> Objekt als untergeordnetes Element der <xref:System.Web.UI.WebControls.QueryExtender> Steuerelement.  
+  
+-   Festlegen der `ControlID` Eigenschaft von der <xref:System.Web.DynamicData.DynamicFilterExpression> Objekt, um die Filtersteuerelement verweisen.  
+  
+ In den vorherigen Schritten wird davon ausgegangen, dass die verwandte Filtersteuerelemente, die von datengebundenen Steuerelementen und die Datenquellen-Steuerelements auf der Seite definiert sind.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.DynamicData.DynamicFilterExpression> Steuerelement auf einer Seite eine Filtervorlage auswählen. Die Filtervorlage wird ausgewählt, die <xref:System.Web.DynamicData.DynamicFilter> Steuerelement, das identifizierte <xref:System.Web.DynamicData.DynamicFilterExpression> steuern Sie über seine `ControID` Eigenschaft.  
+  
+```  
+<asp:QueryExtender ID="QueryExtender1"   
+    TargetControlID="GridDataSource" runat="server">  
+    <asp:DynamicFilterExpression ControlID="CategoryFilterID" />  
+</asp:QueryExtender>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DynamicFilterExpression ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.DynamicFilterExpression.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.DynamicData.DynamicFilterExpression" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlID">
+      <MemberSignature Language="C#" Value="public string ControlID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ControlID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.DynamicFilterExpression.ControlID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Bezeichner des Filtersteuerelements.</summary>
+        <value>Der Bezeichner des Filters.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Bezeichner wird verwendet, durch die <xref:System.Web.DynamicData.DynamicFilterExpression> Klasse, um die Filter auswählen zu steuern, auf das delegiert der Aufgabe der Erstellung der Abfrage, die wiederum von der Datenquelle ausgeführt wird.  
+  
+ Die Filtersteuerelement delegiert die Aufgabe der Erstellung der Abfrage, die die Filtervorlage Verweise. Die Abfrage wird dann ausgeführt, durch das Datenquellensteuerelement, das vom verwiesen wird die <xref:System.Web.UI.WebControls.QueryExtender> Steuerelement.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.DynamicData.DynamicFilterExpression> Klasse zur Auswahl eines Filters-Steuerelements auf einer Seite.  
+  
+```  
+<asp:QueryExtender ID="QueryExtender1"   
+    TargetControlID="GridDataSource" runat="server">  
+    <asp:DynamicFilterExpression ControlID="CategoryFilterID" />  
+</asp:QueryExtender>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetQueryable">
+      <MemberSignature Language="C#" Value="public override System.Linq.IQueryable GetQueryable (System.Linq.IQueryable source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Linq.IQueryable GetQueryable(class System.Linq.IQueryable source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.DynamicFilterExpression.GetQueryable(System.Linq.IQueryable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.IQueryable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Linq.IQueryable" />
+      </Parameters>
+      <Docs>
+        <param name="source">Die Datenquellenabfrage zu ändern.</param>
+        <summary>Ruft die geänderte Abfrage mithilfe des aktuellen Werts für den Filter ab.</summary>
+        <returns>Die Datenquellenabfrage, die geändert werden, mithilfe des aktuellen Werts, der in enthalten ist das <see cref="T:System.Web.DynamicData.DynamicFilterExpression" /> Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.DynamicData.DynamicFilterExpression.GetQueryable%2A> Methode delegiert die Aufgabe der Erstellung der Abfrage die Filtervorlage verweist das Filtersteuerelement, das angegeben wird, die die <xref:System.Web.DynamicData.DynamicFilterExpression.ControlID%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetContext">
+      <MemberSignature Language="C#" Value="public override void SetContext (System.Web.UI.Control owner, System.Web.HttpContext context, System.Web.UI.WebControls.IQueryableDataSource dataSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetContext(class System.Web.UI.Control owner, class System.Web.HttpContext context, class System.Web.UI.WebControls.IQueryableDataSource dataSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.DynamicFilterExpression.SetContext(System.Web.UI.Control,System.Web.HttpContext,System.Web.UI.WebControls.IQueryableDataSource)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Web.UI.Control" />
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+        <Parameter Name="dataSource" Type="System.Web.UI.WebControls.IQueryableDataSource" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Das Steuerelement, enthält die <see cref="T:System.Web.DynamicData.DynamicFilterExpression" /> Instanz, wie z. B. die <see cref="T:System.Web.UI.WebControls.QueryExtender" /> Steuerelement.</param>
+        <param name="context">Das aktuelle <see cref="T:System.Web.HttpContext" />-Objekt.</param>
+        <param name="dataSource">Die Ziel-Datenquelle für die <see cref="T:System.Web.DynamicData.DynamicFilterExpression" /> Instanz.</param>
+        <summary>Initialisiert den Ausdruck mit Datenquelleninformationen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,84 @@
+<Type Name="RootContext" FullName="System.ComponentModel.Design.Serialization.RootContext">
+  <TypeSignature Language="C#" Value="public sealed class RootContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RootContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Serialization.RootContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ein <see cref="T:System.ComponentModel.Design.Serialization.CodeDomSerializer" /> Fügt einen Stammkontext, um eine Definition des Stammobjekts bereitzustellen. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.Serialization.RootContext> platziert werden kann, auf dem Kontextstapel zur Darstellung des Objekts, das den Stamm der Serialisierungshierarchie ist. Zusätzlich zu dieser Instanz der <xref:System.ComponentModel.Design.Serialization.RootContext> enthält auch einen Ausdruck, der verwendet werden kann, Verweis der <xref:System.ComponentModel.Design.Serialization.RootContext>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RootContext (System.CodeDom.CodeExpression expression, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeExpression expression, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.RootContext.#ctor(System.CodeDom.CodeExpression,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="expression" Type="System.CodeDom.CodeExpression" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der Ausdruck, der das Stammobjekt im Objektdiagramm darstellt.</param>
+        <param name="value">Das Stammobjekt des Objektdiagramms.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Design.Serialization.RootContext" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="expression" /> oder <paramref name="value" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Expression">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeExpression Expression { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeExpression Expression" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.RootContext.Expression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeExpression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Ausdruck ab, der das Stammobjekt im Objektdiagramm darstellt.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeExpression" /> , das Stammobjekt im Objektdiagramm darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.RootContext.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Stammobjekt des Objektdiagramms ab.</summary>
+        <value>Das Stammobjekt des Objektdiagramms.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

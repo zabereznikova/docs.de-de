@@ -1,0 +1,410 @@
+<Type Name="ReliableSessionElement" FullName="System.ServiceModel.Configuration.ReliableSessionElement">
+  <TypeSignature Language="C#" Value="public sealed class ReliableSessionElement : System.ServiceModel.Configuration.BindingElementExtensionElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ReliableSessionElement extends System.ServiceModel.Configuration.BindingElementExtensionElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.ReliableSessionElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Configuration.BindingElementExtensionElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Konfigurationseinstellung für WS-Reliable Messaging dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn dieses Element einer benutzerdefinierten Bindung hinzugefügt wird, kann der resultierende Kanal ExactlyOnce-Zustellungszusicherungen unterstützen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ReliableSessionElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ReliableSessionElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Configuration.ReliableSessionElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcknowledgementInterval">
+      <MemberSignature Language="C#" Value="public TimeSpan AcknowledgementInterval { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan AcknowledgementInterval" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ReliableSessionElement.AcknowledgementInterval" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ServiceModel.Configuration.TimeSpanOrInfiniteConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("acknowledgementInterval", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Zeitintervall ab oder legt fest, wie lange ein Ziel wartet, bevor eine Bestätigung an die Nachrichtenquelle in zuverlässigen Kanälen gesendet wird, die von der Factory erstellt werden.</summary>
+        <value>Eine <see cref="T:System.TimeSpan" />, die das Zeitintervall angibt, das der Dienst abwartet, bevor eine Bestätigung an die Nachrichtenquelle gesendet wird. Der Standardwert beträgt 2 Sekunden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyConfiguration">
+      <MemberSignature Language="C#" Value="public override void ApplyConfiguration (System.ServiceModel.Channels.BindingElement bindingElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ApplyConfiguration(class System.ServiceModel.Channels.BindingElement bindingElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ReliableSessionElement.ApplyConfiguration(System.ServiceModel.Channels.BindingElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingElement" Type="System.ServiceModel.Channels.BindingElement" />
+      </Parameters>
+      <Docs>
+        <param name="bindingElement">Ein Bindungselement.</param>
+        <summary>Übernimmt den Inhalt eines angegebenen Bindungselements in diesen Bindungskonfigurationsabschnitt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingElementType">
+      <MemberSignature Language="C#" Value="public override Type BindingElementType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type BindingElementType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ReliableSessionElement.BindingElementType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ dieses Bindungselements ab.</summary>
+        <value>Der Typ dieses Bindungselements.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyFrom">
+      <MemberSignature Language="C#" Value="public override void CopyFrom (System.ServiceModel.Configuration.ServiceModelExtensionElement from);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyFrom(class System.ServiceModel.Configuration.ServiceModelExtensionElement from) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ReliableSessionElement.CopyFrom(System.ServiceModel.Configuration.ServiceModelExtensionElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.ServiceModel.Configuration.ServiceModelExtensionElement" />
+      </Parameters>
+      <Docs>
+        <param name="from">Der zu kopierende Konfigurationsabschnitt.</param>
+        <summary>Kopiert den Inhalt des angegebenen Konfigurationsabschnitts in diesen Konfigurationsabschnitt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBindingElement">
+      <MemberSignature Language="C#" Value="protected override System.ServiceModel.Channels.BindingElement CreateBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.ServiceModel.Channels.BindingElement CreateBindingElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ReliableSessionElement.CreateBindingElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FlowControlEnabled">
+      <MemberSignature Language="C#" Value="public bool FlowControlEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool FlowControlEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ReliableSessionElement.FlowControlEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("flowControlEnabled", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt einen Wert fest, der angibt, ob die erweiterte Flusssteuerung, eine Microsoft-spezifische Implementierung der Flusssteuerung für WS-Reliable Messaging, aktiviert ist.</summary>
+        <value>
+          <see langword="true" />, wenn die erweiterte Flusssteuerung, eine Microsoft-spezifische Implementierung der Flusssteuerung für WS-Reliable Messaging, aktiviert ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InactivityTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan InactivityTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan InactivityTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ReliableSessionElement.InactivityTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ServiceModel.Configuration.TimeSpanOrInfiniteConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("inactivityTimeout", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen <see cref="T:System.TimeSpan" />-Wert ab oder legt einen Wert fest, der die maximale Dauer angibt, die der Kanal dem anderen Kommunikationsteilnehmer für das ausbleibende Senden von Meldungen zugesteht, bevor im Kanal ein Fehler ausgelöst wird.</summary>
+        <value>Ein <see cref="T:System.TimeSpan" />-Wert, der die maximale Dauer angibt, die der Kanal dem anderen Kommunikationsteilnehmer für das ausbleibende Senden von Meldungen zugesteht, bevor im Kanal ein Fehler ausgelöst wird. Der Standardwert ist 00:10:00.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aktivität auf einem Kanal wird als Empfang einer Anwendungs- oder Infrastrukturnachricht definiert. Diese Eigenschaft steuert die maximale Menge an Zeit, um eine inaktive Sitzung am Leben zu erhalten. Bei längeren Zeiten ohne Aktivität wird die Sitzung durch die Infrastruktur beendet, und im Kanal wird ein Fehler ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeFrom">
+      <MemberSignature Language="C#" Value="protected override void InitializeFrom (System.ServiceModel.Channels.BindingElement bindingElement);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void InitializeFrom(class System.ServiceModel.Channels.BindingElement bindingElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ReliableSessionElement.InitializeFrom(System.ServiceModel.Channels.BindingElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingElement" Type="System.ServiceModel.Channels.BindingElement" />
+      </Parameters>
+      <Docs>
+        <param name="bindingElement">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxPendingChannels">
+      <MemberSignature Language="C#" Value="public int MaxPendingChannels { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxPendingChannels" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ReliableSessionElement.MaxPendingChannels" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("maxPendingChannels", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MaxValue=16384, MinValue=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl von Kanälen ab, die auf dem Listener warten können, um akzeptiert zu werden, oder legt diese Anzahl fest.</summary>
+        <value>Die maximale Anzahl von Kanälen, die auf dem Listener akzeptiert werden sollen. Der Standard ist 128.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert sollte eine Ganzzahl zwischen 1 und 16384 sein.  
+  
+ Kanäle sind ausstehend, wenn sie darauf warten, akzeptiert zu werden. Wenn dieser Grenzwert einmal erreicht ist, werden keine Kanäle erstellt. Sie werden dagegen in den ausstehenden Modus versetzt, bis diese Zahl sinkt (durch das Akzeptieren ausstehender Kanäle). Dieser Grenzwert gilt für jede Factory.  
+  
+ Wenn der Schwellenwert erreicht wird und eine Remoteanwendung versucht, eine neue zuverlässige Sitzung herzustellen, wird die Anforderung abgelehnt und der Öffnungsvorgang, der dies angefordert hat, schlägt fehl. Dieser Grenzwert gilt nicht für die Anzahl an ausstehenden ausgehenden Kanälen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxRetryCount">
+      <MemberSignature Language="C#" Value="public int MaxRetryCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxRetryCount" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ReliableSessionElement.MaxRetryCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("maxRetryCount", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MinValue=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl der Versuche eines zuverlässigen Kanals ab, eine Nachricht, für die keine Bestätigung empfangen wurde, erneut zu übertragen (durch Aufrufen von "Senden" im zugrunde liegenden Kanal), oder legt diesen Wert fest.</summary>
+        <value>Maximale Anzahl der Versuche eines zuverlässigen Kanals, eine Nachricht, für die keine Bestätigung empfangen wurde, erneut zu übertragen (durch Aufrufen von "Senden" im zugrunde liegenden Kanal). Der Mindestwert ist 1, der Höchstwert ist 20, und der Standardwert ist 8.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert sollte eine ganze Zahl größer null sein. Wenn nach der letzten Übertragung keine Bestätigung empfangen wurde, tritt ein Fehler im Kanal auf.  
+  
+ Eine Nachricht wird als übertragen betrachtet, wenn die Zustellung vom Empfänger bestätigt wird.  
+  
+ Wenn die Bestätigung nicht innerhalb einer bestimmten Zeit eingeht, überträgt die Infrastruktur die Nachricht automatisch neu. Die Infrastruktur versucht die Nachricht maximal so oft erneut zu senden, wie durch diese Eigenschaft festgelegt. Wenn nach der letzten Übertragung keine Bestätigung empfangen wurde, tritt ein Fehler im Kanal auf.  
+  
+ Die Infrastruktur verwendet einen exponentiellen Backoff-Algorithmus um den Zeitpunkt für die Neuübertragung zu ermitteln. Dabei wird eine berechnete durchschnittliche Round Trip Time zugrunde gelegt. Der Zeitpunkt liegt zunächst 1 Sekunde vor der Neuübertragung. Bei jedem erneuten Versuch wird die Verzögerung verdoppelt. Zwischen dem ersten Übertragungsversuch und dem letzten Übertragungsversuch liegen somit ca. 8,5 Minuten. Der Zeitpunkt für den ersten Neuübertragungsversuch wird gemäß der berechneten Round Trip Time angepasst, und die daraus resultierende Zeitspanne für die Übertragungsversuche variiert entsprechend. Dadurch können die Zeitpunkte für die Neuübertragung dynamisch an die unterschiedlichen Netzwerkbedingungen angepasst werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxTransferWindowSize">
+      <MemberSignature Language="C#" Value="public int MaxTransferWindowSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxTransferWindowSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ReliableSessionElement.MaxTransferWindowSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("maxTransferWindowSize", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MaxValue=4096, MinValue=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Größe des Puffers ab oder legt diese fest.</summary>
+        <value>Die maximale Größe des Puffers. Gültige Werte reichen von 1 bis 4096 einschließlich.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Auf dem Client definiert diese Eigenschaft die maximale Größe des Puffers, in dem ein zuverlässiger Kanal die noch nicht vom Empfänger bestätigten Nachrichten speichert. Die Einheit dieses Kontingents ist eine Nachricht. Ist der Puffer voll, werden weitere Sendevorgänge blockiert.  
+  
+ Beim Empfänger definiert diese Eigenschaft die maximale Größe des Puffers, in dem ein Kanal eingehende Nachrichten speichert, die noch nicht an die Anwendung zugestellt wurden. Ist der Puffer voll, werden weitere Nachrichten vom Empfänger automatisch verworfen und müssen vom Client erneut übertragen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Ordered">
+      <MemberSignature Language="C#" Value="public bool Ordered { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Ordered" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ReliableSessionElement.Ordered" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("ordered", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab oder legt einen booleschen Wert fest, der angibt, ob Nachrichten auf jeden Fall in der Reihenfolge ihres Versands eintreffen.</summary>
+        <value>
+          <see langword="true" />, wenn Meldungen garantiert in der Reihenfolge ihres Versands eintreffen; <see langword="false" />, wenn Meldungen auch in einer anderen Reihenfolge eintreffen können. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ReliableSessionElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReliableMessagingVersion">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.ReliableMessagingVersion ReliableMessagingVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.ReliableMessagingVersion ReliableMessagingVersion" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ReliableSessionElement.ReliableMessagingVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ServiceModel.Configuration.ReliableMessagingVersionConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("reliableMessagingVersion", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ReliableMessagingVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Version des vom Konfigurationselement angegebenen WS-ReliableMessaging ab oder legt sie fest.</summary>
+        <value>Eine Instanz, die von der <see cref="T:System.ServiceModel.ReliableMessagingVersion" /> abgeleitet wurde, die die Standardversion des WS-ReliableMessaging-Protokolls darstellt, das vom Konfigurationselement verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es gibt derzeit zwei Versionen des WS-ReliableMessaging-Protokolls, die von [!INCLUDE[indigo1](~/includes/indigo1-md.md)] unterstützt werden: WS-ReliableMessaging1.1 und WS-ReliableMessagingFebruary2005. Die Standardversion ist WS-ReliableMessagingFebruary2005.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

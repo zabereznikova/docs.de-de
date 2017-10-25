@@ -1,0 +1,72 @@
+<Type Name="XmlSchemaWhiteSpaceFacet" FullName="System.Xml.Schema.XmlSchemaWhiteSpaceFacet">
+  <TypeSignature Language="C#" Value="public class XmlSchemaWhiteSpaceFacet : System.Xml.Schema.XmlSchemaFacet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlSchemaWhiteSpaceFacet extends System.Xml.Schema.XmlSchemaFacet" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Schema.XmlSchemaWhiteSpaceFacet" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.Schema.XmlSchemaFacet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt das World Wide Web Consortium (W3C) <see langword="whiteSpace" /> Facet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Schema.XmlSchemaWhiteSpaceFacet> Klasse definiert, wie der SimpleType-Wert Leerzeichen behandelt wird. Die `whiteSpace` Facetwert möglich `preserve`, `replace`, oder `collapse`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Verwendung der `XmlSchemaWhiteSpaceFacet` Klasse.  
+  
+ [!code-cpp[Classic WebData XmlSchemaWhiteSpaceFacet Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic Webdata XmlSchemaWhiteSpaceFacet Example/CPP/whitespacefacet.cpp#1)]
+ [!code-csharp[Classic WebData XmlSchemaWhiteSpaceFacet Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic Webdata XmlSchemaWhiteSpaceFacet Example/CS/whitespacefacet.cs#1)]
+ [!code-vb[Classic WebData XmlSchemaWhiteSpaceFacet Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic Webdata XmlSchemaWhiteSpaceFacet Example/VB/whitespacefacet.vb#1)]  
+  
+ Für das vorhergehende Codebeispiel wird die folgende XML-Datei generiert.  
+  
+ [!code-xml[Classic WebData XmlSchemaWhiteSpaceFacet Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic Webdata XmlSchemaWhiteSpaceFacet Example/XML/example.xsd#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSchemaWhiteSpaceFacet ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaWhiteSpaceFacet.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.Schema.XmlSchemaWhiteSpaceFacet" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

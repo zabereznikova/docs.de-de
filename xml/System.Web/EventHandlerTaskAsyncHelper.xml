@@ -1,0 +1,80 @@
+<Type Name="EventHandlerTaskAsyncHelper" FullName="System.Web.EventHandlerTaskAsyncHelper">
+  <TypeSignature Language="C#" Value="public sealed class EventHandlerTaskAsyncHelper" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EventHandlerTaskAsyncHelper extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.EventHandlerTaskAsyncHelper" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Konvertiert die Aufgabe zurückgibt, asynchrone Methoden in Methoden, die das asynchrone Programmiermodell verwendet, die in früheren Versionen von ASP.NET verwenden und auf Grundlage, beginnen und enden Ereignisse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um asynchrone Aufgaben in ASP.NET 4.5 zu behandeln, die Sie Implementieren der Logik, um eine Aufgabe als Zurückgeben einer <xref:System.Web.TaskEventHandler> delegieren. Dieses Modell der asynchronen Programmierung mit aufgabenbasierte hat Vorrang vor dem Modell, die in früheren Versionen von ASP.NET verwenden, welche Basen alle Ereignisbehandlung auf beginnen und enden Ereignisse verwendet. Nach dem Implementieren einer <xref:System.Web.TaskEventHandler> Delegaten, Sie können anschließend übergeben Sie sie an der <xref:System.Web.EventHandlerTaskAsyncHelper.%23ctor%2A> -Konstruktor, der dient als Wrapper für die Logik Aufgabe zurückgibt und den Handler für das Modell verwendet beginnen und enden Ereignisse konvertiert. Die <xref:System.Web.EventHandlerTaskAsyncHelper> -Klasse ermöglicht es Ihrer <xref:System.Web.TaskEventHandler> -Objekt, mit das ASP.NET-Seitenframework kompatibel sein. Beim Aufrufen der <xref:System.Web.UI.Page.AddOnPreRenderCompleteAsync%2A> Methode den Prozess der Aufgabe für eine asynchrone Seite, die Sie verwenden die <xref:System.Web.EventHandlerTaskAsyncHelper.BeginEventHandler%2A> und <xref:System.Web.EventHandlerTaskAsyncHelper.EndEventHandler%2A> Eigenschaften der konvertierten Begin und Ereignishandlern an die Methode übergeben.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventHandlerTaskAsyncHelper (System.Web.TaskEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.TaskEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.EventHandlerTaskAsyncHelper.#ctor(System.Web.TaskEventHandler)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="handler" Type="System.Web.TaskEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="handler">Die asynchrone Aufgabe.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.EventHandlerTaskAsyncHelper" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginEventHandler">
+      <MemberSignature Language="C#" Value="public System.Web.BeginEventHandler BeginEventHandler { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.BeginEventHandler BeginEventHandler" />
+      <MemberSignature Language="DocId" Value="P:System.Web.EventHandlerTaskAsyncHelper.BeginEventHandler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.BeginEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="T:System.Web.BeginEventHandler" /> Methode für eine asynchrone Aufgabe.</summary>
+        <value>Die Methode, die Begin-Ereignisses für die asynchrone Aufgabe verarbeitet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndEventHandler">
+      <MemberSignature Language="C#" Value="public System.Web.EndEventHandler EndEventHandler { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.EndEventHandler EndEventHandler" />
+      <MemberSignature Language="DocId" Value="P:System.Web.EventHandlerTaskAsyncHelper.EndEventHandler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.EndEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die <see cref="T:System.Web.EndEventHandler" /> Methode für eine asynchrone Aufgabe.</summary>
+        <value>Die Methode, die End-Ereignis für die asynchrone Aufgabe verarbeitet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

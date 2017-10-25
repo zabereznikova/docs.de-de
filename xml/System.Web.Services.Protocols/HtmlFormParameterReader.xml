@@ -1,0 +1,72 @@
+<Type Name="HtmlFormParameterReader" FullName="System.Web.Services.Protocols.HtmlFormParameterReader">
+  <TypeSignature Language="C#" Value="public class HtmlFormParameterReader : System.Web.Services.Protocols.ValueCollectionParameterReader" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HtmlFormParameterReader extends System.Web.Services.Protocols.ValueCollectionParameterReader" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.HtmlFormParameterReader" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Services.Protocols.ValueCollectionParameterReader</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Liest die eingehenden Anforderungsparameter für Webdienste, die mithilfe von HTTP mit Name-Wert-Paare, die nicht als eine SOAP-Nachricht, sondern z. B. ein HTML-Formular codiert implementiert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Services.Protocols.HtmlFormParameterReader>und andere Klassen in der <xref:System.Web.Services.Protocols> Namespace unterstützt die .NET Framework-Implementierungen von Webdiensten über HTTP-GET und HTTP-POST-Vorgänge. Web Service Autoren und Leser serialisieren und deserialisieren, bzw. die Parameter oder Rückgabeobjekt Webmethoden und den HTTP-Anforderung oder Antwort Streams. Web Service Autoren und Leser HTTP für den Transport verwenden, jedoch nicht mit den standardmäßigen SOAP-Nachrichten austauschen. Die dienstseitige <xref:System.Web.Services.Protocols.HtmlFormParameterReader> Klasse bietet einen <xref:System.Web.Services.Protocols.HtmlFormParameterReader.Read%2A> Methode Parameter Lesen von Name-Wert-Paare, die codiert werden in den Text einer HTTP-Anforderung mit dem MIME-Typ `application/x-www-form-urlencoded`.  
+  
+ Sie in der Regel nicht benötigen, verwenden Sie <xref:System.Web.Services.Protocols.HtmlFormParameterReader> direkt. HTTP-POST-Webdienste sind aktiviert, wenn einer ASP.NET-Konfigurationsdatei (Web.config) [ \<Protokolle >-Element](http://msdn.microsoft.com/en-us/f3b301dc-855c-4062-8bcf-5ccadb598fab) Element enthält ein [ \<hinzufügen >-Element für \<Protokolle >](http://msdn.microsoft.com/en-us/abaa41b9-aa8b-469f-8ae5-e58c4d3a2921) Element, dessen `name` Wert des Attributs ist "HttpPost". Die <xref:System.Web.Services.Protocols.HtmlFormParameterReader> Klasse wird automatisch verwendet, wenn ein HTTP-POST-Webdienst aktiviert ist und eine anwendbare HTTP-Anforderung empfangen wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HtmlFormParameterReader ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.HtmlFormParameterReader.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Services.Protocols.HtmlFormParameterReader" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public override object[] Read (System.Web.HttpRequest request);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object[] Read(class System.Web.HttpRequest request) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.HtmlFormParameterReader.Read(System.Web.HttpRequest)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.Web.HttpRequest" />
+      </Parameters>
+      <Docs>
+        <param name="request">Ein <see cref="T:System.Web.HttpRequest" /> Objekt, das im Text einer HTTP-Anforderung codierte HTML-Wert-Paaren enthält.</param>
+        <summary>Liest ein Name-Wert-Paare in der Webmethode Parameterwerte.</summary>
+        <returns>Ein Array von Objekten enthalten die Name-Wert-Paare.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Services.Protocols.HtmlFormParameterReader.Read%2A> Methode verwendet den Inhalt der <xref:System.Web.HttpRequest> des Objekts <xref:System.Web.HttpRequest.Form%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

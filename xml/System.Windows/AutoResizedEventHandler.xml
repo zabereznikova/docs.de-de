@@ -1,0 +1,32 @@
+<Type Name="AutoResizedEventHandler" FullName="System.Windows.AutoResizedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void AutoResizedEventHandler(object sender, AutoResizedEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AutoResizedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.AutoResizedEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.AutoResizedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Die Ereignisdaten.</param>
+    <summary>Stellt die Methode zur Behandlung des <see cref="E:System.Windows.Interop.HwndSource.AutoResized" />-Ereignisses dar, das durch <see cref="T:System.Windows.Interop.HwndSource" /> ausgelöst wurde.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Interop.HwndSource.AutoResized> Ereignis wird ausgelöst, wenn die [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Layoutsystem bewirkt, dass eine <xref:System.Windows.Interop.HwndSource> automatisch angepasst wird. Eine typische Handlerimplementierung würden kommunizieren Größe ändert, zu das HWND als Bestandteil der <xref:System.Windows.Interop.HwndSource>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

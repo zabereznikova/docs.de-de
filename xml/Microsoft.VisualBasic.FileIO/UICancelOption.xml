@@ -1,0 +1,57 @@
+<Type Name="UICancelOption" FullName="Microsoft.VisualBasic.FileIO.UICancelOption">
+  <TypeSignature Language="C#" Value="public enum UICancelOption" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed UICancelOption extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.FileIO.UICancelOption" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, ob eine Ausnahme ausgelöst wird, wenn der Benutzer klickt **"Abbrechen"** während eines Vorgangs.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration bestimmt, ob ein <xref:System.OperationCanceledException> wird ausgelöst, wenn ein Benutzer klickt auf **"Abbrechen"** während eines Vorgangs. In beiden Fällen wird der Vorgang abgebrochen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DoNothing">
+      <MemberSignature Language="C#" Value="DoNothing" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.FileIO.UICancelOption DoNothing = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.FileIO.UICancelOption.DoNothing" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.FileIO.UICancelOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Werden keine Aktionen ausgeführt, wenn der Benutzer klickt **"Abbrechen"**.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ThrowException">
+      <MemberSignature Language="C#" Value="ThrowException" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.FileIO.UICancelOption ThrowException = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.FileIO.UICancelOption.ThrowException" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.FileIO.UICancelOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Löst eine Ausnahme aus, wenn der Benutzer klickt **"Abbrechen"**.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

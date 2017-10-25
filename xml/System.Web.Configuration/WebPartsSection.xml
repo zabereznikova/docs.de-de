@@ -1,0 +1,231 @@
+<Type Name="WebPartsSection" FullName="System.Web.Configuration.WebPartsSection">
+  <TypeSignature Language="C#" Value="public sealed class WebPartsSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WebPartsSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.WebPartsSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht programmgesteuerten Zugriff auf die <see langword="webParts" /> Konfigurationsdateiabschnitt. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `webParts` Konfigurationsdateiabschnitt bietet die Möglichkeit geben Sie einen Anbieter des Webparts Personalisierung, Personalisierung autorisierungen festgelegt und fügen benutzerdefinierte Klassen, Erweitern der <xref:System.Web.UI.WebControls.WebParts.WebPartTransformer> Klasse zur Verwendung von Webparts-Verbindungen.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird veranschaulicht, wie Werte für verschiedene Attribute der deklarativ angeben, die `webParts` Abschnitt, die auch als Member zugegriffen werden kann die <xref:System.Web.Configuration.WebPartsSection> Klasse.  
+  
+ Im folgenden Konfigurationsbeispiel-Datei zeigt, wie Sie Werte für deklarativ angeben, die `webParts` Abschnitt.  
+  
+```  
+<system.web>  
+  <webParts>  
+    <personalization  
+      defaultProvider=" AspNetSqlPersonalizationProvider ">  
+        <!—- Providers may only be defined at the   
+            application level -->  
+      <providers>  
+        <add name="AspNetSqlPersonalizationProvider"  
+type="System.Web.UI.WebControls.WebParts.SqlPersonalizationProvider"  
+        connectionStringName="LocalSqlServer"  
+        applicationName="/" />        
+      </providers>  
+      <authorization>  
+        <deny users="*" verbs="enterSharedScope" />  
+        <allow users="Admin" verbs="modifyState" />  
+      </authorization>  
+    </personalization>  
+    <transformers>  
+      <add name="RowToFieldTransformer"  
+        type="System.Web.UI.WebControls.WebParts.RowToFieldTransformer" />  
+      <add name="RowToFilterTransformer"  
+        type="System.Web.UI.WebControls.WebParts.RowToFilterTransformer" />  
+      <add name="RowToParametersTransformer"  
+type="System.Web.UI.WebControls.WebParts.RowToParametersTransformer" />  
+    </transformers>  
+  </webParts>  
+</system.web>  
+```  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.WebPartsSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.WebPartsSection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebPartsSection/CS/usingwebpartssection.cs#1)]
+ [!code-vb[System.Web.Configuration.WebPartsSection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebPartsSection/VB/usingwebpartssection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartsSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.WebPartsSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Configuration.WebPartsSection" />-Klasse mit Standardeinstellungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.WebPartsSection.%23ctor%2A> Konstruktor ist nicht vorgesehen, direkt aus Ihrem Code verwendet werden. Sie wird vom Konfigurationssystem von ASP.NET aufgerufen. Sie rufen Sie eine Instanz von der <xref:System.Web.Configuration.WebPartsSection> Klasse, indem die <xref:System.Configuration.Configuration.GetSection%2A> Methode.  
+  
+ Dieser Konstruktor ist nicht dazu gedacht, die direkt aus Ihrem Code verwendet werden. Sie wird vom Konfigurationssystem von ASP.NET aufgerufen.  
+  
+ Die folgende Tabelle zeigt die Standardeinstellungen, die für diesen Konstruktor verwendet werden.  
+  
+|Einstellung|Standardwert|  
+|-------------|-------------------|  
+|<xref:System.Web.Configuration.WebPartsSection.Personalization%2A>|Ein leeres <xref:System.Web.Configuration.WebPartsPersonalization>-Objekt.|  
+|<xref:System.Web.Configuration.WebPartsSection.Transformers%2A>|Ein <xref:System.Web.Configuration.TransformerInfoCollection> Auflistung mit dem Standardwert <xref:System.Web.Configuration.TransformerInfo> Objekt.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableExport">
+      <MemberSignature Language="C#" Value="public bool EnableExport { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableExport" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.WebPartsSection.EnableExport" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("enableExport", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob den Export von Steuerelementdaten in eine XML-Beschreibungsdatei zu aktivieren.</summary>
+        <value>
+          <see langword="true" />So aktivieren Sie den Export von Steuerelementdaten in eine XML-Beschreibungsdatei; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRuntimeObject">
+      <MemberSignature Language="C#" Value="protected override object GetRuntimeObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetRuntimeObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.WebPartsSection.GetRuntimeObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Personalization">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.WebPartsPersonalization Personalization { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.WebPartsPersonalization Personalization" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.WebPartsSection.Personalization" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("personalization")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.WebPartsPersonalization</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Web.Configuration.WebPartsPersonalization" /> Objekt, das Sie die Webparts Personalisierungsanbieter angeben und Festlegen von Webparts Personalisierung autorisierungen ermöglicht.</summary>
+        <value>Ein <see cref="T:System.Web.Configuration.WebPartsPersonalization" /> -Objekt, das Ihnen die Möglichkeit geben die Personalisierungsanbieter und Personalisierung autorisierungen festgelegt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.WebPartsSection.Personalization%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Web.Configuration.WebPartsSection#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebPartsSection/CS/usingwebpartssection.cs#3)]
+ [!code-vb[System.Web.Configuration.WebPartsSection#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebPartsSection/VB/usingwebpartssection.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.WebPartsSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transformers">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.TransformerInfoCollection Transformers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.TransformerInfoCollection Transformers" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.WebPartsSection.Transformers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("transformers")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.TransformerInfoCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von <see cref="T:System.Web.Configuration.TransformerInfo" />-Objekten ab.</summary>
+        <value>Ein <see cref="T:System.Web.Configuration.TransformerInfoCollection" /> Auflistung von <see cref="T:System.Web.Configuration.TransformerInfo" /> Objekte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Configuration.TransformerInfo>-Objekte geben benutzerdefinierte Klassen, mit denen erweitert die <xref:System.Web.UI.WebControls.WebParts.WebPartTransformer> Klasse zur Verwendung von Webparts-Verbindungen für ASP.NET-Anwendungen, die von der Konfigurationsdatei betroffen sind. Diese Transformatorklassen fungieren als Brücken zwischen verbundenen Webparts und übersetzen Daten zwischen Webparts mit nicht kompatiblen Verbindungspunkten.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.WebPartsSection.Transformers%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Web.Configuration.WebPartsSection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebPartsSection/CS/usingwebpartssection.cs#2)]
+ [!code-vb[System.Web.Configuration.WebPartsSection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebPartsSection/VB/usingwebpartssection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

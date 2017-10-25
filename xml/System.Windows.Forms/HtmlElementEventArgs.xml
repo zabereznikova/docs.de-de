@@ -1,0 +1,528 @@
+<Type Name="HtmlElementEventArgs" FullName="System.Windows.Forms.HtmlElementEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class HtmlElementEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit HtmlElementEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.HtmlElementEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für die Ereignisse, die auf definierten <see cref="T:System.Windows.Forms.HtmlDocument" /> und <see cref="T:System.Windows.Forms.HtmlElement" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.HtmlElementEventArgs>Kapselt die gleichen Informationen finden Sie auf der `window.event` Objekt beim Programmieren mit dem nicht verwalteten HTML-DOM oder beim Schreiben von Active Script für HTML-Seiten.  
+  
+ In den meisten Fällen können Sie <xref:System.Windows.Forms.HtmlElementEventArgs.ToElement%2A> auf das HTML-Element zu suchen, der die Ereignisaktion empfängt und <xref:System.Windows.Forms.HtmlElementEventArgs.FromElement%2A> Suche nach dem HTML-Element, das das aktuelle Ereignis verursacht wird. Nicht jedes Ereignis stellt jedoch einen Wert für diese Eigenschaften; finden Sie in der verwalteten Dokumentation für ein Ereignis oder der entsprechenden Dokumentation in der Internet Explorer-SDK-Dokumentation zu ermitteln, ob das Ereignis werden bereitgestellt.  
+  
+ Viele Ereignisse in das HTML-DOM werden an den übergeordneten Elementen gesendet, es sei denn, sie abgebrochen werden. Dies wird als Ereignis bubbling bezeichnet. Wenn eine `SPAN` innerhalb von einer `DIV` einem Mausklick empfängt, und klicken Sie dann einen Click-Ereignis, für ausgelöst wird die `SPAN` zuerst anschließend für die `DIV`, und schließlich für der HTML-Seite `BODY` Element. <xref:System.Windows.Forms.HtmlElementEventArgs.BubbleEvent%2A>Steuert, ob ein Ereignis auf diese Weise oder nicht verhält.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Typs. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.HtmlDocument.Click> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.HtmlDocument> mit dem Namen `HtmlDocument1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.HtmlDocument.Click> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#422](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#422)]
+ [!code-vb[System.Windows.Forms.EventExamples#422](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#422)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AltKeyPressed">
+      <MemberSignature Language="C#" Value="public bool AltKeyPressed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AltKeyPressed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlElementEventArgs.AltKeyPressed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob die ALT-Taste gedrückt wurde, wenn dieses Ereignis aufgetreten ist.</summary>
+        <value>
+          <see langword="true" />ist die ALT-Taste gedrückt wurde. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.HtmlDocument.Click?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.HtmlDocument> mit dem Namen `HtmlDocument1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.HtmlDocument.Click?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#422](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#422)]
+ [!code-vb[System.Windows.Forms.EventExamples#422](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#422)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BubbleEvent">
+      <MemberSignature Language="C#" Value="public bool BubbleEvent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BubbleEvent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlElementEventArgs.BubbleEvent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das aktuelle Ereignis oben durch die Hierarchie der Elemente des HTML-Dokumentobjektmodells ausgelöst.</summary>
+        <value>
+          <see langword="true" />Wenn das Ereignis ausgelöst; <see langword="false" /> Wenn dies nicht der Fall.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nicht alle Ereignisse im Blasendiagramm Document Object Model. Alle Ereignisse verfügbar gemacht werden, indem Sie die <xref:System.Windows.Forms.HtmlDocument> verwaltete Wrapper Blase mit Ausnahme von <xref:System.Windows.Forms.HtmlDocument.Stop>. Für <xref:System.Windows.Forms.HtmlElement>, `Error` und `Load` Ereignisse werden nicht weitergeleitet. Festlegen von `BubbleEvent` auf `true` während eines dieser Ereignisse haben keine Auswirkungen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.HtmlDocument.Click?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.HtmlDocument> mit dem Namen `HtmlDocument1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.HtmlDocument.Click?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#422](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#422)]
+ [!code-vb[System.Windows.Forms.EventExamples#422](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#422)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientMousePosition">
+      <MemberSignature Language="C#" Value="public System.Drawing.Point ClientMousePosition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Point ClientMousePosition" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlElementEventArgs.ClientMousePosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Position des Mauszeigers im Clientbereich des Dokuments.</summary>
+        <value>Die aktuelle Position des Mauszeigers.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `ClientMousePosition`Gibt die Position des Cursors relativ zur linken oberen Ecke des Dokuments. Verwendung <xref:System.Windows.Forms.HtmlElementEventArgs.MousePosition%2A> Sie ggf. die Koordinaten der Maus relativ zu dem Element, das das Ereignis ausgelöst hat.  
+  
+   
+  
+## Examples  
+ Die folgenden HTML-Datei veranschaulicht die relative Positionierung von einem `TABLE` innerhalb von einer `BODY` Tag.  
+  
+```  
+<HTML>  
+  
+<BODY>  
+  
+    <TABLE style="position:relative;top:100px;left:100px;">  
+        <TR>  
+            <TD>Text</TD>  
+            <TD>More text</TD>  
+        </TR>  
+    </TABLE>  
+  
+</BODY>  
+  
+</HTML>  
+  
+```  
+  
+ Das folgende Codebeispiel zeigt den Unterschied zwischen <xref:System.Windows.Forms.HtmlElementEventArgs.MousePosition%2A>, <xref:System.Windows.Forms.HtmlElementEventArgs.ClientMousePosition%2A>, und <xref:System.Windows.Forms.HtmlElementEventArgs.OffsetMousePosition%2A> klickt der Benutzer auf ein Element von der `TABLE`. <xref:System.Windows.Forms.HtmlElementEventArgs.ClientMousePosition%2A>Zeigt die Koordinaten relativ zur linken oberen Ecke des Clientbereichs des Dokuments an. <xref:System.Windows.Forms.HtmlElementEventArgs.MousePosition%2A>Zeigt Koordinaten relativ zur linken oberen Ecke von der `TABLE`. Wenn Sie auf eine der Zeilen Text erhalten, klicken Sie auf <xref:System.Windows.Forms.HtmlElementEventArgs.OffsetMousePosition%2A> zeigt Koordinaten relativ zur, `TD` Element.  
+  
+ Dieses Beispiel benötigen Sie von Ihnen konfigurierten `Document_MouseDown` als Handler für das <xref:System.Windows.Forms.HtmlDocument.MouseDown> Ereignis auf <xref:System.Windows.Forms.HtmlDocument>.  
+  
+ [!code-csharp[System.Windows.Forms.HtmlElementEventArgs#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElementEventArgs/CS/Form1.cs#2)]
+ [!code-vb[System.Windows.Forms.HtmlElementEventArgs#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElementEventArgs/VB/Form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CtrlKeyPressed">
+      <MemberSignature Language="C#" Value="public bool CtrlKeyPressed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CtrlKeyPressed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlElementEventArgs.CtrlKeyPressed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob die STRG-Taste gedrückt wurde, wenn dieses Ereignis aufgetreten ist.</summary>
+        <value>
+          <see langword="true" />Wenn Sie die STRG-Taste gedrückt wurde; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.HtmlDocument.Click?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.HtmlDocument> mit dem Namen `HtmlDocument1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.HtmlDocument.Click?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#422](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#422)]
+ [!code-vb[System.Windows.Forms.EventExamples#422](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#422)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventType">
+      <MemberSignature Language="C#" Value="public string EventType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EventType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlElementEventArgs.EventType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Ereignisses ab, das ausgelöst wurde.</summary>
+        <value>Der Name des Ereignisses.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.HtmlDocument.Click?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.HtmlDocument> mit dem Namen `HtmlDocument1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.HtmlDocument.Click?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#422](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#422)]
+ [!code-vb[System.Windows.Forms.EventExamples#422](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#422)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromElement">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlElement FromElement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.HtmlElement FromElement" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlElementEventArgs.FromElement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Forms.HtmlElement" /> der Mauszeiger die Form weg bewegt wird.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.HtmlElement" /> der Mauszeiger die Form weg bewegt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.HtmlElementEventArgs.FromElement%2A>hat z. B. ein gültiger während Mausereignisse <xref:System.Windows.Forms.HtmlElement.MouseEnter> und <xref:System.Windows.Forms.HtmlElement.MouseLeave>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyPressedCode">
+      <MemberSignature Language="C#" Value="public int KeyPressedCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 KeyPressedCode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlElementEventArgs.KeyPressedCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den ASCII-Wert des Tastaturzeichens eingegeben eine <see cref="E:System.Windows.Forms.HtmlElement.KeyPress" />, <see cref="E:System.Windows.Forms.HtmlElement.KeyDown" />, oder <see cref="E:System.Windows.Forms.HtmlElement.KeyUp" /> Ereignis.</summary>
+        <value>Der ASCII-Wert des zusammengesetzten Tastatureingabe.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.HtmlDocument.Click?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.HtmlDocument> mit dem Namen `HtmlDocument1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.HtmlDocument.Click?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#422](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#422)]
+ [!code-vb[System.Windows.Forms.EventExamples#422](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#422)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseButtonsPressed">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.MouseButtons MouseButtonsPressed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.MouseButtons MouseButtonsPressed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlElementEventArgs.MouseButtonsPressed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MouseButtons</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Maustaste gedrückt, während auf den geklickt wurde, eine <see cref="E:System.Windows.Forms.HtmlElement.MouseDown" /> oder <see cref="E:System.Windows.Forms.HtmlElement.MouseUp" /> Ereignis.</summary>
+        <value>Die Maustaste los, auf die geklickt wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.HtmlDocument.Click?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.HtmlDocument> mit dem Namen `HtmlDocument1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.HtmlDocument.Click?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#422](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#422)]
+ [!code-vb[System.Windows.Forms.EventExamples#422](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#422)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MousePosition">
+      <MemberSignature Language="C#" Value="public System.Drawing.Point MousePosition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Point MousePosition" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlElementEventArgs.MousePosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Position des Mauszeigers relativ zu einem relativ positioniertes übergeordnetes Element fest.</summary>
+        <value>Die Position des Mauszeigers relativ zur linken oberen Ecke des übergeordneten Elements des Elements, das das Ereignis ausgelöst, wenn das übergeordnete Element relativ positioniert ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Relative Positionierung wird im HTML-Format verwendet, um ein Element auf einer Seite im Verhältnis zu seinem übergeordneten Element zu platzieren.  
+  
+ Wenn ein Element relativ positioniert ist, wird diese Eigenschaft zurück zum gleiche Ergebnis wie <xref:System.Windows.Forms.HtmlElementEventArgs.ClientMousePosition%2A>.  
+  
+   
+  
+## Examples  
+ Die folgenden HTML-Datei veranschaulicht die relative Positionierung von einem `TABLE` innerhalb von einer `BODY` Tag.  
+  
+```  
+<HTML>  
+  
+<BODY>  
+  
+    <TABLE style="position:relative;top:100px;left:100px;">  
+        <TR>  
+            <TD>Text/TD>  
+            <TD>More text</TD>  
+        </TR>  
+    </TABLE>  
+  
+</BODY>  
+  
+</HTML>  
+  
+```  
+  
+ Das folgende Codebeispiel zeigt den Unterschied zwischen <xref:System.Windows.Forms.HtmlElementEventArgs.MousePosition%2A>, <xref:System.Windows.Forms.HtmlElementEventArgs.ClientMousePosition%2A>, und <xref:System.Windows.Forms.HtmlElementEventArgs.OffsetMousePosition%2A> klickt der Benutzer auf ein Element von der `TABLE`. <xref:System.Windows.Forms.HtmlElementEventArgs.ClientMousePosition%2A>Zeigt die Koordinaten relativ zur linken oberen Ecke des Clientbereichs des Dokuments an. <xref:System.Windows.Forms.HtmlElementEventArgs.MousePosition%2A>Zeigt Koordinaten relativ zur linken oberen Ecke von der `TABLE`. Wenn Sie auf eine der Zeilen Text erhalten, klicken Sie auf <xref:System.Windows.Forms.HtmlElementEventArgs.OffsetMousePosition%2A> zeigt Koordinaten relativ zur, `TD` Element.  
+  
+ Dieses Beispiel benötigen Sie von Ihnen konfigurierten `Document_MouseDown` als Handler für das <xref:System.Windows.Forms.HtmlDocument.MouseDown> Ereignis auf <xref:System.Windows.Forms.HtmlDocument>.  
+  
+ [!code-csharp[System.Windows.Forms.HtmlElementEventArgs#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElementEventArgs/CS/Form1.cs#2)]
+ [!code-vb[System.Windows.Forms.HtmlElementEventArgs#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElementEventArgs/VB/Form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OffsetMousePosition">
+      <MemberSignature Language="C#" Value="public System.Drawing.Point OffsetMousePosition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Point OffsetMousePosition" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlElementEventArgs.OffsetMousePosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Position des Mauszeigers relativ zu dem Element, das das Ereignis auslöst.</summary>
+        <value>Die Position des Mauszeigers relativ zu dem Element, das das Ereignis auslöst.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Die folgenden HTML-Datei veranschaulicht die relative Positionierung von einem `TABLE` innerhalb von einer `BODY` Tag.  
+  
+```  
+<HTML>  
+  
+<BODY>  
+  
+    <TABLE style="position:relative;top:100px;left:100px;">  
+        <TR>  
+            <TD>Text</TD>  
+            <TD>More text</TD>  
+        </TR>  
+    </TABLE>  
+  
+</BODY>  
+  
+</HTML>  
+  
+```  
+  
+ Das folgende Codebeispiel zeigt den Unterschied zwischen <xref:System.Windows.Forms.HtmlElementEventArgs.MousePosition%2A>, <xref:System.Windows.Forms.HtmlElementEventArgs.ClientMousePosition%2A> und <xref:System.Windows.Forms.HtmlElementEventArgs.OffsetMousePosition%2A> klickt der Benutzer auf ein Element von der `TABLE`. <xref:System.Windows.Forms.HtmlElementEventArgs.ClientMousePosition%2A>Zeigt die Koordinaten relativ zur linken oberen Ecke des Clientbereichs des Dokuments an. <xref:System.Windows.Forms.HtmlElementEventArgs.MousePosition%2A>Zeigt Koordinaten relativ zur linken oberen Ecke von der `TABLE`. Wenn Sie auf eine der Zeilen Text erhalten, klicken Sie auf <xref:System.Windows.Forms.HtmlElementEventArgs.OffsetMousePosition%2A> zeigt Koordinaten relativ zur, `TD` Element.  
+  
+ Dieses Beispiel benötigen Sie von Ihnen konfigurierten `Document_MouseDown` als Handler für das <xref:System.Windows.Forms.HtmlDocument.MouseDown> Ereignis auf <xref:System.Windows.Forms.HtmlDocument>.  
+  
+ [!code-csharp[System.Windows.Forms.HtmlElementEventArgs#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElementEventArgs/CS/Form1.cs#2)]
+ [!code-vb[System.Windows.Forms.HtmlElementEventArgs#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElementEventArgs/VB/Form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnValue">
+      <MemberSignature Language="C#" Value="public bool ReturnValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReturnValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlElementEventArgs.ReturnValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Rückgabewert des behandelten Ereignisses.</summary>
+        <value>
+          <see langword="true" />Wenn das Ereignis behandelt wurde; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.HtmlDocument.Click?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.HtmlDocument> mit dem Namen `HtmlDocument1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.HtmlDocument.Click?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#422](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#422)]
+ [!code-vb[System.Windows.Forms.EventExamples#422](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#422)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShiftKeyPressed">
+      <MemberSignature Language="C#" Value="public bool ShiftKeyPressed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShiftKeyPressed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlElementEventArgs.ShiftKeyPressed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob die UMSCHALTTASTE gedrückt wurde, wenn dieses Ereignis aufgetreten ist.</summary>
+        <value>
+          <see langword="true" />Wenn Sie die UMSCHALTTASTE gedrückt wurde; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.HtmlDocument.Click?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.HtmlDocument> mit dem Namen `HtmlDocument1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.HtmlDocument.Click?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#422](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#422)]
+ [!code-vb[System.Windows.Forms.EventExamples#422](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#422)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToElement">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlElement ToElement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.HtmlElement ToElement" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlElementEventArgs.ToElement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Forms.HtmlElement" /> gegen die der Benutzer den Mauszeiger verschoben wird.</summary>
+        <value>Das Element in dem Richtung der Mauszeiger die Form verschoben werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.HtmlElementEventArgs.ToElement%2A>hat z. B. ein gültiger während Mausereignisse <xref:System.Windows.Forms.HtmlElement.MouseEnter> und <xref:System.Windows.Forms.HtmlElement.MouseLeave>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.HtmlDocument.Click?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.HtmlDocument> mit dem Namen `HtmlDocument1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.HtmlDocument.Click?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#422](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#422)]
+ [!code-vb[System.Windows.Forms.EventExamples#422](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#422)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

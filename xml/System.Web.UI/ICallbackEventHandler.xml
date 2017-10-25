@@ -1,0 +1,85 @@
+<Type Name="ICallbackEventHandler" FullName="System.Web.UI.ICallbackEventHandler">
+  <TypeSignature Language="C#" Value="public interface ICallbackEventHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICallbackEventHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ICallbackEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Verwendet, um anzugeben, dass ein Steuerelement, das Ziel ein Rückrufereignis auf dem Server sein kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementieren der <xref:System.Web.UI.ICallbackEventHandler> Schnittstelle für ein beliebiges benutzerdefiniertes Steuerelement, das Rückrufereignisse empfangen muss. Weitere Informationen finden Sie unter [Implementing Client Rückrufe ohne Postbacks](http://msdn.microsoft.com/library/dfaaa7d4-e1f2-4322-b2f5-796e0419f185).  
+  
+ Beispiele für Steuerelemente, implementieren die <xref:System.Web.UI.ICallbackEventHandler> Schnittstelle enthalten die <xref:System.Web.UI.WebControls.GridView>, <xref:System.Web.UI.WebControls.DetailsView>, und <xref:System.Web.UI.WebControls.TreeView> Steuerelemente. Wenn ein Rückrufereignis als Ziel verwendet ein Steuerelement, implementiert die <xref:System.Web.UI.ICallbackEventHandler> -Schnittstelle, die <xref:System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent%2A> Methode wird aufgerufen, um die Behandlung des Ereignisses, das Ereignisargument als Parameter übergeben und die <xref:System.Web.UI.ICallbackEventHandler.GetCallbackResult%2A> Methode gibt das Ergebnis des Rückrufs.  
+  
+ Steuerelemente, die Abrufen von Daten aus einem Datenquellensteuerelement während eines Rückrufs können synchron oder asynchron tun. ASP.NET-Steuerelemente wie <xref:System.Web.UI.WebControls.GridView>, <xref:System.Web.UI.WebControls.DetailsView>, und <xref:System.Web.UI.WebControls.TreeView> synchron implementiert werden. Synchrone Rückrufe werden nicht verhindert, dass den Benutzer im Browser arbeiten. Im synchronen Modus kann jeweils nur ein Rückruf, mit der letzte Rückruf Vorrang ausgeführt werden. Wenn ein Websteuerelement implementiert wird, um asynchrones Verhalten zu unterstützen, können mehrere Rückrufe gleichzeitig ausgelöst werden. Weitere Informationen zur asynchronen Programmierung finden Sie unter [das ereignisbasierte asynchrone Muster (EAP)](~/docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  
+  
+ Sie können angeben, ob Rückrufereignisse über die Benutzeroberfläche von einem Steuerelement implementieren gerendert die <xref:System.Web.UI.ICallbackEventHandler> Schnittstelle werden überprüft. Validierung von Ereignissen ist eine gute Sicherheitsmethode. Allerdings können zur Verbesserung der Leistung Sie es deaktivieren. Um zu steuern, ob Ereignis Validierung Rückrufereignisse, legen Sie die `enableEventValidation` Attribut des der [@ Page](http://msdn.microsoft.com/en-us/f06cf9e5-22bb-461d-8b8f-549e53ff40a4) Richtlinie oder die `enableEventValidation` Attribut des der [pages ((ASP.NET Settings Schema)-Element](http://msdn.microsoft.com/en-us/4123bb66-3fe4-4d62-b70e-33758656b458) der Datei "Web.config". Wenn Sie festlegen, die <xref:System.Web.UI.Page.EnableEventValidation%2A> -Eigenschaft im Code, legen Sie sie der `Page_Init` Phase der Verarbeitung der Seite. Weitere Informationen zu den Sicherheitsvorteil Ereignis Validierung mit seiner Leistungskosten Netzwerklastenausgleich, finden Sie unter [Übersicht über die Leistung von ASP.NET](http://msdn.microsoft.com/library/f882bf1b-a009-4312-ac06-74370ffabc0b).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetCallbackResult">
+      <MemberSignature Language="C#" Value="public string GetCallbackResult ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetCallbackResult() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ICallbackEventHandler.GetCallbackResult" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ein Rückrufereignis, das ein Steuerelement als Ziel verwendet die Ergebnisse zurückgegeben werden.</summary>
+        <returns>Das Ergebnis des Rückrufs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ausnahmen in <xref:System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent%2A> hat keine Auswirkung <xref:System.Web.UI.ICallbackEventHandler.GetCallbackResult%2A> aufgerufen wird und ein Ergebnis zurückgegeben. Um zu verhindern, dass <xref:System.Web.UI.ICallbackEventHandler.GetCallbackResult%2A> ein Ergebnis zurückgibt, legen Sie ein Flag beim Auftreten einer in Ausnahme <xref:System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent%2A> und zurückgeben eine leere Zeichenfolge aus <xref:System.Web.UI.ICallbackEventHandler.GetCallbackResult%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseCallbackEvent">
+      <MemberSignature Language="C#" Value="public void RaiseCallbackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RaiseCallbackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">Eine Zeichenfolge, die ein Ereignisargument für die Übergabe an den Ereignishandler darstellt.</param>
+        <summary>Verarbeitet ein Rückrufereignis, das ein Steuerelement ausgerichtet ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `null` dient als Parameter für das Ereignisargument, die Zeichenfolge "null" oder gesendeten zurück an den Server serialisiert wird. Da es keine Möglichkeit zur Unterscheidung gibt `null` und "null", vermeiden Sie `null` argumentparametern mit Rückrufen.  
+  
+ Ausnahmen in <xref:System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent%2A> hat keine Auswirkung <xref:System.Web.UI.ICallbackEventHandler.GetCallbackResult%2A> aufgerufen wird und ein Ergebnis zurückgegeben. Um zu verhindern, dass <xref:System.Web.UI.ICallbackEventHandler.GetCallbackResult%2A> ein Ergebnis zurückgibt, legen Sie ein Flag beim Auftreten einer in Ausnahme <xref:System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent%2A> und zurückgeben eine leere Zeichenfolge aus <xref:System.Web.UI.ICallbackEventHandler.GetCallbackResult%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

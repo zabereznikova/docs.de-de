@@ -1,0 +1,407 @@
+<Type Name="ButtonRenderer" FullName="System.Windows.Forms.ButtonRenderer">
+  <TypeSignature Language="C#" Value="public sealed class ButtonRenderer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ButtonRenderer extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ButtonRenderer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Methoden zum Rendern des einem Schaltflächen-Steuerelement mit oder ohne visuelle Stile verwendet. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ButtonRenderer> Klasse bietet eine Reihe von `static` Methoden, die zum Rendern eines Button-Steuerelements verwendet werden können. Unter dem Rendern eine Steuerelements versteht man das Zeichnen der Benutzeroberfläche eines Steuerelements. Um eine Schaltfläche zu zeichnen, verwenden Sie eines der <xref:System.Windows.Forms.ButtonRenderer.DrawButton%2A> Methoden. Diese Methoden bieten eine Vielzahl von Optionen, z. B. das Zeichnen von Text oder ein Bild auf die Schaltfläche "".  
+  
+ Wenn im Betriebssystem visuelle Stile aktiviert sind und visuelle Stile für die aktuelle Anwendung angewendet werden <xref:System.Windows.Forms.ButtonRenderer.DrawButton%2A> wird die Schaltfläche mit den aktuellen visuellen Stil gezeichnet. Andernfalls <xref:System.Windows.Forms.ButtonRenderer.DrawButton%2A> wird die Schaltfläche mit dem klassischen Windows-Stil gezeichnet. Dies ist hilfreich, wenn Sie ein benutzerdefiniertes Steuerelement gezeichnet werden, das automatisch die aktuelle Einstellung der visuellen Stil des Betriebssystems entsprechen soll.  
+  
+ Diese Klasse dient als Wrapper für die Funktionalität des eine <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer?displayProperty=nameWithType> , festgelegt ist, um eines der Elemente, die verfügbar gemacht werden, indem die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Button.PushButton?displayProperty=nameWithType> Klasse. Weitere Informationen finden Sie unter [Rendern von Steuerelementen mit visuellen Stilen](~/docs/framework/winforms/controls/rendering-controls-with-visual-styles.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie ein benutzerdefiniertes Steuerelement zu erstellen, verwendet die <xref:System.Windows.Forms.ButtonRenderer.DrawButton%2A> Methode, um eine Schaltfläche gezeichnet werden soll. Wenn die Schaltfläche geklickt wird, das Steuerelement eine kleinere Schaltfläche innerhalb der Begrenzung der ursprünglichen Schaltfläche zeichnet und das Steuerelement verwendet die <xref:System.Windows.Forms.ButtonRenderer.DrawParentBackground%2A> Methode über den Rest der ursprünglichen Schaltfläche gezeichnet.  
+  
+ [!code-cpp[System.Windows.Forms.ButtonRenderer#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ButtonRenderer/cpp/form1.cpp#0)]
+ [!code-csharp[System.Windows.Forms.ButtonRenderer#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ButtonRenderer/CS/form1.cs#0)]
+ [!code-vb[System.Windows.Forms.ButtonRenderer#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ButtonRenderer/VB/form1.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DrawButton">
+      <MemberSignature Language="C#" Value="public static void DrawButton (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, System.Windows.Forms.VisualStyles.PushButtonState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawButton(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, valuetype System.Windows.Forms.VisualStyles.PushButtonState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonRenderer.DrawButton(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.VisualStyles.PushButtonState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.PushButtonState" />
+      </Parameters>
+      <Docs>
+        <param name="g">Die <see cref="T:System.Drawing.Graphics" /> verwendet, um die Schaltfläche gezeichnet werden soll.</param>
+        <param name="bounds">Die <see cref="T:System.Drawing.Rectangle" /> , die die Begrenzungen der Schaltfläche angibt.</param>
+        <param name="state">Eines der <see cref="T:System.Windows.Forms.VisualStyles.PushButtonState" /> Werten, die den visuellen Status der Schaltfläche angibt.</param>
+        <summary>Zeichnet ein Schaltflächen-Steuerelement in den angegebenen Zustand und die Grenzen an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn im Betriebssystem visuelle Stile aktiviert sind, und visuelle Stile für die aktuelle Anwendung angewendet werden, wird diese Methode auf die Schaltfläche mit den aktuellen visuellen Stil gezeichnet. Andernfalls wird die Schaltfläche mit dem klassischen Windows-Stil zeichnen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawButton">
+      <MemberSignature Language="C#" Value="public static void DrawButton (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, bool focused, System.Windows.Forms.VisualStyles.PushButtonState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawButton(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, bool focused, valuetype System.Windows.Forms.VisualStyles.PushButtonState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonRenderer.DrawButton(System.Drawing.Graphics,System.Drawing.Rectangle,System.Boolean,System.Windows.Forms.VisualStyles.PushButtonState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="focused" Type="System.Boolean" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.PushButtonState" />
+      </Parameters>
+      <Docs>
+        <param name="g">Die <see cref="T:System.Drawing.Graphics" /> verwendet, um die Schaltfläche gezeichnet werden soll.</param>
+        <param name="bounds">Die <see cref="T:System.Drawing.Rectangle" /> , die die Begrenzungen der Schaltfläche angibt.</param>
+        <param name="focused">
+          <see langword="true" />ein Fokusrechteck auf die Schaltfläche gezeichnet werden soll; andernfalls <see langword="false" />.</param>
+        <param name="state">Eines der <see cref="T:System.Windows.Forms.VisualStyles.PushButtonState" /> Werten, die den visuellen Status der Schaltfläche angibt.</param>
+        <summary>Zeichnet ein Schaltflächen-Steuerelement im angegebenen Zustand und Grenzen, und klicken Sie mit einem optionalen Fokusrechteck an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn im Betriebssystem visuelle Stile aktiviert sind, und visuelle Stile für die aktuelle Anwendung angewendet werden, wird diese Methode auf die Schaltfläche mit den aktuellen visuellen Stil gezeichnet. Andernfalls wird die Schaltfläche mit dem klassischen Windows-Stil zeichnen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawButton">
+      <MemberSignature Language="C#" Value="public static void DrawButton (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, System.Drawing.Image image, System.Drawing.Rectangle imageBounds, bool focused, System.Windows.Forms.VisualStyles.PushButtonState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawButton(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, class System.Drawing.Image image, valuetype System.Drawing.Rectangle imageBounds, bool focused, valuetype System.Windows.Forms.VisualStyles.PushButtonState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonRenderer.DrawButton(System.Drawing.Graphics,System.Drawing.Rectangle,System.Drawing.Image,System.Drawing.Rectangle,System.Boolean,System.Windows.Forms.VisualStyles.PushButtonState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="image" Type="System.Drawing.Image" />
+        <Parameter Name="imageBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="focused" Type="System.Boolean" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.PushButtonState" />
+      </Parameters>
+      <Docs>
+        <param name="g">Die <see cref="T:System.Drawing.Graphics" /> verwendet, um die Schaltfläche gezeichnet werden soll.</param>
+        <param name="bounds">Die <see cref="T:System.Drawing.Rectangle" /> , die die Begrenzungen der Schaltfläche angibt.</param>
+        <param name="image">Das <see cref="T:System.Drawing.Image" />, das auf der Schaltfläche gezeichnet werden soll.</param>
+        <param name="imageBounds">Die <see cref="T:System.Drawing.Rectangle" /> , darstellt, die Dimensionen der <c>Image</c>.</param>
+        <param name="focused">
+          <see langword="true" />ein Fokusrechteck auf die Schaltfläche gezeichnet werden soll; andernfalls <see langword="false" />.</param>
+        <param name="state">Eines der <see cref="T:System.Windows.Forms.VisualStyles.PushButtonState" /> Werten, die den visuellen Status der Schaltfläche angibt.</param>
+        <summary>Zeichnet ein Schaltflächen-Steuerelement im angegebenen Zustand und Grenzen, mit dem angegebenen Bild und mit einem optionalen Fokusrechteck an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn im Betriebssystem visuelle Stile aktiviert sind, und visuelle Stile für die aktuelle Anwendung angewendet werden, wird diese Methode auf die Schaltfläche mit den aktuellen visuellen Stil gezeichnet. Andernfalls wird die Schaltfläche mit dem klassischen Windows-Stil zeichnen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawButton">
+      <MemberSignature Language="C#" Value="public static void DrawButton (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, string buttonText, System.Drawing.Font font, bool focused, System.Windows.Forms.VisualStyles.PushButtonState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawButton(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, string buttonText, class System.Drawing.Font font, bool focused, valuetype System.Windows.Forms.VisualStyles.PushButtonState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonRenderer.DrawButton(System.Drawing.Graphics,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Boolean,System.Windows.Forms.VisualStyles.PushButtonState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="buttonText" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="focused" Type="System.Boolean" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.PushButtonState" />
+      </Parameters>
+      <Docs>
+        <param name="g">Die <see cref="T:System.Drawing.Graphics" /> verwendet, um die Schaltfläche gezeichnet werden soll.</param>
+        <param name="bounds">Die <see cref="T:System.Drawing.Rectangle" /> , die die Begrenzungen der Schaltfläche angibt.</param>
+        <param name="buttonText">Das <see cref="T:System.String" />, das auf der Schaltfläche gezeichnet werden soll.</param>
+        <param name="font">Die <see cref="T:System.Drawing.Font" /> zuweisen <c>ButtonText</c>.</param>
+        <param name="focused">
+          <see langword="true" />ein Fokusrechteck auf die Schaltfläche gezeichnet werden soll; andernfalls <see langword="false" />.</param>
+        <param name="state">Eines der <see cref="T:System.Windows.Forms.VisualStyles.PushButtonState" /> Werten, die den visuellen Status der Schaltfläche angibt.</param>
+        <summary>Zeichnet ein Schaltflächen-Steuerelement im angegebenen Zustand und Grenzen, mit dem angegebenen Text und mit einem optionalen Fokusrechteck an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn im Betriebssystem visuelle Stile aktiviert sind, und visuelle Stile für die aktuelle Anwendung angewendet werden, wird diese Methode auf die Schaltfläche mit den aktuellen visuellen Stil gezeichnet. Andernfalls wird die Schaltfläche mit dem klassischen Windows-Stil zeichnen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.ButtonRenderer.DrawButton%28System.Drawing.Graphics%2CSystem.Drawing.Rectangle%2CSystem.String%2CSystem.Drawing.Font%2CSystem.Boolean%2CSystem.Windows.Forms.VisualStyles.PushButtonState%29> -Methode in eines benutzerdefinierten Steuerelements <xref:System.Windows.Forms.Control.OnPaint%2A> Methode, um eine Schaltfläche in den Zustand, der durch die Position des Mauszeigers bestimmt gezeichnet werden soll. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.ButtonRenderer> Klasse.  
+  
+ [!code-cpp[System.Windows.Forms.ButtonRenderer#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ButtonRenderer/cpp/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.ButtonRenderer#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ButtonRenderer/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.ButtonRenderer#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ButtonRenderer/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawButton">
+      <MemberSignature Language="C#" Value="public static void DrawButton (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, string buttonText, System.Drawing.Font font, System.Windows.Forms.TextFormatFlags flags, bool focused, System.Windows.Forms.VisualStyles.PushButtonState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawButton(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, string buttonText, class System.Drawing.Font font, valuetype System.Windows.Forms.TextFormatFlags flags, bool focused, valuetype System.Windows.Forms.VisualStyles.PushButtonState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonRenderer.DrawButton(System.Drawing.Graphics,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Windows.Forms.TextFormatFlags,System.Boolean,System.Windows.Forms.VisualStyles.PushButtonState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="buttonText" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="flags" Type="System.Windows.Forms.TextFormatFlags" />
+        <Parameter Name="focused" Type="System.Boolean" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.PushButtonState" />
+      </Parameters>
+      <Docs>
+        <param name="g">Die <see cref="T:System.Drawing.Graphics" /> verwendet, um die Schaltfläche gezeichnet werden soll.</param>
+        <param name="bounds">Die <see cref="T:System.Drawing.Rectangle" /> , die die Begrenzungen der Schaltfläche angibt.</param>
+        <param name="buttonText">Das <see cref="T:System.String" />, das auf der Schaltfläche gezeichnet werden soll.</param>
+        <param name="font">Die <see cref="T:System.Drawing.Font" /> zuweisen <c>ButtonText</c>.</param>
+        <param name="flags">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.TextFormatFlags" /> Werte zuweisen <c>ButtonText</c>.</param>
+        <param name="focused">
+          <see langword="true" />ein Fokusrechteck auf die Schaltfläche gezeichnet werden soll; andernfalls <see langword="false" />.</param>
+        <param name="state">Eines der <see cref="T:System.Windows.Forms.VisualStyles.PushButtonState" /> Werten, die den visuellen Status der Schaltfläche angibt.</param>
+        <summary>Zeichnet ein Schaltflächen-Steuerelement im angegebenen Zustand und Grenzen, mit dem angegebenen Text und textformatierung und mit einem optionalen Fokusrechteck an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn im Betriebssystem visuelle Stile aktiviert sind, und visuelle Stile für die aktuelle Anwendung angewendet werden, wird diese Methode auf die Schaltfläche mit den aktuellen visuellen Stil gezeichnet. Andernfalls wird die Schaltfläche mit dem klassischen Windows-Stil zeichnen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawButton">
+      <MemberSignature Language="C#" Value="public static void DrawButton (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, string buttonText, System.Drawing.Font font, System.Drawing.Image image, System.Drawing.Rectangle imageBounds, bool focused, System.Windows.Forms.VisualStyles.PushButtonState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawButton(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, string buttonText, class System.Drawing.Font font, class System.Drawing.Image image, valuetype System.Drawing.Rectangle imageBounds, bool focused, valuetype System.Windows.Forms.VisualStyles.PushButtonState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonRenderer.DrawButton(System.Drawing.Graphics,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Drawing.Image,System.Drawing.Rectangle,System.Boolean,System.Windows.Forms.VisualStyles.PushButtonState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="buttonText" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="image" Type="System.Drawing.Image" />
+        <Parameter Name="imageBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="focused" Type="System.Boolean" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.PushButtonState" />
+      </Parameters>
+      <Docs>
+        <param name="g">Die <see cref="T:System.Drawing.Graphics" /> verwendet, um die Schaltfläche gezeichnet werden soll.</param>
+        <param name="bounds">Die <see cref="T:System.Drawing.Rectangle" /> , die die Begrenzungen der Schaltfläche angibt.</param>
+        <param name="buttonText">Das <see cref="T:System.String" />, das auf der Schaltfläche gezeichnet werden soll.</param>
+        <param name="font">Die <see cref="T:System.Drawing.Font" /> zuweisen <c>ButtonText</c>.</param>
+        <param name="image">Das <see cref="T:System.Drawing.Image" />, das auf der Schaltfläche gezeichnet werden soll.</param>
+        <param name="imageBounds">Die <see cref="T:System.Drawing.Rectangle" /> , darstellt, die Dimensionen der <c>Image</c>.</param>
+        <param name="focused">
+          <see langword="true" />ein Fokusrechteck auf die Schaltfläche gezeichnet werden soll; andernfalls <see langword="false" />.</param>
+        <param name="state">Eines der <see cref="T:System.Windows.Forms.VisualStyles.PushButtonState" /> Werten, die den visuellen Status der Schaltfläche angibt.</param>
+        <summary>Zeichnet ein Schaltflächen-Steuerelement im angegebenen Zustand und Grenzen, mit dem angegebenen Text und Bild und mit einem optionalen Fokusrechteck an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn im Betriebssystem visuelle Stile aktiviert sind, und visuelle Stile für die aktuelle Anwendung angewendet werden, wird diese Methode auf die Schaltfläche mit den aktuellen visuellen Stil gezeichnet. Andernfalls wird die Schaltfläche mit dem klassischen Windows-Stil zeichnen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawButton">
+      <MemberSignature Language="C#" Value="public static void DrawButton (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, string buttonText, System.Drawing.Font font, System.Windows.Forms.TextFormatFlags flags, System.Drawing.Image image, System.Drawing.Rectangle imageBounds, bool focused, System.Windows.Forms.VisualStyles.PushButtonState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawButton(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, string buttonText, class System.Drawing.Font font, valuetype System.Windows.Forms.TextFormatFlags flags, class System.Drawing.Image image, valuetype System.Drawing.Rectangle imageBounds, bool focused, valuetype System.Windows.Forms.VisualStyles.PushButtonState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonRenderer.DrawButton(System.Drawing.Graphics,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Windows.Forms.TextFormatFlags,System.Drawing.Image,System.Drawing.Rectangle,System.Boolean,System.Windows.Forms.VisualStyles.PushButtonState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="buttonText" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="flags" Type="System.Windows.Forms.TextFormatFlags" />
+        <Parameter Name="image" Type="System.Drawing.Image" />
+        <Parameter Name="imageBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="focused" Type="System.Boolean" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.PushButtonState" />
+      </Parameters>
+      <Docs>
+        <param name="g">Die <see cref="T:System.Drawing.Graphics" /> verwendet, um die Schaltfläche gezeichnet werden soll.</param>
+        <param name="bounds">Die <see cref="T:System.Drawing.Rectangle" /> , die die Begrenzungen der Schaltfläche angibt.</param>
+        <param name="buttonText">Das <see cref="T:System.String" />, das auf der Schaltfläche gezeichnet werden soll.</param>
+        <param name="font">Die <see cref="T:System.Drawing.Font" /> zuweisen <c>ButtonText</c>.</param>
+        <param name="flags">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.TextFormatFlags" /> Werte zuweisen <c>ButtonText</c>.</param>
+        <param name="image">Das <see cref="T:System.Drawing.Image" />, das auf der Schaltfläche gezeichnet werden soll.</param>
+        <param name="imageBounds">Die <see cref="T:System.Drawing.Rectangle" /> , darstellt, die Dimensionen der <c>Image</c>.</param>
+        <param name="focused">
+          <see langword="true" />ein Fokusrechteck auf die Schaltfläche gezeichnet werden soll; andernfalls <see langword="false" />.</param>
+        <param name="state">Eines der <see cref="T:System.Windows.Forms.VisualStyles.PushButtonState" /> Werten, die den visuellen Status der Schaltfläche angibt.</param>
+        <summary>Zeichnet ein Schaltflächen-Steuerelement im angegebenen Zustand und Grenzen; mit dem angegebenen Text, Formatieren von Text und Bild; und mit einem optionalen Fokusrechteck.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn im Betriebssystem visuelle Stile aktiviert sind, und visuelle Stile für die aktuelle Anwendung angewendet werden, wird diese Methode auf die Schaltfläche mit den aktuellen visuellen Stil gezeichnet. Andernfalls wird die Schaltfläche mit dem klassischen Windows-Stil zeichnen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawParentBackground">
+      <MemberSignature Language="C#" Value="public static void DrawParentBackground (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, System.Windows.Forms.Control childControl);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawParentBackground(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, class System.Windows.Forms.Control childControl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonRenderer.DrawParentBackground(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="childControl" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="g">Die <see cref="T:System.Drawing.Graphics" /> zum Zeichnen des Hintergrunds für das übergeordnete Element des <c>ChildControl</c>.</param>
+        <param name="bounds">Die <see cref="T:System.Drawing.Rectangle" /> in der Hintergrund des übergeordneten Steuerelements gezeichnet werden soll. Dieses Rechteck sollte innerhalb der Grenzen des untergeordneten Steuerelements.</param>
+        <param name="childControl">Das Steuerelement, dessen übergeordneten Hintergrund gezeichnet wird.</param>
+        <summary>Zeichnet den Hintergrund des übergeordneten Elements eines Steuerelements im angegebenen Bereich.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.ButtonRenderer.DrawParentBackground%2A> Methode über einen Bereich eines benutzerdefinierten Steuerelements gezeichnet. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Forms.ButtonRenderer> Klasse.  
+  
+ [!code-cpp[System.Windows.Forms.ButtonRenderer#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ButtonRenderer/cpp/form1.cpp#4)]
+ [!code-csharp[System.Windows.Forms.ButtonRenderer#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ButtonRenderer/CS/form1.cs#4)]
+ [!code-vb[System.Windows.Forms.ButtonRenderer#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ButtonRenderer/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBackgroundPartiallyTransparent">
+      <MemberSignature Language="C#" Value="public static bool IsBackgroundPartiallyTransparent (System.Windows.Forms.VisualStyles.PushButtonState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsBackgroundPartiallyTransparent(valuetype System.Windows.Forms.VisualStyles.PushButtonState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonRenderer.IsBackgroundPartiallyTransparent(System.Windows.Forms.VisualStyles.PushButtonState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.PushButtonState" />
+      </Parameters>
+      <Docs>
+        <param name="state">Eines der <see cref="T:System.Windows.Forms.VisualStyles.PushButtonState" /> Werten, die den visuellen Status der Schaltfläche angibt.</param>
+        <summary>Gibt an, ob der Hintergrund der Schaltfläche halbtransparente Bereiche oder Alphablending aufweist.</summary>
+        <returns>
+          <see langword="true" />Wenn der Hintergrund der Schaltfläche halbtransparente Bereiche oder Alphablending aufweist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderMatchingApplicationState">
+      <MemberSignature Language="C#" Value="public static bool RenderMatchingApplicationState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool RenderMatchingApplicationState" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ButtonRenderer.RenderMatchingApplicationState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Renderer den Anwendungsstatus verwendet, um Rendering-Format zu bestimmen.</summary>
+        <value>
+          <see langword="true" />Wenn der Anwendungsstatus verwendet wird, um Rendering-Format zu bestimmen; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.ButtonRenderer.RenderMatchingApplicationState%2A> Eigenschaft ist `true`, <xref:System.Windows.Forms.ButtonRenderer> verwendet die Einstellung aus der <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A?displayProperty=nameWithType> -Eigenschaft können Sie das Rendering-Format zu bestimmen. Wenn <xref:System.Windows.Forms.ButtonRenderer.RenderMatchingApplicationState%2A> ist `false`, der Renderer wird immer mit visuellen Stilen rendern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

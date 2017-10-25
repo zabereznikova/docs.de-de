@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.UI.Design.WebControls">
+  <Docs>
+    <summary>Die <see cref="N:System.Web.UI.Design.WebControls" /> -Namespace enthält Klassen, die verwendet werden können, um zur Entwurfszeit Unterstützung für Webserversteuerelemente zu erweitern.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,124 @@
+<Type Name="IWorkflowRootDesigner" FullName="System.Workflow.ComponentModel.Design.IWorkflowRootDesigner">
+  <TypeSignature Language="C#" Value="public interface IWorkflowRootDesigner : IDisposable, System.ComponentModel.Design.IRootDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IWorkflowRootDesigner implements class System.ComponentModel.Design.IDesigner, class System.ComponentModel.Design.IRootDesigner, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Design.IWorkflowRootDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.Design.IRootDesigner</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert die Eigenschaften für den aufrufenden Designer und Nachrichtenfilter (InvokingDesigner und MessageFilters) sowie die Methode, mit der ermittelt wird, ob eine Aktivität für alle Workflow-Stamm-Designer unterstützt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Alle Workflow-Stamm-Designer sind vom Typ <xref:System.Workflow.ComponentModel.Design.ActivityDesigner> oder erben von diesem Typ.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="InvokingDesigner">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.Design.CompositeActivityDesigner InvokingDesigner { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.ComponentModel.Design.CompositeActivityDesigner InvokingDesigner" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.IWorkflowRootDesigner.InvokingDesigner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.CompositeActivityDesigner</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Workflow.ComponentModel.Design.CompositeActivityDesigner" /> ab, der die Initialisierung des Workflow-Stamm-Designers angefordert hat, oder legt ihn fest.</summary>
+        <value>Der <see cref="T:System.Workflow.ComponentModel.Design.CompositeActivityDesigner" />, der die Initialisierung des Workflow-Stammdesigners angefordert hat.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der aktuelle Aktivitätsdesigner einem anderen Aktivitätsdesigner untergeordnet ist, ist der übergeordnete Designer oft auch der aufrufende Designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSupportedActivityType">
+      <MemberSignature Language="C#" Value="public bool IsSupportedActivityType (Type activityType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsSupportedActivityType(class System.Type activityType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.IWorkflowRootDesigner.IsSupportedActivityType(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="activityType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="activityType">Der <see cref="T:System.Type" />, für den überprüft werden soll, ob er vom Designer unterstützt wird.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob der angegebene Typ vom aktuellen Workflow-Designer unterstützt wird.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="type" /> vom aktuellen Workflow-Designer unterstützt wird, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageFilters">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Workflow.ComponentModel.Design.WorkflowDesignerMessageFilter&gt; MessageFilters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Workflow.ComponentModel.Design.WorkflowDesignerMessageFilter&gt; MessageFilters" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.IWorkflowRootDesigner.MessageFilters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Workflow.ComponentModel.Design.WorkflowDesignerMessageFilter&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle Meldungsfilter ab, die dem Workflow-Stamm-Designer zugeordnet sind.</summary>
+        <value>Eine schreibgeschützte WorkflowDesignerMessageFilter-Auflistung, die alle dem Workflow-Stamm-Designer zugeordneten Meldungsfilter enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsLayoutPersistence">
+      <MemberSignature Language="C#" Value="public bool SupportsLayoutPersistence { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsLayoutPersistence" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.IWorkflowRootDesigner.SupportsLayoutPersistence" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, der angibt, ob der tatsächliche Workflow-Stammdesigner die Layoutspeicherung unterstützt.</summary>
+        <value>
+          <see langword="true" />, wenn der Designer die Layoutspeicherung unterstützt; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

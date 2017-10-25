@@ -1,0 +1,170 @@
+<Type Name="CngKeyUsages" FullName="System.Security.Cryptography.CngKeyUsages">
+  <TypeSignature Language="C#" Value="public enum CngKeyUsages" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CngKeyUsages extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.CngKeyUsages" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die kryptografischen Vorgänge an, mit denen ein CNG-Schlüssel (Cryptography Next Generation ) verwendet werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nicht alle Vorgänge gelten, die jedem Schlüssel. Beispielsweise kann kein ECDSA (ELLIPTIC Curve Digital Signature Algorithm)-Schlüssel für die Entschlüsselung verwendet werden, auch wenn die Entschlüsselung Verwendung festgelegt ist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllUsages">
+      <MemberSignature Language="C#" Value="AllUsages" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.CngKeyUsages AllUsages = int32(16777215)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.CngKeyUsages.AllUsages" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngKeyUsages</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Schlüssel kann für alle Zwecke verwendet werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Decryption">
+      <MemberSignature Language="C#" Value="Decryption" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.CngKeyUsages Decryption = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.CngKeyUsages.Decryption" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngKeyUsages</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Schlüssel kann für die Ver- und Entschlüsselung verwendet werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyAgreement">
+      <MemberSignature Language="C#" Value="KeyAgreement" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.CngKeyUsages KeyAgreement = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.CngKeyUsages.KeyAgreement" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngKeyUsages</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Schlüssel kann für Geheimvertrag Generation und zum Schlüsselaustausch verwendet werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.CngKeyUsages None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.CngKeyUsages.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngKeyUsages</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Schlüssel sind keine Verwendungswerte zugewiesen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Signing">
+      <MemberSignature Language="C#" Value="Signing" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.CngKeyUsages Signing = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.CngKeyUsages.Signing" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngKeyUsages</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Schlüssel kann zum Signieren und Überprüfen von verwendet werden.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

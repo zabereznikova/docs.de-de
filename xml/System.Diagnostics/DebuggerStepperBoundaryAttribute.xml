@@ -1,0 +1,74 @@
+<Type Name="DebuggerStepperBoundaryAttribute" FullName="System.Diagnostics.DebuggerStepperBoundaryAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DebuggerStepperBoundaryAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit DebuggerStepperBoundaryAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.DebuggerStepperBoundaryAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Constructor | System.AttributeTargets.Method, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass der Code nach dem Attribut ausführen, nicht Schritt, Modus ausgeführt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.DebuggerStepperBoundaryAttribute> Attribut wird verwendet, als ein Escapezeichen aus den Effekt einer <xref:System.Diagnostics.DebuggerNonUserCodeAttribute>. Für die Ausführung innerhalb der Grenzen des dem <xref:System.Diagnostics.DebuggerNonUserCodeAttribute>, Designer bereitgestellten Code wird ausgeführt, während einer schrittweisen bis der nächste Benutzer Code bereitgestellt gefunden wird. Wenn Kontextwechsel in einem Thread vorgenommen werden, kann der nächste Benutzer bereitgestellter Code-Modul in Einzelschritten nicht auf den Code beziehen, der gerade gedebuggten war. Um dies zu vermeiden, Debuggen, verwenden die <xref:System.Diagnostics.DebuggerStepperBoundaryAttribute> mit Escapezeichen aus schrittweises Durchlaufen von Code zum Ausführen von Code. Z. B. in [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)], beim Auftreten einer <xref:System.Diagnostics.DebuggerStepperBoundaryAttribute> bei der schrittweisen Code mit der Taste F10 (oder **Prozedurschritt** Befehl) hat dieselbe Wirkung wie das Drücken der F5-Taste oder mit der **Debuggenstarten**Befehl.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DebuggerStepperBoundaryAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DebuggerStepperBoundaryAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Diagnostics.DebuggerStepperBoundaryAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Beschreibung der Zweck dieses Konstruktors finden Sie in der <xref:System.Diagnostics.DebuggerStepperBoundaryAttribute> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

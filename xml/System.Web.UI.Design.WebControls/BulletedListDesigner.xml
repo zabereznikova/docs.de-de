@@ -1,0 +1,113 @@
+<Type Name="BulletedListDesigner" FullName="System.Web.UI.Design.WebControls.BulletedListDesigner">
+  <TypeSignature Language="C#" Value="public class BulletedListDesigner : System.Web.UI.Design.WebControls.ListControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BulletedListDesigner extends System.Web.UI.Design.WebControls.ListControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.BulletedListDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.WebControls.ListControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Zum Bereitstellen von entwurfszeitunterstützung in einem visuellen Designer für die <see cref="T:System.Web.UI.WebControls.BulletedList" /> -Webserversteuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einem visuellen Designer beim Wechsel aus Quelle zur Entwurfsansicht Markup-Quellcode, beschreibt die <xref:System.Web.UI.WebControls.BulletedList> Steuerelement wird analysiert und eine Entwurfszeitversion des Steuerelements wird erstellt, auf der Entwurfsoberfläche angezeigt. Wenn Sie zurück zur Quellansicht wechseln, wird das Steuerelement zur Entwurfszeit auf den Markupquellcode beibehalten und in das Markup für die Webseite bearbeitet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BulletedListDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.BulletedListDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.WebControls.BulletedListDesigner" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ .NET Framework erstellt intern eine neue Instanz der dem <xref:System.Web.UI.Design.WebControls.BulletedListDesigner> Klasse bei der Erstellung der zugeordneten <xref:System.Web.UI.WebControls.BulletedList> Steuerelement oder eine Kopie des Steuerelements auf der Entwurfsoberfläche angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostFilterEvents">
+      <MemberSignature Language="C#" Value="protected override void PostFilterEvents (System.Collections.IDictionary events);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PostFilterEvents(class System.Collections.IDictionary events) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.BulletedListDesigner.PostFilterEvents(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="events" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="events">Die <see cref="T:System.Collections.IDictionary" /> , enthält die <see cref="T:System.ComponentModel.EventDescriptor" /> Objekte, die die Ereignisse des Steuerelements darstellt. Die Schlüssel in der <see cref="T:System.Collections.IDictionary" /> sind Ereignisnamen.</param>
+        <summary>Ermöglicht dem Designer, um den Satz von Ereignissen zu filtern, die das zugeordnete Steuerelement zur Entwurfszeit verfügbar machen soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Steuerelement-Designer verwenden von abgeleiteten Methoden, die <xref:System.ComponentModel.Design.ComponentDesigner.PostFilterEvents%2A?displayProperty=nameWithType> Methode um den Satz von Ereignissen zu filtern, die das Steuerelement entwerfende verfügbar, über gemacht wird die <xref:System.ComponentModel.TypeDescriptor> Objekt.  
+  
+ Für die <xref:System.Web.UI.WebControls.BulletedList> -Steuerelement, das <xref:System.Web.UI.Design.WebControls.BulletedListDesigner.PostFilterEvents%2A> Methode entfernt die <xref:System.Web.UI.WebControls.ListControl.SelectedIndexChanged> Ereignis in der Liste, die vom Designer verfügbar gemacht wird.  
+  
+ Die Schlüssel in der <xref:System.Collections.IDictionary> Schnittstelle sind die Namen der Ereignisse. Die Werte in der <xref:System.Collections.IDictionary> werden Objekte des Typs <xref:System.ComponentModel.EventDescriptor>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Überschreiben der <see cref="M:System.Web.UI.Design.WebControls.BulletedListDesigner.PostFilterEvents(System.Collections.IDictionary)" /> Methode bietet eine Möglichkeit, ändern oder Entfernen von Elementen im Wörterbuch von Ereignissen, die vom Designer für das genannte Steuerelement verfügbar gemacht werden.  
+  
+ Sie können das Wörterbuch, das über den möglich ist direkt filtern die <paramref name="events" /> annimmt, oder Sie können diese unverändert belassen. Wenn Sie außer Kraft gesetzt werden die <see cref="M:System.Web.UI.Design.WebControls.BulletedListDesigner.PostFilterEvents(System.Collections.IDictionary)" /> -Methode, die basisimplementierung aufrufen, nachdem Sie Ihren eigenen Filtern ausführen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="UsePreviewControl">
+      <MemberSignature Language="C#" Value="protected override bool UsePreviewControl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UsePreviewControl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.BulletedListDesigner.UsePreviewControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Designer das tatsächliche Steuerelement, das der Designer zum Generieren des Markups zur Entwurfszeit zugeordnet ist, anstatt eine temporäre Kopie verwenden soll.</summary>
+        <value>Immer <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da die <xref:System.Web.UI.Design.WebControls.BulletedListDesigner.UsePreviewControl%2A> Eigenschaft ist immer `true`, verwendet der Designer ein <xref:System.Web.UI.WebControls.View> Steuerelement, das eine temporäre Kopie des zugeordneten enthält <xref:System.Web.UI.WebControls.BulletedList> Steuerelement, um das Markup zur Entwurfszeit zu generieren. Die <xref:System.Web.UI.WebControls.View> Steuerelement wirkt sich nicht auf die Persistenz der <xref:System.Web.UI.WebControls.BulletedList>. Wenn die <xref:System.Web.UI.Design.WebControls.BulletedListDesigner.UsePreviewControl%2A> Eigenschaft zurückgegeben wurden `false`, der Designer zugeordneten verwenden <xref:System.Web.UI.WebControls.BulletedList> selbst das Markup zur Entwurfszeit zu generieren.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie können außer Kraft setzen die <see cref="P:System.Web.UI.Design.WebControls.DetailsViewDesigner.UsePreviewControl" /> -Eigenschaft zum Zurückgeben von <see langword="false" /> oder um zu bestimmen, deren Wert basierend auf, ob das Steuerelement mit einem auf Klassenebene gekennzeichnet ist <see cref="T:System.Web.UI.Design.SupportsPreviewControlAttribute" /> Objekt. Wenn die <see cref="P:System.Web.UI.Design.WebControls.DetailsViewDesigner.UsePreviewControl" /> Eigenschaft nicht überschrieben wird, die <see cref="T:System.Web.UI.Design.WebControls.BulletedListDesigner" /> -Objekt ignoriert die <see cref="T:System.Web.UI.Design.SupportsPreviewControlAttribute" />.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

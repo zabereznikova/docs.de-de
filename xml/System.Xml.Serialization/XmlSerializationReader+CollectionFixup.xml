@@ -1,0 +1,172 @@
+<Type Name="XmlSerializationReader+CollectionFixup" FullName="System.Xml.Serialization.XmlSerializationReader+CollectionFixup">
+  <TypeSignature Language="C#" Value="protected class XmlSerializationReader.CollectionFixup" />
+  <TypeSignature Language="ILAsm" Value=".class nested protected auto ansi beforefieldinit XmlSerializationReader/CollectionFixup extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.XmlSerializationReader.CollectionFixup" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält eine <see cref="T:System.Xml.Serialization.XmlSerializationCollectionFixupCallback" /> delegieren Instanz sowie die Methode der Eingaben; liefert auch den Parameter der Methode.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Während der Initialisierung die .NET Framework-XML-Serialisierungsinfrastruktur dynamisch generiert und kompiliert eine temporäre Klasse für die Deserialisierung von abgeleitet der <xref:System.Xml.Serialization.XmlSerializationReader> Klasse. Während dieses Vorgangs generiert die Infrastruktur Methoden, implementieren die <xref:System.Xml.Serialization.XmlSerializationCollectionFixupCallback> delegieren. Darüber hinaus instanziiert <xref:System.Xml.Serialization.XmlSerializationReader.CollectionFixup> -Klassenobjekten Fixup Methoden zusammen mit deren Eingaben zu speichern. Die Infrastruktur ist daher für SOAP-codierte Arrays oder SOAP-codierte,-Klassenobjekte Elemente, deren Daten in jedem Fall Typen Auflistungen von .NET Framework oder Enumerationen zugeordnet werden. Die Methoden werden dann bei Bedarf während der Deserialisierung zum Füllen Arrayelemente oder-Klassenobjekte Objekte aufgerufen.  
+  
+ Instanziieren Sie nicht direkt <xref:System.Xml.Serialization.XmlSerializationCollectionFixupCallback> oder <xref:System.Xml.Serialization.XmlSerializationReader.CollectionFixup>.  
+  
+ SOAP-Codierung wird in Abschnitt 5 der SOAP 1.1-Spezifikation beschrieben.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CollectionFixup (object collection, System.Xml.Serialization.XmlSerializationCollectionFixupCallback callback, object collectionItems);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object collection, class System.Xml.Serialization.XmlSerializationCollectionFixupCallback callback, object collectionItems) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializationReader.CollectionFixup.#ctor(System.Object,System.Xml.Serialization.XmlSerializationCollectionFixupCallback,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="collection" Type="System.Object" />
+        <Parameter Name="callback" Type="System.Xml.Serialization.XmlSerializationCollectionFixupCallback" />
+        <Parameter Name="collectionItems" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="collection">Eine Auflistung, die in der die Rückrufmethode Elementarrays Auflistung kopiert wird.</param>
+        <param name="callback">Eine Methode, die instanziiert die <see cref="T:System.Xml.Serialization.XmlSerializationCollectionFixupCallback" /> delegieren.</param>
+        <param name="collectionItems">Ein Array, in dem die Rückrufmethode eine Auflistung kopiert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xml.Serialization.XmlSerializationReader.CollectionFixup" /> Klasse mit Parametern für eine Rückrufmethode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nicht direkt erstellen und-Instanz von der <xref:System.Xml.Serialization.XmlSerializationReader.CollectionFixup> Klasse oder die <xref:System.Xml.Serialization.XmlSerializationCollectionFixupCallback> delegieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Callback">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlSerializationCollectionFixupCallback Callback { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.XmlSerializationCollectionFixupCallback Callback" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlSerializationReader.CollectionFixup.Callback" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlSerializationCollectionFixupCallback</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Rückrufmethode, die instanziiert die <see cref="T:System.Xml.Serialization.XmlSerializationCollectionFixupCallback" /> delegieren.</summary>
+        <value>Die <see cref="T:System.Xml.Serialization.XmlSerializationCollectionFixupCallback" /> Delegat, der an die Rückrufmethode verweist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Collection">
+      <MemberSignature Language="C#" Value="public object Collection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Collection" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlSerializationReader.CollectionFixup.Collection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <paramref name="object collection" /> für die Rückrufmethode.</summary>
+        <value>Die Auflistung, die für die Korrektur verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Serialization.XmlSerializationReader.CollectionFixup.Collection%2A> -Eigenschaft ruft die Auflistung in der Methode, die implementiert die <xref:System.Xml.Serialization.XmlSerializationCollectionFixupCallback> Delegaten kopiert das Array, das über abgerufen wird die <xref:System.Xml.Serialization.XmlSerializationReader.CollectionFixup.CollectionItems%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CollectionItems">
+      <MemberSignature Language="C#" Value="public object CollectionItems { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object CollectionItems" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlSerializationReader.CollectionFixup.CollectionItems" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Array, in dem die Rückrufmethode eine Auflistung kopiert.</summary>
+        <value>Das Array, in dem die Rückrufmethode eine Auflistung kopiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Serialization.XmlSerializationReader.CollectionFixup.CollectionItems%2A> -Eigenschaft ruft dem Array ab, die die Methode, die implementiert die <xref:System.Xml.Serialization.XmlSerializationCollectionFixupCallback> Delegieren von Daten in das Objekt, das über abgerufen wird kopiert die <xref:System.Xml.Serialization.XmlSerializationReader.CollectionFixup.Collection%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,427 @@
+<Type Name="CollectionDataContractAttribute" FullName="System.Runtime.Serialization.CollectionDataContractAttribute">
+  <TypeSignature Language="C#" Value="public sealed class CollectionDataContractAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CollectionDataContractAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.CollectionDataContractAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Struct, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglich bei Anwendung auf einen Auflistungstyp die benutzerdefinierte Angabe der Auflistungselemente. Dieses Attribut kann nur auf Typen angewendet werden, die vom <see cref="T:System.Runtime.Serialization.DataContractSerializer" /> als gültige, serialisierbare Auflistungen erkannt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das <xref:System.Runtime.Serialization.CollectionDataContractAttribute> dient dazu, die Interoperabilität beim Arbeiten mit Daten von nicht-[!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Anbietern zu erleichtern und die genaue Form der serialisierten Instanzen zu steuern. Deshalb können Sie mit der <xref:System.Runtime.Serialization.CollectionDataContractAttribute.ItemName%2A>-Eigenschaft die Namen der sich wiederholenden Elemente in einer Auflistung kontrollieren. Dies ist besonders dann sinnvoll, wenn der Anbieter den XML-Elementtypnamen nicht als Arrayelementnamen verwendet: wenn der Anbieter beispielsweise anstelle des XSD-Typnamens "string" als Elementtypnamen "String" verwendet.  
+  
+ Der <xref:System.Runtime.Serialization.CollectionDataContractAttribute> ist auch für die Verwendung mit Wörterbuchtypen zur Behandlung verschlüsselter Auflistungen vorgesehen. Wörterbuchtypen sind Klassen, die entweder den <xref:System.Collections.IDictionary> oder die <xref:System.Collections.Generic.IDictionary%602>-Schnittstelle implementieren, z. B. <xref:System.Collections.Generic.Dictionary%602>. Verwenden Sie die <xref:System.Runtime.Serialization.CollectionDataContractAttribute.KeyName%2A>-Eigenschaft und die <xref:System.Runtime.Serialization.CollectionDataContractAttribute.ValueName%2A>-Eigenschaft, um benutzerdefinierte Namen festzulegen, wenn Sie die <xref:System.Collections.Generic.Dictionary%602>-Klasse verwenden.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]Mithilfe der <xref:System.Runtime.Serialization.DataContractSerializer>, finden Sie unter [mithilfe von Datenverträgen](~/docs/framework/wcf/feature-details/using-data-contracts.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird der <xref:System.Runtime.Serialization.CollectionDataContractAttribute> auf eine Klasse angewendet, die von der <xref:System.Collections.Generic.List%601>-Klasse erbt. Der Code legt die <xref:System.Runtime.Serialization.CollectionDataContractAttribute.Name%2A>-Eigenschaft und die <xref:System.Runtime.Serialization.CollectionDataContractAttribute.ItemName%2A>-Eigenschaft auf benutzerdefinierte Werte fest.  
+  
+ [!code-csharp[CollectionDataContractAttribute#1](~/samples/snippets/csharp/VS_Snippets_CFX/collectiondatacontractattribute/cs/source.cs#1)]
+ [!code-vb[CollectionDataContractAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/collectiondatacontractattribute/vb/source.vb#1)]  
+  
+ Wenn die [ServiceModel Metadata Utility Tool (Svcutil.exe)](~/docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) wird zum Generieren von Code für den Client verwendet, der Code ähnelt dem folgenden Beispiel. Beachten Sie, dass sowohl der Name der Klasse als auch der <xref:System.Runtime.Serialization.CollectionDataContractAttribute.ItemName%2A> geändert werden. Bei der Verwendung von Generika wird der Typparametername verwendet, um den resultierenden Typnamen zu erstellen.  
+  
+ [!code-csharp[CollectionDataContractAttribute#2](~/samples/snippets/csharp/VS_Snippets_CFX/collectiondatacontractattribute/cs/source.cs#2)]
+ [!code-vb[CollectionDataContractAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/collectiondatacontractattribute/vb/source.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CollectionDataContractAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.CollectionDataContractAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Serialization.CollectionDataContractAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsItemNameSetExplicitly">
+      <MemberSignature Language="C#" Value="public bool IsItemNameSetExplicitly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsItemNameSetExplicitly" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.CollectionDataContractAttribute.IsItemNameSetExplicitly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob <see cref="P:System.Runtime.Serialization.CollectionDataContractAttribute.ItemName" /> explizit festgelegt wurde.</summary>
+        <value>Gibt <see langword="true" /> Wenn wurde der Name des Elements explizit festgelegt wurde, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsKeyNameSetExplicitly">
+      <MemberSignature Language="C#" Value="public bool IsKeyNameSetExplicitly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsKeyNameSetExplicitly" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.CollectionDataContractAttribute.IsKeyNameSetExplicitly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob <see cref="P:System.Runtime.Serialization.CollectionDataContractAttribute.KeyName" /> explizit festgelegt wurde.</summary>
+        <value>Gibt <see langword="true" /> Wenn wurde der Schlüsselname explizit festgelegt wurde, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNameSetExplicitly">
+      <MemberSignature Language="C#" Value="public bool IsNameSetExplicitly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNameSetExplicitly" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.CollectionDataContractAttribute.IsNameSetExplicitly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob <see cref="P:System.Runtime.Serialization.CollectionDataContractAttribute.Name" /> explizit festgelegt wurde.</summary>
+        <value>Gibt <see langword="true" /> wenn explizit festgelegt wurde, andernfalls der Name wurde <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNamespaceSetExplicitly">
+      <MemberSignature Language="C#" Value="public bool IsNamespaceSetExplicitly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNamespaceSetExplicitly" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.CollectionDataContractAttribute.IsNamespaceSetExplicitly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob <see cref="P:System.Runtime.Serialization.CollectionDataContractAttribute.Namespace" /> explizit festgelegt wurde.</summary>
+        <value>Gibt <see langword="true" /> , wenn der Elementnamespace explizit festgelegt wurde, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReference">
+      <MemberSignature Language="C#" Value="public bool IsReference { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReference" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.CollectionDataContractAttribute.IsReference" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt einen Wert fest, der angibt, ob Objektverweisdaten beizubehalten sind.</summary>
+        <value>
+          <see langword="true" />, um Objektverweisdaten zu behalten; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Einstellung `IsReference` gilt nicht für die Elemente der Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReferenceSetExplicitly">
+      <MemberSignature Language="C#" Value="public bool IsReferenceSetExplicitly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReferenceSetExplicitly" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.CollectionDataContractAttribute.IsReferenceSetExplicitly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob der Verweis explizit festgelegt wurde.</summary>
+        <value>Gibt <see langword="true" /> Wenn der Verweis explizit festgelegt wurde, andernfalls wurde <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValueNameSetExplicitly">
+      <MemberSignature Language="C#" Value="public bool IsValueNameSetExplicitly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsValueNameSetExplicitly" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.CollectionDataContractAttribute.IsValueNameSetExplicitly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob <see cref="P:System.Runtime.Serialization.CollectionDataContractAttribute.ValueName" /> explizit festgelegt wurde.</summary>
+        <value>Gibt <see langword="true" /> Wenn wurde der Wertname explizit festgelegt wurde, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemName">
+      <MemberSignature Language="C#" Value="public string ItemName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ItemName" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.CollectionDataContractAttribute.ItemName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen benutzerdefinierten Namen für ein Auflistungselement ab oder legt ihn fest.</summary>
+        <value>Der auf die Auflistungselemente anzuwendende Name.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyName">
+      <MemberSignature Language="C#" Value="public string KeyName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyName" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.CollectionDataContractAttribute.KeyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den benutzerdefinierten Namen für einen Wörterbuchschlüsselnamen ab oder legt ihn fest.</summary>
+        <value>Der anstelle des standardmäßigen Wörterbuchschlüsselnamens zu verwendende Name.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.CollectionDataContractAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Datenvertrags für den Auflistungstyp ab oder legt ihn fest.</summary>
+        <value>Der Name des Datenvertrags für den Auflistungstyp.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public string Namespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.CollectionDataContractAttribute.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namespace für den Datenvertrag ab oder legt ihn fest.</summary>
+        <value>Der Namespace des Datenvertrags.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueName">
+      <MemberSignature Language="C#" Value="public string ValueName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ValueName" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.CollectionDataContractAttribute.ValueName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den benutzerdefinierten Namen für einen Wörterbuchwertnamen ab oder legt ihn fest.</summary>
+        <value>Der anstelle des standardmäßigen Wörterbuchwertnamens zu verwendende Name.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

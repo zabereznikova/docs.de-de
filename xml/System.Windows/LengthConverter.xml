@@ -1,0 +1,185 @@
+<Type Name="LengthConverter" FullName="System.Windows.LengthConverter">
+  <TypeSignature Language="C#" Value="public class LengthConverter : System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LengthConverter extends System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.LengthConverter" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.TypeConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Konvertiert Instanzen anderer Typen in und aus Instanzen von einem <see cref="T:System.Double" /> , die die Länge eines Objekts darstellen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.LengthConverter>unterstützt die Konvertierung in und aus den folgenden Datentypen: <xref:System.String>, <xref:System.Decimal>, <xref:System.Single>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.UInt16>, <xref:System.UInt32>, und <xref:System.UInt64>.  
+  
+<a name="XAMLTextUsage_LengthConverter"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen und Verwenden einer Instanz von der <xref:System.Windows.LengthConverter> Objekt. Eine benutzerdefinierte Methode aufgerufen `ChangeLeft` definiert ist, die konvertiert des Inhalts einer <xref:System.Windows.Controls.ListBoxItem> (definiert in einer separaten [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] Datei) mit einer Instanz von <xref:System.Double>, und höher in eine <xref:System.String>. Diese Methode übergibt der <xref:System.Windows.Controls.ListBoxItem> auf eine <xref:System.Windows.LengthConverter> -Objekt, das konvertiert die <xref:System.Windows.Controls.ListBoxItem> <xref:System.Windows.Controls.ContentControl.Content%2A> mit einer Instanz von <xref:System.Double>. Beachten Sie, das diesen Wert auf bereits konvertiert wurde eine <xref:System.String> mithilfe der <xref:System.Windows.Controls.Control.ToString%2A> Methode. Dieser Wert wird dann zurück zum Übergeben der <xref:System.Windows.Controls.Canvas.SetLeft%2A> Methode und die <xref:System.Windows.Controls.Canvas.GetLeft%2A> Methode der <xref:System.Windows.Controls.Canvas> damit ändern Sie die Position des der `text1` Objekt.  
+  
+ [!code-csharp[CanvasPositioningProperties#2](~/samples/snippets/csharp/VS_Snippets_Wpf/CanvasPositioningProperties/CSharp/Window1.xaml.cs#2)]
+ [!code-vb[CanvasPositioningProperties#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CanvasPositioningProperties/VisualBasic/Window1.xaml.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LengthConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.LengthConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.LengthConverter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFrom">
+      <MemberSignature Language="C#" Value="public override bool CanConvertFrom (System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, Type sourceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFrom(class System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, class System.Type sourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.LengthConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeDescriptorContext" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="sourceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="typeDescriptorContext">Stellt Kontextinformationen über eine Komponente bereit.</param>
+        <param name="sourceType">Gibt den Datentyp für die Konvertierung ausgewertet.</param>
+        <summary>Bestimmt, ob die Konvertierung von einem angegebenen Typ um möglich ist eine <see cref="T:System.Double" /> , die die Länge eines Objekts darstellt.</summary>
+        <returns>
+          <see langword="true" />Wenn die Konvertierung möglich ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.LengthConverter>unterstützt die Konvertierung in und aus den folgenden Datentypen: <xref:System.String>, <xref:System.Decimal>, <xref:System.Single>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.UInt16>, <xref:System.UInt32>, und <xref:System.UInt64>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertTo">
+      <MemberSignature Language="C#" Value="public override bool CanConvertTo (System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertTo(class System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.LengthConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeDescriptorContext" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="typeDescriptorContext">Stellt Kontextinformationen über eine Komponente bereit.</param>
+        <param name="destinationType">Gibt den Datentyp für die Konvertierung ausgewertet.</param>
+        <summary>Bestimmt, ob die Konvertierung in einen angegebenen Typ aus möglich ist eine <see cref="T:System.Double" /> , die die Länge eines Objekts darstellt.</summary>
+        <returns>
+          <see langword="true" />Wenn die Konvertierung in den <paramref name="destinationType" /> möglich ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.LengthConverter>unterstützt die Konvertierung der folgenden Typen: <xref:System.String>, <xref:System.Decimal>, <xref:System.Single>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.UInt16>, <xref:System.UInt32>, und <xref:System.UInt64>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, System.Globalization.CultureInfo cultureInfo, object source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, class System.Globalization.CultureInfo cultureInfo, object source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.LengthConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeDescriptorContext" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="cultureInfo" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="source" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="typeDescriptorContext">Stellt Kontextinformationen über eine Komponente bereit.</param>
+        <param name="cultureInfo">Stellt kulturspezifische Informationen, die während der Konvertierung erhalten bleibt.</param>
+        <param name="source">Identifiziert das Objekt, das konvertiert wird <see cref="T:System.Double" />.</param>
+        <summary>Konvertiert Instanzen anderer Datentypen in Instanzen von <see cref="T:System.Double" /> , die die Länge eines Objekts darstellen.</summary>
+        <returns>Eine Instanz von <see cref="T:System.Double" /> , das den Wert der Konvertierung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.LengthConverter>unterstützt die Konvertierung der folgenden Typen: <xref:System.String>, <xref:System.Decimal>, <xref:System.Single>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Tritt auf, wenn die <paramref name="source" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Tritt auf, wenn die <paramref name="source" /> nicht <see langword="null" /> und ist kein gültiger Typ für die Konvertierung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public override object ConvertTo (System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, System.Globalization.CultureInfo cultureInfo, object value, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(class System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, class System.Globalization.CultureInfo cultureInfo, object value, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.LengthConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeDescriptorContext" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="cultureInfo" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="typeDescriptorContext">Beschreibt die Kontextinformationen für eine Komponente, wie z. B. den Container und <see cref="T:System.ComponentModel.PropertyDescriptor" />.</param>
+        <param name="cultureInfo">Gibt kulturspezifische Informationen, einschließlich der Schriftsystem und der Kalender, der verwendet wird.</param>
+        <param name="value">Identifiziert die <see cref="T:System.Object" /> , das konvertiert wird.</param>
+        <param name="destinationType">Geben Sie die Daten, die dieser Instanz von <see cref="T:System.Double" /> zu konvertiert wird.</param>
+        <summary>In Instanzen von anderen Typen konvertiert <see cref="T:System.Double" /> , die die Länge eines Objekts darstellen.</summary>
+        <returns>Ein neues <see cref="T:System.Object" /> , das den Wert der Konvertierung.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Tritt auf, wenn die <paramref name="value" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Tritt auf, wenn die <paramref name="value" /> nicht <see langword="null" /> und keine <see cref="T:System.Windows.Media.Brush" />, oder die <paramref name="destinationType" /> ist ungültig.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

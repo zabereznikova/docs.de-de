@@ -1,0 +1,786 @@
+<Type Name="ContextMenuService" FullName="System.Windows.Controls.ContextMenuService">
+  <TypeSignature Language="C#" Value="public static class ContextMenuService" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed ContextMenuService extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.ContextMenuService" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt den System-Implementierung für die Anzeige von einer <see cref="T:System.Windows.Controls.ContextMenu" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Controls.ContextMenuService> -Klasse stellt angefügte Eigenschaften, mit denen die Darstellung und die Position eines Kontextmenüs angegeben werden können. Viele der Eigenschaften in der <xref:System.Windows.Controls.ContextMenuService> Klasse sind auch definiert, durch die <xref:System.Windows.Controls.ContextMenu>.  Manchmal ist es sinnvoller, die Eigenschaften festlegen, indem die <xref:System.Windows.Controls.ContextMenuService> als Klasse, indem Sie die Eigenschaften auf eine <xref:System.Windows.Controls.ContextMenu>. Sie können z. B. Erstellen einer <xref:System.Windows.Controls.ContextMenu> verwenden, um mehrere Elemente gemeinsam verwendet werden, aber die <xref:System.Windows.Controls.ContextMenuService> Klasse an eine andere Position der der <xref:System.Windows.Controls.ContextMenu> für jedes Element. Die folgenden Eigenschaften werden definiert, indem die <xref:System.Windows.Controls.ContextMenu> und <xref:System.Windows.Controls.ContextMenuService> Klassen.  Wenn eine dieser Eigenschaften auf beide festgelegt <xref:System.Windows.Controls.ContextMenu> und die <xref:System.Windows.Controls.ContextMenuService>, den Wert der Eigenschaft aus der <xref:System.Windows.Controls.ContextMenuService> verwendet wird.  
+  
+-   <xref:System.Windows.Controls.ContextMenuService.Placement%2A>  
+  
+-   <xref:System.Windows.Controls.ContextMenuService.PlacementRectangle%2A>  
+  
+-   <xref:System.Windows.Controls.ContextMenuService.PlacementTargetProperty>  
+  
+-   <xref:System.Windows.Controls.ContextMenuService.HorizontalOffset%2A>  
+  
+-   <xref:System.Windows.Controls.ContextMenuService.VerticalOffsetProperty>  
+  
+-   <xref:System.Windows.Controls.ContextMenuService.HasDropShadow%2A>  
+  
+ Sie können auch die <xref:System.Windows.Controls.ContextMenuService> Menüs für deaktivierte Elemente anzeigen.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel weist die gleiche <xref:System.Windows.Controls.ContextMenu> zwei Schaltflächen und legt die <xref:System.Windows.Controls.ContextMenuService.HasDropShadow%2A>, <xref:System.Windows.Controls.ContextMenuService.Placement%2A>, <xref:System.Windows.Controls.ContextMenuService.PlacementRectangle%2A>, <xref:System.Windows.Controls.ContextMenuService.HorizontalOffset%2A>, und <xref:System.Windows.Controls.ContextMenu.VerticalOffset%2A> Eigenschaften zum Festlegen der <xref:System.Windows.Controls.ContextMenu> an andere Positionen für jede Schaltfläche.  
+  
+ [!code-xaml[ContextMenuService_snip#SharedContextMenu](~/samples/snippets/csharp/VS_Snippets_Wpf/ContextMenuService_snip/CSharp/Pane1.xaml#sharedcontextmenu)]  
+  
+ Das folgende Beispiel zeigt, wie den Dienst zum Anzeigen einer <xref:System.Windows.Controls.ContextMenu> für eine deaktivierte Schaltfläche. Beachten Sie, dass Sie die <xref:System.Windows.Controls.ContextMenuService.ShowOnDisabled%2A> Eigenschaft auf die Schaltfläche, die das übergeordnete Element des Kontextmenüs ist.  
+  
+ [!code-xaml[ContextMenu#3](~/samples/snippets/csharp/VS_Snippets_Wpf/ContextMenu/CSharp/Pane1.xaml#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddContextMenuClosingHandler">
+      <MemberSignature Language="C#" Value="public static void AddContextMenuClosingHandler (System.Windows.DependencyObject element, System.Windows.Controls.ContextMenuEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddContextMenuClosingHandler(class System.Windows.DependencyObject element, class System.Windows.Controls.ContextMenuEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContextMenuService.AddContextMenuClosingHandler(System.Windows.DependencyObject,System.Windows.Controls.ContextMenuEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Controls.ContextMenuEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der Ereignishandler, der hinzugefügt werden soll.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Controls.ContextMenuService.ContextMenuClosing" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddContextMenuOpeningHandler">
+      <MemberSignature Language="C#" Value="public static void AddContextMenuOpeningHandler (System.Windows.DependencyObject element, System.Windows.Controls.ContextMenuEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddContextMenuOpeningHandler(class System.Windows.DependencyObject element, class System.Windows.Controls.ContextMenuEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContextMenuService.AddContextMenuOpeningHandler(System.Windows.DependencyObject,System.Windows.Controls.ContextMenuEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Controls.ContextMenuEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der Ereignishandler, der hinzugefügt werden soll.</param>
+        <summary>Fügt einen Handler für das <see cref="E:System.Windows.Controls.ContextMenuService.ContextMenuOpening" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuClosingEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent ContextMenuClosingEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent ContextMenuClosingEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ContextMenuService.ContextMenuClosingEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert das <see cref="E:System.Windows.Controls.ContextMenuService.ContextMenuClosing" />-Routingereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuOpeningEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent ContextMenuOpeningEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent ContextMenuOpeningEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ContextMenuService.ContextMenuOpeningEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.Controls.ContextMenuService.ContextMenuOpening" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ContextMenuProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ContextMenuProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ContextMenuService.ContextMenuProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Controls.ContextMenuService.ContextMenu" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContextMenu">
+      <MemberSignature Language="C#" Value="public static System.Windows.Controls.ContextMenu GetContextMenu (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Controls.ContextMenu GetContextMenu(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContextMenuService.GetContextMenu(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForType(typeof(System.Windows.DependencyObject))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ContextMenu</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">Objekt bereit, die Abfrage die <see cref="P:System.Windows.FrameworkElement.ContextMenu" /> Eigenschaft.</param>
+        <summary>Ruft den Wert der <see cref="P:System.Windows.Controls.ContextMenuService.ContextMenu" /> -Eigenschaft des angegebenen Objekts.</summary>
+        <returns>Der Wert der <see cref="P:System.Windows.Controls.ContextMenuService.ContextMenu" /> Eigenschaft.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHasDropShadow">
+      <MemberSignature Language="C#" Value="public static bool GetHasDropShadow (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool GetHasDropShadow(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContextMenuService.GetHasDropShadow(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForType(typeof(System.Windows.DependencyObject))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">-Objekt in der Abfrage bereit, ob es sich um einen Schatten verfügt.</param>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Windows.Controls.ContextMenu" /> einen Schlagschatten aufweist.</summary>
+        <returns>Ein boolescher Wert **"true"** Wenn die <see cref="T:System.Windows.Controls.ContextMenu" /> verfügt über einen Schlagschatten; **"false"** andernfalls.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHorizontalOffset">
+      <MemberSignature Language="C#" Value="public static double GetHorizontalOffset (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 GetHorizontalOffset(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContextMenuService.GetHorizontalOffset(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.LengthConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForType(typeof(System.Windows.DependencyObject))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">Objekt bereit, die Abfrage die <see cref="P:System.Windows.Controls.ContextMenuService.HorizontalOffset" /> Eigenschaft.</param>
+        <summary>Ruft den Wert der <see cref="P:System.Windows.Controls.ContextMenuService.HorizontalOffset" /> -Eigenschaft des angegebenen Objekts.</summary>
+        <returns>Der Wert der <see cref="P:System.Windows.Controls.ContextMenuService.HorizontalOffset" /> Eigenschaft.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIsEnabled">
+      <MemberSignature Language="C#" Value="public static bool GetIsEnabled (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool GetIsEnabled(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContextMenuService.GetIsEnabled(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForType(typeof(System.Windows.DependencyObject))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">Objekt bereit, die Abfrage die <see cref="P:System.Windows.Controls.ContextMenuService.IsEnabled" /> Eigenschaft.</param>
+        <summary>Ruft den Wert der <see cref="P:System.Windows.Controls.ContextMenuService.IsEnabled" /> -Eigenschaft des angegebenen Objekts.</summary>
+        <returns>Der Wert der <see cref="P:System.Windows.Controls.ContextMenuService.IsEnabled" /> Eigenschaft.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPlacement">
+      <MemberSignature Language="C#" Value="public static System.Windows.Controls.Primitives.PlacementMode GetPlacement (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Controls.Primitives.PlacementMode GetPlacement(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContextMenuService.GetPlacement(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForType(typeof(System.Windows.DependencyObject))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.PlacementMode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">Objekt bereit, die Abfrage die <see cref="P:System.Windows.Controls.ContextMenuService.Placement" /> Eigenschaft.</param>
+        <summary>Ruft den Wert der <see cref="P:System.Windows.Controls.ContextMenuService.Placement" /> -Eigenschaft des angegebenen Objekts.</summary>
+        <returns>Der Wert der <see cref="P:System.Windows.Controls.ContextMenuService.Placement" /> Eigenschaft.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPlacementRectangle">
+      <MemberSignature Language="C#" Value="public static System.Windows.Rect GetPlacementRectangle (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Rect GetPlacementRectangle(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContextMenuService.GetPlacementRectangle(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForType(typeof(System.Windows.DependencyObject))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">Objekt bereit, die Abfrage die <see cref="P:System.Windows.Controls.ContextMenuService.PlacementRectangle" /> Eigenschaft.</param>
+        <summary>Ruft den Wert der <see cref="P:System.Windows.Controls.ContextMenuService.PlacementRectangle" /> -Eigenschaft des angegebenen Objekts.</summary>
+        <returns>Der Wert der <see cref="P:System.Windows.Controls.ContextMenuService.PlacementRectangle" /> Eigenschaft.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPlacementTarget">
+      <MemberSignature Language="C#" Value="public static System.Windows.UIElement GetPlacementTarget (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.UIElement GetPlacementTarget(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContextMenuService.GetPlacementTarget(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForType(typeof(System.Windows.DependencyObject))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.UIElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">Objekt bereit, die Abfrage die <see cref="P:System.Windows.Controls.ContextMenuService.PlacementTarget" /> Eigenschaft.</param>
+        <summary>Ruft den Wert der <see cref="P:System.Windows.Controls.ContextMenuService.PlacementTarget" /> -Eigenschaft des angegebenen Objekts.</summary>
+        <returns>Der Wert der <see cref="P:System.Windows.Controls.ContextMenuService.PlacementTarget" /> Eigenschaft.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetShowOnDisabled">
+      <MemberSignature Language="C#" Value="public static bool GetShowOnDisabled (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool GetShowOnDisabled(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContextMenuService.GetShowOnDisabled(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForType(typeof(System.Windows.DependencyObject))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">Objekt bereit, die Abfrage die <see cref="P:System.Windows.Controls.ContextMenuService.ShowOnDisabled" /> Eigenschaft.</param>
+        <summary>Ruft den Wert der <see cref="P:System.Windows.Controls.ContextMenuService.ShowOnDisabled" /> -Eigenschaft des angegebenen Objekts.</summary>
+        <returns>Der Wert der <see cref="P:System.Windows.Controls.ContextMenuService.ShowOnDisabled" /> Eigenschaft.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVerticalOffset">
+      <MemberSignature Language="C#" Value="public static double GetVerticalOffset (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 GetVerticalOffset(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContextMenuService.GetVerticalOffset(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.LengthConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForType(typeof(System.Windows.DependencyObject))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">Objekt bereit, die Abfrage die <see cref="P:System.Windows.Controls.ContextMenuService.VerticalOffset" /> Eigenschaft.</param>
+        <summary>Ruft den Wert der <see cref="P:System.Windows.Controls.ContextMenuService.VerticalOffset" /> -Eigenschaft des angegebenen Objekts.</summary>
+        <returns>Der Wert der <see cref="P:System.Windows.Controls.ContextMenuService.VerticalOffset" /> Eigenschaft.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasDropShadowProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HasDropShadowProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HasDropShadowProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ContextMenuService.HasDropShadowProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Controls.ContextMenuService.HasDropShadow" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalOffsetProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HorizontalOffsetProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HorizontalOffsetProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ContextMenuService.HorizontalOffsetProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Controls.ContextMenuService.HorizontalOffset" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnabledProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsEnabledProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsEnabledProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ContextMenuService.IsEnabledProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Controls.ContextMenuService.IsEnabled" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PlacementProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PlacementProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PlacementProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ContextMenuService.PlacementProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Controls.ContextMenuService.Placement" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PlacementRectangleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PlacementRectangleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PlacementRectangleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ContextMenuService.PlacementRectangleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Controls.ContextMenuService.PlacementRectangle" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PlacementTargetProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PlacementTargetProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PlacementTargetProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ContextMenuService.PlacementTargetProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Controls.ContextMenuService.PlacementTarget" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveContextMenuClosingHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveContextMenuClosingHandler (System.Windows.DependencyObject element, System.Windows.Controls.ContextMenuEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveContextMenuClosingHandler(class System.Windows.DependencyObject element, class System.Windows.Controls.ContextMenuEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContextMenuService.RemoveContextMenuClosingHandler(System.Windows.DependencyObject,System.Windows.Controls.ContextMenuEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Controls.ContextMenuEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der Ereignishandler, der entfernt werden soll.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Controls.ContextMenuService.ContextMenuClosing" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveContextMenuOpeningHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveContextMenuOpeningHandler (System.Windows.DependencyObject element, System.Windows.Controls.ContextMenuEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveContextMenuOpeningHandler(class System.Windows.DependencyObject element, class System.Windows.Controls.ContextMenuEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContextMenuService.RemoveContextMenuOpeningHandler(System.Windows.DependencyObject,System.Windows.Controls.ContextMenuEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.Controls.ContextMenuEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das <see cref="T:System.Windows.UIElement" /> oder das <see cref="T:System.Windows.ContentElement" />, das dieses Ereignis überwacht.</param>
+        <param name="handler">Der Ereignishandler, der entfernt werden soll.</param>
+        <summary>Entfernt einen Handler für das <see cref="E:System.Windows.Controls.ContextMenuService.ContextMenuOpening" /> angefügtes Ereignis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetContextMenu">
+      <MemberSignature Language="C#" Value="public static void SetContextMenu (System.Windows.DependencyObject element, System.Windows.Controls.ContextMenu value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetContextMenu(class System.Windows.DependencyObject element, class System.Windows.Controls.ContextMenu value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContextMenuService.SetContextMenu(System.Windows.DependencyObject,System.Windows.Controls.ContextMenu)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Windows.Controls.ContextMenu" />
+      </Parameters>
+      <Docs>
+        <param name="element">Objekt, das die Eigenschaft auf festgelegt.</param>
+        <param name="value">Der festzulegende Wert.</param>
+        <summary>Legt den Wert für die <see cref="P:System.Windows.Controls.ContextMenuService.ContextMenu" /> -Eigenschaft des angegebenen Objekts.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetHasDropShadow">
+      <MemberSignature Language="C#" Value="public static void SetHasDropShadow (System.Windows.DependencyObject element, bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetHasDropShadow(class System.Windows.DependencyObject element, bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContextMenuService.SetHasDropShadow(System.Windows.DependencyObject,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="element">Objekt, das die Eigenschaft auf festgelegt.</param>
+        <param name="value">Boolescher Wert festgelegt wird, <see langword="true" /> Wenn die <see cref="T:System.Windows.Controls.ContextMenu" /> verfügt über einen Schlagschatten; <see langword="false" /> andernfalls.</param>
+        <summary>Legt einen Wert, der angibt, ob die <see cref="T:System.Windows.Controls.ContextMenu" /> einen Schlagschatten aufweist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetHorizontalOffset">
+      <MemberSignature Language="C#" Value="public static void SetHorizontalOffset (System.Windows.DependencyObject element, double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetHorizontalOffset(class System.Windows.DependencyObject element, float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContextMenuService.SetHorizontalOffset(System.Windows.DependencyObject,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="element">Objekt, das der Wert festgelegt.</param>
+        <param name="value">Der festzulegende Wert.</param>
+        <summary>Legt den Wert für die <see cref="P:System.Windows.Controls.ContextMenuService.HorizontalOffset" /> -Eigenschaft des angegebenen Objekts.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetIsEnabled">
+      <MemberSignature Language="C#" Value="public static void SetIsEnabled (System.Windows.DependencyObject element, bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetIsEnabled(class System.Windows.DependencyObject element, bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContextMenuService.SetIsEnabled(System.Windows.DependencyObject,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="element">Ein Objekt in Wert festlegen.</param>
+        <param name="value">Der festzulegende Wert.</param>
+        <summary>Legt den Wert für die <see cref="P:System.Windows.Controls.ContextMenuService.IsEnabled" /> -Eigenschaft des angegebenen Objekts.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPlacement">
+      <MemberSignature Language="C#" Value="public static void SetPlacement (System.Windows.DependencyObject element, System.Windows.Controls.Primitives.PlacementMode value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetPlacement(class System.Windows.DependencyObject element, valuetype System.Windows.Controls.Primitives.PlacementMode value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContextMenuService.SetPlacement(System.Windows.DependencyObject,System.Windows.Controls.Primitives.PlacementMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Windows.Controls.Primitives.PlacementMode" />
+      </Parameters>
+      <Docs>
+        <param name="element">Objekt, das der Wert festgelegt.</param>
+        <param name="value">Der festzulegende Wert.</param>
+        <summary>Legt den Wert für die <see cref="P:System.Windows.Controls.ContextMenuService.Placement" /> -Eigenschaft des angegebenen Objekts.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPlacementRectangle">
+      <MemberSignature Language="C#" Value="public static void SetPlacementRectangle (System.Windows.DependencyObject element, System.Windows.Rect value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetPlacementRectangle(class System.Windows.DependencyObject element, valuetype System.Windows.Rect value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContextMenuService.SetPlacementRectangle(System.Windows.DependencyObject,System.Windows.Rect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Windows.Rect" />
+      </Parameters>
+      <Docs>
+        <param name="element">Objekt, das der Wert festgelegt.</param>
+        <param name="value">Der festzulegende Wert.</param>
+        <summary>Legt den Wert für die <see cref="P:System.Windows.Controls.ContextMenuService.PlacementRectangle" /> -Eigenschaft des angegebenen Objekts.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPlacementTarget">
+      <MemberSignature Language="C#" Value="public static void SetPlacementTarget (System.Windows.DependencyObject element, System.Windows.UIElement value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetPlacementTarget(class System.Windows.DependencyObject element, class System.Windows.UIElement value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContextMenuService.SetPlacementTarget(System.Windows.DependencyObject,System.Windows.UIElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Windows.UIElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Ein Objekt in Wert festlegen.</param>
+        <param name="value">Der festzulegende Wert.</param>
+        <summary>Legt den Wert für die <see cref="P:System.Windows.Controls.ContextMenuService.PlacementTarget" /> -Eigenschaft des angegebenen Objekts.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetShowOnDisabled">
+      <MemberSignature Language="C#" Value="public static void SetShowOnDisabled (System.Windows.DependencyObject element, bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetShowOnDisabled(class System.Windows.DependencyObject element, bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContextMenuService.SetShowOnDisabled(System.Windows.DependencyObject,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="element">Ein Objekt in Wert festlegen.</param>
+        <param name="value">Der festzulegende Wert.</param>
+        <summary>Legt den Wert für die <see cref="P:System.Windows.Controls.ContextMenuService.ShowOnDisabled" /> -Eigenschaft des angegebenen Objekts.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetVerticalOffset">
+      <MemberSignature Language="C#" Value="public static void SetVerticalOffset (System.Windows.DependencyObject element, double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetVerticalOffset(class System.Windows.DependencyObject element, float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContextMenuService.SetVerticalOffset(System.Windows.DependencyObject,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="element">Ein Objekt in Wert festlegen.</param>
+        <param name="value">Der festzulegende Wert.</param>
+        <summary>Legt den Wert für die <see cref="P:System.Windows.Controls.ContextMenuService.VerticalOffset" /> -Eigenschaft des angegebenen Objekts.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowOnDisabledProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ShowOnDisabledProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ShowOnDisabledProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ContextMenuService.ShowOnDisabledProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Controls.ContextMenuService.ShowOnDisabled" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalOffsetProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty VerticalOffsetProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty VerticalOffsetProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ContextMenuService.VerticalOffsetProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Controls.ContextMenuService.VerticalOffset" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,101 @@
+<Type Name="FormsProtectionEnum" FullName="System.Web.Configuration.FormsProtectionEnum">
+  <TypeSignature Language="C#" Value="public enum FormsProtectionEnum" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FormsProtectionEnum extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.FormsProtectionEnum" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Definiert den Typ der Verschlüsselung, falls vorhanden, die für Cookies verwenden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie alle Wert auswählen, verwendet das System der konfigurierte Datenvalidierungsalgorithmus, basierend auf den [MachineKey-Element ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/4b5699a9-bc21-4c4a-85f1-8b3b8ebd2d46) Tag. Dies ist die Standardeinstellung und empfohlenen Wert.  
+  
+ Wenn Sie "keine" auswählen, können die Cookies-Angriffen ausgesetzt sein.  
+  
+ Wenn Sie Überprüfung auswählen, wird das Cookie gültigkeitsprüfung für Cookies verwenden, indem ein Validierungsschlüssel mit den Cookiedaten verkettet, ein Message Authentication Code (MAC) berechnet und der MAC an das ausgehende Cookie angehängt erstellt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.FormsProtectionEnum.All> Enumeration. Verweisen auf das Codebeispiel in die <xref:System.Web.Configuration.FormsAuthenticationConfiguration> klassenthema Informationen zum Abrufen des Abschnitts.  
+  
+ [!code-csharp[System.Web.Configuration.FormsAuthenticationConfiguration#11](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationConfiguration/CS/formsauthenticationconfiguration.cs#11)]
+ [!code-vb[System.Web.Configuration.FormsAuthenticationConfiguration#11](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationConfiguration/VB/formsauthenticationconfiguration.vb#11)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="All" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.FormsProtectionEnum All = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.FormsProtectionEnum.All" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.FormsProtectionEnum</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Anwendung zum Schutz des Cookies datenvalidierung und Verschlüsselung verwenden. Diese Option verwendet die konfigurierte Datenvalidierungsalgorithmus (auf der Grundlage der <see langword="machineKey" /> Element). Für die Verschlüsselung wird Triple-DES (3DES).) verwendet, sofern dieser verfügbar ist, und wenn der Schlüssel mindestens 48 Bytes lang ist. <see langword="All" />Die Standardeinstellung ist (und empfohlene) Wert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Encryption">
+      <MemberSignature Language="C#" Value="Encryption" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.FormsProtectionEnum Encryption = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.FormsProtectionEnum.Encryption" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.FormsProtectionEnum</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass Cookies werden mithilfe von Triple-DES oder DES verschlüsselt. allerdings keine von Cookies datenvalidierung ist. Auf diese Weise verwendete Cookies könnten ausgewählten Klartext Sicherheit ausgesetzt sein.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.FormsProtectionEnum None = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.FormsProtectionEnum.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.FormsProtectionEnum</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Verschlüsselung und gültigkeitsprüfung bei Sites deaktiviert sind, die Cookies ausschließlich für die Personalisierung verwenden und somit über geringere sicherheitsanforderungen verfügen. Verwendung von Cookies auf diese Weise wird nicht empfohlen. Es ist jedoch die Möglichkeit geringsten Ressourcenaufwand, um Personalisierung mithilfe von .NET Framework zu aktivieren.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Validation">
+      <MemberSignature Language="C#" Value="Validation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.FormsProtectionEnum Validation = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.FormsProtectionEnum.Validation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.FormsProtectionEnum</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Anwendung ein Validierungsschema verwenden, um sicherzustellen, dass der Inhalt eines verschlüsselten Cookies während der Übertragung nicht geändert wurden. Das Cookie wird erstellt, indem ein Validierungsschlüssel mit den Cookiedaten verkettet, ein Message Authentication Code (MAC) berechnet und der MAC an das ausgehende Cookie angehängt wird.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

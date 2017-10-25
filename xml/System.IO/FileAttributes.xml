@@ -1,0 +1,520 @@
+<Type Name="FileAttributes" FullName="System.IO.FileAttributes">
+  <TypeSignature Language="C#" Value="public enum FileAttributes" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed FileAttributes extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.IO.FileAttributes" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.FileSystem.Primitives</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Attribute für Dateien und Verzeichnisse bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können Attribute für Dateien und Verzeichnisse abrufen, durch Aufrufen der <xref:System.IO.File.GetAttributes%2A> Methode, und Sie können sie festlegen durch Aufrufen der <xref:System.IO.File.SetAttributes%2A> Methode.  
+  
+ Es ist nicht möglich, so ändern Sie den Komprimierungsstatus einer <xref:System.IO.File> Objekt mithilfe der <xref:System.IO.File.SetAttributes%2A> Methode. Stattdessen müssen Sie tatsächlich die Datei mithilfe einer Komprimierungstool oder eine der Klassen in Komprimieren der <xref:System.IO.Compression?displayProperty=nameWithType> Namespace.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel veranschaulicht das Abrufen der Attribute für eine Datei, und überprüfen Sie, ob die Datei schreibgeschützt ist.  
+  
+ [!code-csharp[System.IO.FileAttributes#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.fileattributes/cs/example.cs#1)]
+ [!code-vb[System.IO.FileAttributes#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.fileattributes/vb/example.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Archive">
+      <MemberSignature Language="C#" Value="Archive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileAttributes Archive = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileAttributes.Archive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Datei ist ein Kandidat für die Sicherung oder entfernen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Compressed">
+      <MemberSignature Language="C#" Value="Compressed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileAttributes Compressed = int32(2048)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileAttributes.Compressed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Datei komprimiert wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Device">
+      <MemberSignature Language="C#" Value="Device" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileAttributes Device = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileAttributes.Device" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Für zukünftige Verwendung reserviert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Directory">
+      <MemberSignature Language="C#" Value="Directory" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileAttributes Directory = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileAttributes.Directory" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Datei ist ein Verzeichnis.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Encrypted">
+      <MemberSignature Language="C#" Value="Encrypted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileAttributes Encrypted = int32(16384)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileAttributes.Encrypted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Datei oder das Verzeichnis ist verschlüsselt. Bei einer Datei bedeutet dies, dass alle Daten in der Datei verschlüsselt ist. Für ein Verzeichnis ist bedeutet dies, dass die Verschlüsselung der Standardwert für neu erstellte Dateien und Verzeichnisse ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Hidden">
+      <MemberSignature Language="C#" Value="Hidden" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileAttributes Hidden = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileAttributes.Hidden" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Datei wird ausgeblendet, und ist daher nicht in einer normalen Verzeichnisliste enthalten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IntegrityStream">
+      <MemberSignature Language="C#" Value="IntegrityStream" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileAttributes IntegrityStream = int32(32768)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileAttributes.IntegrityStream" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Datei oder das Verzeichnis enthält Unterstützung für die Integrität von Daten. Wenn dieser Wert auf eine Datei angewendet wird, haben alle Datenströme in der Datei Integrität-Unterstützung. Wenn dieser Wert standardmäßig auf ein Verzeichnis, alle neuen Dateien und Unterverzeichnisse in diesem Verzeichnis angewendet wird, schließen Sie die Integrität-Unterstützung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileAttributes Normal = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileAttributes.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Datei ist eine standard-Datei, die über keine besonderen Attribute verfügt. Dieses Attribut ist nur gültig, wenn es allein verwendet wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoScrubData">
+      <MemberSignature Language="C#" Value="NoScrubData" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileAttributes NoScrubData = int32(131072)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileAttributes.NoScrubData" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Datei oder das Verzeichnis ist von den Scanvorgang der Integrität ausgeschlossen. Wenn dieser Wert auf ein Verzeichnis, wird standardmäßig angewendet wird werden alle neuen Dateien und Unterverzeichnisse in diesem Verzeichnis aus Datenintegrität ausgeschlossen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotContentIndexed">
+      <MemberSignature Language="C#" Value="NotContentIndexed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileAttributes NotContentIndexed = int32(8192)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileAttributes.NotContentIndexed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Datei wird nicht durch das Betriebssystem Inhaltsindizierungsdienst indiziert werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Offline">
+      <MemberSignature Language="C#" Value="Offline" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileAttributes Offline = int32(4096)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileAttributes.Offline" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Datei ist offline. Die Daten der Datei ist nicht sofort verfügbar.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnly">
+      <MemberSignature Language="C#" Value="ReadOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileAttributes ReadOnly = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileAttributes.ReadOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Datei ist schreibgeschützt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReparsePoint">
+      <MemberSignature Language="C#" Value="ReparsePoint" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileAttributes ReparsePoint = int32(1024)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileAttributes.ReparsePoint" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Datei enthält einen Analysepunkt ein Block von benutzerdefinierten Daten, die eine Datei oder ein Verzeichnis zugeordnet ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SparseFile">
+      <MemberSignature Language="C#" Value="SparseFile" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileAttributes SparseFile = int32(512)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileAttributes.SparseFile" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Datei ist eine Datei mit geringer Dichte. Dateien mit geringer Dichte sind in der Regel große Dateien, deren Daten hauptsächlich aus Nullen besteht.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="System">
+      <MemberSignature Language="C#" Value="System" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileAttributes System = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileAttributes.System" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Datei ist eine Systemdatei. D. h. die Datei ist Teil des Betriebssystems oder ausschließlich vom Betriebssystem verwendet wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Temporary">
+      <MemberSignature Language="C#" Value="Temporary" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileAttributes Temporary = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileAttributes.Temporary" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Datei ist vorübergehend. Eine temporäre Datei enthält Daten, die benötigt werden, während eine Anwendung ausgeführt wird, jedoch nicht benötigt wird, nachdem die Anwendung fertig gestellt wurde. Dateisysteme versuchen, alle beibehalten, die die Daten für schnelleren Zugriff statt Löschen der Daten im Arbeitsspeicher zu Massenspeicher wieder. Eine temporäre Datei sollte von der Anwendung gelöscht werden, sobald es nicht mehr benötigt wird.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,486 @@
+<Type Name="PropertyTabAttribute" FullName="System.ComponentModel.PropertyTabAttribute">
+  <TypeSignature Language="C#" Value="public class PropertyTabAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PropertyTabAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.PropertyTabAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.All)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Registerkarten für Eigenschaften, die für die angegebene Klasse oder Klassen angezeigt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.PropertyTabAttribute> können Sie eine neue Eigenschaftsseite zum Hinzufügen einer <xref:System.Windows.Forms.PropertyGrid> Steuerelement. Die <xref:System.ComponentModel.PropertyTabAttribute> können zusätzliche Eigenschaftenregisterkarten zum Verfügbarmachen von Eigenschaftsinformationen als eine Komponente der Standardsatz von Eigenschaften hinzufügen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.ComponentModel.PropertyTabAttribute> eine Eigenschaftenregisterkarte angeben. Das Codebeispiel definiert eine Komponente, die die Eigenschaften einer anderen ausgewählten Komponente nach Typ verfügbar macht.  
+  
+ [!code-cpp[PropertyTabExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/PropertyTabExample/CPP/class1.cpp#1)]
+ [!code-csharp[PropertyTabExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/PropertyTabExample/CS/class1.cs#1)]
+ [!code-vb[PropertyTabExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/PropertyTabExample/VB/class1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyTabAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyTabAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.PropertyTabAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist ein Standardkonstruktor, der eine nicht initialisierte erstellt <xref:System.ComponentModel.PropertyTabAttribute>. Dieser Konstruktor kann verwendet werden, Ableitung von diesem Attribut, und geben Sie mehrere Arten der Registerkarte "durch den Aufruf <xref:System.ComponentModel.PropertyTabAttribute.InitializeArrays%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyTabAttribute (string tabClassName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string tabClassName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyTabAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tabClassName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="tabClassName">Die Assembly qualifizierte Name des Typs der zu erstellenden Registerkarte. Ein Beispiel für diese Formatkonvention, finden Sie unter <see cref="P:System.Type.AssemblyQualifiedName" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.PropertyTabAttribute" /> -Klasse unter Verwendung der angegebenen Klassennamen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyTabAttribute (Type tabClass);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type tabClass) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyTabAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tabClass" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="tabClass">Der Typ der zu erstellenden Registerkarte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.PropertyTabAttribute" /> -Klasse mithilfe des angegebenen Typs der Registerkarte ".</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyTabAttribute (string tabClassName, System.ComponentModel.PropertyTabScope tabScope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string tabClassName, valuetype System.ComponentModel.PropertyTabScope tabScope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyTabAttribute.#ctor(System.String,System.ComponentModel.PropertyTabScope)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tabClassName" Type="System.String" />
+        <Parameter Name="tabScope" Type="System.ComponentModel.PropertyTabScope" />
+      </Parameters>
+      <Docs>
+        <param name="tabClassName">Die Assembly qualifizierte Name des Typs der zu erstellenden Registerkarte. Ein Beispiel für diese Formatkonvention, finden Sie unter <see cref="P:System.Type.AssemblyQualifiedName" />.</param>
+        <param name="tabScope">Ein <see cref="T:System.ComponentModel.PropertyTabScope" /> , der den Bereich dieser Registerkarte angibt. Wenn der Bereich ist <see cref="F:System.ComponentModel.PropertyTabScope.Component" />, es wird nur für Komponenten mit dem entsprechenden angezeigt <see cref="T:System.ComponentModel.PropertyTabAttribute" />. Ist er <see cref="F:System.ComponentModel.PropertyTabScope.Document" />, wird für alle Komponenten im Dokument angezeigt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.PropertyTabAttribute" /> -Klasse mit dem angegebenen Klassennamen und den Bereich der Registerkarte ".</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="tabScope" /> ist nicht <see cref="F:System.ComponentModel.PropertyTabScope.Document" /> oder <see cref="F:System.ComponentModel.PropertyTabScope.Component" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyTabAttribute (Type tabClass, System.ComponentModel.PropertyTabScope tabScope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type tabClass, valuetype System.ComponentModel.PropertyTabScope tabScope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyTabAttribute.#ctor(System.Type,System.ComponentModel.PropertyTabScope)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tabClass" Type="System.Type" />
+        <Parameter Name="tabScope" Type="System.ComponentModel.PropertyTabScope" />
+      </Parameters>
+      <Docs>
+        <param name="tabClass">Der Typ der zu erstellenden Registerkarte.</param>
+        <param name="tabScope">Ein <see cref="T:System.ComponentModel.PropertyTabScope" /> , der den Bereich dieser Registerkarte angibt. Wenn der Bereich ist <see cref="F:System.ComponentModel.PropertyTabScope.Component" />, es wird nur für Komponenten mit dem entsprechenden angezeigt <see cref="T:System.ComponentModel.PropertyTabAttribute" />. Ist er <see cref="F:System.ComponentModel.PropertyTabScope.Document" />, wird für alle Komponenten im Dokument angezeigt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.PropertyTabAttribute" /> mithilfe des angegebenen Typs Registerkarte und der Gültigkeitsbereich der Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.ComponentModel.PropertyTabAttribute> eine Eigenschaftenregisterkarte angeben.  
+  
+ [!code-cpp[PropertyTabExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/PropertyTabExample/CPP/class1.cpp#1)]
+ [!code-csharp[PropertyTabExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/PropertyTabExample/CS/class1.cs#1)]
+ [!code-vb[PropertyTabExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/PropertyTabExample/VB/class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="tabScope" /> ist nicht <see cref="F:System.ComponentModel.PropertyTabScope.Document" /> oder <see cref="F:System.ComponentModel.PropertyTabScope.Component" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.ComponentModel.PropertyTabAttribute other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(class System.ComponentModel.PropertyTabAttribute other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyTabAttribute.Equals(System.ComponentModel.PropertyTabAttribute)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.ComponentModel.PropertyTabAttribute" />
+      </Parameters>
+      <Docs>
+        <param name="other">Ein <see cref="T:System.ComponentModel.PropertyTabAttribute" /> mit dieser Instanz zu vergleichender oder <see langword="null" />.</param>
+        <summary>Gibt einen Wert, der angibt, ob diese Instanz gleich einem angegebenen Attribut.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.ComponentModel.PropertyTabAttribute" /> Instanzen gleich sind; andernfalls, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.TypeLoadException">Vom angegebenen Typen der <see cref="P:System.ComponentModel.PropertyTabAttribute.TabClassNames" /> Eigenschaft von der <paramref name="other" /> Parameter wurde nicht gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyTabAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="other">Ein Objekt, das mit dieser Instanz verglichen werden soll, oder <see langword="null" />.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einem angegebenen Objekt ist.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="other" /> bezieht sich auf die gleiche <see cref="T:System.ComponentModel.PropertyTabAttribute" /> Instanz ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.TypeLoadException">Vom angegebenen Typen der <see cref="P:System.ComponentModel.PropertyTabAttribute.TabClassNames" /> Eigenschaft von der <paramref name="other" /> Parameter konnte nicht gefunden werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyTabAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Hashcode für dieses Objekt ab.</summary>
+        <returns>Der Hashcode für das Objekt das Attribut gehört.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeArrays">
+      <MemberSignature Language="C#" Value="protected void InitializeArrays (string[] tabClassNames, System.ComponentModel.PropertyTabScope[] tabScopes);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void InitializeArrays(string[] tabClassNames, valuetype System.ComponentModel.PropertyTabScope[] tabScopes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyTabAttribute.InitializeArrays(System.String[],System.ComponentModel.PropertyTabScope[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tabClassNames" Type="System.String[]" />
+        <Parameter Name="tabScopes" Type="System.ComponentModel.PropertyTabScope[]" />
+      </Parameters>
+      <Docs>
+        <param name="tabClassNames">Ein Array von vollqualifizierten Typnamen der Typen, die für die Registerkarten im Fenster Eigenschaften zu erstellen.</param>
+        <param name="tabScopes">Der Bereich der einzelnen Registerkarten. Wenn der Bereich ist <see cref="F:System.ComponentModel.PropertyTabScope.Component" />, es wird nur für Komponenten mit dem entsprechenden angezeigt <see cref="T:System.ComponentModel.PropertyTabAttribute" />. Ist er <see cref="F:System.ComponentModel.PropertyTabScope.Document" />, wird für alle Komponenten im Dokument angezeigt.</param>
+        <summary>Initialisiert das Attribut mit dem angegebenen Namen der Registerkartenklassen und Array von Gültigkeitsbereichen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.PropertyTabAttribute.InitializeArrays%2A>Stellt eine Hilfsfunktion, mit denen die Typen der Registerkarte "festgelegt werden kann Klassen, die dies <xref:System.ComponentModel.PropertyTabAttribute> angibt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Eine oder mehrere der Werte in <paramref name="tabScopes" /> nicht <see cref="F:System.ComponentModel.PropertyTabScope.Document" /> oder <see cref="F:System.ComponentModel.PropertyTabScope.Component" />.  
+  
+ - oder -   
+  
+ Die Länge der <paramref name="tabClassNames" /> und <paramref name="tabScopes" /> Arrays stimmen nicht überein.  
+  
+ - oder -   
+  
+ <paramref name="tabClassNames" /> oder <paramref name="tabScopes" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeArrays">
+      <MemberSignature Language="C#" Value="protected void InitializeArrays (Type[] tabClasses, System.ComponentModel.PropertyTabScope[] tabScopes);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void InitializeArrays(class System.Type[] tabClasses, valuetype System.ComponentModel.PropertyTabScope[] tabScopes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyTabAttribute.InitializeArrays(System.Type[],System.ComponentModel.PropertyTabScope[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tabClasses" Type="System.Type[]" />
+        <Parameter Name="tabScopes" Type="System.ComponentModel.PropertyTabScope[]" />
+      </Parameters>
+      <Docs>
+        <param name="tabClasses">Die Typen der zu erstellenden Registerkarten.</param>
+        <param name="tabScopes">Der Bereich der einzelnen Registerkarten. Wenn der Bereich ist <see cref="F:System.ComponentModel.PropertyTabScope.Component" />, es wird nur für Komponenten mit dem entsprechenden angezeigt <see cref="T:System.ComponentModel.PropertyTabAttribute" />. Ist er <see cref="F:System.ComponentModel.PropertyTabScope.Document" />, wird für alle Komponenten im Dokument angezeigt.</param>
+        <summary>Initialisiert das Attribut mit dem angegebenen Namen der Registerkartenklassen und Array von Gültigkeitsbereichen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.PropertyTabAttribute.InitializeArrays%2A>Stellt eine Hilfsfunktion, mit denen die Typen der Registerkarte "festgelegt werden kann Klassen, die dies <xref:System.ComponentModel.PropertyTabAttribute> angibt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Eine oder mehrere der Werte in <paramref name="tabScopes" /> nicht <see cref="F:System.ComponentModel.PropertyTabScope.Document" /> oder <see cref="F:System.ComponentModel.PropertyTabScope.Component" />.  
+  
+ - oder -   
+  
+ Die Länge der <paramref name="tabClassNames" /> und <paramref name="tabScopes" /> Arrays stimmen nicht überein.  
+  
+ - oder -   
+  
+ <paramref name="tabClassNames" /> oder <paramref name="tabScopes" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TabClasses">
+      <MemberSignature Language="C#" Value="public Type[] TabClasses { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type[] TabClasses" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.PropertyTabAttribute.TabClasses" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Typen von Registerkarten, die dieses Attribut verwendet.</summary>
+        <value>Ein Array von Typen, der angibt, der Typen von Registerkarten, die dieses Attribut verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle angegebenen Typen müssen in der Lage, zugewiesen werden, eine <xref:System.Windows.Forms.Design.PropertyTab>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.TypeLoadException">Die Typen, die gemäß der <see cref="P:System.ComponentModel.PropertyTabAttribute.TabClassNames" /> Eigenschaft wurde nicht gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TabClassNames">
+      <MemberSignature Language="C#" Value="protected string[] TabClassNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] TabClassNames" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.PropertyTabAttribute.TabClassNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Registerkarte "-Klassen, die dieses Attribut verwendet.</summary>
+        <value>Die Namen der Registerkarte "-Klassen, die dieses Attribut verwendet werden soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabScopes">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.PropertyTabScope[] TabScopes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ComponentModel.PropertyTabScope[] TabScopes" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.PropertyTabAttribute.TabScopes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyTabScope[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Array von Gültigkeitsbereichen jeder Registerkarte für dieses <see cref="T:System.ComponentModel.PropertyTabAttribute" />.</summary>
+        <value>Ein Array von <see cref="T:System.ComponentModel.PropertyTabScope" /> -Objekten, die Bereiche der Registerkarten angeben.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

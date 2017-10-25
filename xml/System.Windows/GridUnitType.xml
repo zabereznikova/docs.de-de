@@ -1,0 +1,75 @@
+<Type Name="GridUnitType" FullName="System.Windows.GridUnitType">
+  <TypeSignature Language="C#" Value="public enum GridUnitType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed GridUnitType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.GridUnitType" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Beschreibt die Art des Werts, der eine <see cref="T:System.Windows.GridLength" /> -Objekt enthalten ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Stern Sizing dient zum Verteilen der verfügbare Platz von gewichteten Proportionen.  
+  
+ In [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)], werden Sternwerte als * oder 2 *. Im ersten erhielten Groß-/Kleinschreibung, die Zeile oder Spalte ein Mal als den verfügbaren Platz; Im zweiten Fall würde die Zeile oder Spalte erhalten zwei Mal den verfügbaren Speicherplatz, und so weiter.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Auto">
+      <MemberSignature Language="C#" Value="Auto" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.GridUnitType Auto = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.GridUnitType.Auto" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.GridUnitType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Größe wird durch die Größeneigenschaften des Inhaltsobjekts bestimmt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Pixel">
+      <MemberSignature Language="C#" Value="Pixel" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.GridUnitType Pixel = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.GridUnitType.Pixel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.GridUnitType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Wert wird als Pixel ausgedrückt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Star">
+      <MemberSignature Language="C#" Value="Star" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.GridUnitType Star = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.GridUnitType.Star" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.GridUnitType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Wert wird als gewichtete Proportion des verfügbaren Platzes angegeben.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

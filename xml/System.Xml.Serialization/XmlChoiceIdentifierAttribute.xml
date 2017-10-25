@@ -1,0 +1,251 @@
+<Type Name="XmlChoiceIdentifierAttribute" FullName="System.Xml.Serialization.XmlChoiceIdentifierAttribute">
+  <TypeSignature Language="C#" Value="public class XmlChoiceIdentifierAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlChoiceIdentifierAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.XmlChoiceIdentifierAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field | System.AttributeTargets.Parameter | System.AttributeTargets.ReturnValue, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass der Member durch Verwendung einer Enumeration genauer erkannt werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die XML-Schemadefinition Element mit dem Namen `xsi:choice` wird verwendet, um ein komplexes Element definieren, die nur ein untergeordnetes Element in einer Instanz enthalten kann (Maxoccurs = 1). Diese untergeordneten kann eine von mehreren Typen, und kann einen von mehreren Namen aufweisen. Jeder Name bezieht sich auf einen bestimmten Typ; Allerdings können mehrere Namen desselben Typs zugeordnet werden. Aus diesem Grund ist eine Instanz eines solchen Elements Schemafragment. Angenommen, Sie haben das folgende Schemafragment, die solche ein Schemafragment Element mit dem Namen definiert `MyChoice`.  
+  
+```  
+<xsd:complexType name="MyChoice">  
+ <xsd:sequence>  
+ <xsd:choice minOccurs="0" maxOccurs="1">  
+ <xsd:element minOccurs="1" maxOccurs="1" name="ChoiceOne" type="xsd:string" />  
+ <xsd:element minOccurs="1" maxOccurs="1" name="ChoiceTwo" type="xsd:string" />  
+ </xsd:choice>  
+ </xsd:sequence>  
+</xsd:complexType>  
+```  
+  
+ Die <xref:System.Xml.Serialization.XmlChoiceIdentifierAttribute> können Sie jede Instanz des Elements einen speziellen Enumerationswert zuweisen. Sie müssen entweder die Enumeration selbst erstellen oder er kann generiert werden, durch die [XML-Schemadefinitionstools (Xsd.exe)](~/docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md). Der folgende C#-Code zeigt wie die <xref:System.Xml.Serialization.XmlChoiceIdentifierAttribute> wird angewendet, um eine `Item` Feld; die <xref:System.Xml.Serialization.XmlChoiceIdentifierAttribute.MemberName%2A> Eigenschaft identifiziert das Feld, das die Enumeration, die weiter verwendet wird enthält, um die Auswahl zu erkennen.  
+  
+```  
+public class Choices{  
+ [XmlChoiceIdentifier("ItemType")]  
+ [XmlChoiceIdentifier("ChoiceOne")]  
+ [XmlChoiceIdentifier("ChoiceTwo")]  
+ public string MyChoice;  
+  
+ // Do not serialize this next field:  
+ [XmlIgnore]  
+ public ItemChoiceType ItemType;  
+}  
+// Do not include this enumeration in the XML schema.  
+[XmlType(IncludeInSchema = false)]  
+public enum ItemChoiceType{  
+ ChoiceOne,  
+ ChoiceTwo,  
+}  
+```  
+  
+ Wenn dieser Code vorhanden ist, können Sie diese serialisieren und Deserialisieren von dieser Klasse durch Festlegen der `ItemType` Feld eine geeignete Enumeration. Beispielsweise serialisiert die `Choice` -Klasse, die C#-Code ähnelt der folgenden Darstellung.  
+  
+```  
+Choices mc = new Choices();  
+mc.MyChoice = "Item Choice One";  
+mc.ItemType = ItemChoiceType.ChoiceOne;  
+```  
+  
+ Beim Deserialisieren von ähnelt dem C#-Code Folgendes:  
+  
+```  
+MyChoice mc = (MyChoice) myXmlSerializer.Deserialize(myReader);  
+if(mc.ItemType == ItemChoiceType.ChoiceOne)  
+ {  
+     // Handle choice one.  
+ }  
+if(mc.ItemType == ItemChoiceType.ChoiceTwo)  
+ {  
+     // Handle choice two.  
+ }  
+if(mc.ItemType != null)  
+ {  
+     throw CreateUnknownTypeException(mc.Item);  
+ }  
+```  
+  
+ Es wird ein zweites Szenario bei der <xref:System.Xml.Serialization.XmlChoiceIdentifierAttribute> verwendet wird. Im folgenden Schema wird das Element ein Feld, das ein Array von Elementen zurückgibt (MaxOccurs = "unbounded"). Das Array kann Objekte der ersten Auswahl enthalten ("D-a-t-a"), und die zweite Wahl ("MoreData").  
+  
+```  
+<xsd:complexType name="MyChoice">  
+ <xsd:sequence>  
+ <xsd:choice minOccurs="0" maxOccurs="unbounded">  
+ <xsd:element minOccurs="1" maxOccurs="1" name="D-a-t-a" type="xsd:string" />  
+ <xsd:element minOccurs="1" maxOccurs="1" name="MoreData" type="xsd:string" />  
+ </xsd:choice>  
+ </xsd:sequence>  
+</xsd:complexType>  
+```  
+  
+ Die resultierende Klasse verwendet dann ein Feld, um ein Array von Elementen zurückzugeben. Für jedes Element im Array, ein entsprechendes `ItemChoiceType` Enumeration muss auch vorhanden sein. Die entsprechenden Enumerationen sind in das zurückgegebene Array enthalten die `ItemsElementName` Feld.  
+  
+```  
+public class MyChoice {  
+ [System.Xml.Serialization.XmlElementAttribute("D-a-t-a", typeof(string), IsNullable=false)]  
+ [System.Xml.Serialization.XmlElementAttribute("MoreData", typeof(string), IsNullable=false)]  
+ [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]  
+ public string[] Items;  
+ [System.Xml.Serialization.XmlElementAttribute(IsNullable=false)]  
+ [System.Xml.Serialization.XmlIgnoreAttribute()]  
+ public ItemsChoiceType[] ItemsElementName;  
+}  
+[System.Xml.Serialization.XmlTypeAttribute(IncludeInSchema=false)]  
+public enum ItemsChoiceType {  
+ [System.Xml.Serialization.XmlEnumAttribute("D-a-t-a")]  
+ Data,  
+ MoreData,  
+}  
+```  
+  
+ Beim Deserialisieren eines Objekts, das einen Bereich von Optionen enthält, verwenden Sie eine Steuerelement-Struktur (z. B. eine If...... else-Struktur) bestimmen, wie ein bestimmter Wert deserialisiert. Überprüfen Sie in der Struktur des Steuerelements den Enumerationswert und Deserialisieren Sie den Wert entsprechend zu.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Klasse serialisiert `Choices` , enthält zwei Felder `MyChoice` und `ManyChoices`. Die <xref:System.Xml.Serialization.XmlChoiceIdentifierAttribute> gilt für jedes Feld an, der angibt (über die <xref:System.Xml.Serialization.XmlChoiceIdentifierAttribute.MemberName%2A> Eigenschaft) einen anderen Klassenmember, der Ruft ab oder legt eine Enumeration, die den Elementwert erkennt. Die `MyChoice` Feld kann auf einen einzelnen Wert festgelegt werden, mit einem entsprechenden Enumerationsmember die `EnumType` Feld. Die `ManyChoices` Feld gibt ein Array von Objekten zurück. Die `ChoiceArray` Feld gibt ein Array von Enumerationswerten zurück. Für jeden Arraymember in der `ManyChoices` Feld, ein entsprechenden Member befindet sich im zurückgegebenen Array von der `ChoiceArray` Feld.  
+  
+ [!code-cpp[XmlChoiceIdentifierAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/XmlChoiceIdentifierAttribute Example/CPP/choice.cpp#1)]
+ [!code-csharp[XmlChoiceIdentifierAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/XmlChoiceIdentifierAttribute Example/CS/choice.cs#1)]
+ [!code-vb[XmlChoiceIdentifierAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/XmlChoiceIdentifierAttribute Example/VB/choice.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlChoiceIdentifierAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlChoiceIdentifierAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.Serialization.XmlChoiceIdentifierAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Klasse serialisiert `Choices` , enthält zwei Felder `MyChoice` und `ManyChoices`. Die <xref:System.Xml.Serialization.XmlChoiceIdentifierAttribute> gilt für jedes Feld an, der angibt (über die <xref:System.Xml.Serialization.XmlChoiceIdentifierAttribute.MemberName%2A> Eigenschaft) einen anderen Klassenmember, der Ruft ab oder legt eine Enumeration, die den Elementwert erkennt. Die `MyChoice` Feld kann auf einen einzelnen Wert festgelegt werden, mit einem entsprechenden Enumerationsmember die `EnumType` Feld. Die `ManyChoices` Feld gibt ein Array von Objekten zurück. Die `ChoiceArray` Feld gibt ein Array von Enumerationswerten zurück. Für jeden Arraymember in der `ManyChoices` Feld, ein entsprechenden Member befindet sich im zurückgegebenen Array von der `ChoiceArray` Feld.  
+  
+ [!code-cpp[XmlChoiceIdentifierAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/XmlChoiceIdentifierAttribute Example/CPP/choice.cpp#1)]
+ [!code-csharp[XmlChoiceIdentifierAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/XmlChoiceIdentifierAttribute Example/CS/choice.cs#1)]
+ [!code-vb[XmlChoiceIdentifierAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/XmlChoiceIdentifierAttribute Example/VB/choice.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlChoiceIdentifierAttribute (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlChoiceIdentifierAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Elementname, der die Enumeration verwendet, um eine Auswahl erkennen zurückgibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.Serialization.XmlChoiceIdentifierAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberName">
+      <MemberSignature Language="C#" Value="public string MemberName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MemberName" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlChoiceIdentifierAttribute.MemberName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Felds, das die Enumeration zu verwendende Erkennen von Typen zurückgibt.</summary>
+        <value>Der Name eines Felds, das eine Enumeration zurückgibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mindestens ein Mitglied muss vorliegen, in der Enumeration zurückgegeben, die für das Feld der <xref:System.Xml.Serialization.XmlChoiceIdentifierAttribute.MemberName%2A> Wert. Standardmäßig nimmt die Enumeration der Name des Felds, das die <xref:System.Xml.Serialization.XmlChoiceIdentifierAttribute> auf angewendet wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Klasse serialisiert `Choices` , enthält zwei Felder `MyChoice` und `ManyChoices`. Die <xref:System.Xml.Serialization.XmlChoiceIdentifierAttribute> gilt für jedes Feld an, der angibt (über die <xref:System.Xml.Serialization.XmlChoiceIdentifierAttribute.MemberName%2A> Eigenschaft) einen anderen Klassenmember, der Ruft ab oder legt eine Enumeration, die den Elementwert erkennt. Die `MyChoice` Feld kann auf einen einzelnen Wert festgelegt werden, mit einem entsprechenden Enumerationsmember die `EnumType` Feld. Die `ManyChoices` Feld gibt ein Array von Objekten zurück. Die `ChoiceArray` Feld gibt ein Array von Enumerationswerten zurück. Für jeden Arraymember in der `ManyChoices` Feld, ein entsprechenden Member befindet sich im zurückgegebenen Array von der `ChoiceArray` Feld.  
+  
+ [!code-cpp[XmlChoiceIdentifierAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/XmlChoiceIdentifierAttribute Example/CPP/choice.cpp#1)]
+ [!code-csharp[XmlChoiceIdentifierAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/XmlChoiceIdentifierAttribute Example/CS/choice.cs#1)]
+ [!code-vb[XmlChoiceIdentifierAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/XmlChoiceIdentifierAttribute Example/VB/choice.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

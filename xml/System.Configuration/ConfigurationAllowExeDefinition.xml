@@ -1,0 +1,109 @@
+<Type Name="ConfigurationAllowExeDefinition" FullName="System.Configuration.ConfigurationAllowExeDefinition">
+  <TypeSignature Language="C#" Value="public enum ConfigurationAllowExeDefinition" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ConfigurationAllowExeDefinition extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.ConfigurationAllowExeDefinition" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Positionen innerhalb der Konfigurationsdatei Hierarchie, das festgelegt oder die enthaltenen Eigenschaften außer Kraft setzen kann ein <see cref="T:System.Configuration.ConfigurationSection" /> Objekt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Werte in dieser Enumeration werden optional verwendet werden, beim Erstellen einer neuen Instanz von der <xref:System.Configuration.ConfigurationSection> Klasse. Beachten Sie, dass Clientanwendungen nur diese Enumeration gilt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="MachineOnly">
+      <MemberSignature Language="C#" Value="MachineOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Configuration.ConfigurationAllowExeDefinition MachineOnly = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Configuration.ConfigurationAllowExeDefinition.MachineOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationAllowExeDefinition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Configuration.ConfigurationSection" /> kann nur in der Datei Machine.config definiert werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MachineToApplication">
+      <MemberSignature Language="C#" Value="MachineToApplication" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Configuration.ConfigurationAllowExeDefinition MachineToApplication = int32(100)" />
+      <MemberSignature Language="DocId" Value="F:System.Configuration.ConfigurationAllowExeDefinition.MachineToApplication" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationAllowExeDefinition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Configuration.ConfigurationSection" /> kann entweder in der Datei "Machine.config" oder in der Datei "Exe.config" im Anwendungsverzeichnis Client definiert werden. Dies ist der Standardwert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MachineToLocalUser">
+      <MemberSignature Language="C#" Value="MachineToLocalUser" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Configuration.ConfigurationAllowExeDefinition MachineToLocalUser = int32(300)" />
+      <MemberSignature Language="DocId" Value="F:System.Configuration.ConfigurationAllowExeDefinition.MachineToLocalUser" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationAllowExeDefinition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Configuration.ConfigurationSection" /> kann in der Datei "Machine.config" in der Datei Exe.config im Anwendungsverzeichnis Client in der Datei User.config im roaming-Benutzerverzeichnis oder in der Datei User.config im Verzeichnis lokalen Benutzers definiert werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MachineToRoamingUser">
+      <MemberSignature Language="C#" Value="MachineToRoamingUser" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Configuration.ConfigurationAllowExeDefinition MachineToRoamingUser = int32(200)" />
+      <MemberSignature Language="DocId" Value="F:System.Configuration.ConfigurationAllowExeDefinition.MachineToRoamingUser" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationAllowExeDefinition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Configuration.ConfigurationSection" /> kann in der Datei "Machine.config" in der Datei "Exe.config" im Anwendungsverzeichnis Client oder in der Datei User.config im roaming-Benutzerverzeichnis definiert werden.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

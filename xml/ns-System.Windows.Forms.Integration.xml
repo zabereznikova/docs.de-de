@@ -1,0 +1,19 @@
+<Namespace Name="System.Windows.Forms.Integration">
+  <Docs>
+    <summary>Enthält Klassen, die die Interoperation von Windows Forms und WPF-Steuerelemente unterstützen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Integration> -Namespace enthält Klassen, die Interoperation zwischen ermöglichen die [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] und [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Technologien. Bei Verwendung von <xref:System.Windows.Forms.Integration> Klassen, die Sie hosten [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] Steuerelemente [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Seiten und [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Elemente im [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)]-basierenden Anwendungen.  
+  
+ Zwei wichtigsten Klassen, die interoperation Funktionen zu implementieren sind <xref:System.Windows.Forms.Integration.WindowsFormsHost> und <xref:System.Windows.Forms.Integration.ElementHost>. Die verwendete Klasse hängt von der Implementierung des Steuerelements ab:  
+  
+-   Verwenden der <xref:System.Windows.Forms.Integration.WindowsFormsHost> Klasse bei der Verwendung muss ein [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] control für eine [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Seite.  
+  
+-   Verwenden der <xref:System.Windows.Forms.Integration.ElementHost> Klasse bei der Verwendung muss ein [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Element in einer [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)]--basierten Anwendung.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

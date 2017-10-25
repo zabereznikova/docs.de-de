@@ -1,0 +1,457 @@
+<Type Name="X509ChainPolicy" FullName="System.Security.Cryptography.X509Certificates.X509ChainPolicy">
+  <TypeSignature Language="C#" Value="public sealed class X509ChainPolicy" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit X509ChainPolicy extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.X509Certificates.X509ChainPolicy" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Kettenrichtlinie dar, die beim Erstellen einer X509-Zertifikatkette angewendet werden soll. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> Objekt haben kann ein <xref:System.Security.Cryptography.X509Certificates.X509ChainPolicy> Eigenschaft, die die Richtlinie zu verwendende in des Überprüfungsprozesses angibt. Beachten Sie, dass nur <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> Objekte für das Konstruieren einer <xref:System.Security.Cryptography.X509Certificates.X509ChainPolicy> Objekt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel öffnet persönlichen Zertifikatspeicher des aktuellen Benutzers, ermöglicht es dem Benutzer zur Auswahl eines Zertifikats, und klicken Sie dann Zertifikats und Kette Zertifikatinformationen in die Konsole geschrieben. Die Ausgabe hängt das Zertifikat, das Sie auswählen.  
+  
+ [!code-cpp[x509chaintest#1](~/samples/snippets/cpp/VS_Snippets_CLR/x509chaintest/CPP/x509chaintest.cpp#1)]
+ [!code-csharp[x509chaintest#1](~/samples/snippets/csharp/VS_Snippets_CLR/x509chaintest/CS/x509chaintest.cs#1)]
+ [!code-vb[x509chaintest#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/x509chaintest/vb/x509chaintest.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509ChainPolicy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509ChainPolicy.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.X509Certificates.X509ChainPolicy" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationPolicy">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.OidCollection ApplicationPolicy { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.OidCollection ApplicationPolicy" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.X509ChainPolicy.ApplicationPolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.OidCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Objektbezeichnern (OIDs) angeben, welche Anwendungsrichtlinien oder die erweiterten Schlüsselverwendungen (EKUs) das Zertifikat unterstützt ab.</summary>
+        <value>Ein <see cref="T:System.Security.Cryptography.OidCollection" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig ist diese Auflistung leer. Sie können zusätzliche Objektbezeichnern (OIDs) auf die Auflistung mit dem folgenden Code hinzufügen:  
+  
+ [!code-cpp[x509chaintest#5](~/samples/snippets/cpp/VS_Snippets_CLR/x509chaintest/CPP/remarks.cpp#5)]
+ [!code-csharp[x509chaintest#5](~/samples/snippets/csharp/VS_Snippets_CLR/x509chaintest/CS/remarks.cs#5)]
+ [!code-vb[x509chaintest#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/x509chaintest/vb/remarks.vb#5)]  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel öffnet persönlichen Zertifikatspeicher des aktuellen Benutzers, ermöglicht es dem Benutzer zur Auswahl eines Zertifikats, und klicken Sie dann Zertifikats und Kette Zertifikatinformationen in die Konsole geschrieben. Die Ausgabe hängt das Zertifikat, das Sie auswählen.  
+  
+ [!code-cpp[x509chaintest#3](~/samples/snippets/cpp/VS_Snippets_CLR/x509chaintest/CPP/x509chaintest.cpp#3)]
+ [!code-csharp[x509chaintest#3](~/samples/snippets/csharp/VS_Snippets_CLR/x509chaintest/CS/x509chaintest.cs#3)]
+ [!code-vb[x509chaintest#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/x509chaintest/vb/x509chaintest.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CertificatePolicy">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.OidCollection CertificatePolicy { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.OidCollection CertificatePolicy" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.X509ChainPolicy.CertificatePolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.OidCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Objektbezeichnern (OIDs), welche Richtlinien für Rechtekontozertifikate das Zertifikat unterstützt angibt.</summary>
+        <value>Ein <see cref="T:System.Security.Cryptography.OidCollection" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig ist diese Auflistung leer. Diese Eigenschaft wird nur unter Windows XP und höheren Betriebssystemen unterstützt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel öffnet persönlichen Zertifikatspeicher des aktuellen Benutzers, ermöglicht es dem Benutzer zur Auswahl eines Zertifikats, und klicken Sie dann Zertifikats und Kette Zertifikatinformationen in die Konsole geschrieben. Die Ausgabe hängt das Zertifikat, das Sie auswählen.  
+  
+ [!code-cpp[x509chaintest#3](~/samples/snippets/cpp/VS_Snippets_CLR/x509chaintest/CPP/x509chaintest.cpp#3)]
+ [!code-csharp[x509chaintest#3](~/samples/snippets/csharp/VS_Snippets_CLR/x509chaintest/CS/x509chaintest.cs#3)]
+ [!code-vb[x509chaintest#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/x509chaintest/vb/x509chaintest.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtraStore">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate2Collection ExtraStore { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509Certificate2Collection ExtraStore" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.X509ChainPolicy.ExtraStore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2Collection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt eine zusätzliche Auflistung von Zertifikaten, die von chaining Engine durchsucht werden können, wenn eine Zertifikatskette zu überprüfen.</summary>
+        <value>Ein <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2Collection" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Protokolle wie z. B. Secure Sockets Layer (SSL) und Secure MIME (S/MIME) ermöglichen die Angabe weiterer Zertifikate für die Verwendung bei der Überprüfung einer Zertifikatkette; Diese Zertifikate können nachweisen, um in den Validierungsprozess nützlich zu sein. Diese Eigenschaft ermöglicht diese Zertifikate der Kettenvalidierungsmodul übergeben werden soll. Standardmäßig ist diese Auflistung leer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509ChainPolicy.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt die <see cref="T:System.Security.Cryptography.X509Certificates.X509ChainPolicy" /> Elemente mit ihren Standardwerten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Setzt alle Klasseneigenschaften auf ihre Standardwerte zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RevocationFlag">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509RevocationFlag RevocationFlag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.X509Certificates.X509RevocationFlag RevocationFlag" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.X509ChainPolicy.RevocationFlag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509RevocationFlag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt Werte für die X509 Revocation-Flags.</summary>
+        <value>Ein <see cref="T:System.Security.Cryptography.X509Certificates.X509RevocationFlag" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft verwendet die Werte aus den <xref:System.Security.Cryptography.X509Certificates.X509RevocationFlag> Enumeration. Der Standardwert lautet <xref:System.Security.Cryptography.X509Certificates.X509RevocationFlag.ExcludeRoot>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel öffnet persönlichen Zertifikatspeicher des aktuellen Benutzers, ermöglicht es dem Benutzer zur Auswahl eines Zertifikats, und klicken Sie dann Zertifikats und Kette Zertifikatinformationen in die Konsole geschrieben. Die Ausgabe hängt das Zertifikat, das Sie auswählen.  
+  
+ [!code-cpp[x509chaintest#3](~/samples/snippets/cpp/VS_Snippets_CLR/x509chaintest/CPP/x509chaintest.cpp#3)]
+ [!code-csharp[x509chaintest#3](~/samples/snippets/csharp/VS_Snippets_CLR/x509chaintest/CS/x509chaintest.cs#3)]
+ [!code-vb[x509chaintest#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/x509chaintest/vb/x509chaintest.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="T:System.Security.Cryptography.X509Certificates.X509RevocationFlag" /> angegebene Wert ist kein gültiges Flag.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RevocationMode">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509RevocationMode RevocationMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.X509Certificates.X509RevocationMode RevocationMode" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.X509ChainPolicy.RevocationMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509RevocationMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Werte für X509 Zertifikatssperrmodus fest.</summary>
+        <value>Ein <see cref="T:System.Security.Cryptography.X509Certificates.X509RevocationMode" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft verwendet die Werte aus den <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> Enumeration. Der Standardwert lautet <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode.Online>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel öffnet persönlichen Zertifikatspeicher des aktuellen Benutzers, ermöglicht es dem Benutzer zur Auswahl eines Zertifikats, und klicken Sie dann Zertifikats und Kette Zertifikatinformationen in die Konsole geschrieben. Die Ausgabe hängt das Zertifikat, das Sie auswählen.  
+  
+ [!code-cpp[x509chaintest#3](~/samples/snippets/cpp/VS_Snippets_CLR/x509chaintest/CPP/x509chaintest.cpp#3)]
+ [!code-csharp[x509chaintest#3](~/samples/snippets/csharp/VS_Snippets_CLR/x509chaintest/CS/x509chaintest.cs#3)]
+ [!code-vb[x509chaintest#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/x509chaintest/vb/x509chaintest.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="T:System.Security.Cryptography.X509Certificates.X509RevocationMode" /> angegebene Wert ist kein gültiges Flag.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlRetrievalTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan UrlRetrievalTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan UrlRetrievalTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.X509ChainPolicy.UrlRetrievalTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeitspanne ab, die während der Überprüfung online-sperrüberprüfung verstrichen oder der Zertifikatssperrliste (CRL) herunterladen.</summary>
+        <value>Ein <see cref="T:System.TimeSpan" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie online sperrüberprüfung verwenden zu können, kann diese Eigenschaft verwendet werden, URL-Abruf-Timeout festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerificationFlags">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509VerificationFlags VerificationFlags { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.X509Certificates.X509VerificationFlags VerificationFlags" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.X509ChainPolicy.VerificationFlags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509VerificationFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Überprüfungsflags für das Zertifikat ab.</summary>
+        <value>Ein Wert aus der <see cref="T:System.Security.Cryptography.X509Certificates.X509VerificationFlags" />-Enumeration.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt Werte aus der <xref:System.Security.Cryptography.X509Certificates.X509VerificationFlags> Enumeration.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel öffnet persönlichen Zertifikatspeicher des aktuellen Benutzers, ermöglicht es dem Benutzer zur Auswahl eines Zertifikats, und klicken Sie dann Zertifikats und Kette Zertifikatinformationen in die Konsole geschrieben. Die Ausgabe hängt das Zertifikat, das Sie auswählen.  
+  
+ [!code-cpp[x509chaintest#3](~/samples/snippets/cpp/VS_Snippets_CLR/x509chaintest/CPP/x509chaintest.cpp#3)]
+ [!code-csharp[x509chaintest#3](~/samples/snippets/csharp/VS_Snippets_CLR/x509chaintest/CS/x509chaintest.cs#3)]
+ [!code-vb[x509chaintest#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/x509chaintest/vb/x509chaintest.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="T:System.Security.Cryptography.X509Certificates.X509VerificationFlags" /> angegebene Wert ist kein gültiges Flag. Der Standardwert lautet <see cref="F:System.Security.Cryptography.X509Certificates.X509VerificationFlags.NoFlag" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VerificationTime">
+      <MemberSignature Language="C#" Value="public DateTime VerificationTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime VerificationTime" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.X509ChainPolicy.VerificationTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Zeit, die das Zertifikat überprüft wurde in Ortszeit angegeben.</summary>
+        <value>Ein <see cref="T:System.DateTime" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt einen Wert, der angibt, der Zeit, wenn, die das Zertifikat überprüft wurde, in Ortszeit angegeben. Dies ist wichtig, beim signierte Nachrichten zu überprüfen, da die Signatur ungültig zum Zeitpunkt der Anmeldung, nicht zum Zeitpunkt der Überprüfung wurden muss.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel öffnet persönlichen Zertifikatspeicher des aktuellen Benutzers, ermöglicht es dem Benutzer zur Auswahl eines Zertifikats, und klicken Sie dann Zertifikats und Kette Zertifikatinformationen in die Konsole geschrieben. Die Ausgabe hängt das Zertifikat, das Sie auswählen.  
+  
+ [!code-cpp[x509chaintest#3](~/samples/snippets/cpp/VS_Snippets_CLR/x509chaintest/CPP/x509chaintest.cpp#3)]
+ [!code-csharp[x509chaintest#3](~/samples/snippets/csharp/VS_Snippets_CLR/x509chaintest/CS/x509chaintest.cs#3)]
+ [!code-vb[x509chaintest#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/x509chaintest/vb/x509chaintest.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

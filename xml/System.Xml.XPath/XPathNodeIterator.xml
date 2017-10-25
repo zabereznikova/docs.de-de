@@ -1,0 +1,546 @@
+<Type Name="XPathNodeIterator" FullName="System.Xml.XPath.XPathNodeIterator">
+  <TypeSignature Language="C#" Value="public abstract class XPathNodeIterator : ICloneable, System.Collections.IEnumerable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit XPathNodeIterator extends System.Object implements class System.Collections.IEnumerable, class System.ICloneable" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.XPath.XPathNodeIterator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XPath</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Position={CurrentPosition}, Current={debuggerDisplayProxy}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Iterator für eine ausgewählte Gruppe von Knoten bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Xml.XPath.XPathNodeIterator> von zurückgegebene Objekt der <xref:System.Xml.XPath.XPathNavigator> Klasse befindet sich nicht auf dem ersten Knoten in einer ausgewählten Reihe von Knoten. Ein Aufruf der <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> Methode der <xref:System.Xml.XPath.XPathNodeIterator> Klasse muss vorgenommen werden, um zu positionieren der <xref:System.Xml.XPath.XPathNodeIterator> Objekt auf dem ersten Knoten im ausgewählten Satz von Knoten.  
+  
+ Bei Verwendung der <xref:System.Xml.XPath.XPathNodeIterator>, wenn Sie den aktuellen Knoten oder einen seiner übergeordneten Elemente bearbeiten, wird die aktuelle Position verloren. Wenn Sie eine Anzahl von Knoten bearbeiten möchten, die Sie ausgewählt haben, erstellen Sie eine <xref:System.Xml.XPath.XPathNavigator> array, kopieren Sie alle Knoten aus dem <xref:System.Xml.XPath.XPathNodeIterator> in das Array, klicken Sie dann das Array durchlaufen und ändern Sie die Knoten.  
+  
+ Es gibt zwei Möglichkeiten zum Durchlaufen einer <xref:System.Xml.XPath.XPathNavigator> -Auflistung unter Verwendung der <xref:System.Xml.XPath.XPathNodeIterator> Klasse.  
+  
+ Eine Möglichkeit ist die Verwendung der <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> -Methode, und rufen Sie dann <xref:System.Xml.XPath.XPathNodeIterator.Current%2A> Abrufen des aktuellen <xref:System.Xml.XPath.XPathNavigator> -Instanz, wie im folgenden Beispiel gezeigt:  
+  
+ [!code-cpp[XPathNavigatorMethods#55](~/samples/snippets/cpp/VS_Snippets_Data/XPathNavigatorMethods/CPP/xpathnavigatormethods.cpp#55)]
+ [!code-csharp[XPathNavigatorMethods#55](~/samples/snippets/csharp/VS_Snippets_Data/XPathNavigatorMethods/CS/xpathnavigatormethods.cs#55)]
+ [!code-vb[XPathNavigatorMethods#55](~/samples/snippets/visualbasic/VS_Snippets_Data/XPathNavigatorMethods/VB/xpathnavigatormethods.vb#55)]  
+  
+ Eine andere Möglichkeit ist die Verwendung einer `foreach` Schleife zum Aufrufen der <xref:System.Xml.XPath.XPathNodeIterator.GetEnumerator%2A> -Methode und die zurückgegebene <xref:System.Collections.IEnumerator> Schnittstelle zum Auflisten der Knoten, wie im folgenden Beispiel gezeigt:  
+  
+ [!code-cpp[XPathNavigatorMethods#56](~/samples/snippets/cpp/VS_Snippets_Data/XPathNavigatorMethods/CPP/xpathnavigatormethods.cpp#56)]
+ [!code-csharp[XPathNavigatorMethods#56](~/samples/snippets/csharp/VS_Snippets_Data/XPathNavigatorMethods/CS/xpathnavigatormethods.cs#56)]
+ [!code-vb[XPathNavigatorMethods#56](~/samples/snippets/visualbasic/VS_Snippets_Data/XPathNavigatorMethods/VB/xpathnavigatormethods.vb#56)]  
+  
+ Sie sollten entweder <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> und <xref:System.Xml.XPath.XPathNodeIterator.Current%2A> oder <xref:System.Xml.XPath.XPathNodeIterator.GetEnumerator%2A>. Kombinieren diese beiden Ansätze kann zu unerwarteten Ergebnissen führen. Z. B. wenn die <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> -Methode zuerst aufgerufen wird, und klicken Sie dann die <xref:System.Xml.XPath.XPathNodeIterator.GetEnumerator%2A> Methode wird aufgerufen, der `foreach` Schleife, die `foreach` Schleife beginnt beim Aufzählen der Ergebnisse vom Anfang der auflistungs, aber von der Position nach der <xref:System.Xml.XPath.XPathNodeIterator.Current%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Xml.XPath.XPathNavigator.Select%2A> Methode der <xref:System.Xml.XPath.XPathNavigator> Klasse auf eine Knotengruppe unter Verwendung der <xref:System.Xml.XPath.XPathNodeIterator> Klasse.  
+  
+ [!code-cpp[XPathNavigatorMethods#39](~/samples/snippets/cpp/VS_Snippets_Data/XPathNavigatorMethods/CPP/xpathnavigatormethods.cpp#39)]
+ [!code-csharp[XPathNavigatorMethods#39](~/samples/snippets/csharp/VS_Snippets_Data/XPathNavigatorMethods/CS/xpathnavigatormethods.cs#39)]
+ [!code-vb[XPathNavigatorMethods#39](~/samples/snippets/visualbasic/VS_Snippets_Data/XPathNavigatorMethods/VB/xpathnavigatormethods.vb#39)]  
+  
+ In diesem Beispiel wird die Datei `books.xml` als Eingabe verwendet.  
+  
+```xml  
+  
+<?xml version="1.0" encoding="utf-8" ?>   
+<bookstore>  
+    <book genre="autobiography" publicationdate="1981-03-22" ISBN="1-861003-11-0">  
+        <title>The Autobiography of Benjamin Franklin</title>  
+        <author>  
+            <first-name>Benjamin</first-name>  
+            <last-name>Franklin</last-name>  
+        </author>  
+        <price>8.99</price>  
+    </book>  
+    <book genre="novel" publicationdate="1967-11-17" ISBN="0-201-63361-2">  
+        <title>The Confidence Man</title>  
+        <author>  
+            <first-name>Herman</first-name>  
+            <last-name>Melville</last-name>  
+        </author>  
+        <price>11.99</price>  
+    </book>  
+    <book genre="philosophy" publicationdate="1991-02-15" ISBN="1-861001-57-6">  
+        <title>The Gorgias</title>  
+        <author>  
+            <name>Plato</name>  
+        </author>  
+        <price>9.99</price>  
+    </book>  
+</bookstore>  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Beim Erben von der <see cref="T:System.Xml.XPath.XPathNodeIterator" /> -Klasse, müssen Sie die folgenden Member überschreiben:  
+  
+-   <see cref="M:System.Xml.XPath.XPathNodeIterator.Clone" />  
+  
+-   <see cref="P:System.Xml.XPath.XPathNodeIterator.Current" />  
+  
+-   <see cref="P:System.Xml.XPath.XPathNodeIterator.CurrentPosition" />  
+  
+-   <see cref="M:System.Xml.XPath.XPathNodeIterator.MoveNext" /></para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XPathNodeIterator ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNodeIterator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.XPath.XPathNodeIterator" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird von abgeleiteten Klassenkonstruktoren Zustand bei dieser Art initialisiert aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XPath.XPathNodeIterator Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XPath.XPathNodeIterator Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNodeIterator.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNodeIterator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse gibt einen Klon dieses <see cref="T:System.Xml.XPath.XPathNodeIterator" /> Objekt.</summary>
+        <returns>Ein neues <see cref="T:System.Xml.XPath.XPathNodeIterator" /> Objektklon dieses <see cref="T:System.Xml.XPath.XPathNodeIterator" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das geklonte <xref:System.Xml.XPath.XPathNodeIterator> -Objekt positioniert ist, auf dem gleichen Knoten im Knoten "" festgelegt, wenn Aufrufe an vorgenommen wurden die <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> Methode. Das geklonte <xref:System.Xml.XPath.XPathNodeIterator> Objekt ist nicht betroffen, durch nachfolgende Änderungen an dieser <xref:System.Xml.XPath.XPathNodeIterator> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public virtual int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathNodeIterator.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index des letzten Knotens in der ausgewählten Gruppe von Knoten ab.</summary>
+        <value>Der Index des letzten Knotens im ausgewählten Satz von Knoten oder 0, wenn es keine Knoten ausgewählt sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.XPath.XPathNodeIterator.Count%2A> Eigenschaft wirkt sich nicht auf die Position der <xref:System.Xml.XPath.XPathNodeIterator>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XPath.XPathNavigator Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XPath.XPathNavigator Current" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathNodeIterator.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNavigator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim außer Kraft setzen in einer abgeleiteten Klasse das <see cref="T:System.Xml.XPath.XPathNavigator" />-Objekt für dieses <see cref="T:System.Xml.XPath.XPathNodeIterator" /> ab, das im aktuellen Kontextknoten positioniert wurde.</summary>
+        <value>Ein im Kontextknoten positioniertes <see cref="T:System.Xml.XPath.XPathNavigator" />-Objekt, von dem aus die Knotengruppe ausgewählt wurde. Die <see cref="M:System.Xml.XPath.XPathNodeIterator.MoveNext" />-Methode muss aufgerufen werden, um <see cref="T:System.Xml.XPath.XPathNodeIterator" /> auf den ersten Knoten in der ausgewählten Gruppe zu verschieben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die Eigenschaften des zurückgegebenen <xref:System.Xml.XPath.XPathNavigator> Objekt zum Abrufen von Informationen für den aktuellen Knoten. Allerdings das zurückgegebene <xref:System.Xml.XPath.XPathNavigator> Objekt sollte nicht geändert werden. Das zurückgegebene <xref:System.Xml.XPath.XPathNavigator> Objekt kann nicht aus der ausgewählten Knotengruppe verschoben werden.  
+  
+ Alternativ können Sie Klonen der <xref:System.Xml.XPath.XPathNavigator> -Objekt unter Verwendung der <xref:System.Xml.XPath.XPathNavigator.Clone%2A> Methode der <xref:System.Xml.XPath.XPathNavigator> Klasse. Das geklonte <xref:System.Xml.XPath.XPathNavigator> Objekt kann dann aus der ausgewählten Knotengruppe verschoben werden. Diese Methode zum Klonen der <xref:System.Xml.XPath.XPathNavigator> Objekt beeinträchtigt die Leistung der XPath-Abfrage.  
+  
+ Wenn die <xref:System.Xml.XPath.XPathNavigator.SelectAncestors%2A>, <xref:System.Xml.XPath.XPathNavigator.SelectDescendants%2A>, und <xref:System.Xml.XPath.XPathNavigator.SelectChildren%2A> -Methode dazu keine Knoten ausgewählt, die <xref:System.Xml.XPath.XPathNodeIterator.Current%2A> Eigenschaft verweist möglicherweise nicht den Kontextknoten.  
+  
+ Um zu testen, ob der Knoten ausgewählt wurden, verwenden die <xref:System.Xml.XPath.XPathNodeIterator.Count%2A> Eigenschaft wie im folgenden Beispiel gezeigt.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel ruft alle Buchtitel Herman Melville mithilfe der <xref:System.Xml.XPath.XPathNodeIterator.Current%2A> Eigenschaft von der <xref:System.Xml.XPath.XPathNodeIterator> Objekt und die <xref:System.Xml.XPath.XPathNavigator.Clone%2A> Methode der <xref:System.Xml.XPath.XPathNavigator> Klasse.  
+  
+ [!code-cpp[XPathNavigatorMethods#6](~/samples/snippets/cpp/VS_Snippets_Data/XPathNavigatorMethods/CPP/xpathnavigatormethods.cpp#6)]
+ [!code-csharp[XPathNavigatorMethods#6](~/samples/snippets/csharp/VS_Snippets_Data/XPathNavigatorMethods/CS/xpathnavigatormethods.cs#6)]
+ [!code-vb[XPathNavigatorMethods#6](~/samples/snippets/visualbasic/VS_Snippets_Data/XPathNavigatorMethods/VB/xpathnavigatormethods.vb#6)]  
+  
+ In diesem Beispiel wird die Datei `contosoBooks.xml` als Eingabe verwendet.  
+  
+```xml  
+  
+<?xml version="1.0" encoding="utf-8" ?>  
+<bookstore xmlns="http://www.contoso.com/books">  
+    <book genre="autobiography" publicationdate="1981-03-22" ISBN="1-861003-11-0">  
+        <title>The Autobiography of Benjamin Franklin</title>  
+        <author>  
+            <first-name>Benjamin</first-name>  
+            <last-name>Franklin</last-name>  
+        </author>  
+        <price>8.99</price>  
+    </book>  
+    <book genre="novel" publicationdate="1967-11-17" ISBN="0-201-63361-2">  
+        <title>The Confidence Man</title>  
+        <author>  
+            <first-name>Herman</first-name>  
+            <last-name>Melville</last-name>  
+        </author>  
+        <price>11.99</price>  
+    </book>  
+    <book genre="philosophy" publicationdate="1991-02-15" ISBN="1-861001-57-6">  
+        <title>The Gorgias</title>  
+        <author>  
+            <name>Plato</name>  
+        </author>  
+        <price>9.99</price>  
+    </book>  
+</bookstore>  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentPosition">
+      <MemberSignature Language="C#" Value="public abstract int CurrentPosition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CurrentPosition" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathNodeIterator.CurrentPosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft den Index der aktuellen Position im ausgewählten Satz von Knoten ab.</summary>
+        <value>Der Index der aktuellen Position.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Index ist 1-basiert. Daher muss es sich bei der erste Knoten um einen Index von 1. Ein Index von 0 gibt an, dass es keine Knoten ausgewählt sind. Diese Eigenschaft gibt immer eine positive ganze Zahl zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNodeIterator.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein <see cref="T:System.Collections.IEnumerator" /> Objekt, das die ausgewählte Knotengruppe durchlaufen.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" /> Objekt, das die ausgewählte Knotengruppe durchlaufen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Enumerator befindet sich auf die aktuelle Position der <xref:System.Xml.XPath.XPathNodeIterator> Objekt.  
+  
+ Es gibt zwei Möglichkeiten zum Durchlaufen einer <xref:System.Xml.XPath.XPathNavigator> -Auflistung unter Verwendung der <xref:System.Xml.XPath.XPathNodeIterator> Klasse.  
+  
+ Eine Möglichkeit ist die Verwendung der <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> -Methode, und rufen Sie dann <xref:System.Xml.XPath.XPathNodeIterator.Current%2A> Abrufen des aktuellen <xref:System.Xml.XPath.XPathNavigator> -Instanz, wie im folgenden Beispiel gezeigt:  
+  
+ [!code-cpp[XPathNavigatorMethods#55](~/samples/snippets/cpp/VS_Snippets_Data/XPathNavigatorMethods/CPP/xpathnavigatormethods.cpp#55)]
+ [!code-csharp[XPathNavigatorMethods#55](~/samples/snippets/csharp/VS_Snippets_Data/XPathNavigatorMethods/CS/xpathnavigatormethods.cs#55)]
+ [!code-vb[XPathNavigatorMethods#55](~/samples/snippets/visualbasic/VS_Snippets_Data/XPathNavigatorMethods/VB/xpathnavigatormethods.vb#55)]  
+  
+ Eine andere Möglichkeit ist die Verwendung einer `foreach` Schleife zum Aufrufen der <xref:System.Xml.XPath.XPathNodeIterator.GetEnumerator%2A> -Methode und die zurückgegebene <xref:System.Collections.IEnumerator> Schnittstelle zum Auflisten der Knoten, wie im folgenden Beispiel gezeigt:  
+  
+ [!code-cpp[XPathNavigatorMethods#56](~/samples/snippets/cpp/VS_Snippets_Data/XPathNavigatorMethods/CPP/xpathnavigatormethods.cpp#56)]
+ [!code-csharp[XPathNavigatorMethods#56](~/samples/snippets/csharp/VS_Snippets_Data/XPathNavigatorMethods/CS/xpathnavigatormethods.cs#56)]
+ [!code-vb[XPathNavigatorMethods#56](~/samples/snippets/visualbasic/VS_Snippets_Data/XPathNavigatorMethods/VB/xpathnavigatormethods.vb#56)]  
+  
+ Sie sollten entweder die <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> Methode und <xref:System.Xml.XPath.XPathNodeIterator.Current%2A> , oder verwenden Sie die <xref:System.Xml.XPath.XPathNodeIterator.GetEnumerator%2A> Methode. Kombinieren diese beiden Ansätze kann zu unerwarteten Ergebnissen führen. Z. B. wenn die <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> -Methode zuerst aufgerufen wird, und klicken Sie dann die <xref:System.Xml.XPath.XPathNodeIterator.GetEnumerator%2A> Methode wird aufgerufen, der `foreach` Schleife, die `foreach` Schleife beginnt beim Aufzählen der Ergebnisse vom Anfang der auflistungs, aber von der Position nach der <xref:System.Xml.XPath.XPathNodeIterator.Current%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveNext">
+      <MemberSignature Language="C#" Value="public abstract bool MoveNext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool MoveNext() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNodeIterator.MoveNext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beim Überschreiben in einer abgeleiteten Klasse wird das von der <see cref="P:System.Xml.XPath.XPathNodeIterator.Current" />-Eigenschaft zurückgegebene <see cref="T:System.Xml.XPath.XPathNavigator" />-Objekt auf den nächsten Knoten in der ausgewählten Knotengruppe verschoben.</summary>
+        <returns>
+          <see langword="true" />, wenn das <see cref="T:System.Xml.XPath.XPathNavigator" />-Objekt auf den nächsten Knoten verschoben wurde. <see langword="false" />, wenn keine weiteren ausgewählten Knoten vorhanden sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.XPath.XPathNodeIterator> -Objekt positioniert ist, auf dem ersten Knoten in der ausgewählten Knotengruppe erst nach dem ersten Aufruf der <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> Methode. Die Knotengruppe wird in der Dokumentreihenfolge erstellt. Aus diesem Grund Aufrufen der <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> Methode springt auf den nächsten Knoten in Dokumentreihenfolge.  
+  
+ Es gibt zwei Möglichkeiten zum Durchlaufen einer <xref:System.Xml.XPath.XPathNavigator> -Auflistung unter Verwendung der <xref:System.Xml.XPath.XPathNodeIterator> Klasse.  
+  
+ Eine Möglichkeit ist die Verwendung der <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> -Methode, und rufen Sie dann <xref:System.Xml.XPath.XPathNodeIterator.Current%2A> Abrufen des aktuellen <xref:System.Xml.XPath.XPathNavigator> -Instanz, wie im folgenden Beispiel gezeigt:  
+  
+ [!code-cpp[XPathNavigatorMethods#55](~/samples/snippets/cpp/VS_Snippets_Data/XPathNavigatorMethods/CPP/xpathnavigatormethods.cpp#55)]
+ [!code-csharp[XPathNavigatorMethods#55](~/samples/snippets/csharp/VS_Snippets_Data/XPathNavigatorMethods/CS/xpathnavigatormethods.cs#55)]
+ [!code-vb[XPathNavigatorMethods#55](~/samples/snippets/visualbasic/VS_Snippets_Data/XPathNavigatorMethods/VB/xpathnavigatormethods.vb#55)]  
+  
+ Eine andere Möglichkeit ist die Verwendung einer `foreach` Schleife zum Aufrufen der <xref:System.Xml.XPath.XPathNodeIterator.GetEnumerator%2A> -Methode und die zurückgegebene <xref:System.Collections.IEnumerator> Schnittstelle zum Auflisten der Knoten, wie im folgenden Beispiel gezeigt:  
+  
+ [!code-cpp[XPathNavigatorMethods#56](~/samples/snippets/cpp/VS_Snippets_Data/XPathNavigatorMethods/CPP/xpathnavigatormethods.cpp#56)]
+ [!code-csharp[XPathNavigatorMethods#56](~/samples/snippets/csharp/VS_Snippets_Data/XPathNavigatorMethods/CS/xpathnavigatormethods.cs#56)]
+ [!code-vb[XPathNavigatorMethods#56](~/samples/snippets/visualbasic/VS_Snippets_Data/XPathNavigatorMethods/VB/xpathnavigatormethods.vb#56)]  
+  
+ Sie sollten entweder die <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> Methode und <xref:System.Xml.XPath.XPathNodeIterator.Current%2A> , oder verwenden Sie die <xref:System.Xml.XPath.XPathNodeIterator.GetEnumerator%2A> Methode. Kombinieren diese beiden Ansätze kann zu unerwarteten Ergebnissen führen. Z. B. wenn die <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> -Methode zuerst aufgerufen wird, und klicken Sie dann die <xref:System.Xml.XPath.XPathNodeIterator.GetEnumerator%2A> Methode wird aufgerufen, der `foreach` Schleife, die `foreach` Schleife beginnt beim Aufzählen der Ergebnisse vom Anfang der auflistungs, aber von der Position nach der <xref:System.Xml.XPath.XPathNodeIterator.Current%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Xml.XPath.XPathNavigator.Select%2A> Methode der <xref:System.Xml.XPath.XPathNavigator> Klasse auf eine Knotengruppe unter Verwendung der <xref:System.Xml.XPath.XPathNodeIterator> Klasse.  
+  
+ [!code-cpp[XPathNavigatorMethods#39](~/samples/snippets/cpp/VS_Snippets_Data/XPathNavigatorMethods/CPP/xpathnavigatormethods.cpp#39)]
+ [!code-csharp[XPathNavigatorMethods#39](~/samples/snippets/csharp/VS_Snippets_Data/XPathNavigatorMethods/CS/xpathnavigatormethods.cs#39)]
+ [!code-vb[XPathNavigatorMethods#39](~/samples/snippets/visualbasic/VS_Snippets_Data/XPathNavigatorMethods/VB/xpathnavigatormethods.vb#39)]  
+  
+ In diesem Beispiel wird die Datei `books.xml` als Eingabe verwendet.  
+  
+```xml  
+  
+<?xml version="1.0" encoding="utf-8" ?>   
+<bookstore>  
+    <book genre="autobiography" publicationdate="1981-03-22" ISBN="1-861003-11-0">  
+        <title>The Autobiography of Benjamin Franklin</title>  
+        <author>  
+            <first-name>Benjamin</first-name>  
+            <last-name>Franklin</last-name>  
+        </author>  
+        <price>8.99</price>  
+    </book>  
+    <book genre="novel" publicationdate="1967-11-17" ISBN="0-201-63361-2">  
+        <title>The Confidence Man</title>  
+        <author>  
+            <first-name>Herman</first-name>  
+            <last-name>Melville</last-name>  
+        </author>  
+        <price>11.99</price>  
+    </book>  
+    <book genre="philosophy" publicationdate="1991-02-15" ISBN="1-861001-57-6">  
+        <title>The Gorgias</title>  
+        <author>  
+            <name>Plato</name>  
+        </author>  
+        <price>9.99</price>  
+    </book>  
+</bookstore>  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ICloneable.Clone">
+      <MemberSignature Language="C#" Value="object ICloneable.Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ICloneable.Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNodeIterator.System#ICloneable#Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues Objekt, das eine Kopie der aktuellen Instanz darstellt.</summary>
+        <returns>Ein neues Objekt, das eine Kopie dieser Instanz ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Xml.XPath.XPathNodeIterator>-Instanz in eine <xref:System.ICloneable>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

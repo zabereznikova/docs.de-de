@@ -1,0 +1,6 @@
+<Namespace Name="System.ServiceModel.MsmqIntegration">
+  <Docs>
+    <summary>Der <see cref="N:System.ServiceModel.MsmqIntegration" />-Namespace beinhaltet Klassen, die sich auf die Microsoft Message Queuing Service (MSMQ)-Integration beziehen, wodurch Kommunikation zwischen MSMQ- und Windows Communication Foundation (WCF)-Anwendungen ermöglicht wird.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

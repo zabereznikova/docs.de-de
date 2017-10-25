@@ -1,0 +1,839 @@
+<Type Name="CommandLineBuilder" FullName="Microsoft.Build.Utilities.CommandLineBuilder">
+  <TypeSignature Language="C#" Value="public class CommandLineBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CommandLineBuilder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Utilities.CommandLineBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Umfasst Hilfsprogrammmethoden zum Erstellen einer Befehlszeile.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:Microsoft.Build.Utilities.ToolTask> ausführt [Ilasm.exe (IL-Assembler)](~/docs/framework/tools/ilasm-exe-il-assembler.md). Die <xref:Microsoft.Build.Utilities.CommandLineBuilder>, <xref:Microsoft.Build.Utilities.ToolLocationHelper>, und <xref:Microsoft.Build.Utilities.TaskLoggingHelper> Klassen werden verwendet, um die benötigten Informationen zum Ausführen der Aufgabe zu generieren.  
+  
+ [!code-csharp[msbuild_ToolTask#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_ToolTask/CS/ILAsm.cs#1)]
+ [!code-vb[msbuild_ToolTask#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_ToolTask/VB/ILAsm.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CommandLineBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Utilities.CommandLineBuilder" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:Microsoft.Build.Utilities.ToolTask> ausführt [Ilasm.exe (IL-Assembler)](~/docs/framework/tools/ilasm-exe-il-assembler.md). Die <xref:Microsoft.Build.Utilities.CommandLineBuilder>, <xref:Microsoft.Build.Utilities.ToolLocationHelper>, und <xref:Microsoft.Build.Utilities.TaskLoggingHelper> Klassen werden verwendet, um die benötigten Informationen zum Ausführen der Aufgabe zu generieren.  
+  
+ [!code-csharp[msbuild_ToolTask#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_ToolTask/CS/ILAsm.cs#1)]
+ [!code-vb[msbuild_ToolTask#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_ToolTask/VB/ILAsm.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CommandLineBuilder (bool quoteHyphensOnCommandLine);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool quoteHyphensOnCommandLine) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="quoteHyphensOnCommandLine" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="quoteHyphensOnCommandLine">Bei true müssen Bindestriche in Anführungszeichen gesetzt werden.</param>
+        <summary>Standardkonstruktor</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="AppendFileNameIfNotNull">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Fügt an die Befehlszeile den durch den Parameter dargestellten Dateinamen an, und fügt bei Bedarf Anführungszeichen ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:Microsoft.Build.Utilities.ToolTask> ausführt [Ilasm.exe (IL-Assembler)](~/docs/framework/tools/ilasm-exe-il-assembler.md). Die <xref:Microsoft.Build.Utilities.CommandLineBuilder>, <xref:Microsoft.Build.Utilities.ToolLocationHelper>, und <xref:Microsoft.Build.Utilities.TaskLoggingHelper> Klassen werden verwendet, um die benötigten Informationen zum Ausführen der Aufgabe zu generieren.  
+  
+ [!code-csharp[msbuild_ToolTask#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_ToolTask/CS/ILAsm.cs#1)]
+ [!code-vb[msbuild_ToolTask#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_ToolTask/VB/ILAsm.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="AppendFileNameIfNotNull">
+      <MemberSignature Language="C#" Value="public void AppendFileNameIfNotNull (Microsoft.Build.Framework.ITaskItem fileItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendFileNameIfNotNull(class Microsoft.Build.Framework.ITaskItem fileItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendFileNameIfNotNull(Microsoft.Build.Framework.ITaskItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileItem" Type="Microsoft.Build.Framework.ITaskItem" />
+      </Parameters>
+      <Docs>
+        <param name="fileItem">Die Aufgabenelementspezifikation, die an die Befehlszeile angefügt werden soll. Ist er <see langword="null" />, diese Methode hat keine Auswirkung.</param>
+        <summary>Fügt an die Befehlszeile mit dem Dateinamen des angegebenen <see cref="T:Microsoft.Build.Framework.ITaskItem" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt an die Befehlszeile mit der eine Aufgabenelementspezifikation und Aufgabenelementspezifikation in Anführungszeichen ein, nach Bedarf.  
+  
+ Wenn die Befehlszeile nicht leer ist, fügt diese Methode vor der Aufgabenelementspezifikation ein Leerzeichen ein.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:Microsoft.Build.Utilities.ToolTask> ausführt [Ilasm.exe (IL-Assembler)](~/docs/framework/tools/ilasm-exe-il-assembler.md). Die <xref:Microsoft.Build.Utilities.CommandLineBuilder>, <xref:Microsoft.Build.Utilities.ToolLocationHelper>, und <xref:Microsoft.Build.Utilities.TaskLoggingHelper> Klassen werden verwendet, um die benötigten Informationen zum Ausführen der Aufgabe zu generieren.  
+  
+ [!code-csharp[msbuild_ToolTask#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_ToolTask/CS/ILAsm.cs#1)]
+ [!code-vb[msbuild_ToolTask#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_ToolTask/VB/ILAsm.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendFileNameIfNotNull">
+      <MemberSignature Language="C#" Value="public void AppendFileNameIfNotNull (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendFileNameIfNotNull(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendFileNameIfNotNull(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der anzufügende Dateiname. Ist er <see langword="null" />, diese Methode hat keine Auswirkung.</param>
+        <summary>Fügt an die Befehlszeile den durch den Parameter dargestellten Dateinamen an, und fügt bei Bedarf Anführungszeichen ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt an die Befehlszeile mit einem Dateinamen und schließt den Dateinamen in Anführungszeichen ein, nach Bedarf.  
+  
+ Wenn das erste Zeichen des Dateinamens ein Bindestrich, dann ist `.\` am Anfang des Dateinamens zur Unterscheidung von einem Switch hinzugefügt wird.  
+  
+ Wenn die Befehlszeile nicht leer ist, fügt diese Methode vor der Dateiname ein Leerzeichen ein.  
+  
+   
+  
+## Examples  
+ `AppendFileNameIfNotNull("-StrangeFileName.cs")`ergibt `.\-StrangeFileName.cs`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendFileNamesIfNotNull">
+      <MemberSignature Language="C#" Value="public void AppendFileNamesIfNotNull (Microsoft.Build.Framework.ITaskItem[] fileItems, string delimiter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendFileNamesIfNotNull(class Microsoft.Build.Framework.ITaskItem[] fileItems, string delimiter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendFileNamesIfNotNull(Microsoft.Build.Framework.ITaskItem[],System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileItems" Type="Microsoft.Build.Framework.ITaskItem[]" />
+        <Parameter Name="delimiter" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileItems">Die Aufgabenelementspezifikationen, die angefügt werden sollen. Wenn das Array gleich <see langword="null" /> ist, hat diese Methode keine Auswirkung.</param>
+        <param name="delimiter">Das Trennzeichen, das in der Befehlszeile zwischen Aufgabenelementspezifikationen eingefügt werden soll.</param>
+        <summary>Fügt die Liste der Dateinamen, die im angegebenen <see cref="T:Microsoft.Build.Framework.ITaskItem" />-Array enthalten sind, an die Befehlszeile an, wobei die Namen durch das angegebene Trennzeichen voneinander getrennt sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt an die Befehlszeile mit dem Dateinamen und schließt die Dateinamen in Anführungszeichen ein, nach Bedarf. Die Dateinamen werden durch das angegebene Trennzeichen getrennt.  
+  
+ Wenn die Befehlszeile nicht leer ist, fügt diese Methode ein Leerzeichen, bevor Sie den Dateinamen ein.  
+  
+   
+  
+## Examples  
+ Siehe das Beispiel in <xref:Microsoft.Build.Utilities.CommandLineBuilder.AppendFileNamesIfNotNull%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendFileNamesIfNotNull">
+      <MemberSignature Language="C#" Value="public void AppendFileNamesIfNotNull (string[] fileNames, string delimiter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendFileNamesIfNotNull(string[] fileNames, string delimiter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendFileNamesIfNotNull(System.String[],System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileNames" Type="System.String[]" />
+        <Parameter Name="delimiter" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileNames">Die anzufügenden Dateinamen. Wenn das Array gleich <see langword="null" /> ist, hat diese Methode keine Auswirkung.</param>
+        <param name="delimiter">Das Trennzeichen, das in der Befehlszeile zwischen Dateinamen eingefügt werden soll.</param>
+        <summary>Fügt die Liste der Dateinamen, die im angegebenen <see langword="string" />-Array enthalten sind, an die Befehlszeile an, wobei die Namen durch das angegebene Trennzeichen voneinander getrennt sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt an die Befehlszeile mit dem Dateinamen und schließt die Dateinamen in Anführungszeichen ein, nach Bedarf. Die Dateinamen werden durch das angegebene Trennzeichen getrennt.  
+  
+ Wenn die Befehlszeile nicht leer ist, fügt diese Methode ein Leerzeichen, bevor Sie den Dateinamen ein.  
+  
+   
+  
+## Examples  
+ `AppendFileNamesIfNotNull(new string[] {"Alpha.cs", "Beta.cs"}, ",")`ergibt `Alpha.cs,Beta.cs`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendFileNameWithQuoting">
+      <MemberSignature Language="C#" Value="protected void AppendFileNameWithQuoting (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void AppendFileNameWithQuoting(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendFileNameWithQuoting(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der anzufügende Dateiname.</param>
+        <summary>Fügt einen Dateinamen an die Befehlszeile an und schließt den Dateinamen in Anführungszeichen ein, sofern erforderlich.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das erste Zeichen des Dateinamens ein Bindestrich, dann ist `.\` am Anfang des Dateinamens zur Unterscheidung von einem Switch hinzugefügt wird.  
+  
+ Diese Methode fügt der Befehlszeile mit einem Leerzeichen, nicht vor der Ausführung.  
+  
+   
+  
+## Examples  
+ `AppendFileNameWithQuoting("-StrangeFileName.cs")`ergibt `.\-StrangeFileName.cs`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendQuotedTextToBuffer">
+      <MemberSignature Language="C#" Value="protected void AppendQuotedTextToBuffer (System.Text.StringBuilder buffer, string unquotedTextToAppend);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void AppendQuotedTextToBuffer(class System.Text.StringBuilder buffer, string unquotedTextToAppend) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendQuotedTextToBuffer(System.Text.StringBuilder,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Text.StringBuilder" />
+        <Parameter Name="unquotedTextToAppend" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Der Puffer, an den der Text angefügt werden soll.</param>
+        <param name="unquotedTextToAppend">Der zu zitierende Text.</param>
+        <summary>Fügt bestimmten Text bei Bedarf nach dem ersten Zitieren zum Puffer hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendSpaceIfNotEmpty">
+      <MemberSignature Language="C#" Value="protected void AppendSpaceIfNotEmpty ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void AppendSpaceIfNotEmpty() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendSpaceIfNotEmpty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fügt ein Leerzeichen zur angegebenen Zeichenfolge hinzu, vorausgesetzt die Zeichenfolge ist nicht leer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist nur geerbten Klassen zur Verfügung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendSwitch">
+      <MemberSignature Language="C#" Value="public void AppendSwitch (string switchName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendSwitch(string switchName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendSwitch(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="switchName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="switchName">Der Name des Schalters, der an die Befehlszeile angefügt werden soll. Dieser Wert darf nicht <see langword="null" /> sein.</param>
+        <summary>Fügt der Befehlszeile den angegebenen Schalter an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Befehlszeile nicht leer ist, fügt diese Methode vor der Switch ein Leerzeichen ein.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:Microsoft.Build.Utilities.ToolTask> ausführt [Ilasm.exe (IL-Assembler)](~/docs/framework/tools/ilasm-exe-il-assembler.md). Die <xref:Microsoft.Build.Utilities.CommandLineBuilder>, <xref:Microsoft.Build.Utilities.ToolLocationHelper>, und <xref:Microsoft.Build.Utilities.TaskLoggingHelper> Klassen werden verwendet, um die benötigten Informationen zum Ausführen der Aufgabe zu generieren.  
+  
+ [!code-csharp[msbuild_ToolTask#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_ToolTask/CS/ILAsm.cs#1)]
+ [!code-vb[msbuild_ToolTask#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_ToolTask/VB/ILAsm.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendSwitchIfNotNull">
+      <MemberSignature Language="C#" Value="public void AppendSwitchIfNotNull (string switchName, Microsoft.Build.Framework.ITaskItem parameter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendSwitchIfNotNull(string switchName, class Microsoft.Build.Framework.ITaskItem parameter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendSwitchIfNotNull(System.String,Microsoft.Build.Framework.ITaskItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="switchName" Type="System.String" />
+        <Parameter Name="parameter" Type="Microsoft.Build.Framework.ITaskItem" />
+      </Parameters>
+      <Docs>
+        <param name="switchName">Der Name des Schalters, der an die Befehlszeile angefügt werden soll. Dieser Wert darf nicht <see langword="null" /> sein.</param>
+        <param name="parameter">Der Schalterparameter, der an die Befehlszeile angefügt werden soll. Anführungszeichen werden bei Bedarf hinzugefügt. Wenn dieser Wert <see langword="null" /> ist, hat diese Methode keine Auswirkung.</param>
+        <summary>Fügt einen Schalter an die Befehlszeile an, der eine Aufgabenelementspezifikation verwendet, die als einzelner Zeichenfolgenparameter fungiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kapselt einzelne Dateinamen in Anführungszeichen ein, nach Bedarf.  
+  
+ Wenn die Befehlszeile nicht leer ist, fügt diese Methode vor der Switch ein Leerzeichen ein.  
+  
+   
+  
+## Examples  
+ Siehe das Beispiel in <xref:Microsoft.Build.Utilities.CommandLineBuilder.AppendSwitchIfNotNull%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendSwitchIfNotNull">
+      <MemberSignature Language="C#" Value="public void AppendSwitchIfNotNull (string switchName, string parameter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendSwitchIfNotNull(string switchName, string parameter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendSwitchIfNotNull(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="switchName" Type="System.String" />
+        <Parameter Name="parameter" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="switchName">Der Name des Schalters, der an die Befehlszeile angefügt werden soll. Dieser Wert darf nicht <see langword="null" /> sein.</param>
+        <param name="parameter">Der Schalterparameter, der an die Befehlszeile angefügt werden soll. Anführungszeichen werden bei Bedarf hinzugefügt. Wenn dieser Wert <see langword="null" /> ist, hat diese Methode keine Auswirkung.</param>
+        <summary>Fügt eine Schalter an die Befehlszeile an, der einen einzigen Zeichenfolgenparameter akzeptiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kapselt einzelne Dateinamen in Anführungszeichen ein, nach Bedarf.  
+  
+ Wenn die Befehlszeile nicht leer ist, fügt diese Methode vor der Switch ein Leerzeichen ein.  
+  
+   
+  
+## Examples  
+ `AppendSwitchIfNotNull("/source:", "File Name.cs")`ergibt `/source:\"File Name.cs\"`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendSwitchIfNotNull">
+      <MemberSignature Language="C#" Value="public void AppendSwitchIfNotNull (string switchName, Microsoft.Build.Framework.ITaskItem[] parameters, string delimiter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendSwitchIfNotNull(string switchName, class Microsoft.Build.Framework.ITaskItem[] parameters, string delimiter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendSwitchIfNotNull(System.String,Microsoft.Build.Framework.ITaskItem[],System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="switchName" Type="System.String" />
+        <Parameter Name="parameters" Type="Microsoft.Build.Framework.ITaskItem[]" />
+        <Parameter Name="delimiter" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="switchName">Der Name des Schalters, der an die Befehlszeile angefügt werden soll. Dieser Wert darf nicht <see langword="null" /> sein.</param>
+        <param name="parameters">Ein Array von Schalterparametern, die der Befehlszeile angefügt werden sollen. Anführungszeichen werden bei Bedarf hinzugefügt. Wenn das Array gleich <see langword="null" /> ist, hat diese Methode keine Auswirkung.</param>
+        <param name="delimiter">Das Trennzeichen, das die einzelnen Parameter voneinander trennt. Dieser Wert kann leer sein, jedoch keine <see langword="null" />.</param>
+        <summary>Fügt einen Schalter an die Befehlszeile an, der ein Array von Aufgabenelementspezifikation verwendet, die als Zeichenfolgenparameter fungieren.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kapselt einzelne Dateinamen in Anführungszeichen ein, nach Bedarf.  
+  
+ Wenn die Befehlszeile nicht leer ist, fügt diese Methode vor der Switch ein Leerzeichen ein.  
+  
+   
+  
+## Examples  
+ Siehe das Beispiel in <xref:Microsoft.Build.Utilities.CommandLineBuilder.AppendSwitchIfNotNull%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendSwitchIfNotNull">
+      <MemberSignature Language="C#" Value="public void AppendSwitchIfNotNull (string switchName, string[] parameters, string delimiter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendSwitchIfNotNull(string switchName, string[] parameters, string delimiter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendSwitchIfNotNull(System.String,System.String[],System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="switchName" Type="System.String" />
+        <Parameter Name="parameters" Type="System.String[]" />
+        <Parameter Name="delimiter" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="switchName">Der Name des Schalters, der an die Befehlszeile angefügt werden soll. Dieser Wert darf nicht <see langword="null" /> sein.</param>
+        <param name="parameters">Ein Array von Schalterparametern, die der Befehlszeile angefügt werden sollen. Anführungszeichen werden bei Bedarf hinzugefügt. Wenn das Array gleich <see langword="null" /> ist, hat diese Methode keine Auswirkung.</param>
+        <param name="delimiter">Das Trennzeichen, das die einzelnen Parameter voneinander trennt. Dieser Wert kann leer sein, jedoch keine <see langword="null" />.</param>
+        <summary>Fügt der Befehlszeile einen Schalter an, der ein Zeichenfolgenarray akzeptiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kapselt einzelne Dateinamen in Anführungszeichen ein, nach Bedarf.  
+  
+ Wenn die Befehlszeile nicht leer ist, fügt diese Methode vor der Switch ein Leerzeichen ein.  
+  
+   
+  
+## Examples  
+ `AppendSwitchIfNotNull("/sources:", new string[] {"Alpha.cs", "Be ta.cs"}, ";")`ergibt `/sources:Alpha.cs;\"Be ta.cs\"`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendSwitchUnquotedIfNotNull">
+      <MemberSignature Language="C#" Value="public void AppendSwitchUnquotedIfNotNull (string switchName, Microsoft.Build.Framework.ITaskItem parameter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendSwitchUnquotedIfNotNull(string switchName, class Microsoft.Build.Framework.ITaskItem parameter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendSwitchUnquotedIfNotNull(System.String,Microsoft.Build.Framework.ITaskItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="switchName" Type="System.String" />
+        <Parameter Name="parameter" Type="Microsoft.Build.Framework.ITaskItem" />
+      </Parameters>
+      <Docs>
+        <param name="switchName">Der Name des Schalters, der an die Befehlszeile angefügt werden soll. Dieser Wert darf nicht <see langword="null" /> sein.</param>
+        <param name="parameter">Der Schalterparameter, der an die Befehlszeile angefügt werden soll. Es werden keine Anführungszeichen hinzugefügt. Wenn dieser Wert <see langword="null" /> ist, hat diese Methode keine Auswirkung.</param>
+        <summary>Fügt an die Befehlszeile einen Schalter an, der eine Aufgabenelementspezifikation als einen einzelnen Zeichenfolgenparameter akzeptiert. Dabei wird nicht versucht, den Schalterparameter mit Anführungszeichen zu kapseln.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Befehlszeile nicht leer ist, fügt diese Methode vor der Switch ein Leerzeichen ein.  
+  
+   
+  
+## Examples  
+ Siehe das Beispiel in <xref:Microsoft.Build.Utilities.CommandLineBuilder.AppendSwitchUnquotedIfNotNull%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendSwitchUnquotedIfNotNull">
+      <MemberSignature Language="C#" Value="public void AppendSwitchUnquotedIfNotNull (string switchName, string parameter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendSwitchUnquotedIfNotNull(string switchName, string parameter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendSwitchUnquotedIfNotNull(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="switchName" Type="System.String" />
+        <Parameter Name="parameter" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="switchName">Der Name des Schalters, der an die Befehlszeile angefügt werden soll. Dieser Wert darf nicht <see langword="null" /> sein.</param>
+        <param name="parameter">Der Schalterparameter, der an die Befehlszeile angefügt werden soll. Es werden keine Anführungszeichen hinzugefügt. Wenn dieser Wert <see langword="null" /> ist, hat diese Methode keine Auswirkung.</param>
+        <summary>Fügt an die Befehlszeile einen Schalter an, der einen einzelnen Zeichenfolgenparameter akzeptiert. Dabei wird nicht versucht, den Schalterparameter mit Anführungszeichen zu kapseln.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Befehlszeile nicht leer ist, fügt diese Methode vor der Switch ein Leerzeichen ein.  
+  
+   
+  
+## Examples  
+ `AppendSwitchUnquotedIfNotNull("/source:", "File Name.cs")`ergibt `/source:File Name.cs`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendSwitchUnquotedIfNotNull">
+      <MemberSignature Language="C#" Value="public void AppendSwitchUnquotedIfNotNull (string switchName, Microsoft.Build.Framework.ITaskItem[] parameters, string delimiter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendSwitchUnquotedIfNotNull(string switchName, class Microsoft.Build.Framework.ITaskItem[] parameters, string delimiter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendSwitchUnquotedIfNotNull(System.String,Microsoft.Build.Framework.ITaskItem[],System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="switchName" Type="System.String" />
+        <Parameter Name="parameters" Type="Microsoft.Build.Framework.ITaskItem[]" />
+        <Parameter Name="delimiter" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="switchName">Der Name des Schalters, der an die Befehlszeile angefügt werden soll. Dieser Wert darf nicht <see langword="null" /> sein.</param>
+        <param name="parameters">Ein Array von Schalterparametern, die an die Befehlszeile angefügt werden sollen. Es werden keine Anführungszeichen hinzugefügt. Wenn das Array gleich <see langword="null" /> ist, hat diese Methode keine Auswirkung.</param>
+        <param name="delimiter">Das Trennzeichen, das die einzelnen Parameter voneinander trennt. Dieser Wert kann leer sein, jedoch keine <see langword="null" />.</param>
+        <summary>Fügt an die Befehlszeile einen Schalter an, der ein Array von Aufgabenelementspezifikationen enthält, die als Zeichenfolgenparameter fungieren. Dabei wird nicht versucht, die Parameter mit Anführungszeichen zu kapseln.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Befehlszeile nicht leer ist, fügt diese Methode vor der Switch ein Leerzeichen ein.  
+  
+   
+  
+## Examples  
+ Siehe das Beispiel in <xref:Microsoft.Build.Utilities.CommandLineBuilder.AppendSwitchUnquotedIfNotNull%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendSwitchUnquotedIfNotNull">
+      <MemberSignature Language="C#" Value="public void AppendSwitchUnquotedIfNotNull (string switchName, string[] parameters, string delimiter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendSwitchUnquotedIfNotNull(string switchName, string[] parameters, string delimiter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendSwitchUnquotedIfNotNull(System.String,System.String[],System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="switchName" Type="System.String" />
+        <Parameter Name="parameters" Type="System.String[]" />
+        <Parameter Name="delimiter" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="switchName">Der Name des Schalters, der an die Befehlszeile angefügt werden soll. Dieser Wert darf nicht <see langword="null" /> sein.</param>
+        <param name="parameters">Ein Array von Schalterparametern, die an die Befehlszeile angefügt werden sollen. Es werden keine Anführungszeichen hinzugefügt. Wenn das Array gleich <see langword="null" /> ist, hat diese Methode keine Auswirkung.</param>
+        <param name="delimiter">Das Trennzeichen, das die einzelnen Parameter voneinander trennt. Dieser Wert kann leer sein, jedoch keine <see langword="null" />.</param>
+        <summary>Fügt an die Befehlszeile einen Schalter an, der ein Array von Zeichenfolgenparametern akzeptiert. Dabei wird nicht versucht, die Schalterparameter mit Anführungszeichen zu kapseln.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Befehlszeile nicht leer ist, fügt diese Methode vor der Switch ein Leerzeichen ein.  
+  
+   
+  
+## Examples  
+ `AppendSwitchUnquotedIfNotNull("/sources:", new string[] {"Alpha.cs", "Be ta.cs"}, ";")`ergibt `/sources:Alpha.cs;Be ta.cs`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendTextUnquoted">
+      <MemberSignature Language="C#" Value="public void AppendTextUnquoted (string textToAppend);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendTextUnquoted(string textToAppend) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendTextUnquoted(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textToAppend" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="textToAppend">Die Zeichenfolge, die an die Befehlszeile angefügt werden soll.</param>
+        <summary>Fügt eine Zeichenfolge an die Befehlszeile an, ohne zu versuchen, die Zeichenfolge in Anführungszeichen einzuschließen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt der Befehlszeile mit einem Leerzeichen, nicht vor der Ausführung.  
+  
+   
+  
+## Examples  
+ `AppendTextUnquoted(@"Folder name\filename.cs")`ergibt `Folder name\\filename.cs`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendTextWithQuoting">
+      <MemberSignature Language="C#" Value="protected void AppendTextWithQuoting (string textToAppend);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void AppendTextWithQuoting(string textToAppend) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.AppendTextWithQuoting(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textToAppend" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="textToAppend">Die Zeichenfolge, die an die Befehlszeile angefügt werden soll.</param>
+        <summary>Fügt eine Zeichenfolge an die Befehlszeile an und schließt die Zeichenfolge in Anführungszeichen ein, sofern erforderlich.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode fügt der Befehlszeile mit einem Leerzeichen, nicht vor der Ausführung.  
+  
+   
+  
+## Examples  
+ `AppendTextWithQuoting(@"Folder name\filename.cs")`ergibt `\"Folder name\\filename.cs\"`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandLine">
+      <MemberSignature Language="C#" Value="protected System.Text.StringBuilder CommandLine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.StringBuilder CommandLine" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.CommandLineBuilder.CommandLine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.StringBuilder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Text.StringBuilder" />-Instanz ab, die die Befehlszeile für erbende Klassen darstellt.</summary>
+        <value>Ein <see cref="T:System.Text.StringBuilder" /> für erbende Klassen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsQuotingRequired">
+      <MemberSignature Language="C#" Value="protected virtual bool IsQuotingRequired (string parameter);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool IsQuotingRequired(string parameter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.IsQuotingRequired(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameter" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parameter">Die Zeichenfolge, die auf Zeichen überprüft wird, die Anführungszeichen erfordern.</param>
+        <summary>Bestimmt, ob der angegebene Zeichenfolgenparameter in Anführungszeichen eingeschlossen werden muss, da er Leerzeichen enthält.</summary>
+        <returns>
+          <see langword="true" />, wenn der Schalterparameter mit Anführungszeichen eingeschlossen werden muss andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public int Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Length" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.CommandLineBuilder.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Repräsentiert die Länge der Befehlszeile.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Befehlszeile als Zeichenfolge zurück.</summary>
+        <returns>Ein <see cref="T:System.String" /> , die über die Befehlszeile darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:Microsoft.Build.Utilities.ToolTask> ausführt [Ilasm.exe (IL-Assembler)](~/docs/framework/tools/ilasm-exe-il-assembler.md). Die <xref:Microsoft.Build.Utilities.CommandLineBuilder>, <xref:Microsoft.Build.Utilities.ToolLocationHelper>, und <xref:Microsoft.Build.Utilities.TaskLoggingHelper> Klassen werden verwendet, um die benötigten Informationen zum Ausführen der Aufgabe zu generieren.  
+  
+ Msbuild_ToolTask Nr. 1  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyThrowNoEmbeddedDoubleQuotes">
+      <MemberSignature Language="C#" Value="protected virtual void VerifyThrowNoEmbeddedDoubleQuotes (string switchName, string parameter);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void VerifyThrowNoEmbeddedDoubleQuotes(string switchName, string parameter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CommandLineBuilder.VerifyThrowNoEmbeddedDoubleQuotes(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="switchName" Type="System.String" />
+        <Parameter Name="parameter" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="switchName">Eine Zeichenfolge, die den Parameternamen für die Fehlermeldung darstellt.</param>
+        <param name="parameter">Eine Zeichenfolge, die den Parameter darstellt, der auf doppelte Anführungszeichen durchsucht werden soll.</param>
+        <summary>Gibt einen Fehler zurück, wenn der Befehlszeilenparameter ein doppeltes Anführungszeichen (") enthält. Da doppelte Anführungszeichen in Befehlszeilenparametern ungültig sind, lassen sich durch diese Methode Parametereinschleusungsangriffe verhindern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.Build.Utilities.CommandLineBuilder.VerifyThrowNoEmbeddedDoubleQuotes%2A>ist Sie eine virtuelle Methode, damit Ihre Anwendungen können diese Methode überschreiben, wenn Sie doppelte Anführungszeichen mit Escapezeichen versehen in Dateinamen zulassen möchten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

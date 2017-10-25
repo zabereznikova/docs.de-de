@@ -1,0 +1,127 @@
+<Type Name="MessageSecurityOverHttpElement" FullName="System.ServiceModel.Configuration.MessageSecurityOverHttpElement">
+  <TypeSignature Language="C#" Value="public class MessageSecurityOverHttpElement : System.ServiceModel.Configuration.ServiceModelConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MessageSecurityOverHttpElement extends System.ServiceModel.Configuration.ServiceModelConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.MessageSecurityOverHttpElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Configuration.ServiceModelConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die Sicherheitskonfigurationseinstellungen für Meldungen, die mithilfe von HTTP gesendet werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AlgorithmSuite">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.SecurityAlgorithmSuite AlgorithmSuite { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Security.SecurityAlgorithmSuite AlgorithmSuite" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.MessageSecurityOverHttpElement.AlgorithmSuite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ServiceModel.Configuration.SecurityAlgorithmSuiteConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("algorithmSuite", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityAlgorithmSuite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Meldungsverschlüsselung und die Key Wrap-Algorithmen ab, die verwendet werden, um eine HTTP-Meldung zu sichern, oder legt sie fest.</summary>
+        <value>Ein gültiger <see cref="T:System.ServiceModel.Security.SecurityAlgorithmSuite" />-Wert, der die Meldungsverschlüsselung und die Key Wrap-Algorithmen angibt, die verwendet werden, um eine HTTP-Meldung zu sichern. Der Standardwert ist <see cref="P:System.ServiceModel.Security.SecurityAlgorithmSuite.Basic256" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientCredentialType">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.MessageCredentialType ClientCredentialType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.MessageCredentialType ClientCredentialType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.MessageSecurityOverHttpElement.ClientCredentialType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("clientCredentialType", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.MessageCredentialType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Typ der Anmeldeinformationen an, die beim Durchführen der Clientauthentifizierung mit meldungsbasierter Sicherheit oder <see langword="TransportWithMessageCredential" /> verwendet werden.</summary>
+        <value>Ein gültiger <see cref="T:System.ServiceModel.MessageCredentialType" />-Wert, der den Typ der Anmeldeinformationen angibt, die beim Durchführen der Clientauthentifizierung mit meldungsbasierter Sicherheit oder <see langword="TransportWithMessageCredential" /> verwendet werden. Der Standardwert ist <see cref="F:System.ServiceModel.MessageCredentialType.Windows" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NegotiateServiceCredential">
+      <MemberSignature Language="C#" Value="public bool NegotiateServiceCredential { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NegotiateServiceCredential" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.MessageSecurityOverHttpElement.NegotiateServiceCredential" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("negotiateServiceCredential", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab oder legt einen booleschen Wert fest, der angibt, ob die Dienstanmeldeinformationen auf dem Client out-of-band bereitgestellt oder vom Dienst auf dem Client über einen Aushandlungsvorgang abgerufen werden.</summary>
+        <value>
+          <see langword="true" />, wenn die Dienstanmeldeinformationen auf dem Client out-of-band bereitgestellt werden, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt an, ob die Dienstanmeldeinformationen auf dem Client out-of-band bereitgestellt oder vom Dienst auf dem Client über einen Aushandlungsvorgang abgerufen werden. Eine solche Verhandlung ist Vorläufer zum üblichen Nachrichtenaustausch.  
+  
+ Wenn die <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A>-Eigenschaft 'Anonymous', <xref:System.ServiceModel.MessageCredentialType.UserName> oder <xref:System.ServiceModel.MessageCredentialType.Certificate>ist, wird durch das Festlegen dieser Eigenschaft auf `false` impliziert, dass das Dienstzertifikat auf dem Client out-of-band verfügbar ist, und der Client muss die <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.ServiceCertificate%2A>-Eigenschaft der <xref:System.ServiceModel.Configuration.ServiceCredentialsElement>-Klasse angeben. Dieser Modus ist mit SOAP-Stapeln interoperabel, die WS-Trust und WS-SecureConversation implementieren.  
+  
+ Wenn die <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A>-Eigenschaft mit <xref:System.ServiceModel.MessageCredentialType.Windows> identisch ist, wird durch das Festlegen dieser Eigenschaft auf `false` eine auf Kerberos basierende Authentifizierung verursacht. Dies erfordert, dass der Client und der Dienst ein Teil einer Kerberos-Domäne sind. Dieser Modus ist mit SOAP-Stapeln interoperabel, die das Kerberos-Tokenprofil (gemäß der Definition in OASIS WSS TC) sowie WS-Trust und WS-SecureConversation implementieren.  
+  
+ Wenn diese Eigenschaft `true` ist, wird eine .NET SOAP-Aushandlung verursacht, die den SPNego-Austausch über SOAP-Meldungen tunnelt.  
+  
+ Diese Eigenschaft gibt an, ob die Dienstanmeldeinformationen automatisch zwischen dem Client und dem Dienst ausgehandelt werden. Wenn diese Eigenschaft `true` ist, dann tritt eine solche Aushandlung auf. Wenn diese Eigenschaft `false` ist, müssen die Dienstanmeldeinformationen auf dem Client vor der Kommunikation mit dem Dienst angegeben werden.  
+  
+ Wenn diese Eigenschaft auf `false` festgelegt ist und die Bindung zum Verwenden von Windows als Clientanmeldeinformations-Typ konfiguriert ist, muss das Dienstkonto einem SPN (Service Principal Name) zugeordnet werden. Führen Sie zu diesem Zweck den Dienst unter dem Konto NETZWERKDIENST oder dem Konto LOKALES SYSTEM aus. Verwenden Sie andernfalls das Tool SetSpn.exe, um einen Dienstprinzipalnamen für das Dienstkonto zu erstellen. Der Client muss in jedem Fall den korrekten Dienstprinzipalnamen im Verwenden der [ &lt;ServicePrincipalName&gt; ](~/docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) Element, oder indem Sie die <xref:System.ServiceModel.EndpointAddress> Konstruktor. Weitere Informationen finden Sie unter [-Dienstidentität und Authentifizierung](~/docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.MessageSecurityOverHttpElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Configuration.ConfigurationPropertyCollection" />-Instanz ab, die eine Auflistung von <see cref="T:System.Configuration.ConfigurationProperty" />-Objekten enthält, die Attribute oder <see cref="T:System.Configuration.ConfigurationElement" />-Objekte dieses Konfigurationselements sein können.</summary>
+        <value>Eine <see cref="T:System.Configuration.ConfigurationPropertyCollection" />-Instanz, die eine Sammlung mit <see cref="T:System.Configuration.ConfigurationProperty" />-Objekten enthält, die entweder Attribute oder <see cref="T:System.Configuration.ConfigurationElement" />-Objekte dieses Konfigurationselements sein können.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

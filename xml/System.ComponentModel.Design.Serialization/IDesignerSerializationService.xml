@@ -1,0 +1,107 @@
+<Type Name="IDesignerSerializationService" FullName="System.ComponentModel.Design.Serialization.IDesignerSerializationService">
+  <TypeSignature Language="C#" Value="public interface IDesignerSerializationService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDesignerSerializationService" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Serialization.IDesignerSerializationService" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Schnittstelle, die Serialisierung und Deserialisierung aufrufen kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Service bietet Methoden, eine Auflistung von Objekten in einem serialisierbaren Objekt zu konvertieren, das sie darstellt, sowie zum Konvertieren von Serialisierungsdaten auf das Objekt oder die Objekte, die es darstellt.  
+  
+ Alle Komponenten, die einen Designer unterstützen müssen die Serialisierung des Typs der einzelnen Komponenten unterstützen. Dies tritt auf, wenn der Designer die öffentlichen Eigenschaften, Methoden und Ereignissen jedes Typs sucht und diese in einem Typdeskriptor darstellt.  
+  
+ Diese Schnittstelle verwendet die Technik des Scannens Member, um eine Sammlung von Komponenten in ein einzelnes Objekt zu konvertieren, der zur Laufzeit Serialisierung unterstützt. Dies stellt keine unbedingt für die Serialisierung von benutzerdefinierten Typen bereit, die auf die Klasse gehören. Viele Objekte erfordern ein benutzerdefiniertes Serialisierungsprogramm, deren Werte zur Laufzeit serialisiert wurden. Um ein Serialisierungsprogramm für einen benutzerdefinierten Typ anzugeben, verwenden Sie eine <xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute> Attribut, oder Implementieren einer <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationProvider>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Deserialize">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection Deserialize (object serializationData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.ICollection Deserialize(object serializationData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.IDesignerSerializationService.Deserialize(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationData" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="serializationData">Ein Objekt, bestehend aus serialisierten Daten.</param>
+        <summary>Deserialisiert das Datenobjekt für den angegebenen Serialisierungsinformationen und gibt eine Auflistung von Objekten, die von diesen Daten dargestellt.</summary>
+        <returns>Ein <see cref="T:System.Collections.ICollection" /> von Objekten, die aus dem angegebenen Serialisierungs-Datenobjekt neu erstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public object Serialize (System.Collections.ICollection objects);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Serialize(class System.Collections.ICollection objects) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.IDesignerSerializationService.Serialize(System.Collections.ICollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objects" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="objects">Eine Auflistung von zu serialisierenden Objekten.</param>
+        <summary>Serialisiert die angegebene Auflistung von Objekten und speichert sie in einem Serialisierungsdatenobjekt.</summary>
+        <returns>Ein Objekt, das den serialisierten Status der angegebenen Auflistung von Objekten enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das zurückgegebene Objekt unterstützt vollständig Serialisierung zur Laufzeit.  
+  
+ Das von dieser Methode zurückgegebene Objekt enthält aktive Verweise auf Objekte in der Auflistung. Dieses Objekt kann dann an alle zur Laufzeit Serialisierungsmechanismus übergeben werden. Das Objekt selbst serialisiert Komponenten die gleiche Weise wie Designer Quelle dafür schreiben, indem Sie ihren Status, Eigenschaft um Eigenschaft speichern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

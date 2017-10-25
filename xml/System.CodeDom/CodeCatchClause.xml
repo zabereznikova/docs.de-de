@@ -1,0 +1,226 @@
+<Type Name="CodeCatchClause" FullName="System.CodeDom.CodeCatchClause">
+  <TypeSignature Language="C#" Value="public class CodeCatchClause" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeCatchClause extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeCatchClause" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine <see langword="catch" /> Ausnahmeblock eine <see langword="try/catch" /> Anweisung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.CodeCatchClause>Dient zur Darstellung einer `catch` Ausnahmeblock eine `try/catch` Anweisung.  
+  
+ Die <xref:System.CodeDom.CodeCatchClause.CatchExceptionType%2A> Eigenschaft gibt den Typ der Ausnahme abgefangen. Die <xref:System.CodeDom.CodeCatchClause.LocalName%2A> Eigenschaft gibt einen Namen für die Variable, die die abgefangene Ausnahme darstellt. Die <xref:System.CodeDom.CodeCatchClause.Statements%2A> Auflistungseigenschaft enthält die Anweisungen für die `catch` Block.  
+  
+   
+  
+## Examples  
+ Der folgende Beispielcode veranschaulicht die Verwendung <xref:System.CodeDom.CodeCatchClause> Objekte definieren Ausnahmebehandlungsklauseln einer try … catch-Block.  
+  
+ [!code-cpp[CodeTryCatchFinallyExample#2](~/samples/snippets/cpp/VS_Snippets_CLR/CodeTryCatchFinallyExample/CPP/codetrycatchfinallyexample.cpp#2)]
+ [!code-csharp[CodeTryCatchFinallyExample#2](~/samples/snippets/csharp/VS_Snippets_CLR/CodeTryCatchFinallyExample/CS/codetrycatchfinallyexample.cs#2)]
+ [!code-vb[CodeTryCatchFinallyExample#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeTryCatchFinallyExample/VB/codetrycatchfinallyexample.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeCatchClause ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeCatchClause.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.CodeDom.CodeCatchClause" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeCatchClause (string localName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string localName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeCatchClause.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="localName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="localName">Der Name der lokalen Variablen, die für die Ausnahme in der Catch-Klausel deklariert werden. Diese ist optional.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.CodeCatchClause" /> -Klasse unter Verwendung des angegebenen Namens der lokalen Variablen für die Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeCatchClause (string localName, System.CodeDom.CodeTypeReference catchExceptionType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string localName, class System.CodeDom.CodeTypeReference catchExceptionType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeCatchClause.#ctor(System.String,System.CodeDom.CodeTypeReference)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="localName" Type="System.String" />
+        <Parameter Name="catchExceptionType" Type="System.CodeDom.CodeTypeReference" />
+      </Parameters>
+      <Docs>
+        <param name="localName">Der Name der lokalen Variablen, die für die Ausnahme in der Catch-Klausel deklariert werden. Diese ist optional.</param>
+        <param name="catchExceptionType">Ein <see cref="T:System.CodeDom.CodeTypeReference" /> , der den Typ der Ausnahme abfangen angibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.CodeCatchClause" /> -Klasse unter Verwendung des angegebenen Namens der lokalen Variablen für die Ausnahme und dem Typ der Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeCatchClause (string localName, System.CodeDom.CodeTypeReference catchExceptionType, params System.CodeDom.CodeStatement[] statements);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string localName, class System.CodeDom.CodeTypeReference catchExceptionType, class System.CodeDom.CodeStatement[] statements) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeCatchClause.#ctor(System.String,System.CodeDom.CodeTypeReference,System.CodeDom.CodeStatement[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="localName" Type="System.String" />
+        <Parameter Name="catchExceptionType" Type="System.CodeDom.CodeTypeReference" />
+        <Parameter Name="statements" Type="System.CodeDom.CodeStatement[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="localName">Der Name der lokalen Variablen, die für die Ausnahme in der Catch-Klausel deklariert werden. Diese ist optional.</param>
+        <param name="catchExceptionType">Ein <see cref="T:System.CodeDom.CodeTypeReference" /> , der den Typ der Ausnahme abfangen angibt.</param>
+        <param name="statements">Ein Array von <see cref="T:System.CodeDom.CodeStatement" /> Objekte, die den Inhalt des Catch-Blocks darstellen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.CodeCatchClause" /> -Klasse unter Verwendung des angegebenen Namens der lokalen Variablen für die Ausnahme ausnahmenauflistung Typ und die Anweisung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CatchExceptionType">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeTypeReference CatchExceptionType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeTypeReference CatchExceptionType" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeCatchClause.CatchExceptionType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeReference</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ der Ausnahme, um mit dem CatchBlock behandelt.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeTypeReference" /> , der den Typ des zu behandelnden Ausnahme angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Wert für diese Eigenschaft nicht angegeben ist, wird standardmäßig der Wert dieser Eigenschaft auf <xref:System.Exception>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalName">
+      <MemberSignature Language="C#" Value="public string LocalName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LocalName" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeCatchClause.LocalName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt dem Variablennamen der Ausnahme, die die <see langword="catch" /> -Klausel behandelt.</summary>
+        <value>Der Name für die Ausnahmevariable, die die <see langword="catch" /> -Klausel behandelt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt den Namen der lokalen Variablen für die Ausnahme. Diese lokale Variable ist optional. Standardmäßig muss die-Klausel nicht auf diese Variable zu.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Statements">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeStatementCollection Statements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeStatementCollection Statements" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeCatchClause.Statements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeStatementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anweisungen innerhalb des Catch-Blocks.</summary>
+        <value>Ein <see cref="T:System.CodeDom.CodeStatementCollection" /> mit den Anweisungen innerhalb des Catch-Blocks.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

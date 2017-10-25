@@ -1,0 +1,238 @@
+<Type Name="RegisterAssembly" FullName="Microsoft.Build.Tasks.RegisterAssembly">
+  <TypeSignature Language="C#" Value="public class RegisterAssembly : Microsoft.Build.Tasks.AppDomainIsolatedTaskExtension, System.Runtime.InteropServices.ITypeLibExporterNotifySink" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RegisterAssembly extends Microsoft.Build.Tasks.AppDomainIsolatedTaskExtension implements class System.Runtime.InteropServices.ITypeLibExporterNotifySink" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.RegisterAssembly" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Tasks.AppDomainIsolatedTaskExtension</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.InteropServices.ITypeLibExporterNotifySink</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Implementiert die <c>RegisterAssembly</c> Aufgabe. Verwenden der <c>RegisterAssembly</c> Element in der Projektdatei erstellen und Ausführen dieser Aufgabe. Weitere Informationen zu Verwendung und Parametern finden Sie unter [RegisterAssembly-Aufgabe](http://msdn.microsoft.com/library/ba5f19ac-6764-4d28-9b79-a86de58f8987).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Framework64 /\<Version > / RegisterAssemblyTask eine Bibliothek von COM-Objekten, die als 32-Bit-Komponenten registriert kann nicht aufgelöst werden. Framework /\<Version > / RegisterAssemblyTask eine Bibliothek von COM-Objekten, die als 64-Bit-Komponenten registriert kann nicht aufgelöst werden.  
+  
+ Z. B. Wenn Sie eine Bibliothek von COM-Objekte mit dem Namen "ClassLibrary1" als 32-Bit-Komponenten auf einem 64-Bit-Computer zu registrieren, führen Sie Visual Studio und das Ziel in X64 ändern, schlägt fehl, der Build mit dem folgenden Fehler:  
+  
+ `ClassLibrary1.dll is not a valid assembly`  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RegisterAssembly ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.RegisterAssembly.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Tasks.RegisterAssembly" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Assemblies">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] Assemblies { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] Assemblies" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.RegisterAssembly.Assemblies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Required</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Assemblys ab, die in COM registriert werden sollen, oder legt sie fest.</summary>
+        <value>Die in COM zu registrierenden Assemblys.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyListFile">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem AssemblyListFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem AssemblyListFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.RegisterAssembly.AssemblyListFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt Sie Informationen zum Zustand zwischen der <c>RegisterAssembly</c> Aufgabe und die [UnregisterAssembly](http://msdn.microsoft.com/library/04f549dd-3591-4dda-9c3a-cf6ede9df2c3) Aufgabe. Dies verhindert, dass die <c>UnregisterAssembly</c> Task versucht, die Registrierung eine Assembly aufzuheben, die nicht registriert werden konnte die <c>RegisterAssembly</c> Aufgabe.</summary>
+        <value>Die Statusinformationen für die <c>UnregisterAssembly</c> Task, um die ordnungsgemäße Bereinigung durchgeführt werden.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCodeBase">
+      <MemberSignature Language="C#" Value="public bool CreateCodeBase { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CreateCodeBase" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.RegisterAssembly.CreateCodeBase" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab, der angibt, ob die Aufgabe einen CodeBase-Eintrag in der Registrierung erstellt, der den Dateipfad einer nicht im globalen Assemblycache installierten Assembly angibt, oder legt diesen booleschen Wert fest.</summary>
+        <value>
+          <see langword="true" />, wenn die Aufgabe einen CodeBase-Eintrag in der Registrierung erstellt, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Option sollte nicht angegeben werden, wenn Sie die zu registrierende Assembly später im globalen Assemblycache installieren.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public override bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.RegisterAssembly.Execute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt die <c>RegisterAssembly</c> Aufgabe.</summary>
+        <returns>
+          <see langword="true" />, wenn die Aufgabe erfolgreich ausgeführt wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ReportEvent">
+      <MemberSignature Language="C#" Value="public void ReportEvent (System.Runtime.InteropServices.ExporterEventKind kind, int code, string msg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReportEvent(valuetype System.Runtime.InteropServices.ExporterEventKind kind, int32 code, string msg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.RegisterAssembly.ReportEvent(System.Runtime.InteropServices.ExporterEventKind,System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="System.Runtime.InteropServices.ExporterEventKind" />
+        <Parameter Name="code" Type="System.Int32" />
+        <Parameter Name="msg" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="kind">Beschreibt die Rückrufe, die das Type Library Exporter-Tool ausführt, wenn es eine Typbibliothek exportiert.</param>
+        <param name="code">Der Fehlercode des Exportereignisses.</param>
+        <param name="msg">Die Meldung des Exportereignisses.</param>
+        <summary>Rückrufmethode zum Melden der Exportereignisse von Typbibliotheken.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveRef">
+      <MemberSignature Language="C#" Value="public object ResolveRef (System.Reflection.Assembly assemblyToResolve);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object ResolveRef(class System.Reflection.Assembly assemblyToResolve) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.RegisterAssembly.ResolveRef(System.Reflection.Assembly)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assemblyToResolve" Type="System.Reflection.Assembly" />
+      </Parameters>
+      <Docs>
+        <param name="assemblyToResolve">Die Assembly, für die Typbibliotheken gesucht werden sollen.</param>
+        <summary>Rückrufmethode zum Suchen der Typbibliothek für die angegebene Assembly.</summary>
+        <returns>
+          <see langword="null" /> in allen Fällen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Protokolliert einen Fehler, der angibt, dass die angegebene Assembly für COM-Interop in allen Fällen nicht registriert ist.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TypeLibFiles">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] TypeLibFiles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] TypeLibFiles" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.RegisterAssembly.TypeLibFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Typbibliothek ab, die aus der angegebenen Assembly generiert werden soll, oder legt sie fest.</summary>
+        <value>Die Typbibliothek, die aus der angegebenen Assembly generiert werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die generierte Typbibliothek enthält Definitionen der in der Assembly definierten Typen, auf die zugegriffen werden kann. Die Typbibliothek wird nur generiert, wenn eine der folgenden Aussagen zutrifft:  
+  
+-   Eine Typbibliothek mit diesem Namen ist an diesem Speicherort nicht vorhanden.  
+  
+-   Eine Typbibliothek vorhanden ist, jedoch ist älter als die Assembly übergeben werden.  
+  
+ Wenn die Typbibliothek neuer ist als die übergebene Assembly, wird keine neue erstellt, aber die Assembly wird immer noch registriert.  
+  
+ Bei Verwendung dieser Eigenschaft angegeben ist, muss die gleiche Anzahl von Elementen als die <xref:Microsoft.Build.Tasks.RegisterAssembly.Assemblies%2A> Eigenschaft oder der Task schlägt fehl. Wenn keine Eingaben angegeben werden, erhält die Aufgabe standardmäßig den Namen der Assembly und ändert die Erweiterung des Elements in TLB.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

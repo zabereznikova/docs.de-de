@@ -1,0 +1,458 @@
+<Type Name="TaskItem" FullName="Microsoft.Build.Utilities.TaskItem">
+  <TypeSignature Language="C#" Value="public sealed class TaskItem : MarshalByRefObject, Microsoft.Build.Framework.ITaskItem2" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TaskItem extends System.MarshalByRefObject implements class Microsoft.Build.Framework.ITaskItem, class Microsoft.Build.Framework.ITaskItem2" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Utilities.TaskItem" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.MarshalByRefObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Framework.ITaskItem2</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Definiert ein einzelnes Element des Projekts bei der Übergabe an eine Aufgabe.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.Build.Utilities.TaskItem>Objekte müssen Elemente in Projektdateien nicht genau entsprechen. Wenn in diesem Fall würde Aufgaben dann Zugriff auf Daten verfügen, die über die Projektdatei nicht explizit an die Aufgabe übergeben wurde. Dies ist nicht auf, ein Sicherheitsproblem, sondern vielmehr ein Problem mit Projekt Übersichtlichkeit und Transparenz.  
+  
+ Diese Klasse muss versiegelt werden, da das Buildmodul eine eigene Kopie dieses Typs instanziiert. Wenn eine Drittanbietern wären, zum Erweitern dieser Klasse das Buildmodul ein unerwünschtes Verhalten ergeben.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TaskItem ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskItem.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Utilities.TaskItem" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor aktiviert diese COM erstellt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TaskItem (Microsoft.Build.Framework.ITaskItem sourceItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Framework.ITaskItem sourceItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskItem.#ctor(Microsoft.Build.Framework.ITaskItem)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sourceItem" Type="Microsoft.Build.Framework.ITaskItem" />
+      </Parameters>
+      <Docs>
+        <param name="sourceItem">Das zu kopierende Element.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.Build.Utilities.TaskItem" /> -Klasse unter Verwendung der angegebenen Quelle <see cref="T:Microsoft.Build.Framework.ITaskItem" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TaskItem (string itemSpec);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string itemSpec) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskItem.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="itemSpec" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="itemSpec">Die Elementspezifikation.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.Build.Utilities.TaskItem" /> -Klasse unter Verwendung der angegebenen Elementspezifikations-Zeichenfolge.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TaskItem (string itemSpec, System.Collections.IDictionary itemMetadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string itemSpec, class System.Collections.IDictionary itemMetadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskItem.#ctor(System.String,System.Collections.IDictionary)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="itemSpec" Type="System.String" />
+        <Parameter Name="itemMetadata" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="itemSpec">Die Elementspezifikation.</param>
+        <param name="itemMetadata">Die benutzerdefinierten Metadaten für die Elementspezifikation.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.Build.Utilities.TaskItem" /> -Klasse unter Verwendung der angegebenen elementspezifikationszeichenfolge und die zugehörigen Metadaten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCustomMetadata">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionary CloneCustomMetadata ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IDictionary CloneCustomMetadata() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskItem.CloneCustomMetadata" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Klont die Auflistung von benutzerdefinierten Metadaten für die Elementspezifikation.</summary>
+        <returns>Ein <see cref="T:System.Collections.IDictionary" />, das einen Klon der benutzerdefinierten Metadaten darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode schließt keine integrierten Metadaten ein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyMetadataTo">
+      <MemberSignature Language="C#" Value="public void CopyMetadataTo (Microsoft.Build.Framework.ITaskItem destinationItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyMetadataTo(class Microsoft.Build.Framework.ITaskItem destinationItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskItem.CopyMetadataTo(Microsoft.Build.Framework.ITaskItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destinationItem" Type="Microsoft.Build.Framework.ITaskItem" />
+      </Parameters>
+      <Docs>
+        <param name="destinationItem">Das Element, in das diese Methode Metadaten kopiert.</param>
+        <summary>Kopiert die Elementspezifikations-Metadaten in das angegebene Zielaufgabenelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Metadaten für das Zielelement bereits vorhanden ist, wird dann nicht überschrieben. Die ursprünglichen Metadatenwert hat Vorrang vor den kopierten Metadatenwert.  
+  
+ Diese Methode kopiert die Elementspezifikation keine auf das Zielaufgabenelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMetadata">
+      <MemberSignature Language="C#" Value="public string GetMetadata (string metadataName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetMetadata(string metadataName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskItem.GetMetadata(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadataName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="metadataName">Der Name der abzurufenden Metadaten.</param>
+        <summary>Ruft die angegebenen Metadaten für das Element ab.</summary>
+        <returns>Ein <see cref="T:System.String" /> , die den Metadatenwert darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeLifetimeService">
+      <MemberSignature Language="C#" Value="public override object InitializeLifetimeService ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object InitializeLifetimeService() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskItem.InitializeLifetimeService" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gewährt bei Überschreibung in einer abgeleiteten Klasse Aufgabenelementen eine unbegrenzte Leasezeit.</summary>
+        <returns>
+          <see langword="null" />Um eine unbegrenzte Lebensdauer anzugeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Andernfalls wird für eine begrenzte Lease von 5 Minuten zurückgegeben; und Task-Instanzen können ablaufen, wenn sie eine lange Zeit in Anspruch nehmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemSpec">
+      <MemberSignature Language="C#" Value="public string ItemSpec { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ItemSpec" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.TaskItem.ItemSpec" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Elementspezifikation ab oder legt sie fest.</summary>
+        <value>Ein <see cref="T:System.String" /> , die die Elementspezifikation darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.Build.Framework.ITaskItem.ItemSpec%2A> für die folgenden Elementdeklaration in einem Projekt auf die Datei ist `File.cs`.  
+  
+```  
+<ItemGroup>  
+    <Compile Include="File.cs"/>  
+</ItemGroup>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MetadataCount">
+      <MemberSignature Language="C#" Value="public int MetadataCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MetadataCount" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.TaskItem.MetadataCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der für das Element festgelegten Metadaten ab.</summary>
+        <value>Eine <see cref="T:System.Int32" /> , die die Anzahl der für das Element festgelegten Metadaten darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MetadataNames">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection MetadataNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection MetadataNames" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.TaskItem.MetadataNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Namen aller Metadaten für das Element ab.</summary>
+        <value>Ein <see cref="T:System.Collections.ICollection" /> der Metadatennamen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.Build.Framework.ITaskItem2.CloneCustomMetadataEscaped">
+      <MemberSignature Language="C#" Value="System.Collections.IDictionary ITaskItem2.CloneCustomMetadataEscaped ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IDictionary Microsoft.Build.Framework.ITaskItem2.CloneCustomMetadataEscaped() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskItem.Microsoft#Build#Framework#ITaskItem2#CloneCustomMetadataEscaped" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+          <see cref="T:Microsoft.Build.Framework.ITaskItem2" />Implementierung, die einen Klon der Metadaten für dieses Objekt zurückgibt. Zurückgegebene Werte weisen ihre ursprüngliche Form mit Escapezeichen auf.</summary>
+        <returns>Gibt die geklonten Metadaten zurück, wobei die Escapezeichen der Werte beibehalten werden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.Build.Framework.ITaskItem2.EvaluatedIncludeEscaped">
+      <MemberSignature Language="C#" Value="string Microsoft.Build.Framework.ITaskItem2.EvaluatedIncludeEscaped { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Microsoft.Build.Framework.ITaskItem2.EvaluatedIncludeEscaped" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.TaskItem.Microsoft#Build#Framework#ITaskItem2#EvaluatedIncludeEscaped" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="T:Microsoft.Build.Framework.ITaskItem2" />Ruft ab oder legt das Element Implementierung include-Wert.  Dazu gehören für datenträgerbasierten Elementen Pfad der Daten.</summary>
+        <value>Gibt den Include-Wert des Elements zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.Build.Framework.ITaskItem2.GetMetadataValueEscaped">
+      <MemberSignature Language="C#" Value="string ITaskItem2.GetMetadataValueEscaped (string metadataName);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string Microsoft.Build.Framework.ITaskItem2.GetMetadataValueEscaped(string metadataName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskItem.Microsoft#Build#Framework#ITaskItem2#GetMetadataValueEscaped(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadataName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="metadataName">Die Metadaten, die abgefragt werden</param>
+        <summary>
+          <see cref="T:Microsoft.Build.Framework.ITaskItem2" />Implementierung, die die Werte der Metadaten für das Element, das abgefragt werden kann.</summary>
+        <returns>Gibt den Metadatenwert mit Escapezeichen zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.Build.Framework.ITaskItem2.SetMetadataValueLiteral">
+      <MemberSignature Language="C#" Value="void ITaskItem2.SetMetadataValueLiteral (string metadataName, string metadataValue);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Build.Framework.ITaskItem2.SetMetadataValueLiteral(string metadataName, string metadataValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskItem.Microsoft#Build#Framework#ITaskItem2#SetMetadataValueLiteral(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadataName" Type="System.String" />
+        <Parameter Name="metadataValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="metadataName">Der Name der Metadaten.</param>
+        <param name="metadataValue">Der Wert der Metadaten.</param>
+        <summary>
+          <see cref="T:Microsoft.Build.Framework.ITaskItem2" />Implementierung, die benutzerdefinierten Metadaten für das Element festgelegt werden kann. Geht davon aus, dass der übergebene Wert ohne Escapezeichen ist, und versieht den Wert entsprechend mit Escapezeichen, um seinen Wert beizubehalten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator string (Microsoft.Build.Utilities.TaskItem taskItemToCast);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname string op_Explicit(class Microsoft.Build.Utilities.TaskItem taskItemToCast) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskItem.op_Explicit(Microsoft.Build.Utilities.TaskItem)~System.String" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="taskItemToCast" Type="Microsoft.Build.Utilities.TaskItem" />
+      </Parameters>
+      <Docs>
+        <param name="taskItemToCast">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveMetadata">
+      <MemberSignature Language="C#" Value="public void RemoveMetadata (string metadataName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveMetadata(string metadataName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskItem.RemoveMetadata(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadataName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="metadataName">Der Name der zu entfernenden Metadaten.</param>
+        <summary>Entfernt die angegebenen Metadaten für das Element.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMetadata">
+      <MemberSignature Language="C#" Value="public void SetMetadata (string metadataName, string metadataValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetMetadata(string metadataName, string metadataValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskItem.SetMetadata(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadataName" Type="System.String" />
+        <Parameter Name="metadataValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="metadataName">Der Name der festzulegenden oder zu ändernden Metadaten.</param>
+        <param name="metadataValue">Der neue Wert der Metadaten.</param>
+        <summary>Legt den Wert der angegebenen Metadaten für das Element fest oder ändert ihn.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskItem.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Elementspezifikation ab.</summary>
+        <returns>Ein <see cref="T:System.String" /> , die die Elementspezifikation darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

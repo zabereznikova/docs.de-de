@@ -1,0 +1,357 @@
+<Type Name="RegistryRights" FullName="System.Security.AccessControl.RegistryRights">
+  <TypeSignature Language="C#" Value="public enum RegistryRights" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RegistryRights extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.AccessControl.RegistryRights" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, die Zugriffsrechte für das Steuerelement, die auf Registrierungsobjekte angewendet werden können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Security.AccessControl.RegistryRights> Rechte Enumeration, um Zugriff auf die Registrierung festzulegen, bei der Erstellung <xref:System.Security.AccessControl.RegistrySecurity> Objekte. Zunächst zum Anwenden von Zugriffsrechte, um einen Registrierungsschlüssel hinzufügen <xref:System.Security.AccessControl.RegistryAccessRule> -Objekte eine <xref:System.Security.AccessControl.RegistrySecurity> -Objekt, und fügen Sie der <xref:System.Security.AccessControl.RegistrySecurity> Objekt, das die Schlüssel unter Verwendung der <xref:Microsoft.Win32.RegistryKey.SetAccessControl%2A?displayProperty=nameWithType> Methode oder eine entsprechende Überladung der der <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A?displayProperty=nameWithType> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Security.AccessControl.RegistryRights> Enumeration. Der Code erstellt einen Testschlüssel, sodass des aktuellen Benutzers ReadKey und Löschzugriff Rechte jedoch verweigern ChangePermissions und WriteKey Rechte. Nachfolgende versucht, die erfolgreich oder die Abhängigkeit von diesen Berechtigungen fehl.  
+  
+ Bevor der Schlüssel gelöscht wird, hält den Code ein. Wechseln Sie zu den Registrierungs-Editor ("Regedit.exe" oder "Regedt32.exe"), und stellen Sie sicher, dass die gleichen Zugriffsrechte angewendet werden soll, wenn der Zugriff auf den Schlüssel mithilfe des Registrierungs-Editors.  
+  
+ Dieses Beispiel funktioniert am besten bei Verwendung von **RunAs** über die Befehlszeile den Registrierungs-Editor und den Beispielcode als lokaler Benutzer ohne Administratorrechte ausführen. Angenommen, wenn Sie einen lokalen Benutzer namens "testuser", den Befehl definiert haben `runas /user:TestUser cmd` öffnet ein Befehlsfenster, das von dem aus Sie den Registrierungs-Editor, und klicken Sie dann den Beispielcode ausführen können.  
+  
+ [!code-cpp[RegistrySecurity101#1](~/samples/snippets/cpp/VS_Snippets_CLR/RegistrySecurity101/cpp/source.cpp#1)]
+ [!code-csharp[RegistrySecurity101#1](~/samples/snippets/csharp/VS_Snippets_CLR/RegistrySecurity101/CS/source.cs#1)]
+ [!code-vb[RegistrySecurity101#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/RegistrySecurity101/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ChangePermissions">
+      <MemberSignature Language="C#" Value="ChangePermissions" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.RegistryRights ChangePermissions = int32(262144)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.RegistryRights.ChangePermissions" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.RegistryRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht zu ändern, die den Zugriffsregeln Überwachungsregeln, die einem Registrierungsschlüssel zugeordnet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateLink">
+      <MemberSignature Language="C#" Value="CreateLink" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.RegistryRights CreateLink = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.RegistryRights.CreateLink" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.RegistryRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Für Verwendung durch das System vorgesehen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSubKey">
+      <MemberSignature Language="C#" Value="CreateSubKey" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.RegistryRights CreateSubKey = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.RegistryRights.CreateSubKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.RegistryRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht zum Unterschlüssel eines Registrierungsschlüssels zu erstellen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="Delete" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.RegistryRights Delete = int32(65536)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.RegistryRights.Delete" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.RegistryRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht, einen Registrierungsschlüssel zu löschen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EnumerateSubKeys">
+      <MemberSignature Language="C#" Value="EnumerateSubKeys" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.RegistryRights EnumerateSubKeys = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.RegistryRights.EnumerateSubKeys" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.RegistryRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht zum Auflisten der Unterschlüssel eines Registrierungsschlüssels.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteKey">
+      <MemberSignature Language="C#" Value="ExecuteKey" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.RegistryRights ExecuteKey = int32(131097)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.RegistryRights.ExecuteKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.RegistryRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wie in <see cref="F:System.Security.AccessControl.RegistryRights.ReadKey" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FullControl">
+      <MemberSignature Language="C#" Value="FullControl" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.RegistryRights FullControl = int32(983103)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.RegistryRights.FullControl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.RegistryRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht, die vollständige Kontrolle über einen Registrierungsschlüssel auszuüben, ändern seine Zugriffsregeln und Überwachungsregeln.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Notify">
+      <MemberSignature Language="C#" Value="Notify" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.RegistryRights Notify = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.RegistryRights.Notify" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.RegistryRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht zum Anfordern der Benachrichtigung über Änderungen auf einem Registrierungsschlüssel.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryValues">
+      <MemberSignature Language="C#" Value="QueryValues" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.RegistryRights QueryValues = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.RegistryRights.QueryValues" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.RegistryRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht, die Name/Wert-Paare in einem Registrierungsschlüssel abzufragen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadKey">
+      <MemberSignature Language="C#" Value="ReadKey" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.RegistryRights ReadKey = int32(131097)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.RegistryRights.ReadKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.RegistryRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht, die Name/Wert-Paare in einem Registrierungsschlüssel, um Anforderung Benachrichtigung über Änderungen, seine Unterschlüssel auflisten und zum Lesen die Zugriffsregeln und Überwachungsregeln abzufragen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadPermissions">
+      <MemberSignature Language="C#" Value="ReadPermissions" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.RegistryRights ReadPermissions = int32(131072)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.RegistryRights.ReadPermissions" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.RegistryRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht zum Öffnen und die Zugriffsregeln kopieren und Überwachen von Regeln für einem Registrierungsschlüssel.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="SetValue" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.RegistryRights SetValue = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.RegistryRights.SetValue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.RegistryRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht zum Erstellen, löschen oder Festlegen von Name/Wert-Paare in einem Registrierungsschlüssel.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TakeOwnership">
+      <MemberSignature Language="C#" Value="TakeOwnership" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.RegistryRights TakeOwnership = int32(524288)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.RegistryRights.TakeOwnership" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.RegistryRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht zum Ändern des Besitzers eines Registrierungsschlüssels.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteKey">
+      <MemberSignature Language="C#" Value="WriteKey" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.RegistryRights WriteKey = int32(131078)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.RegistryRights.WriteKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.RegistryRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Recht zum Erstellen, löschen und die Name/Wert-Paare in einem Registrierungsschlüssel, erstellen oder Löschen von Unterschlüsseln gespeichert, zum Anfordern der Benachrichtigung über Änderungen, seine Unterschlüssel auflisten und zum Lesen die Zugriffsregeln und Überwachungsregeln festgelegt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

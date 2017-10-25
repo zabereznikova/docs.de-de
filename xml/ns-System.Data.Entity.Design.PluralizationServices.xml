@@ -1,0 +1,6 @@
+<Namespace Name="System.Data.Entity.Design.PluralizationServices">
+  <Docs>
+    <summary>Die <see cref="T:System.Data.Entity.Design.PluralizationServices" /> Namespace stellt Klassen bereit, zum Ändern von Wörtern von der Singular-in Pluralform (und umgekehrt).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

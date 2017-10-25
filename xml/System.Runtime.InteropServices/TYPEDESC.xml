@@ -1,0 +1,82 @@
+<Type Name="TYPEDESC" FullName="System.Runtime.InteropServices.TYPEDESC">
+  <TypeSignature Language="C#" Value="public struct TYPEDESC" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential sealed beforefieldinit TYPEDESC extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.TYPEDESC" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Verwenden Sie stattdessen <see cref="T:System.Runtime.InteropServices.ComTypes.TYPEDESC" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `TYPEDESC`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="lpValue">
+      <MemberSignature Language="C#" Value="public IntPtr lpValue;" />
+      <MemberSignature Language="ILAsm" Value=".field public native int lpValue" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.TYPEDESC.lpValue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wenn die Variable <see langword="VT_SAFEARRAY" /> oder <see langword="VT_PTR" />, <see cref="F:System.Runtime.InteropServices.TYPEDESC.lpValue" /> Feld enthält einen Zeiger auf eine <see langword="TYPEDESC" /> , der den Elementtyp angibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `TYPEDESC`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vt">
+      <MemberSignature Language="C#" Value="public short vt;" />
+      <MemberSignature Language="ILAsm" Value=".field public int16 vt" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.TYPEDESC.vt" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, der variant-Typ für das Element, das von diesem beschrieben <see langword="TYPEDESC" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `TYPEDESC`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

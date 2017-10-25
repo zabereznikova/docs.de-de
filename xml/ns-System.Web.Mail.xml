@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.Mail">
+  <Docs>
+    <summary>Die Klassen in diesem Namespace sind veraltet. Verwenden der <see cref="N:System.Net.Mail" /> Namespace stattdessen. Die <see cref="N:System.Web.Mail" /> -Namespace enthält Klassen, mit denen Sie zum Erstellen und Senden von Nachrichten mithilfe der Komponente zur Nachricht CDOSYS (Collaboration Data Objects für Windows 2000). Die e-Mail-Nachricht wird über den SMTP-Mail-Dienst in Microsoft Windows 2000 integriert oder über einen beliebigen SMTP-Server übermittelt. Die Klassen in diesem Namespace können von ASP.NET oder einer beliebigen verwalteten Anwendung verwendet werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

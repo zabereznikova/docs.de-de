@@ -1,0 +1,56 @@
+<Type Name="OpenReadCompletedEventHandler" FullName="System.Net.OpenReadCompletedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void OpenReadCompletedEventHandler(object sender, OpenReadCompletedEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed OpenReadCompletedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Net.OpenReadCompletedEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.WebClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Net.OpenReadCompletedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Net.OpenReadCompletedEventArgs" /> , die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode zur Behandlung des <see cref="E:System.Net.WebClient.OpenReadCompleted" />-Ereignisses eines <see cref="T:System.Net.WebClient" />-Objekts dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen eines <xref:System.Net.OpenReadCompletedEventHandler>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel veranschaulicht das Herunterladen einer Ressource zum Lesen.  
+  
+ [!code-cpp[NCLWebClientAsync#30](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLWebClientAsync/CPP/asyncmethods.cpp#30)]
+ [!code-csharp[NCLWebClientAsync#30](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLWebClientAsync/CS/asyncmethods.cs#30)]
+ [!code-vb[NCLWebClientAsync#30](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLWebClientAsync/VB/asyncmethods.vb#30)]  
+  
+ Die folgende Methode wird aufgerufen, wenn der Download abgeschlossen ist.  
+  
+ [!code-cpp[NCLWebClientAsync#31](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLWebClientAsync/CPP/asyncmethods.cpp#31)]
+ [!code-csharp[NCLWebClientAsync#31](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLWebClientAsync/CS/asyncmethods.cs#31)]
+ [!code-vb[NCLWebClientAsync#31](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLWebClientAsync/VB/asyncmethods.vb#31)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

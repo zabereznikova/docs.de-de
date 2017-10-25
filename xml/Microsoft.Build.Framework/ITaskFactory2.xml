@@ -1,0 +1,90 @@
+<Type Name="ITaskFactory2" FullName="Microsoft.Build.Framework.ITaskFactory2">
+  <TypeSignature Language="C#" Value="public interface ITaskFactory2 : Microsoft.Build.Framework.ITaskFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITaskFactory2 implements class Microsoft.Build.Framework.ITaskFactory" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.ITaskFactory2" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Framework.ITaskFactory</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Beschreibt und erweiterte <see cref="T:Microsoft.Build.Framework.ITaskFactory" /> Schnittstelle, eine neue Aufgabeninstanz Factory implementieren muss.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateTask">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITask CreateTask (Microsoft.Build.Framework.IBuildEngine taskFactoryLoggingHost, System.Collections.Generic.IDictionary&lt;string,string&gt; taskIdentityParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Build.Framework.ITask CreateTask(class Microsoft.Build.Framework.IBuildEngine taskFactoryLoggingHost, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; taskIdentityParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.ITaskFactory2.CreateTask(Microsoft.Build.Framework.IBuildEngine,System.Collections.Generic.IDictionary{System.String,System.String})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITask</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="taskFactoryLoggingHost" Type="Microsoft.Build.Framework.IBuildEngine" />
+        <Parameter Name="taskIdentityParameters" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="taskFactoryLoggingHost">Der Host für den Task Factory Protokollierung protokolliert Meldungen in den Kontext des Vorgangs.</param>
+        <param name="taskIdentityParameters">Spezielle Parameter, mit denen die Aufgabenfactory kann ändern, wie sie Aufgaben, z. B. Laufzeit- und Architekturwerte ausgeführt wird.</param>
+        <summary>Erstellen Sie eine Instanz des Tasks, die mit "spezielle" auf den einzelnen Vorgang Aufruf mit den MSBuildRuntime und MSBuildArchitecture Aufgabe Standardparametern festgelegten Parametern einen optionalen Satz verwendet werden soll. MSBuild stellt eine Implementierung dieser Schnittstelle, TaskHostFactory, die mit den Werten "CLR2", "CLR4", "CurrentRuntime", "MSBuildRuntime", verwendet und "*" (alle); und "MSBuildArchitecture" mit den Werten "X86", "X64", "CurrentArchitecture", und "\*" (vorhanden). Eine Implementierung der ITaskFactory2 diese vordefinierten MSBuildRuntime und MSBuildArchitecture Werte verwendet werden, oder Sie können neue Werte für diese Parameter angeben.</summary>
+        <returns>Die generierten Aufgabe oder <c>null</c> , wenn der Task konnte nicht erstellt werden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Aufgabenfactory ITaskFactory2 implementiert, wird MSBuild anstelle von ITaskFactory.CreateTask Instanzenmethoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public bool Initialize (string taskName, System.Collections.Generic.IDictionary&lt;string,string&gt; factoryIdentityParameters, System.Collections.Generic.IDictionary&lt;string,Microsoft.Build.Framework.TaskPropertyInfo&gt; parameterGroup, string taskBody, Microsoft.Build.Framework.IBuildEngine taskFactoryLoggingHost);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Initialize(string taskName, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; factoryIdentityParameters, class System.Collections.Generic.IDictionary`2&lt;string, class Microsoft.Build.Framework.TaskPropertyInfo&gt; parameterGroup, string taskBody, class Microsoft.Build.Framework.IBuildEngine taskFactoryLoggingHost) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.ITaskFactory2.Initialize(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IDictionary{System.String,Microsoft.Build.Framework.TaskPropertyInfo},System.String,Microsoft.Build.Framework.IBuildEngine)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="taskName" Type="System.String" />
+        <Parameter Name="factoryIdentityParameters" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="parameterGroup" Type="System.Collections.Generic.IDictionary&lt;System.String,Microsoft.Build.Framework.TaskPropertyInfo&gt;" />
+        <Parameter Name="taskBody" Type="System.String" />
+        <Parameter Name="taskFactoryLoggingHost" Type="Microsoft.Build.Framework.IBuildEngine" />
+      </Parameters>
+      <Docs>
+        <param name="taskName">Der Name des Tasks.</param>
+        <param name="factoryIdentityParameters">Spezielle Parameter, mit denen die Aufgabenfactory kann ändern, wie sie Aufgaben, z. B. Laufzeit- und Architekturwerte ausgeführt wird. Der Schlüssel ist der Name des Parameters und der Wert ist der Wert des Parameters. Dies ist der Satz an Parametern, der auf die UsingTask festgelegt wurde, z. B. die UsingTask Runtime und die Architektur-Parameter verwenden.</param>
+        <param name="parameterGroup">Die Parametergruppe.</param>
+        <param name="taskBody">Der Aufgabentext.</param>
+        <param name="taskFactoryLoggingHost">Der Host der Aufgabe Factory-Protokollierung.</param>
+        <summary>Initialisiert diese Factory zum Instanziieren von Aufgaben mit einem bestimmten Inline-Aufgabe-Block und einen Satz von UsingTask-Parameter. MSBuild stellt eine Implementierung dieser Schnittstelle, TaskHostFactory, die mit den Werten "CLR2", "CLR4", "CurrentRuntime", "Runtime", verwendet und "*" (alle); und "Architektur" mit den Werten "X86", "X64", "CurrentArchitecture", und "\*" (vorhanden). Eine Implementierung der ITaskFactory2 diese vordefinierten Laufzeit- und Architekturwerte Werte verwendet werden, oder Sie können neue Werte für diese Parameter angeben.</summary>
+        <returns>Ein Wert, der angibt, ob die Initialisierung erfolgreich war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ MSBuild-Modul wird zum Initialisieren der Factory aufzurufen. Initialisieren dieses Werk genug, damit die Factory gestellt werden kann, und zwar unabhängig davon, ob Aufgabennamen von der Factory erstellt werden können. Wenn eine Aufgabenfactory ITaskFactory2 implementiert, wird diese Initialisierungsmethode anstelle von ITaskFactory.Initialize aufgerufen werden.  
+  
+ Die TaskFactoryLoggingHost protokolliert Meldungen in den Kontext des Ziels, an die Aufgabe zuerst verwendet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

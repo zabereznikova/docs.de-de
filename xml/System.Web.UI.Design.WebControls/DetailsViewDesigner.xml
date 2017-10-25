@@ -1,0 +1,507 @@
+<Type Name="DetailsViewDesigner" FullName="System.Web.UI.Design.WebControls.DetailsViewDesigner">
+  <TypeSignature Language="C#" Value="public class DetailsViewDesigner : System.Web.UI.Design.WebControls.DataBoundControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DetailsViewDesigner extends System.Web.UI.Design.WebControls.DataBoundControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.DetailsViewDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.WebControls.DataBoundControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Entwurfszeitunterstützung in einem visuellen Designer für das <see cref="T:System.Web.UI.WebControls.DetailsView" />-Steuerelement bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einem visuellen Designer beim Wechsel aus Quelle zur Entwurfsansicht Markup-Quellcode, beschreibt die <xref:System.Web.UI.WebControls.DetailsView> Steuerelement wird analysiert und eine Entwurfszeitversion des Steuerelements wird erstellt, auf der Entwurfsoberfläche angezeigt. Wenn Sie zurück zur Quellansicht wechseln, wird das Steuerelement zur Entwurfszeit auf den Markupquellcode beibehalten und in das Markup für die Webseite bearbeitet.  
+  
+ Die Eigenschaften der <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner> Klasse bieten die folgenden Funktionen:  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.ActionLists%2A> Eigenschaft gibt eine <xref:System.ComponentModel.Design.DesignerActionListCollection> -Objekt, das in der Regel auf ein Objekt enthält, die abgeleitet ist die <xref:System.ComponentModel.Design.DesignerActionList> Klasse für jede Ebene in der Vererbungsstruktur des Designers.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.AutoFormats%2A> -Eigenschaft gibt eine Auflistung der Formatierungsschemas für die Anzeige in der **AutoFormat** (Dialogfeld).  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.TemplateGroups%2A> -Eigenschaft gibt eine Auflistung der Vorlagengruppen für die Felder des zugeordneten <xref:System.Web.UI.WebControls.DetailsView> Steuerelements und der obersten Ebene <xref:System.Web.UI.WebControls.DetailsView> Vorlagen.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.UsePreviewControl%2A> -Eigenschaft gibt immer `true`, gibt an, dass der Designer eine temporäre Kopie des zugeordneten erstellt <xref:System.Web.UI.WebControls.DetailsView> Steuerelement, um das Markup zur Entwurfszeit zu generieren.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner> -Klasse, Methoden bieten die folgenden Funktionen:  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.DataBind%2A> Methode bindet das zugeordnete <xref:System.Web.UI.WebControls.DetailsView> Steuerelement an eine Datenquelle zur Entwurfszeit.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.GetDesignTimeHtml%2A> -Methode gibt das Markup ab, das Rendering des zugeordneten <xref:System.Web.UI.WebControls.DetailsView> zur Entwurfszeit.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.Initialize%2A> Methode bereitet den Designer zum Anzeigen, bearbeiten und Entwerfen des zugeordneten <xref:System.Web.UI.WebControls.DetailsView>.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.OnClick%2A> Methode wird aufgerufen, wenn auf einen Bereich der Entwurfszeitansicht des zugeordneten <xref:System.Web.UI.WebControls.DetailsView> geklickt wird.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.OnSchemaRefreshed%2A> Methode wird aufgerufen, wenn das Schema der Datenquelle der zugeordneten <xref:System.Web.UI.WebControls.DetailsView> ändert.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.PreFilterProperties%2A> Methode dient zum Entfernen oder Hinzufügen zusätzlicher Eigenschaften oder Shadowing von Eigenschaften des zugeordneten <xref:System.Web.UI.WebControls.DetailsView>.  
+  
+ Zur Entwurfszeit bearbeitbare Bereiche werden nicht unterstützt, der <xref:System.Web.UI.WebControls.DetailsView> -Steuerelement, sodass der <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.GetEditableDesignerRegionContent%2A> und <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.SetEditableDesignerRegionContent%2A> Methoden verfügen über keine Funktionalität.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erweitern der <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner> auf die Darstellung von Steuerelementen zu ändern, die von der abgeleiteten Klasse die <xref:System.Web.UI.WebControls.DetailsView> -Steuerelements zur Entwurfszeit.  
+  
+ Im Beispiel leitet der `MyDetailsView` -Steuerelement aus der <xref:System.Web.UI.WebControls.DetailsView>. Die `MyDetailsView` ist einfach eine Kopie der <xref:System.Web.UI.WebControls.DetailsView> Steuerelement. Das Beispiel auch abgeleitet ist die `MyDetailsViewDesigner` -Klasse aus <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner> und platziert eine <xref:System.ComponentModel.DesignerAttribute> -Objekt für `MyDetailsViewDesigner` auf die `MyDetailsView` Steuerelement.  
+  
+ `The MyDetailsViewDesigner`überschreibt die <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.SampleRowCount%2A> Eigenschaft angeben, dass die Pagerzeile der Entwurfszeitansicht des der `MyDetailsView` fünf Seitenlinks enthalten. Es überschreibt die <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.PreFilterProperties%2A> Methode zum Erstellen von der <xref:System.Web.UI.Control.NamingContainer%2A> Eigenschaft sichtbar ist, in der **Eigenschaft** Raster zur Entwurfszeit. Es überschreibt die <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.GetDesignTimeHtml%2A> Methode einschließen der <xref:System.Web.UI.WebControls.DetailsView.Caption%2A> Eigenschaft, wenn er, als neue erste Zeile in angegeben wird der `MyDetailsView` Raster zur Entwurfszeit. Wenn die <xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A> Eigenschaft von der `MyDetailsView` ist die <xref:System.Web.UI.WebControls.BorderStyle.NotSet> oder <xref:System.Web.UI.WebControls.BorderStyle.None> Wert, der <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.GetDesignTimeHtml%2A> zeichnet einen blauen gestrichelten Rahmen um das Steuerelement an sein Wertebereich mehr sichtbar zu machen.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.DetailsViewDesigner#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.DetailsViewDesigner/CS/detailsviewdesigner.cs#1)]
+ [!code-vb[System.Web.UI.Design.WebControls.DetailsViewDesigner#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.DetailsViewDesigner/VB/detailsviewdesigner.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DetailsViewDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DetailsViewDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.WebControls.DetailsViewDesigner" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ .NET Framework erstellt intern eine neue Instanz der dem <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner> Klasse bei der Erstellung der zugeordneten <xref:System.Web.UI.WebControls.DetailsView> Steuerelement oder eine Kopie des Steuerelements auf der Entwurfsoberfläche angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActionLists">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.Design.DesignerActionListCollection ActionLists { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.DesignerActionListCollection ActionLists" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.DetailsViewDesigner.ActionLists" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerActionListCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Designer-Aktionslistenauflistung für diesen Designer ab.</summary>
+        <value>Die diesem Designer zugeordnete <see cref="T:System.ComponentModel.Design.DesignerActionListCollection" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoFormats">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.Design.DesignerAutoFormatCollection AutoFormats { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.DesignerAutoFormatCollection AutoFormats" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.DetailsViewDesigner.AutoFormats" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.DesignerAutoFormatCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der automatischen Formatierungsschemas ab anzuzeigenden der **AutoFormat** (Dialogfeld).</summary>
+        <value>Eine <see cref="T:System.Web.UI.Design.DesignerAutoFormatCollection" />, die die vordefinierten Schemas für <see cref="T:System.Web.UI.WebControls.DetailsView" /> enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.DesignerAutoFormatCollection> wird von einem XML-codierten Member einer internen Klasse aufgefüllt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBind">
+      <MemberSignature Language="C#" Value="protected override void DataBind (System.Web.UI.WebControls.BaseDataBoundControl dataBoundControl);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void DataBind(class System.Web.UI.WebControls.BaseDataBoundControl dataBoundControl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DetailsViewDesigner.DataBind(System.Web.UI.WebControls.BaseDataBoundControl)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataBoundControl" Type="System.Web.UI.WebControls.BaseDataBoundControl" />
+      </Parameters>
+      <Docs>
+        <param name="dataBoundControl">Das an die Entwurfszeitdatenquelle zu bindende <see cref="T:System.Web.UI.WebControls.DetailsView" />-Steuerelement.</param>
+        <summary>Bindet das zugeordnete Steuerelement an die Entwurfszeitdatenquelle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.DataBind%2A> Methode bindet das zugeordnete <xref:System.Web.UI.WebControls.DetailsView> die Steuerung an die Datenquelle zur Entwurfszeit und berechnet die Anzahl der Pager und automatisch generierten Zeilen, die erforderlich sind, basierend auf den Funktionen, die für die angegeben sind die <xref:System.Web.UI.WebControls.DetailsView>.  
+  
+ Die `dataBoundControl` -Parameter stellt die <xref:System.Web.UI.WebControls.DetailsView> -Steuerelement, das diesem Designer oder eine Kopie dieses Steuerelements zugeordnet ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DetailsViewDesigner.GetDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft das Markup ab, das zum Rendern des zugeordneten Steuerelements zur Entwurfszeit verwendet wird.</summary>
+        <returns>Ein <see cref="T:System.String" />, der das Markup enthält, mit dem der <see cref="T:System.Web.UI.WebControls.DetailsView" /> zur Entwurfszeit gerendert wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zuerst die <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.GetDesignTimeHtml> -Methode legt die <xref:System.Web.UI.WebControls.DetailsView.AutoGenerateRows%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.DetailsView> die Steuerung an `true`, wenn die <xref:System.Web.UI.WebControls.DetailsView.Fields%2A> Auflistung ist leer. Die <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.GetDesignTimeHtml%2A> legt dann die <xref:System.Web.UI.WebControls.DetailsView.DataKeyNames%2A> Auflistung von der <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.GetDesignTimeHtml%2A> auf ein leeres Steuerelement <xref:System.String> array-Wenn das Schema der Datenquelle abgerufen werden kann. Aktualisiert die <xref:System.ComponentModel.TypeDescriptor> Objekt, das Erzwingen der <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.PreFilterProperties%2A> Methode, die aufgerufen werden. Er ruft dann die Basismethode, um das Markup zu generieren.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.GetDesignTimeHtml%2A> Methode in einer Klasse geerbt von der <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner> Klasse so ändern Sie die Darstellung der <xref:System.Web.UI.WebControls.DetailsView> -Steuerelements zur Entwurfszeit. Im Beispiel fügt eine neue erste Zeile der Raster enthält die <xref:System.Web.UI.WebControls.DetailsView.Caption%2A> -Eigenschaft, wenn die <xref:System.Web.UI.WebControls.DetailsView.Caption%2A> definiert ist. Wenn die <xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A> Eigenschaft des Steuerelements, das von abgeleitet ist <xref:System.Web.UI.WebControls.DetailsView> ist die <xref:System.Web.UI.WebControls.BorderStyle.NotSet> oder <xref:System.Web.UI.WebControls.BorderStyle.None> Wert, der <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.GetDesignTimeHtml%2A> zeichnet einen blauen gestrichelten Rahmen um das Steuerelement an sein Wertebereich mehr sichtbar zu machen. Es ändert sich nicht auf die Laufzeit-Darstellung des Steuerelements aus.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.DetailsViewDesigner#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.DetailsViewDesigner/CS/detailsviewdesigner.cs#4)]
+ [!code-vb[System.Web.UI.Design.WebControls.DetailsViewDesigner#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.DetailsViewDesigner/VB/detailsviewdesigner.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie außer Kraft setzen die <see cref="M:System.Web.UI.Design.WebControls.DetailsViewDesigner.GetDesignTimeHtml" /> -Methode, achten Sie darauf, dass Sie die Basismethode aufrufen, da sie schließlich über mehrere Außerkraftsetzung Ebenen auf aufruft, die <see cref="T:System.Web.UI.WebControls.DetailsView" /> Steuerelement oder eine Kopie des Steuerelements zum Generieren des Markups.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml (System.Web.UI.Design.DesignerRegionCollection regions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml(class System.Web.UI.Design.DesignerRegionCollection regions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DetailsViewDesigner.GetDesignTimeHtml(System.Web.UI.Design.DesignerRegionCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="regions" Type="System.Web.UI.Design.DesignerRegionCollection" />
+      </Parameters>
+      <Docs>
+        <param name="regions">Eine <see cref="T:System.Web.UI.Design.DesignerRegionCollection" />, der Definitionen der Bereiche in der Entwurfszeitansicht des Steuerelements hinzugefügt werden, die auswählbar sind und auf die geklickt werden kann.</param>
+        <summary>Ruft das Markup ab, das für das Rendering des zugeordneten Steuerelements zur Entwurfszeit verwendet wird, und füllt eine Auflistung von Designerbereichen auf.</summary>
+        <returns>Ein <see cref="T:System.String" />, der das Markup enthält, mit dem der <see cref="T:System.Web.UI.WebControls.DetailsView" /> zur Entwurfszeit gerendert wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.GetDesignTimeHtml%2A?displayProperty=nameWithType> Methodenaufrufe der <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.GetDesignTimeHtml%2A?displayProperty=nameWithType> Methode zum Generieren der des Markups für das Rendering zur Entwurfszeit die <xref:System.Web.UI.WebControls.DetailsView> Steuerelement. Die <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.GetDesignTimeHtml%2A?displayProperty=nameWithType> Methode füllt ebenfalls `regions` mit einem <xref:System.Web.UI.Design.DesignerRegion> Objekt für jeden Bereich durch Klicken aktivierbaren oder auswählbare des Renderings zur Entwurfszeit.  
+  
+ Für die <xref:System.Web.UI.WebControls.DetailsView>, die erste Zelle in jeder Zeile ausgewählt ist; alle Zellen in den Zeilen sind geklickt werden kann.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.GetDesignTimeHtml%2A> Methode in einer Klasse, die vom geerbt wird der <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner> Klasse so ändern Sie die Darstellung der <xref:System.Web.UI.WebControls.DetailsView> -Steuerelements zur Entwurfszeit. Im Beispiel fügt eine neue erste Zeile der Raster enthält die <xref:System.Web.UI.WebControls.DetailsView.Caption%2A> -Eigenschaft, wenn die <xref:System.Web.UI.WebControls.DetailsView.Caption%2A> definiert ist. Wenn die <xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A> Eigenschaft des Steuerelements, das von abgeleitet ist die <xref:System.Web.UI.WebControls.DetailsView> ist die <xref:System.Web.UI.WebControls.BorderStyle.NotSet> oder <xref:System.Web.UI.WebControls.BorderStyle.None> Wert, der <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.GetDesignTimeHtml%2A> zeichnet einen blauen gestrichelten Rahmen um das Steuerelement an sein Wertebereich mehr sichtbar zu machen. Es ändert sich nicht auf die Laufzeit-Darstellung des Steuerelements aus.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.DetailsViewDesigner#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.DetailsViewDesigner/CS/detailsviewdesigner.cs#4)]
+ [!code-vb[System.Web.UI.Design.WebControls.DetailsViewDesigner#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.DetailsViewDesigner/VB/detailsviewdesigner.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie außer Kraft setzen die <see cref="M:System.Web.UI.Design.WebControls.DetailsViewDesigner.GetDesignTimeHtml(System.Web.UI.Design.DesignerRegionCollection)" /> -Methode, achten Sie darauf, dass Sie die Basismethode aufrufen oder die <see cref="M:System.Web.UI.Design.WebControls.DetailsViewDesigner.GetDesignTimeHtml" /> überladen, da sie schließlich über mehrere Außerkraftsetzung Ebenen auf Aufrufen der <see cref="T:System.Web.UI.WebControls.DetailsView" /> Steuerelement oder eine Kopie des Steuerelements zum Generieren des Markups.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEditableDesignerRegionContent">
+      <MemberSignature Language="C#" Value="public override string GetEditableDesignerRegionContent (System.Web.UI.Design.EditableDesignerRegion region);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetEditableDesignerRegionContent(class System.Web.UI.Design.EditableDesignerRegion region) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DetailsViewDesigner.GetEditableDesignerRegionContent(System.Web.UI.Design.EditableDesignerRegion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="region" Type="System.Web.UI.Design.EditableDesignerRegion" />
+      </Parameters>
+      <Docs>
+        <param name="region">Der <see cref="T:System.Web.UI.Design.EditableDesignerRegion" />, für den Inhalte abgerufen werden sollen.</param>
+        <summary>Gibt den Inhalt für einen bearbeitbaren Bereich der Entwurfszeitansicht des zugeordneten Steuerelements zurück.</summary>
+        <returns>Der Inhalt für einen bearbeitbaren Bereich der Entwurfszeitansicht des zugeordneten Steuerelements.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Funktionalität ist zurzeit nicht verfügbar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DetailsViewDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Ein <see cref="T:System.Web.UI.WebControls.DetailsView" />-Steuerelement, das eine <see cref="T:System.ComponentModel.IComponent" /> implementiert.</param>
+        <summary>Bereitet den Designer zum Anzeigen, Bearbeiten und Entwerfen des zugeordneten Steuerelements vor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Designerhost ruft die <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.Initialize%2A> Methode, wenn es der Designer zum Rendern verwenden kann die <xref:System.Web.UI.WebControls.DetailsView> Steuerelement. Die <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.Initialize%2A> und ihre Basismethoden konfigurieren Eigenschaften und Ereignisse, die erforderlich, für den Vorgang des Designers sind einrichten.  
+  
+ Die `component` -Parameter stellt die <xref:System.Web.UI.WebControls.DetailsView> -Steuerelement, das diesem Designer oder eine Kopie dieses Steuerelements zugeordnet ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClick">
+      <MemberSignature Language="C#" Value="protected override void OnClick (System.Web.UI.Design.DesignerRegionMouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClick(class System.Web.UI.Design.DesignerRegionMouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DetailsViewDesigner.OnClick(System.Web.UI.Design.DesignerRegionMouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.Design.DesignerRegionMouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Web.UI.Design.DesignerRegionMouseEventArgs" />, das den Bereich des Steuerelements definiert, auf den geklickt wurde.</param>
+        <summary>Wird aufgerufen, wenn auf einen Bereich der Entwurfszeitansicht für das zugeordnete Steuerelement geklickt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.OnClick%2A> Methode speichert den Index des ausgewählten Bereichs und aktualisiert das Markup, das rendert die <xref:System.Web.UI.WebControls.DetailsView> Steuerelement auf der Entwurfsoberfläche angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSchemaRefreshed">
+      <MemberSignature Language="C#" Value="protected override void OnSchemaRefreshed ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnSchemaRefreshed() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DetailsViewDesigner.OnSchemaRefreshed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, wenn das Schema der Datenquelle für das zugeordnete Steuerelement geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Designer im Modus oder ein Feld Bearbeiten von Vorlagen ist wird hinzugefügt oder bearbeitet, die <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.OnSchemaRefreshed%2A> Methodenaufrufe der <xref:System.Web.UI.Design.ControlDesigner.InvokeTransactedChange%2A> Methode, die ihrerseits die <xref:System.Web.UI.Design.ControlDesigner.OnComponentChanged%2A> Methode zum Aktualisieren der <xref:System.Web.UI.WebControls.DetailsView> Steuerelement, um die Änderung an der Datenquelle widerspiegeln.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreFilterProperties">
+      <MemberSignature Language="C#" Value="protected override void PreFilterProperties (System.Collections.IDictionary properties);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PreFilterProperties(class System.Collections.IDictionary properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DetailsViewDesigner.PreFilterProperties(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Eine Auflistung, die das <see cref="T:System.Collections.IDictionary" /> von hinzugefügten Eigenschaften und Shadowing-Eigenschaften implementiert.</param>
+        <summary>Wird vom Designer zum Entfernen von Eigenschaften aus der Anzeige im <paramref name="Properties" />-Raster, zum Hinzufügen von Eigenschaften oder zum Durchführen von Shadowing von Eigenschaften des zugeordneten Steuerelements verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Steuerelement-Designer verwenden Methoden abgeleitet wurde. die <xref:System.ComponentModel.Design.ComponentDesigner.PreFilterProperties%2A?displayProperty=nameWithType> Methode verschiedene Steuerelementeigenschaften mit entsprechenden zur Entwurfszeit zu überschatten, die der Designer implementiert, um Eigenschaften hinzufügen oder Entfernen von Eigenschaften aus der `Properties` Raster.  
+  
+ Für die <xref:System.Web.UI.WebControls.DetailsView> -Steuerelement, die <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.PreFilterProperties%2A> Methode legt die <xref:System.ComponentModel.BrowsableAttribute> Objekt des der <xref:System.Web.UI.WebControls.DetailsView.Fields%2A> Eigenschaft, um `false` Wenn das Steuerelement ist im Vorlagenmodus. Dadurch wird sichergestellt, dass eine Spalte, die im Vorlagenmodus ist gelöscht werden kann, mit der `Fields` (Dialogfeld).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.PreFilterProperties%2A> Methode in einer Klasse, die vom geerbt wird die <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner> -Klasse zum Ändern der `Properties` Raster der <xref:System.Web.UI.WebControls.DetailsView> -Steuerelements zur Entwurfszeit. Im Beispiel wird die <xref:System.Web.UI.Control.NamingContainer%2A> Eigenschaft sichtbar ist, in der `Properties` Raster.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.DetailsViewDesigner#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.DetailsViewDesigner/CS/detailsviewdesigner.cs#3)]
+ [!code-vb[System.Web.UI.Design.WebControls.DetailsViewDesigner#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.DetailsViewDesigner/VB/detailsviewdesigner.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Überschreiben Sie die <see cref="M:System.Web.UI.Design.WebControls.DetailsViewDesigner.PreFilterProperties(System.Collections.IDictionary)" /> Methode, um Eigenschaften hinzufügen oder Ändern von Eigenschaften in der Entwurfszeiteigenschaft-Auflistung. Achten Sie darauf, dass Sie die Basismethode aufrufen, bevor Sie andere Verarbeitungsschritte ausführt.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="SampleRowCount">
+      <MemberSignature Language="C#" Value="protected override int SampleRowCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SampleRowCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.DetailsViewDesigner.SampleRowCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der anzuzeigenden Beispielzeilen für das zugeordnete Steuerelement ab.</summary>
+        <value>Die Anzahl der anzuzeigenden Beispielzeilen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.SampleRowCount%2A> Eigenschaft gibt immer die Anzahl `2`. Dies bewirkt, dass zwei Seitenlinks in die Pagerzeile des anzuzeigenden der <xref:System.Web.UI.WebControls.DetailsView> -Steuerelements zur Entwurfszeit.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.SampleRowCount%2A> Eigenschaft in einer Klasse geerbt wird, von der <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner> Klasse, um die Anzahl der Seitenlinks angezeigt werden, in der Pagerzeile ändern die <xref:System.Web.UI.WebControls.DetailsView> -Steuerelements zur Entwurfszeit. Im Beispiel wird fünf Seitenlinks angezeigt werden.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.DetailsViewDesigner#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.DetailsViewDesigner/CS/detailsviewdesigner.cs#2)]
+ [!code-vb[System.Web.UI.Design.WebControls.DetailsViewDesigner#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.DetailsViewDesigner/VB/detailsviewdesigner.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetEditableDesignerRegionContent">
+      <MemberSignature Language="C#" Value="public override void SetEditableDesignerRegionContent (System.Web.UI.Design.EditableDesignerRegion region, string content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetEditableDesignerRegionContent(class System.Web.UI.Design.EditableDesignerRegion region, string content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DetailsViewDesigner.SetEditableDesignerRegionContent(System.Web.UI.Design.EditableDesignerRegion,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="region" Type="System.Web.UI.Design.EditableDesignerRegion" />
+        <Parameter Name="content" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="region">Die zu aktualisierende <see cref="T:System.Web.UI.Design.EditableDesignerRegion" />.</param>
+        <param name="content">Ein <see cref="T:System.String" /> zum Schreiben in <c>Region</c>.</param>
+        <summary>Gibt den Inhalt für einen bearbeitbaren Bereich der Entwurfszeitansicht des zugeordneten Steuerelements an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.SetEditableDesignerRegionContent%2A> Methode hat keine Funktion; es gibt keine Unterstützung für bearbeitbare Bereiche in der Entwurfszeitansicht des der <xref:System.Web.UI.WebControls.DetailsView> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TemplateGroups">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.Design.TemplateGroupCollection TemplateGroups { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.TemplateGroupCollection TemplateGroups" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.DetailsViewDesigner.TemplateGroups" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.TemplateGroupCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der Vorlagengruppen für die Felder des zugeordneten Steuerelements ab.</summary>
+        <value>Eine <see cref="T:System.Web.UI.Design.TemplateGroupCollection" />, die ein Element für jedes aus einer Vorlage gebildete Feld im <see cref="T:System.Web.UI.WebControls.DetailsView" />-Steuerelement enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.TemplateGroups%2A> Eigenschaft erstellt eine Auflistung von <xref:System.Web.UI.Design.TemplateGroup> Objekte enthalten, von denen eine für jedes aus einer Vorlage gebildete Datenfeld und eine für jedes Steuerelementfeld (z. B. Header, Footer und Pager) im zugeordneten <xref:System.Web.UI.WebControls.DetailsView> Steuerelement. Das Feld "Daten" <xref:System.Web.UI.Design.TemplateGroup> Elemente verfügen über eine <xref:System.Web.UI.Design.TemplateDefinition> -Objekt für jedes der vordefinierten Zeile Vorlagentypen. Steuerwort-Genauigkeitskontrollfeld <xref:System.Web.UI.Design.TemplateGroup> Elemente enthalten einen einzelnen <xref:System.Web.UI.Design.TemplateDefinition>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsePreviewControl">
+      <MemberSignature Language="C#" Value="protected override bool UsePreviewControl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UsePreviewControl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.DetailsViewDesigner.UsePreviewControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Designer zum Generieren des Entwurfszeitmarkups anstelle des dem Designer tatsächlich zugeordneten Steuerelements eine temporäre Kopie verwenden soll.</summary>
+        <value>Immer <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da der <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.UsePreviewControl%2A> Eigenschaft ist immer `true`, verwendet der Designer eine <xref:System.Web.UI.WebControls.View> Steuerelement, das eine Kopie des zugeordneten enthält <xref:System.Web.UI.WebControls.DetailsView> Steuerelement, um das Markup zur Entwurfszeit zu generieren. Die <xref:System.Web.UI.WebControls.View> Steuerelement wirkt sich nicht auf die Persistenz der <xref:System.Web.UI.WebControls.DetailsView>. Wenn die <xref:System.Web.UI.Design.WebControls.DetailsViewDesigner.UsePreviewControl%2A> Eigenschaft wurde überschrieben, um zurückzukehren `false`, mithilfe des Designers die zugeordnete <xref:System.Web.UI.WebControls.DetailsView> steuern, selbst für das Markup zur Entwurfszeit zu generieren.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie können außer Kraft setzen die <see cref="P:System.Web.UI.Design.WebControls.DetailsViewDesigner.UsePreviewControl" /> -Eigenschaft zum Zurückgeben von <see langword="false" /> oder um zu bestimmen, deren Wert basierend auf, ob das Steuerelement mit einem auf Klassenebene gekennzeichnet ist <see cref="T:System.Web.UI.Design.SupportsPreviewControlAttribute" /> Objekt. Wenn die <see cref="P:System.Web.UI.Design.WebControls.DetailsViewDesigner.UsePreviewControl" /> nicht überschrieben wird, die <see cref="T:System.Web.UI.WebControls.DetailsView" /> -Objekt ignoriert die <see cref="T:System.Web.UI.Design.SupportsPreviewControlAttribute" />.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

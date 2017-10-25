@@ -1,0 +1,113 @@
+<Type Name="ServiceControllerPermission" FullName="System.ServiceProcess.ServiceControllerPermission">
+  <TypeSignature Language="C#" Value="public sealed class ServiceControllerPermission : System.Security.Permissions.ResourcePermissionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit ServiceControllerPermission extends System.Security.Permissions.ResourcePermissionBase" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceProcess.ServiceControllerPermission" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceProcess</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Permissions.ResourcePermissionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht eine Steuerung der Codezugriff Sicherheitsberechtigungen für die Dienst-Controller.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceControllerPermission ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceProcess.ServiceControllerPermission.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceProcess.ServiceControllerPermission" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceControllerPermission (System.Security.Permissions.PermissionState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.PermissionState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceProcess.ServiceControllerPermission.#ctor(System.Security.Permissions.PermissionState)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="state" Type="System.Security.Permissions.PermissionState" />
+      </Parameters>
+      <Docs>
+        <param name="state">Einer der <see cref="T:System.Security.Permissions.PermissionState" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ServiceProcess.ServiceControllerPermission" /> Klasse mit dem angegebenen Zugriff auf Ressourcen.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Der <paramref name="state" />-Parameter ist kein gültiger Wert von <see cref="T:System.Security.Permissions.PermissionState" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceControllerPermission (System.ServiceProcess.ServiceControllerPermissionEntry[] permissionAccessEntries);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceProcess.ServiceControllerPermissionEntry[] permissionAccessEntries) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceProcess.ServiceControllerPermission.#ctor(System.ServiceProcess.ServiceControllerPermissionEntry[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="permissionAccessEntries" Type="System.ServiceProcess.ServiceControllerPermissionEntry[]" />
+      </Parameters>
+      <Docs>
+        <param name="permissionAccessEntries">Ein Array von <see cref="T:System.ServiceProcess.ServiceControllerPermissionEntry" />-Objekten. Die <see cref="P:System.ServiceProcess.ServiceControllerPermission.PermissionEntries" /> Eigenschaft auf diesen Wert festgelegt ist.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ServiceProcess.ServiceControllerPermission" /> Klasse mit den Einträgen für die angegebene Berechtigung.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="permissionAccessEntries" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceControllerPermission (System.ServiceProcess.ServiceControllerPermissionAccess permissionAccess, string machineName, string serviceName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ServiceProcess.ServiceControllerPermissionAccess permissionAccess, string machineName, string serviceName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceProcess.ServiceControllerPermission.#ctor(System.ServiceProcess.ServiceControllerPermissionAccess,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="permissionAccess" Type="System.ServiceProcess.ServiceControllerPermissionAccess" />
+        <Parameter Name="machineName" Type="System.String" />
+        <Parameter Name="serviceName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="permissionAccess">Einer der <see cref="T:System.ServiceProcess.ServiceControllerPermissionAccess" />-Werte.</param>
+        <param name="machineName">Der Name des Computers, auf dem der Dienst befindet.</param>
+        <param name="serviceName">Der kurze Name, der Dienst für das System identifiziert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ServiceProcess.ServiceControllerPermission" /> Klasse den Zugriff auf die angegebene Berechtigung die Zugriffsebenen, den Namen des Computers, auf dem der Dienst befindet, und den kurzen Namen, die den Dienst im System identifiziert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PermissionEntries">
+      <MemberSignature Language="C#" Value="public System.ServiceProcess.ServiceControllerPermissionEntryCollection PermissionEntries { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceProcess.ServiceControllerPermissionEntryCollection PermissionEntries" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceProcess.ServiceControllerPermission.PermissionEntries" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceProcess.ServiceControllerPermissionEntryCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Berechtigungseinträge für diese Anforderung Berechtigungen ab.</summary>
+        <value>Ein <see cref="T:System.ServiceProcess.ServiceControllerPermissionEntryCollection" /> , die die Berechtigungseinträge für diese Anforderung Berechtigungen enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

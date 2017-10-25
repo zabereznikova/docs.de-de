@@ -1,0 +1,160 @@
+<Type Name="BuildStartedEventArgs" FullName="Microsoft.Build.Framework.BuildStartedEventArgs">
+  <TypeSignature Language="C#" Value="public class BuildStartedEventArgs : Microsoft.Build.Framework.BuildStatusEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit BuildStartedEventArgs extends Microsoft.Build.Framework.BuildStatusEventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.BuildStartedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Framework.BuildStatusEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:Microsoft.Build.Framework.IEventSource.BuildStarted" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Warnung: das Markieren eines Typs [Serializable], ohne einen Vertrag für die Serialisierung ISerializable implementieren erzwingt, denn es handelt sich, dass eine Zusicherung für den Typ niemals zu ändern, d. h. den Typ Felder ist unveränderlich. Hinzufügen neuer Felder in der nächsten Version des Typs ohne speziellen FX-Richtlinien befolgen, können sowohl die Vorwärts-und Rückwärtskompatibilität unterbrechen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BuildStartedEventArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.BuildStartedEventArgs.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Framework.BuildStartedEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BuildStartedEventArgs (string message, string helpKeyword);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, string helpKeyword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.BuildStartedEventArgs.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Der Text des Ereignisses.</param>
+        <param name="helpKeyword">Das Hilfeschlüsselwort, die dem Ereignis zugeordnet wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.Build.Framework.BuildStartedEventArgs" /> Klasse mit der angegebenen Meldung und das Schlüsselwort "Help".</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BuildStartedEventArgs (string message, string helpKeyword, System.Collections.Generic.IDictionary&lt;string,string&gt; environmentOfBuild);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, string helpKeyword, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; environmentOfBuild) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.BuildStartedEventArgs.#ctor(System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="environmentOfBuild" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="message">SMS</param>
+        <param name="helpKeyword">Schlüsselwort "Help"</param>
+        <param name="environmentOfBuild">Ein Wörterbuch der die Build-Umgebung auflistet, wenn der Build gestartet wird.</param>
+        <summary>Konstruktor, um alle Parameter initialisiert werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Absenderfeld kann hier nicht festgelegt werden, und es wird davon ausgegangen, dass "MSBuild".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BuildStartedEventArgs (string message, string helpKeyword, DateTime eventTimestamp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, string helpKeyword, valuetype System.DateTime eventTimestamp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.BuildStartedEventArgs.#ctor(System.String,System.String,System.DateTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="eventTimestamp" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="message">SMS</param>
+        <param name="helpKeyword">Schlüsselwort "Help"</param>
+        <param name="eventTimestamp">Timestamp, wann das Ereignis erstellt wurde</param>
+        <summary>Konstruktor, um Zeitstempel festgelegt werden können.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BuildStartedEventArgs (string message, string helpKeyword, DateTime eventTimestamp, params object[] messageArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, string helpKeyword, valuetype System.DateTime eventTimestamp, object[] messageArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.BuildStartedEventArgs.#ctor(System.String,System.String,System.DateTime,System.Object[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="eventTimestamp" Type="System.DateTime" />
+        <Parameter Name="messageArgs" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="message">SMS</param>
+        <param name="helpKeyword">Schlüsselwort "Help"</param>
+        <param name="eventTimestamp">Timestamp, wann das Ereignis erstellt wurde</param>
+        <param name="messageArgs">Nachricht args</param>
+        <summary>Konstruktor, um Zeitstempel festgelegt werden können.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildEnvironment">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,string&gt; BuildEnvironment { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; BuildEnvironment" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.BuildStartedEventArgs.BuildEnvironment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Umgebungswörterbuch, die zu Beginn des Builds verwendet wird.</summary>
+        <value>Gibt die Umgebungswörterbuch, die zu Beginn des Builds verwendet wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

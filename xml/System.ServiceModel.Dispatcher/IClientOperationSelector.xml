@@ -1,0 +1,94 @@
+<Type Name="IClientOperationSelector" FullName="System.ServiceModel.Dispatcher.IClientOperationSelector">
+  <TypeSignature Language="C#" Value="public interface IClientOperationSelector" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IClientOperationSelector" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.IClientOperationSelector" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert den Vertrag für eine Vorgangsauswahl.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementieren Sie die <xref:System.ServiceModel.Dispatcher.IClientOperationSelector>-Schnittstelle, um eine benutzerdefinierte Vorgangsauswahl zu erstellen, die an die <xref:System.ServiceModel.Dispatcher.ClientRuntime.OperationSelector%2A>-Eigenschaft angehängt werden kann, um auf Basis der aufgerufenen Proxymethode auszuwählen, welche Vertragsvorgänge aufgerufen werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AreParametersRequiredForSelection">
+      <MemberSignature Language="C#" Value="public bool AreParametersRequiredForSelection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AreParametersRequiredForSelection" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.IClientOperationSelector.AreParametersRequiredForSelection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob Parameter zur Bestimmung der Auswahl erforderlich sind.</summary>
+        <value>
+          <see langword="true" />, wenn Parameter erforderlich sind, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der zurückgegebene Wert ist `false`, sofern der Benutzer nicht überladene Methoden aufweist. Wenn False zurückgegeben wird, ist das an <xref:System.ServiceModel.Dispatcher.IClientOperationSelector.SelectOperation%2A> übergebene Objektarray `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectOperation">
+      <MemberSignature Language="C#" Value="public string SelectOperation (System.Reflection.MethodBase method, object[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string SelectOperation(class System.Reflection.MethodBase method, object[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.IClientOperationSelector.SelectOperation(System.Reflection.MethodBase,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="method" Type="System.Reflection.MethodBase" />
+        <Parameter Name="parameters" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="method">Die aufgerufene Methode.</param>
+        <param name="parameters">Die an die Methode übergebenen Parameter.</param>
+        <summary>Gibt den ausgewählten Vorgang zurück.</summary>
+        <returns>Der von der benutzerdefinierten Vorgangsauswahl ausgewählte Vorgang.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

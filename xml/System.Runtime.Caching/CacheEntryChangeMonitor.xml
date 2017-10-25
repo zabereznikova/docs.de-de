@@ -1,0 +1,131 @@
+<Type Name="CacheEntryChangeMonitor" FullName="System.Runtime.Caching.CacheEntryChangeMonitor">
+  <TypeSignature Language="C#" Value="public abstract class CacheEntryChangeMonitor : System.Runtime.Caching.ChangeMonitor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CacheEntryChangeMonitor extends System.Runtime.Caching.ChangeMonitor" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Caching.CacheEntryChangeMonitor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Caching</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.Caching.ChangeMonitor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Basisklasse, die stellt eine <see cref="T:System.Runtime.Caching.ChangeMonitor" /> Typ, der implementiert werden kann, um Änderungen an der Einträge im Cache zu überwachen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Caching.CacheEntryChangeMonitor> Klasse enthält abstrakte, schreibgeschützte Eigenschaften, die für die Überwachung von Cacheeinträgen implementiert werden können. Diese Klasse wird verwendet, wenn eine Cacheimplementierung zum Überwachen von Änderungen mit den Einträgen in seinem Cache verfügt. Für Caches, die <xref:System.Runtime.Caching.ObjectCache> Cache-Implementierungen, die eine Instanz der <xref:System.Runtime.Caching.CacheEntryChangeMonitor> Typ wird zurückgegeben, indem Sie die <xref:System.Runtime.Caching.ObjectCache.CreateCacheEntryChangeMonitor%28System.Collections.Generic.IEnumerable%7BSystem.String%7D%2CSystem.String%29> Methode.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Informationen zu den Vererbungsvertrag, der befolgt werden muss, finden Sie unter den Informationen für erben in der <see cref="T:System.Runtime.Caching.ChangeMonitor" /> -Klassenübersicht.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CacheEntryChangeMonitor ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.CacheEntryChangeMonitor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Runtime.Caching.CacheEntryChangeMonitor" />-Klasse. Dieser Konstruktor wird von Konstruktoren in abgeleiteten Klassen zum Initialisieren der Basisklasse aufgerufen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Caching.CacheEntryChangeMonitor> -Klasse verfügt über einen Standardkonstruktor.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Legen Sie der Konstruktor einer abgeleiteten Klasse muss die <see cref="P:System.Runtime.Caching.ChangeMonitor.UniqueId" /> -Eigenschaft, mit der Überwachung beginnen, und rufen <see cref="M:System.Runtime.Caching.ChangeMonitor.InitializationComplete" /> vor den Konstruktor zurück. Wenn eine Abhängigkeit Änderungen vor der Initialisierung abgeschlossen (z. B., wenn ein abhängiger Cacheschlüssel nicht im Cache gefunden wird), muss der Konstruktor aufrufen der <see cref="M:System.Runtime.Caching.ChangeMonitor.OnChanged(System.Object)" /> Methode. Aufruf des Konstruktors kann die <see cref="M:System.Runtime.Caching.ChangeMonitor.Dispose" /> Methode erst nach <see cref="M:System.Runtime.Caching.ChangeMonitor.InitializationComplete" /> aufgerufen wird, da <see cref="M:System.Runtime.Caching.ChangeMonitor.Dispose" /> löst eine Ausnahme aus, wenn die Initialisierung nicht abgeschlossen wird.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheKeys">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt; CacheKeys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;string&gt; CacheKeys" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.CacheEntryChangeMonitor.CacheKeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Cacheschlüsseln, die überwacht werden zum Ändern ab.</summary>
+        <value>Eine Auflistung von Cacheschlüssel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Auflistung wird normalerweise im Konstruktor einer abgeleiteten festgelegt <xref:System.Runtime.Caching.CacheEntryChangeMonitor> Typ.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastModified">
+      <MemberSignature Language="C#" Value="public abstract DateTimeOffset LastModified { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTimeOffset LastModified" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.CacheEntryChangeMonitor.LastModified" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTimeOffset</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der die aktuelle Zeit (in UTC-Zeit) angibt, die der überwachten Cacheeintrag geändert wurde.</summary>
+        <value>Die verstrichene Zeit.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn mehrere Cacheeinträge auf Änderungen überwacht wird, sind die <xref:System.Runtime.Caching.CacheEntryChangeMonitor.LastModified%2A> Eigenschaft gibt der spätesten Zeitpunkt eine Änderung aufgetreten ist, in einem der Einträge im Cache.  
+  
+ Der Wert, der die <xref:System.Runtime.Caching.CacheEntryChangeMonitor.LastModified%2A> Eigenschaft wird in der Regel während der Initialisierung einer abgeleiteten Klasse berechnet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegionName">
+      <MemberSignature Language="C#" Value="public abstract string RegionName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RegionName" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.CacheEntryChangeMonitor.RegionName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen eines Datenbereichs des Caches ab.</summary>
+        <value>Der Name eines Bereichs im Cache.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Eigenschaft gibt in der Regel eine bestimmte Region, in dem Änderungen im Cache überwacht werden. Die <xref:System.Runtime.Caching.CacheEntryChangeMonitor.RegionName%2A> Eigenschaft ermöglicht die Option zum Konfigurieren der Änderung überwacht, damit sie Cacheeinträge nur in einem bestimmten Cachebereich überwachen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

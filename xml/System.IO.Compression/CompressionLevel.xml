@@ -1,0 +1,141 @@
+<Type Name="CompressionLevel" FullName="System.IO.Compression.CompressionLevel">
+  <TypeSignature Language="C#" Value="public enum CompressionLevel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CompressionLevel extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Compression.CompressionLevel" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Compression</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt Werte an, die angeben, ob bei einem Komprimierungsvorgang die Geschwindigkeit oder die Komprimierungsgröße im Vordergrund steht.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Komprimierung-Vorgänge umfassen in der Regel einen Kompromiss zwischen Geschwindigkeit und die Wirksamkeit der Komprimierung. Sie verwenden die <xref:System.IO.Compression.CompressionLevel> Enumeration, um anzugeben, welche Faktor in Ihrem Entwicklungsszenario noch wichtiger ist: die Zeit zum Abschließen der Komprimierungsvorgang oder die Größe der komprimierten Datei. Diese Werte entsprechen nicht bestimmte Komprimierungsgrad; das Objekt, das Komprimierung implementiert, bestimmt, zu deren Behandlung.  
+  
+ Die folgenden Methoden der <xref:System.IO.Compression.DeflateStream>, <xref:System.IO.Compression.GZipStream>, <xref:System.IO.Compression.ZipArchive>, <xref:System.IO.Compression.ZipFile>, und <xref:System.IO.Compression.ZipFileExtensions> Klassen enthalten einen Parameter namens `compressionLevel` , mit der Sie den Komprimierungsgrad festlegen:  
+  
+-   <xref:System.IO.Compression.DeflateStream.%23ctor%28System.IO.Stream%2CSystem.IO.Compression.CompressionLevel%29?displayProperty=nameWithType>  
+  
+-   <xref:System.IO.Compression.DeflateStream.%23ctor%28System.IO.Stream%2CSystem.IO.Compression.CompressionLevel%2CSystem.Boolean%29?displayProperty=nameWithType>  
+  
+-   <xref:System.IO.Compression.GZipStream.%23ctor%28System.IO.Stream%2CSystem.IO.Compression.CompressionLevel%29?displayProperty=nameWithType>  
+  
+-   <xref:System.IO.Compression.GZipStream.%23ctor%28System.IO.Stream%2CSystem.IO.Compression.CompressionLevel%2CSystem.Boolean%29?displayProperty=nameWithType>  
+  
+-   <xref:System.IO.Compression.ZipArchive.CreateEntry%28System.String%2CSystem.IO.Compression.CompressionLevel%29?displayProperty=nameWithType>  
+  
+-   <xref:System.IO.Compression.ZipFile.CreateFromDirectory%28System.String%2CSystem.String%2CSystem.IO.Compression.CompressionLevel%2CSystem.Boolean%29?displayProperty=nameWithType>  
+  
+-   <xref:System.IO.Compression.ZipFileExtensions.CreateEntryFromFile%28System.IO.Compression.ZipArchive%2CSystem.String%2CSystem.String%2CSystem.IO.Compression.CompressionLevel%29?displayProperty=nameWithType>  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie den Komprimierungsgrad festlegen, beim Erstellen der Zip-Archiv mithilfe der <xref:System.IO.Compression.ZipFile> Klasse.  
+  
+ [!code-csharp[System.IO.Compression.ZipFile#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.zipfile/cs/program3.cs#3)]
+ [!code-vb[System.IO.Compression.ZipFile#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.zipfile/vb/program3.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Fastest">
+      <MemberSignature Language="C#" Value="Fastest" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Compression.CompressionLevel Fastest = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Compression.CompressionLevel.Fastest" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Compression.CompressionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Den Komprimierungsvorgang sollte so schnell wie möglich abgeschlossen, auch wenn die resultierende Datei optimal nicht komprimiert wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoCompression">
+      <MemberSignature Language="C#" Value="NoCompression" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Compression.CompressionLevel NoCompression = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Compression.CompressionLevel.NoCompression" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Compression.CompressionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Keine Komprimierung sollte für die Datei ausgeführt werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Optimal">
+      <MemberSignature Language="C#" Value="Optimal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Compression.CompressionLevel Optimal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Compression.CompressionLevel.Optimal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Compression.CompressionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Komprimierungsvorgang sollten optimal komprimiert werden, auch wenn der Vorgang eine längere Zeit in Anspruch nimmt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

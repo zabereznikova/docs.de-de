@@ -1,0 +1,324 @@
+<Type Name="WorkflowOwnershipException" FullName="System.Workflow.Runtime.WorkflowOwnershipException">
+  <TypeSignature Language="C#" Value="public class WorkflowOwnershipException : Exception" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit WorkflowOwnershipException extends System.Exception" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.WorkflowOwnershipException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die Ausnahme, die ausgelöst wird, wenn das Workflowlaufzeitmodul versucht, eine momentan von einer anderen Workflowlaufzeitmodul-Instanz geladene Workflowinstanz zu laden. Diese Ausnahme wird auch ausgelöst, wenn das Workflowlaufzeitmodul versucht, einen Workflow zu speichern, nachdem das beim Laden des Workflows angegebene Besitzertimeout abgelaufen ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Die <xref:System.Workflow.Runtime.WorkflowOwnershipException> wird von Persistenzdiensten verwendet, die über die Unterstützung verfügen, dass mehrere Anwendungen auf dieselbe Datenbank zugreifen. In solch einer Umgebung kann eine Instanz der Workflowlaufzeit versuchen, einen Workflow zu laden, der bereits von einer anderen Instanz des Workflowlaufzeitmoduls geladen ist. Zum Beispiel löst die <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>-Klasse die <xref:System.Workflow.Runtime.WorkflowOwnershipException> aus, wenn diese Situation eintritt.  
+  
+ Wenn Sie einen Persistenzdienst implementieren, der die <xref:System.Workflow.Runtime.WorkflowOwnershipException> auslöst, müssen Sie vor dem Auslösen der Ausnahme die <xref:System.Guid> der Workflowinstanz angeben, für die die Ausnahme auftritt. Dazu verwenden Sie einen geeigneten Konstruktor für die Klasse oder legen die <xref:System.Workflow.Runtime.WorkflowOwnershipException.InstanceId%2A>-Eigenschaft fest.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowOwnershipException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowOwnershipException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Runtime.WorkflowOwnershipException" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert die <xref:System.Exception.Message%2A>-Eigenschaft der neuen Instanz mit einer Systemmeldung, die den Fehler beschreibt und die aktuelle Systemkultur berücksichtigt.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.Workflow.Runtime.WorkflowOwnershipException>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Ein NULL-Verweis (`Nothing` in Visual Basic).|  
+|<xref:System.Exception.Message%2A>|Eine im System enthaltene lokalisierte Beschreibung.|  
+|<xref:System.Workflow.Runtime.WorkflowOwnershipException.InstanceId%2A>|Ein leerer <xref:System.Guid>.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowOwnershipException (Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowOwnershipException.#ctor(System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die <see cref="T:System.Guid" /> der Workflowinstanz, für die diese Ausnahme aufgetreten ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Runtime.WorkflowOwnershipException" />-Klasse, indem eine <see cref="T:System.Guid" /> einer angegebenen Workflowinstanz verwendet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `instanceId` ist äquivalent zur <xref:System.Workflow.Runtime.WorkflowInstance.InstanceId%2A?displayProperty=nameWithType>-Eigenschaft der Workflowinstanz. Die <xref:System.Exception.Message%2A>-Eigenschaft der neuen Instanz wird als Systemmeldung initialisiert, die den Fehler beschreibt und die aktuelle Systemkultur berücksichtigt.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.Workflow.Runtime.WorkflowOwnershipException>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Ein NULL-Verweis (`Nothing` in Visual Basic).|  
+|<xref:System.Exception.Message%2A>|Eine im System enthaltene lokalisierte Beschreibung.|  
+|<xref:System.Workflow.Runtime.WorkflowOwnershipException.InstanceId%2A>|Die <xref:System.Guid> der Workflowinstanz, die über die `instanceId` angegeben wird, für die diese Ausnahme aufgetreten ist.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowOwnershipException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowOwnershipException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Meldung, in der der Fehler beschrieben wird.</param>
+        <summary>Initialisiert unter Verwendung der angegebenen Fehlermeldung eine neue Instanz der <see cref="T:System.Workflow.Runtime.WorkflowOwnershipException" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Inhalt des `message`-Parameters sollte für Personen verständlich sein. Der Aufrufer dieses Konstruktors muss sicherstellen, dass diese Zeichenfolge für die aktuelle Systemkultur lokalisiert wurde. Wenn Sie diesen Konstruktor verwenden, sollten Sie die <xref:System.Workflow.Runtime.WorkflowOwnershipException.InstanceId%2A> explizit festlegen, bevor Sie die Ausnahme auslösen.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.Workflow.Runtime.WorkflowOwnershipException>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Ein NULL-Verweis (`Nothing` in Visual Basic).|  
+|<xref:System.Exception.Message%2A>|Die Zeichenfolge der Fehlermeldung.|  
+|<xref:System.Workflow.Runtime.WorkflowOwnershipException.InstanceId%2A>|Ein leerer <xref:System.Guid>.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowOwnershipException (Guid instanceId, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid instanceId, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowOwnershipException.#ctor(System.Guid,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die <see cref="T:System.Guid" /> der Workflowinstanz, für die diese Ausnahme aufgetreten ist.</param>
+        <param name="message">Die Meldung, in der der Fehler beschrieben wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Runtime.WorkflowOwnershipException" />-Klasse, indem die <see cref="T:System.Guid" /> einer angegebenen Workflowinstanz und eine angegebene Fehlermeldung verwendet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `instanceId` ist äquivalent zur <xref:System.Workflow.Runtime.WorkflowInstance.InstanceId%2A?displayProperty=nameWithType>-Eigenschaft der Workflowinstanz. Der Inhalt des `message`-Parameters sollte für Personen verständlich sein. Der Aufrufer dieses Konstruktors muss sicherstellen, dass diese Zeichenfolge für die aktuelle Systemkultur lokalisiert wurde.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.Workflow.Runtime.WorkflowOwnershipException>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Ein NULL-Verweis (`Nothing` in Visual Basic).|  
+|<xref:System.Exception.Message%2A>|Die Zeichenfolge der Fehlermeldung.|  
+|<xref:System.Workflow.Runtime.WorkflowOwnershipException.InstanceId%2A>|Die <xref:System.Guid> der Workflowinstanz, die über die `instanceId` angegeben wird, für die diese Ausnahme aufgetreten ist.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WorkflowOwnershipException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowOwnershipException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info"><see cref="T:System.Runtime.Serialization.SerializationInfo" />, die die Daten des serialisierten Objekts für die ausgelöste Ausnahme enthält.</param>
+        <param name="context"><see cref="T:System.Runtime.Serialization.StreamingContext" />, der die Kontextinformationen zur Quelle bzw. zum Ziel enthält.</param>
+        <summary>Initialisiert eine neue Instanz der WorkflowOwnershipException-Klasse mit serialisierten Daten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird während der Serialisierung aufgerufen, um das über einen Stream übertragene Ausnahmeobjekt wiederherzustellen.  
+  
+ Weitere Informationen finden Sie in den Ausführungen zu XML und zur SOAP-Serialisierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowOwnershipException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowOwnershipException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Meldung, in der der Fehler beschrieben wird.</param>
+        <param name="innerException">Die Ausnahme, die die Ursache der aktuellen Ausnahme ist. Wenn die <c>"InnerException"</c> Parameter ist kein null-Verweis (<see langword="Nothing" /> in Visual Basic), die aktuelle Ausnahme wird ausgelöst, in einem Catch-Block, der die innere Ausnahme behandelt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Runtime.WorkflowOwnershipException" />-Klasse. Dabei wird eine angegebene Fehlermeldung und ein Verweis auf die innere Ausnahme verwendet, die diese Ausnahme ausgelöst hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Ausnahme, die als direktes Ergebnis einer vorhergehenden Ausnahme ausgelöst wird, muss in der <xref:System.Exception.InnerException%2A>-Eigenschaft über einen Verweis auf die vorhergehende Ausnahme verfügen. Die <xref:System.Exception.InnerException%2A>-Eigenschaft gibt denselben Wert, der auf den Konstruktor angewendet wird, oder einen NULL-Verweis ('Nothing' in Visual Basic) zurück, wenn der `innerException`-Parameter den Wert der inneren Ausnahme nicht für den Konstruktor bereitstellt. Der Inhalt des `message`-Parameters sollte für Personen verständlich sein. Der Aufrufer dieses Konstruktors muss sicherstellen, dass diese Zeichenfolge für die aktuelle Systemkultur lokalisiert wurde. Wenn Sie diesen Konstruktor verwenden, sollten Sie die <xref:System.Workflow.Runtime.WorkflowOwnershipException.InstanceId%2A> explizit festlegen, bevor Sie die Ausnahme auslösen.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.Workflow.Runtime.WorkflowOwnershipException>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Der Verweis auf die interne Ausnahme.|  
+|<xref:System.Exception.Message%2A>|Die Zeichenfolge der Fehlermeldung.|  
+|<xref:System.Workflow.Runtime.WorkflowOwnershipException.InstanceId%2A>|Ein leerer <xref:System.Guid>.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowOwnershipException (Guid instanceId, string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid instanceId, string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowOwnershipException.#ctor(System.Guid,System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Die <see cref="T:System.Guid" /> der Workflowinstanz, für die diese Ausnahme aufgetreten ist.</param>
+        <param name="message">Die Meldung, in der der Fehler beschrieben wird.</param>
+        <param name="innerException">Die Ausnahme, die die Ursache der aktuellen Ausnahme ist. Wenn die <c>"InnerException"</c> Parameter ist kein null-Verweis (<see langword="Nothing" /> in Visual Basic), die aktuelle Ausnahme wird ausgelöst, in einem Catch-Block, der die innere Ausnahme behandelt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.Runtime.WorkflowOwnershipException" />-Klasse. Dabei wird die <see cref="T:System.Guid" /> einer angegebenen Workflowinstanz, eine angegebene Fehlermeldung und ein Verweis auf die innere Ausnahme verwendet, die die Ursache für die Ausnahme darstellt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Ausnahme, die als direktes Ergebnis einer vorhergehenden Ausnahme ausgelöst wird, muss in der <xref:System.Exception.InnerException%2A>-Eigenschaft über einen Verweis auf die vorhergehende Ausnahme verfügen. Die <xref:System.Exception.InnerException%2A>-Eigenschaft gibt denselben Wert, der auf den Konstruktor angewendet wird, oder einen NULL-Verweis ('Nothing' in Visual Basic) zurück, wenn der `innerException`-Parameter den Wert der inneren Ausnahme nicht für den Konstruktor bereitstellt.  
+  
+ `instanceId` ist äquivalent zur <xref:System.Workflow.Runtime.WorkflowInstance.InstanceId%2A?displayProperty=nameWithType>-Eigenschaft der Workflowinstanz. Der Inhalt des `message`-Parameters sollte für Personen verständlich sein. Der Aufrufer dieses Konstruktors muss sicherstellen, dass diese Zeichenfolge für die aktuelle Systemkultur lokalisiert wurde.  
+  
+ In der folgenden Tabelle werden die anfänglichen Eigenschaftenwerte für eine <xref:System.Workflow.Runtime.WorkflowOwnershipException>-Instanz aufgeführt.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Der Verweis auf die interne Ausnahme.|  
+|<xref:System.Exception.Message%2A>|Die Zeichenfolge der Fehlermeldung.|  
+|<xref:System.Workflow.Runtime.WorkflowOwnershipException.InstanceId%2A>|Die <xref:System.Guid> der Workflowinstanz, die über die `instanceId` angegeben wird, für die diese Ausnahme aufgetreten ist.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowOwnershipException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info"><see cref="T:System.Runtime.Serialization.SerializationInfo" />, die die Daten des serialisierten Objekts für die ausgelöste Ausnahme enthält.</param>
+        <param name="context"><see cref="T:System.Runtime.Serialization.StreamingContext" />, der die Kontextinformationen zur Quelle bzw. zum Ziel enthält.</param>
+        <summary>Legt das <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Objekt mit der <see cref="T:System.Guid" /> der Workflowinstanz, die dieser Ausnahme zugeordnet ist, und zusätzliche Ausnahmeinformationen fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.WorkflowOwnershipException.GetObjectData%2A> legt die <xref:System.Runtime.Serialization.SerializationInfo> mit allen Daten für das Ausnahmeobjekt fest, das für die Serialisierung vorgesehen ist. Während der Deserialisierung wird das Ausnahmeobjekt aus der über den Stream übertragenen <xref:System.Runtime.Serialization.SerializationInfo> wiederhergestellt.  
+  
+ Weitere Informationen finden Sie in den Ausführungen zu XML und zur SOAP-Serialisierung.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="info" /> ist ein NULL-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceId">
+      <MemberSignature Language="C#" Value="public Guid InstanceId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid InstanceId" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.WorkflowOwnershipException.InstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Guid" /> der Workflowinstanz ab, für die diese Ausnahme ausgelöst wurde.</summary>
+        <value>
+          <see cref="P:System.Workflow.Runtime.WorkflowOwnershipException.InstanceId" /> ist äquivalent zur <see cref="P:System.Workflow.Runtime.WorkflowInstance.InstanceId" />-Eigenschaft der Workflowinstanz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

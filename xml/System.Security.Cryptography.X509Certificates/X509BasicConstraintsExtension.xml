@@ -1,0 +1,338 @@
+<Type Name="X509BasicConstraintsExtension" FullName="System.Security.Cryptography.X509Certificates.X509BasicConstraintsExtension">
+  <TypeSignature Language="C#" Value="public sealed class X509BasicConstraintsExtension : System.Security.Cryptography.X509Certificates.X509Extension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit X509BasicConstraintsExtension extends System.Security.Cryptography.X509Certificates.X509Extension" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.X509Certificates.X509BasicConstraintsExtension" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.X509Certificates.X509Extension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die für ein Zertifikat festgelegten Beschränkungen. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse stellt für ein Zertifikat festgelegten Eigenschaften, die die grundlegende Einschränkungen zu definieren.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie auf persönlichen Zertifikatspeicher des Benutzers öffnen und Anzeigen von Informationen über jedes Zertifikat im Speicher.  Dieses Beispiel verwendet die <xref:System.Security.Cryptography.X509Certificates.X509BasicConstraintsExtension> Klasse, um die Informationen anzuzeigen.  
+  
+ [!code-cpp[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/CS/sample.cs#1)]
+ [!code-vb[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/VB/sample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509BasicConstraintsExtension ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509BasicConstraintsExtension.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.X509Certificates.X509BasicConstraintsExtension" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie auf persönlichen Zertifikatspeicher des Benutzers öffnen und Anzeigen von Informationen über jedes Zertifikat im Speicher.  Dieses Beispiel verwendet die <xref:System.Security.Cryptography.X509Certificates.X509BasicConstraintsExtension> Klasse, um die Informationen anzuzeigen.  
+  
+ [!code-cpp[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/CS/sample.cs#1)]
+ [!code-vb[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509BasicConstraintsExtension (System.Security.Cryptography.AsnEncodedData encodedBasicConstraints, bool critical);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.AsnEncodedData encodedBasicConstraints, bool critical) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509BasicConstraintsExtension.#ctor(System.Security.Cryptography.AsnEncodedData,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="encodedBasicConstraints" Type="System.Security.Cryptography.AsnEncodedData" />
+        <Parameter Name="critical" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="encodedBasicConstraints">Die codierten Daten zu verwenden, um die Erweiterung zu erstellen.</param>
+        <param name="critical">
+          <see langword="true" />Wenn die Erweiterung wichtig ist; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Cryptography.X509Certificates.X509BasicConstraintsExtension" /> -Klasse unter Verwendung einer <see cref="T:System.Security.Cryptography.AsnEncodedData" /> -Objekt und ein Wert, der angibt, ob die Erweiterung wichtig ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, wenn die Informationen zum Erstellen einer Erweiterung bereits in einem <xref:System.Security.Cryptography.AsnEncodedData> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509BasicConstraintsExtension (bool certificateAuthority, bool hasPathLengthConstraint, int pathLengthConstraint, bool critical);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool certificateAuthority, bool hasPathLengthConstraint, int32 pathLengthConstraint, bool critical) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509BasicConstraintsExtension.#ctor(System.Boolean,System.Boolean,System.Int32,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="certificateAuthority" Type="System.Boolean" />
+        <Parameter Name="hasPathLengthConstraint" Type="System.Boolean" />
+        <Parameter Name="pathLengthConstraint" Type="System.Int32" />
+        <Parameter Name="critical" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="certificateAuthority">
+          <see langword="true" />Wenn das Zertifikat ein Zertifikat der Zertifizierungsstelle (CA) ist; andernfalls <see langword="false" />.</param>
+        <param name="hasPathLengthConstraint">
+          <see langword="true" />Wenn Sie das Zertifikat eine Einschränkung für die Anzahl der Pfadebenen verfügt können sie; andernfalls <see langword="false" />.</param>
+        <param name="pathLengthConstraint">Die Anzahl der Ebenen im Pfad des Zertifikats nicht zulässig.</param>
+        <param name="critical">
+          <see langword="true" />Wenn die Erweiterung wichtig ist; andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.X509Certificates.X509BasicConstraintsExtension" />-Klasse. Parameter geben einen Wert, der angibt, ob ein Zertifikat mit einem Zertifikat der Zertifizierungsstelle (CA), einen Wert, der angibt ist, ob das Zertifikat eine Beschränkung auf die Anzahl der Pfadebenen, die es ermöglicht, die Anzahl der Ebenen im Pfad des Zertifikats nicht zulässig sind , und ein Wert, der angibt, ob die Erweiterung wichtig ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CertificateAuthority">
+      <MemberSignature Language="C#" Value="public bool CertificateAuthority { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CertificateAuthority" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.X509BasicConstraintsExtension.CertificateAuthority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein Zertifikat mit einem Zertifikat der Zertifizierungsstelle (CA) ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Zertifikat ein Zertifikat der Zertifizierungsstelle (CA), andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um festzustellen, ob das Zertifikat ein Zertifikat der Zertifizierungsstelle (CA) ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie auf persönlichen Zertifikatspeicher des Benutzers öffnen und Anzeigen von Informationen über jedes Zertifikat im Speicher.  Dieses Beispiel verwendet die <xref:System.Security.Cryptography.X509Certificates.X509BasicConstraintsExtension> Klasse, um die Informationen anzuzeigen.  
+  
+ [!code-cpp[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/CS/sample.cs#1)]
+ [!code-vb[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyFrom">
+      <MemberSignature Language="C#" Value="public override void CopyFrom (System.Security.Cryptography.AsnEncodedData asnEncodedData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyFrom(class System.Security.Cryptography.AsnEncodedData asnEncodedData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509BasicConstraintsExtension.CopyFrom(System.Security.Cryptography.AsnEncodedData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asnEncodedData" Type="System.Security.Cryptography.AsnEncodedData" />
+      </Parameters>
+      <Docs>
+        <param name="asnEncodedData">Die codierten Daten zu verwenden, um die Erweiterung zu erstellen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Cryptography.X509Certificates.X509BasicConstraintsExtension" /> -Klasse unter Verwendung einer <see cref="T:System.Security.Cryptography.AsnEncodedData" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, wenn die Informationen zum Erstellen einer Erweiterung bereits in einem <xref:System.Security.Cryptography.AsnEncodedData> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasPathLengthConstraint">
+      <MemberSignature Language="C#" Value="public bool HasPathLengthConstraint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasPathLengthConstraint" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.X509BasicConstraintsExtension.HasPathLengthConstraint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein Zertifikat eine Einschränkung für die Anzahl der Pfadebenen verfügt, die es ermöglicht.</summary>
+        <value>
+          <see langword="true" />Wenn das Zertifikat eine Einschränkung für die Anzahl der Pfadebenen es zulässt verfügt, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Aussteller des Zertifikats kann die Anzahl der Ebenen in einer Zertifikatpfad einschränken. Diese Eigenschaft gibt an, ob das Zertifikat für diese Beschränkung sind. Wenn dieser Wert ist `true`, können Sie die <xref:System.Security.Cryptography.X509Certificates.X509BasicConstraintsExtension.PathLengthConstraint%2A> -Eigenschaft können Sie bestimmen die Anzahl der Ebenen zulässig.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie auf persönlichen Zertifikatspeicher des Benutzers öffnen und Anzeigen von Informationen über jedes Zertifikat im Speicher.  Dieses Beispiel verwendet die <xref:System.Security.Cryptography.X509Certificates.X509BasicConstraintsExtension> Klasse, um die Informationen anzuzeigen.  
+  
+ [!code-cpp[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/CS/sample.cs#1)]
+ [!code-vb[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Die Erweiterung kann nicht entschlüsselt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PathLengthConstraint">
+      <MemberSignature Language="C#" Value="public int PathLengthConstraint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PathLengthConstraint" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.X509BasicConstraintsExtension.PathLengthConstraint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Ebenen im Pfad des Zertifikats nicht zulässig.</summary>
+        <value>Eine ganze Zahl, der angibt, der Anzahl der Ebenen im Pfad des Zertifikats nicht zulässig.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Zertifikat eine Einschränkung für die Anzahl der Pfadebenen, die es ermöglicht verfügt, gibt diese Eigenschaft an, wie viele Ebenen zulässig sind.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie auf persönlichen Zertifikatspeicher des Benutzers öffnen und Anzeigen von Informationen über jedes Zertifikat im Speicher.  Dieses Beispiel verwendet die <xref:System.Security.Cryptography.X509Certificates.X509BasicConstraintsExtension> Klasse, um die Informationen anzuzeigen.  
+  
+ [!code-cpp[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/CS/sample.cs#1)]
+ [!code-vb[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Die Erweiterung kann nicht entschlüsselt werden.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

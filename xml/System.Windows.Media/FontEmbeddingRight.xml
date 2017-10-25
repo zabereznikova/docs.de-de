@@ -1,0 +1,233 @@
+<Type Name="FontEmbeddingRight" FullName="System.Windows.Media.FontEmbeddingRight">
+  <TypeSignature Language="C#" Value="public enum FontEmbeddingRight" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FontEmbeddingRight extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.FontEmbeddingRight" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Beschreibt die Schriftart einbetten von Berechtigungen, die in einer OpenType-Schriftart-Datei angegeben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen über die OpenType-Schriftarten finden Sie unter der **OpenType-Spezifikation** am [http://www.microsoft.com/typography/otspec/](http://www.microsoft.com/typography/otspec/).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Editable">
+      <MemberSignature Language="C#" Value="Editable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.FontEmbeddingRight Editable = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.FontEmbeddingRight.Editable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FontEmbeddingRight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Schriftart eingebettet werden kann, aber es muss nur installiert werden vorübergehend auf anderen Systemen. Im Gegensatz zu den <see cref="F:System.Windows.Media.FontEmbeddingRight.PreviewAndPrint" /> festlegen, Dokumente, die bearbeitet werden Schriftarten können geöffnet sein für Lesen, bearbeiten ist zulässig, und Änderungen gespeichert werden können.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EditableButNoSubsetting">
+      <MemberSignature Language="C#" Value="EditableButNoSubsetting" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.FontEmbeddingRight EditableButNoSubsetting = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.FontEmbeddingRight.EditableButNoSubsetting" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FontEmbeddingRight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Schriftart eingebettet werden kann, aber es muss nur installiert werden vorübergehend auf anderen Systemen. Zum Lesen, bearbeiten ist zulässig, und Änderungen gespeichert werden können, können Dokumente, die die Schriftart geöffnet werden. Die Schriftart möglicherweise nicht Teilmengen vor dem einbetten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EditableButNoSubsettingAndWithBitmapsOnly">
+      <MemberSignature Language="C#" Value="EditableButNoSubsettingAndWithBitmapsOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.FontEmbeddingRight EditableButNoSubsettingAndWithBitmapsOnly = int32(12)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.FontEmbeddingRight.EditableButNoSubsettingAndWithBitmapsOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FontEmbeddingRight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Schriftart eingebettet werden kann, aber es muss nur installiert werden vorübergehend auf anderen Systemen. Zum Lesen, bearbeiten ist zulässig, und Änderungen gespeichert werden können, können Dokumente, die die Schriftart geöffnet werden. Die Schriftart möglicherweise nicht Teilmengen vor dem einbetten. Nur in der Schriftart enthaltenen Bitmaps kann eingebettet werden. Keine Daten für die Gliederung möglicherweise eingebettet werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EditableButWithBitmapsOnly">
+      <MemberSignature Language="C#" Value="EditableButWithBitmapsOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.FontEmbeddingRight EditableButWithBitmapsOnly = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.FontEmbeddingRight.EditableButWithBitmapsOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FontEmbeddingRight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Schriftart eingebettet werden kann, aber es muss nur installiert werden vorübergehend auf anderen Systemen. Zum Lesen, bearbeiten ist zulässig, und Änderungen gespeichert werden können, können Dokumente, die die Schriftart geöffnet werden. Nur in der Schriftart enthaltenen Bitmaps kann eingebettet werden. Keine Daten für die Gliederung möglicherweise eingebettet werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Installable">
+      <MemberSignature Language="C#" Value="Installable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.FontEmbeddingRight Installable = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.FontEmbeddingRight.Installable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FontEmbeddingRight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Schriftarten mit dieser Einstellung anzugeben, dass eingebettet und dauerhaft von einer Anwendung auf dem Remotesystem installiert werden kann. Der Benutzer des remote-Systems erhält, die identische Rechte, Pflichten und Lizenzen für diese Schriftart als die ursprüngliche "Käufer" der Schriftart, und Entwerfen unterliegt den gleichen Endbenutzer-Lizenzvertrag, Urheberrechte, Patente und/oder Marken, wie die ursprüngliche "Käufer" wurde .</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InstallableButNoSubsetting">
+      <MemberSignature Language="C#" Value="InstallableButNoSubsetting" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.FontEmbeddingRight InstallableButNoSubsetting = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.FontEmbeddingRight.InstallableButNoSubsetting" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FontEmbeddingRight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Schriftarten mit dieser Einstellung anzugeben, dass eingebettet und dauerhaft von einer Anwendung auf dem Remotesystem installiert werden kann. Sie möglicherweise nicht über die Teilmengen vor dem einbetten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InstallableButNoSubsettingAndWithBitmapsOnly">
+      <MemberSignature Language="C#" Value="InstallableButNoSubsettingAndWithBitmapsOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.FontEmbeddingRight InstallableButNoSubsettingAndWithBitmapsOnly = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.FontEmbeddingRight.InstallableButNoSubsettingAndWithBitmapsOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FontEmbeddingRight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Schriftarten mit dieser Einstellung anzugeben, dass eingebettet und dauerhaft von einer Anwendung auf dem Remotesystem installiert werden kann. Sie möglicherweise nicht über die Teilmengen vor dem einbetten. Nur Bitmaps enthalten sind, in die Schriftarten kann eingebettet werden. Keine Daten für die Gliederung möglicherweise eingebettet werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InstallableButWithBitmapsOnly">
+      <MemberSignature Language="C#" Value="InstallableButWithBitmapsOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.FontEmbeddingRight InstallableButWithBitmapsOnly = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.FontEmbeddingRight.InstallableButWithBitmapsOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FontEmbeddingRight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Schriftarten mit dieser Einstellung anzugeben, dass eingebettet und dauerhaft von einer Anwendung auf dem Remotesystem installiert werden kann. Nur Bitmaps enthalten sind, in die Schriftarten kann eingebettet werden. Keine Daten für die Gliederung möglicherweise eingebettet werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewAndPrint">
+      <MemberSignature Language="C#" Value="PreviewAndPrint" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.FontEmbeddingRight PreviewAndPrint = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.FontEmbeddingRight.PreviewAndPrint" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FontEmbeddingRight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Schriftart kann eingebettet und vorübergehend auf dem remoten System geladen werden. Alle Dokumente, die die Schriftart müssen in einem nur-Lese Modus geöffnet werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewAndPrintButNoSubsetting">
+      <MemberSignature Language="C#" Value="PreviewAndPrintButNoSubsetting" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.FontEmbeddingRight PreviewAndPrintButNoSubsetting = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.FontEmbeddingRight.PreviewAndPrintButNoSubsetting" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FontEmbeddingRight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Schriftart kann eingebettet und vorübergehend auf dem remoten System geladen werden. Alle Dokumente, die die Schriftart müssen in einem nur-Lese Modus geöffnet werden. Die Schriftart möglicherweise nicht Teilmengen vor dem einbetten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewAndPrintButNoSubsettingAndWithBitmapsOnly">
+      <MemberSignature Language="C#" Value="PreviewAndPrintButNoSubsettingAndWithBitmapsOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.FontEmbeddingRight PreviewAndPrintButNoSubsettingAndWithBitmapsOnly = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.FontEmbeddingRight.PreviewAndPrintButNoSubsettingAndWithBitmapsOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FontEmbeddingRight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Schriftart kann eingebettet und vorübergehend auf dem remoten System geladen werden. Alle Dokumente, die die Schriftart müssen in einem nur-Lese Modus geöffnet werden. Die Schriftart möglicherweise nicht Teilmengen vor dem einbetten. Nur in der Schriftart enthaltenen Bitmaps kann eingebettet werden. Keine Daten für die Gliederung möglicherweise eingebettet werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewAndPrintButWithBitmapsOnly">
+      <MemberSignature Language="C#" Value="PreviewAndPrintButWithBitmapsOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.FontEmbeddingRight PreviewAndPrintButWithBitmapsOnly = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.FontEmbeddingRight.PreviewAndPrintButWithBitmapsOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FontEmbeddingRight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Schriftart kann eingebettet und vorübergehend auf dem remoten System geladen werden. Alle Dokumente, die die Schriftart müssen in einem nur-Lese Modus geöffnet werden. Nur in der Schriftart enthaltenen Bitmaps kann eingebettet werden. Keine Daten für die Gliederung möglicherweise eingebettet werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RestrictedLicense">
+      <MemberSignature Language="C#" Value="RestrictedLicense" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.FontEmbeddingRight RestrictedLicense = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.FontEmbeddingRight.RestrictedLicense" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FontEmbeddingRight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Schriftarten mit dieser Einstellung müssen nicht geändert, eingebettet oder auf irgendeine Weise erste um Erlaubnis des rechtmäßigen Besitzers ausgetauscht.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

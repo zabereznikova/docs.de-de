@@ -1,0 +1,390 @@
+<Type Name="RecognitionResult" FullName="System.Speech.Recognition.RecognitionResult">
+  <TypeSignature Language="C#" Value="public sealed class RecognitionResult : System.Speech.Recognition.RecognizedPhrase, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit RecognitionResult extends System.Speech.Recognition.RecognizedPhrase implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.RecognitionResult" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Speech.Recognition.RecognizedPhrase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("{DebuggerDisplayString ()}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält detaillierte Informationen über Eingaben, die von Instanzen von erkannt wurde <see cref="T:System.Speech.Recognition.SpeechRecognitionEngine" /> oder <see cref="T:System.Speech.Recognition.SpeechRecognizer" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse leitet sich von <xref:System.Speech.Recognition.RecognizedPhrase> und enthält ausführliche Informationen zu Spracherkennung, u. a. folgende:  
+  
+-   Die <xref:System.Speech.Recognition.RecognizedPhrase.Grammar%2A> Eigenschaftenverweise der <xref:System.Speech.Recognition.Grammar> , dass die Erkennung verwendet, um die Spracherkennung zu identifizieren.  
+  
+-   Die <xref:System.Speech.Recognition.RecognizedPhrase.Text%2A> Eigenschaft enthält den normalisierten Text für den Ausdruck. Weitere Informationen zu textnormalisierung, finden Sie unter <xref:System.Speech.Recognition.ReplacementText>.  
+  
+-   Die <xref:System.Speech.Recognition.RecognizedPhrase.Semantics%2A> -Eigenschaft verweist auf die semantischen Informationen, die im Resultset enthalten sind. Die semantische Informationen ist ein Wörterbuch mit den Schlüsselnamen und zugehörige semantische Daten.  
+  
+-   Die <xref:System.Speech.Recognition.RecognitionResult.Alternates%2A> Eigenschaft enthält eine Auflistung von <xref:System.Speech.Recognition.RecognizedPhrase> Objekte, die andere Candidate Interpretationen der audio Eingabe darstellen. Finden Sie unter <xref:System.Speech.Recognition.RecognitionResult.Alternates%2A> zusätzliche Informationen.  
+  
+-   Die <xref:System.Speech.Recognition.RecognizedPhrase.Words%2A> Eigenschaft enthält eine geordnete Auflistung von <xref:System.Speech.Recognition.RecognizedWordUnit> Objekte, die jeweils darstellen erkannt Wort in der Eingabe. Jede <xref:System.Speech.Recognition.RecognizedWordUnit> enthält Anzeigeformat lexikalischen Format und Aussprache-Informationen für das entsprechende Wort.  
+  
+ Bestimmte Member der <xref:System.Speech.Recognition.SpeechRecognitionEngine>, <xref:System.Speech.Recognition.SpeechRecognizer>, und <xref:System.Speech.Recognition.Grammar> Klassen können generieren eine <xref:System.Speech.Recognition.RecognitionResult>. Weitere Informationen finden Sie in der folgenden Methoden und Ereignisse.  
+  
+-   Methoden und Ereignisse von den <xref:System.Speech.Recognition.SpeechRecognitionEngine> Klasse:  
+  
+    -   <xref:System.Speech.Recognition.SpeechRecognitionEngine.EmulateRecognize%2A>  
+  
+    -   <xref:System.Speech.Recognition.SpeechRecognitionEngine.EmulateRecognizeAsync%2A>  
+  
+    -   <xref:System.Speech.Recognition.SpeechRecognitionEngine.SpeechHypothesized>  
+  
+    -   <xref:System.Speech.Recognition.SpeechRecognitionEngine.SpeechRecognitionRejected>  
+  
+    -   <xref:System.Speech.Recognition.SpeechRecognitionEngine.SpeechRecognized>  
+  
+-   Methoden und Ereignisse von den <xref:System.Speech.Recognition.SpeechRecognizer> Klasse:  
+  
+    -   <xref:System.Speech.Recognition.SpeechRecognizer.EmulateRecognize%2A>  
+  
+    -   <xref:System.Speech.Recognition.SpeechRecognizer.EmulateRecognizeAsync%2A>  
+  
+    -   <xref:System.Speech.Recognition.SpeechRecognizer.SpeechHypothesized>  
+  
+    -   <xref:System.Speech.Recognition.SpeechRecognizer.SpeechRecognitionRejected>  
+  
+    -   <xref:System.Speech.Recognition.SpeechRecognizer.SpeechRecognized>  
+  
+-   Die <xref:System.Speech.Recognition.Grammar.SpeechRecognized> -Ereignis für die <xref:System.Speech.Recognition.Grammar> Klasse.  
+  
+ Weitere Informationen zur Deaktivierung von Ereignissen finden Sie unter [mit Spracherkennung Recognition Ereignissen](http://msdn.microsoft.com/en-us/01c598ca-2e0e-4e89-b303-cd1cef9e8482).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt einen Handler für das `SpeechRecognized` -Ereignis für ein <xref:System.Speech.Recognition.SpeechRecognitionEngine> oder <xref:System.Speech.Recognition.SpeechRecognizer> -Objekt, und einige der Informationen über die zugeordnete <xref:System.Speech.Recognition.RecognitionResult>.  
+  
+```csharp  
+  
+// Handle the SpeechRecognized event.   
+void SpeechRecognizedHandler(object sender, SpeechRecognizedEventArgs e)  
+{  
+  if (e.Result == null) return;  
+  
+  // Add event handler code here.  
+  
+  // The following code illustrates some of the information available  
+  // in the recognition result.  
+  Console.WriteLine("Grammar({0}), {1}: {2}",  
+    e.Result.Grammar.Name, e.Result.Audio.Duration, e.Result.Text);  
+  
+  // Display the semantic values in the recognition result.  
+  foreach (KeyValuePair<String, SemanticValue> child in e.Result.Semantics)  
+  {  
+    Console.WriteLine(" {0} key: {1}",  
+      child.Key, child.Value.Value ?? "null");  
+  }  
+  Console.WriteLine();  
+  
+  // Display information about the words in the recognition result.  
+  foreach (RecognizedWordUnit word in e.Result.Words)  
+  {  
+    RecognizedAudio audio = e.Result.GetAudioForWordRange(word, word);  
+    Console.WriteLine(" {0,-10} {1,-10} {2,-10} {3} ({4})",  
+      word.Text, word.LexicalForm, word.Pronunciation,  
+      audio.Duration, word.DisplayAttributes);  
+  }  
+  
+  // Display the recognition alternates for the result.  
+  foreach (RecognizedPhrase phrase in e.Result.Alternates)  
+  {  
+    Console.WriteLine(" alt({0}) {1}", phrase.Confidence, phrase.Text);  
+  }  
+}  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Alternates">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Speech.Recognition.RecognizedPhrase&gt; Alternates { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Speech.Recognition.RecognizedPhrase&gt; Alternates" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.RecognitionResult.Alternates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Speech.Recognition.RecognizedPhrase&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der möglichen Übereinstimmungen für die Eingabe, die von der Spracherkennung ab.</summary>
+        <value>Eine schreibgeschützte Auflistung von Erkennungsalternativen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erkennung <xref:System.Speech.Recognition.RecognitionResult.Alternates%2A> sind nach den Werten sortiert ihre <xref:System.Speech.Recognition.RecognizedPhrase.Confidence%2A> Eigenschaften. Die Vertrauenswert des angegebenen Ausdrucks gibt an, die Wahrscheinlichkeit, dass der Ausdruck die Eingabe übereinstimmt. Der Ausdruck mit dem höchsten Wert für die Zuverlässigkeit ist der Ausdruck, der sehr wahrscheinlich die Eingabe entspricht.  
+  
+ Jede <xref:System.Speech.Recognition.RecognizedPhrase.Confidence%2A> Wert ausgewertet werden soll, einzeln und ohne Verweis auf die Vertrauenswerte anderer <xref:System.Speech.Recognition.RecognitionResult.Alternates%2A>. Die Eigenschaften, die die <xref:System.Speech.Recognition.RecognitionResult> erbt von <xref:System.Speech.Recognition.RecognizedPhrase> bieten ausführliche Informationen zu den Ausdruck mit der höchsten vertrauensergebnis.  
+  
+ Eine Verwendung für die <xref:System.Speech.Recognition.RecognitionResult.Alternates%2A> bezieht sich auf automatisierte Fehlerkorrektur. Beispielsweise konnte beim Entwerfen eines Dialogfelds Verzeichnis eine Anwendung der Benutzer aufgefordert, überprüfen Sie, verfügt die Anwendung die richtige Informationen von einem Ereignis Recognition wie in "" Anna"sagen haben?" Wenn der Benutzer sagt "no", und klicken Sie dann die Anwendung konnte den Benutzer über alle Varianten, die hoch genug mussten Abfragen <xref:System.Speech.Recognition.RecognizedPhrase.Confidence%2A> Ergebnis.  
+  
+ Weitere Informationen zu Spracherkennung und die Verwendung von Erkennungsalternativen, finden Sie unter [Spracherkennung](http://msdn.microsoft.com/en-us/6a7dc524-07fc-4862-8d48-8c10dc64b919) und [mit Spracherkennung Recognition Ereignissen](http://msdn.microsoft.com/en-us/01c598ca-2e0e-4e89-b303-cd1cef9e8482).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt einen Handler für das `SpeechRecognized` Ereignis und einige der Informationen über die zugeordnete <xref:System.Speech.Recognition.RecognitionResult>.  
+  
+```csharp  
+  
+// Handle the SpeechRecognized event.   
+void SpeechRecognizedHandler(object sender, SpeechRecognizedEventArgs e)  
+{  
+  if (e.Result == null) return;  
+  
+  // Add event handler code here.  
+  
+  // The following code illustrates some of the information available  
+  // in the recognition result.  
+  Console.WriteLine("Grammar({0}), {1}: {2}",  
+    e.Result.Grammar.Name, e.Result.Audio.Duration, e.Result.Text);  
+  
+  // Display the semantic values in the recognition result.  
+  foreach (KeyValuePair<String, SemanticValue> child in e.Result.Semantics)  
+  {  
+    Console.WriteLine(" {0} key: {1}",  
+      child.Key, child.Value.Value ?? "null");  
+  }  
+  Console.WriteLine();  
+  
+  // Display information about the words in the recognition result.  
+  foreach (RecognizedWordUnit word in e.Result.Words)  
+  {  
+    RecognizedAudio audio = e.Result.GetAudioForWordRange(word, word);  
+    Console.WriteLine(" {0,-10} {1,-10} {2,-10} {3} ({4})",  
+      word.Text, word.LexicalForm, word.Pronunciation,  
+      audio.Duration, word.DisplayAttributes);  
+  }  
+  
+  // Display the recognition alternates for the result.  
+  foreach (RecognizedPhrase phrase in e.Result.Alternates)  
+  {  
+    Console.WriteLine(" alt({0}) {1}", phrase.Confidence, phrase.Text);  
+  }  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Audio">
+      <MemberSignature Language="C#" Value="public System.Speech.Recognition.RecognizedAudio Audio { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Speech.Recognition.RecognizedAudio Audio" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.RecognitionResult.Audio" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.RecognizedAudio</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Audiodatei dem Erkennungsergebnis zugeordnet.</summary>
+        <value>Die Audiodatei dem Erkennungsergebnis zugeordnet oder <see langword="null" /> , wenn die Erkennung das Ergebnis eines Aufrufs generiert die <see langword="EmulateRecognize" /> oder <see langword="EmulateRecognizeAsync" /> Methoden eine <see cref="T:System.Speech.Recognition.SpeechRecognitionEngine" /> oder <see cref="T:System.Speech.Recognition.SpeechRecognizer" /> Instanz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um einen Abschnitt der Audiodatei erhalten, die einen bestimmten Bereich von Wörtern in das Erkennungsergebnis zugeordnet ist, verwenden die <xref:System.Speech.Recognition.RecognitionResult.GetAudioForWordRange%2A> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt einen Handler für das **SpeechRecognized** Ereignis und einige der Informationen über die zugeordnete <xref:System.Speech.Recognition.RecognitionResult>.  
+  
+```csharp  
+  
+// Handle the SpeechRecognized event.   
+void SpeechRecognizedHandler(object sender, SpeechRecognizedEventArgs e)  
+{  
+  if (e.Result == null) return;  
+  
+  // Add event handler code here.  
+  
+  // The following code illustrates some of the information available  
+  // in the recognition result.  
+      Console.WriteLine("Grammar({0}): {1}", e.Result.Grammar.Name, e.Result.Text);  
+      Console.WriteLine("Audio for result:");  
+      Console.WriteLine("  Start time: "+ e.Result.Audio.StartTime);  
+      Console.WriteLine("  Duration: " + e.Result.Audio.Duration);  
+      Console.WriteLine("  Format: " + e.Result.Audio.Format.EncodingFormat);  
+  
+  // Display the semantic values in the recognition result.  
+  foreach (KeyValuePair<String, SemanticValue> child in e.Result.Semantics)  
+  {  
+    Console.WriteLine(" {0} key: {1}",  
+      child.Key, child.Value.Value ?? "null");  
+  }  
+  Console.WriteLine();  
+  
+  // Display information about the words in the recognition result.  
+  foreach (RecognizedWordUnit word in e.Result.Words)  
+  {  
+    RecognizedAudio audio = e.Result.GetAudioForWordRange(word, word);  
+    Console.WriteLine(" {0,-10} {1,-10} {2,-10} {3} ({4})",  
+      word.Text, word.LexicalForm, word.Pronunciation,  
+      audio.Duration, word.DisplayAttributes);  
+  }  
+  
+  // Display the recognition alternates for the result.  
+  foreach (RecognizedPhrase phrase in e.Result.Alternates)  
+  {  
+    Console.WriteLine(" alt({0}) {1}", phrase.Confidence, phrase.Text);  
+  }  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAudioForWordRange">
+      <MemberSignature Language="C#" Value="public System.Speech.Recognition.RecognizedAudio GetAudioForWordRange (System.Speech.Recognition.RecognizedWordUnit firstWord, System.Speech.Recognition.RecognizedWordUnit lastWord);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Speech.Recognition.RecognizedAudio GetAudioForWordRange(class System.Speech.Recognition.RecognizedWordUnit firstWord, class System.Speech.Recognition.RecognizedWordUnit lastWord) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.RecognitionResult.GetAudioForWordRange(System.Speech.Recognition.RecognizedWordUnit,System.Speech.Recognition.RecognizedWordUnit)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.RecognizedAudio</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="firstWord" Type="System.Speech.Recognition.RecognizedWordUnit" />
+        <Parameter Name="lastWord" Type="System.Speech.Recognition.RecognizedWordUnit" />
+      </Parameters>
+      <Docs>
+        <param name="firstWord">Das erste Wort im Bereich.</param>
+        <param name="lastWord">Das letzte Wort in den Bereich.</param>
+        <summary>Ruft einen Abschnitt eines das Audio, das einen bestimmten Bereich von Wörtern in das Erkennungsergebnis zugeordnet ist.</summary>
+        <returns>Der Abschnitt Audio der Word-Bereich zugeordnet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie zum Abrufen der vollständigen Audio verknüpft sind, mit dem Erkennungsergebnis der <xref:System.Speech.Recognition.RecognitionResult.Audio%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine Grammatik Namenseingabe akzeptiert und fügt es einen Handler für das `SpeechRecognized` Ereignis. Die Grammatik verwendet einen Platzhalter für das Namenselement des Ausdrucks. Der Ereignishandler verwendet die Audiodatei aus dem Platzhalter erstellen und eine Aufforderung Begrüßung wiedergegeben.  
+  
+```csharp  
+  
+private Grammar CreateNameInputGrammar()  
+{  
+  GrammarBuilder wildcardBuilder = new GrammarBuilder();  
+  wildcardBuilder.AppendWildcard();  
+  SemanticResultKey nameKey =  
+    new SemanticResultKey("Name", wildcardBuilder);  
+  
+  GrammarBuilder nameBuilder =  
+    new GrammarBuilder("My name is");  
+  nameBuilder.Append(nameKey);  
+  
+  Grammar nameGrammar = new Grammar(nameBuilder);  
+  nameGrammar.Name = "Name input";  
+  
+  nameGrammar.SpeechRecognized +=  
+    new EventHandler<SpeechRecognizedEventArgs>(  
+      NameInputHandler);  
+  
+  return nameGrammar;  
+}  
+  
+// Handle the SpeechRecognized event for the name grammar.  
+private void NameInputHandler(object sender, SpeechRecognizedEventArgs e)  
+{  
+  if (e.Result == null) return;  
+  
+  RecognitionResult result = e.Result;  
+  SemanticValue semantics = e.Result.Semantics;  
+  
+  if (semantics.ContainsKey("Name"))  
+  {  
+    RecognizedAudio nameAudio =  
+      result.GetAudioForWordRange(  
+        result.Words[3], result.Words[result.Words.Count - 1]);  
+  
+    // Save the audio. Create a directory and file as necessary.  
+    FileInfo fi = new FileInfo(@"C:\temp\temp.wav");  
+    if (!fi.Directory.Exists)  
+    {  
+      fi.Directory.Create();  
+    }  
+    FileStream stream = new FileStream(fi.FullName, FileMode.Create);  
+    nameAudio.WriteToWaveStream(stream);  
+    stream.Close();  
+  
+    // Greet the person using the saved audio.  
+    SpeechSynthesizer synthesizer = new SpeechSynthesizer();  
+    PromptBuilder builder = new PromptBuilder();  
+    builder.AppendText("Hello");  
+    builder.AppendAudio(fi.FullName);  
+    synthesizer.Speak(builder);  
+  }  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NullReferenceException">Das Erkennungsmodul generiert das Ergebnis eines Aufrufs <see langword="EmulateRecognize" /> oder <see langword="EmulateRecognizeAsync" /> Methoden die <see cref="T:System.Speech.Recognition.SpeechRecognizer" /> oder <see cref="T:System.Speech.Recognition.SpeechRecognitionEngine" /> Objekte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.RecognitionResult.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Das mit Daten zu füllende Objekt.</param>
+        <param name="context">Das Ziel für die Serialisierung.</param>
+        <summary>Füllt eine <see cref="T:System.Runtime.Serialization.SerializationInfo" /> Instanz mit den Daten, die zum Serialisieren des Zielobjekts erforderlich sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Speech.Recognition.RecognitionResult>-Instanz in eine <xref:System.Runtime.Serialization.ISerializable>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

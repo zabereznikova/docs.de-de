@@ -1,0 +1,83 @@
+<Type Name="SharedAttribute" FullName="System.Composition.SharedAttribute">
+  <TypeSignature Language="C#" Value="public class SharedAttribute : System.Composition.PartMetadataAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SharedAttribute extends System.Composition.PartMetadataAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Composition.SharedAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Composition.AttributedModel</AssemblyName>
+    <AssemblyVersion>1.0.31.0</AssemblyVersion>
+    <AssemblyVersion>1.0.32.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Composition.PartMetadataAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Markiert den ergänzten Teil als zur gemeinsamen Nutzung von innerhalb der angegebenen Grenzen eingeschränkt.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SharedAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.SharedAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.AttributedModel</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Composition.SharedAttribute" /> markiert sind als global freigegeben.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SharedAttribute (string sharingBoundaryName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string sharingBoundaryName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.SharedAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.AttributedModel</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sharingBoundaryName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sharingBoundaryName">Die Grenze der Freigabe.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Composition.SharedAttribute" /> -Klasse mit der angegebenen Freigabe Grenzen.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SharingBoundary">
+      <MemberSignature Language="C#" Value="public string SharingBoundary { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SharingBoundary" />
+      <MemberSignature Language="DocId" Value="P:System.Composition.SharedAttribute.SharingBoundary" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.AttributedModel</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Grenze, die außerhalb, die das Teil von diesem Attribut gekennzeichnet nicht verfügbar ist.</summary>
+        <value>Die Grenze der Freigabe.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,316 @@
+<Type Name="ColumnDefinition" FullName="System.Windows.Controls.ColumnDefinition">
+  <TypeSignature Language="C#" Value="public class ColumnDefinition : System.Windows.Controls.DefinitionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ColumnDefinition extends System.Windows.Controls.DefinitionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.ColumnDefinition" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.DefinitionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert spaltenspezifische Eigenschaften, die für <see cref="T:System.Windows.Controls.Grid" />-Elemente gelten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.ColumnDefinition>verwendet eine eigene spezielle Struktur einer <xref:System.Windows.GridLength>, um seine Breitenmerkmale zu beschreiben. <xref:System.Windows.GridLength>ermöglicht eine <xref:System.Windows.Controls.ColumnDefinition> Variable Verteilung des verfügbaren Platzes zu unterstützen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ColumnDefinition ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ColumnDefinition.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.ColumnDefinition" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActualWidth">
+      <MemberSignature Language="C#" Value="public double ActualWidth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ActualWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ColumnDefinition.ActualWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der die tatsächliche berechnete Breite einer <see cref="T:System.Windows.Controls.ColumnDefinition" /> darstellt.</summary>
+        <value>Ein <see cref="T:System.Double" />-Wert, der die tatsächliche berechnete Breite in geräteunabhängigen Pixeln angibt. Der Standardwert ist 0,0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist ein berechneter Wert, der auf andere Breiteneingaben und das Layoutsystem basiert.  
+  
+ Beim Hinzufügen oder Entfernen von Zeilen oder Spalten, die <xref:System.Windows.Controls.ColumnDefinition.ActualWidth%2A> für alle <xref:System.Windows.Controls.ColumnDefinition> Elemente und die <xref:System.Windows.Controls.RowDefinition.ActualHeight%2A> aller <xref:System.Windows.Controls.RowDefinition> Elemente wird 0 (null) bis <xref:System.Windows.UIElement.Measure%2A> aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxWidth">
+      <MemberSignature Language="C#" Value="public double MaxWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 MaxWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ColumnDefinition.MaxWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.LengthConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der die maximale Breite der gibt eine <see cref="T:System.Windows.Controls.ColumnDefinition" />.</summary>
+        <value>Ein <see cref="T:System.Double" /> , die die maximale Breite darstellt. Der Standardwert ist <see cref="F:System.Double.PositiveInfinity" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie diese Werte zusammen in demselben Codebeispiel verwenden die <xref:System.Windows.Controls.ColumnDefinition.MinWidth%2A> Wert hat Vorrang vor den <xref:System.Windows.Controls.ColumnDefinition.MaxWidth%2A> -Wert, der wiederum Vorrang vor den <xref:System.Windows.Controls.ColumnDefinition.Width%2A> Wert.  
+  
+ Beim Hinzufügen oder Entfernen von Zeilen oder Spalten, die <xref:System.Windows.Controls.ColumnDefinition.ActualWidth%2A> für alle <xref:System.Windows.Controls.ColumnDefinition> Elemente und die <xref:System.Windows.Controls.RowDefinition.ActualHeight%2A> aller <xref:System.Windows.Controls.RowDefinition> Elemente wird 0 (null) bis <xref:System.Windows.UIElement.Measure%2A> aufgerufen wird.  
+  
+<a name="xamlAttributeUsage_MaxWidtht"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object MaxWidth="double"/>  
+- or -  
+<object MaxWidth="qualifiedDouble"/>  
+```  
+  
+<a name="xamlValues_MaxWidth"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *double*  
+ <xref:System.Double>  
+  
+ Die Zeichenfolgendarstellung einer <xref:System.Double> Wert größer als oder gleich `0.0034` jedoch gleich oder kleiner als `160000`. Ein nicht qualifizierter Wert wird in geräteunabhängigen Pixeln gemessen. Zeichenfolgen müssen nicht explizit Dezimaltrennzeichen enthalten.  
+  
+ *qualifiedDouble*  
+ Ein *doppelte* Wert wie oben beschrieben (ausgenommen `Auto`) gefolgt von einem der folgenden Einheitenbezeichner: `px`, `in`, `cm`, `pt`.  
+  
+ `px`(Standard)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`ist Zoll. 1 In == 96px  
+  
+ `cm`ist Zentimeter an. 1cm==(96/2.54) px  
+  
+ `pt`ist die Punkte. 1pt==(96/72) px  
+  
+<a name="dependencyPropertyInfo_MaxWidth"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ColumnDefinition.MaxWidthProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxWidthProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MaxWidthProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MaxWidthProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ColumnDefinition.MaxWidthProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Windows.LengthConverter, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, Custom=null")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ColumnDefinition.MaxWidth" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinWidth">
+      <MemberSignature Language="C#" Value="public double MinWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 MinWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ColumnDefinition.MinWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.LengthConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der die Mindestbreite darstellt eine <see cref="T:System.Windows.Controls.ColumnDefinition" />.</summary>
+        <value>Ein <see cref="T:System.Double" /> , der die Mindestbreite darstellt. Der Standardwert ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie diese Werte zusammen in demselben Codebeispiel verwenden die <xref:System.Windows.Controls.ColumnDefinition.MinWidth%2A> Wert hat Vorrang vor den <xref:System.Windows.Controls.ColumnDefinition.MaxWidth%2A> -Wert, der wiederum Vorrang vor den <xref:System.Windows.Controls.ColumnDefinition.Width%2A> Wert.  
+  
+ Beim Hinzufügen oder Entfernen von Zeilen oder Spalten, die <xref:System.Windows.Controls.ColumnDefinition.ActualWidth%2A> für alle <xref:System.Windows.Controls.ColumnDefinition> Elemente und die <xref:System.Windows.Controls.RowDefinition.ActualHeight%2A> aller <xref:System.Windows.Controls.RowDefinition> Elemente wird 0 (null) bis <xref:System.Windows.UIElement.Measure%2A> aufgerufen wird.  
+  
+<a name="xamlAttributeUsage_MinWidth"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object MinWidth="double"/>  
+- or -  
+<object MinWidth="qualifiedDouble"/>  
+```  
+  
+<a name="xamlValues_MinWidth"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *double*  
+ <xref:System.Double>  
+  
+ Die Zeichenfolgendarstellung einer <xref:System.Double> Wert größer als oder gleich `0.0034` jedoch gleich oder kleiner als `160000`. Ein nicht qualifizierter Wert wird in geräteunabhängigen Pixeln gemessen. Zeichenfolgen müssen nicht explizit Dezimaltrennzeichen enthalten.  
+  
+ *qualifiedDouble*  
+ Ein *doppelte* Wert wie oben beschrieben (ausgenommen `Auto`) gefolgt von einem der folgenden Einheitenbezeichner: `px`, `in`, `cm`, `pt`.  
+  
+ `px`(Standard)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`ist Zoll. 1 In == 96px  
+  
+ `cm`ist Zentimeter an. 1cm==(96/2.54) px  
+  
+ `pt`ist die Punkte. 1pt==(96/72) px  
+  
+<a name="dependencyPropertyInfo_MinWidth"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ColumnDefinition.WidthProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinWidthProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MinWidthProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MinWidthProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ColumnDefinition.MinWidthProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Windows.LengthConverter, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, Custom=null")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ColumnDefinition.MinWidth" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Offset">
+      <MemberSignature Language="C#" Value="public double Offset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Offset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ColumnDefinition.Offset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der den Offsetwert dieser <see cref="T:System.Windows.Controls.ColumnDefinition" />.</summary>
+        <value>Ein <see cref="T:System.Double" /> , der den Offset der Spalte darstellt. Der Standardwert ist 0,0.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public System.Windows.GridLength Width { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.GridLength Width" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ColumnDefinition.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.GridLength</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die berechnete Breite eines <see cref="T:System.Windows.Controls.ColumnDefinition" />-Elements ab oder legt den <see cref="T:System.Windows.GridLength" />-Wert einer Spalte fest, die durch die <see cref="T:System.Windows.Controls.ColumnDefinition" /> definiert ist.</summary>
+        <value>Die <see cref="T:System.Windows.GridLength" />, die die Breite der Spalte darstellt. Der Standardwert ist 1,0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardeinstellung für <xref:System.Windows.GridUnitType> ist <xref:System.Windows.GridUnitType.Star>.  
+  
+ Beim Hinzufügen oder Entfernen von Zeilen oder Spalten, die <xref:System.Windows.Controls.ColumnDefinition.ActualWidth%2A> für alle <xref:System.Windows.Controls.ColumnDefinition> Elemente und die <xref:System.Windows.Controls.RowDefinition.ActualHeight%2A> aller <xref:System.Windows.Controls.RowDefinition> Elemente wird 0 (null) bis <xref:System.Windows.UIElement.Measure%2A> aufgerufen wird.  
+  
+<a name="dependencyPropertyInfo_Width"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.ColumnDefinition.WidthProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WidthProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty WidthProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty WidthProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ColumnDefinition.WidthProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.ColumnDefinition.Width" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

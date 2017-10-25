@@ -1,0 +1,301 @@
+<Type Name="InstanceView" FullName="System.Runtime.DurableInstancing.InstanceView">
+  <TypeSignature Language="C#" Value="public sealed class InstanceView" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit InstanceView extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.DurableInstancing.InstanceView" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Ansicht einer Instanz dar. So geben beispielsweise Implementierungen der <see cref="M:System.Runtime.DurableInstancing.InstanceStore.Execute(System.Runtime.DurableInstancing.InstanceHandle,System.Runtime.DurableInstancing.InstancePersistenceCommand,System.TimeSpan)" />-Methode ein <see cref="T:System.Runtime.DurableInstancing.InstanceView" />-Objekt zurück, das den Einblick in die Instanzdaten im Instanzspeicher ermöglicht.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jedes InstanceView-Objekt ist einem "InstanceHandle" zugeordnet. Für eine von "InstanceStore.Execute" zurückgegebene "InstanceView" ist der zugeordnete Handle derjenige, der an "Execute" übergeben wird. Für eine von "InstancePersistenceContext.InstanceView" zurückgegebene "InstanceView" ist der zugeordnete Handle derjenige, der an "TryCommand" übergeben wird.  
+  
+ Einem "InstanceHandle" können zum jeweiligen Zeitpunkt null oder mehr InstanceView-Objekte zugeordnet sein. Von "InstanceStore.Execute" zurückgegebene InstanceView-Objekte sind unveränderlich und stellen nach der erfolgreichen Ausführung dieses Befehls einen Snapshot des bekannten Instanzzustands dar. Von "InstancePersistenceContext" zurückgegebene InstanceView-Objekte sind änderbar und stellen den aktuellen bekannten Instanzzustand dar, gemäß Aktualisierung während der Befehlsausführung.  (Wenn der Befehl letztlich fehlschlägt, wird dieser Zwischenzustand verworfen).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="InstanceData">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt; InstanceData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;class System.Xml.Linq.XName, class System.Runtime.DurableInstancing.InstanceValue&gt; InstanceData" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.DurableInstancing.InstanceView.InstanceData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft Instanzdaten als Wörterbuch mit Namen und Werten ab.</summary>
+        <value>Die Instanzdaten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceDataConsistency">
+      <MemberSignature Language="C#" Value="public System.Runtime.DurableInstancing.InstanceValueConsistency InstanceDataConsistency { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.DurableInstancing.InstanceValueConsistency InstanceDataConsistency" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.DurableInstancing.InstanceView.InstanceDataConsistency" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.DurableInstancing.InstanceValueConsistency</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Konsistenzstatus der InstanceData-Eigenschaft ab.</summary>
+        <value>Die Konsistenz ("Keine", "Unsicher" bzw. "Partiell") der Instanzdaten. "InstanceValueConsistency.None" gibt an, dass die InstanceData-Eigenschaft ein vollständig gefülltes und gesperrtes Set von Instanzdaten enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceId">
+      <MemberSignature Language="C#" Value="public Guid InstanceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid InstanceId" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.DurableInstancing.InstanceView.InstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Bezeichner (ID) der Instanz als GUID ab.</summary>
+        <value>Die ID der Instanz bzw. "Guid.Empty", wenn der zugeordnete Instanzhandle an keine Instanz gebunden ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceKeys">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;Guid,System.Runtime.DurableInstancing.InstanceKeyView&gt; InstanceKeys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;valuetype System.Guid, class System.Runtime.DurableInstancing.InstanceKeyView&gt; InstanceKeys" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.DurableInstancing.InstanceView.InstanceKeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Guid,System.Runtime.DurableInstancing.InstanceKeyView&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Instanzschlüssel als Wörterbuch von Instanzschlüsselbezeichnern und zugeordneten <see cref="T:System.Runtime.DurableInstancing.InstanceKeyView" />-Objekten ab.</summary>
+        <value>Ein Wörterbuch von Instanzschlüsselbezeichnern und ihren zugeordneten Instanzschlüsselansichtsobjekten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceKeysConsistency">
+      <MemberSignature Language="C#" Value="public System.Runtime.DurableInstancing.InstanceValueConsistency InstanceKeysConsistency { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.DurableInstancing.InstanceValueConsistency InstanceKeysConsistency" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.DurableInstancing.InstanceView.InstanceKeysConsistency" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.DurableInstancing.InstanceValueConsistency</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Konsistenzustand der InstanceKeys-Eigenschaft ab.</summary>
+        <value>Der Konsistenzwert von Instanzschlüsseln. "InstanceValueConsistency.None" gibt an, dass die InstanceKeys-Eigenschaft ein vollständig gefülltes und gesperrtes Set von Instanzschlüsseln (jedoch nicht zwangsweise die Metadaten der einzelnen Schlüssel) enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceMetadata">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt; InstanceMetadata { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;class System.Xml.Linq.XName, class System.Runtime.DurableInstancing.InstanceValue&gt; InstanceMetadata" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.DurableInstancing.InstanceView.InstanceMetadata" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Metadaten einer Instanz als Wörterbuch mit Namen und <see cref="T:System.Runtime.DurableInstancing.InstanceValue" />-Objekten ab.</summary>
+        <value>Die Metadaten der Instanz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceMetadataConsistency">
+      <MemberSignature Language="C#" Value="public System.Runtime.DurableInstancing.InstanceValueConsistency InstanceMetadataConsistency { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.DurableInstancing.InstanceValueConsistency InstanceMetadataConsistency" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.DurableInstancing.InstanceView.InstanceMetadataConsistency" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.DurableInstancing.InstanceValueConsistency</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Konsistenzzustand der InstanceMetadata-Eigenschaft ab.</summary>
+        <value>Die Konsistenz der Instanzmetadaten. "InstanceValueConsistency.None" gibt an, dass die InstanceMetadata-Eigenschaft ein vollständig gefülltes und gesperrtes Set von Instanzmetadaten enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceOwner">
+      <MemberSignature Language="C#" Value="public System.Runtime.DurableInstancing.InstanceOwner InstanceOwner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.DurableInstancing.InstanceOwner InstanceOwner" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.DurableInstancing.InstanceView.InstanceOwner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.DurableInstancing.InstanceOwner</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Besitzer der Instanz ab.</summary>
+        <value>Der Besitzer der Instanz. Gibt NULL zurück, wenn der zugeordnete Instanzhandle nicht an einen Instanzbesitzer gebunden ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceOwnerMetadata">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt; InstanceOwnerMetadata { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;class System.Xml.Linq.XName, class System.Runtime.DurableInstancing.InstanceValue&gt; InstanceOwnerMetadata" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.DurableInstancing.InstanceView.InstanceOwnerMetadata" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Metadaten für einen Instanzbesitzer als Wörterbuch mit Namen und Werten ab.</summary>
+        <value>Ein Wörterbuch, das Instanzbesitzermetadaten enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceOwnerMetadataConsistency">
+      <MemberSignature Language="C#" Value="public System.Runtime.DurableInstancing.InstanceValueConsistency InstanceOwnerMetadataConsistency { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.DurableInstancing.InstanceValueConsistency InstanceOwnerMetadataConsistency" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.DurableInstancing.InstanceView.InstanceOwnerMetadataConsistency" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.DurableInstancing.InstanceValueConsistency</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Konsistenzzustand der InstanceOwnerMetadata-Eigenschaft ab.</summary>
+        <value>Die Konsistenz der Instanzbesitzermetadaten.  Gibt NULL zurück, wenn der zugeordnete Instanzhandle nicht an einen Instanzbesitzer gebunden ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceState">
+      <MemberSignature Language="C#" Value="public System.Runtime.DurableInstancing.InstanceState InstanceState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.DurableInstancing.InstanceState InstanceState" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.DurableInstancing.InstanceView.InstanceState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.DurableInstancing.InstanceState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zustand der Instanz ("Unbekannt", "Nicht initialisiert", "Initialisiert" bzw. "Abgeschlossen") ab.</summary>
+        <value>Der Zustand der Instanz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceStoreQueryResults">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Runtime.DurableInstancing.InstanceStoreQueryResult&gt; InstanceStoreQueryResults { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Runtime.DurableInstancing.InstanceStoreQueryResult&gt; InstanceStoreQueryResults" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.DurableInstancing.InstanceView.InstanceStoreQueryResults" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Runtime.DurableInstancing.InstanceStoreQueryResult&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von <see cref="T:System.Runtime.DurableInstancing.InstanceStoreQueryResult" />-Objekten ab. Die Auflistung wid automatisch zurückgesetzt. So wird festgelegt, dass sie bei jeder Ausführung eines Befehls für den zugeordneten Instanzhandle geleert wird.</summary>
+        <value>Eine Auflistung von <see cref="T:System.Runtime.DurableInstancing.InstanceStoreQueryResult" />-Objekten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBoundToInstance">
+      <MemberSignature Language="C#" Value="public bool IsBoundToInstance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBoundToInstance" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.DurableInstancing.InstanceView.IsBoundToInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen Wert zurück, der angibt, ob der zugeordnete Instanzhandle an eine Instanz gebunden ist.</summary>
+        <value>
+          <see langword="true" />Wenn der zugeordnete Instanzhandle ist an eine Instanz gebunden; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBoundToInstanceOwner">
+      <MemberSignature Language="C#" Value="public bool IsBoundToInstanceOwner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBoundToInstanceOwner" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.DurableInstancing.InstanceView.IsBoundToInstanceOwner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen Wert zurück, der angibt, ob der zugeordnete Instanzhandle an einen Instanzbesitzer gebunden ist.</summary>
+        <value>
+          <see langword="true" />Wenn der zugeordnete Instanzhandle ist an einen instanzbesitzer gebunden; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBoundToLock">
+      <MemberSignature Language="C#" Value="public bool IsBoundToLock { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBoundToLock" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.DurableInstancing.InstanceView.IsBoundToLock" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen Wert zurück, der angibt, ob der zugeordnete Instanzhandle an eine Instanzsperre gebunden ist.</summary>
+        <value>
+          <see langword="true" />Wenn der zugeordnete Instanzhandle ist an eine Instanzsperre gebunden; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

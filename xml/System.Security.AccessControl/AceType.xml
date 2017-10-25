@@ -1,0 +1,427 @@
+<Type Name="AceType" FullName="System.Security.AccessControl.AceType">
+  <TypeSignature Language="C#" Value="public enum AceType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AceType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.AccessControl.AceType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.AccessControl</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Definiert die verfügbaren Zugriff Control Entry (ACE)-Typen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ MaxDefinedAceType ist der größte derzeit definierte ACE-Typ. Benutzerdefinierte ACE-Typen müssen definiert werden, um die Werte, die größer als MaxDefinedAceType aufweisen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AccessAllowed">
+      <MemberSignature Language="C#" Value="AccessAllowed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.AceType AccessAllowed = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceType.AccessAllowed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermöglicht den Zugriff auf ein Objekt für einen bestimmten Vertrauensnehmer identifizierte ein <see cref="T:System.Security.Principal.IdentityReference" /> Objekt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessAllowedCallback">
+      <MemberSignature Language="C#" Value="AccessAllowedCallback" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.AceType AccessAllowedCallback = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceType.AccessAllowedCallback" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermöglicht den Zugriff auf ein Objekt für einen bestimmten Vertrauensnehmer identifizierte ein <see cref="T:System.Security.Principal.IdentityReference" /> Objekt. Dieser ACE-Typ kann optional Rückrufdaten enthalten. Die Rückrufdaten ist eine Ressource-Manager-spezifische BLOB, das nicht interpretiert wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessAllowedCallbackObject">
+      <MemberSignature Language="C#" Value="AccessAllowedCallbackObject" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.AceType AccessAllowedCallbackObject = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceType.AccessAllowedCallbackObject" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermöglicht den Zugriff auf ein Objekt, eine Eigenschaft festgelegt oder eine Eigenschaft. Der ACE enthält eine Reihe von Zugriffsrechten, eine GUID, die den Typ des Objekts identifiziert und ein <see cref="T:System.Security.Principal.IdentityReference" /> -Objekt, das den Vertrauensnehmer identifiziert, dem das System Zugriff gewährt wird. Der ACE enthält außerdem eine GUID und eine Gruppe von Flags, die Vererbung des ACE von untergeordneten Objekten zu steuern. Dieser ACE-Typ kann optional Rückrufdaten enthalten. Die Rückrufdaten ist eine Ressource-Manager-spezifische BLOB, das nicht interpretiert wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessAllowedCompound">
+      <MemberSignature Language="C#" Value="AccessAllowedCompound" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.AceType AccessAllowedCompound = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceType.AccessAllowedCompound" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Definiert, aber nie verwendet. Aus Gründen der Vollständigkeit enthalten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessAllowedObject">
+      <MemberSignature Language="C#" Value="AccessAllowedObject" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.AceType AccessAllowedObject = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceType.AccessAllowedObject" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermöglicht den Zugriff auf ein Objekt, eine Eigenschaft festgelegt oder eine Eigenschaft. Der ACE enthält eine Reihe von Zugriffsrechten, eine GUID, die den Typ des Objekts identifiziert und ein <see cref="T:System.Security.Principal.IdentityReference" /> -Objekt, das den Vertrauensnehmer identifiziert, dem das System Zugriff gewährt wird. Der ACE enthält außerdem eine GUID und eine Gruppe von Flags, die Vererbung des ACE von untergeordneten Objekten zu steuern.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessDenied">
+      <MemberSignature Language="C#" Value="AccessDenied" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.AceType AccessDenied = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceType.AccessDenied" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verweigert den Zugriff auf ein Objekt für einen bestimmten Vertrauensnehmer identifizierte ein <see cref="T:System.Security.Principal.IdentityReference" /> Objekt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessDeniedCallback">
+      <MemberSignature Language="C#" Value="AccessDeniedCallback" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.AceType AccessDeniedCallback = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceType.AccessDeniedCallback" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verweigert den Zugriff auf ein Objekt für einen bestimmten Vertrauensnehmer identifizierte ein <see cref="T:System.Security.Principal.IdentityReference" /> Objekt. Dieser ACE-Typ kann optional Rückrufdaten enthalten. Die Rückrufdaten ist eine Ressource-Manager-spezifische BLOB, das nicht interpretiert wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessDeniedCallbackObject">
+      <MemberSignature Language="C#" Value="AccessDeniedCallbackObject" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.AceType AccessDeniedCallbackObject = int32(12)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceType.AccessDeniedCallbackObject" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verweigert den Zugriff auf ein Objekt, eine Eigenschaft festgelegt oder eine Eigenschaft an. Der ACE enthält eine Reihe von Zugriffsrechten, eine GUID, die den Typ des Objekts identifiziert und ein <see cref="T:System.Security.Principal.IdentityReference" /> -Objekt, das den Vertrauensnehmer identifiziert, dem das System Zugriff gewährt wird. Der ACE enthält außerdem eine GUID und eine Gruppe von Flags, die Vererbung des ACE von untergeordneten Objekten zu steuern. Dieser ACE-Typ kann optional Rückrufdaten enthalten. Die Rückrufdaten ist eine Ressource-Manager-spezifische BLOB, das nicht interpretiert wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessDeniedObject">
+      <MemberSignature Language="C#" Value="AccessDeniedObject" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.AceType AccessDeniedObject = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceType.AccessDeniedObject" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verweigert den Zugriff auf ein Objekt, eine Eigenschaft festgelegt oder eine Eigenschaft an. Der ACE enthält eine Reihe von Zugriffsrechten, eine GUID, die den Typ des Objekts identifiziert und ein <see cref="T:System.Security.Principal.IdentityReference" /> -Objekt, das den Vertrauensnehmer identifiziert, dem das System Zugriff gewährt wird. Der ACE enthält außerdem eine GUID und eine Gruppe von Flags, die Vererbung des ACE von untergeordneten Objekten zu steuern.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxDefinedAceType">
+      <MemberSignature Language="C#" Value="MaxDefinedAceType" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.AceType MaxDefinedAceType = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceType.MaxDefinedAceType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verfolgt den maximalen definierten ACE Geben Sie in der Enumeration.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemAlarm">
+      <MemberSignature Language="C#" Value="SystemAlarm" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.AceType SystemAlarm = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceType.SystemAlarm" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Für zukünftige Verwendung reserviert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemAlarmCallback">
+      <MemberSignature Language="C#" Value="SystemAlarmCallback" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.AceType SystemAlarmCallback = int32(14)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceType.SystemAlarmCallback" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Für zukünftige Verwendung reserviert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemAlarmCallbackObject">
+      <MemberSignature Language="C#" Value="SystemAlarmCallbackObject" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.AceType SystemAlarmCallbackObject = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceType.SystemAlarmCallbackObject" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Für zukünftige Verwendung reserviert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemAlarmObject">
+      <MemberSignature Language="C#" Value="SystemAlarmObject" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.AceType SystemAlarmObject = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceType.SystemAlarmObject" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Für zukünftige Verwendung reserviert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemAudit">
+      <MemberSignature Language="C#" Value="SystemAudit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.AceType SystemAudit = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceType.SystemAudit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bewirkt, dass eine Meldung, die protokolliert werden, wenn ein angegebene Vertrauensnehmer versucht, Zugriff auf ein Objekt. Der Vertrauensnehmer identifizierte ein <see cref="T:System.Security.Principal.IdentityReference" /> Objekt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemAuditCallback">
+      <MemberSignature Language="C#" Value="SystemAuditCallback" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.AceType SystemAuditCallback = int32(13)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceType.SystemAuditCallback" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bewirkt, dass eine Meldung, die protokolliert werden, wenn ein angegebene Vertrauensnehmer versucht, Zugriff auf ein Objekt. Der Vertrauensnehmer identifizierte ein <see cref="T:System.Security.Principal.IdentityReference" /> Objekt. Dieser ACE-Typ kann optional Rückrufdaten enthalten. Die Rückrufdaten ist eine Ressource-Manager-spezifische BLOB, das nicht interpretiert wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemAuditCallbackObject">
+      <MemberSignature Language="C#" Value="SystemAuditCallbackObject" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.AceType SystemAuditCallbackObject = int32(15)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceType.SystemAuditCallbackObject" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bewirkt, dass eine Meldung, die protokolliert werden, wenn ein angegebene Vertrauensnehmer versucht, Zugriff auf ein Objekt oder-Unterobjekte z. B. Eigenschaftensätze oder Eigenschaften. Der ACE enthält eine Reihe von Zugriffsrechten, eine GUID, die den Typ des Objekts oder Unterobjekts identifiziert und ein <see cref="T:System.Security.Principal.IdentityReference" /> -Objekt, das den Vertrauensnehmer identifiziert, für den das System Zugriff überwachen. Der ACE enthält außerdem eine GUID und eine Gruppe von Flags, die Vererbung des ACE von untergeordneten Objekten zu steuern. Dieser ACE-Typ kann optional Rückrufdaten enthalten. Die Rückrufdaten ist eine Ressource-Manager-spezifische BLOB, das nicht interpretiert wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemAuditObject">
+      <MemberSignature Language="C#" Value="SystemAuditObject" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.AceType SystemAuditObject = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceType.SystemAuditObject" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bewirkt, dass eine Meldung, die protokolliert werden, wenn ein angegebene Vertrauensnehmer versucht, Zugriff auf ein Objekt oder-Unterobjekte z. B. Eigenschaftensätze oder Eigenschaften. Der ACE enthält eine Reihe von Zugriffsrechten, eine GUID, die den Typ des Objekts oder Unterobjekts identifiziert und ein <see cref="T:System.Security.Principal.IdentityReference" /> -Objekt, das den Vertrauensnehmer identifiziert, für den das System Zugriff überwachen. Der ACE enthält außerdem eine GUID und eine Gruppe von Flags, die Vererbung des ACE von untergeordneten Objekten zu steuern.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

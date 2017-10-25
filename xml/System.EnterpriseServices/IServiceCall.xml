@@ -1,0 +1,63 @@
+<Type Name="IServiceCall" FullName="System.EnterpriseServices.IServiceCall">
+  <TypeSignature Language="C#" Value="public interface IServiceCall" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IServiceCall" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.IServiceCall" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("BD3E2E12-42DD-40f4-A09A-95A50C58304B")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementiert die Batchverarbeitung, die über die Aktivität erstellt von gesendet wird <see cref="T:System.EnterpriseServices.Activity" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendung <xref:System.EnterpriseServices.IServiceCall> Batchverarbeitung ausführen, die COM+-Dienste verwendet werden, ohne das Erstellen einer Komponente speziell für die Verwendung dieser Dienste. Dieser Schnittstelle können Skript Umgebungen wie z. B. Internet Information Services (IIS) und ASP.NET nutzen, COM+-Diensten ohne die Notwendigkeit, eine COM+-Komponente zu erstellen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="OnCall">
+      <MemberSignature Language="C#" Value="public void OnCall ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnCall() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.IServiceCall.OnCall" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Startet die Ausführung der Batchverarbeitung in diese Methode implementiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Batchverarbeitung, das diese Methode ausgeführt wird ausgeführt, im Kontext und Thread-Apartment der Aktivität erstellt, durch den Aufruf von <xref:System.EnterpriseServices.Activity>. Die Batchverarbeitung in dieser Methode wird ausgeführt, durch den Aufruf von entweder <xref:System.EnterpriseServices.Activity.SynchronousCall%2A?displayProperty=nameWithType> oder <xref:System.EnterpriseServices.Activity.AsynchronousCall%2A?displayProperty=nameWithType>.  
+  
+> [!CAUTION]
+>  Sie müssen sicherstellen, dass diese Methode threadsicher in Situationen, in dem die Aktivität-Objekt, indem erstellt <xref:System.EnterpriseServices.Activity> wird nicht mit einem synchronisierten Kontext erstellt, weil in solchen Situationen viele Aufrufe von <xref:System.EnterpriseServices.IServiceCall.OnCall%2A> können zur selben Zeit ausführen.  
+  
+ Um die beste Leistung aus dem System zu erreichen, die Konfiguration des Sicherheitskontexts der Aktivität erstellt <xref:System.EnterpriseServices.Activity> abgeglichen werden an die Batchverarbeitung ausgeführt werden, indem Sie die <xref:System.EnterpriseServices.IServiceCall.OnCall%2A> Methode. Angenommen, wenn die Batchverarbeitung in der <xref:System.EnterpriseServices.IServiceCall.OnCall%2A> Methode verwendet, dem Pool hinzugefügt werden Objekte, die Aktivität erstellt von <xref:System.EnterpriseServices.Activity> für die Verwendung der Multithread-Apartment (MTA) konfiguriert werden sollte.  
+  
+ Informationen zu dem Pool hinzugefügt werden Objekten finden Sie unter "Anforderungen für Pool Objekte" in der Platform SDK in MSDN.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

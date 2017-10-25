@@ -1,0 +1,196 @@
+<Type Name="UpdateMapMetadata" FullName="System.Activities.DynamicUpdate.UpdateMapMetadata">
+  <TypeSignature Language="C#" Value="public class UpdateMapMetadata" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UpdateMapMetadata extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.DynamicUpdate.UpdateMapMetadata" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt Optionen für die Karte Updatemetadaten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse unterstützt die Versionskontrolle und die dynamische Updatefunktionalität von Windows Workflow Foundation. [!INCLUDE[crabout](~/includes/crabout-md.md)]workflowversionsverwaltung workflowidentität und dynamische Updates finden Sie unter den folgenden Themen.  
+  
+ [Workflowversionsverwaltung](http://go.microsoft.com/fwlink/?LinkID=271561)  
+ Beschreibt den Workflow Versioning Funktionen, eingeführt in [!INCLUDE[net_v45](~/includes/net-v45-md.md)].  
+  
+ [Dynamisches Update](http://go.microsoft.com/fwlink/?LinkId=271563)  
+ Beschreibt, wie die Workflowdefinition einer persistenten Workflowinstanz zu aktualisieren, indem Sie die Verwendung des dynamischen Updates.  
+  
+ [Verwenden von WorkflowApplication-Identität und-versionsverwaltung](http://go.microsoft.com/fwlink/?LinkId=271564)  
+ Beschreibt, wie <xref:System.Activities.WorkflowIdentity> zum parallelen Hosten mehrerer Workflowversionen verwendet wird.  
+  
+ [Parallele Versionsverwaltung in WorkflowServiceHost](http://go.microsoft.com/fwlink/?LinkId=271565)  
+ Beschreibt, wie mehrere Versionen eines Workflows für einen einzelnen Endpunkt zu hosten.  
+  
+ [Vorgehensweise: Paralleles Hosten mehrerer Workflowversionen](http://go.microsoft.com/fwlink/?LinkId=271566)  
+ Dieser Schritt der [Lernprogramm für erste Schritte](http://go.microsoft.com/fwlink/?LinkId=271570) Aktualisieren einer Workflowdefinition und Hosten von Workflows mithilfe der alten und neuen Definition gleichzeitig veranschaulicht.  
+  
+ [Vorgehensweise: Aktualisieren der Definition einer ausgeführten Workflowinstanz](http://go.microsoft.com/fwlink/?LinkId=271567)  
+ Dieser Schritt der [Lernprogramm für erste Schritte](http://go.microsoft.com/fwlink/?LinkId=271570) demonstriert das Aktualisieren der persistenten Workflowinstanzen, um eine neue Workflowdefinition verwenden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddMatch">
+      <MemberSignature Language="C#" Value="public void AddMatch (System.Activities.Activity updatedChild, System.Activities.Activity originalChild);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddMatch(class System.Activities.Activity updatedChild, class System.Activities.Activity originalChild) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DynamicUpdate.UpdateMapMetadata.AddMatch(System.Activities.Activity,System.Activities.Activity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="updatedChild" Type="System.Activities.Activity" />
+        <Parameter Name="originalChild" Type="System.Activities.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="updatedChild">Das aktualisierte untergeordnete Element.</param>
+        <param name="originalChild">Das untergeordnete ursprüngliche Element.</param>
+        <summary>Fügt eine Übereinstimmung für <see cref="T:System.Activities.DynamicUpdate.UpdateMapMetadata" /> mit dem angegebenen untergeordneten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddMatch">
+      <MemberSignature Language="C#" Value="public void AddMatch (System.Activities.Variable updatedVariable, System.Activities.Variable originalVariable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddMatch(class System.Activities.Variable updatedVariable, class System.Activities.Variable originalVariable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DynamicUpdate.UpdateMapMetadata.AddMatch(System.Activities.Variable,System.Activities.Variable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="updatedVariable" Type="System.Activities.Variable" />
+        <Parameter Name="originalVariable" Type="System.Activities.Variable" />
+      </Parameters>
+      <Docs>
+        <param name="updatedVariable">Die aktualisierte Variable.</param>
+        <param name="originalVariable">Die ursprüngliche Variable.</param>
+        <summary>Fügt eine Übereinstimmung für <see cref="T:System.Activities.DynamicUpdate.UpdateMapMetadata" /> mit der angegebenen Variablen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowUpdateInsideThisActivity">
+      <MemberSignature Language="C#" Value="public void AllowUpdateInsideThisActivity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AllowUpdateInsideThisActivity() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DynamicUpdate.UpdateMapMetadata.AllowUpdateInsideThisActivity" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ermöglicht die Aktualisierung der Zuordnung von Metadaten in der aktuellen Aktivität.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisallowUpdateInsideThisActivity">
+      <MemberSignature Language="C#" Value="public void DisallowUpdateInsideThisActivity (string reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DisallowUpdateInsideThisActivity(string reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DynamicUpdate.UpdateMapMetadata.DisallowUpdateInsideThisActivity(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reason" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="reason">Der Grund der untersagen.</param>
+        <summary>Lässt nicht zu der Zuordnung von Metadaten in der aktuellen Aktivität aktualisieren.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMatch">
+      <MemberSignature Language="C#" Value="public System.Activities.Activity GetMatch (System.Activities.Activity updatedChild);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Activities.Activity GetMatch(class System.Activities.Activity updatedChild) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DynamicUpdate.UpdateMapMetadata.GetMatch(System.Activities.Activity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="updatedChild" Type="System.Activities.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="updatedChild">Das aktualisierte untergeordnete Element.</param>
+        <summary>Ruft eine Übereinstimmung für <see cref="T:System.Activities.DynamicUpdate.UpdateMapMetadata" /> mit dem angegebenen untergeordneten.</summary>
+        <returns>Die Übereinstimmung für <see cref="T:System.Activities.DynamicUpdate.UpdateMapMetadata" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMatch">
+      <MemberSignature Language="C#" Value="public System.Activities.Variable GetMatch (System.Activities.Variable updatedVariable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Activities.Variable GetMatch(class System.Activities.Variable updatedVariable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DynamicUpdate.UpdateMapMetadata.GetMatch(System.Activities.Variable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Variable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="updatedVariable" Type="System.Activities.Variable" />
+      </Parameters>
+      <Docs>
+        <param name="updatedVariable">Die aktualisierte Variable.</param>
+        <summary>Ruft eine Übereinstimmung für <see cref="T:System.Activities.DynamicUpdate.UpdateMapMetadata" /> mit der angegebenen Variablen.</summary>
+        <returns>Die Übereinstimmung für <see cref="T:System.Activities.DynamicUpdate.UpdateMapMetadata" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReferenceToImportedChild">
+      <MemberSignature Language="C#" Value="public bool IsReferenceToImportedChild (System.Activities.Activity childActivity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsReferenceToImportedChild(class System.Activities.Activity childActivity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DynamicUpdate.UpdateMapMetadata.IsReferenceToImportedChild(System.Activities.Activity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="childActivity" Type="System.Activities.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="childActivity">Die untergeordnete Aktivität.</param>
+        <summary>Gibt an, ob die <see cref="T:System.Activities.DynamicUpdate.UpdateMapMetadata" /> ist ein Verweis auf importierte untergeordnete.</summary>
+        <returns>
+          <see langword="True" />Wenn die <see cref="T:System.Activities.DynamicUpdate.UpdateMapMetadata" /> ist ein Verweis auf importierte untergeordnete; anderenfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

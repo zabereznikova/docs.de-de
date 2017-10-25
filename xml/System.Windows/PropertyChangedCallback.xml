@@ -1,0 +1,38 @@
+<Type Name="PropertyChangedCallback" FullName="System.Windows.PropertyChangedCallback">
+  <TypeSignature Language="C#" Value="public delegate void PropertyChangedCallback(DependencyObject d, DependencyPropertyChangedEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PropertyChangedCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.PropertyChangedCallback" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="d" Type="System.Windows.DependencyObject" />
+    <Parameter Name="e" Type="System.Windows.DependencyPropertyChangedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="d">Die <see cref="T:System.Windows.DependencyObject" /> auf dem die Eigenschaft Wert geändert hat.</param>
+    <param name="e">Ereignisdaten, die von jedem Ereignis ausgegeben werden, das Änderungen am tatsächlichen Wert dieser Eigenschaft nachverfolgt.</param>
+    <summary>Stellt den Rückruf dar, der aufgerufen wird, wenn der effektive Eigenschaftswert einer Abhängigkeitseigenschaft geändert wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird eine neue Abhängigkeitseigenschaft, die mit der Signatur, die angibt, registriert einen <xref:System.Windows.PropertyChangedCallback>. Die <xref:System.Windows.PropertyChangedCallback> wird verwendet, um einen Rückruf erstellt wird, eine interne Eigenschaft geändert, wenn die öffentliche Eigenschaft ändert.  
+  
+ [!code-csharp[WPFAquariumSln#RegisterAG](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerag)]
+ [!code-vb[WPFAquariumSln#RegisterAG](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerag)]  
+  
+ [!code-csharp[WPFAquariumSln#AGPropertyChangedCallback](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#agpropertychangedcallback)]
+ [!code-vb[WPFAquariumSln#AGPropertyChangedCallback](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#agpropertychangedcallback)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

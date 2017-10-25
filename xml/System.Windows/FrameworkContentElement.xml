@@ -1,0 +1,2734 @@
+<Type Name="FrameworkContentElement" FullName="System.Windows.FrameworkContentElement">
+  <TypeSignature Language="C#" Value="public class FrameworkContentElement : System.Windows.ContentElement, System.ComponentModel.ISupportInitialize, System.Windows.IFrameworkInputElement, System.Windows.Markup.IQueryAmbient" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi FrameworkContentElement extends System.Windows.ContentElement implements class System.ComponentModel.ISupportInitialize, class System.Windows.IFrameworkInputElement, class System.Windows.IInputElement, class System.Windows.Markup.IQueryAmbient" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.FrameworkContentElement" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.ContentElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ISupportInitialize</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Windows.IFrameworkInputElement</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Windows.Markup.IQueryAmbient</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.RuntimeNameProperty("Name")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.UsableDuringInitialization(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.XmlLangProperty("Language")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.StyleTypedProperty(Property="FocusVisualStyle", StyleTargetType=typeof(System.Windows.Controls.Control))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+      <see cref="T:System.Windows.FrameworkContentElement" />ist der WPF-Frameworkebene vorgenommene Implementierung und Erweiterung der <see cref="T:System.Windows.ContentElement" /> Basisklasse. <see cref="T:System.Windows.FrameworkContentElement" />bietet Unterstützung für zusätzliche Eingabe-APIs (einschließlich QuickInfos und Kontextmenüs), Storyboards, Datenkontext für die Datenbindung, Formatvorlagen und logischen Struktur Hilfs-APIs.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.FrameworkContentElement>eigene Renderingverhalten definieren nicht noch; Instanziieren ein tatsächliches <xref:System.Windows.FrameworkContentElement> Klasseninstanz im Code oder Markup ist möglich, aber zeigt "nothing" in einem [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Anwendung [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)]. Renderinglogik muss angegeben werden, von Klassen, <xref:System.Windows.FrameworkContentElement> untergeordneten Elemente als Teil ihrer Inhaltsmodell oder in <xref:System.Windows.FrameworkContentElement> abgeleitete Klassen.  
+  
+ <xref:System.Windows.FrameworkContentElement>Viele der gleichen absichtlich codenavigation [!INCLUDE[TLA2#tla_api#plural](~/includes/tla2sharptla-apisharpplural-md.md)] als <xref:System.Windows.FrameworkElement>. Beachten Sie, dass bestimmte [!INCLUDE[TLA2#tla_api#plural](~/includes/tla2sharptla-apisharpplural-md.md)] finden Sie auf <xref:System.Windows.FrameworkElement> keine <xref:System.Windows.FrameworkContentElement> entspricht. Einige der <xref:System.Windows.FrameworkElement> [!INCLUDE[TLA2#tla_api#plural](~/includes/tla2sharptla-apisharpplural-md.md)] sind für Funktionen wie die Darstellung von Geometrie oder das Layout, die für nicht relevant sind eine <xref:System.Windows.FrameworkContentElement>.  
+  
+ Die meisten vorhandenen <xref:System.Windows.FrameworkContentElement> abgeleitete Klassen befinden sich der <xref:System.Windows.Documents> Namespace. Viele dieser abgeleiteten Klassen implementieren Elemente für die flussdokumentmodells. Bestimmte abgeleiteten Klassen, z. B. <xref:System.Windows.Documents.Hyperlink> einige Steuerelement-ähnliche Funktionalität, sondern abgeleitet sind <xref:System.Windows.FrameworkContentElement> , dass das Steuerelement in das Flussdokumentmodell mit einbezogen werden können.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FrameworkContentElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkContentElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.FrameworkContentElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddLogicalChild">
+      <MemberSignature Language="C#" Value="protected void AddLogicalChild (object child);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void AddLogicalChild(object child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkContentElement.AddLogicalChild(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="child" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="child">Das untergeordnete Element, das hinzugefügt werden soll.</param>
+        <summary>Fügt das bereitgestellte Element als untergeordnetes Element dieses Elements hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann eine Ausnahme ausgelöst, wenn Sie zu einem Zeitpunkt aufgerufen wird, wenn die logische Struktur von einem anderen Prozess durchlaufen wird.  
+  
+ Die meisten <xref:System.Windows.FrameworkContentElement> abgeleitete Klassen verfügbar zu machen, dedizierte Auflistungen, die für die Kapselung verantwortlich sind (z. B. <xref:System.Windows.Documents.Span.Inlines%2A> auf die <xref:System.Windows.Documents.Span> Klasse. <xref:System.Windows.Documents.Section.Blocks%2A> auf die <xref:System.Windows.Documents.Section> Klasse). Sie können in der Regel vermeiden, indem der logischen Struktur direkt zu bearbeiten, wenn Sie von diesen Klassen ableiten. Arbeiten mit der logischen Struktur für Inhaltselemente ist, die einen speziellen Parser oder ein spezieller benötigen möglicherweise erweiterte Szenario <xref:System.Windows.FrameworkElement> , fungiert als übergeordnetes Rendering-Element (Inhaltshost).  
+  
+ Weitere Informationen zur Verwendung von <xref:System.Windows.FrameworkContentElement.LogicalChildren%2A> und <xref:System.Windows.FrameworkContentElement.AddLogicalChild%2A>, finden Sie unter [Strukturen in WPF](~/docs/framework/wpf/advanced/trees-in-wpf.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInit">
+      <MemberSignature Language="C#" Value="public virtual void BeginInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkContentElement.BeginInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, bevor ein Element initialisiert wird.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Überschreiben Sie diese Methode, um eine besondere Behandlung bereitstellen, die ausgeführt werden soll, bevor das Element während der Prozess des Ladens Element initialisiert wird.  
+  
+ Die Implementierung sollte die basisimplementierung aufrufen, da die Implementierung Base (Standard) einige interne Flags Initialisierung des festlegt.  
+  
+ Die grundlegende Implementierung löst eine Ausnahme aus, wenn <see cref="M:System.Windows.FrameworkContentElement.BeginInit" /> heißt für dasselbe Element vor dem Erreichen von mehr als einmal <see cref="M:System.Windows.FrameworkContentElement.EndInit" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginStoryboard">
+      <MemberSignature Language="C#" Value="public void BeginStoryboard (System.Windows.Media.Animation.Storyboard storyboard);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void BeginStoryboard(class System.Windows.Media.Animation.Storyboard storyboard) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkContentElement.BeginStoryboard(System.Windows.Media.Animation.Storyboard)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="storyboard" Type="System.Windows.Media.Animation.Storyboard" />
+      </Parameters>
+      <Docs>
+        <param name="storyboard">Das Storyboard zu beginnen.</param>
+        <summary>Startet die Abfolge der Aktionen, die im bereitgestellten Storyboard enthalten sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für die Signaturen, die keine verwenden die `isControllable`, Parameter, oder wenn dieser Parameter angegeben wird `false`, der Animation zugeordneten Uhren auf der Zeitachse werden entfernt, sobald sie den Zeitraum "Fill" erreicht. Die Animation kann nicht aus diesem Grund neu gestartet werden, nach der einmal ausgeführt wird. Beachten Sie, dass eine Animation steuern auch erfordert, dass das Storyboard benannt oder als eine Instanz im Code zugegriffen werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginStoryboard">
+      <MemberSignature Language="C#" Value="public void BeginStoryboard (System.Windows.Media.Animation.Storyboard storyboard, System.Windows.Media.Animation.HandoffBehavior handoffBehavior);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void BeginStoryboard(class System.Windows.Media.Animation.Storyboard storyboard, valuetype System.Windows.Media.Animation.HandoffBehavior handoffBehavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkContentElement.BeginStoryboard(System.Windows.Media.Animation.Storyboard,System.Windows.Media.Animation.HandoffBehavior)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="storyboard" Type="System.Windows.Media.Animation.Storyboard" />
+        <Parameter Name="handoffBehavior" Type="System.Windows.Media.Animation.HandoffBehavior" />
+      </Parameters>
+      <Docs>
+        <param name="storyboard">Das Storyboard zu beginnen.</param>
+        <param name="handoffBehavior">Der Wert der Enumeration, die beschreibt Verhalten verwenden, wenn eine in das Storyboard beschriebene Eigenschaft bereits animiert wird.</param>
+        <summary>Startet die Abfolge der Aktionen, die in der bereitgestellten Storyboard mit Optionen angegeben, für welche erfolgen soll, wenn die Eigenschaft bereits animiert wird enthalten sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für die Signaturen, die keine verwenden die `isControllable`, Parameter, oder wenn dieser Parameter angegeben wird `false`, der Animation zugeordneten Uhren auf der Zeitachse werden entfernt, sobald sie den Zeitraum "Fill" erreicht. Die Animation kann nicht aus diesem Grund neu gestartet werden, nach der einmal ausgeführt wird. Beachten Sie, dass eine Animation steuern auch erfordert, dass das Storyboard benannt oder als eine Instanz im Code zugegriffen werden kann.  
+  
+## <a name="using-the-compose-handoffbehavior"></a>Mit dem Verfassen HandoffBehavior  
+ Beim Anwenden einer <xref:System.Windows.Media.Animation.Storyboard>, <xref:System.Windows.Media.Animation.AnimationTimeline>, oder <xref:System.Windows.Media.Animation.AnimationClock> auf eine Eigenschaft mit der <xref:System.Windows.Media.Animation.HandoffBehavior.Compose> <xref:System.Windows.Media.Animation.HandoffBehavior>, stellen alle <xref:System.Windows.Media.Animation.Clock> zuvor mit dieser Eigenschaft zugewiesenen Objekte weiter an Systemressourcen beanspruchen, das Timing-System verwendet wird Entfernen Sie die Uhren nicht automatisch.  
+  
+ Um Leistungsprobleme zu vermeiden, wenn Sie eine große Anzahl von Uhren mit anwenden <xref:System.Windows.Media.Animation.HandoffBehavior.Compose>, Sie sollten zusammengesetzte Uhren aus der animierten Eigenschaft nach dem Abschluss entfernen. Es gibt mehrere Möglichkeiten, eine Uhr zu entfernen:  
+  
+-   Verwenden Sie zum Entfernen aller Uhren aus einer Eigenschaft der <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationClock%29> oder <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> -Methode des animierten Objekts. Geben Sie die Eigenschaft als erster Parameter animierten und `null` als das zweite. Dadurch werden alle Animationsuhren aus der Eigenschaft entfernt.  
+  
+-   Zum Entfernen einer bestimmten <xref:System.Windows.Media.Animation.AnimationClock> , aus einer Liste von Uhren verwenden die <xref:System.Windows.Media.Animation.Clock.Controller%2A> Eigenschaft der <xref:System.Windows.Media.Animation.AnimationClock> abgerufen eine <xref:System.Windows.Media.Animation.ClockController>, rufen Sie anschließend die <xref:System.Windows.Media.Animation.ClockController.Remove%2A> Methode der <xref:System.Windows.Media.Animation.ClockController>. Dies erfolgt in der Regel in der <xref:System.Windows.Media.Animation.Clock.Completed> -Ereignishandler für eine Uhr. Beachten Sie, dass nur Stammuhren von gesteuert werden, können eine <xref:System.Windows.Media.Animation.ClockController>; das <xref:System.Windows.Media.Animation.Clock.Controller%2A> Eigenschaft einer untergeordneten Uhr gibt `null`. Beachten Sie auch, dass die <xref:System.Windows.Media.Animation.Clock.Completed> Ereignis wird nicht ausgelöst, wenn die effektive Dauer der Uhr endlos ist.  In diesem Fall muss der Benutzer bestimmen beim Aufrufen <xref:System.Windows.Media.Animation.ClockController.Remove%2A>.  
+  
+ Dies betrifft hauptsächlich Animationen für Objekte, die eine lange Lebensdauer haben.  Wenn ein Objekt Garbage Collection durchgeführt wird, wird die Uhren werden auch getrennt, und Sammlung veralteter Objekte aufgenommen.  
+  
+ Weitere Informationen zu Uhr Objekten finden Sie unter [Animationen und zeitlichen Steuerung Systemübersicht](~/docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginStoryboard">
+      <MemberSignature Language="C#" Value="public void BeginStoryboard (System.Windows.Media.Animation.Storyboard storyboard, System.Windows.Media.Animation.HandoffBehavior handoffBehavior, bool isControllable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void BeginStoryboard(class System.Windows.Media.Animation.Storyboard storyboard, valuetype System.Windows.Media.Animation.HandoffBehavior handoffBehavior, bool isControllable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkContentElement.BeginStoryboard(System.Windows.Media.Animation.Storyboard,System.Windows.Media.Animation.HandoffBehavior,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="storyboard" Type="System.Windows.Media.Animation.Storyboard" />
+        <Parameter Name="handoffBehavior" Type="System.Windows.Media.Animation.HandoffBehavior" />
+        <Parameter Name="isControllable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="storyboard">Das Storyboard zu beginnen.</param>
+        <param name="handoffBehavior">Der Wert der Enumeration, die beschreibt Verhalten verwenden, wenn eine in das Storyboard beschriebene Eigenschaft bereits animiert wird.</param>
+        <param name="isControllable">Bestimmt, ob die Animation steuerbar ist (angehalten werden kann), nachdem dieser gestartet wird.</param>
+        <summary>Startet die Abfolge der Aktionen, die in der bereitgestellten Storyboard mit dem angegebenen Zustand für das Steuerelement der Animation nach dem Start wird enthalten sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für die Signaturen, die keine verwenden die `isControllable`, Parameter, oder wenn dieser Parameter angegeben wird `false`, der Animation zugeordneten Uhren auf der Zeitachse werden entfernt, sobald sie den Zeitraum "Fill" erreicht. Die Animation kann nicht aus diesem Grund neu gestartet werden, nach der einmal ausgeführt wird. Beachten Sie, dass eine Animation steuern auch erfordert, dass das Storyboard benannt oder als eine Instanz im Code zugegriffen werden kann.  
+  
+## <a name="using-the-compose-handoffbehavior"></a>Mit dem Verfassen HandoffBehavior  
+ Beim Anwenden einer <xref:System.Windows.Media.Animation.Storyboard>, <xref:System.Windows.Media.Animation.AnimationTimeline>, oder <xref:System.Windows.Media.Animation.AnimationClock> auf eine Eigenschaft mit der <xref:System.Windows.Media.Animation.HandoffBehavior.Compose> <xref:System.Windows.Media.Animation.HandoffBehavior>, stellen alle <xref:System.Windows.Media.Animation.Clock> zuvor mit dieser Eigenschaft zugewiesenen Objekte weiter an Systemressourcen beanspruchen, das Timing-System verwendet wird Diese Uhren nicht automatisch entfernt werden.  
+  
+ Um Leistungsprobleme zu vermeiden, wenn Sie eine große Anzahl von Uhren mit anwenden <xref:System.Windows.Media.Animation.HandoffBehavior.Compose>, Sie sollten zusammengesetzte Uhren aus der animierten Eigenschaft nach dem Abschluss entfernen. Es gibt mehrere Möglichkeiten, eine Uhr zu entfernen:  
+  
+-   Verwenden Sie zum Entfernen aller Uhren aus einer Eigenschaft der <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationClock%29> oder <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> -Methode des animierten Objekts. Geben Sie die Eigenschaft als erster Parameter animierten und `null` als das zweite. Dadurch werden alle Animationsuhren aus der Eigenschaft entfernt.  
+  
+-   Zum Entfernen einer bestimmten <xref:System.Windows.Media.Animation.AnimationClock> , aus einer Liste von Uhren verwenden die <xref:System.Windows.Media.Animation.Clock.Controller%2A> Eigenschaft der <xref:System.Windows.Media.Animation.AnimationClock> abgerufen eine <xref:System.Windows.Media.Animation.ClockController>, rufen Sie anschließend die <xref:System.Windows.Media.Animation.ClockController.Remove%2A> Methode der <xref:System.Windows.Media.Animation.ClockController>. Dies erfolgt in der Regel in der <xref:System.Windows.Media.Animation.Clock.Completed> -Ereignishandler für eine Uhr. Beachten Sie, dass nur Stammuhren von gesteuert werden, können eine <xref:System.Windows.Media.Animation.ClockController>; das <xref:System.Windows.Media.Animation.Clock.Controller%2A> Eigenschaft einer untergeordneten Uhr gibt `null`. Beachten Sie auch, dass die <xref:System.Windows.Media.Animation.Clock.Completed> Ereignis wird nicht ausgelöst, wenn die effektive Dauer der Uhr endlos ist.  In diesem Fall muss der Benutzer bestimmen beim Aufrufen <xref:System.Windows.Media.Animation.ClockController.Remove%2A>.  
+  
+ Dies betrifft hauptsächlich Animationen für Objekte, die eine lange Lebensdauer haben.  Wenn ein Objekt Garbage Collection durchgeführt wird, wird die Uhren werden auch getrennt, und Sammlung veralteter Objekte aufgenommen.  
+  
+ Weitere Informationen zu Uhr Objekten finden Sie unter [Animationen und zeitlichen Steuerung Systemübersicht](~/docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingGroup">
+      <MemberSignature Language="C#" Value="public System.Windows.Data.BindingGroup BindingGroup { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Data.BindingGroup BindingGroup" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FrameworkContentElement.BindingGroup" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.NeverLocalize)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.BindingGroup</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.Data.BindingGroup" /> , die für das Element verwendet wird.</summary>
+        <value>Die <see cref="T:System.Windows.Data.BindingGroup" /> , die für das Element verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Data.BindingGroup> zum Überprüfen der Werte von mehreren Eigenschaften eines Objekts verwendet werden können. Nehmen wir beispielsweise an, dass eine Anwendung den Benutzer fordert auf eine Adresse eingeben, und dann ein Objekt des Typs füllt `Address`, die über die Eigenschaften verfügt `Street`, `City`, `ZipCode`, und `Country`, mit den Werten, die der Benutzer bereitgestellt. Die Anwendung verfügt über einen Bereich, vier enthält <xref:System.Windows.Controls.TextBox> Steuerelemente, von denen jedes an eine der Eigenschaften des Objekts gebunden ist. Können Sie eine <xref:System.Windows.Controls.ValidationRule> in einem <xref:System.Windows.Data.BindingGroup> zum Überprüfen der `Address` Objekt. Z. B. die <xref:System.Windows.Controls.ValidationRule> können sicherstellen, dass die Postleitzahl für das Land der Adresse gültig ist.  
+  
+ Untergeordnete Elemente erben die <xref:System.Windows.Data.BindingGroup> von den übergeordneten Elementen, genauso wie bei jeder anderen vererbbare Eigenschaft.  
+  
+<a name="dependencyPropertyInfo_BindingGroup"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.FrameworkContentElement.BindingGroupProperty>|  
+|Festgelegte Metadateneigenschaften **"true"**|<xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingGroupProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BindingGroupProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BindingGroupProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FrameworkContentElement.BindingGroupProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.FrameworkContentElement.BindingGroup" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BringIntoView">
+      <MemberSignature Language="C#" Value="public void BringIntoView ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void BringIntoView() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkContentElement.BringIntoView" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Versucht, dieses Element sichtbar, in einem bildlauffähigen Bereiche zu machen, der es enthalten ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Aufruf dieser Methode, rufen Sie <xref:System.Windows.Controls.ScrollContentPresenter.MakeVisible%2A> für alle übergeordneten Bereich mit verschiebbarem Fensterinhalt mit dem Element (das übergeordnete Element ist möglicherweise sehr gut eine <xref:System.Windows.FrameworkElement>, sondern eine <xref:System.Windows.FrameworkContentElement>). Wenn dieses Element nicht in einem bildlauffähigen Bereich enthalten ist, das Ereignis weiterhin ausgelöst, aber es werden keine Auswirkung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenu">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.ContextMenu ContextMenu { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.ContextMenu ContextMenu" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FrameworkContentElement.ContextMenu" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ContextMenu</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Kontext Menu-Element, das angezeigt wird, wenn Sie im Kontextmenü den Befehl angefordert wird, über [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] von innerhalb dieses Elements.</summary>
+        <value>Im Kontextmenü den Befehl, der dieses Element verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_ContextMenu"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.FrameworkContentElement.ContextMenuProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine <xref:System.Windows.Controls.ContextMenu> auf eine <xref:System.Windows.Documents.Paragraph>.  
+  
+ [!code-xaml[ContentElementsSmorgasbord#ContextMenu](~/samples/snippets/csharp/VS_Snippets_Wpf/ContentElementsSmorgasbord/CSharp/page1.xaml#contextmenu)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuClosing">
+      <MemberSignature Language="C#" Value="public event System.Windows.Controls.ContextMenuEventHandler ContextMenuClosing;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Controls.ContextMenuEventHandler ContextMenuClosing" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.FrameworkContentElement.ContextMenuClosing" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ContextMenuEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, unmittelbar bevor ein Kontextmenü für das Element geschlossen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um schließende unterdrücken sollte Kontextmenüs, die Handler des Ereignisses es als behandelt markiert.  
+  
+ Verwenden Sie dieses Ereignis als ein <xref:System.Windows.EventTrigger> in einem Format müssen Sie auf den zugrunde liegenden Dienst Ereignisbezeichner verweisen:  
+  
+ [!code-xaml[CorePseudocode#FEContextMenuClosing](~/samples/snippets/csharp/VS_Snippets_Wpf/CorePseudocode/CSharp/pseudocode.xaml#fecontextmenuclosing)]  
+  
+ (Diese Verwendung ist erforderlich, da die Implementierung von Ereignissen auf <xref:System.Windows.FrameworkContentElement> , macht die zugrunde liegenden Dienstereignis nicht richtig zugeordnet ist die <xref:System.Windows.FrameworkContentElement.ContextMenuClosing> Bezeichner für die Verwendung in Triggern).  
+  
+<a name="routedEventInfo_ContextMenuClosing"></a>   
+## <a name="routed-event-information"></a>Informationen zum Routingereignis  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.FrameworkContentElement.ContextMenuClosingEvent>|  
+|Routing-Strategie|Bubbling|  
+|Delegate|<xref:System.Windows.Controls.ContextMenuEventHandler>|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel implementiert einen Handler, der den Cursor über ein benannter Bereich ändert `DisplayArea` (nicht dargestellt). Der Kommentar verweist auf eine <xref:System.Windows.UIElement> Verwendung "," tatsächlich wäre in diesem Beispiel identisch, aber wenn `DisplayArea` wurden eine <xref:System.Windows.FrameworkContentElement>.  
+  
+ [!code-csharp[cursors#ChangeCursorsSample](~/samples/snippets/csharp/VS_Snippets_Wpf/cursors/CSharp/Window1.xaml.cs#changecursorssample)]
+ [!code-vb[cursors#ChangeCursorsSample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/cursors/VisualBasic/Window1.xaml.vb#changecursorssample)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuClosingEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent ContextMenuClosingEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent ContextMenuClosingEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FrameworkContentElement.ContextMenuClosingEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.FrameworkContentElement.ContextMenuClosing" /> [weitergeleitet Ereignisübersicht](~/docs/framework/wpf/advanced/routed-events-overview.md).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ereignis-ID-Objekte werden erstellt, wenn Routingereignisse registriert werden (finden Sie unter <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>) und kann dann verwendet werden, um Klassenhandler hinzuzufügen (finden Sie unter <xref:System.Windows.EventManager.RegisterClassHandler%2A>). Bezeichnerobjekte enthalten einen kennzeichnenden Namen, Besitzertyp, Handlertyp, Routingstrategie und eine Hilfsprogrammmethode zum Hinzufügen von Besitzern für das Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuOpening">
+      <MemberSignature Language="C#" Value="public event System.Windows.Controls.ContextMenuEventHandler ContextMenuOpening;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Controls.ContextMenuEventHandler ContextMenuOpening" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.FrameworkContentElement.ContextMenuOpening" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ContextMenuEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein Kontextmenü für das Element geöffnet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum manuellen Öffnen des Kontextmenüs kennzeichnen Handler für die Ereignisse das betreffende Ereignis als behandelt. Andernfalls, den vorhandenen Wert von der <xref:System.Windows.FrameworkContentElement.ContextMenu%2A> Eigenschaft wird verwendet, um automatisch ein Kontextmenü geöffnet. Das Ereignis als behandelt markiert wird die Standardaktion tatsächlich abgebrochen, und möglicherweise Gelegenheit, den Wert zurückgesetzt, die <xref:System.Windows.FrameworkContentElement.ContextMenu%2A> Eigenschaft, und öffnen Sie die neue <xref:System.Windows.Controls.ContextMenu>. Es ist jedoch ein Problem der zeitlichen Steuerung, die Sie beachten sollten. Um vollständig ersetzen Sie im Kontextmenü den Befehl über eine <xref:System.Windows.FrameworkContentElement.ContextMenuOpening> Handler auf, die ursprüngliche Kontextmenü darf nicht null / leer sein. Alternativ müssen Sie das Ereignis zu behandeln und dann manuell ein neues Kontextmenü geöffnet. Weitere Informationen finden Sie unter [wie: Behandeln Sie das ContextMenuOpening-Ereignis](~/docs/framework/wpf/advanced/how-to-handle-the-contextmenuopening-event.md).  
+  
+ Verwenden Sie dieses Ereignis als ein <xref:System.Windows.EventTrigger> in einem Format müssen Sie auf den zugrunde liegenden Dienst Ereignisbezeichner verweisen:  
+  
+ [!code-xaml[CorePseudocode#FEContextMenuOpening](~/samples/snippets/csharp/VS_Snippets_Wpf/CorePseudocode/CSharp/pseudocode.xaml#fecontextmenuopening)]  
+  
+ (Diese Verwendung ist erforderlich, da die Implementierung von Ereignissen auf <xref:System.Windows.FrameworkContentElement> , macht die zugrunde liegenden Dienstereignis nicht richtig zugeordnet ist die <xref:System.Windows.FrameworkContentElement.ContextMenuOpening> Bezeichner für die Verwendung in Triggern).  
+  
+<a name="routedEventInfo_ContextMenuOpening"></a>   
+## <a name="routed-event-information"></a>Informationen zum Routingereignis  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.FrameworkContentElement.ContextMenuOpeningEvent>|  
+|Routing-Strategie|Bubbling|  
+|Delegate|<xref:System.Windows.Controls.ContextMenuEventHandler>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuOpeningEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent ContextMenuOpeningEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent ContextMenuOpeningEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FrameworkContentElement.ContextMenuOpeningEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.FrameworkContentElement.ContextMenuOpening" /> [weitergeleitet Ereignisübersicht](~/docs/framework/wpf/advanced/routed-events-overview.md).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ereignis-ID-Objekte werden erstellt, wenn Routingereignisse registriert werden (finden Sie unter <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>) und kann dann verwendet werden, um Klassenhandler hinzuzufügen (finden Sie unter <xref:System.Windows.EventManager.RegisterClassHandler%2A>). Bezeichnerobjekte enthalten einen kennzeichnenden Namen, Besitzertyp, Handlertyp, Routingstrategie und eine Hilfsprogrammmethode zum Hinzufügen von Besitzern für das Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ContextMenuProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ContextMenuProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FrameworkContentElement.ContextMenuProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.FrameworkContentElement.ContextMenu" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cursor">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.Cursor Cursor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.Cursor Cursor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FrameworkContentElement.Cursor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Cursor ab bzw. legt den Cursor fest, der angezeigt wird, wenn sich der Mauszeiger über diesem Element befindet.</summary>
+        <value>Der anzuzeigende Cursor. Der Standardwert ist gemäß dieser Abhängigkeitseigenschaft als <see langword="null" /> definiert. Der zur Laufzeit angewendete Standardwert resultiert jedoch aus einer Vielzahl von Faktoren.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Festlegen dieser Eigenschaft [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Prozessor basiert auf typkonvertierung für die <xref:System.Windows.Input.Cursor> Klasse, um die Zeichenfolge ergeben. Die bereitgestellte Zeichenfolge ergeben sollten eine <xref:System.Windows.Input.CursorType> Wert. Ausführliche Informationen finden Sie unter <xref:System.Windows.Input.Cursor>.  
+  
+ Ob der von dieser Eigenschaft festgelegte Cursor werden oder wird nicht angezeigt, wenn der Mauszeiger über diesem Element befindet ist auch abhängig von den Wert der <xref:System.Windows.FrameworkContentElement.ForceCursor%2A> Eigenschaft. Darüber hinaus wirkt ereignisbezogene Faktoren, z. B. ein aktives ziehen, Mauseingaben aufzufangen, Textbearbeitung-Modi im Steuerelemente usw., den Cursor mit einer höheren Priorität als der Wert sich auch, die Sie in dieser Eigenschaft angeben.  
+  
+ Wenn Sie das Verhalten der Einstellung dieser Eigenschaft auf den tatsächlichen Standardwert zurücksetzen möchten, legen Sie es auf `null` erneut aus.  
+  
+ Die `null` Standard wirklich bedeutet, dass Bestimmung des Werts praktische Cursor hier verzögert, und von einer anderen Stelle abgerufen werden soll. Wenn keine programmgesteuerte Werte aus einer Quelle, den Standardcursor angezeigt, über eine [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Anwendung wird ein Pfeil sein.  
+  
+ Jeder Bewegung der Maus über ein [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Anwendung löst eine <xref:System.Windows.ContentElement.QueryCursor> Ereignis. Die Ereignis-Blasen und jedes Element entlang der Route erhält die Möglichkeit, die für die Ereignisbehandlung und zum Festlegen des Werts, der den Cursor über die Argumente für dieses Ereignis. Wenn dies der Fall ist, hat die Tatsache, dass das Ereignis behandelt wird und einen geänderten Wert in den Argumenten hat Vorrang vor den Wert des der <xref:System.Windows.FrameworkContentElement.Cursor%2A> Eigenschaft auf jeder Ebene, es sei denn, <xref:System.Windows.FrameworkContentElement.ForceCursor%2A> festgelegt ist.  
+  
+ Wenn Sie einen benutzerdefinierten Cursor nicht erstellt werden, in der Regel Sie legen Sie diese Eigenschaft auf eine statische Eigenschaft-Wert, der die <xref:System.Windows.Input.Cursors> Klasse.  
+  
+ Festlegen der <xref:System.Windows.Input.Cursor> auf einen benutzerdefinierten Wert ist bei teilweiser Vertrauenswürdigkeit nicht aktiviert. Weitere Informationen zu benutzerdefinierten Cursor finden Sie unter [Input Overview](~/docs/framework/wpf/advanced/input-overview.md).  
+  
+<a name="dependencyPropertyInfo_Cursor"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.FrameworkContentElement.CursorProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird den Cursor auf einen benutzerdefinierten Wert.  
+  
+ [!code-csharp[cursors#ChangeCursorsSample](~/samples/snippets/csharp/VS_Snippets_Wpf/cursors/CSharp/Window1.xaml.cs#changecursorssample)]
+ [!code-vb[cursors#ChangeCursorsSample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/cursors/VisualBasic/Window1.xaml.vb#changecursorssample)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CursorProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CursorProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CursorProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FrameworkContentElement.CursorProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.FrameworkContentElement.Cursor" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataContext">
+      <MemberSignature Language="C#" Value="public object DataContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DataContext" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FrameworkContentElement.DataContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.NeverLocalize)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen des Datenkontexts für ein Element fest, wenn das Element an Datenbindungen beteiligt ist.</summary>
+        <value>Das Objekt, das als Datenkontext verwendet werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ *Datenkontext* ist ein Konzept, das kann Elemente Informationen von ihren übergeordneten Elementen Bindungsquelle erben, die für die Bindung als auch andere Merkmale der Bindung wie des Pfads verwendet wird.  
+  
+ Datenkontext kann direkt festgelegt werden, ein [!INCLUDE[TLA#tla_clr](~/includes/tlasharptla-clr-md.md)] Objekt, mit den Bindungen, die als Eigenschaften des betreffenden Objekts bewertet. Alternativ können Sie den Datenkontext festlegen, um eine <xref:System.Windows.Data.DataSourceProvider> Objekt.  
+  
+ Diese Abhängigkeitseigenschaft erbt Eigenschaftswerte. Wenn kein anderer Wert für untergeordnete Elemente vorhanden sind <xref:System.Windows.FrameworkContentElement.DataContext%2A> hergestellt, über lokale Werte oder Stile, das Eigenschaftensystem wird legen Sie den Wert, der <xref:System.Windows.FrameworkContentElement.DataContext%2A> Wert des nächsten übergeordneten Elements mit diesem Wert zugewiesen.  
+  
+ Alternativ können Sie eine der folgenden Eigenschaften von der <xref:System.Windows.Data.Binding> Klasse, um die Bindungsquelle explizit anzugeben: <xref:System.Windows.Data.Binding.ElementName%2A>, <xref:System.Windows.Data.Binding.Source%2A>, oder <xref:System.Windows.Data.Binding.RelativeSource%2A>. Weitere Informationen finden Sie unter [Vorgehensweise: Angeben der Bindungsquelle](~/docs/framework/wpf/data/how-to-specify-the-binding-source.md).  
+  
+ In [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], <xref:System.Windows.FrameworkContentElement.DataContext%2A> am häufigsten auf festgelegt ist, als ein <xref:System.Windows.Data.Binding> Deklaration. Sie können Eigenschaftenelementsyntax oder Attributsyntax verwenden. Die Attributsyntax wird im Beispiel auf dieser Seite angezeigt. Sie können auch festlegen <xref:System.Windows.FrameworkContentElement.DataContext%2A> im Code.  
+  
+<a name="xamlPropertyElementUsage_DataContext"></a>   
+## <a name="xaml-property-element-usage"></a>Verwendung von XAML-Eigenschaftenelementen  
+  
+```  
+<object>  
+  <object.DataContext>  
+    <dataContextObject />  
+  </object.DataContext>  
+</object>  
+```  
+  
+<a name="xamlAttributeUsage_DataContext"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object DataContext="bindingUsage"/>  
+- or -  
+<object DataContext="{resourceExtension contextResourceKey}"/>  
+```  
+  
+<a name="xamlValues_DataContext"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *dataContextObject*  
+ Eine direkte eingebettetes Objekt, das als Datenkontext für alle Bindungen innerhalb des übergeordneten Elements dient. Dieses Objekt in der Regel ist eine <xref:System.Windows.Data.Binding> oder ein anderes <xref:System.Windows.Data.BindingBase> Unterklasse. Alternativ können Sie unformatierten Daten eines beliebigen [!INCLUDE[TLA2#tla_clr](~/includes/tla2sharptla-clr-md.md)] Objekttyp vorgesehen für die Bindung mit den tatsächlichen Bindungen später definiert hier platziert werden kann.  
+  
+ *bindingUsage*  
+ Eine Bindungsverwendung, die einen entsprechenden Datenkontext ergibt. Weitere Informationen finden Sie unter [Binding als Markuperweiterung](~/docs/framework/wpf/advanced/binding-markup-extension.md).  
+  
+ *resourceExtension*  
+ Eines der folgenden: `StaticResource`, oder `DynamicResource`. Diese Verwendung wird verwendet, bei Bezugnahme auf unformatierten Daten als ein Objekt in Ressourcen definiert. Finden Sie unter [XAML-Ressourcen](~/docs/framework/wpf/advanced/xaml-resources.md).  
+  
+ *contextResourceKey*  
+ Der Schlüsselbezeichner für das Objekt, das angefordert wird, innerhalb einer <xref:System.Windows.ResourceDictionary>.  
+  
+<a name="dependencyPropertyInfo_DataContext"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.FrameworkContentElement.DataContextProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Bindung auf einen <xref:System.Windows.Documents.Paragraph> Element, durch das Erstellen eines neuen benutzerdefinierten Daten-Objekts, das Objekt als herstellen <xref:System.Windows.FrameworkContentElement.DataContext%2A>, und den Bindungspfad auf eine Eigenschaft darin festlegen.  
+  
+ [!code-csharp[ContentElementsSmorgasbord#DataContext](~/samples/snippets/csharp/VS_Snippets_Wpf/ContentElementsSmorgasbord/CSharp/page1.xaml.cs#datacontext)]
+ [!code-vb[ContentElementsSmorgasbord#DataContext](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ContentElementsSmorgasbord/visualbasic/page1.xaml.vb#datacontext)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataContextChanged">
+      <MemberSignature Language="C#" Value="public event System.Windows.DependencyPropertyChangedEventHandler DataContextChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.DependencyPropertyChangedEventHandler DataContextChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.FrameworkContentElement.DataContextChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyPropertyChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn dieses Element Datenkontext geändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Erläuterung der Datenkontexten und Datenbindung, finden Sie unter [Übersicht zur Datenbindung](~/docs/framework/wpf/data/data-binding-overview.md).  
+  
+> [!IMPORTANT]
+>  Wenn ein Element <xref:System.Windows.FrameworkContentElement.DataContext%2A> ändert sich, alle datengebundenen Eigenschaften für dieses Element sind möglicherweise betroffen. Dies gilt für alle Elemente, Nachfolgerelemente des aktuellen Elements an, die den Datenkontext zu erben, und auch das aktuelle Element selbst. Alle solchen Bindungen interpretieren erneut das neue <xref:System.Windows.FrameworkContentElement.DataContext%2A> entsprechend den neuen Wert im Bindungen. Es gibt keine Garantie, die hinsichtlich der Reihenfolge dieser Änderungen auf das Auslösen von der <xref:System.Windows.FrameworkContentElement.DataContextChanged> Ereignis.  Die Änderungen können vor dem Ereignis nach dem Ereignis oder eine beliebige Mischung auftreten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataContextProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DataContextProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DataContextProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FrameworkContentElement.DataContextProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.FrameworkContentElement.DataContext" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultStyleKey">
+      <MemberSignature Language="C#" Value="protected object DefaultStyleKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DefaultStyleKey" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FrameworkContentElement.DefaultStyleKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Schlüssel verwenden, um die Formatvorlage für das genannte Steuerelement in den Themen zu suchen.</summary>
+        <value>Der Formatvorlagenschlüssel. Ordnungsgemäß als Teil der Designformatvorlagen-Suche funktioniert, muss dieser Wert werden die <see cref="T:System.Type" /> des Elements, das formatiert wird. <see langword="null" />ist ein zulässiger Wert für einen bestimmten Fall.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird in der Regel nicht über einen ihrer direkten Eigenschaftensetter festgelegt. Stattdessen wird der typspezifische Metadaten dieser Abhängigkeitseigenschaft überschreiben, jedes Mal, wenn Sie eine neue Unterklasse erstellen. Wenn haben, rufen Sie eine Unterklasse der <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> Methode für die <xref:System.Windows.FrameworkContentElement.DefaultStyleKeyProperty> Bezeichner im statischen Konstruktor der Steuerelementunterklasse.  
+  
+ Beispielsweise ein Inlineklasse, wie etwa <xref:System.Windows.Documents.Bold> tatsächlich hat kaum Implementierung mehr als eine Überschreibung der <xref:System.Windows.FrameworkContentElement.DefaultStyleKey%2A> Metadaten im statischen Konstruktor und das Verfügbarmachen von mehreren Instanzkonstruktoren. Die Tatsache, dass die Elemente von umgeben der <xref:System.Windows.Documents.Bold> -Tag ein <xref:System.Windows.Documents.TextElement.FontWeight%2A> Eigenschaft <xref:System.Windows.FontWeights.Bold%2A> wird implementiert, innerhalb der Designstil, auf die verwiesen wurde, durch Festlegen den Wert von <xref:System.Windows.FrameworkContentElement.DefaultStyleKey%2A> auf `typeof(Bold)`.  
+  
+ Wenn Sie ein Element oder Steuerelement Designformatvorlagen absichtlich nicht verwenden möchten, legen Sie die <xref:System.Windows.FrameworkContentElement.OverridesDefaultStyle%2A> Eigenschaft `true`.  
+  
+<a name="dependencyPropertyInfo_DefaultStyleKey"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.FrameworkContentElement.DefaultStyleKeyProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultStyleKeyProperty">
+      <MemberSignature Language="C#" Value="protected static readonly System.Windows.DependencyProperty DefaultStyleKeyProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field familyorassembly static initonly class System.Windows.DependencyProperty DefaultStyleKeyProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FrameworkContentElement.DefaultStyleKeyProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.FrameworkContentElement.DefaultStyleKey" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndInit">
+      <MemberSignature Language="C#" Value="public virtual void EndInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkContentElement.EndInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird unmittelbar nach der Initialisierung eines Elements aufgerufen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementieren Sie diese Methode, um eine besondere Behandlung bereitstellen, die ausgeführt werden soll, wenn das Element während der Prozess des Ladens Element initialisiert wird.  
+  
+ Die Implementierung sollte die basisimplementierung aufrufen, da die Implementierung Base (Standard) einige interne Flags Initialisierung des festlegt.  
+  
+ Wenn <xref:System.Windows.FrameworkContentElement.BeginInit%2A> zuvor aufgerufen wurde, die Base Implementierung löst die <xref:System.Windows.FrameworkContentElement.Initialized> Ereignis. Andernfalls gilt: Wenn <xref:System.Windows.FrameworkContentElement.BeginInit%2A> nicht aufgerufen wurde, oder es konnte nicht bestimmt, ob <xref:System.Windows.FrameworkContentElement.BeginInit%2A> wurde aufgerufen, wird das Ereignis nicht ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindName">
+      <MemberSignature Language="C#" Value="public object FindName (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object FindName(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkContentElement.FindName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des zu suchenden Elements.</param>
+        <summary>Sucht ein Element mit dem Namen des bereitgestellten Bezeichners.</summary>
+        <returns>Das angeforderte Element. Möglicherweise <see langword="null" /> , wenn kein übereinstimmendes Element gefunden wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn dieses Element über untergeordnete Elemente verfügt, werden diese untergeordneten Elemente rekursiv nach dem angeforderten benannten Element durchsucht.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Eigenschaft für ein Element gefunden wird, namentlich in einem <xref:System.Windows.Documents.FlowDocument> auf einer Seite.  
+  
+ [!code-csharp[ContentElementsSmorgasbord#FindName](~/samples/snippets/csharp/VS_Snippets_Wpf/ContentElementsSmorgasbord/CSharp/page1.xaml.cs#findname)]
+ [!code-vb[ContentElementsSmorgasbord#FindName](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ContentElementsSmorgasbord/visualbasic/page1.xaml.vb#findname)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindResource">
+      <MemberSignature Language="C#" Value="public object FindResource (object resourceKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object FindResource(object resourceKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkContentElement.FindResource(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceKey" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="resourceKey">Der Schlüsselbezeichner der zu findenden Ressource.</param>
+        <summary>Sucht nach einer Ressource mit dem angegebenen Schlüssel und löst eine Ausnahme aus, wenn die angeforderte Ressource nicht gefunden wird.</summary>
+        <returns>Die gefundene Ressource oder <see langword="null" /> , wenn keine übereinstimmende Ressource gefunden wurde (aber wird ebenfalls eine Ausnahme ausgelöst, wenn <see langword="null" />).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Wenn Sie diese Methode für einen Schlüssel, die nicht gefunden werden kann aufrufen, wird eine Ausnahme ausgelöst. Wenn Sie nicht, um Ausnahmen für diesen Fall zu behandeln möchten, sollten Sie stattdessen Aufrufen <xref:System.Windows.FrameworkContentElement.TryFindResource%2A>. <xref:System.Windows.FrameworkContentElement.TryFindResource%2A>Gibt `null` Wenn keine Ressource gefunden wird, und löst keine Ausnahme.  
+  
+ Wenn die Ressource für das aufrufende Element nicht gefunden wird, die übergeordnete Struktur wird mit der logischen Struktur durchsucht, auf die gleiche Weise, die die Struktur wäre gesuchte Wenn eine Ressource mit Schlüssel zur Laufzeit angefordert wurden.  
+  
+ In der Regel würden Sie sofort den Rückgabewert in den Typ der Eigenschaft umgewandelt, den Sie mit den zurückgegebenen Ressourcenwert festgelegt wurden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel sucht nach einer Ressource, wie im Markup definierte und wendet sie auf eine bestimmte Eigenschaft eines Elements in Reaktion auf ein Routingereignis.  
+  
+ [!code-csharp[ContentElementsSmorgasbord#FindResource](~/samples/snippets/csharp/VS_Snippets_Wpf/ContentElementsSmorgasbord/CSharp/page1.xaml.cs#findresource)]
+ [!code-vb[ContentElementsSmorgasbord#FindResource](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ContentElementsSmorgasbord/visualbasic/page1.xaml.vb#findresource)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Windows.ResourceReferenceKeyNotFoundException">Der angeforderte Ressourcenschlüssel wurde nicht gefunden.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="resourceKey" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FocusVisualStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Style FocusVisualStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Style FocusVisualStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FrameworkContentElement.FocusVisualStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen eines Objekts, das die Anpassung von Darstellung, Effekten oder anderen Formateigenschaften ermöglicht, die auf dieses Element angewendet werden, wenn es den Tastaturfokus erhält.</summary>
+        <value>Die gewünschte Formatvorlage, die angewendet wird, wenn das Element den Fokus erhält. Die in der Abhängigkeitseigenschaft deklarierte Standardwert ist eine leere statische <see cref="T:System.Windows.Style" />. Der tatsächliche Wert zur Laufzeit ist jedoch häufig (aber nicht immer) eine Formatvorlage, die von der Designunterstützung für Steuerelemente bereitgestellt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Festlegen dieser Eigenschaft [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)]Stile werden fast immer als eine Ressource, statt Inline als Element definiert und, dass die Ressource in der Regel ist auf die verwiesen wird als eine <xref:System.Windows.StaticResourceExtension>.  
+  
+ Beachten Sie, dass diese Eigenschaft wirkt sich auf die visuelle Darstellung, aber keine über dies in den Metadaten Auskunft gibt. Dies ist, da die visuelle Darstellung ereignisgesteuerte möglicherweise nicht immer gelten, und ist somit nicht in der Regel Visualisierung oder Layout Informationen in den Metadaten gemeldet sollten.  
+  
+ Grundsätzlich sollte das visuelle Verhalten des Fokus auf ein Steuerelement angewendet kohärente von Element zu Element sein. Die sinnvollste zum Erzwingen von Kohärenz besteht darin, den visuellen Stil der Fokus nur ändern, wenn Sie ein vollständiges Design erstellen. Festlegen dieser Eigenschaft auf einzelne Formatvorlagen und nicht als Teil eines Designs ist nicht die beabsichtigte Verwendung dieser Eigenschaft, da sie zu einer verwirrend Benutzeroberfläche hinsichtlich des Tastaturfokus führen kann. Wenn Sie Elements prozessinternes spezifisches Verhalten, die absichtlich nicht kohärent ist beabsichtigt, wird ein viel besserer Ansatz im Stile für einzelne Eingabestatus-Eigenschaften, z. B. Verwenden von Triggern <xref:System.Windows.UIElement.IsFocused%2A> oder <xref:System.Windows.UIElement.IsKeyboardFocusWithin%2A>, und klicken Sie auf eine Weise dazu, die nicht der Fall ist beeinträchtigen Sie mit den visuellen Stil des vorhandenen Fokus visuell. Weitere Informationen über den Entwurf der <xref:System.Windows.FrameworkContentElement.FocusVisualStyle%2A> sowie die alternativen Eigenschaften zu konzentrieren, finden Sie unter [Formatierung für den Fokus in Steuerelementen und FocusVisualStyle](~/docs/framework/wpf/advanced/styling-for-focus-in-controls-and-focusvisualstyle.md).  
+  
+<a name="xamlAttributeUsage_FocusVisualStyle"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object FocusVisualStyle="{resourceExtension styleResourceKey}"/>  
+```  
+  
+<a name="xamlPropertyElementUsage_FocusVisualStyle"></a>   
+## <a name="xaml-property-element-usage"></a>Verwendung von XAML-Eigenschaftenelementen  
+  
+<a name="xamlValues_FocusVisualStyle"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *resourceExtension*  
+ Eines der folgenden:, oder. Finden Sie unter [XAML-Ressourcen](~/docs/framework/wpf/advanced/xaml-resources.md).  
+  
+ *styleResourceKey*  
+ Der Schlüssel, der den angeforderten Stil identifiziert. Der Schlüssel verweist auf eine vorhandene Ressource in einem <xref:System.Windows.ResourceDictionary>.  
+  
+> [!NOTE]
+>  Eigenschaftenelementsyntax ist technisch zwar möglich, aber nicht empfehlenswert. Finden Sie unter [Inlinestile und Vorlagen](~/docs/framework/wpf/advanced/inline-styles-and-templates.md).  Eine Bindung verwendet oder <xref:System.Windows.Data.Binding> ist auch möglich, aber ungewöhnlich.  
+  
+<a name="dependencyPropertyInfo_FocusVisualStyle"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.FrameworkContentElement.FocusVisualStyleProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FocusVisualStyleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FocusVisualStyleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FocusVisualStyleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FrameworkContentElement.FocusVisualStyleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.FrameworkContentElement.FocusVisualStyle" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForceCursor">
+      <MemberSignature Language="C#" Value="public bool ForceCursor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ForceCursor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FrameworkContentElement.ForceCursor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob dies <see cref="T:System.Windows.FrameworkContentElement" /> erzwingen soll die [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] Rendern des Cursors gemäß Deklaration durch diese Instanz <see cref="P:System.Windows.FrameworkContentElement.Cursor" /> Eigenschaft.</summary>
+        <value>
+          <see langword="true" />zum Erzwingen der Cursor-Präsentation, während er sich über diesem Element für die Verwendung dieser Instanz des für den Cursor (einschließlich auf alle untergeordneten Elemente), festlegen andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft auf `true` überschreibt die Cursor-Voreinstellungen, die durch die untergeordneten Elemente. Dies ist daher im Allgemeinen Anwendung [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] sind möglicherweise für den Benutzer verwirrend, insbesondere, wenn untergeordnete Cursor angeben möchten. Festlegen von <xref:System.Windows.FrameworkElement.ForceCursor%2A> Unterklassen oder Compositing Szenarios besser geeignet ist.  
+  
+<a name="dependencyPropertyInfo_ForceCursor"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.FrameworkContentElement.ForceCursorProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird den Cursor über dem Element.  
+  
+ [!code-xaml[ForceCursor#ForceCursor](~/samples/snippets/csharp/VS_Snippets_Wpf/ForceCursor/CS/default.xaml#forcecursor)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForceCursorProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ForceCursorProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ForceCursorProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FrameworkContentElement.ForceCursorProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.FrameworkContentElement.ForceCursor" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBindingExpression">
+      <MemberSignature Language="C#" Value="public System.Windows.Data.BindingExpression GetBindingExpression (System.Windows.DependencyProperty dp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Data.BindingExpression GetBindingExpression(class System.Windows.DependencyProperty dp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkContentElement.GetBindingExpression(System.Windows.DependencyProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.BindingExpression</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+      </Parameters>
+      <Docs>
+        <param name="dp">Das Ziel <see cref="T:System.Windows.DependencyProperty" /> aus der die Bindung abgerufen.</param>
+        <summary>Ruft die <see cref="T:System.Windows.Data.BindingExpression" /> für die Bindung für die angegebene Eigenschaft.</summary>
+        <returns>Gibt eine <see cref="T:System.Windows.Data.BindingExpression" /> ist das Ziel Daten gebunden ist; andernfalls <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel ruft eine Bindung durch Abfragen einer Eigenschaft ab.  
+  
+ [!code-csharp[ContentElementsSmorgasbord#GetBindingExpression](~/samples/snippets/csharp/VS_Snippets_Wpf/ContentElementsSmorgasbord/CSharp/page1.xaml.cs#getbindingexpression)]
+ [!code-vb[ContentElementsSmorgasbord#GetBindingExpression](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ContentElementsSmorgasbord/visualbasic/page1.xaml.vb#getbindingexpression)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUIParentCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.DependencyObject GetUIParentCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Windows.DependencyObject GetUIParentCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkContentElement.GetUIParentCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein alternatives logisches übergeordnetes Element für dieses Element zurück, wenn kein visuelles übergeordnetes Element vorhanden ist. In diesem Fall eine <see cref="T:System.Windows.FrameworkContentElement" /> übergeordnete Element ist immer den gleichen Wert wie die <see cref="P:System.Windows.FrameworkContentElement.Parent" /> Eigenschaft.</summary>
+        <returns>Gibt <see langword="null" /> immer eine WPF-Frameworkebene vorgenommene Implementierung dieser Methode eine nicht visuelle übergeordnete Verbindung hat.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardimplementierung gibt die erwartete einzelne visuelle übergeordnetes Element zurück. Benutzerdefinierte Implementierungen möglicherweise alternative übergeordnete Beziehungen zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialized">
+      <MemberSignature Language="C#" Value="public event EventHandler Initialized;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Initialized" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.FrameworkContentElement.Initialized" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn dies <see cref="T:System.Windows.FrameworkContentElement" /> initialisiert wird. Dies stimmt mit den Fällen, in dem der Wert des der <see cref="P:System.Windows.FrameworkContentElement.IsInitialized" /> Eigenschaft ändert sich von <see langword="false" /> (oder nicht definiert) zu <see langword="true" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Windows.FrameworkContentElement.EndInit%2A> oder <xref:System.Windows.FrameworkContentElement.OnInitialized%2A> Methoden aufgerufen werden. Aufrufe dieser Methoden können vorgenommen wurden mit absichtliche Code oder durch die [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] Prozess des Ladens.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputScope">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.InputScope InputScope { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.InputScope InputScope" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FrameworkContentElement.InputScope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.InputScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Kontext für die Eingabe verwendet, die von diesem <see cref="T:System.Windows.FrameworkContentElement" />.</summary>
+        <value>Der Eingabebereich, der bestimmt, wie Eingaben von alternativen Eingabemethoden interpretiert werden. Der Standardwert ist <see langword="null" /> (führt zu einer Standardbehandlung von Befehlen).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Abhängigkeitseigenschaft erbt Eigenschaftswerte. Wenn kein anderer Wert für untergeordnete Elemente vorhanden sind <xref:System.Windows.FrameworkElement.InputScope%2A> hergestellt, über lokale Werte oder Stile, das Eigenschaftensystem wird legen Sie den Wert, der <xref:System.Windows.FrameworkElement.InputScope%2A> Wert des nächsten übergeordneten Elements mit diesem Wert zugewiesen.  
+  
+ Obwohl eine [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Syntax Verwendung aufgelistet ist und syntaktisch zulässig ist, wird durch Festlegen dieser Eigenschaft [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] ist nicht üblich.  
+  
+<a name="dependencyPropertyInfo_InputScope"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.FrameworkContentElement.InputScopeProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputScopeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty InputScopeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty InputScopeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FrameworkContentElement.InputScopeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.FrameworkContentElement.InputScope" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInitialized">
+      <MemberSignature Language="C#" Value="public bool IsInitialized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInitialized" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FrameworkContentElement.IsInitialized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob dieses Element initialisiert wurde, entweder durch das Laden als [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)], oder durch explizites seine <see cref="M:System.Windows.FrameworkContentElement.EndInit" /> aufgerufene Methode.</summary>
+        <value>
+          <see langword="true" />Wenn das Element pro den zuvor erwähnten laden oder Methodenaufrufe initialisiert wird. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist möglicherweise auch `true` , wenn dieses Element in der Elementstruktur verschoben wurde, dass er ein neues übergeordnetes Element aufweist und deshalb neu geladen werden muss.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLoaded">
+      <MemberSignature Language="C#" Value="public bool IsLoaded { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLoaded" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FrameworkContentElement.IsLoaded" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob dieses Element für die Präsentation geladen wurde.</summary>
+        <value>
+          <see langword="true" />Wenn das aktuelle Element an eine Elementstruktur angefügt ist und gerendert wurden. <see langword="false" /> , wenn das Element nie an eine geladene Elementstruktur angefügt wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einer neu erstellten Instanz startet diese Eigenschaft deaktiviert `false`, und bleibt `true` sobald er, um festgelegt ist `true`, selbst wenn anschließend durch Code entfernt.  
+  
+   
+  
+## Examples  
+ Der folgende Beispielcode verwendet <xref:System.Windows.FrameworkContentElement.IsLoaded%2A> als eine bedingte Überprüfung, um sicherzustellen, dass eine Funktion `displayData` (nicht dargestellt) werden gültige Elemente geladen haben auf der Seite berücksichtigt werden sollen, als Teil eines ereignishandlers bei Bedarf zu funktionieren. Dass dieselbe Logik, wie ein Ereignishandler für ausgeführt wird <xref:System.Windows.FrameworkContentElement.Loaded>.  
+  
+ [!code-csharp[ContentElementsSmorgasbord#IsLoaded](~/samples/snippets/csharp/VS_Snippets_Wpf/ContentElementsSmorgasbord/CSharp/page1.xaml.cs#isloaded)]
+ [!code-vb[ContentElementsSmorgasbord#IsLoaded](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ContentElementsSmorgasbord/visualbasic/page1.xaml.vb#isloaded)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Language">
+      <MemberSignature Language="C#" Value="public System.Windows.Markup.XmlLanguage Language { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Markup.XmlLanguage Language" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FrameworkContentElement.Language" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Markup.XmlLanguage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Sprachinformationen für die Lokalisierung/Globalisierung eines einzelnen Elements ab oder legt diese Informationen fest.</summary>
+        <value>Die Kulturinformationen für dieses Element. Der Standardwert ist eine <see cref="T:System.Windows.Markup.XmlLanguage" /> -Instanz mit seiner <see cref="P:System.Windows.Markup.XmlLanguage.IetfLanguageTag" /> Wert auf die Zeichenfolge "En-US" festgelegt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Zeichenfolgenformate unterliegen dem RFC 3066-Standard. Z. B. USA Englisch ist "En-US". Finden Sie unter <xref:System.Windows.Markup.XmlLanguage> Weitere Informationen zu den Werten und Format.  
+  
+ Diese Abhängigkeitseigenschaft erbt Eigenschaftswerte. Wenn kein anderer Wert für untergeordnete Elemente vorhanden sind <xref:System.Windows.FrameworkElement.Language%2A> hergestellt, über lokale Werte oder Stile, das Eigenschaftensystem wird legen Sie den Wert, der <xref:System.Windows.FrameworkElement.Language%2A> Wert des nächsten übergeordneten Elements mit diesem Wert zugewiesen.  
+  
+<a name="dependencyPropertyInfo_CultureInfo"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.FrameworkContentElement.LanguageProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LanguageProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty LanguageProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty LanguageProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FrameworkContentElement.LanguageProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.FrameworkContentElement.Language" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Loaded">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler Loaded;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler Loaded" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.FrameworkContentElement.Loaded" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn das Element ausgerichtet und gerendert sowie zur Interaktion vorbereitet wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Direkte Routingereignisse führen Sie eine Route nicht ausgeführt, sie sind nur innerhalb des gleichen Elements in dem sie ausgelöst werden. Direkte Routingereignisse unterstützen andere Verhalten Routingereignis: sie unterstützen eine Auflistung zugegriffen werden kann, Handler und dient als ein <xref:System.Windows.EventTrigger> in einem Format.  
+  
+<a name="routedEventInfo_Loaded"></a>   
+## <a name="routed-event-information"></a>Informationen zum Routingereignis  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.FrameworkContentElement.LoadedEvent>|  
+|Routing-Strategie|Direkt|  
+|Delegate|<xref:System.Windows.RoutedEventHandler>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent LoadedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent LoadedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FrameworkContentElement.LoadedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.FrameworkContentElement.Loaded" /> [weitergeleitet Ereignisübersicht](~/docs/framework/wpf/advanced/routed-events-overview.md).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ereignis-ID-Objekte werden erstellt, wenn Routingereignisse registriert werden (finden Sie unter <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>) und kann dann verwendet werden, um Klassenhandler hinzuzufügen (finden Sie unter <xref:System.Windows.EventManager.RegisterClassHandler%2A>). Bezeichnerobjekte enthalten einen kennzeichnenden Namen, Besitzertyp, Handlertyp, Routingstrategie und eine Hilfsprogrammmethode zum Hinzufügen von Besitzern für das Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogicalChildren">
+      <MemberSignature Language="C#" Value="protected virtual System.Collections.IEnumerator LogicalChildren { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerator LogicalChildren" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FrameworkContentElement.LogicalChildren" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Enumerator für die logischen untergeordneten Elemente dieses Elements ab.</summary>
+        <value>Ein Enumerator für die logischen untergeordneten Elemente dieses Elements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Verwendung von <xref:System.Windows.FrameworkContentElement.LogicalChildren%2A> und <xref:System.Windows.FrameworkContentElement.AddLogicalChild%2A>, finden Sie unter [Strukturen in WPF](~/docs/framework/wpf/advanced/trees-in-wpf.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveFocus">
+      <MemberSignature Language="C#" Value="public override sealed bool MoveFocus (System.Windows.Input.TraversalRequest request);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool MoveFocus(class System.Windows.Input.TraversalRequest request) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkContentElement.MoveFocus(System.Windows.Input.TraversalRequest)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.Windows.Input.TraversalRequest" />
+      </Parameters>
+      <Docs>
+        <param name="request">Die Richtung, die Fokus verschoben werden, als Wert der Enumeration.</param>
+        <summary>Verschiebt den Tastaturfokus aus diesem Element zu einem anderen Element.</summary>
+        <returns>Gibt <see langword="true" /> wenn Fokus erfolgreich verschoben wurde. <see langword="false" /> das Zielelement in Richtung wie angegeben, ist nicht vorhanden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FrameworkContentElement.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.NeverLocalize)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen des Elementnamens. Der Name stellt einen Instanzverweis bereit, sodass programmgesteuerter Code-Behind, z. B. Ereignishandlercode, auf ein Element verweisen kann, sobald es erstellt wurde, während der Analyse einer [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].</summary>
+        <value>Der Name des Elements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die häufigste Verwendung dieser Eigenschaft ist beim Angeben einer [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Elementname im Markup.  
+  
+ Diese Eigenschaft bietet im Wesentlichen eine WPF-Frameworkebene benutzerfreundliche-Eigenschaft zum Festlegen der [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] [X: Name-Direktive](~/docs/framework/xaml-services/x-name-directive.md).  
+  
+ Abrufen einer <xref:System.Windows.FrameworkContentElement.Name%2A> aus Code ist nicht üblich, da Sie bereits den entsprechenden Verweis im Code haben, Sie nur Methoden aufrufen können und Eigenschaften für das Element verweisen Elementverweises der <xref:System.Windows.FrameworkContentElement.Name%2A>. Eine Ausnahme ist, wenn die Zeichenfolge eine überladene Bedeutung aufweist, z. B. ist es hilfreich, wenn diese Namen in [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)]. Festlegen einer <xref:System.Windows.FrameworkContentElement.Name%2A> aus Code Wenn die ursprüngliche <xref:System.Windows.FrameworkContentElement.Name%2A> wurde Markup festgelegt wird ebenfalls nicht empfohlen, und ändern die Eigenschaft ändert sich nicht auf den Objektverweis. Solche Objektverweise werden nur erstellt, wenn die zugrunde liegenden Namescopes während explizit erstellt werden [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] laden.  
+  
+ Sie müssen ausdrücklich Aufrufen <xref:System.Windows.FrameworkContentElement.RegisterName%2A> auf eine effektive Änderung vornehmen der <xref:System.Windows.FrameworkContentElement.Name%2A> Eigenschaft eines Elements bereits geladen.  
+  
+ Eine wichtige Fall, in dem das Festlegen <xref:System.Windows.FrameworkContentElement.Name%2A> aus Code ist wichtig für das Benennen von Elementen, für die storyboards für ausgeführt wird. Bevor Sie einen Namen registrieren können, müssen u. u. auch instanziieren und Zuweisen einer <xref:System.Windows.NameScope> Instanz. Finden Sie im Beispielabschnitt oder [Storyboards Overview](~/docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
+  
+ Festlegen von <xref:System.Windows.FrameworkContentElement.Name%2A> aus Code verfügt über eingeschränkten Anwendungen jedoch die Suche nach einem Element anhand des Namens ist eher üblich, insbesondere, wenn Sie ein Navigationsmodell für Einzelseiten Dokumentationssatzes, wobei Seiten in der Anwendung zu laden und -Laufzeitcode ist nicht notwendigerweise Code-Behind, Seite "jeweiligen". Die Hilfsprogrammmethode <xref:System.Windows.FrameworkContentElement.FindName%2A>, kann über eine <xref:System.Windows.FrameworkContentElement>, finde beliebiges Element durch <xref:System.Windows.FrameworkContentElement.Name%2A> in die logische Struktur rekursiv des Elements. Oder Sie können die <xref:System.Windows.LogicalTreeHelper.FindLogicalNode%2A> statische Methode der <xref:System.Windows.LogicalTreeHelper>, dem nimmt auch die <xref:System.Windows.FrameworkContentElement.Name%2A> Zeichenfolge als Argument.  
+  
+ Häufig verwendete Stammelemente (<xref:System.Windows.Window>, <xref:System.Windows.Controls.Page> z. B.) implementieren die Schnittstelle <xref:System.Windows.Markup.INameScope>. Implementierungen dieser Schnittstelle werden erwartet, um zu erzwingen, dass Namen innerhalb des Bereichs eindeutig sein.  
+  
+<a name="dependencyPropertyInfo_Name"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.FrameworkContentElement.NameProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.UIPropertyMetadata.IsAnimationProhibited%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NameProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty NameProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty NameProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FrameworkContentElement.NameProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.FrameworkContentElement.Name" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnContextMenuClosing">
+      <MemberSignature Language="C#" Value="protected virtual void OnContextMenuClosing (System.Windows.Controls.ContextMenuEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnContextMenuClosing(class System.Windows.Controls.ContextMenuEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkContentElement.OnContextMenuClosing(System.Windows.Controls.ContextMenuEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Controls.ContextMenuEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Stellt Daten zum Ereignis.</param>
+        <summary>Wird aufgerufen, wenn die <see cref="E:System.Windows.FrameworkContentElement.ContextMenuClosing" /> Routingereignis beim Durchlauf, erreicht dieser Klasse in seiner Route. Implementieren Sie diese Methode, um eine Klassenbehandlung für dieses Ereignis hinzuzufügen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode hat keine Standardimplementierung. Für den Fall, dass eine Zwischenklasse in der Vererbung diese Methode implementiert hat, sollten Sie dennoch die basisimplementierung aufrufen.  
+  
+ Der Zweck dieser Methode ist zumindest ähneln [!INCLUDE[TLA#tla_clr](~/includes/tlasharptla-clr-md.md)] -Ereignismuster auf * Methoden: DSC bietet die Möglichkeit zum Behandeln des übereinstimmenden Ereignis von abgeleiteten Klassen mit einem Klassenhandler statt einem Instanzhandler. In diesem Fall wird das übereinstimmende Ereignis ein Routingereignis. Das Implementierungsmuster der On * Methoden unterscheidet sich für Routingereignisse, da das Routingereignis von einem untergeordneten Element, nicht unbedingt das Element ausgelöst worden sein kann, mit denen Handler aufgerufen wird. Aus diesem Grund Ihrer Implementierung müssen Sie die Argumente berücksichtigen (und sollten nicht versuchen, erneut Auslösen des Ereignisses in den meisten Fällen). Unterklassen des <xref:System.Windows.FrameworkContentElement> wählen Sie mit der konnte Ereignishandlermethoden private Klasse aufgerufen werden, wenn das Ereignis entlang der Route empfangen wird. Eine mögliche Szenario besteht darin die Argumente des Ereignisses und absichtlich markiert das Ereignis als behandelt, um die Route zu verkürzen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnContextMenuOpening">
+      <MemberSignature Language="C#" Value="protected virtual void OnContextMenuOpening (System.Windows.Controls.ContextMenuEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnContextMenuOpening(class System.Windows.Controls.ContextMenuEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkContentElement.OnContextMenuOpening(System.Windows.Controls.ContextMenuEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Controls.ContextMenuEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ereignisdaten für das Ereignis.</param>
+        <summary>Wird aufgerufen, wenn die <see cref="E:System.Windows.FrameworkContentElement.ContextMenuOpening" /> Routingereignis beim Durchlauf, erreicht dieser Klasse in seiner Route. Implementieren Sie diese Methode, um eine Klassenbehandlung für dieses Ereignis hinzuzufügen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode hat keine Standardimplementierung. Für den Fall, dass eine Zwischenklasse in der Vererbung diese Methode implementiert hat, sollten Sie dennoch base() aufrufen.  
+  
+ Der Zweck dieser Methode ist zumindest ähneln [!INCLUDE[TLA#tla_clr](~/includes/tlasharptla-clr-md.md)] -Ereignismuster auf * Methoden: DSC bietet die Möglichkeit zum Behandeln des übereinstimmenden Ereignis von abgeleiteten Klassen mit einem Klassenhandler statt einem Instanzhandler. In diesem Fall wird das übereinstimmende Ereignis ein Routingereignis. Das Implementierungsmuster der On * Methoden unterscheidet sich für Routingereignisse, da das Routingereignis von einem untergeordneten Element, nicht unbedingt das Element ausgelöst worden sein kann, die Handler aufgerufen wird, damit Ihre Implementierung die Quelle für die Ereignisargumente werden muss Eigenschaften berücksichtigt (und sollten nicht versuchen, erneut Auslösen des Ereignisses in den meisten Fällen). Unterklassen des <xref:System.Windows.FrameworkContentElement> wählen Sie mit der konnte Ereignishandlermethoden private Klasse aufgerufen werden, wenn das Ereignis entlang der Route empfangen wird. Eine mögliche Szenario besteht darin die Argumente des Ereignisses und absichtlich markiert das Ereignis als behandelt, um die Route zu verkürzen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnGotFocus">
+      <MemberSignature Language="C#" Value="protected override void OnGotFocus (System.Windows.RoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnGotFocus(class System.Windows.RoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkContentElement.OnGotFocus(System.Windows.RoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.RoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ereignisdaten für das Ereignis.</param>
+        <summary>Der Klassenhandler für das <see cref="E:System.Windows.ContentElement.GotFocus" /> Ereignis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klassenhandler festlegt entsprechenden Fokusverhalten für dieses Element, wenn das Ereignis aus diesem Element ausgelöst wurde. Wenn die Quelle des Ereignisses ein anderes Element in der Struktur wurde, wird der Handler keine Aktion ausgeführt.  
+  
+ Überschreiben Sie diese Methode, um diese Standardeinstellung Fokussierung Verhalten auf das Element zu ändern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInitialized">
+      <MemberSignature Language="C#" Value="protected virtual void OnInitialized (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnInitialized(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkContentElement.OnInitialized(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ereignisdaten für das Ereignis.</param>
+        <summary>Löst das <see cref="E:System.Windows.FrameworkContentElement.Initialized" />-Ereignis aus. Diese Methode wird aufgerufen, wenn <see cref="P:System.Windows.FrameworkContentElement.IsInitialized" /> festgelegt ist, um <see langword="true" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardimplementierung dieser virtuellen Methode löst das Ereignis aus, wie weiter oben in diesem Thema beschrieben. Bei überschreibungen sollte base(), um dieses Verhalten beizubehalten aufgerufen.  
+  
+ Beachten Sie, dass die <xref:System.Windows.FrameworkContentElement.IsInitialized%2A> Eigenschaft ist schreibgeschützt. Aus diesem Grund kann nicht die Initialisierungsverhalten auf diese Weise erzwingen festgelegt werden. Festlegen der Initialisierung sollte nur von erfolgen die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Framework.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPropertyChanged">
+      <MemberSignature Language="C#" Value="protected override void OnPropertyChanged (System.Windows.DependencyPropertyChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPropertyChanged(valuetype System.Windows.DependencyPropertyChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkContentElement.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.DependencyPropertyChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten, die die geänderte Eigenschaft beschreiben, einschließlich der alten und neuen Werte.</param>
+        <summary>Wird aufgerufen, wenn der effektive Wert einer Abhängigkeitseigenschaft für dieses <see cref="T:System.Windows.FrameworkContentElement" /> aktualisiert wurde. Welche spezifische Abhängigkeitseigenschaft geändert wird, wird im Argumentparameter gemeldet. Überschreibt <see cref="M:System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode dient nicht in der Regel eigenschaftenänderungen oder Außerkraftsetzungen aufgewendet erkennen. Sie dient stattdessen für Änderungen des als Muster verwendeten allgemeinen invalidierungstypen verfügbar, wenn bestimmte Informationen über wide Klassifizierungen Eigenschaften bekannt ist.  
+  
+ Diese Methode wird möglicherweise mehrere Male während der Lebensdauer eines Objekts aufgerufen. Aus diesem Grund können Sie eine bessere Leistung erzielen, wenn Sie die Metadaten bestimmter Eigenschaften überschreiben und Sie dann fügen <xref:System.Windows.CoerceValueCallback> oder <xref:System.Windows.PropertyChangedCallback> Funktionen für die einzelnen Eigenschaften. Allerdings würden Sie diese Methode verwenden, wenn eine <xref:System.Windows.FrameworkContentElement> enthält eine signifikante Anzahl Wert verknüpft Abhängigkeitseigenschaften, oder wenn es die Logik enthält, wie z. B. Renderingverhalten, die erneut ausgeführt werden, muss mehrere Fälle der Ungültigkeitserklärungen beziehen.  
+  
+ Beachten Sie, dass ein identisch mit dem Namen `OnPropertyChanged` Methode mit einer anderen Signatur (der Parametertyp ist <xref:System.ComponentModel.PropertyChangedEventArgs>), die auf eine Reihe von Klassen angezeigt werden können. Dass `OnPropertyChanged` für Daten Objekt Benachrichtigungen verwendet wird, und ist Teil des Vertrags für <xref:System.ComponentModel.INotifyPropertyChanged>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Rufen Sie immer die grundlegende Implementierung als erster Vorgang in Ihrer Implementierung. Dies versäumt wird die gesamte erheblich deaktiviert [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] Eigenschaftensystem, wodurch falsche Werte gemeldet werden.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStyleChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnStyleChanged (System.Windows.Style oldStyle, System.Windows.Style newStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void OnStyleChanged(class System.Windows.Style oldStyle, class System.Windows.Style newStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkContentElement.OnStyleChanged(System.Windows.Style,System.Windows.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldStyle" Type="System.Windows.Style" />
+        <Parameter Name="newStyle" Type="System.Windows.Style" />
+      </Parameters>
+      <Docs>
+        <param name="oldStyle">Das alte Format.</param>
+        <param name="newStyle">Die neue Formatvorlage an.</param>
+        <summary>Wird aufgerufen, wenn das Format, dass dieses Element geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode hat eine Standardimplementierung, die ein internes, beachten Sie die Formatvorlage geändert Bedingung Flag festlegt.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Rufen Sie immer die grundlegende Implementierung, die andernfalls Stile können nicht angewendet werden kann. Szenarien für das Überschreiben dieser Methode können enthalten, wenn die abgeleitete Klasse ist eine spezielle Stilauswahl Stilwerte. Design ändert, werden möglicherweise mit dieser Methode aufgerufen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnToolTipClosing">
+      <MemberSignature Language="C#" Value="protected virtual void OnToolTipClosing (System.Windows.Controls.ToolTipEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnToolTipClosing(class System.Windows.Controls.ToolTipEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkContentElement.OnToolTipClosing(System.Windows.Controls.ToolTipEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Controls.ToolTipEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Stellt Daten zum Ereignis.</param>
+        <summary>Wird aufgerufen, wenn die <see cref="E:System.Windows.FrameworkContentElement.ToolTipClosing" /> Routingereignis beim Durchlauf, erreicht dieser Klasse in seiner Route. Implementieren Sie diese Methode, um eine Klassenbehandlung für dieses Ereignis hinzuzufügen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode hat keine Standardimplementierung. Für den Fall, dass eine Zwischenklasse in der Vererbung diese Methode implementiert hat, sollten Sie dennoch base() aufrufen.  
+  
+ Der Zweck dieser Methode ist zumindest ähneln [!INCLUDE[TLA#tla_clr](~/includes/tlasharptla-clr-md.md)] -Ereignismuster auf * Methoden: DSC bietet die Möglichkeit zum Behandeln des übereinstimmenden Ereignis von abgeleiteten Klassen mit einem Klassenhandler statt einem Instanzhandler. In diesem Fall wird das übereinstimmende Ereignis ein Routingereignis. Das Implementierungsmuster der On * Methoden unterscheidet sich für Routingereignisse, da das Routingereignis von einem untergeordneten Element, nicht unbedingt das Element ausgelöst worden sein kann, die Handler aufgerufen wird, damit Ihre Implementierung die Quelle für die Ereignisargumente werden muss Eigenschaften berücksichtigt (und sollten nicht versuchen, erneut Auslösen des Ereignisses in den meisten Fällen). Unterklassen des <xref:System.Windows.FrameworkContentElement> wählen Sie mit der konnte Ereignishandlermethoden private Klasse aufgerufen werden, wenn das Ereignis entlang der Route empfangen wird. Eine mögliche Szenario besteht darin die Argumente des Ereignisses und absichtlich markiert das Ereignis als behandelt, um die Route zu verkürzen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnToolTipOpening">
+      <MemberSignature Language="C#" Value="protected virtual void OnToolTipOpening (System.Windows.Controls.ToolTipEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnToolTipOpening(class System.Windows.Controls.ToolTipEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkContentElement.OnToolTipOpening(System.Windows.Controls.ToolTipEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Controls.ToolTipEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Stellt Daten zum Ereignis.</param>
+        <summary>Wird aufgerufen, wenn die <see cref="E:System.Windows.FrameworkContentElement.ToolTipOpening" /> Routingereignis beim Durchlauf, erreicht dieser Klasse in seiner Route. Implementieren Sie diese Methode, um eine Klassenbehandlung für dieses Ereignis hinzuzufügen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode hat keine Standardimplementierung. Für den Fall, dass eine Zwischenklasse in der Vererbung diese Methode implementiert hat, sollten Sie dennoch base() aufrufen.  
+  
+ Der Zweck dieser Methode ist zumindest ähneln [!INCLUDE[TLA#tla_clr](~/includes/tlasharptla-clr-md.md)] -Ereignismuster auf * Methoden: DSC bietet die Möglichkeit zum Behandeln des übereinstimmenden Ereignis von abgeleiteten Klassen mit einem Klassenhandler statt einem Instanzhandler. In diesem Fall wird das übereinstimmende Ereignis ein Routingereignis. Das Implementierungsmuster der On * Methoden unterscheidet sich für Routingereignisse, da das Routingereignis von einem untergeordneten Element, nicht unbedingt das Element ausgelöst worden sein kann, die Handler aufgerufen wird, damit die Implementierung die Ereignisargumente Quelle durchführen müssen Eigenschaften berücksichtigt (und sollten nicht versuchen, erneut Auslösen des Ereignisses in den meisten Fällen). Unterklassen des <xref:System.Windows.FrameworkContentElement> wählen Sie mit der konnte Ereignishandlermethoden private Klasse aufgerufen werden, wenn das Ereignis entlang der Route empfangen wird. Eine mögliche Szenario besteht darin die Argumente des Ereignisses und absichtlich markiert das Ereignis als behandelt, um die Route zu verkürzen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OverridesDefaultStyle">
+      <MemberSignature Language="C#" Value="public bool OverridesDefaultStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OverridesDefaultStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FrameworkContentElement.OverridesDefaultStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob dieses Element Stileigenschaften aus Designformatvorlagen integriert.</summary>
+        <value>
+          <see langword="true" />Wenn dieses Element nicht Stileigenschaften Design verwendet werden; Alle Stil Ausgangsobjekte Eigenschaften stammen lokale Anwendung Formatvorlagen und Designs Stileigenschaften gelten nicht. <see langword="false" />Wenn die Anwendungsstile werden zuerst angewendet, und klicken Sie dann Designformatvorlagen anwenden für Eigenschaften, die Formatvorlagen der Anwendung nicht ausdrücklich festgelegt wurden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die häufigste Verwendung dieser Eigenschaft ist eine indirekte Verwendung innerhalb der Setter eines Formats, der einen Designstil bereitstellt.  
+  
+<a name="dependencyPropertyInfo_OverridesDefaultStyle"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.FrameworkContentElement.OverridesDefaultStyleProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OverridesDefaultStyleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty OverridesDefaultStyleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty OverridesDefaultStyleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FrameworkContentElement.OverridesDefaultStyleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.FrameworkContentElement.OverridesDefaultStyle" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public System.Windows.DependencyObject Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DependencyObject Parent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FrameworkContentElement.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das übergeordnete Element in der logischen Struktur dieses Elements ab.</summary>
+        <value>Das logische übergeordnete Element dieses Elements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beachten Sie, dass sich das logische übergeordnete Element eines Elements möglicherweise je nach den Funktionen der Anwendung geändert und den Wert dieser Eigenschaft diese Änderung nicht widerspiegelt. In der Regel sollten Sie den Wert abrufen, unmittelbar bevor Sie ihn benötigen.  
+  
+ Finden Sie unter [Strukturen in WPF](~/docs/framework/wpf/advanced/trees-in-wpf.md) für Weitere Informationen zu durchlaufen, logischen Strukturen und die Szenarien, in denen dieser Ansatz für Element-Ermittlung geeignet ist.  
+  
+ Im Eigenschaftensystem wird möglicherweise neu berechnen alle Eigenschaftswerte eines Elements, wenn er erneut übergeordnet ist, da einige Eigenschaften Werte in der logischen Struktur erben. Die <xref:System.Windows.FrameworkContentElement.DataContext%2A> , die gilt für Bindungen können auch ändern, wenn Elemente erneut übergeordnet werden.  
+  
+ Ändern eines Elements in der Regel nur erfolgt durch die Bearbeitung von Auflistungen, mithilfe von dedizierten hinzufügen oder entfernen-Methoden, oder durch Festlegen von Inhaltseigenschaften von Elementen.  
+  
+ Das häufigste Szenario für die Verwendung der <xref:System.Windows.FrameworkContentElement.Parent%2A> Eigenschaft wird zum Abrufen eines Verweises und rufen Sie anschließend auf verschiedenen <xref:System.Windows.FrameworkContentElement> Eigenschaftswerte aus dem übergeordneten Element. Bei Vorlagen der <xref:System.Windows.FrameworkContentElement.Parent%2A> der Vorlage schließlich werden `null`. Über diesen Punkt hinaus, und erweitern in der logischen Struktur, in dem die Vorlage tatsächlich angewendet wird, verwenden Sie <xref:System.Windows.FrameworkContentElement.TemplatedParent%2A>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel überprüft, um festzustellen, ob die <xref:System.Windows.FrameworkContentElement.Parent%2A> von einem <xref:System.Windows.Documents.TextPointer> verfügt über einen bestimmten Typ.  
+  
+ [!code-csharp[TextPointer_snippets#FCEParent](~/samples/snippets/csharp/VS_Snippets_Wpf/TextPointer_Snippets/CSharp/Window1.xaml.cs#fceparent)]
+ [!code-vb[TextPointer_snippets#FCEParent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextPointer_Snippets/visualbasic/window1.xaml.vb#fceparent)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PredictFocus">
+      <MemberSignature Language="C#" Value="public override sealed System.Windows.DependencyObject PredictFocus (System.Windows.Input.FocusNavigationDirection direction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Windows.DependencyObject PredictFocus(valuetype System.Windows.Input.FocusNavigationDirection direction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkContentElement.PredictFocus(System.Windows.Input.FocusNavigationDirection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="direction" Type="System.Windows.Input.FocusNavigationDirection" />
+      </Parameters>
+      <Docs>
+        <param name="direction">Die Richtung für die eine Änderung des potenziellen Fokus bestimmt werden soll.</param>
+        <summary>Bestimmt das nächste Element, das würde den Fokus erhalten relativ zu diesem Element für eine bereitgestellte Fokus Bewegung Richtung, aber den Fokus nicht tatsächlich verschoben. Diese Methode ist versiegelt und kann nicht überschrieben werden.</summary>
+        <returns>Das nächste Element, das konzentrieren würde zu verschieben, wenn Fokus tatsächlich durchlaufen wurden. Gelegten <see langword="null" /> wenn Fokus relativ zu diesem Element für die angegebene Richtung verschoben werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.FrameworkContentElement.MoveFocus%2A>ist die entsprechende Methode, die tatsächlich Fokus.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Eines der folgenden Anweisungen im angegebenen der <see cref="T:System.Windows.Input.TraversalRequest" />: <see cref="F:System.Windows.Input.FocusNavigationDirection.Next" />, <see cref="F:System.Windows.Input.FocusNavigationDirection.Previous" />, <see cref="F:System.Windows.Input.FocusNavigationDirection.First" />, <see cref="F:System.Windows.Input.FocusNavigationDirection.Last" />. Diese Anweisungen sind nicht zulässig für <see cref="M:System.Windows.FrameworkContentElement.PredictFocus(System.Windows.Input.FocusNavigationDirection)" /> (zulässig sind jedoch <see cref="M:System.Windows.FrameworkContentElement.MoveFocus(System.Windows.Input.TraversalRequest)" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterName">
+      <MemberSignature Language="C#" Value="public void RegisterName (string name, object scopedElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterName(string name, object scopedElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkContentElement.RegisterName(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="scopedElement" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name, der für die angegebene Name-Objekt-Zuordnung verwendet.</param>
+        <param name="scopedElement">Objekt für die Zuordnung.</param>
+        <summary>Stellt einen Accessor, der Zugriff auf vereinfacht die <see cref="T:System.Windows.NameScope" /> Registrierungsmethode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist eine bequeme Methode zum Aufrufen <xref:System.Windows.NameScope.RegisterName%2A>. Die Implementierung überprüft aufeinander folgenden übergeordneten Elemente, bis die entsprechende <xref:System.Windows.NameScope> -Implementierung, die gefunden wird, mit einer Suche nach einem Element, das implementiert <xref:System.Windows.Markup.INameScope>. Weitere Informationen zu Namescopes finden Sie unter [WPF-XAML-Namescopes](~/docs/framework/wpf/advanced/wpf-xaml-namescopes.md).  
+  
+ Aufrufen von <xref:System.Windows.FrameworkContentElement.RegisterName%2A> ist erforderlich, um die Animationsstoryboards für Anwendungen, wenn im Code erstellt, ordnungsgemäß zu verknüpfen. Dies ist, da einer der Schlüsselwerte storyboard-Eigenschaften, <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>, eine Namenssuche zur Laufzeit verwendet, statt einen Verweis auf ein Target-Element erstellen. Dies gilt auch, wenn dieses Element als Verweis aus dem Code zugegriffen werden. Weitere Informationen darüber, warum die Namen für die Storyboardziele registriert werden müssen, finden Sie unter [Storyboards Overview](~/docs/framework/wpf/graphics-multimedia/storyboards-overview.md). Animationen für Inhaltselemente sind weniger gebräuchlich als Animationen für Steuerelemente, die [Storyboards Overview](~/docs/framework/wpf/graphics-multimedia/storyboards-overview.md) konzentriert sich auf Szenarien für das Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveLogicalChild">
+      <MemberSignature Language="C#" Value="protected void RemoveLogicalChild (object child);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void RemoveLogicalChild(object child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkContentElement.RemoveLogicalChild(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="child" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="child">Das zu entfernende Element.</param>
+        <summary>Entfernt das angegebene Element aus der logischen Struktur dieses Elements.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies [!INCLUDE[TLA#tla_api](~/includes/tlasharptla-api-md.md)] ist hauptsächlich für die abgeleitete Klasse Szenarien beim Hinzufügen von Unterstützung für untergeordnete Sammlungen relevant.  
+  
+ Die meisten <xref:System.Windows.FrameworkContentElement> abgeleitete Klassen verfügbar zu machen, dedizierte Auflistungen, die für die Kapselung verantwortlich sind (z. B. <xref:System.Windows.Documents.Span.Inlines%2A> auf die <xref:System.Windows.Documents.Span> Klasse. <xref:System.Windows.Documents.Section.Blocks%2A> auf die <xref:System.Windows.Documents.Section> Klasse). Ableiten von dieser Klassen in der Regel kann die Notwendigkeit zur logische Struktur direkt bearbeiten vermeiden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resources">
+      <MemberSignature Language="C#" Value="public System.Windows.ResourceDictionary Resources { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.ResourceDictionary Resources" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FrameworkContentElement.Resources" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.Ambient</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.ResourceDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das aktuelle lokal definierte Ressourcenwörterbuch.</summary>
+        <value>Die aktuelle lokal definierte Ressourcen. Dies ist ein Wörterbuch von Ressourcen, in denen Ressourcen innerhalb des Wörterbuchs von Schlüssel zugegriffen wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ressourcenwörterbücher, die vollständig oder teilweise in definierbaren [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] werden in der Regel als ein Eigenschaftenelement erstellt und sind in der Regel für das Stammelement für die einzelnen Seiten oder für die Anwendung. Platzieren das Ressourcenwörterbuch auf dieser Ebene erleichtert es, aus der einzelnen untergeordneten Elemente auf der Seite (oder eine andere Seite, in die Anwendung Groß-/Kleinschreibung) zu suchen. In den meisten Anwendungsszenarios wird empfohlen, Stile als Objektelemente in einem Ressourcenwörterbuch definiert werden oder als externe Ressourcen definiert werden, damit die gesamte Stilressource eigenständig sein kann (dieser Ansatz hilft separate-Designer Zuständigkeiten von Entwickleraufgaben durch die Trennung von physischen Dateien, die bearbeitet werden müssen).  
+  
+ Beachten Sie, dass diese Eigenschaft gibt nur das Ressourcenwörterbuch direkt in dieses Element deklariert. Dies ist anders als die eigentliche Ressource Lookup-Prozess, in dem ein untergeordnetes Element in jedem übergeordneten Element, die Suche rekursiv nach oben definierten Ressourcen zugreifen können.  
+  
+ Ressourcen können auch aus Code innerhalb der Auflistung verwiesen werden, aber beachten Sie, dass Ressourcen in erstellt [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] kann definitiv nicht zugegriffen werden erst nach dem <xref:System.Windows.FrameworkContentElement.Loaded> wird ausgelöst, indem Sie das Element, das das Wörterbuch deklariert. In der Tat Ressourcen werden asynchron analysiert, und auch nicht die <xref:System.Windows.FrameworkContentElement.Loaded> Ereignis ist eine Zusicherung, die Sie referenzieren können eine [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Ressource definiert. Aus diesem Grund sollten Sie in der Regel nur auf zugreifen [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] definierten Ressourcen als Teil des Codes zur Laufzeit oder über andere [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Techniken z. B. Stile oder ressourcenerweiterungsparameter für Attributwerte. Zugriff auf Ressourcen über Code entspricht im Wesentlichen um einen Verweis, die von [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+ Die zugrunde liegende <xref:System.Windows.ResourceDictionary> unterstützt die Methoden zum Hinzufügen, entfernen oder Abfragen von Ressourcen in der Auflistung mithilfe von Code erforderlich. Die <xref:System.Windows.FrameworkContentElement.Resources%2A> Eigenschaft kann festgelegt werden, unterstützt das Szenario für die Ressourcen-Auflistung, der ein Element kann ein neues oder anderes werden vollständig zu ersetzen <xref:System.Windows.ResourceDictionary>.  
+  
+ Beachten Sie, dass die [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] gezeigte Syntax enthält kein Element für die <xref:System.Windows.ResourceDictionary>. Dies ist ein Beispiel für implizite Auflistungssyntax; Ein Tag, das das Auflistungselement darstellt, kann ausgelassen werden. Die Elemente, die als Elemente der Auflistung hinzugefügt werden, werden stattdessen angegeben. Weitere Informationen zu impliziten Sammlungen und [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], finden Sie unter [XAML-Syntax im Detail](~/docs/framework/wpf/advanced/xaml-syntax-in-detail.md). Einen Fall, in dem ein <xref:System.Windows.ResourceDictionary> wird immer noch explizit angegeben, wie ein Element ist, wenn Sie ein zusammengeführtes Wörterbuch einführen, in diesem Fall stehen in der Regel keine untergeordneten Elemente für diesen <xref:System.Windows.ResourceDictionary>. Weitere Informationen finden Sie unter [Ressourcenverzeichnis zusammengeführt](~/docs/framework/wpf/advanced/merged-resource-dictionaries.md).  
+  
+<a name="xamlPropertyElementUsage_Resources"></a>   
+## <a name="xaml-property-element-usage"></a>Verwendung von XAML-Eigenschaftenelementen  
+  
+```  
+<object>  
+  <object.Resources>  
+    oneOrMoreResourceElements  
+  </object.Resources>  
+</object>  
+```  
+  
+<a name="xamlValues_Resources"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *oneOrMoreResourceElements*  
+ Ein oder mehrere Objektelemente, von die jede eine Ressource definiert werden. Jede Ressource Property-Element innerhalb der einzelnen <xref:System.Windows.ResourceDictionary> benötigen Sie einen eindeutigen Wert für die [X: Key-Anweisung](~/docs/framework/xaml-services/x-key-directive.md), die als eindeutiger Schlüssel fungiert, beim Abrufen der Werte aus den <xref:System.Windows.ResourceDictionary>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.FrameworkContentElement.Resources%2A> Auflistung auf eine <xref:System.Windows.Documents.FlowDocument> Root-Element. <xref:System.Windows.Documents.FlowDocument>eine normale Auswahl ist, da sie eine der wenigen ist <xref:System.Windows.FrameworkContentElement> Klassen, die sinnvoll als Stammelement und Ressourcen werden im Allgemeinen gespeichert, auf der Stammebene Seite oder sogar ein noch höheres Ebenen z. B. in der Anwendung.  
+  
+ [!code-xaml[ContentElementsSmorgasbord#FCEResources](~/samples/snippets/csharp/VS_Snippets_Wpf/ContentElementsSmorgasbord/CSharp/page2.xaml#fceresources)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBinding">
+      <MemberSignature Language="C#" Value="public System.Windows.Data.BindingExpression SetBinding (System.Windows.DependencyProperty dp, string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Data.BindingExpression SetBinding(class System.Windows.DependencyProperty dp, string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkContentElement.SetBinding(System.Windows.DependencyProperty,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.BindingExpression</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="dp">Bezeichnet die gebundene Eigenschaft.</param>
+        <param name="path">Der Name der Quelleigenschaft oder der Pfad der Eigenschaft, die für die Bindung verwendet.</param>
+        <summary>Ordnet eine Bindung an dieses Element basierend auf den Namen der bereitgestellten Source-Eigenschaft als eine Qualifikation Pfad mit der Datenquelle an.</summary>
+        <returns>Zeichnet die Bedingungen der Bindung auf. Dieser Rückgabewert kann bei der Fehlerüberprüfung nützlich sein.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist eine bequeme Methode zum Aufrufen <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>, wiederum übergibt die aktuelle Instanz als der <xref:System.Windows.DependencyObject>, und erstellt einen neuen <xref:System.Windows.Data.Binding> auf Grundlage der bereitgestellten `path` Parameter. Diese Signatur ist einfacher, wenn Sie eine einfache standardbindung herstellen. Wenn Sie müssen Bindungseigenschaften nicht standardmäßige Bedingungen angeben, oder verwenden möchten eine <xref:System.Windows.Data.MultiBinding> oder <xref:System.Windows.Data.PriorityBinding>, verwenden Sie die <xref:System.Windows.FrameworkContentElement.SetBinding%28System.Windows.DependencyProperty%2CSystem.Windows.Data.BindingBase%29> Signatur.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Bindung auf einen <xref:System.Windows.Documents.Paragraph> Element, durch das Erstellen eines neuen benutzerdefinierten Daten-Objekts, das Objekt als herstellen <xref:System.Windows.FrameworkContentElement.DataContext%2A>, und den Bindungspfad auf eine Eigenschaft darin festlegen.  
+  
+ [!code-csharp[ContentElementsSmorgasbord#DataContext](~/samples/snippets/csharp/VS_Snippets_Wpf/ContentElementsSmorgasbord/CSharp/page1.xaml.cs#datacontext)]
+ [!code-vb[ContentElementsSmorgasbord#DataContext](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ContentElementsSmorgasbord/visualbasic/page1.xaml.vb#datacontext)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBinding">
+      <MemberSignature Language="C#" Value="public System.Windows.Data.BindingExpressionBase SetBinding (System.Windows.DependencyProperty dp, System.Windows.Data.BindingBase binding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Data.BindingExpressionBase SetBinding(class System.Windows.DependencyProperty dp, class System.Windows.Data.BindingBase binding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkContentElement.SetBinding(System.Windows.DependencyProperty,System.Windows.Data.BindingBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.BindingExpressionBase</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+        <Parameter Name="binding" Type="System.Windows.Data.BindingBase" />
+      </Parameters>
+      <Docs>
+        <param name="dp">Bezeichnet die gebundene Eigenschaft.</param>
+        <param name="binding">Stellt eine Bindung dar.</param>
+        <summary>Fügt auf der Grundlage des bereitgestellten Bindungsobjekts eine Bindung an dieses Element an.</summary>
+        <returns>Zeichnet die Bedingungen der Bindung auf. Dieser Rückgabewert kann bei der Fehlerüberprüfung nützlich sein.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist eine bequeme Methode zum Aufrufen <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>, die die aktuelle Instanz als übergibt die <xref:System.Windows.DependencyObject>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Bindung auf einen <xref:System.Windows.Documents.Paragraph> Element, durch Erstellen eines neuen <xref:System.Windows.Data.Binding> und indem Sie die Quelle ein neu erstelltes `DateTime` Objekt.  
+  
+ [!code-csharp[ContentElementsSmorgasbord#SetBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/ContentElementsSmorgasbord/CSharp/page1.xaml.cs#setbinding)]
+ [!code-vb[ContentElementsSmorgasbord#SetBinding](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ContentElementsSmorgasbord/visualbasic/page1.xaml.vb#setbinding)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetResourceReference">
+      <MemberSignature Language="C#" Value="public void SetResourceReference (System.Windows.DependencyProperty dp, object name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetResourceReference(class System.Windows.DependencyProperty dp, object name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkContentElement.SetResourceReference(System.Windows.DependencyProperty,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+        <Parameter Name="name" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dp">Die Eigenschaft, an die die Ressource gebunden ist.</param>
+        <param name="name">Der Name der Ressource.</param>
+        <summary>Sucht nach einer Ressource mit dem angegebenen Namen, und richtet einen Ressourcenverweis, für die angegebene Eigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Ressourcenverweis ist vergleichbar mit der Verwendung von einem [DynamicResource Markuperweiterung](~/docs/framework/wpf/advanced/dynamicresource-markup-extension.md) im Markup. Der Ressourcenverweis erstellt einen internen Ausdruck, der den Wert der angegebenen Eigenschaft für zurückgestellten zur Laufzeit bereitstellt. Der Ausdruck wird erneut ausgewertet werden, immer das Ressourcenwörterbuch geänderte Wert über interne Ereignisse gibt an, oder, wenn das aktuelle Element erneut übergeordnet ist (eine Änderung des übergeordneten würde das Wörterbuch Suche Pfad ändern).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeResources">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeResources ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeResources() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkContentElement.ShouldSerializeResources" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt zurück, ob Serialisierungsprozesse den Inhalt der serialisieren sollen die <see cref="P:System.Windows.FrameworkContentElement.Resources" /> Eigenschaft für Instanzen dieser Klasse.</summary>
+        <returns>
+          <see langword="true" />, wenn der <see cref="P:System.Windows.FrameworkContentElement.Resources" />-Eigenschaftswert serialisiert werden soll, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl zurück `true` solange es mindestens eine Ressource in der lokalen ist <xref:System.Windows.FrameworkContentElement.Resources%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeStyle">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeStyle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkContentElement.ShouldSerializeStyle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt zurück, ob Serialisierungsprozesse den Inhalt der serialisieren sollen die <see cref="P:System.Windows.FrameworkContentElement.Style" /> Eigenschaft für Instanzen dieser Klasse.</summary>
+        <returns>
+          <see langword="true" />, wenn der <see cref="P:System.Windows.FrameworkContentElement.Style" />-Eigenschaftswert serialisiert werden soll, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl zurück `true` Wenn die <xref:System.Windows.Style> lokal festgelegt ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceUpdated">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Windows.Data.DataTransferEventArgs&gt; SourceUpdated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Data.DataTransferEventArgs&gt; SourceUpdated" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.FrameworkContentElement.SourceUpdated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Data.DataTransferEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine zugeordnete Datenquelle, die Teil einer Bindung dieses Elements ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis begleitet die <xref:System.Windows.Data.Binding.SourceUpdated> Ereignis, das ausgelöst wird, von einer <xref:System.Windows.Data.Binding> mit diesem Element verknüpft sind.  
+  
+<a name="xamlAttributeUsage_SourceUpdated"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object SourceUpdated="EventHandler"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Style">
+      <MemberSignature Language="C#" Value="public System.Windows.Style Style { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Style Style" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FrameworkContentElement.Style" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Stil ab, der von diesem Element verwendet werden soll, oder legt ihn fest.</summary>
+        <value>Der übernommene und nicht dem Standardstil entsprechende Stil für das Element, wenn ein Stil vorhanden ist. Andernfalls <see langword="null" />. Der Standardwert für ein mit den Standardwerten konstruiertes <see cref="T:System.Windows.FrameworkContentElement" /> ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das aktuelle Format wird häufig von einem Standardformat aus Designumgebung oder Formatvorlagen, die in der Regel auf Objekte dieses Typs angewendet, indem Ressourcen auf Seiten- oder Anwendungsebene (ein impliziter Stil) bereitgestellt. Diese Eigenschaft ist nicht festgelegt oder return-Standard (Designformatvorlagen), aber es gibt zurück, die implizite oder explizite Stil. Bei impliziten oder expliziten Stilen spielt es keine, ob das Format als Ressource zugegriffen oder lokal definiert ist.  
+  
+ Das Festlegen von den Formaten bestehen einige Einschränkungen. Sie können die gesamte zurücksetzen <xref:System.Windows.FrameworkContentElement.Style%2A> Eigenschaft, um ein neues <xref:System.Windows.Style> erzwingt die zu irgendeinem Zeitpunkt ein Layout zurücksetzen. Jedoch so bald wie diesem Format verwendet von einem geladenen Element platziert wird die <xref:System.Windows.Style> angesehen wird, versiegelt. Bei dem Versuch, eine einzelne Eigenschaft eines Stils in Gebrauch ändern (z. B. alle Elemente in der Auflistung der <xref:System.Windows.Style.Setters%2A>) bewirkt, dass eine Ausnahme ausgelöst werden. Ein Format, das im Markup definierte gilt verwendet werden, sobald dies aus einem Ressourcenwörterbuch (für Ressourcen erfolgt) oder die Seite enthalten ist (für Inlineformatvorlagen) geladen ist.  
+  
+ <xref:System.Windows.FrameworkContentElement.Style%2A>ist eine Abhängigkeitseigenschaft mit besonderer Rangfolge. Der lokal festgelegten Stil mit der höchsten Priorität in der Regel im Eigenschaftensystem arbeitet. Wenn die <xref:System.Windows.FrameworkContentElement.Style%2A> null festgelegt ist, wird beim Laden der Eigenschaft wird überprüft, ob impliziten Stilen als definierten Ressourcen, die diesen Typ angeben. Wenn das Format immer noch null nach diesem Schritt ist wird der Stil ergibt sich aus den Standardstil (Design), jedoch das Standardformat nicht, in zurückgegeben wird der <xref:System.Windows.FrameworkContentElement.Style%2A> Eigenschaftswert. Finden Sie unter [Dependency Property Value Precedence](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).  
+  
+<a name="xamlAttributeUsage_Style"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object Style="{resourceExtension StyleResourceKey}"/>  
+```  
+  
+<a name="xamlValues_Style"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *resourceExtension*  
+ Eines der folgenden:, oder. Finden Sie unter [XAML-Ressourcen](~/docs/framework/wpf/advanced/xaml-resources.md).  
+  
+ *styleResourceKey*  
+ Der Schlüssel, der den angeforderten Stil identifiziert. Der Schlüssel verweist auf eine vorhandene Ressource in einem <xref:System.Windows.ResourceDictionary>.  
+  
+> [!NOTE]
+>  Eigenschaftenelementsyntax ist technisch zwar möglich, aber nicht empfehlenswert. Finden Sie unter [Inlinestile und Vorlagen](~/docs/framework/wpf/advanced/inline-styles-and-templates.md).  Eine Bindung verwendet oder <xref:System.Windows.Data.Binding> ist auch möglich, aber ungewöhnlich.  
+  
+<a name="dependencyPropertyInfo_Style"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.FrameworkContentElement.StyleProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.FrameworkContentElement.Resources%2A> Auflistung auf eine <xref:System.Windows.Documents.FlowDocument> "Root"-Element und anschließend darauf verweist, als Ressource für ein bestimmtes Format für einen <xref:System.Windows.Documents.Paragraph>.  
+  
+ [!code-xaml[ContentElementsSmorgasbord#FCEResources](~/samples/snippets/csharp/VS_Snippets_Wpf/ContentElementsSmorgasbord/CSharp/page2.xaml#fceresources)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StyleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty StyleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty StyleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FrameworkContentElement.StyleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.FrameworkContentElement.Style" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IQueryAmbient.IsAmbientPropertyAvailable">
+      <MemberSignature Language="C#" Value="bool IQueryAmbient.IsAmbientPropertyAvailable (string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Windows.Markup.IQueryAmbient.IsAmbientPropertyAvailable(string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkContentElement.System#Windows#Markup#IQueryAmbient#IsAmbientPropertyAvailable(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Der Name der angeforderten ambient-Eigenschaft.</param>
+        <summary>Eine Beschreibung dieses Members finden Sie unter der <see cref="M:System.Windows.Markup.IQueryAmbient.IsAmbientPropertyAvailable(System.String)" />-Methode.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="propertyName" /> verfügbar ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.FrameworkContentElement>-Instanz in eine <xref:System.Windows.Markup.IQueryAmbient>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tag">
+      <MemberSignature Language="C#" Value="public object Tag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Tag" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FrameworkContentElement.Tag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen willkürlichen Objektwert ab, der zum Speichern von benutzerdefinierten Informationen zu diesem Element verwendet werden kann.</summary>
+        <value>Den beabsichtigten Wert. Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist analog zu Eigenschaften von Tags in anderen [!INCLUDE[TLA#tla_ms](~/includes/tlasharptla-ms-md.md)] Programmiermodelle, z. B. [!INCLUDE[TLA#tla_vba](~/includes/tlasharptla-vba-md.md)] oder [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)]. Es soll einen bereits vorhandenen Ort zum Speichern von einige grundlegende benutzerdefinierte Informationen über jedes Element, ohne dass Anwendungsentwickler Unterklasse verfügbar zu machen.  
+  
+<a name="xamlValues_Tag"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ Da diese Eigenschaft ein Objekt akzeptiert, müssen Sie die Verwendung des Elements verwenden, um festzulegen der <xref:System.Windows.FrameworkContentElement.Tag%2A> Eigenschaft im [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] auf etwas anderes als ein Objekt mit einem bekannten und integrierten Typkonverter, z. B. eine Zeichenfolge. Auf diese Weise verwendete Objekte befinden sich in der Regel nicht in der [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Namespaces und erfordern daher möglicherweise Namespacezuordnung für den externen Namespace um eingeführt werden, als [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Elemente.  
+  
+<a name="dependencyPropertyInfo_Tag"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.FrameworkContentElement.TagProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TagProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TagProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TagProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FrameworkContentElement.TagProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.FrameworkContentElement.Tag" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetUpdated">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Windows.Data.DataTransferEventArgs&gt; TargetUpdated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Data.DataTransferEventArgs&gt; TargetUpdated" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.FrameworkContentElement.TargetUpdated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Data.DataTransferEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine zugeordnete Zieleigenschaft, die Teil einer Bindung dieses Elements ist, geändert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis begleitet die <xref:System.Windows.Data.Binding.TargetUpdated> Ereignis, das ausgelöst wird, von einer <xref:System.Windows.Data.Binding> mit diesem Element verknüpft sind. Dies bedeutet normalerweise, dass die betreffende Bindung eine bidirektionale Bindung ist und dass die gebundene Abhängigkeitseigenschaft bestätigt eine Ungültigkeit des Werts der vorherigen pro eine Überprüfung oder dem Schema, das die Eigenschaft unterstützt.  
+  
+ Die Ereignisargumente dieses Ereignisses informiert, dass Sie die gebundene Eigenschaft geändert wurde.  
+  
+<a name="xamlAttributeUsage_TargetUpdated"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object TargetUpdated="EventHandler"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TemplatedParent">
+      <MemberSignature Language="C#" Value="public System.Windows.DependencyObject TemplatedParent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DependencyObject TemplatedParent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FrameworkContentElement.TemplatedParent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf die übergeordnete Vorlage dieses Elements ab. Diese Eigenschaft ist nicht relevant, wenn das Element nicht durch eine Vorlage erstellt wurde.</summary>
+        <value>Das Element, dessen <see cref="T:System.Windows.FrameworkTemplate" /> <see cref="P:System.Windows.FrameworkTemplate.VisualTree" /> verursacht dieses Element erstellt werden soll. Dieser Wert ist häufig <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vorlagen sind eigentlich freigegebene Objekte, in dem der Inhalt der Vorlage nur einmal erstellt werden. Aus diesem Grund, wenn Sie einen Objektverweis auf ein Element, die aus einer Vorlage abrufen, können Sie feststellen, dass die offensichtliche logische Struktur nicht in das Stammverzeichnis Seite erreicht. Um einen solchen Vorlage Verweis auf die Seite logische Struktur eine Verbindung herzustellen, erhalten Sie die <xref:System.Windows.FrameworkContentElement.TemplatedParent%2A> -Wert und den Vorgang fortzusetzen, um die Navigation durch die Elementstruktur nach Bedarf.  
+  
+ <xref:System.Windows.FrameworkContentElement.TemplatedParent%2A>Häufig werden `null` für gemeinsame Objekte, da Sie einen Objektverweis aus einer Seite in der Anwendung erhalten haben, dieses Element möglicherweise nicht aus einer Vorlage erstellt wurde. Fälle, in denen <xref:System.Windows.FrameworkContentElement.TemplatedParent%2A> möglicherweise nicht `null` zählen Vorgänge wie das Ereignis Treffertests, für bestimmte Eingabeereignisse Behandlung von oder Arbeiten mit Enumeratoren, die möglicherweise von Vorlagen stammt Elemente zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTip">
+      <MemberSignature Language="C#" Value="public object ToolTip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ToolTip" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FrameworkContentElement.ToolTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das QuickInfo-Objekt, das für dieses Element angezeigt wird, die [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)].</summary>
+        <value>Das QuickInfo-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Wert dieser Eigenschaft vom Typ <xref:System.Windows.Controls.ToolTip>, klicken Sie dann die QuickInfo, die in verwendet werden, also die [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)].  Wenn der Wert eines anderen Typs ist, wird dieser Wert verwendet werden die *Inhalt* für eine <xref:System.Windows.Controls.ToolTip> bereitgestellt (erstellt), vom System. Weitere Informationen finden Sie unter <xref:System.Windows.Controls.ToolTipService>. Die Dienstklasse enthält angefügte Eigenschaften, die verwendet werden können, um eine QuickInfo weiter anpassen.  
+  
+<a name="xamlAttributeUsage_ToolTip"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object ToolTip="toolTipContent"/>  
+```  
+  
+<a name="xamlPropertyElementUsage_ToolTip"></a>   
+## <a name="xaml-property-element-usage"></a>Verwendung von XAML-Eigenschaftenelementen  
+  
+```  
+<object>  
+  <object.ToolTip>  
+    <ToolTip .../>  
+  </object.ToolTip>  
+</object>  
+- or -  
+<object>  
+  <object.ToolTip>  
+    toolTipObjectContent  
+  </object.ToolTip>  
+</object>  
+```  
+  
+<a name="xamlValues_ToolTip"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *toolTipContent*  
+ Eine Zeichenfolge, die den Anzeigetext für wird die <xref:System.Windows.FrameworkContentElement.ToolTip%2A>.  
+  
+ *toolTipObjectContent*  
+ Ein Objekt, das in Objektelementform, das als Inhalt für die zu verwendende bereitgestellten der <xref:System.Windows.FrameworkContentElement> . In der Regel wäre dies eine <xref:System.Windows.FrameworkElement> oder ein anderes Element, das Layout für die Zusammensetzung der <xref:System.Windows.FrameworkContentElement.ToolTip%2A>, letztendlich mit Textinhalt in der Zusammensetzung. Bei dieser Verwendung der <xref:System.Windows.Controls.ToolTip> Element erstellt implizit aus dem analysierten [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], und die *ToolTipObjectContent* Inhalt festgelegt ist, als die <xref:System.Windows.Controls.ContentControl.Content%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ <`ToolTip` .../>  
+ Siehe <xref:System.Windows.Controls.ToolTip>.  
+  
+<a name="dependencyPropertyInfo_ToolTip"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.FrameworkContentElement.ToolTipProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird den Wert, der die <xref:System.Windows.FrameworkElement.ToolTip%2A> Eigenschaft direkt in eine Zeichenfolge.  
+  
+ [!code-csharp[TableSnippets2#_Table_RowGroups_ManipRows](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_maniprows)]
+ [!code-vb[TableSnippets2#_Table_RowGroups_ManipRows](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_maniprows)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTipClosing">
+      <MemberSignature Language="C#" Value="public event System.Windows.Controls.ToolTipEventHandler ToolTipClosing;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Controls.ToolTipEventHandler ToolTipClosing" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.FrameworkContentElement.ToolTipClosing" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ToolTipEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, unmittelbar bevor eine QuickInfo für das Element geschlossen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Schließen der QuickInfo zu unterdrücken, sollte der Handler des Ereignisses es als behandelt markiert.  
+  
+ Dieses Ereignis nicht mit einem <xref:System.Windows.EventTrigger> in einem Format. Dies ist, da die Bezeichnerfeld dieses Ereignisses eine Implementierung von einem Dienst erneut verwendet, die keine hinzufügen/entfernen-Methoden für das Ereignis verfügbar macht.  
+  
+<a name="routedEventInfo_ToolTipClosing"></a>   
+## <a name="routed-event-information"></a>Informationen zum Routingereignis  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.FrameworkContentElement.ToolTipClosingEvent>|  
+|Routing-Strategie|Direkt|  
+|Delegate|<xref:System.Windows.Controls.ToolTipEventHandler>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTipClosingEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent ToolTipClosingEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent ToolTipClosingEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FrameworkContentElement.ToolTipClosingEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.FrameworkContentElement.ToolTipClosing" /> [weitergeleitet Ereignisübersicht](~/docs/framework/wpf/advanced/routed-events-overview.md).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ereignis-ID-Objekte werden erstellt, wenn Routingereignisse registriert werden (finden Sie unter <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>) und kann dann verwendet werden, um Klassenhandler hinzuzufügen (finden Sie unter <xref:System.Windows.EventManager.RegisterClassHandler%2A>). Bezeichnerobjekte enthalten einen kennzeichnenden Namen, Besitzertyp, Handlertyp, Routingstrategie und eine Hilfsprogrammmethode zum Hinzufügen von Besitzern für das Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTipOpening">
+      <MemberSignature Language="C#" Value="public event System.Windows.Controls.ToolTipEventHandler ToolTipOpening;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Controls.ToolTipEventHandler ToolTipOpening" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.FrameworkContentElement.ToolTipOpening" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ToolTipEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn eine QuickInfo für das Element geöffnet ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum manuellen Öffnen des QuickInfos kennzeichnen Handler für die Ereignisse das betreffende Ereignis als behandelt. Andernfalls den Wert der <xref:System.Windows.FrameworkContentElement.ToolTip%2A> Eigenschaft wird verwendet, um automatisch ein Kontextmenü geöffnet. Das Ereignis als behandelt markiert wird die Standardaktion tatsächlich abgebrochen, und möglicherweise Gelegenheit, den Wert zurückgesetzt, die <xref:System.Windows.FrameworkContentElement.ToolTip%2A> Eigenschaft, und öffnen Sie die neue <xref:System.Windows.Controls.ContextMenu>. Beachten Sie, dass dieses Ereignis nicht ausgelöst, wird Wenn <xref:System.Windows.FrameworkContentElement.ToolTip%2A> ist ein null-Verweis oder auf andere Weise nicht festgelegt.  
+  
+ Dieses Ereignis nicht mit einem <xref:System.Windows.EventTrigger> in einem Format. Dies ist, da die Bezeichnerfeld dieses Ereignisses eine Implementierung von einem Dienst erneut verwendet, die keine hinzufügen/entfernen-Methoden für das Ereignis verfügbar macht.  
+  
+<a name="routedEventInfo_ToolTipOpening"></a>   
+## <a name="routed-event-information"></a>Informationen zum Routingereignis  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.FrameworkContentElement.ToolTipOpeningEvent>|  
+|Routing-Strategie|Direkt|  
+|Delegate|<xref:System.Windows.Controls.ToolTipEventHandler>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTipOpeningEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent ToolTipOpeningEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent ToolTipOpeningEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FrameworkContentElement.ToolTipOpeningEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.FrameworkContentElement.ToolTipOpening" /> [weitergeleitet Ereignisübersicht](~/docs/framework/wpf/advanced/routed-events-overview.md).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ereignis-ID-Objekte werden erstellt, wenn Routingereignisse registriert werden (finden Sie unter <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>) und kann dann verwendet werden, um Klassenhandler hinzuzufügen (finden Sie unter <xref:System.Windows.EventManager.RegisterClassHandler%2A>). Bezeichnerobjekte enthalten einen kennzeichnenden Namen, Besitzertyp, Handlertyp, Routingstrategie und eine Hilfsprogrammmethode zum Hinzufügen von Besitzern für das Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTipProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ToolTipProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ToolTipProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FrameworkContentElement.ToolTipProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.FrameworkContentElement.ToolTip" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryFindResource">
+      <MemberSignature Language="C#" Value="public object TryFindResource (object resourceKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object TryFindResource(object resourceKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkContentElement.TryFindResource(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceKey" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="resourceKey">Der Schlüsselbezeichner der zu findenden Ressource.</param>
+        <summary>Sucht nach einer Ressource mit dem angegebenen Schlüssel und gibt diese Ressource zurück, sofern sie gefunden wurde.</summary>
+        <returns>Die gefundene Ressource. Wenn keine Ressource gefunden wurde, <see langword="null" /> wird zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Ressource für das aufrufende Element nicht gefunden wird, ist die übergeordnete Struktur die gleiche Weise, die die Struktur die logische Struktur durchsucht durchsucht, wenn der Schlüssel zur Laufzeit ein dynamischen Ressourcenverweis angefordert wurden.  
+  
+ In der Regel würden Sie sofort den Rückgabewert in den Typ der Eigenschaft umgewandelt, den Sie mit den zurückgegebenen Ressourcenwert festgelegt wurden.  
+  
+ Die <xref:System.Windows.FrameworkContentElement.FindResource%2A> Methode verhält sich ähnlich, außer dass Sie zu einer Ausnahme im Fall von keine Ressource mit dem angegebenen Schlüssel gefunden wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel sucht nach einer Ressource, wie im Markup definierte und wendet sie auf eine bestimmte Eigenschaft eines Elements in Reaktion auf ein Routingereignis.  
+  
+ [!code-csharp[ContentElementsSmorgasbord#TryFindResource](~/samples/snippets/csharp/VS_Snippets_Wpf/ContentElementsSmorgasbord/CSharp/page1.xaml.cs#tryfindresource)]
+ [!code-vb[ContentElementsSmorgasbord#TryFindResource](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ContentElementsSmorgasbord/visualbasic/page1.xaml.vb#tryfindresource)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unloaded">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler Unloaded;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler Unloaded" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.FrameworkContentElement.Unloaded" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn das Element aus einer Elementstruktur geladener Elemente entfernt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Direkte Routingereignisse führen Sie eine Route nicht ausgeführt, sie sind nur innerhalb des gleichen Elements in dem sie ausgelöst werden. Direkte Routingereignisse unterstützen andere Verhalten Routingereignis: sie unterstützen eine Auflistung zugegriffen werden kann, Handler und dient als ein <xref:System.Windows.EventTrigger> in einem Format.  
+  
+<a name="routedEventInfo_Unloaded"></a>   
+## <a name="routed-event-information"></a>Informationen zum Routingereignis  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.FrameworkContentElement.UnloadedEvent>|  
+|Routing-Strategie|Direkt|  
+|Delegate|<xref:System.Windows.RoutedEventHandler>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnloadedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent UnloadedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent UnloadedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FrameworkContentElement.UnloadedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="E:System.Windows.FrameworkContentElement.Unloaded" /> [weitergeleitet Ereignisübersicht](~/docs/framework/wpf/advanced/routed-events-overview.md).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ereignis-ID-Objekte werden erstellt, wenn Routingereignisse registriert werden (finden Sie unter <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>) und kann dann verwendet werden, um Klassenhandler hinzuzufügen (finden Sie unter <xref:System.Windows.EventManager.RegisterClassHandler%2A>). Bezeichnerobjekte enthalten einen kennzeichnenden Namen, Besitzertyp, Handlertyp, Routingstrategie und eine Hilfsprogrammmethode zum Hinzufügen von Besitzern für das Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnregisterName">
+      <MemberSignature Language="C#" Value="public void UnregisterName (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UnregisterName(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkContentElement.UnregisterName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Paars Name-Objekt, aus dem aktuellen Bereich zu entfernen.</param>
+        <summary>Vereinfacht den Zugriff auf die <see cref="T:System.Windows.NameScope" /> Aufhebung der Registrierung Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen nur zum Aufheben der Registrierung Namen, wenn Sie beabsichtigen, ein anderes Element mit demselben Namen erneut zu registrieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateDefaultStyle">
+      <MemberSignature Language="C#" Value="public void UpdateDefaultStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UpdateDefaultStyle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkContentElement.UpdateDefaultStyle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wendet das Standardformat der aktuellen <see cref="T:System.Windows.FrameworkContentElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

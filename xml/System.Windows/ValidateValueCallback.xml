@@ -1,0 +1,42 @@
+<Type Name="ValidateValueCallback" FullName="System.Windows.ValidateValueCallback">
+  <TypeSignature Language="C#" Value="public delegate bool ValidateValueCallback(object value);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ValidateValueCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.ValidateValueCallback" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="value" Type="System.Object" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Boolean</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="value">Der zu überprüfende Wert.</param>
+    <summary>Stellt eine Methode dar, die als Rückruf verwendet wird, mit dem der effektive Wert einer Abhängigkeitseigenschaft überprüft wird.</summary>
+    <returns>
+      <see langword="true" />Wenn der Wert überprüft wurde. <see langword="false" /> , wenn der übermittelte Wert ungültig war.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rückrufe, die basierend auf diesen Delegaten werden verwendet, mit bestimmten Signaturen von <xref:System.Windows.DependencyProperty.Register%2A?displayProperty=nameWithType> und Methoden, wie z. B. verwandte <xref:System.Windows.DependencyProperty.RegisterAttached%2A> und nur-Lese Entsprechungen. Verwenden Sie Signaturen, die akzeptieren der `validateValueCallback` Parameter an, wenn Sie bestimmte Überprüfung des Eigenschaftswerts möchten, die der effektive festgelegt ist. Sie sollten dann dieser Rückruf implementieren, so, dass er die tatsächliche Validierung von den vorgeschlagenen Wert führt. Der Rückruf zurückgeben sollte `true` Wenn der an den Rückruf übermittelte Wert gültig ist und `false` andernfalls. Ein `false` Wert erzeugt eine Ausnahme in einem bestimmten Teil der Eigenschaftensystems, in dem die ungültige Eigenschaft festgelegt wurde, damit die Anwendung darauf vorbereitet sein sollten, um diese Ausnahmen zu behandeln.  
+  
+ Überprüfung Rückrufe werden auf Eigenschaftsbezeichner Abhängigkeit, anstatt die Metadaten für Abhängigkeitseigenschaften gespeichert. Der Validierungsrückruf hat keinen Zugriff auf eine bestimmte Instanz von einem <xref:System.Windows.DependencyObject> auf dem die Eigenschaft festgelegt und kann nur beeinflussen, welche Werte in der Regel für die Eigenschaft akzeptiert werden. Wenn Sie einen Rückruf, die auf der Grundlage einer bestimmten Instanz Eigenschaftswerte ändern können benötigen, sollten Sie verwenden eine Kombination aus einem <xref:System.Windows.CoerceValueCallback> und <xref:System.Windows.PropertyChangedCallback> Rückrufe entsprechend der Anwendung auf die Metadaten der Eigenschaft. Sie können diese Rückrufe auch auf verwandte Eigenschaften anwenden, die den Wert der Eigenschaft auswirken, sollten. Weitere Informationen finden Sie unter [Rückrufen von Abhängigkeitseigenschaften und Validierung](~/docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel schließt eine Implementierung von diesem Rückruf, um einen Wertebereich für eine benutzerdefinierte Abhängigkeitseigenschaft zu überprüfen. In diesem Fall erwartet den Wert der Eigenschaft eine Enumeration, und die Validierung wird sichergestellt, dass der bereitgestellte Wert ein Member dieser Enumeration ergibt.  
+  
+ [!code-csharp[DPCustom#ValidateValueCallback](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCustom/CSharp/default.xaml.cs#validatevaluecallback)]
+ [!code-vb[DPCustom#ValidateValueCallback](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCustom/visualbasic/default.xaml.vb#validatevaluecallback)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

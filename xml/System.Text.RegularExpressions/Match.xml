@@ -1,0 +1,332 @@
+<Type Name="Match" FullName="System.Text.RegularExpressions.Match">
+  <TypeSignature Language="C#" Value="public class Match : System.Text.RegularExpressions.Group" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit Match extends System.Text.RegularExpressions.Group" />
+  <TypeSignature Language="DocId" Value="T:System.Text.RegularExpressions.Match" />
+  <AssemblyInfo>
+    <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Text.RegularExpressions.Group</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Ergebnisse aus einer einzelnen Übereinstimmung mit einem regulären Ausdruck dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Text.RegularExpressions.Match> Objekt ist unveränderlich und besitzt keinen öffentlichen Konstruktor. Eine Instanz von der <xref:System.Text.RegularExpressions.Match> Klasse wird zurückgegeben, indem Sie die <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> -Methode und stellt das erste Muster in einer Zeichenfolge überein. Nachfolgende Übereinstimmungen dargestellte <xref:System.Text.RegularExpressions.Match> zurückgegebenen Objekte die <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> Methode. Darüber hinaus eine <xref:System.Text.RegularExpressions.MatchCollection> Objekt, das besteht aus 0 (null), einem oder mehreren <xref:System.Text.RegularExpressions.Match> zurückgegebenen Objekte ist von der <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> Methode.  
+  
+ Wenn die <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> Methode keine Entsprechung für das Muster eines regulären Ausdrucks in einer Eingabezeichenfolge entsprechen, gibt ein leeres <xref:System.Text.RegularExpressions.MatchCollection> Objekt. Anschließend können Sie eine `foreach` in c# zu erstellen oder eine `For Each` erstellen in Visual Basic zum Durchlaufen der Auflistung.  
+  
+ Wenn die <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> Methode keine Entsprechung für das Muster des regulären Ausdrucks übereinstimmen, gibt es eine <xref:System.Text.RegularExpressions.Match> -Objekt, das gleich <xref:System.Text.RegularExpressions.Match.Empty%2A?displayProperty=nameWithType>. Sie können die <xref:System.Text.RegularExpressions.Group.Success%2A> Eigenschaft, um zu bestimmen, ob die Übereinstimmung erfolgreich war. Dies wird im folgenden Beispiel veranschaulicht.  
+  
+ [!code-csharp[System.Text.RegularExpressions.Match.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Text.RegularExpressions.Match.Class/cs/Match1.cs#1)]
+ [!code-vb[System.Text.RegularExpressions.Match.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.RegularExpressions.Match.Class/vb/Match1.vb#1)]  
+  
+ Ist eine Musterübereinstimmung erfolgreich, werden die <xref:System.Text.RegularExpressions.Capture.Value%2A> Eigenschaft enthält die übereinstimmende Teilzeichenfolge der <xref:System.Text.RegularExpressions.Capture.Index%2A> Eigenschaft gibt die nullbasierte Anfangsposition der übereinstimmenden Teilzeichenfolge in der Eingabezeichenfolge und die <xref:System.Text.RegularExpressions.Capture.Length%2A> Eigenschaft gibt an, die die Länge der übereinstimmenden Teilzeichenfolge in der Eingabezeichenfolge.  
+  
+ Da eine einzelne Übereinstimmung mehrere Erfassungsgruppen umfassen kann <xref:System.Text.RegularExpressions.Match> verfügt über eine <xref:System.Text.RegularExpressions.Match.Groups%2A> Eigenschaft, die zurückgibt der <xref:System.Text.RegularExpressions.GroupCollection>. Die <xref:System.Text.RegularExpressions.Match> Instanz selbst das erste Objekt in der Auflistung entspricht am `Match.Groups[0]` (`Match.Groups(0)` in Visual Basic), der die gesamte Übereinstimmung darstellt. Sie können die Erfassungsgruppen in einer Übereinstimmung auf folgende Weise zugreifen:  
+  
+-   Können Sie die Elemente durchlaufen die <xref:System.Text.RegularExpressions.GroupCollection> -Objekt mithilfe einer `foreach` (c#) oder `For Each` (Visual Basic) Konstrukt.  
+  
+-   Sie können die <xref:System.Text.RegularExpressions.GroupCollection.Item%28System.Int32%29?displayProperty=nameWithType> Eigenschaft zum Abrufen von Gruppen durch die Anzahl der Erfassungsgruppe. Beachten Sie, dass Sie ermitteln können, welche nummerierten Gruppen in einem regulären Ausdruck vorhanden sind, durch Aufrufen der Instanz <xref:System.Text.RegularExpressions.Regex.GetGroupNumbers%2A?displayProperty=nameWithType> Methode.  
+  
+-   Sie können die <xref:System.Text.RegularExpressions.GroupCollection.Item%28System.String%29?displayProperty=nameWithType> Eigenschaft zum Abrufen von Gruppen durch den Namen der Erfassungsgruppe. Beachten Sie, dass Sie bestimmen können, welche benannten Gruppen in einem regulären Ausdruck vorhanden sind, durch Aufrufen der Instanz <xref:System.Text.RegularExpressions.Regex.GetGroupNames?displayProperty=nameWithType> Methode.  
+  
+   
+  
+## Examples  
+ Die folgenden Beispiele verwenden die reguläre `Console\.Write(Line)?`. Der reguläre Ausdruck wird wie folgt interpretiert:  
+  
+|||  
+|-|-|  
+|Konsole\\. Schreiben|Übereinstimmung mit der Zeichenfolge „Console.Write“. Beachten Sie, dass der "." wird mit Escapezeichen versehen, damit er als literal Periode interpretiert wird, statt als Platzhalter, der mit jedem Zeichen übereinstimmt.|  
+|(Zeile)?|Übereinstimmung mit null oder einem Vorkommen der Zeichenfolge „Line“.|  
+  
+ **Beispiel 1**  
+  
+ Im folgenden Beispiel wird die <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> Methode, um alle musterübereinstimmungen in einer Eingabezeichenfolge abzurufen. Iteriert dann die <xref:System.Text.RegularExpressions.Match> Objekte in der zurückgegebenen <xref:System.Text.RegularExpressions.MatchCollection> Objekt, das Informationen über jede Übereinstimmung anzuzeigen.  
+  
+ [!code-csharp[System.Text.RegularExpressions.Match.Class#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Text.RegularExpressions.Match.Class/cs/Match2.cs#2)]
+ [!code-vb[System.Text.RegularExpressions.Match.Class#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.RegularExpressions.Match.Class/vb/Match2.vb#2)]  
+  
+ **Beispiel 2**  
+  
+ Im folgenden Beispiel wird die <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%29> und <xref:System.Text.RegularExpressions.Match.NextMatch%2A> Methoden, um eine Übereinstimmung zu einem Zeitpunkt abgerufen.  
+  
+ [!code-csharp[System.Text.RegularExpressions.Match.Class#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Text.RegularExpressions.Match.Class/cs/Match3.cs#3)]
+ [!code-vb[System.Text.RegularExpressions.Match.Class#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.RegularExpressions.Match.Class/vb/Match3.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static System.Text.RegularExpressions.Match Empty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.RegularExpressions.Match Empty" />
+      <MemberSignature Language="DocId" Value="P:System.Text.RegularExpressions.Match.Empty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.RegularExpressions.Match</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die leere Gruppe ab. Alle fehlgeschlagenen Übereinstimmungen geben diese leere Übereinstimmung zurück.</summary>
+        <value>Eine leere Übereinstimmung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft sollte nicht verwendet werden, um festzustellen, ob eine Übereinstimmung erfolgreich ist. Verwenden Sie stattdessen die `Match.Success` Eigenschaft (die aus geerbt wird <xref:System.Text.RegularExpressions.Group.Success%2A?displayProperty=nameWithType>).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Groups">
+      <MemberSignature Language="C#" Value="public virtual System.Text.RegularExpressions.GroupCollection Groups { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.RegularExpressions.GroupCollection Groups" />
+      <MemberSignature Language="DocId" Value="P:System.Text.RegularExpressions.Match.Groups" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.RegularExpressions.GroupCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der mit dem regulären Ausdruck übereinstimmenden Gruppen ab.</summary>
+        <value>Die Zeichengruppen, die mit dem Muster übereinstimmen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Muster eines regulären Ausdrucks kann Teilausdrücke einschließen, die definiert werden, indem Sie einen Teil der Muster für reguläre Ausdrücke in Klammern einschließen. Jede dieser Teilausdruck bildet eine Gruppe. Die <xref:System.Text.RegularExpressions.Match.Groups%2A> Eigenschaft ermöglicht den Zugriff auf Informationen zu diesen Teilausdruck entspricht. Zum Beispiel das Muster des regulären Ausdrucks `(\d{3})-(\d{3}-\d{4})`, zwei Teilausdrücke hat das nordamerikanische Telefonnummer übereinstimmt. Die erste besteht aus einer Ortskennzahl, die die ersten drei Ziffern der Telefonnummer verfasst. Diese Gruppe wird durch den ersten Teil der reguläre Ausdruck erfasst `(\d{3})`. Die zweite besteht aus der jeweiligen Telefonnummer, die in den letzten sieben Ziffern der Telefonnummer verfasst. Diese Gruppe wird durch den zweiten Teil der reguläre Ausdruck erfasst `(\d{3}-\d{4})`. Dieser beiden Gruppen können dann abgerufen werden, aus der <xref:System.Text.RegularExpressions.GroupCollection> von zurückgegebene Objekt der <xref:System.Text.RegularExpressions.Match.Groups%2A> -Eigenschaft wie im folgenden Beispiel gezeigt.  
+  
+ [!code-csharp[System.Text.RegularExpressions.Match.Groups#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.match.groups/cs/groups1.cs#1)]
+ [!code-vb[System.Text.RegularExpressions.Match.Groups#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.match.groups/vb/groups1.vb#1)]  
+  
+ Die <xref:System.Text.RegularExpressions.GroupCollection> zurückgegebenes Objekt die <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> Eigenschaft ist ein nullbasierten Auflistung-Objekt, das immer mindestens ein Mitglied ist. Wenn das Modul für reguläre Ausdrücke keine Übereinstimmung in einer bestimmten Eingabezeichenfolge findet die <xref:System.Text.RegularExpressions.Group.Success%2A?displayProperty=nameWithType> Eigenschaft der einzelnen <xref:System.Text.RegularExpressions.Group> Objekt in der Auflistung (das Objekt bei Index 0) festgelegt ist, um `false` und <xref:System.Text.RegularExpressions.Group> Objekt <xref:System.Text.RegularExpressions.Capture.Value%2A>-Eigenschaftensatz auf <xref:System.String.Empty?displayProperty=nameWithType>. Wenn das Modul für reguläre Ausdrücke eine Übereinstimmung, das erste Element des finden, kann die <xref:System.Text.RegularExpressions.GroupCollection> von zurückgegebene Objekt (das Element bei Index 0) der <xref:System.Text.RegularExpressions.Match.Groups%2A> Eigenschaft enthält eine Zeichenfolge, die dem Muster des gesamten regulären Ausdruck übereinstimmt. Jedes nachfolgende Element darstellt, aus dem Index eine nach oben, eine erfasste Gruppe Wenn der reguläre Ausdruck Erfassungsgruppen enthält. Weitere Informationen finden Sie im Abschnitt "Gruppierung erstellt und Objekten regulärer Ausdrücke" die [Gruppierungskonstrukte](~/docs/standard/base-types/grouping-constructs-in-regular-expressions.md) Artikel.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird versucht, das Muster eines regulären Ausdrucks mit einer Beispielzeichenfolge zuzuordnen. Im Beispiel wird die <xref:System.Text.RegularExpressions.Match.Groups%2A> Eigenschaft zum Speichern von Informationen, die durch die die Übereinstimmung für die Anzeige in der Konsole abgerufen werden.  
+  
+ [!code-cpp[Regex Match, NextMatch, Groups, Captures#8](~/samples/snippets/cpp/VS_Snippets_CLR/regex match, nextmatch, groups, captures/cpp/snippet8.cpp#8)]
+ [!code-csharp[Regex Match, NextMatch, Groups, Captures#8](~/samples/snippets/csharp/VS_Snippets_CLR/regex match, nextmatch, groups, captures/cs/snippet8.cs#8)]
+ [!code-vb[Regex Match, NextMatch, Groups, Captures#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/regex match, nextmatch, groups, captures/vb/snippet8.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextMatch">
+      <MemberSignature Language="C#" Value="public System.Text.RegularExpressions.Match NextMatch ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Text.RegularExpressions.Match NextMatch() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.RegularExpressions.Match.NextMatch" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.RegularExpressions.Match</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein neues <see cref="T:System.Text.RegularExpressions.Match" />-Objekt mit den Ergebnissen für die nächste Übereinstimmung zurück und beginnt dabei an der Endposition der vorherigen Übereinstimmung (mit dem Zeichen, das dem letzten übereinstimmenden Zeichen folgt).</summary>
+        <returns>Die folgende Übereinstimmung für einen regulären Ausdruck.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist vergleichbar mit einem Aufruf <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.Int32%29?displayProperty=nameWithType> erneut, und übergeben (`Index+Length`) als die neue Startposition.  
+  
+> [!NOTE]
+>  Diese Methode ändert nicht die aktuelle Instanz. Stattdessen gibt es eine neue <xref:System.Text.RegularExpressions.Match> Objekt, das Informationen zur nächsten Übereinstimmung enthält.  
+  
+ Beim Abrufen der nächsten Übereinstimmung Auslösen einer <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> Wenn ein Timeoutwert für das Abgleichen von Vorgängen im Endeffekt dasselbe ist, und beim Suchen der nächsten Übereinstimmung dieses Timeoutintervall überschreitet.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Text.RegularExpressions.Match.NextMatch%2A> Methode zum Erfassen des regulären Ausdrucks entspricht, über die erste Übereinstimmung.  
+  
+ [!code-cpp[Regex Match, NextMatch, Groups, Captures#8](~/samples/snippets/cpp/VS_Snippets_CLR/regex match, nextmatch, groups, captures/cpp/snippet8.cpp#8)]
+ [!code-csharp[Regex Match, NextMatch, Groups, Captures#8](~/samples/snippets/csharp/VS_Snippets_CLR/regex match, nextmatch, groups, captures/cs/snippet8.cs#8)]
+ [!code-vb[Regex Match, NextMatch, Groups, Captures#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/regex match, nextmatch, groups, captures/vb/snippet8.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Text.RegularExpressions.RegexMatchTimeoutException">Es ist ein Timeout aufgetreten.</exception>
+        <block subset="none" type="usage">
+          <para>Wenn ein Versuch wird wiederholt durch Aufrufen der <see cref="M:System.Text.RegularExpressions.Match.NextMatch" /> -Methode, das Modul für reguläre Ausdrücke kann leere Übereinstimmungen besondere Behandlung. In der Regel <see cref="M:System.Text.RegularExpressions.Match.NextMatch" /> beginnt die Suche nach der nächsten Übereinstimmung genau, wo die vorherige Übereinstimmung angehalten wurde. Nachdem eine leere Übereinstimmung der <see cref="M:System.Text.RegularExpressions.Match.NextMatch" /> -Methode setzt von einem Zeichen auf, bevor Sie versuchen, die nächste Übereinstimmung. Dieses Verhalten garantiert, dass das Modul für reguläre Ausdrücke durch die Zeichenfolge ausgeführt wird. Andernfalls, da eine leere Übereinstimmung nicht in jeder vorwärtsbewegung führt, startet die nächste Übereinstimmung in genau dieselbe Stelle ein wie die vorherige Übereinstimmung und dieselbe leere Zeichenfolge würde wiederholt überein.  
+  
+ Dies wird im folgenden Beispiel veranschaulicht. Muster für reguläre Ausdrücke <c>eine *</c> sucht nach 0 (null) oder mehr Vorkommen des Buchstabens "a" in der Zeichenfolge "Abaabb". Wie die Ausgabe des Beispiels zeigt, findet die Suche sechs entspricht. Der erste Versuch sucht das erste "a". Der zweite Übereinstimmung beginnt, in dem die erste exakt endet, vor der ersten b. Es findet keine Vorkommen von "a" und eine leere Zeichenfolge zurückgegeben. Die dritte Übereinstimmung beginnt nun nicht genau, wo der zweiten Vergleich beendet wurde, da die zweite Übereinstimmung eine leere Zeichenfolge zurückgegeben wurde. Stattdessen werden ein Zeichen später, nach der ersten "b" beginnt. Der dritte Übereinstimmung sucht nach zwei Vorkommen von "a" und "aa" zurückgegeben. Der vierte Versuch beginnt, in dem der dritten Vergleich beendet wurde, bevor Sie die zweite "b", und eine leere Zeichenfolge zurückgegeben. Der fünfte Versuch setzt erneut ein Zeichen, damit vor der dritten "b" beginnt und eine leere Zeichenfolge zurückgegeben. Der sechste Übereinstimmung beginnt nach der letzten "b" und erneut eine leere Zeichenfolge zurückgegeben.  
+  
+ [!code-csharp[System.Text.RegularExpressions.Match.NextMatch#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.match.nextmatch/cs/nextmatch1.cs#1)]
+ [!code-vb[System.Text.RegularExpressions.Match.NextMatch#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.match.nextmatch/vb/nextmatch1.vb#1)]</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Result">
+      <MemberSignature Language="C#" Value="public virtual string Result (string replacement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string Result(string replacement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.RegularExpressions.Match.Result(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="replacement" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="replacement">Das zu verwendende Ersetzungsmuster.</param>
+        <summary>Gibt die Erweiterung des angegebenen Ersetzungsmusters zurück.</summary>
+        <returns>Die erweiterte Version des <paramref name="replacement" />-Parameters.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Während der <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> Methode ersetzt alle Übereinstimmungen in einer Eingabezeichenfolge mit einer angegebenen Ersetzungsmusters der <xref:System.Text.RegularExpressions.Match.Result%2A> Methode eine einzelne Übereinstimmung mit einem angegebenen Ersetzungsmuster ersetzt. Da es eine einzelne Übereinstimmung verarbeitet, es ist auch möglich, zu verarbeiten, auf die übereinstimmende Zeichenfolge vor dem Aufrufen der <xref:System.Text.RegularExpressions.Match.Result%2A> Methode.  
+  
+ Die `replacement` Parameter ist ein standard reguläre Ersetzungsmuster. Sie können von Literalzeichen und reguläre Ersetzungen bestehen. Weitere Informationen finden Sie unter [Ersetzungen](~/docs/standard/base-types/substitutions-in-regular-expressions.md).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel ersetzt die Bindestriche, die Anfang und Ende ein Klammerausdrucks mit Klammern.  
+  
+ [!code-csharp[System.Text.RegularExpressions.Match.Result#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.match.result/cs/result1.cs#1)]
+ [!code-vb[System.Text.RegularExpressions.Match.Result#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.match.result/vb/result1.vb#1)]  
+  
+ Das Muster für reguläre Ausdrücke `--(.+?)--` wird entsprechend der folgenden Tabelle interpretiert:  
+  
+|Muster|Beschreibung|  
+|-------------|-----------------|  
+|`--`|Übereinstimmung mit zwei Bindestriche.|  
+|`(.+?)`|Übereinstimmung mit beliebigem Zeichen ein- oder mehrmals, jedoch so wenige Male wie möglich. Dies ist die erste Erfassungsgruppe.|  
+|`--`|Übereinstimmung mit zwei Bindestriche.|  
+  
+ Beachten Sie, dass das reguläre Ausdrucksmuster `--(.+?)--` verzögerten Quantifizierer verwendet `+?`. Wenn der gierige Quantifizierer `+` verwendet wurden, stattdessen das Modul für reguläre Ausdrücke würde nur eine einzelne Übereinstimmung in der Eingabezeichenfolge finden.  
+  
+ Die Ersatzzeichenfolge `($1)` ersetzt die Übereinstimmung mit der ersten erfassten Gruppe, die in Klammern eingeschlossen ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="replacement" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">Erweiterung ist für dieses Muster nicht zulässig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Synchronized">
+      <MemberSignature Language="C#" Value="public static System.Text.RegularExpressions.Match Synchronized (System.Text.RegularExpressions.Match inner);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Text.RegularExpressions.Match Synchronized(class System.Text.RegularExpressions.Match inner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.RegularExpressions.Match.Synchronized(System.Text.RegularExpressions.Match)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.RegularExpressions.Match</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inner" Type="System.Text.RegularExpressions.Match" />
+      </Parameters>
+      <Docs>
+        <param name="inner">Eine der erwarteten Übereinstimmung entsprechende Übereinstimmung mit einem regulären Ausdruck.</param>
+        <summary>Gibt eine der bereitgestellten Instanz entsprechende <see cref="T:System.Text.RegularExpressions.Match" />-Instanz zurück, die von mehreren Threads gemeinsam verwendet werden kann.</summary>
+        <returns>Eine Übereinstimmung für einen regulären Ausdruck, die für mehrere Threads freigegeben werden kann.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="inner" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

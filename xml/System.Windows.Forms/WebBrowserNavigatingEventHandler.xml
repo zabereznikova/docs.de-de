@@ -1,0 +1,40 @@
+<Type Name="WebBrowserNavigatingEventHandler" FullName="System.Windows.Forms.WebBrowserNavigatingEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void WebBrowserNavigatingEventHandler(object sender, WebBrowserNavigatingEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WebBrowserNavigatingEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.WebBrowserNavigatingEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Forms.WebBrowserNavigatingEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Windows.Forms.WebBrowserNavigatingEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode für die Behandlung der <see cref="E:System.Windows.Forms.WebBrowser.Navigating" /> -Ereignis für ein <see cref="T:System.Windows.Forms.WebBrowser" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen eines <xref:System.Windows.Forms.WebBrowserNavigatingEventHandler>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen zu Ereignishandlerdelegaten, finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie einen Handler für das <xref:System.Windows.Forms.WebBrowser.Navigating?displayProperty=nameWithType> Ereignis, um die Navigation "Abbrechen", wenn ein Formular für die Webseite nicht aufgefüllt wurden. Die <xref:System.Windows.Forms.WebBrowser.Document%2A?displayProperty=nameWithType> Eigenschaft wird verwendet, um zu bestimmen, ob das Formulareingabefeld einen Wert enthält. Dieses Beispiel benötigen Sie, dass das Formular enthält ein <xref:System.Windows.Forms.WebBrowser> -Steuerelement namens `webBrowser1`.  
+  
+ [!code-csharp[WebBrowserMisc#30](~/samples/snippets/csharp/VS_Snippets_Winforms/WebBrowserMisc/CS/WebBrowserMisc.cs#30)]
+ [!code-vb[WebBrowserMisc#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WebBrowserMisc/vb/WebBrowserMisc.vb#30)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

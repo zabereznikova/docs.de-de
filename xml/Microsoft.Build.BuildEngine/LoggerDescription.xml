@@ -1,0 +1,90 @@
+<Type Name="LoggerDescription" FullName="Microsoft.Build.BuildEngine.LoggerDescription">
+  <TypeSignature Language="C#" Value="public class LoggerDescription" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LoggerDescription extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.BuildEngine.LoggerDescription" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Informationen zu einer Protokollierung als eine Auflistung von Werten, die zum Instanziieren der Protokollierung sowie serialisiert wird, übergeben zwischen verschiedenen Prozessen verwendet werden kann.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LoggerDescription (string loggerClassName, string loggerAssemblyName, string loggerAssemblyFile, string loggerSwitchParameters, Microsoft.Build.Framework.LoggerVerbosity verbosity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string loggerClassName, string loggerAssemblyName, string loggerAssemblyFile, string loggerSwitchParameters, valuetype Microsoft.Build.Framework.LoggerVerbosity verbosity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.LoggerDescription.#ctor(System.String,System.String,System.String,System.String,Microsoft.Build.Framework.LoggerVerbosity)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="loggerClassName" Type="System.String" />
+        <Parameter Name="loggerAssemblyName" Type="System.String" />
+        <Parameter Name="loggerAssemblyFile" Type="System.String" />
+        <Parameter Name="loggerSwitchParameters" Type="System.String" />
+        <Parameter Name="verbosity" Type="Microsoft.Build.Framework.LoggerVerbosity" />
+      </Parameters>
+      <Docs>
+        <param name="loggerClassName">Der Klassenname für die Protokollierung.</param>
+        <param name="loggerAssemblyName">Der Name der Assembly für die Protokollierung.</param>
+        <param name="loggerAssemblyFile">Der Name der Assembly-Datei für die Protokollierung.</param>
+        <param name="loggerSwitchParameters">Eine Zeichenfolge von Protokollierungsparameter <see langword="null" /> Wenn keine vorhanden sind.</param>
+        <param name="verbosity">Die Ausführlichkeit der Schalter für die Protokollierung.  
+  
+ **Hinweis** in der Befehlszeile alle Protokollierungen den gleichen Ausführlichkeitsgrad abrufen.</param>
+        <summary>Erstellt eine Protokollierung Beschreibung basierend auf den angegebenen Parametern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Name der Protokollierung wird durch die Kombination der Klasse und Assemblynamen generiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoggerSwitchParameters">
+      <MemberSignature Language="C#" Value="public string LoggerSwitchParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LoggerSwitchParameters" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.LoggerDescription.LoggerSwitchParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Zeichenfolge des Protokollierungsparameter ab.</summary>
+        <value>Gibt eine Zeichenfolgenliste der Protokollparameter zurück. <see langword="null" /> Wenn keine vorhanden sind.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Verbosity">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.LoggerVerbosity Verbosity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Build.Framework.LoggerVerbosity Verbosity" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.LoggerDescription.Verbosity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.LoggerVerbosity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Ausführlichkeitsgrad für die Protokollierung an.</summary>
+        <value>Ein Zeichenfolgenwert, der Ausführlichkeitsgrad für die Protokollierung darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

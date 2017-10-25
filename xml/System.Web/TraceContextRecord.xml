@@ -1,0 +1,188 @@
+<Type Name="TraceContextRecord" FullName="System.Web.TraceContextRecord">
+  <TypeSignature Language="C#" Value="public sealed class TraceContextRecord" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TraceContextRecord extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.TraceContextRecord" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Ablaufverfolgungsmeldung für ASP.NET und zugehörigen Daten dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.TraceContextRecord> -Objekt kapselt die Ablaufverfolgungsmeldung Kategorie, alle zugeordneten <xref:System.Exception>, und gibt an, ob der Ablaufverfolgungsdatensatz geschrieben wurde, durch die <xref:System.Web.TraceContext.Warn%2A?displayProperty=nameWithType> Methode.  
+  
+ Jeder Aufruf der <xref:System.Web.TraceContext.Write%2A?displayProperty=nameWithType> und <xref:System.Web.TraceContext.Warn%2A?displayProperty=nameWithType> Methoden generiert eine <xref:System.Web.TraceContextRecord> -Objekt, das hinzugefügt wird die <xref:System.Web.TraceContextEventArgs.TraceRecords%2A?displayProperty=nameWithType> Auflistung von Nachrichten. Sie können Zugriff auf die Auflistung von Datensätzen durch Behandeln der <xref:System.Web.TraceContext.TraceFinished> Ereignis.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie registrieren, können ein <xref:System.Web.TraceContextEventHandler> Delegat zum Behandeln der <xref:System.Web.TraceContext.TraceFinished> Ereignis. In diesem Beispiel wird die `OnTraceFinished` Methode greift auf die Auflistung der <xref:System.Web.TraceContextRecord> Objekte über die <xref:System.Web.TraceContextEventArgs.TraceRecords%2A> -Eigenschaft, deren durchläuft, und schreibt sie in den Antwortstream.  
+  
+ [!code-aspx-csharp[System.Web.Trace_3#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Trace_3/CS/form3cs.aspx#1)]
+ [!code-aspx-vb[System.Web.Trace_3#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Trace_3/VB/form3vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TraceContextRecord (string category, string msg, bool isWarning, Exception errorInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string category, string msg, bool isWarning, class System.Exception errorInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.TraceContextRecord.#ctor(System.String,System.String,System.Boolean,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="category" Type="System.String" />
+        <Parameter Name="msg" Type="System.String" />
+        <Parameter Name="isWarning" Type="System.Boolean" />
+        <Parameter Name="errorInfo" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="category">Die Ablaufverfolgungskategorie, die die Nachricht empfängt.</param>
+        <param name="msg">Die Ablaufverfolgungsmeldung.</param>
+        <param name="isWarning">
+          <see langword="true" />Wenn die Methode zugeordnet der <see cref="T:System.Web.TraceContextRecord" /> ist die <see cref="Overload:System.Web.TraceContext.Warn" /> -Methode. <see langword="false" /> Wenn die Ablaufverfolgung-Methode ist die <see cref="Overload:System.Web.TraceContext.Write" /> Methode.</param>
+        <param name="errorInfo">Ein <see cref="T:System.Exception" /> Objekt, das zusätzliche Fehlerinformationen enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.TraceContextRecord" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jeder Aufruf der <xref:System.Web.TraceContext.Write%2A?displayProperty=nameWithType> und <xref:System.Web.TraceContext.Warn%2A?displayProperty=nameWithType> Methoden generiert eine <xref:System.Web.TraceContextRecord> -Objekt, das hinzugefügt wird die <xref:System.Web.TraceContextEventArgs.TraceRecords%2A?displayProperty=nameWithType> Auflistung von Nachrichten. Die <xref:System.Web.TraceContext.Warn%2A> Aufruf legt die <xref:System.Web.TraceContextRecord.IsWarning%2A> Eigenschaft `true`, während die <xref:System.Web.TraceContext.Write%2A> Methodenaufrufe, legen Sie es auf `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Category">
+      <MemberSignature Language="C#" Value="public string Category { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Category" />
+      <MemberSignature Language="DocId" Value="P:System.Web.TraceContextRecord.Category" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die benutzerdefinierte Kategorie für den Ablaufverfolgungsdatensatz ab.</summary>
+        <value>Eine Zeichenfolge, die eine Kategorie für den Ablaufverfolgungsdatensatz darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Kategorie wird verwendet, um eine bessere Leistung Ablaufverfolgungsmeldungen erkennbaren Gruppen zu organisieren, aber Sie können eine beliebige Zeichenfolge sein. Die <xref:System.Web.TraceContext> -Klasse verwendet <xref:System.String.Empty?displayProperty=nameWithType> als Standardkategorie für Methoden, die nur eine `message` Parameter. Die Standardkategorie für ASP.NET, der mehrere Ablaufverfolgungsdatensätze schreibt, wenn Ablaufverfolgung aktiviert ist, wird "aspx.page".  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie den Zugriff auf die <xref:System.Web.TraceContextRecord.Category%2A> Eigenschaft eine <xref:System.Web.TraceContextRecord>, und drucken sie und ihre zugeordneten ablaufverfolgungsnachricht, um die `Response` Stream.  
+  
+ [!code-aspx-csharp[System.Web.Trace_5#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Trace_5/CS/form5cs.aspx#1)]
+ [!code-aspx-vb[System.Web.Trace_5#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Trace_5/VB/form5vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorInfo">
+      <MemberSignature Language="C#" Value="public Exception ErrorInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception ErrorInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Web.TraceContextRecord.ErrorInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Exception" /> den Ablaufverfolgungsdatensatz zugeordnet, wenn ein solcher verfügbar ist.</summary>
+        <value>Ein <see cref="T:System.Exception" /> den Ablaufverfolgungsdatensatz zugeordnet, falls vorhanden, oder <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können eine Ausnahme in einen Ablaufverfolgungsdatensatz einschließen, wenn Sie Debuggen einer Anwendung oder eine Problembehandlung Fehler- und Ausnahmebehandlung verwenden tracing. Die <xref:System.Web.TraceContextRecord.ErrorInfo%2A> Eigenschaft ist `null` bei der Ablaufverfolgungsdatensatz eines zugeordnet ist die <xref:System.Web.TraceContext> Methoden, die keinen explizites `errorInfo` Parameter oder keine Ausnahme angegeben ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsWarning">
+      <MemberSignature Language="C#" Value="public bool IsWarning { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsWarning" />
+      <MemberSignature Language="DocId" Value="P:System.Web.TraceContextRecord.IsWarning" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, ob der Ablaufverfolgungsdatensatz zugeordnet ist eine <see cref="Overload:System.Web.TraceContext.Warn" /> -Methodenaufruf.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Web.TraceContextRecord" /> zugeordnet ist die <see cref="Overload:System.Web.TraceContext.Warn" /> Methodenaufruf ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie überprüft der <xref:System.Web.TraceContextRecord.IsWarning%2A> Eigenschaft eine <xref:System.Web.TraceContextRecord> zu bestimmen, ob die Nachricht, die der Datensatz enthält vom geschrieben wurde eine <xref:System.Web.TraceContext.Warn%2A> oder <xref:System.Web.TraceContext.Write%2A> -Methodenaufruf. Wenn der Ablaufverfolgungsdatensatz eine Warnmeldung angezeigt wird, stammt eine andere Aktion als, wenn sie eine Fehlermeldung angezeigt ist.  
+  
+ [!code-aspx-csharp[System.Web.Trace_4#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Trace_4/CS/form4cs.aspx#1)]
+ [!code-aspx-vb[System.Web.Trace_4#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Trace_4/VB/form4vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:System.Web.TraceContextRecord.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die benutzerdefinierten Ablaufverfolgungsmeldung ab.</summary>
+        <value>Eine Zeichenfolge, die eine Nachricht für den Ablaufverfolgungsdatensatz darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Nachricht kann eine beliebige Zeichenfolge sein und wird verwendet, um ausführliche Ablaufverfolgungsinformationen zu schreiben. Message-Parameter, der an übergebene entspricht der <xref:System.Web.TraceContext.Write%2A?displayProperty=nameWithType> und <xref:System.Web.TraceContext.Warn%2A?displayProperty=nameWithType> Methoden. Die Informationen kann zur Laufzeit Werte, Nachrichten, die Sie helfen begleitet Sie durch die Ausführung des Programms oder andere Diagnosedaten sein.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie den Zugriff auf die <xref:System.Web.TraceContextRecord.Message%2A> Eigenschaft eine <xref:System.Web.TraceContextRecord>, und drucken Sie ihn auf die `Response` Stream.  
+  
+ [!code-aspx-csharp[System.Web.Trace_4#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Trace_4/CS/form4cs.aspx#1)]
+ [!code-aspx-vb[System.Web.Trace_4#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Trace_4/VB/form4vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

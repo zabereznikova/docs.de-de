@@ -1,0 +1,174 @@
+<Type Name="LabelAlignmentStyles" FullName="System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles">
+  <TypeSignature Language="C#" Value="public enum LabelAlignmentStyles" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LabelAlignmentStyles extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt eine Bezeichnung Ausrichtung beim <see cref="T:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle" /> verwendet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles> -Enumeration stellt die Ausrichtung einer Bezeichnung dar; es wird festgelegt, indem die <xref:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.MovingDirection%2A> Eigenschaft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Bottom">
+      <MemberSignature Language="C#" Value="Bottom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles Bottom = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles.Bottom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Bezeichnung wird am unteren Rand des Datenpunkts ausgerichtet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BottomLeft">
+      <MemberSignature Language="C#" Value="BottomLeft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles BottomLeft = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles.BottomLeft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Bezeichnung wird auf der linken unteren Ecke des Datenpunkts ausgerichtet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BottomRight">
+      <MemberSignature Language="C#" Value="BottomRight" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles BottomRight = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles.BottomRight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Bezeichnung wird auf der unteren rechten Ecke des Datenpunkts ausgerichtet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Center">
+      <MemberSignature Language="C#" Value="Center" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles Center = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles.Center" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Bezeichnung wird in die Mitte des Datenpunkts ausgerichtet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="Left" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles Left = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles.Left" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Bezeichnung wird links neben dem Datenpunkt ausgerichtet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="Right" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles Right = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles.Right" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Bezeichnung wird rechts neben dem Datenpunkt ausgerichtet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Top">
+      <MemberSignature Language="C#" Value="Top" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles Top = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles.Top" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Bezeichnung wird am oberen Rand des Datenpunkts ausgerichtet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TopLeft">
+      <MemberSignature Language="C#" Value="TopLeft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles TopLeft = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles.TopLeft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Bezeichnung wird auf der linken oberen Ecke des Datenpunkts ausgerichtet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TopRight">
+      <MemberSignature Language="C#" Value="TopRight" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles TopRight = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles.TopRight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnung wird der oberen rechten Ecke des Datenpunkts ausgerichtet.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

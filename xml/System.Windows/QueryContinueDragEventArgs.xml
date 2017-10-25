@@ -1,0 +1,124 @@
+<Type Name="QueryContinueDragEventArgs" FullName="System.Windows.QueryContinueDragEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class QueryContinueDragEventArgs : System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit QueryContinueDragEventArgs extends System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.QueryContinueDragEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.RoutedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Argumente, die für die <see cref="E:System.Windows.DragDrop.QueryContinueDrag" /> Ereignis.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.DragDrop.QueryContinueDrag> Ereignis tritt während eines Drag & Drop-Vorgangs und ermöglicht die Quelle des Ziehvorgangs bestimmen, ob der Drag-and-Drop-Vorgang abgebrochen werden soll.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public System.Windows.DragAction Action { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.DragAction Action" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.QueryContinueDragEventArgs.Action" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DragAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den aktuellen Status des zugeordneten Drag &amp; Drop-Vorgangs.</summary>
+        <value>Ein Mitglied der <see cref="T:System.Windows.DragAction" /> Enumeration, die den aktuellen Status des zugeordneten Drag-and-Drop-Vorgang angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig die <xref:System.Windows.DragDrop.QueryContinueDrag> Ereignis legt die <xref:System.Windows.QueryContinueDragEventArgs.Action%2A> Eigenschaft `Cancel` , wenn die ESC-Taste gedrückt wird, und legt sie fest <xref:System.Windows.QueryContinueDragEventArgs.Action%2A> zu `Drop` , wenn die linke, mittlere oder rechte Maustaste losgelassen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EscapePressed">
+      <MemberSignature Language="C#" Value="public bool EscapePressed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EscapePressed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.QueryContinueDragEventArgs.EscapePressed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert, der angibt, ob die ESC-Taste gedrückt wurde.</summary>
+        <value>Ein boolescher Wert, der angibt, ob die ESC-Taste gedrückt wurde. <see langword="true" />Wenn die ESC-Taste gedrückt wurde; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird standardmäßig die <xref:System.Windows.DragDrop.QueryContinueDrag> Ereignis legt die <xref:System.Windows.QueryContinueDragEventArgs.Action%2A> Eigenschaft `Cancel` , wenn die ESC-Taste gedrückt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeEventHandler">
+      <MemberSignature Language="C#" Value="protected override void InvokeEventHandler (Delegate genericHandler, object genericTarget);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InvokeEventHandler(class System.Delegate genericHandler, object genericTarget) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.QueryContinueDragEventArgs.InvokeEventHandler(System.Delegate,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="genericHandler" Type="System.Delegate" />
+        <Parameter Name="genericTarget" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="genericHandler">To be added.</param>
+        <param name="genericTarget">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyStates">
+      <MemberSignature Language="C#" Value="public System.Windows.DragDropKeyStates KeyStates { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.DragDropKeyStates KeyStates" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.QueryContinueDragEventArgs.KeyStates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DragDropKeyStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Flagenumeration, der angibt, dem aktuellen Pufferzustand die UMSCHALTTASTE, STRG und ALT sowie den Zustand der Maustasten ab.</summary>
+        <value>Mindestens ein Mitglied der <see cref="T:System.Windows.DragDropKeyStates" /> Flagenumeration.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abhängig vom Status eines bestimmten Schlüssels kann die Auswirkungen eines Drag-and-Drop-Vorgangs angepasst werden. Z. B. werden abhängig davon, ob die Tasten STRG oder UMSCHALT während des Drag-and-Drop-Vorgangs gedrückt werden Daten entweder kopiert oder verschoben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

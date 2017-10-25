@@ -1,0 +1,219 @@
+<Type Name="PrintQueueException" FullName="System.Printing.PrintQueueException">
+  <TypeSignature Language="C#" Value="public class PrintQueueException : System.Printing.PrintSystemException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit PrintQueueException extends System.Printing.PrintSystemException" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.PrintQueueException" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Printing.PrintSystemException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die Ausnahme, die ausgelöst wird, wenn eine fehlerbedingung verhindert den Zugriff auf oder die Erstellung einer <see cref="T:System.Printing.PrintQueue" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  Klassen, die innerhalb der <xref:System.Printing> Namespace werden nicht für die Verwendung innerhalb einer Windows-Dienst oder der ASP.NET-Anwendung oder der Dienst unterstützt. Unerwartete Probleme erzeugen versucht, diese Klassen von innerhalb einer dieser Anwendungstypen zu verwenden, wie z. B. wirkte-service-Leistung und zur Laufzeit Ausnahmen.  
+  
+ Wenn Sie aus einer Windows Forms-Anwendung drucken möchten, finden Sie unter der <xref:System.Drawing.Printing> Namespace.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintQueueException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueueException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Printing.PrintQueueException" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintQueueException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueueException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Ein <see cref="T:System.String" /> , die den Fehlerzustand beschreibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Printing.PrintQueueException" /> Klasse, die einen bestimmten Fehlerzustand bereitstellt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PrintQueueException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueueException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die Daten, die zum Serialisieren oder Deserialisieren eines Objekts erforderlich ist.</param>
+        <param name="context">Der Kontext, einschließlich der Quelle und das Ziel des serialisierten Streams.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Printing.PrintQueueException" /> Klasse, die eine bestimmte <see cref="T:System.Runtime.Serialization.SerializationInfo" /> und <see cref="T:System.Runtime.Serialization.StreamingContext" />. Dieser Konstruktor ist geschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintQueueException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueueException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Ein <see cref="T:System.String" /> , die den Fehlerzustand beschreibt.</param>
+        <param name="innerException">Der zugrunde liegende Fehlerzustand, verursacht die <see cref="T:System.Printing.PrintQueueException" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Printing.PrintQueueException" /> Adapterklasse, die einen bestimmten Fehlerzustand, einschließlich der zugrunde liegende Ursache für die Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintQueueException (int errorCode, string message, string printerName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 errorCode, string message, string printerName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueueException.#ctor(System.Int32,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="errorCode" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="printerName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="errorCode">Ein <see cref="T:System.Int32" /> , wird interpretiert, als ein HRESULT, einen codierten numerischen Wert, der einer bestimmten Ausnahme zugewiesen ist.</param>
+        <param name="message">Ein <see cref="T:System.String" /> , die den Fehlerzustand beschreibt.</param>
+        <param name="printerName">Der Name des Druckers, auf den zugegriffen wurde, als der Fehler auftrat.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Printing.PrintQueueException" /> Klasse, die einen bestimmten Fehlercode, Fehlerzustand und Druckername bereitstellt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintQueueException (int errorCode, string message, string printerName, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 errorCode, string message, string printerName, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueueException.#ctor(System.Int32,System.String,System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="errorCode" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="printerName" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="errorCode">Ein <see cref="T:System.Int32" /> , wird interpretiert, als ein HRESULT, einen codierten numerischen Wert, der einer bestimmten Ausnahme zugewiesen ist.</param>
+        <param name="message">Ein <see cref="T:System.String" /> , die den Fehlerzustand beschreibt.</param>
+        <param name="printerName">Der Name des Druckers, auf den zugegriffen wurde, als der Fehler auftrat.</param>
+        <param name="innerException">Der zugrunde liegende Fehlerzustand, verursacht die <see cref="T:System.Printing.PrintQueueException" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Printing.PrintQueueException" /> Adapterklasse, die einen bestimmten Drucker Name, Fehlercode und Fehlerzustand sowie die zugrunde liegende Ursache für die Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintQueueException (int errorCode, string message, string printerName, string printerMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 errorCode, string message, string printerName, string printerMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueueException.#ctor(System.Int32,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="errorCode" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="printerName" Type="System.String" />
+        <Parameter Name="printerMessage" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="errorCode">Ein <see cref="T:System.Int32" /> , wird interpretiert, als ein HRESULT, einen codierten numerischen Wert, der einer bestimmten Ausnahme zugewiesen ist.</param>
+        <param name="message">Ein <see cref="T:System.String" /> , die den Fehlerzustand beschreibt.</param>
+        <param name="printerName">Der Name des Druckers, auf den zugegriffen wurde, als der Fehler auftrat.</param>
+        <param name="printerMessage">Die Ausnahmemeldung, die gesendet wurde, vom Druckertreiber oder nicht verwalteten Drucksystem-Komponente, die die Ausnahme ausgelöst hat.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Printing.PrintQueueException" /> -Klasse, die einen bestimmten Fehlercode, Fehlerzustand, Druckername und Drucker Nachricht angegeben werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueueException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Die Daten, die zum Serialisieren oder Deserialisieren eines Objekts erforderlich ist.</param>
+        <param name="context">Der Kontext, einschließlich der Quelle und das Ziel des serialisierten Streams.</param>
+        <summary>Ruft die Daten, die zum Serialisieren des Objekts verwendet werden, und ruft den Kontext des serialisierten Streams ab.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrinterName">
+      <MemberSignature Language="C#" Value="public string PrinterName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PrinterName" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueueException.PrinterName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Druckers, der wurde zugegriffen wird, wenn die Ausnahme ausgelöst wurde.</summary>
+        <value>Ein <see cref="T:System.String" /> mit dem Namen des Druckers.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

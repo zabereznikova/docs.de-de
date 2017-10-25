@@ -1,0 +1,86 @@
+<Type Name="IExtenderControl" FullName="System.Web.UI.IExtenderControl">
+  <TypeSignature Language="C#" Value="public interface IExtenderControl" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IExtenderControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IExtenderControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert das Verhalten für ein Extendersteuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Extendersteuerelementen, die davon Herleiten der <xref:System.Web.UI.ExtenderControl> Klasse erfordert eine <xref:System.Web.UI.ScriptManager> Steuerelement auf der Seite befinden. Die <xref:System.Web.UI.ExtenderControl> Basisklasse führt einen expliziten Test aus, um sicherzustellen, dass ein <xref:System.Web.UI.ScriptManager> Steuerelement auf der Seite vorhanden ist.  
+  
+ Allerdings gegebenenfalls zum Erstellen von Extendersteuerelementen und die Seite enthält kein <xref:System.Web.UI.ScriptManager> -Steuerelement, erstellen Sie eine Klasse, implementiert die <xref:System.Web.UI.IExtenderControl> -Schnittstelle direkt. Darüber hinaus, wenn Sie eine Klasse erstellen, die abgeleitet <xref:System.Web.UI.Control> oder Erweitern Sie ein vorhandenes Steuerelement an, die abgeleitet <xref:System.Web.UI.Control>, können Sie implementieren die <xref:System.Web.UI.IExtenderControl> -Schnittstelle zur Unterstützung von Clientfunktionen.  
+  
+ Die <xref:System.Web.UI.IExtenderControl> -Schnittstelle registriert die Skriptbibliotheken für ein Steuerelement durch Aufrufen der <xref:System.Web.UI.IExtenderControl.GetScriptReferences%2A> -Methode und registriert <xref:System.Web.UI.ScriptDescriptor> -Objektpaaren durch Aufrufen der <xref:System.Web.UI.IExtenderControl.GetScriptDescriptors%2A> Methode. Die <xref:System.Web.UI.IExtenderControl.GetScriptDescriptors%2A> Methode gibt ein <xref:System.Collections.IEnumerable> Liste der <xref:System.Web.UI.ScriptDescriptor> Objekte.  
+  
+> [!NOTE]
+>  Wenn Sie einen vorhandenen Steuerelementtyp erweitern, die abgeleitet ist die <xref:System.Web.UI.WebControls.WebControl> -Klasse, implementieren Sie die <xref:System.Web.UI.IScriptControl> Schnittstelle.  
+  
+ So erstellen ein Extendersteuerelement durch die Implementierung <xref:System.Web.UI.IExtenderControl>, Sie Folgendes tun:  
+  
+-   Schreiben Sie Code für des Steuerelements `OnInit` Ereignis zu erkennen und verwenden Sie die <xref:System.Web.UI.ScriptManager> steuern, wenn sie auf der Seite verfügbar ist.  
+  
+-   Wenn die <xref:System.Web.UI.ScriptManager> ist nicht verfügbar auf der Seite Geben Sie Alternative Möglichkeit, um die erforderlichen Skripts zu registrieren, durch Aufrufen der statische Methoden von der <xref:System.Web.UI.ScriptManager> Klasse.  
+  
+-   Geben Sie für geschützte virtuelle Member <xref:System.Web.UI.IExtenderControl> Elemente.  
+  
+-   Stellen Sie als einen Skriptblock, der Sie beim Registrieren der <xref:System.Web.UI.ScriptManager> Steuerelement. Sie müssen dies tun, während des Steuerelements `PreRender`, `PreRenderComplete`, oder `Render` Ereignisse.  
+  
+-   Registrieren Sie die Skriptdeskriptoren, während des Steuerelements `Render` Ereignis.  
+  
+> [!NOTE]
+>  Wenn die Seite enthält eine <xref:System.Web.UI.UpdatePanel> Steuerelement die Seite darf eine <xref:System.Web.UI.ScriptManager> Steuerelement. Sie implementieren müssen die <xref:System.Web.UI.IExtenderControl> Schnittstelle nur, wenn die Seite keine enthält eine <xref:System.Web.UI.ScriptManager> Steuerelement.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetScriptDescriptors">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptDescriptor&gt; GetScriptDescriptors (System.Web.UI.Control targetControl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Web.UI.ScriptDescriptor&gt; GetScriptDescriptors(class System.Web.UI.Control targetControl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IExtenderControl.GetScriptDescriptors(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptDescriptor&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetControl" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="targetControl">Der Serversteuerelement, dem der Extender zugeordnet ist.</param>
+        <summary>Registriert die <see cref="T:System.Web.UI.ScriptDescriptor" /> Objekte für das Steuerelement und gibt ein Objekt, enthält die <see cref="T:System.Web.UI.ScriptDescriptor" /> Objekte für das Steuerelement.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerable" /> Sammlung mit <see cref="T:System.Web.UI.ScriptDescriptor" /> Objekte.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetScriptReferences">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptReference&gt; GetScriptReferences ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Web.UI.ScriptReference&gt; GetScriptReferences() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IExtenderControl.GetScriptReferences" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptReference&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Registriert die Skriptbibliotheken für das Steuerelement, und gibt eine Enumeration von ECMAScript (JavaScript)-Dateien, die als eingebettete Ressourcen registriert wurden.</summary>
+        <returns>Eine <see cref="T:System.Collections.IEnumerable" /> Auflistung, die JavaScript-Dateien enthält, die als registriert wurden, eingebettete Ressourcen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

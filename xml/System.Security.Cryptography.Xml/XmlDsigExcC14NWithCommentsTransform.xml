@@ -1,0 +1,95 @@
+<Type Name="XmlDsigExcC14NWithCommentsTransform" FullName="System.Security.Cryptography.Xml.XmlDsigExcC14NWithCommentsTransform">
+  <TypeSignature Language="C#" Value="public class XmlDsigExcC14NWithCommentsTransform : System.Security.Cryptography.Xml.XmlDsigExcC14NTransform" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlDsigExcC14NWithCommentsTransform extends System.Security.Cryptography.Xml.XmlDsigExcC14NTransform" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Xml.XmlDsigExcC14NWithCommentsTransform" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.Xml.XmlDsigExcC14NTransform</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die exklusive C14N XML-Kanonisierungsalgorithmus Transformation für eine digitale Signatur gemäß der Definition von World Wide Web Consortium (W3C), mit Kommentaren dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Cryptography.Xml.XmlDsigExcC14NWithCommentsTransform> -Klasse stellt die exklusive C14N XML-Kanonisierungsalgorithmus-Transformation mit Kommentaren dar.  Diese Klasse ähnelt der <xref:System.Security.Cryptography.Xml.XmlDsigExcC14NTransform> -Klasse, die Signaturgeber einen Digest anhand die kanonische Form eines XML-Dokuments erstellen kann.  Allerdings die <xref:System.Security.Cryptography.Xml.XmlDsigExcC14NWithCommentsTransform> Klasse Vorgänger Kontext aus einem kanonisierten Unterdokument ausgeschlossen.  
+  
+ Verwenden der <xref:System.Security.Cryptography.Xml.XmlDsigExcC14NWithCommentsTransform> -Klasse, wenn Sie eine XML-Datei kanonisieren müssen die Aufteilung von Unterdokumenten, damit es unabhängig von seinem XML-Kontext ist.  Z. B. Webdienste, die mit XML-innerhalb von komplexen Kommunikationsprotokolle häufig signiert müssen Anwendungen z. B. XML auf diese Weise umwandeln.  Solche Anwendungen berücksichtigen häufig XML in verschiedene dynamisch erstellten Elemente, die im Wesentlichen ändern das Dokument und XML-Überprüfung der Signatur zu Fehlern führen können.  Die <xref:System.Security.Cryptography.Xml.XmlDsigExcC14NWithCommentsTransform> Klasse löst dieses Problem, indem eine solche Vorgänger Kontext von kanonischen Unterdokument ausgeschlossen.  
+  
+ Beachten Sie, dass Sie eine neue Instanz einer Kanonisierung Transform-Klasse direkt erstellt werden können.  Übergeben Sie zum Angeben einer Kanonisierungstransformation Uniform Resource Identifier (URI), die die Transformation, beschreibt die <xref:System.Security.Cryptography.Xml.SignedInfo.CanonicalizationMethod%2A> -Eigenschaft, die aus zugänglich ist die <xref:System.Security.Cryptography.Xml.SignedXml.SignedInfo%2A> Eigenschaft.  Um einen Verweis auf die Kanonisierungstransformation abzurufen, verwenden die <xref:System.Security.Cryptography.Xml.SignedInfo.CanonicalizationMethodObject%2A> -Eigenschaft, die aus zugänglich ist die <xref:System.Security.Cryptography.Xml.SignedXml.SignedInfo%2A> Eigenschaft.  
+  
+ Der URI, der beschreibt, die <xref:System.Security.Cryptography.Xml.XmlDsigExcC14NWithCommentsTransform> Klasse definiert ist, durch die <xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigExcC14NWithCommentsTransformUrl> Feld.  
+  
+ Weitere Informationen über die exklusive C14N-Transformation finden Sie unter XMLDSIG-Spezifikation des World Wide Web Consortium (W3C) unter www.w3.org/TR/xmldsig-core/. Der Kanonisierungsalgorithmus wird in der kanonischen W3C-XML-Spezifikation definiert, die auf www.w3.org/2001/10/xml-exc-c14n verfügbar ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Signieren und Überprüfen eines XML-Dokuments mithilfe der <xref:System.Security.Cryptography.Xml.XmlDsigExcC14NWithCommentsTransform> Klasse.  Dieses Beispiel erstellt eine Signatur Umschlag.  
+  
+ [!code-cpp[Cryptography.Xml.XmlDsigExcC14NWithCommentsTransform#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XmlDsigExcC14NWithCommentsTransform/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.Xml.XmlDsigExcC14NWithCommentsTransform#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XmlDsigExcC14NWithCommentsTransform/CS/sample.cs#1)]
+ [!code-vb[Cryptography.Xml.XmlDsigExcC14NWithCommentsTransform#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XmlDsigExcC14NWithCommentsTransform/VB/sample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlDsigExcC14NWithCommentsTransform ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlDsigExcC14NWithCommentsTransform.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.Xml.XmlDsigExcC14NWithCommentsTransform" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlDsigExcC14NWithCommentsTransform (string inclusiveNamespacesPrefixList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string inclusiveNamespacesPrefixList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlDsigExcC14NWithCommentsTransform.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="inclusiveNamespacesPrefixList" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="inclusiveNamespacesPrefixList">Der Namespace-Präfixe, die mit den standardmäßigen Kanonisierungsalgorithmus.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Cryptography.Xml.XmlDsigExcC14NWithCommentsTransform" /> -Klasse, die eine Liste der Namespace-Präfixe, die mit den standardmäßigen Kanonisierungsalgorithmus angibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `inclusiveNamespacesPrefixList` Parameter enthält eine Leerzeichen getrennte Liste der Namespace-Präfixe, die mit dem exklusiven Kanonisierungsalgorithmus, anstatt den standardmäßigen Kanonisierungsalgorithmus.  Um den Standardnamespace anzugeben, der kein Präfix aufweist, übergeben Sie das Präfix "#default".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

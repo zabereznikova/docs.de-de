@@ -1,0 +1,474 @@
+<Type Name="Size" FullName="System.Windows.Size">
+  <TypeSignature Language="C#" Value="public struct Size : IFormattable" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit Size extends System.ValueType implements class System.IFormattable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Size" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IFormattable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.SizeConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ValueSerializer(typeof(System.Windows.Converters.SizeValueSerializer))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementiert eine Struktur, die zur Beschreibung der <see cref="T:System.Windows.Size" /> eines Objekts.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Size>ist besonders nützlich, da er sowohl beschreibt die <xref:System.Windows.Size.Height%2A> und <xref:System.Windows.Size.Width%2A> eines Objekts. <xref:System.Windows.Size>ist sehr häufig verwendet vom Layoutsystem zum Anordnen und Elemente messen.  
+  
+<a name="xamlAttributeUsage_Size"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="width,height"/>  
+```  
+  
+<a name="xamlValues_Size"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *width*  
+ Ein Wert größer als oder gleich 0, der angibt, die <xref:System.Windows.Size.Width%2A> von der <xref:System.Windows.Size> Struktur.  
+  
+ *Höhe*  
+ Ein Wert größer als oder gleich 0, der angibt, die <xref:System.Windows.Size.Height%2A> von der <xref:System.Windows.Size> Struktur.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie eine <xref:System.Windows.Size> Struktur im Code.  
+  
+ [!code-cpp[PlotPanel#2](~/samples/snippets/cpp/VS_Snippets_Wpf/PlotPanel/CPP/PlotPanel.cpp#2)]
+ [!code-csharp[PlotPanel#2](~/samples/snippets/csharp/VS_Snippets_Wpf/PlotPanel/CSharp/PlotPanel.cs#2)]
+ [!code-vb[PlotPanel#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PlotPanel/VisualBasic/PlotPanel.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Size (double width, double height);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 width, float64 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Size.#ctor(System.Double,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="width" Type="System.Double" />
+        <Parameter Name="height" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="width">Die anfängliche Breite der Instanz von <see cref="T:System.Windows.Size" />.</param>
+        <param name="height">Die anfängliche Höhe der Instanz von <see cref="T:System.Windows.Size" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Size" /> strukturieren und weist ihm eine anfängliche <paramref name="width" /> und <paramref name="height" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `width` und `height` darf nicht negativ sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static System.Windows.Size Empty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Size Empty" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Size.Empty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der einen statischen leere <see cref="T:System.Windows.Size" />.</summary>
+        <value>Eine leere Instanz der <see cref="T:System.Windows.Size" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Size.Width%2A> und <xref:System.Windows.Size.Height%2A> der Instanz von <xref:System.Windows.Size> -unendlich gleich sind, wenn diese Eigenschaft aufgerufen wird. Dies ist der einzige Fall, in dem <xref:System.Windows.Size> kann eine negative Zahl sein.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Size.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Der zu vergleichende <see cref="T:System.Object" />.</param>
+        <summary>Vergleicht ein Objekt mit einer Instanz von <see cref="T:System.Windows.Size" /> auf Gleichheit.</summary>
+        <returns>
+          <see langword="true" />Wenn die Größen gleich sind. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Double>Werte können zu einem Fehler, wenn durch die Bearbeitung führen. Werte, die logisch gleich sind möglicherweise nicht den Wert `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Windows.Size value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(valuetype System.Windows.Size value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Size.Equals(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die Größe für die aktuelle Instanz vergleichen <see cref="T:System.Windows.Size" />.</param>
+        <summary>Vergleicht einen Wert mit einer Instanz von <see cref="T:System.Windows.Size" /> auf Gleichheit.</summary>
+        <returns>
+          <see langword="true" />, wenn die Instanzen von <see cref="T:System.Windows.Size" /> gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Double>Werte können zu einem Fehler, wenn durch die Bearbeitung führen. Werte, die logisch gleich sind möglicherweise nicht den Wert `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public static bool Equals (System.Windows.Size size1, System.Windows.Size size2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Equals(valuetype System.Windows.Size size1, valuetype System.Windows.Size size2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Size.Equals(System.Windows.Size,System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="size1" Type="System.Windows.Size" />
+        <Parameter Name="size2" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="size1">Die erste zu vergleichende Instanz von <see cref="T:System.Windows.Size" />.</param>
+        <param name="size2">Die zweite zu vergleichende Instanz von <see cref="T:System.Windows.Size" />.</param>
+        <summary>Vergleicht zwei Instanzen von <see cref="T:System.Windows.Size" /> auf Gleichheit.</summary>
+        <returns>
+          <see langword="true" />, wenn die Instanzen von <see cref="T:System.Windows.Size" /> gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Double>Werte können zu einem Fehler, wenn durch die Bearbeitung führen. Werte, die logisch gleich sind möglicherweise nicht den Wert `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Size.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Hashcode für diese Instanz von <see cref="T:System.Windows.Size" />.</summary>
+        <returns>Der Hashcode für diese Instanz von <see cref="T:System.Windows.Size" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public double Height { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Height" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Size.Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="P:System.Windows.Size.Height" /> dieser Instanz von <see cref="T:System.Windows.Size" />.</summary>
+        <value>Die <see cref="P:System.Windows.Size.Height" /> dieser Instanz von <see cref="T:System.Windows.Size" />. Der Standard ist 0. Der Wert darf nicht negativ sein.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public bool IsEmpty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEmpty" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Size.IsEmpty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob diese Instanz von <see cref="T:System.Windows.Size" /> ist <see cref="P:System.Windows.Size.Empty" />.</summary>
+        <value>
+          <see langword="true" />Wenn diese Instanz der Größe <see cref="P:System.Windows.Size.Empty" />andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Auch wenn <xref:System.Windows.Size> ist 0 (null) der Instanz von <xref:System.Windows.Size> enthält weiterhin den Wert 0 oder 1, um eine 0 (null) oder Punktesatz anzugeben. Verwenden Sie diese Eigenschaft daher nicht für einen Bereich 0 zu überprüfen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.Size size1, System.Windows.Size size2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Windows.Size size1, valuetype System.Windows.Size size2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Size.op_Equality(System.Windows.Size,System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="size1" Type="System.Windows.Size" />
+        <Parameter Name="size2" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="size1">Die erste zu vergleichende Instanz von <see cref="T:System.Windows.Size" />.</param>
+        <param name="size2">Die zweite zu vergleichende Instanz von <see cref="T:System.Windows.Size" />.</param>
+        <summary>Vergleicht zwei Instanzen von <see cref="T:System.Windows.Size" /> auf Gleichheit.</summary>
+        <returns>True, wenn die beiden Instanzen von <see cref="T:System.Windows.Size" /> gleich sind; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator System.Windows.Point (System.Windows.Size size);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Windows.Point op_Explicit(valuetype System.Windows.Size size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Size.op_Explicit(System.Windows.Size)~System.Windows.Point" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="size" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="size">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator System.Windows.Vector (System.Windows.Size size);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Windows.Vector op_Explicit(valuetype System.Windows.Size size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Size.op_Explicit(System.Windows.Size)~System.Windows.Vector" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Vector</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="size" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="size">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.Size size1, System.Windows.Size size2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Windows.Size size1, valuetype System.Windows.Size size2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Size.op_Inequality(System.Windows.Size,System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="size1" Type="System.Windows.Size" />
+        <Parameter Name="size2" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="size1">Die erste zu vergleichende Instanz von <see cref="T:System.Windows.Size" />.</param>
+        <param name="size2">Die zweite zu vergleichende Instanz von <see cref="T:System.Windows.Size" />.</param>
+        <summary>Vergleicht zwei Instanzen von <see cref="T:System.Windows.Size" /> auf Ungleichheit.</summary>
+        <returns>
+          <see langword="true" />Wenn die Instanzen von <see cref="T:System.Windows.Size" /> nicht gleich sind; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static System.Windows.Size Parse (string source);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Size Parse(string source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Size.Parse(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="source">Ein <see cref="T:System.String" /> Wert, der zum Analysieren einer <see cref="T:System.Windows.Size" /> Wert.</param>
+        <summary>Gibt eine Instanz des <see cref="T:System.Windows.Size" /> aus einem konvertierten <see cref="T:System.String" />.</summary>
+        <returns>Eine Instanz von <see cref="T:System.Windows.Size" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IFormattable.ToString">
+      <MemberSignature Language="C#" Value="string IFormattable.ToString (string format, IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.IFormattable.ToString(string format, class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Size.System#IFormattable#ToString(System.String,System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="format">Das zu verwendende Format.</param>
+        <param name="provider">Der zum Formatieren des Werts zu verwendende Anbieter.</param>
+        <summary>Dieser Typ oder Member unterstützt die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <returns>Der Wert der aktuellen Instanz im angegebenen Format.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Size.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.String" /> , darstellt, dies <see cref="T:System.Windows.Size" /> Objekt.</summary>
+        <returns>Ein <see cref="T:System.String" /> , der die Breite, gefolgt von der Höhe angibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Size.Width%2A> Eigenschaft auf 30 festgelegt ist und die <xref:System.Windows.Size.Height%2A> Eigenschaftensatz auf 40, die <xref:System.Windows.Size.ToString%2A> Methode gibt eine Zeichenfolge, die besagt, dass `"30, 40"`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ToString(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Size.ToString(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Ein Objekt, das eine Möglichkeit zum Steuern der Formatierung bereitstellt.</param>
+        <summary>Gibt eine <see cref="T:System.String" /> , die dieser Instanz von darstellt <see cref="T:System.Windows.Size" />.</summary>
+        <returns>Ein <see cref="T:System.String" /> , darstellt, dies <see cref="T:System.Windows.Size" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public double Width { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Width" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Size.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="P:System.Windows.Size.Width" /> dieser Instanz von <see cref="T:System.Windows.Size" />.</summary>
+        <value>Die <see cref="P:System.Windows.Size.Width" /> dieser Instanz von <see cref="T:System.Windows.Size" />. Der Standardwert ist <c>0</c>. Der Wert darf nicht negativ sein.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

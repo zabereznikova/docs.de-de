@@ -1,0 +1,1378 @@
+<Type Name="Quaternion" FullName="System.Numerics.Quaternion">
+  <TypeSignature Language="C#" Value="public struct Quaternion : IEquatable&lt;System.Numerics.Quaternion&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit Quaternion extends System.ValueType implements class System.IEquatable`1&lt;valuetype System.Numerics.Quaternion&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Numerics.Quaternion" />
+  <AssemblyInfo>
+    <AssemblyName>System.Numerics.Vectors</AssemblyName>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.2.0</AssemblyVersion>
+    <AssemblyVersion>4.1.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Numerics</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Numerics.Quaternion&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt einen Vektor dar, der zum Codieren von dreidimensionalen physischen Drehungen verwendet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Quaternion> -Struktur wird verwendet, um ein Objekt zu (X, y, Z)-Vektor effizient Drehen von der Winkel Theta, in denen:  
+  
+```  
+w = cos(theta/2)  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Quaternion (System.Numerics.Vector3 vectorPart, float scalarPart);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Numerics.Vector3 vectorPart, float32 scalarPart) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Quaternion.#ctor(System.Numerics.Vector3,System.Single)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="vectorPart" Type="System.Numerics.Vector3" />
+        <Parameter Name="scalarPart" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="vectorPart">Der Vektorteil der Quaternion.</param>
+        <param name="scalarPart">Der Drehungsteil der Quaternion.</param>
+        <summary>Erstellt eine Quaternion aus dem angegebenen Vektorteil und den Drehungsteilen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Quaternion (float x, float y, float z, float w);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float32 x, float32 y, float32 z, float32 w) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Quaternion.#ctor(System.Single,System.Single,System.Single,System.Single)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="x" Type="System.Single" />
+        <Parameter Name="y" Type="System.Single" />
+        <Parameter Name="z" Type="System.Single" />
+        <Parameter Name="w" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="x">Der Wert, der der X-Komponente der Quaternion zugewiesen werden soll.</param>
+        <param name="y">Der Wert, der der Y-Komponente der Quaternion zugewiesen werden soll.</param>
+        <param name="z">Der Wert, der der Z-Komponente der Quaternion zugewiesen werden soll.</param>
+        <param name="w">Der Wert, der der W-Komponente der Quaternion zugewiesen werden soll.</param>
+        <summary>Erzeugt eine Quaternion aus den angegebenen Komponenten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Quaternion Add (System.Numerics.Quaternion value1, System.Numerics.Quaternion value2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Quaternion Add(valuetype System.Numerics.Quaternion value1, valuetype System.Numerics.Quaternion value2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Quaternion.Add(System.Numerics.Quaternion,System.Numerics.Quaternion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Quaternion</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value1" Type="System.Numerics.Quaternion" />
+        <Parameter Name="value2" Type="System.Numerics.Quaternion" />
+      </Parameters>
+      <Docs>
+        <param name="value1">Die erste Quaternion.</param>
+        <param name="value2">Die zweite Quaternion.</param>
+        <summary>Addiert zu jedem Element in einer Quaternion das entsprechende Element in einer zweiten Quaternion.</summary>
+        <returns>Die Quaternion, die die addierten Werte von <paramref name="value1" /> und <paramref name="value2" /> enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Concatenate">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Quaternion Concatenate (System.Numerics.Quaternion value1, System.Numerics.Quaternion value2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Quaternion Concatenate(valuetype System.Numerics.Quaternion value1, valuetype System.Numerics.Quaternion value2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Quaternion.Concatenate(System.Numerics.Quaternion,System.Numerics.Quaternion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Quaternion</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value1" Type="System.Numerics.Quaternion" />
+        <Parameter Name="value2" Type="System.Numerics.Quaternion" />
+      </Parameters>
+      <Docs>
+        <param name="value1">Die erste Quaterniondrehung in der Reihe.</param>
+        <param name="value2">Die zweite Quaterniondrehung in der Reihe.</param>
+        <summary>Verkettet zwei Quaternionen.</summary>
+        <returns>Eine neue Quaternion, die die Verkettung der <paramref name="value1" />-Drehung, gefolgt von der <paramref name="value2" />-Drehung, darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Conjugate">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Quaternion Conjugate (System.Numerics.Quaternion value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Quaternion Conjugate(valuetype System.Numerics.Quaternion value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Quaternion.Conjugate(System.Numerics.Quaternion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Quaternion</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Quaternion" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die Quaternion.</param>
+        <summary>Gibt das Konjugat einer angegebenen Quaternion zurück.</summary>
+        <returns>Eine neue Quaternion, die das Konjugat von <see langword="value" /> ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromAxisAngle">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Quaternion CreateFromAxisAngle (System.Numerics.Vector3 axis, float angle);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Quaternion CreateFromAxisAngle(valuetype System.Numerics.Vector3 axis, float32 angle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Quaternion.CreateFromAxisAngle(System.Numerics.Vector3,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Quaternion</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="axis" Type="System.Numerics.Vector3" />
+        <Parameter Name="angle" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="axis">Der Vektor, um den die Drehung erfolgt.</param>
+        <param name="angle">Der Winkel im Bogenmaß für die Drehung um den Vektor.</param>
+        <summary>Erstellt eine Quaternion aus einem Vektor und einen Winkel für die Drehung um den Vektor.</summary>
+        <returns>Die neu erstellte Quaternion.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromRotationMatrix">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Quaternion CreateFromRotationMatrix (System.Numerics.Matrix4x4 matrix);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Quaternion CreateFromRotationMatrix(valuetype System.Numerics.Matrix4x4 matrix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Quaternion.CreateFromRotationMatrix(System.Numerics.Matrix4x4)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Quaternion</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matrix" Type="System.Numerics.Matrix4x4" />
+      </Parameters>
+      <Docs>
+        <param name="matrix">Die Rotationsmatrix.</param>
+        <summary>Erstellt eine Quaternion aus der angegebenen Rotationsmatrix.</summary>
+        <returns>Die neu erstellte Quaternion.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromYawPitchRoll">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Quaternion CreateFromYawPitchRoll (float yaw, float pitch, float roll);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Quaternion CreateFromYawPitchRoll(float32 yaw, float32 pitch, float32 roll) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Quaternion.CreateFromYawPitchRoll(System.Single,System.Single,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Quaternion</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="yaw" Type="System.Single" />
+        <Parameter Name="pitch" Type="System.Single" />
+        <Parameter Name="roll" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="yaw">Der Gierwinkel im Bogenmaß um die Y-Achse.</param>
+        <param name="pitch">Der Nickwinkel im Bogenmaß um die X-Achse.</param>
+        <param name="roll">Der Rollwinkel im Bogenmaß um die Z-Achse.</param>
+        <summary>Erstellt eine neue Quaternion aus den angegebenen Werten für Gieren, Nicken und Rollen.</summary>
+        <returns>Die resultierende Quaternion.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Divide">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Quaternion Divide (System.Numerics.Quaternion value1, System.Numerics.Quaternion value2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Quaternion Divide(valuetype System.Numerics.Quaternion value1, valuetype System.Numerics.Quaternion value2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Quaternion.Divide(System.Numerics.Quaternion,System.Numerics.Quaternion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Quaternion</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value1" Type="System.Numerics.Quaternion" />
+        <Parameter Name="value2" Type="System.Numerics.Quaternion" />
+      </Parameters>
+      <Docs>
+        <param name="value1">Der Dividend.</param>
+        <param name="value2">Der Divisor.</param>
+        <summary>Dividiert eine Quaternion durch eine zweite Quaternion.</summary>
+        <returns>Die Quaternion, die aus der Division von <paramref name="value1" /> durch <paramref name="value2" /> resultiert.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dot">
+      <MemberSignature Language="C#" Value="public static float Dot (System.Numerics.Quaternion quaternion1, System.Numerics.Quaternion quaternion2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 Dot(valuetype System.Numerics.Quaternion quaternion1, valuetype System.Numerics.Quaternion quaternion2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Quaternion.Dot(System.Numerics.Quaternion,System.Numerics.Quaternion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="quaternion1" Type="System.Numerics.Quaternion" />
+        <Parameter Name="quaternion2" Type="System.Numerics.Quaternion" />
+      </Parameters>
+      <Docs>
+        <param name="quaternion1">Die erste Quaternion.</param>
+        <param name="quaternion2">Die zweite Quaternion.</param>
+        <summary>Berechnet das Skalarprodukt von zwei Quaternionen.</summary>
+        <returns>Das Skalarprodukt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Numerics.Quaternion other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype System.Numerics.Quaternion other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Quaternion.Equals(System.Numerics.Quaternion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Numerics.Quaternion" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die andere Quaternion.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob diese Instanz und eine andere Quaternion gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn die beiden Quaternionen gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es sind zwei Quaternionen gleich, wenn jedes ihrer entsprechenden Komponenten gleich ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Quaternion.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das mit der aktuellen Instanz verglichen werden soll.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob diese Instanz und ein angegebenes Objekt gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn die angegebene Instanz und <paramref name="obj" /> gleich sind, andernfalls <see langword="false" /><see langword="" />. Wenn <paramref name="obj" /> gleich <see langword="null" /> ist, gibt die Methode <see langword="false" /> zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle Instanz und `obj` sind gleich, wenn `obj` ist ein <xref:System.Numerics.Quaternion> -Objekt und die entsprechenden Komponenten von aller Matrizen gleich sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Quaternion.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese Instanz zurück.</summary>
+        <returns>Der Hashcode.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Identity">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Quaternion Identity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Numerics.Quaternion Identity" />
+      <MemberSignature Language="DocId" Value="P:System.Numerics.Quaternion.Identity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Quaternion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Quaternion ab, die keine Drehung darstellt.</summary>
+        <value>Eine Quaternion, deren Werte <c>(0, 0, 0, 1)</c>.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Inverse">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Quaternion Inverse (System.Numerics.Quaternion value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Quaternion Inverse(valuetype System.Numerics.Quaternion value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Quaternion.Inverse(System.Numerics.Quaternion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Quaternion</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Quaternion" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die Quaternion.</param>
+        <summary>Gibt die Inverse einer Quaternion zurück.</summary>
+        <returns>Die inverse Quaternion.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsIdentity">
+      <MemberSignature Language="C#" Value="public bool IsIdentity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsIdentity" />
+      <MemberSignature Language="DocId" Value="P:System.Numerics.Quaternion.IsIdentity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die aktuelle Instanz die Identitätsquaternion ist.</summary>
+        <value>
+          <see langword="true" />, wenn die aktuelle Instanz die Identitätsquaternion ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public float Length ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float32 Length() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Quaternion.Length" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Berechnet die Länge der Quaternion.</summary>
+        <returns>Die berechnete Länge der Quaternion.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LengthSquared">
+      <MemberSignature Language="C#" Value="public float LengthSquared ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float32 LengthSquared() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Quaternion.LengthSquared" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Berechnet das Quadrat der Länge der Quaternion.</summary>
+        <returns>Das Quadrat der Länge der Quaternion.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Lerp">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Quaternion Lerp (System.Numerics.Quaternion quaternion1, System.Numerics.Quaternion quaternion2, float amount);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Quaternion Lerp(valuetype System.Numerics.Quaternion quaternion1, valuetype System.Numerics.Quaternion quaternion2, float32 amount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Quaternion.Lerp(System.Numerics.Quaternion,System.Numerics.Quaternion,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Quaternion</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="quaternion1" Type="System.Numerics.Quaternion" />
+        <Parameter Name="quaternion2" Type="System.Numerics.Quaternion" />
+        <Parameter Name="amount" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="quaternion1">Die erste Quaternion.</param>
+        <param name="quaternion2">Die zweite Quaternion.</param>
+        <param name="amount">Die relative Gewichtung der <c>quaternion2</c> in der Interpolation.</param>
+        <summary>Führt eine lineare Interpolation zwischen zwei Quaternionen basierend auf einem Wert durch, der die Gewichtung der zweiten Quaternion angibt.</summary>
+        <returns>Die interpolierte Quaternion.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Multiply">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Quaternion Multiply (System.Numerics.Quaternion value1, System.Numerics.Quaternion value2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Quaternion Multiply(valuetype System.Numerics.Quaternion value1, valuetype System.Numerics.Quaternion value2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Quaternion.Multiply(System.Numerics.Quaternion,System.Numerics.Quaternion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Quaternion</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value1" Type="System.Numerics.Quaternion" />
+        <Parameter Name="value2" Type="System.Numerics.Quaternion" />
+      </Parameters>
+      <Docs>
+        <param name="value1">Die erste Quaternion.</param>
+        <param name="value2">Die zweite Quaternion.</param>
+        <summary>Gibt die Quaternion zurück, die aus der Multiplikation zweier Quaternionen resultiert.</summary>
+        <returns>Die Produktquaternion.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Multiply">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Quaternion Multiply (System.Numerics.Quaternion value1, float value2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Quaternion Multiply(valuetype System.Numerics.Quaternion value1, float32 value2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Quaternion.Multiply(System.Numerics.Quaternion,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Quaternion</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value1" Type="System.Numerics.Quaternion" />
+        <Parameter Name="value2" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="value1">Die Quellquaternion.</param>
+        <param name="value2">Der Skalarwert.</param>
+        <summary>Gibt die Quaternion zurück, die sich aus der Skalierung aller Komponenten einer angegebenen Quaternion um einen skalaren Faktor ergibt.</summary>
+        <returns>Die skalierte Quaternion.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Negate">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Quaternion Negate (System.Numerics.Quaternion value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Quaternion Negate(valuetype System.Numerics.Quaternion value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Quaternion.Negate(System.Numerics.Quaternion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Quaternion</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Quaternion" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu negierende Quaternion.</param>
+        <summary>Kehrt das Vorzeichen jeder Komponente der Quaternion um.</summary>
+        <returns>Die negierte Quaternion.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Normalize">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Quaternion Normalize (System.Numerics.Quaternion value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Quaternion Normalize(valuetype System.Numerics.Quaternion value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Quaternion.Normalize(System.Numerics.Quaternion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Quaternion</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Quaternion" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu normalisierende Quaternion.</param>
+        <summary>Teilt jede Komponente einer angegebenen <see cref="T:System.Numerics.Quaternion" /> durch ihre Länge.</summary>
+        <returns>Die normalisierte Quaternion.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Addition">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Quaternion operator + (System.Numerics.Quaternion value1, System.Numerics.Quaternion value2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Quaternion op_Addition(valuetype System.Numerics.Quaternion value1, valuetype System.Numerics.Quaternion value2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Quaternion.op_Addition(System.Numerics.Quaternion,System.Numerics.Quaternion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Quaternion</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value1" Type="System.Numerics.Quaternion" />
+        <Parameter Name="value2" Type="System.Numerics.Quaternion" />
+      </Parameters>
+      <Docs>
+        <param name="value1">Die erste Quaternion.</param>
+        <param name="value2">Die zweite Quaternion.</param>
+        <summary>Addiert zu jedem Element in einer Quaternion das entsprechende Element in einer zweiten Quaternion.</summary>
+        <returns>Die Quaternion, die die addierten Werte von <paramref name="value1" /> und <paramref name="value2" /> enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Quaternion.op_Addition%2A> Methode definiert, den Vorgang des Additionsoperators für <xref:System.Numerics.Quaternion> Objekte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Division">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Quaternion operator / (System.Numerics.Quaternion value1, System.Numerics.Quaternion value2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Quaternion op_Division(valuetype System.Numerics.Quaternion value1, valuetype System.Numerics.Quaternion value2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Quaternion.op_Division(System.Numerics.Quaternion,System.Numerics.Quaternion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Quaternion</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value1" Type="System.Numerics.Quaternion" />
+        <Parameter Name="value2" Type="System.Numerics.Quaternion" />
+      </Parameters>
+      <Docs>
+        <param name="value1">Der Dividend.</param>
+        <param name="value2">Der Divisor.</param>
+        <summary>Dividiert eine Quaternion durch eine zweite Quaternion.</summary>
+        <returns>Die Quaternion, die aus der Division von <paramref name="value1" /> durch <paramref name="value2" /> resultiert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Quaternion.op_Division%2A> Methode definiert die Divisionsoperation für <xref:System.Numerics.Quaternion> Objekte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Numerics.Quaternion value1, System.Numerics.Quaternion value2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Numerics.Quaternion value1, valuetype System.Numerics.Quaternion value2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Quaternion.op_Equality(System.Numerics.Quaternion,System.Numerics.Quaternion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value1" Type="System.Numerics.Quaternion" />
+        <Parameter Name="value2" Type="System.Numerics.Quaternion" />
+      </Parameters>
+      <Docs>
+        <param name="value1">Die erste zu vergleichende Quaternion.</param>
+        <param name="value2">Die zweite zu vergleichende Quaternion.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob zwei Quaternionen gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn die beiden Quaternionen gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es sind zwei Quaternionen gleich, wenn jedes ihrer entsprechenden Komponenten gleich ist.  
+  
+ Die <xref:System.Numerics.Quaternion.op_Equality%2A> Methode definiert, den Vorgang des Gleichheitsoperators für <xref:System.Numerics.Quaternion> Objekte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Numerics.Quaternion value1, System.Numerics.Quaternion value2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Numerics.Quaternion value1, valuetype System.Numerics.Quaternion value2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Quaternion.op_Inequality(System.Numerics.Quaternion,System.Numerics.Quaternion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value1" Type="System.Numerics.Quaternion" />
+        <Parameter Name="value2" Type="System.Numerics.Quaternion" />
+      </Parameters>
+      <Docs>
+        <param name="value1">Die erste zu vergleichende Quaternion.</param>
+        <param name="value2">Die zweite zu vergleichende Quaternion.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob zwei Quaternionen ungleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="value1" /> und <paramref name="value2" /> ungleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Multiply">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Quaternion operator * (System.Numerics.Quaternion value1, System.Numerics.Quaternion value2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Quaternion op_Multiply(valuetype System.Numerics.Quaternion value1, valuetype System.Numerics.Quaternion value2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Quaternion.op_Multiply(System.Numerics.Quaternion,System.Numerics.Quaternion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Quaternion</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value1" Type="System.Numerics.Quaternion" />
+        <Parameter Name="value2" Type="System.Numerics.Quaternion" />
+      </Parameters>
+      <Docs>
+        <param name="value1">Die erste Quaternion.</param>
+        <param name="value2">Die zweite Quaternion.</param>
+        <summary>Gibt die Quaternion zurück, die aus der Multiplikation zweier Quaternionen resultiert.</summary>
+        <returns>Die Produktquaternion.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Quaternion.op_Multiply%2A> Methode definiert, den Vorgang, der den Multiplikationsoperator für <xref:System.Numerics.Quaternion> Objekte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Multiply">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Quaternion operator * (System.Numerics.Quaternion value1, float value2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Quaternion op_Multiply(valuetype System.Numerics.Quaternion value1, float32 value2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Quaternion.op_Multiply(System.Numerics.Quaternion,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Quaternion</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value1" Type="System.Numerics.Quaternion" />
+        <Parameter Name="value2" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="value1">Die Quellquaternion.</param>
+        <param name="value2">Der Skalarwert.</param>
+        <summary>Gibt die Quaternion zurück, die sich aus der Skalierung aller Komponenten einer angegebenen Quaternion um einen skalaren Faktor ergibt.</summary>
+        <returns>Die skalierte Quaternion.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Quaternion.op_Multiply%2A> Methode definiert, den Vorgang, der den Multiplikationsoperator für <xref:System.Numerics.Quaternion> Objekte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Subtraction">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Quaternion operator - (System.Numerics.Quaternion value1, System.Numerics.Quaternion value2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Quaternion op_Subtraction(valuetype System.Numerics.Quaternion value1, valuetype System.Numerics.Quaternion value2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Quaternion.op_Subtraction(System.Numerics.Quaternion,System.Numerics.Quaternion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Quaternion</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value1" Type="System.Numerics.Quaternion" />
+        <Parameter Name="value2" Type="System.Numerics.Quaternion" />
+      </Parameters>
+      <Docs>
+        <param name="value1">Die erste Quaternion.</param>
+        <param name="value2">Die zweite Quaternion.</param>
+        <summary>Subtrahiert jedes Element aus einer zweiten Quaternion von seinem entsprechenden Element in einer ersten Quaternion.</summary>
+        <returns>Die Quaternion, die die Werte enthält, die sich aus der Subtraktion jedes Elements in <paramref name="value2" /> von seinem entsprechenden Element in <paramref name="value1" /> ergeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Quaternion.op_Subtraction%2A> Methode definiert, den Vorgang des Subtraktionsoperators für <xref:System.Numerics.Quaternion> Objekte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_UnaryNegation">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Quaternion operator - (System.Numerics.Quaternion value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Quaternion op_UnaryNegation(valuetype System.Numerics.Quaternion value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Quaternion.op_UnaryNegation(System.Numerics.Quaternion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Quaternion</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Quaternion" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu negierende Quaternion.</param>
+        <summary>Kehrt das Vorzeichen jeder Komponente der Quaternion um.</summary>
+        <returns>Die negierte Quaternion.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Quaternion.op_UnaryNegation%2A> Methode definiert, den Vorgang, der den unären Negationsoperator für <xref:System.Numerics.Quaternion> Objekte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Slerp">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Quaternion Slerp (System.Numerics.Quaternion quaternion1, System.Numerics.Quaternion quaternion2, float amount);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Quaternion Slerp(valuetype System.Numerics.Quaternion quaternion1, valuetype System.Numerics.Quaternion quaternion2, float32 amount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Quaternion.Slerp(System.Numerics.Quaternion,System.Numerics.Quaternion,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Quaternion</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="quaternion1" Type="System.Numerics.Quaternion" />
+        <Parameter Name="quaternion2" Type="System.Numerics.Quaternion" />
+        <Parameter Name="amount" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="quaternion1">Die erste Quaternion.</param>
+        <param name="quaternion2">Die zweite Quaternion.</param>
+        <param name="amount">Die relative Gewichtung der zweiten Quaternion in der Interpolation.</param>
+        <summary>Interpoliert zwischen zwei Quaternionen mit der Methode der sphärischen linearen Interpolation.</summary>
+        <returns>Die interpolierte Quaternion.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subtract">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Quaternion Subtract (System.Numerics.Quaternion value1, System.Numerics.Quaternion value2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Quaternion Subtract(valuetype System.Numerics.Quaternion value1, valuetype System.Numerics.Quaternion value2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Quaternion.Subtract(System.Numerics.Quaternion,System.Numerics.Quaternion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Quaternion</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value1" Type="System.Numerics.Quaternion" />
+        <Parameter Name="value2" Type="System.Numerics.Quaternion" />
+      </Parameters>
+      <Docs>
+        <param name="value1">Die erste Quaternion.</param>
+        <param name="value2">Die zweite Quaternion.</param>
+        <summary>Subtrahiert jedes Element aus einer zweiten Quaternion von seinem entsprechenden Element in einer ersten Quaternion.</summary>
+        <returns>Die Quaternion, die die Werte enthält, die sich aus der Subtraktion jedes Elements in <paramref name="value2" /> von seinem entsprechenden Element in <paramref name="value1" /> ergeben.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Quaternion.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge zurück, die diese Quaternion darstellt.</summary>
+        <returns>Die Zeichenfolgendarstellung dieser Quaternion.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die numerischen Werte in der zurückgegebenen Zeichenfolge werden mit den Konventionen der aktuellen Kultur formatiert. Für die Kultur En-US, kann die zurückgegebene Zeichenfolge z. B. als angezeigt `{X:1.1 Y:2.2 Z:3.3 W:4.4}`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="W">
+      <MemberSignature Language="C#" Value="public float W;" />
+      <MemberSignature Language="ILAsm" Value=".field public float32 W" />
+      <MemberSignature Language="DocId" Value="F:System.Numerics.Quaternion.W" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Rotationskomponente der Quaternion.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="X">
+      <MemberSignature Language="C#" Value="public float X;" />
+      <MemberSignature Language="ILAsm" Value=".field public float32 X" />
+      <MemberSignature Language="DocId" Value="F:System.Numerics.Quaternion.X" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der X-Wert der Vektorkomponente der Quaternion.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Y">
+      <MemberSignature Language="C#" Value="public float Y;" />
+      <MemberSignature Language="ILAsm" Value=".field public float32 Y" />
+      <MemberSignature Language="DocId" Value="F:System.Numerics.Quaternion.Y" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Y-Wert der Vektorkomponente der Quaternion.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Z">
+      <MemberSignature Language="C#" Value="public float Z;" />
+      <MemberSignature Language="ILAsm" Value=".field public float32 Z" />
+      <MemberSignature Language="DocId" Value="F:System.Numerics.Quaternion.Z" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Z-Wert der Vektorkomponente der Quaternion.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

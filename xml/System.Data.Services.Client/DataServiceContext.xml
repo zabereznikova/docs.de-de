@@ -1,0 +1,2436 @@
+<Type Name="DataServiceContext" FullName="System.Data.Services.Client.DataServiceContext">
+  <TypeSignature Language="C#" Value="public class DataServiceContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataServiceContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.Client.DataServiceContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services.Client</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Der <see cref="T:System.Data.Services.Client.DataServiceContext" /> stellt den Laufzeitkontext des Datendiensts dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[ssAstoria](~/includes/ssastoria-md.md)] sind zustandslos, aber <xref:System.Data.Services.Client.DataServiceContext> nicht. Der Client-Status bleibt zwischen Interaktionen erhalten, um Funktionen (z. B. die Updateverwaltung) zu unterstützen. Diese Klasse und die Klasse <xref:System.Data.Services.Client.DataServiceQuery>, die eine bestimmte HTTP-Anforderung an einen Datendienst darstellt, sind die beiden Hauptklassen in der Clientbibliothek.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die Verwendung von <xref:System.Data.Services.Client.DataServiceContext>, erzeugt durch das Tool zum Hinzufügen einer Dienstreferenz, für die explizite Ausführung einer Abfrage an den Northwind-Datendienst, die alle Kunden zurückgibt. Der URI der angeforderten `Customers`-Entitätenmenge wird automatisch vom Kontext bestimmt. Die Abfrage wird implizit ausgeführt, wenn die Enumeration auftritt. Northwind-Datendienst wird erstellt, wenn Sie die [!INCLUDE[ssAstoria](~/includes/ssastoria-md.md)] .  
+  
+ [!code-csharp[Astoria Northwind Client#GetAllCustomers](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#getallcustomers)]
+ [!code-vb[Astoria Northwind Client#GetAllCustomers](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#getallcustomers)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataServiceContext (Uri serviceRoot);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri serviceRoot) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.#ctor(System.Uri)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serviceRoot" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="serviceRoot">Ein absoluter URI, der den Stamm eines Datendiensts identifiziert.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Services.Client.DataServiceContext" />-Klasse mit der angegebenen <paramref name="serviceRoot" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Client-Bibliothek erwartet, dass `baseURI` auf den Stamm eines Datendiensts zeigt. Eine Überprüfungsanforderung wir jedoch nicht abgegeben. Identifiziert `baseURI` den Stamm des Diensts nicht, wird die Definition des Verhaltens der Clientbibliothek aufgehoben.  
+  
+ Ein URI mit einem nachgestellten Schrägstrich entspricht einem Zeichen ohne das nachfolgende Zeichen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Hierzu muss <paramref name="serviceRoot" /> NULL sein.</exception>
+        <exception cref="T:System.ArgumentException">Wenn <paramref name="serviceRoot" /> kein absoluter URI ist.  
+  
+ - oder -   
+  
+ Wenn <paramref name="serviceRoot" /> ein gut strukturierter URI ohne eine Abfrage oder ein Abfragefragment ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddLink">
+      <MemberSignature Language="C#" Value="public void AddLink (object source, string sourceProperty, object target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddLink(object source, string sourceProperty, object target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.AddLink(System.Object,System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="sourceProperty" Type="System.String" />
+        <Parameter Name="target" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="source">Das Quellobjekt für den neuen Link.</param>
+        <param name="sourceProperty">Der Name der Navigationseigenschaft des Quellobjekts, das das verknüpfte Objekt zurückgibt.</param>
+        <param name="target">Das Objekt bezogen auf das Quellobjekt durch den neuen Link.</param>
+        <summary>Fügt den angegebenen Link dem Satz von Objekten hinzu, den der <see cref="T:System.Data.Services.Client.DataServiceContext" /> nachverfolgt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Benachrichtigt <xref:System.Data.Services.Client.DataServiceContext>, dass ein neuer Link zwischen der verwandten Quelle und den Zielobjekten vorhanden ist, und dass der Link von der angegebenen Quelleigenschaft vertreten wird. <xref:System.Data.Services.Client.DataServiceContext> fügt diesen Link dem Satz von neu erstellten Links hinzu, der beim nächsten Aufruf von <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> an den Datendienst gesendet werden.  
+  
+ Links sind unidirektionale Vertrauensstellungen. Da Zuordnungen bidirektionale sind, in einer 1: 1-Zuordnung muss Aufrufen <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> erneut aus, um die umgekehrte Verknüpfung erstellt und in eine viele-zu-Eins-Zuordnung Sie rufen <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> einen Link auf die "one" Ende der Zuordnung zu erstellen.  
+  
+ Das Zielobjekt muss den vom Parameter `sourceProperty` identifizierten Typ oder einen Untertyp aufweisen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie die <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>-Methode und die <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>-Methode verwendet werden, um Links zu erstellen, die Beziehungen definieren. In diesem Beispiel werden die Navigationseigenschaften für das `Order_Details`-Objekt auch explizit festgelegt. Dieses Beispiel verwendet die <xref:System.Data.Services.Client.DataServiceContext> generiert, durch das Hinzufügen eines Dienstverweises Tool basierend auf der Northwind-Datendienst, die erstellt wird, Sie nach Beendigung der [!INCLUDE[ssAstoria](~/includes/ssastoria-md.md)] .  
+  
+ [!code-csharp[Astoria Northwind Client#AddOrderDetailToOrder](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addorderdetailtoorder)]
+ [!code-vb[Astoria Northwind Client#AddOrderDetailToOrder](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addorderdetailtoorder)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wenn <paramref name="source" />, <paramref name="sourceProperty" /> oder <paramref name="target" /> NULL sind.</exception>
+        <exception cref="T:System.InvalidOperationException">Wenn ein Link bereits vorhanden ist.  
+  
+ - oder -   
+  
+ Wenn das Objekt <paramref name="source" /> oder <paramref name="target" /> in <see cref="F:System.Data.Services.Client.EntityStates.Detached" /> sind oder den Status <see cref="F:System.Data.Services.Client.EntityStates.Deleted" /> aufweisen.  
+  
+ - oder -   
+  
+ Wenn <paramref name="sourceProperty" /> keine Auflistung ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddObject">
+      <MemberSignature Language="C#" Value="public void AddObject (string entitySetName, object entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddObject(string entitySetName, object entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.AddObject(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entitySetName" Type="System.String" />
+        <Parameter Name="entity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entitySetName">Der Name der Entität, der die Ressource hinzugefügt wurde.</param>
+        <param name="entity">Das Objekt, das vom <see cref="T:System.Data.Services.Client.DataServiceContext" /> nachverfolgt werden soll.</param>
+        <summary>Fügt das angegebene Objekt dem Satz von Objekten hinzu, den der <see cref="T:System.Data.Services.Client.DataServiceContext" /> nachverfolgt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Objekt wird in den Nachverfolgungssatz des <xref:System.Data.Services.Client.DataServiceContext> im Zustand <xref:System.Data.Services.Client.EntityStates.Added> gesetzt. <xref:System.Data.Services.Client.DataServiceContext> versucht, beim nächsten Aufruf von <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> das Objekt mit HTTP POST einzufügen. Diese Methode fügt Objekte zu <xref:System.Data.Services.Client.DataServiceContext> hinzu, die mit der angegebenen Entität in Verbindung stehen. Jedes Objekt muss durch einen separaten Aufruf an <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> hinzugefügt werden.  
+  
+ Die Methode überprüft nicht, dass die angegebene Entitätenmenge im Datendienst zugeordnet ist die <xref:System.Data.Services.Client.DataServiceContext> hinzugefügt werden oder dass das hinzugefügte Objekt über die erforderlichen Eigenschaften besitzt mussten in den angegebenen `entity set`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wenn <paramref name="entitySetName" /> oder <paramref name="entity" /> NULL ist.</exception>
+        <exception cref="T:System.ArgumentException">Wenn <paramref name="entitySetName" /> leer ist.  
+  
+ - oder -   
+  
+ Wenn <paramref name="entity" /> keine definierte Schlüsseleigenschaft hat.</exception>
+        <exception cref="T:System.InvalidOperationException">Wenn die Entität bereits vom Kontext nachverfolgt wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRelatedObject">
+      <MemberSignature Language="C#" Value="public void AddRelatedObject (object source, string sourceProperty, object target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRelatedObject(object source, string sourceProperty, object target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.AddRelatedObject(System.Object,System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="sourceProperty" Type="System.String" />
+        <Parameter Name="target" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="source">Das übergeordnete Objekt, das vom Kontext nachverfolgt wird.</param>
+        <param name="sourceProperty">Der Name der Navigationseigenschaft, die das verknüpfte Objekt auf Grundlage einer Zuordnung zwischen den zwei Entitäten zurückgibt.</param>
+        <param name="target">Das verknüpfte Objekt, das hinzugefügt wird.</param>
+        <summary>Fügt dem Kontext ein verknüpftes Objekt hinzu und erstellt den Link, der die Beziehung zwischen den zwei Objekten in einer einzelnen Anforderung definiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die <xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A>-Methode aufrufen, um ein verknüpftes Objekt hinzuzufügen, statt diese drei Methoden aufzurufen: <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>, <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>, <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyingChanges">
+      <MemberSignature Language="C#" Value="public bool ApplyingChanges { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ApplyingChanges" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.DataServiceContext.ApplyingChanges" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob <see cref="T:System.Data.Services.Client.DataServiceContext" /> Änderungen für nachverfolgte Objekte übernimmt.</summary>
+        <value>Gibt <see langword="true" /> , wenn derzeit Änderungen übernommen werden; andernfalls gibt <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttachLink">
+      <MemberSignature Language="C#" Value="public void AttachLink (object source, string sourceProperty, object target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AttachLink(object source, string sourceProperty, object target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.AttachLink(System.Object,System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="sourceProperty" Type="System.String" />
+        <Parameter Name="target" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="source">Das Quellobjekt im neuen Link.</param>
+        <param name="sourceProperty">Der Name der Eigenschaft auf dem Quellobjekt, das den Link zwischen der Quelle und dem Zielobjekt darstellt.</param>
+        <param name="target">Das Zielobjekt im Link, der zum in diesem Aufruf angegebenen Quellobjekt verpflichtet wird. Das Zielobjekt muss dem Typ entsprechen, der durch die Quelleigenschaft oder einen Untertyp identifiziert wird.</param>
+        <summary>Benachrichtigt <see cref="T:System.Data.Services.Client.DataServiceContext" />, mit der Verfolgung des Links zu beginnen, der eine Beziehung zwischen Entitätsobjekten definiert.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Wenn <paramref name="source" />, <paramref name="sourceProperty" /> oder <paramref name="target" /> NULL ist.</exception>
+        <exception cref="T:System.InvalidOperationException">Wenn der Link zwischen den zwei Entitäten bereits vorhanden ist.  
+  
+ - oder -   
+  
+ Wenn <paramref name="source" /> oder <paramref name="target" /> den Status <see cref="F:System.Data.Services.Client.EntityStates.Added" /> oder <see cref="F:System.Data.Services.Client.EntityStates.Deleted" /> aufweist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AttachTo">
+      <MemberSignature Language="C#" Value="public void AttachTo (string entitySetName, object entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AttachTo(string entitySetName, object entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.AttachTo(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entitySetName" Type="System.String" />
+        <Parameter Name="entity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entitySetName">Der Name des Satzes, der den Fehler enthält.</param>
+        <param name="entity">Die Ressource, die von <see cref="T:System.Data.Services.Client.DataServiceContext" /> nachverfolgt werden soll. Die Ressource wird mit dem Status Unverändert angefügt.</param>
+        <summary>Benachrichtigt den <see cref="T:System.Data.Services.Client.DataServiceContext" />, mit der Verfolgung der angegebenen Ressource zu beginnen und gibt die Position der Ressource zum angegebenen Ressourcensatz an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Entität Teil eines Objektdiagramms ist, durchläuft dieser Vorgang das Diagramm nicht, um verknüpfte Objekte hinzuzufügen. Es ist ein flacher Vorgang.  
+  
+ Die Methode überprüft nicht, ob die angegebene Entitätenmenge im Datendienst zu <xref:System.Data.Services.Client.DataServiceContext> auftritt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wenn <paramref name="entity" /> oder <paramref name="entitySetName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Wenn <paramref name="entitySetName" /> eine leere Zeichenfolge ist.  
+  
+ - oder -   
+  
+ Wenn <paramref name="entity" /> keine definierte Schlüsseleigenschaft hat.</exception>
+        <exception cref="T:System.InvalidOperationException">Wenn <paramref name="entity" /> bereits vom Kontext verfolgt wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AttachTo">
+      <MemberSignature Language="C#" Value="public void AttachTo (string entitySetName, object entity, string etag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AttachTo(string entitySetName, object entity, string etag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.AttachTo(System.String,System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entitySetName" Type="System.String" />
+        <Parameter Name="entity" Type="System.Object" />
+        <Parameter Name="etag" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="entitySetName">Eine Zeichenfolge, die den Namen der Entität enthält, an der die Entität angehängt ist.</param>
+        <param name="entity">Die Entität, die hinzugefügt werden soll.</param>
+        <param name="etag">Ein eTag-Wert, der den Status der Entität beim letzten Abrufen aus dem Datendienst darstellt. Dieser Wert wird als nicht transparente Zeichenfolge behandelt; keine Validierung durch die Clientbibliothek.</param>
+        <summary>Benachrichtigt den <see cref="T:System.Data.Services.Client.DataServiceContext" />, mit der Verfolgung der angegebenen Ressource zu beginnen und gibt die Position der Ressource zum angegebenen Ressourcensatz an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufruf dieser Methode wird <xref:System.Data.Services.Client.DataServiceContext> aufgefordert, mit dem Verfolgen der angegebenen Entität zu beginnen. Die Entität, zu der diese Entität gehört, wird identifiziert.  
+  
+ Wenn die Entität Teil eines Objektdiagramms ist, durchläuft dieser Vorgang das Diagramm nicht, um verknüpfte Objekte hinzuzufügen. Das Objekt wird unverändert zu <xref:System.Data.Services.Client.DataServiceContext> hinzugefügt. Die Methode überprüft nicht, ob die angegebene Entitätenmenge im Datendienst zu <xref:System.Data.Services.Client.DataServiceContext> auftritt.  
+  
+ Wenn die Überladung mit einem eTag verwendet wird, ist das angegebene eTag der neu angefügten Entität zugeordnet. Das eTag wird dann an den Datendienst gesendet (mit allen nachfolgenden Updates oder Abfragen für die Entität, nach HTTP-Semantik). Manuelle Generierung von eTag-Werten wird nicht empfohlen, aber diese Überladung wird bereitgestellt, um Entitäten zu aktivieren, die möglicherweise serialisiert und gespeichert wurden, um erneut zusammen mit relevanten Parallelitätsmetadaten angehängt zu werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wenn <paramref name="entitySetName" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Wenn <paramref name="entity" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Wenn <paramref name="entitySetName" /> eine leere Zeichenfolge ist.  
+  
+ - oder -   
+  
+ Wenn das angegebene Objekt nicht über eine Schlüsseleigenschaft verfügt.</exception>
+        <exception cref="T:System.InvalidOperationException">Wenn das angegebene Objekt bereits vom Kontext nachverfolgt wird</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseUri">
+      <MemberSignature Language="C#" Value="public Uri BaseUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri BaseUri" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.DataServiceContext.BaseUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den absoluten URI ab, der den Stamm des Zieldatendiensts identifiziert.</summary>
+        <value>Ein absoluter URI, der den Stamm eines T-Datendiensts identifiziert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein URI mit einem nachgestellten Schrägstrich entspricht einem Zeichen ohne das nachfolgende Zeichen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginExecute&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginExecute&lt;T&gt; (System.Data.Services.Client.DataServiceQueryContinuation&lt;T&gt; continuation, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginExecute&lt;T&gt;(class System.Data.Services.Client.DataServiceQueryContinuation`1&lt;!!T&gt; continuation, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.BeginExecute``1(System.Data.Services.Client.DataServiceQueryContinuation{``0},System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="continuation" Type="System.Data.Services.Client.DataServiceQueryContinuation&lt;T&gt;" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der von der Abfrage zurückgegebene Typ.</typeparam>
+        <param name="continuation">Ein <see cref="T:System.Data.Services.Client.DataServiceQueryContinuation`1" />-Objekt, das die nächste Seite der Daten darstellt, die vom Datendienst zurückgegeben werden.</param>
+        <param name="callback">Delegat, der aufgerufen werden soll, wenn Ergebnisse für die Verwendung durch den Client verfügbar sind.</param>
+        <param name="state">Benutzerdefiniertes Statusobjekt, das an den Rückruf übergeben wird.</param>
+        <summary>Sendet asynchron eine Anforderung an den Datendienst, um die nächste Seite der Daten in einem ausgelagerten Abfrageergebnis abzurufen.</summary>
+        <returns><see cref="T:System.IAsyncResult" /> für den Status des Vorgangs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das angegebene <xref:System.Data.Services.Client.DataServiceQueryContinuation%601>-Objekt enthält den URI der bei Ausführung die nächste Seite der Daten im Abfrageergebnis zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginExecute&lt;TElement&gt;">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginExecute&lt;TElement&gt; (Uri requestUri, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginExecute&lt;TElement&gt;(class System.Uri requestUri, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.BeginExecute``1(System.Uri,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TElement" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="requestUri" Type="System.Uri" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TElement">Der von der Abfrage zurückgegebene Typ.</typeparam>
+        <param name="requestUri">Der URI, an den die generierte Abfrage gesendet wird. Der URI kann jeder gültige Datendienst-URI sein. Es darf <c> $ </c> Abfrageparameter.</param>
+        <param name="callback">Delegat, der aufgerufen werden soll, wenn Ergebnisse für die Verwendung durch den Client verfügbar sind.</param>
+        <param name="state">Benutzerdefiniertes Statusobjekt, das an den Rückruf übergeben wird.</param>
+        <summary>Asynchron sendet die Anforderung, damit dieser Aufruf beim Warten auf die Ergebnisse vom Dienst keine Verarbeitung blockiert.</summary>
+        <returns>Ein Objekt, das verwendet wird, um den Status des asynchronen Vorgangs nachzuverfolgen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das zurückgegebene <xref:System.IAsyncResult>-Objekt wird verwendet, um den Abschluss des asynchronen Vorgangs zu ermitteln. Weitere Informationen finden Sie unter [asynchrone Vorgänge](~/docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).  
+  
+ Der Methode <xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A> verwendet die gleiche Semantik wie <xref:System.Data.Services.Client.DataServiceContext.Execute%2A>. Diese Methode sendet die Anforderung jedoch asynchron, sodass dieser Aufruf beim Warten auf die Ergebnisse vom Dienst keine Verarbeitung blockiert. Entsprechend dem asynchronen Begin/End-Standardmuster wird beim Abrufen der Abfrageergebnisse der bereitgestellte Rückruf aufgerufen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie eine asynchrone Abfrage durch Aufrufen der <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A>-Methode zum Starten der Abfrage ausgeführt wird. Der Inlinedelegat ruft die <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A>-Methode zum Anzeigen der Abfrageergebnisse auf. Dieses Beispiel verwendet die <xref:System.Data.Services.Client.DataServiceContext> generiert, durch das Hinzufügen eines Dienstverweises Tool basierend auf der Northwind-Datendienst, die erstellt wird, Sie nach Beendigung der [!INCLUDE[ssAstoria](~/includes/ssastoria-md.md)] .  
+  
+ [!code-csharp[Astoria Northwind Client#ExecuteQueryAsync](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#executequeryasync)]
+ [!code-vb[Astoria Northwind Client#ExecuteQueryAsync](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#executequeryasync)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginExecuteBatch">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginExecuteBatch (AsyncCallback callback, object state, params System.Data.Services.Client.DataServiceRequest[] queries);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginExecuteBatch(class System.AsyncCallback callback, object state, class System.Data.Services.Client.DataServiceRequest[] queries) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.BeginExecuteBatch(System.AsyncCallback,System.Object,System.Data.Services.Client.DataServiceRequest[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+        <Parameter Name="queries" Type="System.Data.Services.Client.DataServiceRequest[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="callback">Der aufgerufene Delegierte, wenn eine Antwort auf die Batchanforderung empfangen wird.</param>
+        <param name="state">Das benutzerdefinierte Statusobjekt, das zur Übergabe von Kontextdaten an die Rückrufmethode zu verwendet wird.</param>
+        <param name="queries">Das Array von Abfrageanforderungen für die Batchanforderung.</param>
+        <summary>Sendet asynchron eine Gruppe von Abfragen als Batch an den Datendienst.</summary>
+        <returns>Ein <see cref="T:System.IAsyncResult" />-Objekt, das verwendet wird, um den Status des asynchronen Vorgangs nachzuverfolgen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das zurückgegebene <xref:System.IAsyncResult>-Objekt wird verwendet, um den Abschluss des asynchronen Vorgangs zu ermitteln. Weitere Informationen finden Sie unter [asynchrone Vorgänge](~/docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).  
+  
+ Die Abfragen werden als <xref:System.Data.Services.Client.DataServiceRequest%601>-Instanzen angegeben. Gibt <xref:System.Data.Services.Client.DataServiceResponse> mit dfer Antwort auf die Batchanforderung als Ganzes zurück. Einzelne Abfrageantworten werden als <xref:System.Data.Services.Client.DataServiceResponse>-Objekte dargestellt, auf die durch das Auflisten der <xref:System.Data.Services.Client.DataServiceResponse>-Instanz zugegriffen werden können.  
+  
+ Nach dem Beenden dieser Methode wurde die ganze HTTP-Antwort für die Batchanforderung vom Netzwerkdatenstrom gelesen, aber die Antworten wurden nicht verarbeitet. Keine Identitätsauflösung oder Objektmaterialisierung für eine angegebene Entität in der Antwort, bis diese aufgelistet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginGetReadStream">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginGetReadStream (object entity, System.Data.Services.Client.DataServiceRequestArgs args, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginGetReadStream(object entity, class System.Data.Services.Client.DataServiceRequestArgs args, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.BeginGetReadStream(System.Object,System.Data.Services.Client.DataServiceRequestArgs,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+        <Parameter Name="args" Type="System.Data.Services.Client.DataServiceRequestArgs" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Die Entität, die die abzurufende binäre Eigenschaft verfügt.</param>
+        <param name="args">Instanz der Klasse <see cref="T:System.Data.Services.Client.DataServiceRequestArgs" />, die Einstellungen für die HTTP-Anforderungsnachricht enthält.</param>
+        <param name="callback">Delegat, der aufgerufen werden soll, wenn Ergebnisse für die Verwendung durch den Client verfügbar sind.</param>
+        <param name="state">Benutzerdefiniertes Statusobjekt, das an den Rückruf übergeben wird.</param>
+        <summary>Ruft asynchron ab binären Eigenschaftendaten für die angegebene Entität als Datenstrom zusammen mit den angegebenen Nachrichtenheadern.</summary>
+        <returns>Ein <see cref="T:System.IAsyncResult" />-Objekt, das verwendet wird, um den Status des asynchronen Vorgangs nachzuverfolgen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A> -Methode fordert asynchron einen Datenstrom, der binäre Eigenschaft der angeforderten enthält `entity`.  
+  
+ Im AtomPub-Protokoll der `entity` ein Medienlinkeintrag ist, und die binäre Eigenschaft ist die zugeordnete Medienressource.  
+  
+ Keine Validierung wird auf den Headern ausgeführt, die in `args` festgelegt werden. Ändern Sie keinen HTTP-Header in einer Weise, die die Bedeutung von der Anforderung ändert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Einer der Parameter der Methode angegeben ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException"><paramref name="entity" /> wird nicht von <see cref="T:System.Data.Services.Client.DataServiceContext" /> nachverfolgt.  
+  
+ - oder -   
+  
+ Die <paramref name="entity" /> befindet sich im Zustand <see cref="F:System.Data.Services.Client.EntityStates.Added" />.  
+  
+ - oder -   
+  
+ Die <paramref name="entity" /> ein Medienlinkeintrag ist und nicht über eine binäre Eigenschaft verfügt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginLoadProperty">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginLoadProperty (object entity, string propertyName, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginLoadProperty(object entity, string propertyName, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.BeginLoadProperty(System.Object,System.String,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Die Entität, die die zu ladende Eigenschaft enthält.</param>
+        <param name="propertyName">Der Name der Eigenschaft in der zu ladenden Entität.</param>
+        <param name="callback">Der aufgerufene Delegierte, wenn eine Antwort auf die Anforderung empfangen wird.</param>
+        <param name="state">Das benutzerdefinierte Statusobjekt, das zur Übergabe von Kontextdaten an die Rückrufmethode zu verwendet wird.</param>
+        <summary>Lädt den Wert der angegebenen Eigenschaft vom Datendienst asynchron.</summary>
+        <returns>Ein <see langword="IAsyncResult" /> zur Darstellung des Status eines asynchronen Vorgangs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Aufruf dieser Methode ruft einen Netzwerkvorgang auf, um den Wert einer Eigenschaft abzurufen. Die angegebene Eigenschaft ist möglicherweise eine der Eigenschaften einer Entität, einschließlich Eigenschaften, die Zuordnungen oder Links darstellen. Wenn die Eigenschaft eine Zuordnung oder einen Link oder eine verzögerte Eigenschaft darstellt, erhät der Client durch den Aufruf dieser Methode eine Möglichkeit, verwandte Ressourcen langsamer zu laden. Wenn die Entität den Status Geändert aufweist, lädt der Eigenschaftswert verknüpfte Entitäten und markiert diese und Links als unverändert.  
+  
+ Wenn die Eigenschaft bereits geladen wird, können Sie durch Aufrufen dieser Methode den Wert der Eigenschaft aktualisieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginLoadProperty">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginLoadProperty (object entity, string propertyName, System.Data.Services.Client.DataServiceQueryContinuation continuation, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginLoadProperty(object entity, string propertyName, class System.Data.Services.Client.DataServiceQueryContinuation continuation, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.BeginLoadProperty(System.Object,System.String,System.Data.Services.Client.DataServiceQueryContinuation,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="continuation" Type="System.Data.Services.Client.DataServiceQueryContinuation" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Die Entität, die die zu ladende Eigenschaft enthält.</param>
+        <param name="propertyName">Der Name der Eigenschaft in der zu ladenden Entität.</param>
+        <param name="continuation">Ein <see cref="T:System.Data.Services.Client.DataServiceQueryContinuation`1" />-Objekt, das die nächste Seite der zugehörigen Daten darstellt, die vom Datendienst zurückgegeben werden.</param>
+        <param name="callback">Delegat, der aufgerufen werden soll, wenn Ergebnisse für die Verwendung durch den Client verfügbar sind.</param>
+        <param name="state">Benutzerdefiniertes Statusobjekt, das an den Rückruf übergeben wird.</param>
+        <summary>Lädt asynchron die nächste Seite der verknüpften Entitäten vom Datendienst mit dem angegebenen Abfragefortsetzungsobjekt.</summary>
+        <returns><see cref="T:System.IAsyncResult" /> für den Status des Vorgangs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das angegebene <xref:System.Data.Services.Client.DataServiceQueryContinuation%601>-Objekt enthält den URI der bei Ausführung die nächste Seite der Daten im Abfrageergebnis zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginLoadProperty">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginLoadProperty (object entity, string propertyName, Uri nextLinkUri, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginLoadProperty(object entity, string propertyName, class System.Uri nextLinkUri, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.BeginLoadProperty(System.Object,System.String,System.Uri,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="nextLinkUri" Type="System.Uri" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Die Entität, die die zu ladende Eigenschaft enthält.</param>
+        <param name="propertyName">Der Name der Eigenschaft in der zu ladenden Entität.</param>
+        <param name="nextLinkUri">Der URI, der verwendet wurde, um die nächste Ergebnisse-Seite zu laden.</param>
+        <param name="callback">Delegat, der aufgerufen werden soll, wenn Ergebnisse für die Verwendung durch den Client verfügbar sind.</param>
+        <param name="state">Benutzerdefiniertes Statusobjekt, das an den Rückruf übergeben wird.</param>
+        <summary>Lädt asynchron mit dem angegebenen nächsten Link-URI eine Seite der verknüpften Entitäten vom Datendienst.</summary>
+        <returns>Ein <see cref="T:System.IAsyncResult" />-Objekt, das verwendet wird, um den Status des asynchronen Vorgangs nachzuverfolgen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `entity` den Status <xref:System.Data.Services.Client.EntityStates.Unchanged> oder <xref:System.Data.Services.Client.EntityStates.Modified> aufweist werden die zugehörigen Entitäten im Status <xref:System.Data.Services.Client.EntityStates.Unchanged> geladen, und die Links zwischen den Entities werden auch im Zustand <xref:System.Data.Services.Client.EntityStates.Unchanged> erstellt.  
+  
+ Ist `entity` im Status <xref:System.Data.Services.Client.EntityStates.Deleted> werden die zugehörigen Entities mit dem Status <xref:System.Data.Services.Client.EntityStates.Unchanged> geladen, und die Links zwischen den Entities werden im Zustand <xref:System.Data.Services.Client.EntityStates.Deleted> erstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginSaveChanges">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginSaveChanges (AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSaveChanges(class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.BeginSaveChanges(System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Der beim Abschluss der Vorgangs aufzurufende Delegat.</param>
+        <param name="state">Das benutzerdefinierte Statusobjekt, das zur Übergabe von Kontextdaten an die Rückrufmethode zu verwendet wird.</param>
+        <summary>Übergibt die anstehenden Änderungen asynchron an den von <see cref="T:System.Data.Services.Client.DataServiceContext" /> gesammelten Datendienst seit der letzten Speicherung von Änderungen.</summary>
+        <returns>Ein <see langword="IAsyncResult" /> zur Darstellung des Status eines asynchronen Vorgangs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dem <xref:System.Data.Services.Client.DataServiceContext> werden Änderungen hinzugefügt, indem <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>, <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>, der <xref:System.Data.Services.Client.DataServiceContext.AttachTo%2A>, <xref:System.Data.Services.Client.DataServiceContext.AttachLink%2A>, <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A>, <xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A>, <xref:System.Data.Services.Client.DataServiceContext.Detach%2A> oder <xref:System.Data.Services.Client.DataServiceContext.DetachLink%2A> aufgerufen wird.  
+  
+ Änderungen werden wie mit der Methode <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> an den Datendienst gesendet – ein Vorgang je HTTP-Anforderung.  
+  
+ Tritt Verarbeiten eines Vorgangs ein Fehler auf, werden keine zusätzlichen Vorgänge vom Datendienst verarbeitet. Stattdessen wird eine Antwort erstellt, die dem Client mitteilt, welche Vorgänge durchgeführt wurden, welche Ergebnisse erzielt wurden und welche Vorgänge aufgrund eines Fehlers nicht versucht wurden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginSaveChanges">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginSaveChanges (System.Data.Services.Client.SaveChangesOptions options, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSaveChanges(valuetype System.Data.Services.Client.SaveChangesOptions options, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.BeginSaveChanges(System.Data.Services.Client.SaveChangesOptions,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.Data.Services.Client.SaveChangesOptions" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="options">Die Optionen für die der Client den ausstehenden Satz von Änderungen speichern kann.</param>
+        <param name="callback">Der beim Abschluss der Vorgangs aufzurufende Delegat.</param>
+        <param name="state">Das benutzerdefinierte Statusobjekt, das zur Übergabe von Kontextdaten an die Rückrufmethode zu verwendet wird.</param>
+        <summary>Übergibt die anstehenden Änderungen asynchron an den von <see cref="T:System.Data.Services.Client.DataServiceContext" /> gesammelten Datendienst seit der letzten Speicherung von Änderungen.</summary>
+        <returns>Ein <see cref="T:System.IAsyncResult" /> zur Darstellung des Status eines asynchronen Vorgangs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dem <xref:System.Data.Services.Client.DataServiceContext> werden Änderungen hinzugefügt, indem <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>, <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>, der <xref:System.Data.Services.Client.DataServiceContext.AttachTo%2A>, <xref:System.Data.Services.Client.DataServiceContext.AttachLink%2A>, <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A>, <xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A>, <xref:System.Data.Services.Client.DataServiceContext.Detach%2A> oder <xref:System.Data.Services.Client.DataServiceContext.DetachLink%2A> aufgerufen wird.  
+  
+ Wenn <xref:System.Data.Services.Client.SaveChangesOptions.Batch> festgelegt wird, sind alle ausstehenden Änderungen in einem Batch in einem einzelnen Änderungssatz enthalten und werden an den Datendienst in einer einzelnen HTTP-Anforderung gesendet. Dies erfordert, dass der Zieldienst die Batch-Verarbeitung unterstützt.  
+  
+ Ist <xref:System.Data.Services.Client.SaveChangesOptions.Batch> nicht festgelegt:  
+  
+-   Änderungen werden z. B. in der <xref:System.Data.Services.Client.DataServiceContext.SaveChanges>-Methode an den Datendienst gesendet: ein Vorgang zu einer HTTP-Anforderung.  
+  
+-   <xref:System.Data.Services.Client.OperationResponse.StatusCode%2A> ist stets 200.  
+  
+-   Die <xref:System.Data.Services.Client.OperationResponse.Headers%2A>-Eigenschaft gibt eine leere Auflistung zurück.  
+  
+ Wenn <xref:System.Data.Services.Client.SaveChangesOptions.ContinueOnError> festgelegt wird:  
+  
+-   Tritt beim Verarbeiten in einem einem Änderungssatz ein Fehler auf, werden die nachfolgenden Vorgänge nicht versucht. der Datendienst verarbeitet weiterhin jedoch den nächstern Änderungssatz im Batch.  
+  
+-   Diese Option kann nicht festgelegt werden, wenn <xref:System.Data.Services.Client.SaveChangesOptions.Batch> definiert ist, da bei aktivierter Batch-Verarbeitung alle Vorgänge in einem einzelnen Änderungssatz positioniert werden.  
+  
+ Ist <xref:System.Data.Services.Client.SaveChangesOptions.ContinueOnError> nicht festgelegt:  
+  
+-   Tritt Verarbeiten eines Vorgangs ein Fehler auf, werden keine zusätzlichen Vorgänge vom Datendienst verarbeitet.  
+  
+ Es wird eine Antwort erstellt, die dem Client mitteilt, welche Vorgänge durchgeführt wurden, welche Ergebnisse erzielt wurden und welche Vorgänge aufgrund eines Fehlers nicht versucht wurden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelRequest">
+      <MemberSignature Language="C#" Value="public void CancelRequest (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CancelRequest(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.CancelRequest(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">Das <see cref="T:System.IAsyncResult" />-Objekt des abzubrechenden Vorgangs.</param>
+        <summary>Versucht, den Vorgang abzubrechen, der dem angegebenen <see cref="T:System.IAsyncResult" />-Objekt zugeordnet ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das an den <xref:System.IAsyncResult>-Parameter übergebene `asyncResult`-Objekt ist das zurückgegebene Objekt, wenn ein Vorgang asynchron ausgeführt wird. Weitere Informationen finden Sie unter [asynchrone Vorgänge](~/docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md). Bis diese Anforderung verarbeitet wird, die <xref:System.Data.Services.Client.DataServiceContext> Instanz ist nicht in einem vorhersagbaren Zustand. Die <xref:System.Data.Services.Client.DataServiceContext> sicher verwendet werden kann bei der <xref:System.IAsyncResult.IsCompleted%2A> Eigenschaft der `asyncResult` gibt einen Wert von `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateQuery&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public System.Data.Services.Client.DataServiceQuery&lt;T&gt; CreateQuery&lt;T&gt; (string entitySetName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Services.Client.DataServiceQuery`1&lt;!!T&gt; CreateQuery&lt;T&gt;(string entitySetName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.CreateQuery``1(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Client.DataServiceQuery&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="entitySetName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der von der Abfrage zurückgegebene Typ.</typeparam>
+        <param name="entitySetName">Eine Zeichenfolge, die zu einem URI auflöst.</param>
+        <summary>Erstellt eine Datendienstabfrage für Daten eines angegebenen generischen Typs.</summary>
+        <returns>Eine neue <see cref="T:System.Data.Services.Client.DataServiceQuery`1" />-Instanz, die eine Datendienstabfrage darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Credentials">
+      <MemberSignature Language="C#" Value="public System.Net.ICredentials Credentials { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.ICredentials Credentials" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.DataServiceContext.Credentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.ICredentials</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Authentifizierungsinformationen ab, die von jeder mit dem <see cref="T:System.Data.Services.Client.DataServiceContext" />-Objekt erstellten Abfrage verwendet werden, oder legt sie fest.</summary>
+        <value>Die Basisauthentifizierungsschnittstelle zum Abrufen von Anmeldeinformationen für die Web-Client-Authentifizierung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataNamespace">
+      <MemberSignature Language="C#" Value="public string DataNamespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataNamespace" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.DataServiceContext.DataNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den XML-Namespace für Datenelemente (nicht Metadatenelemente) eines Atom-Stoms ab oder legt ihn fest.</summary>
+        <value>Eine Zeichenfolge, die den XML-Namespace für Datenelemente einer Nutzlast im ATOM-Format darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert dieser Eigenschaft ist der Standard-[!INCLUDE[ssAstoria](~/includes/ssastoria-md.md)]-Namespace: `http://schemas.microsoft.com/ado/2007/08/dataservices`.  
+  
+ Diese Eigenschaft wirkt sich auf beiden Namespace aus, der zum Analysieren des Inhalts von Datendienst und Namespace zum Erzeugen des an den Datendienst gesendeten Inhalts zu generieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteLink">
+      <MemberSignature Language="C#" Value="public void DeleteLink (object source, string sourceProperty, object target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DeleteLink(object source, string sourceProperty, object target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.DeleteLink(System.Object,System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="sourceProperty" Type="System.String" />
+        <Parameter Name="target" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="source">Das Quellobjekt im Link, der zum Löschen markiert war.</param>
+        <param name="sourceProperty">Der Name der Navigationseigenschaft des Quellobjekts, das verwendet wird, um auf das Zielobjekt zuzugreifen.</param>
+        <param name="target">Das an dem Link beteiligte Zielobjekt, der zum Quellobjekt verpflichtet wird. Das Zielobjekt muss dem Typ entsprechen, der durch die Quelleigenschaft oder einen Untertyp identifiziert wird.</param>
+        <summary>Ändert den Zustand des Links in der Liste, die von <see cref="T:System.Data.Services.Client.DataServiceContext" /> nachverfolgt wird, in Deleted.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jeder Link, der von <xref:System.Data.Services.Client.DataServiceContext> unabhängig von seinem aktuellen Zustand nachverfolgt wird, kann getrennt werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wenn <paramref name="source" />, <paramref name="sourceProperty" /> oder <paramref name="target" /> NULL ist.</exception>
+        <exception cref="T:System.InvalidOperationException">Wenn <paramref name="source" /> oder <paramref name="target" /> den Status <see cref="F:System.Data.Services.Client.EntityStates.Detached" /> oder <see cref="F:System.Data.Services.Client.EntityStates.Added" /> aufweist.  
+  
+ - oder -   
+  
+ Wenn <paramref name="sourceProperty" /> keine Auflistung ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteObject">
+      <MemberSignature Language="C#" Value="public void DeleteObject (object entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DeleteObject(object entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.DeleteObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Die nachverfolgte Entität, die den Status Gelöscht erhalten soll.</param>
+        <summary>Ändert den Zustand des angegebenen Objekts, das in <see cref="T:System.Data.Services.Client.DataServiceContext" /> gelöscht werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Links zur angegebenen Entität werden als gelöscht markiert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wenn <paramref name="entity" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Wenn das Objekt nicht von <see cref="T:System.Data.Services.Client.DataServiceContext" /> nachverfolgt wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Detach">
+      <MemberSignature Language="C#" Value="public bool Detach (object entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Detach(object entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.Detach(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Die nachverfolgte Entität, die von <see cref="T:System.Data.Services.Client.DataServiceContext" /> getrennt werden soll.</param>
+        <summary>Entfernt die Entität aus der Liste der Entitäten, die <see cref="T:System.Data.Services.Client.DataServiceContext" /> nachverfolgt.</summary>
+        <returns>Gibt <see langword="true" /> , wenn die angegebene Entität, andernfalls getrennten wurde <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sobald ein Objekt getrennt wird, wird es nicht mehr von <xref:System.Data.Services.Client.DataServiceContext> nachverfolgt.  
+  
+ Die <xref:System.Data.Services.Client.DataServiceContext.Detach%2A>-Methode kann aufgerufen werden, um ein Objekt unabhängig von seinem <xref:System.Data.Services.Client.EntityStates> zu trennen.  
+  
+ Nach dem Abtrennen der angegebenen Entität, trennt diese Methode auch Links zur Entität.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wenn <paramref name="entity" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DetachLink">
+      <MemberSignature Language="C#" Value="public bool DetachLink (object source, string sourceProperty, object target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool DetachLink(object source, string sourceProperty, object target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.DetachLink(System.Object,System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="sourceProperty" Type="System.String" />
+        <Parameter Name="target" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="source">Das Quellobjekt im Link, der zum Löschen markiert war.</param>
+        <param name="sourceProperty">Der Name der Eigenschaft des Quellobjekts, das die Quelle im Link zwischen der Quelle und dem Ziel darstellt.</param>
+        <param name="target">Das an dem Link beteiligte Zielobjekt, der zum Quellobjekt verpflichtet wird. Das Zielobjekt muss dem Typ entsprechen, der durch die Quelleigenschaft oder einen Untertyp identifiziert wird.</param>
+        <summary>Entfernt den angegebenen Link aus der Liste der Links, die von <see cref="T:System.Data.Services.Client.DataServiceContext" /> nachverfolgt wird.</summary>
+        <returns>Gibt true zurück, wenn die angegebene Entität getrennt wurde, andernfalls false.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jeder Link, der von <xref:System.Data.Services.Client.DataServiceContext> unabhängig von seinem aktuellen Zustand nachverfolgt wird, kann getrennt werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wenn <paramref name="source" /> oder <paramref name="sourceProperty" /> sind <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Wenn <paramref name="sourceProperty" /> eine leere Zeichenfolge ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndExecute&lt;TElement&gt;">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;TElement&gt; EndExecute&lt;TElement&gt; (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;!!TElement&gt; EndExecute&lt;TElement&gt;(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.EndExecute``1(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;TElement&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TElement" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TElement">Der von der Abfrage zurückgegebene Typ.</typeparam>
+        <param name="asyncResult">
+          <see cref="T:System.IAsyncResult" />-Objekt</param>
+        <summary>Wird aufgerufen, um <see cref="M:System.Data.Services.Client.DataServiceContext.BeginExecute``1(System.Uri,System.AsyncCallback,System.Object)" /> abzuschließen.</summary>
+        <returns>Die von der Abfrage zurückgegebenen Ergebnisse.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entsprechend dem asynchronen Begin/End-Standardmuster wird beim Abrufen der Abfrageergebnisse der bereitgestellte Rückruf aufgerufen. Weitere Informationen finden Sie unter [asynchrone Vorgänge](~/docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).  
+  
+ Wenn der Rückruf aufgerufen wird, wurden alle Ergebnisse vom HTTP-Datenstrom gelesen, aber sie wurden nicht verarbeitet. Es wurden keine lokalen, auf den Benutzer zugeschnittene Objekte materialisiert/geändert, und eine Identitätsauflösung ist nicht aufgetreten. Wenn <xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A> aufgerufen wird, wird ein <xref:System.Data.Services.Client.DataServiceResponse> erstellt und zurückgegeben, aber die Ergebnisse wurden immer noch nicht verarbeitet. Identitätsauflösung, Objektmaterialisierung und Manipulation treten nur auf, wenn der Benutzer die Ergebnisse auflistet.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie eine asynchrone Abfrage durch Aufrufen der <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A>-Methode zum Starten der Abfrage ausgeführt wird. Der Inlinedelegat ruft die <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A>-Methode zum Anzeigen der Abfrageergebnisse auf. Dieses Beispiel verwendet die <xref:System.Data.Services.Client.DataServiceContext> generiert, durch das Hinzufügen eines Dienstverweises Tool basierend auf der Northwind-Datendienst, die erstellt wird, Sie nach Beendigung der [!INCLUDE[ssAstoria](~/includes/ssastoria-md.md)] .  
+  
+ [!code-csharp[Astoria Northwind Client#ExecuteQueryAsync](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#executequeryasync)]
+ [!code-vb[Astoria Northwind Client#ExecuteQueryAsync](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#executequeryasync)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wenn <paramref name="asyncResult" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Wenn <paramref name="asyncResult" /> stammt nicht aus diesem <see cref="T:System.Data.Services.Client.DataServiceContext" /> Instanz.  
+  
+ - oder -   
+  
+ Wenn die <see cref="M:System.Data.Services.Client.DataServiceContext.EndExecute``1(System.IAsyncResult)" />-Methode zuvor aufgerufen wurde.</exception>
+        <exception cref="T:System.InvalidOperationException">Wenn ein Fehler entweder während der Ausführung der Anforderung ausgelöst wird oder wenn der Inhalt der Antwortnachricht in Objekte konvertiert wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndExecuteBatch">
+      <MemberSignature Language="C#" Value="public System.Data.Services.Client.DataServiceResponse EndExecuteBatch (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Services.Client.DataServiceResponse EndExecuteBatch(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.EndExecuteBatch(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Client.DataServiceResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">Ein <see cref="T:System.IAsyncResult" /> zur Darstellung des Status eines asynchronen Vorgangs.</param>
+        <summary>Wird aufgerufen, um <see cref="M:System.Data.Services.Client.DataServiceContext.BeginExecuteBatch(System.AsyncCallback,System.Object,System.Data.Services.Client.DataServiceRequest[])" /> abzuschließen.</summary>
+        <returns>Die <see langword="DataServiceResult" /> -Objekt, das das Ergebnis des Batchvorgangs angibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sendet eine Gruppe von Abfragen als Batch an den Datendienst. Einzelne Abfrageantworten werden als <xref:System.Data.Services.Client.DataServiceResponse>-Objekte dargestellt, die von <xref:System.Data.Services.Client.OperationResponse> abgeleitet werden. Der Zugriff darauf besteht von der <xref:System.Data.Services.Client.DataServiceResponse>-Instanz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndGetReadStream">
+      <MemberSignature Language="C#" Value="public System.Data.Services.Client.DataServiceStreamResponse EndGetReadStream (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Services.Client.DataServiceStreamResponse EndGetReadStream(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.EndGetReadStream(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Client.DataServiceStreamResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">Das Ergebnis des <see cref="M:System.Data.Services.Client.DataServiceContext.BeginGetReadStream(System.Object,System.Data.Services.Client.DataServiceRequestArgs,System.AsyncCallback,System.Object)" />-Vorgangs, der den binären Datenstrom enthält.</param>
+        <summary>Wird aufgerufen, zum Abschließen des asynchronen Vorgangs eine binäre Eigenschaft als Stream abgerufen.</summary>
+        <returns>Eine Instanz von <see cref="T:System.Data.Services.Client.DataServiceStreamResponse" />, die den Antwortstrom mit seinen Metadaten enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Services.Client.DataServiceContext.EndGetReadStream%2A>-Methode wird aufgerufen, um die Ergebnisse von der <xref:System.Data.Services.Client.DataServiceContext.BeginGetReadStream%2A>-Methode zu empfangen.  
+  
+ Die <xref:System.Data.Services.Client.DataServiceContext.EndGetReadStream%2A>-Methode wird erst abgeschlossen, wenn die Antwort von der <xref:System.Data.Services.Client.DataServiceContext.BeginGetReadStream%2A>-Methode empfangen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndLoadProperty">
+      <MemberSignature Language="C#" Value="public System.Data.Services.Client.QueryOperationResponse EndLoadProperty (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Services.Client.QueryOperationResponse EndLoadProperty(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.EndLoadProperty(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Client.QueryOperationResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">Ein <see cref="T:System.IAsyncResult" /> zur Darstellung des Status eines asynchronen Vorgangs.</param>
+        <summary>Wird aufgerufen, um den <see cref="M:System.Data.Services.Client.DataServiceContext.BeginLoadProperty(System.Object,System.String,System.AsyncCallback,System.Object)" />-Vorgang abzuschließen.</summary>
+        <returns>Die Antwort auf den Ladevorgang.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Fehler während der Anforderung auftritt, oder während die Antwort vom Datendienst verarbeitet wird, erfolgt eine Ausnahme.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndSaveChanges">
+      <MemberSignature Language="C#" Value="public System.Data.Services.Client.DataServiceResponse EndSaveChanges (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Services.Client.DataServiceResponse EndSaveChanges(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.EndSaveChanges(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Client.DataServiceResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">Ein <see cref="T:System.IAsyncResult" /> zur Darstellung des Status eines asynchronen Vorgangs.</param>
+        <summary>Wird aufgerufen, um den <see cref="M:System.Data.Services.Client.DataServiceContext.BeginSaveChanges(System.AsyncCallback,System.Object)" />-Vorgang abzuschließen.</summary>
+        <returns>Ein <see cref="T:System.Data.Services.Client.DataServiceResponse" />-Objekt, das das Ergebnis des Batchvorgangs angibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.Data.Services.Client.DataServiceResponse.BatchStatusCode%2A> sollte überprüft werden, um das Ergebnis von Batchvorgängen zu sehen. Einzelne Vorgangsergebnisse können für die von der <xref:System.Data.Services.Client.DataServiceResponse>-Nummerierung zurückgegebenen Vorgangsobjekten abgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Entities">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Services.Client.EntityDescriptor&gt; Entities { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Data.Services.Client.EntityDescriptor&gt; Entities" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.DataServiceContext.Entities" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Services.Client.EntityDescriptor&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste aller Ressourcen ab, die gerade von <see cref="T:System.Data.Services.Client.DataServiceContext" /> nachverfolgt wird.</summary>
+        <value>Eine Liste von <see cref="T:System.Data.Services.Client.EntityDescriptor" />-Objekten, die alle Ressourcen darstellen, die gerade von <see cref="T:System.Data.Services.Client.DataServiceContext" /> nachverfolgt werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn keine Ressourcen nachverfolgt werden, wird eine Liste, die über 0 (null) Elemente verfügt, zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public System.Data.Services.Client.QueryOperationResponse&lt;T&gt; Execute&lt;T&gt; (System.Data.Services.Client.DataServiceQueryContinuation&lt;T&gt; continuation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Services.Client.QueryOperationResponse`1&lt;!!T&gt; Execute&lt;T&gt;(class System.Data.Services.Client.DataServiceQueryContinuation`1&lt;!!T&gt; continuation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.Execute``1(System.Data.Services.Client.DataServiceQueryContinuation{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Client.QueryOperationResponse&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="continuation" Type="System.Data.Services.Client.DataServiceQueryContinuation&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der von der Abfrage zurückgegebene Typ.</typeparam>
+        <param name="continuation">Ein <see cref="T:System.Data.Services.Client.DataServiceQueryContinuation`1" />-Objekt, das die nächste Seite der Daten darstellt, die vom Datendienst zurückgegeben werden.</param>
+        <summary>Sendet eine Anforderung an den Datendienst, um die nächste Seite der Daten in einem ausgelagerten Abfrageergebnis abzurufen.</summary>
+        <returns>Die Antwort, die die nächste Seite der Daten im Abfrageergebnis enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das angegebene <xref:System.Data.Services.Client.DataServiceQueryContinuation%601>-Objekt enthält den URI der bei Ausführung die nächste Seite der Daten im Abfrageergebnis zurück.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Wenn ein Fehler entweder während der Ausführung der Anforderung ausgelöst wird oder wenn der Inhalt der Antwortnachricht in Objekte konvertiert wird.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute&lt;TElement&gt;">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;TElement&gt; Execute&lt;TElement&gt; (Uri requestUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;!!TElement&gt; Execute&lt;TElement&gt;(class System.Uri requestUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.Execute``1(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;TElement&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TElement" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="requestUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TElement">Der Typ, den die Funktion zurückgibt.</typeparam>
+        <param name="requestUri">Der URI, an den die generierte Abfrage gesendet wird. Der URI ist kann jeder gültige Datendienst-URI sein. Kann $-Abfrageparameter enthalten.</param>
+        <summary>Sendet eine Anforderung an den Datendienst, um einen bestimmten URI auszuführen.</summary>
+        <returns>Die Ergebnisse der Abfrage.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Services.Client.DataServiceContext.Execute%2A>-Methode wird verwendet, um durch den URI einen Datendienst abzufragen. Die Methode verursacht eine HTTP-GET-Anforderung, die zum Datendienst ausgegeben wird. Der angegebene Anforderungs-URI kann absolut oder relativ sein.  
+  
+ Wenn der `requestUri` absolut ist, überprüft diese Methode, ob beim Erstellen des <xref:System.Data.Services.Client.DataServiceContext> der URI auf den angegebenen Datendienst verweist. Wenn der `requestUri` relativ ist, entfernt diese Methode alle vorangestellten Schrägstriche und fügt `requestUri` an die beim Erstellen des <xref:System.Data.Services.Client.DataServiceContext> bereitgestellten Daten an. Ein Schrägstrich wird angefügt, nachdem der URI zum <xref:System.Data.Services.Client.DataServiceContext>-Konstruktor übergeben wurde (sofern nicht bereits vorhanden).  
+  
+ Nach dem Beenden dieser Methode wurde die ganze HTTP-Antwort für die Anforderung vom Netzwerkdatenstrom gelesen, aber die Antwort wurde nicht verarbeitet. Keine Identitätsauflösung oder Objektmaterialisierung. Identitätsauflösung und vollständige Objektmaterialisierung treten für eine angegebene Entität in der Antwort erst auf, wenn diese aufgelistet wird.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel werden `do…while`-Entitäten aus ausgelagerten Ergebnissen aus dem Datendienst mithilfe einer `Customers`-Schleife geladen. Die <xref:System.Data.Services.Client.DataServiceContext.Execute%2A>-Methode wird mit dem nächsten Link-URI aufgerufen, um die nächste Seite der Daten zu empfangen.  
+  
+ [!code-csharp[Astoria Northwind Client#GetCustomersPaged](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#getcustomerspaged)]
+ [!code-vb[Astoria Northwind Client#GetCustomersPaged](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#getcustomerspaged)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.WebException">Wenn eine Antwort nicht von einer Anforderung an den <paramref name="requestUri" /> empfangen wird.</exception>
+        <exception cref="T:System.ArgumentNullException">Wenn <paramref name="requestUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Wenn <paramref name="requestUri" /> kein gültiger URI für den Datendienst ist.</exception>
+        <exception cref="T:System.InvalidOperationException">Wenn ein Fehler entweder während der Ausführung der Anforderung ausgelöst wird oder wenn der Inhalt der Antwortnachricht in Objekte konvertiert wird.</exception>
+        <exception cref="T:System.Data.Services.Client.DataServiceQueryException">Wenn der Datendienst den Fehler "HTTP 404: Ressource nicht gefunden" zurückgibt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteBatch">
+      <MemberSignature Language="C#" Value="public System.Data.Services.Client.DataServiceResponse ExecuteBatch (params System.Data.Services.Client.DataServiceRequest[] queries);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Services.Client.DataServiceResponse ExecuteBatch(class System.Data.Services.Client.DataServiceRequest[] queries) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.ExecuteBatch(System.Data.Services.Client.DataServiceRequest[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Client.DataServiceResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="queries" Type="System.Data.Services.Client.DataServiceRequest[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="queries">Array von <see cref="T:System.Data.Services.Client.DataServiceRequest[]" />-Objekten, die die Abfragen bilden.</param>
+        <summary>Sendet eine Gruppe von Abfragen als Batch an den Datendienst.</summary>
+        <returns>Die Antwort auf den Batchvorgang.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Abfragen werden als <xref:System.Data.Services.Client.DataServiceRequest%601>-Instanzen angegeben. Gibt <xref:System.Data.Services.Client.DataServiceResponse> mit dfer Antwort auf die Batchanforderung als Ganzes zurück. Einzelne Abfrageantworten werden als einzelne <xref:System.Data.Services.Client.OperationResponse>-Objekte dargestellt, auf die durch das Auflisten der <xref:System.Data.Services.Client.DataServiceResponse>-Instanz zugegriffen werden können.  
+  
+ Nach dem Beenden dieser Methode wurde die ganze HTTP-Antwort für die Batchanforderung vom Netzwerkdatenstrom gelesen, aber die Antworten wurden nicht verarbeitet. Keine Identitätsauflösung oder Objektmaterialisierung für eine angegebene Entität in der Antwort, bis diese aufgelistet wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie die <xref:System.Data.Services.Client.DataServiceContext.ExecuteBatch*>-Methode zum Ausführen eines Arrays von <xref:System.Data.Services.Client.DataServiceRequest%601>-Objekten aufgerufen wird, das Abfragen enthält, die das `Customers`-Objekt und das `Products`-Objekt aus dem Northwind-Datendienst zurückgeben. Die Auflistung von <xref:System.Data.Services.Client.QueryOperationResponse%601>-Objekten in der zurückgegebenen <xref:System.Data.Services.Client.DataServiceResponse> wird aufgelistet, und die Auflistung von in jeder <xref:System.Data.Services.Client.QueryOperationResponse%601> enthaltenen Objekten wird ebenfalls aufgelistet. Dieses Beispiel verwendet die <xref:System.Data.Services.Client.DataServiceContext> generiert, durch das Hinzufügen eines Dienstverweises Tool basierend auf der Northwind-Datendienst, die erstellt wird, Sie nach Beendigung der [!INCLUDE[ssAstoria](~/includes/ssastoria-md.md)] .  
+  
+ [!code-csharp[Astoria Northwind Client#BatchQuery](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#batchquery)]
+ [!code-vb[Astoria Northwind Client#BatchQuery](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#batchquery)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEntityDescriptor">
+      <MemberSignature Language="C#" Value="public System.Data.Services.Client.EntityDescriptor GetEntityDescriptor (object entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Services.Client.EntityDescriptor GetEntityDescriptor(object entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.GetEntityDescriptor(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Client.EntityDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Das Objekt für der Entitätsdeskriptor zurückgegeben werden soll.</param>
+        <summary>Ruft den <see cref="T:System.Data.Services.Client.EntityDescriptor" /> für das angegebene Entitätsobjekt ab.</summary>
+        <returns>Die <see cref="T:System.Data.Services.Client.EntityDescriptor" /> Instanz, für die <paramref name="entity" />, oder <see langword="null" /> Wenn ein <see cref="T:System.Data.Services.Client.EntityDescriptor" /> für das Objekt nicht vorhanden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLinkDescriptor">
+      <MemberSignature Language="C#" Value="public System.Data.Services.Client.LinkDescriptor GetLinkDescriptor (object source, string sourceProperty, object target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Services.Client.LinkDescriptor GetLinkDescriptor(object source, string sourceProperty, object target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.GetLinkDescriptor(System.Object,System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Client.LinkDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="sourceProperty" Type="System.String" />
+        <Parameter Name="target" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="source">Quellobjekt im Link</param>
+        <param name="sourceProperty">Der Name der Navigationseigenschaft auf die <c>Quelle</c> -Objekt, das verbundene Objekt zurückgibt.</param>
+        <param name="target">Die verknüpfte Entität.</param>
+        <summary>Ruft <see cref="T:System.Data.Services.Client.LinkDescriptor" /> für einen bestimmten Link ab, der die Beziehung zwischen zwei Entitäten definiert.</summary>
+        <returns>Die <see cref="T:System.Data.Services.Client.LinkDescriptor" /> Instanz für die angegebene Beziehung oder <see langword="null" /> Wenn eine <see cref="T:System.Data.Services.Client.LinkDescriptor" /> für die Beziehung nicht vorhanden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMetadataUri">
+      <MemberSignature Language="C#" Value="public Uri GetMetadataUri ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Uri GetMetadataUri() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.GetMetadataUri" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen URI des Speicherorts der .edmx-Metadaten ab.</summary>
+        <returns>Ein URI, der den Speicherort der Metadaten-Beschreibung identifiziert (im EDMX-Format) – für den Datendienst, der vom Basis-URI identifiziert wurde, der an den Konstruktor übergeben wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt den URI zurück, der mit einem einzelnen Pfadsegment (`/$metadata`) an den Konstruktor übergeben wurde. Der Aufruf dieser Methode kann Netzwerkvorgang zur dynamischen ermittlung des Metadaten-URI erzeugen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReadStream">
+      <MemberSignature Language="C#" Value="public System.Data.Services.Client.DataServiceStreamResponse GetReadStream (object entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Services.Client.DataServiceStreamResponse GetReadStream(object entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.GetReadStream(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Client.DataServiceStreamResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Die Entität, die die abzurufende binäre Eigenschaft verfügt.</param>
+        <summary>Ruft ab die binären Eigenschaftendaten für die angegebene Entität als Datenstrom.</summary>
+        <returns>Eine Instanz von <see cref="T:System.Data.Services.Client.DataServiceStreamResponse" />, die die Antwort darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A> -Methode fordert synchron einen Daten-Datenstrom, der die binäre Eigenschaft der angeforderten enthält `entity`.  
+  
+ Im AtomPub-Protokoll der `entity` ein Medienlinkeintrag ist, und die binäre Eigenschaft ist die zugeordnete Medienressource.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="entity" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException"><paramref name="entity" /> wird nicht von <see cref="T:System.Data.Services.Client.DataServiceContext" /> nachverfolgt.  
+  
+ - oder -   
+  
+ Die <paramref name="entity" /> befindet sich im Zustand <see cref="F:System.Data.Services.Client.EntityStates.Added" />.  
+  
+ - oder -   
+  
+ Die <paramref name="entity" /> ein Medienlinkeintrag ist und nicht über eine binäre Eigenschaft verfügt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReadStream">
+      <MemberSignature Language="C#" Value="public System.Data.Services.Client.DataServiceStreamResponse GetReadStream (object entity, System.Data.Services.Client.DataServiceRequestArgs args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Services.Client.DataServiceStreamResponse GetReadStream(object entity, class System.Data.Services.Client.DataServiceRequestArgs args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.GetReadStream(System.Object,System.Data.Services.Client.DataServiceRequestArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Client.DataServiceStreamResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+        <Parameter Name="args" Type="System.Data.Services.Client.DataServiceRequestArgs" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Die Entität, die die abzurufende binäre Eigenschaft verfügt.</param>
+        <param name="args">Instanz der Klasse <see cref="T:System.Data.Services.Client.DataServiceRequestArgs" />, die Einstellungen für die HTTP-Anforderungsnachricht enthält.</param>
+        <summary>Ruft binären Eigenschaftendaten für die angegebene Entität als Datenstrom zusammen mit den angegebenen Nachrichtenheadern.</summary>
+        <returns>Eine Instanz von <see cref="T:System.Data.Services.Client.DataServiceStreamResponse" />, die die Antwort darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A> -Methode fordert synchron einen Daten-Datenstrom, der die binäre Eigenschaft der angeforderten enthält `entity`.  
+  
+ Im AtomPub-Protokoll der `entity` ein Medienlinkeintrag ist, und die binäre Eigenschaft ist die zugeordnete Medienressource.  
+  
+ Keine Validierung wird auf den Headern ausgeführt, die in `args` festgelegt werden. Ändern Sie keinen HTTP-Header in einer Weise, die die Bedeutung von der Anforderung ändert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="entity" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="args" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException"><paramref name="entity" /> wird nicht von <see cref="T:System.Data.Services.Client.DataServiceContext" /> nachverfolgt.  
+  
+ - oder -   
+  
+ Die <paramref name="entity" /> befindet sich im Zustand <see cref="F:System.Data.Services.Client.EntityStates.Added" />.  
+  
+ - oder -   
+  
+ Die <paramref name="entity" /> ein Medienlinkeintrag ist und nicht über eine binäre Eigenschaft verfügt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReadStream">
+      <MemberSignature Language="C#" Value="public System.Data.Services.Client.DataServiceStreamResponse GetReadStream (object entity, string acceptContentType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Services.Client.DataServiceStreamResponse GetReadStream(object entity, string acceptContentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.GetReadStream(System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Client.DataServiceStreamResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+        <Parameter Name="acceptContentType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Die Entität, die die abzurufende binäre Eigenschaft verfügt.</param>
+        <param name="acceptContentType">Der Inhaltstyp der Daten aus dem Datendienst, der im Accept-Header angegebene angefordert.</param>
+        <summary>Ruft ab die binären Eigenschaftendaten für die angegebene Entität als Datenstrom, mit der angegebenen akzeptieren-Nachrichtenkopf.</summary>
+        <returns>Eine Instanz von <see cref="T:System.Data.Services.Client.DataServiceStreamResponse" />, die die Antwort darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `acceptContentType` Parameter muss einen gültigen Wert für den Accept-HTTP-Header.  
+  
+ Die <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A> -Methode fordert synchron einen Daten-Datenstrom, der die binäre Eigenschaft der angeforderten enthält `entity`.  
+  
+ Im AtomPub-Protokoll der `entity` ein Medienlinkeintrag ist, und die binäre Eigenschaft ist die zugeordnete Medienressource.  
+  
+ Keine Validierung wird auf den Headern ausgeführt, die in `acceptContentType` festgelegt werden. Ändern Sie diesen HTTP-Header nicht in einer Weise, die die Bedeutung von der Anforderung ändert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="entity" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="acceptContentType" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException"><paramref name="entity" /> wird nicht von <see cref="T:System.Data.Services.Client.DataServiceContext" /> nachverfolgt.  
+  
+ - oder -   
+  
+ Die <paramref name="entity" /> befindet sich im Zustand <see cref="F:System.Data.Services.Client.EntityStates.Added" />.  
+  
+ - oder -   
+  
+ Die <paramref name="entity" /> ein Medienlinkeintrag ist und nicht über eine binäre Eigenschaft verfügt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReadStreamUri">
+      <MemberSignature Language="C#" Value="public Uri GetReadStreamUri (object entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Uri GetReadStreamUri(object entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.GetReadStreamUri(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Die Entität, die die abzurufende binäre Eigenschaft verfügt.</param>
+        <summary>Ruft den URI, der verwendet wird, um die binären Eigenschaftendaten als Datenstrom zurückzugeben.</summary>
+        <returns>Der gelesene URI des binären Datenstroms.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ist `entity` ein Medienlinkeintrag ist, gibt die <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A>-Methode einen URI zurück, der verwendet wird, um auf den Inhalt der Medienressource zuzugreifen.  
+  
+ Dieser URI wird nur in einer GET-Anforderung verwendet, um den Inhalt einer Medienressource zu lesen. Es reagiert möglicherweise nicht auf POST-, PUT- oder DELETE-Anforderungen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wenn die angegebene Entität ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException"><paramref name="entity" /> wird nicht von <see cref="T:System.Data.Services.Client.DataServiceContext" /> nachverfolgt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreMissingProperties">
+      <MemberSignature Language="C#" Value="public bool IgnoreMissingProperties { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IgnoreMissingProperties" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen/Definieren, ob vom Typ gelesene Eigenschaften dem clientseitigen Typ zugeordnet werden müssen.</summary>
+        <value>Ein boolescher Wert, der angibt, ob Eigenschaften, die vom Typ gelesenen werden, den clientseitigen Typeigenschaften zugeordnet werden müssen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `true`, Materialisierung erfolgreich ist, auch wenn Eigenschaften vom Typ Eigenschaften des Clienttyps zugeordnet werden können. Wenn `false`, des Konflikts-Eigenschaft löst eine Ausnahme bei der Objektmaterialisierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreResourceNotFoundException">
+      <MemberSignature Language="C#" Value="public bool IgnoreResourceNotFoundException { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IgnoreResourceNotFoundException" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.DataServiceContext.IgnoreResourceNotFoundException" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen/Definieren, ob eine Ausnahme ausgelöst wird, wenn ein Fehler mit dem Fehlercode 404 (Die Ressource wurde nicht gefunden) vom Datendienst zurückgegeben wird.</summary>
+        <value>Bei Festlegung auf <see langword="true" />, die Client-Bibliothek gibt ein leeres Resultset anstatt durch das Auslösen einer <see cref="T:System.Data.Services.Client.DataServiceQueryException" /> Wenn der Datendienst gibt HTTP 404: Ressource wurde nicht gefunden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Links">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Services.Client.LinkDescriptor&gt; Links { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Data.Services.Client.LinkDescriptor&gt; Links" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.DataServiceContext.Links" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Services.Client.LinkDescriptor&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung aller Zuordnungen oder Links ab, die gerade durch das <see cref="T:System.Data.Services.Client.DataServiceContext" />-Objekt verfolgt werden.</summary>
+        <value>Eine Auflistung von <see cref="T:System.Data.Services.Client.LinkDescriptor" />-Objekten, die alle Zuordnungen oder Links darstellen, die gerade durch das Objekt <see cref="T:System.Data.Services.Client.DataServiceContext" /> verfolgt werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn gerade keine Links nachverfolgt werden, wird eine Liste mit 0 Elementen zurückgegeben. Die Auflistung ist schreibgeschützt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadProperty">
+      <MemberSignature Language="C#" Value="public System.Data.Services.Client.QueryOperationResponse LoadProperty (object entity, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Services.Client.QueryOperationResponse LoadProperty(object entity, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.LoadProperty(System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Client.QueryOperationResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Die Entität, die die zu ladende Eigenschaft enthält.</param>
+        <param name="propertyName">Der Name der Eigenschaft in der zu ladenden Entität.</param>
+        <summary>Lädt verzögerte Inhalte für eine angegebene Eigenschaft vom Datendienst.</summary>
+        <returns>Die Antwort auf den Ladevorgang.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch Aufrufen dieser Methode wird ein Netzwerkvorgang zum Abrufe des Eigenschaftswerts aktiviert. Die angegebene Eigenschaft ist möglicherweise eine der Eigenschaften einer Entität, einschließlich Eigenschaften, die Zuordnungen oder Links darstellen.  
+  
+ Wenn die Eigenschaft eine Zuordnung oder einen Link oder eine verzögerte Eigenschaft darstellt, erhät der Client durch den Aufruf dieser Methode eine Möglichkeit, verwandte Ressourcen langsamer zu laden.  
+  
+ Wenn die Entität im unveränderten oder geänderten Zustand ist, lädt der Eigenschaftswert die verknüpften Entitäten und markiert sie unverändert mit unveränderten Links  
+  
+ Wenn die Eigenschaft bereits geladen wird, können Sie durch Aufrufen dieser Methode den Wert der Eigenschaft aktualisieren.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie das `Customers`-Objekt, das sich auf jede zurückgegebene `Orders`-Instanz bezieht, explizit geladen wird. Dieses Beispiel verwendet die <xref:System.Data.Services.Client.DataServiceContext> generiert, durch das Hinzufügen eines Dienstverweises Tool basierend auf der Northwind-Datendienst, die erstellt wird, Sie nach Beendigung der [!INCLUDE[ssAstoria](~/includes/ssastoria-md.md)] .  
+  
+ [!code-csharp[Astoria Northwind Client#LoadRelatedOrderCustomer](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#loadrelatedordercustomer)]
+ [!code-vb[Astoria Northwind Client#LoadRelatedOrderCustomer](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#loadrelatedordercustomer)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadProperty">
+      <MemberSignature Language="C#" Value="public System.Data.Services.Client.QueryOperationResponse LoadProperty (object entity, string propertyName, System.Data.Services.Client.DataServiceQueryContinuation continuation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Services.Client.QueryOperationResponse LoadProperty(object entity, string propertyName, class System.Data.Services.Client.DataServiceQueryContinuation continuation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.LoadProperty(System.Object,System.String,System.Data.Services.Client.DataServiceQueryContinuation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Client.QueryOperationResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="continuation" Type="System.Data.Services.Client.DataServiceQueryContinuation" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Die Entität, die die zu ladende Eigenschaft enthält.</param>
+        <param name="propertyName">Der Name der Eigenschaft in der zu ladenden Entität.</param>
+        <param name="continuation">Ein <see cref="T:System.Data.Services.Client.DataServiceQueryContinuation`1" />-Objekt, das für die nächste Seite der zugehörigen Entitäten steht, die vom Datendienst geladen werden.</param>
+        <summary>Lädt die nächste Seite der verknüpften Entitäten vom Datendienst mit dem angegebenen Abfragefortsetzungsobjekt.</summary>
+        <returns>Die Antwort, die die nächste Seite der zugehörigen Entitätsdaten enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `entity` den Status <xref:System.Data.Services.Client.EntityStates.Unchanged> oder <xref:System.Data.Services.Client.EntityStates.Modified> aufweist, werden die verknüpften Entitäten als Objekte mit dem Status <xref:System.Data.Services.Client.EntityStates.Unchanged> geladen, mit Links auch mit dem Status <xref:System.Data.Services.Client.EntityStates.Unchanged>.  
+  
+ Wenn `entity` den Status <xref:System.Data.Services.Client.EntityStates.Deleted> aufweist, werden die zugehörigen Entitäten als Objekte mit dem Status <xref:System.Data.Services.Client.EntityStates.Unchanged> mit Links geladen, die den Status <xref:System.Data.Services.Client.EntityStates.Deleted> aufweisen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Ist <paramref name="entity" /> in <see cref="F:System.Data.Services.Client.EntityStates.Detached" /> oder <see cref="F:System.Data.Services.Client.EntityStates.Added" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadProperty">
+      <MemberSignature Language="C#" Value="public System.Data.Services.Client.QueryOperationResponse LoadProperty (object entity, string propertyName, Uri nextLinkUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Services.Client.QueryOperationResponse LoadProperty(object entity, string propertyName, class System.Uri nextLinkUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.LoadProperty(System.Object,System.String,System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Client.QueryOperationResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="nextLinkUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Die Entität, die die zu ladende Eigenschaft enthält.</param>
+        <param name="propertyName">Der Name der Eigenschaft in der zu ladenden Entität.</param>
+        <param name="nextLinkUri">Der URI, der verwendet wird, um die nächste Ergebnisseite zu laden.</param>
+        <summary>Lädt mit dem angegebenen nächsten Link-URI eine Seite von verknüpften Entitäten.</summary>
+        <returns>Eine Instanz von <see cref="T:System.Data.Services.Client.QueryOperationResponse`1" />, die die Ergebnisse der Anforderung enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `entity` den Status <xref:System.Data.Services.Client.EntityStates.Unchanged> oder <xref:System.Data.Services.Client.EntityStates.Modified> aufweist werden die zugehörigen Entitäten im Status <xref:System.Data.Services.Client.EntityStates.Unchanged> geladen, und die Links zwischen den Entities werden auch im Zustand <xref:System.Data.Services.Client.EntityStates.Unchanged> erstellt.  
+  
+ Ist `entity` im Status <xref:System.Data.Services.Client.EntityStates.Deleted> werden die zugehörigen Entities mit dem Status <xref:System.Data.Services.Client.EntityStates.Unchanged> geladen, und die Links zwischen den Entities werden im Zustand <xref:System.Data.Services.Client.EntityStates.Deleted> erstellt.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel werden verknüpfte `Orders`-Entitäten mit jeder `Customers`-Entität zurückgegeben, und es wird eine `do…while`-Schleife zum Laden von `Customers`-Entitätenseiten und eine geschachtelte `while`-Schleife zum Laden verknüpfter `Orders`-Entitäten aus dem Datendienst verwendet. Die <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A>-Methode wird verwendet, um Seiten verwandter `Orders`-Entitäten zu laden.  
+  
+ [!code-csharp[Astoria Northwind Client#GetCustomersPagedNested](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#getcustomerspagednested)]
+ [!code-vb[Astoria Northwind Client#GetCustomersPagedNested](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#getcustomerspagednested)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Ist <paramref name="entity" /> in <see cref="F:System.Data.Services.Client.EntityStates.Detached" /> oder <see cref="F:System.Data.Services.Client.EntityStates.Added" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadProperty&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public System.Data.Services.Client.QueryOperationResponse&lt;T&gt; LoadProperty&lt;T&gt; (object entity, string propertyName, System.Data.Services.Client.DataServiceQueryContinuation&lt;T&gt; continuation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Services.Client.QueryOperationResponse`1&lt;!!T&gt; LoadProperty&lt;T&gt;(object entity, string propertyName, class System.Data.Services.Client.DataServiceQueryContinuation`1&lt;!!T&gt; continuation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.LoadProperty``1(System.Object,System.String,System.Data.Services.Client.DataServiceQueryContinuation{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Client.QueryOperationResponse&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="continuation" Type="System.Data.Services.Client.DataServiceQueryContinuation&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Elementtyp der Auflistung zum Laden.</typeparam>
+        <param name="entity">Die Entität, die die zu ladende Eigenschaft enthält.</param>
+        <param name="propertyName">Der Name der Eigenschaft in der zu ladenden Entität.</param>
+        <param name="continuation">Ein <see cref="T:System.Data.Services.Client.DataServiceQueryContinuation`1" />-Objekt, das für die nächste Seite der zugehörigen Entitäten steht, die vom Datendienst geladen werden.</param>
+        <summary>Lädt die nächste Seite der verknüpften Entitäten vom Datendienst mit dem angegebenen generischen Abfragefortsetzungsobjekt.</summary>
+        <returns>Die Antwort, die die nächste Seite der zugehörigen Entitätsdaten enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `entity` den Status <xref:System.Data.Services.Client.EntityStates.Unchanged> oder <xref:System.Data.Services.Client.EntityStates.Modified> aufweist, werden die verknüpften Entitäten als Objekte mit dem Status <xref:System.Data.Services.Client.EntityStates.Unchanged> geladen, mit Links auch mit dem Status <xref:System.Data.Services.Client.EntityStates.Unchanged>.  
+  
+ Wenn `entity` den Status <xref:System.Data.Services.Client.EntityStates.Deleted> aufweist, werden die zugehörigen Entitäten als Objekte mit dem Status <xref:System.Data.Services.Client.EntityStates.Unchanged> mit Links geladen, die den Status <xref:System.Data.Services.Client.EntityStates.Deleted> aufweisen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Ist <paramref name="entity" /> in <see cref="F:System.Data.Services.Client.EntityStates.Detached" /> oder <see cref="F:System.Data.Services.Client.EntityStates.Added" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeOption">
+      <MemberSignature Language="C#" Value="public System.Data.Services.Client.MergeOption MergeOption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.Services.Client.MergeOption MergeOption" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.DataServiceContext.MergeOption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Client.MergeOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Synchronisierungsoption zum Empfangen von Entitäten von einem Datendienst ab oder legt sie fest.</summary>
+        <value>Ein Member der <see cref="T:System.Data.Services.Client.MergeOption" />-Nummerierung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert wird von der Deserialisierungskomponente des Clients vor der Objektmaterialisierung gelesen. Legen Sie diese Eigenschaft auf die entsprechende Materialisierungsoption fest, bevor Abfragen oder Updates zum Datendienst ausgeführt werden. Der Standardwert ist <xref:System.Data.Services.Client.MergeOption.AppendOnly>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadingEntity">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Data.Services.Client.ReadingWritingEntityEventArgs&gt; ReadingEntity;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Data.Services.Client.ReadingWritingEntityEventArgs&gt; ReadingEntity" />
+      <MemberSignature Language="DocId" Value="E:System.Data.Services.Client.DataServiceContext.ReadingEntity" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Data.Services.Client.ReadingWritingEntityEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, nachdem Entitätsdaten vollständig in das Entitätsobjekt geladen wurden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das <xref:System.Data.Services.Client.DataServiceContext.ReadingEntity>-Ereignis tritt auf, nachdem die Entitätsdaten zusammen mit allen verschachtelten Entitäten vollständig in das Zielobjekt gelesen wurden. Ist Überwachung etwas anders als <xref:System.Data.Services.Client.MergeOption.NoTracking>, das Objekt angefügt wird, bevor das Ereignis auftritt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveName">
+      <MemberSignature Language="C#" Value="public Func&lt;Type,string&gt; ResolveName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Func`2&lt;class System.Type, string&gt; ResolveName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.DataServiceContext.ResolveName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;System.Type,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen/Definieren einer Funktion zum Außerkraftsetzen der Standardtypauflösungsstrategie, die von der Client-Bibliothek beim Senden von Entitäten an einen Datendienst verwendet wurde.</summary>
+        <value>Gibt eine Zeichenfolge zurück, die den Namen von <see cref="T:System.Data.Services.Client.DataServiceContext" /> enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aktiviert das Außerkraftsetzen der Standardtypauflösung, die von der Clientbibliothek verwendet wurde. Legen Sie diese Eigenschaft für einen Delegierten fest, der eine Funktion zum Auflösen eines Typs in der Client-Anwendung in einen Namespace-qualifizierten Typnamen identifiziert.. Dies ermöglicht es dem Client, die benutzerdefinierte Zuordnung zum Typnamen einer Antwort vom Server und dem Typ im Client auszuführen.  
+  
+> [!NOTE]
+>  Diese Methode aktiviert das Überschreiben des Entitätsnamens, der in die Zieldarstellung serialisiert wird (z. B. Atom oder JSON) für den angegebenen Typ.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveType">
+      <MemberSignature Language="C#" Value="public Func&lt;string,Type&gt; ResolveType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Func`2&lt;string, class System.Type&gt; ResolveType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.DataServiceContext.ResolveType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;System.String,System.Type&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen/Definieren einer Funktion, die beim Empfangen von Entitäten von einem Datendienst zum Außerkraftsetzen einer Funktion verwendet wird.</summary>
+        <value>Ein Funktionsdelegierter, der eine Außerkraftsetzungsfunktion identifiziert, die zum Außerkraftsetzen einer Standardtypauflösung durch die Client-Bibliothek verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aktiviert Überschreibung der Standardtypauflösungsstrategie, die von der Clientbibliothek verwendet wird. Stellen Sie diese Eigenschaft auf einen Delegierten ein, der eine Funktion zum Auflösen eines Namespace-qualifizierten Typnamens in einen Typ in der Client-Anwendung identifiziert. Dies ermöglicht es dem Client, die benutzerdefinierte Zuordnung zum Typnamen einer Antwort vom Server und dem Typ im Client auszuführen.  
+  
+ Das Außerkraftsetzen der Typauflösung aktiviert auch das Einfügen einer benutzerdefinierten Zuordnungsstrategie zwischen einem Typnamen und einem Typ. Dies beeinflusst nicht das Materialisieren einer Antwort auf den identifizierten Typ.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="SaveChanges">
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Speichert die Änderungen, die <see cref="T:System.Data.Services.Client.DataServiceContext" /> zur Speicherung nachverfolgt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Services.Client.DataServiceResponse> mit Status, Headern und Fehlern aus dem Aufruf von <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="SaveChanges">
+      <MemberSignature Language="C#" Value="public System.Data.Services.Client.DataServiceResponse SaveChanges ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Services.Client.DataServiceResponse SaveChanges() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.SaveChanges" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Client.DataServiceResponse</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert die Änderungen, die <see cref="T:System.Data.Services.Client.DataServiceContext" /> zur Speicherung nachverfolgt.</summary>
+        <returns><see cref="T:System.Data.Services.Client.DataServiceResponse" /> mit Status, Headern und Fehlern aus dem Aufruf von <see cref="M:System.Data.Services.Client.DataServiceContext.SaveChanges.Remarks" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveChanges">
+      <MemberSignature Language="C#" Value="public System.Data.Services.Client.DataServiceResponse SaveChanges (System.Data.Services.Client.SaveChangesOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Services.Client.DataServiceResponse SaveChanges(valuetype System.Data.Services.Client.SaveChangesOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.SaveChanges(System.Data.Services.Client.SaveChangesOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Client.DataServiceResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.Data.Services.Client.SaveChangesOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options">Ein Member der <see cref="T:System.Data.Services.Client.MergeOption" />-Nummerierung, das die Materialisierungsoption angibt.</param>
+        <summary>Speichert die Änderungen, die <see cref="T:System.Data.Services.Client.DataServiceContext" /> zur Speicherung nachverfolgt.</summary>
+        <returns><see cref="T:System.Data.Services.Client.DataServiceResponse" /> mit Status, Headern und Fehlern aus dem Aufruf von <see cref="M:System.Data.Services.Client.DataServiceContext.SaveChanges" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vorgänge werden an den Datendienst in der folgenden Reihenfolge gesendet werden.  
+  
+1.  <xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A>  
+  
+2.  <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A>  
+  
+3.  <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A>  
+  
+4.  <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>  
+  
+5.  <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> und <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveChangesDefaultOptions">
+      <MemberSignature Language="C#" Value="public System.Data.Services.Client.SaveChangesOptions SaveChangesDefaultOptions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.Services.Client.SaveChangesOptions SaveChangesDefaultOptions" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.DataServiceContext.SaveChangesDefaultOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Client.SaveChangesOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen/Definieren der <see cref="T:System.Data.Services.Client.SaveChangesOptions" />-Werte, die von der Methode <see cref="M:System.Data.Services.Client.DataServiceContext.SaveChanges" /> verwendet werden.</summary>
+        <value>Die aktuellen Optionen den Vorgang zum Speichern von Änderungen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird bereitgestellt, damit Optionen (z. B. Zusammenführungs- und Ersetzungssemantik) einmalig für <xref:System.Data.Services.Client.DataServiceContext> festgelegt werden und dann überschrieben werden können – je nach Bedarf beim Anrufen von einer der <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>-Überladungen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendingRequest">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Data.Services.Client.SendingRequestEventArgs&gt; SendingRequest;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Data.Services.Client.SendingRequestEventArgs&gt; SendingRequest" />
+      <MemberSignature Language="DocId" Value="E:System.Data.Services.Client.DataServiceContext.SendingRequest" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Data.Services.Client.SendingRequestEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn <see cref="T:System.Net.HttpWebRequest" /> neu erstellt wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das <xref:System.Data.Services.Client.DataServiceContext.SendingRequest>-Ereignis tritt auf, bevor die erforderlichen Eigenschaftswerte im Objekt festgelegt werden. Garantien  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLink">
+      <MemberSignature Language="C#" Value="public void SetLink (object source, string sourceProperty, object target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetLink(object source, string sourceProperty, object target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.SetLink(System.Object,System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="sourceProperty" Type="System.String" />
+        <Parameter Name="target" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="source">Das Quellobjekt für den neuen Link.</param>
+        <param name="sourceProperty">Die Eigenschaft des Quellobjekts, das das Zielobjekt des neuen Links identifiziert.</param>
+        <param name="target">Das untergeordnete Objekt des neuen Links, der durch das Aufrufen dieser Methode initialisiert werden soll. Das Zielobjekt muss es sich um einen Untertyp des Typs von identifiziert die <c>SourceProperty</c> Parameter. Wenn <c>Ziel</c> auf festgelegt ist null, den Aufruf einen löschlinkvorgang darstellt.</param>
+        <summary>Benachrichtigt <see cref="T:System.Data.Services.Client.DataServiceContext" />, dass ein neuer Link zwischen den Objekten vorhanden ist und dass der Link von der durch den <paramref name="sourceProperty" />-Parameter angegebenen Eigenschaft dargestellt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein neuer Link wird mit dem Status <xref:System.Data.Services.Client.EntityStates.Added> erstellt. <xref:System.Data.Services.Client.DataServiceContext> fügt diesen neuen Link dem Satz von neu erstellten Links hinzu, der beim nächsten Aufruf von <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> an den Datendienst gesendet werden.  
+  
+ Wenn das Zielargument NULL ist, sollte der von sourceProperty dargestellte Link entfernt werden (der Link wird in den Status <xref:System.Data.Services.Client.EntityStates.Deleted> versetzt).  
+  
+ Links sind unidirektionale Vertrauensstellungen. Wenn eine rückzeiger vorhanden ist, der angibt, einer zwei-Wege-Zuordnung, diese Methode sollte werden erneut aufgerufen, um benachrichtigt die <xref:System.Data.Services.Client.DataServiceContext> für den zweiten Link  
+  
+ Diese Methode unterstützt nur das Hinzufügen von Links zu Beziehungen mit Multiplizität = 1 (Die Quelleigenschaft ist ein Objektverweis). Wenn eine Klasse `Person` mit einer anderen `Person` durch die Eigenschaft `Friend` verbunden ist, kann mit diesem Aufruf `Person` mit `Person` verbunden werden. Diese Methode löst eine Ausnahme aus, wenn der dargestellte Parameter `sourceProperty` mehrere Kardinalitätsbeziehungen aufweist.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie die <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>-Methode und die <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>-Methode verwendet werden, um Links zu erstellen, die Beziehungen definieren. In diesem Beispiel werden die Navigationseigenschaften für das `Order_Details`-Objekt auch explizit festgelegt.  
+  
+ [!code-csharp[Astoria Northwind Client#AddOrderDetailToOrder](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addorderdetailtoorder)]
+ [!code-vb[Astoria Northwind Client#AddOrderDetailToOrder](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addorderdetailtoorder)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wenn <paramref name="source" />, <paramref name="sourceProperty" /> oder <paramref name="target" /> NULL sind.</exception>
+        <exception cref="T:System.InvalidOperationException">Wenn der angegebene Link bereits vorhanden ist.  
+  
+ - oder -   
+  
+ Wenn sich die als <paramref name="source" /> bereitgestellten Objekte oder <paramref name="target" /> im Status <see cref="F:System.Data.Services.Client.EntityStates.Detached" /> oder <see cref="F:System.Data.Services.Client.EntityStates.Deleted" /> befinden.  
+  
+ - oder -   
+  
+ Wenn <paramref name="sourceProperty" /> keine Navigationseigenschaft ist, die einen Verweis auf ein einzelnes verknüpftes Objekt definiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSaveStream">
+      <MemberSignature Language="C#" Value="public void SetSaveStream (object entity, System.IO.Stream stream, bool closeStream, System.Data.Services.Client.DataServiceRequestArgs args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetSaveStream(object entity, class System.IO.Stream stream, bool closeStream, class System.Data.Services.Client.DataServiceRequestArgs args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.SetSaveStream(System.Object,System.IO.Stream,System.Boolean,System.Data.Services.Client.DataServiceRequestArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="closeStream" Type="System.Boolean" />
+        <Parameter Name="args" Type="System.Data.Services.Client.DataServiceRequestArgs" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Die Entität, die eine binäre Eigenschaft, der den Datenstrom zugewiesen wurde.</param>
+        <param name="stream">Der <see cref="T:System.IO.Stream" />, von dem die binären Daten gelesen werden sollen.</param>
+        <param name="closeStream">Ein <see cref="T:System.Boolean" />-Wert, der bestimmt, ob der Datenstrom geschlossen wird, wenn die <see cref="M:System.Data.Services.Client.DataServiceContext.SaveChanges" />-Methode abgeschlossen wird.</param>
+        <param name="args">Instanz der Klasse <see cref="T:System.Data.Services.Client.DataServiceRequestArgs" />, die Einstellungen für die HTTP-Anforderungsnachricht enthält.</param>
+        <summary>Legt einen neuen Datenstrom als binäre Eigenschaft einer Entität, mit den angegebenen Einstellungen in der Anforderungsnachricht fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> Methode legt fest, den binären Datenstrom, der die Medienressource zugeordnet ist die `entity`, die ein Medienlinkeintrag aufgerufen wird.  
+  
+ Die <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A>-Methode aufzurufen markiert die Entität als Medienlinkeintrag. Der Entitätszustand wird auch auf <xref:System.Data.Services.Client.EntityStates.Modified> festgelegt, damit der Datenstrom das nächste Mal an den Datendienst gesendet wird, der die <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>-Methode aufgerufen wird.  
+  
+ Die <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A>-Methode liest den <xref:System.IO.Stream> bis zum Ende. Ein <xref:System.IO.Stream.Seek%2A>-Ablauf wird nicht für <xref:System.IO.Stream> versucht.  
+  
+ Wenn `closeStream` ist `true`die <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> Methode schließt den Stream vor dem zurückgeben. Der Datenstrom wird geschlossen, selbst wenn ein Fehler auftritt, und der Datenstrom nicht gelesen wird.  
+  
+ Wenn `entity` über <xref:System.Data.Services.Client.MediaEntryAttribute> verfügt, kann die Medienressource kein Datenstrom sein. Entfernen Sie dieses Attribut, bevor Sie versuchen, den Datenstrom für `entity` festzulegen.  
+  
+ Keine Validierung wird auf den Headern ausgeführt, die in `args` festgelegt werden. Ändern Sie keinen HTTP-Header in einer Weise, die die Bedeutung von der Anforderung ändert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Parameter der Methode angegeben sind <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException"><paramref name="entity" /> wird nicht von dieser <see cref="T:System.Data.Services.Client.DataServiceContext" />-Instanz nachverfolgt.  
+  
+ - oder -   
+  
+ <paramref name="entity" /> verfügt über <see cref="T:System.Data.Services.Client.MediaEntryAttribute" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSaveStream">
+      <MemberSignature Language="C#" Value="public void SetSaveStream (object entity, System.IO.Stream stream, bool closeStream, string contentType, string slug);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetSaveStream(object entity, class System.IO.Stream stream, bool closeStream, string contentType, string slug) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.SetSaveStream(System.Object,System.IO.Stream,System.Boolean,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="closeStream" Type="System.Boolean" />
+        <Parameter Name="contentType" Type="System.String" />
+        <Parameter Name="slug" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Die Entität, die eine binäre Eigenschaft, der den Datenstrom zugewiesen wurde.</param>
+        <param name="stream">Der <see cref="T:System.IO.Stream" />, von dem die binären Daten gelesen werden sollen.</param>
+        <param name="closeStream">Ein <see cref="T:System.Boolean" />-Wert, der bestimmt, ob der Datenstrom geschlossen wird, wenn die <see cref="M:System.Data.Services.Client.DataServiceContext.SaveChanges" />-Methode abgeschlossen wird.</param>
+        <param name="contentType">Der Content-Type-Headerwert für die Anforderungsnachricht.</param>
+        <param name="slug">Der Slug-Header-Wert für die Anforderungsnachricht.</param>
+        <summary>Legt einen neuen Datenstrom als binäre Eigenschaft einer Entität. Der angegebene Content-Type und Slug-Header sind in der Anforderungsnachricht enthalten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> Methode legt fest, den binären Datenstrom, der die Medienressource zugeordnet ist die `entity`, die ein Medienlinkeintrag aufgerufen wird.  
+  
+ Die <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A>-Methode aufzurufen markiert die Entität als Medienlinkeintrag. Der Entitätszustand wird auch auf <xref:System.Data.Services.Client.EntityStates.Modified> festgelegt, damit der Datenstrom das nächste Mal an den Datendienst gesendet wird, der die <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>-Methode aufgerufen wird.  
+  
+ Die <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A>-Methode liest den <xref:System.IO.Stream> bis zum Ende. Ein <xref:System.IO.Stream.Seek%2A>-Ablauf wird nicht für <xref:System.IO.Stream> versucht.  
+  
+ Wenn `closeStream` ist `true`die <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> Methode schließt den Stream vor dem zurückgeben. Der Datenstrom wird geschlossen, selbst wenn ein Fehler auftritt, und der Datenstrom nicht gelesen wird.  
+  
+ Wenn `entity` über <xref:System.Data.Services.Client.MediaEntryAttribute> verfügt, kann die Medienressource kein Datenstrom sein. Entfernen Sie dieses Attribut, bevor Sie versuchen, den Datenstrom für `entity` festzulegen.  
+  
+ Keine Validierung wird auf den Headern ausgeführt, die in `contentType` und `slug` festgelegt werden. Ändern Sie diese HTTP-Header nicht in einer Weise, die die Bedeutung von der Anforderung ändert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Parameter der Methode angegeben sind <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException"><paramref name="entity" /> wird nicht von dieser <see cref="T:System.Data.Services.Client.DataServiceContext" />-Instanz nachverfolgt.  
+  
+ - oder -   
+  
+ <see langword="entity" /> verfügt über <see cref="T:System.Data.Services.Client.MediaEntryAttribute" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Timeout">
+      <MemberSignature Language="C#" Value="public int Timeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Timeout" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.DataServiceContext.Timeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Timeoutoption, die für die zugrunde liegende HTTP-Anforderung an den Datendienst verwendet wird.</summary>
+        <value>Eine ganze Zahl, die das Zeitintervall vor dem Timeout eines Service Requests angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert wird zum Übergeben der <xref:System.Net.HttpWebRequest.Timeout> Eigenschaft des zugrunde liegenden <xref:System.Net.HttpWebRequest> Objekt. Der Wert muss vor dem Ausführen einer Abfrage oder eines Updates festgelegt werden. Der Wert wird möglicherweise zwischen Anforderungen an einen Datendienst und dem neuen Wert geändert. Er wird von der nächsten Datendienstanforderung aufwärts ausgewählt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetEntity&lt;TEntity&gt;">
+      <MemberSignature Language="C#" Value="public bool TryGetEntity&lt;TEntity&gt; (Uri identity, out TEntity entity) where TEntity : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetEntity&lt;class TEntity&gt;(class System.Uri identity, [out] !!TEntity&amp; entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.TryGetEntity``1(System.Uri,``0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TEntity">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Uri" />
+        <Parameter Name="entity" Type="TEntity&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TEntity">Der Typ der Entität.</typeparam>
+        <param name="identity">Der URI der verfolgten, abzurufenden Entität.</param>
+        <param name="entity">Die abzurufende Entität.</param>
+        <summary>Testabruf einer Entität, die von <see cref="T:System.Data.Services.Client.DataServiceContext" /> durch Verweis auf den URI der Entität nachverfolgt wird.</summary>
+        <returns>Wird eine Entität bei <paramref name="resourceUri" /> gefunden, wird diese im Ausgangsparameter zurückgegeben (<paramref name="entity" />), und true wird zurückgegeben. Wird keine Entität gefunden, wird false zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Entität den Status <xref:System.Data.Services.Client.EntityStates.Detached> oder <xref:System.Data.Services.Client.EntityStates.Added> aufweist, steht kein URI zur Verfügung. Der Aufruf mit dieser Methode ist nicht möglich.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wenn <paramref name="identity" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetUri">
+      <MemberSignature Language="C#" Value="public bool TryGetUri (object entity, out Uri identity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetUri(object entity, [out] class System.Uri&amp; identity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.TryGetUri(System.Object,System.Uri@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+        <Parameter Name="identity" Type="System.Uri&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Die identifizierte Entität die <c>Identität</c>.</param>
+        <param name="identity">Der URI der Entität.</param>
+        <summary>Ruft den kanonischen URI der angegebenen Entität ab (falls verfügbar).</summary>
+        <returns>Gibt true zurück, wenn der kanonische URI im Ausgabeparameter zurückgegeben wird. Wenn die angegebene Entität nicht vom <see cref="T:System.Data.Services.Client.DataServiceContext" /> nachverfolgt, oder weist diese nicht den Status Hinzugefügt auf, steht kein URI zur Verfügung, und false wird zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Objekte mit dem Status <xref:System.Data.Services.Client.EntityStates.Added> verfügen noch nicht über einen URI.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wenn <paramref name="entity" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeScheme">
+      <MemberSignature Language="C#" Value="public Uri TypeScheme { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri TypeScheme" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.DataServiceContext.TypeScheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen/Definieren des URI ab, der verwendet wurde, um das Typschema des Diensts anzugeben.</summary>
+        <value>Ein <see cref="T:System.Uri" />-Objekt, das das Typschema enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einer ATOM-Nutzlast ist der Rückgabewert das Schemaattribut eines Kategorieelements, das verwendet wurde, um den Typ einer Entität zu identifizieren. Der Standardwert ist `http://schemas.microsoft.com/ado/2007/08/dataservices/scheme`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateObject">
+      <MemberSignature Language="C#" Value="public void UpdateObject (object entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UpdateObject(object entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceContext.UpdateObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Die nachverfolgte Entität, die den Zustand <see cref="F:System.Data.Services.Client.EntityStates.Modified" /> erhalten soll.</param>
+        <summary>Ändert den Zustand des angegebenen Objekts in <see cref="T:System.Data.Services.Client.DataServiceContext" /> im <see cref="F:System.Data.Services.Client.EntityStates.Modified" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird ein vorhandenes Objekt abgerufen und geändert und anschließend die <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A>-Methode im <xref:System.Data.Services.Client.DataServiceContext> aufgerufen, um das Element im Kontext als aktualisiert zu markieren. Eine HTTP MERGE-Nachricht wird an den Datendienst gesendet, wenn die <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>-Methode aufgerufen wird. Dieses Beispiel verwendet die <xref:System.Data.Services.Client.DataServiceContext> generiert, durch das Hinzufügen eines Dienstverweises Tool basierend auf der Northwind-Datendienst, die erstellt wird, Sie nach Beendigung der [!INCLUDE[ssAstoria](~/includes/ssastoria-md.md)] .  
+  
+ [!code-csharp[Astoria Northwind Client#ModifyCustomer](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#modifycustomer)]
+ [!code-vb[Astoria Northwind Client#ModifyCustomer](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#modifycustomer)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wenn <paramref name="entity" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Wenn <paramref name="entity" /> den Zustand <see cref="F:System.Data.Services.Client.EntityStates.Detached" /> aufweist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UsePostTunneling">
+      <MemberSignature Language="C#" Value="public bool UsePostTunneling { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UsePostTunneling" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.DataServiceContext.UsePostTunneling" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab, der angibt, ob Nachtunneln verwendet wird.</summary>
+        <value>Ruft einen booleschen Wert ab, der angibt, ob Nachtunneln verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft steuert, ob Erstellungs-, Update- und Löschanforderungen an den Datendienst die Tunnelfunktion des Protokolls nutzt oder nicht. Ist die Option aktiviert, wird Tunneln verwendet. Andernfalls werden Standard-HTTP-Methoden verwendet.  
+  
+ Der Standardwert dieser Eigenschaft ist false.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WritingEntity">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Data.Services.Client.ReadingWritingEntityEventArgs&gt; WritingEntity;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Data.Services.Client.ReadingWritingEntityEventArgs&gt; WritingEntity" />
+      <MemberSignature Language="DocId" Value="E:System.Data.Services.Client.DataServiceContext.WritingEntity" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Data.Services.Client.ReadingWritingEntityEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, nachdem eine Entität in einer Anforderungsnachricht vollständig in XML serialisiert wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Handhabung des <xref:System.Data.Services.Client.DataServiceContext.WritingEntity>-Ereignisses ermöglicht die XML-Änderung in einer Anforderung vor dem Senden.  
+  
+ Das <xref:System.Data.Services.Client.DataServiceContext.WritingEntity>-Ereignis tritt möglicherweise auf einem anderen Thread auf, wenn Sie <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%28System.Data.Services.Client.SaveChangesOptions%2CSystem.AsyncCallback%2CSystem.Object%29> ohne <xref:System.Data.Services.Client.SaveChangesOptions.Batch> im angegebenen <xref:System.Data.Services.Client.SaveChangesOptions>-Wert aufrufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

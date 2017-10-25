@@ -1,0 +1,307 @@
+<Type Name="XmlFormatExtensionAttribute" FullName="System.Web.Services.Configuration.XmlFormatExtensionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class XmlFormatExtensionAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit XmlFormatExtensionAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Configuration.XmlFormatExtensionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass eine Erweiterung der Beschreibung Format in eine oder mehrere Erweiterungspunkte ausgeführt wird. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Erweiterung der Beschreibung Format erweitert, wie eine dienstbeschreibung für einen XML-Webdienst erstellt mithilfe von ASP.NET generiert wird. Insbesondere Fügt eine Erweiterung der Beschreibung Format XML-Elemente, die Beschreibung des Diensts. Dies ist hilfreich, wenn eine SOAP-Erweiterung zum Ausführen auf Client und Server-Seite von einem XML-Webdienst erstellt wird, wie Informationen zu SOAP-Erweiterungen in der dienstbeschreibung nicht platziert wird. Wenn Sie Informationen über die SOAP-Erweiterung, die Beschreibung des Diensts hinzufügen möchten, kann ein Client interpretiert werden, dass die spezifischen SOAP-Erweiterung ausgeführt werden muss. Ein Beispiel für eine SOAP-Erweiterung, die sowohl auf dem Client als auch auf dem Server ausgeführt werden muss, ist eine SOAP-Verschlüsselungserweiterung. Wenn eine SOAP-verschlüsselungserweiterung nur auf dem Server ausgeführt wird, und es Rückgabewerte vor dem Senden an den Client verschlüsselt, muss der Client die SOAP-Erweiterung ausgeführt wird, um die SOAP-Nachricht zu entschlüsseln verfügen. Andernfalls kann der Client den Rückgabewert nicht verarbeiten.  
+  
+ Verwenden Sie die folgenden Schritte aus, um eine Erweiterung Format der Beschreibung zu erstellen:  
+  
+1.  Erstellen Sie eine Klasse, die abgeleitet <xref:System.Web.Services.Description.ServiceDescriptionFormatExtension>.  
+  
+2.  Anwenden einer <xref:System.Web.Services.Configuration.XmlFormatExtensionAttribute> auf die Klasse, und geben Sie die Erweiterungspunkte, an dem die Webdiensterweiterung für Beschreibung Format ausführen sollten.  
+  
+3.  Wenden Sie optional eine <xref:System.Web.Services.Configuration.XmlFormatExtensionPointAttribute> auf die Klasse, und geben Sie ein Element innerhalb der Klasse, die als neuer Erweiterungspunkt fungiert.  
+  
+4.  Wenden Sie optional eine <xref:System.Web.Services.Configuration.XmlFormatExtensionPrefixAttribute> auf die Klasse, und geben Sie das XML-Namespacepräfix, um XML-Elemente, die von der Beschreibung-Format diensterweiterung generierten zugeordnet werden.  
+  
+5.  Konfigurieren Sie die Beschreibung Format-Webdiensterweiterung für die Ausführung innerhalb der `serviceDescriptionFormatExtensionTypes` Abschnitt der Konfigurationsdatei.  
+  
+   
+  
+## Examples  
+ [!code-csharp[ServiceDescriptionFormatExtension#1](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension/CS/source.cs#1)]
+ [!code-vb[ServiceDescriptionFormatExtension#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionFormatExtension/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlFormatExtensionAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Configuration.XmlFormatExtensionAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Services.Configuration.XmlFormatExtensionAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlFormatExtensionAttribute (string elementName, string ns, Type extensionPoint1);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string elementName, string ns, class System.Type extensionPoint1) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Configuration.XmlFormatExtensionAttribute.#ctor(System.String,System.String,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="elementName" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="extensionPoint1" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="elementName">Das XML-Element vom Format der Webdiensterweiterung-Beschreibung der dienstbeschreibung hinzugefügt.</param>
+        <param name="ns">Der XML-Namespace für das XML-Element, das Format der Webdiensterweiterung-Beschreibung der dienstbeschreibung hinzugefügt.</param>
+        <param name="extensionPoint1">Der Erweiterungspunkt, in dem die Erweiterung Beschreibung Dienst ausgeführt werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Services.Configuration.XmlFormatExtensionAttribute" /> Klasse, die die XML-Element und den Namespace hinzufügen, bei der Ausführung an der angegebenen Erweiterungspunkt angibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[ServiceDescriptionFormatExtension#2](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension/CS/source.cs#2)]
+ [!code-vb[ServiceDescriptionFormatExtension#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionFormatExtension/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlFormatExtensionAttribute (string elementName, string ns, Type[] extensionPoints);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string elementName, string ns, class System.Type[] extensionPoints) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Configuration.XmlFormatExtensionAttribute.#ctor(System.String,System.String,System.Type[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="elementName" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="extensionPoints" Type="System.Type[]" />
+      </Parameters>
+      <Docs>
+        <param name="elementName">Das XML-Element vom Format der Webdiensterweiterung-Beschreibung der dienstbeschreibung hinzugefügt.</param>
+        <param name="ns">Der XML-Namespace für das XML-Element, das Format der Webdiensterweiterung-Beschreibung der dienstbeschreibung hinzugefügt.</param>
+        <param name="extensionPoints">Ein Array von Erweiterungspunkten in dem Format der Webdiensterweiterung-Beschreibung ausgeführt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Services.Configuration.XmlFormatExtensionAttribute" /> Klasse, die die XML-Element und den Namespace hinzufügen, bei der Ausführung an den angegebenen Erweiterungspunkten angibt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlFormatExtensionAttribute (string elementName, string ns, Type extensionPoint1, Type extensionPoint2);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string elementName, string ns, class System.Type extensionPoint1, class System.Type extensionPoint2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Configuration.XmlFormatExtensionAttribute.#ctor(System.String,System.String,System.Type,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="elementName" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="extensionPoint1" Type="System.Type" />
+        <Parameter Name="extensionPoint2" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="elementName">Das XML-Element vom Format der Webdiensterweiterung-Beschreibung der dienstbeschreibung hinzugefügt.</param>
+        <param name="ns">Der XML-Namespace für das XML-Element, das Format der Webdiensterweiterung-Beschreibung der dienstbeschreibung hinzugefügt.</param>
+        <param name="extensionPoint1">Ein Erweiterungspunkt, an dem die Dienst-Beschreibung Format Erweiterung ausgeführt werden soll.</param>
+        <param name="extensionPoint2">Ein Erweiterungspunkt, an dem die Dienst-Beschreibung Format Erweiterung ausgeführt werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Services.Configuration.XmlFormatExtensionAttribute" /> Klasse, die die XML-Element und den Namespace hinzufügen, bei der Ausführung an den angegebenen Erweiterungspunkten angibt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlFormatExtensionAttribute (string elementName, string ns, Type extensionPoint1, Type extensionPoint2, Type extensionPoint3);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string elementName, string ns, class System.Type extensionPoint1, class System.Type extensionPoint2, class System.Type extensionPoint3) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Configuration.XmlFormatExtensionAttribute.#ctor(System.String,System.String,System.Type,System.Type,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="elementName" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="extensionPoint1" Type="System.Type" />
+        <Parameter Name="extensionPoint2" Type="System.Type" />
+        <Parameter Name="extensionPoint3" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="elementName">Das XML-Element vom Format der Webdiensterweiterung-Beschreibung der dienstbeschreibung hinzugefügt.</param>
+        <param name="ns">Der XML-Namespace für das XML-Element, das Format der Webdiensterweiterung-Beschreibung der dienstbeschreibung hinzugefügt.</param>
+        <param name="extensionPoint1">Ein Erweiterungspunkt, an dem die Dienst-Beschreibung Format Erweiterung ausgeführt werden soll.</param>
+        <param name="extensionPoint2">Ein Erweiterungspunkt, an dem die Dienst-Beschreibung Format Erweiterung ausgeführt werden soll.</param>
+        <param name="extensionPoint3">Ein Erweiterungspunkt, an dem die Dienst-Beschreibung Format Erweiterung ausgeführt werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Services.Configuration.XmlFormatExtensionAttribute" /> Klasse, die die XML-Element und den Namespace hinzufügen, bei der Ausführung an den angegebenen Erweiterungspunkten angibt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlFormatExtensionAttribute (string elementName, string ns, Type extensionPoint1, Type extensionPoint2, Type extensionPoint3, Type extensionPoint4);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string elementName, string ns, class System.Type extensionPoint1, class System.Type extensionPoint2, class System.Type extensionPoint3, class System.Type extensionPoint4) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Configuration.XmlFormatExtensionAttribute.#ctor(System.String,System.String,System.Type,System.Type,System.Type,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="elementName" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="extensionPoint1" Type="System.Type" />
+        <Parameter Name="extensionPoint2" Type="System.Type" />
+        <Parameter Name="extensionPoint3" Type="System.Type" />
+        <Parameter Name="extensionPoint4" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="elementName">Das XML-Element vom Format der Webdiensterweiterung-Beschreibung der dienstbeschreibung hinzugefügt.</param>
+        <param name="ns">Der XML-Namespace für das XML-Element, das Format der Webdiensterweiterung-Beschreibung der dienstbeschreibung hinzugefügt.</param>
+        <param name="extensionPoint1">Ein Erweiterungspunkt, an dem die Dienst-Beschreibung Format Erweiterung ausgeführt werden soll.</param>
+        <param name="extensionPoint2">Ein Erweiterungspunkt, an dem die Dienst-Beschreibung Format Erweiterung ausgeführt werden soll.</param>
+        <param name="extensionPoint3">Ein Erweiterungspunkt, an dem die Dienst-Beschreibung Format Erweiterung ausgeführt werden soll.</param>
+        <param name="extensionPoint4">Ein Erweiterungspunkt, an dem die Dienst-Beschreibung Format Erweiterung ausgeführt werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Services.Configuration.XmlFormatExtensionAttribute" /> Klasse, die die XML-Element und den Namespace hinzufügen, bei der Ausführung an den angegebenen Erweiterungspunkten angibt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementName">
+      <MemberSignature Language="C#" Value="public string ElementName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ElementName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Configuration.XmlFormatExtensionAttribute.ElementName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Element in XML-Format der Webdiensterweiterung-Beschreibung der dienstbeschreibung hinzugefügt.</summary>
+        <value>Das XML-Element vom Format der Webdiensterweiterung-Beschreibung der dienstbeschreibung hinzugefügt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[ServiceDescriptionFormatExtension#2](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension/CS/source.cs#2)]
+ [!code-vb[ServiceDescriptionFormatExtension#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionFormatExtension/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtensionPoints">
+      <MemberSignature Language="C#" Value="public Type[] ExtensionPoints { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type[] ExtensionPoints" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Configuration.XmlFormatExtensionAttribute.ExtensionPoints" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Phasen, zu denen die Webdiensterweiterung für Beschreibung Format ist, ausgeführt.</summary>
+        <value>Ein Array von <see cref="T:System.Type" /> , die gibt der Phase, zu dem die Webdiensterweiterung für Beschreibung Format ist, ausgeführt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Liste der verfügbaren Typen, die mit dem eine Erweiterung der Beschreibung Format ausgeführt werden kann enthalten, die in ASP.NET integrierten und benutzerdefinierten Typen auf dem Webserver konfiguriert. Die in ASP.NET, die mit der Erweiterung Format Beschreibung Dienst ausführen können integrierten Typen sind in der folgenden Liste:  
+  
+-   <xref:System.Web.Services.Description.Binding>  
+  
+-   <xref:System.Web.Services.Description.OperationBinding>  
+  
+-   <xref:System.Web.Services.Description.FaultBinding>  
+  
+-   <xref:System.Web.Services.Description.InputBinding>  
+  
+-   <xref:System.Web.Services.Description.OutputBinding>  
+  
+-   <xref:System.Web.Services.Description.Operation>  
+  
+-   <xref:System.Web.Services.Description.Types>  
+  
+-   <xref:System.Web.Services.Description.Port>  
+  
+-   <xref:System.Web.Services.Description.ServiceDescription>  
+  
+ Alle diese Klassen finden Sie in Abschnitten innerhalb einer dienstbeschreibung, die von ASP.NET generiert werden.  
+  
+   
+  
+## Examples  
+ [!code-csharp[ServiceDescriptionFormatExtension#2](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension/CS/source.cs#2)]
+ [!code-vb[ServiceDescriptionFormatExtension#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionFormatExtension/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public string Namespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Configuration.XmlFormatExtensionAttribute.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den XML-Namespace für das XML-Element, das Format der Webdiensterweiterung-Beschreibung der dienstbeschreibung hinzugefügt.</summary>
+        <value>Der XML-Namespace für das XML-Element, das Format der Webdiensterweiterung-Beschreibung der dienstbeschreibung hinzugefügt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[ServiceDescriptionFormatExtension#2](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension/CS/source.cs#2)]
+ [!code-vb[ServiceDescriptionFormatExtension#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionFormatExtension/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

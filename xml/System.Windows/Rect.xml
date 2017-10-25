@@ -1,0 +1,1889 @@
+<Type Name="Rect" FullName="System.Windows.Rect">
+  <TypeSignature Language="C#" Value="public struct Rect : IFormattable" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit Rect extends System.ValueType implements class System.IFormattable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Rect" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IFormattable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.RectConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ValueSerializer(typeof(System.Windows.Converters.RectValueSerializer))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Beschreibt die Breite, Höhe und Position eines Rechtecks.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlAttributeUsage_Duration"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="x,y,width,height"/>  
+```  
+  
+<a name="xamlValues_MinWidth"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *x*  
+ <xref:System.Double?displayProperty=nameWithType>  
+  
+ Der Speicherort der X-Koordinate der linken Seite des Rechtecks.  
+  
+ *y*  
+ <xref:System.Double?displayProperty=nameWithType>  
+  
+ Der Speicherort der y-Koordinate des oberen Randes des Rechtecks.  
+  
+ *width*  
+ <xref:System.Double?displayProperty=nameWithType>  
+  
+ Ein nicht negativer Wert, der stellt die <xref:System.Windows.Rect.Width%2A> des Rechtecks.  
+  
+ *Höhe*  
+ <xref:System.Double?displayProperty=nameWithType>  
+  
+ Ein nicht negativer Wert, der stellt die <xref:System.Windows.Rect.Height%2A> des Rechtecks.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie eine <xref:System.Windows.Rect> Struktur, die die Abmessungen und Position eines Rechtecks mit XAML angeben.  
+  
+ [!code-csharp[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/CSharp/RectExample.cs#rectexamplewholepage)]
+ [!code-vb[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/visualbasic/rectexample.vb#rectexamplewholepage)]
+ [!code-xaml[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/RectExample.xaml#rectexamplewholepage)]  
+  
+ Das folgende Beispiel zeigt, wie Sie per Code erstellen Sie ein Rechteck, und fügen es auf der Seite. Das Beispiel veranschaulicht auch zum Suchen von Größe und Informationen über das neue Rechteck und Rendern der Informationen in einem <xref:System.Windows.Controls.TextBox> unter dem Rechteck.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample1_csharp)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Rect (System.Windows.Size size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Size size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.#ctor(System.Windows.Size)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="size" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="size">Ein <see cref="T:System.Windows.Size" /> -Struktur, die Breite und Höhe des Rechtecks angibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Rect" /> -Struktur, die der angegebenen Größe und befindet sich unter (0,0).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen eines neuen <xref:System.Windows.Rect> -Struktur unter Verwendung der <xref:System.Windows.Rect.%23ctor%28System.Windows.Size%29> Konstruktor.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample2_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample2_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Rect (System.Windows.Point point1, System.Windows.Point point2);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Point point1, valuetype System.Windows.Point point2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.#ctor(System.Windows.Point,System.Windows.Point)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="point1" Type="System.Windows.Point" />
+        <Parameter Name="point2" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="point1">Der erste Punkt, den das neue Rechteck enthalten muss.</param>
+        <param name="point2">Der zweite Punkt, den das neue Rechteck enthalten muss.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Rect" /> -Struktur, die genau groß genug ist, für die zwei angegebenen Punkte enthalten ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen eines neuen <xref:System.Windows.Rect> -Struktur unter Verwendung der <xref:System.Windows.Rect.%23ctor%28System.Windows.Point%2CSystem.Windows.Point%29> Konstruktor.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample3_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample3_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Rect (System.Windows.Point location, System.Windows.Size size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Point location, valuetype System.Windows.Size size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.#ctor(System.Windows.Point,System.Windows.Size)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="location" Type="System.Windows.Point" />
+        <Parameter Name="size" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="location">Ein Punkt, der den Speicherort von der linken oberen Ecke des Rechtecks angibt.</param>
+        <param name="size">Ein <see cref="T:System.Windows.Size" /> -Struktur, die Breite und Höhe des Rechtecks angibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Rect" /> -Struktur, die den Speicherort angegebenen linken oberen Ecke und die angegebene Breite und Höhe hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen eines neuen <xref:System.Windows.Rect> -Struktur unter Verwendung der <xref:System.Windows.Rect.%23ctor%28System.Windows.Point%2CSystem.Windows.Size%29> Konstruktor.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample4_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample4_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Rect (System.Windows.Point point, System.Windows.Vector vector);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Point point, valuetype System.Windows.Vector vector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.#ctor(System.Windows.Point,System.Windows.Vector)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Point" />
+        <Parameter Name="vector" Type="System.Windows.Vector" />
+      </Parameters>
+      <Docs>
+        <param name="point">Der erste Punkt, die das Rechteck enthalten muss.</param>
+        <param name="vector">Der Betrag, um den angegebenen Punkt versetzt werden soll. Das resultierende Rechteck wird genau groß genug ist, um die beiden Punkte enthalten.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Rect" /> -Struktur, die genau groß genug ist, für den angegebenen Punkt und die Summe aus den angegebenen Punkt und dem angegebenen Vektor enthalten ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen eines neuen <xref:System.Windows.Rect> -Struktur unter Verwendung der <xref:System.Windows.Rect.%23ctor%28System.Windows.Point%2CSystem.Windows.Vector%29> Konstruktor.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample5_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample5_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Rect (double x, double y, double width, double height);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 x, float64 y, float64 width, float64 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.#ctor(System.Double,System.Double,System.Double,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="x" Type="System.Double" />
+        <Parameter Name="y" Type="System.Double" />
+        <Parameter Name="width" Type="System.Double" />
+        <Parameter Name="height" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die x-Koordinate der linken oberen Ecke des Rechtecks.</param>
+        <param name="y">Die y-Koordinate der linken oberen Ecke des Rechtecks.</param>
+        <param name="width">Die Breite des Rechtecks.</param>
+        <param name="height">Die Höhe des Rechtecks.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Rect" /> -Struktur, die den angegebenen X-Koordinate, y-Koordinate, Breite und Höhe hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen eines neuen <xref:System.Windows.Rect> -Struktur unter Verwendung der <xref:System.Windows.Rect.%23ctor%28System.Double%2CSystem.Double%2CSystem.Double%2CSystem.Double%29> Konstruktor.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample6_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample6_csharp)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="width" />ist ein negativer Wert.  
+  
+ - oder -   
+  
+ <paramref name="height" />ist ein negativer Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Bottom">
+      <MemberSignature Language="C#" Value="public double Bottom { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Bottom" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Rect.Bottom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der y-Achse die Unterseite des Rechtecks ab.</summary>
+        <value>Der Wert der y-Achse des unteren Rands des Rechtecks. Wenn das Rechteck leer ist, ist der Wert <see cref="F:System.Double.NegativeInfinity" /> .</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wert der y-Achse die Unterseite des Rechtecks ist gleich der Summe der <xref:System.Windows.Rect.Y%2A> und <xref:System.Windows.Rect.Height%2A> Eigenschaften.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie per Code erstellen Sie ein Rechteck, und fügen es auf der Seite. Das Beispiel veranschaulicht auch zum Suchen von Größe und Informationen über das neue Rechteck und Rendern der Informationen in einem <xref:System.Windows.Controls.TextBox> unter dem Rechteck.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BottomLeft">
+      <MemberSignature Language="C#" Value="public System.Windows.Point BottomLeft { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Point BottomLeft" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Rect.BottomLeft" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Position der unteren linken Ecke des Rechtecks ab</summary>
+        <value>Die Position von der unteren linken Ecke des Rechtecks.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Position von der unteren linken Ecke des Rechtecks ist gleich (<xref:System.Windows.Rect.X%2A>, <xref:System.Windows.Rect.Y%2A>  +  <xref:System.Windows.Rect.Height%2A>).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie per Code erstellen Sie ein Rechteck, und fügen es auf der Seite. Das Beispiel veranschaulicht auch zum Suchen von Größe und Informationen über das neue Rechteck und Rendern der Informationen in einem <xref:System.Windows.Controls.TextBox> unter dem Rechteck.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BottomRight">
+      <MemberSignature Language="C#" Value="public System.Windows.Point BottomRight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Point BottomRight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Rect.BottomRight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Position der unteren rechten Ecke des Rechtecks ab.</summary>
+        <value>Die Position von der unteren rechten Ecke des Rechtecks.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Position von der unteren rechten Ecke des Rechtecks ist gleich (<xref:System.Windows.Rect.X%2A> + <xref:System.Windows.Rect.Width%2A>, <xref:System.Windows.Rect.Y%2A>  +  <xref:System.Windows.Rect.Height%2A>).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie per Code erstellen Sie ein Rechteck, und fügen es auf der Seite. Das Beispiel veranschaulicht auch zum Suchen von Größe und Informationen über das neue Rechteck und Rendern der Informationen in einem <xref:System.Windows.Controls.TextBox> unter dem Rechteck.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Windows.Point point);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(valuetype System.Windows.Point point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Contains(System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="point">Der Punkt, um zu überprüfen.</param>
+        <summary>Gibt an, ob das Rechteck angegebenen Punkt enthält.</summary>
+        <returns>
+          <see langword="true" />Wenn das Rechteck angegebenen Punkt enthält. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Rect.Contains%28System.Windows.Point%29> Methode, um zu bestimmen, ob das Rechteck angegebenen enthält <xref:System.Windows.Point>.  
+  
+ [!code-csharp[RectExamples_snip#ContainsExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#containsexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Windows.Rect rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(valuetype System.Windows.Rect rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Contains(System.Windows.Rect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Windows.Rect" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Das zu überprüfende Rechteck.</param>
+        <summary>Gibt an, ob das Rechteck des angegebenen Rechtecks enthält.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="rect" /> ist vollständig im Rechteck enthalten ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Rect.Contains%28System.Windows.Rect%29> Methode, um zu bestimmen, ob ein Rechteck in einem anderen Rechteck enthalten ist.  
+  
+ [!code-csharp[RectExamples_snip#ContainsExample2_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#containsexample2_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (double x, double y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(float64 x, float64 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Contains(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Double" />
+        <Parameter Name="y" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die X-Koordinate des Punkts, der überprüft werden soll.</param>
+        <param name="y">Die y-Koordinate des Punkts, der überprüft werden soll.</param>
+        <summary>Gibt an, ob das Rechteck den angegebenen x- und y-Koordinate enthält.</summary>
+        <returns>
+          <see langword="true" />Wenn (<paramref name="x" />, <paramref name="y" />) wird durch das Rechteck enthalten ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Rect.Contains%28System.Double%2CSystem.Double%29> Methode, um zu bestimmen, ob das Rechteck der durch die angegebenen x- und y-Koordinate angegebenen Punkt enthält.  
+  
+ [!code-csharp[RectExamples_snip#ContainsExample3_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#containsexample3_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static System.Windows.Rect Empty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Rect Empty" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Rect.Empty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen speziellen Wert, der ein Rechteck ohne Position oder Bereich darstellt.</summary>
+        <value>Das leere Rechteck, besitzt <see cref="P:System.Windows.Rect.X" /> und <see cref="P:System.Windows.Rect.Y" /> Eigenschaftswerte des <see cref="F:System.Double.PositiveInfinity" />, und verfügt über <see cref="P:System.Windows.Rect.Width" /> und <see cref="P:System.Windows.Rect.Height" /> Eigenschaftswerte des <see cref="F:System.Double.NegativeInfinity" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vermeiden Sie mathematische Berechnungen im Zusammenhang mit leeren Rechtecke an. Da beide <xref:System.Windows.Rect.X%2A> und <xref:System.Windows.Rect.Y%2A> unendliche Werte, Prozessor, die Vorgänge sind von diesen Operationen erheblich beeinträchtigt werden. Vergleiche, die im Zusammenhang mit diesen Werten wirkt sich nicht auf Leistung der Anwendung aus.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Das Objekt, das aktuelle Rechteck verglichen werden soll.</param>
+        <summary>Gibt an, ob das angegebene Objekt gleich dem aktuellen Rechteck ist.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="o" /> ist ein <see cref="T:System.Windows.Rect" /> und hat die gleiche <see cref="P:System.Windows.Rect.Location" /> und <see cref="P:System.Windows.Rect.Size" /> Werte wie das aktuelle Rechteck; anderenfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang überprüft auf Objektgleichheit.  
+  
+ In diesem Vergleich, zwei Instanzen von <xref:System.Double.NaN?displayProperty=nameWithType> als gleich betrachtet werden.  
+  
+> [!NOTE]
+>  Position und Abmessungen des Rechtecks sind durch beschrieben <xref:System.Double> Werte. Da <xref:System.Double> Werte abnehmen können, wenn Sie bearbeitet, fehlschlagen, ein Vergleich zwischen zwei Werten, die logisch gleich sind.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Rect.Equals%28System.Object%29> Methode, um zu bestimmen, ob ein Rechteck mit einem angegebenen Objekt identisch ist.  
+  
+ [!code-csharp[RectExamples_snip#EqualsExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#equalsexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Windows.Rect value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(valuetype System.Windows.Rect value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Equals(System.Windows.Rect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Rect" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Rechteck, das aktuelle Rechteck verglichen werden soll.</param>
+        <summary>Gibt an, ob das angegebene Rechteck und das aktuelle Rechteck gleich ist.</summary>
+        <returns>
+          <see langword="true" />Wenn das angegebene Rechteck die gleiche hat <see cref="P:System.Windows.Rect.Location" /> und <see cref="P:System.Windows.Rect.Size" /> Werte wie das aktuelle Rechteck; anderenfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang überprüft auf Objektgleichheit.  
+  
+ In diesem Vergleich, zwei Instanzen von <xref:System.Double.NaN?displayProperty=nameWithType> als gleich betrachtet werden.  
+  
+> [!NOTE]
+>  Position und Abmessungen des Rechtecks sind durch beschrieben <xref:System.Double> Werte. Da <xref:System.Double> Werte abnehmen können, wenn Sie bearbeitet, fehlschlagen, ein Vergleich zwischen zwei Werten, die logisch gleich sind.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Rect.Equals%28System.Windows.Rect%29> Methode, um zu bestimmen, ob ein Rechteck mit einem angegebenen Rechteck identisch ist.  
+  
+ [!code-csharp[RectExamples_snip#EqualsExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#equalsexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public static bool Equals (System.Windows.Rect rect1, System.Windows.Rect rect2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Equals(valuetype System.Windows.Rect rect1, valuetype System.Windows.Rect rect2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Equals(System.Windows.Rect,System.Windows.Rect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect1" Type="System.Windows.Rect" />
+        <Parameter Name="rect2" Type="System.Windows.Rect" />
+      </Parameters>
+      <Docs>
+        <param name="rect1">Das erste Rechteck, verglichen werden soll.</param>
+        <param name="rect2">Das zweite Rechteck, verglichen werden soll.</param>
+        <summary>Gibt an, ob die angegebenen Rechtecke gleich sind.</summary>
+        <returns>
+          <see langword="true" />Wenn Rechtecke identischem <see cref="P:System.Windows.Rect.Location" /> und <see cref="P:System.Windows.Rect.Size" /> Werte; anderenfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang überprüft auf Objektgleichheit.  
+  
+ In diesem Vergleich, zwei Instanzen von <xref:System.Double.NaN?displayProperty=nameWithType> als gleich betrachtet werden.  
+  
+> [!NOTE]
+>  Position und Abmessungen des Rechtecks sind durch beschrieben <xref:System.Double> Werte. Da <xref:System.Double> Werte abnehmen können, wenn Sie bearbeitet, fehlschlagen, ein Vergleich zwischen zwei Werten, die logisch gleich sind.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Rect.Equals%28System.Windows.Rect%2CSystem.Windows.Rect%29> Methode, um zu bestimmen, ob ein Rechteck gleich einem anderen ist.  
+  
+ [!code-csharp[RectExamples_snip#EqualsExample2_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#equalsexample2_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen Hashcode für das Rechteck.</summary>
+        <returns>Ein Hashcode für die aktuelle <see cref="T:System.Windows.Rect" /> Struktur.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode erstellt einen Hashcode mithilfe der <xref:System.Windows.Rect.X%2A>, <xref:System.Windows.Rect.Y%2A>, <xref:System.Windows.Rect.Width%2A>, und <xref:System.Windows.Rect.Height%2A> Eigenschaftswerte.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Rect.GetHashCode%2A> den Hashcode der abzurufenden Methode eine <xref:System.Windows.Rect>.  
+  
+ [!code-csharp[RectExamples_snip#GetHashCodeExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#gethashcodeexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public double Height { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Height" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Rect.Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Höhe des Rechtecks ab oder legt diese fest.</summary>
+        <value>Eine positive Zahl, die die Höhe des Rechtecks darstellt. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Rect.Empty%2A> Rechteck hat eine <xref:System.Windows.Rect.Height%2A> von <xref:System.Double.NegativeInfinity>. Die <xref:System.Windows.Rect.Empty%2A> Rechteck ist schreibgeschützt; die <xref:System.Windows.Rect.Height%2A> kann nicht geändert werden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie eine <xref:System.Windows.Rect> Struktur, die die Abmessungen und Position eines Rechtecks mit XAML angeben.  
+  
+ [!code-csharp[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/CSharp/RectExample.cs#rectexamplewholepage)]
+ [!code-vb[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/visualbasic/rectexample.vb#rectexamplewholepage)]
+ [!code-xaml[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/RectExample.xaml#rectexamplewholepage)]  
+  
+ Das folgende Beispiel zeigt, wie Sie per Code erstellen Sie ein Rechteck, und fügen es auf der Seite. Das Beispiel veranschaulicht auch zum Suchen von Größe und Informationen über das neue Rechteck und Rendern der Informationen in einem <xref:System.Windows.Controls.TextBox> unter dem Rechteck.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <see cref="P:System.Windows.Rect.Height" />ein negativer Wert festgelegt ist.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.Windows.Rect.Height" />festgelegt auf ein <see cref="P:System.Windows.Rect.Empty" /> Rechteck.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Inflate">
+      <MemberSignature Language="C#" Value="public void Inflate (System.Windows.Size size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Inflate(valuetype System.Windows.Size size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Inflate(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="size" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="size">Gibt den Umfang, um das Rechteck zu erweitern. Die <see cref="T:System.Windows.Size" /> Struktur <see cref="P:System.Windows.Size.Width" /> -Eigenschaft gibt die Menge des Rechtecks heraufsetzen <see cref="P:System.Windows.Rect.Left" /> und <see cref="P:System.Windows.Rect.Right" /> Eigenschaften. Die <see cref="T:System.Windows.Size" /> Struktur <see cref="P:System.Windows.Size.Height" /> -Eigenschaft gibt die Menge des Rechtecks heraufsetzen <see cref="P:System.Windows.Rect.Top" /> und <see cref="P:System.Windows.Rect.Bottom" /> Eigenschaften.</param>
+        <summary>Erweitert das Rechteck unter Verwendung des angegebenen <see cref="T:System.Windows.Size" />, in allen Richtungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Rect.Width%2A> des sich ergebenden Rechtecks vergrößert wird zweimal die <xref:System.Windows.Size.Width%2A> des angegebenen <xref:System.Windows.Size> -Struktur, da sowohl der linken und rechten Seite des Rechtecks vergrößert werden. Entsprechend der <xref:System.Windows.Rect.Height%2A> des sich ergebenden Rechtecks vergrößert wird zweimal die <xref:System.Windows.Size.Height%2A> des angegebenen <xref:System.Windows.Size> Struktur.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Rect.Inflate%28System.Windows.Size%29> Methode, um die Größe eines Rechtecks erhöhen.  
+  
+ [!code-csharp[RectExamples_snip#InflateExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#inflateexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Diese Methode wird aufgerufen, auf die <see cref="P:System.Windows.Rect.Empty" /> Rechteck.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Inflate">
+      <MemberSignature Language="C#" Value="public void Inflate (double width, double height);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Inflate(float64 width, float64 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Inflate(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="width" Type="System.Double" />
+        <Parameter Name="height" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="width">Der Betrag, zum Erweitern oder Verkleinern der linken und rechten Seiten des Rechtecks.</param>
+        <param name="height">Der Betrag, zum Erweitern oder verkleinern die oberen und unteren Seite des Rechtecks.</param>
+        <summary>Erweitert oder verkleinert das Rechteck unter Verwendung der angegebenen Breite und Höhe Werte in allen Richtungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Rect.Width%2A> der resultierende Rechteck wird erhöht oder verringert zweimal die angegebene Breite Offset, da sie auf der linken und der rechten Seite des Rechtecks angewendet wird. Entsprechend der <xref:System.Windows.Rect.Height%2A> des sich ergebenden Rechtecks erhöht oder verringert wird zweimal in der angegebenen Höhe.  
+  
+ Wenn die angegebene Breite oder Höhe des Rechtecks durch mehr als die aktuelle verkleinert <xref:System.Windows.Rect.Width%2A> oder <xref:System.Windows.Rect.Height%2A>– und dem Rechteck, das einen negativen Bereich – das Rechteck wird die <xref:System.Windows.Rect.Empty%2A> Rechteck.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Rect.Inflate%28System.Double%2CSystem.Double%29> Methode, um die Größe eines Rechtecks zu ändern.  
+  
+ [!code-csharp[RectExamples_snip#InflateExample2_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#inflateexample2_csharp)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Diese Methode wird aufgerufen, auf die <see cref="P:System.Windows.Rect.Empty" /> Rechteck.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Inflate">
+      <MemberSignature Language="C#" Value="public static System.Windows.Rect Inflate (System.Windows.Rect rect, System.Windows.Size size);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Rect Inflate(valuetype System.Windows.Rect rect, valuetype System.Windows.Size size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Inflate(System.Windows.Rect,System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Windows.Rect" />
+        <Parameter Name="size" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Die <see cref="T:System.Windows.Rect" /> Struktur zu ändern.</param>
+        <param name="size">Gibt den Umfang, um das Rechteck zu erweitern. Die <see cref="T:System.Windows.Size" /> Struktur <see cref="P:System.Windows.Size.Width" /> -Eigenschaft gibt die Menge des Rechtecks heraufsetzen <see cref="P:System.Windows.Rect.Left" /> und <see cref="P:System.Windows.Rect.Right" /> Eigenschaften. Die <see cref="T:System.Windows.Size" /> Struktur <see cref="P:System.Windows.Size.Height" /> -Eigenschaft gibt die Menge des Rechtecks heraufsetzen <see cref="P:System.Windows.Rect.Top" /> und <see cref="P:System.Windows.Rect.Bottom" /> Eigenschaften.</param>
+        <summary>Gibt das Rechteck, das aus dem angegebene Rechteck durch das angegebene erweitern führt <see cref="T:System.Windows.Size" />, in allen Richtungen.</summary>
+        <returns>Das resultierende Rechteck.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Rect.Width%2A> des sich ergebenden Rechtecks vergrößert wird zweimal die <xref:System.Windows.Size.Width%2A> des angegebenen <xref:System.Windows.Size> -Struktur, da sowohl der linken und rechten Seite des Rechtecks vergrößert werden. Entsprechend der <xref:System.Windows.Rect.Height%2A> des sich ergebenden Rechtecks vergrößert wird zweimal die <xref:System.Windows.Size.Height%2A> des angegebenen <xref:System.Windows.Size> Struktur.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Rect.Inflate%28System.Windows.Rect%2CSystem.Windows.Size%29> Methode, um die Größe eines Rechtecks zu ändern.  
+  
+ [!code-csharp[RectExamples_snip#InflateExample3_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#inflateexample3_csharp)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="rect" />ist ein <see cref="P:System.Windows.Rect.Empty" /> Rechteck.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Inflate">
+      <MemberSignature Language="C#" Value="public static System.Windows.Rect Inflate (System.Windows.Rect rect, double width, double height);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Rect Inflate(valuetype System.Windows.Rect rect, float64 width, float64 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Inflate(System.Windows.Rect,System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Windows.Rect" />
+        <Parameter Name="width" Type="System.Double" />
+        <Parameter Name="height" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Die <see cref="T:System.Windows.Rect" /> Struktur zu ändern.</param>
+        <param name="width">Der Betrag, zum Erweitern oder Verkleinern der linken und rechten Seiten des Rechtecks.</param>
+        <param name="height">Der Betrag, zum Erweitern oder verkleinern die oberen und unteren Seite des Rechtecks.</param>
+        <summary>Erstellt ein Rechteck, das Erweitern oder verkleinern das angegebene Rechteck der angegebenen Breite und Höhe Werte, in allen Richtungen ergibt.</summary>
+        <returns>Das resultierende Rechteck.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Rect.Width%2A> der resultierende Rechteck wird erhöht oder verringert zweimal die angegebene Breite Offset, da sie auf der linken und der rechten Seite des Rechtecks angewendet wird. Entsprechend der <xref:System.Windows.Rect.Height%2A> des sich ergebenden Rechtecks erhöht oder verringert wird zweimal in der angegebenen Höhe.  
+  
+ Wenn die angegebenen Modifizierer Breite oder Höhe des Rechtecks durch mehr als die aktuelle verkleinert <xref:System.Windows.Rect.Width%2A> oder <xref:System.Windows.Rect.Height%2A>– und dem Rechteck, das einen negativen Bereich – Methodenrückgabe <xref:System.Windows.Rect.Empty%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Rect.Inflate%28System.Windows.Rect%2CSystem.Double%2CSystem.Double%29> Methode, um die Größe eines Rechtecks zu ändern.  
+  
+ [!code-csharp[RectExamples_snip#InflateExample4_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#inflateexample4_csharp)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="rect" />ist ein <see cref="P:System.Windows.Rect.Empty" /> Rechteck.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public void Intersect (System.Windows.Rect rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Intersect(valuetype System.Windows.Rect rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Intersect(System.Windows.Rect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Windows.Rect" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Das Rechteck für die Überschneidung mit dem aktuellen Rechteck.</param>
+        <summary>Sucht die Schnittmenge des aktuellen Rechtecks und des angegebenen Rechtecks und speichert das Ergebnis wie das aktuelle Rechteck.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn keine Überschneidung vorhanden ist, wird das aktuelle Rechteck <xref:System.Windows.Rect.Empty%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Rect.Intersect%28System.Windows.Rect%29> -Methode ermittelt die Schnittmenge zweier Rechtecke und speichern Sie das Ergebnis als Rechteck.  
+  
+ [!code-csharp[RectExamples_snip#IntersectExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#intersectexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public static System.Windows.Rect Intersect (System.Windows.Rect rect1, System.Windows.Rect rect2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Rect Intersect(valuetype System.Windows.Rect rect1, valuetype System.Windows.Rect rect2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Intersect(System.Windows.Rect,System.Windows.Rect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect1" Type="System.Windows.Rect" />
+        <Parameter Name="rect2" Type="System.Windows.Rect" />
+      </Parameters>
+      <Docs>
+        <param name="rect1">Das erste Rechteck, verglichen werden soll.</param>
+        <param name="rect2">Das zweite Rechteck, verglichen werden soll.</param>
+        <summary>Gibt die Schnittmenge der angegebenen Rechtecke zurück.</summary>
+        <returns>Die Schnittmenge der beiden Rechtecke oder <see cref="P:System.Windows.Rect.Empty" /> Wenn keine Überschneidung vorhanden ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Rect.Intersect%28System.Windows.Rect%2CSystem.Windows.Rect%29> Methode, um die Schnittmenge zweier Rechtecke zu ermitteln.  
+  
+ [!code-csharp[RectExamples_snip#IntersectExample2_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#intersectexample2_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IntersectsWith">
+      <MemberSignature Language="C#" Value="public bool IntersectsWith (System.Windows.Rect rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IntersectsWith(valuetype System.Windows.Rect rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.IntersectsWith(System.Windows.Rect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Windows.Rect" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Das zu überprüfende Rechteck.</param>
+        <summary>Gibt an, ob das angegebene Rechteck mit dem aktuellen Rechteck überschneidet.</summary>
+        <returns>
+          <see langword="true" />Wenn das angegebene Rechteck mit dem aktuellen Rechteck überschneidet; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Rect.IntersectsWith%2A> Methode, um zu bestimmen, ob die Schnittmenge zweier Rechtecke.  
+  
+ [!code-csharp[RectExamples_snip#IntersectsWithExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#intersectswithexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public bool IsEmpty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEmpty" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Rect.IsEmpty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Rechteck der <see cref="P:System.Windows.Rect.Empty" /> Rechteck.</summary>
+        <value>
+          <see langword="true" />Wenn das Rechteck ist der <see cref="P:System.Windows.Rect.Empty" /> Rechteck ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft nicht auf 0 (null) Bereich getestet. ein Rechteck mit 0 (null) ist nicht notwendigerweise die <xref:System.Windows.Rect.Empty%2A> Rechteck. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Windows.Rect.Empty%2A>-Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="public double Left { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Left" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Rect.Left" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den x-Achsen-Wert des linken Rands des Rechtecks ab.</summary>
+        <value>Der Wert der x-Achse der linken Seite des Rechtecks.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Abrufen dieser Eigenschaft entspricht dem Abrufen der <xref:System.Windows.Rect.X%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie per Code erstellen Sie ein Rechteck, und fügen es auf der Seite. Das Beispiel veranschaulicht auch zum Suchen von Größe und Informationen über das neue Rechteck und Rendern der Informationen in einem <xref:System.Windows.Controls.TextBox> unter dem Rechteck.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="public System.Windows.Point Location { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Point Location" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Rect.Location" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Position der oberen linken Ecke des Rechtecks fest.</summary>
+        <value>Die Position von der linken oberen Ecke des Rechtecks. Der Standardwert ist (0, 0).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Position der oberen linken Ecke des Rechtecks ist gleich (<xref:System.Windows.Rect.X%2A>, <xref:System.Windows.Rect.Y%2A>).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie eine <xref:System.Windows.Rect> Struktur, die die Abmessungen und Position eines Rechtecks mit XAML angeben.  
+  
+ [!code-csharp[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/CSharp/RectExample.cs#rectexamplewholepage)]
+ [!code-vb[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/visualbasic/rectexample.vb#rectexamplewholepage)]
+ [!code-xaml[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/RectExample.xaml#rectexamplewholepage)]  
+  
+ Das folgende Beispiel zeigt, wie Sie per Code erstellen Sie ein Rechteck, und fügen es auf der Seite. Das Beispiel veranschaulicht auch zum Suchen von Größe und Informationen über das neue Rechteck und Rendern der Informationen in einem <xref:System.Windows.Controls.TextBox> unter dem Rechteck.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.Windows.Rect.Location" />festgelegt auf ein <see cref="P:System.Windows.Rect.Empty" /> Rechteck.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Offset">
+      <MemberSignature Language="C#" Value="public void Offset (System.Windows.Vector offsetVector);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Offset(valuetype System.Windows.Vector offsetVector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Offset(System.Windows.Vector)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offsetVector" Type="System.Windows.Vector" />
+      </Parameters>
+      <Docs>
+        <param name="offsetVector">Ein Vektor, der die horizontalen und vertikalen verwendeten Mengen, um das Rechteck verschieben angibt.</param>
+        <summary>Verschiebt das Rechteck mit dem angegebenen Vektor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufrufen dieser Methode für ein leeres Rechteck (<xref:System.Windows.Rect.Empty%2A?displayProperty=nameWithType>) ist nicht zulässig.  
+  
+ Beachten Sie, dass der Aufruf der <xref:System.Windows.Rect.Offset%2A> Methode haben nur Auswirkungen, wenn Sie ändern können, die <xref:System.Windows.Rect.X%2A> und <xref:System.Windows.Rect.Y%2A> direkt auf Eigenschaften. Da <xref:System.Windows.Rect> ist ein Werttyp ist, wenn Sie verweisen auf eine <xref:System.Windows.Rect> Objekt mithilfe einer Eigenschaft oder der Indexer zu verwenden, erhalten Sie eine Kopie des Objekts, keinen Verweis auf das Objekt. Wenn Sie versuchen, ändern Sie <xref:System.Windows.Rect.X%2A> oder <xref:System.Windows.Rect.Y%2A> auf eine Eigenschaft oder einen Indexer ein Compilerfehler auftritt. Auf ähnliche Weise aufrufen <xref:System.Windows.Rect.Offset%2A> auf die Eigenschaft oder der Indexer ändert sich nicht das zugrunde liegende Objekt.  Wenn Sie den Wert ändern möchten eine <xref:System.Windows.Rect> , auf den als eine Eigenschaft oder einen Indexer verwiesen wird, erstellen Sie ein neues <xref:System.Windows.Rect>, ändern Sie die Felder, und weisen Sie ihm anschließend die <xref:System.Windows.Rect> zurück an die Eigenschaft oder der Indexer.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Rect.Offset%28System.Windows.Vector%29> Methode, um die Position eines Rechtecks zu ändern.  
+  
+ [!code-csharp[RectExamples_snip#OffsetExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#offsetexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Diese Methode wird aufgerufen, auf die <see cref="P:System.Windows.Rect.Empty" /> Rechteck.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Offset">
+      <MemberSignature Language="C#" Value="public void Offset (double offsetX, double offsetY);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Offset(float64 offsetX, float64 offsetY) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Offset(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offsetX" Type="System.Double" />
+        <Parameter Name="offsetY" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="offsetX">Der Betrag, um das Rechteck horizontal verschoben werden soll.</param>
+        <param name="offsetY">Der Betrag, um das Rechteck vertikal verschoben werden soll.</param>
+        <summary>Verschiebt das Rechteck anhand der angegebenen horizontalen und vertikalen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufrufen dieser Methode für ein leeres Rechteck (<xref:System.Windows.Rect.Empty%2A?displayProperty=nameWithType>) ist nicht zulässig.  
+  
+ Beachten Sie, dass der Aufruf der <xref:System.Windows.Rect.Offset%2A> Methode haben nur Auswirkungen, wenn Sie ändern können, die <xref:System.Windows.Rect.X%2A> und <xref:System.Windows.Rect.Y%2A> direkt auf Eigenschaften. Da <xref:System.Windows.Rect> ist ein Werttyp ist, wenn Sie verweisen auf eine <xref:System.Windows.Rect> Objekt mithilfe einer Eigenschaft oder der Indexer zu verwenden, erhalten Sie eine Kopie des Objekts, keinen Verweis auf das Objekt. Wenn Sie versuchen, ändern Sie <xref:System.Windows.Rect.X%2A> oder <xref:System.Windows.Rect.Y%2A> auf eine Eigenschaft oder einen Indexer ein Compilerfehler auftritt. Auf ähnliche Weise aufrufen <xref:System.Windows.Rect.Offset%2A> auf die Eigenschaft oder der Indexer ändert sich nicht das zugrunde liegende Objekt.  Wenn Sie den Wert ändern möchten eine <xref:System.Windows.Rect> , auf den als eine Eigenschaft oder einen Indexer verwiesen wird, erstellen Sie ein neues <xref:System.Windows.Rect>, ändern Sie die Felder, und weisen Sie ihm anschließend die <xref:System.Windows.Rect> zurück an die Eigenschaft oder der Indexer.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Rect.Offset%28System.Double%2CSystem.Double%29> Methode, um die Position eines Rechtecks zu ändern.  
+  
+ [!code-csharp[RectExamples_snip#OffsetExample2_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#offsetexample2_csharp)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Diese Methode wird aufgerufen, auf die <see cref="P:System.Windows.Rect.Empty" /> Rechteck.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Offset">
+      <MemberSignature Language="C#" Value="public static System.Windows.Rect Offset (System.Windows.Rect rect, System.Windows.Vector offsetVector);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Rect Offset(valuetype System.Windows.Rect rect, valuetype System.Windows.Vector offsetVector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Offset(System.Windows.Rect,System.Windows.Vector)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Windows.Rect" />
+        <Parameter Name="offsetVector" Type="System.Windows.Vector" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Das ursprüngliche Rechteck.</param>
+        <param name="offsetVector">Ein Vektor, der die horizontalen und vertikalen Offsets für das neue Rechteck angibt.</param>
+        <summary>Gibt ein Rechteck, das offset aus dem angegebenen Rechteck mit dem angegebenen Vektor zurück.</summary>
+        <returns>Das resultierende Rechteck.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufruf dieser Methode ein leeres Rechteck (<xref:System.Windows.Rect.Empty%2A?displayProperty=nameWithType>) ist nicht zulässig.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Rect.Offset%28System.Windows.Rect%2CSystem.Windows.Vector%29> Methode, um die Position eines Rechtecks zu ändern.  
+  
+ [!code-csharp[RectExamples_snip#OffsetExample3_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#offsetexample3_csharp)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="rect" /> ist <see cref="P:System.Windows.Rect.Empty" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Offset">
+      <MemberSignature Language="C#" Value="public static System.Windows.Rect Offset (System.Windows.Rect rect, double offsetX, double offsetY);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Rect Offset(valuetype System.Windows.Rect rect, float64 offsetX, float64 offsetY) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Offset(System.Windows.Rect,System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Windows.Rect" />
+        <Parameter Name="offsetX" Type="System.Double" />
+        <Parameter Name="offsetY" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Das Rechteck verschieben.</param>
+        <param name="offsetX">Der horizontale Offset für das neue Rechteck.</param>
+        <param name="offsetY">Der vertikale Offset für das neue Rechteck.</param>
+        <summary>Gibt ein Rechteck, das versetzt ist aus dem angegebenen Rechteck mit der angegebenen horizontalen und vertikalen Mengen zurück.</summary>
+        <returns>Das resultierende Rechteck.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufruf dieser Methode ein leeres Rechteck (<xref:System.Windows.Rect.Empty%2A?displayProperty=nameWithType>) ist nicht zulässig.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Rect.Offset%28System.Windows.Rect%2CSystem.Double%2CSystem.Double%29> Methode, um die Position eines Rechtecks zu ändern.  
+  
+ [!code-csharp[RectExamples_snip#OffsetExample4_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#offsetexample4_csharp)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="rect" /> ist <see cref="P:System.Windows.Rect.Empty" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.Rect rect1, System.Windows.Rect rect2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Windows.Rect rect1, valuetype System.Windows.Rect rect2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.op_Equality(System.Windows.Rect,System.Windows.Rect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect1" Type="System.Windows.Rect" />
+        <Parameter Name="rect2" Type="System.Windows.Rect" />
+      </Parameters>
+      <Docs>
+        <param name="rect1">Das erste Rechteck, verglichen werden soll.</param>
+        <param name="rect2">Das zweite Rechteck, verglichen werden soll.</param>
+        <summary>Vergleicht zwei Rechtecke exakten Gleichheit.</summary>
+        <returns>
+          <see langword="true" />Wenn Rechtecke identischem <see cref="P:System.Windows.Rect.Location" /> und <see cref="P:System.Windows.Rect.Size" /> Werte; anderenfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang überprüft auf Objektgleichheit.  
+  
+ In diesem Vergleich, zwei Instanzen von <xref:System.Double.NaN?displayProperty=nameWithType> als gleich betrachtet werden.  
+  
+> [!NOTE]
+>  Position und Abmessungen des Rechtecks sind durch beschrieben <xref:System.Double> Werte. Da <xref:System.Double> Werte abnehmen können, wenn Sie bearbeitet, fehlschlagen, ein Vergleich zwischen zwei Werten, die logisch gleich sind.  
+  
+ Die entsprechende Methode für diesen Operator ist.<xref:System.Windows.Rect.Equals%28System.Windows.Rect%2CSystem.Windows.Rect%29?displayProperty=nameWithType>  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Rect.op_Equality%2A> Operator, um zu bestimmen, ob zwei Rechtecke genau gleich sind.  
+  
+ [!code-csharp[RectExamples_snip#OverloadedEqualityOperatorExample](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#overloadedequalityoperatorexample)]
+ [!code-vb[RectExamples_snip#OverloadedEqualityOperatorExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RectExamples_snip/visualbasic/rectexample.vb#overloadedequalityoperatorexample)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.Rect rect1, System.Windows.Rect rect2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Windows.Rect rect1, valuetype System.Windows.Rect rect2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.op_Inequality(System.Windows.Rect,System.Windows.Rect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect1" Type="System.Windows.Rect" />
+        <Parameter Name="rect2" Type="System.Windows.Rect" />
+      </Parameters>
+      <Docs>
+        <param name="rect1">Das erste Rechteck, verglichen werden soll.</param>
+        <param name="rect2">Das zweite Rechteck, verglichen werden soll.</param>
+        <summary>Vergleicht zwei Rechtecke auf Ungleichheit.</summary>
+        <returns>
+          <see langword="true" />Wenn Rechtecke identisch keine <see cref="P:System.Windows.Rect.Location" /> und <see cref="P:System.Windows.Rect.Size" /> Werte; anderenfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang prüft auf Ungleichheit Objekt.  
+  
+ In diesem Vergleich, zwei Instanzen von <xref:System.Double.NaN?displayProperty=nameWithType> als gleich betrachtet werden.  
+  
+> [!NOTE]
+>  Position und Abmessungen des Rechtecks sind durch beschrieben <xref:System.Double> Werte. Da <xref:System.Double> Werte abnehmen können, wenn Sie bearbeitet, fehlschlagen, ein Vergleich zwischen zwei Werten, die logisch gleich sind.  
+  
+ Die entsprechende Methode für diesen Operator ist.<xref:System.Windows.Rect.Equals%28System.Windows.Rect%2CSystem.Windows.Rect%29?displayProperty=nameWithType>  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Rect.op_Inequality%2A> Operator, um zu bestimmen, ob zwei Rechtecke nicht genau gleich sind.  
+  
+ [!code-csharp[RectExamples_snip#OverloadedInequalityOperatorExample](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#overloadedinequalityoperatorexample)]
+ [!code-vb[RectExamples_snip#OverloadedInequalityOperatorExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RectExamples_snip/visualbasic/rectexample.vb#overloadedinequalityoperatorexample)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static System.Windows.Rect Parse (string source);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Rect Parse(string source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Parse(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="source">Die Zeichenfolgendarstellung des Rechtecks, das Format "X, y, Breite, Höhe".</param>
+        <summary>Erstellt ein neues Rechteck aus der Darstellung der angegebenen Zeichenfolge.</summary>
+        <returns>Das resultierende Rechteck.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Rect.Parse%2A> Methode, um eine Darstellung eines Rechtecks in Konvertieren einer <xref:System.Windows.Rect> Struktur.  
+  
+ [!code-csharp[RectExamples_snip#ParseExample](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#parseexample)]
+ [!code-vb[RectExamples_snip#ParseExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RectExamples_snip/visualbasic/rectexample.vb#parseexample)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="public double Right { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Right" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Rect.Right" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den x-Achsen-Wert, der der rechten Seite des Rechtecks ab.</summary>
+        <value>Der Wert der x-Achse der rechten Seite des Rechtecks.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der x-Achsen-Wert, der der rechten Seite des Rechtecks ist gleich der Summe der <xref:System.Windows.Rect.X%2A> und <xref:System.Windows.Rect.Width%2A> Eigenschaften.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie per Code erstellen Sie ein Rechteck, und fügen es auf der Seite. Das Beispiel veranschaulicht auch zum Suchen von Größe und Informationen über das neue Rechteck und Rendern der Informationen in einem <xref:System.Windows.Controls.TextBox> unter dem Rechteck.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scale">
+      <MemberSignature Language="C#" Value="public void Scale (double scaleX, double scaleY);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Scale(float64 scaleX, float64 scaleY) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Scale(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scaleX" Type="System.Double" />
+        <Parameter Name="scaleY" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="scaleX">Der Skalierungsfaktor in X-Richtung.</param>
+        <param name="scaleY">Der Skalierungsfaktor in y-Richtung.</param>
+        <summary>Multipliziert die Größe des aktuellen Rechtecks mit den angegebenen x- und y Werte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Rect.Scale%2A> Methode, um die Breite und Höhe eines Rechtecks um den angegebenen Betrag zu multiplizieren.  
+  
+ [!code-csharp[RectExamples_snip#ScaleExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#scaleexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public System.Windows.Size Size { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Size Size" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Rect.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, das die Breite und Höhe des Rechtecks.</summary>
+        <value>Ein <see cref="T:System.Windows.Size" /> -Struktur, die Breite und Höhe des Rechtecks angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie eine <xref:System.Windows.Rect> Struktur, die die Abmessungen und Position eines Rechtecks mit XAML angeben.  
+  
+ [!code-csharp[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/CSharp/RectExample.cs#rectexamplewholepage)]
+ [!code-vb[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/visualbasic/rectexample.vb#rectexamplewholepage)]
+ [!code-xaml[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/RectExample.xaml#rectexamplewholepage)]  
+  
+ Das folgende Beispiel zeigt, wie Sie per Code erstellen Sie ein Rechteck, und fügen es auf der Seite. Das Beispiel veranschaulicht auch zum Suchen von Größe und Informationen über das neue Rechteck und Rendern der Informationen in einem <xref:System.Windows.Controls.TextBox> unter dem Rechteck.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.Windows.Rect.Size" />festgelegt auf ein <see cref="P:System.Windows.Rect.Empty" /> Rechteck.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IFormattable.ToString">
+      <MemberSignature Language="C#" Value="string IFormattable.ToString (string format, IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.IFormattable.ToString(string format, class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.System#IFormattable#ToString(System.String,System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="format">Das zu verwendende Format.  
+  
+ - oder -   
+  
+ Ein null-Verweis (<see langword="Nothing" /> in Visual Basic), verwenden Sie das Standardformat für den Typ des definiert die <see cref="T:System.IFormattable" /> Implementierung.</param>
+        <param name="provider">Der zum Formatieren des Werts zu verwendende Anbieter.  
+  
+ - oder -   
+  
+ Ein null-Verweis (<see langword="Nothing" /> in Visual Basic) um die Zahlenformatinformationen aus dem aktuellen Gebietsschema des Betriebssystems abzurufen.</param>
+        <summary>Formatiert den Wert der aktuellen Instanz mit dem angegebenen Format.</summary>
+        <returns>Eine Zeichenfolgendarstellung des Rechtecks.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Rect>-Instanz in eine <xref:System.IFormattable>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Top">
+      <MemberSignature Language="C#" Value="public double Top { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Top" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Rect.Top" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Position der y-Achse des oberen Rands des Rechtecks ab.</summary>
+        <value>Die y-Achsen-Position des oberen Rands des Rechtecks.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Abrufen dieser Eigenschaft entspricht dem Abrufen der <xref:System.Windows.Rect.Y%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie per Code erstellen Sie ein Rechteck, und fügen es auf der Seite. Das Beispiel veranschaulicht auch zum Suchen von Größe und Informationen über das neue Rechteck und Rendern der Informationen in einem <xref:System.Windows.Controls.TextBox> unter dem Rechteck.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TopLeft">
+      <MemberSignature Language="C#" Value="public System.Windows.Point TopLeft { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Point TopLeft" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Rect.TopLeft" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Position der oberen linken Ecke des Rechtecks ab.</summary>
+        <value>Die Position von der linken oberen Ecke des Rechtecks.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Position der oberen linken Ecke des Rechtecks ist gleich (<xref:System.Windows.Rect.X%2A>, <xref:System.Windows.Rect.Y%2A>).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie per Code erstellen Sie ein Rechteck, und fügen es auf der Seite. Das Beispiel veranschaulicht auch zum Suchen von Größe und Informationen über das neue Rechteck und Rendern der Informationen in einem <xref:System.Windows.Controls.TextBox> unter dem Rechteck.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TopRight">
+      <MemberSignature Language="C#" Value="public System.Windows.Point TopRight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Point TopRight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Rect.TopRight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Position der oberen rechten Ecke des Rechtecks ab.</summary>
+        <value>Die Position von der oberen rechten Ecke des Rechtecks.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Position der oberen rechten Ecke des Rechtecks ist gleich (<xref:System.Windows.Rect.X%2A> + <xref:System.Windows.Rect.Width%2A>, <xref:System.Windows.Rect.Y%2A>).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie per Code erstellen Sie ein Rechteck, und fügen es auf der Seite. Das Beispiel veranschaulicht auch zum Suchen von Größe und Informationen über das neue Rechteck und Rendern der Informationen in einem <xref:System.Windows.Controls.TextBox> unter dem Rechteck.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolgendarstellung des Rechtecks zurück.</summary>
+        <returns>Eine Zeichenfolgendarstellung des aktuellen Rechtecks. Die Zeichenfolge weist folgende Form: "<see cref="P:System.Windows.Rect.X" />,<see cref="P:System.Windows.Rect.Y" />,<see cref="P:System.Windows.Rect.Width" />,<see cref="P:System.Windows.Rect.Height" />".</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Rect.ToString> eine Zeichenfolgendarstellung der abzurufenden Methode eine <xref:System.Windows.Rect> Struktur.  
+  
+ [!code-csharp[RectExamples_snip#ToStringExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#tostringexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ToString(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.ToString(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Kulturspezifische Formatierungsinformationen.</param>
+        <summary>Gibt eine Zeichenfolgendarstellung des Rechtecks mit den angegebenen Formatanbieter zurück.</summary>
+        <returns>Eine Zeichenfolgendarstellung der aktuellen Rechteck, das durch den angegebenen Formatanbieter bestimmt wird.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public void Transform (System.Windows.Media.Matrix matrix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Transform(valuetype System.Windows.Media.Matrix matrix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Transform(System.Windows.Media.Matrix)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matrix" Type="System.Windows.Media.Matrix" />
+      </Parameters>
+      <Docs>
+        <param name="matrix">Eine Matrix, die die anzuwendende Transformation angibt.</param>
+        <summary>Anwenden der angegebenen Matrix transformiert das Rechteck.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Rect.Transform%28System.Windows.Media.Matrix%29> -Methode zum Transformieren einer <xref:System.Windows.Rect> Struktur mithilfe einer <xref:System.Windows.Media.Matrix>.  
+  
+ [!code-csharp[RectExamples_snip#TransformExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#transformexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public static System.Windows.Rect Transform (System.Windows.Rect rect, System.Windows.Media.Matrix matrix);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Rect Transform(valuetype System.Windows.Rect rect, valuetype System.Windows.Media.Matrix matrix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Transform(System.Windows.Rect,System.Windows.Media.Matrix)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Windows.Rect" />
+        <Parameter Name="matrix" Type="System.Windows.Media.Matrix" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Ein Rechteck, das die Grundlage für die Transformation ist.</param>
+        <param name="matrix">Eine Matrix, die die anzuwendende Transformation angibt.</param>
+        <summary>Gibt das Rechteck, das sich aus dem Anwenden der angegebenen Matrix in das angegebene Rechteck ergibt.</summary>
+        <returns>Das Rechteck, das aus der Operation ergibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Rect.Transform%28System.Windows.Rect%2CSystem.Windows.Media.Matrix%29> Methode zum Erstellen eines neuen <xref:System.Windows.Rect> -Struktur, die aus der Anwendung führt eine <xref:System.Windows.Media.Matrix> auf ein vorhandenes Rechteck.  
+  
+ [!code-csharp[RectExamples_snip#TransformExample2_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#transformexample2_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public void Union (System.Windows.Point point);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Union(valuetype System.Windows.Point point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Union(System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="point">Der Punkt enthalten.</param>
+        <summary>Erweitert das aktuelle Rechteck genau genug auf den angegebenen Punkt enthalten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Rect.Union%28System.Windows.Point%29> Methode, um das aktuelle Rechteck genau genug erweitert werden, enthalten einen bestimmten <xref:System.Windows.Point>.  
+  
+ [!code-csharp[RectExamples_snip#UnionExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#unionexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public void Union (System.Windows.Rect rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Union(valuetype System.Windows.Rect rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Union(System.Windows.Rect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Windows.Rect" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Das Rechteck eingeschlossen werden soll.</param>
+        <summary>Erweitert das aktuelle Rechteck genau genug auf den angegebene Rechteck enthalten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Rect.Union%28System.Windows.Rect%29> Methode, um das aktuelle Rechteck genau genug zu erweitern, auf das angegebene Rechteck enthalten.  
+  
+ [!code-csharp[RectExamples_snip#UnionExample2_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#unionexample2_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public static System.Windows.Rect Union (System.Windows.Rect rect, System.Windows.Point point);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Rect Union(valuetype System.Windows.Rect rect, valuetype System.Windows.Point point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Union(System.Windows.Rect,System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Windows.Rect" />
+        <Parameter Name="point" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Das Rechteck eingeschlossen werden soll.</param>
+        <param name="point">Der Punkt enthalten.</param>
+        <summary>Erstellt ein Rechteck, das genau groß genug ist, für das angegebene Rechteck und den angegebenen Punkt enthalten ist.</summary>
+        <returns>Ein Rechteck, das genau groß genug ist, für das angegebene Rechteck und den angegebenen Punkt enthalten ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Rect.Union%28System.Windows.Rect%2CSystem.Windows.Point%29> Methode, um ein Rechteck zu erstellen, die genau groß genug ist, für einen angegebenen Rechteck enthalten ist und eine angegebene <xref:System.Windows.Point>.  
+  
+ [!code-csharp[RectExamples_snip#UnionExample3_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#unionexample3_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public static System.Windows.Rect Union (System.Windows.Rect rect1, System.Windows.Rect rect2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Rect Union(valuetype System.Windows.Rect rect1, valuetype System.Windows.Rect rect2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Union(System.Windows.Rect,System.Windows.Rect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect1" Type="System.Windows.Rect" />
+        <Parameter Name="rect2" Type="System.Windows.Rect" />
+      </Parameters>
+      <Docs>
+        <param name="rect1">Das erste Rechteck eingeschlossen werden soll.</param>
+        <param name="rect2">Das zweite Rechteck eingeschlossen werden soll.</param>
+        <summary>Erstellt ein Rechteck, das genau groß genug ist, für die beiden angegebenen Rechtecke enthalten ist.</summary>
+        <returns>Das resultierende Rechteck.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Rect.Union%28System.Windows.Rect%2CSystem.Windows.Rect%29> Methode, um ein Rechteck zu erstellen, die genau groß genug ist, für die zwei angegebenen Rechtecke enthalten ist.  
+  
+ [!code-csharp[RectExamples_snip#UnionExample4_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#unionexample4_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public double Width { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Width" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Rect.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Breite des Rechtecks ab bzw. legt diese fest.</summary>
+        <value>Eine positive Zahl, die die Breite des Rechtecks darstellt. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Rect.Empty%2A> Rechteck hat eine <xref:System.Windows.Rect.Width%2A> von <xref:System.Double.NegativeInfinity>. Die <xref:System.Windows.Rect.Empty%2A> Rechteck ist schreibgeschützt; die <xref:System.Windows.Rect.Width%2A> kann nicht geändert werden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie eine <xref:System.Windows.Rect> Struktur, die die Abmessungen und Position eines Rechtecks mit XAML angeben.  
+  
+ [!code-csharp[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/CSharp/RectExample.cs#rectexamplewholepage)]
+ [!code-vb[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/visualbasic/rectexample.vb#rectexamplewholepage)]
+ [!code-xaml[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/RectExample.xaml#rectexamplewholepage)]  
+  
+ Das folgende Beispiel zeigt, wie Sie per Code erstellen Sie ein Rechteck, und fügen es auf der Seite. Das Beispiel veranschaulicht auch zum Suchen von Größe und Informationen über das neue Rechteck und Rendern der Informationen in einem <xref:System.Windows.Controls.TextBox> unter dem Rechteck.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <see cref="P:System.Windows.Rect.Width" />ein negativer Wert festgelegt ist.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.Windows.Rect.Width" />festgelegt auf ein <see cref="P:System.Windows.Rect.Empty" /> Rechteck.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="X">
+      <MemberSignature Language="C#" Value="public double X { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 X" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Rect.X" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert der x-Achse der linken Seite des Rechtecks.</summary>
+        <value>Der Wert der x-Achse der linken Seite des Rechtecks.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Abrufen dieser Eigenschaft entspricht dem Abrufen der <xref:System.Windows.Rect.Left%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie eine <xref:System.Windows.Rect> Struktur, die die Abmessungen und Position eines Rechtecks mit XAML angeben.  
+  
+ [!code-csharp[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/CSharp/RectExample.cs#rectexamplewholepage)]
+ [!code-vb[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/visualbasic/rectexample.vb#rectexamplewholepage)]
+ [!code-xaml[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/RectExample.xaml#rectexamplewholepage)]  
+  
+ Das folgende Beispiel zeigt, wie Sie per Code erstellen Sie ein Rechteck, und fügen es auf der Seite. Das Beispiel veranschaulicht auch zum Suchen von Größe und Informationen über das neue Rechteck und Rendern der Informationen in einem <xref:System.Windows.Controls.TextBox> unter dem Rechteck.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.Windows.Rect.X" />festgelegt auf ein <see cref="P:System.Windows.Rect.Empty" /> Rechteck.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Y">
+      <MemberSignature Language="C#" Value="public double Y { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Y" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Rect.Y" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert der y-Achse des oberen Randes des Rechtecks.</summary>
+        <value>Der Wert der y-Achse des oberen Randes des Rechtecks.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Abrufen dieser Eigenschaft entspricht dem Abrufen der <xref:System.Windows.Rect.Top%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie eine <xref:System.Windows.Rect> Struktur, die die Abmessungen und Position eines Rechtecks mit XAML angeben.  
+  
+ [!code-csharp[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/CSharp/RectExample.cs#rectexamplewholepage)]
+ [!code-vb[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/visualbasic/rectexample.vb#rectexamplewholepage)]
+ [!code-xaml[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/RectExample.xaml#rectexamplewholepage)]  
+  
+ Das folgende Beispiel zeigt, wie Sie per Code erstellen Sie ein Rechteck, und fügen es auf der Seite. Das Beispiel veranschaulicht auch zum Suchen von Größe und Informationen über das neue Rechteck und Rendern der Informationen in einem <xref:System.Windows.Controls.TextBox> unter dem Rechteck.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.Windows.Rect.Y" />festgelegt auf ein <see cref="P:System.Windows.Rect.Empty" /> Rechteck.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

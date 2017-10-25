@@ -1,0 +1,89 @@
+<Type Name="UnicodeDecodingConformance" FullName="System.Net.Configuration.UnicodeDecodingConformance">
+  <TypeSignature Language="C#" Value="public enum UnicodeDecodingConformance" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed UnicodeDecodingConformance extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Configuration.UnicodeDecodingConformance" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Steuert die Interpretation von Unicode-Zeichen von der <see cref="Overload:System.Net.WebUtility.HtmlDecode" /> Methoden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen wie die Unicode-Zeichen bestimmt sind im HTML-codiert werden, finden Sie unter [Zeichen im Markup und CSS schützt](http://go.microsoft.com/fwlink/?LinkId=256607).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Auto">
+      <MemberSignature Language="C#" Value="Auto" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Configuration.UnicodeDecodingConformance Auto = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Configuration.UnicodeDecodingConformance.Auto" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Configuration.UnicodeDecodingConformance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden Sie die automatische Verhalten. Das Decodieren Verhalten richtet sich nach der aktuellen Anwendung Zielframework. Für [!INCLUDE[net_v45](~/includes/net-v45-md.md)] und später ist der Unicode-Codierung Decodierung strict.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Compat">
+      <MemberSignature Language="C#" Value="Compat" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Configuration.UnicodeDecodingConformance Compat = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Configuration.UnicodeDecodingConformance.Compat" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Configuration.UnicodeDecodingConformance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden Sie-kompatibles Verhalten. Gibt an, dass eingehende Daten nicht auf Gültigkeit überprüft werden, bevor decodiert wird. Beispielsweise wird die Eingabezeichenfolge "&amp;Amp; #xD84C;" als U + D84C, also eine nicht paarweise zugeordneten Ersatzzeichen decodiert werden würde. Darüber hinaus der Decoder nicht interpretieren kann Codepunkte der SMP, wenn sie also als HTML-codierte Ersatzzeichen dargestellt sind der Inputstring "&amp;#144308;" in der Ausgabezeichenfolge würde "&amp;#144308;".</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Loose">
+      <MemberSignature Language="C#" Value="Loose" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Configuration.UnicodeDecodingConformance Loose = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Configuration.UnicodeDecodingConformance.Loose" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Configuration.UnicodeDecodingConformance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden Sie Lose Verhalten. Ähnlich wie <see cref="F:System.Net.Configuration.UnicodeDecodingConformance.Compat" /> , gibt es keine Gültigkeit überprüft, aber der Decoder auch Codepunkte versteht. Die Eingabezeichenfolge "&amp;#144308;" ordnungsgemäß in das Zeichen U + 233B4 decodieren würde. Diese Option soll maximale Interoperabilität zu gewährleisten, wenn der Decoder der Formatelemente nicht weiß, den Anbieter verwendet, um die codierte Zeichenfolge zu generieren.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Strict">
+      <MemberSignature Language="C#" Value="Strict" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Configuration.UnicodeDecodingConformance Strict = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Configuration.UnicodeDecodingConformance.Strict" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Configuration.UnicodeDecodingConformance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verwenden Sie Verhalten. Gibt an, dass die eingehende codierten Daten auf Gültigkeit überprüft werden, bevor decodiert wird. Beispielsweise wird die Eingabezeichenfolge "&amp;#144308;" als U + 233B4, jedoch wird die Eingabezeichenfolge decodieren würde "&amp;#xD84C;&amp; #xDFB4;"nicht ordnungsgemäß decodiert werden. Bereits decodiert Daten in der Zeichenfolge werden nicht auf Gültigkeit überprüft. Beispielsweise führt wird die Eingabezeichenfolge "\ud800" eine Ausgabezeichenfolge von "\ud800", zu wie das Ersatzzeichen bereits decodiert während der Decodierung, übersprungen wird, obwohl er nicht paarweise zugeordneten ist.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

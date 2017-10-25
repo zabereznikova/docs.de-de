@@ -1,0 +1,105 @@
+<Type Name="TableAttribute" FullName="System.Data.Linq.Mapping.TableAttribute">
+  <TypeSignature Language="C#" Value="public sealed class TableAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TableAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Linq.Mapping.TableAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Linq</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Kennzeichnet eine Klasse als Entitätsklasse, die einer Datenbanktabelle zugeordnet ist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie dieses Attribut, um eine Klasse als Entität zu kennzeichnen, die einer Datenbanktabelle oder einer Ansicht zugeordnet ist. [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]behandelt Klassen, die die <xref:System.Data.Linq.Mapping.TableAttribute> Attribut als permanente Klassen.  
+  
+ [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]unterstützt nur einzelne Tabelle zuordnen. D. h. eine Entitätsklasse muss genau eine Datenbanktabelle zugeordnet werden, und Sie können keine Datenbanktabelle auf mehrere Klassen zuordnen, zur gleichen Zeit.  
+  
+ Können Sie die <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> Eigenschaft von der <xref:System.Data.Linq.Mapping.TableAttribute> Attribut, um einen Namen für die Tabelle angeben, und Sie können optional den Schemanamen einen Tabellennamen zu qualifizieren. Wenn Sie einen Namen nicht mit angeben der <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> -Eigenschaft, der Tabellenname wird davon ausgegangen, dass der Name der Klasse identisch sein.  
+  
+## <a name="schema-qualified-names"></a>Schema-qualifizierte Namen  
+ Sie können optional den Schemanamen verwenden, um einen Tabellennamen zu qualifizieren. Standardmäßig wird das Token links neben dem ersten Zeitraum in der <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> Zeichenfolge gilt den Schemanamen an. Der Rest des Namens gilt der Tabellenname sein. Der Anbieter den Tabellennamen nach Bedarf in Anführungszeichen ein. Z. B. die [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] Datenanbieter für SQL Server stellt sicher, dass Klammern mindestens verwendet werden, wo sie benötigt werden.  
+  
+> [!NOTE]
+>  In einigen Fällen müssen Sie Attribute explizit Anführungszeichen setzen, da SQL Server-Anbieter automatisch Anführungszeichen kann nicht. Die folgende Tabelle zeigt einige Beispiele.  
+  
+|Case|Beispiel: Bezeichnername|Beispiel: Die erwartete Zeichenfolge in Attributen|Andernfalls...|  
+|----------|------------------------------|--------------------------------------------|----------------|  
+|Schemaname enthält einen Punkt|Schema: "A.B"<br /><br /> Tabelle: "C"|"[A.B]. C"|Die erste Periode wird davon ausgegangen, dass um der Schemaname nicht mit dem Tabellennamen zu trennen.|  
+|Schematabelle/Name beginnt mit`@`|"@SomeName"|"[@SomeName]"|Angenommen, dass ein Parametername sein.|  
+|Schema beginnt mit `[` und endet mit`]`|"[Schema.Table]"|"[[Schema]. [Table]]]"|Der Bezeichner ohne Anführungszeichen ähnelt einen Bezeichner in Anführungszeichen.|  
+|Tabelle beginnt mit `[` und endet mit`]`|"[Table]"|"[[Table]]]"|Der Bezeichner ohne Anführungszeichen ähnelt einen Bezeichner in Anführungszeichen.|  
+  
+   
+  
+## Examples  
+ [!code-csharp[DLinqCustomize#1](~/samples/snippets/csharp/VS_Snippets_Data/DLinqCustomize/cs/Program.cs#1)]
+ [!code-vb[DLinqCustomize#1](~/samples/snippets/visualbasic/VS_Snippets_Data/DLinqCustomize/vb/Module1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TableAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Mapping.TableAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Linq.Mapping.TableAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.TableAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Tabelle oder Sicht.</summary>
+        <value>Standardmäßig ist der Wert identisch mit den Namen der Klasse.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie einen Namen nicht mit angeben <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A>, wird davon ausgegangen, dass der Tabellenname mit dem Klassennamen identisch sein.  
+  
+> [!NOTE]
+>  Ein Schemaname können optional um den Tabellennamen (z. B. Schema3.Table5) zu kennzeichnen. Standardmäßig wird das Token auf der linken Seite des ersten Punkts in der <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> Zeichenfolge gilt den Schemanamen und dem Rest der Tabellenname sein.  
+  
+ Im folgenden Beispiel die Standardnamen für die Tabelle, `Customer`, geändert wird, um `Customers`.  
+  
+   
+  
+## Examples  
+ [!code-csharp[DLinqCustomize#1](~/samples/snippets/csharp/VS_Snippets_Data/DLinqCustomize/cs/Program.cs#1)]
+ [!code-vb[DLinqCustomize#1](~/samples/snippets/visualbasic/VS_Snippets_Data/DLinqCustomize/vb/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

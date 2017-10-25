@@ -1,0 +1,601 @@
+<Type Name="CounterType" FullName="System.Diagnostics.PerformanceData.CounterType">
+  <TypeSignature Language="C#" Value="public enum CounterType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CounterType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.PerformanceData.CounterType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Definiert die möglichen Typen von Indikatoren. Jeder Leistungsindikator ist einen Leistungsindikator vom Typ zugewiesen werden. Der Leistungsindikator vom Typ bestimmt, wie die Leistungsindikatorendaten berechnet, Mittelwert gebildet und dargestellt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ausführliche Informationen zu den in dieser Enumeration aufgeführten Typen, siehe Abschnitt Counter Types der [Windows Server 2003 Deployment Kit](http://go.microsoft.com/FWLink/?LinkId=84422).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AverageBase">
+      <MemberSignature Language="C#" Value="AverageBase" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType AverageBase = int32(1073939458)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.AverageBase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Zähler wird verwendet, wie die Basisdaten (Nenner) in die Berechnung der Zeit oder Anzahl für die Mittelwerte der <see cref="F:System.Diagnostics.PerformanceData.CounterType.AverageCount64" /> und <see cref="F:System.Diagnostics.PerformanceData.CounterType.AverageTimer32" /> Leistungsindikator Typen. Dieser Leistungsindikator vom Typ erfasst nur den letzten erfassten Wert an. (Siehe den PERF_AVERAGE_BASE Indikatortyp im Deployment Kit).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AverageCount64">
+      <MemberSignature Language="C#" Value="AverageCount64" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType AverageCount64 = int32(1073874176)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.AverageCount64" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Leistungsindikator vom Typ zeigt, wie viele Elemente verarbeitet werden, im Durchschnitt während eines Vorgangs. Indikatoren dieses Typs zeigen das Verhältnis der Elemente, die verarbeitet wird (z. B. gesendete Bytes), auf die Anzahl der durchgeführten Operationen. Das Verhältnis wird berechnet, indem die Anzahl der Elemente, die während des letzten Zeitintervalls auf die Anzahl der Vorgänge, die im letzten Zeitraum abgeschlossen verarbeitet. (Siehe den PERF_AVERAGE_BULK Indikatortyp im Deployment Kit).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AverageTimer32">
+      <MemberSignature Language="C#" Value="AverageTimer32" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType AverageTimer32 = int32(805438464)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.AverageTimer32" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Leistungsindikator vom Typ misst die durchschnittliche Zeit, die es dauert, bis ein Prozess oder einen Vorgang abgeschlossen. Indikatoren dieses Typs zeigen ein Verhältnis von die gesamte verstrichene Zeit des Abtastintervalls für die Anzahl von Prozessen oder Vorgänge, die während dieser Zeit abgeschlossen. Dieser Leistungsindikator vom Typ misst Zeit in Ticks der Systemuhr. (Siehe den PERF_AVERAGE_TIMER Indikatortyp im Deployment Kit).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Delta32">
+      <MemberSignature Language="C#" Value="Delta32" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType Delta32 = int32(4195328)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.Delta32" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Leistungsindikator vom Typ zeigt die Änderung des gemessenen Attributs zwischen den beiden letzten Abtastintervalls an. (Siehe den PERF_COUNTER_DELTA-Indikatortyp im Deployment Kit).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Delta64">
+      <MemberSignature Language="C#" Value="Delta64" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType Delta64 = int32(4195584)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.Delta64" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Leistungsindikator vom Typ zeigt die Änderung des gemessenen Attributs zwischen den beiden letzten Abtastintervalls an. Es ist identisch mit der <see cref="F:System.Diagnostics.PerformanceData.CounterType.Delta32" /> Leistungsindikator Typ, mit dem Unterschied, dass er größere Felder verwendet, um größere Werte zu berücksichtigen. (Siehe die PERF_COUNTER_LARGE_DELTA-Indikatortyp im Deployment Kit).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ElapsedTime">
+      <MemberSignature Language="C#" Value="ElapsedTime" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType ElapsedTime = int32(807666944)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.ElapsedTime" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Leistungsindikator vom Typ zeigt die Gesamtzeit zwischen wann die Komponente oder ein Prozess gestartet wurde und die Uhrzeit an, wenn dieser Wert berechnet wird. (Siehe den PERF_ELAPSED_TIME-Indikatortyp im Deployment Kit).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LargeQueueLength">
+      <MemberSignature Language="C#" Value="LargeQueueLength" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType LargeQueueLength = int32(4523264)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.LargeQueueLength" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Leistungsindikator vom Typ überwacht die durchschnittliche Länge von einer Warteschlange auf eine Ressource mit der Zeit. Indikatoren dieses Typs zeigen den Unterschied zwischen der Länge von Warteschlangen Belegung während der letzten beiden Abtastintervallen, dividiert durch die Dauer des Intervalls. Dieser Leistungsindikator vom Typ entspricht der <see cref="F:System.Diagnostics.PerformanceData.CounterType.QueueLength" /> Leistungsindikator Typ, mit dem Unterschied, dass er größere Felder verwendet, um größere Werte zu berücksichtigen. (Siehe den PERF_COUNTER_LARGE_QUEUELEN_TYPE-Indikatortyp im Deployment Kit).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MultiTimerBase">
+      <MemberSignature Language="C#" Value="MultiTimerBase" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType MultiTimerBase = int32(1107494144)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.MultiTimerBase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Anzahl der Elemente, die als Stichprobe verwendet. Es wird als Nenner bei der Berechnung verwendet, zum Abrufen der Durchschnittswert auf die Elemente geprüft modellbasiert Zeitangaben mehrerer, aber ähnlich, Elemente. Dieser Typ unterstützt die folgenden Indikatortypen: <see cref="F:System.Diagnostics.PerformanceData.CounterType.MultiTimerPercentageActive" />, <see cref="F:System.Diagnostics.PerformanceData.CounterType.MultiTimerPercentageNotActive" />, <see cref="F:System.Diagnostics.PerformanceData.CounterType.MultiTimerPercentageActive100Ns" />, und <see cref="F:System.Diagnostics.PerformanceData.CounterType.MultiTimerPercentageNotActive100Ns" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MultiTimerPercentageActive">
+      <MemberSignature Language="C#" Value="MultiTimerPercentageActive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType MultiTimerPercentageActive = int32(574686464)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.MultiTimerPercentageActive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Leistungsindikator ist ein Multitimer. Multitimer sammeln Daten von mehr als eine Instanz einer Komponente, z. B. Prozessor oder Datenträger. Indikatoren dieses Typs zeigen die aktive Zeit eine oder mehrere Komponenten als Prozentsatz der Gesamtzeit während des Abtastintervalls an. Da der Zähler die Aktivitätszeit der Komponenten, die gleichzeitig aufzeichnet, kann der resultierende Prozentsatz 100 Prozent überschreiten. Dieser Leistungsindikator vom Typ unterscheidet sich von <see cref="F:System.Diagnostics.PerformanceData.CounterType.MultiTimerPercentageActive100Ns" /> in dieser Zeit in Ticks des der Zeitgeber für die Systemleistung und nicht in Einheiten von 100 Nanosekunden gemessen. (Siehe den PERF_COUNTER_MULTI_TIMER Indikatortyp im Deployment Kit).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MultiTimerPercentageActive100Ns">
+      <MemberSignature Language="C#" Value="MultiTimerPercentageActive100Ns" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType MultiTimerPercentageActive100Ns = int32(575735040)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.MultiTimerPercentageActive100Ns" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Leistungsindikator vom Typ zeigt die aktive Zeit eine oder mehrere Komponenten als Prozentsatz der Gesamtzeit während des Abtastintervalls an. Sie misst die Zeit in Einheiten von 100 Nanosekunden. Dieser Leistungsindikator ist ein Multitimer. Multitimer sind mehr als eine Instanz einer Komponente, z. B. Prozessor oder Datenträger zu überwachen. (Siehe den PERF_100NSEC_MULTI_TIMER Indikatortyp im Deployment Kit).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MultiTimerPercentageNotActive">
+      <MemberSignature Language="C#" Value="MultiTimerPercentageNotActive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType MultiTimerPercentageNotActive = int32(591463680)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.MultiTimerPercentageNotActive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Leistungsindikator vom Typ zeigt die aktive Zeit eine oder mehrere Komponenten als Prozentsatz der Gesamtzeit während des Abtastintervalls an. Dieser Leistungsindikator vom Typ ist ein inverser Multitimer. Multitimer überwachen mehr als eine Instanz einer Komponente, z. B. Prozessor oder Datenträger. Inverse Indikatoren messen die Zeit, die eine Komponente nicht aktiv ist, und leiten die aktive Zeit aus dieser Messung. Dieser Indikator unterscheidet sich von <see cref="F:System.Diagnostics.PerformanceData.CounterType.MultiTimerPercentageNotActive100Ns" /> in dieser Zeit in Ticks des der Zeitgeber für die Systemleistung und nicht in Einheiten von 100 Nanosekunden gemessen. (Siehe den PERF_COUNTER_MULTI_TIMER_INV Indikatortyp im Deployment Kit).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MultiTimerPercentageNotActive100Ns">
+      <MemberSignature Language="C#" Value="MultiTimerPercentageNotActive100Ns" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType MultiTimerPercentageNotActive100Ns = int32(592512256)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.MultiTimerPercentageNotActive100Ns" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Leistungsindikator vom Typ zeigt die aktive Zeit eine oder mehrere Komponenten als Prozentsatz der Gesamtzeit während des Abtastintervalls an. Leistungsindikatoren der Time-Typ dieses Measure in Einheiten von 100 Nanosekunden. Dieser Leistungsindikator vom Typ ist ein inverser Multitimer. Multitimer sind mehr als eine Instanz einer Komponente, z. B. Prozessor oder Datenträger zu überwachen. Inverse Indikatoren messen die Zeit, die eine Komponente nicht aktiv ist und der inaktive Zeitmessung Aktivitätsdauer abgeleitet. (Siehe den PERF_100NSEC_MULTI_TIMER_INV Indikatortyp im Deployment Kit).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectSpecificTimer">
+      <MemberSignature Language="C#" Value="ObjectSpecificTimer" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType ObjectSpecificTimer = int32(543229184)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.ObjectSpecificTimer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser für 64-Bit-Indikatortyp ist ein Zeitgeber, der in objektspezifischen Einheiten anzeigt. (Siehe den PERF_OBJ_TIME_TIMER Indikatortyp im Deployment Kit).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PercentageActive">
+      <MemberSignature Language="C#" Value="PercentageActive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType PercentageActive = int32(541132032)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.PercentageActive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Leistungsindikator vom Typ zeigt die durchschnittliche Zeit, die eine Komponente als Prozentsatz des gesamten Abtastintervalls aktiv war. (Siehe den PERF_COUNTER_TIMER-Indikatortyp im Deployment Kit).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PercentageActive100Ns">
+      <MemberSignature Language="C#" Value="PercentageActive100Ns" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType PercentageActive100Ns = int32(542180608)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.PercentageActive100Ns" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Leistungsindikator vom Typ zeigt die aktive Zeit einer Komponente als Prozentsatz der gesamten verstrichene Zeit des Abtastintervalls an. Sie misst die Zeit in Einheiten von 100 Nanosekunden. Indikatoren dieses Typs sind konzipiert, um die Aktivität einer Komponente zu einem Zeitpunkt zu messen. (Siehe den PERF_100NSEC_TIMER-Indikatortyp im Deployment Kit).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PercentageNotActive">
+      <MemberSignature Language="C#" Value="PercentageNotActive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType PercentageNotActive = int32(557909248)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.PercentageNotActive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dies ist ein inverser Indikatortyp. Inverse Indikatoren messen die Zeit, die eine Komponente nicht aktiv ist, und leiten die aktive Zeit aus dieser Messung. Leistungsindikatoren dieses Typs anzuzeigen, die durchschnittliche prozentuale aktive Zeit, die während des Abtastintervalls beobachtet wird. Der Wert dieser Indikatoren wird berechnet, indem die Überwachung des Prozentsatz der Zeit, die der Dienst nicht aktiv war, und klicken Sie dann den Wert von 100 Prozent subtrahiert. Dieser Leistungsindikator vom Typ entspricht der <see cref="F:System.Diagnostics.PerformanceData.CounterType.PercentageNotActive100Ns" /> Leistungsindikator Typ, außer dass sie die Zeit in Ticks des der Zeitgeber für die Systemleistung und nicht in Einheiten von 100 Nanosekunden misst. (Siehe den PERF_COUNTER_TIMER_INV-Indikatortyp im Deployment Kit).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PercentageNotActive100Ns">
+      <MemberSignature Language="C#" Value="PercentageNotActive100Ns" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType PercentageNotActive100Ns = int32(558957824)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.PercentageNotActive100Ns" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Leistungsindikator vom Typ zeigt die durchschnittliche prozentuale Belegung während des Abtastintervalls Aktivitätszeit. Dies ist ein inverser Zähler. Inverse Indikatoren werden berechnet, durch die Überwachung des Prozentsatz der Zeit, die der Dienst nicht aktiv war, und klicken Sie dann den Wert von 100 Prozent subtrahiert. (Siehe den PERF_100NSEC_TIMER_INV-Indikatortyp im Deployment Kit).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PrecisionObjectSpecificTimer">
+      <MemberSignature Language="C#" Value="PrecisionObjectSpecificTimer" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType PrecisionObjectSpecificTimer = int32(543622400)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.PrecisionObjectSpecificTimer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Leistungsindikator vom Typ zeigt einen Wert, der zwei Werte von Leistungsindikatoren besteht: die Anzahl der verstrichenen Zeit des Ereignisses überwacht wird und das Intervall, in das Feld PerfFreq des Headers Objekt angegeben. Dieser Leistungsindikator vom Typ unterscheidet sich von anderen Leistungsindikator-Timer, da die Uhrzeit des Tick den Wert dieses Indikators um mögliche Unterschiede aufgrund der Latenzzeit im Funktionsaufruf eliminieren begleitet. Genauigkeit Indikatortypen werden verwendet, wenn Standardbetriebssystem Zeitgeber nicht vorhanden sind, die für exakte ablesen ermöglichen präzise genug sind. (Siehe den PERF_PRECISION_OBJECT_TIMER Indikatortyp im Deployment Kit).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PrecisionSystemTimer">
+      <MemberSignature Language="C#" Value="PrecisionSystemTimer" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType PrecisionSystemTimer = int32(541525248)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.PrecisionSystemTimer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Leistungsindikator vom Typ zeigt einen Wert, der zwei Werte von Leistungsindikatoren besteht: die Anzahl der verstrichenen Zeit des Ereignisses überwacht wird und das Intervall aus den Zeitgeber für die Systemleistung. Dieser Leistungsindikator vom Typ unterscheidet sich von anderen Leistungsindikator-Timer, da die Uhrzeit des Tick der Zählerwert begleitet eliminieren alle möglichen Unterschied aufgrund der Latenzzeit im Funktionsaufruf. Genauigkeit Indikatortypen werden verwendet, wenn Standardbetriebssystem Zeitgeber nicht vorhanden sind, die für exakte ablesen ermöglichen präzise genug sind. (Siehe die PERF_PRECISION_TIMER-Indikatortyp im Deployment Kit).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PrecisionTimer100Ns">
+      <MemberSignature Language="C#" Value="PrecisionTimer100Ns" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType PrecisionTimer100Ns = int32(542573824)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.PrecisionTimer100Ns" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Leistungsindikator vom Typ zeigt einen Wert, der zwei Werte von Leistungsindikatoren besteht: die Anzahl der verstrichenen Zeit des Ereignisses überwacht wird und "Uhrzeit" aus einem privaten Zeitgeber in den gleichen Einheiten. Sie misst die Zeit in Einheiten von 100 Nanosekunden. Dieser Leistungsindikator vom Typ unterscheidet sich von anderen Leistungsindikator-Timer, da die Uhrzeit des Tick den Wert dieses Indikators eliminieren alle möglichen Unterschied aufgrund der Latenzzeit im Funktionsaufruf begleitet. Genauigkeit Indikatortypen werden verwendet, wenn Standardbetriebssystem Zeitgeber nicht vorhanden sind, die für exakte ablesen ermöglichen präzise genug sind. (Siehe den PERF_PRECISION_100NS_TIMER Indikatortyp im Deployment Kit).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="QueueLength">
+      <MemberSignature Language="C#" Value="QueueLength" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType QueueLength = int32(4523008)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.QueueLength" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Leistungsindikator vom Typ wurde entwickelt, um die durchschnittliche Länge von einer Warteschlange auf eine Ressource mit der Zeit zu überwachen. Es zeigt den Unterschied zwischen der Länge von Warteschlangen Belegung während der letzten beiden Abtastintervallen dividiert durch die Dauer des Intervalls. (Siehe den PERF_COUNTER_QUEUELEN_TYPE Indikatortyp im Deployment Kit).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="QueueLength100Ns">
+      <MemberSignature Language="C#" Value="QueueLength100Ns" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType QueueLength100Ns = int32(5571840)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.QueueLength100Ns" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Leistungsindikator vom Typ misst die Länge der Warteschlange Warteschlangenlänge Produkt mit einer 100-Nanosekunden-Zeitbasis. (Siehe den PERF_COUNTER_100NS_QUEUELEN_TYPE-Indikatortyp im Deployment Kit).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="QueueLengthObjectTime">
+      <MemberSignature Language="C#" Value="QueueLengthObjectTime" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType QueueLengthObjectTime = int32(6620416)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.QueueLengthObjectTime" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Leistungsindikator vom Typ misst die Länge der Warteschlange Warteschlangenlänge Produkt mit einer objektspezifischen Zeitbasis. (Siehe die PERF_COUNTER_OBJ_QUEUELEN_TYPE-Indikatortyp im Deployment Kit).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RateOfCountPerSecond32">
+      <MemberSignature Language="C#" Value="RateOfCountPerSecond32" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType RateOfCountPerSecond32 = int32(272696320)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.RateOfCountPerSecond32" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Leistungsindikator vom Typ zeigt die durchschnittliche Anzahl der pro Sekunde des Messintervalls durchgeführten Operationen. Indikatoren dieses Typs messen die Zeit in Ticks der Systemuhr. (Siehe den PERF_COUNTER_COUNTER Indikatortyp im Deployment Kit).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RateOfCountPerSecond64">
+      <MemberSignature Language="C#" Value="RateOfCountPerSecond64" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType RateOfCountPerSecond64 = int32(272696576)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.RateOfCountPerSecond64" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Leistungsindikator vom Typ zeigt die durchschnittliche Anzahl der pro Sekunde des Messintervalls durchgeführten Operationen. Indikatoren dieses Typs messen die Zeit in Ticks der Systemuhr. Dieser Leistungsindikator vom Typ entspricht der <see cref="F:System.Diagnostics.PerformanceData.CounterType.RateOfCountPerSecond32" /> aufweisen, aber er größere Felder verwendet, um größere Werte zu berücksichtigen. (Siehe den PERF_COUNTER_BULK_COUNT-Indikatortyp im Deployment Kit).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RawBase32">
+      <MemberSignature Language="C#" Value="RawBase32" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType RawBase32 = int32(1073939459)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.RawBase32" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Leistungsindikator vom Typ erfasst nur den letzten erfassten Wert an. Der Wert wird als der Nenner eines Indikators verwendet, die einen arithmetischen Bruch darstellt. Dieser Typ unterstützt die <see cref="F:System.Diagnostics.PerformanceData.CounterType.RawFraction32" /> Leistungsindikator Typ. (Siehe den PERF_RAW_BASE Indikatortyp im Deployment Kit).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RawBase64">
+      <MemberSignature Language="C#" Value="RawBase64" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType RawBase64 = int32(1073939712)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.RawBase64" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Leistungsindikator vom Typ erfasst den letzten erfassten Wert an. Es ist identisch mit der <see cref="F:System.Diagnostics.PerformanceData.CounterType.RawBase32" /> Leistungsindikator Typ, mit dem Unterschied, dass er größere Felder verwendet, um größere Werte zu berücksichtigen. Dieser Typ unterstützt die <see cref="F:System.Diagnostics.PerformanceData.CounterType.RawFraction64" /> Leistungsindikator Typ. (Siehe den PERF_LARGE_RAW_BASE-Indikatortyp im Deployment Kit).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RawData32">
+      <MemberSignature Language="C#" Value="RawData32" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType RawData32 = int32(65536)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.RawData32" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Leistungsindikator vom Typ zeigt nur den letzten erfassten Wert an. Durchschnittswert nicht angezeigt. (Siehe den PERF_COUNTER_RAWCOUNT-Indikatortyp im Deployment Kit).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RawData64">
+      <MemberSignature Language="C#" Value="RawData64" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType RawData64 = int32(65792)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.RawData64" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Leistungsindikator vom Typ zeigt den letzten erfassten Wert nur, keinen Durchschnitt an. Es ist identisch mit der <see cref="F:System.Diagnostics.PerformanceData.CounterType.RawData32" /> Leistungsindikator Typ, mit dem Unterschied, dass er größere Felder verwendet, um größere Werte zu berücksichtigen. (Siehe den PERF_COUNTER_LARGE_RAWCOUNT-Indikatortyp im Deployment Kit).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RawDataHex32">
+      <MemberSignature Language="C#" Value="RawDataHex32" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType RawDataHex32 = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.RawDataHex32" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Leistungsindikator vom Typ zeigt die zuletzt beobachteten Wert im Hexadezimalformat an. Durchschnittswert nicht angezeigt. (Siehe den PERF_COUNTER_RAWCOUNT_HEX-Indikatortyp im Deployment Kit).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RawDataHex64">
+      <MemberSignature Language="C#" Value="RawDataHex64" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType RawDataHex64 = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.RawDataHex64" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Leistungsindikator vom Typ zeigt den letzten erfassten Wert im Hexadezimalformat an. Es ist identisch mit der <see cref="F:System.Diagnostics.PerformanceData.CounterType.RawDataHex32" /> Leistungsindikator Typ, mit dem Unterschied, dass er größere Felder verwendet, um größere Werte zu berücksichtigen. (Siehe die PERF_COUNTER_LARGE_RAWCOUNT_HEX-Indikatortyp im Deployment Kit).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RawFraction32">
+      <MemberSignature Language="C#" Value="RawFraction32" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType RawFraction32 = int32(537003008)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.RawFraction32" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Leistungsindikator vom Typ zeigt das Verhältnis einer Teilmenge an einen Satz als Prozentsatz. Beispielsweise vergleicht er die Anzahl der Bytes in Verwendung auf einem Datenträger, auf die Gesamtzahl der Bytes auf dem Datenträger. Indikatoren dieses Typs zeigen den aktuellen Prozentwert, keinen Durchschnitt über die Zeit. (Siehe die PERF_RAW_FRACTION Leistungsindikator vom Typ im Deployment Kit).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RawFraction64">
+      <MemberSignature Language="C#" Value="RawFraction64" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType RawFraction64 = int32(537003264)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.RawFraction64" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Leistungsindikator vom Typ zeigt das Verhältnis einer Teilmenge an einen Satz als Prozentsatz. Beispielsweise vergleicht er die Anzahl der Bytes in Verwendung auf einem Datenträger, auf die Gesamtzahl der Bytes auf dem Datenträger. Indikatoren dieses Typs zeigen den aktuellen Prozentwert, keinen Durchschnitt über die Zeit. Es ist identisch mit der <see cref="F:System.Diagnostics.PerformanceData.CounterType.RawFraction32" /> Leistungsindikator Typ, mit dem Unterschied, dass er größere Felder verwendet, um größere Werte zu berücksichtigen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SampleBase">
+      <MemberSignature Language="C#" Value="SampleBase" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType SampleBase = int32(1073939457)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.SampleBase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Indikator speichert die Anzahl der Stichproben Interrupts ausgeführt und dient als Nenner den Anteil der Stichproben. Dieser Typ unterstützt die <see cref="F:System.Diagnostics.PerformanceData.CounterType.SampleFraction" /> Leistungsindikator Typ.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SampleCounter">
+      <MemberSignature Language="C#" Value="SampleCounter" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType SampleCounter = int32(4260864)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.SampleCounter" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Leistungsindikator vom Typ zeigt die durchschnittliche Anzahl der pro Sekunde durchgeführten Operationen. Sie misst die Zeit in Ticks des der Zeitgeber für die Systemleistung. Die Variable F stellt die Anzahl der Ticks, die in einer Sekunde auftreten. Der Wert von F ist die umgerechnet, damit das Ergebnis in Sekunden angezeigt wird. (Siehe den PERF_SAMPLE_COUNTER Indikatortyp im Deployment Kit).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SampleFraction">
+      <MemberSignature Language="C#" Value="SampleFraction" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType SampleFraction = int32(549585920)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.SampleFraction" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dieser Leistungsindikator vom Typ zeigt die durchschnittliche Verhältnis der Treffer für alle Vorgänge während der letzten beiden Abtastintervallen. (Siehe die PERF_SAMPLE_FRACTION verwendet Leistungsindikator vom Typ im Deployment Kit).</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

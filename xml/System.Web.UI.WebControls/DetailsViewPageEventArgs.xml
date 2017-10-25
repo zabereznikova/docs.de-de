@@ -1,0 +1,110 @@
+<Type Name="DetailsViewPageEventArgs" FullName="System.Web.UI.WebControls.DetailsViewPageEventArgs">
+  <TypeSignature Language="C#" Value="public class DetailsViewPageEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DetailsViewPageEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DetailsViewPageEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Web.UI.WebControls.DetailsView.PageIndexChanging" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DetailsView> -Steuerelement löst die <xref:System.Web.UI.WebControls.DetailsView.PageIndexChanging> Ereignis aus, wenn eine Pagerschaltfläche (eine Schaltfläche mit seiner `CommandName` -Eigenschaft auf "Seite" festgelegt) innerhalb des Steuerelements geklickt wird, jedoch bevor die <xref:System.Web.UI.WebControls.DetailsView> Steuerelement behandelt den Pagingvorgang. Dadurch können Sie einen Ereignishandler bereitstellen, der eine benutzerdefinierte Routine ausführt, z. B. den Pagingvorgang Abbrechen, wenn dieses Ereignis tritt auf.  
+  
+> [!NOTE]
+>  Pagerschaltflächen befinden sich in der Regel in der Pagerzeile eine <xref:System.Web.UI.WebControls.DetailsView> Steuerelement.  
+  
+ Ein <xref:System.Web.UI.WebControls.DetailsViewPageEventArgs> Objekt übergeben wird, an den Ereignishandler, wodurch Sie den Index, der vom Benutzer ausgewählten Seite ermitteln und um anzugeben, ob der Pagingvorgang abgebrochen werden soll. Um den Index des vom Benutzer ausgewählten Seite zu bestimmen, verwenden die <xref:System.Web.UI.WebControls.DetailsViewPageEventArgs.NewPageIndex%2A> Eigenschaft. Legen Sie zum Abbrechen des Pagingvorgangs der <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.DetailsViewPageEventArgs> -Objekt `true`.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz der <xref:System.Web.UI.WebControls.DetailsViewPageEventArgs>-Klasse finden Sie im <xref:System.Web.UI.WebControls.DetailsViewPageEventArgs.%23ctor%2A>-Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DetailsViewPageEventArgs> -Objekt übergeben, um den Ereignishandler für die <xref:System.Web.UI.WebControls.DetailsView.PageIndexChanging> Ereignis, um eine Pagingvorgang "Abbrechen", wenn der Benutzer versucht, navigieren Sie zu einer anderen Seite während der <xref:System.Web.UI.WebControls.DetailsView> -Steuerelement befindet sich im Bearbeitungsmodus.  
+  
+ [!code-aspx-csharp[DetailsViewPageEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewPageEventArgs/CS/detailsviewpageeventargscs.aspx#1)]
+ [!code-aspx-vb[DetailsViewPageEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewPageEventArgs/VB/detailsviewpageeventargsvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DetailsViewPageEventArgs (int newPageIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 newPageIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DetailsViewPageEventArgs.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="newPageIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="newPageIndex">Der Index der neuen Seite angezeigt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.DetailsViewPageEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.DetailsViewPageEventArgs> Klasse.  
+  
+ Die folgende Tabelle zeigt die anfängliche Eigenschaftswert für eine Instanz von <xref:System.Web.UI.WebControls.DetailsViewPageEventArgs>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.DetailsViewPageEventArgs.NewPageIndex%2A>|Der Wert des `newPageIndex`-Parameters.|  
+  
+> [!NOTE]
+>  Dieser Konstruktor wird hauptsächlich von Steuerelemententwicklern verwendet, beim Auslösen von Ereignissen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewPageIndex">
+      <MemberSignature Language="C#" Value="public int NewPageIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NewPageIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DetailsViewPageEventArgs.NewPageIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Index für die neue Seite für die anzuzeigenden in die <see cref="T:System.Web.UI.WebControls.DetailsView" /> Steuerelement.</summary>
+        <value>Der Index für die neue Seite für die anzuzeigenden in die <see cref="T:System.Web.UI.WebControls.DetailsView" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da die <xref:System.Web.UI.WebControls.DetailsView.PageIndexChanging> Ereignis tritt auf, bevor die <xref:System.Web.UI.WebControls.DetailsView> Steuerelement führt den Pagingvorgang der <xref:System.Web.UI.WebControls.DetailsView.PageIndex%2A> -Eigenschaft des Steuerelements enthält den Index des zuvor angezeigten Seite und kann nicht verwendet werden, um zu bestimmen, den Index des ausgewählten Seite durch den Benutzer. Verwenden der <xref:System.Web.UI.WebControls.DetailsViewPageEventArgs.NewPageIndex%2A> -Eigenschaft zum Bestimmen des Seitenindex. Diese Eigenschaft können auch um programmgesteuert zu überschreiben, den Seitenindex vom Benutzer ausgewählt werden, indem Sie es in einen anderen Wert festlegen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DetailsViewPageEventArgs.NewPageIndex%2A> -Eigenschaft können Sie den Index des vom Benutzer ausgewählten Seite zu bestimmen.  
+  
+ [!code-aspx-csharp[DetailsViewPageEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewPageEventArgs/CS/detailsviewpageeventargscs.aspx#1)]
+ [!code-aspx-vb[DetailsViewPageEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewPageEventArgs/VB/detailsviewpageeventargsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

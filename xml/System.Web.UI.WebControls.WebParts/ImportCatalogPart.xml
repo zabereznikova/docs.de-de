@@ -1,0 +1,677 @@
+<Type Name="ImportCatalogPart" FullName="System.Web.UI.WebControls.WebParts.ImportCatalogPart">
+  <TypeSignature Language="C#" Value="public sealed class ImportCatalogPart : System.Web.UI.WebControls.WebParts.CatalogPart" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ImportCatalogPart extends System.Web.UI.WebControls.WebParts.CatalogPart" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.ImportCatalogPart" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebParts.CatalogPart</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Importiert eine Beschreibungsdatei für ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> -Steuerelement (oder andere ASP.NET-Serversteuerelement als verwendet eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement), sodass Benutzer das Steuerelement zu einer Webseite mit vordefinierten Einstellungen hinzufügen können. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> -Steuerelement ermöglicht Benutzern das eine Beschreibungsdatei zu importieren, die beschreibt, die Einstellungen für eine <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement oder Serversteuerelement, die ein Benutzer möchte, Hinzufügen einer <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Zone.  
+  
+ Nachdem ein Benutzer eine Beschreibungsdatei importiert die <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement in der Datei verwiesen wird angezeigt, in der <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> -Steuerelement und ein Benutzer das Steuerelement auf der Seite hinzufügen.  
+  
+ Die Description-Datei ist nicht identisch mit dem Steuerelement selbst. Es ist eine XML-Datei, die mit ein. WebPart-Erweiterung und enthält Name/Wert-Paare--größtenteils Eigenschaftswerte –, die den Zustand des Steuerelements beschreiben. Die Description-Datei wird entsprechend einem angegebenen XML-Format erstellt, wie in diesem Thema beschriebenen [Beschreibungsdateien für Webparts-Steuerelemente](http://msdn.microsoft.com/library/480992e4-8fc7-43f8-bffc-ae97bbdfe5b8).  
+  
+ Wie für das Steuerelement, dem auf die Description-Datei verweist, kann entweder in eine Assembly kompiliert werden, oder es kann ein Benutzersteuerelement in einer ASCX-Datei definiert sein. In beiden Fällen muss das Steuerelement in einer importierten Beschreibungsdatei verwiesen wird auf dem Webserver vorhanden sein, die Seite zu, die versucht hosten, das Steuerelement zu importieren. Die Description-Datei verweist auf das Steuerelement Name und die Assembly (oder Datei), das das Steuerelement enthält, und die Description-Datei enthält Einstellungen, die des Steuerelements-Eigenschaftswerte, Darstellung und Verhalten beeinflussen.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> -Steuerelement ermöglicht Benutzern das Freigeben von Einstellungen für Steuerelemente. Ein komplexes Steuerelement möglich, dass viele Eigenschaften und Einstellungen. Beispielsweise ist in einer typischen Intranetwebsite innerhalb eines großen Unternehmens, ein benutzerdefiniertes <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement könnte enthalten eine Reihe von Eigenschaften, die Werte für die Benutzer-Umgebung, z. B. Datenbankverbindungen, abteilungsspezifische Informationen usw. enthalten. Das Steuerelement möglicherweise auch eine Reihe von Eigenschaften enthalten, die die Darstellung beeinflussen. Ein Benutzer konnte das Steuerelement auf einer bestimmten Website personalisieren und rufen Sie die Anwendung ordnungsgemäß funktioniert, eine Beschreibungsdatei für das Steuerelement exportieren und dann für andere Benutzer die Datei um ein vollständig konfigurierte Steuerelement mit anderen Intranet einzufügen importieren konnte freigeben die Description-Datei Standorte, die sie personalisieren zulässig sind. Solange die kompilierte Assembly oder die Benutzersteuerelementdatei mit dem Steuerelement auf dem Webserver vorhanden, die ihre Website hostet ist, können Benutzer das Steuerelement zu anderen Websites hinzufügen.  
+  
+ Der Mechanismus Benutzer importiert eine Beschreibungsdatei (und daher seine zugeordneten Serversteuerelemente) in eine Webseite ist die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> -Steuerelement, das der Entwickler einer Seite zu einer Webseite hinzufügen müssen. Wenn ein Benutzer die Seite in den Kataloganzeigemodus, wechselt der <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> Steuerelement angezeigt wird, und der Benutzer kann Benutzer dieses Steuerelement, um das Durchsuchen der. WebPart-Beschreibungsdatei entspricht, des dem Serversteuerelements, das sie importieren möchten. Befolgen die Benutzeroberfläche und Anweisungen, die durch die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> -Steuerelement, ein Benutzer kann das gewünschte Steuerelement in der Webseite, mit die Darstellung und das vollständig konfigurierte entsprechend den Angaben in der importierten Beschreibungsdatei Eigenschaften hinzufügen.  
+  
+ Vor einem <xref:System.Web.UI.WebControls.WebParts.WebPart> des Steuerelements Beschreibungsdatei importiert werden kann, muss zunächst erstellen Sie einen Benutzer (exportieren) die Datei basierend auf einer vorhandenen <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement. Wenn die folgenden Bedingungen erfüllt sind, kann eine Beschreibungsdatei für ein Steuerelement exportiert werden:  
+  
+-   Das Steuerelement verfügt über Eigenschaften, die mit markiert die `Personalizable` Attribut.  
+  
+-   Die Datei "Web.config" wurde der `enableExport` -Attributwert festgelegt `true` auf die `<webParts>` Element.  
+  
+-   Ein Entwickler legt den Wert für die <xref:System.Web.UI.WebControls.WebParts.WebPart.ExportMode%2A> Eigenschaft des Steuerelements an einen anderen Wert als den Standardwert <xref:System.Web.UI.WebControls.WebParts.WebPartExportMode.None>, der den Export verhindert. Wenn die <xref:System.Web.UI.WebControls.WebParts.WebPart.ExportMode%2A> Eigenschaftswert festgelegt ist, um <xref:System.Web.UI.WebControls.WebParts.WebPartExportMode.NonSensitiveData>, jede Eigenschaft, die enthält ein <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.IsSensitive%2A> Parameter mit einer `Personalizable` Attribut wird nicht exportiert werden, wenn ein Benutzer eine Beschreibungsdatei exportiert. Dies ermöglicht Steuerelemententwicklern, um zu verhindern, dass vertrauliche Daten wie Verbindungszeichenfolgen in bestimmten Situationen exportiert wird.  
+  
+ Ein Benutzer kann ein Steuerelement, das für den Export durch Klicken auf das Exportieren-Verb, das im Verbmenü des Steuerelements, und den Anweisungen zum Speichern aktiviert wurde exportieren ein. WebPart-Beschreibungsdatei für das Steuerelement. Andere Benutzer können dann diese Datei, um die eigenen Instanzen des Steuerelements konfigurieren importieren.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> Klasse enthält mehrere Eigenschaften. Die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.BrowseHelpText%2A> Eigenschaft enthält Text mit Anweisungen für Benutzer beim Durchsuchen die Description-Datei zu suchen. Die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.ImportedPartLabelText%2A> Eigenschaft enthält Text, der als Bezeichnung für das importierte Steuerelement fungiert, entsprechend der Anzeige innerhalb der <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> Steuerelement. Die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.PartImportErrorLabelText%2A> enthält Text, der angezeigt wird, wenn ein Fehler auftritt, wenn Sie eine Beschreibung des Steuerelements importiert wird. Die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.Title%2A> Eigenschaft überschreibt die Basiseigenschaft zum Zuweisen eines Standardtitel für ein <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> steuern, wenn der Entwickler keinen Titel zuweist. Die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.UploadButtonText%2A> -Eigenschaft enthält den Text für die Schaltfläche, die der Benutzer klickt, um der Description-Datei hochladen und die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.UploadHelpText%2A> Eigenschaft enthält eine Anleitung für den Uploadprozess.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> -Klasse enthält auch mehrere eindeutige Methoden. Die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetAvailableWebPartDescriptions%2A> Methode ruft eine <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> -Objekt für jedes <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement im Katalog, wodurch eine <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> -Steuerelement zum Anzeigen von Informationen über jedes Steuerelement ohne eine Instanz erstellen zu müssen. Die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetWebPart%2A> Methode ruft eine Instanz eines bestimmten <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement, basierend auf der Beschreibung, die an die Methode übergeben.  
+  
+ Es gibt einige inhärenten Risiken im Zusammenhang mit der Verwendung der <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> Steuerelement. Ein Beispiel ist die Möglichkeit, Ihre Web-Anwendung über die Description-Dateien zum Importieren von schädliche Daten importieren. Wenn jemand bösartiges Skript-Code als Wert für eine Zeichenfolgeneigenschaft, in der Description-Datei gespeichert, kann dieses Skript potenziell ausgeführt, wenn ein Benutzer die Description-Datei importiert, und das Webserversteuerelement auf die verwiesen wird, zu einer Webseite fügt. Zur Minimierung des Risikos der Description-Dateien durch schädliche Daten importieren sollten Serversteuerelemente, die Zeichenfolge typisierte Eigenschaften haben immer die Daten codieren. Ein weiteres Risiko umfasst das Importieren von Typen über Beschreibungsdateien (siehe [Beschreibungsdateien für Webparts-Steuerelemente](http://msdn.microsoft.com/library/480992e4-8fc7-43f8-bffc-ae97bbdfe5b8)). Ein böswilliger Benutzer Anforderungen zum Laden von Assemblys in vielen übermitteln konnte die <xref:System.AppDomain>, wodurch eine übermäßig viel Arbeitsspeicher belegt werden.  
+  
+ Um die Risiken im Zusammenhang mit dem Import zu vermeiden, Sie können das Feature deaktivieren vollständig durch nicht mithilfe des Importfeatures oder <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> Steuerelement. Oder Sie können einschränken, welche Benutzer auf das Steuerelement zugreifen. Sie können hierfür programmgesteuert Rollenverwaltung (finden Sie unter [Verwalten von Autorisierung mithilfe von Rollen](http://msdn.microsoft.com/library/01954ce4-39a2-487f-8153-a69f6f6f3195)). Z. B. beim Laden der Seite können Sie testen, um festzustellen, ob ein Benutzer in einer bestimmten Rolle, z. B. die Rolle "Administrator" ist. Wenn der Benutzer in der Rolle ist, können Sie programmgesteuert hinzufügen der <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> Steuerelement auf der Seite für diesen Benutzer. Sie können einen deklarativen Ansatz auch verwenden, um die Gruppe der Benutzer einschränken, verwendet werden kann, die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> Steuerelement.  Innerhalb der Webseite, die einen Katalog enthält, konnte Sie platzieren Sie zwei <xref:System.Web.UI.WebControls.WebParts.CatalogZone> Steuerelemente: eine für Benutzer, die importiert werden können, und eine für diejenigen, die nicht möglich. Die Zone für Benutzer, die importiert werden kann, würde enthalten die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> Steuerelement. Die Zone selbst platziert werden konnte, innerhalb eines ein <xref:System.Web.UI.WebControls.LoginView> -Steuerelement, sodass Sie mithilfe des Steuerelements in der Zone zu beschränken, nur die authentifizierte Benutzer oder Rollen, die Sie angeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> deklarativ und programmgesteuert auf einer Webseite zu steuern. Das Beispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, das Ihnen ermöglicht, ändern Sie die Anzeigemodi auf einer Webparts-Seite.  
+  
+-   Eine Webseite mit einem <xref:System.Web.UI.WebControls.WebParts.CatalogZone> Steuerelement und ein <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> Steuerelement.  
+  
+-   Eine Quellcodedatei, die zwei benutzerdefinierte enthält <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente.  
+  
+-   Eine Erläuterung der Funktionsweise des Beispiels an, wenn Sie die Seite in einem Browser zu laden.  
+  
+ Der erste Teil dieses Codebeispiel ist das Benutzersteuerelement, das Benutzern ermöglicht, Anzeigemodi auf einer Webseite zu ändern. Platzieren den folgenden Quellcode in eine Datei, und nennen Sie sie Displaymodemenucs.ascx oder Displaymodemenuvb.ascx (je nachdem welche Sprache Sie verwenden). Informationen zu Modi und eine Beschreibung des Quellcodes in diesem Steuerelement finden Sie unter [Exemplarische Vorgehensweise: Ändern des Anzeigemodus auf einer Webparts-Seite](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_ImportCatalogPart_Overview#7](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/CS/DisplayModeMenuCS.ascx#7)]
+ [!code-aspx-vb[WebParts_ImportCatalogPart_Overview#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/VB/DisplayModeMenuVB.ascx#7)]  
+  
+ Der zweite Teil des Codebeispiels wird die Webseite. Am oberen Rand der Seite "sind zwei `register` Direktiven enthalten, von denen eine für das Benutzersteuerelement und eine für die kompilierte Komponente, die die beiden benutzerdefinierten enthält <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente. Beachten Sie, dass die Seite einen deklarative Verweis auf die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> -Steuerelement, in der richtigen Hierarchie von deklarativen Elementen geschachtelt. Beachten Sie außerdem, dass mehrere Eigenschaftswerte deklarativ auf zugewiesen sind die `<asp:importcatalogpart>` Element. Darüber hinaus die `Button1_Click` Methode wird eine Anzahl an Eigenschaftenwerten aktualisiert, auf die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> Steuerelement.  
+  
+ Auf der Seite <xref:System.Web.UI.WebControls.WebParts.WebPartZone> -Steuerelement, das zwei benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPart> deklariert werden. Die `<aspSample:userinfowebpart>` Steuerelement verfügt über ein `exportmode="all"` Attribut darauf. Dieses Attribut ist erforderlich, damit Benutzer eine Beschreibungsdatei für das Steuerelement zu exportieren, die dann von anderen Benutzern importiert werden können, die das Steuerelement mit der Description-Datei importieren möchten.  
+  
+> [!NOTE]
+>  Von Benutzern einer Webparts-Anwendung so exportieren Sie eine Beschreibungsdatei für aktiviert <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente, die Exportfunktion in der Web-Anwendung muss zusätzlich aktiviert werden, durch Hinzufügen einer `enableExport="true"` -Attribut auf die `<webParts>` Element (ist ein untergeordnetes Element von der `<system.web>`Element) in der Datei "Web.config". Export standardmäßig deaktiviert ist, also Wenn Export für die Anwendung noch nicht aktiviert haben, bearbeiten Sie die Datei "Web.config" und führen Sie es jetzt.  
+  
+ [!code-aspx-csharp[WebParts_ImportCatalogPart_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/CS/ImportCatalogPartOverviewCS.aspx#1)]
+ [!code-aspx-vb[WebParts_ImportCatalogPart_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/VB/ImportCatalogPartOverviewVB.aspx#1)]  
+  
+ Der dritte Teil des Codebeispiels wird der Quellcode für die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente. Beachten Sie, die einige Eigenschaften in diesen Steuerelementen markiert sind, mit der `WebBrowsable` Attribut. Dies ermöglicht die <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> Steuerelement die Benutzeroberfläche (UI) für einen Benutzer, diese Eigenschaften zu bearbeiten, wenn die Steuerelemente im Bearbeitungsmodus sind dynamisch zu generieren. Die Eigenschaften werden ebenfalls mit markiert ein `WebDisplayName` -Attribut, um den Text der Bezeichnung anzugeben, die neben jedes Steuerelement in der Benutzeroberfläche zum Bearbeiten angezeigt wird. Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Dieses Codebeispiel verwendet die dynamische Kompilierung. Eine exemplarische Vorgehensweise, die beide Methoden der Kompilierung veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ Wird aufgerufen, das benutzerdefinierte Steuerelement `TextDisplayWebPart` verwiesen wird, auf der Webseite mit einer `<aspSample:TextDisplayWebPart>` Element. Die anderen Steuerelement namens `UserInfoWebPart`, auch deklariert wird auf der Webseite zu Beginn, obwohl Sie sie später, um die Möglichkeit, eine Beschreibungsdatei für ein Steuerelement importieren veranschaulichen entfernt.  
+  
+ [!code-csharp[WebParts_ImportCatalogPart_Overview#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/CS/userinfowebpart.cs#6)]
+ [!code-vb[WebParts_ImportCatalogPart_Overview#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/VB/userinfowebpart.vb#6)]  
+  
+ Führen Sie jetzt das Codebeispiel. Laden Sie die Webseite in einem Browser. Der erste Schritt ist so bearbeiten Sie die `UserInfoWebPart` Steuerelement. Verwenden der **Anzeigemodus** Dropdownlisten-Steuerelement, und wählen **bearbeiten** auf die Seite, um den Bearbeitungsmodus wechseln. Klicken Sie auf die Verbmenü des der `UserInfoWebPart` -Steuerelement (nach unten weisenden Pfeil in der Titelleiste), und klicken Sie dann auf **bearbeiten**. Wenn die Benutzeroberfläche zum bearbeitende angezeigt wird, werden verschiedene Bearbeitungssteuerelemente unterhalb der `UserInfoWebPart` Steuerelement, das Sie verwenden können, um die Feldwerte zu bearbeiten. Einige Felder bearbeiten, klicken Sie auf **OK**, und verwenden Sie dann die **Anzeigemodus** Dropdown-Liste für die Seite, um den Durchsuchen-Modus zurück.  
+  
+ Der zweite Schritt exportieren ist ein. WebPart-Beschreibungsdatei für die `UserInfoWebPart` Steuerelement. Klicken Sie auf die im Verbenmenü auf das benutzerdefinierte Steuerelement (dargestellt durch den Pfeil nach unten in der Titelleiste), und klicken Sie auf **exportieren**. Befolgen Sie die Anweisungen zum Speichern einer. WebPart-Beschreibungsdatei für das Steuerelement. Jetzt schließen Sie auf der Webseite zu, und bearbeiten Sie die Seitenquelle in einem Editor. Löschen Sie die `<aspSample:userinfowebpart>` Deklaration-Steuerelement, und klicken Sie dann speichern und schließen Sie die Datei. (Sie diesen Schritt, um einen Benutzer zu simulieren, die noch nicht auf diese Weise die `UserInfoWebPart` steuern, damit das Steuerelement auf der Seite zu importieren).  
+  
+ Die Webseite in einem Browser erneut zu laden. Die `UserInfoWebPart` Steuerelement sollte nicht angezeigt werden, da Sie ihn entfernt. Verwenden der **Anzeigemodus** Dropdownlisten-Steuerelement, und wählen **Katalog** auf der Seite ", Katalogmodus zu wechseln. In der <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> steuern, und klicken Sie auf die **Durchsuchen** Schaltfläche aus, und navigieren Sie zu der. WebPart Datei, die Sie erstellt haben, und klicken Sie auf die **hochladen** Schaltfläche. Ein Verweis auf das Steuerelement sollte mit einem Kontrollkästchen daneben angezeigt werden. Aktivieren Sie das Kontrollkästchen, und klicken Sie auf **hinzufügen** das Steuerelement auf der Seite hinzufügen.  
+  
+ Während Sie in dieser Ansicht der Seite sind, klicken Sie auf die **Update ImportCatalogPart** Schaltfläche am unteren Rand der Seite, um die Auswirkung der Aktualisierung programmgesteuert auf einer Anzahl an Eigenschaftenwerten finden Sie unter der <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> Steuerelement. Beachten Sie nach dem Klicken auf die Schaltfläche aus, wie die verschiedenen Eigenschaften in der Benutzeroberfläche geändert werden.  
+  
+ Klicken Sie abschließend auf **schließen** Katalogmodus beenden und die Seite, um den Durchsuchen-Modus zurück. Die `UserInfoWebPart` Steuerelement sollte jetzt auf der Seite angezeigt werden, die die Werte, den er hatte, wenn Sie zuvor exportiert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImportCatalogPart ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ImportCatalogPart.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.WebParts.ImportCatalogPart" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.%23ctor%2A> Konstruktor ist ein Standard ist kein Konstruktor deklariert, der <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> Klasse und daher keine besonderen Aufgaben durchgeführt werden, wenn eine neue Instanz der Klasse erstellt wird. Den Konstruktor wird von .NET Framework verwendet, zum Erstellen einer Instanz der Klasse.  
+  
+ Normalerweise Sie nicht benötigen, verwenden Sie die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.%23ctor%2A> Konstruktor programmgesteuert in Ihrem eigenen Code. Die beabsichtigte Verwendung des Steuerelements ist für Seitenentwickler, um es zu einer Seite deklarativ zur Entwurfszeit hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BrowseHelpText">
+      <MemberSignature Language="C#" Value="public string BrowseHelpText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BrowseHelpText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ImportCatalogPart.BrowseHelpText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert eine SMS-Nachricht, die Benutzer anweist, um den Speicherort einer Datei Beschreibung suchen.</summary>
+        <value>Eine Zeichenfolge, die den Text der Nachricht enthält. Der Standardwert ist eine von .NET Framework bereitgestellte kulturspezifische Meldung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.BrowseHelpText%2A> -Eigenschaft bietet Benutzern eine einfache Übersicht über die erste Aktion, die sie ausführen müssen, gerade ein importiertes Steuerelement hinzuzufügen: Geben Sie den Speicherort einer Datei Beschreibung durch einen Pfad eingeben, oder Navigieren zu der Datei. Ein typischer Grund dafür, einen benutzerdefinierten Wert für diese Eigenschaft angeben ist, wenn Sie spezielle Anweisungen für Benutzer, z. B. eine bestimmte Netzwerkfreigabe verfügen, dem sie suchen sollten eine Beschreibungsdatei.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.BrowseHelpText%2A> Eigenschaft deklarativ und programmgesteuert. Für vollständige Code- und zum Ausführen des Beispiels erforderlichen Schritte finden Sie im Beispielabschnitt von der <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> -Klassenübersicht.  
+  
+ Im folgenden Abschnitt des Codes, beachten Sie, dass die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.BrowseHelpText%2A> Eigenschaftswert für das Steuerelement deklarativ festgelegt ist.  
+  
+ [!code-aspx-csharp[WebParts_ImportCatalogPart_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/CS/ImportCatalogPartOverviewCS.aspx#2)]
+ [!code-aspx-vb[WebParts_ImportCatalogPart_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/VB/ImportCatalogPartOverviewVB.aspx#2)]  
+  
+ In diesem Abschnitt des Codes der <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.BrowseHelpText%2A> Eigenschaftswert programmgesteuert zugewiesen ist.  
+  
+ [!code-csharp[WebParts_ImportCatalogPart_Overview#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/CS/ImportCatalogPartOverviewCS.aspx#3)]
+ [!code-vb[WebParts_ImportCatalogPart_Overview#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/VB/ImportCatalogPartOverviewVB.aspx#3)]  
+  
+ Wenn Sie die Seite in einem Browser zu laden, können Sie die **Anzeigemodus** Dropdownlisten-Steuerelement auswählen **Katalogmodus** und die Seite in den Katalogmodus wechseln. Beachten Sie auf der Seite im Katalogmodus und der Description-Datei hochgeladen die Textzeichenfolgen, die in der Benutzeroberfläche (UI) angezeigt, für die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> Steuerelement. Wenn Sie auf die **Beschreibungsdatei hochladen** Schaltfläche der Text für mehrere Eigenschaften in der Benutzeroberfläche geändert wird, einschließlich des Texts für die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.BrowseHelpText%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateChildControls">
+      <MemberSignature Language="C#" Value="protected override void CreateChildControls ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void CreateChildControls() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ImportCatalogPart.CreateChildControls" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultButton">
+      <MemberSignature Language="C#" Value="public override string DefaultButton { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultButton" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ImportCatalogPart.DefaultButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, welche Schaltfläche in der Benutzeroberfläche (UI) als Standardschaltfläche behandelt wird, die den Fokus erhält, wenn Formular, das die Schaltfläche enthält gerendert wird. Diese Eigenschaft sollte nicht vom Entwickler Seitencode aufgerufen werden.</summary>
+        <value>Eine Zeichenfolge, die die ID des enthält die <see cref="T:System.Web.UI.WebControls.Button" /> , die den Fokus standardmäßig in eine <see cref="T:System.Web.UI.WebControls.Panel" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Code für diese Eigenschaft überschreibt die Basiseigenschaft geerbt von der <xref:System.Web.UI.WebControls.Panel> Klasse, um die Eigenschaft in Designern auszublenden und zu verhindern, dass Sie von Designs betroffen sind. Wenn dieser öffentlich ist, wird diese Eigenschaft wird intern von der Webparts-Steuerelementsatz zum Standardrendering zurückgreifen dieses Steuerelements verwendet und nicht von Entwicklern verwendet werden soll.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAvailableWebPartDescriptions">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection GetAvailableWebPartDescriptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection GetAvailableWebPartDescriptions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetAvailableWebPartDescriptions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Auflistung der Beschreibungen der verfügbaren <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelemente in einem Katalog.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection" /> , enthält eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" /> für jedes Steuerelement in einem Katalog.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetAvailableWebPartDescriptions%2A> Methode stellt eine Implementierung für die abstrakte Basisklasse Methode deklariert die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Klasse. Die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetAvailableWebPartDescriptions%2A> Methodenrückgabe Beschreibungsinformationen für jedes Steuerelement in einem Katalog. Beachten Sie, dass im Fall von einer <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> steuern, es kann nur ein Serversteuerelement in den Katalog zu einem Zeitpunkt, obwohl die Methode funktionieren würde, gäbe es mehrere Steuerelemente.  
+  
+ Ein <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> Objekt ist ein Objekt, das enthält wichtige Informationen zu einem <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement, darunter seine ID, einen Objektverweis auf das Steuerelement und die Werte für mehrere wichtige Eigenschaften, die vom geerbt werden die <xref:System.Web.UI.WebControls.WebParts.Part> Klasse, z. B. <xref:System.Web.UI.WebControls.WebParts.Part.Title%2A> und <xref:System.Web.UI.WebControls.WebParts.Part.Description%2A>.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetAvailableWebPartDescriptions%2A> Methode verbessert die Leistung. Wenn ein Katalog erstellt wird, benötigt er einige Informationen über jedes Steuerelement darin enthaltenen z. B. einen Titel, eine Beschreibung, ein Symbol (falls vorhanden) und einer ID, Zum Erstellen einer Instanz jedes Steuerelements auf diese Informationen abzurufen, anstatt eine <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> Zone, die einen Katalog Aufrufe erstellt die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetAvailableWebPartDescriptions%2A> -Methode, und der Aufruf gibt nur die Beschreibungsinformationen für das Steuerelement anstelle einer Instanz von der -Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetAvailableWebPartDescriptions%2A> Methode auf einer Webseite. Das Beispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, das Ihnen ermöglicht, ändern Sie die Anzeigemodi auf einer Webparts-Seite.  
+  
+-   Eine Webseite mit einem <xref:System.Web.UI.WebControls.WebParts.CatalogZone> Steuerelement und ein <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> -Steuerelement, zusammen mit Code, der verwendet die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetAvailableWebPartDescriptions%2A> Methode.  
+  
+-   Eine Quellcodedatei, die zwei benutzerdefinierte enthält <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente.  
+  
+-   Eine Erläuterung der Funktionsweise des Beispiels an, wenn Sie die Seite in einem Browser zu laden.  
+  
+ Der erste Teil dieses Codebeispiel ist das Benutzersteuerelement, das Benutzern ermöglicht, Anzeigemodi auf einer Webseite zu ändern. Platzieren den folgenden Quellcode in eine Datei, und nennen Sie sie Displaymodemenucs.ascx oder Displaymodemenuvb.ascx (je nachdem welche Sprache Sie verwenden). Informationen zu Modi und eine Beschreibung des Quellcodes in diesem Steuerelement finden Sie unter [Exemplarische Vorgehensweise: Ändern des Anzeigemodus auf einer Webparts-Seite](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_ImportCatalogPart_Get#7](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Get/CS/DisplayModeMenuCS.ascx#7)]
+ [!code-aspx-vb[WebParts_ImportCatalogPart_Get#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Get/VB/DisplayModeMenuVB.ascx#7)]  
+  
+ Der zweite Teil des Codebeispiels wird die Webseite. Am oberen Rand der Seite "sind zwei `register` Direktiven enthalten, von denen eine für das Benutzersteuerelement und eine für die kompilierte Komponente, die die beiden benutzerdefinierten enthält <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente. Beide Steuerelemente werden deklarativ in das Markup der Seite verwiesen werden. Für die deklarative Verweise auf die <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente (beide beginnen mit einem `aspSample` Präfix), beachten Sie, dass jede verfügt über ein `exportMode="all"` Attribut hinzugefügt wird. Dieses Attribut ermöglicht es Ihnen so exportieren Sie ein. WebPart-Beschreibungsdatei für das Steuerelement, das Sie bei einem späteren Schritt So importieren Sie das Steuerelement zu einer Seite verwenden.  
+  
+> [!NOTE]
+>  Von Benutzern einer Webparts-Anwendung so exportieren Sie eine Beschreibungsdatei für aktiviert <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente, die Exportfunktion in der Web-Anwendung muss zusätzlich aktiviert werden, durch Hinzufügen einer `enableExport="true"` -Attribut auf die `<webParts>` Element (ist ein untergeordnetes Element von der `<system.web>`Element) in der Datei "Web.config". Export standardmäßig deaktiviert ist, also Wenn Export für die Anwendung noch nicht aktiviert haben, bearbeiten Sie die Datei "Web.config" und führen Sie es jetzt.  
+  
+ Die Webseite enthält auch einen deklarativen Verweis auf die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> -Steuerelement, in der richtigen Hierarchie von deklarativen Elementen geschachtelt. Die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetAvailableWebPartDescriptions%2A> Methode wird aufgerufen, in den Code für die `Button1_Click` Methode.  
+  
+ [!code-aspx-csharp[WebParts_ImportCatalogPart_Get#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Get/CS/ImportCatalogPart_GetCS.aspx#1)]
+ [!code-aspx-vb[WebParts_ImportCatalogPart_Get#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Get/VB/ImportCatalogPart_GetVB.aspx#1)]  
+  
+ Der dritte Teil des Codebeispiels wird der Quellcode für die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente. Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Dieses Codebeispiel verwendet die dynamische Kompilierung. Eine exemplarische Vorgehensweise, die beide Methoden der Kompilierung veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_ImportCatalogPart_Get#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Get/CS/userinfowebpart.cs#6)]
+ [!code-vb[WebParts_ImportCatalogPart_Get#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Get/VB/userinfowebpart.vb#6)]  
+  
+ Führen Sie jetzt das Codebeispiel. Laden Sie die Webseite in einem Browser. Der erste Schritt besteht Export ein. WebPart-Beschreibungsdatei für jede <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement (für die `TextDisplayWebPart` und für die `UserInfoWebPart` Steuerelement). Für jedes Steuerelement, klicken Sie auf die im Verbenmenü auf das Steuerelement (dargestellt durch den Pfeil nach unten in der Titelleiste), und klicken Sie auf **exportieren**. Befolgen Sie die Anweisungen zum Speichern einer. WebPart-Beschreibungsdatei für das Steuerelement. Nachdem Sie eine Beschreibungsdatei für jedes Steuerelement exportiert haben, schließen Sie die Webseite, und bearbeiten Sie die Seitenquelle in einem Editor. Löschen der `<aspSample:userinfowebpart>` und die `<aspSample:textdisplaywebpart>` Deklarationselemente zu steuern, speichern und schließen Sie die Datei. (Sie werden auf diese Weise diesen Schritt, um einen Benutzer zu simulieren, der noch nicht diese Steuerelemente verfügt, damit die Steuerelemente auf der Seite "importiert werden kann).  
+  
+ Die Webseite in einem Browser erneut zu laden. Verwenden der **Anzeigemodus** Dropdownlisten-Steuerelement, und wählen **Katalog** auf der Seite ", Katalogmodus zu wechseln. In der <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> steuern, und klicken Sie auf die **Durchsuchen** Schaltfläche, wechseln Sie zu der. WebPart-Dateien, die Sie erstellt haben, wählen Sie eine, und klicken Sie auf die **hochladen** Schaltfläche. Ein Verweis auf das Steuerelement sollte mit einem Kontrollkästchen daneben angezeigt werden. Aktivieren Sie das Kontrollkästchen, und klicken Sie auf **hinzufügen** das Steuerelement auf der Seite hinzufügen. Wiederholen Sie diesen Vorgang für die Steuerelemente.  
+  
+ Während Sie in dieser Ansicht der Seite sind, klicken Sie auf die **Get WebPart Description** Schaltfläche am unteren Rand der Seite auf die Auswirkung der programmgesteuerten Zugriff auf die <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> -Objekt für die derzeit geladen, die Beschreibung des Steuerelements in der <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> Steuerelement. Die Methode verwendet, um die Beschreibungsdetails zugreifen gefunden wird, der `Button1_Click` Methode der Quellcode für die Seite ist die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetAvailableWebPartDescriptions%2A> Methode. Eine Bezeichnung unterhalb der Schaltfläche zeigt grundlegende Informationen über das Steuerelement.  
+  
+ Wiederholen Sie den Vorgang zum Hinzufügen des zweiten Steuerelements auf der Seite ", nach dem Hinzufügen des ersten Steuerelements. Klicken Sie abschließend auf **schließen** Katalogmodus beenden und die Seite, um den Durchsuchen-Modus zurück. Beide benutzerdefinierten Steuerelemente sollte jetzt angezeigt werden, die auf der Seite mit den Werten, die ihnen zugewiesen waren, wenn Sie zuvor Description-Dateien exportiert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWebPart">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.WebParts.WebPart GetWebPart (System.Web.UI.WebControls.WebParts.WebPartDescription description);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.UI.WebControls.WebParts.WebPart GetWebPart(class System.Web.UI.WebControls.WebParts.WebPartDescription description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetWebPart(System.Web.UI.WebControls.WebParts.WebPartDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPart</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="description" Type="System.Web.UI.WebControls.WebParts.WebPartDescription" />
+      </Parameters>
+      <Docs>
+        <param name="description">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" /> , das Details zum Steuerelement enthält.</param>
+        <summary>Gibt einen Verweis auf eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement basierend auf den Werten in der Beschreibung, die an die Methode übergeben.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement, dessen Beschreibung den Werten in entsprechen <paramref name="description" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetWebPart%2A> Methode gibt einen Verweis auf eine <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement, dessen Beschreibung Informationen den Werten der entsprechen, der <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> Objekt an die Methode übergeben. Diese Methode wird in der Regel verwendet, zusammen mit der <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.GetAvailableWebPartDescriptions%2A> -Methode, die zum Abrufen der Beschreibungen von Steuerelementen im Katalog verwendet wird. Einzelne <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente können dann abgerufen oder bearbeitet werden, je nach Bedarf vom Übergabe einzelner <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> -Objekte und die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetWebPart%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetWebPart%2A> Methode auf einer Webseite. Das Beispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, das Ihnen ermöglicht, ändern Sie die Anzeigemodi auf einer Webparts-Seite.  
+  
+-   Eine Webseite mit einem <xref:System.Web.UI.WebControls.WebParts.CatalogZone> Steuerelement und ein <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> -Steuerelement, zusammen mit Code, der verwendet die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetWebPart%2A> Methode.  
+  
+-   Eine Quellcodedatei, die zwei benutzerdefinierte enthält <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente.  
+  
+-   Eine Erläuterung der Funktionsweise des Beispiels an, wenn Sie die Seite in einem Browser zu laden.  
+  
+ Der erste Teil dieses Codebeispiel ist das Benutzersteuerelement, das Benutzern ermöglicht, Anzeigemodi auf einer Webseite zu ändern. Platzieren den folgenden Quellcode in eine Datei, und nennen Sie sie Displaymodemenucs.ascx oder Displaymodemenuvb.ascx (je nachdem welche Sprache Sie verwenden). Informationen zu Modi und eine Beschreibung des Quellcodes in diesem Steuerelement finden Sie unter [Exemplarische Vorgehensweise: Ändern des Anzeigemodus auf einer Webparts-Seite](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_ImportCatalogPart_Get#7](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Get/CS/DisplayModeMenuCS.ascx#7)]
+ [!code-aspx-vb[WebParts_ImportCatalogPart_Get#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Get/VB/DisplayModeMenuVB.ascx#7)]  
+  
+ Der zweite Teil des Codebeispiels wird die Webseite. Am oberen Rand der Seite "sind zwei `register` Direktiven enthalten, von denen eine für das Benutzersteuerelement und eine für die kompilierte Komponente, die die beiden benutzerdefinierten enthält <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente. Beide Steuerelemente werden deklarativ in das Markup der Seite verwiesen werden. Für die deklarative Verweise auf die <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente (beide beginnen mit einem `aspSample` Präfix), beachten Sie, dass jede verfügt über ein `exportMode="all"` Attribut hinzugefügt wird. Dieses Attribut ermöglicht es Ihnen so exportieren Sie ein. WebPart-Beschreibungsdatei für das Steuerelement, das Sie bei einem späteren Schritt So importieren Sie das Steuerelement zu einer Seite verwenden.  
+  
+> [!NOTE]
+>  Von Benutzern einer Webparts-Anwendung so exportieren Sie eine Beschreibungsdatei für aktiviert <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente, die Exportfunktion in der Web-Anwendung muss zusätzlich aktiviert werden, durch Hinzufügen einer `enableExport="true"` -Attribut auf die `<webParts>` Element (ist ein untergeordnetes Element von der `<system.web>`Element) in der Datei "Web.config". Export standardmäßig deaktiviert ist, also Wenn Export für die Anwendung noch nicht aktiviert haben, bearbeiten Sie die Datei "Web.config" und führen Sie es jetzt.  
+  
+ Die Webseite enthält auch einen deklarativen Verweis auf die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> -Steuerelement, in der richtigen Hierarchie von deklarativen Elementen geschachtelt. Die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetWebPart%2A> Methode wird aufgerufen, in den Code für die `Button2_Click` Methode.  
+  
+ [!code-aspx-csharp[WebParts_ImportCatalogPart_Get#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Get/CS/ImportCatalogPart_GetCS.aspx#1)]
+ [!code-aspx-vb[WebParts_ImportCatalogPart_Get#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Get/VB/ImportCatalogPart_GetVB.aspx#1)]  
+  
+ Der dritte Teil des Codebeispiels wird der Quellcode für die beiden <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente. Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Dieses Codebeispiel verwendet die dynamische Kompilierung. Eine exemplarische Vorgehensweise, die beide Methoden der Kompilierung veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_ImportCatalogPart_Get#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Get/CS/userinfowebpart.cs#6)]
+ [!code-vb[WebParts_ImportCatalogPart_Get#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Get/VB/userinfowebpart.vb#6)]  
+  
+ Führen Sie jetzt das Codebeispiel. Laden Sie die Webseite in einem Browser. Der erste Schritt besteht Export ein. WebPart-Beschreibungsdatei für jede <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement (für die `TextDisplayWebPart` und für die `UserInfoWebPart` Steuerelement). Für jedes Steuerelement, klicken Sie auf die im Verbenmenü auf das Steuerelement (dargestellt durch den Pfeil nach unten in der Titelleiste), und klicken Sie auf **exportieren**. Befolgen Sie die Anweisungen zum Speichern einer. WebPart-Beschreibungsdatei für das Steuerelement. Nachdem Sie eine Beschreibungsdatei für jedes Steuerelement exportiert haben, schließen Sie die Webseite, und bearbeiten Sie die Seitenquelle in einem Editor. Löschen der `<aspSample:userinfowebpart>` und die `<aspSample:textdisplaywebpart>` Deklarationselemente zu steuern, speichern und schließen Sie die Datei. (Sie werden auf diese Weise diesen Schritt, um einen Benutzer zu simulieren, der noch nicht diese Steuerelemente verfügt, damit die Steuerelemente auf der Seite "importiert werden kann).  
+  
+ Die Webseite in einem Browser erneut zu laden. Verwenden der **Anzeigemodus** Dropdownlisten-Steuerelement, und wählen **Katalog** auf der Seite ", Katalogmodus zu wechseln. In der <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> steuern, und klicken Sie auf die **Durchsuchen** Schaltfläche, wechseln Sie zu der. WebPart-Dateien, die Sie erstellt haben, wählen Sie eine, und klicken Sie auf die **hochladen** Schaltfläche. Ein Verweis auf das Steuerelement sollte mit einem Kontrollkästchen daneben angezeigt werden. Nun, dass die Beschreibung des Steuerelements in hochgeladen werden die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> steuern, und klicken Sie auf die **verwenden GetWebPart** Schaltfläche am unteren Rand der Seite. Veranschaulichung werden die Auswirkungen der Aufruf der <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetWebPart%2A> -Methode und übergibt Sie an die Steuerelement-Beschreibung, die derzeit geladen, der <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> Steuerelement. Beachten Sie, dass das zugeordnete Steuerelement sofort auf der Webseite, ohne dass der Benutzer hinzugefügt wird auf die **hinzufügen** Schaltfläche. Die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.GetWebPart%2A> Methode, die aufgerufen wird, in der `Button2_Click` Methodenrückgabe der Quellcode für die Seite die <xref:System.Web.UI.WebControls.WebParts.WebPart> die aktuelle Beschreibung in den geladene zugeordneten Steuerelements die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> Steuerelement. Weiter die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.AddWebPart%2A> Methode wird aufgerufen, und die <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement direkt auf der Seite hinzugefügt wird. Dies veranschaulicht das Hinzufügen des Steuerelements programmgesteuert aus dem <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> Steuerelement ohne Eingreifen des Benutzers.  
+  
+ Wiederholen Sie den Vorgang zum Hinzufügen des zweiten Steuerelements auf der Seite ", nach dem Hinzufügen des ersten Steuerelements. Klicken Sie abschließend auf **schließen** Katalogmodus beenden und die Seite, um den Durchsuchen-Modus zurück. Beide benutzerdefinierten Steuerelemente sollte jetzt angezeigt werden, die auf der Seite mit den Werten, die ihnen zugewiesen waren, wenn Sie zuvor Description-Dateien exportiert werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="description" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="description" />ist kein verfügbarer <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" /> Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportedPartLabelText">
+      <MemberSignature Language="C#" Value="public string ImportedPartLabelText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ImportedPartLabelText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ImportCatalogPart.ImportedPartLabelText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt Text angezeigt, nachdem ein Benutzer importiert eine Beschreibungsdatei darstellt, oder beschreiben das importierte Steuerelement im Katalog der importierten Steuerelemente.</summary>
+        <value>Eine Zeichenfolge, die den Text der Bezeichnung enthält. Der Standardwert ist eine von .NET Framework bereitgestellte kulturspezifische Meldung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.ImportedPartLabelText%2A> Eigenschaft wird normalerweise verwendet, um eine kurze, allgemeine Bezeichnung enthalten, die das Steuerelement im beschreibt die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.ImportedPartLabelText%2A> Eigenschaft deklarativ und programmgesteuert. Für vollständige Code- und zum Ausführen des Beispiels erforderlichen Schritte finden Sie im Beispielabschnitt von der <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> -Klassenübersicht.  
+  
+ Im folgenden Abschnitt des Codes, beachten Sie, dass die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.ImportedPartLabelText%2A> Eigenschaftswert für das Steuerelement deklarativ festgelegt ist.  
+  
+ [!code-aspx-csharp[WebParts_ImportCatalogPart_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/CS/ImportCatalogPartOverviewCS.aspx#2)]
+ [!code-aspx-vb[WebParts_ImportCatalogPart_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/VB/ImportCatalogPartOverviewVB.aspx#2)]  
+  
+ In diesem Abschnitt des Codes der <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.ImportedPartLabelText%2A> Eigenschaftswert programmgesteuert zugewiesen ist.  
+  
+ [!code-csharp[WebParts_ImportCatalogPart_Overview#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/CS/ImportCatalogPartOverviewCS.aspx#3)]
+ [!code-vb[WebParts_ImportCatalogPart_Overview#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/VB/ImportCatalogPartOverviewVB.aspx#3)]  
+  
+ Wenn Sie die Seite in einem Browser zu laden, können Sie die **Anzeigemodus** Dropdownlisten-Steuerelement auswählen **Katalogmodus** und die Seite in den Katalogmodus wechseln. Beachten Sie auf der Seite im Katalogmodus und der Description-Datei hochgeladen die Textzeichenfolgen, die in der Benutzeroberfläche (UI) angezeigt, für die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> Steuerelement. Wenn Sie auf die **Beschreibungsdatei hochladen** Schaltfläche der Text für mehrere Eigenschaften in der Benutzeroberfläche geändert wird, einschließlich des Texts für die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.ImportedPartLabelText%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadControlState">
+      <MemberSignature Language="C#" Value="protected override void LoadControlState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void LoadControlState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ImportCatalogPart.LoadControlState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInit">
+      <MemberSignature Language="C#" Value="protected override void OnInit (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnInit(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ImportCatalogPart.OnInit(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PartImportErrorLabelText">
+      <MemberSignature Language="C#" Value="public string PartImportErrorLabelText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PartImportErrorLabelText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ImportCatalogPart.PartImportErrorLabelText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Fehlermeldung, die angezeigt wird, wenn während des Importvorgangs ein Fehler auftritt.</summary>
+        <value>Eine Zeichenfolge, die den Text der Bezeichnung enthält. Der Standardwert ist eine von .NET Framework bereitgestellte kulturspezifische Meldung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.PartImportErrorLabelText%2A> Eigenschaft eignet sich für einen Benutzer benachrichtigen, wenn ein Problem oder Fehler tritt auf, während die Seite versucht, eine Beschreibungsdatei zu importieren.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.PartImportErrorLabelText%2A> Eigenschaft deklarativ und programmgesteuert. Für vollständige Code- und zum Ausführen des Beispiels erforderlichen Schritte finden Sie im Beispielabschnitt von der <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> -Klassenübersicht.  
+  
+ Im folgenden Abschnitt des Codes, beachten Sie, dass die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.PartImportErrorLabelText%2A> Eigenschaftswert für das Steuerelement deklarativ festgelegt ist.  
+  
+ [!code-aspx-csharp[WebParts_ImportCatalogPart_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/CS/ImportCatalogPartOverviewCS.aspx#2)]
+ [!code-aspx-vb[WebParts_ImportCatalogPart_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/VB/ImportCatalogPartOverviewVB.aspx#2)]  
+  
+ In diesem Abschnitt des Codes der <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.PartImportErrorLabelText%2A> Eigenschaftswert programmgesteuert zugewiesen ist.  
+  
+ [!code-csharp[WebParts_ImportCatalogPart_Overview#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/CS/ImportCatalogPartOverviewCS.aspx#3)]
+ [!code-vb[WebParts_ImportCatalogPart_Overview#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/VB/ImportCatalogPartOverviewVB.aspx#3)]  
+  
+ Wenn Sie die Seite in einem Browser zu laden, können Sie die **Anzeigemodus** Dropdownlisten-Steuerelement auswählen **Katalogmodus** und die Seite in den Katalogmodus wechseln. Beachten Sie auf der Seite im Katalogmodus und der Description-Datei hochgeladen die Textzeichenfolgen, die in der Benutzeroberfläche (UI) angezeigt, für die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> Steuerelement. Wenn Sie auf die **Beschreibungsdatei hochladen** Schaltfläche der Text für mehrere Eigenschaften in der Benutzeroberfläche geändert wird, einschließlich des Texts für die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.PartImportErrorLabelText%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ImportCatalogPart.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderContents">
+      <MemberSignature Language="C#" Value="protected override void RenderContents (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void RenderContents(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ImportCatalogPart.RenderContents(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveControlState">
+      <MemberSignature Language="C#" Value="protected override object SaveControlState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance object SaveControlState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ImportCatalogPart.SaveControlState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="public override string Title { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Title" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ImportCatalogPart.Title" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt Sie den Titel, der angezeigt wird, in der Titelleiste des ein <see cref="T:System.Web.UI.WebControls.WebParts.ImportCatalogPart" /> Steuerelement.</summary>
+        <value>Eine Zeichenfolge, die als Titel des Steuerelements verwendet wird. Der Standardwert ist eine vom Webparts-Steuerelementsatz bereitgestellte Name des berechneten Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.Title%2A> Eigenschaftswert wird angezeigt, in der Titelleiste des ein <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> steuern, wenn das Steuerelement im Katalogmodus sichtbar ist. Wenn das Steuerelement auf einer Seite deklariert wird, können Sie einen Wert für die Eigenschaft festlegen, mit der `Title` Attribut. Wenn Sie einen Wert für den Titel nicht angeben, wird ein kulturspezifische Standardwert verwendet, um die Art der Eigenschaften beschreiben, die dieses Steuerelement ermöglicht Benutzern das bearbeiten es.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.Title%2A> Eigenschaft deklarativ und programmgesteuert. Für vollständige Code- und zum Ausführen des Beispiels erforderlichen Schritte finden Sie im Beispielabschnitt von der <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> -Klassenübersicht.  
+  
+ Im folgenden Abschnitt des Codes, beachten Sie, dass die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.Title%2A> Eigenschaftswert für das Steuerelement deklarativ festgelegt ist.  
+  
+ [!code-aspx-csharp[WebParts_ImportCatalogPart_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/CS/ImportCatalogPartOverviewCS.aspx#2)]
+ [!code-aspx-vb[WebParts_ImportCatalogPart_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/VB/ImportCatalogPartOverviewVB.aspx#2)]  
+  
+ In diesem Abschnitt des Codes der <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.Title%2A> Eigenschaftswert programmgesteuert zugewiesen ist.  
+  
+ [!code-csharp[WebParts_ImportCatalogPart_Overview#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/CS/ImportCatalogPartOverviewCS.aspx#3)]
+ [!code-vb[WebParts_ImportCatalogPart_Overview#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/VB/ImportCatalogPartOverviewVB.aspx#3)]  
+  
+ Wenn Sie die Seite in einem Browser zu laden, können Sie die **Anzeigemodus** Dropdownlisten-Steuerelement auswählen **Katalogmodus** und die Seite in den Katalogmodus wechseln. Beachten Sie auf der Seite im Katalogmodus und der Description-Datei hochgeladen die Textzeichenfolgen, die in der Benutzeroberfläche (UI) angezeigt, für die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> Steuerelement. Wenn Sie auf die **Beschreibungsdatei hochladen** Schaltfläche der Text für mehrere Eigenschaften in der Benutzeroberfläche geändert wird, einschließlich des Texts für die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.Title%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UploadButtonText">
+      <MemberSignature Language="C#" Value="public string UploadButtonText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UploadButtonText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ImportCatalogPart.UploadButtonText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text für die <see cref="T:System.Web.UI.WebControls.Button" /> Steuerelement, das das Hochladen einer Beschreibungsdatei startet.</summary>
+        <value>Eine Zeichenfolge, die verwendet wird, wie der Text für ein <see cref="T:System.Web.UI.WebControls.Button" />. Der Standardwert ist eine von der Webparts-Steuerelementsatz bereitgestellte kulturspezifische Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.UploadButtonText%2A> -Eigenschaft stellt den Text für die <xref:System.Web.UI.WebControls.Button> Steuerelement, das den Uploadprozess startet. Wenn Sie benutzerdefinierten Text können Sie diese Eigenschaft und zum Zuweisen der <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.UploadHelpText%2A> -Eigenschaft, der Text soll verdeutlichen, dass der Benutzer eine Beschreibungsdatei hochgeladen wird. Der Text sollte nicht angenommen oder impliziert, dass während des Uploads tatsächlich das Steuerelement selbst hochgeladen wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.UploadButtonText%2A> Eigenschaft deklarativ und programmgesteuert. Für vollständige Code- und zum Ausführen des Beispiels erforderlichen Schritte finden Sie im Beispielabschnitt von der <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> -Klassenübersicht.  
+  
+ Im folgenden Abschnitt des Codes, beachten Sie, dass die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.UploadButtonText%2A> Eigenschaftswert für das Steuerelement deklarativ festgelegt ist.  
+  
+ [!code-aspx-csharp[WebParts_ImportCatalogPart_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/CS/ImportCatalogPartOverviewCS.aspx#2)]
+ [!code-aspx-vb[WebParts_ImportCatalogPart_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/VB/ImportCatalogPartOverviewVB.aspx#2)]  
+  
+ In diesem Abschnitt des Codes der <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.UploadButtonText%2A> Eigenschaftswert programmgesteuert zugewiesen ist.  
+  
+ [!code-csharp[WebParts_ImportCatalogPart_Overview#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/CS/ImportCatalogPartOverviewCS.aspx#3)]
+ [!code-vb[WebParts_ImportCatalogPart_Overview#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/VB/ImportCatalogPartOverviewVB.aspx#3)]  
+  
+ Wenn Sie die Seite in einem Browser zu laden, können Sie die **Anzeigemodus** Dropdownlisten-Steuerelement auswählen **Katalogmodus** und die Seite in den Katalogmodus wechseln. Beachten Sie auf der Seite im Katalogmodus und der Description-Datei hochgeladen die Textzeichenfolgen, die in der Benutzeroberfläche (UI) angezeigt, für die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> Steuerelement. Wenn Sie auf die **Beschreibungsdatei hochladen** Schaltfläche der Text für mehrere Eigenschaften in der Benutzeroberfläche geändert wird, einschließlich des Texts für die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.UploadButtonText%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UploadHelpText">
+      <MemberSignature Language="C#" Value="public string UploadHelpText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UploadHelpText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ImportCatalogPart.UploadHelpText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text der Nachricht, die dem Benutzer informiert, wie eine Beschreibungsdatei hochladen.</summary>
+        <value>Eine Zeichenfolge, die als Anweisungen für den Benutzer zum Hochladen einer Datei für hostspaltenbeschreibung verwendet wird. Der Standardwert ist eine von der Webparts-Steuerelementsatz bereitgestellte kulturspezifische Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.UploadHelpText%2A> Eigenschaft enthält eine kurze Satz oder einen Satz von Anweisungen für Benutzer, die auf eine Schaltfläche zum Hochladen der Description-Datei auffordert. Wenn Sie benutzerdefinierten Text können Sie diese Eigenschaft und zum Zuweisen der <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.UploadButtonText%2A> -Eigenschaft, der Text soll verdeutlichen, dass der Benutzer eine Beschreibungsdatei hochgeladen wird. Der Text sollte nicht angenommen oder impliziert, dass während des Uploads tatsächlich das Steuerelement selbst hochgeladen wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.UploadHelpText%2A> Eigenschaft deklarativ und programmgesteuert. Für vollständige Code- und zum Ausführen des Beispiels erforderlichen Schritte finden Sie im Beispielabschnitt von der <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> -Klassenübersicht.  
+  
+ Im folgenden Abschnitt des Codes, beachten Sie, dass die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.UploadHelpText%2A> Eigenschaftswert für das Steuerelement deklarativ festgelegt ist.  
+  
+ [!code-aspx-csharp[WebParts_ImportCatalogPart_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/CS/ImportCatalogPartOverviewCS.aspx#2)]
+ [!code-aspx-vb[WebParts_ImportCatalogPart_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/VB/ImportCatalogPartOverviewVB.aspx#2)]  
+  
+ In diesem Abschnitt des Codes der <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.UploadHelpText%2A> Eigenschaftswert programmgesteuert zugewiesen ist.  
+  
+ [!code-csharp[WebParts_ImportCatalogPart_Overview#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/CS/ImportCatalogPartOverviewCS.aspx#3)]
+ [!code-vb[WebParts_ImportCatalogPart_Overview#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ImportCatalogPart_Overview/VB/ImportCatalogPartOverviewVB.aspx#3)]  
+  
+ Wenn Sie die Seite in einem Browser zu laden, können Sie die **Anzeigemodus** Dropdownlisten-Steuerelement auswählen **Katalogmodus** und die Seite in den Katalogmodus wechseln. Beachten Sie auf der Seite im Katalogmodus und der Description-Datei hochgeladen die Textzeichenfolgen, die in der Benutzeroberfläche (UI) angezeigt, für die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> Steuerelement. Wenn Sie auf die **Beschreibungsdatei hochladen** Schaltfläche der Text für mehrere Eigenschaften in der Benutzeroberfläche geändert wird, einschließlich des Texts für die <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart.UploadHelpText%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

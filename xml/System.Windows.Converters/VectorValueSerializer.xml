@@ -1,0 +1,147 @@
+<Type Name="VectorValueSerializer" FullName="System.Windows.Converters.VectorValueSerializer">
+  <TypeSignature Language="C#" Value="public class VectorValueSerializer : System.Windows.Markup.ValueSerializer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit VectorValueSerializer extends System.Windows.Markup.ValueSerializer" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Converters.VectorValueSerializer" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Markup.ValueSerializer</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Konvertiert Instanzen von <see cref="T:System.String" /> in <see cref="T:System.Windows.Vector" />-Instanzen und umgekehrt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse wird in der Regel nur von verwendet die <xref:System.Windows.Markup.Primitives.MarkupWriter> für Serialisierungszwecke.  
+  
+<a name="xamlTextUsage_Int32RectValueSerializer"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public VectorValueSerializer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Converters.VectorValueSerializer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Converters.VectorValueSerializer" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFromString">
+      <MemberSignature Language="C#" Value="public override bool CanConvertFromString (string value, System.Windows.Markup.IValueSerializerContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFromString(string value, class System.Windows.Markup.IValueSerializerContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Converters.VectorValueSerializer.CanConvertFromString(System.String,System.Windows.Markup.IValueSerializerContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="context" Type="System.Windows.Markup.IValueSerializerContext" />
+      </Parameters>
+      <Docs>
+        <param name="value">Zeichenfolge, die für die Konvertierung ausgewertet werden soll.</param>
+        <param name="context">Die für die Konvertierung verwendeten Kontextinformationen.</param>
+        <summary>Bestimmt, ob das angegebene <see cref="T:System.String" /> konvertiert werden kann, mit einer Instanz von <see cref="T:System.Windows.Vector" />.</summary>
+        <returns>Gibt immer <see langword="true" /> zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertToString">
+      <MemberSignature Language="C#" Value="public override bool CanConvertToString (object value, System.Windows.Markup.IValueSerializerContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertToString(object value, class System.Windows.Markup.IValueSerializerContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Converters.VectorValueSerializer.CanConvertToString(System.Object,System.Windows.Markup.IValueSerializerContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="context" Type="System.Windows.Markup.IValueSerializerContext" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Objekt, das für die Konvertierung ausgewertet werden soll.</param>
+        <param name="context">Die für die Konvertierung verwendeten Kontextinformationen.</param>
+        <summary>Bestimmt, ob das angegebene <see cref="T:System.Windows.Vector" /> konvertiert werden kann, um eine <see cref="T:System.String" />.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="value" /> in einen <see cref="T:System.String" /> konvertiert werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFromString">
+      <MemberSignature Language="C#" Value="public override object ConvertFromString (string value, System.Windows.Markup.IValueSerializerContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFromString(string value, class System.Windows.Markup.IValueSerializerContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Converters.VectorValueSerializer.ConvertFromString(System.String,System.Windows.Markup.IValueSerializerContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="context" Type="System.Windows.Markup.IValueSerializerContext" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu konvertierende Zeichenfolge.</param>
+        <param name="context">Die für die Konvertierung verwendeten Kontextinformationen.</param>
+        <summary>Konvertiert ein <see cref="T:System.String" />-Element in ein <see cref="T:System.Windows.Vector" />-Element.</summary>
+        <returns>Eine neue Instanz von <see cref="T:System.Windows.Vector" /> anhand des angegebenen <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung verwendet <xref:System.Windows.Vector.Parse%2A?displayProperty=nameWithType> intern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertToString">
+      <MemberSignature Language="C#" Value="public override string ConvertToString (object value, System.Windows.Markup.IValueSerializerContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ConvertToString(object value, class System.Windows.Markup.IValueSerializerContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Converters.VectorValueSerializer.ConvertToString(System.Object,System.Windows.Markup.IValueSerializerContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="context" Type="System.Windows.Markup.IValueSerializerContext" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das in eine Zeichenfolge zu konvertierende Objekt.</param>
+        <param name="context">Die für die Konvertierung verwendeten Kontextinformationen.</param>
+        <summary>Konvertiert eine Instanz von <see cref="T:System.Windows.Vector" /> in eine <see cref="T:System.String" />.</summary>
+        <returns>Eine Zeichenfolgendarstellung des angegebenen <see cref="T:System.Windows.Vector" />-Objekts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,114 @@
+<Type Name="CatalogPartDesigner" FullName="System.Web.UI.Design.WebControls.WebParts.CatalogPartDesigner">
+  <TypeSignature Language="C#" Value="public class CatalogPartDesigner : System.Web.UI.Design.WebControls.WebParts.PartDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CatalogPartDesigner extends System.Web.UI.Design.WebControls.WebParts.PartDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.WebParts.CatalogPartDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.WebControls.WebParts.PartDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet zur Entwurfszeit Unterstützung für <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" />-, <see cref="T:System.Web.UI.WebControls.WebParts.ImportCatalogPart" />- und <see cref="T:System.Web.UI.WebControls.WebParts.PageCatalogPart" />-Steuerelemente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.UI.Design.WebControls.WebParts.CatalogPartDesigner>ist ein Mehrzweck-Designer, der zur Entwurfszeit stellt rendering <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> und <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> Steuerelemente, die von erben die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Basisklasse. <xref:System.Web.UI.Design.WebControls.WebParts.CatalogPartDesigner>Dient als eine standard-Steuerelement-Designer nur welche Anpassung benötigt, um das zugeordnete Steuerelement zu überprüfen und gelten Datenbankzustands Modus Entwurf für das Rendering zur Entwurfszeit hinzufügen.  
+  
+ Wenn Sie einen benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> -Steuerelement, Sie können einen abgeleiteten Designer erstellen, wie z. B. <xref:System.Web.UI.Design.WebControls.WebParts.DeclarativeCatalogPartDesigner>, um zur Entwurfszeit Rendering bereitzustellen. Elemente können problemlos nach Bedarf überschreiben. allerdings zum Überschreiben der <xref:System.Web.UI.Design.WebControls.WebParts.CatalogPartDesigner.CreateViewControl%2A> -Methode, achten Sie darauf, dass Sie die basisimplementierung zum Vermeiden von Datenverlusten Entwurf im Modus Zustandsinformationen aufrufen.  
+  
+   
+  
+## Examples  
+ <xref:System.Web.UI.Design.WebControls.WebParts.CatalogPartDesigner>und <xref:System.Web.UI.Design.WebControls.WebParts.EditorPartDesigner> verwenden eine identische Schnittstelle und Funktionalität. Ein Codebeispiel finden Sie unter der <xref:System.Web.UI.Design.WebControls.WebParts.EditorPartDesigner> -Klassenübersicht.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CatalogPartDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WebParts.CatalogPartDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.WebControls.WebParts.CatalogPartDesigner" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateViewControl">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.Control CreateViewControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.Control CreateViewControl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WebParts.CatalogPartDesigner.CreateViewControl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Kopie des zugeordneten <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> Steuerelement zur Entwurfszeit gerendert.</summary>
+        <returns>Eine Kopie des zugeordneten <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> Steuerelement.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird überschrieben, um Zoneninformationen in das Steuerelement zu kopieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WebParts.CatalogPartDesigner.GetDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt sicher, dass das Steuerelement in einer Zone vom Typ befindet sich <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZoneBase" />, und klicken Sie dann Ruft das Markup ab, die Darstellung des Steuerelements zur Entwurfszeit verwendet wird.</summary>
+        <returns>Das Markup, das verwendet wird, um die Darstellung des Steuerelements zur Entwurfszeit oder Markup Fehler, wenn das Steuerelement nicht im befindet eine <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZoneBase" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WebParts.CatalogPartDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" />-abgeleiteten Steuerelements, die dem Designer zugeordnete.</param>
+        <summary>Bindet den Designer an die zugeordnete <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" />-abgeleiteten Steuerelements.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

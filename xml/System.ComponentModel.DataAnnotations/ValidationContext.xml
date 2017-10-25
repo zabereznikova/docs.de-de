@@ -1,0 +1,370 @@
+<Type Name="ValidationContext" FullName="System.ComponentModel.DataAnnotations.ValidationContext">
+  <TypeSignature Language="C#" Value="public sealed class ValidationContext : IServiceProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ValidationContext extends System.Object implements class System.IServiceProvider" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.DataAnnotations.ValidationContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IServiceProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Beschreibt den Kontext, in dem eine Validierungsüberprüfung ausgeführt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse beschreibt den Typ oder Member, die für die Validierung ausgeführt wird. Es kann auch benutzerdefinierte Validierung, die durch jeden Dienst hinzugefügt werden, implementiert die <xref:System.IServiceProvider> Schnittstelle.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidationContext (object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.ValidationContext.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Die Objektinstanz, die validiert werden soll. Diese darf nicht <see langword="null" /> sein.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.DataAnnotations.ValidationContext" />-Klasse unter Verwendung des angegebenen Objektinstanz.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidationContext (object instance, System.Collections.Generic.IDictionary&lt;object,object&gt; items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object instance, class System.Collections.Generic.IDictionary`2&lt;object, object&gt; items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.ValidationContext.#ctor(System.Object,System.Collections.Generic.IDictionary{System.Object,System.Object})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+        <Parameter Name="items" Type="System.Collections.Generic.IDictionary&lt;System.Object,System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Die Objektinstanz, die validiert werden soll.  Diese darf nicht <see langword="null" /> sein.</param>
+        <param name="items">Ein optionaler Satz von Schlüssel-Wert-Paaren, die Consumern verfügbar gemacht werden sollen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.DataAnnotations.ValidationContext" />-Klasse unter Verwendung des angegebenen Objekts und eines optionalen Eigenschaftenbehälters.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `items` ist `null`, wird ein leeres Wörterbuch erstellt. Wenn `items` ist nicht null ist, wird der Satz von Schlüssel/Wert-Paare in ein neues Wörterbuch, das verhindert, dass Verbraucher ändern die ursprüngliche Wörterbuch kopiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidationContext (object instance, IServiceProvider serviceProvider, System.Collections.Generic.IDictionary&lt;object,object&gt; items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object instance, class System.IServiceProvider serviceProvider, class System.Collections.Generic.IDictionary`2&lt;object, object&gt; items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.ValidationContext.#ctor(System.Object,System.IServiceProvider,System.Collections.Generic.IDictionary{System.Object,System.Object})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+        <Parameter Name="items" Type="System.Collections.Generic.IDictionary&lt;System.Object,System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Das Objekt, dessen Gültigkeit überprüft werden soll. Dieser Parameter ist erforderlich.</param>
+        <param name="serviceProvider">Das Objekt, das die <see cref="T:System.IServiceProvider" />-Schnittstelle implementiert. Dieser Parameter ist optional.</param>
+        <param name="items">Ein Wörterbuch von Schlüssel-Wert-Paaren, das für Dienstconsumer verfügbar gemacht werden soll. Dieser Parameter ist optional.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.DataAnnotations.ValidationContext" />-Klasse unter Verwendung des angegebenen Wörterbuchs der Dienstconsumer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `serviceProvider` Parameter darstellt, einen Dienst, der verwendet werden kann die <xref:System.ComponentModel.DataAnnotations.ValidationContext.GetService%2A> Methode, um die benutzerdefinierte Überprüfung auszuführen.  
+  
+ Wenn die `items` Parameter ist `null`, wird ein leeres Wörterbuch erstellt. Wenn der Parameter nicht `null`, den Satz von Schlüssel/Wert-Paare in ein neues Wörterbuch, das verhindert, dass das für Dienstconsumer ändern die ursprüngliche Wörterbuch kopiert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public string DisplayName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.ValidationContext.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des zu überprüfenden Members ab oder legt ihn fest.</summary>
+        <value>Der Name des zu überprüfenden Members.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.DataAnnotations.ValidationContext.DisplayName%2A> Wert ist der Name, der dem Benutzer angezeigt wird. Wenn Sie ein Anzeigenamen nicht explizit festgelegt ist, verwendet diese Eigenschaft den Wert, der zugewiesen wird durch den zugehörigen <xref:System.ComponentModel.DataAnnotations.DisplayAttribute> Objekt. Wenn dieses Attribut nicht vorhanden ist, gibt die Eigenschaft den Wert der <xref:System.ComponentModel.DataAnnotations.ValidationContext.MemberName%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetService">
+      <MemberSignature Language="C#" Value="public object GetService (Type serviceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetService(class System.Type serviceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.ValidationContext.GetService(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">Der Typ des Diensts, der für die Validierung verwendet werden soll.</param>
+        <summary>Gibt den Dienst zurück, der eine benutzerdefinierte Validierung bereitstellt.</summary>
+        <returns>Eine Instanz des Diensts oder <see langword="null" />, wenn der Dienst nicht verfügbar ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.ComponentModel.DataAnnotations.ValidationContext.ServiceContainer%2A> Objekt ist auf der Anwendungsebene definiert die <xref:System.ComponentModel.DataAnnotations.ValidationContext.GetService%2A> Methode greift auf, um den angeforderten Dienst abzurufen.  
+  
+ Wenn die <xref:System.ComponentModel.DataAnnotations.ValidationContext.ServiceContainer%2A> Objekt ist nicht definiert oder den Dienst wird nicht zurückgegeben der <xref:System.ComponentModel.DataAnnotations.ValidationContext.GetService%2A> Methodenabfragen der <xref:System.IServiceProvider> -Objekt, das an die <xref:System.ComponentModel.DataAnnotations.ValidationContext.%23ctor%2A> Methode, um den Dienst zu erhalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeServiceProvider">
+      <MemberSignature Language="C#" Value="public void InitializeServiceProvider (Func&lt;Type,object&gt; serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InitializeServiceProvider(class System.Func`2&lt;class System.Type, object&gt; serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.ValidationContext.InitializeServiceProvider(System.Func{System.Type,System.Object})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.Func&lt;System.Type,System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Der Dienstanbieter.</param>
+        <summary>Initialisiert die <see cref="T:System.ComponentModel.DataAnnotations.ValidationContext" /> ein Dienstanbieter, der Dienst zurückgeben kann mit Instanzen von angegeben wird, wenn [GetService](http://msdn.microsoft.com/library/system.web.mvc.idependencyresolver.getservice\(VS.98\).aspx) aufgerufen wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Items">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;object,object&gt; Items { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;object, object&gt; Items" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.ValidationContext.Items" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Object,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Wörterbuch der Schlüssel-Wert-Paare ab, das diesem Kontext zugeordnet ist.</summary>
+        <value>Das Wörterbuch der Schlüssel-Wert-Paare für diesen Kontext.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist nie `null`, aber das Wörterbuch kann leer sein. Änderungen, die auf Elemente in diesem Wörterbuch im ursprünglichen Wörterbuch widergespiegelt, die im Konstruktor angegeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberName">
+      <MemberSignature Language="C#" Value="public string MemberName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MemberName" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.ValidationContext.MemberName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des zu überprüfenden Members ab oder legt ihn fest.</summary>
+        <value>Der Name des zu überprüfenden Members.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stellt eine Entität Elementnamen nicht den Namen einer entsprechenden Feld "Daten" dar. Dieser Name ist daher kein lokalisierter Name. Es sollte nur für die Eigenschaft oder ein Parameterwert Kontexte festgelegt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectInstance">
+      <MemberSignature Language="C#" Value="public object ObjectInstance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ObjectInstance" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.ValidationContext.ObjectInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Objekt ab, das validiert werden soll.</summary>
+        <value>Das Objekt, dessen Gültigkeit überprüft werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Objektinstanz möglicherweise während der Überprüfung besonders während der Überprüfung auf Eigenschaftenebene in einem unbestimmten Zustand.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectType">
+      <MemberSignature Language="C#" Value="public Type ObjectType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ObjectType" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.ValidationContext.ObjectType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des zu validierenden Objekts ab.</summary>
+        <value>Der Typ des zu validierenden Objekts.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceContainer">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Design.IServiceContainer ServiceContainer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.IServiceContainer ServiceContainer" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.ValidationContext.ServiceContainer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.IServiceContainer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Validierungsdienstecontainer ab.</summary>
+        <value>Der Validierungsdienstecontainer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.DataAnnotations.ValidationContext.ServiceContainer%2A> Eigenschaft wird zum Abrufen von Diensten während der Validierung verwendet.  
+  
+ Wenn die <xref:System.IServiceProvider> Anbieter, die in den Konstruktor implementiert angegeben ist die <xref:System.ComponentModel.Design.IServiceContainer> der Provider-Schnittstelle wird zum Initialisieren der <xref:System.ComponentModel.DataAnnotations.ValidationContext.ServiceContainer%2A> Eigenschaft. Andernfalls die <xref:System.ComponentModel.DataAnnotations.ValidationContext.ServiceContainer%2A> Eigenschaft auf einen leeren Container initialisiert ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

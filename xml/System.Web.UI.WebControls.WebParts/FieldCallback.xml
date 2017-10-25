@@ -1,0 +1,32 @@
+<Type Name="FieldCallback" FullName="System.Web.UI.WebControls.WebParts.FieldCallback">
+  <TypeSignature Language="C#" Value="public delegate void FieldCallback(object fieldValue);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FieldCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.FieldCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="fieldValue" Type="System.Object" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="fieldValue">Die Rückrufmethode.</param>
+    <summary>Verweist auf die Methode, die aufgerufen wird, wenn Daten von einem Anbieter abgerufen werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Webparts-Steuerelement enthält Daten über die <xref:System.Web.UI.WebControls.WebParts.IWebPartField> -Schnittstelle, die Consumer oder Transformer muss abrufen und verarbeiten die Felddaten aus der Anbieter. Die <xref:System.Web.UI.WebControls.WebParts.FieldCallback> Delegat stellt die Methode für die Verarbeitung der Anbieterdaten aufrufen.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.IWebPartField.GetFieldValue%2A?displayProperty=nameWithType> Methode enthält einen <xref:System.Web.UI.WebControls.WebParts.FieldCallback> Parameter zu delegieren.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

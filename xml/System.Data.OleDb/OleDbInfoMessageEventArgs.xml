@@ -1,0 +1,138 @@
+<Type Name="OleDbInfoMessageEventArgs" FullName="System.Data.OleDb.OleDbInfoMessageEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class OleDbInfoMessageEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OleDbInfoMessageEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Data.OleDb.OleDbInfoMessageEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Data.OleDb.OleDbConnection.InfoMessage" />-Ereignis bereit. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.OleDb.OleDbConnection.InfoMessage> Ereignis enthält einen <xref:System.Data.OleDb.OleDbErrorCollection> Auflistung mit Warnungen, die aus der Datenquelle gesendet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ErrorCode">
+      <MemberSignature Language="C#" Value="public int ErrorCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ErrorCode" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbInfoMessageEventArgs.ErrorCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das HRESULT, das dem ANSI SQL-standard für die Datenbank ab.</summary>
+        <value>Das HRESULT, der die Quelle des Fehlers, der identifiziert, ob der Fehler von mehr als einem zentralen Ort ausgestellt werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist ein Wrapper für die <xref:System.Data.OleDb.OleDbError.SQLState%2A> Eigenschaft des ersten <xref:System.Data.OleDb.OleDbError> in der <xref:System.Data.OleDb.OleDbInfoMessageEventArgs.Errors%2A> Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Errors">
+      <MemberSignature Language="C#" Value="public System.Data.OleDb.OleDbErrorCollection Errors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.OleDb.OleDbErrorCollection Errors" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbInfoMessageEventArgs.Errors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbErrorCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Warnungen, die aus der Datenquelle gesendet.</summary>
+        <value>Die Auflistung von Warnungen, die aus der Datenquelle gesendet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbInfoMessageEventArgs.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den vollständigen Text des Fehlers aus der Datenquelle gesendet.</summary>
+        <value>Der vollständige Text des Fehlers.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist ein Wrapper für die <xref:System.Data.OleDb.OleDbError.Message%2A> Eigenschaft des ersten <xref:System.Data.OleDb.OleDbError> in der <xref:System.Data.OleDb.OleDbInfoMessageEventArgs.Errors%2A> Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public string Source { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Source" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbInfoMessageEventArgs.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Objekts, das den Fehler generiert hat.</summary>
+        <value>Der Name des Objekts, das den Fehler generiert hat.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist ein Wrapper für die <xref:System.Data.OleDb.OleDbError.Source%2A> Eigenschaft des ersten <xref:System.Data.OleDb.OleDbError> in der <xref:System.Data.OleDb.OleDbInfoMessageEventArgs.Errors%2A> Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbInfoMessageEventArgs.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Zeichenfolgendarstellung der <see cref="E:System.Data.OleDb.OleDbConnection.InfoMessage" /> Ereignis.</summary>
+        <returns>Eine Zeichenfolge, die <see cref="E:System.Data.OleDb.OleDbConnection.InfoMessage" /> Ereignis.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

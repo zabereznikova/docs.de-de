@@ -1,0 +1,62 @@
+<Type Name="LocalCertificateSelectionCallback" FullName="System.Net.Security.LocalCertificateSelectionCallback">
+  <TypeSignature Language="C#" Value="public delegate System.Security.Cryptography.X509Certificates.X509Certificate LocalCertificateSelectionCallback(object sender, string targetHost, X509CertificateCollection localCertificates, X509Certificate remoteCertificate, string[] acceptableIssuers);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LocalCertificateSelectionCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Security.LocalCertificateSelectionCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="targetHost" Type="System.String" />
+    <Parameter Name="localCertificates" Type="System.Security.Cryptography.X509Certificates.X509CertificateCollection" />
+    <Parameter Name="remoteCertificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate" />
+    <Parameter Name="acceptableIssuers" Type="System.String[]" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Ein Objekt, das Zustandsinformationen für diese Validierung enthält.</param>
+    <param name="targetHost">Der Hostserver vom Client angegeben.</param>
+    <param name="localCertificates">Ein <see cref="T:System.Security.Cryptography.X509Certificates.X509CertificateCollection" /> mit lokalen Zertifikaten.</param>
+    <param name="remoteCertificate">Das Zertifikat zum Authentifizieren der Remotepartei verwendet wird.</param>
+    <param name="acceptableIssuers">Ein <see cref="T:System.String" /> Array Zertifikataussteller für die remote-Teilnehmers akzeptabel.</param>
+    <summary>Wählt das lokale Secure Sockets Layer (SSL)-Zertifikat für die Authentifizierung verwendet.</summary>
+    <returns>Ein <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate" /> für das Herstellen einer SSL-Verbindungs verwendet.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Delegat wird verwendet, um die Erstellung von Instanzen der <xref:System.Net.Security.SslStream> Klasse. Die <xref:System.Net.Security.SslStream> Klasse dient zum Schutz von Informationen zwischen einem Client und Server ausgetauscht. Client und Server verwenden Sie diesen Delegaten zur Auswahl eines Zertifikats für die Authentifizierung verwendet werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel veranschaulicht die Implementierung einer Methode für diesen Delegaten.  
+  
+ [!code-cpp[NclSslClientAsync#2](~/samples/snippets/cpp/VS_Snippets_Remoting/NclSslClientAsync/CPP/NclSslClientAsync.cpp#2)]
+ [!code-csharp[NclSslClientAsync#2](~/samples/snippets/csharp/VS_Snippets_Remoting/NclSslClientAsync/CS/clientasync.cs#2)]  
+  
+ Das folgende Codebeispiel veranschaulicht das Erstellen einer Instanz dieses Delegaten.  
+  
+ [!code-cpp[NclSslClientAsync#6](~/samples/snippets/cpp/VS_Snippets_Remoting/NclSslClientAsync/CPP/NclSslClientAsync.cpp#6)]
+ [!code-csharp[NclSslClientAsync#6](~/samples/snippets/csharp/VS_Snippets_Remoting/NclSslClientAsync/CS/clientasync.cs#6)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

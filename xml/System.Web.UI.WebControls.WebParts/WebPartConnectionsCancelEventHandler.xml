@@ -1,0 +1,38 @@
+<Type Name="WebPartConnectionsCancelEventHandler" FullName="System.Web.UI.WebControls.WebParts.WebPartConnectionsCancelEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void WebPartConnectionsCancelEventHandler(object sender, WebPartConnectionsCancelEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WebPartConnectionsCancelEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebPartConnectionsCancelEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Web.UI.WebControls.WebParts.WebPartConnectionsCancelEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnectionsCancelEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode für die Behandlung der <see cref="E:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartsConnecting" /> Ereignis oder <see cref="E:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartsDisconnecting" /> -Ereignis für ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartsConnecting> Ereignis wird ausgelöst, durch die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.OnWebPartsConnecting%2A> -Methode, und wird signalisiert, dass der Verbindungsprozess begonnen hat (ein Benutzer hat z. B. ein Steuerelement ausgewählt und eine Connect-Verb geklickt), aber noch nicht abgeschlossen ist. Das Ereignis bietet die Möglichkeit, eine Verbindung abzubrechen, bevor er abgeschlossen ist. Wenn die Verbindung erfolgreich abgeschlossen wird, wird dieses Ereignis gefolgt von der <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartsConnected> Ereignis.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartsDisconnecting> Ereignis wird ausgelöst, durch die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.OnWebPartsDisconnecting%2A> -Methode, und es signalisiert die Tatsache, dass ein Benutzer ein Trennen-Verb geklickt hat oder die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.DisconnectWebParts%2A> andernfalls-Methode aufgerufen wurde. Das Ereignis bietet die Möglichkeit zum Abbrechen des Prozess beim Beenden einer Verbindung, bevor er abgeschlossen ist. Wenn die Verbindung erfolgreich beendet wird, wird dieses Ereignis gefolgt von der <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartsDisconnected> Ereignis.  
+  
+ Die Methode angegeben, der <xref:System.Web.UI.WebControls.WebParts.WebPartConnectionsCancelEventHandler> Delegat wird aufgerufen, wenn eine <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartsConnecting> oder <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartsDisconnecting> Ereignis wird ausgelöst.  
+  
+ Seite-Entwickler können benutzerdefinierte Handler für die Ereignisse hinzufügen, indem die `OnWebPartsDisconnecting` und `OnWebPartsConnecting` -Attribute verwenden, um die `<asp:webpartmanager>` Element und die Attribute benutzerdefinierten Methodennamen zuweisen. Ein benutzerdefinierter Handler kann auch programmgesteuert zugewiesen werden. Weitere Informationen zum Zuweisen von programmgesteuert einen Ereignishandler finden Sie unter [NIB: Vorgehensweise: Verbinden von Ereignishandlermethoden mit Ereignissen](http://msdn.microsoft.com/en-us/348e9600-22e3-49a2-8864-11c5bb3e98fc).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

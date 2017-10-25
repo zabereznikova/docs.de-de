@@ -1,0 +1,1071 @@
+<Type Name="ComponentDesigner" FullName="System.ComponentModel.Design.ComponentDesigner">
+  <TypeSignature Language="C#" Value="public class ComponentDesigner : IDisposable, System.ComponentModel.Design.IComponentInitializer, System.ComponentModel.Design.IDesignerFilter, System.ComponentModel.Design.ITreeDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ComponentDesigner extends System.Object implements class System.ComponentModel.Design.IComponentInitializer, class System.ComponentModel.Design.IDesigner, class System.ComponentModel.Design.IDesignerFilter, class System.ComponentModel.Design.ITreeDesigner, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.ComponentDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.Design.IComponentInitializer</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.Design.IDesignerFilter</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.Design.ITreeDesigner</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Erweitert das Entwurfsmodusverhalten einer Komponente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.ComponentDesigner> Basisdesignerklasse stellt einen einfachen Designer, die das Verhalten einer zugeordneten Komponente im Entwurfsmodus erweitern kann.  
+  
+ <xref:System.ComponentModel.Design.ComponentDesigner>Stellt ein leeres <xref:System.ComponentModel.Design.IDesignerFilter> -schnittstellenimplementierung, Attribute, Eigenschaften und Ereignisse der zugeordneten Komponente zur Entwurfszeit angepasst, deren Methoden überschrieben werden können.  
+  
+ Sie können einen Designer Zuordnen eines Typs unter Verwendung einer <xref:System.ComponentModel.DesignerAttribute>. Einen Überblick über das Anpassen des Verhaltens zur Entwurfszeit finden Sie unter [Erweitern der Entwurfszeitunterstützung](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2).  
+  
+ Die <xref:System.ComponentModel.Design.ComponentDesigner> Klasse implementiert, ein spezielles Verhalten für die Eigenschaftendeskriptoren vererbten Komponenten. Einen internen Typ, der mit dem Namen `InheritedPropertyDescriptor` wird verwendet, die standardmäßig <xref:System.ComponentModel.Design.ComponentDesigner> Implementierung Eigenschaften stehen, die von einer Basisklasse geerbt werden. Es gibt zwei Fälle, die in denen diese Eigenschaftendeskriptoren hinzugefügt werden.  
+  
+1.  Das Stammobjekt selbst, der zurückgegeben wird durch die <xref:System.ComponentModel.Design.IDesignerHost.RootComponent%2A?displayProperty=nameWithType> -Eigenschaft, da Sie von ihrer Basisklasse erben.  
+  
+2.  An Felder in der Basisklasse des Stammobjekts gefunden. Öffentliche und geschützte Felder von der Basisklasse werden in den Designer hinzugefügt, sodass sie vom Benutzer bearbeitet werden können.  
+  
+ Die `InheritedPropertyDescriptor` Klasse wird den Standardwert einer Eigenschaft geändert, sodass der Standardwert der aktuelle Wert bei der Objektinstanziierung ist. Dies ist, da die Eigenschaft aus einer anderen Instanz geerbt wird. Der Designer definiert, den Wert der Eigenschaft zurücksetzen, wie er auf den Wert festlegen, die von der geerbten Klasse festgelegt wurde. Dieser Wert unterscheidet sich vom Standardwert in den Metadaten gespeichert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel enthält ein Beispiel <xref:System.ComponentModel.Design.ComponentDesigner> Implementierung und eine Beispielkomponente, die dem Designer zugeordnete. Der Designer implementiert eine Überschreibung der der <xref:System.ComponentModel.Design.ComponentDesigner.Initialize%2A> Methode, die die Basis aufruft `Initialize` -Methode, eine Überschreibung der der <xref:System.ComponentModel.Design.ComponentDesigner.DoDefaultAction%2A> Methode, die anzeigt eine <xref:System.Windows.Forms.MessageBox> die Komponente doppelklicken auf ist und eine Überschreibung von der <xref:System.ComponentModel.Design.ComponentDesigner.Verbs%2A> Eigenschaftenaccessor, das eine benutzerdefinierte bereitstellt <xref:System.ComponentModel.Design.DesignerVerb> Menübefehl aus dem Kontextmenü für die Komponente.  
+  
+ [!code-cpp[ComponentDesignerExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ComponentDesignerExample/CPP/examplecomponent.cpp#1)]
+ [!code-csharp[ComponentDesignerExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ComponentDesignerExample/CS/examplecomponent.cs#1)]
+ [!code-vb[ComponentDesignerExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ComponentDesignerExample/VB/examplecomponent.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComponentDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ComponentDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Design.ComponentDesigner" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActionLists">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.Design.DesignerActionListCollection ActionLists { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.DesignerActionListCollection ActionLists" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.ComponentDesigner.ActionLists" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerActionListCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die zur Entwurfszeit-Aktionslisten unterstützt, die von der dem Designer zugeordnete Komponente ab.</summary>
+        <value>Die während der Entwurfszeit-Aktion enthält, von der dem Designer zugeordnete Komponente unterstützt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssociatedComponents">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.ICollection AssociatedComponents { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection AssociatedComponents" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.ComponentDesigner.AssociatedComponents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung der Komponenten, die mit der Komponente, die vom Designer verwaltet.</summary>
+        <value>Die Komponenten, die die vom Designer verwalteten Komponente zugeordnet sind.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt an, alle Komponenten, kopiert oder verschoben werden, zusammen mit der Komponente, die vom Designer verwaltet wird, während eines Kopiervorgangs ziehen oder Verschiebevorgang ab.  
+  
+ Wenn diese Auflistung Verweise auf andere Komponenten in das aktuelle Dokument im Entwurfsmodus enthält, werden diese Komponenten zusammen mit der Komponente, die vom Designer verwaltet wird, während eines Kopiervorgangs kopiert.  
+  
+ Wenn die vom Designer verwaltete Komponente ausgewählt ist, wird diese Auflistung mit allen verschachtelten Steuerelementen gefüllt. Dieser Auflistung kann auch andere Komponenten, wie z. B. die Schaltflächen einer Symbolleiste enthalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Component">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.IComponent Component { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.IComponent Component" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.ComponentDesigner.Component" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IComponent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Komponente aus, die diesem Designer entworfen wird.</summary>
+        <value>Die Komponente, die vom Designer verwaltet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.ComponentDesigner.Initialize%2A> Methode <xref:System.ComponentModel.Design.ComponentDesigner> wird diese Eigenschaft festgelegt.  
+  
+> [!NOTE]
+>  Zum Überschreiben der <xref:System.ComponentModel.Design.ComponentDesigner.Initialize%2A> -Methode die Basisklasse aufrufen <xref:System.ComponentModel.Design.ComponentDesigner.Initialize%2A> -Methode vor dem Verwenden dieser Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ComponentDesigner.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle vom <see cref="T:System.ComponentModel.Design.ComponentDesigner" /> verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.ComponentModel.Design.ComponentDesigner.Dispose%2A> auf, wenn Sie <xref:System.ComponentModel.Design.ComponentDesigner> nicht mehr benötigen. Die <xref:System.ComponentModel.Design.ComponentDesigner.Dispose%2A>-Methode bewirkt, dass <xref:System.ComponentModel.Design.ComponentDesigner> nicht mehr verwendet werden kann. Nach dem Aufruf <xref:System.ComponentModel.Design.ComponentDesigner.Dispose%2A>, müssen Sie alle Verweise auf Freigeben der <xref:System.ComponentModel.Design.ComponentDesigner> , damit der Garbage Collector den Arbeitsspeicher freigeben kann, die die <xref:System.ComponentModel.Design.ComponentDesigner> belegt wurde. Weitere Informationen finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Rufen Sie immer <xref:System.ComponentModel.Design.ComponentDesigner.Dispose%2A> auf, bevor Sie den letzten Verweis auf das <xref:System.ComponentModel.Design.ComponentDesigner> freigeben. Andernfalls bleiben die verwendeten Ressourcen reserviert, bis die Garbage Collection die <xref:System.ComponentModel.Design.ComponentDesigner>-Methode des `Finalize`-Objekts aufruft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ComponentDesigner.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.ComponentModel.Design.ComponentDesigner" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich `Dispose()` Methode und die <xref:System.Object.Finalize%2A> Methode. `Dispose()`Ruft die geschützte `Dispose(Boolean)` Methode mit dem `disposing` Parametersatz auf `true`. <xref:System.Object.Finalize%2A>Ruft `Dispose` mit `disposing` festgelegt `false`.  
+  
+ Wenn die `disposing` Parameter ist "true", gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte, die von diesem <xref:System.ComponentModel.Design.ComponentDesigner> Verweise. Diese Methode ruft die `Dispose()`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Zum Überschreiben <see langword="Dispose(Boolean)" /> Achten Sie darauf, dass Sie nicht auf Objekte verweisen, die einen früheren Aufruf freigegeben wurden <see langword="Dispose" />. Weitere Informationen zum Implementieren <see langword="Dispose(Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see langword="Dispose" /> und <see cref="M:System.Object.Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="DoDefaultAction">
+      <MemberSignature Language="C#" Value="public virtual void DoDefaultAction ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DoDefaultAction() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ComponentDesigner.DoDefaultAction" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Methodensignatur in der Quellcodedatei für das Standardereignis für die Komponente und den Cursor des Benutzers an diesen Speicherort navigiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Windows Forms und Web Forms-Designer wird diese Methode aufgerufen, wenn ein Benutzer eine Komponente doppelklickt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.Design.CheckoutException">Fehler bei, die in ein Quellcode-Verwaltungsprogramm eingecheckte Datei auszuchecken.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~ComponentDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ComponentDesigner.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Versucht, durch Aufrufen von <see langword="Dispose(false)" /> Ressourcen freizugeben, bevor das Objekt durch die Garbage Collection wieder zugänglich gemacht wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überschreibt <xref:System.Object.Finalize%2A?displayProperty=nameWithType> und bereinigt Ressourcen durch Aufrufen von `Dispose(false)`. Überschreiben Sie `Dispose(Boolean)`, um die Bereinigung anzupassen.  
+  
+ Diese Methode sollte nicht von Anwendungscode aufgerufen werden. ein Objekt `Finalize` Methode wird automatisch während der Garbagecollection aufgerufen, durch einen Aufruf von seiner Finalisierung verfolgt, durch den Garbage Collector deaktiviert wurde die <xref:System.GC.SuppressFinalize%2A?displayProperty=nameWithType> Methode.  
+  
+ Weitere Informationen finden Sie unter [Finalize-Methoden und Destruktoren](http://msdn.microsoft.com/en-us/fd376774-1643-499b-869e-9546a3aeea70), [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md), und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetService">
+      <MemberSignature Language="C#" Value="protected virtual object GetService (Type serviceType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object GetService(class System.Type serviceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ComponentDesigner.GetService(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">Der Typ des anzufordernden Dienstes.</param>
+        <summary>Versucht, den angegebenen Diensttyp von der Entwurfsmodussite der Komponente des Designers abzurufen.</summary>
+        <returns>Ein Objekt, das den angeforderten Dienst implementiert oder <see langword="null" /> , wenn der Dienst nicht aufgelöst werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die standardmäßige Implementierung dieser Methode fordert den Dienst über die Site der Komponente.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.ComponentModel.Design.ComponentDesigner.GetService%2A> Methode Designer Dienste zugreifen.  
+  
+ [!code-csharp[System.ComponentModel.Design.DesignerServices#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerServices/CS/Form1.cs#7)]
+ [!code-vb[System.ComponentModel.Design.DesignerServices#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerServices/VB/Form1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InheritanceAttribute">
+      <MemberSignature Language="C#" Value="protected virtual System.ComponentModel.InheritanceAttribute InheritanceAttribute { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.InheritanceAttribute InheritanceAttribute" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.ComponentDesigner.InheritanceAttribute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.InheritanceAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Attribut, das den Typ der Vererbung von der zugeordneten Komponente angibt.</summary>
+        <value>Die <see cref="T:System.ComponentModel.InheritanceAttribute" /> für die zugeordnete Komponente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Inherited">
+      <MemberSignature Language="C#" Value="protected bool Inherited { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Inherited" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.ComponentDesigner.Inherited" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob diese Komponente geerbt wird.</summary>
+        <value>
+          <see langword="true" />Wenn die Komponente geerbt wird. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public virtual void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ComponentDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die Komponente für diesen Designer.</param>
+        <summary>Bereitet den Designer zum Anzeigen, bearbeiten und Entwerfen der angegebenen Komponente vor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Designerhost ruft diese Methode auf, wenn er mit dem Designer bereit ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeExistingComponent">
+      <MemberSignature Language="C#" Value="public virtual void InitializeExistingComponent (System.Collections.IDictionary defaultValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void InitializeExistingComponent(class System.Collections.IDictionary defaultValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ComponentDesigner.InitializeExistingComponent(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="defaultValues" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="defaultValues">Ein Name/Wert-Wörterbuch mit Standardwerten, die auf Eigenschaften angewendet werden können. Möglicherweise <see langword="null" /> , wenn keine Standardwerte angegeben werden.</param>
+        <summary>Initialisiert eine vorhandene Komponente erneut.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.ComponentDesigner.InitializeExistingComponent%2A> Methode wird aufgerufen, wenn eine vorhandene Komponente erneut initialisiert wird. Dies kann z. B. auftreten, nachdem der Benutzer eine Komponente in einen anderen Container zieht.  
+  
+ Sie können die `defaultValues` Wörterbuch anzuwendende sollten Sie Standardwerte für Eigenschaften; jedoch Sie sollte nicht geändert werden, Komponenteneigenschaften abgesehen Rollenoptionen im Wörterbuch vorhanden ist, da diese vorhandenen Komponente bereits Eigenschaften festgelegt haben, kann.  
+  
+ Die standardmäßige Implementierung dieser Methode wird keine Aktion ausgeführt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeNewComponent">
+      <MemberSignature Language="C#" Value="public virtual void InitializeNewComponent (System.Collections.IDictionary defaultValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void InitializeNewComponent(class System.Collections.IDictionary defaultValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ComponentDesigner.InitializeNewComponent(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="defaultValues" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="defaultValues">Ein Name/Wert-Wörterbuch mit Standardwerten, die auf Eigenschaften angewendet werden können. Möglicherweise <see langword="null" /> , wenn keine Standardwerte angegeben werden.</param>
+        <summary>Initialisiert eine neu erstellte Komponente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.ComponentDesigner.InitializeNewComponent%2A> Methode wird aufgerufen, wenn eine Komponente zuerst, normalerweise initialisiert wird nach dem ersten, einer Entwurfsoberfläche hinzufügen.  
+  
+ Führen Sie alle erforderlichen Initialisierungsschritte für diese Komponente und kann ignoriert werden, die `defaultValues` Wörterbuch vollständig.  
+  
+ Die standardmäßige Implementierung dieser Methode wird keine Aktion ausgeführt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeNonDefault">
+      <MemberSignature Language="C#" Value="public virtual void InitializeNonDefault ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void InitializeNonDefault() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ComponentDesigner.InitializeNonDefault" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This method has been deprecated. Use InitializeExistingComponent instead.  http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert die Einstellungen für eine importierte Komponente, die bereits mit Einstellungen als die Standardwerte initialisiert wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, wenn der Designer ein Steuerelement zugeordnet ist, die nicht in seinem Standardzustand, z. B. ein Steuerelement ist, die Sie einfügen oder verschieben Sie mit einem Drag & Drop-Vorgang in den Designer. Diese Methode bietet eine Möglichkeit, bei der Implementierung zu ändern oder Shadowing für die Eigenschaften der Komponente als der initialisieren Sie die Eigenschaften für die Komponente auf ihre Standardwerte. Diese Methode wird nach anderen Initialisierungsfunktionen zur aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeGetInheritanceAttribute">
+      <MemberSignature Language="C#" Value="protected System.ComponentModel.InheritanceAttribute InvokeGetInheritanceAttribute (System.ComponentModel.Design.ComponentDesigner toInvoke);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.ComponentModel.InheritanceAttribute InvokeGetInheritanceAttribute(class System.ComponentModel.Design.ComponentDesigner toInvoke) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ComponentDesigner.InvokeGetInheritanceAttribute(System.ComponentModel.Design.ComponentDesigner)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.InheritanceAttribute</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toInvoke" Type="System.ComponentModel.Design.ComponentDesigner" />
+      </Parameters>
+      <Docs>
+        <param name="toInvoke">Die <see cref="T:System.ComponentModel.Design.ComponentDesigner" /> , dessen Vererbungsattribut abgerufen.</param>
+        <summary>Ruft die <see cref="T:System.ComponentModel.InheritanceAttribute" /> des angegebenen <see cref="T:System.ComponentModel.Design.ComponentDesigner" />.</summary>
+        <returns>Die <see cref="T:System.ComponentModel.InheritanceAttribute" /> des angegebenen Designers.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSetComponentDefaults">
+      <MemberSignature Language="C#" Value="public virtual void OnSetComponentDefaults ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnSetComponentDefaults() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ComponentDesigner.OnSetComponentDefaults" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This method has been deprecated. Use InitializeNewComponent instead.  http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt die Standardeigenschaften für die Komponente fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.Design.ComponentDesigner.OnSetComponentDefaults%2A>wird aufgerufen, wenn der Designer initialisiert wird. Dies ermöglicht es dem Designer auf die Standardwerte für die Basiskomponente bereitzustellen.  
+  
+ Diese Methode wird nur einmal aufgerufen werden: beim ersten Erstellen der Komponente aus der Toolbox auf die Entwurfsoberfläche ziehen. Nachfolgende Initialisierungen des Designers führen Sie diese Methode nicht aufgerufen werden.  
+  
+ Die standardmäßige Implementierung dieser Methode wird die Standardeigenschaft der Komponente auf den Namen der Komponente, wenn die Standardeigenschaft eine Zeichenfolge ist, und die Eigenschaft nicht bereits festgelegt. Diese Methode kann implementiert werden, in einer abgeleiteten Klasse die Initialisierung der Komponente anpassen, die diesem Designer entworfen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentComponent">
+      <MemberSignature Language="C#" Value="protected virtual System.ComponentModel.IComponent ParentComponent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.IComponent ParentComponent" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.ComponentDesigner.ParentComponent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IComponent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die übergeordnete Komponente für diesen Designer ab.</summary>
+        <value>Die übergeordnete Komponente für diesen Designer oder <see langword="null" /> , wenn der Designer die Stammkomponente ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stellt einen generischen Mechanismus für die Ermittlung von Beziehungen über-und Elemente in Designern und dient der <xref:System.ComponentModel.Design.ComponentDesigner> des Objekts <xref:System.ComponentModel.Design.ITreeDesigner> schnittstellenimplementierung. Diese Eigenschaft sollte nur zurückgeben `null` Wenn der Designer die Stammkomponente ist. Die standardmäßige Implementierung dieser Eigenschaft gibt die Stammkomponente für alle Komponenten, die nicht die Stammkomponente sind und es zurück `null` für die Stammkomponente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostFilterAttributes">
+      <MemberSignature Language="C#" Value="protected virtual void PostFilterAttributes (System.Collections.IDictionary attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void PostFilterAttributes(class System.Collections.IDictionary attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ComponentDesigner.PostFilterAttributes(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Die Attribute für die Klasse der Komponente.</param>
+        <summary>Ermöglicht einem Designer zu ändern oder Entfernen von Elementen aus dem Satz von Attributen, die über macht eine <see cref="T:System.ComponentModel.TypeDescriptor" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bietet eine Möglichkeit zum Ändern oder entfernen die Elemente im Wörterbuch mit Attributen, die durch verfügbar gemacht werden eine <xref:System.ComponentModel.TypeDescriptor>.  
+  
+ Der Schlüssel im Wörterbuch Attribute sind die Typ-IDs der Attribute, durch den Wert des angegebenen ihre <xref:System.Attribute.TypeId%2A> Eigenschaft. Die Objekte sind vom Typ <xref:System.ComponentModel.PropertyDescriptor>. Diese Methode wird aufgerufen, unmittelbar nach der <xref:System.ComponentModel.Design.ComponentDesigner.PreFilterAttributes%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie können das Wörterbuch, das über den möglich ist direkt filtern die <paramref name="attributes" /> annimmt, oder Sie können diese unverändert belassen. Wenn Sie diese Methode überschreiben, rufen Sie die basisimplementierung auf, nachdem Sie Ihren eigenen Filtern ausführen. Darüber hinaus müssen Sie nicht Elemente im Entfernen der <see cref="M:System.ComponentModel.Design.ComponentDesigner.PostFilterAttributes(System.Collections.IDictionary)" /> Methode. Ändern Sie stattdessen die Attribute, um Elemente auszublenden. Sie können auch Elemente im Entfernen der <see cref="M:System.ComponentModel.Design.ComponentDesigner.PreFilterAttributes(System.Collections.IDictionary)" /> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PostFilterEvents">
+      <MemberSignature Language="C#" Value="protected virtual void PostFilterEvents (System.Collections.IDictionary events);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void PostFilterEvents(class System.Collections.IDictionary events) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ComponentDesigner.PostFilterEvents(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="events" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="events">Die Ereignisse für die Klasse der Komponente.</param>
+        <summary>Ermöglicht einem Designer zu ändern oder Entfernen von Elementen aus dem Satz von Ereignissen, die über macht eine <see cref="T:System.ComponentModel.TypeDescriptor" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bietet eine Möglichkeit zum Ändern oder entfernen die Elemente im Wörterbuch von Ereignissen, die durch verfügbar gemacht werden eine <xref:System.ComponentModel.TypeDescriptor>.  
+  
+ Der Schlüssel im Wörterbuch von Ereignissen sind die Namen der Ereignisse. Die Objekte sind vom Typ <xref:System.ComponentModel.PropertyDescriptor>. Diese Methode wird aufgerufen, unmittelbar nach der <xref:System.ComponentModel.Design.ComponentDesigner.PreFilterEvents%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie können das Wörterbuch, das über den möglich ist direkt filtern die <paramref name="events" /> annimmt, oder Sie können diese unverändert belassen. Wenn Sie diese Methode überschreiben, rufen Sie die basisimplementierung auf, nachdem Sie Ihren eigenen Filtern ausführen. Darüber hinaus müssen Sie nicht Elemente im Entfernen der <see cref="M:System.ComponentModel.Design.ComponentDesigner.PostFilterEvents(System.Collections.IDictionary)" /> Methode. Ändern Sie stattdessen die Attribute, um Elemente auszublenden. Sie können auch Elemente im Entfernen der <see cref="M:System.ComponentModel.Design.ComponentDesigner.PreFilterEvents(System.Collections.IDictionary)" /> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PostFilterProperties">
+      <MemberSignature Language="C#" Value="protected virtual void PostFilterProperties (System.Collections.IDictionary properties);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void PostFilterProperties(class System.Collections.IDictionary properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ComponentDesigner.PostFilterProperties(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Die Eigenschaften für die Klasse der Komponente.</param>
+        <summary>Ermöglicht einem Designer zu ändern oder Entfernen von Elementen aus dem Satz von Eigenschaften, die über macht eine <see cref="T:System.ComponentModel.TypeDescriptor" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bietet eine Möglichkeit zum Ändern oder entfernen die Elemente im Wörterbuch von Eigenschaften, die durch verfügbar gemacht werden eine <xref:System.ComponentModel.TypeDescriptor>.  
+  
+ Der Schlüssel im Wörterbuch Eigenschaften sind die Namen der Eigenschaften. Die Objekte sind vom Typ <xref:System.ComponentModel.PropertyDescriptor>. Diese Methode wird aufgerufen, unmittelbar nach der <xref:System.ComponentModel.Design.ComponentDesigner.PreFilterProperties%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie können das Wörterbuch, das über den möglich ist direkt filtern die <paramref name="properties" /> annimmt, oder Sie können diese unverändert belassen. Wenn Sie diese Methode überschreiben, rufen Sie die basisimplementierung auf, nachdem Sie Ihren eigenen Filtern ausführen. Darüber hinaus müssen Sie nicht Elemente im Entfernen der <see cref="M:System.ComponentModel.Design.ComponentDesigner.PostFilterProperties(System.Collections.IDictionary)" /> Methode. Ändern Sie stattdessen die Attribute, um Elemente auszublenden. Sie können auch Elemente im Entfernen der <see cref="M:System.ComponentModel.Design.ComponentDesigner.PreFilterProperties(System.Collections.IDictionary)" /> Methode.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PreFilterAttributes">
+      <MemberSignature Language="C#" Value="protected virtual void PreFilterAttributes (System.Collections.IDictionary attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void PreFilterAttributes(class System.Collections.IDictionary attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ComponentDesigner.PreFilterAttributes(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Die Attribute für die Klasse der Komponente.</param>
+        <summary>Ermöglicht es einen Designer, den Satz von Attributen hinzufügen, das sie, über offenlegt eine <see cref="T:System.ComponentModel.TypeDescriptor" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bietet eine Möglichkeit, Elemente, die dem Wörterbuch von Attributen hinzufügen, die über ein Designer verfügbar macht eine <xref:System.ComponentModel.TypeDescriptor>.  
+  
+ Der Schlüssel im Wörterbuch Attribute sind die Typ-IDs der Attribute, durch den Wert des angegebenen ihre <xref:System.Attribute.TypeId%2A> Eigenschaft. Die Objekte sind vom Typ <xref:System.ComponentModel.PropertyDescriptor>. Diese Methode wird aufgerufen, unmittelbar vor der <xref:System.ComponentModel.Design.ComponentDesigner.PostFilterAttributes%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie können das Wörterbuch, das über den möglich ist direkt ändern die <paramref name="attributes" /> annimmt, oder Sie können diese unverändert belassen. Wenn Sie diese Methode überschreiben, rufen Sie die basisimplementierung auf, bevor Sie eine eigene Filtern ausführen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PreFilterEvents">
+      <MemberSignature Language="C#" Value="protected virtual void PreFilterEvents (System.Collections.IDictionary events);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void PreFilterEvents(class System.Collections.IDictionary events) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ComponentDesigner.PreFilterEvents(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="events" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="events">Die Ereignisse für die Klasse der Komponente.</param>
+        <summary>Ermöglicht es einen Designer, den Satz von Ereignissen hinzufügen, das sie, über offenlegt eine <see cref="T:System.ComponentModel.TypeDescriptor" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bietet eine Möglichkeit, Elemente, die dem Wörterbuch von Ereignissen hinzufügen, die über ein Designer verfügbar macht eine <xref:System.ComponentModel.TypeDescriptor>.  
+  
+ Der Schlüssel im Wörterbuch von Ereignissen sind die Namen der Ereignisse. Die Objekte sind vom Typ <xref:System.ComponentModel.PropertyDescriptor>. Diese Methode wird aufgerufen, unmittelbar vor der <xref:System.ComponentModel.Design.ComponentDesigner.PostFilterEvents%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie können das Wörterbuch, das über den möglich ist direkt ändern die <paramref name="events" /> annimmt, oder Sie können diese unverändert belassen. Wenn Sie diese Methode überschreiben, rufen Sie die basisimplementierung auf, bevor Sie eine eigene Filtern ausführen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PreFilterProperties">
+      <MemberSignature Language="C#" Value="protected virtual void PreFilterProperties (System.Collections.IDictionary properties);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void PreFilterProperties(class System.Collections.IDictionary properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ComponentDesigner.PreFilterProperties(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Die Eigenschaften für die Klasse der Komponente.</param>
+        <summary>Ermöglicht einen Designer, den Satz von Eigenschaften hinzufügen, die über macht eine <see cref="T:System.ComponentModel.TypeDescriptor" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bietet eine Möglichkeit, Elemente, die dem Wörterbuch von Eigenschaften hinzufügen, die über ein Designer verfügbar macht eine <xref:System.ComponentModel.TypeDescriptor>.  
+  
+ Der Schlüssel im Wörterbuch Eigenschaften sind die Namen der Eigenschaften. Die Objekte sind vom Typ <xref:System.ComponentModel.PropertyDescriptor>. Diese Methode wird aufgerufen, unmittelbar vor der <xref:System.ComponentModel.Design.ComponentDesigner.PostFilterProperties%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie können das Wörterbuch, das über den möglich ist direkt ändern die <paramref name="properties" /> annimmt, oder Sie können diese unverändert belassen. Wenn Sie diese Methode überschreiben, rufen Sie die basisimplementierung auf, bevor Sie eine eigene Filtern ausführen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseComponentChanged">
+      <MemberSignature Language="C#" Value="protected void RaiseComponentChanged (System.ComponentModel.MemberDescriptor member, object oldValue, object newValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RaiseComponentChanged(class System.ComponentModel.MemberDescriptor member, object oldValue, object newValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ComponentDesigner.RaiseComponentChanged(System.ComponentModel.MemberDescriptor,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="member" Type="System.ComponentModel.MemberDescriptor" />
+        <Parameter Name="oldValue" Type="System.Object" />
+        <Parameter Name="newValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="member">Ein <see cref="T:System.ComponentModel.MemberDescriptor" /> , der angibt, dass des Elements, das geändert wurde.</param>
+        <param name="oldValue">Der alte Wert des Elements.</param>
+        <param name="newValue">Der neue Wert des Elements.</param>
+        <summary>Benachrichtigt den <see cref="T:System.ComponentModel.Design.IComponentChangeService" /> , die diese Komponente geändert wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie diese Methode nur, wenn Sie Komponenteneigenschaften direkt ändern und nicht über die Accessoren gebotenen <xref:System.ComponentModel.MemberDescriptor>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseComponentChanging">
+      <MemberSignature Language="C#" Value="protected void RaiseComponentChanging (System.ComponentModel.MemberDescriptor member);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RaiseComponentChanging(class System.ComponentModel.MemberDescriptor member) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ComponentDesigner.RaiseComponentChanging(System.ComponentModel.MemberDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="member" Type="System.ComponentModel.MemberDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="member">Ein <see cref="T:System.ComponentModel.MemberDescriptor" /> , die angibt, dass des Elements, das geändert werden.</param>
+        <summary>Benachrichtigt den <see cref="T:System.ComponentModel.Design.IComponentChangeService" /> , dass diese Komponente geändert werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie diese Methode nur, wenn Sie Komponenteneigenschaften direkt ändern und nicht über Accessoren gebotenen <xref:System.ComponentModel.MemberDescriptor>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShadowProperties">
+      <MemberSignature Language="C#" Value="protected System.ComponentModel.Design.ComponentDesigner.ShadowPropertyCollection ShadowProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.ComponentDesigner/ShadowPropertyCollection ShadowProperties" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.ComponentDesigner.ShadowProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.ComponentDesigner+ShadowPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Eigenschaftswerten, die benutzereinstellungen überschreiben.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.Design.ComponentDesigner.ShadowPropertyCollection" /> , der das Shadowing von Eigenschaften des Entwurfsdokuments angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.IDesignerFilter.PostFilterAttributes">
+      <MemberSignature Language="C#" Value="void IDesignerFilter.PostFilterAttributes (System.Collections.IDictionary attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.Design.IDesignerFilter.PostFilterAttributes(class System.Collections.IDictionary attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ComponentDesigner.System#ComponentModel#Design#IDesignerFilter#PostFilterAttributes(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Die <see cref="T:System.Attribute" /> Objekte für die Klasse der Komponente. Die Schlüssel im Wörterbuch Attribute sind die <see cref="P:System.Attribute.TypeId" /> Werte der Attribute.</param>
+        <summary>Eine Beschreibung dieses Members finden Sie unter der <see cref="M:System.ComponentModel.Design.IDesignerFilter.PostFilterAttributes(System.Collections.IDictionary)" />-Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.ComponentModel.Design.ComponentDesigner>-Instanz in eine <xref:System.ComponentModel.Design.IDesignerFilter>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.IDesignerFilter.PostFilterEvents">
+      <MemberSignature Language="C#" Value="void IDesignerFilter.PostFilterEvents (System.Collections.IDictionary events);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.Design.IDesignerFilter.PostFilterEvents(class System.Collections.IDictionary events) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ComponentDesigner.System#ComponentModel#Design#IDesignerFilter#PostFilterEvents(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="events" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="events">Die <see cref="T:System.ComponentModel.EventDescriptor" /> Objekte, die die Ereignisse der Klasse der Komponente darstellen. Die Schlüssel im Wörterbuch von Ereignissen sind Ereignisnamen.</param>
+        <summary>Eine Beschreibung dieses Members finden Sie unter der <see cref="M:System.ComponentModel.Design.IDesignerFilter.PostFilterEvents(System.Collections.IDictionary)" />-Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.ComponentModel.Design.ComponentDesigner>-Instanz in eine <xref:System.ComponentModel.Design.IDesignerFilter>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.IDesignerFilter.PostFilterProperties">
+      <MemberSignature Language="C#" Value="void IDesignerFilter.PostFilterProperties (System.Collections.IDictionary properties);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.Design.IDesignerFilter.PostFilterProperties(class System.Collections.IDictionary properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ComponentDesigner.System#ComponentModel#Design#IDesignerFilter#PostFilterProperties(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Die <see cref="T:System.ComponentModel.PropertyDescriptor" /> Objekte, die die Eigenschaften der Klasse der Komponente darstellen. Die Schlüssel im Wörterbuch von Eigenschaften sind Eigenschaftennamen.</param>
+        <summary>Eine Beschreibung dieses Members finden Sie unter der <see cref="M:System.ComponentModel.Design.IDesignerFilter.PostFilterProperties(System.Collections.IDictionary)" />-Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.ComponentModel.Design.ComponentDesigner>-Instanz in eine <xref:System.ComponentModel.Design.IDesignerFilter>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.IDesignerFilter.PreFilterAttributes">
+      <MemberSignature Language="C#" Value="void IDesignerFilter.PreFilterAttributes (System.Collections.IDictionary attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.Design.IDesignerFilter.PreFilterAttributes(class System.Collections.IDictionary attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ComponentDesigner.System#ComponentModel#Design#IDesignerFilter#PreFilterAttributes(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Die <see cref="T:System.Attribute" /> Objekte für die Klasse der Komponente. Die Schlüssel im Wörterbuch Attribute sind die <see cref="P:System.Attribute.TypeId" /> Werte der Attribute.</param>
+        <summary>Eine Beschreibung dieses Members finden Sie unter der <see cref="M:System.ComponentModel.Design.IDesignerFilter.PreFilterAttributes(System.Collections.IDictionary)" />-Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.ComponentModel.Design.ComponentDesigner>-Instanz in eine <xref:System.ComponentModel.Design.IDesignerFilter>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.IDesignerFilter.PreFilterEvents">
+      <MemberSignature Language="C#" Value="void IDesignerFilter.PreFilterEvents (System.Collections.IDictionary events);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.Design.IDesignerFilter.PreFilterEvents(class System.Collections.IDictionary events) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ComponentDesigner.System#ComponentModel#Design#IDesignerFilter#PreFilterEvents(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="events" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="events">Die <see cref="T:System.ComponentModel.EventDescriptor" /> Objekte, die die Ereignisse der Klasse der Komponente darstellen. Die Schlüssel im Wörterbuch von Ereignissen sind Ereignisnamen.</param>
+        <summary>Eine Beschreibung dieses Members finden Sie unter der <see cref="M:System.ComponentModel.Design.IDesignerFilter.PreFilterEvents(System.Collections.IDictionary)" />-Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.ComponentModel.Design.ComponentDesigner>-Instanz in eine <xref:System.ComponentModel.Design.IDesignerFilter>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.IDesignerFilter.PreFilterProperties">
+      <MemberSignature Language="C#" Value="void IDesignerFilter.PreFilterProperties (System.Collections.IDictionary properties);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.Design.IDesignerFilter.PreFilterProperties(class System.Collections.IDictionary properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ComponentDesigner.System#ComponentModel#Design#IDesignerFilter#PreFilterProperties(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Die <see cref="T:System.ComponentModel.PropertyDescriptor" /> Objekte, die die Eigenschaften der Klasse der Komponente darstellen. Die Schlüssel im Wörterbuch von Eigenschaften sind Eigenschaftennamen.</param>
+        <summary>Eine Beschreibung dieses Members finden Sie unter der <see cref="M:System.ComponentModel.Design.IDesignerFilter.PreFilterProperties(System.Collections.IDictionary)" />-Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.ComponentModel.Design.ComponentDesigner>-Instanz in eine <xref:System.ComponentModel.Design.IDesignerFilter>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.ITreeDesigner.Children">
+      <MemberSignature Language="C#" Value="System.Collections.ICollection System.ComponentModel.Design.ITreeDesigner.Children { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection System.ComponentModel.Design.ITreeDesigner.Children" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.ComponentDesigner.System#ComponentModel#Design#ITreeDesigner#Children" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Members finden Sie unter der <see cref="P:System.ComponentModel.Design.ITreeDesigner.Children" />-Eigenschaft.</summary>
+        <value>Ein <see cref="T:System.Collections.ICollection" /> , enthält die Auflistung der <see cref="T:System.ComponentModel.Design.IDesigner" /> im aktuellen übergeordneten Designer enthaltenen Designer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.ComponentModel.Design.ComponentDesigner>-Instanz in eine <xref:System.ComponentModel.Design.ITreeDesigner>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.ITreeDesigner.Parent">
+      <MemberSignature Language="C#" Value="System.ComponentModel.Design.IDesigner System.ComponentModel.Design.ITreeDesigner.Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.IDesigner System.ComponentModel.Design.ITreeDesigner.Parent" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.ComponentDesigner.System#ComponentModel#Design#ITreeDesigner#Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.IDesigner</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Beschreibung dieses Members finden Sie unter der <see cref="P:System.ComponentModel.Design.ITreeDesigner.Parent" />-Eigenschaft.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.Design.IDesigner" /> für den übergeordneten Designer oder <see langword="null" /> , wenn kein übergeordnetes Element.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.ComponentModel.Design.ComponentDesigner>-Instanz in eine <xref:System.ComponentModel.Design.ITreeDesigner>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Verbs">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.Design.DesignerVerbCollection Verbs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.DesignerVerbCollection Verbs" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.ComponentDesigner.Verbs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerVerbCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Entwurfszeitverben unterstützt, die von der Komponente, die dem Designer zugeordnet ist.</summary>
+        <value>Ein <see cref="T:System.ComponentModel.Design.DesignerVerbCollection" /> von <see cref="T:System.ComponentModel.Design.DesignerVerb" /> Objekte oder <see langword="null" /> , wenn keine Designerverben verfügbar sind. Gibt immer diese Standardimplementierung <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt `null` Wenn die Komponente keine Entwurfszeitverben verfügt.  
+  
+ Die entwurfszeitumgebung zeigt in der Regel Verben, die von dieser Methode in einem Kontextmenü (Rechtsklick) zurückgegeben. Wenn ein Benutzer eines der Verben, wählt die <xref:System.ComponentModel.Design.MenuCommand.Invoke%2A> Methode des entsprechenden <xref:System.ComponentModel.Design.DesignerVerb> aufgerufen wird.  
+  
+> [!NOTE]
+>  Eine Entwurfszeit Umgebung in der Regel stellt eine **Eigenschaften** Befehl im Kontextmenü einer Komponente. Daher verwenden keine solche einen Eintrag in der Auflistung der Verben Designer angegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,288 @@
+<Type Name="DisplayFormatAttribute" FullName="System.ComponentModel.DataAnnotations.DisplayFormatAttribute">
+  <TypeSignature Language="C#" Value="public class DisplayFormatAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DisplayFormatAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.DataAnnotations.DisplayFormatAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, wie Datenfelder angezeigt und von ASP.NET Dynamic Data formatiert sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie dieses Attribut auf ein Datenfeld anwenden, müssen Sie die Richtlinien für die Verwendung der Attribute anfügen. Weitere Informationen finden Sie unter [ASP.NET Dynamic Data Guidelines](http://msdn.microsoft.com/en-us/c563bbf3-feb9-484e-81d1-a585f1b0e192).  
+  
+   
+  
+## Examples  
+ Finden Sie ein Beispiel für diese Funktion online: [ausführen](http://go.microsoft.com/fwlink/?LinkId=120736&sref=System.ComponentModel.DataAnnotations.DisplayFormatAttribute).  
+  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.ComponentModel.DataAnnotations.DisplayFormatAttribute> Formatierung für ein Datenfeld anpassen. Das Beispiel führt die folgenden Schritte aus:  
+  
+-   Implementiert eine partielle Klasse für Metadaten und eine zugehörige Metadaten-Klasse.  
+  
+-   In der zugehörigen Metadaten-Klasse, es gilt die <xref:System.ComponentModel.DataAnnotations.DisplayFormatAttribute> -Attribut angeben, führt zu folgenden Ergebnissen:  
+  
+    -   Zeigen Sie den Text "[Null]", wenn ein Feld "Daten" leer ist.  
+  
+    -   Währungsdaten in Gebietsschema spezifischen Währungsformat angezeigt.  
+  
+    -   Datumsinformationen in Kurzformat (mm/tt/jj) angezeigt. Dieses Format gilt auch im Bearbeitungsmodus befindet.  
+  
+ [!code-csharp[System.ComponentModel.DataAnnotations.DisplayFormatAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.DisplayFormatAttribute/CS/product.cs#1)]
+ [!code-vb[System.ComponentModel.DataAnnotations.DisplayFormatAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.DisplayFormatAttribute/VB/product.vb#1)]  
+  
+ Zum Kompilieren des Beispiels benötigen Sie Folgendes:  
+  
+-   [!INCLUDE[vs_orcas_ext](~/includes/vs-orcas-ext-md.md)]Service Pack 1 oder [!INCLUDE[vwd_exp_orcas_long](~/includes/vwd-exp-orcas-long-md.md)] Service Pack 1.  
+  
+-   Die Beispieldatenbank "AdventureWorksLT". Informationen zum Herunterladen und Installieren der SQL Server-Beispieldatenbank finden Sie unter [Microsoft SQL Server Product Samples: Database](http://go.microsoft.com/fwlink/?LinkId=117483) auf der CodePlex-Website. Stellen Sie sicher, dass Sie die richtige Version der Beispieldatenbank für die Version von SQL Server installieren, auf denen Sie ausgeführt werden ([!INCLUDE[sqprsqext](~/includes/sqprsqext-md.md)] oder [!INCLUDE[ssKatmai_long](~/includes/sskatmai-long-md.md)]).  
+  
+-   Eine datengesteuerte-Website. Dadurch können Sie erstellen einen Datenkontext für die Datenbank und die Klasse enthält das Feld "Daten" anpassen. Weitere Informationen finden Sie unter `Walkthrough: Creating a New Dynamic Data Web Site using Scaffolding`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DisplayFormatAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.DisplayFormatAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.DataAnnotations.DisplayFormatAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyFormatInEditMode">
+      <MemberSignature Language="C#" Value="public bool ApplyFormatInEditMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ApplyFormatInEditMode" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.DisplayFormatAttribute.ApplyFormatInEditMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Formatierung eine Zeichenfolge, die von angegeben wird die <see cref="P:System.ComponentModel.DataAnnotations.DisplayFormatAttribute.DataFormatString" /> -Eigenschaft auf den Feldwert angewendet wird, wenn das Datenfeld im Bearbeitungsmodus befindet.</summary>
+        <value>
+          <see langword="true" />Wenn der Wert des Felds in der Formatzeichenfolge gilt Bearbeitungsmodus; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig wird die Formatzeichenfolge, die von angegeben wird die <xref:System.ComponentModel.DataAnnotations.DisplayFormatAttribute.DataFormatString%2A> Eigenschaft auf Feldwerte angewendet wird, nur, wenn das datengebundene Steuerelement im schreibgeschützten Modus befindet.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.ComponentModel.DataAnnotations.DisplayFormatAttribute.ApplyFormatInEditMode%2A> Eigenschaft, um das Anzeigeformat für Datumsinformationen festzulegen, wenn das Datenfeld im Bearbeitungsmodus befindet. Das Datenformat des Felds für das Feld "Daten" verwendet wird angegeben, indem die <xref:System.ComponentModel.DataAnnotations.DisplayFormatAttribute.DataFormatString%2A> Eigenschaft.  
+  
+ [!code-csharp[System.ComponentModel.DataAnnotations.DisplayFormatAttribute#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.DisplayFormatAttribute/CS/product.cs#4)]
+ [!code-vb[System.ComponentModel.DataAnnotations.DisplayFormatAttribute#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.DisplayFormatAttribute/VB/product.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertEmptyStringToNull">
+      <MemberSignature Language="C#" Value="public bool ConvertEmptyStringToNull { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ConvertEmptyStringToNull" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.DisplayFormatAttribute.ConvertEmptyStringToNull" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob leere Zeichenfolgenwerte ("") werden automatisch in konvertiert <see langword="null" /> Wenn das Feld "Daten" in der Datenquelle aktualisiert wird.</summary>
+        <value>
+          <see langword="true" />Wenn leere Zeichenfolgenwerte automatisch in konvertiert werden <see langword="null" />ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Benutzer können eine leere Zeichenfolge für einen Feldwert eingeben. Verwenden der <xref:System.ComponentModel.DataAnnotations.DisplayFormatAttribute.ConvertEmptyStringToNull%2A> Eigenschaft, um anzugeben, ob es sich bei ein leeren Zeichenfolgenwert in automatisch konvertiert wird `null` Wenn das Feld "Daten" in der Datenbank aktualisiert wird.  
+  
+> [!NOTE]
+>  Wird standardmäßig ein <xref:System.Web.DynamicData.DynamicField> Objekt angezeigt `null` Werte als leere Zeichenfolgen. Wenn einen anderen Wert anzeigen zu können, legen Sie die <xref:System.ComponentModel.DataAnnotations.DisplayFormatAttribute.NullDisplayText%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.ComponentModel.DataAnnotations.DisplayFormatAttribute.ConvertEmptyStringToNull%2A> So aktivieren Sie die Konvertierung von leeren Zeichenfolgenwerten zu `null`.  
+  
+ [!code-csharp[System.ComponentModel.DataAnnotations.DisplayFormatAttribute#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.DisplayFormatAttribute/CS/product.cs#2)]
+ [!code-vb[System.ComponentModel.DataAnnotations.DisplayFormatAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.DisplayFormatAttribute/VB/product.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataFormatString">
+      <MemberSignature Language="C#" Value="public string DataFormatString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataFormatString" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.DisplayFormatAttribute.DataFormatString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Anzeigeformat für den Wert des Felds.</summary>
+        <value>Eine Formatierungszeichenfolge, die das Anzeigeformat für den Wert des Datenfelds angibt. Der Standardwert ist eine leere Zeichenfolge (""), die angibt, dass keine besondere Formatierung auf den Feldwert angewendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.ComponentModel.DataAnnotations.DisplayFormatAttribute.DataFormatString%2A> Eigenschaft, um ein benutzerdefiniertes Format für die Werte anzugeben, die in angezeigt werden die <xref:System.Web.DynamicData.DynamicField> Objekt. Wenn die <xref:System.ComponentModel.DataAnnotations.DisplayFormatAttribute.DataFormatString%2A> Eigenschaft nicht festgelegt ist, wird der Wert des Felds ohne besondere Formatierung angezeigt. Weitere Informationen finden Sie unter [Formatierung von Typen](~/docs/standard/base-types/formatting-types.md).  
+  
+> [!NOTE]
+>  Wenn die <xref:System.Web.DynamicData.DynamicField.HtmlEncode%2A?displayProperty=nameWithType> Eigenschaft ist `true`, der Wert des Felds ist HTML-codiert in seine Zeichenfolgendarstellung, bevor die Formatierungszeichenfolge angewendet wird. Für einige Objekte, z. B. Datumsangaben empfiehlt es sich um steuern, wie das Objekt mit einer Formatzeichenfolge angezeigt wird. In diesen Fällen müssen Sie festlegen der <xref:System.Web.DynamicData.DynamicField.HtmlEncode%2A?displayProperty=nameWithType> Eigenschaft `false`.  
+  
+ Standardmäßig wird die Formatierungszeichenfolge auf den Feldwert angewendet, nur, wenn das datengebundene Steuerelement, die enthält die <xref:System.Web.DynamicData.DynamicField> Objekt befindet sich im schreibgeschützten Modus. Um die Formatierungszeichenfolge auf Feldwerte anwenden, wenn sie im Bearbeitungsmodus sind, legen Sie die <xref:System.Web.DynamicData.DynamicField.ApplyFormatInEditMode%2A> Eigenschaft `true`.  
+  
+ Die Formatierungszeichenfolge kann eine literale Zeichenfolge sein und in der Regel enthält einen Platzhalter für den Wert des Felds. Beispielsweise ist in der Formatzeichenfolge "Elementwert: {0}", {0} Platzhalter durch den Wert des Felds ersetzt, wenn die Zeichenfolge, in angezeigt wird der <xref:System.Web.DynamicData.DynamicField> Objekt. Der Rest der Formatierungszeichenfolge wird als Literaltext angezeigt.  
+  
+> [!NOTE]
+>  Wenn die Formatierungszeichenfolge keine Platzhalter enthalten, ist der Wert des Felds aus der Datenquelle nicht in den endgültigen Anzeigetext enthalten.  
+  
+   
+  
+## Examples  
+ Den folgenden Beispielen wird veranschaulicht, wie Sie die <xref:System.ComponentModel.DataAnnotations.DisplayFormatAttribute.DataFormatString%2A> Eigenschaft, um das Anzeigeformat der Datenfelder festlegen. Im ersten Beispiel wird das Anzeigeformat für ein Datenfeld der Currency-Datentyp. Im zweiten Beispiel wird das Anzeigeformat für ein Datenfeld des Date-Typ.  
+  
+ [!code-csharp[System.ComponentModel.DataAnnotations.DisplayFormatAttribute#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.DisplayFormatAttribute/CS/product.cs#3)]
+ [!code-vb[System.ComponentModel.DataAnnotations.DisplayFormatAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.DisplayFormatAttribute/VB/product.vb#3)]  
+  
+ [!code-csharp[System.ComponentModel.DataAnnotations.DisplayFormatAttribute#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.DisplayFormatAttribute/CS/product.cs#4)]
+ [!code-vb[System.ComponentModel.DataAnnotations.DisplayFormatAttribute#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.DisplayFormatAttribute/VB/product.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HtmlEncode">
+      <MemberSignature Language="C#" Value="public bool HtmlEncode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HtmlEncode" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.DisplayFormatAttribute.HtmlEncode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Feld HTML-codiert werden soll.</summary>
+        <value>
+          <see langword="true" />Wenn das Feld HTML-codiert werden soll; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NullDisplayText">
+      <MemberSignature Language="C#" Value="public string NullDisplayText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NullDisplayText" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.DisplayFormatAttribute.NullDisplayText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text, der für ein Feld angezeigt wird, wenn der Wert des Felds ist <see langword="null" />.</summary>
+        <value>Der Text, der für ein Feld angezeigt wird, wenn der Wert des Felds ist <see langword="null" />. Der Standardwert ist eine leere Zeichenfolge ("") und gibt an, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einigen Fällen wird ein Datenfeld-Wert als null-Werte in der Datenquelle gespeichert. Sie können angeben, benutzerdefinierten Text, der für Datenfelder angezeigt, die einen null-Wert verfügen die <xref:System.ComponentModel.DataAnnotations.DisplayFormatAttribute.NullDisplayText%2A> Eigenschaft. Wenn diese Eigenschaft nicht festgelegt ist, werden null-Feldwerte angezeigt, als leere Zeichenfolgen ("").  
+  
+> [!NOTE]
+>  Um eine leere Zeichenfolge als Feldwert in einen null-Wert zu konvertieren, müssen Sie festlegen der <xref:System.ComponentModel.DataAnnotations.DisplayFormatAttribute.ConvertEmptyStringToNull%2A> Eigenschaft `true`.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.ComponentModel.DataAnnotations.DisplayFormatAttribute.NullDisplayText%2A> definieren eine Beschriftung angezeigt wird, wenn das Feld "Daten" ist `null`.  
+  
+ [!code-csharp[System.ComponentModel.DataAnnotations.DisplayFormatAttribute#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.DisplayFormatAttribute/CS/product.cs#2)]
+ [!code-vb[System.ComponentModel.DataAnnotations.DisplayFormatAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.DisplayFormatAttribute/VB/product.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

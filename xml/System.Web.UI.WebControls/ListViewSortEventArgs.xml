@@ -1,0 +1,149 @@
+<Type Name="ListViewSortEventArgs" FullName="System.Web.UI.WebControls.ListViewSortEventArgs">
+  <TypeSignature Language="C#" Value="public class ListViewSortEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ListViewSortEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ListViewSortEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Web.UI.WebControls.ListView.Sorting" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ListView> -Steuerelement löst die <xref:System.Web.UI.WebControls.ListView.Sorting> Ereignis aus, wenn eine Sortierschaltfläche, jedoch bevor geklickt wird die <xref:System.Web.UI.WebControls.ListView> Steuerelement behandelt den Sortiervorgang. (Eine Schaltfläche zum Sortieren ist eine Schaltfläche, deren `CommandName` -Eigenschaft auf "Sort" festgelegt.) Dadurch können Sie eine Ereignisbehandlungsmethode bereitstellen, die eine benutzerdefinierte Routine ausführt, wenn dieses Ereignis tritt auf, z. B. den Sortierungsausdruck anpassen.  
+  
+ Ein <xref:System.Web.UI.WebControls.ListViewSortEventArgs> Objekt wird an die Ereignisbehandlungsmethode übergeben. Dieses Objekt können Sie angeben, oder ermitteln, die Sortierreihenfolge Ausdruck und die Sortierreihenfolge für die <xref:System.Web.UI.WebControls.ListView> Steuerelement. Verwenden Sie zum Bestimmen des Sortierungsausdruck die <xref:System.Web.UI.WebControls.ListViewSortEventArgs.SortExpression%2A> Eigenschaft. Verwenden Sie zum Bestimmen der Sortierreihenfolge der <xref:System.Web.UI.WebControls.ListViewSortEventArgs.SortDirection%2A> Eigenschaft. Sie können auch einen Sortiervorgang abbrechen, indem die <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft `true`.  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz der <xref:System.Web.UI.WebControls.ListViewSortEventArgs>-Klasse finden Sie im <xref:System.Web.UI.WebControls.ListViewSelectEventArgs.%23ctor%2A>-Konstruktor.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.ListViewSortEventArgs> Objekts angezeigt werden, die Sortierreihenfolge und die Spalte, die sortiert wird.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ListView.Sorting#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.Sorting/CS/ListViewSortingCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ListView.Sorting#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.Sorting/VB/ListViewSortingVB.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListViewSortEventArgs (string sortExpression, System.Web.UI.WebControls.SortDirection sortDirection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string sortExpression, valuetype System.Web.UI.WebControls.SortDirection sortDirection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListViewSortEventArgs.#ctor(System.String,System.Web.UI.WebControls.SortDirection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sortExpression" Type="System.String" />
+        <Parameter Name="sortDirection" Type="System.Web.UI.WebControls.SortDirection" />
+      </Parameters>
+      <Docs>
+        <param name="sortExpression">Der Sortierausdruck, der zum Sortieren der Elemente im Steuerelement verwendet wird.</param>
+        <param name="sortDirection">Ein <see cref="T:System.Web.UI.WebControls.SortDirection" /> Wert, der die Richtung, in der zum Sortieren der Elemente im Steuerelement angibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.ListViewSortEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.ListViewSortEventArgs> Klasse.  
+  
+> [!NOTE]
+>  Dieser Konstruktor wird hauptsächlich von Steuerelemententwicklern verwendet, beim Auslösen von Ereignissen.  
+  
+ Die folgende Tabelle zeigt die anfänglichen Eigenschaftswerte für eine Instanz der <xref:System.Web.UI.WebControls.ListViewSortEventArgs>-Klasse.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.ListViewSortEventArgs.SortExpression%2A>|Der Wert des `sortExpression`-Parameters.|  
+|<xref:System.Web.UI.WebControls.ListViewSortEventArgs.SortDirection%2A>|Der Wert des `sortDirection`-Parameters.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SortDirection">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.SortDirection SortDirection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.SortDirection SortDirection" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewSortEventArgs.SortDirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.SortDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Richtung, in die Sortierung der <see cref="T:System.Web.UI.WebControls.ListView" /> Steuerelement.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.SortDirection" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.WebControls.ListView.Sorting> Ereignis ausgelöst wird, können Sie die <xref:System.Web.UI.WebControls.ListViewSortEventArgs.SortDirection%2A> Eigenschaft angeben, oder ermitteln, in welcher Reihenfolge die <xref:System.Web.UI.WebControls.ListView> -Steuerelement Elemente sortiert.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.ListViewSortEventArgs> Objekts, um die Sortierreihenfolge und die Spalte, die zu sortierenden anzuzeigen. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.WebControls.ListViewSortEventArgs> Klasse.  
+  
+ [!code-csharp[System.Web.UI.WebControls.ListView.Sorting#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.Sorting/CS/ListViewSortingCS.aspx#2)]
+ [!code-vb[System.Web.UI.WebControls.ListView.Sorting#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.Sorting/VB/ListViewSortingVB.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SortExpression">
+      <MemberSignature Language="C#" Value="public string SortExpression { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SortExpression" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewSortEventArgs.SortExpression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Ausdruck, der verwendet wird, zum Sortieren der Elemente in der <see cref="T:System.Web.UI.WebControls.ListView" /> Steuerelement.</summary>
+        <value>Der Ausdruck, der verwendet wird, zum Sortieren der Elemente in der <see cref="T:System.Web.UI.WebControls.ListView" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.WebControls.ListView.Sorting> Ereignis ausgelöst wird, können Sie die <xref:System.Web.UI.WebControls.ListViewSortEventArgs.SortExpression%2A> Eigenschaft, um den Sortierungsausdruck anzugeben, die zum Sortieren verwendet werden die <xref:System.Web.UI.WebControls.ListView> Steuerelement. Der Sortierausdruck enthält den Namen des Felds zu sortieren. Sie können auch mehrere Spalten gleichzeitig sortieren, programmgesteuert durch Festlegen dieser Eigenschaft auf eine durch Trennzeichen getrennte Liste von Feldnamen.  
+  
+> [!NOTE]
+>  Wird standardmäßig die <xref:System.Web.UI.WebControls.ListView> Steuerelement betrifft die vollständige Liste der Spalten in der Sortierreihenfolge an. Die Sortierrichtung betrifft daher nur die letzte Spalte in der Liste.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Web.UI.WebControls.ListViewSortEventArgs> Objekts, um die Sortierreihenfolge und die Spalte, die zu sortierenden anzuzeigen. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.WebControls.ListViewSortEventArgs> Klasse.  
+  
+ [!code-csharp[System.Web.UI.WebControls.ListView.Sorting#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.Sorting/CS/ListViewSortingCS.aspx#2)]
+ [!code-vb[System.Web.UI.WebControls.ListView.Sorting#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.Sorting/VB/ListViewSortingVB.aspx#2)]  
+  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Web.UI.WebControls.ListViewSortEventArgs.SortExpression%2A> Eigenschaft um Sortieren mehrerer Spalten mit verschiedenen sortierrichtungen auf jede Spalte angewendet.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ListViewSortEventArgs.SortExpression#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListViewSortEventArgs.SortExpression/CS/SortExpressionCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ListViewSortEventArgs.SortExpression#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListViewSortEventArgs.SortExpression/VB/SortExpressionVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

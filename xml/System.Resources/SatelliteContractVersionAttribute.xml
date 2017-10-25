@@ -1,0 +1,126 @@
+<Type Name="SatelliteContractVersionAttribute" FullName="System.Resources.SatelliteContractVersionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SatelliteContractVersionAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SatelliteContractVersionAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Resources.SatelliteContractVersionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly, AllowMultiple=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Weist ein <see cref="T:System.Resources.ResourceManager" /> Objekt an eine bestimmte Version einer Satellitenassembly anzufordern.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="desktop-apps"></a>Desktop-Apps  
+ Bei desktop-apps die <xref:System.Resources.SatelliteContractVersionAttribute> Attribut stellt einen Vertrag zwischen einer Hauptassembly und alle zugehörigen Satelliten her. Sie dieses Attribut anwenden, um die Hauptassembly, und übergeben sie die Versionsnummer der Satellitenassemblys, die mit dieser Version der Hauptassembly verwendet werden kann. Wenn der Ressourcen-Manager (<xref:System.Resources.ResourceManager> Objekt) Ressourcen sucht, lädt er explizit die Satelliten-Version, die durch dieses Attribut auf die Hauptassembly angegeben.  
+  
+ Bei der Aktualisierung der Hauptassembly erhöhen Sie die Versionsnummer der Assembly. Möglicherweise möchten Sie keine neue Kopien der Satellitenassemblys zu liefern, wenn die vorhandenen Server mit Ihrer app kompatibel sind. In diesem Fall die Hauptassembly Versionsnummer erhöht, aber lassen Sie die Nummer der Satellitenvertragsversion identisch. Der Ressourcen-Manager verwendet Ihre vorhandenen Satellitenassemblys.  
+  
+ Wenn Sie eine Satellitenassembly jedoch nicht die Hauptassembly überarbeiten möchten, erhöhen Sie die Versionsnummer des Satelliten. In diesem Fall liefern Sie eine Herausgeberrichtlinienassembly zusammen mit der Satellitenassembly, die besagt, dass die neue Satellitenassembly Abwärtskompatibilität mit der alten Satellitenassembly hat. Der Ressourcen-Manager verwendet weiterhin die alte Vertragsnummer geschriebene Hauptassembly basierend auf den <xref:System.Resources.SatelliteContractVersionAttribute> Attribut, jedoch wird das Ladeprogramm binden, auf die Version der Satelliten-Assembly, die von der Richtlinienassembly angegeben wird.  
+  
+ Ein Anbieter, der eine freigegebene Komponente verwendet eine Herausgeberrichtlinienassembly um eine Kompatibilität-Anweisung zu einer bestimmten Version einer freigegebenen Assembly zu erstellen. Eine Herausgeberrichtlinienassembly ist eine Assembly mit starkem Namen mit dem Namen im Format `policy.<major>.<minor>.<ComponentAssemblyName>`, und registriert ist, der. Die Herausgeberrichtlinie wird aus einer XML-Konfigurationsdatei generiert (finden Sie unter der) mithilfe der [Al.exe (Assembly Linker)](~/docs/framework/tools/al-exe-assembly-linker.md) Tool. Der Assemblylinker wird verwendet, mit der `/link` Option aus, um die XML-Konfigurationsdatei mit einer Manifestassembly zu verknüpfen, sodass die dann in den globalen Assemblycache gespeichert werden. Die Assemblys der Publisher-Richtlinie können verwendet werden, wenn ein Anbieter Wartungszwecken (Servicepack) ausgeliefert wird, die Fehlerbehebungen enthält.  
+  
+## <a name="includewin8appnamelongincludeswin8-appname-long-mdmd-apps"></a>[!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]-Apps  
+ Dieses Attribut wird ignoriert, [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] apps, da Paket-Ressourcendateien (paketressourcenindex) keine versionsverwaltung Semantik. Darüber hinaus die [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] Paketerstellungsmodell ist erforderlich, alle Ressourcen im selben Paket, ohne dass erneutes Bereitstellen von Satellitenassemblys oder PRI-Dateien zu senden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SatelliteContractVersionAttribute (string version);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.SatelliteContractVersionAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="version">Eine Zeichenfolge, die die Version der zu ladenden Satellitenassemblys angibt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Resources.SatelliteContractVersionAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor initialisiert die <xref:System.Resources.SatelliteContractVersionAttribute.Version%2A> Eigenschaft mit dem `version` Parameter.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="version" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public string Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Version" />
+      <MemberSignature Language="DocId" Value="P:System.Resources.SatelliteContractVersionAttribute.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Version der Satellitenassemblys mit den erforderlichen Ressourcen.</summary>
+        <value>Eine Zeichenfolge, die die Version von Satellitenassemblys mit der erforderlichen Ressourcen enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle Eigenschaft gibt die Version der Satellitenassemblys, die mit der Hauptassembly verwendet werden mit diesem Attribut gekennzeichnet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

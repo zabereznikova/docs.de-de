@@ -1,0 +1,62 @@
+<Type Name="AuthorizationFailedEventArgs" FullName="System.IdentityModel.Services.AuthorizationFailedEventArgs">
+  <TypeSignature Language="C#" Value="public class AuthorizationFailedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AuthorizationFailedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Services.AuthorizationFailedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.IdentityModel.Services.WSFederationAuthenticationModule.AuthorizationFailed" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.AuthorizationFailed> Ereignis wird ausgelöst, wenn die Autorisierung fehlgeschlagen ist und die <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) ist die Bestimmung, ob ein Identitätsanbieter (STS) umgeleitet.  
+  
+ Legen Sie die <xref:System.IdentityModel.Services.AuthorizationFailedEventArgs.RedirectToIdentityProvider%2A> Eigenschaft, um zu bestimmen, ob die Umleitung Common Language Runtime-Logik von WSFAM aufgerufen wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AuthorizationFailedEventArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.AuthorizationFailedEventArgs.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Services.AuthorizationFailedEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RedirectToIdentityProvider">
+      <MemberSignature Language="C#" Value="public bool RedirectToIdentityProvider { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RedirectToIdentityProvider" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.AuthorizationFailedEventArgs.RedirectToIdentityProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Common Language Runtime (<see cref="T:System.IdentityModel.Services.WSFederationAuthenticationModule" />) sollte an einen Identitätsanbieter umleiten.</summary>
+        <value>
+          <see langword="true" />Umleiten; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

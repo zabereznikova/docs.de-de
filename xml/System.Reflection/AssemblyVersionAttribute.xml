@@ -1,0 +1,165 @@
+<Type Name="AssemblyVersionAttribute" FullName="System.Reflection.AssemblyVersionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class AssemblyVersionAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AssemblyVersionAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.AssemblyVersionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Version der Assembly an, die gerade mit Attributen versehen wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Reflection.AssemblyVersionAttribute> Attribut wird verwendet, um eine Assembly eine Versionsnummer zugewiesen. Diese Versionsnummer wird dann mit den Metadaten der Assembly gespeichert.  
+  
+ Versionsnummer der Assembly ist Bestandteil der Identität einer Assembly und spielt eine Schlüsselrolle in der Bindung auf die Assembly und Versionsrichtlinien. Der Standardversionsrichtlinie für die Laufzeit zufolge werden Anwendungen nur in der Version ausgeführt, in der sie erstellt und getestet wurden, sofern dies nicht durch eine explizite Versionsrichtlinie in den Konfigurationsdateien (die Anwendungskonfigurationsdatei, die Herausgeberrichtliniendatei und die Administratorkonfigurationsdatei für den Computer) überschrieben wird. Finden Sie unter [Assemblys in der Common Language Runtime](~/docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) für Weitere Informationen.  
+  
+> [!NOTE]
+>  Die Version wird nur bei Assemblys mit starkem Namen überprüft.  
+  
+ Die Versionsnummer besteht aus vier Teilen wie folgt:  
+  
+ \<Hauptversion >. \<Nebenversion >. \<Buildnummer >. \<Revision >  
+  
+> [!IMPORTANT]
+>  Alle Komponenten der Version müssen es sich um ganze Zahlen größer oder gleich 0 sein. Metadaten schränkt die Haupt-und Nebenversion, Build und Revisionskomponenten für eine Assembly und einem Maximalwert von <xref:System.UInt16.MaxValue?displayProperty=nameWithType> - 1. Wenn eine Komponente diesen Wert überschreitet, tritt ein Kompilierungsfehler auf.  
+  
+ Sie können alle Werte angeben, oder Sie können die Standard-Buildnummer, Revisionsnummer oder beides mit einem Sternchen (*) akzeptieren. Beispielsweise `[assembly:AssemblyVersion("2.3.25.1")]` gibt 2 als Hauptversion, 3 als Nebenversion, 25 als Buildnummer und 1 als Revisionsnummer an. Eine Versionsnummer, z. B. `[assembly:AssemblyVersion("1.2.*")]` gibt 1 als Hauptversion, 2 als Nebenversion, und akzeptiert die standardmäßigen Build- und Revisionsnummern Nummern. Eine Versionsnummer, z. B. `[assembly:AssemblyVersion("1.2.15.*")]` gibt 1 als Hauptversion, 2 als Nebenversion, 15, als die Buildnummer und akzeptiert die Standard-Revisionsnummer. Die Standard-Buildnummer wird täglich erhöht. Die Revisionsnummer der Standardwert ist die Anzahl der Sekunden seit Mitternacht lokale Zeit (ohne Berücksichtigung der zeitzonenanpassungen Konto für die Sommerzeit), geteilt durch 2.  
+  
+> [!NOTE]
+>  Wenn Sie ein Sternchen für die Nummer des Builds angeben, können keine Sie vielfältige Revisionsnummer angeben.  
+  
+ Die Haupt- und Nebenversionsnummern Assemblyversionen werden als die Versionsnummer der Typbibliothek verwendet, wenn die Assembly exportiert wird. Einige COM-Hosts akzeptieren keine Typbibliotheken mit der Versionsnummer 0,0. Daher, wenn Sie eine Assembly für COM-Clients verfügbar machen möchten, die Version der Assembly explizit auf 1.0 festgelegt in der `AssemblyVersionAttribute` Seite für Projekte, die außerhalb von erstellte [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)] und ohne `AssemblyVersionAttribute` angegebenen. Dazu, selbst wenn die Version der Assembly auf 0,0 festgelegt ist. Alle erstellten Projekten [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)] standardmäßige Assembly-Version 1.0 haben. *.  
+  
+ Um den Namen einer Assembly erhalten Sie geladen haben, rufen <xref:System.Reflection.Assembly.GetName%2A> für die Assembly zum Abrufen einer <xref:System.Reflection.AssemblyName>, und rufen Sie anschließend die <xref:System.Reflection.AssemblyName.Version%2A> Eigenschaft. Rufen Sie zum Abrufen der Name einer Assembly nicht geladen haben <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> über die Clientanwendung die Assemblyversion zu überprüfen, die Ihre Anwendung verwendet.  
+  
+ Die <xref:System.Reflection.AssemblyVersionAttribute> Attribut kann nur einmal angewendet werden. Das Attribut wird bereits einige Visual Studio-Projektvorlagen enthalten. Beim Hinzufügen des Attributs im Code in diesen Projekten verursacht einen Compilerfehler.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Reflection.AssemblyVersionAttribute> Attribut auf eine Assembly eine Versionsnummer zugewiesen. Zum Zeitpunkt der Kompilierung wird diese Versionsinformationen mit den Metadaten der Assembly gespeichert. Zur Laufzeit ruft das Beispiel den Wert ab, mit der <xref:System.Type.Assembly%2A?displayProperty=nameWithType> Eigenschaft für einen Typ in der Assembly zum Abrufen eines Verweises auf die derzeit ausgeführte Assembly gefunden, und es ruft Versionsinformationen aus der Assembly ab der <xref:System.Reflection.AssemblyName.Version%2A> Eigenschaft der <xref:System.Reflection.AssemblyName> zurückgegebenes Objekt die <xref:System.Reflection.Assembly.GetName%2A?displayProperty=nameWithType> Methode.  
+  
+ [!code-csharp[System.Version.Class#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Version.Class/cs/example1.cs#6)]
+ [!code-vb[System.Version.Class#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Version.Class/vb/example1.vb#6)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssemblyVersionAttribute (string version);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.AssemblyVersionAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="version">Die Versionsnummer der mit Attributen versehenen Assembly.</param>
+        <summary>Initialisiert eine neue Instanz der <see langword="AssemblyVersionAttribute" />-Klasse mit der Versionsnummer der Assembly, die mit Attributen versehen wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Format der `version` Zeichenfolge ist: `major`. `minor`. `build`. `revision`.  
+  
+ Wenn Sie eine Version angeben möchten, müssen Sie mindestens angeben `major`. Bei Angabe von `major` und `minor`, Sie können ein Sternchen (*) angeben, für die `build`. Dies bewirkt, dass `build` gleich der Anzahl der Tage seit dem 1. Januar 2000 als lokale Zeit, und für `revision` gleich der Anzahl der Sekunden seit Mitternacht Ortszeit (ohne Berücksichtigung der zeitzonenanpassungen Konto für die Sommerzeit), werden geteilt durch 2.  
+  
+ Wenn Sie `major`, `minor` und `build` angeben, können Sie für `revision` ein Sternchen angeben. Dies bewirkt, dass `revision` gleich der Anzahl der Sekunden seit Mitternacht (Ortszeit) geteilt durch 2 sein.  
+  
+ Beispiele für gültige Versionszeichenfolgen:  
+  
+ 1  
+  
+ 1.1  
+  
+ 1.1.*  
+  
+ 1.1.1  
+  
+ 1.1.1.*  
+  
+ 1.1.1.1  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public string Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Version" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.AssemblyVersionAttribute.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Versionsnummer der mit Attributen versehenen Assembly ab.</summary>
+        <value>Eine Zeichenfolge mit der Versionsnummer der Assembly.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,178 @@
+<Type Name="SourceFilter" FullName="System.Diagnostics.SourceFilter">
+  <TypeSignature Language="C#" Value="public class SourceFilter : System.Diagnostics.TraceFilter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SourceFilter extends System.Diagnostics.TraceFilter" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.SourceFilter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Diagnostics.TraceFilter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt an, ob ein Listener eine Nachricht basierend auf der Quelle einer Ablaufverfolgung verfolgen soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einer der mehrere verschiedene Arten von Filtern kann einen Ablaufverfolgungslistener zugewiesen werden, eine Ebene der Überwachung durch den Ablaufverfolgungsschalter bereitgestellten Rahmen hinaus bereitstellen zu können. Der Filter kann verwendet werden, um die Ebene der Ablaufverfolgung zu steuern, die vom Listener erzeugt wird.  
+  
+ Diese Klasse filtert Ereignisse basierend auf einer bestimmten Ablaufverfolgungsquelle, die vom Benutzer festgelegt.  
+  
+ <xref:System.Diagnostics.SourceFilter>überschreibt die <xref:System.Diagnostics.TraceFilter.ShouldTrace%2A> Methode und definiert einen <xref:System.Diagnostics.SourceFilter.Source%2A> Eigenschaft mit dem Namen der Ablaufverfolgungsquelle vom Listener verfolgt werden sollen.  
+  
+> [!NOTE]
+>  Dieser Filter wird bereitgestellt, da mehrere Ablaufverfolgungsquellen gleichzeitig denselben Ablaufverfolgungslistener verwenden können.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SourceFilter (string source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SourceFilter.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="source" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="source">Der Name der Ablaufverfolgungsquelle.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.SourceFilter" /> -Klasse und gibt den Namen der Ablaufverfolgungsquelle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert von der `source` Parameter zur Initialisierung der <xref:System.Diagnostics.SourceFilter.Source%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel ruft die <xref:System.Diagnostics.TraceSource.TraceData%2A> Methode mit zwei verschiedenen Datenquellen, Filter, eine mit einem fiktiven Namen, der andere mit dem Namen der aktuellen Ablaufverfolgungsquelle. Im ersten Fall wird die Ablaufverfolgung nicht in die Konsole geschrieben; Im zweiten Fall wird die Ablaufverfolgung geschrieben. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.TraceSource> Klasse.  
+  
+ [!code-csharp[System.Diagnostics.TraceSource#28](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource/CS/program.cs#28)]
+ [!code-vb[System.Diagnostics.TraceSource#28](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource/VB/program.vb#28)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldTrace">
+      <MemberSignature Language="C#" Value="public override bool ShouldTrace (System.Diagnostics.TraceEventCache cache, string source, System.Diagnostics.TraceEventType eventType, int id, string formatOrMessage, object[] args, object data1, object[] data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool ShouldTrace(class System.Diagnostics.TraceEventCache cache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, string formatOrMessage, object[] args, object data1, object[] data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SourceFilter.ShouldTrace(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String,System.Object[],System.Object,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="formatOrMessage" Type="System.String" />
+        <Parameter Name="args" Type="System.Object[]" />
+        <Parameter Name="data1" Type="System.Object" />
+        <Parameter Name="data" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="cache">Ein Objekt, das den Cache für das Ablaufverfolgungsereignis darstellt.</param>
+        <param name="source">Der Name der Quelle.</param>
+        <param name="eventType">Einer der Enumerationswerte, der den Ereignistyp identifiziert.</param>
+        <param name="id">Eine Ablaufverfolgung-ID-Nummer.</param>
+        <param name="formatOrMessage">Das Format zum Schreiben einer Arrays von Argumenten oder eine Nachricht um zu schreiben.</param>
+        <param name="args">Ein Array von Argumentobjekten.</param>
+        <param name="data1">Ein Trace-Datenobjekt.</param>
+        <param name="data">Ein Array von Datenobjekten Ablaufverfolgung.</param>
+        <summary>Bestimmt, ob der Ablaufverfolgungslistener das Ereignis verfolgen soll.</summary>
+        <returns>
+          <see langword="true" />Wenn die Ablaufverfolgung erzeugt werden soll; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Wert von der `source` Parameter entspricht dem Wert der <xref:System.Diagnostics.SourceFilter.Source%2A> -Eigenschaft, die Methode gibt `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="source" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public string Source { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Source" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.SourceFilter.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Ablaufverfolgungsquelle.</summary>
+        <value>Der Name der Ablaufverfolgungsquelle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Diagnostics.SourceFilter.Source%2A>identifiziert die Ablaufverfolgungsquelle für die Ablaufverfolgungsinformationen zu schreiben. Ablaufverfolgungsinformationen werden nicht für andere Ablaufverfolgungsquellen geschrieben. Der Name der Ablaufverfolgungsquelle ist die `name` Parameter aus dem Konstruktor für die <xref:System.Diagnostics.TraceSource>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der Wert ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

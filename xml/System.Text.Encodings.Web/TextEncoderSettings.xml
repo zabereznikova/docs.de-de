@@ -1,0 +1,397 @@
+<Type Name="TextEncoderSettings" FullName="System.Text.Encodings.Web.TextEncoderSettings">
+  <TypeSignature Language="C#" Value="public class TextEncoderSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TextEncoderSettings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Text.Encodings.Web.TextEncoderSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Filter, der können nur bestimmte Unicode-Codepunkten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[ 
+
+## Remarks  
+ Der Quellcode für diesen Typ finden Sie in der [System.Text.Encodings.Web Projekt](https://github.com/dotnet/corefx/tree/master/src/System.Text.Encodings.Web) auf GitHub. Komponententests, die auch dienen können, wie Codebeispiele, in gefunden werden der [System.Text.Encodings.Web/tests](https://github.com/dotnet/corefx/tree/master/src/System.Text.Encodings.Web/tests) Ordner auf GitHub.  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextEncoderSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.Encodings.Web.TextEncoderSettings.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Instanziiert einen Filtername ist leeren (erlaubt keine Codepunkte über standardmäßig).</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextEncoderSettings (System.Text.Encodings.Web.TextEncoderSettings other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Text.Encodings.Web.TextEncoderSettings other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.Encodings.Web.TextEncoderSettings.#ctor(System.Text.Encodings.Web.TextEncoderSettings)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="other" Type="System.Text.Encodings.Web.TextEncoderSettings" />
+      </Parameters>
+      <Docs>
+        <param name="other">Die andere <see cref="T:System.Text.Encodings.Web.TextEncoderSettings" /> Objekt, das geklont werden.</param>
+        <summary>Instanziiert einen Filter durch Klonen der Zulassungsliste eines anderen <see cref="T:System.Text.Encodings.Web.TextEncoderSettings" /> Objekt.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextEncoderSettings (params System.Text.Unicode.UnicodeRange[] allowedRanges);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Text.Unicode.UnicodeRange[] allowedRanges) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.Encodings.Web.TextEncoderSettings.#ctor(System.Text.Unicode.UnicodeRange[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="allowedRanges" Type="System.Text.Unicode.UnicodeRange[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="allowedRanges">Die Zeichenbereiche zulässiger.</param>
+        <summary>Instanziiert einen Filter, in dem nur die Zeichenbereiche gemäß <paramref name="allowedRanges" /> durch den Filter zulässig sind.</summary>
+        <remarks>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="allowedRanges" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowCharacter">
+      <MemberSignature Language="C#" Value="public virtual void AllowCharacter (char character);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AllowCharacter(char character) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.Encodings.Web.TextEncoderSettings.AllowCharacter(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="character" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="character">Die zulässigen Zeichen.</param>
+        <summary>Durch angegebene Zeichen können <paramref name="character" /> durch den Filter.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowCharacters">
+      <MemberSignature Language="C#" Value="public virtual void AllowCharacters (params char[] characters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AllowCharacters(char[] characters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.Encodings.Web.TextEncoderSettings.AllowCharacters(System.Char[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="characters" Type="System.Char[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="characters">Die zulässigen Zeichen.</param>
+        <summary>Ermöglicht allen von angegebene Zeichen <paramref name="characters" /> durch den Filter.</summary>
+        <remarks>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="characters" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowCodePoints">
+      <MemberSignature Language="C#" Value="public virtual void AllowCodePoints (System.Collections.Generic.IEnumerable&lt;int&gt; codePoints);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AllowCodePoints(class System.Collections.Generic.IEnumerable`1&lt;int32&gt; codePoints) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.Encodings.Web.TextEncoderSettings.AllowCodePoints(System.Collections.Generic.IEnumerable{System.Int32})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="codePoints" Type="System.Collections.Generic.IEnumerable&lt;System.Int32&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="codePoints">Die zulässigen Codepunkte.</param>
+        <summary>Ermöglicht allen Codepunkte gemäß <paramref name="codePoints" />.</summary>
+        <remarks>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="codePoints" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowRange">
+      <MemberSignature Language="C#" Value="public virtual void AllowRange (System.Text.Unicode.UnicodeRange range);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AllowRange(class System.Text.Unicode.UnicodeRange range) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.Encodings.Web.TextEncoderSettings.AllowRange(System.Text.Unicode.UnicodeRange)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="range" Type="System.Text.Unicode.UnicodeRange" />
+      </Parameters>
+      <Docs>
+        <param name="range">Der Bereich von Zeichen zulässig.</param>
+        <summary>Ermöglicht allen von angegebene Zeichen <paramref name="range" /> durch den Filter.</summary>
+        <remarks>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="range" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowRanges">
+      <MemberSignature Language="C#" Value="public virtual void AllowRanges (params System.Text.Unicode.UnicodeRange[] ranges);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AllowRanges(class System.Text.Unicode.UnicodeRange[] ranges) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.Encodings.Web.TextEncoderSettings.AllowRanges(System.Text.Unicode.UnicodeRange[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ranges" Type="System.Text.Unicode.UnicodeRange[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="ranges">Die Bereiche von Zeichen zulässig.</param>
+        <summary>Ermöglicht allen von angegebene Zeichen <paramref name="ranges" /> durch den Filter.</summary>
+        <remarks>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="ranges" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public virtual void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.Encodings.Web.TextEncoderSettings.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt dieses Objekt durch untersagen alle Zeichen zurück.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForbidCharacter">
+      <MemberSignature Language="C#" Value="public virtual void ForbidCharacter (char character);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ForbidCharacter(char character) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.Encodings.Web.TextEncoderSettings.ForbidCharacter(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="character" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="character">Das unzulässige Zeichen.</param>
+        <summary>Lässt das Zeichen <paramref name="character" /> durch den Filter.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForbidCharacters">
+      <MemberSignature Language="C#" Value="public virtual void ForbidCharacters (params char[] characters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ForbidCharacters(char[] characters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.Encodings.Web.TextEncoderSettings.ForbidCharacters(System.Char[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="characters" Type="System.Char[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="characters">Die unzulässigen Zeichen.</param>
+        <summary>Lässt alle von angegebene Zeichen <paramref name="characters" /> durch den Filter.</summary>
+        <remarks>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="characters" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ForbidRange">
+      <MemberSignature Language="C#" Value="public virtual void ForbidRange (System.Text.Unicode.UnicodeRange range);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ForbidRange(class System.Text.Unicode.UnicodeRange range) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.Encodings.Web.TextEncoderSettings.ForbidRange(System.Text.Unicode.UnicodeRange)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="range" Type="System.Text.Unicode.UnicodeRange" />
+      </Parameters>
+      <Docs>
+        <param name="range">Der Bereich von Zeichen, die nicht zugelassen werden.</param>
+        <summary>Lässt alle von angegebene Zeichen <paramref name="range" /> durch den Filter.</summary>
+        <remarks>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="range" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ForbidRanges">
+      <MemberSignature Language="C#" Value="public virtual void ForbidRanges (params System.Text.Unicode.UnicodeRange[] ranges);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ForbidRanges(class System.Text.Unicode.UnicodeRange[] ranges) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.Encodings.Web.TextEncoderSettings.ForbidRanges(System.Text.Unicode.UnicodeRange[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ranges" Type="System.Text.Unicode.UnicodeRange[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="ranges">Die Bereiche von Zeichen nicht zulässig.</param>
+        <summary>Lässt alle von angegebene Zeichen <paramref name="ranges" /> durch den Filter.</summary>
+        <remarks>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="ranges" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllowedCodePoints">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IEnumerable&lt;int&gt; GetAllowedCodePoints ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;int32&gt; GetAllowedCodePoints() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.Encodings.Web.TextEncoderSettings.GetAllowedCodePoints" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.IteratorStateMachine(typeof(System.Text.Encodings.Web.TextEncoderSettings/&lt;GetAllowedCodePoints&gt;d__15))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Enumerator aller zulässigen Codepunkte ab.</summary>
+        <returns>Der Enumerator der zulässigen Codepunkten.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

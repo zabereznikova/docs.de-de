@@ -1,0 +1,91 @@
+<Type Name="NullExtension" FullName="System.Windows.Markup.NullExtension">
+  <TypeSignature Language="C#" Value="public class NullExtension : System.Windows.Markup.MarkupExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NullExtension extends System.Windows.Markup.MarkupExtension" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.NullExtension" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Markup.MarkupExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("PresentationFramework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.MarkupExtensionReturnType(typeof(System.Object))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementiert eine XAML-Markuperweiterung, damit ein NULL-Objekt zurückgegeben wird, das in XAML zum expliziten Festlegen von Werten auf NULL verwendet werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In XAML null und einer leeren Zeichenfolge entsprechen im Allgemeinen nicht. Verwenden Sie die `{x:Null}` Erweiterung Auslastung, um ein Attribut festgelegt, die in der zugrunde liegenden Eigenschaft schaltet `null`.  Weitere Informationen wie das Festlegen von null-Werte für Szenarios in XAML relevant ist, finden Sie unter [X: Null-Markuperweiterung](~/docs/framework/xaml-services/x-null-markup-extension.md).  
+  
+ Diese Klasse ist eine Implementierung der Markuperweiterung. Markuperweiterungsklassen existieren hauptsächlich, dass unterstützen die Infrastruktur wie XAML-Prozessoren für eine bestimmte Erweiterung interpretieren. Die Elemente, die Markuperweiterungsklassen Implementierung verfügbar zu machen sind in der Regel sollen nicht aus dem Code aufgerufen werden. Diese Markuperweiterungsklasse unterstützt die [X: Null-Markuperweiterung](~/docs/framework/xaml-services/x-null-markup-extension.md) Nutzung für .NET XAML-Dienste.  
+  
+ In früheren Versionen von .NET Framework, diese Klasse (und die `x:Null` Unterstützung von Markuperweiterungen XAML-Verhalten als auch die entsprechenden Xmlns-Zuordnung) waren in der WPF-spezifischen Assembly PresentationFramework. In [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], <xref:System.Windows.Markup.NullExtension> befindet sich in der System.Xaml-Assembly. Dadurch wird die `x:Null` Verwendung von Anwendungen mit Frameworks, die auf .NET XAML-Dienste verweisen verfügbar. Sie benötigen keine PresentationFramework als einer referenzierten Assembly so lange anvisierten [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]. Weitere Informationen finden Sie unter [aus WPF zu System.Xaml migrierte Typen](~/docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md).  
+  
+ Die System.Xaml-Assembly verwendet <xref:System.Windows.Markup.XmlnsDefinitionAttribute> abzubildenden alle Typen in der Assembly auf die Verwendung von XAML-Namespace für die Verwendung von XAML-Sprache ([!INCLUDE[TLA#tla_xamlxmlnsv1](~/includes/tlasharptla-xamlxmlnsv1-md.md)]). In der Regel deklarieren Sie ein Präfix für [!INCLUDE[TLA#tla_xamlxmlnsv1](~/includes/tlasharptla-xamlxmlnsv1-md.md)] in einer Zuordnung der Root-Element und verwenden Sie das Präfix `x`.  
+  
+## <a name="wpf-usage-notes"></a>Hinweise zur WPF-Verwendung  
+ Für WPF-Abhängigkeitseigenschaften, beim Festlegen der Wert einer Abhängigkeitseigenschaft zu `null`, Sie sind nicht unbedingt Festlegen der Eigenschaft auf den Standardwert, auch wenn es sich um einen Reference (Eigenschaft) ist. Der Standardwert einer Abhängigkeitseigenschaft hängt von der Registrierung der Abhängigkeitseigenschaft ab. Ein nicht festgelegter Wert ist nicht notwendigerweise `null` entweder; finden Sie unter <xref:System.Windows.DependencyProperty.UnsetValue>. Weitere Informationen finden Sie unter <xref:System.Windows.DependencyObject.ClearValue%2A> oder [Übersicht über Abhängigkeitseigenschaften](~/docs/framework/wpf/advanced/dependency-properties-overview.md).  
+  
+<a name="xamlTextUsage_NullExtension"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NullExtension ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.NullExtension.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Markup.NullExtension" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProvideValue">
+      <MemberSignature Language="C#" Value="public override object ProvideValue (IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ProvideValue(class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.NullExtension.ProvideValue(System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Ein Objekt, das Dienste für die Implementierung der Markuperweiterung bereitstellen kann.</param>
+        <summary>Bietet <see langword="null" /> als Wert für die Ausgabe dieser Markuperweiterung verwenden.</summary>
+        <returns>Ein NULL-Verweis.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode unterstützt die Verwendung von XAML-Implementierungen von ereignissprozessoren und sollte nicht direkt aufgerufen werden. Eine Implementierung der XAML-Prozessor verwendet diese Methode beim Erstellen von Objektdiagrammen, die implizit enthalten eine `x:Null` Erweiterungsverwendung. Es beruht auf allgemeine Verhalten für die Verwendung von XAML-Prozessoren, beim Verarbeiten einer <xref:System.Windows.Markup.MarkupExtension> , und rufen Sie die `ProvideValue` Implementierung.  
+  
+ Diese Implementierung nicht auf Dienste, die basieren beruht auf dem übergebenen `serviceProvider`. Es gibt immer einen null-Verweis unabhängig vom Kontext zurück. In der .NET Framework-XAML-Dienste-Implementierung der zurückzugebende Wert, abgerufen wird, durch Verweisen auf die <xref:System.Xaml.XamlLanguage.Null%2A?displayProperty=nameWithType> statischen Wert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

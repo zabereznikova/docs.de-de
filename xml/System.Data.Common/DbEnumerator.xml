@@ -1,0 +1,272 @@
+<Type Name="DbEnumerator" FullName="System.Data.Common.DbEnumerator">
+  <TypeSignature Language="C#" Value="public class DbEnumerator : System.Collections.IEnumerator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DbEnumerator extends System.Object implements class System.Collections.IEnumerator" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Common.DbEnumerator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerator</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Macht die <see cref="M:System.Collections.IEnumerable.GetEnumerator" />-Methode verfügbar, die eine einfache Iteration über eine Auflistung durch einen .NET Framework-Datenanbieter unterstützt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Common.DbEnumerator> -Klasse wird implementiert von einer .NET Framework-Datenanbieter bindungsunterstützung Daten bereitstellen.  
+  
+ Programmbedingt die <xref:System.Data.Common.DbEnumerator> -Objekt ist dazu gedacht, für die Verwendung mit nur einem Resultset. Sie führen eine Batchanweisung mit zwei SQL SELECT-Anweisungen, die verschiedene Schemas zurückgeben, kann die zweite Anweisung beispielsweise nicht zurückgeben das gesamte Schema. Um diese Situation zu vermeiden, erhalten eine <xref:System.Data.Common.DbEnumerator> für jedes Resultset und rufen Sie dann die `NextResult` -Methode von .NET Framework Data Provider DataReader-Objekt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DbEnumerator (System.Data.Common.DbDataReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.Common.DbDataReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbEnumerator.#ctor(System.Data.Common.DbDataReader)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Data.Common.DbDataReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der Datenreader, der durchlaufen werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Common.DbEnumerator" />-Klasse mit dem angegebenen Datenreader.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DbEnumerator (System.Data.IDataReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.IDataReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbEnumerator.#ctor(System.Data.IDataReader)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Data.IDataReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der <see langword="DataReader" />, der durchlaufen werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Common.DbEnumerator" />-Klasse mit dem angegebenen <see langword="DataReader" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DbEnumerator (System.Data.Common.DbDataReader reader, bool closeReader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.Common.DbDataReader reader, bool closeReader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbEnumerator.#ctor(System.Data.Common.DbDataReader,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Data.Common.DbDataReader" />
+        <Parameter Name="closeReader" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der Datenreader, der durchlaufen werden soll.</param>
+        <param name="closeReader">
+          <see langword="true" />, um den Datenreader nach dem Durchlaufen seiner Daten automatisch zu schließen, andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Common.DbEnumerator" />-Klasse mit dem angegebenen Reader und gibt an, ob der Reader nach dem Durchlaufen seiner Daten automatisch geschlossen werden soll.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DbEnumerator (System.Data.IDataReader reader, bool closeReader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.IDataReader reader, bool closeReader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbEnumerator.#ctor(System.Data.IDataReader,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Data.IDataReader" />
+        <Parameter Name="closeReader" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der <see langword="DataReader" />, der durchlaufen werden soll.</param>
+        <param name="closeReader">
+          <see langword="true" />, um den <see langword="DataReader" /> nach dem Durchlaufen seiner Daten automatisch zu schließen, andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Common.DbEnumerator" />-Klasse mit dem angegebenen <see langword="DataReader" />, und gibt an, ob der <see langword="DataReader" /> nach dem Durchlaufen seiner Daten automatisch geschlossen werden soll.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public object Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Current" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbEnumerator.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das aktuelle Element in der Auflistung ab.</summary>
+        <value>Das aktuelle Element in der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach dem Erstellen eines Enumerators oder nach einem <xref:System.Data.Common.DbEnumerator.Reset%2A>, <xref:System.Data.Common.DbEnumerator.MoveNext%2A> aufgerufen werden, um den Enumerator auf das erste Element der Auflistung vor dem Lesen des Werts von <xref:System.Data.Common.DbEnumerator.Current%2A>ist, andernfalls <xref:System.Data.Common.DbEnumerator.Current%2A> ist nicht definiert. <xref:System.Data.Common.DbEnumerator.Current%2A>Außerdem löst eine Ausnahme aus, wenn der letzte Aufruf <xref:System.Data.Common.DbEnumerator.MoveNext%2A> "false" zurückgegeben, die am Ende der Auflistung angibt. <xref:System.Data.Common.DbEnumerator.Current%2A>Verschiebt die Position des Enumerators und aufeinander folgende Aufrufe von nicht <xref:System.Data.Common.DbEnumerator.Current%2A> dasselbe Objekt zurück, bis entweder <xref:System.Data.Common.DbEnumerator.MoveNext%2A> oder <xref:System.Data.Common.DbEnumerator.Reset%2A> aufgerufen wird. Ein Enumerator bleibt gültig, solange die Auflistung unverändert ist. Wenn Änderungen an der Auflistung vorgenommen werden, z. B. das Hinzufügen, ändern oder Löschen von Elementen, der Enumerator unwiederbringlich seine Gültigkeit und der nächste Aufruf von <xref:System.Data.Common.DbEnumerator.MoveNext%2A> oder <xref:System.Data.Common.DbEnumerator.Reset%2A> generiert eine <xref:System.InvalidOperationException>. Wenn die Auflistung, zwischen geändert wird <xref:System.Data.Common.DbEnumerator.MoveNext%2A> und <xref:System.Data.Common.DbEnumerator.Current%2A>, <xref:System.Data.Common.DbEnumerator.Current%2A> gibt das Element, dem er festgelegt ist, auch wenn der Enumerator bereits ungültig ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Enumerator befindet sich vor dem ersten Element der Sammlung oder hinter dem letzten Element.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveNext">
+      <MemberSignature Language="C#" Value="public bool MoveNext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool MoveNext() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbEnumerator.MoveNext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt den Enumerator auf das nächste Element der Auflistung.</summary>
+        <returns>
+          <see langword="true" />, wenn der Enumerator erfolgreich auf das nächste Element gesetzt wurde, <see langword="false" />, wenn der Enumerator das Ende der Auflistung überschritten hat.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach dem Erstellen eines Enumerators oder nach einem Aufruf von <xref:System.Data.Common.DbEnumerator.Reset%2A>, ist ein Enumerator vor das erste Element der Auflistung und der erste Aufruf von <xref:System.Data.Common.DbEnumerator.MoveNext%2A> setzt den Enumerator auf das erste Element der Auflistung. Nachdem das Ende der Auflistung übergebene nachfolgende Aufrufe von ist <xref:System.Data.Common.DbEnumerator.MoveNext%2A> bis "false" zurückgeben <xref:System.Data.Common.DbEnumerator.Reset%2A> aufgerufen wird. Ein Enumerator bleibt gültig, solange die Auflistung unverändert ist. Wenn Änderungen an der Auflistung vorgenommen werden, z. B. das Hinzufügen, ändern oder Löschen von Elementen, der Enumerator unwiederbringlich seine Gültigkeit und der nächste Aufruf von <xref:System.Data.Common.DbEnumerator.MoveNext%2A> oder <xref:System.Data.Common.DbEnumerator.Reset%2A> löst eine <xref:System.InvalidOperationException>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Sammlung wurde nach der Erstellung des Enumerators geändert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbEnumerator.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt den Enumerator auf seine anfängliche Position vor dem ersten Element in der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Enumerator bleibt gültig, solange die Auflistung unverändert ist. Wenn Änderungen an der Auflistung vorgenommen werden, z. B. das Hinzufügen, ändern oder Löschen von Elementen, der Enumerator unwiederbringlich seine Gültigkeit und der nächste Aufruf von <xref:System.Data.Common.DbEnumerator.MoveNext%2A> oder <xref:System.Data.Common.DbEnumerator.Reset%2A> löst eine <xref:System.InvalidOperationException>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Sammlung wurde nach der Erstellung des Enumerators geändert.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

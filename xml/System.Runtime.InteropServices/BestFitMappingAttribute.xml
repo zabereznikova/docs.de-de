@@ -1,0 +1,183 @@
+<Type Name="BestFitMappingAttribute" FullName="System.Runtime.InteropServices.BestFitMappingAttribute">
+  <TypeSignature Language="C#" Value="public sealed class BestFitMappingAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit BestFitMappingAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.BestFitMappingAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Interface, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Steuert, ob Unicode-Zeichen in möglichst passende ANSI-Zeichen konvertiert werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können dieses Attribut auf eine Assembly, Schnittstelle, Klasse oder Struktur anwenden.  
+  
+ Standardmäßig konvertiert die common Language Runtime in ANSI-Zeichen, die alle Unicode-Zeichen, die verwalteten an eine nicht verwaltete Methode ausführen unter Windows 98 oder WindowsMe übergeben Zuordnung mit ähnlichen Zeichen ermöglicht den Interop-Marshaller eine schließen-Zeichen auf, wenn keine genaue Übereinstimmung vorhanden ist. Beispielsweise konvertiert der Marshaller das copyright Unicode-Zeichen 'c' nicht verwaltete Methoden, die ANSI-Zeichen zu akzeptieren.  
+  
+> [!CAUTION]
+>  Einige Zeichen verfügen nicht über eine Darstellung mit ähnlichen Zeichen; Diese Zeichen werden als zuzuordnenden bezeichnet. Zuzuordnenden Zeichen konvertiert werden in der Regel auf den Standardwert "?" ANSI-Zeichen. Bestimmte Unicode-Zeichen werden in gefährliche Zeichen, z. B. den umgekehrten Schrägstrich konvertiert "\\' Zeichen, die versehentlich auf einen Pfad ändern können.  
+  
+ <xref:System.Runtime.InteropServices.BestFitMappingAttribute>bietet zwei Parameter, um Aspekte der Zuordnung mit ähnlichen Zeichen zu steuern. Zuordnung mit ähnlichen ein- und ausschalten aktivieren bzw. deaktivieren, verwenden Sie den ersten Parameter. Der Standardwert ist `true`, wodurch die Zuordnung mit ähnlichen Zeichen auf die Assembly, die Schnittstelle und die Klasse Ebenen. Ein Attribut auf eine Schnittstelle oder Klasse überschreibt ein Attribut auf Assemblyebene. Sie ebenso aktivieren oder deaktivieren Sie die optimale Zuordnung für Plattformaufrufe mithilfe der <xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping?displayProperty=nameWithType> Feld. Ein Wert festgelegt, die von der Plattform aufrufen Feld überschreibt alle Ebenen der <xref:System.Runtime.InteropServices.BestFitMappingAttribute>.  
+  
+ Sie können den zweiten Parameter, um zu steuern, ob bei Zeichen, eine Ausnahme auszulösen. Der Standardwert für die <xref:System.Runtime.InteropServices.BestFitMappingAttribute.ThrowOnUnmappableChar> Feld ist `false`, welche deaktiviert, die eine Ausnahme auszulösen, die Common Language Runtime Zeit findet ein Unicode-Zeichen, die zu konvertierenden verfügt das "?" ANSI-Zeichen. Auch wenn die Zuordnung mit ähnlichen Zeichen ist `true`, zuzuordnenden Zeichen eine Ausnahme generiert. wenn die <xref:System.Runtime.InteropServices.BestFitMappingAttribute.ThrowOnUnmappableChar> Feld ist `true`. Zur Erhöhung der Sicherheit können Sie den ersten Parameter zum Umschalten `false` und der zweite Parameter für `true`. Diese Kombination von parametereinstellungen aktiviert die Zuordnung mit ähnlichen Zeichen deaktiviert, aber den Mechanismus Auslösen der Ausnahme als Sicherheitsmaßnahme ermöglicht.  
+  
+> [!CAUTION]
+>  Sie können nicht vom bereitgestellten Standardwerte ändern <xref:System.Runtime.InteropServices.BestFitMappingAttribute> beim Übergeben eines verwalteten Arrays, dessen Elemente sind im ANSI-Zeichen oder LPSTRs sind, ein nicht verwaltetes sicheres Array. Zuordnung mit ähnlichen Zeichen ist immer aktiviert, und es werden keine Ausnahmen ausgelöst werden kann. Denken Sie daran, dass diese Kombination Ihrer Sicherheitsmodell gefährden kann.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie optimale Zuordnung deaktiviert und eine Ausnahme für die Konvertierung von Unicode-Zeichen, das "?" ANSI-Zeichen. Festlegen von <xref:System.Runtime.InteropServices.BestFitMappingAttribute> Parameter auf diese Weise bietet eine zusätzliche Maß an Sicherheit.  
+  
+ [!code-cpp[System.Runtime.InteropServices.BestFitMappingAttribute#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.runtime.interopservices.bestfitmappingattribute/cpp/source.cpp#1)]
+ [!code-csharp[System.Runtime.InteropServices.BestFitMappingAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.interopservices.bestfitmappingattribute/cs/source.cs#1)]
+ [!code-vb[System.Runtime.InteropServices.BestFitMappingAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.runtime.interopservices.bestfitmappingattribute/vb/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BestFitMappingAttribute (bool BestFitMapping);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool BestFitMapping) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.BestFitMappingAttribute.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="BestFitMapping" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="BestFitMapping">
+          <see langword="true" />um anzugeben, dass die Zuordnung mit ähnlichen Zeichen aktiviert ist. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.InteropServices.BestFitMappingAttribute" /> Satz auf den Wert der Klasse die <see cref="P:System.Runtime.InteropServices.BestFitMappingAttribute.BestFitMapping" /> Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BestFitMapping">
+      <MemberSignature Language="C#" Value="public bool BestFitMapping { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BestFitMapping" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.BestFitMappingAttribute.BestFitMapping" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Verhalten der Zuordnung mit ähnlichen Zeichen ab, bei der Konvertierung von Unicode-Zeichen in ANSI-Zeichen.</summary>
+        <value>
+          <see langword="true" />Wenn die Zuordnung mit ähnlichen Zeichen aktiviert ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Zuordnung mit ähnlichen Zeichen ist `false` und <xref:System.Runtime.InteropServices.BestFitMappingAttribute.ThrowOnUnmappableChar> ist `true`, alle Unicode-Zeichen, die Konvertierung in das ANSI-Format erfordern generiert eine Ausnahme aus, wenn an nicht verwalteten Code übergeben. Einige Zeichen können nicht zugeordnet werden, selbst wenn die optimale Zuordnung `true`. Einige Zeichen verfügen nicht über eine Darstellung mit ähnlichen Zeichen; Diese Zeichen werden als zuzuordnenden bezeichnet. Zuzuordnenden Zeichen konvertiert werden in der Regel auf den Standardwert "?" ANSI-Zeichen.  
+  
+> [!CAUTION]
+>  Bestimmte Unicode-Zeichen werden in gefährliche Zeichen, z. B. den umgekehrten Schrägstrich konvertiert "\\' Zeichen, die versehentlich auf einen Pfad ändern können.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThrowOnUnmappableChar">
+      <MemberSignature Language="C#" Value="public bool ThrowOnUnmappableChar;" />
+      <MemberSignature Language="ILAsm" Value=".field public bool ThrowOnUnmappableChar" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.BestFitMappingAttribute.ThrowOnUnmappableChar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Aktiviert oder deaktiviert das Auslösen einer Ausnahme auf ein nicht zuzuordnenden Unicode-Zeichen, das in ein ANSI konvertiert wird "?" Zeichen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `false`, <xref:System.Runtime.InteropServices.BestFitMappingAttribute.ThrowOnUnmappableChar> Feld deaktiviert ist; andernfalls wird eine Ausnahme jedes Mal der Interop-Marshaller ein zuzuordnendes Zeichen erkennt ausgelöst. Der standardmäßige `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

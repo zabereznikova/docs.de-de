@@ -1,0 +1,644 @@
+<Type Name="WebHttpBehavior" FullName="System.ServiceModel.Description.WebHttpBehavior">
+  <TypeSignature Language="C#" Value="public class WebHttpBehavior : System.ServiceModel.Description.IEndpointBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebHttpBehavior extends System.Object implements class System.ServiceModel.Description.IEndpointBehavior" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.WebHttpBehavior" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Web</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IEndpointBehavior</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Aktiviert das Webprogrammiermodell für einen Windows Communication Foundation (WCF)-Dienst.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird das <xref:System.ServiceModel.Description.WebHttpBehavior>-Verhalten in Verbindung mit der <xref:System.ServiceModel.WebHttpBinding>-Bindung verwendet, kann [!INCLUDE[indigo2](~/includes/indigo2-md.md)] Webdienste zur Verfügung stellen und auf sie zugreifen. <xref:System.ServiceModel.Web.WebServiceHost> fügt dieses Verhalten automatisch zu Endpunkten hinzu, die <xref:System.ServiceModel.WebHttpBinding> verwenden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebHttpBehavior ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.WebHttpBehavior.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Description.WebHttpBehavior" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddBindingParameters">
+      <MemberSignature Language="C#" Value="public virtual void AddBindingParameters (System.ServiceModel.Description.ServiceEndpoint endpoint, System.ServiceModel.Channels.BindingParameterCollection bindingParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddBindingParameters(class System.ServiceModel.Description.ServiceEndpoint endpoint, class System.ServiceModel.Channels.BindingParameterCollection bindingParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.WebHttpBehavior.AddBindingParameters(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Channels.BindingParameterCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="bindingParameters" Type="System.ServiceModel.Channels.BindingParameterCollection" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">Der Endpunkt.</param>
+        <param name="bindingParameters">Die Bindungsparameter, die eine Änderung der Bindungen unterstützen.</param>
+        <summary>Implementiert die <see cref="M:System.ServiceModel.Description.IEndpointBehavior.AddBindingParameters(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Channels.BindingParameterCollection)" />-Methode, um zur Laufzeit Daten an Bindungen zu übergeben und benutzerdefiniertes Verhalten zu unterstützen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddClientErrorInspector">
+      <MemberSignature Language="C#" Value="protected virtual void AddClientErrorInspector (System.ServiceModel.Description.ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.ClientRuntime clientRuntime);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void AddClientErrorInspector(class System.ServiceModel.Description.ServiceEndpoint endpoint, class System.ServiceModel.Dispatcher.ClientRuntime clientRuntime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.WebHttpBehavior.AddClientErrorInspector(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.ClientRuntime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="clientRuntime" Type="System.ServiceModel.Dispatcher.ClientRuntime" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">Der Dienstendpunkt.</param>
+        <param name="clientRuntime">Die Clientlaufzeit.</param>
+        <summary>Fügt dem angegebenen Dienstendpunkt einen Clientfehlerinspektor hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddServerErrorHandlers">
+      <MemberSignature Language="C#" Value="protected virtual void AddServerErrorHandlers (System.ServiceModel.Description.ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.EndpointDispatcher endpointDispatcher);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void AddServerErrorHandlers(class System.ServiceModel.Description.ServiceEndpoint endpoint, class System.ServiceModel.Dispatcher.EndpointDispatcher endpointDispatcher) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.WebHttpBehavior.AddServerErrorHandlers(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.EndpointDispatcher)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="endpointDispatcher" Type="System.ServiceModel.Dispatcher.EndpointDispatcher" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">Der Dienstendpunkt.</param>
+        <param name="endpointDispatcher">Der Endpunktverteiler.</param>
+        <summary>Überschreiben Sie diese Methode, um die Handhabung von Fehlern zu ändern, die in diesem Dienst auftreten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyClientBehavior">
+      <MemberSignature Language="C#" Value="public virtual void ApplyClientBehavior (System.ServiceModel.Description.ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.ClientRuntime clientRuntime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ApplyClientBehavior(class System.ServiceModel.Description.ServiceEndpoint endpoint, class System.ServiceModel.Dispatcher.ClientRuntime clientRuntime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.WebHttpBehavior.ApplyClientBehavior(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.ClientRuntime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="clientRuntime" Type="System.ServiceModel.Dispatcher.ClientRuntime" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">Der Endpunkt, der den Vertrag verfügbar macht.</param>
+        <param name="clientRuntime">Der Client, auf den das benutzerdefinierte Verhalten angewendet wird.</param>
+        <summary>Implementiert die <see cref="M:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.ClientRuntime)" />-Methode, um eine Änderung oder Erweiterung des Clients über einen Endpunkt zu unterstützen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Rahmen dieser Methode werden <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29> und <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29> für jeden Vorgang aufgerufen, um das zu installierende <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> zu bestimmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyDispatchBehavior">
+      <MemberSignature Language="C#" Value="public virtual void ApplyDispatchBehavior (System.ServiceModel.Description.ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.EndpointDispatcher endpointDispatcher);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ApplyDispatchBehavior(class System.ServiceModel.Description.ServiceEndpoint endpoint, class System.ServiceModel.Dispatcher.EndpointDispatcher endpointDispatcher) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.WebHttpBehavior.ApplyDispatchBehavior(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.EndpointDispatcher)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="endpointDispatcher" Type="System.ServiceModel.Dispatcher.EndpointDispatcher" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">Der Endpunkt, der den Vertrag verfügbar macht.</param>
+        <param name="endpointDispatcher">Der Endpunktverteiler, auf den das Verhalten angewendet wird.</param>
+        <summary>Implementiert die <see cref="M:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.EndpointDispatcher)" />-Methode, um eine Änderung oder Erweiterung des Clients über einen Endpunkt zu unterstützen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Rahmen dieser Methode werden <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29> und <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29> für jeden Vorgang aufgerufen, um das zu installierende <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> zu bestimmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutomaticFormatSelectionEnabled">
+      <MemberSignature Language="C#" Value="public virtual bool AutomaticFormatSelectionEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutomaticFormatSelectionEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab bzw. legt einen Wert fest, der angibt, ob die automatische Formatauswahl aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn die automatische Formatauswahl aktiviert ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]Automatische Formatauswahl finden Sie unter [WCF Web-HTTP-Formatierung](~/docs/framework/wcf/feature-details/wcf-web-http-formatting.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultBodyStyle">
+      <MemberSignature Language="C#" Value="public virtual System.ServiceModel.Web.WebMessageBodyStyle DefaultBodyStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.Web.WebMessageBodyStyle DefaultBodyStyle" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.WebHttpBehavior.DefaultBodyStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Web.WebMessageBodyStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Standardstil für den Nachrichtentext ab oder legt diesen fest.</summary>
+        <value>Einer der in der <see cref="T:System.ServiceModel.Web.WebMessageBodyStyle" />-Enumeration definierten Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.ServiceModel.Web.WebGetAttribute> oder <xref:System.ServiceModel.Web.WebInvokeAttribute> die <xref:System.ServiceModel.Web.WebInvokeAttribute.BodyStyle%2A>-Eigenschaft nicht explizit festlegt, wird der Wert dieser Eigenschaft als Textstil für den Vorgang verwendet. Der Standardwert ist <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultOutgoingRequestFormat">
+      <MemberSignature Language="C#" Value="public virtual System.ServiceModel.Web.WebMessageFormat DefaultOutgoingRequestFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.Web.WebMessageFormat DefaultOutgoingRequestFormat" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingRequestFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Web.WebMessageFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Standardformat für ausgehende Anforderungen ab oder legt es fest.</summary>
+        <value>Einer der in der <see cref="T:System.ServiceModel.Web.WebMessageFormat" />-Enumeration definierten Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.ServiceModel.Web.WebGetAttribute> oder <xref:System.ServiceModel.Web.WebInvokeAttribute> die `OutgoingRequestFormat`-Eigenschaft nicht explizit festlegt, wird der Wert dieser Eigenschaft als Anforderungsformat für den Vorgang verwendet. Der Standardwert ist <xref:System.ServiceModel.Web.WebMessageFormat.Xml>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultOutgoingResponseFormat">
+      <MemberSignature Language="C#" Value="public virtual System.ServiceModel.Web.WebMessageFormat DefaultOutgoingResponseFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.Web.WebMessageFormat DefaultOutgoingResponseFormat" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Web.WebMessageFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Standardformat für ausgehende Antworten ab oder legt es fest.</summary>
+        <value>Einer der in der <see cref="T:System.ServiceModel.Web.WebMessageFormat" />-Enumeration definierten Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.ServiceModel.Web.WebGetAttribute> oder <xref:System.ServiceModel.Web.WebInvokeAttribute> die `OutgoingResponseFormat`-Eigenschaft nicht explizit festlegt, wird der Wert dieser Eigenschaft als Antwortformat für den Vorgang verwendet. Der Standardwert ist <xref:System.ServiceModel.Web.WebMessageFormat.Xml>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FaultExceptionEnabled">
+      <MemberSignature Language="C#" Value="public virtual bool FaultExceptionEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool FaultExceptionEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.WebHttpBehavior.FaultExceptionEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Flag ab bzw. legt das Flag fest, das angibt, ob ein FaultException-Element generiert wird, wenn ein interner Serverfehler (HTTP-Statuscode: 500) auftritt.</summary>
+        <value>Gibt <see langword="true" /> zurück, wenn das Flag aktiviert ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOperationSelector">
+      <MemberSignature Language="C#" Value="protected virtual System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector GetOperationSelector (System.ServiceModel.Description.ServiceEndpoint endpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector GetOperationSelector(class System.ServiceModel.Description.ServiceEndpoint endpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.WebHttpBehavior.GetOperationSelector(System.ServiceModel.Description.ServiceEndpoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">Der Endpunkt, der den Vertrag verfügbar macht.</param>
+        <summary>Erstellt ein neues <see cref="T:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector" />-Objekt.</summary>
+        <returns>Eine Instanz von <see cref="T:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector" />, die die Vorgangsauswahl für den angegebenen Endpunkt enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector> ordnet Aufrufe basierend auf dem URI-Suffix (Uniform Resource Identifier) und der verwendeten HTTP-Methode zu [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Dienstvorgängen zu. Abgeleitete Verhalten können diesen Erweiterungspunkt nutzen, um eine eigene Implementierung von <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector> bereitzustellen, die die eingehende HTTP-Anforderung einem Dienstvorgang zuordnet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetQueryStringConverter">
+      <MemberSignature Language="C#" Value="protected virtual System.ServiceModel.Dispatcher.QueryStringConverter GetQueryStringConverter (System.ServiceModel.Description.OperationDescription operationDescription);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.ServiceModel.Dispatcher.QueryStringConverter GetQueryStringConverter(class System.ServiceModel.Description.OperationDescription operationDescription) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.WebHttpBehavior.GetQueryStringConverter(System.ServiceModel.Description.OperationDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Dispatcher.QueryStringConverter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operationDescription" Type="System.ServiceModel.Description.OperationDescription" />
+      </Parameters>
+      <Docs>
+        <param name="operationDescription">Der Dienstvorgang.</param>
+        <summary>Ruft den Abfragezeichenfolgenkonverter ab.</summary>
+        <returns>Eine <see cref="T:System.ServiceModel.Dispatcher.QueryStringConverter" />-Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Verhalten können diesen Erweiterungspunkt nutzen, um eine eigene Implementierung von <xref:System.ServiceModel.Dispatcher.QueryStringConverter> bereitzustellen, die die Dienstvorgangsparametertypen aus und in die Abfragezeichenfolge des URL für die HTTP-Anforderung konvertieren kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReplyClientFormatter">
+      <MemberSignature Language="C#" Value="protected virtual System.ServiceModel.Dispatcher.IClientMessageFormatter GetReplyClientFormatter (System.ServiceModel.Description.OperationDescription operationDescription, System.ServiceModel.Description.ServiceEndpoint endpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.ServiceModel.Dispatcher.IClientMessageFormatter GetReplyClientFormatter(class System.ServiceModel.Description.OperationDescription operationDescription, class System.ServiceModel.Description.ServiceEndpoint endpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.WebHttpBehavior.GetReplyClientFormatter(System.ServiceModel.Description.OperationDescription,System.ServiceModel.Description.ServiceEndpoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Dispatcher.IClientMessageFormatter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operationDescription" Type="System.ServiceModel.Description.OperationDescription" />
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="operationDescription">Der Dienstvorgang.</param>
+        <param name="endpoint">Der Dienstendpunkt.</param>
+        <summary>Ruft das Antwortformatierungsprogramm auf dem Client für den angegebenen Endpunkt und den Dienstvorgang ab.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.Dispatcher.IClientMessageFormatter" />-Verweis auf das Antwortformatierungsprogramm auf dem Client für den angegebenen Vorgang und Endpunkt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Verhalten können diesen Erweiterungspunkt nutzen, um eine eigene <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>-Implementierung bereitzustellen, die aufgerufen wird, um die Antwortnachricht in die Ausgabeparameter/Rückgabewerte des Dienstvorgangs zu deserialisieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReplyDispatchFormatter">
+      <MemberSignature Language="C#" Value="protected virtual System.ServiceModel.Dispatcher.IDispatchMessageFormatter GetReplyDispatchFormatter (System.ServiceModel.Description.OperationDescription operationDescription, System.ServiceModel.Description.ServiceEndpoint endpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.ServiceModel.Dispatcher.IDispatchMessageFormatter GetReplyDispatchFormatter(class System.ServiceModel.Description.OperationDescription operationDescription, class System.ServiceModel.Description.ServiceEndpoint endpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.WebHttpBehavior.GetReplyDispatchFormatter(System.ServiceModel.Description.OperationDescription,System.ServiceModel.Description.ServiceEndpoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Dispatcher.IDispatchMessageFormatter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operationDescription" Type="System.ServiceModel.Description.OperationDescription" />
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="operationDescription">Der Dienstvorgang.</param>
+        <param name="endpoint">Der Dienstendpunkt.</param>
+        <summary>Ruft das Antwortformatierungsprogramm in dem Dienst für den angegebenen Endpunkt und den Dienstvorgang ab.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.Dispatcher.IDispatchMessageFormatter" />-Verweis auf das Antwortformatierungsprogramm in dem Dienst für den angegebenen Vorgang und Endpunkt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Verhalten können diesen Erweiterungspunkt nutzen, um eine eigene <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>-Implementierung bereitzustellen, die aufgerufen wird, um die Ausgabeparameter/Rückgabewerte des Dienstvorgangs in eine Antwortnachricht zu konvertieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRequestClientFormatter">
+      <MemberSignature Language="C#" Value="protected virtual System.ServiceModel.Dispatcher.IClientMessageFormatter GetRequestClientFormatter (System.ServiceModel.Description.OperationDescription operationDescription, System.ServiceModel.Description.ServiceEndpoint endpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.ServiceModel.Dispatcher.IClientMessageFormatter GetRequestClientFormatter(class System.ServiceModel.Description.OperationDescription operationDescription, class System.ServiceModel.Description.ServiceEndpoint endpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.WebHttpBehavior.GetRequestClientFormatter(System.ServiceModel.Description.OperationDescription,System.ServiceModel.Description.ServiceEndpoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Dispatcher.IClientMessageFormatter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operationDescription" Type="System.ServiceModel.Description.OperationDescription" />
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="operationDescription">Der Dienstvorgang.</param>
+        <param name="endpoint">Der Dienstendpunkt.</param>
+        <summary>Ruft das Anforderungsformatierungsprogramm auf dem Client für den angegebenen Dienstvorgang und Endpunkt ab.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.Dispatcher.IClientMessageFormatter" />-Verweis auf das Anforderungsformatierungsprogramm auf dem Client für den angegebenen Vorgang und Endpunkt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Verhalten können diesen Erweiterungspunkt nutzen, um eine eigene <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>-Implementierung bereitzustellen, die aufgerufen wird, um die Eingabeparameter des Dienstvorgangsaufrufs in eine Anforderungsnachricht zu konvertieren. Die in <xref:System.UriTemplate> des Dienstvorgangs angegebenen Parameter müssen in den `To`-URI der Anforderungsnachricht serialisiert werden. Weitere Parameter müssen in den Text der Anforderungsnachricht serialisiert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRequestDispatchFormatter">
+      <MemberSignature Language="C#" Value="protected virtual System.ServiceModel.Dispatcher.IDispatchMessageFormatter GetRequestDispatchFormatter (System.ServiceModel.Description.OperationDescription operationDescription, System.ServiceModel.Description.ServiceEndpoint endpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.ServiceModel.Dispatcher.IDispatchMessageFormatter GetRequestDispatchFormatter(class System.ServiceModel.Description.OperationDescription operationDescription, class System.ServiceModel.Description.ServiceEndpoint endpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.WebHttpBehavior.GetRequestDispatchFormatter(System.ServiceModel.Description.OperationDescription,System.ServiceModel.Description.ServiceEndpoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Dispatcher.IDispatchMessageFormatter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operationDescription" Type="System.ServiceModel.Description.OperationDescription" />
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="operationDescription">Der Dienstvorgang.</param>
+        <param name="endpoint">Der Dienstendpunkt.</param>
+        <summary>Ruft das Anforderungsformatierungsprogramm in dem Dienst für den angegebenen Dienstvorgang und Endpunkt ab.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.Dispatcher.IDispatchMessageFormatter" />-Verweis auf das Anforderungsformatierungsprogramm in dem Dienst für den angegebenen Vorgang und Endpunkt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Verhalten können diesen Erweiterungspunkt nutzen, um eine eigene <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>-Implementierung bereitzustellen, die aufgerufen wird, um die Eingabeparameter des Dienstvorgangs aus der Anforderungsnachricht zu deserialisieren. Die in <xref:System.UriTemplate> des Dienstvorgangs angegebenen Parameter müssen aus dem `To`-URI der Anforderungsnachricht deserialisiert werden. Weitere Parameter müssen aus dem Text der Anforderungsnachricht deserialisiert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpEnabled">
+      <MemberSignature Language="C#" Value="public virtual bool HelpEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HelpEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.WebHttpBehavior.HelpEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab bzw. legt einen Wert fest, der angibt, ob die [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Hilfeseite aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn die [!INCLUDE[indigo2](~/includes/indigo2-md.md)]Hilfeseite aktiviert ist; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]die [!INCLUDE[indigo2](~/includes/indigo2-md.md)] REST-Hilfeseite finden Sie unter [WCF Web-HTTP-Dienst-Hilfeseite](~/docs/framework/wcf/feature-details/wcf-web-http-service-help-page.md).  
+  
+ So aktivieren Sie das helpEnabled-Attribut in einer Konfigurationsdatei:  
+  
+```  
+  
+<system.serviceModel>  
+    <behaviors>  
+        <endpointBehaviors>  
+            <behavior name="MyEndpointBehavior">  
+                <webHttp helpEnabled="true" />  
+            </behavior>  
+    </endpointBehaviors>  
+</system.serviceModel>  
+  
+```  
+  
+ So aktivieren Sie programmgesteuert die HelpEnabled-Eigenschaft:  
+  
+```  
+  
+WebHttpBehavior helpBehavior = new WebHttpBehavior();  
+helpBehavior.HelpEnabled = true;  
+host.Description.Endpoints[0].Behaviors.Add(helpBehavior);  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="JavascriptCallbackParameterName">
+      <MemberSignature Language="C#" Value="protected string JavascriptCallbackParameterName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string JavascriptCallbackParameterName" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.WebHttpBehavior.JavascriptCallbackParameterName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des JavaScript-Rückrufparameters ab bzw. legt ihn fest.</summary>
+        <value>Der Name des JavaScript-Rückrufparameters.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public virtual void Validate (System.ServiceModel.Description.ServiceEndpoint endpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Validate(class System.ServiceModel.Description.ServiceEndpoint endpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.WebHttpBehavior.Validate(System.ServiceModel.Description.ServiceEndpoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">Der Dienstendpunkt.</param>
+        <summary>Bestätigt, dass der Endpunkt die Anforderungen für das Webprogrammiermodell erfüllt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überprüft Folgendes:  
+  
+-   Der Endpunkt ist nicht `null`.  
+  
+-   Der Endpunkt verwendet das HTTP- oder HTTPS-Schema.  
+  
+-   Die <xref:System.ServiceModel.Channels.MessageVersion> der Bindung ist auf <xref:System.ServiceModel.Channels.MessageVersion.None%2A> festgelegt.  
+  
+-   Die Bindung enthält ein <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, wobei <xref:System.ServiceModel.Channels.TransportBindingElement.ManualAddressing%2A> auf `true` festgelegt ist.  
+  
+-   Die in <xref:System.UriTemplate> festgelegten Parameter müssen Bestandteil des Vorgangs sein.  
+  
+-   Vorgänge, die <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare> angeben, verfügen höchstens über einen Eingabeparameter und über keine Ausgabeparameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateBinding">
+      <MemberSignature Language="C#" Value="protected virtual void ValidateBinding (System.ServiceModel.Description.ServiceEndpoint endpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ValidateBinding(class System.ServiceModel.Description.ServiceEndpoint endpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.WebHttpBehavior.ValidateBinding(System.ServiceModel.Description.ServiceEndpoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">Der Dienstendpunkt.</param>
+        <summary>Stellt sicher, dass die Bindung für die Verwendung mit dem WCF-Webprogrammiermodell gültig ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateOperation">
+      <MemberSignature Language="C#" Value="protected void ValidateOperation (System.ServiceModel.Description.OperationDescription operation);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ValidateOperation(class System.ServiceModel.Description.OperationDescription operation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.WebHttpBehavior.ValidateOperation(System.ServiceModel.Description.OperationDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operation" Type="System.ServiceModel.Description.OperationDescription" />
+      </Parameters>
+      <Docs>
+        <param name="operation">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

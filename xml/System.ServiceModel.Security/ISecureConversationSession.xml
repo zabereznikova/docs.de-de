@@ -1,0 +1,71 @@
+<Type Name="ISecureConversationSession" FullName="System.ServiceModel.Security.ISecureConversationSession">
+  <TypeSignature Language="C#" Value="public interface ISecureConversationSession : System.ServiceModel.Security.ISecuritySession" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISecureConversationSession implements class System.ServiceModel.Channels.ISession, class System.ServiceModel.Security.ISecuritySession" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.ISecureConversationSession" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Security.ISecuritySession</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Sicherheitssitzung für eine sichere Konversation dar. Die kommunizierenden Parteien sichern alle Nachrichten in der Sitzung mit einem <see langword="SecurityContextToken" />, das vom Server als Teil der Sitzungseinrichtung ausgestellt wird.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="TryReadSessionTokenIdentifier">
+      <MemberSignature Language="C#" Value="public bool TryReadSessionTokenIdentifier (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryReadSessionTokenIdentifier(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.ISecureConversationSession.TryReadSessionTokenIdentifier(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der <see cref="T:System.Xml.XmlReader" />, mit dem versucht wird, das Token zu lesen.</param>
+        <summary>Es wird versucht, den Sitzungstokenbezeichner zu lesen, auf den vom XML-Leser verwiesen wird.</summary>
+        <returns>
+          <see langword="true" />, wenn der XML-Code, auf den der XML-Leser verweist, einer <see langword="SecurityKeyIdentifierClause" /> entspricht, die mit dem Token der Sicherheitssitzung übereinstimmt, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist nützlich für Sitzungen wie WS-RM-Sitzungen, die oberhalb der Sicherheitssitzung stattfinden und im Sitzungseinrichtungsprotokoll auf das Token der Sicherheitssitzung verweisen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteSessionTokenIdentifier">
+      <MemberSignature Language="C#" Value="public void WriteSessionTokenIdentifier (System.Xml.XmlDictionaryWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteSessionTokenIdentifier(class System.Xml.XmlDictionaryWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.ISecureConversationSession.WriteSessionTokenIdentifier(System.Xml.XmlDictionaryWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer"><see cref="T:System.Xml.XmlDictionaryWriter" />, mit dem versucht wird, das Token zu schreiben.</param>
+        <summary>Versucht, die <see langword="SecurityKeyIdentifierClause" /> zu schreiben, die dem Token der Sicherheitssitzung entspricht. Diese Methode ist nützlich für Sitzungen wie WS-RM-Sitzungen, die oberhalb der Sicherheitssitzung stattfinden und im Sitzungseinrichtungsprotokoll auf das Token der Sicherheitssitzung verweisen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

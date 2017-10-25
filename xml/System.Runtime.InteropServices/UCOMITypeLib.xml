@@ -1,0 +1,355 @@
+<Type Name="UCOMITypeLib" FullName="System.Runtime.InteropServices.UCOMITypeLib">
+  <TypeSignature Language="C#" Value="public interface UCOMITypeLib" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract UCOMITypeLib" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.UCOMITypeLib" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("00020402-0000-0000-c000-000000000046")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Verwenden Sie stattdessen <see cref="T:System.Runtime.InteropServices.ComTypes.ITypeLib" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu den `ITypeLib` Schnittstelle, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FindName">
+      <MemberSignature Language="C#" Value="public void FindName (string szNameBuf, int lHashVal, System.Runtime.InteropServices.UCOMITypeInfo[] ppTInfo, int[] rgMemId, ref short pcFound);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void FindName(string szNameBuf, int32 lHashVal, [out] class System.Runtime.InteropServices.UCOMITypeInfo[] ppTInfo, [out] int32[] rgMemId, int16&amp; pcFound) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMITypeLib.FindName(System.String,System.Int32,System.Runtime.InteropServices.UCOMITypeInfo[],System.Int32[],System.Int16@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="szNameBuf" Type="System.String" />
+        <Parameter Name="lHashVal" Type="System.Int32" />
+        <Parameter Name="ppTInfo" Type="System.Runtime.InteropServices.UCOMITypeInfo[]" />
+        <Parameter Name="rgMemId" Type="System.Int32[]" />
+        <Parameter Name="pcFound" Type="System.Int16&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="szNameBuf">Der Name gesucht werden soll.</param>
+        <param name="lHashVal">Berechnet ein Hash-Wert, um die Suche zu beschleunigen, indem die <see langword="LHashValOfNameSys" /> Funktion. Wenn <c>lHashVal</c> gleich 0 ist, wird ein Wert berechnet.</param>
+        <param name="ppTInfo">Bei erfolgreicher Rückgabe ein Array von Zeigern auf die Typ-Beschreibungen, die den Namen, die im angegebenen enthalten <c>SzNameBuf</c>.</param>
+        <param name="rgMemId">Ein Array von der <see langword="MEMBERID" /> des der gefundenen Elemente. <c>RgMemId</c> [i] ist die <see langword="MEMBERID" /> , indiziert, in der Beschreibung des durch angegebenen <c>PpTInfo</c> [i]. Nicht mit <see langword="null" />.</param>
+        <param name="pcFound">Bei einem Eintrag gibt an wie viele Instanzen suchen. Beispielsweise <c>PcFound</c> = 1 aufgerufen werden, um das erste Vorkommen zu suchen. Die Suche angehalten wird, wenn eine Instanz gefunden wird.  
+  
+ Gibt an die Anzahl der Instanzen, die gefunden wurden, beim Beenden. Wenn die <see langword="in" /> und <see langword="out" /> Werte <c>PcFound</c> sind nahezu identisch, es gibt möglicherweise weitere Beschreibungen, die den Namen enthalten.</param>
+        <summary>Sucht nach Vorkommen einer typbeschreibung in einer Typbibliothek ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es muss genügend `rgMemId` zum Speichern `pcFound` Einträge.  
+  
+ Weitere Informationen zu `ITypeLib::FindName`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDocumentation">
+      <MemberSignature Language="C#" Value="public void GetDocumentation (int index, out string strName, out string strDocString, out int dwHelpContext, out string strHelpFile);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetDocumentation(int32 index, [out] string&amp; strName, [out] string&amp; strDocString, [out] int32&amp; dwHelpContext, [out] string&amp; strHelpFile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMITypeLib.GetDocumentation(System.Int32,System.String@,System.String@,System.Int32@,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="strName" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="strDocString" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="dwHelpContext" Type="System.Int32&amp;" RefType="out" />
+        <Parameter Name="strHelpFile" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index die typbeschreibung, deren Dokumentation ist, zurückgegeben werden.</param>
+        <param name="strName">Gibt eine Zeichenfolge mit dem Namen des angegebenen Elements zurück.</param>
+        <param name="strDocString">Gibt eine Zeichenfolge, die die Dokumentation für das angegebene Element enthält.</param>
+        <param name="dwHelpContext">Gibt den Hilfekontextbezeichner verknüpft sind, mit dem angegebenen Element zurück.</param>
+        <param name="strHelpFile">Gibt eine Zeichenfolge, die der vollqualifizierte Name der Hilfedatei enthält, zurück.</param>
+        <summary>Ruft ab, die Bibliotheks Dokumentationszeichenfolge, den vollständigen Namen der Hilfedatei sowie Pfad und der Kontextbezeichner für das Hilfethema "Bibliothek" in der Hilfedatei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `ITypeLib::GetDocumentation`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLibAttr">
+      <MemberSignature Language="C#" Value="public void GetLibAttr (out IntPtr ppTLibAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetLibAttr([out] native int&amp; ppTLibAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMITypeLib.GetLibAttr(System.IntPtr@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ppTLibAttr" Type="System.IntPtr&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="ppTLibAttr">Nach erfolgreicher Rückkehr eine Struktur, die Attribute der Bibliothek enthält.</param>
+        <summary>Ruft die Struktur, die Attribute der Bibliothek enthält.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Werte der Struktur verweist `ppTLibAttr` erhalten Sie, indem <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A>.  
+  
+ Weitere Informationen zu `ITypeLib::GetTypeLibAttr`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypeComp">
+      <MemberSignature Language="C#" Value="public void GetTypeComp (out System.Runtime.InteropServices.UCOMITypeComp ppTComp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetTypeComp([out] class System.Runtime.InteropServices.UCOMITypeComp&amp; ppTComp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMITypeLib.GetTypeComp(System.Runtime.InteropServices.UCOMITypeComp@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ppTComp" Type="System.Runtime.InteropServices.UCOMITypeComp&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="ppTComp">Bei erfolgreicher Rückgabe einer Instanz von einem <see langword="UCOMITypeComp" /> für diese Instanz <see langword="ITypeLib" />.</param>
+        <summary>Ermöglicht einen Client-Compiler zum Binden an einer Bibliothek Typen, Variablen, Konstanten und globalen Funktionen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `ITypeLib::GetTypeComp`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypeInfo">
+      <MemberSignature Language="C#" Value="public void GetTypeInfo (int index, out System.Runtime.InteropServices.UCOMITypeInfo ppTI);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetTypeInfo(int32 index, [out] class System.Runtime.InteropServices.UCOMITypeInfo&amp; ppTI) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMITypeLib.GetTypeInfo(System.Int32,System.Runtime.InteropServices.UCOMITypeInfo@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="ppTI" Type="System.Runtime.InteropServices.UCOMITypeInfo&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index der <see langword="UCOMITypeInfo" /> zurückzugebenden Schnittstelle.</param>
+        <param name="ppTI">Nach erfolgreicher Rückkehr eine <see langword="UCOMITypeInfo" /> beschreiben den Typ verweist <c>Index</c>.</param>
+        <summary>Ruft die typbeschreibung der angegebene in der Bibliothek ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `ITypeLib::GetTypeInfo`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypeInfoCount">
+      <MemberSignature Language="C#" Value="public int GetTypeInfoCount ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetTypeInfoCount() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMITypeLib.GetTypeInfoCount" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Anzahl der Beschreibungen in der Typbibliothek.</summary>
+        <returns>Die Anzahl der Beschreibungen in der Typbibliothek.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `ITypeLib::GetTypeInfoCount`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypeInfoOfGuid">
+      <MemberSignature Language="C#" Value="public void GetTypeInfoOfGuid (ref Guid guid, out System.Runtime.InteropServices.UCOMITypeInfo ppTInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetTypeInfoOfGuid(valuetype System.Guid&amp; guid, [out] class System.Runtime.InteropServices.UCOMITypeInfo&amp; ppTInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMITypeLib.GetTypeInfoOfGuid(System.Guid@,System.Runtime.InteropServices.UCOMITypeInfo@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="guid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="ppTInfo" Type="System.Runtime.InteropServices.UCOMITypeInfo&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="guid">Die IID der Schnittstelle des CLSID der Klasse, deren Typinformationen angefordert wird.</param>
+        <param name="ppTInfo">Nach erfolgreicher Rückkehr die angeforderte <see langword="ITypeInfo" /> Schnittstelle.</param>
+        <summary>Ruft die Beschreibung, die der angegebenen GUID entspricht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `ITypeLib::GetTypeInfoOfGuid`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypeInfoType">
+      <MemberSignature Language="C#" Value="public void GetTypeInfoType (int index, out System.Runtime.InteropServices.TYPEKIND pTKind);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetTypeInfoType(int32 index, [out] valuetype System.Runtime.InteropServices.TYPEKIND&amp; pTKind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMITypeLib.GetTypeInfoType(System.Int32,System.Runtime.InteropServices.TYPEKIND@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="pTKind" Type="System.Runtime.InteropServices.TYPEKIND&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index der Beschreibung des in der Typbibliothek.</param>
+        <param name="pTKind">Ein Verweis auf die <see langword="TYPEKIND" /> Enumeration für die Beschreibung des.</param>
+        <summary>Ruft den Typ einer typbeschreibung ab.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `ITypeLib::GetTypeInfoOfType`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsName">
+      <MemberSignature Language="C#" Value="public bool IsName (string szNameBuf, int lHashVal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsName(string szNameBuf, int32 lHashVal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMITypeLib.IsName(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="szNameBuf" Type="System.String" />
+        <Parameter Name="lHashVal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="szNameBuf">Die zu testende Zeichenfolge.</param>
+        <param name="lHashVal">Der Hashwert der <c>SzNameBuf</c>.</param>
+        <summary>Gibt an, ob eine übergebene Zeichenfolge den Namen eines Typs enthält oder Members, in der Bibliothek beschrieben.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="szNameBuf" /> in der Typbibliothek gefunden wurde; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `ITypeLib::IsName`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseTLibAttr">
+      <MemberSignature Language="C#" Value="public void ReleaseTLibAttr (IntPtr pTLibAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReleaseTLibAttr(native int pTLibAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMITypeLib.ReleaseTLibAttr(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pTLibAttr" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="pTLibAttr">Die <see langword="TLIBATTR" /> freigeben.</param>
+        <summary>Versionen der <see cref="T:System.Runtime.InteropServices.TYPELIBATTR" /> ursprünglich abgerufene <see cref="M:System.Runtime.InteropServices.UCOMITypeLib.GetLibAttr(System.IntPtr@)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu `ITypeLib::ReleaseTLibAttr`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

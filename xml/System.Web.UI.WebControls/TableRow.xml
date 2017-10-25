@@ -1,0 +1,494 @@
+<Type Name="TableRow" FullName="System.Web.UI.WebControls.TableRow">
+  <TypeSignature Language="C#" Value="public class TableRow : System.Web.UI.WebControls.WebControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TableRow extends System.Web.UI.WebControls.WebControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.TableRow" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Cells")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.PreviewControlDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(true, "Cells")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Zeile in einem <see cref="T:System.Web.UI.WebControls.Table" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In diesem Thema:  
+  
+-   [Introduction (Einführung)](#introduction)  
+  
+-   [Deklarationssyntax](#declarative_syntax)  
+  
+<a name="introduction"></a>   
+## <a name="introduction"></a>Einführung  
+ Die <xref:System.Web.UI.WebControls.TableRow> Klasse stellt eine Zeile in einem <xref:System.Web.UI.WebControls.Table> Steuerelement.  
+  
+ Diese Klasse ermöglicht es Ihnen, festzulegen, wie der Inhalt der Zeile angezeigt werden. Die Ausrichtung des Inhalts in der Zeile angegeben werden, indem die <xref:System.Web.UI.WebControls.TableRow.HorizontalAlign%2A> und <xref:System.Web.UI.WebControls.TableRow.VerticalAlign%2A> Eigenschaften.  
+  
+ Sie können die Zellen in der Zeile programmgesteuert verwalten, mit der <xref:System.Web.UI.WebControls.TableRow.Cells%2A> Auflistung. Die <xref:System.Web.UI.WebControls.TableRow.Cells%2A> Auflistung ist eine Auflistung von <xref:System.Web.UI.WebControls.TableCell> Objekte, die die Zellen in der Zeile darstellen.  
+  
+> [!CAUTION]
+>  Die <xref:System.Web.UI.WebControls.TableCell> -Steuerelement anzuzeigende Benutzereingaben, die möglicherweise böswillige Clientskripts umfasst verwendet werden kann. Überprüfen Sie alle Informationen, die für ausführbare Skripts, SQL-Anweisungen oder anderen Code von einem Client gesendet wird, vor der Anzeige in der Anwendung. ASP.NET bietet eine Funktion für den Überprüfung eingabeanforderung zum Blockieren von Skript und HTML in Benutzereingaben. Server-Validierungssteuerelemente werden ebenfalls bereitgestellt, um Benutzereingaben zu bewerten. Weitere Informationen finden Sie unter [ASP.NET-Validierungssteuerelementen](http://msdn.microsoft.com/library/fa2aa14d-a461-492e-9a79-c990904613ef).  
+  
+<a name="declarative_syntax"></a>   
+## <a name="declarative-syntax"></a>Deklarationssyntax  
+  
+```  
+<asp:TableRow  
+    AccessKey="string"  
+    BackColor="color name|#dddddd"  
+    BorderColor="color name|#dddddd"  
+    BorderStyle="NotSet|None|Dotted|Dashed|Solid|Double|Groove|Ridge|  
+        Inset|Outset"  
+    BorderWidth="size"  
+    CssClass="string"  
+    Enabled="True|False"  
+    EnableTheming="True|False"  
+    EnableViewState="True|False"  
+    Font-Bold="True|False"  
+    Font-Italic="True|False"  
+    Font-Names="string"  
+    Font-Overline="True|False"  
+    Font-Size="string|Smaller|Larger|XX-Small|X-Small|Small|Medium|  
+        Large|X-Large|XX-Large"  
+    Font-Strikeout="True|False"  
+    Font-Underline="True|False"  
+    ForeColor="color name|#dddddd"  
+    Height="size"  
+    HorizontalAlign="NotSet|Left|Center|Right|Justify"  
+    ID="string"  
+    OnDataBinding="DataBinding event handler"  
+    OnDisposed="Disposed event handler"  
+    OnInit="Init event handler"  
+    OnLoad="Load event handler"  
+    OnPreRender="PreRender event handler"  
+    OnUnload="Unload event handler"  
+    runat="server"  
+    SkinID="string"  
+    Style="string"  
+    TabIndex="integer"  
+    TableSection="TableHeader|TableBody|TableFooter"  
+    ToolTip="string"  
+    VerticalAlign="NotSet|Top|Middle|Bottom"  
+    Visible="True|False"  
+    Width="size"  
+>  
+        <asp:TableCell  
+            AccessKey="string"  
+            AssociatedHeaderCellID="string"  
+            BackColor="color name|#dddddd"  
+            BorderColor="color name|#dddddd"  
+            BorderStyle="NotSet|None|Dotted|Dashed|Solid|Double|  
+                Groove|Ridge|Inset|Outset"  
+            BorderWidth="size"  
+            ColumnSpan="integer"  
+            CssClass="string"  
+            Enabled="True|False"  
+            EnableTheming="True|False"  
+            EnableViewState="True|False"  
+            Font-Bold="True|False"  
+            Font-Italic="True|False"  
+            Font-Names="string"  
+            Font-Overline="True|False"  
+            Font-Size="string|Smaller|Larger|XX-Small|  
+                X-Small|Small|Medium|Large|X-Large|XX-Large"  
+            Font-Strikeout="True|False"  
+            Font-Underline="True|False"  
+            ForeColor="color name|#dddddd"  
+            Height="size"  
+            HorizontalAlign="NotSet|Left|Center|Right|Justify"  
+            ID="string"  
+            OnDataBinding="DataBinding event handler"  
+            OnDisposed="Disposed event handler"  
+            OnInit="Init event handler"  
+            OnLoad="Load event handler"  
+            OnPreRender="PreRender event handler"  
+            OnUnload="Unload event handler"  
+            RowSpan="integer"  
+            runat="server"  
+            SkinID="string"  
+            Style="string"  
+            TabIndex="integer"  
+            Text="string"  
+            ToolTip="string"  
+            VerticalAlign="NotSet|Top|Middle|Bottom"  
+            Visible="True|False"  
+            Width="size"  
+            Wrap="True|False"  
+        />  
+        <asp:TableHeaderCell  
+            AbbreviatedText="string"  
+            AccessKey="string"  
+            AssociatedHeaderCellID="string"  
+            BackColor="color name|#dddddd"  
+            BorderColor="color name|#dddddd"  
+            BorderStyle="NotSet|None|Dotted|Dashed|Solid|Double|  
+                Groove|Ridge|Inset|Outset"  
+            BorderWidth="size"  
+            CategoryText="string"  
+            ColumnSpan="integer"  
+            CssClass="string"  
+            Enabled="True|False"  
+            EnableTheming="True|False"  
+            EnableViewState="True|False"  
+            Font-Bold="True|False"  
+            Font-Italic="True|False"  
+            Font-Names="string"  
+            Font-Overline="True|False"  
+            Font-Size="string|Smaller|Larger|XX-Small|  
+                X-Small|Small|Medium|Large|X-Large|XX-Large"  
+            Font-Strikeout="True|False"  
+            Font-Underline="True|False"  
+            ForeColor="color name|#dddddd"  
+            Height="size"  
+            HorizontalAlign="NotSet|Left|Center|Right|Justify"  
+            ID="string"  
+            OnDataBinding="DataBinding event handler"  
+            OnDisposed="Disposed event handler"  
+            OnInit="Init event handler"  
+            OnLoad="Load event handler"  
+            OnPreRender="PreRender event handler"  
+            OnUnload="Unload event handler"  
+            RowSpan="integer"  
+            runat="server"  
+            Scope="NotSet|Row|Column"  
+            SkinID="string"  
+            Style="string"  
+            TabIndex="integer"  
+            Text="string"  
+            ToolTip="string"  
+            VerticalAlign="NotSet|Top|Middle|Bottom"  
+            Visible="True|False"  
+            Width="size"  
+            Wrap="True|False"  
+        />  
+</asp:TableRow>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine Tabelle erstellt, programmgesteuert Tabelle Elemente hinzugefügt und wird die Tabelle auf der Webseite angezeigt.  
+  
+ [!code-aspx-csharp[TableCell#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TableCell/CS/tablecellcs.aspx#1)]
+ [!code-aspx-vb[TableCell#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TableCell/VB/tablecellvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TableRow ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TableRow.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.TableRow" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.TableRow> Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer neuen Instanz von einem <xref:System.Web.UI.WebControls.TableRow> -Klasse programmgesteuert.  
+  
+ Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.WebControls.TableRow> Klasse.  
+  
+ [!code-csharp[TableCell#5](~/samples/snippets/csharp/VS_Snippets_WebNet/TableCell/CS/tablecellcs.aspx#5)]
+ [!code-vb[TableCell#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TableCell/VB/tablecellvb.aspx#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cells">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.TableCellCollection Cells { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.TableCellCollection Cells" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TableRow.Cells" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerDefaultProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableCellCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von <see cref="T:System.Web.UI.WebControls.TableCell" /> Objekte, die darstellen, die Zellen einer Zeile in einem <see cref="T:System.Web.UI.WebControls.Table" /> Steuerelement.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.TableCellCollection" /> -Objekt, das eine Auflistung von Zellen in einer Zeile des stellt eine <see cref="T:System.Web.UI.WebControls.Table" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Eigenschaft können Sie programmgesteuert eine Auflistung von <xref:System.Web.UI.WebControls.TableCell> Objekte, die die Zellen einer Zeile des darstellen der <xref:System.Web.UI.WebControls.Table> Steuerelement. Sie können programmgesteuert hinzufügen, einfügen, oder Entfernen einer <xref:System.Web.UI.WebControls.TableCell> Objekt aus der Auflistung.  
+  
+> [!NOTE]
+>  Diese Eigenschaft wird nur verwendet werden, beim Erstellen von <xref:System.Web.UI.WebControls.Table> Steuerelemente programmgesteuert. Zur Entwurfszeit ist diese Eigenschaft festgelegt, indem Sie deklarieren <xref:System.Web.UI.WebControls.TableCell> Objekte.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine Tabelle erstellt, programmgesteuert Tabelle Elemente hinzugefügt und wird die Tabelle auf der Webseite angezeigt.  
+  
+ [!code-aspx-csharp[TableCell#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TableCell/CS/tablecellcs.aspx#1)]
+ [!code-aspx-vb[TableCell#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TableCell/VB/tablecellvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateControlCollection">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.ControlCollection CreateControlCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.ControlCollection CreateControlCollection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TableRow.CreateControlCollection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues <see cref="T:System.Web.UI.ControlCollection" /> -Objekt für die <see cref="T:System.Web.UI.WebControls.TableRow" /> Steuerelement.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.ControlCollection" /> -Objekt, enthält die <see cref="T:System.Web.UI.WebControls.TableRow" /> untergeordneten Steuerelemente des Steuerelements.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.TableRow.CreateControlCollection%2A> Methode erstellt ein neues <xref:System.Web.UI.ControlCollection> Objekt, enthält die <xref:System.Web.UI.WebControls.TableRow> Zellen.  
+  
+ Die <xref:System.Web.UI.WebControls.TableRow.CreateControlCollection%2A> Methode wird hauptsächlich von Steuerelemententwicklern zum Erweitern der Funktionalität von Interesse der <xref:System.Web.UI.WebControls.TableRow> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateControlStyle">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.WebControls.Style CreateControlStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.WebControls.Style CreateControlStyle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TableRow.CreateControlStyle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Style</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine <see cref="T:System.Web.UI.WebControls.TableItemStyle" /> -Objekt für die <see cref="T:System.Web.UI.WebControls.TableRow" /> Steuerelement.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.Style" /> -Objekt, das die Stileigenschaften für gibt die <see cref="T:System.Web.UI.WebControls.TableRow" /> Steuerelement.  
+  
+ Die <see cref="M:System.Web.UI.WebControls.TableRow.CreateControlCollection" /> Methode wird hauptsächlich von Steuerelemententwicklern zum Erweitern der Funktionalität von Interesse der <see cref="T:System.Web.UI.WebControls.TableRow" /> Steuerelement.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalAlign">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.HorizontalAlign HorizontalAlign { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.HorizontalAlign HorizontalAlign" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TableRow.HorizontalAlign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.HorizontalAlign</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die horizontale Ausrichtung des Inhalts in der Zeile.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.HorizontalAlign" />-Werte. Der Standardwert ist <see langword="NotSet" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TableRow.HorizontalAlign%2A> Eigenschaft, um die horizontale Ausrichtung des Inhalts der Zeile anzugeben. In der folgenden Tabelle sind die möglichen Werte aufgeführt.  
+  
+|Horizontale Ausrichtung|Beschreibung|  
+|--------------------------|-----------------|  
+|<xref:System.Web.UI.WebControls.HorizontalAlign.NotSet>|Die horizontale Ausrichtung ist nicht festgelegt.|  
+|<xref:System.Web.UI.WebControls.HorizontalAlign.Left>|Der Inhalt der Zeile sind linksbündig ausgerichtet.|  
+|<xref:System.Web.UI.WebControls.HorizontalAlign.Center>|Der Inhalt der Zeile zentriert werden.|  
+|<xref:System.Web.UI.WebControls.HorizontalAlign.Right>|Der Inhalt der Zeile sind rechtsbündig ausgerichtet.|  
+|<xref:System.Web.UI.WebControls.HorizontalAlign.Justify>|Der Inhalt der Zeile sind gleichmäßig verteilt und den linken und rechten Rand ausgerichtet.|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TableRow.HorizontalAlign%2A> Eigenschaft. Ein vollständiges, funktionsfähiges Codebeispiel finden Sie unter der <xref:System.Web.UI.WebControls.TableRow> Übersichtsthema.  
+  
+ [!code-csharp[TableCell#4](~/samples/snippets/csharp/VS_Snippets_WebNet/TableCell/CS/tablecellcs.aspx#4)]
+ [!code-vb[TableCell#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TableCell/VB/tablecellvb.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsDisabledAttribute">
+      <MemberSignature Language="C#" Value="public override bool SupportsDisabledAttribute { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsDisabledAttribute" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TableRow.SupportsDisabledAttribute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob vom Steuerelement das <see langword="disabled" />-Attribut des gerenderten HTML-Elements auf "disabled" festgelegt werden soll, wenn die <see cref="P:System.Web.UI.WebControls.WebControl.IsEnabled" />-Eigenschaft des Steuerelements <see langword="false" /> ist.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="P:System.Web.UI.Control.RenderingCompatibility" /> Eigenschaft gibt an, eine frühere ASP.NET-Version als <c>4.0</c>ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt an, wie ASP.NET HTML für ein Steuerelement rendern soll, wenn das Steuerelement deaktiviert ist. Wenn diese Eigenschaft ist `true`, rendert ASP.NET ein `disabled` Attribut, wenn ein Steuerelement deaktiviert ist. Wenn diese Eigenschaft ist `false`, rendert ASP.NET ein `class` Attribut, wenn ein Steuerelement deaktiviert ist. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.WebControl.SupportsDisabledAttribute%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TableSection">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.TableRowSection TableSection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.TableRowSection TableSection" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TableRow.TableSection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableRowSection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Speicherort für eine <see cref="T:System.Web.UI.WebControls.TableRow" /> -Objekt in ein <see cref="T:System.Web.UI.WebControls.Table" /> Steuerelement.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.TableRowSection" />-Wert. Die Standardeinstellung ist <see cref="F:System.Web.UI.WebControls.TableRowSection.TableBody" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TableRow.TableSection%2A> Eigenschaft zum Abrufen oder festlegen, in dem die <xref:System.Web.UI.WebControls.TableRow> Objekt befindet sich einem <xref:System.Web.UI.WebControls.Table> Steuerelement. Für die verfügbaren Standorte finden Sie unter <xref:System.Web.UI.WebControls.TableRowSection>. In der folgenden Tabelle sind die möglichen Werte aufgeführt.  
+  
+|Tabelle Zeile im Abschnitt|Als angezeigt|  
+|-----------------------|------------------|  
+|<xref:System.Web.UI.WebControls.TableRowSection.TableHeader>|Die Kopfzeile.|  
+|<xref:System.Web.UI.WebControls.TableRowSection.TableBody>|Der Text der Tabelle.|  
+|<xref:System.Web.UI.WebControls.TableRowSection.TableFooter>|Die Fußzeile.|  
+  
+ Wenn Sie die deklarative Syntax zu verwenden, muss in den Abschnitten in der Reihenfolge der Header, Nachrichtentext und Fußzeile.  
+  
+ Die <xref:System.Web.UI.WebControls.TableRowSection> Enumeration ermöglicht es Ihnen, zugegriffen werden kann, mithilfe von Websites erstellen die <xref:System.Web.UI.WebControls.Table> Steuerelement durch Hinzufügen der `<thead>`, `<tbody>`, und `<tfoot>` Elemente auf den HTML-Code, der an dem Client gerendert wird. Wenn alle Zeilen in einer Tabelle in der `<tbody>` -Element, wird der Abschnittsinformationen nicht gerendert. In einem nicht-Body-Element muss mindestens eine Zeile sein.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TableRow.TableSection%2A> Eigenschaft zum Definieren von Kopf- und Fußzeile Zeilen in einem <xref:System.Web.UI.WebControls.Table> Steuerelement.  
+  
+ [!code-aspx-csharp[TableRow#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TableRow/CS/TableRowCS.aspx#1)]
+ [!code-aspx-vb[TableRow#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TableRow/VB/TableRowVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der <see cref="T:System.Web.UI.WebControls.TableRowSection" /> ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalAlign">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.VerticalAlign VerticalAlign { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.VerticalAlign VerticalAlign" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TableRow.VerticalAlign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.VerticalAlign</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die vertikale Ausrichtung des Inhalts in der Zeile.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.VerticalAlign" />-Werte. Der Standardwert ist <see langword="NotSet" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.TableRow.VerticalAlign%2A> Eigenschaft, um die vertikale Ausrichtung des Inhalts der Zeile anzugeben. In der folgenden Tabelle sind die möglichen Werte aufgeführt.  
+  
+|Vertikale Ausrichtung|Beschreibung|  
+|------------------------|-----------------|  
+|<xref:System.Web.UI.WebControls.VerticalAlign.NotSet>|Die vertikale Ausrichtung ist nicht festgelegt.|  
+|<xref:System.Web.UI.WebControls.VerticalAlign.Top>|Der Inhalt der Zeile werden am oberen Rand der Zeile ausgerichtet.|  
+|<xref:System.Web.UI.WebControls.VerticalAlign.Middle>|Der Inhalt der Zeile werden in der Mitte der Zeile ausgerichtet.|  
+|<xref:System.Web.UI.WebControls.VerticalAlign.Bottom>|Der Inhalt der Zeile werden am unteren Rand der Zeile ausgerichtet.|  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TableRow.VerticalAlign%2A> Eigenschaft. Ein vollständiges, funktionsfähiges Codebeispiel finden Sie unter der <xref:System.Web.UI.WebControls.TableRow> Übersichtsthema.  
+  
+ [!code-csharp[TableCell#4](~/samples/snippets/csharp/VS_Snippets_WebNet/TableCell/CS/tablecellcs.aspx#4)]
+ [!code-vb[TableCell#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TableCell/VB/tablecellvb.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

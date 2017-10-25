@@ -1,0 +1,124 @@
+<Type Name="EasingMode" FullName="System.Windows.Media.Animation.EasingMode">
+  <TypeSignature Language="C#" Value="public enum EasingMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EasingMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.EasingMode" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Definiert die Sicherheitsmodi, die in der abgeleiteten Klassen aus <see cref="T:System.Windows.Media.Animation.EasingFunctionBase" /> ihre Beschleunigung ausführen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgenden Diagramme veranschaulichen die unterschiedlichen Werte von <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>, wobei *f*(*t*) den Animationsstatus und *t* Uhrzeit darstellt.  
+  
+ <xref:System.Windows.Media.Animation.BackEase>  
+  
+ ![BackEase EasingMode-Diagramme. ] (~/add/media/backease-graph.png "BackEase EasingMode-Diagramme.")  
+  
+ <xref:System.Windows.Media.Animation.BounceEase>  
+  
+ ![BounceEase EasingMode-Diagramme. ] (~/add/media/bounceease-graph.png "BounceEase EasingMode-Diagramme.")  
+  
+ <xref:System.Windows.Media.Animation.CircleEase>  
+  
+ ![CircleEase EasingMode-Diagramme. ] (~/add/media/circleease-graph.png "CircleEase EasingMode-Diagramme.")  
+  
+ <xref:System.Windows.Media.Animation.CubicEase>  
+  
+ ![CubicEase EasingMode-Diagramme. ] (~/add/media/cubicease-graph.png "CubicEase EasingMode-Diagramme.")  
+  
+ <xref:System.Windows.Media.Animation.ElasticEase>  
+  
+ ![ElasticEase mit Diagrammen von anderen Easingmodes. ] (~/add/media/elasticease-graph.png "ElasticEase mit Diagrammen von anderen Easingmodes.")  
+  
+ <xref:System.Windows.Media.Animation.ExponentialEase>  
+  
+ ![ExponentialEase-Diagramme von anderen Easingmodes. ] (~/add/media/exponentialease-graph.png "ExponentialEase-Diagramme von anderen Easingmodes.")  
+  
+ <xref:System.Windows.Media.Animation.PowerEase>  
+  
+ ![QuarticEase mit Diagrammen von anderen Easingmodes. ] (~/add/media/quarticease-graph.png "QuarticEase mit Diagrammen von anderen Easingmodes.")  
+  
+ <xref:System.Windows.Media.Animation.QuadraticEase>  
+  
+ ![QuadraticEase mit Diagrammen von anderen Easingmodes](~/add/media/quadraticease-graph.png "QuadraticEase mit Diagrammen von anderen Easingmodes")  
+  
+ <xref:System.Windows.Media.Animation.QuarticEase>  
+  
+ ![QuarticEase mit Diagrammen von anderen Easingmodes. ] (~/add/media/quarticease-graph.png "QuarticEase mit Diagrammen von anderen Easingmodes.")  
+  
+ <xref:System.Windows.Media.Animation.QuinticEase>  
+  
+ ![QuinticEase mit Diagrammen von anderen Easingmodes. ] (~/add/media/quinticease-graph.png "QuinticEase mit Diagrammen von anderen Easingmodes.")  
+  
+ <xref:System.Windows.Media.Animation.SineEase>  
+  
+ ![SineEase für andere EasingMode-Werte](~/add/media/sineease-graph.png "SineEase für andere EasingMode-Werte")  
+  
+<a name="xamlAttributeUsage_HorizontalAlignment"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="enumMemberName"/>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EaseIn">
+      <MemberSignature Language="C#" Value="EaseIn" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Animation.EasingMode EaseIn = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.EasingMode.EaseIn" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.EasingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Interpolation folgt der mathematische Formel, die der Beschleunigungsfunktion zugeordnet ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseInOut">
+      <MemberSignature Language="C#" Value="EaseInOut" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Animation.EasingMode EaseInOut = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.EasingMode.EaseInOut" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.EasingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Interpolation verwendet <see cref="F:System.Windows.Media.Animation.EasingMode.EaseIn" /> für die erste Hälfte der Animation und <see cref="F:System.Windows.Media.Animation.EasingMode.EaseOut" /> für die zweite Hälfte.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseOut">
+      <MemberSignature Language="C#" Value="EaseOut" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Animation.EasingMode EaseOut = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.EasingMode.EaseOut" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.EasingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Interpolation folgt Interpolation zu 100 % minus der Ausgabe der Formel, die der Beschleunigungsfunktion zugeordnet ist.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,352 @@
+<Type Name="Computer" FullName="Microsoft.VisualBasic.Devices.Computer">
+  <TypeSignature Language="C#" Value="public class Computer : Microsoft.VisualBasic.Devices.ServerComputer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi Computer extends Microsoft.VisualBasic.Devices.ServerComputer" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Devices.Computer" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.VisualBasic.Devices.ServerComputer</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Eigenschaften für die Bearbeitung von Computerkomponenten bereit, z.B. Audio, die Uhr, die Tastatur, das Dateisystem und so weiter.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Eigenschaften verfügbar gemacht werden, indem die `My.Computer` Objekts zur Laufzeit bestimmt, Informationen über den Computer, auf dem die Anwendung bereitgestellt wird, zurück. In der Regel unterscheidet sich diese Daten auf dem Entwicklungscomputer verfügbar war.  
+  
+ Einige Member, wie z. B. die `My.Computer.Audio` Objekt, das nur für nicht-Server-Anwendungen verfügbar sind.  
+  
+ Die folgende Tabelle enthält Beispiele für Aufgaben im Zusammenhang mit der `My.Computer` Objekt.  
+  
+|Beschreibung|Siehe|  
+|--------|---------|  
+|Überprüfen des Verbindungsstatus|[Gewusst wie: Überprüfen des Verbindungsstatus](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-check-connection-status.md)|  
+|Eine Datei herunterladen|[Gewusst wie: Herunterladen einer Datei](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)|  
+|Hochladen einer Datei|[Gewusst wie: Hochladen einer Datei](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)|  
+|Erstellen von Registrierungsschlüsseln|[Gewusst wie: Erstellen von Registrierungsschlüsseln und Festlegen ihrer Werte](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)|  
+|Zugriff auf die Zwischenablage|[Speichern von Daten in der Zwischenablage und Lesen von Daten aus der Zwischenablage](~/docs/visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)|  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `My.Computer.Name` Eigenschaft der Name des Computers angezeigt, auf dem der Code ausgeführt wird.  
+  
+ [!code-vb[VbVbalrMyComputer#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Computer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Devices.Computer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.VisualBasic.Devices.Computer" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [Objekte](http://msdn.microsoft.com/library/651c73e4-dca8-402b-9c6b-e3902b3a3f4b)  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Audio">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualBasic.Devices.Audio Audio { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.VisualBasic.Devices.Audio Audio" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Devices.Computer.Audio" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Devices.Audio</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt, das Eigenschaften für Methoden für die Wiedergabe von Tönen bereitstellt.</summary>
+        <value>Die <see langword="My.Computer.Audio" /> Objekt für den Computer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft bietet einfachen Zugriff auf die `My.Computer.Audio` Objekt. Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.Devices.Audio> Objekt.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows Forms-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows Forms-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ Die `My.Computer.Audio.Play` Methode gibt den angegebenen Sound im Hintergrund beim `AudioPlayMode.Background` angegeben ist.  
+  
+ [!code-vb[VbVbalrMyComputer#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#15)]  
+  
+ Dieser Code kann nur in einer Windows Forms-Anwendung ausgeführt.  
+  
+ Der Dateiname sollte eine WAV-Datei auf Ihrem System verweisen.  
+  
+ Zur Vereinfachung der Verwaltung von Ihrem Audiodateien sollten Sie die Dateien als Anwendungsressourcen. Die Dateien dann durch zugegriffen werden können die `My.Resources` Objekt. Weitere Informationen finden Sie unter [My.Resources-Objekt](~/docs/visual-basic/language-reference/objects/my-resources-object.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clipboard">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualBasic.MyServices.ClipboardProxy Clipboard { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.VisualBasic.MyServices.ClipboardProxy Clipboard" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Devices.Computer.Clipboard" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.MyServices.ClipboardProxy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt, das Methoden zum Bearbeiten der Zwischenablage bereitstellt.</summary>
+        <value>Die <see langword="My.Computer.Clipboard" /> Objekt für den Computer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft bietet einfachen Zugriff auf die <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy> Objekt.  
+  
+ Diese Eigenschaft ist nur für nicht-Server-Clientanwendungen verfügbar sind.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows Forms-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows Forms-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel liest Text aus der Zwischenablage in die Zeichenfolge `textOnClipboard`.  
+  
+ [!code-vb[VbVbcnMyClipboard#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#6)]  
+  
+ In diesem Beispiel schlägt fehl, wenn kein Text vorhanden, in die Zwischenablage ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keyboard">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualBasic.Devices.Keyboard Keyboard { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.VisualBasic.Devices.Keyboard Keyboard" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Devices.Computer.Keyboard" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Devices.Keyboard</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt, das Eigenschaften für den Zugriff auf den aktuellen Status der Tastatur, z. B. welche Schlüssel aktuell gedrückt werden und bietet eine Methode zum Senden von Tastatureingaben an des aktiven Fensters ab.</summary>
+        <value>Die <see langword="My.Computer.Keyboard" /> Objekt für den Computer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft bietet einfachen Zugriff auf die `My.Computer.Keyboard` Objekt. Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.Devices.Keyboard> Objekt.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows Forms-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows Forms-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `My.Computer.Keyboard.CtrlKeyDown` Eigenschaft, um zu bestimmen, ob derzeit die STRG-Taste gedrückt wird.  
+  
+ [!code-vb[VbVbalrMyComputer#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#36)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mouse">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualBasic.Devices.Mouse Mouse { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.VisualBasic.Devices.Mouse Mouse" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Devices.Computer.Mouse" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Devices.Mouse</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt, das Eigenschaften bereitstellt, zum Abrufen von Informationen über das Format und die Konfiguration der Maus auf dem lokalen Computer installiert.</summary>
+        <value>Die <see langword="My.Computer.Mouse" /> Objekt für den Computer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft bietet einfachen Zugriff auf die `My.Computer.Mouse` Objekt. Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.Devices.Mouse> Objekt.  
+  
+ Diese Eigenschaft ist nur für nicht-Server-Clientanwendungen verfügbar sind.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows Forms-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows Forms-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die `My.Computer.Mouse.WheelExists` und `My.Computer.Mouse.WheelScrollLines` Eigenschaften, um zu bestimmen, ob die Maus über ein Mausrad verfügt und wie viel Bildlauf beim Drehen.  
+  
+ [!code-vb[VbVbalrMyComputer#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#26)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Ports">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualBasic.Devices.Ports Ports { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.VisualBasic.Devices.Ports Ports" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Devices.Computer.Ports" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Devices.Ports</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt, das eine Eigenschaft und eine Methode für den Zugriff auf die seriellen Anschlüsse des Computers bereitstellt.</summary>
+        <value>Das <see langword="My.Computer.Ports" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft bietet einfachen Zugriff auf die `My.Computer.Ports` Objekt. Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.Devices.Ports> Objekt.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows Forms-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows Forms-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird beschrieben, wie Zeichenfolgen an des Computers senden `COM1` seriellen Anschluss.  
+  
+ Der `Using`-Block ermöglicht es der Anwendung, den seriellen Port auch dann zu schließen, wenn eine Ausnahme generiert wird. Der gesamte Code, der den seriellen Anschluss ändert sollte angezeigt werden, innerhalb dieses Blocks oder innerhalb einer `Try...Catch...Finally` Block mit einem Aufruf von verwenden die <xref:System.IO.Ports.SerialPort.Close%2A> Methode.  
+  
+ Die <xref:System.IO.Ports.SerialPort.WriteLine%2A>-Methode sendet die Daten an den seriellen Anschluss.  
+  
+ [!code-vb[VbVbalrMyComputer#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#33)]  
+  
+ Weitere Informationen finden Sie unter [wie: Senden von Zeichenfolgen zu seriellen Anschlüssen](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Screen">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Screen Screen { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Screen Screen" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Devices.Computer.Screen" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Screen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Forms.Screen" /> -Objekt, das primären Bildschirm des Computers darstellt.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.Screen" /> Objekt, das die primären Computerbildschirm darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `My.Computer.Screen` Eigenschaft bietet ähnliche Funktionen der <xref:System.Windows.Forms.Screen.PrimaryScreen%2A> Eigenschaft.  
+  
+## <a name="availability-by-project-type"></a>Verfügbarkeit nach Projekttyp  
+  
+|Projekttyp:|Verfügbar|  
+|------------------|---------------|  
+|Windows Forms-Anwendung|**Ja**|  
+|Klassenbibliothek|**Ja**|  
+|Konsolenanwendung|**Ja**|  
+|Windows Forms-Steuerelementbibliothek|**Ja**|  
+|Websteuerelementbibliothek|Nein|  
+|Windows-Dienst|**Ja**|  
+|Website|Nein|  
+  
+   
+  
+## Examples  
+ Dieses Beispiel verwendet die <xref:System.Windows.Forms.Screen.WorkingArea%2A> Eigenschaft von der `My.Computer.Screen` -Eigenschaft zum Bestimmen des Arbeitsbereichs des Computers der primären anzeigen und dann wird das Formular, um die Arbeitsfläche auszufüllen.  
+  
+ [!code-vb[VbVbalrMyComputer#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#10)]  
+  
+ In diesem Beispiel muss in einer Windows Forms-Anwendung ausgeführt.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Steuert die Fähigkeit, auf Dateien und Ordner zuzugreifen. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

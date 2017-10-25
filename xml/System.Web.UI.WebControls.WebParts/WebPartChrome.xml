@@ -1,0 +1,498 @@
+<Type Name="WebPartChrome" FullName="System.Web.UI.WebControls.WebParts.WebPartChrome">
+  <TypeSignature Language="C#" Value="public class WebPartChrome" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebPartChrome extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebPartChrome" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht es Entwicklern, das Rendering für nur die ausgewählten Bereiche von überschreiben <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> oder Serversteuerelemente in einem <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZoneBase" /> Zone.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Webparts-Chrom bezieht sich auf die peripheren Elemente der Benutzeroberfläche (UI), die alle <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement oder Serversteuerelemente, die einer <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Zone. Chrom für ein Steuerelement enthält eine Rahmenlinie, Titelleiste, und die Symbole, Titeltext und Verbmenü, die in der Titelleiste angezeigt werden. Die Darstellung der Chrome auf der Ebene der Zone festgelegt ist, und gilt für alle Serversteuerelemente in der Zone.  
+  
+ Die Webparts-Steuerelementen werden mithilfe der <xref:System.Web.UI.WebControls.WebParts.WebPartChrome> Klasse zum Rendern der Chrome für <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente. Diese Klasse bietet darüber hinaus eine Möglichkeit für Entwickler, das Rendering für jeden beliebigen Bereich (z. B. die Kopf- oder Fußzeile) der Anpassen der <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente in eine <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Zone ohne das gesamte Rendering für diese Steuerelemente zu behandeln. Sie können z. B. überschreiben die <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.CreateWebPartChromeStyle%2A> Methode, um einige spezifische Stilattribute anzupassen angewendet, um die <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Zone, aber Sie können auf das Standardrendering zurückgreifen, behandeln den Rest basieren.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartChrome> Klasse enthält mehrere wichtige Methoden, die hilfreich sind, wenn Sie das Rendering außer Kraft setzen möchten <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente. Ist die <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.CreateWebPartChromeStyle%2A> -Methode, die Ihnen ermöglicht, ändern Sie die Formatattribute des der <xref:System.Web.UI.WebControls.Style> Objekt zugeordnet der <xref:System.Web.UI.WebControls.WebParts.WebPartChrome> Objekt, das zum Rendern eines Steuerelements verwendet. Ein weiterer Vorteil ist die <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.%23ctor%2A> -Konstruktor, der Sie verwenden, wenn Sie außer Kraft setzen die <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.CreateWebPartChrome%2A> Methode in einem benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Klasse zum Erstellen einer Instanz des benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.WebPartChrome> Objekt. Eine andere nützliche Methode ist die <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.RenderPartContents%2A> -Methode, die Sie verwenden können, um das Rendering des Inhaltsbereichs von Steuerelementen in einer Zone (im Gegensatz zu Chromelemente werden z. B. Kopfzeilen, Fußzeilen und Titelleisten) zu steuern. Die <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.GetWebPartVerbs%2A> Methode können Sie bestimmte Verben ausschließen gerendert wird, wenn für die aus irgendeinem Grund nicht möchten, dass Benutzer diese Verben in der Benutzeroberfläche angezeigt. Schließlich umfassende programmgesteuerte Kontrolle über alle Aspekte des Renderings gegebenenfalls die <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelemente, die Sie überschreiben die <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.RenderWebPart%2A> Methode.  
+  
+ Reihe von Eigenschaften der <xref:System.Web.UI.WebControls.WebParts.WebPartChrome> Klasse sind auch nützlich. Die <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.Zone%2A> und <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.WebPartManager%2A> Eigenschaften geben Verweise auf die Zone zugeordnet der <xref:System.Web.UI.WebControls.WebParts.WebPartChrome> -Objekt und das aktuelle <xref:System.Web.UI.WebControls.WebParts.WebPartManager> bzw. die Instanz.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.WebParts.WebPartChrome> Klasse, um das Standardrendering der außer Kraft setzen <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente in einem <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Zone.  
+  
+ Das Codebeispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, das Ihnen ermöglicht, ändern Sie die Anzeigemodi auf einer Webparts-Seite.  
+  
+-   Eine Webseite, die alle Steuerelemente im Beispiel hostet.  
+  
+-   Eine Klasse, die den Quellcode für ein benutzerdefiniertes enthält <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Zone und einer <xref:System.Web.UI.WebControls.WebParts.WebPartChrome> Klasse.  
+  
+-   Eine Erläuterung der Funktionsweise des Beispiels.  
+  
+ Der erste Teil des Codebeispiels wird das Benutzersteuerelement. Der Quellcode für das Benutzersteuerelement stammen aus einem anderen Thema. Für dieses Codebeispiel funktioniert, müssen Sie die ASCX-Datei für das Benutzersteuerelement aus der [Exemplarische Vorgehensweise: Ändern von Anzeigemodi auf einer Webparts-Seite](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0) Thema, und platzieren Sie die Datei im gleichen Ordner wie die ASPX-Seite in diesem Codebeispiel wird.  
+  
+ Der zweite Teil des Beispiels wird die Webseite. Beachten Sie, dass es eine `Register` -Direktive am Anfang der Datei so registrieren Sie die kompilierte Komponente und ein Tagpräfix. Beachten Sie auch, dass die Seite die benutzerdefinierte Zone mithilfe des Elements verweist auf `<aspSample:MyZone>` und mehrere standard-Serversteuerelemente von ASP.NET in der Zone enthält. Die Serversteuerelemente implementieren keine tatsächlichen Funktionen nicht; Sie werden hier nur zur Veranschaulichung verwendet wie die <xref:System.Web.UI.WebControls.WebParts.WebPartChrome> Klassenfunktionen gelten für Rendering Zonen. Beachten Sie, dass diese Serversteuerelemente, obwohl es keine tatsächliche sind <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente, werden jeweils automatisch eingeschlossen (von ASP.NET) mit einer <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Objekt zur Laufzeit, daher sie die gleiche Funktionalität wie müssen <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente.  
+  
+ [!code-aspx-csharp[WebParts_WebPartChrome_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartChrome_Overview/CS/webpartchromecs.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPartChrome_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartChrome_Overview/VB/webpartchromevb.aspx#1)]  
+  
+ Der dritte Teil des Codebeispiels wird die Quelle für die benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Zone und einer <xref:System.Web.UI.WebControls.WebParts.WebPartChrome> Klasse. In den Konstruktor für die benutzerdefinierte Zone-Klasse, prüft der Code die `MyZone.RenderVerbsInMenu` Eigenschaft. Wenn der Wert `true`, Verben werden in einem Menü gerendert, für jede der <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente in der Zone. Dies ist das Standardverhalten in der Menge der Webparts-Steuerelemente. Wenn die `MyZone.RenderVerbsInMenu` Eigenschaftswert ist `false`, Hierbei handelt es sich um die Standardeinstellung in dieser benutzerdefinierten Zone, die Verben werden als Links in der Titelleiste jedes Steuerelements einzeln gerendert. Beachten Sie, die auf der Webseite Webseitencode die `<aspSample:MyZone>` -Element deklariert ist, gibt es eine `RenderVerbsInMenu` -Attributsatz zur `true`, sodass die Verben in Menüs für die Steuerelemente angezeigt werden. Um dieses Feature zu experimentieren, können Sie festlegen deklarativen `RenderVerbsInMenu` -Attribut `false`, und beachten Sie, wie die Verben als Links gerendert werden.  
+  
+ Die benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPartChrome> Klasse überschreibt das Rendering auf mehrere Methoden, und die benutzerdefinierte Zone erstellt eine Instanz von der `MyWebPartChrome` -Klasse in seiner <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.CreateWebPartChrome%2A> Methode. Dies gilt das benutzerdefinierte Rendering, zur Seite. Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Eine exemplarische Vorgehensweise, die beide Methoden der Kompilierung veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_WebPartChrome_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartChrome_Overview/CS/MyChrome.cs#2)]
+ [!code-vb[WebParts_WebPartChrome_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartChrome_Overview/VB/MyChrome.vb#2)]  
+  
+ Beim Laden der Webseite in einem Browser können Sie sehen, wie die verschiedenen stilistischer und andere Rendering-Anpassungen in den Quellcode bereitgestellt der `MyWebPartChrome` Klasse angezeigt wird, auf die <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente, die in der Zone gerendert.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Erben von der <see cref="T:System.Web.UI.WebControls.WebParts.WebPartChrome" /> Klasse, wenn Sie das Standardrendering für bestimmte Bereiche der außer Kraft setzen möchten <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> oder Serversteuerelemente. Sie können optional außer Kraft setzen die <see cref="M:System.Web.UI.WebControls.WebParts.WebPartChrome.CreateWebPartChromeStyle(System.Web.UI.WebControls.WebParts.WebPart,System.Web.UI.WebControls.WebParts.PartChromeType)" /> -Methode, die <see cref="M:System.Web.UI.WebControls.WebParts.WebPartChrome.GetWebPartVerbs(System.Web.UI.WebControls.WebParts.WebPart)" /> -Methode, und insbesondere die <see cref="M:System.Web.UI.WebControls.WebParts.WebPartChrome.RenderPartContents(System.Web.UI.HtmlTextWriter,System.Web.UI.WebControls.WebParts.WebPart)" /> oder <see cref="M:System.Web.UI.WebControls.WebParts.WebPartChrome.RenderWebPart(System.Web.UI.HtmlTextWriter,System.Web.UI.WebControls.WebParts.WebPart)" /> Methoden, um das Rendering anzupassen. Zum Verwenden benutzerdefinierter <see cref="T:System.Web.UI.WebControls.WebParts.WebPartChrome" /> -Klasse für die <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelemente in einer Zone entwickeln Sie eine benutzerdefinierte Zone abgeleitet wurde. die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZoneBase" /> Klasse, und überschreiben die <see cref="M:System.Web.UI.WebControls.WebParts.WebPartZoneBase.CreateWebPartChrome" /> Methode. Weitere Informationen zum Verwenden einer untergeordneten <see cref="T:System.Web.UI.WebControls.WebParts.WebPartChrome" /> Objekt in einer Zone, finden Sie im Beispielabschnitt.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartChrome (System.Web.UI.WebControls.WebParts.WebPartZoneBase zone, System.Web.UI.WebControls.WebParts.WebPartManager manager);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.WebParts.WebPartZoneBase zone, class System.Web.UI.WebControls.WebParts.WebPartManager manager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartChrome.#ctor(System.Web.UI.WebControls.WebParts.WebPartZoneBase,System.Web.UI.WebControls.WebParts.WebPartManager)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="zone" Type="System.Web.UI.WebControls.WebParts.WebPartZoneBase" />
+        <Parameter Name="manager" Type="System.Web.UI.WebControls.WebParts.WebPartManager" />
+      </Parameters>
+      <Docs>
+        <param name="zone">Die zugeordnete <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZoneBase" /> Steuerelement.</param>
+        <param name="manager">Die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> Steuerelement auf der aktuellen Seite.</param>
+        <summary>Initialisiert eine neue Instanz des Steuerelements.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.%23ctor%2A> Initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.WebParts.WebPartChrome> Klasse. Es dient in erster Linie durch eine <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> zone in seine <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.CreateWebPartChrome%2A> Methode zum Erstellen einer Instanz von der <xref:System.Web.UI.WebControls.WebParts.WebPartChrome> -Objekt, das das Chromrendering und benutzerdefinierte Rendering für behandelt <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente in der Zone.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, zwei Dinge. Zunächst erstellt er eine neue Instanz der benutzerdefinierten Klasse `MyWebPartChrome` durch Überschreiben der <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.CreateWebPartChrome%2A> Methode in einer abgeleiteten <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Zone aufgerufen `MyZone`. Im Konstruktor der zweiten die `MyWebPartChrome` Klasse weist die Objekte in den Parametern des Konstruktors auf private Felder, die innerhalb der Klasse verwendet werden können. Dieses Beispiel ermöglicht daher, auf die zugeordneten Zone zugreifen und <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Objekt auch im Konstruktor vor dem Ausführen der <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.Zone%2A> und <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.WebPartManager%2A> Eigenschaften zugegriffen werden. Beachten Sie, dass für den Konstruktor funktioniert Basiskonstruktor auch als Teil der Deklaration der Methode aufgerufen werden muss.  
+  
+ Der folgende Code enthält zwei benutzerdefinierten Klassen. Den vollständigen Code zum Ausführen des Beispiels erforderlich sind, einschließlich der Webseite zum Hosten der Steuerelemente finden Sie im Beispielabschnitt von der <xref:System.Web.UI.WebControls.WebParts.WebPartChrome> Übersichtsthema.  
+  
+ [!code-csharp[WebParts_WebPartChrome_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartChrome_Overview/CS/MyChrome.cs#2)]
+ [!code-vb[WebParts_WebPartChrome_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartChrome_Overview/VB/MyChrome.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="zone" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateWebPartChromeStyle">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.WebControls.Style CreateWebPartChromeStyle (System.Web.UI.WebControls.WebParts.WebPart webPart, System.Web.UI.WebControls.WebParts.PartChromeType chromeType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.WebControls.Style CreateWebPartChromeStyle(class System.Web.UI.WebControls.WebParts.WebPart webPart, valuetype System.Web.UI.WebControls.WebParts.PartChromeType chromeType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartChrome.CreateWebPartChromeStyle(System.Web.UI.WebControls.WebParts.WebPart,System.Web.UI.WebControls.WebParts.PartChromeType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Style</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webPart" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+        <Parameter Name="chromeType" Type="System.Web.UI.WebControls.WebParts.PartChromeType" />
+      </Parameters>
+      <Docs>
+        <param name="webPart">Das Steuerelement, das gerade gerendert wird.</param>
+        <param name="chromeType">Der Typ der Chrome für ein bestimmtes Steuerelement. eines der <see cref="T:System.Web.UI.WebControls.WebParts.PartChromeType" /> Enumerationswerte.</param>
+        <summary>Erstellt die Formatvorlagenobjekt, das für die einzelnen Stilattribute bereitstellt <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement gerendert wird, indem Sie die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartChrome" /> Objekt.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.Style" /> mit Stilattributen für die <paramref name="webPart" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.CreateWebPartChromeStyle%2A> Methode erstellt eine <xref:System.Web.UI.WebControls.Style> -Objekt, das von verwendet wird, die <xref:System.Web.UI.WebControls.WebParts.WebPartChrome> Objekt zum Rendern einer <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement. Die Standardmethode erstellt Stilattribute basierend auf den <xref:System.Web.UI.WebControls.WebParts.WebZone.PartChromeType%2A> Eigenschaftswert, der die <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement verwiesen wird, der `webPart` Parameter.  
+  
+ Ein Sonderfall vor tritt auf, wenn ein <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement ausgewählt ist. Wenn die Seite in einen Anzeigemodus wird Steuerelemente ausgewählt werden können und das aktuelle Steuerelement ausgewählt ist, der Standardwert <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.CreateWebPartChromeStyle%2A> Methode führt auch die Stilinformationen des Steuerelements mit der Formatinformationen aus der <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.SelectedPartChromeStyle%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Dieses Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.CreateWebPartChromeStyle%2A> Methode. Den vollständigen Code zum Ausführen des Beispiels erforderlich sind, finden Sie im Beispielabschnitt von der <xref:System.Web.UI.WebControls.WebParts.WebPartChrome> Übersichtsthema.  
+  
+ Im folgende Abschnitt aus dem Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.CreateWebPartChromeStyle%2A> Methode. Beachten Sie, dass sie zuerst die Stilinformationen, die von der Basismethode erstellt ruft und anschließend die Stilinformationen durch Ändern der Schriftart für die <xref:System.Web.UI.WebControls.WebParts.WebPart> steuern gerendert wird.  
+  
+ [!code-csharp[WebParts_WebPartChrome_Overview#5](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartChrome_Overview/CS/MyChrome.cs#5)]
+ [!code-vb[WebParts_WebPartChrome_Overview#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartChrome_Overview/VB/MyChrome.vb#5)]  
+  
+ Wenn Sie die Webseite in einem Browser zu laden, sehen Sie, dass die Schriftart in verwendet das <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente wird in der überschriebenen angegebenen <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.CreateWebPartChromeStyle%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="webPart" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="chromeType" />ist keine von der <see cref="T:System.Web.UI.WebControls.WebParts.PartChromeType" /> Enumerationswerte.</exception>
+        <block subset="none" type="overrides">
+          <para>Erben von der <see cref="T:System.Web.UI.WebControls.WebParts.WebPartChrome" /> -Klasse, Sie können optional außer Kraft setzen die <see cref="M:System.Web.UI.WebControls.WebParts.WebPartChrome.CreateWebPartChromeStyle(System.Web.UI.WebControls.WebParts.WebPart,System.Web.UI.WebControls.WebParts.PartChromeType)" /> -Methode und zusammenführen, die die Stilinformationen aus der Basismethode mit benutzerdefinierten Stil Attribute, die Sie hinzufügen möchten. Eine Demonstration finden Sie in den Code im Beispielabschnitt.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="DragDropEnabled">
+      <MemberSignature Language="C#" Value="protected bool DragDropEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DragDropEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartChrome.DragDropEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob Steuerelemente in eine und aus der Zone gezogen werden können.</summary>
+        <value>Ein boolescher Wert, der angibt, ob Steuerelemente gezogen werden können.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert von der <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.DragDropEnabled%2A> Eigenschaft richtet sich nach dem Wert der die <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.DragDropEnabled%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilterWebPartVerbs">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.WebControls.WebParts.WebPartVerbCollection FilterWebPartVerbs (System.Web.UI.WebControls.WebParts.WebPartVerbCollection verbs, System.Web.UI.WebControls.WebParts.WebPart webPart);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.WebControls.WebParts.WebPartVerbCollection FilterWebPartVerbs(class System.Web.UI.WebControls.WebParts.WebPartVerbCollection verbs, class System.Web.UI.WebControls.WebParts.WebPart webPart) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartChrome.FilterWebPartVerbs(System.Web.UI.WebControls.WebParts.WebPartVerbCollection,System.Web.UI.WebControls.WebParts.WebPart)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartVerbCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="verbs" Type="System.Web.UI.WebControls.WebParts.WebPartVerbCollection" />
+        <Parameter Name="webPart" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+      </Parameters>
+      <Docs>
+        <param name="verbs">Die Auflistung aller Verben, die mit dem auf die verwiesen wird im Steuerelement verknüpfte der <c>WebPart</c> Parameter.</param>
+        <param name="webPart">Das Steuerelement gegenwärtig gerendert wird.</param>
+        <summary>Schließt bestimmte Verben nicht gerendert, auf Grundlage der Kriterien, die von einem Entwickler bereitgestellt.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerbCollection" /> , die alle zugeordnete Verben enthält die <paramref name="webPart" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.FilterWebPartVerbs%2A> Methode bietet eine Möglichkeit, bestimmte Verben aus der Auflistung der zugeordneten Verben Filtern automatisch eine <xref:System.Web.UI.WebControls.WebParts.WebPart> steuern und verhindern, dass die gefilterten Verben gerendert wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="verbs" /> Auflistung <see langword="null" />.  
+  
+ \-"oder" -<see langword="" /> <paramref name="webPart" /> ist <see langword="null" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie beim Erstellen eines benutzerdefinierten <see cref="T:System.Web.UI.WebControls.WebParts.WebPartChrome" /> -Klasse, Sie können optional außer Kraft setzen die <see cref="M:System.Web.UI.WebControls.WebParts.WebPartChrome.FilterWebPartVerbs(System.Web.UI.WebControls.WebParts.WebPartVerbCollection,System.Web.UI.WebControls.WebParts.WebPart)" /> Methode, um bestimmte Verben verhindert herausfiltern. Die gängigste Methode hierfür ist eine private Methode erstellen, die die Verben überprüft wird, in der <see cref="P:System.Web.UI.WebControls.WebParts.WebPart.Verbs" /> Auflistung von einer <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> steuern und bestimmt, ob jedes Verb gerendert werden soll, auf Grundlage der Kriterien, die Sie auswählen. Beachten Sie, dass die Basismethode viele standardmäßige Filterkriterien, die schwer enthält zu reproduzieren, wenn Sie vollständig überschreiben Sie die Methode; Wenn Sie nur ein paar Sonderfälle verfügen, empfiehlt es sich, rufen zuerst die Basismethode und übergeben Sie die resultierende Auflistung über eine eigene zusätzliche Methode aus, um Ihre benutzerdefinierten Filterkriterien anzuwenden.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWebPartChromeClientID">
+      <MemberSignature Language="C#" Value="protected string GetWebPartChromeClientID (System.Web.UI.WebControls.WebParts.WebPart webPart);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string GetWebPartChromeClientID(class System.Web.UI.WebControls.WebParts.WebPart webPart) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartChrome.GetWebPartChromeClientID(System.Web.UI.WebControls.WebParts.WebPart)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webPart" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+      </Parameters>
+      <Docs>
+        <param name="webPart">Das Steuerelement gegenwärtig gerendert wird.</param>
+        <summary>Ruft die Client-ID für die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartChrome" /> Objekt auf einer Webseite rendern.</summary>
+        <returns>Eine Zeichenfolge, die Client-ID für enthält, die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartChrome" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.GetWebPartChromeClientID%2A> -Methode erhält der Client-ID der Tabelle, enthält die `webPart` gerendert wird. Die Tabelle ist die gerenderte Ausgabe, die direkt mit entspricht dem <xref:System.Web.UI.WebControls.WebParts.WebPartChrome> -Objekt und dient als Container zum Anwenden von Formaten und Erstellen eines modularen Layouts für das Steuerelement.  
+  
+ Es eignet sich die Client-ID der abzurufenden der <xref:System.Web.UI.WebControls.WebParts.WebPartChrome> -Objekt für die clientseitige Skripts, wenn Sie etwas im Chrom ändern, ohne die Seite an den Server bereitstellen möchten.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="webPart" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWebPartTitleClientID">
+      <MemberSignature Language="C#" Value="protected string GetWebPartTitleClientID (System.Web.UI.WebControls.WebParts.WebPart webPart);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string GetWebPartTitleClientID(class System.Web.UI.WebControls.WebParts.WebPart webPart) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartChrome.GetWebPartTitleClientID(System.Web.UI.WebControls.WebParts.WebPart)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webPart" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+      </Parameters>
+      <Docs>
+        <param name="webPart">Das Steuerelement gegenwärtig gerendert wird.</param>
+        <summary>Ruft die Client-ID für die Tabellenzelle mit dem Titel für eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement.</summary>
+        <returns>Eine Zeichenfolge, die Client-ID für den Titel enthält, der <paramref name="webPart" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.GetWebPartTitleClientID%2A> Methode ruft die Client-ID-Wert für die Tabellenzelle mit dem Titel der ab dem `webPart` gerendert wird.  
+  
+ Ein wichtiges Szenario, in dem die <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.GetWebPartTitleClientID%2A> Methode dient zum Abrufen der Client-ID einer Titelzelle und der `webPart` ist für die Webparts Drag-and-Drop-Funktion. Die Methode eignet sich auch für andere clientseitige scripting-Zwecke. Beispielsweise konnte den Titel oder den Stil der Zelle mit clientseitigen Skripts, anstatt die Seite an den Server zurückgesendet wird, geändert werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="webPart" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWebPartVerbs">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.WebControls.WebParts.WebPartVerbCollection GetWebPartVerbs (System.Web.UI.WebControls.WebParts.WebPart webPart);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.WebControls.WebParts.WebPartVerbCollection GetWebPartVerbs(class System.Web.UI.WebControls.WebParts.WebPart webPart) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartChrome.GetWebPartVerbs(System.Web.UI.WebControls.WebParts.WebPart)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartVerbCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webPart" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+      </Parameters>
+      <Docs>
+        <param name="webPart">Das Steuerelement gegenwärtig gerendert wird.</param>
+        <summary>Ruft eine Auflistung der Verben, die mit gerendert werden soll eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerbCollection" /> , enthält alle Verben, die mit gerendert werden soll <paramref name="webPart" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.GetWebPartVerbs%2A> Methode bietet Entwicklern eine Möglichkeit zum Überschreiben der Methode und ausgeschlossen, dass bestimmte Verben gerendert wird. Dies ist vergleichbar mit der <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.FilterWebPartVerbs%2A> -Methode, die auch Verben verhindert ausschließen kann.  
+  
+ Allerdings die <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.GetWebPartVerbs%2A> Methode ist nicht vorgesehen, für Fälle, in der Sie bestimmte Kriterien, um zu entscheiden, ob ein Verb gerendert überprüfen möchten. Stattdessen eignet sich diese Methode, wenn Sie im Voraus wissen, dass Sie immer ein bestimmtes Verb ausschließen möchten. Angenommen, Sie entwickeln ein benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.WebPartChrome> -Klasse, können Sie festlegen, dass Sie immer das Verb schließen auf ausschließen möchten <xref:System.Web.UI.WebControls.WebParts.WebPart> steuert, sodass Benutzer die Steuerelemente nicht schließen können. Statt die <xref:System.Web.UI.WebControls.WebParts.WebPart.AllowClose%2A> Eigenschaft, um `false` auf allen Steuerelementen können Sie einfach überschreiben die <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.GetWebPartVerbs%2A> -Methode und dem Exclude schließen Verben auf einer gerenderten <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement gerendert wird, mit Ihrer benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.WebPartChrome> Objekt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.GetWebPartVerbs%2A> Methode. Den vollständigen Code zum Ausführen des Beispiels erforderlich sind, finden Sie im Beispielabschnitt von der <xref:System.Web.UI.WebControls.WebParts.WebPartChrome> Übersichtsthema.  
+  
+ Im folgende Abschnitt aus dem Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.GetWebPartVerbs%2A> Methode. Die überschriebene Methode verwendet die Basismethode abzurufenden alle Verben aus der `webPart` steuern und durchläuft die verbauflistung, die alle Verben außer der schließen-Verb an, das Hinzufügen einer <xref:System.Collections.ArrayList> Objekt. Dies reduziert Satz von Verben wird anschließend in ein neues zugewiesen <xref:System.Web.UI.WebControls.WebParts.WebPartVerbCollection>, der an den Aufrufer zurückgegeben wird.  
+  
+ [!code-csharp[WebParts_WebPartChrome_Overview#4](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartChrome_Overview/CS/MyChrome.cs#4)]
+ [!code-vb[WebParts_WebPartChrome_Overview#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartChrome_Overview/VB/MyChrome.vb#4)]  
+  
+ Wenn Sie die Webseite in einem Browser zu laden, und klicken Sie auf die Verbmenü (mit einem nach unten weisenden Pfeil in der Titelleiste angezeigt) der einzelnen <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement, können Sie sehen, dass das Verb schließen nicht für jedes Steuerelement gerendert wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="webPart" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformPreRender">
+      <MemberSignature Language="C#" Value="public virtual void PerformPreRender ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PerformPreRender() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartChrome.PerformPreRender" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt Aufgaben aus, die vor dem Rendering erfolgen müssen <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelemente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderPartContents">
+      <MemberSignature Language="C#" Value="protected virtual void RenderPartContents (System.Web.UI.HtmlTextWriter writer, System.Web.UI.WebControls.WebParts.WebPart webPart);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RenderPartContents(class System.Web.UI.HtmlTextWriter writer, class System.Web.UI.WebControls.WebParts.WebPart webPart) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartChrome.RenderPartContents(System.Web.UI.HtmlTextWriter,System.Web.UI.WebControls.WebParts.WebPart)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+        <Parameter Name="webPart" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.Web.UI.HtmlTextWriter" /> , empfängt der <c>WebPart</c> Inhalt.</param>
+        <param name="webPart">Das Steuerelement gegenwärtig gerendert wird.</param>
+        <summary>Den Hauptinhaltsbereich der rendert eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> -Steuerelement, mit Ausnahme von Kopf- und Fußzeilen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.RenderPartContents%2A> Methode können Sie die Darstellung der im Textbereich der überschreiben `webPart`, lassen Sie die Darstellung von Kopf- und Fußzeilen auf das Standardrendering zurückgreifen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.RenderPartContents%2A> Methode. Den vollständigen Code zum Ausführen des Beispiels erforderlich sind, finden Sie im Beispielabschnitt von der <xref:System.Web.UI.WebControls.WebParts.WebPartChrome> Übersichtsthema.  
+  
+ Im folgende Abschnitt aus dem Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.RenderPartContents%2A> Methode. Die überschriebene Methode führt zwei Aufgaben zum Anpassen des Renderings für den Hauptteil der <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement. Zunächst wird überprüft, um zu bestimmen, ob das Steuerelement gerade ausgewählt ist, und wenn dies der Fall ist, schreibt eine Zeichenfolge und der Inhalt wird nicht gerendert. Zweiter, wenn das Steuerelement nicht ausgewählt ist, und wenn das Steuerelement Zone vom Typ `MyZone`, die Methode rendert das Steuerelement. Letztere Prüfung kann verwendet werden, falls gewünscht, um sicherzustellen, dass eine benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPartChrome> Klasse kann verwendet werden, nur um Rendern <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente in einem bestimmten Typ von <xref:System.Web.UI.WebControls.WebParts.WebPartZone> Zone, die entwickelt wurde, enthält die <xref:System.Web.UI.WebControls.WebParts.WebPartChrome> Objekt.  
+  
+ [!code-csharp[WebParts_WebPartChrome_Overview#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartChrome_Overview/CS/MyChrome.cs#6)]
+ [!code-vb[WebParts_WebPartChrome_Overview#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartChrome_Overview/VB/MyChrome.vb#6)]  
+  
+ Wenn Sie die Webseite in einem Browser zu laden, sehen Sie sich, dass der Inhalt jedes Steuerelements normal gerendert wird. Wenn Sie die Seite in den Entwurfsmodus wechseln (durch Auswahl **Entwurf** in der **Anzeigemodus** Dropdownlisten-Steuerelement), und ziehen Sie eines der Steuerelemente in die leere Zone mit der Bezeichnung **WebPartZone2**, unterschiedlich ist, den Inhalt des Steuerelements gerendert werden, weil das benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPartChrome> Objekt ist nicht für das Rendering in ein Standardzone verwendet wird. Dies ist die gleiche Auswirkung, die Sie erzielen würden, würden Sie versuchen, die Verwendung der benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.WebPartChrome> Klasse mit einer anderen Zone neben der `MyZone` -Klasse, aufgrund der vorhergehenden Quellcode.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie können optional außer Kraft setzen die <see cref="M:System.Web.UI.WebControls.WebParts.WebPartChrome.RenderPartContents(System.Web.UI.HtmlTextWriter,System.Web.UI.WebControls.WebParts.WebPart)" /> Methode. Wenn daher einfach die Renderinganpassungen ausführen können sollen für <paramref name="webPart" />, und rufen Sie anschließend die <see cref="M:System.Web.UI.Control.RenderControl(System.Web.UI.HtmlTextWriter)" /> Methode. Wenn Sie auf das Standardrendering zurückgreifen bei Verbindungsfehlern verlassen möchten, rufen Sie zuerst die Basismethode und passen Sie die <paramref name="writer" /> , die von der Basismethode zurückgegeben wird.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderWebPart">
+      <MemberSignature Language="C#" Value="public virtual void RenderWebPart (System.Web.UI.HtmlTextWriter writer, System.Web.UI.WebControls.WebParts.WebPart webPart);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RenderWebPart(class System.Web.UI.HtmlTextWriter writer, class System.Web.UI.WebControls.WebParts.WebPart webPart) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartChrome.RenderWebPart(System.Web.UI.HtmlTextWriter,System.Web.UI.WebControls.WebParts.WebPart)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+        <Parameter Name="webPart" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.Web.UI.HtmlTextWriter" /> , empfängt der <c>WebPart</c> Inhalt.</param>
+        <param name="webPart">Das Steuerelement gegenwärtig gerendert wird.</param>
+        <summary>Rendert ein vollständiges <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> -Steuerelement mit allen zugehörigen Bereichen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.RenderWebPart%2A> Methode rendert das vollständige <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement mit Header, Inhalt und Fußzeile. Überschreiben diese Methode ermöglicht Entwicklern die programmgesteuerte Kontrolle über alle Aspekte der Rendern vollständige `webPart`, und aus diesem Grund überschreiben diese Methode ist sehr komplex. Wie bei anderen Methoden in der <xref:System.Web.UI.WebControls.WebParts.WebPartChrome> Klasse, die Entwickler überschreiben können, wenn Sie diese Methode, eine gemeinsame überschreiben und nützlich Ansatz besteht darin, rufen Sie zunächst die Basismethode, nehmen die <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement, das zurückgegeben wird, und einige seiner Eigenschaften anpassen anstatt die gesamte Verarbeitung rendering selbst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das Steuerelement, <paramref name="webPart" /> verweist, ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WebPartManager">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.WebControls.WebParts.WebPartManager WebPartManager { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartManager WebPartManager" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartChrome.WebPartManager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf die aktuelle <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> Instanz.</summary>
+        <value>Ein Verweis auf das aktuelle <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> auf der Webseite.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.WebPartManager%2A> Eigenschaft stellt einen Verweis auf das aktuelle <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Instanz auf der Seite.  
+  
+   
+  
+## Examples  
+ Dieses Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.WebPartManager%2A> Eigenschaft. Den vollständigen Code zum Ausführen des Beispiels erforderlich sind, finden Sie im Beispielabschnitt von der <xref:System.Web.UI.WebControls.WebParts.WebPartChrome> Übersichtsthema.  
+  
+ Im folgenden Codebeispiel wird mit der <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.WebPartManager%2A> -Eigenschaft können Sie bestimmen, ob die aktuelle <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement gerendert wird, wird des ausgewählten Steuerelements an, die in diesem Beispiel bedeutet, dass die Seite in der Bearbeitungsansicht ist, und das Steuerelement momentan bearbeitet wird wird. Wenn diese Bedingungen erfüllt sind, wird der Text des Steuerelements wird nicht gerendert, und eine Zeichenfolge an seiner Stelle geschrieben.  
+  
+ [!code-csharp[WebParts_WebPartChrome_Overview#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartChrome_Overview/CS/MyChrome.cs#6)]
+ [!code-vb[WebParts_WebPartChrome_Overview#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartChrome_Overview/VB/MyChrome.vb#6)]  
+  
+ Wenn Sie die Webseite in einem Browser zu laden, können Sie die Seite in den Bearbeitungsmodus wechseln, indem auswählen **bearbeiten** in der **Anzeigemodus** Dropdownlisten-Steuerelement. Klicken Sie im Verbmenü des entweder der Steuerelemente bearbeiten-Verb. Wenn die Seite gerendert wird, wird der Text des Steuerelements für die Bearbeitung aktiviert nicht gerendert. Jedoch, wenn Sie das Steuerelement in die leere Zone mit der Bezeichnung ziehen **WebPartZone2**, der Text des Steuerelements wird gerendert. Dies ist die zweite Zone ist ein Standard <xref:System.Web.UI.WebControls.WebParts.WebPartZone> Zone, und es verwendet keine benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.WebPartChrome> Klasse in diesem Beispiel wird zum Rendern der <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Zone">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.WebControls.WebParts.WebPartZoneBase Zone { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartZoneBase Zone" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartChrome.Zone" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartZoneBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf die zugeordnete <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZoneBase" /> Zone.</summary>
+        <value>Ein Verweis auf eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZoneBase" /> zugeordneten der <see cref="T:System.Web.UI.WebControls.WebParts.WebPartChrome" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.Zone%2A> Eigenschaft stellt einen Verweis auf die <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Zone, die die Steuerelemente, für die enthält die <xref:System.Web.UI.WebControls.WebParts.WebPartChrome> -Objekt Rendering bereitstellt.  
+  
+   
+  
+## Examples  
+ Dieses Codebeispiel veranschaulicht die Verwendung von der <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.Zone%2A> Eigenschaft. Den vollständigen Code zum Ausführen des Beispiels erforderlich sind, finden Sie im Beispielabschnitt von der <xref:System.Web.UI.WebControls.WebParts.WebPartChrome> Übersichtsthema.  
+  
+ Im folgenden Codebeispiel wird mit der <xref:System.Web.UI.WebControls.WebParts.WebPartChrome.Zone%2A> Eigenschaft, um zu bestimmen, ob die Zone mit derzeit zugewiesen ist die <xref:System.Web.UI.WebControls.WebParts.WebPartChrome> Objekt ist eine Zone vom Typ `MyZone`. Wenn dies der Fall ist, werden der Inhalt des Steuerelements gerendert. Dieser Code würde zu verhindern, dass die benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPartChrome> Objekt von der Arbeit mit einer anderen Zone derjenigen zum Erstellen einer Instanz des Zertifikats.  
+  
+ [!code-csharp[WebParts_WebPartChrome_Overview#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartChrome_Overview/CS/MyChrome.cs#6)]
+ [!code-vb[WebParts_WebPartChrome_Overview#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartChrome_Overview/VB/MyChrome.vb#6)]  
+  
+ Wenn Sie die Webseite in einem Browser zu laden, wird der Inhalt jedes Steuerelements normal gerendert. Sie können die Seite in den Entwurfsmodus wechseln, dazu **Entwurf** in der **Anzeigemodus** Dropdownlisten-Steuerelement. Wenn Sie eines der Steuerelemente in die leere Zone mit der Bezeichnung ziehen **WebPartZone2**, unterschiedlich ist, dessen Inhalt gerendert werden, da die benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPartChrome> Objekt ist nicht für das Rendering verwendet wird. Dies ist die gleiche Auswirkung, die Sie erzielen würden, würden Sie versuchen, die Verwendung der benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.WebPartChrome> Klasse mit einer anderen Zone neben der `MyZone` aufgrund des vorhergehenden Quellcodes-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

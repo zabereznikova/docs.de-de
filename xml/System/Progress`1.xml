@@ -1,0 +1,207 @@
+<Type Name="Progress&lt;T&gt;" FullName="System.Progress&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public class Progress&lt;T&gt; : IProgress&lt;T&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Progress`1&lt;T&gt; extends System.Object implements class System.IProgress`1&lt;!T&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Progress`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IProgress&lt;T&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="T">Gibt den Typ des Werts Berichts ausgeführt.</typeparam>
+    <summary>Stellt eine <see cref="T:System.IProgress`1" /> , die Rückrufe für jede gemeldet, dass Fortschrittswert aufruft.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Ereignishandler, die an den Konstruktor oder Ereignishandler registriert die <xref:System.Progress%601.ProgressChanged> Ereignis aufgerufen werden, über eine <xref:System.Threading.SynchronizationContext> Instanz erfasst werden, wenn die Instanz erstellt wird. Es ist kein aktueller <xref:System.Threading.SynchronizationContext> zum Zeitpunkt der Erstellung der Rückrufe aufgerufen werden werden, auf die <xref:System.Threading.ThreadPool>.  
+  
+ Weitere Informationen und ein Codebeispiel finden Sie im Artikel [Async 4.5: Bearbeitung aktivieren und der Abbruch von asynchronen APIs](http://go.microsoft.com/fwlink/p/?LinkId=267243) im .NET Framework-Blog.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Progress ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Progress`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert die <see cref="T:System.Progress`1" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Progress (Action&lt;T&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Action`1&lt;!T&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Progress`1.#ctor(System.Action{`0})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="handler" Type="System.Action&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="handler">Ein Handler aufgerufen, für jede Fortschrittswert gemeldet. Dieser Handler wird aufgerufen, die zusätzlich zu den alle Delegaten registriert die <see cref="E:System.Progress`1.ProgressChanged" /> Ereignis. Je nach den <see cref="T:System.Threading.SynchronizationContext" /> Instanz erfasst werden, indem Sie die <see cref="T:System.Progress`1" /> bei der Erstellung, es ist möglich, dass dieser Handlerinstanz gleichzeitig mit sich selbst aufgerufen werden kann.</param>
+        <summary>Initialisiert die <see cref="T:System.Progress`1" /> Objekt mit den angegebenen Rückruf.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnReport">
+      <MemberSignature Language="C#" Value="protected virtual void OnReport (T value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnReport(!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Progress`1.OnReport(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert von den aktualisierten Status.</param>
+        <summary>Gibt eine Änderung des Status an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProgressChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;T&gt; ProgressChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;!T&gt; ProgressChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Progress`1.ProgressChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Für jeden gemeldeten Fortschrittswert ausgelöst.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit diesem Ereignis registriert Ereignishandler wird aufgerufen, auf die <xref:System.Threading.SynchronizationContext> aufgezeichnet, wenn die Instanz erstellt wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IProgress&lt;T&gt;.Report">
+      <MemberSignature Language="C#" Value="void IProgress&lt;T&gt;.Report (T value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.IProgress&lt;T&gt;.Report(!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Progress`1.System#IProgress&lt;T&gt;#Report(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert von den aktualisierten Status.</param>
+        <summary>Gibt eine Änderung des Status an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

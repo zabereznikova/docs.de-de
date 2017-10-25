@@ -1,0 +1,582 @@
+<Type Name="MetaDataMember" FullName="System.Data.Linq.Mapping.MetaDataMember">
+  <TypeSignature Language="C#" Value="public abstract class MetaDataMember" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MetaDataMember extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Linq.Mapping.MetaDataMember" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Linq</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Zuordnung zwischen einem Feld oder eine Eigenschaft eines Objekts für die Domäne in eine Spalte einer Datenbanktabelle dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MetaDataMember ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Mapping.MetaDataMember.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Linq.Mapping.MetaDataMember" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Association">
+      <MemberSignature Language="C#" Value="public abstract System.Data.Linq.Mapping.MetaAssociation Association { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Linq.Mapping.MetaAssociation Association" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.MetaDataMember.Association" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Linq.Mapping.MetaAssociation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Data.Linq.Mapping.MetaAssociation" /> , die bei diesem Member entspricht.</summary>
+        <value>Das entsprechende <see cref="T:System.Data.Linq.Mapping.MetaAssociation" /> falls vorhanden; andernfalls <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stellt eine Verknüpfung zwischen Maildatenbank wie ein Fremdschlüssel, Primärschlüssel-Beziehung dar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSync">
+      <MemberSignature Language="C#" Value="public abstract System.Data.Linq.Mapping.AutoSync AutoSync { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.Linq.Mapping.AutoSync AutoSync" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.MetaDataMember.AutoSync" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Linq.Mapping.AutoSync</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die lesen-Verhalten für diesen Member für INSERT- und update-Vorgänge.</summary>
+        <value>Eine <see cref="T:System.Data.Linq.Mapping.AutoSync" />-Enumeration.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBeNull">
+      <MemberSignature Language="C#" Value="public abstract bool CanBeNull { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanBeNull" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.MetaDataMember.CanBeNull" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob der Wert dieses Elements zugewiesen werden, kann die <see langword="null" /> Wert.</summary>
+        <value>
+          <see langword="true" />Wenn bei diesem Member zugewiesen werden kann die <see langword="null" /> Wert; anderenfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist abhängig von der <xref:System.Data.Linq.Mapping.MetaDataMember.DbType%2A> -Eigenschaft, und der Einfachheit halber bereitgestellt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DbType">
+      <MemberSignature Language="C#" Value="public abstract string DbType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DbType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.MetaDataMember.DbType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ der entsprechenden Datenbankspalte ab.</summary>
+        <value>Der Typ der Datenbankspalte als Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dadurch werden dem genauen Text verwendet, um die Spalte in einem Transact-SQL-Tabelle-Deklaration-Befehl zu definieren. Wenn nicht so definiert ist, wird der Typ der Datenbankspalte aus den Elementtyp abgeleitet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeclaringType">
+      <MemberSignature Language="C#" Value="public abstract System.Data.Linq.Mapping.MetaType DeclaringType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Linq.Mapping.MetaType DeclaringType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.MetaDataMember.DeclaringType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Linq.Mapping.MetaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Data.Linq.Mapping.MetaType" /> , die dieses Datenelement enthält.</summary>
+        <value>Das Meta-Typ, der das aktuelle Element enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeferredSourceAccessor">
+      <MemberSignature Language="C#" Value="public abstract System.Data.Linq.Mapping.MetaAccessor DeferredSourceAccessor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Linq.Mapping.MetaAccessor DeferredSourceAccessor" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.MetaDataMember.DeferredSourceAccessor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Linq.Mapping.MetaAccessor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Accessor, der zum Abrufen und Festlegen der verzögerten Quelle dieses Elements verwendet wird.</summary>
+        <value>Der Accessor wird verwendet, um die verzögerte Quelle für diesen Member zugreifen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeferredValueAccessor">
+      <MemberSignature Language="C#" Value="public abstract System.Data.Linq.Mapping.MetaAccessor DeferredValueAccessor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Linq.Mapping.MetaAccessor DeferredValueAccessor" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.MetaDataMember.DeferredValueAccessor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Linq.Mapping.MetaAccessor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Accessor, der zum Abrufen und Festlegen des verzögerten Wert dieses Elements (ohne Fetch) verwendet wird.</summary>
+        <value>Der Accessor wird verwendet, um die verzögerte Wert für diesen Member zugreifen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expression">
+      <MemberSignature Language="C#" Value="public abstract string Expression { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Expression" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.MetaDataMember.Expression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Ausdruck ab, der eine berechnete Spalte definiert.</summary>
+        <value>Der Ausdruck für die berechnete Spalte als Zeichenfolge.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAssociation">
+      <MemberSignature Language="C#" Value="public abstract bool IsAssociation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAssociation" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.MetaDataMember.IsAssociation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob dieser Member eine zuordnungsbeziehung definiert.</summary>
+        <value>
+          <see langword="true" />Wenn dieser Member eine zuordnungsbeziehung definiert wird. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDbGenerated">
+      <MemberSignature Language="C#" Value="public abstract bool IsDbGenerated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDbGenerated" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.MetaDataMember.IsDbGenerated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob dieses Element automatisch von der Datenbank generiert wird.</summary>
+        <value>
+          <see langword="true" />Wenn bei diesem Member automatisch von der Datenbank generiert wird. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Automatisch generierte Member werden synchronisiert, sofort nach der entsprechenden Zeile eingefügt wird. Fügen Sie Trigger generierten Schlüssel, die Werte werden nicht unterstützt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDeclaredBy">
+      <MemberSignature Language="C#" Value="public abstract bool IsDeclaredBy (System.Data.Linq.Mapping.MetaType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsDeclaredBy(class System.Data.Linq.Mapping.MetaType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Mapping.MetaDataMember.IsDeclaredBy(System.Data.Linq.Mapping.MetaType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Data.Linq.Mapping.MetaType" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der zu überprüfende Typ.</param>
+        <summary>Gibt an, ob dieses Elements durch den angegebenen Typ deklariert wird.</summary>
+        <returns>
+          <see langword="true" />Wenn dieses Elements durch den angegebenen Typ deklariert ist. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDeferred">
+      <MemberSignature Language="C#" Value="public abstract bool IsDeferred { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDeferred" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.MetaDataMember.IsDeferred" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob das Standardverhalten dieses Members im zurückgestellten geladen ist.</summary>
+        <value>
+          <see langword="true" />Wenn bei diesem Member im zurückgestellten standardmäßig geladen; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDiscriminator">
+      <MemberSignature Language="C#" Value="public abstract bool IsDiscriminator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDiscriminator" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.MetaDataMember.IsDiscriminator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob bei diesem Member die Vererbung Unterscheidungseigenschaft darstellt.</summary>
+        <value>
+          <see langword="true" />Wenn bei diesem Member die Vererbung Unterscheidungseigenschaft darstellt; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann `true` für darf höchstens ein Element der obersten zugeordneten Klasse in einer Hierarchie.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPersistent">
+      <MemberSignature Language="C#" Value="public abstract bool IsPersistent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPersistent" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.MetaDataMember.IsPersistent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob dieses Elements auf eine Spalte (oder Einschränkung) zugeordnet ist.</summary>
+        <value>
+          <see langword="true" />Wenn dieses Element auf eine Spalte (oder Einschränkung); zugeordnet ist andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Klasse kann eine Kombination von permanenten und nicht persistent gespeicherte Elemente verfügen. Permanente Member zugeordnet sind, während nicht permanente Member nicht zugeordnet sind. Eine zugeordnete Klasse muss über mindestens einen permanenten Member verfügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPrimaryKey">
+      <MemberSignature Language="C#" Value="public abstract bool IsPrimaryKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPrimaryKey" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.MetaDataMember.IsPrimaryKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob dieses Element Teil der Identität für den Typ ist.</summary>
+        <value>
+          <see langword="true" />Wenn bei diesem Member Teil der Identität für den Typ handelt; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft ist `true`, Members der Klasse stellt eine Spalte, die Teil des eindeutigen Schlüssels für die Tabelle ist. Mehr als ein Member der Klasse kann diese Eigenschaft auf festgelegt haben `true` für einen Schlüssel, die eine Zusammensetzung der zugeordneten Spalten ist. Für eine Entitätsklasse mindestens ein Mitglied muss dieses Attribut aufweisen, und der Primärschlüssel oder einen eindeutigen Schlüssel in der entsprechenden Tabelle oder Sicht zugeordnet werden soll. Andernfalls betrachtet LINQ to SQL Instanzen der Klasse als zum Übergeben von Änderungen an die Datenbank schreibgeschützt.  
+  
+ Die Anzahl der Spalten, die mit identifiziert <xref:System.Data.Linq.Mapping.MetaDataMember.IsPrimaryKey%2A> müssen nicht als Primärschlüssel. Sie geben lediglich eine Gruppe, die die Entität eindeutig identifiziert. Allgemeine alternativen schließen Indexspalten oder andere eindeutige Schlüsselspalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVersion">
+      <MemberSignature Language="C#" Value="public abstract bool IsVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.MetaDataMember.IsVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, ob dieses Element die Zeilenversion oder den Zeitstempel darstellt.</summary>
+        <value>
+          <see langword="true" />Wenn dieser Member die Zeilenversion oder den Zeitstempel darstellt; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Versionsnummern erhöht werden, und Timestamp-Spalten werden aktualisiert, wenn die zugeordnete Zeile aktualisiert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadMethod">
+      <MemberSignature Language="C#" Value="public abstract System.Reflection.MethodInfo LoadMethod { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MethodInfo LoadMethod" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.MetaDataMember.LoadMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Data.Linq.DataContext" /> -Methode, die zum Ausführen von Ladevorgängen die Durchführung verwendet wird.</summary>
+        <value>Die Load-Methode als <see cref="T:System.Reflection.MethodInfo" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MappedName">
+      <MemberSignature Language="C#" Value="public abstract string MappedName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MappedName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.MetaDataMember.MappedName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Spalte (oder Einschränkung) in der Datenbank ab.</summary>
+        <value>Der Name der Spalte (oder Einschränkung) als Zeichenfolge.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Member">
+      <MemberSignature Language="C#" Value="public abstract System.Reflection.MemberInfo Member { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MemberInfo Member" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.MetaDataMember.Member" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MemberInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die zugrunde liegende <see cref="T:System.Reflection.MemberInfo" /> ab.</summary>
+        <value>Elementinformationen Attribute und Metadaten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberAccessor">
+      <MemberSignature Language="C#" Value="public abstract System.Data.Linq.Mapping.MetaAccessor MemberAccessor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Linq.Mapping.MetaAccessor MemberAccessor" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.MetaDataMember.MemberAccessor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Linq.Mapping.MetaAccessor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Accessor, der zum Abrufen oder festlegen den Wert dieses Elements verwendet wird.</summary>
+        <value>Die Zugriffsmethode.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public abstract string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.MetaDataMember.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Elements identisch mit der <see cref="T:System.Reflection.MemberInfo" /> Name.</summary>
+        <value>Identisch mit dem Namen der <see cref="T:System.Reflection.MemberInfo" /> Name.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Ordinal">
+      <MemberSignature Language="C#" Value="public abstract int Ordinal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Ordinal" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.MetaDataMember.Ordinal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ordnungsposition dieses Elements in das Standardlayout von Abfrageergebnissen ab.</summary>
+        <value>Die Ordnungsposition.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StorageAccessor">
+      <MemberSignature Language="C#" Value="public abstract System.Data.Linq.Mapping.MetaAccessor StorageAccessor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Linq.Mapping.MetaAccessor StorageAccessor" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.MetaDataMember.StorageAccessor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Linq.Mapping.MetaAccessor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Accessor, der zum Abrufen oder Festlegen des Speicherwerts dieses Elements verwendet wird.</summary>
+        <value>Der Accessor für die Speicherwert dieses Elements.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StorageMember">
+      <MemberSignature Language="C#" Value="public abstract System.Reflection.MemberInfo StorageMember { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MemberInfo StorageMember" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.MetaDataMember.StorageMember" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MemberInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Element, das die Daten für diesen Member speichert.</summary>
+        <value>Der Speichermember.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public abstract Type Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.MetaDataMember.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ dieses Elements ab.</summary>
+        <value>Der Typ des aktuellen Elements.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateCheck">
+      <MemberSignature Language="C#" Value="public abstract System.Data.Linq.Mapping.UpdateCheck UpdateCheck { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.Linq.Mapping.UpdateCheck UpdateCheck" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.MetaDataMember.UpdateCheck" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Linq.Mapping.UpdateCheck</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die vollständige Parallelität Check-Richtlinie für dieses Element ab.</summary>
+        <value>Ein <see cref="T:System.Data.Linq.Mapping.UpdateCheck" /> Enum.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Klasse keinen Mitglied Version (<xref:System.Data.Linq.Mapping.MetaDataMember.IsVersion%2A> festgelegt `true`), Erkennung erfolgt durch die ursprünglichen Werte der Elemente mit dem aktuellen Datenbankstatus verglichen.  
+  
+ Die <xref:System.Data.Linq.Mapping.MetaDataMember.UpdateCheck%2A> Eigenschaft bestimmt, wie LINQ to SQL die konflikterkennung unter der vollständigen Parallelität implementiert. Nur die Elemente mit dieser Eigenschaft auf festgelegt <xref:System.Data.Linq.Mapping.UpdateCheck.Always> oder <xref:System.Data.Linq.Mapping.UpdateCheck.WhenChanged> werden während der Erkennung von Bereitstellungskonflikten berücksichtigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

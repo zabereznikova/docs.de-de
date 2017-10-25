@@ -1,0 +1,145 @@
+<Type Name="DetailsViewInsertEventArgs" FullName="System.Web.UI.WebControls.DetailsViewInsertEventArgs">
+  <TypeSignature Language="C#" Value="public class DetailsViewInsertEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DetailsViewInsertEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DetailsViewInsertEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Web.UI.WebControls.DetailsView.ItemInserting" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DetailsView> -Steuerelement löst die <xref:System.Web.UI.WebControls.DetailsView.ItemInserting> Ereignis aus, wenn eine Schaltfläche zum Einfügen (eine Schaltfläche mit seiner `CommandName` -Eigenschaft auf "Einfügen") innerhalb des Steuerelements geklickt wird, jedoch bevor die <xref:System.Web.UI.WebControls.DetailsView> Steuerelement einfügen des Datensatzes. Dadurch können Sie einen Ereignishandler bereitstellen, die eine benutzerdefinierte Routine, z. B. HTML-Codierung führt die Werte eines Datensatzes in der Datenquelle einfügt, wenn dieses Ereignis tritt auf, bevor.  
+  
+ Ein <xref:System.Web.UI.WebControls.DetailsViewInsertEventArgs> Objekt wird an den Ereignishandler, der Ihnen ermöglicht, den Wert eines Arguments optionaler Befehl gesendet, um zu bestimmen, übergeben die <xref:System.Web.UI.WebControls.DetailsView> Steuerelement und anzugeben, dass der Insert-Vorgang abgebrochen werden soll. Den Wert des Befehlsarguments ermitteln Sie mithilfe der <xref:System.Web.UI.WebControls.DetailsViewInsertEventArgs.CommandArgument%2A> Eigenschaft. Legen Sie zum Abbrechen des Insert-Vorgangs der <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft `true`. Sie können auch lesen oder ändern Sie die Feldwerte für den neuen Eintrag mit dem <xref:System.Web.UI.WebControls.DetailsViewInsertEventArgs.Values%2A> Eigenschaft.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz der <xref:System.Web.UI.WebControls.DetailsViewInsertEventArgs>-Klasse finden Sie im <xref:System.Web.UI.WebControls.DetailsViewInsertEventArgs.%23ctor%2A>-Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DetailsViewInsertEventArgs> -Objekt übergeben, um den Ereignishandler für das <xref:System.Web.UI.WebControls.DetailsView.ItemInserting> Ereignis, um eine Insert-Vorgang "Abbrechen".  
+  
+ [!code-aspx-csharp[DetailsViewInsertEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewInsertEventArgs/CS/detailsviewinserteventargscs.aspx#1)]
+ [!code-aspx-vb[DetailsViewInsertEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewInsertEventArgs/VB/detailsviewinserteventargsvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DetailsViewInsertEventArgs (object commandArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object commandArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DetailsViewInsertEventArgs.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="commandArgument" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="commandArgument">Ein optionales Befehlsargument übergeben wird, um die <see cref="T:System.Web.UI.WebControls.DetailsView" /> Steuerelement.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.DetailsViewInsertEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.DetailsViewInsertEventArgs> Klasse.  
+  
+ Die folgende Tabelle zeigt die anfängliche Eigenschaftswert für eine Instanz von der <xref:System.Web.UI.WebControls.DetailsViewInsertEventArgs> Klasse.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.DetailsViewInsertEventArgs.CommandArgument%2A>|Der Wert des `commandArgument`-Parameters.|  
+  
+> [!NOTE]
+>  Dieser Konstruktor wird hauptsächlich von Steuerelemententwicklern verwendet, beim Auslösen von Ereignissen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandArgument">
+      <MemberSignature Language="C#" Value="public object CommandArgument { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object CommandArgument" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DetailsViewInsertEventArgs.CommandArgument" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Befehlsargument für der Insert-Vorgang zum Übergeben der <see cref="T:System.Web.UI.WebControls.DetailsView" /> Steuerelement.</summary>
+        <value>Das Befehlsargument für den Einfügevorgang zu übergeben, um die <see cref="T:System.Web.UI.WebControls.DetailsView" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DetailsViewInsertEventArgs.CommandArgument%2A> Eigenschaft zum Bestimmen des Werts, der das Befehlsargument übergeben wird, auf die <xref:System.Web.UI.WebControls.DetailsView> Steuerelement. Die <xref:System.Web.UI.WebControls.DetailsViewInsertEventArgs.CommandArgument%2A> Eigenschaft wird verwendet, um zusätzliche Informationen zum Einfügevorgang.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Festlegen der <xref:System.Web.UI.WebControls.Button.CommandArgument%2A> Eigenschaft des eine <xref:System.Web.UI.WebControls.Button> Steuerung und Abrufen und verwenden Sie den Wert während der <xref:System.Web.UI.WebControls.DetailsView.ItemInserting> Ereignis.  
+  
+ [!code-aspx-csharp[DetailsViewInsertEventArgsCommandArgument#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewInsertEventArgsCommandArgument/CS/InsertCommand.aspx#1)]
+ [!code-aspx-vb[DetailsViewInsertEventArgsCommandArgument#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewInsertEventArgsCommandArgument/VB/InsertCommandVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary Values" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DetailsViewInsertEventArgs.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Wörterbuch, das Feld Name/Wert-Paare für den Datensatz einfügen enthält.</summary>
+        <value>Ein <see cref="T:System.Collections.Specialized.IOrderedDictionary" /> , enthält ein Wörterbuch von Schlüsselfeld-Wert-Paare für den Datensatz eingefügt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DetailsViewInsertEventArgs.Values%2A> Eigenschaft, um den Zugriff auf die Werte der Felder für den Datensatz eingefügt. Beispielsweise können Sie HTML-codiert sind des Datensatzes vor dem Einfügen in der Datenquelle.  
+  
+ Die <xref:System.Web.UI.WebControls.DetailsViewInsertEventArgs.Values%2A> Eigenschaft gibt ein Objekt, implementiert die <xref:System.Collections.Specialized.IOrderedDictionary> Schnittstelle. Das Objekt enthält <xref:System.Collections.DictionaryEntry> Objekte, die die Felder des Datensatzes darstellen.  
+  
+> [!NOTE]
+>  Abzukürzen, können Sie auch den Indexer, der die <xref:System.Collections.Specialized.IOrderedDictionary> Objekt Zugriff auf das Feld Werte direkt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DetailsViewInsertEventArgs.Values%2A> Eigenschaft, um den Zugriff auf die Werte von Feldern für den Datensatz eingefügt wird.  
+  
+ [!code-aspx-csharp[DetailsViewInsertEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewInsertEventArgs/CS/detailsviewinserteventargscs.aspx#1)]
+ [!code-aspx-vb[DetailsViewInsertEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewInsertEventArgs/VB/detailsviewinserteventargsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

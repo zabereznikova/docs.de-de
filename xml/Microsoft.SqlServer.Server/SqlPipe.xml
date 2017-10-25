@@ -1,0 +1,322 @@
+<Type Name="SqlPipe" FullName="Microsoft.SqlServer.Server.SqlPipe">
+  <TypeSignature Language="C#" Value="public sealed class SqlPipe" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SqlPipe extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.SqlServer.Server.SqlPipe" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Können verwaltete gespeicherte Prozeduren prozessintern ausgeführt wird, für eine SQL Server-Datenbank Ergebnisse zurück an den Aufrufer zurückgegeben. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz dieser Klasse über verwaltete gespeicherte Prozeduren zur Verfügung gestellt wird die <xref:Microsoft.SqlServer.Server.SqlContext.Pipe%2A> Eigenschaft von der <xref:Microsoft.SqlServer.Server.SqlContext> Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Data.SqlClient.SqlConnection> und <xref:System.Data.SqlClient.SqlCommand> zum Auswählen von Zeilen aus einer Datenquelle in einer gespeicherten Prozedur. Anschließend wird eine <xref:Microsoft.SqlServer.Server.SqlPipe> führen Sie den Befehl und die Ergebnisse zurück an den Client gesendet.  
+  
+ [!code-csharp[DataWorks SqlPipe#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlPipe/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlPipe#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlPipe/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ExecuteAndSend">
+      <MemberSignature Language="C#" Value="public void ExecuteAndSend (System.Data.SqlClient.SqlCommand command);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ExecuteAndSend(class System.Data.SqlClient.SqlCommand command) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlPipe.ExecuteAndSend(System.Data.SqlClient.SqlCommand)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="System.Data.SqlClient.SqlCommand" />
+      </Parameters>
+      <Docs>
+        <param name="command">Die <see cref="T:System.Data.SqlClient.SqlCommand" /> Objekt, das ausgeführt werden.</param>
+        <summary>Führt den Befehl, der als Parameter übergeben, und die Ergebnisse an den Client gesendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zusätzlich zu den tatsächlichen Ergebnisse werden andere Nachrichten und der Fehler auch direkt an den Client gesendet.  
+  
+ Output-Parameter und Rückgabewerte werden nicht an den Client gesendet. Diese sind für den Aufrufer über die Parameters-Auflistung, der das Befehlsobjekt verfügbar.  
+  
+ Wenn der Befehl nicht auf eine prozessinterne Verbindung gebunden ist ein <xref:System.InvalidOperationException> ausgelöst wird. Diese Methode wird auf Befehle gebunden, die für Out-of-Process-Verbindungen nicht unterstützt.  
+  
+ Treten Fehler in der <xref:System.Data.SqlClient.SqlCommand> -Objekt, das gesendet wurde, werden Ausnahmen an die Pipe gesendet, aber eine Kopie wird auch den aufrufenden verwalteten Code gesendet,. Wenn der aufrufende Code die Ausnahme nicht abfängt, wird es im Stapel an den Transact-SQL-Code weitergeben und zweimal in der Ausgabe angezeigt. Wenn der aufrufende Code die Ausnahme abfängt, der Pipe-Consumer wird der Fehler weiterhin angezeigt, aber es werden Fehler aufgrund doppelter.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird <xref:System.Data.SqlClient.SqlConnection> und <xref:System.Data.SqlClient.SqlCommand> zum Auswählen von Zeilen aus einer Datenquelle in einer gespeicherten Prozedur. Anschließend wird eine <xref:Microsoft.SqlServer.Server.SqlPipe> führen Sie den Befehl und die Ergebnisse zurück an den Client gesendet.  
+  
+ [!code-csharp[DataWorks SqlPipe.ExecuteAndSend#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlPipe.ExecuteAndSend/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlPipe.ExecuteAndSend#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlPipe.ExecuteAndSend/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="command" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Diese Methode wird auf Befehle gebunden, die für Out-of-Process-Verbindungen nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSendingResults">
+      <MemberSignature Language="C#" Value="public bool IsSendingResults { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSendingResults" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlPipe.IsSendingResults" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:Microsoft.SqlServer.Server.SqlPipe" /> befindet sich im Modus der einzelnen Resultsets zurück an den Client senden. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="M:Microsoft.SqlServer.Server.SqlPipe.SendResultsStart(Microsoft.SqlServer.Server.SqlDataRecord)" /> -Methode aufgerufen wurde und die <see cref="T:Microsoft.SqlServer.Server.SqlPipe" /> befindet sich im Modus des Sendens von einzelnen Resultsets zurück an den Client; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Send">
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Sendet Ergebnisse direkt an den Client oder die aktuelle Consumer der Ausgabe an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die **senden** -Methode sendet Daten direkt an den Client oder Aufrufer. Normalerweise ist es dem Client, der die Ausgabe der **Pipe** -Methode, aber im Fall von geschachtelten CLR gespeicherte Prozeduren, die Consumer der Ausgabe auch kann eine gespeicherte Prozedur handeln. Z. B. die prozedur1 ruft <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> mit dem Befehlstext "EXEC Procedure2". Bei Procedure2 handelt es ist auch eine verwaltete gespeicherte Prozedur. Wenn Procedure2 jetzt ruft <xref:Microsoft.SqlServer.Server.SqlPipe.Send%2A>, wird die Zeile an den Reader von Procedure1, nicht an den Client gesendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Send">
+      <MemberSignature Language="C#" Value="public void Send (Microsoft.SqlServer.Server.SqlDataRecord record);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Send(class Microsoft.SqlServer.Server.SqlDataRecord record) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlPipe.Send(Microsoft.SqlServer.Server.SqlDataRecord)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="record" Type="Microsoft.SqlServer.Server.SqlDataRecord" />
+      </Parameters>
+      <Docs>
+        <param name="record">Einzeiliges Resultset an den Client gesendet: ein <see cref="T:Microsoft.SqlServer.Server.SqlDataRecord" /> Objekt.</param>
+        <summary>Sendet ein einzeiliges Resultset direkt an den Client oder die aktuelle Consumer der Ausgabe an.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="record" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Send">
+      <MemberSignature Language="C#" Value="public void Send (System.Data.SqlClient.SqlDataReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Send(class System.Data.SqlClient.SqlDataReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlPipe.Send(System.Data.SqlClient.SqlDataReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Data.SqlClient.SqlDataReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Die Einfügung mehrerer Zeilen Resultset an den Client gesendet werden: eine <see cref="T:System.Data.SqlClient.SqlDataReader" /> Objekt.</param>
+        <summary>Sendet eine mehrzeilige Resultset direkt an den Client oder die aktuelle Consumer der Ausgabe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Data.SqlClient.SqlDataReader> Objekt übergeben, wie ein Parameter Spalten ausgeblendet wurden, diese Spalten werden nicht weitergegeben, um das Resultset an den Client gesendet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="reader" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Send">
+      <MemberSignature Language="C#" Value="public void Send (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Send(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlPipe.Send(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Zeichenfolge, die an den Client gesendet werden.</param>
+        <summary>Sendet eine zeichenfolgenmeldung direkt an den Client oder die aktuelle Consumer der Ausgabe an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Zeichenfolge wird als eine informative Meldung an dem Client gesendet. Clientanwendungen können Nachrichten durch verschiedene Mechanismen, abhängig von den Data Access-Anwendungsprogrammierschnittstelle (API) überwachen, die sie verwenden. Z. B. wenn der Client ADO.NET verwendet, das Übertragen von Nachrichten über die <xref:System.Data.SqlClient.SqlConnection.InfoMessage> Ereignis.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:Microsoft.SqlServer.Server.SqlPipe.Send%2A> Methode, um eine Meldungszeichenfolge direkt an den Client zu senden.  
+  
+ [!code-csharp[DataWorks SqlPipe.Send#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlPipe.Send/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlPipe.Send#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlPipe.Send/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <paramref name="message" /> ist länger als 4.000 Zeichen.</exception>
+        <exception cref="T:System.ArgumentNullException"><paramref name="message" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SendResultsEnd">
+      <MemberSignature Language="C#" Value="public void SendResultsEnd ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SendResultsEnd() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlPipe.SendResultsEnd" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Markiert das Ende eines Resultsets und gibt die <see cref="T:Microsoft.SqlServer.Server.SqlPipe" /> Instanz an den Ausgangszustand zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwaltete gespeicherte Prozeduren können Resultsets senden, für Clients, die nicht implementiert sind eine <xref:System.Data.SqlClient.SqlDataReader>. Diese Methode zusammen mit <xref:Microsoft.SqlServer.Server.SqlPipe.SendResultsStart%2A> und <xref:Microsoft.SqlServer.Server.SqlPipe.SendResultsRow%2A>, ermöglicht es gespeicherten Prozeduren, benutzerdefinierte Resultsets an den Client zu senden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt ein neues <xref:Microsoft.SqlServer.Server.SqlDataRecord> und dessen <xref:Microsoft.SqlServer.Server.SqlMetaData>. Im Beispiel wird dann kennzeichnet den Anfang eines Resultsets mithilfe der <xref:Microsoft.SqlServer.Server.SqlPipe.SendResultsStart%2A> Methode, sendet die Datensätze mit Beispieldaten zurück an den Client mithilfe der <xref:Microsoft.SqlServer.Server.SqlPipe.SendResultsRow%2A> -Methode und markiert das Ende des Resultsets festgelegt, mit der <xref:Microsoft.SqlServer.Server.SqlPipe.SendResultsEnd%2A> Methode.  
+  
+ [!code-csharp[DataWorks SqlPipe.SendResultsEnd#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlPipe.SendResultsEnd/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlPipe.SendResultsEnd#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlPipe.SendResultsEnd/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="M:Microsoft.SqlServer.Server.SqlPipe.SendResultsStart(Microsoft.SqlServer.Server.SqlDataRecord)" /> Methode wurde zuvor nicht aufgerufen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SendResultsRow">
+      <MemberSignature Language="C#" Value="public void SendResultsRow (Microsoft.SqlServer.Server.SqlDataRecord record);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SendResultsRow(class Microsoft.SqlServer.Server.SqlDataRecord record) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlPipe.SendResultsRow(Microsoft.SqlServer.Server.SqlDataRecord)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="record" Type="Microsoft.SqlServer.Server.SqlDataRecord" />
+      </Parameters>
+      <Docs>
+        <param name="record">Ein <see cref="T:Microsoft.SqlServer.Server.SqlDataRecord" /> Objekt mit den Spaltenwerten für die Zeile an den Client gesendet werden. Das Schema für den Datensatz muss dem Schema, das durch die Metadaten des beschriebenen entsprechen der <see cref="T:Microsoft.SqlServer.Server.SqlDataRecord" /> übergeben, um die <see cref="M:Microsoft.SqlServer.Server.SqlPipe.SendResultsStart(Microsoft.SqlServer.Server.SqlDataRecord)" /> Methode.</param>
+        <summary>Sendet eine einzelne Zeile mit Daten an den Client zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwaltete gespeicherte Prozeduren können Resultsets senden, für Clients, die nicht implementiert sind eine <xref:System.Data.SqlClient.SqlDataReader>. Diese Methode zusammen mit <xref:Microsoft.SqlServer.Server.SqlPipe.SendResultsStart%2A> und <xref:Microsoft.SqlServer.Server.SqlPipe.SendResultsEnd%2A>, ermöglicht es gespeicherten Prozeduren, benutzerdefinierte Resultsets an den Client zu senden.  
+  
+ Die <xref:Microsoft.SqlServer.Server.SqlPipe.SendResultsRow%2A> Methode sendet eine einzelne Zeile mit Daten an den Client zurück. Zeilen können anschließend an den Aufrufer zurückgegeben werden, durch den Aufruf <xref:Microsoft.SqlServer.Server.SqlPipe.SendResultsRow%2A>, einmal für jede Zeile, die gesendet werden. Nachdem alle Zeilen gesendet wurden, einen Aufruf der <xref:Microsoft.SqlServer.Server.SqlPipe.SendResultsEnd%2A> Methode ist erforderlich, um das Ende des Resultsets zu markieren.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt ein neues <xref:Microsoft.SqlServer.Server.SqlDataRecord> und dessen <xref:Microsoft.SqlServer.Server.SqlMetaData>. Im Beispiel wird dann kennzeichnet den Anfang eines Resultsets mithilfe der <xref:Microsoft.SqlServer.Server.SqlPipe.SendResultsStart%2A> Methode, sendet die Datensätze mit Beispieldaten zurück an den Client mithilfe der <xref:Microsoft.SqlServer.Server.SqlPipe.SendResultsRow%2A> -Methode und markiert das Ende des Resultsets festgelegt, mit der <xref:Microsoft.SqlServer.Server.SqlPipe.SendResultsEnd%2A> Methode.  
+  
+ [!code-csharp[DataWorks SqlPipe.SendResultsRow#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlPipe.SendResultsRow/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlPipe.SendResultsRow#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlPipe.SendResultsRow/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="record" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="M:Microsoft.SqlServer.Server.SqlPipe.SendResultsStart(Microsoft.SqlServer.Server.SqlDataRecord)" /> Methode wurde zuvor nicht aufgerufen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SendResultsStart">
+      <MemberSignature Language="C#" Value="public void SendResultsStart (Microsoft.SqlServer.Server.SqlDataRecord record);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SendResultsStart(class Microsoft.SqlServer.Server.SqlDataRecord record) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlPipe.SendResultsStart(Microsoft.SqlServer.Server.SqlDataRecord)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="record" Type="Microsoft.SqlServer.Server.SqlDataRecord" />
+      </Parameters>
+      <Docs>
+        <param name="record">Ein <see cref="T:Microsoft.SqlServer.Server.SqlDataRecord" /> Objekt aus dem Metadaten extrahiert werden, und verwendet, um das Resultset zu beschreiben.</param>
+        <summary>Kennzeichnet den Anfang eines Resultsets zurück an den Client gesendet werden, und verwendet den Datensatz-Parameter, um die Metadaten zu erstellen, die das Resultset beschreibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwaltete gespeicherte Prozeduren können Resultsets senden, für Clients, die nicht implementiert sind eine <xref:System.Data.SqlClient.SqlDataReader>. Diese Methode zusammen mit <xref:Microsoft.SqlServer.Server.SqlPipe.SendResultsRow%2A> und <xref:Microsoft.SqlServer.Server.SqlPipe.SendResultsEnd%2A>, ermöglicht es gespeicherten Prozeduren, benutzerdefinierte Resultsets an den Client zu senden.  
+  
+ Die <xref:Microsoft.SqlServer.Server.SqlPipe.SendResultsStart%2A> Methode kennzeichnet den Anfang eines Resultsets und verwendet den Datensatz-Parameter, um die Metadaten zu erstellen, die das Resultset beschreibt. Alle nachfolgenden Zeilen, die gesendet, mit der <xref:Microsoft.SqlServer.Server.SqlPipe.SendResultsRow%2A> -Methode, müssen dieser Metadatendefinition entsprechen.  
+  
+ Beachten Sie, dass nach der Aufruf <xref:Microsoft.SqlServer.Server.SqlPipe.SendResultsStart%2A>, nur <xref:Microsoft.SqlServer.Server.SqlPipe.SendResultsRow%2A> und <xref:Microsoft.SqlServer.Server.SqlPipe.SendResultsEnd%2A> aufgerufen werden kann. Jede andere Methode in derselben Instanz von <xref:Microsoft.SqlServer.Server.SqlPipe> löst eine <xref:System.InvalidOperationException>. <xref:Microsoft.SqlServer.Server.SqlPipe.SendResultsEnd%2A>Legt <xref:Microsoft.SqlServer.Server.SqlPipe> zurück an den Ausgangszustand, in dem andere Methoden aufgerufen werden können.  
+  
+ Nach dem Steuerelement in Transact-SQL-CLR-Ausführung zurückgibt, versuchen Sie nicht, eine statische oder lokale Variable, die mit CLR-Speicher initialisiert verwenden. Beispielsweise nicht speichern, die eine Instanz einer prozessinternen-Klasse, zum Beispiel `SQLDataRecord`, nachdem steuerelementrückgabe aus der CLR verwendet werden wird. Eine Ausnahme ist die `SQLMetaData` in Prozessklasse.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt ein neues <xref:Microsoft.SqlServer.Server.SqlDataRecord> und dessen <xref:Microsoft.SqlServer.Server.SqlMetaData>. Im Beispiel wird dann kennzeichnet den Anfang eines Resultsets mithilfe der <xref:Microsoft.SqlServer.Server.SqlPipe.SendResultsStart%2A> Methode, sendet die Datensätze mit Beispieldaten zurück an den Client mithilfe der <xref:Microsoft.SqlServer.Server.SqlPipe.SendResultsRow%2A> -Methode und markiert das Ende des Resultsets festgelegt, mit der <xref:Microsoft.SqlServer.Server.SqlPipe.SendResultsEnd%2A> Methode.  
+  
+ [!code-csharp[DataWorks SqlPipe.SendResultsStart#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlPipe.SendResultsStart/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlPipe.SendResultsStart#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlPipe.SendResultsStart/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="record" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="record" /> enthält keine Spalten oder wurde nicht initialisiert.</exception>
+        <exception cref="T:System.InvalidOperationException">Eine andere Methode als <see cref="M:Microsoft.SqlServer.Server.SqlPipe.SendResultsRow(Microsoft.SqlServer.Server.SqlDataRecord)" /> oder <see cref="M:Microsoft.SqlServer.Server.SqlPipe.SendResultsEnd" /> wurde aufgerufen, nachdem die <see cref="M:Microsoft.SqlServer.Server.SqlPipe.SendResultsStart(Microsoft.SqlServer.Server.SqlDataRecord)" /> Methode.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

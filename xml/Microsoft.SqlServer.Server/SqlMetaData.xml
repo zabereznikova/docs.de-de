@@ -1,0 +1,2592 @@
+<Type Name="SqlMetaData" FullName="Microsoft.SqlServer.Server.SqlMetaData">
+  <TypeSignature Language="C#" Value="public sealed class SqlMetaData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SqlMetaData extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.SqlServer.Server.SqlMetaData" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.SqlClient</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt an, und Ruft Metadateninformationen von Parametern und Spalten des <see cref="T:Microsoft.SqlServer.Server.SqlDataRecord" /> Objekte. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt die Erstellung mehrerer <xref:Microsoft.SqlServer.Server.SqlMetaData> Objekte, die die Spaltenmetadaten eines Datensatzes und die Erstellung von beschreiben eine <xref:Microsoft.SqlServer.Server.SqlDataRecord>. Die Spaltenwerte die <xref:Microsoft.SqlServer.Server.SqlDataRecord> festgelegt sind und die <xref:Microsoft.SqlServer.Server.SqlDataRecord> wird gesendet, um dem aufrufenden Programm verwendet die <xref:Microsoft.SqlServer.Server.SqlContext> Klasse.  
+  
+ [!code-csharp[DataWorks SqlMetaData Samples#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlMetaData Samples/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlMetaData Samples#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlMetaData Samples/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlMetaData (string name, System.Data.SqlDbType dbType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Data.SqlDbType dbType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.#ctor(System.String,System.Data.SqlDbType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="dbType" Type="System.Data.SqlDbType" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Spalte.</param>
+        <param name="dbType">Der SQL Server-Typ des Parameters oder der Spalte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Klasse mit dem angegebenen Spaltennamen und Typ.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dürfen nur aus die folgenden als an den Konstruktor zu übergebenden `dbType`: `Bit`, `BigInt`, `DateTime`, `Decimal`, `Float`, `Int`, `Money`, `Numeric`, `SmallDateTime`, `SmallInt` , `SmallMoney`, `TimeStamp`, `TinyInt`, `UniqueIdentifier`, `Xml`.  
+  
+ Im folgenden sind die Standardwerte zugewiesen `dbType`, abhängig von der `SqlDbType` (die <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionDatabase%2A>, <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionName%2A>, <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionOwningSchema%2A>, und <xref:Microsoft.SqlServer.Server.SqlMetaData.Type%2A> Eigenschaften werden festgelegt, um `null`):  
+  
+|SqlDbType|Maximale Länge|Genauigkeit|Skalieren|Gebietsschema|Vergleichen von Optionen|  
+|---------------|--------------------|---------------|-----------|------------|---------------------|  
+|`Bit`|1|1|0|0|Keine|  
+|`BigInt`|8|19|0|0|Keine|  
+|`DateTime`|8|23|3|0|Keine|  
+|`Decimal`|9|18|0|0|Keine|  
+|`Float`|8|53|0|0|Keine|  
+|`Int`|4|10|0|0|Keine|  
+|`Money`|8|19|4|0|Keine|  
+|`Numeric`|9|18|0|0|Keine|  
+|`SmallDateTime`|4|16|0|0|Keine|  
+|`SmallInt`|2|5|0|0|Keine|  
+|`SmallMoney`|4|10|4|0|Keine|  
+|`TimeStamp`|8|0|0|0|Keine|  
+|`TinyInt`|1|3|0|0|Keine|  
+|`UniqueIdentifier`|16|0|0|0|Keine|  
+|`Xml`|Max (-1)|0|0|0|IgnoreCase-IgnoreKanaType, IgnoreWidth|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt ein neues <xref:Microsoft.SqlServer.Server.SqlMetaData> Objekt durch Angeben der Spalte namens und eines Spaltendatentyps von <xref:System.Data.SqlDbType>.`Int`.  
+  
+ [!code-csharp[DataWorks SqlMetaData Samples#3](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlMetaData Samples/CS/source.cs#3)]
+ [!code-vb[DataWorks SqlMetaData Samples#3](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlMetaData Samples/VB/source.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="Name" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Ein <see langword="SqlDbType" /> , ist nicht zulässig, als an den Konstruktor übergebene <paramref name="dbType" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlMetaData (string name, System.Data.SqlDbType dbType, long maxLength);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Data.SqlDbType dbType, int64 maxLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.#ctor(System.String,System.Data.SqlDbType,System.Int64)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="dbType" Type="System.Data.SqlDbType" />
+        <Parameter Name="maxLength" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Spalte.</param>
+        <param name="dbType">Der SQL Server-Typ des Parameters oder der Spalte.</param>
+        <param name="maxLength">Die maximale Länge des angegebenen Typs.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Klasse mit dem angegebenen Spaltennamen, den Typ und die maximale Länge.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dürfen nur aus die folgenden als an den Konstruktor zu übergebenden `dbType`: `Binary`, `Char`, `Image`, `NChar`, `Ntext`, `NVarChar`, `Text`, `VarBinary`, `VarChar`.  
+  
+ Nur eine `maxLength` Spezifikation des <xref:Microsoft.SqlServer.Server.SqlMetaData.Max%2A>, oder-1 ist zulässig, für die ein `dbType` von `Text`, `NText`, oder `Image`.  
+  
+ Für eine `dbType` von `Varchar`, `Nvarchar`, oder `VarBinary`, eine Längenangabe von <xref:Microsoft.SqlServer.Server.SqlMetaData.Max%2A>, oder-1 und deklariert die Metadaten als varchar(max), nvarchar(max) oder als nvarbinary(max) bzw..  
+  
+ Im folgenden sind die Standardwerte zugewiesen `dbType`, abhängig von der `SqlDbType` (die <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionDatabase%2A>, <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionName%2A>, <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionOwningSchema%2A>, und <xref:Microsoft.SqlServer.Server.SqlMetaData.Type%2A> Eigenschaften werden festgelegt, um `null`):  
+  
+|SqlDbType|Genauigkeit|Skalieren|Gebietsschema|Vergleichen von Optionen|  
+|---------------|---------------|-----------|------------|---------------------|  
+|Binär|0|0|0|IgnoreCase-IgnoreKanaType, IgnoreWidth|  
+|Char|0|0|\<Thread >|IgnoreCase-IgnoreKanaType, IgnoreWidth|  
+|Bild|0|0|0|Keine|  
+|NChar|0|0|\<Thread >|IgnoreCase-IgnoreKanaType, IgnoreWidth|  
+|NText|0|0|\<Thread >|IgnoreCase-IgnoreKanaType, IgnoreWidth|  
+|NVarChar|0|0|\<Thread >|IgnoreCase-IgnoreKanaType, IgnoreWidth|  
+|Text|0|0|\<Thread >|IgnoreCase-IgnoreKanaType, IgnoreWidth|  
+|VarBinary|0|0||IgnoreCase-IgnoreKanaType, IgnoreWidth|  
+|VarChar|0|0|\<Thread >|IgnoreCase-IgnoreKanaType, IgnoreWidth|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt ein neues <xref:Microsoft.SqlServer.Server.SqlMetaData> Objekt durch Angabe des Spaltennamens eines Spaltendatentyps von <xref:System.Data.SqlDbType> `.NVarChar`, und einer maximalen Länge von 12 Zeichen lang sein.  
+  
+ [!code-csharp[DataWorks SqlMetaData Samples#2](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlMetaData Samples/CS/source.cs#2)]
+ [!code-vb[DataWorks SqlMetaData Samples#2](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlMetaData Samples/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="Name" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">SqlDbType ist nicht zulässig als an den Konstruktor übergeben wurde <paramref name="dbType" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlMetaData (string name, System.Data.SqlDbType dbType, Type userDefinedType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Data.SqlDbType dbType, class System.Type userDefinedType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.#ctor(System.String,System.Data.SqlDbType,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="dbType" Type="System.Data.SqlDbType" />
+        <Parameter Name="userDefinedType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Spalte.</param>
+        <param name="dbType">Der SQL Server-Typ des Parameters oder der Spalte.</param>
+        <param name="userDefinedType">Ein <see cref="T:System.Type" /> -Instanz, die auf den UDT verweist.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Klasse mit dem angegebenen Spaltennamen, den Typ und den benutzerdefinierten Typ (UDT).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nur die folgenden `SqlDbType` kann als an den Konstruktor zu übergebenden `dbType`: `UDT`.  
+  
+ Im folgenden sind die Standardwerte zugewiesen `dbType`, abhängig von der `SqlDbType` (die <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionDatabase%2A>, <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionName%2A>, <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionOwningSchema%2A>, und <xref:Microsoft.SqlServer.Server.SqlMetaData.Type%2A> Eigenschaften werden festgelegt, um `null`):  
+  
+|SqlDbType|Maximale Länge|Genauigkeit|Skalieren|Gebietsschema|Vergleichen von Optionen|  
+|---------------|--------------------|---------------|-----------|------------|---------------------|  
+|UDT|\<Maximallänge des Typs > oder -1|0|0|0|Keine|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="Name" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">SqlDbType ist nicht zulässig als an den Konstruktor übergeben wurde <paramref name="dbType" />, oder <paramref name="userDefinedType" /> verweist auf einen Typ, der keinen <see cref="T:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute" /> deklariert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlMetaData (string name, System.Data.SqlDbType dbType, byte precision, byte scale);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Data.SqlDbType dbType, unsigned int8 precision, unsigned int8 scale) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.#ctor(System.String,System.Data.SqlDbType,System.Byte,System.Byte)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="dbType" Type="System.Data.SqlDbType" />
+        <Parameter Name="precision" Type="System.Byte" />
+        <Parameter Name="scale" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Parameters oder der Spalte.</param>
+        <param name="dbType">Der SQL Server-Typ des Parameters oder der Spalte.</param>
+        <param name="precision">Die Genauigkeit des Parameters oder der Spalte.</param>
+        <param name="scale">Die Dezimalstellen des Parameters oder der Spalte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Klasse mit den angegebenen Spaltennamen, Datentyp, Genauigkeit und Dezimalstellenanzahl.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nur die folgenden `SqlDbType` kann als an den Konstruktor zu übergebenden `dbType`: `Decimal`.  
+  
+ Im folgenden sind die Standardwerte zugewiesen `dbType`, abhängig von der `SqlDbType` (die <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionDatabase%2A>, <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionName%2A>, <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionOwningSchema%2A>, und <xref:Microsoft.SqlServer.Server.SqlMetaData.Type%2A> Eigenschaften werden festgelegt, um `null`):  
+  
+|SqlDbType|Maximale Länge|Genauigkeit|Skalieren|Gebietsschema|Vergleichen von Optionen|  
+|---------------|--------------------|---------------|-----------|------------|---------------------|  
+|Decimal|9|18|0|0|Keine|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="Name" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Ein <see langword="SqlDbType" /> , ist nicht zulässig, als an den Konstruktor übergebene <paramref name="dbType" />, oder <paramref name="scale" /> war größer als <paramref name="precision" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlMetaData (string name, System.Data.SqlDbType dbType, Type userDefinedType, string serverTypeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Data.SqlDbType dbType, class System.Type userDefinedType, string serverTypeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.#ctor(System.String,System.Data.SqlDbType,System.Type,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="dbType" Type="System.Data.SqlDbType" />
+        <Parameter Name="userDefinedType" Type="System.Type" />
+        <Parameter Name="serverTypeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Spalte.</param>
+        <param name="dbType">Der SQL Server-Typ des Parameters oder der Spalte.</param>
+        <param name="userDefinedType">Ein <see cref="T:System.Type" /> -Instanz, die auf den UDT verweist.</param>
+        <param name="serverTypeName">Der Name des SQL Server-Typ für <c>UserDefinedType</c>.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Klasse mit dem angegebenen Spaltennamen, die den benutzerdefinierten Typ (UDT) und die SQLServer-Typ.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlMetaData (string name, System.Data.SqlDbType dbType, long maxLength, long locale, System.Data.SqlTypes.SqlCompareOptions compareOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Data.SqlDbType dbType, int64 maxLength, int64 locale, valuetype System.Data.SqlTypes.SqlCompareOptions compareOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.#ctor(System.String,System.Data.SqlDbType,System.Int64,System.Int64,System.Data.SqlTypes.SqlCompareOptions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="dbType" Type="System.Data.SqlDbType" />
+        <Parameter Name="maxLength" Type="System.Int64" />
+        <Parameter Name="locale" Type="System.Int64" />
+        <Parameter Name="compareOptions" Type="System.Data.SqlTypes.SqlCompareOptions" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Parameters oder der Spalte.</param>
+        <param name="dbType">Der SQL Server-Typ des Parameters oder der Spalte.</param>
+        <param name="maxLength">Die maximale Länge des angegebenen Typs.</param>
+        <param name="locale">Die Gebietsschema-ID des Parameters oder der Spalte.</param>
+        <param name="compareOptions">Die Vergleichsregeln des Parameters oder der Spalte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> -Klasse mit den angegebenen Spaltennamen, den Typ, die maximale Länge, Gebietsschema und Vergleichsoptionen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dürfen nur aus die folgenden als an den Konstruktor zu übergebenden `dbType`: `Char`, `NChar`, `Ntext`, `NVarChar`, `Text`, `VarChar`.  
+  
+ Nur eine `maxLength` Spezifikation des <xref:Microsoft.SqlServer.Server.SqlMetaData.Max%2A>, oder-1 ist, ist zulässig, für die ein `dbType` von `Text` oder `NText`.  
+  
+ Für eine `dbType` von `Varchar` oder `Nvarchar`, eine Längenangabe von <xref:Microsoft.SqlServer.Server.SqlMetaData.Max%2A>, oder-1 und deklariert die Metadaten als varchar(max) bzw. nvarchar(max) bzw..  
+  
+ Im folgenden sind die Standardwerte zugewiesen `dbType`, abhängig von der `SqlDbType` (die <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionDatabase%2A>, <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionName%2A>, <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionOwningSchema%2A>, und <xref:Microsoft.SqlServer.Server.SqlMetaData.Type%2A> Eigenschaften werden festgelegt, um `null`):  
+  
+|SqlDbType|Genauigkeit|Skalieren|  
+|---------------|---------------|-----------|  
+|`Char`|0|0|  
+|`NChar`|0|0|  
+|`NText`|0|0|  
+|`NVarChar`|0|0|  
+|`Text`|0|0|  
+|`VarChar`|0|0|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="Name" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">SqlDbType ist nicht zulässig als an den Konstruktor übergeben wurde <paramref name="dbType" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlMetaData (string name, System.Data.SqlDbType dbType, string database, string owningSchema, string objectName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Data.SqlDbType dbType, string database, string owningSchema, string objectName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.#ctor(System.String,System.Data.SqlDbType,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="dbType" Type="System.Data.SqlDbType" />
+        <Parameter Name="database" Type="System.String" />
+        <Parameter Name="owningSchema" Type="System.String" />
+        <Parameter Name="objectName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Spalte.</param>
+        <param name="dbType">Der SQL Server-Typ des Parameters oder der Spalte.</param>
+        <param name="database">Der Datenbankname der XML-schemaauflistung einer typisierten XML-Instanz.</param>
+        <param name="owningSchema">Der Name der relationalen Schemas der XML-schemaauflistung einer typisierten XML-Instanz.</param>
+        <param name="objectName">Der Name der XML-schemaauflistung einer typisierten XML-Instanz.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> -Klasse mit den angegebenen Spaltennamen, Typ, Name der Datenbank, besitzenden Schema und Objektname.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nur die folgenden `SqlDbType` kann als an den Konstruktor zu übergebenden `dbType`: `Xml`.  
+  
+ Im folgenden sind die Standardwerte zugewiesen `dbType`, abhängig von der `SqlDbType`:  
+  
+|SqlDbType|Maximale Länge|Genauigkeit|Skalieren|Gebietsschema|Vergleichen von Optionen|  
+|---------------|--------------------|---------------|-----------|------------|---------------------|  
+|`Xml`|Max (-1)|0|0|0|IgnoreCase-IgnoreKanaType, IgnoreWidth|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="Name" /> ist <see langword="null" />, oder <paramref name="objectName" /> ist <see langword="null" /> Wenn <paramref name="database" /> und <paramref name="owningSchema" /> sind nicht -<see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">SqlDbType ist nicht zulässig als an den Konstruktor übergeben wurde <paramref name="dbType" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlMetaData (string name, System.Data.SqlDbType dbType, bool useServerDefault, bool isUniqueKey, System.Data.SqlClient.SortOrder columnSortOrder, int sortOrdinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Data.SqlDbType dbType, bool useServerDefault, bool isUniqueKey, valuetype System.Data.SqlClient.SortOrder columnSortOrder, int32 sortOrdinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.#ctor(System.String,System.Data.SqlDbType,System.Boolean,System.Boolean,System.Data.SqlClient.SortOrder,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="dbType" Type="System.Data.SqlDbType" />
+        <Parameter Name="useServerDefault" Type="System.Boolean" />
+        <Parameter Name="isUniqueKey" Type="System.Boolean" />
+        <Parameter Name="columnSortOrder" Type="System.Data.SqlClient.SortOrder" />
+        <Parameter Name="sortOrdinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Spalte.</param>
+        <param name="dbType">Der SQL Server-Typ des Parameters oder der Spalte.</param>
+        <param name="useServerDefault">Gibt an, ob diese Spalte die Standardserverwert verwenden soll.</param>
+        <param name="isUniqueKey">Gibt an, ob die Spalte in der Tabellenwertparameter eindeutig ist.</param>
+        <param name="columnSortOrder">Gibt die Sortierreihenfolge für eine Spalte an.</param>
+        <param name="sortOrdinal">Gibt die Ordnungszahl der Sortierspalte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> -Klasse mit dem angegebenen Spaltennamen und dem Standardserver. Diese Form des Konstruktors unterstützt Tabellenwertparameter können Sie angeben, ob die Spalte in der Tabellenwertparameter, die Sortierreihenfolge für die Spalte und die Ordnungszahl der Sortierspalte eindeutig ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter [Table-Valued Parameters](~/docs/framework/data/adonet/sql/table-valued-parameters.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlMetaData (string name, System.Data.SqlDbType dbType, long maxLength, bool useServerDefault, bool isUniqueKey, System.Data.SqlClient.SortOrder columnSortOrder, int sortOrdinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Data.SqlDbType dbType, int64 maxLength, bool useServerDefault, bool isUniqueKey, valuetype System.Data.SqlClient.SortOrder columnSortOrder, int32 sortOrdinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.#ctor(System.String,System.Data.SqlDbType,System.Int64,System.Boolean,System.Boolean,System.Data.SqlClient.SortOrder,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="dbType" Type="System.Data.SqlDbType" />
+        <Parameter Name="maxLength" Type="System.Int64" />
+        <Parameter Name="useServerDefault" Type="System.Boolean" />
+        <Parameter Name="isUniqueKey" Type="System.Boolean" />
+        <Parameter Name="columnSortOrder" Type="System.Data.SqlClient.SortOrder" />
+        <Parameter Name="sortOrdinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Spalte.</param>
+        <param name="dbType">Der SQL Server-Typ des Parameters oder der Spalte.</param>
+        <param name="maxLength">Die maximale Länge des angegebenen Typs.</param>
+        <param name="useServerDefault">Gibt an, ob diese Spalte die Standardserverwert verwenden soll.</param>
+        <param name="isUniqueKey">Gibt an, ob die Spalte in der Tabellenwertparameter eindeutig ist.</param>
+        <param name="columnSortOrder">Gibt die Sortierreihenfolge für eine Spalte an.</param>
+        <param name="sortOrdinal">Gibt die Ordnungszahl der Sortierspalte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Klasse mit dem angegebenen Spaltennamen, Typ, maximale Länge und Serverstandard. Diese Form des Konstruktors unterstützt Tabellenwertparameter können Sie angeben, ob die Spalte in der Tabellenwertparameter, die Sortierreihenfolge für die Spalte und die Ordnungszahl der Sortierspalte eindeutig ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter [Table-Valued Parameters](~/docs/framework/data/adonet/sql/table-valued-parameters.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlMetaData (string name, System.Data.SqlDbType dbType, byte precision, byte scale, bool useServerDefault, bool isUniqueKey, System.Data.SqlClient.SortOrder columnSortOrder, int sortOrdinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Data.SqlDbType dbType, unsigned int8 precision, unsigned int8 scale, bool useServerDefault, bool isUniqueKey, valuetype System.Data.SqlClient.SortOrder columnSortOrder, int32 sortOrdinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.#ctor(System.String,System.Data.SqlDbType,System.Byte,System.Byte,System.Boolean,System.Boolean,System.Data.SqlClient.SortOrder,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="dbType" Type="System.Data.SqlDbType" />
+        <Parameter Name="precision" Type="System.Byte" />
+        <Parameter Name="scale" Type="System.Byte" />
+        <Parameter Name="useServerDefault" Type="System.Boolean" />
+        <Parameter Name="isUniqueKey" Type="System.Boolean" />
+        <Parameter Name="columnSortOrder" Type="System.Data.SqlClient.SortOrder" />
+        <Parameter Name="sortOrdinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Spalte.</param>
+        <param name="dbType">Der SQL Server-Typ des Parameters oder der Spalte.</param>
+        <param name="precision">Die Genauigkeit des Parameters oder der Spalte.</param>
+        <param name="scale">Die Dezimalstellen des Parameters oder der Spalte.</param>
+        <param name="useServerDefault">Gibt an, ob diese Spalte die Standardserverwert verwenden soll.</param>
+        <param name="isUniqueKey">Gibt an, ob die Spalte in der Tabellenwertparameter eindeutig ist.</param>
+        <param name="columnSortOrder">Gibt die Sortierreihenfolge für eine Spalte an.</param>
+        <param name="sortOrdinal">Gibt die Ordnungszahl der Sortierspalte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> -Klasse mit der angegebenen Spalte Name, Typ, Genauigkeit, Dezimalstellen und Server-Standard. Diese Form des Konstruktors unterstützt Tabellenwertparameter können Sie angeben, ob die Spalte in der Tabellenwertparameter, die Sortierreihenfolge für die Spalte und die Ordnungszahl der Sortierspalte eindeutig ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter [Table-Valued Parameters](~/docs/framework/data/adonet/sql/table-valued-parameters.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlMetaData (string name, System.Data.SqlDbType dbType, long maxLength, byte precision, byte scale, long locale, System.Data.SqlTypes.SqlCompareOptions compareOptions, Type userDefinedType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Data.SqlDbType dbType, int64 maxLength, unsigned int8 precision, unsigned int8 scale, int64 locale, valuetype System.Data.SqlTypes.SqlCompareOptions compareOptions, class System.Type userDefinedType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.#ctor(System.String,System.Data.SqlDbType,System.Int64,System.Byte,System.Byte,System.Int64,System.Data.SqlTypes.SqlCompareOptions,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="dbType" Type="System.Data.SqlDbType" />
+        <Parameter Name="maxLength" Type="System.Int64" />
+        <Parameter Name="precision" Type="System.Byte" />
+        <Parameter Name="scale" Type="System.Byte" />
+        <Parameter Name="locale" Type="System.Int64" />
+        <Parameter Name="compareOptions" Type="System.Data.SqlTypes.SqlCompareOptions" />
+        <Parameter Name="userDefinedType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Spalte.</param>
+        <param name="dbType">Der SQL Server-Typ des Parameters oder der Spalte.</param>
+        <param name="maxLength">Die maximale Länge des angegebenen Typs.</param>
+        <param name="precision">Die Genauigkeit des Parameters oder der Spalte.</param>
+        <param name="scale">Die Dezimalstellen des Parameters oder der Spalte.</param>
+        <param name="locale">Die Gebietsschema-ID des Parameters oder der Spalte.</param>
+        <param name="compareOptions">Die Vergleichsregeln des Parameters oder der Spalte.</param>
+        <param name="userDefinedType">Ein <see cref="T:System.Type" /> -Instanz, die auf den UDT verweist.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> -Klasse mit der angegebenen Spaltenname, Typ, maximale Länge, Genauigkeit, Skala Gebietsschema-ID, Optionen und den benutzerdefinierten Typ (UDT) verglichen werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dürfen nur aus die folgenden als an den Konstruktor zu übergebenden `dbType`: `BigInt`, `Bit`, `BitInt`, `DateTime`, `Decimal`, `Float`, `Image`, `Int`, `Money`, `Ntext` , `Numeric`, `Real`, `SmallDateTime`, `SmallInt`, `SmallMoney`, `Text`, `TimeStamp`, `TinyInt`, `UniqueIdentifier`, `Variant`, `Xml`.  
+  
+ Im folgenden sind die Standardwerte zugewiesen `dbType`, abhängig von der `SqlDbType` (die <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionDatabase%2A>, <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionName%2A>, <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionOwningSchema%2A>, und <xref:Microsoft.SqlServer.Server.SqlMetaData.Type%2A> Eigenschaften werden festgelegt, um `null`):  
+  
+|SqlDbType|Maximale Länge|Genauigkeit|Skalieren|Gebietsschema|Vergleichen von Optionen|  
+|---------------|--------------------|---------------|-----------|------------|---------------------|  
+|`BigInt`|8|19|0|0|Keine|  
+|`Bit`|1|1|0|0|Keine|  
+|`DateTime`|8|23|3|0|Keine|  
+|`Decimal`|9|18|0|0|Keine|  
+|`Float`|8|53|0|0|Keine|  
+|`Image`|Max (-1)|0|0|0|Keine|  
+|`Int`|4|10|0|0|Keine|  
+|`Money`|8|19|4|0|Keine|  
+|`Ntext`|Max (-1)|0|0|\<Thread >|IgnoreCase-IgnoreKanaType, IgnoreWidth|  
+|`Real`|4|24|0|0|Keine|  
+|`Row`|\<Anzahl der Spalten >|0|0|0|Keine|  
+|`SmallDateTime`|4|16|0|0|Keine|  
+|`SmallInt`|2|5|0|0|Keine|  
+|`SmallMoney`|4|10|4|0|Keine|  
+|`Text`|Max (-1)|0|0|\<Thread >|IgnoreCase-IgnoreKanaType, IgnoreWidth|  
+|`TimeStamp`|8|0|0|0|Keine|  
+|`TinyInt`|1|3|0|0|Keine|  
+|`UniqueIdentifier`|16|0|0|0|Keine|  
+|`UDT`|\<Maximallänge des Typs > oder -1|0|0|0|Keine|  
+|`Variant`|8016|0|0|0|Keine|  
+|`Xml`|Max (-1)|0|0|0|IgnoreCase-IgnoreKanaType, IgnoreWidth|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="Name" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Ein <see langword="SqlDbType" /> , ist nicht zulässig, als an den Konstruktor übergebene <paramref name="dbType" />, oder <paramref name="userDefinedType" /> verweist auf einen Typ, der keinen <see cref="T:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute" /> deklariert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlMetaData (string name, System.Data.SqlDbType dbType, Type userDefinedType, string serverTypeName, bool useServerDefault, bool isUniqueKey, System.Data.SqlClient.SortOrder columnSortOrder, int sortOrdinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Data.SqlDbType dbType, class System.Type userDefinedType, string serverTypeName, bool useServerDefault, bool isUniqueKey, valuetype System.Data.SqlClient.SortOrder columnSortOrder, int32 sortOrdinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.#ctor(System.String,System.Data.SqlDbType,System.Type,System.String,System.Boolean,System.Boolean,System.Data.SqlClient.SortOrder,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="dbType" Type="System.Data.SqlDbType" />
+        <Parameter Name="userDefinedType" Type="System.Type" />
+        <Parameter Name="serverTypeName" Type="System.String" />
+        <Parameter Name="useServerDefault" Type="System.Boolean" />
+        <Parameter Name="isUniqueKey" Type="System.Boolean" />
+        <Parameter Name="columnSortOrder" Type="System.Data.SqlClient.SortOrder" />
+        <Parameter Name="sortOrdinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Spalte.</param>
+        <param name="dbType">Der SQL Server-Typ des Parameters oder der Spalte.</param>
+        <param name="userDefinedType">Ein <see cref="T:System.Type" /> -Instanz, die auf den UDT verweist.</param>
+        <param name="serverTypeName">Der Name des SQL Server-Typ für <c>UserDefinedType</c>.</param>
+        <param name="useServerDefault">Gibt an, ob diese Spalte die Standardserverwert verwenden soll.</param>
+        <param name="isUniqueKey">Gibt an, ob die Spalte in der Tabellenwertparameter eindeutig ist.</param>
+        <param name="columnSortOrder">Gibt die Sortierreihenfolge für eine Spalte an.</param>
+        <param name="sortOrdinal">Gibt die Ordnungszahl der Sortierspalte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> -Klasse mit den angegebenen Spaltennamen, Typ, den benutzerdefinierten Typ, SQL Server-Typ und Serverstandard. Diese Form des Konstruktors unterstützt Tabellenwertparameter können Sie angeben, ob die Spalte in der Tabellenwertparameter, die Sortierreihenfolge für die Spalte und die Ordnungszahl der Sortierspalte eindeutig ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter [Table-Valued Parameters](~/docs/framework/data/adonet/sql/table-valued-parameters.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlMetaData (string name, System.Data.SqlDbType dbType, long maxLength, long locale, System.Data.SqlTypes.SqlCompareOptions compareOptions, bool useServerDefault, bool isUniqueKey, System.Data.SqlClient.SortOrder columnSortOrder, int sortOrdinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Data.SqlDbType dbType, int64 maxLength, int64 locale, valuetype System.Data.SqlTypes.SqlCompareOptions compareOptions, bool useServerDefault, bool isUniqueKey, valuetype System.Data.SqlClient.SortOrder columnSortOrder, int32 sortOrdinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.#ctor(System.String,System.Data.SqlDbType,System.Int64,System.Int64,System.Data.SqlTypes.SqlCompareOptions,System.Boolean,System.Boolean,System.Data.SqlClient.SortOrder,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="dbType" Type="System.Data.SqlDbType" />
+        <Parameter Name="maxLength" Type="System.Int64" />
+        <Parameter Name="locale" Type="System.Int64" />
+        <Parameter Name="compareOptions" Type="System.Data.SqlTypes.SqlCompareOptions" />
+        <Parameter Name="useServerDefault" Type="System.Boolean" />
+        <Parameter Name="isUniqueKey" Type="System.Boolean" />
+        <Parameter Name="columnSortOrder" Type="System.Data.SqlClient.SortOrder" />
+        <Parameter Name="sortOrdinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Spalte.</param>
+        <param name="dbType">Der SQL Server-Typ des Parameters oder der Spalte.</param>
+        <param name="maxLength">Die maximale Länge des angegebenen Typs.</param>
+        <param name="locale">Die Gebietsschema-ID des Parameters oder der Spalte.</param>
+        <param name="compareOptions">Die Vergleichsregeln des Parameters oder der Spalte.</param>
+        <param name="useServerDefault">Gibt an, ob diese Spalte die Standardserverwert verwenden soll.</param>
+        <param name="isUniqueKey">Gibt an, ob die Spalte in der Tabellenwertparameter eindeutig ist.</param>
+        <param name="columnSortOrder">Gibt die Sortierreihenfolge für eine Spalte an.</param>
+        <param name="sortOrdinal">Gibt die Ordnungszahl der Sortierspalte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Klasse mit dem angegebenen Spaltennamen, Typ, maximale Länge, Gebietsschema, Vergleichsoptionen und Serverstandard. Diese Form des Konstruktors unterstützt Tabellenwertparameter können Sie angeben, ob die Spalte in der Tabellenwertparameter, die Sortierreihenfolge für die Spalte und die Ordnungszahl der Sortierspalte eindeutig ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter [Table-Valued Parameters](~/docs/framework/data/adonet/sql/table-valued-parameters.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlMetaData (string name, System.Data.SqlDbType dbType, string database, string owningSchema, string objectName, bool useServerDefault, bool isUniqueKey, System.Data.SqlClient.SortOrder columnSortOrder, int sortOrdinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Data.SqlDbType dbType, string database, string owningSchema, string objectName, bool useServerDefault, bool isUniqueKey, valuetype System.Data.SqlClient.SortOrder columnSortOrder, int32 sortOrdinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.#ctor(System.String,System.Data.SqlDbType,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Data.SqlClient.SortOrder,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="dbType" Type="System.Data.SqlDbType" />
+        <Parameter Name="database" Type="System.String" />
+        <Parameter Name="owningSchema" Type="System.String" />
+        <Parameter Name="objectName" Type="System.String" />
+        <Parameter Name="useServerDefault" Type="System.Boolean" />
+        <Parameter Name="isUniqueKey" Type="System.Boolean" />
+        <Parameter Name="columnSortOrder" Type="System.Data.SqlClient.SortOrder" />
+        <Parameter Name="sortOrdinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Spalte.</param>
+        <param name="dbType">Der SQL Server-Typ des Parameters oder der Spalte.</param>
+        <param name="database">Der Datenbankname der XML-schemaauflistung einer typisierten XML-Instanz.</param>
+        <param name="owningSchema">Der Name der relationalen Schemas der XML-schemaauflistung einer typisierten XML-Instanz.</param>
+        <param name="objectName">Der Name der XML-schemaauflistung einer typisierten XML-Instanz.</param>
+        <param name="useServerDefault">Gibt an, ob diese Spalte die Standardserverwert verwenden soll.</param>
+        <param name="isUniqueKey">Gibt an, ob die Spalte in der Tabellenwertparameter eindeutig ist.</param>
+        <param name="columnSortOrder">Gibt die Sortierreihenfolge für eine Spalte an.</param>
+        <param name="sortOrdinal">Gibt die Ordnungszahl der Sortierspalte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> -Klasse mit den angegebenen Spaltennamen, Datenbankname, besitzenden Schema, Objektnamen und Standardserver. Diese Form des Konstruktors unterstützt Tabellenwertparameter können Sie angeben, ob die Spalte in der Tabellenwertparameter, die Sortierreihenfolge für die Spalte und die Ordnungszahl der Sortierspalte eindeutig ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter [Table-Valued Parameters](~/docs/framework/data/adonet/sql/table-valued-parameters.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlMetaData (string name, System.Data.SqlDbType dbType, long maxLength, byte precision, byte scale, long localeId, System.Data.SqlTypes.SqlCompareOptions compareOptions, Type userDefinedType, bool useServerDefault, bool isUniqueKey, System.Data.SqlClient.SortOrder columnSortOrder, int sortOrdinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Data.SqlDbType dbType, int64 maxLength, unsigned int8 precision, unsigned int8 scale, int64 localeId, valuetype System.Data.SqlTypes.SqlCompareOptions compareOptions, class System.Type userDefinedType, bool useServerDefault, bool isUniqueKey, valuetype System.Data.SqlClient.SortOrder columnSortOrder, int32 sortOrdinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.#ctor(System.String,System.Data.SqlDbType,System.Int64,System.Byte,System.Byte,System.Int64,System.Data.SqlTypes.SqlCompareOptions,System.Type,System.Boolean,System.Boolean,System.Data.SqlClient.SortOrder,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="dbType" Type="System.Data.SqlDbType" />
+        <Parameter Name="maxLength" Type="System.Int64" />
+        <Parameter Name="precision" Type="System.Byte" />
+        <Parameter Name="scale" Type="System.Byte" />
+        <Parameter Name="localeId" Type="System.Int64" />
+        <Parameter Name="compareOptions" Type="System.Data.SqlTypes.SqlCompareOptions" />
+        <Parameter Name="userDefinedType" Type="System.Type" />
+        <Parameter Name="useServerDefault" Type="System.Boolean" />
+        <Parameter Name="isUniqueKey" Type="System.Boolean" />
+        <Parameter Name="columnSortOrder" Type="System.Data.SqlClient.SortOrder" />
+        <Parameter Name="sortOrdinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Spalte.</param>
+        <param name="dbType">Der SQL Server-Typ des Parameters oder der Spalte.</param>
+        <param name="maxLength">Die maximale Länge des angegebenen Typs.</param>
+        <param name="precision">Die Genauigkeit des Parameters oder der Spalte.</param>
+        <param name="scale">Die Dezimalstellen des Parameters oder der Spalte.</param>
+        <param name="localeId">Die Gebietsschema-ID des Parameters oder der Spalte.</param>
+        <param name="compareOptions">Die Vergleichsregeln des Parameters oder der Spalte.</param>
+        <param name="userDefinedType">Ein <see cref="T:System.Type" /> -Instanz, die auf den UDT verweist.</param>
+        <param name="useServerDefault">Gibt an, ob diese Spalte die Standardserverwert verwenden soll.</param>
+        <param name="isUniqueKey">Gibt an, ob die Spalte in der Tabellenwertparameter eindeutig ist.</param>
+        <param name="columnSortOrder">Gibt die Sortierreihenfolge für eine Spalte an.</param>
+        <param name="sortOrdinal">Gibt die Ordnungszahl der Sortierspalte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> -Klasse mit der angegebenen Spaltenname, Typ, maximale Länge, Genauigkeit, Skala Gebietsschema-ID, Optionen und den benutzerdefinierten Typ (UDT) verglichen werden soll. Diese Form des Konstruktors unterstützt Tabellenwertparameter können Sie angeben, ob die Spalte in der Tabellenwertparameter, die Sortierreihenfolge für die Spalte und die Ordnungszahl der Sortierspalte eindeutig ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter [Table-Valued Parameters](~/docs/framework/data/adonet/sql/table-valued-parameters.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Adjust">
+      <MemberSignature Language="C#" Value="public bool Adjust (bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Adjust(bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.Adjust(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert überprüft die <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Instanz.</param>
+        <summary>Überprüft das angegebene <see cref="T:System.Boolean" /> Wert anhand der Metadaten und den Wert passt, bei Bedarf.</summary>
+        <returns>Der angepasste Wert als eine <see cref="T:System.Boolean" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Value" />entspricht nicht der <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Typ oder <paramref name="value" /> konnte nicht angepasst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Adjust">
+      <MemberSignature Language="C#" Value="public byte Adjust (byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8 Adjust(unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.Adjust(System.Byte)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert überprüft die <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Instanz.</param>
+        <summary>Überprüft das angegebene <see cref="T:System.Byte" /> Wert anhand der Metadaten und den Wert passt, bei Bedarf.</summary>
+        <returns>Der angepasste Wert als eine <see cref="T:System.Byte" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Value" />entspricht nicht der <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Typ oder <paramref name="value" /> konnte nicht angepasst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Adjust">
+      <MemberSignature Language="C#" Value="public byte[] Adjust (byte[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] Adjust(unsigned int8[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.Adjust(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert überprüft die <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Instanz.</param>
+        <summary>Überprüft das angegebene Array von <see cref="T:System.Byte" /> Werte anhand der Metadaten und den Wert passt, bei Bedarf.</summary>
+        <returns>Der angepasste Wert als ein Array von <see cref="T:System.Byte" /> Werte.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Value" />entspricht nicht der <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Typ oder <paramref name="value" /> konnte nicht angepasst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Adjust">
+      <MemberSignature Language="C#" Value="public char Adjust (char value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance char Adjust(char value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.Adjust(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert überprüft die <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Instanz.</param>
+        <summary>Überprüft das angegebene <see cref="T:System.Char" /> Wert anhand der Metadaten und den Wert passt, bei Bedarf.</summary>
+        <returns>Der angepasste Wert als eine <see cref="T:System.Char" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Value" />entspricht nicht der <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Typ oder <paramref name="value" /> konnte nicht angepasst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Adjust">
+      <MemberSignature Language="C#" Value="public char[] Adjust (char[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance char[] Adjust(char[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.Adjust(System.Char[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Char[]" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert überprüft die <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Instanz.</param>
+        <summary>Überprüft das angegebene Array von <see cref="T:System.Char" /> Werte anhand der Metadaten und den Wert passt, bei Bedarf.</summary>
+        <returns>Der angepasste Wert als ein Array <see cref="T:System.Char" /> Werte.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Value" />entspricht nicht der <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Typ oder <paramref name="value" /> konnte nicht angepasst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Adjust">
+      <MemberSignature Language="C#" Value="public System.Data.SqlTypes.SqlBinary Adjust (System.Data.SqlTypes.SqlBinary value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Data.SqlTypes.SqlBinary Adjust(valuetype System.Data.SqlTypes.SqlBinary value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.Adjust(System.Data.SqlTypes.SqlBinary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBinary</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.SqlTypes.SqlBinary" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert überprüft die <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Instanz.</param>
+        <summary>Überprüft das angegebene <see cref="T:System.Data.SqlTypes.SqlBinary" /> Wert anhand der Metadaten und den Wert passt, bei Bedarf.</summary>
+        <returns>Der angepasste Wert als eine <see cref="T:System.Data.SqlTypes.SqlBinary" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Value" />entspricht nicht der <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Typ oder <paramref name="value" /> konnte nicht angepasst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Adjust">
+      <MemberSignature Language="C#" Value="public System.Data.SqlTypes.SqlBoolean Adjust (System.Data.SqlTypes.SqlBoolean value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Data.SqlTypes.SqlBoolean Adjust(valuetype System.Data.SqlTypes.SqlBoolean value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.Adjust(System.Data.SqlTypes.SqlBoolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.SqlTypes.SqlBoolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert überprüft die <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Instanz.</param>
+        <summary>Überprüft das angegebene <see cref="T:System.Data.SqlTypes.SqlBoolean" /> Wert anhand der Metadaten und den Wert passt, bei Bedarf.</summary>
+        <returns>Der angepasste Wert als eine <see cref="T:System.Data.SqlTypes.SqlBoolean" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Value" />entspricht nicht der <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Typ oder <paramref name="value" /> konnte nicht angepasst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Adjust">
+      <MemberSignature Language="C#" Value="public System.Data.SqlTypes.SqlByte Adjust (System.Data.SqlTypes.SqlByte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Data.SqlTypes.SqlByte Adjust(valuetype System.Data.SqlTypes.SqlByte value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.Adjust(System.Data.SqlTypes.SqlByte)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlByte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.SqlTypes.SqlByte" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert überprüft die <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Instanz.</param>
+        <summary>Überprüft das angegebene <see cref="T:System.Data.SqlTypes.SqlByte" /> Wert anhand der Metadaten und den Wert passt, bei Bedarf.</summary>
+        <returns>Der angepasste Wert als eine <see cref="T:System.Data.SqlTypes.SqlByte" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Value" />entspricht nicht der <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Typ oder <paramref name="value" /> konnte nicht angepasst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Adjust">
+      <MemberSignature Language="C#" Value="public System.Data.SqlTypes.SqlBytes Adjust (System.Data.SqlTypes.SqlBytes value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.SqlTypes.SqlBytes Adjust(class System.Data.SqlTypes.SqlBytes value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.Adjust(System.Data.SqlTypes.SqlBytes)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBytes</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.SqlTypes.SqlBytes" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert überprüft die <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Instanz.</param>
+        <summary>Überprüft das angegebene <see cref="T:System.Data.SqlTypes.SqlBytes" /> Wert anhand der Metadaten und den Wert passt, bei Bedarf.</summary>
+        <returns>Der angepasste Wert als eine <see cref="T:System.Data.SqlTypes.SqlBytes" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Value" />entspricht nicht der <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Typ oder <paramref name="value" /> konnte nicht angepasst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Adjust">
+      <MemberSignature Language="C#" Value="public System.Data.SqlTypes.SqlChars Adjust (System.Data.SqlTypes.SqlChars value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.SqlTypes.SqlChars Adjust(class System.Data.SqlTypes.SqlChars value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.Adjust(System.Data.SqlTypes.SqlChars)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlChars</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.SqlTypes.SqlChars" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert überprüft die <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Instanz.</param>
+        <summary>Überprüft das angegebene <see cref="T:System.Data.SqlTypes.SqlChars" /> Wert anhand der Metadaten und den Wert passt, bei Bedarf.</summary>
+        <returns>Der angepasste Wert als eine <see cref="T:System.Data.SqlTypes.SqlChars" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Value" />entspricht nicht der <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Typ oder <paramref name="value" /> konnte nicht angepasst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Adjust">
+      <MemberSignature Language="C#" Value="public System.Data.SqlTypes.SqlDateTime Adjust (System.Data.SqlTypes.SqlDateTime value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Data.SqlTypes.SqlDateTime Adjust(valuetype System.Data.SqlTypes.SqlDateTime value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.Adjust(System.Data.SqlTypes.SqlDateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlDateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.SqlTypes.SqlDateTime" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert überprüft die <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Instanz.</param>
+        <summary>Überprüft das angegebene <see cref="T:System.Data.SqlTypes.SqlDateTime" /> Wert anhand der Metadaten und den Wert passt, bei Bedarf.</summary>
+        <returns>Der angepasste Wert als eine <see cref="T:System.Data.SqlTypes.SqlDateTime" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Value" />entspricht nicht der <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Typ oder <paramref name="value" /> konnte nicht angepasst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Adjust">
+      <MemberSignature Language="C#" Value="public System.Data.SqlTypes.SqlDecimal Adjust (System.Data.SqlTypes.SqlDecimal value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Data.SqlTypes.SqlDecimal Adjust(valuetype System.Data.SqlTypes.SqlDecimal value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.Adjust(System.Data.SqlTypes.SqlDecimal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlDecimal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.SqlTypes.SqlDecimal" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert überprüft die <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Instanz.</param>
+        <summary>Überprüft das angegebene <see cref="T:System.Data.SqlTypes.SqlDecimal" /> Wert anhand der Metadaten und den Wert passt, bei Bedarf.</summary>
+        <returns>Der angepasste Wert als eine <see cref="T:System.Data.SqlTypes.SqlDecimal" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Value" />entspricht nicht der <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Typ oder <paramref name="value" /> konnte nicht angepasst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Adjust">
+      <MemberSignature Language="C#" Value="public System.Data.SqlTypes.SqlDouble Adjust (System.Data.SqlTypes.SqlDouble value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Data.SqlTypes.SqlDouble Adjust(valuetype System.Data.SqlTypes.SqlDouble value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.Adjust(System.Data.SqlTypes.SqlDouble)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlDouble</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.SqlTypes.SqlDouble" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert überprüft die <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Instanz.</param>
+        <summary>Überprüft das angegebene <see cref="T:System.Data.SqlTypes.SqlDouble" /> Wert anhand der Metadaten und den Wert passt, bei Bedarf.</summary>
+        <returns>Der angepasste Wert als eine <see cref="T:System.Data.SqlTypes.SqlDouble" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Value" />entspricht nicht der <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Typ oder <paramref name="value" /> konnte nicht angepasst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Adjust">
+      <MemberSignature Language="C#" Value="public System.Data.SqlTypes.SqlGuid Adjust (System.Data.SqlTypes.SqlGuid value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Data.SqlTypes.SqlGuid Adjust(valuetype System.Data.SqlTypes.SqlGuid value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.Adjust(System.Data.SqlTypes.SqlGuid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlGuid</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.SqlTypes.SqlGuid" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert überprüft die <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Instanz.</param>
+        <summary>Überprüft das angegebene <see cref="T:System.Data.SqlTypes.SqlGuid" /> Wert anhand der Metadaten und den Wert passt, bei Bedarf.</summary>
+        <returns>Der angepasste Wert als eine <see cref="T:System.Data.SqlTypes.SqlGuid" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Value" />entspricht nicht der <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Typ oder <paramref name="value" /> konnte nicht angepasst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Adjust">
+      <MemberSignature Language="C#" Value="public System.Data.SqlTypes.SqlInt16 Adjust (System.Data.SqlTypes.SqlInt16 value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Data.SqlTypes.SqlInt16 Adjust(valuetype System.Data.SqlTypes.SqlInt16 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.Adjust(System.Data.SqlTypes.SqlInt16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlInt16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.SqlTypes.SqlInt16" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert überprüft die <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Instanz.</param>
+        <summary>Überprüft das angegebene <see cref="T:System.Data.SqlTypes.SqlInt16" /> Wert anhand der Metadaten und den Wert passt, bei Bedarf.</summary>
+        <returns>Der angepasste Wert als eine <see cref="T:System.Data.SqlTypes.SqlInt16" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Value" />entspricht nicht der <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Typ oder <paramref name="value" /> konnte nicht angepasst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Adjust">
+      <MemberSignature Language="C#" Value="public System.Data.SqlTypes.SqlInt32 Adjust (System.Data.SqlTypes.SqlInt32 value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Data.SqlTypes.SqlInt32 Adjust(valuetype System.Data.SqlTypes.SqlInt32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.Adjust(System.Data.SqlTypes.SqlInt32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlInt32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.SqlTypes.SqlInt32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert überprüft die <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Instanz.</param>
+        <summary>Überprüft das angegebene <see cref="T:System.Data.SqlTypes.SqlInt32" /> Wert anhand der Metadaten und den Wert passt, bei Bedarf.</summary>
+        <returns>Der angepasste Wert als eine <see cref="T:System.Data.SqlTypes.SqlInt32" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Value" />entspricht nicht der <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Typ oder <paramref name="value" /> konnte nicht angepasst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Adjust">
+      <MemberSignature Language="C#" Value="public System.Data.SqlTypes.SqlInt64 Adjust (System.Data.SqlTypes.SqlInt64 value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Data.SqlTypes.SqlInt64 Adjust(valuetype System.Data.SqlTypes.SqlInt64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.Adjust(System.Data.SqlTypes.SqlInt64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlInt64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.SqlTypes.SqlInt64" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert überprüft die <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Instanz.</param>
+        <summary>Überprüft das angegebene <see cref="T:System.Data.SqlTypes.SqlInt64" /> Wert anhand der Metadaten und den Wert passt, bei Bedarf.</summary>
+        <returns>Der angepasste Wert als eine <see cref="T:System.Data.SqlTypes.SqlInt64" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Value" />entspricht nicht der <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Typ oder <paramref name="value" /> konnte nicht angepasst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Adjust">
+      <MemberSignature Language="C#" Value="public System.Data.SqlTypes.SqlMoney Adjust (System.Data.SqlTypes.SqlMoney value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Data.SqlTypes.SqlMoney Adjust(valuetype System.Data.SqlTypes.SqlMoney value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.Adjust(System.Data.SqlTypes.SqlMoney)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlMoney</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.SqlTypes.SqlMoney" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert überprüft die <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Instanz.</param>
+        <summary>Überprüft das angegebene <see cref="T:System.Data.SqlTypes.SqlMoney" /> Wert anhand der Metadaten und den Wert passt, bei Bedarf.</summary>
+        <returns>Der angepasste Wert als eine <see cref="T:System.Data.SqlTypes.SqlMoney" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Value" />entspricht nicht der <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Typ oder <paramref name="value" /> konnte nicht angepasst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Adjust">
+      <MemberSignature Language="C#" Value="public System.Data.SqlTypes.SqlSingle Adjust (System.Data.SqlTypes.SqlSingle value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Data.SqlTypes.SqlSingle Adjust(valuetype System.Data.SqlTypes.SqlSingle value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.Adjust(System.Data.SqlTypes.SqlSingle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlSingle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.SqlTypes.SqlSingle" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert überprüft die <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Instanz.</param>
+        <summary>Überprüft das angegebene <see cref="T:System.Data.SqlTypes.SqlSingle" /> Wert anhand der Metadaten und den Wert passt, bei Bedarf.</summary>
+        <returns>Der angepasste Wert als eine <see cref="T:System.Data.SqlTypes.SqlSingle" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Value" />entspricht nicht der <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Typ oder <paramref name="value" /> konnte nicht angepasst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Adjust">
+      <MemberSignature Language="C#" Value="public System.Data.SqlTypes.SqlString Adjust (System.Data.SqlTypes.SqlString value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Data.SqlTypes.SqlString Adjust(valuetype System.Data.SqlTypes.SqlString value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.Adjust(System.Data.SqlTypes.SqlString)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlString</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.SqlTypes.SqlString" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert überprüft die <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Instanz.</param>
+        <summary>Überprüft das angegebene <see cref="T:System.Data.SqlTypes.SqlString" /> Wert anhand der Metadaten und den Wert passt, bei Bedarf.</summary>
+        <returns>Der angepasste Wert als eine <see cref="T:System.Data.SqlTypes.SqlString" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Value" />entspricht nicht der <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Typ oder <paramref name="value" /> konnte nicht angepasst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Adjust">
+      <MemberSignature Language="C#" Value="public System.Data.SqlTypes.SqlXml Adjust (System.Data.SqlTypes.SqlXml value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.SqlTypes.SqlXml Adjust(class System.Data.SqlTypes.SqlXml value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.Adjust(System.Data.SqlTypes.SqlXml)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlXml</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.SqlTypes.SqlXml" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert überprüft die <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Instanz.</param>
+        <summary>Überprüft das angegebene <see cref="T:System.Data.SqlTypes.SqlXml" /> Wert anhand der Metadaten und den Wert passt, bei Bedarf.</summary>
+        <returns>Der angepasste Wert als eine <see cref="T:System.Data.SqlTypes.SqlXml" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Value" />entspricht nicht der <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Typ oder <paramref name="value" /> konnte nicht angepasst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Adjust">
+      <MemberSignature Language="C#" Value="public DateTime Adjust (DateTime value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.DateTime Adjust(valuetype System.DateTime value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.Adjust(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert überprüft die <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Instanz.</param>
+        <summary>Überprüft das angegebene <see cref="T:System.DateTime" /> Wert anhand der Metadaten und den Wert passt, bei Bedarf.</summary>
+        <returns>Der angepasste Wert als eine <see cref="T:System.DateTime" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Value" />entspricht nicht der <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Typ oder <paramref name="value" /> konnte nicht angepasst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Adjust">
+      <MemberSignature Language="C#" Value="public DateTimeOffset Adjust (DateTimeOffset value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.DateTimeOffset Adjust(valuetype System.DateTimeOffset value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.Adjust(System.DateTimeOffset)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTimeOffset</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.DateTimeOffset" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert überprüft die <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Instanz.</param>
+        <summary>Überprüft das angegebene <see cref="T:System.DateTimeOffset" /> Wert anhand der Metadaten und den Wert passt, bei Bedarf.</summary>
+        <returns>Der angepasste Wert als ein Array von <see cref="T:System.DateTimeOffset" /> Werte.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Value" />entspricht nicht der <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Typ oder <paramref name="value" /> konnte nicht angepasst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Adjust">
+      <MemberSignature Language="C#" Value="public decimal Adjust (decimal value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Decimal Adjust(valuetype System.Decimal value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.Adjust(System.Decimal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Decimal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Decimal" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert überprüft die <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Instanz.</param>
+        <summary>Überprüft das angegebene <see cref="T:System.Decimal" /> Wert anhand der Metadaten und den Wert passt, bei Bedarf.</summary>
+        <returns>Der angepasste Wert als eine <see cref="T:System.Decimal" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Value" />entspricht nicht der <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Typ oder <paramref name="value" /> konnte nicht angepasst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Adjust">
+      <MemberSignature Language="C#" Value="public double Adjust (double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 Adjust(float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.Adjust(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert überprüft die <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Instanz.</param>
+        <summary>Überprüft das angegebene <see cref="T:System.Double" /> Wert anhand der Metadaten und den Wert passt, bei Bedarf.</summary>
+        <returns>Der angepasste Wert als eine <see cref="T:System.Double" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Value" />entspricht nicht der <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Typ oder <paramref name="value" /> konnte nicht angepasst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Adjust">
+      <MemberSignature Language="C#" Value="public Guid Adjust (Guid value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Guid Adjust(valuetype System.Guid value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.Adjust(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert überprüft die <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Instanz.</param>
+        <summary>Überprüft das angegebene <see cref="T:System.Guid" /> Wert anhand der Metadaten und den Wert passt, bei Bedarf.</summary>
+        <returns>Der angepasste Wert als eine <see cref="T:System.Guid" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Value" />entspricht nicht der <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Typ oder <paramref name="value" /> konnte nicht angepasst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Adjust">
+      <MemberSignature Language="C#" Value="public short Adjust (short value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int16 Adjust(int16 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.Adjust(System.Int16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert überprüft die <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Instanz.</param>
+        <summary>Überprüft das angegebene <see cref="T:System.Int16" /> Wert anhand der Metadaten und den Wert passt, bei Bedarf.</summary>
+        <returns>Der angepasste Wert als eine <see cref="T:System.Int16" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Value" />entspricht nicht der <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Typ oder <paramref name="value" /> konnte nicht angepasst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Adjust">
+      <MemberSignature Language="C#" Value="public int Adjust (int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Adjust(int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.Adjust(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert überprüft die <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Instanz.</param>
+        <summary>Überprüft das angegebene <see cref="T:System.Int32" /> Wert anhand der Metadaten und den Wert passt, bei Bedarf.</summary>
+        <returns>Der angepasste Wert als eine <see cref="T:System.Int32" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Value" />entspricht nicht der <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Typ oder <paramref name="value" /> konnte nicht angepasst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Adjust">
+      <MemberSignature Language="C#" Value="public long Adjust (long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int64 Adjust(int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.Adjust(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert überprüft die <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Instanz.</param>
+        <summary>Überprüft das angegebene <see cref="T:System.Int64" /> Wert anhand der Metadaten und den Wert passt, bei Bedarf.</summary>
+        <returns>Der angepasste Wert als eine <see cref="T:System.Int64" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Value" />entspricht nicht der <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Typ oder <paramref name="value" /> konnte nicht angepasst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Adjust">
+      <MemberSignature Language="C#" Value="public object Adjust (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Adjust(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.Adjust(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert überprüft die <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Instanz.</param>
+        <summary>Überprüft das angegebene <see cref="T:System.Object" /> Wert anhand der Metadaten und den Wert passt, bei Bedarf.</summary>
+        <returns>Der angepasste Wert als eine <see cref="T:System.Object" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Value" />entspricht nicht der <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Typ oder <paramref name="value" /> konnte nicht angepasst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Adjust">
+      <MemberSignature Language="C#" Value="public float Adjust (float value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float32 Adjust(float32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.Adjust(System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert überprüft die <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Instanz.</param>
+        <summary>Überprüft das angegebene <see cref="T:System.Single" /> Wert anhand der Metadaten und den Wert passt, bei Bedarf.</summary>
+        <returns>Der angepasste Wert als eine <see cref="T:System.Single" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Value" />entspricht nicht der <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Typ oder <paramref name="value" /> konnte nicht angepasst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Adjust">
+      <MemberSignature Language="C#" Value="public string Adjust (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string Adjust(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.Adjust(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert überprüft die <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Instanz.</param>
+        <summary>Überprüft das angegebene <see cref="T:System.String" /> Wert anhand der Metadaten und den Wert passt, bei Bedarf.</summary>
+        <returns>Der angepasste Wert als eine <see cref="T:System.String" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Value" />entspricht nicht der <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Typ oder <paramref name="value" /> konnte nicht angepasst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Adjust">
+      <MemberSignature Language="C#" Value="public TimeSpan Adjust (TimeSpan value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.TimeSpan Adjust(valuetype System.TimeSpan value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.Adjust(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert überprüft die <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Instanz.</param>
+        <summary>Überprüft das angegebene <see cref="T:System.TimeSpan" /> Wert anhand der Metadaten und den Wert passt, bei Bedarf.</summary>
+        <returns>Der angepasste Wert als ein Array von <see cref="T:System.TimeSpan" /> Werte.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Value" />entspricht nicht der <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Typ oder <paramref name="value" /> konnte nicht angepasst werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareOptions">
+      <MemberSignature Language="C#" Value="public System.Data.SqlTypes.SqlCompareOptions CompareOptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.SqlTypes.SqlCompareOptions CompareOptions" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlMetaData.CompareOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlCompareOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Vergleichsregeln, die für die Spalte oder Parameter verwendet.</summary>
+        <value>Die Vergleichsregeln verwendet, die für die Spalte oder Parameter als ein <see cref="T:System.Data.SqlTypes.SqlCompareOptions" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DbType">
+      <MemberSignature Language="C#" Value="public System.Data.DbType DbType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.DbType DbType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlMetaData.DbType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Datentyp der Spalte oder des Parameters ab.</summary>
+        <value>Der Datentyp der Spalte oder des Parameters als eine <see cref="T:System.Data.DbType" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardtyp ist <xref:System.Data.DbType>.`String`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InferFromValue">
+      <MemberSignature Language="C#" Value="public static Microsoft.SqlServer.Server.SqlMetaData InferFromValue (object value, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.SqlServer.Server.SqlMetaData InferFromValue(object value, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMetaData.InferFromValue(System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.SqlServer.Server.SqlMetaData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Objekt, von dem die Metadaten abgeleitet ist.</param>
+        <param name="name">Das zurückgegebene zugewiesene Name <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Instanz.</param>
+        <summary>Leitet die Metadaten aus dem angegebenen Objekt und gibt ihn als einen <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Instanz.</summary>
+        <returns>Die abgeleiteten Metadaten als eine <see cref="T:Microsoft.SqlServer.Server.SqlMetaData" /> Instanz.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="value" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUniqueKey">
+      <MemberSignature Language="C#" Value="public bool IsUniqueKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsUniqueKey" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlMetaData.IsUniqueKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob die Spalte in der Tabellenwertparameter eindeutig ist.</summary>
+        <value>Ein <see langword="Boolean" />-Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardeinstellung ist `FALSE`.  
+  
+ Diese Eigenschaft kann nur festgelegt werden, eines der <xref:Microsoft.SqlServer.Server.SqlMetaData> Konstruktoren.  
+  
+ Weitere Informationen finden Sie unter [Table-Valued Parameters](~/docs/framework/data/adonet/sql/table-valued-parameters.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocaleId">
+      <MemberSignature Language="C#" Value="public long LocaleId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 LocaleId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlMetaData.LocaleId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Gebietsschema-ID der Spalte oder des Parameters ab.</summary>
+        <value>Die Gebietsschema-ID der Spalte oder des Parameters als eine <see cref="T:System.Int64" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist das aktuelle Gebietsschema für den aktuellen Thread für SqlDbTypes mit Zeichenfolgenwerten und 0 für SqlDbTypes, die keine Sortierung unterstützen.  
+  
+ Gibt 0 zurück, wenn die Sortierung des zugrunde liegenden Spaltentyps nicht definiert ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Max">
+      <MemberSignature Language="C#" Value="public static long Max { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property int64 Max" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlMetaData.Max" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Länge des <see langword="text" />, <see langword="ntext" />, und <see langword="image" /> -Datentypen.</summary>
+        <value>Die Länge des <see langword="text" />, <see langword="ntext" />, und <see langword="image" /> -Datentypen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist -1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxLength">
+      <MemberSignature Language="C#" Value="public long MaxLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaxLength" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlMetaData.MaxLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Länge der Spalte oder des Parameters ab.</summary>
+        <value>Die maximale Länge der Spalte oder des Parameters als eine <see cref="T:System.Int64" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die mögliche Maximallänge für Werte der angegebenen Spalte. Gibt 0 für Typen als fester oder variabler Länge Zeichen- und Binärtypen. Variabler Größe Spalten oder Parametern deklariert mit den `Max` Konstruktorparameter gibt-1 zurück.  
+  
+ Für <xref:System.Data.DbType>.`Row` Dies gibt die Anzahl der Spalten in der Zeile Metadateninstanz zurück.  
+  
+ Der Standardwert ist 0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlMetaData.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Spalte oder des Parameters ab.</summary>
+        <value>Der Name der Spalte oder des Parameters als eine <see cref="T:System.String" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Die <paramref name="Name" /> angegebenen, in der Konstruktor ist länger als 128 Zeichen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Precision">
+      <MemberSignature Language="C#" Value="public byte Precision { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Precision" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlMetaData.Precision" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Genauigkeit der Spalte oder des Parameters ab.</summary>
+        <value>Die Genauigkeit der Spalte oder des Parameters als eine <see cref="T:System.Byte" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt 0 zurück, wenn die Genauigkeit des zugrunde liegenden Spaltentyps nicht definiert ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scale">
+      <MemberSignature Language="C#" Value="public byte Scale { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Scale" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlMetaData.Scale" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Dezimalstellen der Spalte oder des Parameters ab.</summary>
+        <value>Die Dezimalstellen der Spalte oder des Parameters.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gibt 0 zurück, wenn die Skalierung des zugrunde liegenden Spaltentyps nicht definiert ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SortOrder">
+      <MemberSignature Language="C#" Value="public System.Data.SqlClient.SortOrder SortOrder { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.SqlClient.SortOrder SortOrder" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlMetaData.SortOrder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SortOrder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Sortierreihenfolge für eine Spalte zurück.</summary>
+        <value>Ein <see cref="T:System.Data.SqlClient.SortOrder" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann nur festgelegt werden, eines der <xref:Microsoft.SqlServer.Server.SqlMetaData> Konstruktoren.  
+  
+ Weitere Informationen finden Sie unter [Table-Valued Parameters](~/docs/framework/data/adonet/sql/table-valued-parameters.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SortOrdinal">
+      <MemberSignature Language="C#" Value="public int SortOrdinal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SortOrdinal" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlMetaData.SortOrdinal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Ordnungszahl der Sortierspalte.</summary>
+        <value>Die Ordnungszahl der Sortierspalte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standard ist 1.  
+  
+ Diese Eigenschaft kann nur festgelegt werden, eines der <xref:Microsoft.SqlServer.Server.SqlMetaData> Konstruktoren.  
+  
+ Weitere Informationen finden Sie unter [Table-Valued Parameters](~/docs/framework/data/adonet/sql/table-valued-parameters.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SqlDbType">
+      <MemberSignature Language="C#" Value="public System.Data.SqlDbType SqlDbType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.SqlDbType SqlDbType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlMetaData.SqlDbType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlDbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Datentyp der Spalte oder des Parameters ab.</summary>
+        <value>Der Datentyp der Spalte oder des Parameters als eine <see cref="T:System.Data.DbType" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist `NVarChar`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public Type Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlMetaData.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die common Language Runtime (CLR)-Typ auf, der einen benutzerdefinierten Typ (UDT) ab.</summary>
+        <value>Der CLR-Typname eines benutzerdefinierten Typs als ein <see cref="T:System.Type" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist `null`.  
+  
+ Gibt `null` Wenn <xref:Microsoft.SqlServer.Server.SqlMetaData.SqlDbType%2A> ist kein UDT-Typ. `Null`kann auch für zurückgegeben gültige UDT-Resultsets, in denen ist die Assembly nicht für die Anwendung verfügbar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeName">
+      <MemberSignature Language="C#" Value="public string TypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TypeName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlMetaData.TypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den dreiteiligen Namen den benutzerdefinierten Typ (UDT) oder den SQL Server-Typ, der durch die Instanz dargestellt wird.</summary>
+        <value>Der Name des UDT oder SQL Server als ein <see cref="T:System.String" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseServerDefault">
+      <MemberSignature Language="C#" Value="public bool UseServerDefault { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseServerDefault" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlMetaData.UseServerDefault" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob diese Spalte der Standardwert für den Server verwenden möchten.</summary>
+        <value>Ein <see langword="Boolean" />-Wert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardeinstellung ist `FALSE`.  
+  
+ Diese Eigenschaft kann nur festgelegt werden, eines der <xref:Microsoft.SqlServer.Server.SqlMetaData> Konstruktoren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlSchemaCollectionDatabase">
+      <MemberSignature Language="C#" Value="public string XmlSchemaCollectionDatabase { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlSchemaCollectionDatabase" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionDatabase" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Datenbank ab, in der sich die Schemaauflistung für diese XML-Instanz befindet.</summary>
+        <value>Der Name der Datenbank befindet sich, in dem die schemaauflistung für diese XML-Instanz als ein <see cref="T:System.String" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist `null`.  
+  
+ Diese Eigenschaft ist möglicherweise `null` , wenn die Auflistung innerhalb der aktuellen Datenbank definiert ist. Es ist auch `null` , wenn es in diesem Fall keine schemaauflistung wird <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionName%2A> und <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionOwningSchema%2A> sind ebenfalls null.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlSchemaCollectionName">
+      <MemberSignature Language="C#" Value="public string XmlSchemaCollectionName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlSchemaCollectionName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Schemaauflistung für diese XML-Instanz ab.</summary>
+        <value>Der Name der schemaauflistung für diese XML-Instanz als ein <see cref="T:System.String" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist `null`.  
+  
+ Dieser Wert ist `null` Falls keine zugeordneten schemaauflistung verfügt. Wenn der Wert `null`, klicken Sie dann <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionDatabase%2A> und <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionOwningSchema%2A> sind auch `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlSchemaCollectionOwningSchema">
+      <MemberSignature Language="C#" Value="public string XmlSchemaCollectionOwningSchema { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlSchemaCollectionOwningSchema" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionOwningSchema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das besitzende relationale Schema auf dem sich die schemaauflistung für diese XML-Instanz befindet.</summary>
+        <value>Das besitzende relationale Schema befindet sich, in dem die schemaauflistung für diese XML-Instanz als ein <see cref="T:System.String" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist `null`.  
+  
+ Dieser Wert möglicherweise `null` , wenn die Auflistung innerhalb der aktuellen Datenbank und einem Standardschema definiert ist. Es ist ebenfalls null, wenn es in diesem Fall keine schemaauflistung wird <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionDatabase%2A> und <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionName%2A> sind auch `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

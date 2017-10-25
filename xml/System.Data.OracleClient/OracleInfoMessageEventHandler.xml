@@ -1,0 +1,32 @@
+<Type Name="OracleInfoMessageEventHandler" FullName="System.Data.OracleClient.OracleInfoMessageEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void OracleInfoMessageEventHandler(object sender, OracleInfoMessageEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed OracleInfoMessageEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Data.OracleClient.OracleInfoMessageEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.OracleClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Data.OracleClient.OracleInfoMessageEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Data.OracleClient.OracleInfoMessageEventArgs" />-Objekt, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode dar, die das <see cref="E:System.Data.OracleClient.OracleConnection.InfoMessage" />-Ereignis eines <see cref="T:System.Data.OracleClient.OracleConnection" /> behandelt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen eines <xref:System.Data.OracleClient.OracleInfoMessageEventArgs>-Delegaten geben Sie die Methode für die Ereignisbehandlung an. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen zu Ereignishandlerdelegaten, finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,794 @@
+<Type Name="DataGridColumn" FullName="System.Web.UI.WebControls.DataGridColumn">
+  <TypeSignature Language="C#" Value="public abstract class DataGridColumn : System.Web.UI.IStateManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DataGridColumn extends System.Object implements class System.Web.UI.IStateManager" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DataGridColumn" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IStateManager</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.ExpandableObjectConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Dient als Basisklasse für die unterschiedlichen Spaltentypen des <see cref="T:System.Web.UI.WebControls.DataGrid" />-Steuerelements.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DataGridColumn> Klasse ist die Basisklasse für alle Spaltentypen, der die <xref:System.Web.UI.WebControls.DataGrid> Steuerelement. Es definiert die Eigenschaften und Methoden, die für alle Spaltentypen gültig sind. Eine Instanz von der <xref:System.Web.UI.WebControls.DataGridColumn> Klasse wird nicht direkt erstellt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DataGridColumn ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataGridColumn.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.DataGridColumn" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor zum Erstellen und initialisieren Sie eine Instanz von der <xref:System.Web.UI.WebControls.DataGridColumn> Klasse.  
+  
+> [!NOTE]
+>  Instanzen dieser Klasse werden in der Regel nicht direkt erstellt. Es ist eine Basisklasse, die die Eigenschaften und Methoden, die allgemeine Klassen für alle Spalten definiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignMode">
+      <MemberSignature Language="C#" Value="protected bool DesignMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DesignMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataGridColumn.DesignMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Spalte im Entwurfsmodus befindet.</summary>
+        <value>
+          <see langword="true" />Wenn die Spalte im Entwurfsmodus befindet; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DataGridColumn.DesignMode%2A> Eigenschaft, um programmgesteuert zu ermitteln, ob die Spalte im Entwurfsmodus befindet.  
+  
+ Weitere Informationen zum Entwurfsmodus finden Sie unter <xref:System.ComponentModel.ISite.DesignMode%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FooterStyle">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.TableItemStyle FooterStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.TableItemStyle FooterStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataGridColumn.FooterStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableItemStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Stileigenschaften für den Fußzeilenbereich der Spalte ab.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.TableItemStyle" /> , der die Stileigenschaften für den Fußzeilenbereich der Spalte enthält. Der Standardwert ist eine leere <see cref="T:System.Web.UI.WebControls.TableItemStyle" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um einen benutzerdefinierten Stil für den Fußzeilenbereich der Spalte bereitzustellen. Allgemeine Stilattribute, die angepasst werden können enthalten Vordergrundfarbe, Hintergrundfarbe, Schriftart und die Ausrichtung in der Zelle. Bereitstellen von einem anderen Format erhöht die Darstellung der Spalte in der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DataGridColumn.FooterStyle%2A> Eigenschaft, um die Stileigenschaften für den Fußzeilenbereich der Spalte festzulegen.  
+  
+ [!code-aspx-csharp[DataGridColumnFooterStyle#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataGridColumnFooterStyle/CS/datagridcolumnfooterstylecs.aspx#1)]
+ [!code-aspx-vb[DataGridColumnFooterStyle#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataGridColumnFooterStyle/VB/datagridcolumnfooterstylevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FooterText">
+      <MemberSignature Language="C#" Value="public virtual string FooterText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FooterText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataGridColumn.FooterText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest in der Fußzeilenbereich der Spalte angezeigten Text.</summary>
+        <value>In der Fußzeilenbereich der Spalte angezeigte Text. Der Standardwert ist <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DataGridColumn.FooterText%2A> Eigenschaft angeben, oder ermitteln, in der Fußzeilenbereich der Spalte angezeigten Text.  
+  
+> [!CAUTION]
+>  Text ist nicht HTML-codierte, bevor er in den Fußzeilenbereich der Spalte angezeigt wird. Dadurch können Skripts in HTML-Tags im Text eingebettet. Wenn diese Eigenschaft dynamisch mit Benutzereingaben festgelegt ist, achten Sie darauf, dass Sie zur Überprüfung des Werts um Sicherheitsrisiken zu reduzieren.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DataGridColumn.FooterText%2A> -Eigenschaft in der Fußzeilenbereich der Spalte angezeigte Text an.  
+  
+ [!code-aspx-csharp[DataGridColumnFooterText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataGridColumnFooterText/CS/datagridcolumnfootertextcs.aspx#1)]
+ [!code-aspx-vb[DataGridColumnFooterText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataGridColumnFooterText/VB/datagridcolumnfootertextvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderImageUrl">
+      <MemberSignature Language="C#" Value="public virtual string HeaderImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HeaderImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataGridColumn.HeaderImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Speicherort des Bilds, das in der Kopfzeile der Spalte angezeigt.</summary>
+        <value>Der Speicherort des Bilds, das in der Kopfzeile der Spalte angezeigt. Der Standardwert ist <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DataGridColumn.HeaderImageUrl%2A> Eigenschaft zum Angeben der URL eines Bilds in der Kopfzeile der Spalte angezeigt. Sie können einen relativen oder eine absolute URL verwenden. Eine relative URL verknüpft den Speicherort des Bilds an den Speicherort der Webseite, ohne einen vollständigen Pfad auf dem Server. Der Pfad ist relativ zum Speicherort der Webseite. Dies erleichtert es den gesamten Standort auf dem Server in ein anderes Verzeichnis verschieben, ohne den Pfad zu dem Bild in den Code aktualisieren. Eine absolute URL stellt den vollständigen Pfad bereit, damit die Website in ein anderes Verzeichnis verschieben Aktualisieren des Codes erfordert.  
+  
+> [!NOTE]
+>  Wenn Sie den Text anstelle eines Bilds in der Kopfzeile der Spalte anzeigen möchten, legen Sie die <xref:System.Web.UI.WebControls.DataGridColumn.HeaderText%2A> -Eigenschaft statt dieser Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DataGridColumn.HeaderImageUrl%2A> Eigenschaft, um das Bild angezeigt, in der Kopfzeile der Spalte anzugeben.  
+  
+ [!code-aspx-csharp[DataGridColumnHeaderImageUrl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataGridColumnHeaderImageUrl/CS/datagridcolumnheaderimageurlcs.aspx#1)]
+ [!code-aspx-vb[DataGridColumnHeaderImageUrl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataGridColumnHeaderImageUrl/VB/datagridcolumnheaderimageurlvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderStyle">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.TableItemStyle HeaderStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.TableItemStyle HeaderStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataGridColumn.HeaderStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableItemStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Stileigenschaften für den Abschnitt der Kopfzeile der Spalte ab.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.TableItemStyle" /> , der die Stileigenschaften für den Headerbereich der Spalte enthält. Der Standardwert ist eine leere <see cref="T:System.Web.UI.WebControls.TableItemStyle" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um einen benutzerdefinierten Stil für den Headerbereich der Spalte bereitzustellen. Allgemeine Stilattribute, die angepasst werden können enthalten Vordergrundfarbe, Hintergrundfarbe, Schriftart und die Ausrichtung in der Zelle. Bereitstellen von einem anderen Format erhöht die Darstellung der Spalte in der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DataGridColumn.HeaderStyle%2A> Eigenschaft, um die Stileigenschaften für den Abschnitt der Kopfzeile der Spalte abzurufen.  
+  
+ [!code-aspx-csharp[DataGridColumnFooterStyle#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataGridColumnFooterStyle/CS/datagridcolumnfooterstylecs.aspx#1)]
+ [!code-aspx-vb[DataGridColumnFooterStyle#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataGridColumnFooterStyle/VB/datagridcolumnfooterstylevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderText">
+      <MemberSignature Language="C#" Value="public virtual string HeaderText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HeaderText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataGridColumn.HeaderText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text in der Kopfzeile der Spalte angezeigt.</summary>
+        <value>In der Kopfzeile der Spalte angezeigte Text. Der Standardwert ist <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DataGridColumn.HeaderText%2A> Eigenschaft anzugeben oder zu ermitteln, in der Kopfzeile der Spalte angezeigten Text. Wenn Sie ein Bild anstelle von Text in der Kopfzeile der Spalte anzeigen möchten, legen Sie die <xref:System.Web.UI.WebControls.DataGridColumn.HeaderImageUrl%2A> -Eigenschaft statt dieser Eigenschaft.  
+  
+> [!CAUTION]
+>  Text ist nicht HTML-codierte, bevor er in der Kopfzeile der Spalte angezeigt wird. Dadurch können Skripts in HTML-Tags im Text eingebettet. Wenn diese Eigenschaft dynamisch mit Benutzereingaben festgelegt ist, achten Sie darauf, dass Sie zur Überprüfung des Werts um Sicherheitsrisiken zu reduzieren.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DataGridColumn.HeaderText%2A> Eigenschaft, um den Text für den Headerbereich der Spalte anzugeben.  
+  
+ [!code-aspx-csharp[DataGridColumnFooterText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataGridColumnFooterText/CS/datagridcolumnfootertextcs.aspx#1)]
+ [!code-aspx-vb[DataGridColumnFooterText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataGridColumnFooterText/VB/datagridcolumnfootertextvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public virtual void Initialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataGridColumn.Initialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt die basisimplementierung zum Zurücksetzen einer Spalteninhalts abgeleitet wurde. die <see cref="T:System.Web.UI.WebControls.DataGridColumn" /> Klasse auf ihren ursprünglichen Zustand.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DataGridColumn.Initialize%2A> Methode stellt die basisimplementierung zum Zurücksetzen einer Spalteninhalts abgeleitet wurde. die <xref:System.Web.UI.WebControls.DataGridColumn> Klasse auf ihren ursprünglichen Zustand. Diese Methode wird nicht direkt aufgerufen. Stattdessen wird diese Methode durch eine abgeleitete Spaltenklasse geerbt, der verwendet werden kann, um eine Spalte des abgeleiteten Typs zurückzusetzen. Optional können Sie diese Methode in der abgeleiteten Klasse eine angepasste Initialisierung von Routine bereitstellen überschreiben. Diese basisimplementierung für die <xref:System.Web.UI.WebControls.DataGridColumn.Initialize%2A> Methode wird häufig aufgerufen, von der überschriebenen Methode zum Zurücksetzen der Eigenschaften gemeinsam auf alle Spaltentypen abgeleitet wurde. die <xref:System.Web.UI.WebControls.DataGridColumn> Klasse. Die <xref:System.Web.UI.WebControls.DataGridColumn.Initialize%2A> Methode wird in der Regel aufgerufen, während der Datenbindung vor der ersten Zeile gebunden wird.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.DataGridColumn.Initialize%2A> Methode wird verwendet, ist die Spalte der Entwurfsmodus festgelegt `true`.  
+  
+> [!NOTE]
+>  Diese Methode wird häufig von Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeCell">
+      <MemberSignature Language="C#" Value="public virtual void InitializeCell (System.Web.UI.WebControls.TableCell cell, int columnIndex, System.Web.UI.WebControls.ListItemType itemType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void InitializeCell(class System.Web.UI.WebControls.TableCell cell, int32 columnIndex, valuetype System.Web.UI.WebControls.ListItemType itemType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataGridColumn.InitializeCell(System.Web.UI.WebControls.TableCell,System.Int32,System.Web.UI.WebControls.ListItemType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cell" Type="System.Web.UI.WebControls.TableCell" />
+        <Parameter Name="columnIndex" Type="System.Int32" />
+        <Parameter Name="itemType" Type="System.Web.UI.WebControls.ListItemType" />
+      </Parameters>
+      <Docs>
+        <param name="cell">Ein <see cref="T:System.Web.UI.WebControls.TableCell" /> , Zurücksetzen die Zelle darstellt.</param>
+        <param name="columnIndex">Die Nummer der Spalte, in denen die Zelle befindet.</param>
+        <param name="itemType">Einer der <see cref="T:System.Web.UI.WebControls.ListItemType" />-Werte.</param>
+        <summary>Stellt die basisimplementierung zum Zurücksetzen der angegebenen Zelle aus einer Spalte abgeleitet wurde. die <see cref="T:System.Web.UI.WebControls.DataGridColumn" /> Klasse auf ihren ursprünglichen Zustand.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DataGridColumn.InitializeCell%2A> Methode stellt die basisimplementierung zum Zurücksetzen der angegebenen Zelle aus einer Spalte abgeleitet wurde. die <xref:System.Web.UI.WebControls.DataGridColumn> Klasse auf ihren ursprünglichen Zustand. Diese Methode wird nicht direkt aufgerufen. Stattdessen wird diese Methode durch eine abgeleitete Spaltenklasse geerbt, der verwendet werden kann, um eine Zelle in der Spalte des abgeleiteten Typs zurückzusetzen. Optional können Sie diese Methode in der abgeleiteten Klasse eine angepasste Initialisierung von Routine bereitstellen überschreiben. Diese basisimplementierung für die <xref:System.Web.UI.WebControls.DataGridColumn.InitializeCell%2A> Methode wird häufig aufgerufen, von der überschriebenen Methode zum Zurücksetzen der Eigenschaften gemeinsam auf alle Zellen im aus abgeleiteten Spalten die <xref:System.Web.UI.WebControls.DataGridColumn> Klasse.  
+  
+ In dieser Implementierung der <xref:System.Web.UI.WebControls.DataGridColumn.InitializeCell%2A> Methode setzt nur die Zellen der Kopf- und Fußzeile. Andere Typen von Zellen sind von dieser Methode nicht betroffen.  
+  
+ Wenn die Sortierung aktiviert ist (durch Festlegen der <xref:System.Web.UI.WebControls.DataGrid.AllowSorting%2A> Eigenschaft, um `true`), eine <xref:System.Web.UI.WebControls.LinkButton> standardmäßig die Headerzelle-Steuerelement hinzugefügt. Dadurch können Sie in der Spalte bei der <xref:System.Web.UI.WebControls.LinkButton> Steuerelement geklickt wird. Wenn Sie ein Bild für die Headerzelle angeben (durch Festlegen der <xref:System.Web.UI.WebControls.DataGridColumn.HeaderImageUrl%2A> Eigenschaft), wird ein <xref:System.Web.UI.WebControls.ImageButton> wird stattdessen Steuerelement erstellt.  
+  
+ Wenn die Sortierung deaktiviert ist, den angegebenen Text der <xref:System.Web.UI.WebControls.DataGridColumn.HeaderText%2A> Eigenschaft wird in der Kopfzeilenzelle angezeigt. Wenn Sie ein Bild für die Headerzelle angeben (durch Festlegen der <xref:System.Web.UI.WebControls.DataGridColumn.HeaderImageUrl%2A> Eigenschaft), wird ein <xref:System.Web.UI.WebControls.Image> die Headerzelle Steuerelement hinzugefügt wird.  
+  
+ Da ein Browser keine leere Zelle angezeigt wird, wenn ein Bild im nicht in der Kopfzeilenzelle angezeigt und die <xref:System.Web.UI.WebControls.DataGridColumn.HeaderText%2A> Eigenschaft nicht festgelegt ist, wird ein geschütztes Leerzeichen im HTML-Entität (`&nbsp;`) wird in der Kopfzeilenzelle angezeigt. Auf ähnliche Weise, wenn die Zelle kein Inhalt vorhanden ist (wenn die <xref:System.Web.UI.WebControls.DataGridColumn.FooterText%2A> Eigenschaft nicht festgelegt ist), ein geschütztes Leerzeichen im HTML-Entität wird angezeigt, in die Zelle.  
+  
+> [!NOTE]
+>  Diese Methode wird häufig von Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTrackingViewState">
+      <MemberSignature Language="C#" Value="protected bool IsTrackingViewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTrackingViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataGridColumn.IsTrackingViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der bestimmt, ob die <see cref="T:System.Web.UI.WebControls.DataGridColumn" /> Objekt speichern ihres Zustands markiert ist.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Web.UI.WebControls.DataGridColumn" /> markiert ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemStyle">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.TableItemStyle ItemStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.TableItemStyle ItemStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataGridColumn.ItemStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableItemStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Stileigenschaften für die einzelnen Zellen der Spalte ab.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.TableItemStyle" /> , der die Stileigenschaften für die einzelnen Zellen der Spalte enthält. Der Standardwert ist eine leere <see cref="T:System.Web.UI.WebControls.TableItemStyle" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um einen benutzerdefinierten Stil für die einzelnen Zellen der Spalte bereitzustellen. Allgemeine Stilattribute, die angepasst werden können enthalten Vordergrundfarbe, Hintergrundfarbe, Schriftart und die Ausrichtung in der Zelle. Bereitstellen von einem anderen Format erhöht die Darstellung der Spalte in der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DataGridColumn.ItemStyle%2A> Eigenschaft, um die Stileigenschaften der einzelnen Zellen in einer Spalte abzurufen.  
+  
+ [!code-aspx-csharp[DataGridColumnItemStyle#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataGridColumnItemStyle/CS/datagridcolumnitemstylecs.aspx#1)]
+ [!code-aspx-vb[DataGridColumnItemStyle#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataGridColumnItemStyle/VB/datagridcolumnitemstylevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected virtual void LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataGridColumn.LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Ein <see cref="T:System.Object" /> , das den gespeicherten Zustand enthält die <see cref="T:System.Web.UI.WebControls.DataGridColumn" />.</param>
+        <summary>Lädt den Zustand der <see cref="T:System.Web.UI.WebControls.DataGridColumn" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode dient in erster Linie durch die .NET Framework-Infrastruktur und sollte nicht direkt aus Ihrem Code verwendet werden.  Allerdings können Entwickler von Steuerelementen überschreiben Sie diese Methode, um anzugeben, wie ein benutzerdefiniertes Serversteuerelement seinen Ansichtszustand wiederherstellt. Weitere Informationen finden Sie unter [ASP.NET State Management Overview](http://msdn.microsoft.com/library/0218d965-5d30-445b-b6a6-8870e70e63ce).  
+  
+ Verwenden der <xref:System.Web.UI.WebControls.DataGridColumn.LoadViewState%2A> -Methode zum Laden von des Status der <xref:System.Web.UI.WebControls.DataGridColumn> Objekt. Dadurch wird eine Spalte aus, um benutzerdefinierte Ansichtszustand auszuführen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnColumnChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnColumnChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnColumnChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataGridColumn.OnColumnChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die <see cref="M:System.Web.UI.Design.WebControls.DataGridDesigner.OnColumnsChanged" /> Methode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Eigenschaften einer Spalte abgeleitet wurde. die <xref:System.Web.UI.WebControls.DataGridColumn> -Klasse ändern, die <xref:System.Web.UI.Design.WebControls.DataGridDesigner.OnColumnsChanged%2A?displayProperty=nameWithType> Methode sollte aufgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Owner">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.WebControls.DataGrid Owner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.DataGrid Owner" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataGridColumn.Owner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataGrid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.UI.WebControls.DataGrid" /> -Steuerelement, das die Spalte ein Mitglied ist.</summary>
+        <value>Die <see cref="T:System.Web.UI.WebControls.DataGrid" /> -Steuerelement, das die Spalte ein Mitglied ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DataGridColumn.Owner%2A> Eigenschaft, um programmgesteuert zu ermitteln der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement, das die Spalte ein Mitglied ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveViewState">
+      <MemberSignature Language="C#" Value="protected virtual object SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataGridColumn.SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert den aktuellen Zustand der <see cref="T:System.Web.UI.WebControls.DataGridColumn" /> Objekt.</summary>
+        <returns>Ein <see cref="T:System.Object" /> , das den gespeicherten Zustand enthält die <see cref="T:System.Web.UI.WebControls.DataGridColumn" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DataGridColumn.SaveViewState%2A> Methode, um den Zustand der speichern die <xref:System.Web.UI.WebControls.DataGridColumn> Objekt. Dadurch wird eine Spalte aus, um benutzerdefinierte Ansichtszustand auszuführen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SortExpression">
+      <MemberSignature Language="C#" Value="public virtual string SortExpression { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SortExpression" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataGridColumn.SortExpression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Felds oder der Ausdruck für die Übergabe an die <see cref="M:System.Web.UI.WebControls.DataGrid.OnSortCommand(System.Web.UI.WebControls.DataGridSortCommandEventArgs)" /> Methode, wenn eine Spalte für die Sortierung ausgewählt wird.</summary>
+        <value>Der Name des Felds Übergabe an <see cref="M:System.Web.UI.WebControls.DataGrid.OnSortCommand(System.Web.UI.WebControls.DataGridSortCommandEventArgs)" /> Wenn eine Spalte für die Sortierung ausgewählt ist. Der Standardwert ist <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DataGridColumn.SortExpression%2A> Eigenschaft, um anzugeben, oder bestimmen Sie den Namen des Felds Übergabe an die <xref:System.Web.UI.WebControls.DataGrid.OnSortCommand%2A> Methode, wenn eine Spalte für die Sortierung ausgewählt wird.  
+  
+> [!NOTE]
+>  Diese Eigenschaft ist die Spalte nicht auf ein Feld in der Datenquelle zu binden. Um eine Spalte an ein Feld zu binden, finden Sie in der Dokumentation für den bestimmten Spaltentyp.  
+  
+ Wenn Sortierung aktiviert ist, <xref:System.Web.UI.WebControls.LinkButton> Steuerelemente im Abschnitt Überschrift der einzelnen Spalten dargestellt werden, in denen die <xref:System.Web.UI.WebControls.DataGridColumn.SortExpression%2A> festgelegt wird.  
+  
+> [!NOTE]
+>  Wenn die <xref:System.Web.UI.WebControls.DataGrid.AutoGenerateColumns%2A> -Eigenschaftensatz auf `true`, die <xref:System.Web.UI.WebControls.DataGridColumn.SortExpression%2A> -Eigenschaft für jede Spalte in der <xref:System.Web.UI.WebControls.DataGrid> die Datenbindung unterstützenden Steuerelement wird automatisch zusammen mit dem Feldnamen, die an die Spalte gebundenen festgelegt. Wenn die <xref:System.Web.UI.WebControls.DataGrid.AutoGenerateColumns%2A> -Eigenschaftensatz auf `false`, müssen Sie manuell festlegen, die <xref:System.Web.UI.WebControls.DataGridColumn.SortExpression%2A> Eigenschaft mit dem Namen des Felds gebunden wird, auf die Spalte für jede Spalte, die Sie für die Sortierung aktivieren möchten.  
+  
+ Diese <xref:System.Web.UI.WebControls.LinkButton> Steuerelementen können Sie zum Sortieren der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement anhand der ausgewählten Spalte. Wenn eine <xref:System.Web.UI.WebControls.LinkButton> -Steuerelement für eine Spalte geklickt wird, die <xref:System.Web.UI.WebControls.DataGrid.SortCommand> Ereignis wird ausgelöst. Der Wert des der <xref:System.Web.UI.WebControls.DataGridColumn.SortExpression%2A> Eigenschaft für die ausgewählte Spalte wird zum Übergeben der <xref:System.Web.UI.WebControls.DataGrid.OnSortCommand%2A> Ereignishandler als Teil der <xref:System.Web.UI.WebControls.DataGridSortCommandEventArgs> Objekt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DataGridColumn.SortExpression%2A> Eigenschaft, um den Feldnamen Sortierspalte anzugeben.  
+  
+ [!code-aspx-csharp[DataGridColumnSortExpression#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataGridColumnSortExpression/CS/datagridcolumnsortexpressioncs.aspx#1)]
+ [!code-aspx-vb[DataGridColumnSortExpression#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataGridColumnSortExpression/VB/datagridcolumnsortexpressionvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.IsTrackingViewState">
+      <MemberSignature Language="C#" Value="bool System.Web.UI.IStateManager.IsTrackingViewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.UI.IStateManager.IsTrackingViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataGridColumn.System#Web#UI#IStateManager#IsTrackingViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Spalte Änderungen des Ansichtszustands nachverfolgt wird.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Web.UI.WebControls.DataGridColumn" /> Objekt seine Änderungen am Ansichtszustand nachverfolgt wird, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DataGridColumn.IsTrackingViewState%2A> Member wird hauptsächlich von Steuerelemententwicklern verwendet, wenn eine benutzerdefinierte Implementierung von Ableiten der <xref:System.Web.UI.WebControls.DataGridColumn> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.LoadViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.LoadViewState (object state);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.LoadViewState(object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataGridColumn.System#Web#UI#IStateManager#LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="state">Ein <see cref="T:System.Object" /> darstellt, die die <see cref="T:System.Web.UI.WebControls.DataGridColumn" /> Objekt wiederherstellen.</param>
+        <summary>Lädt, die zuvor gespeicherten Zustand.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.SaveViewState">
+      <MemberSignature Language="C#" Value="object IStateManager.SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.Web.UI.IStateManager.SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataGridColumn.System#Web#UI#IStateManager#SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein Objekt, das Zustandsänderungen enthält.</summary>
+        <returns>Das <see cref="T:System.Object" />, das die Ansichtszustandsänderungen enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.TrackViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataGridColumn.System#Web#UI#IStateManager#TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Startet das Verfolgen von Zustandsänderungen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataGridColumn.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Zeichenfolgendarstellung der Spalte zurück.</summary>
+        <returns>Gibt <see cref="F:System.String.Empty" />zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DataGridColumn.ToString%2A> Methode, um die Zeichenfolgendarstellung der Spalte abzurufen.  
+  
+> [!NOTE]
+>  Diese Methode wird vom geerbt der <xref:System.Object?displayProperty=nameWithType> Klasse und gilt nicht für die <xref:System.Web.UI.WebControls.DataGridColumn> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackViewState">
+      <MemberSignature Language="C#" Value="protected virtual void TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataGridColumn.TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Nachverfolgung von Änderungen am Ansichtszustand des Serversteuerelements verursacht, damit sie in des Webserversteuerelement gespeichert werden können <see cref="T:System.Web.UI.StateBag" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DataGridColumn.TrackViewState%2A> Methode zum Nachverfolgen von Änderungen am Ansichtszustand für das Serversteuerelement, damit sie in des Webserversteuerelement gespeichert werden können <xref:System.Web.UI.StateBag?displayProperty=nameWithType> Objekt. Dadurch wird eine Spalte aus, um benutzerdefinierte Ansichtszustand auszuführen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewState">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.StateBag ViewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.StateBag ViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataGridColumn.ViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.StateBag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.UI.StateBag" /> von abgeleitetes Objekt, das in einer Spalte kann die <see cref="T:System.Web.UI.WebControls.DataGridColumn" /> Klasse, um ihre Eigenschaften zu speichern.</summary>
+        <value>Der <see cref="T:System.Web.UI.StateBag" /> für den <see cref="T:System.Web.UI.WebControls.DataGridColumn" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DataGridColumn.ViewState%2A> Eigenschaft zum Abrufen der <xref:System.Web.UI.StateBag?displayProperty=nameWithType> von abgeleitetes Objekt, das in einer Spalte kann die <xref:System.Web.UI.WebControls.DataGridColumn> Klasse, um ihre Eigenschaften zu speichern. Der Status der einzelnen Eigenschaften wird automatisch verwaltet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="public bool Visible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visible" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataGridColumn.Visible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Spalte sichtbar ist, in der <see cref="T:System.Web.UI.WebControls.DataGrid" /> Steuerelement.</summary>
+        <value>
+          <see langword="true" />Wenn die Spalte in der sichtbar ist die <see cref="T:System.Web.UI.WebControls.DataGrid" /> steuern; anderenfalls <see langword="false" />. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.DataGridColumn.Visible%2A> Eigenschaft, um programmgesteuert zu steuern, ob die Spalte sichtbar ist, in der <xref:System.Web.UI.WebControls.DataGrid> Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.DataGridColumn.Visible%2A> Eigenschaft, um anzugeben, ob eine Spalte sichtbar ist.  
+  
+ [!code-aspx-csharp[DataGridColumnVisible#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataGridColumnVisible/CS/datagridcolumnvisiblecs.aspx#1)]
+ [!code-aspx-vb[DataGridColumnVisible#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataGridColumnVisible/VB/datagridcolumnvisiblevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

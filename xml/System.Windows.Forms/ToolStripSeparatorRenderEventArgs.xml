@@ -1,0 +1,84 @@
+<Type Name="ToolStripSeparatorRenderEventArgs" FullName="System.Windows.Forms.ToolStripSeparatorRenderEventArgs">
+  <TypeSignature Language="C#" Value="public class ToolStripSeparatorRenderEventArgs : System.Windows.Forms.ToolStripItemRenderEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ToolStripSeparatorRenderEventArgs extends System.Windows.Forms.ToolStripItemRenderEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolStripSeparatorRenderEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.ToolStripItemRenderEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Forms.ToolStripRenderer.RenderGrip" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Typs. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ToolStripRenderer.RenderSeparator> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz eines Typs, die enthält von erben <xref:System.Windows.Forms.ToolStripRenderer>, z. B. eine <xref:System.Windows.Forms.ToolStripSystemRenderer> oder <xref:System.Windows.Forms.ToolStripProfessionalRenderer>. Geben Sie den Namen der Instanz `ToolStripRenderer1` und stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ToolStripRenderer.RenderSeparator> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#602](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#602)]
+ [!code-vb[System.Windows.Forms.EventExamples#602](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#602)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolStripSeparatorRenderEventArgs (System.Drawing.Graphics g, System.Windows.Forms.ToolStripSeparator separator, bool vertical);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Graphics g, class System.Windows.Forms.ToolStripSeparator separator, bool vertical) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripSeparatorRenderEventArgs.#ctor(System.Drawing.Graphics,System.Windows.Forms.ToolStripSeparator,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="separator" Type="System.Windows.Forms.ToolStripSeparator" />
+        <Parameter Name="vertical" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="g">Die <see cref="T:System.Drawing.Graphics" /> mit Paint-Ereignis.</param>
+        <param name="separator">Die <see cref="T:System.Windows.Forms.ToolStripSeparator" /> gezeichnet werden.</param>
+        <param name="vertical">Ein Wert, der angibt, ob der <see cref="T:System.Windows.Forms.ToolStripSeparator" /> vertikal gezeichnet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.ToolStripSeparatorRenderEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Vertical">
+      <MemberSignature Language="C#" Value="public bool Vertical { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Vertical" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripSeparatorRenderEventArgs.Vertical" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Anzeigestil für den Ziehpunkt vertikal ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Anzeigestil für die <see cref="T:System.Windows.Forms.ToolStripSeparator" /> vertikale ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ToolStripRenderer.RenderSeparator?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz eines Typs, die enthält von erben <xref:System.Windows.Forms.ToolStripRenderer>, z. B. eine <xref:System.Windows.Forms.ToolStripSystemRenderer> oder <xref:System.Windows.Forms.ToolStripProfessionalRenderer>. Geben Sie den Namen der Instanz `ToolStripRenderer1` und stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ToolStripRenderer.RenderSeparator?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#602](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#602)]
+ [!code-vb[System.Windows.Forms.EventExamples#602](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#602)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

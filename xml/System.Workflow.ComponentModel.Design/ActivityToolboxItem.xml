@@ -1,0 +1,230 @@
+<Type Name="ActivityToolboxItem" FullName="System.Workflow.ComponentModel.Design.ActivityToolboxItem">
+  <TypeSignature Language="C#" Value="public class ActivityToolboxItem : System.Drawing.Design.ToolboxItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ActivityToolboxItem extends System.Drawing.Design.ToolboxItem" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Design.ActivityToolboxItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Drawing.Design.ToolboxItem</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Basisklasse für alle Toolboxelemente bereit, die einer Aktivität in einem Workflow-Designer zugeordnet sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Alle einer <xref:System.Workflow.ComponentModel.Activity>-Klasse zugeordneten Toolboxelemente werden von <xref:System.Workflow.ComponentModel.Design.ActivityToolboxItem> abgeleitet. Diese Klasse zeigt eine grafische Darstellung einer <xref:System.Workflow.ComponentModel.Activity>-Klasse in der Toolbox einer Entwurfzeitumgebung an und erstellt eine Instanz der zugeordneten <xref:System.Workflow.ComponentModel.Activity>-Klasse, wenn sie von einem Benutzer auf die Entwurfsoberfläche gezogen wird. Das Aktivitäts-Toolboxelement stellt normalerweise eine Aktivität dar, die beim Aufrufen eines Entwurfsmodusdokuments erstellt werden soll.  
+  
+ Diese Klasse erbt direkt von der <xref:System.Drawing.Design.ToolboxItem>-Klasse.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine vollständige <xref:System.Workflow.ComponentModel.Design.ActivityToolboxItem>-Klasse für eine benutzerdefinierte Aktivität. In diesem Beispiel wird die <xref:System.Workflow.ComponentModel.Design.ActivityToolboxItem.CreateComponentsCore%2A>-Methode außer Kraft gesetzt, um zwei benutzerdefinierte Aktivitäten in <xref:System.Workflow.Activities.ParallelActivity> zu platzieren.  
+  
+ [!code-csharp[WF_Samples#70](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#70)]
+ [!code-vb[WF_Samples#70](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#70)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityToolboxItem ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityToolboxItem.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.ComponentModel.Design.ActivityToolboxItem" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardkonstruktor für die <xref:System.Workflow.ComponentModel.Design.ActivityToolboxItem>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityToolboxItem (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityToolboxItem.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ von <see cref="T:System.Workflow.ComponentModel.Activity" />, der vom Toolboxelement erstellt wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.ComponentModel.Design.ActivityToolboxItem" />-Klasse, die den angegebenen <see cref="T:System.Workflow.ComponentModel.Activity" />-Komponententyp erstellt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ActivityToolboxItem (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityToolboxItem.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info"><see cref="T:System.Runtime.Serialization.SerializationInfo" />, die Informationen für die Deserialisierung des Toolboxelements enthält.</param>
+        <param name="context"><see cref="T:System.Runtime.Serialization.StreamingContext" />, der den Deserialisierungskontext für das Toolboxelement bereitstellt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.ComponentModel.Design.ActivityToolboxItem" />-Klasse mit der angegebenen <see cref="T:System.Runtime.Serialization.SerializationInfo" /> und der angegebenen <see cref="T:System.Runtime.Serialization.StreamingContext" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Workflow.ComponentModel.Design.ActivityToolboxItem.%23ctor%2A> aufgerufen wird, deserialisiert sie das Toolboxelement.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine vollständige <xref:System.Workflow.ComponentModel.Design.ActivityToolboxItem>-Klasse für eine benutzerdefinierte Aktivität. Die <xref:System.Drawing.Design.ToolboxItem.Deserialize%2A>-Methode wird im Konstruktor aufgerufen, um eine neue Instanz von <xref:System.Workflow.ComponentModel.Design.ActivityToolboxItem> zu initialisieren.  
+  
+ [!code-csharp[WF_Samples#70](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#70)]
+ [!code-vb[WF_Samples#70](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#70)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateComponentsCore">
+      <MemberSignature Language="C#" Value="protected override System.ComponentModel.IComponent[] CreateComponentsCore (System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.ComponentModel.IComponent[] CreateComponentsCore(class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityToolboxItem.CreateComponentsCore(System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IComponent[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="host">Der <see cref="T:System.ComponentModel.Design.IDesignerHost" />, in dem das Toolboxelement bereitgestellt wird.</param>
+        <summary>Erstellt beim Aufrufen des Toolboxelements eine <see cref="T:System.Workflow.ComponentModel.Activity" />-Komponente oder ein Array von <see cref="T:System.Workflow.ComponentModel.Activity" />-Komponenten.</summary>
+        <returns>Ein Array von erstellten <see cref="T:System.ComponentModel.IComponent" />-Objekten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Workflow.ComponentModel.Design.ActivityToolboxItem.CreateComponentsCore%2A>-Methode gibt die Komponente bzw. die Komponenten zurück, die von <xref:System.Workflow.ComponentModel.Design.ActivityToolboxItem> erstellt werden.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine vollständige <xref:System.Workflow.ComponentModel.Design.ActivityToolboxItem>-Klasse für eine benutzerdefinierte Aktivität. In diesem Beispiel wird die <xref:System.Workflow.ComponentModel.Design.ActivityToolboxItem.CreateComponentsCore%2A>-Methode außer Kraft gesetzt, um zwei benutzerdefinierte Aktivitäten in <xref:System.Workflow.Activities.ParallelActivity> einzufügen.  
+  
+ [!code-csharp[WF_Samples#70](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#70)]
+ [!code-vb[WF_Samples#70](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#70)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateComponentsWithUI">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.IComponent[] CreateComponentsWithUI (System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.IComponent[] CreateComponentsWithUI(class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityToolboxItem.CreateComponentsWithUI(System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IComponent[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="host">Der <see cref="T:System.ComponentModel.Design.IDesignerHost" />, in dem das Toolboxelement bereitgestellt wird.</param>
+        <summary>Erstellt eine <see cref="T:System.Workflow.ComponentModel.Activity" />-Komponente oder ein Array von <see cref="T:System.Workflow.ComponentModel.Activity" />-Komponenten, die beim Aufrufen des Toolboxelements ein Dialogfeld auf der Entwurfsoberfläche generieren.</summary>
+        <returns>Ein Array von erstellten <see cref="T:System.ComponentModel.IComponent" />-Objekten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aktivitätsdesignerentwickler können diese Methode außer Kraft setzen, um ein Dialogfeld anzuzeigen, wenn das Toolboxelement auf die Entwurfsoberfläche gezogen wird. Sofern sie nicht außer Kraft gesetzt wird, weist diese Methode das gleiche Verhalten auf wie <xref:System.Workflow.ComponentModel.Design.ActivityToolboxItem.CreateComponentsCore%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetToolboxDisplayName">
+      <MemberSignature Language="C#" Value="public static string GetToolboxDisplayName (Type activityType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetToolboxDisplayName(class System.Type activityType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityToolboxItem.GetToolboxDisplayName(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="activityType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="activityType">Der Typ von <see cref="T:System.Workflow.ComponentModel.Activity" />, für den der Anzeigename abgerufen werden soll.</param>
+        <summary>Ruft den zugeordneten Anzeigenamen für das Toolboxelement in der Toolbox ab.</summary>
+        <returns>Zeichenfolge, die den Anzeigenamen für das Toolboxelement darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetToolboxImage">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Image GetToolboxImage (Type activityType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Drawing.Image GetToolboxImage(class System.Type activityType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityToolboxItem.GetToolboxImage(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="activityType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="activityType">Der Typ von <see cref="T:System.Workflow.ComponentModel.Activity" />, für den das Toolboxbild abgerufen werden soll.</param>
+        <summary>Ruft das zugeordnete Bild ab, das das Toolboxelement in der Toolbox darstellt.</summary>
+        <returns>Bildobjekt, das in der Toolbox für ein Toolboxelement angezeigt wird.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

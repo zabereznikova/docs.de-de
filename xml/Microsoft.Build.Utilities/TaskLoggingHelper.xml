@@ -1,0 +1,1647 @@
+<Type Name="TaskLoggingHelper" FullName="Microsoft.Build.Utilities.TaskLoggingHelper">
+  <TypeSignature Language="C#" Value="public class TaskLoggingHelper : MarshalByRefObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TaskLoggingHelper extends System.MarshalByRefObject" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Utilities.TaskLoggingHelper" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.MarshalByRefObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Hilfsprotokollierungsmethoden bereit, die von Aufgaben verwendet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt den Code für eine Aufgabe, die eine oder mehrere Verzeichnisse erstellt.  
+  
+ [!code-csharp[msbuild_MakeDirTask#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_MakeDirTask/CS/msbuild_MakeDirTask.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TaskLoggingHelper (Microsoft.Build.Framework.ITask taskInstance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Framework.ITask taskInstance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.#ctor(Microsoft.Build.Framework.ITask)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="taskInstance" Type="Microsoft.Build.Framework.ITask" />
+      </Parameters>
+      <Docs>
+        <param name="taskInstance">Die Aufgabe, die eine Instanz dieser Aufgabe enthält.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.Build.Utilities.TaskLoggingHelper" /> -Klasse und ordnet sie der angegebenen Aufgabeninstanz.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TaskLoggingHelper (Microsoft.Build.Framework.IBuildEngine buildEngine, string taskName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Framework.IBuildEngine buildEngine, string taskName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.#ctor(Microsoft.Build.Framework.IBuildEngine,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="buildEngine" Type="Microsoft.Build.Framework.IBuildEngine" />
+        <Parameter Name="taskName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="buildEngine">Das Buildmodul.</param>
+        <param name="taskName">Name der Aufgabe.</param>
+        <summary>Öffentlicher Konstruktor, der von Task-Factorys verwendet werden kann, um diese Meldungen zu unterstützen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildEngine">
+      <MemberSignature Language="C#" Value="protected Microsoft.Build.Framework.IBuildEngine BuildEngine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.IBuildEngine BuildEngine" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.TaskLoggingHelper.BuildEngine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.IBuildEngine</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Buildmodul ab, das der Aufgabe zugeordnet ist.</summary>
+        <value>Eine <see cref="T:Microsoft.Build.Framework.IBuildEngine" /> , die die Instanz des Buildmoduls, die der Aufgabe zugeordnet ist darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtractMessageCode">
+      <MemberSignature Language="C#" Value="public string ExtractMessageCode (string message, out string messageWithoutCodePrefix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ExtractMessageCode(string message, [out] string&amp; messageWithoutCodePrefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.ExtractMessageCode(System.String,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="messageWithoutCodePrefix" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die vollständige zu analysierende Meldung, die das Codepräfix enthält.</param>
+        <param name="messageWithoutCodePrefix">Die Meldung, aus der das Codepräfix entfernt wurde.</param>
+        <summary>Extrahiert das Präfix des Meldungscodes aus der angegebenen vollständigen Meldungszeichenfolge.</summary>
+        <returns>Das Präfix des Meldungscodes, das aus der vollständigen Meldungszeichenfolge extrahiert wurde, oder <see langword="null" />, wenn kein Meldungscode vorhanden ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nachricht Code Präfixe müssen die folgenden regulären Ausdrücken von .NET übereinstimmen, um erkannt zu werden: `^\s*[A-Za-z]+\d+:\s*`.  
+  
+   
+  
+## Examples  
+ Wenn diese Methode die vollständigen Meldungszeichenfolge erhält `MYTASK1001: This is an error message.` und akzeptiert `This is an error message.` als Wert für die `messageWithoutCodePrefix` Parameter, und es gibt `MYTASK1001`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="message" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatResourceString">
+      <MemberSignature Language="C#" Value="public virtual string FormatResourceString (string resourceName, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string FormatResourceString(string resourceName, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.FormatResourceString(System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceName" Type="System.String" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="resourceName">Der Name der zu ladenden Zeichenfolgenressource.</param>
+        <param name="args">Optionale Argumente für das Formatieren der geladenen Zeichenfolge.</param>
+        <summary>Lädt die angegebene Ressourcenzeichenfolge und formatiert diese optional mit den angegebenen Argumenten.</summary>
+        <returns>Die formatierte Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für die Formatierung wird die Kultur des aktuellen Threads verwendet.  
+  
+ Diese Methode erfordert die übergeordnete Aufgabe auf seine Ressourcen registriert haben, entweder mit der <xref:Microsoft.Build.Utilities.Task> Basisklassenkonstruktor oder <xref:Microsoft.Build.Utilities.Task.TaskResources%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Durch angegebene Zeichenfolgenressource <paramref name="resourceName" /> ist nicht vorhanden.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:Microsoft.Build.Utilities.Task.TaskResources" /> Eigenschaft des Tasks "Besitzer" ist nicht festgelegt.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="resourceName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatString">
+      <MemberSignature Language="C#" Value="public virtual string FormatString (string unformatted, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string FormatString(string unformatted, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.FormatString(System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="unformatted" Type="System.String" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="unformatted">Die zu formatierende Zeichenkette.</param>
+        <param name="args">Die Argumente für die Formatierung.</param>
+        <summary>Formatiert die angegebene Zeichenfolge mit den angegebenen Argumenten.</summary>
+        <returns>Die formatierte Zeichenfolge.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für die Formatierung wird die Kultur des aktuellen Threads verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="unformatted" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResourceMessage">
+      <MemberSignature Language="C#" Value="public virtual string GetResourceMessage (string resourceName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetResourceMessage(string resourceName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.GetResourceMessage(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="resourceName">Der Ressourcenname.</param>
+        <summary>Ruft die Nachricht aus der Ressource im Task-Bibliothek.</summary>
+        <returns>Gibt die Meldung Ressource im Task-Bibliothek zurück.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasLoggedErrors">
+      <MemberSignature Language="C#" Value="public bool HasLoggedErrors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasLoggedErrors" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.TaskLoggingHelper.HasLoggedErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der anzeigt, ob von der Aufgabe über dieses Protokollierungshilfsobjekt Fehler protokolliert wurden.</summary>
+        <value>
+          <see langword="true" />Wenn die Aufgabe über dieses Protokollierungshilfsobjekt Fehler protokolliert hat; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt den Code für eine Aufgabe, die eine oder mehrere Verzeichnisse erstellt.  
+  
+ [!code-csharp[msbuild_MakeDirTask#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_MakeDirTask/CS/msbuild_MakeDirTask.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpKeywordPrefix">
+      <MemberSignature Language="C#" Value="public string HelpKeywordPrefix { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HelpKeywordPrefix" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.TaskLoggingHelper.HelpKeywordPrefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Präfix ab, das zum Erstellen von Hilfeschlüsselwörtern aus Ressourcennamen verwendet wird, oder legt dieses fest.</summary>
+        <value>Das Präfix, das zum Erstellen von Hilfeschlüsselwörtern aus Ressourcennamen verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Aufgabe keine Hilfeschlüsselwörter parteinachrichten zugeordnet, kann es ignoriert diese Eigenschaft oder legen sie den `null`. Wenn diese Eigenschaft, um eine leere festgelegt wird <xref:System.String>, Ressourcennamen wörtlich als Hilfeschlüsselwörter verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeLifetimeService">
+      <MemberSignature Language="C#" Value="public override object InitializeLifetimeService ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object InitializeLifetimeService() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.InitializeLifetimeService" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>InitializeLifetimeService wird aufgerufen, wenn das Remoteobjekt aktiviert wird.  
+  
+ Diese Methode ermitteln, wie lange die Lebensdauer des Objekts werden.  
+  
+ Thread-sicher. Allerdings sollten InitializeLifetimeService und MarkAsInactive nur in dieser Reihenfolge zusammen oder überhaupt nicht oder nicht mehr als einmal aufgerufen werden.</summary>
+        <returns>Das Leaseobjekt zur Steuerung der Lebensdauer des Objekts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogCommandLine">
+      <MemberSignature Language="C#" Value="public void LogCommandLine (string commandLine);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogCommandLine(string commandLine) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogCommandLine(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandLine" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="commandLine">Die Zeichenfolge der Befehlszeile.</param>
+        <summary>Protokolliert die Befehlszeile für ein zugrunde liegendes Tool, eine ausführbare Datei oder einen Shellbefehl einer Aufgabe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist nicht threadsicher.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogCommandLine">
+      <MemberSignature Language="C#" Value="public void LogCommandLine (Microsoft.Build.Framework.MessageImportance importance, string commandLine);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogCommandLine(valuetype Microsoft.Build.Framework.MessageImportance importance, string commandLine) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogCommandLine(Microsoft.Build.Framework.MessageImportance,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="importance" Type="Microsoft.Build.Framework.MessageImportance" />
+        <Parameter Name="commandLine" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="importance">Einer der Werte von <see cref="T:Microsoft.Build.Framework.MessageImportance" /> , der die Wichtigkeitsstufe der Befehlszeile angibt.</param>
+        <param name="commandLine">Die Zeichenfolge der Befehlszeile.</param>
+        <summary>Protokolliert die Befehlszeile für ein zugrunde liegendes Tool, eine zugrunde liegende ausführbare Datei oder einen zugrunde liegenden Shellbefehl einer Aufgabe, wobei die angegebene Wichtigkeitsstufe verwendet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist nicht threadsicher.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogCriticalMessage">
+      <MemberSignature Language="C#" Value="public void LogCriticalMessage (string subcategory, string code, string helpKeyword, string file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, string message, params object[] messageArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogCriticalMessage(string subcategory, string code, string helpKeyword, string file, int32 lineNumber, int32 columnNumber, int32 endLineNumber, int32 endColumnNumber, string message, object[] messageArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogCriticalMessage(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subcategory" Type="System.String" />
+        <Parameter Name="code" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="file" Type="System.String" />
+        <Parameter Name="lineNumber" Type="System.Int32" />
+        <Parameter Name="columnNumber" Type="System.Int32" />
+        <Parameter Name="endLineNumber" Type="System.Int32" />
+        <Parameter Name="endColumnNumber" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="messageArgs" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="subcategory">Beschreibung des Warnungstyps (kann null sein).</param>
+        <param name="code">Message Authentication Code (kann null sein).</param>
+        <param name="helpKeyword">Das Hilfeschlüsselwort für die Host-IDE (kann null sein).</param>
+        <param name="file">Der Pfad zur Datei, die die Nachricht (kann null sein).</param>
+        <param name="lineNumber">Die Zeile in der Datei, die die Nachricht (Festlegung auf 0 (null), wenn nicht verfügbar).</param>
+        <param name="columnNumber">Die Spalte in der Datei, die die Nachricht (Festlegung auf 0 (null), wenn nicht verfügbar).</param>
+        <param name="endLineNumber">Die letzte Zeile eines Bereichs von Zeilen in der Datei, die die Nachricht (Festlegung auf 0 (null), wenn nicht verfügbar).</param>
+        <param name="endColumnNumber">Die letzte Spalte eines Bereichs von Spalten in der Datei, die die Nachricht (Festlegung auf 0 (null), wenn nicht verfügbar).</param>
+        <param name="message">Die Meldungszeichenfolge.</param>
+        <param name="messageArgs">Optionale Argumente für das Formatieren der Meldungszeichenfolge.</param>
+        <summary>Meldet eine kritische Meldung mit der angegebenen Zeichenfolge und andere Nachrichtendetails.  
+  
+ Thread-sicher.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Wird ausgelöst, wenn <c>Nachricht</c> ist null.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="LogError">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Protokolliert einen Fehler.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt den Code für eine Aufgabe, die eine oder mehrere Verzeichnisse erstellt.  
+  
+ [!code-csharp[msbuild_MakeDirTask#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_MakeDirTask/CS/msbuild_MakeDirTask.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="LogError">
+      <MemberSignature Language="C#" Value="public void LogError (string message, params object[] messageArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogError(string message, object[] messageArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogError(System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="messageArgs" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="message">Die Meldung.</param>
+        <param name="messageArgs">Optionale Argumente für das Formatieren der Meldungszeichenfolge.</param>
+        <summary>Protokolliert einen Fehler mit der angegebenen Meldung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist nicht threadsicher.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Code für eine Aufgabe, die eine oder mehrere Verzeichnisse erstellt.  
+  
+ [!code-csharp[msbuild_MakeDirTask#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_MakeDirTask/CS/msbuild_MakeDirTask.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="message" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LogError">
+      <MemberSignature Language="C#" Value="public void LogError (string subcategory, string errorCode, string helpKeyword, string file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, string message, params object[] messageArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogError(string subcategory, string errorCode, string helpKeyword, string file, int32 lineNumber, int32 columnNumber, int32 endLineNumber, int32 endColumnNumber, string message, object[] messageArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogError(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subcategory" Type="System.String" />
+        <Parameter Name="errorCode" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="file" Type="System.String" />
+        <Parameter Name="lineNumber" Type="System.Int32" />
+        <Parameter Name="columnNumber" Type="System.Int32" />
+        <Parameter Name="endLineNumber" Type="System.Int32" />
+        <Parameter Name="endColumnNumber" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="messageArgs" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="subcategory">Die Beschreibung des Fehlertyps.</param>
+        <param name="errorCode">Der Fehlercode.</param>
+        <param name="helpKeyword">Das dem Fehler zuzuordnende Schlüsselwort „Help“.</param>
+        <param name="file">Der Pfad zur Datei, die den Fehler enthält.</param>
+        <param name="lineNumber">Die Zeile in der Datei, in der der Fehler auftritt.</param>
+        <param name="columnNumber">Die Spalte in der Datei, in der der Fehler auftritt.</param>
+        <param name="endLineNumber">Die letzte Zeile in der Datei, in der der Fehler auftritt.</param>
+        <param name="endColumnNumber">Die letzte Spalte in der Datei, in der der Fehler auftritt.</param>
+        <param name="message">Die Meldung.</param>
+        <param name="messageArgs">Optionale Argumente für das Formatieren der Meldungszeichenfolge.</param>
+        <summary>Protokolliert einen Fehler mit der angegebenen Meldung und weiteren Fehlerdetails.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Parameter `subCategory`, `errorCode`, `helpKeyword`, und `file` kann `null`.  
+  
+ Die Parameter `lineNumber`, `columnNumber`, `endLineNumber`, und `endColumnNumber` muss auf 0 festgelegt werden, wenn sie nicht verfügbar sind.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="message" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LogErrorFromException">
+      <MemberSignature Language="C#" Value="public void LogErrorFromException (Exception exception);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogErrorFromException(class System.Exception exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogErrorFromException(System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exception" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="exception">Die zu protokollierende Ausnahme.</param>
+        <summary>Protokolliert einen Fehler und verwendet dazu die Meldung aus der angegebenen Ausnahme.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es wird keine Aufrufliste angezeigt werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="e" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LogErrorFromException">
+      <MemberSignature Language="C#" Value="public void LogErrorFromException (Exception exception, bool showStackTrace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogErrorFromException(class System.Exception exception, bool showStackTrace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogErrorFromException(System.Exception,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exception" Type="System.Exception" />
+        <Parameter Name="showStackTrace" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="exception">Die zu protokollierende Ausnahme.</param>
+        <param name="showStackTrace">
+          <see langword="true" />um die stapelüberwachung in das Protokoll aufzunehmen; andernfalls <see langword="false" />.</param>
+        <summary>Protokolliert einen Fehler anhand der Meldung und optional anhand der Stapelüberwachung aus der angegebenen Ausnahme.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist nicht threadsicher.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="e" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LogErrorFromException">
+      <MemberSignature Language="C#" Value="public void LogErrorFromException (Exception exception, bool showStackTrace, bool showDetail, string file);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogErrorFromException(class System.Exception exception, bool showStackTrace, bool showDetail, string file) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogErrorFromException(System.Exception,System.Boolean,System.Boolean,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exception" Type="System.Exception" />
+        <Parameter Name="showStackTrace" Type="System.Boolean" />
+        <Parameter Name="showDetail" Type="System.Boolean" />
+        <Parameter Name="file" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="exception">Die zu protokollierende Ausnahme.</param>
+        <param name="showStackTrace">
+          <see langword="true" />um die stapelüberwachung in das Protokoll aufzunehmen; andernfalls <see langword="false" />.</param>
+        <param name="showDetail">
+          <see langword="true" />Um Ausnahmetypen und alle inneren Ausnahmen zu protokollieren; andernfalls <see langword="false" />.</param>
+        <param name="file">Der Name der Datei, die im Zusammenhang mit der Ausnahme oder <see langword="null" /> , wenn die Projektdatei protokolliert werden sollen.</param>
+        <summary>Protokolliert einen Fehler anhand der Meldung und optional anhand der Stapelüberwachung aus der angegebenen und allen inneren Ausnahmen.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="e" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LogErrorFromResources">
+      <MemberSignature Language="C#" Value="public void LogErrorFromResources (string messageResourceName, params object[] messageArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogErrorFromResources(string messageResourceName, object[] messageArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogErrorFromResources(System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageResourceName" Type="System.String" />
+        <Parameter Name="messageArgs" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="messageResourceName">Der Name der zu ladenden Zeichenfolgenressource.</param>
+        <param name="messageArgs">Die Argumente für das Formatieren der geladenen Zeichenfolge.</param>
+        <summary>Protokolliert einen Fehler anhand der angegebenen Ressourcenzeichenfolge.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist nicht threadsicher.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="messageResourceName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LogErrorFromResources">
+      <MemberSignature Language="C#" Value="public void LogErrorFromResources (string subcategoryResourceName, string errorCode, string helpKeyword, string file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, string messageResourceName, params object[] messageArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogErrorFromResources(string subcategoryResourceName, string errorCode, string helpKeyword, string file, int32 lineNumber, int32 columnNumber, int32 endLineNumber, int32 endColumnNumber, string messageResourceName, object[] messageArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogErrorFromResources(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subcategoryResourceName" Type="System.String" />
+        <Parameter Name="errorCode" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="file" Type="System.String" />
+        <Parameter Name="lineNumber" Type="System.Int32" />
+        <Parameter Name="columnNumber" Type="System.Int32" />
+        <Parameter Name="endLineNumber" Type="System.Int32" />
+        <Parameter Name="endColumnNumber" Type="System.Int32" />
+        <Parameter Name="messageResourceName" Type="System.String" />
+        <Parameter Name="messageArgs" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="subcategoryResourceName">Der Name der Zeichenfolgenressource, die den Fehlertyp beschreibt.</param>
+        <param name="errorCode">Der Fehlercode.</param>
+        <param name="helpKeyword">Das dem Fehler zuzuordnende Schlüsselwort „Help“.</param>
+        <param name="file">Der Pfad zur Datei, die den Fehler enthält.</param>
+        <param name="lineNumber">Die Zeile in der Datei, in der der Fehler auftritt.</param>
+        <param name="columnNumber">Die Spalte in der Datei, in der der Fehler auftritt.</param>
+        <param name="endLineNumber">Die letzte Zeile in der Datei, in der der Fehler auftritt.</param>
+        <param name="endColumnNumber">Die letzte Spalte in der Datei, in der der Fehler auftritt.</param>
+        <param name="messageResourceName">Der Name der zu ladenden Zeichenfolgenressource.</param>
+        <param name="messageArgs">Die Argumente für das Formatieren der geladenen Zeichenfolge.</param>
+        <summary>Protokolliert einen Fehler mit der angegebenen Ressourcenzeichenfolge und weiteren Fehlerdetails.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Parameter `subCategoryResourceName`, `errorCode`, `helpKeyword`, und `file` kann `null`.  
+  
+ Die Parameter `lineNumber`, `columnNumber`, `endLineNumber`, und `endColumnNumber` muss auf 0 festgelegt werden, wenn sie nicht verfügbar sind.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="messageResourceName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LogErrorWithCodeFromResources">
+      <MemberSignature Language="C#" Value="public void LogErrorWithCodeFromResources (string messageResourceName, params object[] messageArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogErrorWithCodeFromResources(string messageResourceName, object[] messageArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogErrorWithCodeFromResources(System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageResourceName" Type="System.String" />
+        <Parameter Name="messageArgs" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="messageResourceName">Der Name der zu ladenden Zeichenfolgenressource.</param>
+        <param name="messageArgs">Die Argumente für das Formatieren der geladenen Zeichenfolge.</param>
+        <summary>Protokolliert einen Fehler anhand der angegebenen Ressourcenzeichenfolge mit einem Fehlercode.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Nachricht mit dem Fehlercode beginnt, wird der Code extrahiert und mit der Meldung protokolliert.  
+  
+ Wenn einem hilfsschlüsselwortpräfix bereitgestellt wurde, wird er auch mit der Meldung protokolliert. Schlüsselwort "Help" besteht aus durch Anfügen von dem Namen der Ressource an die hilfsschlüsselwortpräfix. Eine Aufgabe kann einem hilfsschlüsselwortpräfix entweder mit Bereitstellen der <xref:Microsoft.Build.Utilities.Task> Basisklassenkonstruktor oder <xref:Microsoft.Build.Utilities.Task.HelpKeywordPrefix%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="messageResourceName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LogErrorWithCodeFromResources">
+      <MemberSignature Language="C#" Value="public void LogErrorWithCodeFromResources (string subcategoryResourceName, string file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, string messageResourceName, params object[] messageArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogErrorWithCodeFromResources(string subcategoryResourceName, string file, int32 lineNumber, int32 columnNumber, int32 endLineNumber, int32 endColumnNumber, string messageResourceName, object[] messageArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogErrorWithCodeFromResources(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subcategoryResourceName" Type="System.String" />
+        <Parameter Name="file" Type="System.String" />
+        <Parameter Name="lineNumber" Type="System.Int32" />
+        <Parameter Name="columnNumber" Type="System.Int32" />
+        <Parameter Name="endLineNumber" Type="System.Int32" />
+        <Parameter Name="endColumnNumber" Type="System.Int32" />
+        <Parameter Name="messageResourceName" Type="System.String" />
+        <Parameter Name="messageArgs" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="subcategoryResourceName">Der Name der Zeichenfolgenressource, die den Fehlertyp beschreibt.</param>
+        <param name="file">Der Pfad zur Datei, die den Fehler enthält.</param>
+        <param name="lineNumber">Die Zeile in der Datei, in der der Fehler auftritt.</param>
+        <param name="columnNumber">Die Spalte in der Datei, in der der Fehler auftritt.</param>
+        <param name="endLineNumber">Die letzte Zeile in der Datei, in der der Fehler auftritt.</param>
+        <param name="endColumnNumber">Die letzte Spalte in der Datei, in der der Fehler auftritt.</param>
+        <param name="messageResourceName">Der Name der zu ladenden Zeichenfolgenressource.</param>
+        <param name="messageArgs">Die Argumente für das Formatieren der geladenen Zeichenfolge.</param>
+        <summary>Protokolliert einen Fehler mit der angegebenen Ressourcenzeichenfolge und weiteren Fehlerdetails.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Nachricht mit dem Fehlercode beginnt, wird der Code extrahiert und mit der Meldung protokolliert.  
+  
+ Wenn einem hilfsschlüsselwortpräfix bereitgestellt wurde, wird er auch mit der Meldung protokolliert. Schlüsselwort "Help" besteht aus durch Anfügen von dem Namen der Ressource an die hilfsschlüsselwortpräfix. Eine Aufgabe kann einem hilfsschlüsselwortpräfix entweder mit Bereitstellen der <xref:Microsoft.Build.Utilities.Task> Basisklassenkonstruktor oder <xref:Microsoft.Build.Utilities.Task.HelpKeywordPrefix%2A> Eigenschaft.  
+  
+ Die Parameter `subCategoryResourceName`, und `file` kann `null`.  
+  
+ Die Parameter `lineNumber`, `columnNumber`, `endLineNumber`, und `endColumnNumber` muss auf 0 festgelegt werden, wenn sie nicht verfügbar sind.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="messageResourceName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LogExternalProjectFinished">
+      <MemberSignature Language="C#" Value="public void LogExternalProjectFinished (string message, string helpKeyword, string projectFile, bool succeeded);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogExternalProjectFinished(string message, string helpKeyword, string projectFile, bool succeeded) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogExternalProjectFinished(System.String,System.String,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="projectFile" Type="System.String" />
+        <Parameter Name="succeeded" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Textnachricht.</param>
+        <param name="helpKeyword">Das Hilfeschlüsselwort.</param>
+        <param name="projectFile">Der Name des Projekts.</param>
+        <param name="succeeded">
+          <see langword="true" />um anzugeben, dass das Projekt erfolgreich erstellt wurde. andernfalls <see langword="false" />.</param>
+        <summary>Unterstützt das Protokollieren der benutzerdefinierten <see cref="T:Microsoft.Build.Framework.ExternalProjectFinishedEventArgs" /> Buildereignisses.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogExternalProjectStarted">
+      <MemberSignature Language="C#" Value="public void LogExternalProjectStarted (string message, string helpKeyword, string projectFile, string targetNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogExternalProjectStarted(string message, string helpKeyword, string projectFile, string targetNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogExternalProjectStarted(System.String,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="projectFile" Type="System.String" />
+        <Parameter Name="targetNames" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Textnachricht.</param>
+        <param name="helpKeyword">Das Hilfeschlüsselwort.</param>
+        <param name="projectFile">Der Name des Projekts.</param>
+        <param name="targetNames">Die zu erstellenden Ziele. Eine leere Zeichenfolge kennzeichnet Standardziele.</param>
+        <summary>Unterstützt das Protokollieren der benutzerdefinierten <see cref="T:Microsoft.Build.Framework.ExternalProjectStartedEventArgs" /> Buildereignisses.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="LogMessage">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Protokolliert eine Meldung anhand der angegebenen Zeichenfolge.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt den Code für eine Aufgabe, die eine oder mehrere Verzeichnisse erstellt.  
+  
+ [!code-csharp[msbuild_MakeDirTask#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_MakeDirTask/CS/msbuild_MakeDirTask.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="LogMessage">
+      <MemberSignature Language="C#" Value="public void LogMessage (string message, params object[] messageArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogMessage(string message, object[] messageArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogMessage(System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="messageArgs" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="message">Die Meldung.</param>
+        <param name="messageArgs">Die Argumente für das Formatieren der Meldung.</param>
+        <summary>Protokolliert eine Meldung anhand der angegebenen Zeichenfolge.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.Build.Framework.MessageImportance> ist der Wert einer Nachricht `Normal` standardmäßig.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Code für eine Aufgabe, die eine oder mehrere Verzeichnisse erstellt.  
+  
+ [!code-csharp[msbuild_MakeDirTask#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_MakeDirTask/CS/msbuild_MakeDirTask.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="message" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LogMessage">
+      <MemberSignature Language="C#" Value="public void LogMessage (Microsoft.Build.Framework.MessageImportance importance, string message, params object[] messageArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogMessage(valuetype Microsoft.Build.Framework.MessageImportance importance, string message, object[] messageArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogMessage(Microsoft.Build.Framework.MessageImportance,System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="importance" Type="Microsoft.Build.Framework.MessageImportance" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="messageArgs" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="importance">Einer der Enumerationswerte, der die Wichtigkeit der Meldung angibt.</param>
+        <param name="message">Die Meldung.</param>
+        <param name="messageArgs">Die Argumente für das Formatieren der Meldung.</param>
+        <summary>Protokolliert eine Meldung mit der angegebenen Zeichenfolge und Wichtigkeit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dafür sorgen, dass die richtige Reihenfolge der Parameter oder die andere Überladung versehentlich aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="message" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LogMessage">
+      <MemberSignature Language="C#" Value="public void LogMessage (string subcategory, string code, string helpKeyword, string file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, Microsoft.Build.Framework.MessageImportance importance, string message, params object[] messageArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogMessage(string subcategory, string code, string helpKeyword, string file, int32 lineNumber, int32 columnNumber, int32 endLineNumber, int32 endColumnNumber, valuetype Microsoft.Build.Framework.MessageImportance importance, string message, object[] messageArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogMessage(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,Microsoft.Build.Framework.MessageImportance,System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subcategory" Type="System.String" />
+        <Parameter Name="code" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="file" Type="System.String" />
+        <Parameter Name="lineNumber" Type="System.Int32" />
+        <Parameter Name="columnNumber" Type="System.Int32" />
+        <Parameter Name="endLineNumber" Type="System.Int32" />
+        <Parameter Name="endColumnNumber" Type="System.Int32" />
+        <Parameter Name="importance" Type="Microsoft.Build.Framework.MessageImportance" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="messageArgs" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="subcategory">Beschreibung des Warnungstyps (kann null sein).</param>
+        <param name="code">Message Authentication Code (kann null sein)</param>
+        <param name="helpKeyword">Das Hilfeschlüsselwort für die Host-IDE (kann null sein).</param>
+        <param name="file">Der Pfad zur Datei, die die Nachricht (kann null sein).</param>
+        <param name="lineNumber">Die Zeile in der Datei, die die Nachricht (Festlegung auf 0 (null), wenn nicht verfügbar).</param>
+        <param name="columnNumber">Die Spalte in der Datei, die die Nachricht (Festlegung auf 0 (null), wenn nicht verfügbar).</param>
+        <param name="endLineNumber">Die letzte Zeile eines Bereichs von Zeilen in der Datei, die die Nachricht (Festlegung auf 0 (null), wenn nicht verfügbar).</param>
+        <param name="endColumnNumber">Die letzte Spalte eines Bereichs von Spalten in der Datei, die die Nachricht (Festlegung auf 0 (null), wenn nicht verfügbar).</param>
+        <param name="importance">Die Wichtigkeit der Meldung.</param>
+        <param name="message">Die Meldungszeichenfolge.</param>
+        <param name="messageArgs">Optionale Argumente für das Formatieren der Meldungszeichenfolge.</param>
+        <summary>Protokolliert eine Meldung mit der angegebenen Zeichenfolge und andere Nachrichtendetails.  
+  
+ Thread-sicher.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Wird ausgelöst, wenn <c>Nachricht</c> ist null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LogMessageFromResources">
+      <MemberSignature Language="C#" Value="public void LogMessageFromResources (string messageResourceName, params object[] messageArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogMessageFromResources(string messageResourceName, object[] messageArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogMessageFromResources(System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageResourceName" Type="System.String" />
+        <Parameter Name="messageArgs" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="messageResourceName">Der Name der zu ladenden Zeichenfolgenressource.</param>
+        <param name="messageArgs">Die Argumente für das Formatieren der geladenen Zeichenfolge.</param>
+        <summary>Protokolliert eine Meldung anhand der angegebenen Ressourcenzeichenfolge.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:Microsoft.Build.Framework.MessageImportance> ist der Wert einer Nachricht `Normal` standardmäßig.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="messageResourceName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LogMessageFromResources">
+      <MemberSignature Language="C#" Value="public void LogMessageFromResources (Microsoft.Build.Framework.MessageImportance importance, string messageResourceName, params object[] messageArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogMessageFromResources(valuetype Microsoft.Build.Framework.MessageImportance importance, string messageResourceName, object[] messageArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogMessageFromResources(Microsoft.Build.Framework.MessageImportance,System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="importance" Type="Microsoft.Build.Framework.MessageImportance" />
+        <Parameter Name="messageResourceName" Type="System.String" />
+        <Parameter Name="messageArgs" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="importance">Einer der Enumerationswerte, der die Wichtigkeit der Meldung angibt.</param>
+        <param name="messageResourceName">Der Name der zu ladenden Zeichenfolgenressource.</param>
+        <param name="messageArgs">Die Argumente für das Formatieren der geladenen Zeichenfolge.</param>
+        <summary>Protokolliert eine Meldung mit der angegebenen Ressourcenzeichenfolge und Wichtigkeit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dafür sorgen, dass die richtige Reihenfolge der Parameter oder die andere Überladung versehentlich aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="message" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LogMessageFromText">
+      <MemberSignature Language="C#" Value="public bool LogMessageFromText (string lineOfText, Microsoft.Build.Framework.MessageImportance messageImportance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool LogMessageFromText(string lineOfText, valuetype Microsoft.Build.Framework.MessageImportance messageImportance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogMessageFromText(System.String,Microsoft.Build.Framework.MessageImportance)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lineOfText" Type="System.String" />
+        <Parameter Name="messageImportance" Type="Microsoft.Build.Framework.MessageImportance" />
+      </Parameters>
+      <Docs>
+        <param name="lineOfText">Die Textzeile, aus der protokolliert werden soll.</param>
+        <param name="messageImportance">Einer der Werte von <see cref="T:Microsoft.Build.Framework.MessageImportance" /> , der die Wichtigkeitsstufe der Befehlszeile angibt.</param>
+        <summary>Protokolliert eine Fehlermeldung oder Warnung aus der angegebenen Textzeile.</summary>
+        <returns>
+          <see langword="true" />Wenn ein Fehler protokolliert wurde. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Warnungen und Fehler und Warnungen werden nur für Zeilen protokolliert, die den kanonische Format entsprechen. Alle anderen Zeilen werden als Nachrichten behandelt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="lineOfText" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LogMessagesFromFile">
+      <MemberSignature Language="C#" Value="public bool LogMessagesFromFile (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool LogMessagesFromFile(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogMessagesFromFile(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Name der Datei, aus der Meldungen protokolliert werden sollen.</param>
+        <summary>Protokolliert Fehler, Warnungen und Meldungen für jede Textzeile in der angegebenen Datei.</summary>
+        <returns>
+          <see langword="true" />um anzugeben, über mindestens wurde ein Fehler protokolliert; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fehler und Warnungen werden für Zeilen protokolliert, die ein bestimmtes kanonisches Format entsprechen. Alle anderen Zeilen werden als Nachrichten protokolliert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="message" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LogMessagesFromFile">
+      <MemberSignature Language="C#" Value="public bool LogMessagesFromFile (string fileName, Microsoft.Build.Framework.MessageImportance messageImportance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool LogMessagesFromFile(string fileName, valuetype Microsoft.Build.Framework.MessageImportance messageImportance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogMessagesFromFile(System.String,Microsoft.Build.Framework.MessageImportance)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="messageImportance" Type="Microsoft.Build.Framework.MessageImportance" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Name der Datei, aus der Meldungen protokolliert werden sollen.</param>
+        <param name="messageImportance">Einer der Enumerationswerte, der die Wichtigkeit von protokollierten Meldungen angibt.</param>
+        <summary>Protokolliert Fehler, Warnungen und Meldungen für jede Textzeile in der angegebenen Datei. Protokolliert ebenfalls die Bedeutung von Meldungen.</summary>
+        <returns>
+          <see langword="true" />um anzugeben, über mindestens wurde ein Fehler protokolliert; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fehler und Warnungen werden für Zeilen protokolliert, die ein bestimmtes kanonisches Format entsprechen. Alle anderen Zeilen werden als Nachrichten protokolliert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wird ausgelöst, wenn <c>Filename</c> ist null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LogMessagesFromStream">
+      <MemberSignature Language="C#" Value="public bool LogMessagesFromStream (System.IO.TextReader stream, Microsoft.Build.Framework.MessageImportance messageImportance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool LogMessagesFromStream(class System.IO.TextReader stream, valuetype Microsoft.Build.Framework.MessageImportance messageImportance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogMessagesFromStream(System.IO.TextReader,Microsoft.Build.Framework.MessageImportance)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.TextReader" />
+        <Parameter Name="messageImportance" Type="Microsoft.Build.Framework.MessageImportance" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Ein <see cref="T:System.IO.TextReader" /> , die die zu protokollierenden Stream liest.</param>
+        <param name="messageImportance">Einer der Werte von <see cref="T:Microsoft.Build.Framework.MessageImportance" /> , der die Wichtigkeitsstufe der Befehlszeile angibt.</param>
+        <summary>Protokolliert eine Fehlermeldung oder Warnung aus dem angegebenen Stream.</summary>
+        <returns>
+          <see langword="true" />Wenn ein Fehler protokolliert wurde. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist nicht threadsicher.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LogWarning">
+      <MemberSignature Language="C#" Value="public void LogWarning (string message, params object[] messageArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogWarning(string message, object[] messageArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogWarning(System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="messageArgs" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="message">Die Meldung.</param>
+        <param name="messageArgs">Optionale Argumente für das Formatieren der Meldungszeichenfolge.</param>
+        <summary>Protokolliert eine Warnung mit der angegebenen Meldung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist nicht threadsicher.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="message" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LogWarning">
+      <MemberSignature Language="C#" Value="public void LogWarning (string subcategory, string warningCode, string helpKeyword, string file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, string message, params object[] messageArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogWarning(string subcategory, string warningCode, string helpKeyword, string file, int32 lineNumber, int32 columnNumber, int32 endLineNumber, int32 endColumnNumber, string message, object[] messageArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogWarning(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subcategory" Type="System.String" />
+        <Parameter Name="warningCode" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="file" Type="System.String" />
+        <Parameter Name="lineNumber" Type="System.Int32" />
+        <Parameter Name="columnNumber" Type="System.Int32" />
+        <Parameter Name="endLineNumber" Type="System.Int32" />
+        <Parameter Name="endColumnNumber" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="messageArgs" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="subcategory">Die Beschreibung des Warnungstyps.</param>
+        <param name="warningCode">Der Warncode.</param>
+        <param name="helpKeyword">Das Help-Schlüsselwort, das der Warnung zugeordnet wird.</param>
+        <param name="file">Der Pfad zu der Datei, die die Warnung enthält.</param>
+        <param name="lineNumber">Die Zeile in der Datei, in der die Warnung auftritt.</param>
+        <param name="columnNumber">Die Spalte in der Datei, in der die Warnung auftritt.</param>
+        <param name="endLineNumber">Die Endzeile in der Datei, in der die Warnung auftritt.</param>
+        <param name="endColumnNumber">Die letzte Spalte in der Datei, in der die Warnung auftritt.</param>
+        <param name="message">Die Meldung.</param>
+        <param name="messageArgs">Optionale Argumente für das Formatieren der Meldungszeichenfolge.</param>
+        <summary>Protokolliert anhand der angegebenen Meldung und weiterer Warndetails eine Warnung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Parameter `subCategory`, `warningCode`, `helpKeyword`, und `file` kann `null`.  
+  
+ Die Parameter `lineNumber`, `columnNumber`, `endLineNumber`, und `endColumnNumber` muss auf 0 festgelegt werden, wenn sie nicht verfügbar sind.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="message" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LogWarningFromException">
+      <MemberSignature Language="C#" Value="public void LogWarningFromException (Exception exception);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogWarningFromException(class System.Exception exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogWarningFromException(System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exception" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="exception">Die zu protokollierende Ausnahme.</param>
+        <summary>Protokolliert eine Warnung unter Verwendung der Meldung aus der angegebenen Ausnahme.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist nicht threadsicher.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="e" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LogWarningFromException">
+      <MemberSignature Language="C#" Value="public void LogWarningFromException (Exception exception, bool showStackTrace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogWarningFromException(class System.Exception exception, bool showStackTrace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogWarningFromException(System.Exception,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exception" Type="System.Exception" />
+        <Parameter Name="showStackTrace" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="exception">Die zu protokollierende Ausnahme.</param>
+        <param name="showStackTrace">
+          <see langword="true" />um die stapelüberwachung in das Protokoll aufzunehmen; andernfalls <see langword="false" />.</param>
+        <summary>Protokolliert eine Warnung anhand der Meldung und optional anhand der Stapelüberwachung aus der angegebenen Ausnahme.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist nicht threadsicher.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="e" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LogWarningFromResources">
+      <MemberSignature Language="C#" Value="public void LogWarningFromResources (string messageResourceName, params object[] messageArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogWarningFromResources(string messageResourceName, object[] messageArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogWarningFromResources(System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageResourceName" Type="System.String" />
+        <Parameter Name="messageArgs" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="messageResourceName">Der Name der zu ladenden Zeichenfolgenressource.</param>
+        <param name="messageArgs">Die Argumente für das Formatieren der geladenen Zeichenfolge.</param>
+        <summary>Protokolliert eine Warnung anhand der angegebenen Ressourcenzeichenfolge.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist nicht threadsicher.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="messageResourceName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LogWarningFromResources">
+      <MemberSignature Language="C#" Value="public void LogWarningFromResources (string subcategoryResourceName, string warningCode, string helpKeyword, string file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, string messageResourceName, params object[] messageArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogWarningFromResources(string subcategoryResourceName, string warningCode, string helpKeyword, string file, int32 lineNumber, int32 columnNumber, int32 endLineNumber, int32 endColumnNumber, string messageResourceName, object[] messageArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogWarningFromResources(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subcategoryResourceName" Type="System.String" />
+        <Parameter Name="warningCode" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="file" Type="System.String" />
+        <Parameter Name="lineNumber" Type="System.Int32" />
+        <Parameter Name="columnNumber" Type="System.Int32" />
+        <Parameter Name="endLineNumber" Type="System.Int32" />
+        <Parameter Name="endColumnNumber" Type="System.Int32" />
+        <Parameter Name="messageResourceName" Type="System.String" />
+        <Parameter Name="messageArgs" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="subcategoryResourceName">Der Name der Zeichenfolgenressource, die den Warnungstyp beschreibt.</param>
+        <param name="warningCode">Der Warncode.</param>
+        <param name="helpKeyword">Das Help-Schlüsselwort, das der Warnung zugeordnet wird.</param>
+        <param name="file">Der Pfad zu der Datei, die die Warnung enthält.</param>
+        <param name="lineNumber">Die Zeile in der Datei, in der die Warnung auftritt.</param>
+        <param name="columnNumber">Die Spalte in der Datei, in der die Warnung auftritt.</param>
+        <param name="endLineNumber">Die Endzeile in der Datei, in der die Warnung auftritt.</param>
+        <param name="endColumnNumber">Die Endspalte in der Datei, in der die Warnung auftritt.</param>
+        <param name="messageResourceName">Der Name der zu ladenden Zeichenfolgenressource.</param>
+        <param name="messageArgs">Die Argumente für das Formatieren der geladenen Zeichenfolge.</param>
+        <summary>Protokolliert anhand der angegebenen Ressourcenzeichenfolge und anderer Warndetails eine Warnung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Parameter `subCategoryResourceName`, `warningCode`, `helpKeyword`, und `file` kann `null`.  
+  
+ Die Parameter `lineNumber`, `columnNumber`, `endLineNumber`, und `endColumnNumber` muss auf 0 festgelegt werden, wenn sie nicht verfügbar sind.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="messageResourceName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LogWarningWithCodeFromResources">
+      <MemberSignature Language="C#" Value="public void LogWarningWithCodeFromResources (string messageResourceName, params object[] messageArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogWarningWithCodeFromResources(string messageResourceName, object[] messageArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogWarningWithCodeFromResources(System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageResourceName" Type="System.String" />
+        <Parameter Name="messageArgs" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="messageResourceName">Der Name der zu ladenden Zeichenfolgenressource.</param>
+        <param name="messageArgs">Die Argumente für das Formatieren der geladenen Zeichenfolge.</param>
+        <summary>Protokolliert eine Warnung mit einem Warncode anhand der angegebenen Ressourcenzeichenfolge.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Nachricht mit einem Warncode beginnt, wird der Code extrahiert und mit der Meldung protokolliert.  
+  
+ Wenn einem hilfsschlüsselwortpräfix bereitgestellt wurde, wird er auch mit der Meldung protokolliert. Schlüsselwort "Help" besteht aus durch Anfügen von dem Namen der Ressource an die hilfsschlüsselwortpräfix. Eine Aufgabe kann einem hilfsschlüsselwortpräfix entweder mit Bereitstellen der <xref:Microsoft.Build.Utilities.Task> Basisklassenkonstruktor oder <xref:Microsoft.Build.Utilities.Task.HelpKeywordPrefix%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="messageResourceName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LogWarningWithCodeFromResources">
+      <MemberSignature Language="C#" Value="public void LogWarningWithCodeFromResources (string subcategoryResourceName, string file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, string messageResourceName, params object[] messageArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LogWarningWithCodeFromResources(string subcategoryResourceName, string file, int32 lineNumber, int32 columnNumber, int32 endLineNumber, int32 endColumnNumber, string messageResourceName, object[] messageArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.LogWarningWithCodeFromResources(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subcategoryResourceName" Type="System.String" />
+        <Parameter Name="file" Type="System.String" />
+        <Parameter Name="lineNumber" Type="System.Int32" />
+        <Parameter Name="columnNumber" Type="System.Int32" />
+        <Parameter Name="endLineNumber" Type="System.Int32" />
+        <Parameter Name="endColumnNumber" Type="System.Int32" />
+        <Parameter Name="messageResourceName" Type="System.String" />
+        <Parameter Name="messageArgs" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="subcategoryResourceName">Der Name der Zeichenfolgenressource, die den Warnungstyp beschreibt.</param>
+        <param name="file">Der Pfad zu der Datei, die die Warnung enthält.</param>
+        <param name="lineNumber">Die Zeile in der Datei, in der die Warnung auftritt.</param>
+        <param name="columnNumber">Die Spalte in der Datei, in der die Warnung auftritt.</param>
+        <param name="endLineNumber">Die Endzeile in der Datei, in der die Warnung auftritt.</param>
+        <param name="endColumnNumber">Die Endspalte in der Datei, in der die Warnung auftritt.</param>
+        <param name="messageResourceName">Der Name der zu ladenden Zeichenfolgenressource.</param>
+        <param name="messageArgs">Die Argumente für das Formatieren der geladenen Zeichenfolge.</param>
+        <summary>Protokolliert eine Warnung mit einem Warncode, wozu die angegebene Ressourcenzeichenfolge und weitere Warndetails verwendet werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Nachricht mit einem Warncode beginnt, wird der Code extrahiert und mit der Meldung protokolliert.  
+  
+ Wenn einem hilfsschlüsselwortpräfix bereitgestellt wurde, wird er auch mit der Meldung protokolliert. Schlüsselwort "Help" besteht aus durch Anfügen von dem Namen der Ressource an die hilfsschlüsselwortpräfix. Eine Aufgabe kann einem hilfsschlüsselwortpräfix entweder mit Bereitstellen der <xref:Microsoft.Build.Utilities.Task> Basisklassenkonstruktor oder <xref:Microsoft.Build.Utilities.Task.HelpKeywordPrefix%2A> Eigenschaft.  
+  
+ Die Parameter `subCategoryResourceName`, und `file` kann `null`.  
+  
+ Die Parameter `lineNumber`, `columnNumber`, `endLineNumber`, und `endColumnNumber` muss auf 0 festgelegt werden, wenn sie nicht verfügbar sind.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="messageResourceName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MarkAsInactive">
+      <MemberSignature Language="C#" Value="public void MarkAsInactive ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MarkAsInactive() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskLoggingHelper.MarkAsInactive" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Benachrichtigt das <see langword="TaskLoggingHelper" /> , die sie nicht mehr benötigt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist threadsicher, jedoch InitializeLifetimeService und MarkAsInactive, müssen in dieser Reihenfolge aufgerufen oder müssen Sie beide Methoden aufrufen, und müssen Sie beide Methoden mehrmals aufrufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskName">
+      <MemberSignature Language="C#" Value="protected string TaskName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TaskName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.TaskLoggingHelper.TaskName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der übergeordneten Aufgabe ab.</summary>
+        <value>Der Name der übergeordneten Aufgabe.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskResources">
+      <MemberSignature Language="C#" Value="public System.Resources.ResourceManager TaskResources { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Resources.ResourceManager TaskResources" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.TaskLoggingHelper.TaskResources" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Resources.ResourceManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen der von den Protokollierungsmethoden verwendeten kulturspezifischen Ressourcen.</summary>
+        <value>Ein <see cref="T:System.Resources.ResourceManager" /> , die von den Protokollierungsmethoden verwendeten kulturspezifischen Ressourcen darstellt. Dieser Wert kann <see langword="null" /> sein.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die abgeleitete Klassen lokalisierte Zeichenfolgen verfügen, sollten sie ihre Ressourcen mit dieser Eigenschaft registrieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,65 @@
+<Type Name="DispatcherUnhandledExceptionEventArgs" FullName="System.Windows.Threading.DispatcherUnhandledExceptionEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class DispatcherUnhandledExceptionEventArgs : System.Windows.Threading.DispatcherEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DispatcherUnhandledExceptionEventArgs extends System.Windows.Threading.DispatcherEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Threading.DispatcherEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für die <see cref="T:System.Windows.Threading.Dispatcher" /> <see cref="E:System.Windows.Threading.Dispatcher.UnhandledException" /> Ereignis.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Threading.Dispatcher.UnhandledException> Ereignis tritt auf, wenn code ausführen, der die <xref:System.Windows.Threading.Dispatcher> löst eine Ausnahme, die nicht behandelt wird.  
+  
+ Die <xref:System.Windows.Threading.Dispatcher.UnhandledExceptionFilter> Ereignis bietet eine Möglichkeit zum Auslösen der <xref:System.Windows.Threading.Dispatcher.UnhandledException> Ereignis.  Die <xref:System.Windows.Threading.Dispatcher.UnhandledExceptionFilter> Ereignis wird zuerst ausgelöst und, wenn <xref:System.Windows.Threading.DispatcherUnhandledExceptionFilterEventArgs.RequestCatch%2A> auf die <xref:System.Windows.Threading.DispatcherUnhandledExceptionFilterEventArgs> auf festgelegt ist `false`, die <xref:System.Windows.Threading.Dispatcher.UnhandledException> -Ereignis wird nicht ausgelöst werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public Exception Exception { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Exception" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Exception" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ausnahme, die ausgelöst wurde, beim Ausführen von Code über den Verteiler ab.</summary>
+        <value>Die Ausnahme.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Handled">
+      <MemberSignature Language="C#" Value="public bool Handled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Handled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Handled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob das Ausnahmeereignis behandelt wurde.</summary>
+        <value>
+          <see langword="true" />Wenn die Ausnahme verarbeitet wurde. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

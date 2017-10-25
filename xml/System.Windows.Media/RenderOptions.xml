@@ -1,0 +1,615 @@
+<Type Name="RenderOptions" FullName="System.Windows.Media.RenderOptions">
+  <TypeSignature Language="C#" Value="public static class RenderOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit RenderOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.RenderOptions" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet Optionen zum Steuern des Renderingverhaltens von Objekten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die angefügten Eigenschaften der <xref:System.Windows.Media.RenderOptions> Klasse, um Optionen für die Darstellung von Text und visuelle Elemente in der WPF-Anwendung anzugeben. Diese Optionen ermöglichen es Ihnen, die Darstellung für Geschwindigkeit oder Qualität optimieren.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BitmapScalingModeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BitmapScalingModeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BitmapScalingModeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.RenderOptions.BitmapScalingModeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Media.RenderOptions.BitmapScalingMode" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheInvalidationThresholdMaximumProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CacheInvalidationThresholdMaximumProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CacheInvalidationThresholdMaximumProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximumProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheInvalidationThresholdMinimumProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CacheInvalidationThresholdMinimumProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CacheInvalidationThresholdMinimumProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMinimumProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMinimum" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CachingHintProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CachingHintProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CachingHintProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.RenderOptions.CachingHintProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Media.RenderOptions.CachingHint" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearTypeHintProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ClearTypeHintProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ClearTypeHintProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.RenderOptions.ClearTypeHintProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Media.RenderOptions.ClearTypeHint" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EdgeModeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty EdgeModeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty EdgeModeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.RenderOptions.EdgeModeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Media.RenderOptions.EdgeMode" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBitmapScalingMode">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.BitmapScalingMode GetBitmapScalingMode (System.Windows.DependencyObject target);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Media.BitmapScalingMode GetBitmapScalingMode(class System.Windows.DependencyObject target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.RenderOptions.GetBitmapScalingMode(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForType(typeof(System.Windows.DependencyObject))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.BitmapScalingMode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="target">Das Abhängigkeitsobjekt, aus dem Abrufen des Werts der <see cref="P:System.Windows.Media.RenderOptions.BitmapScalingMode" /> -Eigenschaft.</param>
+        <summary>Gibt den Wert der angefügten <see cref="P:System.Windows.Media.RenderOptions.BitmapScalingMode" />-Eigenschaft für ein angegebenes Abhängigkeitsobjekt zurück.</summary>
+        <returns>Der aktuelle Wert der die <see cref="P:System.Windows.Media.RenderOptions.BitmapScalingMode" /> -Eigenschaft für das angegebene Abhängigkeitsobjekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Abrufen der <xref:System.Windows.Media.BitmapScalingMode> für ein Image-Objekt.  
+  
+ [!code-csharp[RenderOptions#RenderOptionsSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet1)]
+ [!code-vb[RenderOptions#RenderOptionsSnippet1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der angegebene <paramref name="target" /> ist gleich <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCacheInvalidationThresholdMaximum">
+      <MemberSignature Language="C#" Value="public static double GetCacheInvalidationThresholdMaximum (System.Windows.DependencyObject target);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 GetCacheInvalidationThresholdMaximum(class System.Windows.DependencyObject target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.RenderOptions.GetCacheInvalidationThresholdMaximum(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForType(typeof(System.Windows.Media.TileBrush))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="target">Das Abhängigkeitsobjekt, aus dem Abrufen des Werts der <see cref="P:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum" /> -Eigenschaft.</param>
+        <summary>Gibt den Wert der angefügten <see cref="P:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum" />-Eigenschaft für ein angegebenes Abhängigkeitsobjekt zurück.</summary>
+        <returns>Der aktuelle Wert der die <see cref="P:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum" /> -Eigenschaft für das angegebene Abhängigkeitsobjekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Abrufen der Zwischenspeichern Hinweis Werte für eine <xref:System.Windows.Media.DrawingBrush>.  
+  
+ [!code-csharp[RenderOptions#RenderOptionsSnippet4](~/samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet4)]
+ [!code-vb[RenderOptions#RenderOptionsSnippet4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der angegebene <paramref name="target" /> ist gleich <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCacheInvalidationThresholdMinimum">
+      <MemberSignature Language="C#" Value="public static double GetCacheInvalidationThresholdMinimum (System.Windows.DependencyObject target);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 GetCacheInvalidationThresholdMinimum(class System.Windows.DependencyObject target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.RenderOptions.GetCacheInvalidationThresholdMinimum(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForType(typeof(System.Windows.Media.TileBrush))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="target">Das Abhängigkeitsobjekt, aus dem Abrufen des Werts der <see cref="P:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMinimum" /> -Eigenschaft.</param>
+        <summary>Gibt den Wert der angefügten <see cref="P:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMinimum" />-Eigenschaft für ein angegebenes Abhängigkeitsobjekt zurück.</summary>
+        <returns>Der aktuelle Wert der die <see cref="P:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMinimum" /> -Eigenschaft für das angegebene Abhängigkeitsobjekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Abrufen der Zwischenspeichern Hinweis Werte für eine <xref:System.Windows.Media.DrawingBrush>.  
+  
+ [!code-csharp[RenderOptions#RenderOptionsSnippet4](~/samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet4)]
+ [!code-vb[RenderOptions#RenderOptionsSnippet4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der angegebene <paramref name="target" /> ist gleich <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCachingHint">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.CachingHint GetCachingHint (System.Windows.DependencyObject target);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Media.CachingHint GetCachingHint(class System.Windows.DependencyObject target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.RenderOptions.GetCachingHint(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForType(typeof(System.Windows.Media.TileBrush))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.CachingHint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="target">Das Abhängigkeitsobjekt, aus dem Abrufen des Werts der <see cref="P:System.Windows.Media.RenderOptions.CachingHint" /> -Eigenschaft.</param>
+        <summary>Gibt den Wert der angefügten <see cref="P:System.Windows.Media.RenderOptions.CachingHint" />-Eigenschaft für ein angegebenes Abhängigkeitsobjekt zurück.</summary>
+        <returns>Der aktuelle Wert der die <see cref="P:System.Windows.Media.RenderOptions.CachingHint" /> -Eigenschaft für das angegebene Abhängigkeitsobjekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Abrufen der Zwischenspeichern Hinweis Werte für eine <xref:System.Windows.Media.DrawingBrush>.  
+  
+ [!code-csharp[RenderOptions#RenderOptionsSnippet4](~/samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet4)]
+ [!code-vb[RenderOptions#RenderOptionsSnippet4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der angegebene <paramref name="target" /> ist gleich <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClearTypeHint">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.ClearTypeHint GetClearTypeHint (System.Windows.DependencyObject target);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Media.ClearTypeHint GetClearTypeHint(class System.Windows.DependencyObject target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.RenderOptions.GetClearTypeHint(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForType(typeof(System.Windows.DependencyObject))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.ClearTypeHint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="target">Die <see cref="T:System.Windows.DependencyObject" /> zum Abrufen der <see cref="P:System.Windows.Media.RenderOptions.ClearTypeHint" /> angefügte Eigenschaft für.</param>
+        <summary>Ruft den Wert der <see cref="P:System.Windows.Media.RenderOptions.ClearTypeHint" /> -Eigenschaft des angegebenen Elements.</summary>
+        <returns>Der Wert, der die <see cref="P:System.Windows.Media.RenderOptions.ClearTypeHint" /> angefügte Eigenschaft für <paramref name="target" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEdgeMode">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.EdgeMode GetEdgeMode (System.Windows.DependencyObject target);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Media.EdgeMode GetEdgeMode(class System.Windows.DependencyObject target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.RenderOptions.GetEdgeMode(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForType(typeof(System.Windows.DependencyObject))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.EdgeMode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="target">Das Abhängigkeitsobjekt, aus dem Abrufen des Werts der <see cref="P:System.Windows.Media.RenderOptions.EdgeMode" /> -Eigenschaft.</param>
+        <summary>Gibt den Wert der angefügten <see cref="P:System.Windows.Media.RenderOptions.EdgeMode" />-Eigenschaft für ein angegebenes Abhängigkeitsobjekt zurück.</summary>
+        <returns>Der aktuelle Wert der die <see cref="P:System.Windows.Media.RenderOptions.EdgeMode" /> -Eigenschaft für das angegebene Abhängigkeitsobjekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für Zeichnungsprimitiven ohne Text, z. B. <xref:System.Windows.Shapes.Ellipse> und <xref:System.Windows.Shapes.Polygon>, ist <xref:System.Windows.Media.EdgeMode.Unspecified>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der angegebene <paramref name="target" /> ist gleich <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRenderMode">
+      <MemberSignature Language="C#" Value="public static System.Windows.Interop.RenderMode ProcessRenderMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Interop.RenderMode ProcessRenderMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.RenderOptions.ProcessRenderMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Interop.RenderMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Render-Modus-Einstellung für den aktuellen Prozess an.</summary>
+        <value>Die <see cref="T:System.Windows.Interop.RenderMode" /> Einstellung für den aktuellen Prozess.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Media.RenderOptions.ProcessRenderMode%2A> Eigenschaft, um Elemente des Softwarerendering für den aktuellen Prozess zu erzwingen. Viele Probleme beim Rendern können vermieden werden, die in WPF-Anwendungen auftreten und, die durch externen Probleme verursacht werden, wenn Sie die Einstellung auf Elemente des Softwarerendering ändern.  
+  
+ Während des Anwendungsstarts Wenn Ihre Anwendung Renderingprobleme, z. B. langsame Frameraten, erkennt können Sie den Renderingmodus nur auf Software festlegen. Außerdem empfiehlt es sich zum Aktivieren der Benutzer festlegen, während die Anwendung ausgeführt wird.  
+  
+ Die <xref:System.Windows.Interop.RenderMode.SoftwareOnly> Einstellung überschreibt die <xref:System.Windows.Interop.HwndTarget.RenderMode%2A> Einstellung. Die Rangfolge für Elemente des Softwarerendering ist:  
+  
+1.  Registrierungsschlüssel DisableHWAcceleration  
+  
+2.  <xref:System.Windows.Media.RenderOptions.ProcessRenderMode%2A>  
+  
+3.  <xref:System.Windows.Interop.HwndTarget.RenderMode%2A>(pro-Ziel)  
+  
+ **Hinweis** <xref:System.Windows.Media.RenderOptions.ProcessRenderMode%2A> legt fest, und ändert nicht notwendigerweise den tatsächlichen Renderingmodus. Andere Teile des Systems möglicherweise außer Kraft setzen diese Voreinstellung legt fest und das System in den Elemente des Softwarerendering erzwingen.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">Diese Eigenschaft festgelegt. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBitmapScalingMode">
+      <MemberSignature Language="C#" Value="public static void SetBitmapScalingMode (System.Windows.DependencyObject target, System.Windows.Media.BitmapScalingMode bitmapScalingMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetBitmapScalingMode(class System.Windows.DependencyObject target, valuetype System.Windows.Media.BitmapScalingMode bitmapScalingMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.RenderOptions.SetBitmapScalingMode(System.Windows.DependencyObject,System.Windows.Media.BitmapScalingMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Windows.DependencyObject" />
+        <Parameter Name="bitmapScalingMode" Type="System.Windows.Media.BitmapScalingMode" />
+      </Parameters>
+      <Docs>
+        <param name="target">Die <see cref="T:System.Windows.UIElement" /> oder <see cref="T:System.Windows.Media.DrawingGroup" /> Nachfolger, für den zum Festlegen des Werts, der die <see cref="P:System.Windows.Media.RenderOptions.BitmapScalingMode" /> Eigenschaft.</param>
+        <param name="bitmapScalingMode">Der neue Wert, auf den die Eigenschaft festgelegt werden soll.</param>
+        <summary>Legt den Wert für die <see cref="P:System.Windows.Media.RenderOptions.BitmapScalingMode" /> angefügte Eigenschaft für ein angegebenes Abhängigkeitsobjekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Media.RenderOptions.SetBitmapScalingMode%2A> Methode auf eine <xref:System.Windows.UIElement> oder <xref:System.Windows.Media.DrawingGroup> Nachfolger, die eine Bitmap animiert.  
+  
+ Beim Animieren der Skalierung von Bitmaps kann der Standardalgorithmus für das Resampling von Bildern hoher Qualität zuweilen einen solchen Umfang an Systemressourcen beanspruchen, dass eine Verringerung der Einzelbildrate auftritt und Animationen ruckartig wiedergegeben werden. Durch Festlegen der <xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A> Eigenschaft von der <xref:System.Windows.Media.RenderOptions> -Objekt <xref:System.Windows.Media.BitmapScalingMode.LowQuality>, Animationen erstellen, wenn eine Bitmap zu skalieren.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.Windows.Media.BitmapScalingMode> für ein <xref:System.Windows.Controls.Image> Objekt.  
+  
+ [!code-csharp[RenderOptions#RenderOptionsSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet2)]
+ [!code-vb[RenderOptions#RenderOptionsSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der angegebene <paramref name="target" /> ist gleich <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCacheInvalidationThresholdMaximum">
+      <MemberSignature Language="C#" Value="public static void SetCacheInvalidationThresholdMaximum (System.Windows.DependencyObject target, double cacheInvalidationThresholdMaximum);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetCacheInvalidationThresholdMaximum(class System.Windows.DependencyObject target, float64 cacheInvalidationThresholdMaximum) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.RenderOptions.SetCacheInvalidationThresholdMaximum(System.Windows.DependencyObject,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Windows.DependencyObject" />
+        <Parameter Name="cacheInvalidationThresholdMaximum" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="target">Das Abhängigkeitsobjekt, für das Festlegen des Werts der <see cref="P:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum" /> Eigenschaft</param>
+        <param name="cacheInvalidationThresholdMaximum">Der neue Wert, auf den die Eigenschaft festgelegt werden soll.</param>
+        <summary>Legt den Wert für die <see cref="P:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum" /> angefügte Eigenschaft für ein angegebenes Abhängigkeitsobjekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Festlegen der <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum%2A> angefügte Eigenschaft im Code.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die Option zum Zwischenspeichern Hinweis für ein <xref:System.Windows.Media.DrawingBrush>.  
+  
+ [!code-csharp[RenderOptions#RenderOptionsSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet3)]
+ [!code-vb[RenderOptions#RenderOptionsSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der angegebene <paramref name="target" /> ist gleich <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCacheInvalidationThresholdMinimum">
+      <MemberSignature Language="C#" Value="public static void SetCacheInvalidationThresholdMinimum (System.Windows.DependencyObject target, double cacheInvalidationThresholdMinimum);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetCacheInvalidationThresholdMinimum(class System.Windows.DependencyObject target, float64 cacheInvalidationThresholdMinimum) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.RenderOptions.SetCacheInvalidationThresholdMinimum(System.Windows.DependencyObject,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Windows.DependencyObject" />
+        <Parameter Name="cacheInvalidationThresholdMinimum" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="target">Das Abhängigkeitsobjekt, für das Festlegen des Werts der <see cref="P:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMinimum" /> Eigenschaft</param>
+        <param name="cacheInvalidationThresholdMinimum">Der neue Wert, auf den die Eigenschaft festgelegt werden soll.</param>
+        <summary>Legt den Wert für die <see cref="P:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMinimum" /> angefügte Eigenschaft für ein angegebenes Abhängigkeitsobjekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Festlegen der <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMinimum%2A> angefügte Eigenschaft im Code.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die Option zum Zwischenspeichern Hinweis für ein <xref:System.Windows.Media.DrawingBrush>.  
+  
+ [!code-csharp[RenderOptions#RenderOptionsSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet3)]
+ [!code-vb[RenderOptions#RenderOptionsSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der angegebene <paramref name="target" /> ist gleich <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCachingHint">
+      <MemberSignature Language="C#" Value="public static void SetCachingHint (System.Windows.DependencyObject target, System.Windows.Media.CachingHint cachingHint);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetCachingHint(class System.Windows.DependencyObject target, valuetype System.Windows.Media.CachingHint cachingHint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.RenderOptions.SetCachingHint(System.Windows.DependencyObject,System.Windows.Media.CachingHint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Windows.DependencyObject" />
+        <Parameter Name="cachingHint" Type="System.Windows.Media.CachingHint" />
+      </Parameters>
+      <Docs>
+        <param name="target">Das Abhängigkeitsobjekt, für das Festlegen des Werts der <see cref="P:System.Windows.Media.RenderOptions.CachingHint" /> Eigenschaft.</param>
+        <param name="cachingHint">Der neue Wert, auf den die Eigenschaft festgelegt werden soll.</param>
+        <summary>Legt den Wert für die <see cref="P:System.Windows.Media.RenderOptions.CachingHint" /> angefügte Eigenschaft für ein angegebenes Abhängigkeitsobjekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] zwischenspeichert, den gerenderten Inhalt <xref:System.Windows.Media.DrawingBrush> und <xref:System.Windows.Media.VisualBrush> Objekte. In statischen Szenarien, in denen der Inhalt weder die Verwendung des Pinsels in der Szene geändert wird, bietet nicht Zwischenspeichern der Vorteil, da Videospeicher gespart wird. Wenn ein Pinsel mit statischem Inhalt verwendet wird, auf eine nicht statische Weise das Standardverhalten des [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] entspricht der gesamte Inhalt des Pinsels erneut zu rendern jeden Frame, selbst wenn der Inhalt unverändert bleibt. Dies wird z. B. vorkommen, wenn ein statischer <xref:System.Windows.Media.DrawingBrush> oder <xref:System.Windows.Media.VisualBrush> auf die Oberfläche eines Objekts für das Drehen von 3D zugeordnet ist. Den statischen Inhalt erneut rendern kann sich negativ auf die Leistung auswirken.  
+  
+ Durch Festlegen der <xref:System.Windows.Media.RenderOptions.CachingHint%2A> -Eigenschaft des Pinsels auf <xref:System.Windows.Media.CachingHint.Cache>, Sie können die Leistung mithilfe von zwischengespeicherten Versionen der Kacheleffekt Objekte erhöhen.  
+  
+ Die <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMinimum%2A> und <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum%2A> Eigenschaftswerte sind Werte von relativer Größe, die bestimmen, wann die <xref:System.Windows.Media.TileBrush> Objekt aufgrund von Änderungen an der Skalierung neu generiert werden sollte. Beispielsweise, wenn die <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum%2A> Eigenschaftensatz zu 2.0, den Cache für die <xref:System.Windows.Media.TileBrush> muss erneut generiert werden, nur, wenn seine Größe zweimal die Größe des aktuellen Caches überschreitet.  
+  
+ Verwenden Sie diese Methode zum Festlegen der <xref:System.Windows.Media.RenderOptions.CachingHint%2A> angefügte Eigenschaft im Code.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die Option zum Zwischenspeichern Hinweis für ein <xref:System.Windows.Media.DrawingBrush>.  
+  
+ [!code-csharp[RenderOptions#RenderOptionsSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet3)]
+ [!code-vb[RenderOptions#RenderOptionsSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der angegebene <paramref name="target" /> ist gleich <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetClearTypeHint">
+      <MemberSignature Language="C#" Value="public static void SetClearTypeHint (System.Windows.DependencyObject target, System.Windows.Media.ClearTypeHint clearTypeHint);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetClearTypeHint(class System.Windows.DependencyObject target, valuetype System.Windows.Media.ClearTypeHint clearTypeHint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.RenderOptions.SetClearTypeHint(System.Windows.DependencyObject,System.Windows.Media.ClearTypeHint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Windows.DependencyObject" />
+        <Parameter Name="clearTypeHint" Type="System.Windows.Media.ClearTypeHint" />
+      </Parameters>
+      <Docs>
+        <param name="target">Die <see cref="T:System.Windows.DependencyObject" /> Festlegen der <see cref="P:System.Windows.Media.RenderOptions.ClearTypeHint" /> -Eigenschaft auf.</param>
+        <param name="clearTypeHint">Die neue <see cref="P:System.Windows.Media.RenderOptions.ClearTypeHint" /> Wert.</param>
+        <summary>Legt den Wert für die <see cref="P:System.Windows.Media.RenderOptions.ClearTypeHint" /> -Eigenschaft des angegebenen Elements.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der angegebene <paramref name="target" /> ist gleich <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetEdgeMode">
+      <MemberSignature Language="C#" Value="public static void SetEdgeMode (System.Windows.DependencyObject target, System.Windows.Media.EdgeMode edgeMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetEdgeMode(class System.Windows.DependencyObject target, valuetype System.Windows.Media.EdgeMode edgeMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.RenderOptions.SetEdgeMode(System.Windows.DependencyObject,System.Windows.Media.EdgeMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Windows.DependencyObject" />
+        <Parameter Name="edgeMode" Type="System.Windows.Media.EdgeMode" />
+      </Parameters>
+      <Docs>
+        <param name="target">Das Abhängigkeitsobjekt, für das Festlegen des Werts der <see cref="P:System.Windows.Media.RenderOptions.EdgeMode" /> Eigenschaft</param>
+        <param name="edgeMode">Der neue Wert, auf den die Eigenschaft festgelegt werden soll.</param>
+        <summary>Legt den Wert für die <see cref="P:System.Windows.Media.RenderOptions.EdgeMode" /> angefügte Eigenschaft für ein angegebenes Abhängigkeitsobjekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Textobjekte werden immer mit Antialiasing angezeigt und durch Festlegen des Werts des Edge-Modus nicht betroffen sind. Wenn Sie den Wert des Edge-Modus eines visuellen Objekts festlegen, werden alle untergeordneten Zeichnungsprimitiven des visuellen Objekts auf den gleichen Wert des Edge-Modus festgelegt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Media.RenderOptions.SetEdgeMode%2A> -Methode zum Festlegen der Edge-Modus für ein visuelles Objekt zu <xref:System.Windows.Media.EdgeMode.Aliased>.  
+  
+ [!code-csharp[VisualSnippets#SetEdgeMode](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualSnippets/CSharp/Snippets.cs#setedgemode)]
+ [!code-vb[VisualSnippets#SetEdgeMode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualSnippets/visualbasic/snippets.vb#setedgemode)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der angegebene <paramref name="target" /> ist gleich <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

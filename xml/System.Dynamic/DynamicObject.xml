@@ -1,0 +1,975 @@
+<Type Name="DynamicObject" FullName="System.Dynamic.DynamicObject">
+  <TypeSignature Language="C#" Value="public class DynamicObject : System.Dynamic.IDynamicMetaObjectProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit DynamicObject extends System.Object implements class System.Dynamic.IDynamicMetaObjectProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Dynamic.DynamicObject" />
+  <AssemblyInfo>
+    <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Linq.Expressions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Dynamic.IDynamicMetaObjectProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Basisklasse zum Angeben von dynamischem Verhalten zur Laufzeit bereit. Diese Klasse muss vererbt werden und kann nicht direkt instanziiert werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `DynamicObject` -Klasse können Sie definieren, welche Vorgänge für dynamische Objekte ausgeführt werden können und wie diese Vorgänge ausgeführt. Beispielsweise können Sie definieren, was geschieht, wenn Sie versuchen, erhalten eine Objekteigenschaft festlegen, eine Methode aufrufen oder standard mathematische Operationen wie Addition und Multiplikation ausführen.  
+  
+ Diese Klasse ist hilfreich, wenn Sie ein bequemer Protokoll für eine Bibliothek erstellen möchten. Wenn Benutzern der Bibliothek verwenden Syntax wie beispielsweise `Scriptobj.SetProperty("Count", 1)`, können Sie die Möglichkeit, viel einfachere Syntax zu verwenden, etwa geben `scriptobj.Count = 1`.  
+  
+ Eine Instanz kann nicht direkt erstellt die `DynamicObject` Klasse. Um das dynamische Verhalten zu implementieren, sollten Sie erben die `DynamicObject` Klasse, und überschreiben Sie die erforderlichen Methoden. Z. B. Wenn Sie nur Vorgänge zum Festlegen und Abrufen von Eigenschaften benötigen, können Sie überschreiben nur die <xref:System.Dynamic.DynamicObject.TrySetMember%2A> und <xref:System.Dynamic.DynamicObject.TryGetMember%2A> Methoden.  
+  
+ In c# zum Aktivieren von dynamischen Verhaltens für Instanzen von Klassen abgeleitet der `DynamicObject` -Klasse, müssen Sie verwenden die `dynamic` Schlüsselwort. Weitere Informationen finden Sie unter [Verwenden von dynamischen Typen](~/docs/csharp/programming-guide/types/using-type-dynamic.md).  
+  
+ In Visual Basic werden die dynamische Vorgängen von spätes Binden unterstützt. Weitere Informationen finden Sie unter [frühe und späte Bindung](http://msdn.microsoft.com/library/d6ff7f1e-b94f-4205-ab8d-5cfa91758724).  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer Instanz einer Klasse, die abgeleitet ist die `DynamicObject` Klasse.  
+  
+```csharp  
+public class SampleDynamicObject : DynamicObject {}  
+//...  
+dynamic sampleObject = new SampleDynamicObject ();  
+```  
+  
+```vb  
+Public Class SampleDynamicObject   
+    Inherits DynamicObject  
+'...  
+Dim sampleObject As Object = New SampleDynamicObject()  
+```  
+  
+ Sie können auch eigene Member hinzufügen, um von abgeleiteten Klassen der `DynamicObject` Klasse. Wenn Ihre Klasse Eigenschaften definiert und auch überschreibt die <xref:System.Dynamic.DynamicObject.TrySetMember%2A> -Methode, die dynamic Language Runtime (DLR) verwendet zuerst den Binder Sprache nach einer statischen Definition einer Eigenschaft in der Klasse gesucht werden soll. Wenn keine solche Eigenschaft vorhanden ist, ruft die DLR die <xref:System.Dynamic.DynamicObject.TrySetMember%2A> Methode.  
+  
+ Die `DynamicObject` Klasse implementiert die Schnittstelle DLR <xref:System.Dynamic.IDynamicMetaObjectProvider>, können Sie Instanzen von Teilen der `DynamicObject` Klassenschema in Sprachen, die das Modell der DLR-Interoperabilität unterstützen. Sie können z. B. erstellen eine Instanz von der `DynamicObject` in C#-Klasse, und klicken Sie dann an eine IronPython-Funktion übergeben. Weitere Informationen finden Sie unter [Übersicht über die Dynamic Language Runtime](~/docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md) und Dokumentation auf der [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028) Website.  
+  
+> [!NOTE]
+>  Wenn Sie ein einfaches Szenario haben, in denen, die Sie ein Objekt benötigen, das nur hinzufügen und Entfernen von Mitgliedern zur Laufzeit können, aber, die nicht auf bestimmte Vorgänge zu definieren und nicht statische Member aufweisen, verwenden Sie, die <xref:System.Dynamic.ExpandoObject> Klasse.  
+>   
+>  Wenn Sie ein erweiterten Szenario haben, in denen Sie definieren, wie dynamische Objekte, die Interoperabilitätsprotokoll teilnehmen, oder Sie müssen DLR schnellen dynamischen Dispatch Zwischenspeichern verwalten müssen, erstellen Sie eine eigene Implementierung von der <xref:System.Dynamic.IDynamicMetaObjectProvider> Schnittstelle.  
+  
+   
+  
+## Examples  
+ Angenommen, Sie, um alternative Syntax bereitstellen, für den Zugriff auf Werte in einem Wörterbuch, damit der Verfassung möchten `sampleDictionary["Text"] = "Sample text"` (`sampleDictionary("Text") = "Sample text"` in Visual Basic), können Sie schreiben `sampleDictionary.Text = "Sample text"`. Darüber hinaus diese Syntax die Groß-/Kleinschreibung, werden sollen, damit `sampleDictionary.Text` entspricht `sampleDictionary.text`.  
+  
+ Das folgende Codebeispiel veranschaulicht die `DynamicDictionary` -Klasse, die abgeleitet ist die `DynamicObject` Klasse. Die `DynamicDictionary` Klasse enthält ein Objekt des der `Dictionary<string, object>` Typ (`Dictionary(Of String, Object)` in Visual Basic) zum Speichern der Schlüssel-Wert-Paare und überschreibt die <xref:System.Dynamic.DynamicObject.TrySetMember%2A> und <xref:System.Dynamic.DynamicObject.TryGetMember%2A> Methoden zum unterstützen der neuen Syntax. Sie bietet außerdem eine `Count` Eigenschaft, die zeigt, wie viele dynamischen Eigenschaften des Wörterbuchs enthält.  
+  
+ [!code-csharp[System.Dynamic.DynamicObject#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.dynamic.dynamicobject/cs/program.cs#1)]
+ [!code-vb[System.Dynamic.DynamicObject#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.dynamic.dynamicobject/vb/module1.vb#1)]  
+  
+ Weitere Beispiele finden Sie unter [Wrapper erstellen, mit DynamicObject](http://go.microsoft.com/fwlink/?LinkId=169008) im C#-häufig gestellte Fragen-Blog.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DynamicObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.DynamicObject.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Ermöglicht es abgeleiteten Typen, die zum Initialisieren einer neuen Instanz von der <see cref="T:System.Dynamic.DynamicObject" /> Typ.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz kann nicht direkt erstellt die <xref:System.Dynamic.DynamicObject> Klasse. Um dynamische Verhalten zu implementieren, müssen Sie erben die <xref:System.Dynamic.DynamicObject> Klasse, und überschreiben Sie die erforderlichen Methoden.  
+  
+ In c# zum Aktivieren von dynamischen Verhaltens für Instanzen der Klassen abgeleitet der <xref:System.Dynamic.DynamicObject> -Klasse, müssen Sie verwenden die `dynamic` Schlüsselwort. Weitere Informationen finden Sie unter [Verwenden von dynamischen Typen](~/docs/csharp/programming-guide/types/using-type-dynamic.md).  
+  
+ In Visual Basic werden die dynamische Vorgängen von spätes Binden unterstützt. Weitere Informationen finden Sie unter [frühe und späte Bindung](http://msdn.microsoft.com/library/d6ff7f1e-b94f-4205-ab8d-5cfa91758724).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer Instanz von Klassen, die abgeleitet sind die <xref:System.Dynamic.DynamicObject> Klasse.  
+  
+```csharp  
+public class SampleDynamicObject : DynamicObject {}  
+//...  
+dynamic sampleObject = new SampleDynamicObject ();  
+```  
+  
+```vb  
+Public Class SampleDynamicObject   
+    Inherits DynamicObject  
+'...  
+Dim sampleObject As Object = New SampleDynamicObject()  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDynamicMemberNames">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IEnumerable&lt;string&gt; GetDynamicMemberNames ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; GetDynamicMemberNames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.DynamicObject.GetDynamicMemberNames" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Enumeration aller dynamischen Elements Namen zurück.</summary>
+        <returns>Eine Sequenz, die Namen der dynamischen Elements enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist nur für Debugzwecke bestimmt vorhanden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMetaObject">
+      <MemberSignature Language="C#" Value="public virtual System.Dynamic.DynamicMetaObject GetMetaObject (System.Linq.Expressions.Expression parameter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Dynamic.DynamicMetaObject GetMetaObject(class System.Linq.Expressions.Expression parameter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Dynamic.DynamicMetaObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameter" Type="System.Linq.Expressions.Expression" />
+      </Parameters>
+      <Docs>
+        <param name="parameter">Der Ausdruck für <see cref="T:System.Dynamic.DynamicMetaObject" /> an die dynamischen virtuellen Methoden zu sendende.</param>
+        <summary>Stellt eine <see cref="T:System.Dynamic.DynamicMetaObject" /> , die Verteilung an die dynamischen virtuellen Methoden. Das Objekt kann in einem anderen gekapselt werden <see cref="T:System.Dynamic.DynamicMetaObject" /> um benutzerdefiniertes Verhalten für einzelne Aktionen bereitzustellen. Diese Methode unterstützt die Dynamic Language Runtime-Infrastruktur für die Implementierung einer Sprache, und es sollte nicht direkt aus Ihrem Code verwendet werden.</summary>
+        <returns>Ein Objekt von der <see cref="T:System.Dynamic.DynamicMetaObject" /> Typ.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryBinaryOperation">
+      <MemberSignature Language="C#" Value="public virtual bool TryBinaryOperation (System.Dynamic.BinaryOperationBinder binder, object arg, out object result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryBinaryOperation(class System.Dynamic.BinaryOperationBinder binder, object arg, [out] object&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.DynamicObject.TryBinaryOperation(System.Dynamic.BinaryOperationBinder,System.Object,System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binder" Type="System.Dynamic.BinaryOperationBinder" />
+        <Parameter Name="arg" Type="System.Object" />
+        <Parameter Name="result" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="binder">Enthält Informationen zu der binären Operation. Die <c>Binder. Vorgang</c> -Eigenschaft gibt ein <see cref="T:System.Linq.Expressions.ExpressionType" /> Objekt. Z. B. für die <c>Sum = zuerst + second</c> -Anweisung, in denen <c>erste</c> und <c>zweite</c> abgeleitet sind die <see langword="DynamicObject" /> -Klasse, <c>Binder. Vorgang</c> gibt <c>ExpressionType.Add</c>.</param>
+        <param name="arg">Der Rechte Operand für den binären Operation. Z. B. für die <c>Sum = zuerst + second</c> -Anweisung, in denen <c>erste</c> und <c>zweite</c> abgeleitet sind die <see langword="DynamicObject" /> -Klasse, <c>Arg</c>gleich <c>zweiten</c>.</param>
+        <param name="result">Das Ergebnis der binären Operation.</param>
+        <summary>Stellt die Implementierung für binäre Operationen bereit. Abgeleitete Klassen aus der <see cref="T:System.Dynamic.DynamicObject" /> Klasse kann diese Methode zum Angeben von dynamischen Verhaltens für Operationen wie Addition und Multiplikation überschreiben.</summary>
+        <returns>
+          <see langword="true" />, wenn der Vorgang erfolgreich ist, andernfalls <see langword="false" />. Wenn diese Methode zurückgibt <see langword="false" />, Laufzeitbinder der Sprache bestimmt das Verhalten. (In den meisten Fällen ist eine sprachspezifische Laufzeitausnahme ausgelöst.)</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Klassen aus der <xref:System.Dynamic.DynamicObject> Klasse überschreiben, kann diese Methode, um anzugeben, wie binäre Operationen für ein dynamisches Objekt ausgeführt werden soll. Wenn die Methode nicht überschrieben wird, wird das Verhalten von Laufzeitbinder der Sprache bestimmt. (In den meisten Fällen ist eine sprachspezifische Laufzeitausnahme ausgelöst.)  
+  
+ Diese Methode wird aufgerufen, wenn Sie die binäre Operationen wie Addition und Multiplikation verfügen. Z. B. wenn die <xref:System.Dynamic.DynamicObject.TryBinaryOperation%2A> -Methode überschrieben wird, wird automatisch aufgerufen, für Anweisungen wie `sum = first + second` oder `multiply = first*second`, wobei `first` stammt aus dem `DynamicObject` Klasse.  
+  
+ Sie erhalten Informationen über den Typ der binären Operation mit den `Operation` Eigenschaft von der `binder` Parameter.  
+  
+ Wenn das dynamische Objekt nur in c# und Visual Basic verwendet wird die `binder.Operation` Eigenschaft kann einen der folgenden Werte aus haben die <xref:System.Linq.Expressions.ExpressionType> Enumeration. In anderen Sprachen wie z. B. IronPython oder IronRuby, können Sie jedoch andere Werte haben. Weitere Informationen zu <xref:System.Linq.Expressions.ExpressionType>, finden Sie die Dokumentation für die [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028) Website.  
+  
+|Wert|Beschreibung|C#|Visual Basic|  
+|-----------|-----------------|---------|------------------|  
+|`Add`|Eine Addition ohne überlaufüberprüfung für numerische Operanden.|`a + b`|`a + b`|  
+|`AddAssign`|Eine zusammengesetzte additionszuweisungsoperation ohne überlaufüberprüfung für numerische Operanden.|`a += b`|Wird nicht unterstützt.|  
+|`And`|Eine bitweise `AND` Vorgang.|`a & b`|`a And b`|  
+|`AndAssign`|Eine bitweise `AND` zusammengesetzte Zuweisungsoperation.|`a &= b`|Wird nicht unterstützt.|  
+|`Divide`|Eine arithmetische Division.|`a / b`|`a / b`|  
+|`DivideAssign`|Eine arithmetische verbundzuweisung Division.|`a /= b`|Wird nicht unterstützt.|  
+|`ExclusiveOr`|Eine bitweise `XOR` Vorgang.|`a ^ b`|`a Xor b`|  
+|`ExclusiveOrAssign`|Eine bitweise `XOR` zusammengesetzte Zuweisungsoperation.|`a ^= b`|Wird nicht unterstützt.|  
+|`GreaterThan`|Eine "größer als"-Vergleich.|`a > b`|`a > b`|  
+|`GreaterThanOrEqual`|Ein Vergleich "größer als oder gleich".|`a >= b`|Wird nicht unterstützt.|  
+|`LeftShift`|Eine bitweise Linksschiebeoperation.|`a << b`|`a << b`|  
+|`LeftShiftAssign`|Eine bitweise Linksschiebe-Zuweisungsoperation zusammengesetzten.|`a <<= b`|Wird nicht unterstützt.|  
+|`LessThan`|Eine "kleiner als"-Vergleich.|`a < b`|`a < b`|  
+|`LessThanOrEqual`|Ein "kleiner als oder gleich"-Vergleich.|`a <= b`|Wird nicht unterstützt.|  
+|`Modulo`|Eine arithmetische Restoperation.|`a % b`|`a Mod b`|  
+|`ModuloAssign`|Ein Vorgang für den arithmetischen Rest-verbundzuweisung.|`a %= b`|Wird nicht unterstützt.|  
+|`Multiply`|Einen Multiplikationsvorgang ohne überlaufüberprüfung für numerische Operanden.|`a * b`|`a * b`|  
+|`MultiplyAssign`|Eine zusammengesetzte multiplikationszuweisungsoperation ohne überlaufüberprüfung für numerische Operanden.|`a *= b`|Wird nicht unterstützt.|  
+|`NotEqual`|Einen Ungleichheitsvergleich.|`a != b`|`a <> b`|  
+|`Or`|Eine bitweise oder logische `OR` Vorgang.|`a &#124; b`|`a Or b`|  
+|`OrAssign`|Eine bitweise oder logische `OR` verbundzuweisung.|`a &#124;= b`|Wird nicht unterstützt.|  
+|`Power`|Eine mathematische Operation, der Potenzieren einer Zahl in eine Potenz.|Wird nicht unterstützt.|`a ^ b`|  
+|`RightShift`|Eine bitweise Rechtsschiebeoperation.|`a >> b`|`a >> b`|  
+|`RightShiftAssign`|Eine bitweise Rechtsschiebe-Zuweisungsoperation zusammengesetzten.|`a >>= b`|Wird nicht unterstützt.|  
+|`Subtract`|Eine Subtraktion ohne überlaufüberprüfung für numerische Operanden.|`a - b`|`a - b`|  
+|`SubtractAssign`|Eine zusammengesetzte subtraktionszuweisungsoperation ohne überlaufüberprüfung für numerische Operanden.|`a -= b`|Wird nicht unterstützt.|  
+  
+> [!NOTE]
+>  Implementiert `OrElse` (`a || b`) und `AndAlso` (`a && b`) Operationen für dynamische Objekte in c#, Sie wollen beide implementieren die <xref:System.Dynamic.DynamicObject.TryUnaryOperation%2A> Methode und die <xref:System.Dynamic.DynamicObject.TryBinaryOperation%2A> Methode.  
+>   
+>  Die `OrElse` Vorgang besteht aus den unären `IsTrue` Vorgang und der Binärdatei `Or` Vorgang. Die `Or` Vorgang wird nur ausgeführt, wenn das Ergebnis der `IsTrue` Vorgang ist `false`.  
+>   
+>  Die `AndAlso` Vorgang besteht aus den unären `IsFalse` Vorgang und der Binärdatei `And` Vorgang. Die `And` Vorgang wird nur ausgeführt, wenn das Ergebnis der `IsFalse` Vorgang ist `false`.  
+  
+   
+  
+## Examples  
+ Angenommen Sie, Sie eine Datenstruktur zum Speichern von Text und numerischer Darstellungen von Zahlen benötigen, und Sie grundlegende mathematische Operationen wie Addition und Subtraktion für solche Daten definieren möchten.  
+  
+ Das folgende Codebeispiel veranschaulicht die `DynamicNumber` -Klasse, die abgeleitet ist die <xref:System.Dynamic.DynamicObject> Klasse. `DynamicNumber`überschreibt die <xref:System.Dynamic.DynamicObject.TryBinaryOperation%2A> Methode zum Aktivieren von mathematischer Operations. Es überschreibt auch die <xref:System.Dynamic.DynamicObject.TrySetMember%2A> und <xref:System.Dynamic.DynamicObject.TryGetMember%2A> Methoden zum Aktivieren des Zugriffs auf die Elemente.  
+  
+ In diesem Beispiel werden nur die Operationen Addition und Subtraktion unterstützt. Wenn Sie versuchen, eine Anweisung wie schreiben `resultNumber = firstNumber*secondNumber`, eine Laufzeitausnahme wird ausgelöst.  
+  
+ [!code-csharp[System.Dynamic.DynamicObject#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.dynamic.dynamicobject/cs/program.cs#2)]
+ [!code-vb[System.Dynamic.DynamicObject#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.dynamic.dynamicobject/vb/module1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryConvert">
+      <MemberSignature Language="C#" Value="public virtual bool TryConvert (System.Dynamic.ConvertBinder binder, out object result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryConvert(class System.Dynamic.ConvertBinder binder, [out] object&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.DynamicObject.TryConvert(System.Dynamic.ConvertBinder,System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binder" Type="System.Dynamic.ConvertBinder" />
+        <Parameter Name="result" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="binder">Enthält Informationen zum Konvertierungsvorgang zur. Die <c>Binder. Typ</c> Eigenschaft ermöglicht den Typ, der das Objekt konvertiert werden muss. Z. B. für die Anweisung <c>(String) SampleObject</c> in c# (<c>CType (SampleObject, Typ)</c> in Visual Basic), wobei <c>SampleObject</c> ist eine Instanz der abgeleiteten Klasse aus der <see cref="T:System.Dynamic.DynamicObject" /> -Klasse, <c>Binder. Typ</c> gibt die <see cref="T:System.String" /> Typ. Die <c>Binder. Explizite</c> Eigenschaft enthält Informationen über die Art der Konvertierung, die auftritt. Es gibt <see langword="true" /> für die explizite Konvertierung und <see langword="false" /> für eine implizite Konvertierung.</param>
+        <param name="result">Das Ergebnis des Typkonvertierungsvorgangs.</param>
+        <summary>Stellt die Implementierung für den Typ Konvertierungsvorgänge bereit. Abgeleitete Klassen aus der <see cref="T:System.Dynamic.DynamicObject" /> Klasse überschreiben können Sie diese Methode zum Angeben von dynamischen Verhaltens für Vorgänge, die ein Objekt von einem Typ in einen anderen zu konvertieren.</summary>
+        <returns>
+          <see langword="true" />, wenn der Vorgang erfolgreich ist, andernfalls <see langword="false" />. Wenn diese Methode zurückgibt <see langword="false" />, Laufzeitbinder der Sprache bestimmt das Verhalten. (In den meisten Fällen ist eine sprachspezifische Laufzeitausnahme ausgelöst.)</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Klassen aus der <xref:System.Dynamic.DynamicObject> Klasse überschreiben, kann diese Methode, um anzugeben, wie eine typkonvertierung für ein dynamisches Objekt ausgeführt werden sollen. Wenn die Methode nicht überschrieben wird, wird das Verhalten von Laufzeitbinder der Sprache bestimmt. (In den meisten Fällen ist eine sprachspezifische Laufzeitausnahme ausgelöst.)  
+  
+ In C# geschrieben Wenn diese Methode überschrieben wird, wird es automatisch aufgerufen, wenn stehen Ihnen eine explizite oder implizite Konvertierung wie im folgenden Codebeispiel gezeigt.  
+  
+ In Visual Basic wird nur die explizite Konvertierung unterstützt. Wenn Sie diese Methode überschreiben, rufen Sie es mithilfe der <xref:Microsoft.VisualBasic.Conversion.CTypeDynamic%2A> oder <xref:Microsoft.VisualBasic.Conversion.CTypeDynamic%2A> Funktionen.  
+  
+```csharp  
+// Explicit conversion.  
+String sampleExplicit = (String)sampleObject;  
+// Implicit conversion.  
+String sampleImplicit = sampleObject;  
+```  
+  
+```vb  
+// Explicit conversion - first variant.  
+Dim testExplicit1 = CTypeDynamic(Of String)(sampleObject)  
+// Explicit conversion - second variant.  
+Dim testExplicit2 = CTypeDynamic(sampleObject, GetType(String))  
+```  
+  
+   
+  
+## Examples  
+ Angenommen Sie, Sie eine Datenstruktur zum Speichern von Text und numerischer Darstellungen von Zahlen benötigen und definieren Konvertierungen von diesem Datenstruktur anwendbar auf Zeichenfolgen und ganzen Zahlen werden sollen.  
+  
+ Das folgende Codebeispiel veranschaulicht die `DynamicNumber` -Klasse, die abgeleitet ist die <xref:System.Dynamic.DynamicObject> Klasse. `DynamicNumber`überschreibt die <xref:System.Dynamic.DynamicObject.TryConvert%2A> Methode, um die Konvertierung vom Typ zu aktivieren. Es überschreibt auch die <xref:System.Dynamic.DynamicObject.TrySetMember%2A> und <xref:System.Dynamic.DynamicObject.TryGetMember%2A> Methoden zum Aktivieren des Zugriffs auf die Datenelemente.  
+  
+ In diesem Beispiel wird nur die Konvertierung in Zeichenfolgen und ganzen Zahlen unterstützt. Wenn Sie versuchen, ein Objekt in einen anderen Typ zu konvertieren, wird eine Laufzeitausnahme ausgelöst.  
+  
+ [!code-csharp[System.Dynamic.DynamicObject#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.dynamic.dynamicobject/cs/program.cs#3)]
+ [!code-vb[System.Dynamic.DynamicObject#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.dynamic.dynamicobject/vb/module1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryCreateInstance">
+      <MemberSignature Language="C#" Value="public virtual bool TryCreateInstance (System.Dynamic.CreateInstanceBinder binder, object[] args, out object result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryCreateInstance(class System.Dynamic.CreateInstanceBinder binder, object[] args, [out] object&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.DynamicObject.TryCreateInstance(System.Dynamic.CreateInstanceBinder,System.Object[],System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binder" Type="System.Dynamic.CreateInstanceBinder" />
+        <Parameter Name="args" Type="System.Object[]" />
+        <Parameter Name="result" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="binder">Enthält Informationen zu dem Initialisierungsvorgang.</param>
+        <param name="args">Die Argumente, die während der Initialisierung auf das Objekt übergeben werden. Z. B. für die <c>neue SampleType(100)</c> -Vorgang, in dem <c>SampleType</c> ist der Typ abgeleitet der <see cref="T:System.Dynamic.DynamicObject" /> -Klasse, <c>Args [0]</c> gleich 100 ist.</param>
+        <param name="result">Das Ergebnis der Initialisierung.</param>
+        <summary>Stellt die Implementierung für Vorgänge, die eine neue Instanz der ein dynamisches Objekt zu initialisieren. Diese Methode dient nicht zur Verwendung in c# oder Visual Basic.</summary>
+        <returns>
+          <see langword="true" />, wenn der Vorgang erfolgreich ist, andernfalls <see langword="false" />. Wenn diese Methode zurückgibt <see langword="false" />, Laufzeitbinder der Sprache bestimmt das Verhalten. (In den meisten Fällen ist eine sprachspezifische Laufzeitausnahme ausgelöst.)</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Klassen aus der <xref:System.Dynamic.DynamicObject> Klasse überschreiben, kann diese Methode, um anzugeben, wie eine neue Instanz des dynamischen Objekts initialisiert werden soll. Wenn die Methode nicht überschrieben wird, wird das Verhalten von Laufzeitbinder der Sprache bestimmt. (In den meisten Fällen ist eine sprachspezifische Laufzeitausnahme ausgelöst.)  
+  
+ C# und Visual Basic-Compiler geben nie Code aus, um diese Methode verwenden, da sie nicht über die erstrangige Typen unterstützen. Diese Methode ist für Sprachen, die Unterstützung für die Initialisierung von dynamischen Objekten mithilfe von Syntax wie vorgesehen `dynamic new`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryDeleteIndex">
+      <MemberSignature Language="C#" Value="public virtual bool TryDeleteIndex (System.Dynamic.DeleteIndexBinder binder, object[] indexes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryDeleteIndex(class System.Dynamic.DeleteIndexBinder binder, object[] indexes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.DynamicObject.TryDeleteIndex(System.Dynamic.DeleteIndexBinder,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binder" Type="System.Dynamic.DeleteIndexBinder" />
+        <Parameter Name="indexes" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="binder">Enthält Informationen zu den Löschvorgang.</param>
+        <param name="indexes">Die Indizes gelöscht werden soll.</param>
+        <summary>Stellt die Implementierung für Vorgänge, die ein Objekt über einen Index zu löschen. Diese Methode dient nicht zur Verwendung in c# oder Visual Basic.</summary>
+        <returns>
+          <see langword="true" />, wenn der Vorgang erfolgreich ist, andernfalls <see langword="false" />. Wenn diese Methode zurückgibt <see langword="false" />, Laufzeitbinder der Sprache bestimmt das Verhalten. (In den meisten Fällen ist eine sprachspezifische Laufzeitausnahme ausgelöst.)</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Klassen aus der <xref:System.Dynamic.DynamicObject> Klasse überschreiben, kann diese Methode, um anzugeben, wie ein Wert, der einem angegebenen Index gelöscht werden soll. Wenn die Methode nicht überschrieben wird, wird das Verhalten von Laufzeitbinder der Sprache bestimmt. (In den meisten Fällen ist eine sprachspezifische Laufzeitausnahme ausgelöst.)  
+  
+ C# und Visual Basic-Compiler geben nie Code aus, um diese Methode verwenden, da sie diese Art von Vorgang nicht unterstützen. Diese Methode ist für Sprachen, die Syntax zum Löschen von Objekten wie z. B. nach Index unterstützen vorgesehen `del sampleObject[1,2]` in Python.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryDeleteMember">
+      <MemberSignature Language="C#" Value="public virtual bool TryDeleteMember (System.Dynamic.DeleteMemberBinder binder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryDeleteMember(class System.Dynamic.DeleteMemberBinder binder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.DynamicObject.TryDeleteMember(System.Dynamic.DeleteMemberBinder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binder" Type="System.Dynamic.DeleteMemberBinder" />
+      </Parameters>
+      <Docs>
+        <param name="binder">Enthält Informationen zu den Löschvorgang.</param>
+        <summary>Stellt die Implementierung für Vorgänge, die einen Objektmember löschen. Diese Methode dient nicht zur Verwendung in c# oder Visual Basic.</summary>
+        <returns>
+          <see langword="true" />, wenn der Vorgang erfolgreich ist, andernfalls <see langword="false" />. Wenn diese Methode zurückgibt <see langword="false" />, Laufzeitbinder der Sprache bestimmt das Verhalten. (In den meisten Fällen ist eine sprachspezifische Laufzeitausnahme ausgelöst.)</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Klassen aus der <xref:System.Dynamic.DynamicObject> Klasse überschreiben, kann diese Methode, um anzugeben, wie einem Objektelement gelöscht werden soll. Wenn diese Methode nicht überschrieben wird, wird das Verhalten von Laufzeitbinder der Sprache bestimmt. (In den meisten Fällen ist eine sprachspezifische Laufzeitausnahme ausgelöst.)  
+  
+ C# und Visual Basic-Compiler geben nie Code aus, um diese Methode verwenden, da sie diese Art von Vorgang nicht unterstützen. Diese Methode ist für Sprachen, die Syntax zum Löschen von Elementen, z. B. unterstützen vorgesehen `del sampleObject.SampleMember` in Python.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetIndex">
+      <MemberSignature Language="C#" Value="public virtual bool TryGetIndex (System.Dynamic.GetIndexBinder binder, object[] indexes, out object result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryGetIndex(class System.Dynamic.GetIndexBinder binder, object[] indexes, [out] object&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.DynamicObject.TryGetIndex(System.Dynamic.GetIndexBinder,System.Object[],System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binder" Type="System.Dynamic.GetIndexBinder" />
+        <Parameter Name="indexes" Type="System.Object[]" />
+        <Parameter Name="result" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="binder">Enthält Informationen zu den Vorgang.</param>
+        <param name="indexes">Die Indizes, die im Vorgang verwendet werden. Z. B. für die <c>SampleObject [3]</c> Vorgang in c# (<c>sampleObject(3)</c> in Visual Basic), wobei <c>SampleObject</c> stammt aus der <see langword="DynamicObject" /> -Klasse, <c>Indizes [0]</c> gleich 3 ist.</param>
+        <param name="result">Das Ergebnis des Indexvorgangs.</param>
+        <summary>Stellt die Implementierung für Vorgänge, die ein Wert über einen Index abgerufen wird. Abgeleitete Klassen aus der <see cref="T:System.Dynamic.DynamicObject" /> Klasse kann diese Methode zum Angeben von dynamischen Verhaltens für Indexvorgänge überschreiben.</summary>
+        <returns>
+          <see langword="true" />, wenn der Vorgang erfolgreich ist, andernfalls <see langword="false" />. Wenn diese Methode zurückgibt <see langword="false" />, Laufzeitbinder der Sprache bestimmt das Verhalten. (In den meisten Fällen wird eine Laufzeitausnahme ausgelöst.)</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Klassen aus der <xref:System.Dynamic.DynamicObject> Klasse überschreiben, kann diese Methode, um anzugeben, wie das Abrufen eines Werts über einen Index für ein dynamisches Objekt ausgeführt werden soll. Wenn die Methode nicht überschrieben wird, wird das Verhalten von Laufzeitbinder der Sprache bestimmt. (In den meisten Fällen wird eine Laufzeitausnahme ausgelöst.)  
+  
+ Wenn diese Methode überschrieben wird, wird Sie automatisch aufgerufen, wenn ein Vorgang wie vorliegt `sampleObject[3]` in c# oder `sampleObject(3)` in Visual Basic, Where `sampleObject` stammt aus dem <xref:System.Dynamic.DynamicObject> Klasse.  
+  
+   
+  
+## Examples  
+ Gehen davon aus entweder nach Namen an, dass ein Objekt zu erstellen, in dem Eigenschaften werden können, sollen z. B. zugegriffen `Property0`, `Property1`usw., oder nach Index, damit, z. B. `sampleObject.Property0` entspricht `sampleObject[0]` in c# oder `sampleObject(0)` in Visual Basic.  
+  
+ Das folgende Codebeispiel veranschaulicht die `SampleDynamicObject` -Klasse, die abgeleitet ist die <xref:System.Dynamic.DynamicObject> Klasse. Die `SampleDynamicObject` Klasse enthält ein Objekt von der `Dictionary<string, object>` Typ (`Dictionary(Of String, Object)` in Visual Basic) zum Speichern von Schlüssel-Wert-Paare. `SampleDynamicObject`überschreibt die <xref:System.Dynamic.DynamicObject.TrySetIndex%2A> und <xref:System.Dynamic.DynamicObject.TryGetIndex%2A> Methoden zum Aktivieren des Zugriffs über einen Index. Es überschreibt die <xref:System.Dynamic.DynamicObject.TrySetMember%2A> und <xref:System.Dynamic.DynamicObject.TryGetMember%2A> Methoden zum Aktivieren des Zugriffs nach Eigenschaftenname an.  
+  
+ [!code-csharp[System.Dynamic.DynamicObject#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.dynamic.dynamicobject/cs/program.cs#4)]
+ [!code-vb[System.Dynamic.DynamicObject#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.dynamic.dynamicobject/vb/module1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetMember">
+      <MemberSignature Language="C#" Value="public virtual bool TryGetMember (System.Dynamic.GetMemberBinder binder, out object result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryGetMember(class System.Dynamic.GetMemberBinder binder, [out] object&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.DynamicObject.TryGetMember(System.Dynamic.GetMemberBinder,System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binder" Type="System.Dynamic.GetMemberBinder" />
+        <Parameter Name="result" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="binder">Enthält Informationen über das Objekt, das den dynamischen Vorgang aufgerufen hat. Die <c>Binder. Namen</c> Eigenschaft enthält den Namen des Elements, auf dem der dynamische Vorgang ausgeführt wird. Z. B. für die <c>Console.WriteLine(sampleObject.SampleProperty)</c> -Anweisung, in denen <c>SampleObject</c> ist eine Instanz der abgeleiteten Klasse aus der <see cref="T:System.Dynamic.DynamicObject" /> -Klasse, <c>Binder . Namen</c> "SampleProperty" zurückgegeben. Die <c>Binder. IgnoreCase</c> Eigenschaft gibt an, ob es sich bei der Elementnamen die Groß-/Kleinschreibung beachtet wird.</param>
+        <param name="result">Das Ergebnis des Get-Vorgangs. Angenommen, wenn die Methode für eine Eigenschaft aufgerufen wird, können Sie zuweisen den Eigenschaftswert an <c>Ergebnis</c>.</param>
+        <summary>Stellt die Implementierung für Vorgänge, die Elementwerte abrufen. Abgeleitete Klassen aus der <see cref="T:System.Dynamic.DynamicObject" /> Klasse kann diese Methode zum Angeben von dynamischen Verhaltens für Vorgänge wie das Abrufen eines Werts für eine Eigenschaft überschreiben.</summary>
+        <returns>
+          <see langword="true" />, wenn der Vorgang erfolgreich ist, andernfalls <see langword="false" />. Wenn diese Methode zurückgibt <see langword="false" />, Laufzeitbinder der Sprache bestimmt das Verhalten. (In den meisten Fällen wird eine Laufzeitausnahme ausgelöst.)</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Klassen aus der <xref:System.Dynamic.DynamicObject> Klasse überschreiben, kann diese Methode, um anzugeben, wie Vorgänge, die Elementwerte abrufen für ein dynamisches Objekt ausgeführt werden soll. Wenn die Methode nicht überschrieben wird, wird das Verhalten von Laufzeitbinder der Sprache bestimmt. (In den meisten Fällen wird eine Laufzeitausnahme ausgelöst.)  
+  
+ Diese Methode wird aufgerufen, wenn Sie die Anweisungen wie haben `Console.WriteLine(sampleObject.SampleProperty)`, wobei `sampleObject` ist eine Instanz der abgeleiteten Klasse aus der <xref:System.Dynamic.DynamicObject> Klasse.  
+  
+ Sie können auch eigene Member hinzufügen, um von abgeleiteten Klassen der `DynamicObject` Klasse. Wenn Ihre Klasse Eigenschaften definiert und auch überschreibt die <xref:System.Dynamic.DynamicObject.TrySetMember%2A> -Methode, die dynamic Language Runtime (DLR) verwendet zuerst den Binder Sprache nach einer statischen Definition einer Eigenschaft in der Klasse gesucht werden soll. Wenn keine solche Eigenschaft vorhanden ist, ruft die DLR die <xref:System.Dynamic.DynamicObject.TrySetMember%2A> Methode.  
+  
+   
+  
+## Examples  
+ Angenommen, Sie, um alternative Syntax bereitstellen, für den Zugriff auf Werte in einem Wörterbuch, damit der Verfassung möchten `sampleDictionary["Text"] = "Sample text"` (`sampleDictionary("Text") = "Sample text"` in Visual Basic), können Sie schreiben `sampleDictionary.Text = "Sample text"`. Darüber hinaus muss diese Syntax Groß-/Kleinschreibung, sodass `sampleDictionary.Text` entspricht `sampleDictionary.text`.  
+  
+ Das folgende Codebeispiel veranschaulicht die `DynamicDictionary` -Klasse, die abgeleitet ist die <xref:System.Dynamic.DynamicObject> Klasse. Die `DynamicDictionary` Klasse enthält ein Objekt des der `Dictionary<string, object>` Typ (`Dictionary(Of String, Object)` in Visual Basic) zum Speichern der Schlüssel-Wert-Paare und überschreibt die <xref:System.Dynamic.DynamicObject.TrySetMember%2A> und <xref:System.Dynamic.DynamicObject.TryGetMember%2A> Methoden zum unterstützen der neuen Syntax. Sie bietet außerdem eine `Count` Eigenschaft, die zeigt, wie viele dynamischen Eigenschaften des Wörterbuchs enthält.  
+  
+ [!code-csharp[System.Dynamic.DynamicObject#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.dynamic.dynamicobject/cs/program.cs#1)]
+ [!code-vb[System.Dynamic.DynamicObject#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.dynamic.dynamicobject/vb/module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryInvoke">
+      <MemberSignature Language="C#" Value="public virtual bool TryInvoke (System.Dynamic.InvokeBinder binder, object[] args, out object result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryInvoke(class System.Dynamic.InvokeBinder binder, object[] args, [out] object&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.DynamicObject.TryInvoke(System.Dynamic.InvokeBinder,System.Object[],System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binder" Type="System.Dynamic.InvokeBinder" />
+        <Parameter Name="args" Type="System.Object[]" />
+        <Parameter Name="result" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="binder">Enthält Informationen zu den Aufrufvorgang.</param>
+        <param name="args">Die Argumente, die während des Aufrufvorgangs an das Objekt übergeben werden. Z. B. für die <c>sampleObject(100)</c> -Vorgang, in dem <c>SampleObject</c> stammt aus der <see cref="T:System.Dynamic.DynamicObject" /> -Klasse, <c>Args [0]</c> gleich 100 ist.</param>
+        <param name="result">Das Ergebnis des Objektaufrufs.</param>
+        <summary>Stellt die Implementierung für Vorgänge, die ein Objekt aufrufen. Abgeleitete Klassen aus der <see cref="T:System.Dynamic.DynamicObject" /> Klasse überschreiben können Sie diese Methode zum Angeben von dynamischen Verhaltens für Vorgänge wie z. B. ein Objekt oder einen Delegaten aufzurufen.</summary>
+        <returns>
+          <see langword="true" />, wenn der Vorgang erfolgreich ist, andernfalls <see langword="false" />. Wenn diese Methode zurückgibt <see langword="false" />, Laufzeitbinder der Sprache bestimmt das Verhalten. (In den meisten Fällen ist eine sprachspezifische Laufzeitausnahme ausgelöst.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Klassen aus der <xref:System.Dynamic.DynamicObject> Klasse überschreiben, kann diese Methode, um anzugeben, wie Vorgänge, die ein Objekt aufrufen für ein dynamisches Objekt ausgeführt werden soll. Wenn die Methode nicht überschrieben wird, wird das Verhalten von Laufzeitbinder der Sprache bestimmt. (In den meisten Fällen wird eine Laufzeitausnahme ausgelöst.)  
+  
+ Wenn diese Methode überschrieben wird, wird Sie automatisch aufgerufen, wenn ein Vorgang wie vorliegt `sampleObject(100)`, wobei `sampleObject` stammt aus dem <xref:System.Dynamic.DynamicObject> Klasse.  
+  
+ Der Vorgang zum Aufrufen eines Objekts wird in c#, aber nicht in Visual Basic unterstützt. Visual Basic-Compiler gibt nie Code aus, um diese Methode verwenden, und die Sprache Visual Basic unterstützt keine Syntax wie `sampleObject(100)`.  
+  
+   
+  
+## Examples  
+ Angenommen Sie, Sie eine Datenstruktur zum Speichern von Text und numerischer Darstellungen von Zahlen benötigen. Sie möchten zu können, um den Wert für jede Eigenschaft einzeln anzugeben sowie um alle Eigenschaften in einer einzelnen Anweisung initialisieren zu können.  
+  
+ Das folgende Codebeispiel veranschaulicht die `DynamicNumber` -Klasse, die abgeleitet ist die <xref:System.Dynamic.DynamicObject> Klasse. `DynamicNumber`überschreibt die <xref:System.Dynamic.DynamicObject.TryInvoke%2A> Methode, um die Initialisierung aller Eigenschaften, die gleichzeitig aktivieren. Es überschreibt auch die <xref:System.Dynamic.DynamicObject.TrySetMember%2A> und <xref:System.Dynamic.DynamicObject.TryGetMember%2A> Methoden für den Zugriff auf einzelne Objekteigenschaften.  
+  
+ [!code-csharp[System.Dynamic.DynamicObject#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.dynamic.dynamicobject/cs/program.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryInvokeMember">
+      <MemberSignature Language="C#" Value="public virtual bool TryInvokeMember (System.Dynamic.InvokeMemberBinder binder, object[] args, out object result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryInvokeMember(class System.Dynamic.InvokeMemberBinder binder, object[] args, [out] object&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.DynamicObject.TryInvokeMember(System.Dynamic.InvokeMemberBinder,System.Object[],System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binder" Type="System.Dynamic.InvokeMemberBinder" />
+        <Parameter Name="args" Type="System.Object[]" />
+        <Parameter Name="result" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="binder">Enthält Informationen zu den dynamischen Vorgang. Die <c>Binder. Namen</c> Eigenschaft enthält den Namen des Elements, auf dem der dynamische Vorgang ausgeführt wird. Z. B. für die Anweisung <c>sampleObject.SampleMethod(100)</c>, wobei <c>SampleObject</c> ist eine Instanz der abgeleiteten Klasse aus der <see cref="T:System.Dynamic.DynamicObject" /> -Klasse, <c>Binder. Namen</c> "SampleMethod" zurückgegeben. Die <c>Binder. IgnoreCase</c> Eigenschaft gibt an, ob es sich bei der Elementnamen die Groß-/Kleinschreibung beachtet wird.</param>
+        <param name="args">Die Argumente, die während des Aufrufvorgangs an das Objektelement übergeben werden. Z. B. für die Anweisung <c>sampleObject.SampleMethod(100)</c>, wobei <c>SampleObject</c> stammt aus dem <see cref="T:System.Dynamic.DynamicObject" /> -Klasse, <c>Args [0]</c> gleich 100 ist.</param>
+        <param name="result">Das Ergebnis des elementaufrufs.</param>
+        <summary>Stellt die Implementierung für Vorgänge, die einen Member aufgerufen werden soll. Abgeleitete Klassen aus der <see cref="T:System.Dynamic.DynamicObject" /> Klasse kann diese Methode zum Angeben von dynamischen Verhaltens für Vorgänge wie das Aufrufen einer Methode überschreiben.</summary>
+        <returns>
+          <see langword="true" />, wenn der Vorgang erfolgreich ist, andernfalls <see langword="false" />. Wenn diese Methode zurückgibt <see langword="false" />, Laufzeitbinder der Sprache bestimmt das Verhalten. (In den meisten Fällen ist eine sprachspezifische Laufzeitausnahme ausgelöst.)</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Klassen aus der <xref:System.Dynamic.DynamicObject> Klasse überschreiben, kann diese Methode, um anzugeben, wie Vorgänge, die einem Objektelement Aufrufen für ein dynamisches Objekt ausgeführt werden soll. Wenn die Methode nicht überschrieben wird, wird das Verhalten von Laufzeitbinder der Sprache bestimmt. (In den meisten Fällen ist eine sprachspezifische Laufzeitausnahme ausgelöst.)  
+  
+ Wenn diese Methode überschrieben wird, wird Sie automatisch aufgerufen, wenn Sie einen Vorgang wie ausführen `sampleObject.SampleMethod(100)`, wobei `sampleObject` stammt aus dem `DynamicObject` Klasse.  
+  
+ Sie können auch Ihre eigenen Methoden hinzufügen, die von der abgeleiteten Klassen der <xref:System.Dynamic.DynamicObject> Klasse. Angenommen, Sie überschreiben die <xref:System.Dynamic.DynamicObject.TryInvokeMember%2A> -Methode, die dynamische Verteilung-System versucht zunächst zu bestimmen, ob die angegebene Methode in der Klasse vorhanden ist. Wenn sie die Methode nicht gefunden wird, verwendet die <xref:System.Dynamic.DynamicObject.TryInvokeMember%2A> Implementierung.  
+  
+ Diese Methode unterstützt keine `ref` und `out` Parameter. Alle Parameter in der `args` Array als Wert übergeben.  
+  
+   
+  
+## Examples  
+ Angenommen, Sie, um alternative Syntax bereitstellen, für den Zugriff auf Werte in einem Wörterbuch, damit der Verfassung möchten `sampleDictionary["Text"] = "Sample text"` (`sampleDictionary("Text") = "Sample text"` in Visual Basic), können Sie schreiben `sampleDictionary.Text = "Sample text"`. Darüber hinaus möchten dieses Wörterbuch aufweist und die standard-Wörterbuch-Methoden aufgerufen werden können.  
+  
+ Das folgende Codebeispiel veranschaulicht die `DynamicDictionary` -Klasse, die abgeleitet ist die <xref:System.Dynamic.DynamicObject> Klasse. Die `DynamicDictionary` Klasse enthält ein Objekt von der `Dictionary<string, object>` Typ (`Dictionary(Of String, Object)` in Visual Basic) zum Speichern von Schlüssel-Wert-Paare. Es überschreibt die <xref:System.Dynamic.DynamicObject.TryInvokeMember%2A> -Methode zur Unterstützung der Methoden der der <xref:System.Collections.Generic.Dictionary%602> -Klasse ab und überschreibt die <xref:System.Dynamic.DynamicObject.TrySetMember%2A> und <xref:System.Dynamic.DynamicObject.TryGetMember%2A> Methoden zum unterstützen der neuen Syntax. Sie bietet außerdem eine `Print` -Methode, die alle Wörterbuchschlüssel und-Werte ausgegeben.  
+  
+ [!code-csharp[System.Dynamic.DynamicObject#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.dynamic.dynamicobject/cs/program.cs#6)]
+ [!code-vb[System.Dynamic.DynamicObject#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.dynamic.dynamicobject/vb/module1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrySetIndex">
+      <MemberSignature Language="C#" Value="public virtual bool TrySetIndex (System.Dynamic.SetIndexBinder binder, object[] indexes, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TrySetIndex(class System.Dynamic.SetIndexBinder binder, object[] indexes, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.DynamicObject.TrySetIndex(System.Dynamic.SetIndexBinder,System.Object[],System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binder" Type="System.Dynamic.SetIndexBinder" />
+        <Parameter Name="indexes" Type="System.Object[]" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="binder">Enthält Informationen zu den Vorgang.</param>
+        <param name="indexes">Die Indizes, die im Vorgang verwendet werden. Z. B. für die <c>SampleObject [3] = 10</c> Vorgang in c# (<c>sampleObject(3) = 10</c> in Visual Basic), wobei <c>SampleObject</c> stammt aus der <see cref="T:System.Dynamic.DynamicObject" /> -Klasse <c>Indizes [0]</c> gleich 3 ist.</param>
+        <param name="value">Der Wert für das Objekt festzulegen, mit dem angegebenen Index. Z. B. für die <c>SampleObject [3] = 10</c> Vorgang in c# (<c>sampleObject(3) = 10</c> in Visual Basic), wobei <c>SampleObject</c> stammt aus der <see cref="T:System.Dynamic.DynamicObject" /> -Klasse <c>Wert</c> gleich 10 ist.</param>
+        <summary>Stellt die Implementierung für Vorgänge, die einen Wert vom Index festgelegt. Abgeleitete Klassen aus der <see cref="T:System.Dynamic.DynamicObject" /> Klasse überschreiben können Sie diese Methode zum Angeben von dynamischen Verhaltens für Vorgänge, die Zugriff auf Objekte von einem angegebenen Index.</summary>
+        <returns>
+          <see langword="true" />, wenn der Vorgang erfolgreich ist, andernfalls <see langword="false" />. Wenn diese Methode zurückgibt <see langword="false" />, Laufzeitbinder der Sprache bestimmt das Verhalten. (In den meisten Fällen ist eine sprachspezifische Laufzeitausnahme ausgelöst.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Klassen aus der <xref:System.Dynamic.DynamicObject> Klasse überschreiben, kann diese Methode, um anzugeben, wie Vorgänge, die ein Objekt nach Index zugegriffen für ein dynamisches Objekt ausgeführt werden soll. Wenn die Methode nicht überschrieben wird, wird das Verhalten von Laufzeitbinder der Sprache bestimmt. (In den meisten Fällen ist eine sprachspezifische Laufzeitausnahme ausgelöst.)  
+  
+ Wenn diese Methode überschrieben wird, wird Sie automatisch aufgerufen, wenn ein Vorgang wie vorliegt `sampleObject[3] = 10` in c# oder `sampleObject(3) = 10` in Visual Basic, Where `sampleObject` stammt aus dem <xref:System.Dynamic.DynamicObject> Klasse.  
+  
+   
+  
+## Examples  
+ Gehen davon aus entweder nach Namen an, dass ein Objekt zu erstellen, in dem Eigenschaften werden können, sollen z. B. zugegriffen `Property0`, `Property1`usw., oder nach Index, damit, z. B. `sampleObject.Property0` entspricht `sampleObject[0]` in c# oder `sampleObject(0)` in Visual Basic.  
+  
+ Das folgende Codebeispiel veranschaulicht die `SampleDynamicObject` -Klasse, die abgeleitet ist die <xref:System.Dynamic.DynamicObject> Klasse. Die `SampleDynamicObject` Klasse enthält ein Objekt von der `Dictionary<string, object>` Typ (`Dictionary(Of String, Object)` in Visual Basic) zum Speichern von Schlüssel-Wert-Paare. `SampleDynamicObject`überschreibt die <xref:System.Dynamic.DynamicObject.TrySetIndex%2A> und <xref:System.Dynamic.DynamicObject.TryGetIndex%2A> Methoden zum Aktivieren des Zugriffs über einen Index. Es überschreibt die <xref:System.Dynamic.DynamicObject.TrySetMember%2A> und <xref:System.Dynamic.DynamicObject.TryGetMember%2A> Methoden zum Aktivieren des Zugriffs nach Eigenschaftenname an.  
+  
+ [!code-csharp[System.Dynamic.DynamicObject#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.dynamic.dynamicobject/cs/program.cs#4)]
+ [!code-vb[System.Dynamic.DynamicObject#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.dynamic.dynamicobject/vb/module1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrySetMember">
+      <MemberSignature Language="C#" Value="public virtual bool TrySetMember (System.Dynamic.SetMemberBinder binder, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TrySetMember(class System.Dynamic.SetMemberBinder binder, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.DynamicObject.TrySetMember(System.Dynamic.SetMemberBinder,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binder" Type="System.Dynamic.SetMemberBinder" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="binder">Enthält Informationen über das Objekt, das den dynamischen Vorgang aufgerufen hat. Die <c>Binder. Namen</c> Eigenschaft enthält den Namen des Members, der der Wert zugewiesen wird. Z. B. für die Anweisung <c>sampleObject.SampleProperty = "Test"</c>, wobei <c>SampleObject</c> ist eine Instanz der abgeleiteten Klasse aus der <see cref="T:System.Dynamic.DynamicObject" /> -Klasse, <c>Binder. Namen</c> "SampleProperty" zurückgegeben. Die <c>Binder. IgnoreCase</c> Eigenschaft gibt an, ob es sich bei der Elementnamen die Groß-/Kleinschreibung beachtet wird.</param>
+        <param name="value">Der Wert für das Element fest. Z. B. für <c>sampleObject.SampleProperty = "Test"</c>, wobei <c>SampleObject</c> ist eine Instanz der abgeleiteten Klasse aus der <see cref="T:System.Dynamic.DynamicObject" /> -Klasse, die <c>Wert</c> ist " "Test".</param>
+        <summary>Stellt die Implementierung für Vorgänge, die Elementwerte festlegen. Abgeleitete Klassen aus der <see cref="T:System.Dynamic.DynamicObject" /> Klasse kann diese Methode zum Angeben von dynamischen Verhaltens für Vorgänge wie das Festlegen eines Werts für eine Eigenschaft überschreiben.</summary>
+        <returns>
+          <see langword="true" />, wenn der Vorgang erfolgreich ist, andernfalls <see langword="false" />. Wenn diese Methode zurückgibt <see langword="false" />, Laufzeitbinder der Sprache bestimmt das Verhalten. (In den meisten Fällen ist eine sprachspezifische Laufzeitausnahme ausgelöst.)</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Klassen aus der <xref:System.Dynamic.DynamicObject> Klasse überschreiben, kann diese Methode, um anzugeben, wie Vorgänge, die auf einen Member ein Wert festgelegt für ein dynamisches Objekt ausgeführt werden soll. Wenn die Methode nicht überschrieben wird, wird das Verhalten von Laufzeitbinder der Sprache bestimmt. (In den meisten Fällen ist eine sprachspezifische Laufzeitausnahme ausgelöst.)  
+  
+ Diese Methode wird aufgerufen, wenn Sie die Anweisungen wie haben `sampleObject.SampleProperty = "Test"`, wobei `sampleObject` ist eine Instanz der Klasse, die abgeleitet ist die <xref:System.Dynamic.DynamicObject> Klasse.  
+  
+ Sie können auch eigene Member hinzufügen, um von abgeleiteten Klassen der `DynamicObject` Klasse. Wenn Ihre Klasse Eigenschaften definiert und auch überschreibt die <xref:System.Dynamic.DynamicObject.TrySetMember%2A> -Methode, die dynamic Language Runtime (DLR) verwendet zuerst den Binder Sprache nach einer statischen Definition einer Eigenschaft in der Klasse gesucht werden soll. Wenn keine solche Eigenschaft vorhanden ist, ruft die DLR die <xref:System.Dynamic.DynamicObject.TrySetMember%2A> Methode.  
+  
+   
+  
+## Examples  
+ Angenommen, Sie, um alternative Syntax bereitstellen, für den Zugriff auf Werte in einem Wörterbuch, damit der Verfassung möchten `sampleDictionary["Text"] = "Sample text"` (`sampleDictionary("Text") = "Sample text"` in Visual Basic), können Sie schreiben `sampleDictionary.Text = "Sample text"`. Darüber hinaus muss diese Syntax Groß-/Kleinschreibung, sodass `sampleDictionary.Text` entspricht `sampleDictionary.text`.  
+  
+ Das folgende Codebeispiel veranschaulicht die `DynamicDictionary` -Klasse, die abgeleitet ist die <xref:System.Dynamic.DynamicObject> Klasse. Die `DynamicDictionary` Klasse enthält ein Objekt des der `Dictionary<string, object>` Typ (`Dictionary(Of String, Object)` in Visual Basic) zum Speichern der Schlüssel-Wert-Paare und überschreibt die <xref:System.Dynamic.DynamicObject.TrySetMember%2A> und <xref:System.Dynamic.DynamicObject.TryGetMember%2A> Methoden zum unterstützen der neuen Syntax. Sie bietet außerdem eine `Count` Eigenschaft, die zeigt, wie viele dynamischen Eigenschaften des Wörterbuchs enthält.  
+  
+ [!code-csharp[System.Dynamic.DynamicObject#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.dynamic.dynamicobject/cs/program.cs#1)]
+ [!code-vb[System.Dynamic.DynamicObject#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.dynamic.dynamicobject/vb/module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryUnaryOperation">
+      <MemberSignature Language="C#" Value="public virtual bool TryUnaryOperation (System.Dynamic.UnaryOperationBinder binder, out object result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryUnaryOperation(class System.Dynamic.UnaryOperationBinder binder, [out] object&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.DynamicObject.TryUnaryOperation(System.Dynamic.UnaryOperationBinder,System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binder" Type="System.Dynamic.UnaryOperationBinder" />
+        <Parameter Name="result" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="binder">Enthält Informationen zu der unären Operation. Die <c>Binder. Vorgang</c> -Eigenschaft gibt ein <see cref="T:System.Linq.Expressions.ExpressionType" /> Objekt. Z. B. für die <c>NegativeNumber = - Anzahl</c> -Anweisung, in denen <c>Anzahl</c> stammt aus der <see langword="DynamicObject" /> -Klasse, <c>Binder. Vorgang</c> "Negate" zurückgegeben.</param>
+        <param name="result">Das Ergebnis der unären Operation.</param>
+        <summary>Stellt die Implementierung für unäre Operationen bereit. Abgeleitete Klassen aus der <see cref="T:System.Dynamic.DynamicObject" /> Klasse kann überschreiben diese Methode, um dynamisches Verhalten für Vorgänge wie Negation, Inkrement oder Dekrement anzugeben.</summary>
+        <returns>
+          <see langword="true" />, wenn der Vorgang erfolgreich ist, andernfalls <see langword="false" />. Wenn diese Methode zurückgibt <see langword="false" />, Laufzeitbinder der Sprache bestimmt das Verhalten. (In den meisten Fällen ist eine sprachspezifische Laufzeitausnahme ausgelöst.)</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Klassen aus der <xref:System.Dynamic.DynamicObject> Klasse überschreiben, kann diese Methode, um anzugeben, wie unäre Operationen für ein dynamisches Objekt ausgeführt werden soll. Wenn die Methode nicht überschrieben wird, wird das Verhalten von Laufzeitbinder der Sprache bestimmt. (In den meisten Fällen ist eine sprachspezifische Laufzeitausnahme ausgelöst.)  
+  
+ Diese Methode wird aufgerufen, wenn unäre Operationen, wie z. B. Negation, Inkrement oder Dekrement. Z. B. wenn die <xref:System.Dynamic.DynamicObject.TryUnaryOperation%2A> -Methode überschrieben wird, diese Methode wird automatisch aufgerufen, für Anweisungen wie `negativeNumber = -number`, wobei `number` stammt aus dem <xref:System.Dynamic.DynamicObject> Klasse.  
+  
+ Sie erhalten Informationen über den Typ der unären Operation mit den `Operation` Eigenschaft von der `binder` Parameter.  
+  
+ Wenn das dynamische Objekt nur in c# und Visual Basic verwendet wird die `binder.Operation` Eigenschaft kann einen der folgenden Werte aus haben die <xref:System.Linq.Expressions.ExpressionType> Enumeration. In anderen Sprachen wie z. B. IronPython oder IronRuby, können Sie jedoch andere Werte haben. Weitere Informationen zu <xref:System.Linq.Expressions.ExpressionType>, finden Sie die Dokumentation für die [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028) Website.  
+  
+|Wert|Beschreibung|C#|Visual Basic|  
+|-----------|-----------------|---------|------------------|  
+|`Decrement`|Eine unäre-dekrementierungsoperation an.|`a--`|Wird nicht unterstützt.|  
+|`Increment`|Eine unäre-Inkrementierungsoperation an.|`a++`|Wird nicht unterstützt.|  
+|`Negate`|Eine arithmetische Negation.|`-a`|`-a`|  
+|`Not`|Eine logische Negation.|`!a`|`Not a`|  
+|`OnesComplement`|Ein Komplement darstellt.|`~a`|Wird nicht unterstützt.|  
+|`IsFalse`|Ein Bedingungswert "false.|`a && b`|Wird nicht unterstützt.|  
+|`IsTrue`|Ein Bedingungswert "true.|`a &#124;&#124; b`|Wird nicht unterstützt.|  
+|`UnaryPlus`|Ein unäres plus.|`+a`|`+a`|  
+  
+> [!NOTE]
+>  Implementiert `OrElse` (`a || b`) und `AndAlso` (`a && b`) Operationen für dynamische Objekte in c#, Sie wollen beide implementieren die <xref:System.Dynamic.DynamicObject.TryUnaryOperation%2A> Methode und die <xref:System.Dynamic.DynamicObject.TryBinaryOperation%2A> Methode.  
+>   
+>  Die `OrElse` Vorgang besteht aus den unären `IsTrue` Vorgang und der Binärdatei `Or` Vorgang. Die `Or` Vorgang wird nur ausgeführt, wenn das Ergebnis der `IsTrue` Vorgang ist `false`.  
+>   
+>  Die `AndAlso` Vorgang besteht aus den unären `IsFalse` Vorgang und der Binärdatei `And` Vorgang. Die `And` Vorgang wird nur ausgeführt, wenn das Ergebnis der `IsFalse` Vorgang ist `false`.  
+  
+   
+  
+## Examples  
+ Angenommen Sie, Sie eine Datenstruktur zum Speichern von Text und numerischer Darstellungen von Zahlen benötigen, und Sie eine mathematische Negationsoperation für solche Daten zu definieren möchten.  
+  
+ Das folgende Codebeispiel veranschaulicht die `DynamicNumber` -Klasse, die abgeleitet ist die <xref:System.Dynamic.DynamicObject> Klasse. `DynamicNumber`überschreibt die <xref:System.Dynamic.DynamicObject.TryUnaryOperation%2A> Methode, um die mathematische Negationsoperation zu aktivieren. Wird auch überschreibt die <xref:System.Dynamic.DynamicObject.TrySetMember%2A> und <xref:System.Dynamic.DynamicObject.TryGetMember%2A> Methoden zum Aktivieren des Zugriffs auf die Elemente.  
+  
+ In diesem Beispiel wird nur die mathematische Negationsoperation unterstützt. Wenn Sie versuchen, eine Anweisung wie schreiben `negativeNumber = +number`, eine Laufzeitausnahme tritt auf.  
+  
+ [!code-csharp[System.Dynamic.DynamicObject#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.dynamic.dynamicobject/cs/program.cs#7)]
+ [!code-vb[System.Dynamic.DynamicObject#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.dynamic.dynamicobject/vb/module1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

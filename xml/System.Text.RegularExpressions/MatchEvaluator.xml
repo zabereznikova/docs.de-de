@@ -1,0 +1,53 @@
+<Type Name="MatchEvaluator" FullName="System.Text.RegularExpressions.MatchEvaluator">
+  <TypeSignature Language="C#" Value="public delegate string MatchEvaluator(Match match);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed MatchEvaluator extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Text.RegularExpressions.MatchEvaluator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="match" Type="System.Text.RegularExpressions.Match" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.String</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="match">Die <see cref="T:System.Text.RegularExpressions.Match" /> -Objekt, das während einer einzelnen regulären ausdrucksübereinstimmung stellt eine <see cref="Overload:System.Text.RegularExpressions.Regex.Replace" /> Methodenvorgangs.</param>
+    <summary>Stellt die Methode, die jedes Mal aufgerufen wird, eine Übereinstimmung des regulären Ausdrucks, während gefunden wird, eine <see cref="Overload:System.Text.RegularExpressions.Regex.Replace" /> Methodenvorgangs.</summary>
+    <returns>Eine Zeichenfolge zurückgegeben, die von der Methode, die durch dargestellt ist die <see cref="T:System.Text.RegularExpressions.MatchEvaluator" /> delegieren.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können eine <xref:System.Text.RegularExpressions.MatchEvaluator> Delegatenmethode zum Ausführen einer benutzerdefinierten Überprüfung oder Änderung Operation für jede Übereinstimmung, wie z. B. durch eine Methode für die Ersetzung gefunden <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.Text.RegularExpressions.MatchEvaluator%29?displayProperty=nameWithType>. Für jede übereinstimmende Zeichenfolge, die <xref:System.Text.RegularExpressions.Regex.Replace%2A> Methodenaufrufe der <xref:System.Text.RegularExpressions.MatchEvaluator> Delegatenmethode mit einem <xref:System.Text.RegularExpressions.Match> Objekt, das die Übereinstimmung darstellt. Die Delegatmethode führt die Verarbeitung erforderlichen Genauigkeitsgrad und gibt eine Zeichenfolge zurück, die durch die <xref:System.Text.RegularExpressions.Regex.Replace%2A> Methode ersetzt die übereinstimmende Zeichenfolge.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Text.RegularExpressions.MatchEvaluator> Delegat, der jede übereinstimmende Gruppe von Zeichen durch die Anzahl der Übereinstimmung zu ersetzen.  
+  
+ [!code-cpp[System.Text.RegularExpressions.MatchEvaluator#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.text.regularexpressions.MatchEvaluator/CPP/regexreplace.cpp#1)]
+ [!code-csharp[System.Text.RegularExpressions.MatchEvaluator#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.MatchEvaluator/CS/regexreplace.cs#1)]
+ [!code-vb[System.Text.RegularExpressions.MatchEvaluator#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.MatchEvaluator/VB/regexreplace.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,100 @@
+<Type Name="DesignerActionHeaderItem" FullName="System.ComponentModel.Design.DesignerActionHeaderItem">
+  <TypeSignature Language="C#" Value="public sealed class DesignerActionHeaderItem : System.ComponentModel.Design.DesignerActionTextItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DesignerActionHeaderItem extends System.ComponentModel.Design.DesignerActionTextItem" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.DesignerActionHeaderItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Design.DesignerActionTextItem</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein statisches Headerelement auf einen Smarttagbereich dar. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wie die <xref:System.ComponentModel.Design.DesignerActionTextItem> -Basisklasse <xref:System.ComponentModel.Design.DesignerActionHeaderItem> einzelne statische Textelemente in einen Smarttagbereich darstellt. Allerdings <xref:System.ComponentModel.Design.DesignerActionHeaderItem> Einträge werden fett angezeigt. In der Regel wird ein Headerelement verwendet, um eine Überschrift für eine Gruppe von Elementen in einem Bereich zu erstellen. Durch Klicken auf ein Headerelement, wird keine Aktion ausgeführt.  
+  
+ Einzelne Systemsteuerungselemente gehören zusammen, um einen Bereich zu bilden, durch Aufrufen der <xref:System.ComponentModel.Design.DesignerActionList.GetSortedActionItems%2A> Methode der <xref:System.ComponentModel.Design.DesignerActionList> Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer Sammlung von <xref:System.ComponentModel.Design.DesignerActionItem> Objekte.  
+  
+ Ein vollständiges Beispiel Smarttags implementieren, finden Sie unter [wie: Anfügen von Smarttags auf eine Komponente in Windows Forms](http://msdn.microsoft.com/library/42cc4a0c-9ab3-47e1-93b8-03b6a6ccf233).  
+  
+ [!code-csharp[System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent/CS/smarttags.cs#7)]
+ [!code-vb[System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent/VB/smarttags.vb#7)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerActionHeaderItem (string displayName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string displayName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionHeaderItem.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="displayName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="displayName">Der Text, der in der Kopfzeile angezeigt werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Design.DesignerActionHeaderItem" /> -Klasse unter Verwendung der angegebenen Zeichenfolge.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor legt die <xref:System.ComponentModel.Design.DesignerActionItem.DisplayName%2A> und die <xref:System.ComponentModel.Design.DesignerActionItem.Category%2A> auf den Wert der Eigenschaften der `displayName` Parameter und legt die <xref:System.ComponentModel.Design.DesignerActionItem.Description%2A> Eigenschaft, um `null`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer Sammlung von <xref:System.ComponentModel.Design.DesignerActionItem> Objekte.  
+  
+ Ein vollständiges Beispiel Smarttags implementieren, finden Sie unter [wie: Anfügen von Smarttags auf eine Komponente in Windows Forms](http://msdn.microsoft.com/library/42cc4a0c-9ab3-47e1-93b8-03b6a6ccf233).  
+  
+ [!code-csharp[System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent/CS/smarttags.cs#7)]
+ [!code-vb[System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent/VB/smarttags.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerActionHeaderItem (string displayName, string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string displayName, string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionHeaderItem.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="displayName" Type="System.String" />
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="displayName">Der Text, der in der Kopfzeile angezeigt werden.</param>
+        <param name="category">Die Groß-/Kleinschreibung <see cref="T:System.String" /> , definiert die Gruppierungen von Bereich Einträge.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Design.DesignerActionHeaderItem" /> -Klasse unter Verwendung der Verbindungszeichenfolgen für die angegebenen Name und Kategorie.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor legt die <xref:System.ComponentModel.Design.DesignerActionItem.Description%2A> Eigenschaft `null`. Die <xref:System.ComponentModel.Design.DesignerActionItem.Category%2A> Eigenschaft Groß-/Kleinschreibung beachtet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,101 @@
+<Type Name="HttpRemotingHandlerFactory" FullName="System.Runtime.Remoting.Channels.Http.HttpRemotingHandlerFactory">
+  <TypeSignature Language="C#" Value="public class HttpRemotingHandlerFactory : System.Web.IHttpHandlerFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HttpRemotingHandlerFactory extends System.Object implements class System.Web.IHttpHandlerFactory" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Channels.Http.HttpRemotingHandlerFactory" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Remoting</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.IHttpHandlerFactory</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Initialisiert neue Instanzen der <see cref="T:System.Runtime.Remoting.Channels.Http.HttpRemotingHandler" /> Klasse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle Klasse erzeugt dynamisch neue Instanzen der <xref:System.Runtime.Remoting.Channels.Http.HttpRemotingHandler> Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpRemotingHandlerFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.Http.HttpRemotingHandlerFactory.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Instanz von <see cref="T:System.Runtime.Remoting.Channels.Http.HttpRemotingHandlerFactory" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHandler">
+      <MemberSignature Language="C#" Value="public System.Web.IHttpHandler GetHandler (System.Web.HttpContext context, string verb, string url, string filePath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.IHttpHandler GetHandler(class System.Web.HttpContext context, string verb, string url, string filePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.Http.HttpRemotingHandlerFactory.GetHandler(System.Web.HttpContext,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.IHttpHandler</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+        <Parameter Name="verb" Type="System.String" />
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="filePath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">Eine Instanz von der <see cref="T:System.Web.HttpContext" /> -Klasse, die Verweise auf systeminterne Serverobjekte bereitstellt (z. B. <see langword="Request" />, <see langword="Response" />, <see langword="Session" />, und <see langword="Server" />) verwendet, um HTTP-Anforderungen.</param>
+        <param name="verb">Die HTTP-Datenübertragungsmethode (<see langword="GET" /> oder <see langword="POST" />), die der Client verwendet.</param>
+        <param name="url">Die <see cref="P:System.Web.HttpRequest.RawUrl" /> der angeforderten Ressource.</param>
+        <param name="filePath">Die <see cref="P:System.Web.HttpRequest.PhysicalApplicationPath" /> zu der angeforderten Ressource.</param>
+        <summary>Gibt eine Instanz des der <see cref="T:System.Runtime.Remoting.Channels.Http.HttpRemotingHandler" /> Klasse.</summary>
+        <returns>Ein neues <see cref="T:System.Runtime.Remoting.Channels.Http.HttpRemotingHandler" /> , die die Anforderung verarbeitet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen über die aktuelle Methode finden Sie unter <xref:System.Web.IHttpHandlerFactory.GetHandler%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseHandler">
+      <MemberSignature Language="C#" Value="public void ReleaseHandler (System.Web.IHttpHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReleaseHandler(class System.Web.IHttpHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.Http.HttpRemotingHandlerFactory.ReleaseHandler(System.Web.IHttpHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handler" Type="System.Web.IHttpHandler" />
+      </Parameters>
+      <Docs>
+        <param name="handler">Die <see cref="T:System.Web.IHttpHandler" /> freigeben.</param>
+        <summary>Ermöglicht die Wiederverwendung des angegebenen einer Factory <see cref="T:System.Runtime.Remoting.Channels.Http.HttpRemotingHandler" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

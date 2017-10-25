@@ -1,0 +1,163 @@
+<Type Name="AttachedPropertyBrowsableForTypeAttribute" FullName="System.Windows.AttachedPropertyBrowsableForTypeAttribute">
+  <TypeSignature Language="C#" Value="public sealed class AttachedPropertyBrowsableForTypeAttribute : System.Windows.AttachedPropertyBrowsableAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AttachedPropertyBrowsableForTypeAttribute extends System.Windows.AttachedPropertyBrowsableAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.AttachedPropertyBrowsableForTypeAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.AttachedPropertyBrowsableAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, AllowMultiple=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass eine angefügte Eigenschaft nur für Elemente durchsucht werden kann, die von einem bestimmten Typ abgeleitet sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Bedeutung des Begriffs `browsable` wie dies bei Beschreibungen für diesen [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] ist analog zu die Beschreibungen für <xref:System.ComponentModel.BrowsableAttribute>, aber der durchsuchbarkeitszustand für eine angefügte Eigenschaft ist besonders relevant für die Eigenschaftsinformationen für [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)], da in erster Linie eine angefügte Eigenschaft ist ein [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] Konzept.  
+  
+ Wenn für mehrere Typen angegeben ist ein <xref:System.Windows.AttachedPropertyBrowsableForTypeAttribute> [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)], die Eigenschaft durchsucht werden kann, entspricht der Typ angegeben ist (logisches oder).  Der Typ kann auch eine Schnittstelle sein.  
+  
+ Dies [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] gibt <xref:System.AttributeUsageAttribute.AllowMultiple%2A> `true`.  
+  
+ Dies [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] sollte nur auf Get-Accessor der angefügten Eigenschaftsdefinitionen angewendet werden. Dies sind nicht anwendbar [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] für die Set-Zugriffsmethode. Obwohl intuitiv die Set-Operation, die durchsuchbar für bereitgestellt werden [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] auf den entsprechenden Elementen ist das Vorhandensein und die Merkmale der Get-Accessor für die Eigenschaft, die das "true" Verhalten steuert-Element definiert.  
+  
+ Allgemeine Informationen zum Deklarieren von angefügten Eigenschaften finden Sie unter [Eigenschaftenübersicht angefügt](~/docs/framework/wpf/advanced/attached-properties-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AttachedPropertyBrowsableForTypeAttribute (Type targetType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type targetType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.AttachedPropertyBrowsableForTypeAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="targetType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="targetType">Den gewünschten Typ, der die Verwendung der angefügten Eigenschaft festlegt, in denen dies [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] gilt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.AttachedPropertyBrowsableForTypeAttribute" /> -Klasse unter Verwendung der bereitgestellten <paramref name="targetType" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.AttachedPropertyBrowsableForTypeAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Die <see cref="T:System.Windows.AttachedPropertyBrowsableForTypeAttribute" /> zum Vergleichen mit der aktuellen <see cref="T:System.Windows.AttachedPropertyBrowsableForTypeAttribute" />.</param>
+        <summary>Bestimmt, ob die aktuelle <see cref="T:System.Windows.AttachedPropertyBrowsableForTypeAttribute" /> [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] mit einem angegebenen Objekt identisch ist.</summary>
+        <returns>
+          <see langword="true" />, wenn das angegebene <see cref="T:System.Windows.AttachedPropertyBrowsableForTypeAttribute" /> gleich der aktuellen <see cref="T:System.Windows.AttachedPropertyBrowsableForTypeAttribute" /> ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung unterstützt Wertgleichheit des einen möglichen festlegbaren Werts, der verfügbar gemacht werden, von diesem [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)], <xref:System.Windows.AttachedPropertyBrowsableForTypeAttribute.TargetType%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.AttachedPropertyBrowsableForTypeAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese <see cref="T:System.Windows.AttachedPropertyBrowsableForTypeAttribute" /> [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)].</summary>
+        <returns>Ein 32-Bit-Ganzzahlwert ohne Vorzeichen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung unterstützt mehrere mögliche Hashwerte basierend auf einen möglichen festlegbaren Werts, der von diesem verfügbar gemacht [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)], <xref:System.Windows.AttachedPropertyBrowsableForTypeAttribute.TargetType%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetType">
+      <MemberSignature Language="C#" Value="public Type TargetType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type TargetType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.AttachedPropertyBrowsableForTypeAttribute.TargetType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Basistyp, die Bereiche für die Verwendung der angefügten Eigenschaft festlegt, ab, in denen dies [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] gilt.</summary>
+        <value>Der angeforderte <see cref="T:System.Type" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann festgelegt werden, nur über die [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] Deklaration von zur Verfügung gestellt der <xref:System.Windows.AttachedPropertyBrowsableForTypeAttribute> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeId">
+      <MemberSignature Language="C#" Value="public override object TypeId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object TypeId" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.AttachedPropertyBrowsableForTypeAttribute.TypeId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen eindeutigen Typbezeichner für <see cref="T:System.Windows.AttachedPropertyBrowsableForTypeAttribute" /> [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)].</summary>
+        <value>Ein Objekt, das ist ein eindeutiger Bezeichner für die <see cref="T:System.Windows.AttachedPropertyBrowsableForTypeAttribute" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung gibt einen eindeutigen Wert für die einzelnen [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)], dies ist erforderlich, da dies [!INCLUDE[TLA2#tla_netframewkattr](~/includes/tla2sharptla-netframewkattr-md.md)] können mehrere Verwendungen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

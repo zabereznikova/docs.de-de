@@ -1,0 +1,97 @@
+<Type Name="ExtendedPropertyValueEditor" FullName="System.Activities.Presentation.PropertyEditing.ExtendedPropertyValueEditor">
+  <TypeSignature Language="C#" Value="public class ExtendedPropertyValueEditor : System.Activities.Presentation.PropertyEditing.PropertyValueEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ExtendedPropertyValueEditor extends System.Activities.Presentation.PropertyEditing.PropertyValueEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.PropertyEditing.ExtendedPropertyValueEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.Presentation.PropertyEditing.PropertyValueEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Container für die gesamte erweiterte Editorlogik für Eigenschaften.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Activities.Presentation.PropertyEditing.ExtendedPropertyValueEditor>-Klasse kann zwei <xref:System.Windows.DataTemplate>-Objekte enthalten, eines für einen Inline-Editor und eines für einen erweiterten Editor. Inline-Editor stellt eine benutzerdefinierte Schnittstelle, die innerhalb der Grenzen der `Properties` Fenster und den erweiterten Editor stellt eine Schnittstelle, die in einem neuen Fenster angezeigt wird.  
+  
+ Die <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A>-Eigenschaft gibt die XAML-Vorlage für die visuelle Oberfläche für den Inline-Editor zurück, und die <xref:System.Activities.Presentation.PropertyEditing.ExtendedPropertyValueEditor.ExtendedEditorTemplate%2A>-Eigenschaft gibt die XAML-Vorlage für den erweiterten Editor zurück. Sie werden in der Regel in einem ResourceDictionary an anderer Stelle im Projekt bereitgestellt.  
+  
+ Sie sollten den benutzerdefinierten <xref:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton> mithilfe der <xref:System.Activities.Presentation.PropertyEditing.ExtendedPropertyValueEditor> aufrufen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExtendedPropertyValueEditor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.PropertyEditing.ExtendedPropertyValueEditor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.Presentation.PropertyEditing.ExtendedPropertyValueEditor" />-Klasse ohne die <see cref="T:System.Windows.DataTemplate" />-Objekten des angegebenen erweiterten Editors und Inline-Editors.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExtendedPropertyValueEditor (System.Windows.DataTemplate extendedEditorTemplate, System.Windows.DataTemplate inlineEditorTemplate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.DataTemplate extendedEditorTemplate, class System.Windows.DataTemplate inlineEditorTemplate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.PropertyEditing.ExtendedPropertyValueEditor.#ctor(System.Windows.DataTemplate,System.Windows.DataTemplate)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="extendedEditorTemplate" Type="System.Windows.DataTemplate" />
+        <Parameter Name="inlineEditorTemplate" Type="System.Windows.DataTemplate" />
+      </Parameters>
+      <Docs>
+        <param name="extendedEditorTemplate">Die <see cref="T:System.Windows.DataTemplate" /> für den erweiterten Popup-Editor und fixierten Editor.</param>
+        <param name="inlineEditorTemplate">Die für den Inline-Editor verwendete <see cref="T:System.Windows.DataTemplate" />.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.Presentation.PropertyEditing.ExtendedPropertyValueEditor" />-Klasse mit den <see cref="T:System.Windows.DataTemplate" />-Objekten des angegebenen erweiterten Editors und Inline-Editors.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wird sie verwendet, wird der <xref:System.Activities.ActivityContext.DataContext%2A> auf einen <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtendedEditorTemplate">
+      <MemberSignature Language="C#" Value="public System.Windows.DataTemplate ExtendedEditorTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DataTemplate ExtendedEditorTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.PropertyEditing.ExtendedPropertyValueEditor.ExtendedEditorTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DataTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die für den erweiterten Popup- bzw. fixierten Editor verwendete <see cref="T:System.Windows.DataTemplate" /> ab oder legt diese fest.</summary>
+        <value>Die <see cref="T:System.Windows.DataTemplate" /> für den erweiterten Popup bzw. fixierten Editor verwendete Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.Activities.ActivityContext.DataContext%2A> ist auf einen <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

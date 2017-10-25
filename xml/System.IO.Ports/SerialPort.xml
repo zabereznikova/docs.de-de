@@ -1,0 +1,2420 @@
+<Type Name="SerialPort" FullName="System.IO.Ports.SerialPort">
+  <TypeSignature Language="C#" Value="public class SerialPort : System.ComponentModel.Component" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SerialPort extends System.ComponentModel.Component" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Ports.SerialPort" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Ports</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Component</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.MonitoringDescription("")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen seriellen Anschluss (als entsprechende Ressource) dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die .NET Framework-Quellcodes für diesen Typ finden Sie unter der [Verweisquelle](http://referencesource.microsoft.com/#System/sys/system/io/ports/SerialPort.cs#ae0a3218c6c9f7fe). Sie können den Quellcode online Durchsuchen, Referenz für die Offlineanzeige herunterladen und schrittweise durchlaufen (inklusive Patches und Updates) während des Debuggens; finden Sie unter [Anweisungen](http://referencesource.microsoft.com/).  
+  
+ Verwenden Sie diese Klasse, um einen seriellen Anschluss-Ressource "File" zu steuern. Diese Klasse stellt synchrone und ereignisgesteuerte e/a-Zugriff auf PIN-und Unterbrechungszustände und den Zugriff auf Eigenschaften des seriellen Treibers. Darüber hinaus kann die Funktionalität dieser Klasse umschlossen werden, in einer internen <xref:System.IO.Stream> Objekt zugegriffen werden kann, durch die <xref:System.IO.Ports.SerialPort.BaseStream%2A> -Eigenschaft, und übergeben Sie Klassen, die Streams umschließen oder verwenden.  
+  
+ Die <xref:System.IO.Ports.SerialPort> Klasse unterstützt die folgenden Codierungen: <xref:System.Text.ASCIIEncoding>, <xref:System.Text.UTF8Encoding>, <xref:System.Text.UnicodeEncoding>, <xref:System.Text.UTF32Encoding>, und jede Codierung in "mscorlib.dll", bei denen die Codepage ist kleiner als 50000 oder die Codepage 54936, definiert.  Sie können alternative Codierungen verwenden, aber Sie müssen die <xref:System.IO.Ports.SerialPort.ReadByte%2A> oder <xref:System.IO.Ports.SerialPort.Write%2A> Methode und die Codierung selbst ausführen.  
+  
+ Verwenden Sie die <xref:System.IO.Ports.SerialPort.GetPortNames%2A> Methode, um die gültigen Ports für den aktuellen Computer abzurufen.  
+  
+ Wenn ein <xref:System.IO.Ports.SerialPort> Objekt wird blockiert, während eines Lesevorgangs, brechen Sie den Thread nicht ab. Stattdessen entweder schließen die Basis zu streamen, oder löschen Sie die <xref:System.IO.Ports.SerialPort> Objekt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.IO.Ports.SerialPort> -Klasse zwei Benutzer auf zwei unterschiedlichen Computern, die durch eine Nullmodemkabels verbundene chatten ermöglicht. In diesem Beispiel werden die Benutzer für die Porteinstellungen und einen Benutzernamen für die vor dem Chatten aufgefordert. Beide Computer müssen die Anwendung aus, um vollständige Funktionalität dieses Beispiels zu erzielen ausgeführt werden.  
+  
+ [!code-cpp[System.IO.Ports.SerialPort#10](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cpp/serialport.cpp#10)]
+ [!code-csharp[System.IO.Ports.SerialPort#10](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cs/SerialPort.cs#10)]
+ [!code-vb[System.IO.Ports.SerialPort#10](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/vb/SerialPort.vb#10)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.SecurityPermission">für die Fähigkeit, nicht verwalteten Code aufrufen. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SerialPort ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Ports.SerialPort.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.Ports.SerialPort" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor verwendet Standardwerte für Eigenschaften, wenn keine angegeben wurde. Z. B. die <xref:System.IO.Ports.SerialPort.DataBits%2A> -Eigenschaft standardmäßig auf 8 die <xref:System.IO.Ports.SerialPort.Parity%2A> -Eigenschaft verwendet standardmäßig die `None` -Enumerationswert, der <xref:System.IO.Ports.SerialPort.StopBits%2A> Eigenschaft hat den Standardwert 1 und dem Port Standardnamen COM1.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.IO.Ports.SerialPort> -Klasse zwei Benutzer auf zwei unterschiedlichen Computern, die durch eine Nullmodemkabels verbundene chatten ermöglicht. In diesem Beispiel werden die Benutzer für die Porteinstellungen und einen Benutzernamen für die vor dem Chatten aufgefordert. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels, das sich für die <xref:System.IO.Ports.SerialPort> Klasse.  
+  
+ [!code-cpp[System.IO.Ports.SerialPort#01](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cpp/serialport.cpp#01)]
+ [!code-csharp[System.IO.Ports.SerialPort#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cs/SerialPort.cs#01)]
+ [!code-vb[System.IO.Ports.SerialPort#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/vb/SerialPort.vb#01)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SerialPort (System.ComponentModel.IContainer container);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.IContainer container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Ports.SerialPort.#ctor(System.ComponentModel.IContainer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="container" Type="System.ComponentModel.IContainer" />
+      </Parameters>
+      <Docs>
+        <param name="container">Eine Schnittstelle zu einem Container.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.Ports.SerialPort" />-Klasse mit dem angegebenen <see cref="T:System.ComponentModel.IContainer" />-Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor verwendet Standardwerte für Eigenschaften, wenn keine angegeben wurde. Z. B. die <xref:System.IO.Ports.SerialPort.DataBits%2A> -Eigenschaft standardmäßig auf 8 die <xref:System.IO.Ports.SerialPort.Parity%2A> -Eigenschaft verwendet standardmäßig die `None` -Enumerationswert, der <xref:System.IO.Ports.SerialPort.StopBits%2A> Eigenschaft hat den Standardwert 1 und dem Port Standardnamen COM1.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Der angegebene Port wurde nicht gefunden oder konnte nicht geöffnet werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SerialPort (string portName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string portName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Ports.SerialPort.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="portName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="portName">Der zu verwendende Anschluss (z. B. COM1).</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.Ports.SerialPort" />-Klasse unter Verwendung des angegebenen Anschlussnamens.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor zum Erstellen einer neuen Instanz von der <xref:System.IO.Ports.SerialPort> Klasse, wenn Sie den Portnamen angeben möchten.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Der angegebene Port wurde nicht gefunden oder konnte nicht geöffnet werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SerialPort (string portName, int baudRate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string portName, int32 baudRate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Ports.SerialPort.#ctor(System.String,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="portName" Type="System.String" />
+        <Parameter Name="baudRate" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="portName">Der zu verwendende Anschluss (z. B. COM1).</param>
+        <param name="baudRate">Die Baudrate.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.Ports.SerialPort" />-Klasse unter Verwendung des angegebenen Anschlussnamens und der Baudrate.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor zum Erstellen einer neuen Instanz von der <xref:System.IO.Ports.SerialPort> Klasse, wenn Sie den Portnamen und die Baudrate angeben möchten.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Der angegebene Port wurde nicht gefunden oder konnte nicht geöffnet werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SerialPort (string portName, int baudRate, System.IO.Ports.Parity parity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string portName, int32 baudRate, valuetype System.IO.Ports.Parity parity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Ports.SerialPort.#ctor(System.String,System.Int32,System.IO.Ports.Parity)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="portName" Type="System.String" />
+        <Parameter Name="baudRate" Type="System.Int32" />
+        <Parameter Name="parity" Type="System.IO.Ports.Parity" />
+      </Parameters>
+      <Docs>
+        <param name="portName">Der zu verwendende Anschluss (z. B. COM1).</param>
+        <param name="baudRate">Die Baudrate.</param>
+        <param name="parity">Einer der <see cref="P:System.IO.Ports.SerialPort.Parity" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.Ports.SerialPort" />-Klasse mit dem angegebenen Anschlussnamen, der Baudrate und dem Paritätsbit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor zum Erstellen einer neuen Instanz von der <xref:System.IO.Ports.SerialPort> Klasse, wenn Sie den Portnamen, der Baudrate und dem Paritätsbit angeben möchten.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Der angegebene Port wurde nicht gefunden oder konnte nicht geöffnet werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SerialPort (string portName, int baudRate, System.IO.Ports.Parity parity, int dataBits);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string portName, int32 baudRate, valuetype System.IO.Ports.Parity parity, int32 dataBits) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Ports.SerialPort.#ctor(System.String,System.Int32,System.IO.Ports.Parity,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="portName" Type="System.String" />
+        <Parameter Name="baudRate" Type="System.Int32" />
+        <Parameter Name="parity" Type="System.IO.Ports.Parity" />
+        <Parameter Name="dataBits" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="portName">Der zu verwendende Anschluss (z. B. COM1).</param>
+        <param name="baudRate">Die Baudrate.</param>
+        <param name="parity">Einer der <see cref="P:System.IO.Ports.SerialPort.Parity" />-Werte.</param>
+        <param name="dataBits">Der Datenbitwert.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.Ports.SerialPort" />-Klasse mit dem angegebenen Anschlussnamen, der Baudrate, dem Paritätsbit und Datenbits.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor zum Erstellen einer neuen Instanz von der <xref:System.IO.Ports.SerialPort> Klasse, wenn Sie den Portnamen, die Baudrate, dem Paritätsbit und Datenbits angeben möchten.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Der angegebene Port wurde nicht gefunden oder konnte nicht geöffnet werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SerialPort (string portName, int baudRate, System.IO.Ports.Parity parity, int dataBits, System.IO.Ports.StopBits stopBits);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string portName, int32 baudRate, valuetype System.IO.Ports.Parity parity, int32 dataBits, valuetype System.IO.Ports.StopBits stopBits) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Ports.SerialPort.#ctor(System.String,System.Int32,System.IO.Ports.Parity,System.Int32,System.IO.Ports.StopBits)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="portName" Type="System.String" />
+        <Parameter Name="baudRate" Type="System.Int32" />
+        <Parameter Name="parity" Type="System.IO.Ports.Parity" />
+        <Parameter Name="dataBits" Type="System.Int32" />
+        <Parameter Name="stopBits" Type="System.IO.Ports.StopBits" />
+      </Parameters>
+      <Docs>
+        <param name="portName">Der zu verwendende Anschluss (z. B. COM1).</param>
+        <param name="baudRate">Die Baudrate.</param>
+        <param name="parity">Einer der <see cref="P:System.IO.Ports.SerialPort.Parity" />-Werte.</param>
+        <param name="dataBits">Der Datenbitwert.</param>
+        <param name="stopBits">Einer der <see cref="P:System.IO.Ports.SerialPort.StopBits" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.Ports.SerialPort" />-Klasse mit dem angegebenen Anschlussnamen, der Baudrate, dem Paritätsbit, den Datenbits und Stoppbits.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor zum Erstellen einer neuen Instanz von der <xref:System.IO.Ports.SerialPort> Klasse, wenn Sie verwenden möchten, geben Sie den Portnamen, der Baudrate, dem Paritätsbit, Datenbits und Stoppbits.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Der angegebene Port wurde nicht gefunden oder konnte nicht geöffnet werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseStream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream BaseStream { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Stream BaseStream" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Ports.SerialPort.BaseStream" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das zugrunde liegende <see cref="T:System.IO.Stream" />-Objekt für ein <see cref="T:System.IO.Ports.SerialPort" />-Objekt ab.</summary>
+        <value>Ein <see cref="T:System.IO.Stream" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft für explizite asynchrone e/a-Vorgänge oder zum Übergeben der <xref:System.IO.Ports.SerialPort> -Objekt an eine <xref:System.IO.Stream> Wrapperklasse wie z. B. <xref:System.IO.StreamWriter>.  
+  
+ Öffnen Sie einen seriellen Anschluss <xref:System.IO.Ports.SerialPort.BaseStream%2A> -Eigenschaft gibt ein Objekt, das von der abstrakten abgeleitet wird <xref:System.IO.Stream> -Klasse, und implementiert lesen und Schreiben von Methoden, die mit dem Prototypen geerbt von der <xref:System.IO.Stream> Klasse: <xref:System.IO.Stream.BeginRead%2A>, <xref:System.IO.Stream.BeginWrite%2A>, <xref:System.IO.Stream.Read%2A> , <xref:System.IO.Stream.ReadByte%2A>, <xref:System.IO.Stream.Write%2A>, und <xref:System.IO.Stream.WriteByte%2A>. Diese Methoden können nützlich sein, wenn eine umschlossene serielle Ressource zum Übergeben einer <xref:System.IO.Stream> Wrapperklasse.  
+  
+ Aufgrund der nicht zugegriffen werden kann, der das umschlossene Dateihandle der <xref:System.IO.Stream.Length%2A> und <xref:System.IO.Stream.Position%2A> Eigenschaften werden nicht unterstützt, und die <xref:System.IO.Stream.Seek%2A> und <xref:System.IO.Stream.SetLength%2A> Methoden werden nicht unterstützt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Stream ist geschlossen. Dies kann auftreten, da die <see cref="M:System.IO.Ports.SerialPort.Open" /> Methode nicht aufgerufen wurde oder die <see cref="M:System.IO.Ports.SerialPort.Close" /> -Methode aufgerufen wurde.</exception>
+        <exception cref="T:System.NotSupportedException">Der Datenstrom ist in einer .NET Compact Framework-Anwendung und eine der folgenden Methoden aufgerufen wurde:  
+  
+ <see cref="M:System.IO.Stream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)" /><see cref="M:System.IO.Stream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)" /><see cref="M:System.IO.Stream.EndRead(System.IAsyncResult)" /><see cref="M:System.IO.Stream.EndWrite(System.IAsyncResult)" />  
+  
+ .NET Compact Framework unterstützt nicht das asynchrone Modell mit Basisstreams.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BaudRate">
+      <MemberSignature Language="C#" Value="public int BaudRate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BaudRate" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Ports.SerialPort.BaudRate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(9600)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die serielle Baudrate ab oder legt diese fest.</summary>
+        <value>Die Baudrate.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Baudrate muss durch den Benutzer des seriellen Treibers unterstützt werden. Der Standardwert ist 9600 Bits pro Sekunde (Bit/s).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.IO.Ports.SerialPort.BaudRate%2A> Eigenschaft `9600`.  
+  
+ [!code-cpp[System.IO.Ports.SerialPort#20](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cpp/datareceived.cpp#20)]
+ [!code-csharp[System.IO.Ports.SerialPort#20](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cs/datareceived.cs#20)]
+ [!code-vb[System.IO.Ports.SerialPort#20](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/vb/datareceived.vb#20)]  
+  
+ Das folgende Beispiel veranschaulicht die Verwendung von der <xref:System.IO.Ports.SerialPort> -Klasse zwei Benutzer auf zwei unterschiedlichen Computern, die durch eine Nullmodemkabels verbundene chatten ermöglicht. In diesem Beispiel werden die Benutzer für die Porteinstellungen und einen Benutzernamen für die vor dem Chatten aufgefordert. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels, das sich für die <xref:System.IO.Ports.SerialPort> Klasse.  
+  
+ [!code-cpp[System.IO.Ports.SerialPort#01](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cpp/serialport.cpp#01)]
+ [!code-csharp[System.IO.Ports.SerialPort#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cs/SerialPort.cs#01)]
+ [!code-vb[System.IO.Ports.SerialPort#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/vb/SerialPort.vb#01)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die Baudrate angegeben ist kleiner oder gleich 0 (null) oder größer als die maximal zulässige Baudrate für das Gerät.</exception>
+        <exception cref="T:System.IO.IOException">Der Port ist in einem ungültigen Zustand.  
+  
+ \- oder –  
+  
+ Fehler bei der Zustand des zugrunde liegenden Ports festgelegt. Beispielsweise die Parameter zu übergeben, von diesem <see cref="T:System.IO.Ports.SerialPort" /> Objekt war ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BreakState">
+      <MemberSignature Language="C#" Value="public bool BreakState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BreakState" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Ports.SerialPort.BreakState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zustand bei einer Signalunterbrechung ab oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn der Anschluss unterbrochen ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Zustand bei einer signalunterbrechung tritt auf, wenn eine Übertragung angehalten wird, und die Zeile sich im Zustand "unterbrechen" (alle niedrig, keine Stoppbit befindet) bis freigegeben. Um Haltezustand eingegeben haben, legen Sie diese Eigenschaft auf `true`. Wenn der Port bereits unterbrochen wird, das Festlegen dieser Eigenschaft erneut zu `true` führt nicht zu einer Ausnahme. Es ist nicht möglich, zum Schreiben in die <xref:System.IO.Ports.SerialPort> Objekt beim <xref:System.IO.Ports.SerialPort.BreakState%2A> ist `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Der Port ist in einem ungültigen Zustand.  
+  
+ \- oder –  
+  
+ Fehler bei der Zustand des zugrunde liegenden Ports festgelegt. Beispielsweise die Parameter zu übergeben, von diesem <see cref="T:System.IO.Ports.SerialPort" /> Objekt war ungültig.</exception>
+        <exception cref="T:System.InvalidOperationException">Der Stream ist geschlossen. Dies kann auftreten, da die <see cref="M:System.IO.Ports.SerialPort.Open" /> Methode nicht aufgerufen wurde oder die <see cref="M:System.IO.Ports.SerialPort.Close" /> -Methode aufgerufen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BytesToRead">
+      <MemberSignature Language="C#" Value="public int BytesToRead { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BytesToRead" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Ports.SerialPort.BytesToRead" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl von Datenbytes im Empfangspuffer ab.</summary>
+        <value>Die Anzahl von Datenbytes im Empfangspuffer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Empfangspuffer enthält des seriellen Treibers Empfangspuffer sowie internen Pufferung der <xref:System.IO.Ports.SerialPort> Objekt selbst.  
+  
+ Da die <xref:System.IO.Ports.SerialPort.BytesToRead%2A> Eigenschaft darstellt, sowohl die <xref:System.IO.Ports.SerialPort> Puffer und der Puffer Windows erstellt, können sie einen höheren Wert als Zurückgeben der <xref:System.IO.Ports.SerialPort.ReadBufferSize%2A> Eigenschaft, die nur den Windows erstellten Puffer darstellt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Port ist nicht geöffnet werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BytesToWrite">
+      <MemberSignature Language="C#" Value="public int BytesToWrite { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BytesToWrite" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Ports.SerialPort.BytesToWrite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl von Datenbytes im Sendepuffer ab.</summary>
+        <value>Die Anzahl von Datenbytes im Sendepuffer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sendepuffer enthält des seriellen Treibers Sendepuffer sowie internen Pufferung der <xref:System.IO.Ports.SerialPort> Objekt selbst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Der Port ist in einem ungültigen Zustand.</exception>
+        <exception cref="T:System.InvalidOperationException">Der Stream ist geschlossen. Dies kann auftreten, da die <see cref="M:System.IO.Ports.SerialPort.Open" /> Methode nicht aufgerufen wurde oder die <see cref="M:System.IO.Ports.SerialPort.Close" /> -Methode aufgerufen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CDHolding">
+      <MemberSignature Language="C#" Value="public bool CDHolding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CDHolding" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Ports.SerialPort.CDHolding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zustand der Zeile für die Erkennung des Trägers für den Anschluss ab.</summary>
+        <value>
+          <see langword="true" />, wenn der Träger erkannt wird, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann verwendet werden, um den Zustand der Zeile der Netzbetreiber-Erkennung für einen Port zu überwachen. Kein Netzbetreiber gibt normalerweise an, dass der Empfänger aufgelegt hat und der Netzbetreiber wurde gelöscht.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Der Port ist in einem ungültigen Zustand.  
+  
+ \- oder –  
+  
+ Fehler bei der Zustand des zugrunde liegenden Ports festgelegt. Beispielsweise die Parameter zu übergeben, von diesem <see cref="T:System.IO.Ports.SerialPort" /> Objekt war ungültig.</exception>
+        <exception cref="T:System.InvalidOperationException">Der Stream ist geschlossen. Dies kann auftreten, da die <see cref="M:System.IO.Ports.SerialPort.Open" /> Methode nicht aufgerufen wurde oder die <see cref="M:System.IO.Ports.SerialPort.Close" /> -Methode aufgerufen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Ports.SerialPort.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schließt die Anschlussverbindung, legt die <see cref="P:System.IO.Ports.SerialPort.IsOpen" />-Eigenschaft auf <see langword="false" /> fest und löscht das interne <see cref="T:System.IO.Stream" />-Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufrufen dieser Methode schließt die <xref:System.IO.Ports.SerialPort> -Objekt, löscht der Empfangs- und Übertragungspuffer. Diese Methode ruft die <xref:System.ComponentModel.Component.Dispose?displayProperty=nameWithType> -Methode, die die geschützte ruft <xref:System.IO.Ports.SerialPort.Dispose%28System.Boolean%29?displayProperty=nameWithType> Methode mit der `disposing` Parameter festgelegt wird, um `true`.  
+  
+ Die bewährte Methode für jede Anwendung ist, warten Sie einige Zeitdauer nach dem Aufruf der <xref:System.IO.Ports.SerialPort.Close%2A> Methode vor dem Aufrufen der <xref:System.IO.Ports.SerialPort.Open%2A> -Methode, mit dem Port kann nicht geschlossen werden sofort.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.IO.Ports.SerialPort> -Klasse zwei Benutzer auf zwei unterschiedlichen Computern, die durch eine Nullmodemkabels verbundene chatten ermöglicht. In diesem Beispiel werden die Benutzer für die Porteinstellungen und einen Benutzernamen für die vor dem Chatten aufgefordert. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels, das sich für die <xref:System.IO.Ports.SerialPort> Klasse.  
+  
+ [!code-cpp[System.IO.Ports.SerialPort#01](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cpp/serialport.cpp#01)]
+ [!code-csharp[System.IO.Ports.SerialPort#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cs/SerialPort.cs#01)]
+ [!code-vb[System.IO.Ports.SerialPort#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/vb/SerialPort.vb#01)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Der Port ist in einem ungültigen Zustand.  
+  
+ \- oder –  
+  
+ Fehler bei der Zustand des zugrunde liegenden Ports festgelegt. Beispielsweise die Parameter zu übergeben, von diesem <see cref="T:System.IO.Ports.SerialPort" /> Objekt war ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CtsHolding">
+      <MemberSignature Language="C#" Value="public bool CtsHolding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CtsHolding" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Ports.SerialPort.CtsHolding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zustand der Clear-to-Send-Zeile ab.</summary>
+        <value>
+          <see langword="true" />, wenn die Clear-to-Send-Zeile erkannt wird, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Clear-to-Send (CTS) Zeile wird in Request to Send/Clear verwendet, um flusssteuerung (RTS/CTS) zu senden. Die Zeile CTS wird von einem Port abgefragt, bevor Daten gesendet werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Der Port ist in einem ungültigen Zustand.  
+  
+ \- oder –  
+  
+ Fehler bei der Zustand des zugrunde liegenden Ports festgelegt. Beispielsweise die Parameter zu übergeben, von diesem <see cref="T:System.IO.Ports.SerialPort" /> Objekt war ungültig.</exception>
+        <exception cref="T:System.InvalidOperationException">Der Stream ist geschlossen. Dies kann auftreten, da die <see cref="M:System.IO.Ports.SerialPort.Open" /> Methode nicht aufgerufen wurde oder die <see cref="M:System.IO.Ports.SerialPort.Close" /> -Methode aufgerufen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBits">
+      <MemberSignature Language="C#" Value="public int DataBits { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DataBits" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Ports.SerialPort.DataBits" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(8)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Standardlänge der Datenbits pro Byte ab oder legt diese fest.</summary>
+        <value>Die Länge der Datenbits.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wertebereich für diese Eigenschaft wird von 5 bis 8. Der Standardwert ist 8.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.IO.Ports.SerialPort> -Klasse zwei Benutzer auf zwei unterschiedlichen Computern, die durch eine Nullmodemkabels verbundene chatten ermöglicht. In diesem Beispiel werden die Benutzer für die Porteinstellungen und einen Benutzernamen für die vor dem Chatten aufgefordert. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels, das sich für die <xref:System.IO.Ports.SerialPort> Klasse.  
+  
+ [!code-cpp[System.IO.Ports.SerialPort#01](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cpp/serialport.cpp#01)]
+ [!code-csharp[System.IO.Ports.SerialPort#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cs/SerialPort.cs#01)]
+ [!code-vb[System.IO.Ports.SerialPort#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/vb/SerialPort.vb#01)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Der Port ist in einem ungültigen Zustand.  
+  
+ \- oder –  
+  
+ Fehler bei der Zustand des zugrunde liegenden Ports festgelegt. Beispielsweise die Parameter zu übergeben, von diesem <see cref="T:System.IO.Ports.SerialPort" /> Objekt war ungültig.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Datenbitwert ist kleiner als 5 oder mehr als 8.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DataReceived">
+      <MemberSignature Language="C#" Value="public event System.IO.Ports.SerialDataReceivedEventHandler DataReceived;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.IO.Ports.SerialDataReceivedEventHandler DataReceived" />
+      <MemberSignature Language="DocId" Value="E:System.IO.Ports.SerialPort.DataReceived" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.SerialDataReceivedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass Daten über einen Port empfangen wurden, der durch das <see cref="T:System.IO.Ports.SerialPort" />-Objekt dargestellt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Datenereignisse können verursacht werden, indem keines der Elemente in der <xref:System.IO.Ports.SerialData> Enumeration. Da das Betriebssystem an, ob dieses Ereignis auslösen, oder nicht festgelegt wird, können nicht alle Paritätsfehler gemeldet werden.  
+  
+ Die <xref:System.IO.Ports.SerialPort.DataReceived> Ereignis wird auch ausgelöst, wenn Eof-Zeichen, unabhängig von der Anzahl der Bytes im internen Eingabepuffer und den Wert empfangen wird der <xref:System.IO.Ports.SerialPort.ReceivedBytesThreshold%2A> Eigenschaft.  
+  
+ <xref:System.IO.Ports.SerialPort.PinChanged>, <xref:System.IO.Ports.SerialPort.DataReceived>, und <xref:System.IO.Ports.SerialPort.ErrorReceived> Ereignisse außerhalb der Reihenfolge aufgerufen werden können, und möglicherweise gibt es eine kurze Verzögerung zwischen beim zugrunde liegenden Datenstroms auf den Fehler meldet, und wenn der Ereignishandler ausgeführt wird. Nur ein Ereignishandler kann zu einem Zeitpunkt ausgeführt werden.  
+  
+ Die <xref:System.IO.Ports.SerialPort.DataReceived> Ereignis ist nicht unbedingt für jedes empfangene Byte ausgelöst werden. Verwenden der <xref:System.IO.Ports.SerialPort.BytesToRead%2A> -Eigenschaft können Sie bestimmen, wie viele Daten bleibt, um in den Puffer gelesen werden.  
+  
+ Die <xref:System.IO.Ports.SerialPort.DataReceived> Ereignis für ein sekundärer Thread ausgelöst wird, wenn Daten von empfangen werden die <xref:System.IO.Ports.SerialPort> Objekt. Da dieses in einem sekundären Thread Ereignis wird und nicht der Hauptthread, bei dem Versuch, einige Elemente in der Haupt-Thread, z. B. UI-Elemente ändern konnte eine threading Ausnahme auslösen. Bei Bedarf so ändern Sie die Elemente im Hauptfenster <xref:System.Windows.Forms.Form> oder <xref:System.Windows.Forms.Control>, Post Change Requests mit <xref:System.Windows.Forms.Control.Invoke%2A>, erfolgt die Arbeiten an den richtigen Thread.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird eine <xref:System.IO.Ports.SerialDataReceivedEventHandler> zu <xref:System.IO.Ports.SerialPort.DataReceived> , lesen alle verfügbaren Daten, die an den Anschluss COM1 erhalten. Beachten Sie, um diesen Code zu testen es notwendig ist, dass Hardware an, die Daten sendet COM1 angefügt ist.  
+  
+ [!code-cpp[System.IO.Ports.SerialPort#06](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cpp/datareceived.cpp#06)]
+ [!code-csharp[System.IO.Ports.SerialPort#06](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cs/datareceived.cs#06)]
+ [!code-vb[System.IO.Ports.SerialPort#06](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/vb/datareceived.vb#06)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DiscardInBuffer">
+      <MemberSignature Language="C#" Value="public void DiscardInBuffer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DiscardInBuffer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Ports.SerialPort.DiscardInBuffer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verwirft Daten aus dem Empfangspuffer des seriellen Treibers.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode entspricht dem folgenden Visual Basic-Code: `MSComm1.InBufferCount = 0`. Löscht den Empfangspuffer, aber wirkt sich nicht auf den Übertragungspuffer.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Der Port ist in einem ungültigen Zustand.  
+  
+ \- oder –  
+  
+ Fehler bei der Zustand des zugrunde liegenden Ports festgelegt. Beispielsweise die Parameter zu übergeben, von diesem <see cref="T:System.IO.Ports.SerialPort" /> Objekt war ungültig.</exception>
+        <exception cref="T:System.InvalidOperationException">Der Stream ist geschlossen. Dies kann auftreten, da die <see cref="M:System.IO.Ports.SerialPort.Open" /> Methode nicht aufgerufen wurde oder die <see cref="M:System.IO.Ports.SerialPort.Close" /> -Methode aufgerufen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DiscardNull">
+      <MemberSignature Language="C#" Value="public bool DiscardNull { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DiscardNull" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Ports.SerialPort.DiscardNull" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Not implemented")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob NULL-Bytes bei der Übertragung zwischen dem Anschluss und dem Empfangspuffer ignoriert werden, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn NULL-Bytes ignoriert werden, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert sollte normalerweise festgelegt werden, um `false`, insbesondere für binäre Übertragungen.  Wenn diese Eigenschaft auf `true` können zu unerwarteten Ergebnissen für UTF32 - und UTF16-codierte Bytes führen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Der Port ist in einem ungültigen Zustand.  
+  
+ \- oder –  
+  
+ Fehler bei der Zustand des zugrunde liegenden Ports festgelegt. Beispielsweise die Parameter zu übergeben, von diesem <see cref="T:System.IO.Ports.SerialPort" /> Objekt war ungültig.</exception>
+        <exception cref="T:System.InvalidOperationException">Der Stream ist geschlossen. Dies kann auftreten, da die <see cref="M:System.IO.Ports.SerialPort.Open" /> Methode nicht aufgerufen wurde oder die <see cref="M:System.IO.Ports.SerialPort.Close" /> -Methode aufgerufen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DiscardOutBuffer">
+      <MemberSignature Language="C#" Value="public void DiscardOutBuffer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DiscardOutBuffer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Ports.SerialPort.DiscardOutBuffer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verwirft Daten aus dem Übertragungspuffer des seriellen Treibers.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode entspricht dem folgenden Visual Basic-Code: `MSComm1.OutBufferCount = 0`. Löscht den Übertragungspuffer, aber wirkt sich nicht auf den Empfangspuffer.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Der Port ist in einem ungültigen Zustand.  
+  
+ \- oder –  
+  
+ Fehler bei der Zustand des zugrunde liegenden Ports festgelegt. Beispielsweise die Parameter zu übergeben, von diesem <see cref="T:System.IO.Ports.SerialPort" /> Objekt war ungültig.</exception>
+        <exception cref="T:System.InvalidOperationException">Der Stream ist geschlossen. Dies kann auftreten, da die <see cref="M:System.IO.Ports.SerialPort.Open" /> Methode nicht aufgerufen wurde oder die <see cref="M:System.IO.Ports.SerialPort.Close" /> -Methode aufgerufen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Ports.SerialPort.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.IO.Ports.SerialPort" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich <xref:System.ComponentModel.Component.Dispose%2A> Methode und die <xref:System.Object.Finalize%2A> Methode. <xref:System.ComponentModel.Component.Dispose%2A>Ruft die geschützte <xref:System.IO.Ports.SerialPort.Dispose%2A> Methode mit dem `disposing` Parametersatz auf `true`. <xref:System.Object.Finalize%2A>Ruft <xref:System.IO.Ports.SerialPort.Dispose%2A> mit `disposing` festgelegt `false`.  
+  
+ Wenn der `disposing`-Parameter `true` ist, gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte reserviert sind, auf die dieser <xref:System.IO.Ports.SerialPort> verweist. Diese Methode ruft die <xref:System.ComponentModel.Component.Dispose%2A>-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ Diese Methode leert und schließt den Streamobjekt der <xref:System.IO.Ports.SerialPort.BaseStream%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Der Port ist in einem ungültigen Zustand.  
+  
+ \- oder –  
+  
+ Fehler bei der Zustand des zugrunde liegenden Ports festgelegt. Beispielsweise die Parameter zu übergeben, von diesem <see cref="T:System.IO.Ports.SerialPort" /> Objekt war ungültig.</exception>
+        <block subset="none" type="overrides">
+          <para>
+            <see cref="M:System.ComponentModel.Component.Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Beim Überschreiben von <see cref="M:System.IO.Ports.SerialPort.Dispose(System.Boolean)" /> müssen Sie darauf achten, nicht auf Objekte zu verweisen, die durch einen früheren Aufruf von <see cref="M:System.ComponentModel.Component.Dispose" /> freigegeben wurden. Weitere Informationen zum Implementieren <see cref="M:System.IO.Ports.SerialPort.Dispose(System.Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see cref="M:System.ComponentModel.Component.Dispose" /> und <see cref="M:System.Object.Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="DsrHolding">
+      <MemberSignature Language="C#" Value="public bool DsrHolding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DsrHolding" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Ports.SerialPort.DsrHolding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zustand des DSR (Data Set Ready)-Signals ab.</summary>
+        <value>
+          <see langword="true" />, wenn ein Data Set Ready-Signal zum Anschluss gesendet wurde, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird in Data Set Ready/Data Terminal Ready (DSR/DTR)-Handshake verwendet. Das Dataset (Ready)-Signals wird normalerweise von einem Modem an einen Port gesendet, um anzugeben, dass er zur Datenübertragung oder Daten Empfang bereit ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Der Port ist in einem ungültigen Zustand.  
+  
+ \- oder –  
+  
+ Fehler bei der Zustand des zugrunde liegenden Ports festgelegt. Beispielsweise die Parameter zu übergeben, von diesem <see cref="T:System.IO.Ports.SerialPort" /> Objekt war ungültig.</exception>
+        <exception cref="T:System.InvalidOperationException">Der Stream ist geschlossen. Dies kann auftreten, da die <see cref="M:System.IO.Ports.SerialPort.Open" /> Methode nicht aufgerufen wurde oder die <see cref="M:System.IO.Ports.SerialPort.Close" /> -Methode aufgerufen wurde.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DtrEnable">
+      <MemberSignature Language="C#" Value="public bool DtrEnable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DtrEnable" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Ports.SerialPort.DtrEnable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der das Data Terminal Ready (DTR)-Signal während einer seriellen Kommunikation aktiviert, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, um Data Terminal Ready (DTR) zu aktivieren, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Data Terminal Ready (DTR) wird in der Regel während der Software-Handshake XON/XOFF und Request to Send/Clear-flusssteuerung (RTS/CTS) und Modem Kommunikation senden aktiviert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Der Port ist in einem ungültigen Zustand.  
+  
+ \- oder –  
+  
+ Fehler bei der Zustand des zugrunde liegenden Ports festgelegt. Beispielsweise die Parameter zu übergeben, von diesem <see cref="T:System.IO.Ports.SerialPort" /> Objekt war ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Encoding">
+      <MemberSignature Language="C#" Value="public System.Text.Encoding Encoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding Encoding" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Ports.SerialPort.Encoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Bytecodierung für die Konvertierung von Text vor und nach der Übertragung ab oder legt diese fest.</summary>
+        <value>Ein <see cref="T:System.Text.Encoding" />-Objekt. Die Standardeinstellung ist <see cref="T:System.Text.ASCIIEncoding" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Die <see cref="P:System.IO.Ports.SerialPort.Encoding" /> -Eigenschaft wurde festgelegt, um <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.IO.Ports.SerialPort.Encoding" /> -Eigenschaft wurde festgelegt, um eine Codierung, die nicht <see cref="T:System.Text.ASCIIEncoding" />, <see cref="T:System.Text.UTF8Encoding" />, <see cref="T:System.Text.UTF32Encoding" />, <see cref="T:System.Text.UnicodeEncoding" />jeweils die Windows-Einzelbyte-Codierungen, oder eine der Windows-double-Byte-Codierungen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorReceived">
+      <MemberSignature Language="C#" Value="public event System.IO.Ports.SerialErrorReceivedEventHandler ErrorReceived;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.IO.Ports.SerialErrorReceivedEventHandler ErrorReceived" />
+      <MemberSignature Language="DocId" Value="E:System.IO.Ports.SerialPort.ErrorReceived" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.SerialErrorReceivedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass ein Fehler bei einem Port aufgetreten ist, der durch ein <see cref="T:System.IO.Ports.SerialPort" />-Objekt dargestellt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fehlerereignisse können verursacht werden, indem keines der Elemente in der <xref:System.IO.Ports.SerialError> Enumeration. Da das Betriebssystem an, ob dieses Ereignis auslösen, oder nicht festgelegt wird, können nicht alle Paritätsfehler gemeldet werden.  
+  
+ <xref:System.IO.Ports.SerialPort.PinChanged>, <xref:System.IO.Ports.SerialPort.DataReceived>, und <xref:System.IO.Ports.SerialPort.ErrorReceived> Ereignisse außerhalb der Reihenfolge aufgerufen werden können, und möglicherweise gibt es eine kurze Verzögerung zwischen beim zugrunde liegenden Datenstroms auf die Fehlerberichte und wann Code kann, wenn der Ereignishandler ausgeführt wird. Nur ein Ereignishandler kann zu einem Zeitpunkt ausgeführt werden.  
+  
+ Wenn ein Paritätsfehler in das nachfolgende Byte eines Streams befindet, wird ein zusätzliches Byte des Eingabepuffers mit einem Wert von 126 hinzugefügt werden.  
+  
+ Die <xref:System.IO.Ports.SerialPort.ErrorReceived> Ereignis wird in einem sekundären Thread beim Empfang des Fehlers aus der <xref:System.IO.Ports.SerialPort> Objekt. Da dieses in einem sekundären Thread Ereignis wird und nicht der Hauptthread, bei dem Versuch, einige Elemente in der Haupt-Thread, z. B. UI-Elemente ändern konnte eine threading Ausnahme auslösen. Bei Bedarf so ändern Sie die Elemente im Hauptfenster <xref:System.Windows.Forms.Form> oder <xref:System.Windows.Forms.Control>, Post Change Requests mit <xref:System.Windows.Forms.Control.Invoke%2A>, erfolgt die Arbeiten an den richtigen Thread.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPortNames">
+      <MemberSignature Language="C#" Value="public static string[] GetPortNames ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string[] GetPortNames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Ports.SerialPort.GetPortNames" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft ein Array der seriellen Anschlussnamen für den aktuellen Computer ab.</summary>
+        <returns>Ein Array der seriellen Anschlussnamen für den aktuellen Computer.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Reihenfolge der Anschlussnamen Merry <xref:System.IO.Ports.SerialPort.GetPortNames%2A> nicht angegeben wird.  
+  
+ Verwenden der <xref:System.IO.Ports.SerialPort.GetPortNames%2A> Methode, um den aktuellen Computer eine Liste der gültigen seriellen Anschlussnamen abzufragen. Beispielsweise können Sie diese Methode, um festzustellen, ob COM1 und COM2 gültige serielle Anschlüsse für den aktuellen Computer sind.  
+  
+ Portnamen werden aus der Registrierung (z. B. "HKEY_LOCAL_MACHINE\Hardware\DeviceMap\SerialComm") abgerufen. Wenn die Registrierung veraltete oder fehlerhafte Daten enthält die <xref:System.IO.Ports.SerialPort.GetPortNames%2A> Methode gibt falsche Daten zurück.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.IO.Ports.SerialPort.GetPortNames%2A> -Methode seriellen Anschlussnamen auf der Konsole angezeigt.  
+  
+ [!code-cpp[IO.Ports.GetPortNames#1](~/samples/snippets/cpp/VS_Snippets_CLR/IO.Ports.GetPortNames/cpp/example.cpp#1)]
+ [!code-csharp[IO.Ports.GetPortNames#1](~/samples/snippets/csharp/VS_Snippets_CLR/IO.Ports.GetPortNames/CS/example.cs#1)]
+ [!code-vb[IO.Ports.GetPortNames#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/IO.Ports.GetPortNames/VB/example.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.Win32Exception">Die seriellen Anschlussnamen konnte nicht abgefragt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Handshake">
+      <MemberSignature Language="C#" Value="public System.IO.Ports.Handshake Handshake { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.Ports.Handshake Handshake" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Ports.SerialPort.Handshake" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.Handshake</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Handshakeprotokoll für die Datenübertragung an seriellen Anschlüssen anhand eines Werts von <see cref="T:System.IO.Ports.Handshake" /> ab oder legt dieses fest.</summary>
+        <value>Einer der <see cref="T:System.IO.Ports.Handshake" />-Werte. Die Standardeinstellung ist <see langword="None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Handshake verwendet wird, wird das Gerät verbunden, um die <xref:System.IO.Ports.SerialPort> Objekt wird angewiesen, Daten senden, wenn es mindestens beendet werden soll (<xref:System.IO.Ports.SerialPort.ReadBufferSize%2A>-1024) Bytes im Puffer. Das Gerät wird angewiesen, um Daten erneut senden, wenn es 1024 oder weniger Bytes im Puffer gibt zu starten. Wenn das Gerät Daten in Blöcken, die größer als 1024 Bytes sind sendet, kann dies zum Überlaufen des Puffers führen.  
+  
+ Wenn die <xref:System.IO.Ports.SerialPort.Handshake%2A> -Eigenschaftensatz auf <xref:System.IO.Ports.Handshake.RequestToSendXOnXOff> und <xref:System.IO.Ports.SerialPort.CtsHolding%2A> festgelegt ist, um `false`, XOff-Zeichen werden nicht gesendet werden. Wenn <xref:System.IO.Ports.SerialPort.CtsHolding%2A> legen Sie dann auf `true`, weitere Daten gesendet werden müssen, bevor das XOff-Zeichen gesendet wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.IO.Ports.SerialPort> -Klasse zwei Benutzer auf zwei unterschiedlichen Computern, die durch eine Nullmodemkabels verbundene chatten ermöglicht. In diesem Beispiel werden die Benutzer für die Porteinstellungen und einen Benutzernamen für die vor dem Chatten aufgefordert. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels, das sich für die <xref:System.IO.Ports.SerialPort> Klasse.  
+  
+ [!code-cpp[System.IO.Ports.SerialPort#01](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cpp/serialport.cpp#01)]
+ [!code-csharp[System.IO.Ports.SerialPort#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cs/SerialPort.cs#01)]
+ [!code-vb[System.IO.Ports.SerialPort#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/vb/SerialPort.vb#01)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Der Port ist in einem ungültigen Zustand.  
+  
+ \- oder –  
+  
+ Fehler bei der Zustand des zugrunde liegenden Ports festgelegt. Beispielsweise die Parameter zu übergeben, von diesem <see cref="T:System.IO.Ports.SerialPort" /> Objekt war ungültig.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der übergebene Wert ist kein gültiger Wert in der <see cref="T:System.IO.Ports.Handshake" /> Enumeration.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InfiniteTimeout">
+      <MemberSignature Language="C#" Value="public const int InfiniteTimeout = -1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 InfiniteTimeout = (-1)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Ports.SerialPort.InfiniteTimeout" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>-1</MemberValue>
+      <Docs>
+        <summary>Gibt an, dass kein Timeout erfolgen soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert wird verwendet, mit der <xref:System.IO.Ports.SerialPort.ReadTimeout%2A> und <xref:System.IO.Ports.SerialPort.WriteTimeout%2A> Eigenschaften.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOpen">
+      <MemberSignature Language="C#" Value="public bool IsOpen { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOpen" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Ports.SerialPort.IsOpen" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der den offenen oder geschlossenen Status des <see cref="T:System.IO.Ports.SerialPort" />-Objekts angibt.</summary>
+        <value>
+          <see langword="true" />, wenn der serielle Anschluss geöffnet ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.Ports.SerialPort.IsOpen%2A> Eigenschaft verfolgt nach, ob der Port für die Verwendung durch den Aufrufer geöffnet ist, und nicht, ob der Port für jede Anwendung auf dem Computer geöffnet ist.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <see cref="P:System.IO.Ports.SerialPort.IsOpen" /> übergebene Wert ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.IO.Ports.SerialPort.IsOpen" /> übergebene Wert ist eine leere Zeichenfolge ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NewLine">
+      <MemberSignature Language="C#" Value="public string NewLine { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NewLine" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Ports.SerialPort.NewLine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("\n")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert ab, mit dem das Ende eines Aufrufs der <see cref="M:System.IO.Ports.SerialPort.ReadLine" />-Methode und der <see cref="M:System.IO.Ports.SerialPort.WriteLine(System.String)" />-Methode interpretiert wird, oder legt diesen fest.</summary>
+        <value>Ein Wert, der das Ende einer Zeile darstellt. Der Standardwert ist ein Zeilenvorschub, <see cref="P:System.Environment.NewLine" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft bestimmt, welcher Wert (Byte) das Ende einer Zeile für die <xref:System.IO.Ports.SerialPort.ReadLine%2A> und <xref:System.IO.Ports.SerialPort.WriteLine%2A> Methoden. Die End-of-Line-Wert beträgt standardmäßig <xref:System.Environment.NewLine%2A>. Sie würden diese auf einen anderen Wert ändern, wenn das bestimmte serielle Gerät, mit dem Sie arbeiten, einen anderen Wert für diesen Zweck verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der Eigenschaftswert ist leer.</exception>
+        <exception cref="T:System.ArgumentNullException">Der Eigenschaftswert ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public void Open ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Open() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Ports.SerialPort.Open" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Öffnet eine neue serielle Anschlussverbindung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Pro kann nur eine offene Verbindung vorhanden sein <xref:System.IO.Ports.SerialPort> Objekt.  
+  
+ Die bewährte Methode für jede Anwendung ist, warten Sie einige Zeitdauer nach dem Aufruf der <xref:System.IO.Ports.SerialPort.Close%2A> Methode vor dem Aufrufen der <xref:System.IO.Ports.SerialPort.Open%2A> -Methode, mit dem Port kann nicht geschlossen werden sofort.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.IO.Ports.SerialPort> -Klasse zwei Benutzer auf zwei unterschiedlichen Computern, die durch eine Nullmodemkabels verbundene chatten ermöglicht. In diesem Beispiel werden die Benutzer für die Porteinstellungen und einen Benutzernamen für die vor dem Chatten aufgefordert. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels, das sich für die <xref:System.IO.Ports.SerialPort> Klasse.  
+  
+ [!code-cpp[System.IO.Ports.SerialPort#01](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cpp/serialport.cpp#01)]
+ [!code-csharp[System.IO.Ports.SerialPort#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cs/SerialPort.cs#01)]
+ [!code-vb[System.IO.Ports.SerialPort#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/vb/SerialPort.vb#01)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UnauthorizedAccessException">Der Zugriff auf den Port verweigert.  
+  
+ \- oder –  
+  
+ Den aktuellen Prozess oder einen anderen Prozess auf dem System bereits den angegebenen COM-Port entweder durch Öffnen einer <see cref="T:System.IO.Ports.SerialPort" /> Instanz oder in nicht verwaltetem Code.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Mindestens eine der Eigenschaften für diese Instanz ist ungültig. Z. B. die <see cref="P:System.IO.Ports.SerialPort.Parity" />, <see cref="P:System.IO.Ports.SerialPort.DataBits" />, oder <see cref="P:System.IO.Ports.SerialPort.Handshake" /> Eigenschaften sind keine gültigen Werte; der <see cref="P:System.IO.Ports.SerialPort.BaudRate" /> ist kleiner oder gleich 0 (null); die <see cref="P:System.IO.Ports.SerialPort.ReadTimeout" /> oder <see cref="P:System.IO.Ports.SerialPort.WriteTimeout" /> -Eigenschaft ist kleiner als 0 (null) und ist nicht <see cref="F:System.IO.Ports.SerialPort.InfiniteTimeout" />.</exception>
+        <exception cref="T:System.ArgumentException">Der Portname beginnt nicht mit "COM".  
+  
+ \- oder –  
+  
+ Der Dateityp des Ports wird nicht unterstützt.</exception>
+        <exception cref="T:System.IO.IOException">Der Port ist in einem ungültigen Zustand.  
+  
+ \- oder –  
+  
+ Fehler bei der Zustand des zugrunde liegenden Ports festgelegt. Beispielsweise die Parameter zu übergeben, von diesem <see cref="T:System.IO.Ports.SerialPort" /> Objekt war ungültig.</exception>
+        <exception cref="T:System.InvalidOperationException">Der angegebene Port auf der aktuellen Instanz der dem <see cref="T:System.IO.Ports.SerialPort" /> ist bereits geöffnet.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">zum Aufrufen von nicht verwalteten Codes. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /> Sicherheitsaktion:<see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Parity">
+      <MemberSignature Language="C#" Value="public System.IO.Ports.Parity Parity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.Ports.Parity Parity" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Ports.SerialPort.Parity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.Parity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Paritätsprüfungsprotokoll ab oder legt dieses fest.</summary>
+        <value>Einer der Enumerationswerte, der das Paritätsprüfungsprotokoll darstellt. Die Standardeinstellung ist <see cref="F:System.IO.Ports.Parity.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Parität ist eine fehlerprüfung-Prozedur, die in der die Anzahl von 1 s muss immer gleich sein – entweder gerade oder ungerade – für jede Gruppe von Bits, die ohne Fehler übertragen wird. Modem-zu-Modem-Kommunikation ist Parität häufig mit einer der Parameter, die vereinbart werden müssen durch Parteien senden und empfangen, platzieren Sie Parteien bevor Übertragung verwendet werden kann.  
+  
+ Wenn ein Paritätsfehler in das nachfolgende Byte eines Streams befindet, wird ein zusätzliches Byte des Eingabepuffers mit einem Wert von 126 hinzugefügt werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.IO.Ports.SerialPort> -Klasse zwei Benutzer auf zwei unterschiedlichen Computern, die durch eine Nullmodemkabels verbundene chatten ermöglicht. In diesem Beispiel werden die Benutzer für die Porteinstellungen und einen Benutzernamen für die vor dem Chatten aufgefordert. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels, das sich für die <xref:System.IO.Ports.SerialPort> Klasse.  
+  
+ [!code-cpp[System.IO.Ports.SerialPort#01](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cpp/serialport.cpp#01)]
+ [!code-csharp[System.IO.Ports.SerialPort#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cs/SerialPort.cs#01)]
+ [!code-vb[System.IO.Ports.SerialPort#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/vb/SerialPort.vb#01)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Der Port ist in einem ungültigen Zustand.  
+  
+ \- oder –  
+  
+ Fehler bei der Zustand des zugrunde liegenden Ports festgelegt. Beispielsweise die Parameter zu übergeben, von diesem <see cref="T:System.IO.Ports.SerialPort" /> Objekt war ungültig.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <see cref="P:System.IO.Ports.SerialPort.Parity" /> übergebene Wert ist kein gültiger Wert in der <see cref="T:System.IO.Ports.Parity" /> Enumeration.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ParityReplace">
+      <MemberSignature Language="C#" Value="public byte ParityReplace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 ParityReplace" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Ports.SerialPort.ParityReplace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(63)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Not implemented")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Byte ab, das ungültige Bytes in einem Datenstream ersetzt, wenn ein Paritätsfehler auftritt, oder legt dieses fest.</summary>
+        <value>Ein Byte, das ungültige Bytes ersetzt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Wert auf das Nullzeichen festgelegt ist, ist die Parität Ersatz deaktiviert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Der Port ist in einem ungültigen Zustand.  
+  
+ \- oder –  
+  
+ Fehler bei der Zustand des zugrunde liegenden Ports festgelegt. Beispielsweise die Parameter zu übergeben, von diesem <see cref="T:System.IO.Ports.SerialPort" /> Objekt war ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PinChanged">
+      <MemberSignature Language="C#" Value="public event System.IO.Ports.SerialPinChangedEventHandler PinChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.IO.Ports.SerialPinChangedEventHandler PinChanged" />
+      <MemberSignature Language="DocId" Value="E:System.IO.Ports.SerialPort.PinChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.SerialPinChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass ein Nicht-Datensignalereignis an dem Port aufgetreten ist, der durch das <see cref="T:System.IO.Ports.SerialPort" />-Objekt dargestellt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Serielle Pin geändert Ereignisse können verursacht werden, indem keines der Elemente in der <xref:System.IO.Ports.SerialPinChange> Enumeration. Da das Betriebssystem an, ob dieses Ereignis auslösen, oder nicht festgelegt wird, können nicht alle Paritätsfehler gemeldet werden. Im Rahmen des Ereignisses wird ist der neue Wert, der die Pin festgelegt.  
+  
+ Der <xref:System.IO.Ports.SerialPort.PinChanged> Ereignis wird ausgelöst, wenn eine <xref:System.IO.Ports.SerialPort> Objekt geht in die <xref:System.IO.Ports.SerialPort.BreakState%2A>, jedoch nicht, wenn der Port beendet die <xref:System.IO.Ports.SerialPort.BreakState%2A>. Dieses Verhalten gilt nicht für andere Werte in der <xref:System.IO.Ports.SerialPinChange> Enumeration.  
+  
+ <xref:System.IO.Ports.SerialPort.PinChanged>, <xref:System.IO.Ports.SerialPort.DataReceived>, und <xref:System.IO.Ports.SerialPort.ErrorReceived> Ereignisse außerhalb der Reihenfolge aufgerufen werden können, und möglicherweise gibt es eine kurze Verzögerung zwischen beim zugrunde liegenden Datenstroms auf den Fehler meldet, und wenn der Ereignishandler ausgeführt wird. Nur ein Ereignishandler kann zu einem Zeitpunkt ausgeführt werden.  
+  
+ Die <xref:System.IO.Ports.SerialPort.PinChanged> Ereignis für ein sekundärer Thread ausgelöst wird. Da dieses in einem sekundären Thread Ereignis wird und nicht der Hauptthread, bei dem Versuch, einige Elemente in der Haupt-Thread, z. B. UI-Elemente ändern konnte eine threading Ausnahme auslösen. Bei Bedarf so ändern Sie die Elemente im Hauptfenster <xref:System.Windows.Forms.Form> oder <xref:System.Windows.Forms.Control>, Post Change Requests mit <xref:System.Windows.Forms.Control.Invoke%2A>, erfolgt die Arbeiten an den richtigen Thread.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PortName">
+      <MemberSignature Language="C#" Value="public string PortName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PortName" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Ports.SerialPort.PortName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("COM1")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Anschluss für die Kommunikation ab oder legt diesen fest, einschließlich aller verfügbaren COM-Anschlüsse, aber nicht beschränkt auf diese.</summary>
+        <value>Der Kommunikationsport. Die Standardeinstellung lautet COM1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Liste der gültigen Anschlussnamen kann abgerufen werden, mithilfe der <xref:System.IO.Ports.SerialPort.GetPortNames%2A> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.IO.Ports.SerialPort> -Klasse zwei Benutzer auf zwei unterschiedlichen Computern, die durch eine Nullmodemkabels verbundene chatten ermöglicht. In diesem Beispiel werden die Benutzer für die Porteinstellungen und einen Benutzernamen für die vor dem Chatten aufgefordert. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels, das sich für die <xref:System.IO.Ports.SerialPort> Klasse.  
+  
+ [!code-cpp[System.IO.Ports.SerialPort#01](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cpp/serialport.cpp#01)]
+ [!code-csharp[System.IO.Ports.SerialPort#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cs/SerialPort.cs#01)]
+ [!code-vb[System.IO.Ports.SerialPort#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/vb/SerialPort.vb#01)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.IO.Ports.SerialPort.PortName" /> -Eigenschaft wurde auf einen Wert mit einer Länge von 0 (null) festgelegt.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.IO.Ports.SerialPort.PortName" /> Eigenschaftensatz wurde auf einen Wert, der mit "\\\\".  
+  
+ - oder -   
+  
+ Der Portname war ungültig.</exception>
+        <exception cref="T:System.ArgumentNullException">Die <see cref="P:System.IO.Ports.SerialPort.PortName" /> -Eigenschaft wurde festgelegt, um <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Der angegebene Port ist geöffnet.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public int Read (byte[] buffer, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Read(unsigned int8[] buffer, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Ports.SerialPort.Read(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Das Bytearray, in das die Eingabe geschrieben werden soll.</param>
+        <param name="offset">Der Offset im <c>Puffer</c> mit dem die Bytes geschrieben.</param>
+        <param name="count">Die maximale Anzahl der zu lesenden Bytes. Es werden weniger Bytes gelesen, wenn <c>Anzahl</c> ist größer als die Anzahl der Bytes im Eingabepuffer.</param>
+        <summary>Liest eine Anzahl von Bytes aus dem <see cref="T:System.IO.Ports.SerialPort" />-Eingabepuffer und schreibt diese Bytes am angegebenen Offset in ein Bytearray.</summary>
+        <returns>Die Anzahl von gelesenen Bytes.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn es zum Wechseln zwischen Lesen von Text und Lesen von Binärdaten aus dem Stream erforderlich ist, wählen Sie ein Protokoll, das die Grenze zwischen Text- und Binärdaten, z. B. manuell Bytes gelesen und Entschlüsseln von Daten sorgfältig definiert.  
+  
+ Da die <xref:System.IO.Ports.SerialPort> Klasse puffert Daten und der Stream in enthalten die <xref:System.IO.Ports.SerialPort.BaseStream%2A> Eigenschaft jedoch nicht, möglicherweise Konflikte über wie viele Bytes gelesen werden.  Die <xref:System.IO.Ports.SerialPort.BytesToRead%2A> Eigenschaft kann darauf hinweisen, dass die zu lesenden Bytes vorhanden sind, aber diese Bytes möglicherweise nicht zugegriffen werden kann, in den Stream, den Sie der <xref:System.IO.Ports.SerialPort.BaseStream%2A> Eigenschaft, da sie gepuffert wurde die <xref:System.IO.Ports.SerialPort> Klasse.  
+  
+ Die <xref:System.IO.Ports.SerialPort.Read%2A> Methode nicht andere Operationen blockieren, wenn die Anzahl der Bytes ist gleich gelesen `count` jedoch in den seriellen Anschluss noch gelesenen Bytes verfügbar sind.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der übergebene Puffer ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Der angegebene Port ist nicht geöffnet werden.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="offset" /> oder <paramref name="count" /> Parameter sind außerhalb eines gültigen Bereichs der der <paramref name="buffer" /> übergeben werden. Entweder <paramref name="offset" /> oder <paramref name="count" /> ist kleiner als 0 (null).</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="offset" />plus <paramref name="count" /> ist größer als die Länge der <paramref name="buffer" />.</exception>
+        <exception cref="T:System.TimeoutException">Es waren keine Bytes gelesen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public int Read (char[] buffer, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Read(char[] buffer, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Ports.SerialPort.Read(System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Char[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Das Zeichenarray, in das die Eingabe geschrieben werden soll.</param>
+        <param name="offset">Der Offset im <c>Puffer</c> mit dem die Zeichen geschrieben.</param>
+        <param name="count">Die maximale Anzahl der zu lesenden Zeichen. Es werden weniger Zeichen gelesen, wenn <c>Anzahl</c> ist größer als die Anzahl der Zeichen im Eingabepuffer.</param>
+        <summary>Liest eine Anzahl von Zeichen aus dem <see cref="T:System.IO.Ports.SerialPort" />-Eingabepuffer und schreibt diese am angegebenen Offset in ein Zeichenarray.</summary>
+        <returns>Die Anzahl von gelesenen Zeichen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode zum Lesen von Zeichen aus den seriellen Anschluss.  
+  
+ Wenn es zum Wechseln zwischen Lesen von Text und Lesen von Binärdaten aus dem Stream erforderlich ist, wählen Sie ein Protokoll, das die Grenze zwischen Text- und Binärdaten, z. B. manuell Bytes gelesen und Entschlüsseln von Daten sorgfältig definiert.  
+  
+ Da die <xref:System.IO.Ports.SerialPort> Klasse puffert Daten und der Stream in enthalten die <xref:System.IO.Ports.SerialPort.BaseStream%2A> Eigenschaft jedoch nicht, möglicherweise Konflikte über wie viele Zeichen gelesen werden.  Die <xref:System.IO.Ports.SerialPort.BytesToRead%2A> Eigenschaft kann darauf hinweisen, dass die zu lesenden Zeichen vorhanden sind, aber diese Zeichen möglicherweise nicht zugegriffen werden kann, in den Stream, den Sie der <xref:System.IO.Ports.SerialPort.BaseStream%2A> Eigenschaft, da sie zu gepuffert wurden die <xref:System.IO.Ports.SerialPort> Klasse.  
+  
+ Die <xref:System.IO.Ports.SerialPort.Read%2A> Methode nicht andere Operationen blockieren, wenn die Anzahl der Bytes ist gleich gelesen `count` jedoch in den seriellen Anschluss noch gelesenen Bytes verfügbar sind.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="offset" />plus <paramref name="count" /> ist größer als die Länge des Puffers.  
+  
+ \- oder –  
+  
+ <paramref name="count" />ist 1, und es ist ein Ersatzzeichen im Puffer.</exception>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="buffer" /> übergeben wird <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="offset" /> oder <paramref name="count" /> Parameter sind außerhalb eines gültigen Bereichs der der <paramref name="buffer" /> übergeben werden. Entweder <paramref name="offset" /> oder <paramref name="count" /> ist kleiner als 0 (null).</exception>
+        <exception cref="T:System.InvalidOperationException">Der angegebene Port ist nicht geöffnet werden.</exception>
+        <exception cref="T:System.TimeoutException">Keine Zeichen wurden gelesen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadBufferSize">
+      <MemberSignature Language="C#" Value="public int ReadBufferSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ReadBufferSize" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Ports.SerialPort.ReadBufferSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(4096)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe des <see cref="T:System.IO.Ports.SerialPort" />-Eingabepuffers ab oder legt diese fest.</summary>
+        <value>Die Puffergröße in Byte. Der Standardwert ist 4096. Der maximale Wert ist der einer positiven ganzen Zahl oder 2147483647.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.Ports.SerialPort.ReadBufferSize%2A> Eigenschaft ignoriert alle Werte, die kleiner als 4096.  
+  
+ Da die <xref:System.IO.Ports.SerialPort.ReadBufferSize%2A> Eigenschaft darstellt, nur die Windows-erstellten Puffer, können sie einen niedrigeren Wert als Zurückgeben der <xref:System.IO.Ports.SerialPort.BytesToRead%2A> Eigenschaft, die beide darstellt der <xref:System.IO.Ports.SerialPort> Puffer und der Windows-erstellten Puffer.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <see cref="P:System.IO.Ports.SerialPort.ReadBufferSize" /> festgelegte Wert ist kleiner oder gleich 0 (null).</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.IO.Ports.SerialPort.ReadBufferSize" /> -Eigenschaft wurde festgelegt, während der Stream geöffnet war.</exception>
+        <exception cref="T:System.IO.IOException">Die <see cref="P:System.IO.Ports.SerialPort.ReadBufferSize" /> -Eigenschaft wurde auf einen Wert ungerade ganze Zahl festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadByte">
+      <MemberSignature Language="C#" Value="public int ReadByte ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 ReadByte() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Ports.SerialPort.ReadByte" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Liest synchron ein Byte aus dem <see cref="T:System.IO.Ports.SerialPort" />-Eingabepuffer.</summary>
+        <returns>Das Byte, das in <see cref="T:System.Int32" /> umgewandelt wurde, oder -1, wenn das Ende des Streams gelesen wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode liest ein Byte.  
+  
+ Gehen Sie vorsichtig vor, wenn mit <xref:System.IO.Ports.SerialPort.ReadByte%2A> und <xref:System.IO.Ports.SerialPort.ReadChar%2A> zusammen. Umschalten zwischen Bytes gelesen, und Lesen von Zeichen kann zusätzliche Daten gelesen werden und/oder andere unerwartetem Verhalten führen. Wenn es zum Wechseln zwischen Lesen von Text und Lesen von Binärdaten aus dem Stream erforderlich ist, wählen Sie ein Protokoll, das die Grenze zwischen Text- und Binärdaten, z. B. manuell Bytes gelesen und Entschlüsseln von Daten sorgfältig definiert.  
+  
+> [!NOTE]
+>  Da die <xref:System.IO.Ports.SerialPort> Klasse puffert Daten und der Stream in enthalten die <xref:System.IO.Ports.SerialPort.BaseStream%2A> Eigenschaft jedoch nicht, möglicherweise Konflikte über wie viele Bytes gelesen werden.  Die <xref:System.IO.Ports.SerialPort.BytesToRead%2A> Eigenschaft kann darauf hinweisen, dass die zu lesenden Bytes vorhanden sind, aber diese Bytes möglicherweise nicht zugegriffen werden kann, in den Stream, den Sie der <xref:System.IO.Ports.SerialPort.BaseStream%2A> Eigenschaft, da sie gepuffert wurde die <xref:System.IO.Ports.SerialPort> Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der angegebene Port ist nicht geöffnet werden.</exception>
+        <exception cref="T:System.ServiceProcess.TimeoutException">Der Vorgang wurde nicht abgeschlossen, bevor das Timeout ist abgelaufen.  
+  
+ \- oder –  
+  
+ Es wurde kein Byte gelesen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadChar">
+      <MemberSignature Language="C#" Value="public int ReadChar ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 ReadChar() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Ports.SerialPort.ReadChar" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Liest synchron ein Zeichen aus dem <see cref="T:System.IO.Ports.SerialPort" />-Eingabepuffer.</summary>
+        <returns>Das Zeichen, das gelesen wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode liest ein vollständiges Zeichen, die auf Grundlage der Codierung.  
+  
+ Gehen Sie vorsichtig vor, wenn mit <xref:System.IO.Ports.SerialPort.ReadByte%2A> und <xref:System.IO.Ports.SerialPort.ReadChar%2A> zusammen. Umschalten zwischen Bytes gelesen, und Lesen von Zeichen kann zusätzliche Daten gelesen werden und/oder andere unerwartetem Verhalten führen. Wenn es zum Wechseln zwischen Lesen von Text und Lesen von Binärdaten aus dem Stream erforderlich ist, wählen Sie ein Protokoll, das die Grenze zwischen Text- und Binärdaten, z. B. manuell Bytes gelesen und Entschlüsseln von Daten sorgfältig definiert.  
+  
+> [!NOTE]
+>  Da die <xref:System.IO.Ports.SerialPort> Klasse puffert Daten und der Stream in enthalten die <xref:System.IO.Ports.SerialPort.BaseStream%2A> Eigenschaft jedoch nicht, möglicherweise Konflikte über wie viele Bytes gelesen werden.  Die <xref:System.IO.Ports.SerialPort.BytesToRead%2A> Eigenschaft kann darauf hinweisen, dass die zu lesenden Bytes vorhanden sind, aber diese Bytes möglicherweise nicht zugegriffen werden kann, in den Stream, den Sie der <xref:System.IO.Ports.SerialPort.BaseStream%2A> Eigenschaft, da sie gepuffert wurde die <xref:System.IO.Ports.SerialPort> Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der angegebene Port ist nicht geöffnet werden.</exception>
+        <exception cref="T:System.ServiceProcess.TimeoutException">Der Vorgang wurde nicht abgeschlossen, bevor das Timeout ist abgelaufen.  
+  
+ \- oder –  
+  
+ Es war kein Zeichen in der vorgesehenen Timeoutzeitraum verfügbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadExisting">
+      <MemberSignature Language="C#" Value="public string ReadExisting ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ReadExisting() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Ports.SerialPort.ReadExisting" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Liest alle sofort verfügbaren Bytes auf Grundlage der Codierung sowohl im Stream als auch im Eingabepuffer des <see cref="T:System.IO.Ports.SerialPort" />-Objekts.</summary>
+        <returns>Der Inhalt des Streams und des Eingabepuffers des <see cref="T:System.IO.Ports.SerialPort" />-Objekts.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt den Inhalt des Streams und des internen Puffers, der die <xref:System.IO.Ports.SerialPort> Objekt als Zeichenfolge. Diese Methode ist einen Timeout nicht verwenden. Beachten Sie, dass diese Methode lassen kann nachfolgende führende Bytes im internen Puffer, wodurch die <xref:System.IO.Ports.SerialPort.BytesToRead%2A> Wert größer als 0 (null).  
+  
+ Wenn es zum Wechseln zwischen Lesen von Text und Lesen von Binärdaten aus dem Stream erforderlich ist, wählen Sie ein Protokoll, das die Grenze zwischen Text- und Binärdaten, z. B. manuell Bytes gelesen und Entschlüsseln von Daten sorgfältig definiert.  
+  
+> [!NOTE]
+>  Die <xref:System.IO.Ports.SerialPort> Klasse puffert Daten, aber das Streamobjekt enthalten, der <xref:System.IO.Ports.SerialPort.BaseStream%2A?displayProperty=nameWithType> Eigenschaft nicht. Aus diesem Grund die <xref:System.IO.Ports.SerialPort> Objekt und das Datenstromobjekt unterscheiden sich auf die Anzahl der Bytes, die zum Lesen verfügbar sind. Wenn Bytes gepuffert werden, um die <xref:System.IO.Ports.SerialPort> -Objekt, das <xref:System.IO.Ports.SerialPort.BytesToRead%2A> Eigenschaft umfasst diese Bytes in seinen Wert; allerdings diese Bytes möglicherweise nicht verfügbar in den Stream, der in enthaltenen der <xref:System.IO.Ports.SerialPort.BaseStream%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der angegebene Port ist nicht geöffnet werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadLine">
+      <MemberSignature Language="C#" Value="public string ReadLine ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ReadLine() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Ports.SerialPort.ReadLine" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Liest bis zum <see cref="P:System.IO.Ports.SerialPort.NewLine" />-Wert im Eingabepuffer.</summary>
+        <returns>Der Inhalt des Eingabepuffers bis zum ersten Vorkommen eines <see cref="P:System.IO.Ports.SerialPort.NewLine" />-Werts.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beachten Sie, dass während dieser Methode nicht zurückgegeben werden die <xref:System.IO.Ports.SerialPort.NewLine%2A> Wert, der <xref:System.IO.Ports.SerialPort.NewLine%2A> Wert aus dem Eingabepuffer entfernt.  
+  
+ Wird standardmäßig die <xref:System.IO.Ports.SerialPort.ReadLine%2A> Methode blockiert, bis eine Zeile empfangen wird. Wenn dieses Verhalten nicht erwünscht ist, legen Sie die <xref:System.IO.Ports.SerialPort.ReadTimeout%2A> Eigenschaft auf einen beliebigen Wert ungleich 0 (null), um zu erzwingen der <xref:System.IO.Ports.SerialPort.ReadLine%2A> -Methode auslöst eine <xref:System.TimeoutException> , wenn eine Zeile den Port nicht verfügbar ist.  
+  
+ Wenn es zum Wechseln zwischen Lesen von Text und Lesen von Binärdaten aus dem Stream erforderlich ist, wählen Sie ein Protokoll, das die Grenze zwischen Text- und Binärdaten, z. B. manuell Bytes gelesen und Entschlüsseln von Daten sorgfältig definiert.  
+  
+> [!NOTE]
+>  Da die <xref:System.IO.Ports.SerialPort> Klasse puffert Daten und der Stream in enthalten die <xref:System.IO.Ports.SerialPort.BaseStream%2A> Eigenschaft jedoch nicht, möglicherweise Konflikte über wie viele Bytes gelesen werden.  Die <xref:System.IO.Ports.SerialPort.BytesToRead%2A> Eigenschaft kann darauf hinweisen, dass die zu lesenden Bytes vorhanden sind, aber diese Bytes möglicherweise nicht zugegriffen werden kann, in den Stream, den Sie der <xref:System.IO.Ports.SerialPort.BaseStream%2A> Eigenschaft, da sie gepuffert wurde die <xref:System.IO.Ports.SerialPort> Klasse.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.IO.Ports.SerialPort> -Klasse zwei Benutzer auf zwei unterschiedlichen Computern, die durch eine Nullmodemkabels verbundene chatten ermöglicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels, das sich für die <xref:System.IO.Ports.SerialPort> Klasse.  
+  
+ [!code-cpp[System.IO.Ports.SerialPort#01](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cpp/serialport.cpp#01)]
+ [!code-csharp[System.IO.Ports.SerialPort#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cs/SerialPort.cs#01)]
+ [!code-vb[System.IO.Ports.SerialPort#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/vb/SerialPort.vb#01)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der angegebene Port ist nicht geöffnet werden.</exception>
+        <exception cref="T:System.TimeoutException">Der Vorgang wurde nicht abgeschlossen, bevor das Timeout ist abgelaufen.  
+  
+ \- oder –  
+  
+ Es wurden keine Bytes gelesen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadTimeout">
+      <MemberSignature Language="C#" Value="public int ReadTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ReadTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Ports.SerialPort.ReadTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(-1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Millisekunden ab, bevor ein Timeout auftritt, wenn ein Lesevorgang nicht beendet wird, oder legt diese fest.</summary>
+        <value>Die Anzahl der Millisekunden, bevor ein Timeout auftritt, wenn ein Lesevorgang nicht beendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Timeoutwert für Lesevorgänge wurde ursprünglich auf 500 Millisekunden in der Win32 Communications-API festgelegt werden. Diese Eigenschaft ermöglicht Ihnen, diesen Wert festzulegen. Das Timeout kann auf einen beliebigen Wert größer als 0 (null) festgelegt, oder legen Sie auf <xref:System.IO.Ports.SerialPort.InfiniteTimeout>, in diesem Fall kein Timeout erfolgt. Standardmäßig ist <xref:System.IO.Ports.SerialPort.InfiniteTimeout> festgelegt.  
+  
+> [!NOTE]
+>  Benutzer, der die nicht verwaltete `COMMTIMEOUTS` Struktur erwarten kann, legen Sie den Timeoutwert 0 (null), um Timeouts zu unterdrücken. Unterdrücken von Timeouts mit der <xref:System.IO.Ports.SerialPort.ReadTimeout%2A> -Eigenschaft, Sie müssen jedoch angeben <xref:System.IO.Ports.SerialPort.InfiniteTimeout>.  
+  
+ Diese Eigenschaft hat keine Auswirkungen auf die <xref:System.IO.Stream.BeginRead%2A> -Methode des Datenstroms zurückgegebenes der <xref:System.IO.Ports.SerialPort.BaseStream%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.IO.Ports.SerialPort> -Klasse zwei Benutzer auf zwei unterschiedlichen Computern, die durch eine Nullmodemkabels verbundene chatten ermöglicht. In diesem Beispiel werden die Benutzer für die Porteinstellungen und einen Benutzernamen für die vor dem Chatten aufgefordert. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels, das sich für die <xref:System.IO.Ports.SerialPort> Klasse.  
+  
+ [!code-cpp[System.IO.Ports.SerialPort#01](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cpp/serialport.cpp#01)]
+ [!code-csharp[System.IO.Ports.SerialPort#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cs/SerialPort.cs#01)]
+ [!code-vb[System.IO.Ports.SerialPort#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/vb/SerialPort.vb#01)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Der Port ist in einem ungültigen Zustand.  
+  
+ \- oder –  
+  
+ Fehler bei der Zustand des zugrunde liegenden Ports festgelegt. Beispielsweise die Parameter zu übergeben, von diesem <see cref="T:System.IO.Ports.SerialPort" /> Objekt war ungültig.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Timeoutwert für Lesevorgänge ist kleiner als 0 (null) und ungleich <see cref="F:System.IO.Ports.SerialPort.InfiniteTimeout" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadTo">
+      <MemberSignature Language="C#" Value="public string ReadTo (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ReadTo(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Ports.SerialPort.ReadTo(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Wert, der angibt, wo der Lesevorgang anhält.</param>
+        <summary>Liest eine Zeichenfolge bis zum angegebenen <paramref name="value" /> im Eingabepuffer.</summary>
+        <returns>Der Inhalt des Eingabepuffers bis zum angegebenen <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode liest eine Zeichenfolge bis zum angegebenen `value`. Während die zurückgegebene Zeichenfolge keine umfasst die `value`, die `value` aus dem Eingabepuffer entfernt wird.  
+  
+ Wenn es zum Wechseln zwischen Lesen von Text und Lesen von Binärdaten aus dem Stream erforderlich ist, wählen Sie ein Protokoll, das die Grenze zwischen Text- und Binärdaten, z. B. manuell Bytes gelesen und Entschlüsseln von Daten sorgfältig definiert.  
+  
+> [!NOTE]
+>  Da die <xref:System.IO.Ports.SerialPort> Klasse puffert Daten und der Stream in enthalten die <xref:System.IO.Ports.SerialPort.BaseStream%2A> Eigenschaft jedoch nicht, möglicherweise Konflikte über wie viele Bytes gelesen werden.  Die <xref:System.IO.Ports.SerialPort.BytesToRead%2A> Eigenschaft kann darauf hinweisen, dass die zu lesenden Bytes vorhanden sind, aber diese Bytes möglicherweise nicht zugegriffen werden kann, in den Stream, den Sie der <xref:System.IO.Ports.SerialPort.BaseStream%2A> Eigenschaft, da sie gepuffert wurde die <xref:System.IO.Ports.SerialPort> Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Länge der <paramref name="value" /> Parameter gleich 0 ist.</exception>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="value" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Der angegebene Port ist nicht geöffnet werden.</exception>
+        <exception cref="T:System.TimeoutException">Der Vorgang wurde nicht abgeschlossen, bevor das Timeout ist abgelaufen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceivedBytesThreshold">
+      <MemberSignature Language="C#" Value="public int ReceivedBytesThreshold { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ReceivedBytesThreshold" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Ports.SerialPort.ReceivedBytesThreshold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Not implemented")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl von Bytes im internen Eingabepuffer ab, bevor ein <see cref="E:System.IO.Ports.SerialPort.DataReceived" />-Ereignis auftritt, oder legt diese fest.</summary>
+        <value>Die Anzahl von Bytes im internen Eingabepuffer, bevor ein <see cref="E:System.IO.Ports.SerialPort.DataReceived" />-Ereignis ausgelöst wird. Der Standard ist 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.Ports.SerialPort.DataReceived> Ereignis wird auch ausgelöst, wenn ein <xref:System.IO.Ports.SerialData.Eof> Zeichen empfangen wird, unabhängig von der Anzahl der Bytes im internen Eingabepuffer und den Wert der <xref:System.IO.Ports.SerialPort.ReceivedBytesThreshold%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <see cref="P:System.IO.Ports.SerialPort.ReceivedBytesThreshold" /> Wert ist kleiner als oder gleich 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RtsEnable">
+      <MemberSignature Language="C#" Value="public bool RtsEnable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RtsEnable" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Ports.SerialPort.RtsEnable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das Request to Send (RTS)-Signal während der seriellen Kommunikation aktiviert ist, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, um Request to Transmit (RTS) zu aktivieren, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Request to Transmit (RTS)-Signal in Request to Send/Clear dient normalerweise zum flusssteuerung (RTS/CTS) zu senden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Wert des der <see cref="P:System.IO.Ports.SerialPort.RtsEnable" /> Eigenschaft festgelegt oder abgerufen wurde während der <see cref="P:System.IO.Ports.SerialPort.Handshake" /> -Eigenschaftensatz auf die <see cref="F:System.IO.Ports.Handshake.RequestToSend" /> Wert oder die <see cref="F:System.IO.Ports.Handshake.RequestToSendXOnXOff" /> Wert.</exception>
+        <exception cref="T:System.IO.IOException">Der Port ist in einem ungültigen Zustand.  
+  
+ \- oder –  
+  
+ Fehler bei der Zustand des zugrunde liegenden Ports festgelegt. Beispielsweise die Parameter zu übergeben, von diesem <see cref="T:System.IO.Ports.SerialPort" /> Objekt war ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StopBits">
+      <MemberSignature Language="C#" Value="public System.IO.Ports.StopBits StopBits { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.Ports.StopBits StopBits" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Ports.SerialPort.StopBits" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.StopBits</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Standardanzahl von Stoppbits pro Byte ab oder legt diese fest.</summary>
+        <value>Einer der <see cref="T:System.IO.Ports.StopBits" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für <xref:System.IO.Ports.SerialPort.StopBits%2A> lautet <xref:System.IO.Ports.StopBits.One>.  
+  
+ Die <xref:System.IO.Ports.StopBits?displayProperty=nameWithType> Wert wird nicht unterstützt.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Festlegen der <xref:System.IO.Ports.SerialPort.StopBits%2A> Eigenschaft `One`.  
+  
+ [!code-cpp[System.IO.Ports.SerialPort#20](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cpp/datareceived.cpp#20)]
+ [!code-csharp[System.IO.Ports.SerialPort#20](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cs/datareceived.cs#20)]
+ [!code-vb[System.IO.Ports.SerialPort#20](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/vb/datareceived.vb#20)]  
+  
+ Das folgende Beispiel veranschaulicht die Verwendung von der <xref:System.IO.Ports.SerialPort> -Klasse zwei Benutzer auf zwei unterschiedlichen Computern, die durch eine Nullmodemkabels verbundene chatten ermöglicht. In diesem Beispiel werden die Benutzer für die Porteinstellungen und einen Benutzernamen für die vor dem Chatten aufgefordert. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.IO.Ports.SerialPort> Klasse.  
+  
+ [!code-cpp[System.IO.Ports.SerialPort#01](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cpp/serialport.cpp#01)]
+ [!code-csharp[System.IO.Ports.SerialPort#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cs/SerialPort.cs#01)]
+ [!code-vb[System.IO.Ports.SerialPort#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/vb/SerialPort.vb#01)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <see cref="P:System.IO.Ports.SerialPort.StopBits" /> Wert <see cref="F:System.IO.Ports.StopBits.None" />.</exception>
+        <exception cref="T:System.IO.IOException">Der Port ist in einem ungültigen Zustand.  
+  
+ \- oder –  
+  
+ Fehler bei der Zustand des zugrunde liegenden Ports festgelegt. Beispielsweise die Parameter zu übergeben, von diesem <see cref="T:System.IO.Ports.SerialPort" /> Objekt war ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (string str);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(string str) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Ports.SerialPort.Write(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="str">To be added.</param>
+        <summary>Schreibt die angegebene Zeichenfolge in den seriellen Anschluss.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, wenn Sie eine Zeichenfolge als Ausgabe in einen seriellen Anschluss schreiben möchten.  
+  
+ Wenn es zu viele Bytes in den Ausgabepuffer sind und <xref:System.IO.Ports.SerialPort.Handshake%2A> auf festgelegt ist <xref:System.IO.Ports.Handshake.XOnXOff> die <xref:System.IO.Ports.SerialPort> Objekt authentifizierungsbibliotheksmethoden ein <xref:System.ServiceProcess.TimeoutException> während sie darauf wartet, dass das Gerät bereit zur Annahme von mehr Daten befinden.  
+  
+ Standardmäßig <xref:System.IO.Ports.SerialPort> verwendet <xref:System.Text.ASCIIEncoding> zum Codieren der Zeichen. <xref:System.Text.ASCIIEncoding>alle Zeichen, die größer als 127 als (Char) 63 codiert oder "?". Um zusätzliche Zeichen in diesem Bereich zu unterstützen, legen Sie <xref:System.IO.Ports.SerialPort.Encoding%2A> auf <xref:System.Text.UTF8Encoding>, <xref:System.Text.UTF32Encoding>, oder <xref:System.Text.UnicodeEncoding>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der angegebene Port ist nicht geöffnet werden.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="str" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ServiceProcess.TimeoutException">Der Vorgang wurde nicht abgeschlossen, bevor das Timeout ist abgelaufen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (byte[] buffer, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(unsigned int8[] buffer, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Ports.SerialPort.Write(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Das Bytearray mit den Daten, die an den Anschluss geschrieben werden sollen.</param>
+        <param name="offset">Der nullbasierte Byteoffset im die <c>Puffer</c> Parameter, ab dem Bytes in den Anschluss kopiert.</param>
+        <param name="count">Die Anzahl der zu schreibenden Bytes.</param>
+        <summary>Schreibt eine angegebene Anzahl von Bytes unter Verwendung von Daten aus einem Puffer in den seriellen Anschluss.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, wenn Sie in ein Byte-Puffer beim Erstellen der Ausgabe an einen seriellen Anschluss schreiben möchten.  
+  
+ Wenn es zu viele Bytes in den Ausgabepuffer sind und <xref:System.IO.Ports.SerialPort.Handshake%2A> auf festgelegt ist <xref:System.IO.Ports.Handshake.XOnXOff> die <xref:System.IO.Ports.SerialPort> Objekt authentifizierungsbibliotheksmethoden ein <xref:System.ServiceProcess.TimeoutException> während sie darauf wartet, dass das Gerät bereit zur Annahme von mehr Daten befinden.  
+  
+ Standardmäßig <xref:System.IO.Ports.SerialPort> verwendet <xref:System.Text.ASCIIEncoding> zum Codieren der Zeichen. <xref:System.Text.ASCIIEncoding>alle Zeichen, die größer als 127 als (Char) 63 codiert oder "?". Um zusätzliche Zeichen in diesem Bereich zu unterstützen, legen Sie <xref:System.IO.Ports.SerialPort.Encoding%2A> auf <xref:System.Text.UTF8Encoding>, <xref:System.Text.UTF32Encoding>, oder <xref:System.Text.UnicodeEncoding>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="buffer" /> übergeben wird <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Der angegebene Port ist nicht geöffnet werden.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="offset" /> oder <paramref name="count" /> Parameter sind außerhalb eines gültigen Bereichs der der <paramref name="buffer" /> übergeben werden. Entweder <paramref name="offset" /> oder <paramref name="count" /> ist kleiner als 0 (null).</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="offset" />plus <paramref name="count" /> ist größer als die Länge der <paramref name="buffer" />.</exception>
+        <exception cref="T:System.ServiceProcess.TimeoutException">Der Vorgang wurde nicht abgeschlossen, bevor das Timeout ist abgelaufen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (char[] buffer, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(char[] buffer, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Ports.SerialPort.Write(System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Char[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Das Zeichenarray mit den Daten, die an den Anschluss geschrieben werden sollen.</param>
+        <param name="offset">Der nullbasierte Byteoffset im die <c>Puffer</c> Parameter, ab dem Bytes in den Anschluss kopiert.</param>
+        <param name="count">Die Anzahl der zu schreibenden Zeichen.</param>
+        <summary>Schreibt eine angegebene Anzahl von Zeichen unter Verwendung von Daten aus einem Puffer in den seriellen Anschluss.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, wenn Sie in einen Zeichenpuffer beim Erstellen der Ausgabe an einen seriellen Anschluss schreiben möchten.  
+  
+ Wenn es zu viele Bytes in den Ausgabepuffer sind und <xref:System.IO.Ports.SerialPort.Handshake%2A> auf festgelegt ist <xref:System.IO.Ports.Handshake.XOnXOff> die <xref:System.IO.Ports.SerialPort> Objekt authentifizierungsbibliotheksmethoden ein <xref:System.ServiceProcess.TimeoutException> während sie darauf wartet, dass das Gerät bereit zur Annahme von mehr Daten befinden.  
+  
+ Standardmäßig <xref:System.IO.Ports.SerialPort> verwendet <xref:System.Text.ASCIIEncoding> zum Codieren der Zeichen. <xref:System.Text.ASCIIEncoding>alle Zeichen, die größer als 127 als (Char) 63 codiert oder "?". Um zusätzliche Zeichen in diesem Bereich zu unterstützen, legen Sie <xref:System.IO.Ports.SerialPort.Encoding%2A> auf <xref:System.Text.UTF8Encoding>, <xref:System.Text.UTF32Encoding>, oder <xref:System.Text.UnicodeEncoding>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="buffer" /> übergeben wird <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Der angegebene Port ist nicht geöffnet werden.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="offset" /> oder <paramref name="count" /> Parameter sind außerhalb eines gültigen Bereichs der der <paramref name="buffer" /> übergeben werden. Entweder <paramref name="offset" /> oder <paramref name="count" /> ist kleiner als 0 (null).</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="offset" />plus <paramref name="count" /> ist größer als die Länge der <paramref name="buffer" />.</exception>
+        <exception cref="T:System.ServiceProcess.TimeoutException">Der Vorgang wurde nicht abgeschlossen, bevor das Timeout ist abgelaufen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteBufferSize">
+      <MemberSignature Language="C#" Value="public int WriteBufferSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 WriteBufferSize" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Ports.SerialPort.WriteBufferSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(2048)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe des Ausgabepuffers des seriellen Anschlusses ab oder legt diese fest.</summary>
+        <value>Die Größe des Ausgabepuffers. Der Standard ist 2048.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.Ports.SerialPort.WriteBufferSize%2A> Eigenschaft ignoriert alle Werte, die kleiner als 2048.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <see cref="P:System.IO.Ports.SerialPort.WriteBufferSize" /> Wert ist kleiner als oder gleich 0 (null).</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.IO.Ports.SerialPort.WriteBufferSize" /> -Eigenschaft wurde festgelegt, während der Stream geöffnet war.</exception>
+        <exception cref="T:System.IO.IOException">Die <see cref="P:System.IO.Ports.SerialPort.WriteBufferSize" /> -Eigenschaft wurde auf einen Wert ungerade ganze Zahl festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public void WriteLine (string str);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteLine(string str) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Ports.SerialPort.WriteLine(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="str">To be added.</param>
+        <summary>Schreibt die angegebene Zeichenfolge und den <see cref="P:System.IO.Ports.SerialPort.NewLine" />-Wert in den Ausgabepuffer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn es zu viele Bytes im Eingabepuffer sind und <xref:System.IO.Ports.SerialPort.Handshake%2A> auf festgelegt ist <xref:System.IO.Ports.Handshake.XOnXOff> die <xref:System.IO.Ports.SerialPort> Objekt authentifizierungsbibliotheksmethoden ein <xref:System.ServiceProcess.TimeoutException> während sie darauf wartet, dass das Gerät bereit zur Annahme von mehr Daten befinden.  
+  
+ Die geschriebene Ausgabe enthält die <xref:System.IO.Ports.SerialPort.NewLine%2A> Zeichenfolge.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.IO.Ports.SerialPort> -Klasse zwei Benutzer auf zwei unterschiedlichen Computern, die durch eine Nullmodemkabels verbundene chatten ermöglicht. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels, das sich für die <xref:System.IO.Ports.SerialPort> Klasse.  
+  
+ [!code-cpp[System.IO.Ports.SerialPort#01](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cpp/serialport.cpp#01)]
+ [!code-csharp[System.IO.Ports.SerialPort#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cs/SerialPort.cs#01)]
+ [!code-vb[System.IO.Ports.SerialPort#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/vb/SerialPort.vb#01)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="str" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Der angegebene Port ist nicht geöffnet werden.</exception>
+        <exception cref="T:System.TimeoutException">Die <see cref="M:System.IO.Ports.SerialPort.WriteLine(System.String)" /> Methode konnte nicht in den Stream geschrieben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteTimeout">
+      <MemberSignature Language="C#" Value="public int WriteTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 WriteTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Ports.SerialPort.WriteTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(-1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Millisekunden ab, bevor ein Timeout auftritt, wenn ein Schreibvorgang nicht beendet wird, oder legt diese fest.</summary>
+        <value>Die Anzahl von Millisekunden, bevor ein Timeout auftritt. Die Standardeinstellung ist <see cref="F:System.IO.Ports.SerialPort.InfiniteTimeout" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Timeoutwert für Schreibvorgänge wurde ursprünglich auf 500 Millisekunden in der Win32 Communications-API festgelegt werden. Diese Eigenschaft ermöglicht Ihnen, diesen Wert festzulegen. Das Timeout kann auf einen beliebigen Wert größer als 0 (null) festgelegt, oder legen Sie auf <xref:System.IO.Ports.SerialPort.InfiniteTimeout>, in diesem Fall kein Timeout erfolgt. Standardmäßig ist <xref:System.IO.Ports.SerialPort.InfiniteTimeout> festgelegt.  
+  
+> [!NOTE]
+>  Benutzer, der die nicht verwaltete `COMMTIMEOUTS` Struktur erwarten kann, legen Sie den Timeoutwert 0 (null), um Timeouts zu unterdrücken. Unterdrücken von Timeouts mit der <xref:System.IO.Ports.SerialPort.WriteTimeout%2A> -Eigenschaft, Sie müssen jedoch angeben <xref:System.IO.Ports.SerialPort.InfiniteTimeout>.  
+  
+ Diese Eigenschaft hat keine Auswirkungen auf die <xref:System.IO.Stream.BeginWrite%2A> -Methode des Datenstroms zurückgegebenes der <xref:System.IO.Ports.SerialPort.BaseStream%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.IO.Ports.SerialPort> -Klasse zwei Benutzer auf zwei unterschiedlichen Computern, die durch eine Nullmodemkabels verbundene chatten ermöglicht. In diesem Beispiel werden die Benutzer für die Porteinstellungen und einen Benutzernamen für die vor dem Chatten aufgefordert. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels, das sich für die <xref:System.IO.Ports.SerialPort> Klasse.  
+  
+ [!code-cpp[System.IO.Ports.SerialPort#01](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cpp/serialport.cpp#01)]
+ [!code-csharp[System.IO.Ports.SerialPort#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cs/SerialPort.cs#01)]
+ [!code-vb[System.IO.Ports.SerialPort#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/vb/SerialPort.vb#01)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Der Port ist in einem ungültigen Zustand.  
+  
+ \- oder –  
+  
+ Fehler bei der Zustand des zugrunde liegenden Ports festgelegt. Beispielsweise die Parameter zu übergeben, von diesem <see cref="T:System.IO.Ports.SerialPort" /> Objekt war ungültig.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <see cref="P:System.IO.Ports.SerialPort.WriteTimeout" /> Wert ist kleiner als 0 (null) und ungleich <see cref="F:System.IO.Ports.SerialPort.InfiniteTimeout" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

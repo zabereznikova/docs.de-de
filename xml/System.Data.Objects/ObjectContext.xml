@@ -1,0 +1,2341 @@
+<Type Name="ObjectContext" FullName="System.Data.Objects.ObjectContext">
+  <TypeSignature Language="C#" Value="public class ObjectContext : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ObjectContext extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Objects.ObjectContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt Funktionen zum Abfragen von und Arbeiten mit Entitätsdaten als Objekte bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Data.Objects.ObjectContext>-Klasse ist nicht threadsicher. Die Integrität von Datenobjekten in einer <xref:System.Data.Objects.ObjectContext> nicht in Multithreadszenarien sichergestellt werden.  
+  
+ Die <xref:System.Data.Objects.ObjectContext> Klasse ist die primäre Klasse für die Interaktion mit Daten als Objekte, die Instanzen von Entitätstypen sind, die in einem konzeptionellen Modell definiert sind. Eine Instanz der <xref:System.Data.Objects.ObjectContext>-Klasse dient zum Kapseln folgender Objekte:  
+  
+-   Eine Verbindung zur Datenbank in Form eines <xref:System.Data.EntityClient.EntityConnection>-Objekts.  
+  
+-   Metadaten zur Beschreibung des Modells in Form eines <xref:System.Data.Metadata.Edm.MetadataWorkspace>-Objekts.  
+  
+-   Ein <xref:System.Data.Objects.ObjectStateManager>-Objekt zur Verwaltung der im Cache befindlichen Objekte.  
+  
+ Wenn die Objektebene, die ein konzeptionelles Modell darstellt, die von den Entity Data Model-Tools generiert wird, das die Klasse, die darstellt der <xref:System.Data.Metadata.Edm.EntityContainer> für das Modell abgeleitet ist die <xref:System.Data.Objects.ObjectContext>.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel beruht auf dem [AdventureWorks Sales-Modell](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). Das folgende Beispiel zeigt die Vorgehensweise beim Erstellen eines <xref:System.Data.Objects.ObjectContext>.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectContext](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectcontext)]
+ [!code-vb[DP ObjectServices Concepts#ObjectContext](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectcontext)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectContext (System.Data.EntityClient.EntityConnection connection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.EntityClient.EntityConnection connection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.#ctor(System.Data.EntityClient.EntityConnection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="connection" Type="System.Data.EntityClient.EntityConnection" />
+      </Parameters>
+      <Docs>
+        <param name="connection">Eine <see cref="T:System.Data.EntityClient.EntityConnection" /> , die Verweise auf das Modell und die datenquellenverbindung enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Objects.ObjectContext" />-Klasse mit der angegebenen Verbindung. Während der Konstruktion wird der Metadaten-Arbeitsbereich aus dem <see cref="T:System.Data.EntityClient.EntityConnection" />-Objekt extrahiert.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="connection" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException"><paramref name="connection" /> ist ungültig.  
+  
+ - oder -   
+  
+ Der Metadaten-Arbeitsbereich ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectContext (string connectionString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string connectionString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="connectionString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="connectionString">Die Verbindungszeichenfolge, die auch den Zugriff auf die Metadateninformationen bereitstellt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Objects.ObjectContext" />-Klasse mit der angegebenen Verbindungszeichenfolge und dem standardmäßigen Entitätencontainernamen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `connectionString` ist eine Zeichenfolge, die Informationen enthält, die Zugriff auf ein konzeptionelles Modell und die Verbindung mit einer Datenquelle erforderlich ist. Die <xref:System.Data.EntityClient.EntityConnectionStringBuilder>-Klasse kann zur ordnungsgemäßen Formatierung der Zeichenfolge verwendet werden.  
+  
+ Das generieren eine benannte Verbindungszeichenfolge, die in der Konfigurationsdatei der Anwendung gespeichert ist. Diese benannte Verbindungszeichenfolge bereitgestellt werden kann, statt die `connectionString` Parameter bei der Instanziierung der <xref:System.Data.Objects.ObjectContext> Klasse.  
+  
+   
+  
+## Examples  
+ Das Beispiel in diesem Thema beruht auf dem [AdventureWorks Sales-Modell](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). Das Beispiel zeigt die Erstellung eines <xref:System.Data.Objects.ObjectContext>.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectContext](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectcontext)]
+ [!code-vb[DP ObjectServices Concepts#ObjectContext](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectcontext)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="connectionString" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException"><paramref name="connectionString" /> ist ungültig.  
+  
+ - oder -   
+  
+ Der Metadaten-Arbeitsbereich ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ObjectContext (System.Data.EntityClient.EntityConnection connection, string defaultContainerName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Data.EntityClient.EntityConnection connection, string defaultContainerName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.#ctor(System.Data.EntityClient.EntityConnection,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="connection" Type="System.Data.EntityClient.EntityConnection" />
+        <Parameter Name="defaultContainerName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="connection">Eine <see cref="T:System.Data.EntityClient.EntityConnection" /> , die Verweise auf das Modell und die datenquellenverbindung enthält.</param>
+        <param name="defaultContainerName">Der Name des standardmäßigen Entitätencontainers. Wenn die <c>DefaultContainerName</c> wird festgelegt durch diese Methode wird die Eigenschaft schreibgeschützt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Objects.ObjectContext" />-Klasse mit einer angegebenen Verbindung und einem angegebenen Entitätencontainernamen.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="connection" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="connection" />, <paramref name="defaultContainerName" />, oder der Metadaten-Arbeitsbereich ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ObjectContext (string connectionString, string defaultContainerName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string connectionString, string defaultContainerName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="connectionString" Type="System.String" />
+        <Parameter Name="defaultContainerName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="connectionString">Die Verbindungszeichenfolge, die auch den Zugriff auf die Metadateninformationen bereitstellt.</param>
+        <param name="defaultContainerName">Der Name des standardmäßigen Entitätencontainers. Wenn die <c>DefaultContainerName</c> wird festgelegt durch diese Methode wird die Eigenschaft schreibgeschützt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Data.Objects.ObjectContext" />-Klasse mit einer angegebenen Verbindungszeichenfolge und einem angegebenen Entitätencontainernamen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `connectionString` ist eine Zeichenfolge, die Informationen enthält, die Zugriff auf ein konzeptionelles Modell und die Verbindung mit einer Datenquelle erforderlich ist. Die <xref:System.Data.EntityClient.EntityConnectionStringBuilder>-Klasse kann zur ordnungsgemäßen Formatierung der Zeichenfolge verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="connectionString" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="connectionString" />, <paramref name="defaultContainerName" />, oder der Metadaten-Arbeitsbereich ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptAllChanges">
+      <MemberSignature Language="C#" Value="public void AcceptAllChanges ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AcceptAllChanges() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.AcceptAllChanges" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Übernimmt alle Änderungen, die an Objekten im Objektkontext vorgenommen werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Übernimmt die Änderungen an allen zugehörigen Einträgen im <xref:System.Data.Objects.ObjectStateManager>, sodass ihr anschließender Status unverändert oder getrennt ist.  
+  
+ Diese Methode durchläuft alle <xref:System.Data.Objects.ObjectStateEntry>-Objekte innerhalb des <xref:System.Data.Objects.ObjectStateManager> mit Status "Added" oder "Modified" und legt dann den Status des Eintrags auf "Unchanged" fest. Die gelöschten Elemente werden getrennt.  
+  
+ Wenn die <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> Methode wurde aufgerufen, und die <xref:System.Data.Objects.SaveOptions.AcceptAllChangesAfterSave> nicht angegeben wurde, wird der Benutzer muss das Aufrufen der <xref:System.Data.Objects.ObjectContext.AcceptAllChanges%2A> Methode. Die <xref:System.Data.Objects.ObjectContext.AcceptAllChanges%2A>-Methode ist hilfreich, wenn eine Transaktion fehlgeschlagen ist und der Benutzer einen erneuten Versuch unternehmen möchte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddObject">
+      <MemberSignature Language="C#" Value="public void AddObject (string entitySetName, object entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddObject(string entitySetName, object entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.AddObject(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entitySetName" Type="System.String" />
+        <Parameter Name="entity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entitySetName">Stellt den Namen der Entitätenmenge dar, der optional durch den Entitätencontainernamen qualifiziert werden kann.</param>
+        <param name="entity">Das hinzuzufügende <see cref="T:System.Object" />.</param>
+        <summary>Fügt dem Objektkontext ein Objekt hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Data.Objects.ObjectContext.AddObject%2A> für den <xref:System.Data.Objects.ObjectContext> auf, um das Objekt dem Objektkontext hinzuzufügen. Führen Sie dies aus, wenn das Objekt ein neues Objekt ist, das noch nicht in der Datenquelle vorhanden ist. Weitere Informationen finden Sie unter [Anfügen und Trennen von Objekten](http://msdn.microsoft.com/en-us/41d5c1ef-1b78-4502-aa10-7e1438d62d23).  
+  
+ Objekte werden dem <xref:System.Data.Objects.ObjectStateManager> im Status <xref:System.Data.EntityState.Detached>, <xref:System.Data.EntityState.Deleted> oder <xref:System.Data.EntityState.Added> hinzugefügt.  
+  
+ Bei Erstellung eines neuen Objekts, das mit einem anderen Objekt im Objektkontext verbunden ist, sollte das Objekt mit einer der folgenden Methoden hinzugefügt werden:  
+  
+-   Rufen Sie die <xref:System.Data.Objects.DataClasses.EntityCollection%601.Add%2A>-Methode für die <xref:System.Data.Objects.DataClasses.EntityCollection%601> auf, und geben Sie das verbundene Objekt an. Dies gilt für 1:n- und m:n-Beziehungen.  
+  
+-   Legen Sie die <xref:System.Data.Objects.DataClasses.EntityReference%601.Value%2A>-Eigenschaft des <xref:System.Data.Objects.DataClasses.EntityReference%601> auf das verbundene Objekt fest. Dies gilt für 1:1- und m:1-Beziehungen.  
+  
+ Weitere Informationen finden Sie unter [erstellen, hinzufügen, ändern und Löschen von Objekten](http://msdn.microsoft.com/en-us/f76f1fad-c553-4b59-820b-89b3dec2fad1).  
+  
+ Wenn das Objekt im getrennten Zustand nicht muss ein <xref:System.Data.EntityKey>.  
+  
+ Die Regeln für die `entitySetName` Format sind wie folgt:  
+  
+-   Wenn die <xref:System.Data.Objects.ObjectContext.DefaultContainerName%2A> Eigenschaft ist `null`, und klicken Sie dann die `entitySetName` hat als in vollständig qualifiziert werden * \<Namens des Entitätencontainers >*.* \<Entitätenmengenname >*.  
+  
+-   Wenn <xref:System.Data.Objects.ObjectContext.DefaultContainerName%2A> nicht `null`, und klicken Sie dann die `entitySetName` kann es sich um * \<Namens des Entitätencontainers >*.* \<Entitätenmengenname >* oder * \<Entitätenmengenname >*.  
+  
+ Wenn die `object` hat eine <xref:System.Data.EntityKey> und `entitySetName` weist den Wert der <xref:System.Data.Metadata.Edm.EntitySet> der Entität Schlüssel übereinstimmen der <xref:System.Data.Metadata.Edm.EntitySet> , gefunden wurde, basierend auf der `entitySetName` und Namens des Entitätencontainers.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel beruht auf dem [AdventureWorks Sales-Modell](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). Im Beispiel fügt ein neues Produkt hinzu und speichert die Änderungen in der Datenbank.  
+  
+ [!code-csharp[DP ObjectServices Concepts#AddObject](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#addobject)]
+ [!code-vb[DP ObjectServices Concepts#AddObject](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#addobject)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="entity" />-Parameter ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Die <paramref name="entitySetName" /> nicht geeignet ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyCurrentValues&lt;TEntity&gt;">
+      <MemberSignature Language="C#" Value="public TEntity ApplyCurrentValues&lt;TEntity&gt; (string entitySetName, TEntity currentEntity) where TEntity : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!TEntity ApplyCurrentValues&lt;class TEntity&gt;(string entitySetName, !!TEntity currentEntity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.ApplyCurrentValues``1(System.String,``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TEntity</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TEntity">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="entitySetName" Type="System.String" />
+        <Parameter Name="currentEntity" Type="TEntity" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TEntity">Der Entitätstyp des Objekts.</typeparam>
+        <param name="entitySetName">Der Name der Entitätenmenge, der das Objekt angehört.</param>
+        <param name="currentEntity">Das getrennte Objekt, das über Eigenschaftsaktualisierungen verfügt, die für das ursprüngliche Objekt übernommen werden sollen. Der Entitätsschlüssel der <c>CurrentEntity</c> übereinstimmen der <see cref="P:System.Data.Objects.ObjectStateEntry.EntityKey" /> Eigenschaft eines Eintrags in der <see cref="T:System.Data.Objects.ObjectContext" />.</param>
+        <summary>Kopiert die Skalarwerte aus dem angegebenen Objekt in das Objekt im <see cref="T:System.Data.Objects.ObjectContext" />, das über den gleichen Schlüssel verfügt.</summary>
+        <returns>Das aktualisierte Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Objects.ObjectContext.ApplyCurrentValues%2A> Methode wird verwendet, um die Änderungen zu übernehmen, die auf Objekte außerhalb vorgenommen wurden die <xref:System.Data.Objects.ObjectContext>, wie z. B. getrennte Objekte, die von einem Webdienst empfangen werden. Die Methode kopiert die Skalarwerte aus dem angegebenen Objekt in das Objekt in der <xref:System.Data.Objects.ObjectContext> , die über den gleichen Schlüssel verfügt. Sie können die <xref:System.Data.EntityKey> des getrennten Objekts um eine Instanz dieses Objekts aus der Datenquelle abzurufen. Weitere Informationen finden Sie unter [wie: Zurückgeben einer bestimmten Objekt verwendet seinen Schlüssel](http://msdn.microsoft.com/en-us/2e9902af-29b0-4e5d-92db-03dfe6ec49bd). Alle Werte, die von der ursprünglichen Werte des Objekts abweichen, werden als geändert markiert. Beachten Sie, dass die Methode gilt nicht die aktuellen Werte für die zugehörige Objekte der `currentEntity`.  
+  
+ Wenn Sie ein mit den aktuellen Werten Diagramm und die ursprünglichen Werte anwenden möchten, rufen Sie <xref:System.Data.Objects.ObjectContext.ApplyOriginalValues%2A> Methode.  
+  
+ Sie können auch die <xref:System.Data.Objects.ObjectSet%601.ApplyCurrentValues%2A> von der <xref:System.Data.Objects.ObjectSet%601> oder <xref:System.Data.Objects.ObjectStateEntry.ApplyCurrentValues%2A> Methode der <xref:System.Data.Objects.ObjectStateEntry>. Weitere Informationen finden Sie unter [Erstellen von N-Tier-Anwendungen](http://msdn.microsoft.com/en-us/9439d2ba-6b5f-44e8-be65-8a442d922cbb).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="entitySetName" /> oder <paramref name="current" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.Data.Metadata.Edm.EntitySet" /> aus <paramref name="entitySetName" /> entspricht nicht der <see cref="T:System.Data.Metadata.Edm.EntitySet" /> für des Objekts <see cref="T:System.Data.EntityKey" />.  
+  
+ - oder -   
+  
+ Das Objekt befindet sich nicht in der <see cref="T:System.Data.Objects.ObjectStateManager" /> oder weist eine <see cref="F:System.Data.EntityState.Detached" /> Zustand.  
+  
+ - oder -   
+  
+ Der Entitätsschlüssel des angegebenen Objekts ist ungültig.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="entitySetName" /> ist eine leere Zeichenfolge.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyOriginalValues&lt;TEntity&gt;">
+      <MemberSignature Language="C#" Value="public TEntity ApplyOriginalValues&lt;TEntity&gt; (string entitySetName, TEntity originalEntity) where TEntity : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!TEntity ApplyOriginalValues&lt;class TEntity&gt;(string entitySetName, !!TEntity originalEntity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.ApplyOriginalValues``1(System.String,``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TEntity</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TEntity">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="entitySetName" Type="System.String" />
+        <Parameter Name="originalEntity" Type="TEntity" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TEntity">Der Typ des Entitätsobjekts.</typeparam>
+        <param name="entitySetName">Der Name der Entitätenmenge, der das Objekt angehört.</param>
+        <param name="originalEntity">Das getrennte Objekt, das ursprünglichen Werte, die auf das Objekt angewendet wurde. Der Entitätsschlüssel der <c>OriginalEntity</c> übereinstimmen der <see cref="P:System.Data.Objects.ObjectStateEntry.EntityKey" /> Eigenschaft eines Eintrags in der <see cref="T:System.Data.Objects.ObjectContext" />.</param>
+        <summary>Kopiert die skalaren Werte aus dem angegebenen Objekt in den Satz der ursprünglichen Werte des Objekts im <see cref="T:System.Data.Objects.ObjectContext" />, der über den gleichen Schlüssel verfügt.</summary>
+        <returns>Das aktualisierte Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Objects.ObjectContext.ApplyOriginalValues%2A> Methode wird verwendet, um die Änderungen zu übernehmen, die auf Objekte außerhalb vorgenommen wurden die <xref:System.Data.Objects.ObjectContext>, wie z. B. getrennte Objekte, die von einem Webdienst empfangen werden. Die Methode kopiert die Skalarwerte aus dem angegebenen Objekt in das Objekt in der <xref:System.Data.Objects.ObjectContext> , die über den gleichen Schlüssel verfügt. Sie können die <xref:System.Data.EntityKey> des getrennten Objekts um eine Instanz dieses Objekts aus der Datenquelle abzurufen. Weitere Informationen finden Sie unter [wie: Zurückgeben einer bestimmten Objekt verwendet seinen Schlüssel](http://msdn.microsoft.com/en-us/2e9902af-29b0-4e5d-92db-03dfe6ec49bd). Alle Werte, die von den aktuellen Werten des Objekts abweichen, werden als geändert markiert. Beachten Sie, dass die Methode gilt nicht die aktuellen Werte für die zugehörige Objekte der `originalEntity`.  
+  
+ Wenn Sie ein Diagramm mit den ursprünglichen Werten haben und die aktuellen Werte anwenden möchten, rufen Sie <xref:System.Data.Objects.ObjectContext.ApplyCurrentValues%2A> Methode.  
+  
+ Sie können auch die <xref:System.Data.Objects.ObjectSet%601.ApplyOriginalValues%2A> von der <xref:System.Data.Objects.ObjectSet%601> oder <xref:System.Data.Objects.ObjectStateEntry.ApplyOriginalValues%2A> Methode der <xref:System.Data.Objects.ObjectStateEntry>. Weitere Informationen finden Sie unter [Erstellen von N-Tier-Anwendungen](http://msdn.microsoft.com/en-us/9439d2ba-6b5f-44e8-be65-8a442d922cbb).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="entitySetName" /> oder <paramref name="original" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.Data.Metadata.Edm.EntitySet" /> aus <paramref name="entitySetName" /> entspricht nicht der <see cref="T:System.Data.Metadata.Edm.EntitySet" /> für des Objekts <see cref="T:System.Data.EntityKey" />.  
+  
+ - oder -   
+  
+ Ein <see cref="T:System.Data.Objects.ObjectStateEntry" /> für das Objekt nicht werden, in gefunden kann der <see cref="T:System.Data.Objects.ObjectStateManager" />. - oder -   
+  
+ Das Objekt befindet sich in einem <see cref="F:System.Data.EntityState.Added" /> oder ein <see cref="F:System.Data.EntityState.Detached" /> Zustand.  
+  
+ - oder -   
+  
+ Der Entitätsschlüssel des angegebenen Objekts ist ungültig oder verfügt über die Eigenschaft ändert.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="entitySetName" /> ist eine leere Zeichenfolge.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyPropertyChanges">
+      <MemberSignature Language="C#" Value="public void ApplyPropertyChanges (string entitySetName, object changed);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ApplyPropertyChanges(string entitySetName, object changed) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.ApplyPropertyChanges(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use ApplyCurrentValues instead")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entitySetName" Type="System.String" />
+        <Parameter Name="changed" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entitySetName">Der Name der Entitätenmenge, der das Objekt angehört.</param>
+        <param name="changed">Das getrennte Objekt, das über Eigenschaftsaktualisierungen verfügt, die für das ursprüngliche Objekt übernommen werden sollen.</param>
+        <summary>Übernimmt Eigenschaftsänderungen eines getrennten Objekts für ein Objekt, das bereits an den Objektkontext angefügt wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Objects.ObjectContext.ApplyCurrentValues%2A>-Methode wird verwendet, um Eigenschaftsänderungen von einer geänderten, getrennten Version eines Objekts für die ursprüngliche Version zu übernehmen, die an den <xref:System.Data.Objects.ObjectContext> angefügt ist. Dadurch werden Szenarios wie beispielsweise Webdienste unterstützt, bei denen ein Entitätsobjekt getrennt und an eine Remoteanwendung gesendet wird, in der Eigenschaftsaktualisierungen vorgenommen werden. Mithilfe dieser Methode können solche Änderungen einfacher für das ursprüngliche Objekt übernommen werden.  
+  
+ Nach Abschluss von <xref:System.Data.Objects.ObjectContext.ApplyCurrentValues%2A> befindet sich das Objekt im <xref:System.Data.EntityState.Modified>-Status. Rufen Sie die <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> Methode, um die Datenquelle zu aktualisieren.  
+  
+ Das ursprüngliche Objekt muss im <xref:System.Data.Objects.ObjectStateManager> vorhanden sein und den Status <xref:System.Data.EntityState.Modified> oder <xref:System.Data.EntityState.Unchanged> aufweisen. Das ursprüngliche Objekt wird nur geändert, wenn vorhanden geänderte Eigenschaften in sind der `changed` Objekt.  
+  
+ Die <xref:System.Data.Objects.DataClasses.EntityObject.EntityKey%2A> Eigenschaft des angegebenen Objekts muss festgelegt werden, um eine gültige <xref:System.Data.EntityKey>.  
+  
+ <xref:System.Data.Objects.ObjectContext.ApplyCurrentValues%2A> beeinflusst keine Navigationseigenschaften oder verbundenen Objekte.  
+  
+ <xref:System.Data.Objects.ObjectContext.ApplyCurrentValues%2A> legt lediglich Eigenschaften fest, die in den Entitätsmetadaten für den Typ vorhanden sind. Zum Beispiel sind Eigenschaften, die in einer partiellen Klasse hinzugefügt werden, nicht in die <xref:System.Data.Objects.ObjectContext.ApplyCurrentValues%2A>-Operation eingeschlossen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wenn <paramref name="entitySetName" /> ist <see langword="null" /> oder eine leere Zeichenfolge.  
+  
+ - oder -   
+  
+ Wenn <paramref name="changed" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Wenn die <see cref="T:System.Data.Metadata.Edm.EntitySet" /> aus <paramref name="entitySetName" /> entspricht nicht der <see cref="T:System.Data.Metadata.Edm.EntitySet" /> für des Objekts <see cref="T:System.Data.EntityKey" />.  
+  
+ - oder -   
+  
+ Wenn die Entität einen anderen Status als <see cref="F:System.Data.EntityState.Modified" /> oder <see cref="F:System.Data.EntityState.Unchanged" /> aufweist.  
+  
+ - oder -   
+  
+ Das ursprüngliche Objekt ist nicht an den Kontext angefügt.</exception>
+        <exception cref="T:System.ArgumentException">Wenn der Typ des der <paramref name="changed" /> Objekt ist nicht denselben Typ wie das ursprüngliche Objekt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Attach">
+      <MemberSignature Language="C#" Value="public void Attach (System.Data.Objects.DataClasses.IEntityWithKey entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Attach(class System.Data.Objects.DataClasses.IEntityWithKey entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.Attach(System.Data.Objects.DataClasses.IEntityWithKey)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Data.Objects.DataClasses.IEntityWithKey" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Das anzufügende Objekt.</param>
+        <summary>Fügt ein Objekt oder Objektdiagramm an den Objektkontext an, wenn das Objekt über einen Entitätsschlüssel verfügt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Data.Objects.ObjectContext.Attach%2A> für den <xref:System.Data.Objects.ObjectContext> auf, um das Objekt an den Objektkontext anzufügen. Dies ist notwendig, wenn das Objekt bereits in der Datenquelle vorhanden, aber ist derzeit nicht an den Kontext angefügt ist. Weitere Informationen finden Sie unter [Anpassen von Objekten](http://msdn.microsoft.com/en-us/af6f07ce-2261-4c65-87cf-d018ad082921).  
+  
+ <xref:System.Data.Objects.ObjectContext.Attach%2A> wird verwendet, um ein Objekt oder das Objekt der obersten Ebene eines Objektdiagramms anzufügen.  
+  
+ Das anzufügende Objekt muss <xref:System.Data.Objects.DataClasses.IEntityWithKey> implementieren, um einen <xref:System.Data.EntityKey> bereitzustellen. Von allen generierten Entitätsklassen wird <xref:System.Data.Objects.DataClasses.IEntityWithKey> implementiert.  
+  
+ Wenn Sie verbundene Objekte anfügen, müssen Sie auch aufrufen `Attach` auf die <xref:System.Data.Objects.DataClasses.EntityReference%601> oder <xref:System.Data.Objects.DataClasses.EntityCollection%601> zum Definieren der Beziehung.  
+  
+ Diese Methode ruft die <xref:System.Data.Objects.ObjectContext.AttachTo%2A>-Methode auf.  
+  
+ Folgendes gilt beim Anfügen von Objekten:  
+  
+-   Wenn das anzufügende Objekt über verbundene Objekte verfügt, werden auch diese Objekte an den Objektkontext angefügt.  
+  
+-   Objekte werden dem Objektkontext im Status "Unchanged" hinzugefügt.  
+  
+-   Das Objekt, das an die <xref:System.Data.Objects.ObjectContext.Attach%2A>-Methode übergeben wird, muss über einen gültigen <xref:System.Data.Objects.DataClasses.EntityObject.EntityKey%2A>-Wert verfügen. Wenn das Objekt keinen gültigen <xref:System.Data.Objects.DataClasses.EntityObject.EntityKey%2A>-Wert aufweist, geben Sie den Namen des Entitätssatzes mit der <xref:System.Data.Objects.ObjectContext.AttachTo%2A>-Methode an.  
+  
+   
+  
+## Examples  
+ Das Beispiel in diesem Thema beruht auf dem [AdventureWorks Sales-Modell](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). In diesem Beispiel werden zwei Objekte angefügt, und anschließend wird die Beziehung definiert.  
+  
+ [!code-csharp[DP ObjectServices Concepts#AttachRelatedObjects](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#attachrelatedobjects)]
+ [!code-vb[DP ObjectServices Concepts#AttachRelatedObjects](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#attachrelatedobjects)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="entity" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Ungültiger Entitätsschlüssel.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AttachTo">
+      <MemberSignature Language="C#" Value="public void AttachTo (string entitySetName, object entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AttachTo(string entitySetName, object entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.AttachTo(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entitySetName" Type="System.String" />
+        <Parameter Name="entity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entitySetName">Stellt den Namen der Entitätenmenge dar, der optional durch den Entitätencontainernamen qualifiziert werden kann.</param>
+        <param name="entity">Das anzufügende <see cref="T:System.Object" />.</param>
+        <summary>Fügt ein Objekt oder Objektdiagramm an den Objektkontext in einer bestimmten Entitätenmenge an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Data.Objects.ObjectContext.AttachTo%2A> auf die <xref:System.Data.Objects.ObjectContext> auf das Objekt an eine bestimmte Entitätenmenge im Objektkontext anzufügen oder wenn das Objekt hat eine `null` (`Nothing` in Visual Basic) <xref:System.Data.EntityKey> Wert. Weitere Informationen finden Sie unter [Anfügen und Trennen von Objekten](http://msdn.microsoft.com/en-us/41d5c1ef-1b78-4502-aa10-7e1438d62d23).  
+  
+ Das anzufügende Objekt kann eigenständig oder Teil des Diagramms sein.  
+  
+ Die Regeln für die `entitySetName` Format sind wie folgt:  
+  
+-   Wenn die <xref:System.Data.Objects.ObjectContext.DefaultContainerName%2A> Eigenschaft ist `null`, und klicken Sie dann die `entitySetName` hat als in vollständig qualifiziert werden * \<Namens des Entitätencontainers >*.* \<Entitätenmengenname >*.  
+  
+-   Wenn die <xref:System.Data.Objects.ObjectContext.DefaultContainerName%2A> nicht `null`, und klicken Sie dann die `entitySetName` kann es sich um * \<Namens des Entitätencontainers >*.* \<Entitätenmengenname >* oder * \<Entitätenmengenname >*.  
+  
+ Das anzufügende Objekt muss keinen damit verbundenen <xref:System.Data.EntityKey> haben. Wenn das Objekt einen Entitätsschlüssel gezeigt wird, klicken Sie dann keinen `entitySetName` darf keine leere Zeichenfolge sein.  
+  
+ Verfügt das anzufügende Objekt ein <xref:System.Data.EntityKey> und `entitySetName` weist den Wert der <xref:System.Data.Metadata.Edm.EntitySet> der Entität Schlüssel übereinstimmen der <xref:System.Data.Metadata.Edm.EntitySet> , gefunden wurde, basierend auf den `entitySetName` und Namens des Entitätencontainers.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="entity" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Ungültige Entitätenmenge.  
+  
+ - oder -   
+  
+ Das Objekt verfügt über einen temporären Schlüssel.  
+  
+ - oder -   
+  
+ Das Objekt verfügt über einen <see cref="T:System.Data.EntityKey" />, und die <see cref="T:System.Data.Metadata.Edm.EntitySet" /> stimmt nicht mit der Entitätenmenge überein, die der Methode als Argument übergeben wurde.  
+  
+ - oder -   
+  
+ Das Objekt hat keinen <see cref="T:System.Data.EntityKey" />, und es ist keine Entitätenmenge angegeben.  
+  
+ - oder -   
+  
+ Ein Objekt aus dem Objektdiagramm verfügt über einen temporären <see cref="T:System.Data.EntityKey" />.  
+  
+ - oder -   
+  
+ Ein Objekt aus dem Objektdiagramm verfügt über einen ungültigen <see cref="T:System.Data.EntityKey" /> (Beispiel: Werte im Schlüssel stimmen nicht mit Werten im Objekt überein).  
+  
+ - oder -   
+  
+ Die Entitätenmenge konnte nicht gefunden werden, von einem bestimmten <paramref name="entitySetName" /> Name und Namens des Entitätencontainers.  
+  
+ - oder -   
+  
+ Ein Objekt aus dem Objektdiagramm ist bereits in einem anderen Status-Manager vorhanden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandTimeout">
+      <MemberSignature Language="C#" Value="public Nullable&lt;int&gt; CommandTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; CommandTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.ObjectContext.CommandTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Timeoutwert in Sekunden für alle Operationen im Objektkontext ab oder legt diesen fest. Ein <see langword="null" /> Wert gibt an, dass der Standardwert des zugrunde liegenden Anbieters verwendet werden soll.</summary>
+        <value>Ein <see cref="T:System.Int32" />-Wert, der den Timeoutwert in Sekunden darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Standardtimeout für Objektabfragen und den <xref:System.Data.Objects.ObjectContext.SaveChanges%2A>-Vorgang wird vom zugrunde liegenden Verbindungsanbieter definiert. Sie können diesen Standardtimeout jedoch mithilfe der <xref:System.Data.Objects.ObjectContext.CommandTimeout%2A>-Eigenschaft im <xref:System.Data.Objects.ObjectContext> überschreiben (siehe folgendes Beispiel).  
+  
+ [!code-csharp[DP ObjectServices Concepts#QueryTimeout](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#querytimeout)]
+ [!code-vb[DP ObjectServices Concepts#QueryTimeout](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#querytimeout)]  
+  
+ Dieses Vorgehen wird empfohlen, wenn eine komplexe Abfrage durchgeführt wird, oder wenn andere Leistungsprobleme dazu führen, dass Abfragen oder Aufrufe von <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> häufig zu einem Timeout führen.  
+  
+   
+  
+## Examples  
+ [Objektabfragen](http://msdn.microsoft.com/en-us/0768033c-876f-471d-85d5-264884349276)  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der Timeoutwert ist kleiner als 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Connection">
+      <MemberSignature Language="C#" Value="public System.Data.Common.DbConnection Connection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Common.DbConnection Connection" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.ObjectContext.Connection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbConnection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die vom Objektkontext verwendete Verbindung ab.</summary>
+        <value>Ein <see cref="T:System.Data.Common.DbConnection" />-Objekt, das der Verbindung entspricht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt das Verbindungsobjekt zurück, das an den Konstruktor übergeben bzw. während der Konstruktion erstellt wurde. Der Besitz der Verbindung wird durch die verwendeten Konstruktoren bestimmt.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird ein <xref:System.Data.EntityClient.EntityConnection>-Objekt erstellt, das an den Konstruktor eines <xref:System.Data.Objects.ObjectContext> mit langer Laufzeit übergeben wird. Die Verbindung wird manuell geöffnet. Sowohl das <xref:System.Data.EntityClient.EntityConnection>-Objekt als auch das <xref:System.Data.Objects.ObjectContext>-Objekt werden manuell freigegeben.  
+  
+ [!code-csharp[DP ObjectServices Concepts#OpenEntityConnection](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#openentityconnection)]
+ [!code-vb[DP ObjectServices Concepts#OpenEntityConnection](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#openentityconnection)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Wenn die <see cref="T:System.Data.Objects.ObjectContext" /> -Instanz wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextOptions">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.ObjectContextOptions ContextOptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Objects.ObjectContextOptions ContextOptions" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.ObjectContext.ContextOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.ObjectContextOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Data.Objects.ObjectContextOptions" /> -Instanz, die Optionen, mit denen das Verhalten von beeinflussen die <see cref="T:System.Data.Objects.ObjectContext" />.</summary>
+        <value>Die <see cref="T:System.Data.Objects.ObjectContextOptions" /> -Instanz, die Optionen, mit denen das Verhalten von beeinflussen die <see cref="T:System.Data.Objects.ObjectContext" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDatabase">
+      <MemberSignature Language="C#" Value="public void CreateDatabase ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CreateDatabase() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.CreateDatabase" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt die Datenbank mit der aktuellen Verbindung mit der Datenquelle und die Metadaten in die <see cref="T:System.Data.Metadata.Edm.StoreItemCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Data.Objects.ObjectContext.CreateDatabaseScript%2A> der Data Definition Language (DDL)-Skript anzeigen. Rufen Sie <xref:System.Data.Objects.ObjectContext.CreateDatabase%2A> beim Ausführen des Skripts.  
+  
+ Die meisten Aufgaben wird übertragen die <xref:System.Data.Common.DbProviderServices.CreateDatabase%2A> Methode.  
+  
+ Weitere Informationen finden Sie unter [arbeiten mit Data Definition Language](~/docs/framework/data/adonet/ef/working-with-data-definition-language.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDatabaseScript">
+      <MemberSignature Language="C#" Value="public string CreateDatabaseScript ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string CreateDatabaseScript() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.CreateDatabaseScript" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Generiert ein Data Definition Language (DDL)-Skript, der Schemaobjekte (Tabellen, Primärschlüssel, Fremdschlüssel) erstellt, für die Metadaten in die <see cref="T:System.Data.Metadata.Edm.StoreItemCollection" />. <see cref="T:System.Data.Metadata.Edm.StoreItemCollection" /> lädt Metadaten aus SSDL (Datenspeicherschema-Definitionssprache)-Dateien.</summary>
+        <returns>Ein DDL-Skript, für welche Schemaobjekte für die Metadaten in erstellt, die <see cref="T:System.Data.Metadata.Edm.StoreItemCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Data.Objects.ObjectContext.CreateDatabaseScript%2A> DDL-Skripts anzeigen. Rufen Sie <xref:System.Data.Objects.ObjectContext.CreateDatabase%2A> beim Ausführen des Skripts.  
+  
+ Die meisten Aufgaben wird übertragen die <xref:System.Data.Common.DbProviderServices.CreateDatabase%2A> Methode.  
+  
+ Weitere Informationen finden Sie unter [arbeiten mit Data Definition Language](~/docs/framework/data/adonet/ef/working-with-data-definition-language.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateEntityKey">
+      <MemberSignature Language="C#" Value="public System.Data.EntityKey CreateEntityKey (string entitySetName, object entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.EntityKey CreateEntityKey(string entitySetName, object entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.CreateEntityKey(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.EntityKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entitySetName" Type="System.String" />
+        <Parameter Name="entity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entitySetName">Der voll qualifizierte Name der Entitätenmenge, der das Entitätsobjekt angehört.</param>
+        <param name="entity">Das Objekt, für das der Entitätsschlüssel abgerufen wird.</param>
+        <summary>Erstellt den Entitätsschlüssel für ein bestimmtes Objekt, oder gibt den Entitätsschlüssel zurück, wenn dieser bereits existiert.</summary>
+        <returns>Der <see cref="T:System.Data.EntityKey" /> des Objekts.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein <xref:System.Data.EntityKey> ist nicht vorhanden, für die `entity`, die <xref:System.Data.Objects.ObjectContext.CreateEntityKey%2A> Methode erstellt einen neuen Schlüssel für sie.  
+  
+ Mit dieser Methode wird ermittelt, ob ein Objekt mit demselben <xref:System.Data.EntityKey> bereits an den <xref:System.Data.Objects.ObjectContext> angefügt wurde. Wenn ein Objekt mit demselben <xref:System.Data.EntityKey> bereits angefügt wurde, wird eine Ausnahme ausgelöst. Verwenden Sie die <xref:System.Data.Objects.ObjectContext.CreateEntityKey%2A>-Methode, um den <xref:System.Data.EntityKey> des getrennten Objekts abzurufen, bevor Sie die <xref:System.Data.Objects.ObjectContext.Attach%2A>-Methode aufrufen.  
+  
+   
+  
+## Examples  
+ Das Beispiel in diesem Thema beruht auf dem [AdventureWorks Sales-Modell](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). In diesem Beispiel wird <xref:System.Data.Objects.ObjectContext.CreateEntityKey%2A> verwendet, um den Entitätsschlüssel eines vorhandenen Objekts abzurufen.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ApplyItemUpdatesGetObject](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#applyitemupdatesgetobject)]
+ [!code-vb[DP ObjectServices Concepts#ApplyItemUpdatesGetObject](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#applyitemupdatesgetobject)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wenn entweder der Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Wenn <paramref name="entitySetName" /> leer ist.  
+  
+ - oder -   
+  
+ Wenn der Typ des der <paramref name="entity" /> Objekt ist nicht in der Entitätenmenge vorhanden.  
+  
+ - oder -   
+  
+ Wenn die <paramref name="entitySetName" /> ist nicht vollständig qualifiziert.</exception>
+        <exception cref="T:System.InvalidOperationException">Wenn der Entitätsschlüssel anhand der angegebenen Parameter nicht erstellt werden kann.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateObject&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T CreateObject&lt;T&gt; () where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T CreateObject&lt;class T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.CreateObject``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">Typ des zurückzugebenden Objekts.</typeparam>
+        <summary>Erstellt und gibt eine Instanz des angeforderten Typs zurück.</summary>
+        <returns>Eine Instanz des angeforderten Typs <paramref name="T" />, oder eine Instanz eines abgeleiteten Typs, die es ermöglicht <paramref name="T" /> mit Entity Framework verwendet werden soll. Das zurückgegebene Objekt ist eine Instanz des angeforderten Typs oder einer Instanz eines abgeleiteten Typs, der den angeforderten Typ mit dem Entity Framework verwendet werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Objects.ObjectContext.CreateObject%2A> Methode wird mit POCO-Datenklassen verwendet, um sicherzustellen, dass das zurückgegebene Objekt ordnungsgemäß vom Entity Framework verwaltet werden kann. Weitere Informationen finden Sie unter [Anforderungen für das Erstellen von Proxys POCO](http://msdn.microsoft.com/en-us/dcdbf982-9b9d-4582-806a-64de4a1c03c8) und [arbeiten mit POCO-Entitäten](http://msdn.microsoft.com/en-us/5e0fb82a-b6d1-41a1-b37b-c12db61629d3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateObjectSet&lt;TEntity&gt;">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.ObjectSet&lt;TEntity&gt; CreateObjectSet&lt;TEntity&gt; () where TEntity : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Objects.ObjectSet`1&lt;!!TEntity&gt; CreateObjectSet&lt;class TEntity&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.CreateObjectSet``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.ObjectSet&lt;TEntity&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TEntity">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="TEntity">Der Entitätstyp des angeforderten <see cref="T:System.Data.Objects.ObjectSet`1" />.</typeparam>
+        <summary>Erstellt ein neues <see cref="T:System.Data.Objects.ObjectSet`1" /> -Instanz, die zum Abfragen, hinzufügen, ändern und Löschen von Objekten des angegebenen Entitätstyps verwendet wird.</summary>
+        <returns>Die neue <see cref="T:System.Data.Objects.ObjectSet`1" />-Instanz.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Data.Objects.ObjectContext.DefaultContainerName" /> Eigenschaft nicht festgelegt ist, auf die <see cref="T:System.Data.Objects.ObjectContext" />.  
+  
+ - oder -   
+  
+ Der angegebene Typ gehört mehr als eine Entitätenmenge.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateObjectSet&lt;TEntity&gt;">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.ObjectSet&lt;TEntity&gt; CreateObjectSet&lt;TEntity&gt; (string entitySetName) where TEntity : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Objects.ObjectSet`1&lt;!!TEntity&gt; CreateObjectSet&lt;class TEntity&gt;(string entitySetName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.CreateObjectSet``1(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.ObjectSet&lt;TEntity&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TEntity">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="entitySetName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TEntity">Der Entitätstyp des angeforderten <see cref="T:System.Data.Objects.ObjectSet`1" />.</typeparam>
+        <param name="entitySetName">Name der Entitätenmenge für das zurückgegebene <see cref="T:System.Data.Objects.ObjectSet`1" />. Die Zeichenfolge muss durch den Standardcontainernamen qualifiziert werden, wenn die <see cref="P:System.Data.Objects.ObjectContext.DefaultContainerName" /> Eigenschaft nicht festgelegt ist, auf die <see cref="T:System.Data.Objects.ObjectContext" />.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Data.Objects.ObjectSet`1" /> -Instanz, die zum Abfragen, hinzufügen, ändern und Löschen von Objekten des angegebenen Typs und mit der angegebenen Entität Satzname verwendet wird.</summary>
+        <returns>Die neue <see cref="T:System.Data.Objects.ObjectSet`1" />-Instanz.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.Data.Metadata.Edm.EntitySet" /> aus <paramref name="entitySetName" /> entspricht nicht der <see cref="T:System.Data.Metadata.Edm.EntitySet" /> für des Objekts <see cref="T:System.Data.EntityKey" />.  
+  
+ - oder -   
+  
+ Die <see cref="P:System.Data.Objects.ObjectContext.DefaultContainerName" /> Eigenschaft nicht festgelegt ist, auf die <see cref="T:System.Data.Objects.ObjectContext" /> und der Name ist nicht qualifiziert, als Teil der <paramref name="entitySetName" /> Parameter.  
+  
+ - oder -   
+  
+ Der angegebene Typ gehört mehr als eine Entitätenmenge.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateProxyTypes">
+      <MemberSignature Language="C#" Value="public void CreateProxyTypes (System.Collections.Generic.IEnumerable&lt;Type&gt; types);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CreateProxyTypes(class System.Collections.Generic.IEnumerable`1&lt;class System.Type&gt; types) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.CreateProxyTypes(System.Collections.Generic.IEnumerable{System.Type})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="types" Type="System.Collections.Generic.IEnumerable&lt;System.Type&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="types">Eine Enumeration von <see cref="T:System.Type" /> Objekte, die benutzerdefinierte Datenklassen darstellen, die das konzeptionelle Modell zuordnen.</param>
+        <summary>Generiert einen entsprechenden Typ, der für jeden Typ in der angegebenen Enumeration mit dem Entity Framework verwendet werden kann.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einzelne Typen in der `types` -Enumeration, die nicht auf einen Entitätstyp im konzeptionellen Modell zugeordnet sind, werden ignoriert.  
+  
+ Weitere Informationen finden Sie unter [Anforderungen für das Erstellen von Proxys POCO](http://msdn.microsoft.com/en-us/dcdbf982-9b9d-4582-806a-64de4a1c03c8) und [arbeiten mit POCO-Entitäten](http://msdn.microsoft.com/en-us/5e0fb82a-b6d1-41a1-b37b-c12db61629d3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateQuery&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.ObjectQuery&lt;T&gt; CreateQuery&lt;T&gt; (string queryString, params System.Data.Objects.ObjectParameter[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Objects.ObjectQuery`1&lt;!!T&gt; CreateQuery&lt;T&gt;(string queryString, class System.Data.Objects.ObjectParameter[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.CreateQuery``1(System.String,System.Data.Objects.ObjectParameter[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.ObjectQuery&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="queryString" Type="System.String" />
+        <Parameter Name="parameters" Type="System.Data.Objects.ObjectParameter[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Der Entitätstyp des zurückgegebenen <see cref="T:System.Data.Objects.ObjectQuery`1" />.</typeparam>
+        <param name="queryString">Die auszuführende Abfragezeichenfolge.</param>
+        <param name="parameters">Der Abfrage zu übergebende Parameter.</param>
+        <summary>Erstellt im aktuellen Objektkontext mit der angegebenen Abfragezeichenfolge eine <see cref="T:System.Data.Objects.ObjectQuery`1" />.</summary>
+        <returns>Eine <see cref="T:System.Data.Objects.ObjectQuery`1" /> des angegebenen Typs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie <xref:System.Data.Objects.ObjectContext.CreateQuery%2A>, um eine <xref:System.Data.Objects.ObjectQuery%601> des angegebenen Typs zu erstellen, die dem aktuellen Objektkontext angehört.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel beruht auf dem [AdventureWorks Sales-Modell](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832).  
+  
+ In dem Beispiel wird eine einfache Abfrage erstellt und die Auflistung der Ergebnisse durchlaufen.  
+  
+ [!code-csharp[DP ObjectServices Concepts#CreateQuery](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#createquery)]
+ [!code-vb[DP ObjectServices Concepts#CreateQuery](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#createquery)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="queryString" />-Parameter oder der <paramref name="parameters" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DatabaseExists">
+      <MemberSignature Language="C#" Value="public bool DatabaseExists ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool DatabaseExists() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.DatabaseExists" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überprüft, ob die Datenbank, die als Datenbank in Verbindung mit der aktuellen Datenquelle angegeben wird in der Datenquelle vorhanden ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die Datenbank vorhanden ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die meisten Aufgaben wird übertragen die <xref:System.Data.Common.DbProviderServices.DatabaseExists%2A> Methode.  
+  
+ Weitere Informationen finden Sie unter [arbeiten mit Data Definition Language](~/docs/framework/data/adonet/ef/working-with-data-definition-language.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultContainerName">
+      <MemberSignature Language="C#" Value="public string DefaultContainerName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultContainerName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.ObjectContext.DefaultContainerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Standardcontainernamen ab oder legt diesen fest.</summary>
+        <value>Eine <see cref="T:System.String" />, die den Standardcontainernamen darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Objects.ObjectContext.DefaultContainerName%2A>gibt nie `null`; es gibt entweder den Wert, der Gruppe oder eine leere Zeichenfolge. Der Benutzer kann diese Eigenschaft festlegen, um `null`, aber der Name wird intern auf eine leere Zeichenfolge festgelegt werden, damit der Benutzer niemals beide eine leere Zeichenfolge überprüfen muss und `null`.  
+  
+ Der Standardcontainername wird ebenfalls als Teil eines Konstruktors definiert. Wenn der Standardcontainername durch den geschützten Konstruktor festgelegt wird, ist die Eigenschaft schreibgeschützt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteDatabase">
+      <MemberSignature Language="C#" Value="public void DeleteDatabase ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DeleteDatabase() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.DeleteDatabase" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht die Datenbank, die als Datenbank in Verbindung mit der aktuellen Datenquelle angegeben wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die meisten Aufgaben wird übertragen die <xref:System.Data.Common.DbProviderServices.DeleteDatabase%2A> Methode.  
+  
+ Weitere Informationen finden Sie unter [arbeiten mit Data Definition Language](~/docs/framework/data/adonet/ef/working-with-data-definition-language.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteObject">
+      <MemberSignature Language="C#" Value="public void DeleteObject (object entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DeleteObject(object entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.DeleteObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Ein Objekt, das die zu löschende Entität angibt. Das Objekt kann jeden Status außer <see cref="F:System.Data.EntityState.Detached" /> haben.</param>
+        <summary>Markiert ein Objekt zum Löschen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Markiert ein Objekt aus dem <xref:System.Data.Objects.ObjectStateManager> zum Löschen. Das Objekt wird in den Daten gelöscht Datenquelle, wenn die <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> -Methode aufgerufen wird.  
+  
+ Beim Löschen des übergeordneten Objekts werden auch alle untergeordneten Objekte in der eingeschränkten Beziehung gelöscht. Das Ergebnis ist das gleiche wie beim Aktivieren der `CascadeDelete`-Eigenschaft in der Zuordnung für die Beziehung.  
+  
+ Die <xref:System.Data.Objects.ObjectContext.DeleteObject%2A> Methode kann aufgerufen werden, für Objekte, die bereits gelöscht wurden.  
+  
+   
+  
+## Examples  
+ Diese Beispiele beruhen auf den [AdventureWorks Sales-Modell](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832).  
+  
+ In diesem Beispiel erstellt eine <xref:System.Data.EntityKey> mit einem bestimmten "ProductID", wird der Schlüssel beim Abrufen eines Product-Objekts aus der Datenquelle verwendet, löscht das Produkt und die Änderungen in der Datenbank gespeichert.  
+  
+ [!code-csharp[DP ObjectServices Concepts#DeleteObject](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#deleteobject)]
+ [!code-vb[DP ObjectServices Concepts#DeleteObject](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#deleteobject)]  
+  
+ In diesem Beispiel löscht ein vorhandenes Element der Bestellung, fügt ein neues Element und speichert die Änderungen in der Datenbank.  
+  
+ [!code-csharp[DP ObjectServices Concepts#SaveChanges](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#savechanges)]
+ [!code-vb[DP ObjectServices Concepts#SaveChanges](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#savechanges)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="entity" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="entity" /> existiert nicht.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Detach">
+      <MemberSignature Language="C#" Value="public void Detach (object entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Detach(object entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.Detach(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Zu trennendes Objekt. Nur die <c>Entität</c> entfernt wird; Wenn es werden alle zugehörigen Objekte, die mit dem gleichen nachverfolgt werden <see cref="T:System.Data.Objects.ObjectStateManager" />, diese werden nicht automatisch getrennt werden.</param>
+        <summary>Entfernt das Objekt aus dem Objektkontext.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entfernt das Objekt aus dem <xref:System.Data.Objects.ObjectStateManager>. Dadurch werden Änderungsnachverfolgung und Identitätsauflösung für dieses Objekt deaktiviert. Weitere Informationen finden Sie unter [Anfügen und Trennen von Objekten](http://msdn.microsoft.com/en-us/41d5c1ef-1b78-4502-aa10-7e1438d62d23).  
+  
+ Nach dem Aufruf der <xref:System.Data.Objects.ObjectContext.Detach%2A>-Methode werden vom System alle Verweise auf dieses Objekt gelöscht und es kann vom Garbage Collector gesammelt werden.  
+  
+> [!NOTE]
+>  Die Garbage Collection (automatische Speicherbereinigung) kann nur erfolgen, wenn der Benutzercode keine Verweise auf das getrennte Objekt enthält.  
+  
+ Folgendes gilt beim Trennen von Objekten:  
+  
+-   <xref:System.Data.Objects.ObjectContext.Detach%2A> betrifft nur das jeweilige Objekt, das an die Methode übergeben wird. Wenn das zu trennende Objekt über verbundene Objekte im Objektkontext verfügt, werden diese Objekte nicht getrennt.  
+  
+-   Das Trennen von Objekten wirkt sich nicht auf Daten in der Datenquelle aus.  
+  
+-   Während eines Trennvorgangs werden keine Anweisungen zur kaskadierten Löschung oder referenziellen Einschränkungen erzwungen.  
+  
+ Weitere Informationen finden Sie unter [Anfügen und Trennen von Objekten](http://msdn.microsoft.com/en-us/41d5c1ef-1b78-4502-aa10-7e1438d62d23).  
+  
+   
+  
+## Examples  
+ [!code-csharp[DP ObjectServices Concepts#DetachObjects](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#detachobjects)]
+ [!code-vb[DP ObjectServices Concepts#DetachObjects](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#detachobjects)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"><paramref name="entity" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <paramref name="entity" /> ist nicht mit diesem verknüpft <see cref="T:System.Data.Objects.ObjectContext" /> (z. B. wurde neu erstellt und noch keinem Kontext zugeordnet Sie über einen anderen Kontext abgerufen wurde, oder Sie wurde bereits getrennt).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DetectChanges">
+      <MemberSignature Language="C#" Value="public void DetectChanges ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DetectChanges() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.DetectChanges" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt sicher, dass <see cref="T:System.Data.Objects.ObjectStateEntry" /> Änderungen werden synchronisiert, mit Änderungen in allen Objekten, die von nachverfolgt werden die <see cref="T:System.Data.Objects.ObjectStateManager" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die vom Objektkontext verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode schließt die Verbindung, wenn er vom Entity Framework geöffnet wurde. Nach dem <xref:System.Data.Objects.ObjectContext.Dispose%2A> aufgerufen wird, werden Vorgänge, die eine offene Verbindung, z. B. Ausführen einer Abfrage oder zum Aufrufen von erfordern die <xref:System.Data.Objects.ObjectQuery.ToTraceString%2A> -Methode, wird eine Ausnahme ausgelöst. Operationen, für die keine offene Verbindung notwendig ist, wie das Verfassen von Abfragen oder das Anfügen von Objekten, verursachen keine Ausnahme. Die <xref:System.Data.Objects.ObjectContext.Dispose%2A> Methode wird nicht explizit geöffneten Verbindungen geschlossen.  
+  
+ Begrenzen des Bereichs einer <xref:System.Data.Objects.ObjectContext> innerhalb einer `using` Block (`Using` in Visual Basic) wird sichergestellt, dass Ressourcen ordnungsgemäß freigegeben werden. Weitere Informationen finden Sie unter [Verwalten von Verbindungen und Transaktionen](http://msdn.microsoft.com/en-us/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
+  
+ Die <xref:System.Data.Objects.ObjectContext.Dispose> Methodenaufrufe der `virtual` (`Overridable` in Visual Basic) <xref:System.Data.Objects.ObjectContext.Dispose%28System.Boolean%29> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die vom Objektkontext verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode schließt die Verbindung. Nach dem <xref:System.Data.Objects.ObjectContext.Dispose%2A> aufgerufen wird, werden Vorgänge, die eine offene Verbindung, z. B. Ausführen einer Abfrage oder zum Aufrufen von erfordern die <xref:System.Data.Objects.ObjectQuery.ToTraceString%2A> -Methode, wird eine Ausnahme ausgelöst. Operationen, für die keine offene Verbindung notwendig ist, wie das Verfassen von Abfragen oder das Anfügen von Objekten, verursachen keine Ausnahme.  
+  
+ Begrenzen des Bereichs einer <xref:System.Data.Objects.ObjectContext> innerhalb einer `using` Block (`Using` in Visual Basic) wird sichergestellt, dass Ressourcen ordnungsgemäß freigegeben werden. Weitere Informationen finden Sie unter [Verwalten von Verbindungen und Transaktionen](http://msdn.microsoft.com/en-us/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteFunction">
+      <MemberSignature Language="C#" Value="public int ExecuteFunction (string functionName, params System.Data.Objects.ObjectParameter[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 ExecuteFunction(string functionName, class System.Data.Objects.ObjectParameter[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.ExecuteFunction(System.String,System.Data.Objects.ObjectParameter[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="functionName" Type="System.String" />
+        <Parameter Name="parameters" Type="System.Data.Objects.ObjectParameter[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="functionName">Der Name der gespeicherten Prozedur oder Funktion. Der Name kann den Containernamen enthalten, z. B. <c> &lt;Containername&gt;.&lt; Funktionsname&gt;</c>. Wenn der Standardcontainername bekannt ist, wird nur der Funktionsname benötigt.</param>
+        <param name="parameters">Ein Array von <see cref="T:System.Data.Objects.ObjectParameter" />-Objekten.</param>
+        <summary>Führt eine gespeicherte Prozedur oder Funktion, die in der Datenquelle definiert ist und im konzeptionellen Modell ausgedrückt; verwirft alle von der Funktion zurückgegebenen Ergebnisse; und gibt die Anzahl der Zeilen durch die Ausführung beeinflusst.</summary>
+        <returns>Die Anzahl der betroffenen Zeilen.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="function" />ist null oder leer.  
+  
+ - oder -   
+  
+ <paramref name="function" /> wurde nicht gefunden.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Entitätsreader unterstützt diese <paramref name="function" />.  
+  
+ - oder -   
+  
+ Es liegt ein Typenkonflikt für den Reader und den <paramref name="function" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteFunction&lt;TElement&gt;">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.ObjectResult&lt;TElement&gt; ExecuteFunction&lt;TElement&gt; (string functionName, params System.Data.Objects.ObjectParameter[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Objects.ObjectResult`1&lt;!!TElement&gt; ExecuteFunction&lt;TElement&gt;(string functionName, class System.Data.Objects.ObjectParameter[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.ExecuteFunction``1(System.String,System.Data.Objects.ObjectParameter[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.ObjectResult&lt;TElement&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TElement" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="functionName" Type="System.String" />
+        <Parameter Name="parameters" Type="System.Data.Objects.ObjectParameter[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <typeparam name="TElement">Der Entitätstyp der <see cref="T:System.Data.Objects.ObjectResult`1" /> zurückgegeben, wenn die Funktion für die Datenquelle ausgeführt wird. Dieser Typ implementieren muss, <see cref="T:System.Data.Objects.DataClasses.IEntityWithChangeTracker" />.</typeparam>
+        <param name="functionName">Der Name der gespeicherten Prozedur oder Funktion. Der Name kann den Containernamen enthalten, z. B. <c> &lt;Containername&gt;.&lt; Funktionsname&gt;</c>. Wenn der Standardcontainername bekannt ist, wird nur der Funktionsname benötigt.</param>
+        <param name="parameters">Ein Array von <see cref="T:System.Data.Objects.ObjectParameter" />-Objekten.</param>
+        <summary>Führt eine gespeicherte Prozedur oder Funktion, die in der Datenquelle definiert und im konzeptionellen Modell, mit den angegebenen Parametern zugeordnet ist. Gibt einen typisierten <see cref="T:System.Data.Objects.ObjectResult`1" />.</summary>
+        <returns>Ein <see cref="T:System.Data.Objects.ObjectResult`1" /> für die Daten, die von der gespeicherten Prozedur zurückgegeben wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Objects.ObjectContext.ExecuteFunction%2A> Methode ist eine Hilfsmethode, die zum Ausführen von gespeicherten Prozeduren oder Funktionen, die in der Datenquelle definiert und im konzeptionellen Modell ausgedrückt verwendet wird. Die Entity Data Model-Tools generieren eine Methode für jede im konzeptionellen Modell. Diese Methoden rufen einen stark typisierten `ExecuteFunction` eine typisierte zurückzugebenden <xref:System.Data.Objects.ObjectResult%601>. Weitere Informationen finden Sie unter [Anwendungscode mithilfe von gespeicherten Prozeduren (Entity Framework)](http://msdn.microsoft.com/en-us/d13dd33f-fcf9-4e86-bd00-74bc31521536).  
+  
+ Alle Parameter für die Funktion im Parameterarray erforderlich sind, und alle Typen anhand der Metadaten für den Import-Funktion, z. B. den Typ der Funktion selbst überprüft werden. `null`Werte sind für CLR-Werttypen zulässig. Parametervalidierung wird vom Anbieter durchgeführt.  
+  
+ Die <xref:System.Data.Objects.ObjectContext.ExecuteFunction%2A> -Methode verwendet die <xref:System.Data.Objects.MergeOption> Wert <xref:System.Data.Objects.MergeOption.AppendOnly>. Aus diesem Grund ist ein Objekt bereits im Objektkontext vorhanden, wird es nicht aus der Datenquelle geladen werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="function" />ist null oder leer.  
+  
+ - oder -   
+  
+ <paramref name="function" /> wurde nicht gefunden.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Entitätsreader unterstützt diese <paramref name="function" />.  
+  
+ - oder -   
+  
+ Es liegt ein Typenkonflikt für den Reader und den <paramref name="function" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteFunction&lt;TElement&gt;">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.ObjectResult&lt;TElement&gt; ExecuteFunction&lt;TElement&gt; (string functionName, System.Data.Objects.MergeOption mergeOption, params System.Data.Objects.ObjectParameter[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Objects.ObjectResult`1&lt;!!TElement&gt; ExecuteFunction&lt;TElement&gt;(string functionName, valuetype System.Data.Objects.MergeOption mergeOption, class System.Data.Objects.ObjectParameter[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.ExecuteFunction``1(System.String,System.Data.Objects.MergeOption,System.Data.Objects.ObjectParameter[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.ObjectResult&lt;TElement&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TElement" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="functionName" Type="System.String" />
+        <Parameter Name="mergeOption" Type="System.Data.Objects.MergeOption" />
+        <Parameter Name="parameters" Type="System.Data.Objects.ObjectParameter[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <typeparam name="TElement">Der Entitätstyp der <see cref="T:System.Data.Objects.ObjectResult`1" /> zurückgegeben, wenn die Funktion für die Datenquelle ausgeführt wird. Dieser Typ implementieren muss, <see cref="T:System.Data.Objects.DataClasses.IEntityWithChangeTracker" />.</typeparam>
+        <param name="functionName">Der Name der gespeicherten Prozedur oder Funktion. Der Name kann den Containernamen enthalten, z. B. <c> &lt;Containername&gt;.&lt; Funktionsname&gt;</c>. Wenn der Standardcontainername bekannt ist, wird nur der Funktionsname benötigt.</param>
+        <param name="mergeOption">Die beim Ausführen der Abfrage zu verwendende <see cref="T:System.Data.Objects.MergeOption" />.</param>
+        <param name="parameters">Ein Array von <see cref="T:System.Data.Objects.ObjectParameter" />-Objekten.</param>
+        <summary>Führt die angegebene gespeicherte Prozedur oder Funktion, die in der Datenquelle definiert ist und im konzeptionellen Modell, mit dem angegebenen Parameter und MergeOption ausgedrückt. Gibt einen typisierten <see cref="T:System.Data.Objects.ObjectResult`1" />.</summary>
+        <returns>Ein <see cref="T:System.Data.Objects.ObjectResult`1" /> für die Daten, die von der gespeicherten Prozedur zurückgegeben wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Objects.ObjectContext.ExecuteFunction%2A> Methode ist eine Hilfsmethode, die zum Ausführen von gespeicherten Prozeduren oder Funktionen, die in der Datenquelle definiert und im konzeptionellen Modell ausgedrückt verwendet wird. Die Entity Data Model-Tools generieren eine Methode für jede im konzeptionellen Modell. Diese Methoden rufen einen stark typisierten `ExecuteFunction` eine typisierte zurückzugebenden <xref:System.Data.Objects.ObjectResult%601>. Weitere Informationen finden Sie unter [Anwendungscode mithilfe von gespeicherten Prozeduren (Entity Framework)](http://msdn.microsoft.com/en-us/d13dd33f-fcf9-4e86-bd00-74bc31521536).  
+  
+ Alle Parameter für die Funktion im Parameterarray erforderlich sind, und alle Typen anhand der Metadaten für den Import-Funktion, z. B. den Typ der Funktion selbst überprüft werden. `null`Werte sind für CLR-Werttypen zulässig. Parametervalidierung wird vom Anbieter durchgeführt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="function" />ist null oder leer.  
+  
+ - oder -   
+  
+ <paramref name="function" /> wurde nicht gefunden.</exception>
+        <exception cref="T:System.InvalidOperationException">Die Entitätsreader unterstützt diese <paramref name="function" />.  
+  
+ - oder -   
+  
+ Es liegt ein Typenkonflikt für den Reader und den <paramref name="function" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteStoreCommand">
+      <MemberSignature Language="C#" Value="public int ExecuteStoreCommand (string commandText, params object[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 ExecuteStoreCommand(string commandText, object[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.ExecuteStoreCommand(System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandText" Type="System.String" />
+        <Parameter Name="parameters" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="commandText">Der Befehl, der in der systemeigenen Sprache der Datenquelle ausführen.</param>
+        <param name="parameters">Ein Array von Parametern an den Befehl übergeben werden soll.</param>
+        <summary>Führt einen beliebigen Befehl direkt für die Datenquelle aus, wobei die vorhandene Verbindung.</summary>
+        <returns>Die Anzahl der betroffenen Zeilen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Verwendung parametrisierter Befehle hilft beim Schutz vor SQL Injection-Angriffen, bei denen ein Angreifer einen SQL-Befehl in eine SQL-Anweisung einschleust, der die Sicherheit auf dem Server gefährdet. Parametrisierte Befehle schützen vor einer SQL-Injection-Angriff, durch die sichergestellt wird, dass die Werte aus einer externen Quelle empfangen als nur Werte und nicht als Bestandteil der SQL-Anweisung übergeben werden. Daher werden in einen Wert eingefügte SQL-Befehle nicht an der Datenquelle ausgeführt. Stattdessen werden sie nur als Parameterwert ausgewertet. Zusätzlich zu den Sicherheitsvorteilen stellen parametrisierte Befehle eine praktische Methode zum Organisieren von Werten mit einer SQL­Anweisung oder an eine gespeicherte Prozedur übergeben werden.  
+  
+ Der `parameters`-Wert kann ein Array von <xref:System.Data.Common.DbParameter>-Objekten oder ein Array von Parameterwerten sein. Wenn nur Werte angegeben sind, ein Array von <xref:System.Data.Common.DbParameter> Objekte auf Grundlage der Reihenfolge der Werte im Array erstellt.  
+  
+ Der Speicherbefehl wird im Kontext der aktuellen Transaktion ausgeführt, wenn die aktuelle Transaktion vorhanden ist.  
+  
+ Weitere Informationen finden Sie unter:  
+  
+ [Ausführen von Store-Befehle direkt](http://msdn.microsoft.com/en-us/5708d0a2-3f76-4825-978a-d06ff5c4bb3d) und  
+  
+ [Vorgehensweise: Direktes Ausführen von Befehlen für die Datenquelle](http://msdn.microsoft.com/en-us/def3cc87-cfff-4dee-83cf-1a40c73a2d01)  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteStoreQuery&lt;TElement&gt;">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.ObjectResult&lt;TElement&gt; ExecuteStoreQuery&lt;TElement&gt; (string commandText, params object[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Objects.ObjectResult`1&lt;!!TElement&gt; ExecuteStoreQuery&lt;TElement&gt;(string commandText, object[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.ExecuteStoreQuery``1(System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.ObjectResult&lt;TElement&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TElement" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="commandText" Type="System.String" />
+        <Parameter Name="parameters" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <typeparam name="TElement">To be added.</typeparam>
+        <param name="commandText">Der Befehl, der in der systemeigenen Sprache der Datenquelle ausführen.</param>
+        <param name="parameters">Ein Array von Parametern an den Befehl übergeben werden soll.</param>
+        <summary>Führt eine Abfrage direkt für die Datenquelle, die eine Sequenz von typisierten Ergebnisse zurückgibt.</summary>
+        <returns>Eine Enumeration von Objekten des Typs <paramref name="TResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Objects.ObjectContext.ExecuteStoreQuery%2A> Methode verwendet die vorhandene Verbindung, um einen beliebigen Befehl direkt für die Datenquelle auszuführen. Der Speicherbefehl wird im Kontext der aktuellen Transaktion ausgeführt, wenn eine solche Transaktion vorhanden ist.  
+  
+ Der Aufruf der <xref:System.Data.Objects.ObjectContext.ExecuteStoreQuery%2A>-Methode entspricht dem Aufruf der <xref:System.Data.Common.DbCommand.ExecuteReader%2A>-Methode der <xref:System.Data.Common.DbCommand>-Klasse, nur gibt die <xref:System.Data.Objects.ObjectContext.ExecuteStoreQuery%2A>-Methode Entitäten zurück und die <xref:System.Data.Common.DbCommand.ExecuteReader%2A>-Methode gibt Eigenschaftswerte im <xref:System.Data.Common.DbDataReader> zurück.  
+  
+ Rufen Sie die <xref:System.Data.Objects.ObjectContext.ExecuteStoreQuery%2A> mit der angegebenen Entität Satzname, wenn Sie die Ergebnisse nachverfolgt werden sollen.  
+  
+ Rufen Sie die <xref:System.Data.Objects.ObjectContext.Translate%2A> Methode übersetzt eine <xref:System.Data.Common.DbDataReader> in Entitätsobjekten, wenn der Leser Datenzeilen enthält, die den angegebenen Entitätstyp zugeordnet.  
+  
+ Die Verwendung parametrisierter Befehle hilft beim Schutz vor SQL Injection-Angriffen, bei denen ein Angreifer einen SQL-Befehl in eine SQL-Anweisung einschleust, der die Sicherheit auf dem Server gefährdet. Parametrisierte Befehle schützen vor einer SQL-Injection-Angriff, durch die sichergestellt wird, dass die Werte aus einer externen Quelle empfangen als nur Werte und nicht als Bestandteil der SQL-Anweisung übergeben werden. Daher werden in einen Wert eingefügte SQL-Befehle nicht an der Datenquelle ausgeführt. Stattdessen werden sie nur als Parameterwert ausgewertet. Zusätzlich zu den Sicherheitsvorteilen stellen parametrisierte Befehle eine praktische Methode zum Organisieren von Werten mit einer SQL­Anweisung oder an eine gespeicherte Prozedur übergeben werden.  
+  
+ Der `parameters`-Wert kann ein Array von <xref:System.Data.Common.DbParameter>-Objekten oder ein Array von Parameterwerten sein. Wenn nur Werte angegeben sind, ein Array von <xref:System.Data.Common.DbParameter> Objekte auf Grundlage der Reihenfolge der Werte im Array erstellt.  
+  
+ Weitere Informationen finden Sie unter:  
+  
+ [Ausführen von Store-Befehle direkt](http://msdn.microsoft.com/en-us/5708d0a2-3f76-4825-978a-d06ff5c4bb3d) und  
+  
+ [Vorgehensweise: Direktes Ausführen von Befehlen für die Datenquelle](http://msdn.microsoft.com/en-us/def3cc87-cfff-4dee-83cf-1a40c73a2d01)  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteStoreQuery&lt;TEntity&gt;">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.ObjectResult&lt;TEntity&gt; ExecuteStoreQuery&lt;TEntity&gt; (string commandText, string entitySetName, System.Data.Objects.MergeOption mergeOption, params object[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Objects.ObjectResult`1&lt;!!TEntity&gt; ExecuteStoreQuery&lt;TEntity&gt;(string commandText, string entitySetName, valuetype System.Data.Objects.MergeOption mergeOption, object[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.ExecuteStoreQuery``1(System.String,System.String,System.Data.Objects.MergeOption,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.ObjectResult&lt;TEntity&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TEntity" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="commandText" Type="System.String" />
+        <Parameter Name="entitySetName" Type="System.String" />
+        <Parameter Name="mergeOption" Type="System.Data.Objects.MergeOption" />
+        <Parameter Name="parameters" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <typeparam name="TEntity">To be added.</typeparam>
+        <param name="commandText">Der Befehl, der in der systemeigenen Sprache der Datenquelle ausführen.</param>
+        <param name="entitySetName">Die Entitätenmenge des der <c>TResult</c> Typ. Wenn einem Entitätenmengennamen nicht angegeben wird, werden die Ergebnisse nicht sehr verfolgt werden.</param>
+        <param name="mergeOption">Die beim Ausführen der Abfrage zu verwendende <see cref="T:System.Data.Objects.MergeOption" />. Die Standardeinstellung ist <see cref="F:System.Data.Objects.MergeOption.AppendOnly" />.</param>
+        <param name="parameters">Ein Array von Parametern an den Befehl übergeben werden soll.</param>
+        <summary>Führt eine Abfrage direkt für die Datenquelle und gibt eine Sequenz von typisierten Ergebnisse zurück. Geben Sie die Entitätenmenge und der MergeOption, sodass Abfrageergebnisse als Entitäten nachverfolgt werden können.</summary>
+        <returns>Eine Enumeration von Objekten des Typs <paramref name="TResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Objects.ObjectContext.ExecuteStoreQuery%2A> Methode verwendet die vorhandene Verbindung, um einen beliebigen Befehl direkt für die Datenquelle auszuführen. Der Speicherbefehl wird im Kontext der aktuellen Transaktion ausgeführt, wenn eine solche Transaktion vorhanden ist.  
+  
+ Der Aufruf der <xref:System.Data.Objects.ObjectContext.ExecuteStoreQuery%2A>-Methode entspricht dem Aufruf der <xref:System.Data.Common.DbCommand.ExecuteReader%2A>-Methode der <xref:System.Data.Common.DbCommand>-Klasse, nur gibt die <xref:System.Data.Objects.ObjectContext.ExecuteStoreQuery%2A>-Methode Entitäten zurück und die <xref:System.Data.Common.DbCommand.ExecuteReader%2A>-Methode gibt Eigenschaftswerte im <xref:System.Data.Common.DbDataReader> zurück.  
+  
+ Geben Sie, dass der Name der Entitätenmenge, wenn Sie die Ergebnisse als Entitäten verfolgt werden sollen.  
+  
+ Rufen Sie <xref:System.Data.Objects.ObjectContext.Translate%2A> Methode übersetzt eine <xref:System.Data.Common.DbDataReader> in Entitätsobjekten, wenn der Leser Datenzeilen enthält, die den angegebenen Entitätstyp zugeordnet.  
+  
+ Die Verwendung parametrisierter Befehle hilft beim Schutz vor SQL Injection-Angriffen, bei denen ein Angreifer einen SQL-Befehl in eine SQL-Anweisung einschleust, der die Sicherheit auf dem Server gefährdet. Parametrisierte Befehle schützen vor einer SQL-Injection-Angriff, durch die sichergestellt wird, dass die Werte aus einer externen Quelle empfangen als nur Werte und nicht als Bestandteil der SQL-Anweisung übergeben werden. Daher werden in einen Wert eingefügte SQL-Befehle nicht an der Datenquelle ausgeführt. Stattdessen werden sie nur als Parameterwert ausgewertet. Zusätzlich zu den Sicherheitsvorteilen stellen parametrisierte Befehle eine praktische Methode zum Organisieren von Werten mit einer SQL­Anweisung oder an eine gespeicherte Prozedur übergeben werden.  
+  
+ Der `parameters`-Wert kann ein Array von <xref:System.Data.Common.DbParameter>-Objekten oder ein Array von Parameterwerten sein. Wenn nur Werte angegeben sind, ein Array von <xref:System.Data.Common.DbParameter> Objekte auf Grundlage der Reihenfolge der Werte im Array erstellt.  
+  
+ Weitere Informationen finden Sie unter:  
+  
+ [Ausführen von Store-Befehle direkt](http://msdn.microsoft.com/en-us/5708d0a2-3f76-4825-978a-d06ff5c4bb3d) und  
+  
+ [Vorgehensweise: Direktes Ausführen von Befehlen für die Datenquelle](http://msdn.microsoft.com/en-us/def3cc87-cfff-4dee-83cf-1a40c73a2d01)  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKnownProxyTypes">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEnumerable&lt;Type&gt; GetKnownProxyTypes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IEnumerable`1&lt;class System.Type&gt; GetKnownProxyTypes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.GetKnownProxyTypes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Type&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle vorhandenen Proxytypen zurück.</summary>
+        <returns>Ein <see cref="T:System.Collections.Generic.IEnumerable`1" /> aller vorhandenen Proxy-Typen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Objects.ObjectContext.GetKnownProxyTypes%2A> Methode wird verwendet, wenn Objekt Proxygenerierung für POCO-Entitäten aktiviert ist. Weitere Informationen finden Sie unter [Anforderungen für das Erstellen von Proxys POCO](http://msdn.microsoft.com/en-us/dcdbf982-9b9d-4582-806a-64de4a1c03c8) und [arbeiten mit POCO-Entitäten](http://msdn.microsoft.com/en-us/5e0fb82a-b6d1-41a1-b37b-c12db61629d3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectByKey">
+      <MemberSignature Language="C#" Value="public object GetObjectByKey (System.Data.EntityKey key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetObjectByKey(class System.Data.EntityKey key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.GetObjectByKey(System.Data.EntityKey)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Data.EntityKey" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel des zu suchenden Objekts.</param>
+        <summary>Gibt ein Objekt mit dem angegebenen Entitätsschlüssel zurück.</summary>
+        <returns>Ein <see cref="T:System.Object" />, bei dem es sich um die Instanz eines Entitätstyps handelt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Objects.ObjectContext.GetObjectByKey%2A> versucht ein Objekt mit dem angegebenen <xref:System.Data.EntityKey> vom <xref:System.Data.Objects.ObjectStateManager> abzurufen. Wenn das Objekt derzeit nicht in den Objektkontext geladen wird, wird eine Abfrage bei einem Versuch, das Objekt aus der Datenquelle zurückgeben ausgeführt. Weitere Informationen finden Sie unter [Objektabfragen](http://msdn.microsoft.com/en-us/0768033c-876f-471d-85d5-264884349276).  
+  
+ <xref:System.Data.Objects.ObjectContext.GetObjectByKey%2A> löst eine <xref:System.Data.ObjectNotFoundException> aus, wenn das Objekt nicht gefunden wird. Um die Behandlung dieser Ausnahme zu vermeiden, können Sie stattdessen die <xref:System.Data.Objects.ObjectContext.TryGetObjectByKey%2A>-Methode verwenden.  
+  
+ Diese Methode gibt Objekte im <xref:System.Data.EntityState.Deleted>-Status zurück.  
+  
+ Ein temporärer Schlüssel kann nicht verwendet werden, um ein Objekt aus der Datenquelle zurückzugeben.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel beruht auf dem [AdventureWorks Sales-Modell](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). In dem Beispiel wird ein <xref:System.Data.EntityKey> für eine Entität des angegebenen Typs erstellt und anschließend eine Entität mittels Schlüssel abgerufen.  
+  
+ [!code-csharp[DP ObjectServices Concepts#EntityKeyClass_GetObjectByKey](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#entitykeyclass_getobjectbykey)]
+ [!code-vb[DP ObjectServices Concepts#EntityKeyClass_GetObjectByKey](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#entitykeyclass_getobjectbykey)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="key" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.Data.ObjectNotFoundException">Das Objekt wurde nicht gefunden, entweder in der <see cref="T:System.Data.Objects.ObjectStateManager" /> oder die Datenquelle.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectType">
+      <MemberSignature Language="C#" Value="public static Type GetObjectType (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Type GetObjectType(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.GetObjectType(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die <see cref="T:System.Type" /> von Proxy-Objekt.</param>
+        <summary>Gibt den Entitätstyp des POCO-Entität mit einem Proxyobjekt eines angegebenen Typs zurück.</summary>
+        <returns>Die <see cref="T:System.Type" /> der zugeordneten POCO-Entität.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Objects.ObjectContext.GetObjectType%2A> Methode wird verwendet, wenn Objekt Proxygenerierung für POCO-Entitäten aktiviert ist. Weitere Informationen finden Sie unter [Anforderungen für das Erstellen von Proxys POCO](http://msdn.microsoft.com/en-us/dcdbf982-9b9d-4582-806a-64de4a1c03c8) und [arbeiten mit POCO-Entitäten](http://msdn.microsoft.com/en-us/5e0fb82a-b6d1-41a1-b37b-c12db61629d3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="LoadProperty">
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Lädt ein verknüpftes Objekt explizit, bei Verwendung von POCO-Datenklassen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Verwendung von POCO-Datenklassen können verbundene Objekte explizit wie Instanzen von Entitätstypen geladen werden, die von den Entity Data Model-Tools generiert werden. Dies ist, da die Tools die Navigationseigenschaften generieren, die Zurückgeben einer <xref:System.Data.Objects.DataClasses.EntityCollection%601> oder <xref:System.Data.Objects.DataClasses.EntityReference%601> von verknüpften Objekten beim <xref:System.Data.Objects.DataClasses.RelatedEnd.Load%2A> für aufgerufen wird eine <xref:System.Data.Objects.DataClasses.RelatedEnd>. POCO-Entitäten können immer noch geladen werden, indem verzögertes Laden durch Festlegen der <xref:System.Data.Objects.ObjectContextOptions.LazyLoadingEnabled%2A> Eigenschaft, um `true` für die Instanz von <xref:System.Data.Objects.ObjectContextOptions> der zurückgegeben wird, indem die <xref:System.Data.Objects.ObjectContext.ContextOptions%2A?displayProperty=nameWithType> -Eigenschaft, oder mit unverzüglichem Laden mit der <xref:System.Data.Objects.ObjectQuery%601.Include%2A> Methode für die <xref:System.Data.Objects.ObjectQuery%601>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="LoadProperty">
+      <MemberSignature Language="C#" Value="public void LoadProperty (object entity, string navigationProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LoadProperty(object entity, string navigationProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.LoadProperty(System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+        <Parameter Name="navigationProperty" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Die Entität, für die verknüpfte Objekte werden geladen.</param>
+        <param name="navigationProperty">Der Name der Navigationseigenschaft, die die verknüpften Objekte zu ladenden zurückgibt.</param>
+        <summary>Lädt explizit ein Objekt mit dem angegebenen Objekt verknüpft sind, indem die angegebene Navigationseigenschaft und mit der voreingestellten Zusammenführungsoption.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Objects.ObjectContext.LoadProperty%2A> Methode muss aufgerufen werden, um explizite Ladevorgänge bei Verwendung von POCO-Datenklassen zu ermöglichen.  
+  
+ Nach dem Aufruf <xref:System.Data.Objects.ObjectContext.LoadProperty%2A>, das verbundene Objekt durch die Navigationseigenschaften der Quellentität zugegriffen werden kann.  
+  
+ Bei Verwendung von POCO-Datenklassen können verbundene Objekte explizit wie Instanzen von Entitätstypen geladen werden, die von den Entity Data Model-Tools generiert werden. Dies ist, da die Tools die Navigationseigenschaften generieren, die Zurückgeben einer <xref:System.Data.Objects.DataClasses.EntityCollection%601> oder <xref:System.Data.Objects.DataClasses.EntityReference%601> von verknüpften Objekten beim <xref:System.Data.Objects.DataClasses.RelatedEnd.Load%2A> für aufgerufen wird eine <xref:System.Data.Objects.DataClasses.RelatedEnd>. POCO-Entitäten können immer noch geladen werden, indem verzögertes Laden durch Festlegen der <xref:System.Data.Objects.ObjectContextOptions.LazyLoadingEnabled%2A> Eigenschaft, um `true` für die Instanz von <xref:System.Data.Objects.ObjectContextOptions> der zurückgegeben wird, indem die <xref:System.Data.Objects.ObjectContext.ContextOptions%2A?displayProperty=nameWithType> -Eigenschaft, oder mit unverzüglichem Laden mit der <xref:System.Data.Objects.ObjectQuery%601.Include%2A> Methode für die <xref:System.Data.Objects.ObjectQuery%601>.  
+  
+ Wenn die <xref:System.Data.Objects.ObjectContext.LoadProperty%2A> -Methode aufgerufen wird, werden Objekte in geladen der <xref:System.Data.Objects.ObjectContext> unter Verwendung des standardmäßigen <xref:System.Data.Objects.MergeOption> Wert <xref:System.Data.Objects.MergeOption.AppendOnly>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <paramref name="entity" /> befindet sich in einem <see cref="F:System.Data.EntityState.Detached" />, <see cref="F:System.Data.EntityState.Added," /> oder <see cref="F:System.Data.EntityState.Deleted" /> Zustand  
+  
+ - oder -   
+  
+ Die <paramref name="entity" /> ist auf eine andere Instanz angefügt <see cref="T:System.Data.Objects.ObjectContext" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadProperty">
+      <MemberSignature Language="C#" Value="public void LoadProperty (object entity, string navigationProperty, System.Data.Objects.MergeOption mergeOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LoadProperty(object entity, string navigationProperty, valuetype System.Data.Objects.MergeOption mergeOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.LoadProperty(System.Object,System.String,System.Data.Objects.MergeOption)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+        <Parameter Name="navigationProperty" Type="System.String" />
+        <Parameter Name="mergeOption" Type="System.Data.Objects.MergeOption" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Die Entität, für die verknüpfte Objekte werden geladen.</param>
+        <param name="navigationProperty">Der Name der Navigationseigenschaft, die die verknüpften Objekte zu ladenden zurückgibt.</param>
+        <param name="mergeOption">Die <see cref="T:System.Data.Objects.MergeOption" /> zu verwendende Wert beim Laden der verbundenen Objekte.</param>
+        <summary>Lädt explizit ein Objekt, das mit dem angegebenen Objekt verknüpft ist, indem die angegebene Navigationseigenschaft und mit der angegebenen MergeOption aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Objects.ObjectContext.LoadProperty%2A> Methode muss aufgerufen werden, um explizite Ladevorgänge bei Verwendung von POCO-Datenklassen zu ermöglichen.  
+  
+ Nach dem Aufruf <xref:System.Data.Objects.ObjectContext.LoadProperty%2A>, das verbundene Objekt durch die Navigationseigenschaften der Quellentität zugegriffen werden kann.  
+  
+ Bei Verwendung von POCO-Datenklassen können verbundene Objekte explizit wie Instanzen von Entitätstypen geladen werden, die von den Entity Data Model-Tools generiert werden. Dies ist, da die Tools die Navigationseigenschaften generieren, die Zurückgeben einer <xref:System.Data.Objects.DataClasses.EntityCollection%601> oder <xref:System.Data.Objects.DataClasses.EntityReference%601> von verknüpften Objekten beim <xref:System.Data.Objects.DataClasses.RelatedEnd.Load%2A> für aufgerufen wird eine <xref:System.Data.Objects.DataClasses.RelatedEnd>. POCO-Entitäten können immer noch geladen werden, indem verzögertes Laden durch Festlegen der <xref:System.Data.Objects.ObjectContextOptions.LazyLoadingEnabled%2A> Eigenschaft, um `true` für die Instanz von <xref:System.Data.Objects.ObjectContextOptions> der zurückgegeben wird, indem die <xref:System.Data.Objects.ObjectContext.ContextOptions%2A?displayProperty=nameWithType> -Eigenschaft, oder mit unverzüglichem Laden mit der <xref:System.Data.Objects.ObjectQuery%601.Include%2A> Methode für die <xref:System.Data.Objects.ObjectQuery%601>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <paramref name="entity" /> befindet sich in einem <see cref="F:System.Data.EntityState.Detached" />, <see cref="F:System.Data.EntityState.Added," /> oder <see cref="F:System.Data.EntityState.Deleted" /> Zustand  
+  
+ - oder -   
+  
+ Die <paramref name="entity" /> ist auf eine andere Instanz angefügt <see cref="T:System.Data.Objects.ObjectContext" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadProperty&lt;TEntity&gt;">
+      <MemberSignature Language="C#" Value="public void LoadProperty&lt;TEntity&gt; (TEntity entity, System.Linq.Expressions.Expression&lt;Func&lt;TEntity,object&gt;&gt; selector);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LoadProperty&lt;TEntity&gt;(!!TEntity entity, class System.Linq.Expressions.Expression`1&lt;class System.Func`2&lt;!!TEntity, object&gt;&gt; selector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.LoadProperty``1(``0,System.Linq.Expressions.Expression{System.Func{``0,System.Object}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TEntity" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="entity" Type="TEntity" />
+        <Parameter Name="selector" Type="System.Linq.Expressions.Expression&lt;System.Func&lt;TEntity,System.Object&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TEntity">To be added.</typeparam>
+        <param name="entity">Das Quellobjekt, das für das verknüpfte Objekte werden geladen.</param>
+        <param name="selector">Eine LINQ-Ausdruck, der die verwandten Objekte zu ladenden definiert.</param>
+        <summary>Lädt explizit ein Objekt, das mit dem angegebenen Objekt verknüpft ist, indem der angegebene LINQ-Abfrage und mit der voreingestellten Zusammenführungsoption.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Objects.ObjectContext.LoadProperty%2A> Methode muss aufgerufen werden, um explizite Ladevorgänge bei Verwendung von POCO-Datenklassen zu ermöglichen.  
+  
+ Nach dem Aufruf <xref:System.Data.Objects.ObjectContext.LoadProperty%2A>, das verbundene Objekt durch die Navigationseigenschaften der Quellentität zugegriffen werden kann.  
+  
+ Die zu ladende Eigenschaft wird angegeben, von einem LINQ-Ausdruck, der in Form einer Memberzugriff einfache Eigenschaft, wie in sein muss `(entity) => entity.PropertyName`, wobei *PropertyName* ist die Navigationseigenschaft, die verwandten Objekte zu ladenden zurückgibt. Es wird eine Ausnahme ausgelöst, wenn andere Formen von LINQ-Ausdruck verwendet werden.  
+  
+ Bei Verwendung von POCO-Datenklassen können verbundene Objekte explizit wie Instanzen von Entitätstypen geladen werden, die von den Entity Data Model-Tools generiert werden. Dies ist, da die Tools die Navigationseigenschaften generieren, die Zurückgeben einer <xref:System.Data.Objects.DataClasses.EntityCollection%601> oder <xref:System.Data.Objects.DataClasses.EntityReference%601> von verknüpften Objekten beim <xref:System.Data.Objects.DataClasses.RelatedEnd.Load%2A> für aufgerufen wird eine <xref:System.Data.Objects.DataClasses.RelatedEnd>. POCO-Entitäten können immer noch geladen werden, indem verzögertes Laden durch Festlegen der <xref:System.Data.Objects.ObjectContextOptions.LazyLoadingEnabled%2A> Eigenschaft, um `true` für die Instanz von <xref:System.Data.Objects.ObjectContextOptions> der zurückgegeben wird, indem die <xref:System.Data.Objects.ObjectContext.ContextOptions%2A?displayProperty=nameWithType> -Eigenschaft, oder mit unverzüglichem Laden mit der <xref:System.Data.Objects.ObjectQuery%601.Include%2A> Methode für die <xref:System.Data.Objects.ObjectQuery%601>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="selector" />stellt keine gültigen Eingabeparameter bereit.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="selector" /> ist NULL.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <paramref name="entity" /> befindet sich in einem <see cref="F:System.Data.EntityState.Detached" />, <see cref="F:System.Data.EntityState.Added," /> oder <see cref="F:System.Data.EntityState.Deleted" /> Zustand  
+  
+ - oder -   
+  
+ Die <paramref name="entity" /> ist auf eine andere Instanz angefügt <see cref="T:System.Data.Objects.ObjectContext" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadProperty&lt;TEntity&gt;">
+      <MemberSignature Language="C#" Value="public void LoadProperty&lt;TEntity&gt; (TEntity entity, System.Linq.Expressions.Expression&lt;Func&lt;TEntity,object&gt;&gt; selector, System.Data.Objects.MergeOption mergeOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LoadProperty&lt;TEntity&gt;(!!TEntity entity, class System.Linq.Expressions.Expression`1&lt;class System.Func`2&lt;!!TEntity, object&gt;&gt; selector, valuetype System.Data.Objects.MergeOption mergeOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.LoadProperty``1(``0,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Data.Objects.MergeOption)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TEntity" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="entity" Type="TEntity" />
+        <Parameter Name="selector" Type="System.Linq.Expressions.Expression&lt;System.Func&lt;TEntity,System.Object&gt;&gt;" />
+        <Parameter Name="mergeOption" Type="System.Data.Objects.MergeOption" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TEntity">To be added.</typeparam>
+        <param name="entity">Das Quellobjekt, das für das verknüpfte Objekte werden geladen.</param>
+        <param name="selector">Eine LINQ-Ausdruck, der die verwandten Objekte zu ladenden definiert.</param>
+        <param name="mergeOption">Die <see cref="T:System.Data.Objects.MergeOption" /> zu verwendende Wert beim Laden der verbundenen Objekte.</param>
+        <summary>Lädt explizit ein Objekt, das mit dem angegebenen Objekt verknüpft ist, indem der angegebene LINQ-Abfrage und mithilfe der angegebenen Zusammenführungsoption.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Objects.ObjectContext.LoadProperty%2A> Methode muss aufgerufen werden, um explizite Ladevorgänge bei Verwendung von POCO-Datenklassen zu ermöglichen.  
+  
+ Nach dem Aufruf <xref:System.Data.Objects.ObjectContext.LoadProperty%2A>, das verbundene Objekt durch die Navigationseigenschaften der Quellentität zugegriffen werden kann.  
+  
+ Die zu ladende Eigenschaft wird angegeben, von einem LINQ-Ausdruck, der in Form einer Memberzugriff einfache Eigenschaft, wie in sein muss `(entity) => entity.PropertyName` , in denen *PropertyName* ist die Navigationseigenschaft, die verwandten Objekte zu ladenden zurückgibt. Es wird eine Ausnahme ausgelöst, wenn andere Formen von LINQ-Ausdruck verwendet werden.  
+  
+ Bei Verwendung von POCO-Datenklassen können verbundene Objekte explizit wie Instanzen von Entitätstypen geladen werden, die von den Entity Data Model-Tools generiert werden. Dies ist, da die Tools die Navigationseigenschaften generieren, die Zurückgeben einer <xref:System.Data.Objects.DataClasses.EntityCollection%601> oder <xref:System.Data.Objects.DataClasses.EntityReference%601> von verknüpften Objekten beim <xref:System.Data.Objects.DataClasses.RelatedEnd.Load%2A> für aufgerufen wird eine <xref:System.Data.Objects.DataClasses.RelatedEnd>. POCO-Entitäten können immer noch geladen werden, indem verzögertes Laden durch Festlegen der <xref:System.Data.Objects.ObjectContextOptions.LazyLoadingEnabled%2A> Eigenschaft, um `true` für die Instanz von <xref:System.Data.Objects.ObjectContextOptions> der zurückgegeben wird, indem die <xref:System.Data.Objects.ObjectContext.ContextOptions%2A?displayProperty=nameWithType> -Eigenschaft, oder mit unverzüglichem Laden mit der <xref:System.Data.Objects.ObjectQuery%601.Include%2A> Methode für die <xref:System.Data.Objects.ObjectQuery%601>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="selector" />stellt keine gültigen Eingabeparameter bereit.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="selector" /> ist NULL.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <paramref name="entity" /> befindet sich in einem <see cref="F:System.Data.EntityState.Detached" />, <see cref="F:System.Data.EntityState.Added," /> oder <see cref="F:System.Data.EntityState.Deleted" /> Zustand  
+  
+ - oder -   
+  
+ Die <paramref name="entity" /> ist auf eine andere Instanz angefügt <see cref="T:System.Data.Objects.ObjectContext" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MetadataWorkspace">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.MetadataWorkspace MetadataWorkspace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Metadata.Edm.MetadataWorkspace MetadataWorkspace" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.ObjectContext.MetadataWorkspace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.MetadataWorkspace</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den vom Objektkontext verwendeten Metadaten-Arbeitsbereich ab.</summary>
+        <value>Das diesem <see cref="T:System.Data.Metadata.Edm.MetadataWorkspace" /> zugeordnete <see cref="T:System.Data.Objects.ObjectContext" />-Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Metadata.Edm.MetadataWorkspace>-Klasse ist eine zentrale Laufzeit-API, mit deren Hilfe im Kontext einer Anwendung mit den Entity Data Model-Metadaten (EDM) interagiert werden kann. Weitere Informationen finden Sie unter [Metadaten-Arbeitsbereich](http://msdn.microsoft.com/en-us/601aee56-3eda-4caa-9082-a01df76c5e84).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectMaterialized">
+      <MemberSignature Language="C#" Value="public event System.Data.Objects.ObjectMaterializedEventHandler ObjectMaterialized;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Data.Objects.ObjectMaterializedEventHandler ObjectMaterialized" />
+      <MemberSignature Language="DocId" Value="E:System.Data.Objects.ObjectContext.ObjectMaterialized" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.ObjectMaterializedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn im Rahmen einer Abfrage oder eines Ladevorgangs ein neues Entitätsobjekt aus Daten in der Datenquelle erstellt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, nachdem alle skalaren, komplexen und verweisen auf die Eigenschaften für ein Objekt, aber bevor geladen werden, dass Sie Auflistungen festgelegt wurden. Wenn ein Objekt mit dem gleichen Schlüsselwert im Objektkontext vorhanden ist, das Entity Framework das Objekt nicht neu erstellen und dieses Ereignis wird nicht ausgelöst werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectStateManager">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.ObjectStateManager ObjectStateManager { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Objects.ObjectStateManager ObjectStateManager" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.ObjectContext.ObjectStateManager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.ObjectStateManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Objektstatus-Manager ab, der vom Objektkontext verwendet wird, um Objektänderungen nachzuverfolgen.</summary>
+        <value>Der von diesem <see cref="T:System.Data.Objects.ObjectStateManager" /> verwendete <see cref="T:System.Data.Objects.ObjectContext" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Diese Beispiele beruhen auf den [AdventureWorks Sales-Modell](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). In diesem Beispiel wird der <xref:System.Data.Objects.ObjectStateManager> aus dem <xref:System.Data.Objects.ObjectContext> abgerufen und für den Zugriff auf ein Objekt im Kontext verwendet.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectStateManager](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectstatemanager)]
+ [!code-vb[DP ObjectServices Concepts#ObjectStateManager](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectstatemanager)]  
+  
+ In diesem Beispiel wird die <xref:System.Data.Objects.ObjectStateManager.TryGetObjectStateEntry%2A>-Methode für den zurückgegebenen <xref:System.Data.Objects.ObjectStateManager> verwendet, um ein Objekt auf Grundlage des zugehörigen Entitätsschlüssels abzurufen.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ApplyItemUpdates](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#applyitemupdates)]
+ [!code-vb[DP ObjectServices Concepts#ApplyItemUpdates](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#applyitemupdates)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryProvider">
+      <MemberSignature Language="C#" Value="protected System.Linq.IQueryProvider QueryProvider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Linq.IQueryProvider QueryProvider" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.ObjectContext.QueryProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.IQueryProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, der LINQ-Abfrage-Anbieter mit diesem Objektkontext verknüpft sind.</summary>
+        <value>Die <see cref="T:System.Linq.IQueryProvider" /> Instanz, die von diesem Objektkontext verwendet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Refresh">
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Aktualisiert bestimmte Objekte im Objektkontext mit Daten aus der Datenquelle an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Reihenfolge, in der Objekte aktualisiert werden, ist nicht deterministisch.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Refresh">
+      <MemberSignature Language="C#" Value="public void Refresh (System.Data.Objects.RefreshMode refreshMode, System.Collections.IEnumerable collection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Refresh(valuetype System.Data.Objects.RefreshMode refreshMode, class System.Collections.IEnumerable collection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.Refresh(System.Data.Objects.RefreshMode,System.Collections.IEnumerable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="refreshMode" Type="System.Data.Objects.RefreshMode" />
+        <Parameter Name="collection" Type="System.Collections.IEnumerable" />
+      </Parameters>
+      <Docs>
+        <param name="refreshMode">Ein <see cref="T:System.Data.Objects.RefreshMode" /> Wert, der angibt, ob die eigenschaftsänderungen im Objektkontext mit Eigenschaftswerten aus der Datenquelle überschrieben werden.</param>
+        <param name="collection">Eine <see cref="T:System.Collections.IEnumerable" />-Auflistung von zu aktualisierenden Objekten.</param>
+        <summary>Aktualisiert eine Auflistung von Objekten im Objektkontext mit Daten aus der Datenquelle an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode hat die doppelten Zweck der Objekte im Objektkontext mit Daten aus der Datenquelle aktualisiert werden können, und wird der Mechanismus, durch den Konflikte aufgelöst werden können. Weitere Informationen finden Sie unter [Änderungen speichern und Verwalten von Parallelität](http://msdn.microsoft.com/en-us/b8378601-4f26-4a05-a24a-f50aeb68610e).  
+  
+ Die Reihenfolge, in der Objekte aktualisiert werden, ist nicht deterministisch.  
+  
+ Nach dem <xref:System.Data.Objects.ObjectContext.Refresh%2A> aufgerufen wird, wird des Objekts ursprüngliche Werte immer mit den Datenquellenwert aktualisiert werden, aber die aktuellen Werte können oder möglicherweise nicht mit den Datenquellenwert aktualisiert werden. Dies ist abhängig vom <xref:System.Data.Objects.RefreshMode>-Wert. Die <xref:System.Data.Objects.RefreshMode.StoreWins> Modus bedeutet, dass die Objekte in der Auflistung der Datenquellenwerte entsprechend aktualisiert werden sollen. <xref:System.Data.Objects.RefreshMode.ClientWins>bedeutet, dass nur die Änderungen im Objektkontext persistent gespeichert werden werden, auch wenn es andere Änderungen in der Datenquelle wurden.  
+  
+ Um sicherzustellen, dass Objekte anhand Quellseite Logik aktualisiert wurden, rufen Sie <xref:System.Data.Objects.ObjectContext.Refresh%2A> mit <xref:System.Data.Objects.RefreshMode.StoreWins> nach dem Aufruf der <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="collection" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="refreshMode" /> ist nicht gültig.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="collection" /> ist leer.  
+  
+ - oder -   
+  
+ Ein Objekt ist nicht an den Kontext angefügt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Refresh">
+      <MemberSignature Language="C#" Value="public void Refresh (System.Data.Objects.RefreshMode refreshMode, object entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Refresh(valuetype System.Data.Objects.RefreshMode refreshMode, object entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.Refresh(System.Data.Objects.RefreshMode,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="refreshMode" Type="System.Data.Objects.RefreshMode" />
+        <Parameter Name="entity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="refreshMode">Einer der <see cref="T:System.Data.Objects.RefreshMode" />-Werte, der den Modus zum Aktualisieren des <see cref="T:System.Data.Objects.ObjectStateManager" /> angibt.</param>
+        <param name="entity">Das zu aktualisierende Objekt.</param>
+        <summary>Aktualisiert ein Objekt im Objektkontext mit Daten aus der Datenquelle an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Objects.ObjectContext.Refresh%2A>weist den doppelten Zweck, dass ein Objekt mit Daten aus der Datenquelle aktualisiert werden und wird der Mechanismus, durch den Konflikte aufgelöst werden können. Weitere Informationen finden Sie unter [Änderungen speichern und Verwalten von Parallelität](http://msdn.microsoft.com/en-us/b8378601-4f26-4a05-a24a-f50aeb68610e).  
+  
+ Die Reihenfolge, in der Objekte aktualisiert werden, ist nicht deterministisch.  
+  
+ Nach der <xref:System.Data.Objects.ObjectContext.Refresh%2A> Methode aufgerufen wird, ursprünglichen Werte des Objekts werden immer mit den Datenquellenwert aktualisiert, aber die aktuellen Werte können oder möglicherweise nicht mit den Datenquellenwert aktualisiert werden. Dies ist abhängig vom <xref:System.Data.Objects.RefreshMode>. Die <xref:System.Data.Objects.RefreshMode.StoreWins> Modus bedeutet, dass das Objekt den Datenquellenwerten entsprechend aktualisiert werden sollen. Die <xref:System.Data.Objects.RefreshMode.ClientWins> Wert bedeutet, dass nur die Änderungen im Objektkontext beibehalten werden, auch wenn es andere Änderungen in der Datenquelle wurden.  
+  
+ Um sicherzustellen, dass ein Objekt durch die Quellseite Logik zur aktualisiert wurde, rufen Sie die <xref:System.Data.Objects.ObjectContext.Refresh%2A> Methode mit dem <xref:System.Data.Objects.RefreshMode.StoreWins> Wert nach dem Aufruf der <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> Methode.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel beruht auf dem [AdventureWorks Sales-Modell](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). Im diesem Beispiel wird versucht, Änderungen zu speichern, was zu einem Parallelitätskonflikt führen kann. Anschließend wird gezeigt, wie der Parallelitätskonflikt gelöst wird, indem der Objektkontext aktualisiert wird, bevor die Änderungen erneut gespeichert werden.  
+  
+ [!code-csharp[DP ObjectServices Concepts#Concurrency](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#concurrency)]
+ [!code-vb[DP ObjectServices Concepts#Concurrency](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#concurrency)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="collection" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="refreshMode" /> ist nicht gültig.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="collection" /> ist leer.  
+  
+ - oder -   
+  
+ Ein Objekt ist nicht an den Kontext angefügt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveChanges">
+      <MemberSignature Language="C#" Value="public int SaveChanges ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 SaveChanges() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.SaveChanges" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Behält alle Updates mit der Datenquelle und Zurücksetzen von Kennwörtern "Änderungen nachverfolgen" im Objektkontext.</summary>
+        <returns>Die Anzahl von Objekten im Status <see cref="F:System.Data.EntityState.Added" />, <see cref="F:System.Data.EntityState.Modified" /> oder <see cref="F:System.Data.EntityState.Deleted" />, als <see cref="M:System.Data.Objects.ObjectContext.SaveChanges" /> aufgerufen wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um sicherzustellen, dass Objekte auf dem Client Daten Quellseite Logik aktualisiert wurden, rufen Sie die <xref:System.Data.Objects.ObjectContext.Refresh%2A> Methode mit dem <xref:System.Data.Objects.RefreshMode.StoreWins> Wert nach dem Aufruf <xref:System.Data.Objects.ObjectContext.SaveChanges%2A>. Weitere Informationen finden Sie unter [Änderungen speichern und Verwalten von Parallelität](http://msdn.microsoft.com/en-us/b8378601-4f26-4a05-a24a-f50aeb68610e).  
+  
+ <xref:System.Data.Objects.ObjectContext.SaveChanges%2A>innerhalb einer Transaktion verarbeitet. <xref:System.Data.Objects.ObjectContext.SaveChanges%2A>Rollback der Transaktion wird, und löst eine Ausnahme aus, wenn eine der geänderten <xref:System.Data.Objects.ObjectStateEntry> Objekte können nicht persistent gespeichert.  
+  
+ Wenn die vollständige Parallelität verletzt wurde, wird eine <xref:System.Data.OptimisticConcurrencyException> ausgelöst. Die Verletzung der vollständigen Parallelität kann aufgelöst werden, indem Sie sie abfangen, die <xref:System.Data.Objects.ObjectContext.Refresh%2A>-Methode mit dem Wert <xref:System.Data.Objects.RefreshMode.StoreWins> oder <xref:System.Data.Objects.RefreshMode.ClientWins> aufrufen und anschließend <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> erneut aufrufen. Weitere Informationen finden Sie unter [Vorgehensweise: Verwalten von Datenparallelität im Objektkontext](http://msdn.microsoft.com/en-us/25ffe70d-ce97-4f0a-8ae0-22b7c40f748a).  
+  
+   
+  
+## Examples  
+ Dieses Beispiel beruht auf dem [AdventureWorks Sales-Modell](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). Im diesem Beispiel wird versucht, Änderungen zu speichern, die möglicherweise einen Parallelitätskonflikt verursachen. Anschließend wird gezeigt, wie der Parallelitätskonflikt gelöst wird, indem der Objektkontext aktualisiert wird, bevor die Änderungen erneut gespeichert werden.  
+  
+ [!code-csharp[DP ObjectServices Concepts#Concurrency](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#concurrency)]
+ [!code-vb[DP ObjectServices Concepts#Concurrency](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#concurrency)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.OptimisticConcurrencyException">In der Datenquelle hat die vollständige Parallelität verletzt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveChanges">
+      <MemberSignature Language="C#" Value="public int SaveChanges (bool acceptChangesDuringSave);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 SaveChanges(bool acceptChangesDuringSave) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.SaveChanges(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use SaveChanges(SaveOptions options) instead.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="acceptChangesDuringSave" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="acceptChangesDuringSave">Dieser Parameter wird für clientseitige Transaktionsunterstützung benötigt. Wenn <see langword="true" />, die für alle Objekte der änderungsnachverfolgung wird zurückgesetzt, nach <see cref="M:System.Data.Objects.ObjectContext.SaveChanges(System.Boolean)" /> abgeschlossen ist. Wenn <see langword="false" />, rufen Sie die <see cref="M:System.Data.Objects.ObjectContext.AcceptAllChanges" /> Methode nach <see cref="M:System.Data.Objects.ObjectContext.SaveChanges(System.Boolean)" />.</param>
+        <summary>Behält alle Updates mit der Datenquelle und optional Zurücksetzen von Kennwörtern änderungsnachverfolgung im Objektkontext.</summary>
+        <returns>Die Anzahl von Objekten im Status <see cref="F:System.Data.EntityState.Added" />, <see cref="F:System.Data.EntityState.Modified" /> oder <see cref="F:System.Data.EntityState.Deleted" />, als <see cref="M:System.Data.Objects.ObjectContext.SaveChanges" /> aufgerufen wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie die <xref:System.Data.Objects.ObjectContext.SaveChanges%28System.Data.Objects.SaveOptions%29> Methode stattdessen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.OptimisticConcurrencyException">Die vollständige Parallelität wurde verletzt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveChanges">
+      <MemberSignature Language="C#" Value="public virtual int SaveChanges (System.Data.Objects.SaveOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 SaveChanges(valuetype System.Data.Objects.SaveOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.SaveChanges(System.Data.Objects.SaveOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.Data.Objects.SaveOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options">Ein <see cref="T:System.Data.Objects.SaveOptions" /> Wert, der das Verhalten des Vorgangs bestimmt.</param>
+        <summary>Behält alle Updates an die Datenquelle mit dem angegebenen <see cref="T:System.Data.Objects.SaveOptions" />.</summary>
+        <returns>Die Anzahl von Objekten im Status <see cref="F:System.Data.EntityState.Added" />, <see cref="F:System.Data.EntityState.Modified" /> oder <see cref="F:System.Data.EntityState.Deleted" />, als <see cref="M:System.Data.Objects.ObjectContext.SaveChanges" /> aufgerufen wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese bestimmte Überladung von <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> entweder sicherstellen, dass <xref:System.Data.Objects.ObjectContext.DetectChanges%2A> wird aufgerufen, bevor Sie Änderungen an der Datenquelle, oder dass speichern <xref:System.Data.Objects.ObjectContext.AcceptAllChanges%2A> wird aufgerufen, nachdem Sie Änderungen an die Datenquelle zu speichern.  
+  
+ Diese Enumeration verfügt über eine <xref:System.FlagsAttribute> , die eine bitweise Kombination der Memberwerte zulässt.  
+  
+ Um sicherzustellen, dass Objekte auf dem Client Daten Quellseite Logik aktualisiert wurden, rufen Sie die <xref:System.Data.Objects.ObjectContext.Refresh%2A> Methode mit dem <xref:System.Data.Objects.RefreshMode.StoreWins> Wert nach dem Aufruf <xref:System.Data.Objects.ObjectContext.SaveChanges%2A>. Die <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> Methode in einer Transaktion ausgeführt wird. <xref:System.Data.Objects.ObjectContext.SaveChanges%2A>Rollback der Transaktion wird, und löst eine Ausnahme aus, wenn eine der geänderten <xref:System.Data.Objects.ObjectStateEntry> Objekte können nicht persistent gespeichert.  
+  
+ Wenn die vollständige Parallelität verletzt wurde, wird eine <xref:System.Data.OptimisticConcurrencyException> ausgelöst. Die Verletzung der vollständigen Parallelität kann aufgelöst werden, indem Sie sie abfangen, die <xref:System.Data.Objects.ObjectContext.Refresh%2A>-Methode mit dem Wert <xref:System.Data.Objects.RefreshMode.StoreWins> oder <xref:System.Data.Objects.RefreshMode.ClientWins> aufrufen und anschließend die <xref:System.Data.Objects.ObjectContext.SaveChanges%2A>-Methode erneut aufrufen. Weitere Informationen finden Sie unter [Vorgehensweise: Verwalten von Datenparallelität im Objektkontext](http://msdn.microsoft.com/en-us/25ffe70d-ce97-4f0a-8ae0-22b7c40f748a).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.OptimisticConcurrencyException">Die vollständige Parallelität wurde verletzt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SavingChanges">
+      <MemberSignature Language="C#" Value="public event EventHandler SavingChanges;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler SavingChanges" />
+      <MemberSignature Language="DocId" Value="E:System.Data.Objects.ObjectContext.SavingChanges" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn Änderungen an der Datenquelle gespeichert werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das <xref:System.Data.Objects.ObjectContext.SavingChanges>-Ereignis wird zu Beginn einer <xref:System.Data.Objects.ObjectContext.SaveChanges%2A>-Operation für einen <xref:System.Data.Objects.ObjectContext> ausgelöst. Dieses Ereignis wird normalerweise dazu verwendet, um geänderte Objekte zu validieren, bevor neue Werte in die Datenbank geschrieben werden.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel beruht auf dem [AdventureWorks Sales-Modell](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). Dabei wird ein Handler für das <xref:System.Data.Objects.ObjectContext.SavingChanges>-Ereignis registriert, der die Validierung des Entitätsstatus durchführt.  
+  
+ [!code-csharp[DP ObjectServices Concepts#SavingChanges](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#savingchanges)]
+ [!code-vb[DP ObjectServices Concepts#SavingChanges](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#savingchanges)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Translate&lt;TElement&gt;">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.ObjectResult&lt;TElement&gt; Translate&lt;TElement&gt; (System.Data.Common.DbDataReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Objects.ObjectResult`1&lt;!!TElement&gt; Translate&lt;TElement&gt;(class System.Data.Common.DbDataReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.Translate``1(System.Data.Common.DbDataReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.ObjectResult&lt;TElement&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TElement" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Data.Common.DbDataReader" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TElement">To be added.</typeparam>
+        <param name="reader">Die <see cref="T:System.Data.Common.DbDataReader" /> mit Entitätsdaten in Entitätsobjekte übersetzt.</param>
+        <summary>Übersetzt einen <see cref="T:System.Data.Common.DbDataReader" /> , Zeilen von Entitätsdaten auf Objekte vom angeforderten Entitätstyp enthält.</summary>
+        <returns>Eine Enumeration von Objekten des Typs <paramref name="TResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Objects.ObjectContext.Translate%2A> Methode wird verwendet, um Entitätsdaten aus übersetzt eine <xref:System.Data.Common.DbDataReader> in Objekte des angeforderten Typs. Dieser Vorgang wird automatisch durchgeführt, wenn ein <xref:System.Data.Objects.ObjectQuery%601> wird ausgeführt, um Entitätsdaten zurückgeben. Die <xref:System.Data.Objects.ObjectContext.Translate%2A> Methode können Sie für eine Datenquelle eine standard ADO.NET-Abfrage ausgeführt wird und die zurückgegebenen Zeilen in Entitätsobjekte übersetzt.  
+  
+ Die angegebene <xref:System.Data.Common.DbDataReader> muss Daten enthalten, die den angeforderten Entitätstyp zugeordnet.  
+  
+ Weitere Informationen finden Sie unter:  
+  
+ [Ausführen von Store-Befehle direkt](http://msdn.microsoft.com/en-us/5708d0a2-3f76-4825-978a-d06ff5c4bb3d) und  
+  
+ [Vorgehensweise: Direktes Ausführen von Befehlen für die Datenquelle](http://msdn.microsoft.com/en-us/def3cc87-cfff-4dee-83cf-1a40c73a2d01)  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wenn <paramref name="reader" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Translate&lt;TEntity&gt;">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.ObjectResult&lt;TEntity&gt; Translate&lt;TEntity&gt; (System.Data.Common.DbDataReader reader, string entitySetName, System.Data.Objects.MergeOption mergeOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Objects.ObjectResult`1&lt;!!TEntity&gt; Translate&lt;TEntity&gt;(class System.Data.Common.DbDataReader reader, string entitySetName, valuetype System.Data.Objects.MergeOption mergeOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.Translate``1(System.Data.Common.DbDataReader,System.String,System.Data.Objects.MergeOption)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.ObjectResult&lt;TEntity&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TEntity" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Data.Common.DbDataReader" />
+        <Parameter Name="entitySetName" Type="System.String" />
+        <Parameter Name="mergeOption" Type="System.Data.Objects.MergeOption" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TEntity">To be added.</typeparam>
+        <param name="reader">Die <see cref="T:System.Data.Common.DbDataReader" /> mit Entitätsdaten in Entitätsobjekte übersetzt.</param>
+        <param name="entitySetName">Die Entitätenmenge des der <c>TResult</c> Typ.</param>
+        <param name="mergeOption">Die <see cref="T:System.Data.Objects.MergeOption" /> um zu verwendende übersetzt Objekte werden dem Objektkontext hinzugefügt. Die Standardeinstellung ist <see cref="F:System.Data.Objects.MergeOption.AppendOnly" />.</param>
+        <summary>Übersetzt einen <see cref="T:System.Data.Common.DbDataReader" /> , Zeilen von Entitätsdaten auf Objekte vom angeforderten Entitätstyp, in einer bestimmten Entitätenmenge und mit der angegebenen Zusammenführungsoption enthält.</summary>
+        <returns>Eine Enumeration von Objekten des Typs <paramref name="TResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Objects.ObjectContext.Translate%2A> Methode wird verwendet, um Entitätsdaten aus übersetzt eine <xref:System.Data.Common.DbDataReader> in Objekte des angeforderten Typs. Dieser Vorgang wird automatisch durchgeführt, wenn ein <xref:System.Data.Objects.ObjectQuery%601> wird ausgeführt, um Entitätsdaten zurückgeben. Die <xref:System.Data.Objects.ObjectContext.Translate%2A> Methode können Sie für eine Datenquelle eine standard ADO.NET-Abfrage ausgeführt wird und die zurückgegebenen Zeilen in Entitätsobjekte übersetzt.  
+  
+ Die angegebene <xref:System.Data.Common.DbDataReader> muss Daten enthalten, die den angeforderten Entitätstyp zugeordnet.  
+  
+ Weitere Informationen finden Sie unter:  
+  
+ [Ausführen von Store-Befehle direkt](http://msdn.microsoft.com/en-us/5708d0a2-3f76-4825-978a-d06ff5c4bb3d) und  
+  
+ [Vorgehensweise: Direktes Ausführen von Befehlen für die Datenquelle](http://msdn.microsoft.com/en-us/def3cc87-cfff-4dee-83cf-1a40c73a2d01)  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wenn <paramref name="reader" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Wenn das angegebene <paramref name="mergeOption" /> ist kein gültiger <see cref="T:System.Data.Objects.MergeOption" /> Wert.</exception>
+        <exception cref="T:System.InvalidOperationException">Wenn das angegebene <paramref name="entitySetName" /> ist keine gültige Entitätenmenge für den <paramref name="TResult" /> Typ.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetObjectByKey">
+      <MemberSignature Language="C#" Value="public bool TryGetObjectByKey (System.Data.EntityKey key, out object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetObjectByKey(class System.Data.EntityKey key, [out] object&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectContext.TryGetObjectByKey(System.Data.EntityKey,System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Data.EntityKey" />
+        <Parameter Name="value" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Schlüssel des zu suchenden Objekts.</param>
+        <param name="value">Enthält das Objekt, wenn diese Methode erfolgreich beendet wurde.</param>
+        <summary>Gibt ein Objekt mit dem angegebenen Entitätsschlüssel zurück.</summary>
+        <returns>
+          <see langword="true" />Wenn das Objekt erfolgreich abgerufen wurde. <see langword="false" />Wenn die <paramref name="key" /> ist temporär, die Verbindung ist <see langword="null" />, oder die <paramref name="value" /> ist <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Objects.ObjectContext.TryGetObjectByKey%2A> versucht ein Objekt mit dem angegebenen <xref:System.Data.EntityKey> vom <xref:System.Data.Objects.ObjectStateManager> abzurufen. Wenn das Objekt derzeit nicht in den Objektkontext geladen wird, wird eine Abfrage bei einem Versuch, das Objekt aus der Datenquelle zurückgeben ausgeführt. Weitere Informationen finden Sie unter [Objektabfragen](http://msdn.microsoft.com/en-us/0768033c-876f-471d-85d5-264884349276).  
+  
+ Verwenden Sie die <xref:System.Data.Objects.ObjectContext.TryGetObjectByKey%2A>-Methode, um die Behandlung der <xref:System.Data.ObjectNotFoundException> zu vermeiden, die vom <xref:System.Data.Objects.ObjectContext.GetObjectByKey%2A> ausgelöst wird, wenn das Objekt nicht gefunden wurde.  
+  
+ Diese Methode gibt Objekte im <xref:System.Data.EntityState.Deleted>-Status zurück.  
+  
+ Ein temporärer Schlüssel kann nicht verwendet werden, um ein Objekt aus der Datenquelle zurückzugeben.  
+  
+ Die <xref:System.Data.Objects.ObjectContext.TryGetObjectByKey%2A> Methode ermöglicht das standardmäßige .NET `TryParse` Muster für die <xref:System.Data.Objects.ObjectContext.GetObjectByKey%2A> Methode zurückgeben `false` bei der <xref:System.Data.ObjectNotFoundException> abgefangen wird.  
+  
+   
+  
+## Examples  
+ Das Beispiel in diesem Thema beruht auf dem [AdventureWorks Sales-Modell](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). In dem Beispiel wird ein <xref:System.Data.EntityKey> für eine Entität des angegebenen Typs erstellt und anschließend versucht, eine Entität mittels Schlüssel abzurufen.  
+  
+ [!code-csharp[DP ObjectServices Concepts#EntityKeyClass_TryGetObjectByKey](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#entitykeyclass_trygetobjectbykey)]
+ [!code-vb[DP ObjectServices Concepts#EntityKeyClass_TryGetObjectByKey](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#entitykeyclass_trygetobjectbykey)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Nicht kompatible Metadaten für <paramref name="key" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

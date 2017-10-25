@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.Instrumentation">
+  <Docs>
+    <summary>Die <see cref="N:System.Web.Instrumentation" /> -Namespace enthält Typen, die Informationen zur Ausführung der aktuellen Seite, bereitstellen, die Ausführung Listener und Instrumentation enthalten und, enthalten die Methoden, die aufgerufen werden, bevor und nachdem Ansichtsmodul Ausgabe gerendert wird.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

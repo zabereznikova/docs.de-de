@@ -1,0 +1,139 @@
+<Type Name="TextReturnReader" FullName="System.Web.Services.Protocols.TextReturnReader">
+  <TypeSignature Language="C#" Value="public class TextReturnReader : System.Web.Services.Protocols.MimeReturnReader" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TextReturnReader extends System.Web.Services.Protocols.MimeReturnReader" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.TextReturnReader" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Services.Protocols.MimeReturnReader</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Lesevorgänge werden Werte für webdiensteclients, die mithilfe von HTTP implementiert, aber ohne SOAP aus HTTP-Antworttext zurückgegeben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Services.Protocols.TextReturnReader>und andere Klassen in der <xref:System.Web.Services.Protocols> Namespace unterstützt die .NET Framework-Implementierungen von Webdiensten über HTTP-GET und HTTP-POST-Vorgänge. Web Service Autoren und Leser serialisieren und deserialisieren, bzw. die Parameter oder Rückgabeobjekt Webmethoden und den HTTP-Anforderung oder Antwort Streams. Web Service Autoren und Leser HTTP für den Transport verwenden, jedoch nicht mit den standardmäßigen SOAP-Nachrichten austauschen.  
+  
+ Die <xref:System.Web.Services.Protocols.TextReturnReader> Klasse implementiert die clientseitige Lesen nicht-XML-Text in Rückgabewerte der Methode. Um einen Rückgabewert zu erhalten, wird der Text, der im Text einer HTTP-Antwort codiert ist, analysiert, mit der Suche mit regulären Ausdrücken Muster, gemäß dem Attribut <xref:System.Web.Services.Protocols.MatchAttribute>, die an eine Webmethode in einer Clientproxyklasse angewendet werden können. Die <xref:System.Web.Services.Protocols.TextReturnReader> -Klasse ruft die <xref:System.Web.Services.Protocols.PatternMatcher> -Klasse tatsächlich den Mustervergleich ausgeführt.  
+  
+ Textmustern bietet eine Möglichkeit für Webdienste zum Abrufen von HTML-Inhalt ohne Konvertierung in XML-Dokumente, die XML-Schema-Definitionen gebunden werden müssen. Reguläre Ausdrücke Suche Ziele werden angegeben, in einem Dokument Web Services Description Language (WSDL) über `match` XML-Elemente im `text` Elemente. Beide Elemente gehören zum Namespace http://microsoft.com/wsdl/mime/textMatching/.  
+  
+ Wenn **entsprechen** in einem WSDL-Dokument Elemente angegeben sind, wendet das Tool Wsdl.exe <xref:System.Web.Services.Protocols.MatchAttribute> -Attribute verwenden, um die entsprechenden Webmethoden in der Clientproxyklasse, die generiert wird. Darüber hinaus <xref:System.Web.Services.Protocols.TextReturnReader> wird verwendet, anstelle von <xref:System.Web.Services.Protocols.XmlReturnReader>, die Standardklasse für die Deserialisierung der Webmethode Rückgabewerte gemäß der .NET Framework-Implementierungen von Webdiensten über HTTP-GET und HTTP-POST-Vorgänge.  
+  
+ Sie in der Regel nicht benötigen, verwenden Sie die <xref:System.Web.Services.Protocols.TextReturnReader> -Klasse direkt verwendet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextReturnReader ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.TextReturnReader.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Services.Protocols.TextReturnReader" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInitializer">
+      <MemberSignature Language="C#" Value="public override object GetInitializer (System.Web.Services.Protocols.LogicalMethodInfo methodInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetInitializer(class System.Web.Services.Protocols.LogicalMethodInfo methodInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.TextReturnReader.GetInitializer(System.Web.Services.Protocols.LogicalMethodInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="methodInfo" Type="System.Web.Services.Protocols.LogicalMethodInfo" />
+      </Parameters>
+      <Docs>
+        <param name="methodInfo">Eine <see cref="T:System.Web.Services.Protocols.LogicalMethodInfo" />, die die Webmethode angibt, für die der Initialisierer abgerufen wird.</param>
+        <summary>Gibt einen Initialisierer für die angegebene Methode zurück.</summary>
+        <returns>Einen Initialisierer für die angegebene Methode</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Initialisierer ist ein Objekt übergeben, die als Parameter an die <xref:System.Web.Services.Protocols.TextReturnReader.Initialize%2A> Methode. Für die <xref:System.Web.Services.Protocols.TextReturnReader> -Klasse, die Initialisierung ist ein <xref:System.Web.Services.Protocols.PatternMatcher> -Objekt auf Grundlage der Rückgabetyp der Webmethode.  
+  
+ Die <xref:System.Web.Services.Protocols.TextReturnReader.GetInitializer%2A> Methode wird aufgerufen, während der dienstinitialisierung. Später, zum Zeitpunkt der Verarbeitung einer Antwort, die Initialisierer-Objekt übergeben wird die <xref:System.Web.Services.Protocols.TextReturnReader.Initialize%2A> Methode einer anderen <xref:System.Web.Services.Protocols.TextReturnReader> Instanz. Die andere Instanz führt das eigentliche lesen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.TextReturnReader.Initialize(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Ein <see cref="T:System.Web.Services.Protocols.PatternMatcher" /> Objekt für den Rückgabetyp der aufgerufenen Webmethode.</param>
+        <summary>Initialisiert eine Instanz an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Services.Protocols.TextReturnReader.Initialize%2A> Methode stellt der <xref:System.Web.Services.Protocols.PatternMatcher> Objekt, das verwendet wird, indem die <xref:System.Web.Services.Protocols.TextReturnReader.Read%2A> Methode beim Analysieren von Text in der HTTP-Antwort enthalten sind. Die <xref:System.Web.Services.Protocols.TextReturnReader.Initialize%2A> Methode wird aufgerufen, die zum Zeitpunkt der Verarbeitung einer Anforderung. Der Eingabeparameter `o`, abgerufen wird, durch Aufrufen der <xref:System.Web.Services.Protocols.TextReturnReader.GetInitializer%2A> Methode in einer anderen Instanz der Klasse, die während der Clientinitialisierung abgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public override object Read (System.Net.WebResponse response, System.IO.Stream responseStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Read(class System.Net.WebResponse response, class System.IO.Stream responseStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.TextReturnReader.Read(System.Net.WebResponse,System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="response" Type="System.Net.WebResponse" />
+        <Parameter Name="responseStream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="response">Ein <see cref="T:System.Net.WebResponse" /> -Objekt, das die ausgabemeldung für einen Vorgang enthält.</param>
+        <param name="responseStream">Ein <see cref="T:System.IO.Stream" /> , deren Inhalt wird der Hauptteil der HTTP-Antwort dargestellt, durch die <c>Antwort</c> Parameter.</param>
+        <summary>Analysiert den Text in der HTTP-Antwort.</summary>
+        <returns>Ein Objekt mit der deserialisierte Webmethode-Rückgabewert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Analysieren des Textinhalts der HTTP-Antwort der <xref:System.Web.Services.Protocols.TextReturnReader> Implementierung der Klasse die <xref:System.Web.Services.Protocols.TextReturnReader.Read%2A> -Methode verwendet die <xref:System.Web.Services.Protocols.PatternMatcher> -Objekt übergeben, als Argument an die <xref:System.Web.Services.Protocols.TextReturnReader.Initialize%2A> Methode. Es schließt den Antwortstream vor der Rückgabe der deserialisierten Rückgabewert der Webmethode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

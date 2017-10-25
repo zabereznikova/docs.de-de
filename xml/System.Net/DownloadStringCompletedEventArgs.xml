@@ -1,0 +1,93 @@
+<Type Name="DownloadStringCompletedEventArgs" FullName="System.Net.DownloadStringCompletedEventArgs">
+  <TypeSignature Language="C#" Value="public class DownloadStringCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DownloadStringCompletedEventArgs extends System.ComponentModel.AsyncCompletedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Net.DownloadStringCompletedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.WebClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.AsyncCompletedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Net.WebClient.DownloadStringCompleted" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Instanzen dieser Klasse übergeben werden, um die <xref:System.Net.DownloadStringCompletedEventHandler>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, eine Zeichenfolge asynchron herunterladen.  
+  
+ [!code-cpp[NCLWebClientAsync#28](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLWebClientAsync/CPP/asyncmethods.cpp#28)]
+ [!code-csharp[NCLWebClientAsync#28](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLWebClientAsync/CS/asyncmethods.cs#28)]
+ [!code-vb[NCLWebClientAsync#28](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLWebClientAsync/VB/asyncmethods.vb#28)]  
+  
+ Die folgende Methode wird aufgerufen, wenn der Download abgeschlossen ist.  
+  
+ [!code-cpp[NCLWebClientAsync#29](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLWebClientAsync/CPP/asyncmethods.cpp#29)]
+ [!code-csharp[NCLWebClientAsync#29](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLWebClientAsync/CS/asyncmethods.cs#29)]
+ [!code-vb[NCLWebClientAsync#29](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLWebClientAsync/VB/asyncmethods.vb#29)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Result">
+      <MemberSignature Language="C#" Value="public string Result { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Result" />
+      <MemberSignature Language="DocId" Value="P:System.Net.DownloadStringCompletedEventArgs.Result" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Daten ab, die von heruntergeladen haben, werden eine <see cref="Overload:System.Net.WebClient.DownloadStringAsync" /> Methode.</summary>
+        <value>Ein <see cref="T:System.String" /> , das die heruntergeladenen Daten enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überprüfen Sie die <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> und <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> Eigenschaften vor der Verwendung der Daten, die von dieser Eigenschaft zurückgegeben werden. Wenn die <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> den Wert der Eigenschaft ist ein <xref:System.Exception> Objekt oder die <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> den Wert der Eigenschaft ist `true`, der asynchrone Vorgang wurde nicht ordnungsgemäß abgeschlossen und die <xref:System.Net.DownloadDataCompletedEventArgs.Result%2A> den Wert der Eigenschaft nicht mehr gültig.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NCLWebClientAsync#29](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLWebClientAsync/CPP/asyncmethods.cpp#29)]
+ [!code-csharp[NCLWebClientAsync#29](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLWebClientAsync/CS/asyncmethods.cs#29)]
+ [!code-vb[NCLWebClientAsync#29](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLWebClientAsync/VB/asyncmethods.vb#29)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

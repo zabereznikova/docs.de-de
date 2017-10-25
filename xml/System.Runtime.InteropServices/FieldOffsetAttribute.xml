@@ -1,0 +1,122 @@
+<Type Name="FieldOffsetAttribute" FullName="System.Runtime.InteropServices.FieldOffsetAttribute">
+  <TypeSignature Language="C#" Value="public sealed class FieldOffsetAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit FieldOffsetAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.FieldOffsetAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Field, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die physische Position von Feldern innerhalb der nicht verwalteten Darstellung einer Klasse oder Struktur an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können dieses Attribut auf Felder anwenden.  
+  
+ Dieses Attribut wird verwendet, wenn <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType>, mit <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType> an ihren Konstruktor übergeben, wird angewendet, um eine Klasse oder Struktur an den Offset von jeder nicht- `static` oder Konstanten Member innerhalb der nicht verwalteten Darstellung dieser Klasse oder Struktur.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Anwenden der <xref:System.Runtime.InteropServices.FieldOffsetAttribute> auf Member einer Klasse mit der ein explizites Layout.  
+  
+ [!code-cpp[Classic FieldOffsetAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FieldOffsetAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FieldOffsetAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FieldOffsetAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic FieldOffsetAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FieldOffsetAttribute Example/VB/source.vb#1)]  
+  
+ Ein größeres Beispiel finden Sie unter der <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType> Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FieldOffsetAttribute (int offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.FieldOffsetAttribute.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="offset">Der Offset in Bytes vom Anfang der Struktur auf den Anfang des Felds.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.InteropServices.FieldOffsetAttribute" /> Klasse mit dem Offset in der Struktur bis zum Anfang des Felds.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public int Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Value" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.FieldOffsetAttribute.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Offset vom Anfang der Struktur auf den Anfang des Felds ab.</summary>
+        <value>Der Offset vom Anfang der Struktur auf den Anfang des Felds.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

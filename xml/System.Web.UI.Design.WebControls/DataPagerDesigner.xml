@@ -1,0 +1,259 @@
+<Type Name="DataPagerDesigner" FullName="System.Web.UI.Design.WebControls.DataPagerDesigner">
+  <TypeSignature Language="C#" Value="public class DataPagerDesigner : System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataPagerDesigner extends System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.DataPagerDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.ControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Entwurfszeitunterstützung in einem visuellen Designer für das <see cref="T:System.Web.UI.WebControls.DataPager" />-Steuerelement bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einem visuellen Designer, wenn Sie eine Sicht-Designers wechseln (z. B. `Design` anzeigen in [!INCLUDE[vs_current_short](~/includes/vs-current-short-md.md)]), das Markup, das beschreibt, die <xref:System.Web.UI.WebControls.DataPager> Steuerelement wird analysiert. Auf der Entwurfsoberfläche wird eine Entwurfszeitversion des Steuerelements erstellt. Wenn Sie zur Quellansicht wechseln, wird das Steuerelement zur Entwurfszeit als Markup für die Webseite beibehalten.  
+  
+ Die Eigenschaften der <xref:System.Web.UI.Design.WebControls.DataPagerDesigner> Klasse bieten die folgenden Funktionen:  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.ActionLists%2A> Eigenschaft gibt die Liste der Elemente, die verwendet werden, um einen Smarttagbereich zu erstellen.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.PagedControlID%2A> Eigenschaft dient als Designer (Shadowing) Version der <xref:System.Web.UI.WebControls.DataPager.PagedControlID%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.TemplateGroups%2A> -Eigenschaft gibt eine Auflistung der Vorlagengruppen für die auf Vorlagen basierenden Pagerfelder des zugeordneten <xref:System.Web.UI.WebControls.DataPager> Steuerelement.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.UsePreviewControl%2A> -Eigenschaft gibt immer `true`, was bedeutet, dass der Designer eine temporäre Kopie des zugeordneten erstellt <xref:System.Web.UI.WebControls.DataPager> Steuerelement, um das Markup zur Entwurfszeit zu generieren.  
+  
+ Die Methoden der <xref:System.Web.UI.Design.WebControls.DataPagerDesigner> Klasse bieten die folgenden Funktionen:  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.GetDesignTimeHtml%2A> und <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.GetEmptyDesignTimeHtml%2A> Methoden zurück, das HTML-Markup ab, das Rendering des zugeordneten <xref:System.Web.UI.WebControls.DataPager> zur Entwurfszeit.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.Initialize%2A> Methode bereitet den Designer zum Anzeigen, bearbeiten und Entwerfen des zugeordneten <xref:System.Web.UI.WebControls.DataPager> Steuerelement.  
+  
+-   Die <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.PreFilterProperties%2A> Methode dient zum Hinzufügen oder Entfernen von Eigenschaften aus dem Eigenschaftenraster "für die <xref:System.Web.UI.WebControls.DataPager> Steuerelement.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataPagerDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataPagerDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.WebControls.DataPagerDesigner" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] erstellt eine neue Instanz der dem <xref:System.Web.UI.Design.WebControls.DataPagerDesigner> Klasse bei der Erstellung der zugeordneten <xref:System.Web.UI.WebControls.DataPager> Steuerelement oder eine Kopie des Steuerelements auf der Entwurfsoberfläche angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActionLists">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.Design.DesignerActionListCollection ActionLists { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.DesignerActionListCollection ActionLists" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.DataPagerDesigner.ActionLists" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerActionListCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Liste der Elemente, die verwendet werden, erstellen Sie im Smarttagbereich für den zugeordneten <see cref="T:System.Web.UI.WebControls.DataPager" /> Steuerelement.</summary>
+        <value>Die Liste der Elemente, die verwendet werden, erstellen Sie im Smarttagbereich für den zugeordneten <see cref="T:System.Web.UI.WebControls.DataPager" /> Steuerelement.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataPagerDesigner.GetDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Generiert das HTML-Markup ab, das Rendering des zugeordneten <see cref="T:System.Web.UI.WebControls.DataPager" /> -Steuerelements zur Entwurfszeit.</summary>
+        <returns>Das HTML-Markup ab, das Rendering des zugeordneten <see cref="T:System.Web.UI.WebControls.DataPager" /> -Steuerelements zur Entwurfszeit.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.WebControls.DataPager.Fields%2A?displayProperty=nameWithType> Auflistung ist nicht leer ist, die <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.GetDesignTimeHtml> Methode aktualisiert die <xref:System.ComponentModel.TypeDescriptor> Objekt, das Erzwingen der <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.PreFilterProperties%2A> -Methode aufgerufen und ruft dann die grundlegende Implementierung. Wenn die <xref:System.Web.UI.WebControls.DataPager.Fields%2A?displayProperty=nameWithType> -Auflistung leer ist, die <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.GetDesignTimeHtml> Methode ruft die <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.GetEmptyDesignTimeHtml%2A> Methode, um das Markup zu generieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEmptyDesignTimeHtml">
+      <MemberSignature Language="C#" Value="protected override string GetEmptyDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetEmptyDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataPagerDesigner.GetEmptyDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Generiert das HTML-Markup, das darstellt eine <see cref="T:System.Web.UI.WebControls.DataPager" /> -Steuerelements zur Entwurfszeit, die zur Laufzeit keine visuelle Darstellung hat.</summary>
+        <returns>Das HTML-Markup, das eine leere darstellt <see cref="T:System.Web.UI.WebControls.DataPager" /> -Steuerelements zur Entwurfszeit.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.GetEmptyDesignTimeHtml%2A> Methode wird vom Designer zum Rendern der <xref:System.Web.UI.WebControls.DataPager> zur Entwurfszeit zu steuern, wenn die <xref:System.Web.UI.WebControls.DataPager.Fields%2A?displayProperty=nameWithType> Auflistung ist leer. Die <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.GetEmptyDesignTimeHtml%2A> Methodenaufrufe der <xref:System.Web.UI.Design.ControlDesigner.CreatePlaceHolderDesignTimeHtml%28System.String%29> Methode, um einen Platzhalter zu erstellen, die den Typ und die ID des Steuerelements, und zusätzliche Anweisungen für den Benutzer anzeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataPagerDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Das Steuerelement, das entworfen wird.</param>
+        <summary>Initialisiert den Steuerelementdesigner und lädt das angegebene Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Designerhost ruft die <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.Initialize%2A> Methode, wenn es der Designer zum Rendern verwenden kann die <xref:System.Web.UI.WebControls.DataPager> Steuerelement. Die <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.Initialize%2A> -Methode und ihre Basismethoden Eigenschaften konfigurieren und Verbinden mit Ereignissen, die für den Designer erforderlich sind.  
+  
+ Die `component` Parameter ist der <xref:System.Web.UI.WebControls.DataPager> Steuerelement, das diesem Designer zugeordnet, oder eine Kopie des der <xref:System.Web.UI.WebControls.DataPager> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PagedControlID">
+      <MemberSignature Language="C#" Value="public string PagedControlID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PagedControlID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.DataPagerDesigner.PagedControlID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert für die Designer-Version von der <see cref="P:System.Web.UI.WebControls.DataPager.PagedControlID" /> Eigenschaft.</summary>
+        <value>Der Wert der <see cref="P:System.Web.UI.WebControls.DataPager.PagedControlID" />-Eigenschaft.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreFilterProperties">
+      <MemberSignature Language="C#" Value="protected override void PreFilterProperties (System.Collections.IDictionary properties);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PreFilterProperties(class System.Collections.IDictionary properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataPagerDesigner.PreFilterProperties(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Eine Auflistung, die die Eigenschaften enthält, die im Eigenschaftenraster für verfügbar gemacht werden die <see cref="T:System.Web.UI.WebControls.DataPager" /> -Steuerelements zur Entwurfszeit.</param>
+        <summary>Hinzufügt oder entfernt Sie Eigenschaften aus dem Eigenschaftenraster für die <see cref="T:System.Web.UI.WebControls.DataPager" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.PreFilterProperties%2A> Methode fügt eine neue Eigenschaft, um das Eigenschaftenraster des der <xref:System.Web.UI.WebControls.DataPager> Steuerelement, das entspricht der <xref:System.Web.UI.WebControls.DataPager.PagedControlID%2A?displayProperty=nameWithType> Eigenschaft. Wenn die <xref:System.Web.UI.Design.ControlDesigner.InTemplateMode%2A> -Eigenschaftensatz auf `true`, die <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.PreFilterProperties%2A> Methode legt auch fest der <xref:System.ComponentModel.BrowsableAttribute> Attribut des der <xref:System.Web.UI.WebControls.DataPager.Fields%2A?displayProperty=nameWithType> Eigenschaft `BrowsableAttribute.No`. Dadurch wird verhindert, dass Pagerfelder gelöscht wird, mithilfe der `Fields` (Dialogfeld), wenn ein Pagerfeld aus einer Vorlage gebildete im Vorlagenmodus ist.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Überschreiben Sie die <see cref="M:System.Web.UI.Design.WebControls.DataPagerDesigner.PreFilterProperties(System.Collections.IDictionary)" /> Methode, um Eigenschaften hinzufügen oder Ändern von Eigenschaften in der Entwurfszeiteigenschaft-Auflistung. Stellen Sie sicher, dass Sie der Basisklasse aufrufen, <see cref="M:System.Web.UI.Design.WebControls.DataPagerDesigner.PreFilterProperties(System.Collections.IDictionary)" /> -Methode auf, bevor Sie weitere Verarbeitung ausführen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="TemplateGroups">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.Design.TemplateGroupCollection TemplateGroups { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.TemplateGroupCollection TemplateGroups" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.DataPagerDesigner.TemplateGroups" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.TemplateGroupCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der Vorlagengruppen für die auf Vorlagen basierenden Pagerfelder des zugeordneten <see cref="T:System.Web.UI.WebControls.DataPager" /> Steuerelement.</summary>
+        <value>Eine Auflistung der Vorlagengruppen für die auf Vorlagen basierenden Pagerfelder des zugeordneten <see cref="T:System.Web.UI.WebControls.DataPager" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.TemplateGroups%2A> Eigenschaft erstellt eine Auflistung von <xref:System.Web.UI.Design.TemplateGroup> Objekte, die darstellen, die für Vorlagenelemente in einem <xref:System.Web.UI.WebControls.DataPager> -Steuerelements zur Entwurfszeit. Es fügt ein Element auf die Auflistung für jeden <xref:System.Web.UI.WebControls.TemplatePagerField> Objekt in der <xref:System.Web.UI.WebControls.DataPager.Fields%2A> Auflistung der zugeordneten <xref:System.Web.UI.WebControls.DataPager> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsePreviewControl">
+      <MemberSignature Language="C#" Value="protected override bool UsePreviewControl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UsePreviewControl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.DataPagerDesigner.UsePreviewControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Designer eine temporäre Kopie, anstelle des tatsächlichen verwenden soll <see cref="T:System.Web.UI.WebControls.DataPager" /> Steuerelement, das dem Designer zugeordnet ist, um das Markup zur Entwurfszeit zu generieren.</summary>
+        <value>
+          <see langword="true" /> in allen Fällen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

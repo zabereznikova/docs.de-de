@@ -1,0 +1,1327 @@
+<Type Name="BaseValidator" FullName="System.Web.UI.WebControls.BaseValidator">
+  <TypeSignature Language="C#" Value="public abstract class BaseValidator : System.Web.UI.WebControls.Label, System.Web.UI.IValidator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BaseValidator extends System.Web.UI.WebControls.Label implements class System.Web.UI.IValidator" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.BaseValidator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.Label</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IValidator</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("ErrorMessage")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.BaseValidatorDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fungiert als die abstrakte Basisklasse für Validierungssteuerelemente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.BaseValidator> Klasse stellt die basisimplementierung für alle Validierungssteuerelemente bereit. Validierungssteuerelemente werden zum Überprüfen von Benutzereingaben in einer zugeordneten Eingabesteuerelements. Wenn der Benutzer einen Wert, der Überprüfung ein Fehler auftritt eingibt, zeigt das Validierungssteuerelement eine Fehlermeldung an. Da ein Validierungssteuerelement vom Eingabesteuerelement getrennt ist, können Sie die Fehlermeldung an einer beliebigen Stelle auf der Seite auf das Eingabesteuerelement positionieren. ASP.NET verfügt über mehrere Validierungssteuerelemente, die bestimmte Arten von Überprüfung durchgeführt. Die folgende Tabelle beschreibt diese Steuerelemente.  
+  
+|Validierungssteuerelement|Beschreibung|  
+|------------------------|-----------------|  
+|<xref:System.Web.UI.WebControls.CompareValidator>|Überprüft einen Wert anhand des Werts in ein anderes Eingabesteuerelement eingegeben, mit einem konstanten Wert oder anhand eines Datentyps durch Festlegen der <xref:System.Web.UI.WebControls.CompareValidator.Operator%2A?displayProperty=nameWithType> Eigenschaft <xref:System.Web.UI.WebControls.ValidationCompareOperator?displayProperty=nameWithType>.|  
+|<xref:System.Web.UI.WebControls.CustomValidator>|Einen Wert, der mit einem Benutzer bereitgestellten benutzerdefinierten Validierungsroutine wird überprüft.|  
+|<xref:System.Web.UI.WebControls.RangeValidator>|Überprüft, ob ein Wert innerhalb eines Bereichs von Werten ist.|  
+|<xref:System.Web.UI.WebControls.RegularExpressionValidator>|Überprüft einen Wert mit einem regulären Ausdruck.|  
+|<xref:System.Web.UI.WebControls.RequiredFieldValidator>|Überprüft, ob ein Wert in ein erforderliches Feld eingegeben wurde.|  
+  
+ Validierungssteuerelemente validieren stets das zugeordnete Eingabesteuerelement auf dem Server. Validierungssteuerelemente verfügen außerdem über vollständige Client-Side-Implementierung, die Skript-fähigen Browser (z. B. Microsoft Internet Explorer, Version 4.0 und höher) ermöglicht die Validierung auf dem Client. Die clientseitige Validierung verbessert den Validierungsprozess durch Überprüfen von Benutzereingaben, bevor sie an den Server gesendet wird. Dadurch wird ein Fehler auf dem Client erkannt werden, vor dem Senden des Formulars der Roundtrip der notwendigen Informationen für die serverseitige Validierung zu vermeiden.  
+  
+ Mehrere Validierungssteuerelemente können mit einem einzelnen Eingabesteuerelement verwendet werden, um verschiedene Kriterien zu überprüfen. Sie können z. B. mehrere Validierungssteuerelemente auf Anwenden eine <xref:System.Web.UI.WebControls.TextBox> Steuerelement. Können Sie eine <xref:System.Web.UI.WebControls.RangeValidator> Steuerelement, um sicherzustellen, dass den eingegebene im Wert der <xref:System.Web.UI.WebControls.TextBox> -Steuerelement ist innerhalb eines Bereichs festlegen und ein <xref:System.Web.UI.WebControls.RequiredFieldValidator> Steuerelement, um sicherzustellen, dass der Benutzer einen Wert eingibt.  
+  
+ ASP.NET verfügt über viele Steuerelemente, die die Fähigkeit zum Zurücksenden an den Server verfügen. Wenn eines dieser Steuerelemente hat seine `CausesValidation` -Eigenschaftensatz auf `true`, Überprüfung wird ausgeführt, wenn das Steuerelement an den Server zurückgesendet. Die folgenden Steuerelemente haben die Möglichkeit zum Zurücksenden an den Server:  
+  
+-   <xref:System.Web.UI.WebControls.BulletedList?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.WebControls.Button?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.WebControls.CheckBox?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.WebControls.CheckBoxList?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.WebControls.DropDownList?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.HtmlControls.HtmlButton?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.HtmlControls.HtmlInputButton?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.HtmlControls.HtmlInputImage?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.WebControls.ImageButton?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.WebControls.LinkButton?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.WebControls.ListBox?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.WebControls.RadioButtonList?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.WebControls.TextBox?displayProperty=nameWithType>  
+  
+> [!NOTE]
+>  Einige dieser Kontrollen post an den Server nur, wenn die `AutoPostBack` -Eigenschaftensatz auf `true`.  
+  
+ Diese Steuerelemente verfügen über eine `ValidationGroup` Eigenschaft, wenn festgelegt ist, nur die Validierungssteuerelemente innerhalb der angegebenen Gruppe überprüft werden, wenn das Steuerelement ein Postback an den Server auslöst. Gruppieren von Steuerelementen für die Validierung, legen Sie die <xref:System.Web.UI.WebControls.BaseValidator.ValidationGroup%2A> Eigenschaft der einzelnen Validierungssteuerelemente auf den gleichen Wert.  
+  
+ Um ein Validierungssteuerelement ein Eingabesteuerelements zuzuordnen, verwenden Sie die <xref:System.Web.UI.WebControls.BaseValidator.ControlToValidate%2A> Eigenschaft. Verwenden Sie zum Angeben des Texts, in einem Validierungssteuerelement angezeigt werden soll, wenn die Überprüfung fehlschlägt, die <xref:System.Web.UI.WebControls.BaseValidator.Text%2A> Eigenschaft. Sie können auch anzeigen, eine Zusammenfassung aller Steuerelemente, bei denen bei der Überprüfung auf der Seite mit einem <xref:System.Web.UI.WebControls.ValidationSummary> Steuerelement. Anzuzeigende in Text an einer <xref:System.Web.UI.WebControls.ValidationSummary> steuern, verwenden Sie die <xref:System.Web.UI.WebControls.BaseValidator.ErrorMessage%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Wenn Sie festlegen der <xref:System.Web.UI.WebControls.BaseValidator.ErrorMessage%2A> Eigenschaft festlegen, ohne die <xref:System.Web.UI.WebControls.BaseValidator.Text%2A> -Eigenschaft, die den Wert des der <xref:System.Web.UI.WebControls.BaseValidator.ErrorMessage%2A> Eigenschaft wird auch im Validierungssteuerelement angezeigt.  
+  
+ Wenn Validierungssteuerelemente verwenden zu können, sollten Sie immer die Ergebnisse der serverseitige Validierung vor der Verarbeitung überprüfen. Nach einem postback, jedoch bevor die Ereignismethoden aufgerufen werden, auf der Seite ruft die Validierungssteuerelemente und aggregiert die Ergebnisse in der <xref:System.Web.UI.Page.IsValid%2A?displayProperty=nameWithType> Eigenschaft. (Sie können auch aufrufen, die Validierungssteuerelemente, die explizit mit der `Validate` Methode.) In Ihrem eigenen Code sollten Sie überprüfen, die die <xref:System.Web.UI.Page.IsValid%2A?displayProperty=nameWithType> -Eigenschaft gibt `true` vor dem Verarbeiten der Eingabe. Obwohl Skript-fähigen Browser zu verhindern, möglicherweise einen Postback dass verhindern, der auf dem Client angezeigt werden soll, wenn die Validierung immer auch sollten Sie überprüfen fehlgeschlagen ist, <xref:System.Web.UI.Page.IsValid%2A?displayProperty=nameWithType> in Servercode vor der Verarbeitung der überprüften Daten.  
+  
+ Sie können die Überprüfung auch manuell ausführen. Um alle Validierungssteuerelemente auf der Seite zu überprüfen, verwenden Sie die <xref:System.Web.UI.Page.Validate%2A?displayProperty=nameWithType> Methode. Einzelne Validierungssteuerelemente können überprüft werden, mithilfe der <xref:System.Web.UI.WebControls.BaseValidator.Validate%2A> -Methode des Steuerelements.  
+  
+> [!NOTE]
+>  Bei Verwendung der <xref:System.Web.UI.Page.IsValid%2A?displayProperty=nameWithType> Eigenschaft in einer `Page_Load` -Methode, müssen Sie zuerst explizit aufrufen der <xref:System.Web.UI.Page.Validate%2A?displayProperty=nameWithType> Methode. Da nach der Validierung der <xref:System.Web.UI.Control.Load?displayProperty=nameWithType> Ereignis für die Seite, jedoch bevor Sie den Ereignishandler für die `Click` oder `Command` Ereignisse, die <xref:System.Web.UI.Page.IsValid%2A?displayProperty=nameWithType> Eigenschaft erst dann aktualisiert, die <xref:System.Web.UI.Page.Validate%2A?displayProperty=nameWithType> Methode wird aufgerufen. Als Alternative können Sie platzieren Sie Ihren Code im Ereignishandler für das `Click` oder `Command` Ereignis statt der `Page_Load` Methode.  
+  
+ Nicht alle Webserver-Steuerelemente unterstützen Validierungssteuerelemente. Die Standardsteuerelemente, die überprüft werden, können mit einem Validierungssteuerelement sind:  
+  
+-   <xref:System.Web.UI.WebControls.DropDownList?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.WebControls.FileUpload?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.WebControls.ListBox?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.WebControls.RadioButtonList?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.WebControls.TextBox?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.HtmlControls.HtmlInputFile?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.HtmlControls.HtmlInputPassword?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.HtmlControls.HtmlInputText?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.HtmlControls.HtmlSelect?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.HtmlControls.HtmlTextArea?displayProperty=nameWithType>  
+  
+> [!NOTE]
+>  Für ein Eingabesteuerelement überprüft werden die <xref:System.Web.UI.ValidationPropertyAttribute?displayProperty=nameWithType> Attribut muss auf das Steuerelement angewendet werden.  
+  
+> [!NOTE]
+>  Bei Verwendung von Validierungssteuerelemente, die davon Herleiten <xref:System.Web.UI.WebControls.BaseValidator> innerhalb einer <xref:System.Web.UI.UpdatePanel> steuern, stellen Sie sicher, dass das Validierungssteuerelement und das Steuerelement, das diesem zugeordnet ist, im gleichen Bereich sind. Weitere Informationen zum Verwenden der <xref:System.Web.UI.UpdatePanel> für Aktualisierungen von Teilseiten steuern, finden Sie unter [Teilrendering von Seiten Rendering Overview](http://msdn.microsoft.com/library/5c12736d-d9e9-464a-9388-3fe0f9f49e49).  
+  
+ Wenn die Überprüfung fehlschlägt, können Sie den Fokus auf das zugeordnete Eingabesteuerelement festlegen, durch Festlegen der <xref:System.Web.UI.WebControls.BaseValidator.SetFocusOnError%2A> Eigenschaft `true`.  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.WebControls.BaseValidator>, finden Sie unter der <xref:System.Web.UI.WebControls.BaseValidator.%23ctor%2A> Konstruktor.  
+  
+## <a name="accessibility"></a>Barrierefreiheit  
+ Weitere Informationen dazu, wie das Steuerelement so konfigurieren, dass er Markup generiert, das den Accessibility Standards entspricht, finden Sie unter [Barrierefreiheit in Visual Studio und ASP.NET](http://msdn.microsoft.com/library/7e3ce9c4-6b7d-4fb1-94b5-72cf2a44fe13) und [ASP.NET-Steuerelemente und Barrierefreiheit](http://msdn.microsoft.com/library/847a37e3-ce20-41da-b0d3-7dfb0fdae9a0).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mehrere Validierungssteuerelemente verwenden, um sicherzustellen, dass der Benutzer, einen gültigen Wert in eingibt einem <xref:System.Web.UI.WebControls.TextBox> Steuerelement.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[Classic BaseValidator Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic BaseValidator Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic BaseValidator Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic BaseValidator Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Beim Erben von der <see cref="T:System.Web.UI.WebControls.BaseValidator" /> -Klasse, müssen Sie die folgenden Member überschreiben: <see cref="M:System.Web.UI.WebControls.BaseValidator.EvaluateIsValid" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BaseValidator ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BaseValidator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.BaseValidator" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird nicht direkt aufgerufen. Validierungssteuerelemente, die von dieser Klasse erben, können aus ihrer eigenen Konstruktoren initialisiert werden, die grundlegenden Eigenschaften dieser Konstruktor aufrufen.  
+  
+ In der folgenden Tabelle zeigt die anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.WebControls.BaseValidator>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.BaseValidator.IsValid%2A>|`true`|  
+|<xref:System.Web.UI.WebControls.BaseValidator.ForeColor%2A>|<xref:System.Drawing.Color.Red%2A?displayProperty=nameWithType>|  
+|<xref:System.Web.UI.WebControls.BaseValidator.PropertiesValid%2A>|`true`|  
+|<xref:System.Web.UI.WebControls.BaseValidator.RenderUplevel%2A>|`false`|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAttributesToRender">
+      <MemberSignature Language="C#" Value="protected override void AddAttributesToRender (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddAttributesToRender(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BaseValidator.AddAttributesToRender(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Web.UI.HtmlTextWriter" />, der den Ausgabestream für das Rendering von HTML-Inhalten auf dem Client darstellt.</param>
+        <summary>Fügt die HTML-Attribute und-Stile für das Steuerelement mit dem angegebenen gerendert werden <see cref="T:System.Web.UI.HtmlTextWriter" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.BaseValidator.AddAttributesToRender%2A> Methode wird verwendet, um die Attribute des Steuerelements in der HTML-Tag für das Steuerelement gerendert. Diese Methode wird normalerweise von Entwicklern in abgeleiteten Klassen die entsprechenden Attributen einzufügende überschrieben und Stile in die <xref:System.Web.UI.HtmlTextWriter> Ausgabestream für ein Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben der <see cref="M:System.Web.UI.WebControls.BaseValidator.AddAttributesToRender(System.Web.UI.HtmlTextWriter)" /> -Methode, achten Sie darauf, dass Sie die entsprechende Methode in der Basisklasse aufrufen. Andernfalls werden die Attribute in der Basisklasse nicht gerendert.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="AssociatedControlID">
+      <MemberSignature Language="C#" Value="public override string AssociatedControlID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AssociatedControlID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BaseValidator.AssociatedControlID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diese Eigenschaft wird nicht unterstützt.</summary>
+        <value>Diese Eigenschaft wird nicht unterstützt und löst immer eine <see cref="T:System.NotSupportedException" /> aus.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird nicht unterstützt. Diese Eigenschaft wird nur auf der Basis unterstützt <xref:System.Web.UI.WebControls.Label> Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Es wurde versucht, diese Eigenschaft festzulegen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckControlValidationProperty">
+      <MemberSignature Language="C#" Value="protected void CheckControlValidationProperty (string name, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CheckControlValidationProperty(string name, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BaseValidator.CheckControlValidationProperty(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Das zu überprüfende Steuerelement.</param>
+        <param name="propertyName">Zusätzlichen Text ein, die die Quelle der Ausnahme, die beschreiben, ob eine Ausnahme ausgelöst wird, von der Verwendung dieser Methode.</param>
+        <summary>Überprüft, ob das angegebene Steuerelement auf der Seite angezeigt und Überprüfungseigenschaften, die enthält.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.BaseValidator.CheckControlValidationProperty%2A> Methode ist eine Hilfsmethode in erster Linie durch die <xref:System.Web.UI.WebControls.BaseValidator.ControlPropertiesValid%2A> Methode, um zu überprüfen, ob das angegebene Steuerelement auf der Seite angezeigt und Überprüfungseigenschaften, die enthält. Diese Methode gibt einen Wert über das Ergebnis nicht zurück. Stattdessen wird eine Ausnahme ausgelöst, bei der Überprüfung ein Fehler auftritt.  
+  
+> [!NOTE]
+>  Diese Methode wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Das angegebene Steuerelement wurde nicht gefunden.  
+  
+ \- oder –  
+  
+ Das angegebene Steuerelement verfügt nicht über eine <see cref="T:System.Web.UI.ValidationPropertyAttribute" /> Attribut zugeordnet; aus diesem Grund kann nicht mit einem Validierungssteuerelement überprüft werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlPropertiesValid">
+      <MemberSignature Language="C#" Value="protected virtual bool ControlPropertiesValid ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool ControlPropertiesValid() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BaseValidator.ControlPropertiesValid" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob das Steuerelement durch die <see cref="P:System.Web.UI.WebControls.BaseValidator.ControlToValidate" /> Eigenschaft ist ein gültiges Steuerelement.</summary>
+        <returns>
+          <see langword="true" />Wenn das Steuerelement durch angegeben <see cref="P:System.Web.UI.WebControls.BaseValidator.ControlToValidate" /> ist ein Steuerelement gültiges ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.BaseValidator.ControlPropertiesValid%2A> Methode ist eine Hilfsmethode in erster Linie durch die <xref:System.Web.UI.WebControls.BaseValidator.PropertiesValid%2A> -Eigenschaft können Sie bestimmen, ob die <xref:System.Web.UI.WebControls.BaseValidator.ControlToValidate%2A> -Eigenschaft enthält ein Eingabesteuerelement gültig. Ein Eingabesteuerelement gültig ist, werden die <xref:System.Web.UI.WebControls.BaseValidator.ControlToValidate%2A> Eigenschaft muss auf einen beliebigen Wert festgelegt werden, und dieser Wert muss ein Steuerelement auf der Seite, die die Validierung unterstützt.  
+  
+> [!NOTE]
+>  Diese Methode wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Kein Wert angegeben, für die <see cref="P:System.Web.UI.WebControls.BaseValidator.ControlToValidate" /> Eigenschaft.  
+  
+ \- oder –  
+  
+ Das Eingabesteuerelement gemäß der <see cref="P:System.Web.UI.WebControls.BaseValidator.ControlToValidate" /> Eigenschaft wird auf der Seite nicht gefunden.  
+  
+ \- oder –  
+  
+ Das Eingabesteuerelement gemäß der <see cref="P:System.Web.UI.WebControls.BaseValidator.ControlToValidate" /> Eigenschaft verfügt nicht über eine <see cref="T:System.Web.UI.ValidationPropertyAttribute" /> Attribut zugeordnet; aus diesem Grund kann nicht mit einem Validierungssteuerelement überprüft werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlToValidate">
+      <MemberSignature Language="C#" Value="public string ControlToValidate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ControlToValidate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BaseValidator.ControlToValidate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.WebControls.ValidatedControlConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.IDReferenceProperty</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert das Eingabesteuerelement, um zu überprüfen.</summary>
+        <value>Das Eingabesteuerelement zu überprüfen. Der Standardwert ist <see cref="F:System.String.Empty" />, was bedeutet, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.BaseValidator.ControlToValidate%2A> Eigenschaft, um das Eingabesteuerelement überprüft anzugeben. Diese Eigenschaft muss festgelegt werden, um die ID eines Eingabesteuerelements für alle Validierungssteuerelemente mit Ausnahme der <xref:System.Web.UI.WebControls.CustomValidator> -Steuerelement, das kann leer gelassen werden. Wenn Sie ein gültiges Eingabesteuerelement nicht angeben, wird eine Ausnahme ausgelöst werden, wenn die Seite gerendert wird. Die ID muss auf ein Steuerelement innerhalb desselben Containers als das Validierungssteuerelement verweisen. Muss er in der gleichen Seite oder einem Benutzersteuerelement oder muss er in der gleichen Vorlage eines Steuerelements mit Vorlagen.  
+  
+ Die Standardsteuerelemente, die überprüft werden können, sind:  
+  
+-   <xref:System.Web.UI.WebControls.DropDownList?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.WebControls.FileUpload?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.WebControls.ListBox?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.WebControls.RadioButtonList?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.WebControls.TextBox?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.HtmlControls.HtmlInputFile?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.HtmlControls.HtmlInputPassword?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.HtmlControls.HtmlInputText?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.HtmlControls.HtmlSelect?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.HtmlControls.HtmlTextArea?displayProperty=nameWithType>  
+  
+> [!NOTE]
+>  Für ein Eingabesteuerelement überprüft werden die <xref:System.Web.UI.ValidationPropertyAttribute?displayProperty=nameWithType> Attribut muss auf das Steuerelement angewendet werden.  
+  
+ Alle Validierungssteuerelemente, mit Ausnahme der <xref:System.Web.UI.WebControls.RequiredFieldValidator> steuern, Überprüfung wird übergeben werden, wenn das Eingabesteuerelement angegeben, wird die <xref:System.Web.UI.WebControls.BaseValidator.ControlToValidate%2A> Eigenschaft enthält keinen Text. Bei Verwendung einer <xref:System.Web.UI.WebControls.CustomValidator> Steuerelement, das die clientseitige und serverseitige Validierungsfunktionen werden entweder nicht aufgerufen.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.BaseValidator.ControlToValidate%2A> Eigenschaft, um das Eingabesteuerelement überprüft anzugeben.  
+  
+ [!code-aspx-csharp[Classic BaseValidator Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic BaseValidator Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic BaseValidator Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic BaseValidator Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DetermineRenderUplevel">
+      <MemberSignature Language="C#" Value="protected virtual bool DetermineRenderUplevel ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool DetermineRenderUplevel() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BaseValidator.DetermineRenderUplevel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob das Validierungssteuerelement die clientseitige Validierung ausführen kann.</summary>
+        <returns>
+          <see langword="true" />Wenn das Validierungssteuerelement die clientseitige Validierung ausführen kann. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.BaseValidator.DetermineRenderUplevel%2A> Methode ist eine Hilfsfunktion, die hauptsächlich von verwendet wird, die <xref:System.Web.UI.WebControls.BaseValidator.RenderUplevel%2A> Eigenschaft, um zu bestimmen, ob der Clientbrowser Clientskript unterstützt. Für diese Eigenschaft zurückzugebenden `true`, müssen Folgendes zutreffen:  
+  
+-   Der Browser verfügt Clientskript aktiviert.  
+  
+-   Die <xref:System.Web.HttpBrowserCapabilitiesBase.W3CDomVersion%2A> Eigenschaft von der <xref:System.Web.HttpBrowserCapabilitiesBase> -Objekt, das in gespeichert ist die <xref:System.Web.HttpRequest.Browser%2A?displayProperty=nameWithType> Eigenschaft ist 1 oder höher.  
+  
+-   Die <xref:System.Web.Configuration.HttpCapabilitiesBase.EcmaScriptVersion%2A> Eigenschaft von der <xref:System.Web.HttpBrowserCapabilitiesBase> -Objekt, das in gespeichert ist die <xref:System.Web.HttpRequest.Browser%2A?displayProperty=nameWithType> Eigenschaft ist 1.2 oder höher.  
+  
+    > [!NOTE]
+    >  Diese Methode wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Display">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.ValidatorDisplay Display { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.ValidatorDisplay Display" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BaseValidator.Display" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ValidatorDisplay</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Verhalten der Fehlermeldung in einem Validierungssteuerelement.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.ValidatorDisplay" />-Werte. Der Standardwert ist <see langword="Static" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.BaseValidator.Display%2A> Eigenschaft, um das Verhalten der Fehlermeldung im Validierungssteuerelement anzugeben. Die folgende Tabelle enthält die verschiedenen Werte, die verwendet werden können.  
+  
+|Anzeigeverhalten|Beschreibung|  
+|----------------------|-----------------|  
+|`None`|Der validierungsmeldung ist nie Inline angezeigt.|  
+|`Static`|Speicherplatz für die Meldung der Validierung wird im Seitenlayout zugeordnet.|  
+|`Dynamic`|Speicherplatz für die Meldung der Validierung wird auf der Seite dynamisch hinzugefügt werden, bei einem Überprüfungsfehler.|  
+  
+> [!NOTE]
+>  Das Verhalten hängt davon ab, ob die clientseitige Validierung durchgeführt wird. Wenn clientseitige Validierung nicht aktiv ist (da der Browser nicht unterstützt wird oder mit deaktivierten Remoteverwaltung der <xref:System.Web.UI.Page.ClientTarget%2A?displayProperty=nameWithType> Seitendirektive oder <xref:System.Web.UI.WebControls.BaseValidator.EnableClientScript%2A> Eigenschaft), `ValidatorDisplay.Static` und `ValidatorDisplay.Dynamic` Verhalten sich ebenso: nimmt die Fehlermeldung sich nur, wenn Speicherplatz wird es angezeigt. Die Möglichkeit, Speicherplatz dynamisch für die Nachricht zu reservieren, wenn er nicht angezeigt wird (`ValidatorDisplay.Dynamic`) funktioniert nur mit clientseitige Validierung.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.BaseValidator.Display%2A> -Eigenschaft diesen Speicherplatz an, für die Meldung der Validierung auf der Webseite dynamisch hinzugefügt wird bei einem Überprüfungsfehler.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[Classic BaseValidator Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic BaseValidator Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic BaseValidator Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic BaseValidator Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der angegebene Wert ist nicht der <see cref="T:System.Web.UI.WebControls.ValidatorDisplay" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableClientScript">
+      <MemberSignature Language="C#" Value="public bool EnableClientScript { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableClientScript" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BaseValidator.EnableClientScript" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die clientseitige Validierung aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn die clientseitige Validierung aktiviert ist; andernfalls <see langword="false" />. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.BaseValidator.EnableClientScript%2A> Eigenschaft, um anzugeben, ob die clientseitige Validierung aktiviert ist.  
+  
+ Validierungssteuerelemente Validierung immer auf dem Server. Sie haben außerdem die vollständige Client-Side-Implementierung, die DHTML-unterstützten Browser (z. B. Microsoft Internet Explorer 4.0 und höher) ermöglicht, die Validierung auf dem Client. Die clientseitige Validierung verbessert den Validierungsprozess durch Überprüfen von Benutzereingaben, bevor sie an den Server gesendet wird. Dadurch wird ein Fehler auf dem Client erkannt werden, vor dem Senden des Formulars der Roundtrip der notwendigen Informationen für die serverseitige Validierung zu vermeiden.  
+  
+ Standardmäßig ist dieser Wert festgelegt, um `true`, wodurch die clientseitige Validierung, wenn der Browser unterstützt. Sie können die clientseitige Validierung auf Grundlage von Steuerelement deaktivieren. Dies ist hilfreich, wenn Probleme mit dem Layout der Seite dynamische Aktualisierung auf dem Client erstellt werden, oder einige Servercode ausgeführt wird, vor der Überprüfung werden soll.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.BaseValidator.EnableClientScript%2A> Eigenschaft, um die clientseitige Validierung zu deaktivieren, sodass die Zufallszahlen können, auf dem Server generiert werden.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[Classic BaseValidator Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic BaseValidator Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic BaseValidator Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic BaseValidator Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public override bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BaseValidator.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Validierungssteuerelement aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Validierungssteuerelement aktiviert ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.BaseValidator.Enabled%2A> Eigenschaft, um anzugeben, ob das Validierungssteuerelement aktiviert ist. Sie können das Validierungssteuerelement deaktivieren, indem das Festlegen dieser Eigenschaft auf `false`.  
+  
+ Durch Festlegen der <xref:System.Web.UI.Control.Visible%2A?displayProperty=nameWithType> oder <xref:System.Web.UI.WebControls.BaseValidator.Enabled%2A> Eigenschaft `false` wird keine Validierung ausgeführt wird. Dies bewirkt, dass die <xref:System.Web.UI.WebControls.BaseValidator.IsValid%2A> Eigenschaft immer ausgewertet `true`.  
+  
+ Die <xref:System.Web.UI.WebControls.BaseValidator.Enabled%2A> Eigenschaft unterscheidet sich geringfügig von der <xref:System.Web.UI.Control.Visible%2A?displayProperty=nameWithType> Eigenschaft. Wenn die <xref:System.Web.UI.Control.Visible%2A?displayProperty=nameWithType> für ein Validierungssteuerelement ist-Eigenschaftensatz auf `true`, aber die <xref:System.Web.UI.WebControls.BaseValidator.Enabled%2A> -Eigenschaftensatz auf `false`, Validierungssteuerelement wird noch gerendert, für die clientseitige Validierung, aber in einem deaktivierten Zustand. Sie können das Validierungssteuerelement auf dem Client dann erneut mit DHTML-Skript aktivieren.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.BaseValidator.Enabled%2A> Eigenschaft aktivieren oder Deaktivieren der Validierungssteuerelemente auf der Webseite serverseitigen Code verwenden.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[Classic BaseValidator.Enabled Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic BaseValidator.Enabled Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic BaseValidator.Enabled Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic BaseValidator.Enabled Example/VB/sourcevb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.BaseValidator.Enabled%2A> Eigenschaft aktivieren oder Deaktivieren der Validierungssteuerelemente auf der Webseite mit clientseitigen Code.  
+  
+<!-- TODO: review snippet reference  [!CODE [Classic BaseValidator.Enabled Example2#1](Classic BaseValidator.Enabled Example2#1)]  -->  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorMessage">
+      <MemberSignature Language="C#" Value="public string ErrorMessage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ErrorMessage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BaseValidator.ErrorMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text fest, für die Fehlermeldung, in angezeigt einem <see cref="T:System.Web.UI.WebControls.ValidationSummary" /> steuern, wenn die Validierung fehlschlägt.</summary>
+        <value>Die Fehlermeldung angezeigt, die einer <see cref="T:System.Web.UI.WebControls.ValidationSummary" /> steuern, wenn die Validierung fehlschlägt. Der Standardwert ist eine leere Zeichenfolge (""), die angibt, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Verwendung einer <xref:System.Web.UI.WebControls.ValidationSummary> steuern, verwenden Sie die <xref:System.Web.UI.WebControls.BaseValidator.ErrorMessage%2A> Eigenschaft an, die im anzuzeigende Text der <xref:System.Web.UI.WebControls.ValidationSummary> steuern, wenn die Validierung für das aktuelle Validierungssteuerelement fehlschlägt. Um das im Validierungssteuerelement selbst anzuzeigende Text anzugeben, verwenden die <xref:System.Web.UI.WebControls.BaseValidator.Text%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Wenn Sie festlegen der <xref:System.Web.UI.WebControls.BaseValidator.ErrorMessage%2A> Eigenschaft festlegen, ohne die <xref:System.Web.UI.WebControls.BaseValidator.Text%2A> -Eigenschaft, die den Wert des der <xref:System.Web.UI.WebControls.BaseValidator.ErrorMessage%2A> Eigenschaft wird auch im Validierungssteuerelement angezeigt.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [ASP.NET-Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.BaseValidator.ErrorMessage%2A> -Eigenschaft an die anderen Nachrichten für die <xref:System.Web.UI.WebControls.ValidationSummary> Steuerelement und dem <xref:System.Web.UI.WebControls.RequiredFieldValidator> und <xref:System.Web.UI.WebControls.CompareValidator> Steuerelemente.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[Classic BaseValidator Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic BaseValidator Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic BaseValidator Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic BaseValidator Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluateIsValid">
+      <MemberSignature Language="C#" Value="protected abstract bool EvaluateIsValid ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool EvaluateIsValid() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BaseValidator.EvaluateIsValid" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beim Überschreiben in einer abgeleiteten Klasse enthält diese Methode den Code, um zu bestimmen, ob der Wert im Eingabesteuerelement gültig ist.</summary>
+        <returns>
+          <see langword="true" />, wenn der Wert im Eingabesteuerelement gültig ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.BaseValidator.EvaluateIsValid%2A> Methode, um zu bestimmen, ob der angegebene Wert im Eingabesteuerelement durch die <xref:System.Web.UI.WebControls.BaseValidator.ControlToValidate%2A> Eigenschaft ist gültig.  
+  
+> [!NOTE]
+>  Diese Methode wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>In einer abgeleiteten Klasse zurückgeben soll, ob der Wert im Eingabesteuerelement gültig ist, müssen Sie diese Methode implementieren.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColor">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Color ForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BaseValidator.ForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "Red")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Farbe der als Meldung angezeigt, wenn die Validierung fehlschlägt.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> , die die Farbe der Nachricht angezeigt, wenn es sich bei einem Überprüfungsfehler darstellt. Die Standardeinstellung ist <see cref="P:System.Drawing.Color.Red" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.BaseValidator.ForeColor%2A> -Eigenschaft an eine benutzerdefinierte Farbe für die Nachricht im Validierungssteuerelement angezeigt, wenn die Validierung fehlschlägt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.BaseValidator.ForeColor%2A> Eigenschaft, um der validierungsmeldung blau angezeigt.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[Classic BaseValidator.ForeColor Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic BaseValidator.ForeColor Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic BaseValidator.ForeColor Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic BaseValidator.ForeColor Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetControlRenderID">
+      <MemberSignature Language="C#" Value="protected string GetControlRenderID (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string GetControlRenderID(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BaseValidator.GetControlRenderID(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Steuerelements zum Abrufen der Client-ID aus.</param>
+        <summary>Ruft die Client-ID des angegebenen Steuerelements.</summary>
+        <returns>Die Client-ID des angegebenen Steuerelements.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.BaseValidator.GetControlRenderID%2A> Methode zum Abrufen der Client-ID des angegebenen Steuerelements. Weitere Informationen finden Sie unter <xref:System.Web.UI.Control.ClientID%2A>.  
+  
+> [!NOTE]
+>  Diese Methode wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetControlValidationValue">
+      <MemberSignature Language="C#" Value="protected string GetControlValidationValue (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string GetControlValidationValue(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BaseValidator.GetControlValidationValue(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name, der das Eingabesteuerelement, dessen Wert abgerufen werden soll.</param>
+        <summary>Ruft den Wert der angegebenen Eingabesteuerelement zugeordnet.</summary>
+        <returns>Der Wert der angegebenen Eingabesteuerelement zugeordnet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.BaseValidator.GetControlValidationValue%2A> Methode, um den zugeordneten Wert durch das angegebene Eingabesteuerelement, unabhängig von den Steuerelementtyp "abzurufen. Beispielsweise können Sie diese Methode verwenden, zum Abrufen des Werts einer <xref:System.Web.UI.WebControls.TextBox> Steuerelement als auch der Wert des ausgewählten Elements aus einer <xref:System.Web.UI.WebControls.ListBox> Steuerelement. Wenn das angegebene Steuerelement nicht gefunden werden kann, `null` wird zurückgegeben.  
+  
+> [!NOTE]
+>  Diese Methode wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValidationProperty">
+      <MemberSignature Language="C#" Value="public static System.ComponentModel.PropertyDescriptor GetValidationProperty (object component);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ComponentModel.PropertyDescriptor GetValidationProperty(object component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BaseValidator.GetValidationProperty(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="component">Ein <see cref="T:System.Object" /> , die die Validierungseigenschaft des abzurufenden Steuerelements darstellt.</param>
+        <summary>Bestimmt die Validierungseigenschaft eines Steuerelements, (falls vorhanden).</summary>
+        <returns>Ein <see cref="T:System.ComponentModel.PropertyDescriptor" /> , das die Validierungseigenschaft des Steuerelements enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.BaseValidator.GetValidationProperty%2A> Methode ist eine Hilfsfunktion, die die Eigenschaft für die Validierung der angegebenen Eingabesteuerelements abruft.  
+  
+> [!NOTE]
+>  Diese Methode wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUnobtrusive">
+      <MemberSignature Language="C#" Value="protected bool IsUnobtrusive { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsUnobtrusive" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BaseValidator.IsUnobtrusive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das Steuerelement unaufdringliches JavaScript generiert.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement unaufdringliches JavaScript generiert; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt `false` Wenn die <xref:System.Web.UI.Page.UnobtrusiveValidationMode%2A> Eigenschaftswert ist <xref:System.Web.UI.UnobtrusiveValidationMode.None>; andernfalls gibt diese Eigenschaft zurück `true` .  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValid">
+      <MemberSignature Language="C#" Value="public bool IsValid { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsValid" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BaseValidator.IsValid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das zugeordnete Eingabesteuerelement Überprüfung erfolgreich.</summary>
+        <value>
+          <see langword="true" />Wenn das zugeordnete Eingabesteuerelement Überprüfung erfolgreich ist; andernfalls <see langword="false" />. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.BaseValidator.IsValid%2A> Eigenschaft, um zu bestimmen, ob das zugeordnete Eingabesteuerelement die Validierung erfolgreich war.  
+  
+> [!CAUTION]
+>  Da der Standardwert dieser Eigenschaft ist `true`, zurückgegeben `true` , wenn Sie diese Eigenschaft Abfragen, bevor die Überprüfung ausgeführt wird. Dies kann beispielsweise auftreten, wenn Sie versuchen, verwenden diese Eigenschaft in der <xref:System.Web.UI.Control.Load?displayProperty=nameWithType> -Ereignis für eine Seite.  
+  
+ Die <xref:System.Web.UI.WebControls.BaseValidator.IsValid%2A> Eigenschaft wird ausgewertet, nur, wenn die <xref:System.Web.UI.WebControls.BaseValidator.Validate%2A> -Methode aufgerufen wird. Sie erreichen die <xref:System.Web.UI.WebControls.BaseValidator.Validate%2A> Methode für jede Überprüfungen, einzeln auf der Seite zu steuern, oder rufen Sie alle auf einmal mithilfe der <xref:System.Web.UI.Page.Validate%2A?displayProperty=nameWithType> Methode. Schaltflächen-Steuerelemente mit ihren `CausesValidation` -Eigenschaftensatz auf `true` ist, rufen ebenfalls die <xref:System.Web.UI.Page.Validate%2A?displayProperty=nameWithType> Methode.  
+  
+> [!NOTE]
+>  Es ist möglich, den Wert dieser Eigenschaft manuell ändern, nachdem die Validierung stattgefunden hat. Dies können Sie das Überprüfungsergebnis überschreiben, falls notwendig.  
+  
+ Die <xref:System.Web.UI.Page.IsValid%2A?displayProperty=nameWithType> Eigenschaft für die Seite wird festgelegt, um `true` nur, wenn die <xref:System.Web.UI.WebControls.BaseValidator.IsValid%2A> Eigenschaft für jedes Validierungssteuerelement auf der Seite ist ebenfalls festgelegt `true`.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.BaseValidator.IsValid%2A> Eigenschaft, um zu bestimmen, ob das zugeordnete Eingabesteuerelement die Validierung erfolgreich war.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[BaseValidatorIsValid#1](~/samples/snippets/csharp/VS_Snippets_WebNet/BaseValidatorIsValid/CS/basevalidatorisvalidcs.aspx#1)]
+ [!code-aspx-vb[BaseValidatorIsValid#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/BaseValidatorIsValid/VB/basevalidatorisvalidvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInit">
+      <MemberSignature Language="C#" Value="protected override void OnInit (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnInit(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BaseValidator.OnInit(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.Init" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nachdem diese Methode des Basissteuerelements ruft <xref:System.Web.UI.Control.OnInit%2A> -Methode wird der <xref:System.Web.UI.WebControls.WebControl.ForeColor%2A> Eigenschaft <xref:System.Drawing.Color.Red%2A> wenn Folgendes zutrifft:  
+  
+-   Die <xref:System.Web.UI.WebControls.WebControl.ForeColor%2A> Eigenschaft noch nicht festgelegt.  
+  
+-   Die <xref:System.Web.UI.Control.RenderingCompatibility%2A> Eigenschaft gibt eine ASP.NET-Version vor `4.0`. Standardmäßig werden Validierungssteuerelemente in ASP.NET 4 und höheren Versionen keine Fehler in Rot angezeigt. Informationen dazu, wie die visuelle Darstellung der Validierungssteuerelemente steuern, finden Sie unter [Validieren von Benutzereingaben in ASP.NET Web Pages](http://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461).  
+  
+ Diese Methode registriert auch das Validierungssteuerelement auf der Seite.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Web.UI.WebControls.BaseValidator.OnInit(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Web.UI.WebControls.BaseValidator.OnInit(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BaseValidator.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.PreRender" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wurde überschrieben, um den Clientbrowser überprüfen und konfigurieren das Validierungssteuerelement für Kompatibilität vor dem Rendern.  
+  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.Web.UI.WebControls.BaseValidator.OnPreRender%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Web.UI.WebControls.BaseValidator.OnPreRender(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Web.UI.WebControls.BaseValidator.OnPreRender(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnUnload">
+      <MemberSignature Language="C#" Value="protected override void OnUnload (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnUnload(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BaseValidator.OnUnload(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.Unload" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wurde überschrieben, um das Validierungssteuerelement auf der Seite Aufheben der Registrierung.  
+  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.Web.UI.WebControls.BaseValidator.OnUnload%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Web.UI.WebControls.BaseValidator.OnUnload(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Web.UI.WebControls.BaseValidator.OnUnload(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertiesValid">
+      <MemberSignature Language="C#" Value="protected bool PropertiesValid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PropertiesValid" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BaseValidator.PropertiesValid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob das Steuerelement vom angegebenen ab der <see cref="P:System.Web.UI.WebControls.BaseValidator.ControlToValidate" /> Eigenschaft ist ein gültiges Steuerelement.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement durch angegeben <see cref="P:System.Web.UI.WebControls.BaseValidator.ControlToValidate" /> ist ein Steuerelement gültiges ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.BaseValidator.PropertiesValid%2A> -Eigenschaft können Sie bestimmen, ob die <xref:System.Web.UI.WebControls.BaseValidator.ControlToValidate%2A> -Eigenschaft enthält ein Eingabesteuerelement gültig. Ein Eingabesteuerelement gültig ist, werden die <xref:System.Web.UI.WebControls.BaseValidator.ControlToValidate%2A> Eigenschaft muss auf ein Steuerelement auf der Seite festgelegt werden.  
+  
+> [!NOTE]
+>  Diese Eigenschaft wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Kein Wert angegeben wird, der <see cref="P:System.Web.UI.WebControls.BaseValidator.ControlToValidate" /> Eigenschaft.  
+  
+ \- oder –  
+  
+ Das Eingabesteuerelement gemäß der <see cref="P:System.Web.UI.WebControls.BaseValidator.ControlToValidate" /> Eigenschaft wird auf der Seite nicht gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterValidatorCommonScript">
+      <MemberSignature Language="C#" Value="protected void RegisterValidatorCommonScript ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RegisterValidatorCommonScript() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BaseValidator.RegisterValidatorCommonScript" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Registriert Code auf der Seite für die clientseitige Validierung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.BaseValidator.RegisterValidatorCommonScript%2A> Methode, um Code auf der Seite die clientseitige Validierung zu registrieren.  
+  
+> [!NOTE]
+>  Diese Methode wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Rufen Sie diese Methode der <see cref="E:System.Web.UI.Control.PreRender" /> -Ereignishandler der abgeleiteten Klasse den Code zu registrieren, das die clientseitige Validierung ausführt.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterValidatorDeclaration">
+      <MemberSignature Language="C#" Value="protected virtual void RegisterValidatorDeclaration ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RegisterValidatorDeclaration() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BaseValidator.RegisterValidatorDeclaration" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Registriert eine ECMAScript-Arraydeklaration mit dem Arraynamen <see langword="Page_Validators" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.BaseValidator.RegisterValidatorDeclaration%2A> -Methode registriert eine ECMAScript-Arraydeklaration mit dem Arraynamen `Page_Validators`.  
+  
+> [!NOTE]
+>  Diese Methode wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BaseValidator.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.Web.UI.HtmlTextWriter" />, der den Ausgabestream für das Rendering auf dem Client enthält.</param>
+        <summary>Zeigt das Steuerelement auf dem Client.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.BaseValidator.Render%2A> Methode wird verwendet, um das HTML-Markup für ein Validierungssteuerelement zu generieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderUplevel">
+      <MemberSignature Language="C#" Value="protected bool RenderUplevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RenderUplevel" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BaseValidator.RenderUplevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Clientbrowser "komplexe"-Rendering unterstützt.</summary>
+        <value>
+          <see langword="true" />Wenn der Browser "komplexe"-Rendering unterstützt; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.BaseValidator.RenderUplevel%2A> Eigenschaft, um zu bestimmen, ob der Clientbrowser "komplexe" unterstützt. Für einen Browser mit Unterstützung von "komplexe" Darstellung muss es sich um die Microsoft Internet Explorer (DOKUMENTOBJEKTMODELL), Version 4 oder höher und ECMAScript-Version 1.2 oder höher unterstützen.  
+  
+> [!NOTE]
+>  Diese Eigenschaft wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFocusOnError">
+      <MemberSignature Language="C#" Value="public bool SetFocusOnError { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SetFocusOnError" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BaseValidator.SetFocusOnError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Fokus auf das vom angegebenen Steuerelement festgelegt ist die <see cref="P:System.Web.UI.WebControls.BaseValidator.ControlToValidate" /> Eigenschaft, wenn die Validierung fehlschlägt.</summary>
+        <value>
+          <see langword="true" />festzulegende den Fokus auf das Steuerelement, das vom angegebenen <see cref="P:System.Web.UI.WebControls.BaseValidator.ControlToValidate" /> bei einem Überprüfungsfehler; anderenfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.BaseValidator.SetFocusOnError%2A> Eigenschaft, um anzugeben, ob der Fokus automatisch auf das Steuerelement durch angegeben festgelegt wird die <xref:System.Web.UI.WebControls.BaseValidator.ControlToValidate%2A> Eigenschaft, wenn dieses Validierungssteuerelement fehlschlägt. Dies ermöglicht es dem Benutzer das entsprechende Steuerelement schnell aktualisieren.  
+  
+ Wenn mehrere Validierungssteuerelemente fehlschlagen und diese Eigenschaft, um festgelegt wird `true`, das Steuerelement angegeben wird, der <xref:System.Web.UI.WebControls.BaseValidator.ControlToValidate%2A> -Eigenschaft für das erste Validierungssteuerelement den Fokus erhält.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public override string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BaseValidator.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerDefaultProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text im Validierungssteuerelement angezeigt, wenn die Validierung fehlschlägt.</summary>
+        <value>Der Text im Validierungssteuerelement angezeigt, wenn die Validierung fehlschlägt. Der Standardwert ist eine leere Zeichenfolge ("") und gibt an, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.BaseValidator.Text%2A> -Eigenschaft geben Sie den Text in einem Validierungssteuerelement angezeigt werden soll, wenn die Validierung fehlschlägt. Sie können auch anzeigen, eine Zusammenfassung aller Steuerelemente, bei denen bei der Überprüfung auf der Seite mit einem <xref:System.Web.UI.WebControls.ValidationSummary> Steuerelement. Anzuzeigende in Text an einer <xref:System.Web.UI.WebControls.ValidationSummary> steuern, verwenden Sie die <xref:System.Web.UI.WebControls.BaseValidator.ErrorMessage%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Wenn Sie festlegen der <xref:System.Web.UI.WebControls.BaseValidator.ErrorMessage%2A> Eigenschaft festlegen, ohne die <xref:System.Web.UI.WebControls.BaseValidator.Text%2A> -Eigenschaft, die den Wert des der <xref:System.Web.UI.WebControls.BaseValidator.ErrorMessage%2A> Eigenschaft wird auch im Validierungssteuerelement angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public void Validate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Validate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BaseValidator.Validate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt die Überprüfung für die zugeordneten Eingabesteuerelements und Updates der <see cref="P:System.Web.UI.WebControls.BaseValidator.IsValid" /> Eigenschaft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.BaseValidator.Validate%2A> Methode, um die datenüberprüfung für das zugeordnete Eingabesteuerelement auszuführen. Dieser Methode können Sie programmgesteuert auf das Eingabesteuerelement validiert. Die <xref:System.Web.UI.WebControls.BaseValidator.IsValid%2A> Eigenschaft wird automatisch mit den Ergebnissen der Validierung aktualisiert.  
+  
+   
+  
+## Examples  
+ Ein Beispiel für die <xref:System.Web.UI.WebControls.BaseValidator.Validate%2A> in einer abgeleiteten Klasse verwendete Methode finden Sie unter der <xref:System.Web.UI.WebControls.CompareValidator> -Klassenübersicht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationGroup">
+      <MemberSignature Language="C#" Value="public virtual string ValidationGroup { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ValidationGroup" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BaseValidator.ValidationGroup" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Validierungsgruppe, zu der dieses Validierungssteuerelement gehört.</summary>
+        <value>Der Name der Gruppe "Überprüfung" zu der dieses Validierungssteuerelement gehört. Der Standardwert ist eine leere Zeichenfolge ("") und gibt an, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET verfügt über viele Steuerelemente, die die Fähigkeit zum Zurücksenden an den Server verfügen. Wenn eines dieser Steuerelemente hat seine `CausesValidation` -Eigenschaftensatz auf `true`, Überprüfung wird ausgeführt, wenn das Steuerelement an Server zurückgesendet. Die folgenden Steuerelemente haben die Möglichkeit zum Zurücksenden an den Server:  
+  
+-   <xref:System.Web.UI.WebControls.BulletedList?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.WebControls.Button?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.WebControls.CheckBox?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.WebControls.CheckBoxList?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.WebControls.DropDownList?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.HtmlControls.HtmlButton?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.HtmlControls.HtmlInputButton?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.HtmlControls.HtmlInputImage?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.WebControls.ImageButton?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.WebControls.LinkButton?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.WebControls.ListBox?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.WebControls.RadioButtonList?displayProperty=nameWithType>  
+  
+-   <xref:System.Web.UI.WebControls.TextBox?displayProperty=nameWithType>  
+  
+> [!NOTE]
+>  Einige dieser Kontrollen post an den Server nur, wenn die `AutoPostBack` -Eigenschaftensatz auf `true`.  
+  
+ Diese Steuerelemente verfügen über eine `ValidationGroup` Eigenschaft, wenn festgelegt ist, nur die Validierungssteuerelemente innerhalb der angegebenen Gruppe überprüft werden, wenn das Steuerelement ein Postback an den Server auslöst. Verwenden der <xref:System.Web.UI.WebControls.BaseValidator.ValidationGroup%2A> Eigenschaft, um ein Validierungssteuerelement Validierungsgruppe zuweisen. Die <xref:System.Web.UI.Page> -Klasse auch verfügbar macht eine <xref:System.Web.UI.Page.GetValidators%2A> Methode und eine <xref:System.Web.UI.Page.Validate%2A> -Methode, die akzeptiert eine <xref:System.Web.UI.WebControls.BaseValidator.ValidationGroup%2A> input-Parameters.  
+  
+ Diese Eigenschaft kann nicht von Designs oder Stylesheetdesigns festgelegt werden. Weitere Informationen finden Sie unter <xref:System.Web.UI.ThemeableAttribute> und [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.BaseValidator.ValidationGroup%2A> Eigenschaft, um ein Validierungssteuerelement zu einer Gruppe zuweisen.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[BaseValidatorValidationGroup#1](~/samples/snippets/csharp/VS_Snippets_WebNet/BaseValidatorValidationGroup/CS/BaseValidatorValidationGroupcs.aspx#1)]
+ [!code-aspx-vb[BaseValidatorValidationGroup#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/BaseValidatorValidationGroup/VB/BaseValidatorValidationGroupvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

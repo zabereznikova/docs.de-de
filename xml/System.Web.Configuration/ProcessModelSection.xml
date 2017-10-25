@@ -1,0 +1,1238 @@
+<Type Name="ProcessModelSection" FullName="System.Web.Configuration.ProcessModelSection">
+  <TypeSignature Language="C#" Value="public sealed class ProcessModelSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ProcessModelSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.ProcessModelSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Konfiguriert die Einstellungen für die ASP.NET Modell auf einem Webserver (Internet Information Services, IIS). Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.ProcessModelSection> -Klasse bietet eine Möglichkeit zum programmgesteuerten Zugriff auf und Ändern der `processModel` Abschnitt einer Konfigurationsdatei.  
+  
+ Die <xref:System.Web.Configuration.ProcessModelSection> -Klasse steuert verschiedene Aspekte des ASP.NET-Arbeitsprozesses, einschließlich seiner Lebensdauer, die Anzahl der Instanzen, die gleichzeitig ausgeführt, Sicherheits-ID erstellt, und die Größe der CLR-Threadpools.  
+  
+ Wenn ASP.NET unter IIS 6 im einheitlichen Modus ausgeführt wird, wird von ASP.NET verwendet die IIS 6-Prozessmodell und ignoriert die meisten Einstellungen in diesem Abschnitt. Verwenden Sie die IIS-Verwaltung-Benutzeroberfläche (UI), um diese Eigenschaften zu konfigurieren. ASP.NET verwendet weiterhin die folgenden Eigenschaften, die über die Konfigurationsdatei konfiguriert werden können: <xref:System.Web.Configuration.ProcessModelSection.RequestQueueLimit%2A>, <xref:System.Web.Configuration.ProcessModelSection.ResponseDeadlockInterval%2A>, <xref:System.Web.Configuration.ProcessModelSection.MaxWorkerThreads%2A>, <xref:System.Web.Configuration.ProcessModelSection.MaxIOThreads%2A>, <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>, und <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>.  
+  
+ Die `processModel` Abschnitt kann nicht verschlüsselt werden, die geschützte Konfiguration oder Tools verwenden, da sie von der ASP.NET ISAPI-Erweiterung genutzt wird.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird veranschaulicht, wie Werte für verschiedene Attribute der deklarativ angeben, die `processModel` Abschnitt, die auch als Member zugegriffen werden kann die <xref:System.Web.Configuration.ProcessModelSection> Klasse.  
+  
+ Im folgenden Konfigurationsbeispiel-Datei zeigt, wie Sie Werte für deklarativ angeben, die `processModel` Abschnitt.  
+  
+```  
+<processModel   
+  enable="True" timeout="Infinite"   
+  idleTimeout="Infinite"   
+  shutdownTimeout="00:00:05" requestLimit="Infinite"  
+  requestQueueLimit="5000" restartQueueLimit="10"   
+  memoryLimit="60" webGarden="False" cpuMask="0xffffffff"   
+  userName="machine" password="AutoGenerate" logLevel="Errors"  
+  clientConnectedCheck="00:00:05"   
+  comAuthenticationLevel="Connect" comImpersonationLevel="Impersonate"  
+  responseDeadlockInterval="00:03:00"   
+  responseRestartDeadlockInterval="00:03:00" autoConfig="True"  
+  maxWorkerThreads="20" maxIoThreads="20" minWorkerThreads="1"  
+  minIoThreads="1" serverErrorMessageFile="" pingFrequency="Infinite"  
+  pingTimeout="Infinite" asyncOption="20" maxAppDomains="2000"   
+/>  
+```  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.Configuration.ProcessModelSection> Klasse.  
+  
+ [!code-csharp[System.Web.Configuration.ProcessModelSection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/CS/processmodelsection.cs#1)]
+ [!code-vb[System.Web.Configuration.ProcessModelSection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/VB/processmodelsection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProcessModelSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProcessModelSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Configuration.ProcessModelSection" />-Klasse mit Standardeinstellungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.ProcessModelSection.%23ctor%2A> Konstruktor ist nicht vorgesehen, direkt aus Ihrem Code verwendet werden. Sie wird vom Konfigurationssystem von ASP.NET aufgerufen. Sie rufen Sie eine Instanz von der <xref:System.Web.Configuration.ProcessModelSection> Klasse, indem die <xref:System.Configuration.Configuration.GetSection%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoConfig">
+      <MemberSignature Language="C#" Value="public bool AutoConfig { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoConfig" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProcessModelSection.AutoConfig" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("autoConfig", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Einstellung für die Leistung von ASP.NET für ASP.NET-Anwendungen automatisch konfiguriert werden.</summary>
+        <value>
+          <see langword="true" />Wenn die Leistungseinstellungen für ASP.NET-Anwendungen automatisch konfiguriert werden. andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.Configuration.ProcessModelSection.AutoConfig%2A> Wert wird festgelegt, um `false`, explizite "Web.config"-Werte werden verwendet, um die der Leistungskonfiguration für die ASP.NET-Anwendung zu bestimmen. Wenn die <xref:System.Web.Configuration.ProcessModelSection.AutoConfig%2A> Wert wird festgelegt, um `true`, die Leistungseinstellungen werden automatisch für die ASP.NET-Anwendung konfiguriert.  
+  
+ Die <xref:System.Web.Configuration.ProcessModelSection.AutoConfig%2A> Wert explizit auf festgelegt `true` in der Datei "Machine.config". Der Standardwert festgelegt ist, um `false`.  Wenn die <xref:System.Web.Configuration.ProcessModelSection.AutoConfig%2A> Wert wird aus "Machine.config" entfernt, die explizite Einstellungen werden anstelle der automatisch konfigurierte Einstellungen verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientConnectedCheck">
+      <MemberSignature Language="C#" Value="public TimeSpan ClientConnectedCheck { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan ClientConnectedCheck" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProcessModelSection.ClientConnectedCheck" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.InfiniteTimeSpanConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("clientConnectedCheck", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Wert, der angibt, wie langen einer Anforderung in der Warteschlange verbleibt.</summary>
+        <value>Ein <see cref="T:System.TimeSpan" /> Wert, der Zeit in die Warteschlange angibt. Der Standardwert ist 5 Sekunden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt an, wie lange eine Anforderung in Warteschlange, bevor ASP.NET eine verbundener Client-Prüfung ausführt.  
+  
+> [!NOTE]
+>  Wenn das Intervall abläuft, während die Anforderung noch in die Warteschlange gestellt wird, erfolgt eine Prüfung für Clients besteht vor der Anforderung an den ASP.NET-Arbeitsprozess für die Behandlung von übergeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zugreifen auf und Ändern der <xref:System.Web.Configuration.ProcessModelSection.ClientConnectedCheck%2A> Eigenschaft.  
+  
+ [!code-csharp[System.Web.Configuration.ProcessModelSection#18](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/CS/processmodelsection.cs#18)]
+ [!code-vb[System.Web.Configuration.ProcessModelSection#18](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/VB/processmodelsection.vb#18)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComAuthenticationLevel">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.ProcessModelComAuthenticationLevel ComAuthenticationLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Configuration.ProcessModelComAuthenticationLevel ComAuthenticationLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProcessModelSection.ComAuthenticationLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("comAuthenticationLevel", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.ProcessModelComAuthenticationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, die Ebene der Authentifizierung für DCOM-Sicherheit.</summary>
+        <value>Einer der <see cref="T:System.Web.Configuration.ProcessModelComAuthenticationLevel" />-Werte. Der Standardwert ist <see cref="F:System.Web.Configuration.ProcessModelComAuthenticationLevel.Connect" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Wert dieser Eigenschaft auf festgelegt ist <xref:System.Web.Configuration.ProcessModelComAuthenticationLevel.Default>, DCOM, bestimmt die Authentifizierung mit dem normalen Sicherheitsaushandlung-Algorithmus. Der Standardwert dieser Eigenschaft entsprechend den Angaben in der Datei "Machine.config" zugewiesen ist <xref:System.Web.Configuration.ProcessModelComAuthenticationLevel.Connect>. DCOM wird in diesem Fall authentifiziert, die Anmeldeinformationen des Clients nur, wenn der Client eine Beziehung mit dem Server herstellt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Zugriff auf die <xref:System.Web.Configuration.ProcessModelSection.ComAuthenticationLevel%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Web.Configuration.ProcessModelSection#21](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/CS/processmodelsection.cs#21)]
+ [!code-vb[System.Web.Configuration.ProcessModelSection#21](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/VB/processmodelsection.vb#21)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComImpersonationLevel">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.ProcessModelComImpersonationLevel ComImpersonationLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Configuration.ProcessModelComImpersonationLevel ComImpersonationLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProcessModelSection.ComImpersonationLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("comImpersonationLevel", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.ProcessModelComImpersonationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, der Authentifizierungsebene für COM-Sicherheit.</summary>
+        <value>Einer der <see cref="T:System.Web.Configuration.ProcessModelComImpersonationLevel" />-Werte. Der Standardwert ist <see cref="F:System.Web.Configuration.ProcessModelComImpersonationLevel.Impersonate" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Wert dieser Eigenschaft auf festgelegt ist <xref:System.Web.Configuration.ProcessModelComImpersonationLevel.Default>, DCOM, bestimmt die Ebene des Identitätswechsels mit dem normalen Sicherheitsaushandlung-Algorithmus. Der Standardwert dieser Eigenschaft entsprechend den Angaben in der Datei "Machine.config" zugewiesen ist <xref:System.Web.Configuration.ProcessModelComImpersonationLevel.Impersonate>. In diesem Fall kann die Serverprozess den Sicherheitskontext für den Client im Auftrag des Clients durchführen, während imitieren.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Zugriff auf die <xref:System.Web.Configuration.ProcessModelSection.ComImpersonationLevel%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Web.Configuration.ProcessModelSection#22](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/CS/processmodelsection.cs#22)]
+ [!code-vb[System.Web.Configuration.ProcessModelSection#22](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/VB/processmodelsection.vb#22)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CpuMask">
+      <MemberSignature Language="C#" Value="public int CpuMask { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CpuMask" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProcessModelSection.CpuMask" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("cpuMask", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, welche Prozessoren auf einem Server mit mehreren Prozessoren ASP.NET-Prozesse ausgeführt werden.</summary>
+        <value>Die Zahl, die das Bitmuster darstellt angewendet werden soll. Der Standardwert ist 0xFFFFFFFF.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.ProcessModelSection.CpuMask%2A> Wert gibt ein Bitmuster, die der CPUs, die sich zum Ausführen von ASP.NET-Threads angibt. Wenn die <xref:System.Web.Configuration.ProcessModelSection.WebGarden%2A> -Eigenschaftensatz auf `true`, <xref:System.Web.Configuration.ProcessModelSection.CpuMask%2A> Arbeitsprozesse auf die Anzahl der zulässigen CPUs beschränkt. Die maximale zulässige Anzahl von Arbeitsprozessen ist gleich der Anzahl der CPUs. Standardmäßig sind alle CPUs aktiviert und ASP.NET startet einen Prozess für jede CPU. Wenn die <xref:System.Web.Configuration.ProcessModelSection.WebGarden%2A> -Eigenschaftensatz auf `false`die <xref:System.Web.Configuration.ProcessModelSection.CpuMask%2A> -Attribut ignoriert und nur einen Arbeitsprozess ausgeführt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Zugriff auf die <xref:System.Web.Configuration.ProcessModelSection.CpuMask%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Web.Configuration.ProcessModelSection#25](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/CS/processmodelsection.cs#25)]
+ [!code-vb[System.Web.Configuration.ProcessModelSection#25](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/VB/processmodelsection.vb#25)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementProperty">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationElementProperty ElementProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationElementProperty ElementProperty" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProcessModelSection.ElementProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElementProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enable">
+      <MemberSignature Language="C#" Value="public bool Enable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enable" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProcessModelSection.Enable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("enable", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob das Prozessmodell aktiviert ist.</summary>
+        <value>
+          <see langword="true" />Wenn das Prozessmodell aktiviert ist; andernfalls <see langword="false" />. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.ProcessModelSection.Enable%2A> Eigenschaft gibt an, ob ASP.NET in einem externen Arbeitsprozess gehostet wird. Wenn <xref:System.Web.Configuration.ProcessModelSection.Enable%2A> ist `true`, ASP.NET ist, andernfalls in einem externen Arbeitsprozess gehostet, direkt in Inetinfo.exe ausgeführt wird.  
+  
+> [!NOTE]
+>  Ausführen von ASP.NET in Inetinfo.exe wird nicht empfohlen, da dies umfasst die Anwendung in den Sicherheitskontext des lokalen Systems ausgeführt. Wenn ASP.NET in IIS (Internetinformationsdienste) 6 im einheitlichen Modus ausgeführt wird, wird diese Einstellung ignoriert, daher in der Regel keinen Grund besteht, festgelegt ist, dass `false`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Zugriff auf die <xref:System.Web.Configuration.ProcessModelSection.Enable%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Web.Configuration.ProcessModelSection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/CS/processmodelsection.cs#2)]
+ [!code-vb[System.Web.Configuration.ProcessModelSection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/VB/processmodelsection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IdleTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan IdleTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan IdleTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProcessModelSection.IdleTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.InfiniteTimeSpanConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("idleTimeout", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, des Zeitraums der Inaktivität, nach dem ASP.NET den Arbeitsprozess automatisch beendet.</summary>
+        <value>Ein <see cref="T:System.TimeSpan" /> Wert, der angibt, der Leerlaufzeit an. Der Standardwert ist unbegrenzt, die entspricht <see cref="F:System.TimeSpan.MaxValue" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Arbeitsprozess wird neu gestartet (zurückgewiesen) werden, wenn die <xref:System.Web.Configuration.ProcessModelSection.IdleTimeout%2A> Eigenschaftswert erreicht ist. Standardmäßig nur zwei Bedingungen dazu führen, dass die bounce: der Prozess überschreitet den zulässigen arbeitsspeichergrenzwert oder der Prozess überschreitet die zulässige Anzahl von Anforderungen, die in die Warteschlange eingereiht werden können. Sie können die Standardfarben andere Bedingungen hinzufügen. Beispielsweise können Sie die <xref:System.Web.Configuration.ProcessModelSection.IdleTimeout%2A> -Eigenschaft können Sie die Zeit Begrenzen der Arbeitsprozess im Leerlauf ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Zugriff auf die <xref:System.Web.Configuration.ProcessModelSection.IdleTimeout%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Web.Configuration.ProcessModelSection#16](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/CS/processmodelsection.cs#16)]
+ [!code-vb[System.Web.Configuration.ProcessModelSection#16](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/VB/processmodelsection.vb#16)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogLevel">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.ProcessModelLogLevel LogLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Configuration.ProcessModelLogLevel LogLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProcessModelSection.LogLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("logLevel", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.ProcessModelLogLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, der Ereignistypen auf, im Ereignisprotokoll aufgezeichnet wird.</summary>
+        <value>Einer der <see cref="T:System.Web.Configuration.ProcessModelLogLevel" />-Werte. Der Standardwert ist <see cref="F:System.Web.Configuration.ProcessModelLogLevel.Errors" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch die ordnungsgemäße Verwendung dieser Eigenschaft können Sie die Fehler filtern, die das System anmelden kann. Nachdem Sie eine Vorstellung von der Anwendung Funktionsstörungen oder Engpässe haben, empfiehlt es sich um eine Strategie entwickeln, die den Bereich der Fehler eingeschränkt wird, die Sie interessiert sind.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Zugriff auf die <xref:System.Web.Configuration.ProcessModelSection.LogLevel%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Web.Configuration.ProcessModelSection#23](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/CS/processmodelsection.cs#23)]
+ [!code-vb[System.Web.Configuration.ProcessModelSection#23](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/VB/processmodelsection.vb#23)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxAppDomains">
+      <MemberSignature Language="C#" Value="public int MaxAppDomains { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxAppDomains" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProcessModelSection.MaxAppDomains" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("maxAppDomains", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MaxValue=2147483646, MinValue=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die maximale zulässige Anzahl von Anwendungsdomänen in einem Prozess.</summary>
+        <value>Die maximal zulässige Anzahl von Anwendungsdomänen in einem Prozess.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.Configuration.ProcessModelSection.MaxAppDomains%2A> Schwellenwert überschritten wird, die am wenigsten verwendet die Anwendungsdomäne wird heruntergefahren, wenn eine neue Anwendungsdomäne gestartet werden muss.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Zugriff auf die <xref:System.Web.Configuration.ProcessModelSection.MaxAppDomains%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Web.Configuration.ProcessModelSection#27](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/CS/processmodelsection.cs#27)]
+ [!code-vb[System.Web.Configuration.ProcessModelSection#27](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/VB/processmodelsection.vb#27)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxIOThreads">
+      <MemberSignature Language="C#" Value="public int MaxIOThreads { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxIOThreads" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProcessModelSection.MaxIOThreads" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("maxIoThreads", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MaxValue=2147483646, MinValue=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, der maximalen Anzahl von e/a-Threads pro CPU im CLR-Threadpools.</summary>
+        <value>Die maximale Anzahl von Threads. Die Standardeinstellung ist 20.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert der <xref:System.Web.Configuration.ProcessModelSection.MaxIOThreads%2A> muss gleich oder größer als die <xref:System.Web.Configuration.HttpRuntimeSection.MinFreeThreads%2A> festlegen in der `httpRuntime` Konfigurationsabschnitt.  
+  
+ Dass gewisse Kontrolle über die CPU-Auslastung durch Festlegen der Anzahl der Arbeitsthreads und e/a-Threads mit der <xref:System.Web.Configuration.ProcessModelSection.MaxWorkerThreads%2A> Eigenschaft und die <xref:System.Web.Configuration.ProcessModelSection.MaxIOThreads%2A> Eigenschaft bzw..  
+  
+ Der Unterschied zwischen den beiden Typen von Threads ist, dass Letzteres an e/a-Objekte, z. B. einen Stream oder eine Pipe gebunden werden und das Erstere herkömmliche uneingeschränkten Threads sind. Für Internet Information Services (IIS) Version 6.0 und höher verarbeitet ASP.NET Anforderungen an Arbeitsthreads. Dies ist in IIS ASP.NET integriert ist.  
+  
+ Diese Threads werden aus dem prozessweit CLR-Threadpool, gehören zu einer Anwendung abgerufen.  
+  
+> [!NOTE]
+>  In der Regel sind die Standardwerte für die zulässigen Threads ausreichend, um die hohe CPU-Auslastung zu halten. Wenn aus irgendeinem Grund, die Ihre Anwendung langsam ist, z. B. für externe Ressourcen warten, können Sie versuchen, um die Anzahl der Threads an, die einen Wert kleiner als 100 zu erhöhen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Zugriff auf die <xref:System.Web.Configuration.ProcessModelSection.MaxIOThreads%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Web.Configuration.ProcessModelSection#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/CS/processmodelsection.cs#5)]
+ [!code-vb[System.Web.Configuration.ProcessModelSection#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/VB/processmodelsection.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxWorkerThreads">
+      <MemberSignature Language="C#" Value="public int MaxWorkerThreads { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxWorkerThreads" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProcessModelSection.MaxWorkerThreads" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("maxWorkerThreads", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MaxValue=2147483646, MinValue=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, der maximale Menge von Worker-Threads pro CPU im CLR-Threadpools.</summary>
+        <value>Die maximale Anzahl von Threads. Die Standardeinstellung ist 20.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert der <xref:System.Web.Configuration.ProcessModelSection.MaxWorkerThreads%2A> muss gleich oder größer als die <xref:System.Web.Configuration.HttpRuntimeSection.MinFreeThreads%2A> festlegen in der `httpRuntime` Konfigurationsabschnitt.  
+  
+ Dass gewisse Kontrolle über die CPU-Auslastung durch Festlegen der Anzahl der Arbeitsthreads und e/a-Threads mit der <xref:System.Web.Configuration.ProcessModelSection.MaxWorkerThreads%2A> Eigenschaft und der <xref:System.Web.Configuration.ProcessModelSection.MaxIOThreads%2A> Eigenschaft bzw..  
+  
+ Der Unterschied zwischen den beiden Typen von Threads ist, dass Letzteres an e/a-Objekte, z. B. einen Stream oder eine Pipe gebunden werden und das Erstere herkömmliche uneingeschränkten Threads sind. Für Internet Information Services (IIS) Version 6.0 und höher verarbeitet ASP.NET Anforderungen an Arbeitsthreads. Dies ist in IIS ASP.NET integriert ist.  
+  
+ Diese Threads werden aus dem prozessweit CLR-Threadpool, gehören zu einer Anwendung abgerufen.  
+  
+> [!NOTE]
+>  In der Regel sind die Standardwerte für die zulässigen Threads ausreichend, um die hohe CPU-Auslastung zu halten. Wenn aus irgendeinem Grund, die Ihre Anwendung langsam ist, z. B. für externe Ressourcen warten, können Sie versuchen, um die Anzahl der Threads an, die einen Wert kleiner als 100 zu erhöhen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Zugriff auf die <xref:System.Web.Configuration.ProcessModelSection.MaxWorkerThreads%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Web.Configuration.ProcessModelSection#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/CS/processmodelsection.cs#7)]
+ [!code-vb[System.Web.Configuration.ProcessModelSection#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/VB/processmodelsection.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemoryLimit">
+      <MemberSignature Language="C#" Value="public int MemoryLimit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MemoryLimit" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProcessModelSection.MemoryLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("memoryLimit", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, der maximal zulässige Arbeitsspeichergröße fest.</summary>
+        <value>Der Prozentsatz des gesamten Systemspeichers. Der Standardwert ist 60 Prozent.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Speichergröße wird als Prozentsatz des gesamten Systemspeichers ausgedrückt. Dies ist die Menge an Arbeitsspeicher, die ein Arbeitsprozess nutzen kann, bis zum Neustart von ASP.NET (zurückweist) es.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Zugriff auf die <xref:System.Web.Configuration.ProcessModelSection.MemoryLimit%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Web.Configuration.ProcessModelSection#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/CS/processmodelsection.cs#3)]
+ [!code-vb[System.Web.Configuration.ProcessModelSection#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/VB/processmodelsection.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinIOThreads">
+      <MemberSignature Language="C#" Value="public int MinIOThreads { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MinIOThreads" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProcessModelSection.MinIOThreads" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("minIoThreads", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MaxValue=2147483646, MinValue=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Mindestanzahl von e/a-Threads pro CPU in CLR-Threadpools.</summary>
+        <value>Die minimale Anzahl von e/a-Threads pro CPU im CLR-Threadpools.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Zugriff auf die <xref:System.Web.Configuration.ProcessModelSection.MinIOThreads%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Web.Configuration.ProcessModelSection#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/CS/processmodelsection.cs#4)]
+ [!code-vb[System.Web.Configuration.ProcessModelSection#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/VB/processmodelsection.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinWorkerThreads">
+      <MemberSignature Language="C#" Value="public int MinWorkerThreads { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MinWorkerThreads" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProcessModelSection.MinWorkerThreads" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("minWorkerThreads", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MaxValue=2147483646, MinValue=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die minimale Anzahl von Worker-Threads pro CPU in CLR-Threadpools.</summary>
+        <value>Die minimale Anzahl von Worker-Threads pro CPU im CLR-Threadpools</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Zugriff auf die <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Web.Configuration.ProcessModelSection#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/CS/processmodelsection.cs#6)]
+ [!code-vb[System.Web.Configuration.ProcessModelSection#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/VB/processmodelsection.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Password">
+      <MemberSignature Language="C#" Value="public string Password { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Password" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProcessModelSection.Password" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("password", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, das Kennwort für die Windows-Identität fest.</summary>
+        <value>Das Kennwort zu verwenden. Der Standardwert ist automatisch generieren.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.ProcessModelSection.Password%2A> Eigenschaft muss zusammen mit der <xref:System.Web.Configuration.ProcessModelSection.UserName%2A> Eigenschaft.  
+  
+ Bei festgelegtem dazu führen, dass diese Eigenschaftswerte der Arbeitsprozess mit der konfigurierten Windows-Identität ausgeführt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Zugriff auf die <xref:System.Web.Configuration.ProcessModelSection.Password%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Web.Configuration.ProcessModelSection#20](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/CS/processmodelsection.cs#20)]
+ [!code-vb[System.Web.Configuration.ProcessModelSection#20](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/VB/processmodelsection.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PingFrequency">
+      <MemberSignature Language="C#" Value="public TimeSpan PingFrequency { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan PingFrequency" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProcessModelSection.PingFrequency" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.InfiniteTimeSpanConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("pingFrequency", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, der des Zeitintervalls an, an dem die ISAPI-Erweiterung sendet Pingsignale an den Arbeitsprozess, um festzustellen, ob er ausgeführt wird.</summary>
+        <value>Die <see cref="T:System.TimeSpan" /> des angegebenen Zeitintervalls zu definieren. Der Standardwert ist 30 Sekunden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Arbeitsprozess wird neu (zurückgewiesen) gestartet, wenn er nicht, nachdem ausgeführt wird die <xref:System.Web.Configuration.ProcessModelSection.PingFrequency%2A> Intervall ist abgelaufen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Zugriff auf die <xref:System.Web.Configuration.ProcessModelSection.PingFrequency%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Web.Configuration.ProcessModelSection#13](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/CS/processmodelsection.cs#13)]
+ [!code-vb[System.Web.Configuration.ProcessModelSection#13](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/VB/processmodelsection.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PingTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan PingTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan PingTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProcessModelSection.PingTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.InfiniteTimeSpanConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("pingTimeout", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, der des Zeitintervalls, nach dem ein nicht reagierender Arbeitsprozess neu gestartet wird.</summary>
+        <value>Die <see cref="T:System.TimeSpan" /> des angegebenen Zeitintervalls zu definieren. Der Standardwert ist 5 Sekunden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die ISAPI-Erweiterungen Pingen Sie den Arbeitsprozess an den <xref:System.Web.Configuration.ProcessModelSection.PingFrequency%2A> Intervall. Wenn der Arbeitsprozess nicht mehr, innerhalb reagiert der <xref:System.Web.Configuration.ProcessModelSection.PingTimeout%2A> Intervall, den Prozess neu gestartet wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Zugriff auf die <xref:System.Web.Configuration.ProcessModelSection.PingTimeout%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Web.Configuration.ProcessModelSection#14](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/CS/processmodelsection.cs#14)]
+ [!code-vb[System.Web.Configuration.ProcessModelSection#14](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/VB/processmodelsection.vb#14)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProcessModelSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestLimit">
+      <MemberSignature Language="C#" Value="public int RequestLimit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RequestLimit" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProcessModelSection.RequestLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.InfiniteIntConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("requestLimit", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MinValue=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, der Anzahl der Anforderungen, die zulässig sind, bevor ein Arbeitsprozess wiederverwendet wird.</summary>
+        <value>Die Anzahl der zulässigen Anforderungen. Der Standardwert ist unbegrenzt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Anzahl der Anforderungen überschritten wird, wird von ASP.NET automatisch die Stelle von der aktuellen Aktivität wird einen neuer Arbeitsprozess gestartet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.ProcessModelSection.RequestLimit%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Web.Configuration.ProcessModelSection#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/CS/processmodelsection.cs#8)]
+ [!code-vb[System.Web.Configuration.ProcessModelSection#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/VB/processmodelsection.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestQueueLimit">
+      <MemberSignature Language="C#" Value="public int RequestQueueLimit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RequestQueueLimit" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProcessModelSection.RequestQueueLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.InfiniteIntConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("requestQueueLimit", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MinValue=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, der Anzahl der Anforderungen, die in der Warteschlange zulässig.</summary>
+        <value>Die Anzahl der Anforderungen, die in die Warteschlange eingereiht werden dürfen. Der Standardwert ist 5000.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET beginnt zurückgeben, wenn die Anzahl der Anforderungen, die in der Warteschlange zulässig überschritten wird, "503 – Too Server ausgelastet" Fehler, um neue Anforderungen. Wenn dieser Grenzwert erreicht wird, wird das System im nicht ordnungsgemäße Bedingungen ausgeführt. Dies kann ein Symptom für eine Fehlfunktion oder, vielleicht nur Überlastung. Neustart (Zurückweisen) des Arbeitsprozesses ist möglicherweise die einzige Möglichkeit, weitere Probleme zu verhindern.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.ProcessModelSection.RequestQueueLimit%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Web.Configuration.ProcessModelSection#10](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/CS/processmodelsection.cs#10)]
+ [!code-vb[System.Web.Configuration.ProcessModelSection#10](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/VB/processmodelsection.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseDeadlockInterval">
+      <MemberSignature Language="C#" Value="public TimeSpan ResponseDeadlockInterval { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan ResponseDeadlockInterval" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProcessModelSection.ResponseDeadlockInterval" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.InfiniteTimeSpanConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("responseDeadlockInterval", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.TimeSpanValidator(MaxValueString="10675199.02:48:05.4775807", MinValueString="00:00:00")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, der des Zeitintervalls für den Arbeitsprozess reagieren.</summary>
+        <value>Die <see cref="T:System.TimeSpan" /> definiert das Intervall. Die Standardeinstellung beträgt drei Minuten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Prozess neu gestartet, wenn stehen Anforderungen in der Warteschlange und wenn nicht stattgefunden hat eine Antwort während des angegebenen Zeitintervalls, die von definiert ist <xref:System.Web.Configuration.ProcessModelSection.ResponseDeadlockInterval%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.ProcessModelSection.ResponseDeadlockInterval%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Web.Configuration.ProcessModelSection#17](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/CS/processmodelsection.cs#17)]
+ [!code-vb[System.Web.Configuration.ProcessModelSection#17](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/VB/processmodelsection.vb#17)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseRestartDeadlockInterval">
+      <MemberSignature Language="C#" Value="public TimeSpan ResponseRestartDeadlockInterval { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan ResponseRestartDeadlockInterval" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProcessModelSection.ResponseRestartDeadlockInterval" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.InfiniteTimeSpanConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("responseRestartDeadlockInterval", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nicht mehr verwendet.</summary>
+        <value>Nicht zutreffend.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird von ASP.NET nicht mehr verwendet und wird nur für Abwärtskompatibilität bereitgestellt. Es wird einen Fehler bei der Konfiguration nicht verursachen, wenn sie bereits in einer Konfigurationsdatei vorhanden ist. Alle recycling im Falle einer Deadlockbedingung wird jetzt gesteuert, indem die <xref:System.Web.Configuration.ProcessModelSection.ResponseDeadlockInterval%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Zugriff auf die <xref:System.Web.Configuration.ProcessModelSection.ResponseRestartDeadlockInterval%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Web.Configuration.ProcessModelSection#11](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/CS/processmodelsection.cs#11)]
+ [!code-vb[System.Web.Configuration.ProcessModelSection#11](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/VB/processmodelsection.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RestartQueueLimit">
+      <MemberSignature Language="C#" Value="public int RestartQueueLimit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RestartQueueLimit" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProcessModelSection.RestartQueueLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.InfiniteIntConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("restartQueueLimit", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MinValue=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, in der die maximale Anzahl von Anforderungen während des Wartens auf eines neuer Arbeitsprozess gestartet, Behandlung von Anforderungen durch die ISAPI Warteschlange fest.</summary>
+        <value>Die Anzahl der Anforderungen in der Warteschlange. Der Standard ist 10.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn dieses Limit überschritten wird, erhalten eine Clientanforderung eine 503-Fehler, bis der Arbeitsprozess bereit ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Zugriff auf die <xref:System.Web.Configuration.ProcessModelSection.RestartQueueLimit%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Web.Configuration.ProcessModelSection#9](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/CS/processmodelsection.cs#9)]
+ [!code-vb[System.Web.Configuration.ProcessModelSection#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/VB/processmodelsection.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerErrorMessageFile">
+      <MemberSignature Language="C#" Value="public string ServerErrorMessageFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ServerErrorMessageFile" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProcessModelSection.ServerErrorMessageFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("serverErrorMessageFile", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, der Datei, deren Inhalt verwendet werden muss, wenn ein schwerwiegender Fehler auftritt.</summary>
+        <value>Der Pfad der Datei verwendet, wenn ein schwerwiegender Fehler auftritt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Datei, deren Inhalt statt der Standard-Server nicht verfügbar-Nachricht verwendet wird.  
+  
+ Speicherort der Datei kann es sich um einen relativen oder einen absoluten Dateipfad sein.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.ProcessModelSection.ServerErrorMessageFile%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Web.Configuration.ProcessModelSection#28](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/CS/processmodelsection.cs#28)]
+ [!code-vb[System.Web.Configuration.ProcessModelSection#28](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/VB/processmodelsection.vb#28)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShutdownTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan ShutdownTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan ShutdownTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProcessModelSection.ShutdownTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.InfiniteTimeSpanConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("shutdownTimeout", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.TimeSpanValidator(MaxValueString="10675199.02:48:05.4775807", MinValueString="00:00:00")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, der zulässige Zeit für den Arbeitsprozess heruntergefahren.</summary>
+        <value>Die <see cref="T:System.TimeSpan" /> definiert das Intervall. Der Standardwert ist 5 Sekunden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt die zulässige Anzahl von Minuten für den Arbeitsprozess ordnungsgemäß beendet. Wenn das Timeout abläuft, beendet ASP.NET der Arbeitsprozess wird erzwungen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.ProcessModelSection.ShutdownTimeout%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Web.Configuration.ProcessModelSection#15](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/CS/processmodelsection.cs#15)]
+ [!code-vb[System.Web.Configuration.ProcessModelSection#15](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/VB/processmodelsection.vb#15)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Timeout">
+      <MemberSignature Language="C#" Value="public TimeSpan Timeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan Timeout" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProcessModelSection.Timeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.InfiniteTimeSpanConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("timeout", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, der Anzahl der Minuten, bis der ASP.NET wird einen neuer Arbeitsprozess gestartet.</summary>
+        <value>Die <see cref="T:System.TimeSpan" /> definiert das Intervall. Der Standardwert ist unbegrenzt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET wird die Stelle von der aktuellen Aktivität wird einen neuer Arbeitsprozess gestartet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Web.Configuration.ProcessModelSection.Timeout%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Web.Configuration.ProcessModelSection#10](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/CS/processmodelsection.cs#10)]
+ [!code-vb[System.Web.Configuration.ProcessModelSection#10](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/VB/processmodelsection.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserName">
+      <MemberSignature Language="C#" Value="public string UserName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProcessModelSection.UserName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("userName", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, des Benutzernamen für eine Windows-Identität fest.</summary>
+        <value>Der Benutzername. Der Standardwert ist Computer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Falls vorhanden, die <xref:System.Web.Configuration.ProcessModelSection.UserName%2A> definiert eine Windows-Identität, den Standardprozess unterscheiden. Diese Identität wird verwendet, um den ASP.NET-Arbeitsprozess ausgeführt.  
+  
+ Standardmäßig <xref:System.Web.Configuration.ProcessModelSection.UserName%2A> festgelegt ist, der spezielle Wert Computer und der Ausführung unter einem Benutzerkonto mit dem Namen ASPNET, die automatisch erstellt wird, wenn ASP.NET installiert ist.  
+  
+ Die <xref:System.Web.Configuration.ProcessModelSection.Password%2A> Eigenschaft muss zusammen mit der <xref:System.Web.Configuration.ProcessModelSection.UserName%2A> Eigenschaft.  
+  
+ Bei festgelegtem dazu führen, dass diese Eigenschaftswerte der Arbeitsprozess mit der konfigurierten Windows-Identität ausgeführt.  
+  
+> [!NOTE]
+>  Wenn die <xref:System.Web.Configuration.ProcessModelSection.UserName%2A> Eigenschaft auf festgelegt ist, mit dem Kennwort automatisch generieren, die es definiert eine Entität, wird den Prozess als ein Administratorkonto ausgeführt und kann alle ASP.NET-Code für Benutzer unter der vollständige Administratorrechte-Prozess ausgeführt wird. Achten Sie also, besonders für diesen Fall, für die Berechtigungen, die zulässig.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Zugriff auf die <xref:System.Web.Configuration.ProcessModelSection.UserName%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Web.Configuration.ProcessModelSection#19](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/CS/processmodelsection.cs#19)]
+ [!code-vb[System.Web.Configuration.ProcessModelSection#19](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/VB/processmodelsection.vb#19)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebGarden">
+      <MemberSignature Language="C#" Value="public bool WebGarden { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool WebGarden" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProcessModelSection.WebGarden" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("webGarden", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert aus, aktivieren den verfügbaren CPUs die Arbeitsprozesse ausgeführt.</summary>
+        <value>
+          <see langword="true" />, wenn <see cref="P:System.Web.Configuration.ProcessModelSection.CpuMask" /> wird verwendet, um die Anzahl der zulässigen CPUs; die Arbeitsprozesse zuordnen <see langword="false" /> Wenn <see cref="P:System.Web.Configuration.ProcessModelSection.CpuMask" /> wird ignoriert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.ProcessModelSection.WebGarden%2A> Eigenschaft muss zusammen mit der <xref:System.Web.Configuration.ProcessModelSection.CpuMask%2A> Eigenschaft.  
+  
+ Wenn die <xref:System.Web.Configuration.ProcessModelSection.WebGarden%2A> -Eigenschaftensatz auf `false`die <xref:System.Web.Configuration.ProcessModelSection.CpuMask%2A> -Attribut ignoriert und nur ein Arbeitsprozess ausgeführt wird.  
+  
+> [!NOTE]
+>  Multiprozessor-Webserver wird einen Webgarten bezeichnet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Zugriff auf die <xref:System.Web.Configuration.ProcessModelSection.WebGarden%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[System.Web.Configuration.ProcessModelSection#24](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/CS/processmodelsection.cs#24)]
+ [!code-vb[System.Web.Configuration.ProcessModelSection#24](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/VB/processmodelsection.vb#24)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

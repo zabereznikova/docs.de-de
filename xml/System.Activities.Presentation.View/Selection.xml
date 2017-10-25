@@ -1,0 +1,401 @@
+<Type Name="Selection" FullName="System.Activities.Presentation.View.Selection">
+  <TypeSignature Language="C#" Value="public class Selection : System.Activities.Presentation.ContextItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Selection extends System.Activities.Presentation.ContextItem" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.View.Selection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.Presentation.ContextItem</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert eine Auswahl von Objekten, die als <see cref="T:System.Activities.Presentation.ContextItem" /> im <see cref="T:System.Activities.Presentation.EditingContext" /> veröffentlicht werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Auswahl besteht aus 0 (null) oder mehr Objekten. Das erste Objekt in einer Auswahl wird als primäre Auswahl definiert, die verwendet wird, wenn ein Objekt in einer Gruppe als Schlüssel verwendet werden muss. Jedes Objekt wird als <xref:System.Activities.Presentation.Model.ModelItem> gespeichert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Selection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.View.Selection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein leeres <see cref="T:System.Activities.Presentation.View.Selection" />-Objekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Selection (params System.Activities.Presentation.Model.ModelItem[] selectedObjects);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Activities.Presentation.Model.ModelItem[] selectedObjects) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.View.Selection.#ctor(System.Activities.Presentation.Model.ModelItem[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="selectedObjects" Type="System.Activities.Presentation.Model.ModelItem[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="selectedObjects">Ein Parameterarray von Objekten, die ausgewählt werden sollen.</param>
+        <summary>Erstellt ein <see cref="T:System.Activities.Presentation.View.Selection" />-Objekt mit den angegebenen ausgewählten Objekten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das erste Objekt wird als primäre Auswahl betrachtet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Selection (System.Collections.Generic.IEnumerable&lt;System.Activities.Presentation.Model.ModelItem&gt; selectedObjects);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;class System.Activities.Presentation.Model.ModelItem&gt; selectedObjects) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.View.Selection.#ctor(System.Collections.Generic.IEnumerable{System.Activities.Presentation.Model.ModelItem})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="selectedObjects" Type="System.Collections.Generic.IEnumerable&lt;System.Activities.Presentation.Model.ModelItem&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="selectedObjects">Eine Enumeration der Objekte, die ausgewählt werden sollen.</param>
+        <summary>Erstellt ein <see cref="T:System.Activities.Presentation.View.Selection" />-Objekt mit den angegebenen ausgewählten Objekten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das erste Objekt in der Enumeration wird als primäre Auswahl betrachtet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wenn <paramref name="selectedObjects" /> gleich <see langword="null" /> ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Selection (System.Collections.IEnumerable selectedObjects);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.IEnumerable selectedObjects) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.View.Selection.#ctor(System.Collections.IEnumerable)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="selectedObjects" Type="System.Collections.IEnumerable" />
+      </Parameters>
+      <Docs>
+        <param name="selectedObjects">Eine Enumeration der Objekte, die ausgewählt werden sollen.</param>
+        <summary>Erstellt ein <see cref="T:System.Activities.Presentation.View.Selection" />-Objekt mit den angegebenen ausgewählten Objekten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das erste Objekt in der Enumeration wird als primäre Auswahl betrachtet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wenn <paramref name="selectedObjects" /> gleich <see langword="null" /> ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Selection (System.Collections.Generic.IEnumerable&lt;System.Activities.Presentation.Model.ModelItem&gt; selectedObjects, Predicate&lt;System.Activities.Presentation.Model.ModelItem&gt; match);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;class System.Activities.Presentation.Model.ModelItem&gt; selectedObjects, class System.Predicate`1&lt;class System.Activities.Presentation.Model.ModelItem&gt; match) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.View.Selection.#ctor(System.Collections.Generic.IEnumerable{System.Activities.Presentation.Model.ModelItem},System.Predicate{System.Activities.Presentation.Model.ModelItem})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="selectedObjects" Type="System.Collections.Generic.IEnumerable&lt;System.Activities.Presentation.Model.ModelItem&gt;" />
+        <Parameter Name="match" Type="System.Predicate&lt;System.Activities.Presentation.Model.ModelItem&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="selectedObjects">Eine Enumeration der Objekte, die ausgewählt werden sollen.</param>
+        <param name="match">Die Kriterien zum Aufnehmen von Objekten. Nur die Objekte in <c>SelectedObjects</c> , erfüllen, die das Prädikat auf die Auswahl hinzugefügt werden wird.</param>
+        <summary>Erstellt ein <see cref="T:System.Activities.Presentation.View.Selection" />-Objekt mit den angegebenen ausgewählten Objekten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das erste Objekt in der Enumeration, das dem Prädikat entspricht, wird als primäre Auswahl betrachtet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wenn <paramref name="selectedObjects" /> oder <paramref name="match" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Selection (System.Collections.IEnumerable selectedObjects, Predicate&lt;System.Activities.Presentation.Model.ModelItem&gt; match);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.IEnumerable selectedObjects, class System.Predicate`1&lt;class System.Activities.Presentation.Model.ModelItem&gt; match) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.View.Selection.#ctor(System.Collections.IEnumerable,System.Predicate{System.Activities.Presentation.Model.ModelItem})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="selectedObjects" Type="System.Collections.IEnumerable" />
+        <Parameter Name="match" Type="System.Predicate&lt;System.Activities.Presentation.Model.ModelItem&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="selectedObjects">Eine Enumeration der Objekte, die ausgewählt werden sollen.</param>
+        <param name="match">Die Kriterien zum Aufnehmen von Objekten. Nur die Objekte in <c>SelectedObjects</c> , erfüllen, die das Prädikat auf die Auswahl hinzugefügt werden wird.</param>
+        <summary>Erstellt ein <see cref="T:System.Activities.Presentation.View.Selection" />-Objekt mit den angegebenen ausgewählten Objekten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das erste Objekt in der Enumeration, das dem Prädikat entspricht, wird als primäre Auswahl betrachtet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Wenn <paramref name="selectedObjects" /> oder <paramref name="match" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemType">
+      <MemberSignature Language="C#" Value="public override sealed Type ItemType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ItemType" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.View.Selection.ItemType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Elementtyp für dieses Bearbeitungskontextelement zurück.</summary>
+        <value>Gibt <c>Operatoren "typeof" (</c><see cref="T:System.Activities.Presentation.View.Selection" /><c>)</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist eine Überschreibung von <xref:System.Activities.Presentation.ContextItem.ItemType%2A>. Wenn Sie eine abgeleitete Klasse erstellen, überschreiben Sie diese Eigenschaft, um den <xref:System.Type> des abgeleiteten Typs zurückzugeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrimarySelection">
+      <MemberSignature Language="C#" Value="public System.Activities.Presentation.Model.ModelItem PrimarySelection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Presentation.Model.ModelItem PrimarySelection" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.View.Selection.PrimarySelection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.Model.ModelItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die primäre Auswahl zurück.</summary>
+        <value>Gibt die primäre Auswahl als <see cref="T:System.Activities.Presentation.Model.ModelItem" /> zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="public static System.Activities.Presentation.View.Selection Select (System.Activities.Presentation.EditingContext context, System.Activities.Presentation.Model.ModelItem itemToSelect);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Activities.Presentation.View.Selection Select(class System.Activities.Presentation.EditingContext context, class System.Activities.Presentation.Model.ModelItem itemToSelect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.View.Selection.Select(System.Activities.Presentation.EditingContext,System.Activities.Presentation.Model.ModelItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.View.Selection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.Presentation.EditingContext" />
+        <Parameter Name="itemToSelect" Type="System.Activities.Presentation.Model.ModelItem" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der Bearbeitungskontext, auf den die Auswahländerung angewendet werden soll.</param>
+        <param name="itemToSelect">Das auszuwählende Element.</param>
+        <summary>Eine Hilfsmethode für die Auswahl, die die vorhandene Auswahl in den Kontext aufnimmt und ein Element darin auswählt. Wenn das Element bereits in der Auswahl ist, wird die Auswahl beibehalten, und das Element wird zur primären Auswahl hochgestuft.</summary>
+        <returns>Ein Auswahlobjekt, das die neue Auswahl enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedObjects">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Activities.Presentation.Model.ModelItem&gt; SelectedObjects { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class System.Activities.Presentation.Model.ModelItem&gt; SelectedObjects" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.View.Selection.SelectedObjects" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Activities.Presentation.Model.ModelItem&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Enumeration ausgewählter Objekte.</summary>
+        <value>Gibt die ausgewählten Objekte als <see cref="T:System.Collections.Generic.IEnumerable`1" /> zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionCount">
+      <MemberSignature Language="C#" Value="public int SelectionCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SelectionCount" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.View.Selection.SelectionCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Anzahl der gegenwärtig in dieser Auswahl ausgewählten Objekte.</summary>
+        <value>Gibt die Anzahl der ausgewählten Objekte als <see cref="T:System.Int32" /> zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectOnly">
+      <MemberSignature Language="C#" Value="public static System.Activities.Presentation.View.Selection SelectOnly (System.Activities.Presentation.EditingContext context, System.Activities.Presentation.Model.ModelItem itemToSelect);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Activities.Presentation.View.Selection SelectOnly(class System.Activities.Presentation.EditingContext context, class System.Activities.Presentation.Model.ModelItem itemToSelect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.View.Selection.SelectOnly(System.Activities.Presentation.EditingContext,System.Activities.Presentation.Model.ModelItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.View.Selection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.Presentation.EditingContext" />
+        <Parameter Name="itemToSelect" Type="System.Activities.Presentation.Model.ModelItem" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der Bearbeitungskontext, auf den die Auswahländerung angewendet werden soll.</param>
+        <param name="itemToSelect">Das auszuwählende Element.</param>
+        <summary>Eine Hilfsmethode für die Auswahl, die ein Element in der Auswahl festlegt. Die Auswahl aller vorhandenen Elemente wird aufgehoben.</summary>
+        <returns>Ein Auswahlobjekt, das die neue Auswahl enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subscribe">
+      <MemberSignature Language="C#" Value="public static void Subscribe (System.Activities.Presentation.EditingContext context, System.Activities.Presentation.SubscribeContextCallback&lt;System.Activities.Presentation.View.Selection&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Subscribe(class System.Activities.Presentation.EditingContext context, class System.Activities.Presentation.SubscribeContextCallback`1&lt;class System.Activities.Presentation.View.Selection&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.View.Selection.Subscribe(System.Activities.Presentation.EditingContext,System.Activities.Presentation.SubscribeContextCallback{System.Activities.Presentation.View.Selection})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.Presentation.EditingContext" />
+        <Parameter Name="handler" Type="System.Activities.Presentation.SubscribeContextCallback&lt;System.Activities.Presentation.View.Selection&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der zu überwachende Bearbeitungskontext.</param>
+        <param name="handler">Der aufzurufende Handler, wenn sich die Auswahl ändert.</param>
+        <summary>Eine Hilfsmethode, die die Auswahländerungsereignisse abonniert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Toggle">
+      <MemberSignature Language="C#" Value="public static System.Activities.Presentation.View.Selection Toggle (System.Activities.Presentation.EditingContext context, System.Activities.Presentation.Model.ModelItem itemToToggle);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Activities.Presentation.View.Selection Toggle(class System.Activities.Presentation.EditingContext context, class System.Activities.Presentation.Model.ModelItem itemToToggle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.View.Selection.Toggle(System.Activities.Presentation.EditingContext,System.Activities.Presentation.Model.ModelItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.View.Selection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.Presentation.EditingContext" />
+        <Parameter Name="itemToToggle" Type="System.Activities.Presentation.Model.ModelItem" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der Bearbeitungskontext, auf den die Auswahländerung angewendet werden soll.</param>
+        <param name="itemToToggle">Das Element, für das die Auswahl umgeschaltet werden soll.</param>
+        <summary>Eine Hilfsmethode für die Auswahl, die die vorhandene Auswahl in den Kontext aufnimmt und eine neue Auswahl erstellt, die den umgeschalteten Zustand des Elements enthält. Wenn das Element der Auswahl hinzugefügt werden soll, wird es als primäre Auswahl hinzugefügt.</summary>
+        <returns>Ein Auswahlobjekt, das die neue Auswahl enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public static System.Activities.Presentation.View.Selection Union (System.Activities.Presentation.EditingContext context, System.Activities.Presentation.Model.ModelItem itemToAdd);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Activities.Presentation.View.Selection Union(class System.Activities.Presentation.EditingContext context, class System.Activities.Presentation.Model.ModelItem itemToAdd) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.View.Selection.Union(System.Activities.Presentation.EditingContext,System.Activities.Presentation.Model.ModelItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.View.Selection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.Presentation.EditingContext" />
+        <Parameter Name="itemToAdd" Type="System.Activities.Presentation.Model.ModelItem" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der Bearbeitungskontext, auf den die Auswahländerung angewendet werden soll.</param>
+        <param name="itemToAdd">Das Element, dass der Auswahl hinzugefügt werden soll.</param>
+        <summary>Eine Hilfsmethode für die Auswahl, die die vorhandene Auswahl in den Kontext aufnimmt und eine neue Auswahl erstellt, die die ursprüngliche Auswahl und das angegebene hinzuzufügende Element enthält. Wenn das angegebene hinzuzufügende Element bereits in der ursprünglichen Auswahl ist, wird es zur primären Auswahl hochgestuft.</summary>
+        <returns>Ein Auswahlobjekt, das die neue Auswahl enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unsubscribe">
+      <MemberSignature Language="C#" Value="public static void Unsubscribe (System.Activities.Presentation.EditingContext context, System.Activities.Presentation.SubscribeContextCallback&lt;System.Activities.Presentation.View.Selection&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Unsubscribe(class System.Activities.Presentation.EditingContext context, class System.Activities.Presentation.SubscribeContextCallback`1&lt;class System.Activities.Presentation.View.Selection&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.View.Selection.Unsubscribe(System.Activities.Presentation.EditingContext,System.Activities.Presentation.SubscribeContextCallback{System.Activities.Presentation.View.Selection})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.Presentation.EditingContext" />
+        <Parameter Name="handler" Type="System.Activities.Presentation.SubscribeContextCallback&lt;System.Activities.Presentation.View.Selection&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der zu überwachende Bearbeitungskontext.</param>
+        <param name="handler">Der aufzurufende Handler, wenn sich die Auswahl ändert.</param>
+        <summary>Eine Hilfsmethode, die ein zuvor hinzugefügtes Auswahländerungsereignis entfernt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

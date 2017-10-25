@@ -1,0 +1,951 @@
+<Type Name="ErrorProvider" FullName="System.Windows.Forms.ErrorProvider">
+  <TypeSignature Language="C#" Value="public class ErrorProvider : System.ComponentModel.Component, System.ComponentModel.IExtenderProvider, System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ErrorProvider extends System.ComponentModel.Component implements class System.ComponentModel.IExtenderProvider, class System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ErrorProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Component</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IExtenderProvider</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ISupportInitialize</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ComplexBindingProperties("DataSource", "DataMember")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ProvideProperty("IconPadding", typeof(System.Windows.Forms.Control))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ProvideProperty("IconAlignment", typeof(System.Windows.Forms.Control))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ProvideProperty("Error", typeof(System.Windows.Forms.Control))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItemFilter("System.Windows.Forms")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bietet eine Benutzeroberfläche, über die angezeigt werden kann, dass für ein Steuerelement auf einem Formular ein zugeordneter Fehler vorliegt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.ErrorProvider>Stellt einen einfachen Mechanismus bereit, die Endbenutzer anzeigt, dass ein Steuerelement in einem Formular einen zugeordneten Fehler aufweist. Wenn eine Zeichenfolge zur fehlerbeschreibung für das Steuerelement angegeben wird, wird ein Symbol neben dem Steuerelement angezeigt. Das Symbol in der vom angegebenen Weise blinkt <xref:System.Windows.Forms.ErrorProvider.BlinkStyle%2A>, vom angegebenen Rate <xref:System.Windows.Forms.ErrorProvider.BlinkRate%2A>. Wenn der Mauszeiger über dem Symbol zeigt, wird eine QuickInfo mit der Zeichenfolge zur fehlerbeschreibung.  
+  
+ Verwenden Sie in der Regel <xref:System.Windows.Forms.ErrorProvider> im Zusammenhang mit datengebundene Steuerelemente. Bei Verwendung <xref:System.Windows.Forms.ErrorProvider> von datengebundenen Steuerelementen, geben Sie die <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A>, entweder im Konstruktor oder durch Festlegen der <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Die <xref:System.Windows.Forms.ErrorProvider> Komponente leistet keine integrierten Unterstützung für Eingabehilfen-Clients. Um die Anwendung zugreifen können, wenn diese Komponente verwenden, müssen Sie einen zusätzliche zugänglichen Feedbackmechanismus bereitstellen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.ErrorProvider> Klasse, um die Benachrichtigung des Benutzers einen Dateneingabefehler. Das Beispiel erstellt eine <xref:System.Windows.Forms.Form> , enthält eine <xref:System.Windows.Forms.TextBox> -Steuerelement, ein <xref:System.Windows.Forms.NumericUpDown> -Steuerelement, und ein <xref:System.Windows.Forms.ComboBox> steuern, von denen jede seinen Inhalt zu überprüfen und eine <xref:System.Windows.Forms.ErrorProvider> für jedes Steuerelement. Im Beispiel wird Fehler Symboloptionen mithilfe der <xref:System.Windows.Forms.ErrorProvider.BlinkRate%2A> und <xref:System.Windows.Forms.ErrorProvider.BlinkStyle%2A> Eigenschaften und die <xref:System.Windows.Forms.ErrorProvider.SetIconAlignment%2A> und <xref:System.Windows.Forms.ErrorProvider.SetIconPadding%2A> Methoden. Die <xref:System.Windows.Forms.ErrorProvider.SetError%2A> Methode wird aufgerufen, mit oder ohne entsprechenden Fehlertext während eines Steuerelements <xref:System.Windows.Forms.Control.Validated> Ereignis, abhängig von den Inhalt des Steuerelements.  
+  
+ [!code-cpp[System.Windows.Forms.ErrorProvider#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ErrorProvider/CPP/errorproviderexample.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ErrorProvider#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ErrorProvider/CS/errorproviderexample.cs#1)]
+ [!code-vb[System.Windows.Forms.ErrorProvider#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ErrorProvider/VB/errorproviderexample.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.ErrorProvider> mit einem <xref:System.Windows.Forms.ErrorProvider.DataSource%2A> und <xref:System.Windows.Forms.ErrorProvider.DataMember%2A> einen Fehler an den Benutzer an.  
+  
+ [!code-cpp[Classic ErrorProvider Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ErrorProvider Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ErrorProvider Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ErrorProvider Example/CS/source.cs#1)]
+ [!code-vb[Classic ErrorProvider Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ErrorProvider Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ErrorProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ErrorProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.ErrorProvider" /> -Klasse und initialisiert die Standardeinstellungen für <see cref="P:System.Windows.Forms.ErrorProvider.BlinkRate" />, <see cref="P:System.Windows.Forms.ErrorProvider.BlinkStyle" />, und die <see cref="P:System.Windows.Forms.ErrorProvider.Icon" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der folgenden Tabelle zeigt die anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Windows.Forms.ErrorProvider>.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Windows.Forms.ErrorProvider.Icon%2A>|Ein Symbol, das aus einem Ausrufezeichen in einem Kreis mit rotem Hintergrund besteht|  
+|<xref:System.Windows.Forms.ErrorProvider.BlinkRate%2A>|250|  
+|<xref:System.Windows.Forms.ErrorProvider.BlinkStyle%2A>|<xref:System.Windows.Forms.ErrorBlinkStyle.BlinkIfDifferentError>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ErrorProvider (System.ComponentModel.IContainer container);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.IContainer container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ErrorProvider.#ctor(System.ComponentModel.IContainer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="container" Type="System.ComponentModel.IContainer" />
+      </Parameters>
+      <Docs>
+        <param name="container">Die <see cref="T:System.ComponentModel.IContainer" /> auf Fehler überwachen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.ErrorProvider" /> Klasse angefügt, um eine <see cref="T:System.ComponentModel.IContainer" /> Implementierung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.IContainer> angegeben wurde, ist das Containerobjekt für datengebundene Steuerelemente mit dem ErrorProvider zuordnen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ErrorProvider (System.Windows.Forms.ContainerControl parentControl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.ContainerControl parentControl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ErrorProvider.#ctor(System.Windows.Forms.ContainerControl)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="parentControl" Type="System.Windows.Forms.ContainerControl" />
+      </Parameters>
+      <Docs>
+        <param name="parentControl">Der Container des Steuerelements auf Fehler überwachen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.ErrorProvider" /> Klasse, die einen Container angefügt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Control> gemäß <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> das Containerobjekt für datengebundene Steuerelemente mit dem ErrorProvider zugeordnet ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindToDataAndErrors">
+      <MemberSignature Language="C#" Value="public void BindToDataAndErrors (object newDataSource, string newDataMember);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void BindToDataAndErrors(object newDataSource, string newDataMember) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ErrorProvider.BindToDataAndErrors(System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newDataSource" Type="System.Object" />
+        <Parameter Name="newDataMember" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="newDataSource">Ein Dataset basierend auf den <see cref="T:System.Collections.IList" /> Schnittstelle, um Fehler überwacht werden soll. Dies ist normalerweise ein <see cref="T:System.Data.DataSet" /> Fehler überwacht werden soll.</param>
+        <param name="newDataMember">Eine Auflistung innerhalb der <c>NewDataSource</c> auf Fehler überwachen. Dies ist in der Regel wird eine <see cref="T:System.Data.DataTable" />.</param>
+        <summary>Bietet eine Methode zum Festlegen der <see cref="P:System.Windows.Forms.ErrorProvider.DataSource" /> und <see cref="P:System.Windows.Forms.ErrorProvider.DataMember" /> zur Laufzeit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zur Vermeidung von Konflikten bei der Ausführung, die auftreten können, wenn Sie ändern <xref:System.Windows.Forms.ErrorProvider.DataSource%2A> und <xref:System.Windows.Forms.ErrorProvider.DataMember%2A>, verwenden Sie <xref:System.Windows.Forms.ErrorProvider.BindToDataAndErrors%2A> anstatt durch die Einstellung <xref:System.Windows.Forms.ErrorProvider.DataSource%2A> und <xref:System.Windows.Forms.ErrorProvider.DataMember%2A> einzeln.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BlinkRate">
+      <MemberSignature Language="C#" Value="public int BlinkRate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BlinkRate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ErrorProvider.BlinkRate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(250)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Frequenz ab, in der das Fehlersymbol blinkt, oder legt diese fest.</summary>
+        <value>Die Frequenz, in der das Fehlersymbol blinken soll, in Millisekunden. Der Standardwert ist 250 Millisekunden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Fehlersymbol blinkt mit einer angegebenen Rate. Ein Wert von 0 (null) legt <xref:System.Windows.Forms.ErrorProvider.BlinkStyle%2A> auf <xref:System.Windows.Forms.ErrorBlinkStyle.NeverBlink>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.ErrorProvider> Klasse, um die Benachrichtigung des Benutzers einen Dateneingabefehler. Das Beispiel erstellt eine <xref:System.Windows.Forms.Form> , enthält eine <xref:System.Windows.Forms.TextBox> -Steuerelement, ein <xref:System.Windows.Forms.NumericUpDown> -Steuerelement, und ein <xref:System.Windows.Forms.ComboBox> steuern, von denen jede seinen Inhalt zu überprüfen und eine <xref:System.Windows.Forms.ErrorProvider> für jedes Steuerelement. Im Beispiel wird Fehler Symboloptionen mithilfe der <xref:System.Windows.Forms.ErrorProvider.BlinkRate%2A> und <xref:System.Windows.Forms.ErrorProvider.BlinkStyle%2A> Eigenschaften und die <xref:System.Windows.Forms.ErrorProvider.SetIconAlignment%2A> und <xref:System.Windows.Forms.ErrorProvider.SetIconPadding%2A> Methoden. Die <xref:System.Windows.Forms.ErrorProvider.SetError%2A> Methode wird aufgerufen, mit oder ohne entsprechenden Fehlertext während eines Steuerelements <xref:System.Windows.Forms.Control.Validated> Ereignis, abhängig von den Inhalt des Steuerelements.  
+  
+ [!code-cpp[System.Windows.Forms.ErrorProvider#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ErrorProvider/CPP/errorproviderexample.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ErrorProvider#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ErrorProvider/CS/errorproviderexample.cs#1)]
+ [!code-vb[System.Windows.Forms.ErrorProvider#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ErrorProvider/VB/errorproviderexample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert ist kleiner als 0 (null).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BlinkStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ErrorBlinkStyle BlinkStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ErrorBlinkStyle BlinkStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ErrorProvider.BlinkStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ErrorBlinkStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, wann das Fehlersymbol blinkt, oder legt diesen fest.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.ErrorBlinkStyle" />-Werte. Die Standardeinstellung ist <see cref="F:System.Windows.Forms.ErrorBlinkStyle.BlinkIfDifferentError" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Fehlersymbol blinkt, auf die Weise, die gemäß der zugewiesenen <xref:System.Windows.Forms.ErrorBlinkStyle> Wenn ein Fehler auftritt. Festlegen der <xref:System.Windows.Forms.ErrorProvider.BlinkRate%2A> auf 0 (null) festgelegt die <xref:System.Windows.Forms.ErrorProvider.BlinkStyle%2A> auf <xref:System.Windows.Forms.ErrorBlinkStyle.NeverBlink>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.ErrorProvider> Klasse, um die Benachrichtigung des Benutzers einen Dateneingabefehler. Das Beispiel erstellt eine <xref:System.Windows.Forms.Form> , enthält eine <xref:System.Windows.Forms.TextBox> -Steuerelement, ein <xref:System.Windows.Forms.NumericUpDown> -Steuerelement, und ein <xref:System.Windows.Forms.ComboBox> steuern, von denen jede seinen Inhalt zu überprüfen und eine <xref:System.Windows.Forms.ErrorProvider> für jedes Steuerelement. Im Beispiel wird Fehler Symboloptionen mithilfe der <xref:System.Windows.Forms.ErrorProvider.BlinkRate%2A> und <xref:System.Windows.Forms.ErrorProvider.BlinkStyle%2A> Eigenschaften und die <xref:System.Windows.Forms.ErrorProvider.SetIconAlignment%2A> und <xref:System.Windows.Forms.ErrorProvider.SetIconPadding%2A> Methoden. Die <xref:System.Windows.Forms.ErrorProvider.SetError%2A> Methode wird aufgerufen, mit oder ohne entsprechenden Fehlertext während eines Steuerelements <xref:System.Windows.Forms.Control.Validated> Ereignis, abhängig von den Inhalt des Steuerelements.  
+  
+ [!code-cpp[System.Windows.Forms.ErrorProvider#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ErrorProvider/CPP/errorproviderexample.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ErrorProvider#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ErrorProvider/CS/errorproviderexample.cs#1)]
+ [!code-vb[System.Windows.Forms.ErrorProvider#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ErrorProvider/VB/errorproviderexample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der zugewiesene Wert ist nicht der <see cref="T:System.Windows.Forms.ErrorBlinkStyle" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanExtend">
+      <MemberSignature Language="C#" Value="public bool CanExtend (object extendee);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanExtend(object extendee) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ErrorProvider.CanExtend(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="extendee" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="extendee">Das Steuerelement erweitert werden.</param>
+        <summary>Ruft einen Wert ab, der angibt, ob ein Steuerelement erweitert werden kann.</summary>
+        <returns>
+          <see langword="true" />Wenn das Steuerelement erweitert werden kann; andernfalls <see langword="false" />.  
+  
+ Diese Eigenschaft <see langword="true" /> Wenn das Objekt eine <see cref="T:System.Windows.Forms.Control" /> und keine <see cref="T:System.Windows.Forms.Form" /> oder <see cref="T:System.Windows.Forms.ToolBar" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie in der Regel <xref:System.Windows.Forms.ErrorProvider.CanExtend%2A> zu bestimmen, ob Sie anfügen können eine <xref:System.Windows.Forms.ErrorProvider> auf das angegebene Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ErrorProvider.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht alle dieser Komponente zugeordneten Einstellungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufrufen dieser Methode löscht alle eigenschafteneinstellungen für diesen <xref:System.Windows.Forms.ErrorProvider>, Wiederherstellen der Eigenschaften mit ihren Standardwerten. Um die Fehlermeldung zu löschen, rufen die <xref:System.Windows.Forms.ErrorProvider.SetError%2A> -Methode und übergeben Sie <xref:System.String.Empty> für die <xref:System.String> Wert. Dadurch wird das Fehlersymbol aus dem angegebenen entfernt <xref:System.Windows.Forms.Control>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainerControl">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ContainerControl ContainerControl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ContainerControl ContainerControl" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ErrorProvider.ContainerControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ContainerControl</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, des übergeordnete Steuerelements für dieses <see cref="T:System.Windows.Forms.ErrorProvider" />.</summary>
+        <value>Die <see cref="T:System.Windows.Forms.ContainerControl" /> , die die Steuerelemente enthält, die die <see cref="T:System.Windows.Forms.ErrorProvider" /> angefügt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist normalerweise die <xref:System.Windows.Forms.Form> die datengebundenen Steuerelemente befinden sich auf.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">für abgeleitete Klassen, um diese Eigenschaft zu überschreiben. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DataMember">
+      <MemberSignature Language="C#" Value="public string DataMember { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataMember" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ErrorProvider.DataMember" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataMemberListEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die zu überwachende Liste in einer Datenquelle ab oder legt diese fest.</summary>
+        <value>Die Zeichenfolge, die für eine Liste innerhalb der Datenquelle, die gemäß den <see cref="P:System.Windows.Forms.ErrorProvider.DataSource" /> überwacht werden soll. Dies ist in der Regel wird eine <see cref="T:System.Data.DataTable" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ErrorProvider.DataMember%2A> ist eine Navigationszeichenfolge basierend auf <xref:System.Windows.Forms.ErrorProvider.DataSource%2A>.  
+  
+ Zur Vermeidung von Konflikten bei der Ausführung, die auftreten können, wenn Sie ändern <xref:System.Windows.Forms.ErrorProvider.DataSource%2A> und <xref:System.Windows.Forms.ErrorProvider.DataMember%2A>, verwenden Sie <xref:System.Windows.Forms.ErrorProvider.BindToDataAndErrors%2A> anstatt durch die Einstellung <xref:System.Windows.Forms.ErrorProvider.DataSource%2A> und <xref:System.Windows.Forms.ErrorProvider.DataMember%2A> einzeln.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.ErrorProvider> mit einem <xref:System.Windows.Forms.ErrorProvider.DataSource%2A> und <xref:System.Windows.Forms.ErrorProvider.DataMember%2A> einen Fehler an den Benutzer an.  
+  
+ [!code-cpp[Classic ErrorProvider Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ErrorProvider Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ErrorProvider Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ErrorProvider Example/CS/source.cs#1)]
+ [!code-vb[Classic ErrorProvider Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ErrorProvider Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSource">
+      <MemberSignature Language="C#" Value="public object DataSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DataSource" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ErrorProvider.DataSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.AttributeProvider(typeof(System.ComponentModel.IListSource))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, die die <see cref="T:System.Windows.Forms.ErrorProvider" /> überwacht.</summary>
+        <value>Eine Datenquelle basierend auf den <see cref="T:System.Collections.IList" /> Schnittstelle, um Fehler überwacht werden soll. Dies ist normalerweise ein <see cref="T:System.Data.DataSet" /> Fehler überwacht werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ErrorProvider.DataSource%2A> ist eine Datenquelle, die Sie an ein Steuerelement anfügen können, und die Sie auf Fehler überwachen möchten. <xref:System.Windows.Forms.ErrorProvider.DataSource%2A>kann festgelegt werden, um eine beliebige Sammlung, die implementiert <xref:System.Collections.IList>.  
+  
+ Zur Vermeidung von Konflikten bei der Ausführung, die auftreten können, wenn Sie ändern <xref:System.Windows.Forms.ErrorProvider.DataSource%2A> und <xref:System.Windows.Forms.ErrorProvider.DataMember%2A>, verwenden Sie <xref:System.Windows.Forms.ErrorProvider.BindToDataAndErrors%2A> anstatt durch die Einstellung <xref:System.Windows.Forms.ErrorProvider.DataSource%2A> und <xref:System.Windows.Forms.ErrorProvider.DataMember%2A> einzeln.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.ErrorProvider> mit einem <xref:System.Windows.Forms.ErrorProvider.DataSource%2A> und <xref:System.Windows.Forms.ErrorProvider.DataMember%2A> einen Fehler an den Benutzer an. Dieser Code geht davon aus, Sie erstellt und aufgefüllt haben eine <xref:System.Data.DataSet> mit dem Namen `dataSet1` , enthält eine <xref:System.Data.DataTable> mit dem Namen `dataTable1`. Beim Binden der <xref:System.Data.DataSet> an ein Steuerelement, z. B. die <xref:System.Windows.Forms.DataGridView> zu steuern, über angegebene Fehler <xref:System.Data.DataRow> Objekte werden als Fehler Glyphen in der <xref:System.Windows.Forms.DataGridView> Steuerelement.  
+  
+ [!code-cpp[Classic ErrorProvider Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ErrorProvider Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ErrorProvider Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ErrorProvider Example/CS/source.cs#1)]
+ [!code-vb[Classic ErrorProvider Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ErrorProvider Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ErrorProvider.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.ComponentModel.Component" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetError">
+      <MemberSignature Language="C#" Value="public string GetError (System.Windows.Forms.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetError(class System.Windows.Forms.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ErrorProvider.GetError(System.Windows.Forms.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="control">Das Element, das die Zeichenfolge zur fehlerbeschreibung für abrufen.</param>
+        <summary>Gibt die aktuelle Zeichenfolge zur Fehlerbeschreibung für das angegebene Steuerelement zurück.</summary>
+        <returns>Die Zeichenfolge zur Fehlerbeschreibung für das angegebene Steuerelement.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.ErrorProvider.GetError%2A> Methode, um einen Fehler zu überprüfen, vor dem Öffnen eines Dateidialogfelds. Um dieses Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular mit einem <xref:System.Windows.Forms.TextBox> mit dem Namen `TextBox1`, wird ein <xref:System.Windows.Forms.OpenFileDialog> mit dem Namen `OpenFileDialog1`, eine Schaltfläche mit dem Namen `Button1`, und ein <xref:System.Windows.Forms.ErrorProvider> mit dem Namen `ErrorProvider1`. Stellen Sie sicher, dass alle Ereignisse den Ereignishandler zugeordnet sind.  
+  
+ [!code-cpp[System.Windows.Forms.FileDialog#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.FileDialog/CPP/filedialogform.cpp#2)]
+ [!code-csharp[System.Windows.Forms.FileDialog#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FileDialog/CS/filedialogform.cs#2)]
+ [!code-vb[System.Windows.Forms.FileDialog#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FileDialog/VB/filedialogform.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="control" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIconAlignment">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ErrorIconAlignment GetIconAlignment (System.Windows.Forms.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Forms.ErrorIconAlignment GetIconAlignment(class System.Windows.Forms.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ErrorProvider.GetIconAlignment(System.Windows.Forms.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ErrorIconAlignment</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="control">Das Steuerelement, das die Position des Symbols zu erhalten.</param>
+        <summary>Ruft einen Wert ab, der angibt, an welcher Position das Fehlersymbol relativ zum Steuerelement platziert werden soll.</summary>
+        <returns>Einer der <see cref="T:System.Windows.Forms.ErrorIconAlignment" />-Werte. Die standardmäßige Symbol Ausrichtung ist <see cref="F:System.Windows.Forms.ErrorIconAlignment.MiddleRight" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="control" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIconPadding">
+      <MemberSignature Language="C#" Value="public int GetIconPadding (System.Windows.Forms.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetIconPadding(class System.Windows.Forms.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ErrorProvider.GetIconPadding(System.Windows.Forms.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="control">Das Steuerelement, das die Auffüllung für abrufen.</param>
+        <summary>Gibt den zusätzlichen Zwischenraum zurück, der neben dem Fehlersymbol eingefügt wird.</summary>
+        <returns>Die Anzahl der Pixel, zwischen dem Symbol und das Steuerelement zu verlassen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Viele Symbole befindet sich normalerweise auf die zusätzlichen Platz, um ihren zentralen Bilder aus, sodass der Padding-Wert nur erforderlich ist, wenn zusätzlicher Speicherplatz erforderlich ist. Padding-Werte kann positiv oder negativ sein. Negative Werte bewirken, dass das Symbol am Rand des Steuerelements überlappen. Die standardauffüllung-Symbol ist 0.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="control" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Icon">
+      <MemberSignature Language="C#" Value="public System.Drawing.Icon Icon { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Icon Icon" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ErrorProvider.Icon" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Icon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Drawing.Icon" /> , neben einem Steuerelement, das angezeigt wird, wenn eine Zeichenfolge zur fehlerbeschreibung für das Steuerelement festgelegt wurde.</summary>
+        <value>Ein <see cref="T:System.Drawing.Icon" /> Signale ein Fehler aufgetreten. Das Standardsymbol besteht aus einem Ausrufezeichen in einem Kreis mit einem roten Hintergrund.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Optimale Ergebnisse zu erzielen verwenden Sie ein Symbol, der die Größe 16 x 16 Pixel. Angegebene Symbole werden geändert, um 16 x 16 Pixel, falls notwendig werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der zugewiesene Wert der <see cref="T:System.Drawing.Icon" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRightToLeftChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnRightToLeftChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnRightToLeftChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ErrorProvider.OnRightToLeftChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.ErrorProvider.RightToLeftChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.ErrorProvider.OnRightToLeftChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.ErrorProvider.OnRightToLeftChanged(System.EventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.ErrorProvider.OnRightToLeftChanged(System.EventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RightToLeft">
+      <MemberSignature Language="C#" Value="public virtual bool RightToLeft { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RightToLeft" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ErrorProvider.RightToLeft" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Komponente in einem Gebietsschema verwendet wird, das von rechts nach links geschriebene Schriftarten unterstützt.</summary>
+        <value>
+          <see langword="true" />Wenn die Komponente in einem Gebietsschema rechts-nach-links verwendet wird; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft festgelegt ist auf "true", wird den Fehler Symbol wird angezeigt, auf der linken Seite des zugeordneten Steuerelements und der QuickInfo-Text wird in der Reihenfolge von rechts nach links angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RightToLeftChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler RightToLeftChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler RightToLeftChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ErrorProvider.RightToLeftChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die <see cref="P:System.Windows.Forms.ErrorProvider.RightToLeft" /> Eigenschaft Wert geändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ErrorProvider.RightToLeftChanged> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.ErrorProvider> mit dem Namen `ErrorProvider1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ErrorProvider.RightToLeftChanged> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#382](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#382)]
+ [!code-vb[System.Windows.Forms.EventExamples#382](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#382)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetError">
+      <MemberSignature Language="C#" Value="public void SetError (System.Windows.Forms.Control control, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetError(class System.Windows.Forms.Control control, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ErrorProvider.SetError(System.Windows.Forms.Control,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Windows.Forms.Control" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="control">Das Steuerelement, das die Zeichenfolge zur fehlerbeschreibung für festgelegt.</param>
+        <param name="value">Die Zeichenfolge zur fehlerbeschreibung, oder <see langword="null" /> oder <see cref="F:System.String.Empty" /> So entfernen Sie den Fehler.</param>
+        <summary>Legt die Zeichenfolge zur Fehlerbeschreibung für das angegebene Steuerelement fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Länge des `value` ist größer als 0 (null), und klicken Sie dann das Symbol "Fehler" angezeigt wird, und die QuickInfo für das Symbol "Fehler" der Fehler Description-Text ist. Wenn die Länge 0 (null) oder `value` ist `null`, das Symbol "Fehler" ist ausgeblendet.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.ErrorProvider> Klasse, um die Benachrichtigung des Benutzers einen Dateneingabefehler. Das Beispiel erstellt eine <xref:System.Windows.Forms.Form> , enthält eine <xref:System.Windows.Forms.TextBox> -Steuerelement, ein <xref:System.Windows.Forms.NumericUpDown> -Steuerelement, und ein <xref:System.Windows.Forms.ComboBox> steuern, von denen jede seinen Inhalt zu überprüfen und eine <xref:System.Windows.Forms.ErrorProvider> für jedes Steuerelement. Im Beispiel wird Fehler Symboloptionen mithilfe der <xref:System.Windows.Forms.ErrorProvider.BlinkRate%2A> und <xref:System.Windows.Forms.ErrorProvider.BlinkStyle%2A> Eigenschaften und die <xref:System.Windows.Forms.ErrorProvider.SetIconAlignment%2A> und <xref:System.Windows.Forms.ErrorProvider.SetIconPadding%2A> Methoden. Die <xref:System.Windows.Forms.ErrorProvider.SetError%2A> Methode wird aufgerufen, mit oder ohne entsprechenden Fehlertext während eines Steuerelements <xref:System.Windows.Forms.Control.Validated> Ereignis, abhängig von den Inhalt des Steuerelements.  
+  
+ [!code-cpp[System.Windows.Forms.ErrorProvider#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ErrorProvider/CPP/errorproviderexample.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ErrorProvider#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ErrorProvider/CS/errorproviderexample.cs#1)]
+ [!code-vb[System.Windows.Forms.ErrorProvider#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ErrorProvider/VB/errorproviderexample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="control" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetIconAlignment">
+      <MemberSignature Language="C#" Value="public void SetIconAlignment (System.Windows.Forms.Control control, System.Windows.Forms.ErrorIconAlignment value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetIconAlignment(class System.Windows.Forms.Control control, valuetype System.Windows.Forms.ErrorIconAlignment value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ErrorProvider.SetIconAlignment(System.Windows.Forms.Control,System.Windows.Forms.ErrorIconAlignment)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Windows.Forms.Control" />
+        <Parameter Name="value" Type="System.Windows.Forms.ErrorIconAlignment" />
+      </Parameters>
+      <Docs>
+        <param name="control">Das Steuerelement, das die Position des Symbols festgelegt.</param>
+        <param name="value">Einer der <see cref="T:System.Windows.Forms.ErrorIconAlignment" />-Werte.</param>
+        <summary>Legt die Position fest, an der das Fehlersymbol relativ zum Steuerelement platziert werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der endgültige Position des Symbols wird durch das Symbol Auffüllung von Werten geändert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.ErrorProvider> Klasse, um die Benachrichtigung des Benutzers einen Dateneingabefehler. Das Beispiel erstellt eine <xref:System.Windows.Forms.Form> , enthält eine <xref:System.Windows.Forms.TextBox> -Steuerelement, ein <xref:System.Windows.Forms.NumericUpDown> -Steuerelement, und ein <xref:System.Windows.Forms.ComboBox> steuern, von denen jede seinen Inhalt zu überprüfen und eine <xref:System.Windows.Forms.ErrorProvider> für jedes Steuerelement. Im Beispiel wird Fehler Symboloptionen mithilfe der <xref:System.Windows.Forms.ErrorProvider.BlinkRate%2A> und <xref:System.Windows.Forms.ErrorProvider.BlinkStyle%2A> Eigenschaften und die <xref:System.Windows.Forms.ErrorProvider.SetIconAlignment%2A> und <xref:System.Windows.Forms.ErrorProvider.SetIconPadding%2A> Methoden. Die <xref:System.Windows.Forms.ErrorProvider.SetError%2A> Methode wird aufgerufen, mit oder ohne entsprechenden Fehlertext während eines Steuerelements <xref:System.Windows.Forms.Control.Validated> Ereignis, abhängig von den Inhalt des Steuerelements.  
+  
+ [!code-cpp[System.Windows.Forms.ErrorProvider#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ErrorProvider/CPP/errorproviderexample.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ErrorProvider#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ErrorProvider/CS/errorproviderexample.cs#1)]
+ [!code-vb[System.Windows.Forms.ErrorProvider#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ErrorProvider/VB/errorproviderexample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="control" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetIconPadding">
+      <MemberSignature Language="C#" Value="public void SetIconPadding (System.Windows.Forms.Control control, int padding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetIconPadding(class System.Windows.Forms.Control control, int32 padding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ErrorProvider.SetIconPadding(System.Windows.Forms.Control,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Windows.Forms.Control" />
+        <Parameter Name="padding" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="control">Die <c>Steuerelement</c> die Auffüllung für festlegen.</param>
+        <param name="padding">Die Anzahl der Pixel, zwischen dem Symbol hinzufügen und die <c>Steuerelement</c>.</param>
+        <summary>Legt den zusätzlichen Leerraum zwischen dem angegebenen Steuerelement und dem Fehlersymbol fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Viele Symbole haben in der Regel zusätzliche Platz um zentralen Bilder, daher der Abstandswert nur erforderlich, ist wenn zusätzlicher Speicherplatz erforderlich ist. Padding-Werte kann positiv oder negativ sein. Negative Werte bewirken, dass das Symbol am Rand des Steuerelements überlappen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.ErrorProvider> Klasse, um die Benachrichtigung des Benutzers einen Dateneingabefehler. Das Beispiel erstellt eine <xref:System.Windows.Forms.Form> , enthält eine <xref:System.Windows.Forms.TextBox> -Steuerelement, ein <xref:System.Windows.Forms.NumericUpDown> -Steuerelement, und ein <xref:System.Windows.Forms.ComboBox> steuern, von denen jede seinen Inhalt zu überprüfen und eine <xref:System.Windows.Forms.ErrorProvider> für jedes Steuerelement. Im Beispiel wird Fehler Symboloptionen mithilfe der <xref:System.Windows.Forms.ErrorProvider.BlinkRate%2A> und <xref:System.Windows.Forms.ErrorProvider.BlinkStyle%2A> Eigenschaften und die <xref:System.Windows.Forms.ErrorProvider.SetIconAlignment%2A> und <xref:System.Windows.Forms.ErrorProvider.SetIconPadding%2A> Methoden. Die <xref:System.Windows.Forms.ErrorProvider.SetError%2A> Methode wird aufgerufen, mit oder ohne entsprechenden Fehlertext während eines Steuerelements <xref:System.Windows.Forms.Control.Validated> Ereignis, abhängig von den Inhalt des Steuerelements.  
+  
+ [!code-cpp[System.Windows.Forms.ErrorProvider#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ErrorProvider/CPP/errorproviderexample.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ErrorProvider#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ErrorProvider/CS/errorproviderexample.cs#1)]
+ [!code-vb[System.Windows.Forms.ErrorProvider#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ErrorProvider/VB/errorproviderexample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="control" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Site">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.ISite Site { set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.ISite Site" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ErrorProvider.Site" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ISite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.ComponentModel.ISite" /> von <see cref="T:System.ComponentModel.Component" /> ab oder legt ihn fest.</summary>
+        <value>Der mit <see cref="T:System.ComponentModel.Component" /> verbundene <see cref="T:System.ComponentModel.ISite" /> oder NULL, wenn <see cref="T:System.ComponentModel.Component" /> nicht in einem <see cref="T:System.ComponentModel.IContainer" /> gekapselt ist, der <see cref="T:System.ComponentModel.Component" /> kein <see cref="T:System.ComponentModel.ISite" /> zugeordnet wurde oder <see cref="T:System.ComponentModel.Component" /> aus seinem <see cref="T:System.ComponentModel.IContainer" /> entfernt wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ISupportInitialize.BeginInit">
+      <MemberSignature Language="C#" Value="void ISupportInitialize.BeginInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.ISupportInitialize.BeginInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ErrorProvider.System#ComponentModel#ISupportInitialize#BeginInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Signalisiert dem Objekt den Start der Initialisierung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ISupportInitialize.EndInit">
+      <MemberSignature Language="C#" Value="void ISupportInitialize.EndInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.ISupportInitialize.EndInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ErrorProvider.System#ComponentModel#ISupportInitialize#EndInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Signalisiert dem Objekt den Abschluss der Initialisierung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tag">
+      <MemberSignature Language="C#" Value="public object Tag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Tag" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ErrorProvider.Tag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.StringConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt ab, das Daten über die Komponente enthält, oder legt dieses fest.</summary>
+        <value>Ein Objekt, das Daten zum Steuerelement enthält. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft, um benutzerdefinierte Daten über die Komponente zu speichern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateBinding">
+      <MemberSignature Language="C#" Value="public void UpdateBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UpdateBinding() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ErrorProvider.UpdateBinding" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bietet eine Methode zum Aktualisieren der Bindungen der der <see cref="P:System.Windows.Forms.ErrorProvider.DataSource" />, <see cref="P:System.Windows.Forms.ErrorProvider.DataMember" />, und dem Fehlertext.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel Sie diese Methode aufrufen, nachdem Sie aufgerufen haben <xref:System.Windows.Forms.ErrorProvider.BindToDataAndErrors%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,305 @@
+<Type Name="ComSourceInterfacesAttribute" FullName="System.Runtime.InteropServices.ComSourceInterfacesAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ComSourceInterfacesAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ComSourceInterfacesAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ComSourceInterfacesAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, Inherited=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt eine Liste mit Schnittstellen an, die als COM-Ereignisquellen für die attributierte Klasse verfügbar gemacht werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können dieses Attribut auf Klassen anwenden.  
+  
+ Sie können dieses Attribut anwenden, um eine verwaltete Klasse, um die Ereignisschnittstellen zu identifizieren, die die Klasse als COM-Verbindungspunkte verfügbar macht. Eine Ereignisschnittstelle enthält Methoden, die Ereignismember der Klasse zugeordnet. Der Klassenname für das Ereignis und den Methodennamen für die Schnittstelle müssen identisch sein. Dieses Attribut kann bis zu vier Schnittstellen für eine Klasse aufnehmen, übergeben Sie den Typ der Quellschnittstelle des entsprechenden Konstruktors und die zwischen einem und vier Typargumente akzeptieren. Für Klassen, die mehr als vier Schnittstellen verfügbar machen möchten, kann die Zeichenfolgenversion des Konstruktors verwendet werden. Weitere Informationen über das Verfügbarmachen für COM-Clients finden Sie unter [wie: Auslösen von Ereignisse, die von einem COM-Empfänger behandelt](http://msdn.microsoft.com/en-us/7c9944b2-e951-4c3e-a0a1-59b2ae37d7fd).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Anwenden der <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute> für die Verbindung die Ereignissenken-Schnittstelle einer Klasse durch die Namespaces und -Schnittstelle übergeben.  
+  
+ [!code-cpp[Classic ComSourceInterfacesAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ComSourceInterfacesAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ComSourceInterfacesAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ComSourceInterfacesAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic ComSourceInterfacesAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ComSourceInterfacesAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComSourceInterfacesAttribute (string sourceInterfaces);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string sourceInterfaces) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComSourceInterfacesAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sourceInterfaces" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sourceInterfaces">Eine Null getrennte Liste von Namen der vollständig qualifizierte Ereignisquellen-Schnittstelle.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.InteropServices.ComSourceInterfacesAttribute" /> Klasse mit dem Namen der Quellschnittstelle des Ereignisses.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, um mehr als vier Ereignisquellen-Schnittstellen für COM-Clients verfügbar zu machen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComSourceInterfacesAttribute (Type sourceInterface);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type sourceInterface) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComSourceInterfacesAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sourceInterface" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="sourceInterface">Die <see cref="T:System.Type" /> der Quellschnittstelle.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.InteropServices.ComSourceInterfacesAttribute" /> Klasse mit dem Typ, der als eine Quellschnittstelle verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, um ein einzelnes Ereignis Quellschnittstelle für COM-Clients verfügbar zu machen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComSourceInterfacesAttribute (Type sourceInterface1, Type sourceInterface2);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type sourceInterface1, class System.Type sourceInterface2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComSourceInterfacesAttribute.#ctor(System.Type,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sourceInterface1" Type="System.Type" />
+        <Parameter Name="sourceInterface2" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="sourceInterface1">Die <see cref="T:System.Type" /> des Standard-Quellschnittstelle.</param>
+        <param name="sourceInterface2">Die <see cref="T:System.Type" /> einer Quelle-Schnittstelle.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.InteropServices.ComSourceInterfacesAttribute" /> Klasse mit den Typen, die als Quellschnittstellen verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, um zwei Ereignisquellen-Schnittstellen für COM-Clients verfügbar zu machen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComSourceInterfacesAttribute (Type sourceInterface1, Type sourceInterface2, Type sourceInterface3);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type sourceInterface1, class System.Type sourceInterface2, class System.Type sourceInterface3) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComSourceInterfacesAttribute.#ctor(System.Type,System.Type,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sourceInterface1" Type="System.Type" />
+        <Parameter Name="sourceInterface2" Type="System.Type" />
+        <Parameter Name="sourceInterface3" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="sourceInterface1">Die <see cref="T:System.Type" /> des Standard-Quellschnittstelle.</param>
+        <param name="sourceInterface2">Die <see cref="T:System.Type" /> einer Quelle-Schnittstelle.</param>
+        <param name="sourceInterface3">Die <see cref="T:System.Type" /> einer Quelle-Schnittstelle.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see langword="ComSourceInterfacesAttribute" /> Klasse mit den Typen, die als Quellschnittstellen verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, um drei Ereignisquellen-Schnittstellen für COM-Clients verfügbar zu machen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComSourceInterfacesAttribute (Type sourceInterface1, Type sourceInterface2, Type sourceInterface3, Type sourceInterface4);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type sourceInterface1, class System.Type sourceInterface2, class System.Type sourceInterface3, class System.Type sourceInterface4) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComSourceInterfacesAttribute.#ctor(System.Type,System.Type,System.Type,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sourceInterface1" Type="System.Type" />
+        <Parameter Name="sourceInterface2" Type="System.Type" />
+        <Parameter Name="sourceInterface3" Type="System.Type" />
+        <Parameter Name="sourceInterface4" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="sourceInterface1">Die <see cref="T:System.Type" /> des Standard-Quellschnittstelle.</param>
+        <param name="sourceInterface2">Die <see cref="T:System.Type" /> einer Quelle-Schnittstelle.</param>
+        <param name="sourceInterface3">Die <see cref="T:System.Type" /> einer Quelle-Schnittstelle.</param>
+        <param name="sourceInterface4">Die <see cref="T:System.Type" /> einer Quelle-Schnittstelle.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Runtime.InteropServices.ComSourceInterfacesAttribute" /> Klasse mit den Typen, die als Quellschnittstellen verwendet.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, um vier Ereignisquellen-Schnittstellen für COM-Clients verfügbar zu machen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.ComSourceInterfacesAttribute.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den vollqualifizierten Namen der Quellschnittstelle des Ereignisses ab.</summary>
+        <value>Der vollqualifizierte Name der Quellschnittstelle des Ereignisses.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie mehr als eine Quellschnittstelle angeben, ist der zurückgegebene Wert eine Null getrennte Liste von Namen der vollständig qualifizierte Ereignisquellen-Schnittstelle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

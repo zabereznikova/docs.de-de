@@ -1,0 +1,54 @@
+<Type Name="ICompensatableActivity" FullName="System.Workflow.ComponentModel.ICompensatableActivity">
+  <TypeSignature Language="C#" Value="public interface ICompensatableActivity" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICompensatableActivity" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.ICompensatableActivity" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert die von <see cref="T:System.Workflow.ComponentModel.Activity" /> benötigte Schnittstelle, die kompensiert werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Weitere Informationen zur Kompensierung finden Sie unter [mithilfe von Transaktionen in Workflows](http://msdn.microsoft.com/en-us/78212ef0-6e48-4fe8-84dd-0010964187ad).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Compensate">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.ActivityExecutionStatus Compensate (System.Workflow.ComponentModel.ActivityExecutionContext executionContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Workflow.ComponentModel.ActivityExecutionStatus Compensate(class System.Workflow.ComponentModel.ActivityExecutionContext executionContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.ICompensatableActivity.Compensate(System.Workflow.ComponentModel.ActivityExecutionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.ActivityExecutionStatus</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="executionContext" Type="System.Workflow.ComponentModel.ActivityExecutionContext" />
+      </Parameters>
+      <Docs>
+        <param name="executionContext"><see cref="T:System.Workflow.ComponentModel.ActivityExecutionContext" /> für den Vorgang.</param>
+        <summary>Wird von der Workflowlaufzeit aufgerufen, um eine Aktivität zu kompensieren, die sich im Zustand Geschlossen befindet. Die Aktivität muss über den Wert <see langword="Succeeded" /> für die <see cref="P:System.Workflow.ComponentModel.Activity.ExecutionResult" />-Eigenschaft verfügen, um kompensiert werden zu können.</summary>
+        <returns>Der <see cref="T:System.Workflow.ComponentModel.ActivityExecutionStatus" /> nach versuchter Ausführung des Vorgangs.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

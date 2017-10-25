@@ -1,0 +1,198 @@
+<Type Name="DockPattern" FullName="System.Windows.Automation.DockPattern">
+  <TypeSignature Language="C#" Value="public class DockPattern : System.Windows.Automation.BasePattern" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DockPattern extends System.Windows.Automation.BasePattern" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.DockPattern" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.BasePattern</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Steuerelemente dar, die ihre Andockeigenschaften innerhalb eines Andockcontainers verfügbar machen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein dockingcontainer ist ein Steuerelement, das die Anordnung von untergeordneten Elementen, sowohl horizontal oder vertikal relativ zu den Begrenzungen des dockingcontainers und anderer Elemente innerhalb des Containers ermöglicht.  
+  
+ Steuerelemente werden relativ zueinander entsprechend ihrer aktuellen Z-Reihenfolge angeordnet angedockt; Je höher ihre Z-Reihenfolge Platzierung weiteren vom angegebenen Rand des dockingcontainers werden sie platziert.  
+  
+ Finden Sie unter [Zuordnen von Steuerelementmustern für Benutzeroberflächenautomatisierungs-Clients](~/docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md) Beispiele für Steuerelemente, die dieses Steuerelementmuster implementieren können.  
+  
+ <xref:System.Windows.Automation.DockPattern>unterstützt keine Eigenschaften des dockingcontainers bzw. der Steuerelemente, die neben dem aktuellen Steuerelement im dockingcontainer angedockt werden können.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cached">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.DockPattern.DockPatternInformation Cached { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.DockPattern/DockPatternInformation Cached" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.DockPattern.Cached" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.DockPattern+DockPatternInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die zwischengespeicherten [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)]-Eigenschaftswerte für dieses <see cref="T:System.Windows.Automation.DockPattern" /> ab.</summary>
+        <value>Eine Struktur, die die zwischengespeicherten [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)]-Eigenschaftswerte für das Steuerelementmuster enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zwischengespeicherte Eigenschaftswerte müssen zuvor angefordert wurden mit einer <xref:System.Windows.Automation.CacheRequest>. Verwendung <xref:System.Windows.Automation.DockPattern.Current%2A> auf den aktuellen Wert einer Eigenschaft abzurufen.  
+  
+ Informationen zu den verfügbaren Eigenschaften und deren Verwendung finden Sie unter <xref:System.Windows.Automation.DockPattern.DockPatternInformation>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die angeforderte Eigenschaft befindet sich nicht im Cache.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.DockPattern.DockPatternInformation Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.DockPattern/DockPatternInformation Current" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.DockPattern.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.DockPattern+DockPatternInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuellen [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)]-Eigenschaftswerte für dieses <see cref="T:System.Windows.Automation.DockPattern" /> ab.</summary>
+        <value>Eine Struktur, die die aktuellen [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)]-Eigenschaftswerte für das Steuerelementmuster enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Muster muss aus einer <xref:System.Windows.Automation.AutomationElement> mit einer <xref:System.Windows.Automation.AutomationElementMode.Full> Verweis, um die aktuellen Werte zu erhalten. Wenn die <xref:System.Windows.Automation.AutomationElement> abgerufen wurde, mithilfe von <xref:System.Windows.Automation.AutomationElementMode.None>, enthält es nur zwischengespeicherte Daten, und beim Versuch, den aktuellen Wert einer beliebigen Eigenschaft abzurufen, wird eine Ausnahme ausgelöst. Verwendung <xref:System.Windows.Automation.DockPattern.Cached%2A> um den zwischengespeicherten Wert einer Eigenschaft abzurufen, die zuvor angegeben wurde mit einem <xref:System.Windows.Automation.CacheRequest>.  
+  
+ Informationen zu den verfügbaren Eigenschaften und deren Verwendung finden Sie unter <xref:System.Windows.Automation.DockPattern.DockPatternInformation>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DockPositionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty DockPositionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty DockPositionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.DockPattern.DockPositionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die <see cref="P:System.Windows.Automation.DockPattern.DockPatternInformation.DockPosition" />-Eigenschaft an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Bezeichner wird durch Benutzeroberflächenautomatisierungs-Clientanwendungen verwendet. Benutzeroberflächenautomatisierungs-Anbietern zu verwendende das entsprechende Feld im <xref:System.Windows.Automation.DockPatternIdentifiers>.  
+  
+ Diese Eigenschaft kann auch abgerufen werden, aus der <xref:System.Windows.Automation.DockPattern.Current%2A> oder <xref:System.Windows.Automation.DockPattern.Cached%2A> Eigenschaften.  
+  
+ Der Standardwert ist <xref:System.Windows.Automation.DockPosition.None>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.DockPosition> Wert abgerufen wird, die für ein Steuerelement, unterstützt die aktuelle Andockposition darstellt <xref:System.Windows.Automation.DockPattern>.  
+  
+ [!code-csharp[UIADockPattern_snip#100](~/samples/snippets/csharp/VS_Snippets_Wpf/UIADockPattern_snip/CSharp/UIADockPattern_snippets.cs#100)]
+ [!code-vb[UIADockPattern_snip#100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIADockPattern_snip/VisualBasic/UIADockPattern_snippets.vb#100)]  
+[!code-csharp[UIADockPattern_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIADockPattern_snip/CSharp/UIADockPattern_snippets.cs#102)]
+[!code-vb[UIADockPattern_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIADockPattern_snip/VisualBasic/UIADockPattern_snippets.vb#102)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pattern">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationPattern Pattern;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationPattern Pattern" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.DockPattern.Pattern" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationPattern</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet das <see cref="T:System.Windows.Automation.DockPattern" />-Steuerelementmuster.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Bezeichner wird durch Benutzeroberflächenautomatisierungs-Clientanwendungen verwendet. Benutzeroberflächenautomatisierungs-Anbietern zu verwendende das entsprechende Feld im <xref:System.Windows.Automation.DockPatternIdentifiers>.  
+  
+ Das Muster [!INCLUDE[TLA#tla_id](~/includes/tlasharptla-id-md.md)] übergeben an Methoden wie z. B. <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> zum Abrufen der Steuerelementmuster aus dem angegebenen <xref:System.Windows.Automation.AutomationElement>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.DockPattern> Steuerelementmuster abgerufenes ein <xref:System.Windows.Automation.AutomationElement>.  
+  
+ [!code-csharp[UIADockPattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIADockPattern_snip/CSharp/UIADockPattern_snippets.cs#101)]
+ [!code-vb[UIADockPattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIADockPattern_snip/VisualBasic/UIADockPattern_snippets.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDockPosition">
+      <MemberSignature Language="C#" Value="public void SetDockPosition (System.Windows.Automation.DockPosition dockPosition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetDockPosition(valuetype System.Windows.Automation.DockPosition dockPosition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.DockPattern.SetDockPosition(System.Windows.Automation.DockPosition)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dockPosition" Type="System.Windows.Automation.DockPosition" />
+      </Parameters>
+      <Docs>
+        <param name="dockPosition">Die Andockposition relativ zu den Begrenzungen des Dockingcontainers und anderer Elemente im Container.</param>
+        <summary>Dockt das <see cref="T:System.Windows.Automation.AutomationElement" /> an der angeforderten <see cref="T:System.Windows.Automation.DockPosition" /> innerhalb eines Andockcontainers.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein dockingcontainer ist ein Steuerelement, das die Anordnung von untergeordneten Elementen, sowohl horizontal oder vertikal relativ zu den Begrenzungen des dockingcontainers und anderer Elemente innerhalb des Containers ermöglicht.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.AutomationElement> hat, die ein Steuerelement, das das Steuerelementmuster DockPattern-unterstützt darstellt seine `dockPosition` geändert.  
+  
+ [!code-csharp[UIADockPattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIADockPattern_snip/CSharp/UIADockPattern_snippets.cs#101)]
+ [!code-vb[UIADockPattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIADockPattern_snip/VisualBasic/UIADockPattern_snippets.vb#101)]  
+[!code-csharp[UIADockPattern_snip#103](~/samples/snippets/csharp/VS_Snippets_Wpf/UIADockPattern_snip/CSharp/UIADockPattern_snippets.cs#103)]
+[!code-vb[UIADockPattern_snip#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIADockPattern_snip/VisualBasic/UIADockPattern_snippets.vb#103)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Wenn ein Steuerelement die geforderte Andockart nicht ausführen kann.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

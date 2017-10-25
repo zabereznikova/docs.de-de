@@ -1,0 +1,371 @@
+<Type Name="DnsPermission" FullName="System.Net.DnsPermission">
+  <TypeSignature Language="C#" Value="public sealed class DnsPermission : System.Security.CodeAccessPermission, System.Security.Permissions.IUnrestrictedPermission" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit DnsPermission extends System.Security.CodeAccessPermission implements class System.Security.Permissions.IUnrestrictedPermission" />
+  <TypeSignature Language="DocId" Value="T:System.Net.DnsPermission" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.CodeAccessPermission</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Security.Permissions.IUnrestrictedPermission</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Steuert die Zugriffsrechte auf Domain Name System (DNS) Server im Netzwerk zugreifen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standardberechtigungen können alle lokalen und Zone Intranetanwendungen Zugriff auf DNS-Dienste und kein DNS-Berechtigung für Anwendungen für die Internetzone.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DnsPermission (System.Security.Permissions.PermissionState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.PermissionState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.DnsPermission.#ctor(System.Security.Permissions.PermissionState)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="state" Type="System.Security.Permissions.PermissionState" />
+      </Parameters>
+      <Docs>
+        <param name="state">Einer der <see cref="T:System.Security.Permissions.PermissionState" />-Werte.</param>
+        <summary>Erstellt eine neue Instanz der dem <see cref="T:System.Net.DnsPermission" /> -Klasse, die uneingeschränkten DNS-Zugriff erlaubt oder keinen DNS-Zugriff.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `state` ist <xref:System.Security.Permissions.PermissionState.Unrestricted>die <xref:System.Net.DnsPermission> Instanz übergibt alle Forderungen. Wenn `state` jeder andere Wert enthält den <xref:System.Net.DnsPermission> Instanz schlägt fehl, alle Anforderungen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine Instanz von der <xref:System.Net.DnsPermission> Klasse.  
+  
+ [!code-cpp[DnsPermission_Constructor#1](~/samples/snippets/cpp/VS_Snippets_Remoting/DnsPermission_Constructor/CPP/dnspermission_constructor.cpp#1)]
+ [!code-csharp[DnsPermission_Constructor#1](~/samples/snippets/csharp/VS_Snippets_Remoting/DnsPermission_Constructor/CS/dnspermission_constructor.cs#1)]
+ [!code-vb[DnsPermission_Constructor#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DnsPermission_Constructor/VB/dnspermission_constructor.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="state" /> ist kein gültiger <see cref="T:System.Security.Permissions.PermissionState" />-Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.DnsPermission.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine identische Kopie der aktuellen Berechtigungsinstanz.</summary>
+        <returns>Eine neue Instanz der dem <see cref="T:System.Net.DnsPermission" /> -Klasse, die eine identische Kopie der aktuellen Instanz ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Kopie einer <xref:System.Net.DnsPermission> Instanz bietet den gleichen Zugriff auf DNS-Server wie die ursprüngliche Berechtigungsinstanz.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine identische Kopie eines vorhandenen <xref:System.Net.DnsPermission> Instanz.  
+  
+ [!code-cpp[DnsPermission_Copy#1](~/samples/snippets/cpp/VS_Snippets_Remoting/DnsPermission_Copy/CPP/dnspermission_copy.cpp#1)]
+ [!code-csharp[DnsPermission_Copy#1](~/samples/snippets/csharp/VS_Snippets_Remoting/DnsPermission_Copy/CS/dnspermission_copy.cs#1)]
+ [!code-vb[DnsPermission_Copy#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DnsPermission_Copy/VB/dnspermission_copy.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXml">
+      <MemberSignature Language="C#" Value="public override void FromXml (System.Security.SecurityElement securityElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void FromXml(class System.Security.SecurityElement securityElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.DnsPermission.FromXml(System.Security.SecurityElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="securityElement" Type="System.Security.SecurityElement" />
+      </Parameters>
+      <Docs>
+        <param name="securityElement">Die XML-Codierung zur Wiederherstellung der <see cref="T:System.Net.DnsPermission" /> Instanz.</param>
+        <summary>Rekonstruiert ein <see cref="T:System.Net.DnsPermission" /> -Instanz anhand einer XML-Codierung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.DnsPermission.FromXml%2A> -Methode rekonstruiert ein <xref:System.Net.DnsPermission> -Instanz anhand einer XML-Codierung, die definiert, indem die <xref:System.Security.SecurityElement> Klasse.  
+  
+ Verwenden der <xref:System.Net.DnsPermission.ToXml%2A> Methode für die XML-Codierung der <xref:System.Net.DnsPermission> Instanz, einschließlich Zustandsinformationen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird rekonstruiert ein <xref:System.Net.DnsPermission> -Instanz anhand einer XML-Codierung.  
+  
+ [!code-cpp[DnsPermission_FromXml#1](~/samples/snippets/cpp/VS_Snippets_Remoting/DnsPermission_FromXml/CPP/dnspermission_fromxml.cpp#1)]
+ [!code-csharp[DnsPermission_FromXml#1](~/samples/snippets/csharp/VS_Snippets_Remoting/DnsPermission_FromXml/CS/dnspermission_fromxml.cs#1)]
+ [!code-vb[DnsPermission_FromXml#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DnsPermission_FromXml/VB/dnspermission_fromxml.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="securityElement" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="securityElement" />ist eine <see cref="T:System.Net.DnsPermission" /> Element.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Intersect (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Intersect(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.DnsPermission.Intersect(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Die <see cref="T:System.Net.DnsPermission" /> Instanz für die Überschneidung mit der aktuellen Instanz.</param>
+        <summary>Erstellt eine Berechtigung, die die Schnittmenge der aktuellen Berechtigungsinstanz ist auch die angegebene Berechtigungsinstanz an.</summary>
+        <returns>Ein <see cref="T:System.Net.DnsPermission" /> -Instanz, die die Schnittmenge des aktuellen darstellt <see cref="T:System.Net.DnsPermission" /> Instanz mit dem angegebenen <see cref="T:System.Net.DnsPermission" /> Instanz oder <see langword="null" /> , wenn die Schnittmenge leer ist. Wenn sowohl die aktuelle Instanz und <paramref name="target" /> sind nicht eingeschränkt ist, gibt diese Methode eine neue <see cref="T:System.Net.DnsPermission" /> -Instanz, uneingeschränkt ist, andernfalls ist er gibt <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.DnsPermission.Intersect%2A> Methode gibt ein <xref:System.Net.DnsPermission> -Instanz, die den Zugriff durch sowohl das aktuelle definierten ermöglicht <xref:System.Net.DnsPermission> Instanz und die angegebene <xref:System.Net.DnsPermission> Instanz. Jede Anforderung muss beide Berechtigungen für die Weiterleitung von ihrer Schnittmenge übergeben.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine Berechtigung, die die Schnittmenge der aktuellen Berechtigungsinstanz ist auch die angegebene Berechtigungsinstanz.  
+  
+ [!code-cpp[dnspermission_union_intersect#2](~/samples/snippets/cpp/VS_Snippets_Remoting/dnspermission_union_intersect/CPP/dnspermission_union_intersect.cpp#2)]
+ [!code-csharp[dnspermission_union_intersect#2](~/samples/snippets/csharp/VS_Snippets_Remoting/dnspermission_union_intersect/CS/dnspermission_union_intersect.cs#2)]
+ [!code-vb[dnspermission_union_intersect#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/dnspermission_union_intersect/VB/dnspermission_union_intersect.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="target" />ist weder eine <see cref="T:System.Net.DnsPermission" /> noch <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSubsetOf">
+      <MemberSignature Language="C#" Value="public override bool IsSubsetOf (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsSubsetOf(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.DnsPermission.IsSubsetOf(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Die zweite <see cref="T:System.Net.DnsPermission" /> Instanz, auf die teilmengenbeziehung geprüft werden soll.</param>
+        <summary>Bestimmt, ob die aktuelle Berechtigungsinstanz eine Teilmenge der angegebenen Berechtigung-Instanz ist.</summary>
+        <returns>
+          <see langword="false" />Wenn die aktuelle Instanz nicht eingeschränkt ist und <paramref name="target" /> handelt es sich um <see langword="null" /> oder uneingeschränkt ist, andernfalls <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuelle <xref:System.Net.DnsPermission> Instanz ist eine Teilmenge des angegebenen <xref:System.Net.DnsPermission> Instanz, wenn die aktuelle <xref:System.Net.DnsPermission> Instanz gibt eine Reihe von Vorgängen, die vollständig enthalten ist durch das angegebene <xref:System.Net.DnsPermission> Instanz.  
+  
+ Wenn die <xref:System.Net.DnsPermission.IsSubsetOf%2A> -Methode zurückkehrt `true`, den aktuellen <xref:System.Net.DnsPermission> Instanz lässt keine umfassenderen Zugriff auf DNS-Server als verfügt das angegebene <xref:System.Net.DnsPermission> Instanz.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Net.DnsPermission.IsSubsetOf%2A> Methode, um zu bestimmen, ob die aktuelle Berechtigungsinstanz eine Teilmenge der angegebenen Berechtigung-Instanz ist.  
+  
+ [!code-cpp[DnsPermission_IsSubsetOf#1](~/samples/snippets/cpp/VS_Snippets_Remoting/DnsPermission_IsSubsetOf/CPP/dnspermission_issubsetof.cpp#1)]
+ [!code-csharp[DnsPermission_IsSubsetOf#1](~/samples/snippets/csharp/VS_Snippets_Remoting/DnsPermission_IsSubsetOf/CS/dnspermission_issubsetof.cs#1)]
+ [!code-vb[DnsPermission_IsSubsetOf#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DnsPermission_IsSubsetOf/VB/dnspermission_issubsetof.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="target" />ist weder eine <see cref="T:System.Net.DnsPermission" /> noch <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUnrestricted">
+      <MemberSignature Language="C#" Value="public bool IsUnrestricted ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsUnrestricted() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.DnsPermission.IsUnrestricted" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überprüft den gesamten Berechtigungsstatus des Objekts an.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Net.DnsPermission" /> Instanz wurde mit <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Net.DnsPermission.IsUnrestricted%2A> Methode, um den gesamten Berechtigungsstatus des Objekts zu überprüfen.  
+  
+ [!code-cpp[DnsPermission_IsUnrestricted#1](~/samples/snippets/cpp/VS_Snippets_Remoting/DnsPermission_IsUnrestricted/CPP/dnspermission_isunrestricted.cpp#1)]
+ [!code-csharp[DnsPermission_IsUnrestricted#1](~/samples/snippets/csharp/VS_Snippets_Remoting/DnsPermission_IsUnrestricted/CS/dnspermission_isunrestricted.cs#1)]
+ [!code-vb[DnsPermission_IsUnrestricted#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DnsPermission_IsUnrestricted/VB/dnspermission_isunrestricted.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public override System.Security.SecurityElement ToXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.SecurityElement ToXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.DnsPermission.ToXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine XML-Codierung von einem <see cref="T:System.Net.DnsPermission" /> Instanz und ihres aktuellen Zustands.</summary>
+        <returns>Ein <see cref="T:System.Security.SecurityElement" /> -Instanz, die eine XML-codierte Darstellung des Sicherheitsobjekts, einschließlich Zustandsinformationen enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.DnsPermission.ToXml%2A> Methode erstellt eine <xref:System.Security.SecurityElement> Instanz für die XML-Codierung, eine Darstellung der <xref:System.Net.DnsPermission> Instanz, einschließlich Zustandsinformationen.  
+  
+ Verwenden der <xref:System.Net.DnsPermission.FromXml%2A> Verfahren zum Wiederherstellen von Informationen über den Zustand aus einer <xref:System.Security.SecurityElement> Instanz.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine XML-Codierung einer <xref:System.Net.DnsPermission> Instanz.  
+  
+ [!code-cpp[DnsPermission_Constructor#1](~/samples/snippets/cpp/VS_Snippets_Remoting/DnsPermission_Constructor/CPP/dnspermission_constructor.cpp#1)]
+ [!code-csharp[DnsPermission_Constructor#1](~/samples/snippets/csharp/VS_Snippets_Remoting/DnsPermission_Constructor/CS/dnspermission_constructor.cs#1)]
+ [!code-vb[DnsPermission_Constructor#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DnsPermission_Constructor/VB/dnspermission_constructor.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Union (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Union(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.DnsPermission.Union(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Die <see cref="T:System.Net.DnsPermission" /> -Instanz, mit der aktuellen Instanz kombiniert.</param>
+        <summary>Erstellt eine Berechtigungsinstanz, die als Kombination der aktuellen Berechtigungsinstanz und die angegebene Berechtigung-Instanz.</summary>
+        <returns>Ein <see cref="T:System.Net.DnsPermission" /> -Instanz, die die Kombination der aktuellen darstellt <see cref="T:System.Net.DnsPermission" /> Instanz mit dem angegebenen <see cref="T:System.Net.DnsPermission" /> Instanz. Wenn <paramref name="target" /> ist <see langword="null" />, diese Methode gibt eine Kopie der aktuellen Instanz zurück. Wenn die aktuelle Instanz oder <paramref name="target" /> ist nicht eingeschränkt ist, gibt diese Methode eine <see cref="T:System.Net.DnsPermission" /> -Instanz, die andernfalls nicht eingeschränkt ist, gibt es eine <see cref="T:System.Net.DnsPermission" /> -Instanz, die beschränkt ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.DnsPermission.Union%2A> Methode gibt ein <xref:System.Net.DnsPermission> Instanz, die Zugriff erlaubt, definiert entweder durch die aktuelle <xref:System.Net.DnsPermission> Instanz oder die angegebene <xref:System.Net.DnsPermission> Instanz. Jede Anforderung, entweder Berechtigung durchläuft, übergibt die Union.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine Berechtigungsinstanz, die als Kombination der aktuellen Berechtigungsinstanz und die angegebene Berechtigung-Instanz.  
+  
+ [!code-cpp[dnspermission_union_intersect#1](~/samples/snippets/cpp/VS_Snippets_Remoting/dnspermission_union_intersect/CPP/dnspermission_union_intersect.cpp#1)]
+ [!code-csharp[dnspermission_union_intersect#1](~/samples/snippets/csharp/VS_Snippets_Remoting/dnspermission_union_intersect/CS/dnspermission_union_intersect.cs#1)]
+ [!code-vb[dnspermission_union_intersect#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/dnspermission_union_intersect/VB/dnspermission_union_intersect.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="target" />ist weder eine <see cref="T:System.Net.DnsPermission" /> noch <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

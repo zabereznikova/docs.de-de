@@ -1,0 +1,43 @@
+<Type Name="PropertyValueUIHandler" FullName="System.Drawing.Design.PropertyValueUIHandler">
+  <TypeSignature Language="C#" Value="public delegate void PropertyValueUIHandler(ITypeDescriptorContext context, PropertyDescriptor propDesc, ArrayList valueUIItemList);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PropertyValueUIHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Design.PropertyValueUIHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+    <Parameter Name="propDesc" Type="System.ComponentModel.PropertyDescriptor" />
+    <Parameter Name="valueUIItemList" Type="System.Collections.ArrayList" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> , die zum Abrufen von Informationen zum Sitzungskontext verwendet werden kann.</param>
+    <param name="propDesc">Ein <see cref="T:System.ComponentModel.PropertyDescriptor" /> , der die abgefragte Eigenschaft darstellt.</param>
+    <param name="valueUIItemList">Ein <see cref="T:System.Collections.ArrayList" /> von <see cref="T:System.Drawing.Design.PropertyValueUIItem" /> Objekte der Eigenschaft zugeordnet, die die UI-Elemente enthält.</param>
+    <summary>Stellt die Methode, die einen Delegaten an eine Implementierung der fügt <see cref="T:System.Drawing.Design.IPropertyValueUIService" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn dieser Delegat aufgerufen wird, fügen sie eine <xref:System.Drawing.Design.PropertyValueUIItem> mit UI-Elementen für die angegebene Eigenschaft, die <xref:System.Collections.ArrayList> als übergeben der `valueUIItemList` Parameter.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Erstellen einer <xref:System.Drawing.Design.PropertyValueUIHandler> Ereignishandlermethode, die bietet <xref:System.Drawing.Design.PropertyValueUIItem> Objekte für alle Eigenschaften, die mit dem Namen `HorizontalMargin` oder `VerticalMargin`.  
+  
+ [!code-cpp[IPropertyValueUIServiceExample#2](~/samples/snippets/cpp/VS_Snippets_Winforms/IPropertyValueUIServiceExample/CPP/propertyuicomponent.cpp#2)]
+ [!code-csharp[IPropertyValueUIServiceExample#2](~/samples/snippets/csharp/VS_Snippets_Winforms/IPropertyValueUIServiceExample/CS/propertyuicomponent.cs#2)]
+ [!code-vb[IPropertyValueUIServiceExample#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IPropertyValueUIServiceExample/VB/propertyuicomponent.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

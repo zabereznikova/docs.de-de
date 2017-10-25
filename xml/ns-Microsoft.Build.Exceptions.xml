@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.Build.Exceptions">
+  <Docs>
+    <summary>Enthält Ausnahmetypen,, die während des Erstellungsprozesses ausgelöst werden können.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

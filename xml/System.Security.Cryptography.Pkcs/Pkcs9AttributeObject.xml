@@ -1,0 +1,190 @@
+<Type Name="Pkcs9AttributeObject" FullName="System.Security.Cryptography.Pkcs.Pkcs9AttributeObject">
+  <TypeSignature Language="C#" Value="public class Pkcs9AttributeObject : System.Security.Cryptography.AsnEncodedData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Pkcs9AttributeObject extends System.Security.Cryptography.AsnEncodedData" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Pkcs.Pkcs9AttributeObject" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.AsnEncodedData</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Attribut für CMS/PKCS #7 "und" PKCS #9-Operationen verwendet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Security.Cryptography.Pkcs.Pkcs9AttributeObject> Objekt kann als ein stark typisiertes betrachtet werden <xref:System.Security.Cryptography.AsnEncodedData> Objekt durch das Hinzufügen von der <xref:System.Security.Cryptography.Pkcs.Pkcs9AttributeObject.Oid%2A> Eigenschaft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Pkcs9AttributeObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.Pkcs9AttributeObject.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.Pkcs.Pkcs9AttributeObject" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Pkcs9AttributeObject (System.Security.Cryptography.AsnEncodedData asnEncodedData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.AsnEncodedData asnEncodedData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.Pkcs9AttributeObject.#ctor(System.Security.Cryptography.AsnEncodedData)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="asnEncodedData" Type="System.Security.Cryptography.AsnEncodedData" />
+      </Parameters>
+      <Docs>
+        <param name="asnEncodedData">Ein Objekt, das den zu verwendenden PKCS #9-Attributtyp und Wert enthält.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Cryptography.Pkcs.Pkcs9AttributeObject" /> -Klasse mit einer angegebenen <see cref="T:System.Security.Cryptography.AsnEncodedData" /> Objekt als Wert und Typ des Attributs.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Die Länge der <paramref name="Value" /> Mitglied der <paramref name="Oid" /> Mitglied <paramref name="asnEncodedData" /> 0 (null).</exception>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="Oid" /> Mitglied <paramref name="asnEncodedData" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Die <paramref name="Value" /> Mitglied der <paramref name="Oid" /> Mitglied <paramref name="asnEncodedData" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Pkcs9AttributeObject (System.Security.Cryptography.Oid oid, byte[] encodedData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.Oid oid, unsigned int8[] encodedData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.Pkcs9AttributeObject.#ctor(System.Security.Cryptography.Oid,System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="oid" Type="System.Security.Cryptography.Oid" />
+        <Parameter Name="encodedData" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="oid">Ein Objekt, das den PKCS #9-Attributtyp darstellt.</param>
+        <param name="encodedData">Ein Array von Byte-Werte, stellt die PKCS #9-Attributwert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Cryptography.Pkcs.Pkcs9AttributeObject" /> -Klasse mit einer angegebenen <see cref="T:System.Security.Cryptography.Oid" /> Objekt wie der Typ des Attributs und einem angegebenen ASN. 1-Daten als Wert des Attributs codierten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Pkcs9AttributeObject (string oid, byte[] encodedData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string oid, unsigned int8[] encodedData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.Pkcs9AttributeObject.#ctor(System.String,System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="oid" Type="System.String" />
+        <Parameter Name="encodedData" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="oid">Die Zeichenfolgendarstellung eines OIDs, das den PKCS #9-Attributtyp darstellt.</param>
+        <param name="encodedData">Ein Array von Bytewerten, das den PKCS #9-Attributwert enthält.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Security.Cryptography.Pkcs.Pkcs9AttributeObject" /> Klasse eine angegebene Zeichenfolgendarstellung ein Objektbezeichner (OID) verwenden, wie der Typ des Attributs und einem angegebenen ASN. 1-Daten als Wert des Attributs codierten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyFrom">
+      <MemberSignature Language="C#" Value="public override void CopyFrom (System.Security.Cryptography.AsnEncodedData asnEncodedData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyFrom(class System.Security.Cryptography.AsnEncodedData asnEncodedData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.Pkcs9AttributeObject.CopyFrom(System.Security.Cryptography.AsnEncodedData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asnEncodedData" Type="System.Security.Cryptography.AsnEncodedData" />
+      </Parameters>
+      <Docs>
+        <param name="asnEncodedData">Ein Objekt, das den zu verwendenden PKCS #9-Attributtyp und Wert enthält.</param>
+        <summary>Kopiert einen PKCS #9-Attributtyp und einen Wert für dieses <see cref="T:System.Security.Cryptography.Pkcs.Pkcs9AttributeObject" /> aus dem angegebenen <see cref="T:System.Security.Cryptography.AsnEncodedData" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="asnEncodeData" />stellt nicht kompatiblen Attributtyp dar.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="asnEncodedData" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Oid">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Oid Oid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Oid Oid" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.Pkcs9AttributeObject.Oid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Oid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Security.Cryptography.Oid" /> -Objekt, das den Typ des zugeordneten Attributs darstellt <see cref="T:System.Security.Cryptography.Pkcs.Pkcs9AttributeObject" /> Objekt.</summary>
+        <value>Ein Objekt, das den Typ des zugeordneten Attributs darstellt <see cref="T:System.Security.Cryptography.Pkcs.Pkcs9AttributeObject" /> Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

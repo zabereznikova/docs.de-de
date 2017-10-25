@@ -1,0 +1,101 @@
+<Type Name="ContentPlaceHolder" FullName="System.Web.UI.WebControls.ContentPlaceHolder">
+  <TypeSignature Language="C#" Value="public class ContentPlaceHolder : System.Web.UI.Control" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ContentPlaceHolder extends System.Web.UI.Control implements class System.Web.UI.INamingContainer" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ContentPlaceHolder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Control</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.ContentPlaceHolderDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItemFilter("System.Web.UI")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItemFilter("Microsoft.VisualStudio.Web.WebForms.MasterPageWebFormDesigner", System.ComponentModel.ToolboxItemFilterType.Require)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ControlBuilder(typeof(System.Web.UI.WebControls.ContentPlaceHolderBuilder))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ToolboxData("&lt;{0}:ContentPlaceHolder runat="server"&gt;&lt;/{0}:ContentPlaceHolder&gt;")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert einen Bereich für Inhalte in einer ASP.NET-Masterseite.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Web.UI.WebControls.ContentPlaceHolder> -Steuerelement definiert einen relativen Bereich für Inhalte auf einer Masterseite und rendert alle Text, Markup und Serversteuerelemente von einer verknüpften <xref:System.Web.UI.WebControls.Content> Steuerelement in einer Inhaltsseite gefunden.  
+  
+ Ein <xref:System.Web.UI.WebControls.Content> Steuerelement zugeordnet ist ein <xref:System.Web.UI.WebControls.ContentPlaceHolder> mithilfe seiner <xref:System.Web.UI.WebControls.Content.ContentPlaceHolderID%2A> Eigenschaft. Legen Sie die <xref:System.Web.UI.WebControls.Content.ContentPlaceHolderID%2A> auf den Wert der Eigenschaft der <xref:System.Web.UI.Control.ID%2A> -Eigenschaft des verwandten <xref:System.Web.UI.WebControls.ContentPlaceHolder> Steuerelement auf einer Masterseite. Mehrere <xref:System.Web.UI.WebControls.ContentPlaceHolder> können auf einer Masterseite deklariert werden.  
+  
+ Innerhalb einer Inhaltsseite, nur eine <xref:System.Web.UI.WebControls.Content> Steuerelement kann angeben, dass den Inhalt für ein <xref:System.Web.UI.WebControls.ContentPlaceHolder> auf der Masterseite. Jedoch in jeder Inhaltsseite, die eine Gestaltungsvorlage verwendet wird, dass separate <xref:System.Web.UI.WebControls.Content> Kontrollen hinsichtlich der <xref:System.Web.UI.WebControls.ContentPlaceHolder>. Sie können z. B. Definieren der <xref:System.Web.UI.WebControls.ContentPlaceHolder> für den Seitentitel auf einer Masterseite. Für jede Inhaltsseite, die Gestaltungsvorlage verwendet, wird, fügen Sie ein <xref:System.Web.UI.WebControls.Content> Steuerelement, das den Text und Markup für den Seitentitel bereitstellt.  
+  
+> [!NOTE]
+>  XHTML-Kompatibilität wird ein leeres Title-Element erstellt, wenn ein Titel nicht definiert wurde oder nicht gefunden werden.  
+  
+ Sie können den Standardinhalt Hauptvideos angeben der <xref:System.Web.UI.WebControls.ContentPlaceHolder> Steuerelementtags, aber dieser Inhalt wird durch den Inhalt in einer verknüpften Inhaltsseite ersetzt.  
+  
+ Weitere Informationen zu Masterseiten und Inhaltsseiten, finden Sie unter [DEL: ASP.NET Masterseiten](http://msdn.microsoft.com/en-us/0852291d-6f62-4e9f-a809-45cc81e78d6b).  
+  
+<a name="DeclarativeSyntax"></a>   
+## <a name="declarative-syntax"></a>Deklarationssyntax  
+  
+```  
+<asp: ContentPlaceHolder  
+    EnableViewState="True|False"  
+    ID="string"  
+    OnDataBinding="DataBinding event handler"  
+    OnDisposed="Disposed event handler"  
+    OnInit="Init event handler"  
+    OnLoad="Load event handler"  
+    OnPreRender="PreRender event handler"  
+    OnUnload="Unload event handler"  
+    runat="server"  
+    Visible="True|False"  
+>  
+        <!-- child controls -->  
+</asp:ContentPlaceHolder>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht wie die <xref:System.Web.UI.WebControls.ContentPlaceHolder> Steuerelement wird verwendet, um ein Inhaltsbereich für eine Masterseite definiert. Die erste Webseite ist eine Masterseite und definiert einen Inhaltsbereich mithilfe einer <xref:System.Web.UI.WebControls.ContentPlaceHolder> Steuerelement.  
+  
+ [!code-xml[System.Web.UI.MasterPage_1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.MasterPage_1/CS/MasterPageSample_1cs.master#1)]   
+  
+ Im folgenden Codebeispiel wird veranschaulicht, eine Seite für die vorhergehenden Gestaltungsvorlage. Text, Markup und Serversteuerelemente definiert, in der <xref:System.Web.UI.WebControls.Content> Steuerelementvorlage gerendert werden die <xref:System.Web.UI.WebControls.ContentPlaceHolder> auf der Masterseite.  
+  
+ [!code-csharp[System.Web.UI.MasterPage_1#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.MasterPage_1/CS/samplemasterclass.cs#3)]
+ [!code-vb[System.Web.UI.MasterPage_1#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.MasterPage_1/VB/samplemasterclass.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContentPlaceHolder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ContentPlaceHolder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.ContentPlaceHolder" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

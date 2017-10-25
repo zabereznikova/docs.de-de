@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.Build.Utilities">
+  <Docs>
+    <summary>Die <see cref="N:Microsoft.Build.Utilities" /> Namespace enthält Hilfsklassen, die Sie zum Erstellen einer eigenen MSBuild Protokollierungen und Aufgaben verwenden können. Informationen finden Sie unter <see href="https://docs.microsoft.com/visualstudio/msbuild/">MSBuild</see>.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

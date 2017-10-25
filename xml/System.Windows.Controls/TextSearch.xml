@@ -1,0 +1,191 @@
+<Type Name="TextSearch" FullName="System.Windows.Controls.TextSearch">
+  <TypeSignature Language="C#" Value="public sealed class TextSearch : System.Windows.DependencyObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TextSearch extends System.Windows.DependencyObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.TextSearch" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.DependencyObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht einem Benutzer schnell Zugriff auf Elemente in einen Satz durch Eingabe von Präfixen von Zeichenfolgen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse dient zum Zuweisen einer Zeichenfolge zu Elementen in der Auflistung eines Steuerelements. Jedes Element in der Auflistung eine Zeichenfolge zuweisen, erfüllt zwei Ziele. Es gibt den Text an, wenn das Element ausgewählt ist, und es dem Benutzer ein Element auswählen ermöglicht, indem Sie die zugewiesene Zeichenfolge eingeben.  
+  
+ Nehmen wir beispielsweise an, die eine <xref:System.Windows.Controls.ComboBox> enthält eine Auflistung von <xref:System.Windows.Controls.Image> Objekte, von denen ein Bild von einer Dog ist.  Wenn Sie die Zeichenfolge "Dog" zu diesem Element zuweisen, kann der Benutzer den Hund auswählen, indem Sie das Wort im Textfeld des Kombinationsfelds eingeben. Sobald der Benutzer mit ausreichender Bestandteil des Worts zur Unterscheidung von anderen Elementen in der Auswahl eingibt, wird das Abbild des der Hund ausgewählt werden. Wenn <xref:System.Windows.Controls.ComboBox.IsEditable%2A> festgelegt ist, um `true` auf die <xref:System.Windows.Controls.ComboBox>, "Dog" im Textfeld angezeigt wird.  
+  
+ Können Sie angeben, den Text, der ein Element mit identifiziert die <xref:System.Windows.Controls.TextSearch.TextPath%2A?displayProperty=nameWithType> -Eigenschaft für ein Steuerelement oder durch Festlegen der <xref:System.Windows.Controls.TextSearch.Text%2A> Eigenschaft für jedes Element in der Auflistung des Steuerelements. Festlegen dieser Eigenschaften wird sichergestellt, dass unerwarteter Text nicht angezeigt wird. Wenn Sie festlegen, die <xref:System.Windows.Controls.TextSearch.Text%2A> -Eigenschaft für ein Steuerelement sammelelement, die <xref:System.Windows.Controls.TextSearch.TextPath%2A> Eigenschaft wird ignoriert.  Wenn Sie festlegen, die <xref:System.Windows.Controls.TextSearch.TextPath%2A> Eigenschaft auf einen Wert, der nicht den Namen einer vorhandenen Eigenschaft ist <xref:System.Windows.Controls.TextSearch.TextPath%2A> wird ignoriert.  
+  
+<a name="xamlTextUsage_TextSearch"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ Sie können nicht in diese verwaltete Klasse deklarieren [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], aber Sie können statischen Eigenschaften verwenden Sie zum Zuweisen von Werten in [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+   
+  
+## Examples  
+ Erstellen Sie in den folgenden Beispielen <xref:System.Windows.Controls.ComboBox> Steuerelemente, die Bilder als Objekte anstelle von Text enthalten.  Funktionell sind in den Beispielen identisch. Im ersten Beispiel wird die <xref:System.Windows.Controls.TextSearch.TextPath%2A> Eigenschaft auf die <xref:System.Windows.Controls.ComboBox> und im zweiten Beispiel wird die <xref:System.Windows.Controls.AccessText.Text%2A> Eigenschaft für jedes Element in der Auflistung.  
+  
+ [!code-xaml[ComboBoxProps_snip#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ComboBoxProps_snip/CS/pane1.xaml#1)]  
+  
+ [!code-xaml[ComboBoxProps_snip#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ComboBoxProps_snip/CS/pane1.xaml#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetText">
+      <MemberSignature Language="C#" Value="public static string GetText (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetText(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextSearch.GetText(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForType(typeof(System.Windows.DependencyObject))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, aus dem der Eigenschaftswert gelesen wird.</param>
+        <summary>Gibt die Zeichenfolge zurück, die das angegebene Element bezeichnet.</summary>
+        <returns>Die Zeichenfolge, die das angegebene Element bezeichnet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt den Wert der die <xref:System.Windows.Controls.TextSearch.Text%2A> angefügte Eigenschaft aus dem angegebenen Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTextPath">
+      <MemberSignature Language="C#" Value="public static string GetTextPath (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetTextPath(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextSearch.GetTextPath(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForType(typeof(System.Windows.DependencyObject))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, aus dem der Eigenschaftswert gelesen wird.</param>
+        <summary>Gibt den Namen der Eigenschaft zurück, die ein Element in der Auflistung des angegebenen Elements bezeichnet.</summary>
+        <returns>Der Name der Eigenschaft, die das Element für den Benutzer bezeichnet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt den Wert der die <xref:System.Windows.Controls.TextSearch.TextPath%2A> angefügte Eigenschaft aus dem angegebenen Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetText">
+      <MemberSignature Language="C#" Value="public static void SetText (System.Windows.DependencyObject element, string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetText(class System.Windows.DependencyObject element, string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextSearch.SetText(System.Windows.DependencyObject,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, in das der Wert der Eigenschaft geschrieben wird.</param>
+        <param name="text">Eine Zeichenfolge, die das Element identifiziert.</param>
+        <summary>Schreibt die <see cref="P:System.Windows.Controls.TextSearch.Text" /> angefügten Eigenschaftswert für das angegebene Element.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetTextPath">
+      <MemberSignature Language="C#" Value="public static void SetTextPath (System.Windows.DependencyObject element, string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetTextPath(class System.Windows.DependencyObject element, string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextSearch.SetTextPath(System.Windows.DependencyObject,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, in das der Wert der Eigenschaft geschrieben wird.</param>
+        <param name="path">Der Name der Eigenschaft, die ein Element identifiziert.</param>
+        <summary>Schreibt die <see cref="P:System.Windows.Controls.TextSearch.TextPath" /> angefügte Eigenschaft für das angegebene Element.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextPathProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TextPathProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TextPathProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.TextSearch.TextPathProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Controls.TextSearch.TextPath" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TextProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TextProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.TextSearch.TextProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Controls.TextSearch.Text" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

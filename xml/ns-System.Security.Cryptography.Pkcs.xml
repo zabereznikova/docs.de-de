@@ -1,0 +1,6 @@
+<Namespace Name="System.Security.Cryptography.Pkcs">
+  <Docs>
+    <summary>Die <see cref="N:System.Security.Cryptography.Pkcs" /> -Namespace stellt Programmierelemente für Public Key Cryptography Standards (PKCS), einschließlich der Methoden zum Signieren von Daten, Austauschen von Schlüsseln, Anfordern von Zertifikaten, Verschlüsselung mit öffentlichem Schlüssel und Entschlüsselung und andere Sicherheitsfunktionen bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

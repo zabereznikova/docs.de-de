@@ -1,0 +1,134 @@
+<Type Name="X509IncludeOption" FullName="System.Security.Cryptography.X509Certificates.X509IncludeOption">
+  <TypeSignature Language="C#" Value="public enum X509IncludeOption" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed X509IncludeOption extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.X509Certificates.X509IncludeOption" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, welcher Anteil der x. 509-Zertifikatskette in den Daten des x. 509-eingeschlossen werden sollen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration gibt an, welcher Anteil der Zertifikatskette x. 509-Daten einschließt. Sie können auch nur das Endzertifikat enthalten; die gesamte Kette; oder die gesamte Kette mit Ausnahme des Stammzertifikats an, die Standardeinstellung.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EndCertOnly">
+      <MemberSignature Language="C#" Value="EndCertOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509IncludeOption EndCertOnly = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509IncludeOption.EndCertOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509IncludeOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nur das Endzertifikat ist in den x. 509-Kette Informationen enthalten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ExcludeRoot">
+      <MemberSignature Language="C#" Value="ExcludeRoot" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509IncludeOption ExcludeRoot = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509IncludeOption.ExcludeRoot" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509IncludeOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die gesamte x. 509-Kette ist enthalten, mit Ausnahme des Stammzertifikats.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509IncludeOption None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509IncludeOption.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509IncludeOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es werden keine Informationen des x. 509-Kette ist enthalten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WholeChain">
+      <MemberSignature Language="C#" Value="WholeChain" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509IncludeOption WholeChain = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509IncludeOption.WholeChain" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509IncludeOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die gesamte x. 509-Kette ist enthalten.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

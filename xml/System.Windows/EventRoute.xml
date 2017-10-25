@@ -1,0 +1,178 @@
+<Type Name="EventRoute" FullName="System.Windows.EventRoute">
+  <TypeSignature Language="C#" Value="public sealed class EventRoute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EventRoute extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.EventRoute" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt den Container für die Route befolgt werden, indem ein Routingereignis dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse entspricht einem gültigen <xref:System.Windows.RoutedEvent>, und enthält eine geordnete Liste von Paaren aus Ziel und Ereignishandler, die auf der Ereignisroute für dieses Ereignis verweisen. <xref:System.Windows.EventRoute>unterstützt das Hinzufügen von neuen Einträge der Liste, und ermöglicht das für die Handler in der Liste, aufgerufen werden soll.  
+  
+ Die meisten normalen Vorgänge zum Hinzufügen von Handlern für [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] Ereignisse erfordern keine Arbeiten mit dieser Klasse (verwenden Sie z. B. <xref:System.Windows.EventManager> Methoden zum Hinzufügen von Klassenbehandlung oder Abfragen für vorhandene Handler eines Ereignisses). Diese Klasse ist hauptsächlich für die Verwendung auf, wenn Elemente, bestimmte Informationen zu untergeordneten oder übergeordneten Elementen, die es praktikabel ist aufweisen, Elemente hinzufügen oder entfernen Sie Elemente aus der berechneten Ereignis Standardroute machen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventRoute (System.Windows.RoutedEvent routedEvent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.RoutedEvent routedEvent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.EventRoute.#ctor(System.Windows.RoutedEvent)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="routedEvent" Type="System.Windows.RoutedEvent" />
+      </Parameters>
+      <Docs>
+        <param name="routedEvent">Der Ereignisbezeichner ungleich NULL an diese Ereignisroute zugeordnet werden soll.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Windows.EventRoute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (object target, Delegate handler, bool handledEventsToo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(object target, class System.Delegate handler, bool handledEventsToo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.EventRoute.Add(System.Object,System.Delegate,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Object" />
+        <Parameter Name="handler" Type="System.Delegate" />
+        <Parameter Name="handledEventsToo" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="target">Gibt das Zielobjekt, von denen der Handler die Route hinzugefügt werden.</param>
+        <param name="handler">Gibt den Handler der Route hinzugefügt werden.</param>
+        <param name="handledEventsToo">Gibt an, und zwar unabhängig davon, ob der Listener Ereignisse erkennt, die bereits verarbeitet wurden.</param>
+        <summary>Die Route hinzugefügt den angegebenen Handler für das angegebene Ziel.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es ist kein Fehler um einen Handler für eine bestimmte Zielinstanz zweimal hinzuzufügen. In diesem Fall wird der Handler zweimal aufgerufen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PeekBranchNode">
+      <MemberSignature Language="C#" Value="public object PeekBranchNode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object PeekBranchNode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.EventRoute.PeekBranchNode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt das oberste Element auf dem Ereignis Route Stapel, bei dem zwei logische Strukturen voneinander abweichen.</summary>
+        <returns>Das oberste Element auf dem Ereignis Route Stapel, bei dem zwei logische Strukturen voneinander abweichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PeekBranchSource">
+      <MemberSignature Language="C#" Value="public object PeekBranchSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object PeekBranchSource() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.EventRoute.PeekBranchSource" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Quelle für das oberste Element auf dem Ereignis Route Stapel, bei dem zwei logische Strukturen voneinander abweichen.</summary>
+        <returns>Die Quelle für das oberste Element auf dem Ereignis Route Stapel, bei dem zwei logische Strukturen voneinander abweichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PopBranchNode">
+      <MemberSignature Language="C#" Value="public object PopBranchNode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object PopBranchNode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.EventRoute.PopBranchNode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den obersten Knoten im Ereignis Route Stapel, bei dem zwei logische Strukturen voneinander abweichen.</summary>
+        <returns>Der oberste Knoten auf dem Ereignis Route Stapel, bei dem zwei logische Strukturen voneinander abweichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PushBranchNode">
+      <MemberSignature Language="C#" Value="public void PushBranchNode (object node, object source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PushBranchNode(object node, object source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.EventRoute.PushBranchNode(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Object" />
+        <Parameter Name="source" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="node">Das oberste Element auf dem Ereignis Route Stapel, bei dem zwei logische Strukturen voneinander abweichen.</param>
+        <param name="source">Die Quelle für das oberste Element auf dem Ereignis Route Stapel, bei dem zwei logische Strukturen voneinander abweichen.</param>
+        <summary>Fügt den oberste Knoten für den Ereignis-Route-Stapel in dem zwei logische Strukturen voneinander abweichen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

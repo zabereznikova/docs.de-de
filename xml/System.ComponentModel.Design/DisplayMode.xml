@@ -1,0 +1,146 @@
+<Type Name="DisplayMode" FullName="System.ComponentModel.Design.DisplayMode">
+  <TypeSignature Language="C#" Value="public enum DisplayMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DisplayMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.DisplayMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Definiert, die angeben, die Anzeigemodi verwendeten Bezeichner <see cref="T:System.ComponentModel.Design.ByteViewer" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.DisplayMode> Bezeichner verwendet werden, um anzugeben, den Anzeigemodus verwendet, um jede Bytesequenz anzuzeigen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mit <xref:System.ComponentModel.Design.DisplayMode> Bezeichner. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.ComponentModel.Design.ByteViewer> Klasse.  
+  
+ [!code-cpp[ByteViewerExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ByteViewerExample/CPP/form1.cpp#1)]
+ [!code-csharp[ByteViewerExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ByteViewerExample/CS/form1.cs#1)]
+ [!code-vb[ByteViewerExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ByteViewerExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Ansi">
+      <MemberSignature Language="C#" Value="Ansi" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Design.DisplayMode Ansi = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.DisplayMode.Ansi" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DisplayMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Anzeige der ANSI-Format.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mit <xref:System.ComponentModel.Design.DisplayMode> Bezeichner. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.ComponentModel.Design.ByteViewer> Klasse.  
+  
+ [!code-cpp[ByteViewerExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ByteViewerExample/CPP/form1.cpp#1)]
+ [!code-csharp[ByteViewerExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ByteViewerExample/CS/form1.cs#1)]
+ [!code-vb[ByteViewerExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ByteViewerExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Auto">
+      <MemberSignature Language="C#" Value="Auto" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Design.DisplayMode Auto = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.DisplayMode.Auto" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DisplayMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Einen Anzeigemodus, der automatisch einen Anzeigemodus auswählt. In diesem Modus werden die Bytes untersucht, um festzustellen, ob sie Hexadezimal- oder gedruckt werden können. Wenn die Bytes im Hexadezimalformat, sind die <see cref="F:System.ComponentModel.Design.DisplayMode.Hexdump" /> Modus ausgewählt ist. Wenn das Zeichen ein druckbares Zeichen übereinstimmen, wird ein Test ausgeführt, um automatisch wählen Sie entweder die <see cref="F:System.ComponentModel.Design.DisplayMode.Ansi" /> oder <see cref="F:System.ComponentModel.Design.DisplayMode.Unicode" /> Anzeigemodus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mit <xref:System.ComponentModel.Design.DisplayMode> Bezeichner. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.ComponentModel.Design.ByteViewer> Klasse.  
+  
+ [!code-cpp[ByteViewerExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ByteViewerExample/CPP/form1.cpp#1)]
+ [!code-csharp[ByteViewerExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ByteViewerExample/CS/form1.cs#1)]
+ [!code-vb[ByteViewerExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ByteViewerExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Hexdump">
+      <MemberSignature Language="C#" Value="Hexdump" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Design.DisplayMode Hexdump = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.DisplayMode.Hexdump" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DisplayMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Anzeige im Hexadezimalformat angegeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mit <xref:System.ComponentModel.Design.DisplayMode> Bezeichner. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.ComponentModel.Design.ByteViewer> Klasse.  
+  
+ [!code-cpp[ByteViewerExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ByteViewerExample/CPP/form1.cpp#1)]
+ [!code-csharp[ByteViewerExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ByteViewerExample/CS/form1.cs#1)]
+ [!code-vb[ByteViewerExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ByteViewerExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unicode">
+      <MemberSignature Language="C#" Value="Unicode" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Design.DisplayMode Unicode = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.DisplayMode.Unicode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DisplayMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Unicode-Format anzeigen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mit <xref:System.ComponentModel.Design.DisplayMode> Bezeichner. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.ComponentModel.Design.ByteViewer> Klasse.  
+  
+ [!code-cpp[ByteViewerExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ByteViewerExample/CPP/form1.cpp#1)]
+ [!code-csharp[ByteViewerExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ByteViewerExample/CS/form1.cs#1)]
+ [!code-vb[ByteViewerExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ByteViewerExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

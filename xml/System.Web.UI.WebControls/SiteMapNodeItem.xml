@@ -1,0 +1,278 @@
+<Type Name="SiteMapNodeItem" FullName="System.Web.UI.WebControls.SiteMapNodeItem">
+  <TypeSignature Language="C#" Value="public class SiteMapNodeItem : System.Web.UI.WebControls.WebControl, System.Web.UI.IDataItemContainer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SiteMapNodeItem extends System.Web.UI.WebControls.WebControl implements class System.Web.UI.IDataItemContainer, class System.Web.UI.INamingContainer" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.SiteMapNodeItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IDataItemContainer</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die <see cref="T:System.Web.UI.WebControls.SiteMapNodeItem" /> Klasse wird verwendet, durch die <see cref="T:System.Web.UI.WebControls.SiteMapPath" /> Steuerelement funktional darzustellen eine <see cref="T:System.Web.SiteMapNode" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.SiteMapPath> -Steuerelement ist ein <xref:System.Web.UI.WebControls.CompositeControl>, dies bedeutet, dass es rendert eine Benutzeroberfläche viele andere Webserversteuerelemente zusammensetzen. Während der <xref:System.Web.UI.WebControls.SiteMapPath> Steuerelement arbeitet direkt mit der <xref:System.Web.SiteMap> für Ihren Standort konfiguriert und die zugehörige <xref:System.Web.SiteMapNode> Objekte, die <xref:System.Web.SiteMapNode> Objekte sind nicht-Webserversteuerelemente. Die <xref:System.Web.UI.WebControls.SiteMapNodeItem> Klasse ist ein Web-Server-Steuerelement-Wrapper für die <xref:System.Web.SiteMapNode> Klasse, wodurch die <xref:System.Web.UI.WebControls.SiteMapPath> -Steuerelement zum Anzeigen von <xref:System.Web.SiteMapNode> Daten unter Beibehaltung der funktionellen Unterschied zwischen einem Datenelement generische Navigation und einen Benutzer Interface-Element.  
+  
+ Die <xref:System.Web.UI.WebControls.SiteMapPath> Steuerelement verwaltet die Zuordnung Websiteknoten in seiner <xref:System.Web.UI.Control.Controls%2A> Auflistung intern. Da die <xref:System.Web.UI.WebControls.SiteMapPath> kann seine untergeordneten Steuerelemente mit verschiedenen Formaten, Vorlagen und Aufträge rendern, muss er unterscheiden zwischen funktional verschiedene Typen von Knoten, unabhängig von der Reihenfolge angezeigt werden können. Aus diesem Grund jede <xref:System.Web.UI.WebControls.SiteMapNodeItem> eines bestimmten Typs erstellt wird. (Mögliche Typen sind aufgeführt, der <xref:System.Web.UI.WebControls.SiteMapNodeItemType> -Enumeration.)  
+  
+ Verwenden der <xref:System.Web.UI.WebControls.SiteMapNodeItem> -Klasse direkt im Code nur, wenn Sie beabsichtigen, Erweitern der <xref:System.Web.UI.WebControls.SiteMapPath> steuern oder ein Steuerelement mit ähnlichen Funktionen schreiben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zur Erstellung und Bearbeitung <xref:System.Web.UI.WebControls.SiteMapNodeItem> Objekte innerhalb der <xref:System.Web.UI.WebControls.SiteMapPath.InitializeItem%2A> Methode einer Klasse, die abgeleitet <xref:System.Web.UI.WebControls.SiteMapPath>. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.WebControls.SiteMapPath> Klasse.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.DropDownNavigationPath_1#3](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.DropDownNavigationPath_1/CS/dropdownnavigationpath.cs#3)]
+ [!code-vb[Urtue.Samples.Alexkr.DropDownNavigationPath_1#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.DropDownNavigationPath_1/VB/dropdownnavigationpath.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SiteMapNodeItem (int itemIndex, System.Web.UI.WebControls.SiteMapNodeItemType itemType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 itemIndex, valuetype System.Web.UI.WebControls.SiteMapNodeItemType itemType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SiteMapNodeItem.#ctor(System.Int32,System.Web.UI.WebControls.SiteMapNodeItemType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="itemIndex" Type="System.Int32" />
+        <Parameter Name="itemType" Type="System.Web.UI.WebControls.SiteMapNodeItemType" />
+      </Parameters>
+      <Docs>
+        <param name="itemIndex">Der Index in der <see cref="P:System.Web.UI.Control.Controls" /> Auflistung, die die <see cref="T:System.Web.UI.WebControls.SiteMapPath" /> Steuerelement verwendet, um zu verfolgen die <see cref="T:System.Web.UI.WebControls.SiteMapNodeItem" /> Objekt.</param>
+        <param name="itemType">Der funktionale Typ des <see cref="T:System.Web.SiteMapNode" /> , die von diesem <see cref="T:System.Web.UI.WebControls.SiteMapNodeItem" /> darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.SiteMapNodeItem" /> -Klasse mithilfe des angegebenen Indexes und <see cref="T:System.Web.UI.WebControls.SiteMapNodeItemType" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.WebControls.SiteMapPath.PathDirection%2A> ist <xref:System.Web.UI.WebControls.PathDirection.RootToCurrent>, Sie können jedes Element einer tieferen Ebene der Navigationshierarchie hinzufügen, am Ende der <xref:System.Web.UI.Control.Controls%2A> Auflistung. Jedoch wenn die <xref:System.Web.UI.WebControls.SiteMapPath.PathDirection%2A> -Eigenschaftensatz auf <xref:System.Web.UI.WebControls.PathDirection.CurrentToRoot>, muss jeder Knoten einen tieferen Ebene eingefügt werden, am Anfang der <xref:System.Web.UI.Control.Controls%2A> Auflistung.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Web.UI.WebControls.SiteMapNodeItem> Objekt. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.WebControls.SiteMapPath> Klasse.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.DropDownNavigationPath_1#3](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.DropDownNavigationPath_1/CS/dropdownnavigationpath.cs#3)]
+ [!code-vb[Urtue.Samples.Alexkr.DropDownNavigationPath_1#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.DropDownNavigationPath_1/VB/dropdownnavigationpath.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemIndex">
+      <MemberSignature Language="C#" Value="public virtual int ItemIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ItemIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.SiteMapNodeItem.ItemIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index ab, die die <see cref="T:System.Web.UI.WebControls.SiteMapPath" /> Steuerelement verwendet wird, nachverfolgen und Verwalten der <see cref="T:System.Web.UI.WebControls.SiteMapNodeItem" /> in ihren internen Auflistungen.</summary>
+        <value>Eine ganze Zahl, die den Speicherort des darstellt der <see cref="T:System.Web.UI.WebControls.SiteMapNodeItem" /> in die <see cref="T:System.Web.UI.WebControls.SiteMapPath" /> internen Auflistungen des Steuerelements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Abrufen der <xref:System.Web.UI.WebControls.SiteMapNodeItem.ItemIndex%2A> Eigenschaft und verwenden sie zum Erstellen einer <xref:System.Web.UI.WebControls.SiteMapNodeItem> Pfadtrennzeichen. <xref:System.Web.UI.WebControls.SiteMapNodeItemType.PathSeparator>Knotenelemente, die im selben Index als den vorherigen Knoten erstellt werden. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.WebControls.SiteMapPath> Klasse.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.DropDownNavigationPath_1#3](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.DropDownNavigationPath_1/CS/dropdownnavigationpath.cs#3)]
+ [!code-vb[Urtue.Samples.Alexkr.DropDownNavigationPath_1#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.DropDownNavigationPath_1/VB/dropdownnavigationpath.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemType">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.SiteMapNodeItemType ItemType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.SiteMapNodeItemType ItemType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.SiteMapNodeItem.ItemType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.SiteMapNodeItemType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des der <see cref="T:System.Web.UI.WebControls.SiteMapNodeItem" />.</summary>
+        <value>Ein Mitglied der <see cref="T:System.Web.UI.WebControls.SiteMapNodeItemType" /> -Enumeration, die die funktionale Rolle des Knotenelements in der Navigationshierarchie angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.UI.WebControls.SiteMapNodeItem>Objekte mit einem <xref:System.Web.UI.WebControls.SiteMapNodeItemType.PathSeparator> Typ sind nicht gebunden, in ein entsprechendes <xref:System.Web.SiteMapNode>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Überprüfen des Typs einer <xref:System.Web.UI.WebControls.SiteMapNodeItem> mithilfe der <xref:System.Web.UI.WebControls.SiteMapNodeItem.ItemType%2A> Eigenschaft. In diesem Beispiel wird der einzige Knoten geben, die die <xref:System.Web.UI.WebControls.SiteMapPath.InitializeItem%2A> -Methode behandelt wird die <xref:System.Web.SiteMap.CurrentNode%2A> Typ. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.WebControls.SiteMapPath> Klasse.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.DropDownNavigationPath_1#2](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.DropDownNavigationPath_1/CS/dropdownnavigationpath.cs#2)]
+ [!code-vb[Urtue.Samples.Alexkr.DropDownNavigationPath_1#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.DropDownNavigationPath_1/VB/dropdownnavigationpath.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItemType">
+      <MemberSignature Language="C#" Value="protected virtual void SetItemType (System.Web.UI.WebControls.SiteMapNodeItemType itemType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void SetItemType(valuetype System.Web.UI.WebControls.SiteMapNodeItemType itemType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SiteMapNodeItem.SetItemType(System.Web.UI.WebControls.SiteMapNodeItemType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemType" Type="System.Web.UI.WebControls.SiteMapNodeItemType" />
+      </Parameters>
+      <Docs>
+        <param name="itemType">Einer der <see cref="T:System.Web.UI.WebControls.SiteMapNodeItemType" />-Werte.</param>
+        <summary>Legt die aktuelle <see cref="T:System.Web.UI.WebControls.SiteMapNodeItem" /> <see cref="P:System.Web.UI.WebControls.SiteMapNodeItem.ItemType" /> Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SiteMapNode">
+      <MemberSignature Language="C#" Value="public virtual System.Web.SiteMapNode SiteMapNode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.SiteMapNode SiteMapNode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.SiteMapNodeItem.SiteMapNode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SiteMapNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Web.SiteMapNode" /> Objekt, mit der <see cref="T:System.Web.UI.WebControls.SiteMapNodeItem" /> darstellt.</summary>
+        <value>Ein <see cref="T:System.Web.SiteMapNode" /> Objekt, mit dem <see cref="T:System.Web.UI.WebControls.SiteMapPath" /> Steuerelement verwendet, um eine Benutzeroberfläche für Website-Navigation anzeigen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.SiteMapNodeItem.SiteMapNode%2A> Eigenschaft ruft ab oder legt ihn fest der <xref:System.Web.SiteMapNode> , die die <xref:System.Web.UI.WebControls.SiteMapNodeItem> gebunden ist. <xref:System.Web.UI.WebControls.SiteMapNodeItem>Objekte, die über eine <xref:System.Web.UI.WebControls.SiteMapNodeItemType.PathSeparator> Typ sind nicht gebunden, in ein entsprechendes <xref:System.Web.SiteMapNode> Objekt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Abrufen der <xref:System.Web.UI.WebControls.SiteMapNodeItem.SiteMapNode%2A> -Eigenschaft und den Zugriff der <xref:System.Web.SiteMapNode.Title%2A> und <xref:System.Web.SiteMapNode.Url%2A> Eigenschaften einer <xref:System.Web.SiteMapNode> Objekt. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für eine <xref:System.Web.UI.WebControls.SiteMapPath> Klasse.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.DropDownNavigationPath_1#2](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.DropDownNavigationPath_1/CS/dropdownnavigationpath.cs#2)]
+ [!code-vb[Urtue.Samples.Alexkr.DropDownNavigationPath_1#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.DropDownNavigationPath_1/VB/dropdownnavigationpath.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IDataItemContainer.DataItem">
+      <MemberSignature Language="C#" Value="object System.Web.UI.IDataItemContainer.DataItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Web.UI.IDataItemContainer.DataItem" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.SiteMapNodeItem.System#Web#UI#IDataItemContainer#DataItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt, das in vereinfachten Datenbindungsvorgängen verwendet wird.</summary>
+        <value>Ein Objekt, das den Wert zu verwendende Datenbindungsfunktionen Vorgänge darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel sollten Sie verwenden die <xref:System.Web.UI.WebControls.SiteMapNodeItem.SiteMapNode%2A> Eigenschaft für den Datenzugriff dargestellt durch eine <xref:System.Web.UI.WebControls.SiteMapNodeItem> Objekt.  
+  
+ Die <xref:System.Web.UI.WebControls.SiteMapNodeItem.System%23Web%23UI%23IDataItemContainer%23DataItem%2A> Member ist eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.WebControls.SiteMapNodeItem>-Instanz in eine <xref:System.Web.UI.IDataItemContainer>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IDataItemContainer.DataItemIndex">
+      <MemberSignature Language="C#" Value="int System.Web.UI.IDataItemContainer.DataItemIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 System.Web.UI.IDataItemContainer.DataItemIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.SiteMapNodeItem.System#Web#UI#IDataItemContainer#DataItemIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index des Datenelements, das an das Steuerelement gebunden ist.</summary>
+        <value>Eine ganze Zahl, die die Position des Datenelements in stellt die <see cref="T:System.Web.UI.WebControls.SiteMapPath" /> internen Auflistungen des Steuerelements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel sollten Sie verwenden die <xref:System.Web.UI.WebControls.SiteMapNodeItem.ItemIndex%2A> -Eigenschaft bestimmt den Index für eine <xref:System.Web.UI.WebControls.SiteMapNodeItem> Objekt.  
+  
+ Die <xref:System.Web.UI.WebControls.SiteMapNodeItem.System%23Web%23UI%23IDataItemContainer%23DataItemIndex%2A> Member ist eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.WebControls.SiteMapNodeItem>-Instanz in eine <xref:System.Web.UI.IDataItemContainer>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IDataItemContainer.DisplayIndex">
+      <MemberSignature Language="C#" Value="int System.Web.UI.IDataItemContainer.DisplayIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 System.Web.UI.IDataItemContainer.DisplayIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.SiteMapNodeItem.System#Web#UI#IDataItemContainer#DisplayIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Position des Datenelements ab, wie er im Steuerelement angezeigt.</summary>
+        <value>Eine ganze Zahl, die die Position des Datenelements in stellt die <see cref="T:System.Web.UI.WebControls.SiteMapPath" /> internen Auflistungen des Steuerelements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel sollten Sie verwenden die <xref:System.Web.UI.WebControls.SiteMapNodeItem.ItemIndex%2A> -Eigenschaft bestimmt den Index für eine <xref:System.Web.UI.WebControls.SiteMapNodeItem> Objekt.  
+  
+ Die <xref:System.Web.UI.WebControls.SiteMapNodeItem.System%23Web%23UI%23IDataItemContainer%23DisplayIndex%2A> Member ist eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Web.UI.WebControls.SiteMapNodeItem>-Instanz in eine <xref:System.Web.UI.IDataItemContainer>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

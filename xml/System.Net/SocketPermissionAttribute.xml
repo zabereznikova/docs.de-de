@@ -1,0 +1,232 @@
+<Type Name="SocketPermissionAttribute" FullName="System.Net.SocketPermissionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SocketPermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit SocketPermissionAttribute extends System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Net.SocketPermissionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Permissions.CodeAccessSecurityAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Constructor | System.AttributeTargets.Method, AllowMultiple=true, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Sicherheitsaktionen an Steuerelement <see cref="T:System.Net.Sockets.Socket" /> Verbindungen. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um dieses Attribut verwenden, Ihre <xref:System.Net.Sockets.Socket> Verbindung entsprechen die Eigenschaften, die im angegebenen Ihrer <xref:System.Net.SocketPermissionAttribute>. Beispielsweise, um die Berechtigung zum Anwenden einer <xref:System.Net.Sockets.Socket> Verbindung an Port 80, festgelegt die <xref:System.Net.SocketPermissionAttribute.Port%2A> Eigenschaft von der <xref:System.Net.SocketPermissionAttribute> auf "80". Die Sicherheitsinformationen, die im angegebenen <xref:System.Net.SocketPermissionAttribute> befindet sich in den Metadaten des Attributziels, die die Klasse, ist die <xref:System.Net.SocketPermissionAttribute> angewendet wird. Das System greift dann auf die Informationen zur Laufzeit. Die <xref:System.Security.Permissions.SecurityAction> , wird zum Übergeben des Konstruktors bestimmt die zulässigen <xref:System.Net.SocketPermissionAttribute> Ziele.  
+  
+> [!NOTE]
+>  Die Eigenschaften einer <xref:System.Net.SocketPermissionAttribute> Werte, die nicht `null`. Darüber hinaus können einmal festgelegt, die Werte der Eigenschaften geändert werden.  
+  
+> [!NOTE]
+>  Weitere Informationen zum Verwenden von Attributen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SocketPermissionAttribute (System.Security.Permissions.SecurityAction action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.SecurityAction action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.SocketPermissionAttribute.#ctor(System.Security.Permissions.SecurityAction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Security.Permissions.SecurityAction" />
+      </Parameters>
+      <Docs>
+        <param name="action">Einer der <see cref="T:System.Security.Permissions.SecurityAction" />-Werte.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.SocketPermissionAttribute" />-Klasse mit dem angegebenen <see cref="T:System.Security.Permissions.SecurityAction" />-Wert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Security.Permissions.SecurityAction> -Wert, der an diesen Konstruktor übergeben wird, gibt die zulässigen <xref:System.Net.SocketPermissionAttribute> Ziele.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="action" /> ist kein gültiger <see cref="T:System.Security.Permissions.SecurityAction" />-Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Access">
+      <MemberSignature Language="C#" Value="public string Access { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Access" />
+      <MemberSignature Language="DocId" Value="P:System.Net.SocketPermissionAttribute.Access" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Netzwerk-Zugriffsmethode, die von diesem darf <see cref="T:System.Net.SocketPermissionAttribute" />.</summary>
+        <value>Eine Zeichenfolge, die Netzwerk-Zugriffsmethode enthält, die von dieser Instanz von darf <see cref="T:System.Net.SocketPermissionAttribute" />. Gültige Werte sind "Accept" und "Verbinden".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für Write-sobald. Gültige Werte für diese Eigenschaft entsprechen <xref:System.Net.NetworkAccess> Enumerationswerte.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.Net.SocketPermissionAttribute.Access" /> Eigenschaft ist nicht <see langword="null" /> beim Versuch, den Wert festzulegen. Um mehr als eine Zugriffsmethode anzugeben, verwenden Sie ein zusätzliches Attribut deklarationsanweisung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePermission">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission CreatePermission ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission CreatePermission() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.SocketPermissionAttribute.CreatePermission" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt und gibt eine neue Instanz der <see cref="T:System.Net.SocketPermission" />-Klasse zurück.</summary>
+        <returns>Eine Instanz von der <see cref="T:System.Net.SocketPermission" /> Klasse, die der Sicherheitsdeklaration entspricht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.SocketPermissionAttribute.CreatePermission%2A> Methode wird nicht von der Anwendung durch das Sicherheitssystem aufgerufen. Die Sicherheitsinformationen vom beschrieben <xref:System.Net.SocketPermissionAttribute> befindet sich in den Metadaten des Attributziels, die die Klasse, ist die <xref:System.Net.SocketPermissionAttribute> angewendet wird. Das System greift dann auf die Informationen zur Laufzeit und Aufrufe <xref:System.Net.SocketPermissionAttribute.CreatePermission%2A>. Das System verwendet den zurückgegebenen <xref:System.Security.IPermission> , die angegebenen sicherheitsanforderungen zu erzwingen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Mindestens eines der aktuellen Instanz <see cref="P:System.Net.SocketPermissionAttribute.Access" />, <see cref="P:System.Net.SocketPermissionAttribute.Host" />, <see cref="P:System.Net.SocketPermissionAttribute.Transport" />, oder <see cref="P:System.Net.SocketPermissionAttribute.Port" /> Eigenschaften <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Host">
+      <MemberSignature Language="C#" Value="public string Host { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Host" />
+      <MemberSignature Language="DocId" Value="P:System.Net.SocketPermissionAttribute.Host" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, der DNS-Hostname oder IP-Adresse, die von dieser angegeben ist <see cref="T:System.Net.SocketPermissionAttribute" />.</summary>
+        <value>Eine Zeichenfolge, enthält der DNS-Hostname oder IP-Adresse, die dieser Instanz zugeordnet ist <see cref="T:System.Net.SocketPermissionAttribute" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für Write-sobald und gibt den Domain Name Services (DNS)-Hostnamen für die diese Berechtigung gilt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <see cref="P:System.Net.SocketPermissionAttribute.Host" />ist kein <see langword="null" /> beim Versuch, den Wert festzulegen. Wenn mehrere Hosts angeben möchten, verwenden Sie ein zusätzliches Attribut deklarationsanweisung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Port">
+      <MemberSignature Language="C#" Value="public string Port { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Port" />
+      <MemberSignature Language="DocId" Value="P:System.Net.SocketPermissionAttribute.Port" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Portnummer, die mit dieser verknüpft ist <see cref="T:System.Net.SocketPermissionAttribute" />.</summary>
+        <value>Eine Zeichenfolge, die die Nummer des Ports, die dieser Instanz zugeordnet ist, enthält <see cref="T:System.Net.SocketPermissionAttribute" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist für Write-sobald und gibt die Portnummer an, für die diese Berechtigung gilt. Gültige Werte sind eine Ganzzahl-codierte Zeichenfolge oder die Zeichenfolge "All".  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.Net.SocketPermissionAttribute.Port" /> Eigenschaft <see langword="null" /> beim Versuch, den Wert festzulegen. Um mehrere Ports anzugeben, verwenden Sie ein zusätzliches Attribut deklarationsanweisung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Transport">
+      <MemberSignature Language="C#" Value="public string Transport { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Transport" />
+      <MemberSignature Language="DocId" Value="P:System.Net.SocketPermissionAttribute.Transport" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Net.TransportType" /> angegeben, die von diesem <see cref="T:System.Net.SocketPermissionAttribute" />.</summary>
+        <value>Eine Zeichenfolge, enthält die <see cref="T:System.Net.TransportType" /> , die mit dieser verknüpft ist <see cref="T:System.Net.SocketPermissionAttribute" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mögliche Zeichenfolgenwerte dieser Eigenschaft werden <xref:System.Net.TransportType.All>, <xref:System.Net.TransportType.Connectionless>, <xref:System.Net.TransportType.ConnectionOriented>, <xref:System.Net.TransportType.Tcp>, und <xref:System.Net.TransportType.Udp>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <see cref="P:System.Net.SocketPermissionAttribute.Transport" />ist kein <see langword="null" /> beim Versuch, den Wert festzulegen. Um mehr als ein Transporttyp anzugeben, verwenden Sie ein zusätzliches Attribut deklarationsanweisung.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

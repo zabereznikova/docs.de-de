@@ -1,0 +1,440 @@
+<Type Name="ParserErrorCollection" FullName="System.Web.ParserErrorCollection">
+  <TypeSignature Language="C#" Value="public sealed class ParserErrorCollection : System.Collections.CollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit ParserErrorCollection extends System.Collections.CollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.ParserErrorCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.CollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Verwaltet einen Satz von Parserfehlern, die während der Analyse erkannt wurden. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.ParserErrorCollection> -Klasse stellt Methoden und Eigenschaften, die Sie verwenden können, um die Verwaltung einer Auflistung von <xref:System.Web.ParserError> Objekte. Sie können z. B. einen Satz von Parserfehlern hinzufügen, zu einer Auflistung bei der Analyse bei der Verwendung eines benutzerdefiniertes <xref:System.Web.Compilation.BuildProvider> Objekt Bericht alle Ausnahmen abgefangen werden, während der Analyse zu analysieren.  
+  
+ Zum Hinzufügen von Parserfehlern zum Entfernen von ein, oder suchen sie in einer Auflistung, verwenden Sie folgende Schritte aus:  
+  
+-   Die <xref:System.Web.ParserErrorCollection.Add%2A> -Methode zum Hinzufügen einer einzelnes <xref:System.Web.ParserError> Objekt der Auflistung.  
+  
+-   Die <xref:System.Web.ParserErrorCollection.AddRange%2A> Methoden zum Hinzufügen von mehreren <xref:System.Web.ParserError> -Objekte der Auflistung.  
+  
+-   Sowohl die <xref:System.Web.ParserErrorCollection.Insert%2A> Methode und die <xref:System.Web.ParserErrorCollection.Item%2A> Eigenschaft, die die <xref:System.Web.ParserErrorCollection> Indexer, eine einzelne hinzufügen <xref:System.Web.ParserError> Objekt der Auflistung am angegebenen Index.  
+  
+ Darüber hinaus können Sie die <xref:System.Web.ParserErrorCollection> Klasse, um die folgenden Aktionen ausführen:  
+  
+-   Entfernen Sie <xref:System.Web.ParserError> Objekte mit der <xref:System.Web.ParserErrorCollection.Remove%2A> Methode.  
+  
+-   Überprüfen Sie, ob ein bestimmter <xref:System.Web.ParserError> ist in der Auflistung mithilfe der <xref:System.Web.ParserErrorCollection.Contains%2A> Methode.  
+  
+-   Suchen von Where eine <xref:System.Web.ParserError> Objekt befindet sich in der Auflistung mithilfe der <xref:System.Web.ParserErrorCollection.IndexOf%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.ParserErrorCollection> Methoden.  
+  
+ [!code-csharp[System.Web.ParserErrorCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.ParserErrorCollection/CS/ParserErrorCollection_CS.aspx#1)]
+ [!code-vb[System.Web.ParserErrorCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.ParserErrorCollection/VB/ParserErrorCollection_VB.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ParserErrorCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ParserErrorCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.ParserErrorCollection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Initialisieren einer Instanz der <xref:System.Web.ParserErrorCollection> Klasse.  
+  
+ [!code-csharp[System.Web.ParserErrorCollection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.ParserErrorCollection/CS/ParserErrorCollection_CS.aspx#2)]
+ [!code-vb[System.Web.ParserErrorCollection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.ParserErrorCollection/VB/ParserErrorCollection_VB.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ParserErrorCollection (System.Web.ParserError[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.ParserError[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ParserErrorCollection.#ctor(System.Web.ParserError[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.ParserError[]" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Array vom Typ <see cref="T:System.Web.ParserError" /> , angibt, die Fehler in der Auflistung hinzu.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.ParserErrorCollection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.ParserErrorCollection.%23ctor%2A?displayProperty=nameWithType> Konstruktor fügt ein Array von <xref:System.Web.ParserError> -Objekte der Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Web.ParserError value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Web.ParserError value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ParserErrorCollection.Add(System.Web.ParserError)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.ParserError" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.Web.ParserError" /> Wert in der Auflistung hinzu.</param>
+        <summary>Fügt einen Wert für die Sammlung an.</summary>
+        <returns>Der Index des Werts in der Auflistung ist; andernfalls -1, wenn der Wert bereits in der Auflistung vorhanden ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.ParserErrorCollection.Add%2A> -Methode zum Hinzufügen einer vorhandenen <xref:System.Web.ParserError> Objekt der Auflistung. Kann nicht hinzugefügt werden, die gleiche <xref:System.Web.ParserError> mehr als einmal auf die Auflistung Objekt. Beim Aufrufen der <xref:System.Web.ParserErrorCollection.Add%2A> -Methode eine <xref:System.Web.ParserError> -Objekt, das bereits in der Auflistung, schlägt der Vorgang fehl und-1 wird zurückgegeben.  
+  
+ Verwenden Sie zum Hinzufügen mehrerer Objekte auf die Auflistung der <xref:System.Web.ParserErrorCollection.AddRange%2A> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Hinzufügen einer <xref:System.Web.ParserError> -Objekt an eine <xref:System.Web.ParserErrorCollection> Objekt.  
+  
+ [!code-csharp[System.Web.ParserErrorCollection#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.ParserErrorCollection/CS/ParserErrorCollection_CS.aspx#3)]
+ [!code-vb[System.Web.ParserErrorCollection#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.ParserErrorCollection/VB/ParserErrorCollection_VB.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.Web.ParserError[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.Web.ParserError[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ParserErrorCollection.AddRange(System.Web.ParserError[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.ParserError[]" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Array vom Typ <see cref="T:System.Web.ParserError" /> , die die Werte der Auflistung hinzuzufügende angibt.</param>
+        <summary>Fügt ein Array von <see cref="T:System.Web.ParserError" /> -Objekte der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.ParserErrorCollection.AddRange%2A> Methode, um ein Array von hinzuzufügen <xref:System.Web.ParserError> -Objekte der Auflistung. Die <xref:System.Web.ParserErrorCollection.AddRange%2A> Methode ist nützlich, wenn Sie mehrere erstellen <xref:System.Web.ParserError> Objekte, und sie der Auflistung mit einem einzelnen Methodenaufruf hinzufügen möchten. Hinzufügen einzelner <xref:System.Web.ParserError> -Objekte der Auflistung verwenden die <xref:System.Web.ParserErrorCollection.Add%2A> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Hinzufügen eines Bereichs von <xref:System.Web.ParserError> Datenbankobjekte in einem <xref:System.Web.ParserErrorCollection> Objekt.  
+  
+ [!code-csharp[System.Web.ParserErrorCollection#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.ParserErrorCollection/CS/ParserErrorCollection_CS.aspx#4)]
+ [!code-vb[System.Web.ParserErrorCollection#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.ParserErrorCollection/VB/ParserErrorCollection_VB.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.Web.ParserErrorCollection value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.Web.ParserErrorCollection value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ParserErrorCollection.AddRange(System.Web.ParserErrorCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.ParserErrorCollection" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein <see cref="T:System.Web.ParserErrorCollection" /> , enthält die <see cref="T:System.Web.ParserError" /> Objekten, die der Auflistung hinzugefügt.</param>
+        <summary>Fügt die Objekte in einer vorhandenen <see cref="T:System.Web.ParserErrorCollection" /> auf die Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Gegensatz zu den <xref:System.Web.ParserErrorCollection.Add%2A> -Methode, die <xref:System.Web.ParserErrorCollection.AddRange%2A> Methode verfügt nicht über einen Rückgabewert, der verwendet werden kann, um zu bestimmen, ob eine <xref:System.Web.ParserError> hinzugefügte Objekt ist bereits in der Auflistung. Wenn Sie diese Informationen benötigen, verwenden Sie die <xref:System.Web.ParserErrorCollection.Contains%2A> Methode vor der Verwendung <xref:System.Web.ParserErrorCollection.AddRange%2A>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Hinzufügen eines Bereichs von <xref:System.Web.ParserError> Datenbankobjekte in einem <xref:System.Web.ParserErrorCollection> Objekt.  
+  
+ [!code-csharp[System.Web.ParserErrorCollection#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.ParserErrorCollection/CS/ParserErrorCollection_CS.aspx#4)]
+ [!code-vb[System.Web.ParserErrorCollection#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.ParserErrorCollection/VB/ParserErrorCollection_VB.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <see cref="T:System.Web.ParserError" />-Wert ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Web.ParserError value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Web.ParserError value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ParserErrorCollection.Contains(System.Web.ParserError)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.ParserError" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.Web.ParserError" />, die in der Auflistung gesucht werden soll.</param>
+        <summary>Bestimmt, ob die <see cref="T:System.Web.ParserError" /> Objekt befindet sich in der Auflistung.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Web.ParserError" /> befindet sich in der Auflistung befindet, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kann nicht hinzugefügt werden, die gleiche <xref:System.Web.ParserError> mehr als einmal auf die Auflistung Objekt. Aber versucht wird, zum Hinzufügen einer <xref:System.Web.ParserError> Objekt mehr als einmal wird keine Ausnahme ausgelöst. Stattdessen wird das Hinzufügen fehl. In diesem Fall die <xref:System.Web.ParserErrorCollection.Add%2A> Methode wird der Wert-1 zurück. Allerdings die <xref:System.Web.ParserErrorCollection.AddRange%2A> und <xref:System.Web.ParserErrorCollection.Insert%2A> Methoden keine Werte zurückgeben. Beim Hinzufügen von <xref:System.Web.ParserError> Objekte mithilfe einer dieser Methoden verwenden das <xref:System.Web.ParserErrorCollection.Contains%2A> Methode, um zu bestimmen, ob ein bestimmter <xref:System.Web.ParserError> Objekt ist bereits in der Auflistung.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Instanz eines angegebenen gesucht <xref:System.Web.ParserError> -Objekt in ein <xref:System.Web.ParserErrorCollection> Objekt.  
+  
+ [!code-csharp[System.Web.ParserErrorCollection#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.ParserErrorCollection/CS/ParserErrorCollection_CS.aspx#5)]
+ [!code-vb[System.Web.ParserErrorCollection#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.ParserErrorCollection/VB/ParserErrorCollection_VB.aspx#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.ParserError[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.ParserError[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ParserErrorCollection.CopyTo(System.Web.ParserError[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Web.ParserError[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Ein Array vom Typ <see cref="T:System.Web.ParserError" /> in das die Parserfehler in der Auflistung kopiert werden.</param>
+        <param name="index">Der erste Index innerhalb des Arrays, die <see cref="T:System.Web.ParserError" /> kopiert wird.</param>
+        <summary>Kopiert die <see cref="T:System.Web.ParserError" /> Objekte in der Auflistung in ein kompatibles eindimensionales Array, beginnend am angegebenen Index des Zielarrays.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.ParserErrorCollection.CopyTo%2A> Methode zum Kopieren der <xref:System.Web.ParserError> Objekte in einer Auflistung (einschließlich der enthaltenen Elementverweise) in ein kompatibles Array, beginnend am angegebenen Index. Dies ist nützlich, wenn Sie sortieren möchten die <xref:System.Web.ParserError> Objekte in der Auflistung mithilfe der <xref:System.Array.Sort%2A> Methode. Gehen Sie dazu wie folgt vor:  
+  
+1.  Kopieren der <xref:System.Web.ParserError> -Objekte in ein kompatibles Array.  
+  
+2.  Das Array zu sortieren.  
+  
+3.  Verwenden der <xref:System.Web.ParserErrorCollection.Remove%2A> Methode, um alle Entfernen der <xref:System.Web.ParserError> Objekte aus der Auflistung.  
+  
+4.  Verwenden der <xref:System.Web.ParserErrorCollection.AddRange%2A> Methode das sortierte Array wieder in der Auflistung hinzu.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Kopieren der Inhalte von einem <xref:System.Web.ParserErrorCollection> Objekt mit dem angegebenen <xref:System.Web.ParserError> Array.  
+  
+ [!code-csharp[System.Web.ParserErrorCollection#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.ParserErrorCollection/CS/ParserErrorCollection_CS.aspx#6)]
+ [!code-vb[System.Web.ParserErrorCollection#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.ParserErrorCollection/VB/ParserErrorCollection_VB.aspx#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.ParserError value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Web.ParserError value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ParserErrorCollection.IndexOf(System.Web.ParserError)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.ParserError" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.Web.ParserError" />, die in der Auflistung gesucht werden soll.</param>
+        <summary>Ruft den Index des angegebenen <see cref="T:System.Web.ParserError" /> Objekt in der Auflistung.</summary>
+        <returns>Der nullbasierte Index des der <see cref="T:System.Web.ParserError" /> Objekte innerhalb der Auflistung befindet, andernfalls 1, wenn die <see cref="T:System.Web.ParserError" /> befindet sich nicht in der Auflistung.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.ParserErrorCollection.IndexOf%2A> Methode, um zu bestimmen, den Index des ein <xref:System.Web.ParserError> Objekt innerhalb der Auflistung. Dies ist hilfreich, um zu bestimmen, den Index der einzelnen <xref:System.Web.ParserError> beim Durchlaufen der auflistungs mithilfe der <xref:System.Collections.IEnumerator> zurückgegebenes Objekt die <xref:System.Collections.CollectionBase.GetEnumerator%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie der Index des zu einer <xref:System.Web.ParserError> Objekt am angegebenen Index in eine <xref:System.Web.ParserErrorCollection> Auflistung.  
+  
+ [!code-csharp[System.Web.ParserErrorCollection#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.ParserErrorCollection/CS/ParserErrorCollection_CS.aspx#5)]
+ [!code-vb[System.Web.ParserErrorCollection#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.ParserErrorCollection/VB/ParserErrorCollection_VB.aspx#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Web.ParserError value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Web.ParserError value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ParserErrorCollection.Insert(System.Int32,System.Web.ParserError)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Web.ParserError" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index innerhalb der Auflistung ab dem Einfügen der <see cref="T:System.Web.ParserError" />.</param>
+        <param name="value">Die <see cref="T:System.Web.ParserError" /> in die Auflistung einzufügende Objekt.</param>
+        <summary>Fügt das angegebene <see cref="T:System.Web.ParserError" /> Objekt am angegebenen Index in die Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.ParserErrorCollection.Insert%2A> Methode zum Einfügen einer vorhandenen <xref:System.Web.ParserError> Objekt an einem bestimmten Index in der Auflistung.  
+  
+ Kann nicht hinzugefügt werden, die gleiche <xref:System.Web.ParserError> mehr als einmal auf die Auflistung Objekt. Beim Aufrufen der <xref:System.Web.ParserErrorCollection.Insert%2A> -Methode mithilfe einer <xref:System.Web.ParserError> , die sich bereits in der Auflistung, schlägt der Vorgang fehl. Verwenden der <xref:System.Web.ParserErrorCollection.Contains%2A> -Methode vor dem Einfügen, um festzustellen, ob ein bestimmter <xref:System.Web.ParserError> ist bereits in der Auflistung. Verschieben einer <xref:System.Web.ParserError> in der Auflistung, müssen Sie zuerst entfernen sie mithilfe der <xref:System.Web.ParserErrorCollection.Remove%2A> Methode und fügen Sie sie am gewünschten Index, indem <xref:System.Web.ParserErrorCollection.Insert%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Einfügen einer <xref:System.Web.ParserError> Objekt am angegebenen Index in eine <xref:System.Web.ParserErrorCollection> Auflistung.  
+  
+ [!code-csharp[System.Web.ParserErrorCollection#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.ParserErrorCollection/CS/ParserErrorCollection_CS.aspx#8)]
+ [!code-vb[System.Web.ParserErrorCollection#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.ParserErrorCollection/VB/ParserErrorCollection_VB.aspx#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.ParserError this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.ParserError Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ParserErrorCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.ParserError</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index innerhalb der Auflistung der <see cref="T:System.Web.ParserError" /> Objekt zum Abrufen oder festlegen.</param>
+        <summary>Ruft ab oder legt die <see cref="T:System.Web.ParserError" /> Objekt am angegebenen Index in der Auflistung.</summary>
+        <value>Die <see cref="T:System.Web.ParserError" /> am angegebenen Index in der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.ParserErrorCollection.Item%2A> Eigenschaft zum Abrufen der <xref:System.Web.ParserError> Objekt am angegebenen Index in der Auflistung. Wenn Sie haben einen Verweis auf die <xref:System.Web.ParserError> Objekt und den Index benötigen, verwenden die <xref:System.Web.ParserErrorCollection.IndexOf%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.ParserError value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Web.ParserError value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ParserErrorCollection.Remove(System.Web.ParserError)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.ParserError" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die aus der Auflistung zu entfernende <see cref="T:System.Web.ParserError" />.</param>
+        <summary>Entfernt das angegebene <see cref="T:System.Web.ParserError" />-Objekt aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.ParserErrorCollection.Remove%2A> -Methode zum Entfernen einer <xref:System.Web.ParserError> Objekt aus der Auflistung, wenn Sie einen Verweis auf die <xref:System.Web.ParserError>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Entfernen einer <xref:System.Web.ParserError> aus dem angegebenen Index in einer <xref:System.Web.ParserErrorCollection> Objekt.  
+  
+ [!code-csharp[System.Web.ParserErrorCollection#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.ParserErrorCollection/CS/ParserErrorCollection_CS.aspx#8)]
+ [!code-vb[System.Web.ParserErrorCollection#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.ParserErrorCollection/VB/ParserErrorCollection_VB.aspx#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

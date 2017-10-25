@@ -1,0 +1,250 @@
+<Type Name="SingleKeyFrame" FullName="System.Windows.Media.Animation.SingleKeyFrame">
+  <TypeSignature Language="C#" Value="public abstract class SingleKeyFrame : System.Windows.Freezable, System.Windows.Media.Animation.IKeyFrame" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SingleKeyFrame extends System.Windows.Freezable implements class System.Windows.Media.Animation.IKeyFrame" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.SingleKeyFrame" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Freezable</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Media.Animation.IKeyFrame</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Abstrakte Klasse, die bei der Implementierung ein Animationssegment mit einem eigenen Zielwert und eigener Interpolationsmethode für <see cref="T:System.Windows.Media.Animation.SingleAnimationUsingKeyFrames" /> definiert.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SingleKeyFrame ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.SingleKeyFrame.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.SingleKeyFrame" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SingleKeyFrame (float value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(float32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.SingleKeyFrame.#ctor(System.Single)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der <see cref="P:System.Windows.Media.Animation.SingleKeyFrame.Value" /> der neuen <see cref="T:System.Windows.Media.Animation.SingleKeyFrame" />-Instanz.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.SingleKeyFrame" />-Klasse, die den angegebenen Ziel-<see cref="P:System.Windows.Media.Animation.SingleKeyFrame.Value" /> hat.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SingleKeyFrame (float value, System.Windows.Media.Animation.KeyTime keyTime);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(float32 value, valuetype System.Windows.Media.Animation.KeyTime keyTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.SingleKeyFrame.#ctor(System.Single,System.Windows.Media.Animation.KeyTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Single" />
+        <Parameter Name="keyTime" Type="System.Windows.Media.Animation.KeyTime" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der <see cref="P:System.Windows.Media.Animation.SingleKeyFrame.Value" /> der neuen <see cref="T:System.Windows.Media.Animation.SingleKeyFrame" />-Instanz.</param>
+        <param name="keyTime">Der <see cref="P:System.Windows.Media.Animation.SingleKeyFrame.KeyTime" /> der neuen <see cref="T:System.Windows.Media.Animation.SingleKeyFrame" />-Instanz.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.SingleKeyFrame" />-Klasse, die den angegebenen Ziel-<see cref="P:System.Windows.Media.Animation.SingleKeyFrame.Value" /> und die <see cref="P:System.Windows.Media.Animation.SingleKeyFrame.KeyTime" /> aufweist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterpolateValue">
+      <MemberSignature Language="C#" Value="public float InterpolateValue (float baseValue, double keyFrameProgress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float32 InterpolateValue(float32 baseValue, float64 keyFrameProgress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.SingleKeyFrame.InterpolateValue(System.Single,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseValue" Type="System.Single" />
+        <Parameter Name="keyFrameProgress" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="baseValue">Der Wert, von dem animiert werden soll.</param>
+        <param name="keyFrameProgress">Ein Wert zwischen 0,0 und 1,0 (einschließlich), der den Prozentsatz der verstrichenen Zeit für diesen Keyframe angibt.</param>
+        <summary>Gibt den interpolierten Wert eines bestimmten Keyframes mit dem angegebenen Fortschrittsinkrement zurück.</summary>
+        <returns>Der Ausgabewert dieses Keyframes unter Verwendung des angegebenen Basiswerts und Fortschritts.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Basiswert wird in der Regel den anfänglichen Wert des zu animierenden Eigenschaft oder der <xref:System.Windows.Media.Animation.BooleanKeyFrame.Value%2A> des vorherigen Keyframes.  
+  
+ Die meisten Implementierungen werden die Rückgabe des Werts der `baseValue` Wenn `keyFrameProgress` ist "0,0".  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Tritt auf, wenn <paramref name="keyFrameProgress" /> befindet sich nicht zwischen 0,0 und 1,0 (einschließlich).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InterpolateValueCore">
+      <MemberSignature Language="C#" Value="protected abstract float InterpolateValueCore (float baseValue, double keyFrameProgress);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance float32 InterpolateValueCore(float32 baseValue, float64 keyFrameProgress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.SingleKeyFrame.InterpolateValueCore(System.Single,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseValue" Type="System.Single" />
+        <Parameter Name="keyFrameProgress" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="baseValue">Der Wert, von dem animiert werden soll. Dies ist in der Regel der Wert des vorherigen Keyframes.</param>
+        <param name="keyFrameProgress">Ein Wert zwischen 0,0 und 1,0 (einschließlich), der den Prozentsatz der verstrichenen Zeit für diesen Keyframe angibt.</param>
+        <summary>Berechnet den Wert eines Keyframes mit dem angegebenen Fortschrittsinkrement.</summary>
+        <returns>Der Ausgabewert dieses Keyframes unter Verwendung des angegebenen Basiswerts und Fortschritts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyTime">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.KeyTime KeyTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Animation.KeyTime KeyTime" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.SingleKeyFrame.KeyTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.KeyTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeit fest, zu dem Ziel der Keyframes <see cref="P:System.Windows.Media.Animation.SingleKeyFrame.Value" /> erreicht werden soll.</summary>
+        <value>Die Zeit, an dem aktuellen Wert des Keyframes gleich sein sollten, seine <see cref="P:System.Windows.Media.Animation.SingleKeyFrame.Value" /> Eigenschaft. Der Standardwert ist <see cref="P:System.Windows.Media.Animation.KeyTime.Uniform" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_KeyTime"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Animation.SingleKeyFrame.KeyTimeProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyTimeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty KeyTimeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty KeyTimeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.SingleKeyFrame.KeyTimeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Animation.SingleKeyFrame.KeyTime" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Media.Animation.IKeyFrame.Value">
+      <MemberSignature Language="C#" Value="object System.Windows.Media.Animation.IKeyFrame.Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Windows.Media.Animation.IKeyFrame.Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.SingleKeyFrame.System#Windows#Media#Animation#IKeyFrame#Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den zugeordneten Wert durch einen <see cref="T:System.Windows.Media.Animation.KeyTime" /> Instanz.</summary>
+        <value>Der aktuelle Wert für diese Eigenschaft.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public float Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.SingleKeyFrame.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zielwert des Keyframes ab oder legt ihn fest.</summary>
+        <value>Zielwert des Keyframes, bei der der Wert dieses Keyframes zur angegebenen <see cref="P:System.Windows.Media.Animation.SingleKeyFrame.KeyTime" />. Der Standardwert ist <c>0</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Value"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Animation.SingleKeyFrame.ValueProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ValueProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ValueProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.SingleKeyFrame.ValueProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Animation.SingleKeyFrame.Value" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

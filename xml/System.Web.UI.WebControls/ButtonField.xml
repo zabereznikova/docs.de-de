@@ -1,0 +1,583 @@
+<Type Name="ButtonField" FullName="System.Web.UI.WebControls.ButtonField">
+  <TypeSignature Language="C#" Value="public class ButtonField : System.Web.UI.WebControls.ButtonFieldBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ButtonField extends System.Web.UI.WebControls.ButtonFieldBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ButtonField" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.ButtonFieldBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Feld dar, das als Schaltfläche in einem datengebundenen Steuerelement angezeigt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ButtonField> Klasse wird verwendet, indem Sie datengebundene Steuerelemente (z. B. <xref:System.Web.UI.WebControls.GridView> und <xref:System.Web.UI.WebControls.DetailsView>) eine Schaltfläche für jeden Datensatz angezeigt, die angezeigt wird. Die <xref:System.Web.UI.WebControls.ButtonField> Objekt wird anders angezeigt, je nach dem datengebundenen Steuerelement in der er verwendet wird. Z. B. die <xref:System.Web.UI.WebControls.GridView> -Steuerelement zeigt eine <xref:System.Web.UI.WebControls.ButtonField> Objekt als eine Spalte während der <xref:System.Web.UI.WebControls.DetailsView> Steuerelement als eine Zeile angezeigt.  
+  
+ Klicken auf eine Schaltfläche in einem Schaltflächenfeld löst das Befehlsereignis des übergeordneten datengebundenen Steuerelements aus. Sie können eine benutzerdefinierte Routine ausführen, wenn Sie einen Befehl geklickt wird, durch die Bereitstellung von eines ereignishandlers für das Befehlsereignis bereitstellen.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.GridView> -Steuerelement löst die <xref:System.Web.UI.WebControls.GridView.RowCommand> Ereignis, während die <xref:System.Web.UI.WebControls.DetailsView> -Steuerelement löst die <xref:System.Web.UI.WebControls.DetailsView.ItemCommand> Ereignis.  
+  
+ Um den Index des Datensatzes zu bestimmen, die das Befehlsereignis auslöst, mithilfe der <xref:System.Web.UI.WebControls.CommandEventArgs.CommandArgument%2A> Eigenschaft das Ereignisargument, das an das Befehlsereignis für das datengebundene Steuerelement übergeben wird. Die <xref:System.Web.UI.WebControls.ButtonField> Klasse füllt automatisch die <xref:System.Web.UI.WebControls.CommandEventArgs.CommandArgument%2A> Eigenschaft mit dem entsprechenden Index-Wert.  
+  
+ Verwenden Sie zum Angeben des Typs der Schaltfläche zum Anzeigen der <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft. Verwenden Sie beim Anzeigen einer Verknüpfung oder -Befehl die <xref:System.Web.UI.WebControls.ButtonField.Text%2A> Eigenschaft, um die Beschriftung für die anzuzeigenden Schaltflächen der anzugeben.  
+  
+> [!NOTE]
+>  Wenn Sie festlegen, die <xref:System.Web.UI.WebControls.ButtonField.Text%2A> -Eigenschaft, die alle Schaltflächen in einer <xref:System.Web.UI.WebControls.ButtonField> dieselbe Beschriftung.  
+  
+ Alternativ können Sie binden die <xref:System.Web.UI.WebControls.ButtonField> Objekt in ein Feld in einer Datenquelle. Dadurch können Sie zum Anzeigen von anderer Beschriftungen für die Schaltflächen in der <xref:System.Web.UI.WebControls.ButtonField> Objekt. Die Werte im angegebenen Feld werden für die Beschriftungen Text, Schaltflächen verwendet. Legen Sie die <xref:System.Web.UI.WebControls.ButtonField.DataTextField%2A> zu bindende Eigenschaft eine <xref:System.Web.UI.WebControls.ButtonField> Objekt in ein Feld in einer Datenquelle.  
+  
+ Verwenden Sie zum Anzeigen von Bildschaltfläche der <xref:System.Web.UI.WebControls.ButtonField.ImageUrl%2A> Eigenschaft an, das für die Schaltflächen in anzuzeigende Bild der <xref:System.Web.UI.WebControls.ButtonField> Objekt.  
+  
+> [!NOTE]
+>  Alle Schaltflächen in einem <xref:System.Web.UI.WebControls.ButtonField> Objekt verfügen über dasselbe Bild.  
+  
+ Können Sie Ausblenden einer <xref:System.Web.UI.WebControls.ButtonField> Objekt in einem datengebundenen Steuerelement durch Festlegen der <xref:System.Web.UI.WebControls.DataControlField.Visible%2A> Eigenschaft `false`.  
+  
+ Die <xref:System.Web.UI.WebControls.ButtonField> Objekts können Sie die Abschnitte für Kopf- und Fußzeilen anpassen. Um eine Beschriftung in der Kopf- oder Fußzeile Abschnitt anzuzeigen, legen die <xref:System.Web.UI.WebControls.DataControlField.HeaderText%2A> oder <xref:System.Web.UI.WebControls.DataControlField.FooterText%2A> Eigenschaften bzw.. Sie können ein Bild anstelle von Text in der Kopfzeile anzeigen, durch Festlegen der <xref:System.Web.UI.WebControls.DataControlField.HeaderImageUrl%2A> Eigenschaft. Headerabschnitts im Ausblenden einer <xref:System.Web.UI.WebControls.ButtonField> Objekt, das Festlegen der <xref:System.Web.UI.WebControls.ButtonFieldBase.ShowHeader%2A> Eigenschaft `false`.  
+  
+> [!NOTE]
+>  Einige datengebundene Steuerelemente (z. B. die <xref:System.Web.UI.WebControls.GridView> Steuerelement) können ein- oder ausblenden nur den gesamten Kopfzeilenbereich des Steuerelements. Diese datengebundenen Steuerelemente unterstützen nicht die <xref:System.Web.UI.WebControls.ButtonFieldBase.ShowHeader%2A> -Eigenschaft für eine einzelne Schaltflächenfeld. Zum Anzeigen oder Ausblenden der gesamte Headerabschnitt eines datengebundenen Steuerelements (falls verfügbar), verwenden Sie die `ShowHeader` Eigenschaft für das Steuerelement.  
+  
+ Die Darstellung der können auch Anpassen der <xref:System.Web.UI.WebControls.ButtonField> Objekt (Schriftfarbe, Hintergrundfarbe und So weiter), indem Sie die Stileigenschaften für die verschiedenen Teile des Felds festlegen. Die folgende Tabelle enthält die verschiedenen Stileigenschaften.  
+  
+|Style-Eigenschaft|Die Stileigenschaften für|  
+|--------------------|----------------------------|  
+|<xref:System.Web.UI.WebControls.DataControlField.ControlStyle%2A>|Web-Server des untergeordneten Steuerelemente von der <xref:System.Web.UI.WebControls.ButtonField>.|  
+|<xref:System.Web.UI.WebControls.DataControlField.FooterStyle%2A>|Der Fußzeilenbereich enthält, der die <xref:System.Web.UI.WebControls.ButtonField>.|  
+|<xref:System.Web.UI.WebControls.DataControlField.HeaderStyle%2A>|Der Headerabschnitt eines der <xref:System.Web.UI.WebControls.ButtonField>.|  
+|<xref:System.Web.UI.WebControls.DataControlField.ItemStyle%2A>|Die Datenelemente der <xref:System.Web.UI.WebControls.ButtonField>.|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine <xref:System.Web.UI.WebControls.ButtonField> eine Spalte mit Befehlsschaltflächen im anzuzeigenden Objekttyp ein <xref:System.Web.UI.WebControls.GridView> Steuerelement.  
+  
+ [!code-aspx-csharp[ButtonField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ButtonField/CS/buttonfieldcs.aspx#1)]
+ [!code-aspx-vb[ButtonField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ButtonField/VB/buttonfieldvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ButtonField ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ButtonField.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.ButtonField" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.ButtonField.%23ctor%2A> Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.ButtonField> Klasse. Dieser Konstruktor wird normalerweise verwendet, beim Hinzufügen von Feldern zu einem dynamisch erstellten datengebundenen Steuerelement.  
+  
+ Hinzufügen einer <xref:System.Web.UI.WebControls.ButtonField> -Objekt dynamisch zu einem datengebundenen Steuerelement, erstellen Sie ein neues <xref:System.Web.UI.WebControls.ButtonField> Objekt, seine Eigenschaften festlegen und anschließend die feldauflistung für das datengebundene Steuerelement hinzugefügt. Z. B. bei Verwendung der <xref:System.Web.UI.WebControls.GridView> steuern, fügen Sie der <xref:System.Web.UI.WebControls.ButtonField> -Objekt an die <xref:System.Web.UI.WebControls.GridView.Columns%2A> Auflistung.  
+  
+> [!NOTE]
+>  Obwohl Sie Felder dynamisch ein datengebundenes Steuerelement hinzufügen können Felder sollten jedoch statisch deklariert und dann angezeigt oder ausgeblendet werden, entsprechend den Anforderungen. Deklarieren alle Ihre Felder statisch reduziert die Größe des Ansichtszustands für das übergeordnete datengebundene Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie mit der m-Konstruktor Hinzufügen einer <xref:System.Web.UI.WebControls.ButtonField> -Objekt dynamisch eine <xref:System.Web.UI.WebControls.GridView> Steuerelement.  
+  
+ [!code-aspx-csharp[ButtonFieldCtor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ButtonFieldCtor/CS/buttonfieldctorcs.aspx#1)]
+ [!code-aspx-vb[ButtonFieldCtor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ButtonFieldCtor/VB/buttonfieldctorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandName">
+      <MemberSignature Language="C#" Value="public virtual string CommandName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CommandName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ButtonField.CommandName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Zeichenfolge, die eine Schaltfläche im auszuführende Aktion darstellt, ein <see cref="T:System.Web.UI.WebControls.ButtonField" /> Objekt geklickt wird.</summary>
+        <value>Der Name der Aktion zum Ausführen einer Schaltfläche in der <see cref="T:System.Web.UI.WebControls.ButtonField" /> geklickt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.ButtonField.CommandName%2A> Eigenschaft, um einen Befehlsnamen zuordnen, z. B. `"Add"` oder `"Remove"`, mit den Schaltflächen in der <xref:System.Web.UI.WebControls.ButtonField> Objekt. Sie können festlegen, die <xref:System.Web.UI.WebControls.ButtonField.CommandName%2A> Eigenschaft auf eine beliebige Zeichenfolge, die identifiziert die Aktion, die ausgeführt werden, wenn auf die Schaltfläche geklickt wird. Sie können programmgesteuert bestimmen den Befehlsnamen in einem Ereignishandler und die entsprechenden Aktionen ausführen.  
+  
+> [!NOTE]
+>  Alle Schaltflächen in einem <xref:System.Web.UI.WebControls.ButtonField> Objekt freigeben, der gleichnamigen Befehl.  
+  
+ Datengebundene Steuerelemente bestimmte Befehlsnamen erkannt und automatisch auslösen und behandeln die entsprechenden Ereignisse für das Steuerelement. Die folgenden Befehlsnamen werden erkannt:  
+  
+-   `"Cancel"`  
+  
+-   `"Delete"`  
+  
+-   `"Edit"`  
+  
+-   `"Insert"`  
+  
+-   `"New"`  
+  
+-   `"Page"`  
+  
+-   `"Select"`  
+  
+-   `"Sort"`  
+  
+-   `"Update"`  
+  
+ Um Paging aufzurufen, legen die <xref:System.Web.UI.WebControls.ButtonField.CommandName%2A> auf `"Page"` und <xref:System.Web.UI.WebControls.Button.CommandArgument%2A> des enthaltenden <xref:System.Web.UI.WebControls.Button> die Steuerung an `"First"`, `"Last"`, `"Prev"`, `"Next"`, oder eine Seitenzahl an. Da jedoch die <xref:System.Web.UI.WebControls.Button.CommandArgument%2A> für eine <xref:System.Web.UI.WebControls.ButtonField> -Steuerelement ist immer der Zeilenindex der ganze Zahl ein <xref:System.Web.UI.WebControls.ButtonField> Steuerelement eignet sich nicht zum Aufrufen von Paging. Außerdem auf Sortieren Sie Aufrufen der <xref:System.Web.UI.WebControls.ButtonField.CommandName%2A> auf `"Sort"`, <xref:System.Web.UI.WebControls.Button.CommandArgument%2A> -Eigenschaft für eine <xref:System.Web.UI.WebControls.ButtonField> -Steuerelement ist immer der Zeilenindex für die ganze Zahl. Aus diesem Grund eine <xref:System.Web.UI.WebControls.ButtonField> Steuerelement eignet sich nicht zum Aufrufen der Sortierung. Bei benutzerdefinierten Befehlsnamen, z. B. `"Add"` und `"Remove"`, müssen Sie den Ereigniscode zum Überprüfen der Befehlsname, und führen Sie eine benutzerdefinierte Aktion schreiben. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.DataControlCommands>.  
+  
+> [!NOTE]
+>  Nicht alle Befehlsnamen werden von jedem von datengebundenen Steuerelementen erkannt. Beispielsweise `"New"` wird von nicht erkannt die <xref:System.Web.UI.WebControls.GridView> Steuerelement und `"Select"` wird nicht erkannt, durch die <xref:System.Web.UI.WebControls.DetailsView> Steuerelement.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.ButtonField.CommandName%2A> -Eigenschaft an einen Befehlsnamen für die Schaltflächen in einer <xref:System.Web.UI.WebControls.ButtonField> Objekt des ein <xref:System.Web.UI.WebControls.GridView> Steuerelement.  
+  
+ [!code-aspx-csharp[ButtonField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ButtonField/CS/buttonfieldcs.aspx#1)]
+ [!code-aspx-vb[ButtonField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ButtonField/VB/buttonfieldvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyProperties">
+      <MemberSignature Language="C#" Value="protected override void CopyProperties (System.Web.UI.WebControls.DataControlField newField);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CopyProperties(class System.Web.UI.WebControls.DataControlField newField) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ButtonField.CopyProperties(System.Web.UI.WebControls.DataControlField)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newField" Type="System.Web.UI.WebControls.DataControlField" />
+      </Parameters>
+      <Docs>
+        <param name="newField">Die <see cref="T:System.Web.UI.WebControls.DataControlField" /> , kopieren Sie die Eigenschaften des aktuellen <see cref="T:System.Web.UI.WebControls.ButtonField" />.</param>
+        <summary>Kopiert die Eigenschaften des aktuellen <see cref="T:System.Web.UI.WebControls.ButtonField" /> Objekt mit dem angegebenen <see cref="T:System.Web.UI.WebControls.DataControlField" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ButtonFieldBase.CopyProperties%2A> Methode ist eine Hilfsmethode, die von verwendet wird, die <xref:System.Web.UI.WebControls.DataControlField.CloneField%2A?displayProperty=nameWithType> Methode, um die Eigenschaften des aktuellen kopieren <xref:System.Web.UI.WebControls.ButtonFieldBase>-abgeleitete Objekt, das die <xref:System.Web.UI.WebControls.DataControlField> -Objekt, das erstellt wurde die <xref:System.Web.UI.WebControls.DataControlField.CloneField%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben der <see cref="M:System.Web.UI.WebControls.ButtonField.CopyProperties(System.Web.UI.WebControls.DataControlField)" /> Methode in einer abgeleiteten Klasse Aufrufen der <see cref="M:System.Web.UI.WebControls.ButtonField.CopyProperties(System.Web.UI.WebControls.DataControlField)" /> -Methode der Basisklasse, um sicherzustellen, dass alle Eigenschaften des Objekts kopiert werden.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateField">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.WebControls.DataControlField CreateField ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.WebControls.DataControlField CreateField() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ButtonField.CreateField" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlField</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt und gibt eine neue Instanz der <see cref="T:System.Web.UI.WebControls.ButtonField" />-Klasse zurück.</summary>
+        <returns>Eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.ButtonField" /> Klasse.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ButtonField.CreateField%2A> Methode ist eine Hilfsmethode, die von verwendet wird, die <xref:System.Web.UI.WebControls.DataControlField.CloneField%2A> Methode der Basisklasse zum Erstellen eines leeren <xref:System.Web.UI.WebControls.ButtonField> Objekt, mit dem Kopieren Sie der Eigenschaften des aktuellen <xref:System.Web.UI.WebControls.ButtonField>-abgeleitetes Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Überschreiben Sie die <see cref="M:System.Web.UI.WebControls.ButtonField.CreateField" /> Methode, um eine neue Instanz der abgeleiteten Klasse zurückzugeben. Rufen Sie nicht die <see cref="M:System.Web.UI.WebControls.ButtonField.CreateField" /> Methode der Basisklasse.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="DataTextField">
+      <MemberSignature Language="C#" Value="public virtual string DataTextField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataTextField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ButtonField.DataTextField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Web.UI.Design.DataSourceViewSchemaConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Datenfelds an, für die der Wert, um gebunden ist, die <see cref="P:System.Web.UI.WebControls.Button.Text" /> Eigenschaft von der <see cref="T:System.Web.UI.WebControls.Button" /> Steuerelement, das vom gerendert wird die <see cref="T:System.Web.UI.WebControls.ButtonField" /> Objekt.</summary>
+        <value>Der Name des Felds zum Binden an die <see cref="T:System.Web.UI.WebControls.ButtonField" />. Der Standardwert ist eine leere Zeichenfolge (""), gibt an, dass die <see cref="P:System.Web.UI.WebControls.ButtonField.DataTextField" /> Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft des eine <xref:System.Web.UI.WebControls.ButtonField> -Objekts festgelegt wird, um die <xref:System.Web.UI.WebControls.ButtonType.Button> oder <xref:System.Web.UI.WebControls.ButtonType.Link> Wert, verwenden Sie die <xref:System.Web.UI.WebControls.ButtonField.DataTextField%2A> -Eigenschaft den Namen des Felds, das zum Binden an die <xref:System.Web.UI.WebControls.ButtonField> Objekt. Anschließend werden die Werte des Felds angezeigt wie der Text für die Schaltflächen in der <xref:System.Web.UI.WebControls.ButtonField> Objekt. Optional können Sie den angezeigten Text formatieren, indem Sie die Einstellung der <xref:System.Web.UI.WebControls.ButtonField.DataTextFormatString%2A> Eigenschaft.  
+  
+ Anstatt die <xref:System.Web.UI.WebControls.ButtonField.DataTextField%2A> zu bindende Eigenschaft eine <xref:System.Web.UI.WebControls.ButtonField> -Objekt an ein Feld aus einer Datenquelle können Sie die <xref:System.Web.UI.WebControls.ButtonField.Text%2A> Eigenschaft zum Anzeigen von statischem Text für den Text der Schaltflächen auf der <xref:System.Web.UI.WebControls.ButtonField> Objekt. Wenn die <xref:System.Web.UI.WebControls.ButtonField.Text%2A> Eigenschaft verwendet wird, dieselbe Beschriftung für jede Schaltfläche verwendet.  
+  
+> [!NOTE]
+>  Wenn die <xref:System.Web.UI.WebControls.ButtonField.DataTextField%2A> und <xref:System.Web.UI.WebControls.ButtonField.Text%2A> Eigenschaften festgelegt sind, die <xref:System.Web.UI.WebControls.ButtonField.DataTextField%2A> -Eigenschaft Vorrang.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.ButtonField.DataTextField%2A> Eigenschaft an, welches Feld anzuzeigenden eine <xref:System.Web.UI.WebControls.ButtonField> Spalte eine <xref:System.Web.UI.WebControls.GridView> Steuerelement.  
+  
+ [!code-aspx-csharp[ButtonFieldDataTextField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ButtonFieldDataTextField/CS/buttonfielddatatextfieldcs.aspx#1)]
+ [!code-aspx-vb[ButtonFieldDataTextField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ButtonFieldDataTextField/VB/buttonfielddatatextfieldvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataTextFormatString">
+      <MemberSignature Language="C#" Value="public virtual string DataTextFormatString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataTextFormatString" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ButtonField.DataTextFormatString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeichenfolge, die das Anzeigeformat für den Wert des Felds angibt.</summary>
+        <value>Eine Formatzeichenfolge, die das Anzeigeformat für den Wert des Felds angibt. Der Standardwert ist eine leere Zeichenfolge (""), die angibt, dass keine besondere Formatierung auf den Feldwert angewendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.WebControls.ButtonField.DataTextFormatString%2A> Eigenschaft, um ein benutzerdefiniertes Format für die Werte anzugeben, die in angezeigt werden die <xref:System.Web.UI.WebControls.ButtonField> Objekt. Wenn die <xref:System.Web.UI.WebControls.ButtonField.DataTextFormatString%2A> Eigenschaft nicht festgelegt ist, wird der Wert für das Feld ohne besondere Formatierung angezeigt.  
+  
+> [!NOTE]
+>  Die Formatzeichenfolge gilt nur, wenn die <xref:System.Web.UI.WebControls.ButtonField.DataTextField%2A> festgelegt wird.  
+  
+ Die Formatzeichenfolge kann eine literale Zeichenfolge sein und in der Regel enthält einen Platzhalter für den Wert für das Feld. Angenommen, in der Formatzeichenfolge `"Item Value: {0}"`, die `{0}` Platzhalter wird mit dem Wert für das Feld ersetzt, bei der Anzeige in der <xref:System.Web.UI.WebControls.ButtonField> Objekt. Der Rest der Formatzeichenfolge wird als Literaltext angezeigt.  
+  
+> [!NOTE]
+>  Wenn die Formatzeichenfolge keine Platzhalter enthalten, ist der Wert für das Feld aus der Datenquelle nicht in den endgültigen Anzeigetext enthalten.  
+  
+ Der Platzhalter besteht aus zwei Teilen, durch einen Doppelpunkt getrennt und eingeschlossen in Klammern ein, in der Form { `A` : `Bxx` }. Der Wert vor dem Doppelpunkt (`A` im allgemeinen Beispiel) gibt den Index für die der Wert des Felds in einer nullbasierten Liste von Parametern.  
+  
+> [!NOTE]
+>  Dies `A` Parameter ist Teil der Syntax der Formatierung. Da nur ein Feldwert in jeder Zelle vorhanden ist, wird dieser Wert kann nur auf 0 festgelegt.  
+  
+ Der Doppelpunkt und die Werte nach dem Doppelpunkt sind optional. Die Zeichen nach dem Doppelpunkt (`B` im allgemeinen Beispiel) gibt das Format, in dem den Wert angezeigt. Die folgende Tabelle enthält die gängigen Formaten.  
+  
+|Formatzeichen|Beschreibung|  
+|----------------------|-----------------|  
+|`C`|Zeigt numerische Werte im Währungsformat an.|  
+|`D`|Zeigt die numerische Werte im Dezimalformat.|  
+|`E`|Numerischen Werte in wissenschaftlicher (exponentieller) Format angezeigt.|  
+|`F`|Numerischen Werte in festgelegten Format angezeigt.|  
+|`G`|Im Allgemeinen formatieren Sie numerische Werte angezeigt.|  
+|`N`|Numerischen Werte im Zahlenformat angezeigt.|  
+|`X`|Numerischen Werte im Hexadezimalformat angezeigt.|  
+  
+> [!NOTE]
+>  Mit Ausnahme von `X`, die Formatierungszeichen sind nicht in der Groß-/Kleinschreibung beachtet. Die `X` Formatzeichen zeigt die Hexadezimalzeichen in die Groß-/Kleinschreibung, der angegeben wird.  
+  
+ Der Wert nach der Formatzeichen (`xx` im allgemeinen Beispiel) gibt die Anzahl der signifikanten Ziffern oder Dezimalstellen an. Z. B. die Formatzeichenfolge `"{0:F2}"` zeigt eine Festkommazahl mit zwei Dezimalstellen an.  
+  
+ Weitere Informationen zum Formatieren von Zeichenfolgen finden Sie unter [Formatierungstypen](~/docs/standard/base-types/formatting-types.md).  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.ButtonField.DataTextFormatString%2A> -Eigenschaft ein benutzerdefiniertes Format für die Werte eines Felds an.  
+  
+ [!code-aspx-csharp[ButtonFieldDataTextField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ButtonFieldDataTextField/CS/buttonfielddatatextfieldcs.aspx#1)]
+ [!code-aspx-vb[ButtonFieldDataTextField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ButtonFieldDataTextField/VB/buttonfielddatatextfieldvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatDataTextValue">
+      <MemberSignature Language="C#" Value="protected virtual string FormatDataTextValue (object dataTextValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string FormatDataTextValue(object dataTextValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ButtonField.FormatDataTextValue(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataTextValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dataTextValue">Der Wert des Felds zu formatieren.</param>
+        <summary>Formatiert den angegebenen Feldwert für eine Zelle in der <see cref="T:System.Web.UI.WebControls.ButtonField" /> Objekt.</summary>
+        <returns>Der Wert des Felds in dem vom angegebenen Format konvertiert die <see cref="P:System.Web.UI.WebControls.ButtonField.DataTextFormatString" /> Eigenschaft.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ButtonField.FormatDataTextValue%2A> Methode ist eine Hilfsmethode, die verwendet wird, um den Wert eines Felds in das Format zu transformieren, das angegeben wird die <xref:System.Web.UI.WebControls.ButtonField.DataTextFormatString%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Erweitern der <see cref="T:System.Web.UI.WebControls.ButtonField" /> -Klasse, die Sie überschreiben die <see cref="M:System.Web.UI.WebControls.ButtonField.FormatDataTextValue(System.Object)" /> Methode, um eine benutzerdefinierte Formatierung Routine durchführen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageUrl">
+      <MemberSignature Language="C#" Value="public virtual string ImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ButtonField.ImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Bild für die anzuzeigenden für jede Schaltfläche auf der <see cref="T:System.Web.UI.WebControls.ButtonField" /> Objekt.</summary>
+        <value>Das Bild für die anzuzeigenden für jede Schaltfläche auf der <see cref="T:System.Web.UI.WebControls.ButtonField" />. Der Standardwert ist eine leere Zeichenfolge (""), gibt an, dass die <see cref="P:System.Web.UI.WebControls.ButtonField.ImageUrl" /> Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.ButtonField> -Objekts festgelegt wird, um die <xref:System.Web.UI.WebControls.ButtonType.Image> Wert, verwenden Sie die <xref:System.Web.UI.WebControls.ButtonField.ImageUrl%2A> Eigenschaft an, das für jede Schaltfläche anzuzeigende Bild. Dieses Bild kann beliebiges Dateiformat aufweisen (JPG, GIF, BMP usw.) sein, solange der Clientbrowser dieses Format unterstützt.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.ButtonField.ImageUrl%2A> Eigenschaft an einem Bild zur Anzeige für jede Schaltfläche auf der <xref:System.Web.UI.WebControls.ButtonField> Objekt. Für dieses Codebeispiel angezeigt werden soll müssen Sie Ihr eigenes Image bereitstellen.  
+  
+ [!code-aspx-csharp[ButtonFieldImageUrl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ButtonFieldImageUrl/CS/buttonfieldimageurlcs.aspx#1)]
+ [!code-aspx-vb[ButtonFieldImageUrl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ButtonFieldImageUrl/VB/buttonfieldimageurlvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override bool Initialize (bool sortingEnabled, System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Initialize(bool sortingEnabled, class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ButtonField.Initialize(System.Boolean,System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sortingEnabled" Type="System.Boolean" />
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="sortingEnabled">
+          <see langword="true" />So aktivieren Sie die Sortierung; andernfalls <see langword="false" />.</param>
+        <param name="control">Das Steuerelement, das Besitzer ist, der <see cref="T:System.Web.UI.WebControls.ButtonField" />.</param>
+        <summary>Initialisiert das aktuelle <see cref="T:System.Web.UI.WebControls.ButtonField" />-Objekt.</summary>
+        <returns>
+          <see langword="false" />, womit das Steuerelement muss nicht erneut an Daten binden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ButtonField.Initialize%2A> Methode wird aufgerufen, indem Sie das Steuerelement mit dem die <xref:System.Web.UI.WebControls.ButtonField> -Objekt bezieht, führen Sie die grundlegende Initialisierung für Instanzen des Felds, bevor das Feld jemals eine Zeilen-Auflistung hinzugefügt wird. Data-Steuerelemente, z. B. <xref:System.Web.UI.WebControls.DetailsView> und <xref:System.Web.UI.WebControls.GridView>, rufen Sie die <xref:System.Web.UI.WebControls.DataControlField.Initialize%2A> Methode in ihre `CreateChildControls` Methoden vor anderen Methoden wie z. B. `CreateRow`, werden aufgerufen, um bestimmte Zeilen mit Daten zu erstellen.  
+  
+ Rufen Sie die <xref:System.Web.UI.WebControls.ButtonField.Initialize%2A> Methode, wenn Sie ein benutzerdefiniertes datengebundene Steuerelement schreiben, der verwendet <xref:System.Web.UI.WebControls.TableCell> Objekte für die grundlegende Initialisierung für einen <xref:System.Web.UI.WebControls.ButtonField> Objekt. Implementieren Sie diese Methode, wenn Ihre <xref:System.Web.UI.WebControls.ButtonField>-abgeleiteten Typ erfordert Initialisierungen Objekt aus, bevor er füllt <xref:System.Web.UI.WebControls.TableCell> Objekte mit Daten oder Steuerelemente in der <xref:System.Web.UI.WebControls.ButtonField.InitializeCell%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sie sollten überschreiben die <see cref="M:System.Web.UI.WebControls.ButtonField.Initialize(System.Boolean,System.Web.UI.Control)" /> -Methode und der Rückgabewert <see langword="true" />, wenn das Feld ist erforderlich, dass die Datenbindung für Postback im Auftrag für das Feld, um ordnungsgemäß zu arbeiten ausgeführt werden.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeCell">
+      <MemberSignature Language="C#" Value="public override void InitializeCell (System.Web.UI.WebControls.DataControlFieldCell cell, System.Web.UI.WebControls.DataControlCellType cellType, System.Web.UI.WebControls.DataControlRowState rowState, int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void InitializeCell(class System.Web.UI.WebControls.DataControlFieldCell cell, valuetype System.Web.UI.WebControls.DataControlCellType cellType, valuetype System.Web.UI.WebControls.DataControlRowState rowState, int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ButtonField.InitializeCell(System.Web.UI.WebControls.DataControlFieldCell,System.Web.UI.WebControls.DataControlCellType,System.Web.UI.WebControls.DataControlRowState,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cell" Type="System.Web.UI.WebControls.DataControlFieldCell" />
+        <Parameter Name="cellType" Type="System.Web.UI.WebControls.DataControlCellType" />
+        <Parameter Name="rowState" Type="System.Web.UI.WebControls.DataControlRowState" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="cell">Die zu initialisierende <see cref="T:System.Web.UI.WebControls.DataControlFieldCell" />.</param>
+        <param name="cellType">Ein <see cref="T:System.Web.UI.WebControls.DataControlCellType" /> Wert, der den Typ der Zeile (Header, Footer oder Daten) angibt.</param>
+        <param name="rowState">Einer der <see cref="T:System.Web.UI.WebControls.DataControlRowState" />-Werte.</param>
+        <param name="rowIndex">Der nullbasierte Index der Zeile.</param>
+        <summary>Initialisiert das angegebene <see cref="T:System.Web.UI.WebControls.DataControlFieldCell" /> Objekt, das dem angegebenen Zeilenstatus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ButtonField.InitializeCell%2A> Methode erstellt den Schaltflächentyp, der durch angegeben ist die <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft und fügt es der <xref:System.Web.UI.Control.Controls%2A> Auflistung von der <xref:System.Web.UI.WebControls.DataControlFieldCell> Objekt. Die <xref:System.Web.UI.WebControls.Button.CommandArgument%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.Button> Steuerelement festgelegt ist, um `rowIndex`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public virtual string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ButtonField.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die statische Beschriftung, die für jede Schaltfläche auf angezeigt wird der <see cref="T:System.Web.UI.WebControls.ButtonField" /> Objekt.</summary>
+        <value>Die Beschriftung angezeigt, die für jede Schaltfläche auf der <see cref="T:System.Web.UI.WebControls.ButtonField" />. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> Eigenschaft eine <xref:System.Web.UI.WebControls.ButtonField> -Objekts festgelegt wird, um die <xref:System.Web.UI.WebControls.ButtonType.Button> oder <xref:System.Web.UI.WebControls.ButtonType.Link> Wert, verwenden Sie die <xref:System.Web.UI.WebControls.ButtonField.Text%2A> Eigenschaft zum Anzeigen von statischem Text für die Beschriftung der Schaltflächen auf der <xref:System.Web.UI.WebControls.ButtonField>. Jede Schaltfläche wird dieselbe Beschriftung verwendet.  
+  
+ Anstatt die <xref:System.Web.UI.WebControls.ButtonField.Text%2A> Eigenschaft zum Anzeigen von statischem Text in einer <xref:System.Web.UI.WebControls.ButtonField> -Objekt können Sie die <xref:System.Web.UI.WebControls.ButtonField.DataTextField%2A> zu bindende Eigenschaft der <xref:System.Web.UI.WebControls.ButtonField> auf ein Feld in einer Datenquelle. Anschließend werden die Werte des Felds als Beschriftung der Schaltflächen angezeigt.  
+  
+> [!NOTE]
+>  Wenn die <xref:System.Web.UI.WebControls.ButtonField.DataTextField%2A> und <xref:System.Web.UI.WebControls.ButtonField.Text%2A> Eigenschaften festgelegt sind, die <xref:System.Web.UI.WebControls.ButtonField.DataTextField%2A> -Eigenschaft Vorrang.  
+  
+ Der Wert dieser Eigenschaft wird im Ansichtszustand gespeichert.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.ButtonField.Text%2A> Eigenschaft an, dass die Beschriftung für jede Schaltfläche auf eine <xref:System.Web.UI.WebControls.ButtonField> Objekt.  
+  
+ [!code-aspx-csharp[ButtonField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ButtonField/CS/buttonfieldcs.aspx#1)]
+ [!code-aspx-vb[ButtonField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ButtonField/VB/buttonfieldvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateSupportsCallback">
+      <MemberSignature Language="C#" Value="public override void ValidateSupportsCallback ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ValidateSupportsCallback() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ButtonField.ValidateSupportsCallback" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob die Steuerelemente, die sind in enthaltenen ein <see cref="T:System.Web.UI.WebControls.ButtonField" /> -Objekt Rückrufe unterstützen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.ButtonField.ValidateSupportsCallback%2A> Methode ist eine Hilfsmethode, die verwendet wird, um zu bestimmen, ob die Steuerelemente, die in enthaltenen ein <xref:System.Web.UI.WebControls.ButtonField> -Objekt Rückrufe unterstützen. Diese Methode wird implementiert, als eine leere Methode (eine Methode, die keinen Code enthalten ist), um anzugeben, dass Rückrufe unterstützt werden.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.ButtonField.ValidateSupportsCallback%2A> Methode wird hauptsächlich von Steuerelemententwicklern verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Abgeleitete Klassen die <see cref="T:System.Web.UI.WebControls.BoundField" /> -Klasse überschreiben die <see cref="M:System.Web.UI.WebControls.ButtonField.ValidateSupportsCallback" /> Methode, um anzugeben, ob die Unterstützung von Rückrufen in die Steuerelemente, die nach dem Feld enthalten sind. Um anzugeben, dass Rückrufe unterstützt werden, implementieren die <see cref="M:System.Web.UI.WebControls.ButtonField.ValidateSupportsCallback" /> Methode als eine leere Methode, die keine Ausnahme auslöst, andernfalls eine Ausnahme mit einer aussagekräftigen Meldung erläutert, warum Rückrufe nicht unterstützt werden.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

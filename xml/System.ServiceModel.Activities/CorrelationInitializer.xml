@@ -1,0 +1,63 @@
+<Type Name="CorrelationInitializer" FullName="System.ServiceModel.Activities.CorrelationInitializer">
+  <TypeSignature Language="C#" Value="public abstract class CorrelationInitializer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CorrelationInitializer extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activities.CorrelationInitializer" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Eine abstrakte Basisklasse für Korrelationsinitialisierer, die verwendet werden, um der Laufzeit mitzuteilen, welches Protokoll für die Korrelation verwendet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Common Language Runtime verwendet die <xref:System.ServiceModel.Activities.CorrelationInitializer.CorrelationHandle%2A> für die Korrelation, sofern vorhanden, andernfalls die **CorrelatesWith** -Eigenschaft der Messagingaktivität verwendet.  Wenn keines der beiden Elemente vorhanden ist, wird das von <xref:System.ServiceModel.Activities.CorrelationScope> bereitgestellte Ambient-Handle oder der Workflowdienst verwendet.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CorrelationHandle">
+      <MemberSignature Language="C#" Value="public System.Activities.InArgument&lt;System.ServiceModel.Activities.CorrelationHandle&gt; CorrelationHandle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.InArgument`1&lt;class System.ServiceModel.Activities.CorrelationHandle&gt; CorrelationHandle" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.CorrelationInitializer.CorrelationHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.InArgument&lt;System.ServiceModel.Activities.CorrelationHandle&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.ServiceModel.Activities.CorrelationHandle" />-Argument für den Korrelationsinitialisierer ab oder legt dieses fest.</summary>
+        <value>Das Korrelationshandleargument.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Common Language Runtime verwendet die <xref:System.ServiceModel.Activities.CorrelationInitializer.CorrelationHandle%2A> für die Korrelation, sofern vorhanden, andernfalls die **CorrelatesWith** -Eigenschaft der Messagingaktivität verwendet.  Wenn keines der beiden Elemente vorhanden ist, wird das von <xref:System.ServiceModel.Activities.CorrelationScope> bereitgestellte Ambient-Handle oder der Workflowdienst verwendet.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie der Korrelationsinitialisierer in einer <xref:System.ServiceModel.Activities.SendReply>-Aktivität angegeben wird.  
+  
+ [!code-csharp[ContentBasedCorrelation#2](~/samples/snippets/csharp/VS_Snippets_CFX/contentbasedcorrelation/cs/service.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

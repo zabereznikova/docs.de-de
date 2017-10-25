@@ -1,0 +1,177 @@
+<Type Name="ConfigurationElementInterceptor" FullName="System.IdentityModel.Configuration.ConfigurationElementInterceptor">
+  <TypeSignature Language="C#" Value="public class ConfigurationElementInterceptor : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConfigurationElementInterceptor extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Configuration.ConfigurationElementInterceptor" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Es sind Teile des Konfigurationsschemas Windows Identity Foundation (WIF) in dem Benutzer beliebige Elemente und Attribute angeben können. Bei Angabe z. B. einen benutzerdefinierten token Handler. Die <see cref="T:System.IdentityModel.Configuration.ConfigurationElementInterceptor" /> -Klasse wird implementiert, um diese Fälle zu behandeln.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConfigurationElementInterceptor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Configuration.ConfigurationElementInterceptor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Configuration.ConfigurationElementInterceptor" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChildNodes">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlNodeList ChildNodes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlNodeList ChildNodes" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.ConfigurationElementInterceptor.ChildNodes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die untergeordneten Knoten dieses Elements ab.</summary>
+        <value>Die Auflistung der untergeordneten Knoten. <see langword="null" />Wenn dieses Element keine untergeordneten Knoten verfügt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeserializeElement">
+      <MemberSignature Language="C#" Value="protected override void DeserializeElement (System.Xml.XmlReader reader, bool serializeCollectionKey);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void DeserializeElement(class System.Xml.XmlReader reader, bool serializeCollectionKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Configuration.ConfigurationElementInterceptor.DeserializeElement(System.Xml.XmlReader,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="serializeCollectionKey" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Der <see cref="T:System.Xml.XmlReader" />, der aus der Konfigurationsdatei liest.</param>
+        <param name="serializeCollectionKey">
+          <see langword="true" />, um nur die Auflistungsschlüsseleigenschaften zu serialisieren, andernfalls <see langword="false" />.</param>
+        <summary>Liest XML aus der Konfigurationsdatei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementAsXml">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlElement ElementAsXml { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlElement ElementAsXml" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.ConfigurationElementInterceptor.ElementAsXml" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das XML-Element, das von dieser Instanz dargestellten ab.</summary>
+        <value>Das XML-Element.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDeserializeUnrecognizedAttribute">
+      <MemberSignature Language="C#" Value="protected override bool OnDeserializeUnrecognizedAttribute (string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnDeserializeUnrecognizedAttribute(string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Configuration.ConfigurationElementInterceptor.OnDeserializeUnrecognizedAttribute(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des nicht erkannten Attributs.</param>
+        <param name="value">Der Wert des nicht erkannten Attributs.</param>
+        <summary>Ruft einen Wert ab, der angibt, ob während der Deserialisierung ein unbekanntes Attribut aufgetreten ist. Gibt immer <see langword="true" /> zurück.</summary>
+        <returns>Gibt immer <see langword="true" />, was bedeutet, dass ein unbekanntes Attribut aufgetreten ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Configuration.ConfigurationElementInterceptor> Klasse ist speziell implementiert, um beliebige, benutzerdefinierte Attribute und Elemente zu behandeln. Aus diesem Grund gibt diese Methode `true` Wenn .NET Framework erkennt, ein unbekanntes Element oder Attribut zu der Parser, der ausgeführt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDeserializeUnrecognizedElement">
+      <MemberSignature Language="C#" Value="protected override bool OnDeserializeUnrecognizedElement (string elementName, System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnDeserializeUnrecognizedElement(string elementName, class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Configuration.ConfigurationElementInterceptor.OnDeserializeUnrecognizedElement(System.String,System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="elementName" Type="System.String" />
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="elementName">Der Name des unbekannten Unterelements.</param>
+        <param name="reader">Der XML-Reader, der für die Deserialisierung verwendet wird.</param>
+        <summary>Ruft einen Wert ab, der angibt, ob während der Deserialisierung ein unbekanntes Element aufgetreten ist. Gibt immer <see langword="true" /> zurück.</summary>
+        <returns>Gibt immer <see langword="true" />, was bedeutet, dass ein unbekanntes Element aufgetreten ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Configuration.ConfigurationElementInterceptor> Klasse ist speziell implementiert, um beliebige, benutzerdefinierte Attribute und Elemente zu behandeln. Aus diesem Grund gibt diese Methode `true` Wenn .NET Framework erkennt, ein unbekanntes Element oder Attribut zu der Parser, der ausgeführt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="protected override void Reset (System.Configuration.ConfigurationElement parentElement);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Reset(class System.Configuration.ConfigurationElement parentElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Configuration.ConfigurationElementInterceptor.Reset(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parentElement" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="parentElement">Der übergeordnete Knoten des Konfigurationselements.</param>
+        <summary>Setzt den internen Status dieses <see cref="T:System.IdentityModel.Configuration.ConfigurationElementInterceptor" />-Objekts zurück, einschließlich der Sperren und der Eigenschaftenauflistungen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

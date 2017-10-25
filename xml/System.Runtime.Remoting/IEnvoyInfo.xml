@@ -1,0 +1,51 @@
+<Type Name="IEnvoyInfo" FullName="System.Runtime.Remoting.IEnvoyInfo">
+  <TypeSignature Language="C#" Value="public interface IEnvoyInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IEnvoyInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.IEnvoyInfo" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält Informationen für Envoy.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Schnittstelle, um benutzerdefinierte Envoy-Informationen bereitzustellen, die zusammen mit übergeben werden die <xref:System.Runtime.Remoting.ObjRef> Objekte.  
+  
+ Klassen, die die aktuelle Schnittstelle implementieren, enthalten eine serialisierte Kette von Nachrichtenempfängern, die erneut generiert, wenn ein Proxy erstellt wird, um das Objekt darstellen. Diese Funktion wird zum <xref:System.Runtime.Remoting.Contexts.Context> gebundenes Objekt nur Typen, und die Gruppen von Objekten, die zur Laufzeit, z. B. Transaktionen Dienstleistungen darstellt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EnvoySinks">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Messaging.IMessageSink EnvoySinks { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Remoting.Messaging.IMessageSink EnvoySinks" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.IEnvoyInfo.EnvoySinks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Messaging.IMessageSink</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Liste der Envoys, die durch die Server-Kontext und Objekt-Ketten beigetragen wurden, wenn das Objekt gemarshallt wurde.</summary>
+        <value>Eine Kette von Envoy senken.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit Infrastrukturcode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Berechtigungswert:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

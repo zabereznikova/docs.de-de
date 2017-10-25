@@ -1,0 +1,35 @@
+<Type Name="VisualStyleElement+ProgressBar" FullName="System.Windows.Forms.VisualStyles.VisualStyleElement+ProgressBar">
+  <TypeSignature Language="C#" Value="public static class VisualStyleElement.ProgressBar" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi abstract sealed beforefieldinit VisualStyleElement/ProgressBar extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Klassen, ermöglichen <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> Objekte für die Bestandteile der Statusanzeige-Steuerelements. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar> Klasse bietet eine Grundlage, die in der folgenden Klassen definiert werden:  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar.Bar>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar.BarVertical>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar.Chunk>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar.ChunkVertical>  
+  
+ Jede dieser Klassen enthält eine oder mehrere Eigenschaften, die Zurückgeben einer <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> für jeden Status des Teils der Statusanzeige dem Klassennamen angegeben.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

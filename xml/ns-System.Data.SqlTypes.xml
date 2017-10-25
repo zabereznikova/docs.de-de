@@ -1,0 +1,35 @@
+<Namespace Name="System.Data.SqlTypes">
+  <Docs>
+    <summary>Die <see cref="N:System.Data.SqlTypes" /> -Namespace stellt Klassen für systemeigene Datentypen in SQL Server bereit. Diese Klassen bieten eine sicherere und schnellere Alternative zu den Datentypen, die von der .NET Framework common Language Runtime (CLR) bereitgestellt. Verwenden der Klassen in diesem Namespace verhindert, dass Fehler bei der datentypkonvertierung durch Genauigkeitsverlust verursacht. Da andere Datentypen konvertiert werden, in und aus **SqlTypes** hinter den Kulissen explizit erstellen und Verwenden von Objekten in diesem Namespace auch führt schnelleren Code.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jeder Datentyp in **SqlTypes** hat seine äquivalenten Datentyp in SQL Server, mit der gleichen zugrunde liegenden datendarstellung. Viele davon haben auch die entsprechenden Datentypen in der CLR. Allerdings **SqlDateTime**, **SqlDecimal**, und **SqlString** haben unterschiedliche zugrunde liegenden Datenstrukturen mit der entsprechenden .NET Framework-Datentypen.  
+  
+ Die folgende Tabelle ordnet die Elemente der **SqlTypes** Namespace an Microsoft [!INCLUDE[ssNoVersion](~/includes/ssnoversion-md.md)] Datentypen und den Mitgliedern der der <xref:System.Data.SqlDbType> Enumeration.  
+  
+|.NET Framework SqlTypes|Systemeigene[!INCLUDE[ssNoVersion](~/includes/ssnoversion-md.md)]|.NET Framework SqlDbType|  
+|-----------------------------|------------------------------------------------------------------------|------------------------------|  
+|<xref:System.Data.SqlTypes.SqlBinary>|Binary "," Image "," Timestamp "," varbinary|Binär, Image, TimeStamp, VarBinary|  
+|<xref:System.Data.SqlTypes.SqlBoolean>|Bit|Bit|  
+|<xref:System.Data.SqlTypes.SqlByte>|tinyint|TinyInt|  
+|<xref:System.Data.SqlTypes.SqlBytes>|Binary "," Image "," Timestamp "," varbinary|Binär, Image, TimeStamp, VarBinary|  
+|<xref:System.Data.SqlTypes.SqlChars>|Char "," Nchar "," Text "," Ntext "," Nvarchar "," varchar|Char "," NChar "," Text "," Ntext "," NVarChar "," VarChar|  
+|<xref:System.Data.SqlTypes.SqlDateTime>|DateTime, smalldatetime|DateTime, SmallDateTime|  
+|<xref:System.Data.SqlTypes.SqlDecimal>|Numeric, decimal|Decimal|  
+|<xref:System.Data.SqlTypes.SqlDouble>|frei verschieben|Float|  
+|<xref:System.Data.SqlTypes.SqlFileStream>|varbinary|VarBinary|  
+|<xref:System.Data.SqlTypes.SqlGuid>|uniqueidentifier|UniqueIdentifier|  
+|<xref:System.Data.SqlTypes.SqlInt16>|smallint|SmallInt|  
+|<xref:System.Data.SqlTypes.SqlInt32>|int|Int|  
+|<xref:System.Data.SqlTypes.SqlInt64>|bigint|BigInt|  
+|<xref:System.Data.SqlTypes.SqlMoney>|Money, Smallmoney.|Money, SmallMoney.|  
+|<xref:System.Data.SqlTypes.SqlSingle>|Reelle|Real|  
+|<xref:System.Data.SqlTypes.SqlString>|Char "," Nchar "," Text "," Ntext "," Nvarchar "," varchar|Char "," NChar "," Text "," Ntext "," NVarChar "," VarChar|  
+|<xref:System.Data.SqlTypes.SqlXml>|xml|Xml|  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

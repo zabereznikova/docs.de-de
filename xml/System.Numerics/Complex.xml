@@ -1,0 +1,2993 @@
+<Type Name="Complex" FullName="System.Numerics.Complex">
+  <TypeSignature Language="C#" Value="public struct Complex : IEquatable&lt;System.Numerics.Complex&gt;, IFormattable" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit Complex extends System.ValueType implements class System.IEquatable`1&lt;valuetype System.Numerics.Complex&gt;, class System.IFormattable" />
+  <TypeSignature Language="DocId" Value="T:System.Numerics.Complex" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Numerics</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Numerics</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Numerics.Complex&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IFormattable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine komplexe Zahl dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine komplexe Zahl ist eine Zahl, die eine reelle Zahl und einem imaginären Teil umfasst. Eine komplexe Zahl Z wird in der Regel geschrieben, in der Form Z = X + "Yi", in dem *x* und *y* reelle Zahlen, und *ich* imaginäre-Einheit, die die Eigenschaft ist *i* <sup>2</sup> =-1. Der reelle Teil der komplexen Zahl dargestellte *x*, und der imaginäre Teil der komplexen Zahl dargestellte *y*.  
+  
+ Die <xref:System.Numerics.Complex> verwendet der kartesischen Koordinatensystem (real-imaginären) beim Instanziieren und Bearbeiten von komplexe Zahlen. Eine komplexe Zahl kann als Punkt in einem zweidimensionalen Koordinatensystem dargestellt werden, als der komplexen Ebene bezeichnet. Der reelle Teil der komplexen Zahl auf der x-Achse (der horizontalen Achse), und der imaginäre Teil auf der y-Achse (die vertikale Achse) positioniert ist.  
+  
+ Einem beliebigen Punkt in der komplexen Ebene kann auch basierend auf der Absolute-Wert, mit dem polar Koordinatensystem. In Polarkoordinaten ausgedrückt werden, ein Punkt wird durch zwei Zahlen charakterisiert:  
+  
+-   Seine Größe, die die Entfernung des Punkts vom Ursprung ist (d. h. 0,0 oder den Punkt, an dem die x-Achse und die y-Achse schneiden).  
+  
+-   Die Phase, in der der Winkel zwischen der tatsächlichen Achse und die Zeile, die vom Ursprung zum Punkt gezeichnet wird.  
+  
+## <a name="instantiating-a-complex-number"></a>Instanziieren einer komplexen Zahl  
+ Sie können eine komplexe Zahl in einem der folgenden Methoden einen Wert zuweisen:  
+  
+-   Durch das Übergeben von zwei <xref:System.Double> Werte an ihren Konstruktor. Der erste Wert repräsentiert den reellen Teil der komplexen Zahl und der zweite Wert den imaginären Teil dar. Diese Werte stellen die Position der komplexen Zahl in die zweidimensionalen kartesischen Koordinatensystem dar.  
+  
+-   Durch Aufrufen der statischen (`Shared` in Visual Basic) <xref:System.Numerics.Complex.FromPolarCoordinates%2A?displayProperty=nameWithType> Methode, um eine komplexe Zahl aus seinen Polarkoordinaten zu erstellen.  
+  
+-   Durch Zuweisen einer <xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64>, <xref:System.UInt64>, <xref:System.Single>, oder <xref:System.Double> -Wert an ein <xref:System.Numerics.Complex> Objekt. Der Wert wird der reelle Teil der komplexen Zahl und imaginäre Teil entspricht 0.  
+  
+-   Durch die Umwandlung (in c#) oder konvertieren (in Visual Basic) einer <xref:System.Decimal> oder <xref:System.Numerics.BigInteger> -Wert an ein <xref:System.Numerics.Complex> Objekt. Der Wert wird der reelle Teil der komplexen Zahl und imaginäre Teil entspricht 0.  
+  
+-   Durch Zuweisen der komplexen Zahl, die von einer Methode oder der Operator, um zurückgegeben wird ein <xref:System.Numerics.Complex> Objekt. Beispielsweise <xref:System.Numerics.Complex.Add%2A?displayProperty=nameWithType> ist eine statische Methode, die eine komplexe Zahl zurückgibt, die die Summe von zwei komplexe Zahlen ist und die <xref:System.Numerics.Complex.op_Addition%2A?displayProperty=nameWithType> Operator addiert zwei komplexe Zahlen und gibt das Ergebnis zurück.  
+  
+ Das folgende Beispiel zeigt jede dieser fünf Arten von Zuweisen eines Werts in eine komplexe Zahl.  
+  
+ [!code-csharp[System.Numerics.Complex.Class#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.class/cs/create1.cs#2)]
+ [!code-vb[System.Numerics.Complex.Class#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.class/vb/create1.vb#2)]  
+  
+## <a name="operations-with-complex-numbers"></a>Operationen mit komplexen Zahlen  
+ Die <xref:System.Numerics.Complex> Struktur in .NET Framework enthält Member, die die folgende Funktionalität bereitstellen:  
+  
+-   Methoden zum Vergleichen von zwei komplexe Zahlen, um festzustellen, ob sie gleich sind.  
+  
+-   Operatoren, die arithmetische Operationen für komplexe Zahlen. <xref:System.Numerics.Complex>Operatoren ermöglichen es Ihnen, Addition, Subtraktion, Multiplikation, Division und unäre Negation mit komplexen Zahlen ausführen.  
+  
+-   Methoden, um andere numerischen Operationen für komplexe Zahlen auszuführen. Zusätzlich zu den vier grundlegenden arithmetischen Operationen können Sie eine komplexe Zahl mit einem bestimmten Exponenten auslösen, ermittelt die Quadratwurzel einer komplexen Zahl und rufen Sie den absoluten Wert einer komplexen Zahl.  
+  
+-   Methoden für trigonometrische Operationen für komplexe Zahlen. Beispielsweise können Sie den Tangens eines Winkels, dargestellt durch eine komplexe Zahl berechnen.  
+  
+ Beachten Sie Folgendes: Da die <xref:System.Numerics.Complex.Real%2A> und <xref:System.Numerics.Complex.Imaginary%2A> Eigenschaften sind schreibgeschützt, kann nicht, ändern Sie den Wert eines vorhandenen <xref:System.Numerics.Complex> Objekt.  Alle Methoden, die für einen Vorgang ausführen einer <xref:System.Numerics.Complex> Zahl ist, wenn deren Rückgabewert vom Typ <xref:System.Numerics.Complex>, ein neues zurückgeben <xref:System.Numerics.Complex> Anzahl.  
+  
+## <a name="precision-and-complex-numbers"></a>Genauigkeit und komplexe Zahlen  
+ Die reellen und imaginären Teile einer komplexen Zahl werden durch zwei Werte für Gleitkommazahlen mit doppelter Genauigkeit dargestellt. Dies bedeutet, dass <xref:System.Numerics.Complex> Werte, wie Werte für Gleitkommazahlen mit doppelter Genauigkeit, können als Ergebnis von numerischen Genauigkeit verlieren. Dies bedeutet, dass strenge Vergleiche auf Gleichheit zweier <xref:System.Numerics.Complex> Werte können fehlschlagen, selbst wenn der Unterschied zwischen den beiden Werten aufgrund eines Verlusts Genauigkeit ist. Weitere Informationen finden Sie unter <xref:System.Double>.  
+  
+ Die Potenzierung der Logarithmus einer Zahl sollte z. B. die ursprüngliche Nummer zurückgeben. In einigen Fällen kann der Verlust an Genauigkeit von Gleitkommawerten jedoch geringfügige Unterschiede zwischen den beiden Werten führen, wie im folgenden Beispiel veranschaulicht.  
+  
+ [!code-csharp[System.Numerics.Complex.Class#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.class/cs/precision1.cs#5)]
+ [!code-vb[System.Numerics.Complex.Class#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.class/vb/precision1.vb#5)]  
+  
+ Auf ähnliche Weise, im folgenden Beispiel, das die Quadratwurzel berechnet eine <xref:System.Numerics.Complex> Zahl ist, etwas andere Ergebnisse erzeugt, auf die 32-Bit- und IA64-Versionen von .NET Framework.  
+  
+ [!code-csharp[System.Numerics.Complex.Class#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.class/cs/precision1.cs#6)]
+ [!code-vb[System.Numerics.Complex.Class#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.class/vb/precision1.vb#6)]  
+  
+## <a name="complex-numbers-infinity-and-nan"></a>Komplexe Zahlen unendlich und NaN  
+ Die reellen und imaginären Teile einer komplexen Zahl dargestellte <xref:System.Double> Werte. Zusätzlich zu den im Bereich von <xref:System.Double.MinValue?displayProperty=nameWithType> auf <xref:System.Double.MaxValue?displayProperty=nameWithType>, real oder imaginäre Teil einer komplexen Zahl kann den Wert des haben <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>, <xref:System.Double.NegativeInfinity?displayProperty=nameWithType>, oder <xref:System.Double.NaN?displayProperty=nameWithType>. <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>, <xref:System.Double.NegativeInfinity?displayProperty=nameWithType>, und <xref:System.Double.NaN?displayProperty=nameWithType> alle bei jedem Vorgang arithmetische oder trigonometrische weitergegeben.  
+  
+ Im folgenden Beispiel werden die Division durch <xref:System.Numerics.Complex.Zero> erzeugt eine komplexe Zahl, deren reellen und imaginären Teile beide sind <xref:System.Double.NaN?displayProperty=nameWithType>. Folglich Multiplikation mit diesem Wert auch erzeugt eine komplexe Zahl, deren reellen und imaginären Teile sind <xref:System.Double.NaN?displayProperty=nameWithType>. Auf ähnliche Weise Ausführen einer Multiplikation, die den Bereich der überläuft der <xref:System.Double> erzeugt eine komplexe Zahl, deren reelle Teil <xref:System.Double.NaN?displayProperty=nameWithType> und deren imaginärer Teil <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>. Eine komplexe Zahl, deren reelle Teil gibt dann eine Division mit diese komplexe Zahl <xref:System.Double.NaN?displayProperty=nameWithType> und deren imaginärer Teil <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>.  
+  
+ [!code-csharp[System.Numerics.Complex.Class#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.class/cs/nan1.cs#3)]
+ [!code-vb[System.Numerics.Complex.Class#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.class/vb/nan1.vb#3)]  
+  
+ Mathematische Operationen mit komplexen Zahlen, die ungültig sind oder dieser Überlauf des Bereichs von, der <xref:System.Double> -Datentyp ist keine Ausnahme ausgelöst. Sie geben Sie eine <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>, <xref:System.Double.NegativeInfinity?displayProperty=nameWithType>, oder <xref:System.Double.NaN?displayProperty=nameWithType> in den folgenden Situationen:  
+  
+-   Die Division durch 0 (null) gibt eine positive Zahl <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>.  
+  
+-   Jeder Vorgang, der die obere Grenze überschreitet die <xref:System.Double> Datentyp gibt <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>.  
+  
+-   Die Division durch 0 (null) gibt eine negative Zahl <xref:System.Double.NegativeInfinity?displayProperty=nameWithType>.  
+  
+-   Jeder Vorgang, der die untere Grenze des überläuft der <xref:System.Double> Datentyp gibt <xref:System.Double.NegativeInfinity?displayProperty=nameWithType>.  
+  
+-   Gibt die Division von 0 durch 0 <xref:System.Double.NaN?displayProperty=nameWithType>.  
+  
+-   Vorgänge, die für Operanden ausgeführt wird, deren Werte <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>, <xref:System.Double.NegativeInfinity?displayProperty=nameWithType>, oder <xref:System.Double.NaN?displayProperty=nameWithType> gibt <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>, <xref:System.Double.NegativeInfinity?displayProperty=nameWithType>, oder <xref:System.Double.NaN?displayProperty=nameWithType>, abhängig von den jeweiligen Vorgang.  
+  
+ Beachten Sie, dass dies für alle zwischenberechnungen mit einer anderen Methode ausgeführt gilt. Z. B. die Multiplikation von `new Complex(9e308, 9e308) and new Complex(2.5, 3.5)` verwendet die Formel (Ac - bd) + (Ad + bc) ich. Die Berechnung von die reelle Komponente, die aus der Multiplikation resultiert wertet den Ausdruck 9e308 * 2.5 - 9e308 * 3.5. Jede Multiplikation in diesem Ausdruck gibt <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>, und der Versuch zu subtrahierenden <xref:System.Double.PositiveInfinity?displayProperty=nameWithType> aus <xref:System.Double.PositiveInfinity?displayProperty=nameWithType> gibt <xref:System.Double.NaN?displayProperty=nameWithType>.  
+  
+## <a name="formatting-a-complex-number"></a>Eine komplexe Zahl formatieren  
+ Standardmäßig weist die angegebene Zeichenfolgendarstellung einer komplexen Zahl Form `(` *echte* `,` *imaginären*`)`, wobei *echte* und *imaginären* sind die zeichenfolgendarstellungen der <xref:System.Double> Werte, mit denen die komplexe Zahl reellen und imaginären Komponenten bilden. Einige Überladungen der <xref:System.Numerics.Complex.ToString%2A> Methode ermöglichen die Anpassung der zeichenfolgendarstellungen, die dieser <xref:System.Double> Werte reflektieren die Formatierungskonventionen einer bestimmten Kultur oder in einem bestimmten Format, die durch eine standardmäßige oder benutzerdefinierte numerische definierten angezeigt werden. Die Formatzeichenfolge. (Weitere Informationen finden Sie unter [Standard Numeric Format Strings](~/docs/standard/base-types/standard-numeric-format-strings.md) und [benutzerdefinierte Zahlenformatzeichenfolgen](~/docs/standard/base-types/custom-numeric-format-strings.md).)  
+  
+ Eine der gängigeren Methoden auszudrücken, die Zeichenfolgendarstellung einer komplexen Zahl nimmt die Form a + Bi, wobei eine reelle Komponente der komplexen Zahl ist, und b ist die imaginäre Komponente der komplexen Zahl. In Electrical Engineering-Team, eine komplexe Zahl wird am häufigsten als eine + Bj. Sie können die Darstellung einer komplexen Zahl in einem dieser beiden Formate zurückgeben. Zu diesem Zweck definieren Sie einen benutzerdefiniertes Formatanbieter durch Implementieren der <xref:System.ICustomFormatter> und <xref:System.IFormatProvider> Schnittstellen, und rufen Sie dann die <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> Methode.  
+  
+ Das folgende Beispiel definiert eine `ComplexFormatter` Klasse, die eine komplexe Zahl als Zeichenfolge in der Form darstellt a + Bi oder ein + Bj.  
+  
+ [!code-csharp[System.Numerics.Complex.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.class/cs/customfmt1.cs#1)]
+ [!code-vb[System.Numerics.Complex.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.class/vb/customfmt1.vb#1)]  
+  
+ Im folgenden Beispiel wird dieses benutzerdefinierte Formatierungsprogramm klicken Sie dann auf die angegebene Zeichenfolgendarstellung einer komplexen Zahl anzuzeigen.  
+  
+ [!code-csharp[System.Numerics.Complex.Class#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.class/cs/customfmt1.cs#4)]
+ [!code-vb[System.Numerics.Complex.Class#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.class/vb/customfmt1.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Complex (double real, double imaginary);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 real, float64 imaginary) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.#ctor(System.Double,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="real" Type="System.Double" />
+        <Parameter Name="imaginary" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="real">Der reelle Teil der komplexen Zahl.</param>
+        <param name="imaginary">Der imaginäre Teil der komplexen Zahl.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Numerics.Complex" />-Struktur mit den angegebenen reellen und imaginären Werten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `real` oder `imaginary` Argumente können Genauigkeit verlieren, wenn sie Datentypen sind, die eine explizite Umwandlung in erfordern <xref:System.Double>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel zwei komplexe Zahlen instanziiert und verwendet sie dann in Addition, Subtraktion, Multiplikation und Division Vorgängen.  
+  
+ [!code-csharp[System.Numerics.Complex.ctor#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.ctor/cs/ctor1.cs#1)]
+ [!code-vb[System.Numerics.Complex.ctor#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.ctor/vb/ctor1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Abs">
+      <MemberSignature Language="C#" Value="public static double Abs (System.Numerics.Complex value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 Abs(valuetype System.Numerics.Complex value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.Abs(System.Numerics.Complex)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Complex" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine komplexe Zahl.</param>
+        <summary>Ruft den absoluten Wert (oder die Größenordnung) einer komplexen Zahl ab.</summary>
+        <returns>Der Absolutbetrag von <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Absolute Wert einer komplexen Zahl entspricht der <xref:System.Numerics.Complex.Magnitude%2A> Eigenschaft. Der Absolute Wert einer reellen Zahl eine + Bi ist wie folgt berechnet:  
+  
+-   Wenn b = 0, das Ergebnis ist 0.  
+  
+-   Wenn eine > b, um das Ergebnis ist eine *<xref:System.Math.Sqrt%2A?displayProperty=nameWithType>(1 + b<sup>2</sup>/a<sup>2</sup>).  
+  
+-   Wenn b > ein, das Ergebnis ist b * <xref:System.Math.Sqrt%2A?displayProperty=nameWithType>(1 + a<sup>2</sup>/b<sup>2</sup>).  
+  
+ Wenn die Berechnung des absoluten Werts zu einem Überlauf führt, gibt die Methode entweder <xref:System.Double.PositiveInfinity?displayProperty=nameWithType> oder <xref:System.Double.NegativeInfinity?displayProperty=nameWithType>. Wenn entweder die <xref:System.Numerics.Complex.Real%2A> oder <xref:System.Numerics.Complex.Imaginary%2A> Eigenschaft <xref:System.Double.NaN?displayProperty=nameWithType> und die Eigenschaft ist keines von beiden <xref:System.Double.PositiveInfinity?displayProperty=nameWithType> noch <xref:System.Double.NegativeInfinity?displayProperty=nameWithType>, der Methodenrückgabe <xref:System.Double.NaN?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel berechnet den absoluten Wert einer komplexen Zahl und beweist, dass der Wert entspricht der <xref:System.Numerics.Complex.Magnitude%2A> Eigenschaft.  
+  
+ [!code-csharp[System.Numerics.Complex.Abs#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.abs/cs/abs1.cs#1)]
+ [!code-vb[System.Numerics.Complex.Abs#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.abs/vb/abs1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Acos">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Complex Acos (System.Numerics.Complex value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Complex Acos(valuetype System.Numerics.Complex value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.Acos(System.Numerics.Complex)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Complex" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine komplexe Zahl, die einen Kosinus darstellt.</param>
+        <summary>Gibt den Winkel zurück, der der Arkuskosinus der angegebenen komplexen Zahl ist.</summary>
+        <returns>Der Winkel im Bogenmaß, der der Arkuskosinus von <paramref name="value" /> ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Complex.Acos%2A> -Methode für komplexe Zahlen entspricht der <xref:System.Math.Acos%2A?displayProperty=nameWithType> Methode für reelle Zahlen.  
+  
+ Die <xref:System.Numerics.Complex.Acos%2A> Methode verwendet die folgende Formel:  
+  
+ (-<xref:System.Numerics.Complex.ImaginaryOne>) * <xref:System.Numerics.Complex.Log%2A>(`value` + <xref:System.Numerics.Complex.ImaginaryOne>*<xref:System.Numerics.Complex.Sqrt%2A>(<xref:System.Numerics.Complex.One> - `value` * `value`)))    
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die <xref:System.Numerics.Complex.Acos%2A> Methode. Es zeigt, dass den zurückgegebene Wert durch Übergeben der <xref:System.Numerics.Complex.Acos%2A> Methode, um die <xref:System.Numerics.Complex.Cos%2A> Methodenrückgabe die ursprünglichen <xref:System.Numerics.Complex> Wert.  
+  
+ [!code-csharp[System.Numerics.Complex.Acos#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.acos/cs/acos1.cs#1)]
+ [!code-vb[System.Numerics.Complex.Acos#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.acos/vb/acos1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Complex Add (System.Numerics.Complex left, System.Numerics.Complex right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Complex Add(valuetype System.Numerics.Complex left, valuetype System.Numerics.Complex right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.Add(System.Numerics.Complex,System.Numerics.Complex)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Numerics.Complex" />
+        <Parameter Name="right" Type="System.Numerics.Complex" />
+      </Parameters>
+      <Docs>
+        <param name="left">Die erste zu addierende komplexe Zahl.</param>
+        <param name="right">Die zweite zu addierende komplexe Zahl.</param>
+        <summary>Addiert zwei komplexe Zahlen und gibt das Ergebnis zurück.</summary>
+        <returns>Die Summe von <paramref name="left" /> und <paramref name="right" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Hinzufügen einer komplexen Zahl "," a + Bi, und eine zweite komplexe Zahl, die c + di, weist folgende Form:  
+  
+ (a + C) + (b + d) ich.  
+  
+ Wenn die Methode Ergebnisse zu einem Überlauf entweder in der realen oder imaginären Komponente aufrufen, ist der Wert der Komponente <xref:System.Double.PositiveInfinity?displayProperty=nameWithType> oder <xref:System.Double.NegativeInfinity?displayProperty=nameWithType>.  
+  
+ Sprachen, die keine benutzerdefinierte Operatoren unterstützen können die <xref:System.Numerics.Complex.Add%2A> Methode, um Addition mit komplexen Zahlen auszuführen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht außerdem mit komplexe Zahlen.  
+  
+ [!code-csharp[System.Numerics.Complex.Add#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.add/cs/add1.cs#1)]
+ [!code-vb[System.Numerics.Complex.Add#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.add/vb/add1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Asin">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Complex Asin (System.Numerics.Complex value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Complex Asin(valuetype System.Numerics.Complex value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.Asin(System.Numerics.Complex)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Complex" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine komplexe Zahl.</param>
+        <summary>Gibt den Winkel zurück, der der Arkussinus der angegebenen komplexen Zahl ist.</summary>
+        <returns>Der Winkel, der der Arkussinus von <paramref name="value" /> ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Complex.Asin%2A> -Methode für komplexe Zahlen entspricht der <xref:System.Math.Asin%2A?displayProperty=nameWithType> Methode für reelle Zahlen.  
+  
+ Die <xref:System.Numerics.Complex.Asin%2A> Methode verwendet die folgende Formel:  
+  
+ -<xref:System.Numerics.Complex.ImaginaryOne> * <xref:System.Numerics.Complex.Log%2A>(<xref:System.Numerics.Complex.ImaginaryOne> * Wert + <xref:System.Numerics.Complex.Sqrt%2A>(<xref:System.Numerics.Complex.One> -Wert * Wert))    
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die <xref:System.Numerics.Complex.Asin%2A> Methode. Es zeigt, dass den zurückgegebene Wert durch Übergeben der <xref:System.Numerics.Complex.Asin%2A> Methode, um die <xref:System.Numerics.Complex.Sin%2A> Methodenrückgabe die ursprünglichen <xref:System.Numerics.Complex> Wert.  
+  
+ [!code-csharp[System.Numerics.Complex.Asin#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.asin/cs/asin1.cs#1)]
+ [!code-vb[System.Numerics.Complex.Asin#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.asin/vb/asin1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Atan">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Complex Atan (System.Numerics.Complex value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Complex Atan(valuetype System.Numerics.Complex value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.Atan(System.Numerics.Complex)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Complex" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine komplexe Zahl.</param>
+        <summary>Gibt den Winkel zurück, der der Arkustangens der angegebenen komplexen Zahl ist.</summary>
+        <returns>Der Winkel, der der Arkustangens von <paramref name="value" /> ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Complex.Atan%2A> -Methode für komplexe Zahlen entspricht der <xref:System.Math.Atan%2A?displayProperty=nameWithType> Methode für reelle Zahlen.  
+  
+ Die <xref:System.Numerics.Complex.Atan%2A> Methode verwendet die folgende Formel:  
+  
+ <xref:System.Numerics.Complex.ImaginaryOne>/ Neuer komplexer (2.0, 0,0)) * (<xref:System.Numerics.Complex.Log%2A>(<xref:System.Numerics.Complex.One>  -  <xref:System.Numerics.Complex.ImaginaryOne> * Wert)- <xref:System.Numerics.Complex.Log%2A>(<xref:System.Numerics.Complex.One> + ImaginaryOne * Wert)   
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die <xref:System.Numerics.Complex.Atan%2A> Methode. Es zeigt, dass den zurückgegebene Wert durch Übergeben der <xref:System.Numerics.Complex.Atan%2A> Methode, um die <xref:System.Numerics.Complex.Tan%2A> Methodenrückgabe die ursprünglichen <xref:System.Numerics.Complex> Wert.  
+  
+ [!code-csharp[System.Numerics.Complex.Atan#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.atan/cs/atan1.cs#1)]
+ [!code-vb[System.Numerics.Complex.Atan#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.atan/vb/atan1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Conjugate">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Complex Conjugate (System.Numerics.Complex value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Complex Conjugate(valuetype System.Numerics.Complex value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.Conjugate(System.Numerics.Complex)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Complex" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine komplexe Zahl.</param>
+        <summary>Berechnet die konjugierte Zahl einer komplexen Zahl und gibt das Ergebnis zurück.</summary>
+        <returns>Die konjugierte Zahl von <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die konjugierte Zahl einer komplexen Zahl kehrt das Zeichen die imaginäre Komponente; unäre Negation werden also auf die imaginäre Komponente angewendet. Wenn ein + Bi ist eine komplexe Zahl, deren konjugierte Zahl einer - Bi.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt das Konjugat von zwei komplexe Zahlen.  
+  
+ [!code-csharp[System.Numerics.Complex.Conjugate#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.conjugate/cs/conjugate1.cs#1)]
+ [!code-vb[System.Numerics.Complex.Conjugate#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.conjugate/vb/conjugate1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cos">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Complex Cos (System.Numerics.Complex value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Complex Cos(valuetype System.Numerics.Complex value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.Cos(System.Numerics.Complex)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Complex" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine komplexe Zahl.</param>
+        <summary>Gibt den Kosinus der angegebenen komplexen Zahl zurück.</summary>
+        <returns>Der Kosinus von <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Complex.Cos%2A> -Methode für komplexe Zahlen entspricht der <xref:System.Math.Cos%2A?displayProperty=nameWithType> Methode für reelle Zahlen.  
+  
+ Die <xref:System.Numerics.Complex.Cos%2A> Methode verwendet die folgende Formel berechnet den Kosinus der komplexen Zahl a + Bi:  
+  
+ (<xref:System.Math.Cos%2A>(a) * <xref:System.Math.Cosh%2A>(b),-(<xref:System.Math.Sin%2A>(a) * <xref:System.Math.Sinh%2A>(b)))  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die <xref:System.Numerics.Complex.Acos%2A> Methode. Es zeigt, dass den zurückgegebene Wert durch Übergeben der <xref:System.Numerics.Complex.Acos%2A> Methode, um die <xref:System.Numerics.Complex.Cos%2A> Methodenrückgabe die ursprünglichen <xref:System.Numerics.Complex> Wert.  
+  
+ [!code-csharp[System.Numerics.Complex.Acos#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.acos/cs/acos1.cs#1)]
+ [!code-vb[System.Numerics.Complex.Acos#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.acos/vb/acos1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cosh">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Complex Cosh (System.Numerics.Complex value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Complex Cosh(valuetype System.Numerics.Complex value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.Cosh(System.Numerics.Complex)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Complex" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine komplexe Zahl.</param>
+        <summary>Gibt den Hyperbelkosinus der angegebenen komplexen Zahl zurück.</summary>
+        <returns>Der Hyperbelkosinus von <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Complex.Cosh%2A> -Methode für komplexe Zahlen entspricht der <xref:System.Math.Cosh%2A?displayProperty=nameWithType> Methode für reelle Zahlen.  
+  
+ Die <xref:System.Numerics.Complex.Cosh%2A> Methode verwendet die folgende Formel berechnet den hyperbolischen Kosinus der komplexen Zahl a + Bi:  
+  
+ (<xref:System.Math.Cosh%2A>(a) * <xref:System.Math.Cos%2A>(b) <xref:System.Math.Sinh%2A>(a) * <xref:System.Math.Sin%2A>(b))  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Divide">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Complex Divide (System.Numerics.Complex dividend, System.Numerics.Complex divisor);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Complex Divide(valuetype System.Numerics.Complex dividend, valuetype System.Numerics.Complex divisor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.Divide(System.Numerics.Complex,System.Numerics.Complex)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dividend" Type="System.Numerics.Complex" />
+        <Parameter Name="divisor" Type="System.Numerics.Complex" />
+      </Parameters>
+      <Docs>
+        <param name="dividend">Die zu dividierende komplexe Zahl.</param>
+        <param name="divisor">Die komplexe Zahl, durch die dividiert wird.</param>
+        <summary>Dividiert eine komplexe Zahl durch eine andere komplexe Zahl und gibt das Ergebnis zurück.</summary>
+        <returns>Der Quotient der Division.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Division einer komplexen Zahl, einer + Bi, indem Sie eine zweite komplexe Zahl, die Anzahl, die c + die di, weist folgende Form:  
+  
+ ((AC + BD) / (c<sup>2</sup> + d<sup>2</sup>)) + ((bc-ad) / (c<sup>2</sup> + d<sup>2</sup>) ich  
+  
+ Wenn die Berechnung des Quotienten zu einem Überlauf in der realen oder imaginären Komponente ergibt, ist der Wert dieser Komponente <xref:System.Double.PositiveInfinity?displayProperty=nameWithType> oder <xref:System.Double.NegativeInfinity?displayProperty=nameWithType>.  
+  
+ Die <xref:System.Numerics.Complex.Divide%2A> Methode kann verwendet werden, von Sprachen, die benutzerdefinierte Operatoren nicht unterstützen. Das Verhalten ist identisch mit der Division mit dem Divisionsoperator.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel werden eine komplexe Zahl von jedem Element in einem Array komplexer Zahlen dividiert.  
+  
+ [!code-csharp[System.Numerics.Complex.Divide#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.divide/cs/divide1.cs#1)]
+ [!code-vb[System.Numerics.Complex.Divide#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.divide/vb/divide1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Numerics.Complex value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype System.Numerics.Complex value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.Equals(System.Numerics.Complex)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Complex" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu vergleichende komplexe Zahl.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob die aktuelle Instanz und eine angegebene komplexe Zahl den gleichen Wert haben.</summary>
+        <returns>
+          <see langword="true" />, wenn diese komplexe Zahl und <paramref name="value" /> den gleichen Wert haben, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Complex.Equals%28System.Numerics.Complex%29> Methode stellt der <xref:System.IEquatable%601> Implementierung für die <xref:System.Numerics.Complex> Struktur. Eine etwas bessere Leistung als <xref:System.Numerics.Complex.Equals%28System.Object%29> Methode, da sie keinen Parameter in einer komplexen Zahl zu konvertieren.  
+  
+ Wenn ihre reellen Teile gleich sind und ihre imaginären Teile gleich sind, werden die zwei komplexe Zahlen gleich sind. Die <xref:System.Numerics.Complex.Equals%28System.Numerics.Complex%29> Methode entspricht dem folgenden Ausdruck:  
+  
+ [!code-csharp[System.Numerics.Complex.Equals#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.equals/cs/equals1.cs#1)]
+ [!code-vb[System.Numerics.Complex.Equals#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.equals/vb/equals1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="usage">
+          <para>Verwenden der <see cref="M:System.Numerics.Complex.Equals(System.Numerics.Complex)" /> Methode mit Vorsicht, da zwei Werte, die anscheinend äquivalent sind berücksichtigt werden können aufgrund der unterschiedlichen Genauigkeit die reellen und imaginären Komponenten ungleich. Im folgenden Beispiel gemeldet, die <c>(3.33333, 0.142857)</c> und <c>(10/3, 1/7)</c> ungleich sind.  
+  
+ [!code-csharp[System.Numerics.Complex.Equals#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.equals/cs/precision1.cs#4)]
+ [!code-vb[System.Numerics.Complex.Equals#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.equals/vb/precision1.vb#4)]  
+  
+ Eine empfohlene Verfahren besteht darin, eine akzeptable Rand Unterschied zwischen den beiden Werten definieren (z. B.. 01 % einer der Werte reellen und imaginären Komponenten) statt Vergleichen der Werte hinsichtlich ihrer Gleichheit. Wenn der Absolute Wert des Unterschieds zwischen den beiden Werten kleiner als oder gleich besagter Rand ist, der Unterschied ist wahrscheinlich aufgrund entscheidend dafür, Genauigkeit, und daher die Werte als gleich wahrscheinlich sind. Im folgenden Beispiel wird diese Technik, die zwei komplexe Werte verglichen werden soll, die im vorherigen Codebeispiel gefunden werden. Er findet den zwei komplexe Zahlen gleich sind.  
+  
+ [!code-csharp[System.Numerics.Complex.Equals#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.equals/cs/precision1.cs#5)]
+ [!code-vb[System.Numerics.Complex.Equals#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.equals/vb/precision1.vb#5)]</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das zu vergleichende Objekt.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob die aktuelle Instanz und ein angegebenes Objekt über den gleichen Wert verfügen.</summary>
+        <returns>
+          <see langword="true" />, wenn der <paramref name="obj" />-Parameter ein <see cref="T:System.Numerics.Complex" />-Objekt oder ein Typ ist, der die implizite Konvertierung in ein <see cref="T:System.Numerics.Complex" />-Objekt unterstützt, und der Wert gleich dem aktuellen <see cref="T:System.Numerics.Complex" />-Objekt ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ihre reellen Teile gleich sind und ihre imaginären Teile gleich sind, werden die zwei komplexe Zahlen gleich sind. Die <xref:System.Numerics.Complex.Equals%28System.Object%29> Methode entspricht dem folgenden Ausdruck:  
+  
+ [!code-csharp[System.Numerics.Complex.Equals#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.equals/cs/equals1.cs#2)]
+ [!code-vb[System.Numerics.Complex.Equals#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.equals/vb/equals1.vb#2)]  
+  
+ Wenn die `obj` -Parameter ist eine <xref:System.Numerics.Complex> -Objekt, aber es ist ein Datentyp, der für die eine implizite Konvertierung definiert ist, die <xref:System.Numerics.Complex.Equals%28System.Object%29> -Methode konvertiert `obj` auf eine <xref:System.Numerics.Complex> -Objekt, dessen Realteil gleich dem Wert des ist`obj`und deren imaginärer Teil gleich 0 (null) vor dem Vergleich. Das folgende Beispiel veranschaulicht dies durch suchen, dass eine komplexe Zahl und einen Gleitkommawert mit doppelter Genauigkeit gleich sind.  
+  
+ [!code-csharp[System.Numerics.Complex.Equals#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.equals/cs/equals3.cs#6)]
+ [!code-vb[System.Numerics.Complex.Equals#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.equals/vb/equals3.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="usage">
+          <para>Verwenden der <see cref="M:System.Numerics.Complex.Equals(System.Numerics.Complex)" /> Methode mit Vorsicht, da zwei Werte, die anscheinend äquivalent sind berücksichtigt werden können aufgrund der unterschiedlichen Genauigkeit die reellen und imaginären Komponenten ungleich. Das Problem verstärkt werden kann, wenn <paramref name="obj" /> muss eine Konvertierung in einen <see cref="T:System.Double" /> vor dem Vergleich. Im folgenden Beispiel wird eine komplexe Zahl, deren reelle Komponente angezeigt wird, entspricht, einer <see cref="T:System.Single" /> Wert mit dem <see cref="T:System.Single" /> Wert. Wie die Ausgabe zeigt, gibt der Vergleich Gleichheit <see langword="False" />.  
+  
+ [!code-csharp[System.Numerics.Complex.Equals#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.equals/cs/equals4.cs#8)]
+ [!code-vb[System.Numerics.Complex.Equals#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.equals/vb/equals4.vb#8)]  
+  
+ Eine empfohlene Verfahren besteht darin, eine akzeptable Rand Unterschied zwischen den beiden Werten definieren (z. B.. 01 % einer der Werte reellen und imaginären Komponenten) statt Vergleichen der Werte hinsichtlich ihrer Gleichheit. Wenn der Absolute Wert des Unterschieds zwischen den beiden Werten kleiner als oder gleich besagter Rand ist, der Unterschied ist wahrscheinlich aufgrund einen Unterschied bei der Genauigkeit, und daher die Werte als gleich wahrscheinlich sind. Im folgenden Beispiel wird diese Technik, die zwei Werte verglichen werden soll, die im vorherigen Codebeispiel gefunden werden. Er findet jetzt gleich sein.  
+  
+ [!code-csharp[System.Numerics.Complex.Equals#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.equals/cs/precision2.cs#7)]
+ [!code-vb[System.Numerics.Complex.Equals#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.equals/vb/precision2.vb#7)]</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Exp">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Complex Exp (System.Numerics.Complex value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Complex Exp(valuetype System.Numerics.Complex value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.Exp(System.Numerics.Complex)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Complex" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine komplexe Zahl, die einen Exponenten angibt.</param>
+        <summary>Gibt <see langword="e" /> potenziert mit einer angegebenen komplexen Zahl zurück.</summary>
+        <returns>Die Zahl <see langword="e" /> hoch <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Numerics.Complex.Pow%2A> Methode, um die Potenzen von anderen Basen zu berechnen.  
+  
+ Die <xref:System.Numerics.Complex.Exp%2A> -Methode für komplexe Zahlen entspricht der <xref:System.Math.Exp%2A?displayProperty=nameWithType> Methode für reelle Zahlen. <xref:System.Numerics.Complex.Exp%2A>ist das Gegenteil der <xref:System.Numerics.Complex.Log%2A>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die <xref:System.Numerics.Complex.Exp%2A> Methode. Es veranschaulicht, wie für das Fehlen der Genauigkeit der Kompensation der <xref:System.Double> -Datentyp, übergeben den Rückgabewert von der <xref:System.Numerics.Complex.Log%2A> Methode, um die <xref:System.Numerics.Complex.Exp%2A> Methodenrückgabe die ursprünglichen <xref:System.Numerics.Complex> Wert.  
+  
+ [!code-csharp[System.Numerics.Complex.Log#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.log/cs/log1.cs#1)] 
+ [!code-vb[System.Numerics.Complex.Log#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.log/vb/log1.vb#1)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromPolarCoordinates">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Complex FromPolarCoordinates (double magnitude, double phase);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Complex FromPolarCoordinates(float64 magnitude, float64 phase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.FromPolarCoordinates(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="magnitude" Type="System.Double" />
+        <Parameter Name="phase" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="magnitude">Die Größe, die die Entfernung vom Ursprung (dem Schnittpunkt der x-Achse mit der y-Achse) zur Zahl ist.</param>
+        <param name="phase">Die Phase, d. h. der Winkel von der Linie zur horizontalen Achse, gemessen im Bogenmaß.</param>
+        <summary>Erstellt eine komplexe Zahl aus den Polarkoordinaten eines Punkts.</summary>
+        <returns>Eine komplexe Zahl.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Complex.FromPolarCoordinates%2A> -Methode instanziiert eine komplexe Zahl, die basierend auf ihrer Polarkoordinaten.  
+  
+ Da es mehrere Darstellungen eines Punkts auf einer komplexen Ebene, den Rückgabewert sind der <xref:System.Numerics.Complex.FromPolarCoordinates%2A> Methode normalisiert wird. Die Größe wird in eine positive Zahl normalisiert, und die Phase wird auf einen Wert im Bereich von - normalisiert<xref:System.Math.PI> auf <xref:System.Math.PI>. Demzufolge die Werte der <xref:System.Numerics.Complex.Phase%2A> und <xref:System.Numerics.Complex.Magnitude%2A> Eigenschaften des resultierenden komplexen Zahl möglicherweise nicht die ursprünglichen Werte der gleich der `magnitude` und `phase` Parameter.  
+  
+ Konvertieren eines Werts von Grad in Bogenmaß für die `phase` multiplizieren, indem sie Parameter  <xref:System.Math.PI?displayProperty=nameWithType> /180.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Numerics.Complex.FromPolarCoordinates%2A> Methode zum Instanziieren einer komplexen Zahl basierend auf ihrer Polarkoordinaten und zeigt dann den Wert von dessen <xref:System.Numerics.Complex.Magnitude%2A> und <xref:System.Numerics.Complex.Phase%2A> Eigenschaften.  
+  
+ [!code-csharp[System.Numerics.Complex.Phase#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.phase/cs/phase1.cs#1)]
+ [!code-vb[System.Numerics.Complex.Phase#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.phase/vb/phase1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für das aktuelle <see cref="T:System.Numerics.Complex" />-Objekt zurück.</summary>
+        <returns>Ein 32-Bit-Hashcode als ganze Zahl mit Vorzeichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Imaginary">
+      <MemberSignature Language="C#" Value="public double Imaginary { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Imaginary" />
+      <MemberSignature Language="DocId" Value="P:System.Numerics.Complex.Imaginary" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die imaginäre Komponente des aktuellen <see cref="T:System.Numerics.Complex" />-Objekts ab.</summary>
+        <value>Die imaginäre Komponente einer komplexen Zahl.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine komplexe Zahl a + Bi, die <xref:System.Numerics.Complex.Imaginary%2A> Eigenschaft gibt den Wert von b zurück.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Array von <xref:System.Numerics.Complex> Objekten und zeigt die reellen und imaginären Komponenten jedes in der Form a + Bi.  
+  
+ [!code-csharp[System.Numerics.Complex.Real#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.real/cs/real1.cs#1)]
+ [!code-vb[System.Numerics.Complex.Real#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.real/vb/real1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImaginaryOne">
+      <MemberSignature Language="C#" Value="public static readonly System.Numerics.Complex ImaginaryOne;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Numerics.Complex ImaginaryOne" />
+      <MemberSignature Language="DocId" Value="F:System.Numerics.Complex.ImaginaryOne" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine neue <see cref="T:System.Numerics.Complex" />-Instanz mit einer reellen Zahl gleich 0 und einer imaginären Zahl gleich 1 zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel instanziiert einen <xref:System.Numerics.Complex> Wert mithilfe der <xref:System.Numerics.Complex.ImaginaryOne> Eigenschaft. Es vergleicht dann diesen Wert auf einen anderen Wert, der durch den Aufruf instanziiert wird die <xref:System.Numerics.Complex> Konstruktor mit einer reellen Teil, der ungleich 0 (null) und einem imaginären Teil entspricht. Wie die Ausgabe des Beispiels zeigt, sind die beiden Werte gleich.  
+  
+ [!code-csharp[System.Numerics.Complex.ImaginaryOne#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.imaginaryone/cs/imaginaryone1.cs#1)]
+ [!code-vb[System.Numerics.Complex.ImaginaryOne#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.imaginaryone/vb/imaginaryone1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Log">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Complex Log (System.Numerics.Complex value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Complex Log(valuetype System.Numerics.Complex value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.Log(System.Numerics.Complex)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Complex" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine komplexe Zahl.</param>
+        <summary>Gibt den natürlichen Logarithmus (zur Basis <see langword="e" />) einer komplexen Zahl zurück.</summary>
+        <returns>Der natürliche Logarithmus (zur Basis <see langword="e" />) von <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Complex.Log%28System.Numerics.Complex%29> -Methode für komplexe Zahlen entspricht der <xref:System.Math.Log%28System.Double%29?displayProperty=nameWithType> Methode für reelle Zahlen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die <xref:System.Numerics.Complex.Log%2A> Methode. Es veranschaulicht, wie für das Fehlen der Genauigkeit der Kompensation der <xref:System.Double> -Datentyp, übergeben den Rückgabewert von der <xref:System.Numerics.Complex.Log%2A> Methode, um die <xref:System.Numerics.Complex.Exp%2A> Methodenrückgabe die ursprünglichen <xref:System.Numerics.Complex> Wert.  
+  
+ [!code-csharp[System.Numerics.Complex.Log#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.log/cs/log1.cs#1)] 
+ [!code-vb[System.Numerics.Complex.Log#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.log/vb/log1.vb#1)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Log">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Complex Log (System.Numerics.Complex value, double baseValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Complex Log(valuetype System.Numerics.Complex value, float64 baseValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.Log(System.Numerics.Complex,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Complex" />
+        <Parameter Name="baseValue" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine komplexe Zahl.</param>
+        <param name="baseValue">Die Basis des Logarithmus.</param>
+        <summary>Gibt den Logarithmus einer angegebenen komplexen Zahl zu einer angegebenen Basis zurück.</summary>
+        <returns>Der Logarithmus von <paramref name="value" /> zur Basis <paramref name="baseValue" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Complex.Log%28System.Numerics.Complex%2CSystem.Double%29> -Methode für komplexe Zahlen entspricht der <xref:System.Math.Log%28System.Double%2CSystem.Double%29?displayProperty=nameWithType> Methode für reelle Zahlen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Log10">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Complex Log10 (System.Numerics.Complex value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Complex Log10(valuetype System.Numerics.Complex value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.Log10(System.Numerics.Complex)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Complex" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine komplexe Zahl.</param>
+        <summary>Gibt den Logarithmus einer angegebenen komplexen Zahl zur Basis 10 zurück.</summary>
+        <returns>Der Logarithmus zur Basis 10 von <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Complex.Log10%2A> -Methode für komplexe Zahlen entspricht der <xref:System.Math.Log10%2A?displayProperty=nameWithType> Methode für reelle Zahlen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Magnitude">
+      <MemberSignature Language="C#" Value="public double Magnitude { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Magnitude" />
+      <MemberSignature Language="DocId" Value="P:System.Numerics.Complex.Magnitude" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größenordnung (oder den absoluten Wert) einer komplexen Zahl ab.</summary>
+        <value>Die Größe der aktuellen Instanz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Complex.Magnitude%2A> Eigenschaft ist identisch mit den absoluten Wert einer komplexen Zahl. Es gibt die Entfernung vom Ursprung (dem Schnittpunkt der x-Achse und y-Achse in der kartesischen Koordinatensystem), der zweidimensionale Punkt, der durch eine komplexe Zahl dargestellt wird. Der Absolute Wert wird wie folgt berechnet:  
+  
+ &#124; eine + Bi &#124; = <xref:System.Math.Sqrt%2A?displayProperty=nameWithType>(eine * ein + b * b)  
+  
+ Wenn die Berechnung des absoluten Werts zu einem Überlauf führt, gibt diese Eigenschaft entweder <xref:System.Double.PositiveInfinity?displayProperty=nameWithType> oder <xref:System.Double.NegativeInfinity?displayProperty=nameWithType>.  
+  
+ Die <xref:System.Numerics.Complex.Magnitude%2A> und <xref:System.Numerics.Complex.Phase%2A> Eigenschaften wird definiert, die Position eines Punkts, der das Koordinatensystem Polar eine komplexe Zahl darstellt.  
+  
+ Instanziieren Sie eine komplexe Zahl, die basierend auf ihrer Polarkoordinaten anstelle dessen kartesischen Koordinaten durch Aufrufen der <xref:System.Numerics.Complex.FromPolarCoordinates%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel berechnet den absoluten Wert einer komplexen Zahl und beweist, dass der Wert entspricht der <xref:System.Numerics.Complex.Magnitude%2A> Eigenschaft.  
+  
+ [!code-csharp[System.Numerics.Complex.Abs#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.abs/cs/abs1.cs#1)]
+ [!code-vb[System.Numerics.Complex.Abs#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.abs/vb/abs1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Multiply">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Complex Multiply (System.Numerics.Complex left, System.Numerics.Complex right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Complex Multiply(valuetype System.Numerics.Complex left, valuetype System.Numerics.Complex right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.Multiply(System.Numerics.Complex,System.Numerics.Complex)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Numerics.Complex" />
+        <Parameter Name="right" Type="System.Numerics.Complex" />
+      </Parameters>
+      <Docs>
+        <param name="left">Die erste zu multiplizierende komplexe Zahl.</param>
+        <param name="right">Die zweite zu multiplizierende komplexe Zahl.</param>
+        <summary>Gibt das Produkt zweier komplexer Zahlen zurück.</summary>
+        <returns>Das Produkt des <paramref name="left" />-Parameters und des <paramref name="right" />-Parameters.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Multiplikation mit einer komplexen Zahl "," a + Bi, und eine zweite komplexe Zahl, die c + di, weist folgende Form:  
+  
+ (Ac - bd) + (Ad + bc) ich  
+  
+ Wenn die Multiplikation einen Überlauf in der realen oder imaginären Komponente ergibt, ist der Wert dieser Komponente <xref:System.Double.PositiveInfinity?displayProperty=nameWithType> oder <xref:System.Double.NegativeInfinity?displayProperty=nameWithType>.  
+  
+ Die <xref:System.Numerics.Complex.Multiply%2A> Methode ist für Sprachen, die keine benutzerdefinierte Operatoren unterstützen implementiert. Das Verhalten ist identisch mit der Multiplikation mit der Multiplikationsoperator.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine komplexe Zahl von jedem Element in einem Array komplexer Zahlen multipliziert.  
+  
+ [!code-csharp[System.Numerics.Complex.Multiply#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.multiply/cs/multiply1.cs#1)]
+ [!code-vb[System.Numerics.Complex.Multiply#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.multiply/vb/multiply1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Negate">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Complex Negate (System.Numerics.Complex value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Complex Negate(valuetype System.Numerics.Complex value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.Negate(System.Numerics.Complex)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Complex" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine komplexe Zahl.</param>
+        <summary>Gibt die additive Inverse einer angegebenen komplexen Zahl zurück.</summary>
+        <returns>Das Ergebnis der <see cref="P:System.Numerics.Complex.Real" />- und <see cref="P:System.Numerics.Complex.Imaginary" />-Komponenten des <paramref name="value" />-Parameters multipliziert mit -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Additive Inverse einer komplexen Zahl ist eine komplexe Zahl, die den Wert erzeugt <xref:System.Numerics.Complex> Wenn es in der ursprünglichen komplexe Zahl hinzugefügt wird. Diese Methode gibt eine komplexe Zahl, die in der die reellen und imaginären Komponenten der ursprünglichen komplexen Zahl mit-1 multipliziert werden.  
+  
+ Die <xref:System.Numerics.Complex.Negate%2A> Methode ist für Sprachen, die keine benutzerdefinierte Operatoren unterstützen implementiert. Sein Verhalten ist identisch mit den unären Negationsoperator Negation <xref:System.Numerics.Complex.op_UnaryNegation%2A>.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel ruft die Additive Inverse jedes Elements in einem Array komplexer Zahlen ab.  
+  
+ [!code-csharp[System.Numerics.Complex.Negate#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.negate/cs/negate1.cs#1)]
+ [!code-vb[System.Numerics.Complex.Negate#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.negate/vb/negate1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="One">
+      <MemberSignature Language="C#" Value="public static readonly System.Numerics.Complex One;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Numerics.Complex One" />
+      <MemberSignature Language="DocId" Value="F:System.Numerics.Complex.One" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine neue <see cref="T:System.Numerics.Complex" />-Instanz mit einer reellen Zahl gleich 1 und einer imaginären Zahl gleich 0 zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel instanziiert einen <xref:System.Numerics.Complex> Wert mithilfe der <xref:System.Numerics.Complex.One> Eigenschaft. Es vergleicht dann diesen Wert auf einen anderen Wert, der durch den Aufruf instanziiert wird die <xref:System.Numerics.Complex> Konstruktor mit einer echten gleich Ausdruck und einem imaginären Teil gleich 0 (null). Wie die Ausgabe des Beispiels zeigt, sind die beiden Werte gleich.  
+  
+ [!code-csharp[System.Numerics.Complex.One#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.one/cs/one1.cs#1)]
+ [!code-vb[System.Numerics.Complex.One#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.one/vb/one1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Addition">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Complex operator + (System.Numerics.Complex left, System.Numerics.Complex right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Complex op_Addition(valuetype System.Numerics.Complex left, valuetype System.Numerics.Complex right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.op_Addition(System.Numerics.Complex,System.Numerics.Complex)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Numerics.Complex" />
+        <Parameter Name="right" Type="System.Numerics.Complex" />
+      </Parameters>
+      <Docs>
+        <param name="left">Der erste zu addierende Wert.</param>
+        <param name="right">Der zweite zu addierende Wert.</param>
+        <summary>Addiert zwei komplexe Zahlen.</summary>
+        <returns>Die Summe von <paramref name="left" /> und <paramref name="right" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Complex.op_Addition%2A> Methode definiert die Additionsoperation für komplexe Zahlen. Dadurch werden dem folgenden Code:  
+  
+ [!code-csharp[System.Numerics.Complex.Add#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.add/cs/add3.cs#3)]
+ [!code-vb[System.Numerics.Complex.Add#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.add/vb/add3.vb#3)]  
+  
+ Das Hinzufügen einer komplexen Zahl "," a + Bi, und eine zweite komplexe Zahl, die c + di, weist folgende Form:  
+  
+ (a + C) + (b + d) ich  
+  
+ Wenn die Methode Ergebnisse zu einem Überlauf entweder in der realen oder imaginären Komponente aufrufen, ist der Wert dieser Komponente <xref:System.Double.PositiveInfinity?displayProperty=nameWithType> oder <xref:System.Double.NegativeInfinity?displayProperty=nameWithType>.  
+  
+ Sprachen, die keine benutzerdefinierte Operatoren unterstützen können Aufrufen der <xref:System.Numerics.Complex.Add%2A> Methode stattdessen.  
+  
+ Die entsprechende Methode für diesen Operator ist.<xref:System.Numerics.Complex.Add%28System.Numerics.Complex%2CSystem.Numerics.Complex%29?displayProperty=nameWithType>  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht außerdem mit komplexe Zahlen.  
+  
+ [!code-csharp[System.Numerics.Complex.Add#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.add/cs/add2.cs#2)]
+ [!code-vb[System.Numerics.Complex.Add#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.add/vb/add2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Division">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Complex operator / (System.Numerics.Complex left, System.Numerics.Complex right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Complex op_Division(valuetype System.Numerics.Complex left, valuetype System.Numerics.Complex right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.op_Division(System.Numerics.Complex,System.Numerics.Complex)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Numerics.Complex" />
+        <Parameter Name="right" Type="System.Numerics.Complex" />
+      </Parameters>
+      <Docs>
+        <param name="left">Der zu dividierende Wert.</param>
+        <param name="right">Der Wert, durch den dividiert werden soll.</param>
+        <summary>Dividiert eine angegebene komplexe Zahl durch eine andere angegebene komplexe Zahl.</summary>
+        <returns>Das Ergebnis der Division von <paramref name="left" /> durch <paramref name="right" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Complex.op_Division%2A> Methode definiert die Divisionsoperation für komplexe Zahlen. Dadurch werden dem folgenden Code:  
+  
+ [!code-csharp[System.Numerics.Complex.Divide#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.divide/cs/divide2.cs#2)]
+ [!code-vb[System.Numerics.Complex.Divide#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.divide/vb/divide2.vb#2)]  
+  
+ Die Division eines komplexen Zahl "," a + Bi, und eine zweite komplexe Zahl, die c + di, weist folgende Form:  
+  
+ ((AC + BD) / (c<sup>2</sup> + d<sup>2</sup>)) + ((bc-ad) / (c<sup>2</sup> + d<sup>2</sup>) ich  
+  
+ Wenn ein Überlauf in der realen oder imaginären Komponente die Division ergibt, ist der Wert dieser Komponente <xref:System.Double.PositiveInfinity?displayProperty=nameWithType> oder <xref:System.Double.NegativeInfinity?displayProperty=nameWithType>.  
+  
+ Sprachen, die benutzerdefinierte Operatoren und Überladen von Operatoren nicht unterstützen können Aufrufen der <xref:System.Numerics.Complex.Divide%2A> Methode stattdessen.  
+  
+ Die entsprechende Methode für diesen Operator ist.<xref:System.Numerics.Complex.Divide%28System.Numerics.Complex%2CSystem.Numerics.Complex%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Numerics.Complex left, System.Numerics.Complex right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Numerics.Complex left, valuetype System.Numerics.Complex right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.op_Equality(System.Numerics.Complex,System.Numerics.Complex)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Numerics.Complex" />
+        <Parameter Name="right" Type="System.Numerics.Complex" />
+      </Parameters>
+      <Docs>
+        <param name="left">Die erste zu vergleichende komplexe Zahl.</param>
+        <param name="right">Die zweite zu vergleichende komplexe Zahl.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob zwei komplexe Zahlen gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn der <paramref name="left" />-Parameter und der <paramref name="right" />-Parameter denselben Wert aufweisen, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Complex.op_Equality%2A> Methode definiert, den Vorgang des Gleichheitsoperators für <xref:System.Numerics.Complex> Werte. Dadurch werden dem folgenden Code:  
+  
+ [!code-csharp[System.Numerics.Complex.Equals#9](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.equals/cs/eqoperator1.cs#9)]
+ [!code-vb[System.Numerics.Complex.Equals#9](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.equals/vb/eqoperator1.vb#9)]  
+  
+ Sprachen, die keine benutzerdefinierte Operatoren unterstützen können Aufrufen der <xref:System.Numerics.Complex.Equals%28System.Numerics.Complex%29> Methode stattdessen.  
+  
+ Wenn ihre reellen Teile gleich sind und ihre imaginären Teile gleich sind, werden die zwei komplexe Zahlen gleich sind. Die <xref:System.Numerics.Complex.op_Equality%2A> Methode entspricht dem folgenden Ausdruck:  
+  
+ [!code-csharp[System.Numerics.Complex.Equals#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.equals/cs/equals1.cs#3)]
+ [!code-vb[System.Numerics.Complex.Equals#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.equals/vb/equals1.vb#3)]  
+  
+ Beachten Sie, dass aufgrund der Unterschiede in der Genauigkeit zwei komplexe Zahlen, der anscheinend äquivalent sind als ungleich betrachtet werden können. Weitere Informationen und eine mögliche problemumgehung finden Sie in der <xref:System.Numerics.Complex.Equals%28System.Numerics.Complex%29> Methode.  
+  
+ Die entsprechende Methode für diesen Operator ist.<xref:System.Numerics.Complex.Equals%2A?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator System.Numerics.Complex (decimal value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Complex op_Explicit(valuetype System.Decimal value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.op_Explicit(System.Decimal)~System.Numerics.Complex" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Decimal" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert, der in eine komplexe Zahl konvertiert werden soll.</param>
+        <summary>Definiert eine explizite Konvertierung eines <see cref="T:System.Decimal" />-Werts in eine komplexe Zahl.</summary>
+        <returns>Eine komplexe Zahl mit einer reellen Komponente gleich <paramref name="value" /> und einer imaginären Komponente gleich 0.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Explizite Konvertierungsoperatoren definieren Typen konvertiert werden können, die eine <xref:System.Numerics.Complex> Objekt. Sprachcompiler führen diese Konvertierung nicht automatisch aus, da es zu Datenverlust führen kann. Stattdessen führen sie die Konvertierung nur dann, wenn ein Umwandlungsoperator (in c#) oder eine Konvertierungsfunktion (z. B. `CType` in Visual Basic) verwendet wird. Andernfalls zeigen sie einen Compilerfehler.
+
+ Die Konvertierung von einem <xref:System.Decimal> Wert, der dem reellen Teil einer komplexen Zahl kann zu einem Genauigkeitsverlust führen, da ein <xref:System.Double>, ist der Typ der komplexen Zahl <xref:System.Numerics.Complex.Real%2A> Eigenschaft verfügt über weniger signifikante Ziffern als ein <xref:System.Decimal>.
+
+
+
+## Examples
+ Das folgende Beispiel veranschaulicht die explizite Konvertierung <xref:System.Decimal> Werte <xref:System.Numerics.Complex> Werte.
+
+ [!code-csharp[System.Numerics.Complex.Explicit#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.explicit/cs/explicit1.cs#1)]   
+ [!code-vb[System.Numerics.Complex.Explicit#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.explicit/vb/explicit1.vb#1)]   
+
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator System.Numerics.Complex (System.Numerics.BigInteger value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Complex op_Explicit(valuetype System.Numerics.BigInteger value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.op_Explicit(System.Numerics.BigInteger)~System.Numerics.Complex" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.BigInteger" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert, der in eine komplexe Zahl konvertiert werden soll.</param>
+        <summary>Definiert eine explizite Konvertierung eines <see cref="T:System.Numerics.BigInteger" />-Werts in eine komplexe Zahl.</summary>
+        <returns>Eine komplexe Zahl mit einer reellen Komponente gleich <paramref name="value" /> und einer imaginären Komponente gleich 0.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Explizite Konvertierungsoperatoren definieren Typen konvertiert werden können, die eine <xref:System.Numerics.Complex> Objekt. Sprachcompiler führen diese Konvertierung nicht automatisch aus, da es zu Datenverlust führen kann. Stattdessen führen sie die Konvertierung nur dann, wenn ein Umwandlungsoperator (in c#) oder eine Konvertierungsfunktion (z. B. `CType` in Visual Basic) verwendet wird. Andernfalls zeigen sie einen Compilerfehler.
+
+ Die Konvertierung von einem <xref:System.Numerics.BigInteger> Wert, der dem reellen Teil einer komplexen Zahl kann zu einem Genauigkeitsverlust führen, da ein <xref:System.Double>, ist der Typ der komplexen Zahl <xref:System.Numerics.Complex.Real%2A> Eigenschaft verfügt über weniger signifikante Ziffern als ein <xref:System.Numerics.BigInteger>.
+
+ Wenn die Konvertierung erfolgreich ist da die <xref:System.Numerics.BigInteger> liegt außerhalb des Bereichs der <xref:System.Double> Typ, der Vorgang wird nicht ausgelöst. eine <xref:System.OverflowException>. Stattdessen Wenn `value` ist kleiner als <xref:System.Double.MinValue>, das Ergebnis ist eine komplexe Zahl mit einem <xref:System.Numerics.Complex.Real%2A> Eigenschaftswert gleich <xref:System.Double.NegativeInfinity>. Wenn `value` ist größer als <xref:System.Double.MaxValue>, das Ergebnis ist eine komplexe Zahl mit einem <xref:System.Numerics.Complex.Real%2A> Eigenschaftswert gleich <xref:System.Double.PositiveInfinity>.
+
+
+
+## Examples
+ Das folgende Beispiel veranschaulicht die explizite Konvertierung <xref:System.Numerics.BigInteger> Werte <xref:System.Numerics.Complex> Werte.
+
+ [!code-csharp[System.Numerics.Complex.Explicit#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.explicit/cs/explicit1.cs#2)]   
+ [!code-vb[System.Numerics.Complex.Explicit#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.explicit/vb/explicit1.vb#2)]   
+
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Numerics.Complex (byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Complex op_Implicit(unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.op_Implicit(System.Byte)~System.Numerics.Complex" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert, der in eine komplexe Zahl konvertiert werden soll.</param>
+        <summary>Definiert eine implizite Konvertierung eines Bytewerts ohne Vorzeichen in eine komplexe Zahl.</summary>
+        <returns>Ein Objekt, das den Wert des <paramref name="value" />-Parameters als reellen Teil und 0 als imaginären Teil enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überladungen der der <xref:System.Numerics.Complex.op_Implicit%2A> Operator definieren die Typen aus dem automatisch ein Compiler konvertieren kann ein <xref:System.Numerics.Complex> Objekt ohne einen expliziten Umwandlungsoperator (in c#) oder einen Aufruf für eine Konvertierungsfunktion (in Visual Basic). Sie sind erweiterungskonvertierungen, die beinhalten keine Daten verloren gehen, und lösen Sie keine <xref:System.OverflowException>.
+
+ Diese Überladung kann den Compiler Konvertierungen von verarbeitet eine <xref:System.Byte> Wert in eine komplexe Zahl, wie im folgenden Beispiel gezeigt. Beachten Sie, dass das Ergebnis der Konvertierung einer komplexen Zahl, deren reelle Teil gleich ist, der <xref:System.Byte> Wert und deren imaginärer Teil gleich 0 (null) ist.
+
+ [!code-csharp[System.Numerics.Complex.Implicit#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.implicit/cs/implicit1.cs#1)]   
+ [!code-vb[System.Numerics.Complex.Implicit#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.implicit/vb/implicit1.vb#1)]   
+
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Numerics.Complex (double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Complex op_Implicit(float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.op_Implicit(System.Double)~System.Numerics.Complex" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert, der in eine komplexe Zahl konvertiert werden soll.</param>
+        <summary>Definiert eine implizite Konvertierung einer Gleitkommazahl mit doppelter Genauigkeit in eine komplexe Zahl.</summary>
+        <returns>Ein Objekt, das den Wert des <paramref name="value" />-Parameters als reellen Teil und 0 als imaginären Teil enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überladungen der der <xref:System.Numerics.Complex.op_Implicit%2A> Operator definieren die Typen aus dem automatisch ein Compiler konvertieren kann ein <xref:System.Numerics.Complex> Objekt ohne einen expliziten Umwandlungsoperator (in c#) oder einen Aufruf für eine Konvertierungsfunktion (in Visual Basic). Sie sind erweiterungskonvertierungen, die beinhalten keine Daten verloren gehen, und lösen Sie keine <xref:System.OverflowException>.
+
+ Diese Überladung kann den Compiler Konvertierungen von verarbeitet eine <xref:System.Double> Wert in eine komplexe Zahl, wie im folgenden Beispiel gezeigt. Beachten Sie, dass das Ergebnis der Konvertierung einer komplexen Zahl, deren reelle Teil gleich ist, der <xref:System.Double> Wert und deren imaginärer Teil gleich 0 (null) ist.
+
+ [!code-csharp[System.Numerics.Complex.Implicit#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.implicit/cs/implicit1.cs#2)]   
+ [!code-vb[System.Numerics.Complex.Implicit#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.implicit/vb/implicit1.vb#2)]   
+
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Numerics.Complex (short value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Complex op_Implicit(int16 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.op_Implicit(System.Int16)~System.Numerics.Complex" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert, der in eine komplexe Zahl konvertiert werden soll.</param>
+        <summary>Definiert eine implizite Konvertierung einer 16-Bit-Ganzzahl mit Vorzeichen in eine komplexe Zahl.</summary>
+        <returns>Ein Objekt, das den Wert des <paramref name="value" />-Parameters als reellen Teil und 0 als imaginären Teil enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überladungen der der <xref:System.Numerics.Complex.op_Implicit%2A> Operator definieren die Typen aus dem automatisch ein Compiler konvertieren kann ein <xref:System.Numerics.Complex> Objekt ohne einen expliziten Umwandlungsoperator (in c#) oder einen Aufruf für eine Konvertierungsfunktion (in Visual Basic). Sie sind erweiterungskonvertierungen, die beinhalten keine Daten verloren gehen, und lösen Sie keine <xref:System.OverflowException>.
+
+ Diese Überladung kann den Compiler verarbeitet Konvertierungen von einem 16-Bit-Ganzzahl mit Vorzeichen in eine komplexe Zahl, wie im folgenden Beispiel gezeigt. Beachten Sie, dass das Ergebnis der Konvertierung eine komplexe Zahl, ist entspricht die 16-Bit-Ganzzahl mit Vorzeichen, deren reelle Teil, und deren imaginärer Teil gleich 0 (null).
+
+ [!code-csharp[System.Numerics.Complex.Implicit#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.implicit/cs/implicit1.cs#3)]   
+ [!code-vb[System.Numerics.Complex.Implicit#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.implicit/vb/implicit1.vb#3)]   
+
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Numerics.Complex (int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Complex op_Implicit(int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.op_Implicit(System.Int32)~System.Numerics.Complex" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert, der in eine komplexe Zahl konvertiert werden soll.</param>
+        <summary>Definiert eine implizite Konvertierung einer 32-Bit-Ganzzahl mit Vorzeichen in eine komplexe Zahl.</summary>
+        <returns>Ein Objekt, das den Wert des <paramref name="value" />-Parameters als reellen Teil und 0 als imaginären Teil enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überladungen der der <xref:System.Numerics.Complex.op_Implicit%2A> Operator definieren die Typen aus dem automatisch ein Compiler konvertieren kann ein <xref:System.Numerics.Complex> Objekt ohne einen expliziten Umwandlungsoperator (in c#) oder einen Aufruf für eine Konvertierungsfunktion (in Visual Basic). Sie sind erweiterungskonvertierungen, die beinhalten keine Daten verloren gehen, und lösen Sie keine <xref:System.OverflowException>.
+
+ Diese Überladung kann den Compiler verarbeitet Konvertierungen von einem 32-Bit-Ganzzahl mit Vorzeichen in eine komplexe Zahl, wie im folgenden Beispiel gezeigt. Beachten Sie, dass das Ergebnis der Konvertierung eine komplexe Zahl ist, deren reelle Teil ist die 32-Bit-Ganzzahl mit Vorzeichen gleich und deren imaginärer Teil gleich 0 (null).
+
+ [!code-csharp[System.Numerics.Complex.Implicit#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.implicit/cs/implicit1.cs#4)]   
+ [!code-vb[System.Numerics.Complex.Implicit#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.implicit/vb/implicit1.vb#4)]   
+
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Numerics.Complex (long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Complex op_Implicit(int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.op_Implicit(System.Int64)~System.Numerics.Complex" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert, der in eine komplexe Zahl konvertiert werden soll.</param>
+        <summary>Definiert eine implizite Konvertierung einer 64-Bit-Ganzzahl mit Vorzeichen in eine komplexe Zahl.</summary>
+        <returns>Ein Objekt, das den Wert des <paramref name="value" />-Parameters als reellen Teil und 0 als imaginären Teil enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überladungen der der <xref:System.Numerics.Complex.op_Implicit%2A> Operator definieren die Typen aus dem automatisch ein Compiler konvertieren kann ein <xref:System.Numerics.Complex> Objekt ohne einen expliziten Umwandlungsoperator (in c#) oder einen Aufruf für eine Konvertierungsfunktion (in Visual Basic). Sie sind erweiterungskonvertierungen, die beinhalten keine Daten verloren gehen, und lösen Sie keine <xref:System.OverflowException>.
+
+ Diese Überladung kann den Compiler verarbeitet Konvertierungen von einem 64-Bit-Ganzzahl mit Vorzeichen in eine komplexe Zahl, wie im folgenden Beispiel gezeigt. Beachten Sie, dass das Ergebnis der Konvertierung eine komplexe Zahl ist, deren reelle Teil ist die 64-Bit-Ganzzahl mit Vorzeichen gleich und deren imaginärer Teil gleich 0 (null).
+
+ [!code-csharp[System.Numerics.Complex.Implicit#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.implicit/cs/implicit1.cs#5)]   
+ [!code-vb[System.Numerics.Complex.Implicit#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.implicit/vb/implicit1.vb#5)]   
+
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Numerics.Complex (sbyte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Complex op_Implicit(int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.op_Implicit(System.SByte)~System.Numerics.Complex" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.SByte" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert, der in eine komplexe Zahl konvertiert werden soll.</param>
+        <summary>Definiert eine implizite Konvertierung eines Bytewerts mit Vorzeichen in eine komplexe Zahl.   
+           
+Diese API ist nicht CLS-kompatibel.</summary>
+        <returns>Ein Objekt, das den Wert des <paramref name="value" />-Parameters als reellen Teil und 0 als imaginären Teil enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überladungen der der <xref:System.Numerics.Complex.op_Implicit%2A> Operator definieren die Typen aus dem automatisch ein Compiler konvertieren kann ein <xref:System.Numerics.Complex> Objekt ohne einen expliziten Umwandlungsoperator (in c#) oder einen Aufruf für eine Konvertierungsfunktion (in Visual Basic). Sie sind erweiterungskonvertierungen, die beinhalten keine Daten verloren gehen, und lösen Sie keine <xref:System.OverflowException>.
+
+ Diese Überladung kann den Compiler verarbeitet Konvertierungen von einen Bytewert mit Vorzeichen in eine komplexe Zahl, wie im folgenden Beispiel gezeigt. Beachten Sie, dass das Ergebnis der Konvertierung eine komplexe Zahl ist, deren reelle Teil gleich dem Bytewert mit Vorzeichen und deren imaginärer Teil gleich 0 (null).
+
+ [!code-csharp[System.Numerics.Complex.Implicit#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.implicit/cs/implicit1.cs#6)]   
+ [!code-vb[System.Numerics.Complex.Implicit#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.implicit/vb/implicit1.vb#6)]   
+
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Numerics.Complex (float value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Complex op_Implicit(float32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.op_Implicit(System.Single)~System.Numerics.Complex" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert, der in eine komplexe Zahl konvertiert werden soll.</param>
+        <summary>Definiert eine implizite Konvertierung einer Gleitkommazahl mit einfacher Genauigkeit in eine komplexe Zahl.</summary>
+        <returns>Ein Objekt, das den Wert des <paramref name="value" />-Parameters als reellen Teil und 0 als imaginären Teil enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überladungen der der <xref:System.Numerics.Complex.op_Implicit%2A> Operator definieren die Typen aus dem automatisch ein Compiler konvertieren kann ein <xref:System.Numerics.Complex> Objekt ohne einen expliziten Umwandlungsoperator (in c#) oder einen Aufruf für eine Konvertierungsfunktion (in Visual Basic). Sie sind erweiterungskonvertierungen, die beinhalten keine Daten verloren gehen, und lösen Sie keine <xref:System.OverflowException>.
+
+ Diese Überladung kann den Compiler Konvertierungen von verarbeitet eine <xref:System.Single> Wert in eine komplexe Zahl, wie im folgenden Beispiel gezeigt. Beachten Sie, dass das Ergebnis der Konvertierung einer komplexen Zahl, deren reelle Teil gleich ist, der <xref:System.Single> Wert und deren imaginärer Teil gleich 0 (null) ist.
+
+ [!code-csharp[System.Numerics.Complex.Implicit#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.implicit/cs/implicit1.cs#7)]   
+ [!code-vb[System.Numerics.Complex.Implicit#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.implicit/vb/implicit1.vb#7)]   
+
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Numerics.Complex (ushort value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Complex op_Implicit(unsigned int16 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.op_Implicit(System.UInt16)~System.Numerics.Complex" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.UInt16" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert, der in eine komplexe Zahl konvertiert werden soll.</param>
+        <summary>Definiert eine implizite Konvertierung einer 16-Bit-Ganzzahl ohne Vorzeichen in eine komplexe Zahl.   
+           
+Diese API ist nicht CLS-kompatibel.</summary>
+        <returns>Ein Objekt, das den Wert des <paramref name="value" />-Parameters als reellen Teil und 0 als imaginären Teil enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überladungen der der <xref:System.Numerics.Complex.op_Implicit%2A> Operator definieren die Typen aus dem automatisch ein Compiler konvertieren kann ein <xref:System.Numerics.Complex> Objekt ohne einen expliziten Umwandlungsoperator (in c#) oder einen Aufruf für eine Konvertierungsfunktion (in Visual Basic). Sie sind erweiterungskonvertierungen, die beinhalten keine Daten verloren gehen, und lösen Sie keine <xref:System.OverflowException>.
+
+ Diese Überladung kann den Compiler verarbeitet Konvertierungen von einem 16-Bit-Ganzzahl ohne Vorzeichen in eine komplexe Zahl, wie im folgenden Beispiel gezeigt. Beachten Sie, dass das Ergebnis der Konvertierung eine komplexe Zahl ist, deren reelle Teil gleich der 16-Bit-Ganzzahl ohne Vorzeichen und deren imaginärer Teil gleich 0 (null).
+
+ [!code-csharp[System.Numerics.Complex.Implicit#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.implicit/cs/implicit1.cs#8)]   
+ [!code-vb[System.Numerics.Complex.Implicit#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.implicit/vb/implicit1.vb#8)]   
+
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Numerics.Complex (uint value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Complex op_Implicit(unsigned int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.op_Implicit(System.UInt32)~System.Numerics.Complex" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert, der in eine komplexe Zahl konvertiert werden soll.</param>
+        <summary>Definiert eine implizite Konvertierung einer 32-Bit-Ganzzahl ohne Vorzeichen in eine komplexe Zahl.   
+           
+Diese API ist nicht CLS-kompatibel.</summary>
+        <returns>Ein Objekt, das den Wert des <paramref name="value" />-Parameters als reellen Teil und 0 als imaginären Teil enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überladungen der der <xref:System.Numerics.Complex.op_Implicit%2A> Operator definieren die Typen aus dem automatisch ein Compiler konvertieren kann ein <xref:System.Numerics.Complex> Objekt ohne einen expliziten Umwandlungsoperator (in c#) oder einen Aufruf für eine Konvertierungsfunktion (in Visual Basic). Sie sind erweiterungskonvertierungen, die beinhalten keine Daten verloren gehen, und lösen Sie keine <xref:System.OverflowException>.
+
+ Diese Überladung kann den Compiler verarbeitet Konvertierungen von einem 32-Bit-Ganzzahl ohne Vorzeichen in eine komplexe Zahl, wie im folgenden Beispiel gezeigt. Beachten Sie, dass das Ergebnis der Konvertierung eine komplexe Zahl ist, deren reelle Teil ist die 32-Bit-Ganzzahl ohne Vorzeichen gleich und deren imaginärer Teil gleich 0 (null).
+
+ [!code-csharp[System.Numerics.Complex.Implicit#9](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.implicit/cs/implicit1.cs#9)]   
+ [!code-vb[System.Numerics.Complex.Implicit#9](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.implicit/vb/implicit1.vb#9)]   
+
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Numerics.Complex (ulong value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Complex op_Implicit(unsigned int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.op_Implicit(System.UInt64)~System.Numerics.Complex" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.UInt64" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Wert, der in eine komplexe Zahl konvertiert werden soll.</param>
+        <summary>Definiert eine implizite Konvertierung einer 64-Bit-Ganzzahl ohne Vorzeichen in eine komplexe Zahl.   
+           
+Diese API ist nicht CLS-kompatibel.</summary>
+        <returns>Ein Objekt, das den Wert des <paramref name="value" />-Parameters als reellen Teil und 0 als imaginären Teil enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überladungen der der <xref:System.Numerics.Complex.op_Implicit%2A> Operator definieren die Typen aus dem automatisch ein Compiler konvertieren kann ein <xref:System.Numerics.Complex> Objekt ohne einen expliziten Umwandlungsoperator (in c#) oder einen Aufruf für eine Konvertierungsfunktion (in Visual Basic). Sie sind erweiterungskonvertierungen, die beinhalten keine Daten verloren gehen, und lösen Sie keine <xref:System.OverflowException>.
+
+ Diese Überladung kann den Compiler verarbeitet Konvertierungen von einem 64-Bit-Ganzzahl ohne Vorzeichen in eine komplexe Zahl, wie im folgenden Beispiel gezeigt. Beachten Sie, dass das Ergebnis der Konvertierung eine komplexe Zahl ist, deren reelle Teil ist die 64-Bit-Ganzzahl ohne Vorzeichen gleich und deren imaginärer Teil gleich 0 (null).
+
+ [!code-csharp[System.Numerics.Complex.Implicit#10](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.implicit/cs/implicit1.cs#10)]   
+ [!code-vb[System.Numerics.Complex.Implicit#10](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.implicit/vb/implicit1.vb#10)]   
+
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Numerics.Complex left, System.Numerics.Complex right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Numerics.Complex left, valuetype System.Numerics.Complex right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.op_Inequality(System.Numerics.Complex,System.Numerics.Complex)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Numerics.Complex" />
+        <Parameter Name="right" Type="System.Numerics.Complex" />
+      </Parameters>
+      <Docs>
+        <param name="left">Der erste zu vergleichende Wert.</param>
+        <param name="right">Der zweite zu vergleichende Wert.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob zwei komplexe Zahlen ungleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="left" /> und <paramref name="right" /> ungleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Complex.op_Equality%2A> Methode definiert, den Vorgang für komplexe Zahlen des Ungleichheitsoperators. Dadurch werden dem folgenden Code:  
+  
+ [!code-csharp[System.Numerics.Complex.Inequality#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.inequality/cs/inequality1.cs#1)]
+ [!code-vb[System.Numerics.Complex.Inequality#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.inequality/vb/inequality1.vb#1)]  
+  
+ Sprachen, die keine benutzerdefinierte Operatoren unterstützen können auf Ungleichheit testen, durch Aufrufen der <xref:System.Numerics.Complex.Equals%28System.Numerics.Complex%29> -Methode und ihren Wert umkehren.  
+  
+ Beachten Sie, dass aufgrund der Unterschiede in der Genauigkeit zwei komplexe Zahlen, der anscheinend äquivalent sind als ungleich betrachtet werden können. Eine mögliche Lösung besteht darin, zurückgibt, eine Vergleichsmethode implementiert `true` nur, wenn der Unterschied zwischen den zwei reellen und imaginären Teile der komplexen Zahlen einen bestimmten Schwellenwert überschreitet (z. B.. 01 % des Werts der realen oder imaginären Komponente des einer der komplexen Zahlen). Weitere Informationen finden Sie unter der Methode <xref:System.Numerics.Complex.Equals%28System.Numerics.Complex%29>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Multiply">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Complex operator * (System.Numerics.Complex left, System.Numerics.Complex right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Complex op_Multiply(valuetype System.Numerics.Complex left, valuetype System.Numerics.Complex right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.op_Multiply(System.Numerics.Complex,System.Numerics.Complex)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Numerics.Complex" />
+        <Parameter Name="right" Type="System.Numerics.Complex" />
+      </Parameters>
+      <Docs>
+        <param name="left">Der erste zu multiplizierende Wert.</param>
+        <param name="right">Der zweite zu multiplizierende Wert.</param>
+        <summary>Multipliziert zwei angegebene komplexe Zahlen.</summary>
+        <returns>Das Produkt von <paramref name="left" /> und <paramref name="right" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Complex.op_Multiply%2A> Methode definiert, den Vorgang der den Multiplikationsoperator für komplexe Zahlen. Dadurch werden dem folgenden Code:  
+  
+ [!code-csharp[System.Numerics.Complex.Multiply#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.multiply/cs/multiply2.cs#2)]
+ [!code-vb[System.Numerics.Complex.Multiply#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.multiply/vb/multiply2.vb#2)]  
+  
+ Die Multiplikation mit einer komplexen Zahl "," a + Bi, und eine zweite komplexe Zahl, die c + di, weist folgende Form:  
+  
+ (Ac - bd) + (Ad + bc) ich  
+  
+ Wenn die Multiplikation einen Überlauf in der realen oder imaginären Komponente ergibt, ist der Wert dieser Komponente <xref:System.Double.PositiveInfinity?displayProperty=nameWithType> oder <xref:System.Double.NegativeInfinity?displayProperty=nameWithType>.  
+  
+ Sprachen, die keine benutzerdefinierte Operatoren unterstützen können Aufrufen der <xref:System.Numerics.Complex.Multiply%2A> Methode stattdessen.  
+  
+ Die entsprechende Methode für diesen Operator ist.<xref:System.Numerics.Complex.Multiply%28System.Numerics.Complex%2CSystem.Numerics.Complex%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Subtraction">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Complex operator - (System.Numerics.Complex left, System.Numerics.Complex right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Complex op_Subtraction(valuetype System.Numerics.Complex left, valuetype System.Numerics.Complex right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.op_Subtraction(System.Numerics.Complex,System.Numerics.Complex)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Numerics.Complex" />
+        <Parameter Name="right" Type="System.Numerics.Complex" />
+      </Parameters>
+      <Docs>
+        <param name="left">Der Wert, von dem subtrahiert werden soll (der Minuend).</param>
+        <param name="right">Der Wert, der subtrahiert werden soll (der Subtrahend).</param>
+        <summary>Subtrahiert eine komplexe Zahl von einer anderen komplexen Zahl.</summary>
+        <returns>Das Ergebnis der Subtraktion von <paramref name="right" /> von <paramref name="left" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Complex.op_Subtraction%2A> Methode definiert, die Operation des Subtraktionsoperators für komplexe Zahlen. Dadurch werden dem folgenden Code:  
+  
+ [!code-csharp[System.Numerics.Complex.Subtract#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.subtract/cs/subtract2.cs#2)]
+ [!code-vb[System.Numerics.Complex.Subtract#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.subtract/vb/subtract2.vb#2)]  
+  
+ Wenn die Methode Ergebnisse zu einem Überlauf entweder in der realen oder imaginären Komponente aufrufen, ist der Wert dieser Komponente <xref:System.Double.PositiveInfinity?displayProperty=nameWithType> oder <xref:System.Double.NegativeInfinity?displayProperty=nameWithType>.  
+  
+ Eine komplexe Zahl, die c + di, aus einer anderen komplexen Zahl, die Subtraktion einen + Bi weist folgende Form:  
+  
+ (a - c) + (b - d) ich  
+  
+ Sprachen, die keine benutzerdefinierte Operatoren unterstützen können Aufrufen der <xref:System.Numerics.Complex.Subtract%2A> Methode stattdessen.  
+  
+ Die entsprechende Methode für diesen Operator ist.<xref:System.Numerics.Complex.Subtract%28System.Numerics.Complex%2CSystem.Numerics.Complex%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_UnaryNegation">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Complex operator - (System.Numerics.Complex value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Numerics.Complex op_UnaryNegation(valuetype System.Numerics.Complex value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.op_UnaryNegation(System.Numerics.Complex)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Complex" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu negierende Wert.</param>
+        <summary>Gibt die additive Inverse einer angegebenen komplexen Zahl zurück.</summary>
+        <returns>Das Ergebnis der <see cref="P:System.Numerics.Complex.Real" />- und <see cref="P:System.Numerics.Complex.Imaginary" />-Komponenten des <paramref name="value" />-Parameters multipliziert mit -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Complex.op_UnaryNegation%2A> Methode definiert, den Vorgang der unäre Negationsoperator (Additive Inverse) für komplexe Zahlen. Dadurch werden dem folgenden Code:  
+  
+ [!code-csharp[System.Numerics.Complex.Negate#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.negate/cs/negate2.cs#2)]
+ [!code-vb[System.Numerics.Complex.Negate#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.negate/vb/negate2.vb#2)]  
+  
+ Die resultierende komplexe Zahl erzeugt den Wert <xref:System.Numerics.Complex> 0 (null), wenn sie in der ursprünglichen komplexe Zahl hinzugefügt wird. Sprachen, die keine benutzerdefinierte Operatoren unterstützen können Aufrufen der <xref:System.Numerics.Complex.Negate%2A> Methode stattdessen.  
+  
+ Die entsprechende Methode für diesen Operator ist.<xref:System.Numerics.Complex.Negate%28System.Numerics.Complex%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Phase">
+      <MemberSignature Language="C#" Value="public double Phase { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Phase" />
+      <MemberSignature Language="DocId" Value="P:System.Numerics.Complex.Phase" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Phase einer komplexen Zahl ab.</summary>
+        <value>Die Phase einer komplexen Zahl im Bogenmaß.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für eine komplexe Zahl eine + Bi, die Phase wird als berechnet <xref:System.Math.Atan2%2A?displayProperty=nameWithType>(b, eine).  
+  
+ Sie können eine komplexe Zahl durch seine kartesischen Koordinaten auf der komplexen Ebene oder durch ihre Polarkoordinaten identifizieren. Die Phase (Argumente) einer komplexen Zahl ist der Winkel der realen Achse eine Linie vom Zeitpunkt der Ursprung (dem Schnittpunkt der x-Achse und y-Achse), zu dem Punkt, der durch die komplexe Zahl dargestellt wird. Die Größe (dargestellt durch die <xref:System.Numerics.Complex.Magnitude%2A> Eigenschaft) entspricht dem Abstand vom Ursprungspunkt zu dem Punkt, der durch die komplexe Zahl dargestellt wird.  
+  
+ Instanziieren Sie eine komplexe Zahl, die basierend auf ihrer Polarkoordinaten anstelle dessen kartesischen Koordinaten durch Aufrufen der <xref:System.Numerics.Complex.FromPolarCoordinates%2A> Methode.  
+  
+ Um die Phase von Bogenmaß in Grad umwandeln möchten, Multiplizieren Sie es mit 180 /<xref:System.Math.PI?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Numerics.Complex.FromPolarCoordinates%2A> Methode zum Instanziieren einer komplexen Zahl basierend auf ihrer Polarkoordinaten und zeigt dann den Wert von dessen <xref:System.Numerics.Complex.Magnitude%2A> und <xref:System.Numerics.Complex.Phase%2A> Eigenschaften.  
+  
+ [!code-csharp[System.Numerics.Complex.Phase#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.phase/cs/phase1.cs#1)]
+ [!code-vb[System.Numerics.Complex.Phase#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.phase/vb/phase1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pow">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Complex Pow (System.Numerics.Complex value, double power);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Complex Pow(valuetype System.Numerics.Complex value, float64 power) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.Pow(System.Numerics.Complex,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Complex" />
+        <Parameter Name="power" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine komplexe Zahl, die mit einem Exponenten potenziert werden soll.</param>
+        <param name="power">Eine Gleitkommazahl mit doppelter Genauigkeit, die einen Exponenten darstellt.</param>
+        <summary>Gibt eine angegebene komplexe Zahl potenziert mit einem als Gleitkommazahl mit doppelter Genauigkeit angegebenen Exponenten zurück.</summary>
+        <returns>Die komplexe Zahl <paramref name="value" /> potenziert mit <paramref name="power" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `value` gleich <xref:System.Numerics.Complex?displayProperty=nameWithType> ist, gibt die Methode <xref:System.Numerics.Complex?displayProperty=nameWithType> zurück. Für andere Werte Wenn `power` gleich 0 ist, gibt die Methode zurück <xref:System.Numerics.Complex?displayProperty=nameWithType>, und wenn `power` gleich 1 ist, gibt `value`.  
+  
+ Diese Methode entspricht der <xref:System.Math.Pow%2A?displayProperty=nameWithType> Methode für die primitiven numerischen Typen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Potenzierung mit einer komplexen Zahl und einen Exponenten, dessen Wert zwischen-1 und 10 liegt.  
+  
+ [!code-csharp[System.Numerics.Complex.Pow#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.pow/cs/pow1.cs#1)]
+ [!code-vb[System.Numerics.Complex.Pow#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.pow/vb/pow1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pow">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Complex Pow (System.Numerics.Complex value, System.Numerics.Complex power);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Complex Pow(valuetype System.Numerics.Complex value, valuetype System.Numerics.Complex power) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.Pow(System.Numerics.Complex,System.Numerics.Complex)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Complex" />
+        <Parameter Name="power" Type="System.Numerics.Complex" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine komplexe Zahl, die mit einem Exponenten potenziert werden soll.</param>
+        <param name="power">Eine komplexe Zahl, die einen Exponenten angibt.</param>
+        <summary>Gibt eine komplexe Zahl potenziert mit einem durch eine komplexe Zahl angegebenen Exponenten zurück.</summary>
+        <returns>Die komplexe Zahl <paramref name="value" /> potenziert mit <paramref name="power" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Real">
+      <MemberSignature Language="C#" Value="public double Real { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Real" />
+      <MemberSignature Language="DocId" Value="P:System.Numerics.Complex.Real" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die reelle Komponente des aktuellen <see cref="T:System.Numerics.Complex" />-Objekts ab.</summary>
+        <value>Die reelle Komponente einer komplexen Zahl.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine komplexe Zahl a + Bi, die <xref:System.Numerics.Complex.Real%2A> Eigenschaft gibt den Wert ein.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Array von <xref:System.Numerics.Complex> Objekten und zeigt die reellen und imaginären Komponenten jedes in der Form a + Bi.  
+  
+ [!code-csharp[System.Numerics.Complex.Real#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.real/cs/real1.cs#1)]
+ [!code-vb[System.Numerics.Complex.Real#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.real/vb/real1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reciprocal">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Complex Reciprocal (System.Numerics.Complex value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Complex Reciprocal(valuetype System.Numerics.Complex value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.Reciprocal(System.Numerics.Complex)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Complex" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine komplexe Zahl.</param>
+        <summary>Gibt den Kehrwert einer komplexen Zahl zurück.</summary>
+        <returns>Der Kehrwert von <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Kehrwert oder Kehrwert einer Zahl *x* ist eine Zahl *y* , in denen *x* multipliziert *y* 1 ergibt. Der Kehrwert einer komplexen Zahl ist die komplexe Zahl, die erzeugt <xref:System.Numerics.Complex?displayProperty=nameWithType> Wenn die zwei Zahlen multipliziert werden. Eine komplexe Zahl von a + Bi dargestellt, wird die reziproke durch den Ausdruck dargestellt eine / (eine<sup>2</sup>+ b<sup>2</sup>) + b-/ (eine<sup>2</sup> + b<sup>2</sup>).  
+  
+ Falls der Wert <xref:System.Numerics.Complex?displayProperty=nameWithType>, gibt die Methode <xref:System.Numerics.Complex?displayProperty=nameWithType>. Andernfalls wird das Ergebnis des Ausdrucks zurückgegeben <xref:System.Numerics.Complex?displayProperty=nameWithType> / `value`.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Numerics.Complex.Reciprocal%2A> Methode, um die reziproke Werte mehrerer komplexer Zahlen zu berechnen. Es veranschaulicht auch, dass das Ergebnis der Multiplikation von einer komplexen Zahl mit seinem Kehrwert <xref:System.Numerics.Complex?displayProperty=nameWithType>.  
+  
+ [!code-csharp[System.Numerics.Complex.Reciprocal#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.reciprocal/cs/reciprocal1.cs#1)]
+ [!code-vb[System.Numerics.Complex.Reciprocal#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.reciprocal/vb/reciprocal1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sin">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Complex Sin (System.Numerics.Complex value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Complex Sin(valuetype System.Numerics.Complex value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.Sin(System.Numerics.Complex)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Complex" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine komplexe Zahl.</param>
+        <summary>Gibt den Sinus der angegebenen komplexen Zahl zurück.</summary>
+        <returns>Der Sinus von <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Complex.Sin%2A> -Methode für komplexe Zahlen entspricht der <xref:System.Math.Sin%2A?displayProperty=nameWithType> Methode für reelle Zahlen.  
+  
+ Die <xref:System.Numerics.Complex.Sin%2A> Methode verwendet die folgende Formel berechnet den Sinus der komplexen Zahl a + Bi:  
+  
+ (<xref:System.Math.Sin%2A>(a) * <xref:System.Math.Cosh%2A>(b) <xref:System.Math.Cos%2A>(a) * <xref:System.Math.Sinh%2A>(b))  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die <xref:System.Numerics.Complex.Sin%2A> Methode. Es zeigt, dass den zurückgegebene Wert durch Übergeben der <xref:System.Numerics.Complex.Asin%2A> Methode, um die <xref:System.Numerics.Complex.Sin%2A> Methodenrückgabe die ursprünglichen <xref:System.Numerics.Complex> Wert.  
+  
+ [!code-csharp[System.Numerics.Complex.Asin#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.asin/cs/asin1.cs#1)]
+ [!code-vb[System.Numerics.Complex.Asin#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.asin/vb/asin1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sinh">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Complex Sinh (System.Numerics.Complex value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Complex Sinh(valuetype System.Numerics.Complex value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.Sinh(System.Numerics.Complex)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Complex" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine komplexe Zahl.</param>
+        <summary>Gibt den Hyperbelsinus der angegebenen komplexen Zahl zurück.</summary>
+        <returns>Der Hyperbelsinus von <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Complex.Sinh%2A> -Methode für komplexe Zahlen entspricht der <xref:System.Math.Sinh%2A?displayProperty=nameWithType> Methode für reelle Zahlen.  
+  
+ Die <xref:System.Numerics.Complex.Sinh%2A> Methode verwendet die folgende Formel berechnet den hyperbolischen Sinus der komplexen Zahl a + Bi:  
+  
+ (<xref:System.Math.Sinh%2A>(a) * <xref:System.Math.Cos%2A>(b) <xref:System.Math.Cosh%2A>(a) * <xref:System.Math.Sin%2A>(b))  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sqrt">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Complex Sqrt (System.Numerics.Complex value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Complex Sqrt(valuetype System.Numerics.Complex value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.Sqrt(System.Numerics.Complex)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Complex" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine komplexe Zahl.</param>
+        <summary>Gibt die Quadratwurzel einer angegebenen komplexen Zahl zurück.</summary>
+        <returns>Die Quadratwurzel von <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Quadratwurzel der komplexen Zahl `value` wird anhand der folgenden Formel berechnet:  
+  
+ <xref:System.Numerics.Complex.FromPolarCoordinates%2A?displayProperty=nameWithType>(<xref:System.Math.Sqrt%2A?displayProperty=nameWithType>(`value`.<xref:System.Numerics.Complex.Magnitude%2A>), `value`.<xref:System.Numerics.Complex.Phase%2A>/2.0)   
+  
+ Die <xref:System.Numerics.Complex.Sqrt%2A> -Methode für komplexe Zahlen entspricht der <xref:System.Math.Sqrt%2A?displayProperty=nameWithType> Methode für reelle Zahlen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subtract">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Complex Subtract (System.Numerics.Complex left, System.Numerics.Complex right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Complex Subtract(valuetype System.Numerics.Complex left, valuetype System.Numerics.Complex right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.Subtract(System.Numerics.Complex,System.Numerics.Complex)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Numerics.Complex" />
+        <Parameter Name="right" Type="System.Numerics.Complex" />
+      </Parameters>
+      <Docs>
+        <param name="left">Der Wert, von dem subtrahiert werden soll (der Minuend).</param>
+        <param name="right">Der Wert, der subtrahiert werden soll (der Subtrahend).</param>
+        <summary>Subtrahiert eine komplexe Zahl von einer anderen komplexen Zahl und gibt das Ergebnis zurück.</summary>
+        <returns>Das Ergebnis der Subtraktion von <paramref name="right" /> von <paramref name="left" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine komplexe Zahl, die c + di, aus einer anderen komplexen Zahl, die Subtraktion einen + Bi weist folgende Form:  
+  
+ (a - c) + (b - d) ich  
+  
+ Wenn die Methode Ergebnisse zu einem Überlauf entweder in der realen oder imaginären Komponente aufrufen, ist der Wert dieser Komponente <xref:System.Double.PositiveInfinity?displayProperty=nameWithType> oder <xref:System.Double.NegativeInfinity?displayProperty=nameWithType>.  
+  
+ Sprachen, die keine benutzerdefinierte Operatoren unterstützen können die <xref:System.Numerics.Complex.Subtract%2A> Methode, um Subtraktion mit komplexen Zahlen auszuführen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird subtrahiert jedes komplexe Zahl in einem Array aus einer komplexen Zahl.  
+  
+ [!code-csharp[System.Numerics.Complex.Subtract#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.subtract/cs/subtract1.cs#1)]
+ [!code-vb[System.Numerics.Complex.Subtract#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.subtract/vb/subtract1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tan">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Complex Tan (System.Numerics.Complex value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Complex Tan(valuetype System.Numerics.Complex value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.Tan(System.Numerics.Complex)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Complex" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine komplexe Zahl.</param>
+        <summary>Gibt den Tangens der angegebenen komplexen Zahl zurück.</summary>
+        <returns>Der Tangens von <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Complex.Tan%2A> -Methode für komplexe Zahlen entspricht der <xref:System.Math.Tan%2A?displayProperty=nameWithType> Methode für reelle Zahlen.  
+  
+ Die <xref:System.Numerics.Complex.Tan%2A> Methode verwendet die folgende Formel berechnet den Tangens der komplexen Zahl `value`:  
+  
+ <xref:System.Numerics.Complex.Sin%2A>(`value`) / <xref:System.Numerics.Complex.Cos%2A>(`value`)  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die <xref:System.Numerics.Complex.Tan%2A> Methode. Es zeigt, dass den zurückgegebene Wert durch Übergeben der <xref:System.Numerics.Complex.Atan%2A> Methode, um die <xref:System.Numerics.Complex.Tan%2A> Methodenrückgabe die ursprünglichen <xref:System.Numerics.Complex> Wert.  
+  
+ [!code-csharp[System.Numerics.Complex.Atan#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.atan/cs/atan1.cs#1)]
+ [!code-vb[System.Numerics.Complex.Atan#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.atan/vb/atan1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tanh">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Complex Tanh (System.Numerics.Complex value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Complex Tanh(valuetype System.Numerics.Complex value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.Tanh(System.Numerics.Complex)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Complex" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine komplexe Zahl.</param>
+        <summary>Gibt den Hyperbeltangens der angegebenen komplexen Zahl zurück.</summary>
+        <returns>Der Hyperbeltangens von <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Complex.Tanh%2A> -Methode für komplexe Zahlen entspricht der <xref:System.Math.Tanh%2A?displayProperty=nameWithType> Methode für reelle Zahlen.  
+  
+ Die <xref:System.Numerics.Complex.Tanh%2A> Methode verwendet die folgende Formel berechnet den hyperbolischen Tangens der komplexen Zahl `value`:  
+  
+ <xref:System.Numerics.Complex.Sinh%2A>(`value`) / <xref:System.Numerics.Complex.Cosh%2A>(`value`)  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert den Wert der aktuellen komplexen Zahl in die entsprechende Zeichenfolgendarstellung in kartesischer Form.</summary>
+        <returns>Die Zeichenfolgendarstellung der aktuellen Instanz in kartesischer Form.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Standard-Zeichenfolgendarstellung einer komplexen Zahl zeigt die Zahl unter Verwendung seiner kartesischen Koordinaten in der Form `(` *eine* `,` *b*`)`, wobei *eine* ist der reelle Teil der komplexen Zahl und *b* der imaginäre Teil. Beide *eine* und *b* mit dem allgemeinen Formatbezeichner ("G") und den Konventionen der aktuellen Systemkultur formatiert sind.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die angegebene Zeichenfolgendarstellung mehrere komplexe Zahlen. Die Ausgabe verwendet die Formatierungskonventionen der Englisch - USA ("En-US") Kultur, d. h. in diesem Fall die aktuelle Systemkultur.  
+  
+ [!code-csharp[System.Numerics.Complex.ToString#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.tostring/cs/tostring1.cs#1)]
+ [!code-vb[System.Numerics.Complex.ToString#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.tostring/vb/tostring1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ToString(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.ToString(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt.</param>
+        <summary>Konvertiert den Wert der aktuellen komplexen Zahl unter Verwendung der angegebenen kulturabhängigen Formatierungsinformationen in die entsprechende Zeichenfolgendarstellung in kartesischer Form.</summary>
+        <returns>Die Zeichenfolgendarstellung der aktuellen Instanz in kartesischer Form entsprechend dem Wert von <paramref name="provider" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Zeichenfolgendarstellung der komplexen Zahl, die von dieser Methode zurückgegebene zeigt die Zahl unter Verwendung seiner kartesischen Koordinaten in der Form `(` *eine* `,` *b*`)`, auf dem *eine* ist der reelle Teil der komplexen Zahl und *b* der imaginäre Teil. Beide *eine* und *b* formatiert sind, mit dem allgemeinen Formatbezeichner ("G") und den Konventionen der Kultur definiert wird, indem Sie `provider`.  
+  
+ Die `provider` Parameter ist ein <xref:System.IFormatProvider> Implementierung. Die <xref:System.IFormatProvider.GetFormat%2A> Methode gibt ein <xref:System.Globalization.NumberFormatInfo> Objekt, das kulturspezifische Informationen zum Format der reellen und imaginären Zahlen in der zurückgegebenen Zeichenfolge bereitstellt. Wenn `provider` ist `null`, die zurückgegebene Zeichenfolge wird mit formatiert die <xref:System.Globalization.NumberFormatInfo> Objekt der aktuellen Kultur.  
+  
+ Die `provider` Parameter kann einen der folgenden sein:  
+  
+-   Ein <xref:System.Globalization.CultureInfo> Objekt, das die Kultur darstellt, das Formatierungsinformationen bereitstellt.  
+  
+-   Die <xref:System.Globalization.NumberFormatInfo> -Objekt, das Formatierungsinformationen bereitstellt.  
+  
+-   Ein benutzerdefiniertes Objekt, das implementiert die <xref:System.IFormatProvider> Schnittstelle. Die <xref:System.IFormatProvider.GetFormat%2A> Methode gibt die <xref:System.Globalization.NumberFormatInfo> -Objekt, das Formatierungsinformationen bereitstellt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt die angegebene Zeichenfolgendarstellung mehrere komplexe Zahlen. Das Ergebnis verwendet die Formatierungskonventionen der Englisch - USA ("En-US") und Französisch - Frankreich ("fr-FR") Kulturen.  
+  
+ [!code-csharp[System.Numerics.Complex.ToString#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.tostring/cs/tostring2.cs#2)]
+ [!code-vb[System.Numerics.Complex.ToString#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.tostring/vb/tostring2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ToString(string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.ToString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="format">Eine standardmäßige oder benutzerdefinierte numerische Formatierungszeichenfolge.</param>
+        <summary>Konvertiert den Wert der aktuellen komplexen Zahl unter Verwendung des angegebenen Formats für die reellen und imaginären Teile in die entsprechende Zeichenfolgendarstellung in kartesischer Form.</summary>
+        <returns>Die Zeichenfolgendarstellung der aktuellen Instanz in kartesischer Form.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Zeichenfolgendarstellung der komplexen Zahl, die von dieser Methode zurückgegebene zeigt die Zahl unter Verwendung seiner kartesischen Koordinaten in der Form `(` *eine* `,` *b*`)`, auf dem *eine* ist der reelle Teil der komplexen Zahl und *b* der imaginäre Teil. Beide *eine* und *b* werden mithilfe der angegebenen Formatzeichenfolge formatiert `format`. Die `format` -Parameter kann jeder gültige numerische Standardformatbezeichner oder eine beliebige Kombination von benutzerdefinierten Zahlenformatbezeichner sein. Wenn `format` gleich <xref:System.String?displayProperty=nameWithType> oder `null`, die reellen und imaginären Teile der komplexen Zahl mit dem allgemeinen Formatbezeichner ("G") formatiert sind. Wenn `format` ist ein anderer Wert, löst die Methode eine <xref:System.FormatException>.  
+  
+ .NET Framework bietet eine umfangreiche formatierungsunterstützung, dies wird in den folgenden Themen ausführlicher beschrieben:  
+  
+-   Weitere Informationen zu numerischen Formatzeichenfolgen finden Sie unter [Standard Numeric Format Strings](~/docs/standard/base-types/standard-numeric-format-strings.md) und [benutzerdefinierte Zahlenformatzeichenfolgen](~/docs/standard/base-types/custom-numeric-format-strings.md).  
+  
+-   Weitere Informationen zur Formatierung in .NET Framework finden Sie unter [Formatierung von Typen](~/docs/standard/base-types/formatting-types.md).  
+  
+ Das Format der zurückgegebenen Zeichenfolge richtet sich nach der <xref:System.Globalization.NumberFormatInfo> Objekt für die aktuelle Kultur. Je nach den `format` Parameter, dieses Objekt wird gesteuert, Symbole, z. B. das negativen Vorzeichen, das Gruppentrennzeichen und das Dezimaltrennzeichen in der Ausgabezeichenfolge. Aufrufen, um Formatierungsinformationen für Kulturen als der aktuellen Kultur zu ermöglichen, die <xref:System.Numerics.Complex.ToString%28System.String%2CSystem.IFormatProvider%29> überladen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine komplexe Zahl initialisiert und mit mehreren Standardformatzeichenfolgen angezeigt.  
+  
+ [!code-csharp[System.Numerics.Complex.ToString#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.tostring/cs/tostring3.cs#3)]
+ [!code-vb[System.Numerics.Complex.ToString#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.tostring/vb/tostring3.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.FormatException">
+          <paramref name="format" /> ist keine gültige Formatzeichenfolge.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (string format, IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ToString(string format, class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Complex.ToString(System.String,System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="format">Eine standardmäßige oder benutzerdefinierte numerische Formatierungszeichenfolge.</param>
+        <param name="provider">Ein Objekt, das kulturspezifische Formatierungsinformationen bereitstellt.</param>
+        <summary>Konvertiert den Wert der aktuellen komplexen Zahl unter Verwendung des angegebenen Formats und der angegebenen kulturabhängigen Formatierungsinformationen für die reellen und imaginären Teile in die entsprechende Zeichenfolgendarstellung in kartesischer Form.</summary>
+        <returns>Die Zeichenfolgendarstellung der aktuellen Instanz in kartesischer Form entsprechend den Werten von <paramref name="format" /> und <paramref name="provider" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Zeichenfolgendarstellung der komplexen Zahl, die von dieser Methode zurückgegebene zeigt die Zahl unter Verwendung seiner kartesischen Koordinaten in der Form `(` *eine* `,` *b*`)`, auf dem *eine* ist der reelle Teil der komplexen Zahl und *b* der imaginäre Teil. Beide *eine* und *b* werden mithilfe der angegebenen Formatzeichenfolge formatiert `format`. Die `format` -Parameter kann jeder gültige numerische Standardformatbezeichner oder eine beliebige Kombination von benutzerdefinierten Zahlenformatbezeichner sein. Wenn `format` gleich <xref:System.String?displayProperty=nameWithType> oder `null`, die reellen und imaginären Teile der komplexen Zahl mit dem allgemeinen Formatbezeichner ("G") formatiert sind. Wenn `format` ist ein anderer Wert, löst die Methode eine <xref:System.FormatException>.  
+  
+ .NET Framework bietet eine umfangreiche formatierungsunterstützung, dies wird in den folgenden Themen ausführlicher beschrieben:  
+  
+-   Weitere Informationen zu numerischen Formatzeichenfolgen finden Sie unter [Standard Numeric Format Strings](~/docs/standard/base-types/standard-numeric-format-strings.md) und [benutzerdefinierte Zahlenformatzeichenfolgen](~/docs/standard/base-types/custom-numeric-format-strings.md).  
+  
+-   Weitere Informationen zur Formatierung in .NET Framework finden Sie unter [Formatierung von Typen](~/docs/standard/base-types/formatting-types.md).  
+  
+ Die `provider` Parameter ist ein <xref:System.IFormatProvider> Implementierung. Die <xref:System.IFormatProvider.GetFormat%2A> Methode gibt ein <xref:System.Globalization.NumberFormatInfo> Objekt, das kulturspezifische Informationen zum Format der reellen und imaginären Zahlen in der zurückgegebenen Zeichenfolge bereitstellt. Je nach den `format` Parameter, dieses Objekt wird gesteuert, Symbole, z. B. das negativen Vorzeichen, das Gruppentrennzeichen und das Dezimaltrennzeichen in der Ausgabezeichenfolge. Wenn `provider` ist `null`, die zurückgegebene Zeichenfolge wird mit formatiert die <xref:System.Globalization.NumberFormatInfo> Objekt der aktuellen Kultur.  
+  
+ Die `provider` Parameter kann einen der folgenden sein:  
+  
+-   Ein <xref:System.Globalization.CultureInfo> Objekt, das die Kultur darstellt, das Formatierungsinformationen bereitstellt.  
+  
+-   Die <xref:System.Globalization.NumberFormatInfo> -Objekt, das Formatierungsinformationen bereitstellt.  
+  
+-   Ein benutzerdefiniertes Objekt, das implementiert die <xref:System.IFormatProvider> Schnittstelle. Die <xref:System.IFormatProvider.GetFormat%2A> Methode gibt die <xref:System.Globalization.NumberFormatInfo> -Objekt, das Formatierungsinformationen bereitstellt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt ein Array der komplexen Zahlen und zeigt die einzelnen verwenden mehrere Standardformatzeichenfolgen sowie <xref:System.Globalization.CultureInfo> Objekte, die die Kulturen Englisch - USA ("En-US") und Französisch - Frankreich ("fr-FR") darstellen.  
+  
+ [!code-csharp[System.Numerics.Complex.ToString#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.tostring/cs/tostring4.cs#4)]
+ [!code-vb[System.Numerics.Complex.ToString#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.tostring/vb/tostring4.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.FormatException">
+          <paramref name="format" /> ist keine gültige Formatzeichenfolge.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Zero">
+      <MemberSignature Language="C#" Value="public static readonly System.Numerics.Complex Zero;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Numerics.Complex Zero" />
+      <MemberSignature Language="DocId" Value="F:System.Numerics.Complex.Zero" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Numerics</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Complex</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine neue <see cref="T:System.Numerics.Complex" />-Instanz mit einer reellen Zahl gleich 0 und einer imaginären Zahl gleich 0 zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Numerics.Complex.Zero> Eigenschaft wird am häufigsten zum Vergleichen einer <xref:System.Numerics.Complex> Wert auf 0 (null).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel instanziiert einen <xref:System.Numerics.Complex> Wert mithilfe der <xref:System.Numerics.Complex.Zero> Eigenschaft. Es vergleicht dann diesen Wert auf einen anderen Wert, der durch den Aufruf instanziiert wird die <xref:System.Numerics.Complex> Konstruktor mit einer echten gleich 0 (null) und einem imaginären Teil gleich 0 (null). Wie die Ausgabe des Beispiels zeigt, sind die beiden Werte gleich.  
+  
+ [!code-csharp[System.Numerics.Complex.Zero#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.numerics.complex.zero/cs/zero1.cs#1)]
+ [!code-vb[System.Numerics.Complex.Zero#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.numerics.complex.zero/vb/zero1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

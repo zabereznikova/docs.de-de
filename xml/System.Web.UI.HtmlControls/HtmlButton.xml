@@ -1,0 +1,398 @@
+<Type Name="HtmlButton" FullName="System.Web.UI.HtmlControls.HtmlButton">
+  <TypeSignature Language="C#" Value="public class HtmlButton : System.Web.UI.HtmlControls.HtmlContainerControl, System.Web.UI.IPostBackEventHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HtmlButton extends System.Web.UI.HtmlControls.HtmlContainerControl implements class System.Web.UI.IPostBackEventHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.HtmlControls.HtmlButton" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.HtmlControls.HtmlContainerControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IPostBackEventHandler</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("ServerClick")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.SupportsEventValidation</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht den programmgesteuerten Zugriff auf das HTML-Tag <see langword="&lt;button&gt;" /> auf dem Server.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `<button>` -Element ermöglicht Entwicklern benutzerschaltflächen Benutzeroberfläche (UI)-Formular erstellen, die eingebettete HTML-Elemente, einschließlich von anderen Serversteuerelementen zusammengesetzt werden können.  
+  
+> [!NOTE]
+>  Die `<button>` Element wird in der HTML 4.0-Spezifikation definiert und wird nur in Microsoft Internet Explorer, Version 4.0 und höher unterstützt. Um UI Formularschaltflächen für die Verwendung in anderen Browsern erstellen, sollten Sie mithilfe der <xref:System.Web.UI.HtmlControls.HtmlInputImage> Klasse.  
+  
+ Auf bestimmte benutzerdefinierte Anweisungen auszuführen, wenn die <xref:System.Web.UI.HtmlControls.HtmlButton> Steuerelement geklickt wird, geben Sie einen benutzerdefinierten Ereignishandler für die <xref:System.Web.UI.HtmlControls.HtmlButton.ServerClick> Ereignis.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.HtmlControls.HtmlButton> Steuerelement rendert ECMAScript an den Clientbrowser. Der Clientbrowser benötigen für das genannte Steuerelement aktiviert ECMAScript, ordnungsgemäß funktioniert. Weitere Informationen zu Clientskript, finden Sie unter [Clientskripts in ASP.NET Web Pages](http://msdn.microsoft.com/library/13edb6b9-2dea-43c6-b8c1-a47207de19aa).  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.HtmlControls.HtmlButton>, finden Sie unter der <xref:System.Web.UI.HtmlControls.HtmlButton.%23ctor%2A> Konstruktor.  
+  
+> [!CAUTION]
+>  Dieses Steuerelement kann verwendet werden, Benutzereingaben angezeigt werden, die möglicherweise böswillige Clientskripts umfassen. Überprüfen Sie alle Informationen, die für ausführbare Skripts, SQL-Anweisungen oder anderen Code von einem Client gesendet wird, vor der Anzeige in der Anwendung. ASP.NET bietet eine Funktion für den Überprüfung eingabeanforderung zum Blockieren von Skript und HTML in Benutzereingaben. Server-Validierungssteuerelemente werden ebenfalls bereitgestellt, um Benutzereingaben zu bewerten. Weitere Informationen finden Sie unter [Validation Server Control Syntax](http://msdn.microsoft.com/en-us/96d2c59e-693c-4079-9b53-b3ff0d9e9133).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlButton.ServerClick> Ereignis in das Textfeld eingegebene Name angezeigt.  
+  
+ [!code-aspx-csharp[Classic HtmlButton Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HtmlButton Example/cs/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic HtmlButton Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HtmlButton Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HtmlButton ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlButton.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.HtmlControls.HtmlButton" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.HtmlControls.HtmlButton> Steuerelement.  
+  
+ Die folgende Tabelle zeigt die anfängliche Eigenschaftswert für eine Instanz von <xref:System.Web.UI.HtmlControls.HtmlButton>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.HtmlControls.HtmlControl.TagName%2A>|Das Zeichenfolgenliteral "Button".|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie dynamisch hinzufügen ein <xref:System.Web.UI.HtmlControls.HtmlButton> Steuerelement Web Forms-Seite.  
+  
+ [!code-aspx-csharp[HtmlButtonConstructor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlButtonConstructor/CS/htmlbuttonconstructorcs.aspx#1)]
+ [!code-aspx-vb[HtmlButtonConstructor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlButtonConstructor/VB/htmlbuttonconstructorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CausesValidation">
+      <MemberSignature Language="C#" Value="public virtual bool CausesValidation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CausesValidation" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlButton.CausesValidation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Überprüfung erfolgt bei der <see cref="T:System.Web.UI.HtmlControls.HtmlButton" /> Steuerelement geklickt wird.</summary>
+        <value>
+          <see langword="true" />, wenn beim Klicken auf das <see cref="T:System.Web.UI.HtmlControls.HtmlButton" />-Steuerelement eine Validierung durchgeführt wird, andernfalls <see langword="false" />. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig erfolgt die Validierung bei der ein <xref:System.Web.UI.HtmlControls.HtmlButton> Steuerelement geklickt wird. Seitenüberprüfung bestimmt, ob ein Validierungssteuerelement auf der Seite der Eingabesteuerelemente zugeordnet, die alle Validierungsregeln, die gemäß des Validierungssteuerelements übergeben.  
+  
+ Sie können angeben, oder zu bestimmen, ob die Überprüfung auf dem Client und dem Server ausgeführt wird beim ein <xref:System.Web.UI.HtmlControls.HtmlButton> Steuerelement geklickt wird, mithilfe der <xref:System.Web.UI.HtmlControls.HtmlButton.CausesValidation%2A> Eigenschaft. Validierung durchgeführt werden soll, legen Sie die <xref:System.Web.UI.HtmlControls.HtmlButton.CausesValidation%2A> Eigenschaft `false`.  
+  
+ Diese Eigenschaft wird häufig verwendet, in dem Ereignishandler für das <xref:System.Web.UI.HtmlControls.HtmlButton.ServerClick> Ereignis, um zu verhindern, dass Seite Validierung auftritt, wenn eine Schaltfläche "Abbrechen" oder Zurücksetzen geklickt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlButton.CausesValidation%2A> Eigenschaft, um zu verhindern, dass bei der Validierung verhindern. Beachten Sie, dass die <xref:System.Web.UI.WebControls.BaseValidator.Validate%2A> -Methode jedes Validierungssteuerelement unabhängig aktiviert.  
+  
+ [!code-aspx-csharp[HtmlButtonCausesValidation#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlButtonCausesValidation/CS/htmlbuttoncausesvalidationcs.aspx#1)]
+ [!code-aspx-vb[HtmlButtonCausesValidation#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlButtonCausesValidation/VB/htmlbuttoncausesvalidationvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlButton.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.PreRender" /> Ereignis und Register Clientskripts zum Generieren eines Postbacks.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlButton.OnPreRender%2A> Methode wird hauptsächlich von Steuerelemententwicklern zum Erweitern der Funktionalität des verwendet die <xref:System.Web.UI.HtmlControls.HtmlButton> Steuerelement.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.HtmlControls.HtmlButton.OnPreRender%2A> Methode in einem benutzerdefinierten Steuerelement von ReportViewer zur zeigt immer der <xref:System.Web.UI.HtmlControls.HtmlButton> mit fett formatierten Text.  
+  
+ [!code-aspx-csharp[CustomHtmlButtonOnPreRender#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomHtmlButtonOnPreRender/CS/custom_htmlbutton_onprerendercs.aspx#1)]
+ [!code-aspx-vb[CustomHtmlButtonOnPreRender#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomHtmlButtonOnPreRender/VB/custom_htmlbutton_onprerendervb.aspx#1)]  
+  
+ [!code-csharp[CustomHtmlButtonOnPreRender#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomHtmlButtonOnPreRender/CS/custom_htmlbutton_onprerender.cs#2)]
+ [!code-vb[CustomHtmlButtonOnPreRender#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomHtmlButtonOnPreRender/VB/custom_htmlbutton_onprerender.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnServerClick">
+      <MemberSignature Language="C#" Value="protected virtual void OnServerClick (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnServerClick(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlButton.OnServerClick(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.HtmlControls.HtmlButton.ServerClick" />-Ereignis aus. Dadurch können Sie einen benutzerdefinierten Handler für das Ereignis bereitstellen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlButton.ServerClick> Ereignis wird ausgelöst, wenn die <xref:System.Web.UI.HtmlControls.HtmlButton> Steuerelement geklickt wird. Dieses Ereignis verursacht einen Roundtrip vom Client zum Server und zurück ausgeführt. Es wird bewusst sein, von der Clientseite `OnClick` Ereignis. Besteht ein Konflikt zwischen den Code, der ausgeführt wird, mit einer <xref:System.Web.UI.HtmlControls.HtmlButton.ServerClick> Ereignis und Code ausführen, indem eine clientseitige `OnClick` Ereignis, das serverseitige Ereignis Anweisungen werden die clientseitige Code überschreiben.  
+  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.Web.UI.HtmlControls.HtmlButton.OnServerClick%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie deklarativ angeben und codieren einen Ereignishandler für das <xref:System.Web.UI.HtmlControls.HtmlButton.ServerClick> Ereignis. Wenn die <xref:System.Web.UI.HtmlControls.HtmlButton> Steuerelement geklickt wird, wird der Wert in das Textfeld eingegeben wird angezeigt.  
+  
+ [!code-aspx-csharp[Classic HtmlButton Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HtmlButton Example/cs/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic HtmlButton Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HtmlButton Example/VB/sourcevb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie programmgesteuert angeben und codieren einen Ereignishandler für das <xref:System.Web.UI.HtmlControls.HtmlButton.ServerClick> Ereignis.  
+  
+ [!code-aspx-csharp[HtmlButtonConstructor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlButtonConstructor/CS/htmlbuttonconstructorcs.aspx#1)]
+ [!code-aspx-vb[HtmlButtonConstructor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlButtonConstructor/VB/htmlbuttonconstructorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Web.UI.HtmlControls.HtmlButton.OnServerClick(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Web.UI.HtmlControls.HtmlButton.OnServerClick(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="protected virtual void RaisePostBackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RaisePostBackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlButton.RaisePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">Das Argument für das Ereignis.</param>
+        <summary>Löst Ereignisse für das <see cref="T:System.Web.UI.HtmlControls.HtmlButton" />-Steuerelement aus, wenn es ein Postback an den Server ausführt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlButton.RaisePostBackEvent%2A> Methode wird verwendet, indem Sie die <xref:System.Web.UI.HtmlControls.HtmlButton> Steuerelement, wenn darauf geklickt wird, ausgelöst werden soll, eine <xref:System.Web.UI.HtmlControls.HtmlButton.ServerClick> Ereignis.  
+  
+ Wenn die <xref:System.Web.UI.HtmlControls.HtmlButton.CausesValidation%2A> Eigenschaft ist `true`, <xref:System.Web.UI.Page.Validate%2A?displayProperty=nameWithType> Methode wird aufgerufen, mit der angegebenen Gruppe von Steuerelementen der <xref:System.Web.UI.HtmlControls.HtmlButton.ValidationGroup%2A> Eigenschaft.  
+  
+ Diese Methode wird hauptsächlich von Steuerelemententwicklern zum Erweitern der Funktionalität des verwendet die <xref:System.Web.UI.HtmlControls.HtmlButton> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderAttributes">
+      <MemberSignature Language="C#" Value="protected override void RenderAttributes (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RenderAttributes(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlButton.RenderAttributes(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Die <see cref="T:System.Web.UI.HtmlTextWriter" /> , der den Ausgabestream zum Rendern auf dem Client enthält.</param>
+        <summary>Rendert die Attribute des <see cref="T:System.Web.UI.HtmlControls.HtmlButton" />-Steuerelements in das angegebene <see cref="T:System.Web.UI.HtmlTextWriter" />-Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlButton.RenderAttributes%2A> -Methode schreibt den `onclick` -Attribut des gerenderten <xref:System.Web.UI.HtmlControls.HtmlButton> steuern und ruft dann die <xref:System.Web.UI.HtmlControls.HtmlControl.RenderAttributes%2A?displayProperty=nameWithType> Methode.  
+  
+ Die <xref:System.Web.UI.HtmlControls.HtmlButton.RenderAttributes%2A> Methode wird hauptsächlich von Steuerelemententwicklern zum Erweitern der Funktionalität des verwendet die <xref:System.Web.UI.HtmlControls.HtmlButton> Steuerelement.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.HtmlControls.HtmlButton.RenderAttributes%2A> in einem benutzerdefinierten gesteuert wird, damit immer ein Titel angezeigt wird der <xref:System.Web.UI.HtmlControls.HtmlButton> Steuerelement.  
+  
+ [!code-aspx-csharp[CustomHtmlButtonRenderAttributes#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomHtmlButtonRenderAttributes/CS/custom_htmlbutton_renderattributescs.aspx#1)]
+ [!code-aspx-vb[CustomHtmlButtonRenderAttributes#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomHtmlButtonRenderAttributes/VB/custom_htmlbutton_renderattributesvb.aspx#1)]  
+  
+ [!code-csharp[CustomHtmlButtonRenderAttributes#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomHtmlButtonRenderAttributes/CS/custom_htmlbutton_renderattributes.cs#2)]
+ [!code-vb[CustomHtmlButtonRenderAttributes#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomHtmlButtonRenderAttributes/VB/custom_htmlbutton_renderattributes.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerClick">
+      <MemberSignature Language="C#" Value="public event EventHandler ServerClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ServerClick" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.HtmlControls.HtmlButton.ServerClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn der Benutzer klickt auf ein <see cref="T:System.Web.UI.HtmlControls.HtmlButton" /> Steuerelement auf der Webseite des Client.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlButton.ServerClick> Ereignis wird ausgelöst, wenn die <xref:System.Web.UI.HtmlControls.HtmlButton> Steuerelement geklickt wird. Dieses Serverereignis bewirkt, dass einen Roundtrip zum auftreten, vom Client zum Server und zurück. Es wird bewusst sein, von der Clientseite `OnClick` Ereignis. Besteht ein Konflikt zwischen den Code, der ausgeführt wird, mit einer <xref:System.Web.UI.HtmlControls.HtmlButton.ServerClick> Ereignis und Code ausführen, indem eine clientseitige `OnClick` Ereignis, das serverseitige Ereignis Anweisungen werden die clientseitige Code überschreiben.  
+  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie deklarativ angeben und codieren einen Ereignishandler für das <xref:System.Web.UI.HtmlControls.HtmlButton.ServerClick> Ereignis. Wenn die <xref:System.Web.UI.HtmlControls.HtmlButton> Steuerelement geklickt wird, wird der Wert in das Textfeld eingegeben wird angezeigt.  
+  
+ [!code-aspx-csharp[Classic HtmlButton Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HtmlButton Example/cs/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic HtmlButton Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HtmlButton Example/VB/sourcevb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie programmgesteuert angeben und codieren einen Ereignishandler für das <xref:System.Web.UI.HtmlControls.HtmlButton.ServerClick> Ereignis.  
+  
+ [!code-aspx-csharp[HtmlButtonConstructor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlButtonConstructor/CS/htmlbuttonconstructorcs.aspx#1)]
+ [!code-aspx-vb[HtmlButtonConstructor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlButtonConstructor/VB/htmlbuttonconstructorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IPostBackEventHandler.RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="void IPostBackEventHandler.RaisePostBackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlButton.System#Web#UI#IPostBackEventHandler#RaisePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">Die Ereignisargumente.</param>
+        <summary>Löst Ereignisse für das <see cref="T:System.Web.UI.HtmlControls.HtmlButton" />-Steuerelement aus, wenn es ein Postback an den Server ausführt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationGroup">
+      <MemberSignature Language="C#" Value="public virtual string ValidationGroup { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ValidationGroup" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlButton.ValidationGroup" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt Sie die Gruppe von Steuerelementen für die die <see cref="T:System.Web.UI.HtmlControls.HtmlButton" /> eine Validierung auslöst, wenn es an den Server zurückgesendet.</summary>
+        <value>Die Gruppe von Steuerelementen, für die die <see cref="T:System.Web.UI.HtmlControls.HtmlButton" /> -Steuerelement eine Validierung auslöst, wenn es an den Server zurückgesendet. Der Standardwert ist eine leere Zeichenfolge (""), der angibt, die diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überprüfung Gruppen erlauben Ihnen Validierungssteuerelemente auf einer Seite einer bestimmten Kategorie zuweisen. Jede Validierungsgruppe kann unabhängig von anderen Gruppen Überprüfung auf der Seite überprüft werden. Verwenden der <xref:System.Web.UI.HtmlControls.HtmlButton.ValidationGroup%2A> Eigenschaft, um den Namen der Validierungsgruppe für das Angeben der <xref:System.Web.UI.HtmlControls.HtmlButton> -Steuerelement eine Validierung auslöst, wenn es an den Server zurückgesendet.  
+  
+ Diese Eigenschaft wirkt sich nur, wenn der Wert von der <xref:System.Web.UI.HtmlControls.HtmlButton.CausesValidation%2A> -Eigenschaftensatz auf `true`. Wenn geben Sie einen Wert für die <xref:System.Web.UI.HtmlControls.HtmlButton.ValidationGroup%2A> -Eigenschaft, um nur die Validierungssteuerelemente, die Teil der angegebenen Gruppe sind sind validiert, wenn die <xref:System.Web.UI.HtmlControls.HtmlButton> Steuerelement an den Server sendet. Wenn Sie einen Wert für diese Eigenschaft nicht angeben und die <xref:System.Web.UI.HtmlControls.HtmlButton.CausesValidation%2A> -Eigenschaftensatz auf `true`, alle Validierungssteuerelemente auf der Seite, die Validierungsgruppe zugeordnet sind werden überprüft, wenn das Steuerelement an den Server zurückgesendet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlButton.ValidationGroup%2A> Eigenschaft an, das die Steuerelemente beim Überprüfen einer <xref:System.Web.UI.HtmlControls.HtmlButton> Steuerelement an den Server sendet. Die Seite enthält zwei Textfelder zum Erfassen von Daten aus der Benutzer und zwei <xref:System.Web.UI.WebControls.RequiredFieldValidator> Steuerelemente, um sicherzustellen, dass der Benutzer nicht das Textfeld leer bleibt. Die <xref:System.Web.UI.WebControls.RequiredFieldValidator> -Steuerelement für das erste Textfeld in der `CityInfoGroup` Validierungsgruppe und <xref:System.Web.UI.WebControls.RequiredFieldValidator> -Steuerelement für das zweite Feld in der `StateInfoGroup` Validierungsgruppe. Wenn die `CityQueryButton` geklickt wird, wird nur das Steuerelement in der `CityInfoGroup` Validierungsgruppe wird überprüft. Wenn die `StateQueryButton` geklickt wird, wird nur das Steuerelement in der `StateInfoGroup` Validierungsgruppe wird überprüft.  
+  
+ [!code-aspx-csharp[HtmlButtonValidationGroup#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlButtonValidationGroup/CS/htmlbuttonvalidationgroupcs.aspx#1)]
+ [!code-aspx-vb[HtmlButtonValidationGroup#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlButtonValidationGroup/VB/htmlbuttonvalidationgroupvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

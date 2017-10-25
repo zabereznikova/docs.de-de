@@ -1,0 +1,358 @@
+<Type Name="COMFieldInfo" FullName="Microsoft.JScript.COMFieldInfo">
+  <TypeSignature Language="C#" Value="public class COMFieldInfo : System.Reflection.FieldInfo, Microsoft.JScript.MemberInfoInitializer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit COMFieldInfo extends System.Reflection.FieldInfo implements class Microsoft.JScript.MemberInfoInitializer" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.COMFieldInfo" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Reflection.FieldInfo</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.JScript.MemberInfoInitializer</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("CA0F511A-FAF2-4942-B9A8-17D5E46514E8")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht JScript für die Kommunikation mit einer externen COM-Feld. Diese Klasse wird von einer externen COM-Implementierung zum Offenlegen ihrer Objekte für JScript verwendet, da JScript eine verwaltete <see cref="T:System.Reflection.MemberInfo" /> für die Bindung an ein externes Objekt benötigt.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public COMFieldInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.COMFieldInfo.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.JScript.COMFieldInfo" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public override System.Reflection.FieldAttributes Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.FieldAttributes Attributes" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.COMFieldInfo.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.FieldAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Attribute, die diesem Feld zugeordnet sind.</summary>
+        <value>
+          <see cref="F:System.Reflection.FieldAttributes.Public" />
+        </value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DeclaringType">
+      <MemberSignature Language="C#" Value="public override Type DeclaringType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type DeclaringType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.COMFieldInfo.DeclaringType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ, der dieses Feld deklariert.</summary>
+        <value>NULL, da der Typ, der dieses Feld deklariert ist ein externen COM-Objekt.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FieldHandle">
+      <MemberSignature Language="C#" Value="public override RuntimeFieldHandle FieldHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.RuntimeFieldHandle FieldHandle" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.COMFieldInfo.FieldHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.RuntimeFieldHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Löst ein <see cref="F:Microsoft.JScript.JSError.InternalError" /> Ausnahme in allen Fällen.</summary>
+        <value>Löst ein <see cref="F:Microsoft.JScript.JSError.InternalError" /> Ausnahme in allen Fällen.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FieldType">
+      <MemberSignature Language="C#" Value="public override Type FieldType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type FieldType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.COMFieldInfo.FieldType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ dieses Felds ab.</summary>
+        <value>Der <see cref="T:System.Object" />-Typ.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetCOMMemberInfo">
+      <MemberSignature Language="C#" Value="public Microsoft.JScript.COMMemberInfo GetCOMMemberInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.JScript.COMMemberInfo GetCOMMemberInfo() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.COMFieldInfo.GetCOMMemberInfo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.COMMemberInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft ein verwaltetes Objekt, das für die Kommunikation mit diesem externen COM-Feld JScript ermöglicht.</summary>
+        <returns>Ein verwaltetes Objekt, das für die Kommunikation mit diesem externen COM-Feld JScript ermöglicht.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public override object[] GetCustomAttributes (bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object[] GetCustomAttributes(bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.COMFieldInfo.GetCustomAttributes(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="inherit">
+          <see langword="true" />Bei diesem Member Vererbungshierarchie zum Suchen der Attribute zu suchen.</param>
+        <summary>Gibt ein Array, das die benutzerdefinierten Attribute enthält, die diesem Feld zugeordnet sind.</summary>
+        <returns>Ein Array von <see cref="T:System.Reflection.FieldInfo" /> Objekte, die 0 (null) Elemente verfügt.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public override object[] GetCustomAttributes (Type t, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object[] GetCustomAttributes(class System.Type t, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.COMFieldInfo.GetCustomAttributes(System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="t">Der Typ des zu suchenden Attributs.</param>
+        <param name="inherit">
+          <see langword="true" />Bei diesem Member Vererbungshierarchie zum Suchen der Attribute zu suchen.</param>
+        <summary>Gibt ein Array, das die benutzerdefinierten Attribute enthält, die auf dieses Feld, das nur für Attribute des angegebenen Typs suchen angefügt sind.</summary>
+        <returns>Ein Array von <see cref="T:System.Reflection.FieldInfo" /> Objekte, die 0 (null) Elemente verfügt.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public override object GetValue (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetValue(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.COMFieldInfo.GetValue(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Die Argumentliste Übergabe an den externen COM-Feld. Dieser Parameter wird ignoriert.</param>
+        <summary>Ruft den Wert des externen COM-Felds mit dem <see cref="T:Microsoft.JScript.COMMemberInfo" /> , wurde angegeben, um die <see cref="M:Microsoft.JScript.COMFieldInfo.Initialize(System.String,Microsoft.JScript.COMMemberInfo)" /> Methode.</summary>
+        <returns>Der Wert des externen COM-Felds.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public virtual void Initialize (string name, Microsoft.JScript.COMMemberInfo dispatch);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize(string name, class Microsoft.JScript.COMMemberInfo dispatch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.COMFieldInfo.Initialize(System.String,Microsoft.JScript.COMMemberInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="dispatch" Type="Microsoft.JScript.COMMemberInfo" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des externen COM-Felds, das dieses Objekt darstellt.</param>
+        <param name="dispatch">Informationen, mit denen von JScript Zugriff auf das externe COM-Feld.</param>
+        <summary>Initialisiert die Informationen, mit denen JScript für die Kommunikation mit diesem externen COM-Feld.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefined">
+      <MemberSignature Language="C#" Value="public override bool IsDefined (Type t, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefined(class System.Type t, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.COMFieldInfo.IsDefined(System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="t">Der Typ des zu suchenden Attributs.</param>
+        <param name="inherit">
+          <see langword="true" />Bei diesem Member Vererbungshierarchie zum Suchen der Attribute zu suchen.</param>
+        <summary>Bestimmt, ob der Typ des angegebenen Attributs an diesem Feld angefügt ist.</summary>
+        <returns>
+          <see langword="false" /> in allen Fällen.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MemberType">
+      <MemberSignature Language="C#" Value="public override System.Reflection.MemberTypes MemberType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.MemberTypes MemberType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.COMFieldInfo.MemberType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MemberTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Members, der dieses Feld ist. Gibt den Typ der abgeleiteten Klasse <see cref="T:System.Reflection.MemberInfo" /> , die diese Klasse abgeleitet wurde.</summary>
+        <value>
+          <see cref="F:System.Reflection.MemberTypes.Field" />, da diese Klasse abgeleitet <see cref="T:System.Reflection.FieldInfo" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.COMFieldInfo.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des externen COM-Felds, das dieses Objekt darstellt.</summary>
+        <value>Der Name des externen COM-Felds, das dieses Objekt darstellt.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ReflectedType">
+      <MemberSignature Language="C#" Value="public override Type ReflectedType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ReflectedType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.COMFieldInfo.ReflectedType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Klassenobjekt, mit dem diese Instanz durch Reflektion abgerufen wurde.</summary>
+        <value>NULL, da diese Instanz nicht durch Reflektion abgerufen wurde.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public override void SetValue (object obj, object value, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetValue(object obj, object value, valuetype System.Reflection.BindingFlags invokeAttr, class System.Reflection.Binder binder, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.COMFieldInfo.SetValue(System.Object,System.Object,System.Reflection.BindingFlags,System.Reflection.Binder,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="invokeAttr" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="binder" Type="System.Reflection.Binder" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, dessen Feldwert festgelegt wird. Dieser Parameter wird ignoriert.</param>
+        <param name="value">Der neue Wert des externen COM-Members.</param>
+        <param name="invokeAttr">Eine bitweise Kombination der Enumerationswerte, die die Bindung steuern.</param>
+        <param name="binder">Ein Objekt, das den Typ von tatsächlicher Argumenttyp zum Typ des formalen Arguments konvertiert.</param>
+        <param name="culture">Enthält Informationen über eine bestimmte Kultur oder ein Gebietsschema. Zur ordnungsgemäßen Formatierung von Zahlen, Datumsangaben und Zeichenfolgen verwendet.</param>
+        <summary>Legt den Wert des externen COM-Felds mit dem <see cref="T:Microsoft.JScript.COMMemberInfo" /> , wurde angegeben, um die <see cref="M:Microsoft.JScript.COMFieldInfo.Initialize(System.String,Microsoft.JScript.COMMemberInfo)" /> Methode.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

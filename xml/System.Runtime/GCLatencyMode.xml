@@ -1,0 +1,209 @@
+<Type Name="GCLatencyMode" FullName="System.Runtime.GCLatencyMode">
+  <TypeSignature Language="C#" Value="public enum GCLatencyMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed GCLatencyMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.GCLatencyMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Passt die Zeit an, für die der Garbage Collector in die Anwendung eingreift.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können das Ausmaß der Garbagecollection in der Anwendung anpassen, indem Sie die Einstellung der <xref:System.Runtime.GCSettings.LatencyMode%2A> Eigenschaft an ein beliebiges <xref:System.Runtime.GCLatencyMode> außer NoGCRegion-Enumerationswert. Sie können auch die aktuellen Wartezeitmodus der Garbage Collector bestimmen, durch Abrufen der <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> Eigenschaftswert.  
+  
+ Finden Sie unter [Latenzmodi](~/docs/standard/garbage-collection/latency.md) Nähere Informationen dazu, wie die Common Language Runtime-Konfigurationseinstellungen für die Garbagecollection den Standardwert für diese Enumeration beeinflussen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Batch">
+      <MemberSignature Language="C#" Value="Batch" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.GCLatencyMode Batch = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.GCLatencyMode.Batch" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.GCLatencyMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Deaktiviert die Gleichzeitigkeit der Garbage Collection und gibt Objekte in einem Batchaufruf wieder frei. Dies ist der intrusivste Modus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Modus ist für den maximalen Durchsatz auf Kosten der Reaktionsfähigkeit entwickelt.  
+  
+ Dieser Modus überschreibt die Common Language Runtime-Konfigurationseinstellung. Wenn aktiviert ist, verhindert der Wechsel in den Batchmodus Weitere gleichzeitigen Garbage Collection.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Interactive">
+      <MemberSignature Language="C#" Value="Interactive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.GCLatencyMode Interactive = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.GCLatencyMode.Interactive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.GCLatencyMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Aktiviert die gleichzeitige Garbage Collection und gibt Objekte wieder frei, während die Anwendung ausgeführt wird. Dies ist der Standardmodus für die Garbage Collection auf einer Arbeitsstation und weniger intrusiv als <see cref="F:System.Runtime.GCLatencyMode.Batch" />. Dabei werden Reaktionsgeschwindigkeit und Durchsatz ausgeglichen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Modus entspricht einer Arbeitsstation gleichzeitige Garbagecollection.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LowLatency">
+      <MemberSignature Language="C#" Value="LowLatency" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.GCLatencyMode LowLatency = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.GCLatencyMode.LowLatency" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.GCLatencyMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Aktiviert eine Garbage Collection, die bei der Freigabe von Objekten zurückhaltender ist. Vollständige Garbage Collections werden nur ausgeführt, wenn das System wenig Speicher aufweist, während Garbage Collections der Generation 0 und der Generation 1 häufiger ausgeführt werden können.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Modus ist nicht für den Garbage Collector der Server verfügbar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoGCRegion">
+      <MemberSignature Language="C#" Value="NoGCRegion" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.GCLatencyMode NoGCRegion = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.GCLatencyMode.NoGCRegion" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.GCLatencyMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass Garbage Collection angehalten wird, während die App einen kritischen Pfad ausführt.  
+  
+ <see cref="F:System.Runtime.GCLatencyMode.NoGCRegion" /> ist ein schreibgeschützter Wert, d. h. Sie können den <see cref="F:System.Runtime.GCLatencyMode.NoGCRegion" />-Wert nicht der <see cref="P:System.Runtime.GCSettings.LatencyMode" />-Eigenschaft zuweisen. Sie können den Latenzmodus ohne GC-Region durch Aufrufen der <see cref="Overload:System.GC.TryStartNoGCRegion" />-Methode angeben und ihn durch Aufrufen der <see cref="M:System.GC.EndNoGCRegion" />-Methode beenden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SustainedLowLatency">
+      <MemberSignature Language="C#" Value="SustainedLowLatency" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.GCLatencyMode SustainedLowLatency = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.GCLatencyMode.SustainedLowLatency" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.GCLatencyMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Aktiviert Garbage Collection, die versucht, Wartezeit über einen längeren Zeitraum zu minimieren. Der Collector versucht, nur Generation 0-, Generation 1- und gleichzeitige Generation 2-Auflistungen durchzuführen. Die vollständige Sperrung von Auflistungen kann bei unzureichendem Speicherplatz weiterhin auftreten.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

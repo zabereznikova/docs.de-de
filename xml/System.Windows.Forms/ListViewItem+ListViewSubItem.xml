@@ -1,0 +1,426 @@
+<Type Name="ListViewItem+ListViewSubItem" FullName="System.Windows.Forms.ListViewItem+ListViewSubItem">
+  <TypeSignature Language="C#" Value="public class ListViewItem.ListViewSubItem" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi serializable beforefieldinit ListViewItem/ListViewSubItem extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ListViewItem.ListViewSubItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Text")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DesignTimeVisible(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.ListViewSubItemConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Unterelement einer <see cref="T:System.Windows.Forms.ListViewItem" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Forms.ListView> -Steuerelement zeigt eine Liste von Elementen, die von definiert sind die <xref:System.Windows.Forms.ListViewItem> Klasse. Jede <xref:System.Windows.Forms.ListViewItem> Unterelement-Objekte, die von definiert werden können speichern die <xref:System.Windows.Forms.ListViewItem.ListViewSubItem> Klasse. Unterelemente werden angezeigt, wenn die <xref:System.Windows.Forms.ListView.View%2A> Eigenschaft von der <xref:System.Windows.Forms.ListView> Steuerelement auf festgelegt ist <xref:System.Windows.Forms.View.Details>. In der Regel enthalten die Unterelemente Informationen, die mit ihren übergeordneten Element verknüpft ist. Z. B. wenn ein <xref:System.Windows.Forms.ListView> -Steuerelement zeigt Elemente an, Aufträge darstellen, die jedes Element konnte die Bestellnummer angezeigt. Jedes Element, um Informationen wie z. B. die bestellten Produkts anzuzeigen, die Menge der bestellten Artikel und der Gesamtpreis der Bestellung konnte Unterelemente hinzugefügt werden. Im Gegensatz zu <xref:System.Windows.Forms.ListViewItem> Objekte, <xref:System.Windows.Forms.ListViewItem.ListViewSubItem> Objekte können nicht direkt vom Benutzer bearbeitet werden (der Benutzer kann bearbeiten <xref:System.Windows.Forms.ListViewItem> Objekten zurück, wenn die <xref:System.Windows.Forms.ListView.LabelEdit%2A> Eigenschaft von der <xref:System.Windows.Forms.ListView> Steuerelement auf festgelegt ist `true`).  
+  
+ Da Unterelemente nicht direkt vom Benutzer bearbeitet werden und keine Bilder anzeigen, Eigenschaften auf diejenigen beschränkt werden, die den Stil des Texts des Unterelements betreffen, bei der Anzeige in der <xref:System.Windows.Forms.ListView> Steuerelement. Wenn die <xref:System.Windows.Forms.ListViewItem.UseItemStyleForSubItems%2A> Eigenschaft von der <xref:System.Windows.Forms.ListView> , das Unterelemente enthält auf festgelegt ist `false`, können Sie die <xref:System.Windows.Forms.ListViewItem.ListViewSubItem.Font%2A>, <xref:System.Windows.Forms.ListViewItem.ListViewSubItem.BackColor%2A>, und <xref:System.Windows.Forms.ListViewItem.ListViewSubItem.ForeColor%2A> Eigenschaften so ändern Sie die Stile anzuzeigende Text. In der Regel die Stile des Elements und die Unterelemente entsprechen den in einem <xref:System.Windows.Forms.ListView> -Steuerelement, aber wenn Sie, ändern Sie den Stil eines bestimmten möchten <xref:System.Windows.Forms.ListViewItem.ListViewSubItem> um es zu markieren, können Sie diese Eigenschaften auf die Elemente anders angezeigt werden soll.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.ListView> Steuerelement mit drei <xref:System.Windows.Forms.ListViewItem> angegebenen Objekte und drei <xref:System.Windows.Forms.ListViewItem.ListViewSubItem> Objekte, die für jedes Element angegeben. Im Beispiel wird auch erstellt <xref:System.Windows.Forms.ColumnHeader> Objekte die Unterelemente in der Detailansicht angezeigt. Zwei <xref:System.Windows.Forms.ImageList> Objekte werden auch im Bereitstellen von Images für das Codebeispiel erstellt die <xref:System.Windows.Forms.ListViewItem> Objekte. Diese <xref:System.Windows.Forms.ImageList> Objekte werden hinzugefügt, um die <xref:System.Windows.Forms.ListView.LargeImageList%2A> und <xref:System.Windows.Forms.ListView.SmallImageList%2A> Eigenschaften. Das Beispiel verwendet die folgenden Eigenschaften bei der Erstellung der <xref:System.Windows.Forms.ListView> Steuerelement.  
+  
+-   <xref:System.Windows.Forms.ListView.View%2A>  
+  
+-   <xref:System.Windows.Forms.ListView.LabelEdit%2A>  
+  
+-   <xref:System.Windows.Forms.ListView.AllowColumnReorder%2A>  
+  
+-   <xref:System.Windows.Forms.ListView.CheckBoxes%2A>  
+  
+-   <xref:System.Windows.Forms.ListView.FullRowSelect%2A>  
+  
+-   <xref:System.Windows.Forms.ListView.GridLines%2A>  
+  
+-   <xref:System.Windows.Forms.ListView.Sorting%2A>  
+  
+ Sie müssen den Code zum Hinzufügen einer <xref:System.Windows.Forms.Form> und rufen Sie die Methode, die im Beispiel aus dem Konstruktor oder eine andere Methode auf dem Formular erstellt. Im Beispiel erfordert, dass Bilder mit dem Namen `MySmallImage1`, `MySmallImage2`, `MyLargeImage1`, und `MyLargeImage2` befinden sich im Stammverzeichnis von Laufwerk "c"  
+  
+ [!code-cpp[ListViewExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ListViewExample/CPP/form1.cpp#1)]
+ [!code-csharp[ListViewExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ListViewExample/CS/form1.cs#1)]
+ [!code-vb[ListViewExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ListViewExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListViewSubItem ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListViewItem.ListViewSubItem.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.ListViewItem.ListViewSubItem" />-Klasse mit Standardwerten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListViewSubItem (System.Windows.Forms.ListViewItem owner, string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.ListViewItem owner, string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListViewItem.ListViewSubItem.#ctor(System.Windows.Forms.ListViewItem,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.ListViewItem" />
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Ein <see cref="T:System.Windows.Forms.ListViewItem" /> , die das Element, das Unterelement besitzt, darstellt.</param>
+        <param name="text">Der für das Unterelement anzuzeigende Text.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.ListViewItem.ListViewSubItem" /> Klasse mit dem angegebenen Besitzer und Text.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListViewSubItem (System.Windows.Forms.ListViewItem owner, string text, System.Drawing.Color foreColor, System.Drawing.Color backColor, System.Drawing.Font font);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.ListViewItem owner, string text, valuetype System.Drawing.Color foreColor, valuetype System.Drawing.Color backColor, class System.Drawing.Font font) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListViewItem.ListViewSubItem.#ctor(System.Windows.Forms.ListViewItem,System.String,System.Drawing.Color,System.Drawing.Color,System.Drawing.Font)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.ListViewItem" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="foreColor" Type="System.Drawing.Color" />
+        <Parameter Name="backColor" Type="System.Drawing.Color" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Ein <see cref="T:System.Windows.Forms.ListViewItem" /> , die das Element, das Unterelement besitzt, darstellt.</param>
+        <param name="text">Der für das Unterelement anzuzeigende Text.</param>
+        <param name="foreColor">Ein <see cref="T:System.Drawing.Color" /> , die die Vordergrundfarbe des Unterelements darstellt.</param>
+        <param name="backColor">Ein <see cref="T:System.Drawing.Color" /> , die die Hintergrundfarbe des Unterelements darstellt.</param>
+        <param name="font">Ein <see cref="T:System.Drawing.Font" /> , der die Schriftart zur Anzeige des Texts des Unterelements in darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.ListViewItem.ListViewSubItem" /> Klasse mit dem angegebenen Besitzer, Text Vordergrundfarbe, Hintergrundfarbe und Schriftartwerte.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color BackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListViewItem.ListViewSubItem.BackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Hintergrundfarbe des Texts des Unterelements.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> , die die Hintergrundfarbe des Texts des Unterelements darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die <xref:System.Windows.Forms.ListViewItem.ListViewSubItem.BackColor%2A> Eigenschaft so ändern Sie die Farbe des Texthintergrunds Unterelement angezeigt. Diese Eigenschaft kann verwendet werden, wenn Sie unterschiedliche Kombinationen von Vorder- und Hintergrund verwenden möchten (mithilfe der <xref:System.Windows.Forms.ListViewItem.ListViewSubItem.ForeColor%2A> -Eigenschaft zum Festlegen der Vordergrundfarbe), ein Unterelement voneinander zu unterscheiden. Angenommen, Sie legen konnte die <xref:System.Windows.Forms.ListViewItem.ListViewSubItem.BackColor%2A> Eigenschaft <xref:System.Drawing.Color.Red%2A> Unterelemente zu identifizieren, die einen negativen Wert anzeigen.  
+  
+ Wenn die <xref:System.Windows.Forms.ListViewItem.UseItemStyleForSubItems%2A> Eigenschaft von der <xref:System.Windows.Forms.ListViewItem> , besitzt das Unterelement auf festgelegt ist `true`, durch Festlegen dieser Eigenschaft hat keine Auswirkung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bounds">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle Bounds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle Bounds" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListViewItem.ListViewSubItem.Bounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das umschließende Rechteck der <see cref="T:System.Windows.Forms.ListViewItem.ListViewSubItem" />.</summary>
+        <value>Das umschließende <see cref="T:System.Drawing.Rectangle" /> von der <see cref="T:System.Windows.Forms.ListViewItem.ListViewSubItem" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Forms.ListViewItem.ListViewSubItem> nicht hinzugefügt wurde eine <xref:System.Windows.Forms.ListViewItem> oder das besitzende <xref:System.Windows.Forms.ListViewItem> keiner hinzugefügt wurden, ein <xref:System.Windows.Forms.ListView>, die <xref:System.Windows.Forms.ListViewItem.ListViewSubItem.Bounds%2A> Eigenschaft gibt ein leeres <xref:System.Drawing.Rectangle>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Font">
+      <MemberSignature Language="C#" Value="public System.Drawing.Font Font { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Font Font" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListViewItem.ListViewSubItem.Font" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Schriftart des Texts angezeigt, die für das Unterelement ab.</summary>
+        <value>Der <see cref="T:System.Drawing.Font" />, der auf den Text angewendet werden soll, der im Steuerelement angezeigt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Eigenschaft verwenden, so ändern Sie die Schriftarten, die auf den Text des Unterelements angewendet. Wenn die <xref:System.Windows.Forms.ListViewItem.UseItemStyleForSubItems%2A> Eigenschaft von der <xref:System.Windows.Forms.ListViewItem> auf festgelegt ist `true`, das Ändern dieser Eigenschaft hat keine Auswirkungen. Da die <xref:System.Drawing.Font> ist unveränderlich (d. h., dass Sie die Eigenschaften nicht anpassen können), Sie können nur Zuweisen der <xref:System.Windows.Forms.Control.Font%2A> Eigenschaft ein neues <xref:System.Drawing.Font>. Allerdings können Sie die neue Schriftart auf die vorhandene Schriftart basieren.  
+  
+ Im folgenden finden ein Beispiel dazu, wie die vorhandene Schriftart fett zu formatieren:  
+  
+```csharp  
+listViewItem1.SubItems[1].Font = new Font(listViewItem1.SubItems[1].Font,   
+       listViewItem1.SubItems[1].Font.Style | FontStyle.Bold);  
+```  
+  
+```vb  
+ListViewItem1.SubItems[1].Font = New Font(ListViewItem1.SubItems[1].Font, _   
+       ListViewItem1.SubItems[1].Font.Style Or FontStyle.Bold)  
+```  
+  
+ Wenn die <xref:System.Windows.Forms.ListViewItem.UseItemStyleForSubItems%2A> Eigenschaft von der <xref:System.Windows.Forms.ListViewItem> , besitzt das Unterelement auf festgelegt ist `true`, durch Festlegen dieser Eigenschaft hat keine Auswirkung.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Festlegen der <xref:System.Windows.Forms.ListViewItem.UseItemStyleForSubItems%2A> Eigenschaft `false` definieren Sie einen benutzerdefinierten Stil für <xref:System.Windows.Forms.ListViewItem.ListViewSubItem> Objekte. Das Beispiel veranschaulicht das Festlegen der <xref:System.Windows.Forms.ListViewItem.ListViewSubItem.ForeColor%2A> und <xref:System.Windows.Forms.ListViewItem.ListViewSubItem.Font%2A> Eigenschaften. Um das Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular, und rufen die `InitializeListView` -Methode im Konstruktor des Formulars oder <xref:System.Windows.Forms.Form.Load> Ereignisbehandlungsmethode.  
+  
+ [!code-cpp[System.Windows.Forms.ListViewItemStyle#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListViewItemStyle/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ListViewItemStyle#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewItemStyle/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ListViewItemStyle#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewItemStyle/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color ForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListViewItem.ListViewSubItem.ForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Vordergrundfarbe des Texts des Unterelements.</summary>
+        <value>Ein <see cref="T:System.Drawing.Color" /> , die die Vordergrundfarbe des Texts des Unterelements darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die <xref:System.Windows.Forms.ListViewItem.ListViewSubItem.ForeColor%2A> Eigenschaft so ändern Sie die Farbe des Texts des Unterelements. Diese Eigenschaft kann verwendet werden, wenn Sie unterschiedliche Kombinationen von Vorder- und Hintergrund verwenden möchten (mithilfe der <xref:System.Windows.Forms.ListViewItem.ListViewSubItem.BackColor%2A> -Eigenschaft zum Festlegen der Hintergrundfarbe), ein Element aus einer anderen zu unterscheiden. Angenommen, Sie legen konnte die <xref:System.Windows.Forms.ListViewItem.ListViewSubItem.ForeColor%2A> Eigenschaft <xref:System.Drawing.Color.Red%2A> Elemente zu identifizieren, die eine negative Zahl zugeordnet haben.  
+  
+ Wenn die <xref:System.Windows.Forms.ListViewItem.UseItemStyleForSubItems%2A> Eigenschaft von der <xref:System.Windows.Forms.ListViewItem> , besitzt das Unterelement auf festgelegt ist `true`, durch Festlegen dieser Eigenschaft hat keine Auswirkung.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Festlegen der <xref:System.Windows.Forms.ListViewItem.UseItemStyleForSubItems%2A> Eigenschaft `false` definieren Sie einen benutzerdefinierten Stil für <xref:System.Windows.Forms.ListViewItem.ListViewSubItem> Objekte. Das Beispiel veranschaulicht das Festlegen der <xref:System.Windows.Forms.ListViewItem.ListViewSubItem.ForeColor%2A> und <xref:System.Windows.Forms.ListViewItem.ListViewSubItem.Font%2A> Eigenschaften. Um das Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular, und rufen die `InitializeListView` -Methode im Konstruktor des Formulars oder <xref:System.Windows.Forms.Form.Load> Ereignisbehandlungsmethode.  
+  
+ [!code-cpp[System.Windows.Forms.ListViewItemStyle#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListViewItemStyle/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ListViewItemStyle#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewItemStyle/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ListViewItemStyle#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewItemStyle/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListViewItem.ListViewSubItem.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der <see cref="T:System.Windows.Forms.ListViewItem.ListViewSubItem" /> ab oder legt diesen fest.</summary>
+        <value>Der Name des der <see cref="T:System.Windows.Forms.ListViewItem.ListViewSubItem" />, oder eine leere Zeichenfolge (""), wenn kein Name festgelegt wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ListViewItem.ListViewSubItem.Name%2A> Eigenschaft entspricht dem Schlüssel für eine <xref:System.Windows.Forms.ListViewItem.ListViewSubItem> in einem <xref:System.Windows.Forms.ListViewItem.ListViewSubItemCollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetStyle">
+      <MemberSignature Language="C#" Value="public void ResetStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetStyle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListViewItem.ListViewSubItem.ResetStyle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt die Stile für das Unterelement an Standardeinstellung Schriftart und Farbe zurück.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Methode verwenden, zum Zurücksetzen der Schriftart, Hintergrundfarbe und Vordergrund Farbe Einstellungen für das Unterelement ab. Wenn die Formate zurückgesetzt werden, wird das Unterelement mit Standardschriftart, Hintergrundfarbe und Vorder-angezeigt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie das Format der Unterelemente der Zurücksetzen einer <xref:System.Windows.Forms.ListViewItem> mithilfe des der <xref:System.Windows.Forms.ListView.TopItem%2A?displayProperty=nameWithType> Eigenschaft und die <xref:System.Windows.Forms.ListViewItem.ListViewSubItem.ResetStyle%2A> Methode. Fügen Sie zum Ausführen des Beispiels den folgenden Code in ein Formular mit einer Schaltfläche mit dem Namen `Button1`, und rufen Sie die `InitializeListView` -Methode im Konstruktor des Formulars oder <xref:System.Windows.Forms.Form.Load> Ereignisbehandlungsmethode.  
+  
+ [!code-cpp[System.Windows.Forms.ListViewItemStyle#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListViewItemStyle/CPP/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.ListViewItemStyle#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewItemStyle/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.ListViewItemStyle#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewItemStyle/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tag">
+      <MemberSignature Language="C#" Value="public object Tag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Tag" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListViewItem.ListViewSubItem.Tag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.StringConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Objekt, das Daten enthält, zu der <see cref="T:System.Windows.Forms.ListViewItem.ListViewSubItem" />.</summary>
+        <value>Ein <see cref="T:System.Object" />, das Daten über den <see cref="T:System.Windows.Forms.ListViewItem.ListViewSubItem" /> enthält. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ListViewItem.ListViewSubItem.Tag%2A> -Eigenschaft können Sie zum Speichern zusätzlicher Informationen für eine <xref:System.Windows.Forms.ListViewItem.ListViewSubItem>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListViewItem.ListViewSubItem.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text des Unterelements ab.</summary>
+        <value>Der für das Unterelement anzuzeigende Text.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ListViewItem.ListViewSubItem.Text%2A> Eigenschaft können Sie den Text für das Unterelement zu bestimmen. Sie können die <xref:System.Windows.Forms.ListViewItem.ListViewSubItem.BackColor%2A>, <xref:System.Windows.Forms.ListViewItem.ListViewSubItem.ForeColor%2A>, und <xref:System.Windows.Forms.ListViewItem.ListViewSubItem.Font%2A> Eigenschaften zur Angabe, wie der Text angezeigt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListViewItem.ListViewSubItem.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge zurück, die das aktuelle Objekt darstellt.</summary>
+        <returns>Eine Zeichenfolge, die das aktuelle Objekt darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

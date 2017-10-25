@@ -1,0 +1,34 @@
+<Type Name="CrossContextDelegate" FullName="System.Runtime.Remoting.Contexts.CrossContextDelegate">
+  <TypeSignature Language="C#" Value="public delegate void CrossContextDelegate();" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CrossContextDelegate extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Contexts.CrossContextDelegate" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters />
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <summary>Stellt die Methode, die die Anforderungen der Ausführung von Code in einem anderen Kontext behandelt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rückrufe stellen eine Möglichkeit zum Anfordern der Ausführung von Code in einem anderen Kontext. Die <xref:System.Runtime.Remoting.Contexts.CrossContextDelegate> für Kontextrückrufe Klasse definiert ist. Jeder Kontext verfügt über ein Rückrufobjekt, das zum Ausführen von Rückrufen für den Kontext verwendet werden kann. Der Delegat verwendet, um einen Rückruf über das Rückrufobjekt anfordern muss die <xref:System.Runtime.Remoting.Contexts.CrossContextDelegate> Klasse.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+</Type>

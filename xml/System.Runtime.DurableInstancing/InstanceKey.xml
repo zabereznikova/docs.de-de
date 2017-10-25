@@ -1,0 +1,184 @@
+<Type Name="InstanceKey" FullName="System.Runtime.DurableInstancing.InstanceKey">
+  <TypeSignature Language="C#" Value="public class InstanceKey" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InstanceKey extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.DurableInstancing.InstanceKey" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Instanzschlüssel dar und enthält einen Bezeichner und dem Instanzschlüssel zugeordnete Metadaten. Ein Instanzschlüssel fungiert als nicht eindeutiger Alias für eine Instanz.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstanceKey (Guid value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceKey.#ctor(System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die dem Instanzschlüssel zugeordnete GUID. Darf nicht "Guid.Empty" sein.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstanceKey" />-Klasse unter Verwendung der GUID, die dem übergebenen Instanzschlüssel zugeordnet ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstanceKey (Guid value, System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt; metadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid value, class System.Collections.Generic.IDictionary`2&lt;class System.Xml.Linq.XName, class System.Runtime.DurableInstancing.InstanceValue&gt; metadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceKey.#ctor(System.Guid,System.Collections.Generic.IDictionary{System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Guid" />
+        <Parameter Name="metadata" Type="System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die dem Instanzschlüssel zugeordnete GUID. Darf nicht "Guid.Empty" sein.</param>
+        <param name="metadata">Das Wörterbuch, das dem Instanzschlüssel zugeordnete Metadaten enthält, bzw. NULL.</param>
+        <summary>Initialisiert eine Instanz der <see cref="T:System.Runtime.DurableInstancing.InstanceKey" />-Klasse unter Verwendung der GUID und Metadaten, die dem Instanzschlüssel zugeordnet sind.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceKey.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Ein <see cref="T:System.Runtime.DurableInstancing.InstanceKey" />-Objekt, das mit dem aktuellen Objekt verglichen werden muss.  Darf nicht NULL sein.</param>
+        <summary>Vergleicht die GUID, die dem aktuellen Objekt zugeordnet ist (Speicherung in der <see cref="P:System.Runtime.DurableInstancing.InstanceKey.Value" />-Eigenschaft), mit der GUID, die dem <see cref="T:System.Runtime.DurableInstancing.InstanceKey" />-Objekt zugeordnet ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die Objekte identisch sind; andernfalls gibt <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceKey.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen eindeutigen Hashcode für die GUID des aktuellen <see cref="T:System.Runtime.DurableInstancing.InstanceKey" />-Objekts zurück (Speicherung in der Value-Eigenschaft).</summary>
+        <returns>Der eindeutige Hashcode.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidKey">
+      <MemberSignature Language="C#" Value="public static System.Runtime.DurableInstancing.InstanceKey InvalidKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Runtime.DurableInstancing.InstanceKey InvalidKey" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.DurableInstancing.InstanceKey.InvalidKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.DurableInstancing.InstanceKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt ein ungültiges <see cref="T:System.Runtime.DurableInstancing.InstanceKey" />-Objekt zurück. Eine ungültige <see cref="T:System.Runtime.DurableInstancing.InstanceKey" /> Objekt hat "GUID.Empty"-Wert für die <see cref="P:System.Runtime.DurableInstancing.InstanceKey.Value" /> Eigenschaft und eine <see langword="false" /> Wert für die <see cref="P:System.Runtime.DurableInstancing.InstanceKey.IsValid" /> Eigenschaft.</summary>
+        <value>Ein ungültiger Instanzschlüssel.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValid">
+      <MemberSignature Language="C#" Value="public bool IsValid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsValid" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.DurableInstancing.InstanceKey.IsValid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Instanzschlüssel gültig ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Instanzschlüssel gültig ist. andernfalls <see langword="false" />.  Ein Instanzschlüssel ist nur gültig, wenn seine GUID (Speicherung in der Value-Eigenschaft) nicht "Guid.Empty" lautet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Metadata">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt; Metadata { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;class System.Xml.Linq.XName, class System.Runtime.DurableInstancing.InstanceValue&gt; Metadata" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.DurableInstancing.InstanceKey.Metadata" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Wörterbuch ab, das dem Instanzschlüssel zugeordnete Metadaten enthält.</summary>
+        <value>Das Wörterbuch ab, das dem Instanzschlüssel zugeordnete Metadaten enthält. Dieses Wörterbuch ist ein schreibgeschütztes Wörterbuch.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public Guid Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid Value" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.DurableInstancing.InstanceKey.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den GUID-Wert ab, der dem aktuellen Instanzschlüssel zugeordnet ist.</summary>
+        <value>Der GUID-Wert, der dem aktuellen Instanzschlüssel zugeordnet ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Instanzschlüssel ist nur gültig, wenn seine GUID (Speicherung in der Value-Eigenschaft) nicht "Guid.Empty" lautet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

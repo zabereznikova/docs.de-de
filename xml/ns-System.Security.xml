@@ -1,0 +1,6 @@
+<Namespace Name="System.Security">
+  <Docs>
+    <summary>Die <see cref="N:System.Security" /> -Namespace stellt die zugrunde liegende Struktur des Sicherheitssystem der common Language Runtime, einschließlich der Basisklassen für Berechtigungen bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

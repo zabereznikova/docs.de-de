@@ -1,0 +1,93 @@
+<Type Name="JSParser" FullName="Microsoft.JScript.JSParser">
+  <TypeSignature Language="C#" Value="public class JSParser" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit JSParser extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.JSParser" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>JScript-Code wird analysiert. Diese Klasse gehört zur Kategorie Scannen und analysieren. Weitere Informationen zum Scannen und analysieren können, finden Sie unter [erstellen Sie einen Sprachcompiler für .NET Framework](http://go.microsoft.com/fwlink/?LinkId=110392).</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JSParser (Microsoft.JScript.Context context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.JScript.Context context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.JSParser.#ctor(Microsoft.JScript.Context)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="context" Type="Microsoft.JScript.Context" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der Quellcode, zu analysieren.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.JScript.JSParser" /> -Klasse und gibt den Quellcode zu analysieren.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public Microsoft.JScript.ScriptBlock Parse ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.JScript.ScriptBlock Parse() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.JSParser.Parse" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.ScriptBlock</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Analysiert den Quellcode einfügen.</summary>
+        <returns>Der Stamm der die abstrakte Syntaxstruktur, die durch das Analysieren des Codes erstellt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Quellcode wird angegeben, um die <xref:Microsoft.JScript.JSParser.%23ctor%28Microsoft.JScript.Context%29> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ParseEvalBody">
+      <MemberSignature Language="C#" Value="public Microsoft.JScript.Block ParseEvalBody ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.JScript.Block ParseEvalBody() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.JSParser.ParseEvalBody" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Block</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Analysiert den Quellcode einfügen. Verwenden Sie diese Methode anstelle von <see cref="M:Microsoft.JScript.JSParser.Parse" /> Wenn der Quellcode ist innerhalb einer <see langword="eval" /> -Methodenaufruf.</summary>
+        <returns>Der Stamm der die abstrakte Syntaxstruktur, die durch das Analysieren des Codes erstellt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Quellcode wird angegeben, um die <xref:Microsoft.JScript.JSParser.%23ctor%28Microsoft.JScript.Context%29> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

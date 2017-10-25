@@ -1,0 +1,115 @@
+<Type Name="IComponentInitializer" FullName="System.ComponentModel.Design.IComponentInitializer">
+  <TypeSignature Language="C#" Value="public interface IComponentInitializer" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IComponentInitializer" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.IComponentInitializer" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Satz von Standardwerten empfohlene während der Erstellung einer Komponente bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.IComponentInitializer> -Schnittstelle kann durch einen beliebigen Designer, einer Komponente, die implementiert auch implementiert werden <xref:System.ComponentModel.Design.IDesigner>, der einen empfohlenen Satz von Standardwerten für die Komponente entwerfende empfängt. <xref:System.ComponentModel.Design.IComponentInitializer>wird während der Erstellung einer neuen Komponente abgefragt werden. Empfohlene Standardwerte für die Eigenschaften der Komponente werden als Name/Wert-Paare in einem Wörterbuch übergeben.  
+  
+ Dieser Entwurf bietet zwei Anpassung Punkten: das Toolboxelement selbst kann ersetzt oder geändert, um benutzerdefinierte Aktionen durchzuführen, oder der Designer für eine Komponente kann geändert werden, um eine benutzerdefinierte Aktion bereitzustellen. Ein Designer, implementiert <xref:System.ComponentModel.Design.IComponentInitializer> sollten nicht auf eine der zugehörigen Methoden abhängen –<xref:System.ComponentModel.Design.IComponentInitializer.InitializeNewComponent%2A> oder <xref:System.ComponentModel.Design.IComponentInitializer.InitializeExistingComponent%2A>– aufgerufen werden, da Toolboxelemente nicht verpflichtet, diese Methoden aufgerufen werden.  
+  
+ Einen Überblick über das Erstellen von Entwurfskomponenten finden Sie unter [Erweitern der Entwurfszeitunterstützung](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="InitializeExistingComponent">
+      <MemberSignature Language="C#" Value="public void InitializeExistingComponent (System.Collections.IDictionary defaultValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void InitializeExistingComponent(class System.Collections.IDictionary defaultValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IComponentInitializer.InitializeExistingComponent(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="defaultValues" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="defaultValues">Ein Wörterbuch mit den Standardeigenschaftswerten in Name/Wert-Paaren, mit denen der Zustand der Komponente zurückgesetzt werden.</param>
+        <summary>Eine Instanz einer Komponente in seinem Standardzustand wiederhergestellt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.IComponentInitializer.InitializeExistingComponent%2A> Methode wird aufgerufen, wenn ein Designer eine vorhandene Komponente erneut initialisiert wird. Beispielsweise <xref:System.ComponentModel.Design.IComponentInitializer.InitializeExistingComponent%2A> wird häufig aufgerufen, nachdem ein Drag & Drop-Vorgang. Die `defaultValues` Parameter ist ein Wörterbuch mit Name-Wert-Paaren der Standardwerte aufgeführt, die auf die Eigenschaften der zugeordneten Komponente angewendet werden soll. Dieses Wörterbuch aufweist und möglicherweise `null` , wenn keine Standardwerte angegeben wurden.  
+  
+> [!CAUTION]
+>  Wenn Sie diese Methode implementieren, im Allgemeinen sollten Sie nicht ändern die Komponenteneigenschaften über diese Empfehlungen in `defaultValue`. Die vorhandene Komponente möglicherweise bereits dessen Eigenschaften vom Benutzer oder von anderem Code zur Entwurfszeit festgelegt waren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeNewComponent">
+      <MemberSignature Language="C#" Value="public void InitializeNewComponent (System.Collections.IDictionary defaultValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void InitializeNewComponent(class System.Collections.IDictionary defaultValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IComponentInitializer.InitializeNewComponent(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="defaultValues" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="defaultValues">Ein Wörterbuch mit den Standardeigenschaftswerten in sind Name/Wert-Paare, mit denen der Zustand der Komponente initialisiert werden.</param>
+        <summary>Initialisiert eine neue Komponente mit einem Satz von empfohlene Werte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.IComponentInitializer.InitializeNewComponent%2A> Methode wird aufgerufen, nachdem eine neue Komponente erstellt wurde. Es wird normalerweise durch das Toolboxelement selbst aufgerufen und wird verwendet, um die Standardwerte für die Komponente konfigurieren.  
+  
+ Dieses Wörterbuch aufweist und möglicherweise `null` , wenn keine Standardwerte angegeben werden. Wenn das Wörterbuch ist `null`, sollte die Komponenteneigenschaften in Ihren jeweiligen impliziter Standard-Status belassen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

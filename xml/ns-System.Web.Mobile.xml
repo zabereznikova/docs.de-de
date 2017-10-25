@@ -1,0 +1,13 @@
+<Namespace Name="System.Web.Mobile">
+  <Docs>
+    <summary>Die <see cref="N:System.Web.Mobile" /> -Namespace enthält die wichtigsten Funktionen, einschließlich der Authentifizierung und Fehlerbehandlung, zum Erstellen von ASP.NET mobile Web Applications erforderlich.  Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der <see href="http://go.microsoft.com/fwlink/?LinkID=182900">www.asp.net/mobile</see> Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Mobile.MobileCapabilities> Klasse stellt eine einzelne Quelle für den Zugriff auf die Funktionsinformationen zu einem Client-Gerät und zum Ausführen von Abfragen für Gerätefunktionen. Die <xref:System.Web.Mobile.MobileFormsAuthentication> Klasse unterstützt Geräte ohne Cookies durch Anfügen der geeigneten Authentifizierungsinformationen an die entsprechenden URLs.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

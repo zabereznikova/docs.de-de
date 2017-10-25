@@ -1,0 +1,255 @@
+<Type Name="XmlNavigatorFilter" FullName="System.Xml.Xsl.Runtime.XmlNavigatorFilter">
+  <TypeSignature Language="C#" Value="public abstract class XmlNavigatorFilter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit XmlNavigatorFilter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Xsl.Runtime.XmlNavigatorFilter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.SqlXml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+      <see langword="XmlNavigatorFilter" />bietet eine flexible Filtern Abstraktion gegenüber <see cref="T:System.Xml.XPath.XPathNavigator" />. Aufrufer wissen nicht, welche Art von Filterung erfolgt; Rufen sie einfach <see cref="M:System.Xml.Xsl.Runtime.XmlNavigatorFilter.MoveToContent(System.Xml.XPath.XPathNavigator)" /> oder <see cref="M:System.Xml.Xsl.Runtime.XmlNavigatorFilter.MoveToFollowingSibling(System.Xml.XPath.XPathNavigator)" />. Die filterimplementierung Ruft den entsprechenden Vorgang für die <see cref="T:System.Xml.XPath.XPathNavigator" /> um überspringen gefilterte Knoten.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XmlNavigatorFilter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlNavigatorFilter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Bietet eine flexible Filtern Abstraktion gegenüber <see cref="T:System.Xml.XPath.XPathNavigator" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsFiltered">
+      <MemberSignature Language="C#" Value="public abstract bool IsFiltered (System.Xml.XPath.XPathNavigator navigator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsFiltered(class System.Xml.XPath.XPathNavigator navigator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlNavigatorFilter.IsFiltered(System.Xml.XPath.XPathNavigator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="navigator" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="navigator">Eine Instanz der <see cref="T:System.Xml.XPath.XPathNavigator" />-Klasse.</param>
+        <summary>Zurückgeben <see langword="true" /> , wenn der Navigator aktuelle's Knoten die filterbedingung entspricht.</summary>
+        <returns>
+          <see langword="true" />Wenn der aktuelle Knoten die Bedingung entspricht, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToContent">
+      <MemberSignature Language="C#" Value="public abstract bool MoveToContent (System.Xml.XPath.XPathNavigator navigator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool MoveToContent(class System.Xml.XPath.XPathNavigator navigator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlNavigatorFilter.MoveToContent(System.Xml.XPath.XPathNavigator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="navigator" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="navigator">Eine Instanz der <see cref="T:System.Xml.XPath.XPathNavigator" />-Klasse.</param>
+        <summary>Positioniert den Navigator auf dem ersten übereinstimmenden Inhaltsknoten oder -attribut und überspringt gefilterte Knoten. Wenn keine übereinstimmenden Knoten vorhanden sind, wird der Navigator nicht verschoben, und die Methode gibt false zurück.</summary>
+        <returns>
+          <see langword="true" />Wenn der Navigator auf dem untergeordneten Element mit einem übereinstimmenden Namen, andernfalls positioniert ist <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist eine abstrakte Klasse, und der Filter, z. B. den Namen eines Elements verwendet, um die Position des Navigators ist nicht definiert, die von dieser Klasse, aber von der Klasse, die von dieser Klasse abgeleitet ist.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToFollowing">
+      <MemberSignature Language="C#" Value="public abstract bool MoveToFollowing (System.Xml.XPath.XPathNavigator navigator, System.Xml.XPath.XPathNavigator navigatorEnd);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool MoveToFollowing(class System.Xml.XPath.XPathNavigator navigator, class System.Xml.XPath.XPathNavigator navigatorEnd) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlNavigatorFilter.MoveToFollowing(System.Xml.XPath.XPathNavigator,System.Xml.XPath.XPathNavigator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="navigator" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="navigatorEnd" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="navigator">Eine Instanz von der <see cref="T:System.Xml.XPath.XPathNavigator" /> -Klasse, die den Anfang des Bereichs identifiziert, über den Navigationsbereich verschieben kann.</param>
+        <param name="navigatorEnd">Eine Instanz von der <see cref="T:System.Xml.XPath.XPathNavigator" /> -Klasse, die das Ende des Bereichs identifiziert, über den Navigationsbereich verschieben kann.</param>
+        <summary>Positioniert den Navigator auf dem folgenden übereinstimmenden Inhaltsknoten oder -attribut und überspringt gefilterte Knoten. Wenn keine übereinstimmenden Knoten vorhanden sind, wird der Navigator nicht verschoben, und die Methode gibt false zurück.</summary>
+        <returns>
+          <see langword="true" />Wenn der Navigator auf dem nächsten Element mit einem übereinstimmenden Namen, andernfalls positioniert ist <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist eine abstrakte Klasse, und der Filter, z. B. den Namen eines Elements verwendet, um die Position des Navigators ist nicht definiert, die von dieser Klasse, aber von der Klasse, die von dieser Klasse abgeleitet ist.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToFollowingSibling">
+      <MemberSignature Language="C#" Value="public abstract bool MoveToFollowingSibling (System.Xml.XPath.XPathNavigator navigator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool MoveToFollowingSibling(class System.Xml.XPath.XPathNavigator navigator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlNavigatorFilter.MoveToFollowingSibling(System.Xml.XPath.XPathNavigator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="navigator" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="navigator">Eine Instanz der <see cref="T:System.Xml.XPath.XPathNavigator" />-Klasse.</param>
+        <summary>Positioniert den Navigator auf dem nebengeordneten übereinstimmenden Inhaltsknoten oder dem übereinstimmenden Nachfolgerknoten und überspringt gefilterte Knoten. Wenn keine übereinstimmenden Knoten vorhanden sind, wird der Navigator nicht verschoben, und die Methode gibt false zurück.</summary>
+        <returns>
+          <see langword="true" />Wenn der Navigator auf dem nächsten nebengeordneten Element mit einem übereinstimmenden Namen, andernfalls positioniert ist <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist eine abstrakte Klasse, und der Filter, z. B. den Namen eines Elements verwendet, um die Position des Navigators ist nicht definiert, die von dieser Klasse, aber von der Klasse, die von dieser Klasse abgeleitet ist.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToNextContent">
+      <MemberSignature Language="C#" Value="public abstract bool MoveToNextContent (System.Xml.XPath.XPathNavigator navigator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool MoveToNextContent(class System.Xml.XPath.XPathNavigator navigator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlNavigatorFilter.MoveToNextContent(System.Xml.XPath.XPathNavigator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="navigator" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="navigator">Eine Instanz der <see cref="T:System.Xml.XPath.XPathNavigator" />-Klasse.</param>
+        <summary>Positioniert den Navigator auf dem nächsten übereinstimmenden Inhaltsknoten oder -attribut und überspringt gefilterte Knoten. Wenn keine übereinstimmenden Knoten vorhanden sind, wird der Navigator nicht verschoben, und die Methode gibt false zurück.</summary>
+        <returns>
+          <see langword="true" />Wenn der Navigator auf dem nächsten untergeordneten Element mit einem übereinstimmenden Namen, andernfalls positioniert ist <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist eine abstrakte Klasse, und der Filter, z. B. den Namen eines Elements verwendet, um die Position des Navigators ist nicht definiert, die von dieser Klasse, aber von der Klasse, die von dieser Klasse abgeleitet ist.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToPreviousSibling">
+      <MemberSignature Language="C#" Value="public abstract bool MoveToPreviousSibling (System.Xml.XPath.XPathNavigator navigator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool MoveToPreviousSibling(class System.Xml.XPath.XPathNavigator navigator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlNavigatorFilter.MoveToPreviousSibling(System.Xml.XPath.XPathNavigator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="navigator" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="navigator">Eine Instanz der <see cref="T:System.Xml.XPath.XPathNavigator" />-Klasse.</param>
+        <summary>Positioniert den Navigator auf dem vorherigen übereinstimmenden nebengeordneten Knoten und überspringt gefilterte Knoten. Wenn keine übereinstimmenden Knoten vorhanden sind, wird der Navigator nicht verschoben, und die Methode gibt false zurück.</summary>
+        <returns>
+          <see langword="true" />Wenn der Navigator auf dem vorherigen nebengeordneten Element mit einem übereinstimmenden Namen, andernfalls positioniert ist <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist eine abstrakte Klasse, und der Filter, z. B. den Namen eines Elements verwendet, um die Position des Navigators ist nicht definiert, die von dieser Klasse, aber von der Klasse, die von dieser Klasse abgeleitet ist.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

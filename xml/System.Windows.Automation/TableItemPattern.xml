@@ -1,0 +1,189 @@
+<Type Name="TableItemPattern" FullName="System.Windows.Automation.TableItemPattern">
+  <TypeSignature Language="C#" Value="public class TableItemPattern : System.Windows.Automation.GridItemPattern" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TableItemPattern extends System.Windows.Automation.GridItemPattern" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.TableItemPattern" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.GridItemPattern</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die untergeordneten Steuerelemente von Containern, die unterstützen <see cref="T:System.Windows.Automation.TablePattern" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Steuerelementmuster ist analog zu <xref:System.Windows.Automation.GridItemPattern> mit dem Unterschied, dass jedes unterstützen Steuerelement <xref:System.Windows.Automation.TableItemPattern> wird programmgesteuert die Beziehung zwischen der einzelnen Zelle und deren Zeilen- und verfügbar machen.  
+  
+ Zugriff auf Funktionen einzelner Zellen wird bereitgestellt, durch die zusätzliche Unterstützung von <xref:System.Windows.Automation.GridItemPattern>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cached">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.TableItemPattern.TableItemPatternInformation Cached { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.TableItemPattern/TableItemPatternInformation Cached" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.TableItemPattern.Cached" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.TableItemPattern+TableItemPatternInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die zwischengespeicherten Eigenschaftswerte für <see cref="T:System.Windows.Automation.TableItemPattern" />.</summary>
+        <value>Die zwischengespeicherten Eigenschaftswerte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zwischengespeicherte Eigenschaftswerte müssen zuvor angefordert wurden mit einer <xref:System.Windows.Automation.CacheRequest>. Um den aktuellen Wert einer Eigenschaft abzurufen, rufen die Eigenschaft mit <xref:System.Windows.Automation.TableItemPattern.Current%2A>.  
+  
+ Informationen zu den verfügbaren Eigenschaften und deren Verwendung finden Sie unter <xref:System.Windows.Automation.TableItemPattern.TableItemPatternInformation>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die angeforderte Eigenschaft befindet sich nicht im Cache.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnHeaderItemsProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty ColumnHeaderItemsProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty ColumnHeaderItemsProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TableItemPattern.ColumnHeaderItemsProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die Eigenschaft, die alle Spaltenüberschriften abruft, die einem Tabellenelement oder einer Zelle zugeordnet sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Bezeichner wird durch Benutzeroberflächenautomatisierungs-Clientanwendungen verwendet. Benutzeroberflächenautomatisierungs-Anbietern zu verwendende das entsprechende Feld im <xref:System.Windows.Automation.TableItemPatternIdentifiers>.  
+  
+ Diese Eigenschaft ist nicht vorhanden in <xref:System.Windows.Automation.TableItemPattern.TableItemPatternInformation> und abgerufen werden muss, mit <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> oder <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Array von Automation-Elementobjekten, die primären Headerelemente für Zeile oder Spalte einer Tabelle darstellt, abgerufen.  
+  
+ Für die Zwecke dieses Beispiels, das eine Beziehung zwischen der <xref:System.Windows.Automation.TablePattern.TablePatternInformation.RowOrColumnMajor%2A> -Eigenschaft und die Zeile und Spalte Headerelemente veranschaulicht wird. Allerdings können eine Tabelle Zeilen- und Spaltenüberschriften unabhängig von der <xref:System.Windows.Automation.TablePattern.TablePatternInformation.RowOrColumnMajor%2A> -Eigenschaft der Tabelle.  
+  
+ [!code-csharp[UIATableItemPattern_snip#105](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#105)]
+ [!code-vb[UIATableItemPattern_snip#105](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#105)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.TableItemPattern.TableItemPatternInformation Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.TableItemPattern/TableItemPatternInformation Current" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.TableItemPattern.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.TableItemPattern+TableItemPatternInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuellen Eigenschaftswerte für <see cref="T:System.Windows.Automation.TableItemPattern" />.</summary>
+        <value>Die aktuellen Eigenschaftswerte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Muster muss aus einer <xref:System.Windows.Automation.AutomationElement> mit einer <xref:System.Windows.Automation.AutomationElementMode.Full> Verweis, um die aktuellen Werte zu erhalten. Wenn die <xref:System.Windows.Automation.AutomationElement> abgerufen wurde, mithilfe von <xref:System.Windows.Automation.AutomationElementMode.None>, enthält es nur zwischengespeicherte Daten, und beim Versuch, den aktuellen Wert einer beliebigen Eigenschaft abzurufen, wird eine Ausnahme ausgelöst. Verwendung <xref:System.Windows.Automation.TableItemPattern.Cached%2A> um den zwischengespeicherten Wert einer Eigenschaft abzurufen, die zuvor angegeben wurde mit einem <xref:System.Windows.Automation.CacheRequest>.  
+  
+ Informationen zu den verfügbaren Eigenschaften und deren Verwendung finden Sie unter <xref:System.Windows.Automation.TableItemPattern.TableItemPatternInformation>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pattern">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationPattern Pattern;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationPattern Pattern" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TableItemPattern.Pattern" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationPattern</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet das <see cref="T:System.Windows.Automation.TableItemPattern" />-Steuerelementmuster.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Bezeichner wird durch Benutzeroberflächenautomatisierungs-Clientanwendungen verwendet. Benutzeroberflächenautomatisierungs-Anbietern zu verwendende das entsprechende Feld im <xref:System.Windows.Automation.TableItemPatternIdentifiers>.  
+  
+ Der Musterbezeichner wird an Methoden übergeben, z. B. <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> zum Abrufen der Steuerelementmuster aus dem angegebenen <xref:System.Windows.Automation.AutomationElement>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.TableItemPattern> Steuerelementmuster abgerufenes ein <xref:System.Windows.Automation.AutomationElement>.  
+  
+ [!code-csharp[UIATableItemPattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#101)]
+ [!code-vb[UIATableItemPattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowHeaderItemsProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty RowHeaderItemsProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty RowHeaderItemsProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TableItemPattern.RowHeaderItemsProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die Eigenschaft, die alle Zeilenüberschriften abruft, die einem Tabellenelement oder einer Zelle zugeordnet sind.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Bezeichner wird durch Benutzeroberflächenautomatisierungs-Clientanwendungen verwendet. Benutzeroberflächenautomatisierungs-Anbietern zu verwendende das entsprechende Feld im <xref:System.Windows.Automation.TableItemPatternIdentifiers>.  
+  
+ Diese Eigenschaft ist nicht vorhanden in <xref:System.Windows.Automation.TableItemPattern.TableItemPatternInformation> und abgerufen werden muss, mit <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> oder <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Array von Automation-Elementobjekten, die primären Headerelemente für Zeile oder Spalte einer Tabelle darstellt, abgerufen.  
+  
+ Für die Zwecke dieses Beispiels, das eine Beziehung zwischen der <xref:System.Windows.Automation.TablePattern.TablePatternInformation.RowOrColumnMajor%2A> -Eigenschaft und die Zeile und Spalte Headerelemente veranschaulicht wird. Allerdings können eine Tabelle Zeilen- und Spaltenüberschriften unabhängig von der <xref:System.Windows.Automation.TablePattern.TablePatternInformation.RowOrColumnMajor%2A> -Eigenschaft der Tabelle.  
+  
+ [!code-csharp[UIATableItemPattern_snip#105](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#105)]
+ [!code-vb[UIATableItemPattern_snip#105](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#105)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

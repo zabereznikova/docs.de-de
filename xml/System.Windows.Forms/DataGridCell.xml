@@ -1,0 +1,226 @@
+<Type Name="DataGridCell" FullName="System.Windows.Forms.DataGridCell">
+  <TypeSignature Language="C#" Value="public struct DataGridCell" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit DataGridCell extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridCell" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Identifiziert eine Zelle im Raster an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataGridCell> verwendet werden können, zusammen mit den <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> des Steuerelements <xref:System.Windows.Forms.DataGrid.CurrentCell%2A> Eigenschaft zum Abrufen oder Festlegen des Werts, der eine beliebige Zelle. Festlegen der <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> des Steuerelements <xref:System.Windows.Forms.DataGrid.CurrentCell%2A> Eigenschaft, um eine <xref:System.Windows.Forms.DataGridCell> bewirkt, dass den Fokus auf die Zelle, die gemäß der <xref:System.Windows.Forms.DataGridCell>.  
+  
+   
+  
+## Examples  
+ Weist das folgende Beispiel die <xref:System.Windows.Forms.DataGridCell> auf die <xref:System.Windows.Forms.DataGrid.CurrentCell%2A> von einer <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> und gibt die Spalten- und Anzahl der ausgewählten Zelle. Die in gespeicherten Wert der <xref:System.Data.DataTable> wird auch ausgegeben, mit der <xref:System.Windows.Forms.DataGridCell> des Objekts <xref:System.Windows.Forms.DataGridCell.RowNumber%2A> und <xref:System.Windows.Forms.DataGridCell.ColumnNumber%2A>.  
+  
+ [!code-cpp[Classic DataGridCell Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataGridCell Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataGridCell Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataGridCell Example/CS/source.cs#1)]
+ [!code-vb[Classic DataGridCell Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridCell Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridCell (int r, int c);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 r, int32 c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridCell.#ctor(System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="r" Type="System.Int32" />
+        <Parameter Name="c" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="r">Die Nummer einer Zeile in der <see cref="T:System.Windows.Forms.DataGrid" />.</param>
+        <param name="c">Die Anzahl von Spalten in der <see cref="T:System.Windows.Forms.DataGrid" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.DataGridCell" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Forms.DataGridCell> und legt die neue Instanz auf der <xref:System.Windows.Forms.DataGrid.CurrentCell%2A> von einem <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> Steuerelement.  
+  
+ [!code-cpp[Classic DataGridCell.DataGridCell Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataGridCell.DataGridCell Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataGridCell.DataGridCell Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataGridCell.DataGridCell Example/CS/source.cs#1)]
+ [!code-vb[Classic DataGridCell.DataGridCell Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridCell.DataGridCell Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnNumber">
+      <MemberSignature Language="C#" Value="public int ColumnNumber { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ColumnNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridCell.ColumnNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Anzahl von Spalten in der <see cref="T:System.Windows.Forms.DataGrid" /> Steuerelement.</summary>
+        <value>Die Nummer der Spalte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die <xref:System.Windows.Forms.DataGridCell.ColumnNumber%2A> -Wert an ein <xref:System.Data.DataColumn> in der <xref:System.Data.DataTable> zugeordnet der <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> Steuerelement.  
+  
+   
+  
+## Examples  
+ Weist das folgende Beispiel die <xref:System.Windows.Forms.DataGrid.CurrentCell%2A> Eigenschaft eine <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> auf eine <xref:System.Windows.Forms.DataGridCell>. In gespeicherte Wert der <xref:System.Data.DataTable> wird zurückgegeben, durch Angabe <xref:System.Data.DataRow> und <xref:System.Data.DataColumn> Objekte über die <xref:System.Windows.Forms.DataGridCell.RowNumber%2A> und <xref:System.Windows.Forms.DataGridCell.ColumnNumber%2A> Eigenschaften.  
+  
+ [!code-cpp[Classic DataGridCell.ColumnNumber Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataGridCell.ColumnNumber Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataGridCell.ColumnNumber Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataGridCell.ColumnNumber Example/CS/source.cs#1)]
+ [!code-vb[Classic DataGridCell.ColumnNumber Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridCell.ColumnNumber Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridCell.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Ein Objekt sind zu vergleichen.</param>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.Windows.Forms.DataGridCell" /> ist identisch mit einer zweiten <see cref="T:System.Windows.Forms.DataGridCell" />.</summary>
+        <returns>
+          <see langword="true" />Wenn das zweite Objekt mit dem ersten identisch ist. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel werden zwei <xref:System.Windows.Forms.DataGridCell> Objekte.  
+  
+ [!code-vb[Classic DataGridCell.Equals Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridCell.Equals Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridCell.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Hashwert, der hinzugefügt werden kann eine <see cref="T:System.Collections.Hashtable" />.</summary>
+        <returns>Eine Zahl, die eindeutig den <see cref="T:System.Windows.Forms.DataGridCell" /> in einem <see cref="T:System.Collections.Hashtable" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird den Hashwert der ausgewählten Zelle in einer <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> die Steuerung an eine <xref:System.Collections.Hashtable>.  
+  
+ [!code-cpp[Classic DataGridCell.GetHashCode Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataGridCell.GetHashCode Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataGridCell.GetHashCode Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataGridCell.GetHashCode Example/CS/source.cs#1)]
+ [!code-vb[Classic DataGridCell.GetHashCode Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridCell.GetHashCode Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowNumber">
+      <MemberSignature Language="C#" Value="public int RowNumber { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RowNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridCell.RowNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Nummer einer Zeile in der <see cref="T:System.Windows.Forms.DataGrid" /> Steuerelement.</summary>
+        <value>Die Nummer der Zeile.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Können Sie die <xref:System.Windows.Forms.DataGridCell.RowNumber%2A> -Wert an ein <xref:System.Data.DataRow> in der <xref:System.Data.DataTable> zugeordnet der <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> Steuerelement.  
+  
+   
+  
+## Examples  
+ Weist das folgende Beispiel die <xref:System.Windows.Forms.DataGrid.CurrentCell%2A> Eigenschaft eine <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> auf eine <xref:System.Windows.Forms.DataGridCell> und gibt den Wert in gespeicherten der <xref:System.Data.DataTable> des Objekts <xref:System.Windows.Forms.DataGridCell.RowNumber%2A> und <xref:System.Windows.Forms.DataGridCell.ColumnNumber%2A> Eigenschaften.  
+  
+ [!code-cpp[Classic DataGridCell.ColumnNumber Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataGridCell.ColumnNumber Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataGridCell.ColumnNumber Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataGridCell.ColumnNumber Example/CS/source.cs#1)]
+ [!code-vb[Classic DataGridCell.ColumnNumber Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridCell.ColumnNumber Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridCell.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Zeilennummer und Spaltennummer der Zelle.</summary>
+        <returns>Eine Zeichenfolge mit der Zeilennummer und Spaltennummer.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel gibt die Zeilennummer des der <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> des Steuerelements <xref:System.Windows.Forms.DataGrid.CurrentCell%2A> mithilfe der <xref:System.Windows.Forms.DataGridCell> des Objekts <xref:System.Windows.Forms.DataGridCell.ToString%2A> Methode.  
+  
+ [!code-cpp[Classic DataGridCell.ToString Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataGridCell.ToString Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataGridCell.ToString Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataGridCell.ToString Example/CS/source.cs#1)]
+ [!code-vb[Classic DataGridCell.ToString Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridCell.ToString Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,6 @@
+<Namespace Name="System.ComponentModel.DataAnnotations">
+  <Docs>
+    <summary>Die <see cref="N:System.ComponentModel.DataAnnotations" /> Namespace enthält die Attributklassen, die zum Definieren von Metadaten für ASP.NET-MVC und ASP.NET Data-Steuerelemente verwendet werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

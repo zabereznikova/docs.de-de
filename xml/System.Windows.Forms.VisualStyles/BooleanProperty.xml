@@ -1,0 +1,233 @@
+<Type Name="BooleanProperty" FullName="System.Windows.Forms.VisualStyles.BooleanProperty">
+  <TypeSignature Language="C#" Value="public enum BooleanProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BooleanProperty extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.BooleanProperty" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Identifiziert die booleschen Eigenschaften eines visuellen Stilelements.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.VisualStyles.BooleanProperty> Enumeration stellt eine Reihe von booleschen Eigenschaften, die der visuelle Stilelemente zu beschreiben. Die <xref:System.Windows.Forms.VisualStyles.BooleanProperty> Werte dienen als Argument in der <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetBoolean%2A> Methode, um anzugeben, dessen Eigenschaftswert für das Element abgerufen, die die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> darstellt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AlwaysShowSizingBar">
+      <MemberSignature Language="C#" Value="AlwaysShowSizingBar" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.BooleanProperty AlwaysShowSizingBar = int32(2208)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.BooleanProperty.AlwaysShowSizingBar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.BooleanProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Ziehpunkt wird immer angezeigt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSize">
+      <MemberSignature Language="C#" Value="AutoSize" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.BooleanProperty AutoSize = int32(2202)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.BooleanProperty.AutoSize" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.BooleanProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Breite des Größenanpassungslogik Beschriftungen je nach ausgewähltem das Ausmaß des Texts.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundFill">
+      <MemberSignature Language="C#" Value="BackgroundFill" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.BooleanProperty BackgroundFill = int32(2205)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.BooleanProperty.BackgroundFill" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.BooleanProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Hintergrund eines Elements mit fester Größe ist ein ausgefülltes Rechteck.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderOnly">
+      <MemberSignature Language="C#" Value="BorderOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.BooleanProperty BorderOnly = int32(2203)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.BooleanProperty.BorderOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.BooleanProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es wird nur der Rahmen eines Bilds gezeichnet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Composited">
+      <MemberSignature Language="C#" Value="Composited" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.BooleanProperty Composited = int32(2204)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.BooleanProperty.Composited" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.BooleanProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Steuerelement behandelt zusammengesetzte Zeichnung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GlyphOnly">
+      <MemberSignature Language="C#" Value="GlyphOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.BooleanProperty GlyphOnly = int32(2207)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.BooleanProperty.GlyphOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.BooleanProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nur das Symbol gezeichnet werden soll, nicht auf den Hintergrund.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GlyphTransparent">
+      <MemberSignature Language="C#" Value="GlyphTransparent" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.BooleanProperty GlyphTransparent = int32(2206)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.BooleanProperty.GlyphTransparent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.BooleanProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Symbol weist transparente Bereiche auf.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IntegralSizing">
+      <MemberSignature Language="C#" Value="IntegralSizing" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.BooleanProperty IntegralSizing = int32(2211)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.BooleanProperty.IntegralSizing" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.BooleanProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Faktor für die Skalierung muss eine ganze Zahl für Elemente mit fester Größe.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MirrorImage">
+      <MemberSignature Language="C#" Value="MirrorImage" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.BooleanProperty MirrorImage = int32(2209)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.BooleanProperty.MirrorImage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.BooleanProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Bild wird in rechts-nach-links-Anzeigemodi gespiegelt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceGrow">
+      <MemberSignature Language="C#" Value="SourceGrow" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.BooleanProperty SourceGrow = int32(2212)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.BooleanProperty.SourceGrow" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.BooleanProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Bild wird bei Bedarf vergrößert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceShrink">
+      <MemberSignature Language="C#" Value="SourceShrink" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.BooleanProperty SourceShrink = int32(2213)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.BooleanProperty.SourceShrink" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.BooleanProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bei Bedarf wird das Bild verkleinert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Transparent">
+      <MemberSignature Language="C#" Value="Transparent" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.BooleanProperty Transparent = int32(2201)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.BooleanProperty.Transparent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.BooleanProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Bild hat transparente Bereiche.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UniformSizing">
+      <MemberSignature Language="C#" Value="UniformSizing" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.BooleanProperty UniformSizing = int32(2210)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.BooleanProperty.UniformSizing" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.BooleanProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gleichermaßen müssen die Höhe und Breite angepasst werden.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

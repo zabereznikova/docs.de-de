@@ -1,0 +1,389 @@
+<Type Name="ActiveDirectorySiteLinkCollection" FullName="System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLinkCollection">
+  <TypeSignature Language="C#" Value="public class ActiveDirectorySiteLinkCollection : System.Collections.CollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ActiveDirectorySiteLinkCollection extends System.Collections.CollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLinkCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.CollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLinkCollection" />-Klasse ist eine Auflistung mit Lese-/Schreibzugriff, die <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" />-Objekte enthält.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink link);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink link) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLinkCollection.Add(System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="link" Type="System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" />
+      </Parameters>
+      <Docs>
+        <param name="link">Die <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" /> Objekt, das dieser Auflistung angefügt werden soll.</param>
+        <summary>Fügt das angegebene <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" /> Objekt, das dieser Auflistung.</summary>
+        <returns>Der nullbasierte Index des der <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" /> Objekt, das dieser Auflistung angefügt wird.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.ArgumentException">Das Objekt ist bereits in der Auflistung vorhanden.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="link" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" /> Objekt wurde noch nicht in den Active Directory-Domänendiensten gespeichert zu speichern.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink[] links);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink[] links) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLinkCollection.AddRange(System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="links" Type="System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink[]" />
+      </Parameters>
+      <Docs>
+        <param name="links">Die <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" /> Array mit den Objekten, das dieser Auflistung angefügt werden soll.</param>
+        <summary>Fügt den Inhalt des angegebenen <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" /> Array, die dieser Sammlung.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.ArgumentException">Das Objekt ist bereits in der Auflistung vorhanden.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="links" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" /> Objekt wurde noch nicht in den Active Directory-Domänendiensten gespeichert zu speichern.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLinkCollection links);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLinkCollection links) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLinkCollection.AddRange(System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLinkCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="links" Type="System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLinkCollection" />
+      </Parameters>
+      <Docs>
+        <param name="links">Die <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLinkCollection" /> -Objekt, das die zu dieser Auflistung angefügt Objekte enthält.</param>
+        <summary>Fügt den Inhalt des angegebenen <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLinkCollection" /> Objekt, das dieser Auflistung.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.ArgumentException">Das Objekt ist bereits in dieser Auflistung vorhanden.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="links" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" /> Objekt wurde noch nicht in den Active Directory-Domänendiensten gespeichert zu speichern.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink link);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink link) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLinkCollection.Contains(System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="link" Type="System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" />
+      </Parameters>
+      <Docs>
+        <param name="link">Das <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" />-Objekt, das in dieser Auflistung gesucht werden soll.</param>
+        <summary>Ermittelt, ob das angegebene <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" />-Objekt in dieser Auflistung enthalten ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" /> Objekt befindet sich in dieser Auflistung ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="link" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" /> Objekt wurde noch nicht in den Active Directory-Domänendiensten gespeichert zu speichern.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLinkCollection.CopyTo(System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Die <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" /> Array, das die Elemente dieser Auflistung empfängt.</param>
+        <param name="index">Der nullbasierte Index im <c>Array</c> , in dem diese Methode mit dem Kopieren dieser Auflistung beginnt.</param>
+        <summary>Kopiert alle <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" />-Objekte in dieser Auflistung in das angegebene Array, beginnend bei dem angegebenen Index des Zielarrays.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Das Zielarray ist nicht groß genug, basierend auf die Größe der Auflistung und die <paramref name="index" /> angegebenen.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der angegebene <paramref name="index" /> liegt außerhalb des Bereichs des Zielarrays.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink link);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink link) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLinkCollection.IndexOf(System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="link" Type="System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" />
+      </Parameters>
+      <Docs>
+        <param name="link">Das <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" />-Objekt, das in dieser Auflistung gesucht werden soll.</param>
+        <summary>Gibt den Index des ersten Vorkommens des angegebenen <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" />-Objekts in dieser Auflistung zurück.</summary>
+        <returns>Der nullbasierte Index des ersten übereinstimmenden Objekts. Gibt -1 zurück, wenn kein Member dieser Auflistung mit dem <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" />-Objekt identisch ist.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="link" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" /> Objekt wurde noch nicht in den Active Directory-Domänendiensten gespeichert zu speichern.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink link);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink link) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLinkCollection.Insert(System.Int32,System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="link" Type="System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index in dieser Auflistung, an das Objekt eingefügt wird.</param>
+        <param name="link">Die <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" /> in diese Auflistung einzufügende Objekt.</param>
+        <summary>Fügt das angegebene <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" /> Objekt am angegebenen Index in diese Sammlung.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.ArgumentException">Das Objekt ist bereits in der Auflistung vorhanden.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="link" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="index" /> angegeben liegt außerhalb des Bereichs der Auflistung.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" /> Objekt wurde noch nicht in den Active Directory-Domänendiensten gespeichert zu speichern.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLinkCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des der <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" /> Objekt zum Abrufen oder festlegen.</param>
+        <summary>Ruft ab oder legt einen <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" /> -Objekts in dieser Auflistung.</summary>
+        <value>Die <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" /> -Objekt, das am angegebenen Index vorhanden ist.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Das Element bereits in dieser Auflistung (gilt nur für Festlegungsvorgänge).</exception>
+        <exception cref="T:System.ArgumentNullException">Das angegebene Element ist <see langword="null" /> (gilt nur für Festlegungsvorgänge).</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="index" /> angegeben liegt außerhalb des Bereichs dieser Auflistung.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" /> angegeben wurden noch nicht in den Active Directory-Domänendienste-Speicher (gilt nur für Festlegungsvorgänge) gespeichert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClearComplete">
+      <MemberSignature Language="C#" Value="protected override void OnClearComplete ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClearComplete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLinkCollection.OnClearComplete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt die <see cref="M:System.Collections.CollectionBase.OnClearComplete" />-Methode außer Kraft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInsertComplete">
+      <MemberSignature Language="C#" Value="protected override void OnInsertComplete (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnInsertComplete(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLinkCollection.OnInsertComplete(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem das Element eingefügt wurde.</param>
+        <param name="value">Der neue Wert des Elements am <c>Index</c>.</param>
+        <summary>Setzt die <see cref="M:System.Collections.CollectionBase.OnClearComplete" />-Methode außer Kraft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRemoveComplete">
+      <MemberSignature Language="C#" Value="protected override void OnRemoveComplete (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRemoveComplete(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLinkCollection.OnRemoveComplete(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem das Element entfernt wurde.</param>
+        <param name="value">Das Element, das aus der Auflistung entfernt wurde.</param>
+        <summary>Setzt die <see cref="M:System.Collections.CollectionBase.OnRemoveComplete(System.Int32,System.Object)" />-Methode außer Kraft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSetComplete">
+      <MemberSignature Language="C#" Value="protected override void OnSetComplete (int index, object oldValue, object newValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnSetComplete(int32 index, object oldValue, object newValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLinkCollection.OnSetComplete(System.Int32,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="oldValue" Type="System.Object" />
+        <Parameter Name="newValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem der Set-Vorgang aufgetreten ist.</param>
+        <param name="oldValue">Das Element, das durch ersetzt wurde <c>NewValue</c>.</param>
+        <param name="newValue">Das Element, das ersetzt <c>OldValue</c>.</param>
+        <summary>Setzt die <see cref="M:System.Collections.CollectionBase.OnSetComplete(System.Int32,System.Object,System.Object)" />-Methode außer Kraft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnValidate">
+      <MemberSignature Language="C#" Value="protected override void OnValidate (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnValidate(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLinkCollection.OnValidate(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das Element in dieser Sammlung aus, um zu überprüfen.</param>
+        <summary>Setzt die <see cref="M:System.Collections.CollectionBase.OnValidate(System.Object)" />-Methode außer Kraft.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="value" />ist ein <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" /> Objekt.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" /> Objekt wurde noch nicht in den Active Directory-Domänendiensten gespeichert zu speichern.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink link);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink link) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLinkCollection.Remove(System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="link" Type="System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" />
+      </Parameters>
+      <Docs>
+        <param name="link">Die <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" /> aus dieser Auflistung zu entfernende Objekt.</param>
+        <summary>Entfernt das erste Vorkommen eines Objekts in dieser Auflistung, die in den angegebenen identisch ist <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Bei einem Aufruf des zugrunde liegenden Verzeichnisdiensts ist ein Fehler aufgetreten.</exception>
+        <exception cref="T:System.ArgumentException">Das Objekt ist nicht in der Auflistung vorhanden.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="link" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink" /> Objekt wurde noch nicht in den Active Directory-Domänendiensten gespeichert zu speichern.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

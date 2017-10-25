@@ -1,0 +1,126 @@
+<Type Name="ParameterCollectionEditor" FullName="System.Web.UI.Design.WebControls.ParameterCollectionEditor">
+  <TypeSignature Language="C#" Value="public class ParameterCollectionEditor : System.Drawing.Design.UITypeEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ParameterCollectionEditor extends System.Drawing.Design.UITypeEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.ParameterCollectionEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Drawing.Design.UITypeEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Komponenten-Editor für den <see cref="T:System.Web.UI.WebControls.ParameterCollection" /> von angegebene Objekt der <see langword="Parameters" /> Eigenschaften des zugeordneten Datenquellen-Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.ParameterCollectionEditor> Klasse bietet eine Benutzeroberfläche zum Bearbeiten der <xref:System.Web.UI.WebControls.Parameter> Elemente der <xref:System.Web.UI.WebControls.ParameterCollection> Objekt zur Entwurfszeit, als von einem der angegebenen die `Parameters` Eigenschaften. Die `Parameters` Eigenschaften gehören die <xref:System.Web.UI.WebControls.ObjectDataSource.DeleteParameters%2A>, <xref:System.Web.UI.WebControls.ObjectDataSource.FilterParameters%2A>, <xref:System.Web.UI.WebControls.ObjectDataSource.InsertParameters%2A>, <xref:System.Web.UI.WebControls.ObjectDataSource.SelectParameters%2A> und <xref:System.Web.UI.WebControls.ObjectDataSource.UpdateParameters%2A> Eigenschaften der <xref:System.Web.UI.WebControls.ObjectDataSource>, <xref:System.Web.UI.WebControls.SqlDataSource>, und andere Datenquellen-Steuerelementen.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.ParameterCollectionEditor> wird aufgerufen, indem Sie die Auslassungspunkte (**... **) auf eine der Schaltfläche den `Parameters` Eigenschaften in der **Eigenschaften** Raster mit den visuellen Designer.  
+  
+ Die <xref:System.Web.UI.Design.WebControls.ParameterCollectionEditor.EditValue%2A> Methode Bearbeitungen der <xref:System.Web.UI.WebControls.Parameter> Elemente der <xref:System.Web.UI.WebControls.ParameterCollection> für zugeordneten Datenquellen-Steuerelements. Die <xref:System.Web.UI.Design.WebControls.ParameterCollectionEditor.GetEditStyle%2A> Methode ruft den Bearbeitungsstil ab, der diesem Editor zugeordnet ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.ComponentModel.EditorAttribute> Attribut zum Zuordnen der <xref:System.Web.UI.Design.WebControls.ParameterCollectionEditor> und <xref:System.Drawing.Design.UITypeEditor> (die Auflistung Editor Basisklasse)-Klassen, mit einer `SelectParameters` Eigenschaft in ein benutzerdefiniertes Steuerelement.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.DesignerEditors#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.DesignerEditors/CS/DesignerEditors.cs#2)]
+ [!code-vb[System.Web.UI.Design.WebControls.DesignerEditors#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.DesignerEditors/VB/DesignerEditors.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ParameterCollectionEditor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.ParameterCollectionEditor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.WebControls.ParameterCollectionEditor" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ .NET Framework erstellt eine neue Instanz der dem <xref:System.Web.UI.Design.WebControls.ParameterCollectionEditor> Klasse, wenn der Seitendesigner mit den Auslassungspunkten ausgewählt (**... **) auf eine der Schaltfläche den `Parameters` Eigenschaften im visuellen Designers **Eigenschaften** Raster beim Entwerfen des zugeordneten Datenquellen-Steuerelements.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditValue">
+      <MemberSignature Language="C#" Value="public override object EditValue (System.ComponentModel.ITypeDescriptorContext context, IServiceProvider provider, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object EditValue(class System.ComponentModel.ITypeDescriptorContext context, class System.IServiceProvider provider, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.ParameterCollectionEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="provider" Type="System.IServiceProvider" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> Objekt zum Abrufen von Kontextinformationen.</param>
+        <param name="provider">Ein Objekt, durch die <see cref="T:System.IServiceProvider" /> über die Bearbeitung von Diensten abgerufen werden kann.</param>
+        <param name="value">Das Objekt, das den Wert für bearbeiten.</param>
+        <summary>Bearbeitet die Elemente der <see cref="T:System.Web.UI.WebControls.ParameterCollection" /> Objekte des zugeordneten Datenquellen-Steuerelements.</summary>
+        <returns>Die neue <paramref name="value" />; andernfalls, wenn der Wert des Objekts nicht geändert hat, <paramref name="value" /> unverändert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.ParameterCollectionEditor.EditValue%2A> -Methode extrahiert zugeordneten Datenquellen-Steuerelements und der Datenquellen-Steuerelement-Designer, die entsprechende Steuerelement aus zugeordnet ist die `context` Parameter. Die unterstützten Datenquellensteuerelemente enthalten die <xref:System.Web.UI.WebControls.ObjectDataSource> und <xref:System.Web.UI.WebControls.SqlDataSource> -Steuerelemente mit den entsprechenden <xref:System.Web.UI.Design.WebControls.ObjectDataSourceDesigner> und <xref:System.Web.UI.Design.WebControls.SqlDataSourceDesigner> Designer.  
+  
+ Nachdem die Daten extrahiert werden, die <xref:System.Web.UI.Design.WebControls.ParameterCollectionEditor.EditValue%2A> Aufrufe zurück an den Datenquellen-Steuerelement-Designer ein Dialogfeld angezeigt, mit dem Bearbeiten, eine <xref:System.Web.UI.WebControls.ParameterCollection> -Objekt, das von einer der verwiesen wird die `Parameters` Eigenschaften des ausgewählten Datenquellen-Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEditStyle">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Design.UITypeEditorEditStyle GetEditStyle (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Drawing.Design.UITypeEditorEditStyle GetEditStyle(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.ParameterCollectionEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.UITypeEditorEditStyle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Die <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> -Objekt, das den Kontext des zu bearbeitenden Objekts angibt.</param>
+        <summary>Ruft den Bearbeitungsstil ab, der diesem Editor zugeordnet ist.</summary>
+        <returns>Der Bearbeitungsstil, der diesem Editor zugeordnet ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.WebControls.ParameterCollectionEditor.GetEditStyle%2A> Methode gibt immer die <xref:System.Drawing.Design.UITypeEditorEditStyle.Modal> -Wert, der angibt, dass die Benutzeroberfläche für den Editor ein modales Dialogfeld ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

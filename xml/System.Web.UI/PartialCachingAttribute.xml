@@ -1,0 +1,380 @@
+<Type Name="PartialCachingAttribute" FullName="System.Web.UI.PartialCachingAttribute">
+  <TypeSignature Language="C#" Value="public sealed class PartialCachingAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PartialCachingAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.PartialCachingAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert das Metadatenattribut, das Web Forms-Benutzersteuerelemente (ASCX-Dateien) verwenden, um anzugeben, ob und wie ihre Ausgabe zwischengespeichert wird. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.PartialCachingAttribute> Attributklasse Benutzersteuerelemente (ASCX-Dateien), das Fragment Zwischenspeichern unterstützen markiert und kapselt die Einstellungen zum Zwischenspeichern, die ASP.NET verwendet, wenn das Steuerelement das Zwischenspeichern. Entwickler von Seiten und Steuerelemente verwenden die <xref:System.Web.UI.PartialCachingAttribute> Attribut, um ermöglichen ein Ausgabecaching für ein benutzerdefiniertes Steuerelement in einer Code-Behind-Datei.  
+  
+ Mithilfe der <xref:System.Web.UI.PartialCachingAttribute> ist eine von mehreren Möglichkeiten, Sie können, ein Ausgabecaching. Die folgende Liste beschreibt die Methoden beschrieben, die Sie verwenden können, um Ausgabe-caching zu aktivieren.  
+  
+-   Verwenden Sie die Direktive, um Ausgabecaches in deklarativen zu aktivieren.  
+  
+-   Verwenden der <xref:System.Web.UI.PartialCachingAttribute> , aktivieren Sie das Zwischenspeichern für ein benutzerdefiniertes Steuerelement in einer Code-Behind-Datei.  
+  
+-   Verwenden der <xref:System.Web.UI.ControlCachePolicy> Klasse, um programmgesteuert cacheeinstellungen in programmgesteuerten Szenarien angeben, in dem Sie arbeiten mit <xref:System.Web.UI.BasePartialCachingControl> Instanzen.  
+  
+ Wenn ein Benutzersteuerelement eine Direktive enthält oder ein <xref:System.Web.UI.PartialCachingAttribute> angewendet, die ASP.NET-Parser generiert eine Instanz der <xref:System.Web.UI.PartialCachingControl> Klasse, um das Benutzersteuerelement zu umschließen.  
+  
+ Weitere Informationen zur Zwischenspeicherung in ASP.NET finden Sie unter [Caching](http://msdn.microsoft.com/library/ac11c8ea-df5d-4de8-b315-9ccf1048b0ce). Weitere Informationen zum Verwenden von Attributen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Web.UI.PartialCachingAttribute>. In diesem Beispiel besteht aus drei Teilen:  
+  
+-   Eine partielle Klasse `ctlMine`, erbt von der <xref:System.Web.UI.UserControl> Basisklasse und zu dem die <xref:System.Web.UI.PartialCachingAttribute> Attribut angewendet wird.  
+  
+-   Ein Benutzersteuerelement, das mit der `ctlMine` partiellen Klasse.  
+  
+-   Eine Web Forms-Seite, die das Benutzersteuerelement hostet.  
+  
+ Der erste Teil des Beispiels zeigt eine partielle Klasse, die von erben die <xref:System.Web.UI.UserControl> Basisklasse und zu dem die <xref:System.Web.UI.PartialCachingAttribute> Attribut angewendet wird. In diesem Beispiel gibt das Attribut an, dass das Benutzersteuerelement für 20 Sekunden zwischengespeichert werden soll.  
+  
+ [!code-csharp[PartialCachingAttribute_1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/PartialCachingAttribute_1/CS/partialcache.cs.ascx.cs#1)]
+ [!code-vb[PartialCachingAttribute_1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PartialCachingAttribute_1/VB/partialcache.vb.ascx.vb#1)]  
+  
+ Der zweite Teil des Beispiels zeigt ein benutzerdefiniertes Steuerelement, das im vorherigen Beispiel zum Zwischenspeichern von Benutzersteuerelementen veranschaulichen dient.  
+  
+ [!code-aspx-csharp[PartialCachingAttribute_1#5](~/samples/snippets/csharp/VS_Snippets_WebNet/PartialCachingAttribute_1/CS/partialcache.cs.ascx#5)]
+ [!code-aspx-vb[PartialCachingAttribute_1#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PartialCachingAttribute_1/VB/partialcache.vb.ascx#5)]  
+  
+ Der dritte Teil des Beispiels wird veranschaulicht, eine Web Forms-Seite, die das Benutzersteuerelement hostet.  
+  
+ [!code-aspx-csharp[PartialCachingAttribute_1#6](~/samples/snippets/csharp/VS_Snippets_WebNet/PartialCachingAttribute_1/CS/partialcache.cs.aspx#6)]
+ [!code-aspx-vb[PartialCachingAttribute_1#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PartialCachingAttribute_1/VB/partialcache.vb.aspx#6)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PartialCachingAttribute (int duration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 duration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PartialCachingAttribute.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="duration" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="duration">Die Zeitdauer in Sekunden, sollte ein benutzerdefiniertes Steuerelement im Ausgabecache bleiben.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.PartialCachingAttribute" /> Klasse mit der angegebenen Dauer, die auf das Benutzersteuerelement zugewiesen wird, zwischengespeichert werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.PartialCachingAttribute.%23ctor%28System.Int32%29> Konstruktor kann auf ein benutzerdefiniertes Steuerelement angewendet werden. Im Beispiel wird der Konstruktor verwendet, um anzugeben, dass das Benutzersteuerelement zwischengespeichert werden kann und die Dauer an. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.PartialCachingAttribute> Klasse.  
+  
+ [!code-csharp[PartialCachingAttribute_1#2](~/samples/snippets/csharp/VS_Snippets_WebNet/PartialCachingAttribute_1/CS/partialcache.cs.ascx.cs#2)]
+ [!code-vb[PartialCachingAttribute_1#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PartialCachingAttribute_1/VB/partialcache.vb.ascx.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PartialCachingAttribute (int duration, string varyByParams, string varyByControls, string varyByCustom);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 duration, string varyByParams, string varyByControls, string varyByCustom) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PartialCachingAttribute.#ctor(System.Int32,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="duration" Type="System.Int32" />
+        <Parameter Name="varyByParams" Type="System.String" />
+        <Parameter Name="varyByControls" Type="System.String" />
+        <Parameter Name="varyByCustom" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="duration">Die Zeitspanne in Sekunden an, die das Benutzersteuerelement zwischengespeichert wird.</param>
+        <param name="varyByParams">Eine durch Semikolons getrennte Liste von Zeichenfolgen verwendet, um den Ausgabecache zu variieren. Standardmäßig entsprechen diese Zeichenfolgen auf, um einen Abfragezeichenfolgenwert mit GET-Methodenattributen gesendet oder auf einen Parameter mit der POST-Methode gesendet. Wenn dieses Attribut auf mehrere Parameter festgelegt ist, enthält der Ausgabecache eine andere Version von das angeforderte Dokument für jeden angegebenen Parameter. Mögliche Werte sind "none", "*", und eine beliebige gültige Abfragezeichenfolge oder die POST-Parametername.</param>
+        <param name="varyByControls">Eine durch Semikolons getrennte Liste von Zeichenfolgen verwendet, um den Ausgabecache zu variieren. Diese Zeichenfolgen darstellen, den vollqualifizierten Namen von Eigenschaften auf einem Benutzersteuerelement. Wenn dieser Parameter für ein benutzerdefiniertes Steuerelement verwendet wird, wird die Ausgabe des Benutzersteuerelements zum Cache für jede Eigenschaft der angegebenen Benutzer-Steuerelement variiert.</param>
+        <param name="varyByCustom">Jeglichem Text, der benutzerdefinierte cacheanforderungen ausgegeben werden. Wenn dieser Parameter den Wert "Browser" angegeben ist, wird der Cache nach Browser und Hauptversion Informationen variiert. Wenn eine benutzerdefinierte Zeichenfolge eingegeben wird, müssen Sie überschreiben die <see cref="M:System.Web.HttpApplication.GetVaryByCustomString(System.Web.HttpContext,System.String)" /> Methode in die Datei "Global.asax" Ihrer Anwendung.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.PartialCachingAttribute" /> -Klasse unter Angabe der Dauer, alle GET und POST Werte Steuerelementnamen und benutzerdefinierte Ausgabecaching für Anforderungen verwendet, um den Cache zu variieren.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.PartialCachingAttribute.%23ctor%28System.Int32%2CSystem.String%2CSystem.String%2CSystem.String%29> Konstruktor kann auf ein benutzerdefiniertes Steuerelement angewendet werden. Im Beispiel der Konstruktor wird verwendet, um anzugeben, dass das Benutzersteuerelement zwischengespeichert werden kann, geben Sie die Zwischenspeicherung Dauer als 20 Sekunden, und geben Sie ein Steuerelement namens `state` für die die Ausgabe des Benutzersteuerelements variiert werden wird.  
+  
+ [!code-csharp[PartialCachingAttribute_2_Resubmit#2](~/samples/snippets/csharp/VS_Snippets_WebNet/PartialCachingAttribute_2_Resubmit/CS/partialcache_1cs.ascx.cs#2)]
+ [!code-vb[PartialCachingAttribute_2_Resubmit#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PartialCachingAttribute_2_Resubmit/VB/partialcache_1vb.ascx.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PartialCachingAttribute (int duration, string varyByParams, string varyByControls, string varyByCustom, bool shared);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 duration, string varyByParams, string varyByControls, string varyByCustom, bool shared) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PartialCachingAttribute.#ctor(System.Int32,System.String,System.String,System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="duration" Type="System.Int32" />
+        <Parameter Name="varyByParams" Type="System.String" />
+        <Parameter Name="varyByControls" Type="System.String" />
+        <Parameter Name="varyByCustom" Type="System.String" />
+        <Parameter Name="shared" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="duration">Die Zeitspanne in Sekunden an, die das Benutzersteuerelement zwischengespeichert wird.</param>
+        <param name="varyByParams">Eine durch Semikolons getrennte Liste von Zeichenfolgen verwendet, um den Ausgabecache zu variieren. Wird standardmäßig diese Zeichenfolgen entsprechen, um einen Abfragezeichenfolgenwert mit gesendeten <see langword="GET" /> Methodenattribute oder einem Parameter mit der <see langword="POST" /> Methode. Wenn dieses Attribut auf mehrere Parameter festgelegt ist, enthält der Ausgabecache eine andere Version von das angeforderte Dokument für jeden angegebenen Parameter. Mögliche Werte sind "none", "*", und eine beliebige gültige Abfragezeichenfolge oder <see langword="POST" /> Name des Parameters.</param>
+        <param name="varyByControls">Eine durch Semikolons getrennte Liste von Zeichenfolgen verwendet, um den Ausgabecache zu variieren. Diese Zeichenfolgen darstellen, den vollqualifizierten Namen von Eigenschaften auf einem Benutzersteuerelement. Wenn dieser Parameter für ein benutzerdefiniertes Steuerelement verwendet wird, wird die Ausgabe des Benutzersteuerelements zum Cache für jede Eigenschaft der angegebenen Benutzer-Steuerelement variiert.</param>
+        <param name="varyByCustom">Jeglichem Text, der benutzerdefinierte cacheanforderungen ausgegeben werden. Wenn dieser Parameter den Wert "Browser" angegeben ist, wird der Cache nach Browser und Hauptversion Informationen variiert. Wenn eine benutzerdefinierte Zeichenfolge eingegeben wird, müssen Sie überschreiben die <see cref="M:System.Web.HttpApplication.GetVaryByCustomString(System.Web.HttpContext,System.String)" /> Methode in die Datei "Global.asax" Ihrer Anwendung.</param>
+        <param name="shared">
+          <see langword="true" />um anzugeben, dass die Ausgabe des Benutzersteuerelements für mehrere Seiten freigegeben werden kann. andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.PartialCachingAttribute" /> -Klasse, die Zwischenspeicherung Dauer jeder angeben <see langword="GET" /> und <see langword="POST" /> Werte, Steuerelementnamen, benutzerdefinierte Ausgabe cacheanforderungen verwendet, um den Cache zu variieren, und gibt an, ob das Benutzersteuerelement ausgeben gemeinsam genutzt werden kann mit mehreren Seiten.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PartialCachingAttribute (int duration, string varyByParams, string varyByControls, string varyByCustom, string sqlDependency, bool shared);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 duration, string varyByParams, string varyByControls, string varyByCustom, string sqlDependency, bool shared) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PartialCachingAttribute.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="duration" Type="System.Int32" />
+        <Parameter Name="varyByParams" Type="System.String" />
+        <Parameter Name="varyByControls" Type="System.String" />
+        <Parameter Name="varyByCustom" Type="System.String" />
+        <Parameter Name="sqlDependency" Type="System.String" />
+        <Parameter Name="shared" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="duration">Die Zeitspanne in Sekunden an, die das Benutzersteuerelement zwischengespeichert wird.</param>
+        <param name="varyByParams">Eine durch Semikolons getrennte Liste von Zeichenfolgen verwendet, um den Ausgabecache zu variieren. Wird standardmäßig diese Zeichenfolgen entsprechen, um einen Abfragezeichenfolgenwert mit gesendeten <see langword="GET" /> Methodenattribute oder einem Parameter mit der <see langword="POST" /> Methode. Wenn dieses Attribut auf mehrere Parameter festgelegt ist, enthält der Ausgabecache eine andere Version von das angeforderte Dokument für jeden angegebenen Parameter. Mögliche Werte sind "none", "*", und eine beliebige gültige Abfragezeichenfolge oder <see langword="POST" /> Name des Parameters.</param>
+        <param name="varyByControls">Eine durch Semikolons getrennte Liste von Zeichenfolgen verwendet, um den Ausgabecache zu variieren. Diese Zeichenfolgen darstellen, den vollqualifizierten Namen von Eigenschaften auf einem Benutzersteuerelement. Wenn dieser Parameter für ein benutzerdefiniertes Steuerelement verwendet wird, wird die Ausgabe des Benutzersteuerelements zum Cache für jede Eigenschaft der angegebenen Benutzer-Steuerelement variiert.</param>
+        <param name="varyByCustom">Jeglichem Text, der benutzerdefinierte cacheanforderungen ausgegeben werden. Wenn dieser Parameter den Wert "Browser" angegeben ist, wird der Cache nach Browser und Hauptversion Informationen variiert. Wenn eine benutzerdefinierte Zeichenfolge eingegeben wird, müssen Sie überschreiben die <see cref="M:System.Web.HttpApplication.GetVaryByCustomString(System.Web.HttpContext,System.String)" /> Methode in die Datei "Global.asax" Ihrer Anwendung.</param>
+        <param name="sqlDependency">Eine durch Trennzeichen getrennte Liste der Datenbanknamen und die Tabelle, die den Namen beim geändert, explizit im ASP.NET-Cache einen Cacheeintrag abläuft. Diese Datenbank entsprechen diese SQL Server-Cache-Abhängigkeiten in Ihrer Web-Konfigurationsabschnitt identifiziert.</param>
+        <param name="shared">
+          <see langword="true" />um anzugeben, dass die Ausgabe des Benutzersteuerelements für mehrere Seiten freigegeben werden kann. andernfalls <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.PartialCachingAttribute" /> Klasse, die die Cache Dauer jeder angibt <see langword="GET" /> und <see langword="POST" /> Werte Steuerelementnamen, benutzerdefinierte Ausgabecaching für Anforderungen verwendet, um den Cache, die Abhängigkeiten Datenbank variieren und gibt an, ob der Benutzer Ausgabe kann mit mehreren Seiten freigegeben werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Duration">
+      <MemberSignature Language="C#" Value="public int Duration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Duration" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PartialCachingAttribute.Duration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft der Zeitspanne in Sekunden ab, die zwischengespeicherte Elemente im Ausgabecache sollten.</summary>
+        <value>Die Zeitdauer in Sekunden, sollte ein benutzerdefiniertes Steuerelement im Ausgabecache bleiben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.PartialCachingAttribute.%23ctor%28System.Int32%29> Konstruktor kann auf ein benutzerdefiniertes Steuerelement angewendet werden. Das Attribut gibt an, dass das Benutzersteuerelement zwischengespeichert werden kann, und gibt eine Dauer Zwischenspeichern von 20 Sekunden. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.PartialCachingAttribute> Klasse.  
+  
+ [!code-csharp[PartialCachingAttribute_1#2](~/samples/snippets/csharp/VS_Snippets_WebNet/PartialCachingAttribute_1/CS/partialcache.cs.ascx.cs#2)]
+ [!code-vb[PartialCachingAttribute_1#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PartialCachingAttribute_1/VB/partialcache.vb.ascx.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderName">
+      <MemberSignature Language="C#" Value="public string ProviderName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProviderName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PartialCachingAttribute.ProviderName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Anbieters, der zum Speichern der zwischengespeicherten Daten für das zugeordnete Steuerelement verwendet wird.</summary>
+        <value>Der Name des Anbieters.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Eigenschaft festlegen, deklarativ oder mithilfe eines Attributs.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Shared">
+      <MemberSignature Language="C#" Value="public bool Shared { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Shared" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PartialCachingAttribute.Shared" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Ausgabe eines Benutzersteuerelements für mehrere Seiten freigegeben werden kann.</summary>
+        <value>
+          <see langword="true" />Wenn die Ausgabe des Benutzersteuerelements mehrere Seiten gemeinsam genutzt werden kann andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie diese Eigenschaft, um festlegen `true`, zwischengespeicherte Ausgabe des Benutzersteuerelements mehrere Web Forms-Seiten zugegriffen werden kann. Wenn Sie nicht die Einstellung `true`, das Standardverhalten besteht darin, eine Version der Ausgabe eines Benutzersteuerelements für jede Seite zwischengespeichert werden, die dieses Benutzersteuerelement enthält. Sie können eine erhebliche Menge an Arbeitsspeicher potenziell sparen, indem diese Eigenschaft aktiviert wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SqlDependency">
+      <MemberSignature Language="C#" Value="public string SqlDependency { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SqlDependency" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PartialCachingAttribute.SqlDependency" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine durch Trennzeichen getrennte Zeichenfolge, die eine oder mehrere der Namenspaaren Datenbank und die Tabelle identifiziert, denen das zwischengespeicherte Benutzersteuerelement abhängig ist.</summary>
+        <value>Eine durch Trennzeichen getrennte Zeichenfolge, die einen Satz von Datenbank- und Tabellennamen identifiziert, die der Benutzer Control-Cacheeintrag abhängig ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.PartialCachingAttribute.SqlDependency%2A> Zeichenfolge identifiziert, Datenbanken und Tabellennamen auf Richtigkeit entsprechend den Namen des SQL Server-Abgängigkeit Cache in Ihrer Konfiguration (in der Regel hinzugefügt, mit der `sqlcachedependency` Konfigurationselemente). Wenn Sie SQL Server 2005 verwenden, legen Sie die <xref:System.Web.UI.PartialCachingAttribute.SqlDependency%2A> Eigenschaft auf "CommandNotification", den angewiesen wird, ASP.NET Zeile Ebene Abhängigkeiten für alle SQL-Befehle innerhalb des Kontexts der aktuellen ASP.NET-Seite zu erstellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VaryByControls">
+      <MemberSignature Language="C#" Value="public string VaryByControls { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VaryByControls" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PartialCachingAttribute.VaryByControls" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste der Steuerelement-Benutzereigenschaften, die den Ausgabecache verwendet, um das Benutzersteuerelement zu variieren.</summary>
+        <value>Die Liste der Eigenschaften der Benutzerrolle-Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.PartialCachingAttribute.%23ctor%28System.Int32%2CSystem.String%2CSystem.String%2CSystem.String%29> Konstruktor kann auf ein benutzerdefiniertes Steuerelement angewendet werden. Im Beispiel wird der Konstruktor verwendet, um anzugeben, dass das Benutzersteuerelement zwischengespeichert werden kann, die Cache Dauer als 20 Sekunden angeben und an ein Steuerelement namens `state` für die die Ausgabe des Benutzersteuerelements variiert werden wird.  
+  
+ [!code-csharp[PartialCachingAttribute_2_Resubmit#2](~/samples/snippets/csharp/VS_Snippets_WebNet/PartialCachingAttribute_2_Resubmit/CS/partialcache_1cs.ascx.cs#2)]
+ [!code-vb[PartialCachingAttribute_2_Resubmit#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PartialCachingAttribute_2_Resubmit/VB/partialcache_1vb.ascx.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VaryByCustom">
+      <MemberSignature Language="C#" Value="public string VaryByCustom { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VaryByCustom" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PartialCachingAttribute.VaryByCustom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste der benutzerdefinierten Zeichenfolgen, mit denen der Ausgabecache variiert das Benutzersteuerelement.</summary>
+        <value>Die Liste der benutzerdefinierten Zeichenfolgen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie "Browser" für diese Eigenschaft angeben, wird das Benutzersteuerelement je nach Browsertyp und Hauptversionsnummer. Diese Eigenschaft können auch um die Werte zu erweitern, die ausgegeben wird, dass der Cache die Benutzerantwort-Steuerelement variiert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.PartialCachingAttribute.%23ctor%28System.Int32%2CSystem.String%2CSystem.String%2CSystem.String%29> Konstruktor kann auf ein benutzerdefiniertes Steuerelement angewendet werden. Im Beispiel wird der Konstruktor verwendet, um anzugeben, dass das Benutzersteuerelement zwischengespeichert werden kann und um anzugeben, dass der Cacheeintrag der Browsertyp und Hauptversionsnummer abhängig ist.  
+  
+ [!code-csharp[PartialCachingAttribute_4#2](~/samples/snippets/csharp/VS_Snippets_WebNet/PartialCachingAttribute_4/CS/partialcache_3cs.ascx.cs#2)]
+ [!code-vb[PartialCachingAttribute_4#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PartialCachingAttribute_4/VB/partialcache_3vb.ascx.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VaryByParams">
+      <MemberSignature Language="C#" Value="public string VaryByParams { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VaryByParams" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PartialCachingAttribute.VaryByParams" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste der Abfragezeichenfolge und Formularbereitstellungsparameter <see langword="POST" /> Parameter, mit denen der Ausgabecache wird das Benutzersteuerelement variieren.</summary>
+        <value>Die Liste der Abfragezeichenfolge und Formularbereitstellungsparameter <see langword="POST" /> Parameter.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.PartialCachingAttribute.%23ctor%28System.Int32%2CSystem.String%2CSystem.String%2CSystem.String%29> Konstruktor kann auf ein benutzerdefiniertes Steuerelement angewendet werden. Im Beispiel wird der Konstruktor verwendet, um anzugeben, dass das Benutzersteuerelement zwischengespeichert werden kann und zum Angeben des Parameters, von dem der Cacheeintrag abhängig ist.  
+  
+ [!code-csharp[PartialCachingAttribute_3#2](~/samples/snippets/csharp/VS_Snippets_WebNet/PartialCachingAttribute_3/CS/partialcache_2cs.ascx.cs#2)]
+ [!code-vb[PartialCachingAttribute_3#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PartialCachingAttribute_3/VB/partialcache_2vb.ascx.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

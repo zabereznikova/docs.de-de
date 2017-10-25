@@ -1,0 +1,166 @@
+<Type Name="ActivityInfo" FullName="System.Activities.Tracking.ActivityInfo">
+  <TypeSignature Language="C#" Value="public sealed class ActivityInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ActivityInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Tracking.ActivityInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enthält Informationen zu einer nachverfolgten <see cref="T:System.Activities.Activity" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityInfo (string name, string id, string instanceId, string typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string id, string instanceId, string typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Tracking.ActivityInfo.#ctor(System.String,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="instanceId" Type="System.String" />
+        <Parameter Name="typeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Aktivität.</param>
+        <param name="id">Die Aktivitäts-ID.</param>
+        <param name="instanceId">Die Instanz-ID der Aktivität.</param>
+        <param name="typeName">Der Typname der Aktivität.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Activities.Tracking.ActivityInfo" />-Klasse unter Verwendung des angegebenen Namens, der ID, der Instanz-ID und des Typnamens.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public string Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Tracking.ActivityInfo.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.DataMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die ID für die Aktivität ab.</summary>
+        <value>Die Aktivitäts-ID.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceId">
+      <MemberSignature Language="C#" Value="public string InstanceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InstanceId" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Tracking.ActivityInfo.InstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.DataMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Laufzeit-ID der Aktivitätsinstanz ab.</summary>
+        <value>Die Instanz-ID der Aktivität.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Aktivität kann mehrmals während Verarbeitung auftreten. Dies ist etwa bei einer Aktivität der Fall, die innerhalb einer Schleife verarbeitet wird. Die <xref:System.Activities.Tracking.ActivityInfo.Id%2A> enthält die ID der Aktivität und ändert sich nicht, während die <xref:System.Activities.Tracking.ActivityInfo.InstanceId%2A> die ID der bestimmten Instanz der Aktivität enthält. Die <xref:System.Activities.Tracking.ActivityInfo.InstanceId%2A> ist für jede spezifische Instanz anders. Beispiel: Eine Aktivität, die in einer Schleife verarbeitet wird, hat bei jedem Durchlaufen der Schleife eine andere <xref:System.Activities.Tracking.ActivityInfo.InstanceId%2A>, die <xref:System.Activities.Tracking.ActivityInfo.Id%2A> hingegen bleibt unverändert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Tracking.ActivityInfo.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.DataMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den der Aktivität zugeordneten Namen ab.</summary>
+        <value>Der Name der Aktivität.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Tracking.ActivityInfo.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Zeichenfolgendarstellung des <see cref="T:System.Activities.Tracking.ActivityInfo" />-Objekts ab.</summary>
+        <returns>Der Aktivitätsname, die ID, die Instanz-ID und der Typname.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeName">
+      <MemberSignature Language="C#" Value="public string TypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Tracking.ActivityInfo.TypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.DataMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Typs der Aktivität ab.</summary>
+        <value>Der Typname der Aktivität.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

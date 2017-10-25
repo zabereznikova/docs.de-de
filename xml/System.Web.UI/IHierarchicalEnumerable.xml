@@ -1,0 +1,74 @@
+<Type Name="IHierarchicalEnumerable" FullName="System.Web.UI.IHierarchicalEnumerable">
+  <TypeSignature Language="C#" Value="public interface IHierarchicalEnumerable : System.Collections.IEnumerable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IHierarchicalEnumerable implements class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IHierarchicalEnumerable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine hierarchische Auflistung, die mit aufgelistet werden, kann ein <see cref="T:System.Collections.IEnumerator" /> Schnittstelle. Auflistungen bereit, implementieren die <see cref="T:System.Web.UI.IHierarchicalEnumerable" /> Schnittstelle von ASP.NET Websitenavigation und Datenquellen-Steuerelementen verwendet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.IHierarchicalEnumerable> -Schnittstelle erweitert die <xref:System.Collections.IEnumerable> Schnittstelle und macht <xref:System.Web.UI.IHierarchicalEnumerable.GetHierarchyData%2A>, ist eine Methode zum Abrufen von ein <xref:System.Web.UI.IHierarchyData> Objekt von einem aufgezählten-Element, zusätzlich zu den <xref:System.Collections.IEnumerable.GetEnumerator%2A> Methode.  
+  
+ In der Regel, die Clients verwenden <xref:System.Web.UI.IHierarchicalEnumerable> Auflistungen abrufen eine <xref:System.Collections.IEnumerator> Objekt durch Aufrufen der <xref:System.Collections.IEnumerable.GetEnumerator%2A> -Methode, durchlaufen Sie dann, bis der Enumeration und rufen die <xref:System.Web.UI.IHierarchicalEnumerable.GetHierarchyData%2A> für jedes aufgelistete Element abrufen eine <xref:System.Web.UI.IHierarchyData> Objekt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Implementieren der <xref:System.Web.UI.IHierarchicalEnumerable> Schnittstelle mit einer Klasse, die erweitert <xref:System.Collections.ArrayList> und stellt eine Auflistung von <xref:System.Web.UI.IHierarchyData> Objekte dieser Wrap <xref:System.IO.FileSystemInfo> Objekte. Die <xref:System.Web.UI.IHierarchicalEnumerable> Auflistung wird durch abgeleitete Klassen verwendet <xref:System.Web.UI.HierarchicalDataSourceView> zum Zurückgeben einer Auflistung von hierarchischen Knoten bei der <xref:System.Web.UI.HierarchicalDataSourceView.Select%2A> -Methode aufgerufen wird. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.HierarchicalDataSourceControl> Klasse.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.FileSystemDataSource_1#4](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.FileSystemDataSource_1/CS/filesystemdatasource.cs#4)]
+ [!code-vb[Urtue.Samples.Alexkr.FileSystemDataSource_1#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.FileSystemDataSource_1/VB/filesystemdatasource.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetHierarchyData">
+      <MemberSignature Language="C#" Value="public System.Web.UI.IHierarchyData GetHierarchyData (object enumeratedItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.IHierarchyData GetHierarchyData(object enumeratedItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IHierarchicalEnumerable.GetHierarchyData(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.IHierarchyData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enumeratedItem" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="enumeratedItem">Die <see cref="T:System.Object" /> für das Zurückgeben einer <see cref="T:System.Web.UI.IHierarchyData" />.</param>
+        <summary>Gibt ein hierarchisches Datenelement für das angegebene aufgelistete Element zurück.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.IHierarchyData" /> Instanz, steht die <see cref="T:System.Object" /> übergeben der <see cref="M:System.Web.UI.IHierarchicalEnumerable.GetHierarchyData(System.Object)" /> Methode.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel, die Clients verwenden <xref:System.Web.UI.IHierarchicalEnumerable> Auflistungen abrufen eine <xref:System.Collections.IEnumerator> Objekt durch Aufrufen der <xref:System.Collections.IEnumerable.GetEnumerator%2A> -Methode, durchlaufen Sie dann, bis der Enumeration und rufen die <xref:System.Web.UI.IHierarchicalEnumerable.GetHierarchyData%2A> -Methode für jede aufgelistete abzurufendes Element ein <xref:System.Web.UI.IHierarchyData> -Objekt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine hierarchische datengebundenen ASP.NET-Steuerelements verwendet ein <xref:System.Web.UI.IHierarchyData> Objekt in einer rekursiven Datenbindungsfunktionen-Methode. Die Elemente in einer <xref:System.Web.UI.IHierarchicalEnumerable> Objekt werden aufgelistet, und für jedes ein <xref:System.Web.UI.IHierarchyData> Objekt abgerufen wird, mit der <xref:System.Web.UI.IHierarchicalEnumerable.GetHierarchyData%2A> Methode. Schließlich die <xref:System.Web.UI.IHierarchyData.HasChildren%2A> Eigenschaft wird überprüft, um zu bestimmen, ob die Rekursion erforderlich ist. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> Klasse.  
+  
+ [!code-csharp[Samples.AspNet.GeneologyTree#5](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.GeneologyTree/CS/geneologytree.cs#5)]
+ [!code-vb[Samples.AspNet.GeneologyTree#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.GeneologyTree/VB/geneologytree.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

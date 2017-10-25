@@ -1,0 +1,175 @@
+<Type Name="IInternalConfigClientHost" FullName="System.Configuration.Internal.IInternalConfigClientHost">
+  <TypeSignature Language="C#" Value="public interface IInternalConfigClientHost" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IInternalConfigClientHost" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.Internal.IInternalConfigClientHost" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert die Schnittstellen, die interne .NET Framework-Infrastruktur zum Anpassen der Konfiguration zu ermöglichen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetExeConfigPath">
+      <MemberSignature Language="C#" Value="public string GetExeConfigPath ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetExeConfigPath() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigClientHost.GetExeConfigPath" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Pfad der Konfigurationsdatei der Anwendung zurück.</summary>
+        <returns>Eine Zeichenfolge, die den Pfad der Konfigurationsdatei der Anwendung darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLocalUserConfigPath">
+      <MemberSignature Language="C#" Value="public string GetLocalUserConfigPath ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetLocalUserConfigPath() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigClientHost.GetLocalUserConfigPath" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge, die den Pfad zur Konfigurationsdatei bekannte lokaler Benutzer darstellt.</summary>
+        <returns>Eine Zeichenfolge, die den Pfad zur Konfigurationsdatei bekannte lokaler Benutzer darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRoamingUserConfigPath">
+      <MemberSignature Language="C#" Value="public string GetRoamingUserConfigPath ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetRoamingUserConfigPath() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigClientHost.GetRoamingUserConfigPath" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge, die den Pfad zu den bekannten servergespeicherten Benutzerkonfigurationsdatei darstellt.</summary>
+        <returns>Eine Zeichenfolge, die den Pfad zu den bekannten servergespeicherten Benutzerkonfigurationsdatei darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsExeConfig">
+      <MemberSignature Language="C#" Value="public bool IsExeConfig (string configPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsExeConfig(string configPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigClientHost.IsExeConfig(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="configPath">Eine Zeichenfolge, die den Pfad der Konfigurationsdatei der Anwendung darstellt.</param>
+        <summary>Gibt einen Wert, der angibt, ob ein Pfad der Konfigurationsdatei als Pfad der Konfigurationsdatei einen derzeit bekannten Anwendung übereinstimmt.</summary>
+        <returns>
+          <see langword="true" />Wenn eine Zeichenfolge mit dem Konfigurationspfad ein Pfad zur Konfigurationsdatei Anwendung entspricht; <see langword="false" /> ist eine Zeichenfolge mit dem Konfigurationspfad nicht identisch mit einem Pfad in der Anwendungskonfigurationsdatei.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLocalUserConfig">
+      <MemberSignature Language="C#" Value="public bool IsLocalUserConfig (string configPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsLocalUserConfig(string configPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigClientHost.IsLocalUserConfig(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="configPath">Eine Zeichenfolge, die den Pfad der Konfigurationsdatei der Anwendung darstellt.</param>
+        <summary>Gibt einen Wert, der angibt, ob ein Pfad der Konfigurationsdatei der Pfad der Konfigurationsdatei für den derzeit bekannten lokalen Benutzer identisch ist.</summary>
+        <returns>
+          <see langword="true" />Wenn eine Zeichenfolge mit dem Konfigurationspfad einen Pfad zu einer bekannten lokalen Benutzerkonfigurationsdatei identisch ist. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRoamingUserConfig">
+      <MemberSignature Language="C#" Value="public bool IsRoamingUserConfig (string configPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsRoamingUserConfig(string configPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigClientHost.IsRoamingUserConfig(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="configPath">Eine Zeichenfolge, die den Pfad zu einer Anwendungskonfigurationsdatei darstellt.</param>
+        <summary>Gibt einen Wert, der angibt, ob ein Pfad der Konfigurationsdatei der Pfad der Konfigurationsdatei für die derzeit bekannten roamingbenutzerprofilfreigabe identisch ist.</summary>
+        <returns>
+          <see langword="true" />Wenn eine Zeichenfolge mit dem Konfigurationspfad einen Pfad zu einer bekannten servergespeicherten Benutzerkonfigurationsdatei identisch ist. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,355 @@
+<Type Name="GeometryModel3D" FullName="System.Windows.Media.Media3D.GeometryModel3D">
+  <TypeSignature Language="C#" Value="public sealed class GeometryModel3D : System.Windows.Media.Media3D.Model3D" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed GeometryModel3D extends System.Windows.Media.Media3D.Model3D" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Media3D.GeometryModel3D" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Media3D.Model3D</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Rendert eine <see cref="T:System.Windows.Media.Media3D.Geometry3D" /> mit dem angegebenen <see cref="T:System.Windows.Media.Media3D.Material" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie erstellen müssen eine <xref:System.Windows.Media.Media3D.Model3D> , mehrere Materialien verwendet, müssen Sie die <xref:System.Windows.Media.Media3D.Model3DGroup> Klasse zum Kombinieren mehrerer <xref:System.Windows.Media.Media3D.GeometryModel3D> Objekte.  
+  
+ Die vorderen und hinteren Seiten von der <xref:System.Windows.Media.Media3D.GeometryModel3D> werden durch die windungsreihenfolge der Dreiecke in bestimmt die <xref:System.Windows.Media.Media3D.MeshGeometry3D>. Die Vorderseite windet im Uhrzeigersinn gedreht.  
+  
+ Die <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A> und <xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A> Eigenschaften möglicherweise <xref:System.Drawing.Brushes.Transparent%2A> oder `null`. Wenn das Material transparent ist, können nicht Sie finden Sie diese Seite des Dreiecks allerdings Treffertests funktionieren wie gewohnt. Wenn das Material ist `null`angezeigt, und Treffertests funktioniert nicht.  
+  
+   
+  
+## Examples  
+ Im folgenden Codeauszug erstellt eine <xref:System.Windows.Media.Media3D.GeometryModel3D> in der Form eines Cubes.  
+  
+ [!code-xaml[Basic3D#Basic3DXAML3DN3](~/samples/snippets/xaml/VS_Snippets_Wpf/Basic3D/XAML/Window1.xaml#basic3dxaml3dn3)]  
+  
+ Im folgenden Codeauszug verwendet eine <xref:System.Windows.Media.Media3D.GeometryModel3D> , deren <xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A> als statische Ressource definiert ist.  
+  
+ [!code-xaml[Animate3Drotation#Animate3DRotation3DN1](~/samples/snippets/csharp/VS_Snippets_Wpf/Animate3DRotation/CS/Window1.xaml#animate3drotation3dn1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Erstellt ein neues <see cref="T:System.Windows.Media.Media3D.GeometryModel3D" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[hittest3d#HitTest3D3DN5](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/Window1.xaml.cs#hittest3d3dn5)]
+ [!code-vb[hittest3d#HitTest3D3DN5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTest3D/visualbasic/window1.xaml.vb#hittest3d3dn5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GeometryModel3D ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.GeometryModel3D.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz von <see cref="T:System.Windows.Media.Media3D.GeometryModel3D" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Der folgende Auszug zeigt die Syntax für Instanzen von GeometryModel3D.  
+  
+ [!code-xaml[animate3drotation#Animate3DRotation3DN3](~/samples/snippets/csharp/VS_Snippets_Wpf/Animate3DRotation/CS/Window1.xaml#animate3drotation3dn3)]  
+  
+ [!code-xaml[basic3d#Basic3DXAML3DN4](~/samples/snippets/xaml/VS_Snippets_Wpf/Basic3D/XAML/Window1.xaml#basic3dxaml3dn4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GeometryModel3D (System.Windows.Media.Media3D.Geometry3D geometry, System.Windows.Media.Media3D.Material material);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Media.Media3D.Geometry3D geometry, class System.Windows.Media.Media3D.Material material) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.GeometryModel3D.#ctor(System.Windows.Media.Media3D.Geometry3D,System.Windows.Media.Media3D.Material)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="geometry" Type="System.Windows.Media.Media3D.Geometry3D" />
+        <Parameter Name="material" Type="System.Windows.Media.Media3D.Material" />
+      </Parameters>
+      <Docs>
+        <param name="geometry">Die Geometrie des der neuen Netz Primitive.</param>
+        <param name="material">Material, das neue Netz primitiven.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Windows.Media.Media3D.GeometryModel3D" /> mit dem angegebenen Geometry3D und Material.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-xaml[animate3drotation#Animate3DRotation3DN3](~/samples/snippets/csharp/VS_Snippets_Wpf/Animate3DRotation/CS/Window1.xaml#animate3drotation3dn3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackMaterial">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.Material BackMaterial { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Media3D.Material BackMaterial" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Material</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das <see cref="T:System.Windows.Media.Media3D.Material" /> ab, das zum Rendern der Rückseite von <see cref="T:System.Windows.Media.Media3D.GeometryModel3D" /> verwendet wird, oder legt es fest.</summary>
+        <value>Das <see cref="T:System.Windows.Media.Media3D.Material" />, das auf die Rückseite von <see cref="T:System.Windows.Media.Media3D.Model3D" /> angewendet wird. Der Standardwert ist **null**.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Rückseite eines Netzes richtet sich nach der Reihenfolge Wicklung Dreieck. Normalerweise werden Back Flächen nicht gerendert werden, es sei denn, das Objekt transformiert oder animiert wird. Sichern Sie die Flächen werden nie gerendert, wenn <xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A> ist `null`.  
+  
+<a name="dependencyPropertyInfo_BackMaterial"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterialProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackMaterialProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BackMaterialProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BackMaterialProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.GeometryModel3D.BackMaterialProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.GeometryModel3D Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Media3D.GeometryModel3D Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.GeometryModel3D.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.GeometryModel3D</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.Media3D.GeometryModel3D" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.GeometryModel3D CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Media3D.GeometryModel3D CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.GeometryModel3D.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.GeometryModel3D</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon des <see cref="T:System.Windows.Media.Media3D.GeometryModel3D" />-Objekts, indem tiefe Kopien der aktuellen Werte dieses Objekts erzeugt werden. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true" /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.GeometryModel3D.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Geometry">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.Geometry3D Geometry { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Media3D.Geometry3D Geometry" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.GeometryModel3D.Geometry" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Geometry3D</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.Media.Media3D.Geometry3D" /> , beschreibt die Form dieses <see cref="T:System.Windows.Media.Media3D.GeometryModel3D" />.</summary>
+        <value>
+          <see cref="T:System.Windows.Media.Media3D.Geometry3D" />die das Modell enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Geometry"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Media3D.GeometryModel3D.GeometryProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgenden Codeauszug erstellt eine <xref:System.Windows.Media.Media3D.GeometryModel3D> in der Form eines Cubes.  
+  
+ [!code-xaml[Basic3D#Basic3DXAML3DN3](~/samples/snippets/xaml/VS_Snippets_Wpf/Basic3D/XAML/Window1.xaml#basic3dxaml3dn3)]  
+  
+ Im folgenden Codeauszug verwendet eine <xref:System.Windows.Media.Media3D.GeometryModel3D> , deren <xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A> als statische Ressource definiert ist.  
+  
+ [!code-xaml[Animate3Drotation#Animate3DRotation3DN1](~/samples/snippets/csharp/VS_Snippets_Wpf/Animate3DRotation/CS/Window1.xaml#animate3drotation3dn1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GeometryProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty GeometryProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty GeometryProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.GeometryModel3D.GeometryProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Media3D.GeometryModel3D.Geometry" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Material">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.Material Material { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Media3D.Material Material" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.GeometryModel3D.Material" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Material</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.Media.Media3D.Material" /> verwendet, um das Rendern der Vorderseite von <see cref="T:System.Windows.Media.Media3D.GeometryModel3D" />.</summary>
+        <value>
+          <see cref="T:System.Windows.Media.Media3D.Material" />angewendet auf die <see cref="T:System.Windows.Media.Media3D.GeometryModel3D" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Material"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Media3D.GeometryModel3D.MaterialProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Im folgenden Codeauszug definiert eine <xref:System.Windows.Media.SolidColorBrush> als eine <xref:System.Windows.Media.Media3D.DiffuseMaterial> auf eine GeometryModel3D.  
+  
+ [!code-xaml[Animate3Drotation#Animate3DRotation3DN1](~/samples/snippets/csharp/VS_Snippets_Wpf/Animate3DRotation/CS/Window1.xaml#animate3drotation3dn1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaterialProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MaterialProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MaterialProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.GeometryModel3D.MaterialProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Media3D.GeometryModel3D.Material" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

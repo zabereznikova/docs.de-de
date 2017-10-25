@@ -1,0 +1,450 @@
+<Type Name="TrustInfo" FullName="Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo">
+  <TypeSignature Language="C#" Value="public sealed class TrustInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TrustInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Diese Klasse stellt die Vertrauenswürdigkeitsinformationen für die Anwendungssicherheit dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TrustInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt das <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo" />-Objekt auf seinen Standardzustand der vollen Vertrauenswürdigkeit zurück.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasUnmanagedCodePermission">
+      <MemberSignature Language="C#" Value="public bool HasUnmanagedCodePermission { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasUnmanagedCodePermission" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.HasUnmanagedCodePermission" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bestimmt, ob die Anwendung über die Berechtigung zum Aufrufen von nicht verwaltetem Code verfügt.</summary>
+        <value>Ein boolescher Wert, der angibt, ob die Anwendung über die Berechtigung zum Aufrufen von nicht verwaltetem Code verfügt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ "Application" bezieht sich auf die Anwendung, für die das Manifest gelesen wird. Sie können die Bereitstellung lesen Anwendungsmanifest mit <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A> oder <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFullTrust">
+      <MemberSignature Language="C#" Value="public bool IsFullTrust { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFullTrust" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.IsFullTrust" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bestimmt, ob die Anwendung voll oder teilweise vertrauenswürdig ist.</summary>
+        <value>Ein boolescher Wert, der angibt, ob die Anwendung voll oder teilweise vertrauenswürdig ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ "Application" bezieht sich auf die Anwendung, für die das Manifest gelesen wird. Sie können die Bereitstellung lesen Anwendungsmanifest mit <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A> oder <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PermissionSet">
+      <MemberSignature Language="C#" Value="public System.Security.PermissionSet PermissionSet { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.PermissionSet PermissionSet" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.PermissionSet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.PermissionSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Berechtigungsobjekt für die Vertrauenswürdigkeit der Anwendung ab oder legt es fest.</summary>
+        <value>Ein <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.PermissionSet" /> Objekt für die Vertrauenswürdigkeit der Anwendung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreserveFullTrustPermissionSet">
+      <MemberSignature Language="C#" Value="public bool PreserveFullTrustPermissionSet { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PreserveFullTrustPermissionSet" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.PreserveFullTrustPermissionSet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob teilweise Vertrauenswürdigkeit beibehalten werden soll, wenn das Flag für volle Vertrauenswürdigkeit festgelegt ist.</summary>
+        <value>Ein boolescher Wert, der angibt, ob teilweise Vertrauenswürdigkeit beibehalten werden soll, wenn das Flag für volle Vertrauenswürdigkeit festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Normal <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.IsFullTrust%2A> festgelegt ist, um `True`, sämtliche berechtigungseinstellungen werden gelöscht. Wenn Sie diese Einstellungen (in der Regel während der Entwurfszeit) beibehalten möchten, können, rufen Sie diese Methode, um die Berechtigung beizubehalten Einstellungen auch dann, wenn <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.IsFullTrust%2A> festgelegt ist, um `True`.  
+  
+ `PreserveFullTrustPermissionSet`sollte nicht festgelegt werden, um `True` für ClickOnce-Bereitstellungen, da dies verstößt gegen die ClickOnce-Schema-Anforderungen.  
+  
+ Wenn diese Eigenschaft, um festgelegt wird `False` mit voller Vertrauenswürdigkeit angegeben, und klicken Sie dann alle Berechtigungen, die in den Berechtigungssatz definiert satzobjekt gelöscht zu speichern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public void Read (System.IO.Stream input);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Read(class System.IO.Stream input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.Read(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="input">Gibt einen Eingabestream an.</param>
+        <summary>Liest die Vertrauenswürdigkeit der Anwendung aus einer XML-Datei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Datenstrom darf nur eine \<TrustInfo > Abschnitt und keine anderen Daten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public void Read (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Read(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.Read(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Name der Eingabedatei.</param>
+        <summary>Liest die Vertrauenswürdigkeit der Anwendung aus einer XML-Datei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die angegebene Zeichenfolge darf nur eine \<TrustInfo > Abschnitt und keine anderen Daten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadManifest">
+      <MemberSignature Language="C#" Value="public void ReadManifest (System.IO.Stream input);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ReadManifest(class System.IO.Stream input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="input">Gibt einen Eingabestream an.</param>
+        <summary>Liest die Vertrauenswürdigkeit der Anwendung aus einem ClickOnce-Anwendungsmanifest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadManifest">
+      <MemberSignature Language="C#" Value="public void ReadManifest (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ReadManifest(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Name der Eingabedatei.</param>
+        <summary>Liest die Vertrauenswürdigkeit der Anwendung aus einem ClickOnce-Anwendungsmanifest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SameSiteAccess">
+      <MemberSignature Language="C#" Value="public string SameSiteAccess { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SameSiteAccess" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.SameSiteAccess" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen der zulässigen Ebene für den Zugriff auf die gleiche Site, wodurch bestimmt wird, ob die Anwendung über die Berechtigung zur Kommunikation mit dem Server verfügt, von dem sie bereitgestellt wurde.</summary>
+        <value>Eine Zeichenfolge, die die zulässige Ebene für den Zugriff auf die gleiche Site angibt. Die Werte sind möglich <see langword="site" /> oder <see langword="none" />.  
+  
+ <see langword="site" />Gibt an, dass die Anwendung Webdienste unter der gleichen URL aufrufen kann, von dem sie bereitgestellt wurde. Wenn von einer Freigabe bereitgestellt wird, muss die Anwendung die Berechtigung zum Lesen von Dateien von dieser Freigabe.  
+  
+ <see langword="none" />Gibt an, dass die Anwendung weder auf Webdienste zugreifen kann unter der gleichen URL, von dem es bereitgestellt wurde, noch Zugriff auf Dateien auf der Freigabe, von dem sie bereitgestellt wurde.  
+  
+ "Application" bezieht sich auf die Anwendung, für die das Manifest gelesen wird (mit <see cref="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest(System.IO.Stream)" />).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ "Application" bezieht sich auf die Anwendung, für die das Manifest gelesen wird. Sie können die Bereitstellung lesen Anwendungsmanifest mit <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A> oder <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle Informationen im Objekt für das Anwendungssicherheitsvertrauen als Zeichenfolge zurück.</summary>
+        <returns>Eine Zeichenfolge, die die Informationen im Objekt für das Anwendungssicherheitsvertrauen enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (System.IO.Stream output);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(class System.IO.Stream output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.Write(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="output" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="output">Gibt einen Ausgabestream an.</param>
+        <summary>Schreibt die Vertrauenswürdigkeit der Anwendung in eine XML-Datei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode aktualisiert nur die \<TrustInfo > Abschnitt in einer Datei, die nur mit der \<TrustInfo > Abschnitt und nichts anderes.  
+  
+ Der angegebene Stream darf nur eine \<TrustInfo > Abschnitt und keine anderen Daten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.Write(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Name der Ausgabedatei.</param>
+        <summary>Schreibt die Vertrauenswürdigkeit der Anwendung in eine XML-Datei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode aktualisiert nur die \<TrustInfo > Abschnitt in einer Datei, die nur mit der \<TrustInfo > Abschnitt und nichts anderes.  
+  
+ Die angegebene Zeichenfolge darf nur eine \<TrustInfo > Abschnitt und keine anderen Daten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteManifest">
+      <MemberSignature Language="C#" Value="public void WriteManifest (System.IO.Stream output);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteManifest(class System.IO.Stream output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.WriteManifest(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="output" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="output">Gibt einen Ausgabestream an, in den die aktualisierte Manifestdatei geschrieben werden soll.</param>
+        <summary>Schreibt die Vertrauenswürdigkeit der Anwendung in das neue ClickOnce-Anwendungsvorlagenmanifest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird nur aktualisiert, die \<TrustInfo > Abschnitt in einer Datei, die nur den auf der obersten Ebene Manifesten Header der \<TrustInfo > Abschnitt und nichts anderes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteManifest">
+      <MemberSignature Language="C#" Value="public void WriteManifest (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteManifest(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.WriteManifest(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Der Name der Ausgabedatei.</param>
+        <summary>Schreibt die Vertrauenswürdigkeit der Anwendung in ein ClickOnce-Anwendungsmanifest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird nur aktualisiert, die \<TrustInfo > Abschnitt in einer Datei, die nur den auf der obersten Ebene Manifesten Header der \<TrustInfo > Abschnitt und nichts anderes.  
+  
+ Diese Überladung der Methode wird die Datei direkt aktualisieren (d. h. die Eingabedatei ist identisch mit der Ausgabedatei). Wenn die Datei vorhanden ist, wird der Trust-Abschnitt aktualisiert werden. Wenn die Datei nicht vorhanden ist, wird ein neue Vorlagenmanifest mit der angegebenen Vertrauenswürdigkeit erstellt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteManifest">
+      <MemberSignature Language="C#" Value="public void WriteManifest (System.IO.Stream input, System.IO.Stream output);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteManifest(class System.IO.Stream input, class System.IO.Stream output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.WriteManifest(System.IO.Stream,System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.IO.Stream" />
+        <Parameter Name="output" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="input">Gibt einen Eingabestream mit dem zu aktualisierenden Manifest an.</param>
+        <param name="output">Gibt einen Ausgabestream an, in den die aktualisierte Manifestdatei geschrieben werden soll.</param>
+        <summary>Aktualisiert ein vorhandenes ClickOnce-Anwendungsmanifest mit der angegebenen Vertrauenswürdigkeit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird nur aktualisiert, die \<TrustInfo > Abschnitt in einer Datei, die nur den auf der obersten Ebene Manifesten Header der \<TrustInfo > Abschnitt und nichts anderes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

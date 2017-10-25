@@ -1,0 +1,87 @@
+<Type Name="UnhandledExceptionMode" FullName="System.Windows.Forms.UnhandledExceptionMode">
+  <TypeSignature Language="C#" Value="public enum UnhandledExceptionMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed UnhandledExceptionMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.UnhandledExceptionMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Definiert, in dem eine Windows Forms-Anwendung nicht behandelte Ausnahmen senden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird verwendet, indem Sie <xref:System.Windows.Forms.Application.SetUnhandledExceptionMode%2A>.  
+  
+> [!NOTE]
+>  In .NET Framework, Version 2.0 werden die common Language Runtime-Verhalten in nicht behandelte Ausnahmen in der Aufrufliste weitergegeben zulassen geändert. Dieses Verhalten kann über die Anwendungskonfigurationsdatei deaktiviert werden. Weitere Informationen finden Sie unter [Ausnahmen in verwalteten Threads](~/docs/standard/threading/exceptions-in-managed-threads.md).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel legt Ereignishandler für beide auftretende Fehler in Windows Forms-Threads und für andere Threads auftretende Fehler. Er legt <xref:System.Windows.Forms.Application.SetUnhandledExceptionMode%2A> , damit alle Fehler von der Anwendung, unabhängig von den Einstellungen in der Anwendungskonfigurationsdatei des Benutzers verarbeitet werden. Er verwendet die <xref:System.Windows.Forms.Application.ThreadException> -Ereignis für die erste und die <xref:System.AppDomain.UnhandledException> Ereignis für die letztgenannte Aufgabe. Da <xref:System.AppDomain.UnhandledException> nicht verhindern, dass eine Anwendung beendet wird, im Beispiel wird der Fehler protokolliert im Ereignisprotokoll des Systems vor der Beendigung.  
+  
+ In diesem Beispiel wird davon ausgegangen, dass Sie, zwei definiert haben <xref:System.Windows.Forms.Button> Steuerelemente `button1` und `button2`auf Ihre <xref:System.Windows.Forms.Form> Klasse.  
+  
+ [!code-cpp[Classic Application.ThreadException Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Application.ThreadException Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Application.ThreadException Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Application.ThreadException Example/CS/source.cs#1)]
+ [!code-vb[Classic Application.ThreadException Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Application.ThreadException Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Automatic">
+      <MemberSignature Language="C#" Value="Automatic" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.UnhandledExceptionMode Automatic = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.UnhandledExceptionMode.Automatic" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.UnhandledExceptionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Alle Ausnahmen, die zum Weiterleiten der <see cref="E:System.Windows.Forms.Application.ThreadException" /> Handler, der Anwendungskonfigurationsdatei nicht anders angegeben.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CatchException">
+      <MemberSignature Language="C#" Value="CatchException" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.UnhandledExceptionMode CatchException = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.UnhandledExceptionMode.CatchException" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.UnhandledExceptionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Immer weiterleiten Ausnahmen für die <see cref="E:System.Windows.Forms.Application.ThreadException" /> Handler. Ignorieren Sie die Anwendungskonfigurationsdatei aufnehmen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ThrowException">
+      <MemberSignature Language="C#" Value="ThrowException" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.UnhandledExceptionMode ThrowException = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.UnhandledExceptionMode.ThrowException" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.UnhandledExceptionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nie Ausnahmen zum Weiterleiten der <see cref="E:System.Windows.Forms.Application.ThreadException" /> Handler. Ignorieren Sie die Anwendungskonfigurationsdatei aufnehmen.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

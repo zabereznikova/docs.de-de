@@ -1,0 +1,6 @@
+<Namespace Name="System.ComponentModel.Composition.Hosting">
+  <Docs>
+    <summary>Der <see cref="N:System.ComponentModel.Composition.Hosting" />-Namespace stellt MEF-Typen (Managed Extensibility Framework) bereit, die den Entwicklern (oder Hosts) von erweiterbaren Anwendungen nützlich sind.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

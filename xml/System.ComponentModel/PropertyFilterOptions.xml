@@ -1,0 +1,128 @@
+<Type Name="PropertyFilterOptions" FullName="System.ComponentModel.PropertyFilterOptions">
+  <TypeSignature Language="C#" Value="public enum PropertyFilterOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PropertyFilterOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.PropertyFilterOptions" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, welche Eigenschaften von Typdeskriptoren, insbesondere gemeldet werden sollte die <see cref="M:System.ComponentModel.TypeDescriptor.GetProperties(System.Object)" /> Methode. Diese Enumeration wird zum Angeben des Werts eines der <see cref="P:System.ComponentModel.PropertyFilterAttribute.Filter" /> Eigenschaft.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Filtermechanismus wird nur vom benutzerdefinierten implementiert <xref:System.ComponentModel.DependencyPropertyDescriptor> für <xref:System.Windows.DependencyObject>.  
+  
+ Ungültige und gültig sind nur für angefügte Eigenschaften relevant. Die Gültigkeit einer Eigenschaft wird bestimmt durch die Zusammenarbeit mit den folgenden Attributen: <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute> , <xref:System.Windows.AttachedPropertyBrowsableForTypeAttribute>, <xref:System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute> die den gewünschten Bereich der angefügten Eigenschaft einmal in der Objektstruktur definieren die [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] geladen wird. Designer-Anwendungen, die Eigenschaftenraster zu füllen und angefügte Eigenschaften im Raster einschließen müssen untersuchen, den Wert oder Vorhandensein dieser Attribute und die relative Position des aktuellen Elements im Vergleich zu einem übergeordneten oder untergeordneten-Element, das "der angefügte besitzt" Diese Eigenschaft. Der Besitzer und Setter Beziehung sowie die Attributwerte und <xref:System.ComponentModel.PropertyFilterOptions> definiert, ob eine angefügte Eigenschaft für ein Element die festgelegten Ereignisfilters gültig bzw. ungültig ist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="All" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.PropertyFilterOptions All = int32(15)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.PropertyFilterOptions.All" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyFilterOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Alle Eigenschaften zurückgeben.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Invalid">
+      <MemberSignature Language="C#" Value="Invalid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.PropertyFilterOptions Invalid = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.PropertyFilterOptions.Invalid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyFilterOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nur die Eigenschaften zurückgeben, die im aktuellen Kontext des Objekts ungültig sind.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.PropertyFilterOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.PropertyFilterOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyFilterOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Keine Eigenschaften zurückgeben.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValues">
+      <MemberSignature Language="C#" Value="SetValues" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.PropertyFilterOptions SetValues = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.PropertyFilterOptions.SetValues" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyFilterOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nur die Eigenschaften zurückgeben, die über aktuell festgelegte lokale Werte verfügen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UnsetValues">
+      <MemberSignature Language="C#" Value="UnsetValues" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.PropertyFilterOptions UnsetValues = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.PropertyFilterOptions.UnsetValues" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyFilterOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nur die Eigenschaften zurückgeben, für die keine lokalen Werte oder keine Eigenschaften in einem externen Ausdrucksspeicher (z. B. Bindung oder zurückgestellte Ressource) festgelegt wurden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Valid">
+      <MemberSignature Language="C#" Value="Valid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.PropertyFilterOptions Valid = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.PropertyFilterOptions.Valid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyFilterOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Jede Eigenschaft zurückgeben, die für das Objekt im aktuellen Bereich gültig ist.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

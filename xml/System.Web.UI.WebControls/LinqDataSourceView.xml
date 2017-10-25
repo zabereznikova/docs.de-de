@@ -1,0 +1,1707 @@
+<Type Name="LinqDataSourceView" FullName="System.Web.UI.WebControls.LinqDataSourceView">
+  <TypeSignature Language="C#" Value="public class LinqDataSourceView : System.Web.UI.WebControls.ContextDataSourceView" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LinqDataSourceView extends System.Web.UI.WebControls.ContextDataSourceView" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.LinqDataSourceView" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.ContextDataSourceView</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Unterstützt die <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> -Steuerelement und stellt eine Schnittstelle für datengebundene Steuerelemente zum Ausführen von LINQ-Datenvorgängen bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.LinqDataSourceView> Klasse dient in erster Linie, die von datengebundenen Steuerelementen und nicht als programmierbares Objekt im Seitencode verwendet werden. Entwickler von Seiten in der Regel verwenden Sie die <xref:System.Web.UI.WebControls.LinqDataSource> Steuerelement mit Daten interagieren.  
+  
+ ASP.NET-Datenquellensteuerelemente enthalten eine oder mehrere Listen der Daten, die vom Datenquellensicht-Objekte dargestellt. Die <xref:System.Web.UI.WebControls.LinqDataSourceView> -Klasse erweitert die <xref:System.Web.UI.DataSourceView> Klasse. Es definiert, das die Funktionen des die <xref:System.Web.UI.WebControls.LinqDataSource> Steuerelement mit dem er zugeordnet ist, und das Lernprogramm zu Data-Funktionen für das Datenquellensteuerelement implementiert. Die <xref:System.Web.UI.WebControls.LinqDataSourceView> -Klasse implementiert die <xref:System.Web.UI.WebControls.LinqDataSourceView.Select%2A>, [Update](<xref:System.Web.UI.WebControls.LinqDataSourceView.UpdateDataObject%2A>), [einfügen](<xref:System.Web.UI.WebControls.LinqDataSourceView.InsertDataObject%2A>), und [löschen](<xref:System.Web.UI.WebControls.LinqDataSourceView.DeleteDataObject%2A>) Vorgänge. Es implementiert auch sortieren, Filtern und Verwalten von Einstellungen, die in der Sicht Zustand gespeichert werden.  
+  
+ Obwohl die <xref:System.Web.UI.WebControls.LinqDataSourceView> Objekt wird nicht direkt verfügbar gemacht, Entwicklern, viele der Eigenschaften und Methoden möglich, die über die <xref:System.Web.UI.WebControls.LinqDataSource> Steuerelement. Die <xref:System.Web.UI.WebControls.LinqDataSourceView> Steuerelement implementiert die folgenden Methoden zum Datenabruf und Ereignisse und macht sie verfügbar, um Entwicklern und andere Aufrufer über die zugeordnete <xref:System.Web.UI.WebControls.LinqDataSource> Steuerelement:  
+  
+-   Die <xref:System.Web.UI.WebControls.LinqDataSource.Select%2A>-Eigenschaft  
+  
+-   Die <xref:System.Web.UI.WebControls.LinqDataSource.Selecting> Ereignis.  
+  
+-   Die <xref:System.Web.UI.WebControls.LinqDataSource.Selected> Ereignis.  
+  
+-   Die <xref:System.Web.UI.WebControls.LinqDataSource.Update%2A>-Methode.  
+  
+-   Die <xref:System.Web.UI.WebControls.LinqDataSource.Updating> Ereignis.  
+  
+-   Die <xref:System.Web.UI.WebControls.LinqDataSource.Updated> Ereignis.  
+  
+-   Die <xref:System.Web.UI.WebControls.LinqDataSource.Insert%2A>-Methode.  
+  
+-   Die <xref:System.Web.UI.WebControls.LinqDataSource.Inserting> Ereignis.  
+  
+-   Die <xref:System.Web.UI.WebControls.LinqDataSource.Inserted> Ereignis.  
+  
+-   Die <xref:System.Web.UI.WebControls.LinqDataSource.Delete%2A>-Methode.  
+  
+-   Die <xref:System.Web.UI.WebControls.LinqDataSource.Deleting> Ereignis.  
+  
+-   Die <xref:System.Web.UI.WebControls.LinqDataSource.Deleted> Ereignis.  
+  
+ Sie können die Daten, die Sie mit abrufen Sortieren der <xref:System.Web.UI.WebControls.LinqDataSource> Steuerelement durch Hinzufügen von ein `OrderBy` Klausel. Sie können einen Sortierungsausdruck für Bereitstellen der <xref:System.Web.UI.WebControls.LinqDataSourceView> Instanz durch Festlegen der <xref:System.Web.UI.DataSourceSelectArguments.SortExpression%2A> Eigenschaft der <xref:System.Web.UI.DataSourceSelectArguments> -Objekt, das übergeben wird der <xref:System.Web.UI.WebControls.LinqDataSourceView.Select%2A> Methode. Die Syntax für die <xref:System.Web.UI.DataSourceSelectArguments.SortExpression%2A> Eigenschaft ist identisch mit der Syntax für eine <xref:System.Data.DataView.Sort%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ Die <xref:System.Web.UI.WebControls.LinqDataSourceView> -Steuerelement implementiert die <xref:System.Web.UI.IStateManager> Schnittstelle und verwendet den Ansichtszustand um Datenbankzustands Seite anforderungsübergreifend nachzuverfolgen. Implementierungen von der <xref:System.Web.UI.WebControls.QueryableDataSourceView.IsTrackingViewState%2A> Eigenschaft und die <xref:System.Web.UI.WebControls.QueryableDataSourceView.LoadViewState%2A>, <xref:System.Web.UI.WebControls.QueryableDataSourceView.SaveViewState%2A>, und <xref:System.Web.UI.WebControls.QueryableDataSourceView.TrackViewState%2A> Methoden dienen zur Überwachung der Ansichtszustand für das Steuerelement zu aktivieren. Weitere Informationen finden Sie unter [ASP.NET State Management Overview](http://msdn.microsoft.com/library/0218d965-5d30-445b-b6a6-8870e70e63ce).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinqDataSourceView (System.Web.UI.WebControls.LinqDataSource owner, string name, System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.LinqDataSource owner, string name, class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.#ctor(System.Web.UI.WebControls.LinqDataSource,System.String,System.Web.HttpContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Web.UI.WebControls.LinqDataSource" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Die Datenquelle zu steuern, die die <see cref="T:System.Web.UI.WebControls.LinqDataSourceView" /> Objekt zugeordnet ist.</param>
+        <param name="name">Zeigen Sie ein eindeutiger Namen für die Datenquelle innerhalb des Bereichs des Datenquellen-Steuerelements, die er besitzt.</param>
+        <param name="context">Die aktuelle <see cref="T:System.Web.HttpContext" />-Instanz.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.LinqDataSourceView" /> Klasse, indem das angegebene <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> Steuerelement als Besitzer der aktuellen Sicht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.LinqDataSourceView.%23ctor%2A> Konstruktor wird aufgerufen, indem Sie die [LinqDataSource.GetView](<xref:System.Web.UI.WebControls.QueryableDataSource.GetView%2A>) Methode, um eine neue Instanz der einer Datenquellensicht mit dem angegebenen zurückzugeben `name` Parameter. Nur ein <xref:System.Web.UI.WebControls.LinqDataSourceView> Objekt zugeordnet ist ein <xref:System.Web.UI.WebControls.LinqDataSource> Steuerelement zu einem Zeitpunkt. Der Name des der <xref:System.Web.UI.WebControls.LinqDataSourceView> Objekt ist immer `DefaultView`, obwohl diese jeweils ist die <xref:System.Web.UI.WebControls.LinqDataSource> steuern, nicht von der <xref:System.Web.UI.WebControls.LinqDataSourceView> Steuerelement. Sie können außer Kraft setzen die [LinqDataSource.GetView](<xref:System.Web.UI.WebControls.QueryableDataSource.GetView%2A>) Methode, um Ansichten zu unterstützen, die eine andere Namenskonvention verwenden.  
+  
+ Die <xref:System.Web.HttpContext> -Instanz, die übergeben wird, indem Sie die `context` Parameter wird von der Datenquellensicht für den Zugriff Parameter-Auflistungen verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanDelete">
+      <MemberSignature Language="C#" Value="public override bool CanDelete { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanDelete" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSourceView.CanDelete" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Web.UI.WebControls.LinqDataSourceView" />-Objekt, das dem aktuellen <see cref="T:System.Web.UI.WebControls.LinqDataSource" />-Steuerelement zugeordnet ist, den Löschvorgang unterstützt.</summary>
+        <value>
+          <see langword="true" />, wenn der Vorgang unterstützt wird, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.LinqDataSourceView.CanDelete%2A> -Eigenschaft gibt `true` Wenn die <xref:System.Web.UI.WebControls.LinqDataSourceView.EnableDelete%2A> -Eigenschaftensatz auf `true`. Allerdings kann ein Löschvorgang trotzdem noch fehlschlagen, wenn die Eigenschaften der zugeordneten Daten nicht festgelegt sind oder nicht ordnungsgemäß festgelegt sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanInsert">
+      <MemberSignature Language="C#" Value="public override bool CanInsert { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanInsert" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSourceView.CanInsert" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Web.UI.WebControls.LinqDataSourceView" />-Objekt, das dem aktuellen <see cref="T:System.Web.UI.WebControls.LinqDataSource" />-Steuerelement zugeordnet ist, den Einfügevorgang unterstützt.</summary>
+        <value>
+          <see langword="true" />, wenn der Vorgang unterstützt wird, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.LinqDataSourceView.CanInsert%2A> -Eigenschaft gibt `true` Wenn die <xref:System.Web.UI.WebControls.LinqDataSourceView.EnableInsert%2A> -Eigenschaftensatz auf `true`. Ein Insert-Vorgang kann jedoch trotzdem noch fehlschlagen, wenn die Eigenschaften der zugeordneten Daten nicht festgelegt sind oder nicht ordnungsgemäß festgelegt sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanPage">
+      <MemberSignature Language="C#" Value="public override bool CanPage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanPage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSourceView.CanPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Web.UI.WebControls.LinqDataSourceView" />-Objekt, das dem aktuellen <see cref="T:System.Web.UI.WebControls.LinqDataSource" />-Steuerelement zugeordnet ist, das Paging der abgerufenen Daten unterstützt.</summary>
+        <value>
+          <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.LinqDataSourceView> Objekt immer Paging unterstützt, auch wenn das Steuerelement Präsentation Paging nicht verwendet. Wenn die [LinqDataSourceView.AutoPage](<xref:System.Web.UI.WebControls.QueryableDataSourceView.AutoPage%2A>) -Eigenschaftensatz auf `false`, können Sie manuell die Daten in Blättern die <xref:System.Web.UI.WebControls.LinqDataSourceView.Selecting> Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRetrieveTotalRowCount">
+      <MemberSignature Language="C#" Value="public override bool CanRetrieveTotalRowCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanRetrieveTotalRowCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSourceView.CanRetrieveTotalRowCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Web.UI.WebControls.LinqDataSourceView" />-Objekt, das dem aktuellen <see cref="T:System.Web.UI.WebControls.LinqDataSource" />-Steuerelement zugeordnet ist, das Abrufen der Gesamtanzahl der Datenzeilen (zusätzlich zum Abrufen der Daten) unterstützt.</summary>
+        <value>
+          <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Datengebundene Steuerelemente verwenden, die Gesamtanzahl der Zeilen, die ausgelagert werden kann, um zu bestimmen, wie Paging-Steuerelemente gerendert wird. Beispielsweise wird dieser Wert verwendet, um zu bestimmen, wie viele numerische Pager-Schaltflächen für das Rendern einer <xref:System.Web.UI.WebControls.GridView> Pager-Steuerelement. Wenn die [LinqDataSourceView.AutoPage](<xref:System.Web.UI.WebControls.QueryableDataSourceView.AutoPage%2A>) -Eigenschaftensatz auf `false`, müssen Sie die Gesamtzeilenanzahl manuell festlegen, der <xref:System.Web.UI.WebControls.LinqDataSourceView.Selecting> Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanSort">
+      <MemberSignature Language="C#" Value="public override bool CanSort { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanSort" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSourceView.CanSort" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Web.UI.WebControls.LinqDataSourceView" />-Objekt, das dem aktuellen <see cref="T:System.Web.UI.WebControls.LinqDataSource" />-Steuerelement zugeordnet ist, eine sortierte Ansicht der abgerufenen Daten unterstützt.</summary>
+        <value>
+          <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.LinqDataSourceView> -Objekt unterstützt immer das Sortieren, auch wenn wird keine Sortierung verwendet. Wenn die [LinqDataSourceView.AutoSort](<xref:System.Web.UI.WebControls.QueryableDataSourceView.AutoSort%2A>) -Eigenschaftensatz auf `false`, Sie können manuell sortieren Sie die Daten in der <xref:System.Web.UI.WebControls.LinqDataSourceView.Selecting> Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanUpdate">
+      <MemberSignature Language="C#" Value="public override bool CanUpdate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanUpdate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSourceView.CanUpdate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Web.UI.WebControls.LinqDataSourceView" />-Objekt, das dem aktuellen <see cref="T:System.Web.UI.WebControls.LinqDataSource" />-Steuerelement zugeordnet ist, den Aktualisierungsvorgang unterstützt.</summary>
+        <value>
+          <see langword="true" />, wenn der Vorgang unterstützt wird, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.LinqDataSourceView.CanUpdate%2A> Eigenschaft gibt den Wert der <xref:System.Web.UI.WebControls.LinqDataSourceView.EnableUpdate%2A> Eigenschaft. Ein Update-Vorgang kann jedoch trotzdem noch fehlschlagen, wenn die Eigenschaften der zugeordneten Daten nicht festgelegt sind oder nicht ordnungsgemäß festgelegt sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextCreated">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt; ContextCreated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt; ContextCreated" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LinqDataSourceView.ContextCreated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, nachdem eine Instanz des Kontextobjekts Typ erstellt wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verarbeiten Sie dieses Ereignis, wenn das Datenkontextobjekt überprüft werden sollen, oder Behandeln von Ausnahmen, die während der Erstellung Kontext ausgelöst wurden, werden sollen. Weitere Informationen finden Sie beim <xref:System.Web.UI.WebControls.LinqDataSource.ContextCreated?displayProperty=nameWithType>-Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextCreating">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceContextEventArgs&gt; ContextCreating;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.LinqDataSourceContextEventArgs&gt; ContextCreating" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LinqDataSourceView.ContextCreating" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceContextEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, bevor eine Instanz des Kontextobjekts Typ erstellt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verarbeiten Sie dieses Ereignis, wenn Sie das Datenkontextobjekt manuell erstellen möchten. Weitere Informationen finden Sie beim <xref:System.Web.UI.WebControls.LinqDataSource.ContextCreating?displayProperty=nameWithType>-Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextDisposing">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceDisposeEventArgs&gt; ContextDisposing;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.LinqDataSourceDisposeEventArgs&gt; ContextDisposing" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LinqDataSourceView.ContextDisposing" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceDisposeEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt vor dem Freigeben der Context-Typ-Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Behandeln Sie dieses Ereignis, um den Kontext vor der Freigabe zugreifen oder Bereinigung ausführen, die speziell für das Objekt ist, bevor das Objekt zerstört wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextType">
+      <MemberSignature Language="C#" Value="public override Type ContextType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ContextType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSourceView.ContextType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ der Datenkontextklasse ab.</summary>
+        <value>Der Typ, der im angegebenen Datenkontextklasse zugeordnet ist die <see cref="P:System.Web.UI.WebControls.LinqDataSourceView.ContextTypeName" /> Eigenschaft.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextTypeName">
+      <MemberSignature Language="C#" Value="public override string ContextTypeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContextTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSourceView.ContextTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Datenkontextklasse an, die das Feld oder die die angegebene Eigenschaft enthält die <see cref="P:System.Web.UI.WebControls.LinqDataSourceView.TableName" /> Eigenschaft.</summary>
+        <value>Der Name der Datenkontextklasse.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Festlegen der <xref:System.Web.UI.WebControls.LinqDataSource.ContextTypeName%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.LinqDataSource> zu steuern, dass Wert auch für festgelegt ist die <xref:System.Web.UI.WebControls.LinqDataSourceView.ContextTypeName%2A> Eigenschaft der <xref:System.Web.UI.WebControls.LinqDataSourceView> Steuerelement. Weitere Informationen finden Sie unter der <xref:System.Web.UI.WebControls.LinqDataSource.ContextTypeName%2A?displayProperty=nameWithType> Objekt.  
+  
+ Diese Eigenschaft muss angegeben werden, es sei denn, das Abfragen von Daten während der angegeben werden die <xref:System.Web.UI.WebControls.LinqDataSourceView.Selecting> Ereignis, oder, sofern der Kontext während manuell erstellt haben, wird die <xref:System.Web.UI.WebControls.LinqDataSourceView.ContextCreating> Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateContext">
+      <MemberSignature Language="C#" Value="protected virtual object CreateContext (Type contextType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object CreateContext(class System.Type contextType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.CreateContext(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contextType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="contextType">Der Typ des Datenkontexts zu erstellen.</param>
+        <summary>Erstellt eine Instanz des Datentyps Kontext.</summary>
+        <returns>Eine Instanz des Datentyps Kontext.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateContext">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.WebControls.ContextDataSourceContextData CreateContext (System.Web.UI.DataSourceOperation operation);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.WebControls.ContextDataSourceContextData CreateContext(valuetype System.Web.UI.DataSourceOperation operation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.CreateContext(System.Web.UI.DataSourceOperation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ContextDataSourceContextData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operation" Type="System.Web.UI.DataSourceOperation" />
+      </Parameters>
+      <Docs>
+        <param name="operation">Der Datenquellenvorgang verwenden.</param>
+        <summary>Erstellt eine Instanz des mit dem angegebenen Datenquellenvorgang Kontext-Datentyps.</summary>
+        <returns>Eine Instanz des Datenkontexts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deleted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt; Deleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt; Deleted" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LinqDataSourceView.Deleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein Delete-Vorgang abgeschlossen ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Behandeln Sie dieses Ereignis zum Abfangen von Ausnahmen, die während der Delete-Vorgang ausgelöst wurden oder um die Werte von Ausgabeparametern von Interesse, nachdem ein Löschvorgang abgeschlossen ist. Sie können die Output-Parameter von Abrufen der <xref:System.Web.UI.WebControls.LinqDataSourceStatusEventArgs> -Objekt, das dem Ereignis zugeordnet ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteDataObject">
+      <MemberSignature Language="C#" Value="protected virtual void DeleteDataObject (object dataContext, object table, object oldDataObject);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void DeleteDataObject(object dataContext, object table, object oldDataObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.DeleteDataObject(System.Object,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataContext" Type="System.Object" />
+        <Parameter Name="table" Type="System.Object" />
+        <Parameter Name="oldDataObject" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dataContext">Der Datenkontext für das zu löschende Objekt.</param>
+        <param name="table">Die Tabelle, die das zu löschende Objekt enthält.</param>
+        <param name="oldDataObject">Das zu löschende Objekt.</param>
+        <summary>Löscht ein Objekt aus einer Tabelle an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteObject">
+      <MemberSignature Language="C#" Value="protected override int DeleteObject (object oldEntity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance int32 DeleteObject(object oldEntity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.DeleteObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldEntity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="oldEntity">Das Datenobjekt zu löschen.</param>
+        <summary>Löscht ein Objekt aus einer Tabelle an.</summary>
+        <returns>Die Anzahl von Datenobjekten, die gelöscht wurden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deleting">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceDeleteEventArgs&gt; Deleting;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.LinqDataSourceDeleteEventArgs&gt; Deleting" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LinqDataSourceView.Deleting" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceDeleteEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, bevor Sie einen Löschvorgang an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Behandeln der <xref:System.Web.UI.WebControls.LinqDataSourceView.Deleting> Ereignis zur Überprüfung dieses Objekts gelöscht werden soll, um einen Wert vor dem Löschvorgang zu ändern oder um den Löschvorgang abzubrechen.  
+  
+ Weitere Informationen finden Sie beim <xref:System.Web.UI.WebControls.LinqDataSource.Deleting?displayProperty=nameWithType>-Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisposeContext">
+      <MemberSignature Language="C#" Value="protected override void DisposeContext (object dataContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void DisposeContext(object dataContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.DisposeContext(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataContext" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dataContext">Der Datenkontext freizugeben.</param>
+        <summary>Verwirft den Datenkontext.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableDelete">
+      <MemberSignature Language="C#" Value="public bool EnableDelete { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableDelete" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSourceView.EnableDelete" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Datenquellensicht Löschen von Zeilen unterstützt.</summary>
+        <value>
+          <see langword="true" />Wenn die Datenquellenansicht unterstützt Löschen von Zeilen. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Festlegen der <xref:System.Web.UI.WebControls.LinqDataSource.EnableDelete%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.LinqDataSource> zu steuern, dass Wert auch für festgelegt ist die <xref:System.Web.UI.WebControls.LinqDataSourceView.EnableDelete%2A> Eigenschaft der <xref:System.Web.UI.WebControls.LinqDataSourceView> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableInsert">
+      <MemberSignature Language="C#" Value="public bool EnableInsert { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableInsert" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSourceView.EnableInsert" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Datenquellensicht Hinzufügen von neue Zeilen unterstützt.</summary>
+        <value>
+          <see langword="true" />Wenn die Ansicht Einfügen von Zeilen unterstützt; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Festlegen der <xref:System.Web.UI.WebControls.LinqDataSource.EnableInsert%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.LinqDataSource> zu steuern, dass Wert auch für festgelegt ist die <xref:System.Web.UI.WebControls.LinqDataSourceView.EnableInsert%2A> Eigenschaft der <xref:System.Web.UI.WebControls.LinqDataSourceView> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableObjectTracking">
+      <MemberSignature Language="C#" Value="public bool EnableObjectTracking { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableObjectTracking" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSourceView.EnableObjectTracking" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Änderungen an den Datenkontext Objekt nachverfolgt werden.</summary>
+        <value>
+          <see langword="true" />Wenn der Datenkontext Objekt für die Änderungen verfolgt wird andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Web.UI.WebControls.LinqDataSource.EnableObjectTracking%2A?displayProperty=nameWithType>-Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableUpdate">
+      <MemberSignature Language="C#" Value="public bool EnableUpdate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableUpdate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSourceView.EnableUpdate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Datenquellensicht Aktualisieren von Zeilen unterstützt.</summary>
+        <value>
+          <see langword="true" />Wenn die Ansicht Aktualisieren von Zeilen unterstützt; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Festlegen der <xref:System.Web.UI.WebControls.LinqDataSource.EnableUpdate%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.LinqDataSource> zu steuern, dass Wert auch für festgelegt ist die <xref:System.Web.UI.WebControls.LinqDataSourceView.EnableUpdate%2A> Eigenschaft der <xref:System.Web.UI.WebControls.LinqDataSourceView> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteDelete">
+      <MemberSignature Language="C#" Value="protected override int ExecuteDelete (System.Collections.IDictionary keys, System.Collections.IDictionary oldValues);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance int32 ExecuteDelete(class System.Collections.IDictionary keys, class System.Collections.IDictionary oldValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.ExecuteDelete(System.Collections.IDictionary,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Collections.IDictionary" />
+        <Parameter Name="oldValues" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Die Zeilenschlüsselwerte für die Datensätze gelöscht werden soll.</param>
+        <param name="oldValues">Die Werte der Zeilen, die ausgewertet werden, um Datenkonflikte zu erkennen.</param>
+        <summary>Führt einen Löschvorgang mit den angegebenen Schlüssel und die alten Werte.</summary>
+        <returns>Die Anzahl der Objekte oder Zeilen, die aus der zugrunde liegenden Datenquelle gelöscht wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Informationen zum Löschen von Daten über eine <xref:System.Web.UI.WebControls.LinqDataSource> steuern, finden Sie unter der <xref:System.Web.UI.WebControls.LinqDataSource.Delete%28System.Collections.IDictionary%2CSystem.Collections.IDictionary%29> Methode der <xref:System.Web.UI.WebControls.LinqDataSource> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteInsert">
+      <MemberSignature Language="C#" Value="protected override int ExecuteInsert (System.Collections.IDictionary values);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance int32 ExecuteInsert(class System.Collections.IDictionary values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.ExecuteInsert(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="values">Die Zeilenwerte in der Datenquelle eingefügt.</param>
+        <summary>Führt einen Einfügevorgang mithilfe der Werte in einer angegebenen Auflistung.</summary>
+        <returns>Die Anzahl der Objekte oder Zeilen, die in der Datenquelle eingefügt wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Informationen zum Einfügen von Daten über eine <xref:System.Web.UI.WebControls.LinqDataSource> steuern, finden Sie unter der <xref:System.Web.UI.WebControls.LinqDataSource.Insert%28System.Collections.IDictionary%29> Methode der <xref:System.Web.UI.WebControls.LinqDataSource> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteSelect">
+      <MemberSignature Language="C#" Value="protected override System.Collections.IEnumerable ExecuteSelect (System.Web.UI.DataSourceSelectArguments arguments);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Collections.IEnumerable ExecuteSelect(class System.Web.UI.DataSourceSelectArguments arguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.ExecuteSelect(System.Web.UI.DataSourceSelectArguments)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arguments" Type="System.Web.UI.DataSourceSelectArguments" />
+      </Parameters>
+      <Docs>
+        <param name="arguments">Ein Objekt, das verwendet wird, um Vorgänge für die Daten jenseits der grundlegenden Datenabruf anzufordern.</param>
+        <summary>Führt einen Vorgang zum Abrufen von Daten an.</summary>
+        <returns>Eine Liste von Datenobjekten oder Zeilen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteUpdate">
+      <MemberSignature Language="C#" Value="protected override int ExecuteUpdate (System.Collections.IDictionary keys, System.Collections.IDictionary values, System.Collections.IDictionary oldValues);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance int32 ExecuteUpdate(class System.Collections.IDictionary keys, class System.Collections.IDictionary values, class System.Collections.IDictionary oldValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.ExecuteUpdate(System.Collections.IDictionary,System.Collections.IDictionary,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Collections.IDictionary" />
+        <Parameter Name="values" Type="System.Collections.IDictionary" />
+        <Parameter Name="oldValues" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Die Zeile Schlüsselwerten für die zu aktualisierenden Datensätze.</param>
+        <param name="values">Die Zeilenwerte in der Datenquelle zu aktualisieren.</param>
+        <param name="oldValues">Die Werte der Zeilen, die ausgewertet werden, um Datenkonflikte zu erkennen.</param>
+        <summary>Führt einen Updatevorgang an.</summary>
+        <returns>Die Anzahl der Zeilen, die in der Datenquelle aktualisiert wurden.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Informationen zum Aktualisieren von Daten über eine <xref:System.Web.UI.WebControls.LinqDataSource> steuern, finden Sie unter der <xref:System.Web.UI.WebControls.LinqDataSource.Update%28System.Collections.IDictionary%2CSystem.Collections.IDictionary%2CSystem.Collections.IDictionary%29> Methode der <xref:System.Web.UI.WebControls.LinqDataSource> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSource">
+      <MemberSignature Language="C#" Value="protected override object GetSource (System.Web.UI.WebControls.QueryContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetSource(class System.Web.UI.WebControls.QueryContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.GetSource(System.Web.UI.WebControls.QueryContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.UI.WebControls.QueryContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Der Datenkontext auf die Abfrage angewendet werden soll.</param>
+        <summary>Gibt die Datenquelle, um eine Abfrage angewendet.</summary>
+        <returns>Die Datenquelle, auf die Abfrage angewendet werden soll.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTableMemberInfo">
+      <MemberSignature Language="C#" Value="protected virtual System.Reflection.MemberInfo GetTableMemberInfo (Type contextType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Reflection.MemberInfo GetTableMemberInfo(class System.Type contextType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.GetTableMemberInfo(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MemberInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contextType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="contextType">Ein Objekt, das die Datenkontextklasse darstellt.</param>
+        <summary>Ruft Metadaten für die Datensammlung ab.</summary>
+        <returns>Ein Objekt, das Typmetadaten für die Datensammlung enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleValidationErrors">
+      <MemberSignature Language="C#" Value="protected override void HandleValidationErrors (System.Collections.Generic.IDictionary&lt;string,Exception&gt; errors, System.Web.UI.DataSourceOperation operation);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void HandleValidationErrors(class System.Collections.Generic.IDictionary`2&lt;string, class System.Exception&gt; errors, valuetype System.Web.UI.DataSourceOperation operation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.HandleValidationErrors(System.Collections.Generic.IDictionary{System.String,System.Exception},System.Web.UI.DataSourceOperation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="errors" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Exception&gt;" />
+        <Parameter Name="operation" Type="System.Web.UI.DataSourceOperation" />
+      </Parameters>
+      <Docs>
+        <param name="errors">Die vom System generierte, feldspezifischen Ausnahmen, die aufgetreten sind.</param>
+        <param name="operation">Der Datenvorgang, der die Ausnahme verursacht hat.</param>
+        <summary>Behandelt alle Ausnahmen, die auftreten, wenn eine Operation fehlschlägt, während ein Datenobjekt erstellt wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertDataObject">
+      <MemberSignature Language="C#" Value="protected virtual void InsertDataObject (object dataContext, object table, object newDataObject);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void InsertDataObject(object dataContext, object table, object newDataObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.InsertDataObject(System.Object,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataContext" Type="System.Object" />
+        <Parameter Name="table" Type="System.Object" />
+        <Parameter Name="newDataObject" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dataContext">Der Datenkontext des Objekts.</param>
+        <param name="table">Die Tabelle, in der die Daten eingefügt werden.</param>
+        <param name="newDataObject">Das einzufügende Objekt.</param>
+        <summary>Ein Datenobjekt in eine Tabelle eingefügt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Inserted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt; Inserted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt; Inserted" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LinqDataSourceView.Inserted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein Insert-Vorgang abgeschlossen ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Behandeln Sie dieses Ereignis zum Abfangen von Ausnahmen, die während des Einfügevorgangs ausgelöst wurden, oder um die Werte von Interesse, nachdem ein Insert-Vorgang abgeschlossen wurde. Weitere Informationen finden Sie beim <xref:System.Web.UI.WebControls.LinqDataSource.Inserted?displayProperty=nameWithType>-Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Inserting">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceInsertEventArgs&gt; Inserting;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.LinqDataSourceInsertEventArgs&gt; Inserting" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LinqDataSourceView.Inserting" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceInsertEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, bevor Sie einen Einfügevorgang an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Behandeln der <xref:System.Web.UI.WebControls.LinqDataSourceView.Inserting> Ereignis zur Überprüfung dieses Objekts eingefügt werden, um einen Wert vor dem Einfügevorgang zu ändern oder den Insert-Vorgang abgebrochen. Weitere Informationen finden Sie beim <xref:System.Web.UI.WebControls.LinqDataSource.Inserting?displayProperty=nameWithType>-Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertObject">
+      <MemberSignature Language="C#" Value="protected override int InsertObject (object newEntity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance int32 InsertObject(object newEntity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.InsertObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newEntity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="newEntity">Das Datenobjekt, das zum Einfügen.</param>
+        <summary>Fügt ein Datenobjekt in eine <see cref="T:System.Web.UI.WebControls.LinqDataSourceView" /> Objekt.</summary>
+        <returns>Die Anzahl der Objekte, die in der Datenquellensicht eingefügt wurden.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnContextCreated">
+      <MemberSignature Language="C#" Value="protected virtual void OnContextCreated (System.Web.UI.WebControls.LinqDataSourceStatusEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnContextCreated(class System.Web.UI.WebControls.LinqDataSourceStatusEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.OnContextCreated(System.Web.UI.WebControls.LinqDataSourceStatusEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.WebControls.LinqDataSourceStatusEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.WebControls.LinqDataSourceView.ContextCreated" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnContextCreating">
+      <MemberSignature Language="C#" Value="protected virtual void OnContextCreating (System.Web.UI.WebControls.LinqDataSourceContextEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnContextCreating(class System.Web.UI.WebControls.LinqDataSourceContextEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.OnContextCreating(System.Web.UI.WebControls.LinqDataSourceContextEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.WebControls.LinqDataSourceContextEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.WebControls.LinqDataSourceView.ContextCreating" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnContextDisposing">
+      <MemberSignature Language="C#" Value="protected virtual void OnContextDisposing (System.Web.UI.WebControls.LinqDataSourceDisposeEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnContextDisposing(class System.Web.UI.WebControls.LinqDataSourceDisposeEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.OnContextDisposing(System.Web.UI.WebControls.LinqDataSourceDisposeEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.WebControls.LinqDataSourceDisposeEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.WebControls.LinqDataSourceView.ContextDisposing" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDeleted">
+      <MemberSignature Language="C#" Value="protected virtual void OnDeleted (System.Web.UI.WebControls.LinqDataSourceStatusEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDeleted(class System.Web.UI.WebControls.LinqDataSourceStatusEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.OnDeleted(System.Web.UI.WebControls.LinqDataSourceStatusEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.WebControls.LinqDataSourceStatusEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.WebControls.LinqDataSourceView.Deleted" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Die <xref:System.Web.UI.WebControls.LinqDataSourceView.OnDeleted%2A> -Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Überschreiben der <see cref="M:System.Web.UI.WebControls.LinqDataSourceView.OnDeleted(System.Web.UI.WebControls.LinqDataSourceStatusEventArgs)" /> Methode in einer abgeleiteten Klasse stellen Sie sicher, dass Sie rufen die <see cref="M:System.Web.UI.WebControls.LinqDataSourceView.OnDeleted(System.Web.UI.WebControls.LinqDataSourceStatusEventArgs)" /> Methode für die Basisklasse, damit Delegaten registrierte das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDeleting">
+      <MemberSignature Language="C#" Value="protected virtual void OnDeleting (System.Web.UI.WebControls.LinqDataSourceDeleteEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDeleting(class System.Web.UI.WebControls.LinqDataSourceDeleteEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.OnDeleting(System.Web.UI.WebControls.LinqDataSourceDeleteEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.WebControls.LinqDataSourceDeleteEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.WebControls.LinqDataSourceView.Deleting" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Die <xref:System.Web.UI.WebControls.LinqDataSourceView.OnDeleting%2A> -Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Überschreiben der <see cref="M:System.Web.UI.WebControls.LinqDataSourceView.OnDeleting(System.Web.UI.WebControls.LinqDataSourceDeleteEventArgs)" /> Methode in einer abgeleiteten Klasse stellen Sie sicher, dass Sie rufen die <see cref="M:System.Web.UI.WebControls.LinqDataSourceView.OnDeleting(System.Web.UI.WebControls.LinqDataSourceDeleteEventArgs)" /> Methode für die Basisklasse, damit Delegaten registrierte das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnException">
+      <MemberSignature Language="C#" Value="protected virtual void OnException (System.Web.DynamicData.DynamicValidatorEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnException(class System.Web.DynamicData.DynamicValidatorEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.OnException(System.Web.DynamicData.DynamicValidatorEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.DynamicData.DynamicValidatorEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Web.DynamicData.IDynamicDataSource.Exception" /> Ereignis aus, wenn eine Operation fehlschlägt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die dynamic Data-Framework verwendet die <xref:System.Web.UI.WebControls.LinqDataSourceView.OnException%2A> Ereignishandler zur Behandlung von Validierungsausnahmen beim Aktualisieren von Daten oder Einfügen von Daten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInserted">
+      <MemberSignature Language="C#" Value="protected virtual void OnInserted (System.Web.UI.WebControls.LinqDataSourceStatusEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnInserted(class System.Web.UI.WebControls.LinqDataSourceStatusEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.OnInserted(System.Web.UI.WebControls.LinqDataSourceStatusEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.WebControls.LinqDataSourceStatusEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.WebControls.LinqDataSourceView.Inserted" /> Ereignis nach der <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> Steuerelement einen Einfügevorgang abgeschlossen wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Die <xref:System.Web.UI.WebControls.LinqDataSourceView.OnInserted%2A> -Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Überschreiben der <see cref="M:System.Web.UI.WebControls.LinqDataSourceView.OnInserted(System.Web.UI.WebControls.LinqDataSourceStatusEventArgs)" /> Methode in einer abgeleiteten Klasse stellen Sie sicher, dass Sie rufen die <see cref="M:System.Web.UI.WebControls.LinqDataSourceView.OnInserted(System.Web.UI.WebControls.LinqDataSourceStatusEventArgs)" /> Methode für die Basisklasse, damit Delegaten registrierte das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInserting">
+      <MemberSignature Language="C#" Value="protected virtual void OnInserting (System.Web.UI.WebControls.LinqDataSourceInsertEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnInserting(class System.Web.UI.WebControls.LinqDataSourceInsertEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.OnInserting(System.Web.UI.WebControls.LinqDataSourceInsertEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.WebControls.LinqDataSourceInsertEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.WebControls.LinqDataSourceView.Inserting" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Die <xref:System.Web.UI.WebControls.LinqDataSourceView.OnInserting%2A> -Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Überschreiben der <see cref="M:System.Web.UI.WebControls.LinqDataSourceView.OnInserting(System.Web.UI.WebControls.LinqDataSourceInsertEventArgs)" /> Methode in einer abgeleiteten Klasse stellen Sie sicher, dass Sie rufen die <see cref="M:System.Web.UI.WebControls.LinqDataSourceView.OnInserting(System.Web.UI.WebControls.LinqDataSourceInsertEventArgs)" /> Methode für die Basisklasse, damit Delegaten registrierte das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelected">
+      <MemberSignature Language="C#" Value="protected virtual void OnSelected (System.Web.UI.WebControls.LinqDataSourceStatusEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSelected(class System.Web.UI.WebControls.LinqDataSourceStatusEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.OnSelected(System.Web.UI.WebControls.LinqDataSourceStatusEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.WebControls.LinqDataSourceStatusEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.WebControls.LinqDataSourceView.Selected" /> Ereignis nach der <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> -Steuerelement einen Vorgang zum Abrufen von Daten abgeschlossen hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Die <xref:System.Web.UI.WebControls.LinqDataSourceView.OnSelected%2A> -Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Überschreiben der <see cref="M:System.Web.UI.WebControls.LinqDataSourceView.OnSelected(System.Web.UI.WebControls.LinqDataSourceStatusEventArgs)" /> Methode in einer abgeleiteten Klasse stellen Sie sicher, dass Sie rufen die <see cref="M:System.Web.UI.WebControls.LinqDataSourceView.OnSelected(System.Web.UI.WebControls.LinqDataSourceStatusEventArgs)" /> Methode für die Basisklasse, damit Delegaten registrierte das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelecting">
+      <MemberSignature Language="C#" Value="protected virtual void OnSelecting (System.Web.UI.WebControls.LinqDataSourceSelectEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSelecting(class System.Web.UI.WebControls.LinqDataSourceSelectEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.OnSelecting(System.Web.UI.WebControls.LinqDataSourceSelectEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.WebControls.LinqDataSourceSelectEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.WebControls.LinqDataSourceView.Selecting" /> Ereignis vor der <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> Steuerelement eine Datenabruf durchgeführt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Die <xref:System.Web.UI.WebControls.LinqDataSourceView.OnSelecting%2A> -Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Überschreiben der <see cref="M:System.Web.UI.WebControls.LinqDataSourceView.OnSelecting(System.Web.UI.WebControls.LinqDataSourceSelectEventArgs)" /> Methode in einer abgeleiteten Klasse stellen Sie sicher, dass Sie rufen die <see cref="M:System.Web.UI.WebControls.LinqDataSourceView.OnSelecting(System.Web.UI.WebControls.LinqDataSourceSelectEventArgs)" /> Methode für die Basisklasse, damit Delegaten registrierte das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnUpdated">
+      <MemberSignature Language="C#" Value="protected virtual void OnUpdated (System.Web.UI.WebControls.LinqDataSourceStatusEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnUpdated(class System.Web.UI.WebControls.LinqDataSourceStatusEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.OnUpdated(System.Web.UI.WebControls.LinqDataSourceStatusEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.WebControls.LinqDataSourceStatusEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.WebControls.LinqDataSourceView.Updated" /> Ereignis nach der <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> Steuerelement einen Update-Vorgang abgeschlossen wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Die <xref:System.Web.UI.WebControls.LinqDataSourceView.OnUpdated%2A> -Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Überschreiben der <see cref="M:System.Web.UI.WebControls.LinqDataSourceView.OnUpdated(System.Web.UI.WebControls.LinqDataSourceStatusEventArgs)" /> Methode in einer abgeleiteten Klasse stellen Sie sicher, dass Sie rufen die <see cref="M:System.Web.UI.WebControls.LinqDataSourceView.OnUpdated(System.Web.UI.WebControls.LinqDataSourceStatusEventArgs)" /> Methode für die Basisklasse, damit Delegaten registrierte das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnUpdating">
+      <MemberSignature Language="C#" Value="protected virtual void OnUpdating (System.Web.UI.WebControls.LinqDataSourceUpdateEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnUpdating(class System.Web.UI.WebControls.LinqDataSourceUpdateEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.OnUpdating(System.Web.UI.WebControls.LinqDataSourceUpdateEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.WebControls.LinqDataSourceUpdateEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.WebControls.LinqDataSourceView.Updating" /> Ereignis vor der <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> Steuerelement einen Updatevorgang ausführt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Die <xref:System.Web.UI.WebControls.LinqDataSourceView.OnUpdating%2A> -Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Beim Überschreiben der <see cref="M:System.Web.UI.WebControls.LinqDataSourceView.OnUpdating(System.Web.UI.WebControls.LinqDataSourceUpdateEventArgs)" /> in einer abgeleiteten Klasse sicher, dass Sie rufen die <see cref="M:System.Web.UI.WebControls.LinqDataSourceView.OnUpdating(System.Web.UI.WebControls.LinqDataSourceUpdateEventArgs)" /> Methode für die Basisklasse, damit Delegaten registrierte das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetDataObject">
+      <MemberSignature Language="C#" Value="protected virtual void ResetDataObject (object table, object dataObject);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ResetDataObject(object table, object dataObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.ResetDataObject(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="table" Type="System.Object" />
+        <Parameter Name="dataObject" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="table">Die Tabelle, die Daten enthält.</param>
+        <param name="dataObject">Die Entität, die den ursprünglichen Zustand der Daten enthält.</param>
+        <summary>Wird das Objekt, das Daten, auf den ursprünglichen Zustand enthält zurückgesetzt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerable Select (System.Web.UI.DataSourceSelectArguments arguments);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.IEnumerable Select(class System.Web.UI.DataSourceSelectArguments arguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.Select(System.Web.UI.DataSourceSelectArguments)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arguments" Type="System.Web.UI.DataSourceSelectArguments" />
+      </Parameters>
+      <Docs>
+        <param name="arguments">Ein Objekt, das verwendet wird, um Vorgänge für die Daten jenseits der grundlegenden Datenabruf anzufordern.</param>
+        <summary>Ruft Daten aus der Datenquelle ab.</summary>
+        <returns>Eine Liste von Datenzeilen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.LinqDataSourceView.Select%2A> Methodenaufrufe der <xref:System.Web.UI.WebControls.LinqDataSourceView.ExecuteSelect%28System.Web.UI.DataSourceSelectArguments%29> -Methode auf und übergibt die `selectArgs` Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Selected">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt; Selected;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt; Selected" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LinqDataSourceView.Selected" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein Datenabruf Vorgang abgeschlossen wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Behandeln Sie dieses Ereignis zum Abfangen von Ausnahmen, die während der select-Vorgang ausgelöst wurden, oder um die Werte von Interesse, nachdem der Vorgang abgeschlossen wurde. Sie können die Werte aus Abrufen der <xref:System.Web.UI.WebControls.LinqDataSourceStatusEventArgs> -Objekt, das dem Ereignis zugeordnet ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Selecting">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceSelectEventArgs&gt; Selecting;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.LinqDataSourceSelectEventArgs&gt; Selecting" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LinqDataSourceView.Selecting" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceSelectEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, bevor der Vorgang Abrufen von Daten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Behandeln der <xref:System.Web.UI.WebControls.LinqDataSourceView.Selecting> Ereignis, um Werte zu ändern, während der Vorgang zum Abrufen von Daten verwendet werden. Weitere Informationen finden Sie beim <xref:System.Web.UI.WebControls.LinqDataSource.Selecting?displayProperty=nameWithType>-Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StoreOriginalValues">
+      <MemberSignature Language="C#" Value="protected override void StoreOriginalValues (System.Collections.IList results);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void StoreOriginalValues(class System.Collections.IList results) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.StoreOriginalValues(System.Collections.IList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="results" Type="System.Collections.IList" />
+      </Parameters>
+      <Docs>
+        <param name="results">Das Ergebnis des <see langword="Select" />-Vorgangs.</param>
+        <summary>Speichert die ursprünglichen Werte aus der <see langword="Select" /> Vorgang im Ansichtszustand des Steuerelements.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StoreOriginalValuesInViewState">
+      <MemberSignature Language="C#" Value="public bool StoreOriginalValuesInViewState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StoreOriginalValuesInViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSourceView.StoreOriginalValuesInViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, dass die ursprünglichen Werte aus der select-Vorgang in Ansichtszustand gespeichert werden, wenn beim Löschen oder Update-Vorgänge sind aktiviert.</summary>
+        <value>
+          <see langword="true" />Wenn die ursprünglichen Werte im Ansichtszustand gespeichert werden; andernfalls <see langword="false" />. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Festlegen der <xref:System.Web.UI.WebControls.LinqDataSource.StoreOriginalValuesInViewState%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.LinqDataSource> zu steuern, dass Wert auch für festgelegt ist die <xref:System.Web.UI.WebControls.LinqDataSourceView.StoreOriginalValuesInViewState%2A> Eigenschaft der <xref:System.Web.UI.WebControls.LinqDataSourceView> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TableName">
+      <MemberSignature Language="C#" Value="public string TableName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TableName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSourceView.TableName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen einer Eigenschaft oder Feld der Context-Klasse, die die Datensammlung enthält.</summary>
+        <value>Der Name der Eigenschaft, die die Datensammlung darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Festlegen der <xref:System.Web.UI.WebControls.LinqDataSource.TableName%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.LinqDataSource> zu steuern, dass Wert auch für festgelegt ist die <xref:System.Web.UI.WebControls.LinqDataSourceView.TableName%2A> Eigenschaft der <xref:System.Web.UI.WebControls.LinqDataSourceView> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Updated">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt; Updated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt; Updated" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LinqDataSourceView.Updated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein Update-Vorgang abgeschlossen ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Behandeln der <xref:System.Web.UI.WebControls.LinqDataSourceView.Updated> Ereignis, um die Werte von Ausgabeparametern von Interesse, nachdem ein Updatevorgang abgeschlossen ist, oder zum Abfangen von Ausnahmen, die während des Aktualisierungsvorgangs ausgelöst wurden. Die Output-Parameter stehen über die <xref:System.Web.UI.WebControls.LinqDataSourceStatusEventArgs> -Objekt, das dem Ereignis zugeordnet ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateDataObject">
+      <MemberSignature Language="C#" Value="protected virtual void UpdateDataObject (object dataContext, object table, object oldDataObject, object newDataObject);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void UpdateDataObject(object dataContext, object table, object oldDataObject, object newDataObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.UpdateDataObject(System.Object,System.Object,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataContext" Type="System.Object" />
+        <Parameter Name="table" Type="System.Object" />
+        <Parameter Name="oldDataObject" Type="System.Object" />
+        <Parameter Name="newDataObject" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dataContext">Der Context-Klasse zu aktualisieren.</param>
+        <param name="table">Die Datensammlung, die zu aktualisierenden Objekts enthält.</param>
+        <param name="oldDataObject">Die zu aktualisierende Objekt.</param>
+        <param name="newDataObject">Das aktualisierte Objekt.</param>
+        <summary>Aktualisiert ein Datenobjekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateObject">
+      <MemberSignature Language="C#" Value="protected override int UpdateObject (object oldEntity, object newEntity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance int32 UpdateObject(object oldEntity, object newEntity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.UpdateObject(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldEntity" Type="System.Object" />
+        <Parameter Name="newEntity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="oldEntity">Die zu aktualisierenden Objekts.</param>
+        <param name="newEntity">Das neue Objekt, für das Update verwendet werden soll.</param>
+        <summary>Aktualisiert ein Datenobjekt.</summary>
+        <returns>0 (null), wenn das Update erfolgreich war, oder -1, wenn das Update fehlgeschlagen ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Updating">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceUpdateEventArgs&gt; Updating;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.LinqDataSourceUpdateEventArgs&gt; Updating" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LinqDataSourceView.Updating" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceUpdateEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, bevor Sie ein Update-Vorgang.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Behandeln der <xref:System.Web.UI.WebControls.LinqDataSourceView.Updating> Ereignis zur Überprüfung dieses Objekts aktualisiert werden, um einen Wert vor dem Updatevorgang zu ändern oder den Updatevorgang abgebrochen. Weitere Informationen finden Sie beim <xref:System.Web.UI.WebControls.LinqDataSource.Updating?displayProperty=nameWithType>-Ereignis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateContextType">
+      <MemberSignature Language="C#" Value="protected virtual void ValidateContextType (Type contextType, bool selecting);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ValidateContextType(class System.Type contextType, bool selecting) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.ValidateContextType(System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contextType" Type="System.Type" />
+        <Parameter Name="selecting" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="contextType">Der Typ der Datenkontextklasse auf, um zu überprüfen.</param>
+        <param name="selecting">Gibt an, ob die Methode aufgerufen wurde, wenn ein select-Vorgang gestartet wird.</param>
+        <summary>Überprüft, ob die Datenkontextklasse abgeleitet <see cref="T:System.Data.Linq.DataContext" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Klasse, die im angegebenen der <xref:System.Web.UI.WebControls.LinqDataSource.ContextTypeName%2A> Eigenschaft leiten sich aus der <xref:System.Data.Linq.DataContext> Klasse in der Reihenfolge aktivieren automatische INSERT-, Update- und Delete-Vorgänge.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Eine INSERT-, Update- oder Delete-Vorgang ausgeführt wird und der Datenkontextklasse nicht ableiten <see cref="T:System.Data.Linq.DataContext" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateDeleteSupported">
+      <MemberSignature Language="C#" Value="protected virtual void ValidateDeleteSupported (System.Collections.IDictionary keys, System.Collections.IDictionary oldValues);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ValidateDeleteSupported(class System.Collections.IDictionary keys, class System.Collections.IDictionary oldValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.ValidateDeleteSupported(System.Collections.IDictionary,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Collections.IDictionary" />
+        <Parameter Name="oldValues" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Ein Wörterbuch von Schlüsselwerten für die Daten, die zu löschende Datensätze.</param>
+        <param name="oldValues">Ein Wörterbuch, das zu löschende Zeilenwerte enthält.</param>
+        <summary>Überprüft, dass die Bedingungen erfüllt sein, um einen Löschvorgang durchzuführen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kann nicht gelöscht werden Daten bei der <xref:System.Web.UI.WebControls.QueryableDataSourceView.GroupBy%2A> Eigenschaft oder die <xref:System.Web.UI.WebControls.QueryableDataSourceView.SelectNew%2A> Eigenschaft enthält einen Wert außer `null`. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Web.UI.WebControls.LinqDataSource.EnableDelete%2A?displayProperty=nameWithType>-Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Web.UI.WebControls.QueryableDataSourceView.GroupBy" /> oder <see cref="P:System.Web.UI.WebControls.QueryableDataSourceView.SelectNew" /> Eigenschaft einen Wert enthält.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <see cref="P:System.Web.UI.WebControls.LinqDataSourceView.CanDelete" /> ist <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateEditSupported">
+      <MemberSignature Language="C#" Value="protected virtual void ValidateEditSupported ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ValidateEditSupported() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.ValidateEditSupported" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überprüft, dass die Bedingungen, die zum Ausführen eines Bearbeitungsvorgangs vorhanden sind.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Die Überprüfung ist fehlgeschlagen oder wurde abgebrochen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateInsertSupported">
+      <MemberSignature Language="C#" Value="protected virtual void ValidateInsertSupported (System.Collections.IDictionary values);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ValidateInsertSupported(class System.Collections.IDictionary values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.ValidateInsertSupported(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="values">Ein Wörterbuch, das Werte einzufügenden Zeilen enthält.</param>
+        <summary>Überprüft, dass die Bedingungen erfüllt sein, um einen Einfügevorgang auszuführen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können keine Daten einfügen, bei der <xref:System.Web.UI.WebControls.QueryableDataSourceView.GroupBy%2A> Eigenschaft oder die <xref:System.Web.UI.WebControls.QueryableDataSourceView.SelectNew%2A> Eigenschaft enthält einen Wert außer `null`. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Web.UI.WebControls.LinqDataSource.EnableInsert%2A?displayProperty=nameWithType>-Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="P:System.Web.UI.WebControls.QueryableDataSourceView.GroupBy" /> oder <see cref="P:System.Web.UI.WebControls.QueryableDataSourceView.SelectNew" /> Eigenschaft enthält einen Wert oder die <paramref name="values" /> Parameter enthält keine Elemente.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <see cref="P:System.Web.UI.WebControls.LinqDataSourceView.CanInsert" /> ist <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateTableType">
+      <MemberSignature Language="C#" Value="protected virtual void ValidateTableType (Type tableType, bool selecting);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ValidateTableType(class System.Type tableType, bool selecting) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.ValidateTableType(System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tableType" Type="System.Type" />
+        <Parameter Name="selecting" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="tableType">Der zu überprüfende Tabellentyp.</param>
+        <param name="selecting">Gibt an, ob die Methode aufgerufen wurde, wenn ein select-Vorgang gestartet wird.</param>
+        <summary>Überprüft, ob der Typ der Klasse, die die Daten darstellt, ein generischer Typ ist.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Der Typ der Tabelle ist nicht generisch.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateUpdateSupported">
+      <MemberSignature Language="C#" Value="protected virtual void ValidateUpdateSupported (System.Collections.IDictionary keys, System.Collections.IDictionary values, System.Collections.IDictionary oldValues);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ValidateUpdateSupported(class System.Collections.IDictionary keys, class System.Collections.IDictionary values, class System.Collections.IDictionary oldValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceView.ValidateUpdateSupported(System.Collections.IDictionary,System.Collections.IDictionary,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Collections.IDictionary" />
+        <Parameter Name="values" Type="System.Collections.IDictionary" />
+        <Parameter Name="oldValues" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Ein Wörterbuch von Schlüsselwerten für die zu aktualisierenden Datensätze.</param>
+        <param name="values">Ein Wörterbuch, das neue Zeilenwerte für den Updatevorgang enthält.</param>
+        <param name="oldValues">Ein Wörterbuch, das die alten Werte für den Updatevorgang enthält.</param>
+        <summary>Überprüft, dass die Bedingungen erfüllt sein, um ein Updatevorgang auszuführen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Daten können nicht aktualisiert bei der <xref:System.Web.UI.WebControls.QueryableDataSourceView.GroupBy%2A> Eigenschaft oder die <xref:System.Web.UI.WebControls.QueryableDataSourceView.SelectNew%2A> Eigenschaft enthält einen Wert außer `null`. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Web.UI.WebControls.LinqDataSource.EnableUpdate%2A?displayProperty=nameWithType>-Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Der Update-Vorgang wird nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,184 @@
+<Type Name="ExpandSegment" FullName="System.Data.Services.ExpandSegment">
+  <TypeSignature Language="C#" Value="public class ExpandSegment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ExpandSegment extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.ExpandSegment" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("ExpandSegment ({name},Filter={filter})]")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Das Segment einer Abfrage, der angibt, ob die Daten Inline statt als verzögerten Inhalt zurückgegeben werden sollen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein `$expand` -Klausel zeigt an, dass jedes `$expand` Element vollständig erweitert werden soll. Beispielsweise den Wert `OrderLines.Product.Image` mit `$expand` bewirkt, dass `OrderLines`, die `Product` jedes Elements im `OrderLines`, und die `Image` von der `Product` jedes Elements im `OrderLines` erweitert werden.  
+  
+ Die Eigenschaft am weitesten links in einer `$expand` -Klausel muss eine Eigenschaft der Entität vom Typ innerhalb der Entitätenmenge, die durch das letzte Pfadsegment in der Anforderungs-URI identifiziert werden.  
+  
+ Redundante expand-Klausel Regeln sind akzeptabel und werden ignoriert.  
+  
+   
+  
+## Examples  
+ Der folgende URI erweitert die `OrderLines` jeweils zugeordneten `Order` von der Abfrage zurückgegeben werden.  
+  
+```  
+http://host/service.svc/Orders?$expand=OrderLines  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExpandSegment (string name, System.Linq.Expressions.Expression filter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Linq.Expressions.Expression filter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.ExpandSegment.#ctor(System.String,System.Linq.Expressions.Expression)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="filter" Type="System.Linq.Expressions.Expression" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Eigenschaft, die erweitert werden.</param>
+        <param name="filter">Die Filteroption in der Abfrage das Erweiterungssegment gilt.</param>
+        <summary>Initialisiert ein <see cref="T:System.Data.Services.ExpandSegment" /> Objekt mit dem angegebenen Eigenschaftsnamen und einen Filterausdruck, der möglicherweise null.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpandedProperty">
+      <MemberSignature Language="C#" Value="public System.Data.Services.Providers.ResourceProperty ExpandedProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Services.Providers.ResourceProperty ExpandedProperty" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.ExpandSegment.ExpandedProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Providers.ResourceProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Eigenschaft erweitert werden.</summary>
+        <value>Der zu erweiternden Eigenschaft.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filter">
+      <MemberSignature Language="C#" Value="public System.Linq.Expressions.Expression Filter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Linq.Expressions.Expression Filter" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.ExpandSegment.Filter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.Expression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Filteroption in der Abfrage das Erweiterungssegment gilt.</summary>
+        <value>Ein Ausdruck, der den Filter auf die Zieldaten angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasFilter">
+      <MemberSignature Language="C#" Value="public bool HasFilter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasFilter" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.ExpandSegment.HasFilter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein boolescher Wert, der angibt, ob die Expand-Anweisung mit einem Filterausdruck verwendet wird.</summary>
+        <value>True oder False</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxResultsExpected">
+      <MemberSignature Language="C#" Value="public int MaxResultsExpected { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxResultsExpected" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.ExpandSegment.MaxResultsExpected" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl der erwarteten Ergebnisse ab.</summary>
+        <value>Der ganzzahlige Wert, der maximalen Anzahl von Ergebnissen angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ So aktivieren Sie den Datendienst zum Erkennen eines Fehlers auf diese Einschränkung erfüllen, erweitern die Anbieter keine zurückgeben sollte mehr als <xref:System.Data.Services.ExpandSegment.MaxResultsExpected%2A> + 1 Elementen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.ExpandSegment.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Name der Eigenschaft, die erweitert werden.</summary>
+        <value>Ein Zeichenfolgenwert, der den Namen der Eigenschaft enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PathHasFilter">
+      <MemberSignature Language="C#" Value="public static bool PathHasFilter (System.Collections.Generic.IEnumerable&lt;System.Data.Services.ExpandSegment&gt; path);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool PathHasFilter(class System.Collections.Generic.IEnumerable`1&lt;class System.Data.Services.ExpandSegment&gt; path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.ExpandSegment.PathHasFilter(System.Collections.Generic.IEnumerable{System.Data.Services.ExpandSegment})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.Collections.Generic.IEnumerable&lt;System.Data.Services.ExpandSegment&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="path">Die Enumeration von Segmenten, um Filter zu überprüfen.</param>
+        <summary>Ein boolescher Wert, der angibt, ob der Pfad eine Filteroption auf Zieldaten enthält.</summary>
+        <returns>"True", wenn keines der Segmente im Pfad ist ein Filter; "false" andernfalls.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

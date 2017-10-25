@@ -1,0 +1,42 @@
+<Type Name="AutomationFocusChangedEventHandler" FullName="System.Windows.Automation.AutomationFocusChangedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void AutomationFocusChangedEventHandler(object sender, AutomationFocusChangedEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AutomationFocusChangedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.AutomationFocusChangedEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Automation.AutomationFocusChangedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Das Objekt, das das Ereignis ausgelöst hat.</param>
+    <param name="e">Informationen zum Ereignis.</param>
+    <summary>Stellt die Methode dar, die von der Benutzeroberflächenautomatisierungs-Clientanwendung implementiert wird, um das Ereignis zu behandeln, das vom Benutzeroberflächenautomatisierungs-Anbieter ausgelöst wird, wenn sich der Fokus geändert hat.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden einer <xref:System.Windows.Automation.AutomationFocusChangedEventHandler> Delegat, der die Methode definieren, die von einem Client zum Behandeln aufgerufen wird, [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Ereignisse fokusänderung ausgelöst wurde.  
+  
+ Die <xref:System.Windows.Automation.AutomationElement> dargestellte `sender` möglicherweise nicht haben zwischengespeicherte Eigenschaften und Muster, abhängig davon, ob die Anwendung für dieses Ereignis beim abonniert eine <xref:System.Windows.Automation.CacheRequest> aktiv war.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel implementiert einen Delegaten zum Behandeln von Ereignissen fokusänderung ausgelöst wurde.  
+  
+ [!code-csharp[UIAFocusTracker_snip#106](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAFocusTracker_snip/CSharp/FocusTracker.cs#106)]
+ [!code-vb[UIAFocusTracker_snip#106](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFocusTracker_snip/VisualBasic/FocusTracker.vb#106)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,145 @@
+<Type Name="IXmlLineInfo" FullName="System.Xml.IXmlLineInfo">
+  <TypeSignature Language="C#" Value="public interface IXmlLineInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IXmlLineInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.IXmlLineInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Schnittstelle bereit, die einer Klasse die Rückgabe von Zeilen- und Positionsinformationen ermöglicht.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird analysiert ein XML-Fragment. Jeder Knoten wird angezeigt, einschließlich Tiefe, Zeilennummer und Zeilenposition.  
+  
+ [!code-cpp[IXmlLineInfo#1](~/samples/snippets/cpp/VS_Snippets_Data/IXmlLineInfo/CPP/lineinfo.cpp#1)]
+ [!code-csharp[IXmlLineInfo#1](~/samples/snippets/csharp/VS_Snippets_Data/IXmlLineInfo/CS/lineinfo.cs#1)]
+ [!code-vb[IXmlLineInfo#1](~/samples/snippets/visualbasic/VS_Snippets_Data/IXmlLineInfo/VB/lineinfo.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="HasLineInfo">
+      <MemberSignature Language="C#" Value="public bool HasLineInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool HasLineInfo() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.IXmlLineInfo.HasLineInfo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Klasse Zeileninformationen zurückgeben kann.</summary>
+        <returns>
+          <see langword="true" />, wenn <see cref="P:System.Xml.IXmlLineInfo.LineNumber" /> und <see cref="P:System.Xml.IXmlLineInfo.LinePosition" /> angegeben werden können, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineNumber">
+      <MemberSignature Language="C#" Value="public int LineNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LineNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.IXmlLineInfo.LineNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuelle Zeilennummer ab.</summary>
+        <value>Die aktuelle Zeilennummer oder 0, wenn keine Zeileninformationen verfügbar sind (z. B. <see cref="M:System.Xml.IXmlLineInfo.HasLineInfo" /> gibt <see langword="false" />).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird in erster Linie für die Fehlerberichterstattung verwendet, aber Sie kann jederzeit aufgerufen werden. Der Anfangswert ist 1. In Kombination mit <xref:System.Xml.IXmlLineInfo.LinePosition%2A>, ein Wert von 1,1 gibt den Anfang eines Dokuments.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinePosition">
+      <MemberSignature Language="C#" Value="public int LinePosition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LinePosition" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.IXmlLineInfo.LinePosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuelle Zeilenposition ab.</summary>
+        <value>Die aktuelle Zeilenposition oder 0, wenn keine Zeileninformationen verfügbar sind (z. B. <see cref="M:System.Xml.IXmlLineInfo.HasLineInfo" /> gibt <see langword="false" />).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird in erster Linie für die Fehlerberichterstattung verwendet, aber Sie kann jederzeit aufgerufen werden. Der Anfangswert ist 1. In Kombination mit <xref:System.Xml.IXmlLineInfo.LineNumber%2A>, ein Wert von 1,1 gibt den Anfang eines Dokuments.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

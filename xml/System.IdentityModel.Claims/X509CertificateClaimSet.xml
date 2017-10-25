@@ -1,0 +1,232 @@
+<Type Name="X509CertificateClaimSet" FullName="System.IdentityModel.Claims.X509CertificateClaimSet">
+  <TypeSignature Language="C#" Value="public class X509CertificateClaimSet : System.IdentityModel.Claims.ClaimSet, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit X509CertificateClaimSet extends System.IdentityModel.Claims.ClaimSet implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Claims.X509CertificateClaimSet" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Claims.ClaimSet</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Auflistung von Ansprüchen dar, die aus einem X.509-Zertifikat extrahiert wurden und einer Entität zugeordnet sind.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509CertificateClaimSet (System.Security.Cryptography.X509Certificates.X509Certificate2 certificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.X509Certificates.X509Certificate2 certificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.X509CertificateClaimSet.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+      </Parameters>
+      <Docs>
+        <param name="certificate">Das X.509-Zertifikat, das dem Satz von Ansprüchen hinzugefügt wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Claims.X509CertificateClaimSet" />-Klasse unter Verwendung des angegebenen X.509-Zertifikats.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public override int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Claims.X509CertificateClaimSet.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl von X.509-Zertifikatsansprüchen in diesem <see cref="T:System.IdentityModel.Claims.X509CertificateClaimSet" />-Objekt ab.</summary>
+        <value>Die Anzahl von X.509-Zertifikatsansprüchen in diesem <see cref="T:System.IdentityModel.Claims.X509CertificateClaimSet" />-Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.X509CertificateClaimSet.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle vom <see cref="T:System.IdentityModel.Claims.X509CertificateClaimSet" /> verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie die <xref:System.IdentityModel.Claims.X509CertificateClaimSet.Dispose%2A>-Methode auf, wenn <xref:System.IdentityModel.Claims.X509CertificateClaimSet> nicht mehr benötigt wird. Die <xref:System.IdentityModel.Claims.X509CertificateClaimSet.Dispose%2A>-Methode bewirkt, dass <xref:System.IdentityModel.Claims.X509CertificateClaimSet> nicht mehr verwendet werden kann. Nach dem Aufruf der <xref:System.IdentityModel.Claims.X509CertificateClaimSet.Dispose%2A>-Methode müssen Sie alle Verweise auf den <xref:System.IdentityModel.Claims.X509CertificateClaimSet> freigeben, sodass der vom <xref:System.IdentityModel.Claims.X509CertificateClaimSet> belegte Speicher bei der Garbage Collection wieder zugänglich gemacht werden kann.  
+  
+> [!NOTE]
+>  Rufen Sie immer <xref:System.IdentityModel.Claims.X509CertificateClaimSet.Dispose%2A> auf, bevor Sie den letzten Verweis auf das <xref:System.IdentityModel.Claims.X509CertificateClaimSet> freigeben. Andernfalls bleiben die verwendeten Ressourcen reserviert, bis die Garbage Collection die <xref:System.IdentityModel.Claims.X509CertificateClaimSet>-Methode des `Finalize`-Objekts aufruft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpirationTime">
+      <MemberSignature Language="C#" Value="public DateTime ExpirationTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime ExpirationTime" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Claims.X509CertificateClaimSet.ExpirationTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ablaufzeit für diesen <see cref="T:System.IdentityModel.Claims.X509CertificateClaimSet" /> ab.</summary>
+        <value>Die Ablaufzeit für diesen <see cref="T:System.IdentityModel.Claims.X509CertificateClaimSet" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindClaims">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IEnumerable&lt;System.IdentityModel.Claims.Claim&gt; FindClaims (string claimType, string right);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.IdentityModel.Claims.Claim&gt; FindClaims(string claimType, string right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.IdentityModel.Claims.Claim&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="claimType" Type="System.String" />
+        <Parameter Name="right" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="claimType">Der Uniform Resource Identifier (URI) eines Anspruchtyps.</param>
+        <param name="right">Der URI des Rechts, das dem neuen Anspruch zugeordnet ist.</param>
+        <summary>Sucht nach dem Anspruch, der dem angegebenen Anspruchtyp und den Rechten im <see cref="T:System.IdentityModel.Claims.X509CertificateClaimSet" /> entspricht.</summary>
+        <returns>Ein <see langword="System.Collections.Generic.IEnumerable&lt;Claim&gt;" /> Objekt, mit dem Sie die Auflistung der Ansprüche, die die angegebenen Kriterien entsprechen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IEnumerator&lt;System.IdentityModel.Claims.Claim&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IEnumerator`1&lt;class System.IdentityModel.Claims.Claim&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.X509CertificateClaimSet.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.IdentityModel.Claims.Claim&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen <see cref="T:System.Collections.Generic.IEnumerator`1" /> ab, der verwendet werden kann, um die Windows-Ansprüche im <see cref="T:System.IdentityModel.Claims.X509CertificateClaimSet" /> aufzulisten.</summary>
+        <returns>Ein <see cref="T:System.Collections.Generic.IEnumerator`1" />, der verwendet werden kann, um die Windows-Ansprüche im <see cref="T:System.IdentityModel.Claims.X509CertificateClaimSet" /> aufzulisten.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Issuer">
+      <MemberSignature Language="C#" Value="public override System.IdentityModel.Claims.ClaimSet Issuer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Claims.ClaimSet Issuer" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Claims.X509CertificateClaimSet.Issuer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Claims.ClaimSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Aussteller für diesen <see cref="T:System.IdentityModel.Claims.X509CertificateClaimSet" /> ab.</summary>
+        <value>Der Aussteller für diesen <see cref="T:System.IdentityModel.Claims.X509CertificateClaimSet" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Aussteller für einen <xref:System.IdentityModel.Claims.X509CertificateClaimSet> folgt dem gleichen Modell wie die X.509-Kette für ein X.509-Zertifikat. Der <xref:System.IdentityModel.Claims.X509CertificateClaimSet>-Stamm wird beispielsweise automatisch ausgestellt und einer Zertifizierungsstelle zugeordnet. Wenn ein Zertifikat in der Kette nicht verfügbar ist, handelt es sich bei dem Stamm <xref:System.IdentityModel.Claims.ClaimSet> um einen anonymen Aussteller.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public override System.IdentityModel.Claims.Claim this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Claims.Claim Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Claims.X509CertificateClaimSet.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Claims.Claim</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des Anspruchs, der abgerufen werden soll.</param>
+        <summary>Ruft den Anspruch für den angegebenen Index ab.</summary>
+        <value>Der Anspruch für den angegebenen Index.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.X509CertificateClaimSet.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Anzahl von X.509-Zertifikatsansprüchen in diesem <see cref="T:System.IdentityModel.Claims.X509CertificateClaimSet" />-Objekt ab.</summary>
+        <returns>Die Anzahl von X.509-Zertifikatsansprüchen in diesem <see cref="T:System.IdentityModel.Claims.X509CertificateClaimSet" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="X509Certificate">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate2 X509Certificate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509Certificate2 X509Certificate" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Claims.X509CertificateClaimSet.X509Certificate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das X.509-Zertifikat ab, das diesem Satz von Ansprüchen zugeordnet ist.</summary>
+        <value>Das X.509-Zertifikat, das diesem Satz von Ansprüchen zugeordnet ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

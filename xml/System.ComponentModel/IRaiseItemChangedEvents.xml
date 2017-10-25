@@ -1,0 +1,62 @@
+<Type Name="IRaiseItemChangedEvents" FullName="System.ComponentModel.IRaiseItemChangedEvents">
+  <TypeSignature Language="C#" Value="public interface IRaiseItemChangedEvents" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRaiseItemChangedEvents" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.IRaiseItemChangedEvents" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt an, ob eine Klasse Eigenschaftenänderungsereignisse konvertiert <see cref="E:System.ComponentModel.IBindingList.ListChanged" /> Ereignisse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.IRaiseItemChangedEvents> Schnittstelle wird in der Regel implementiert, zusammen mit den <xref:System.ComponentModel.IBindingList> -Schnittstelle und gibt an, dass die Liste Eigenschaftenänderungsereignisse konvertiert <xref:System.ComponentModel.IBindingList.ListChanged> Ereignisse.  
+  
+ Sie müssen nur selten implementieren die <xref:System.ComponentModel.IRaiseItemChangedEvents> Schnittstelle. Aus Gründen der Leistung Ihrer Datenquelle sollten jedoch implementieren <xref:System.ComponentModel.IRaiseItemChangedEvents> Wenn es zuvor beschriebene Funktionalität bietet und Ihre Datenquelle interagieren, mit der <xref:System.Windows.Forms.BindingSource> Komponente, da diese Funktion in der integriertist<xref:System.Windows.Forms.BindingSource>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="RaisesItemChangedEvents">
+      <MemberSignature Language="C#" Value="public bool RaisesItemChangedEvents { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RaisesItemChangedEvents" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.IRaiseItemChangedEvents.RaisesItemChangedEvents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die <see cref="T:System.ComponentModel.IRaiseItemChangedEvents" /> -Objekt löst <see cref="E:System.ComponentModel.IBindingList.ListChanged" /> Ereignisse.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.ComponentModel.IRaiseItemChangedEvents" /> -Objekt löst <see cref="E:System.ComponentModel.IBindingList.ListChanged" /> Ereignisse aus, wenn Sie einen der zugehörigen Eigenschaft Änderungen; Werte hingegen <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

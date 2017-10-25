@@ -1,0 +1,96 @@
+<Type Name="SessionSecurityTokenCreatedEventArgs" FullName="System.IdentityModel.Services.SessionSecurityTokenCreatedEventArgs">
+  <TypeSignature Language="C#" Value="public class SessionSecurityTokenCreatedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SessionSecurityTokenCreatedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Services.SessionSecurityTokenCreatedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für die <see cref="E:System.IdentityModel.Services.SessionAuthenticationModule.SessionSecurityTokenCreated" /> Ereignis sowie für die <see cref="E:System.IdentityModel.Services.WSFederationAuthenticationModule.SessionSecurityTokenCreated" /> Ereignis.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig werden:  
+  
+-   In der Sitzung Authentifizierungsmodul (SAM) die <xref:System.IdentityModel.Services.SessionAuthenticationModule.SessionSecurityTokenCreated> Ereignis wird ausgelöst, innerhalb der <xref:System.IdentityModel.Services.SessionAuthenticationModule.OnAuthenticateRequest%2A?displayProperty=nameWithType> Methode auf, nachdem ein Sitzungstoken (<xref:System.IdentityModel.Tokens.SessionSecurityToken>) erstellt wurde. Dies geschieht beispielsweise, wenn ein Ereignishandler für das <xref:System.IdentityModel.Services.SessionAuthenticationModule.SessionSecurityTokenReceived> Ereignis ändert das Token. Sie können die <xref:System.IdentityModel.Services.SessionSecurityTokenCreatedEventArgs> das Sitzungstoken zu ändern, bevor er weitere entlang der Pipeline übergeben wird, und verwendet wird, um die Entität mit dem Ausführen der Anforderung (Benutzer) zu authentifizieren.  
+  
+-   In der WS-Verbund-Authentifizierungsmodul (WSFAM) die <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SessionSecurityTokenCreated> Ereignis wird von der Pipeline zur anforderungsverarbeitung unmittelbar nach dem Abschluss von der WS-Verbund-Anmeldung empfangene Antwortnachricht vom STS und unmittelbar vor der SAM ist ein Sitzungstoken erstellt wurde wird aufgerufen, um den Prinzipal des Threads festlegen und das Sitzungscookie schreiben.  
+  
+ Sie können die <xref:System.IdentityModel.Services.SessionSecurityTokenCreatedEventArgs.SessionToken%2A> Eigenschaft zu ändern oder Ersetzen Sie das Token. Sie können festlegen, die <xref:System.IdentityModel.Services.SessionSecurityTokenCreatedEventArgs.WriteSessionCookie%2A> an, ob das Sitzungscookie sollten werden geschrieben wurden (oder neu geschrieben werden).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SessionSecurityTokenCreatedEventArgs (System.IdentityModel.Tokens.SessionSecurityToken sessionToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Tokens.SessionSecurityToken sessionToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.SessionSecurityTokenCreatedEventArgs.#ctor(System.IdentityModel.Tokens.SessionSecurityToken)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sessionToken" Type="System.IdentityModel.Tokens.SessionSecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="sessionToken">Das sitzungssicherheitstoken, das erstellt wurde.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.IdentityModel.Services.SessionSecurityTokenCreatedEventArgs" /> -Klasse unter Verwendung der angegebenen sitzungssicherheitstoken.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Services.SessionSecurityTokenCreatedEventArgs.SessionToken%2A> Eigenschaft festgelegt ist, auf das Token gemäß der `sessionToken` Parameter. Die <xref:System.IdentityModel.Services.SessionSecurityTokenCreatedEventArgs.WriteSessionCookie%2A>-Eigenschaft wird mit `false` initialisiert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="sessionToken" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionToken">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SessionSecurityToken SessionToken { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SessionSecurityToken SessionToken" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.SessionSecurityTokenCreatedEventArgs.SessionToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SessionSecurityToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das sitzungssicherheitstoken, das erstellt wurde.</summary>
+        <value>Das Sitzungstoken, das erstellt wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteSessionCookie">
+      <MemberSignature Language="C#" Value="public bool WriteSessionCookie { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool WriteSessionCookie" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.SessionSecurityTokenCreatedEventArgs.WriteSessionCookie" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob ein Cookie in der Antwort geschrieben werden soll.</summary>
+        <value>
+          <see langword="true" />Um ein Cookie in der Antwort zu schreiben. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />, das Cookie wird nicht in der Antwort geschrieben.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

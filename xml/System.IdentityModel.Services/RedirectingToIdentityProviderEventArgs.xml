@@ -1,0 +1,79 @@
+<Type Name="RedirectingToIdentityProviderEventArgs" FullName="System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs">
+  <TypeSignature Language="C#" Value="public class RedirectingToIdentityProviderEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RedirectingToIdentityProviderEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider> Ereignis wird ausgelöst, bevor die <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> leitet die Anforderung an den Identitätsanbieter. Sie können Zugriff auf und ändern Sie die Anforderung über die <xref:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs.SignInRequestMessage%2A> Eigenschaft. Sie können z. B. Ändern der <xref:System.IdentityModel.Services.FederationMessage.BaseUri%2A> Eigenschaft in der Meldung "Anmelden" So ändern Sie den Identitätsanbieter, der die Anforderung umgeleitet werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RedirectingToIdentityProviderEventArgs (System.IdentityModel.Services.SignInRequestMessage signInRequestMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Services.SignInRequestMessage signInRequestMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs.#ctor(System.IdentityModel.Services.SignInRequestMessage)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="signInRequestMessage" Type="System.IdentityModel.Services.SignInRequestMessage" />
+      </Parameters>
+      <Docs>
+        <param name="signInRequestMessage">Der passiven WS-Verbund-Anmeldenachricht, die zum Umleiten des Benutzers an den Identitätsanbieter verwendet werden.</param>
+        <summary>Initialisiert eine Instanz von der <see cref="T:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs" /> -Klasse unter Verwendung der angegebenen passiven WS-Verbund-Anmeldenachricht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs.SignInRequestMessage%2A> -Eigenschaft in der neuen Instanz wird auf den Wert des initialisiert die `signInRequestMessage` Parameter.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="signInRequestMessage" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SignInRequestMessage">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Services.SignInRequestMessage SignInRequestMessage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Services.SignInRequestMessage SignInRequestMessage" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs.SignInRequestMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Services.SignInRequestMessage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den passiven WS-Verbund-Anmeldenachricht, der zum Umleiten des Benutzers an den Identitätsanbieter verwendet werden.</summary>
+        <value>Die WS-Verbund-Anmeldenachricht, die zum Umleiten des Benutzers an den Identitätsanbieter verwendet werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die Eigenschaften der Nachricht "Anmelden" So ändern Sie die Anforderung ändern. Sie können z. B. Ändern der <xref:System.IdentityModel.Services.FederationMessage.BaseUri%2A> Eigenschaft in der Meldung "Anmelden" So ändern Sie den Identitätsanbieter, der die Anforderung umgeleitet werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Versuch, die Eigenschaft auf festgelegt <see langword="null" /> auftritt.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

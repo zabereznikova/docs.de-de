@@ -1,0 +1,236 @@
+<Type Name="MsmqIntegrationBinding" FullName="System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding">
+  <TypeSignature Language="C#" Value="public class MsmqIntegrationBinding : System.ServiceModel.MsmqBindingBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MsmqIntegrationBinding extends System.ServiceModel.MsmqBindingBase" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.MsmqBindingBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding" /> -Klasse ordnet Microsoft Message Queuing (MSMQ)-Nachrichten für Windows Communication Foundation (WCF)-Nachrichten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Bindung zur Aktivierung von [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Anwendungen zum Senden und Empfangen von Nachrichten an und von vorhandenen MSMQ-Anwendungen, die COM, systemeigenen C++-APIs oder die im <xref:System.Messaging>-Namespace definierten Typen verwenden.  
+  
+   
+  
+## Examples  
+ Die folgenden Konfigurationsdateiausschnitte zeigen, wie die <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>-Bindung auf dem Client konfiguriert wird:  
+  
+  
+  
+ Die folgenden Konfigurationsdateiausschnitte zeigen, wie die <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>-Bindung auf dem Dienst konfiguriert wird:  
+  
+ [!code-csharp[S_MSMQToWCF#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_msmqtowcf/cs/service.cs#1)]
+ [!code-vb[S_MSMQToWCF#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_msmqtowcf/vb/service.vb#1)]  
+  
+ Der folgende Code zeigt, wie die <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>-Bindung auf dem Dienst programmatisch verwendet wird:  
+  
+ [!code-csharp[S_MSMQToWCF#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_msmqtowcf/cs/service.cs#2)]
+ [!code-vb[S_MSMQToWCF#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_msmqtowcf/vb/service.vb#2)]  
+  
+ Der folgende Code zeigt, wie die <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>-Bindung auf dem Client programmatisch verwendet wird:  
+  
+ [!code-csharp[S_WCFToMsmq#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/snippets.cs#2)]
+ [!code-vb[S_WCFToMsmq#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_wcftomsmq/vb/snippets.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MsmqIntegrationBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MsmqIntegrationBinding (System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode securityMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode securityMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding.#ctor(System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="securityMode" Type="System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode" />
+      </Parameters>
+      <Docs>
+        <param name="securityMode">Der vom MSMQ-Integrationskanal unterstützte Sicherheitsmodus.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding" />-Klasse, indem der angegebene <see cref="T:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode" /> verwendet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode können Sie eine neue Instanz der <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> instantiieren und in einen Sicherheitsmodus übergeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Instantiieren einer Instanz der <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>-Bindung unter Angabe des <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode> veranschaulicht:  
+  
+ [!code-csharp[S_WCFToMsmq#5](~/samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/snippets.cs#5)]
+ [!code-vb[S_WCFToMsmq#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_wcftomsmq/vb/snippets.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der Wert liegt nicht im Bereich der <see cref="T:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode" />-Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MsmqIntegrationBinding (string configurationName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string configurationName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="configurationName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="configurationName">Der Wert des <see langword="configurationName" />-Attributs, mit dem das <see langword="binding" />-Element identifiziert wird, dessen Einstellungen zur Initialisierung der Bindung verwendet werden.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding" />-Klasse aus den Einstellungen eines angegebenen Konfigurationsbindungselements.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode können die Bindungseinstellungen in eine Konfigurationsdatei eingefügt werden, die tatsächliche Bindung kann jedoch in Code hinzugefügt werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Code wird das Erstellen einer Instanz der <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>-Bindung und ihre Initialisierung durch Übergabe des Namens des Bindungselements veranschaulicht.  
+  
+ [!code-csharp[S_WCFToMsmq#3](~/samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/snippets.cs#3)]
+ [!code-vb[S_WCFToMsmq#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_wcftomsmq/vb/snippets.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBindingElements">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.BindingElementCollection CreateBindingElements ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.BindingElementCollection CreateBindingElements() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding.CreateBindingElements" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingElementCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die Bindungselemente im Basisprofilstapel zurück.</summary>
+        <returns>Die <see cref="T:System.ServiceModel.Channels.BindingElementCollection" />, die den Stapel Bindungselemente im Basisprofilstapel enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Security">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity Security { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity Security" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding.Security" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity" /> ab, die mit dieser Bindung verknüpft ist.</summary>
+        <value>Die <see cref="T:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity" />, die mit der Bindung verknüpft ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity> stellt eine Kapselung der MSMQ (Message Queuing)-Transportsicherheitseinstellungen dar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializationFormat">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat SerializationFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat SerializationFormat" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding.SerializationFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Seriealisierungsformat ab, das zum Serialisieren und Deserialisieren der Nachricht verwendet wird, oder legt es fest.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat" />-Objekt, das den zu verwendenden Seriealisierungstyp darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt einen Enumerationswert zurück, mit dem angegeben wird, wie eine [!INCLUDE[indigo2](~/includes/indigo2-md.md)]-Nachricht serialisiert und deserialisiert wird. Weitere Informationen finden Sie unter <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird das Festlegen des Serialisierungsformats einer Instanz der <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>-Klasse veranschaulicht.  
+  
+ [!code-csharp[S_WCFToMsmq#4](~/samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/client.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeSecurity">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeSecurity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeSecurity() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding.ShouldSerializeSecurity" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob Sicherheitsinformationen serialisiert werden sollen.</summary>
+        <returns>
+          <see langword="true" />ob Sicherheitsinformationen serialisiert werden soll; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

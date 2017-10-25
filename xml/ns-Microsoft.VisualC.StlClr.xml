@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.VisualC.StlClr">
+  <Docs>
+    <summary>Enthält Klassen, Schnittstellen und Enumeratoren, die zum Implementieren der <see href="https://docs.microsoft.com/cpp/dotnet/stl-clr-library-reference">STL/CLR-Bibliothek</see>.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

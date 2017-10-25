@@ -1,0 +1,1144 @@
+<Type Name="Geometry" FullName="System.Windows.Media.Geometry">
+  <TypeSignature Language="C#" Value="public abstract class Geometry : System.Windows.Media.Animation.Animatable, IFormattable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract Geometry extends System.Windows.Media.Animation.Animatable implements class System.IFormattable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Geometry" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.Animatable</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IFormattable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Media.GeometryConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ValueSerializer(typeof(System.Windows.Media.Converters.GeometryValueSerializer))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Von dieser abstrakten Basisklasse abgeleitete Klassen definieren geometrische Formen. <see cref="T:System.Windows.Media.Geometry" />-Objekte können zum Ausschneiden, zum Ausführen von Treffertests und zum Rendern von 2D-Grafikdaten verwendet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="geometry-compared-to-shape"></a>Geometrie, die im Vergleich zur Form "  
+ Die <xref:System.Windows.Shapes.Shape?displayProperty=nameWithType> -Klasse verfügt über eine <xref:System.Windows.Shapes.Shape.Fill%2A>, <xref:System.Windows.Shapes.Shape.Stroke%2A>, und andere Eigenschaften zu rendern, <xref:System.Windows.Media.Geometry> und die abgeleiteten Klassen fehlen. Die <xref:System.Windows.Shapes.Shape> Klasse ist eine <xref:System.Windows.FrameworkElement> und aus diesem Grund ist das Layoutsystem; Teil davon abgeleiteten Klassen verwendet werden können, als Inhalt eines Elements, das unterstützt <xref:System.Windows.UIElement> untergeordneten Elemente.  
+  
+ Die <xref:System.Windows.Media.Geometry> -Klasse, andererseits, einfach die Geometrie einer Form definiert und kann nicht selbst gerendert. Aufgrund seiner Einfachheit weist er eine größere Anzahl an verwendet.  
+  
+ **Features von Freezable:** , da es erbt die <xref:System.Windows.Freezable> -Klasse, die <xref:System.Windows.Media.Geometry> Klasse bietet verschiedene spezielle Funktionen: <xref:System.Windows.Media.Geometry> Objekte deklariert werden können, wie für mehrere Objekte, die zur Verbesserung der Schreibschutz versehen wurden freigegeben Leistung, geklont und als threadsicher. Weitere Informationen zu den verschiedenen Features von <xref:System.Windows.Freezable> anzuzeigen, [Freezable Objects Overview](~/docs/framework/wpf/advanced/freezable-objects-overview.md).  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Obwohl diese Klasse abstrakt ist, ist es nicht öffentlich erweiterbar.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="Bounds">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Rect Bounds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Rect Bounds" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Geometry.Bounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Rect" /> , die den Achsen ausgerichtete umgebende Feld gibt die <see cref="T:System.Windows.Media.Geometry" />.</summary>
+        <value>Die Achse ausgerichtete umgebende Feld der <see cref="T:System.Windows.Media.Geometry" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird möglicherweise durch einen Strich hinzugefügte Bereich nicht berücksichtigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Geometry Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Geometry Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Geometry</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon des <see cref="T:System.Windows.Media.Geometry" />-Objekts, indem tiefe Kopien der Werte des Objekts erstellt werden. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Geometry CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Geometry CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Geometry</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon der <see cref="T:System.Windows.Media.Geometry" /> Objekts, indem tiefe Kopien der aktuellen Werte des Objekts. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true" /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Combine">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.PathGeometry Combine (System.Windows.Media.Geometry geometry1, System.Windows.Media.Geometry geometry2, System.Windows.Media.GeometryCombineMode mode, System.Windows.Media.Transform transform);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Media.PathGeometry Combine(class System.Windows.Media.Geometry geometry1, class System.Windows.Media.Geometry geometry2, valuetype System.Windows.Media.GeometryCombineMode mode, class System.Windows.Media.Transform transform) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.Combine(System.Windows.Media.Geometry,System.Windows.Media.Geometry,System.Windows.Media.GeometryCombineMode,System.Windows.Media.Transform)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PathGeometry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="geometry1" Type="System.Windows.Media.Geometry" />
+        <Parameter Name="geometry2" Type="System.Windows.Media.Geometry" />
+        <Parameter Name="mode" Type="System.Windows.Media.GeometryCombineMode" />
+        <Parameter Name="transform" Type="System.Windows.Media.Transform" />
+      </Parameters>
+      <Docs>
+        <param name="geometry1">Die erste zu kombinierende Geometrie.</param>
+        <param name="geometry2">Die zweite zu kombinierende Geometrie.</param>
+        <param name="mode">Einer der Enumerationswerte, der angibt, wie die Geometrien kombiniert werden.</param>
+        <param name="transform">Eine Transformation der kombinierten Geometrie anwenden oder <see langword="null" />.</param>
+        <summary>Kombiniert die beiden Geometrien unter Verwendung des angegebenen <see cref="T:System.Windows.Media.GeometryCombineMode" /> und wendet die angegebene Transformation auf die resultierende Geometrie.</summary>
+        <returns>Die kombinierte Geometrie.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode verwendet die standardmäßige Toleranz-Faktor (beschrieben, die von der <xref:System.Windows.Media.Geometry.StandardFlatteningTolerance%2A> Eigenschaft) Wenn Geometrien kombiniert. Verwenden Sie zum Angeben Ihrer eigenen Fehlertoleranz der <xref:System.Windows.Media.Geometry.Combine%2A> Methode.  
+  
+ Einige <xref:System.Windows.Media.Geometry> Methoden (z. B. <xref:System.Windows.Media.Geometry.Combine%2A>) zu erzeugen, oder verwenden Sie eine polygonale Näherung der Geometry-Instanz. Der Fehlertoleranz gibt die maximale Entfernung zwischen Punkten in diesem polygonale Näherung. Kleinere Toleranzwerte bessere Näherungswerten produzieren, führt jedoch erfordert eine höhere verarbeitungsleistung als Näherungswert mit einer großen Fehlertoleranz.  
+  
+ Sollte sorgfältig, um herauszufinden einbezogen werden, wenn mit <xref:System.Windows.Media.Geometry.Combine%2A> auf eine Union ausgeführt werden, da es CPU sehr teuer sein kann. In den meisten Fällen eine <xref:System.Windows.Media.GeometryGroup> oder <xref:System.Windows.Media.PathGeometry.AddGeometry%2A> besser funktioniert.  
+  
+ Verwendung <xref:System.Windows.Media.Geometry.Combine%2A> nur, wenn eine der folgenden Bedingungen zutrifft:  
+  
+-   Die geometrische Vorgang ist eine Union.  
+  
+-   Entweder der Geometrien hat eine <xref:System.Windows.Media.FillRule> Wert <xref:System.Windows.Media.FillRule.EvenOdd> und die Geometrien überschneiden sich (d. h. die <xref:System.Windows.Media.FillRule> tatsächlich wichtig ist).  
+  
+-   Uhrzeit ist nicht relevant, jedoch ist Speicherplatz (z. B. wenn die Geometrie einmal erstellt und dann zwischengespeichert). In der Regel <xref:System.Windows.Media.Geometry.Combine%2A> erzeugt kleinere Ausgabe als <xref:System.Windows.Media.PathGeometry.AddGeometry%2A>.  
+  
+-   Die resultierende Geometrie gezeichnet oder in einer Pfadanimation verwendet werden und <xref:System.Windows.Media.PathGeometry.AddGeometry%2A> bietet nicht die gewünschte Kontur.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Combine">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.PathGeometry Combine (System.Windows.Media.Geometry geometry1, System.Windows.Media.Geometry geometry2, System.Windows.Media.GeometryCombineMode mode, System.Windows.Media.Transform transform, double tolerance, System.Windows.Media.ToleranceType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Media.PathGeometry Combine(class System.Windows.Media.Geometry geometry1, class System.Windows.Media.Geometry geometry2, valuetype System.Windows.Media.GeometryCombineMode mode, class System.Windows.Media.Transform transform, float64 tolerance, valuetype System.Windows.Media.ToleranceType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.Combine(System.Windows.Media.Geometry,System.Windows.Media.Geometry,System.Windows.Media.GeometryCombineMode,System.Windows.Media.Transform,System.Double,System.Windows.Media.ToleranceType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PathGeometry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="geometry1" Type="System.Windows.Media.Geometry" />
+        <Parameter Name="geometry2" Type="System.Windows.Media.Geometry" />
+        <Parameter Name="mode" Type="System.Windows.Media.GeometryCombineMode" />
+        <Parameter Name="transform" Type="System.Windows.Media.Transform" />
+        <Parameter Name="tolerance" Type="System.Double" />
+        <Parameter Name="type" Type="System.Windows.Media.ToleranceType" />
+      </Parameters>
+      <Docs>
+        <param name="geometry1">Die erste zu kombinierende Geometrie.</param>
+        <param name="geometry2">Die zweite zu kombinierende Geometrie.</param>
+        <param name="mode">Einer der Enumerationswerte, der angibt, wie die Geometrien kombiniert werden.</param>
+        <param name="transform">Eine Transformation der kombinierten Geometrie anwenden oder <see langword="null" />.</param>
+        <param name="tolerance">Die maximale Grenzen für die Entfernung zwischen Punkten in die polygonale Näherung der Geometrien. Bei kleineren Werten genauere Ergebnisse erzeugen jedoch dazu führen, dass Ausführung verlangsamt. Wenn <c>Toleranz</c> ist kleiner als.000001,.000001 wird stattdessen verwendet.</param>
+        <param name="type">Eines der <see cref="T:System.Windows.Media.ToleranceType" /> Werte, der angibt, ob der Fehlertoleranz ein absoluter Wert oder relativ zum Bereich der Geometry-Instanz.</param>
+        <summary>Kombiniert die beiden Geometrien unter Verwendung des angegebenen <see cref="T:System.Windows.Media.GeometryCombineMode" /> und Fehlertoleranz, und wendet die angegebene Transformation auf die resultierende Geometrie.</summary>
+        <returns>Die kombinierte Geometrie.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige <xref:System.Windows.Media.Geometry> Methoden (z. B. <xref:System.Windows.Media.Geometry.Combine%2A>) zu erzeugen, oder verwenden Sie eine polygonale Näherung der Geometry-Instanz. Der Fehlertoleranz gibt die maximale Entfernung zwischen Punkten in diesem polygonale Näherung. Kleinere Toleranzwerte bessere Näherungswerten produzieren, führt jedoch erfordert eine höhere verarbeitungsleistung als Näherungswert mit einer großen Fehlertoleranz.  
+  
+ Sollte sorgfältig, um herauszufinden einbezogen werden, wenn mit <xref:System.Windows.Media.Geometry.Combine%2A> auf eine Union ausgeführt werden, da es CPU sehr teuer sein kann. In den meisten Fällen eine <xref:System.Windows.Media.GeometryGroup> oder <xref:System.Windows.Media.PathGeometry.AddGeometry%2A> besser funktioniert.  
+  
+ Verwendung <xref:System.Windows.Media.Geometry.Combine%2A> nur, wenn eine der folgenden Bedingungen zutrifft:  
+  
+-   Die geometrische Vorgang ist eine Union.  
+  
+-   Entweder der Geometrien hat eine <xref:System.Windows.Media.FillRule> Wert <xref:System.Windows.Media.FillRule.EvenOdd> und die Geometrien überschneiden sich (d. h. die <xref:System.Windows.Media.FillRule> tatsächlich wichtig ist).  
+  
+-   Uhrzeit ist nicht relevant, jedoch ist Speicherplatz (z. B. wenn die Geometrie einmal erstellt und dann zwischengespeichert). In der Regel <xref:System.Windows.Media.Geometry.Combine%2A> erzeugt kleinere Ausgabe als <xref:System.Windows.Media.PathGeometry.AddGeometry%2A>.  
+  
+-   Die resultierende Geometrie gezeichnet oder in einer Pfadanimation verwendet werden und <xref:System.Windows.Media.PathGeometry.AddGeometry%2A> bietet nicht die gewünschte Kontur.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Geometry Empty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Media.Geometry Empty" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Geometry.Empty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Geometry</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein leeres Objekt ab.</summary>
+        <value>Das leere Geometry-Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillContains">
+      <MemberSignature Language="C#" Value="public bool FillContains (System.Windows.Media.Geometry geometry);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool FillContains(class System.Windows.Media.Geometry geometry) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.FillContains(System.Windows.Media.Geometry)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="geometry" Type="System.Windows.Media.Geometry" />
+      </Parameters>
+      <Docs>
+        <param name="geometry">Die zu überprüfende Geometrie.</param>
+        <summary>Gibt an, ob die aktuelle Geometrie vollständig angegebenen enthält <see cref="T:System.Windows.Media.Geometry" />.</summary>
+        <returns>
+          <see langword="true" />Wenn die aktuelle Geometrie vollständig enthält <paramref name="geometry" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Den Standardrand eines Fehlers (beschrieben, die durch die <xref:System.Windows.Media.Geometry.StandardFlatteningTolerance%2A> Eigenschaft) wird verwendet, wenn Sie bestimmen, ob die aktuelle Geometrie die angegebene Geometrie enthält. Um eine eigene Fehlergrenze anzugeben, verwenden die <xref:System.Windows.Media.Geometry.FillContains%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillContains">
+      <MemberSignature Language="C#" Value="public bool FillContains (System.Windows.Point hitPoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool FillContains(valuetype System.Windows.Point hitPoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.FillContains(System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hitPoint" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="hitPoint">Der zu überprüfende Punkt.</param>
+        <summary>Gibt an, ob die Geometrie das angegebene enthält <see cref="T:System.Windows.Point" />.</summary>
+        <returns>
+          <see langword="true" />Wenn die Geometrie enthält <paramref name="hitPoint" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standard-Fehlertoleranz (beschrieben, die durch die <xref:System.Windows.Media.Geometry.StandardFlatteningTolerance%2A> Eigenschaft) wird verwendet, wenn Sie bestimmen, ob die Geometrie an den angegebenen Punkt enthält. Verwenden Sie zum Angeben Ihrer eigenen Fehlertoleranz der <xref:System.Windows.Media.Geometry.FillContains%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillContains">
+      <MemberSignature Language="C#" Value="public bool FillContains (System.Windows.Media.Geometry geometry, double tolerance, System.Windows.Media.ToleranceType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool FillContains(class System.Windows.Media.Geometry geometry, float64 tolerance, valuetype System.Windows.Media.ToleranceType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.FillContains(System.Windows.Media.Geometry,System.Double,System.Windows.Media.ToleranceType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="geometry" Type="System.Windows.Media.Geometry" />
+        <Parameter Name="tolerance" Type="System.Double" />
+        <Parameter Name="type" Type="System.Windows.Media.ToleranceType" />
+      </Parameters>
+      <Docs>
+        <param name="geometry">Die zu überprüfende Geometrie.</param>
+        <param name="tolerance">Die maximale Grenzen für die Entfernung zwischen Punkten in die polygonale Näherung der Geometrien. Bei kleineren Werten genauere Ergebnisse erzeugen jedoch dazu führen, dass Ausführung verlangsamt. Wenn <c>Toleranz</c> ist kleiner als.000001,.000001 wird stattdessen verwendet.</param>
+        <param name="type">Eines der <see cref="T:System.Windows.Media.ToleranceType" /> Werte, der angibt, ob der Fehlertoleranz ein absoluter Wert oder relativ zum Bereich der Geometry-Instanz.</param>
+        <summary>Gibt an, ob die aktuelle Geometrie das angegebene enthält <see cref="T:System.Windows.Media.Geometry" />, der angegebenen Fehlergrenze.</summary>
+        <returns>
+          <see langword="true" />Wenn die aktuelle Geometrie enthält <paramref name="geometry" />, Verwendung der angegebenen Fehlergrenze; anderenfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige <xref:System.Windows.Media.Geometry> Methoden (z. B. <xref:System.Windows.Media.Geometry.FillContains%2A>) zu erzeugen, oder verwenden Sie eine polygonale Näherung der Geometry-Instanz. Der Fehlertoleranz gibt die maximale Entfernung zwischen Punkten in diesem polygonale Näherung. Kleinere Toleranzwerte bessere Näherungswerten produzieren, führt jedoch erfordert eine höhere verarbeitungsleistung als Näherungswert mit einer großen Fehlertoleranz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillContains">
+      <MemberSignature Language="C#" Value="public bool FillContains (System.Windows.Point hitPoint, double tolerance, System.Windows.Media.ToleranceType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool FillContains(valuetype System.Windows.Point hitPoint, float64 tolerance, valuetype System.Windows.Media.ToleranceType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.FillContains(System.Windows.Point,System.Double,System.Windows.Media.ToleranceType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hitPoint" Type="System.Windows.Point" />
+        <Parameter Name="tolerance" Type="System.Double" />
+        <Parameter Name="type" Type="System.Windows.Media.ToleranceType" />
+      </Parameters>
+      <Docs>
+        <param name="hitPoint">Der zu überprüfende Punkt.</param>
+        <param name="tolerance">Die maximale Grenzen für die Entfernung zwischen Punkten in die polygonale Näherung der Geometry-Instanz. Bei kleineren Werten genauere Ergebnisse erzeugen jedoch dazu führen, dass Ausführung verlangsamt. Wenn <c>Toleranz</c> ist kleiner als.000001,.000001 wird stattdessen verwendet.</param>
+        <param name="type">Eines der <see cref="T:System.Windows.Media.ToleranceType" /> Werte, der angibt, ob der Fehlertoleranz ein absoluter Wert oder relativ zum Bereich der Geometry-Instanz.</param>
+        <summary>Gibt an, ob die Geometrie das angegebene enthält <see cref="T:System.Windows.Point" />, der angegebenen Fehlergrenze.</summary>
+        <returns>
+          <see langword="true" />Wenn die Geometrie enthält <paramref name="hitPoint" />, Verwendung der angegebenen Fehlergrenze; anderenfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige <xref:System.Windows.Media.Geometry> Methoden (z. B. <xref:System.Windows.Media.Geometry.FillContains%2A>) zu erzeugen, oder verwenden Sie eine polygonale Näherung der Geometry-Instanz. Der Fehlertoleranz gibt die maximale Entfernung zwischen Punkten in diesem polygonale Näherung. Kleinere Toleranzwerte bessere Näherungswerten produzieren, führt jedoch erfordert eine höhere verarbeitungsleistung als Näherungswert mit einer großen Fehlertoleranz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillContainsWithDetail">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.IntersectionDetail FillContainsWithDetail (System.Windows.Media.Geometry geometry);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Media.IntersectionDetail FillContainsWithDetail(class System.Windows.Media.Geometry geometry) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.FillContainsWithDetail(System.Windows.Media.Geometry)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.IntersectionDetail</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="geometry" Type="System.Windows.Media.Geometry" />
+      </Parameters>
+      <Docs>
+        <param name="geometry">Die zu überprüfende Geometrie.</param>
+        <summary>Gibt einen Wert, der die Schnittmenge der aktuellen Geometrie und die angegebene Geometrie beschreibt.</summary>
+        <returns>Einer der Enumerationswerte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standard-Fehlertoleranz (definiert durch die <xref:System.Windows.Media.Geometry.StandardFlatteningTolerance%2A> Eigenschaft) wird verwendet, wenn Sie bestimmen, ob die aktuelle Geometrie die angegebene Geometrie enthält. Verwenden Sie zum Angeben Ihrer eigenen Fehlertoleranz der <xref:System.Windows.Media.Geometry.FillContainsWithDetail%2A> Methode.  
+  
+ Einige <xref:System.Windows.Media.Geometry> Methoden (z. B. <xref:System.Windows.Media.Geometry.FillContainsWithDetail%2A>) zu erzeugen, oder verwenden Sie eine polygonale Näherung der Geometry-Instanz. Der Fehlertoleranz gibt die maximale Entfernung zwischen Punkten in diesem polygonale Näherung. Kleinere Toleranzwerte bessere Näherungswerten produzieren, führt jedoch erfordert eine höhere verarbeitungsleistung als Näherungswert mit einer großen Fehlertoleranz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillContainsWithDetail">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Media.IntersectionDetail FillContainsWithDetail (System.Windows.Media.Geometry geometry, double tolerance, System.Windows.Media.ToleranceType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Windows.Media.IntersectionDetail FillContainsWithDetail(class System.Windows.Media.Geometry geometry, float64 tolerance, valuetype System.Windows.Media.ToleranceType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.FillContainsWithDetail(System.Windows.Media.Geometry,System.Double,System.Windows.Media.ToleranceType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.IntersectionDetail</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="geometry" Type="System.Windows.Media.Geometry" />
+        <Parameter Name="tolerance" Type="System.Double" />
+        <Parameter Name="type" Type="System.Windows.Media.ToleranceType" />
+      </Parameters>
+      <Docs>
+        <param name="geometry">Die zu überprüfende Geometrie.</param>
+        <param name="tolerance">Die maximale Grenzen für die Entfernung zwischen Punkten in die polygonale Näherung der Geometrien. Bei kleineren Werten genauere Ergebnisse erzeugen jedoch dazu führen, dass Ausführung verlangsamt. Wenn <c>Toleranz</c> ist kleiner als.000001,.000001 wird stattdessen verwendet.</param>
+        <param name="type">Eines der <see cref="T:System.Windows.Media.ToleranceType" /> Werte, der angibt, ob der Fehlertoleranz ein absoluter Wert oder relativ zum Bereich der Geometry-Instanz.</param>
+        <summary>Gibt bei Verwendung der angegebenen Fehlergrenze einen Wert, der beschreibt, der die Schnittmenge der aktuellen Geometrie und die angegebene Geometrie zurück.</summary>
+        <returns>Einer der Enumerationswerte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige <xref:System.Windows.Media.Geometry> Methoden (z. B. <xref:System.Windows.Media.Geometry.FillContainsWithDetail%2A>) zu erzeugen, oder verwenden Sie eine polygonale Näherung der Geometry-Instanz. Der Fehlertoleranz gibt die maximale Entfernung zwischen Punkten in diesem polygonale Näherung. Kleinere Toleranzwerte bessere Näherungswerten produzieren, führt jedoch erfordert eine höhere verarbeitungsleistung als Näherungswert mit einer großen Fehlertoleranz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetArea">
+      <MemberSignature Language="C#" Value="public double GetArea ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 GetArea() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.GetArea" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Bereich der ausgefüllten Bereichs der der <see cref="T:System.Windows.Media.Geometry" /> Objekt.</summary>
+        <returns>Der Bereich der ausgefüllte Bereich der Geometry-Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige <xref:System.Windows.Media.Geometry> Methoden (z. B. <xref:System.Windows.Media.Geometry.GetArea%2A>) zu erzeugen, oder verwenden Sie eine polygonale Näherung der Geometry-Instanz. Der Fehlertoleranz gibt die maximale Entfernung zwischen Punkten in diesem polygonale Näherung. Kleinere Toleranzwerte bessere Näherungswerten produzieren, führt jedoch erfordert eine höhere verarbeitungsleistung als Näherungswert mit einer großen Fehlertoleranz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetArea">
+      <MemberSignature Language="C#" Value="public virtual double GetArea (double tolerance, System.Windows.Media.ToleranceType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance float64 GetArea(float64 tolerance, valuetype System.Windows.Media.ToleranceType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.GetArea(System.Double,System.Windows.Media.ToleranceType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tolerance" Type="System.Double" />
+        <Parameter Name="type" Type="System.Windows.Media.ToleranceType" />
+      </Parameters>
+      <Docs>
+        <param name="tolerance">Die maximale Grenzen für die Entfernung zwischen Punkten in die polygonale Näherung der Geometry-Instanz. Bei kleineren Werten genauere Ergebnisse erzeugen jedoch dazu führen, dass Ausführung verlangsamt. Wenn <c>Toleranz</c> ist kleiner als.000001,.000001 wird stattdessen verwendet.</param>
+        <param name="type">Eines der <see cref="T:System.Windows.Media.ToleranceType" /> Werte, der angibt, ob der Fehlertoleranz ein absoluter Wert oder relativ zum Bereich der Geometry-Instanz.</param>
+        <summary>Ruft den Bereich innerhalb der angegebenen Toleranz ausgefüllten Bereichs der der <see cref="T:System.Windows.Media.Geometry" /> Objekt.</summary>
+        <returns>Der Bereich der ausgefüllte Bereich der Geometry-Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige <xref:System.Windows.Media.Geometry> Methoden (z. B. <xref:System.Windows.Media.Geometry.GetArea%2A>) zu erzeugen, oder verwenden Sie eine polygonale Näherung der Geometry-Instanz. Der Fehlertoleranz gibt die maximale Entfernung zwischen Punkten in diesem polygonale Näherung. Kleinere Toleranzwerte bessere Näherungswerten produzieren, führt jedoch erfordert eine höhere verarbeitungsleistung als Näherungswert mit einer großen Fehlertoleranz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFlattenedPathGeometry">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.PathGeometry GetFlattenedPathGeometry ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.PathGeometry GetFlattenedPathGeometry() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.GetFlattenedPathGeometry" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PathGeometry</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Media.PathGeometry" /> also eine polygonale Näherung der <see cref="T:System.Windows.Media.Geometry" /> Objekt.</summary>
+        <returns>Die polygonale Näherung der <see cref="T:System.Windows.Media.Geometry" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode verwendet die standardmäßige Toleranz-Faktor (beschrieben, die durch die <xref:System.Windows.Media.Geometry.StandardFlatteningTolerance%2A> Eigenschaft) bei der Verarbeitung der Geometrie. Verwenden Sie zum Angeben Ihrer eigenen Fehlertoleranz der <xref:System.Windows.Media.Geometry.GetFlattenedPathGeometry%2A> Methode.  
+  
+ Einige <xref:System.Windows.Media.Geometry> Methoden (z. B. <xref:System.Windows.Media.Geometry.GetFlattenedPathGeometry%2A>) zu erzeugen, oder verwenden Sie eine polygonale Näherung der Geometry-Instanz. Der Fehlertoleranz gibt die maximale Entfernung zwischen Punkten in diesem polygonale Näherung. Kleinere Toleranzwerte bessere Näherungswerten produzieren, führt jedoch erfordert eine höhere verarbeitungsleistung als Näherungswert mit einer großen Fehlertoleranz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFlattenedPathGeometry">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Media.PathGeometry GetFlattenedPathGeometry (double tolerance, System.Windows.Media.ToleranceType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Media.PathGeometry GetFlattenedPathGeometry(float64 tolerance, valuetype System.Windows.Media.ToleranceType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.GetFlattenedPathGeometry(System.Double,System.Windows.Media.ToleranceType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PathGeometry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tolerance" Type="System.Double" />
+        <Parameter Name="type" Type="System.Windows.Media.ToleranceType" />
+      </Parameters>
+      <Docs>
+        <param name="tolerance">Die maximale Grenzen für die Entfernung zwischen Punkten in die polygonale Näherung der Geometry-Instanz. Bei kleineren Werten genauere Ergebnisse erzeugen jedoch dazu führen, dass Ausführung verlangsamt. Wenn <c>Toleranz</c> ist kleiner als.000001,.000001 wird stattdessen verwendet.</param>
+        <param name="type">Eines der <see cref="T:System.Windows.Media.ToleranceType" /> Werte, der angibt, ob der Fehlertoleranz ein absoluter Wert oder relativ zum Bereich der Geometry-Instanz.</param>
+        <summary>Ruft eine <see cref="T:System.Windows.Media.PathGeometry" />, innerhalb der angegebenen Toleranz ist, die eine polygonale Näherung der <see cref="T:System.Windows.Media.Geometry" /> Objekt.</summary>
+        <returns>Die polygonale Näherung der <see cref="T:System.Windows.Media.Geometry" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige <xref:System.Windows.Media.Geometry> Methoden (z. B. <xref:System.Windows.Media.Geometry.GetFlattenedPathGeometry%2A>) zu erzeugen, oder verwenden Sie eine polygonale Näherung der Geometry-Instanz. Der Fehlertoleranz gibt die maximale Entfernung zwischen Punkten in diesem polygonale Näherung. Kleinere Toleranzwerte bessere Näherungswerten produzieren, führt jedoch erfordert eine höhere verarbeitungsleistung als Näherungswert mit einer großen Fehlertoleranz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOutlinedPathGeometry">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.PathGeometry GetOutlinedPathGeometry ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.PathGeometry GetOutlinedPathGeometry() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.GetOutlinedPathGeometry" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PathGeometry</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Media.PathGeometry" /> also eine vereinfachte Kontur des ausgefüllten Bereichs der der <see cref="T:System.Windows.Media.Geometry" />.</summary>
+        <returns>Eine vereinfachte Kontur des ausgefüllten Bereichs der der <see cref="T:System.Windows.Media.Geometry" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode verwendet die standardmäßige Toleranz-Faktor (beschrieben, die durch die <xref:System.Windows.Media.Geometry.StandardFlatteningTolerance%2A> Eigenschaft) bei der Verarbeitung der Geometrie. Verwenden Sie zum Angeben Ihrer eigenen Fehlertoleranz der <xref:System.Windows.Media.Geometry.GetOutlinedPathGeometry%2A> Methode.  
+  
+ Einige <xref:System.Windows.Media.Geometry> Methoden (z. B. <xref:System.Windows.Media.Geometry.GetOutlinedPathGeometry%2A>) zu erzeugen, oder verwenden Sie eine polygonale Näherung der Geometry-Instanz. Der Fehlertoleranz gibt die maximale Entfernung zwischen Punkten in diesem polygonale Näherung. Kleinere Toleranzwerte bessere Näherungswerten produzieren, führt jedoch erfordert eine höhere verarbeitungsleistung als Näherungswert mit einer großen Fehlertoleranz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOutlinedPathGeometry">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Media.PathGeometry GetOutlinedPathGeometry (double tolerance, System.Windows.Media.ToleranceType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Media.PathGeometry GetOutlinedPathGeometry(float64 tolerance, valuetype System.Windows.Media.ToleranceType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.GetOutlinedPathGeometry(System.Double,System.Windows.Media.ToleranceType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PathGeometry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tolerance" Type="System.Double" />
+        <Parameter Name="type" Type="System.Windows.Media.ToleranceType" />
+      </Parameters>
+      <Docs>
+        <param name="tolerance">Die maximale Grenzen für die Entfernung zwischen Punkten in die polygonale Näherung der Geometry-Instanz. Bei kleineren Werten genauere Ergebnisse erzeugen jedoch dazu führen, dass Ausführung verlangsamt. Wenn <c>Toleranz</c> ist kleiner als.000001,.000001 wird stattdessen verwendet.</param>
+        <param name="type">Eines der <see cref="T:System.Windows.Media.ToleranceType" /> Werte, der angibt, ob der Fehlertoleranz ein absoluter Wert oder relativ zum Bereich der Geometry-Instanz.</param>
+        <summary>Ruft eine <see cref="T:System.Windows.Media.PathGeometry" />, innerhalb der angegebenen Toleranz ist, die eine vereinfachte Kontur des ausgefüllten Bereichs der der <see cref="T:System.Windows.Media.Geometry" />.</summary>
+        <returns>Eine vereinfachte Kontur des ausgefüllten Bereichs der der <see cref="T:System.Windows.Media.Geometry" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige <xref:System.Windows.Media.Geometry> Methoden (z. B. <xref:System.Windows.Media.Geometry.GetOutlinedPathGeometry%2A>) zu erzeugen, oder verwenden Sie eine polygonale Näherung der Geometry-Instanz. Der Fehlertoleranz gibt die maximale Entfernung zwischen Punkten in diesem polygonale Näherung. Kleinere Toleranzwerte bessere Näherungswerten produzieren, führt jedoch erfordert eine höhere verarbeitungsleistung als Näherungswert mit einer großen Fehlertoleranz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRenderBounds">
+      <MemberSignature Language="C#" Value="public System.Windows.Rect GetRenderBounds (System.Windows.Media.Pen pen);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Rect GetRenderBounds(class System.Windows.Media.Pen pen) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.GetRenderBounds(System.Windows.Media.Pen)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pen" Type="System.Windows.Media.Pen" />
+      </Parameters>
+      <Docs>
+        <param name="pen">Ein Objekt, das den Clientbereich des Strichs der Geometrie beschreibt.</param>
+        <summary>Gibt eine Achsen ausgerichtete Rechteck, das genau groß genug ist, für die Geometrie enthalten, nachdem er gezeichnet wurde mit dem angegebenen <see cref="T:System.Windows.Media.Pen" />.</summary>
+        <returns>Eine Achse ausgerichtete Rechteck, das genau groß genug ist, um die Kontur der Geometrie enthalten ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode verwendet die standardmäßige Toleranz-Faktor (beschrieben, die durch die <xref:System.Windows.Media.Geometry.StandardFlatteningTolerance%2A> Eigenschaft) bei der Verarbeitung der Geometrie. Verwenden Sie zum Angeben Ihrer eigenen Fehlertoleranz der <xref:System.Windows.Media.Geometry.GetRenderBounds%2A> Methode.  
+  
+ Einige <xref:System.Windows.Media.Geometry> Methoden (z. B. <xref:System.Windows.Media.Geometry.GetRenderBounds%2A>) zu erzeugen, oder verwenden Sie eine polygonale Näherung der Geometry-Instanz. Der Fehlertoleranz gibt die maximale Entfernung zwischen Punkten in diesem polygonale Näherung. Kleinere Toleranzwerte bessere Näherungswerten produzieren, führt jedoch erfordert eine höhere verarbeitungsleistung als Näherungswert mit einer großen Fehlertoleranz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRenderBounds">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Rect GetRenderBounds (System.Windows.Media.Pen pen, double tolerance, System.Windows.Media.ToleranceType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Windows.Rect GetRenderBounds(class System.Windows.Media.Pen pen, float64 tolerance, valuetype System.Windows.Media.ToleranceType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.GetRenderBounds(System.Windows.Media.Pen,System.Double,System.Windows.Media.ToleranceType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pen" Type="System.Windows.Media.Pen" />
+        <Parameter Name="tolerance" Type="System.Double" />
+        <Parameter Name="type" Type="System.Windows.Media.ToleranceType" />
+      </Parameters>
+      <Docs>
+        <param name="pen">Ein Objekt, das den Clientbereich des Strichs der Geometrie beschreibt.</param>
+        <param name="tolerance">Die maximale Grenzen für die Entfernung zwischen Punkten in die polygonale Näherung der Geometry-Instanz. Bei kleineren Werten genauere Ergebnisse erzeugen jedoch dazu führen, dass Ausführung verlangsamt. Wenn <c>Toleranz</c> ist kleiner als.000001,.000001 wird stattdessen verwendet.</param>
+        <param name="type">Eines der <see cref="T:System.Windows.Media.ToleranceType" /> Werte, der angibt, ob der Fehlertoleranz ein absoluter Wert oder relativ zum Bereich der Geometry-Instanz.</param>
+        <summary>Gibt eine Achsen ausgerichtete Rechteck, das genau groß genug ist, für die Geometrie enthalten, nachdem er gezeichnet wurde mit dem angegebenen <see cref="T:System.Windows.Media.Pen" />, erhält den Faktor für die angegebene Toleranz gewährt.</summary>
+        <returns>Eine Achse ausgerichtete Rechteck, das genau groß genug ist, um die Kontur der Geometrie enthalten ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige <xref:System.Windows.Media.Geometry> Methoden (z. B. <xref:System.Windows.Media.Geometry.GetRenderBounds%2A>) zu erzeugen, oder verwenden Sie eine polygonale Näherung der Geometry-Instanz. Der Fehlertoleranz gibt die maximale Entfernung zwischen Punkten in diesem polygonale Näherung. Kleinere Toleranzwerte bessere Näherungswerten produzieren, führt jedoch erfordert eine höhere verarbeitungsleistung als Näherungswert mit einer großen Fehlertoleranz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWidenedPathGeometry">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.PathGeometry GetWidenedPathGeometry (System.Windows.Media.Pen pen);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.PathGeometry GetWidenedPathGeometry(class System.Windows.Media.Pen pen) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.GetWidenedPathGeometry(System.Windows.Media.Pen)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PathGeometry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pen" Type="System.Windows.Media.Pen" />
+      </Parameters>
+      <Docs>
+        <param name="pen">Ein Objekt, das den Clientbereich des Strichs der Geometrie beschreibt.</param>
+        <summary>Ruft eine <see cref="T:System.Windows.Media.PathGeometry" /> also die Form, die von den Strich auf definiert die <see cref="T:System.Windows.Media.Geometry" /> erzeugt durch das angegebene <see cref="T:System.Windows.Media.Pen" />.</summary>
+        <returns>Die Kontur der Geometrie.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige <xref:System.Windows.Media.Geometry> Methoden (z. B. <xref:System.Windows.Media.Geometry.GetWidenedPathGeometry%2A>) zu erzeugen, oder verwenden Sie eine polygonale Näherung der Geometry-Instanz. Der Fehlertoleranz gibt die maximale Entfernung zwischen Punkten in diesem polygonale Näherung. Kleinere Toleranzwerte bessere Näherungswerten produzieren, führt jedoch erfordert eine höhere verarbeitungsleistung als Näherungswert mit einer großen Fehlertoleranz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWidenedPathGeometry">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Media.PathGeometry GetWidenedPathGeometry (System.Windows.Media.Pen pen, double tolerance, System.Windows.Media.ToleranceType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Media.PathGeometry GetWidenedPathGeometry(class System.Windows.Media.Pen pen, float64 tolerance, valuetype System.Windows.Media.ToleranceType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.GetWidenedPathGeometry(System.Windows.Media.Pen,System.Double,System.Windows.Media.ToleranceType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PathGeometry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pen" Type="System.Windows.Media.Pen" />
+        <Parameter Name="tolerance" Type="System.Double" />
+        <Parameter Name="type" Type="System.Windows.Media.ToleranceType" />
+      </Parameters>
+      <Docs>
+        <param name="pen">Das Objekt verwendet, um den Bereich des Strichs der Geometrie definieren.</param>
+        <param name="tolerance">Die maximale Grenzen für die Entfernung zwischen Punkten in die polygonale Näherung der Geometry-Instanz. Bei kleineren Werten genauere Ergebnisse erzeugen jedoch dazu führen, dass Ausführung verlangsamt. Wenn <c>Toleranz</c> ist kleiner als.000001,.000001 wird stattdessen verwendet.</param>
+        <param name="type">Eines der <see cref="T:System.Windows.Media.ToleranceType" /> Werte, der angibt, ob der Fehlertoleranz ein absoluter Wert oder relativ zum Bereich der Geometry-Instanz.</param>
+        <summary>Ruft eine <see cref="T:System.Windows.Media.PathGeometry" /> also die Form, die von den Strich auf definiert die <see cref="T:System.Windows.Media.Geometry" /> erzeugt durch das angegebene <see cref="T:System.Windows.Media.Pen" />, erhält den Faktor für die angegebene Toleranz gewährt.</summary>
+        <returns>Die Geometrie erweitert, indem <paramref name="pen" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige <xref:System.Windows.Media.Geometry> Methoden (z. B. <xref:System.Windows.Media.Geometry.GetWidenedPathGeometry%2A>) zu erzeugen, oder verwenden Sie eine polygonale Näherung der Geometry-Instanz. Der Fehlertoleranz gibt die maximale Entfernung zwischen Punkten in diesem polygonale Näherung. Kleinere Toleranzwerte bessere Näherungswerten produzieren, führt jedoch erfordert eine höhere verarbeitungsleistung als Näherungswert mit einer großen Fehlertoleranz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public abstract bool IsEmpty ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsEmpty() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.IsEmpty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob das Objekt leer ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die Geometrie leer ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MayHaveCurves">
+      <MemberSignature Language="C#" Value="public abstract bool MayHaveCurves ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool MayHaveCurves() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.MayHaveCurves" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bestimmt, ob das Objekt Segmente gekrümmte haben möglicherweise.</summary>
+        <returns>
+          <see langword="true" />Wenn die Geometry-Objekt Segmenten gekrümmte haben möglicherweise andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Geometry Parse (string source);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Media.Geometry Parse(string source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.Parse(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Geometry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="source">Eine Zeichenfolge, die beschreibt, die Geometrie erstellt werden soll.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Windows.Media.Geometry" /> Instanz aus der angegebenen Zeichenfolge mit der aktuellen Kultur.</summary>
+        <returns>Ein neues <see cref="T:System.Windows.Media.Geometry" /> Instanz aus der angegebenen Zeichenfolge erstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Finden Sie unter [Markup Pfadsyntax](~/docs/framework/wpf/graphics-multimedia/path-markup-syntax.md) Informationen, wie diese Zeichenfolge formatiert wird  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeTransform">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeTransform ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeTransform() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.ShouldSerializeTransform" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Wert, der die <see cref="P:System.Windows.Media.Geometry.Transform" /> Eigenschaft serialisiert werden soll.</summary>
+        <returns>
+          <see langword="true" />Wenn der Wert der Geometrie <see cref="P:System.Windows.Media.Geometry.Transform" /> Eigenschaft sollte serialisiert werden, andernfalls, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StandardFlatteningTolerance">
+      <MemberSignature Language="C#" Value="public static double StandardFlatteningTolerance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property float64 StandardFlatteningTolerance" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Geometry.StandardFlatteningTolerance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die standardmäßige Toleranz für polygonalen Näherung verwendet.</summary>
+        <value>Der standard Toleranz 0,25.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrokeContains">
+      <MemberSignature Language="C#" Value="public bool StrokeContains (System.Windows.Media.Pen pen, System.Windows.Point hitPoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool StrokeContains(class System.Windows.Media.Pen pen, valuetype System.Windows.Point hitPoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.StrokeContains(System.Windows.Media.Pen,System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pen" Type="System.Windows.Media.Pen" />
+        <Parameter Name="hitPoint" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="pen">Ein Objekt, das den Clientbereich des Strichs der Geometrie bestimmt.</param>
+        <param name="hitPoint">Der zu überprüfende Punkt.</param>
+        <summary>Bestimmt, ob das angegebene <see cref="T:System.Windows.Point" /> ist Bestandteil des Strichs durch Anwenden der angegebenen erzeugt <see cref="T:System.Windows.Media.Pen" /> der Geometrie.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="hitPoint" /> ist Bestandteil des Strichs durch Anwenden der angegebenen erzeugt <see cref="T:System.Windows.Media.Pen" /> der Geometrie; anderenfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standard-Fehlertoleranz (gemäß der <xref:System.Windows.Media.Geometry.StandardFlatteningTolerance%2A> Eigenschaft) wird verwendet, wenn Sie bestimmen, ob der angegebene Punkt in der Geometrie Strich befindet. Verwenden Sie zum Angeben Ihrer eigenen Fehlertoleranz der <xref:System.Windows.Media.Geometry.StrokeContains%2A> überladen.  
+  
+ Einige <xref:System.Windows.Media.Geometry> Methoden (z. B. <xref:System.Windows.Media.Geometry.StrokeContains%2A>) zu erzeugen, oder verwenden Sie eine polygonale Näherung der Geometry-Instanz. Der Fehlertoleranz gibt die maximale Entfernung zwischen Punkten in diesem polygonale Näherung. Kleinere Toleranzwerte bessere Näherungswerten produzieren, führt jedoch erfordert eine höhere verarbeitungsleistung als Näherungswert mit einer großen Fehlertoleranz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrokeContains">
+      <MemberSignature Language="C#" Value="public bool StrokeContains (System.Windows.Media.Pen pen, System.Windows.Point hitPoint, double tolerance, System.Windows.Media.ToleranceType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool StrokeContains(class System.Windows.Media.Pen pen, valuetype System.Windows.Point hitPoint, float64 tolerance, valuetype System.Windows.Media.ToleranceType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.StrokeContains(System.Windows.Media.Pen,System.Windows.Point,System.Double,System.Windows.Media.ToleranceType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pen" Type="System.Windows.Media.Pen" />
+        <Parameter Name="hitPoint" Type="System.Windows.Point" />
+        <Parameter Name="tolerance" Type="System.Double" />
+        <Parameter Name="type" Type="System.Windows.Media.ToleranceType" />
+      </Parameters>
+      <Docs>
+        <param name="pen">Ein Objekt, das den Strich einer Geometrie definiert.</param>
+        <param name="hitPoint">Der zu überprüfende Punkt.</param>
+        <param name="tolerance">Die maximale Grenzen für die Entfernung zwischen Punkten in die polygonale Näherung der Geometry-Instanz. Bei kleineren Werten genauere Ergebnisse erzeugen jedoch dazu führen, dass Ausführung verlangsamt. Wenn <c>Toleranz</c> ist kleiner als.000001,.000001 wird stattdessen verwendet.</param>
+        <param name="type">Eines der <see cref="T:System.Windows.Media.ToleranceType" /> Werte, der angibt, ob der Fehlertoleranz ein absoluter Wert oder relativ zum Bereich der Geometry-Instanz.</param>
+        <summary>Bestimmt, ob das angegebene <see cref="T:System.Windows.Point" /> ist Bestandteil des Strichs durch Anwenden der angegebenen erzeugt <see cref="T:System.Windows.Media.Pen" /> der Geometrie der Fehlergrenze angegebenen Fehler.</summary>
+        <returns>
+          <see langword="true" />Wenn Strichs erstellt, durch Anwenden des angegebenen <see cref="T:System.Windows.Media.Pen" /> der Geometrie den angegebenen Punkt enthält, erhält den angegebenen Toleranzfaktor; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige <xref:System.Windows.Media.Geometry> Methoden (z. B. <xref:System.Windows.Media.Geometry.StrokeContains%2A>) zu erzeugen, oder verwenden Sie eine polygonale Näherung der Geometry-Instanz. Der Fehlertoleranz gibt die maximale Entfernung zwischen Punkten in diesem polygonale Näherung. Kleinere Toleranzwerte bessere Näherungswerten produzieren, führt jedoch erfordert eine höhere verarbeitungsleistung als Näherungswert mit einer großen Fehlertoleranz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrokeContainsWithDetail">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.IntersectionDetail StrokeContainsWithDetail (System.Windows.Media.Pen pen, System.Windows.Media.Geometry geometry);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Media.IntersectionDetail StrokeContainsWithDetail(class System.Windows.Media.Pen pen, class System.Windows.Media.Geometry geometry) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.StrokeContainsWithDetail(System.Windows.Media.Pen,System.Windows.Media.Geometry)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.IntersectionDetail</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pen" Type="System.Windows.Media.Pen" />
+        <Parameter Name="geometry" Type="System.Windows.Media.Geometry" />
+      </Parameters>
+      <Docs>
+        <param name="pen">Ein Objekt, das den Bereich des Strichs der aktuellen Geometrie bestimmt.</param>
+        <param name="geometry">Die zu überprüfende Geometrie.</param>
+        <summary>Gibt einen Wert, der die Schnittmenge der angegebenen beschreibt <see cref="T:System.Windows.Media.Geometry" /> und des Strichs erstellt durch Anwenden des angegebenen <see cref="T:System.Windows.Media.Pen" /> auf die aktuelle Geometrie.</summary>
+        <returns>Einer der Enumerationswerte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standard-Fehlertoleranz (definiert durch die <xref:System.Windows.Media.Geometry.StandardFlatteningTolerance%2A> Eigenschaft) wird verwendet, wenn Sie bestimmen, ob die angegebene Geometrie in die aktuelle Geometrie Strich befindet. Verwenden Sie zum Angeben Ihrer eigenen Fehlertoleranz der <xref:System.Windows.Media.Geometry.StrokeContainsWithDetail%2A> Methode.  
+  
+ Einige <xref:System.Windows.Media.Geometry> Methoden (z. B. <xref:System.Windows.Media.Geometry.StrokeContainsWithDetail%2A>) zu erzeugen, oder verwenden Sie eine polygonale Näherung der Geometry-Instanz. Der Fehlertoleranz gibt die maximale Entfernung zwischen Punkten in diesem polygonale Näherung. Kleinere Toleranzwerte bessere Näherungswerten produzieren, führt jedoch erfordert eine höhere verarbeitungsleistung als Näherungswert mit einer großen Fehlertoleranz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrokeContainsWithDetail">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.IntersectionDetail StrokeContainsWithDetail (System.Windows.Media.Pen pen, System.Windows.Media.Geometry geometry, double tolerance, System.Windows.Media.ToleranceType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Media.IntersectionDetail StrokeContainsWithDetail(class System.Windows.Media.Pen pen, class System.Windows.Media.Geometry geometry, float64 tolerance, valuetype System.Windows.Media.ToleranceType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.StrokeContainsWithDetail(System.Windows.Media.Pen,System.Windows.Media.Geometry,System.Double,System.Windows.Media.ToleranceType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.IntersectionDetail</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pen" Type="System.Windows.Media.Pen" />
+        <Parameter Name="geometry" Type="System.Windows.Media.Geometry" />
+        <Parameter Name="tolerance" Type="System.Double" />
+        <Parameter Name="type" Type="System.Windows.Media.ToleranceType" />
+      </Parameters>
+      <Docs>
+        <param name="pen">Ein Objekt, das den Bereich des Strichs der aktuellen Geometrie bestimmt.</param>
+        <param name="geometry">Die zu überprüfende Geometrie.</param>
+        <param name="tolerance">Die maximale Grenzen für die Entfernung zwischen Punkten in die polygonale Näherung der Geometrien. Bei kleineren Werten genauere Ergebnisse erzeugen jedoch dazu führen, dass Ausführung verlangsamt. Wenn <c>Toleranz</c> ist kleiner als.000001,.000001 wird stattdessen verwendet.</param>
+        <param name="type">Eines der <see cref="T:System.Windows.Media.ToleranceType" /> Werte, der angibt, ob der Fehlertoleranz ein absoluter Wert oder relativ zum Bereich der Geometry-Instanz.</param>
+        <summary>Ruft einen Wert, der die Schnittmenge der angegebenen beschreibt <see cref="T:System.Windows.Media.Geometry" /> und des Strichs erstellt durch Anwenden des angegebenen <see cref="T:System.Windows.Media.Pen" /> auf die aktuelle Geometrie der Fehlergrenze angegebenen Fehler.</summary>
+        <returns>Einer der Enumerationswerte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einige <xref:System.Windows.Media.Geometry> Methoden (z. B. <xref:System.Windows.Media.Geometry.StrokeContainsWithDetail%2A>) zu erzeugen, oder verwenden Sie eine polygonale Näherung der Geometry-Instanz. Der Fehlertoleranz gibt die maximale Entfernung zwischen Punkten in diesem polygonale Näherung. Kleinere Toleranzwerte bessere Näherungswerten produzieren, führt jedoch erfordert eine höhere verarbeitungsleistung als Näherungswert mit einer großen Fehlertoleranz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IFormattable.ToString">
+      <MemberSignature Language="C#" Value="string IFormattable.ToString (string format, IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.IFormattable.ToString(string format, class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.System#IFormattable#ToString(System.String,System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="format">Das zu verwendende Format.  
+  
+ - oder -   
+  
+ Ein null-Verweis (<see langword="Nothing" /> in Visual Basic), verwenden Sie das Standardformat für den Typ des definiert die <see cref="T:System.IFormattable" /> Implementierung.</param>
+        <param name="provider">Der zum Formatieren des Werts zu verwendende Anbieter.  
+  
+ - oder -   
+  
+ Ein null-Verweis (<see langword="Nothing" /> in Visual Basic) um die Zahlenformatinformationen aus dem aktuellen Gebietsschema des Betriebssystems abzurufen.</param>
+        <summary>Formatiert den Wert der aktuellen Instanz mit dem angegebenen Format.</summary>
+        <returns>Der Wert der aktuellen Instanz im angegebenen Format.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Zeichenfolgendarstellung des Objekts, auf Grundlage der aktuellen Kultur an.</summary>
+        <returns>Eine Zeichenfolgendarstellung des Objekts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ToString(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.ToString(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Kulturspezifische Formatierungsinformationen oder <see langword="null" /> die aktuelle Kultur verwenden.</param>
+        <summary>Erstellt eine Zeichenfolgendarstellung des Objekts unter Verwendung der angegebenen kulturspezifischen Formatierungsinformationen.</summary>
+        <returns>Eine Zeichenfolgendarstellung des Objekts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Transform Transform { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Transform Transform" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Geometry.Transform" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Transform</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest der <see cref="T:System.Windows.Media.Transform" /> Objekt angewendet, um eine <see cref="T:System.Windows.Media.Geometry" />.</summary>
+        <value>Die Transformation angewendet werden, um die <see cref="T:System.Windows.Media.Geometry" />. Beachten Sie, dass dieser Wert möglicherweise einen einzelnen <see cref="T:System.Windows.Media.Transform" /> oder ein <see cref="T:System.Windows.Media.TransformCollection" /> umgewandelt als ein <see cref="T:System.Windows.Media.Transform" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt die Identitätstransformation zurück, wenn das aktuelle Objekt kein Transformationswert ist. Andernfalls gibt es die <xref:System.Windows.Media.Transform> mit dem aktuellen Objekt angewendet.  
+  
+<a name="dependencyPropertyInfo_Transform"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.Geometry.TransformProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Media.Geometry.Transform%2A> Eigenschaft anwenden einer <xref:System.Windows.Media.RotateTransform> auf eine <xref:System.Windows.Media.Geometry> Objekt.  
+  
+ Im Beispiel wird eine <xref:System.Windows.Media.GeometryGroup> So erstellen Sie eine zusammengesetzte Form aus drei <xref:System.Windows.Media.Geometry> Objekte aus, und klicken Sie dann in 45-Grad dreht die Geometrie, mithilfe der <xref:System.Windows.Media.Geometry.Transform%2A> Eigenschaft.  
+  
+ [!code-xaml[Transforms_snip#GeometryTransformExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/GeometryTransformExample.xaml#geometrytransformexamplewholepage)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TransformProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TransformProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Geometry.TransformProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Geometry.Transform" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

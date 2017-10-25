@@ -1,0 +1,289 @@
+<Type Name="JumpTask" FullName="System.Windows.Shell.JumpTask">
+  <TypeSignature Language="C#" Value="public class JumpTask : System.Windows.Shell.JumpItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit JumpTask extends System.Windows.Shell.JumpItem" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Shell.JumpTask" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Shell.JumpItem</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Verknüpfung zu einer Anwendung in der Windows 7-Taskleiste Sprungliste dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Shell.JumpTask> kann als eine Verknüpfung zu einer Anwendung betrachtet werden. Geben Sie den Pfad zur ausführbaren Datei durch Festlegen der <xref:System.Windows.Shell.JumpTask.ApplicationPath%2A> Eigenschaft. Wenn die <xref:System.Windows.Shell.JumpTask.ApplicationPath%2A> ist nicht festgelegt ist, wird der Pfad der aktuell ausgeführten Prozesses wird impliziert. Sie können optional angeben, <xref:System.Windows.Shell.JumpTask.Arguments%2A> Übergabe an die Anwendung beim Start.  
+  
+ Sie können grundlegende Anzeigeeigenschaften, z. B. festlegen <xref:System.Windows.Shell.JumpTask.Title%2A>, <xref:System.Windows.Shell.JumpTask.Description%2A>, und <xref:System.Windows.Shell.JumpTask.IconResourcePath%2A> an die Darstellung des Tasks in der Liste zu wechseln. Ein Symbol mit verwendet eine <xref:System.Windows.Shell.JumpTask> muss als systemeigene Ressource verfügbar sein. Wenn mehrere Symbolressourcen in einer DLL oder ausführbaren Datei verfügbar sind, geben Sie den einen verwendet werden, der angibt, eines Offsets in die <xref:System.Windows.Shell.JumpTask.IconResourceIndex%2A> Eigenschaft.  
+  
+ Wird standardmäßig ein <xref:System.Windows.Shell.JumpTask> platziert werden, in der **Aufgaben** Kategorie der Liste zu wechseln. Sie können benutzerdefinierte Gruppierung von Aufgaben angeben, durch Festlegen der <xref:System.Windows.Shell.JumpItem.CustomCategory%2A> Eigenschaft.  
+  
+ Sie können Elemente in einer Sprungliste visuell trennen, indem Sie erstellen eine <xref:System.Windows.Shell.JumpTask> verfügt, die nicht über eine <xref:System.Windows.Shell.JumpTask.Title%2A> und <xref:System.Windows.Shell.JumpItem.CustomCategory%2A> angegebenen. Diese leere <xref:System.Windows.Shell.JumpTask> angezeigt wird, eine horizontale Linie in der Liste zu wechseln. In diesem Fall werden andere Eigenschaften können festgelegt werden, aber sie haben keine Auswirkung nicht.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie deklarieren eine <xref:System.Windows.Shell.JumpTask> im Markup. Die <xref:System.Windows.Shell.JumpTask> öffnet eine Textdatei mit dem Namen `readme.txt` in der Editor-Anwendung.  
+  
+ [!code-xaml[Shell_JumpListSample#002](~/samples/snippets/csharp/VS_Snippets_Wpf/shell_jumplistsample/cs/app.xaml#002)]  
+  
+ Das folgende Beispiel zeigt, wie Sie konfigurieren eine <xref:System.Windows.Shell.JumpTask> im Code. Die <xref:System.Windows.Shell.JumpTask> öffnet die Rechner-Anwendung.  
+  
+ [!code-csharp[Shell_JumpListSample#241](~/samples/snippets/csharp/VS_Snippets_Wpf/shell_jumplistsample/cs/mainwindow.xaml.cs#241)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JumpTask ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Shell.JumpTask.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Shell.JumpTask" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationPath">
+      <MemberSignature Language="C#" Value="public string ApplicationPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationPath" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shell.JumpTask.ApplicationPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Pfad der Anwendung fest.</summary>
+        <value>Der Pfad der Anwendung. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Shell.JumpTask.ApplicationPath%2A> Eigenschaft nicht angegeben ist, und klicken Sie dann der Pfad der aktuell ausgeführten Prozesses wird impliziert. Eine Anwendung kann es sich um Aufgaben für ausführbare Dateien als ihm selbst enthalten.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie deklarieren eine <xref:System.Windows.Shell.JumpTask> im Markup. Die <xref:System.Windows.Shell.JumpTask> öffnet eine Textdatei mit dem Namen `readme.txt` in der Editor-Anwendung.  
+  
+ [!code-xaml[Shell_JumpListSample#002](~/samples/snippets/csharp/VS_Snippets_Wpf/shell_jumplistsample/cs/app.xaml#002)]  
+  
+ Das folgende Beispiel zeigt, wie Sie konfigurieren eine <xref:System.Windows.Shell.JumpTask> im Code. Die <xref:System.Windows.Shell.JumpTask> öffnet die Rechner-Anwendung.  
+  
+ [!code-csharp[Shell_JumpListSample#241](~/samples/snippets/csharp/VS_Snippets_Wpf/shell_jumplistsample/cs/mainwindow.xaml.cs#241)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Arguments">
+      <MemberSignature Language="C#" Value="public string Arguments { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Arguments" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shell.JumpTask.Arguments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Argumente an die Anwendung beim Start.</summary>
+        <value>Die Argumente, die beim Start an die Anwendung übergeben werden. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie deklarieren eine <xref:System.Windows.Shell.JumpTask> im Markup. Die <xref:System.Windows.Shell.JumpTask> öffnet eine Textdatei mit dem Namen `readme.txt` in der Editor-Anwendung.  
+  
+ [!code-xaml[Shell_JumpListSample#002](~/samples/snippets/csharp/VS_Snippets_Wpf/shell_jumplistsample/cs/app.xaml#002)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shell.JumpTask.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text in der QuickInfo für die Aufgabe in der Sprungliste angezeigt.</summary>
+        <value>Der Text in der QuickInfo für die Aufgabe angezeigt. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie deklarieren eine <xref:System.Windows.Shell.JumpTask> im Markup. Die <xref:System.Windows.Shell.JumpTask> öffnet eine Textdatei mit dem Namen `readme.txt` in der Editor-Anwendung.  
+  
+ [!code-xaml[Shell_JumpListSample#002](~/samples/snippets/csharp/VS_Snippets_Wpf/shell_jumplistsample/cs/app.xaml#002)]  
+  
+ Das folgende Beispiel zeigt, wie Sie konfigurieren eine <xref:System.Windows.Shell.JumpTask> im Code. Die <xref:System.Windows.Shell.JumpTask> öffnet die Rechner-Anwendung.  
+  
+ [!code-csharp[Shell_JumpListSample#241](~/samples/snippets/csharp/VS_Snippets_Wpf/shell_jumplistsample/cs/mainwindow.xaml.cs#241)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IconResourceIndex">
+      <MemberSignature Language="C#" Value="public int IconResourceIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 IconResourceIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shell.JumpTask.IconResourceIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den nullbasierten Index eines in einer Ressource eingebetteten Symbols.</summary>
+        <value>Der nullbasierte Index des Symbols oder-1 zurück, wenn kein Symbol verwendet wird. Der Standard ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Symbol mit verwendet eine <xref:System.Windows.Shell.JumpTask> muss als systemeigene Ressource verfügbar sein. Wenn mehrere Symbole in einer DLL oder ausführbaren Datei verfügbar sind, geben Sie den einen verwendet werden, der angibt, eines Offsets in die <xref:System.Windows.Shell.JumpTask.IconResourceIndex%2A> Eigenschaft.  
+  
+ Wenn keine Symbolressource angegeben wird, oder wenn das angegebene Symbol nicht gefunden wird, wird das Symbol "Standardbetriebssystem" angezeigt. Um anzugeben, dass kein Symbol angezeigt wird, legen die <xref:System.Windows.Shell.JumpTask.IconResourceIndex%2A> Eigenschaft auf-1 festgelegt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie deklarieren eine <xref:System.Windows.Shell.JumpTask> im Markup. Die <xref:System.Windows.Shell.JumpTask> öffnet eine Textdatei mit dem Namen `readme.txt` in der Editor-Anwendung.  
+  
+ [!code-xaml[Shell_JumpListSample#002](~/samples/snippets/csharp/VS_Snippets_Wpf/shell_jumplistsample/cs/app.xaml#002)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IconResourcePath">
+      <MemberSignature Language="C#" Value="public string IconResourcePath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string IconResourcePath" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shell.JumpTask.IconResourcePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Pfad zu einer Ressource, die mit dem Symbol anzuzeigende in der Sprungliste enthält.</summary>
+        <value>Der Pfad auf eine Ressource, die mit dem Symbol enthält. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Symbol mit verwendet eine <xref:System.Windows.Shell.JumpTask> muss als systemeigene Ressource verfügbar sein. Wenn mehrere Symbole in einer DLL oder ausführbaren Datei verfügbar sind, geben Sie den einen verwendet werden, der angibt, eines Offsets in die <xref:System.Windows.Shell.JumpTask.IconResourceIndex%2A> Eigenschaft.  
+  
+ Wenn keine Symbolressource angegeben wird, oder wenn das angegebene Symbol nicht gefunden wird, wird das Symbol "Standardbetriebssystem" angezeigt. Um anzugeben, dass kein Symbol angezeigt wird, legen die <xref:System.Windows.Shell.JumpTask.IconResourceIndex%2A> Eigenschaft auf-1 festgelegt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie deklarieren eine <xref:System.Windows.Shell.JumpTask> im Markup. Die <xref:System.Windows.Shell.JumpTask> öffnet eine Textdatei mit dem Namen `readme.txt` in der Editor-Anwendung.  
+  
+ [!code-xaml[Shell_JumpListSample#002](~/samples/snippets/csharp/VS_Snippets_Wpf/shell_jumplistsample/cs/app.xaml#002)]  
+  
+ Das folgende Beispiel zeigt, wie Sie konfigurieren eine <xref:System.Windows.Shell.JumpTask> im Code. Die <xref:System.Windows.Shell.JumpTask> öffnet die Rechner-Anwendung.  
+  
+ [!code-csharp[Shell_JumpListSample#241](~/samples/snippets/csharp/VS_Snippets_Wpf/shell_jumplistsample/cs/mainwindow.xaml.cs#241)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="public string Title { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Title" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shell.JumpTask.Title" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Text für die Aufgabe in der Liste zu wechseln.</summary>
+        <value>Der Text angezeigt, die für den Task in der Liste zu wechseln. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel die <xref:System.Windows.Shell.JumpTask.Title%2A> Eigenschaft muss festgelegt werden, für die <xref:System.Windows.Shell.JumpTask> in der Sprungliste als klickbare Aufgabe angezeigt werden.  
+  
+ Alternativ können Sie Elemente in einer Sprungliste visuell trennen, indem Sie erstellen eine <xref:System.Windows.Shell.JumpTask> verfügt, die nicht über eine <xref:System.Windows.Shell.JumpTask.Title%2A> und <xref:System.Windows.Shell.JumpItem.CustomCategory%2A> angegebenen. Diese leere <xref:System.Windows.Shell.JumpTask> angezeigt wird, eine horizontale Linie in der Liste zu wechseln. In diesem Fall werden andere Eigenschaften können festgelegt werden, aber sie haben keine Auswirkung nicht.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie deklarieren eine <xref:System.Windows.Shell.JumpTask> im Markup. Die <xref:System.Windows.Shell.JumpTask> öffnet einen Datei Textnamen `readme.txt` in der Editor-Anwendung.  
+  
+ [!code-xaml[Shell_JumpListSample#002](~/samples/snippets/csharp/VS_Snippets_Wpf/shell_jumplistsample/cs/app.xaml#002)]  
+  
+ Das folgende Beispiel zeigt, wie Sie konfigurieren eine <xref:System.Windows.Shell.JumpTask> im Code. Die <xref:System.Windows.Shell.JumpTask> öffnet die Rechner-Anwendung.  
+  
+ [!code-csharp[Shell_JumpListSample#241](~/samples/snippets/csharp/VS_Snippets_Wpf/shell_jumplistsample/cs/mainwindow.xaml.cs#241)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkingDirectory">
+      <MemberSignature Language="C#" Value="public string WorkingDirectory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string WorkingDirectory" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shell.JumpTask.WorkingDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Arbeitsverzeichnis der Anwendung beim Start.</summary>
+        <value>Das Arbeitsverzeichnis der Anwendung beim Start. Die Standardeinstellung ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie deklarieren eine <xref:System.Windows.Shell.JumpTask> im Markup. Die <xref:System.Windows.Shell.JumpTask> öffnet eine Textdatei mit dem Namen `readme.txt` in der Editor-Anwendung.  
+  
+ [!code-xaml[Shell_JumpListSample#002](~/samples/snippets/csharp/VS_Snippets_Wpf/shell_jumplistsample/cs/app.xaml#002)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

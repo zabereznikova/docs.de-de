@@ -1,0 +1,88 @@
+<Type Name="IIntellisenseBuilder" FullName="System.ComponentModel.IIntellisenseBuilder">
+  <TypeSignature Language="C#" Value="public interface IIntellisenseBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IIntellisenseBuilder" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.IIntellisenseBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Schnittstelle, um das Abrufen des Namens des Generators zu vereinfachen und um den Generator anzuzeigen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.IIntellisenseBuilder.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen lokalisierten Namen ab.</summary>
+        <value>Ein lokalisierter Name.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public bool Show (string language, string value, ref string newValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Show(string language, string value, string&amp; newValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.IIntellisenseBuilder.Show(System.String,System.String,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="language" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="newValue" Type="System.String&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="language">Der Sprachdienst, die den Generator aufruft.</param>
+        <param name="value">Der Ausdruck, der bearbeitet wird.</param>
+        <param name="newValue">Der neue Wert.</param>
+        <summary>Zeigt den Generator.</summary>
+        <returns>
+          <see langword="true" />Wenn der Wert ersetzt werden soll, mit <paramref name="newValue" />ist, andernfalls <see langword="false" /> (wenn der Benutzer, z. B. abbricht).</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,2052 @@
+<Type Name="EntityDataSource" FullName="System.Web.UI.WebControls.EntityDataSource">
+  <TypeSignature Language="C#" Value="public class EntityDataSource : System.Web.UI.DataSourceControl, System.Web.DynamicData.IDynamicDataSource, System.Web.UI.WebControls.IQueryableDataSource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EntityDataSource extends System.Web.UI.DataSourceControl implements class System.Web.DynamicData.IDynamicDataSource, class System.Web.UI.IDataSource, class System.Web.UI.WebControls.IQueryableDataSource" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.EntityDataSource" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.DataSourceControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.DynamicData.IDynamicDataSource</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.WebControls.IQueryableDataSource</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("Selecting")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("EntitySetName")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.EntityDataSourceDesigner, System.Web.Entity.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Drawing.ToolboxBitmap(typeof(System.Web.UI.WebControls.EntityDataSource), "EntityDataSource.ico")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.PersistChildren(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Entity Data Model (EDM) für datengebundene Steuerelemente in einer ASP.NET-Anwendung dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In diesem Thema:  
+  
+-   [Introduction (Einführung)](#introduction)  
+  
+-   [Deklarationssyntax](#declarative_syntax)  
+  
+<a name="introduction"></a>   
+## <a name="introduction"></a>Einführung  
+ Sie können die <xref:System.Web.UI.WebControls.EntityDataSource> Steuerelement zusammen mit einem datengebundenen Steuerelement zum Abrufen von Daten aus einem EDM und zum Anzeigen, bearbeiten und Sortieren von Daten auf einer Webseite mithilfe von wenigen oder gar keinen Code. Weitere Informationen finden Sie unter [Übersicht über das EntityDataSource-Steuerelement](http://msdn.microsoft.com/library/1f09af00-9578-4744-a029-765710a3c83f).  
+  
+<a name="declarative_syntax"></a>   
+## <a name="declarative-syntax"></a>Deklarationssyntax  
+  
+```  
+<asp:EntityDataSource  
+    AutoGenerateOrderByClause="True|False"  
+    AutoGenerateWhereClause="True|False"  
+    AutoPage="True|False"  
+    AutoSort="True|False"  
+    CommandText="string"  
+    ConnectionString="string"  
+    ContextType="typed ObjectContext"  
+    ContextTypeName="string"  
+    DefaultContainerName="string"  
+    EnableDelete="True|False"  
+    EnableInsert="True|False"  
+    EnableUpdate="True|False"  
+    EnableViewState="True|False"  
+    EntitySetName="string"  
+    EntityTypeFilter="string"  
+    GroupBy="string"  
+    Include="string"  
+    OnContextCreated="ContextCreated event handler"  
+    OnContextCreating="ContextCreating event handler"  
+    OnContextDisposing="ContextDisposing event handler"  
+    OnDataBinding="DataBinding event handler"  
+    OnDeleted="Deleted event handler"  
+    OnDeleting="Deleting event handler"  
+    OnException="IDynamicDataSource.Exception event handler"  
+    OnInserted="Inserted event handler"  
+    OnInserting="Inserting event handler"  
+    OnSelected="Selected event handler"  
+    OnSelecting="Selecting event handler"  
+    OnUpdated="Updated event handler"  
+    OnUpdating="Updating event handler"  
+    OrderBy="string"  
+    runat="server"  
+    Select="string"  
+    StoreOriginalValuesInViewState="True|False"  
+    Where="string"  
+>  
+        <CommandParameters />  
+        <DeleteParameters />  
+        <GroupByParameters />  
+        <InsertParameters />  
+        <OrderByParameters />  
+        <SelectParameters />  
+        <UpdateParameters />  
+        <WhereParameters />  
+</asp:EntityDataSource>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EntityDataSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EntityDataSource.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.EntityDataSource" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EntityDataSource (System.Data.EntityClient.EntityConnection connection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.EntityClient.EntityConnection connection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EntityDataSource.#ctor(System.Data.EntityClient.EntityConnection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="connection" Type="System.Data.EntityClient.EntityConnection" />
+      </Parameters>
+      <Docs>
+        <param name="connection">Ein <see cref="T:System.Data.EntityClient.EntityConnection" /> mit dem Entity Data Model (EDM).</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> Klasse mit der angegebenen Verbindung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoGenerateOrderByClause">
+      <MemberSignature Language="C#" Value="public bool AutoGenerateOrderByClause { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoGenerateOrderByClause" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.AutoGenerateOrderByClause" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Web.UI.WebControls.EntityDataSource" />-Steuerelement basierend auf Werten in der <see cref="P:System.Web.UI.WebControls.EntityDataSource.OrderByParameters" />-Sammlung dynamisch eine ORDER BY-Klausel erstellt.</summary>
+        <value>
+          <see langword="true" />, wenn das <see cref="T:System.Web.UI.WebControls.EntityDataSource" />-Steuerelement die ORDER BY-Klausel erstellt, andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der <xref:System.Web.UI.WebControls.EntityDataSource.AutoGenerateOrderByClause%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.EntityDataSource> Steuerelement auf festgelegt ist `true`, das Steuerelement generiert automatisch eine ORDER BY-Klausel aus dem Parameter in der <xref:System.Web.UI.WebControls.ParameterCollection> zugewiesen der <xref:System.Web.UI.WebControls.EntityDataSource.OrderByParameters%2A> Eigenschaft. Hierdurch entfällt die Notwendigkeit, explizit eine ORDER BY-Klausel zum Zuweisen der <xref:System.Web.UI.WebControls.EntityDataSource.OrderBy%2A> Eigenschaft.  
+  
+ Wenn Sie festlegen, die <xref:System.Web.UI.WebControls.EntityDataSource.AutoGenerateOrderByClause%2A> Eigenschaft `true`, sollten nicht explizit einen Wert zuweisen der <xref:System.Web.UI.WebControls.EntityDataSource.OrderBy%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird automatisch die ORDER BY-Klausel generiert und verwendet den Wert der `OrderByDropDownList` zum Festlegen des Werts des Parameters.  
+  
+```  
+<asp:DropDownList AutoPostBack="true" ID="OrderByDropDownList" runat="server">  
+    <asp:ListItem Value="TotalDue"></asp:ListItem>  
+    <asp:ListItem Value="OrderDate"></asp:ListItem>  
+</asp:DropDownList>  
+  
+<asp:EntityDataSource ID="EntityDataSourceWithAutoGenOrderBy" runat="server"   
+ConnectionString="name=AdventureWorksEntities"   
+DefaultContainerName="AdventureWorksEntities"   
+EntitySetName="SalesOrderHeaders"   
+Select="it.SalesOrderID, it.TotalDue, it.OrderDate"  
+AutoGenerateOrderByClause="True">  
+<OrderByParameters>  
+    <asp:ControlParameter  
+    ControlID="OrderByDropDownList"/>  
+</OrderByParameters>  
+</asp:EntityDataSource>  
+```  
+  
+ Im folgende Beispiel wird die ORDER BY-Klausel generiert und verwendet automatisch die `DefaultValue` Attribut von der `Parameter` Element, das den Wert des Parameters festgelegt.  
+  
+```  
+<asp:EntityDataSource ID="EntityDataSourceWithAutoGenOrderBy" runat="server"   
+ConnectionString="name=AdventureWorksEntities"   
+DefaultContainerName="AdventureWorksEntities"   
+EntitySetName="SalesOrderHeaders"   
+Select="it.SalesOrderID, it.TotalDue, it.OrderDate"  
+AutoGenerateOrderByClause="True">  
+<OrderByParameters>  
+    <asp:Parameter  
+    DefaultValue="TotalDue"/>  
+</OrderByParameters>  
+</asp:EntityDataSource>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Wenn die <see cref="P:System.Web.UI.WebControls.EntityDataSource.AutoGenerateOrderByClause" />-Eigenschaft auf <see langword="true" /> festgelegt und die <see cref="P:System.Web.UI.WebControls.EntityDataSource.OrderBy" />-Eigenschaft nicht NULL ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoGenerateWhereClause">
+      <MemberSignature Language="C#" Value="public bool AutoGenerateWhereClause { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoGenerateWhereClause" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.AutoGenerateWhereClause" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> Steuerelement dynamisch erstellt eine WHERE-Klausel, die basierend auf Werten, die definiert, der <see cref="P:System.Web.UI.WebControls.EntityDataSource.WhereParameters" /> Auflistung.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> Steuerelement erstellt, die WHERE-Klausel ist, andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um Abfrageergebnisse zu Filtern durch eine Entität Type-Eigenschaft auf einen Ausdruck zu vergleichen, können Sie die <xref:System.Web.UI.WebControls.EntityDataSource.AutoGenerateWhereClause%2A> Eigenschaft. Bei der <xref:System.Web.UI.WebControls.EntityDataSource.AutoGenerateWhereClause%2A> Eigenschaft des der <xref:System.Web.UI.WebControls.EntityDataSource> Steuerelement auf festgelegt ist `true`, generiert das Steuerelement automatisch eine `WHERE` -Klausel aus den Parametern in der <xref:System.Web.UI.WebControls.ParameterCollection> von der <xref:System.Web.UI.WebControls.EntityDataSource.WhereParameters%2A> Eigenschaft. Die <xref:System.Web.UI.WebControls.Parameter.Name%2A> Eigenschaft der einzelnen Parameter wurde in Namen eines Entitätstyps übereinstimmen, die in den Abfrageergebnissen enthalten ist. Wenn Sie festlegen, die <xref:System.Web.UI.WebControls.EntityDataSource.AutoGenerateWhereClause%2A> Eigenschaft, um `true`, sollten Sie nicht explizit Zuweisen einer `WHERE` -Klausel, um die <xref:System.Web.UI.WebControls.EntityDataSource.Where%2A> Eigenschaft.  
+  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird die <xref:System.Web.UI.WebControls.EntityDataSource.AutoGenerateWhereClause%2A> -Eigenschaftensatz auf `true`. Aus diesem Grund die <xref:System.Web.UI.WebControls.Parameter.Name%2A> der Eigenschaft wurde entsprechend von Namen einer Entität, die in den Abfrageergebnissen enthalten ist. Die Abfrage wählt die SalesOrderID und TotalDue enthalten die Eigenschaften des Entitätstyps SalesOrderHeader. Die automatisch generierte `WHERE` -Klausel filtert die Ergebnisse der Abfrage durch vergleichen den TotalDue-Wert, der einen Wert in das Listenfeld-Steuerelement TotalDueList ausgewählt.  
+  
+```  
+<asp:EntityDataSource ID="SalesOrderHeaderWithAutoParam" runat="server"   
+   ConnectionString="name=AdventureWorksEntities"   
+   DefaultContainerName="AdventureWorksEntities"   
+   EntitySetName="SalesOrderHeaders"   
+   Select="it.SalesOrderID, it.TotalDue"  
+    AutoGenerateWhereClause="True">  
+    <WhereParameters>  
+        <asp:ControlParameter ControlID="TotalDueList"   
+           Name="TotalDue" PropertyName="SelectedValue" DbType="Decimal" />  
+    </WhereParameters>  
+</asp:EntityDataSource>  
+```  
+  
+## <a name="example"></a>Beispiel  
+ In der Standardeinstellung ist die <xref:System.Web.UI.WebControls.EntityDataSource.AutoGenerateWhereClause%2A>-Eigenschaft auf `false` festgelegt. Dies bedeutet, dass wir geben die `WHERE` Klausel. Im folgenden Beispiel die `WHERE` -Klausel ist `Where="it.TotalDue < @totalDueParam"` und TotalDueParam ist der Name des Parameters.  
+  
+```  
+<asp:EntityDataSource ID="SalesOrderHeaderWithOutAutoParam" runat="server"   
+   ConnectionString="name=AdventureWorksEntities"   
+   DefaultContainerName="AdventureWorksEntities"   
+   EntitySetName="SalesOrderHeaders"   
+   Where="it.TotalDue < @totalDueParam"   
+    Select="it.SalesOrderID, it.TotalDue">  
+    <WhereParameters>  
+        <asp:ControlParameter ControlID="TotalDueList"   
+           Name="totalDueParam" PropertyName="SelectedValue" DbType="Decimal" />  
+    </WhereParameters>  
+</asp:EntityDataSource>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Wenn die <see cref="P:System.Web.UI.WebControls.EntityDataSource.AutoGenerateWhereClause" />-Eigenschaft auf <see langword="true" /> festgelegt und die <see cref="P:System.Web.UI.WebControls.EntityDataSource.Where" />-Eigenschaft nicht NULL ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoPage">
+      <MemberSignature Language="C#" Value="public bool AutoPage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoPage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.AutoPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Web.UI.WebControls.EntityDataSource" />-Steuerelement die Navigation durch Abschnitte der Daten zur Laufzeit unterstützt, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />, wenn der Benutzer die Daten durchlaufen kann, andernfalls <see langword="false" />. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.EntityDataSource> Steuerelement unterstützt das automatische paging durch die Daten, die von Abfragen zurückgegeben. Die <xref:System.Web.UI.WebControls.EntityDataSource.AutoPage%2A> Eigenschaft ist eine boolesche Eigenschaft, der angibt, ob Paging für Daten aktiviert ist, die von Abfragen mit Bindung an Steuerelemente zurückgegeben wird. Wenn diese Eigenschaft auf festgelegt ist `true`, die <xref:System.Web.UI.WebControls.EntityDataSource> -Steuerelement fügt die entsprechenden Abfrage-Generator-Methoden, die die <xref:System.Data.Objects.ObjectQuery%601> anhand der bereitgestellten Informationen die <xref:System.Web.UI.WebControls.EntityDataSourceView> durch das datengebundene Steuerelement.  
+  
+ Der Wert des der <xref:System.Web.UI.WebControls.EntityDataSource.AutoPage%2A> Eigenschaft bestimmt, ob der <xref:System.Web.UI.WebControls.EntityDataSourceView.CanPage%2A> Eigenschaft der <xref:System.Web.UI.WebControls.EntityDataSourceView> Steuerelement, das die Datenquelle unterstützt wird `true` oder `false`.  
+  
+ Wenn Sie eine Projektion mit aktiviertem Paging definieren, müssen Sie die Eigenschaft nach dem Sortieren der Ergebnisse definieren. Dies bedeutet, dass beim Festlegen der <xref:System.Web.UI.WebControls.EntityDataSource.Select%2A> Eigenschaft das Definieren einer Projektion und <xref:System.Web.UI.WebControls.EntityDataSource.AutoPage%2A> festgelegt `true`, müssen Sie auch Festlegen der <xref:System.Web.UI.WebControls.EntityDataSource.OrderBy%2A> Eigenschaft, um die Reihenfolge zu definieren, oder legt die <xref:System.Web.UI.WebControls.EntityDataSource.AutoGenerateOrderByClause%2A> Eigenschaft `true` und fügen Sie einen Auftrag DURCH die Parameter für die <xref:System.Web.UI.WebControls.EntityDataSource.OrderByParameters%2A> Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSort">
+      <MemberSignature Language="C#" Value="public bool AutoSort { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoSort" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.AutoSort" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das <see cref="T:System.Web.UI.WebControls.EntityDataSource" />-Steuerelement das Sortieren der Daten zur Laufzeit unterstützt, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />, wenn der Benutzer die Daten sortieren kann, andernfalls <see langword="false" />. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.EntityDataSource> Steuerelement unterstützt das automatische Sortieren von Abfragen zurückgegebenen Daten. Die <xref:System.Web.UI.WebControls.EntityDataSource.AutoSort%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.EntityDataSource> -Steuerelement ist eine boolesche Eigenschaft, der angibt, ob die Sortierung für Daten aktiviert ist, die von Abfragen zurückgegeben werden, die an Steuerelemente gebunden werden. Wenn diese Eigenschaft auf festgelegt ist `true`, die <xref:System.Web.UI.WebControls.EntityDataSource> -Steuerelement fügt die entsprechenden Abfrage-Generator-Methoden, die die <xref:System.Data.Objects.ObjectQuery%601> anhand der bereitgestellten Informationen die <xref:System.Web.UI.WebControls.EntityDataSourceView> durch das datengebundene Steuerelement.  
+  
+ Der Wert des der <xref:System.Web.UI.WebControls.EntityDataSource.AutoSort%2A> Eigenschaft bestimmt, ob die <xref:System.Web.UI.WebControls.EntityDataSourceView.CanSort%2A> und <xref:System.Web.UI.WebControls.EntityDataSourceView.CanRetrieveTotalRowCount%2A> Eigenschaften des der <xref:System.Web.UI.WebControls.EntityDataSourceView> Steuerelement, das die Datenquelle unterstützt wird `true` oder `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandParameters">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.ParameterCollection CommandParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.ParameterCollection CommandParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.CommandParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ParameterCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Parameterauflistung für die Abfrage ab.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.ParameterCollection" /> , enthält die Parameter, die an den Befehl übergeben werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.EntityDataSource.CommandParameters%2A> Eigenschaft wird verwendet, für den Zugriff auf die <xref:System.Web.UI.WebControls.ParameterCollection> der Parameter, um eine explizite Entity SQL-Abfrage übergeben werden, die dem angegebenen unter Verwendung, der <xref:System.Web.UI.WebControls.EntityDataSource.CommandText%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel liefert Entity SQL-Befehlstext, der eine Auflistung von Product-Objekten zurückgibt.  
+  
+```  
+<asp:EntityDataSource ID="ProductDataSource" runat="server"   
+    CommandText="SELECT value p FROM Products AS p  
+        WHERE p.ProductID  
+        BETWEEN @OrderIdMin AND @OrderIdMax"  
+    ConnectionString="name=AdventureWorksEntities"   
+    DefaultContainerName="AdventureWorksEntities" >  
+    <CommandParameters>  
+        <asp:ControlParameter Name="OrderIdMin"   
+            ControlID="ProductIdMin" Type="Int32"/>  
+        <asp:ControlParameter Name="OrderIdMax"   
+            ControlID="ProductIdMax" Type="Int32" />  
+    </CommandParameters>  
+</asp:EntityDataSource>  
+  
+```  
+  
+ Das folgende Beispiel gibt eine voraussichtliche Reihe von Spalten zurück:  
+  
+```  
+<asp:EntityDataSource ID="ProductDataSource" runat="server"   
+    CommandText="SELECT p.ProductID, p.ProductName, p.UnitsOnOrder  
+         FROM Products AS p   
+         WHERE p.ProductID BETWEEN @OrderIDMin AND @OrderIDMax"   
+         ContextTypeName="AdventureWorksModel. AdventureWorksEntities">  
+    <CommandParameters>  
+        <asp:ControlParameter Name="OrderIDMin"   
+               ControlID="ProductIDMinTextBox" Type="Int32"/>  
+        <asp:ControlParameter Name="OrderIDMax"   
+               ControlID="ProductIDMaxTextBox" Type="Int32" />  
+    </CommandParameters>  
+</asp:EntityDataSource>  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandText">
+      <MemberSignature Language="C#" Value="public string CommandText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CommandText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.CommandText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Entity SQL-Befehl, der die Abfrage definiert.</summary>
+        <value>Ein <see langword="string" /> Wert, der die Entity SQL-Abfrage ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.EntityDataSource.CommandText%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.EntityDataSource> Steuerelement können Sie eine Abfrage angeben, die einen benutzerdefinierten Entity SQL-Ausdruck verwendet. Die SELECT-Anweisung wie <xref:System.Web.UI.WebControls.EntityDataSource.CommandText%2A> erstellt eine Projektion der ursprünglichen Daten, die nicht aktualisierbar ist.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.EntityDataSource.CommandText%2A> Eigenschaft zugeordnet ist, Update-, INSERT- und Delete-Funktionen werden deaktiviert. In diesem Fall werden die Methoden <xref:System.Web.UI.WebControls.EntityDataSourceView.CanDelete%2A>, <xref:System.Web.UI.WebControls.EntityDataSourceView.CanInsert%2A>, und <xref:System.Web.UI.WebControls.EntityDataSourceView.CanUpdate%2A> der zugehörigen <xref:System.Web.UI.WebControls.EntityDataSourceView> Steuerelement alle return `false`.  
+  
+ Wenn der <xref:System.Web.UI.WebControls.EntityDataSource.CommandText%2A> Eigenschaft festgelegt ist, wird eine Ausnahme ausgelöst, wenn der <xref:System.Web.UI.DataSourceView.ExecuteSelect%2A> Methode wird aufgerufen, indem Sie ein Steuerelement, das an Daten gebunden ist ein <xref:System.Web.UI.WebControls.EntityDataSource> steuern, wenn der Wert der <xref:System.Web.UI.WebControls.EntityDataSource.EnableInsert%2A>, <xref:System.Web.UI.WebControls.EntityDataSource.EnableUpdate%2A>, oder <xref:System.Web.UI.WebControls.EntityDataSource.EnableDelete%2A> auf festgelegt ist `true`.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.EntityDataSource.CommandText%2A> festgelegt ist, um eine Abfrage, die eine Projektion von Eigenschaften zurückgibt (z. B. "`SELECT p.ProductID, p. Name FROM AdventureWorksEntities.Products AS p`"), wird eine <xref:System.Data.Common.DbDataRecord> zurückgegeben werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird angegebene Entity SQL-Befehl gibt eine Auflistung von Product-Objekte.  
+  
+```  
+<asp:EntityDataSource ID="ProductDataSource" runat="server"   
+    CommandText="SELECT value p FROM Products AS p  
+        WHERE p.ProductID  
+        BETWEEN @OrderIdMin AND @OrderIdMax"  
+    ConnectionString="name=AdventureWorksEntities"   
+    DefaultContainerName="AdventureWorksEntities" >  
+    <CommandParameters>  
+        <asp:ControlParameter Name="OrderIdMin"   
+            ControlID="ProductIdMin" Type="Int32"/>  
+        <asp:ControlParameter Name="OrderIdMax"   
+            ControlID="ProductIdMax" Type="Int32" />  
+    </CommandParameters>  
+</asp:EntityDataSource>  
+  
+```  
+  
+ Das folgende Beispiel gibt eine voraussichtliche Reihe von Spalten zurück:  
+  
+```  
+<asp:EntityDataSource ID="ProductDataSource" runat="server"   
+    CommandText="SELECT p.ProductID, p.ProductName, p.UnitsOnOrder  
+          FROM Products AS p   
+          WHERE p.ProductID BETWEEN @OrderIDMin AND @OrderIDMax"   
+          ContextTypeName="AdventureWorksModel. AdventureWorksEntities">  
+    <CommandParameters>  
+        <asp:ControlParameter Name="OrderIDMin"   
+                ControlID="ProductIDMinTextBox" Type="Int32"/>  
+        <asp:ControlParameter Name="OrderIDMax"   
+                ControlID="ProductIDMaxTextBox" Type="Int32" />  
+    </CommandParameters>  
+</asp:EntityDataSource>  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionString">
+      <MemberSignature Language="C#" Value="public string ConnectionString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConnectionString" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.ConnectionString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Verbindungszeichenfolge, die zum Ausführen der Abfrage verwendet wird.</summary>
+        <value>Die Verbindungszeichenfolge für die Abfrage.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.EntityDataSource.ConnectionString%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.EntityDataSource> Steuerelement initialisiert werden kann, aus einer benannten EDM-Verbindungszeichenfolge, die im Element der Konfigurationsdatei der Anwendung gespeichert. Wenn EDM mithilfe des Entity Data Model-Assistenten erstellt wird, wird eine benannte EDM-Verbindung in der Anwendungskonfigurationsdatei erstellt. Wenn eine benannte EDM-Verbindungszeichenfolge in der Anwendungskonfigurationsdatei gefunden wird, wird die Verbindung als eine Option in der Datenquelle konfigurieren-Assistent des EntityDataSource-Designers angezeigt. Weitere Informationen finden Sie unter [Konfigurieren von Datenquellen-Assistenten (EntityDataSource-Steuerelement)](http://msdn.microsoft.com/en-us/263976a5-2406-47c0-8919-c6af6e76d78e).  
+  
+ Wenn die <xref:System.Web.UI.WebControls.EntityDataSource.ContextTypeName%2A> Eigenschaft wurde nicht angegeben, die beide die <xref:System.Web.UI.WebControls.EntityDataSource.DefaultContainerName%2A> und <xref:System.Web.UI.WebControls.EntityDataSource.ConnectionString%2A> Eigenschaften müssen festgelegt werden, für das zu erstellende Steuerelement die <xref:System.Data.Objects.ObjectContext>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextCreated">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceContextCreatedEventArgs&gt; ContextCreated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.EntityDataSourceContextCreatedEventArgs&gt; ContextCreated" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.EntityDataSource.ContextCreated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceContextCreatedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> die Erstellung des <see cref="T:System.Data.Objects.ObjectContext" /> abgeschlossen hat, der zum Arbeiten mit Entitätsdatenobjekten verwendet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Behandeln Sie dieses Ereignis, um Zugriff auf die <xref:System.Data.Objects.ObjectContext> wird, indem Sie die <xref:System.Web.UI.WebControls.EntityDataSource> Steuerelement zum Ausführen der Abfrage und Änderungen nachverfolgen. Diesem Kontextobjekt kann gespeichert und verwendet für aufeinanderfolgende Vorgänge außerhalb der <xref:System.Web.UI.WebControls.EntityDataSource>. Der <xref:System.Data.Objects.ObjectContext> stammt von der <xref:System.Web.UI.WebControls.EntityDataSourceContextCreatedEventArgs> der zurückgegeben wird, indem die <xref:System.Web.UI.WebControls.EntityDataSource.ContextCreated> Ereignis. Weitere Informationen finden Sie unter [Objekt Kontext Lifecycle-Verwaltungsvorgänge (EntityDataSource)](http://msdn.microsoft.com/en-us/67bc2486-112c-47c3-b23f-0297f7ac2160). Weitere Informationen zu den Objektkontext, finden Sie unter [Identitätsauflösung, Zustandsverwaltung und Änderungsnachverfolgung](http://msdn.microsoft.com/en-us/3bd49311-0e72-4ea4-8355-38fe57036ba0).  
+  
+ Der <xref:System.Web.UI.WebControls.EntityDataSource.ContextCreated> Ereignis ermöglicht das Zuweisen von der <xref:System.Data.Objects.ObjectContext> , erstellt wurde, eine Variable für aufeinander folgende Operationen außerhalb der <xref:System.Web.UI.WebControls.EntityDataSource>. Die <xref:System.Web.UI.WebControls.EntityDataSourceContextCreatedEventArgs.Context%2A?displayProperty=nameWithType> Eigenschaft enthält den Kontext, der erstellt wurde, die <xref:System.Web.UI.WebControls.EntityDataSource.ContextCreating> Ereignis. Wenn der Benutzer keinen Kontext während zuweist der <xref:System.Web.UI.WebControls.EntityDataSource.ContextCreating> -Ereignis in die Kontextinstanz enthaltenen <xref:System.Web.UI.WebControls.EntityDataSourceContextCreatedEventArgs.Context%2A?displayProperty=nameWithType> ist der Datensatz erstellt, indem die <xref:System.Web.UI.WebControls.EntityDataSource> basierend auf der <xref:System.Web.UI.WebControls.EntityDataSource.ContextTypeName%2A?displayProperty=nameWithType>, <xref:System.Web.UI.WebControls.EntityDataSource.DefaultContainerName%2A?displayProperty=nameWithType>, oder <xref:System.Web.UI.WebControls.EntityDataSource.ConnectionString%2A?displayProperty=nameWithType> Eigenschaften.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextCreating">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceContextCreatingEventArgs&gt; ContextCreating;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.EntityDataSourceContextCreatingEventArgs&gt; ContextCreating" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.EntityDataSource.ContextCreating" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceContextCreatingEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> erstellt die <see cref="T:System.Data.Objects.ObjectContext" /> dient außerdem zur Arbeit mit Daten von Entitätsobjekten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Behandeln der <xref:System.Web.UI.WebControls.EntityDataSource.ContextCreating> Ereignis geben Sie Ihren eigenen <xref:System.Data.Objects.ObjectContext> anstatt ein neues <xref:System.Data.Objects.ObjectContext> erstellt. Wenn die <xref:System.Web.UI.WebControls.EntityDataSource.ContextCreating> Ereignis nicht behandelt wird oder der Handler kein <xref:System.Data.Objects.ObjectContext>, die <xref:System.Web.UI.WebControls.EntityDataSource> entsprechend der Konfiguration erstellt. Wenn ein <xref:System.Data.Objects.ObjectContext> wird bereitgestellt, um die <xref:System.Web.UI.WebControls.EntityDataSource.ContextCreating> -Ereignis, mit die gleiche Instanz zugewiesen ist die `Context` Eigenschaft des Ereignisobjekts für aufeinander folgende Ereignisse. Weitere Informationen finden Sie unter [Objekt Kontext Lifecycle-Verwaltungsvorgänge (EntityDataSource)](http://msdn.microsoft.com/en-us/67bc2486-112c-47c3-b23f-0297f7ac2160). Weitere Informationen zu den Objektkontext, finden Sie unter [Identitätsauflösung, Zustandsverwaltung und Änderungsnachverfolgung](http://msdn.microsoft.com/en-us/3bd49311-0e72-4ea4-8355-38fe57036ba0).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Data.Objects.ObjectContext> -Variable der der <xref:System.Web.UI.Page> Objekt, und weisen sie Sie der <xref:System.Web.UI.WebControls.EntityDataSourceContextCreatingEventArgs.Context%2A> Eigenschaft der <xref:System.Web.UI.WebControls.EntityDataSourceContextCreatingEventArgs> Objekt.  
+  
+```csharp  
+public partial class _Default : System.Web.UI.Page  
+    {  
+        AdventureWorksModel.AdventureWorksEntities objCtx =  
+            new AdventureWorksModel.AdventureWorksEntities();  
+  
+        protected void EntityDataSource2_ContextCreating(object sender,   
+            EntityDataSourceContextCreatingEventArgs e)  
+        {  
+            e.Context = objCtx;  
+        }  
+    }  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextDisposing">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceContextDisposingEventArgs&gt; ContextDisposing;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.EntityDataSourceContextDisposingEventArgs&gt; ContextDisposing" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.EntityDataSource.ContextDisposing" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceContextDisposingEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, bevor ein <see cref="T:System.Data.Objects.ObjectContext" /> wurde verworfen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Behandeln Sie dieses Ereignis, um zu verhindern, dass die <xref:System.Data.Objects.ObjectContext> verwendet werden, indem die <xref:System.Web.UI.WebControls.EntityDataSource> Steuerelement verworfen wird. Dies geschieht, wenn Sie ein einzelnes verwenden möchten <xref:System.Data.Objects.ObjectContext> Instanz auf der Seite mit mehreren Steuerelementen oder Instanzen von der <xref:System.Web.UI.WebControls.EntityDataSource> Steuerelement. Um zu verhindern, dass der <xref:System.Data.Objects.ObjectContext> verworfen wird, legen die <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft der <xref:System.Web.UI.WebControls.EntityDataSourceContextDisposingEventArgs> -Objekt an `true`. Weitere Informationen finden Sie unter [Objekt Kontext Lifecycle-Verwaltungsvorgänge (EntityDataSource)](http://msdn.microsoft.com/en-us/67bc2486-112c-47c3-b23f-0297f7ac2160). Weitere Informationen zu den Objektkontext, finden Sie unter [Identitätsauflösung, Zustandsverwaltung und Änderungsnachverfolgung](http://msdn.microsoft.com/en-us/3bd49311-0e72-4ea4-8355-38fe57036ba0).  
+  
+   
+  
+## Examples  
+ Zu einem vorhandenen <xref:System.Data.Objects.ObjectContext> Instanzmember für zukünftige Verwendung "Abbrechen" die <xref:System.Web.UI.WebControls.EntityDataSource.ContextCreated> Ereignis wie im folgenden Code gezeigt.  
+  
+```csharp  
+protected void EntityDataSource2_ContextDisposing(object sender,   
+    EntityDataSourceContextDisposingEventArgs e)  
+{  
+    e.Cancel = true;  
+}  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextType">
+      <MemberSignature Language="C#" Value="public Type ContextType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ContextType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.ContextType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den typisierten <see cref="T:System.Data.Objects.ObjectContext" /> verwendet werden, indem die <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> Steuerelement.</summary>
+        <value>Ein Objekt, das von abgeleitet ist <see cref="T:System.Data.Objects.ObjectContext" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Objects.ObjectContext> von verwendet die <xref:System.Web.UI.WebControls.EntityDataSource> Steuerelement zugegriffen werden kann, aus der <xref:System.Web.UI.WebControls.EntityDataSource.ContextType%2A> Eigenschaft. Weitere Informationen finden Sie unter [Objekt Kontext Lifecycle-Verwaltungsvorgänge (EntityDataSource)](http://msdn.microsoft.com/en-us/67bc2486-112c-47c3-b23f-0297f7ac2160).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextTypeName">
+      <MemberSignature Language="C#" Value="public string ContextTypeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContextTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.ContextTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den vollqualifizierten Namen des typisierten <see cref="T:System.Data.Objects.ObjectContext" /> wird, indem Sie die <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> Steuerelement.</summary>
+        <value>Ein <see cref="T:System.String" /> also der vollqualifizierte Name des Typs.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.Web.UI.WebControls.EntityDataSource.ContextTypeName%2A> Eigenschaft der <xref:System.Web.UI.WebControls.EntityDataSource> Steuerelement ist eine Zeichenfolge, die den voll qualifizierten Typnamen des typisierten gibt <xref:System.Data.Objects.ObjectContext> wird, indem Sie die <xref:System.Web.UI.WebControls.EntityDataSource> Steuerelement. Wenn die <xref:System.Web.UI.WebControls.EntityDataSource.ContextTypeName%2A> Eigenschaft wurde nicht angegeben, die beide die <xref:System.Web.UI.WebControls.EntityDataSource.DefaultContainerName%2A> und <xref:System.Web.UI.WebControls.EntityDataSource.ConnectionString%2A> Eigenschaften müssen festgelegt werden, für das zu erstellende Steuerelement die <xref:System.Data.Objects.ObjectContext>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateView">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.WebControls.EntityDataSourceView CreateView ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.WebControls.EntityDataSourceView CreateView() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EntityDataSource.CreateView" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.EntityDataSourceView</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.EntityDataSourceView" /> , diesem Steuerelement zugeordnet ist.</summary>
+        <returns>Ein Objekt, das als Schnittstelle für datengebundene Steuerelemente fungiert.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um eine benutzerdefinierte Ansicht zu gewährleisten, können Sie diese Methode in einer abgeleiteten Klasse überschreiben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultContainerName">
+      <MemberSignature Language="C#" Value="public string DefaultContainerName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultContainerName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.DefaultContainerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Standardcontainernamen ab oder legt diesen fest.</summary>
+        <value>Eine <see cref="T:System.String" />, die den Standardcontainernamen darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.WebControls.EntityDataSource.ContextTypeName%2A> Eigenschaft wurde nicht angegeben, die beide die <xref:System.Web.UI.WebControls.EntityDataSource.DefaultContainerName%2A> und <xref:System.Web.UI.WebControls.EntityDataSource.ConnectionString%2A> Eigenschaften müssen festgelegt werden, für das zu erstellende Steuerelement die <xref:System.Data.Objects.ObjectContext>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deleted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceChangedEventArgs&gt; Deleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.EntityDataSourceChangedEventArgs&gt; Deleted" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.EntityDataSource.Deleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, nachdem ein Objekt aus der Datenquelle gelöscht wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.EntityDataSource.Deleted> Ereignis wird ausgelöst, nachdem die <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> Methode nur erfolgreich aufgerufen wurde auf die <xref:System.Data.Objects.ObjectContext> zum Löschen eines Objekts. Die <xref:System.Web.UI.WebControls.EntityDataSourceChangingEventArgs.Entity%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.EntityDataSourceChangingEventArgs> Objekt wird verwendet, um das gelöschte Objekt zugreifen. Dieses Objekt befindet sich in einem <xref:System.Data.EntityState.Detached> Zustand.  
+  
+ Wenn ein Fehler auftritt, wenn ein Objekt gelöscht wird, die <xref:System.Web.UI.WebControls.EntityDataSource.Deleted> Ereignis wird ausgelöst, der <xref:System.Web.UI.WebControls.EntityDataSourceChangedEventArgs.Exception%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.EntityDataSourceChangedEventArgs> -Objekts festgelegt wird auf das zurückgegebene <xref:System.Exception>, und die <xref:System.Web.UI.WebControls.EntityDataSourceChangedEventArgs.Entity%2A> -Eigenschaftensatz auf `null`. Wenn Sie die Ausnahme behandeln die <xref:System.Web.UI.WebControls.EntityDataSource.Deleted> legen Sie Ereignishandler, d. h. die <xref:System.Web.UI.WebControls.EntityDataSourceChangedEventArgs.ExceptionHandled%2A> Eigenschaft, um `true`. Dies verhindert, dass die Ausnahme erneut ausgelöst wird. Wenn Sie einen Wert angeben `false` für die <xref:System.Web.UI.WebControls.EntityDataSourceChangedEventArgs.ExceptionHandled%2A> -Eigenschaft, die <xref:System.Web.UI.WebControls.EntityDataSource> Ausnahme erneut ausgelöst wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteParameters">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.ParameterCollection DeleteParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.ParameterCollection DeleteParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.DeleteParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ParameterCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Parametern, die während eines Delete-Vorgangs verwendet werden.</summary>
+        <value>Die Parameter, die während eines Delete-Vorgangs verwendet werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für Webanwendungen, die auf ASP.NET 4 oder früher ausgerichtet, den Wert der Eigenschaft befindet sich im Ansichtszustand und Postbacks automatisch beibehalten wird. Für Webanwendungen, die ASP.NET 4.5 abzielen, den Wert der Eigenschaft ist nicht im Ansichtszustand gespeichert und müssen, legen Sie den Wert für jede HTTP-Anforderung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deleting">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceChangingEventArgs&gt; Deleting;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.EntityDataSourceChangingEventArgs&gt; Deleting" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.EntityDataSource.Deleting" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceChangingEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, bevor ein Objekt aus der Datenquelle gelöscht wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.EntityDataSource.Deleting> Ereignis wird ausgelöst, bevor die <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> Methode wird aufgerufen, auf die <xref:System.Data.Objects.ObjectContext> zum Löschen eines Objekts. Die <xref:System.Web.UI.WebControls.EntityDataSourceChangingEventArgs.Entity%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.EntityDataSourceChangingEventArgs> Objekt wird verwendet, um das Objekt gelöscht werden soll. Die Eigenschaften dieses Objekts können nicht vollständig festgelegt werden. Nur die Eigenschaften, die zur Identifizierung des Objekts erforderlich sind, müssen festgelegt werden.  
+  
+ Festzulegen derart das Objekt gelöscht wird, die <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft der <xref:System.Web.UI.WebControls.EntityDataSourceChangingEventArgs> -Objekt `true`.  
+  
+ Bei einem Fehler bei der Vorbereitung zum Löschen eines Objekts die <xref:System.Web.UI.WebControls.EntityDataSource.Deleting> Ereignis wird ausgelöst, und die <xref:System.Web.UI.WebControls.EntityDataSourceChangingEventArgs.Exception%2A> Eigenschaft der <xref:System.Web.UI.WebControls.EntityDataSourceChangingEventArgs> Objektsatz ist auf das zurückgegebene <xref:System.Exception>.  
+  
+ Beim Behandeln der Ausnahme in der <xref:System.Web.UI.WebControls.EntityDataSource.Deleting> legen Sie Ereignishandler, d. h. die <xref:System.Web.UI.WebControls.EntityDataSourceChangingEventArgs.ExceptionHandled%2A> Eigenschaft `true`. Dies verhindert, dass die Ausnahme erneut ausgelöst wird. Wenn Sie einen Wert angeben `false` für die <xref:System.Web.UI.WebControls.EntityDataSourceChangingEventArgs.ExceptionHandled%2A> -Eigenschaft, die <xref:System.Web.UI.WebControls.EntityDataSource> Ausnahme erneut ausgelöst wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableDelete">
+      <MemberSignature Language="C#" Value="public bool EnableDelete { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableDelete" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.EnableDelete" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Objekte können, über gelöscht werden die <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> Steuerelement.</summary>
+        <value>
+          <see langword="true" />Wenn automatische Löschvorgänge aktiviert sind; andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.UI.WebControls.EntityDataSource.Select%2A>kann nicht festgelegt werden, wenn die <xref:System.Web.UI.WebControls.EntityDataSource.EnableDelete%2A> -Eigenschaft aktiviert ist.  
+  
+ Ein `false` zugewiesene Wert der <xref:System.Web.UI.WebControls.EntityDataSource.EnableDelete%2A> Eigenschaft auf die <xref:System.Web.UI.WebControls.EntityDataSource> erzwingt, dass die <xref:System.Web.UI.WebControls.EntityDataSourceView.CanDelete%2A> -Eigenschaft des verwandten <xref:System.Web.UI.WebControls.EntityDataSourceView> zurückzugebenden Objekts `false`. Wenn die <xref:System.Web.UI.WebControls.EntityDataSource.EnableDelete%2A> -Eigenschaftensatz auf `false`, eine <xref:System.NotSupportedException> wird ausgelöst, wenn das datengebundene Steuerelement aufruft der <xref:System.Web.UI.DataSourceView.ExecuteDelete%2A> Methode auf die <xref:System.Web.UI.WebControls.EntityDataSourceView>.  
+  
+ Wenn eine der Bedingungen für aktualisierbarkeit nicht erfüllt werden und die <xref:System.Web.UI.WebControls.EntityDataSource.EnableDelete%2A> -Eigenschaftensatz auf `true`die <xref:System.Web.UI.WebControls.EntityDataSource> löst eine Ausnahme aus.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableFlattening">
+      <MemberSignature Language="C#" Value="public bool EnableFlattening { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableFlattening" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.EnableFlattening" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert, der angibt, ob Sie Wrappererstellung deaktivieren möchten.</summary>
+        <value>
+          <see langword="True" />Wenn die Eigenschaften vereinfacht werden, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie initialisieren, wenn die <xref:System.Web.UI.WebControls.EntityDataSource> Steuerung mithilfe der <xref:System.Web.UI.WebControls.EntityDataSource.EntitySetName%2A> -Eigenschaft, die <xref:System.Web.UI.WebControls.EntityDataSource> dient als Wrapper für jede Entitätsinstanz in den Ergebnissen in ein Objekt des der <xref:System.ComponentModel.ICustomTypeDescriptor> Typ. Weitere Informationen finden Sie unter [vereinfachen von Objekten (EntityDataSource)](http://msdn.microsoft.com/en-us/08a30ef3-1132-4ac4-856c-5ed3d65eaf16).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableInsert">
+      <MemberSignature Language="C#" Value="public bool EnableInsert { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableInsert" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.EnableInsert" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Objekte können, über hinzugefügt werden die <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> Steuerelement.</summary>
+        <value>
+          <see langword="true" />Wenn automatische Einfügevorgänge aktiviert sind; andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.UI.WebControls.EntityDataSource.Select%2A>kann nicht festgelegt werden, wenn die <xref:System.Web.UI.WebControls.EntityDataSource.EnableInsert%2A> -Eigenschaftensatz auf `true`.  
+  
+ Ein `false` zugewiesene Wert der <xref:System.Web.UI.WebControls.EntityDataSource.EnableInsert%2A> Eigenschaft auf die <xref:System.Web.UI.WebControls.EntityDataSource> erzwingt, dass die <xref:System.Web.UI.WebControls.EntityDataSourceView.CanInsert%2A> -Eigenschaft des verwandten <xref:System.Web.UI.WebControls.EntityDataSourceView> zurückzugebenden Objekts `false`. Wenn die <xref:System.Web.UI.WebControls.EntityDataSource.EnableInsert%2A> -Eigenschaftensatz auf `false`, eine <xref:System.NotSupportedException> wird ausgelöst, wenn das datengebundene Steuerelement aufruft der <xref:System.Web.UI.DataSourceView.ExecuteInsert%2A> Methode auf die <xref:System.Web.UI.WebControls.EntityDataSourceView>.  
+  
+ Wenn eine der Bedingungen für aktualisierbarkeit nicht erfüllt werden und die <xref:System.Web.UI.WebControls.EntityDataSource.EnableInsert%2A> -Eigenschaftensatz auf `true`die <xref:System.Web.UI.WebControls.EntityDataSource> löst eine Ausnahme aus.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableUpdate">
+      <MemberSignature Language="C#" Value="public bool EnableUpdate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableUpdate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.EnableUpdate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Objekte über geändert werden, können die <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> Steuerelement.</summary>
+        <value>
+          <see langword="true" />Wenn die automatische Update-Vorgänge aktiviert sind; andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.UI.WebControls.EntityDataSource.Select%2A>kann nicht festgelegt werden, wenn die <xref:System.Web.UI.WebControls.EntityDataSource.EnableUpdate%2A> -Eigenschaftensatz auf `true`.  
+  
+ Ein `false` zugewiesene Wert der <xref:System.Web.UI.WebControls.EntityDataSource.EnableUpdate%2A> Eigenschaft erzwingt die <xref:System.Web.UI.WebControls.EntityDataSourceView.CanUpdate%2A> -Eigenschaft des verwandten <xref:System.Web.UI.WebControls.EntityDataSourceView> zurückzugebenden Objekts `false`. Wenn die <xref:System.Web.UI.WebControls.EntityDataSource.EnableUpdate%2A> -Eigenschaftensatz auf `false`, eine <xref:System.NotSupportedException> wird ausgelöst, wenn das datengebundene Steuerelement aufruft der <xref:System.Web.UI.DataSourceView.ExecuteUpdate%2A> Methode auf die <xref:System.Web.UI.WebControls.EntityDataSourceView>.  
+  
+ Festlegen der <xref:System.Web.UI.WebControls.EntityDataSource.EnableUpdate%2A> Eigenschaft `true` garantiert nicht die aktualisierbarkeit.  
+  
+ Wenn eine der Bedingungen für aktualisierbarkeit nicht erfüllt werden und die <xref:System.Web.UI.WebControls.EntityDataSource.EnableUpdate%2A> -Eigenschaftensatz auf `true`die <xref:System.Web.UI.WebControls.EntityDataSource> löst eine Ausnahme aus.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntitySetName">
+      <MemberSignature Language="C#" Value="public string EntitySetName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EntitySetName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.EntitySetName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Entitätenmenge, die verwendet werden, indem die <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> Steuerelement.</summary>
+        <value>Der Name der Entitätenmenge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.EntityDataSource.EntitySetName%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.EntityDataSource> Steuerelement wird verwendet, um die Entitätenmenge, der den Typ der Objekte angeben, die vom Steuerelement zugegriffen wird. Der Wert, der die <xref:System.Web.UI.WebControls.EntityDataSource.EntitySetName%2A> Eigenschaft ist für die Standard-SELECT-Anweisung, die vom Steuerelement verwendet wird. Die Einstellung ist nicht erforderlich, wenn die Abfrage als Entity SQL-Ausdruck angegeben wird, der an die <xref:System.Web.UI.WebControls.EntityDataSource.CommandText%2A> Eigenschaft. Weitere Informationen finden Sie unter [benutzerdefinierte Befehlstext (EntityDataSource)](http://msdn.microsoft.com/en-us/d42e90d0-1443-474e-8940-53f504d6fc91).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntityTypeFilter">
+      <MemberSignature Language="C#" Value="public string EntityTypeFilter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EntityTypeFilter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.EntityTypeFilter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Ausdruck, der die Abfrage auf Ergebnisse eines bestimmten abgeleiteten Typs beschränkt.</summary>
+        <value>Der Filterausdruck.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Web.UI.WebControls.EntityDataSource> Steuerelement muss einen bestimmten abgeleiteten Typ zurückgeben der <xref:System.Web.UI.WebControls.EntityDataSource.EntityTypeFilter%2A> Eigenschaft muss ebenfalls Geben Sie den Namen dieses abgeleiteten Typs festgelegt werden. Wenn die <xref:System.Web.UI.WebControls.EntityDataSource.EntitySetName%2A> Eigenschaft gibt eine Entitätenmenge, die polymorphe Ergebnisse generieren kann die <xref:System.Web.UI.WebControls.EntityDataSource.EntityTypeFilter%2A> Eigenschaft ist erforderlich, um die Daten bearbeitet werden. Dies hat dieselbe Wirkung wie das Anwenden der <xref:System.Data.Objects.ObjectQuery%601.OfType%60%601?displayProperty=nameWithType> Methode, um die <xref:System.Data.Objects.ObjectQuery%601?displayProperty=nameWithType>. Wenn die Datenbindung schreibgeschützt ist, ist die <xref:System.Web.UI.WebControls.EntityDataSource.EntityTypeFilter%2A> Eigenschaft ist nicht erforderlich. In diesem Fall werden die Eigenschaften des von der Abfrage zurückgegebenen Objekts die von der Standard-Entitätstyp der Entitätenmenge.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetView">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.DataSourceView GetView (string viewName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.DataSourceView GetView(string viewName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EntityDataSource.GetView(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataSourceView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="viewName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="viewName">Der Name der abzurufenden Ansicht. Da die <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> Steuerelement unterstützt nur die Ansicht <c>ViewName</c> wird ignoriert.</param>
+        <summary>Ruft die benannte Datenquellensicht an, die Datenquellen-Steuerelements zugeordnet ist.</summary>
+        <returns>Die <see cref="T:System.Web.UI.WebControls.EntityDataSourceView" /> zugeordneten der <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> Steuerelement.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.EntityDataSource> Steuerelement unterstützt nur eine Datenquellensicht an. Alle Datenquellensicht-Objekte, wie die <xref:System.Web.UI.WebControls.EntityDataSourceView> -Objekt, das die Datenquellen-Steuerelement zugeordnet ist seine Funktionen definiert, alle Aufgaben ausführt, die zum Abrufen von Daten aus der zugrunde liegenden Datenbank und führt Vorgänge, z. B. sortieren Einfügen, löschen und aktualisieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetViewNames">
+      <MemberSignature Language="C#" Value="protected override System.Collections.ICollection GetViewNames ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Collections.ICollection GetViewNames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EntityDataSource.GetViewNames" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Auflistung von Namen, die die Liste von Objekten darstellt, die zugeordnet sind die <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> Steuerelement.</summary>
+        <returns>Ein <see cref="T:System.Collections.ICollection" /> , enthält die Namen der zugeordneten Ansichten der <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> Steuerelement.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.EntityDataSource> Steuerelement unterstützt nur eine Ansicht der zugrunde liegenden Daten. Die <xref:System.Web.UI.WebControls.EntityDataSource.GetViewNames%2A> -Methode gibt eine Einzelelement-Auflistung von diesem einen Ansichtsnamen als Zeichenfolge.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GroupBy">
+      <MemberSignature Language="C#" Value="public string GroupBy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string GroupBy" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.GroupBy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder festlegen den Entity SQL-Ausdruck, der angibt, wie die Ergebnisse der Abfrage gruppiert.</summary>
+        <value>Die GROUP BY-Klausel.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Include">
+      <MemberSignature Language="C#" Value="public string Include { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Include" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.Include" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Ausdruck, der angibt, die verwandten Objekte in die Abfrageergebnisse eingeschlossen werden sollen.</summary>
+        <value>Durch Trennzeichen getrennte Liste von Abfragepfaden in den Abfrageergebnissen zurückgegeben werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.EntityDataSource.Include%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.EntityDataSource> Steuerelement gibt eine durch Trennzeichen getrennte Liste von Abfragepfaden, die definieren, die Objekte sind, zusammen mit dem explizit abgefragten Objekt zurückgegeben. Jeder durch Trennzeichen getrennte Wert in der Zeichenfolge übergeben wird, ohne Änderungen als einen separaten Aufruf von der <xref:System.Data.Objects.ObjectQuery%601.Include%2A> Methode eine <xref:System.Data.Objects.ObjectQuery%601> , wird ausgeführt, indem die [!INCLUDE[adonet_ef](~/includes/adonet-ef-md.md)]. Diese Abfrage ist die Quelle der Daten durch reguliert die <xref:System.Web.UI.WebControls.EntityDataSource> Steuerelement. Die <xref:System.Web.UI.WebControls.EntityDataSource.Include%2A> Eigenschaft ist das Argument angewendet, um die <xref:System.Data.Objects.ObjectQuery%601> bevor er ausgeführt wird.  
+  
+ Die Zeichenfolge angegeben wird, um die <xref:System.Web.UI.WebControls.EntityDataSource.Include%2A> Eigenschaft verwendet das gleiche Format wie die Zeichenfolge, die an die <xref:System.Data.Objects.ObjectQuery%601.Include%2A> Methode <xref:System.Data.Objects.ObjectQuery%601>. Beispiele zur Verwendung von Abfragepfaden verwenden, um verbundene Objekte automatisch zu laden, finden Sie unter [wie: Verwenden von Abfragepfaden Form Ergebnisse](http://msdn.microsoft.com/en-us/100bf7f5-00ba-4c17-8e27-7a8a14831093).  
+  
+ Wenn die <xref:System.Web.UI.WebControls.EntityDataSource.Include%2A> Eigenschaft wird verwendet, um die Abfragepfade angeben, die Eigenschaften der verknüpften Entitäten können nur für schreibgeschützte Daten-Bindung verwendet werden. Wenn verbundene Objekte nicht explizit im Abfragepfad enthalten sind, die Eigenschaftendeskriptoren sind weiterhin verfügbar, für die Datenbindung, aber die Eigenschaften selbst null-Werte zurück. In diesem Fall müssen die verwandten Objekte explizit geladen werden, um die Werte anzuzeigen. Weitere Informationen finden Sie unter [Laden von verknüpften Objekten](http://msdn.microsoft.com/en-us/452347d2-7b3b-44cd-9001-231299a28cb1).  
+  
+   
+  
+## Examples  
+ Das folgende XML-Markup definiert einen Abfragepfad, die zurückgibt `SalesOrderHeader` Objekte im Zusammenhang mit den zurückgegebenen `Contact` Objekt. Mit jedem `SalesOrderHeader`, den zugehörigen `SalesOrderDetail` und `Address` werden auch Objekte zurückgegeben.  
+  
+```  
+<asp:EntityDataSource ID="ContactDataSource" runat="server"   
+    AutoGenerateWhereClause="True" ConnectionString="name=AdventureWorksEntities"   
+    DefaultContainerName="AdventureWorksEntities" EnableDelete="True"   
+    EnableInsert="True" EnableUpdate="True" EntitySetName="Contact"   
+    Include="SalesOrderHeader.SalesOrderDetail, SalesOrderHeader.Address">  
+    <WhereParameters>  
+        <asp:ControlParameter ControlID="customerId" Name="ContactID"   
+            PropertyName="Text" />  
+    </WhereParameters>  
+</asp:EntityDataSource>  
+```  
+  
+ Im vorherige XML-Beispiel ist identisch mit den folgenden <xref:System.Data.Objects.ObjectQuery%601> mit dem Namen `customers`:  
+  
+```  
+ObjectQuery<Contact> customers =  
+      context.Contact  
+       .Where("it.ContactID = @ContactID",  
+         new ObjectParameter("ContactID", customerId))  
+        .Include("SalesOrderHeader.SalesOrderDetail")  
+        .Include("SalesOrderHeader.Address");  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Inserted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceChangedEventArgs&gt; Inserted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.EntityDataSourceChangedEventArgs&gt; Inserted" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.EntityDataSource.Inserted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, nachdem ein neues Objekt in der Datenquelle erstellt wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.EntityDataSource.Inserted> Ereignis wird ausgelöst, wenn das hinzugefügte Objekt in der Datenquelle erstellt wird oder wenn ein Fehler aufgetreten ist, wenn die Daten des Objekts mit der Datenquelle beibehalten werden. Die <xref:System.Web.UI.WebControls.EntityDataSourceChangedEventArgs.Entity%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.EntityDataSourceChangedEventArgs> Objekt wird verwendet, um das hinzugefügte Objekt zugreifen.  
+  
+ Die Eigenschaften dieses Objekts enthalten Werte, die aus der Datenquelle, einschließlich aller Daten Quelle generierten Werte zurückgegeben werden.  
+  
+ Wenn ein Fehler auftritt, wenn ein Objekt mit der Datenquelle beibehalten wird die <xref:System.Web.UI.WebControls.EntityDataSource.Inserted> Ereignis wird ausgelöst, und die <xref:System.Web.UI.WebControls.EntityDataSourceChangedEventArgs.Exception%2A> Eigenschaft der <xref:System.Web.UI.WebControls.EntityDataSourceChangedEventArgs> Objektsatz ist auf das zurückgegebene <xref:System.Exception>. Wenn Sie die Ausnahme behandeln die <xref:System.Web.UI.WebControls.EntityDataSource.Inserted> legen Sie Ereignishandler, d. h. die <xref:System.Web.UI.WebControls.EntityDataSourceChangedEventArgs.ExceptionHandled%2A> Eigenschaft, um `true`. Dies verhindert, dass die Ausnahme erneut ausgelöst wird. Wenn Sie einen Wert angeben `false` für die <xref:System.Web.UI.WebControls.EntityDataSourceChangedEventArgs.ExceptionHandled%2A> -Eigenschaft, die <xref:System.Web.UI.WebControls.EntityDataSource> Ausnahme erneut ausgelöst wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Inserting">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceChangingEventArgs&gt; Inserting;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.EntityDataSourceChangingEventArgs&gt; Inserting" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.EntityDataSource.Inserting" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceChangingEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, bevor ein neues Objekt mit der Datenquelle beibehalten wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.EntityDataSource.Inserting> Ereignis wird ausgelöst, bevor ein neues Objekt mit der Datenquelle beibehalten wird. Die <xref:System.Web.UI.WebControls.EntityDataSource.Inserting> -Ereignis können Sie ändern oder das hinzugefügte Objekt überprüfen, fügen ein anderes Objekt oder brechen Sie den Vorgang. Sie erreichen das Objekt, das hinzugefügt werden, die <xref:System.Web.UI.WebControls.EntityDataSourceChangingEventArgs.Entity%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.EntityDataSourceChangingEventArgs> Objekt. Der Benutzer ist verantwortlich für die Einstellung des richtigen Entitätstyps im, bei der Bereitstellung von eines anderen Objekts der <xref:System.Web.UI.WebControls.EntityDataSourceChangingEventArgs.Entity%2A> Eigenschaft.  
+  
+ Festzulegen derart für das Objekt eingefügt werden die <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.EntityDataSourceChangingEventArgs> -Objekt `true`.  
+  
+ Bei einem beim Erstellen eines neuen Objekts Fehler die <xref:System.Web.UI.WebControls.EntityDataSource.Inserting> Ereignis wird ausgelöst, und die <xref:System.Web.UI.WebControls.EntityDataSourceChangingEventArgs.Exception%2A> Eigenschaft der <xref:System.Web.UI.WebControls.EntityDataSourceChangingEventArgs> Objektsatz ist auf das zurückgegebene <xref:System.Exception>.  
+  
+ Beim Behandeln der Ausnahme in der <xref:System.Web.UI.WebControls.EntityDataSource.Inserting> legen Sie Ereignishandler, d. h. die <xref:System.Web.UI.WebControls.EntityDataSourceChangingEventArgs.ExceptionHandled%2A> Eigenschaft `true`. Dies verhindert, dass die Ausnahme erneut ausgelöst wird. Wenn Sie einen Wert angeben `false` für die <xref:System.Web.UI.WebControls.EntityDataSourceChangingEventArgs.ExceptionHandled%2A> -Eigenschaft, die <xref:System.Web.UI.WebControls.EntityDataSource> Ausnahme erneut ausgelöst wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertParameters">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.ParameterCollection InsertParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.ParameterCollection InsertParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.InsertParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ParameterCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Parametern, die bei einem Einfügevorgang verwendet werden.</summary>
+        <value>Die Parameter, die bei einem Einfügevorgang verwendet werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für Webanwendungen, die auf ASP.NET 4 oder früher ausgerichtet, den Wert der Eigenschaft befindet sich im Ansichtszustand und Postbacks automatisch beibehalten wird. Für Webanwendungen, die ASP.NET 4.5 abzielen, den Wert der Eigenschaft ist nicht im Ansichtszustand gespeichert und müssen, legen Sie den Wert für jede HTTP-Anforderung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadControlState">
+      <MemberSignature Language="C#" Value="protected override void LoadControlState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LoadControlState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EntityDataSource.LoadControlState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Die <see cref="T:System.Object" /> , das Zustandsinformationen enthält.</param>
+        <summary>Lädt den Zustand der beizubehaltenden Eigenschaften im <see cref="T:System.Web.UI.WebControls.EntityDataSource" />-Steuerelement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInit">
+      <MemberSignature Language="C#" Value="protected override void OnInit (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnInit(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EntityDataSource.OnInit(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" /> -Objekt, das Ereignisdaten enthält.</param>
+        <summary>Fügt eine <see cref="E:System.Web.UI.Page.LoadComplete" /> -Ereignishandler, um die <see cref="T:System.Web.UI.Page" /> -Steuerelement, enthält die <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> Steuerelement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnUnload">
+      <MemberSignature Language="C#" Value="protected override void OnUnload (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnUnload(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EntityDataSource.OnUnload(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" /> -Objekt, das Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.Unload" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OrderBy">
+      <MemberSignature Language="C#" Value="public string OrderBy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OrderBy" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.OrderBy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder festlegen den Entity SQL-Ausdruck, der angibt, wie die Abfrageergebnisse sortiert.</summary>
+        <value>Die ORDER BY-Klausel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.EntityDataSource.OrderBy%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.EntityDataSource> -Steuerelement ist eine Zeichenfolge, die einen Ausdruck einer Entity SQL-Abfrage darstellt. Diese Zeichenfolge übergeben wird, ohne Änderungen zu einer <xref:System.Data.Objects.ObjectQuery%601> , wird ausgeführt, indem die [!INCLUDE[adonet_ef](~/includes/adonet-ef-md.md)]. Diese Abfrage ist die Quelle der Daten durch reguliert die <xref:System.Web.UI.WebControls.EntityDataSource> Steuerelement. Die Zeichenfolge angegeben wird, um die <xref:System.Web.UI.WebControls.EntityDataSource.OrderBy%2A> Eigenschaft verwendet das gleiche Format wie die Zeichenfolge, die an die <xref:System.Data.Objects.ObjectQuery%601.OrderBy%2A> Methode <xref:System.Data.Objects.ObjectQuery%601>. Beispiele zur Verwendung der-Klausel zum Sortieren von Abfrageergebnissen finden Sie in [wie: Sortieren von Daten](http://msdn.microsoft.com/en-us/c05f2506-cb9d-4ebc-822b-300042ad53e7).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel in einer ASPX-Datei, die XML-Markup Ruft einen Wert ab, von einem Steuerelement und übergibt diese als Parameter an die <xref:System.Web.UI.WebControls.EntityDataSource.Where%2A> Eigenschaft.  
+  
+```  
+<asp:EntityDataSource ID="SalesOrderHeader" runat="server"   
+  ConnectionString="name=AdventureWorksEntities"   
+  DefaultContainerName="AdventureWorksEntities" EnableDelete="True"   
+  EnableInsert="True" EnableUpdate="True" EntitySetName="SalesOrderHeader"   
+  EntityTypeFilter="" OrderBy="it.TotalDue DESC" Select=""   
+   Where="it.OnlineOrderFlag = TRUE AND it.TotalDue &gt; @ordercost">  
+  <WhereParameters>  
+    <asp:ControlParameter ControlID="costLimit" DbType="Int32"   
+      DefaultValue="2500" Name="ordercost" PropertyName="Text" />  
+  </WhereParameters>  
+</asp:EntityDataSource>  
+  
+```  
+  
+ Im vorherige XML-Beispiel entspricht der folgenden <xref:System.Data.Objects.ObjectQuery%601> mit dem Namen `onlineOrders`:  
+  
+```  
+ObjectQuery<SalesOrderHeader> onlineOrders =  
+      context.SalesOrderHeader  
+       .Where("it.OnlineOrderFlag = TRUE AND it.TotalDue > @ordercost",  
+         new ObjectParameter("ordercost", orderCost))  
+        .OrderBy("it.TotalDue DESC");  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OrderByParameters">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.ParameterCollection OrderByParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.ParameterCollection OrderByParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.OrderByParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ParameterCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Parametern, die zum Erstellen der ORDER BY-Klausel verwendet werden.</summary>
+        <value>Die Parameter, die zum Erstellen der ORDER BY-Klausel verwendet werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der <xref:System.Web.UI.WebControls.EntityDataSource.AutoGenerateOrderByClause%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.EntityDataSource> Steuerelement auf festgelegt ist `true`, das Steuerelement generiert automatisch eine ORDER BY-Klausel aus dem Parameter in der <xref:System.Web.UI.WebControls.ParameterCollection> zugewiesen der <xref:System.Web.UI.WebControls.EntityDataSource.OrderByParameters%2A> Eigenschaft. Hierdurch entfällt die Notwendigkeit, explizit eine ORDER BY-Klausel zum Zuweisen der <xref:System.Web.UI.WebControls.EntityDataSource.OrderBy%2A> Eigenschaft. Die zur Erstellung der ORDER BY-Klausel aus der <xref:System.Web.UI.WebControls.EntityDataSource.OrderByParameters%2A> Eigenschaft erfordert, dass die <xref:System.Web.UI.WebControls.Parameter.Name%2A> Eigenschaft des Parameters in der Auflistung identifiziert eine einzelne Eigenschaft des Elements, das von der Abfrage zurückgegeben wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird automatisch die ORDER BY-Klausel generiert und verwendet den Wert der `orderByDropDownList` zum Festlegen des Werts des Parameters.  
+  
+```  
+<asp:EntityDataSource ID="SalesOrderHeader" runat="server"   
+    ConnectionString="name=AdventureWorksEntities"  
+    DefaultContainerName="AdventureWorksEntities" EnableDelete="True"   
+    EnableInsert="True" EnableUpdate="True" EntitySetName="SalesOrderHeader"   
+    Where="it.OnlineOrderFlag = true" AutoGenerateOrderByClause="True">  
+    <OrderByParameters>  
+        <asp:ControlParameter Name="OrderByParameter"   
+            ControlID="orderByDropDownList" Type="String" />  
+    </OrderByParameters>  
+</asp:EntityDataSource>  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryCreated">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.QueryCreatedEventArgs&gt; QueryCreated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.QueryCreatedEventArgs&gt; QueryCreated" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.EntityDataSource.QueryCreated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.QueryCreatedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, nachdem die <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> eine Entity SQL-Abfrage erstellt hat, die während der Konfiguration des <see cref="T:System.Web.UI.WebControls.EntityDataSource" />-Steuerelements angegeben wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter [Anwenden von LINQ-Abfragen EntityDataSource](http://msdn.microsoft.com/en-us/cb70db56-9f9d-4b79-98fe-f03dd5ad1e38).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveControlState">
+      <MemberSignature Language="C#" Value="protected override object SaveControlState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object SaveControlState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EntityDataSource.SaveControlState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert den Zustand der beizubehaltenden Eigenschaften im <see cref="T:System.Web.UI.WebControls.EntityDataSource" />-Steuerelement.</summary>
+        <returns>Die <see cref="T:System.Object" /> , das Zustandsinformationen enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="public string Select { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Select" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.Select" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Projektion ab, die die Eigenschaften definiert, die in die Abfrageergebnisse eingeschlossen werden sollen, oder legt sie fest.</summary>
+        <value>Die Parameter, die zum Erstellen der ORDER BY-Klausel verwendet werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.EntityDataSource.Select%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.EntityDataSource> Steuerelement enthält eine Zeichenfolge, die eine Entity SQL-Abfrage-Anweisung darstellt. Dadurch können Sie einen angegebenen Satz von Eigenschaften aus den Objekten, die von der Abfrage zurückgegebenen projiziert.  
+  
+ Diese Zeichenfolge übergeben wird, ohne Änderungen zu den <xref:System.Data.Objects.ObjectQuery%601> , wird ausgeführt, indem die [!INCLUDE[adonet_ef](~/includes/adonet-ef-md.md)]. Diese Abfrage ist die Quelle der Daten durch reguliert die <xref:System.Web.UI.WebControls.EntityDataSource> Steuerelement. Die Zeichenfolge angegeben wird, um die <xref:System.Web.UI.WebControls.EntityDataSource.Select%2A> Eigenschaft verwendet das gleiche Format wie die Zeichenfolge, die an die <xref:System.Data.Objects.ObjectQuery%601.Select%2A> Methode <xref:System.Data.Objects.ObjectQuery%601>. Beispiele für die-Klausel verwenden, um eine Projektion für eine Abfrage definieren, finden Sie unter [Vorgehensweise: Ausführen einer Abfrage, gibt die anonymen Typenobjekte](http://msdn.microsoft.com/en-us/3b264025-e911-4d73-90ce-992d2b9d189d).  
+  
+ Updates werden für voraussichtliche Daten nicht unterstützt. Dies bedeutet, dass bei Verwendung der <xref:System.Web.UI.WebControls.EntityDataSource.Select%2A> Eigenschaft, um eine Projektion, die gebundenen Daten, die Bindung anzugeben unterstützt keine Updates.  
+  
+ Wenn Sie eine Projektion mit aktiviertem Paging definieren, müssen Sie die Eigenschaft nach dem Sortieren der Ergebnisse definieren. Dies bedeutet, dass die When Festlegen der <xref:System.Web.UI.WebControls.EntityDataSource.Select%2A> Eigenschaft, um eine Projektion definiert und haben <xref:System.Web.UI.WebControls.EntityDataSource.AutoPage%2A> festgelegt `true`, müssen Sie auch Festlegen der <xref:System.Web.UI.WebControls.EntityDataSource.OrderBy%2A> Eigenschaft, um die Reihenfolge zu definieren, oder legt die <xref:System.Web.UI.WebControls.EntityDataSource.AutoGenerateOrderByClause%2A> Eigenschaft, um `true` und fügen Sie einen Auftrag DURCH die Parameter für die <xref:System.Web.UI.WebControls.EntityDataSource.OrderByParameters%2A> Auflistung.  
+  
+ <xref:System.Web.UI.WebControls.EntityDataSource.Select%2A>kann nicht festgelegt werden, wenn <xref:System.Web.UI.WebControls.EntityDataSource.EnableUpdate%2A>, <xref:System.Web.UI.WebControls.EntityDataSource.EnableDelete%2A>, oder <xref:System.Web.UI.WebControls.EntityDataSource.EnableInsert%2A> aktiviert ist.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.EntityDataSource.Select%2A> festgelegt ist, um eine Abfrage, die eine Projektion von Eigenschaften zurückgibt (z. B. `SELECT p.ProductID, p. Name FROM AdventureWorksEntities.Products AS p`), wird eine <xref:System.Data.Common.DbDataRecord> zurückgegeben werden.  
+  
+   
+  
+## Examples  
+ Das folgende XML-Markup verwendet die <xref:System.Web.UI.WebControls.EntityDataSource.Select%2A> Eigenschaft, um eine Projektion mit sechs Eigenschaften des Product-Typs anzugeben:  
+  
+```  
+<asp:EntityDataSource ID="ProductDataSource" runat="server"   
+    ConnectionString="name=AdventureWorksEntities"   
+    DefaultContainerName="AdventureWorksEntities"   
+    EntitySetName="Product" OrderBy="it.[ProductID]"   
+    Select="it.[ProductID], it.[Name], it.[ListPrice],   
+    it.[Size], it.[Style], it.[Weight]">  
+</asp:EntityDataSource>  
+  
+```  
+  
+ Im vorherige XML-Beispiel ist identisch mit den folgenden <xref:System.Data.Objects.ObjectQuery%601> mit dem Namen `products`:  
+  
+```  
+ObjectQuery<Product> products = context.Product  
+    .Select(it.[ProductID], it.[Name], it.[ListPrice],   
+      it.[Size], it.[Style], it.[Weight])  
+    .OrderBy("it.[ProductID]");  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Wenn die <see cref="P:System.Web.UI.WebControls.EntityDataSource.Select" />-Eigenschaft eine Abfrageprojektion angibt, und der Wert von <see cref="P:System.Web.UI.WebControls.EntityDataSource.EnableUpdate" />, <see cref="P:System.Web.UI.WebControls.EntityDataSource.EnableDelete" /> oder <see cref="P:System.Web.UI.WebControls.EntityDataSource.EnableInsert" /> <see langword="true" /> ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Selected">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceSelectedEventArgs&gt; Selected;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.EntityDataSourceSelectedEventArgs&gt; Selected" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.EntityDataSource.Selected" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceSelectedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, nachdem eine Abfrage ausgeführt wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.EntityDataSource.Selected> Ereignis wird ausgelöst, nachdem eine Abfrage ausgeführt wurde und Daten zurückgegeben wurden. Es wird auch ausgelöst, wenn während der Ausführung oder die Vorbereitung der Abfrage ein Fehler aufgetreten.  
+  
+ Die <xref:System.Web.UI.WebControls.EntityDataSourceSelectedEventArgs.Results%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.EntityDataSourceSelectedEventArgs> Objekt enthält eine <xref:System.Collections.IEnumerable> von Objekten, die von der Abfrage zurückgegeben werden. Behandeln der <xref:System.Web.UI.WebControls.EntityDataSource.Selected> Ereignis abrufen und speichern zurückgegebenen Entitäten in der <xref:System.Web.UI.Control.ViewState%2A>. Führen Sie diese Option, um objektänderungen auf der Seite beibehalten werden.  
+  
+ Die <xref:System.Web.UI.WebControls.EntityDataSourceSelectedEventArgs.TotalRowCount%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.EntityDataSourceSelectedEventArgs> Objekt zeigt die Gesamtzahl der Objekte auf allen Seiten, unabhängig von den Werten, die durch das datengebundene Steuerelement für das Paging übergeben. <xref:System.Web.UI.WebControls.EntityDataSourceSelectedEventArgs.TotalRowCount%2A>wird nur abgerufen, wenn das datengebundene Steuerelement erforderlich, z. B. wenn Paging aktiviert ist.  
+  
+ Wenn ein Fehler auftritt, wenn die Abfrage wird vorbereitet oder ausgeführt, die <xref:System.Web.UI.WebControls.EntityDataSource.Selected> Ereignis wird ausgelöst, die <xref:System.Web.UI.WebControls.EntityDataSourceSelectedEventArgs.Exception%2A> Eigenschaft der <xref:System.Web.UI.WebControls.EntityDataSourceSelectedEventArgs> Objekt festgelegt ist auf das zurückgegebene <xref:System.Exception>, und die <xref:System.Web.UI.WebControls.EntityDataSourceSelectedEventArgs.Results%2A> -Eigenschaftensatz auf `null`. Wenn Sie die Ausnahme behandeln die <xref:System.Web.UI.WebControls.EntityDataSource.Selected> legen Sie Ereignishandler, d. h. die <xref:System.Web.UI.WebControls.EntityDataSourceSelectedEventArgs.ExceptionHandled%2A> Eigenschaft, um `true`. Dies verhindert, dass die Ausnahme erneut ausgelöst wird. Wenn Sie einen Wert angeben `false` für die <xref:System.Web.UI.WebControls.EntityDataSourceChangingEventArgs.ExceptionHandled%2A> -Eigenschaft, die <xref:System.Web.UI.WebControls.EntityDataSource> Ausnahme erneut ausgelöst wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Selecting">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceSelectingEventArgs&gt; Selecting;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.EntityDataSourceSelectingEventArgs&gt; Selecting" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.EntityDataSource.Selecting" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceSelectingEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, bevor eine Abfrage erstellt und ausgeführt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.EntityDataSource.Selecting> Ereignis wird ausgelöst, bevor eine Abfrage erstellt und ausgeführt wird. Behandeln der <xref:System.Web.UI.WebControls.EntityDataSource.Selecting> Ereignis zum Ändern der Konfiguration der <xref:System.Web.UI.WebControls.EntityDataSource> zu lesen oder ändern Sie die Argumente aus dem datengebundenen Steuerelement, bevor die Abfrage erstellt und ausgeführt wird.  
+  
+ Festlegen der <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.EntityDataSourceSelectingEventArgs> -Objekt `true` um die Abfrage abzubrechen. Wenn die SELECT-Vorgang abgebrochen wird, werden keine Daten an das datengebundene Steuerelement zurückgegeben.  
+  
+ Wenn `AllowPaging` auf festgelegt ist `true` in das datengebundene Steuerelement die <xref:System.Web.UI.WebControls.EntityDataSource> Ruft die <xref:System.Data.Objects.ObjectQuery%601.Skip%2A> und <xref:System.Data.Objects.ObjectQuery%601.Top%2A> Abfrage-Generator-Methoden auf <xref:System.Data.Objects.ObjectQuery%601> mithilfe des Werts der der <xref:System.Web.UI.DataSourceSelectArguments.StartRowIndex%2A> und <xref:System.Web.UI.DataSourceSelectArguments.MaximumRows%2A> Eigenschaften die <xref:System.Web.UI.DataSourceSelectArguments> Objekt.  
+  
+ Wenn `AllowSorting` auf festgelegt ist `true` in das datengebundene Steuerelement die <xref:System.Web.UI.DataSourceSelectArguments.SortExpression%2A> von der <xref:System.Web.UI.DataSourceSelectArguments> Objekt kann geändert werden, wenn die <xref:System.Web.UI.WebControls.EntityDataSource.Selecting> Ereignis behandelt wird. Andere Abfrageoperatoren, z. B. WHERE oder ORDER BY, die im Markup Seite angegebenen gelten nach der <xref:System.Web.UI.WebControls.EntityDataSource.Selecting> Ereignis wird ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectParameters">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.ParameterCollection SelectParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.ParameterCollection SelectParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.SelectParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ParameterCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Parametern, die zum Erstellen der Projektion verwendet werden.</summary>
+        <value>Die Parameter, die zum Erstellen der Projektion verwendet werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wie die <xref:System.Data.Objects.ObjectQuery%601.Select%2A> Methode der <xref:System.Data.Objects.ObjectQuery%601> -Klasse, Parameter können übergeben werden, die Projektion aus, die von definiert wird die <xref:System.Web.UI.WebControls.EntityDataSource.Select%2A> Eigenschaft. Die <xref:System.Web.UI.WebControls.EntityDataSource.SelectParameters%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.EntityDataSource> Steuerelement gibt eine <xref:System.Web.UI.WebControls.ParameterCollection> , enthält die Parameter an, um die SELECT-Anweisung der Abfrage bereit. Die <xref:System.Web.UI.WebControls.EntityDataSource.SelectParameters%2A> Eigenschaft verwendet benannte Argumente, um auf die Parameter verweisen, die in der Zeichenfolge angegeben werden, die an die <xref:System.Web.UI.WebControls.EntityDataSource.Select%2A> Eigenschaft.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.EntityDataSource.SelectParameters%2A> Eigenschaft nicht festgelegt ist, erfolgt keine Ersetzung von Typparametern. Die Parameternamen in der SELECT-Anweisung mit dem Präfix der "`@"` Symbol`,` benötigen einen passenden Namen der <xref:System.Web.UI.WebControls.ParameterCollection>. NULL-Werte sind nicht zulässig, für die Parameter in einem <xref:System.Web.UI.WebControls.ParameterCollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StoreOriginalValuesInViewState">
+      <MemberSignature Language="C#" Value="public bool StoreOriginalValuesInViewState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StoreOriginalValuesInViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.StoreOriginalValuesInViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Daten aus der Datenquelle gespeichert werden sollen, im Ansichtszustand, um sicherzustellen, dass die Daten nicht von einem anderen Prozess geändert wird, bevor er aktualisiert oder gelöscht wird.</summary>
+        <value>
+          <see langword="true" />Wenn die Werte in der Ansicht gespeichert werden Status; andernfalls <see langword="false" />. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zum Nachverfolgen von Änderungen bei Update- und Löschvorgänge aktiviert sind, die <xref:System.Web.UI.WebControls.EntityDataSource> Steuerelement muss Speichern von Informationen zu ursprünglichen Werte der geladenen Objekte in der <xref:System.Web.UI.PageStatePersister.ControlState%2A>. Diese erforderlichen Informationen in den Ansichtszustand zu speichern, wird die Seitengröße erhöhen. Sie können die ursprünglichen Werte im Ansichtszustand zu speichern, durch Festlegen von Deaktivieren der <xref:System.Web.UI.WebControls.EntityDataSource.StoreOriginalValuesInViewState%2A> Eigenschaft `false`. Wenn Sie dies tun, die [!INCLUDE[adonet_ef](~/includes/adonet-ef-md.md)] Parallelität in aktualisierten Objekten nicht zu überwachen. Weitere Informationen finden Sie unter [Aktualisieren von Daten (EntityDataSource)](http://msdn.microsoft.com/en-us/ca153eec-6817-4c1d-b262-efd6d35b0246).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.WebControls.IQueryableDataSource.RaiseViewChanged">
+      <MemberSignature Language="C#" Value="void IQueryableDataSource.RaiseViewChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.WebControls.IQueryableDataSource.RaiseViewChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EntityDataSource.System#Web#UI#WebControls#IQueryableDataSource#RaiseViewChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Benachrichtigt das datengebundene Steuerelement, das ein Parameterobjekt geändert hat und das datengebundene Steuerelement aktualisieren muss.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackViewState">
+      <MemberSignature Language="C#" Value="protected override void TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EntityDataSource.TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Nachverfolgung von Änderungen am Ansichtszustand des Serversteuerelements verursacht, damit sie in des Webserversteuerelement gespeichert werden können <see cref="T:System.Web.UI.StateBag" /> Objekt. Auf dieses Objekt kann über die <see cref="P:System.Web.UI.Control.ViewState" />-Eigenschaft zugegriffen werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter <xref:System.Web.UI.Control.TrackViewState%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Updated">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceChangedEventArgs&gt; Updated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.EntityDataSourceChangedEventArgs&gt; Updated" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.EntityDataSource.Updated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, nachdem Änderungen an einem Objekt mit der Datenquelle persistent gespeichert wurden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.EntityDataSource.Updated> Ereignis wird ausgelöst, wenn ein Fehler, beim Anwenden von Änderungen aufgetreten ist oder Änderungen an einem geänderten Objekt mit der Datenquelle beibehalten werden. Die <xref:System.Web.UI.WebControls.EntityDataSourceChangedEventArgs.Entity%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.EntityDataSourceChangedEventArgs> Objekt wird verwendet, um das geänderte Objekt zugreifen.  
+  
+ Die Eigenschaften dieses Objekts enthalten Werte, die aus der Datenquelle, einschließlich aller vom Server generierte Werte zurückgegeben.  
+  
+ Wenn ein Fehler auftritt, wenn Änderungen an der Datenquelle beibehalten werden die <xref:System.Web.UI.WebControls.EntityDataSource.Updated> Ereignis wird ausgelöst, und die <xref:System.Web.UI.WebControls.EntityDataSourceChangedEventArgs.Exception%2A> Eigenschaft der <xref:System.Web.UI.WebControls.EntityDataSourceChangedEventArgs> Objektsatz ist auf das zurückgegebene <xref:System.Exception>. Wenn Sie die Ausnahme behandeln die <xref:System.Web.UI.WebControls.EntityDataSource.Updated> legen Sie Ereignishandler, d. h. die <xref:System.Web.UI.WebControls.EntityDataSourceChangedEventArgs.ExceptionHandled%2A> Eigenschaft, um `true`. Dies verhindert, dass die Ausnahme erneut ausgelöst wird. Wenn Sie einen Wert angeben `false` für die <xref:System.Web.UI.WebControls.EntityDataSourceChangedEventArgs.ExceptionHandled%2A> -Eigenschaft, die <xref:System.Web.UI.WebControls.EntityDataSource> Ausnahme erneut ausgelöst wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateParameters">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.ParameterCollection UpdateParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.ParameterCollection UpdateParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.UpdateParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ParameterCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Parametern, die während eines Updatevorgangs verwendet werden.</summary>
+        <value>Die Parameter, die während eines Updatevorgangs verwendet werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für Webanwendungen, die auf ASP.NET 4 oder früher ausgerichtet, den Wert der Eigenschaft befindet sich im Ansichtszustand und Postbacks automatisch beibehalten wird. Für Webanwendungen, die ASP.NET 4.5 abzielen, den Wert der Eigenschaft ist nicht im Ansichtszustand gespeichert und müssen, legen Sie den Wert für jede HTTP-Anforderung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Updating">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceChangingEventArgs&gt; Updating;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.EntityDataSourceChangingEventArgs&gt; Updating" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.EntityDataSource.Updating" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceChangingEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, bevor Sie Änderungen an einem Objekt mit der Datenquelle beibehalten werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.EntityDataSource.Updating> Ereignis wird ausgelöst, bevor Änderungen an den Eigenschaften eines Objekts mit der Datenquelle beibehalten werden. Die <xref:System.Web.UI.WebControls.EntityDataSource.Updating> -Ereignis können Sie ändern oder Überprüfen der Änderungen auf das Objekt, geben Sie ein anderes Objekt oder den Vorgang abbrechen, bevor die Änderungen beibehalten werden. Sie erreichen das geänderte Objekt aus der <xref:System.Web.UI.WebControls.EntityDataSourceChangingEventArgs.Entity%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.EntityDataSourceChangingEventArgs> Objekt. Der Benutzer ist verantwortlich für die Einstellung des richtigen Entitätstyps im, bei der Bereitstellung von eines anderen Objekts der <xref:System.Web.UI.WebControls.EntityDataSourceChangingEventArgs.Entity%2A> Eigenschaft.  
+  
+ Behandeln der <xref:System.Web.UI.WebControls.EntityDataSource.Updating> Ereignis ändern, müssen die <xref:System.Data.Objects.ObjectStateEntry> für das Objekt, das verschiedene ursprünglichen Werte für die parallelitätssteuerung festgelegt. Weitere Informationen finden Sie unter [Änderungen speichern und Verwalten von Parallelität](http://msdn.microsoft.com/en-us/b8378601-4f26-4a05-a24a-f50aeb68610e).  
+  
+ Um die Änderungen persistent gespeichert wird, zu beenden, legen Sie die <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.EntityDataSourceChangingEventArgs> -Objekt `true`.  
+  
+ Wenn ein Fehler auftritt, wenn ein Objekt zu instanziieren oder Ändern von Eigenschaften, die <xref:System.Web.UI.WebControls.EntityDataSource.Updating> Ereignis wird ausgelöst, und die <xref:System.Web.UI.WebControls.EntityDataSourceChangingEventArgs.Exception%2A> Eigenschaft der <xref:System.Web.UI.WebControls.EntityDataSourceChangingEventArgs> -Objekts festgelegt wird auf das zurückgegebene <xref:System.Exception>.  
+  
+ Beim Behandeln der Ausnahme in der <xref:System.Web.UI.WebControls.EntityDataSource.Updating> legen Sie Ereignishandler, d. h. die <xref:System.Web.UI.WebControls.EntityDataSourceChangingEventArgs.ExceptionHandled%2A> Eigenschaft `true`. Dies verhindert, dass die Ausnahme erneut ausgelöst wird. Wenn Sie einen Wert angeben `false` für die <xref:System.Web.UI.WebControls.EntityDataSourceChangingEventArgs.ExceptionHandled%2A> -Eigenschaft, die <xref:System.Web.UI.WebControls.EntityDataSource> Ausnahme erneut ausgelöst wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Where">
+      <MemberSignature Language="C#" Value="public string Where { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Where" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.Where" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder festlegen den Entity SQL-Ausdruck, der angibt, wie die Abfrageergebnisse gefiltert.</summary>
+        <value>Die WHERE-Klausel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.EntityDataSource.Where%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.EntityDataSource> -Steuerelement ist eine Zeichenfolge, eine Klausel darstellt, die das Prädikat einer Entity SQL-Abfrage ist. Diese Zeichenfolge übergeben wird, ohne Änderungen zu einer <xref:System.Data.Objects.ObjectQuery%601> , wird ausgeführt, indem die [!INCLUDE[adonet_ef](~/includes/adonet-ef-md.md)]. Diese Abfrage ist die Quelle der Daten durch reguliert die <xref:System.Web.UI.WebControls.EntityDataSource> Steuerelement. Die Zeichenfolge angegeben wird, um die <xref:System.Web.UI.WebControls.EntityDataSource.Where%2A> Eigenschaft verwendet das gleiche Format wie die Zeichenfolge, die an die <xref:System.Data.Objects.ObjectQuery%601.Where%2A> Methode <xref:System.Data.Objects.ObjectQuery%601>. Beispiele für die-Klausel verwenden, um eine Abfrage zu filtern, finden Sie unter [wie: Filtern von Daten](http://msdn.microsoft.com/en-us/776f8556-3350-4572-804a-b1513515c1b2).  
+  
+ Um Abfrageergebnisse zu Filtern durch eine Entität Type-Eigenschaft auf einen Ausdruck zu vergleichen, finden Sie Informationen zu den <xref:System.Web.UI.WebControls.EntityDataSource.AutoGenerateWhereClause%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel in einer ASPX-Datei, die XML-Markup Ruft einen Wert ab, von einem Steuerelement und übergibt diese als Parameter an die <xref:System.Web.UI.WebControls.EntityDataSource.Where%2A> Eigenschaft.  
+  
+```  
+<asp:EntityDataSource ID="SalesOrderHeader" runat="server"   
+  ConnectionString="name=AdventureWorksEntities"   
+  DefaultContainerName="AdventureWorksEntities" EnableDelete="True"   
+  EnableInsert="True" EnableUpdate="True" EntitySetName="SalesOrderHeader"   
+  EntityTypeFilter="" OrderBy="it.TotalDue DESC" Select=""   
+   Where="it.OnlineOrderFlag = TRUE AND it.TotalDue &gt; @ordercost">  
+  <WhereParameters>  
+    <asp:ControlParameter ControlID="costLimit" DbType="Int32"   
+      DefaultValue="2500" Name="ordercost" PropertyName="Text" />  
+  </WhereParameters>  
+</asp:EntityDataSource>  
+  
+```  
+  
+ Im vorherige XML-Beispiel ist identisch mit den folgenden <xref:System.Data.Objects.ObjectQuery%601> mit dem Namen `onlineOrders`:  
+  
+```  
+ObjectQuery<SalesOrderHeader> onlineOrders =  
+      context.SalesOrderHeader  
+       .Where("it.OnlineOrderFlag = TRUE AND it.TotalDue > @ordercost",  
+         new ObjectParameter("ordercost", orderCost))  
+        .OrderBy("it.TotalDue DESC");  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WhereParameters">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.ParameterCollection WhereParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.ParameterCollection WhereParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.WhereParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ParameterCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Parametern, die zum Erstellen der WHERE-Klausel verwendet werden.</summary>
+        <value>Die Parameter, die zum Erstellen der WHERE-Klausel verwendet werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wie die <xref:System.Data.Objects.ObjectQuery%601.Where%2A> Methode der <xref:System.Data.Objects.ObjectQuery%601> -Klasse, Parameter können übergeben werden, die das Prädikat zugewiesen der <xref:System.Web.UI.WebControls.EntityDataSource.Where%2A> Eigenschaft. Die <xref:System.Web.UI.WebControls.EntityDataSource.WhereParameters%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.EntityDataSource> Steuerelement gibt eine <xref:System.Web.UI.WebControls.ParameterCollection> , enthält die Parameter der WHERE-Klausel der Abfrage angeben. Die <xref:System.Web.UI.WebControls.EntityDataSource.WhereParameters%2A> Eigenschaft verwendet benannte Argumente, um auf die Parameter verweisen, die in der Zeichenfolge angegeben werden, die an die <xref:System.Web.UI.WebControls.EntityDataSource.Where%2A> Eigenschaft.  
+  
+ Wenn die <xref:System.Web.UI.WebControls.EntityDataSource.WhereParameters%2A> Eigenschaft nicht festgelegt ist, erfolgt keine Ersetzung von Typparametern. Die Parameternamen in der WHERE-Klausel vorangestellt wird, wird das Symbol "`@"` benötigen einen passenden Namen der <xref:System.Web.UI.WebControls.ParameterCollection>. NULL-Werte sind nicht zulässig, für die Parameter in einem <xref:System.Web.UI.WebControls.ParameterCollection>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel in einer ASPX-Datei, die XML-Markup Ruft einen Wert ab, von einem Steuerelement und übergibt diese als Parameter an die <xref:System.Web.UI.WebControls.EntityDataSource.Where%2A> Eigenschaft.  
+  
+```  
+<asp:EntityDataSource ID="SalesOrderHeader" runat="server"   
+  ConnectionString="name=AdventureWorksEntities"   
+  DefaultContainerName="AdventureWorksEntities" EnableDelete="True"   
+  EnableInsert="True" EnableUpdate="True" EntitySetName="SalesOrderHeader"   
+  EntityTypeFilter="" OrderBy="it.TotalDue DESC" Select=""   
+   Where="it.OnlineOrderFlag = TRUE AND it.TotalDue &gt; @ordercost">  
+  <WhereParameters>  
+    <asp:ControlParameter ControlID="costLimit" DbType="Int32"   
+      DefaultValue="2500" Name="ordercost" PropertyName="Text" />  
+  </WhereParameters>  
+</asp:EntityDataSource>  
+  
+```  
+  
+ Im vorherige XML-Beispiel ist identisch mit den folgenden <xref:System.Data.Objects.ObjectQuery%601> mit dem Namen `onlineOrders`:  
+  
+```  
+ObjectQuery<SalesOrderHeader> onlineOrders =  
+      context.SalesOrderHeader  
+       .Where("it.OnlineOrderFlag = TRUE AND it.TotalDue > @ordercost",  
+         new ObjectParameter("ordercost", orderCost))  
+        .OrderBy("it.TotalDue DESC");  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

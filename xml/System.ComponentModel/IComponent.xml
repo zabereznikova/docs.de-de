@@ -1,0 +1,141 @@
+<Type Name="IComponent" FullName="System.ComponentModel.IComponent">
+  <TypeSignature Language="C#" Value="public interface IComponent : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IComponent implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.IComponent" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Design.Serialization.RootDesignerSerializer("System.ComponentModel.Design.Serialization.RootCodeDomSerializer, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.ComponentModel.Design.Serialization.CodeDomSerializer, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.ComponentModel.Design.ComponentDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.ComponentModel.Design.IDesigner))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Windows.Forms.Design.ComponentDocumentDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.ComponentModel.Design.IRootDesigner))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.ComponentConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die für alle Komponenten erforderliche Funktionalität bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.Component>ist die standardmäßige Implementierung des <xref:System.ComponentModel.IComponent> und dient als Basisklasse für alle Komponenten in der common Language Runtime.  
+  
+ Sie können Komponenten in einem Container enthalten. In diesem Kontext bezieht sich auf logische Einkapselung, nicht visual Containment "Containment". Sie können Komponenten und Container in einer Vielzahl von Szenarien visual und nicht sichtbare verwenden.  
+  
+ <xref:System.Windows.Forms.Control?displayProperty=nameWithType>erbt von <xref:System.ComponentModel.Component>, die standardmäßige Implementierung des <xref:System.ComponentModel.IComponent>.  
+  
+ Eine Komponente interagiert mit seinem Container in erster Linie über einen Container bereitgestellten <xref:System.ComponentModel.ISite>, dies ist ein Repository mit Informationen für Container-spezifische pro Komponente.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Implementieren der <xref:System.ComponentModel.IComponent>, <xref:System.ComponentModel.ISite>, und <xref:System.ComponentModel.IContainer> Schnittstellen.  
+  
+ [!code-cpp[ContainerExmpl#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ContainerExmpl/CPP/librarycontainer.cpp#1)]
+ [!code-csharp[ContainerExmpl#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ContainerExmpl/CS/librarycontainer.cs#1)]
+ [!code-vb[ContainerExmpl#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ContainerExmpl/VB/librarycontainer.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Um eine Komponente zu sein, eine Klasse implementieren muss die <see cref="T:System.ComponentModel.IComponent" /> Schnittstelle, und geben Sie einen grundlegenden Konstruktor, der keine Parameter oder einen einzelnen Parameter vom Typ erfordert <see cref="T:System.ComponentModel.IContainer" />. Weitere Informationen zur Implementierung <see cref="T:System.ComponentModel.IComponent" />, finden Sie unter [Programmieren mit Komponenten](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3).</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="Disposed">
+      <MemberSignature Language="C#" Value="public event EventHandler Disposed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Disposed" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.IComponent.Disposed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die Methode dar, die das <see cref="E:System.ComponentModel.IComponent.Disposed" />-Ereignis einer Komponente behandelt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen eines <xref:System.ComponentModel.IComponent.Disposed>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen zu Ereignishandlerdelegaten, finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Site">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.ISite Site { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.ISite Site" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.IComponent.Site" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ISite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.ComponentModel.ISite" /> ab, der dem <see cref="T:System.ComponentModel.IComponent" /> zugeordnet ist, oder legt diesen fest.</summary>
+        <value>Die <see cref="T:System.ComponentModel.ISite" /> mit der Komponente verwenden; oder <see langword="null" />, wenn die Komponente nicht mit einen Standort verfügt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standorte können auch als Repository für Container-spezifische, pro Komponente Informationen, z. B. den Namen der Komponente dienen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

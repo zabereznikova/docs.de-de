@@ -1,0 +1,252 @@
+<Type Name="RSAPKCS1SignatureDeformatter" FullName="System.Security.Cryptography.RSAPKCS1SignatureDeformatter">
+  <TypeSignature Language="C#" Value="public class RSAPKCS1SignatureDeformatter : System.Security.Cryptography.AsymmetricSignatureDeformatter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RSAPKCS1SignatureDeformatter extends System.Security.Cryptography.AsymmetricSignatureDeformatter" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.RSAPKCS1SignatureDeformatter" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.AsymmetricSignatureDeformatter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Überprüft eine <see cref="T:System.Security.Cryptography.RSA" /> PKCS #1-Signatur der Version 1.5.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse wird verwendet, um zu überprüfen, ob eine digitale Signatur, die mit der <xref:System.Security.Cryptography.RSA> Algorithmus.  
+  
+ Verwendung <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> zum Erstellen der digitaler Signaturen mit der <xref:System.Security.Cryptography.RSA> Algorithmus.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A> Methode zum Überprüfen einer Signatur.  
+  
+ [!code-csharp[System.Security.Cryptography.RSAPKCS1SignatureDeFormatterExample#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.security.cryptography.rsapkcs1signaturedeformatterexample/cs/program.cs#1)]
+ [!code-vb[System.Security.Cryptography.RSAPKCS1SignatureDeFormatterExample#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.security.cryptography.rsapkcs1signaturedeformatterexample/vb/program.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RSAPKCS1SignatureDeformatter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.RSAPKCS1SignatureDeformatter" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendung <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.SetKey%2A> und <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.SetHashAlgorithm%2A> , legen Sie den Schlüssel und Hash-Algorithmus vor dem Aufruf <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RSAPKCS1SignatureDeformatter (System.Security.Cryptography.AsymmetricAlgorithm key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.AsymmetricAlgorithm key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.#ctor(System.Security.Cryptography.AsymmetricAlgorithm)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="key" Type="System.Security.Cryptography.AsymmetricAlgorithm" />
+      </Parameters>
+      <Docs>
+        <param name="key">Die Instanz von <see cref="T:System.Security.Cryptography.RSA" /> , die den öffentlichen Schlüssel enthält.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.RSAPKCS1SignatureDeformatter" />-Klasse mit dem angegebenen Schlüssel.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendung <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.SetHashAlgorithm%2A> festzulegende Hashalgorithmus vor dem Aufruf <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetHashAlgorithm">
+      <MemberSignature Language="C#" Value="public override void SetHashAlgorithm (string strName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetHashAlgorithm(string strName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.SetHashAlgorithm(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="strName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="strName">Der Name des Hashalgorithmus, der zum Überprüfen der Signatur verwendet werden soll.</param>
+        <summary>Legt den Hashalgorithmus fest, der zum Überprüfen der Signatur verwendet werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen vor dem Aufruf ein Hashalgorithmus festlegen <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetKey">
+      <MemberSignature Language="C#" Value="public override void SetKey (System.Security.Cryptography.AsymmetricAlgorithm key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetKey(class System.Security.Cryptography.AsymmetricAlgorithm key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.SetKey(System.Security.Cryptography.AsymmetricAlgorithm)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Security.Cryptography.AsymmetricAlgorithm" />
+      </Parameters>
+      <Docs>
+        <param name="key">Die Instanz von <see cref="T:System.Security.Cryptography.RSA" /> , die den öffentlichen Schlüssel enthält.</param>
+        <summary>Legt den öffentlichen Schlüssel fest, der zum Überprüfen der Signatur verwendet werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen einen Schlüssel vor dem Aufruf festlegen <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifySignature">
+      <MemberSignature Language="C#" Value="public override bool VerifySignature (byte[] rgbHash, byte[] rgbSignature);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool VerifySignature(unsigned int8[] rgbHash, unsigned int8[] rgbSignature) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature(System.Byte[],System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rgbHash" Type="System.Byte[]" />
+        <Parameter Name="rgbSignature" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="rgbHash">Signieren mit <c>RgbSignature</c>.</param>
+        <param name="rgbSignature">Die Signatur für zu überprüfende <c>RgbHash</c>.</param>
+        <summary>Überprüft die <see cref="T:System.Security.Cryptography.RSA" /> PKCS #1-Signatur für die angegebenen Daten.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="rgbSignature" /> der Signatur entspricht, mit dem angegebenen Hashalgorithmus und Schlüssel für berechnete <paramref name="rgbHash" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie müssen einen Schlüssel und einen Hashalgorithmus angeben, vor dem Aufrufen dieser Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A> Methode zum Überprüfen einer Signatur.  
+  
+ [!code-csharp[System.Security.Cryptography.RSAPKCS1SignatureDeFormatterExample#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.security.cryptography.rsapkcs1signaturedeformatterexample/cs/program.cs#1)]
+ [!code-vb[System.Security.Cryptography.RSAPKCS1SignatureDeFormatterExample#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.security.cryptography.rsapkcs1signaturedeformatterexample/vb/program.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicUnexpectedOperationException">Der Schlüssel ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Der Hashalgorithmus ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="rgbHash" />-Parameter ist <see langword="null" />.  
+  
+ - oder -   
+  
+ Der <paramref name="rgbSignature" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

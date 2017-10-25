@@ -1,0 +1,168 @@
+<Type Name="DefaultAuthenticationModule" FullName="System.Web.Security.DefaultAuthenticationModule">
+  <TypeSignature Language="C#" Value="public sealed class DefaultAuthenticationModule : System.Web.IHttpModule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DefaultAuthenticationModule extends System.Object implements class System.Web.IHttpModule" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Security.DefaultAuthenticationModule" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.IHttpModule</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt sicher, dass ein Authentifizierungsobjekt im Kontext vorhanden ist. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.DefaultAuthenticationModule> wird sichergestellt, dass die <xref:System.Web.HttpContext.User%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> Instanz wird festgelegt, um ein <xref:System.Security.Principal.IPrincipal> Objekt für jede Anforderung. Die <xref:System.Web.Security.DefaultAuthenticationModule> untersucht die <xref:System.Web.HttpContext.User%2A> Eigenschaft nach der <xref:System.Web.HttpApplication.AuthenticateRequest> Ereignis und vor der <xref:System.Web.HttpApplication.AuthorizeRequest> Ereignis. Wenn die <xref:System.Web.HttpContext.User%2A> Eigenschaft ist `null`, die <xref:System.Web.Security.DefaultAuthenticationModule> legt die <xref:System.Web.HttpContext.User%2A> Eigenschaft, um eine <xref:System.Security.Principal.GenericPrincipal> -Objekt, das keine Benutzerinformationen enthält.  
+  
+ Das Authentifizierungsmodul festgelegt die <xref:System.Web.HttpResponse.StatusCode%2A> Eigenschaft auf 401, die <xref:System.Web.Security.DefaultAuthenticationModule> wird eine Fehler "Zugriff verweigert"-Seite gerendert. Wenn der Wert des der <xref:System.Web.HttpResponse.StatusCode%2A> Eigenschaft wird auf einen Wert größer als 200 festgelegt, der <xref:System.Web.Security.DefaultAuthenticationModule> Objekt wird die Anforderung beendet. In diesem Fall nur HTTP-Module, die zum Abonnieren der <xref:System.Web.HttpApplication.EndRequest> Ereignis vor dem Abschluss der aktuellen Anforderung aufgerufen werden.  
+  
+ Die <xref:System.Web.Security.DefaultAuthenticationModule> macht eine <xref:System.Web.Security.DefaultAuthenticationModule.Authenticate> Ereignis. Verwenden Sie dieses Ereignis, um eine benutzerdefinierte bereitzustellen <xref:System.Security.Principal.IPrincipal> -Objekt für die <xref:System.Web.HttpContext.User%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> Instanz. Die <xref:System.Web.Security.WindowsAuthenticationModule.Authenticate> Ereignis erfolgt durch Angabe eines Ereignisses mit dem Namen **DefaultAuthentication_OnAuthenticate** in die Datei "Global.asax" der Anwendung.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die **DefaultAuthentication_OnAuthenticate** Ereignis, um zu testen, ob die <xref:System.Web.HttpContext.User%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> Instanz `null`. Wenn die <xref:System.Web.HttpContext.User%2A> Eigenschaft ist `null`, und dann das Beispiel setzt die <xref:System.Web.HttpContext.User%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> -Instanz, auf eine <xref:System.Security.Principal.GenericPrincipal> Objekt, in dem die <xref:System.Security.Principal.GenericPrincipal.Identity%2A> von der <xref:System.Security.Principal.GenericPrincipal> Objekt ist eine <xref:System.Security.Principal.GenericIdentity> mit eine <xref:System.Security.Principal.GenericIdentity.Name%2A> Wert "Default".  
+  
+> [!NOTE]
+>  Die **DefaultAuthentication_OnAuthenticate** Ereignis wird ausgelöst, bevor die <xref:System.Web.HttpApplication.AuthorizeRequest> Ereignis. Als Ergebnis, wenn Sie festlegen, die <xref:System.Web.HttpContext.User%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> Instanz auf eine benutzerdefinierte Identität das Verhalten der Anwendung beeinflusst werden kann. Angenommen, Sie verwenden die <xref:System.Web.Security.FormsAuthentication> Klasse an, und legen `<deny users="?" />` im Konfigurationsabschnitt, stellen Sie sicher, dass nur authentifizierte Benutzer Zugriff auf Ihrer Website, in diesem Beispiel das-Element ignoriert werden, verursacht während der Benutzer einen Namen hat, wird die " Default." Stattdessen geben Sie `<deny users="default" />` um sicherzustellen, dass nur authentifizierte Benutzer Ihre Website zugreifen können.  
+  
+ [!code-csharp[System.Web.Security.DefaultAuthenticationModule#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.DefaultAuthenticationModule/CS/global.asax#1)]
+ [!code-vb[System.Web.Security.DefaultAuthenticationModule#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.DefaultAuthenticationModule/VB/global.asax#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DefaultAuthenticationModule ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.DefaultAuthenticationModule.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Security.DefaultAuthenticationModule" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird nicht von Anwendungscode aufgerufen werden soll.  
+  
+ ASP.NET ruft diesen Konstruktor zum Erstellen einer Instanz von der <xref:System.Web.Security.DefaultAuthenticationModule> Klasse. Nach dem Aufruf des Konstruktors, ruft er die <xref:System.Web.Security.DefaultAuthenticationModule.Init%2A> Methode zur Initialisierung der neuen <xref:System.Web.Security.DefaultAuthenticationModule> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Authenticate">
+      <MemberSignature Language="C#" Value="public event System.Web.Security.DefaultAuthenticationEventHandler Authenticate;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.Security.DefaultAuthenticationEventHandler Authenticate" />
+      <MemberSignature Language="DocId" Value="E:System.Web.Security.DefaultAuthenticationModule.Authenticate" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.DefaultAuthenticationEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, nachdem die Anforderung authentifiziert wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.DefaultAuthenticationModule.Authenticate> Ereignis wird ausgelöst, nachdem die <xref:System.Web.HttpApplication.AuthenticateRequest> Ereignis. Er wird verwendet, um sicherzustellen, dass die <xref:System.Web.HttpContext.User%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> Instanz wird aufgefüllt, mit einer <xref:System.Security.Principal.IPrincipal> Objekt.  
+  
+ Sie erreichen die <xref:System.Web.Security.DefaultAuthenticationModule.Authenticate> -Ereignis für die <xref:System.Web.Security.DefaultAuthenticationModule> -Klasse durch Angabe einer Unterroutine namens **DefaultAuthentication_OnAuthenticate** in die Datei "Global.asax" der Anwendung.  
+  
+ Können Sie die <xref:System.Web.Security.DefaultAuthenticationEventArgs.Context%2A> Eigenschaft von der <xref:System.Web.Security.DefaultAuthenticationEventArgs> Objekt in der **DefaultAuthentication_OnAuthenticate** Ereignis als festzulegen der <xref:System.Web.HttpContext.User%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> Instanz für eine benutzerdefinierte <xref:System.Security.Principal.IPrincipal>Objekt. Wenn Sie einen Wert für nicht angeben der <xref:System.Web.HttpContext.User%2A> -Eigenschaft, die <xref:System.Web.Security.DefaultAuthenticationModule> legt die <xref:System.Web.HttpContext.User%2A> Eigenschaft der <xref:System.Web.HttpContext> -Instanz, auf eine <xref:System.Security.Principal.GenericPrincipal> -Objekt, das keine Benutzerinformationen enthält.  
+  
+ Die **DefaultAuthentication_OnAuthenticate** Ereignis wird ausgelöst, nachdem die <xref:System.Web.HttpApplication.AuthenticateRequest> Ereignis und vor dem <xref:System.Web.HttpApplication.AuthorizeRequest> Ereignis. Wenn Sie einen Abschnitt verfügen, der den Benutzernamen ein, gestattet oder verweigert den Zugriff auf die Anwendung abhängt, Ändern der <xref:System.Web.HttpContext.User%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> Instanz kann beeinflussen das Verhalten der Anwendung. Stellen Sie sicher, dass der Benutzername, die Sie, während festlegen die **DefaultAuthentication_OnAuthenticate** Ereignis gilt, wenn Sie den Abschnitt in der Konfiguration angeben.  
+  
+> [!NOTE]
+>  Wenn die Web-Anwendung in IIS 7.0 im integrierten Modus ausgeführt wird die <xref:System.Web.Security.DefaultAuthenticationModule.Authenticate> -Ereignis für die <xref:System.Web.Security.DefaultAuthenticationModule> wird nicht ausgelöst. Wenn die `mode` -Attribut des Konfigurationselements auf "None" festgelegt ist und die Anwendung abonniert die <xref:System.Web.Security.DefaultAuthenticationModule.Authenticate> Ereignis, eine <xref:System.PlatformNotSupportedException> Fehler ausgelöst. In diesem Szenario, um die Authentifizierung der Benachrichtigung abonnieren der <xref:System.Web.HttpApplication.AuthenticateRequest> -Ereignis für die <xref:System.Web.HttpApplication> Instanz. Weitere Informationen zu Kompatibilitätsproblemen im integrierten Modus, finden Sie unter [Verschieben einer ASP.NET-Anwendung von IIS 6.0 zu IIS 7,0](http://msdn.microsoft.com/library/76f9cc78-f978-4837-b1c8-51d642ec4847).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der **DefaultAuthentication_OnAuthenticate** Ereignis, um zu testen, ob die <xref:System.Web.HttpContext.User%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> Instanz `null`. Wenn die <xref:System.Web.HttpContext.User%2A> Eigenschaft ist `null`, und dann das Beispiel setzt die <xref:System.Web.HttpContext.User%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> -Instanz, auf eine <xref:System.Security.Principal.GenericPrincipal> Objekt, in dem die <xref:System.Security.Principal.GenericPrincipal.Identity%2A> von der <xref:System.Security.Principal.GenericPrincipal> Objekt ist eine <xref:System.Security.Principal.GenericIdentity> mit eine <xref:System.Security.Principal.GenericIdentity.Name%2A> Wert "Default".  
+  
+> [!NOTE]
+>  Die **DefaultAuthentication_OnAuthenticate** Ereignis wird ausgelöst, bevor die <xref:System.Web.HttpApplication.AuthorizeRequest> Ereignis. Als Ergebnis, wenn Sie festlegen, die <xref:System.Web.HttpContext.User%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> Instanz auf eine benutzerdefinierte Identität das Verhalten der Anwendung beeinflusst werden kann. Angenommen, Sie verwenden die <xref:System.Web.Security.FormsAuthentication> Klasse an, und legen `<deny users="?" />` im Konfigurationsabschnitt, stellen Sie sicher, dass nur authentifizierte Benutzer Zugriff auf Ihrer Website, in diesem Beispiel das-Element ignoriert werden, verursacht während der Benutzer einen Namen hat, wird die " Default." Stattdessen geben Sie `<deny users="default" />` um sicherzustellen, dass nur authentifizierte Benutzer Ihre Website zugreifen können.  
+  
+ [!code-csharp[System.Web.Security.DefaultAuthenticationModule#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.DefaultAuthenticationModule/CS/global.asax#1)]
+ [!code-vb[System.Web.Security.DefaultAuthenticationModule#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.DefaultAuthenticationModule/VB/global.asax#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.DefaultAuthenticationModule.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle Ressourcen, mit Ausnahme des Speichers, der verwendet wird, indem Sie die <see cref="T:System.Web.Security.DefaultAuthenticationModule" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird nicht von Anwendungscode aufgerufen werden soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Init">
+      <MemberSignature Language="C#" Value="public void Init (System.Web.HttpApplication app);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Init(class System.Web.HttpApplication app) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.DefaultAuthenticationModule.Init(System.Web.HttpApplication)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="app" Type="System.Web.HttpApplication" />
+      </Parameters>
+      <Docs>
+        <param name="app">Die aktuelle <see cref="T:System.Web.HttpApplication" />-Instanz.</param>
+        <summary>Initialisiert die <see cref="T:System.Web.Security.DefaultAuthenticationModule" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird nicht von Anwendungscode aufgerufen werden soll.  
+  
+ Die <xref:System.Web.Security.DefaultAuthenticationModule.Init%2A> Methode wird sichergestellt, dass die <xref:System.Web.Security.DefaultAuthenticationModule> ist bei der Verarbeitung von Ereignissen enthalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

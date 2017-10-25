@@ -1,0 +1,199 @@
+<Type Name="X509SubjectKeyIdentifierClause" FullName="System.IdentityModel.Tokens.X509SubjectKeyIdentifierClause">
+  <TypeSignature Language="C#" Value="public class X509SubjectKeyIdentifierClause : System.IdentityModel.Tokens.BinaryKeyIdentifierClause" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit X509SubjectKeyIdentifierClause extends System.IdentityModel.Tokens.BinaryKeyIdentifierClause" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.X509SubjectKeyIdentifierClause" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Tokens.BinaryKeyIdentifierClause</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Schlüsselbezeichnerklausel dar, die ein <see cref="T:System.IdentityModel.Tokens.X509SecurityToken" />-Sicherheitstoken unter Verwendung der Subjektschlüssel-Bezeichnererweiterung des X.509-Zertifikats identifiziert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel ist es nicht erforderlich, die <xref:System.IdentityModel.Tokens.X509SubjectKeyIdentifierClause> zu verwenden, es sei denn, es wird ein benutzerdefinierter Sicherheitstokendienst erstellt. Wenn ein Sicherheitstokendienst ein Sicherheitstoken zurückgibt, enthält das ausgegebene Sicherheitstoken Verweise auf angefügte und nicht angefügte Sicherheitstoken. Angefügte Verweise beziehen sich auf Sicherheitstoken, die im Sicherheitsheader einer SOAP-Nachricht enthalten sind, während sich nicht angefügte Verweise auf Sicherheitstoken beziehen, die nicht im Sicherheitsheader einer SOAP-Nachricht enthalten sind. Diese Verweise bestätigen in der Regel die Echtheit des ausgegebenen Sicherheitstokens. Verwenden Sie die <xref:System.IdentityModel.Tokens.X509ThumbprintKeyIdentifierClause>-Klasse, um auf einen <xref:System.IdentityModel.Tokens.X509SecurityToken>-Sicherheitstoken unter Verwendung der Subjektschlüssel-Bezeichnererweiterung des X.509-Zertifikats zu verweisen. Die <xref:System.IdentityModel.Tokens.X509SubjectKeyIdentifierClause.GetX509SubjectKeyIdentifier%2A>-Methode gibt die Subjektschlüssel-Bezeichnererweiterung zurück.  
+  
+ [!INCLUDE[vsindigo](~/includes/vsindigo-md.md)] unterstützt die folgenden Typen von Sicherheitstokenverweisen für <xref:System.IdentityModel.Tokens.X509SecurityToken>-Sicherheitstoken.  
+  
+-   <xref:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause>  
+  
+-   <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause>  
+  
+-   <xref:System.IdentityModel.Tokens.X509SubjectKeyIdentifierClause>  
+  
+ <xref:System.IdentityModel.Tokens.X509ThumbprintKeyIdentifierClause>  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509SubjectKeyIdentifierClause (byte[] certificateSubject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] certificateSubject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509SubjectKeyIdentifierClause.#ctor(System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ski" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="certificateSubject">To be added.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IdentityModel.Tokens.X509SubjectKeyIdentifierClause" />-Klasse mithilfe des angegebenen Subjektschlüsselbezeichners.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="certificateSubject" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanCreateFrom">
+      <MemberSignature Language="C#" Value="public static bool CanCreateFrom (System.Security.Cryptography.X509Certificates.X509Certificate2 certificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool CanCreateFrom(class System.Security.Cryptography.X509Certificates.X509Certificate2 certificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509SubjectKeyIdentifierClause.CanCreateFrom(System.Security.Cryptography.X509Certificates.X509Certificate2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+      </Parameters>
+      <Docs>
+        <param name="certificate">Ein <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" />-Objekt, das das X.509-Zertifikat enthält.</param>
+        <summary>Ruft einen Wert ab, der angibt, ob eine Schlüsselbezeichnerklausel für das angegebene X.509-Zertifikat erstellt werden kann.</summary>
+        <returns>
+          <see langword="true" />, wenn eine Schlüsselbezeichnerklausel für das <paramref name="certificate" /> erstellt werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Schlüsselbezeichnerklausel kann erstellt werden, wenn der `certificate`-Parameter die Erweiterung <xref:System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierExtension> enthält.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="certificate" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetX509SubjectKeyIdentifier">
+      <MemberSignature Language="C#" Value="public byte[] GetX509SubjectKeyIdentifier ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetX509SubjectKeyIdentifier() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509SubjectKeyIdentifierClause.GetX509SubjectKeyIdentifier" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Subjektschlüsselbezeichner ab.</summary>
+        <returns>Ein <see cref="T:System.Byte" />-Array, das den Subjektschlüsselbezeichner enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matches">
+      <MemberSignature Language="C#" Value="public bool Matches (System.Security.Cryptography.X509Certificates.X509Certificate2 certificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Matches(class System.Security.Cryptography.X509Certificates.X509Certificate2 certificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509SubjectKeyIdentifierClause.Matches(System.Security.Cryptography.X509Certificates.X509Certificate2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+      </Parameters>
+      <Docs>
+        <param name="certificate">Ein <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" />, der das zu vergleichende X.509-Zertifikat enthält.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob der Schlüsselbezeichner für diese Instanz mit dem Schlüsselbezeichner des angegebenen X.509-Zertifikats übereinstimmt.</summary>
+        <returns>
+          <see langword="true" />, wenn das <paramref name="certificate" /> über den gleichen Subjektschlüsselbezeichner verfügt wie die aktuelle Instanz, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.X509SubjectKeyIdentifierClause.Matches%2A>-Methode vergleicht die <xref:System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierExtension>-Erweiterung der beiden X.509-Zertifikate.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="certificate" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509SubjectKeyIdentifierClause.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge zurück, die das aktuelle Objekt darstellt.</summary>
+        <returns>Ein <see cref="T:System.String" />, der das aktuelle Objekt darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IdentityModel.Tokens.X509SubjectKeyIdentifierClause.ToString%2A>-Methode gibt den Subjektschlüsselbezeichner zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryCreateFrom">
+      <MemberSignature Language="C#" Value="public static bool TryCreateFrom (System.Security.Cryptography.X509Certificates.X509Certificate2 certificate, out System.IdentityModel.Tokens.X509SubjectKeyIdentifierClause clause);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryCreateFrom(class System.Security.Cryptography.X509Certificates.X509Certificate2 certificate, [out] class System.IdentityModel.Tokens.X509SubjectKeyIdentifierClause&amp; clause) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509SubjectKeyIdentifierClause.TryCreateFrom(System.Security.Cryptography.X509Certificates.X509Certificate2,System.IdentityModel.Tokens.X509SubjectKeyIdentifierClause@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.X509SubjectKeyIdentifierClause&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="certificate">Ein <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" />, um die dazugehörige Schlüsselbezeichnerklausel zu erstellen.</param>
+        <param name="clause">To be added.</param>
+        <summary>Erstellt mit dem angegebenen X.509-Zertifikat eine Schlüsselbezeichnerklausel.</summary>
+        <returns>
+          <see langword="true" />, wenn eine Schlüsselbezeichnerklausel für das angegebene X.509-Zertifikat erstellt werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine <xref:System.IdentityModel.Tokens.X509SubjectKeyIdentifierClause>-Schlüsselbezeichnerklausel kann für das X.509-Zertifikat erstellt werden, wenn es einen Subjektschlüsselbezeichner enthält.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="certificate" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

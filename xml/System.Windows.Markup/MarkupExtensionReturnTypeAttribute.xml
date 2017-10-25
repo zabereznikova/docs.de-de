@@ -1,0 +1,155 @@
+<Type Name="MarkupExtensionReturnTypeAttribute" FullName="System.Windows.Markup.MarkupExtensionReturnTypeAttribute">
+  <TypeSignature Language="C#" Value="public sealed class MarkupExtensionReturnTypeAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MarkupExtensionReturnTypeAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.MarkupExtensionReturnTypeAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Meldet den Typ, den eine Markuperweiterung zurückgeben kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Markup.MarkupExtension> abgeleiteten benutzerdefinierten Klasse anwenden, sollten [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] um einen möglichen typsichere Rückgabetyp angeben, die von zurückgegeben wird seine <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> Implementierung. Das heißt, wenn eine Markuperweiterung immer einen spezifischeren Typ als Typ des zurückgibt <xref:System.Object>, und Umwandeln in ein primäres Szenario ist, sollte die Markuperweiterungsklasse mit <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> und den Typ melden.  
+  
+ In früheren Versionen von .NET Framework war diese Klasse in der WPF-spezifischen Assembly WindowsBase. In [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> befindet sich in der System.Xaml-Assembly. Weitere Informationen finden Sie unter [aus WPF zu System.Xaml migrierte Typen](~/docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md).  
+  
+ Weitere Informationen zu Mustern für die Implementierung einer benutzerdefinierten XAML-Markuperweiterung, finden Sie unter <xref:System.Windows.Markup.MarkupExtension> und [Typkonverter und Markuperweiterungen für XAML](~/docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MarkupExtensionReturnTypeAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Markup.MarkupExtensionReturnTypeAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MarkupExtensionReturnTypeAttribute (Type returnType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type returnType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="returnType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="returnType">Der Rückgabetyp, die von diesem [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] Berichte.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Markup.MarkupExtensionReturnTypeAttribute" /> -Klasse unter Verwendung der bereitgestellten <see cref="T:System.Type" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Markup.MarkupExtension> abgeleiteten benutzerdefinierten Klasse anwenden, sollten [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] der typsichere Rückgabetyp an, die von zurückgegeben wird seine <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> Implementierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MarkupExtensionReturnTypeAttribute (Type returnType, Type expressionType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type returnType, class System.Type expressionType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.#ctor(System.Type,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("The expressionType argument is not used by the XAML parser. To specify the expected return type, use MarkupExtensionReturnTypeAttribute(Type). To specify custom handling for expression types, use XamlSetMarkupExtensionAttribute.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="returnType" Type="System.Type" />
+        <Parameter Name="expressionType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="returnType">Der Rückgabetyp, die von diesem [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] Berichte.</param>
+        <param name="expressionType">Als veraltet markiert; darf nicht verwendet werden.</param>
+        <summary>Als veraltet markiert; darf nicht verwendet werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Form der <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> besagt, dass einen zweiten Parameter für ein Ausdruck veraltet ist und nicht verwendet werden sollte. Wenn einen Ausdruck oder einen anderen Typ bzw. ein Modell für die verzögerte Auswertung einen möglichen Rückgabetyp ist, sollten Sie mit einem Rückgabetyp von versehen <xref:System.Object> stattdessen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpressionType">
+      <MemberSignature Language="C#" Value="public Type ExpressionType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ExpressionType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.ExpressionType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This is not used by the XAML parser. Please look at XamlSetMarkupExtensionAttribute.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Als veraltet markiert; darf nicht verwendet werden.</summary>
+        <value>Als veraltet markiert; darf nicht verwendet werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Form der <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> besagt, dass einen zweiten Parameter für ein Ausdruck veraltet ist und nicht verwendet werden sollte. Wenn ein Ausdruck möglich ist, sollten Sie mit einem Rückgabetyp von versehen <xref:System.Object> stattdessen. Siehe <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnType">
+      <MemberSignature Language="C#" Value="public Type ReturnType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ReturnType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.ReturnType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Markup.MarkupExtension" /> Rückgabetyp, die dies [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] Berichte.</summary>
+        <value>Der typsichere Rückgabetyp der spezifischen <see cref="M:System.Windows.Markup.MarkupExtension.ProvideValue(System.IServiceProvider)" /> Implementierung der Markuperweiterung, in dem die <see cref="T:System.Windows.Markup.MarkupExtensionReturnTypeAttribute" /> [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] angewendet wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

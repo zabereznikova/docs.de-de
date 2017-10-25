@@ -1,0 +1,201 @@
+<Type Name="UrlEncodedParameterWriter" FullName="System.Web.Services.Protocols.UrlEncodedParameterWriter">
+  <TypeSignature Language="C#" Value="public abstract class UrlEncodedParameterWriter : System.Web.Services.Protocols.MimeParameterWriter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit UrlEncodedParameterWriter extends System.Web.Services.Protocols.MimeParameterWriter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.UrlEncodedParameterWriter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Services.Protocols.MimeParameterWriter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Funktionalität für Writer von Anforderungsparameter für webdiensteclients, die mithilfe von HTTP implementiert, jedoch ohne SOAP-Codierung URL bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Services.Protocols.UrlEncodedParameterWriter>und andere Klassen in der <xref:System.Web.Services.Protocols> Namespace unterstützt die .NET Framework-Implementierungen von Webdiensten über HTTP-GET und HTTP-POST-Vorgänge. Web Service Autoren und Leser serialisieren und deserialisieren, bzw. die Parameter oder Rückgabeobjekt Webmethoden und den HTTP-Anforderung oder Antwort Streams. Web Service Autoren und Leser HTTP für den Transport verwenden, jedoch nicht mit den standardmäßigen SOAP-Nachrichten austauschen.  
+  
+ Die abstrakte <xref:System.Web.Services.Protocols.UrlEncodedParameterWriter> Klasse erbt von der abstrakten <xref:System.Web.Services.Protocols.MimeParameterWriter> -Klasse, indem URL-Codierungsfunktionen für die clientseitige Schreiben von Webmethodenparameter in HTTP-Anforderungsstreams.  
+  
+ Sie in der Regel nicht benötigen, verwenden Sie <xref:System.Web.Services.Protocols.UrlEncodedParameterWriter> oder seiner untergeordneten Klassen direkt. Stattdessen, wenn das Tool Wsdl.exe Clientproxycode entsprechend der HTTP-GET oder HTTP-POST-Implementierungen generiert, es gilt die <xref:System.Web.Services.Protocols.HttpMethodAttribute> an jede Webmethode und legt des Attributs <xref:System.Web.Services.Protocols.HttpMethodAttribute.ParameterFormatter%2A> Eigenschaft in den entsprechenden Typ.  
+  
+> [!NOTE]
+>  Das Hypertext Transfer-Protokoll – HTTP/1.1 gibt die Verwendung einer Variation auf Nachrichtenformat Multipurpose Internet Mail Extensions (MIME), die selbst e-Mail-Nachrichten an verschiedene Inhaltstypen, Text- und binäre ermöglicht.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected UrlEncodedParameterWriter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.UrlEncodedParameterWriter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Services.Protocols.UrlEncodedParameterWriter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Encode">
+      <MemberSignature Language="C#" Value="protected void Encode (System.IO.TextWriter writer, object[] values);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void Encode(class System.IO.TextWriter writer, object[] values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.UrlEncodedParameterWriter.Encode(System.IO.TextWriter,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+        <Parameter Name="values" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.IO.TextWriter" /> -Objekt, das beim Schreiben in die HTTP-Anforderung ist.</param>
+        <param name="values">Die Parameterwerte für den Web-Methode.</param>
+        <summary>Codiert die Parameterwerte für eine Webmethode und schreibt sie in den angegebenen Writer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung von der <xref:System.Web.Services.Protocols.UrlEncodedParameterWriter.Encode%2A> Methode ruft die andere Überladung <xref:System.Web.Services.Protocols.UrlEncodedParameterWriter.Encode%2A>, für jede der Parameterwerte, einschließlich der einzelnen Elemente in Arrays.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Encode">
+      <MemberSignature Language="C#" Value="protected void Encode (System.IO.TextWriter writer, string name, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void Encode(class System.IO.TextWriter writer, string name, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.UrlEncodedParameterWriter.Encode(System.IO.TextWriter,System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Ein <see cref="T:System.IO.TextWriter" /> -Objekt, das beim Schreiben in die HTTP-Anforderung ist.</param>
+        <param name="name">Der Name des Parameters, der codiert werden.</param>
+        <param name="value">Der Wert des Parameters, der codiert werden.</param>
+        <summary>Codiert einen angegebenen Parameterwert und schreibt es in den angegebenen Writer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Signaturen von der <xref:System.Web.Services.Protocols.UrlEncodedParameterWriter.Encode%2A> -Methode, <xref:System.Web.Services.Protocols.UrlEncodedParameterWriter.Encode%2A>, die für jede Webmethode aufgerufen wird, ruft diese Signatur der der <xref:System.Web.Services.Protocols.UrlEncodedParameterWriter.Encode%2A> -Methode für jede der Parameterwerte, einschließlich der einzelnen Elemente in Arrays.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInitializer">
+      <MemberSignature Language="C#" Value="public override object GetInitializer (System.Web.Services.Protocols.LogicalMethodInfo methodInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetInitializer(class System.Web.Services.Protocols.LogicalMethodInfo methodInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.UrlEncodedParameterWriter.GetInitializer(System.Web.Services.Protocols.LogicalMethodInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="methodInfo" Type="System.Web.Services.Protocols.LogicalMethodInfo" />
+      </Parameters>
+      <Docs>
+        <param name="methodInfo">Eine <see cref="T:System.Web.Services.Protocols.LogicalMethodInfo" />, die die Webmethode angibt, für die der Initialisierer abgerufen wird.</param>
+        <summary>Gibt einen Initialisierer für die angegebene Methode zurück.</summary>
+        <returns>Ein <see cref="T:System.Object" />, das den Initialisierer für die angegebene Methode enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Initialisierer ist ein Objekt übergeben, die als Parameter an die <xref:System.Web.Services.Protocols.UrlEncodedParameterWriter.Initialize%2A> Methode. Für die <xref:System.Web.Services.Protocols.UrlEncodedParameterWriter> -Klasse, die Initialisierung ist der Wert der <xref:System.Web.Services.Protocols.LogicalMethodInfo.InParameters%2A> -Eigenschaft der Eingabe <xref:System.Web.Services.Protocols.LogicalMethodInfo> Objekt. Die Eigenschaft ist ein <xref:System.Reflection.ParameterInfo> Array. Die <xref:System.Web.Services.Protocols.UrlEncodedParameterWriter.GetInitializer%2A> Methode wird aufgerufen, während der dienstinitialisierung. Später, zu dem Zeitpunkt, der eine Anforderung wird aufgefüllt, den Initialisierer-Objekt übergeben wird die <xref:System.Web.Services.Protocols.UrlEncodedParameterWriter.Initialize%2A> Methode einer anderen <xref:System.Web.Services.Protocols.UrlEncodedParameterWriter> Instanz. Das andere Objekt führt das eigentliche schreiben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (object initializer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(object initializer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.UrlEncodedParameterWriter.Initialize(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="initializer" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="initializer">Ein <see cref="T:System.Reflection.ParameterInfo" /> Array abgerufen wird, über die <see cref="P:System.Web.Services.Protocols.LogicalMethodInfo.InParameters" /> Eigenschaft von der <see cref="T:System.Web.Services.Protocols.LogicalMethodInfo" /> Klasse.</param>
+        <summary>Initialisiert eine Instanz an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Services.Protocols.UrlEncodedParameterWriter.Initialize%2A> Methode wird aufgerufen, die zum Zeitpunkt der Anforderung wird aufgefüllt.  
+  
+ Der Eingabeparameter `initializer`, abgerufen wird, durch Aufrufen der <xref:System.Web.Services.Protocols.UrlEncodedParameterWriter.GetInitializer%2A> Methode in einer anderen Instanz während der Clientinitialisierung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestEncoding">
+      <MemberSignature Language="C#" Value="public override System.Text.Encoding RequestEncoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding RequestEncoding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.UrlEncodedParameterWriter.RequestEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Codierung ab, die zum Schreiben von Parametern in die HTTP-Anforderung verwendet wird, oder legt sie fest.</summary>
+        <value>Codierung, die zum Schreiben von Parametern in die HTTP-Anforderung verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Codierung, dargestellt durch die <xref:System.Text.Encoding> Klasse, die definiert, wie Zeichen in eine Bytefolge transformiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

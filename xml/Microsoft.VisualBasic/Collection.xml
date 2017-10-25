@@ -1,0 +1,1027 @@
+<Type Name="Collection" FullName="Microsoft.VisualBasic.Collection">
+  <TypeSignature Language="C#" Value="public sealed class Collection : System.Collections.IList, System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed Collection extends System.Object implements class System.Collections.ICollection, class System.Collections.IList, class System.Runtime.Serialization.IDeserializationCallback, class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Collection" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.IDeserializationCallback</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Count = {Count}")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerTypeProxy(typeof(Microsoft.VisualBasic.Collection/CollectionDebugView))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Eine Visual Basic-<see langword="Collection" /> ist eine geordnete Menge von Elementen, auf die als Einheit verwiesen werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Wann immer möglich, sollten Sie die generischen Auflistungen im Verwenden der <xref:System.Collections.Generic?displayProperty=nameWithType> Namespace oder die <xref:System.Collections.Concurrent> Namespace anstelle einer Visual Basic `Collection`. Weitere Informationen finden Sie unter [Sammlungen](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b).  
+  
+ Visual Basic `Collection` Objekt bietet eine einfache Möglichkeit zum Verweisen auf eine verwandte Gruppe von Elementen als einzelnes Objekt. Die Elemente oder *Elemente*in einem Auflistungsfunktionen müssen nur durch die Tatsache, dass in der Auflistung vorhanden sind. Elemente einer Auflistung müssen nicht denselben Datentyp aufweisen.  
+  
+ Sie können erstellen eine Auflistung erstellen anderer Objekte, wie im folgenden Beispiel veranschaulicht.  
+  
+```  
+Dim coll As New Microsoft.VisualBasic.Collection()  
+```  
+  
+ Nachdem Sie eine Sammlung erstellt haben, können Sie Folgendes tun:  
+  
+-   Fügen Sie ein Element mit dem <xref:Microsoft.VisualBasic.Collection.Add%2A> Methode.  
+  
+-   Entfernen Sie ein Element mit dem <xref:Microsoft.VisualBasic.Collection.Remove%2A> Methode.  
+  
+-   Entfernen Sie alle Elemente mit dem <xref:Microsoft.VisualBasic.Collection.Clear%2A> Methode.  
+  
+-   Informieren Sie sich über wie viele Elemente die Auflistung enthält, mit der <xref:Microsoft.VisualBasic.Collection.Count%2A> Eigenschaft.  
+  
+-   Überprüfen Sie, ob ein bestimmtes Element vorhanden ist, mit der <xref:Microsoft.VisualBasic.Collection.Contains%2A> Methode.  
+  
+-   Zurückgeben ein bestimmtes Elements aus der Auflistung mit den <xref:Microsoft.VisualBasic.Collection.Item%2A> Eigenschaft.  
+  
+-   Durchlaufen Sie die gesamte Auflistung mit den [für jede... Nächste Anweisung](~/docs/visual-basic/language-reference/statements/for-each-next-statement.md).  
+  
+    > [!NOTE]
+    >  Obwohl Visual Basic `Collection` Objekt verfügt über Funktionen, die identisch mit der `Collection` -Objekt in Visual Basic 6.0, Interoperation kann nicht in einer COM-Umgebung.  
+  
+    > [!CAUTION]
+    >  Durchlaufen eine Visual Basic `Collection` ist keine threadsichere Prozedur. Selbst wenn die Auflistung synchronisiert wird, können andere Threads nach wie vor die Auflistung, wodurch des Enumerators eine Ausnahme auslöst geändert. Um während der Enumeration Threadsicherheit zu gewährleisten, Sperren Sie die Auflistung oder Ausnahmen Sie die aufgrund von Änderungen von anderen Threads. Weitere Informationen zur Sperrung ein Programmierelement finden Sie unter [SyncLock-Anweisung](~/docs/visual-basic/language-reference/statements/synclock-statement.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt die `Collection` Objekt `names` und ein Dialogfeld, in dem ein Benutzer Objekte (Namen) der Auflistung hinzufügen kann. Es zeigt dann die Namen in der Auflistung, und schließlich ohne Freigabe des leert die Sammlung der `Collection` Objekt selbst.  
+  
+ Um anzuzeigen, wie dies funktioniert, wählen Sie die **Klasse hinzufügen** Befehl die **Projekt** Menü, und deklarieren Sie eine öffentliche Variable namens `instanceName` auf Modulebene von `nameClass` (Typ `Public instanceName`) zum Speichern die Namen der einzelnen Instanzen. Lassen Sie den Standardnamen als `nameClass`. Kopieren Sie den folgenden Code in die **allgemeine** Teil ein anderes Modul, und starten Sie ihn mit der Anweisung `classNamer` in einer anderen Prozedur. (Dieses Beispiel funktioniert nur mit hostanwendungen, die Klassen unterstützt.)  
+  
+ [!code-vb[VbVbalrCollectionObject#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionObject/VB/Class1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Collection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Collection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt und gibt ein neues [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] <see cref="T:Microsoft.VisualBasic.Collection" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] von diesem Konstruktor zurückgegebene Auflistung ist leer und verfügt nicht über keine zugeordnete Anfangskapazität.  
+  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Auflistungen sind nicht kompatibel mit der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Sammlungen zur Verfügung, in der <xref:System.Collections?displayProperty=nameWithType>, <xref:System.Collections.Generic?displayProperty=nameWithType>, und <xref:System.Collections.Specialized?displayProperty=nameWithType> Namespaces.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt ein neues [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Auflistung und der Variablen zugewiesen `coll`:  
+  
+```  
+Dim coll As New Microsoft.VisualBasic.Collection()  
+```  
+  
+ Dies `Collection` Objekt ist 1-basiert, d. h., der die Indexwerte des Elemente reichen von 1 bis zum Wert von der `Count` Eigenschaft. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Sammlungen enthalten Elemente des Typs <xref:System.Object>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (object Item, string Key = null, object Before = null, object After = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void Add(object Item, string Key, object Before, object After) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Collection.Add(System.Object,System.String,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Item" Type="System.Object" />
+        <Parameter Name="Key" Type="System.String" />
+        <Parameter Name="Before" Type="System.Object" />
+        <Parameter Name="After" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="Item">Erforderlich. Ein Objekt eines beliebigen Typs, der angibt, das Element, das der Auflistung hinzugefügt werden soll.</param>
+        <param name="Key">Dies ist optional. Eine eindeutige <see langword="String" /> Ausdruck, der eine Schlüsselzeichenfolge, die statt eines Positionsindizes verwendet werden kann angibt, um auf dieses neue Element in der Auflistung zuzugreifen.</param>
+        <param name="Before">Dies ist optional. Ein Ausdruck, der eine relative Position in der Auflistung angibt. Das Element hinzugefügt werden, wird in der Auflistung vor dem Element identifizierte platziert die <c>vor</c> Argument. Wenn <c>vor</c> ist ein numerischer Ausdruck, muss er eine Zahl zwischen 1 und der Wert der Auflistung <see cref="P:Microsoft.VisualBasic.Collection.Count" /> Eigenschaft. Wenn <c>vor</c> ist ein <see langword="String" /> Ausdruck, muss er entsprechen, die wichtigsten Zeichenfolge angegeben, wenn das betreffende Element der Auflistung hinzugefügt wurde. Sie können nicht beide angeben <c>vor</c> und <c>nach</c>.</param>
+        <param name="After">Dies ist optional. Ein Ausdruck, der eine relative Position in der Auflistung angibt. Das Element hinzugefügt werden, wird in der Auflistung nach dem Element identifizierte platziert die <c>nach</c> Argument. Wenn <c>nach</c> ist ein numerischer Ausdruck, muss er eine Zahl zwischen 1 und der Wert der Auflistung <see langword="Count" /> Eigenschaft. Wenn <c>nach</c> ist ein <see langword="String" /> Ausdruck, muss er entsprechen, die wichtigsten Zeichenfolge angegeben, wenn das betreffende Element der Auflistung hinzugefügt wurde. Sie können nicht beide angeben <c>vor</c> und <c>nach</c>.</param>
+        <summary>Fügt ein Element zu einem <see langword="Collection" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Before` oder `After` Argument muss mit einem vorhandenen Element der Auflistung verweisen; andernfalls ein Fehler auftritt.  
+  
+ Wenn beide die `Before` und `After` Argumente ausgelassen werden, wird das neue Objekt am Ende der Auflistung hinzugefügt.  
+  
+ Außerdem tritt ein Fehler auf, wenn ein angegebenes `Key` Wert entspricht den Schlüssel für ein vorhandenes Element der Auflistung.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die `Add` Methode hinzufügen `child` Objekte – Instanzen einer Klasse mit dem Namen `child` , enthält eine `Public` Eigenschaft `name` – um eine Auflistung mit dem Namen `family`. Um anzuzeigen, wie dies funktioniert, erstellen eine <xref:System.Windows.Forms.Form> mit zwei <xref:System.Windows.Forms.Button> Steuerelementen, und legen ihre <xref:System.Windows.Forms.Control.Text%2A> Eigenschaften `Add` und `List`. Hinzufügen der `child` Klassendefinition und der `family` Deklaration, um den Formularcode. Ändern der `_Click` -Ereignishandler für das **hinzufügen** und **Liste** Schaltflächen wie gezeigt. Die **hinzufügen** Schaltfläche können Sie untergeordnete Elemente hinzufügen. Die **Liste** Schaltfläche zeigt die Namen aller untergeordneten Elemente.  
+  
+ [!code-vb[VbVbalrCollectionObject#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionObject/VB/Form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Collection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht alle Elemente von einem Visual Basic <see langword="Collection" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `Clear` Methode leert die Auflistung und setzt seine <xref:Microsoft.VisualBasic.Collection.Count%2A> Eigenschaft auf 0.  
+  
+   
+  
+## Examples  
+ [!code-vb[VbVbalrCollectionObject#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionObject/VB/Class1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (string Key);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance bool Contains(string Key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Collection.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="Key">Erforderlich. Ein <see langword="String" /> Ausdruck, der angibt, den Schlüssel für die Elemente der Auflistung gesucht werden soll.</param>
+        <summary>Gibt eine <see langword="Boolean" /> Wert, der angibt, ob ein Visual Basic <see langword="Collection" /> -Objekt ein Element mit einem bestimmten Schlüssel enthält.</summary>
+        <returns>Gibt eine <see langword="Boolean" /> Wert, der angibt, ob ein Visual Basic <see langword="Collection" /> -Objekt ein Element mit einem bestimmten Schlüssel enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `Contains`Gibt `True` , wenn die Auflistung ein Element mit einem exakt übereinstimmenden Schlüssel enthält `Key`. Andernfalls `Contains` gibt `False`. Groß-/Kleinschreibung wird ignoriert, beim Ermitteln von Übereinstimmungen Schlüsselwerte.  
+  
+ Ein Visual Basic `Collection` kann einige Elemente, die Schlüssel enthalten und andere Elemente ohne Schlüssel enthalten. Dies hängt davon ab, ob der Aufruf der <xref:Microsoft.VisualBasic.Collection.Add%2A> Methode ein Argument für den optionalen `Key` Parameter.  
+  
+   
+  
+## Examples  
+ [!code-vb[VbVbalrCollectionObject#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionObject/VB/Class1.vb#4)]  
+  
+ Wenn Sie beabsichtigen, Elemente, die mit den Schlüsseln der Auflistung gesucht werden soll, müssen Sie angeben der `Key` Argument jedes Mal, wenn Sie rufen die `Add` Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Collection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine <see langword="Integer" /> mit der Anzahl von Elementen in einer Auflistung. Schreibgeschützt.</summary>
+        <value>Gibt eine <see langword="Integer" /> mit der Anzahl von Elementen in einer Auflistung. Schreibgeschützt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der `Count` -Eigenschaft zum Bestimmen der Anzahl von Elementen in einem `Collection` Objekt.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel veranschaulicht die Verwendung von der `Count` Eigenschaft zum Anzeigen der Anzahl von Elementen in einem <xref:Microsoft.VisualBasic.Collection> Objekt in der Variablen `birthdays`.  
+  
+ [!code-vb[VbVbalrCollectionObject#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionObject/VB/Class1.vb#5)]  
+[!code-vb[VbVbalrCollectionObject#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionObject/VB/Class1.vb#6)]  
+  
+ Die `Collection` Objekt ist 1-basiert, d. h., der die Indexwerte des Elemente reichen von 1 bis zum Wert von der `Count` Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Collection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Verweis auf ein Enumeratorobjekt, das verwendet wird, Durchlaufen einer <see cref="T:Microsoft.VisualBasic.Collection" /> Objekt.</summary>
+        <returns>Gibt einen Verweis auf ein Enumeratorobjekt, das verwendet wird, Durchlaufen einer <see cref="T:Microsoft.VisualBasic.Collection" /> Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die [für jede... Nächste Anweisung](~/docs/visual-basic/language-reference/statements/for-each-next-statement.md) Aufrufe `GetEnumerator` ein Enumeratorobjekt zur Unterstützung von Iteration über die Elemente einer Auflistung abrufen. Normalerweise verwenden Sie eine `For Each`... `Next` Schleife, um eine Auflistung oder ein Array durchlaufen, und Sie müssen nicht aufrufen `GetEnumerator` explizit.  
+  
+ Wenn Sie genauere Kontrolle über die Iteration als benötigen die `For Each`... `Next` Anweisungen bereitstellen, können Sie die `GetEnumerator` Methode, um einen angepassten Durchlauf auszuführen. Es folgen einige Fälle, in denen Sie möglicherweise dazu.  
+  
+-   Möglicherweise möchten am Anfang der auflistungs zurück, und die Iteration erneut starten, bevor er abgeschlossen ist.  
+  
+-   Möglicherweise möchten ein oder mehrere Elemente für eine Vielzahl von Gründen überspringen.  
+  
+-   Sie müssen möglicherweise die Elemente der Auflistung in der Mitte einen Durchlauf ändern. In diesem Fall müssen Sie ein neue Enumeratorobjekt abrufen, da der vorherige Schlüssel ungültig ist.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie `GetEnumerator` zum Abrufen aller Elemente des ein `Collection` Objekt.  
+  
+ [!code-vb[VbVbalrCollectionObject#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionObject/VB/Class1.vb#7)]  
+  
+ `GetEnumerator`erstellt und gibt ein Enumeratorobjekt, das implementiert die <xref:System.Collections.IEnumerator> Schnittstelle die <xref:System.Collections> Namespace. Das Enumeratorobjekt macht die <xref:System.Collections.IEnumerator.Current%2A> Eigenschaft und die <xref:System.Collections.IEnumerator.MoveNext%2A> und <xref:System.Collections.IEnumerator.Reset%2A> Methoden. Weitere Informationen finden Sie unter [für jede... Nächste Anweisung](~/docs/visual-basic/language-reference/statements/for-each-next-statement.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[int Index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Collection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="Index">(A) eines numerischen Ausdrucks, das die Position eines Elements der Auflistung angibt. <c>Index</c> muss eine Zahl zwischen 1 und der Wert der Auflistung sein <see cref="P:Microsoft.VisualBasic.Collection.Count" /> Eigenschaft. Oder (B) eine <see langword="Object" /> Ausdruck, der die Position oder Schlüssel eines Elements der Auflistung angibt.</param>
+        <summary>Gibt ein bestimmtes Element von einem <see langword="Collection" /> Objekt entweder durch Position oder Schlüssel. Schreibgeschützt.</summary>
+        <value>Gibt ein bestimmtes Element von einem <see langword="Collection" /> Objekt entweder durch Position oder Schlüssel. Schreibgeschützt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `Index` ist vom Typ `Object`, `Item` Eigenschaft versucht, diese behandeln, als eine `String`, `Char`, `Char` Array oder eine ganze Zahl. Wenn `Item` kann nicht konvertiert `Index` auf `String` oder `Integer`, löst eine <xref:System.ArgumentException> Ausnahme.  
+  
+ Die `Item` Eigenschaft ist die Standardeigenschaft für eine Auflistung. Aus diesem Grund sind die folgenden Codezeilen gleichwertig.  
+  
+```  
+MsgBox(CStr(customers.Item(1)))  
+MsgBox(CStr(customers(1)))  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die `Item` Eigenschaft, um einen Verweis auf ein Objekt in einer Auflistung abzurufen. Er erstellt `birthdays` als eine `Collection` -Objekt und ruft dann das Objekt, das Rechnungs, Geburtstag darstellt, mit dem Schlüssel `"Bill"` als die `Index` Argument.  
+  
+ [!code-vb[VbVbalrCollectionObject#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionObject/VB/Class1.vb#5)]  
+[!code-vb[VbVbalrCollectionObject#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionObject/VB/Class1.vb#8)]  
+  
+ Beachten Sie, die beim erste Aufruf gibt explizit an die `Item` -Eigenschaft, der zweite jedoch nicht. Beide Aufrufe funktionieren, da die `Item` Eigenschaft ist die Standardeigenschaft für ein `Collection` Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[object Index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(object)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Collection.Item(System.Object)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Index" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="Index">(A) eines numerischen Ausdrucks, das die Position eines Elements der Auflistung angibt. <c>Index</c> muss eine Zahl zwischen 1 und der Wert der Auflistung sein <see cref="P:Microsoft.VisualBasic.Collection.Count" /> Eigenschaft. Oder (B) eine <see langword="Object" /> Ausdruck, der die Position oder Schlüssel eines Elements der Auflistung angibt.</param>
+        <summary>Gibt ein bestimmtes Element von einem <see langword="Collection" /> Objekt entweder durch Position oder Schlüssel. Schreibgeschützt.</summary>
+        <value>Gibt ein bestimmtes Element von einem <see langword="Collection" /> Objekt entweder durch Position oder Schlüssel. Schreibgeschützt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `Index` ist vom Typ `Object`, `Item` Eigenschaft versucht, diese behandeln, als eine `String`, `Char`, `Char` Array oder eine ganze Zahl. Wenn `Item` kann nicht konvertiert `Index` auf `String` oder `Integer`, löst eine <xref:System.ArgumentException> Ausnahme.  
+  
+ Die `Item` Eigenschaft ist die Standardeigenschaft für eine Auflistung. Aus diesem Grund sind die folgenden Codezeilen gleichwertig.  
+  
+```  
+MsgBox(CStr(customers.Item(1)))  
+MsgBox(CStr(customers(1)))  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die `Item` Eigenschaft, um einen Verweis auf ein Objekt in einer Auflistung abzurufen. Er erstellt `birthdays` als eine `Collection` -Objekt und ruft dann das Objekt, das Rechnungs, Geburtstag darstellt, mit dem Schlüssel `"Bill"` als die `Index` Argument.  
+  
+ [!code-vb[VbVbalrCollectionObject#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionObject/VB/Class1.vb#5)]  
+[!code-vb[VbVbalrCollectionObject#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionObject/VB/Class1.vb#8)]  
+  
+ Beachten Sie, die beim erste Aufruf gibt explizit an die `Item` -Eigenschaft, der zweite jedoch nicht. Beide Aufrufe funktionieren, da die `Item` Eigenschaft ist die Standardeigenschaft für ein `Collection` Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[string Key] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Collection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="Key">Eine eindeutige <see langword="String" /> Ausdruck, der eine Schlüsselzeichenfolge, die statt eines Positionsindizes verwendet werden kann angibt, auf ein Element der Auflistung zuzugreifen. <c>Schlüssel</c> muss entsprechen, die die <c>Schlüssel</c> Argument angegeben, wenn das Element der Auflistung hinzugefügt wurde.</param>
+        <summary>Gibt ein bestimmtes Element von einem <see langword="Collection" /> Objekt entweder durch Position oder Schlüssel. Schreibgeschützt.</summary>
+        <value>Gibt ein bestimmtes Element von einem <see langword="Collection" /> Objekt entweder durch Position oder Schlüssel. Schreibgeschützt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `Index` ist vom Typ `Object`, `Item` Eigenschaft versucht, diese behandeln, als eine `String`, `Char`, `Char` Array oder eine ganze Zahl. Wenn `Item` kann nicht konvertiert `Index` auf `String` oder `Integer`, löst eine <xref:System.ArgumentException> Ausnahme.  
+  
+ Die `Item` Eigenschaft ist die Standardeigenschaft für eine Auflistung. Aus diesem Grund sind die folgenden Codezeilen gleichwertig.  
+  
+```  
+MsgBox(CStr(customers.Item(1)))  
+MsgBox(CStr(customers(1)))  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die `Item` Eigenschaft, um einen Verweis auf ein Objekt in einer Auflistung abzurufen. Er erstellt `birthdays` als eine `Collection` -Objekt und ruft dann das Objekt, das Rechnungs, Geburtstag darstellt, mit dem Schlüssel `"Bill"` als die `Index` Argument.  
+  
+ [!code-vb[VbVbalrCollectionObject#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionObject/VB/Class1.vb#5)]  
+[!code-vb[VbVbalrCollectionObject#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionObject/VB/Class1.vb#8)]  
+  
+ Beachten Sie, die beim erste Aufruf gibt explizit an die `Item` -Eigenschaft, der zweite jedoch nicht. Beide Aufrufe funktionieren, da die `Item` Eigenschaft ist die Standardeigenschaft für ein `Collection` Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (int Index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(int32 Index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Collection.Remove(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="Index">Ein numerischer Ausdruck, der die Position eines Elements der Auflistung angibt. <c>Index</c> muss eine Zahl zwischen 1 und der Wert der Auflistung sein <see cref="P:Microsoft.VisualBasic.Collection.Count" /> Eigenschaft.</param>
+        <summary>Entfernt ein Element aus einem <see langword="Collection" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `Remove` Löscht ein Element aus einer Auflistung es verringert der Auflistung <xref:Microsoft.VisualBasic.Collection.Count%2A> Eigenschaft um eins. Es verringert wird auch der `Index` Wert jedes Element, das früher gefolgt von dem gelöschten Element in der Auflistung.  
+  
+ Wenn ein Element der Auflistung ohne hinzugefügte eine `Key`, verwenden Sie die `Index` zu entfernen.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel veranschaulicht die Verwendung von der `Remove` -Methode zum Entfernen von Objekten aus einer <xref:Microsoft.VisualBasic.Collection> Objekt in der Variablen `birthdays`.  
+  
+ [!code-vb[VbVbalrCollectionObject#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionObject/VB/Class1.vb#5)]  
+[!code-vb[VbVbalrCollectionObject#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionObject/VB/Class1.vb#9)]  
+  
+ Befolgen die vier Aufrufe von der `Add` -Methode, die `Count` Eigenschaft 4 enthält, Element `"Bill"` hat Indexwert 1 und Element `"Pete"` Indexwert 4 hat.  
+  
+ Nach dem ersten Aufruf von `Remove`, `Count` ist 3, Element `"Bill"` wird gelöscht, und Element `"Pete"` Indexwert 3 hat.  
+  
+ Nach der zweite Aufruf von `Remove`, `Count` ist 2. Element `"Mike"` wird gelöscht, und Element `"Pete"` hat den Indexwert 2.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string Key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string Key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Collection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="Key">Eine eindeutige <see langword="String" /> Ausdruck, der eine Schlüsselzeichenfolge, die statt eines Positionsindizes verwendet werden kann angibt, auf ein Element der Auflistung zuzugreifen. <c>Schlüssel</c> muss entsprechen, die die <c>Schlüssel</c> Argument angegeben, wenn das Element der Auflistung hinzugefügt wurde.</param>
+        <summary>Entfernt ein Element aus einem <see langword="Collection" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `Remove` Löscht ein Element aus einer Auflistung es verringert der Auflistung <xref:Microsoft.VisualBasic.Collection.Count%2A> Eigenschaft um eins. Es verringert wird auch der `Index` Wert jedes Element, das früher gefolgt von dem gelöschten Element in der Auflistung.  
+  
+ Wenn ein Element der Auflistung ohne hinzugefügte eine `Key`, verwenden Sie die `Index` zu entfernen.  
+  
+   
+  
+## Examples  
+ Dieses Beispiel veranschaulicht die Verwendung von der `Remove` -Methode zum Entfernen von Objekten aus einer <xref:Microsoft.VisualBasic.Collection> Objekt in der Variablen `birthdays`.  
+  
+ [!code-vb[VbVbalrCollectionObject#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionObject/VB/Class1.vb#5)]  
+[!code-vb[VbVbalrCollectionObject#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionObject/VB/Class1.vb#9)]  
+  
+ Befolgen die vier Aufrufe von der `Add` -Methode, die `Count` Eigenschaft 4 enthält, Element `"Bill"` hat Indexwert 1 und Element `"Pete"` Indexwert 4 hat.  
+  
+ Nach dem ersten Aufruf von `Remove`, `Count` ist 3, Element `"Bill"` wird gelöscht, und Element `"Pete"` Indexwert 3 hat.  
+  
+ Nach der zweite Aufruf von `Remove`, `Count` ist 2. Element `"Mike"` wird gelöscht, und Element `"Pete"` hat den Indexwert 2.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method newslot virtual instance void ICollectionCopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Collection.ICollectionCopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale <see cref="T:System.Array" /> , das das Ziel der aus kopierten Elemente <see cref="T:Microsoft.VisualBasic.Collection" /> Objekt. Für das <see cref="T:System.Array" /> muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="index">Der nullbasierte Index im <c>Array</c> an dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die Elemente der <see cref="T:Microsoft.VisualBasic.Collection" /> in ein <see cref="T:System.Array" />, beginnend bei einem bestimmten <see cref="T:System.Array" />-Index. Implementiert die <see cref="T:System.Collections.ICollection" />-Schnittstelle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Elemente kopiert werden, um die <xref:System.Array> in der gleichen Reihenfolge, in dem sich der Enumerator durchläuft, die <xref:Microsoft.VisualBasic.Collection> Objekt.  
+  
+ Diese Methode ist eine O (`n`)-Vorgang, in dem `n` stammt von der <xref:Microsoft.VisualBasic.Collection.System%23Collections%23ICollection%23Count>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist kleiner als Null.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" /> ist mehrdimensional.  
+  
+ - oder -   
+  
+ Die Anzahl der Elemente in der Quelle <see cref="T:Microsoft.VisualBasic.Collection" /> -Quellobjekt ist größer als der verfügbare Platz vom <paramref name="index" /> bis zum Ende des Ziels <paramref name="array" />.</exception>
+        <exception cref="T:System.InvalidCastException">Der Typ der Quelle <see cref="T:Microsoft.VisualBasic.Collection" /> Objekt kann nicht automatisch in den Typ des Ziels umgewandelt werden <paramref name="array" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.ICollectionCount">
+      <MemberSignature Language="C#" Value="int System.Collections.ICollection.ICollectionCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ICollectionCount" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Collection.ICollectionCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.ICollectionIsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.ICollectionIsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ICollectionIsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Collection.ICollectionIsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.ICollectionSyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.ICollectionSyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ICollectionSyncRoot" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Collection.ICollectionSyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method newslot virtual instance class System.Collections.IEnumerator ICollectionGetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Collection.ICollectionGetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der die Auflistung durchläuft. Implementiert die <see cref="T:System.Collections.ICollection" />-Schnittstelle.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" />-Objekt, das zum Durchlaufen der Auflistung verwendet werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [Visual Basic, c#]  
+  
+ Die `foreach`-Anweisung der Programmiersprache C# (`for each` in Visual Basic) verbirgt die Komplexität der Enumeratoren. Daher empfiehlt es sich, `foreach` zu verwenden und den Enumerator nicht direkt zu ändern.  
+  
+ Mit Enumeratoren können die Daten in der Auflistung zwar gelesen, jedoch nicht zum Ändern der zugrunde liegenden Auflistung verwendet werden.  
+  
+ Zu Beginn wird der Enumerator vor das erste Element in der Auflistung positioniert. Die <xref:System.Collections.IEnumerator.Reset%2A> Methode setzt den Enumerator ebenfalls auf diese Position zurück. An dieser Position ist die <xref:System.Collections.IEnumerator.Current%2A> Eigenschaft ist nicht definiert. Sie müssen daher rufen die <xref:System.Collections.IEnumerator.MoveNext%2A> Methode, um den Enumerator auf das erste Element der Auflistung vor dem Lesen des Werts von <xref:System.Collections.IEnumerator.Current%2A>.  
+  
+ <xref:System.Collections.IEnumerator.Current%2A> gibt solange dasselbe Objekt zurück, bis <xref:System.Collections.IEnumerator.MoveNext%2A> oder <xref:System.Collections.IEnumerator.Reset%2A> aufgerufen wird. <xref:System.Collections.IEnumerator.MoveNext%2A> legt <xref:System.Collections.IEnumerator.Current%2A> auf das nächste Element fest.  
+  
+ Wenn <xref:System.Collections.IEnumerator.MoveNext%2A> übergibt am Ende der Auflistung der Enumerator hinter dem letzten Element in der Auflistung positioniert ist und <xref:System.Collections.IEnumerator.MoveNext%2A> gibt `false`. Wenn der Enumerator ist an dieser Position ist nachfolgende Aufrufe <xref:System.Collections.IEnumerator.MoveNext%2A> auch zurückgeben `false`. Wenn der letzte Aufruf <xref:System.Collections.IEnumerator.MoveNext%2A> gibt `false`, <xref:System.Collections.IEnumerator.Current%2A> ist nicht definiert. Um <xref:System.Collections.IEnumerator.Current%2A> wieder auf das erste Element der Auflistung festzulegen, können Sie <xref:System.Collections.IEnumerator.Reset%2A> gefolgt von <xref:System.Collections.IEnumerator.MoveNext%2A> aufrufen.  
+  
+ Ein Enumerator bleibt gültig, solange die Auflistung unverändert ist. Werden an der Auflistung Änderungen wie z. B. Hinzufügen, Bearbeiten oder Entfernen von Elementen vorgenommen, verliert der Enumerator unwiederbringlich seine Gültigkeit und sein Verhalten ist nicht definiert.  
+  
+ Der Enumerator hat keinen exklusiven Zugriff auf die Auflistung; daher ist die Enumeration einer Auflistung systembedingt kein threadsicheres Verfahren. Um während der Enumeration Threadsicherheit zu garantieren, können Sie die Auflistung während der gesamten Enumeration sperren. Um den Lese- und Schreibzugriff auf diese Auflistung durch mehrere Threads zuzulassen, müssen Sie eine eigene Synchronisierung implementieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Add">
+      <MemberSignature Language="C#" Value="int IList.Add (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method newslot virtual instance int32 IListAdd(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Collection.IListAdd(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.Object" /> hinzuzufügende der <see cref="T:Microsoft.VisualBasic.Collection" /> Objekt.</param>
+        <summary>Fügt ein Element aus, um die <see cref="T:Microsoft.VisualBasic.Collection" /> Objekt. Implementiert die <see cref="T:System.Collections.IList" />-Schnittstelle.</summary>
+        <returns>Die Position, an der das neue Element eingefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können auch die <xref:Microsoft.VisualBasic.Collection.Item%2A> zum Hinzufügen neuer Elemente durch Festlegen des Werts eines Schlüssels, die Eigenschaft ist nicht vorhanden, der <xref:Microsoft.VisualBasic.Collection> Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die <see cref="T:Microsoft.VisualBasic.Collection" /> Objekt ist schreibgeschützt.  
+  
+ - oder -   
+  
+ Die <see cref="T:Microsoft.VisualBasic.Collection" /> Objekt eine feste Größe aufweist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Clear">
+      <MemberSignature Language="C#" Value="void IList.Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method newslot virtual instance void IListClear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Collection.IListClear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Elemente aus der <see cref="T:Microsoft.VisualBasic.Collection" /> Objekt. Implementiert die <see cref="T:System.Collections.IList" />-Schnittstelle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode entfernt alle Elemente aus der <xref:Microsoft.VisualBasic.Collection> Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException"><see cref="T:System.Collections.IList" /> ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Contains">
+      <MemberSignature Language="C#" Value="bool IList.Contains (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method newslot virtual instance bool IListContains(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Collection.IListContains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.Object" /> , suchen Sie in der <see cref="T:Microsoft.VisualBasic.Collection" /> Objekt.</param>
+        <summary>Bestimmt, ob die <see cref="T:Microsoft.VisualBasic.Collection" /> Objekt einen bestimmten Wert enthält. Implementiert die <see cref="T:System.Collections.IList" />-Schnittstelle.</summary>
+        <returns>Gibt <see langword="True" /> Wenn die <see cref="T:System.Object" /> befindet sich der <see cref="T:Microsoft.VisualBasic.Collection" /> Objekt; andernfalls <see langword="False" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bestimmt, ob die <xref:Microsoft.VisualBasic.Collection> Objekt einen bestimmten Wert enthält.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IListIsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IListIsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IListIsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Collection.IListIsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IListIsReadOnly">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IListIsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IListIsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Collection.IListIsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IListItem">
+      <MemberSignature Language="C#" Value="object System.Collections.IList.IListItem[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object IListItem(int32)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Collection.IListItem(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IndexOf">
+      <MemberSignature Language="C#" Value="int IList.IndexOf (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method newslot virtual instance int32 IListIndexOf(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Collection.IListIndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.Object" /> , suchen Sie in der <see cref="T:Microsoft.VisualBasic.Collection" /> Objekt.</param>
+        <summary>Bestimmt den Index eines bestimmten Elements in der <see cref="T:Microsoft.VisualBasic.Collection" /> Objekt. Implementiert die <see cref="T:System.Collections.IList" />-Schnittstelle.</summary>
+        <returns>Der Index des <paramref name="value" /> Wenn in der Auflistung gefunden wurde, andernfalls -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bestimmt den Index eines bestimmten Elements in der <xref:Microsoft.VisualBasic.Collection> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Insert">
+      <MemberSignature Language="C#" Value="void IList.Insert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method newslot virtual instance void IListInsert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Collection.IListInsert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem <c>Wert</c> eingefügt werden soll.</param>
+        <param name="value">Die <see cref="T:System.Object" /> zum Einfügen in die <see cref="T:Microsoft.VisualBasic.Collection" /> Objekt.</param>
+        <summary>Fügt ein Element aus, um die <see cref="T:Microsoft.VisualBasic.Collection" /> Objekt am angegebenen Index. Implementiert die <see cref="T:System.Collections.IList" />-Schnittstelle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `index` entspricht der Anzahl der Elemente in der <xref:Microsoft.VisualBasic.Collection> -Objekt, klicken Sie dann `value` am Ende angefügt ist.  
+  
+ In Auflistungen mit zusammenhängenden Elementen, beispielsweise Listen, werden die Elemente hinter der Einfügemarke nach unten verschoben, um das neue Element aufzunehmen. Wenn die Auflistung indiziert ist, werden auch die Indizes der verschobenen Elemente aktualisiert. Dies gilt nicht für Auflistungen, in denen die Elemente konzeptionell in Buckets gruppiert sind, beispielsweise Hashtabellen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" />ist kein gültiger Index in der <see cref="T:Microsoft.VisualBasic.Collection" /> Objekt.</exception>
+        <exception cref="T:System.NotSupportedException">Die <see cref="T:Microsoft.VisualBasic.Collection" /> Objekt ist schreibgeschützt.  
+  
+ - oder -   
+  
+ Die <see cref="T:Microsoft.VisualBasic.Collection" /> Objekt eine feste Größe aufweist.</exception>
+        <exception cref="T:System.NullReferenceException">
+          <paramref name="value" />null-Verweis in der <see cref="T:Microsoft.VisualBasic.Collection" /> Objekt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Remove">
+      <MemberSignature Language="C#" Value="void IList.Remove (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method newslot virtual instance void IListRemove(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Collection.IListRemove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.Object" /> Aufheben der <see cref="T:Microsoft.VisualBasic.Collection" /> Objekt.</param>
+        <summary>Entfernt das erste Vorkommen eines bestimmten Objekts aus der <see cref="T:Microsoft.VisualBasic.Collection" /> Objekt. Implementiert die <see cref="T:System.Collections.IList" />-Schnittstelle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Auflistungen mit zusammenhängenden Elementen, beispielsweise Listen, wird die nach dem Entfernen eines Elements entstandene Lücke durch Verschieben aller nachfolgenden Elemente gefüllt. Wenn die Auflistung indiziert ist, werden auch die Indizes der verschobenen Elemente aktualisiert. Dies gilt nicht für Auflistungen, in denen die Elemente konzeptionell in Buckets gruppiert sind, beispielsweise Hashtabellen. Wenn `value` befindet sich nicht der <xref:Microsoft.VisualBasic.Collection> -Objekt, das <xref:Microsoft.VisualBasic.Collection> Objekt bleibt unverändert, und es wird keine Ausnahme ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Die <see cref="T:Microsoft.VisualBasic.Collection" /> Objekt ist schreibgeschützt.  
+  
+ - oder -   
+  
+ Die <see cref="T:Microsoft.VisualBasic.Collection" /> Objekt eine feste Größe aufweist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.RemoveAt">
+      <MemberSignature Language="C#" Value="void IList.RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method newslot virtual instance void IListRemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Collection.IListRemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des zu entfernenden Elements.</param>
+        <summary>Entfernt die <see cref="T:Microsoft.VisualBasic.Collection" /> Objektelement am angegebenen Index. Implementiert die <see cref="T:System.Collections.IList" />-Schnittstelle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In Auflistungen mit zusammenhängenden Elementen, beispielsweise Listen, wird die nach dem Entfernen eines Elements entstandene Lücke durch Verschieben aller nachfolgenden Elemente gefüllt. Wenn die Auflistung indiziert ist, werden auch die Indizes der verschobenen Elemente aktualisiert. Dies gilt nicht für Auflistungen, in denen die Elemente konzeptionell in Buckets gruppiert sind, beispielsweise Hashtabellen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" />ist kein gültiger Index in der <see cref="T:Microsoft.VisualBasic.Collection" /> Objekt.</exception>
+        <exception cref="T:System.NotSupportedException">Die <see cref="T:Microsoft.VisualBasic.Collection" /> Objekt ist schreibgeschützt.  
+  
+ - oder -   
+  
+ Die <see cref="T:Microsoft.VisualBasic.Collection" /> Objekt eine feste Größe aufweist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.IDeserializationCallback.OnDeserialization">
+      <MemberSignature Language="C#" Value="void IDeserializationCallback.OnDeserialization (object sender);" />
+      <MemberSignature Language="ILAsm" Value=".method newslot virtual instance void OnDeserialization(object sender) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Collection.OnDeserialization(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="sender">Das Objekt, das den Rückruf initiiert hat.</param>
+        <summary>Wird ausgeführt, nachdem die gesamte <see cref="T:Microsoft.VisualBasic.Collection" /> Objektdiagramm deserialisiert wurde. Implementiert die <see cref="T:System.Runtime.Serialization.IDeserializationCallback" />-Schnittstelle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, nachdem die gesamte <xref:Microsoft.VisualBasic.Collection> Objektdiagramm deserialisiert wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method newslot virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Collection.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Ein <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Objekt mit den zum Serialisieren des <see cref="T:Microsoft.VisualBasic.Collection" />-Objekts erforderlichen Informationen.</param>
+        <param name="context">Ein <see cref="T:System.Runtime.Serialization.StreamingContext" /> Objekt mit der Quelle und Ziel des serialisierten Streams mit dem <see cref="T:Microsoft.VisualBasic.Collection" /> Objekt.</param>
+        <summary>Gibt die zum Serialisieren von Daten die <see cref="T:Microsoft.VisualBasic.Collection" /> Objekt. Implementiert die <see cref="T:System.Runtime.Serialization.ISerializable" />-Schnittstelle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt die zum Serialisieren von Daten die <xref:Microsoft.VisualBasic.Collection> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

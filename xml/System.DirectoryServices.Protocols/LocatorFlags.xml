@@ -1,0 +1,313 @@
+<Type Name="LocatorFlags" FullName="System.DirectoryServices.Protocols.LocatorFlags">
+  <TypeSignature Language="C#" Value="public enum LocatorFlags" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LocatorFlags extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.Protocols.LocatorFlags" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die <see cref="T:System.DirectoryServices.Protocols.LocatorFlags" /> Enumeration gibt an, zum Auffinden eines Domänencontrollers erforderlichen Daten.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AvoidSelf">
+      <MemberSignature Language="C#" Value="AvoidSelf" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.LocatorFlags AvoidSelf = int64(16384)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.LocatorFlags.AvoidSelf" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.LocatorFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der zurückgegebene Domänencontroller nicht mit dem aktuellen Computer sein soll. Der Wert ist gleich 16384 oder 0 x 4000.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DirectoryServicesPreferred">
+      <MemberSignature Language="C#" Value="DirectoryServicesPreferred" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.LocatorFlags DirectoryServicesPreferred = int64(32)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.LocatorFlags.DirectoryServicesPreferred" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.LocatorFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Versucht, einen Domänencontroller zu suchen, Verzeichnisdienstfunktionen unterstützt ([!INCLUDE[Win2kFamily](~/includes/win2kfamily-md.md)] oder höher). Der Wert ist gleich 32 oder 0 x 20.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DirectoryServicesRequired">
+      <MemberSignature Language="C#" Value="DirectoryServicesRequired" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.LocatorFlags DirectoryServicesRequired = int64(16)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.LocatorFlags.DirectoryServicesRequired" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.LocatorFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erfordert, dass der zurückgegebene Domänencontroller unterstützt [!INCLUDE[Win2kFamily](~/includes/win2kfamily-md.md)] oder höher. Der Wert ist gleich 16 oder 0 x 10.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ForceRediscovery">
+      <MemberSignature Language="C#" Value="ForceRediscovery" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.LocatorFlags ForceRediscovery = int64(1)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.LocatorFlags.ForceRediscovery" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.LocatorFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erzwingt, dass den zwischengespeicherte Domänencontroller, ignoriert werden sollen. Der Wert ist gleich 1 oder 0 x 1.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GCRequired">
+      <MemberSignature Language="C#" Value="GCRequired" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.LocatorFlags GCRequired = int64(64)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.LocatorFlags.GCRequired" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.LocatorFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erfordert, dass der zurückgegebene Domänencontroller einen globalen Katalogserver für die Gesamtstruktur, Domänen, die mit dieser Domäne als Stamm. Der Wert ist gleich 64 oder 0 x 40.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GoodTimeServerPreferred">
+      <MemberSignature Language="C#" Value="GoodTimeServerPreferred" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.LocatorFlags GoodTimeServerPreferred = int64(8192)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.LocatorFlags.GoodTimeServerPreferred" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.LocatorFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Versucht, einen Domänencontroller zu finden, der eine zuverlässige Zeitserver ist. Der Wert ist gleich 8192 oder 0 x 2000.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IPRequired">
+      <MemberSignature Language="C#" Value="IPRequired" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.LocatorFlags IPRequired = int64(512)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.LocatorFlags.IPRequired" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.LocatorFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Legt die IP-Adresse des Domänencontrollers im DomainControllerAddress-Member von DomainControllerInfo fest. Der Wert ist gleich 512 oder 0 x 200.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDnsName">
+      <MemberSignature Language="C#" Value="IsDnsName" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.LocatorFlags IsDnsName = int64(131072)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.LocatorFlags.IsDnsName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.LocatorFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die DomainName-Parameters einen DNS-Namen. Der Wert ist gleich 131072 oder 0 x 20000.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFlatName">
+      <MemberSignature Language="C#" Value="IsFlatName" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.LocatorFlags IsFlatName = int64(65536)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.LocatorFlags.IsFlatName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.LocatorFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die DomainName-Parameters einen flachen Namen. Der Wert ist gleich 65536 oder 0 x 10000.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="KdcRequired">
+      <MemberSignature Language="C#" Value="KdcRequired" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.LocatorFlags KdcRequired = int64(1024)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.LocatorFlags.KdcRequired" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.LocatorFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erfordert, dass der zurückgegebene Domänencontroller der Kerberos-Schlüsselverteilungscenter-Dienst ausgeführt wird. Der Wert ist gleich 1024 oder 0 x 400.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.LocatorFlags None = int64(0)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.LocatorFlags.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.LocatorFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Keine Daten erforderlich sind. Der Wert ist gleich 0 oder 0 x 0.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OnlyLdapNeeded">
+      <MemberSignature Language="C#" Value="OnlyLdapNeeded" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.LocatorFlags OnlyLdapNeeded = int64(32768)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.LocatorFlags.OnlyLdapNeeded" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.LocatorFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der Server hat eine LDAP-Server. Der Wert ist gleich 32768 oder 0 x 8000.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PdcRequired">
+      <MemberSignature Language="C#" Value="PdcRequired" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.LocatorFlags PdcRequired = int64(128)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.LocatorFlags.PdcRequired" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.LocatorFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erfordert, dass der zurückgegebene Domänencontroller auf dem primären Domänencontroller für die Domäne sein. Der Wert ist gleich 128 oder 0 x 80.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnDnsName">
+      <MemberSignature Language="C#" Value="ReturnDnsName" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.LocatorFlags ReturnDnsName = int64(1073741824)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.LocatorFlags.ReturnDnsName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.LocatorFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der zurückgegebene Name ein DNS-Name werden soll. Der Wert ist gleich 1073741824 oder 0 x 40000000.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnFlatName">
+      <MemberSignature Language="C#" Value="ReturnFlatName" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.LocatorFlags ReturnFlatName = int64(2147483648)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.LocatorFlags.ReturnFlatName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.LocatorFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der Name einer flachen Namen werden soll. Der Wert ist gleich 2147483648 oder 0 x 80000000.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeServerRequired">
+      <MemberSignature Language="C#" Value="TimeServerRequired" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.LocatorFlags TimeServerRequired = int64(2048)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.LocatorFlags.TimeServerRequired" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.LocatorFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erfordert, dass der zurückgegebene Domänencontroller der W32Time-Dienst ausgeführt. Der Wert ist gleich 2048 oder 0 x 800.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteableRequired">
+      <MemberSignature Language="C#" Value="WriteableRequired" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.LocatorFlags WriteableRequired = int64(4096)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.LocatorFlags.WriteableRequired" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.LocatorFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erfordert, dass der zurückgegebene Domänencontroller geschrieben werden. Der Wert ist gleich 4096 oder 0 x 1000.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

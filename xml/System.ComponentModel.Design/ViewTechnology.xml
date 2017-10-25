@@ -1,0 +1,185 @@
+<Type Name="ViewTechnology" FullName="System.ComponentModel.Design.ViewTechnology">
+  <TypeSignature Language="C#" Value="public enum ViewTechnology" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ViewTechnology extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.ViewTechnology" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert die Bezeichner für eine Reihe von Technologien, die Designer-Hosts zu unterstützen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Adapter Ansichtsmodell ersetzt und funktionell erweitert, die <xref:System.ComponentModel.Design.ViewTechnology> feature; allerdings die <xref:System.ComponentModel.Design.ViewTechnology> Funktion wird für Abwärtskompatibilität und für zukünftige Verwendung beibehalten, falls gewünscht. Weitere Informationen finden Sie unter ".NET Shape Library: A Sample Designer" in der Windows Forms Knowledge Base unter http://windowsforms.net/articles/shapedesigner.aspx.  
+  
+ <xref:System.ComponentModel.Design.ViewTechnology>definiert die Bezeichner, die den Modus zum Steuern der Anzeige von einem Designer gehosteten Dokument verwendet werden soll, angeben können.  
+  
+ Sie sollten nur den Standardwert in Ihre Designer hosting-Umgebung verwenden. In früheren Versionen von der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]die <xref:System.ComponentModel.Design.ViewTechnology.Default> -Enumeration angegeben, den Typ des Benutzeroberflächenautomatisierungs-Modell, die von einer Stamm-Designer unterstützt. Da dieses Modell nicht erweiterbar ist, verwenden Sie stattdessen eine *Ansichtsadapter* Modell. Ein Ansicht-Adapter ist ein Typ, der ein Objekt eines Typs in einen anderen passt.  
+  
+ Ein HTML-Designer möglicherweise zurück, z. B. eine `DemoDOM` Struktur als seinen Ansichtszustand. HTML-Designer gibt eine Technologie zur Ansicht der Standardeinstellung zurück. Eine Windows Forms-Hostingumgebung müsste eine oder mehrere Adapter Ansichtsklassen verfügbar. Wenn eine solche Klasse konvertieren konnte die `DemoDOM` in Windows Forms-Steuerelements, unterstützen die Hostinganwendung dieses Typs des Designers. Wenn kein Adapter aus des Designers zurückgegebenen Datentyp verarbeiten kann <xref:System.ComponentModel.Design.IRootDesigner.GetView%2A> -Methode, die Last des Designers schlägt fehl, und der Benutzer wird ein Fehler angezeigt.  
+  
+ [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]verfügt über ein erweiterbares Schema für die Bereitstellung, damit es an eine beliebige Technologie für die Benutzeroberfläche anpassen kann. Drittanbieter-Technologieanbieter können auch einen entsprechenden Sicht Adapter anbieten, und ihre Objektmodelle sofort nutzbar sind.  
+  
+ Ein Beispiel für die zeigen Sie Adapter an, finden Sie unter ".NET Shape Library: A Sample Designer" in der Windows Forms Knowledge Base unter http://windowsforms.net/articles/shapedesigner.aspx.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.ComponentModel.Design.ViewTechnology.Default> Klasse in einem Designer. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.ComponentModel.Design.IRootDesigner.GetView%2A> Schnittstelle.  
+  
+ [!code-cpp[IRootDesigner Sample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IRootDesigner Sample/CPP/class1.cpp#1)]
+ [!code-csharp[IRootDesigner Sample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/IRootDesigner Sample/CS/class1.cs#1)]
+ [!code-vb[IRootDesigner Sample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IRootDesigner Sample/VB/class1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Design.ViewTechnology Default = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.ViewTechnology.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.ViewTechnology</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Standard-Technologie Unterstützung an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Stamm-Designer kann jede Art von Objekt zurück, aber das Objekt muss mit einem Adapter für die Technologie des Hosts kompatibel sein. Hostingumgebungen wie z. B. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] bieten eine Möglichkeit, neue Ansicht Technologie Adapter zu integrieren. Das Standardobjekt für die Ansicht für Windows Forms-Designer ist ein <xref:System.Windows.Forms.Control?displayProperty=nameWithType> Instanz.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.ComponentModel.Design.ViewTechnology> Klasse in einem Designer. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.ComponentModel.Design.IRootDesigner> Schnittstelle.  
+  
+ [!code-cpp[IRootDesigner Sample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IRootDesigner Sample/CPP/class1.cpp#1)]
+ [!code-csharp[IRootDesigner Sample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/IRootDesigner Sample/CS/class1.cs#1)]
+ [!code-vb[IRootDesigner Sample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IRootDesigner Sample/VB/class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Passthrough">
+      <MemberSignature Language="C#" Value="Passthrough" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Design.ViewTechnology Passthrough = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.ViewTechnology.Passthrough" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This value has been deprecated. Use ViewTechnology.Default instead.  http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.ViewTechnology</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt einen Modus, in dem das Ansichtsobjekt direkt in der Entwicklungsumgebung übergeben wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Ansichtsobjekt muss Schnittstellen zu implementieren, die die Entwicklungsumgebung erforderlich sind. Die [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Entwicklungsumgebung unterstützt, Anzeigen von Objekten, die entweder ein ActiveX-Steuerelement, aktive Dokument oder ein Objekt, das die IVsWindowPane-Schnittstelle implementiert, die durch zur Verfügung gestellt werden [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] VSI ([!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Integration) Programm . Die [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Entwicklungsumgebung bietet Unterstützung für diese Ansicht-Technologie. Unterstützung für diese Ansicht Technologie ist nicht notwendigerweise verfügbar in allen entwicklungsumgebungen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WindowsForms">
+      <MemberSignature Language="C#" Value="WindowsForms" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Design.ViewTechnology WindowsForms = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.ViewTechnology.WindowsForms" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This value has been deprecated. Use ViewTechnology.Default instead.  http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.ViewTechnology</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt einen Modus, in dem ein Windows Forms-Steuerelementobjekt die Anzeige für den Stamm-Designer bereitstellt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Designerhost füllt im Dokumentfenster der Development-Umgebung mit Windows Forms-Steuerelement.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.ComponentModel.Design.ViewTechnology> Klasse in einem Designer. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.ComponentModel.Design.LocalizationExtenderProvider> Klasse.  
+  
+ [!code-cpp[LocalizationExtenderProviderExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/LocalizationExtenderProviderExample/CPP/class1.cpp#1)]
+ [!code-csharp[LocalizationExtenderProviderExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/LocalizationExtenderProviderExample/CS/class1.cs#1)]
+ [!code-vb[LocalizationExtenderProviderExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LocalizationExtenderProviderExample/VB/class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

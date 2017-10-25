@@ -1,0 +1,123 @@
+<Type Name="CodeSnippetStatement" FullName="System.CodeDom.CodeSnippetStatement">
+  <TypeSignature Language="C#" Value="public class CodeSnippetStatement : System.CodeDom.CodeStatement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeSnippetStatement extends System.CodeDom.CodeStatement" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeSnippetStatement" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeStatement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Anweisung mit einem literalen Codefragment dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.CodeSnippetStatement>kann repräsentieren eine Anweisung mit einem literalen Codefragment, das direkt in der Quelle ohne Änderungen enthalten sind.  
+  
+ Ein <xref:System.CodeDom.CodeSnippetStatement> speichert einen Codeabschnitt genau im ursprünglichen Format als Zeichenfolge. CodeDOM übersetzt keine literalen Codefragmente. Literale Codefragmente werden gespeichert und in ihrem ursprünglichen Format ausgegeben. CodeDOM-Objekten, die literalen Code enthalten werden bereitgestellt, damit Entwickler Code kapseln können, die bereits in der Zielsprache verwendet wird.  
+  
+ Die <xref:System.CodeDom.CodeSnippetStatement.Value%2A> Eigenschaft enthält den literalen Code für den Codeausschnitt-Anweisung.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine Instanz von der <xref:System.CodeDom.CodeSnippetStatement> -Klasse unter Verwendung eines literalen Codefragments. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.CodeDom.CodeRegionDirective> Klasse.  
+  
+ [!code-csharp[System.CodeDom.CodeDirectives#16](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.CodeDom.CodeDirectives/CS/codedirective.cs#16)]
+ [!code-vb[System.CodeDom.CodeDirectives#16](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.CodeDom.CodeDirectives/VB/codedirective.vb#16)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeSnippetStatement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeSnippetStatement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.CodeDom.CodeSnippetStatement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeSnippetStatement (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeSnippetStatement.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das literal Codefragment der Anweisung dargestellt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.CodeDom.CodeSnippetStatement" /> -Klasse unter Verwendung des angegebenen Codefragments.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine Instanz von der <xref:System.CodeDom.CodeSnippetStatement> -Klasse unter Verwendung eines literalen Codefragments. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.CodeDom.CodeRegionDirective> Klasse.  
+  
+ [!code-csharp[System.CodeDom.CodeDirectives#16](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.CodeDom.CodeDirectives/CS/codedirective.cs#16)]
+ [!code-vb[System.CodeDom.CodeDirectives#16](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.CodeDom.CodeDirectives/VB/codedirective.vb#16)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeSnippetStatement.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen der literale Codefragment der Anweisung.</summary>
+        <value>Die literale Codefragment der Anweisung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

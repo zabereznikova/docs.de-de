@@ -1,0 +1,294 @@
+<Type Name="ActiveDirectorySchedule" FullName="System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule">
+  <TypeSignature Language="C#" Value="public class ActiveDirectorySchedule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ActiveDirectorySchedule extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule" /> Klasse stellt den wöchentlichen Zeitplan für eine Active Directory-Domänendienste-Replikation.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActiveDirectorySchedule ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActiveDirectorySchedule (System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule schedule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule schedule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule.#ctor(System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="schedule" Type="System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule" />
+      </Parameters>
+      <Docs>
+        <param name="schedule">Ein <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule" /> -Objekt, das in diesem Objekt kopiert wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule" /> -Klasse mit dem angegebenen <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule" /> Objekt.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="schedule" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RawSchedule">
+      <MemberSignature Language="C#" Value="public bool[,,] RawSchedule { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool[,,] RawSchedule" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule.RawSchedule" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean[,,]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein dreidimensionales Array, das zu welchem Zeitpunkt während der Woche angibt, dass die Quelle für die Replikation verfügbar ist.</summary>
+        <value>Ein dreidimensionales Array vom <see cref="T:System.Boolean" /> Elemente, die in dem das Element ist <see langword="true" /> , wenn die Quelle für die Replikation während dieses bestimmten 15-Minuten-Intervall verfügbar ist. Das Element ist <see langword="false" /> , wenn die Quelle keine für die Replikation verfügbar ist.  
+  
+ Das Array ist das Format RawSchedule [&lt;Day of Week&gt;, &lt;Stunde&gt;, &lt;15-minütigen Intervallen&gt;]. Alle diese Werte sind nullbasiert, und die Woche beginnt um 00:00 Uhr am Sonntag morgen, koordinierte Weltzeit.  
+  
+ Im folgenden sind die gültigen Werte für den Tag der Woche.  
+  
+ <list type="table"><listheader><term>Day of Week-Wert  
+  
+ </term><description>Angezeigte Tag der Woche.  
+  
+ </description></listheader><item><term> 0  
+  
+ </term><description>Sonntag  
+  
+ </description></item><item><term> 1  
+  
+ </term><description>Montag  
+  
+ </description></item><item><term> 2  
+  
+ </term><description>Dienstag  
+  
+ </description></item><item><term> 3  
+  
+ </term><description>Mittwoch  
+  
+ </description></item><item><term> 4  
+  
+ </term><description>Donnerstag  
+  
+ </description></item><item><term> 5  
+  
+ </term><description>Freitag  
+  
+ </description></item><item><term> 6  
+  
+ </term><description>Samstag  
+  
+ </description></item></list>  
+  
+ Die Stunde ist nullbasiert und wird im 24-Stunden-Format angegeben. Z. B. 14: 00 Uhr als 14 angegeben werden. Gültige Werte sind 0-23.  
+  
+ Das 15-Minuten-Intervall gibt den 15-Minuten-Block innerhalb der Stunde, die die Quelle für die Replikation verfügbar ist. In der folgenden Tabelle werden die möglichen Werte für die 15-Minuten-Intervall.  
+  
+ <list type="table"><listheader><term>15-Minuten-Intervall  
+  
+ </term><description>Beschreibung  
+  
+ </description></listheader><item><term> 0  
+  
+ </term><description>Die Quelle ist für die Replikation zwischen 0 und 14 Minuten nach der vollen Stunde verfügbar.  
+  
+ </description></item><item><term> 1  
+  
+ </term><description>Die Quelle ist für die Replikation von 15 bis 29 Minuten nach der vollen Stunde verfügbar.  
+  
+ </description></item><item><term> 2  
+  
+ </term><description>Die Quelle ist für die Replikation von 30 zu 44 Minuten nach der vollen Stunde verfügbar.  
+  
+ </description></item><item><term> 3  
+  
+ </term><description>Die Quelle ist für die Replikation von 45 bis 59 Minuten nach der vollen Stunde verfügbar.  
+  
+ </description></item></list>  
+  
+ Im folgenden C#-Beispiel wird gezeigt, wie diese Eigenschaft verwendet, um festzustellen, ob die Quelle für die Replikation um 15:50 verfügbar ist Coordinated Universal Time am Dienstag.  
+  
+```csharp  
+Boolean isAvailable = scheduleObject.RawSchedule[2, 15, 3];  
+```  
+  
+ Im folgenden C#-Beispiel zeigt, wie diese Eigenschaft verwendet wird, um das 15-Minuten-Intervall zur Laufzeit durch Dividieren der Minuten, 15 zu berechnen.  
+  
+```csharp  
+Boolean isAvailable = scheduleObject.RawSchedule[2, 15, (Int32)50/15];  
+```</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetSchedule">
+      <MemberSignature Language="C#" Value="public void ResetSchedule ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetSchedule() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule.ResetSchedule" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt den gesamten Zeitplan zur Verfügung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDailySchedule">
+      <MemberSignature Language="C#" Value="public void SetDailySchedule (System.DirectoryServices.ActiveDirectory.HourOfDay fromHour, System.DirectoryServices.ActiveDirectory.MinuteOfHour fromMinute, System.DirectoryServices.ActiveDirectory.HourOfDay toHour, System.DirectoryServices.ActiveDirectory.MinuteOfHour toMinute);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetDailySchedule(valuetype System.DirectoryServices.ActiveDirectory.HourOfDay fromHour, valuetype System.DirectoryServices.ActiveDirectory.MinuteOfHour fromMinute, valuetype System.DirectoryServices.ActiveDirectory.HourOfDay toHour, valuetype System.DirectoryServices.ActiveDirectory.MinuteOfHour toMinute) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule.SetDailySchedule(System.DirectoryServices.ActiveDirectory.HourOfDay,System.DirectoryServices.ActiveDirectory.MinuteOfHour,System.DirectoryServices.ActiveDirectory.HourOfDay,System.DirectoryServices.ActiveDirectory.MinuteOfHour)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fromHour" Type="System.DirectoryServices.ActiveDirectory.HourOfDay" />
+        <Parameter Name="fromMinute" Type="System.DirectoryServices.ActiveDirectory.MinuteOfHour" />
+        <Parameter Name="toHour" Type="System.DirectoryServices.ActiveDirectory.HourOfDay" />
+        <Parameter Name="toMinute" Type="System.DirectoryServices.ActiveDirectory.MinuteOfHour" />
+      </Parameters>
+      <Docs>
+        <param name="fromHour">Eines der <see cref="T:System.DirectoryServices.ActiveDirectory.HourOfDay" /> Member, der die erste Stunde angibt, die die Quelle für die Replikation zur Verfügung stehen.</param>
+        <param name="fromMinute">Eines der <see cref="T:System.DirectoryServices.ActiveDirectory.MinuteOfHour" /> Member, der das erste 15-Minuten-Intervall angibt, dass die Quelle für die Replikation zur Verfügung stehen.</param>
+        <param name="toHour">Eines der <see cref="T:System.DirectoryServices.ActiveDirectory.HourOfDay" /> Member, der die letzte Stunde angibt, die die Quelle für die Replikation zur Verfügung stehen.</param>
+        <param name="toMinute">Eines der <see cref="T:System.DirectoryServices.ActiveDirectory.MinuteOfHour" /> Member, der das letzte 15-Minuten-Intervall angibt, dass die Quelle für die Replikation zur Verfügung stehen.</param>
+        <summary>Fügt einen Bereich von Zeiten für jeden Tag der Woche auf den Zeitplan an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Parameter in dieser Methode sind inklusiv.  
+  
+ Diese Methode ist ein kumulatives Update, und alle vorhandenen Zeitplaninformationen werden nicht entfernt. Wenn Sie einen vorhandenen Zeitplan und den neuen Zeitplan überlappen ist, werden das Ergebnis kumulative. Um den Zeitplan zu löschen, verwenden Sie die <xref:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule.ResetSchedule%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSchedule">
+      <MemberSignature Language="C#" Value="public void SetSchedule (DayOfWeek day, System.DirectoryServices.ActiveDirectory.HourOfDay fromHour, System.DirectoryServices.ActiveDirectory.MinuteOfHour fromMinute, System.DirectoryServices.ActiveDirectory.HourOfDay toHour, System.DirectoryServices.ActiveDirectory.MinuteOfHour toMinute);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetSchedule(valuetype System.DayOfWeek day, valuetype System.DirectoryServices.ActiveDirectory.HourOfDay fromHour, valuetype System.DirectoryServices.ActiveDirectory.MinuteOfHour fromMinute, valuetype System.DirectoryServices.ActiveDirectory.HourOfDay toHour, valuetype System.DirectoryServices.ActiveDirectory.MinuteOfHour toMinute) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule.SetSchedule(System.DayOfWeek,System.DirectoryServices.ActiveDirectory.HourOfDay,System.DirectoryServices.ActiveDirectory.MinuteOfHour,System.DirectoryServices.ActiveDirectory.HourOfDay,System.DirectoryServices.ActiveDirectory.MinuteOfHour)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="day" Type="System.DayOfWeek" />
+        <Parameter Name="fromHour" Type="System.DirectoryServices.ActiveDirectory.HourOfDay" />
+        <Parameter Name="fromMinute" Type="System.DirectoryServices.ActiveDirectory.MinuteOfHour" />
+        <Parameter Name="toHour" Type="System.DirectoryServices.ActiveDirectory.HourOfDay" />
+        <Parameter Name="toMinute" Type="System.DirectoryServices.ActiveDirectory.MinuteOfHour" />
+      </Parameters>
+      <Docs>
+        <param name="day">Eines der <see cref="T:System.DayOfWeek" /> Member, der den Tag der Woche angibt, die die Quelle für die Replikation zur Verfügung stehen.</param>
+        <param name="fromHour">Eines der <see cref="T:System.DirectoryServices.ActiveDirectory.HourOfDay" /> Member, der die erste Stunde angibt, die die Quelle für die Replikation zur Verfügung stehen.</param>
+        <param name="fromMinute">Eines der <see cref="T:System.DirectoryServices.ActiveDirectory.MinuteOfHour" /> Member, der das erste 15-Minuten-Intervall angibt, dass die Quelle für die Replikation zur Verfügung stehen.</param>
+        <param name="toHour">Eines der <see cref="T:System.DirectoryServices.ActiveDirectory.HourOfDay" /> Member, der die letzte Stunde angibt, die die Quelle für die Replikation zur Verfügung stehen.</param>
+        <param name="toMinute">Eines der <see cref="T:System.DirectoryServices.ActiveDirectory.MinuteOfHour" /> Member, der das letzte 15-Minuten-Intervall angibt, dass die Quelle für die Replikation zur Verfügung stehen.</param>
+        <summary>Fügt einen Zeitbereich für eine einzelnes Tag auf den Zeitplan an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Parameter in dieser Methode sind inklusiv.  
+  
+ Diese Methode ist ein kumulatives Update, und alle vorhandenen Zeitplaninformationen werden nicht entfernt. Wenn Sie einen vorhandenen Zeitplan und den neuen Zeitplan überlappen ist, werden das Ergebnis kumulative. Um den Zeitplan zu löschen, verwenden Sie die <xref:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule.ResetSchedule%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Startzeit ist nach der Endzeit.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Mindestens ein Parameter ist ungültig.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="days" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSchedule">
+      <MemberSignature Language="C#" Value="public void SetSchedule (DayOfWeek[] days, System.DirectoryServices.ActiveDirectory.HourOfDay fromHour, System.DirectoryServices.ActiveDirectory.MinuteOfHour fromMinute, System.DirectoryServices.ActiveDirectory.HourOfDay toHour, System.DirectoryServices.ActiveDirectory.MinuteOfHour toMinute);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetSchedule(valuetype System.DayOfWeek[] days, valuetype System.DirectoryServices.ActiveDirectory.HourOfDay fromHour, valuetype System.DirectoryServices.ActiveDirectory.MinuteOfHour fromMinute, valuetype System.DirectoryServices.ActiveDirectory.HourOfDay toHour, valuetype System.DirectoryServices.ActiveDirectory.MinuteOfHour toMinute) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule.SetSchedule(System.DayOfWeek[],System.DirectoryServices.ActiveDirectory.HourOfDay,System.DirectoryServices.ActiveDirectory.MinuteOfHour,System.DirectoryServices.ActiveDirectory.HourOfDay,System.DirectoryServices.ActiveDirectory.MinuteOfHour)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="days" Type="System.DayOfWeek[]" />
+        <Parameter Name="fromHour" Type="System.DirectoryServices.ActiveDirectory.HourOfDay" />
+        <Parameter Name="fromMinute" Type="System.DirectoryServices.ActiveDirectory.MinuteOfHour" />
+        <Parameter Name="toHour" Type="System.DirectoryServices.ActiveDirectory.HourOfDay" />
+        <Parameter Name="toMinute" Type="System.DirectoryServices.ActiveDirectory.MinuteOfHour" />
+      </Parameters>
+      <Docs>
+        <param name="days">Eines der <see cref="T:System.DayOfWeek" /> Member, der den Tag der Woche angibt, die die Quelle für die Replikation zur Verfügung stehen.</param>
+        <param name="fromHour">Eines der <see cref="T:System.DirectoryServices.ActiveDirectory.HourOfDay" /> Member, der die erste Stunde angibt, die die Quelle für die Replikation zur Verfügung stehen.</param>
+        <param name="fromMinute">Eines der <see cref="T:System.DirectoryServices.ActiveDirectory.MinuteOfHour" /> Member, der das erste 15-Minuten-Intervall angibt, dass die Quelle für die Replikation zur Verfügung stehen.</param>
+        <param name="toHour">Eines der <see cref="T:System.DirectoryServices.ActiveDirectory.HourOfDay" /> Member, der die letzte Stunde angibt, die die Quelle für die Replikation zur Verfügung stehen.</param>
+        <param name="toMinute">Eines der <see cref="T:System.DirectoryServices.ActiveDirectory.MinuteOfHour" /> Member, der das letzte 15-Minuten-Intervall angibt, dass die Quelle für die Replikation zur Verfügung stehen.</param>
+        <summary>Fügt einen Zeitbereich für mehrere Tage auf den Zeitplan an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alle Parameter in dieser Methode sind inklusiv.  
+  
+ Diese Methode ist ein kumulatives Update, und alle vorhandenen Zeitplaninformationen werden nicht entfernt. Wenn Sie einen vorhandenen Zeitplan und den neuen Zeitplan überlappen ist, werden das Ergebnis kumulative. Um den Zeitplan zu löschen, verwenden Sie die <xref:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule.ResetSchedule%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die Startzeit ist nach der Endzeit.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Mindestens ein Parameter ist ungültig.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="days" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

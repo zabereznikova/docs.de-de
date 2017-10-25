@@ -1,0 +1,105 @@
+<Type Name="IRemoteDispatch" FullName="System.EnterpriseServices.IRemoteDispatch">
+  <TypeSignature Language="C#" Value="public interface IRemoteDispatch" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRemoteDispatch" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.IRemoteDispatch" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("6619a740-8154-43be-a186-0319578e02db")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementiert, indem Sie die <see cref="T:System.EnterpriseServices.ServicedComponent" /> Klasse, um festzustellen, wo die <see cref="T:System.EnterpriseServices.AutoCompleteAttribute" /> Class-Attribut wird festgelegt, um <see langword="true" /> oder <see langword="false" /> für eine remote-Methodenaufruf.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.EnterpriseServices.IRemoteDispatch> Schnittstelle muss nicht direkt im Code implementiert werden. Sie wird intern von der .NET Framework-Infrastruktur verwendet.  
+  
+ Die <xref:System.EnterpriseServices.AutoCompleteAttribute> Klassenattribut wird sichergestellt, dass im COM+-Kontext, das Objekt "Fertig" ändert Bit automatisch, um festgelegt wird `true` nach der Methodenrückgabe. Das Objekt kann dann deaktiviert werden.  
+  
+ Die <xref:System.EnterpriseServices.IRemoteDispatch> Methoden der Schnittstelle erscheinen nicht in der <xref:System.EnterpriseServices.ServicedComponent> Klassenschnittstelle. Stattdessen <xref:System.EnterpriseServices.ServicedComponent> explizit implementiert <xref:System.EnterpriseServices.IRemoteDispatch>.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+    <altmember cref="T:System.EnterpriseServices.ServicedComponent" />
+    <altmember cref="T:System.EnterpriseServices.AutoCompleteAttribute" />
+  </Docs>
+  <Members>
+    <Member MemberName="RemoteDispatchAutoDone">
+      <MemberSignature Language="C#" Value="public string RemoteDispatchAutoDone (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string RemoteDispatchAutoDone(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.IRemoteDispatch.RemoteDispatchAutoDone(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.EnterpriseServices.AutoComplete(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Eine Zeichenfolge, die in der eine Request-Objekt konvertiert werden, implementiert die <see cref="T:System.Runtime.Remoting.Messaging.IMessage" /> Schnittstelle.</param>
+        <summary>Stellt sicher, dass im COM+-Kontext, der <see cref="T:System.EnterpriseServices.ServicedComponent" /> des Klassenobjekts "Fertig" ändert Bit ist gesetzt, um <see langword="true" /> nach einem Remotemethodenaufruf.</summary>
+        <returns>Eine Zeichenfolge aus einem Response-Objekt, das implementiert konvertiert die <see cref="T:System.Runtime.Remoting.Messaging.IMethodReturnMessage" /> Schnittstelle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.EnterpriseServices.IRemoteDispatch.RemoteDispatchAutoDone%2A> Methode gehört nicht zur veröffentlichten-Schnittstelle der <xref:System.EnterpriseServices.ServicedComponent> -Klasse und muss nicht an anderer Stelle implementiert werden.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteDispatchNotAutoDone">
+      <MemberSignature Language="C#" Value="public string RemoteDispatchNotAutoDone (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string RemoteDispatchNotAutoDone(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.IRemoteDispatch.RemoteDispatchNotAutoDone(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.EnterpriseServices.AutoComplete(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Eine Zeichenfolge für die Konvertierung in eine Anforderung Objekt, durch die <see cref="T:System.Runtime.Remoting.Messaging.IMessage" /> Schnittstelle.</param>
+        <summary>Nicht im COM+-Kontext, sicherzustellen, dass die <see cref="T:System.EnterpriseServices.ServicedComponent" /> des Klassenobjekts "Fertig" ändert Bit ist gesetzt, um <see langword="true" /> nach einem Remotemethodenaufruf.</summary>
+        <returns>Eine Zeichenfolge konvertiert wird, aus einer Antwort Objekt, durch die <see cref="T:System.Runtime.Remoting.Messaging.IMethodReturnMessage" /> Schnittstelle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.EnterpriseServices.IRemoteDispatch.RemoteDispatchNotAutoDone%2A> Methode gehört nicht zur veröffentlichten-Schnittstelle der <xref:System.EnterpriseServices.ServicedComponent> -Klasse und muss nicht an anderer Stelle implementiert werden.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

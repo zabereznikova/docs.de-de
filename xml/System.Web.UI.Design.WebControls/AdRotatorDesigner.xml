@@ -1,0 +1,74 @@
+<Type Name="AdRotatorDesigner" FullName="System.Web.UI.Design.WebControls.AdRotatorDesigner">
+  <TypeSignature Language="C#" Value="public class AdRotatorDesigner : System.Web.UI.Design.WebControls.DataBoundControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AdRotatorDesigner extends System.Web.UI.Design.WebControls.DataBoundControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.AdRotatorDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.WebControls.DataBoundControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.UI.Design.SupportsPreviewControl(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Entwurfszeitunterstützung in einem visuellen Designer für das <see cref="T:System.Web.UI.WebControls.AdRotator" />-Steuerelement bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einem visuellen Designer, wenn Sie von der Quellansicht in die Entwurfsansicht wechseln das Markup, beschreibt die <xref:System.Web.UI.WebControls.AdRotator> Steuerelement wird analysiert. Auf der Entwurfsoberfläche wird eine Entwurfszeitversion des Steuerelements erstellt. Wenn Sie zurück zur Quellansicht wechseln, wird der Steuerelementcode zur Entwurfszeit-auf das Markup für die Webseite persistent gespeichert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AdRotatorDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.AdRotatorDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.WebControls.AdRotatorDesigner" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.AdRotatorDesigner.GetDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Generiert das Markup, das zum Rendern des Steuerelements auf der Entwurfsoberfläche verwendet wird.</summary>
+        <returns>Das Markup, das Steuerelement auf der Entwurfsoberfläche darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Ein Codebeispiel, das veranschaulicht, überschreiben die <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A> Methode in einem auf Vorlagen basierenden datengebundenen Steuerelement-Designer finden Sie unter <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A?displayProperty=nameWithType>.  
+  
+ Wenn das Steuerelement, das diesem Designer zugeordnete Vorlagen verfügt, werden die Vorlagen im Designer angezeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

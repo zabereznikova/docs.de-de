@@ -1,0 +1,32 @@
+<Type Name="WebPartConnectionsEventHandler" FullName="System.Web.UI.WebControls.WebParts.WebPartConnectionsEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void WebPartConnectionsEventHandler(object sender, WebPartConnectionsEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WebPartConnectionsEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebPartConnectionsEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Web.UI.WebControls.WebParts.WebPartConnectionsEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnectionsEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode für die Behandlung der <see cref="E:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartsConnected" /> und <see cref="E:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartsDisconnected" /> Ereignisse der <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartConnectionsEventHandler> Klasse definiert einen Handlerdelegaten für zwei Ereignisse, die auftreten, auf die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Steuerelement: die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartsConnected> Ereignis und die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartsDisconnected> Ereignis. Die Methode, verarbeitet die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartsConnected> Ereignis ist für die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.OnWebPartsConnected%2A> Methode. Die Methode, verarbeitet die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartsDisconnected> Ereignis ist für die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.OnWebPartsDisconnected%2A> Methode. In beiden Fällen werden die Ereignisdaten enthalten, einem <xref:System.Web.UI.WebControls.WebParts.WebPartConnectionsEventArgs> Objekt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,83 @@
+<Type Name="ComboBox+ChildAccessibleObject" FullName="System.Windows.Forms.ComboBox+ChildAccessibleObject">
+  <TypeSignature Language="C#" Value="public class ComboBox.ChildAccessibleObject : System.Windows.Forms.AccessibleObject" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit ComboBox/ChildAccessibleObject extends System.Windows.Forms.AccessibleObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ComboBox.ChildAccessibleObject" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.AccessibleObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Clientprogrammen für Barrierefreiheit Informationen über das <see cref="T:System.Windows.Forms.ComboBox" />-Steuerelement bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Windows Forms verfügt über integrierte Accessibility-Unterstützung und stellt Informationen zu Ihrer Anwendung, die Arbeit mit Clientanwendungen für Barrierefreiheit ermöglicht. Beispiele für die Clientanwendungen für Barrierefreiheit sind Bildschirm Dienstprogramme Enlarger "und" Prüfer, voice-Hilfsprogramme, auf dem Bildschirm Tastaturen, alternative Eingabegeräte und Tastatur Erweiterung Hilfsprogramme. Die <xref:System.Windows.Forms.ComboBox.ChildAccessibleObject> Klasse erbt von der <xref:System.Windows.Forms.AccessibleObject> Klasse von Informationen über die <xref:System.Windows.Forms.ComboBox> Steuerelement Clientanwendungen für Barrierefreiheit.  
+  
+ Instanzen sind vorhanden, wenn Sie, geben Sie benutzerdefinierte Informationen wie Name oder Beschreibung Clientanwendungen für Barrierefreiheit des Steuerelements möchten. Es gibt zwei Möglichkeiten, diese Informationen bereitstellen. Festlegen, um begrenzte Informationen zu Eingabehilfen für vorhandene Steuerelemente zu ermöglichen, welches Steuerelement <xref:System.Windows.Forms.Control.AccessibleName%2A>, <xref:System.Windows.Forms.Control.AccessibleDescription%2A>, <xref:System.Windows.Forms.Control.AccessibleDefaultActionDescription%2A>, und <xref:System.Windows.Forms.Control.AccessibleRole%2A> Eigenschaftswerte, die Clientanwendungen für Barrierefreiheit gemeldet werden.  
+  
+ Wenn Sie weitere Informationen zur Barrierefreiheit in das Steuerelement enthalten benötigen, können Sie eine eigene Klasse, die abgeleitet ist Schreiben der <xref:System.Windows.Forms.AccessibleObject> oder <xref:System.Windows.Forms.Control.ControlAccessibleObject> Klassen. Angenommen, Sie schreiben ein eigene Steuerelement, das die Standardsteuerelemente nicht abgeleitet ist oder Sie Vorgänge wie das Treffertests innerhalb Ihrer Kontrolle benötigen, erstellen Sie eine <xref:System.Windows.Forms.Control.ControlAccessibleObject> für das Steuerelement durch Aufrufen der <xref:System.Windows.Forms.Control.CreateAccessibilityInstance%2A> Methode.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ChildAccessibleObject (System.Windows.Forms.ComboBox owner, IntPtr handle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.ComboBox owner, native int handle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ComboBox.ChildAccessibleObject.#ctor(System.Windows.Forms.ComboBox,System.IntPtr)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.ComboBox" />
+        <Parameter Name="handle" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Die <see cref="T:System.Windows.Forms.ComboBox" /> -Steuerelement, besitzt die <see cref="T:System.Windows.Forms.ComboBox.ChildAccessibleObject" />.</param>
+        <param name="handle">Ein Handle zu einem Teil der <see cref="T:System.Windows.Forms.ComboBox" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.ComboBox.ChildAccessibleObject" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.ComboBox> -Steuerelement intern besteht aus mehr als ein Steuerelement. Die <xref:System.Windows.Forms.ComboBox.ChildAccessibleObject> müssen wissen, das um zu verwendende handle. Da das Handle für die einzelnen Steuerelement einen privaten Member ist, sollten Consumer diesen Konstruktor nicht aufrufen.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ComboBox.ChildAccessibleObject.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Objekts ab.</summary>
+        <value>Der Wert des der <see cref="P:System.Windows.Forms.ComboBox.ChildAccessibleObject.Name" /> Eigenschaft ist identisch mit der <see cref="P:System.Windows.Forms.AccessibleObject.Name" /> -Eigenschaft für die <see cref="T:System.Windows.Forms.AccessibleObject" /> von der <see cref="T:System.Windows.Forms.ComboBox" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

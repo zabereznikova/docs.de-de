@@ -1,0 +1,124 @@
+<Type Name="AutomationPropertyChangedEventArgs" FullName="System.Windows.Automation.AutomationPropertyChangedEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class AutomationPropertyChangedEventArgs : System.Windows.Automation.AutomationEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AutomationPropertyChangedEventArgs extends System.Windows.Automation.AutomationEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.AutomationPropertyChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationTypes</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.AutomationEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Informationen über ein-Eigenschaft ausgelöstes Ereignis.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AutomationPropertyChangedEventArgs (System.Windows.Automation.AutomationProperty property, object oldValue, object newValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Automation.AutomationProperty property, object oldValue, object newValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.AutomationPropertyChangedEventArgs.#ctor(System.Windows.Automation.AutomationProperty,System.Object,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="property" Type="System.Windows.Automation.AutomationProperty" />
+        <Parameter Name="oldValue" Type="System.Object" />
+        <Parameter Name="newValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="property">Der Bezeichner der Eigenschaft, die geändert wurde.</param>
+        <param name="oldValue">Der vorherige Wert der Eigenschaft.</param>
+        <param name="newValue">Der neue Wert der Eigenschaft.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Automation.AutomationPropertyChangedEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `oldValue`kann `null` (`Nothing` in [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]), wenn der vorherige Wert nicht sofort verfügbar ist.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt und löst ein Ereignis aus, wenn eine Eigenschaft geändert wurde.  
+  
+ [!code-csharp[UIAFragmentProvider_snip#123](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAFragmentProvider_snip/CSharp/ListFragment.cs#123)]
+ [!code-vb[UIAFragmentProvider_snip#123](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListFragment.vb#123)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewValue">
+      <MemberSignature Language="C#" Value="public object NewValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object NewValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.AutomationPropertyChangedEventArgs.NewValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den neuen Wert einer Eigenschaft ab, die geändert wurde.</summary>
+        <value>Der neue Wert der Eigenschaft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Benutzeroberflächenautomatisierungs-Clients müssen für die Eigenschaft den Wert in den erwarteten Typ umgewandelt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OldValue">
+      <MemberSignature Language="C#" Value="public object OldValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object OldValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.AutomationPropertyChangedEventArgs.OldValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den alten Wert einer Eigenschaft ab, die geändert wurde.</summary>
+        <value>Der vorherige Wert der Eigenschaft oder Null (<see langword="Nothing" /> in [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]), wenn der vorherige Wert nicht sofort verfügbar ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Benutzeroberflächenautomatisierungs-Clients müssen für die Eigenschaft den Wert in den entsprechenden Typ umwandeln.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Property">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.AutomationProperty Property { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Automation.AutomationProperty Property" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.AutomationPropertyChangedEventArgs.Property" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Automation.AutomationProperty" /> Bezeichner, der angibt, welche Eigenschaft geändert wurde.</summary>
+        <value>Der Bezeichner der Eigenschaft, die geändert wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

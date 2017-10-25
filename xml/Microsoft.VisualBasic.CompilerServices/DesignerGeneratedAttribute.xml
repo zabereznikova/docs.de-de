@@ -1,0 +1,49 @@
+<Type Name="DesignerGeneratedAttribute" FullName="Microsoft.VisualBasic.CompilerServices.DesignerGeneratedAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DesignerGeneratedAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DesignerGeneratedAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.CompilerServices.DesignerGeneratedAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Beim Anwenden auf eine Klasse ruft der Compiler implizit eine Methode zum Initialisieren der Komponente aus dem standardmäßigen synthetischen Standardkonstruktor auf.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Attribut weist der Compiler an, ruft implizit ein privates `InitializeComponent` -Methode aus dem standardmäßigen synthetischen Standardkonstruktor. Der Compiler überprüft auch, dass diese Methode wird vom benutzerdefinierten Konstruktoren aufgerufen und Bericht eine Warnung oder ein Fehler ist es nicht. Die Visual Studio Integrated Development Environment berücksichtigt dieses Attribut beim Generieren von Code im Namen des Benutzers.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerGeneratedAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.DesignerGeneratedAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz des <see cref="T:Microsoft.VisualBasic.CompilerServices.DesignerGeneratedAttribute" />-Attributs.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

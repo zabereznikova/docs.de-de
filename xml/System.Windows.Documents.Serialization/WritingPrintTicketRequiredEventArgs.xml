@@ -1,0 +1,132 @@
+<Type Name="WritingPrintTicketRequiredEventArgs" FullName="System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs">
+  <TypeSignature Language="C#" Value="public class WritingPrintTicketRequiredEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WritingPrintTicketRequiredEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Documents.Serialization.SerializerWriter.WritingPrintTicketRequired" />-Ereignis bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WritingPrintTicketRequiredEventArgs (System.Windows.Xps.Serialization.PrintTicketLevel printTicketLevel, int sequence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Xps.Serialization.PrintTicketLevel printTicketLevel, int32 sequence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs.#ctor(System.Windows.Xps.Serialization.PrintTicketLevel,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="printTicketLevel" Type="System.Windows.Xps.Serialization.PrintTicketLevel" />
+        <Parameter Name="sequence" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="printTicketLevel">Ein Enumerationswert, der angibt, der Bereich der <see cref="P:System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs.CurrentPrintTicket" /> als eine Seite, Dokument oder Sequenz von Dokumenten.</param>
+        <param name="sequence">Basierend auf den Umfang der durch definierten <c>System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs.CurrentPrintTicket</c>, die Anzahl der Seiten oder die Anzahl der Dokumente, die zugeordneten der <see cref="P:System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs.CurrentPrintTicket" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentPrintTicket">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintTicket CurrentPrintTicket { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Printing.PrintTicket CurrentPrintTicket" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs.CurrentPrintTicket" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintTicket</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Standardwert Druckereinstellungen zu verwenden, wenn das Dokument gedruckt wird.</summary>
+        <value>Die standarddruckereinstellungen zu verwenden, wenn das Dokument gedruckt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen der <xref:System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs.CurrentPrintTicket%2A> Eigenschaft nicht überprüfen oder ändern Sie den angegebenen <xref:System.Printing.PrintTicket> für einen bestimmten <xref:System.Printing.PrintQueue>.  Verwenden Sie bei Bedarf die <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> Methode zum Erstellen einer <xref:System.Printing.PrintQueue>-spezifischen <xref:System.Printing.PrintTicket> , der für einen bestimmten Drucker gültig ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentPrintTicketLevel">
+      <MemberSignature Language="C#" Value="public System.Windows.Xps.Serialization.PrintTicketLevel CurrentPrintTicketLevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Xps.Serialization.PrintTicketLevel CurrentPrintTicketLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs.CurrentPrintTicketLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Serialization.PrintTicketLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der den Bereich, der angibt, ab der <see cref="E:System.Windows.Documents.Serialization.SerializerWriter.WritingPrintTicketRequired" /> Ereignis.</summary>
+        <value>Eine Enumeration, die den Bereich, der angibt, die <see cref="E:System.Windows.Documents.Serialization.SerializerWriter.WritingPrintTicketRequired" /> Ereignis für eine Sequenz von Dokumenten, ein einzelnes Dokument oder eine einzelne Seite.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs.CurrentPrintTicketLevel%2A> Eigenschaft ist <xref:System.Windows.Xps.Serialization.PrintTicketLevel.FixedDocumentSequencePrintTicket>, die <xref:System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs.Sequence%2A> -Eigenschaft gibt die Anzahl der Dokumente-Ausgabe mit der <xref:System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs.CurrentPrintTicket%2A>.  Für andere <xref:System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs.CurrentPrintTicketLevel%2A> Werte, die <xref:System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs.Sequence%2A> -Eigenschaft gibt die Anzahl der Seiten an, mit der <xref:System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs.CurrentPrintTicket%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sequence">
+      <MemberSignature Language="C#" Value="public int Sequence { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Sequence" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs.Sequence" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Dokumente oder Seiten Ausgabe mit der <see cref="P:System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs.CurrentPrintTicket" />.</summary>
+        <value>Die Anzahl der Dokumente oder Seiten mit den <see cref="P:System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs.CurrentPrintTicket" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs.CurrentPrintTicketLevel%2A> Eigenschaft ist <xref:System.Windows.Xps.Serialization.PrintTicketLevel.FixedDocumentSequencePrintTicket>, die <xref:System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs.Sequence%2A> -Eigenschaft gibt die Anzahl der Dokumente-Ausgabe mit der <xref:System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs.CurrentPrintTicket%2A>.  Für andere <xref:System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs.CurrentPrintTicketLevel%2A> Werte, die <xref:System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs.Sequence%2A> -Eigenschaft gibt die Anzahl der Seiten an, mit der <xref:System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs.CurrentPrintTicket%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

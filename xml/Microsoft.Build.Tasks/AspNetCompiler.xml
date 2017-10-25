@@ -1,0 +1,493 @@
+<Type Name="AspNetCompiler" FullName="Microsoft.Build.Tasks.AspNetCompiler">
+  <TypeSignature Language="C#" Value="public class AspNetCompiler : Microsoft.Build.Tasks.ToolTaskExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AspNetCompiler extends Microsoft.Build.Tasks.ToolTaskExtension" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.AspNetCompiler" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Tasks.ToolTaskExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementiert die <c>AspNetCompiler</c> Aufgabe. Verwenden der <c>AspNetCompiler</c> Element in der Projektdatei erstellen und Ausführen dieser Aufgabe. Weitere Informationen zu Verwendung und Parametern finden Sie unter [AspNetCompiler-Aufgabe](http://msdn.microsoft.com/library/f811c019-a67b-4d54-82e6-e29549496f6e).</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AspNetCompiler ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.AspNetCompiler.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Tasks.AspNetCompiler" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AddCommandLineCommands">
+      <MemberSignature Language="C#" Value="protected override void AddCommandLineCommands (Microsoft.Build.Tasks.CommandLineBuilderExtension commandLine);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void AddCommandLineCommands(class Microsoft.Build.Tasks.CommandLineBuilderExtension commandLine) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.AspNetCompiler.AddCommandLineCommands(Microsoft.Build.Tasks.CommandLineBuilderExtension)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandLine" Type="Microsoft.Build.Tasks.CommandLineBuilderExtension" />
+      </Parameters>
+      <Docs>
+        <param name="commandLine">Befehlszeilen-Generator, dem Argumente hinzugefügt werden sollen.</param>
+        <summary>Generiert Befehlszeilenargumente für das AspNetCompiler-Tool.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AllowPartiallyTrustedCallers">
+      <MemberSignature Language="C#" Value="public bool AllowPartiallyTrustedCallers { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowPartiallyTrustedCallers" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AspNetCompiler.AllowPartiallyTrustedCallers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert, der angibt, ob die <see cref="T:System.Security.AllowPartiallyTrustedCallersAttribute" />, womit teilweise vertrauenswürdigen Aufrufern Zugriff auf eine Assembly, auf die Assembly mit starkem Namen, die Aspnet_compiler.exe generiert angewendet werden sollte.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Security.AllowPartiallyTrustedCallersAttribute" /> sollte sein, um die Assembly mit starkem Namen, die Aspnet_compiler.exe generiert angewendet wurde, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft muss zusammen mit der <xref:Microsoft.Build.Tasks.AspNetCompiler.KeyFile%2A> oder <xref:Microsoft.Build.Tasks.AspNetCompiler.KeyContainer%2A> Eigenschaften.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Clean">
+      <MemberSignature Language="C#" Value="public bool Clean { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Clean" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AspNetCompiler.Clean" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen eines booleschen Werts, der angibt, ob die vorkompilierte Anwendung bereinigt erstellt wird.</summary>
+        <value>
+          <see langword="true" />, wenn die vorkompilierte Anwendung bereinigt erstellt wird, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft ist `true`, zuvor kompilierten Komponenten werden neu kompiliert werden. Der Standardwert ist `false`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Debug">
+      <MemberSignature Language="C#" Value="public bool Debug { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Debug" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AspNetCompiler.Debug" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab oder legt diesen fest, der anzeigt, ob während der Kompilierung Debuginformationen (PDB-Datei) ausgegeben werden.</summary>
+        <value>
+          <see langword="true" />, wenn während der Kompilierung Debuginformationen (PDB-Datei) ausgegeben werden, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist `false`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DelaySign">
+      <MemberSignature Language="C#" Value="public bool DelaySign { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DelaySign" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AspNetCompiler.DelaySign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen eines booleschen Werts, der angibt, ob das <see cref="T:System.Reflection.AssemblyDelaySignAttribute" /> zur Angabe, dass eine Assembly nur mit dem öffentlichen Schlüsseltoken und nicht mit dem öffentlichen/privaten Schlüsselpaar signiert werden soll, auf die generierte Assembly angewendet werden soll.</summary>
+        <value>
+          <see langword="true" />, wenn das <see cref="T:System.Reflection.AssemblyDelaySignAttribute" /> auf die generierte Assembly angewendet werden soll, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public override bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.AspNetCompiler.Execute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt die <c>AspNetCompiler</c> Aufgabe.</summary>
+        <returns>
+          <see langword="true" />, wenn die Aufgabe erfolgreich ausgeführt wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FixedNames">
+      <MemberSignature Language="C#" Value="public bool FixedNames { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool FixedNames" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AspNetCompiler.FixedNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen eines booleschen Werts, der angibt, ob für jede Seite in der Anwendung eine Assembly generiert werden soll.</summary>
+        <value>
+          <see langword="true" />Wenn eine Assembly für jede Seite in der Anwendung generiert werden soll; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede Assembly wird mit dem virtuellen Pfad der ursprünglichen Seite mit dem Namen, es sei denn, der Name der Betriebssystem-Grenzwert für Dateinamen, übersteigen würde, in dem Fall ein Hashwert generiert und für den Assemblynamen verwendet.  
+  
+ Diese Eigenschaft kann für direkter Kompilierung nicht verwendet werden; direkter Kompilierung wird berücksichtigt, Konfigurationseinstellungen für die Kompilierung Batchmodus.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Force">
+      <MemberSignature Language="C#" Value="public bool Force { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Force" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AspNetCompiler.Force" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert, der angibt, ob vorhandene Dateien der <paramref name="targetDir" /> Verzeichnis und seinen Unterverzeichnissen überschrieben werden sollen.</summary>
+        <value>
+          <see langword="true" />Wenn vorhandene Dateien der <paramref name="targetDir" /> Verzeichnis und seinen Unterverzeichnissen überschrieben; andernfalls werden sollten <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateFullPathToTool">
+      <MemberSignature Language="C#" Value="protected override string GenerateFullPathToTool ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GenerateFullPathToTool() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.AspNetCompiler.GenerateFullPathToTool" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den vollständigen Dateipfad des Tools „AspNetCompiler“ zurück.</summary>
+        <returns>Der vollständig Dateipfad des Tools „AspNetCompiler“.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="KeyContainer">
+      <MemberSignature Language="C#" Value="public string KeyContainer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyContainer" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AspNetCompiler.KeyContainer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert, der angibt, ob die <see cref="T:System.Reflection.AssemblyKeyNameAttribute" />, die den Namen des Containers angibt, für die öffentlichen/privaten Schlüsselpaars, das zum Generieren eines starken Namens verwendet wird, die auf die kompilierte Assembly angewendet werden soll.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Reflection.AssemblyKeyNameAttribute" /> muss auf die kompilierte Assembly angewendet wurde, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft muss zusammen mit <xref:Microsoft.Build.Tasks.AspNetCompiler.AllowPartiallyTrustedCallers%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="KeyFile">
+      <MemberSignature Language="C#" Value="public string KeyFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AspNetCompiler.KeyFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen booleschen Wert, der angibt, ob die <see cref="T:System.Reflection.AssemblyKeyFileAttribute" />, die angibt, dass der Name der Datei mit dem öffentlichen/privaten Schlüsselpaars, das zum Generieren eines starken Namens verwendet wird auf die kompilierte Assembly angewendet werden soll.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Reflection.AssemblyKeyFileAttribute" /> muss auf die kompilierte Assembly angewendet wurde, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft muss zusammen mit <xref:Microsoft.Build.Tasks.AspNetCompiler.AllowPartiallyTrustedCallers%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MetabasePath">
+      <MemberSignature Language="C#" Value="public string MetabasePath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MetabasePath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AspNetCompiler.MetabasePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den vollständigen IIS-Metabasispfad der Anwendung ab oder legt diesen fest.</summary>
+        <value>Der vollständige IIS-Metabasispfad der Anwendung.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="PhysicalPath">
+      <MemberSignature Language="C#" Value="public string PhysicalPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PhysicalPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AspNetCompiler.PhysicalPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den physischen Pfad der zu kompilierenden Anwendung ab oder legt ihn fest.</summary>
+        <value>Der physische Pfad der zu kompilierenden Anwendung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese Eigenschaft nicht vorhanden ist, wird der IIS-Metabasis verwendet, um die Anwendung zu suchen.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TargetFrameworkMoniker">
+      <MemberSignature Language="C#" Value="public string TargetFrameworkMoniker { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetFrameworkMoniker" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AspNetCompiler.TargetFrameworkMoniker" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die zu überwachenden TargetFrameworkMoniker, der angibt, welche .NET Framework-Version von aspnet_compiler.exe verwendet werden soll.</summary>
+        <value>Gibt die zu überwachenden TargetFrameworkMoniker zurück.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Akzeptiert nur .NET Framework-Moniker.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TargetPath">
+      <MemberSignature Language="C#" Value="public string TargetPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AspNetCompiler.TargetPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den physischen Pfad ab, unter dem die Anwendung kompiliert wird, oder legt ihn fest.</summary>
+        <value>Der physische Pfad, unter dem die Anwendung kompiliert wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn nicht angegeben, wird die Anwendung direkt vorkompiliert.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ToolName">
+      <MemberSignature Language="C#" Value="protected override string ToolName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AspNetCompiler.ToolName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des AspNetCompiler-Tools (aspnet_compiler.exe) ab.</summary>
+        <value>Der Name des AspNetCompiler-Tools.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Updateable">
+      <MemberSignature Language="C#" Value="public bool Updateable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Updateable" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AspNetCompiler.Updateable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dient zum Abrufen oder Festlegen eines booleschen Werts, der angibt, ob die vorkompilierte Anwendung aktualisierbar sein wird.</summary>
+        <value>
+          <see langword="true" />Wenn die vorkompilierte Anwendung aktualisierbar sein wird; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert ist `false`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateParameters">
+      <MemberSignature Language="C#" Value="protected override bool ValidateParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ValidateParameters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.AspNetCompiler.ValidateParameters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Überprüft Eingabeparameter und protokolliert Fehler oder Warnungen (sofern vorhanden). Gibt einen booleschen Wert zurück, der angibt, ob die Aufgabenausführung fortgesetzt werden soll.</summary>
+        <returns>
+          <see langword="true" />Wenn die aufgabenausführung fortgesetzt werden soll andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="VirtualPath">
+      <MemberSignature Language="C#" Value="public string VirtualPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VirtualPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AspNetCompiler.VirtualPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den virtuellen Pfad der zu kompilierenden Anwendung ab oder legt ihn fest.</summary>
+        <value>Der virtuelle Pfad der zu kompilierenden Anwendung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `PhysicalPath` festgelegt ist, wird der physische Pfad verwendet, um die Anwendung zu suchen. Andernfalls wird die IIS-Metabasis verwendet, und es wird angenommen, dass sich die Anwendung am Standardspeicherort befindet.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

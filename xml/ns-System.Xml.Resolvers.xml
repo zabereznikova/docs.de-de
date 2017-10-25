@@ -1,0 +1,28 @@
+<Namespace Name="System.Xml.Resolvers">
+  <Docs>
+    <summary>Die <see cref="N:System.Xml.Resolvers" /> Namespace bietet Unterstützung für das Vorabauffüllen des Caches mit DTDs oder XML-Streams.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Resolvers> -Namespace definiert die <xref:System.Xml.Resolvers.XmlPreloadedResolver> und <xref:System.Xml.Resolvers.XmlKnownDtds> Enumeration.  
+  
+ <xref:System.Xml.Resolvers.XmlPreloadedResolver>wird als Resolver verwendet werden, wenn automatische Aufrufe an das Netzwerk nicht erwünscht oder sind nicht möglich. Dieser Typ kann z. B. verwendet werden, zum Laden von zwischengespeicherten, externen DTDs. Ein weiteres Szenario XHTML geladen und mithilfe von <xref:System.Xml.Resolvers.XmlPreloadedResolver> zum Vorabladen von bekannten DTDs, die in XHTML 1.0 definiert werden. Eine bekannte DTD Vorabladen kein Netzwerkverbindungen aufgerufen werden, da diese DTDs bereits in der System.Xml.Utils-Assembly eingebettet sind. Derzeit <xref:System.Xml.Resolvers.XmlPreloadedResolver> enthält XHTML 1.0 und RSS 0.91 DTDs.  
+  
+ Die <xref:System.Xml.Resolvers.XmlKnownDtds> -Enumeration definiert, welche bekannten DTDs der <xref:System.Xml.Resolvers.XmlPreloadedResolver> erkennt. Die <xref:System.Xml.Resolvers.XmlKnownDtds> Enumeration enthält die `Xhtml10`, `Rss091`, `All`, und `None` Werte.  
+  
+ `XmlKnownDtd.Xhtml10`Gibt an, dass die `T:System.Xml.Resolvers.XmlPreloadedResolver` erkennt DTDs und Entitäten, die in XHTML 1.0 definiert werden. Weitere Informationen zu XHTML, finden Sie unter der [XHTML 1.0-Spezifikation](http://go.microsoft.com/fwlink/?LinkID=109812).  
+  
+ `XmlKnownDtd.Rss091`Gibt an, dass die `T:System.Xml.Resolvers.XmlPreloadedResolver` erkennt DTDs und Entitäten, die in RSS 0.91 definiert sind.  
+  
+ `XmlKnownDtd.All`Gibt an, dass die <xref:System.Xml.Resolvers.XmlPreloadedResolver> alle derzeit unterstützten DTDs erkennt. Dies ist das Standardverhalten.  
+  
+ `XmlKnownDtd.None`Gibt an, dass die <xref:System.Xml.Resolvers.XmlPreloadedResolver> erkennt keiner vordefinierten DTDs.  
+  
+> [!NOTE]
+>  Wenn die <xref:System.Xml.Resolvers.XmlPreloadedResolver> lädt eine bekannte DTD Netzwerkverbindungen wird nicht aufgerufen, da die DTDs bereits in der System.Xml.Utils-Assembly eingebettet sind.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

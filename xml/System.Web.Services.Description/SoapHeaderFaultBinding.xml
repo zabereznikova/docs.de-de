@@ -1,0 +1,186 @@
+<Type Name="SoapHeaderFaultBinding" FullName="System.Web.Services.Description.SoapHeaderFaultBinding">
+  <TypeSignature Language="C#" Value="public class SoapHeaderFaultBinding : System.Web.Services.Description.ServiceDescriptionFormatExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SoapHeaderFaultBinding extends System.Web.Services.Description.ServiceDescriptionFormatExtension" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Description.SoapHeaderFaultBinding" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Services.Description.ServiceDescriptionFormatExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Erweiterbarkeitselement hinzugefügt, ein <see cref="T:System.Web.Services.Description.InputBinding" /> oder ein <see cref="T:System.Web.Services.Description.OutputBinding" /> innerhalb eines XML-Webdiensts. Es gibt den SOAP-Header Typen verwendet, um die Fehlerinformationen in den SOAP-Header übertragen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum Angeben von Protokollen für XML-Webdienste finden Sie unter [&#91;\< Topic://cpconbuildingaspnetwebservices > &#93; ](http://msdn.microsoft.com/en-us/01dfc27c-c68e-4910-a0aa-5e4c2a766b0c). Weitere Informationen zu Web Services Description Language (WSDL) finden Sie in der Spezifikation unter http://www.w3.org/TR/wsdl/.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapHeaderFaultBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.SoapHeaderFaultBinding.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Services.Description.SoapHeaderFaultBinding" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Encoding">
+      <MemberSignature Language="C#" Value="public string Encoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Encoding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.SoapHeaderFaultBinding.Encoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("encodingStyle")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen URI fest, die die Art der Codierung verwendet, um die Fehlermeldung für den SOAP-Header codieren darstellt.</summary>
+        <value>Eine Zeichenfolge, die einen URI enthält. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Eigenschaft sollte festgelegt werden, nur dann, wenn der Wert von der <xref:System.Web.Services.Description.SoapHeaderFaultBinding.Use%2A> Eigenschaft ist `Encoded`. Andernfalls wird der XML-Webdienst unerwartetes Verhalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlQualifiedName Message { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlQualifiedName Message" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.SoapHeaderFaultBinding.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("message")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert angeben des Namens der <see cref="T:System.Web.Services.Description.Message" /> innerhalb des XML-Webdiensts, der die <see cref="T:System.Web.Services.Description.SoapHeaderFaultBinding" /> gilt.</summary>
+        <value>Ein <see cref="T:System.Xml.XmlQualifiedName" /> , die den Namen des der <see cref="T:System.Web.Services.Description.Message" />. Der Standardwert ist <see cref="F:System.String.Empty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public string Namespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.SoapHeaderFaultBinding.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("namespace")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abzurufen, oder legt einen URI fest, die den Speicherort der Spezifikationen für die Codierung nicht explizit definierten Inhalt darstellt. die <see cref="P:System.Web.Services.Description.SoapHeaderFaultBinding.Encoding" /> Eigenschaft.</summary>
+        <value>Gibt eine Zeichenfolge, die einen URI darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt eine leere Zeichenfolge zurück (""), wenn der Eigenschaftswert nicht festgelegt wurde. Der Wert sollte nur festgelegt werden, wenn der Wert der <xref:System.Web.Services.Description.SoapHeaderBinding.Use%2A> Eigenschaft ist `Encoded`. Andernfalls wird der XML-Webdienst unerwartetes Verhalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Part">
+      <MemberSignature Language="C#" Value="public string Part { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Part" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.SoapHeaderFaultBinding.Part" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("part")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, dem <see cref="T:System.Web.Services.Description.MessagePart" /> innerhalb des XML-Webdiensts die <see cref="T:System.Web.Services.Description.SoapHeaderFaultBinding" /> betrifft.</summary>
+        <value>Der Name des der <see cref="T:System.Web.Services.Description.MessagePart" /> , der die <see cref="T:System.Web.Services.Description.SoapHeaderFaultBinding" /> gilt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Use">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.SoapBindingUse Use { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Services.Description.SoapBindingUse Use" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.SoapHeaderFaultBinding.Use" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("use")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.SoapBindingUse</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, ob der Header codiert wird mithilfe von Regeln, die gemäß der <see cref="P:System.Web.Services.Description.SoapHeaderBinding.Encoding" /> -Eigenschaft, oder in einem bestimmten Schema gekapselt ist.</summary>
+        <value>Einer der <see cref="T:System.Web.Services.Description.SoapBindingUse" />-Werte. Die Standardeinstellung ist <see langword="Default" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

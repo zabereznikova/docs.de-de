@@ -1,0 +1,114 @@
+<Type Name="FragmentNavigationEventArgs" FullName="System.Windows.Navigation.FragmentNavigationEventArgs">
+  <TypeSignature Language="C#" Value="public class FragmentNavigationEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FragmentNavigationEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Navigation.FragmentNavigationEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für die **FragmentNavigation** Ereignis.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Ereignisargumente enthalten Informationen zu dem Inhaltsfragment, die navigiert wird, und werden an Handler des übergeben der **FragmentNavigation** Ereignis, das durch die folgende implementiert wird:  
+  
+-   <xref:System.Windows.Navigation.NavigationService.FragmentNavigation?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Navigation.NavigationWindow.FragmentNavigation?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Controls.Frame.FragmentNavigation?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Application.FragmentNavigation?displayProperty=nameWithType>  
+  
+ Wird standardmäßig ein Inhaltsfragment wird Inhalt enthalten sind, indem Sie eine benannte <xref:System.Windows.UIElement>, also eine <xref:System.Windows.UIElement> , deren <xref:System.Windows.FrameworkElement.Name%2A> Attribut festgelegt ist, z. B.:  
+  
+```  
+<TextBlock Name="FragmentName">...</TextBlock>  
+```  
+  
+ Navigieren Sie zu einer [!INCLUDE[TLA2#tla_titlexaml](~/includes/tla2sharptla-titlexaml-md.md)] Fragment durch Bereitstellen einer [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] mit einem Suffix in das folgende Format:  
+  
+ \#*FragmentName*  
+  
+ Die nachstehend sehen Sie ein Beispiel für eine [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] , die auf ein Inhaltsfragment verweist:  
+  
+ [http://www.Microsoft.com/TargetPage.XAML#FragmentName](http://www.www.com/homepage.xaml)  
+  
+ Sie behandeln können die **FragmentNavigation** Ereignisses und verwenden Sie <xref:System.Windows.Navigation.FragmentNavigationEventArgs> um eine benutzerdefinierte Implementierung der Inhaltsfragmenten zu implementieren.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Fragment">
+      <MemberSignature Language="C#" Value="public string Fragment { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Fragment" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.FragmentNavigationEventArgs.Fragment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)]-Fragment ab.</summary>
+        <value>Das [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)]-Fragment. Wenn Sie die Eigenschaft auf eine leere Zeichenfolge festlegen, wird standardmäßig zum Anfang des Inhalts navigiert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Handled">
+      <MemberSignature Language="C#" Value="public bool Handled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Handled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.FragmentNavigationEventArgs.Handled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Fragmentnavigation behandelt wurde, oder legt diesen fest.</summary>
+        <value>
+          <see langword="true" />, wenn die Navigation behandelt wurde, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Windows.Navigation.FragmentNavigationEventArgs.Handled%2A> festgelegt ist, um `false`, das System versucht, ein Element mit dem Namen des Fragments zu suchen und anzuzeigen.  
+  
+ Bei der Behandlung der **FragmentNavigation** Ereignisses und verwenden Sie <xref:System.Windows.Navigation.FragmentNavigationEventArgs> um eine benutzerdefinierte Implementierung der Inhaltsfragmenten zu implementieren, müssen Sie festlegen <xref:System.Windows.Navigation.FragmentNavigationEventArgs.Handled%2A> festgelegt ist, um `true` um das Standardverhalten zu überschreiben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Navigator">
+      <MemberSignature Language="C#" Value="public object Navigator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Navigator" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.FragmentNavigationEventArgs.Navigator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Navigator, der das <see cref="E:System.Windows.Navigation.NavigationService.FragmentNavigation" />-Ereignis ausgelöst hat.</summary>
+        <value>Ein <see cref="T:System.Object" />, das auf den Navigator ([!INCLUDE[TLA2#tla_iegeneric](~/includes/tla2sharptla-iegeneric-md.md)], <see cref="T:System.Windows.Navigation.NavigationWindow" />, <see cref="T:System.Windows.Controls.Frame" />) verweist, der zu dem Inhaltsfragment navigiert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

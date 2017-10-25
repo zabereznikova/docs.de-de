@@ -1,0 +1,97 @@
+<Type Name="MediaPermissionAudio" FullName="System.Security.Permissions.MediaPermissionAudio">
+  <TypeSignature Language="C#" Value="public enum MediaPermissionAudio" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MediaPermissionAudio extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.MediaPermissionAudio" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Berechtigungsstufe für Audio an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Enumeration zum Festlegen der <xref:System.Security.Permissions.MediaPermissionAudio> Eigenschaft von der <xref:System.Security.Permissions.MediaPermission> Klasse. Der Standardwert ist SafeAudio.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Security.Permissions.MediaPermissionAttribute.Audio%2A> Eigenschaft.  
+  
+ [!code-csharp[SecurityPermissionsSnippets#MediaPermissionAttribute4](~/samples/snippets/csharp/VS_Snippets_Wpf/SecurityPermissionsSnippets/CSharp/Window1.xaml.cs#mediapermissionattribute4)]
+ [!code-vb[SecurityPermissionsSnippets#MediaPermissionAttribute4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SecurityPermissionsSnippets/visualbasic/window1.xaml.vb#mediapermissionattribute4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllAudio">
+      <MemberSignature Language="C#" Value="AllAudio" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.MediaPermissionAudio AllAudio = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.MediaPermissionAudio.AllAudio" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.MediaPermissionAudio</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Berechtigung, die uneingeschränkte Audiowiedergabe gestattet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoAudio">
+      <MemberSignature Language="C#" Value="NoAudio" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.MediaPermissionAudio NoAudio = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.MediaPermissionAudio.NoAudio" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.MediaPermissionAudio</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Berechtigung, die alle Audiowiedergabe verweigert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SafeAudio">
+      <MemberSignature Language="C#" Value="SafeAudio" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.MediaPermissionAudio SafeAudio = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.MediaPermissionAudio.SafeAudio" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.MediaPermissionAudio</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Berechtigung, die sicher ist, ermöglicht die eingeschränkte Audiowiedergabe verweigern Datenstromzugriff auf die Abbilddatei enthält.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SiteOfOriginAudio">
+      <MemberSignature Language="C#" Value="SiteOfOriginAudio" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.MediaPermissionAudio SiteOfOriginAudio = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.MediaPermissionAudio.SiteOfOriginAudio" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.MediaPermissionAudio</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Berechtigung, die nur Audiowiedergabe von Dateien ermöglicht, die sich auf die Ursprungssite der Anwendung befinden.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

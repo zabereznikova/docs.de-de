@@ -1,0 +1,76 @@
+<Type Name="TextDataBindingHandler" FullName="System.Web.UI.Design.TextDataBindingHandler">
+  <TypeSignature Language="C#" Value="public class TextDataBindingHandler : System.Web.UI.Design.DataBindingHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TextDataBindingHandler extends System.Web.UI.Design.DataBindingHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.TextDataBindingHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.DataBindingHandler</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Handler für die Datenbindung für ein datengebundenes Steuerelement zur Entwurfszeit bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.TextDataBindingHandler> Objekt ist eine Datenbindung-Handler, die Daten einer datengebundenen Eigenschaft zur Entwurfszeit bereitstellen kann. Die Datenbindung Handler werden verwendet, wenn es kein Designer für das Steuerelement vorhanden, die andernfalls bereitstellen möchten, dass die Daten für die Daten Eigenschaft gebunden ist.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextDataBindingHandler ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TextDataBindingHandler.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.TextDataBindingHandler" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBindControl">
+      <MemberSignature Language="C#" Value="public override void DataBindControl (System.ComponentModel.Design.IDesignerHost designerHost, System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void DataBindControl(class System.ComponentModel.Design.IDesignerHost designerHost, class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TextDataBindingHandler.DataBindControl(System.ComponentModel.Design.IDesignerHost,System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="designerHost" Type="System.ComponentModel.Design.IDesignerHost" />
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="designerHost">Ein Objekt, durch <see cref="T:System.ComponentModel.Design.IDesignerHost" /> für das Dokument, das das Steuerelement enthält.</param>
+        <param name="control">Die <see cref="T:System.Web.UI.Control" /> an Daten gebunden werden soll.</param>
+        <summary>Daten-bindet das angegebene Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.TextDataBindingHandler.DataBindControl%2A> Methode <xref:System.Web.UI.Design.TextDataBindingHandler> legt die `Text` Eigenschaft des Steuerelements, falls es vorhanden, auf eine Zeichenfolge mit Beispieldaten ist.  
+  
+ Diese Methode sollte in einer abgeleiteten Klasse eine Funktionalität zu einem benutzerdefinierten Handler für die Datenbindung implementiert werden. Die Logik für die Datenbindung kann innerhalb dieser Methode implementiert werden soll, und auf den Typ oder die Typen, die der Handler gebunden wird, mindestens eine Eigenschaft auf.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Die meisten Daten Bindung Handler müssen untersuchen Sie die datenbindungen Auflistung auf das Steuerelement mithilfe der <see cref="T:System.Web.UI.IDataBindingsAccessor" /> Schnittstelle, um zu bestimmen, ob bestimmten Eigenschaften, die sie behandeln kann an Daten gebunden sind.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

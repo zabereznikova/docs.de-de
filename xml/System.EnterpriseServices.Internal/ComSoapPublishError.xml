@@ -1,0 +1,75 @@
+<Type Name="ComSoapPublishError" FullName="System.EnterpriseServices.Internal.ComSoapPublishError">
+  <TypeSignature Language="C#" Value="public class ComSoapPublishError" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ComSoapPublishError extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.Internal.ComSoapPublishError" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Der Fehlerhandler für die Veröffentlichung von SOAP-aktivierten Dienste im COM+-Anwendungen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.EnterpriseServices.Internal.ComSoapPublishError> -Klasse stellt eine statische <xref:System.EnterpriseServices.Internal.ComSoapPublishError.Report%2A> Methode zum Schreiben in ein Ereignisprotokoll aufgetretenen Fehlern beim Veröffentlichen von SOAP-aktivierten COM-Schnittstellen in COM+-Anwendungen.  
+  
+ <xref:System.EnterpriseServices.Internal.ComSoapPublishError>wird intern von .NET Framework verwendet werden. Sie müssen nicht direkt im Code die Klasse verwenden.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+    <altmember cref="T:System.EnterpriseServices.Internal.Publish" />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComSoapPublishError ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.ComSoapPublishError.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.EnterpriseServices.Internal.ComSoapPublishError" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Report">
+      <MemberSignature Language="C#" Value="public static void Report (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Report(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.ComSoapPublishError.Report(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Eine Fehlermeldung in das Ereignisprotokoll geschrieben werden sollen.</param>
+        <summary>Schreibt in ein Ereignisprotokoll einen Fehler beim Veröffentlichen von SOAP-aktivierten COM-Schnittstellen in COM+-Anwendungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.EnterpriseServices.Internal.ComSoapPublishError.Report%2A> Methode wird intern von .NET Framework verwendet. Sie müssen nicht direkt im Code die Methode verwenden.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,21 @@
+<Type Name="Image+GetThumbnailImageAbort" FullName="System.Drawing.Image+GetThumbnailImageAbort">
+  <TypeSignature Language="C#" Value="public delegate bool Image.GetThumbnailImageAbort();" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed Image/GetThumbnailImageAbort extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Image.GetThumbnailImageAbort" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters />
+  <ReturnValue>
+    <ReturnType>System.Boolean</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <summary>Stellt eine Rückrufmethode, um festzulegen, wann die <see cref="M:System.Drawing.Image.GetThumbnailImage(System.Int32,System.Int32,System.Drawing.Image.GetThumbnailImageAbort,System.IntPtr)" /> Methode Ausführung vorzeitig abbrechen soll.</summary>
+    <returns>Diese Methode gibt <see langword="true" /> beschließt er, die die <see cref="M:System.Drawing.Image.GetThumbnailImage(System.Int32,System.Int32,System.Drawing.Image.GetThumbnailImageAbort,System.IntPtr)" /> Methode vorzeitig Ausführung beendet werden soll; andernfalls wird zurückgegeben <see langword="false" />.</returns>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

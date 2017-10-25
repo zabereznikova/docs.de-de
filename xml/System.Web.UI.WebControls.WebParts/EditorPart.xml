@@ -1,0 +1,423 @@
+<Type Name="EditorPart" FullName="System.Web.UI.WebControls.WebParts.EditorPart">
+  <TypeSignature Language="C#" Value="public abstract class EditorPart : System.Web.UI.WebControls.WebParts.Part" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit EditorPart extends System.Web.UI.WebControls.WebParts.Part" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.EditorPart" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebParts.Part</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.WebParts.EditorPartDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Dient als Basisklasse für Steuerelemente, die sich in <see cref="T:System.Web.UI.WebControls.WebParts.EditorZoneBase" />-Zonen befinden und zum Bearbeiten von <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" />-Steuerelementen verwendet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.EditorPart> Klasse stellt einen Basissatz von Eigenschaften und Methoden, mit denen von den abgeleiteten <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente bereitgestellt, mit der Webparts-Steuerelementsatzes und durch benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente. Ein <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelement kann ein Benutzer eine zugeordnete bearbeiten <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement, indem Sie das Layout, Darstellung, Eigenschaften, Verhalten oder andere Eigenschaften ändern.  
+  
+ Die Bearbeitung Benutzeroberfläche (UI), besteht aus <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase> Zonen, die enthalten <xref:System.Web.UI.WebControls.WebParts.EditorPart> steuert, wird angezeigt, nachdem eine Webseite den Bearbeitungsmodus wechselt.  
+  
+> [!NOTE]
+>  Ein <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelement verwendet werden kann, nur innerhalb einer Zone, die von abgeleitet ist die <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase> Klasse, z. B. die <xref:System.Web.UI.WebControls.WebParts.EditorZone> Steuerelement.  
+  
+ Benutzer kann auswählen, nachdem eine Seite Bearbeitungsmodus eingegeben hat, eine <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement bearbeiten, indem Sie auf ein bearbeiten-Verb im Verbmenü des ausgewählten Steuerelements. Nur ein <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement zu einem Zeitpunkt bearbeitet werden kann.  
+  
+ Mehrere abgeleitete <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente werden mit dem Webparts-Steuerelementsatz bereitgestellt, wie in der folgenden Tabelle aufgeführt. Diese Steuerelemente bieten die Bearbeitungsfunktionen bereit, die für die meisten Anwendungen erforderlich sind. Der typische Ansatz für die Verwendung dieser Steuerelemente auf einer Webparts-Seite ist, um sie im Format die Persistenz von Seite innerhalb zu deklarieren eine `<zonetemplate>` Element, in dem `<zonetemplate>` wird das untergeordnete Element des ein `<asp:editorzone>` Element. Ein Codebeispiel finden Sie im Beispielabschnitt dieses Themas.  
+  
+|Typ des Steuerelements|Beschreibung|  
+|---------------------|-----------------|  
+|<xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart>|Bearbeitet die Darstellung des zugeordneten Steuerelements, einschließlich Eigenschaften, z. B. seine Titeltext, Höhe, Breite und Rahmenattribute an.|  
+|<xref:System.Web.UI.WebControls.WebParts.BehaviorEditorPart>|Bearbeitet die Steuerung des Verhaltens von das zugeordnete Steuerelement, z. B., ob er bearbeitet werden kann, gibt an, ob sie geschlossen werden kann, oder gibt an, ob es in eine andere Zone verschoben werden kann. Dieses Steuerelement ist nur auf einer Seite angezeigt, wenn ein Steuerelement im freigegebenen Personalisierungsbereich bearbeitet wird.|  
+|<xref:System.Web.UI.WebControls.WebParts.LayoutEditorPart>|Bearbeitungen von Layoutattribute für das zugeordnete Steuerelement, z. B. ob es sich im Zustand (reduziert) normal oder minimiert handelt, und in welcher zone wird platziert.|  
+|<xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart>|Eigenschaften des zugeordneten Steuerelements bearbeitet werden, wenn diese Eigenschaften im Quellcode mit deklariert wurden eine `WebBrowsable` Attribut.|  
+  
+> [!NOTE]
+>  Zur Verbesserung der Barrierefreiheit, alle der <xref:System.Web.UI.WebControls.WebParts.EditorPart> steuert bereitgestellten im Webparts-Steuerelementsatz innerhalb gerendert sind eine `<fieldset>` Element. Die `<fieldset>` Element gruppiert verbundenen Satz von Steuerelementen zur Bearbeitung im verwendet einen angegebenen <xref:System.Web.UI.WebControls.WebParts.EditorPart> -Steuerelement, und es Registerkartennavigation zwischen diesen Steuerelementen für visueller Benutzer-Agents (z. B. normale Webbrowser) und Speech-orientierte Benutzer-Agents (z. B. Lesemodus Software).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht deklarative und die programmgesteuerte Verwendung von <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente. Dieses Codebeispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, das Ihnen ermöglicht, ändern Sie die Anzeigemodi auf einer Webparts-Seite.  
+  
+-   Eine Webseite mit einer <xref:System.Web.UI.WebControls.WebParts.EditorZone> Steuerelement mit mehreren der <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente aus der Webparts-Steuerelementsatz deklarierte in der Zone und einen Verweis auf ein benutzerdefiniertes <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement.  
+  
+-   Eine Klasse, die benutzerdefinierte enthält <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement und ein benutzerdefiniertes <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelement zum Bearbeiten einer Eigenschaft in der <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement.  
+  
+-   Eine Erläuterung der Funktionsweise des Beispiels an, wenn Sie die Seite in einem Browser zu laden.  
+  
+ Der erste Teil dieses Codebeispiel ist das Benutzersteuerelement, das Benutzern ermöglicht, Anzeigemodi auf einer Webseite zu ändern. Informationen zu Modi und eine Beschreibung des Quellcodes in diesem Steuerelement finden Sie unter [Exemplarische Vorgehensweise: Ändern des Anzeigemodus auf einer Webparts-Seite](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_EditorPart_Overview#14](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_EditorPart_Overview/CS/displaymodecs.ascx#14)]
+ [!code-aspx-vb[WebParts_EditorPart_Overview#14](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_EditorPart_Overview/VB/displaymodevb.ascx#14)]  
+  
+ Der zweite Teil des Codebeispiels wird die Webseite. Sie enthält einen deklarativen Verweis auf ein <xref:System.Web.UI.WebControls.WebParts.EditorZone> Steuerelement mit einem untergeordneten `<zonetemplate>` Element, das deklarative Verweise auf zwei Webparts-Steuerelementsatzes enthält <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente. Die Seite verweist außerdem auf ein benutzerdefiniertes <xref:System.Web.UI.WebControls.WebParts.WebPart> zu steuern, mit einer `Register` Richtlinie für die Assembly und die `<aspSample:TextDisplayWebPart>` Element für das Steuerelement.  
+  
+ [!code-aspx-csharp[WebParts_EditorPart_Overview#12](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_EditorPart_Overview/CS/editorpart_overview_cs.aspx#12)]
+ [!code-aspx-vb[WebParts_EditorPart_Overview#12](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_EditorPart_Overview/VB/editorpart_overview_vb.aspx#12)]  
+  
+ Der dritte Teil des Codebeispiels wird eine benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPart> Klasse mit dem Namen `TextDisplayWebPart`. Die Klasse implementiert die <xref:System.Web.UI.WebControls.WebParts.IWebEditable> Schnittstelle. Diese Klasse enthält eine geschachtelte, private Klasse mit dem Code für eine Private <xref:System.Web.UI.WebControls.WebParts.EditorPart> zugeordnete Klasse der `TextDisplayWebPart` Klasse, und mit dem Namen `TextDisplayEditorPart`. Zur Laufzeit als der `TextDisplayWebPart` Steuerelement in den Bearbeitungsmodus wechselt, in dessen `TextDisplayWebPart.CreateEditorParts` -Methode erstellt eine Instanz des der `TextDisplayEditorPart` Klasse, und zeigt ihn in der <xref:System.Web.UI.WebControls.WebParts.EditorZone> -Steuerelement, zusammen mit den anderen <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente.  
+  
+ [!code-csharp[WebParts_EditorPart_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_EditorPart_Overview/CS/textdisplaywebpart.cs#1)]
+ [!code-vb[WebParts_EditorPart_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_EditorPart_Overview/VB/textdisplaywebpart.vb#1)]  
+  
+ Laden Sie die Seite in einem Browser, und klicken Sie auf die **Anzeigemodus** Steuerelement wählen **Bearbeitungsmodus** um in den Bearbeitungsmodus zu wechseln. Klicken Sie auf die Verbmenü (Pfeil nach unten) in der Titelleiste des der `TextDisplayWebPart` Steuerelement, und klicken Sie auf **bearbeiten** auf das Steuerelement zu bearbeiten. Wenn die Benutzeroberfläche zum bearbeitende angezeigt wird, sehen Sie drei <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente, einschließlich benutzerdefinierter dasjenige, das Sie bearbeiten kann die `TextDisplayWebPart.FontStyle` Eigenschaft. Wenn Sie in der Bearbeitung Benutzeroberfläche und auf einige Änderungen vornehmen der **übernehmen** Schaltfläche, Sie können das Dropdownlisten-Steuerelement zurückgeben die Seite, um die Durchsuchen-Modus und die vollständige Auswirkung von der Bearbeitung feststellen.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Erstellen eine benutzerdefinierten <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> -Steuerelement, müssen Sie zwei wichtige Methoden überschreiben. Die <see cref="M:System.Web.UI.WebControls.WebParts.EditorPart.ApplyChanges" /> -Methode angewendet wird, Änderungen im Editorsteuerelement, um die <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> steuern bearbeitet wird. Die <see cref="M:System.Web.UI.WebControls.WebParts.EditorPart.SyncChanges" /> Methode ruft die aktuellen Werte von der <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> steuern bearbeitet wird, sodass das Editorsteuerelement bearbeitet werden kann. Mithilfe dieser zwei wichtigen Methoden können Sie abrufen und Festlegen der Werte zwischen benutzerdefinierten <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> Steuerelement und dem <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement bearbeitet wird.  
+  
+ Ableiten von der <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> Klasse, um den Editor für benutzerdefinierte Steuerelemente erstellen, können Sie benutzerdefinierte Steuerelemente hinzufügen ein <see cref="T:System.Web.UI.WebControls.WebParts.EditorZoneBase" /> Zone durch Implementieren der <see cref="T:System.Web.UI.WebControls.WebParts.IWebEditable" /> -Schnittstelle in einer <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> -Steuerelement, ein benutzerdefiniertes Steuerelement oder ein Serversteuerelement. Weitere Informationen sowie ein Codebeispiel finden Sie unter der <see cref="T:System.Web.UI.WebControls.WebParts.IWebEditable" /> -Klassenübersicht. Darüber hinaus das Codebeispiel im Beispielabschnitt veranschaulicht das implementieren <see cref="T:System.Web.UI.WebControls.WebParts.IWebEditable" /> in einem benutzerdefinierten <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected EditorPart ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.EditorPart.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert die Klasse zur Verwendung durch eine geerbte Klasseninstanz. Dieser Konstruktor kann nur von einer geerbten Klasse aufgerufen werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyChanges">
+      <MemberSignature Language="C#" Value="public abstract bool ApplyChanges ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ApplyChanges() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.EditorPart.ApplyChanges" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert die Werte in einer <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> Steuerelement in den entsprechenden Eigenschaften in der zugeordneten <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement.</summary>
+        <returns>
+          <see langword="true" />Wenn das Speichern von Werten der <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> die Steuerung an die <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement erfolgreich ist; andernfalls (wenn ein Fehler auftritt), <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.EditorPart.ApplyChanges%2A> Methode ist eine wichtige Methode für ein <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelement. Ist definiert als eine abstrakte Methode in der <xref:System.Web.UI.WebControls.WebParts.EditorPart> -Klasse und muss durch geerbte Steuerelemente implementiert werden. Die Methode dient zum Speichern der Werte ein Benutzers in eingetragen wurde ein <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelement in den entsprechenden Eigenschaften in der <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement, das in verwiesen wird die <xref:System.Web.UI.WebControls.WebParts.EditorPart.WebPartToEdit%2A> Eigenschaft.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.EditorPart.ApplyChanges%2A> Methode wird aufgerufen, klickt der Benutzer eine Schaltfläche OK oder anwenden-Verb der Bearbeitung Benutzeroberfläche (UI) darstellt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Implementieren der <xref:System.Web.UI.WebControls.WebParts.EditorPart.ApplyChanges%2A> Methode in einem benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelement. Den vollständigen Code zum Ausführen des Beispiels erforderlich sind, finden Sie im Beispielabschnitt von der <xref:System.Web.UI.WebControls.WebParts.EditorPart> -Klassenübersicht.  
+  
+ Der erste Teil des Codebeispiels veranschaulicht die Implementierung der <xref:System.Web.UI.WebControls.WebParts.EditorPart.ApplyChanges%2A> Methode in der benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.EditorPart> Klasse mit dem Namen `TextDisplayEditorPart`. Diese Methode ruft einen Verweis auf die zugeordnete `TextDisplayWebPart` steuern Sie mithilfe der <xref:System.Web.UI.WebControls.WebParts.EditorPart.WebPartToEdit%2A> Eigenschaft. Er aktualisiert dann den Wert der `TextDisplayWebPart.FontStyle` Eigenschaft.  
+  
+ [!code-csharp[WebParts_EditorPart_Overview#5](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_EditorPart_Overview/CS/textdisplaywebpart.cs#5)]
+ [!code-vb[WebParts_EditorPart_Overview#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_EditorPart_Overview/VB/textdisplaywebpart.vb#5)]  
+  
+ Der zweite Teil des Codebeispiels wird gezeigt, wie die zugeordnete <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement, `TextDisplayWebPart`, erstellt eine Auflistung von zugeordneten <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente (in diesem Fall es ist nur ein <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelement namens `TextDisplayEditorPart` in der Auflistung) in die Implementierung von der <xref:System.Web.UI.WebControls.WebParts.IWebEditable.CreateEditorParts%2A> Methode. Diese Methode wird ausgeführt, wenn die `TextDisplayWebPart` Steuerelement in den Bearbeitungsmodus wechselt.  
+  
+ [!code-csharp[WebParts_EditorPart_Overview#4](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_EditorPart_Overview/CS/textdisplaywebpart.cs#4)]
+ [!code-vb[WebParts_EditorPart_Overview#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_EditorPart_Overview/VB/textdisplaywebpart.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Eine Klasse, die von abgeleitet ist die <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> Klasse implementieren muss die <see cref="M:System.Web.UI.WebControls.WebParts.EditorPart.ApplyChanges" /> Methode. Die implementierte Methode ruft einen Verweis auf das zugeordnete Steuerelement mithilfe der <see cref="P:System.Web.UI.WebControls.WebParts.EditorPart.WebPartToEdit" /> -Eigenschaft, und aktualisiert dann die Eigenschaften dieses Steuerelements mit den aktuellen Werten in der <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> Steuerelement.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Display">
+      <MemberSignature Language="C#" Value="public virtual bool Display { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Display" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.EditorPart.Display" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein Steuerelement sein sollten angezeigt, wenn die zugehörigen <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> -Steuerelement befindet sich im Bearbeitungsmodus befindet.</summary>
+        <value>Ein boolescher Wert, der angibt, ob das Steuerelement angezeigt werden soll. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ An bestimmten Punkten in die Bearbeitung verarbeiten, die Zone, enthält ein <xref:System.Web.UI.WebControls.WebParts.EditorPart> steuern überprüft die <xref:System.Web.UI.WebControls.WebParts.EditorPart.Display%2A> Eigenschaft bestimmt, ob das Steuerelement angezeigt.  
+  
+ Es gibt zwei Szenarien, in denen die <xref:System.Web.UI.WebControls.WebParts.EditorPart.Display%2A> -Eigenschaft gibt `false` und <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelement wird nicht angezeigt. Das erste Szenario tritt auf, wenn das Steuerelement bearbeitet wird ein <xref:System.Web.UI.WebControls.WebParts.ProxyWebPart> Steuerelement. Das zweite Szenario tritt auf, wenn das Steuerelement bearbeitet hat seine <xref:System.Web.UI.WebControls.WebParts.WebPart.AllowEdit%2A> und <xref:System.Web.UI.WebControls.WebParts.WebPart.IsShared%2A> Eigenschaften festlegen, um `true`, während die Seite Personalisierungsbereich auf Benutzerebene festgelegt ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayTitle">
+      <MemberSignature Language="C#" Value="public string DisplayTitle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayTitle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.EditorPart.DisplayTitle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge, die den Titeltext, der in der Titelleiste des angezeigten enthält ein <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> Steuerelement.</summary>
+        <value>Eine Zeichenfolge, die den vollständigen, sichtbaren Titel des Steuerelements darstellt. Der Standardwert ist eine berechnete, eine kulturspezifische-Zeichenfolge, die von .NET Framework bereitgestellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.EditorPart.DisplayTitle%2A> Eigenschaft gibt den aktuellen Wert des basistexts <xref:System.Web.UI.WebControls.WebParts.Part.Title%2A> Eigenschaft oder, wenn das Steuerelement über keinen Titel, einen berechneten Wert verfügt. Der berechnete Wert besteht aus einer lokalisierbaren Ressourcenzeichenfolge für unbenannte Steuerelemente. In den Fällen, in denen kein Wert zugewiesen wird, der <xref:System.Web.UI.WebControls.WebParts.Part.Title%2A> -Eigenschaft, der Wert der <xref:System.Web.UI.WebControls.WebParts.EditorPart.DisplayTitle%2A> Eigenschaft unterscheidet sich von der <xref:System.Web.UI.WebControls.WebParts.Part.Title%2A> Eigenschaft.  
+  
+ Da die <xref:System.Web.UI.WebControls.WebParts.EditorPart.DisplayTitle%2A> Eigenschaft soll ein schreibgeschütztes, berechnete Eigenschaft, um den tatsächlichen aktuellen Wert des angezeigten Titels zur Laufzeit, versuchen Sie nicht, diese Eigenschaft verwenden, legen Sie einen Titel für eine <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelement. Um einen Titel festzulegen, verwenden Sie die Basis <xref:System.Web.UI.WebControls.WebParts.Part.Title%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignModeState">
+      <MemberSignature Language="C#" Value="protected override System.Collections.IDictionary GetDesignModeState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Collections.IDictionary GetDesignModeState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.EditorPart.GetDesignModeState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den aktuellen Zustand einer <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> -Steuerelements übergeordnete Zone.</summary>
+        <returns>Ein <see cref="T:System.Collections.IDictionary" /> , die den aktuellen Status der hat die <see cref="T:System.Web.UI.WebControls.WebParts.EditorZoneBase" /> Zone, enthält ein <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> Steuerelement.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.EditorPart.GetDesignModeState%2A> Methodenrückgabe Informationen über den Status der Zone, enthält ein <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelement. Informationen über den Zustand wird in Form eines Wörterbuchs zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.EditorPart.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Web.UI.Control.PreRender" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zusätzlich zum Aufrufen der Basis <xref:System.Web.UI.Control.OnPreRender%2A> -Methode, die <xref:System.Web.UI.WebControls.WebParts.EditorPart.OnPreRender%2A> Methode überprüft auch die <xref:System.Web.UI.WebControls.WebParts.EditorPart.Display%2A> Eigenschaft. Wenn der Wert `false`, dies bedeutet, dass das Steuerelement nicht angezeigt werden soll, und klicken Sie dann die <xref:System.Web.UI.Control.Visible%2A> Eigenschaft ist ebenfalls festgelegt `false`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.Web.UI.WebControls.WebParts.EditorZoneBase" /> , enthält die <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> Steuerelement <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDesignModeState">
+      <MemberSignature Language="C#" Value="protected override void SetDesignModeState (System.Collections.IDictionary data);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetDesignModeState(class System.Collections.IDictionary data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.EditorPart.SetDesignModeState(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="data">Ein <see cref="T:System.Collections.IDictionary" /> , das die Zustandsdaten zum Anzeigen der Zone enthält.</param>
+        <summary>Übernimmt die Merkmale des Entwurfsmodus Status für das aktuelle <see cref="T:System.Web.UI.WebControls.WebParts.EditorZoneBase" /> Zone, enthält ein <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> Steuerelement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncChanges">
+      <MemberSignature Language="C#" Value="public abstract void SyncChanges ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SyncChanges() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.EditorPart.SyncChanges" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Eigenschaftswerte einer <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> -Steuerelement für die zugehörigen <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.EditorPart.SyncChanges%2A> Methode ist eine wichtige Methode für ein <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelement. Ist definiert als eine abstrakte Methode in der <xref:System.Web.UI.WebControls.WebParts.EditorPart> -Klasse und muss durch geerbte Steuerelemente implementiert werden. Dient der Methode zum Abrufen der aktuellen Werte aus den <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement verwiesen wird, der <xref:System.Web.UI.WebControls.WebParts.EditorPart.WebPartToEdit%2A> -Eigenschaft, und aktualisieren Sie die Felder der <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelement mit diesen Werten, sodass ein Benutzer bearbeitet werden kann.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.EditorPart.SyncChanges%2A> Methode wird aufgerufen, wenn die Werte in der zugeordneten <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement möglicherweise geändert. Für jede <xref:System.Web.UI.WebControls.WebParts.EditorPart> -Steuerelement, die <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase> Zone, die das Steuerelement ruft enthält die <xref:System.Web.UI.WebControls.WebParts.EditorPart.SyncChanges%2A> Methode sofort nach dem Aufruf der <xref:System.Web.UI.WebControls.WebParts.EditorPart.ApplyChanges%2A> -Methode, damit die Werte in der <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelement sind immer synchronisiert, mit den Werten in die zugeordnete <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement. Ein weiterer Fall, in dem die <xref:System.Web.UI.WebControls.WebParts.EditorPart.SyncChanges%2A> Methode wird aufgerufen, ist, wenn ein <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement in den Bearbeitungsmodus wechselt.  
+  
+> [!NOTE]
+>  Die <xref:System.Web.UI.WebControls.WebParts.EditorPart.SyncChanges%2A> Methode wird nicht aufgerufen, nachdem die <xref:System.Web.UI.WebControls.WebParts.EditorPart.ApplyChanges%2A> Methode, wenn diese Methode zurückgibt `false`, da in diesem Fall ein Fehler aufgetreten ist.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Implementieren der <xref:System.Web.UI.WebControls.WebParts.EditorPart.SyncChanges%2A> Methode in einem benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelement. Den vollständigen Code zum Ausführen des Beispiels erforderlich sind, finden Sie im Beispielabschnitt von der <xref:System.Web.UI.WebControls.WebParts.EditorPart> -Klassenübersicht.  
+  
+ Der erste Teil des Codebeispiels veranschaulicht die Implementierung der <xref:System.Web.UI.WebControls.WebParts.EditorPart.SyncChanges%2A> Methode in der benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.EditorPart> Klasse mit dem Namen `TextDisplayEditorPart`. Diese Methode ruft einen Verweis auf die zugeordnete `TextDisplayWebPart` steuern Sie mithilfe der <xref:System.Web.UI.WebControls.WebParts.EditorPart.WebPartToEdit%2A> Eigenschaft. Anschließend ruft es den Wert des der `TextDisplayWebPart.FontStyle` Eigenschaft und Updates, welches Element im Dropdownlisten-Steuerelement ausgewählt ist (verwiesen wird, indem Sie die `TextDisplayEditorPart.PartContentFontStyle` Eigenschaft) für die benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelement.  
+  
+ [!code-csharp[WebParts_EditorPart_Overview#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_EditorPart_Overview/CS/textdisplaywebpart.cs#6)]
+ [!code-vb[WebParts_EditorPart_Overview#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_EditorPart_Overview/VB/textdisplaywebpart.vb#6)]  
+  
+ Der zweite Teil des Codebeispiels wird gezeigt, wie die zugeordnete <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement, `TextDisplayWebPart`, erstellt eine Auflistung von zugeordneten <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelemente (in diesem Fall es ist nur ein <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelement namens `TextDisplayEditorPart` in der Auflistung) in die Implementierung von der <xref:System.Web.UI.WebControls.WebParts.IWebEditable.CreateEditorParts%2A> Methode. Diese Methode wird ausgeführt, wenn die `TextDisplayWebPart` Steuerelement in den Bearbeitungsmodus wechselt.  
+  
+ [!code-csharp[WebParts_EditorPart_Overview#4](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_EditorPart_Overview/CS/textdisplaywebpart.cs#4)]
+ [!code-vb[WebParts_EditorPart_Overview#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_EditorPart_Overview/VB/textdisplaywebpart.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Eine Klasse, die von abgeleitet ist die <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> Klasse implementieren muss die <see cref="M:System.Web.UI.WebControls.WebParts.EditorPart.SyncChanges" /> Methode. Der implementierte Methode ruft einen Verweis auf das zugeordnete Steuerelement mithilfe der <see cref="P:System.Web.UI.WebControls.WebParts.EditorPart.WebPartToEdit" /> -Eigenschaft und aktualisiert dann die <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> mit den Eigenschaftswerten vom zugeordneten Steuerelement <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WebPartManager">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.WebControls.WebParts.WebPartManager WebPartManager { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartManager WebPartManager" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.EditorPart.WebPartManager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> der aktuellen Webseite zugeordneten Steuerelements.</summary>
+        <value>Ein Verweis auf die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> auf der Seite.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelement benötigt einen Verweis auf die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> Instanz, da es den aktuellen Personalisierungsbereich der Seite zum Bestimmen des Werts des prüfen muss die <xref:System.Web.UI.WebControls.WebParts.EditorPart.Display%2A> Eigenschaft. Personalisierungsbereich wird bestimmt, indem Sie überprüfen die <xref:System.Web.UI.WebControls.WebParts.WebPartPersonalization.Scope%2A> -Eigenschaft, die über Zugriff auf die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.Personalization%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebPartToEdit">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.WebControls.WebParts.WebPart WebPartToEdit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPart WebPartToEdit" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.EditorPart.WebPartToEdit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPart</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf die <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement, das derzeit bearbeitet wird.</summary>
+        <value>Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> , ist derzeit im Bearbeitungsmodus befindet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement (oder einem anderen Server oder das Benutzersteuerelement) ist, die zurzeit bearbeitete entspricht dem Wert von der <xref:System.Web.UI.WebControls.WebParts.WebPartManager.SelectedWebPart%2A> Eigenschaft. Nur ein <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement bearbeitet werden kann, zu einem Zeitpunkt, und wenn ein Steuerelement in den Bearbeitungsmodus wechseln, ist die <xref:System.Web.UI.WebControls.WebParts.EditorPart.WebPartToEdit%2A> Eigenschaft stellt einen Verweis auf das entsprechende Steuerelement bereit.  
+  
+ Nach der <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase> Zone wurde hinzugefügt. die <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelement der Auflistung von Steuerelementen, weist Sie den Wert des eigenen <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase.WebPartToEdit%2A> Eigenschaft, um die <xref:System.Web.UI.WebControls.WebParts.EditorPart.WebPartToEdit%2A> Eigenschaft auf die <xref:System.Web.UI.WebControls.WebParts.EditorPart> Steuerelement.  
+  
+ Ein <xref:System.Web.UI.WebControls.WebParts.EditorPart> steuern verwendet der <xref:System.Web.UI.WebControls.WebParts.EditorPart.WebPartToEdit%2A> Eigenschaft insbesondere in den zwei wichtigen Methoden<xref:System.Web.UI.WebControls.WebParts.EditorPart.ApplyChanges%2A> und <xref:System.Web.UI.WebControls.WebParts.EditorPart.SyncChanges%2A>– abrufen und die Eigenschaftswerte für das zugeordnete Steuerelement festlegen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Zone">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.WebControls.WebParts.EditorZoneBase Zone { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.EditorZoneBase Zone" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.EditorPart.Zone" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.EditorZoneBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf die <see cref="T:System.Web.UI.WebControls.WebParts.EditorZoneBase" /> Zone, enthält ein <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> Steuerelement.</summary>
+        <value>Eine <see cref="T:System.Web.UI.WebControls.WebParts.EditorZoneBase" /> , die das Steuerelement enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Obwohl die <xref:System.Web.UI.WebControls.WebParts.EditorPart.Zone%2A> Eigenschaft ist schreibgeschützt, es enthält einen Verweis auf die Zone-Objekt, enthält die <xref:System.Web.UI.WebControls.WebParts.EditorPart> -Steuerelement, und Sie können Eigenschaftswerte auf die Zone selbst programmgesteuert ändern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1001 @@
+<Type Name="TextBox" FullName="System.Windows.Forms.TextBox">
+  <TypeSignature Language="C#" Value="public class TextBox : System.Windows.Forms.TextBoxBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TextBox extends System.Windows.Forms.TextBoxBase" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TextBox" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.TextBoxBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Windows.Forms.Design.TextBoxDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Textfeld-Steuerelement von Windows dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit der <xref:System.Windows.Forms.TextBox> -Steuerelement, kann der Benutzer Text eingeben, in einer Anwendung. Dieses Steuerelement verfügt über zusätzliche Funktionen, die in der standardmäßigen Windows Textfeld-Steuerelement, einschließlich mehrzeiliger Bearbeitung und maskieren des Kennworts nicht gefunden wird.  
+  
+ In der Regel eine <xref:System.Windows.Forms.TextBox> Steuerelement wird verwendet, um anzuzeigen, oder übernehmen Sie als Eingabe, eine einzelne Textzeile. Sie können die <xref:System.Windows.Forms.TextBoxBase.Multiline%2A> und <xref:System.Windows.Forms.TextBox.ScrollBars%2A> Eigenschaften so aktivieren Sie mehrere Textzeilen angezeigt oder eingegeben werden. Legen Sie die <xref:System.Windows.Forms.TextBoxBase.AcceptsTab%2A> und <xref:System.Windows.Forms.TextBox.AcceptsReturn%2A> Eigenschaften `true` So aktivieren Sie umfangreichere Textbearbeitung in einem mehrzeiligen <xref:System.Windows.Forms.TextBox> Steuerelement.  
+  
+> [!NOTE]
+>  Müssen Sie festlegen der <xref:System.Windows.Forms.TextBoxBase.Multiline%2A> Eigenschaft `true` die Höhe des Anpassen der <xref:System.Windows.Forms.TextBox> Steuerelement. Sie können die Höhe anpassen, indem Sie die Einstellung der <xref:System.Windows.Forms.Control.Size%2A> Eigenschaft.  
+  
+ Begrenzung des Umfangs des eingegebenen Texts kann eine <xref:System.Windows.Forms.TextBox> Steuerelement durch Festlegen der <xref:System.Windows.Forms.TextBoxBase.MaxLength%2A> Eigenschaft, um eine bestimmte Anzahl von Zeichen. <xref:System.Windows.Forms.TextBox>Steuerelemente können auch verwendet werden, um Kennwörter und andere vertrauliche Informationen zu akzeptieren. Sie können die <xref:System.Windows.Forms.TextBox.PasswordChar%2A> Eigenschaft Maske Zeichen eingegeben werden, in einer einzeiligen Version des Steuerelements. Verwenden der <xref:System.Windows.Forms.TextBox.CharacterCasing%2A> Eigenschaft, um dem Benutzer ermöglichen, geben Sie nur Großbuchstaben, Kleinbuchstaben oder einer Kombination von Groß- und Kleinbuchstaben bestehen in der <xref:System.Windows.Forms.TextBox> Steuerelement.  
+  
+ Um den Bildlauf der <xref:System.Windows.Forms.TextBox> bis der Cursor (Caretzeichen) innerhalb des sichtbaren Bereichs des Steuerelements ist, können Sie die <xref:System.Windows.Forms.TextBoxBase.ScrollToCaret%2A> Methode. Um einen Textbereich im Textfeld auszuwählen, können Sie die <xref:System.Windows.Forms.TextBoxBase.Select%2A> Methode.  
+  
+ Zu verhindern, dass Text eingegeben werden, einer <xref:System.Windows.Forms.TextBox> -Steuerelement, erstellen Sie einen Ereignishandler für das <xref:System.Windows.Forms.Control.KeyDown> Ereignis, um jedes Zeichen in das Steuerelement eingegeben zu überprüfen. Sie können auch alle Daten im-Eintrag Einschränken einer <xref:System.Windows.Forms.TextBox> Steuerelement durch Festlegen der <xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A> Eigenschaft `true`.  
+  
+> [!NOTE]
+>  Die meisten Funktionen von der <xref:System.Windows.Forms.TextBox> Steuerelements geerbt, von der <xref:System.Windows.Forms.TextBoxBase> Klasse.  
+>   
+>  Mithilfe der <xref:System.Windows.Forms.TextBox> Steuerelement mit aktivierten visuellen Stilen führt dazu, dass die falsche Behandlung von Ersatzzeichen-Schriftarten.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt ein mehrzeiliges <xref:System.Windows.Forms.TextBox> -Steuerelement mit vertikalen Schiebeleisten. Dieses Beispiel verwendet die <xref:System.Windows.Forms.TextBoxBase.AcceptsTab%2A>, <xref:System.Windows.Forms.TextBox.AcceptsReturn%2A>, und <xref:System.Windows.Forms.Control.Dock%2A> Eigenschaften der mehrzeiliges Textfeld-Steuerelement nützlich zum Erstellen von Textdokumente vornehmen.  
+  
+ [!code-csharp[Classic TextBox Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic TextBox Example/CS/source.cs#1)]
+ [!code-vb[Classic TextBox Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic TextBox Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextBox ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBox.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.TextBox" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der übergeordnete Container-Steuerelement definiert die Farbe und Schriftart-Einstellungen für die <xref:System.Windows.Forms.TextBox>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine neue Instanz der dem <xref:System.Windows.Forms.TextBox> steuern und weist eine Zeichenfolge für des Steuerelements <xref:System.Windows.Forms.TextBoxBase.Text%2A> Eigenschaft.  
+  
+ [!code-cpp[Classic TextBox.TextBox Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic TextBox.TextBox Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TextBox.TextBox Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic TextBox.TextBox Example/CS/source.cs#1)]
+ [!code-vb[Classic TextBox.TextBox Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic TextBox.TextBox Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptsReturn">
+      <MemberSignature Language="C#" Value="public bool AcceptsReturn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AcceptsReturn" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBox.AcceptsReturn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob durch Drücken der EINGABETASTE in einem mehrzeiligen <see cref="T:System.Windows.Forms.TextBox" /> Steuerelement erstellt eine neue Zeile des Texts im Steuerelement oder aktiviert die Standardschaltfläche für das Formular.</summary>
+        <value>
+          <see langword="true" />Wenn Sie die EINGABETASTE drücken eine neue Zeile des Texts in einer mehrzeiligen Version des Steuerelements erstellt; <see langword="false" /> Wenn die EINGABETASTE drücken die Standardschaltfläche für das Formular aktiviert wird. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Wert dieser Eigenschaft ist `false`, der Benutzer muss drücken Sie STRG + zum Erstellen einer neuen Zeile in einem mehrzeiligen <xref:System.Windows.Forms.TextBox> Steuerelement. Ist keine Standardschaltfläche für das Formular, wird die EINGABETASTE immer eine neue Zeile des Texts im Steuerelement, unabhängig vom Wert dieser Eigenschaft erstellt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt ein mehrzeiliges <xref:System.Windows.Forms.TextBox> -Steuerelement mit vertikalen Schiebeleisten. Dieses Beispiel verwendet die <xref:System.Windows.Forms.TextBoxBase.AcceptsTab%2A>, <xref:System.Windows.Forms.TextBox.AcceptsReturn%2A>, und <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> Eigenschaften der mehrzeiliges Textfeld-Steuerelement nützlich zum Erstellen von Textdokumente vornehmen.  
+  
+ [!code-cpp[Classic TextBox.AcceptsReturn Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic TextBox.AcceptsReturn Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TextBox.AcceptsReturn Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic TextBox.AcceptsReturn Example/CS/source.cs#1)]
+ [!code-vb[Classic TextBox.AcceptsReturn Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic TextBox.AcceptsReturn Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoCompleteCustomSource">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.AutoCompleteStringCollection AutoCompleteCustomSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.AutoCompleteStringCollection AutoCompleteCustomSource" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBox.AutoCompleteCustomSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.ListControlStringCollectionEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AutoCompleteStringCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, welche benutzerdefinierte <see cref="T:System.Collections.Specialized.StringCollection" /> verwendet werden soll, wenn die <see cref="P:System.Windows.Forms.TextBox.AutoCompleteSource" />-Eigenschaft auf <see langword="CustomSource" /> festgelegt ist.</summary>
+        <value>Eine <see cref="T:System.Collections.Specialized.StringCollection" />, die mit <see cref="P:System.Windows.Forms.TextBox.AutoCompleteSource" /> verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.TextBox.AutoCompleteCustomSource%2A>, <xref:System.Windows.Forms.TextBox.AutoCompleteMode%2A>, und <xref:System.Windows.Forms.TextBox.AutoCompleteSource%2A> Eigenschaften zum Erstellen einer <xref:System.Windows.Forms.TextBox> vervollständigt, die Eingabezeichenfolgen automatisch durch Vergleichen des Präfixes mit den Präfixen aller Zeichenfolgen in einer verwalteten Quelle eingegeben werden. Dies ist nützlich für <xref:System.Windows.Forms.TextBox> Steuerelemente, die in der URLs, Adressen, Dateinamen oder Befehle häufig eingegeben werden werden.  
+  
+ Die Verwendung von der <xref:System.Windows.Forms.TextBox.AutoCompleteCustomSource%2A> Eigenschaft ist optional, aber Sie müssen die <xref:System.Windows.Forms.TextBox.AutoCompleteSource%2A> Eigenschaft `CustomSource` um verwenden <xref:System.Windows.Forms.TextBox.AutoCompleteCustomSource%2A>.  
+  
+ Verwenden Sie die <xref:System.Windows.Forms.TextBox.AutoCompleteMode%2A> und <xref:System.Windows.Forms.TextBox.AutoCompleteSource%2A> Eigenschaften zusammen.  
+  
+> [!NOTE]
+>  Das Betriebssystem kann dies die Anzahl der benutzerdefinierten Zeichenfolgen einschränken, die gleichzeitig angezeigt werden können.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Auflistung als die automatische Vervollständigung benutzerdefinierte Quelle für das Verwenden einer <xref:System.Windows.Forms.TextBox> Steuerelement. In diesem Beispiel wird Folgendes durchgeführt:  
+  
+-   Verwendet die <xref:System.Windows.Forms.TextBox.AutoCompleteSource%2A> Eigenschaft zum Aktivieren der <xref:System.Windows.Forms.TextBox> Steuerelement eine benutzerdefinierte Quelle für die automatische Vervollständigung Verhalten zu akzeptieren.  
+  
+-   Verwendet die <xref:System.Windows.Forms.TextBox.AutoCompleteCustomSource%2A> Eigenschaft, um die benutzerdefinierte Liste von Werten festzulegen.  
+  
+-   Verwendet die <xref:System.Windows.Forms.TextBox.AutoCompleteMode%2A> Eigenschaft, um festzulegen, wie die automatische Vervollständigung Kandidaten angezeigt werden.  
+  
+ [!code-csharp[System.Windows.Forms.TextBox.AutoCompleteCustomSource#10](~/samples/snippets/csharp/VS_Snippets_Winforms/system.windows.forms.textbox.autocompletecustomsource/cs/form1.cs#10)]
+ [!code-vb[System.Windows.Forms.TextBox.AutoCompleteCustomSource#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/system.windows.forms.textbox.autocompletecustomsource/vb/form1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoCompleteMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.AutoCompleteMode AutoCompleteMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.AutoCompleteMode AutoCompleteMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBox.AutoCompleteMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AutoCompleteMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Option ab oder legt eine Option fest, die die Funktionsweise der automatischen Vervollständigung für <see cref="T:System.Windows.Forms.TextBox" /> steuert.</summary>
+        <value>Einer der Werte von <see cref="T:System.Windows.Forms.AutoCompleteMode" />. Im folgenden sind die Werte.  
+  
+ <see cref="F:System.Windows.Forms.AutoCompleteMode.Append" />  
+ Fügt die restliche die wahrscheinlichsten kandidatenzeichenfolge in vorhandenen Zeichen, markiert die angehängten Zeichen.  
+  
+ <see cref="F:System.Windows.Forms.AutoCompleteMode.Suggest" />  
+ Zeigt die zusätzliche Dropdown-Liste das Bearbeitungssteuerelement zugeordnet. Diese Dropdownliste wird mit der eine oder mehrere empfohlene Abschlusszeichenfolgen aufgefüllt.  
+  
+ <see cref="F:System.Windows.Forms.AutoCompleteMode.SuggestAppend" />  
+ Fügt die beiden <see langword="Suggest" /> und <see langword="Append" /> Optionen.  
+  
+ <see cref="F:System.Windows.Forms.AutoCompleteMode.None" />  
+ Deaktiviert die automatische Vervollständigung. Dies ist die Standardeinstellung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.TextBox.AutoCompleteCustomSource%2A>, <xref:System.Windows.Forms.TextBox.AutoCompleteMode%2A>, und <xref:System.Windows.Forms.TextBox.AutoCompleteSource%2A> Eigenschaften zum Erstellen einer <xref:System.Windows.Forms.TextBox> vervollständigt, die Eingabezeichenfolgen automatisch durch Vergleichen des Präfixes mit den Präfixen aller Zeichenfolgen in einer verwalteten Quelle eingegeben werden. Dies ist nützlich für <xref:System.Windows.Forms.TextBox> Steuerelemente, die in der URLs, Adressen, Dateinamen oder Befehle häufig eingegeben werden werden.  
+  
+ Die Verwendung von der <xref:System.Windows.Forms.TextBox.AutoCompleteCustomSource%2A> Eigenschaft ist optional, aber Sie müssen die <xref:System.Windows.Forms.TextBox.AutoCompleteSource%2A> Eigenschaft `CustomSource` um verwenden <xref:System.Windows.Forms.TextBox.AutoCompleteCustomSource%2A>.  
+  
+ Verwenden Sie die <xref:System.Windows.Forms.TextBox.AutoCompleteMode%2A> und <xref:System.Windows.Forms.TextBox.AutoCompleteSource%2A> Eigenschaften zusammen.  
+  
+> [!NOTE]
+>  Das Betriebssystem kann dies die Anzahl der benutzerdefinierten Zeichenfolgen einschränken, die gleichzeitig angezeigt werden können.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Auflistung als die automatische Vervollständigung benutzerdefinierte Quelle für das Verwenden einer <xref:System.Windows.Forms.TextBox> Steuerelement. In diesem Beispiel wird Folgendes durchgeführt:  
+  
+-   Verwendet die <xref:System.Windows.Forms.TextBox.AutoCompleteSource%2A> Eigenschaft zum Aktivieren der <xref:System.Windows.Forms.TextBox> Steuerelement eine benutzerdefinierte Quelle für die automatische Vervollständigung Verhalten zu akzeptieren.  
+  
+-   Verwendet die <xref:System.Windows.Forms.TextBox.AutoCompleteCustomSource%2A> Eigenschaft, um die benutzerdefinierte Liste von Werten festzulegen.  
+  
+-   Verwendet die <xref:System.Windows.Forms.TextBox.AutoCompleteMode%2A> Eigenschaft, um festzulegen, wie die automatische Vervollständigung Kandidaten angezeigt werden.  
+  
+ [!code-csharp[System.Windows.Forms.TextBox.AutoCompleteCustomSource#10](~/samples/snippets/csharp/VS_Snippets_Winforms/system.windows.forms.textbox.autocompletecustomsource/cs/form1.cs#10)]
+ [!code-vb[System.Windows.Forms.TextBox.AutoCompleteCustomSource#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/system.windows.forms.textbox.autocompletecustomsource/vb/form1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der angegebene Wert ist keiner der Werte von <see cref="T:System.Windows.Forms.AutoCompleteMode" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoCompleteSource">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.AutoCompleteSource AutoCompleteSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.AutoCompleteSource AutoCompleteSource" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBox.AutoCompleteSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.TextBoxAutoCompleteSourceConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AutoCompleteSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt einen Wert fest, der die Quelle vollständiger Zeichenfolgen für die automatische Vervollständigung angibt.</summary>
+        <value>Einer der Werte von <see cref="T:System.Windows.Forms.AutoCompleteSource" />. Optionen: <see langword="AllSystemSources" />, <see langword="AllUrl" />, <see langword="FileSystem" />, <see langword="HistoryList" />, <see langword="RecentlyUsedList" />, <see langword="CustomSource" /> und <see langword="None" />. Die Standardeinstellung ist <see langword="None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Windows.Forms.TextBox.AutoCompleteCustomSource%2A>, <xref:System.Windows.Forms.TextBox.AutoCompleteMode%2A>, und <xref:System.Windows.Forms.TextBox.AutoCompleteSource%2A> Eigenschaften zum Erstellen einer <xref:System.Windows.Forms.TextBox> vervollständigt, die Eingabezeichenfolgen automatisch durch Vergleichen des Präfixes mit den Präfixen aller Zeichenfolgen in einer verwalteten Quelle eingegeben werden. Dies ist nützlich für <xref:System.Windows.Forms.TextBox> Steuerelemente, die in der URLs, Adressen, Dateinamen oder Befehle häufig eingegeben werden werden.  
+  
+ Die Verwendung von der <xref:System.Windows.Forms.TextBox.AutoCompleteCustomSource%2A> Eigenschaft ist optional, aber Sie müssen die <xref:System.Windows.Forms.TextBox.AutoCompleteSource%2A> Eigenschaft `CustomSource` um verwenden <xref:System.Windows.Forms.TextBox.AutoCompleteCustomSource%2A>.  
+  
+ Verwenden Sie die <xref:System.Windows.Forms.TextBox.AutoCompleteMode%2A> und <xref:System.Windows.Forms.TextBox.AutoCompleteSource%2A> Eigenschaften zusammen.  
+  
+> [!NOTE]
+>  <xref:System.Windows.Forms.TextBox.AutoCompleteSource%2A>funktioniert nicht auf mehrzeiligen <xref:System.Windows.Forms.TextBox> Steuerelemente.  
+  
+> [!NOTE]
+>  Das Betriebssystem kann die Anzahl der benutzerdefinierten Zeichenfolgen begrenzt, die gleichzeitig angezeigt werden können.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Auflistung als die automatische Vervollständigung benutzerdefinierte Quelle für das Verwenden einer <xref:System.Windows.Forms.TextBox> Steuerelement. In diesem Beispiel wird Folgendes durchgeführt:  
+  
+-   Verwendet die <xref:System.Windows.Forms.TextBox.AutoCompleteSource%2A> Eigenschaft zum Aktivieren der <xref:System.Windows.Forms.TextBox> Steuerelement eine benutzerdefinierte Quelle für die automatische Vervollständigung Verhalten zu akzeptieren.  
+  
+-   Verwendet die <xref:System.Windows.Forms.TextBox.AutoCompleteCustomSource%2A> Eigenschaft, um die benutzerdefinierte Liste von Werten festzulegen.  
+  
+-   Verwendet die <xref:System.Windows.Forms.TextBox.AutoCompleteMode%2A> Eigenschaft, um festzulegen, wie die automatische Vervollständigung Kandidaten angezeigt werden.  
+  
+ [!code-csharp[System.Windows.Forms.TextBox.AutoCompleteCustomSource#10](~/samples/snippets/csharp/VS_Snippets_Winforms/system.windows.forms.textbox.autocompletecustomsource/cs/form1.cs#10)]
+ [!code-vb[System.Windows.Forms.TextBox.AutoCompleteCustomSource#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/system.windows.forms.textbox.autocompletecustomsource/vb/form1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der angegebene Wert ist keiner der Werte von <see cref="T:System.Windows.Forms.AutoCompleteSource" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CharacterCasing">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.CharacterCasing CharacterCasing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.CharacterCasing CharacterCasing" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBox.CharacterCasing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CharacterCasing</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, ob die <see cref="T:System.Windows.Forms.TextBox" /> Steuerelement ändert die Groß-/Kleinschreibung Zeichen, wie sie eingegeben wurden.</summary>
+        <value>Eines der <see cref="T:System.Windows.Forms.CharacterCasing" /> Enumerationswerte, der angibt, ob die <see cref="T:System.Windows.Forms.TextBox" /> Steuerelement ändert die Groß-/Kleinschreibung Zeichen. Die Standardeinstellung ist <see langword="CharacterCasing.Normal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die <xref:System.Windows.Forms.TextBox.CharacterCasing%2A> Eigenschaft, die die Groß-/Kleinschreibung Zeichen nach Bedarf von der Anwendung geändert. Sie können beispielsweise die Groß-/Kleinschreibung in alle eingegebenen Zeichen ändern einer <xref:System.Windows.Forms.TextBox> das Benutzersteuerelement zum zur Kennworteingabe Groß- oder Kleinbuchstaben um eine Richtlinie für Kennwörter zu erzwingen.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.TextBox> -Steuerelement, das verwendet wird, um ein Kennwort zu übernehmen. Dieses Beispiel verwendet die <xref:System.Windows.Forms.TextBox.CharacterCasing%2A> Eigenschaft so ändern Sie alle Zeichen in Kleinbuchstaben, und die <xref:System.Windows.Forms.TextBoxBase.MaxLength%2A> Eigenschaft, um die Länge des Kennworts auf acht Zeichen beschränkt. Dieses Beispiel verwendet außerdem die <xref:System.Windows.Forms.TextBox.TextAlign%2A> Eigenschaft zur Mitte des Kennworts in der <xref:System.Windows.Forms.TextBox> Steuerelement.  
+  
+ [!code-cpp[Classic TextBox.CharacterCasing Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic TextBox.CharacterCasing Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TextBox.CharacterCasing Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic TextBox.CharacterCasing Example/CS/source.cs#1)]
+ [!code-vb[Classic TextBox.CharacterCasing Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic TextBox.CharacterCasing Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Ein Wert, der nicht innerhalb des Bereichs der gültigen Werte für die Enumeration ist wurde der Eigenschaft zugewiesen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateParams">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.CreateParams CreateParams { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.CreateParams CreateParams" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBox.CreateParams" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CreateParams</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die benötigten Erstellungsparameter ab, wenn das Steuerelementhandle erstellt wird.</summary>
+        <value>Eine <see cref="T:System.Windows.Forms.CreateParams" />-Eigenschaft, die die erforderlichen Erstellungsparameter enthält, wenn das Handle für das Steuerelement erstellt wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBox.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.Windows.Forms.TextBox" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich `Dispose` Methode und die <xref:System.Object.Finalize%2A> Methode. `Dispose`Ruft die geschützte `Dispose(Boolean)` Methode mit dem `disposing` Parametersatz auf `true`. <xref:System.Object.Finalize%2A>Ruft `Dispose` mit `disposing` festgelegt `false`.  
+  
+ Wenn der `disposing`-Parameter `true` ist, gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte reserviert sind, auf die dieser <xref:System.Windows.Forms.TextBox> verweist. Diese Methode ruft die `Dispose`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Zum Überschreiben <see langword="Dispose(Boolean)" />müssen Sie darauf achten, nicht auf Objekte verweisen, die einen früheren Aufruf freigegeben wurden <see langword="Dispose" />. Weitere Informationen zum Implementieren <see langword="Dispose(Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see langword="Dispose" /> und <see cref="M:System.Object.Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInputKey">
+      <MemberSignature Language="C#" Value="protected override bool IsInputKey (System.Windows.Forms.Keys keyData);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsInputKey(valuetype System.Windows.Forms.Keys keyData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBox.IsInputKey(System.Windows.Forms.Keys)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyData" Type="System.Windows.Forms.Keys" />
+      </Parameters>
+      <Docs>
+        <param name="keyData">Einer der Werte des Schlüssels.</param>
+        <summary>Bestimmt, ob es sich bei der angegebenen Taste um eine normale Eingabetaste handelt oder um eine Sondertaste, für die eine Vorverarbeitung erforderlich ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die angegebene Taste eine normale Eingabetaste ist; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TextBox.IsInputKey%2A> -Methode zurückkehrt `true` Wenn `keyData` enthält die <xref:System.Windows.Forms.Keys.Return> Wert und die <xref:System.Windows.Forms.TextBox.AcceptsReturn%2A> Eigenschaft ist `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Multiline">
+      <MemberSignature Language="C#" Value="public override bool Multiline { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Multiline" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBox.Multiline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob dies ein mehrzeiliges ist <see cref="T:System.Windows.Forms.TextBox" /> Steuerelement.</summary>
+        <value>
+          <see langword="true" />Wenn das Steuerelement ein mehrzeiliges <see cref="T:System.Windows.Forms.TextBox" /> steuern; anderenfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.TextBox.AutoCompleteSource%2A>funktioniert nicht auf mehrzeiligen <xref:System.Windows.Forms.TextBox> Steuerelemente.  
+  
+ Wenn die Schriftart geändert wird, wird Einzüge, die Sie definiert haben, nicht angezeigt. Um Einzüge zu erhalten, legen Sie <xref:System.Windows.Forms.TextBox.Multiline%2A> auf `true` und überschreiben Sie WM_SETFONT ohne die Basisklasse aufzurufen, sodass SETMARGINS nicht aufgerufen wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt ein mehrzeiliges <xref:System.Windows.Forms.TextBox> -Steuerelement mit vertikalen Schiebeleisten. Dieses Beispiel verwendet die <xref:System.Windows.Forms.TextBoxBase.AcceptsTab%2A>, <xref:System.Windows.Forms.TextBox.AcceptsReturn%2A>, und <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> Eigenschaften der mehrzeiliges Textfeld-Steuerelement nützlich zum Erstellen von Textdokumente vornehmen.  
+  
+ [!code-cpp[Classic TextBox.AcceptsReturn Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic TextBox.AcceptsReturn Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TextBox.AcceptsReturn Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic TextBox.AcceptsReturn Example/CS/source.cs#1)]
+ [!code-vb[Classic TextBox.AcceptsReturn Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic TextBox.AcceptsReturn Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBackColorChanged">
+      <MemberSignature Language="C#" Value="protected override void OnBackColorChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnBackColorChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBox.OnBackColorChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.BackColorChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.Windows.Forms.TextBox.OnBackColorChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.TextBox.OnBackColorChanged(System.EventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.TextBox.OnBackColorChanged(System.EventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFontChanged">
+      <MemberSignature Language="C#" Value="protected override void OnFontChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnFontChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBox.OnFontChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.FontChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.Windows.Forms.TextBox.OnFontChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.TextBox.OnFontChanged(System.EventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.TextBox.OnFontChanged(System.EventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnGotFocus">
+      <MemberSignature Language="C#" Value="protected override void OnGotFocus (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnGotFocus(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBox.OnGotFocus(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.GotFocus" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Benutzer wählt Text in einem <xref:System.Windows.Forms.TextBox> -Steuerelement, das Steuerelement speichert die Auswahl. Wenn eine <xref:System.Windows.Forms.TextBox> Steuerelement den Fokus erhält, die Auswahl ist der gleiche, als wenn die <xref:System.Windows.Forms.TextBox> verliert den Fokus. Wenn die <xref:System.Windows.Forms.TextBox> ruft konzentrieren Sie sich zum ersten Mal, der gesamte Text ausgewählt ist.  
+  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.Windows.Forms.TextBox.OnGotFocus%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.TextBox.OnGotFocus(System.EventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.TextBox.OnGotFocus(System.EventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnHandleCreated">
+      <MemberSignature Language="C#" Value="protected override void OnHandleCreated (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnHandleCreated(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBox.OnHandleCreated(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.HandleCreated" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnHandleDestroyed">
+      <MemberSignature Language="C#" Value="protected override void OnHandleDestroyed (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnHandleDestroyed(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBox.OnHandleDestroyed(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="M:System.Windows.Forms.Control.OnHandleDestroyed(System.EventArgs)" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.Windows.Forms.TextBox.OnHandleDestroyed%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.TextBox.OnHandleDestroyed(System.EventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.TextBox.OnHandleDestroyed(System.EventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTextAlignChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnTextAlignChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnTextAlignChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBox.OnTextAlignChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.TextBox.TextAlignChanged" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [NIB: durch das Auslösen eines Ereignisses](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ Mit der <xref:System.Windows.Forms.TextBox.OnTextAlignChanged%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie <see cref="M:System.Windows.Forms.TextBox.OnTextAlignChanged(System.EventArgs)" /> in einer abgeleiteten Klasse überschreiben, müssen Sie die <see cref="M:System.Windows.Forms.TextBox.OnTextAlignChanged(System.EventArgs)" />-Methode der Basisklasse aufrufen, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PasswordChar">
+      <MemberSignature Language="C#" Value="public char PasswordChar { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance char PasswordChar" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBox.PasswordChar" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue('\0')</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Maske Zeichen eines Kennworts in einem einzeiligen <see cref="T:System.Windows.Forms.TextBox" /> Steuerelement.</summary>
+        <value>Das Zeichen, Maskenzeichen in eine einzeilige eingegeben <see cref="T:System.Windows.Forms.TextBox" /> Steuerelement. Legen Sie den Wert dieser Eigenschaft auf 0 (einen Zeichenwert), wenn Sie nicht das Steuerelement, um Zeichen zu maskieren möchten, wie sie eingegeben werden. Ist gleich 0 (einen Zeichenwert) standardmäßig ein.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TextBox.UseSystemPasswordChar%2A> Eigenschaft hat Vorrang gegenüber der <xref:System.Windows.Forms.TextBox.PasswordChar%2A> Eigenschaft. Wenn die <xref:System.Windows.Forms.TextBox.UseSystemPasswordChar%2A> festgelegt ist, um `true`, das Kennwort des Standardzeichensatzes-System verwendet wird, und jedes Zeichen durch Festlegen <xref:System.Windows.Forms.TextBox.PasswordChar%2A> wird ignoriert.  
+  
+ Wenn die <xref:System.Windows.Forms.TextBox.PasswordChar%2A> Eigenschaft festgelegt ist, können keine Ausschneiden und kopieren Sie Aktionen in das Steuerelement über die Tastatur ausgeführt werden.  
+  
+> [!IMPORTANT]
+>  Wenn die <xref:System.Windows.Forms.TextBox> ist im Kennwortmodus, da <xref:System.Windows.Forms.TextBox.PasswordChar%2A>, <xref:System.Windows.Forms.TextBox.UseSystemPasswordChar%2A>, oder <xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A> ist `true`, die <xref:System.Windows.Forms.TextBox> befindet sich im eingeschränkten Modus. In diesem Modus kann die <xref:System.Windows.Forms.ImeMode> ist deaktiviert, aber das aktuelle <xref:System.Windows.Forms.ImeMode> wird zwischengespeichert, damit er als wenn wiederhergestellt werden kann die <xref:System.Windows.Forms.TextBox> einmal nicht mehr uneingeschränkt. Umschalten der <xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A> ist ein gängiges Szenario. Die <xref:System.Windows.Forms.ImeMode> wird schattiert, während das Steuerelement im eingeschränkten Modus befindet. Aus Sicht des Designers die <xref:System.Windows.Forms.ImeMode> angezeigte Wert ist der tatsächliche Wert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.TextBox> -Steuerelement, das verwendet wird, um ein Kennwort zu übernehmen. Dieses Beispiel verwendet die <xref:System.Windows.Forms.TextBox.CharacterCasing%2A> Eigenschaft so ändern Sie alle Zeichen in Kleinbuchstaben eingegeben und die <xref:System.Windows.Forms.TextBoxBase.MaxLength%2A> Eigenschaft, um die Länge des Kennworts auf acht Zeichen beschränkt. Dieses Beispiel verwendet außerdem die <xref:System.Windows.Forms.TextBox.TextAlign%2A> Eigenschaft zur Mitte des Kennworts in der <xref:System.Windows.Forms.TextBox> Steuerelement.  
+  
+ [!code-cpp[Classic TextBox.CharacterCasing Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic TextBox.CharacterCasing Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TextBox.CharacterCasing Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic TextBox.CharacterCasing Example/CS/source.cs#1)]
+ [!code-vb[Classic TextBox.CharacterCasing Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic TextBox.CharacterCasing Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Paste">
+      <MemberSignature Language="C#" Value="public void Paste (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Paste(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBox.Paste(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Der Text zu ersetzen.</param>
+        <summary>Legt den markierten Text dem angegebenen Text ohne das Deaktivieren der Rückgängig-Puffer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Gegensatz zur Einstellung <xref:System.Windows.Forms.TextBoxBase.SelectedText%2A>, <xref:System.Windows.Forms.TextBox.Paste%2A> wirkt sich nicht auf die Zwischenablage.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessCmdKey">
+      <MemberSignature Language="C#" Value="protected override bool ProcessCmdKey (ref System.Windows.Forms.Message m, System.Windows.Forms.Keys keyData);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ProcessCmdKey(valuetype System.Windows.Forms.Message&amp; m, valuetype System.Windows.Forms.Keys keyData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBox.ProcessCmdKey(System.Windows.Forms.Message@,System.Windows.Forms.Keys)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="m" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+        <Parameter Name="keyData" Type="System.Windows.Forms.Keys" />
+      </Parameters>
+      <Docs>
+        <param name="m">Ein <see cref="T:System.Windows.Forms.Message" />, übergeben als Verweis, der die zu verarbeitende fenstermeldung darstellt.</param>
+        <param name="keyData">Eines der <see cref="T:System.Windows.Forms.Keys" /> Werte, die zu verarbeitende Tastenkombination darstellen.</param>
+        <summary>Verarbeitet eine Befehlstaste.</summary>
+        <returns>
+          <see langword="true" />Wenn die Befehlstaste vom Steuerelement verarbeitet wurde; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Neu in 4.6.1. In früheren Versionen, die Tastenkombination STRG + A in einer <xref:System.Windows.Forms.TextBox> wählen Sie den gesamten Text konnte nicht bei der <xref:System.Windows.Forms.TextBoxBase.ShortcutsEnabled%2A> und <xref:System.Windows.Forms.TextBox.Multiline%2A> Eigenschaften wurden beide auf festgelegt `true.`. Diese Methode ermöglicht die Tastenkombination STRG + A, wählen Sie den gesamten Text bei der <xref:System.Windows.Forms.TextBoxBase.ShortcutsEnabled%2A> und <xref:System.Windows.Forms.TextBox.Multiline%2A> Eigenschaften festgelegt`true.`  
+  
+ Anwendungen für .NET Framework-Versionen 4.0 über 4.6 nutzen dieser Methode durch das Hinzufügen der folgenden an der `<runtime>` Abschnitt der Datei "App.config":  
+  
+```xml  
+<AppContextSwitchOverrides value = "Switch.System.Windows.Forms.DoNotSupportSelectAllShortcutInMultilineTextBox=false" />  
+```  
+  
+ Anwendungen für .NET Framework-Versionen 4.6.1 oder höher können dieses Verhalten durch das Hinzufügen der folgenden zum Ablehnen der `<runtime>` Abschnitt der Datei "App.config":  
+  
+```xml  
+<AppContextSwitchOverrides value = "Switch.System.Windows.Forms.DoNotSupportSelectAllShortcutInMultilineTextBox=true" />  
+```  
+  
+> [!NOTE]
+>  Wenn die Datei "App.config" bereits enthält eine `AppContextSwitchOverrides` Schlüssel, den neuen Schlüsselwert in den vorhandenen Schlüssel zusammenführen. Beispielsweise `<AppContextSwitchOverrides value = "oldKey=oldValue;Switch.System.Windows.Forms.DoNotSupportSelectAllShortcutInMultilineTextBox=false" />`.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit nicht verwaltetem Code. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollBars">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ScrollBars ScrollBars { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ScrollBars ScrollBars" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBox.ScrollBars" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ScrollBars</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, welche die Bildlaufleisten sollte angezeigt werden, in einem mehrzeiligen <see cref="T:System.Windows.Forms.TextBox" /> Steuerelement.</summary>
+        <value>Eines der <see cref="T:System.Windows.Forms.ScrollBars" /> Enumerationswerte, der angibt, ob ein mehrzeiliges <see cref="T:System.Windows.Forms.TextBox" /> Steuerelement mit keine Bildlaufleisten, eine horizontale Bildlaufleiste, eine vertikale Bildlaufleiste angezeigt oder beidem angezeigt wird. Die Standardeinstellung ist <see langword="ScrollBars.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Horizontale Bildlaufleisten nicht angezeigt werden Wenn die <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> -Eigenschaftensatz auf `true`, unabhängig vom Wert von der <xref:System.Windows.Forms.TextBox.ScrollBars%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt ein mehrzeiliges <xref:System.Windows.Forms.TextBox> -Steuerelement mit vertikalen Schiebeleisten. Dieses Beispiel verwendet außerdem die <xref:System.Windows.Forms.TextBoxBase.AcceptsTab%2A>, <xref:System.Windows.Forms.TextBox.AcceptsReturn%2A>, und <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> Eigenschaften, um das mehrzeilige <xref:System.Windows.Forms.TextBox> Steuerelement nützlich zum Erstellen von Text-Dokumenten.  
+  
+ [!code-cpp[Classic TextBox.ScrollBars Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic TextBox.ScrollBars Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TextBox.ScrollBars Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic TextBox.ScrollBars Example/CS/source.cs#1)]
+ [!code-vb[Classic TextBox.ScrollBars Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic TextBox.ScrollBars Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Ein Wert, der nicht innerhalb des Bereichs der gültigen Werte für die Enumeration ist wurde der Eigenschaft zugewiesen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public override string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBox.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den diesem Steuerelement zugeordneten Text ab oder legt diesen fest.</summary>
+        <value>Der diesem Steuerelement zugeordnete Text.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextAlign">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HorizontalAlignment TextAlign { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.HorizontalAlignment TextAlign" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBox.TextAlign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HorizontalAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest, wie Text im ausgerichtet ist ein <see cref="T:System.Windows.Forms.TextBox" /> Steuerelement.</summary>
+        <value>Eines der <see cref="T:System.Windows.Forms.HorizontalAlignment" /> Enumerationswerte, der angibt, wie Text im Steuerelement ausgerichtet wird. Die Standardeinstellung ist <see langword="HorizontalAlignment.Left" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Eigenschaft zum Ausrichten von Text in einem <xref:System.Windows.Forms.TextBox> das Layout von Text auf dem Formular entsprechend. Beispielsweise, wenn alle Steuerelemente auf der rechten Seite des Formulars befinden, legen Sie die <xref:System.Windows.Forms.Label.TextAlign%2A> Eigenschaft, um `HorizontalAlignment.Right`, und der Text wird mit der rechten Seite des Steuerelements anstelle der Standardeinstellung links ausgerichtet ausgerichtet werden.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.TextBox> -Steuerelement, das verwendet wird, um ein Kennwort zu übernehmen. Dieses Beispiel verwendet die <xref:System.Windows.Forms.TextBox.CharacterCasing%2A> Eigenschaft so ändern Sie alle Zeichen in Kleinbuchstaben, und die <xref:System.Windows.Forms.TextBoxBase.MaxLength%2A> Eigenschaft, um die Länge des Kennworts auf acht Zeichen beschränkt. Dieses Beispiel verwendet außerdem die <xref:System.Windows.Forms.TextBox.TextAlign%2A> Eigenschaft zur Mitte des Kennworts in der <xref:System.Windows.Forms.TextBox> Steuerelement.  
+  
+ [!code-cpp[Classic TextBox.CharacterCasing Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic TextBox.CharacterCasing Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TextBox.CharacterCasing Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic TextBox.CharacterCasing Example/CS/source.cs#1)]
+ [!code-vb[Classic TextBox.CharacterCasing Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic TextBox.CharacterCasing Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Ein Wert, der nicht innerhalb des Bereichs der gültigen Werte für die Enumeration ist wurde der Eigenschaft zugewiesen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TextAlignChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler TextAlignChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TextAlignChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TextBox.TextAlignChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich der Wert der <see cref="P:System.Windows.Forms.TextBox.TextAlign" />-Eigenschaft geändert hat.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [NIB: Behandeln von Ereignissen](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.TextBox.TextAlignChanged> Ereignis. Dieser Bericht hilft dabei, die Sie feststellen, wenn das Ereignis tritt auf, und Sie beim Debuggen unterstützen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.TextBox> mit dem Namen `TextBox1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.TextBox.TextAlignChanged> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#249](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#249)]
+ [!code-vb[System.Windows.Forms.EventExamples#249](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#249)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseSystemPasswordChar">
+      <MemberSignature Language="C#" Value="public bool UseSystemPasswordChar { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseSystemPasswordChar" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TextBox.UseSystemPasswordChar" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Text in der <see cref="T:System.Windows.Forms.TextBox" /> Steuerelement sollte angezeigt werden, als das standardmäßige Kennwortzeichen.</summary>
+        <value>
+          <see langword="true" />Wenn der Text in der <see cref="T:System.Windows.Forms.TextBox" /> Steuerelement sollte angezeigt werden, als das Standardkennwort ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TextBox.UseSystemPasswordChar%2A> Eigenschaft hat Vorrang gegenüber der <xref:System.Windows.Forms.TextBox.PasswordChar%2A> Eigenschaft. Wenn die <xref:System.Windows.Forms.TextBox.UseSystemPasswordChar%2A> festgelegt ist, um `true`, das Kennwort des Standardzeichensatzes-System verwendet wird, und jedes Zeichen durch Festlegen <xref:System.Windows.Forms.TextBox.PasswordChar%2A> wird ignoriert.  
+  
+> [!IMPORTANT]
+>  Wenn die <xref:System.Windows.Forms.TextBox> ist im Kennwortmodus, da <xref:System.Windows.Forms.TextBox.PasswordChar%2A>, <xref:System.Windows.Forms.TextBox.UseSystemPasswordChar%2A>, oder <xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A> ist `true`, die <xref:System.Windows.Forms.TextBox> befindet sich im eingeschränkten Modus. In diesem Modus kann die <xref:System.Windows.Forms.ImeMode> ist deaktiviert, aber das aktuelle <xref:System.Windows.Forms.ImeMode> wird zwischengespeichert, damit er als wenn wiederhergestellt werden kann die <xref:System.Windows.Forms.TextBox> einmal nicht mehr uneingeschränkt. Umschalten der <xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A> ist ein gängiges Szenario. Die <xref:System.Windows.Forms.ImeMode> wird schattiert, während das Steuerelement im eingeschränkten Modus befindet. Aus Sicht des Designers die <xref:System.Windows.Forms.ImeMode> angezeigte Wert ist der tatsächliche Wert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WndProc">
+      <MemberSignature Language="C#" Value="protected override void WndProc (ref System.Windows.Forms.Message m);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void WndProc(valuetype System.Windows.Forms.Message&amp; m) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TextBox.WndProc(System.Windows.Forms.Message@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="m" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="m">Ein Windows-Message-Objekt.</param>
+        <summary>Verarbeitet Windows-Meldungen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

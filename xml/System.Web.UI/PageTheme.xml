@@ -1,0 +1,441 @@
+<Type Name="PageTheme" FullName="System.Web.UI.PageTheme">
+  <TypeSignature Language="C#" Value="public abstract class PageTheme" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PageTheme extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.PageTheme" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Basisklasse für eine Seitendesign, das eine Auflistung von Ressourcen, die verwendet werden, um ein konsistentes Erscheinungsbild für Seiten und Steuerelemente auf einer Website zu definieren. Seitendesigns kann per Konfiguration oder in der Seitendirektive festgelegt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Seiten- und Entwickler verwenden Sie nicht die <xref:System.Web.UI.ControlSkinDelegate>, <xref:System.Web.UI.ControlSkin>, oder <xref:System.Web.UI.PageTheme> Klassen direkt. Diese Klassen werden von der ASP.NET-Parser und die Laufzeit verwendet, Stylesheet-Elemente anwenden, die in ASP.NET-Designs und Skins Steuerungsdateien für die Seiten und bestimmte Typen von Steuerelementen definiert sind.  
+  
+ Entwickler von Seiten aktivieren (oder deaktivieren) Seitendesigns mithilfe der <xref:System.Web.UI.Page.Theme%2A> und <xref:System.Web.UI.Control.EnableTheming%2A> Eigenschaften. Weitere Informationen zu Seitendesigns finden Sie unter [ASP.NET-Designs und Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PageTheme ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PageTheme.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.PageTheme" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppRelativeTemplateSourceDirectory">
+      <MemberSignature Language="C#" Value="protected abstract string AppRelativeTemplateSourceDirectory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AppRelativeTemplateSourceDirectory" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PageTheme.AppRelativeTemplateSourceDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ab die relative URL des Verzeichnisses für die <see cref="T:System.Web.UI.PageTheme" /> Objekt.</summary>
+        <value>Ein Zeichenfolgenwert, der die relative URL des der <see cref="T:System.Web.UI.PageTheme" /> Verzeichnis.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.PageTheme.AppRelativeTemplateSourceDirectory%2A> Eigenschaft ist abstrakt. Beim Kompilieren, wird ein Design generiert Code, überschreibt die <xref:System.Web.UI.PageTheme.AppRelativeTemplateSourceDirectory%2A> Eigenschaft. Die <xref:System.Web.UI.Control.ResolveUrl%2A> -Methode verwendet die <xref:System.Web.UI.PageTheme.AppRelativeTemplateSourceDirectory%2A> -Eigenschaft löst eine relative URL in eine absolute URL.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlSkins">
+      <MemberSignature Language="C#" Value="protected abstract System.Collections.IDictionary ControlSkins { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary ControlSkins" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PageTheme.ControlSkins" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse eine <see cref="T:System.Collections.IDictionary" /> Schnittstelle der Namen aller Standarddesigns, die für die aktuelle Seitendesign Steuerelementtyp indiziert verfügbar sind.</summary>
+        <value>Eine <see cref="T:System.Collections.IDictionary" /> , die der aktuellen Seitendesign zugeordnete Steuerelementdesigns darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.PageTheme.ControlSkins%2A> Eigenschaft ist abstrakt. Beim Kompilieren, wird ein Design Code generiert werden, die diese Eigenschaft überschreibt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSkinKey">
+      <MemberSignature Language="C#" Value="public static object CreateSkinKey (Type controlType, string skinID);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object CreateSkinKey(class System.Type controlType, string skinID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PageTheme.CreateSkinKey(System.Type,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controlType" Type="System.Type" />
+        <Parameter Name="skinID" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controlType">Die <see cref="T:System.Type" /> des Steuerelements auf die ein Steuerelementdesign angewendet, der übergeben wird i. d. r. aus den <see cref="P:System.Web.UI.ControlBuilder.ControlType" />.</param>
+        <param name="skinID">Der Name des Steuerelementdesigns für die einen Schlüssel erstellt.</param>
+        <summary>Erstellt ein Schlüsselobjekt Lookup für ein bestimmtes Steuerelement und Skin-ID.</summary>
+        <returns>Ein Objekt, das als Suchschlüssel in einer Sammlung im Wörterbuchformat verwendet werden kann, die Informationen zum Typ und Skin-ID enthält.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="controlType" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Eval">
+      <MemberSignature Language="C#" Value="protected object Eval (string expression);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object Eval(string expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PageTheme.Eval(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der Pfad aus dem Container auf die öffentliche Eigenschaft-Wert. Ausführliche Informationen finden Sie unter <see cref="T:System.Web.UI.DataBinder" />.</param>
+        <summary>Verwendet die <see cref="M:System.Web.UI.DataBinder.Eval(System.Object,System.String)" /> Methode der <see cref="P:System.Web.UI.PageTheme.Page" /> Eigenschaft, die die Instanz von der <see cref="T:System.Web.UI.PageTheme" /> Klasse bezieht sich auf einen Datenbindungsausdruck ausgewertet.</summary>
+        <returns>Ein Objekt, das aus der Auswertung des Ausdrucks Datenbindungsfunktionen ergibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.PageTheme.Eval%2A> -Methode verwendet die <xref:System.Web.UI.Page.GetDataItem%2A> Methode, um Daten Elementcontainers zu beheben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Eval">
+      <MemberSignature Language="C#" Value="protected string Eval (string expression, string format);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string Eval(string expression, string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PageTheme.Eval(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.String" />
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Der Pfad aus dem Container auf die öffentliche Eigenschaft-Wert. Ausführliche Informationen finden Sie unter <see cref="T:System.Web.UI.DataBinder" />.</param>
+        <param name="format">Eine .NET Framework-Formatierungszeichenfolge. Ausführliche Informationen finden Sie unter <see cref="T:System.Web.UI.DataBinder" />.</param>
+        <summary>Verwendet die <see cref="M:System.Web.UI.DataBinder.Eval(System.Object,System.String,System.String)" /> Methode der <see cref="P:System.Web.UI.PageTheme.Page" /> Eigenschaft, die die Instanz von der <see cref="T:System.Web.UI.PageTheme" /> Klasse bezieht sich auf einen Datenbindungsausdruck ausgewertet.</summary>
+        <returns>Eine Zeichenfolge, die durch die Auswertung des Datenbindungsausdruck und der Konvertierung in einen Zeichenfolgentyp entsteht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.PageTheme.Eval%2A> -Methode verwendet die <xref:System.Web.UI.Page.GetDataItem%2A> Methode, um Daten Elementcontainers zu beheben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinkedStyleSheets">
+      <MemberSignature Language="C#" Value="protected abstract string[] LinkedStyleSheets { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] LinkedStyleSheets" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PageTheme.LinkedStyleSheets" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse ruft ein Array von Stylesheets, die mit dieser Seite verknüpft sind.</summary>
+        <value>Ein Zeichenfolgenarray von Stylesheets mit dieser Seite verknüpft ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.PageTheme.LinkedStyleSheets%2A> Eigenschaft ist abstrakt und muss in einer abgeleiteten Klasse implementiert werden. Beim Kompilieren, wird ein Design Code generiert werden, die diese Eigenschaft überschreibt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Page">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.Page Page { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Page Page" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PageTheme.Page" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Page</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Web.UI.Page" /> -Objekt, das die Instanz von zugeordnet ist die <see cref="T:System.Web.UI.PageTheme" /> Klasse.</summary>
+        <value>Der mit dem <see cref="T:System.Web.UI.Page" /> verknüpfte <see cref="T:System.Web.UI.PageTheme" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.PageTheme.Page%2A> Eigenschaft ist schreibgeschützt und wird intern zugewiesen, wenn eine Instanz von der <xref:System.Web.UI.PageTheme> -Klasse erstellt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TestDeviceFilter">
+      <MemberSignature Language="C#" Value="public bool TestDeviceFilter (string deviceFilterName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TestDeviceFilter(string deviceFilterName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PageTheme.TestDeviceFilter(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="deviceFilterName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="deviceFilterName">Der Zeichenfolgenname des Gerätefilters überprüfen.</param>
+        <summary>Testet, ob ein Gerätefilter gilt die <see cref="T:System.Web.UI.Page" /> zu steuern, die die Instanz von der <see cref="T:System.Web.UI.PageTheme" /> Klasse zugeordnet ist.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="deviceFilterName" /> gilt für die Seite ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XPath">
+      <MemberSignature Language="C#" Value="protected object XPath (string xPathExpression);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object XPath(string xPathExpression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PageTheme.XPath(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xPathExpression" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xPathExpression">Der XPath-Ausdruck zum Auswerten. Ausführliche Informationen finden Sie unter <see cref="T:System.Web.UI.XPathBinder" />.</param>
+        <summary>Wertet einen XPath-Datenbindungsausdruck an.</summary>
+        <returns>Ein Objekt, das aus der Auswertung des dem Datenbindung ergibt <paramref name="xPathExpression" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.PageTheme.XPath%2A> -Methode verwendet die <xref:System.Web.UI.Page.GetDataItem%2A> -Methode zum Auflösen der <xref:System.Xml.XPath.IXPathNavigable> Objektverweis, der der Ausdruck ausgewertet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XPath">
+      <MemberSignature Language="C#" Value="protected string XPath (string xPathExpression, string format);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string XPath(string xPathExpression, string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PageTheme.XPath(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xPathExpression" Type="System.String" />
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xPathExpression">Der XPath-Ausdruck zum Auswerten. Ausführliche Informationen finden Sie unter <see cref="T:System.Web.UI.XPathBinder" />.</param>
+        <param name="format">Eine .NET Framework-Formatierungszeichenfolge auf das Ergebnis anwenden.</param>
+        <summary>Wertet einen XPath-Datenbindungsausdruck verwenden die angegebene Formatierungszeichenfolge, um das Ergebnis anzuzeigen.</summary>
+        <returns>Eine Zeichenfolge, die durch die Auswertung des Datenbindungsausdruck und der Konvertierung in einen Zeichenfolgentyp entsteht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.PageTheme.XPath%2A> -Methode verwendet die <xref:System.Web.UI.Page.GetDataItem%2A> -Methode zum Auflösen der <xref:System.Xml.XPath.IXPathNavigable> Objektverweis, der der Ausdruck ausgewertet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XPath">
+      <MemberSignature Language="C#" Value="protected object XPath (string xPathExpression, System.Xml.IXmlNamespaceResolver resolver);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object XPath(string xPathExpression, class System.Xml.IXmlNamespaceResolver resolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PageTheme.XPath(System.String,System.Xml.IXmlNamespaceResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xPathExpression" Type="System.String" />
+        <Parameter Name="resolver" Type="System.Xml.IXmlNamespaceResolver" />
+      </Parameters>
+      <Docs>
+        <param name="xPathExpression">Der XPath-Ausdruck zum Auswerten. Ausführliche Informationen finden Sie unter <see cref="T:System.Web.UI.XPathBinder" />.</param>
+        <param name="resolver">Ein Satz von Präfix- und Namespacezuordnungen, die zum Auflösen von Namespaces verwendet.</param>
+        <summary>Wertet einen XPath-Datenbindungsausdruck mithilfe der angegebenen Präfix- und Namespacezuordnungen, die zum Auflösen von Namespaces an.</summary>
+        <returns>Ein Objekt, das aus der Auswertung des dem Datenbindung ergibt <paramref name="xPathExpression" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.PageTheme.XPath%2A> -Methode verwendet die <xref:System.Web.UI.Page.GetDataItem%2A> -Methode zum Auflösen der <xref:System.Xml.XPath.IXPathNavigable> Objektverweis, der der Ausdruck ausgewertet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XPath">
+      <MemberSignature Language="C#" Value="protected string XPath (string xPathExpression, string format, System.Xml.IXmlNamespaceResolver resolver);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string XPath(string xPathExpression, string format, class System.Xml.IXmlNamespaceResolver resolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PageTheme.XPath(System.String,System.String,System.Xml.IXmlNamespaceResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xPathExpression" Type="System.String" />
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="resolver" Type="System.Xml.IXmlNamespaceResolver" />
+      </Parameters>
+      <Docs>
+        <param name="xPathExpression">Der XPath-Ausdruck zum Auswerten. Ausführliche Informationen finden Sie unter <see cref="T:System.Web.UI.XPathBinder" />.</param>
+        <param name="format">Eine .NET Framework-Formatierungszeichenfolge auf das Ergebnis anwenden.</param>
+        <param name="resolver">Ein Satz von Präfix- und Namespacezuordnungen, die zum Auflösen von Namespaces verwendet.</param>
+        <summary>Verwendet die <see cref="M:System.Web.UI.TemplateControl.XPath(System.String,System.String,System.Xml.IXmlNamespaceResolver)" /> Methode der <see cref="P:System.Web.UI.PageTheme.Page" /> zu steuern, die die Instanz von der <see cref="T:System.Web.UI.PageTheme" /> Klasse zum Auswerten eines XPath-Ausdrucks Datenbindungsfunktionen zugeordnet ist.</summary>
+        <returns>Eine Zeichenfolge, die durch die Auswertung des Datenbindungsausdruck und der Konvertierung in einen Zeichenfolgentyp entsteht.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.PageTheme.XPath%2A> -Methode verwendet die <xref:System.Web.UI.Page.GetDataItem%2A> -Methode zum Auflösen der <xref:System.Xml.XPath.IXPathNavigable> Objektverweis, der der Ausdruck ausgewertet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XPathSelect">
+      <MemberSignature Language="C#" Value="protected System.Collections.IEnumerable XPathSelect (string xPathExpression);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Collections.IEnumerable XPathSelect(string xPathExpression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PageTheme.XPathSelect(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xPathExpression" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xPathExpression">Der XPath-Ausdruck zum Auswerten. Ausführliche Informationen finden Sie unter <see cref="T:System.Web.UI.XPathBinder" />.</param>
+        <summary>Wertet einen XPath-Datenbindungsausdruck und gibt eine Knoten-Auflistung, die implementiert die <see cref="T:System.Collections.IEnumerable" /> Schnittstelle.</summary>
+        <returns>Eine <see cref="T:System.Collections.IEnumerable" /> Liste von Knoten aus.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.PageTheme.XPathSelect%2A> -Methode verwendet die <xref:System.Web.UI.Page.GetDataItem%2A> -Methode zum Auflösen der <xref:System.Xml.XPath.IXPathNavigable> Objektverweis, der der Ausdruck ausgewertet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XPathSelect">
+      <MemberSignature Language="C#" Value="protected System.Collections.IEnumerable XPathSelect (string xPathExpression, System.Xml.IXmlNamespaceResolver resolver);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Collections.IEnumerable XPathSelect(string xPathExpression, class System.Xml.IXmlNamespaceResolver resolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PageTheme.XPathSelect(System.String,System.Xml.IXmlNamespaceResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xPathExpression" Type="System.String" />
+        <Parameter Name="resolver" Type="System.Xml.IXmlNamespaceResolver" />
+      </Parameters>
+      <Docs>
+        <param name="xPathExpression">Der XPath-Ausdruck zum Auswerten. Ausführliche Informationen finden Sie unter <see cref="T:System.Web.UI.XPathBinder" />.</param>
+        <param name="resolver">Ein Satz von Präfix- und Namespacezuordnungen, die zum Auflösen von Namespaces verwendet.</param>
+        <summary>Wertet einen XPath-Datenbindungsausdruck mithilfe der angegebenen Präfix- und Namespacezuordnungen zum Auflösen von Namespaces und gibt eine Auflistung von Knoten, implementiert die <see cref="T:System.Collections.IEnumerable" /> Schnittstelle.</summary>
+        <returns>Eine <see cref="T:System.Collections.IEnumerable" /> Liste von Knoten aus.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.PageTheme.XPathSelect%2A> -Methode verwendet die <xref:System.Web.UI.Page.GetDataItem%2A> -Methode zum Auflösen der <xref:System.Xml.XPath.IXPathNavigable> Objektverweis, der der Ausdruck ausgewertet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

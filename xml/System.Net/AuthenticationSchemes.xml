@@ -1,0 +1,256 @@
+<Type Name="AuthenticationSchemes" FullName="System.Net.AuthenticationSchemes">
+  <TypeSignature Language="C#" Value="public enum AuthenticationSchemes" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AuthenticationSchemes extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.AuthenticationSchemes" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Primitives</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt Protokolle für die Authentifizierung an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird verwendet, um die Methode zum Authentifizieren von Clientanforderungen von verarbeiteten angeben <xref:System.Net.HttpListener> Objekte.  
+  
+ **Hinweis** Standardauthentifizierung erfordert den Austausch eines Kennworts und sollte daher vermieden werden, außer im Fall von sicheren, verschlüsselten Verbindungen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, mit dem Negotiate-Enumerationswert angeben, dass Clients mit dem Negotiate Security-Protokoll authentifiziert werden.  
+  
+ [!code-csharp[NCLListener#3](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLListener/CS/sample.cs#3)]
+ [!code-vb[NCLListener#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLListener/vb/sample.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Anonymous">
+      <MemberSignature Language="C#" Value="Anonymous" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.AuthenticationSchemes Anonymous = int32(32768)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.AuthenticationSchemes.Anonymous" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.AuthenticationSchemes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die anonyme Authentifizierung an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Basic">
+      <MemberSignature Language="C#" Value="Basic" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.AuthenticationSchemes Basic = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.AuthenticationSchemes.Basic" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.AuthenticationSchemes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Standardauthentifizierung an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zusätzliche Informationen finden Sie unter RFC 2617 – HTTP Authentication: Basic and Digest Authentication. Dieses Dokument finden Sie unter [http://www.rfc-editor.org](http://www.rfc-editor.org/).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Digest">
+      <MemberSignature Language="C#" Value="Digest" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.AuthenticationSchemes Digest = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.AuthenticationSchemes.Digest" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.AuthenticationSchemes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Hashwertauthentifizierung an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zusätzliche Informationen finden Sie unter RFC 2617 – HTTP Authentication: Basic and Digest Authentication. Dieses Dokument finden Sie unter [http://www.rfc-editor.org](http://www.rfc-editor.org/)  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IntegratedWindowsAuthentication">
+      <MemberSignature Language="C#" Value="IntegratedWindowsAuthentication" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.AuthenticationSchemes IntegratedWindowsAuthentication = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.AuthenticationSchemes.IntegratedWindowsAuthentication" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.AuthenticationSchemes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Windows-Authentifizierung an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Negotiate">
+      <MemberSignature Language="C#" Value="Negotiate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.AuthenticationSchemes Negotiate = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.AuthenticationSchemes.Negotiate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.AuthenticationSchemes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verhandelt mit dem Client das Authentifizierungsschema. Wenn sowohl Client als auch Server Kerberos unterstützen, wird dieses Schema verwendet. Andernfalls wird NTLM verwendet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.AuthenticationSchemes None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.AuthenticationSchemes.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.AuthenticationSchemes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es ist keine Authentifizierung zulässig. Ein Client Anfordern einer <see cref="T:System.Net.HttpListener" /> Objekt mit diesem Flag immer 403 Forbidden Status erhalten. Verwenden Sie dieses Flag an, wenn eine Ressource an einen Client niemals ausgegeben werden soll.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Ntlm">
+      <MemberSignature Language="C#" Value="Ntlm" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.AuthenticationSchemes Ntlm = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.AuthenticationSchemes.Ntlm" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.AuthenticationSchemes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die NTLM-Authentifizierung an.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

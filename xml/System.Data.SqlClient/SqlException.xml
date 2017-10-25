@@ -1,0 +1,621 @@
+<Type Name="SqlException" FullName="System.Data.SqlClient.SqlException">
+  <TypeSignature Language="C#" Value="public sealed class SqlException : System.Data.Common.DbException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit SqlException extends System.Data.Common.DbException" />
+  <TypeSignature Language="DocId" Value="T:System.Data.SqlClient.SqlException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.SqlClient</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.DbException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die Ausnahme, die ausgelöst wird, wenn SQL Server eine Warnung oder einen Fehler zurückgibt. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse wird erstellt, wenn der .NET Framework-Datenanbieter für SQL Server einen vom Server generierten Fehler trifft. (Clientseitige Fehler werden als standard common Language Runtime-Ausnahmen ausgelöst.) <xref:System.Data.SqlClient.SqlException> enthält immer mindestens eine Instanz von <xref:System.Data.SqlClient.SqlError>.  
+  
+ Nachrichten, die mit einen Schweregrad von 10 oder darunter verfügen dienen zur Information und deuten auf Probleme hin, die durch fehlerhafte Informationen, mit denen ein Benutzer hat verursacht. Schweregrade von 11 bis 16 werden vom Benutzer generiert und können vom Benutzer korrigiert werden. Schweregrade von 17 bis 25 zeigen Software- oder Hardwarefehler an. Wenn ein Schweregrad 17, 18 oder 19 Fehler wird Sie weiterarbeiten können, obwohl Sie zum Ausführen einer bestimmten Anweisung möglicherweise nicht.  
+  
+ Die <xref:System.Data.SqlClient.SqlConnection> bleibt hergestellt, wenn der Schweregrad 19 oder darunter beträgt. Wenn der Schweregrad 20 oder größer ist, schließt der Server normalerweise die <xref:System.Data.SqlClient.SqlConnection>. Die Benutzer können die Verbindung aber erneut öffnen und fortfahren. In beiden Fällen wird von der Methode, die den Befehl ausführt, eine <xref:System.Data.SqlClient.SqlException> generiert.  
+  
+ Informationen zu den Warnungen und sonstige Meldungen, die von SQL Server gesendet werden finden Sie im Abschnitt Problembehandlung der SQL Server-Onlinedokumentation. Die <xref:System.Data.SqlClient.SqlException> -Klasse Zuordnungen in SQL Server-Schweregrad.  
+  
+ Im folgenden finden allgemeine Informationen zur Behandlung von Ausnahmen. Code sollte Abfangen von Ausnahmen, um zu verhindern, dass die Anwendung abstürzt und ermöglichen, eine entsprechende Fehlermeldung dem Benutzer angezeigt.  Sie können Datenbanktransaktionen verwenden, um sicherzustellen, dass die Daten unabhängig davon, was, in der Clientanwendung geschieht (einschließlich eines Absturzes) konsistent ist. Funktionen wie System.Transaction.TransactionScope oder die BeginTransaction-Methode (in System.Data.OleDb.OleDbConnection, System.Data.ODBC.ODBCConnection und System.Data.SqlClient.SqlConnection) stellen Sie sicher, konsistente Daten unabhängig von Ausnahmen vom Anbieter ausgelöst wird. Transaktionen können fehlschlagen, daher Fehler abgefangen und wiederholen Sie die Transaktion.  
+  
+ Beachten Sie, beginnend mit .NET Framework 4.5, <xref:System.Data.SqlClient.SqlException> können innere zurückgeben <xref:System.ComponentModel.Win32Exception>.  
+  
+ Exception-Klasse von einer .net Framework-Datenanbieter anbieterspezifischen Fehler meldet. Z. B. "System.Data.ODBC" OdbcException aufweist, "System.Data.OleDb" hat OleDbException und System.Data.SqlClient hat SqlException. Fangen Sie für das beste Maß Fehlerdetail diese Ausnahmen ab, und verwenden Sie die Elemente dieser Ausnahme-Klassen, um die Details des Fehlers zu erhalten.  
+  
+ Zusätzlich zu den Fehlern anbieterspezifischen können .NET Framework-Anbieter Datentypen wie z. B. System.OutOfMemoryException und System.Threading.ThreadAbortException .NET Framework-Ausnahmen auslösen. Wiederherstellung von folgenden Ausnahmen möglicherweise nicht möglich.  
+  
+ Ungültige Eingabe kann dazu führen, dass .NET Framework Data Provider-Typ zum Auslösen einer Ausnahme, z. B. System.ArgumentException oder System.IndexOutOfRangeException.  Aufrufen einer Methode zur falschen Zeit kann System.InvalidOperationException auslösen.  
+  
+ Im Allgemeinen schreiben also einen Ausnahmehandler, der alle Anbieter abfängt spezifischen Ausnahmen als auch Ausnahmen von der common Language Runtime.  Diese können wie folgt im Protokollstapel zugeordnet werden:  
+  
+```  
+Try {  
+   // code here  
+}  
+catch (SqlException odbcEx) {  
+   // Handle more specific SqlException exception here.  
+}  
+catch (Exception ex) {  
+   // Handle generic ones here.  
+}  
+  
+```  
+  
+ Oder:  
+  
+```  
+Try {  
+   // code here  
+}  
+catch (Exception ex) {  
+   if (ex is SqlException) {  
+      // Handle more specific SqlException exception here.  
+   }  
+   Else {  
+      // Handle generic ones here.  
+   }  
+}  
+  
+```  
+  
+ Es ist auch möglich, bei .NET Framework Data Provider Methodenaufruf auf ein Thread des Threadpools mit kein Benutzercode auf dem Stapel fehl. In diesem Fall und asynchronen Methodenaufrufen verwenden, müssen Sie registrieren die <xref:System.AppDomain.UnhandledException> Ereignis, um diese Ausnahmen zu behandeln und Anwendungsabsturz zu vermeiden.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine <xref:System.Data.SqlClient.SqlException> und zeigt dann die Ausnahme.  
+  
+ [!code-csharp[Classic WebData SqlException Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlException Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlException Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlException Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Class">
+      <MemberSignature Language="C#" Value="public byte Class { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Class" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlException.Class" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab den Schweregrad des Fehlers, der von der .NET Framework-Datenanbieter für SQL Server zurückgegeben.</summary>
+        <value>Ein Wert zwischen 1 und 25, der den Schweregrad des Fehlers angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nachrichten, die mit einen Schweregrad von 10 oder darunter verfügen dienen zur Information und deuten auf Probleme hin, die durch fehlerhafte Informationen, mit denen ein Benutzer hat verursacht. Schweregrade von 11 bis 16 werden vom Benutzer generiert und können vom Benutzer korrigiert werden. Schweregrade von 17 bis 25 zeigen Software- oder Hardwarefehler an. Wenn ein Schweregrad 17, 18 oder 19 Fehler wird Sie weiterarbeiten können, obwohl Sie zum Ausführen einer bestimmten Anweisung möglicherweise nicht.  
+  
+ Die <xref:System.Data.SqlClient.SqlConnection> bleibt hergestellt, wenn der Schweregrad 19 oder darunter beträgt. Wenn der Schweregrad 20 oder größer ist, schließt der Server normalerweise die <xref:System.Data.SqlClient.SqlConnection>. Die Benutzer können die Verbindung aber erneut öffnen und fortfahren. In beiden Fällen wird von der Methode, die den Befehl ausführt, eine <xref:System.Data.SqlClient.SqlException> generiert.  
+  
+ Informationen zu den Warnungen und sonstige Meldungen, die von SQL Server gesendet werden finden Sie im Abschnitt Problembehandlung der SQL Server-Dokumentation.  
+  
+ Dies ist ein Wrapper für die <xref:System.Data.SqlClient.SqlError.Class%2A> Eigenschaft des ersten <xref:System.Data.SqlClient.SqlError> in der <xref:System.Data.SqlClient.SqlException.Errors%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt jede <xref:System.Data.SqlClient.SqlError> innerhalb der <xref:System.Data.SqlClient.SqlErrorCollection> Auflistung.  
+  
+ [!code-csharp[Classic WebData SqlException.State Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlException.State Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlException.State Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlException.State Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientConnectionId">
+      <MemberSignature Language="C#" Value="public Guid ClientConnectionId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid ClientConnectionId" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlException.ClientConnectionId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Stellt die Clientverbindungs-ID. Weitere Informationen finden Sie unter [Verfolgen von Daten in ADO.NET](~/docs/framework/data/adonet/data-tracing.md).</summary>
+        <value>Gibt die Clientverbindungs-ID.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Codebeispiel finden Sie unter <xref:System.Data.SqlClient.SqlException.ToString%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Errors">
+      <MemberSignature Language="C#" Value="public System.Data.SqlClient.SqlErrorCollection Errors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.SqlClient.SqlErrorCollection Errors" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlException.Errors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlErrorCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung einer oder mehrerer <see cref="T:System.Data.SqlClient.SqlError" /> Objekte, mit denen erhalten detaillierte Informationen zu Ausnahmen, die von der .NET Framework-Datenanbieter für SQL Server generiert.</summary>
+        <value>Die gesammelten Instanzen der dem <see cref="T:System.Data.SqlClient.SqlError" /> Klasse.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.SqlClient.SqlErrorCollection> Klasse enthält immer mindestens eine Instanz von der <xref:System.Data.SqlClient.SqlError> Klasse.  
+  
+ Dies ist ein Wrapper für <xref:System.Data.SqlClient.SqlErrorCollection>. Weitere Informationen zu SQL Server-Datenbankmodul-Fehlern finden Sie in der SQL Server-Onlinedokumentation.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt jede <xref:System.Data.SqlClient.SqlError> innerhalb der <xref:System.Data.SqlClient.SqlErrorCollection> Auflistung.  
+  
+ [!code-csharp[Classic WebData SqlError Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlError Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlError Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlError Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo si, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo si, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="si" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="si">Die <see cref="T:System.Runtime.Serialization.SerializationInfo" />, die die serialisierten Objektdaten für die ausgelöste Ausnahme enthält.</param>
+        <param name="context">Der <see cref="T:System.Runtime.Serialization.StreamingContext" />, der die Kontextinformationen über die Quelle oder das Ziel enthält.</param>
+        <summary>Legt <see cref="T:System.Runtime.Serialization.SerializationInfo" /> mit Informationen zur Ausnahme fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `GetObjectData` legt die `SerializationInfo` mit allen Daten für das Ausnahmeobjekt fest, das für die Serialisierung vorgesehen ist. Während der Deserialisierung wird die Ausnahme aus der über den Stream übertragenen `SerializationInfo` wiederhergestellt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <paramref name="si" /> Parameter ist ein null-Verweis (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LineNumber">
+      <MemberSignature Language="C#" Value="public int LineNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LineNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlException.LineNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeilennummer in der Transact-SQL-Befehlsbatch oder die gespeicherte Prozedur, der den Fehler generiert hat.</summary>
+        <value>Die Zeilennummer in der Transact-SQL-Befehlsbatch oder die gespeicherte Prozedur, der den Fehler generiert hat.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Zeile, die Nummerierung beginnt bei 1; Wenn 0 zurückgegeben wird, ist die Nummer der Zeile nicht anwendbar.  
+  
+ Dies ist ein Wrapper für die <xref:System.Data.SqlClient.SqlError.LineNumber%2A> Eigenschaft des ersten <xref:System.Data.SqlClient.SqlError> in der <xref:System.Data.SqlClient.SqlException.Errors%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt jede <xref:System.Data.SqlClient.SqlError> innerhalb der <xref:System.Data.SqlClient.SqlErrorCollection> Auflistung.  
+  
+ [!code-csharp[Classic WebData SqlException.State Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlException.State Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlException.State Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlException.State Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public override string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlException.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Number">
+      <MemberSignature Language="C#" Value="public int Number { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Number" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlException.Number" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Nummer ab, die den Fehlertyp angibt.</summary>
+        <value>Die Nummer, die den Fehlertyp angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist ein Wrapper für die <xref:System.Data.SqlClient.SqlError.Number%2A> Eigenschaft des ersten <xref:System.Data.SqlClient.SqlError> in der <xref:System.Data.SqlClient.SqlException.Errors%2A> Eigenschaft. Weitere Informationen zu SQL Server-Datenbankmodul-Fehlern finden Sie in der SQL Server-Onlinedokumentation.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt jede <xref:System.Data.SqlClient.SqlError> innerhalb der <xref:System.Data.SqlClient.SqlErrorCollection> Auflistung.  
+  
+ [!code-csharp[Classic WebData SqlException.State Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlException.State Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlException.State Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlException.State Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Procedure">
+      <MemberSignature Language="C#" Value="public string Procedure { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Procedure" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlException.Procedure" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der gespeicherten Prozedur oder des Remoteprozeduraufrufs (RPC) ab, der diesen Fehler generiert hat.</summary>
+        <value>Der Name der gespeicherten Prozedur oder des RPCs.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist ein Wrapper für die <xref:System.Data.SqlClient.SqlError.Procedure%2A> Eigenschaft des ersten <xref:System.Data.SqlClient.SqlError> in der <xref:System.Data.SqlClient.SqlException.Errors%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt jede <xref:System.Data.SqlClient.SqlError> innerhalb der <xref:System.Data.SqlClient.SqlErrorCollection> Auflistung.  
+  
+ [!code-csharp[Classic WebData SqlException.State Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlException.State Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlException.State Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlException.State Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Server">
+      <MemberSignature Language="C#" Value="public string Server { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Server" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlException.Server" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Computers, der eine Instanz von SQL Server ausgeführt wird, die den Fehler generiert hat.</summary>
+        <value>Der Name des Computers mit einer Instanz von SQL Server.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist ein Wrapper für die <xref:System.Data.SqlClient.SqlError.Server%2A> Eigenschaft des ersten <xref:System.Data.SqlClient.SqlError> in der <xref:System.Data.SqlClient.SqlException.Errors%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt jede <xref:System.Data.SqlClient.SqlError> innerhalb der <xref:System.Data.SqlClient.SqlErrorCollection> Auflistung.  
+  
+ [!code-csharp[Classic WebData SqlException.State Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlException.State Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlException.State Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlException.State Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public override string Source { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Source" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlException.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Providers ab, der den Fehler generiert hat.</summary>
+        <value>Der Name des Providers, der den Fehler generiert hat.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist ein Wrapper für die <xref:System.Data.SqlClient.SqlError.Source%2A> Eigenschaft des ersten <xref:System.Data.SqlClient.SqlError> in der <xref:System.Data.SqlClient.SqlException.Errors%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt jede <xref:System.Data.SqlClient.SqlError> innerhalb der <xref:System.Data.SqlClient.SqlErrorCollection> Auflistung.  
+  
+ [!code-csharp[Classic WebData SqlException.State Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlException.State Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlException.State Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlException.State Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public byte State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 State" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlException.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen numerischen Fehlercode von SQL Server, die einen Fehler, Warnung oder Meldung "keine Daten gefunden" darstellt. Weitere Informationen zum Decodieren von diesen Werten finden Sie unter SQL Server-Onlinedokumentation.</summary>
+        <value>Die Anzahl, die den Fehlercode darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist ein Wrapper für die <xref:System.Data.SqlClient.SqlError.State%2A> Eigenschaft des ersten <xref:System.Data.SqlClient.SqlError> in der <xref:System.Data.SqlClient.SqlException.Errors%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt jede <xref:System.Data.SqlClient.SqlError> innerhalb der <xref:System.Data.SqlClient.SqlErrorCollection> Auflistung.  
+  
+ [!code-csharp[Classic WebData SqlException.State Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlException.State Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlException.State Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlException.State Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlException.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge, die für die aktuelle <see cref="T:System.Data.SqlClient.SqlException" /> Objekt, und schließt die Clientverbindungs-ID (Weitere Informationen finden Sie unter <see cref="P:System.Data.SqlClient.SqlException.ClientConnectionId" />).</summary>
+        <returns>Eine Zeichenfolge, die für die aktuelle <see cref="T:System.Data.SqlClient.SqlException" /> Objekt.<see cref="T:System.String" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden C#-Beispiel zeigt, wie ein Verbindungsversuch mit einem gültigen Server jedoch nicht vorhandene Datenbank bewirkt, dass eine <xref:System.Data.SqlClient.SqlException>, darunter die Clientverbindungs-ID:  
+  
+```  
+using System.Data.SqlClient;  
+using System;  
+  
+public class A {  
+   public static void Main() {  
+      SqlConnection connection = new SqlConnection();  
+      connection.ConnectionString = "Data Source=a_valid_server;Initial Catalog=Northwinda;Integrated Security=true";  
+      try {  
+         connection.Open();  
+      }  
+      catch (SqlException p) {  
+         Console.WriteLine("{0}", p.ClientConnectionId);  
+         Console.WriteLine("{0}", p.ToString());  
+      }  
+      connection.Close();  
+   }  
+}  
+```  
+  
+ Im folgende Visual Basic-Beispiel ist funktionell mit dem vorherigen Beispiel (c#):  
+  
+```  
+Imports System.Data.SqlClient  
+Imports System  
+  
+Module Module1  
+  
+    Sub Main()  
+        Dim connection As New SqlConnection()  
+        connection.ConnectionString = "Data Source=a_valid_server;Initial Catalog=Northwinda;Integrated Security=true"  
+        Try  
+            connection.Open()  
+        Catch p As SqlException  
+            Console.WriteLine("{0}", p.ClientConnectionId)  
+            Console.WriteLine("{0}", p.ToString())  
+        End Try  
+        connection.Close()  
+    End Sub  
+  
+End Module  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

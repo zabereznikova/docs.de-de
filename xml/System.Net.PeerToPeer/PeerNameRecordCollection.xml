@@ -1,0 +1,120 @@
+<Type Name="PeerNameRecordCollection" FullName="System.Net.PeerToPeer.PeerNameRecordCollection">
+  <TypeSignature Language="C#" Value="public class PeerNameRecordCollection : System.Collections.ObjectModel.Collection&lt;System.Net.PeerToPeer.PeerNameRecord&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit PeerNameRecordCollection extends System.Collections.ObjectModel.Collection`1&lt;class System.Net.PeerToPeer.PeerNameRecord&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Net.PeerToPeer.PeerNameRecordCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ObjectModel.Collection&lt;System.Net.PeerToPeer.PeerNameRecord&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="!0">System.Net.PeerToPeer.PeerNameRecord</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Container für <see cref="T:System.Net.PeerToPeer.PeerNameRecord" />-Elemente dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+-   Diese Auflistung enthält Instanzen der <xref:System.Net.PeerToPeer.PeerNameRecord> -Element, das verwendet werden, geben Sie Informationen zu einem Peer innerhalb einer <xref:System.Net.PeerToPeer.Cloud>.  
+  
+-  
+  
+ Verweise auf eine Auflistung Datensatz werden zurückgegeben, durch die <xref:System.Net.PeerToPeer.PeerNameResolver.Resolve%2A> und <xref:System.Net.PeerToPeer.PeerNameResolver.ResolveAsync%2A> Methoden.  
+  
+ Alle Member der Klasse erbt von der Auflistung\<T > Klasse.  Es werden nur die überschriebenen Methoden beschrieben.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PeerNameRecordCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PeerNameRecordCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Net.PeerToPeer.PeerNameRecordCollection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor gibt ein leeres Objekt vom Typ <xref:System.Net.PeerToPeer.PeerNameRecordCollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertItem">
+      <MemberSignature Language="C#" Value="protected override void InsertItem (int index, System.Net.PeerToPeer.PeerNameRecord item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InsertItem(int32 index, class System.Net.PeerToPeer.PeerNameRecord item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PeerNameRecordCollection.InsertItem(System.Int32,System.Net.PeerToPeer.PeerNameRecord)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.Net.PeerToPeer.PeerNameRecord" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des zu ersetzenden Elements.</param>
+        <param name="item">Der Wert für das neue Element am angegebenen Index.</param>
+        <summary>Fügt am angegebenen Index ein <see cref="T:System.Net.PeerToPeer.PeerNameRecord" />-Element in die <see cref="T:System.Net.PeerToPeer.PeerNameRecordCollection" /> ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `Null`Elemente können nicht in eine Auflistung eingefügt werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das bereitgestellte Element darf nicht <see langword="null" /> sein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItem">
+      <MemberSignature Language="C#" Value="protected override void SetItem (int index, System.Net.PeerToPeer.PeerNameRecord item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetItem(int32 index, class System.Net.PeerToPeer.PeerNameRecord item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PeerNameRecordCollection.SetItem(System.Int32,System.Net.PeerToPeer.PeerNameRecord)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.Net.PeerToPeer.PeerNameRecord" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des zu ersetzenden Elements.</param>
+        <param name="item">Der neue Wert für das zu ersetzende Element.</param>
+        <summary>Ersetzt die <see cref="T:System.Net.PeerToPeer.PeerNameRecord" /> am angegebenen Index.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `Null`Elemente sind nicht zulässig.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das bereitgestellte Element darf nicht <see langword="null" /> sein.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

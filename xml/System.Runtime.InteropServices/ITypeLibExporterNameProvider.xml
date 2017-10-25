@@ -1,0 +1,62 @@
+<Type Name="ITypeLibExporterNameProvider" FullName="System.Runtime.InteropServices.ITypeLibExporterNameProvider">
+  <TypeSignature Language="C#" Value="public interface ITypeLibExporterNameProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITypeLibExporterNameProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ITypeLibExporterNameProvider" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("fa1f3615-acb9-486d-9eac-1bef87e36b09")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht die Steuerung der Groß-/Kleinschreibung von Namen, wenn in eine Typbibliothek exportiert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um zu steuern, wie Typen beim Exportieren in eine Typbibliothek benannt werden, muss ein Objekt implementieren diese Schnittstelle sowie <xref:System.Runtime.InteropServices.ITypeLibExporterNotifySink>. Übergeben Sie dann dieses Objekt als letzten Parameter für <xref:System.Runtime.InteropServices.TypeLibConverter.ConvertAssemblyToTypeLib%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetNames">
+      <MemberSignature Language="C#" Value="public string[] GetNames ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string[] GetNames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ITypeLibExporterNameProvider.GetNames" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Liste der Namen, die die Groß-/Kleinschreibung von steuern.</summary>
+        <returns>Ein Array von Zeichenfolgen, wobei jedes Element den Namen eines Typs, um zu steuern, die Groß-/Kleinschreibung für enthält.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Namen in das von dieser Methode zurückgegebene Array müssen eindeutig sein. Wenn Sie ein Namen in das Array von Namen, sogar mit abweichender Groß-/Kleinschreibung, zweimal angezeigt wird hat das erste Vorkommen Vorrang vor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

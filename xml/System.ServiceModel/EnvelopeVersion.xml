@@ -1,0 +1,268 @@
+<Type Name="EnvelopeVersion" FullName="System.ServiceModel.EnvelopeVersion">
+  <TypeSignature Language="C#" Value="public sealed class EnvelopeVersion" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EnvelopeVersion extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.EnvelopeVersion" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Informationen über die SOAP-Version, die zu einer Nachricht und dessen Austausch gehört.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die derzeit verfügbaren SOAP-Versionen sind SOAP 1.1 und SOAP 1.2. Es gibt eine <xref:System.ServiceModel.EnvelopeVersion> für jede dieser Versionen von SOAP, die mit der <xref:System.ServiceModel.EnvelopeVersion.Soap11%2A>-Eigenschaft und der <xref:System.ServiceModel.EnvelopeVersion.Soap12%2A>-Eigenschaft  wiederhergestellt werden kann. Es gibt auch eine <xref:System.ServiceModel.EnvelopeVersion.None%2A>-Nachrichtenversion, die zum Versenden und Empfangen von XML-Nachrichten ohne SOAP-Formatierung verwendet wird. Die jeder Nachrichtenversion zugeordneten Verarbeitungsrollen können mit der <xref:System.ServiceModel.EnvelopeVersion.NextDestinationActorValue%2A>-Eigenschaft und der <xref:System.ServiceModel.EnvelopeVersion.GetUltimateDestinationActorValues%2A>-Methode wiederhergestellt werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird der Zugriff auf die Methoden und Eigenschaften von <xref:System.ServiceModel.EnvelopeVersion> veranschaulicht.  
+  
+ [!code-csharp[S_UEEnvelopeVersion#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueenvelopeversion/cs/program.cs#0)]
+ [!code-vb[S_UEEnvelopeVersion#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ueenvelopeversion/vb/module1.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetUltimateDestinationActorValues">
+      <MemberSignature Language="C#" Value="public string[] GetUltimateDestinationActorValues ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string[] GetUltimateDestinationActorValues() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EnvelopeVersion.GetUltimateDestinationActorValues" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Zeichenfolge ab, die den URI-Namen für die SOAP-Rolle enthält, die der aktuellen Nachrichtenversion für das letzte Ziel zugeordnet ist.</summary>
+        <returns>Eine leere Zeichenfolge, wenn SOAP1.1 verwendet wird; eine Zeichenfolge, die http://www.w3.org/2003/05/soap-envelope/role/ultimateReceiver enthält, wenn SOAP1.2 verwendet wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der letzte Empfänger ist `null`, wenn <xref:System.ServiceModel.EnvelopeVersion.None%2A> angegeben wurde.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UEEnvelopeVersion#5](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueenvelopeversion/cs/program.cs#5)]
+ [!code-vb[S_UEEnvelopeVersion#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ueenvelopeversion/vb/module1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextDestinationActorValue">
+      <MemberSignature Language="C#" Value="public string NextDestinationActorValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NextDestinationActorValue" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.EnvelopeVersion.NextDestinationActorValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge ab, die den URI-Namen für die SOAP-Rolle enthält, die der aktuellen Nachrichtenversion für das nächste Ziel zugeordnet ist.</summary>
+        <value>Eine Zeichenfolge, die http://schemas.xmlsoap.org/soap/actor/next enthält, wenn SOAP1.1 verwendet wird; eine Zeichenfolge, die http://www.w3.org/2003/05/soap-envelope/role/next enthält, wenn SOAP1.2 verwendet wird, und eine leere Zeichenfolge, wenn die Nachrichtenversion NONE ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_UEEnvelopeVersion#4](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueenvelopeversion/cs/program.cs#4)]
+ [!code-vb[S_UEEnvelopeVersion#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ueenvelopeversion/vb/module1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.EnvelopeVersion None { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.EnvelopeVersion None" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.EnvelopeVersion.None" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EnvelopeVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Umschlagversion ohne SOAP-Version ab.</summary>
+        <value>Die Umschlagversion ohne eine SOAP-Formatierung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.ServiceModel.EnvelopeVersion.None%2A>-Nachrichtenversion verwendet wird, wird ein SOAP-Umschlag nicht geschrieben und die Nachricht übermittelt den Inhalt des Textes. Dadurch wird die Kommunikation eines [!INCLUDE[indigo1](~/includes/indigo1-md.md)]-Kanals mit einem Endpunkt aktiviert, der XML ohne SOAP-Formatierung erwartet. Die XML-Nutzlast befindet sich im Nachrichtentext und wird als einziges ausgegeben, wenn sie auf den Encoder trifft.  
+  
+ Wenn der XML-Teil empfangen wird, wird er zur Weitergabe an einen höheren Kanalstapel in einer Nachricht eingehüllt. Die erforderlichen Header werden eingefügt und die Nachricht wird verarbeitet, als wäre es eine SOAP-Nachricht.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UEEnvelopeVersion#3](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueenvelopeversion/cs/program.cs#3)]
+ [!code-vb[S_UEEnvelopeVersion#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ueenvelopeversion/vb/module1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Soap11">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.EnvelopeVersion Soap11 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.EnvelopeVersion Soap11" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.EnvelopeVersion.Soap11" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EnvelopeVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die SOAP1.1-Umschlagversion ab.</summary>
+        <value>Die SOAP1. 1 <see cref="T:System.ServiceModel.EnvelopeVersion" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[crdefault](~/includes/crdefault-md.md)]Das Schema für [SOAP 1.1](http://go.microsoft.com/fwlink/?LinkID=96641).  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UEEnvelopeVersion#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueenvelopeversion/cs/program.cs#1)]
+ [!code-vb[S_UEEnvelopeVersion#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ueenvelopeversion/vb/module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Soap12">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.EnvelopeVersion Soap12 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.EnvelopeVersion Soap12" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.EnvelopeVersion.Soap12" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EnvelopeVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die SOAP1.2-Umschlagversion ab.</summary>
+        <value>Die SOAP1. 2 <see cref="T:System.ServiceModel.EnvelopeVersion" /> Objekt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[crdefault](~/includes/crdefault-md.md)]Das Schema für [SOAP 1.2](http://go.microsoft.com/fwlink/?LinkID=96642).  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UEEnvelopeVersion#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueenvelopeversion/cs/program.cs#2)]
+ [!code-vb[S_UEEnvelopeVersion#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ueenvelopeversion/vb/module1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EnvelopeVersion.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Zeichenfolge ab, die die aktuelle Umschlagversion darstellt.</summary>
+        <returns>Die Zeichenfolgendarstellung der aktuellen Umschlagversion.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt eine kulturabhängige lesbare Zeichenfolge zurück.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UEEnvelopeVersion#6](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueenvelopeversion/cs/program.cs#6)]
+ [!code-vb[S_UEEnvelopeVersion#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ueenvelopeversion/vb/module1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

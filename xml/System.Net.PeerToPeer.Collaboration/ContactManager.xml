@@ -1,0 +1,666 @@
+<Type Name="ContactManager" FullName="System.Net.PeerToPeer.Collaboration.ContactManager">
+  <TypeSignature Language="C#" Value="public sealed class ContactManager : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ContactManager extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Net.PeerToPeer.Collaboration.ContactManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Auflistung von <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> -Objekte, die in einer Windows-Adressbuch – beibehalten werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse verfügt über keine öffentlichen Konstruktoren, da durch ein Verweis darauf zurückgegeben wird die <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration> Klasse.  
+  
+ Behandeln von Bücher, die zugeordnet sind <xref:System.Net.PeerToPeer.Collaboration.PeerContact> Management der Hostpeer-und remote Peer zugeordnet sind.  Beide Computer kann mit anderen Peers zusammenarbeiten. Wenn ein Peer Remotepeers, aber nicht auf dem Hostpeer lokal ist, es kann hinzugefügt werden die <xref:System.Net.PeerToPeer.Collaboration.ContactManager> des Hostpeers. Bestimmte Vorgänge in der <xref:System.Net.PeerToPeer.Collaboration.ContactManager> Klasse, z. B. <xref:System.Net.PeerToPeer.Collaboration.ContactManager.AddContact%2A> und <xref:System.Net.PeerToPeer.Collaboration.ContactManager.DeleteContact%2A>, Korrelieren, um die zugehörigen Vorgänge, die für das Windows-Adressbuch des Remotepeers ausgeführt wird.  
+  
+ Der Hostpeer hat Zugriff auf diesen persistenten Speicher für <xref:System.Net.PeerToPeer.Collaboration.PeerContact> Informationen, die mit den Anwendungen verknüpft werden kann in dem ein Peer teilnehmen möchte. Ein <xref:System.Net.PeerToPeer.Collaboration.PeerApplication> können sich selbst als Benutzer der Identifizieren einer <xref:System.Net.PeerToPeer.Collaboration.ContactManager> persistenten Speicher auf einem Computer.  
+  
+   
+  
+## Examples  
+ Der folgende Beispielcode veranschaulicht das Auflisten einer <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe> und fügen Sie es als ein <xref:System.Net.PeerToPeer.Collaboration.PeerContact> der lokalen <xref:System.Net.PeerToPeer.Collaboration.ContactManager>:  
+  
+ [!code-csharp[NCLPNRPContacts#3](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLPNRPContacts/CS/NCLPNRPContacts.cs#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddContact">
+      <MemberSignature Language="C#" Value="public void AddContact (System.Net.PeerToPeer.Collaboration.PeerContact peerContact);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddContact(class System.Net.PeerToPeer.Collaboration.PeerContact peerContact) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.ContactManager.AddContact(System.Net.PeerToPeer.Collaboration.PeerContact)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="peerContact" Type="System.Net.PeerToPeer.Collaboration.PeerContact" />
+      </Parameters>
+      <Docs>
+        <param name="peerContact">Die <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />-Instanz, die <see cref="T:System.Net.PeerToPeer.Collaboration.ContactManager" /> hinzugefügt werden soll.</param>
+        <summary>Fügt den angegebenen <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> dem <see cref="T:System.Net.PeerToPeer.Collaboration.ContactManager" /> des lokalen Peers hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufrufen dieser Methode erfordert eine <xref:System.Security.Permissions.PermissionState> von <xref:System.Security.Permissions.PermissionState.Unrestricted>.  
+  
+   
+  
+## Examples  
+ Der folgende Beispielcode veranschaulicht das Auflisten einer <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe> und fügen Sie es als ein <xref:System.Net.PeerToPeer.Collaboration.PeerContact> der lokalen <xref:System.Net.PeerToPeer.Collaboration.ContactManager>:  
+  
+ [!code-csharp[NCLPNRPContacts#3](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLPNRPContacts/CS/NCLPNRPContacts.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der von <paramref name="peerContact" /> angegebene <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> ist bereits vorhanden.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="peerContact" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Der angegebene <paramref name="peerContact" /> wurde verworfen.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">-   Der vom <paramref name="peerContact" /> angegebene <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> konnte nicht aus dem serialisierten XML-Format wiederhergestellt werden.  
+  
+-   Der lokale Peer kann der <see cref="T:System.Net.PeerToPeer.Collaboration.ContactManager" />-Instanz, die erstellt wird, nicht hinzugefügt werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Net.PeerToPeer.Collaboration.ApplicationChangedEventArgs&gt; ApplicationChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Net.PeerToPeer.Collaboration.ApplicationChangedEventArgs&gt; ApplicationChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Net.PeerToPeer.Collaboration.ContactManager.ApplicationChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>add: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>remove: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Net.PeerToPeer.Collaboration.ApplicationChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wird ausgelöst, wenn eine <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" /> zugeordnet eine <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> in der <see cref="T:System.Net.PeerToPeer.Collaboration.ContactManager" /> hat sich geändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt nur Anwendungen, die von Kontakten des aufrufenden Peers veröffentlicht.  
+  
+ Bevor dieses Ereignis ausgelöst werden kann, muss der aktuelle Benutzer des Remotepeers die Zusammenarbeit des Remotepeers Abonnieren von Ereignissen. Abonnement erfolgt über die <xref:System.Net.PeerToPeer.Collaboration.PeerContact.Subscribe%2A> Methode.  
+  
+ Dieses Ereignis erfordert eine <xref:System.Security.Permissions.PermissionState> von <xref:System.Security.Permissions.PermissionState.Unrestricted>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Das aufrufende Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateContact">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.PeerContact CreateContact (System.Net.PeerToPeer.Collaboration.PeerNearMe peerNearMe);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.PeerToPeer.Collaboration.PeerContact CreateContact(class System.Net.PeerToPeer.Collaboration.PeerNearMe peerNearMe) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.ContactManager.CreateContact(System.Net.PeerToPeer.Collaboration.PeerNearMe)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerContact</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="peerNearMe" Type="System.Net.PeerToPeer.Collaboration.PeerNearMe" />
+      </Parameters>
+      <Docs>
+        <param name="peerNearMe">Der <see cref="T:System.Net.PeerToPeer.Collaboration.PeerNearMe" />, der der neuen <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />-Instanz zugeordnet werden soll.</param>
+        <summary>Erstellt eine <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> Instanz für den angegebenen <see cref="T:System.Net.PeerToPeer.Collaboration.PeerNearMe" /> Objekt.</summary>
+        <returns>Ein <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> Instanz für den angegebenen <see cref="T:System.Net.PeerToPeer.Collaboration.PeerNearMe" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufrufen dieser Methode erfordert eine <xref:System.Security.Permissions.PermissionState> von <xref:System.Security.Permissions.PermissionState.Unrestricted>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="peerNearMe" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Dieses <see cref="T:System.Net.PeerToPeer.Collaboration.PeerNearMe" />-Objekt wurde verworfen.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">-   Der Kontakte-Manager des Remotepeers übergebene <paramref name="peerNearMe" /> konnte nicht erreicht werden, oder der Kontakt konnte nicht daraus gelesen werden.  
+  
+-   Die <see cref="T:System.Net.PeerToPeer.Collaboration.PeerNearMe" /> übergebene Instanz <paramref name="peerNearMe" /> sind keine Endpunkte festgelegt sein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateContactAsync">
+      <MemberSignature Language="C#" Value="public void CreateContactAsync (System.Net.PeerToPeer.Collaboration.PeerNearMe peerNearMe, object userToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CreateContactAsync(class System.Net.PeerToPeer.Collaboration.PeerNearMe peerNearMe, object userToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.ContactManager.CreateContactAsync(System.Net.PeerToPeer.Collaboration.PeerNearMe,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="peerNearMe" Type="System.Net.PeerToPeer.Collaboration.PeerNearMe" />
+        <Parameter Name="userToken" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="peerNearMe">Der <see cref="T:System.Net.PeerToPeer.Collaboration.PeerNearMe" />, der der neuen <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />-Instanz zugeordnet werden soll.</param>
+        <param name="userToken">Ein benutzerdefiniertes <see cref="T:System.Object" />, das Informationen über den <see cref="M:System.Net.PeerToPeer.Collaboration.ContactManager.CreateContactAsync(System.Net.PeerToPeer.Collaboration.PeerNearMe,System.Object)" />-Vorgang enthält. Es wird zur Identifizierung dem Rückruf des asynchronen Vorgangs übergeben.</param>
+        <summary>Erstellt eine Kontaktinstanz für das angegebene <see cref="T:System.Net.PeerToPeer.Collaboration.PeerNearMe" />-Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufrufen dieser Methode erfordert eine <xref:System.Security.Permissions.PermissionState> von <xref:System.Security.Permissions.PermissionState.Unrestricted>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="userToken" /> ist bereits vorhanden und wird verwendet.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="peerNearMe" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das <see cref="T:System.Net.PeerToPeer.Collaboration.PeerNearMe" />-Objekt wurde verworfen.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">-   Für die angegebene <see cref="T:System.Net.PeerToPeer.Collaboration.PeerNearMe" />-Instanz sind keine Endpunkte festgelegt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateContactCompleted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Net.PeerToPeer.Collaboration.CreateContactCompletedEventArgs&gt; CreateContactCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Net.PeerToPeer.Collaboration.CreateContactCompletedEventArgs&gt; CreateContactCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Net.PeerToPeer.Collaboration.ContactManager.CreateContactCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Net.PeerToPeer.Collaboration.CreateContactCompletedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wird ausgelöst, wenn eine <see cref="M:System.Net.PeerToPeer.Collaboration.ContactManager.CreateContact(System.Net.PeerToPeer.Collaboration.PeerNearMe)" /> -Methode abgeschlossen wurde.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Ereignis wird ausgelöst, wenn die <xref:System.Net.PeerToPeer.Collaboration.ContactManager.CreateContactAsync%2A> -Methode abgeschlossen wurde. Es wird auch ausgelöst, wenn die <xref:System.Net.PeerToPeer.Collaboration.ContactManager> Vorgang Fehler abgeschlossen oder abgebrochen wird.  
+  
+ Dieses Ereignis erfordert eine <xref:System.Security.Permissions.PermissionState> von <xref:System.Security.Permissions.PermissionState.Unrestricted>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Das aufrufende Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteContact">
+      <MemberSignature Language="C#" Value="public void DeleteContact (System.Net.PeerToPeer.Collaboration.PeerContact peerContact);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DeleteContact(class System.Net.PeerToPeer.Collaboration.PeerContact peerContact) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.ContactManager.DeleteContact(System.Net.PeerToPeer.Collaboration.PeerContact)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="peerContact" Type="System.Net.PeerToPeer.Collaboration.PeerContact" />
+      </Parameters>
+      <Docs>
+        <param name="peerContact">Der <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />, der aus der <see cref="T:System.Net.PeerToPeer.Collaboration.ContactManager" /> entfernt werden soll.</param>
+        <summary>Entfernt den angegebenen <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> aus dem <see cref="T:System.Net.PeerToPeer.Collaboration.ContactManager" /> des lokalen Peers.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufrufen dieser Methode erfordert eine <xref:System.Security.Permissions.PermissionState> von <xref:System.Security.Permissions.PermissionState.Unrestricted>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Löschen einer <xref:System.Net.PeerToPeer.Collaboration.PeerContact> vom lokalen <xref:System.Net.PeerToPeer.Collaboration.ContactManager>:  
+  
+ [!code-csharp[NCLPNRPContacts#6](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLPNRPContacts/CS/NCLPNRPContacts.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="peerContact" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteContact">
+      <MemberSignature Language="C#" Value="public void DeleteContact (System.Net.PeerToPeer.PeerName peerName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DeleteContact(class System.Net.PeerToPeer.PeerName peerName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.ContactManager.DeleteContact(System.Net.PeerToPeer.PeerName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="peerName" Type="System.Net.PeerToPeer.PeerName" />
+      </Parameters>
+      <Docs>
+        <param name="peerName">Der <see cref="P:System.Net.PeerToPeer.Collaboration.PeerContact.PeerName" />, der dem <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> zugeordnet ist, der aus dem <see cref="T:System.Net.PeerToPeer.Collaboration.ContactManager" /> entfernt werden soll.</param>
+        <summary>Entfernt den <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />, der dem angegebenen <see cref="P:System.Net.PeerToPeer.Collaboration.PeerContact.PeerName" /> aus dem <see cref="T:System.Net.PeerToPeer.Collaboration.ContactManager" /> des lokalen Peers zugeordnet ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufrufen dieser Methode erfordert eine <xref:System.Security.Permissions.PermissionState> von <xref:System.Security.Permissions.PermissionState.Unrestricted>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Löschen einer <xref:System.Net.PeerToPeer.Collaboration.PeerContact> vom lokalen <xref:System.Net.PeerToPeer.Collaboration.ContactManager>:  
+  
+ [!code-csharp[NCLPNRPContacts#6](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLPNRPContacts/CS/NCLPNRPContacts.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />, der dem <see cref="P:System.Net.PeerToPeer.Collaboration.PeerContact.PeerName" /> zugeordnet ist, wurde im Contact Manager nicht gefunden.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="peerName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Dieses Objekt wurde zuvor von <see cref="M:System.Net.PeerToPeer.Collaboration.ContactManager.Dispose" /> aufgerufen und kann nicht für zukünftige Vorgänge verwendet werden.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException"><see cref="Overload:System.Net.PeerToPeer.Collaboration.ContactManager.DeleteContact" />-Vorgang kann nicht abgeschlossen werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.ContactManager.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle vom <see cref="T:System.Net.PeerToPeer.Collaboration.ContactManager" />-Objekt verwendeten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContact">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.PeerContact GetContact (System.Net.PeerToPeer.PeerName peerName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.PeerToPeer.Collaboration.PeerContact GetContact(class System.Net.PeerToPeer.PeerName peerName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.ContactManager.GetContact(System.Net.PeerToPeer.PeerName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerContact</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="peerName" Type="System.Net.PeerToPeer.PeerName" />
+      </Parameters>
+      <Docs>
+        <param name="peerName">Die <see cref="P:System.Net.PeerToPeer.Collaboration.PeerContact.PeerName" /> zugeordneten der <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> abgerufen werden sollen.</param>
+        <summary>Gibt die <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> für das angegebene Objekt <see cref="P:System.Net.PeerToPeer.Collaboration.PeerContact.PeerName" />.</summary>
+        <returns>
+          <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />die angegebene zugeordnete <see cref="P:System.Net.PeerToPeer.Collaboration.PeerContact.PeerName" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufrufen dieser Methode erfordert eine <xref:System.Security.Permissions.PermissionState> von <xref:System.Security.Permissions.PermissionState.Unrestricted>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="peerName" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Dieses <see cref="P:System.Net.PeerToPeer.Collaboration.PeerContact.PeerName" />-Objekt wurde verworfen.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">-   Wenden Sie sich an nicht gefunden wird, <see cref="T:System.Net.PeerToPeer.Collaboration.ContactManager" />.  
+  
+-   Kann nicht zum Abrufen des Kontakts für die angegebene <see cref="P:System.Net.PeerToPeer.Collaboration.PeerContact.PeerName" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContacts">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.PeerContactCollection GetContacts ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.PeerToPeer.Collaboration.PeerContactCollection GetContacts() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.ContactManager.GetContacts" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerContactCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContactCollection" /> , enthält alle Kontakte in der <see cref="T:System.Net.PeerToPeer.Collaboration.ContactManager" /> Remotepeers.</summary>
+        <returns>
+          <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContactCollection" />enthält alle Kontakte in der <see cref="T:System.Net.PeerToPeer.Collaboration.ContactManager" /> Remotepeers.  
+  
+ Wenn der Kontakte-Manager leer ist, wird eine Auflistung der Größe 0 (null) zurückgegeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufrufen dieser Methode erfordert eine <xref:System.Security.Permissions.PermissionState> von <xref:System.Security.Permissions.PermissionState.Unrestricted>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Abrufen einer <xref:System.Net.PeerToPeer.Collaboration.PeerContactCollection> , die die Kontakte in der lokalen darstellt <xref:System.Net.PeerToPeer.Collaboration.ContactManager>:  
+  
+ [!code-csharp[NCLPNRPContacts#3](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLPNRPContacts/CS/NCLPNRPContacts.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Dieses <see cref="T:System.Net.PeerToPeer.Collaboration.ContactManager" />-Objekt wurde verworfen.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">Ein ungültiger Wert wurde zurückgegeben, wenn diese Methode hat versucht, Auflisten von einem <see cref="T:System.Net.PeerToPeer.Collaboration.Peer" /> wenden Sie sich in dieser Peer an Auflistung.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalContact">
+      <MemberSignature Language="C#" Value="public static System.Net.PeerToPeer.Collaboration.PeerContact LocalContact { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Net.PeerToPeer.Collaboration.PeerContact LocalContact" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.ContactManager.LocalContact" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerContact</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> den lokalen Peer darstellt.</summary>
+        <value>Die <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> Instanz, die den lokalen Peer darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sofern nicht angegeben, wird der Standardwert für diese Eigenschaft ist `null`.  
+  
+ Verwenden diese Eigenschaft erfordert einen <xref:System.Security.Permissions.PermissionState> von <xref:System.Security.Permissions.PermissionState.Unrestricted>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NameChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Net.PeerToPeer.Collaboration.NameChangedEventArgs&gt; NameChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Net.PeerToPeer.Collaboration.NameChangedEventArgs&gt; NameChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Net.PeerToPeer.Collaboration.ContactManager.NameChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>add: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>remove: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Net.PeerToPeer.Collaboration.NameChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wird ausgelöst, wenn die <see cref="P:System.Net.PeerToPeer.Collaboration.PeerContact.PeerName" /> zugeordnet eine <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> in der <see cref="T:System.Net.PeerToPeer.Collaboration.ContactManager" /> hat sich geändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zugeordneten Rückrufs stellt einen Verweis auf das neue <xref:System.Net.PeerToPeer.Collaboration.PeerContact.PeerName%2A>.  
+  
+ Dieses Ereignis erfordert eine <xref:System.Security.Permissions.PermissionState> von <xref:System.Security.Permissions.PermissionState.Unrestricted>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Das aufrufende Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Net.PeerToPeer.Collaboration.ObjectChangedEventArgs&gt; ObjectChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Net.PeerToPeer.Collaboration.ObjectChangedEventArgs&gt; ObjectChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Net.PeerToPeer.Collaboration.ContactManager.ObjectChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>add: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>remove: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Net.PeerToPeer.Collaboration.ObjectChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ausgelöst, wenn ein Objekt innerhalb eines Kontakts registrierten <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> Objekte wurde geändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bevor dieses Ereignis ausgelöst werden kann, muss der aktuelle Benutzer des Remotepeers die Zusammenarbeit des Hostpeers, der Abonnieren von Ereignissen. Abonnement erfolgt über die PeerContact- <xref:System.Net.PeerToPeer.Collaboration.PeerContact.Subscribe%2A> Methoden.  
+  
+ Dieses Ereignis erfordert eine <xref:System.Security.Permissions.PermissionState> von <xref:System.Security.Permissions.PermissionState.Unrestricted>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Das <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" />-Objekt wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PresenceChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Net.PeerToPeer.Collaboration.PresenceChangedEventArgs&gt; PresenceChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Net.PeerToPeer.Collaboration.PresenceChangedEventArgs&gt; PresenceChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Net.PeerToPeer.Collaboration.ContactManager.PresenceChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>add: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>remove: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Net.PeerToPeer.Collaboration.PresenceChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ausgelöst, wenn der Status vorhanden ist, der eine <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> in der <see cref="T:System.Net.PeerToPeer.Collaboration.ContactManager" /> hat sich geändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bevor dieses Ereignis ausgelöst werden kann, muss der aktuelle Benutzer des Remotepeers die Zusammenarbeit des Hostpeers, der Abonnieren von Ereignissen. Abonnement erfolgt über die <xref:System.Net.PeerToPeer.Collaboration.PeerContact.Subscribe%2A> Methode.  
+  
+ Dieses Ereignis erfordert eine <xref:System.Security.Permissions.PermissionState> von <xref:System.Security.Permissions.PermissionState.Unrestricted>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Das <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />-Objekt wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SubscriptionListChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Net.PeerToPeer.Collaboration.SubscriptionListChangedEventArgs&gt; SubscriptionListChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Net.PeerToPeer.Collaboration.SubscriptionListChangedEventArgs&gt; SubscriptionListChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Net.PeerToPeer.Collaboration.ContactManager.SubscriptionListChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>add: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>remove: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Net.PeerToPeer.Collaboration.SubscriptionListChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wird ausgelöst, wenn die Liste der Kontakte abonnierte ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da Abonnements pro Benutzer und nicht pro Prozess- oder Anwendungsdomäne, eine andere Anwendung, die auf dem Host kann auch dazu führen, dass dieses Ereignis ausgelöst werden soll.  
+  
+ Dieses Ereignis erfordert eine <xref:System.Security.Permissions.PermissionState> von <xref:System.Security.Permissions.PermissionState.Unrestricted>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SynchronizingObject">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.ISynchronizeInvoke SynchronizingObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.ISynchronizeInvoke SynchronizingObject" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.ContactManager.SynchronizingObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Description("SynchronizingObject")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ISynchronizeInvoke</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wenn dieser Eigenschaftswert festgelegt ist, müssen alle Ereignisse, die nicht als Ergebnis eines asynchronen Vorgangs ausgelöst zugeordneten Ereignishandler wieder aufgerufen, für den Thread, die die spezifische erstellt <see cref="P:System.Net.PeerToPeer.Collaboration.PeerEndPoint.SynchronizingObject" />.</summary>
+        <value>Objekt, das implementiert die <see cref="T:System.ComponentModel.ISynchronizeInvoke" /> Schnittstelle, und von Instanzen dieses Typs verwendet wird, die für die Ereignis-Handler-Synchronisierung für den Thread, der Sie erstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardwert für diese Eigenschaft ist `null`, gibt an, dass alle Ereignishandler, auf ein System Thread des Threadpools aufgerufen werden.  
+  
+ Diese Eigenschaft wird in der Regel wie z. B. ein Benutzeroberflächenelement festgelegt eine <xref:System.Windows.Forms.Form> Instanz.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Das aufrufende Objekt wurde freigegeben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateContact">
+      <MemberSignature Language="C#" Value="public void UpdateContact (System.Net.PeerToPeer.Collaboration.PeerContact peerContact);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UpdateContact(class System.Net.PeerToPeer.Collaboration.PeerContact peerContact) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.ContactManager.UpdateContact(System.Net.PeerToPeer.Collaboration.PeerContact)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="peerContact" Type="System.Net.PeerToPeer.Collaboration.PeerContact" />
+      </Parameters>
+      <Docs>
+        <param name="peerContact">Der <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> muss aktualisiert werden.</param>
+        <summary>Aktualisiert die dem <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> zugeordneten Daten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufrufen dieser Methode erfordert eine <xref:System.Security.Permissions.PermissionState> von <xref:System.Security.Permissions.PermissionState.Unrestricted>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">-   <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> wurde in <see cref="T:System.Net.PeerToPeer.Collaboration.ContactManager" /> nicht gefunden.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="peerContact" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Dieses <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />-Objekt wurde verworfen.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException"><see cref="M:System.Net.PeerToPeer.Collaboration.ContactManager.UpdateContact(System.Net.PeerToPeer.Collaboration.PeerContact)" />-Vorgang kann nicht abgeschlossen werden.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

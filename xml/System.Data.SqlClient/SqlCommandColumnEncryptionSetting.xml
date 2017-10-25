@@ -1,0 +1,97 @@
+<Type Name="SqlCommandColumnEncryptionSetting" FullName="System.Data.SqlClient.SqlCommandColumnEncryptionSetting">
+  <TypeSignature Language="C#" Value="public enum SqlCommandColumnEncryptionSetting" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SqlCommandColumnEncryptionSetting extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.SqlClient.SqlCommandColumnEncryptionSetting" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wie Daten beim Lesen und Schreiben von verschlüsselten Spalten gesendet und empfangen werden. Je nach spezifischer Abfrage können Leistungseinbußen möglicherweise durch Umgehen der Verarbeitung des Treibers für die grundsätzliche Verschlüsselung verringert werden, wenn nicht verschlüsselte Spalten verwendet werden. Beachten Sie, dass diese Einstellungen nicht dazu verwendet werden können, um die Verschlüsselung zu umgehen und Zugriff auf Klartextdaten zu erhalten. Weitere Informationen finden Sie unter [Always Encrypted (Datenbankmodul)](https://msdn.microsoft.com/library/mt163865.aspx)</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+-   Wenn Always Encrypted für eine Abfrage deaktiviert ist, und die Abfrage enthält Parameter, die verschlüsselte (Parameter) sein, die den verschlüsselten Spalten entsprechen müssen, wird die Abfrage fehl.  
+  
+-   Wenn Always Encrypted für eine Abfrage deaktiviert ist, und die Abfrage gibt Ergebnisse aus den verschlüsselten Spalten zurück, gibt die Abfrage verschlüsselte Werte zurück. Die verschlüsselten Werte müssen Varbinary-Datentyp.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Disabled">
+      <MemberSignature Language="C#" Value="Disabled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlClient.SqlCommandColumnEncryptionSetting Disabled = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlClient.SqlCommandColumnEncryptionSetting.Disabled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlCommandColumnEncryptionSetting</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Deaktiviert die grundsätzliche Verschlüsselung für die Abfrage.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="Enabled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlClient.SqlCommandColumnEncryptionSetting Enabled = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlClient.SqlCommandColumnEncryptionSetting.Enabled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlCommandColumnEncryptionSetting</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Aktiviert die grundsätzliche Verschlüsselung für die Abfrage.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ResultSetOnly">
+      <MemberSignature Language="C#" Value="ResultSetOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlClient.SqlCommandColumnEncryptionSetting ResultSetOnly = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlClient.SqlCommandColumnEncryptionSetting.ResultSetOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlCommandColumnEncryptionSetting</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass nur die Ergebnisse des Befehls von der Routine für die grundsätzliche Verschlüsselung im Treiber verarbeitet werden sollen. Verwenden Sie diesen Wert, wenn der Befehl keine Parameter aufweist, die eine Verschlüsselung erfordern.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UseConnectionSetting">
+      <MemberSignature Language="C#" Value="UseConnectionSetting" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlClient.SqlCommandColumnEncryptionSetting UseConnectionSetting = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlClient.SqlCommandColumnEncryptionSetting.UseConnectionSetting" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlCommandColumnEncryptionSetting</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass der Befehl standardmäßig die Einstellung für die grundsätzliche Verschlüsselung in der Verbindungszeichenfolge verwenden sollte.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

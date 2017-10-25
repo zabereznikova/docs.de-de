@@ -1,0 +1,212 @@
+<Type Name="AccessControlList" FullName="System.Messaging.AccessControlList">
+  <TypeSignature Language="C#" Value="public class AccessControlList : System.Collections.CollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AccessControlList extends System.Collections.CollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.AccessControlList" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.CollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält eine Liste von Zugriffssteuerungseinträgen, die Zugriffsrechte für einen oder mehrere Vertrauensnehmer angeben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Messaging.AccessControlList> Klasse, um mehrere Vertrauensnehmer und Zugriffsrechte mit einem einzigen Aufruf hinzugefügt werden soll, beim Festlegen von Berechtigungen. Erstellen Sie die Zugriffssteuerungsliste, indem Sie einen Zugriffssteuerungseintrag für jede Vertrauensnehmer und Zugriffsrechte Kombination hinzufügen.  
+  
+ Ein <xref:System.Messaging.AccessControlList> gibt die Vertrauensnehmer an, die zugelassen oder verweigert den Zugriff auf ein sicherungsfähiges Objekt. Wenn ein Prozess versucht, ein sicherungsfähiges Objekt zuzugreifen, überprüft das System die Zugriffssteuerungseinträge in der Zugriffssteuerungsliste des Objekts, um festzustellen, ob Zugriff darauf gewähren. Wenn das Objekt keinen Access Control List, gewährt das System Vollzugriff auf alle Elemente aus. Wenn die Zugriffssteuerungsliste für das Objekt keine Einträge enthält, in das System alle Zugriffsversuche auf das Objekt verweigert.  
+  
+ Das System überprüft die Zugriffssteuerungseinträge nacheinander, bis er findet eine oder mehrere, die die angeforderten Zugriffsrechte zu ermöglichen oder keines der angeforderten Zugriffsrechte verweigert wird.  
+  
+ Das System untersucht jede <xref:System.Messaging.AccessControlEntry> nacheinander bis eines der folgenden Ereignisse eintritt:  
+  
+-   Ein Zugriff verweigert <xref:System.Messaging.AccessControlEntry> keines der angeforderten Zugriffsrechte auf einen der im Zugriffstoken des Threads aufgelisteten Vertrauensnehmer explizit verweigert.  
+  
+-   Eine oder mehrere-Zugriff <xref:System.Messaging.AccessControlEntry> Element explizit im Zugriffstoken des Threads aufgelisteten Vertrauensnehmer der angeforderten Zugriffsrechte gewähren.  
+  
+-   Alle <xref:System.Messaging.AccessControlEntry> Elemente überprüft wurden, und es ist noch mindestens ein angefordertes Zugriffsrecht, die nicht explizit hat in diesem Fall wird der Zugriff implizit verweigert zugelassen wurde,.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AccessControlList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.AccessControlList.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Messaging.AccessControlList" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Messaging.AccessControlEntry entry);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Messaging.AccessControlEntry entry) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.AccessControlList.Add(System.Messaging.AccessControlEntry)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entry" Type="System.Messaging.AccessControlEntry" />
+      </Parameters>
+      <Docs>
+        <param name="entry">Ein <see cref="T:System.Messaging.AccessControlEntry" /> , an das Ende der Zugriffssteuerungsliste angefügt werden soll.</param>
+        <summary>Fügt einen Zugriffssteuerungseintrag an die Zugriffssteuerungsliste an.</summary>
+        <returns>Die Position, an der der neue Zugriffssteuerungseintrag eingefügt wurde.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="entry" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Messaging.AccessControlEntry entry);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Messaging.AccessControlEntry entry) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.AccessControlList.Contains(System.Messaging.AccessControlEntry)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entry" Type="System.Messaging.AccessControlEntry" />
+      </Parameters>
+      <Docs>
+        <param name="entry">Die <see cref="T:System.Messaging.AccessControlEntry" /> in der Zugriffssteuerungsliste gesucht werden soll.</param>
+        <summary>Bestimmt, ob die Zugriffssteuerungsliste einen bestimmten Zugriffssteuerungseintrag enthält.</summary>
+        <returns>
+          <see langword="true" />Wenn der Eintrag in der Zugriffssteuerungsliste gefunden wurde. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Messaging.AccessControlEntry[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Messaging.AccessControlEntry[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.AccessControlList.CopyTo(System.Messaging.AccessControlEntry[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Messaging.AccessControlEntry[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Ein Array vom Typ <see cref="T:System.Messaging.AccessControlEntry" /> , die die Zugriffssteuerungslisteneinträge kopiert werden. Für das Array muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="index">Der Index im Array, ab dem kopiert die Einträge des Access Control List.</param>
+        <summary>Kopiert die gesamte Zugriffssteuerungsliste in ein kompatibles eindimensionales Array des Zugriffs Zugriffssteuerungseinträge, beginnend am angegebenen Index des Zielarrays.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="array" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="index" /> Parameter ist kleiner als 0 (null).</exception>
+        <exception cref="T:System.ArgumentException">Die <paramref name="index" /> Parameter ist größer als oder gleich der Länge der <paramref name="array" /> Parameter.  
+  
+ - oder -   
+  
+ Die Anzahl der Elemente in der Zugriffssteuerungsliste für die Quelle ist größer als der verfügbare Platz vom <paramref name="index" /> bis zum Ende des Zielarrays von Zugriffssteuerungseinträgen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Messaging.AccessControlEntry entry);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Messaging.AccessControlEntry entry) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.AccessControlList.IndexOf(System.Messaging.AccessControlEntry)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entry" Type="System.Messaging.AccessControlEntry" />
+      </Parameters>
+      <Docs>
+        <param name="entry">Die <see cref="T:System.Messaging.AccessControlEntry" /> in der Zugriffssteuerungsliste gesucht werden soll.</param>
+        <summary>Bestimmt den bestimmten Index des Zugriffssteuerungseintrags in der Zugriffssteuerungsliste.</summary>
+        <returns>Der Index des Eintrags, wenn sie in der Liste gefunden wurde; andernfalls -1</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Messaging.AccessControlEntry entry);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Messaging.AccessControlEntry entry) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.AccessControlList.Insert(System.Int32,System.Messaging.AccessControlEntry)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="entry" Type="System.Messaging.AccessControlEntry" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem der Zugriffssteuerungseintrag eingefügt werden soll.</param>
+        <param name="entry">Ein <see cref="T:System.Messaging.AccessControlEntry" /> zum Einfügen in die Zugriffssteuerungsliste.</param>
+        <summary>Fügt einen Zugriffssteuerungseintrag in der Zugriffssteuerungsliste an der angegebenen Position ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `index` Parameter entspricht der Anzahl der Elemente in der Zugriffssteuerungsliste, und klicken Sie dann der Eintrag am Ende angefügt ist. Andernfalls die Einträge nach der Einfügemarke nach unten zu verschieben, in der Liste das neue Element aufzunehmen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Die <paramref name="index" /> Parameter ist kein gültiger Index in diese Zugriffssteuerungsliste.</exception>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="entry" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Messaging.AccessControlEntry entry);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Messaging.AccessControlEntry entry) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.AccessControlList.Remove(System.Messaging.AccessControlEntry)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entry" Type="System.Messaging.AccessControlEntry" />
+      </Parameters>
+      <Docs>
+        <param name="entry">Die <see cref="T:System.Messaging.AccessControlEntry" /> Access Control List aufheben.</param>
+        <summary>Entfernt das erste Vorkommen einer bestimmten Zugriffssteuerungseintrag aus Access Control List.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Zugriffssteuerungseinträgen, die auf das entfernte Element folgen, werden nach oben verschoben, um die frei gewordene Stelle einzunehmen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="entry" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

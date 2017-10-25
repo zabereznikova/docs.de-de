@@ -1,0 +1,115 @@
+<Type Name="CleanUpVirtualizedItemEventArgs" FullName="System.Windows.Controls.CleanUpVirtualizedItemEventArgs">
+  <TypeSignature Language="C#" Value="public class CleanUpVirtualizedItemEventArgs : System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CleanUpVirtualizedItemEventArgs extends System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.CleanUpVirtualizedItemEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.RoutedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Controls.VirtualizingStackPanel.CleanUpVirtualizedItem" />-Ereignis bereit.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CleanUpVirtualizedItemEventArgs (object value, System.Windows.UIElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object value, class System.Windows.UIElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.CleanUpVirtualizedItemEventArgs.#ctor(System.Object,System.Windows.UIElement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+      </Parameters>
+      <Docs>
+        <param name="value">Das <see cref="T:System.Object" />, das den ursprünglichen Datenwert darstellt.</param>
+        <param name="element">Ein <see cref="T:System.Windows.UIElement" />, das den Datenwert darstellt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Controls.CleanUpVirtualizedItemEventArgs" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `value` ist ein visuelles Element `value` und `element` identisch sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="public bool Cancel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Cancel" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.CleanUpVirtualizedItemEventArgs.Cancel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob dieses Element nicht erneut virtualisiert werden soll.</summary>
+        <value>
+          <see langword="true" />Wenn Sie verhindern, dieses Elements Revirtualization möchten; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UIElement">
+      <MemberSignature Language="C#" Value="public System.Windows.UIElement UIElement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.UIElement UIElement" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.CleanUpVirtualizedItemEventArgs.UIElement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.UIElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Instanz des visuellen Elements, das den Datenwert darstellt.</summary>
+        <value>Ein <see cref="T:System.Windows.UIElement" />, das den Datenwert darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Windows.Controls.CleanUpVirtualizedItemEventArgs.Value%2A> ist ein visuelles Element, dessen Eigenschaftswert wird identisch sein <xref:System.Windows.Controls.CleanUpVirtualizedItemEventArgs.UIElement%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.CleanUpVirtualizedItemEventArgs.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Object" /> , die den ursprünglichen Datenwert darstellt.</summary>
+        <value>Das <see cref="T:System.Object" />, das den ursprünglichen Datenwert darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Windows.Controls.CleanUpVirtualizedItemEventArgs.Value%2A> ist ein visuelles Element, dessen Eigenschaftswert wird identisch sein <xref:System.Windows.Controls.CleanUpVirtualizedItemEventArgs.UIElement%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

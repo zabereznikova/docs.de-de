@@ -1,0 +1,121 @@
+<Type Name="ObjectHandle" FullName="System.Runtime.Remoting.ObjectHandle">
+  <TypeSignature Language="C#" Value="public class ObjectHandle : MarshalByRefObject, System.Runtime.Remoting.IObjectHandle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ObjectHandle extends System.MarshalByRefObject implements class System.Runtime.Remoting.IObjectHandle" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.ObjectHandle" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.MarshalByRefObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.IObjectHandle</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDual)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Dient als Wrapper für Marshal-by-Value Objektverweise, sodass sie über eine Dereferenzierung zurückgegeben werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Remoting.ObjectHandle> Klasse wird zum Übergeben eines Objekts (in einem umbrochenen Zustand) zwischen mehreren Anwendungsdomänen Laden der Metadaten für das umschlossene Objekt in jeder <xref:System.AppDomain> über den die <xref:System.Runtime.Remoting.ObjectHandle> übertragen werden. Daher die <xref:System.Runtime.Remoting.ObjectHandle> -Klasse ermöglicht es die Aufrufer Kontrolle über den Zeitpunkt der <xref:System.Type> des Remoteobjekts wird in einer Domäne geladen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen eines Objekts in einer anderen <xref:System.AppDomain>, und rufen Sie einen Proxy für das Objekt aus einem <xref:System.Runtime.Remoting.ObjectHandle>. In diesem Beispiel können Sie davon ausgehen, die den Code für die `MyType` Klasse in eine Assembly mit dem Namen "ObjectHandleAssembly" kompiliert wird.  
+  
+ [!code-cpp[ObjectHandle#1](~/samples/snippets/cpp/VS_Snippets_Remoting/ObjectHandle/CPP/objecthandleassembly.cpp#1)]
+ [!code-csharp[ObjectHandle#1](~/samples/snippets/csharp/VS_Snippets_Remoting/ObjectHandle/CS/objecthandleassembly.cs#1)]
+ [!code-vb[ObjectHandle#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ObjectHandle/VB/objecthandleassembly.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectHandle (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.ObjectHandle.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Das Objekt, das durch die neue umschlossen wird <see cref="T:System.Runtime.Remoting.ObjectHandle" />.</param>
+        <summary>Initialisiert eine Instanz von der <see cref="T:System.Runtime.Remoting.ObjectHandle" /> Klasse, die das angegebene Objekt umschließt <paramref name="o" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeLifetimeService">
+      <MemberSignature Language="C#" Value="public override object InitializeLifetimeService ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object InitializeLifetimeService() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.ObjectHandle.InitializeLifetimeService" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert die Lebensdauer-Leasedauer für das umschlossene Objekt.</summary>
+        <returns>Eine initialisierte <see cref="T:System.Runtime.Remoting.Lifetime.ILease" /> , die Ihnen zur Steuerung der Lebensdauer des umschlossenen Objekts ermöglicht.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unwrap">
+      <MemberSignature Language="C#" Value="public object Unwrap ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Unwrap() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.ObjectHandle.Unwrap" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt das umschlossene Objekt zurück.</summary>
+        <returns>Das umschlossene Objekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein Objekt in einer anderen aktivieren <xref:System.AppDomain>, rufen Sie einen Proxy mit der <xref:System.Runtime.Remoting.ObjectHandle.Unwrap%2A> -Methode, und verwenden Sie den Proxy auf das Remoteobjekt zugreifen.  
+  
+ [!code-cpp[ObjectHandle#2](~/samples/snippets/cpp/VS_Snippets_Remoting/ObjectHandle/CPP/objecthandleassembly.cpp#2)]
+ [!code-csharp[ObjectHandle#2](~/samples/snippets/csharp/VS_Snippets_Remoting/ObjectHandle/CS/objecthandleassembly.cs#2)]
+ [!code-vb[ObjectHandle#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ObjectHandle/VB/objecthandleassembly.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="usage">
+          <para>Ein <see cref="T:System.Runtime.Remoting.ObjectHandle" /> ist ein prozessübergreifendes <see cref="T:System.MarshalByRefObject" /> , die von der Lebensdauer Remotingdienst nachverfolgt wird. Ein Aufruf der aktuellen Methode kann fehlschlagen, wenn der Lebensdauerlease für das <see cref="T:System.Runtime.Remoting.ObjectHandle" /> läuft ab.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

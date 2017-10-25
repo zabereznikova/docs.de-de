@@ -1,0 +1,478 @@
+<Type Name="PropertyEntry" FullName="System.Activities.Presentation.PropertyEditing.PropertyEntry">
+  <TypeSignature Language="C#" Value="public abstract class PropertyEntry : System.Activities.Presentation.PropertyEditing.IPropertyFilterTarget, System.ComponentModel.INotifyPropertyChanged" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PropertyEntry extends System.Object implements class System.Activities.Presentation.PropertyEditing.IPropertyFilterTarget, class System.ComponentModel.INotifyPropertyChanged" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.PropertyEditing.PropertyEntry" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Activities.Presentation.PropertyEditing.IPropertyFilterTarget</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.INotifyPropertyChanged</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt die Daten einer Eigenschaft für ein ausgewähltes Element dar und ermöglicht das Bearbeiten dieser Eigenschaft mit typspezifischen Daten.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PropertyEntry ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.PropertyEditing.PropertyEntry.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyEntry" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PropertyEntry (System.Activities.Presentation.PropertyEditing.PropertyValue parentValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Activities.Presentation.PropertyEditing.PropertyValue parentValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.PropertyEditing.PropertyEntry.#ctor(System.Activities.Presentation.PropertyEditing.PropertyValue)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="parentValue" Type="System.Activities.Presentation.PropertyEditing.PropertyValue" />
+      </Parameters>
+      <Docs>
+        <param name="parentValue">Der übergeordnete <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyValue" />.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyEntry" />-Klasse, die als untergeordnete Eigenschaft für den angegebenen <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyValue" /> dient.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für die Hostinfrastruktur abgeleitete Klassen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyFilter">
+      <MemberSignature Language="C#" Value="public virtual void ApplyFilter (System.Activities.Presentation.PropertyEditing.PropertyFilter filter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ApplyFilter(class System.Activities.Presentation.PropertyEditing.PropertyFilter filter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.PropertyEditing.PropertyEntry.ApplyFilter(System.Activities.Presentation.PropertyEditing.PropertyFilter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filter" Type="System.Activities.Presentation.PropertyEditing.PropertyFilter" />
+      </Parameters>
+      <Docs>
+        <param name="filter">Das anzuwendende <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyFilter" />.</param>
+        <summary>Speichert, ob der Zieleigenschaftswert einem angegebenen <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyFilter" /> entspricht.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CategoryName">
+      <MemberSignature Language="C#" Value="public abstract string CategoryName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CategoryName" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.PropertyEditing.PropertyEntry.CategoryName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Kategorie ab, in der sich diese Eigenschaft befindet.</summary>
+        <value>Eine <see cref="T:System.String" />, die den Namen der Kategorie enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePropertyValueInstance">
+      <MemberSignature Language="C#" Value="protected abstract System.Activities.Presentation.PropertyEditing.PropertyValue CreatePropertyValueInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Activities.Presentation.PropertyEditing.PropertyValue CreatePropertyValueInstance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.PropertyEditing.PropertyEntry.CreatePropertyValueInstance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.PropertyEditing.PropertyValue</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aktiviert die Hostinfrastruktur, um eine neue hostspezifische <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyValue" />-Instanz zu erstellen.</summary>
+        <returns>Ein neues <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyValue" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public abstract string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.PropertyEditing.PropertyEntry.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Beschreibung der gekapselten Eigenschaft ab.</summary>
+        <value>Eine Zeichenfolge, die die Beschreibung enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public virtual string DisplayName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.PropertyEditing.PropertyEntry.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Anzeigenamen für den <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyEntry" /> ab.</summary>
+        <value>Eine Zeichenfolge, die den Anzeigenamen enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilterApplied">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Activities.Presentation.PropertyEditing.PropertyFilterAppliedEventArgs&gt; FilterApplied;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Activities.Presentation.PropertyEditing.PropertyFilterAppliedEventArgs&gt; FilterApplied" />
+      <MemberSignature Language="DocId" Value="E:System.Activities.Presentation.PropertyEditing.PropertyEntry.FilterApplied" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Activities.Presentation.PropertyEditing.PropertyFilterAppliedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Deklaration des <see cref="T:System.Activities.Presentation.PropertyEditing.IPropertyFilterTarget" />-Ereignisses, das auftritt, wenn ein <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyFilter" /> durch einen Aufruf der <see cref="M:System.Activities.Presentation.PropertyEditing.PropertyEntry.ApplyFilter(System.Activities.Presentation.PropertyEditing.PropertyFilter)" />-Methode geändert wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasStandardValues">
+      <MemberSignature Language="C#" Value="protected virtual bool HasStandardValues { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasStandardValues" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.PropertyEditing.PropertyEntry.HasStandardValues" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob ein Satz von Standardwerten für diesen <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyEntry" /> verfügbar ist.</summary>
+        <value>
+          <see langword="true" />Wenn ein Satz von Standardwerten zur Verfügung steht; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAdvanced">
+      <MemberSignature Language="C#" Value="public abstract bool IsAdvanced { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAdvanced" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.PropertyEditing.PropertyEntry.IsAdvanced" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyEntry" /> benutzerdefiniert ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Eigenschafteneintrag benutzerdefinierte ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public abstract bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.PropertyEditing.PropertyEntry.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyEntry" /> schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" />Wenn der Eigenschafteneintrag schreibgeschützt ist. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MatchesFilter">
+      <MemberSignature Language="C#" Value="public bool MatchesFilter { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MatchesFilter" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.PropertyEditing.PropertyEntry.MatchesFilter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob <see cref="T:System.Activities.Presentation.PropertyEditing.IPropertyFilterTarget" /> dem Filter entspricht. Legt den Wert fest, um anzugeben, dass <see cref="T:System.Activities.Presentation.PropertyEditing.IPropertyFilterTarget" /> dem Filter entspricht, und löst die Ereignishandlermethode für die Eigenschaftenänderung aus.</summary>
+        <value>
+          <see langword="true" />Wenn das Zielobjekt mit dem Filter übereinstimmt; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der `PropertyContainer` überwacht an dieser Eigenschaft vorgenommene Änderungen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MatchesPredicate">
+      <MemberSignature Language="C#" Value="public virtual bool MatchesPredicate (System.Activities.Presentation.PropertyEditing.PropertyFilterPredicate predicate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool MatchesPredicate(class System.Activities.Presentation.PropertyEditing.PropertyFilterPredicate predicate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.PropertyEditing.PropertyEntry.MatchesPredicate(System.Activities.Presentation.PropertyEditing.PropertyFilterPredicate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="predicate" Type="System.Activities.Presentation.PropertyEditing.PropertyFilterPredicate" />
+      </Parameters>
+      <Docs>
+        <param name="predicate">Die <see cref="T:System.String" />-Anzeige oder der Typname eines Filters, die bzw. der mit dem Zielobjekt abgeglichen wird.</param>
+        <summary>Die Implementierung einer <see cref="T:System.Activities.Presentation.PropertyEditing.IPropertyFilterTarget" />-Methode, die bestimmt, ob die Zielanzeige oder der Typname der angegebenen Zeichenfolge entspricht, die den Namen eines Filters enthält.</summary>
+        <returns>
+          <see langword="true" />Wenn das Ziel anzuzeigen, oder geben Sie Namen mit der angegebenen Zeichenfolge entspricht; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFilterApplied">
+      <MemberSignature Language="C#" Value="protected virtual void OnFilterApplied (System.Activities.Presentation.PropertyEditing.PropertyFilter filter);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnFilterApplied(class System.Activities.Presentation.PropertyEditing.PropertyFilter filter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.PropertyEditing.PropertyEntry.OnFilterApplied(System.Activities.Presentation.PropertyEditing.PropertyFilter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filter" Type="System.Activities.Presentation.PropertyEditing.PropertyFilter" />
+      </Parameters>
+      <Docs>
+        <param name="filter">Das anzuwendende <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyFilter" />.</param>
+        <summary>Löst das <see cref="E:System.Activities.Presentation.PropertyEditing.PropertyEntry.FilterApplied" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPropertyChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnPropertyChanged (System.ComponentModel.PropertyChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnPropertyChanged(class System.ComponentModel.PropertyChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.PropertyEditing.PropertyEntry.OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.ComponentModel.PropertyChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">EventArgs für dieses Ereignis.</param>
+        <summary>Löst das <see cref="T:System.ComponentModel.INotifyPropertyChanged" />-PropertyChanged-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPropertyChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnPropertyChanged (string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnPropertyChanged(string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.PropertyEditing.PropertyEntry.OnPropertyChanged(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Der Name der Eigenschaft, deren Wert geändert wurde.</param>
+        <summary>Löst das <see cref="T:System.ComponentModel.INotifyPropertyChanged" />-Ereignis aus, wenn der <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyContainer" /> ermittelt, dass der <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyValue" /> geändert wurde.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentValue">
+      <MemberSignature Language="C#" Value="public System.Activities.Presentation.PropertyEditing.PropertyValue ParentValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Presentation.PropertyEditing.PropertyValue ParentValue" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.PropertyEditing.PropertyEntry.ParentValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.PropertyEditing.PropertyValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den übergeordneten <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyValue" /> in Klassen ab, die von einer Hostinfrastruktur abgeleitet werden.</summary>
+        <value>Ein übergeordneter <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyValue" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies wird nur für Untereigenschaften, verwendet, damit der Wert stehen `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyChanged">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.PropertyChangedEventHandler PropertyChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Activities.Presentation.PropertyEditing.PropertyEntry.PropertyChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Deklaration des <see cref="T:System.ComponentModel.INotifyPropertyChanged" />-Ereignisses, das auftritt, wenn ein Eigenschaftswert geändert wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyName">
+      <MemberSignature Language="C#" Value="public abstract string PropertyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PropertyName" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.PropertyEditing.PropertyEntry.PropertyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Eigenschaft ab.</summary>
+        <value>Eine Zeichenfolge, die den Namen der Eigenschaft enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyType">
+      <MemberSignature Language="C#" Value="public abstract Type PropertyType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type PropertyType" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.PropertyEditing.PropertyEntry.PropertyType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ der Eigenschaft ab.</summary>
+        <value>Ein Typ, der den Typ der Eigenschaft enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyValue">
+      <MemberSignature Language="C#" Value="public System.Activities.Presentation.PropertyEditing.PropertyValue PropertyValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Presentation.PropertyEditing.PropertyValue PropertyValue" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.PropertyEditing.PropertyEntry.PropertyValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.PropertyEditing.PropertyValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyValue" /> für diesen <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyEntry" /> ab.</summary>
+        <value>Ein <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyValue" />-Objekt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyValueEditor">
+      <MemberSignature Language="C#" Value="public abstract System.Activities.Presentation.PropertyEditing.PropertyValueEditor PropertyValueEditor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Presentation.PropertyEditing.PropertyValueEditor PropertyValueEditor" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.PropertyEditing.PropertyEntry.PropertyValueEditor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.PropertyEditing.PropertyValueEditor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyValueEditor" /> ab, der zur Bearbeitung des Wert für diesen <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyEntry" /> verwendet wird.</summary>
+        <value>Ein <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyValueEditor" />-Objekt, das den aktuellen Editor enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StandardValues">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.ICollection StandardValues { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection StandardValues" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.PropertyEditing.PropertyEntry.StandardValues" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Satz möglicher Werte ab, die diesem <see cref="T:System.Activities.Design.PropertyEditing.PropertyEntry" /> unterstützt werden.</summary>
+        <value>Eine <see cref="T:System.Collections.ICollection" /> möglicher Werte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

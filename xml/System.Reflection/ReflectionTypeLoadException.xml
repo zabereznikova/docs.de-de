@@ -1,0 +1,238 @@
+<Type Name="ReflectionTypeLoadException" FullName="System.Reflection.ReflectionTypeLoadException">
+  <TypeSignature Language="C#" Value="public sealed class ReflectionTypeLoadException : SystemException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit ReflectionTypeLoadException extends System.SystemException" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.ReflectionTypeLoadException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-4.5">System.SystemException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Diese Ausnahme wird durch die <see cref="M:System.Reflection.Module.GetTypes" />-Methode ausgelöst, wenn eine der Klassen in einem Modul nicht geladen werden kann. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `ReflectionTypeLoadException`wird mit dem Wert 0 x 80131602 HRESULT COR_E_REFLECTIONTYPELOAD verwendet.  
+  
+ Eine Instanz enthält das Array von Klassen (Typen-Eigenschaft), die im Modul definiert und geladen wurden. Das Array kann einige null-Werte enthalten. Es gibt auch ein anderes Array von Ausnahmen (`LoaderExceptions` Eigenschaft). Dieses Array Ausnahme stellt vom Klassenladeprogramm ausgelösten Ausnahmen dar. Richten Sie die Lücken in der Klasse Array mit den Ausnahmen.  
+  
+ Diese Ausnahme macht sowohl das Array von Klassen und das Array von `TypeLoadExceptions`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ReflectionTypeLoadException (Type[] classes, Exception[] exceptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type[] classes, class System.Exception[] exceptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.ReflectionTypeLoadException.#ctor(System.Type[],System.Exception[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="classes" Type="System.Type[]" />
+        <Parameter Name="exceptions" Type="System.Exception[]" />
+      </Parameters>
+      <Docs>
+        <param name="classes">Ein Array vom Typ <see langword="Type" /> , enthält die Klassen, die im Modul definiert und geladen wurden. Dieses Array darf ein null-Verweis (<see langword="Nothing" /> in Visual Basic) Werte.</param>
+        <param name="exceptions">Ein Array vom Typ <see langword="Exception" /> , die vom Klassenladeprogramm ausgelösten Ausnahmen enthält. Die null-Verweis (<see langword="Nothing" /> in Visual Basic) Werte in der <c>Klassen</c> array entsprechen den Ausnahmen in diesem <c>Ausnahmen</c> Array.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Reflection.ReflectionTypeLoadException" /> -Klasse mit den angegebenen Klassen und ihre zugeordneten Ausnahmen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ReflectionTypeLoadException (Type[] classes, Exception[] exceptions, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type[] classes, class System.Exception[] exceptions, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.ReflectionTypeLoadException.#ctor(System.Type[],System.Exception[],System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="classes" Type="System.Type[]" />
+        <Parameter Name="exceptions" Type="System.Exception[]" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="classes">Ein Array vom Typ <see langword="Type" /> , enthält die Klassen, die im Modul definiert und geladen wurden. Dieses Array darf ein null-Verweis (<see langword="Nothing" /> in Visual Basic) Werte.</param>
+        <param name="exceptions">Ein Array vom Typ <see langword="Exception" /> , die vom Klassenladeprogramm ausgelösten Ausnahmen enthält. Die null-Verweis (<see langword="Nothing" /> in Visual Basic) Werte in der <c>Klassen</c> array entsprechen den Ausnahmen in diesem <c>Ausnahmen</c> Array.</param>
+        <param name="message">Ein <see langword="String" /> , die die Ursache der Ausnahme beschreibt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Reflection.ReflectionTypeLoadException" /> -Klasse mit den angegebenen Klassen, ihre zugeordneten Ausnahmen und eine Beschreibung der Ausnahme.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.ReflectionTypeLoadException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Zum Serialisieren oder Deserialisieren eines Objekts die Informationen und Daten erforderlich.</param>
+        <param name="context">Der Kontext für die Serialisierung.</param>
+        <summary>Stellt eine <see cref="T:System.Runtime.Serialization.ISerializable" /> Implementierung für serialisierte Objekte.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <see langword="info" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="LoaderExceptions">
+      <MemberSignature Language="C#" Value="public Exception[] LoaderExceptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception[] LoaderExceptions" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.ReflectionTypeLoadException.LoaderExceptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Array der vom Klassenladeprogramm ausgelösten Ausnahmen ab.</summary>
+        <value>Ein Array vom Typ <see langword="Exception" />, das die vom Klassenladeprogramm ausgelösten Ausnahmen enthält. Die NULL-Werte im <see cref="P:System.Reflection.ReflectionTypeLoadException.Types" />-Array dieser Instanz entsprechen den Ausnahmen in diesem Array.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Reflection.ReflectionTypeLoadException.LoaderExceptions%2A> Eigenschaft ruft ein Array vom Typ `Exception` ist, die parallel zu den <xref:System.Reflection.ReflectionTypeLoadException.Types%2A> Array. Dieses Array enthält null-Werte, wenn Reflektion Laden einer Klasse kann nicht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Types">
+      <MemberSignature Language="C#" Value="public Type[] Types { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type[] Types" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.ReflectionTypeLoadException.Types" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Array von Klassen, die im Modul definiert und geladen wurden.</summary>
+        <value>Ein Array vom Typ <see langword="Type" /> , enthält die Klassen, die im Modul definiert und geladen wurden. Dieses Array kann enthalten, u. a. <see langword="null" /> Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Reflection.ReflectionTypeLoadException.LoaderExceptions%2A> Eigenschaft ruft ein Array vom Typ `Exception` also parallel dazu `Types` Array. Dieses Array enthält null-Werte, wenn Reflektion Laden einer Klasse kann nicht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

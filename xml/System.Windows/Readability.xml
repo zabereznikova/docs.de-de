@@ -1,0 +1,82 @@
+<Type Name="Readability" FullName="System.Windows.Readability">
+  <TypeSignature Language="C#" Value="public enum Readability" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Readability extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Readability" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Lesbarkeitswert, der eine <see cref="T:System.Windows.LocalizabilityAttribute" /> für eine binäre XAML (BAML)-Klasse bzw. des Klassenmembers.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.LocalizabilityAttribute> Attribut kann auf eine Klasse, Eigenschaft oder Methode angewendet werden.  
+  
+ Weitere Informationen zum Verwenden der Lokalisierungsattribute finden Sie unter [Lokalisierungsattribute und Kommentare](~/docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, die Lesbarkeitswert, der eine <xref:System.Windows.LocalizabilityAttribute> für eine Schaltfläche definiert.  
+  
+ [!code-xaml[AttributesSnippets#AttributesSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/AttributesSnippets/CSharp/Attributes.xaml#attributessnippet1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Inherit">
+      <MemberSignature Language="C#" Value="Inherit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Readability Inherit = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Readability.Inherit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Readability</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zielwert Lesbarkeit wird vom übergeordneten Knoten geerbt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Readable">
+      <MemberSignature Language="C#" Value="Readable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Readability Readable = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Readability.Readable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Readability</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Zielwert ist Diagnoseausgaben als Klartext.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unreadable">
+      <MemberSignature Language="C#" Value="Unreadable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Readability Unreadable = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Readability.Unreadable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Readability</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Zielwert ist nicht lesbar.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

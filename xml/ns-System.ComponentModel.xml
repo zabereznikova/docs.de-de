@@ -1,0 +1,23 @@
+<Namespace Name="System.ComponentModel">
+  <Docs>
+    <summary>Der Namespace <see cref="N:System.ComponentModel" /> stellt Klassen bereit, mit denen das Verhalten von Komponenten und Steuerelementen zur Laufzeit und zur Entwurfszeit implementiert wird. Dieser Namespace enthält die Basisklassen und Schnittstellen zum Implementieren von Attributen und Typkonvertern, die Datenquellen binden und Komponenten lizenzieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Klassen in diesem Namespace werden in folgenden Kategorien unterteilen:  
+  
+-   Core-Komponentenklassen. Finden Sie unter der <xref:System.ComponentModel.Component>, <xref:System.ComponentModel.IComponent>, <xref:System.ComponentModel.Container>, und <xref:System.ComponentModel.IContainer> Klassen.  
+  
+-   Komponente entschieden haben. Finden Sie unter der <xref:System.ComponentModel.License>, <xref:System.ComponentModel.LicenseManager>, <xref:System.ComponentModel.LicenseProvider>, und <xref:System.ComponentModel.LicenseProviderAttribute> Klassen.  
+  
+-   Attribute Weitere Informationen finden Sie unter der <xref:System.Attribute>-Klasse.  
+  
+-   Deskriptoren und Dauerhaftigkeit. Finden Sie unter der <xref:System.ComponentModel.TypeDescriptor>, <xref:System.ComponentModel.EventDescriptor>, und <xref:System.ComponentModel.PropertyDescriptor> Klassen.  
+  
+-   Typkonverter. Weitere Informationen finden Sie unter der <xref:System.ComponentModel.TypeConverter>-Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

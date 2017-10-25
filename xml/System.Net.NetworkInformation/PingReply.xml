@@ -1,0 +1,267 @@
+<Type Name="PingReply" FullName="System.Net.NetworkInformation.PingReply">
+  <TypeSignature Language="C#" Value="public class PingReply" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PingReply extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.NetworkInformation.PingReply" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Ping</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Informationen zum Status und Daten aus einer <see cref="Overload:System.Net.NetworkInformation.Ping.Send" /> oder <see cref="Overload:System.Net.NetworkInformation.Ping.SendAsync" /> Vorgang.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.NetworkInformation.Ping> Klasse versucht, eine Internet Control Message Protocol (ICMP) echoanforderung mit einem Remotecomputer senden und Empfangen von Informationen aus den Computer über ein ICMP-Echo-Antwortnachricht zurück. Die <xref:System.Net.NetworkInformation.Ping> Klasse Instanzen verwendet die <xref:System.Net.NetworkInformation.PingReply> Klasse, um Informationen über den Vorgang, z. B. seinen Status und die Zeit für die Anforderung zu senden und Empfangen der Antwort zurückgeben.  
+  
+ Die <xref:System.Net.NetworkInformation.Ping.Send%2A> Methoden Instanzen zurückgeben, die <xref:System.Net.NetworkInformation.PingReply> -Klasse direkt verwendet. Die <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> -Methoden zurückgeben einer <xref:System.Net.NetworkInformation.PingReply> in der <xref:System.Net.NetworkInformation.PingCompletedEventHandler> Methode <xref:System.Net.NetworkInformation.PingCompletedEventArgs> Parameter. Die <xref:System.Net.NetworkInformation.PingReply> erfolgt über die <xref:System.Net.NetworkInformation.PingCompletedEventArgs.Reply%2A> Eigenschaft.  
+  
+ Wenn der Wert der <xref:System.Net.NetworkInformation.PingReply.Status%2A> nicht <xref:System.Net.NetworkInformation.IPStatus.Success>, sollten Sie nicht die Rückgabewerte verwenden die <xref:System.Net.NetworkInformation.PingReply.RoundtripTime%2A>, <xref:System.Net.NetworkInformation.PingReply.Options%2A> oder <xref:System.Net.NetworkInformation.PingReply.Buffer%2A> Eigenschaften. Die <xref:System.Net.NetworkInformation.PingReply.RoundtripTime%2A> Eigenschaft gibt NULL zurück die <xref:System.Net.NetworkInformation.PingReply.Buffer%2A> Eigenschaft gibt ein leeres Array zurück und die <xref:System.Net.NetworkInformation.PingReply.Options%2A> Eigenschaft zurück `null`.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung <xref:System.Net.NetworkInformation.Ping> Klasse auf eine ICMP-Echoanfrage synchron gesendet und die Antwort angezeigt.  
+  
+ [!code-cpp[NCLPingSync#1](~/samples/snippets/cpp/VS_Snippets_Remoting/NclPingSync/CPP/syncping.cpp#1)]
+ [!code-csharp[NCLPingSync#1](~/samples/snippets/csharp/VS_Snippets_Remoting/NclPingSync/CS/syncping.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Address">
+      <MemberSignature Language="C#" Value="public System.Net.IPAddress Address { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.IPAddress Address" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.PingReply.Address" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IPAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Adresse des Hosts, der die Internet Control Message Protocol (ICMP) Echoantwort sendet.</summary>
+        <value>Eine <see cref="T:System.Net.IPAddress" /> , die das Ziel für die ICMP-Echo-Nachricht enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.NetworkInformation.PingReply.Address%2A> zurückgegebenes keines der <xref:System.Net.NetworkInformation.Ping.Send%2A> Überladungen können von einem bösartigen Remotecomputer stammen. Schließen Sie nicht mit dem Remotecomputer an. Verwenden Sie DNS, um die IP-Adresse des Computers zu bestimmen, zu dem Sie eine Verbindung herstellen möchten.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine ICMP-Echoanfrage synchron gesendet und zeigt den Wert dieser Eigenschaft.  
+  
+ [!code-cpp[NclPingSampler#2](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLPingSampler/CPP/pingtest.cpp#2)]
+ [!code-csharp[NclPingSampler#2](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLPingSampler/CS/pingtest.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Buffer">
+      <MemberSignature Language="C#" Value="public byte[] Buffer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Buffer" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.PingReply.Buffer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Puffer von Daten in ein Internet Control Message Protocol (ICMP) Echo-Antwortnachricht empfangen wurde.</summary>
+        <value>Ein <see cref="T:System.Byte" /> Array, in eine Antwortnachricht von ICMP Echo oder ein leeres Array, die empfangenen Daten enthält, wenn keine Antwort empfangen wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit der ICMP-Echoanfrage gesendete Datenpuffer wird an den Absender in den Echoantwort zurückgegeben, sodass die Roundtrip-Reisedauer für ein Paket mit einer bekannten Größe berechnet werden kann. Der Datenpuffer in Kombination mit der <xref:System.Net.NetworkInformation.PingOptions.DontFragment%2A> aktivieren, können verwendet werden, um die maximale Übertragungseinheit für den Netzwerkpfad zwischen Quell-und Ziel zu ermitteln. Weitere Informationen finden Sie unter "Traceroutebefehls" in RFC 1574, Abschnitt 3.2, verfügbar unter http://www.ietf.org.  
+  
+ Die verwendete Standardpuffer <xref:System.Net.NetworkInformation.Ping.Send%2A> und <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> 32 Bytes an Daten enthält.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine ICMP-Echoanfrage synchron gesendet und zeigt die Größe des Puffers, der von dieser Eigenschaft zurückgegebene an.  
+  
+ [!code-cpp[NclPingSampler#4](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLPingSampler/CPP/pingtest.cpp#4)]
+ [!code-csharp[NclPingSampler#4](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLPingSampler/CS/pingtest.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Options">
+      <MemberSignature Language="C#" Value="public System.Net.NetworkInformation.PingOptions Options { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.NetworkInformation.PingOptions Options" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.PingReply.Options" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.PingOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Optionen verwendet, um die Antwort auf ein Internet Control Message Protocol (ICMP) echoanforderung übertragen.</summary>
+        <value>Ein <see cref="T:System.Net.NetworkInformation.PingOptions" /> Objekt, das die Zeit zum Live (TTL) und die Fragmentierungsdirektive, die zum Übertragen der Antwort enthält <see cref="P:System.Net.NetworkInformation.PingReply.Status" /> ist <see cref="F:System.Net.NetworkInformation.IPStatus.Success" />ist, andernfalls <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Gültigkeitsdauer (TTL) definiert die Anzahl der Häufigkeit, mit der ein Paket während der Übertragung zwischen Quelle und Ziel Knoten weitergeleitet werden können. Wenn die Anzahl der Weiterleitungen, auch bekannt als Hops, die für die Gültigkeitsdauer (TTL) angegebenen Wert überschreitet, wird das Paket wird als unzustellbar eingestuft und wird verworfen.  
+  
+ Die <xref:System.Net.NetworkInformation.PingOptions.DontFragment%2A> in die ICMP-Echo Anforderung Steuerelemente Paketfragmentierung angegebenen Wert. Wenn <xref:System.Net.NetworkInformation.PingOptions.DontFragment%2A> ist `true` und die Paketgröße überschreitet die maximale Übertragungseinheit des Netzwerkpfads vom Paket, das Paket verworfen und die <xref:System.Net.NetworkInformation.IPStatus.PacketTooBig> Fehler zurückgegeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine ICMP-Echoanfrage synchron gesendet und zeigt die Werte, die in gespeicherten der <xref:System.Net.NetworkInformation.PingOptions> von dieser Eigenschaft zurückgegebenen Objekts.  
+  
+ [!code-cpp[NclPingSampler#3](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLPingSampler/CPP/pingtest.cpp#3)]
+ [!code-csharp[NclPingSampler#3](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLPingSampler/CS/pingtest.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RoundtripTime">
+      <MemberSignature Language="C#" Value="public long RoundtripTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 RoundtripTime" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.PingReply.RoundtripTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl von Millisekunden ab, die zum Senden einer ICMP-Echoanfrage (Internet Control Message Protocol) und zum Empfangen der entsprechenden ICMP-Echoantwortmeldung benötigt wurden.</summary>
+        <value>Ein <see cref="T:System.Int64" />-Wert, der die Roundtripzeit in Millisekunden angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie die Echo-Anforderung ein Fehler auftritt, die <xref:System.Net.NetworkInformation.PingReply.RoundtripTime%2A> als 0 (null) Zeit gemeldet wird, dies ist auch ein gültiger Wert, wenn die Anforderung erfolgreich ist. Sie müssen überprüfen, die <xref:System.Net.NetworkInformation.PingReply.Status%2A> zu bestimmen, ob von dieser Eigenschaft zurückgegebene Wert ignoriert werden sollen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine ICMP-Echoanfrage synchron gesendet und zeigt die Größe des Puffers, der von dieser Eigenschaft zurückgegebene an.  
+  
+ [!code-cpp[NclPingSampler#4](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLPingSampler/CPP/pingtest.cpp#4)]
+ [!code-csharp[NclPingSampler#4](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLPingSampler/CS/pingtest.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Status">
+      <MemberSignature Language="C#" Value="public System.Net.NetworkInformation.IPStatus Status { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.NetworkInformation.IPStatus Status" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.PingReply.Status" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Status der Versuch, eine Internet Control Message Protocol (ICMP) echoanforderung senden und empfangen die entsprechenden ICMP Echo-Antwortnachricht ab.</summary>
+        <value>Ein <see cref="T:System.Net.NetworkInformation.IPStatus" /> Wert, der angibt, des Ergebnis der Anforderung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Wert der <xref:System.Net.NetworkInformation.PingReply.Status%2A> nicht <xref:System.Net.NetworkInformation.IPStatus.Success>, sollten Sie nicht die Rückgabewerte verwenden die <xref:System.Net.NetworkInformation.PingReply.RoundtripTime%2A>, <xref:System.Net.NetworkInformation.PingReply.Options%2A> oder <xref:System.Net.NetworkInformation.PingReply.Buffer%2A> Eigenschaften. Die <xref:System.Net.NetworkInformation.PingReply.RoundtripTime%2A> und <xref:System.Net.NetworkInformation.PingReply.Buffer%2A> Eigenschaften gibt NULL zurück und die <xref:System.Net.NetworkInformation.PingReply.Options%2A> Eigenschaft zurück `null`.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung <xref:System.Net.NetworkInformation.Ping> Klasse auf eine ICMP-Echoanfrage synchron gesendet und die Antwort angezeigt.  
+  
+ [!code-cpp[NCLPingSync#1](~/samples/snippets/cpp/VS_Snippets_Remoting/NclPingSync/CPP/syncping.cpp#1)]
+ [!code-csharp[NCLPingSync#1](~/samples/snippets/csharp/VS_Snippets_Remoting/NclPingSync/CS/syncping.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,180 @@
+<Type Name="Rijndael" FullName="System.Security.Cryptography.Rijndael">
+  <TypeSignature Language="C#" Value="public abstract class Rijndael : System.Security.Cryptography.SymmetricAlgorithm" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Rijndael extends System.Security.Cryptography.SymmetricAlgorithm" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Rijndael" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.SymmetricAlgorithm</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Basisklasse dar, von der alle Implementierungen der <see cref="T:System.Security.Cryptography.Rijndael" /> symmetrischen Verschlüsselungsalgorithmus erben muss.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Algorithmus unterstützt Schlüssellängen von 128, 192 und 256 Bits. direktionales 256 Bits. Dieser Algorithmus unterstützten Blockgrößen von 128, 192 und 256 bits direktionales 128 Bits (<xref:System.Security.Cryptography.Aes>-kompatibel).  
+  
+ Die <xref:System.Security.Cryptography.Rijndael> Klasse ist der Vorgänger des der <xref:System.Security.Cryptography.Aes> Algorithmus. Verwenden Sie die <xref:System.Security.Cryptography.Aes> Algorithmus anstelle von <xref:System.Security.Cryptography.Rijndael>. Weitere Informationen finden Sie im Eintrag [die Unterschiede zwischen Rijndael und AES](http://go.microsoft.com/fwlink/?LinkId=200932) in .NET Security Blog.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Security.Cryptography.Rijndael> Klasse zum Verschlüsseln und Entschlüsseln von Daten.  
+  
+ [!code-csharp[Cryptography.Rijndael.Create.File#1](~/samples/snippets/csharp/VS_Snippets_CLR/cryptography.rijndael.create.file/cs/fileexample.cs#1)]
+ [!code-vb[Cryptography.Rijndael.Create.File#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/cryptography.rijndael.create.file/vb/fileexample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Rijndael ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Rijndael.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz von <see cref="T:System.Security.Cryptography.Rijndael" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Instanz einer abstrakten Klasse kann nicht erstellt werden. Anwendungscode erstellt eine neue Instanz einer abgeleiteten Klasse.  
+  
+ Diese Methode initialisiert die geschützten Felder des <xref:System.Security.Cryptography.SymmetricAlgorithm> auf die Standardwerte, die in der folgenden Tabelle aufgeführt.  
+  
+|Feld|Standardwert|  
+|-----------|-------------------|  
+|<xref:System.Security.Cryptography.SymmetricAlgorithm.KeySizeValue>|256|  
+|<xref:System.Security.Cryptography.SymmetricAlgorithm.BlockSizeValue>|128|  
+|<xref:System.Security.Cryptography.SymmetricAlgorithm.FeedbackSizeValue>|128|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Security.Cryptography.Rijndael> Klasse zum Verschlüsseln und Entschlüsseln von Daten.  
+  
+ [!code-csharp[Cryptography.Rijndael.Create.File#1](~/samples/snippets/csharp/VS_Snippets_CLR/cryptography.rijndael.create.file/cs/fileexample.cs#1)]
+ [!code-vb[Cryptography.Rijndael.Create.File#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/cryptography.rijndael.create.file/vb/fileexample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.Rijndael Create ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.Rijndael Create() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Rijndael.Create" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Rijndael</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein Kryptografieobjekt zum Ausführen der <see cref="T:System.Security.Cryptography.Rijndael" /> Algorithmus.</summary>
+        <returns>Ein Kryptografieobjekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die standardmäßige Implementierung des <xref:System.Security.Cryptography.Rijndael> ist <xref:System.Security.Cryptography.RijndaelManaged>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Security.Cryptography.Rijndael> Klasse zum Verschlüsseln und Entschlüsseln von Daten.  
+  
+ [!code-csharp[Cryptography.Rijndael.Create.File#1](~/samples/snippets/csharp/VS_Snippets_CLR/cryptography.rijndael.create.file/cs/fileexample.cs#1)]
+ [!code-vb[Cryptography.Rijndael.Create.File#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/cryptography.rijndael.create.file/vb/fileexample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Reflection.TargetInvocationException">Der Algorithmus wurde bei aktiviertem FIPS (Federal Information Processing Standards)-Modus verwendet, ist aber nicht FIPS-kompatibel.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.Rijndael Create (string algName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.Rijndael Create(string algName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Rijndael.Create(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Rijndael</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algName">Der Name der spezifischen Implementierung des <see cref="T:System.Security.Cryptography.Rijndael" /> zu erstellen.</param>
+        <summary>Erstellt ein Kryptografieobjekt zum Ausführen der angegebenen Implementierung der <see cref="T:System.Security.Cryptography.Rijndael" /> Algorithmus.</summary>
+        <returns>Ein Kryptografieobjekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zulässigen Werte für die `algName` Parameter sind `Rijndael` und `System.Security.Cryptography.RijndaelManaged`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Reflection.TargetInvocationException">Der Algorithmus beschrieben, die von der <paramref name="algName" /> Parameter mit aktiviertem Federal Information Processing Standards (FIPS) Modus verwendet wurde, jedoch ist nicht FIPS-kompatibel.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

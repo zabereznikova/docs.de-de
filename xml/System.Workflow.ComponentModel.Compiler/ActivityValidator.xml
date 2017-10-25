@@ -1,0 +1,97 @@
+<Type Name="ActivityValidator" FullName="System.Workflow.ComponentModel.Compiler.ActivityValidator">
+  <TypeSignature Language="C#" Value="public class ActivityValidator : System.Workflow.ComponentModel.Compiler.DependencyObjectValidator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ActivityValidator extends System.Workflow.ComponentModel.Compiler.DependencyObjectValidator" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Compiler.ActivityValidator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.ComponentModel.Compiler.DependencyObjectValidator</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ableitung von <see cref="T:System.Workflow.ComponentModel.Compiler.DependencyObjectValidator" />, der Basisklasse für alle Aktivitätsvalidierungssteuerelement-Komponenten.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt einen vollständigen <xref:System.Workflow.ComponentModel.Compiler.ActivityValidator>, der für eine benutzerdefinierte Aktivität verwendet wird. Die benutzerdefinierte Aktivität ist eine `ConsoleWriteLineActivity`-Aktivität, die über eine einzelne Abhängigkeitseigenschaft mit der Bezeichnung `Msg` vom Typ <xref:System.String> verfügt. Das Validierungssteuerelement stellt sicher, dass die `Msg`-Eigenschaft festgelegt wird. Wurde diese Eigenschaft nicht festgelegt, zeigt der Compiler einen Fehler an, wenn die <xref:System.Workflow.ComponentModel.Compiler.ActivityValidator.Validate%2A>-Methode vom <xref:System.Workflow.ComponentModel.Compiler.ActivityValidator> aufgerufen wird, und die Kompilierung schlägt fehl.  
+  
+ [!code-csharp[wf_activities_project#1](~/samples/snippets/csharp/VS_Snippets_CFX/wf_activities_project/cs/consolewritelineactivity.cs#1)]
+ [!code-vb[wf_activities_project#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_activities_project/vb/consolewritelineactivity.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityValidator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.ActivityValidator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.ComponentModel.Compiler.ActivityValidator" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public override System.Workflow.ComponentModel.Compiler.ValidationErrorCollection Validate (System.Workflow.ComponentModel.Compiler.ValidationManager manager, object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Workflow.ComponentModel.Compiler.ValidationErrorCollection Validate(class System.Workflow.ComponentModel.Compiler.ValidationManager manager, object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.ActivityValidator.Validate(System.Workflow.ComponentModel.Compiler.ValidationManager,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Compiler.ValidationErrorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.Workflow.ComponentModel.Compiler.ValidationManager" />
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="manager">Der der Validierung zugeordnete <see cref="T:System.Workflow.ComponentModel.Compiler.ValidationManager" />.</param>
+        <param name="obj">Die zu validierende <see cref="T:System.Workflow.ComponentModel.Activity" />.</param>
+        <summary>Überprüft, ob die jeweilige Aktivität gültig ist.</summary>
+        <returns>Ein <see cref="T:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection" />-Objekt, das alle Fehler bzw. Warnungen enthält, die während der Validierung aufgetreten sind.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ruft <xref:System.Workflow.ComponentModel.Compiler.Validator.ValidateProperties%2A> auf, um die Eigenschaften der <xref:System.Workflow.ComponentModel.Activity> zu überprüfen.  
+  
+ Diese Methode überprüft nur die Eindeutigkeit des <xref:System.Workflow.ComponentModel.Activity.Name%2A> für die <xref:System.Workflow.ComponentModel.Activity>, wenn es sich bei der <xref:System.Workflow.ComponentModel.Activity> nicht um eine Stamm-<xref:System.Workflow.ComponentModel.Activity> handelt.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie die <xref:System.Workflow.ComponentModel.Compiler.ActivityValidator.Validate%2A>-Methode für ein <xref:System.Workflow.ComponentModel.Compiler.ActivityValidator> außer Kraft gesetzt wird, das für eine benutzerdefinierte Aktivität mit einer einzelnen Abhängigkeitseigenschaft namens `Msg` vom Typ <xref:System.String> verwendet wird. Das benutzerdefinierte Validierungssteuerelement stellt sicher, dass die `Msg`-Eigenschaft festgelegt wird. Wurde diese Eigenschaft nicht festgelegt, zeigt der Compiler einen Fehler an, wenn die <xref:System.Workflow.ComponentModel.Compiler.ActivityValidator.Validate%2A>-Methode vom <xref:System.Workflow.ComponentModel.Compiler.ActivityValidator> aufgerufen wird, und die Kompilierung schlägt fehl.  
+  
+ [!code-csharp[wf_activities_project#3](~/samples/snippets/csharp/VS_Snippets_CFX/wf_activities_project/cs/consolewritelineactivity.cs#3)]
+ [!code-vb[wf_activities_project#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_activities_project/vb/consolewritelineactivity.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

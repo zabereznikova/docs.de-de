@@ -1,0 +1,35 @@
+<Type Name="VisualStyleElement+Header" FullName="System.Windows.Forms.VisualStyles.VisualStyleElement+Header">
+  <TypeSignature Language="C#" Value="public static class VisualStyleElement.Header" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi abstract sealed beforefieldinit VisualStyleElement/Header extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.VisualStyleElement.Header" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Klassen, ermöglichen <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> Objekte für jeden Teil des Headersteuerelements. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Header> Klasse bietet eine Grundlage, die in der folgenden Klassen definiert werden:  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Header.Item>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Header.ItemLeft>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Header.ItemRight>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Header.SortArrow>  
+  
+ Jede dieser Klassen enthält eine oder mehrere Eigenschaften, die Zurückgeben einer <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> für jeden Status des Header-Teils dem Klassennamen angegeben.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

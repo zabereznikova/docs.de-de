@@ -1,0 +1,479 @@
+<Type Name="WebClientProtocol" FullName="System.Web.Services.Protocols.WebClientProtocol">
+  <TypeSignature Language="C#" Value="public abstract class WebClientProtocol : System.ComponentModel.Component" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract WebClientProtocol extends System.ComponentModel.Component" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.WebClientProtocol" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Component</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Basisklasse für alle XML-Webdienst-Clientproxys mithilfe von ASP.NET erstellt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Eigenschaften der <xref:System.Web.Services.Protocols.WebClientProtocol> Klasse dienen zum Steuern des Verhaltens des Transports verwendet, um die XML-Dienst webanforderung und die Antwort zu übertragen. Ordnen Sie die Eigenschaften dieser Klasse zu Eigenschaften finden Sie auf <xref:System.Net.WebRequest>. Instanzen von Klassen ableiten von <xref:System.Net.WebRequest>, wie z. B. <xref:System.Net.HttpWebRequest>, dienen als Transportmechanismus für die Verwendung von ASP.NET erstellten XML-Webdienste.  
+  
+ Um mit einem XML-Webdienst kommunizieren, müssen Sie eine Proxyklasse direkt oder indirekt aus erstellen <xref:System.Web.Services.Protocols.WebClientProtocol> für den XML-Webdienst aufgerufen werden soll. Das Tool Wsdl.exe können Sie anstelle die Proxyklasse manuell erstellen, erstellen Sie eine Proxyklasse für einen angegebenen XML-Webdiensts dienstbeschreibung. Da <xref:System.Web.Services.Protocols.WebClientProtocol> ist die Basisklasse für den Clientproxy finden Sie die Eigenschaften auf Ihre Webdienstproxy-Klassen. Diese Eigenschaften sind nützlich für die Steuerung des Anforderungsverhaltens des zugrunde liegenden Transports. Verwenden Sie z. B. die <xref:System.Web.Services.Protocols.WebClientProtocol.Credentials%2A> Eigenschaft für den Aufruf von authentifiziert XML-Webdienste. Anzahl der <xref:System.Web.Services.Protocols.WebClientProtocol> Eigenschaften werden zur Initialisierung der <xref:System.Net.WebRequest> -Objekt, das verwendet wird, um die Web-Anforderung.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird ein ASP.NET Web Form, der aufgerufen wird, einen XML-Webdienst, der mit dem Namen `Math`. Innerhalb der `EnterBtn_Click` -Funktion, das Web Form Proxy festgelegt Informationen und Client-Anmeldeinformationen auf die Proxy-Klasse vor dem Aufruf der remote-XML-Webdienstmethode.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[Classic WebClientProtocol Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic WebClientProtocol Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic WebClientProtocol Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic WebClientProtocol Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Die Eigenschaften für diese Klasse in eine neue Instanz der kopiert eine <see cref="T:System.Net.WebRequest" /> Objekt für jede XML-Webdienst-Methodenaufruf. Während Sie XML-Webdienstmethoden, auf dem gleichen aufrufen können <see cref="T:System.Web.Services.Protocols.WebClientProtocol" /> Instanz aus verschiedenen Threads zur gleichen Zeit besteht keine Synchronisierung ausgeführt, um sicherzustellen, dass eine konsistente Momentaufnahme der Eigenschaften zu übertragen wird die <see cref="T:System.Net.WebRequest" /> Objekt. Aus diesem Grund zum Ändern der Eigenschaften und gleichzeitige Methodenaufrufe aus verschiedenen Threads, die Sie eine andere Instanz des XML-Webdiensts verwenden sollten Webdienstproxy oder geben Sie eine eigene Synchronisierung.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WebClientProtocol ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.WebClientProtocol.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Services.Protocols.WebClientProtocol" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[System.Web.Services.Protocols.WebClientProtocol constructor#1](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Web.Services.Protocols.WebClientProtocol constructor/CPP/class1.cpp#1)]
+ [!code-csharp[System.Web.Services.Protocols.WebClientProtocol constructor#1](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Web.Services.Protocols.WebClientProtocol constructor/CS/class1.cs#1)]
+ [!code-vb[System.Web.Services.Protocols.WebClientProtocol constructor#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Web.Services.Protocols.WebClientProtocol constructor/VB/class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Abort">
+      <MemberSignature Language="C#" Value="public virtual void Abort ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Abort() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.WebClientProtocol.Abort" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bricht eine Anforderung an eine XML-Webdienstmethode ab.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddToCache">
+      <MemberSignature Language="C#" Value="protected static void AddToCache (Type type, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig void AddToCache(class System.Type type, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.WebClientProtocol.AddToCache(System.Type,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die <see cref="T:System.Type" /> des Client-Protokollhandler...</param>
+        <param name="value">Der Client-Protokollhandler, die dem Cache hinzugefügt werden.</param>
+        <summary>Fügen Sie eine Instanz des Client-Protokollhandler in den Cache ein.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionGroupName">
+      <MemberSignature Language="C#" Value="public string ConnectionGroupName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConnectionGroupName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.WebClientProtocol.ConnectionGroupName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Verbindungsgruppe für die Anforderung ab oder legt diesen fest.</summary>
+        <value>Der Name der Verbindungsgruppe. Die Standardeinstellung ist <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Services.Protocols.WebClientProtocol.ConnectionGroupName%2A> Eigenschaft ermöglicht Ihnen, eine Anforderung einer Verbindungsgruppe zuordnen. Weitere Informationen finden Sie unter <xref:System.Net.HttpWebRequest.ConnectionGroupName%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Credentials">
+      <MemberSignature Language="C#" Value="public System.Net.ICredentials Credentials { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.ICredentials Credentials" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.WebClientProtocol.Credentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.ICredentials</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab, oder legt ihn fest Sicherheitsanmeldeinformationen für die XML-Webdienst-Clientauthentifizierung.</summary>
+        <value>Die <see cref="T:System.Net.ICredentials" /> für die XML-Webdienstclient.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Verwendung der `Credentials` -Eigenschaft, ein XML-Webdienstclient muss Instanziieren einer Klasse implementieren <xref:System.Net.ICredentials>, wie z. B. <xref:System.Net.NetworkCredential>, und legen Sie den Client Anmeldeinformationen bestimmte Authentifizierungsmechanismus. Die <xref:System.Net.NetworkCredential> Klasse kann verwendet werden, um Authentifizierungsinformationen, die die grundlegende Verwendung festzulegen Digest-, NTLM- und Kerberos-Authentifizierungsmechanismen.  
+  
+ Wenn die <xref:System.Web.Services.Protocols.WebClientProtocol.Credentials%2A>-Eigenschaft auf <xref:System.Net.CredentialCache.DefaultCredentials%2A?displayProperty=nameWithType> festgelegt wird, handelt der Client je nach der Konfiguration des Servers mit dem Server die Kerberos- und/oder NTLM-Authentifizierung aus.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird ein ASP.NET Web Form, der aufgerufen wird, einen XML-Webdienst, der mit dem Namen `Math`. Innerhalb der `EnterBtn_Click` -Funktion legt das Web Form explizit Authentifizierungsinformationen, die mit der `Credentials` Eigenschaft. Der Benutzername, Kennwort und Domäne werden an den Konstruktor für übergeben der <xref:System.Net.NetworkCredential> Klasse.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter.  
+  
+ [!code-aspx-csharp[Classic WebClientProtocol.Credentials Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic WebClientProtocol.Credentials Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic WebClientProtocol.Credentials Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic WebClientProtocol.Credentials Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFromCache">
+      <MemberSignature Language="C#" Value="protected static object GetFromCache (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig object GetFromCache(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.WebClientProtocol.GetFromCache(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die <see cref="T:System.Type" /> von der Client-Protokollhandler, die aus dem Cache zurückgegeben werden.</param>
+        <summary>Ruft eine Instanz von einem Client-Protokollhandler aus dem Cache ab.</summary>
+        <returns>Eine Instanz von einem Client-Protokollhandler aus dem Cache.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWebRequest">
+      <MemberSignature Language="C#" Value="protected virtual System.Net.WebRequest GetWebRequest (Uri uri);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Net.WebRequest GetWebRequest(class System.Uri uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.WebClientProtocol.GetWebRequest(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebRequest</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="uri">Die <see cref="T:System.Uri" /> beim Erstellen der <see cref="T:System.Net.WebRequest" />.</param>
+        <summary>Erstellt eine <see cref="T:System.Net.WebRequest" /> Instanz für den angegebenen <paramref name="uri" />. Diese geschützte Methode wird aufgerufen, von der Infrastruktur des XML-Webdiensts Client ein neues abzurufenden <see cref="T:System.Net.WebRequest" /> Transport-Objekt, um die XML-Dienst webanforderung zu übertragen.</summary>
+        <returns>Die <see cref="T:System.Net.WebRequest" />-Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode kann überschrieben werden, zum Anpassen der <xref:System.Net.WebRequest> Objekt, bevor die XML-Dienst webanforderung gemacht wird. Sie können z. B. einen benutzerdefinierten Header auf die Anforderung hinzufügen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der <paramref name="uri" />-Parameter ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWebResponse">
+      <MemberSignature Language="C#" Value="protected virtual System.Net.WebResponse GetWebResponse (System.Net.WebRequest request);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Net.WebResponse GetWebResponse(class System.Net.WebRequest request) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(System.Net.WebRequest)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.Net.WebRequest" />
+      </Parameters>
+      <Docs>
+        <param name="request">Die <see cref="T:System.Net.WebRequest" /> zum Abrufen der Antwort aus.</param>
+        <summary>Gibt eine Antwort von einer synchronen Anforderung an eine XML-Webdienstmethode zurück.</summary>
+        <returns>Eine Antwort von einer synchronen Anforderung an eine XML-Webdienstmethode.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Net.WebException">Wenn <see cref="M:System.Web.Services.Protocols.WebClientProtocol.Abort" /> wird aufgerufen, vor dem Aufruf <see cref="M:System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(System.Net.WebRequest)" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWebResponse">
+      <MemberSignature Language="C#" Value="protected virtual System.Net.WebResponse GetWebResponse (System.Net.WebRequest request, IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Net.WebResponse GetWebResponse(class System.Net.WebRequest request, class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(System.Net.WebRequest,System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.Net.WebRequest" />
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="request">Die <see cref="T:System.Net.WebRequest" /> zum Abrufen der Antwort aus.</param>
+        <param name="result">Die <see cref="T:System.IAsyncResult" /> Übergabe an <see cref="M:System.Net.HttpWebRequest.EndGetResponse(System.IAsyncResult)" /> nachdem die Antwort abgeschlossen wurde.</param>
+        <summary>Gibt eine Antwort von einer asynchronen Anforderung an eine XML-Webdienstmethode zurück. Diese geschützte Methode wird von der Infrastruktur des XML-Webdiensts Client zum Abrufen der Antwort von einer asynchronen XML-Dienst webanforderung aufgerufen.</summary>
+        <returns>Eine Antwort von einer asynchronen Anforderung an eine XML-Webdienstmethode.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Net.WebException">Wenn <see cref="M:System.Web.Services.Protocols.WebClientProtocol.Abort" /> wird aufgerufen, vor dem Aufruf <see cref="M:System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(System.Net.WebRequest)" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PreAuthenticate">
+      <MemberSignature Language="C#" Value="public bool PreAuthenticate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PreAuthenticate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.WebClientProtocol.PreAuthenticate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob die Vorauthentifizierung aktiviert ist.</summary>
+        <value>
+          <see langword="true" />für eine Vorauthentifizierung die Anforderung andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Client eine Ressource anfordert, ohne Anmeldeinformationen verwenden, wird der Server die Anforderung und gibt an, welche Authentifizierungsschemas unterstützt. Der Client wählt ein Authentifizierungsschema und sendet die entsprechende `WWW-authenticate` Header mit dem Server. Wenn <xref:System.Web.Services.Protocols.WebClientProtocol.PreAuthenticate%2A> ist `true`die `WWW-authenticate` Header wird mit allen nachfolgenden Anforderungen gesendet.  
+  
+ Wenn <xref:System.Web.Services.Protocols.WebClientProtocol.PreAuthenticate%2A> ist `false`, wird eine Anforderung an die XML-Webdienstmethode ohne zu versuchen, zunächst den Benutzer zu authentifizieren. Wenn der XML-Webdienst anonymen Zugriff zulässt, wird die XML-Webdienstmethode ausgeführt. Wenn der anonyme Zugriff nicht indiziert werden kann, wird ein 401 HTTP-Rückgabecode zurück an den Client gesendet. In der Antwort die <xref:System.Web.Services.Protocols.WebClientProtocol> Klasse gibt die Anmeldeinformationen für die Authentifizierung an den Webserver. Wenn der Client authentifiziert und anschließend zum Zugriff auf den XML-Webdienst autorisiert ist, wird die XML-Webdienstmethode ausgeführt. Andernfalls wird der Client der Zugriff verweigert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestEncoding">
+      <MemberSignature Language="C#" Value="public System.Text.Encoding RequestEncoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding RequestEncoding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.WebClientProtocol.RequestEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RecommendedAsConfigurable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Text.Encoding" /> verwendet, um die Client-Anforderung an den XML-Webdienst zu machen.</summary>
+        <value>Die zeichencodierung für die Clientanforderung. Die Standardeinstellung ist <see langword="null" />, die die standardcodierung für den zugrunde liegenden Transport und dem Protokoll verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Services.Protocols.WebClientProtocol.RequestEncoding%2A> bestimmt die Codierung für die Anforderungsnachricht. Die <xref:System.Net.WebRequest.ContentType%2A> der Anforderung wird mit der Codierungswert versehen sein.  
+  
+ Ableiten von Klassen <xref:System.Web.Services.Protocols.WebClientProtocol> unterstützen ein bestimmtes Protokoll, wie z. B. <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> wird für SOAP, legen Sie diese Eigenschaft für das bestimmte Protokoll Codierung Anforderungen entsprechen. Z. B. die <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> legt die standardcodierung UTF-8.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird ein ASP.NET Web Form, der aufgerufen wird, einen XML-Webdienst, der mit dem Namen `Math`. Innerhalb der `EnterBtn_Click` -Funktion, das Web Form explizit festlegt RequestEncoding in UTF-8.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[Classic WebClientProtocol.RequestEncoding Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic WebClientProtocol.RequestEncoding Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic WebClientProtocol.RequestEncoding Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic WebClientProtocol.RequestEncoding Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Timeout">
+      <MemberSignature Language="C#" Value="public int Timeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Timeout" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.WebClientProtocol.Timeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(100000)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RecommendedAsConfigurable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Zeit, die ein XML-Webdienstclient wartet, bis die Antwort an einen synchronen XML Web Service Request (in Millisekunden) eingehen.</summary>
+        <value>Das Timeout in Millisekunden, für die synchrone Aufrufe an den XML-Webdienst. Der Standardwert ist 100000 Millisekunden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Festlegen der <xref:System.Web.Services.Protocols.WebClientProtocol.Timeout%2A> Eigenschaft <xref:System.Threading.Timeout.Infinite?displayProperty=nameWithType> gibt an, dass die Anforderung kein Timeout definiert ist. Obwohl ein XML-Webdienstclient festlegen, kann die <xref:System.Web.Services.Protocols.WebClientProtocol.Timeout%2A> Eigenschaft kein Timeout, der Webserver kann dennoch dazu führen, dass die Anforderung zu einem Timeout auf dem Server.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die `Timeout` Wert und 15000 liegen (15 Sekunden) für den synchronen Aufruf an die `Add` XML-Webdienstmethode in die `Math` XML-Webdienst.  
+  
+ [!code-cpp[Classic WebClientProtocol.Timeout Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic WebClientProtocol.Timeout Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebClientProtocol.Timeout Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic WebClientProtocol.Timeout Example/CS/source.cs#1)]
+ [!code-vb[Classic WebClientProtocol.Timeout Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic WebClientProtocol.Timeout Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Url">
+      <MemberSignature Language="C#" Value="public string Url { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Url" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.WebClientProtocol.Url" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RecommendedAsConfigurable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Basis-URL des XML-Webdiensts, der Client angefordert wird.</summary>
+        <value>Die base-URL des XML-Webdiensts, der Client wird angefordert. Die Standardeinstellung ist <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit Wsdl.exe generierte Proxyklassen werden einen Standardwert festgelegt <xref:System.Web.Services.Protocols.WebClientProtocol.Url%2A> Eigenschaft für den Client zu verwenden. Die Standardeinstellung <xref:System.Web.Services.Protocols.WebClientProtocol.Url%2A> richtet sich nach dem Speicherort-Attribut, das in die Beschreibung des Diensts, von dem die Proxyklasse generiert wurde, gefunden.  
+  
+ Abgeleitete Klassen, die spezifischen Protokolle wie z. B. Unterstützung <xref:System.Web.Services.Protocols.HttpGetClientProtocol> und <xref:System.Web.Services.Protocols.HttpPostClientProtocol> möglicherweise zusätzliche Informationen zum Hinzufügen <xref:System.Web.Services.Protocols.WebClientProtocol.Url%2A> die XML-Dienst webanforderung vornehmen.  
+  
+ Die <xref:System.Web.Services.Protocols.WebClientProtocol.Url%2A> Eigenschaft kann geändert werden, um auf einen beliebigen XML-Webdienst verweisen, die die Beschreibung des gleichen Diensts implementiert, die von die Proxyklasse generiert wurde.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel ändert die <xref:System.Web.Services.Protocols.WebClientProtocol.Url%2A> -Eigenschaft für die `math` XML-Webdienst an den Webserver mit dem Namen `http:// www.contoso.com`.  
+  
+ [!code-cpp[Classic WebClientProtocol.Url Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic WebClientProtocol.Url Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebClientProtocol.Url Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic WebClientProtocol.Url Example/CS/source.cs#1)]
+ [!code-vb[Classic WebClientProtocol.Url Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic WebClientProtocol.Url Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseDefaultCredentials">
+      <MemberSignature Language="C#" Value="public bool UseDefaultCredentials { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseDefaultCredentials" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.WebClientProtocol.UseDefaultCredentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Festlegen der <see cref="P:System.Web.Services.Protocols.WebClientProtocol.Credentials" /> auf den Wert der Eigenschaft der <see cref="P:System.Net.CredentialCache.DefaultCredentials" /> Eigenschaft.</summary>
+        <value>
+          <see langword="true" />Wenn die Anmeldeinformationen-Eigenschaft, auf den Wert des festgelegt ist der <see cref="P:System.Net.CredentialCache.DefaultCredentials" /> Eigenschaft ist, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,173 @@
+<Type Name="HitTestLocations" FullName="System.Workflow.ComponentModel.Design.HitTestLocations">
+  <TypeSignature Language="C#" Value="public enum HitTestLocations" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HitTestLocations extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Design.HitTestLocations" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Beschreibt den Bereich des Designers, der den an eine <see cref="M:System.Workflow.ComponentModel.Design.ActivityDesigner.HitTest(System.Drawing.Point)" />-Methode übergebenen Punkt enthält.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ <xref:System.Workflow.ComponentModel.Design.HitTestLocations> wird von <xref:System.Workflow.ComponentModel.Design.ActivityDesigner.HitTest%2A>-Methoden zum Beschreiben des Designerbereichs verwendet, in dem Mausklicks oder Drag & Drop-Vorgänge aufgetreten sind. Verwenden Sie <xref:System.Workflow.ComponentModel.Design.HitTestLocations>, um zu entscheiden, welche Aktion nach einem erfolgreichen Treffertest ausgeführt werden soll.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Hinzufügen einer neuen Verzweigung mit einem Designer, der auf der <xref:System.Workflow.ComponentModel.Design.CompositeActivityDesigner>-Klasse basiert. Wenn <xref:System.Workflow.ComponentModel.Design.CompositeActivityDesigner.CanInsertActivities%2A> `true` zurückgibt, wird eine neue Verzweigung mithilfe der <xref:System.Workflow.ComponentModel.Design.CompositeActivityDesigner.InsertActivities%2A>-Methode erstellt. Ein <xref:System.Workflow.ComponentModel.Design.ConnectorHitTestInfo> -Objekt wird erstellt, als Parameter an die <xref:System.Workflow.ComponentModel.Design.CompositeActivityDesigner.InsertActivities%2A> Methode mithilfe den Speicherort des Workflow-Designer das Designer-Flag angeben. Anschließend wird mithilfe der <xref:System.Workflow.ComponentModel.Design.CompositeActivityDesigner.EnsureVisibleContainedDesigner%2A>-Methode sichergestellt, dass die neu hinzugefügte Verzweigung im Workflow-Designer angezeigt wird.  
+  
+ [!code-csharp[Wf_samples#29](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#29)]
+ [!code-vb[Wf_samples#29](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#29)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ActionArea">
+      <MemberSignature Language="C#" Value="ActionArea" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.ComponentModel.Design.HitTestLocations ActionArea = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.HitTestLocations.ActionArea" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.HitTestLocations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass auf den Bereich der Erweiterungsschaltfläche geklickt wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Bottom">
+      <MemberSignature Language="C#" Value="Bottom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.ComponentModel.Design.HitTestLocations Bottom = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.HitTestLocations.Bottom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.HitTestLocations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass am unteren Rand des Designers geklickt wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Connector">
+      <MemberSignature Language="C#" Value="Connector" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.ComponentModel.Design.HitTestLocations Connector = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.HitTestLocations.Connector" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.HitTestLocations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass auf dem Designer auf eine Verbindung geklickt wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Designer">
+      <MemberSignature Language="C#" Value="Designer" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.ComponentModel.Design.HitTestLocations Designer = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.HitTestLocations.Designer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.HitTestLocations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass auf einen beliebigen Teil des Designers geklickt wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="Left" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.ComponentModel.Design.HitTestLocations Left = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.HitTestLocations.Left" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.HitTestLocations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass im linken Teil des Designers geklickt wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.ComponentModel.Design.HitTestLocations None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.HitTestLocations.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.HitTestLocations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass in keinem Teil des Designers geklickt wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="Right" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.ComponentModel.Design.HitTestLocations Right = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.HitTestLocations.Right" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.HitTestLocations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass im rechten Teil des Designers geklickt wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Top">
+      <MemberSignature Language="C#" Value="Top" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.ComponentModel.Design.HitTestLocations Top = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.HitTestLocations.Top" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.HitTestLocations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass am oberen Rand des Designers geklickt wurde.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,143 @@
+<Type Name="IProgressPage" FullName="System.Windows.Interop.IProgressPage">
+  <TypeSignature Language="C#" Value="public interface IProgressPage" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IProgressPage" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Interop.IProgressPage" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert die Interaktion zwischen Windows Presentation Foundation (WPF)-Anwendungen, die interoperation Inhalt gehostet werden und eine Statusseite Host angegeben.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ApplicationName">
+      <MemberSignature Language="C#" Value="public string ApplicationName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.IProgressPage.ApplicationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Anwendung.</summary>
+        <value>Der Name der Anwendung, die Seite stammt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zur Festlegung der Anwendungsname muss warten, bis das manifest Download abgeschlossen ist, da das Manifest selbst die erforderlichen Informationen enthält.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeploymentPath">
+      <MemberSignature Language="C#" Value="public Uri DeploymentPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri DeploymentPath" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.IProgressPage.DeploymentPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Uri" /> Pfad zum Bereitstellungsmanifest Anwendung.</summary>
+        <value>Anwendung den Pfad des Bereitstellungsmanifests.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PublisherName">
+      <MemberSignature Language="C#" Value="public string PublisherName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PublisherName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.IProgressPage.PublisherName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Herausgeber der Anwendung.</summary>
+        <value>Der Verleger identifizierende Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einrichten der Herausgeber der Anwendung muss warten, bis das manifest Download abgeschlossen ist, da das Manifest selbst die erforderlichen Informationen enthält.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RefreshCallback">
+      <MemberSignature Language="C#" Value="public System.Windows.Threading.DispatcherOperationCallback RefreshCallback { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Threading.DispatcherOperationCallback RefreshCallback" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.IProgressPage.RefreshCallback" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherOperationCallback</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Verweis auf eine <see cref="T:System.Windows.Threading.DispatcherOperationCallback" /> Ereignishandler, der die Groß-/Kleinschreibung einen Benutzerinitiierte Refresh-Befehl behandeln kann.</summary>
+        <value>Der Rückrufverweis.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopCallback">
+      <MemberSignature Language="C#" Value="public System.Windows.Threading.DispatcherOperationCallback StopCallback { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Threading.DispatcherOperationCallback StopCallback" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.IProgressPage.StopCallback" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherOperationCallback</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Verweis auf eine <see cref="T:System.Windows.Threading.DispatcherOperationCallback" /> Ereignishandler, der die Groß-/Kleinschreibung eines Benutzerinitiierte Stop-Befehls verarbeiten kann.</summary>
+        <value>Der Rückrufverweis.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateProgress">
+      <MemberSignature Language="C#" Value="public void UpdateProgress (long bytesDownloaded, long bytesTotal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UpdateProgress(int64 bytesDownloaded, int64 bytesTotal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.IProgressPage.UpdateProgress(System.Int64,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bytesDownloaded" Type="System.Int64" />
+        <Parameter Name="bytesTotal" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="bytesDownloaded">Gesamtzahl der Bytes bisher heruntergeladen.</param>
+        <param name="bytesTotal">Gesamtzahl der Bytes, die für die Anwendung heruntergeladen werden müssen.</param>
+        <summary>Upload Fortschritt numerischen stellt Informationen bereit, mit denen die Statusanzeige aktualisiert werden kann.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

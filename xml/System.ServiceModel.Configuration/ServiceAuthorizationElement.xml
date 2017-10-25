@@ -1,0 +1,277 @@
+<Type Name="ServiceAuthorizationElement" FullName="System.ServiceModel.Configuration.ServiceAuthorizationElement">
+  <TypeSignature Language="C#" Value="public sealed class ServiceAuthorizationElement : System.ServiceModel.Configuration.BehaviorExtensionElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ServiceAuthorizationElement extends System.ServiceModel.Configuration.BehaviorExtensionElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.ServiceAuthorizationElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Configuration.BehaviorExtensionElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Konfigurationselement dar, das Sicherheitseinstellungen auf Dienstebene definiert.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceAuthorizationElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceAuthorizationElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Configuration.ServiceAuthorizationElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthorizationPolicies">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.AuthorizationPolicyTypeElementCollection AuthorizationPolicies { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.AuthorizationPolicyTypeElementCollection AuthorizationPolicies" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceAuthorizationElement.AuthorizationPolicies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("authorizationPolicies")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.AuthorizationPolicyTypeElementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Autorisierungsrichtlinientypen ab.</summary>
+        <value>Ein <see cref="T:System.ServiceModel.Configuration.AuthorizationPolicyTypeElementCollection" />, der eine Auflistung von Autorisierungsrichtlinientypen enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Konfigurieren einer Gruppe von Autorisierungsrichtlinienimplementationen ermöglicht die Transformation einer Gruppe von Eingabeansprüchen in eine andere Gruppe von Eingabeansprüchen. Die Zugriffskontrolle kann basierend auf den Ansprüchen gewährt oder verweigert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BehaviorType">
+      <MemberSignature Language="C#" Value="public override Type BehaviorType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type BehaviorType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceAuthorizationElement.BehaviorType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ dieses Verhaltenskonfigurationselements ab.</summary>
+        <value>Der Verhaltenstyp.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyFrom">
+      <MemberSignature Language="C#" Value="public override void CopyFrom (System.ServiceModel.Configuration.ServiceModelExtensionElement from);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyFrom(class System.ServiceModel.Configuration.ServiceModelExtensionElement from) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceAuthorizationElement.CopyFrom(System.ServiceModel.Configuration.ServiceModelExtensionElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.ServiceModel.Configuration.ServiceModelExtensionElement" />
+      </Parameters>
+      <Docs>
+        <param name="from">Das zu kopierende Konfigurationselement.</param>
+        <summary>Kopiert den Inhalt eines angegebenen Konfigurationselements in dieses Konfigurationselement.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBehavior">
+      <MemberSignature Language="C#" Value="protected override object CreateBehavior ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance object CreateBehavior() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceAuthorizationElement.CreateBehavior" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImpersonateCallerForAllOperations">
+      <MemberSignature Language="C#" Value="public bool ImpersonateCallerForAllOperations { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ImpersonateCallerForAllOperations" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceAuthorizationElement.ImpersonateCallerForAllOperations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("impersonateCallerForAllOperations", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen booleschen Wert ab oder legt einen booleschen Wert fest, der angibt, ob alle Vorgänge im Dienst die Identität des Aufrufers annehmen.</summary>
+        <value>
+          <see langword="true" />, wenn alle Vorgänge im Dienst die Identität des Aufrufers annehmen, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein bestimmter Dienstvorgang die Identität des Aufrufers annimmt, wird der Threadkontext zum Aufruferkontext geändert, bevor der angegebene Dienst ausgeführt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImpersonateOnSerializingReply">
+      <MemberSignature Language="C#" Value="public bool ImpersonateOnSerializingReply { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ImpersonateOnSerializingReply" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceAuthorizationElement.ImpersonateOnSerializingReply" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("impersonateOnSerializingReply", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.ServiceModel.Configuration.ServiceAuthorizationElement" /> nimmt die Identität für die Serialisierung der Antwort.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.ServiceModel.Configuration.ServiceAuthorizationElement" /> nimmt die Identität für die Serialisierung der Antwort; anderenfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrincipalPermissionMode">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.PrincipalPermissionMode PrincipalPermissionMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.Description.PrincipalPermissionMode PrincipalPermissionMode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceAuthorizationElement.PrincipalPermissionMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("principalPermissionMode", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.PrincipalPermissionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Principal ab oder legt den Principal fest, der verwendet wird, um Vorgänge auf dem Server auszuführen.</summary>
+        <value>Ein gültiger <see cref="T:System.ServiceModel.Description.PrincipalPermissionMode" />-Wert, der den Principal angibt, der verwendet wird, um Vorgänge auf dem Server auszuführen. Die Standardeinstellung ist <see cref="F:System.ServiceModel.Description.PrincipalPermissionMode.UseWindowsGroups" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceAuthorizationElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RoleProviderName">
+      <MemberSignature Language="C#" Value="public string RoleProviderName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RoleProviderName" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceAuthorizationElement.RoleProviderName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("roleProviderName", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Rollenanbieters ab oder legt den Namen fest, der Rolleninformationen für eine [!INCLUDE[indigo1](~/includes/indigo1-md.md)]-Anwendung bereitstellt.</summary>
+        <value>Der Name des Rollenanbieters. Der Standardwert ist eine leere Zeichenfolge.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verschiedene Typen von Rollenanbieter können verwendet werden, um Rolleninformationen aus einer Windows-Gruppe, einer SQL-Datenbank, eine Autorisierung Manager einen Richtlinienspeicher usw. bereitzustellen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceAuthorizationManagerType">
+      <MemberSignature Language="C#" Value="public string ServiceAuthorizationManagerType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ServiceAuthorizationManagerType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceAuthorizationElement.ServiceAuthorizationManagerType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("serviceAuthorizationManagerType", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den verwendeten Diensttypautorisierungs-Manager ab oder legt ihn fest.</summary>
+        <value>Eine Zeichenfolge, die den Typ des Dienstautorisierungs-Managers angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

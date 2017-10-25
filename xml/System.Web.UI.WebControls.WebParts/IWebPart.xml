@@ -1,0 +1,341 @@
+<Type Name="IWebPart" FullName="System.Web.UI.WebControls.WebParts.IWebPart">
+  <TypeSignature Language="C#" Value="public interface IWebPart" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IWebPart" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.IWebPart" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Allgemeine Eigenschaften der Benutzeroberfläche (UI), der von ASP.NET definiert <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelemente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.IWebPart> Schnittstelle bietet mehrere UI-orientierten Eigenschaften, die Verbesserung der benutzerfreundlichkeit arbeiten mit <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente. Beim Erstellen von Steuerelementen, die von der Basisklasse ableiten <xref:System.Web.UI.WebControls.WebParts.WebPart> -Klasse, erhalten Sie eine Implementierung aller Eigenschaften in der <xref:System.Web.UI.WebControls.WebParts.IWebPart> Schnittstelle, da die <xref:System.Web.UI.WebControls.WebParts.WebPart> Basisklasse implementiert diese Schnittstelle.  
+  
+ Können Sie vorhandene Benutzersteuerelemente, ASP.NET-Steuerelemente oder benutzerdefinierte Serversteuerelemente, die nicht von erben die <xref:System.Web.UI.WebControls.WebParts.WebPart> Klasse als Teil einer Webparts-Anwendung, und sie können auch diese Benutzeroberfläche benutzerorientierte Eigenschaften deklariert, indem die <xref:System.Web.UI.WebControls.WebParts.IWebPart> Schnittstelle. Setzen Sie vorhandene Steuerelemente in eine <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> Zone, zur Laufzeit, die sie mit umschlossen sind ein <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Objekt. Da die <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Klasse erbt von der <xref:System.Web.UI.WebControls.WebParts.WebPart> Basisklasse, können Sie vorhandene Steuerelemente fungieren als "true" <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente und es werden die Eigenschaften der hinzugefügt die <xref:System.Web.UI.WebControls.WebParts.IWebPart> Schnittstelle.  
+  
+ Setzen Sie Serversteuerelemente, die nicht <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelemente in Zonen, die sie verwenden die <xref:System.Web.UI.WebControls.WebParts.IWebPart> Eigenschaften zur Laufzeit, und Sie können auch die Werte dieser Eigenschaften deklarieren, Serversteuerelemente in das Markup der Seite (im Format die Persistenz von Seite "). Jedoch, da diese Eigenschaften zur Laufzeit nur auf die Serversteuerelemente verfügbar sind, während der Entwurfszeit Codierungsfunktionen wie IntelliSense nicht erkennen <xref:System.Web.UI.WebControls.WebParts.IWebPart> Eigenschaften, die auf Serversteuerelemente deklariert werden. Für diese Steuerelemente deklarierte Eigenschaften funktionieren weiterhin auf, wenn Sie die Seite laden, aber Microsoft Visual Studio nicht die Eigenschaften z. B. zur Entwurfszeit erkennt. Wenn Sie hinzufügen möchten die <xref:System.Web.UI.WebControls.WebParts.IWebPart> Eigenschaften zu vorhandenen Server und Benutzersteuerelemente, um das Benutzer zur Entwurfszeit zu verbessern, können Sie implementieren die <xref:System.Web.UI.WebControls.WebParts.IWebPart> -Schnittstelle in einem Serversteuerelement.  
+  
+ Möglicherweise ist der Hauptgrund zum Implementieren der <xref:System.Web.UI.WebControls.WebParts.IWebPart> Schnittstelle wird für Steuerelemente, die nicht die Verwendung von-Eigenschaften (Benutzerdefiniert) unterstützen. Expando-Eigenschaften sind Zeichenfolgen, die auf eine Klasse dynamisch als eine Eigenschaft anhand der hinzugefügt werden können die <xref:System.Web.UI.IAttributeAccessor> Schnittstelle. Steuerelemente, die diese Schnittstelle implementieren, einschließlich der <xref:System.Web.UI.WebControls.WebControl> Klasse und seinen untergeordneten Elementen können Expando-Eigenschaften. Aus diesem Grund alle ASP.NET-Serversteuerelemente, benutzerdefinierte Steuerelemente, die von ihnen abgeleitet werden, Web-Benutzersteuerelemente, und <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelemente unterstützen die Verwendung von Expando-Eigenschaften. Aber benutzerdefinierte Steuerelemente, die direkt von der Basisklasse erben <xref:System.Web.UI.Control> Klasse Expando-Eigenschaften nicht unterstützt. Daher, wenn Sie deklarieren, dass diese Steuerelemente innerhalb einer <xref:System.Web.UI.WebControls.WebParts.WebPartZone>, Sie werden nicht in der Lage, deklarieren Sie die allgemeinen <xref:System.Web.UI.WebControls.WebParts.IWebPart> Eigenschaften auf die Steuerelemente, Eigenschaften, z. B. <xref:System.Web.UI.WebControls.WebParts.IWebPart.Title%2A> und <xref:System.Web.UI.WebControls.WebParts.IWebPart.Description%2A>. Wenn Sie diese Eigenschaften mit derartigen Steuerelementen verwenden möchten, müssen Sie implementieren die <xref:System.Web.UI.WebControls.WebParts.IWebPart> Schnittstelle.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Implementieren der <xref:System.Web.UI.WebControls.WebParts.IWebPart> Schnittstelle in einem Benutzersteuerelement. Dies ist eine einfache Implementierung, die minimal wird gezeigt, wie die Eigenschaften implementiert.  
+  
+ Der erste Teil des Codebeispiels wird veranschaulicht, das Benutzersteuerelement. Das Benutzersteuerelement implementiert alle Eigenschaften der <xref:System.Web.UI.WebControls.WebParts.IWebPart> Schnittstelle sowie zwei zusätzliche Öffentliche Eigeschaften an Steuerelemente gebunden, in der Benutzeroberfläche. Verwenden Sie die beiden benutzerdefinierten Eigenschaften jeder der `Personalizable` -Attribut, das die Werte in diesen Eigenschaften über Browsersitzungen hinweg gespeichert werden kann. Beachten Sie, dass in der Basisklasse <xref:System.Web.UI.WebControls.WebParts.WebPart> klassenimplementierung, alle Eigenschaften des der <xref:System.Web.UI.WebControls.WebParts.IWebPart> Schnittstelle als personalisierbar implementiert auch, obwohl sie nicht in diesem Codebeispiel sind.  
+  
+ [!code-aspx-csharp[WebParts_IWebPart_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IWebPart_Overview/CS/accountusercontrolcs.ascx#2)]
+ [!code-aspx-vb[WebParts_IWebPart_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IWebPart_Overview/VB/accountusercontrolvb.ascx#2)]  
+  
+ Der zweite Teil des Codebeispiels wird veranschaulicht, die Webseite, die das Benutzersteuerelement hostet. Die Seite verfügt über eine <xref:System.Web.UI.WebControls.WebParts.WebPartZone> zu steuern, in dem auf das Benutzersteuerelement verwiesen wird. Beachten Sie, dass einige der <xref:System.Web.UI.WebControls.WebParts.IWebPart> Schnittstelle Eigenschaftswerte werden deklarativ festgelegt, in das Markup für das Benutzersteuerelement, wodurch es sowohl Verhalten sich ähnlich Vorkommen eine <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement zur Entwurfszeit und Laufzeit. Wenn Sie die Seite in einem Browser zu laden, können Sie mithilfe der Benutzeroberfläche auf der Seite veranschaulichen die Möglichkeit, die Werte der implementierten programmgesteuert ändern <xref:System.Web.UI.WebControls.WebParts.IWebPart> Eigenschaften zur Laufzeit. Wenn Sie einige der Eigenschaftswerte ändern, die Änderungen sind nicht auf der Seite zu sehen, aber in der Quelle der Seite sichtbar sind (die <xref:System.Web.UI.WebControls.WebParts.IWebPart.TitleIconImageUrl%2A> Eigenschaft), oder werden in die Anwendungszustandsdaten gespeichert (die <xref:System.Web.UI.WebControls.WebParts.IWebPart.CatalogIconImageUrl%2A> Eigenschaft).  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[WebParts_IWebPart_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IWebPart_Overview/CS/accountuchostcs.aspx#1)]
+ [!code-aspx-vb[WebParts_IWebPart_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IWebPart_Overview/VB/accountuchostvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Normalerweise Sie müssen nicht zum Implementieren der <see cref="T:System.Web.UI.WebControls.WebParts.IWebPart" /> Schnittstelle für benutzerdefinierte <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelemente oder Serversteuerelemente, da die Basis <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Klasse bereits implementiert die Schnittstelle. Benutzerdefinierte <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelemente und andere Serversteuerelemente, die in platziert werden <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZoneBase" /> Zonen, können alle die <see cref="T:System.Web.UI.WebControls.WebParts.IWebPart" /> Eigenschaften.  
+  
+ Der Hauptgrund zum Implementieren der <see cref="T:System.Web.UI.WebControls.WebParts.IWebPart" /> -Schnittstelle selbst, ob in einem benutzerdefinierten <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement oder einem anderen Serversteuerelement ist, wenn die standardmäßige Implementierung geändert werden soll. Sie möchten z. B. Standardwerte für einige der Eigenschaften bereitstellen. Ein weiterer Grund für die Schnittstelle in einem Benutzer- oder Steuerelement zu implementieren ist, damit die zur Entwurfszeit für das Arbeiten mit diesen Eigenschaften für das Steuerelement erweitert werden wird.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="CatalogIconImageUrl">
+      <MemberSignature Language="C#" Value="public string CatalogIconImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CatalogIconImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.IWebPart.CatalogIconImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL zu einem Bild, das darstellt ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement in einem Katalog von Steuerelementen.</summary>
+        <value>Eine Zeichenfolge, die URL zu einem Bild verwendet, um die Darstellung des Steuerelements in einem Katalog darstellt. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Webanwendungen für die Webparts bieten häufig eines Katalogs (oder Liste) von Steuerelementen, die Benutzer zu einer Seite hinzufügen können. Die <xref:System.Web.UI.WebControls.WebParts.IWebPart.CatalogIconImageUrl%2A> Eigenschaft für ein Steuerelement enthält die URL zu einem Bild, das das Steuerelement darstellt, wenn es in einem Katalog angezeigt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht deklarative und die programmgesteuerte Verwendung von der <xref:System.Web.UI.WebControls.WebParts.IWebPart.CatalogIconImageUrl%2A> Eigenschaft. Der vollständigen Quellcode für das Beispiel befindet sich im Abschnitt "Beispiel" von der <xref:System.Web.UI.WebControls.WebParts.IWebPart> -Klassenübersicht.  
+  
+ Der erste Teil des Codebeispiels wird veranschaulicht, wie das Benutzersteuerelement implementiert die <xref:System.Web.UI.WebControls.WebParts.IWebPart.CatalogIconImageUrl%2A> Eigenschaft.  
+  
+ [!code-csharp[WebParts_IWebPart_Overview#8](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IWebPart_Overview/CS/accountusercontrolcs.ascx#8)]
+ [!code-vb[WebParts_IWebPart_Overview#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IWebPart_Overview/VB/accountusercontrolvb.ascx#8)]  
+  
+ Der zweite Teil des Codebeispiels zeigt die Methode im Benutzersteuerelement, das programmgesteuert den Wert für setzt die <xref:System.Web.UI.WebControls.WebParts.IWebPart.CatalogIconImageUrl%2A> Eigenschaft, wenn ein Benutzer den Namen der entsprechenden Eigenschaft aus den Optionsfeldern auf der Seite auswählt setzt einen neuen Wert in das Textfeld und Anschließend klickt er auf die **Update** Schaltfläche.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-csharp[WebParts_IWebPart_Overview#9](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IWebPart_Overview/CS/accountusercontrolcs.ascx#9)]
+ [!code-vb[WebParts_IWebPart_Overview#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IWebPart_Overview/VB/accountusercontrolvb.ascx#9)]  
+  
+ Der dritte Teil des Codebeispiels wird veranschaulicht, wie der Benutzer zu steuern, die implementiert die <xref:System.Web.UI.WebControls.WebParts.IWebPart> Schnittstelle bezieht sich auf eine <xref:System.Web.UI.WebControls.WebParts.WebPartZone> -Steuerelement, und wie die <xref:System.Web.UI.WebControls.WebParts.IWebPart.CatalogIconImageUrl%2A> Eigenschaft für das Steuerelement deklarativ festgelegt ist. Beachten Sie, weil es kein Katalog von Webparts-Steuerelemente, die mit diesem Beispiel bereitgestellt ist, die tatsächliche Auswirkung der Einstellung dieser Eigenschaft angezeigt werden.  
+  
+ [!code-aspx-csharp[WebParts_IWebPart_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IWebPart_Overview/CS/accountuchostcs.aspx#1)]
+ [!code-aspx-vb[WebParts_IWebPart_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IWebPart_Overview/VB/accountuchostvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.IWebPart.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine kurze Erläuterung, die ein Steuerelement, für die Verwendung in QuickInfos und Katalogen von Wirkungsweise zusammenfasst <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelemente.</summary>
+        <value>Eine Zeichenfolge, die Kurzform zusammenfasst die Funktionalität des Steuerelements. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.IWebPart.Description%2A> Eigenschaftswert in der Regel dient als eine beschreibende Zeichenfolge, die für ein Steuerelement in Katalogen, die Listen bieten <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelemente und als QuickInfo in der Titelleiste des Steuerelements. Der Inhalt der Eigenschaft wird in einer QuickInfo angezeigt, wenn ein Benutzer den Mauszeiger über den Text in der Titelleiste des Steuerelements positioniert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht deklarative und die programmgesteuerte Verwendung von der <xref:System.Web.UI.WebControls.WebParts.IWebPart.Description%2A> Eigenschaft. Der vollständigen Quellcode für das Beispiel befindet sich im Abschnitt "Beispiel" von der <xref:System.Web.UI.WebControls.WebParts.IWebPart> -Klassenübersicht.  
+  
+ Der erste Teil des Codebeispiels wird veranschaulicht, wie das Benutzersteuerelement implementiert die <xref:System.Web.UI.WebControls.WebParts.IWebPart.Description%2A> Eigenschaft.  
+  
+ [!code-csharp[WebParts_IWebPart_Overview#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IWebPart_Overview/CS/accountusercontrolcs.ascx#3)]
+ [!code-vb[WebParts_IWebPart_Overview#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IWebPart_Overview/VB/accountusercontrolvb.ascx#3)]  
+  
+ Der zweite Teil des Codebeispiels zeigt die Methode im Benutzersteuerelement, das programmgesteuert den Wert für setzt die <xref:System.Web.UI.WebControls.WebParts.IWebPart.Description%2A> Eigenschaft, wenn ein Benutzer den Namen der entsprechenden Eigenschaft aus den Optionsfeldern auf der Seite auswählt setzt einen neuen Wert in das Textfeld und Anschließend klickt er auf die **Update** Schaltfläche.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-csharp[WebParts_IWebPart_Overview#9](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IWebPart_Overview/CS/accountusercontrolcs.ascx#9)]
+ [!code-vb[WebParts_IWebPart_Overview#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IWebPart_Overview/VB/accountusercontrolvb.ascx#9)]  
+  
+ Der dritte Teil des Codebeispiels wird veranschaulicht, wie der Benutzer zu steuern, die implementiert die <xref:System.Web.UI.WebControls.WebParts.IWebPart> Schnittstelle bezieht sich auf eine <xref:System.Web.UI.WebControls.WebParts.WebPartZone> -Steuerelement, und wie die <xref:System.Web.UI.WebControls.WebParts.IWebPart.Description%2A> Eigenschaft für das Steuerelement deklarativ festgelegt ist. Beachten Sie, dass Sie den Wert dieser Eigenschaft sehen können, indem Sie den Mauszeiger über den Titeltext in der Titelleiste des Steuerelements positionieren, nachdem Sie die Seite in einem Browser geladen wurde. Sie können auch programmgesteuert zu ändern, den Wert der Eigenschaft zur Laufzeit durch Laden die Webseite und verwenden die bereitgestellte Benutzeroberfläche (UI) so ändern Sie den Wert der Eigenschaft experimentieren.  
+  
+ [!code-aspx-csharp[WebParts_IWebPart_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IWebPart_Overview/CS/accountuchostcs.aspx#1)]
+ [!code-aspx-vb[WebParts_IWebPart_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IWebPart_Overview/VB/accountuchostvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subtitle">
+      <MemberSignature Language="C#" Value="public string Subtitle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Subtitle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.IWebPart.Subtitle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Zeichenfolge, die verkettet wird, mit der <see cref="P:System.Web.UI.WebControls.WebParts.IWebPart.Title" /> Eigenschaftswert, um einen vollständigen Titel für bilden eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement.</summary>
+        <value>Eine Zeichenfolge, die als Untertitel für das Steuerelement dient. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.IWebPart.Subtitle%2A> Eigenschaft wird verwendet, um einen Untertitel Standardzeichenfolge für Zurückgeben einer <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement, das den Titel des Steuerelements in der Titelleiste angefügt wird.  
+  
+ Wenn Sie angeben, dass einen Standardwert für die <xref:System.Web.UI.WebControls.WebParts.IWebPart.Subtitle%2A> Eigenschaft in einem Steuerelement, implementiert der <xref:System.Web.UI.WebControls.WebParts.IWebPart> -Schnittstelle ein, den den Webparts-Steuerelementsatz automatisch fügt diese an den Wert des der <xref:System.Web.UI.WebControls.WebParts.IWebPart.Title%2A> Eigenschaft des Steuerelements zur Laufzeit.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht deklarative und die programmgesteuerte Verwendung von der <xref:System.Web.UI.WebControls.WebParts.IWebPart.Subtitle%2A> Eigenschaft. Der vollständigen Quellcode für das Beispiel befindet sich im Abschnitt "Beispiel" von der <xref:System.Web.UI.WebControls.WebParts.IWebPart> -Klassenübersicht.  
+  
+ Der erste Teil des Codebeispiels wird veranschaulicht, wie das Benutzersteuerelement implementiert die <xref:System.Web.UI.WebControls.WebParts.IWebPart.Subtitle%2A> Eigenschaft. Beachten Sie, dass die Eigenschaft schreibgeschützt ist und sollte verwendet werden, um einen Untertitel bereitzustellen, der an den wichtigsten Titel eines Steuerelements angefügt wird.  
+  
+ [!code-csharp[WebParts_IWebPart_Overview#5](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IWebPart_Overview/CS/accountusercontrolcs.ascx#5)]
+ [!code-vb[WebParts_IWebPart_Overview#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IWebPart_Overview/VB/accountusercontrolvb.ascx#5)]  
+  
+ Der zweite Teil des Codebeispiels wird veranschaulicht, wie der Benutzer zu steuern, die implementiert die <xref:System.Web.UI.WebControls.WebParts.IWebPart> Schnittstelle bezieht sich auf eine <xref:System.Web.UI.WebControls.WebParts.WebPartZone> -Steuerelement, und wie die schreibbaren Eigenschaften aus <xref:System.Web.UI.WebControls.WebParts.IWebPart> deklarativ auf das Steuerelement festgelegt werden. Nachdem Sie die Seite in einem Browser geladen haben, beachten Sie, dass der Wert von der <xref:System.Web.UI.WebControls.WebParts.IWebPart.Subtitle%2A> -Eigenschaft, die in das Benutzersteuerelement Implementierungscode festgelegt wurde, wird an den Titel in der Titelleiste des Steuerelements angefügt.  
+  
+ [!code-aspx-csharp[WebParts_IWebPart_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IWebPart_Overview/CS/accountuchostcs.aspx#1)]
+ [!code-aspx-vb[WebParts_IWebPart_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IWebPart_Overview/VB/accountuchostvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="public string Title { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Title" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.IWebPart.Title" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Titel einer <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement.</summary>
+        <value>Eine Zeichenfolge, die den Titel des Steuerelements enthält. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der sichtbare Titeltext in der Titelleiste des Steuerelements festgelegt ist, durch die <xref:System.Web.UI.WebControls.WebParts.IWebPart.Title%2A> Eigenschaft.  
+  
+ Wenn Sie einen Titel für ein Steuerelement nicht angeben, berechnet der Webparts-Steuerelementsatz automatisch eine Standardzeichenfolge, die als Titel verwenden. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.WebParts.WebPart.DisplayTitle%2A>. Darüber hinaus ist es möglich, einen Untertitel bereitzustellen, der das die Titelzeichenfolge angefügt wird. Ausführliche Informationen finden Sie unter <xref:System.Web.UI.WebControls.WebParts.IWebPart.Subtitle%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht deklarative und die programmgesteuerte Verwendung von der <xref:System.Web.UI.WebControls.WebParts.IWebPart.Title%2A> Eigenschaft. Der vollständigen Quellcode für das Beispiel befindet sich im Abschnitt "Beispiel" von der <xref:System.Web.UI.WebControls.WebParts.IWebPart> -Klassenübersicht.  
+  
+ Der erste Teil des Codebeispiels wird veranschaulicht, wie das Benutzersteuerelement implementiert die <xref:System.Web.UI.WebControls.WebParts.IWebPart.Title%2A> Eigenschaft.  
+  
+ [!code-csharp[WebParts_IWebPart_Overview#4](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IWebPart_Overview/CS/accountusercontrolcs.ascx#4)]
+ [!code-vb[WebParts_IWebPart_Overview#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IWebPart_Overview/VB/accountusercontrolvb.ascx#4)]  
+  
+ Der zweite Teil des Codebeispiels zeigt die Methode im Benutzersteuerelement, das programmgesteuert den Wert für setzt die <xref:System.Web.UI.WebControls.WebParts.IWebPart.Title%2A> Eigenschaft, wenn ein Benutzer den Namen der entsprechenden Eigenschaft aus den Optionsfeldern auf der Seite auswählt setzt einen neuen Wert in das Textfeld und Anschließend klickt er auf die **Update** Schaltfläche.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-csharp[WebParts_IWebPart_Overview#9](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IWebPart_Overview/CS/accountusercontrolcs.ascx#9)]
+ [!code-vb[WebParts_IWebPart_Overview#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IWebPart_Overview/VB/accountusercontrolvb.ascx#9)]  
+  
+ Der dritte Teil des Codebeispiels wird veranschaulicht, wie der Benutzer zu steuern, die implementiert die <xref:System.Web.UI.WebControls.WebParts.IWebPart> Schnittstelle bezieht sich auf eine <xref:System.Web.UI.WebControls.WebParts.WebPartZone> -Steuerelement, und wie die <xref:System.Web.UI.WebControls.WebParts.IWebPart.Title%2A> Eigenschaft für das Steuerelement deklarativ festgelegt ist.  
+  
+ [!code-aspx-csharp[WebParts_IWebPart_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IWebPart_Overview/CS/accountuchostcs.aspx#1)]
+ [!code-aspx-vb[WebParts_IWebPart_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IWebPart_Overview/VB/accountuchostvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TitleIconImageUrl">
+      <MemberSignature Language="C#" Value="public string TitleIconImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TitleIconImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.IWebPart.TitleIconImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die URL zu einem Bild zur Darstellung von Webparts-Steuerelement in der Titelleiste des Steuerelements fest.</summary>
+        <value>Eine Zeichenfolge, die URL zu einem Bild darstellt. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.IWebPart.TitleIconImageUrl%2A> Eigenschaft bietet eine Möglichkeit, ein Symbol zugeordnet ein <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement. Das Symbol wird in der Titelleiste des Steuerelements angezeigt. Anwendungsentwickler sollten aus Gründen der Konsistenz thematische dieses Symbol wie in der Abbildung vornehmen, die das Steuerelement in einem Katalog von Webparts-Steuerelemente darstellt (das Image verwiesen wird, der <xref:System.Web.UI.WebControls.WebParts.IWebPart.CatalogIconImageUrl%2A> Eigenschaft).  
+  
+ Wie in der Webparts-Steuerelementsatz implementiert, wird die <xref:System.Web.UI.WebControls.WebParts.IWebPart.TitleIconImageUrl%2A> Eigenschaft personalisiert werden kann, von Endbenutzern so ändern Sie das Bild oder ein Symbol, das in der Titelleiste des Steuerelements angezeigt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht deklarative und die programmgesteuerte Verwendung von der <xref:System.Web.UI.WebControls.WebParts.IWebPart.TitleIconImageUrl%2A> Eigenschaft. Der vollständigen Quellcode für das Beispiel befindet sich im Abschnitt "Beispiel" von der <xref:System.Web.UI.WebControls.WebParts.IWebPart> -Klassenübersicht.  
+  
+ Der erste Teil des Codebeispiels wird veranschaulicht, wie das Benutzersteuerelement implementiert die <xref:System.Web.UI.WebControls.WebParts.IWebPart.TitleIconImageUrl%2A> Eigenschaft.  
+  
+ [!code-csharp[WebParts_IWebPart_Overview#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IWebPart_Overview/CS/accountusercontrolcs.ascx#6)]
+ [!code-vb[WebParts_IWebPart_Overview#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IWebPart_Overview/VB/accountusercontrolvb.ascx#6)]  
+  
+ Der zweite Teil des Codebeispiels zeigt die Methode im Benutzersteuerelement, das programmgesteuert den Wert für setzt die <xref:System.Web.UI.WebControls.WebParts.IWebPart.TitleIconImageUrl%2A> Eigenschaft, wenn ein Benutzer den Namen der entsprechenden Eigenschaft aus den Optionsfeldern auf der Seite auswählt setzt einen neuen Wert in das Textfeld und Anschließend klickt er auf die **Update** Schaltfläche.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-csharp[WebParts_IWebPart_Overview#9](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IWebPart_Overview/CS/accountusercontrolcs.ascx#9)]
+ [!code-vb[WebParts_IWebPart_Overview#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IWebPart_Overview/VB/accountusercontrolvb.ascx#9)]  
+  
+ Der dritte Teil des Codebeispiels wird veranschaulicht, wie der Benutzer zu steuern, die implementiert die <xref:System.Web.UI.WebControls.WebParts.IWebPart> Schnittstelle bezieht sich auf eine <xref:System.Web.UI.WebControls.WebParts.WebPartZone> -Steuerelement, und wie die <xref:System.Web.UI.WebControls.WebParts.IWebPart.TitleIconImageUrl%2A> Eigenschaft für das Steuerelement deklarativ festgelegt ist. Beachten Sie, dass ein Platzhalter für das Symbol "Wenn Sie nicht die URL zu einem echten Bild angeben, in der Titelleiste angezeigt wird.  
+  
+ [!code-aspx-csharp[WebParts_IWebPart_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IWebPart_Overview/CS/accountuchostcs.aspx#1)]
+ [!code-aspx-vb[WebParts_IWebPart_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IWebPart_Overview/VB/accountuchostvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TitleUrl">
+      <MemberSignature Language="C#" Value="public string TitleUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TitleUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.IWebPart.TitleUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine URL zu Zusatzinformationen zu einem <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement.</summary>
+        <value>Eine Zeichenfolge, die eine URL zu weiteren Informationen über stellt eine <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> Steuerelement. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Sie eine URL zum Zuweisen der <xref:System.Web.UI.WebControls.WebParts.IWebPart.TitleUrl%2A> -Eigenschaft, den Titel des Steuerelements wird ein Link. Der Zweck dieser Eigenschaft ist eine einfache Möglichkeit für die Endbenutzer Zugriff auf zusätzliche Informationen über ein Steuerelement angeben. Der zusätzliche Informationen konnte Copyrightinformationen, Kontaktdaten, Details über den Ersteller des Steuerelements oder eine Zusammenfassung der Zweck des Steuerelements angeben.  
+  
+> [!NOTE]
+>  Normalerweise würden Sie keine verwenden die <xref:System.Web.UI.WebControls.WebParts.IWebPart.TitleUrl%2A> Eigenschaft, um auf den Inhalt der Hilfe zu verknüpfen. Die beste Möglichkeit, einen Link zur Hilfe Geben Sie für ein Steuerelement ist die Verwendung der <xref:System.Web.UI.WebControls.WebParts.WebPart.HelpUrl%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht deklarative und die programmgesteuerte Verwendung von der <xref:System.Web.UI.WebControls.WebParts.IWebPart.TitleUrl%2A> Eigenschaft. Der vollständigen Quellcode für das Beispiel befindet sich im Abschnitt "Beispiel" von der <xref:System.Web.UI.WebControls.WebParts.IWebPart> -Klassenübersicht.  
+  
+ Der erste Teil des Codebeispiels wird veranschaulicht, wie das Benutzersteuerelement implementiert die <xref:System.Web.UI.WebControls.WebParts.IWebPart.TitleUrl%2A> Eigenschaft.  
+  
+ [!code-csharp[WebParts_IWebPart_Overview#7](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IWebPart_Overview/CS/accountusercontrolcs.ascx#7)]
+ [!code-vb[WebParts_IWebPart_Overview#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IWebPart_Overview/VB/accountusercontrolvb.ascx#7)]  
+  
+ Der zweite Teil des Codebeispiels zeigt die Methode im Benutzersteuerelement, das programmgesteuert den Wert für setzt die <xref:System.Web.UI.WebControls.WebParts.IWebPart.TitleUrl%2A> Eigenschaft, wenn ein Benutzer den Namen der entsprechenden Eigenschaft aus den Optionsfeldern auf der Seite auswählt setzt einen neuen Wert in das Textfeld und Anschließend klickt er auf die **Update** Schaltfläche.  
+  
+> [!IMPORTANT]
+>  Dieses Beispiel umfasst ein Textfeld, das Benutzereingaben akzeptiert, die ein potenzielles Sicherheitsrisiko darstellen. Standardmäßig stellen ASP.NET-Webseiten sicher, dass Benutzereingaben keine Skript- oder HTML-Elemente enthalten. Weitere Informationen finden Sie unter [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-csharp[WebParts_IWebPart_Overview#9](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IWebPart_Overview/CS/accountusercontrolcs.ascx#9)]
+ [!code-vb[WebParts_IWebPart_Overview#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IWebPart_Overview/VB/accountusercontrolvb.ascx#9)]  
+  
+ Der dritte Teil des Codebeispiels wird veranschaulicht, wie der Benutzer zu steuern, die implementiert die <xref:System.Web.UI.WebControls.WebParts.IWebPart> Schnittstelle bezieht sich auf eine <xref:System.Web.UI.WebControls.WebParts.WebPartZone> -Steuerelement, und wie die <xref:System.Web.UI.WebControls.WebParts.IWebPart.TitleUrl%2A> Eigenschaft für das Steuerelement deklarativ festgelegt ist. Beachten Sie, dass wenn Sie keine URL zu einer tatsächlichen Seite bieten, und ein Benutzer klickt dann auf den Link in der Titelleiste, eine Fehlermeldung angezeigt wird.  
+  
+ [!code-aspx-csharp[WebParts_IWebPart_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IWebPart_Overview/CS/accountuchostcs.aspx#1)]
+ [!code-aspx-vb[WebParts_IWebPart_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IWebPart_Overview/VB/accountuchostvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

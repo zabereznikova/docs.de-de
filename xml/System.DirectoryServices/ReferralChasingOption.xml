@@ -1,0 +1,98 @@
+<Type Name="ReferralChasingOption" FullName="System.DirectoryServices.ReferralChasingOption">
+  <TypeSignature Language="C#" Value="public enum ReferralChasingOption" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ReferralChasingOption extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ReferralChasingOption" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Die <see cref="T:System.DirectoryServices.ReferralChasingOption" /> Enumeration gibt an, ob und wie Referral nachjagen verfolgt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Server feststellt, dass andere Server relevante Informationen enthalten möglicherweise den Client an einen anderen Server zum Abrufen des Ergebnisses verweisen. Referral nachjagen versteht man das mit dem ein Client die verwiesen wird Server die Suche im Verzeichnis zu fortfahren kontaktiert, um.  
+  
+ Verwenden Sie die Konstanten dieser Enumeration suchpräferenzen für Referral nachjagen einrichten. Die Aktion umfasst das Zuweisen von den entsprechenden Feldern des <xref:System.DirectoryServices.DirectorySearcher> auf Elemente in der <xref:System.DirectoryServices.ReferralChasingOption> Enumeration.  
+  
+ Der ADSI-LDAP-Anbieter unterstützt externe Referenzen für die seitenweise Suche jedoch untergeordnete Referenzen während der Auslagerung nicht unterstützt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="All" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ReferralChasingOption All = int32(96)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ReferralChasingOption.All" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ReferralChasingOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Referenzen Sie entweder den untergeordneten oder externen Typ.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="External">
+      <MemberSignature Language="C#" Value="External" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ReferralChasingOption External = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ReferralChasingOption.External" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ReferralChasingOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Externe Verweise nachverfolgen.  Der Typ Referral wieder Ausfälle von ausgeführt ist, wenn kein Verweis nachjagen Option für eine Suche im Verzeichnis angegeben ist, <see cref="F:System.DirectoryServices.ReferralChasingOption.External" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ReferralChasingOption None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ReferralChasingOption.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ReferralChasingOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die genannten Server nie auswerten. Festlegen dieser Option wird verhindert, dass einen Client Kontakt zu anderen Servern in einem Prozess Verweis.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Subordinate">
+      <MemberSignature Language="C#" Value="Subordinate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ReferralChasingOption Subordinate = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ReferralChasingOption.Subordinate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ReferralChasingOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nur untergeordnete Verweise nachverfolgen, die einen untergeordneten Namenskontext in einer Verzeichnisstruktur sind. Der ADSI-LDAP-Anbieter wird immer deaktiviert dieses Flag für die seitenweise Suche.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

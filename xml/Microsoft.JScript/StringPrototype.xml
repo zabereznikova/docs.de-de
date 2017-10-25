@@ -1,0 +1,998 @@
+<Type Name="StringPrototype" FullName="Microsoft.JScript.StringPrototype">
+  <TypeSignature Language="C#" Value="public class StringPrototype : Microsoft.JScript.StringObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StringPrototype extends Microsoft.JScript.StringObject" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.StringPrototype" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.JScript.StringObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt statische Methoden und Eigenschaften für <see cref="T:Microsoft.JScript.StringObject" /> Objekte. Alle Methoden dieser Klasse werden durch Übergabe eines Verweises auf das Objekt aufgerufen, die Zugriff auf die Methode anfordert. Diese Klasse gehört zu "Modell" integrierten Objekt.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="anchor">
+      <MemberSignature Language="C#" Value="public static string anchor (object thisob, object anchorName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string anchor(object thisob, object anchorName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.StringPrototype.anchor(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.String_anchor)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+        <Parameter Name="anchorName" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <param name="anchorName">Das Namensattribut des Ankerelements.</param>
+        <summary>Konvertiert das angegebene Objekt in Text im Premium-Tags eingeschlossen, und weist dem Ankerelement das angegebene Name-Attribut.</summary>
+        <returns>Eine Zeichenfolge im Format <c>"&lt;ein NAME =\"" +</c><paramref name="anchorName" /><c>+ "\"&gt;" +</c><paramref name="thisob" /><c>+ " &lt; /a &gt;"</c>.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="big">
+      <MemberSignature Language="C#" Value="public static string big (object thisob);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string big(object thisob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.StringPrototype.big(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.String_big)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <summary>Konvertiert das angegebene Objekt in Text, in größere Text Markuptags eingeschlossen.</summary>
+        <returns>Eine Zeichenfolge im Format <c>"&lt;BIG&gt;" +</c><paramref name="thisob" /><c>+ "&lt;/BIG&gt;"</c>.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="blink">
+      <MemberSignature Language="C#" Value="public static string blink (object thisob);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string blink(object thisob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.StringPrototype.blink(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.String_blink)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <summary>Konvertiert das angegebene Objekt in Text in eingeschlossen blink Markuptags.</summary>
+        <returns>Eine Zeichenfolge im Format <c>"&lt;BLINK&gt;" +</c><paramref name="thisob" /><c>+ "&lt;/BLINK&gt;"</c>.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="bold">
+      <MemberSignature Language="C#" Value="public static string bold (object thisob);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string bold(object thisob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.StringPrototype.bold(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.String_bold)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <summary>Konvertiert das angegebene Objekt in Text in Fettschrift Markup-Tags eingeschlossen.</summary>
+        <returns>Eine Zeichenfolge im Format <c>"&lt;B&gt;" +</c><paramref name="thisob" /><c>+ "&lt;/b&gt;"</c>.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="charAt">
+      <MemberSignature Language="C#" Value="public static string charAt (object thisob, double pos);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string charAt(object thisob, float64 pos) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.StringPrototype.charAt(System.Object,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.String_charAt)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+        <Parameter Name="pos" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <param name="pos">Die Position des Zeichens zurück.</param>
+        <summary>Gibt das Zeichen an der angegebenen Position in das angegebene Objekt zurück.</summary>
+        <returns>Das Zeichen an der <paramref name="pos" />, sofern vorhanden.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="charCodeAt">
+      <MemberSignature Language="C#" Value="public static object charCodeAt (object thisob, double pos);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object charCodeAt(object thisob, float64 pos) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.StringPrototype.charCodeAt(System.Object,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.String_charCodeAt)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+        <Parameter Name="pos" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <param name="pos">Die Position des Zeichens, dessen Code zurückgegeben werden soll.</param>
+        <summary>Gibt den ASCII-Code des Zeichens an der angegebenen Position in das angegebene Objekt zurück.</summary>
+        <returns>Der Code des Zeichens an der <paramref name="pos" />, sofern vorhanden.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="concat">
+      <MemberSignature Language="C#" Value="public static string concat (object thisob, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string concat(object thisob, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.StringPrototype.concat(System.Object,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject | Microsoft.JScript.JSFunctionAttributeEnum.HasVarArgs, Microsoft.JScript.JSBuiltin.String_concat)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <param name="args">Die Argumente zum Anfügen an <c>Thisob</c>.</param>
+        <summary>Fügt die angegebenen Argumenten für das angegebene Objekt.</summary>
+        <returns>Eine Zeichenfolgendarstellung <paramref name="thisob" />, mit <paramref name="args" /> angefügt.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="constructor">
+      <MemberSignature Language="C#" Value="public static Microsoft.JScript.StringConstructor constructor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.JScript.StringConstructor constructor" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.StringPrototype.constructor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.StringConstructor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf ein prototypbasierten-Objekt, das diesen Prototyp verwendet wird.</summary>
+        <value>Ein Verweis auf ein prototypbasierten-Objekt.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="fixed">
+      <MemberSignature Language="C#" Value="public static string fixed (object thisob);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string fixed(object thisob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.StringPrototype.fixed(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.String_fixed)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <summary>Konvertiert das angegebene Objekt in Text in einer Textdatei mit fester Breite Markup-Tags eingeschlossen.</summary>
+        <returns>Eine Zeichenfolge im Format <c>"&lt;TT&gt;" +</c><paramref name="thisob" /><c>+ "&lt;/TT&gt;"</c>.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="fontcolor">
+      <MemberSignature Language="C#" Value="public static string fontcolor (object thisob, object colorName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string fontcolor(object thisob, object colorName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.StringPrototype.fontcolor(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.String_fontcolor)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+        <Parameter Name="colorName" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <param name="colorName">Die Color-Attribut des Schriftartelements.</param>
+        <summary>Konvertiert das angegebene Objekt in Text in der Schriftart-Tags eingeschlossen, und gibt dem Element das Attribut angegebenen Farbe.</summary>
+        <returns>Eine Zeichenfolge im Format <c>"&lt;FONT COLOR =\"" +</c><paramref name="colorName" /><c>+ "\"&gt;" +</c><paramref name="thisob" /><c>+ "&lt;/ Schriftart&gt;"</c>.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="fontsize">
+      <MemberSignature Language="C#" Value="public static string fontsize (object thisob, object fontSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string fontsize(object thisob, object fontSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.StringPrototype.fontsize(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.String_fontsize)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+        <Parameter Name="fontSize" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <param name="fontSize">Die Size-Attribut des Schriftartelements.</param>
+        <summary>Konvertiert das angegebene Objekt in Text in der Schriftart-Tags eingeschlossen, und gibt dem Element das Attribut für die angegebene Größe.</summary>
+        <returns>Eine Zeichenfolge im Format <c>"&lt;FONT SIZE =\"" +</c><paramref name="fontSize" /><c>+ "\"&gt;" +</c><paramref name="thisob" /><c>+ "&lt;/ Schriftart&gt;"</c>.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="indexOf">
+      <MemberSignature Language="C#" Value="public static int indexOf (object thisob, object searchString, double position);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 indexOf(object thisob, object searchString, float64 position) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.StringPrototype.indexOf(System.Object,System.Object,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.String_indexOf)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+        <Parameter Name="searchString" Type="System.Object" />
+        <Parameter Name="position" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <param name="searchString">Die zu suchende Zeichenfolge.</param>
+        <param name="position">Die Position, an dem mit der Suche begonnen werden soll.</param>
+        <summary>Sucht das erste Vorkommen der angegebenen Zeichenfolge in das angegebene Objekt, beginnend mit der angegebenen Zeichenposition.</summary>
+        <returns>Die Position des ersten Vorkommens des <paramref name="searchString" />, sofern er gefunden wird.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="italics">
+      <MemberSignature Language="C#" Value="public static string italics (object thisob);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string italics(object thisob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.StringPrototype.italics(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.String_italics)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <summary>Konvertiert das angegebene Objekt in Text in Kursivschrift Markup-Tags eingeschlossen.</summary>
+        <returns>Eine Zeichenfolge im Format <c>"&lt;ich&gt;" +</c><paramref name="thisob" /><c>+ "&lt;/i&gt;"</c>.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="lastIndexOf">
+      <MemberSignature Language="C#" Value="public static int lastIndexOf (object thisob, object searchString, double position);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 lastIndexOf(object thisob, object searchString, float64 position) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.StringPrototype.lastIndexOf(System.Object,System.Object,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.String_lastIndexOf)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+        <Parameter Name="searchString" Type="System.Object" />
+        <Parameter Name="position" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <param name="searchString">Die zu suchende Zeichenfolge.</param>
+        <param name="position">Die Position, an dem mit der Suche begonnen werden soll.</param>
+        <summary>Sucht nach dem letzten Vorkommen der angegebenen Zeichenfolge in das angegebene Objekt, beginnend mit der angegebenen Zeichenposition.</summary>
+        <returns>Die Position des letzten Vorkommens von <paramref name="searchString" />, sofern er gefunden wird.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="link">
+      <MemberSignature Language="C#" Value="public static string link (object thisob, object linkRef);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string link(object thisob, object linkRef) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.StringPrototype.link(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.String_link)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+        <Parameter Name="linkRef" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <param name="linkRef">Das Zielattribut des Ankerelements.</param>
+        <summary>Konvertiert das angegebene Objekt in Text im Premium-Tags eingeschlossen, und weist dem Ankerelement Link Target-Attribut, das angegeben ist.</summary>
+        <returns>Eine Zeichenfolge im Format <c>"&lt;A HREF =\"" +</c><paramref name="linkRef" /><c>+ "\"&gt;" +</c><paramref name="thisob" /><c>+ " &lt; /a &gt;"</c>.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="localeCompare">
+      <MemberSignature Language="C#" Value="public static int localeCompare (object thisob, object thatob);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 localeCompare(object thisob, object thatob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.StringPrototype.localeCompare(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.String_localeCompare)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+        <Parameter Name="thatob" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <param name="thatob">Die Zeichenfolge für den Vergleich <c>Thisob</c>.</param>
+        <summary>Vergleicht zwei angegebenen Zeichenfolgen und gibt eine ganze Zahl, die die lexikalische Beziehung untereinander angibt.</summary>
+        <returns>Ein negativer Wert <paramref name="thisob" /> ist kleiner als <paramref name="thatob" />; 0 (null) bei <paramref name="thisob" /> gleich <paramref name="thatob" />. es kann ein positiver Wert <paramref name="thisob" /> ist größer als <paramref name="thatob" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="match">
+      <MemberSignature Language="C#" Value="public static object match (object thisob, Microsoft.JScript.Vsa.VsaEngine engine, object regExp);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object match(object thisob, class Microsoft.JScript.Vsa.VsaEngine engine, object regExp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.StringPrototype.match(System.Object,Microsoft.JScript.Vsa.VsaEngine,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject | Microsoft.JScript.JSFunctionAttributeEnum.HasEngine, Microsoft.JScript.JSBuiltin.String_match)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+        <Parameter Name="engine" Type="Microsoft.JScript.Vsa.VsaEngine" />
+        <Parameter Name="regExp" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <param name="engine">Ein Verweis auf das Skriptmodul.</param>
+        <param name="regExp">Das Muster des regulären Ausdrucks zu suchen.</param>
+        <summary>Führt eine Suche nach dem Muster des angegebenen regulären Ausdruck für das angegebene Objekt.</summary>
+        <returns>Das Ergebnis der Suche nach dem Muster des regulären Ausdrucks.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="replace">
+      <MemberSignature Language="C#" Value="public static string replace (object thisob, object regExp, object replacement);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string replace(object thisob, object regExp, object replacement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.StringPrototype.replace(System.Object,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.String_replace)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+        <Parameter Name="regExp" Type="System.Object" />
+        <Parameter Name="replacement" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <param name="regExp">Das Muster des regulären Ausdrucks zu suchen.</param>
+        <param name="replacement">Der Ersatz für Übereinstimmungen.</param>
+        <summary>Führt eine Suche nach dem Muster des angegebenen regulären Ausdruck für das erste angegebene Objekt und keine Übereinstimmung mit dem dritten angegebenen Objekt ersetzt.</summary>
+        <returns>Die neue Zeichenfolge, nachdem die Ersetzung erfolgt.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="search">
+      <MemberSignature Language="C#" Value="public static int search (object thisob, Microsoft.JScript.Vsa.VsaEngine engine, object regExp);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 search(object thisob, class Microsoft.JScript.Vsa.VsaEngine engine, object regExp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.StringPrototype.search(System.Object,Microsoft.JScript.Vsa.VsaEngine,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject | Microsoft.JScript.JSFunctionAttributeEnum.HasEngine, Microsoft.JScript.JSBuiltin.String_search)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+        <Parameter Name="engine" Type="Microsoft.JScript.Vsa.VsaEngine" />
+        <Parameter Name="regExp" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <param name="engine">Ein Verweis auf das Skriptmodul.</param>
+        <param name="regExp">Das Muster des regulären Ausdrucks zu suchen.</param>
+        <summary>Führt eine Suche nach dem Muster des angegebenen regulären Ausdruck für das angegebene Objekt.</summary>
+        <returns>Wenn die Suche erfolgreich ist, wird der Index der Übereinstimmung; andernfalls -1.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="slice">
+      <MemberSignature Language="C#" Value="public static string slice (object thisob, double start, object end);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string slice(object thisob, float64 start, object end) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.StringPrototype.slice(System.Object,System.Double,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.String_slice)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+        <Parameter Name="start" Type="System.Double" />
+        <Parameter Name="end" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <param name="start">Das erste aufeinander folgende Zeichen abgerufen werden soll.</param>
+        <param name="end">Das letzte aufeinander folgende Zeichen abgerufen.</param>
+        <summary>Erstellt eine neue Zeichenfolge, die mit den angegebenen aufeinanderfolgenden Zeichen aus der angegebenen Zeichenfolge zurück.</summary>
+        <returns>Eine neue Zeichenfolge, die aufeinander folgenden Zeichen zwischen enthält <paramref name="start" /> und <paramref name="end" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="small">
+      <MemberSignature Language="C#" Value="public static string small (object thisob);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string small(object thisob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.StringPrototype.small(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.String_small)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <summary>Konvertiert das angegebene Objekt in Text in kleinere Text Markup-Tags eingeschlossen.</summary>
+        <returns>Eine Zeichenfolge im Format <c>"&lt;kleine&gt;" +</c><paramref name="thisob" /><c>+ "&lt;/kleine&gt;"</c>.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="split">
+      <MemberSignature Language="C#" Value="public static Microsoft.JScript.ArrayObject split (object thisob, Microsoft.JScript.Vsa.VsaEngine engine, object separator, object limit);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.JScript.ArrayObject split(object thisob, class Microsoft.JScript.Vsa.VsaEngine engine, object separator, object limit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.StringPrototype.split(System.Object,Microsoft.JScript.Vsa.VsaEngine,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject | Microsoft.JScript.JSFunctionAttributeEnum.HasEngine, Microsoft.JScript.JSBuiltin.String_split)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.ArrayObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+        <Parameter Name="engine" Type="Microsoft.JScript.Vsa.VsaEngine" />
+        <Parameter Name="separator" Type="System.Object" />
+        <Parameter Name="limit" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <param name="engine">Ein Verweis auf das Skriptmodul.</param>
+        <param name="separator">Die Zeichen, die die Teilzeichenfolgen in trennen <c>Thisob</c>.</param>
+        <param name="limit">Die maximale Anzahl der zurückzugebenden Teilzeichenfolgen.</param>
+        <summary>Gibt ein Array, das die Teilzeichenfolgen in das angegebene Objekt enthält, die durch die angegebenen Zeichen getrennt sind. Die Anzahl von Teilzeichenfolgen im Array wird durch das angegebene Limit eingeschränkt.</summary>
+        <returns>Ein Array, das die Teilzeichenfolgen enthält <paramref name="thisob" /> , die durch getrennt <paramref name="separator" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="strike">
+      <MemberSignature Language="C#" Value="public static string strike (object thisob);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string strike(object thisob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.StringPrototype.strike(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.String_strike)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <summary>Konvertiert das angegebene Objekt in Text in durchgestrichenem Markup-Tags eingeschlossen.</summary>
+        <returns>Eine Zeichenfolge im Format <c>"&lt;STRIKE&gt;" +</c><paramref name="thisob" /><c>+ "&lt;/STRIKE&gt;"</c>.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="sub">
+      <MemberSignature Language="C#" Value="public static string sub (object thisob);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string sub(object thisob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.StringPrototype.sub(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.String_sub)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <summary>Konvertiert das angegebene Objekt in Text im subscript-Markuptags eingeschlossen.</summary>
+        <returns>Eine Zeichenfolge im Format <c>"&lt;SUB&gt;" +</c><paramref name="thisob" /><c>+ "&lt;/SUB&gt;"</c>.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="substr">
+      <MemberSignature Language="C#" Value="public static string substr (object thisob, double start, object count);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string substr(object thisob, float64 start, object count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.StringPrototype.substr(System.Object,System.Double,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.String_substr)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.NotRecommended("substr")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+        <Parameter Name="start" Type="System.Double" />
+        <Parameter Name="count" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <param name="start">Das erste aufeinander folgende Zeichen abgerufen werden soll.</param>
+        <param name="count">Die Anzahl der abzurufenden Zeichen.</param>
+        <summary>Erstellt eine neue Zeichenfolge, die die angegebene Anzahl der aufeinanderfolgenden Zeichen aus der angegebenen Zeichenfolge, beginnend mit der angegebenen Zeichenposition enthält. Verwendung <see cref="M:Microsoft.JScript.StringPrototype.substring(System.Object,System.Double,System.Object)" /> hingegen möglich.</summary>
+        <returns>Eine neue Zeichenfolge, enthält <paramref name="count" /> aufeinander folgende Zeichen, die beginnend am <paramref name="start" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="substring">
+      <MemberSignature Language="C#" Value="public static string substring (object thisob, double start, object end);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string substring(object thisob, float64 start, object end) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.StringPrototype.substring(System.Object,System.Double,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.String_substring)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+        <Parameter Name="start" Type="System.Double" />
+        <Parameter Name="end" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <param name="start">Das erste aufeinander folgende Zeichen abgerufen werden soll.</param>
+        <param name="end">Das letzte aufeinander folgende Zeichen abgerufen.</param>
+        <summary>Erstellt eine neue Zeichenfolge, die mit den angegebenen aufeinanderfolgenden Zeichen aus der angegebenen Zeichenfolge zurück.</summary>
+        <returns>Eine neue Zeichenfolge, die aufeinander folgenden Zeichen zwischen enthält <paramref name="start" /> und <paramref name="end" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="sup">
+      <MemberSignature Language="C#" Value="public static string sup (object thisob);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string sup(object thisob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.StringPrototype.sup(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.String_sup)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <summary>Konvertiert das angegebene Objekt in Text im Superscript Markuptags eingeschlossen.</summary>
+        <returns>Eine Zeichenfolge im Format <c>"&lt;SUP&gt;" +</c><paramref name="thisob" /><c>+ "&lt;/SUP&gt;"</c>.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="toLocaleLowerCase">
+      <MemberSignature Language="C#" Value="public static string toLocaleLowerCase (object thisob);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string toLocaleLowerCase(object thisob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.StringPrototype.toLocaleLowerCase(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.String_toLocaleLowerCase)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <summary>Gibt eine Kopie der angegebenen Zeichenfolge in Kleinbuchstaben, basierend auf den Regeln der Groß-und Kleinschreibung <see cref="P:System.Globalization.CultureInfo.CurrentUICulture" />.</summary>
+        <returns>Eine Zeichenfolge in Kleinbuchstaben.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="toLocaleUpperCase">
+      <MemberSignature Language="C#" Value="public static string toLocaleUpperCase (object thisob);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string toLocaleUpperCase(object thisob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.StringPrototype.toLocaleUpperCase(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.String_toLocaleUpperCase)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <summary>Gibt eine Kopie der angegebenen Zeichenfolge in Großbuchstaben, basierend auf den Regeln der Groß-und Kleinschreibung <see cref="P:System.Globalization.CultureInfo.CurrentUICulture" />.</summary>
+        <returns>Eine Zeichenfolge in Großbuchstaben.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="toLowerCase">
+      <MemberSignature Language="C#" Value="public static string toLowerCase (object thisob);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string toLowerCase(object thisob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.StringPrototype.toLowerCase(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.String_toLowerCase)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <summary>Gibt eine Kopie der angegebenen Zeichenfolge in Kleinbuchstaben, basierend auf den Regeln der Groß-und Kleinschreibung <see cref="P:System.Globalization.CultureInfo.InvariantCulture" />.</summary>
+        <returns>Eine Zeichenfolge in Kleinbuchstaben.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="toString">
+      <MemberSignature Language="C#" Value="public static string toString (object thisob);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string toString(object thisob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.StringPrototype.toString(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.String_toString)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <summary>Erstellt eine Zeichenfolgendarstellung des angegebenen Objekts.</summary>
+        <returns>Eine Zeichenfolgendarstellung von <paramref name="thisob" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="toUpperCase">
+      <MemberSignature Language="C#" Value="public static string toUpperCase (object thisob);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string toUpperCase(object thisob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.StringPrototype.toUpperCase(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.String_toUpperCase)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <summary>Gibt eine Kopie der angegebenen Zeichenfolge in Großbuchstaben, basierend auf den Regeln der Groß-und Kleinschreibung <see cref="P:System.Globalization.CultureInfo.InvariantCulture" />.</summary>
+        <returns>Eine Zeichenfolge in Großbuchstaben.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="valueOf">
+      <MemberSignature Language="C#" Value="public static object valueOf (object thisob);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object valueOf(object thisob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.StringPrototype.valueOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.String_valueOf)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">Das Objekt, dem diese Methode ausgeführt wird.</param>
+        <summary>Gibt den Wert des angegebenen Objekts zurück.</summary>
+        <returns>Der Wert von <paramref name="thisob" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

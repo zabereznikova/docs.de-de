@@ -1,0 +1,110 @@
+<Type Name="StagingAreaInputItem" FullName="System.Windows.Input.StagingAreaInputItem">
+  <TypeSignature Language="C#" Value="public class StagingAreaInputItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StagingAreaInputItem extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.StagingAreaInputItem" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Kapselt ein Eingabeereignis, wenn es von der Eingabe-Manager verarbeitet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Input.StagingAreaInputItem> -Klasse stellt einen Wörterbuch-basierten Speicher der Listener der Eingabe-Manager-Ereignisse.  
+  
+ Die Eingabe im Stagingbereich verarbeitet die Rohdaten in [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] Ereignisse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetData">
+      <MemberSignature Language="C#" Value="public object GetData (object key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetData(object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StagingAreaInputItem.GetData(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">Ein beliebiger Schlüssel für die Daten. Dies kann nicht <see langword="null" />.</param>
+        <summary>Ruft die Eingabedaten, die dem angegebenen Schlüssel zugeordnet.</summary>
+        <returns>Die Daten für diesen Schlüssel oder <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">für das Aufrufen dieser Methode.  Zugeordnete Enumerationen:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Input">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.InputEventArgs Input { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.InputEventArgs Input" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.StagingAreaInputItem.Input" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.InputEventArgs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die zugeordnete Eingabeereignisdaten <see cref="T:System.Windows.Input.StagingAreaInputItem" /> Objekt</summary>
+        <value>Das Ereignis.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetData">
+      <MemberSignature Language="C#" Value="public void SetData (object key, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetData(object key, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StagingAreaInputItem.SetData(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">Ein beliebiger Schlüssel für die Daten. Dies kann nicht <see langword="null" />.</param>
+        <param name="value">Die Daten, die für diesen Schlüssel festgelegt werden soll. Dieser Wert kann <see langword="null" /> sein.</param>
+        <summary>Erstellt einen Wörterbucheintrag mit dem angegebenen Schlüssel und die angegebenen Daten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Daten werden während der Verarbeitung dieses Eingabeereignisses verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">für das Aufrufen dieser Methode.  Zugeordnete Enumerationen:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

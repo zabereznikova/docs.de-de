@@ -1,0 +1,186 @@
+<Type Name="AssociationProvider" FullName="System.Web.DynamicData.ModelProviders.AssociationProvider">
+  <TypeSignature Language="C#" Value="public abstract class AssociationProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit AssociationProvider extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.DynamicData.ModelProviders.AssociationProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DynamicData</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Basisklasse für Spalte-Zuordnung Anbieter bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Association-Anbieter müssen diese Klasse erweitert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AssociationProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.ModelProviders.AssociationProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.DynamicData.ModelProviders.AssociationProvider" /> Klasse zur Verwendung durch eine geerbte Klasseninstanz. Dieser Konstruktor kann nur von einer geerbten Klasse aufgerufen werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Direction">
+      <MemberSignature Language="C#" Value="public virtual System.Web.DynamicData.ModelProviders.AssociationDirection Direction { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.DynamicData.ModelProviders.AssociationDirection Direction" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.ModelProviders.AssociationProvider.Direction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.ModelProviders.AssociationDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ der Zuordnung fest.</summary>
+        <value>Der Typ der Zuordnung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zuordnungen sind 1: 1, 1: n- und m: n.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeignKeyNames">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt; ForeignKeyNames { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;string&gt; ForeignKeyNames" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.ModelProviders.AssociationProvider.ForeignKeyNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, die Namen der Fremdschlüssel, aus denen diese Zuordnung besteht.</summary>
+        <value>Die Namen der Fremdschlüssel, aus denen diese Zuordnung besteht.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromColumn">
+      <MemberSignature Language="C#" Value="public virtual System.Web.DynamicData.ModelProviders.ColumnProvider FromColumn { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.DynamicData.ModelProviders.ColumnProvider FromColumn" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.ModelProviders.AssociationProvider.FromColumn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.ModelProviders.ColumnProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Quellspalte der Zuordnung.</summary>
+        <value>Die Quellspalte der Zuordnung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSortExpression">
+      <MemberSignature Language="C#" Value="public virtual string GetSortExpression (System.Web.DynamicData.ModelProviders.ColumnProvider sortColumn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetSortExpression(class System.Web.DynamicData.ModelProviders.ColumnProvider sortColumn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.ModelProviders.AssociationProvider.GetSortExpression(System.Web.DynamicData.ModelProviders.ColumnProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sortColumn" Type="System.Web.DynamicData.ModelProviders.ColumnProvider" />
+      </Parameters>
+      <Docs>
+        <param name="sortColumn">Die Spalte, auf die Entität sortiert werden soll.</param>
+        <summary>Gibt den Sortierungsausdruck für die Spalte, die durch die Zuordnung dargestellt wird.</summary>
+        <returns>Wenn <see cref="P:System.Web.DynamicData.ModelProviders.ColumnProvider.IsSortable" /> gibt <see langword="true" />, den Sortierungsausdruck für die Spalte, die von der Zuordnung dargestellt ist, andernfalls <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPrimaryKeyInThisTable">
+      <MemberSignature Language="C#" Value="public virtual bool IsPrimaryKeyInThisTable { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPrimaryKeyInThisTable" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.ModelProviders.AssociationProvider.IsPrimaryKeyInThisTable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob in der Tabelle der From-Spaltenteil des Primärschlüssels ist.</summary>
+        <value>
+          <see langword="true" />Wenn die From-Spaltenteil des Primärschlüssels in der Tabelle ist. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToColumn">
+      <MemberSignature Language="C#" Value="public virtual System.Web.DynamicData.ModelProviders.ColumnProvider ToColumn { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.DynamicData.ModelProviders.ColumnProvider ToColumn" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.ModelProviders.AssociationProvider.ToColumn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.ModelProviders.ColumnProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen der Spalte "Ziel" des Zuordnungssatzes.</summary>
+        <value>Die Zielspalte der Zuordnung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ist optional und wird nur für 1: n- und 1: 1-Beziehungen im Allgemeinen benötigt  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToTable">
+      <MemberSignature Language="C#" Value="public virtual System.Web.DynamicData.ModelProviders.TableProvider ToTable { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.DynamicData.ModelProviders.TableProvider ToTable" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.ModelProviders.AssociationProvider.ToTable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.ModelProviders.TableProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zieltabelle der Zuordnung ab.</summary>
+        <value>Die Zieltabelle der Zuordnung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

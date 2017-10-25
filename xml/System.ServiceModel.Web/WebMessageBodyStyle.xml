@@ -1,0 +1,96 @@
+<Type Name="WebMessageBodyStyle" FullName="System.ServiceModel.Web.WebMessageBodyStyle">
+  <TypeSignature Language="C#" Value="public enum WebMessageBodyStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WebMessageBodyStyle extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Web.WebMessageBodyStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Web</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Eine Enumeration, die angibt, ob Parameter und Rückgabewerte eingebunden werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Dienst oder Client Parameter und Rückgabewerte in eine Nachricht serialisiert wird, schreibt er sie innerhalb der Infrastruktur bereitgestellte XML-Elemente und sind *umschlossen*. In einigen Fällen möchten Entwickler nicht, dass diese zusätzlichen XML-Elemente geschrieben werden. Die <xref:System.ServiceModel.Web.WebMessageBodyStyle>-Enumeration gibt an, ob Parameter und Rückgabewerte eingebunden werden.  
+  
+ Diese Enumeration wird zusammen mit <xref:System.ServiceModel.Web.WebGetAttribute> und <xref:System.ServiceModel.Web.WebInvokeAttribute> verwendet, um zu steuern, wie die an einen Dienstvorgang bzw. von einem Dienstvorgang gesendeten Daten übertragen werden. Beide Attribute standardmäßig Bare.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Bare">
+      <MemberSignature Language="C#" Value="Bare" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Web.WebMessageBodyStyle Bare = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Web.WebMessageBodyStyle.Bare" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Web.WebMessageBodyStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es werden weder Anforderungen noch Antworten eingebunden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Wrapped">
+      <MemberSignature Language="C#" Value="Wrapped" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Web.WebMessageBodyStyle Wrapped = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Web.WebMessageBodyStyle.Wrapped" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Web.WebMessageBodyStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es werden sowohl Anforderungen als auch Antworten eingebunden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WrappedRequest">
+      <MemberSignature Language="C#" Value="WrappedRequest" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Web.WebMessageBodyStyle WrappedRequest = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Web.WebMessageBodyStyle.WrappedRequest" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Web.WebMessageBodyStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es werden nur Anforderungen eingebunden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WrappedResponse">
+      <MemberSignature Language="C#" Value="WrappedResponse" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Web.WebMessageBodyStyle WrappedResponse = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Web.WebMessageBodyStyle.WrappedResponse" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Web.WebMessageBodyStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Es werden nur Antworten eingebunden.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

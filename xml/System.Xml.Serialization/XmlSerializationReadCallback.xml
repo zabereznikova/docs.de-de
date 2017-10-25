@@ -1,0 +1,42 @@
+<Type Name="XmlSerializationReadCallback" FullName="System.Xml.Serialization.XmlSerializationReadCallback">
+  <TypeSignature Language="C#" Value="public delegate object XmlSerializationReadCallback();" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed XmlSerializationReadCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.XmlSerializationReadCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters />
+  <ReturnValue>
+    <ReturnType>System.Object</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <summary>Von der verwendeten Delegaten der <see cref="T:System.Xml.Serialization.XmlSerializer" /> Klasse für die Deserialisierung von Typen aus den SOAP-codierten, nicht-Stamm-XML-Daten.</summary>
+    <returns>Das vom Rückruf zurückgegebene Objekt.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Während der Initialisierung die .NET Framework-XML-Serialisierungsinfrastruktur dynamisch generiert und kompiliert eine temporäre Klasse für die Deserialisierung von abgeleitet der <xref:System.Xml.Serialization.XmlSerializationReader> Klasse. Während dieses Vorgangs generiert .NET Framework read-Methoden implementieren die <xref:System.Xml.Serialization.XmlSerializationReadCallback> delegieren. Es ist daher für bestimmte Zuordnungen zwischen .NET Framework-Typen und XML-Datentypen, die über SOAP-codierte XML serialisiert werden und sind nicht-Stammelemente. Klicken Sie dann nach Bedarf, ist eine read-Methode während der Deserialisierung aufgerufen.  
+  
+ Erstellen von Instanzen nicht direkt die <xref:System.Xml.Serialization.XmlSerializationReadCallback> Klasse.  
+  
+ SOAP-Codierung wird in Abschnitt 5 der SOAP 1.1-Spezifikation beschrieben.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+</Type>

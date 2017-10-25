@@ -1,0 +1,333 @@
+<Type Name="DESCryptoServiceProvider" FullName="System.Security.Cryptography.DESCryptoServiceProvider">
+  <TypeSignature Language="C#" Value="public sealed class DESCryptoServiceProvider : System.Security.Cryptography.DES" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DESCryptoServiceProvider extends System.Security.Cryptography.DES" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.DESCryptoServiceProvider" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.DES</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert ein Wrapperobjekt für den Zugriff auf die Anbieterversion Kryptografiedienstanbieter (CSP) von Data Encryption Standard (<see cref="T:System.Security.Cryptography.DES" />) Algorithmus. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Algorithmus unterstützt eine Schlüssellänge von 64 Bits.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit <xref:System.Security.Cryptography.DESCryptoServiceProvider> (eine Implementierung von <xref:System.Security.Cryptography.DES>) mit dem angegebenen Schlüssel (<xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A>) und Initialisierungsvektor (<xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A>) zum Verschlüsseln einer Datei, die vom angegebenen `inName`. Es gibt dann das verschlüsselte Ergebnis in die Datei `outName`.  
+  
+ [!code-cpp[Classic DES Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic DES Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DES Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic DES Example/CS/source.cs#1)]
+ [!code-vb[Classic DES Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic DES Example/VB/source.vb#1)]  
+  
+ Entschlüsselung kann auf die gleiche Weise behandelt werden. Verwenden Sie <xref:System.Security.Cryptography.DESCryptoServiceProvider.CreateDecryptor%2A> anstelle von <xref:System.Security.Cryptography.DESCryptoServiceProvider.CreateEncryptor%2A>. Die gleichen Schlüssel (<xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A>) und Initialisierungsvektor (<xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A>) zum Verschlüsseln die Datei muss für die Entschlüsselung verwendet werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DESCryptoServiceProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DESCryptoServiceProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.DESCryptoServiceProvider" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit <xref:System.Security.Cryptography.DESCryptoServiceProvider> (eine Implementierung von <xref:System.Security.Cryptography.DES>) mit dem angegebenen Schlüssel (<xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A>) und Initialisierungsvektor (<xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A>) zum Verschlüsseln einer Datei, die vom angegebenen `inName`. Es gibt dann das verschlüsselte Ergebnis in die Datei `outName`.  
+  
+ [!code-cpp[Classic DES Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic DES Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DES Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic DES Example/CS/source.cs#1)]
+ [!code-vb[Classic DES Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic DES Example/VB/source.vb#1)]  
+  
+ Entschlüsselung kann auf die gleiche Weise behandelt werden. Verwenden Sie <xref:System.Security.Cryptography.DESCryptoServiceProvider.CreateDecryptor%2A> anstelle von <xref:System.Security.Cryptography.DESCryptoServiceProvider.CreateEncryptor%2A>. Die gleichen Schlüssel (<xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A>) und Initialisierungsvektor (<xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A>) zum Verschlüsseln die Datei muss für die Entschlüsselung verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Data Encryption Standard (<see cref="T:System.Security.Cryptography.DES" />) Kryptografiedienstanbieters ist nicht verfügbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDecryptor">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.ICryptoTransform CreateDecryptor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Cryptography.ICryptoTransform CreateDecryptor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DESCryptoServiceProvider.CreateDecryptor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ICryptoTransform</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDecryptor">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.ICryptoTransform CreateDecryptor (byte[] rgbKey, byte[] rgbIV);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Cryptography.ICryptoTransform CreateDecryptor(unsigned int8[] rgbKey, unsigned int8[] rgbIV) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DESCryptoServiceProvider.CreateDecryptor(System.Byte[],System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ICryptoTransform</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rgbKey" Type="System.Byte[]" />
+        <Parameter Name="rgbIV" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="rgbKey">Der geheime Schlüssel, der für den symmetrischen Algorithmus verwendet werden soll.</param>
+        <param name="rgbIV">Der Initialisierungsvektor, der für den symmetrischen Algorithmus verwendet werden soll.</param>
+        <summary>Erstellt ein symmetrisches Data Encryption Standard (<see cref="T:System.Security.Cryptography.DES" />) Entschlüsselungsobjekt mit dem angegebenen Schlüssel (<see cref="P:System.Security.Cryptography.SymmetricAlgorithm.Key" />) und Initialisierungsvektor (<see cref="P:System.Security.Cryptography.SymmetricAlgorithm.IV" />).</summary>
+        <returns>Ein symmetrisches <see cref="T:System.Security.Cryptography.DES" /> Entschlüsselungsobjekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode entschlüsselt eine verschlüsselte Nachricht, die erstellt wurde, mithilfe der <xref:System.Security.Cryptography.DESCryptoServiceProvider.CreateEncryptor%2A> mit denselben Parametern überladen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Der Wert der <see cref="P:System.Security.Cryptography.SymmetricAlgorithm.Mode" />-Eigenschaft ist <see cref="F:System.Security.Cryptography.CipherMode.OFB" />.  
+  
+ - oder -   
+  
+ Der Wert von der <see cref="P:System.Security.Cryptography.SymmetricAlgorithm.Mode" /> Eigenschaft ist <see cref="F:System.Security.Cryptography.CipherMode.CFB" /> und der Wert des der <see cref="P:System.Security.Cryptography.SymmetricAlgorithm.FeedbackSize" /> Eigenschaft ist nicht 8.  
+  
+ - oder -   
+  
+ Es wurde eine ungültige Schlüsselgröße verwendet.  
+  
+ - oder -   
+  
+ Die Schlüsselgröße des Algorithmus war nicht verfügbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateEncryptor">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.ICryptoTransform CreateEncryptor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Cryptography.ICryptoTransform CreateEncryptor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DESCryptoServiceProvider.CreateEncryptor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ICryptoTransform</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateEncryptor">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.ICryptoTransform CreateEncryptor (byte[] rgbKey, byte[] rgbIV);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Cryptography.ICryptoTransform CreateEncryptor(unsigned int8[] rgbKey, unsigned int8[] rgbIV) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DESCryptoServiceProvider.CreateEncryptor(System.Byte[],System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ICryptoTransform</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rgbKey" Type="System.Byte[]" />
+        <Parameter Name="rgbIV" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="rgbKey">Der geheime Schlüssel, der für den symmetrischen Algorithmus verwendet werden soll.</param>
+        <param name="rgbIV">Der Initialisierungsvektor, der für den symmetrischen Algorithmus verwendet werden soll.</param>
+        <summary>Erstellt ein symmetrisches Data Encryption Standard (<see cref="T:System.Security.Cryptography.DES" />) Verschlüsselungsobjekt mit dem angegebenen Schlüssel (<see cref="P:System.Security.Cryptography.SymmetricAlgorithm.Key" />) und Initialisierungsvektor (<see cref="P:System.Security.Cryptography.SymmetricAlgorithm.IV" />).</summary>
+        <returns>Ein symmetrisches <see cref="T:System.Security.Cryptography.DES" /> Verschlüsselungsobjekt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Security.Cryptography.DESCryptoServiceProvider.CreateDecryptor%2A> -Überladung mit denselben Parametern für das Ergebnis dieser Methode zu entschlüsseln.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen und Verwenden einer <xref:System.Security.Cryptography.DESCryptoServiceProvider> Objekt zum Verschlüsseln und Entschlüsseln von Daten in einer Datei.  
+  
+ [!code-cpp[Cryptography.DESCSP.CreateEncryptor.File#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.DESCSP.CreateEncryptor.File/CPP/fileexample.cpp#1)]
+ [!code-csharp[Cryptography.DESCSP.CreateEncryptor.File#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.DESCSP.CreateEncryptor.File/CS/fileexample.cs#1)]
+ [!code-vb[Cryptography.DESCSP.CreateEncryptor.File#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.DESCSP.CreateEncryptor.File/VB/fileexample.vb#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen und Verwenden einer <xref:System.Security.Cryptography.DESCryptoServiceProvider> Objekt zum Verschlüsseln und Entschlüsseln von Daten im Arbeitsspeicher.  
+  
+ [!code-cpp[Cryptography.DESCSP.CreateEncryptor.Memory#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.DESCSP.CreateEncryptor.Memory/CPP/memoryexample.cpp#1)]
+ [!code-csharp[Cryptography.DESCSP.CreateEncryptor.Memory#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.DESCSP.CreateEncryptor.Memory/CS/memoryexample.cs#1)]
+ [!code-vb[Cryptography.DESCSP.CreateEncryptor.Memory#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.DESCSP.CreateEncryptor.Memory/VB/memoryexample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Der Wert der <see cref="P:System.Security.Cryptography.SymmetricAlgorithm.Mode" />-Eigenschaft ist <see cref="F:System.Security.Cryptography.CipherMode.OFB" />.  
+  
+ - oder -   
+  
+ Der Wert von der <see cref="P:System.Security.Cryptography.SymmetricAlgorithm.Mode" /> Eigenschaft ist <see cref="F:System.Security.Cryptography.CipherMode.CFB" /> und der Wert des der <see cref="P:System.Security.Cryptography.SymmetricAlgorithm.FeedbackSize" /> Eigenschaft ist nicht 8.  
+  
+ - oder -   
+  
+ Es wurde eine ungültige Schlüsselgröße verwendet.  
+  
+ - oder -   
+  
+ Die Schlüsselgröße des Algorithmus war nicht verfügbar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateIV">
+      <MemberSignature Language="C#" Value="public override void GenerateIV ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GenerateIV() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DESCryptoServiceProvider.GenerateIV" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Generiert einen zufälligen Initialisierungsvektor (<see cref="P:System.Security.Cryptography.SymmetricAlgorithm.IV" />) für den Algorithmus zu verwenden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Methode können Sie einen zufälligen generieren <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A> Wenn none angegeben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateKey">
+      <MemberSignature Language="C#" Value="public override void GenerateKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GenerateKey() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DESCryptoServiceProvider.GenerateKey" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Generiert einen zufälligen Schlüssel (<see cref="P:System.Security.Cryptography.SymmetricAlgorithm.Key" />) für den Algorithmus verwendet werden soll.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um einen zufälligen Schlüssel zu generieren, wenn keiner angegeben ist. Diese Methode gibt keine zurück, einen weak-Schlüssel (finden Sie unter <xref:System.Security.Cryptography.DES.IsWeakKey%2A>) oder einen Semiweak-Schlüssel (siehe <xref:System.Security.Cryptography.DES.IsSemiWeakKey%2A>).  
+  
+ Dieser Algorithmus unterstützt eine Schlüssellänge von 64 Bits.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

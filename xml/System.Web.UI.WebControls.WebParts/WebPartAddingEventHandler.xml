@@ -1,0 +1,36 @@
+<Type Name="WebPartAddingEventHandler" FullName="System.Web.UI.WebControls.WebParts.WebPartAddingEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void WebPartAddingEventHandler(object sender, WebPartAddingEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WebPartAddingEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebPartAddingEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Web.UI.WebControls.WebParts.WebPartAddingEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartAddingEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode, verarbeitet die <see cref="E:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartAdding" /> -Ereignis für ein <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> Objekt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartAdding> Ereignis wird ausgelöst, durch die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.OnWebPartAdding%2A> -Methode unmittelbar vor dem Hinzufügen eines Steuerelements zu einer Webparts-Zone. Dieses Ereignis bietet die Möglichkeit, den Prozess abzubrechen, bevor er abgeschlossen ist. Die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartAdded> Ereignis wird aufgerufen, nachdem ein Steuerelement zu einer Webparts-Zone hinzugefügt wurde.  
+  
+ Die Methode angegeben, der <xref:System.Web.UI.WebControls.WebParts.WebPartAddingEventHandler> Delegat wird aufgerufen, wenn eine <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartAdding> Ereignis wird ausgelöst.  
+  
+ Seite-Entwickler können benutzerdefinierte Handler für das Ereignis bereitstellen, durch Hinzufügen der `OnWebPartAdding` -Attribut auf die `<asp:webpartmanager>` Element in einer Seite und dem Attribut einen benutzerdefinierten Methodennamen zuweisen. Ein benutzerdefinierter Handler kann auch programmgesteuert zugewiesen werden. Weitere Informationen zum Zuweisen von programmgesteuert einen Ereignishandler finden Sie unter [NIB: Vorgehensweise: Verbinden von Ereignishandlermethoden mit Ereignissen](http://msdn.microsoft.com/en-us/348e9600-22e3-49a2-8864-11c5bb3e98fc).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

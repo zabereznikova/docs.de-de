@@ -1,0 +1,635 @@
+<Type Name="ManualResetEventSlim" FullName="System.Threading.ManualResetEventSlim">
+  <TypeSignature Language="C#" Value="public class ManualResetEventSlim : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ManualResetEventSlim extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.ManualResetEventSlim" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Set = {IsSet}")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine verschlankte Version von <see cref="T:System.Threading.ManualResetEvent" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Klasse für eine bessere Leistung als <xref:System.Threading.ManualResetEvent> , wenn die Wartezeiten voraussichtlich sehr kurz sind und das Ereignis nicht prozessübergreifend ist. <xref:System.Threading.ManualResetEventSlim>verwendet andauernde Spinvorgänge für kurze Zeit, während er darauf wartet, dass das Ereignis signalisiert wird. Bei kurzen Wartezeiten können Spinvorgänge sehr viel weniger ressourcenintensiv sein als das Warten mit Wait-Handles. Jedoch, wenn das Ereignis nicht innerhalb eines bestimmten Zeitraums Zeit Signalisierung ist <xref:System.Threading.ManualResetEventSlim> Wait-Handle regulären Ereignisse neu sortiert.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie eine <xref:System.Threading.ManualResetEventSlim>. Weitere Informationen zur Verwendung der `SpinCount` und andere bewährten Methoden zu dessen Verwendung dieses Typs finden Sie unter [ManualResetEvent und ManualResetEventSlim](~/docs/standard/threading/manualresetevent-and-manualreseteventslim.md).  
+  
+ [!code-csharp[System.Threading.ManualResetEventSlim#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.manualreseteventslim/cs/mres.cs#01)]
+ [!code-vb[System.Threading.ManualResetEventSlim#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.manualreseteventslim/vb/mres.vb#01)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Alle öffentlichen und geschützten Member der <see cref="T:System.Threading.ManualResetEventSlim" /> sind threadsicher und können gleichzeitig von mehreren Threads, mit Ausnahme von Dispose, das nur zu Transportservers verwendet werden verwendet, wenn alle Vorgänge für die <see cref="T:System.Threading.ManualResetEventSlim" /> abgeschlossen haben, und zurückgesetzt, die soll nur verwendet werden, wenn keine anderen Threads auf das Ereignis zugreifen.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManualResetEventSlim ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ManualResetEventSlim.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Threading.ManualResetEventSlim" /> Klasse mit einem Anfangszustand des "nicht signalisiert".</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManualResetEventSlim (bool initialState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool initialState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ManualResetEventSlim.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="initialState" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="initialState">True, um den Anfangszustand auf „signalisiert“ festzulegen, false um den Anfangszustand auf „nicht signalisiert“ festzulegen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Threading.ManualResetEventSlim" /> Klasse mit einem booleschen Wert, der angibt, ob der Anfangszustand auf "signalisiert" festgelegt werden soll.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManualResetEventSlim (bool initialState, int spinCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool initialState, int32 spinCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ManualResetEventSlim.#ctor(System.Boolean,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="initialState" Type="System.Boolean" />
+        <Parameter Name="spinCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="initialState">True, um den Anfangszustand auf "signalisiert" festzulegen, false um den Anfangszustand auf "nicht signalisiert" festzulegen.</param>
+        <param name="spinCount">Die Anzahl von Spin-Wartevorgängen, die vor dem Fallback auf einen kernelbasierten Wartevorgang stattfinden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Threading.ManualResetEventSlim" /> Klasse mit der ein boolescher Wert, der angibt, ob der Anfangszustand auf "signalisiert" festgelegt werden und eine angegebene Spin-Anzahl.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="spinCount" />ist kleiner als 0 oder größer als der maximal zulässige Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ManualResetEventSlim.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle von der aktuellen Instanz der <see cref="T:System.Threading.ManualResetEventSlim" />-Klasse verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie `Dispose` auf, wenn Sie <xref:System.Threading.ManualResetEventSlim> nicht mehr benötigen. Die `Dispose`-Methode bewirkt, dass <xref:System.Threading.ManualResetEventSlim> nicht mehr verwendet werden kann. Nach dem Aufruf `Dispose`, müssen Sie alle Verweise auf Freigeben der <xref:System.Threading.ManualResetEventSlim> , damit der Garbage Collector den Arbeitsspeicher freigeben kann, die die <xref:System.Threading.ManualResetEventSlim> belegt wurde.  
+  
+ Weitere Informationen finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Rufen Sie immer `Dispose` auf, bevor Sie den letzten Verweis auf das <xref:System.Threading.ManualResetEventSlim> freigeben. Andernfalls bleiben die verwendeten Ressourcen reserviert, bis die Garbage Collection die <xref:System.Threading.ManualResetEventSlim>-Methode des `Finalize`-Objekts aufruft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ManualResetEventSlim.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">true, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, false, um nur nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.Threading.ManualResetEventSlim" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Gegensatz zu den Großteil der Mitglieder <xref:System.Threading.ManualResetEventSlim>, <xref:System.Threading.ManualResetEventSlim.Dispose%2A> ist nicht threadsicher und können nicht gleichzeitig mit anderen Mitgliedern dieser Instanz verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSet">
+      <MemberSignature Language="C#" Value="public bool IsSet { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSet" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.ManualResetEventSlim.IsSet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das Ereignis festgelegt wurde.</summary>
+        <value>True, wenn das Ereignis festgelegt wurde, andernfalls false.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ManualResetEventSlim.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt den Zustand des Ereignisses auf „nicht signalisiert“ fest, sodass Threads blockiert werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Threading.ManualResetEventSlim.Reset%2A>kann aufgerufen werden, gleichzeitig mit der alle Elemente außer <xref:System.Threading.ManualResetEventSlim.WaitHandle%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde bereits verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Set">
+      <MemberSignature Language="C#" Value="public void Set ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Set() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ManualResetEventSlim.Set" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Legt den Zustand des Ereignisses auf „signalisiert“ fest und ermöglicht so die weitere Ausführung eines oder mehrerer wartender Threads.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpinCount">
+      <MemberSignature Language="C#" Value="public int SpinCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SpinCount" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.ManualResetEventSlim.SpinCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl von Spin-Wartevorgängen an, die vor dem Fallback auf einen kernelbasierten Wartevorgang stattfinden.</summary>
+        <value>Gibt die Anzahl von Spin-Wartevorgängen zurück, die vor dem Fallback auf einen kernelbasierten Wartevorgang stattfinden.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Wait">
+      <MemberSignature Language="C#" Value="public void Wait ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Wait() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ManualResetEventSlim.Wait" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Blockiert den aktuellen Thread, bis das aktuelle <see cref="T:System.Threading.ManualResetEventSlim" /> festgelegt ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Aufrufer diese Methode blockiert, bis die aktuelle Instanz unbegrenzt festgelegt ist. Der Aufrufer wird sofort zurückgegeben, wenn das Ereignis derzeit in einem Set-Zustand befindet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die maximale Anzahl der Wartevorgänge wurde überschritten.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde bereits verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Wait">
+      <MemberSignature Language="C#" Value="public bool Wait (int millisecondsTimeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Wait(int32 millisecondsTimeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ManualResetEventSlim.Wait(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="millisecondsTimeout" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="millisecondsTimeout">Die Anzahl von Millisekunden, die gewartet wird, oder <see cref="F:System.Threading.Timeout.Infinite" /> (-1) für Warten ohne Timeout.</param>
+        <summary>Blockiert den aktuellen Thread, bis das aktuelle <see cref="T:System.Threading.ManualResetEventSlim" /> festgelegt ist, verwenden eine 32-Bit-Ganzzahl mit Vorzeichen zum Messen des Zeitintervalls.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Threading.ManualResetEventSlim" /> wurde festgelegt wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="millisecondsTimeout" /> ist eine negative Zahl, jedoch nicht -1, was einen unbeschränkten Timeout darstellt.</exception>
+        <exception cref="T:System.InvalidOperationException">Die maximale Anzahl der Wartevorgänge wurde überschritten.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde bereits verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Wait">
+      <MemberSignature Language="C#" Value="public void Wait (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Wait(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ManualResetEventSlim.Wait(System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">Das zu überwachende <see cref="T:System.Threading.CancellationToken" />.</param>
+        <summary>Blockiert den aktuellen Thread, bis das aktuelle <see cref="T:System.Threading.ManualResetEventSlim" /> ein Signal empfängt, unter Berücksichtigung einer <see cref="T:System.Threading.CancellationToken" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Aufrufer diese Methode blockiert, bis die aktuelle Instanz unbegrenzt festgelegt ist. Der Aufrufer wird sofort zurückgegeben, wenn das Ereignis derzeit in einem Set-Zustand befindet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die maximale Anzahl der Wartevorgänge wurde überschritten.</exception>
+        <exception cref="T:System.OperationCanceledException">
+          <paramref name="cancellationToken" />wurde abgebrochen.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde bereits verworfen oder dem <see cref="T:System.Threading.CancellationTokenSource" /> erstellten <paramref name="cancellationToken" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Wait">
+      <MemberSignature Language="C#" Value="public bool Wait (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Wait(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ManualResetEventSlim.Wait(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Eine <see cref="T:System.TimeSpan" />-Struktur, die die Anzahl der zu wartenden Millisekunden angibt, oder eine <see cref="T:System.TimeSpan" />-Struktur, die -1 Millisekunden zum unendlichen Warten angibt.</param>
+        <summary>Blockiert den aktuellen Thread, bis das aktuelle <see cref="T:System.Threading.ManualResetEventSlim" /> festgelegt wird, wobei eine <see cref="T:System.TimeSpan" /> zum Messen des Zeitintervalls.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Threading.ManualResetEventSlim" /> wurde festgelegt wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="timeout" /> ist eine negative Zahl ungleich „-1 Millisekunden“, die ein unendliches Timeout darstellt.  
+  
+ - oder -   
+  
+ Die Anzahl der Millisekunden für den <paramref name="timeout" /> ist größer als <see cref="F:System.Int32.MaxValue" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die maximale Anzahl der Wartevorgänge wurde überschritten.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde bereits verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Wait">
+      <MemberSignature Language="C#" Value="public bool Wait (int millisecondsTimeout, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Wait(int32 millisecondsTimeout, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ManualResetEventSlim.Wait(System.Int32,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="millisecondsTimeout" Type="System.Int32" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="millisecondsTimeout">Die Anzahl von Millisekunden, die gewartet wird, oder <see cref="F:System.Threading.Timeout.Infinite" /> (-1) für Warten ohne Timeout.</param>
+        <param name="cancellationToken">Das zu überwachende <see cref="T:System.Threading.CancellationToken" />.</param>
+        <summary>Blockiert den aktuellen Thread, bis das aktuelle <see cref="T:System.Threading.ManualResetEventSlim" /> festgelegt ist, verwenden eine 32-Bit-Ganzzahl mit Vorzeichen zum Messen des Zeitintervalls, unter Berücksichtigung einer <see cref="T:System.Threading.CancellationToken" />.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Threading.ManualResetEventSlim" /> wurde festgelegt wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.OperationCanceledException">
+          <paramref name="cancellationToken" />wurde abgebrochen.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="millisecondsTimeout" /> ist eine negative Zahl, jedoch nicht -1, was einen unbeschränkten Timeout darstellt.</exception>
+        <exception cref="T:System.InvalidOperationException">Die maximale Anzahl der Wartevorgänge wurde überschritten.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde bereits verworfen oder dem <see cref="T:System.Threading.CancellationTokenSource" /> erstellten <paramref name="cancellationToken" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Wait">
+      <MemberSignature Language="C#" Value="public bool Wait (TimeSpan timeout, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Wait(valuetype System.TimeSpan timeout, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.ManualResetEventSlim.Wait(System.TimeSpan,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Eine <see cref="T:System.TimeSpan" />-Struktur, die die Anzahl der zu wartenden Millisekunden angibt, oder eine <see cref="T:System.TimeSpan" />-Struktur, die -1 Millisekunden zum unendlichen Warten angibt.</param>
+        <param name="cancellationToken">Das zu überwachende <see cref="T:System.Threading.CancellationToken" />.</param>
+        <summary>Blockiert den aktuellen Thread, bis das aktuelle <see cref="T:System.Threading.ManualResetEventSlim" /> festgelegt ist, wird mithilfe einer <see cref="T:System.TimeSpan" /> zum Messen des Zeitintervalls, unter Berücksichtigung einer <see cref="T:System.Threading.CancellationToken" />.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Threading.ManualResetEventSlim" /> wurde festgelegt wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.OperationCanceledException">
+          <paramref name="cancellationToken" />wurde abgebrochen.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="timeout" /> ist eine negative Zahl ungleich „-1 Millisekunden“, die ein unendliches Timeout darstellt.  
+  
+ - oder -   
+  
+ Die Anzahl der Millisekunden für den <paramref name="timeout" /> ist größer als <see cref="F:System.Int32.MaxValue" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Die maximale Anzahl der Wartevorgänge wurde überschritten.</exception>
+        <exception cref="T:System.ObjectDisposedException">Das Objekt wurde bereits verworfen oder dem <see cref="T:System.Threading.CancellationTokenSource" /> erstellten <paramref name="cancellationToken" /> wurde verworfen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitHandle">
+      <MemberSignature Language="C#" Value="public System.Threading.WaitHandle WaitHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Threading.WaitHandle WaitHandle" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.ManualResetEventSlim.WaitHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.WaitHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den zugrunde liegenden <see cref="T:System.Threading.WaitHandle" /> für dieses Objekt <see cref="T:System.Threading.ManualResetEventSlim" />.</summary>
+        <value>Die zugrunde liegende <see cref="T:System.Threading.WaitHandle" /> -Ereignisobjekt dies <see cref="T:System.Threading.ManualResetEventSlim" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zugriff auf diese Eigenschaft ist, erzwingt die Initialisierung eines zugrunde liegenden Ereignisobjekts, falls dieser noch nicht bereits erstellt wurde. Warten, einfach für dieses <xref:System.Threading.ManualResetEventSlim>, öffentliche Wait-Methoden sollte bevorzugt werden. Es wird empfohlen, zum Verwerfen der <xref:System.Threading.ManualResetEventSlim> Instanz nach dem Zugriff auf diese Eigenschaft, um einen Ressourcenverlust zu verhindern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

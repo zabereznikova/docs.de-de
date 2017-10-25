@@ -1,0 +1,79 @@
+<Type Name="UpdateCheck" FullName="System.Data.Linq.Mapping.UpdateCheck">
+  <TypeSignature Language="C#" Value="public enum UpdateCheck" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed UpdateCheck extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Linq.Mapping.UpdateCheck" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Linq</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wenn Objekte auf Parallelitätskonflikte geprüft werden soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Im Codebeispiel wird nach die Tabelle, die gibt `HomePage` Objekte nie getestet werden sollen.  
+  
+   
+  
+## Examples  
+ [!code-csharp[System.Data.Linq.Mapping.UpdateCheck#1](~/samples/snippets/csharp/VS_Snippets_Data/system.data.linq.mapping.updatecheck/cs/northwind.cs#1)]
+ [!code-vb[System.Data.Linq.Mapping.UpdateCheck#1](~/samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.mapping.updatecheck/vb/northwind.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Always">
+      <MemberSignature Language="C#" Value="Always" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Linq.Mapping.UpdateCheck Always = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Linq.Mapping.UpdateCheck.Always" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Linq.Mapping.UpdateCheck</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Überprüfen Sie immer. Dies ist die Standardeinstellung, es sei denn, <see cref="P:System.Data.Linq.Mapping.ColumnAttribute.IsVersion" /> ist <see langword="true" /> für ein Element.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Never">
+      <MemberSignature Language="C#" Value="Never" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Linq.Mapping.UpdateCheck Never = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Linq.Mapping.UpdateCheck.Never" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Linq.Mapping.UpdateCheck</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nie überprüfen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WhenChanged">
+      <MemberSignature Language="C#" Value="WhenChanged" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Linq.Mapping.UpdateCheck WhenChanged = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Linq.Mapping.UpdateCheck.WhenChanged" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Linq.Mapping.UpdateCheck</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Überprüfen Sie, nur, wenn das Objekt geändert wurde.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

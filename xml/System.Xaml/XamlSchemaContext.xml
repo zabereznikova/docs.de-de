@@ -1,0 +1,519 @@
+<Type Name="XamlSchemaContext" FullName="System.Xaml.XamlSchemaContext">
+  <TypeSignature Language="C#" Value="public class XamlSchemaContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XamlSchemaContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.XamlSchemaContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert einen wiederverwendbaren Kontext für die Interpretation oder die Zuordnung von XAML-Typen und die Typen in den Assemblys, die ihnen zugrunde liegen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein XAML-Schemakontext stellt eine Abstraktionsebene zwischen ein Schema oder Vokabular für XAML und einer bestimmten Parser-Implementierung. Durch Einfügen von das Konzept eines Schemakontexts, das Schema kann mit anderen XAML-Parser verwendet werden, und der Schemakontext füllt die Details, die für die Interaktion mit einem bestimmten XAML-Parser erforderlich sind. Beispielsweise enthält der XAML-Schemakontext Abfrage APIs, die die Verwendung von XAML-Konzepte oder auf die CLR-Bindung für XAML-Typsystem beziehen. Der XAML-Schemakontext ist auch für die Verwaltung der Assemblyliste der geladenen Assemblys, die definiert, in denen ein XAML-Parser Unterstützungstypen sucht zuständig.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>In einer <see cref="T:System.AppDomain" />, eine <see cref="T:System.Xaml.XamlSchemaContext" /> zwischen den verschiedenen Aufrufer, darunter sowohl vollständige und teilweise vertrauenswürdige Aufrufer freigegeben werden können. Diese Situation ist in Frameworks wie z. B. WPF, die teilweise vertrauenswürdigen Zugriff in XAML für Teile des Modells WPF-Anwendung bereitstellen laden vorhanden. Die Standardeinstellung <see cref="T:System.Xaml.XamlSchemaContext" /> -Implementierung bietet Schutzmaßnahmen in diesem Szenario bleiben alle zugehörigen Eigenschaften und Einstellungen, die unveränderlich. Abgeleitete Implementierungen sollten auch nach diesem Modell der Unveränderlichkeit für Eigenschaften und Einstellungen von einem XAML-Schemakontext.  
+  
+ Die <see cref="T:System.Xaml.XamlSchemaContext" /> Basisklasse ist so konzipiert, dass Suchvorgänge keine extern wahrnehmbaren Nebeneffekte haben. Die Typen, die verweist <see cref="T:System.Xaml.XamlSchemaContext" /> -APIs in der Base-Klasse, z. B. <see cref="T:System.Xaml.XamlType" /> oder <see cref="T:System.Xaml.XamlMember" />, erzeugen auch keine Nebeneffekte von suchen. Alle Daten, die erforderlich ist, um ein Schema zu bestimmen, die zur Erstellung und die Einstellungen des verfügbar sein sollte die <see cref="T:System.AppDomain" />. Beachten Sie, dass keine Such-APIs auf explizit übergeben Dienste beruhen; Ihre Eingabe basiert auf nur Zeichenfolgen.  
+  
+ Die <see cref="T:System.Xaml.XamlSchemaContext" /> -Basisklasse und <see cref="T:System.Xaml.XamlType" /> und <see cref="T:System.Xaml.XamlMember" /> sind alle threadsicher in ihre Basis Implementierungen. Ableiten von <see cref="T:System.Xaml.XamlSchemaContext" /> oder leiten Sie die Verwendung von XAML-Typ Systemklassen z. B. <see cref="T:System.Xaml.XamlType" /> und <see cref="T:System.Xaml.XamlMember" /> , Sie können auswählen, ob Ihre Klassen als threadsicher Verhalten.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlSchemaContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlSchemaContext.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xaml.XamlSchemaContext" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlSchemaContext (System.Collections.Generic.IEnumerable&lt;System.Reflection.Assembly&gt; referenceAssemblies);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;class System.Reflection.Assembly&gt; referenceAssemblies) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlSchemaContext.#ctor(System.Collections.Generic.IEnumerable{System.Reflection.Assembly})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="referenceAssemblies" Type="System.Collections.Generic.IEnumerable&lt;System.Reflection.Assembly&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="referenceAssemblies">Ein zählbarer Satz von Assemblyinformationselementen. Jede Assembly Informationselement wird angegeben, indem ein <see cref="T:System.Reflection.Assembly" /> Wert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xaml.XamlSchemaContext" /> -Klasse, basierend auf einem Satz von Verweisassemblys.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlSchemaContext (System.Xaml.XamlSchemaContextSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xaml.XamlSchemaContextSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlSchemaContext.#ctor(System.Xaml.XamlSchemaContextSettings)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="settings" Type="System.Xaml.XamlSchemaContextSettings" />
+      </Parameters>
+      <Docs>
+        <param name="settings">Die Einstellungsobjekt, mit dem Erstellen der <see cref="T:System.Xaml.XamlSchemaContext" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xaml.XamlSchemaContext" /> klassenbasierte für ein Einstellungsobjekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Einstellungsobjekt speichert Informationen zu den Konverter für Text und Markup Extension Einzelheiten der Schemakontext. Weitere Informationen finden Sie unter <xref:System.Xaml.XamlSchemaContextSettings>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlSchemaContext (System.Collections.Generic.IEnumerable&lt;System.Reflection.Assembly&gt; referenceAssemblies, System.Xaml.XamlSchemaContextSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;class System.Reflection.Assembly&gt; referenceAssemblies, class System.Xaml.XamlSchemaContextSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlSchemaContext.#ctor(System.Collections.Generic.IEnumerable{System.Reflection.Assembly},System.Xaml.XamlSchemaContextSettings)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="referenceAssemblies" Type="System.Collections.Generic.IEnumerable&lt;System.Reflection.Assembly&gt;" />
+        <Parameter Name="settings" Type="System.Xaml.XamlSchemaContextSettings" />
+      </Parameters>
+      <Docs>
+        <param name="referenceAssemblies">Ein zählbarer Satz von Assemblyinformationen. Jede Assembly Informationselement wird angegeben, indem ein <see cref="T:System.Reflection.Assembly" /> Wert.</param>
+        <param name="settings">Die Einstellungsobjekt, mit dem Erstellen der <see cref="T:System.Xaml.XamlSchemaContext" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Xaml.XamlSchemaContext" /> -Klasse, basierend auf einem Satz von Verweisassemblys und ein Einstellungsobjekt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~XamlSchemaContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlSchemaContext.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stellt eine nicht standardmäßige <see langword="Finalize" /> Implementierung, die nicht aufruft <see langword="Dispose" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendung von XAML-Schemakontexten sollten nicht durch die automatische Garbagecollection oder durch manuelle Schritte verworfen werden. Obwohl XAML-Schemakontexten keine nicht verwalteten Ressourcen haben <xref:System.Windows.Markup.XamlDeferLoadAttribute> Eigenschaften möglicherweise immer noch aktiv sein, und einen XAML-Schemakontext disposing kann verhindern, dass die zugehörigen-Ladevorgang.  
+  
+ <xref:System.AppDomain.AssemblyLoad>Ereignishandler, die intern als schwache Verweise verknüpft sind, werden von dieser Implementierung bereinigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullyQualifyAssemblyNamesInClrNamespaces">
+      <MemberSignature Language="C#" Value="public bool FullyQualifyAssemblyNamesInClrNamespaces { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool FullyQualifyAssemblyNamesInClrNamespaces" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlSchemaContext.FullyQualifyAssemblyNamesInClrNamespaces" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein XAML-Schema und den entsprechenden Kontext vollqualifizierten Assemblynamen in den Werten verwenden, die von der Such-API zurückgegeben werden.</summary>
+        <value>
+          <see langword="true" />Wenn ein XAML-Schema und den entsprechenden Kontext vollqualifizierten Assemblynamen in den Werten, die von der Such-APIs zurückgegeben werden verwenden. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt die <xref:System.Xaml.XamlSchemaContextSettings.FullyQualifyAssemblyNamesInClrNamespaces%2A?displayProperty=nameWithType> -Wert, der in den Einstellungen für hergestellt wird die <xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Xaml.XamlSchemaContextSettings%29> Konstruktorsignatur. Wenn andere Signaturen für die Konstruktion verwendet werden oder wenn <xref:System.Xaml.XamlSchemaContextSettings.FullyQualifyAssemblyNamesInClrNamespaces%2A?displayProperty=nameWithType> nicht speziell auf festgelegt ist `true`, der Wert dieser Eigenschaft ist `false`.  
+  
+ Der Wert dieser Eigenschaft wirkt sich auf die Zeichenfolgen, die von zurückgegeben werden <xref:System.Xaml.XamlSchemaContext.GetAllXamlNamespaces%2A>. Wenn <xref:System.Xaml.XamlSchemaContext.FullyQualifyAssemblyNamesInClrNamespaces%2A> ist `true`, die Assemblyteil der Zeichenfolge gibt die Entsprechung der <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllXamlNamespaces">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IEnumerable&lt;string&gt; GetAllXamlNamespaces ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; GetAllXamlNamespaces() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlSchemaContext.GetAllXamlNamespaces" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Durchsucht Assemblys, die von diesem gehalten werden <see cref="T:System.Xaml.XamlSchemaContext" /> und gibt eine Menge von Namespaces.</summary>
+        <returns>Ein zählbarer Satz von Namespacebezeichner. Diese Bezeichner werden als Zeichenfolgen bereitgestellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode sucht nur die Verweisassemblys, wenn sie durch Einstellung in der Konstruktion oder Eigenschaft übergeben werden. Wenn keine Assemblys als Verweisassemblys festgelegt werden, überprüft die Logik dieser Methode alle geladenen Assemblys, in denen dies <xref:System.Xaml.XamlSchemaContext> aktiv ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllXamlTypes">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.ICollection&lt;System.Xaml.XamlType&gt; GetAllXamlTypes (string xamlNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.ICollection`1&lt;class System.Xaml.XamlType&gt; GetAllXamlTypes(string xamlNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlSchemaContext.GetAllXamlTypes(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Xaml.XamlType&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xamlNamespace" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xamlNamespace">Rückgabetypen für die Verwendung von XAML-Namespace.</param>
+        <summary>Durchsucht Assemblys, die von diesem gehalten werden <see cref="T:System.Xaml.XamlSchemaContext" /> und gibt einen Satz von Typen aus dem angegebenen XAML-Namespace.</summary>
+        <returns>Ein zählbarer Satz von XAML-Typen. Jede Verwendung von XAML-Typ in der Gruppe wird dargestellt, indem ein <see cref="T:System.Xaml.XamlType" /> Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPreferredPrefix">
+      <MemberSignature Language="C#" Value="public virtual string GetPreferredPrefix (string xmlns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetPreferredPrefix(string xmlns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlSchemaContext.GetPreferredPrefix(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xmlns">Der XAML-Namespace das bevorzugte Präfix für abgerufen.</param>
+        <summary>Ruft eine Zeichenfolge, die als bevorzugte Präfix für Consumer beim Zuordnen des angegebenen XAML-Namespaces zu verwendende gemeldet wird.</summary>
+        <returns>Verwenden Sie eine Zeichenfolge, die Consumern verwenden soll, wenn sie den angegebenen XAML-Namespace für das Markup zugeordnet.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die aktuellste Consumer der Informationen wird in der Regel ein XAML-Writer. Andere indirekte Consumer einschließen Entwurfstools  
+  
+ Sie können diese Informationen im Rahmen der Verwendung von XAML-Bindung für die common Language Runtime (CLR) angeben, durch Anwenden von <xref:System.Windows.Markup.XmlnsPrefixAttribute> auf Assemblyebene.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="xmlns" /> ist NULL.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValueConverter&lt;TConverterBase&gt;">
+      <MemberSignature Language="C#" Value="protected System.Xaml.Schema.XamlValueConverter&lt;TConverterBase&gt; GetValueConverter&lt;TConverterBase&gt; (Type converterType, System.Xaml.XamlType targetType) where TConverterBase : class;" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance class System.Xaml.Schema.XamlValueConverter`1&lt;!!TConverterBase&gt; GetValueConverter&lt;class TConverterBase&gt;(class System.Type converterType, class System.Xaml.XamlType targetType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlSchemaContext.GetValueConverter``1(System.Type,System.Xaml.XamlType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.Schema.XamlValueConverter&lt;TConverterBase&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TConverterBase">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="converterType" Type="System.Type" />
+        <Parameter Name="targetType" Type="System.Xaml.XamlType" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TConverterBase">Die Basisklasse bestimmte Konverter.</typeparam>
+        <param name="converterType">Der Typkonverter-Implementierung.</param>
+        <param name="targetType">Der gewünschte Zieltyp für den Konverter.</param>
+        <summary>Gibt einen Wertkonverter, die in den angeforderten konvertieren kann <paramref name="targetType" />.</summary>
+        <returns>Ein <see cref="T:System.Xaml.Schema.XamlValueConverter`1" /> mit einer Einschränkung, die die Einschränkung entspricht, das beim Methodenaufruf eingefügt wird.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXamlDirective">
+      <MemberSignature Language="C#" Value="public virtual System.Xaml.XamlDirective GetXamlDirective (string xamlNamespace, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xaml.XamlDirective GetXamlDirective(string xamlNamespace, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlSchemaContext.GetXamlDirective(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlDirective</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xamlNamespace" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xamlNamespace">Der XAML-Namespace, der die benannte Direktive enthält.</param>
+        <param name="name">Der Name der Richtlinie zu erhalten.</param>
+        <summary>Gibt eine <see cref="T:System.Xaml.XamlDirective" /> Wert, der eine Richtlinie für die Verwendung von XAML-Sprache oder für eine bestimmte Implementierung darstellt.</summary>
+        <returns>Ein <see cref="T:System.Xaml.XamlDirective" /> -Objekt, das die angeforderte Direktive darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Überschreiben Sie diese Methode, wenn Sie eine abgeleitete Klasse von erstellen <xref:System.Xaml.XamlDirective> als Bestandteil des Szenarios Erweiterung System für eine Verwendung von XAML-Typ.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="xamlNamespace" /> oder <paramref name="name" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXamlType">
+      <MemberSignature Language="C#" Value="public virtual System.Xaml.XamlType GetXamlType (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xaml.XamlType GetXamlType(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlSchemaContext.GetXamlType(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ der abzurufenden eine <see cref="T:System.Xaml.XamlType" /> für.</param>
+        <summary>Gibt eine <see cref="T:System.Xaml.XamlType" /> , die auf einer CLR-Typ-ID basiert.</summary>
+        <returns>Die <see cref="T:System.Xaml.XamlType" /> , entspricht die Eingabe <paramref name="type" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Überladung wird davon ausgegangen, dass Sie die CLR für das Unterstützungstypsystem verwenden. Wenn Sie das CLR-Typsystem nicht verwenden, verwenden Sie <xref:System.Xaml.XamlSchemaContext.GetXamlType%28System.Xaml.Schema.XamlTypeName%29>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXamlType">
+      <MemberSignature Language="C#" Value="public System.Xaml.XamlType GetXamlType (System.Xaml.Schema.XamlTypeName xamlTypeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xaml.XamlType GetXamlType(class System.Xaml.Schema.XamlTypeName xamlTypeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlSchemaContext.GetXamlType(System.Xaml.Schema.XamlTypeName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xamlTypeName" Type="System.Xaml.Schema.XamlTypeName" />
+      </Parameters>
+      <Docs>
+        <param name="xamlTypeName">Die Verwendung von XAML-Typnamen zum Abrufen einer <see cref="T:System.Xaml.XamlType" /> für.</param>
+        <summary>Gibt eine <see cref="T:System.Xaml.XamlType" /> , basiert auf einem XAML-System-Typnamen.</summary>
+        <returns>Die <see cref="T:System.Xaml.XamlType" /> , entspricht die Eingabe <paramref name="xamlTypeName" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Eine Komponente von <paramref name="xamlTypeName" /> (<see cref="P:System.Xaml.Schema.XamlTypeName.Name" /> oder <see cref="P:System.Xaml.Schema.XamlTypeName.Namespace" />) ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="xamlTypeName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXamlType">
+      <MemberSignature Language="C#" Value="protected virtual System.Xaml.XamlType GetXamlType (string xamlNamespace, string name, params System.Xaml.XamlType[] typeArguments);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.Xaml.XamlType GetXamlType(string xamlNamespace, string name, class System.Xaml.XamlType[] typeArguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlSchemaContext.GetXamlType(System.String,System.String,System.Xaml.XamlType[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xamlNamespace" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="typeArguments" Type="System.Xaml.XamlType[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="xamlNamespace">Der XAML-Namespace, der den gewünschten Typ enthält.</param>
+        <param name="name">Der Zeichenfolgenname des gewünschten Typs.</param>
+        <param name="typeArguments">Die Initialisierungstypargumente für einen generischen Typ.</param>
+        <summary>Gibt eine <see cref="T:System.Xaml.XamlType" /> , basiert auf einem XAML-Namespace und eine Zeichenfolge für den Typnamen. Diese Signatur kann angeben, die Typargumente für Fälle, in denen der gewünschte Typ ein generischer Typ ist.</summary>
+        <returns>Die <see cref="T:System.Xaml.XamlType" /> , die die Eingabekriterien entspricht.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAssemblyResolve">
+      <MemberSignature Language="C#" Value="protected virtual System.Reflection.Assembly OnAssemblyResolve (string assemblyName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.Reflection.Assembly OnAssemblyResolve(string assemblyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlSchemaContext.OnAssemblyResolve(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Assembly</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assemblyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="assemblyName">Der Namen zu ladenden Assembly.</param>
+        <summary>Wird aufgerufen, wenn Vorgänge dieser Schemakontext verwenden, um einer Assembly aufzulösen, die erforderlich sind, um die Verwendung von XAML-Namespaces zu beheben, die es enthält.</summary>
+        <returns>Die aufgelöste Assembly.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Verfahren Auflösung zugrunde liegenden Assembly an, die eine interne API ist, hat integrierte Toleranzen für andere Zeichenfolgenformen von Namen einer Assembly im auf der Grundlage der <xref:System.Reflection.AssemblyName> Konstruktion Verhalten.  
+  
+ Der Zweck dieser API werden erste-Chance-Auflösung für bekannte Sätze von Assemblys, z. B. gegen Verweisassemblys statt für den globalen Assemblycache zu aktivieren. Wenn die Liste der Verweisassemblys aufgefüllt wird, kann die standardmäßige Implementierung die bekannten Verweisassemblys zugreifen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReferenceAssemblies">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Reflection.Assembly&gt; ReferenceAssemblies { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class System.Reflection.Assembly&gt; ReferenceAssemblies" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlSchemaContext.ReferenceAssemblies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Reflection.Assembly&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein aufzählbarer Satz von Verweisassemblys für die Verwendung von XAML-Schemakontext ab.</summary>
+        <value>Ein zählbarer Satz von Verweisassemblys für den Schemakontext. Jede Assembly Informationselement wird angegeben, indem ein <see cref="T:System.Reflection.Assembly" /> Wert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportMarkupExtensionsWithDuplicateArity">
+      <MemberSignature Language="C#" Value="public bool SupportMarkupExtensionsWithDuplicateArity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportMarkupExtensionsWithDuplicateArity" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlSchemaContext.SupportMarkupExtensionsWithDuplicateArity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein XAML-Schema und den entsprechenden Kontext Markuperweiterungen unterstützen, die zwei Konstruktoren mit der gleichen Stelligkeit (Anzahl von Eingabeparametern) besitzen.</summary>
+        <value>
+          <see langword="true" />Wenn der Schemakontext Markuperweiterungen, die doppelten Stelligkeit verfügen zulässt; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft gibt die <xref:System.Xaml.XamlSchemaContextSettings.SupportMarkupExtensionsWithDuplicateArity%2A?displayProperty=nameWithType> -Wert, der in den Einstellungen für hergestellt wird die <xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Xaml.XamlSchemaContextSettings%29> Konstruktorsignatur. Wenn andere Signaturen für die Konstruktion verwendet werden oder wenn <xref:System.Xaml.XamlSchemaContextSettings.SupportMarkupExtensionsWithDuplicateArity%2A?displayProperty=nameWithType> nicht speziell auf festgelegt ist `true`, der Wert dieser Eigenschaft ist `false`.  
+  
+ Doppelter Stelligkeit von Markuperweiterungen wird durch die Verwendung von XAML-Spezifikation [MS-XAML] Abschnitt 6.6.7.2 nicht gesondert behandelt. Dies ist, da die Bildung des Elements XAML-Informationen für eine Markuperweiterung unabhängig von der doppelte Stelligkeit identisch ist, die ggf. in der Implementierung der Markuperweiterung vorhanden. Nur den eigentlichen Aufruf der Markuperweiterung und die zugehörige `ProvideValue` macht alle Probleme in Zusammenhang mit doppelte Stelligkeit handelt. Verhalten für die Behandlung doppelten Stelligkeit ist daher nicht definiert und bleibt bis zu einzelnen implementierende XAML-Schemakontext und die Verwendung von XAML-Writer-Integration. Die Verwendung von XAML-Standardschemakontext wie für .NET Framework XAML Services-Vorgänge implementiert unterstützt keine doppelten Stelligkeit; verschiedene .NET Framework-XAML-Dienste-APIs werden Ausnahmen auslösen, bei der Verarbeitung von Markuperweiterungsverwendung mit zugrunde liegenden doppelte Stelligkeit handelt.  
+  
+ Weitere Informationen zum Definieren von Markuperweiterungen finden Sie unter [Markup Extensions for XAML Overview](~/docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetCompatibleXamlNamespace">
+      <MemberSignature Language="C#" Value="public virtual bool TryGetCompatibleXamlNamespace (string xamlNamespace, out string compatibleNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryGetCompatibleXamlNamespace(string xamlNamespace, [out] string&amp; compatibleNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlSchemaContext.TryGetCompatibleXamlNamespace(System.String,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xamlNamespace" Type="System.String" />
+        <Parameter Name="compatibleNamespace" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="xamlNamespace">Die <see langword="xmlns" /> Zeichenfolge für die Verwendung von XAML-Namespace auf ein kompatibles Ergebnis überprüft werden soll.</param>
+        <param name="compatibleNamespace">Bei der Rückgabe dieser Methode die <see langword="xmlns" /> Zeichenfolge für eine kompatible Verwendung von XAML-Namespace-Anforderung. Dies ist möglicherweise mit <c>XamlNamespace</c> , wenn der Methodenrückgabe <see langword="false" />.</param>
+        <summary>Gibt den Erfolg oder Misserfolg einer Anforderung für einen kompatiblen XAML-Namespace. Eine erfolgreiche Anforderung gibt diesem XAML-Namespace als Out-Parameter.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="compatibleNamespace" /> ein verwendbares Ergebnis enthält, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode verwendet intern die folgenden Suchreihenfolge:  
+  
+1.  Ein Kompatibilitätswörterbuch intern implementierte, die möglicherweise von einer früheren Suche aufgefüllt wurde.  
+  
+2.  Die <xref:System.Windows.Markup.XmlnsCompatibleWithAttribute> Parameter Auswertung.  
+  
+ Wenn kein anderer kompatibler Namespace ermittelt wird und die Rückgabe dieser Methode `false`, `compatibleNamespace` Parameter Ausgabe möglicherweise den gleichen Wert wie die `xamlNamespace` Eingabe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="xamlNamespace" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

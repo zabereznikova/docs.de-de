@@ -1,0 +1,203 @@
+<Type Name="ScrollPattern+ScrollPatternInformation" FullName="System.Windows.Automation.ScrollPattern+ScrollPatternInformation">
+  <TypeSignature Language="C#" Value="public struct ScrollPattern.ScrollPatternInformation" />
+  <TypeSignature Language="ILAsm" Value=".class nested public sequential ansi sealed beforefieldinit ScrollPattern/ScrollPatternInformation extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.ScrollPattern.ScrollPatternInformation" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ermöglicht den Zugriff auf die Eigenschaftswerte einer <see cref="T:System.Windows.Automation.ScrollPattern" /> -Objekt mithilfe seiner <see cref="P:System.Windows.Automation.ScrollPattern.Current" /> oder <see cref="P:System.Windows.Automation.ScrollPattern.Cached" /> Accessoren.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="HorizontallyScrollable">
+      <MemberSignature Language="C#" Value="public bool HorizontallyScrollable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HorizontallyScrollable" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.ScrollPattern.ScrollPatternInformation.HorizontallyScrollable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das Benutzeroberflächenautomatisierungs-Element horizontal gescrollt werden kann.</summary>
+        <value>
+          <see langword="true" />, wenn das Benutzeroberflächenautomatisierungs-Element horizontal gescrollt werden kann, andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann dynamisch sein. Z. B. der Inhaltsbereich des Benutzeroberflächenautomatisierungs-Element ist möglicherweise nicht größer als der aktuelle Anzeigebereich Bedeutung <xref:System.Windows.Automation.ScrollPattern.ScrollPatternInformation.HorizontallyScrollable%2A> ist `false`. Allerdings Ändern der Größe der [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Element oder Hinzufügen von untergeordneten Elementen können die Grenzen des Inhaltsbereichs hinter den sichtbaren Bereich zeigt an, dass <xref:System.Windows.Automation.ScrollPattern.ScrollPatternInformation.HorizontallyScrollable%2A> ist `true`.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel eine <xref:System.Windows.Automation.ScrollPattern> -Steuerelementmuster, die von Benutzeroberflächenautomatisierungs-Elements abgerufen wird und wird dann verwendet werden, um das Element die angeforderte Menge einen horizontalen Bildlauf ausführen.  
+  
+ [!code-csharp[UIAScrollPattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAScrollPattern_snip/CSharp/UIAScrollPattern_snippets.cs#101)]
+ [!code-vb[UIAScrollPattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAScrollPattern_snip/VisualBasic/UIAScrollPattern_snippets.vb#101)]  
+[!code-csharp[UIAScrollPattern_snip#107](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAScrollPattern_snip/CSharp/UIAScrollPattern_snippets.cs#107)]
+[!code-vb[UIAScrollPattern_snip#107](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAScrollPattern_snip/VisualBasic/UIAScrollPattern_snippets.vb#107)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalScrollPercent">
+      <MemberSignature Language="C#" Value="public double HorizontalScrollPercent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 HorizontalScrollPercent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.ScrollPattern.ScrollPatternInformation.HorizontalScrollPercent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuelle horizontale Bildlaufposition ab.</summary>
+        <value>Die horizontale Bildlaufposition als Prozentsatz des gesamten Inhaltsbereichs im Benutzeroberflächenautomatisierungs-Element. Der Standardwert ist 0,0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.ScrollPattern> -Objekt abgerufen, die von einem Zielsteuerelement an eine Funktion, die der aktuellen horizontalen und vertikalen Bildlauf des sichtbaren Bereichs innerhalb des Inhaltsbereichs Prozentsätze übergeben wird.  
+  
+ [!code-csharp[UIAScrollPattern_snip#1045](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAScrollPattern_snip/CSharp/UIAScrollPattern_snippets.cs#1045)]
+ [!code-vb[UIAScrollPattern_snip#1045](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAScrollPattern_snip/VisualBasic/UIAScrollPattern_snippets.vb#1045)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalViewSize">
+      <MemberSignature Language="C#" Value="public double HorizontalViewSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 HorizontalViewSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.ScrollPattern.ScrollPatternInformation.HorizontalViewSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuelle Größe der horizontalen Ansicht ab.</summary>
+        <value>Die horizontale Größe des sichtbaren Bereichs als Prozentsatz des gesamten Inhaltsbereichs im Benutzeroberflächenautomatisierungs-Element. Der Standardwert ist 100,0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.ScrollPattern> -Objekt abgerufen, die von einem Zielsteuerelement an eine Funktion, die die aktuelle vertikale und horizontale Größe des sichtbaren Bereichs als Prozentsatz des gesamten Inhaltsbereichs abruft übergeben wird.  
+  
+ [!code-csharp[UIAScrollPattern_snip#1055](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAScrollPattern_snip/CSharp/UIAScrollPattern_snippets.cs#1055)]
+ [!code-vb[UIAScrollPattern_snip#1055](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAScrollPattern_snip/VisualBasic/UIAScrollPattern_snippets.vb#1055)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticallyScrollable">
+      <MemberSignature Language="C#" Value="public bool VerticallyScrollable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool VerticallyScrollable" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.ScrollPattern.ScrollPatternInformation.VerticallyScrollable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das Benutzeroberflächenautomatisierungs-Element vertikal gescrollt werden kann.</summary>
+        <value>
+          <see langword="true" />, wenn das Benutzeroberflächenautomatisierungs-Element horizontal gescrollt werden kann, andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft kann dynamisch sein. Z. B. der Inhaltsbereich des Benutzeroberflächenautomatisierungs-Element ist möglicherweise nicht größer als der aktuelle Anzeigebereich Bedeutung <xref:System.Windows.Automation.ScrollPattern.ScrollPatternInformation.VerticallyScrollable%2A> ist `false`. Allerdings Ändern der Größe der [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] Element oder Hinzufügen von untergeordneten Elementen können die Grenzen des Inhaltsbereichs hinter den sichtbaren Bereich zeigt an, dass <xref:System.Windows.Automation.ScrollPattern.ScrollPatternInformation.VerticallyScrollable%2A> ist `true`.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel eine <xref:System.Windows.Automation.ScrollPattern> -Steuerelementmuster, die von Benutzeroberflächenautomatisierungs-Elements abgerufen wird und anschließend vertikaler Bildlauf durchgeführt wird das Element die angeforderte Menge verwendet.  
+  
+ [!code-csharp[UIAScrollPattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAScrollPattern_snip/CSharp/UIAScrollPattern_snippets.cs#101)]
+ [!code-vb[UIAScrollPattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAScrollPattern_snip/VisualBasic/UIAScrollPattern_snippets.vb#101)]  
+[!code-csharp[UIAScrollPattern_snip#108](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAScrollPattern_snip/CSharp/UIAScrollPattern_snippets.cs#108)]
+[!code-vb[UIAScrollPattern_snip#108](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAScrollPattern_snip/VisualBasic/UIAScrollPattern_snippets.vb#108)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalScrollPercent">
+      <MemberSignature Language="C#" Value="public double VerticalScrollPercent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 VerticalScrollPercent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.ScrollPattern.ScrollPatternInformation.VerticalScrollPercent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuelle vertikale Bildlaufposition ab.</summary>
+        <value>Die vertikale Bildlaufposition als Prozentsatz des gesamten Inhaltsbereichs im Benutzeroberflächenautomatisierungs-Element. Der Standardwert ist 0,0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.ScrollPattern> -Objekt abgerufen, die von einem Zielsteuerelement an eine Funktion, die der aktuellen horizontalen und vertikalen Bildlauf des sichtbaren Bereichs innerhalb des Inhaltsbereichs Prozentsätze übergeben wird.  
+  
+ [!code-csharp[UIAScrollPattern_snip#1045](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAScrollPattern_snip/CSharp/UIAScrollPattern_snippets.cs#1045)]
+ [!code-vb[UIAScrollPattern_snip#1045](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAScrollPattern_snip/VisualBasic/UIAScrollPattern_snippets.vb#1045)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalViewSize">
+      <MemberSignature Language="C#" Value="public double VerticalViewSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 VerticalViewSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.ScrollPattern.ScrollPatternInformation.VerticalViewSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuelle vertikale Größe der Ansicht ab.</summary>
+        <value>Die vertikale Größe des sichtbaren Bereichs als Prozentsatz des gesamten Inhaltsbereichs im Benutzeroberflächenautomatisierungs-Element. Der Standardwert ist 100,0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.ScrollPattern> -Objekt abgerufen, die von einem Zielsteuerelement an eine Funktion, die die aktuelle vertikale und horizontale Größe des sichtbaren Bereichs als Prozentsatz des gesamten Inhaltsbereichs abruft übergeben wird.  
+  
+ [!code-csharp[UIAScrollPattern_snip#1055](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAScrollPattern_snip/CSharp/UIAScrollPattern_snippets.cs#1055)]
+ [!code-vb[UIAScrollPattern_snip#1055](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAScrollPattern_snip/VisualBasic/UIAScrollPattern_snippets.vb#1055)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

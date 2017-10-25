@@ -1,0 +1,102 @@
+<Type Name="Action&lt;T1,T2,T3,T4&gt;" FullName="System.Action&lt;T1,T2,T3,T4&gt;">
+  <TypeSignature Language="C#" Value="public delegate void Action&lt;in T1,in T2,in T3,in T4&gt;(T1 arg1, T2 arg2, T3 arg3, T4 arg4);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Action`4&lt;- T1, - T2, - T3, - T4&gt; extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Action`4" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T1">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="T2">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="T3">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="T4">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.Core, Version=3.5.0.0, Culture=Neutral, PublicKeyToken=b77a5c561934e089")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters>
+    <Parameter Name="arg1" Type="T1" />
+    <Parameter Name="arg2" Type="T2" />
+    <Parameter Name="arg3" Type="T3" />
+    <Parameter Name="arg4" Type="T4" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <typeparam name="T1">Der Typ des ersten Parameters der Methode, die dieser Delegat kapselt.</typeparam>
+    <typeparam name="T2">Der Typ des zweiten Parameters der Methode, die dieser Delegat kapselt.</typeparam>
+    <typeparam name="T3">Der Typ des dritten Parameters der Methode, die dieser Delegat kapselt.</typeparam>
+    <typeparam name="T4">Der Typ des vierten Parameters der Methode, die dieser Delegat kapselt.</typeparam>
+    <param name="arg1">Der erste Parameter der Methode, die dieser Delegat kapselt.</param>
+    <param name="arg2">Der zweite Parameter der Methode, die dieser Delegat kapselt.</param>
+    <param name="arg3">Der dritte Parameter der Methode, die dieser Delegat kapselt.</param>
+    <param name="arg4">Der vierte Parameter der Methode, die dieser Delegat kapselt.</param>
+    <summary>Kapselt eine Methode, die über vier Parameter verfügt und keinen Wert zurückgibt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die <xref:System.Action%604> Delegat, der eine Methode als Parameter übergeben, ohne explizit einen benutzerdefinierten Delegaten zu deklarieren. Die gekapselte Methode muss der Methodensignatur entsprechen, die von diesem Delegaten definiert ist. Dies bedeutet, dass die gekapselte Methode müssen vier Parameter, die alle an ihn als Wert übergeben werden, müssen sie keinen Wert zurück. (In c# muss die Methode zurückgeben `void`. In Visual Basic müssen Sie durch definiert die `Sub`...`End Sub` erstellen. Sie können auch eine Methode, die einen Wert zurückgibt, der ignoriert wird, sein.) In der Regel wird eine solche Methode zum Ausführen eines Vorgangs verwendet.  
+  
+> [!NOTE]
+>  Um eine Methode zu verweisen, die über vier Parameter verfügt und einen Wert zurückgibt, verwenden Sie die generische <xref:System.Func%605> stattdessen delegieren.  
+  
+ Bei Verwendung der <xref:System.Action%604> Delegaten, Sie müssen nicht explizit einen Delegaten definieren, die eine Methode mit vier Parametern kapselt. Der folgende Code deklariert z. B. explizit einen Delegaten, mit dem Namen `StringCopy` und weist einen Verweis auf die `CopyStrings` Methode, um eine Delegatinstanz.  
+  
+ [!code-csharp[System.Action~4#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Action~4/cs/Delegate.cs#1)]
+ [!code-vb[System.Action~4#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Action~4/vb/Delegate.vb#1)]  
+  
+ Im folgende Beispiel wird dieser Code vereinfacht, durch die Instanziierung der <xref:System.Action%604> Delegaten explizit einen neuen Delegaten definieren und eine benannte Methode zuweisen.  
+  
+ [!code-csharp[System.Action~4#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Action~4/cs/Action4.cs#2)]
+ [!code-vb[System.Action~4#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Action~4/vb/Action4.vb#2)]  
+  
+ Sie können auch die <xref:System.Action%604> delegieren mit anonymen Methoden in C# geschrieben, wie im folgenden Beispiel veranschaulicht. (Eine Einführung für anonyme Methoden finden Sie unter [anonyme Methoden](~/docs/csharp/programming-guide/statements-expressions-operators/anonymous-methods.md).)  
+  
+ [!code-csharp[System.Action~4#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Action~4/cs/Anon.cs#3)]  
+  
+ Sie können auch einen Lambda-Ausdruck zum Zuweisen einer <xref:System.Action%604> delegieren Instanz, wie im folgenden Beispiel veranschaulicht. (Eine Einführung in Lambda-Ausdrücke finden Sie unter [Lambda-Ausdrücke](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).)  
+  
+ [!code-csharp[System.Action~4#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Action~4/cs/Lambda.cs#4)]
+ [!code-vb[System.Action~4#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Action~4/vb/lambda.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

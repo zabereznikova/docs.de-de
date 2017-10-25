@@ -1,0 +1,153 @@
+<Type Name="FocusNavigationDirection" FullName="System.Windows.Input.FocusNavigationDirection">
+  <TypeSignature Language="C#" Value="public enum FocusNavigationDirection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FocusNavigationDirection extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.FocusNavigationDirection" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, dass die Richtung, in eine Benutzeroberfläche (UI) in der gewünschter Schwerpunkt änderungsanforderung versucht wird. Die Richtung basiert entweder auf der Aktivierreihenfolge oder relativen Richtung im Layout.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Links, rechts, unten, und jede verschieben den Fokus in einer Richtung basierend auf einer ungefähren Darstellung der relativen Elementpositionen im gerenderten Fenster. Nicht alle Bewegungen, die solche direktionalen sind möglich, abhängig vom Layout des relativen Ihrer [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)].  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Down">
+      <MemberSignature Language="C#" Value="Down" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.FocusNavigationDirection Down = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.FocusNavigationDirection.Down" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.FocusNavigationDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verschieben des Fokus auf ein anderes den Fokus erhalten kann Element nach unten aus dem aktuell den Fokus Element.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="First">
+      <MemberSignature Language="C#" Value="First" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.FocusNavigationDirection First = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.FocusNavigationDirection.First" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.FocusNavigationDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verschieben des Fokus auf das erste den Fokus erhalten kann Element in der Aktivierreihenfolge. Nicht unterstützt für <see cref="M:System.Windows.UIElement.PredictFocus(System.Windows.Input.FocusNavigationDirection)" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Last">
+      <MemberSignature Language="C#" Value="Last" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.FocusNavigationDirection Last = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.FocusNavigationDirection.Last" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.FocusNavigationDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verschieben des Fokus auf das letzte den Fokus erhalten kann Element in der Aktivierreihenfolge. Nicht unterstützt für <see cref="M:System.Windows.UIElement.PredictFocus(System.Windows.Input.FocusNavigationDirection)" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="Left" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.FocusNavigationDirection Left = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.FocusNavigationDirection.Left" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.FocusNavigationDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verschieben des Fokus auf ein anderes Element links neben der derzeit fokussierten Element den Fokus erhalten kann.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Next">
+      <MemberSignature Language="C#" Value="Next" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.FocusNavigationDirection Next = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.FocusNavigationDirection.Next" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.FocusNavigationDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verschieben des Fokus zum nächsten Element den Fokus erhalten kann in der Aktivierreihenfolge. Nicht unterstützt für <see cref="M:System.Windows.UIElement.PredictFocus(System.Windows.Input.FocusNavigationDirection)" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Previous">
+      <MemberSignature Language="C#" Value="Previous" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.FocusNavigationDirection Previous = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.FocusNavigationDirection.Previous" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.FocusNavigationDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verschieben des Fokus zum vorherigen Element den Fokus erhalten kann in der Aktivierreihenfolge. Nicht unterstützt für <see cref="M:System.Windows.UIElement.PredictFocus(System.Windows.Input.FocusNavigationDirection)" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="Right" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.FocusNavigationDirection Right = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.FocusNavigationDirection.Right" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.FocusNavigationDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verschieben des Fokus auf ein anderes Element rechts neben der derzeit fokussierten Element den Fokus erhalten kann.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Up">
+      <MemberSignature Language="C#" Value="Up" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.FocusNavigationDirection Up = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.FocusNavigationDirection.Up" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.FocusNavigationDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verschieben des Fokus auf ein anderes den Fokus erhalten kann Element nach oben aus dem aktuell den Fokus Element.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

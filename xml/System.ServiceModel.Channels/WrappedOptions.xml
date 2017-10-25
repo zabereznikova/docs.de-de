@@ -1,0 +1,60 @@
+<Type Name="WrappedOptions" FullName="System.ServiceModel.Channels.WrappedOptions">
+  <TypeSignature Language="C#" Value="public class WrappedOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WrappedOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.WrappedOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Informationen, die zum Durchführen des Schemaimports mit der <see cref="T:System.Xml.Serialization.XmlSerializer" />-Infrastruktur und <see cref="T:System.Web.Services.Description.ServiceDescriptionImporter" />-Infrastruktur erforderlich sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.Channels.WrappedOptions> dient der <xref:System.ServiceModel.Description.XmlSerializerMessageContractImporter> und [ServiceModel Metadata Utility Tool (Svcutil.exe)](~/docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Die <xref:System.ServiceModel.Channels.WrappedOptions>-Klasse steuert, ob besondere Bedingungen für Dokumente im Dokument-Literal-Stil mit eingeschlossenen Parametern verwendet werden. Verwenden der **/ wrapped** wechseln Sie mit der [ServiceModel Metadata Utility Tool (Svcutil.exe)](~/docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) Tool, um normale Bedingungen festzulegen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WrappedOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.WrappedOptions.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.WrappedOptions" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WrappedFlag">
+      <MemberSignature Language="C#" Value="public bool WrappedFlag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool WrappedFlag" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.WrappedOptions.WrappedFlag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab oder legt einen Wert fest, der angibt, ob besondere Bedingungen für Dokumente im Dokument-Wrapped-Literal-Stil verwendet werden, wenn die Parameter nicht eingeschlossen sind.</summary>
+        <value>
+          <see langword="true" />, wenn besondere Bedingungen für Dokumente im Stil Dokument-Wrapped-Literal verwendet werden und Parameter nicht eingeschlossen sind; andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

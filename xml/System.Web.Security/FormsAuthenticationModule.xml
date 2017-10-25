@@ -1,0 +1,160 @@
+<Type Name="FormsAuthenticationModule" FullName="System.Web.Security.FormsAuthenticationModule">
+  <TypeSignature Language="C#" Value="public sealed class FormsAuthenticationModule : System.Web.IHttpModule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit FormsAuthenticationModule extends System.Object implements class System.Web.IHttpModule" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Security.FormsAuthenticationModule" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.IHttpModule</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Legt die Identität des Benutzers für eine ASP.NET-Anwendung fest, wenn die Formularauthentifizierung aktiviert ist. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.FormsAuthenticationModule> legt die aktuelle <xref:System.Web.HttpContext.User%2A?displayProperty=nameWithType> Eigenschaft, um ein <xref:System.Security.Principal.IPrincipal> Objekt, das Identität des Benutzers für die aktuelle darstellt anfordern, wenn die Authentifizierung <xref:System.Web.Configuration.AuthenticationSection.Mode%2A> auf festgelegt ist <xref:System.Web.Configuration.AuthenticationMode.Forms> in der [Authentifizierung-Element ((ASP.NET Settings Schema) ](http://msdn.microsoft.com/en-us/27bc0ba9-f23a-45f3-ae42-dbe7916e3ee2) Element der Konfigurationsdatei der Anwendung.  
+  
+ Die <xref:System.Web.Security.FormsAuthenticationModule> macht eine <xref:System.Web.Security.FormsAuthenticationModule.Authenticate> Ereignis, das Ihnen ermöglicht, geben Sie eine benutzerdefinierte <xref:System.Security.Principal.IPrincipal> -Objekt für die <xref:System.Web.HttpContext.User%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext>. Die <xref:System.Web.Security.FormsAuthenticationModule.Authenticate> Ereignis erfolgt durch Angeben einer Unterroutine namens **FormsAuthentication_OnAuthenticate** in der Datei "Global.asax", damit Ihre ASP.NET-Anwendung.  
+  
+> [!NOTE]
+>  In IIS 7.0, mit der <xref:System.Web.Security.WindowsAuthenticationModule> mit der <xref:System.Web.Security.FormsAuthenticationModule> wird nicht unterstützt. Weitere Informationen zu Kompatibilitätsproblemen im integrierten Modus, finden Sie unter [Verschieben einer ASP.NET-Anwendung von IIS 6.0 zu IIS 7,0](http://msdn.microsoft.com/library/76f9cc78-f978-4837-b1c8-51d642ec4847).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die **FormsAuthentication_OnAuthenticate** Ereignis als festzulegen der <xref:System.Web.HttpContext.User%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> für eine benutzerdefinierte <xref:System.Security.Principal.IPrincipal> Objekt.  
+  
+ [!code-csharp[System.Web.Security.FormsAuthenticationModule#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.FormsAuthenticationModule/CS/global.asax#1)]
+ [!code-vb[System.Web.Security.FormsAuthenticationModule#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.FormsAuthenticationModule/VB/global.asax#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FormsAuthenticationModule ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.FormsAuthenticationModule.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Security.FormsAuthenticationModule" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird nicht von Anwendungscode aufgerufen werden soll.  
+  
+ ASP.NET ruft diesen Konstruktor zum Erstellen einer Instanz von der <xref:System.Web.Security.FormsAuthenticationModule> Klasse. Nach dem Aufruf des Konstruktors, ruft er die <xref:System.Web.Security.FormsAuthenticationModule.Init%2A> Methode zur Initialisierung der neuen <xref:System.Web.Security.FormsAuthenticationModule> Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Authenticate">
+      <MemberSignature Language="C#" Value="public event System.Web.Security.FormsAuthenticationEventHandler Authenticate;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.Security.FormsAuthenticationEventHandler Authenticate" />
+      <MemberSignature Language="DocId" Value="E:System.Web.Security.FormsAuthenticationModule.Authenticate" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.FormsAuthenticationEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn die Anwendung die aktuelle Anforderung authentifiziert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Security.FormsAuthenticationModule.Authenticate> Ereignis wird ausgelöst, während die <xref:System.Web.HttpApplication.AuthenticateRequest> Ereignis.  
+  
+ Sie behandeln können die <xref:System.Web.Security.FormsAuthenticationModule.Authenticate> -Ereignis für die <xref:System.Web.Security.FormsAuthenticationModule> -Klasse durch Angabe einer Unterroutine namens **FormsAuthentication_OnAuthenticate** in der Datei "Global.asax", damit Ihre ASP.NET-Anwendung.  
+  
+ Können Sie die <xref:System.Web.Security.FormsAuthenticationEventArgs> <xref:System.Web.Security.FormsAuthenticationEventArgs.User%2A> -Eigenschaft angegeben wird, um die **FormsAuthentication_OnAuthenticate** Ereignis als festzulegen der <xref:System.Web.HttpContext.User%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> für eine benutzerdefinierte <xref:System.Security.Principal.IPrincipal> Objekt. Wenn Sie einen Wert für nicht angeben der <xref:System.Web.Security.FormsAuthenticationEventArgs.User%2A> Eigenschaft während der **FormsAuthentication_OnAuthenticate** Ereignis, das durch das Formularauthentifizierungsticket im Cookie oder URL bereitgestellte Identität verwendet wird.  
+  
+ Die **FormsAuthentication_OnAuthenticate** Ereignis wird nur ausgelöst, wenn der Authentifizierungsmodus auf festgelegt ist <xref:System.Web.Configuration.AuthenticationMode.Forms> in der [Authentifizierung Element ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/27bc0ba9-f23a-45f3-ae42-dbe7916e3ee2) Element von der Konfigurationsdatei der Anwendung und die <xref:System.Web.Security.FormsAuthenticationModule> ein aktives HTTP-Modul für die Anwendung.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der **FormsAuthentication_OnAuthenticate** Ereignis als festzulegen der <xref:System.Web.HttpContext.User%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> auf eine <xref:System.Security.Principal.GenericPrincipal> -Objekt, das eine benutzerdefinierte <xref:System.Security.Principal.IPrincipal.Identity%2A>.  
+  
+ [!code-csharp[System.Web.Security.FormsAuthenticationModule#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.FormsAuthenticationModule/CS/global.asax#1)]
+ [!code-vb[System.Web.Security.FormsAuthenticationModule#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.FormsAuthenticationModule/VB/global.asax#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.FormsAuthenticationModule.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle Ressourcen, mit Ausnahme des Speichers, der verwendet wird, indem Sie die <see cref="T:System.Web.Security.FormsAuthenticationModule" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird nicht von Anwendungscode aufgerufen werden soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Init">
+      <MemberSignature Language="C#" Value="public void Init (System.Web.HttpApplication app);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Init(class System.Web.HttpApplication app) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.FormsAuthenticationModule.Init(System.Web.HttpApplication)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="app" Type="System.Web.HttpApplication" />
+      </Parameters>
+      <Docs>
+        <param name="app">Die aktuelle <see cref="T:System.Web.HttpApplication" />-Instanz.</param>
+        <summary>Initialisiert die <see cref="T:System.Web.Security.FormsAuthenticationModule" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird nicht von Anwendungscode aufgerufen werden soll.  
+  
+ Die <xref:System.Web.Security.FormsAuthenticationModule.Init%2A> Methode wird sichergestellt, dass die <xref:System.Web.Security.FormsAuthenticationModule> ist bei der Verarbeitung der enthalten die <xref:System.Web.HttpApplication.AuthenticateRequest> und <xref:System.Web.HttpApplication.EndRequest> Ereignisse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

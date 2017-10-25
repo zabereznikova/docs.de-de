@@ -1,0 +1,194 @@
+<Type Name="FileSystemEventArgs" FullName="System.IO.FileSystemEventArgs">
+  <TypeSignature Language="C#" Value="public class FileSystemEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FileSystemEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.IO.FileSystemEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.FileSystem.Watcher</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das Verzeichnisereignisse: <see cref="E:System.IO.FileSystemWatcher.Changed" />, <see cref="E:System.IO.FileSystemWatcher.Created" />, <see cref="E:System.IO.FileSystemWatcher.Deleted" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IO.FileSystemEventArgs> Klasse wird als Parameter an die Ereignishandler für diese Ereignisse übergeben:  
+  
+ Die <xref:System.IO.FileSystemWatcher.Changed> Ereignis tritt auf, wenn die Größe geändert werden, Systemattributen, letzter Schreibzugriff Zeit, Zeitpunkt des letzten Zugriffs oder Sicherheitsberechtigungen in eine Datei oder ein Verzeichnis im angegebenen <xref:System.IO.FileSystemWatcher.Path%2A> von einem <xref:System.IO.FileSystemWatcher>.  
+  
+ Die <xref:System.IO.FileSystemWatcher.Created> Ereignis tritt auf, wenn eine Datei oder ein Verzeichnis im angegebenen <xref:System.IO.FileSystemWatcher.Path%2A> von einem <xref:System.IO.FileSystemWatcher> erstellt wird.  
+  
+ Die <xref:System.IO.FileSystemWatcher.Deleted> Ereignis tritt auf, wenn eine Datei oder ein Verzeichnis im angegebenen <xref:System.IO.FileSystemWatcher.Path%2A> von einem <xref:System.IO.FileSystemWatcher> wird gelöscht. Weitere Informationen finden Sie unter <xref:System.IO.FileSystemWatcher>.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.IO.FileSystemWatcher> zum Überwachen von Änderungen der Datenbankdatei (erstellt, gelöscht, umbenannt, geändert wird), die auf einem Laufwerk auftreten. Im Beispiel wird auch die ordnungsgemäß empfangen der fehlerbenachrichtigungen veranschaulicht.  
+  
+ [!code-csharp[FileSystemWatcher#1](~/samples/snippets/csharp/VS_Snippets_CLR/FileSystemWatcher/cs/filesystemwatcher.cs#1)]
+ [!code-vb[FileSystemWatcher#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FileSystemWatcher/VB/FileSystemWatcher.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileSystemEventArgs (System.IO.WatcherChangeTypes changeType, string directory, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.IO.WatcherChangeTypes changeType, string directory, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileSystemEventArgs.#ctor(System.IO.WatcherChangeTypes,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Watcher</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="changeType" Type="System.IO.WatcherChangeTypes" />
+        <Parameter Name="directory" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="changeType">Eines der <see cref="T:System.IO.WatcherChangeTypes" /> Werte, die die Art der Änderung erkannt wird, im Dateisystem darstellt.</param>
+        <param name="directory">Das Stammverzeichnis der betreffenden Datei oder des Verzeichnisses.</param>
+        <param name="name">Der Name der betreffenden Datei oder des Verzeichnisses.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.IO.FileSystemEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangeType">
+      <MemberSignature Language="C#" Value="public System.IO.WatcherChangeTypes ChangeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.WatcherChangeTypes ChangeType" />
+      <MemberSignature Language="DocId" Value="P:System.IO.FileSystemEventArgs.ChangeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Watcher</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.WatcherChangeTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Directory-Ereignisses, die aufgetreten sind.</summary>
+        <value>Eines der <see cref="T:System.IO.WatcherChangeTypes" /> Werte, die die Art der Änderung erkannt wird, im Dateisystem darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die <xref:System.IO.FileSystemEventArgs.ChangeType%2A> Eigenschaft. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.IO.FileSystemEventArgs> Klasse.  
+  
+ [!code-csharp[FileSystemWatcher#7](~/samples/snippets/csharp/VS_Snippets_CLR/FileSystemWatcher/cs/filesystemwatcher.cs#7)]
+ [!code-vb[FileSystemWatcher#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/FileSystemWatcher/VB/FileSystemWatcher.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullPath">
+      <MemberSignature Language="C#" Value="public string FullPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FullPath" />
+      <MemberSignature Language="DocId" Value="P:System.IO.FileSystemEventArgs.FullPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Watcher</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den vollständigen Pfad der betreffenden Datei oder des Verzeichnisses ab.</summary>
+        <value>Der Pfad der betreffenden Datei oder des Verzeichnisses.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die <xref:System.IO.FileSystemEventArgs.FullPath%2A> Eigenschaft. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.IO.FileSystemEventArgs> Klasse.  
+  
+ [!code-csharp[FileSystemWatcher#7](~/samples/snippets/csharp/VS_Snippets_CLR/FileSystemWatcher/cs/filesystemwatcher.cs#7)]
+ [!code-vb[FileSystemWatcher#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/FileSystemWatcher/VB/FileSystemWatcher.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">zum Lesen von Dateien. Zugeordnete Enumeration:<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.IO.FileSystemEventArgs.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Watcher</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der betreffenden Datei oder des Verzeichnisses ab.</summary>
+        <value>Der Name der betreffenden Datei oder des Verzeichnisses.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der zurückgegebene Name der <xref:System.IO.FileSystemEventArgs.Name%2A> Eigenschaft ist der relative Pfad der betreffenden Datei oder des Verzeichnisses, in Bezug auf das Verzeichnis, der beobachtet wird. Z. B. wenn ein <xref:System.IO.FileSystemWatcher> Objekt wird überwacht, das Verzeichnis "C:\temp" und die Datei "C:\temp\test\file.txt" ändert, auf die <xref:System.IO.FileSystemEventArgs.Name%2A> Eigenschaft "test\file" zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

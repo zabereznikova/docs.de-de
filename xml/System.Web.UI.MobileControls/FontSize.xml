@@ -1,0 +1,94 @@
+<Type Name="FontSize" FullName="System.Web.UI.MobileControls.FontSize">
+  <TypeSignature Language="C#" Value="public enum FontSize" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FontSize extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.FontSize" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Größe des gerenderten Texts. Diese Klasse kann nicht vererbt werden. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.MobileControls.FontSize> -Enumeration ist eine Teilmenge der <xref:System.Web.UI.WebControls.FontSize?displayProperty=nameWithType>, und die Größe einer Schriftart in einem Container darstellt. Angenommen, Sie haben eine <xref:System.Web.UI.MobileControls.List> innerhalb eines steuern eine <xref:System.Web.UI.MobileControls.Panel> -Steuerelement, mit der <xref:System.Web.UI.MobileControls.Panel> der Schriftgrad des Steuerelements Normal festgelegt ist, können Sie für einen kleinen Schriftgrad angeben der <xref:System.Web.UI.MobileControls.List> Steuerelement.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Large">
+      <MemberSignature Language="C#" Value="Large" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.MobileControls.FontSize Large = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.FontSize.Large" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.FontSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Schriftart ist größer als <see langword="Normal" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.MobileControls.FontSize Normal = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.FontSize.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.FontSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Standardschriftgröße. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotSet">
+      <MemberSignature Language="C#" Value="NotSet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.MobileControls.FontSize NotSet = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.FontSize.NotSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.FontSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Standardwert. Wenn der Wert <see cref="F:System.Web.UI.MobileControls.FontSize.NotSet" />, der Schriftgrad, die vom Format des Steuerelements geerbt wird, oder wenn das Format nicht definiert ist, vom übergeordneten Steuerelements. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Small">
+      <MemberSignature Language="C#" Value="Small" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.MobileControls.FontSize Small = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.FontSize.Small" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.FontSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Schriftart ist kleiner als <see langword="Normal" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

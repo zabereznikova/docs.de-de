@@ -1,0 +1,190 @@
+<Type Name="HitTestOptions" FullName="System.Windows.Forms.VisualStyles.HitTestOptions">
+  <TypeSignature Language="C#" Value="public enum HitTestOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HitTestOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.HitTestOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Optionen, die beim Ausführen von Treffertests im Hintergrund durch einen visuellen Stil angegeben verwendet werden können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.VisualStyles.HitTestOptions> Werte dienen als Argument in der <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.HitTestBackground%2A?displayProperty=nameWithType> Methode.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BackgroundSegment">
+      <MemberSignature Language="C#" Value="BackgroundSegment" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.HitTestOptions BackgroundSegment = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.HitTestOptions.BackgroundSegment" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.HitTestOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Treffertest-Option für das Hintergrundsegment im.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Caption">
+      <MemberSignature Language="C#" Value="Caption" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.HitTestOptions Caption = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.HitTestOptions.Caption" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.HitTestOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Treffertest-Option für die Beschriftung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FixedBorder">
+      <MemberSignature Language="C#" Value="FixedBorder" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.HitTestOptions FixedBorder = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.HitTestOptions.FixedBorder" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.HitTestOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Treffertest-Option für den festen Rahmen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ResizingBorder">
+      <MemberSignature Language="C#" Value="ResizingBorder" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.HitTestOptions ResizingBorder = int32(240)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.HitTestOptions.ResizingBorder" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.HitTestOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die für Größenanpassungsrahmens Treffertest-Option.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ResizingBorderBottom">
+      <MemberSignature Language="C#" Value="ResizingBorderBottom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.HitTestOptions ResizingBorderBottom = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.HitTestOptions.ResizingBorderBottom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.HitTestOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Größe des Rahmens untere Treffertest-Option.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ResizingBorderLeft">
+      <MemberSignature Language="C#" Value="ResizingBorderLeft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.HitTestOptions ResizingBorderLeft = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.HitTestOptions.ResizingBorderLeft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.HitTestOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Treffertest-Option für den linken Rahmen Größe.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ResizingBorderRight">
+      <MemberSignature Language="C#" Value="ResizingBorderRight" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.HitTestOptions ResizingBorderRight = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.HitTestOptions.ResizingBorderRight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.HitTestOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Treffertest-Option für das Recht, die Größe des Rahmens.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ResizingBorderTop">
+      <MemberSignature Language="C#" Value="ResizingBorderTop" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.HitTestOptions ResizingBorderTop = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.HitTestOptions.ResizingBorderTop" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.HitTestOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Treffertest-Option für den oberen Rahmen Größe.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SizingTemplate">
+      <MemberSignature Language="C#" Value="SizingTemplate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.HitTestOptions SizingTemplate = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.HitTestOptions.SizingTemplate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.HitTestOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Größenanpassungsrahmens wird als Vorlage, nicht nur Fensterkanten angegeben. Diese Option ist mit sich gegenseitig ausschließende <see cref="F:System.Windows.Forms.VisualStyles.HitTestOptions.SystemSizingMargins" />; <see cref="F:System.Windows.Forms.VisualStyles.HitTestOptions.SizingTemplate" /> hat Vorrang vor.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemSizingMargins">
+      <MemberSignature Language="C#" Value="SystemSizingMargins" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.HitTestOptions SystemSizingMargins = int32(512)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.HitTestOptions.SystemSizingMargins" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.HitTestOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Rahmenbreite der System-Größe wird anstelle der visuelle Stil Ränder des Inhalts verwendet. Diese Option ist mit sich gegenseitig ausschließende <see cref="F:System.Windows.Forms.VisualStyles.HitTestOptions.SizingTemplate" />; <see cref="F:System.Windows.Forms.VisualStyles.HitTestOptions.SizingTemplate" /> hat Vorrang vor.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

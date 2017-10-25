@@ -1,0 +1,162 @@
+<Type Name="ProfileServiceManager" FullName="System.Web.UI.ProfileServiceManager">
+  <TypeSignature Language="C#" Value="public class ProfileServiceManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProfileServiceManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ProfileServiceManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Path")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.EmptyStringExpandableObjectConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Konfiguriert einen Satz von vorab geladenen Profileigenschaften und den Speicherort der eine benutzerdefinierte Implementierung des Profildiensts.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.ProfileServiceManager> Klasse entspricht dem <xref:System.Web.UI.ScriptManager.ProfileService%2A> -Eigenschaft, die hinzugefügt werden kann die <xref:System.Web.UI.ScriptManager> oder <xref:System.Web.UI.ScriptManagerProxy> Steuerelement.  
+  
+ Sie können <xref:System.Web.UI.ProfileServiceManager> um einen Satz von Profileigenschaften anzugeben, die vorab geladen wird, wenn die Seite gerendert wird, und zum Clientskripts verfügbar. Darüber hinaus können Sie anstelle des integrierten Profils durch AJAX-Funktionen von ASP.NET bereitgestellte Webdienst diese Klasse verwenden, um den Pfad einer alternativen Implementierung des Webdiensts angeben, die zum Laden oder Speichern der Profileigenschaften aus einem Skript verwendet werden.  
+  
+ Um die Profildienst in Ihrer Anwendung verwenden zu können, müssen Sie es in der Konfigurationsdatei aktivieren. Wenn Sie die Verwendung des integrierten Profils Webdienst und keine Eigenschaften vorab zu laden, müssen Sie nicht explizit die Profil-Dienst-Manager auf der Seite deklarieren.  
+  
+ Um einen Satz von vorab geladene Eigenschaften oder ein benutzerdefiniertes Profil Webdienst deklarativ angeben, enthalten eine `<ProfileService>` Element innerhalb der `<asp:ScriptManager>` Element auf der Seite, wie im folgenden Beispiel gezeigt.  
+  
+```  
+<asp:ScriptManager ID="SM1" runat="server">  
+  <ProfileService LoadProperties="propertyA,propertyB" Path="MyProfileService.asmx" />  
+</asp:ScriptManager>  
+```  
+  
+ Sie können auch programmgesteuert Profildienst zum Vorabladen von Eigenschaften oder zum Verwenden eines benutzerdefinierten Profils Webdienst konfigurieren.  
+  
+ Das folgende Beispiel zeigt die grundlegende Klassenstruktur, die in ein benutzerdefiniertes Profil Webdienst implementiert werden muss.  
+  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProfileServiceManager ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ProfileServiceManager.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.ProfileServiceManager" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadProperties">
+      <MemberSignature Language="C#" Value="public string[] LoadProperties { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] LoadProperties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ProfileServiceManager.LoadProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.WebControls.StringArrayConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Array, das die Profileigenschaften enthält, die für Clientskript zur Verfügung gestellt werden.</summary>
+        <value>Ein Zeichenfolgenarray, das die Namen der Profileigenschaften enthält, die vorab geladen und Clientskript zur Verfügung gestellt werden. Der Standardwert ist ein leeres Array.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Web.UI.ProfileServiceManager.LoadProperties%2A> enthält mindestens eine Zeichenfolge, die den Namen einer Eigenschaft Profil entspricht, dann integrierte Profildienst in der Webanwendung für jede der angegebenen Profileigenschaften Profildaten des aktuellen Benutzers abgerufen. Die Profileigenschaftswerte serialisiert und dann Clientskripts bis zur Verfügung gestellt werden die [Eigenschaften Feld](http://msdn.microsoft.com/library/ebce3c40-7017-482b-94df-91f7448fda05) Auflistung.  
+  
+> [!NOTE]
+>  Um diese Eigenschaft deklarativ festzulegen, verwenden Sie eine durch Trennzeichen getrennte Liste von Eigenschaftennamen. Verwenden Sie für gruppierte Eigenschaftswerte, die Syntax *GroupName*.* PropertyName*.  
+  
+ Wenn <xref:System.Web.UI.ProfileServiceManager.LoadProperties%2A> ein leeres Array ist, kein Profil, vorab geladen, wird.  
+  
+ Die <xref:System.Web.UI.ProfileServiceManager.LoadProperties%2A> -Eigenschaft kann angegeben werden, der <xref:System.Web.UI.ScriptManager> Steuerelement oder einem zugeordneten <xref:System.Web.UI.ScriptManagerProxy> Steuerelement. Wenn <xref:System.Web.UI.ProfileServiceManager.LoadProperties%2A> festgelegt ist, sowohl die <xref:System.Web.UI.ScriptManager> Steuerelement und auf einem oder mehreren <xref:System.Web.UI.ScriptManagerProxy> Steuerelemente, die den Satz von Eigenschaften wird durch Zusammenführen aller angegebenen Eigenschaften bestimmt. Doppelte Eigenschaften werden ignoriert.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Die <see cref="P:System.Web.UI.ProfileServiceManager.LoadProperties" /> -Eigenschaft enthält Eigenschaftennamen, die nicht in der aktuellen Anwendung Profilschema sind.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ProfileServiceManager.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Pfad einer benutzerdefinierten Implementierung des Profils Webdienst fest.</summary>
+        <value>Der Pfad einer benutzerdefinierten Implementierung des Profils Webdienst.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Relative virtuelle Pfade, absolute virtuelle Pfade und vollqualifizierte Pfade sind zulässig.  
+  
+ Wenn die <xref:System.Web.UI.ProfileServiceManager.Path%2A> Eigenschaft nicht festgelegt ist, ist des Rückgabewerts <xref:System.String.Empty>. In diesem Fall verwenden die AJAX-Features von ASP.NET klicken Sie dann das integrierte Profil Webdienst, der auf den folgenden internen Standardpfad entspricht: ~ / ScriptServices_ProfileService.asmx. Das gleiche Verhalten tritt auf, wenn Sie festlegen, <xref:System.Web.UI.ProfileServiceManager.Path%2A> ein leerer Wert sein oder `null`.  
+  
+ <xref:System.Web.UI.ProfileServiceManager.Path%2A>kann angegeben werden, der <xref:System.Web.UI.ScriptManager> Steuerelement oder einem zugeordneten <xref:System.Web.UI.ScriptManagerProxy> Steuerelement. Wenn <xref:System.Web.UI.ProfileServiceManager.Path%2A> festgelegt ist, an die <xref:System.Web.UI.ScriptManagerProxy> Ebene, die folgenden Einschränkungen gelten:  
+  
+-   Wenn es mehrere Proxys in der Steuerelementhierarchie sind <xref:System.Web.UI.ProfileServiceManager.Path%2A> muss nicht für jede Proxyinstanz festgelegt werden.  
+  
+-   Wenn <xref:System.Web.UI.ProfileServiceManager.Path%2A> wird explizit auf eine Proxyinstanz festgelegt, der Wert muss identisch sein für alle Proxys, die auf dem diese Eigenschaft wird explizit festgelegt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Mehr als ein eindeutiger Pfad wurde in der Steuerelementhierarchie festgelegt.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

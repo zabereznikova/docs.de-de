@@ -1,0 +1,21 @@
+<Namespace Name="System.Data.Common.CommandTrees.ExpressionBuilder">
+  <Docs>
+    <summary>Die <see cref="N:System.Data.Common.CommandTrees.ExpressionBuilder" /> -Namespace stellt eine Befehlsstruktur-API bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Common.CommandTrees.ExpressionBuilder> API wird verwendet, um Ausdrücke zu erstellen, die durch Werte dargestellt werden <xref:System.Data.Common.CommandTrees.DbExpression> Objekte. Der Befehlsstruktur von bereitgestellten-API die <xref:System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder> Klasse weist folgende Merkmale auf:  
+  
+-   Funktionale. <xref:System.Data.Common.CommandTrees.DbExpression>Objekte werden erstellt, mit der funktionalen Muster, die einen natürlichen Fluss der Konstruktion bereitstellen.  
+  
+-   Lose gekoppelt. Ein <xref:System.Data.Common.CommandTrees.DbExpression> Objekt ist nicht an eine bestimmte Befehlsstruktur gebunden und kann verwendet werden in jedem Kontext, in dem Typ Vereinbarung erfüllt wird.  
+  
+-   Unveränderlich. Die API besteht aus vollständig unveränderlichen Typen; Veränderlichkeit möglicherweise simuliert werden, durch das Ersetzen von neuer Werten beim Neuerstellen einer Ausdrucksbaumstruktur dar.  
+  
+-  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

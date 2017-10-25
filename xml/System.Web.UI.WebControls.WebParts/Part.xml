@@ -1,0 +1,331 @@
+<Type Name="Part" FullName="System.Web.UI.WebControls.WebParts.Part">
+  <TypeSignature Language="C#" Value="public abstract class Part : System.Web.UI.WebControls.Panel, System.Web.UI.INamingContainer, System.Web.UI.WebControls.ICompositeControlDesignerAccessor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Part extends System.Web.UI.WebControls.Panel implements class System.Web.UI.INamingContainer, class System.Web.UI.WebControls.ICompositeControlDesignerAccessor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.Part" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.Panel</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.INamingContainer</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.WebControls.ICompositeControlDesignerAccessor</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.WebParts.PartDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.PersistChildren(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Dient als Basisklasse für alle Webpart-Teilsteuerelemente, die zum Rendern einer modularen Benutzeroberfläche auf einer Web Forms-Seite dienen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.Part> Klasse definiert die Eigenschaften, die gelten für alle Teilsteuerelemente, und aktivieren diese auf einer Webseite eine modulare und konsistente Darstellung haben. Diese gemeinsamen Eigenschaften enthalten einen Titel, eine Beschreibung und Merkmale des Chrome oder des Frames, die ein Teilsteuerelement umgibt.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.Part.Title%2A> Eigenschaft gibt an, einen Titel für das Webpart-Steuerelement. Die <xref:System.Web.UI.WebControls.WebParts.Part.Description%2A> Eigenschaft wird verwendet, um den des Teilsteuerelements Zweck zusammenfassen und als QuickInfo in der Titelleiste des Steuerelements angezeigt. Die <xref:System.Web.UI.WebControls.WebParts.Part.ChromeType%2A> Eigenschaft bestimmt, welche Art des Rahmens um ein Steuerelement, gerendert wird während der <xref:System.Web.UI.WebControls.WebParts.Part.ChromeState%2A> Eigenschaft gibt an, ob ein Teilsteuerelement wird normal gerendert minimiert. Am Rand eines Teilsteuerelements wird durch die Eigenschaften der Zone betroffen, die es enthält. z. B. die <xref:System.Web.UI.WebControls.WebParts.WebZone.PartChromeType%2A> Eigenschaft wirkt sich auf den Rahmen aller Teilsteuerelemente, die in einer Zone.  
+  
+ Ein Typ des Steuerelements ist der <xref:System.Web.UI.WebControls.WebParts.WebPart> -Steuerelement, das Inhalte in einer entsprechenden Zone rendert. Ein weiterer Typ sind die <xref:System.Web.UI.WebControls.WebParts.EditorPart> -Steuerelement, das Steuerelemente der Benutzeroberfläche (UI) verwendet, um ändern enthält (personalisieren) einzelner <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente. Ein dritter Typ von Steuerelement wird der <xref:System.Web.UI.WebControls.WebParts.CatalogPart> -Steuerelement, das eine Liste von stellt <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente, die Benutzer können hinzufügen oder Entfernen von einer Webseite.  
+  
+ Teilsteuerelemente sind in Zonen, die alle durch von der abstrakten ableiten enthalten <xref:System.Web.UI.WebControls.WebParts.WebZone> Klasse. Eine Zone ist verantwortlich für die Strukturierung der darin enthaltenen Teilsteuerelemente. Jede Zone rendert auch Elemente der Benutzeroberfläche für sich selbst, z. B. eine Kopfzeile, eine Fußzeile, eine Titelleiste und UI-Elemente, um jedes enthaltene Steuerelement, z. B. Rahmen.  
+  
+> [!NOTE]
+>  Während Teilsteuerelemente, in der Regel in Zonen befinden, kann ein Teilsteuerelement außerhalb einer Zone platzieren, wenn das Steuerelement im Markup einer Webseite deklarativ verwiesen wird. Wenn ein Steuerelement auf einer Webseite außerhalb einer Zone deklariert ist, das Steuerelement weiterhin funktioniert, aber verliert die meisten Funktionen WebParts. Beispielsweise wird das Steuerelement kann nicht bearbeitet werden und nicht zur Laufzeit in einer Zone gezogen werden. Es ist auch hilfreich zu wissen, dass keine Kontrolle Teil aus einer Zone gezogen und auf einer Seite außerhalb einer Zone werden, zur Laufzeit abgelegt werden kann.  
+  
+ In der folgenden Tabelle werden einige Beispiele für Basisteil Typen und ihre entsprechenden Zonentypen angezeigt.  
+  
+|Teil-Steuerelementtyp|Zonentyp|  
+|-----------------------|---------------|  
+|<xref:System.Web.UI.WebControls.WebParts.WebPart>|<xref:System.Web.UI.WebControls.WebParts.WebPartZone>|  
+|<xref:System.Web.UI.WebControls.WebParts.EditorPart>|<xref:System.Web.UI.WebControls.WebParts.EditorZone>|  
+|<xref:System.Web.UI.WebControls.WebParts.CatalogPart>|<xref:System.Web.UI.WebControls.WebParts.CatalogZone>|  
+  
+ Die verschiedenen Arten von Teilsteuerelemente, die Ableitung der <xref:System.Web.UI.WebControls.WebParts.Part> -Klasse geerbten Eigenschaften für die Benutzeroberfläche unterschiedlich behandelt. <xref:System.Web.UI.WebControls.WebParts.WebPart>-Steuerelemente überschreiben mehrere geerbten Benutzeroberflächenautomatisierungs-Eigenschaften, und markieren sie mit der `Personalizable` Attribut (Einzelheiten finden Sie in der <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute> -Klasse Dokumentation), der es ermöglicht, die Werte dieser Eigenschaften für zukünftige Browsersitzungen, einer Funktion gespeichert werden als Personalisierung bezeichnet. Angenommen, wenn Sie einen Benutzer für das update von programmgesteuert aktivieren einer <xref:System.Web.UI.WebControls.WebParts.WebPart> des Steuerelements <xref:System.Web.UI.WebControls.WebParts.WebPart.Title%2A> Eigenschaft zur Laufzeit, der Wert personalisiert (vorausgesetzt, Personalisierung aktiviert ist, die Standardeinstellung). Mehrere Benutzeroberflächenautomatisierungs-Eigenschaften, die <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente erben von der <xref:System.Web.UI.WebControls.WebParts.Part> -Klasse, und von der <xref:System.Web.UI.WebControls.WebControl> Klasse, die gleiche Weise behandelt werden.  
+  
+ Im Gegensatz dazu andererseits steuert, wie z. B. <xref:System.Web.UI.WebControls.WebParts.EditorPart> und <xref:System.Web.UI.WebControls.WebParts.CatalogPart>, aktivieren Sie nicht die geerbten Benutzeroberflächenautomatisierungs-Eigenschaften auf personalisiert werden. Aus diesem Grund zugewiesene programmgesteuert Werte für zukünftige Browsersitzungen nicht gespeichert werden. Angenommen, wenn Sie einen Benutzer aktualisieren programmgesteuert aktivieren einer <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> des Steuerelements <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Title%2A> Eigenschaft zur Laufzeit der aktualisierte Wert geht verloren, nachdem das Steuerelement geschlossen oder die Browsersitzung beendet.  
+  
+ Eine einfache Möglichkeit zum Speichern der Werte in einer solchen vererbt Benutzeroberflächenautomatisierungs-Eigenschaften für <xref:System.Web.UI.WebControls.WebParts.EditorPart> und <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente für die zukünftige Browsersitzungen ist, um die Eigenschaftenwerte im Format die Persistenz von Seite zu deklarieren. Dies ist jedoch eine statische Methode und noch ist nicht zulässig, die Eigenschaftswerte zu personalisieren. Als Alternative können ggf. programmgesteuerte Updates auf die geerbten Benutzeroberflächenautomatisierungs-Eigenschaften aktivieren, damit Benutzer sie zur Laufzeit personalisieren können können private, statische Variablen Sie zum Speichern der Eigenschaftswerte. Jedes Mal, wenn eine neue Instanz der ein <xref:System.Web.UI.WebControls.WebParts.EditorPart> oder <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelement erstellt (z. B. in der Methode, die des Steuerelements behandelt <xref:System.Web.UI.Control.Init> Ereignis), können Sie eine statische Variable-Wert, der eine entsprechende Eigenschaft zuweisen. Ein derartiger Ansatz ermöglicht Benutzern das Bearbeiten UI und Katalog Benutzeroberfläche einer Webparts-Anwendung zu personalisieren.  
+  
+   
+  
+## Examples  
+ Die folgenden Codebeispiele veranschaulichen die deklarative Verwendung verschiedener Eigenschaften der der <xref:System.Web.UI.WebControls.WebParts.Part> -Klasse unter Verwendung von zwei Instanzen eines benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement auf einer ASP.NET-Webseite verwiesen wird. Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Eine exemplarische Vorgehensweise, die beide Methoden der Kompilierung veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ Der erste Teil des Beispiels enthält den Code für das benutzerdefinierte Steuerelement, mit dem Namen `TextDisplayWebPart`. Da des Steuerelements abgeleitet <xref:System.Web.UI.WebControls.WebParts.WebPart>, erbt es auch die allgemeinen Eigenschaften, die die <xref:System.Web.UI.WebControls.WebParts.Part> Klasse bereitstellt, und veranschaulicht die Verwendung dieser Eigenschaften in diesem Codebeispiel.  
+  
+ [!code-csharp[WebParts_Part_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_Part_Overview/CS/textdisplaywebpart.cs#2)]
+ [!code-vb[WebParts_Part_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_Part_Overview/VB/textdisplaywebpart.vb#2)]  
+  
+ Der zweite Teil des Beispiels zeigt, wie auf die benutzerdefinierte Komponente Steuerelemente auf einer ASP.NET-Webseite verwiesen wird. Beachten Sie, dass die verschiedenen <xref:System.Web.UI.WebControls.WebParts.Part> Eigenschaften deklarativ Instanzen des benutzerdefinierten Steuerelements zugewiesen werden. Vergleichen Sie deklarativen Code, der die beiden Instanzen auf der Seite verweist, und Laden Sie die Seite in einem Browser. Beachten Sie, wie die verschiedenen Eigenschaften für die Darstellung der Steuerelemente auswirken. Z. B. nach dem Laden der Seite in einem Browser eingeben, die zweite Instanz von der `TextDisplayWebPart` Steuerelement wird minimiert, da seine <xref:System.Web.UI.WebControls.WebParts.Part.ChromeState%2A> Eigenschaftswert festgelegt ist, um <xref:System.Web.UI.WebControls.WebParts.PartChromeState.Minimized>.  
+  
+ [!code-aspx-csharp[WebParts_Part_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_Part_Overview/CS/partoverviewcs.aspx#1)]
+ [!code-aspx-vb[WebParts_Part_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_Part_Overview/VB/partoverviewvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Sie sollten normalerweise nicht erben direkt von der <see cref="T:System.Web.UI.WebControls.WebParts.Part" /> Klasse, um benutzerdefinierte Webparts-Steuerelemente zu entwickeln. Um vollständige Webparts-Funktionalität bereitzustellen, erfordert der Webparts-Steuerelementsatz die von abgeleiteten Klassen der <see cref="T:System.Web.UI.WebControls.WebParts.Part" /> Klasse, nämlich <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" />, <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" />, und <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" />, sodass Sie von ihnen zum Entwickeln von benutzerdefinierter Steuerelementen abgeleitet werden soll. Allerdings ist es wichtig, die das Verhalten der Basisklasse zu verstehen <see cref="T:System.Web.UI.WebControls.WebParts.Part" /> Klasse, da es sich um einen gemeinsamen Satz von Eigenschaften, die von allen anderen Teilklassen verwendet bereitstellt.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="ChromeState">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.WebParts.PartChromeState ChromeState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.WebParts.PartChromeState ChromeState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.Part.ChromeState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PartChromeState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob ein Teilsteuerelement in einem Zustand minimiert oder normal ist.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.WebParts.PartChromeState" />-Werte. Die Standardeinstellung ist <see cref="F:System.Web.UI.WebControls.WebParts.PartChromeState.Normal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein des Teilsteuerelements <xref:System.Web.UI.WebControls.WebParts.Part.ChromeState%2A> normal oder minimiert werden können.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die deklarative Verwendung des der <xref:System.Web.UI.WebControls.WebParts.Part.ChromeState%2A> Eigenschaft in einem Teilsteuerelement. Dieses Beispiel benötigen Sie die benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement `TextDisplayWebPart`, im Beispielabschnitt von gefunden werden können die <xref:System.Web.UI.WebControls.WebParts.Part> Zusammenfassung-Klasse.  
+  
+ Beachten Sie, die im deklarativen Markup für die Web-Seite, die zweite Instanz von der `TextDisplayWebPart` -Steuerelement legt seine <xref:System.Web.UI.WebControls.WebParts.Part.ChromeState%2A> Eigenschaft. Nachdem Sie die Seite in einem Browser geladen haben, wird die zweite Instanz des Steuerelements minimiert angezeigt.  
+  
+ [!code-aspx-csharp[WebParts_Part_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_Part_Overview/CS/partoverviewcs.aspx#1)]
+ [!code-aspx-vb[WebParts_Part_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_Part_Overview/VB/partoverviewvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der angegebene Wert ist nicht der <see cref="T:System.Web.UI.WebControls.WebParts.PartChromeState" /> Werte.</exception>
+        <block subset="none" type="overrides">
+          <para>Abgeleitete Klassen, wie z. B. <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> können außer Kraft setzen <see cref="P:System.Web.UI.WebControls.WebParts.Part.ChromeState" /> benutzerspezifische Personalisierung des Rahmens-Zustand des Steuerelements zu aktivieren.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ChromeType">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.WebParts.PartChromeType ChromeType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.WebParts.PartChromeType ChromeType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.Part.ChromeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PartChromeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Typ des Rahmens, der eine Webparts-Steuerelemente umgibt.</summary>
+        <value>Einer der <see cref="T:System.Web.UI.WebControls.WebParts.PartChromeType" />-Werte. Die Standardeinstellung ist <see cref="F:System.Web.UI.WebControls.WebParts.PartChromeType.Default" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein des Teilsteuerelements <xref:System.Web.UI.WebControls.WebParts.Part.ChromeType%2A> Eigenschaft bestimmt die Art des Rahmens des Steuerelements umgibt. Zu den Optionen gehören anzeigen nur einen Titel, nur einen Rahmen, einen Titel und Rahmen, weder oder die Standardoption, die einfach den Wert des verwendet die <xref:System.Web.UI.WebControls.WebParts.WebZone.PartChromeType%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die deklarative Verwendung des der <xref:System.Web.UI.WebControls.WebParts.Part.ChromeType%2A> Eigenschaft in einem Teilsteuerelement. Dieses Beispiel benötigen Sie die benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement `TextDisplayWebPart`, im Beispielabschnitt von gefunden werden können die <xref:System.Web.UI.WebControls.WebParts.Part> Zusammenfassung-Klasse.  
+  
+ Im deklarativen Code für die Webseite, die zweite Instanz von der `TextDisplayWebPart` -Steuerelement legt seine <xref:System.Web.UI.WebControls.WebParts.Part.ChromeType%2A> Eigenschaft so, dass nur einen Titel, während die erste Instanz einen Titel und einen Rahmen hat. Nachdem Sie die Seite in einem Browser geladen haben, wird die zweite Instanz des Steuerelements minimiert angezeigt. Wenn Sie das Steuerelement maximieren, wird einen Titel ohne Rahmen angezeigt.  
+  
+ [!code-aspx-csharp[WebParts_Part_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_Part_Overview/CS/partoverviewcs.aspx#1)]
+ [!code-aspx-vb[WebParts_Part_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_Part_Overview/VB/partoverviewvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der Wert ist keiner der <see cref="T:System.Web.UI.WebControls.WebParts.PartChromeType" />-Werte.</exception>
+        <block subset="none" type="overrides">
+          <para>Abgeleitete Klassen, wie z. B. <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> können außer Kraft setzen <see cref="P:System.Web.UI.WebControls.WebParts.Part.ChromeType" /> um benutzerspezifische Personalisierung der Art des Rahmens zu ermöglichen, die ein Steuerelement frames.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Controls">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.ControlCollection Controls { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ControlCollection Controls" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.Part.Controls" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Web.UI.ControlCollection" /> -Objekt, das die untergeordneten Steuerelemente für ein angegebenes Serversteuerelement in der Hierarchie der Benutzeroberfläche enthält.</summary>
+        <value>Die Auflistung der untergeordneten Steuerelemente für das angegebene Serversteuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Auf einer ASP.NET-Seite Steuerelemente deklarativ zwischen dem Start- und Endtag eines Steuerelements Server hinzugefügt wurden ASP.NET automatisch fügt die Steuerelemente hinzu, der mit dem Serversteuerelement <xref:System.Web.UI.ControlCollection> Objekt. Alle HTML-Tags oder Textzeichenfolgen, die auf dem Server nicht verarbeitet werden, werden als behandelt <xref:System.Web.UI.LiteralControl> Objekte. Diese werden auf die Auflistung wie andere Serversteuerelemente hinzugefügt.  
+  
+ Die <xref:System.Web.UI.Control.Controls%2A> Eigenschaft ermöglicht den programmgesteuerten Zugriff auf die Instanz von der <xref:System.Web.UI.ControlCollection> Klasse für alle Serversteuerelement. Sie können Steuerelemente zur Auflistung hinzufügen, entfernen Sie Steuerelemente aus der Auflistung oder die Serversteuerelemente in der Auflistung durchlaufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBind">
+      <MemberSignature Language="C#" Value="public override void DataBind ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void DataBind() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.Part.DataBind" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bindet eine Datenquelle an das aufgerufene Serversteuerelement und alle untergeordneten Steuerelemente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public virtual string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.Part.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert einen kurzen Ausdruck, der das Webpart-Steuerelement, für die Verwendung in QuickInfos und Kataloge Teilsteuerelemente Wirkungsweise zusammenfasst.</summary>
+        <value>Eine Zeichenfolge zusammenfasst, Kurzform Funktionalität Teilsteuerelements. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.Part.Description%2A> Eigenschaft ist in der Regel eine Zeichenfolge, die in Katalogen verwendet wird, die Listen von Teilsteuerelemente und als QuickInfo in der Titelleiste des bereitstellen. Der Inhalt der <xref:System.Web.UI.WebControls.WebParts.Part.Description%2A> in einer QuickInfo angezeigt wird, wenn Sie den Mauszeiger über den Text in der Titelleiste ein des Teilsteuerelements positionieren. Der QuickInfo-Text wird erstellt, aus dem Wert der <xref:System.Web.UI.WebControls.WebParts.WebPart.DisplayTitle%2A> -Eigenschaft, gefolgt von einem Bindestrich gefolgt von der <xref:System.Web.UI.WebControls.WebParts.Part.Description%2A> Eigenschaftswert.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die deklarative Verwendung des der <xref:System.Web.UI.WebControls.WebParts.Part.Description%2A> Eigenschaft in einem Teilsteuerelement. Dieses Beispiel benötigen Sie die benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement `TextDisplayWebPart`, im Beispielabschnitt von gefunden werden können die <xref:System.Web.UI.WebControls.WebParts.Part> Zusammenfassung-Klasse.  
+  
+ Laden Sie die Seite in einem Browser eingeben, wenn Sie den Mauszeiger über den Titeltext, der die erste Instanz des Steuerelements positionieren, wird der Beschreibungstext in einer QuickInfo angezeigt.  
+  
+ [!code-aspx-csharp[WebParts_Part_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_Part_Overview/CS/partoverviewcs.aspx#1)]
+ [!code-aspx-vb[WebParts_Part_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_Part_Overview/VB/partoverviewvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Abgeleitete Klassen, wie z. B. <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> können außer Kraft setzen <see cref="P:System.Web.UI.WebControls.WebParts.Part.Description" /> benutzerspezifische Personalisierung der Beschreibung für das Steuerelement zu aktivieren.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.WebControls.ICompositeControlDesignerAccessor.RecreateChildControls">
+      <MemberSignature Language="C#" Value="void ICompositeControlDesignerAccessor.RecreateChildControls ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.WebControls.ICompositeControlDesignerAccessor.RecreateChildControls() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.Part.System#Web#UI#WebControls#ICompositeControlDesignerAccessor#RecreateChildControls" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ermöglicht es dem Entwickler eines Designers für zusammengesetzte Teilsteuerelemente zum Neuerstellen des Steuerelements untergeordneten Steuerelemente auf der Entwurfsoberfläche angezeigt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="public virtual string Title { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Title" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.Part.Title" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert den Titel eines Teil-Steuerelements.</summary>
+        <value>Eine Zeichenfolge, die den Titel des Steuerelements darstellt. Der Standardwert ist eine leere Zeichenfolge („“).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der sichtbare Titeltext in der Titelleiste ein des Teilsteuerelements festgelegt ist, durch die <xref:System.Web.UI.WebControls.WebParts.Part.Title%2A> Eigenschaft. Der Titeltext wird auch als Teil der QuickInfo-Text angezeigt, wenn Sie den Mauszeiger über die Titelleiste des positionieren eine <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement oder einem anderen Serversteuerelement, die in angezeigt wird eine <xref:System.Web.UI.WebControls.WebParts.WebPartZone> Zone.  
+  
+ Das Format des Titeltexts richtet sich nach der <xref:System.Web.UI.WebControls.WebParts.WebZone.PartTitleStyle%2A> -Eigenschaft der Zone, die das Steuerelement enthält.  
+  
+ Wenn Sie einen Titel für ein Steuerelement nicht angeben, berechnet der Webparts-Steuerelementsatz automatisch eine Standardzeichenfolge, die als Titel verwenden. Weitere Informationen finden Sie unter <xref:System.Web.UI.WebControls.WebParts.WebPart.DisplayTitle%2A>. Darüber hinaus ist es möglich, einen standardmäßigen Untertitel bereitzustellen, der das die Titelzeichenfolge angefügt wird. Ausführliche Informationen finden Sie unter <xref:System.Web.UI.WebControls.WebParts.WebPart.Subtitle%2A>.  
+  
+ Der Wert dieser Eigenschaft, wenn festgelegt ist, können mit einem Designer-Tool automatisch in einer Ressourcendatei gespeichert werden. Weitere Informationen finden Sie unter <xref:System.ComponentModel.LocalizableAttribute> und [Globalisierung und Lokalisierung](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die deklarative Verwendung des der <xref:System.Web.UI.WebControls.WebParts.Part.Title%2A> Eigenschaft in einem Teilsteuerelement. Dieses Beispiel benötigen Sie die benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement `TextDisplayWebPart`, im Beispielabschnitt von gefunden werden können die <xref:System.Web.UI.WebControls.WebParts.Part> Zusammenfassung-Klasse.  
+  
+ [!code-aspx-csharp[WebParts_Part_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_Part_Overview/CS/partoverviewcs.aspx#1)]
+ [!code-aspx-vb[WebParts_Part_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_Part_Overview/VB/partoverviewvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Abgeleitete Klassen, wie z. B. <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> können außer Kraft setzen <see cref="P:System.Web.UI.WebControls.WebParts.Part.Title" /> benutzerspezifische Personalisierung des Titels zu aktivieren.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

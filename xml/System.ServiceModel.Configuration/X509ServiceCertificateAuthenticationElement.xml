@@ -1,0 +1,192 @@
+<Type Name="X509ServiceCertificateAuthenticationElement" FullName="System.ServiceModel.Configuration.X509ServiceCertificateAuthenticationElement">
+  <TypeSignature Language="C#" Value="public sealed class X509ServiceCertificateAuthenticationElement : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit X509ServiceCertificateAuthenticationElement extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.X509ServiceCertificateAuthenticationElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Konfigurationselement dar, das Authentifizierungseinstellungen für ein Dienstzertifikat angibt. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509ServiceCertificateAuthenticationElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.X509ServiceCertificateAuthenticationElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Configuration.X509ServiceCertificateAuthenticationElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CertificateValidationMode">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.X509CertificateValidationMode CertificateValidationMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.Security.X509CertificateValidationMode CertificateValidationMode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.X509ServiceCertificateAuthenticationElement.CertificateValidationMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("certificateValidationMode", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.X509CertificateValidationMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zertifikatvalidierungsmodus ab oder legt ihn fest.</summary>
+        <value>Der zertifikatsvalidierungsmodus.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public void Copy (System.ServiceModel.Configuration.X509ServiceCertificateAuthenticationElement from);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Copy(class System.ServiceModel.Configuration.X509ServiceCertificateAuthenticationElement from) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.X509ServiceCertificateAuthenticationElement.Copy(System.ServiceModel.Configuration.X509ServiceCertificateAuthenticationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.ServiceModel.Configuration.X509ServiceCertificateAuthenticationElement" />
+      </Parameters>
+      <Docs>
+        <param name="from">Das zu kopierende Konfigurationselement.</param>
+        <summary>Kopiert den Inhalt des angegebenen Konfigurationselements in dieses Konfigurationselement.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="from" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Die Konfigurationsdatei ist schreibgeschützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomCertificateValidatorType">
+      <MemberSignature Language="C#" Value="public string CustomCertificateValidatorType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CustomCertificateValidatorType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.X509ServiceCertificateAuthenticationElement.CustomCertificateValidatorType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("customCertificateValidatorType", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Überprüfungstyp für das benutzerdefinierte Dienstzertifikat ab, der verwendet werden soll, oder legt diesen fest.</summary>
+        <value>Der zu verwendende <see cref="T:System.IdentityModel.Selectors.X509CertificateValidator" />-Typ.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[indigo1](~/includes/indigo1-md.md)] stellt eine standardmäßige Dienstzertifikatüberprüfung bereit, mit der das Dienstzertifikat anhand des Speichers für vertrauenswürdige Personen überprüft wird. Außerdem wird überprüft, ob sich das Zertifikat zu einem gültigen Stamm verkettet. Sie können ein benutzerdefiniertes Validierungssteuerelement implementieren, um ein anderes Verhalten anzugeben, und diese Eigenschaft zum Verweisen auf das benutzerdefinierte Validierungssteuerelement verwenden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.X509ServiceCertificateAuthenticationElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RevocationMode">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509RevocationMode RevocationMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.X509Certificates.X509RevocationMode RevocationMode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.X509ServiceCertificateAuthenticationElement.RevocationMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("revocationMode", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509RevocationMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zertifikatssperrmodus ab oder legt ihn fest.</summary>
+        <value>Der Sperrmodus des Zertifikats.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das System stellt anhand der Liste mit den gesperrten Zertifikaten sicher, dass das Dienstzertifikat nicht gesperrt wurde. Diese Überprüfung kann entweder online oder offline mit einer zwischengespeicherten Liste gesperrter Zertifikate erfolgen. Die Sperrüberprüfung kann deaktiviert werden, indem diese Eigenschaft auf <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode.NoCheck> festgelegt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrustedStoreLocation">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.StoreLocation TrustedStoreLocation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.X509Certificates.StoreLocation TrustedStoreLocation" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.X509ServiceCertificateAuthenticationElement.TrustedStoreLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("trustedStoreLocation", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.StoreLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Speicherort des vertrauenswürdigen Speichers ab, an dem das Dienstzertifikat überprüft wird, oder legt diesen fest.</summary>
+        <value>Der Speicherort des vertrauenswürdigen Speichers, an dem das Dienstzertifikat überprüft wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Sicherheitssystem von [!INCLUDE[indigo1](~/includes/indigo1-md.md)] überprüft das Dienstzertifikat anhand eines <xref:System.Security.Cryptography.X509Certificates.StoreLocation>. Der Speicherort wird mithilfe dieser Eigenschaft angegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,6 @@
+<Namespace Name="System.ServiceModel.Discovery.Version11">
+  <Docs>
+    <summary>Die <see langword="System.ServiceModel.Discovery.Version11" /> -Namespace enthält Klassen, die für die Erstellung und Verwendung von erkennbaren Diensten erforderlich sind. Diese Klassen implementieren das WS-Discovery-Protokoll, Version 1.1 für Windows Communication Foundation (WCF).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

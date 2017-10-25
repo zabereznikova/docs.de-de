@@ -1,0 +1,212 @@
+<Type Name="ValuePattern" FullName="System.Windows.Automation.ValuePattern">
+  <TypeSignature Language="C#" Value="public class ValuePattern : System.Windows.Automation.BasePattern" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ValuePattern extends System.Windows.Automation.BasePattern" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.ValuePattern" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.BasePattern</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Steuerelement, das einen systeminternen Wert verfügt, der nicht abschnittsübergreifend ist und als Zeichenfolge dargestellt werden kann. Diese Zeichenfolge kann oder möglicherweise nicht mehr abhängig von dem Steuerelement und dessen Einstellungen bearbeitet werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cached">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.ValuePattern.ValuePatternInformation Cached { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.ValuePattern/ValuePatternInformation Cached" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.ValuePattern.Cached" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ValuePattern+ValuePatternInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die zwischengespeicherten [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)]-Eigenschaftswerte für dieses <see cref="T:System.Windows.Automation.ValuePattern" /> ab.</summary>
+        <value>Die zwischengespeicherten Eigenschaftswerte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zwischengespeicherte Eigenschaftswerte müssen zuvor angefordert wurden mit einer <xref:System.Windows.Automation.CacheRequest>. Um den Wert einer Eigenschaft am aktuellen Punkt in der Zeit zu erhalten, die Eigenschaft abrufen, mithilfe von <xref:System.Windows.Automation.ValuePattern.Current%2A>.  
+  
+ Informationen zu den verfügbaren Eigenschaften und deren Verwendung finden Sie unter <xref:System.Windows.Automation.ValuePattern.ValuePatternInformation>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die angeforderte Eigenschaft befindet sich nicht im Cache.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.ValuePattern.ValuePatternInformation Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.ValuePattern/ValuePatternInformation Current" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.ValuePattern.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ValuePattern+ValuePatternInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die aktuellen [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)]-Eigenschaftswerte für dieses <see cref="T:System.Windows.Automation.ValuePattern" /> ab.</summary>
+        <value>Die aktuellen Eigenschaftswerte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Muster muss aus einer <xref:System.Windows.Automation.AutomationElement> mit einer <xref:System.Windows.Automation.AutomationElementMode.Full> Verweis, um die aktuellen Werte zu erhalten. Wenn die <xref:System.Windows.Automation.AutomationElement> abgerufen wurde, mithilfe von <xref:System.Windows.Automation.AutomationElementMode.None>, enthält es nur zwischengespeicherte Daten, und beim Versuch, den aktuellen Wert einer beliebigen Eigenschaft abzurufen, wird eine Ausnahme ausgelöst. Verwendung <xref:System.Windows.Automation.ValuePattern.Cached%2A> um den zwischengespeicherten Wert einer Eigenschaft abzurufen, die zuvor angegeben wurde mit einem <xref:System.Windows.Automation.CacheRequest>.  
+  
+ Informationen zu den verfügbaren Eigenschaften und deren Verwendung finden Sie unter <xref:System.Windows.Automation.ValuePattern.ValuePatternInformation>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnlyProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty IsReadOnlyProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty IsReadOnlyProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ValuePattern.IsReadOnlyProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die <see cref="P:System.Windows.Automation.ValuePattern.ValuePatternInformation.IsReadOnly" />-Eigenschaft an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Bezeichner wird durch Benutzeroberflächenautomatisierungs-Clientanwendungen verwendet. Benutzeroberflächenautomatisierungs-Anbietern zu verwendende das entsprechende Feld im <xref:System.Windows.Automation.ValuePatternIdentifiers>.  
+  
+ Ein Steuerelement muss seine <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> festgelegt `true` und dessen <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> festgelegt `false` , bevor ein Client, einen Aufruf von versucht <xref:System.Windows.Automation.ValuePattern.SetValue%2A>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein Stammelement an eine Funktion übergeben, die eine Auflistung von Benutzeroberflächenautomatisierungs-Elementen zurückgibt, die abhängigen Elemente des Stamms und einen Satz von eigenschaftsbedingungen erfüllen.  
+  
+ [!code-csharp[UIAValuePattern_snip#100](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAValuePattern_snip/CSharp/UIAValuePattern_snippets.cs#100)]
+ [!code-vb[UIAValuePattern_snip#100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAValuePattern_snip/VisualBasic/UIAValuePattern_snippets.vb#100)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pattern">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationPattern Pattern;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationPattern Pattern" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ValuePattern.Pattern" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationPattern</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet das <see cref="T:System.Windows.Automation.ValuePattern" />-Steuerelementmuster.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Bezeichner wird durch Benutzeroberflächenautomatisierungs-Clientanwendungen verwendet. Benutzeroberflächenautomatisierungs-Anbietern zu verwendende das entsprechende Feld im <xref:System.Windows.Automation.ValuePatternIdentifiers>.  
+  
+ Der Musterbezeichner wird an Methoden übergeben, z. B. <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> zum Abrufen der Steuerelementmuster aus dem angegebenen <xref:System.Windows.Automation.AutomationElement>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.ValuePattern> Steuerelementmuster abgerufenes ein <xref:System.Windows.Automation.AutomationElement>.  
+  
+ [!code-csharp[UIAValuePattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAValuePattern_snip/CSharp/UIAValuePattern_snippets.cs#101)]
+ [!code-vb[UIAValuePattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAValuePattern_snip/VisualBasic/UIAValuePattern_snippets.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public void SetValue (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetValue(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.ValuePattern.SetValue(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der festzulegende Wert. Der Anbieter für die Automatisierung der Benutzeroberfläche ist verantwortlich für das Konvertieren des Werts in den entsprechenden Datentyp.</param>
+        <summary>Legt den Wert des Steuerelements fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Einzeilige Bearbeitungssteuerelemente unterstützen programmgesteuerten Zugriff auf ihre Inhalte über <xref:System.Windows.Automation.ValuePattern>. Mehrzeilige Bearbeitungssteuerelemente unterstützen jedoch nicht die <xref:System.Windows.Automation.ValuePattern>; stattdessen Geben sie den Zugriff auf ihre Inhalte durch die <xref:System.Windows.Automation.TextPattern> -Steuerelementmuster.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.AutomationElement> , unterstützt die <xref:System.Windows.Automation.ValuePattern> Steuerelementmuster sind seine <xref:System.Windows.Automation.ValuePattern.ValueProperty> auf ein vom Benutzer angegebener Wert festgelegt.  
+  
+ [!code-csharp[UIAValuePattern_snip#103](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAValuePattern_snip/CSharp/UIAValuePattern_snippets.cs#103)]
+ [!code-vb[UIAValuePattern_snip#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAValuePattern_snip/VisualBasic/UIAValuePattern_snippets.vb#103)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Das Steuerelement ist schreibgeschützt.</exception>
+        <exception cref="T:System.Windows.Automation.ElementNotEnabledException">Das Steuerelement ist nicht aktiviert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty ValueProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty ValueProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ValuePattern.ValueProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die <see cref="P:System.Windows.Automation.ValuePattern.ValuePatternInformation.Value" />-Eigenschaft an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Bezeichner wird durch Benutzeroberflächenautomatisierungs-Clientanwendungen verwendet. Benutzeroberflächenautomatisierungs-Anbietern zu verwendende das entsprechende Feld im <xref:System.Windows.Automation.ValuePatternIdentifiers>.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel ein <xref:System.Windows.Automation.ValuePattern> -Objekt abgerufen, die von einem Zielsteuerelement wird in einer Funktion, die das aktuelle abruft übergeben <xref:System.Windows.Automation.ValuePattern> Eigenschaftswerte.  
+  
+ [!code-csharp[UIAValuePattern_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAValuePattern_snip/CSharp/UIAValuePattern_snippets.cs#102)]
+ [!code-vb[UIAValuePattern_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAValuePattern_snip/VisualBasic/UIAValuePattern_snippets.vb#102)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,249 @@
+<Type Name="ITaskItem" FullName="Microsoft.Build.Framework.ITaskItem">
+  <TypeSignature Language="C#" Value="public interface ITaskItem" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITaskItem" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.ITaskItem" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("8661674F-2148-4F71-A92A-49875511C528")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert eine MSBuild-Element, die verbraucht und von Aufgaben ausgegeben werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Anzahl der <xref:Microsoft.Build.Framework.ITaskItem> Objekte, die während eines Builds erstellt entspricht möglicherweise nicht genau Elemente deklariert, die in einer Projektdatei folgende Gründe vorliegen:  
+  
+-   Tasks erstellen mitunter Elemente, die nicht in der Projektdatei deklariert wurden.  
+  
+-   Die Elementauflistung ein kann in der Projektdatei mit Platzhaltern, deklariert werden, die viele Elemente beim Erstellen konnte.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Code für eine Aufgabe, die eine oder mehrere Verzeichnisse erstellt.  
+  
+ [!code-csharp[msbuild_MakeDirTask#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_MakeDirTask/CS/msbuild_MakeDirTask.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CloneCustomMetadata">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionary CloneCustomMetadata ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IDictionary CloneCustomMetadata() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.ITaskItem.CloneCustomMetadata" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die Auflistung von benutzerdefinierten Metadaten ab.</summary>
+        <returns>Die Auflistung von benutzerdefinierten Metadaten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+-   Umfasst integrierte Metadaten nicht.  
+  
+-   Diese Methode sollte es sich um einen Klon der Metadaten zurückgeben.  
+  
+-   Das Schreiben in dieses Wörterbuch aufweist und sollte nicht in das zugrunde liegende Element wiedergegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyMetadataTo">
+      <MemberSignature Language="C#" Value="public void CopyMetadataTo (Microsoft.Build.Framework.ITaskItem destinationItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyMetadataTo(class Microsoft.Build.Framework.ITaskItem destinationItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.ITaskItem.CopyMetadataTo(Microsoft.Build.Framework.ITaskItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destinationItem" Type="Microsoft.Build.Framework.ITaskItem" />
+      </Parameters>
+      <Docs>
+        <param name="destinationItem">Das Element, das die Metadateneinträgen zu kopieren.</param>
+        <summary>Kopiert die Einträge für die benutzerdefinierten Metadaten auf ein anderes Element an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Führen Sie die folgenden Richtlinien beim Implementieren dieser Methode.  
+  
+-   Überschreiben Sie nicht die <xref:Microsoft.Build.Framework.ITaskItem.ItemSpec%2A> Eigenschaft.  
+  
+-   Überschrieben Sie vorhandene Metadateneinträge werden nicht werden.  
+  
+-   Metadateneinträge, die keinen Sinn für das Zielelement machen nicht kopiert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMetadata">
+      <MemberSignature Language="C#" Value="public string GetMetadata (string metadataName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetMetadata(string metadataName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.ITaskItem.GetMetadata(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadataName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="metadataName">Der Name des Metadateneintrags.</param>
+        <summary>Ruft den Wert der angegebenen Metadateneintrag ab.</summary>
+        <returns>Der Wert, der die <paramref name="attributeName" /> Metadaten.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemSpec">
+      <MemberSignature Language="C#" Value="public string ItemSpec { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ItemSpec" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.ITaskItem.ItemSpec" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Elementspezifikation ab oder legt sie fest.</summary>
+        <value>Die Elementspezifikation.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Elementspezifikation ist eine beliebige Zeichenfolge. Wenn das Element eine Datei auf einem Datenträger darstellt, wird die Elementspezifikation der Pfad dieser Datei sein.  
+  
+ Die <xref:Microsoft.Build.Framework.ITaskItem.ItemSpec%2A> für die folgenden Elementdeklaration in einem Projekt auf die Datei ist `File.cs`.  
+  
+```  
+<ItemGroup>  
+    <Compile Include="File.cs"/>  
+</ItemGroup>  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt den Code für eine Aufgabe, die eine oder mehrere Verzeichnisse erstellt.  
+  
+ [!code-csharp[msbuild_MakeDirTask#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_MakeDirTask/CS/msbuild_MakeDirTask.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MetadataCount">
+      <MemberSignature Language="C#" Value="public int MetadataCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MetadataCount" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.ITaskItem.MetadataCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Metadateneinträge, die dem Element zugeordnet.</summary>
+        <value>Die Anzahl der Metadateneinträge, die dem Element zugeordnet werden soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MetadataNames">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection MetadataNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection MetadataNames" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.ITaskItem.MetadataNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Metadateneinträge, die dem Element zugeordnet.</summary>
+        <value>Die Namen der Metadateneinträge, die dem Element zugeordnet werden soll.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveMetadata">
+      <MemberSignature Language="C#" Value="public void RemoveMetadata (string metadataName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveMetadata(string metadataName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.ITaskItem.RemoveMetadata(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadataName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="metadataName">Der Name des zu entfernenden Metadateneintrags.</param>
+        <summary>Entfernt die angegebenen Metadaten-Eintrag aus das Element.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMetadata">
+      <MemberSignature Language="C#" Value="public void SetMetadata (string metadataName, string metadataValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetMetadata(string metadataName, string metadataValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.ITaskItem.SetMetadata(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadataName" Type="System.String" />
+        <Parameter Name="metadataValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="metadataName">Der Name des Metadateneintrags.</param>
+        <param name="metadataValue">Der Wert des Metadateneintrags.</param>
+        <summary>Hinzufügen oder ändern einen Eintrag für die benutzerdefinierten Metadaten für das Element.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

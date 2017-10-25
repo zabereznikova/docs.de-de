@@ -1,0 +1,1612 @@
+<Type Name="Matrix" FullName="System.Windows.Media.Matrix">
+  <TypeSignature Language="C#" Value="public struct Matrix : IFormattable" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit Matrix extends System.ValueType implements class System.IFormattable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Matrix" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IFormattable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Media.MatrixConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ValueSerializer(typeof(System.Windows.Media.Converters.MatrixValueSerializer))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine affine 3 x 3-Transformationsmatrix für Transformationen in 2D-dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ist eine 3 x 3-Matrix für Transformationen im verwendet eine [!INCLUDE[TLA2#tla_2d](~/includes/tla2sharptla-2d-md.md)] X-y-Ebene. Affine Transformationsmatrizen können multipliziert werden soll, um eine beliebige Anzahl von lineare Transformationen, wie Drehung und Neigung (Scherung), gefolgt von der Übersetzung zu bilden. Eine affine Transformationsmatrix hat die letzte Spalte (0, 0, 1) entsprechen daher nur die Elemente in der ersten beiden Spalten muss angegeben werden.  Beachten Sie, dass Vektoren als Zeile-Vektoren, keine Spaltenvektoren ausgedrückt werden.  
+  
+ Ein [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Media.Matrix> in zeilengerichteter Reihenfolge gespeichert, und weist die folgende Struktur:  
+  
+||||  
+|-|-|-|  
+|<xref:System.Windows.Media.Matrix.M11%2A>|<xref:System.Windows.Media.Matrix.M12%2A>|0|  
+|<xref:System.Windows.Media.Matrix.M21%2A>|<xref:System.Windows.Media.Matrix.M22%2A>|0|  
+|<xref:System.Windows.Media.Matrix.OffsetX%2A>|<xref:System.Windows.Media.Matrix.OffsetY%2A>|1|  
+  
+ Die Elemente in der letzten Zeile <xref:System.Windows.Media.Matrix.OffsetX%2A> und <xref:System.Windows.Media.Matrix.OffsetY%2A>, Übersetzungswerte darstellen.  
+  
+ In den Methoden und Eigenschaften wird die Transformationsmatrix in der Regel als einen Vektor mit nur sechs Elemente wie folgt angegeben:  
+  
+ (<xref:System.Windows.Media.Matrix.M11%2A>, <xref:System.Windows.Media.Matrix.M12%2A>, <xref:System.Windows.Media.Matrix.M21%2A>, <xref:System.Windows.Media.Matrix.M22%2A>, <xref:System.Windows.Media.Matrix.OffsetX%2A>, <xref:System.Windows.Media.Matrix.OffsetY%2A>)  
+  
+ Sie können zwar eine <xref:System.Windows.Media.Matrix> Struktur direkt, um einzelne Punkte zu übersetzen oder mit einem <xref:System.Windows.Media.MatrixTransform> um Objekte zu transformieren [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] bietet auch eine Reihe von Klassen, die Ihnen ermöglichen, Objekte zu transformieren, ohne das direkte Arbeiten mit Matrizen: <xref:System.Windows.Media.RotateTransform>, <xref:System.Windows.Media.ScaleTransform>, <xref:System.Windows.Media.SkewTransform>, und <xref:System.Windows.Media.TranslateTransform>.  
+  
+<a name="xamlAttributeUsage_Matrix"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="m11, m12, m21, m22, offsetX, offsetY"/>  
+- or -  
+<object property="Identity"/>  
+```  
+  
+<a name="xamlValues_Matrix"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *M11*  
+ <xref:System.Double?displayProperty=nameWithType>  
+  
+ Der Wert in der ersten Zeile und ersten Spalte der <xref:System.Windows.Media.Matrix>. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Windows.Media.Matrix.M11%2A>-Eigenschaft.  
+  
+ *M12*  
+ <xref:System.Double?displayProperty=nameWithType>  
+  
+ Der Wert in der ersten Zeile und zweiten Spalte. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Windows.Media.Matrix.M12%2A>-Eigenschaft.  
+  
+ *M21*  
+ <xref:System.Double?displayProperty=nameWithType>  
+  
+ Der Wert in der zweiten Zeile und ersten Spalte. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Windows.Media.Matrix.M21%2A>-Eigenschaft.  
+  
+ *M22*  
+ <xref:System.Double?displayProperty=nameWithType>  
+  
+ Der Wert in der zweiten Zeile und zweiten Spalte. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Windows.Media.Matrix.M22%2A>-Eigenschaft.  
+  
+ *offsetX*  
+ <xref:System.Double?displayProperty=nameWithType>  
+  
+ Der Wert in der dritten Zeile und die dritte Spalte. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Windows.Media.Matrix.OffsetX%2A>-Eigenschaft.  
+  
+ *offsetY*  
+ <xref:System.Double?displayProperty=nameWithType>  
+  
+ Der Wert in der dritten Zeile und zweiten Spalte. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Windows.Media.Matrix.OffsetY%2A>-Eigenschaft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Matrix (double m11, double m12, double m21, double m22, double offsetX, double offsetY);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 m11, float64 m12, float64 m21, float64 m22, float64 offsetX, float64 offsetY) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Matrix.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="m11" Type="System.Double" />
+        <Parameter Name="m12" Type="System.Double" />
+        <Parameter Name="m21" Type="System.Double" />
+        <Parameter Name="m22" Type="System.Double" />
+        <Parameter Name="offsetX" Type="System.Double" />
+        <Parameter Name="offsetY" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="m11">Die neue <see cref="T:System.Windows.Media.Matrix" /> Struktur <see cref="P:System.Windows.Media.Matrix.M11" /> Koeffizienten.</param>
+        <param name="m12">Die neue <see cref="T:System.Windows.Media.Matrix" /> Struktur <see cref="P:System.Windows.Media.Matrix.M12" /> Koeffizienten.</param>
+        <param name="m21">Die neue <see cref="T:System.Windows.Media.Matrix" /> Struktur <see cref="P:System.Windows.Media.Matrix.M21" /> Koeffizienten.</param>
+        <param name="m22">Die neue <see cref="T:System.Windows.Media.Matrix" /> Struktur <see cref="P:System.Windows.Media.Matrix.M22" /> Koeffizienten.</param>
+        <param name="offsetX">Die neue <see cref="T:System.Windows.Media.Matrix" /> Struktur <see cref="P:System.Windows.Media.Matrix.OffsetX" /> Koeffizienten.</param>
+        <param name="offsetY">Die neue <see cref="T:System.Windows.Media.Matrix" /> Struktur <see cref="P:System.Windows.Media.Matrix.OffsetY" /> Koeffizienten.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Matrix" />-Struktur.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Append">
+      <MemberSignature Language="C#" Value="public void Append (System.Windows.Media.Matrix matrix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Append(valuetype System.Windows.Media.Matrix matrix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Matrix.Append(System.Windows.Media.Matrix)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matrix" Type="System.Windows.Media.Matrix" />
+      </Parameters>
+      <Docs>
+        <param name="matrix">Die <see cref="T:System.Windows.Media.Matrix" /> Struktur an diese Anfügen <see cref="T:System.Windows.Media.Matrix" /> Struktur.</param>
+        <summary>Fügt das angegebene <see cref="T:System.Windows.Media.Matrix" /> Struktur dieser <see cref="T:System.Windows.Media.Matrix" /> Struktur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang entspricht dem Multiplizieren <xref:System.Windows.Media.Matrix> Struktur durch den Parameter `matrix`.  Matrixmultiplikation ist nicht kommutativ, damit dieser Vorgang nicht als Multiplizieren des Parameters ist `matrix` von diesem <xref:System.Windows.Media.Matrix> Struktur; d. h. (dies * `matrix`) ist nicht identisch (`matrix` * dies).  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie anzufügende eine <xref:System.Windows.Media.Matrix> Struktur in eine andere <xref:System.Windows.Media.Matrix> Struktur.  
+  
+ [!code-csharp[MatrixExamples_snip#MatrixRotateAboutPointExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixrotateaboutpointexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Determinant">
+      <MemberSignature Language="C#" Value="public double Determinant { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Determinant" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Matrix.Determinant" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Determinante der <see cref="T:System.Windows.Media.Matrix" /> Struktur.</summary>
+        <value>Die Determinante der <see cref="T:System.Windows.Media.Matrix" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ In diesem Beispiel wird gezeigt, wie die Determinante der abzurufenden eine <xref:System.Windows.Media.Matrix>.  
+  
+ [!code-csharp[MatrixExamples_snip#MatrixDeterminantExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixdeterminantexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Equals">
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Bestimmt, ob die beiden angegebenen <see cref="T:System.Windows.Media.Matrix" /> Strukturen dieselben Werte aufweisen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Ein <xref:System.Windows.Media.Matrix> speichert seine Werte als Double-Werte. Da der Wert des einem <xref:System.Double> abnehmen kann, wenn arithmetische Operationen, darauf, eines Vergleichs zwischen zwei ausgeführt werden <xref:System.Double> fehlschlagen, Strukturen, die logisch gleich sind.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zwei <xref:System.Windows.Media.Matrix> -Strukturen auf Gleichheit.  
+  
+ [!code-csharp[MatrixExamples_snip#MatrixEqualityExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixequalityexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Matrix.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Der zu vergleichende <see cref="T:System.Object" />.</param>
+        <summary>Bestimmt, ob das angegebene <see cref="T:System.Object" /> ist ein <see cref="T:System.Windows.Media.Matrix" /> Struktur, die identisch mit dieser <see cref="T:System.Windows.Media.Matrix" />.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="o" /> ist eine <see cref="T:System.Windows.Media.Matrix" /> Struktur, die identisch mit dieser <see cref="T:System.Windows.Media.Matrix" /> Struktur; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Ein <xref:System.Windows.Media.Matrix> speichert seine Werte als Double-Werte. Da der Wert des einem <xref:System.Double> abnehmen kann, wenn arithmetische Operationen, darauf, eines Vergleichs zwischen zwei ausgeführt werden <xref:System.Double> fehlschlagen, Strukturen, die logisch gleich sind.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zwei <xref:System.Windows.Media.Matrix> -Strukturen auf Gleichheit.  
+  
+ [!code-csharp[MatrixExamples_snip#MatrixEqualityExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixequalityexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Windows.Media.Matrix value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(valuetype System.Windows.Media.Matrix value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Matrix.Equals(System.Windows.Media.Matrix)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Media.Matrix" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die Instanz von <see cref="T:System.Windows.Media.Matrix" /> , an diese Instanz verglichen werden soll.</param>
+        <summary>Bestimmt, ob das angegebene <see cref="T:System.Windows.Media.Matrix" /> Struktur mit dieser Instanz identisch ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die Instanzen gleich sind. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Ein <xref:System.Windows.Media.Matrix> speichert seine Werte als Double-Werte. Da der Wert des einem <xref:System.Double> abnehmen kann, wenn arithmetische Operationen, darauf, eines Vergleichs zwischen zwei ausgeführt werden <xref:System.Double> fehlschlagen, Strukturen, die logisch gleich sind.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zwei <xref:System.Windows.Media.Matrix> -Strukturen auf Gleichheit.  
+  
+ [!code-csharp[MatrixExamples_snip#MatrixEqualityExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixequalityexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public static bool Equals (System.Windows.Media.Matrix matrix1, System.Windows.Media.Matrix matrix2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Equals(valuetype System.Windows.Media.Matrix matrix1, valuetype System.Windows.Media.Matrix matrix2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Matrix.Equals(System.Windows.Media.Matrix,System.Windows.Media.Matrix)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matrix1" Type="System.Windows.Media.Matrix" />
+        <Parameter Name="matrix2" Type="System.Windows.Media.Matrix" />
+      </Parameters>
+      <Docs>
+        <param name="matrix1">Die erste zu vergleichende <see cref="T:System.Windows.Media.Matrix" />-Struktur.</param>
+        <param name="matrix2">Die zweite zu vergleichende <see cref="T:System.Windows.Media.Matrix" />-Struktur.</param>
+        <summary>Bestimmt, ob die beiden angegebenen <see cref="T:System.Windows.Media.Matrix" /> Strukturen sind identisch.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="matrix1" /> und <paramref name="matrix2" /> übereinstimmen, andernfalls werden <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Ein <xref:System.Windows.Media.Matrix> speichert seine Werte als Double-Werte. Da der Wert des einem <xref:System.Double> abnehmen kann, wenn arithmetische Operationen, darauf, eines Vergleichs zwischen zwei ausgeführt werden <xref:System.Double> fehlschlagen, Strukturen, die logisch gleich sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Matrix.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese <see cref="T:System.Windows.Media.Matrix" />-Struktur zurück.</summary>
+        <returns>Der Hashcode für diese Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasInverse">
+      <MemberSignature Language="C#" Value="public bool HasInverse { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasInverse" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Matrix.HasInverse" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob dies <see cref="T:System.Windows.Media.Matrix" /> Struktur invertierbar ist.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Media.Matrix" /> über eine Inverse verfügt, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird überprüft, ob eine <xref:System.Windows.Media.Matrix> invertierbar ist. Sofern sie invertierbar ist, ist die <xref:System.Windows.Media.Matrix> umkehren.  
+  
+ [!code-csharp[MatrixExamples_snip#MatrixInverseExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixinverseexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Identity">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Matrix Identity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Matrix Identity" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Matrix.Identity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Matrix</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Identität <see cref="T:System.Windows.Media.Matrix" />.</summary>
+        <value>Eine Identitätsmatrix.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Identitätsmatrix verfügt über einen Wert von 1 in den Koeffizienten [1,1], [2,2], [3,3] und der Wert 0 in den restlichen Koeffizienten. Dies entspricht dem Festlegen <xref:System.Windows.Media.Matrix.M11%2A> und <xref:System.Windows.Media.Matrix.M22%2A> auf 1 und <xref:System.Windows.Media.Matrix.M12%2A>, <xref:System.Windows.Media.Matrix.M21%2A>, <xref:System.Windows.Media.Matrix.OffsetX%2A>, und <xref:System.Windows.Media.Matrix.OffsetY%2A> auf 0. In einer affinen Matrix, wobei es sich die Implementierung, die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] verwendet für die <xref:System.Windows.Media.Matrix>,-Struktur Koeffizienten [3,1], [3,2], [3.3] immer die Werte 0,0,1 bzw. aufweisen.  
+  
+||||  
+|-|-|-|  
+|1|0|0|  
+|0|1|0|  
+|0|0|1|  
+  
+ Für eine Identitätsmatrix der <xref:System.Windows.Media.Matrix.ToString%2A> Methode gibt die Zeichenfolge "Identity" anstelle der Koeffizienten für die <xref:System.Windows.Media.Matrix>.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Abrufen der <xref:System.Windows.Media.Matrix.Identity%2A> Matrix.  
+  
+ [!code-csharp[MatrixExamples_snip#MatrixIdentityExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixidentityexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invert">
+      <MemberSignature Language="C#" Value="public void Invert ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Invert() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Matrix.Invert" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Invertiert diese <see cref="T:System.Windows.Media.Matrix" /> Struktur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird überprüft, ob eine <xref:System.Windows.Media.Matrix> Struktur invertierbar ist. Sofern sie invertierbar ist, ist die <xref:System.Windows.Media.Matrix> Struktur wird umgekehrt.  
+  
+ [!code-csharp[MatrixExamples_snip#MatrixInverseExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixinverseexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die <see cref="T:System.Windows.Media.Matrix" /> Struktur ist nicht invertierbar ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsIdentity">
+      <MemberSignature Language="C#" Value="public bool IsIdentity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsIdentity" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Matrix.IsIdentity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob dies <see cref="T:System.Windows.Media.Matrix" /> Struktur ist eine Identitätsmatrix.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Media.Matrix" /> Struktur ist eine Identitätsmatrix ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Identitätsmatrix verfügt über einen Wert von 1 in den Koeffizienten [1,1], [2,2], [3,3] und der Wert 0 in den restlichen Koeffizienten. Dies entspricht dem Festlegen <xref:System.Windows.Media.Matrix.M11%2A> und <xref:System.Windows.Media.Matrix.M22%2A> auf 1 und <xref:System.Windows.Media.Matrix.M12%2A>, <xref:System.Windows.Media.Matrix.M21%2A>, <xref:System.Windows.Media.Matrix.OffsetX%2A>, und <xref:System.Windows.Media.Matrix.OffsetY%2A> auf 0. In einer affinen Matrix, wobei es sich die Implementierung, die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] verwendet für die <xref:System.Windows.Media.Matrix> Struktur Koeffizienten [3,1], [3,2], [3.3] immer die Werte 0,0,1 bzw. aufweisen.  
+  
+||||  
+|-|-|-|  
+|1|0|0|  
+|0|1|0|  
+|0|0|1|  
+  
+ Für eine Identitätsmatrix der <xref:System.Windows.Media.Matrix.ToString%2A> Methode gibt die Zeichenfolge "Identity", anstatt die Koeffizienten, die von der <xref:System.Windows.Media.Matrix>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="M11">
+      <MemberSignature Language="C#" Value="public double M11 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 M11" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Matrix.M11" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert für die erste Zeile und ersten Spalte der <see cref="T:System.Windows.Media.Matrix" /> Struktur.</summary>
+        <value>Der Wert von der ersten Zeile und ersten Spalte der <see cref="T:System.Windows.Media.Matrix" />. Der Standardwert ist 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zwei multipliziert <xref:System.Windows.Media.Matrix> Strukturen und Zuweisen von Werten zu einer <xref:System.Windows.Media.Matrix> nach deren Deklaration und nachdem die Struktur deklariert ist.  
+  
+ [!code-csharp[MatrixExamples_snip#MatrixMultiplicationExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixmultiplicationexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="M12">
+      <MemberSignature Language="C#" Value="public double M12 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 M12" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Matrix.M12" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert der ersten Zeile und zweiten Spalte dieses <see cref="T:System.Windows.Media.Matrix" /> Struktur.</summary>
+        <value>Der Wert der ersten Zeile und zweiten Spalte dieses <see cref="T:System.Windows.Media.Matrix" />. Der Standardwert ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle zeigt das Layout einer <xref:System.Windows.Media.Matrix>.  
+  
+||||  
+|-|-|-|  
+|<xref:System.Windows.Media.Matrix.M11%2A>|<xref:System.Windows.Media.Matrix.M12%2A>|0|  
+|<xref:System.Windows.Media.Matrix.M21%2A>|<xref:System.Windows.Media.Matrix.M22%2A>|0|  
+|<xref:System.Windows.Media.Matrix.OffsetX%2A>|<xref:System.Windows.Media.Matrix.OffsetY%2A>|1|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zwei multipliziert <xref:System.Windows.Media.Matrix> Strukturen und Zuweisen von Werten zu einer <xref:System.Windows.Media.Matrix> nach deren Deklaration und nachdem die Struktur deklariert ist.  
+  
+ [!code-csharp[MatrixExamples_snip#MatrixMultiplicationExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixmultiplicationexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="M21">
+      <MemberSignature Language="C#" Value="public double M21 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 M21" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Matrix.M21" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert der zweiten Zeile und ersten Spalte der <see cref="T:System.Windows.Media.Matrix" /> Struktur.</summary>
+        <value>Der Wert der zweiten Zeile und ersten Spalte der <see cref="T:System.Windows.Media.Matrix" />. Der Standardwert ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle zeigt das Layout einer <xref:System.Windows.Media.Matrix>.  
+  
+||||  
+|-|-|-|  
+|<xref:System.Windows.Media.Matrix.M11%2A>|<xref:System.Windows.Media.Matrix.M12%2A>|0|  
+|<xref:System.Windows.Media.Matrix.M21%2A>|<xref:System.Windows.Media.Matrix.M22%2A>|0|  
+|<xref:System.Windows.Media.Matrix.OffsetX%2A>|<xref:System.Windows.Media.Matrix.OffsetY%2A>|1|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zwei multipliziert <xref:System.Windows.Media.Matrix> Strukturen und Zuweisen von Werten zu einer <xref:System.Windows.Media.Matrix> nach deren Deklaration und nachdem die Struktur deklariert ist.  
+  
+ [!code-csharp[MatrixExamples_snip#MatrixMultiplicationExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixmultiplicationexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="M22">
+      <MemberSignature Language="C#" Value="public double M22 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 M22" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Matrix.M22" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert der zweiten Zeile und zweiten Spalte dieses <see cref="T:System.Windows.Media.Matrix" /> Struktur.</summary>
+        <value>Der Wert der zweiten Zeile und zweiten Spalte dieses <see cref="T:System.Windows.Media.Matrix" /> Struktur. Der Standardwert ist 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle zeigt das Layout einer <xref:System.Windows.Media.Matrix> Struktur.  
+  
+||||  
+|-|-|-|  
+|<xref:System.Windows.Media.Matrix.M11%2A>|<xref:System.Windows.Media.Matrix.M12%2A>|0|  
+|<xref:System.Windows.Media.Matrix.M21%2A>|<xref:System.Windows.Media.Matrix.M22%2A>|0|  
+|<xref:System.Windows.Media.Matrix.OffsetX%2A>|<xref:System.Windows.Media.Matrix.OffsetY%2A>|1|  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zwei multipliziert <xref:System.Windows.Media.Matrix> Strukturen und Zuweisen von Werten zu einer <xref:System.Windows.Media.Matrix> nach deren Deklaration und nachdem die Struktur deklariert ist.  
+  
+ [!code-csharp[MatrixExamples_snip#MatrixMultiplicationExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixmultiplicationexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Multiply">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Matrix Multiply (System.Windows.Media.Matrix trans1, System.Windows.Media.Matrix trans2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Media.Matrix Multiply(valuetype System.Windows.Media.Matrix trans1, valuetype System.Windows.Media.Matrix trans2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Matrix.Multiply(System.Windows.Media.Matrix,System.Windows.Media.Matrix)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Matrix</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="trans1" Type="System.Windows.Media.Matrix" />
+        <Parameter Name="trans2" Type="System.Windows.Media.Matrix" />
+      </Parameters>
+      <Docs>
+        <param name="trans1">Die erste <see cref="T:System.Windows.Media.Matrix" /> zu multiplizierende-Struktur.</param>
+        <param name="trans2">Die zweite <see cref="T:System.Windows.Media.Matrix" /> zu multiplizierende-Struktur.</param>
+        <summary>Multipliziert eine <see cref="T:System.Windows.Media.Matrix" /> durch eine andere Struktur <see cref="T:System.Windows.Media.Matrix" /> Struktur.</summary>
+        <returns>Das Ergebnis der Multiplikation von <paramref name="trans1" /> mit <paramref name="trans2" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Matrixmultiplikation ist nicht kommutativ. Multiplikation `trans1` von `trans2` ist nicht identisch mit der Multiplikation `trans2` von `trans1`.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zwei multipliziert <xref:System.Windows.Media.Matrix> Strukturen.  
+  
+ [!code-csharp[MatrixExamples_snip#MatrixMultiplicationExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixmultiplicationexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OffsetX">
+      <MemberSignature Language="C#" Value="public double OffsetX { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 OffsetX" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Matrix.OffsetX" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert der dritten Zeile und ersten Spalte der <see cref="T:System.Windows.Media.Matrix" /> Struktur.</summary>
+        <value>Der Wert der dritten Zeile und ersten Spalte der <see cref="T:System.Windows.Media.Matrix" /> Struktur. Der Standardwert ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.Matrix.OffsetX%2A> Eigenschaft lautet daher, da sie angibt, dass den Betrag, um die Koordinatenbereich entlang der x-Achse verschoben.  
+  
+ Die folgende Tabelle zeigt das Layout einer <xref:System.Windows.Media.Matrix>.  
+  
+||||  
+|-|-|-|  
+|<xref:System.Windows.Media.Matrix.M11%2A>|<xref:System.Windows.Media.Matrix.M12%2A>|0|  
+|<xref:System.Windows.Media.Matrix.M21%2A>|<xref:System.Windows.Media.Matrix.M22%2A>|0|  
+|<xref:System.Windows.Media.Matrix.OffsetX%2A>|<xref:System.Windows.Media.Matrix.OffsetY%2A>|1|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OffsetY">
+      <MemberSignature Language="C#" Value="public double OffsetY { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 OffsetY" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Matrix.OffsetY" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert der dritten Zeile und zweiten Spalte dieses <see cref="T:System.Windows.Media.Matrix" /> Struktur.</summary>
+        <value>Der Wert der dritten Zeile und zweiten Spalte dieses <see cref="T:System.Windows.Media.Matrix" /> Struktur. Der Standardwert ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.Matrix.OffsetY%2A> Eigenschaft lautet daher, da sie angibt, dass den Betrag, um die Koordinatenbereich entlang der y-Achse verschoben.  
+  
+ Die folgende Tabelle zeigt das Layout einer <xref:System.Windows.Media.Matrix>.  
+  
+||||  
+|-|-|-|  
+|<xref:System.Windows.Media.Matrix.M11%2A>|<xref:System.Windows.Media.Matrix.M12%2A>|0|  
+|<xref:System.Windows.Media.Matrix.M21%2A>|<xref:System.Windows.Media.Matrix.M22%2A>|0|  
+|<xref:System.Windows.Media.Matrix.OffsetX%2A>|<xref:System.Windows.Media.Matrix.OffsetY%2A>|1|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.Media.Matrix matrix1, System.Windows.Media.Matrix matrix2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Windows.Media.Matrix matrix1, valuetype System.Windows.Media.Matrix matrix2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Matrix.op_Equality(System.Windows.Media.Matrix,System.Windows.Media.Matrix)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matrix1" Type="System.Windows.Media.Matrix" />
+        <Parameter Name="matrix2" Type="System.Windows.Media.Matrix" />
+      </Parameters>
+      <Docs>
+        <param name="matrix1">Die erste zu vergleichende <see cref="T:System.Windows.Media.Matrix" />-Struktur.</param>
+        <param name="matrix2">Die zweite zu vergleichende <see cref="T:System.Windows.Media.Matrix" />-Struktur.</param>
+        <summary>Bestimmt, ob die beiden angegebenen <see cref="T:System.Windows.Media.Matrix" /> Strukturen sind identisch.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="matrix1" /> und <paramref name="matrix2" /> übereinstimmen, andernfalls werden <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Ein <xref:System.Windows.Media.Matrix> speichert seine Werte als Double-Werte. Da der Wert des einem <xref:System.Double> abnehmen kann, wenn arithmetische Operationen, darauf, eines Vergleichs zwischen zwei ausgeführt werden <xref:System.Double> fehlschlagen, Strukturen, die logisch gleich sind.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zwei <xref:System.Windows.Media.Matrix> -Strukturen auf Gleichheit.  
+  
+ [!code-csharp[MatrixExamples_snip#MatrixEqualityExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixequalityexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.Media.Matrix matrix1, System.Windows.Media.Matrix matrix2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Windows.Media.Matrix matrix1, valuetype System.Windows.Media.Matrix matrix2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Matrix.op_Inequality(System.Windows.Media.Matrix,System.Windows.Media.Matrix)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matrix1" Type="System.Windows.Media.Matrix" />
+        <Parameter Name="matrix2" Type="System.Windows.Media.Matrix" />
+      </Parameters>
+      <Docs>
+        <param name="matrix1">Die erste zu vergleichende <see cref="T:System.Windows.Media.Matrix" />-Struktur.</param>
+        <param name="matrix2">Die zweite zu vergleichende <see cref="T:System.Windows.Media.Matrix" />-Struktur.</param>
+        <summary>Bestimmt, ob die beiden angegebenen <see cref="T:System.Windows.Media.Matrix" /> Strukturen stimmen nicht überein.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="matrix1" /> und <paramref name="matrix2" /> sind nicht identisch sind, andernfalls, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Ein <xref:System.Windows.Media.Matrix> speichert seine Werte als Double-Werte. Da der Wert des einem <xref:System.Double> abnehmen kann, wenn arithmetische Operationen, darauf, eines Vergleichs zwischen zwei ausgeführt werden <xref:System.Double> fehlschlagen, Strukturen, die logisch gleich sind.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zwei <xref:System.Windows.Media.Matrix> -Strukturen auf Gleichheit.  
+  
+ [!code-csharp[MatrixExamples_snip#MatrixEqualityExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixequalityexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Multiply">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Matrix operator * (System.Windows.Media.Matrix trans1, System.Windows.Media.Matrix trans2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Windows.Media.Matrix op_Multiply(valuetype System.Windows.Media.Matrix trans1, valuetype System.Windows.Media.Matrix trans2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Matrix.op_Multiply(System.Windows.Media.Matrix,System.Windows.Media.Matrix)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Matrix</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="trans1" Type="System.Windows.Media.Matrix" />
+        <Parameter Name="trans2" Type="System.Windows.Media.Matrix" />
+      </Parameters>
+      <Docs>
+        <param name="trans1">Die erste <see cref="T:System.Windows.Media.Matrix" /> zu multiplizierende-Struktur.</param>
+        <param name="trans2">Die zweite <see cref="T:System.Windows.Media.Matrix" /> zu multiplizierende-Struktur.</param>
+        <summary>Multipliziert eine <see cref="T:System.Windows.Media.Matrix" /> durch eine andere Struktur <see cref="T:System.Windows.Media.Matrix" /> Struktur.</summary>
+        <returns>Das Ergebnis der Multiplikation von <paramref name="trans1" /> mit <paramref name="trans2" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Matrixmultiplikation ist nicht kommutativ. Multiplikation `trans1` von `trans2` ist nicht identisch mit der Multiplikation `trans2` von `trans1`.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zwei multipliziert <xref:System.Windows.Media.Matrix> Strukturen.  
+  
+ [!code-csharp[MatrixExamples_snip#MatrixMultiplicationExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixmultiplicationexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Matrix Parse (string source);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Media.Matrix Parse(string source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Matrix.Parse(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Matrix</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="source">Die <see cref="T:System.String" /> Darstellung der Matrix.</param>
+        <summary>Konvertiert eine <see cref="T:System.String" /> Darstellung einer Matrix in die entsprechende <see cref="T:System.Windows.Media.Matrix" /> Struktur.</summary>
+        <returns>Die Entsprechung <see cref="T:System.Windows.Media.Matrix" /> Struktur.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie einer Matrix in eine Zeichenfolgendarstellung Konvertieren einer <xref:System.Windows.Media.Matrix> Struktur.  
+  
+ [!code-csharp[MatrixExamples_snip#MatrixParseExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixparseexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prepend">
+      <MemberSignature Language="C#" Value="public void Prepend (System.Windows.Media.Matrix matrix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Prepend(valuetype System.Windows.Media.Matrix matrix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Matrix.Prepend(System.Windows.Media.Matrix)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matrix" Type="System.Windows.Media.Matrix" />
+      </Parameters>
+      <Docs>
+        <param name="matrix">Die <see cref="T:System.Windows.Media.Matrix" /> Struktur dieser voranstellen <see cref="T:System.Windows.Media.Matrix" /> Struktur.</param>
+        <summary>Das angegebene voran <see cref="T:System.Windows.Media.Matrix" /> Struktur dieser <see cref="T:System.Windows.Media.Matrix" /> Struktur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Vorgang entspricht dem Multiplizieren des Parameters `matrix` von diesem <xref:System.Windows.Media.Matrix> Struktur. Matrixmultiplikation ist nicht kommutativ, aber dieser Vorgang nicht identisch mit dieser Multiplikation ist <xref:System.Windows.Media.Matrix> Struktur durch den Parameter `matrix`, d. h. `matrix` * Dies entspricht nicht dem wie diese * `matrix`.  
+  
+ In eine zusammengesetzte Transformation ist die Reihenfolge der einzelnen Transformationen wichtig. Z. B. Wenn Sie zuerst drehen, und klicken Sie dann zu skalieren, übersetzen, erhalten Sie ein anderes Ergebnis als wenn Sie zuerst zu übersetzen, drehen und anschließend zu skalieren. Reihenfolge von Bedeutung ist ein Grund besteht darin, dass Transformationen wie Drehung und Skalierung in Bezug auf den Ursprung des Koordinatensystems sind. Ein Objekt, das am ursprünglichen Speicherort zentriert ist die Skalierung, ergibt ein anderes Ergebnis als die Skalierung eines Objekts, das vom Ursprung verschoben wurde. Drehen eines Objekts ist, der sich am ursprünglichen Speicherort erzeugt auf ähnliche Weise ein anderes Ergebnis als Drehen eines Objekts, das vom Ursprung verschoben wurde.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie vorangestellt wird, erfolgt eine <xref:System.Windows.Media.Matrix> auf einem anderen <xref:System.Windows.Media.Matrix>.  
+  
+ [!code-csharp[MatrixExamples_snip#MatrixPrependExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixprependexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rotate">
+      <MemberSignature Language="C#" Value="public void Rotate (double angle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Rotate(float64 angle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Matrix.Rotate(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="angle" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="angle">Der Rotationswinkel.</param>
+        <summary>Wendet eine Drehung im angegebenen Winkel um die Herkunft dieses <see cref="T:System.Windows.Media.Matrix" /> Struktur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie Drehung eine <xref:System.Windows.Media.Matrix>.  
+  
+ [!code-csharp[MatrixExamples_snip#MatrixRotateExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixrotateexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RotateAt">
+      <MemberSignature Language="C#" Value="public void RotateAt (double angle, double centerX, double centerY);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RotateAt(float64 angle, float64 centerX, float64 centerY) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Matrix.RotateAt(System.Double,System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="angle" Type="System.Double" />
+        <Parameter Name="centerX" Type="System.Double" />
+        <Parameter Name="centerY" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="angle">Der Winkel in Grad, um den die Drehung dieser Matrix.</param>
+        <param name="centerX">Die X-Koordinate des Punkts, um die Matrix gedreht.</param>
+        <param name="centerY">Die y-Koordinate des Punkts, um die Matrix gedreht.</param>
+        <summary>Dreht die Matrix der angegebenen Position.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie Drehung eine <xref:System.Windows.Media.Matrix> zu einem bestimmten Zeitpunkt.  
+  
+ [!code-csharp[MatrixExamples_snip#MatrixRotateAboutPointExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixrotateaboutpointexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RotateAtPrepend">
+      <MemberSignature Language="C#" Value="public void RotateAtPrepend (double angle, double centerX, double centerY);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RotateAtPrepend(float64 angle, float64 centerX, float64 centerY) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Matrix.RotateAtPrepend(System.Double,System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="angle" Type="System.Double" />
+        <Parameter Name="centerX" Type="System.Double" />
+        <Parameter Name="centerY" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="angle">Der Drehwinkel in Grad.</param>
+        <param name="centerX">Die X-Koordinate des Mittelpunkts der Drehung.</param>
+        <param name="centerY">Die y-Koordinate des Mittelpunkts der Drehung.</param>
+        <summary>Stellt eine Drehung des angegebenen Winkels am angegebenen Punkt zu diesem voran <see cref="T:System.Windows.Media.Matrix" /> Struktur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In eine zusammengesetzte Transformation ist die Reihenfolge der einzelnen Transformationen wichtig. Z. B. Wenn Sie zuerst drehen, und klicken Sie dann zu skalieren, übersetzen, erhalten Sie ein anderes Ergebnis als wenn Sie zuerst zu übersetzen, drehen und anschließend zu skalieren. Reihenfolge von Bedeutung ist ein Grund besteht darin, dass Transformationen wie Drehung und Skalierung in Bezug auf den Ursprung des Koordinatensystems sind. Ein Objekt, das am ursprünglichen Speicherort zentriert ist die Skalierung, ergibt ein anderes Ergebnis als die Skalierung eines Objekts, das vom Ursprung verschoben wurde. Drehen eines Objekts ist, der sich am ursprünglichen Speicherort erzeugt auf ähnliche Weise ein anderes Ergebnis als Drehen eines Objekts, das vom Ursprung verschoben wurde.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie eine Drehung vorangestellt wird, erfolgt eine <xref:System.Windows.Media.Matrix>.  
+  
+ [!code-csharp[MatrixExamples_snip#MatrixPrependRotateExamples_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixprependrotateexamples_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RotatePrepend">
+      <MemberSignature Language="C#" Value="public void RotatePrepend (double angle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RotatePrepend(float64 angle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Matrix.RotatePrepend(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="angle" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="angle">Der Winkel der Drehung voran.</param>
+        <summary>Stellt eine Drehung des angegebenen Winkels dieser voran <see cref="T:System.Windows.Media.Matrix" /> Struktur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In eine zusammengesetzte Transformation ist die Reihenfolge der einzelnen Transformationen wichtig. Z. B. Wenn Sie zuerst drehen, und klicken Sie dann zu skalieren, übersetzen, erhalten Sie ein anderes Ergebnis als wenn Sie zuerst zu übersetzen, drehen und anschließend zu skalieren. Reihenfolge von Bedeutung ist ein Grund besteht darin, dass Transformationen wie Drehung und Skalierung in Bezug auf den Ursprung des Koordinatensystems sind. Ein Objekt, das am ursprünglichen Speicherort zentriert ist die Skalierung, ergibt ein anderes Ergebnis als die Skalierung eines Objekts, das vom Ursprung verschoben wurde. Drehen eines Objekts ist, der sich am ursprünglichen Speicherort erzeugt auf ähnliche Weise ein anderes Ergebnis als Drehen eines Objekts, das vom Ursprung verschoben wurde.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie eine Drehung vorangestellt wird, erfolgt eine <xref:System.Windows.Media.Matrix>.  
+  
+ [!code-csharp[MatrixExamples_snip#MatrixPrependRotateExamples_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixprependrotateexamples_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scale">
+      <MemberSignature Language="C#" Value="public void Scale (double scaleX, double scaleY);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Scale(float64 scaleX, float64 scaleY) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Matrix.Scale(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scaleX" Type="System.Double" />
+        <Parameter Name="scaleY" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="scaleX">Der Wert für die Skalierung dieser <see cref="T:System.Windows.Media.Matrix" /> entlang der x-Achse.</param>
+        <param name="scaleY">Der Wert für die Skalierung dieser <see cref="T:System.Windows.Media.Matrix" /> entlang der y-Achse.</param>
+        <summary>Fügt den angegebenen Skalierungsvektor dieser <see cref="T:System.Windows.Media.Matrix" /> Struktur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie beim Skalieren einer <xref:System.Windows.Media.Matrix> Struktur.  
+  
+ [!code-csharp[MatrixExamples_snip#MatrixScaleExamples_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixscaleexamples_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScaleAt">
+      <MemberSignature Language="C#" Value="public void ScaleAt (double scaleX, double scaleY, double centerX, double centerY);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ScaleAt(float64 scaleX, float64 scaleY, float64 centerX, float64 centerY) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Matrix.ScaleAt(System.Double,System.Double,System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scaleX" Type="System.Double" />
+        <Parameter Name="scaleY" Type="System.Double" />
+        <Parameter Name="centerX" Type="System.Double" />
+        <Parameter Name="centerY" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="scaleX">Der Betrag, um die Skalierung dieser <see cref="T:System.Windows.Media.Matrix" /> entlang der x-Achse.</param>
+        <param name="scaleY">Der Betrag, um die Skalierung dieser <see cref="T:System.Windows.Media.Matrix" /> entlang der y-Achse.</param>
+        <param name="centerX">Die X-Koordinate des Mittelpunkts für die Skalierung.</param>
+        <param name="centerY">Die y-Koordinate des Mittelpunkts für die Skalierung.</param>
+        <summary>Skaliert das <see cref="T:System.Windows.Media.Matrix" /> um den angegebenen Betrag über den angegebenen Punkt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie beim Skalieren einer <xref:System.Windows.Media.Matrix> Struktur.  
+  
+ [!code-csharp[MatrixExamples_snip#MatrixScaleExamples_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixscaleexamples_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScaleAtPrepend">
+      <MemberSignature Language="C#" Value="public void ScaleAtPrepend (double scaleX, double scaleY, double centerX, double centerY);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ScaleAtPrepend(float64 scaleX, float64 scaleY, float64 centerX, float64 centerY) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Matrix.ScaleAtPrepend(System.Double,System.Double,System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scaleX" Type="System.Double" />
+        <Parameter Name="scaleY" Type="System.Double" />
+        <Parameter Name="centerX" Type="System.Double" />
+        <Parameter Name="centerY" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="scaleX">Der Skalierungsfaktor für die x-Achse.</param>
+        <param name="scaleY">Der Skalierungsfaktor für die y-Achse.</param>
+        <param name="centerX">Die X-Koordinate des Punkts an, welche der Skalierungsvorgang ausgeführt wird.</param>
+        <param name="centerY">Die y-Koordinate des Punkts an, welche der Skalierungsvorgang ausgeführt wird.</param>
+        <summary>Über den angegebenen Punkt dieses dem angegebenen Maßstab voran <see cref="T:System.Windows.Media.Matrix" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In eine zusammengesetzte Transformation ist die Reihenfolge der einzelnen Transformationen wichtig. Z. B. Wenn Sie zuerst drehen, und klicken Sie dann zu skalieren, übersetzen, erhalten Sie ein anderes Ergebnis als wenn Sie zuerst zu übersetzen, drehen und anschließend zu skalieren. Reihenfolge von Bedeutung ist ein Grund besteht darin, dass Transformationen wie Drehung und Skalierung in Bezug auf den Ursprung des Koordinatensystems sind. Ein Objekt, das am ursprünglichen Speicherort zentriert ist die Skalierung, ergibt ein anderes Ergebnis als die Skalierung eines Objekts, das vom Ursprung verschoben wurde. Drehen eines Objekts ist, der sich am ursprünglichen Speicherort erzeugt auf ähnliche Weise ein anderes Ergebnis als Drehen eines Objekts, das vom Ursprung verschoben wurde.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie eine Skalierung vorangestellt wird, erfolgt eine <xref:System.Windows.Media.Matrix>.  
+  
+ [!code-csharp[MatrixExamples_snip#MatrixPrependScaleExamples_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixprependscaleexamples_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScalePrepend">
+      <MemberSignature Language="C#" Value="public void ScalePrepend (double scaleX, double scaleY);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ScalePrepend(float64 scaleX, float64 scaleY) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Matrix.ScalePrepend(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scaleX" Type="System.Double" />
+        <Parameter Name="scaleY" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="scaleX">Der Wert für die Skalierung dieser <see cref="T:System.Windows.Media.Matrix" /> Struktur entlang der x-Achse.</param>
+        <param name="scaleY">Der Wert für die Skalierung dieser <see cref="T:System.Windows.Media.Matrix" /> Struktur entlang der y-Achse.</param>
+        <summary>Stellt den angegebenen Skalierungsvektor dieser voran <see cref="T:System.Windows.Media.Matrix" /> Struktur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In eine zusammengesetzte Transformation ist die Reihenfolge der einzelnen Transformationen wichtig. Z. B. Wenn Sie zuerst drehen, und klicken Sie dann zu skalieren, übersetzen, erhalten Sie ein anderes Ergebnis als wenn Sie zuerst zu übersetzen, drehen und anschließend zu skalieren. Reihenfolge von Bedeutung ist ein Grund besteht darin, dass Transformationen wie Drehung und Skalierung in Bezug auf den Ursprung des Koordinatensystems sind. Ein Objekt, das am ursprünglichen Speicherort zentriert ist die Skalierung, ergibt ein anderes Ergebnis als die Skalierung eines Objekts, das vom Ursprung verschoben wurde. Drehen eines Objekts ist, der sich am ursprünglichen Speicherort erzeugt auf ähnliche Weise ein anderes Ergebnis als Drehen eines Objekts, das vom Ursprung verschoben wurde.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie eine Skalierung vorangestellt wird, erfolgt eine <xref:System.Windows.Media.Matrix> Struktur.  
+  
+ [!code-csharp[MatrixExamples_snip#MatrixPrependScaleExamples_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixprependscaleexamples_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetIdentity">
+      <MemberSignature Language="C#" Value="public void SetIdentity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetIdentity() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Matrix.SetIdentity" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dies ändert <see cref="T:System.Windows.Media.Matrix" /> Struktur in eine Identitätsmatrix.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Identitätsmatrix verfügt über einen Wert von 1 in den Koeffizienten [1,1], [2,2], [3,3] und der Wert 0 in den restlichen Koeffizienten. Dies entspricht dem Festlegen <xref:System.Windows.Media.Matrix.M11%2A> und <xref:System.Windows.Media.Matrix.M22%2A> auf 1 und <xref:System.Windows.Media.Matrix.M12%2A>, <xref:System.Windows.Media.Matrix.M21%2A>, <xref:System.Windows.Media.Matrix.OffsetX%2A>, und <xref:System.Windows.Media.Matrix.OffsetY%2A> auf 0. In einer affinen Matrix, wobei es sich die Implementierung, die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] verwendet für die <xref:System.Windows.Media.Matrix> Struktur Koeffizienten [3,1], [3,2], [3.3] immer die Werte 0,0,1 bzw. aufweisen.  
+  
+||||  
+|-|-|-|  
+|1|0|0|  
+|0|1|0|  
+|0|0|1|  
+  
+ Für eine Identitätsmatrix der <xref:System.Windows.Media.Matrix.ToString%2A> Methode gibt die Zeichenfolge "Identity", anstatt die Koeffizienten, die von der <xref:System.Windows.Media.Matrix>.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt Informationen zum Aktivieren einer <xref:System.Windows.Media.Matrix> Struktur in eine Identitätsmatrix.  
+  
+ [!code-csharp[MatrixExamples_snip#MatrixIdentityExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixidentityexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Skew">
+      <MemberSignature Language="C#" Value="public void Skew (double skewX, double skewY);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Skew(float64 skewX, float64 skewY) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Matrix.Skew(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="skewX" Type="System.Double" />
+        <Parameter Name="skewY" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="skewX">Der Winkel in der X-Dimension, um dies verzerrt <see cref="T:System.Windows.Media.Matrix" />.</param>
+        <param name="skewY">Der Winkel in der y-Dimension, um dies verzerrt <see cref="T:System.Windows.Media.Matrix" />.</param>
+        <summary>Fügt eine Neigung mit den angegebenen Grad in der x- und y-Achse Dimensionen dieser <see cref="T:System.Windows.Media.Matrix" /> Struktur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ In diesem Beispiel wird gezeigt, wie auf verzerren eine <xref:System.Windows.Media.Matrix> Struktur.  
+  
+ [!code-csharp[MatrixExamples_snip#MatrixSkewExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixskewexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SkewPrepend">
+      <MemberSignature Language="C#" Value="public void SkewPrepend (double skewX, double skewY);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SkewPrepend(float64 skewX, float64 skewY) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Matrix.SkewPrepend(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="skewX" Type="System.Double" />
+        <Parameter Name="skewY" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="skewX">Der Winkel in der X-Dimension, um dies verzerrt <see cref="T:System.Windows.Media.Matrix" />.</param>
+        <param name="skewY">Der Winkel in der y-Dimension, um dies verzerrt <see cref="T:System.Windows.Media.Matrix" />.</param>
+        <summary>Stellt eine Neigung mit den angegebenen Grad in der x- und y-Achse voran Dimensionen dieser <see cref="T:System.Windows.Media.Matrix" /> Struktur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In eine zusammengesetzte Transformation ist die Reihenfolge der einzelnen Transformationen wichtig. Z. B. Wenn Sie zuerst drehen, und klicken Sie dann zu skalieren, übersetzen, erhalten Sie ein anderes Ergebnis als wenn Sie zuerst zu übersetzen, drehen und anschließend zu skalieren. Reihenfolge von Bedeutung ist ein Grund besteht darin, dass Transformationen wie Drehung und Skalierung in Bezug auf den Ursprung des Koordinatensystems sind. Ein Objekt, das am ursprünglichen Speicherort zentriert ist die Skalierung, ergibt ein anderes Ergebnis als die Skalierung eines Objekts, das vom Ursprung verschoben wurde. Drehen eines Objekts ist, der sich am ursprünglichen Speicherort erzeugt auf ähnliche Weise ein anderes Ergebnis als Drehen eines Objekts, das vom Ursprung verschoben wurde.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel wird gezeigt, wie eine Neigung vorangestellt wird, erfolgt eine <xref:System.Windows.Media.Matrix> Struktur.  
+  
+ [!code-csharp[MatrixExamples_snip#MatrixSkewPrependExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixskewprependexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IFormattable.ToString">
+      <MemberSignature Language="C#" Value="string IFormattable.ToString (string format, IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.IFormattable.ToString(string format, class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Matrix.System#IFormattable#ToString(System.String,System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="format">Das zu verwendende Format.  
+  
+ - oder -   
+  
+ Ein null-Verweis (<see langword="Nothing" /> in Visual Basic), verwenden Sie das Standardformat für den Typ des definiert die <see cref="T:System.IFormattable" /> Implementierung.</param>
+        <param name="provider">Der zum Formatieren des Werts zu verwendende Anbieter.  
+  
+ - oder -   
+  
+ Ein null-Verweis (<see langword="Nothing" /> in Visual Basic) um die Zahlenformatinformationen aus dem aktuellen Gebietsschema des Betriebssystems abzurufen.</param>
+        <summary>Formatiert den Wert der aktuellen Instanz mit dem angegebenen Format.</summary>
+        <returns>Der Wert der aktuellen Instanz im angegebenen Format.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="ToString">
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Erstellt eine <see cref="T:System.String" /> Darstellung dieses <see cref="T:System.Windows.Media.Matrix" /> Struktur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese <xref:System.Windows.Media.Matrix> Struktur eine Identitätsmatrix ist, wird die Zeichenfolge "Identity" zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Matrix.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine <see cref="T:System.String" /> Darstellung dieses <see cref="T:System.Windows.Media.Matrix" /> Struktur.</summary>
+        <returns>Ein <see cref="T:System.String" /> , enthält die <see cref="P:System.Windows.Media.Matrix.M11" />, <see cref="P:System.Windows.Media.Matrix.M12" />, <see cref="P:System.Windows.Media.Matrix.M21" />, <see cref="P:System.Windows.Media.Matrix.M22" />, <see cref="P:System.Windows.Media.Matrix.OffsetX" />, und <see cref="P:System.Windows.Media.Matrix.OffsetY" /> Werte dieses <see cref="T:System.Windows.Media.Matrix" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese <xref:System.Windows.Media.Matrix> ist ein <xref:System.Windows.Media.Matrix.Identity%2A> Matrix, die Zeichenfolge "Identity" zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ToString(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Matrix.ToString(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Die kulturspezifische Formatierungsinformationen.</param>
+        <summary>Erstellt eine <see cref="T:System.String" /> Darstellung dieses <see cref="T:System.Windows.Media.Matrix" /> Struktur mit kulturspezifische Formatierungsinformationen.</summary>
+        <returns>Ein <see cref="T:System.String" /> , enthält die <see cref="P:System.Windows.Media.Matrix.M11" />, <see cref="P:System.Windows.Media.Matrix.M12" />, <see cref="P:System.Windows.Media.Matrix.M21" />, <see cref="P:System.Windows.Media.Matrix.M22" />, <see cref="P:System.Windows.Media.Matrix.OffsetX" />, und <see cref="P:System.Windows.Media.Matrix.OffsetY" /> Werte dieses <see cref="T:System.Windows.Media.Matrix" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese <xref:System.Windows.Media.Matrix> Struktur eine Identitätsmatrix ist, wird die Zeichenfolge "Identity" zurückgegeben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Transform">
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Transformiert den angegebenen Punkt, Array von Punkten, Vektor oder Array von Vektoren von diesem <see cref="T:System.Windows.Media.Matrix" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie eine <xref:System.Windows.Media.Matrix> Punkte und Vektoren transformiert.  
+  
+ [!code-csharp[MatrixExamples_snip#MatrixTransformExamples_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixtransformexamples_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public System.Windows.Point Transform (System.Windows.Point point);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Point Transform(valuetype System.Windows.Point point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Matrix.Transform(System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="point">Der zu transformierende Punkt.</param>
+        <summary>Transformiert den angegebenen Punkt von den <see cref="T:System.Windows.Media.Matrix" /> und gibt das Ergebnis zurück.</summary>
+        <returns>Das Ergebnis der Transformation <paramref name="point" /> von diesem <see cref="T:System.Windows.Media.Matrix" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie eine <xref:System.Windows.Media.Matrix> Punkte und Vektoren transformiert.  
+  
+ [!code-csharp[MatrixExamples_snip#MatrixTransformExamples_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixtransformexamples_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public void Transform (System.Windows.Point[] points);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Transform(valuetype System.Windows.Point[] points) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Matrix.Transform(System.Windows.Point[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="points" Type="System.Windows.Point[]" />
+      </Parameters>
+      <Docs>
+        <param name="points">Die zu transformierenden Punkte. Die ursprünglichen Punkte im Array werden durch ihre transformierten Werte ersetzt.</param>
+        <summary>Transformiert die angegebenen Punkten von diesem <see cref="T:System.Windows.Media.Matrix" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie eine <xref:System.Windows.Media.Matrix> Punkte und Vektoren transformiert.  
+  
+ [!code-csharp[MatrixExamples_snip#MatrixTransformExamples_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixtransformexamples_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public System.Windows.Vector Transform (System.Windows.Vector vector);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Vector Transform(valuetype System.Windows.Vector vector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Matrix.Transform(System.Windows.Vector)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Vector</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="vector" Type="System.Windows.Vector" />
+      </Parameters>
+      <Docs>
+        <param name="vector">Der zu transformierende Vektor.</param>
+        <summary>Transformiert den angegebenen Vektor durch dieses <see cref="T:System.Windows.Media.Matrix" />.</summary>
+        <returns>Das Ergebnis der Transformation <paramref name="vector" /> von diesem <see cref="T:System.Windows.Media.Matrix" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie eine <xref:System.Windows.Media.Matrix> Punkte und Vektoren transformiert.  
+  
+ [!code-csharp[MatrixExamples_snip#MatrixTransformExamples_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixtransformexamples_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public void Transform (System.Windows.Vector[] vectors);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Transform(valuetype System.Windows.Vector[] vectors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Matrix.Transform(System.Windows.Vector[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="vectors" Type="System.Windows.Vector[]" />
+      </Parameters>
+      <Docs>
+        <param name="vectors">Die zu transformierenden Vektoren. Die ursprünglichen Vektoren im Array werden durch ihre transformierten Werte ersetzt.</param>
+        <summary>Transformiert die angegebenen Vektoren mit dieser <see cref="T:System.Windows.Media.Matrix" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie eine <xref:System.Windows.Media.Matrix> Punkte und Vektoren transformiert.  
+  
+ [!code-csharp[MatrixExamples_snip#MatrixTransformExamples_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixtransformexamples_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Translate">
+      <MemberSignature Language="C#" Value="public void Translate (double offsetX, double offsetY);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Translate(float64 offsetX, float64 offsetY) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Matrix.Translate(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offsetX" Type="System.Double" />
+        <Parameter Name="offsetY" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="offsetX">Der Betrag für den offset <see cref="T:System.Windows.Media.Matrix" /> entlang der x-Achse.</param>
+        <param name="offsetY">Der Betrag für den offset <see cref="T:System.Windows.Media.Matrix" /> entlang der y-Achse.</param>
+        <summary>Fügt eine Verschiebung um den angegebenen Offsets dieser <see cref="T:System.Windows.Media.Matrix" /> Struktur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie an eine Verschiebung angefügt eine <xref:System.Windows.Media.Matrix> Struktur.  
+  
+ [!code-csharp[MatrixExamples_snip#MatrixTranslateExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixtranslateexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TranslatePrepend">
+      <MemberSignature Language="C#" Value="public void TranslatePrepend (double offsetX, double offsetY);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TranslatePrepend(float64 offsetX, float64 offsetY) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Matrix.TranslatePrepend(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offsetX" Type="System.Double" />
+        <Parameter Name="offsetY" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="offsetX">Der Betrag für den offset <see cref="T:System.Windows.Media.Matrix" /> entlang der x-Achse.</param>
+        <param name="offsetY">Der Betrag für den offset <see cref="T:System.Windows.Media.Matrix" /> entlang der y-Achse.</param>
+        <summary>Stellt eine Übersetzung des angegebenen Offsets voran <see cref="T:System.Windows.Media.Matrix" /> Struktur.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In eine zusammengesetzte Transformation ist die Reihenfolge der einzelnen Transformationen wichtig. Z. B. Wenn Sie zuerst drehen, und klicken Sie dann zu skalieren, übersetzen, erhalten Sie ein anderes Ergebnis als wenn Sie zuerst zu übersetzen, drehen und anschließend zu skalieren. Reihenfolge von Bedeutung ist ein Grund besteht darin, dass Transformationen wie Drehung und Skalierung in Bezug auf den Ursprung des Koordinatensystems sind. Ein Objekt, das am ursprünglichen Speicherort zentriert ist die Skalierung, ergibt ein anderes Ergebnis als die Skalierung eines Objekts, das vom Ursprung verschoben wurde. Drehen eines Objekts ist, der sich am ursprünglichen Speicherort erzeugt auf ähnliche Weise ein anderes Ergebnis als Drehen eines Objekts, das vom Ursprung verschoben wurde.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt wie eine Verschiebung voranstellen eine <xref:System.Windows.Media.Matrix> Struktur.  
+  
+ [!code-csharp[MatrixExamples_snip#MatrixTranslatePrependExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixtranslateprependexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

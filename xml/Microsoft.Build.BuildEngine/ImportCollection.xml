@@ -1,0 +1,208 @@
+<Type Name="ImportCollection" FullName="Microsoft.Build.BuildEngine.ImportCollection">
+  <TypeSignature Language="C#" Value="public class ImportCollection : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ImportCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.BuildEngine.ImportCollection" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Auflistung aller [Import](http://msdn.microsoft.com/library/3bfecaf1-69fd-4008-b651-c9dafd4389d9) Elemente in einem Projekt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddNewImport">
+      <MemberSignature Language="C#" Value="public void AddNewImport (string projectFile, string condition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddNewImport(string projectFile, string condition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.ImportCollection.AddNewImport(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="projectFile" Type="System.String" />
+        <Parameter Name="condition" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="projectFile">Eine erforderliche Zeichenfolge, die den Namen der Projektdatei für die &lt;Import&gt; Anweisung hinzugefügt werden. Beispiel: myproject.csproj.</param>
+        <param name="condition">Eine optionale Zeichenfolge, die angibt, ob das Element verarbeitet wird. Wenn <c>Bedingung</c> ist <see langword="true" />, klicken Sie dann auf den angegebenen &lt;Import&gt; -Tag hinzugefügt, wenn <see langword="false" />, es ist nicht.</param>
+        <summary>Ermöglicht programmgesteuerten Hinzufügen eines neuen Hosts [ &lt;Import&gt; ](http://msdn.microsoft.com/library/3bfecaf1-69fd-4008-b651-c9dafd4389d9) -Tag, um eine Projektdatei, die vom Host bearbeitet werden.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Microsoft.Build.BuildEngine.Import[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class Microsoft.Build.BuildEngine.Import[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.ImportCollection.CopyTo(Microsoft.Build.BuildEngine.Import[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="Microsoft.Build.BuildEngine.Import[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale <see cref="T:System.Array" /> von <see cref="T:Microsoft.Build.BuildEngine.Import" /> Objekte, die das Ziel der aus kopierten Elemente ist <see cref="T:Microsoft.Build.BuildEngine.ImportCollection" />. Für das <see cref="T:System.Array" /> muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="index">Der nullbasierte Index im <c>Array</c> an dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die gesamte <see cref="T:Microsoft.Build.BuildEngine.ImportCollection" /> in ein kompatibles eindimensionales <see cref="T:System.Array" /> von <see cref="T:Microsoft.Build.BuildEngine.Import" /> -Objekten, beginnend am angegebenen Index des Zielarrays.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.ImportCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das eindimensionale <see cref="T:System.Array" />, das das Ziel der aus der <see cref="T:Microsoft.Build.BuildEngine.ImportCollection" /> kopierten Elemente ist. Für das <see cref="T:System.Array" /> muss eine nullbasierte Indizierung verwendet werden.</param>
+        <param name="index">Der nullbasierte Index im <c>Array</c> an dem der Kopiervorgang beginnt.</param>
+        <summary>Kopiert die gesamte <see cref="T:Microsoft.Build.BuildEngine.ImportCollection" />-Instanz in ein kompatibles eindimensionales <see cref="T:System.Array" />, beginnend am angegebenen Index des Zielarrays.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.ImportCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, der Anzahl der <see cref="T:Microsoft.Build.BuildEngine.Import" /> Objekte in der <see cref="T:Microsoft.Build.BuildEngine.ImportCollection" />.</summary>
+        <value>Eine ganze Zahl, die die Anzahl der <see cref="T:Microsoft.Build.BuildEngine.Import" />-Objekte in der Auflistung darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Jede <xref:Microsoft.Build.BuildEngine.Import> Objekt in der Auflistung stellt ein Element im Projekt dar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.ImportCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der die <see cref="T:Microsoft.Build.BuildEngine.ImportCollection" /> durchläuft.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" /> für die gesamte <see cref="T:Microsoft.Build.BuildEngine.ImportCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ermöglicht den Aufrufer die Verwendung der `foreach` -Anweisung der Programmiersprache c# (`for each` in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]) zum Durchlaufen der einzelnen <xref:Microsoft.Build.BuildEngine.Import> Objekte in der <xref:Microsoft.Build.BuildEngine.ImportCollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.ImportCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob der Zugriff auf die <see cref="T:Microsoft.Build.BuildEngine.ImportCollection" /> synchronisiert (threadsicher) ist.</summary>
+        <value>
+          <see langword="true" />, wenn der Zugriff auf das <see cref="T:Microsoft.Build.BuildEngine.ImportCollection" /> synchronisiert (threadsicher) ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveImport">
+      <MemberSignature Language="C#" Value="public void RemoveImport (Microsoft.Build.BuildEngine.Import importToRemove);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveImport(class Microsoft.Build.BuildEngine.Import importToRemove) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.ImportCollection.RemoveImport(Microsoft.Build.BuildEngine.Import)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="importToRemove" Type="Microsoft.Build.BuildEngine.Import" />
+      </Parameters>
+      <Docs>
+        <param name="importToRemove">Eine Zeichenfolge, die den Namen des der &lt;Import&gt; -Tag, um aus der Projektdatei zu entfernen.</param>
+        <summary>Ermöglicht Hosts das programmgesteuerte Entfernen [ &lt;Import&gt; ](http://msdn.microsoft.com/library/3bfecaf1-69fd-4008-b651-c9dafd4389d9) Tags, die Teil eines Projekts werden Datei, die vom Host bearbeitet werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entfernen eines Imports kennzeichnet das Projekt als geändert, was bedeutet, dass das Projekt während der andere Vorgänge auf die Projektinstanz irgendwann neu ausgewertet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.ImportCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt ab, mit dem der Zugriff auf <see cref="T:Microsoft.Build.BuildEngine.ImportCollection" /> synchronisiert werden kann.</summary>
+        <value>Ein Objekt, mit dem der Zugriff auf die <see cref="T:Microsoft.Build.BuildEngine.ImportCollection" /> synchronisiert werden kann.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

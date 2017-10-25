@@ -1,0 +1,250 @@
+<Type Name="WebPartVerbCollection" FullName="System.Web.UI.WebControls.WebParts.WebPartVerbCollection">
+  <TypeSignature Language="C#" Value="public sealed class WebPartVerbCollection : System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WebPartVerbCollection extends System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebPartVerbCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ReadOnlyCollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Auflistung von benutzerdefinierten Webparts-Verben dar. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Webparts-Verben sind interaktiven Benutzeroberfläche (UI) Elemente, die auf ein Menü oder die Titelleiste der Statusleiste des Webparts-Steuerelement angezeigt werden. Webparts-Zone bietet einen Standardsatz von Verben, die im Webparts-Verbenmenü gerendert werden an ein Steuerelement des Webparts aus. Eine benutzerdefinierte Webparts-Zone oder Webparts-Steuerelemente kann in diesem Menü zusätzliche Verben hinzufügen.  
+  
+ ASP.NET verfügt über mehrere Standardverben standardmäßig für alle Steuerelemente in einer Webparts zone, z. B. das Schließen und Verben minimieren. Es gibt Standardverben zum Öffnen, schließen, bearbeiten und Minimieren eines Steuerelements und andere Verben zum Exportieren einer Definition für das Steuerelement oder das Laden einer Hilfedatei.  
+  
+ Sie können neue Verben erstellen, die im Webparts-Verb-Menü hinzugefügt werden. Ein Steuerelement kann von erben die <xref:System.Web.UI.WebControls.WebParts.WebPart> Basisklasse und hinzufügen <xref:System.Web.UI.WebControls.WebParts.WebPartVerb> Datenbankobjekte in einer <xref:System.Web.UI.WebControls.WebParts.WebPartVerbCollection> Auflistung. Dieser Sammlung kann anschließend hinzugefügt werden, um die <xref:System.Web.UI.WebControls.WebParts.WebPart.Verbs%2A> -Auflistung des Steuerelements.  
+  
+ Kann auch ein Steuerelement implementieren, die <xref:System.Web.UI.WebControls.WebParts.IWebActionable> Schnittstelle, und überschreiben die <xref:System.Web.UI.WebControls.WebParts.IWebActionable.Verbs%2A> Eigenschaft. Anschließend können Sie eine <xref:System.Web.UI.WebControls.WebParts.WebPartVerbCollection> Auflistung benutzerdefinierte Verben an ein Steuerelement hinzufügen.  
+  
+ Diese Klasse implementiert <xref:System.Collections.ReadOnlyCollectionBase>, stellt eine nicht generische, schreibgeschützte Auflistung.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartVerbCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartVerbCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerbCollection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt ein leeres <xref:System.Web.UI.WebControls.WebParts.WebPartVerbCollection> Objekt. So erstellen eine neue Instanz der <xref:System.Web.UI.WebControls.WebParts.WebPartVerbCollection> mit einer bestehenden Kollektion von Webparts-Verben, verwenden Sie können <xref:System.Web.UI.WebControls.WebParts.WebPartVerbCollection.%23ctor%28System.Collections.ICollection%29>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartVerbCollection (System.Collections.ICollection verbs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.ICollection verbs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartVerbCollection.#ctor(System.Collections.ICollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="verbs" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="verbs">Ein Objekt abgeleitet <see cref="T:System.Collections.ICollection" /> , enthält einen Satz von Webparts-Verben.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerbCollection" /> -Klasse unter Verwendung der angegebenen Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt eine Instanz des <xref:System.Web.UI.WebControls.WebParts.WebPartVerbCollection> mithilfe der angegebenen Verben-Auflistung. Diese Auflistung kann jedes Objekt, das von abgeleitet sein <xref:System.Collections.ICollection> , enthält einen Satz von Webparts-Verben.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartVerbCollection (System.Web.UI.WebControls.WebParts.WebPartVerbCollection existingVerbs, System.Collections.ICollection verbs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.WebParts.WebPartVerbCollection existingVerbs, class System.Collections.ICollection verbs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartVerbCollection.#ctor(System.Web.UI.WebControls.WebParts.WebPartVerbCollection,System.Collections.ICollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="existingVerbs" Type="System.Web.UI.WebControls.WebParts.WebPartVerbCollection" />
+        <Parameter Name="verbs" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="existingVerbs">Ein vorhandener <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerbCollection" />.</param>
+        <param name="verbs">Ein Objekt abgeleitet <see cref="T:System.Collections.ICollection" /> , enthält einen Satz von Webparts-Verben.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerbCollection" /> -Klasse unter Verwendung der angegebenen Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor kann zum Kombinieren von zwei Webparts Verb Sammlungen verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Web.UI.WebControls.WebParts.WebPartVerb value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Web.UI.WebControls.WebParts.WebPartVerb value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartVerbCollection.Contains(System.Web.UI.WebControls.WebParts.WebPartVerb)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.UI.WebControls.WebParts.WebPartVerb" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerb" /> gefunden werden.</param>
+        <summary>Sucht in der Auflistung des Webparts-Verb für die angegebene <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerb" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />Wenn die Auflistung der Webparts-Verb enthält; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum Verwenden dieser Methode finden Sie unter ihrer Basismethode <xref:System.Collections.CollectionBase.System%23Collections%23IList%23Contains%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.UI.WebControls.WebParts.WebPartVerb[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.UI.WebControls.WebParts.WebPartVerb[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartVerbCollection.CopyTo(System.Web.UI.WebControls.WebParts.WebPartVerb[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Web.UI.WebControls.WebParts.WebPartVerb[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Das Array, die Elemente kopiert werden.</param>
+        <param name="index">Der Index, in dem Kopiervorgang beginnen soll.</param>
+        <summary>Kopiert die Elemente der Auflistung in das angegebene Array, beginnend am angegebenen Index.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum Verwenden dieser Methode finden Sie unter <xref:System.Collections.ICollection.CopyTo%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.WebControls.WebParts.WebPartVerbCollection Empty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.WebControls.WebParts.WebPartVerbCollection Empty" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.WebPartVerbCollection.Empty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartVerbCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt eine leere Auflistung, die Sie verwenden können, anstatt ein neue zu erstellen. Diese statische Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine statische, schreibgeschützte, leere Instanz der <xref:System.Web.UI.WebControls.WebParts.WebPartVerbCollection> verringert die speicherauslastung in Fällen, in denen Sie möchten eine leere Auflistungsinstanz zurückzugebenden den richtigen Objekttyp von einer Methode oder die Instanz mit einem anderen Objekt verglichen werden soll, Sie müssen jedoch nicht zum Hinzufügen von Mitgliedern zu, den -Instanz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.UI.WebControls.WebParts.WebPartVerb value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Web.UI.WebControls.WebParts.WebPartVerb value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartVerbCollection.IndexOf(System.Web.UI.WebControls.WebParts.WebPartVerb)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.UI.WebControls.WebParts.WebPartVerb" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerb" /> gespeichert werden soll.</param>
+        <summary>Sucht das angegebene Webparts-Verb, und gibt den nullbasierten Index des ersten Vorkommens innerhalb der gesamten Auflistung zurück.</summary>
+        <returns>Der Index des Webparts-Verbs.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum Verwenden dieser Methode finden Sie unter <xref:System.Collections.CollectionBase.System%23Collections%23IList%23IndexOf%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.WebPartVerb this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartVerb Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartVerbCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartVerb</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Indexwert des Webparts-Verbs abgerufen werden sollen.</param>
+        <summary>Ruft eine Webparts-Verb aus der Auflistung am angegebenen Index ab.</summary>
+        <value>Webparts-Verb aus der Auflistung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Eigenschaft auf um einer Webparts-Verben zu erhalten, wenn Sie wissen, dass den Index des Verbs in der Auflistung. Sie können auch die <xref:System.Web.UI.WebControls.WebParts.WebPartVerbCollection.Contains%2A> oder <xref:System.Web.UI.WebControls.WebParts.WebPartVerbCollection.IndexOf%2A> Methode, um ein bestimmtes Verb in der Auflistung gesucht werden soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

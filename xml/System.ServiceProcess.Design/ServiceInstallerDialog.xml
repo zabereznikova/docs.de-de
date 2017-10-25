@@ -1,0 +1,170 @@
+<Type Name="ServiceInstallerDialog" FullName="System.ServiceProcess.Design.ServiceInstallerDialog">
+  <TypeSignature Language="C#" Value="public class ServiceInstallerDialog : System.Windows.Forms.Form" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ServiceInstallerDialog extends System.Windows.Forms.Form" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceProcess.Design.ServiceInstallerDialog" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceProcess</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Form</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Dialogfeld zum Anfordern von Kontoinformationen einer Windows-Dienstanwendung bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In der Regel wird Sie nicht verwenden die <xref:System.ServiceProcess.Design.ServiceInstallerDialog> -Klasse direkt innerhalb des Codes; dieses Dialogfeld wird in der Regel vom Installationsprogramm für eine Windows-dienstanwendung verwendet.  
+  
+ Wenn eine <xref:System.ServiceProcess.ServiceProcessInstaller> Objekt hat die <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> festgelegt `User`, und entweder die <xref:System.ServiceProcess.ServiceProcessInstaller.Username%2A> oder <xref:System.ServiceProcess.ServiceProcessInstaller.Password%2A> ist eine leere Zeichenfolge (""), und klicken Sie dann das Installationsprogramm verwendet <xref:System.ServiceProcess.Design.ServiceInstallerDialog> für diese Werte aufgefordert.  
+  
+ <xref:System.ServiceProcess.Design.ServiceInstallerDialog>leitet sich von <xref:System.Windows.Forms.Form>; verwenden Sie die <xref:System.Windows.Forms.Form> Klasse, Methoden und Eigenschaften zum Anzeigen und bearbeiten das Dialogfeld ". Verwenden Sie z. B. <xref:System.Windows.Forms.Form.ShowDialog%2A> , zeigen Sie das Formular, und überprüfen Sie die <xref:System.ServiceProcess.Design.ServiceInstallerDialog.Result%2A> vor dem Überprüfen des Eingabetext für die <xref:System.ServiceProcess.Design.ServiceInstallerDialog.Username%2A> und <xref:System.ServiceProcess.Design.ServiceInstallerDialog.Password%2A> Eigenschaften.  
+  
+> [!NOTE]
+>  <xref:System.ServiceProcess.Design.ServiceInstallerDialog>die Anmeldeinformationen und Berechtigungen für das angegebene Konto wird nicht überprüft werden. Beispielsweise kann der Benutzer einen ungültigen Kontonamen und das Kennwort für den Computer eingeben, oder das Konto möglicherweise nicht die richtigen Berechtigungen zum Ausführen als Dienst. Überprüfen Sie den Benutzereingaben um sicherzustellen, dass der installierte Dienst erfolgreich ausgeführt wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine <xref:System.ServiceProcess.Design.ServiceInstallerDialog> um den Benutzer für ein Dienstkonto für die Installation aufzufordern.  
+  
+ [!code-cpp[ServiceInstallConfig#1](~/samples/snippets/cpp/VS_Snippets_CLR/ServiceInstallConfig/CPP/source.cpp#1)]
+ [!code-csharp[ServiceInstallConfig#1](~/samples/snippets/csharp/VS_Snippets_CLR/ServiceInstallConfig/CS/source.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceInstallerDialog ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceProcess.Design.ServiceInstallerDialog.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz des Dienstkontoformulars.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein neues <xref:System.ServiceProcess.Design.ServiceInstallerDialog> Formular verfügt über seine <xref:System.ServiceProcess.Design.ServiceInstallerDialog.Result%2A> festgelegt <xref:System.ServiceProcess.Design.ServiceInstallerDialogResult.OK>, <xref:System.ServiceProcess.Design.ServiceInstallerDialog.Username%2A> auf eine leere Zeichenfolge festgelegt (""), und die <xref:System.ServiceProcess.Design.ServiceInstallerDialog.Password%2A> auf eine leere Zeichenfolge festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Main">
+      <MemberSignature Language="C#" Value="public static void Main ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Main() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceProcess.Design.ServiceInstallerDialog.Main" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.STAThread</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Beginnt die Ausführung der Nachrichtenschleife einer Standardanwendung und zeigt das Dienstkontoformular an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode entspricht dem Aufruf <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> auf einem neuen <xref:System.ServiceProcess.Design.ServiceInstallerDialog> bilden; dient normalerweise für Testzwecke verwenden.  
+  
+ Rufen Sie <xref:System.Windows.Forms.Form.ShowDialog%2A> auf die <xref:System.ServiceProcess.Design.ServiceInstallerDialog> Formular zum Anzeigen des Dialogfelds "" in der Anwendung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Password">
+      <MemberSignature Language="C#" Value="public string Password { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Password" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceProcess.Design.ServiceInstallerDialog.Password" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Kennwort für das Dienstkontoformular ab oder legt es fest.</summary>
+        <value>Eine Zeichenfolge, die das Kennwort im Dienstkontoformular darstellt. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceProcess.Design.ServiceInstallerDialog> überprüft nicht die <xref:System.ServiceProcess.Design.ServiceInstallerDialog.Username%2A> und <xref:System.ServiceProcess.Design.ServiceInstallerDialog.Password%2A> Werte. Das Dialogfeld stellt sicher, dass der Benutzer das Kennwort bestätigt, aber nicht die Anmeldeinformationen für das Konto auf dem Computer authentifiziert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Result">
+      <MemberSignature Language="C#" Value="public System.ServiceProcess.Design.ServiceInstallerDialogResult Result { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceProcess.Design.ServiceInstallerDialogResult Result" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceProcess.Design.ServiceInstallerDialog.Result" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceProcess.Design.ServiceInstallerDialogResult</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Dialogfeldergebnis für das Dienstkontoformular ab.</summary>
+        <value>Ein <see cref="T:System.ServiceProcess.Design.ServiceInstallerDialogResult" /> , der angibt, das die Benutzerantwort auf das Dialogfeld. Die Standardeinstellung ist <see langword="OK" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwendung <xref:System.Windows.Forms.Form.ShowDialog%2A> um den Benutzer für das Dienstkonto für die Installation aufzufordern, und überprüfen Sie dann die <xref:System.ServiceProcess.Design.ServiceInstallerDialog.Result%2A> Wert. Wenn der Wert <xref:System.ServiceProcess.Design.ServiceInstallerDialogResult.OK>, überprüfen Sie, ob die Eingabe <xref:System.ServiceProcess.Design.ServiceInstallerDialog.Username%2A> und <xref:System.ServiceProcess.Design.ServiceInstallerDialog.Password%2A> gültig sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Username">
+      <MemberSignature Language="C#" Value="public string Username { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Username" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceProcess.Design.ServiceInstallerDialog.Username" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Benutzernamen für das Dienstkontoformular ab oder legt ihn fest.</summary>
+        <value>Eine Zeichenfolge, die den Benutzernamen im Dienstkontoformular darstellt. Der Standardwert ist eine leere Zeichenfolge ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceProcess.Design.ServiceInstallerDialog> überprüft nicht die <xref:System.ServiceProcess.Design.ServiceInstallerDialog.Username%2A> oder <xref:System.ServiceProcess.Design.ServiceInstallerDialog.Password%2A> Werte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

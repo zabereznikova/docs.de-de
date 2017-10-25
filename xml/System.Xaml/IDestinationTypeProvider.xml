@@ -1,0 +1,64 @@
+<Type Name="IDestinationTypeProvider" FullName="System.Xaml.IDestinationTypeProvider">
+  <TypeSignature Language="C#" Value="public interface IDestinationTypeProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDestinationTypeProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.IDestinationTypeProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Dienst, der einen Systembezeichner des CLR-Typ für den Zieltyp zurückgeben kann. Der Zieltyp ist relevant, wenn der Zieltyp für einen Vorgang für die Einstellung der Eigenschaft von Reflektion oder andere Mechanismen indirekt gemeldet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Typ, der zurückgegebene <xref:System.Xaml.IDestinationTypeProvider.GetDestinationType%2A> aus der aktuellen Position des XAML-Knotenstream mit aktuellen XAML-Schemakontext aufgelöst wird.  
+  
+ Wenn Sie das XAML-Typsystem verwenden, wie von .NET Framework-XAML-Dienste und den Zugriff der Dienstkontext unter diesen Bedingungen implementiert <xref:System.Xaml.IDestinationTypeProvider.GetDestinationType%2A> gibt die <xref:System.Xaml.XamlType.UnderlyingType%2A> basierend auf verfügbaren XAML-System Typinformationen und CLR-basierten XAML-Schemakontext.  
+  
+ Dieser Dienst ist relevant für Situationen, in dem reinen CLR-Reflektion oder andere Mechanismen nicht genügend Informationen zu einem Zieltyp bereitstellen können. Folgender Ausdruck ist eine Liste der relevanten gelegentlich für <xref:System.Xaml.IDestinationTypeProvider>:  
+  
+-   Das CLR-Typsystem meldet einen indirekte Typ aufgrund wie CLR Typen definiert und verwendet, und einen Zieltyp "true" werden sollen. Die APIs im .NET Framework XAML Services verwenden diesen Dienst z. B. intern beim Verarbeiten von Ereignismember. Ereignisse werden gemeldet, durch die reine CLR-Reflektion als eine <xref:System.Delegate>.  
+  
+-   Stellen Sie sicher, dass der Zieltyp des eine Typkonverterverwendung dem erwarteten Typ übereinstimmt, den der Typkonverter erstellt werden kann, werden sollen. Dieses Szenario ist hilfreich, wenn der Zieltyp parametrisiert wurde oder generisch.  
+  
+-   Der Wertkonverter wird aus einer Verwendung aufgerufen wird, die in einem anderen Wertkonverter geschachtelt. In diesem Fall <xref:System.Xaml.IDestinationTypeProvider.GetDestinationType%2A> die Schachtelung und gibt den Zieltyp der tatsächlichen Eigenschaft festgelegt wird, anstatt den Ausgabetyp des dazwischenliegenden Wertkonverters zurückzugeben.  
+  
+ Typkonverter und Markuperweiterungen können Abfragen für <xref:System.Xaml.IDestinationTypeProvider> als Dienst auf dem Dienstkontext, der durch einen XAML-Objektwriter bereitgestellt wird, wenn der XAML-Objektwriter den Wertkonvertierungsverhalten aufruft. Weitere Informationen finden Sie unter [Typkonverter und Markuperweiterungen für XAML](~/docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md) und [verfügbare Dienstkontexte Typkonverter und Markuperweiterungen](~/docs/framework/xaml-services/service-contexts-available-to-type-converters-and-markup-extensions.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetDestinationType">
+      <MemberSignature Language="C#" Value="public Type GetDestinationType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type GetDestinationType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.IDestinationTypeProvider.GetDestinationType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die CLR <see cref="T:System.Type" /> , der den Zieltyp für die relevanten Typkonverter oder die Markuperweiterung identifiziert.</summary>
+        <returns>Eine CLR <see cref="T:System.Type" /> Wert für den Zieltyp.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode hat keine Eingabeparameter. Was zurückgegeben (und ob andere als Rückgabe `null`) richtet sich nach der aktuellen Knotenposition im XAML-Knotenstream.  
+  
+## <a name="service-implementers"></a>Dienstimplementierer  
+ Wenn Sie diesen Dienst implementieren die <xref:System.Xaml.IDestinationTypeProvider.GetDestinationType%2A> -Methode zurückgeben sollte den Typ, der eine Markuperweiterung oder Typ Typkonverter erwartet, auf dessen möglichst spezifischen Typ der Konvertierung oder Ausgabe geprüft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

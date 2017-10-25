@@ -1,0 +1,1964 @@
+<Type Name="XObject" FullName="System.Xml.Linq.XObject">
+  <TypeSignature Language="C#" Value="public abstract class XObject : System.Xml.IXmlLineInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit XObject extends System.Object implements class System.Xml.IXmlLineInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Linq.XObject" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XDocument</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.Linq</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Xml.IXmlLineInfo</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt einen Knoten oder ein Attribut in einer XML-Struktur dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse ist die abstrakte häufige Basisklasse für <xref:System.Xml.Linq.XNode> und <xref:System.Xml.Linq.XAttribute>. Es bietet einige grundlegende Funktionen beider Klassen, z. B. Anmerkungen und Auslösen von Ereignissen beim Knoten geändert haben.  
+  
+ Beachten Sie, dass Anmerkungen nicht Teil des XML-Infosets sind; sie werden nicht serialisiert oder deserialisiert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddAnnotation">
+      <MemberSignature Language="C#" Value="public void AddAnnotation (object annotation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddAnnotation(object annotation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XObject.AddAnnotation(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="annotation" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="annotation">Ein <see cref="T:System.Object" /> , enthält die Anmerkung hinzufügen.</param>
+        <summary>Fügt ein Objekt auf der Anmerkungsliste dieses <see cref="T:System.Xml.Linq.XObject" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beachten Sie, dass Anmerkungen nicht Teil des Infosets sind; Sie sind nicht persistent gespeichert oder angezeigt, indem <xref:System.Xml.Linq.XNode.ToString%2A>. Wenn Sie eine XML-Namespace in das VB-Projekt importieren und AddAnnotation mit dem SaveOptions.OmitDuplicateNamespaces-Enumerationswert aufrufen, wird nur ein Element auch, statt jedes Element der XML-Namespace-Attribut enthalten. Weitere Informationen finden Sie unter [entfernen doppelte Namespaces in XML-Literalen](http://blogs.msdn.com/b/vbteam/archive/2010/06/09/removing-duplicate-namespaces-in-xml-literals-shyam-namboodiripad.aspx).  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine Anmerkung, die eine <xref:System.Xml.Linq.XElement>.  
+  
+```csharp  
+  
+                public class MyAnnotation {  
+    private string tag;  
+    public string Tag {get{return tag;} set{tag=value;}}  
+    public MyAnnotation(string tag) {  
+        this.tag = tag;  
+    }  
+}  
+  
+public class Program {  
+    public static void Main(string[] args) {     
+        MyAnnotation ma = new MyAnnotation("T1");  
+        XElement root = new XElement("Root", "content");  
+        root.AddAnnotation(ma);  
+  
+        MyAnnotation ma2 = (MyAnnotation)root.Annotation<MyAnnotation>();  
+        Console.WriteLine(ma2.Tag);  
+    }  
+}  
+```  
+  
+```vb  
+  
+                Public Class MyAnnotation  
+    Private _tag As String  
+  
+    Property Tag() As String  
+        Get  
+            Return Me._tag  
+        End Get  
+        Set(ByVal Value As String)  
+            Me._tag = Value  
+        End Set  
+    End Property  
+  
+    Public Sub New(ByVal tag As String)  
+        Me._tag = tag  
+    End Sub  
+End Class  
+  
+Module Module1  
+    Sub Main()  
+        Dim ma As MyAnnotation = New MyAnnotation("T1")  
+        Dim root As XElement = <Root>content</Root>  
+        root.AddAnnotation(ma)  
+  
+        Dim ma2 As MyAnnotation = DirectCast(root.Annotation(Of MyAnnotation)(), MyAnnotation)  
+        Console.WriteLine(ma2.Tag)  
+    End Sub  
+  
+End Module  
+```  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```  
+  
+T1  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Annotation">
+      <MemberSignature Language="C#" Value="public object Annotation (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Annotation(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XObject.Annotation(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die <see cref="T:System.Type" /> der Anmerkung abgerufen.</param>
+        <summary>Ruft das erste Anmerkungsobjekt des angegebenen Typs von diesem <see cref="T:System.Xml.Linq.XObject" />.</summary>
+        <returns>Die <see cref="T:System.Object" /> , enthält das erste Anmerkungsobjekt, das mit dem angegebenen Typ übereinstimmt oder <see langword="null" /> , wenn keine Anmerkung des angegebenen Typs ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird eine Anmerkung, die eine <xref:System.Xml.Linq.XElement>. Anschließend wird die Anmerkung wird das Angeben des abzurufende Typs abgerufen.  
+  
+```csharp  
+  
+                public class MyAnnotation {  
+    private string tag;  
+    public string Tag {get{return tag;} set{tag=value;}}  
+    public MyAnnotation(string tag) {  
+        this.tag = tag;  
+    }  
+}  
+  
+public class Program {  
+    public static void Main(string[] args) {     
+        MyAnnotation ma = new MyAnnotation("T1");  
+        XElement root = new XElement("Root", "content");  
+        root.AddAnnotation(ma);  
+  
+        MyAnnotation ma2 = (MyAnnotation)root.Annotation(typeof(MyAnnotation));  
+        Console.WriteLine(ma2.Tag);  
+    }  
+}  
+```  
+  
+```vb  
+  
+                Public Class MyAnnotation  
+    Private _tag As String  
+  
+    Property Tag() As String  
+        Get  
+            Return Me._tag  
+        End Get  
+        Set(ByVal Value As String)  
+            Me._tag = Value  
+        End Set  
+    End Property  
+  
+    Public Sub New(ByVal tag As String)  
+        Me._tag = tag  
+    End Sub  
+End Class  
+  
+Module Module1  
+    Sub Main()  
+        Dim ma As MyAnnotation = New MyAnnotation("T1")  
+        Dim root As XElement = <Root>content</Root>  
+        root.AddAnnotation(ma)  
+  
+        Dim ma2 As MyAnnotation = DirectCast(root.Annotation(GetType(MyAnnotation)), MyAnnotation)  
+        Console.WriteLine(ma2.Tag)  
+    End Sub  
+  
+End Module  
+```  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```  
+  
+T1  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Annotation&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T Annotation&lt;T&gt; () where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T Annotation&lt;class T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XObject.Annotation``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">Der Typ, der die Anmerkung abgerufen werden soll.</typeparam>
+        <summary>Das erste Anmerkungsobjekt des angegebenen Typs von diesem erhalten <see cref="T:System.Xml.Linq.XObject" />.</summary>
+        <returns>Das erste Anmerkungsobjekt, das mit dem angegebenen Typ übereinstimmt oder <see langword="null" /> , wenn keine Anmerkung des angegebenen Typs ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird ein Element eine Anmerkung hinzugefügt und dann über diese Methode abgerufen.  
+  
+```csharp  
+  
+                public class MyAnnotation {  
+    private string tag;  
+    public string Tag {get{return tag;} set{tag=value;}}  
+    public MyAnnotation(string tag) {  
+        this.tag = tag;  
+    }  
+}  
+  
+public class Program {  
+    public static void Main(string[] args) {     
+        MyAnnotation ma = new MyAnnotation("T1");  
+        XElement root = new XElement("Root", "content");  
+        root.AddAnnotation(ma);  
+  
+        MyAnnotation ma2 = root.Annotation<MyAnnotation>();  
+        Console.WriteLine(ma2.Tag);  
+    }  
+}  
+```  
+  
+```vb  
+  
+                Public Class MyAnnotation  
+    Private _tag As String  
+  
+    Property Tag() As String  
+        Get  
+            Return Me._tag  
+        End Get  
+        Set(ByVal Value As String)  
+            Me._tag = Value  
+        End Set  
+    End Property  
+  
+    Public Sub New(ByVal tag As String)  
+        Me._tag = tag  
+    End Sub  
+End Class  
+  
+Module Module1  
+    Sub Main()  
+        Dim ma As MyAnnotation = New MyAnnotation("T1")  
+        Dim root As XElement = <Root>content</Root>  
+        root.AddAnnotation(ma)  
+  
+        Dim ma2 As MyAnnotation = root.Annotation(Of MyAnnotation)()  
+        Console.WriteLine(ma2.Tag)  
+    End Sub  
+End Module  
+```  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```  
+  
+T1  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Annotations">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;object&gt; Annotations (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;object&gt; Annotations(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XObject.Annotations(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die <see cref="T:System.Type" /> der abzurufenden Anmerkungen.</param>
+        <summary>Ruft eine Auflistung von Anmerkungen des angegebenen Typs für diese <see cref="T:System.Xml.Linq.XObject" />.</summary>
+        <returns>Ein <see cref="T:System.Collections.Generic.IEnumerable`1" /> von <see cref="T:System.Object" /> , enthält die Anmerkungen, die den angegebenen Typ für diesen entsprechen <see cref="T:System.Xml.Linq.XObject" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird einige Anmerkungen zu einer <xref:System.Xml.Linq.XElement>, dann Ruft eine Auflistung von Anmerkungen mithilfe dieser Methode ab.  
+  
+```csharp  
+  
+                public class MyAnnotation  
+{  
+    private string tag;  
+    public string Tag { get { return tag; } set { tag = value; } }  
+    public MyAnnotation(string tag)  
+    {  
+        this.tag = tag;  
+    }  
+}  
+  
+class Program  
+{  
+    static void Main(string[] args)  
+    {  
+        XElement root = new XElement("Root", "content");  
+        root.AddAnnotation(new MyAnnotation("T1"));  
+        root.AddAnnotation(new MyAnnotation("T2"));  
+        root.AddAnnotation("abc");  
+        root.AddAnnotation("def");  
+  
+        IEnumerable<object> annotationList;  
+        annotationList = root.Annotations(typeof(MyAnnotation));  
+        foreach (object ma in annotationList)  
+            Console.WriteLine(((MyAnnotation)ma).Tag);  
+        Console.WriteLine("----");  
+  
+        IEnumerable<object> stringAnnotationList;  
+        stringAnnotationList = root.Annotations(typeof(string));  
+        foreach (object str in stringAnnotationList)  
+            Console.WriteLine((string)str);  
+    }  
+}  
+```  
+  
+```vb  
+  
+                Public Class MyAnnotation  
+    Private _tag As String  
+  
+    Property Tag() As String  
+        Get  
+            Return Me._tag  
+        End Get  
+        Set(ByVal Value As String)  
+            Me._tag = Value  
+        End Set  
+    End Property  
+  
+    Public Sub New(ByVal tag As String)  
+        Me._tag = tag  
+    End Sub  
+End Class  
+  
+Module Module1  
+    Sub Main()  
+        Dim root As XElement = <Root>content</Root>  
+        root.AddAnnotation(New MyAnnotation("T1"))  
+        root.AddAnnotation(New MyAnnotation("T2"))  
+        root.AddAnnotation("abc")  
+        root.AddAnnotation("def")  
+  
+        Dim annotationList As IEnumerable(Of Object)  
+        annotationList = root.Annotations(GetType(MyAnnotation))  
+        For Each ma As MyAnnotation In annotationList  
+            Console.WriteLine(ma.Tag)  
+        Next  
+  
+        Console.WriteLine("----")  
+  
+        Dim stringAnnotationList As IEnumerable(Of Object)  
+        stringAnnotationList = root.Annotations(GetType(String))  
+        For Each str As String In stringAnnotationList  
+            Console.WriteLine(str)  
+        Next  
+    End Sub  
+End Module  
+```  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```  
+  
+                T1  
+T2  
+----  
+abc  
+def  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Annotations&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;T&gt; Annotations&lt;T&gt; () where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;!!T&gt; Annotations&lt;class T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XObject.Annotations``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">Der Typ der abzurufenden Anmerkungen.</typeparam>
+        <summary>Ruft eine Auflistung von Anmerkungen des angegebenen Typs für diese <see cref="T:System.Xml.Linq.XObject" />.</summary>
+        <returns>Ein <see cref="T:System.Collections.Generic.IEnumerable`1" /> , enthält die Anmerkungen für diese <see cref="T:System.Xml.Linq.XObject" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird diese Methode zum Abrufen von Anmerkungen auf ein Element.  
+  
+```csharp  
+  
+                public class MyAnnotation {  
+    private string tag;  
+    public string Tag {get{return tag;} set{tag=value;}}  
+    public MyAnnotation(string tag) {  
+        this.tag = tag;  
+    }  
+}  
+  
+class Program {  
+    static void Main(string[] args) {     
+        XElement root = new XElement("Root", "content");  
+        root.AddAnnotation(new MyAnnotation("T1"));  
+        root.AddAnnotation(new MyAnnotation("T2"));  
+        root.AddAnnotation("abc");  
+        root.AddAnnotation("def");  
+  
+        IEnumerable<MyAnnotation> annotationList;  
+        annotationList = root.Annotations<MyAnnotation>();  
+        foreach (MyAnnotation ma in annotationList)  
+            Console.WriteLine(ma.Tag);  
+        Console.WriteLine("----");  
+  
+        IEnumerable<string> stringAnnotationList;  
+        stringAnnotationList = root.Annotations<string>();  
+        foreach (string str in stringAnnotationList)  
+            Console.WriteLine(str);  
+    }  
+}  
+```  
+  
+```vb  
+  
+                Public Class MyAnnotation  
+    Private _tag As String  
+  
+    Property Tag() As String  
+        Get  
+            Return Me._tag  
+        End Get  
+        Set(ByVal Value As String)  
+            Me._tag = Value  
+        End Set  
+    End Property  
+  
+    Public Sub New(ByVal tag As String)  
+        Me._tag = tag  
+    End Sub  
+End Class  
+  
+Module Module1  
+    Sub Main()  
+        Dim root As XElement = <Root>content</Root>  
+        root.AddAnnotation(New MyAnnotation("T1"))  
+        root.AddAnnotation(New MyAnnotation("T2"))  
+        root.AddAnnotation("abc")  
+        root.AddAnnotation("def")  
+  
+        Dim annotationList As IEnumerable(Of MyAnnotation)  
+        annotationList = root.Annotations(Of MyAnnotation)()  
+        For Each ma As MyAnnotation In annotationList  
+            Console.WriteLine(ma.Tag)  
+        Next  
+        Console.WriteLine("----")  
+  
+        Dim stringAnnotationList As IEnumerable(Of String)  
+        stringAnnotationList = root.Annotations(Of String)()  
+        For Each str As String In stringAnnotationList  
+            Console.WriteLine(str)  
+        Next  
+    End Sub  
+End Module  
+```  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```  
+  
+                T1  
+T2  
+----  
+abc  
+def  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseUri">
+      <MemberSignature Language="C#" Value="public string BaseUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BaseUri" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Linq.XObject.BaseUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Basis-URI für <see cref="T:System.Xml.Linq.XObject" />.</summary>
+        <value>Ein <see cref="T:System.String" /> enthält, die den Basis-URI für diesen <see cref="T:System.Xml.Linq.XObject" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit LINQ to XML können Sie XML in einer Reihe von Fashions deserialisiert werden. Sie können aus einer Zeichenfolge zu analysieren, laden Sie es aus einer Datei oder Lesen Sie es aus einem <xref:System.IO.TextReader> oder ein <xref:System.Xml.XmlReader>. In all diesen Fällen verwendet LINQ to XML mindestens eine der konkreten Unterklassen des <xref:System.Xml.XmlReader>.  
+  
+ In einigen Fällen die <xref:System.Xml.XmlReader> weist die Basis-URI und in einigen Fällen ist es nicht. Für die Instanz beim Laden von Daten aus einer Datei die <xref:System.Xml.XmlReader> kennt den Basis-URI, aber beim Lesen aus einer <xref:System.Xml.XmlReader> , die aufgrund von Aufrufen erstellt wurde die <xref:System.Xml.Linq.XElement.Parse%2A> -Methode, besteht keine Gefahr, dass der der <xref:System.Xml.XmlReader> reporting keinen Basis-URI, der XML-Code wurde eine Zeichenfolge.  
+  
+ Wenn beim Analysieren, oder Laden von XML, Sie geben <xref:System.Xml.Linq.LoadOptions.SetBaseUri>, LINQ to XML für jeden Knoten als den Basis-URI fordert die <xref:System.Xml.XmlReader> gibt den Knoten zurück. Wenn der Reader den Basis-URI verfügt, speichert LINQ to XML die Informationen mit LINQ to XML-Knoten. Diese Eigenschaft gibt diese Informationen zurück. Wenn die zugrunde liegende <xref:System.Xml.XmlReader> keinen Basis-URI, diese Eigenschaft eine leere Zeichenfolge zurückgegeben.  
+  
+ Festlegen von <xref:System.Xml.Linq.LoadOptions.SetBaseUri> beim Laden einer XML-Struktur führt zu langsameren Analyse.  
+  
+ Wenn Sie die Basis-URI für eine XML-Struktur festlegen, setzt LINQ to XML eine Anmerkung im Stamm der Struktur. Diese Eigenschaft ist eine berechnete Eigenschaft und navigiert oben in der Struktur auf den Basis-URI zu finden.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel lädt die base-URI- und Zeileninformationen Informationen, die die Datei geladen. Klicken Sie dann den Basis-URI- und Zeileninformationen ausgegeben.  
+  
+ In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Typische Bestellung (LINQ to XML)](http://msdn.microsoft.com/library/0606c09f-6e43-4f8d-95c8-e8e2e08d2348).  
+  
+```csharp  
+  
+                XElement po = XElement.Load("PurchaseOrder.xml",  
+    LoadOptions.SetBaseUri | LoadOptions.SetLineInfo);  
+string[] splitUri = po.BaseUri.Split('/');  
+Console.WriteLine("BaseUri: {0}", splitUri[splitUri.Length - 1]);  
+Console.WriteLine();  
+Console.WriteLine("{0}{1}{2}",  
+    "Element Name".PadRight(20),  
+    "Line".PadRight(5),  
+    "Position");  
+Console.WriteLine("{0}{1}{2}",  
+    "------------".PadRight(20),  
+    "----".PadRight(5),  
+    "--------");  
+foreach (XElement e in po.DescendantsAndSelf())  
+    Console.WriteLine("{0}{1}{2}",  
+        ("".PadRight(e.Ancestors().Count() * 2) + e.Name).PadRight(20),  
+        ((IXmlLineInfo)e).LineNumber.ToString().PadRight(5),  
+        ((IXmlLineInfo)e).LinePosition);  
+```  
+  
+```vb  
+  
+                Dim po As XElement = XElement.Load("PurchaseOrder.xml", LoadOptions.SetBaseUri Or LoadOptions.SetLineInfo)  
+Dim splitUri() As String = po.BaseUri.Split("/"c)  
+Console.WriteLine("BaseUri: {0}", splitUri(splitUri.Length - 1))  
+Console.WriteLine()  
+Console.WriteLine("{0}{1}{2}", _  
+    "Element Name".PadRight(20), _  
+    "Line".PadRight(5), _  
+    "Position")  
+Console.WriteLine("{0}{1}{2}", _  
+    "------------".PadRight(20), _  
+    "----".PadRight(5), _  
+    "--------")  
+For Each e As XElement In po.DescendantsAndSelf()  
+    Console.WriteLine("{0}{1}{2}", _  
+        ("".PadRight(e.Ancestors().Count() * 2) & e.Name.ToString).PadRight(20), _  
+        DirectCast(e, IXmlLineInfo).LineNumber.ToString().PadRight(5), _  
+        DirectCast(e, IXmlLineInfo).LinePosition)  
+Next  
+```  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```  
+  
+                BaseUri: PurchaseOrder.xml  
+  
+Element Name        Line Position  
+------------        ---- --------  
+PurchaseOrder       2    2  
+  Address           3    4  
+    Name            4    6  
+    Street          5    6  
+    City            6    6  
+    State           7    6  
+    Zip             8    6  
+    Country         9    6  
+  Address           11   4  
+    Name            12   6  
+    Street          13   6  
+    City            14   6  
+    State           15   6  
+    Zip             16   6  
+    Country         17   6  
+  DeliveryNotes     19   4  
+  Items             20   4  
+    Item            21   6  
+      ProductName   22   8  
+      Quantity      23   8  
+      USPrice       24   8  
+      Comment       25   8  
+    Item            27   6  
+      ProductName   28   8  
+      Quantity      29   8  
+      USPrice       30   8  
+      ShipDate      31   8  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Changed">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Xml.Linq.XObjectChangeEventArgs&gt; Changed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Xml.Linq.XObjectChangeEventArgs&gt; Changed" />
+      <MemberSignature Language="DocId" Value="E:System.Xml.Linq.XObject.Changed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Xml.Linq.XObjectChangeEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wird ausgelöst, wenn dies <see cref="T:System.Xml.Linq.XObject" /> oder eines seiner Nachfolger geändert haben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ereignisse werden nur ausgelöst, wenn eine XML-Struktur geändert wird, nicht verwendet werden, wenn es erstellt wurde. Dies ist, da Sie einen Ereignishandler hinzufügen, um ein Ereignis aus, bevor Ereignisse empfangen werden können, und einen Ereignishandler kann nicht hinzugefügt werden, bevor Sie haben einen Verweis auf ein <xref:System.Xml.Linq.XObject>. Sie können nicht abgerufen werden einen Verweis auf eine <xref:System.Xml.Linq.XObject> vor der XML-Struktur erstellt wird. Dies bedeutet, dass während der funktionalen Konstruktion einer XML-Struktur keine Ereignisse empfangen werden.  
+  
+ Sie sollten vorsichtig sein, wenn eine XML-Struktur innerhalb eines dieser Ereignisse ändern, weil dies zu unerwarteten Ergebnissen führen kann. Angenommen, Sie erhalten eine <xref:System.Xml.Linq.XObject.Changing> Ereignis, und während das Ereignis verarbeitet wird, entfernen Sie den Knoten aus der Struktur, erhalten Sie möglicherweise nicht die <xref:System.Xml.Linq.XObject.Changed> Ereignis. Wenn ein Ereignis verarbeitet wird, ist es zulässig, eine XML-Struktur als der ändern, die der Knoten enthält, der das Ereignis empfangen wird. Es ist auch zulässig, die gleiche Struktur zu ändern, sofern die Änderungen nicht bestimmten Knoten beeinflussen, auf denen das Ereignis ausgelöst wurde. Wenn Sie den Bereich der Struktur, die die Knoten, die das Ereignis empfangen enthält ändern, sind jedoch die Ereignisse, die Sie erhalten und die Auswirkungen auf die Struktur nicht definiert.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel fügt einen Ereignishandler hinzu, um das Stammelement einer XML-Struktur. Anschließend ändert das Beispiel der Struktur, verursacht LINQ to XML einige Ereignisse ausgelöst werden soll.  
+  
+```csharp  
+  
+                XElement root = new XElement("Root", "content");  
+root.Changing += new EventHandler<XObjectChangeEventArgs>(  
+    (sender, cea) =>  
+    {  
+        Console.WriteLine("Changing event raised");  
+        XElement xSender = (XElement)sender;  
+        Console.WriteLine("  Sender: {0}", xSender.Name);  
+        Console.WriteLine("  ObjectChange: {0}", cea.ObjectChange);  
+    }  
+);  
+root.Changed += new EventHandler<XObjectChangeEventArgs>(  
+    (sender, cea) =>  
+    {  
+        Console.WriteLine("Changed event raised");  
+        XElement xSender = (XElement)sender;  
+        Console.WriteLine("  Sender: {0}", xSender.Name);  
+        Console.WriteLine("  ObjectChange: {0}", cea.ObjectChange);  
+    }  
+);  
+root.Add(new XElement("Child", "child content"));  
+```  
+  
+```vb  
+  
+                Module Module1  
+    WithEvents root As XElement = <Root>content</Root>  
+  
+    Sub Main()  
+        root.Add(<Child>child content</Child>)  
+    End Sub  
+  
+    Private Sub root_Changing( _  
+            ByVal sender As Object, _  
+            ByVal e As XObjectChangeEventArgs) _  
+            Handles root.Changing  
+        Dim xSender As XElement = DirectCast(sender, XElement)  
+        Console.WriteLine("Changing event raised")  
+        Console.WriteLine("  Sender: {0}", xSender.Name)  
+        Console.WriteLine("  ObjectChange: {0}", e.ObjectChange)  
+    End Sub  
+  
+    Private Sub root_Changed( _  
+            ByVal sender As Object, _  
+            ByVal e As XObjectChangeEventArgs) _  
+            Handles root.Changed  
+        Dim xSender As XElement = DirectCast(sender, XElement)  
+        Console.WriteLine("Changed event raised")  
+        Console.WriteLine("  Sender: {0}", xSender.Name)  
+        Console.WriteLine("  ObjectChange: {0}", e.ObjectChange)  
+    End Sub  
+End Module  
+  
+```  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```  
+  
+                Changing event raised  
+  Sender: Child  
+  ObjectChange: Add  
+Changed event raised  
+  Sender: Child  
+  ObjectChange: Add  
+```  
+  
+ Ereignisse erweisen sich als nützlich, wenn aggregierte Informationen in einer XML-Struktur bereitgestellt werden sollen. So können Sie auf diese Weise z. B. einen Rechnungsgesamtbetrag bereitstellen, der sich aus der Summe der Einzelpositionen der Rechnung ergibt. Dieses Beispiel verwendet Ereignisse, um den Gesamtbetrag aller untergeordneten Elemente des komplexen Elements `Items` bereitzustellen:  
+  
+```csharp  
+  
+                XElement root = new XElement("Root",  
+    new XElement("Total", 0),  
+    new XElement("Items")  
+);  
+XElement total = root.Element("Total");  
+XElement items = root.Element("Items");  
+items.Changed += (object sender, XObjectChangeEventArgs cea) =>  
+{  
+    switch (cea.ObjectChange)  
+    {  
+        case XObjectChange.Add:  
+            if (sender is XElement)  
+                total.Value = ((int)total + (int)(XElement)sender).ToString();  
+            if (sender is XText)  
+                total.Value = ((int)total + (int)((XText)sender).Parent).ToString();  
+            break;  
+        case XObjectChange.Remove:  
+            if (sender is XElement)  
+                total.Value = ((int)total - (int)(XElement)sender).ToString();  
+            if (sender is XText)  
+                total.Value = ((int)total - Int32.Parse(((XText)sender).Value)).ToString();  
+            break;  
+    }  
+    Console.WriteLine("Changed {0} {1}", sender.GetType().ToString(), cea.ObjectChange.ToString());  
+};  
+items.SetElementValue("Item1", 25);  
+items.SetElementValue("Item2", 50);  
+items.SetElementValue("Item2", 75);  
+items.SetElementValue("Item3", 133);  
+items.SetElementValue("Item1", null);  
+items.SetElementValue("Item4", 100);  
+Console.WriteLine("Total:{0}", (int)total);  
+Console.WriteLine(root);  
+```  
+  
+```vb  
+  
+                Module Module1  
+    Private total As XElement = Nothing  
+    Private WithEvents items As XElement = Nothing  
+    Private root As XElement = _  
+            <Root>  
+                <Total>0</Total>  
+                <Items></Items>  
+            </Root>  
+  
+    Sub Main()  
+        total = root.<Total>(0)  
+        items = root.<Items>(0)  
+        items.SetElementValue("Item1", 25)  
+        items.SetElementValue("Item2", 50)  
+        items.SetElementValue("Item2", 75)  
+        items.SetElementValue("Item3", 133)  
+        items.SetElementValue("Item1", Nothing)  
+        items.SetElementValue("Item4", 100)  
+        Console.WriteLine("Total:{0}", CInt(total))  
+        Console.WriteLine(root)  
+    End Sub  
+  
+    Private Sub XObjectChanged( _  
+            ByVal sender As Object, _  
+            ByVal cea As XObjectChangeEventArgs) _  
+            Handles items.Changed  
+        Select Case cea.ObjectChange  
+            Case XObjectChange.Add  
+                If sender.GetType() Is GetType(XElement) Then  
+                    total.Value = CStr(CInt(total.Value) + _  
+                            CInt((DirectCast(sender, XElement)).Value))  
+                End If  
+                If sender.GetType() Is GetType(XText) Then  
+                    total.Value = CStr(CInt(total.Value) + _  
+                            CInt((DirectCast(sender, XText)).Value))  
+                End If  
+            Case XObjectChange.Remove  
+                If sender.GetType() Is GetType(XElement) Then  
+                    total.Value = CStr(CInt(total.Value) - _  
+                            CInt((DirectCast(sender, XElement)).Value))  
+                End If  
+                If sender.GetType() Is GetType(XText) Then  
+                    total.Value = CStr(CInt(total.Value) - _  
+                            CInt((DirectCast(sender, XText)).Value))  
+                End If  
+        End Select  
+        Console.WriteLine("Changed {0} {1}", _  
+                            sender.GetType().ToString(), _  
+                            cea.ObjectChange.ToString())  
+    End Sub  
+End Module  
+  
+```  
+  
+ Dieser Code erzeugt die folgende Ausgabe:  
+  
+```  
+  
+                Changed System.Xml.Linq.XElement Add  
+Changed System.Xml.Linq.XElement Add  
+Changed System.Xml.Linq.XText Remove  
+Changed System.Xml.Linq.XText Add  
+Changed System.Xml.Linq.XElement Add  
+Changed System.Xml.Linq.XElement Remove  
+Changed System.Xml.Linq.XElement Add  
+Total:308  
+<Root>  
+  <Total>308</Total>  
+  <Items>  
+    <Item2>75</Item2>  
+    <Item3>133</Item3>  
+    <Item4>100</Item4>  
+  </Items>  
+</Root>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Changing">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Xml.Linq.XObjectChangeEventArgs&gt; Changing;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Xml.Linq.XObjectChangeEventArgs&gt; Changing" />
+      <MemberSignature Language="DocId" Value="E:System.Xml.Linq.XObject.Changing" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Xml.Linq.XObjectChangeEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Wird ausgelöst, wenn dies <see cref="T:System.Xml.Linq.XObject" /> oder eines seiner Nachfolger geändert werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ereignisse werden ausgelöst, nur durch die Änderung einer XML-Struktur, die nicht durch die Erstellung einer XML-Struktur. Müssen Sie einen Ereignishandler hinzufügen, um ein Ereignis aus, bevor Ereignisse empfangen werden können, und einen Ereignishandler kann nicht hinzugefügt werden, bevor Sie haben einen Verweis auf ein <xref:System.Xml.Linq.XObject>. Sie können nicht abgerufen werden einen Verweis auf eine <xref:System.Xml.Linq.XObject> vor der XML-Struktur erstellt wird. Dies bedeutet, dass während der funktionalen Konstruktion einer XML-Struktur keine Ereignisse empfangen werden.  
+  
+ Sie sollten vorsichtig sein, wenn eine XML-Struktur innerhalb eines dieser Ereignisse ändern, weil dies zu unerwarteten Ergebnissen führen kann. Angenommen, Sie erhalten eine <xref:System.Xml.Linq.XObject.Changing> Ereignis, und während das Ereignis verarbeitet wird, entfernen Sie den Knoten aus der Struktur, erhalten Sie möglicherweise nicht die <xref:System.Xml.Linq.XObject.Changed> Ereignis. Wenn ein Ereignis verarbeitet wird, ist es zulässig, eine XML-Struktur als der ändern, die der Knoten enthält, der das Ereignis empfangen wird. Es ist auch zulässig, die gleiche Struktur zu ändern, sofern die Änderungen nicht bestimmten Knoten beeinflussen, auf denen das Ereignis ausgelöst wurde. Wenn Sie den Bereich der Struktur, die die Knoten, die das Ereignis empfangen enthält ändern, sind jedoch die Ereignisse, die Sie erhalten und die Auswirkungen auf die Struktur nicht definiert.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel fügt einen Ereignishandler hinzu, um das Stammelement einer XML-Struktur. Anschließend ändert das Beispiel der Struktur, verursacht LINQ to XML einige Ereignisse ausgelöst werden soll.  
+  
+```csharp  
+  
+                XElement root = new XElement("Root", "content");  
+root.Changing += new EventHandler<XObjectChangeEventArgs>(  
+    (sender, cea) =>  
+    {  
+        Console.WriteLine("Changing event raised");  
+        XElement xSender = (XElement)sender;  
+        Console.WriteLine("  Sender: {0}", xSender.Name);  
+        Console.WriteLine("  ObjectChange: {0}", cea.ObjectChange);  
+    }  
+);  
+root.Changed += new EventHandler<XObjectChangeEventArgs>(  
+    (sender, cea) =>  
+    {  
+        Console.WriteLine("Changed event raised");  
+        XElement xSender = (XElement)sender;  
+        Console.WriteLine("  Sender: {0}", xSender.Name);  
+        Console.WriteLine("  ObjectChange: {0}", cea.ObjectChange);  
+    }  
+);  
+root.Add(new XElement("Child", "child content"));  
+```  
+  
+```vb  
+  
+                Module Module1  
+    WithEvents root As XElement = <Root>content</Root>  
+  
+    Sub Main()  
+        root.Add(<Child>child content</Child>)  
+    End Sub  
+  
+    Private Sub root_Changing( _  
+            ByVal sender As Object, _  
+            ByVal e As XObjectChangeEventArgs) _  
+            Handles root.Changing  
+        Dim xSender As XElement = CType(sender, XElement)  
+        Console.WriteLine("Changing event raised")  
+        Console.WriteLine("  Sender: {0}", xSender.Name)  
+        Console.WriteLine("  ObjectChange: {0}", e.ObjectChange)  
+    End Sub  
+  
+    Private Sub root_Changed( _  
+            ByVal sender As Object, _  
+            ByVal e As XObjectChangeEventArgs) _  
+            Handles root.Changed  
+        Dim xSender As XElement = CType(sender, XElement)  
+        Console.WriteLine("Changed event raised")  
+        Console.WriteLine("  Sender: {0}", xSender.Name)  
+        Console.WriteLine("  ObjectChange: {0}", e.ObjectChange)  
+    End Sub  
+End Module  
+```  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```  
+  
+                Changing event raised  
+  Sender: Child  
+  ObjectChange: Add  
+Changed event raised  
+  Sender: Child  
+  ObjectChange: Add  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Document">
+      <MemberSignature Language="C#" Value="public System.Xml.Linq.XDocument Document { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Linq.XDocument Document" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Linq.XObject.Document" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Linq.XDocument</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Xml.Linq.XDocument" /> für diesen <see cref="T:System.Xml.Linq.XObject" /> ab.</summary>
+        <value>Das <see cref="T:System.Xml.Linq.XDocument" /> für dieses <see cref="T:System.Xml.Linq.XObject" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt ein Dokument mit komplexem Inhalt. Es verwendet dann diese Eigenschaft zum Abrufen des Dokuments für die `Child` Element.  
+  
+```csharp  
+  
+                XDocument doc = new XDocument(  
+    new XComment("A comment in the document."),  
+    new XElement("Root",  
+        new XElement("Child", "content")  
+    )  
+);  
+XElement child = doc.Descendants("Child").First();  
+XDocument documentOfChild = child.Document;  
+Console.WriteLine(documentOfChild.FirstNode);  
+```  
+  
+```vb  
+  
+                Dim doc As XDocument = _  
+        <?xml version="1.0"?>  
+        <!--A comment in the document.-->  
+        <Root>  
+            <Child>content</Child>  
+         </Root>  
+Dim child As XElement = doc.Descendants("Child").First()  
+Dim documentOfChild As XDocument = child.Document  
+Console.WriteLine(documentOfChild.FirstNode)  
+```  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```  
+  
+<!--A comment in the document.-->  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeType">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XmlNodeType NodeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.XmlNodeType NodeType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Linq.XObject.NodeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Knotentyp für diesen <see cref="T:System.Xml.Linq.XObject" />.</summary>
+        <value>Der Knotentyp für diesen <see cref="T:System.Xml.Linq.XObject" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da alle, die von Klassen abgeleitet werden <xref:System.Xml.Linq.XObject> enthalten eine <xref:System.Xml.Linq.XObject.NodeType%2A> -Eigenschaft, können Sie Code schreiben, der ausgeführt wird auf Sammlungen von konkrete Unterklasse von <xref:System.Xml.Linq.XObject>. Code kann dann für jeden Knoten in der Auflistung den Knotentyp testen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird diese Methode, den Knoten für eine Vielzahl von Knoten abzurufen.  
+  
+```csharp  
+  
+                // Note that XNode uses XmlNodeType, which is in the System.Xml namespace.  
+XDocument xmlTree = new XDocument(  
+    new XComment("a comment"),  
+    new XProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"hello.xsl\""),  
+    new XElement("Root",  
+        new XAttribute("Att", "attContent"),  
+        new XElement("Child1",  
+            new XCData("CDATA content")  
+        ),  
+        new XElement("Child2",  
+            new XText("Text content")  
+        )  
+    )  
+);  
+  
+foreach (XNode node in xmlTree.DescendantNodes())  
+{  
+    Console.WriteLine(node.NodeType);  
+    if (node.NodeType == XmlNodeType.Element)  
+    {  
+        foreach (XAttribute att in ((XElement)node).Attributes())  
+            Console.WriteLine(att.NodeType);  
+    }  
+}  
+```  
+  
+```vb  
+  
+                ' Note that XNode uses XmlNodeType, which is in the System.Xml  namespace.  
+Dim xmlTree As XDocument = _   
+    <?xml version="1.0"?>  
+    <!--a comment-->  
+    <?xml-stylesheet type="text/xsl" href="hello.xsl"?>  
+    <Root Att="attContent">  
+        <Child1><![CDATA[CDATA content]]]><![CDATA[]></Child1>  
+        <Child2>Text content</Child2>  
+     </Root>  
+  
+For Each node As XNode In xmlTree.DescendantNodes  
+    Console.WriteLine(node.NodeType.ToString())  
+    If node.NodeType = XmlNodeType.Element Then  
+        For Each att In DirectCast(node, XElement).Attributes  
+            Console.WriteLine(att.NodeType.ToString())  
+        Next  
+    End If  
+Next  
+  
+```  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```  
+  
+                Comment  
+ProcessingInstruction  
+Element  
+Attribute  
+Element  
+CDATA  
+Element  
+Text  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public System.Xml.Linq.XElement Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Linq.XElement Parent" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Linq.XObject.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Linq.XElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das übergeordnete <see cref="T:System.Xml.Linq.XElement" /> dieses <see cref="T:System.Xml.Linq.XObject" /> ab.</summary>
+        <value>Das übergeordnete <see cref="T:System.Xml.Linq.XElement" /> dieses <see cref="T:System.Xml.Linq.XObject" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn diese <xref:System.Xml.Linq.XObject> verfügt über kein übergeordnetes Element ist, gibt diese Eigenschaft `null`.  
+  
+> [!NOTE]
+>  Diese Eigenschaft gibt das übergeordnete Element, und als untergeordnete Knoten eines ein <xref:System.Xml.Linq.XDocument> kein übergeordnetes Element haben, gibt diese Eigenschaft `null` für sie.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird diese Methode.  
+  
+```csharp  
+  
+                XDocument doc = new XDocument(  
+    new XComment("A comment in the document."),  
+    new XElement("Root",  
+        new XElement("Child", "content")  
+    )  
+);  
+XElement child = doc.Descendants("Child").First();  
+XElement root = child.Parent;  
+Console.WriteLine(root.Name);  
+```  
+  
+```vb  
+  
+                Dim doc As XDocument = _   
+    <?xml version="1.0"?>  
+    <!--A comment in the document.-->  
+    <Root>  
+        <Child>content</Child>  
+    </Root>  
+Dim child As XElement = doc.Descendants("Child").First()  
+Dim root As XElement = child.Parent  
+Console.WriteLine(root.Name)  
+```  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```  
+  
+Root  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAnnotations">
+      <MemberSignature Language="C#" Value="public void RemoveAnnotations (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAnnotations(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XObject.RemoveAnnotations(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die <see cref="T:System.Type" /> Anmerkungen zu entfernen.</param>
+        <summary>Entfernt die Anmerkungen des angegebenen Typs aus diesem <see cref="T:System.Xml.Linq.XObject" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt ein Element mit vier Anmerkungen darauf. Dann wird diese Methode verwendet, um zwei davon entfernen.  
+  
+```csharp  
+  
+                public class MyAnnotation {  
+    private string tag;  
+    public string Tag {get{return tag;} set{tag=value;}}  
+    public MyAnnotation(string tag) {  
+        this.tag = tag;  
+    }  
+}  
+  
+class Program  
+{  
+    static void Main(string[] args)  
+    {     
+        XElement root = new XElement("Root", "content");  
+        root.AddAnnotation(new MyAnnotation("T1"));  
+        root.AddAnnotation(new MyAnnotation("T2"));  
+        root.AddAnnotation("abc");  
+        root.AddAnnotation("def");  
+  
+        Console.WriteLine("Count before removing: {0}", root.Annotations<object>().Count());  
+        root.RemoveAnnotations(typeof(MyAnnotation));  
+        Console.WriteLine("Count after removing: {0}", root.Annotations<object>().Count());  
+    }  
+}  
+```  
+  
+```vb  
+  
+                Public Class MyAnnotation  
+    Private _tag As String  
+  
+    Property Tag() As String  
+        Get  
+            Return Me._tag  
+        End Get  
+        Set(ByVal Value As String)  
+            Me._tag = Value  
+        End Set  
+    End Property  
+  
+    Public Sub New(ByVal tag As String)  
+        Me._tag = tag  
+    End Sub  
+End Class  
+  
+Module Module1  
+    Sub Main()  
+        Dim root As XElement = <Root>content</Root>  
+        root.AddAnnotation(New MyAnnotation("T1"))  
+        root.AddAnnotation(New MyAnnotation("T2"))  
+        root.AddAnnotation("abc")  
+        root.AddAnnotation("def")  
+  
+        Console.WriteLine("Count before removing: {0}", root.Annotations(Of Object)().Count())  
+        root.RemoveAnnotations(GetType(MyAnnotation))  
+        Console.WriteLine("Count after removing: {0}", root.Annotations(Of Object)().Count())  
+    End Sub  
+End Module  
+```  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```  
+  
+                Count before removing: 4  
+Count after removing: 2  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAnnotations&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public void RemoveAnnotations&lt;T&gt; () where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAnnotations&lt;class T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XObject.RemoveAnnotations``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">Der Typ der Anmerkungen zu entfernen.</typeparam>
+        <summary>Entfernt die Anmerkungen des angegebenen Typs aus diesem <see cref="T:System.Xml.Linq.XObject" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt ein Element mit vier Anmerkungen darauf. Dann wird diese Methode verwendet, um zwei davon entfernen.  
+  
+```csharp  
+  
+                public class MyAnnotation {  
+    private string tag;  
+    public string Tag {get{return tag;} set{tag=value;}}  
+    public MyAnnotation(string tag) {  
+        this.tag = tag;  
+    }  
+}  
+  
+class Program {  
+    static void Main(string[] args) {     
+        XElement root = new XElement("Root", "content");  
+        root.AddAnnotation(new MyAnnotation("T1"));  
+        root.AddAnnotation(new MyAnnotation("T2"));  
+        root.AddAnnotation("abc");  
+        root.AddAnnotation("def");  
+  
+        Console.WriteLine("Count before removing: {0}", root.Annotations<object>().Count());  
+        root.RemoveAnnotations<MyAnnotation>();  
+        Console.WriteLine("Count after removing: {0}", root.Annotations<object>().Count());  
+    }  
+}  
+```  
+  
+```vb  
+  
+                Public Class MyAnnotation  
+    Private _tag As String  
+  
+    Property Tag() As String  
+        Get  
+            Return Me._tag  
+        End Get  
+        Set(ByVal Value As String)  
+            Me._tag = Value  
+        End Set  
+    End Property  
+  
+    Public Sub New(ByVal tag As String)  
+        Me._tag = tag  
+    End Sub  
+End Class  
+  
+Module Module1  
+    Sub Main()  
+        Dim root As XElement = <Root>content</Root>  
+        root.AddAnnotation(New MyAnnotation("T1"))  
+        root.AddAnnotation(New MyAnnotation("T2"))  
+        root.AddAnnotation("abc")  
+        root.AddAnnotation("def")  
+  
+        Console.WriteLine("Count before removing: {0}", root.Annotations(Of Object)().Count())  
+        root.RemoveAnnotations(Of MyAnnotation)()  
+        Console.WriteLine("Count after removing: {0}", root.Annotations(Of Object)().Count())  
+    End Sub  
+End Module  
+```  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```  
+  
+                Count before removing: 4  
+Count after removing: 2  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Xml.IXmlLineInfo.HasLineInfo">
+      <MemberSignature Language="C#" Value="bool IXmlLineInfo.HasLineInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Xml.IXmlLineInfo.HasLineInfo() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XObject.System#Xml#IXmlLineInfo#HasLineInfo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob dies <see cref="T:System.Xml.Linq.XObject" /> Zeileninformationen hat.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Xml.Linq.XObject" /> Zeileninformationen, andernfalls hat <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können rufen Sie diese Methode, um zu bestimmen, ob die <xref:System.Xml.Linq.XObject> gültige Zeileninformationen enthält.  
+  
+ Diese Methode ist eine explizite Schnittstellenmember-Implementierung einer Methode in der <xref:System.Xml.IXmlLineInfo> Schnittstelle, damit für den Aufruf dieser Methode in umgewandelt werden <xref:System.Xml.IXmlLineInfo>.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel lädt eine kleine XML-Struktur aus einer Datei, das Festlegen der Optionen zum Festlegen von Basis-URI und Zeileninformationen beibehalten werden sollen. Anschließend wird ein anderes Element, das keine Zeileninformationen hinzugefügt. Es wird dann die Zeileninformationen für jedes Element in der Struktur.  
+  
+```csharp  
+  
+                string markup = @"<Root>  
+    <Child1 />  
+    <Child2 />  
+    <Child4 />  
+</Root>";  
+  
+File.WriteAllText("Test.xml", markup);  
+  
+XElement po = XElement.Load("Test.xml",  
+    LoadOptions.SetBaseUri | LoadOptions.SetLineInfo);  
+  
+// add a node to the tree.  
+// the newly added node will not have line information.  
+po.Element("Child2").AddAfterSelf(new XElement("Child3"));  
+  
+string[] splitUri = po.BaseUri.Split('/');  
+Console.WriteLine("BaseUri: {0}", splitUri[splitUri.Length - 1]);  
+Console.WriteLine();  
+Console.WriteLine("{0}{1}{2}",  
+    "Element Name".PadRight(20),  
+    "Line".PadRight(5),  
+    "Position");  
+Console.WriteLine("{0}{1}{2}",  
+    "------------".PadRight(20),  
+    "----".PadRight(5),  
+    "--------");  
+foreach (XElement e in po.DescendantsAndSelf())  
+    Console.WriteLine("{0}{1}{2}",  
+        ("".PadRight(e.Ancestors().Count() * 2) + e.Name).PadRight(20),  
+        ((IXmlLineInfo)e).HasLineInfo() ?  
+            ((IXmlLineInfo)e).LineNumber.ToString().PadRight(5) :  
+            "",  
+        ((IXmlLineInfo)e).HasLineInfo() ?  
+            ((IXmlLineInfo)e).LinePosition.ToString() :  
+            "No Line Information");  
+```  
+  
+```vb  
+  
+                Dim markup As String = _  
+    "<Root>" & Environment.NewLine & _  
+    "    <Child1 />" & Environment.NewLine & _  
+    "    <Child2 />" & Environment.NewLine & _  
+    "    <Child4 />" & Environment.NewLine & _  
+    "</Root>"  
+  
+File.WriteAllText("Test.xml", markup)  
+  
+Dim po As XElement = XElement.Load("Test.xml", LoadOptions.SetBaseUri Or LoadOptions.SetLineInfo)  
+  
+' add a node to the tree.  
+' the newly added node will not have line information.  
+po.Element("Child2").AddAfterSelf(New XElement("Child3"))  
+  
+Dim splitUri() As String = po.BaseUri.Split("/"c)  
+Console.WriteLine("BaseUri: {0}", splitUri(splitUri.Length - 1))  
+Console.WriteLine()  
+Console.WriteLine("{0}{1}{2}", _  
+    "Element Name".PadRight(20), _  
+    "Line".PadRight(5), _  
+    "Position")  
+Console.WriteLine("{0}{1}{2}", _  
+    "------------".PadRight(20), _  
+    "----".PadRight(5), _  
+    "--------")  
+For Each e As XElement In po.DescendantsAndSelf()  
+    Console.WriteLine("{0}{1}{2}", _  
+        ("".PadRight(e.Ancestors().Count() * 2) & e.Name.ToString).PadRight(20), _  
+        IIf(DirectCast(e, IXmlLineInfo).HasLineInfo(), _  
+            DirectCast(e, IXmlLineInfo).LineNumber.ToString().PadRight(5), _  
+            ""), _  
+        IIf(DirectCast(e, IXmlLineInfo).HasLineInfo(), _  
+            DirectCast(e, IXmlLineInfo).LinePosition.ToString(), _  
+            "No Line Information"))  
+Next  
+```  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```  
+  
+                BaseUri: Test.xml  
+  
+Element Name        Line Position  
+------------        ---- --------  
+Root                1    2  
+  Child1            2    6  
+  Child2            3    6  
+  Child3            No Line Information  
+  Child4            4    6  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Xml.IXmlLineInfo.LineNumber">
+      <MemberSignature Language="C#" Value="int System.Xml.IXmlLineInfo.LineNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 System.Xml.IXmlLineInfo.LineNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Linq.XObject.System#Xml#IXmlLineInfo#LineNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeile ab, die die zugrunde liegende Zahl <see cref="T:System.Xml.XmlReader" /> dafür gemeldet <see cref="T:System.Xml.Linq.XObject" />.</summary>
+        <value>Ein <see cref="T:System.Int32" /> , enthält die Nummer der Zeile, die gemeldet werden, indem Sie die <see cref="T:System.Xml.XmlReader" /> dafür <see cref="T:System.Xml.Linq.XObject" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist eine explizite Schnittstellenmember-Implementierung einer Methode in der <xref:System.Xml.IXmlLineInfo> Schnittstelle, damit für den Aufruf dieser Methode in umgewandelt werden <xref:System.Xml.IXmlLineInfo>.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel lädt eine kleine XML-Struktur aus einer Datei, das Festlegen der Optionen zum Festlegen von Basis-URI und Zeileninformationen beibehalten werden sollen. Anschließend wird ein anderes Element, das keine Zeileninformationen hinzugefügt. Es wird dann die Zeileninformationen für jedes Element in der Struktur.  
+  
+```csharp  
+  
+                string markup = @"<Root>  
+    <Child1 />  
+    <Child2 />  
+    <Child4 />  
+</Root>";  
+  
+File.WriteAllText("Test.xml", markup);  
+  
+XElement po = XElement.Load("Test.xml",  
+    LoadOptions.SetBaseUri | LoadOptions.SetLineInfo);  
+  
+// add a node to the tree.  
+// the newly added node will not have line information.  
+po.Element("Child2").AddAfterSelf(new XElement("Child3"));  
+  
+string[] splitUri = po.BaseUri.Split('/');  
+Console.WriteLine("BaseUri: {0}", splitUri[splitUri.Length - 1]);  
+Console.WriteLine();  
+Console.WriteLine("{0}{1}{2}",  
+    "Element Name".PadRight(20),  
+    "Line".PadRight(5),  
+    "Position");  
+Console.WriteLine("{0}{1}{2}",  
+    "------------".PadRight(20),  
+    "----".PadRight(5),  
+    "--------");  
+foreach (XElement e in po.DescendantsAndSelf())  
+    Console.WriteLine("{0}{1}{2}",  
+        ("".PadRight(e.Ancestors().Count() * 2) + e.Name).PadRight(20),  
+        ((IXmlLineInfo)e).HasLineInfo() ?  
+            ((IXmlLineInfo)e).LineNumber.ToString().PadRight(5) :  
+            "",  
+        ((IXmlLineInfo)e).HasLineInfo() ?  
+            ((IXmlLineInfo)e).LinePosition.ToString() :  
+            "No Line Information");  
+```  
+  
+```vb  
+  
+                Dim markup As String = _  
+    "<Root>" & Environment.NewLine & _  
+    "    <Child1 />" & Environment.NewLine & _  
+    "    <Child2 />" & Environment.NewLine & _  
+    "    <Child4 />" & Environment.NewLine & _  
+    "</Root>"  
+  
+File.WriteAllText("Test.xml", markup)  
+  
+Dim po As XElement = XElement.Load("Test.xml", LoadOptions.SetBaseUri Or LoadOptions.SetLineInfo)  
+  
+' add a node to the tree.  
+' the newly added node will not have line information.  
+po.Element("Child2").AddAfterSelf(New XElement("Child3"))  
+  
+Dim splitUri() As String = po.BaseUri.Split("/"c)  
+Console.WriteLine("BaseUri: {0}", splitUri(splitUri.Length - 1))  
+Console.WriteLine()  
+Console.WriteLine("{0}{1}{2}", _  
+    "Element Name".PadRight(20), _  
+    "Line".PadRight(5), _  
+    "Position")  
+Console.WriteLine("{0}{1}{2}", _  
+    "------------".PadRight(20), _  
+    "----".PadRight(5), _  
+    "--------")  
+For Each e As XElement In po.DescendantsAndSelf()  
+    Console.WriteLine("{0}{1}{2}", _  
+        ("".PadRight(e.Ancestors().Count() * 2) & e.Name.ToString).PadRight(20), _  
+        IIf(DirectCast(e, IXmlLineInfo).HasLineInfo(), _  
+            DirectCast(e, IXmlLineInfo).LineNumber.ToString().PadRight(5), _  
+            ""), _  
+        IIf(DirectCast(e, IXmlLineInfo).HasLineInfo(), _  
+            DirectCast(e, IXmlLineInfo).LinePosition.ToString(), _  
+            "No Line Information"))  
+Next  
+```  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```  
+  
+                BaseUri: Test.xml  
+  
+Element Name        Line Position  
+------------        ---- --------  
+Root                1    2  
+  Child1            2    6  
+  Child2            3    6  
+  Child3            No Line Information  
+  Child4            4    6  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Xml.IXmlLineInfo.LinePosition">
+      <MemberSignature Language="C#" Value="int System.Xml.IXmlLineInfo.LinePosition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 System.Xml.IXmlLineInfo.LinePosition" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Linq.XObject.System#Xml#IXmlLineInfo#LinePosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Zeilenposition ab, die die zugrunde liegende <see cref="T:System.Xml.XmlReader" /> dafür gemeldet <see cref="T:System.Xml.Linq.XObject" />.</summary>
+        <value>Ein <see cref="T:System.Int32" /> , enthält die Position der Zeile, die gemeldet werden, indem Sie die <see cref="T:System.Xml.XmlReader" /> dafür <see cref="T:System.Xml.Linq.XObject" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist eine explizite Schnittstellenmember-Implementierung einer Methode in der <xref:System.Xml.IXmlLineInfo> Schnittstelle, damit für den Aufruf dieser Methode in umgewandelt werden <xref:System.Xml.IXmlLineInfo>.  
+  
+   
+  
+## Examples  
+ In diesem Beispiel lädt eine kleine XML-Struktur aus einer Datei, das Festlegen der Optionen zum Festlegen von Basis-URI und Zeileninformationen beibehalten werden sollen. Anschließend wird ein anderes Element, das keine Zeileninformationen hinzugefügt. Es wird dann die Zeileninformationen für jedes Element in der Struktur.  
+  
+```csharp  
+  
+                string markup = @"<Root>  
+    <Child1 />  
+    <Child2 />  
+    <Child4 />  
+</Root>";  
+  
+File.WriteAllText("Test.xml", markup);  
+  
+XElement po = XElement.Load("Test.xml",  
+    LoadOptions.SetBaseUri | LoadOptions.SetLineInfo);  
+  
+// add a node to the tree.  
+// the newly added node will not have line information.  
+po.Element("Child2").AddAfterSelf(new XElement("Child3"));  
+  
+string[] splitUri = po.BaseUri.Split('/');  
+Console.WriteLine("BaseUri: {0}", splitUri[splitUri.Length - 1]);  
+Console.WriteLine();  
+Console.WriteLine("{0}{1}{2}",  
+    "Element Name".PadRight(20),  
+    "Line".PadRight(5),  
+    "Position");  
+Console.WriteLine("{0}{1}{2}",  
+    "------------".PadRight(20),  
+    "----".PadRight(5),  
+    "--------");  
+foreach (XElement e in po.DescendantsAndSelf())  
+    Console.WriteLine("{0}{1}{2}",  
+        ("".PadRight(e.Ancestors().Count() * 2) + e.Name).PadRight(20),  
+        ((IXmlLineInfo)e).HasLineInfo() ?  
+            ((IXmlLineInfo)e).LineNumber.ToString().PadRight(5) :  
+            "",  
+        ((IXmlLineInfo)e).HasLineInfo() ?  
+            ((IXmlLineInfo)e).LinePosition.ToString() :  
+            "No Line Information");  
+```  
+  
+```vb  
+  
+                Dim markup As String = _  
+    "<Root>" & Environment.NewLine & _  
+    "    <Child1 />" & Environment.NewLine & _  
+    "    <Child2 />" & Environment.NewLine & _  
+    "    <Child4 />" & Environment.NewLine & _  
+    "</Root>"  
+  
+File.WriteAllText("Test.xml", markup)  
+  
+Dim po As XElement = XElement.Load("Test.xml", LoadOptions.SetBaseUri Or LoadOptions.SetLineInfo)  
+  
+' add a node to the tree.  
+' the newly added node will not have line information.  
+po.Element("Child2").AddAfterSelf(New XElement("Child3"))  
+  
+Dim splitUri() As String = po.BaseUri.Split("/"c)  
+Console.WriteLine("BaseUri: {0}", splitUri(splitUri.Length - 1))  
+Console.WriteLine()  
+Console.WriteLine("{0}{1}{2}", _  
+    "Element Name".PadRight(20), _  
+    "Line".PadRight(5), _  
+    "Position")  
+Console.WriteLine("{0}{1}{2}", _  
+    "------------".PadRight(20), _  
+    "----".PadRight(5), _  
+    "--------")  
+For Each e As XElement In po.DescendantsAndSelf()  
+    Console.WriteLine("{0}{1}{2}", _  
+        ("".PadRight(e.Ancestors().Count() * 2) & e.Name.ToString).PadRight(20), _  
+        IIf(DirectCast(e, IXmlLineInfo).HasLineInfo(), _  
+            DirectCast(e, IXmlLineInfo).LineNumber.ToString().PadRight(5), _  
+            ""), _  
+        IIf(DirectCast(e, IXmlLineInfo).HasLineInfo(), _  
+            DirectCast(e, IXmlLineInfo).LinePosition.ToString(), _  
+            "No Line Information"))  
+Next  
+```  
+  
+ Dieses Beispiel erzeugt die folgende Ausgabe:  
+  
+```  
+  
+                BaseUri: Test.xml  
+  
+Element Name        Line Position  
+------------        ---- --------  
+Root                1    2  
+  Child1            2    6  
+  Child2            3    6  
+  Child3            No Line Information  
+  Child4            4    6  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

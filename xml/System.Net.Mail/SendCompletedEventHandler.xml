@@ -1,0 +1,50 @@
+<Type Name="SendCompletedEventHandler" FullName="System.Net.Mail.SendCompletedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void SendCompletedEventHandler(object sender, AsyncCompletedEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SendCompletedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Mail.SendCompletedEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Mail</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.ComponentModel.AsyncCompletedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Eine <see cref="T:System.ComponentModel.AsyncCompletedEventArgs" /> , die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode zur Behandlung des <see cref="E:System.Net.Mail.SmtpClient.SendCompleted" />-Ereignisses dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Net.Mail.SendCompletedEventHandler> Delegat wird verwendet, um Ereignisse zu behandeln, die auftreten, wenn die <xref:System.Net.Mail.SmtpClient> Klasse abgeschlossen ist, asynchron senden einer E-mail-Nachricht mit der <xref:System.Net.Mail.SmtpClient.SendAsync%2A> Methode.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, eine e-Mail-Nachricht asynchron senden. Er verwendet ein <xref:System.Net.Mail.SendCompletedEventHandler> zum Aufrufen der `SendCompletedCallback` Methode zum Behandeln <xref:System.Net.Mail.SmtpClient.SendCompleted> Ereignisse.  
+  
+ [!code-cpp[NclMailASync#1](~/samples/snippets/cpp/VS_Snippets_Remoting/NclMailASync/cpp/mailasync.cpp#1)]
+ [!code-csharp[NclMailASync#1](~/samples/snippets/csharp/VS_Snippets_Remoting/NclMailASync/CS/mailasync.cs#1)]
+ [!code-vb[NclMailASync#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NclMailASync/vb/mailasync.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

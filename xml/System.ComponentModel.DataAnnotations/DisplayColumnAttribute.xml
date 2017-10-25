@@ -1,0 +1,252 @@
+<Type Name="DisplayColumnAttribute" FullName="System.ComponentModel.DataAnnotations.DisplayColumnAttribute">
+  <TypeSignature Language="C#" Value="public class DisplayColumnAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DisplayColumnAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.DataAnnotations.DisplayColumnAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Spalte an, die in der angegebenen Tabelle als Fremdschlüsselspalte angezeigt wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Enthält eine Spalte in einer Tabelle einen foreign Key, leitet Dynamic Data den Anzeigewert für diese Spalte aus der Tabelle, auf die verwiesen wird. Standardmäßig wird die erste Spalte der referenzierten Tabelle, deren Typ Zeichenfolge (oder Text) wird, verwendet. Die <xref:System.ComponentModel.DataAnnotations.DisplayColumnAttribute> -Attributs können Sie dieses Standardverhalten ändern und geben Sie eine andere übergeordnete Tabellenspalte für die foreign Key-Feld als Spalte verwendet.  
+  
+ Wenn Sie dieses Attribut anwenden, müssen Sie die folgenden verwendungseinschränkungen befolgen:  
+  
+-   Das Attribut kann nur auf eine Klasse angewendet werden.  
+  
+-   Das Attribut kann von abgeleiteten Klassen geerbt werden.  
+  
+-   Das Attribut kann nur einmal angewendet werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung des <xref:System.ComponentModel.DataAnnotations.DisplayColumnAttribute>-Attributs veranschaulicht. Das Beispiel führt die folgenden Aufgaben:  
+  
+-   Implementiert Metadaten partielle Klassen für die Adresse und Customer-Tabellen, die übergeordnete Tabellen für die CustomerAddress-Tabelle befinden.  
+  
+-   Wendet die <xref:System.ComponentModel.DataAnnotations.DisplayColumnAttribute> -Attribut auf die `Address` Metadaten Teilklasse folgende Informationen an:  
+  
+    -   Die Spalte "City" aus der Tabelle (der übergeordneten Tabelle) wird als Fremdschlüsselspalte in der untergeordneten CustomerAddress-Tabelle angezeigt.  
+  
+    -   Die Spalte "PostalCode" aus der Tabelle (der übergeordneten Tabelle) wird verwendet, für die Sortierung der Adresse Auswahlfeld in der untergeordneten CustomerAddress-Tabelle.  
+  
+    -   Die Sortierreihenfolge wird in aufsteigender Reihenfolge festgelegt.  
+  
+ Das Beispiel wendet die <xref:System.ComponentModel.DataAnnotations.DisplayColumnAttribute> -Attribut auf die `Customer` Metadaten partielle Klasse um anzugeben, dass die LastName-Spalte in der foreign Key-Spalte für die CustomerAddress-Tabelle angezeigt.  
+  
+ [!code-csharp[System.ComponentModel.DataAnnotations.DisplayColumnAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.DisplayColumnAttribute/CS/Address.cs#1)]
+ [!code-vb[System.ComponentModel.DataAnnotations.DisplayColumnAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.DisplayColumnAttribute/VB/Address.vb#1)]  
+  
+ Zum Kompilieren des Beispiels benötigen Sie Folgendes:  
+  
+-   Visual Studio 2008 Service Pack 1 oder Visual Developer 2008 Express Edition Service Pack 1.  
+  
+-   Die Beispieldatenbank "AdventureWorksLT". Informationen zum Herunterladen und Installieren der SQL Server-Beispieldatenbank finden Sie unter [Microsoft SQL Server Product Samples: Database](http://go.microsoft.com/fwlink/?LinkId=117483) auf der CodePlex-Website. Stellen Sie sicher, dass Sie die richtige Version der Beispieldatenbank für die Version von SQL Server installieren, dass Sie (SQL Server 2005 oder SQL Server 2008) ausgeführt werden.  
+  
+-   Eine dynamische datengesteuerte Website. Dadurch können Sie einen Datenkontext für die Datenbank zu erstellen und die Klasse erstellen, die im Datenfeld anpassen. Weitere Informationen finden Sie unter `Walkthrough: Creating a New Dynamic Data Web Site using Scaffolding`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DisplayColumnAttribute (string displayColumn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string displayColumn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.DisplayColumnAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="displayColumn" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="displayColumn">Der Name der Spalte, die als die Anzeigespalte verwendet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.DataAnnotations.DisplayColumnAttribute" /> -Klasse unter Verwendung der angegebenen Spalte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Definieren der übergeordneten Spalte in einer Seite für die untergeordnete Tabelle als die foreign Key-Spalte angezeigt wird.  
+  
+ [!code-csharp[System.ComponentModel.DataAnnotations.DisplayColumnAttribute#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.DisplayColumnAttribute/CS/Address.cs#3)]
+ [!code-vb[System.ComponentModel.DataAnnotations.DisplayColumnAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.DisplayColumnAttribute/VB/Address.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DisplayColumnAttribute (string displayColumn, string sortColumn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string displayColumn, string sortColumn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.DisplayColumnAttribute.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="displayColumn" Type="System.String" />
+        <Parameter Name="sortColumn" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="displayColumn">Der Name der Spalte, die als die Anzeigespalte verwendet werden soll.</param>
+        <param name="sortColumn">Der Name der Spalte, die für die Sortierung verwendet werden soll.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.DataAnnotations.DisplayColumnAttribute" /> Klasse, indem die angegebenen Spalten der anzeigen und sortieren.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Spalte angegeben wird standardmäßig `sortColumn` in aufsteigender Reihenfolge sortiert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DisplayColumnAttribute (string displayColumn, string sortColumn, bool sortDescending);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string displayColumn, string sortColumn, bool sortDescending) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.DisplayColumnAttribute.#ctor(System.String,System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="displayColumn" Type="System.String" />
+        <Parameter Name="sortColumn" Type="System.String" />
+        <Parameter Name="sortDescending" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="displayColumn">Der Name der Spalte, die als die Anzeigespalte verwendet werden soll.</param>
+        <param name="sortColumn">Der Name der Spalte, die für die Sortierung verwendet werden soll.</param>
+        <param name="sortDescending">
+          <see langword="true" />Um in absteigender Reihenfolge sortiert werden. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.DataAnnotations.DisplayColumnAttribute" /> Klasse, indem die angegebenen Anzeigespalte und die angegebene Sortierspalte und Sortierreihenfolge.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie zum Definieren der übergeordneten Spalte in einer Seite für die untergeordnete Tabelle als die foreign Key-Spalte angezeigt wird. Legt das übergeordnete Element Tabellenspalte für das Sortieren und außerdem wird die Sortierreihenfolge.  
+  
+ [!code-csharp[System.ComponentModel.DataAnnotations.DisplayColumnAttribute#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.DisplayColumnAttribute/CS/Address.cs#2)]
+ [!code-vb[System.ComponentModel.DataAnnotations.DisplayColumnAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.DisplayColumnAttribute/VB/Address.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayColumn">
+      <MemberSignature Language="C#" Value="public string DisplayColumn { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayColumn" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.DisplayColumnAttribute.DisplayColumn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Spalte, die als Anzeigefelds verwenden.</summary>
+        <value>Der Name der Anzeigespalte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SortColumn">
+      <MemberSignature Language="C#" Value="public string SortColumn { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SortColumn" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.DisplayColumnAttribute.SortColumn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Spalte, die für die Sortierung verwendet.</summary>
+        <value>Der Name der Sortierspalte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SortDescending">
+      <MemberSignature Language="C#" Value="public bool SortDescending { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SortDescending" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.DisplayColumnAttribute.SortDescending" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob in absteigender oder aufsteigender Reihenfolge sortiert.</summary>
+        <value>
+          <see langword="true" />Wenn die Spalte in absteigender Reihenfolge sortiert wird; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

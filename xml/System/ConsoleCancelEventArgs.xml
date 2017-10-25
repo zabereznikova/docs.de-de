@@ -1,0 +1,136 @@
+<Type Name="ConsoleCancelEventArgs" FullName="System.ConsoleCancelEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class ConsoleCancelEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit ConsoleCancelEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.ConsoleCancelEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Console</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Console.CancelKeyPress" />-Ereignis bereit. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Benutzer kann eine Anwendung Konsolenprozesses unterbrechen, indem gleichzeitig Drücken der <xref:System.ConsoleModifiers.Control> Modifizierertaste und der <xref:System.ConsoleKey.C> -Konsolentaste (STRG + C), oder die <xref:System.ConsoleModifiers.Control> Modifizierertaste und der Unterbrechung-Konsolentaste (STRG + UNTBR). Daher bietet der .NET Framework eine <xref:System.ConsoleCancelEventArgs> Objekt an den Ereignishandler für das <xref:System.Console.CancelKeyPress?displayProperty=nameWithType> Ereignis, um anzugeben, ob der Vorgang abgebrochen werden soll.  
+  
+ Wenn die <xref:System.ConsoleCancelEventArgs.Cancel%2A> -Eigenschaftensatz auf `true` im Ereignishandler, der Prozess fortgesetzt wird; andernfalls wird der Prozess beendet. Standardmäßig wird der Wert von der <xref:System.ConsoleCancelEventArgs> Eigenschaft ist `false`, und der Prozess beendet wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.ConsoleCancelEventArgs> Klasse für die Ereignisbehandlung.  
+  
+ [!code-cpp[console.cancelkeypress#1](~/samples/snippets/cpp/VS_Snippets_CLR/console.cancelkeypress/cpp/ckp.cpp#1)]
+ [!code-csharp[console.cancelkeypress#1](~/samples/snippets/csharp/VS_Snippets_CLR/console.cancelkeypress/cs/ckp.cs#1)]
+ [!code-vb[console.cancelkeypress#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/console.cancelkeypress/vb/ckp.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="public bool Cancel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Cancel" />
+      <MemberSignature Language="DocId" Value="P:System.ConsoleCancelEventArgs.Cancel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Console</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob gleichzeitiges Drücken der <see cref="F:System.ConsoleModifiers.Control" /> Modifizierertaste und der <see cref="F:System.ConsoleKey.C" /> -Konsolentaste (STRG + C) oder die Tasten STRG + UNTBR beendet den aktuellen Prozess. Die Standardeinstellung ist <see langword="false" />, der den aktuellen Prozess beendet.</summary>
+        <value>
+          <see langword="true" />Wenn der aktuelle Prozess fortgesetzt werden soll, wenn der Ereignishandler abgeschlossen ist; <see langword="false" /> , wenn der aktuelle Prozess beendet werden soll. Der Standardwert ist <see langword="false" />; der aktuelle Prozess beendet wird, wenn der Ereignishandler gibt. Wenn <see langword="true" />, der aktuelle Prozess wird fortgesetzt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ConsoleCancelEventArgs.Cancel%2A> -Eigenschaft wird automatisch mit initialisiert `false` Wenn der Handler für die <xref:System.Console.CancelKeyPress> Ereignis aufgerufen wird. Der Wert von der <xref:System.ConsoleCancelEventArgs.Cancel%2A> -Eigenschaft Beendigung der Ereignishandler bestimmt, ob der aktuelle Prozess wird fortgesetzt oder beendet wird.  
+  
+ Wenn STRG + C gedrückt wird, geben Sie in einem Set-Vorgang `true` um anzugeben, dass der aktuelle Prozess fortgesetzt werden sollte, wenn der Ereignishandler abgeschlossen ist, oder `false` , um anzugeben, dass der aktuelle Prozess beendet werden soll.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.ConsoleCancelEventArgs.Cancel%2A> Eigenschaft für die Ereignisbehandlung.  
+  
+ [!code-cpp[console.cancelkeypress#1](~/samples/snippets/cpp/VS_Snippets_CLR/console.cancelkeypress/cpp/ckp.cpp#1)]
+ [!code-csharp[console.cancelkeypress#1](~/samples/snippets/csharp/VS_Snippets_CLR/console.cancelkeypress/cs/ckp.cs#1)]
+ [!code-vb[console.cancelkeypress#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/console.cancelkeypress/vb/ckp.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="usage">
+          <para>In der [!INCLUDE[net_v35_short](~/includes/net-v35-short-md.md)] und [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)], bei dem Versuch, legen Sie die <see cref="P:System.ConsoleCancelEventArgs.Cancel" /> Eigenschaft <see langword="true" /> Wenn die <see cref="E:System.Console.CancelKeyPress" /> Ereignis wurde aufgerufen, indem der Benutzer durch drücken STRG + UNTBR ausgelöst hat eine <see cref="T:System.InvalidOperationException" /> Ausnahme. In der [!INCLUDE[net_v45](~/includes/net-v45-md.md)], Sie können festlegen, die <see cref="P:System.ConsoleCancelEventArgs.Cancel" /> Eigenschaft, um <see langword="true" /> , nachdem der Benutzer, STRG + UNTBR und "Abbrechen", die Beendigung der Anwendung drückt.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="SpecialKey">
+      <MemberSignature Language="C#" Value="public ConsoleSpecialKey SpecialKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ConsoleSpecialKey SpecialKey" />
+      <MemberSignature Language="DocId" Value="P:System.ConsoleCancelEventArgs.SpecialKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Console</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ConsoleSpecialKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Kombination von Modifizierer und Console-Schlüssel, die den aktuellen Prozess unterbrochen.</summary>
+        <value>Einer der Enumerationswerte, der die Tastenkombination angibt, die den aktuellen Prozess unterbrochen. Es ist kein Standardwert vorhanden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.ConsoleCancelEventArgs.SpecialKey%2A> Eigenschaft für die Ereignisbehandlung.  
+  
+ [!code-cpp[console.cancelkeypress#1](~/samples/snippets/cpp/VS_Snippets_CLR/console.cancelkeypress/cpp/ckp.cpp#1)]
+ [!code-csharp[console.cancelkeypress#1](~/samples/snippets/csharp/VS_Snippets_CLR/console.cancelkeypress/cs/ckp.cs#1)]
+ [!code-vb[console.cancelkeypress#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/console.cancelkeypress/vb/ckp.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

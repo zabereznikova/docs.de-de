@@ -1,0 +1,25 @@
+<Namespace Name="System.Text">
+  <Docs>
+    <summary>Der <see cref="N:System.Text" />-Namespace enthält Klassen, die ASCII- und Unicode-Zeichen darstellen, abstrakte Basisklassen zum Konvertieren von Zeichenblöcken in und aus Byteblöcken und eine Hilfsklasse, die <see cref="T:System.String" />-Objekte bearbeitet und formatiert, ohne Zwischeninstanzen von <see cref="T:System.String" /> zu erstellen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Codierungsklassen dienen in erster Linie zum Konvertieren zwischen verschiedenen Codierungen oder Codepages und eine Unicode-Codierung. <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType>Codierung (UTF-16) wird von .NET Framework intern verwendet und <xref:System.Text.Encoding.UTF8%2A?displayProperty=nameWithType> Codierung wird häufig zum Speichern von Zeichendaten zwischen Computern und Kulturen Portabilität sicherzustellen.  
+  
+ Von abgeleiteten Klassen <xref:System.Text.Encoding> ermöglichen es Ihnen, eine Fallbackstrategie auszuwählen, die bestimmt, wie Zeichen in eine Bytefolge codiert werden können oder Bytes, die in Zeichen decodiert werden können behandelt werden. Sie können eine der folgenden:  
+  
+-   Ausnahmefallback. Sie könne Auslösen von Ausnahmen auf Datenfehler entweder über eine `throwonerror` Flag, das in einigen Klassenkonstruktoren oder mithilfe der <xref:System.Text.EncoderExceptionFallback> und <xref:System.Text.DecoderExceptionFallback> Klassen. Wenn Sie über die Integrität des Datenstroms Bedenken haben, wird empfohlen, eine Ausnahme auszulösen.  
+  
+-   Ersatzfallback. Können Sie die <xref:System.Text.EncoderFallback> und <xref:System.Text.DecoderFallback> Klassen so ändern Sie im Hintergrund-Zeichen "?" oder das Unicode-Ersatzzeichen (U + FFFD).  
+  
+-   Fallback mit ähnlichen Zeichen. Diese Option ordnet ein Zeichen in einer Codierung in ein Zeichen in einer anderen Codierung. Bewährte anpassen Fallback wird häufig nicht empfohlen, da es Daten verloren gehen und die zu Verwirrung führen kann, und ist langsamer als einfache "?" Zeichen. Allerdings trifft für ANSI-Codepages mit ähnlichen Zeichen die Standardeinstellung.  
+  
+ Die <xref:System.Text.StringBuilder> Klasse dient für Vorgänge, die eine umfangreiche Manipulationen für eine einzelne Zeichenfolge ausführen. Im Gegensatz zu den <xref:System.String> -Klasse, die <xref:System.Text.StringBuilder> Klasse ist änderbar und bietet eine bessere Leistung beim Verketten oder Löschen von Zeichenfolgen.  
+  
+ Weitere Informationen zu <xref:System.Text?displayProperty=nameWithType>, finden Sie unter [Zeichencodierung in .NET Framework](~/docs/standard/base-types/character-encoding.md) .  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

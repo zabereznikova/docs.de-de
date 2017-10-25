@@ -1,0 +1,125 @@
+<Type Name="AspNetHostingPermissionLevel" FullName="System.Web.AspNetHostingPermissionLevel">
+  <TypeSignature Language="C#" Value="public enum AspNetHostingPermissionLevel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed AspNetHostingPermissionLevel extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.AspNetHostingPermissionLevel" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Vertrauensebene an, die einer ASP.NET-Webanwendung zugewiesen wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Finden Sie unter [ASP.NET Code Access Security](http://msdn.microsoft.com/library/0001d062-f5cd-44e5-bb07-35155569fdb8) ausführliche Informationen zu den Berechtigungen, die jeder Vertrauensebene gewährt werden.  
+  
+ Die Member dieser Enumeration definieren Sicherheitsstufen Anwendung, die von volle Vertrauenswürdigkeit (die Anwendung wird durch die Codezugriffssicherheit uneingeschränkten) für minimale Vertrauenswürdigkeit (die Anwendung verfügt über die Berechtigung nur zum Ausführen). Festlegen die Vertrauensebene für eine ASP.NET-Ressource mit der [Vertrauensstellung](http://msdn.microsoft.com/en-us/eeed0fd3-5aaa-4196-94af-e6baea70dded) Konfigurationselement in einer Datei "Web.config" oder "Machine.config".  
+  
+ Wenn Sie die Sicherheitsrichtlinie für einen bestimmten Server oder Website sperren möchten, verwenden Sie die [Speicherort](http://msdn.microsoft.com/en-us/922ef7d5-da38-4661-b1c6-5b9e5ceda1d5) Element zusammen mit der `allowOverride=false` Attribut, um diese Vertrauensstellung sicherzustellen, dass die Richtlinieneinstellungen nicht überschrieben werden lokal.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="High">
+      <MemberSignature Language="C#" Value="High" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.AspNetHostingPermissionLevel High = int32(500)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.AspNetHostingPermissionLevel.High" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.AspNetHostingPermissionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass Funktionen erfolgreich ausgeführt werden, die mit einer Anforderung für eine Vertrauensebene unterhalb von oder gleich <see langword="High" /> geschützt sind. Diese Ebene ist für sehr vertrauenswürdige Anwendungen mit verwaltetem Code vorgesehen, die die meisten der verwalteten Berechtigungen verwenden müssen, die einen semi-vertrauenswürdigen Zugriff unterstützen. Die Ebene gewährt nicht alle der höchsten Berechtigungen (z.B. die Fähigkeit zum Aufrufen von nativem Code), bietet aber eine Möglichkeit, vertrauenswürdige Anwendungen mit geringstmöglichen Berechtigungen auszuführen oder gewisse Einschränkungen für sehr vertrauenswürdige Anwendungen bereitzustellen. Diese Ebene wird erteilt, indem Sie die Konfiguration mit mindestens der <see cref="F:System.Web.AspNetHostingPermissionLevel.High" /> Vertrauensebene in den [Vertrauensstellung](http://msdn.microsoft.com/en-us/eeed0fd3-5aaa-4196-94af-e6baea70dded) Abschnitt in einer Konfigurationsdatei.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Low">
+      <MemberSignature Language="C#" Value="Low" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.AspNetHostingPermissionLevel Low = int32(300)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.AspNetHostingPermissionLevel.Low" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.AspNetHostingPermissionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass Funktionen erfolgreich ausgeführt werden, die mit einer Anforderung für eine beliebige Vertrauensebene unterhalb von oder gleich <see cref="F:System.Web.AspNetHostingPermissionLevel.Low" /> geschützt sind. Diese Ebene dient dazu, schreibgeschützten Zugriff auf begrenzte Ressourcen in einer eingeschränkten Umgebung zu gewähren. Diese Ebene wird erteilt, indem Sie die Angabe der <see cref="F:System.Web.AspNetHostingPermissionLevel.Low" /> Vertrauensebene in der [Vertrauensstellung](http://msdn.microsoft.com/en-us/eeed0fd3-5aaa-4196-94af-e6baea70dded) Abschnitt in einer Konfigurationsdatei.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Medium">
+      <MemberSignature Language="C#" Value="Medium" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.AspNetHostingPermissionLevel Medium = int32(400)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.AspNetHostingPermissionLevel.Medium" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.AspNetHostingPermissionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass Funktionen erfolgreich ausgeführt werden, die mit einer Anforderung für eine beliebige Vertrauensebene unterhalb von oder gleich <see cref="F:System.Web.AspNetHostingPermissionLevel.Medium" /> geschützt sind. Diese Ebene wird erteilt, indem Sie die Konfiguration mit mindestens der <see cref="F:System.Web.AspNetHostingPermissionLevel.Medium" /> Vertrauensebene in den [Vertrauensstellung](http://msdn.microsoft.com/en-us/eeed0fd3-5aaa-4196-94af-e6baea70dded) Abschnitt in einer Konfigurationsdatei.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Minimal">
+      <MemberSignature Language="C#" Value="Minimal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.AspNetHostingPermissionLevel Minimal = int32(200)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.AspNetHostingPermissionLevel.Minimal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.AspNetHostingPermissionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass Funktionen erfolgreich ausgeführt werden, die mit einer Anforderung für die Vertrauensebene <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" /> geschützt sind. Auf dieser Ebene kann Code ausgeführt werden, aber nicht mit im System vorhandenen Ressourcen interagieren. Diese Ebene wird erteilt, indem Sie die Konfiguration mit mindestens der <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" /> vertrauen Ebene mithilfe der [Vertrauensstellung](http://msdn.microsoft.com/en-us/eeed0fd3-5aaa-4196-94af-e6baea70dded) Abschnitt in einer Konfigurationsdatei.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.AspNetHostingPermissionLevel None = int32(100)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.AspNetHostingPermissionLevel.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.AspNetHostingPermissionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass keine Berechtigung gewährt wird. Bei allen Anforderungen für <see cref="T:System.Web.AspNetHostingPermission" /> tritt ein Fehler auf.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unrestricted">
+      <MemberSignature Language="C#" Value="Unrestricted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.AspNetHostingPermissionLevel Unrestricted = int32(600)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.AspNetHostingPermissionLevel.Unrestricted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.AspNetHostingPermissionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass sämtliche Anforderungen für die Berechtigung zur Verwendung aller Funktionen einer Anwendung gewährt werden. Dies entspricht dem erteilen <see langword="Full" /> Vertrauensebene in den [Vertrauensstellung](http://msdn.microsoft.com/en-us/eeed0fd3-5aaa-4196-94af-e6baea70dded) Abschnitt in einer Konfigurationsdatei.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

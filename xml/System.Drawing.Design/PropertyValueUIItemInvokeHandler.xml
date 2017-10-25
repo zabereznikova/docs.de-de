@@ -1,0 +1,45 @@
+<Type Name="PropertyValueUIItemInvokeHandler" FullName="System.Drawing.Design.PropertyValueUIItemInvokeHandler">
+  <TypeSignature Language="C#" Value="public delegate void PropertyValueUIItemInvokeHandler(ITypeDescriptorContext context, PropertyDescriptor descriptor, PropertyValueUIItem invokedItem);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PropertyValueUIItemInvokeHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Design.PropertyValueUIItemInvokeHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+    <Parameter Name="descriptor" Type="System.ComponentModel.PropertyDescriptor" />
+    <Parameter Name="invokedItem" Type="System.Drawing.Design.PropertyValueUIItem" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="context">Die <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> für die Eigenschaft, die das Symbol, das doppelgeklickt wurde zugeordnet.</param>
+    <param name="descriptor">Die Eigenschaft, die das Symbol, das doppelgeklickt wurde zugeordnet.</param>
+    <param name="invokedItem">Die <see cref="T:System.Drawing.Design.PropertyValueUIItem" /> das Symbol, das doppelgeklickt wurde zugeordnet.</param>
+    <summary>Stellt die Methode zur Behandlung des <see cref="P:System.Drawing.Design.PropertyValueUIItem.InvokeHandler" />-Ereignisses eines <see cref="T:System.Drawing.Design.PropertyValueUIItem" />-Objekts dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Doppelklicken auf ein Symbol im Eigenschaftenfenster löst die <xref:System.Drawing.Design.PropertyValueUIItem.InvokeHandler%2A> -Ereignis für die <xref:System.Drawing.Design.PropertyValueUIItem> , die das Symbol zugeordnet ist. Die <xref:System.Drawing.Design.PropertyValueUIItem.InvokeHandler%2A> Ereignis startet in der Regel eine Benutzeroberfläche (UI), um den Wert der Eigenschaft zu bearbeiten. Hinzufügen einer <xref:System.Drawing.Design.PropertyValueUIItemInvokeHandler> auf die <xref:System.Drawing.Design.PropertyValueUIItem.InvokeHandler%2A> Eigenschaft eine <xref:System.Drawing.Design.PropertyValueUIItem> , weisen Sie einen Ereignishandler an das entsprechende Verhalten führen, wenn das Symbol neben dem Eigenschaftennamen angezeigten doppelgeklickt wird.  
+  
+ Beim Erstellen eines <xref:System.Drawing.Design.PropertyValueUIItemInvokeHandler>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen über Delegaten für Ereignishandler finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel stellt eine <xref:System.Drawing.Design.PropertyValueUIItem> Objekt für alle Eigenschaften der Komponente mit dem Namen `HorizontalMargin` oder `VerticalMargin`. Die <xref:System.Drawing.Design.PropertyValueUIItem> für diese Eigenschaften stellt ein Bild, eine QuickInfo und einen Ereignishandler, die ein Meldungsfeld angezeigt, wenn das Bild für die Eigenschaft geklickt wird. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Drawing.Design.IPropertyValueUIService> Schnittstelle.  
+  
+ [!code-cpp[IPropertyValueUIServiceExample#2](~/samples/snippets/cpp/VS_Snippets_Winforms/IPropertyValueUIServiceExample/CPP/propertyuicomponent.cpp#2)]
+ [!code-csharp[IPropertyValueUIServiceExample#2](~/samples/snippets/csharp/VS_Snippets_Winforms/IPropertyValueUIServiceExample/CS/propertyuicomponent.cs#2)]
+ [!code-vb[IPropertyValueUIServiceExample#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IPropertyValueUIServiceExample/VB/propertyuicomponent.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

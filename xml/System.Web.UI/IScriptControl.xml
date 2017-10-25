@@ -1,0 +1,79 @@
+<Type Name="IScriptControl" FullName="System.Web.UI.IScriptControl">
+  <TypeSignature Language="C#" Value="public interface IScriptControl" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IScriptControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IScriptControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert Methoden, die ASP.NET-Serversteuerelemente implementieren müssen, um Ressourcen von ECMAScript (JavaScript) in AJAX-aktivierte Anwendungen zu definieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Implementierung durch eine Klasse, die Methoden der <xref:System.Web.UI.IScriptControl> -Schnittstelle bereitstellen, Verweise auf Skriptbibliotheken, die Clientkomponenten definieren und Skriptdeskriptoren, die Instanzen von Clienttypen darstellen. Implementieren Sie diese Schnittstelle in benutzerdefinierten Steuerelementen, die Funktionalität des Skript-Steuerelement enthalten wird.  
+  
+ Weitere Informationen finden Sie unter [Hinzufügen von Client-Funktionen auf ein Webserversteuerelement](http://msdn.microsoft.com/library/1d365cbe-1bde-4cef-9fe7-2cd04d3cbdea).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetScriptDescriptors">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptDescriptor&gt; GetScriptDescriptors ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Web.UI.ScriptDescriptor&gt; GetScriptDescriptors() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IScriptControl.GetScriptDescriptors" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptDescriptor&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Auflistung von Skriptdeskriptoren ab, die ECMAScript-Clientkomponenten (JavaScript) darstellen.</summary>
+        <returns>Eine <see cref="T:System.Collections.IEnumerable" />-Auflistung von <see cref="T:System.Web.UI.ScriptDescriptor" />-Objekten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementieren Sie diese Methode zum Definieren von Komponenten, Verhalten oder Clientsteuerelemente aus der Microsoft Ajax-Bibliothek, die das Serversteuerelement erforderlich sind. Diese Methode ermöglicht die Übergabe von deklarativ angegebenen Parametern an Funktionen der Microsoft Ajax-Bibliothek.  
+  
+ Zur Verwendung dieser Methode müssen Sie auch implementieren die abstrakte <xref:System.Web.UI.ScriptDescriptor> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetScriptReferences">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptReference&gt; GetScriptReferences ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Web.UI.ScriptReference&gt; GetScriptReferences() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IScriptControl.GetScriptReferences" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptReference&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft eine Auflistung von <see cref="T:System.Web.UI.ScriptReference" />-Objekten ab, die die Skriptressourcen definieren, die vom Steuerelement benötigt werden.</summary>
+        <returns>Eine <see cref="T:System.Collections.IEnumerable" />-Auflistung von <see cref="T:System.Web.UI.ScriptReference" />-Objekten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementieren Sie diese Methode, um benutzerdefiniertes Skript Bibliotheksverzeichnisse definieren, die das Serversteuerelement erforderlich, z. B. Skripts in einen Ordner Scripts, der die aktuelle Webanwendung oder Ressourcen in einer Assembly sind, an. Skripts von der Microsoft Ajax-Bibliothek müssen nicht auf diese Weise registriert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,321 @@
+<Type Name="UIHintAttribute" FullName="System.ComponentModel.DataAnnotations.UIHintAttribute">
+  <TypeSignature Language="C#" Value="public class UIHintAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UIHintAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.DataAnnotations.UIHintAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field, AllowMultiple=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, die Vorlage oder das Benutzersteuerelement, die Dynamic Data verwendet wird, zum Anzeigen eines Datenfelds an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visual Studio-Projekt mit Quellcode ist zu diesem Thema steht zur Verfügung: [herunterladen](http://go.microsoft.com/fwlink/?linkid=158686).  
+  
+ Verwendet MVC die <xref:System.ComponentModel.DataAnnotations.UIHintAttribute> Klasse, um ein Modell mit einem Datenfeld zuordnen. Dynamic Data verwendet die <xref:System.ComponentModel.DataAnnotations.UIHintAttribute> Klasse, ein benutzerdefiniertes Steuerelement einem Datenfeld zugeordnet werden soll. Dynamic Data verwendet die <xref:System.ComponentModel.DataAnnotations.UIHintAttribute.UIHint%2A> Eigenschaft, um festzustellen, welche Benutzer verwenden, um das Anzeigen eines Datenfelds an.  
+  
+ Weitere Informationen zum Verwenden von Attributen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.ComponentModel.DataAnnotations.UIHintAttribute> Attribut, um den Namen einer benutzerdefinierten Feldvorlage, die die Anzeige behandelt und Bearbeiten eines Datenfelds angeben.  
+  
+ Ein vollständiges Beispiel finden Sie unter [Vorgehensweise: Feld Darstellung der Daten im Datenmodell anpassen](http://msdn.microsoft.com/library/33c2e908-bb52-4656-ba7a-ba55fb04beb2).  
+  
+ [!code-csharp[DynamicData.CustomFieldTemplate#5](~/samples/snippets/csharp/VS_Snippets_WebNet/DynamicData.CustomFieldTemplate/CS/Product.cs#5)]
+ [!code-vb[DynamicData.CustomFieldTemplate#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DynamicData.CustomFieldTemplate/VB/Products.vb#5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UIHintAttribute (string uiHint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string uiHint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.UIHintAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="uiHint" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="uiHint">Das Benutzersteuerelement mit dem Feld "Daten" angezeigt.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.DataAnnotations.UIHintAttribute" /> Klasse, indem Sie ein Steuerelement für die angegebenen Benutzer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.ComponentModel.DataAnnotations.UIHintAttribute> mit diesem Konstruktor erstellte Objekt wird initialisiert unter Verwendung des angegebenen `uiHint`, der angibt, dass des Benutzersteuerelements (Feldvorlage) verwenden, um das Feld "Daten" angezeigt.  
+  
+ ASP.NET Dynamic Data stellt Feldvorlagen, Vorlagen und Data-Steuerelemente zum Rendern von Datenfeldern in einem Datenmodell. Sie können diese Vorlagen und Steuerelemente zur Anpassung von sie ändern oder Sie können ein benutzerdefiniertes Steuerelement erstellen. Wenn Sie ein benutzerdefiniertes Steuerelement erstellen, verwenden Sie die <xref:System.ComponentModel.DataAnnotations.UIHintAttribute.UIHint%2A> -Eigenschaft das Benutzersteuerelement zum Anzeigen eines Datenfelds an.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UIHintAttribute (string uiHint, string presentationLayer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string uiHint, string presentationLayer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.UIHintAttribute.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="uiHint" Type="System.String" />
+        <Parameter Name="presentationLayer" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="uiHint">Das Benutzersteuerelement (Feldvorlage) zu verwenden, um das Feld "Daten" anzuzeigen.</param>
+        <param name="presentationLayer">Die Präsentationsschicht, die die Klasse verwendet werden. Kann auf "HTML", "Silverlight", "WPF" oder "WinForms" festgelegt werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.DataAnnotations.UIHintAttribute" /> -Klasse mit dem angegebenen Benutzersteuerelement und der angegebenen Darstellungsschicht.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UIHintAttribute (string uiHint, string presentationLayer, params object[] controlParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string uiHint, string presentationLayer, object[] controlParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.UIHintAttribute.#ctor(System.String,System.String,System.Object[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="uiHint" Type="System.String" />
+        <Parameter Name="presentationLayer" Type="System.String" />
+        <Parameter Name="controlParameters" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="uiHint">Das Benutzersteuerelement (Feldvorlage) zu verwenden, um das Feld "Daten" anzuzeigen.</param>
+        <param name="presentationLayer">Die Präsentationsschicht, die die Klasse verwendet werden. Kann auf "HTML", "Silverlight", "WPF" oder "WinForms" festgelegt werden.</param>
+        <param name="controlParameters">Das Objekt zu verwenden, um Werte aus beliebigen Datenquellen abzurufen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.DataAnnotations.UIHintAttribute" /> -Klasse unter Verwendung der angegebenen Benutzersteuerelement Darstellungsschicht und Steuerelementparameter.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <see cref="P:System.ComponentModel.DataAnnotations.UIHintAttribute.ControlParameters" />ist <see langword="null" /> oder es handelt sich um einen Schlüssel für die Einschränkung.  
+  
+ - oder -   
+  
+ Der Wert des <see cref="P:System.ComponentModel.DataAnnotations.UIHintAttribute.ControlParameters" /> ist keine Zeichenfolge.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,object&gt; ControlParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; ControlParameters" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.UIHintAttribute.ControlParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Web.DynamicData.DynamicControlParameter" /> Objekt zu verwenden, um Werte aus einer beliebigen Datenquelle abzurufen.</summary>
+        <value>Eine Auflistung von Schlüssel-Wert-Paaren.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.DataAnnotations.UIHintAttribute.ControlParameters%2A> Eigenschaft ermöglicht Ihnen das Abrufen von Daten aus einem Datenmodell, verfolgt Updates in das Datenmodell und benachrichtigt das Modell der Änderungen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.UIHintAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das mit dieser Instanz verglichen werden soll oder eine <see langword="null" /> Verweis.</param>
+        <summary>Ruft einen Wert, der angibt, ob diese Instanz mit dem angegebenen Objekt identisch ist.</summary>
+        <returns>
+          <see langword="true" />Wenn das angegebene Objekt gleich dieser Instanz ist. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.UIHintAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Hashcode für die aktuelle Instanz des Attributs ab.</summary>
+        <returns>Der Hashcode der Attribut-Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PresentationLayer">
+      <MemberSignature Language="C#" Value="public string PresentationLayer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PresentationLayer" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.UIHintAttribute.PresentationLayer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Präsentationsschicht, die mithilfe der <see cref="T:System.ComponentModel.DataAnnotations.UIHintAttribute" /> Klasse.</summary>
+        <value>Die Präsentationsschicht, die von dieser Klasse verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft stellt die Präsentationsschicht, die verwendet die <xref:System.ComponentModel.DataAnnotations.UIHintAttribute> Klasse. Diese Eigenschaft kann auf "HTML", "Silverlight", "WPF" oder "WinForms" festgelegt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeId">
+      <MemberSignature Language="C#" Value="public override object TypeId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object TypeId" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.UIHintAttribute.TypeId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den eindeutigen Bezeichner für das Attribut ab.</summary>
+        <value>Der eindeutige Bezeichner für das Attribut.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UIHint">
+      <MemberSignature Language="C#" Value="public string UIHint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UIHint" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.UIHintAttribute.UIHint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Feldvorlage zu verwenden, um das Feld "Daten" anzuzeigen.</summary>
+        <value>Der Name der Feldvorlage, in dem Feld "Daten" angezeigt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET Dynamic Data stellt Feld und Seitenvorlagen zum Rendern von Datenfeldern in einem Datenmodell. Feld-Vorlagen sind Benutzersteuerelemente (ASCX-Dateien), die Datenfeldern im Modell zugeordnet sind. Sie können die standardmäßige Benutzersteuerelemente, die dynamische Daten bereitstellt, oder Sie können einen eigenen Benutzer Steuerelemente zur Verwendung als Feldvorlage erstellen. Wenn Sie ein benutzerdefiniertes Steuerelement erstellen, verwenden Sie die <xref:System.ComponentModel.DataAnnotations.UIHintAttribute.UIHint%2A> Eigenschaft für eine Eigenschaft, damit die Eigenschaft mithilfe des benutzerdefinierten Benutzersteuerelements gerendert wird. Die <xref:System.ComponentModel.DataAnnotations.UIHintAttribute.UIHint%2A> Eigenschaft gibt an, welche Feldvorlage verwenden, wenn eine bestimmte Spalte gerendert wird. Die <xref:System.ComponentModel.DataAnnotations.UIHintAttribute.UIHint%2A> Eigenschaft kann auf einen der in Dynamic Data bereitgestellten Vorlagen oder eine benutzerdefinierte Vorlage verweisen. Beispielsweise erstellen Sie eine benutzerdefinierte Feldvorlage RedText_Edit.ascx werden können, und verwenden Sie dann die <xref:System.ComponentModel.DataAnnotations.UIHintAttribute.UIHint%2A> Eigenschaft, um anzugeben, dass das Steuerelement RedText_Edit.ascx verwendet werden soll ein Feld für die angegebenen Daten statt der Standardvorlage Text_Edit.ascx zu rendern, wird in dynamischen Daten bereitgestellt.  
+  
+ Das folgende Beispiel zeigt, wie um anzugeben, dass die Spalte "UnitsInStock" in einer Datenbank mithilfe der Vorlage angegebene benutzerdefinierte Feld gerendert wird.  
+  
+ [!code-csharp[DynamicData.CustomFieldTemplate#5](~/samples/snippets/csharp/VS_Snippets_WebNet/DynamicData.CustomFieldTemplate/CS/Product.cs#5)]
+ [!code-vb[DynamicData.CustomFieldTemplate#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DynamicData.CustomFieldTemplate/VB/Products.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

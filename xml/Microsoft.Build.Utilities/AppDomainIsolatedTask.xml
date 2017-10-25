@@ -1,0 +1,265 @@
+<Type Name="AppDomainIsolatedTask" FullName="Microsoft.Build.Utilities.AppDomainIsolatedTask">
+  <TypeSignature Language="C#" Value="public abstract class AppDomainIsolatedTask : MarshalByRefObject, Microsoft.Build.Framework.ITask" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit AppDomainIsolatedTask extends System.MarshalByRefObject implements class Microsoft.Build.Framework.ITask" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Utilities.AppDomainIsolatedTask" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.MarshalByRefObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Framework.ITask</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>Microsoft.Build.Framework.LoadInSeparateAppDomain</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt dieselben Funktionen wie <see cref="T:Microsoft.Build.Utilities.Task" /> bereit, wird aber auch von <see cref="T:System.MarshalByRefObject" /> abgeleitet, damit es in seiner eigenen Anwendungsdomäne instanziiert werden kann.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AppDomainIsolatedTask ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.AppDomainIsolatedTask.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Utilities.AppDomainIsolatedTask" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AppDomainIsolatedTask (System.Resources.ResourceManager taskResources);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Resources.ResourceManager taskResources) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.AppDomainIsolatedTask.#ctor(System.Resources.ResourceManager)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="taskResources" Type="System.Resources.ResourceManager" />
+      </Parameters>
+      <Docs>
+        <param name="taskResources">Die Aufgabenressourcen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Build.Utilities.AppDomainIsolatedTask" />-Klasse und ermöglicht abgeleiteten <see cref="T:Microsoft.Build.Utilities.Task" />-Klassen das Registrieren ihrer Ressourcen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AppDomainIsolatedTask (System.Resources.ResourceManager taskResources, string helpKeywordPrefix);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Resources.ResourceManager taskResources, string helpKeywordPrefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.AppDomainIsolatedTask.#ctor(System.Resources.ResourceManager,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="taskResources" Type="System.Resources.ResourceManager" />
+        <Parameter Name="helpKeywordPrefix" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="taskResources">Die Aufgabenressourcen.</param>
+        <param name="helpKeywordPrefix">Das Präfix für das Hilfeschlüsselwort.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:Microsoft.Build.Utilities.AppDomainIsolatedTask" /> -Klasse und ermöglicht abgeleiteten <see cref="T:Microsoft.Build.Utilities.Task" /> Klassen, ihre Ressourcen zu registrieren sowie stellen ein Präfix zum Verfassen von Hilfeschlüsselwörter aus Zeichenfolgenressourcennamen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Präfix auf eine leere Zeichenfolge ist, werden Zeichenfolgenressourcennamen wörtlich als Hilfeschlüsselwörter verwendet werden. Ein Beispiel, wie das Präfix verwendet wird, finden Sie unter der <xref:Microsoft.Build.Utilities.TaskLoggingHelper.LogErrorWithCodeFromResources%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildEngine">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.IBuildEngine BuildEngine { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.IBuildEngine BuildEngine" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.AppDomainIsolatedTask.BuildEngine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.IBuildEngine</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die für die Aufgaben verfügbare Buildmodulschnittstelle ab oder legt sie fest.</summary>
+        <value>Die <see cref="T:Microsoft.Build.Framework.IBuildEngine" /> , die für Aufgaben verfügbar ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Buildmodul legt automatisch diese Eigenschaft auf Aufgaben zurückgerufen werden können.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public abstract bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.AppDomainIsolatedTask.Execute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Führt die Aufgabe aus.</summary>
+        <returns>
+          <see langword="true" />, wenn erfolgreich, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode muss von der abgeleiteten Klasse implementiert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpKeywordPrefix">
+      <MemberSignature Language="C#" Value="protected string HelpKeywordPrefix { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HelpKeywordPrefix" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.AppDomainIsolatedTask.HelpKeywordPrefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Präfix ab, das zum Erstellen von Hilfeschlüsselwörtern aus Zeichenfolgenressourcennamen verwendet wird, oder legt dieses fest.</summary>
+        <value>Ein <see cref="T:System.String" /> , der zum Erstellen von Hilfeschlüsselwörtern verwendet wird. Dieser Wert kann <see langword="null" /> sein.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn eine Aufgabe keine Hilfeschlüsselwörter parteinachrichten zugeordnet, kann es ignoriert diese Eigenschaft oder er auf null festgelegt. Wenn das Präfix auf eine leere Zeichenfolge festgelegt ist, werden Zeichenfolgenressourcennamen wörtlich als Hilfeschlüsselwörter verwendet werden. Ein Beispiel, wie dieses Präfix verwendet wird, finden Sie unter der <xref:Microsoft.Build.Utilities.TaskLoggingHelper.LogErrorWithCodeFromResources%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostObject">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskHost HostObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskHost HostObject" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.AppDomainIsolatedTask.HostObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskHost</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Host Objektinstanz, die die abgeleitete gehörige <see cref="T:Microsoft.Build.Utilities.Task" />.</summary>
+        <value>Die <see cref="T:Microsoft.Build.Framework.ITaskHost" /> Hostobjektinstanz, die mit der abgeleiteten anfallen <see cref="T:Microsoft.Build.Utilities.Task" />. Dieser Wert kann <see langword="null" /> sein.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Buildmodul legt diese Eigenschaft fest, wenn die Host-IDE ein Hostobjekt mit dieser bestimmten Aufgabe verknüpft hat.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeLifetimeService">
+      <MemberSignature Language="C#" Value="public override object InitializeLifetimeService ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object InitializeLifetimeService() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.AppDomainIsolatedTask.InitializeLifetimeService" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gewährt beim Überschreiben in einer abgeleiteten Klasse Aufgaben eine unbegrenzte Leasezeit.</summary>
+        <returns>
+          <see langword="null" />Um eine unbegrenzte Lebensdauer anzugeben.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Andernfalls wird für eine begrenzte Lease von 5 Minuten zurückgegeben; und Task-Instanzen können ablaufen, wenn sie eine lange Zeit in Anspruch nehmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Log">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Utilities.TaskLoggingHelper Log { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Utilities.TaskLoggingHelper Log" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.AppDomainIsolatedTask.Log" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Utilities.TaskLoggingHelper</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Instanz eines Hilfsobjekts für die Aufgabenprotokollierung ab, das Aufgabenprotokollierungsmethoden enthält.</summary>
+        <value>Ein <see cref="T:Microsoft.Build.Utilities.TaskLoggingHelper" /> , die Aufgabenprotokollierungsmethoden enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskResources">
+      <MemberSignature Language="C#" Value="protected System.Resources.ResourceManager TaskResources { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Resources.ResourceManager TaskResources" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.AppDomainIsolatedTask.TaskResources" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Resources.ResourceManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ihn fest kulturspezifische Ressourcen der abgeleiteten <see cref="T:Microsoft.Build.Utilities.Task" />.</summary>
+        <value>Ein <see cref="T:System.Resources.ResourceManager" /> also eine kulturspezifische Ressource der abgeleiteten <see cref="T:Microsoft.Build.Utilities.Task" />. Dieser Wert kann <see langword="null" /> sein.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abgeleitete Klassen sollten ihre Ressourcen entweder während der Konstruktion oder durch diese Eigenschaft registrieren, wenn lokalisierte Zeichenfolgen verfügen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

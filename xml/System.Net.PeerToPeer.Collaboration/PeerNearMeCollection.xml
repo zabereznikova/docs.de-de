@@ -1,0 +1,103 @@
+<Type Name="PeerNearMeCollection" FullName="System.Net.PeerToPeer.Collaboration.PeerNearMeCollection">
+  <TypeSignature Language="C#" Value="public class PeerNearMeCollection : System.Collections.ObjectModel.Collection&lt;System.Net.PeerToPeer.Collaboration.PeerNearMe&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit PeerNearMeCollection extends System.Collections.ObjectModel.Collection`1&lt;class System.Net.PeerToPeer.Collaboration.PeerNearMe&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Net.PeerToPeer.Collaboration.PeerNearMeCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ObjectModel.Collection&lt;System.Net.PeerToPeer.Collaboration.PeerNearMe&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="!0">System.Net.PeerToPeer.Collaboration.PeerNearMe</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Container für Elemente, die von einem <see cref="T:System.Net.PeerToPeer.Collaboration.PeerNearMe" /> Objekt. Eine Instanz dieses Typs wird zurückgegeben, durch die <see cref="M:System.Net.PeerToPeer.Collaboration.PeerCollaboration.GetPeersNearMe" /> statische Methode.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="InsertItem">
+      <MemberSignature Language="C#" Value="protected override void InsertItem (int index, System.Net.PeerToPeer.Collaboration.PeerNearMe item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InsertItem(int32 index, class System.Net.PeerToPeer.Collaboration.PeerNearMe item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerNearMeCollection.InsertItem(System.Int32,System.Net.PeerToPeer.Collaboration.PeerNearMe)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.Net.PeerToPeer.Collaboration.PeerNearMe" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, in dem sich das Element befindet.</param>
+        <param name="item">Der neue Wert für das Element im angegebenen Index.</param>
+        <summary>Fügt am angegebenen Index oder Schlüssel ein neues <see cref="T:System.Net.PeerToPeer.Collaboration.PeerNearMe" />-Element in die <see cref="T:System.Net.PeerToPeer.Collaboration.PeerNearMeCollection" /> ein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `Null`Wertelemente sind nicht zulässig.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="item" />-Argument lautet <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItem">
+      <MemberSignature Language="C#" Value="protected override void SetItem (int index, System.Net.PeerToPeer.Collaboration.PeerNearMe item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetItem(int32 index, class System.Net.PeerToPeer.Collaboration.PeerNearMe item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerNearMeCollection.SetItem(System.Int32,System.Net.PeerToPeer.Collaboration.PeerNearMe)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.Net.PeerToPeer.Collaboration.PeerNearMe" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, in dem sich das Element befindet.</param>
+        <param name="item">Der neue Wert für das Element im angegebenen Index.</param>
+        <summary>Ersetzt die <see cref="T:System.Net.PeerToPeer.Collaboration.PeerNearMe" /> Element am angegebenen Index.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `Null`Wertelemente sind nicht zulässig.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Das <paramref name="item" />-Argument lautet <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerNearMeCollection.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolgendarstellung des aktuellen Werts für jede Instanz des <see cref="T:System.Net.PeerToPeer.Collaboration.PeerNearMe" />und durch Kommas getrennt.</summary>
+        <returns>Unicode-Zeichenfolge mit den aktuellen Wert für jede Instanz des <see cref="T:System.Net.PeerToPeer.Collaboration.PeerNearMe" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

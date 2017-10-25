@@ -1,0 +1,129 @@
+<Type Name="IRemoteArgumentEnumeratorContract" FullName="System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract">
+  <TypeSignature Language="C#" Value="public interface IRemoteArgumentEnumeratorContract : System.AddIn.Contract.IContract" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRemoteArgumentEnumeratorContract implements class System.AddIn.Contract.IContract" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn.Contract</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.AddIn.Contract.IContract</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Listet die Elemente einer Auflistung von <see cref="T:System.AddIn.Contract.RemoteArgument" /> Objekte.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit Enumeratoren können die Daten in der Auflistung zwar gelesen, jedoch nicht zum Ändern der zugrunde liegenden Auflistung verwendet werden.  
+  
+ Zu Beginn wird der Enumerator vor das erste Element in der Auflistung positioniert. An dieser Position ist der Rückgabewert der <xref:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract.GetCurrent%2A> ist nicht definiert. Aus diesem Grund müssen Sie aufrufen <xref:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract.MoveNext%2A> um den Enumerator auf das erste Element der Auflistung vor dem Aufruf <xref:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract.GetCurrent%2A>.  
+  
+ <xref:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract.GetCurrent%2A> gibt solange dasselbe Objekt zurück, bis <xref:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract.MoveNext%2A> aufgerufen wird. <xref:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract.MoveNext%2A>Legt den Rückgabewert des <xref:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract.GetCurrent%2A> auf das nächste Element.  
+  
+ Wenn <xref:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract.MoveNext%2A> übergibt am Ende der Auflistung der Enumerator hinter dem letzten Element in der Auflistung positioniert ist und <xref:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract.MoveNext%2A> gibt `false`. Wenn der Enumerator ist an dieser Position ist nachfolgende Aufrufe <xref:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract.MoveNext%2A> auch zurückgeben `false`. Wenn der letzte Aufruf <xref:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract.MoveNext%2A> zurückgegebene `false`, der Rückgabewert der <xref:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract.GetCurrent%2A> ist nicht definiert.  
+  
+ Ein Enumerator bleibt gültig, solange die Auflistung unverändert ist. Werden an der Auflistung Änderungen wie z. B. Hinzufügen, Bearbeiten oder Entfernen von Elementen vorgenommen, verliert der Enumerator unwiederbringlich seine Gültigkeit und sein Verhalten ist nicht definiert.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetCurrent">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.RemoteArgument GetCurrent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.AddIn.Contract.RemoteArgument GetCurrent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract.GetCurrent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.RemoteArgument</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die <see cref="T:System.AddIn.Contract.RemoteArgument" /> in der Auflistung an der aktuellen Position des Enumerators.</summary>
+        <returns>Die <see cref="T:System.AddIn.Contract.RemoteArgument" /> in der Auflistung an der aktuellen Position des Enumerators.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Rückgabewert der <xref:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract.GetCurrent%2A> ist nicht definiert, wenn eine der folgenden Bedingungen:  
+  
+-   Der Enumerator vor dem ersten Element in der Auflistung positioniert ist, sofort nach dem Erstellen des Enumerators oder <xref:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract.Reset%2A> aufgerufen wird. <xref:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract.MoveNext%2A>muss aufgerufen werden, um den Enumerator auf das erste Element der Auflistung vor dem Aufruf <xref:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract.GetCurrent%2A>.  
+  
+-   Der letzte Aufruf von <xref:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract.MoveNext%2A> zurückgegebene `false`, gibt das Ende der Auflistung an.  
+  
+-   Der Enumerator ist aufgrund von Änderungen in der Auflistung, z. B. hinzufügen, bearbeiten oder Löschen von Elementen für ungültig erklärt.  
+  
+ <xref:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract.GetCurrent%2A> gibt solange dasselbe Objekt zurück, bis <xref:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract.MoveNext%2A> aufgerufen wird. <xref:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract.MoveNext%2A>Legt den Rückgabewert des <xref:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract.GetCurrent%2A> auf das nächste Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveNext">
+      <MemberSignature Language="C#" Value="public bool MoveNext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool MoveNext() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract.MoveNext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt den Enumerator auf das nächste Element der Auflistung.</summary>
+        <returns>
+          <see langword="true" />, wenn der Enumerator erfolgreich auf das nächste Element gesetzt wurde, <see langword="false" />, wenn der Enumerator das Ende der Auflistung überschritten hat.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach dem Erstellen eines Enumerators oder nach der <xref:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract.Reset%2A> -Methode aufgerufen wird, wird ein Enumerator vor das erste Element der Auflistung positioniert. Der erste Aufruf der <xref:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract.MoveNext%2A> Methode verschiebt den Enumerator auf das erste Element der Auflistung.  
+  
+ Wenn <xref:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract.MoveNext%2A> übergibt am Ende der Auflistung der Enumerator hinter dem letzten Element in der Auflistung positioniert ist und <xref:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract.MoveNext%2A> gibt `false`. Wenn der Enumerator ist an dieser Position ist nachfolgende Aufrufe <xref:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract.MoveNext%2A> auch zurückgeben `false` bis <xref:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract.Reset%2A> aufgerufen wird.  
+  
+ Ein Enumerator bleibt gültig, solange die Auflistung unverändert ist. Wenn die Änderungen werden auf die Auflistung, z. B. das Hinzufügen, ändern oder Löschen von Elementen aus, das der Enumerator unwiederbringlich seine ist ungültig, und der nächste Aufruf von <xref:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract.MoveNext%2A> oder <xref:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract.Reset%2A> löst eine <xref:System.InvalidOperationException>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Sammlung wurde nach der Erstellung des Enumerators geändert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Setzt den Enumerator auf seine anfängliche Position vor dem ersten Element in der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nach dem Aufruf <xref:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract.Reset%2A>, den Wert des <xref:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract.GetCurrent%2A> ist nicht definiert. Rufen Sie die <xref:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract.MoveNext%2A> Methode, um den Enumerator auf das erste Element der Auflistung zu bewegen.  
+  
+ Ein Enumerator bleibt gültig, solange die Auflistung unverändert ist. Wenn die Änderungen werden auf die Auflistung, z. B. das Hinzufügen, ändern oder Löschen von Elementen aus, das der Enumerator unwiederbringlich seine ist ungültig, und der nächste Aufruf von <xref:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract.MoveNext%2A> oder <xref:System.AddIn.Contract.Collections.IRemoteArgumentEnumeratorContract.Reset%2A> löst eine <xref:System.InvalidOperationException>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Sammlung wurde nach der Erstellung des Enumerators geändert.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

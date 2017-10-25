@@ -1,0 +1,6 @@
+<Namespace Name="System.IdentityModel">
+  <Docs>
+    <summary>Die <see cref="N:System.IdentityModel" /> -Namespace enthält Klassen, mit denen Sicherheit token Dienste (STS) zu erstellen. Dazu gehören die <see cref="T:System.IdentityModel.SecurityTokenService" /> und <see cref="T:System.IdentityModel.Scope" /> Klassen sowie Ausnahmen mehrere Hilfsklassen, die die Fähigkeit zum Ausführen von cookietransformationen bereitstellen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

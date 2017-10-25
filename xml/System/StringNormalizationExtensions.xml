@@ -1,0 +1,183 @@
+<Type Name="StringNormalizationExtensions" FullName="System.StringNormalizationExtensions">
+  <TypeSignature Language="C#" Value="public static class StringNormalizationExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit StringNormalizationExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.StringNormalizationExtensions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Globalization.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Erweiterungsmethoden zum Arbeiten mit zeichenfolgennormalisierung bereit.</summary>
+    <remarks>
+        <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+
+Die Erweiterungsmethoden für die <xref:System.StringNormalizationExtensions> Klasse dienen zum Arbeiten mit .NET Implementierungen, die nicht unterstützen die <xref:System.String.IsNormalized%2A?displayProperty=nameWithType> und <xref:System.String.Normalize%2A?displayProperty=nameWithType> Methoden. Allerdings sind diese Methoden enthalten, der <xref:System.String> Klasse in .NET 2.0-Standard und stehen daher alle .NET Implementierungen, die den standardmäßigen .NET 2.0 unterstützen. Weitere Informationen finden Sie unter [.NET Standard](~/docs/standard/net-standard.md).
+  
+        ]]></format>
+    
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsNormalized">
+      <MemberSignature Language="C#" Value="public static bool IsNormalized (this string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsNormalized(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.StringNormalizationExtensions.IsNormalized(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine Zeichenfolge.</param>
+        <summary>Gibt an, ob diese angegebene Zeichenfolge in der Unicode-Normalisierungsform C vorliegt.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="value" /> in der Normalisierungsform C vorliegt; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="value" /> enthält ungültige Unicodezeichen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNormalized">
+      <MemberSignature Language="C#" Value="public static bool IsNormalized (this string value, System.Text.NormalizationForm normalizationForm);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsNormalized(string value, valuetype System.Text.NormalizationForm normalizationForm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.StringNormalizationExtensions.IsNormalized(System.String,System.Text.NormalizationForm)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" RefType="this" />
+        <Parameter Name="normalizationForm" Type="System.Text.NormalizationForm" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine Zeichenfolge.</param>
+        <param name="normalizationForm">Eine Unicode-Normalisierungsform.</param>
+        <summary>Gibt an, ob eine Zeichenfolge in einer angegebenen Unicode-Normalisierungsform vorliegt.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="value" /> in Normalisierungsform <paramref name="normalizationForm" /> vorliegt; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="value" /> enthält ungültige Unicodezeichen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Normalize">
+      <MemberSignature Language="C#" Value="public static string Normalize (this string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string Normalize(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.StringNormalizationExtensions.Normalize(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu normalisierende Zeichenfolge.</param>
+        <summary>Normalisiert eine Zeichenfolge in eine Unicode-Normalisierungsform C.</summary>
+        <returns>Eine neue Zeichenfolge, deren Textwert mit <paramref name="value" /> übereinstimmt, deren binäre Darstellung jedoch in der Unicode-Normalisierungsform C vorliegt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="value" /> enthält ungültige Unicodezeichen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Normalize">
+      <MemberSignature Language="C#" Value="public static string Normalize (this string value, System.Text.NormalizationForm normalizationForm);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string Normalize(string value, valuetype System.Text.NormalizationForm normalizationForm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.StringNormalizationExtensions.Normalize(System.String,System.Text.NormalizationForm)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" RefType="this" />
+        <Parameter Name="normalizationForm" Type="System.Text.NormalizationForm" />
+      </Parameters>
+      <Docs>
+        <param name="value">Die zu normalisierende Zeichenfolge.</param>
+        <param name="normalizationForm">Die Unicode-Normalisierungsform.</param>
+        <summary>Normalisiert eine Zeichenfolge in die angegebene Unicode-Normalisierungsform.</summary>
+        <returns>Eine neue Zeichenfolge, deren Textwert mit <paramref name="value" /> übereinstimmt, deren binäre Darstellung jedoch in der <paramref name="normalizationForm" />-Normalisierungsform vorliegt.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="value" /> enthält ungültige Unicodezeichen.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

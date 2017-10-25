@@ -1,0 +1,500 @@
+<Type Name="ArcSegment" FullName="System.Windows.Media.ArcSegment">
+  <TypeSignature Language="C#" Value="public sealed class ArcSegment : System.Windows.Media.PathSegment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ArcSegment extends System.Windows.Media.PathSegment" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.ArcSegment" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.PathSegment</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen elliptischen Bogen zwischen zwei Punkten dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden einer <xref:System.Windows.Media.PathFigure> Objekt zum Speichern von <xref:System.Windows.Media.ArcSegment> Objekte und andere Segmente.  
+  
+ Ein elliptischer Bogen wird definiert, um die Start- und Endpunkte, die x- und y-Radius, x-Achse Drehung Faktor, ein Wert, der angibt, ob das Kreissegment größer als 180 Grad und ein Wert, der die Richtung, in der der Bogen gezeichnet wird, sein soll. Die <xref:System.Windows.Media.ArcSegment> Klasse enthält keine Eigenschaft für den Anfangspunkt des Bogens; sie definiert nur die Zielpunkt des Bogens dar. Der Anfangspunkt des Bogens ist der aktuelle der <xref:System.Windows.Media.PathFigure> , der die <xref:System.Windows.Media.ArcSegment> hinzugefügt wird.  
+  
+ Die folgenden Abbildungen zeigen den anderen Endpunkt <xref:System.Windows.Media.ArcSegment.Size%2A>, und <xref:System.Windows.Media.ArcSegment.RotationAngle%2A> Einstellungen.  
+  
+ ![ArcSegments mit unterschiedlichen Point-Einstellungen](~/add/media/arcsegment-point.png "ArcSegments mit unterschiedlichen Point-Einstellungen")  
+  
+ ![ArcSegments mit unterschiedlichen Size-Einstellungen](~/add/media/arcsegment-size.png "ArcSegments mit unterschiedlichen Size-Einstellungen")  
+  
+ ![ArcSegments mit unterschiedlichen RotationAngle-Einstellungen](~/add/media/arcsegment-rotationangle.png "ArcSegments mit unterschiedlichen RotationAngle-Einstellungen")  
+  
+## <a name="islargearc-and-sweepdirection"></a>IsLargeArc und SweepDirection  
+ Es gibt vier unterschiedliche Bögen gezeichnet werden können, für die meisten Bögen von einer bestimmten Position, Größe und Rotation; die <xref:System.Windows.Media.ArcSegment.IsLargeArc%2A> und <xref:System.Windows.Media.ArcSegment.SweepDirection%2A> -Eigenschaften angeben, welcher Bogen verwendet.  
+  
+ Eines der vier möglichen Bogen Sweep zwei große Bögen mit Sweep von 180 Grad oder höher, und zwei darstellen kleinere Bögen mit Sweep 180 Grad oder weniger. Wenn <xref:System.Windows.Media.ArcSegment.IsLargeArc%2A> ist **"true"**, und klicken Sie dann eines der zwei größere Bogen Sweep ausgewählten ist, andernfalls wird Wenn ist **"false"**möglich des Bogens kleinere Sweep ausgewählt ist. Die verbleibenden beiden möglichen Bogen werden jeweils in einer anderen Richtung gezeichnet: <xref:System.Windows.Media.SweepDirection.Counterclockwise> oder <xref:System.Windows.Media.SweepDirection.Clockwise>. Die <xref:System.Windows.Media.ArcSegment.SweepDirection%2A> Eigenschaft gibt an, welche verwenden.  
+  
+ Die folgenden Abbildungen zeigen verschiedene <xref:System.Windows.Media.ArcSegment.IsLargeArc%2A> und <xref:System.Windows.Media.ArcSegment.SweepDirection%2A> Einstellungen.  
+  
+ ![ArcSegments mit unterschiedlichen IsLargeArc-Einstellungen](~/add/media/arcsegment-islargearc.png "ArcSegments mit unterschiedlichen IsLargeArc-Einstellungen")  
+ArcSegment Objekte mit unterschiedlichen IsLargeArc-Einstellungen  
+  
+ ![ArcSegments mit unterschiedlichen SweepDirection-Einstellungen](~/add/media/arcsegment-sweepdirection.png "ArcSegments mit unterschiedlichen SweepDirection-Einstellungen")  
+ArcSegment Objekte mit unterschiedlichen SweepDirection-Einstellungen  
+  
+## <a name="freezable-features"></a>Funktionen von Freezable-Objekten  
+ Ein <xref:System.Windows.Media.ArcSegment> ist eine Art von <xref:System.Windows.Freezable> Objekt. Informationen zu <xref:System.Windows.Freezable> Funktionen, z. B. Einfrieren und Klonen, finden Sie unter der [Freezable Objects Overview](~/docs/framework/wpf/advanced/freezable-objects-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.ArcSegment" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.ArcSegment> -Klasse definiert nur die Zielpunkt des Bogens dar; der Anfangspunkt des Bogens ist der aktuelle der <xref:System.Windows.Media.PathFigure>, zu dem die <xref:System.Windows.Media.ArcSegment> hinzugefügt wird.  
+  
+ Für die meisten elliptischen Bogens einer bestimmten Position, Größe und Rotation gibt es vier unterschiedliche Bögen gezeichnet werden können. die `largeArc` und `sweepDirection` Parameter anzugeben, welcher Bogen verwendet.  
+  
+ Eines der vier möglichen Bogen Sweep zwei große Bögen mit Sweep von 180 Grad oder höher, und zwei darstellen kleinere Bögen mit Sweep 180 Grad oder weniger. Wenn `largeArc` ist **"true"**, und klicken Sie dann eines der zwei größere Bogen Sweep ausgewählten ist, andernfalls wird Wenn `largeArc` ist **"false"**möglich des Bogens kleinere Sweep ausgewählt ist.  
+  
+ Wenn `sweepDirection` ist <xref:System.Windows.Media.SweepDirection.Clockwise>, in einer Richtung mit positivem Winkel der Bogen gezeichnet wird. Wenn `sweepDirection` ist <xref:System.Windows.Media.SweepDirection.Counterclockwise>, in einer Richtung mit negativem Winkel der Bogen gezeichnet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ArcSegment ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.ArcSegment.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.ArcSegment" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.ArcSegment> -Klasse definiert nur die Zielpunkt des Bogens dar; der Anfangspunkt des Bogens ist der aktuelle der <xref:System.Windows.Media.PathFigure>, zu dem die <xref:System.Windows.Media.ArcSegment> hinzugefügt wird.  
+  
+ Für die meisten elliptischen Bogens einer bestimmten Position, Größe und Rotation gibt es vier unterschiedliche Bögen gezeichnet werden können. die `largeArc` und `sweepDirection` Parameter anzugeben, welcher Bogen verwendet.  
+  
+ Eines der vier möglichen Bogen Sweep zwei große Bögen mit Sweep von 180 Grad oder höher, und zwei darstellen kleinere Bögen mit Sweep 180 Grad oder weniger. Wenn `largeArc` ist **"true"**, und klicken Sie dann eines der zwei größere Bogen Sweep ausgewählten ist, andernfalls wird Wenn `largeArc` ist **"false"**möglich des Bogens kleinere Sweep ausgewählt ist.  
+  
+ Wenn `sweepDirection` ist <xref:System.Windows.Media.SweepDirection.Clockwise>, in einer Richtung mit positivem Winkel der Bogen gezeichnet wird. Wenn `sweepDirection` ist <xref:System.Windows.Media.SweepDirection.Counterclockwise>, in einer Richtung mit negativem Winkel der Bogen gezeichnet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ArcSegment (System.Windows.Point point, System.Windows.Size size, double rotationAngle, bool isLargeArc, System.Windows.Media.SweepDirection sweepDirection, bool isStroked);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Point point, valuetype System.Windows.Size size, float64 rotationAngle, bool isLargeArc, valuetype System.Windows.Media.SweepDirection sweepDirection, bool isStroked) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.ArcSegment.#ctor(System.Windows.Point,System.Windows.Size,System.Double,System.Boolean,System.Windows.Media.SweepDirection,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Point" />
+        <Parameter Name="size" Type="System.Windows.Size" />
+        <Parameter Name="rotationAngle" Type="System.Double" />
+        <Parameter Name="isLargeArc" Type="System.Boolean" />
+        <Parameter Name="sweepDirection" Type="System.Windows.Media.SweepDirection" />
+        <Parameter Name="isStroked" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="point">Der Zielpunkt des Bogens. Der Anfangspunkt des Bogens wird als aktueller Punkt der <see cref="T:System.Windows.Media.PathFigure" /> definiert, der das <see cref="T:System.Windows.Media.ArcSegment" /> hinzugefügt wird.</param>
+        <param name="size">Der X- und Y-Radius des Bogens. Der X-Radius wird von der <see cref="P:System.Windows.Size.Width" />-Eigenschaft der <see cref="T:System.Windows.Size" />-Struktur angegeben. Der Y-Radius wird von der <see cref="P:System.Windows.Size.Height" />-Eigenschaft der <see cref="T:System.Windows.Size" />-Struktur angegeben.</param>
+        <param name="rotationAngle">Die Drehung der X-Achse der Ellipse.</param>
+        <param name="isLargeArc">Gibt an, ob der Bogen größer als 180 Grad sein soll.</param>
+        <param name="sweepDirection">Legen Sie als Wert <see cref="F:System.Windows.Media.SweepDirection.Clockwise" /> fest, um den Bogen in einer Richtung mit positivem Winkel zu zeichnen. Legen Sie als Wert <see cref="F:System.Windows.Media.SweepDirection.Counterclockwise" /> fest, um den Bogen in einer Richtung mit negativem Winkel zu zeichnen.</param>
+        <param name="isStroked">Legen Sie auf <c>"true"</c> an den Bogen mit Strichen zu zeichnen bei einem <see cref="T:System.Windows.Media.Pen" /> zum Rendern des Segments verwendet, andernfalls <c>"false"</c>.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.ArcSegment" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.ArcSegment> -Klasse definiert nur die Zielpunkt des Bogens dar; der Anfangspunkt des Bogens ist der aktuelle der <xref:System.Windows.Media.PathFigure>, zu dem die <xref:System.Windows.Media.ArcSegment> hinzugefügt wird.  
+  
+ Für die meisten elliptischen Bogens einer bestimmten Position, Größe und Rotation gibt es vier unterschiedliche Bögen gezeichnet werden können. die `largeArc` und `sweepDirection` Parameter anzugeben, welcher Bogen verwendet.  
+  
+ Eines der vier möglichen Bogen Sweep zwei große Bögen mit Sweep von 180 Grad oder höher, und zwei darstellen kleinere Bögen mit Sweep 180 Grad oder weniger. Wenn `largeArc` ist **"true"**, und klicken Sie dann eines der zwei größere Bogen Sweep ausgewählten ist, andernfalls wird Wenn `largeArc` ist **"false"**möglich des Bogens kleinere Sweep ausgewählt ist.  
+  
+ Wenn `sweepDirection` ist <xref:System.Windows.Media.SweepDirection.Clockwise>, in einer Richtung mit positivem Winkel der Bogen gezeichnet wird. Wenn `sweepDirection` ist <xref:System.Windows.Media.SweepDirection.Counterclockwise>, in einer Richtung mit negativem Winkel der Bogen gezeichnet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.ArcSegment Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.ArcSegment Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.ArcSegment.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.ArcSegment</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon dieser <see cref="T:System.Windows.Media.ArcSegment" />, indem tiefe Kopien der Werte dieses Objekts erzeugt werden. Beim Kopieren von Abhängigkeitseigenschaften kopiert diese Methode Ressourcenverweise und Datenbindungen (die aber möglicherweise nicht mehr aufgelöst werden können), jedoch keine Animationen oder ihre aktuellen Werte.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true." /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.ArcSegment CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.ArcSegment CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.ArcSegment.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.ArcSegment</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt einen änderbaren Klon des <see cref="T:System.Windows.Media.ArcSegment" />-Objekts, indem tiefe Kopien der aktuellen Werte dieses Objekts erzeugt werden. Ressourcenverweise, Datenbindungen und Animationen werden nicht kopiert, ihre aktuellen Werte werden jedoch kopiert.</summary>
+        <returns>Ein änderbarer Klon des aktuellen Objekts. Die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft des geklonten Objekts ist <see langword="false" />, auch wenn die <see cref="P:System.Windows.Freezable.IsFrozen" />-Eigenschaft der Quelle <see langword="true" /> war.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, um änderbare Kopien erzeugen fixierte <xref:System.Windows.Freezable> Objekte (oder eine beliebige <xref:System.Windows.Freezable> Objekt). Der Einfachheit halber führt Shadowing für diese Methode die geerbte Version mit einer Implementierung mit starker Typisierung.  
+  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.ArcSegment.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLargeArc">
+      <MemberSignature Language="C#" Value="public bool IsLargeArc { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLargeArc" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.ArcSegment.IsLargeArc" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob das Kreissegment größer als 180 Grad sein soll, oder legt ihn fest.</summary>
+        <value>**"true"** , wenn das Kreissegment größer als 180 Grad ist, andernfalls sein soll **"false"**. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es gibt vier unterschiedliche Bögen gezeichnet werden können, für die meisten Bögen von einer bestimmten Position, Größe und Rotation; die <xref:System.Windows.Media.ArcSegment.IsLargeArc%2A> und <xref:System.Windows.Media.ArcSegment.SweepDirection%2A> -Eigenschaften angeben, welcher Bogen verwendet.  
+  
+ Eines der vier möglichen Bogen Sweep zwei große Bögen mit Sweep von 180 Grad oder höher, und zwei darstellen kleinere Bögen mit Sweep 180 Grad oder weniger. Wenn <xref:System.Windows.Media.ArcSegment.IsLargeArc%2A> ist **"true"**, und klicken Sie dann eines der zwei größere Bogen Sweep ausgewählten ist, andernfalls wird Wenn ist **"false"**möglich des Bogens kleinere Sweep ausgewählt ist. Die verbleibenden beiden möglichen Bogen werden jeweils in einer anderen Richtung gezeichnet: <xref:System.Windows.Media.SweepDirection.Counterclockwise> oder <xref:System.Windows.Media.SweepDirection.Clockwise>. Die <xref:System.Windows.Media.ArcSegment.SweepDirection%2A> Eigenschaft gibt an, welche verwenden.  
+  
+ Die folgende Abbildung zeigt zwei elliptischen Bogens, die identisch sind ihre <xref:System.Windows.Media.ArcSegment.IsLargeArc%2A> Einstellungen.  
+  
+ ![ArcSegments mit unterschiedlichen IsLargeArc-Einstellungen](~/add/media/arcsegment-islargearc.png "ArcSegments mit unterschiedlichen IsLargeArc-Einstellungen")  
+ArcSegment Objekte mit unterschiedlichen IsLargeArc-Einstellungen  
+  
+<a name="dependencyPropertyInfo_IsLargeArc"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.ArcSegment.IsLargeArcProperty>|  
+|Festgelegte Metadateneigenschaften **"true"**|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLargeArcProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsLargeArcProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsLargeArcProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.ArcSegment.IsLargeArcProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.ArcSegment.IsLargeArc" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Point">
+      <MemberSignature Language="C#" Value="public System.Windows.Point Point { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Point Point" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.ArcSegment.Point" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Endpunkt des elliptischen Bogens ab oder legt diesen fest.</summary>
+        <value>Der Punkt, bis zu dem der Bogen gezeichnet wird. Der Standardwert ist (0,0).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Media.ArcSegment> -Klasse definiert nur die Zielpunkt des Bogens dar; der Anfangspunkt des Bogens ist der aktuelle der <xref:System.Windows.Media.PathFigure> , der die <xref:System.Windows.Media.ArcSegment> hinzugefügt wird.  
+  
+ Wenn des Bogensegments Start- und Endpunkt identisch sind, wird kein Bogen gezeichnet.  
+  
+ Es gibt vier unterschiedliche Bögen gezeichnet werden können, für die meisten Bögen von einer bestimmten Position, Größe und Rotation; die <xref:System.Windows.Media.ArcSegment.IsLargeArc%2A> und <xref:System.Windows.Media.ArcSegment.SweepDirection%2A> -Eigenschaften angeben, welcher Bogen verwendet.  
+  
+ Eines der vier möglichen Bogen Sweep zwei große Bögen mit Sweep von 180 Grad oder höher, und zwei darstellen kleinere Bögen mit Sweep 180 Grad oder weniger. Wenn <xref:System.Windows.Media.ArcSegment.IsLargeArc%2A> ist **"true"**, und klicken Sie dann eines der zwei größere Bogen Sweep ausgewählten ist, andernfalls wird Wenn ist **"false"**möglich des Bogens kleinere Sweep ausgewählt ist. Die verbleibenden beiden möglichen Bogen werden jeweils in einer anderen Richtung gezeichnet: <xref:System.Windows.Media.SweepDirection.Counterclockwise> oder <xref:System.Windows.Media.SweepDirection.Clockwise>. Die <xref:System.Windows.Media.ArcSegment.SweepDirection%2A> Eigenschaft gibt an, welche verwenden.  
+  
+ Die folgende Abbildung zeigt verschiedene elliptischen Bogens, die identisch sind ihre <xref:System.Windows.Media.ArcSegment.Point%2A> Einstellungen.  
+  
+ ![ArcSegments mit unterschiedlichen Point-Einstellungen](~/add/media/arcsegment-point.png "ArcSegments mit unterschiedlichen Point-Einstellungen")  
+Mehrere ArcSegment Objekte mit unterschiedlichen Point-Einstellungen  
+  
+<a name="dependencyPropertyInfo_Point"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.ArcSegment.PointProperty>|  
+|Festgelegte Metadateneigenschaften **"true"**|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PointProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PointProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PointProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.ArcSegment.PointProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.ArcSegment.Point" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RotationAngle">
+      <MemberSignature Language="C#" Value="public double RotationAngle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 RotationAngle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.ArcSegment.RotationAngle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert (in Grad) ab oder legt ihn fest, um den die Ellipse um die X-Achse gedreht wird.</summary>
+        <value>Der Wert (in Grad), um den die Ellipse um die X-Achse gedreht wird. Der Standardwert ist 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Abbildung zeigt verschiedene elliptischen Bogens, die identisch sind ihre <xref:System.Windows.Media.ArcSegment.RotationAngle%2A> Einstellungen.  
+  
+ ![ArcSegments mit unterschiedlichen RotationAngle-Einstellungen](~/add/media/arcsegment-rotationangle.png "ArcSegments mit unterschiedlichen RotationAngle-Einstellungen")  
+Mehrere ArcSegment Objekte mit unterschiedlichen RotationAngle-Einstellungen  
+  
+ Beachten Sie, dass, wenn die Breite und Höhe des Bogens identisch sind, durch Festlegen dieser Eigenschaft keine Auswirkung hat.  
+  
+<a name="dependencyPropertyInfo_RotationAngle"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.ArcSegment.RotationAngleProperty>|  
+|Festgelegte Metadateneigenschaften **"true"**|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RotationAngleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty RotationAngleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty RotationAngleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.ArcSegment.RotationAngleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifiziert die <see cref="P:System.Windows.Media.ArcSegment.RotationAngle" /> Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public System.Windows.Size Size { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Size Size" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.ArcSegment.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die x- und y-Radius des Bogens als eine <see cref="T:System.Windows.Size" /> Struktur.</summary>
+        <value>Ein <see cref="T:System.Windows.Size" /> Struktur, die die x- und y-Radius eines elliptischen Bogens beschreibt. Die <see cref="T:System.Windows.Size" /> Struktur <see cref="P:System.Windows.Size.Width" /> Eigenschaft gibt den Radius des Bogens X-; die <see cref="P:System.Windows.Size.Height" /> Eigenschaft gibt den Bogen y-Radius. Der Standardwert ist 0,0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Abbildung zeigt verschiedene elliptischen Bogens, die identisch sind ihre <xref:System.Windows.Media.ArcSegment.Size%2A> Einstellungen.  
+  
+ ![ArcSegments mit unterschiedlichen Size-Einstellungen](~/add/media/arcsegment-size.png "ArcSegments mit unterschiedlichen Size-Einstellungen")  
+Mehrere ArcSegment Objekte mit unterschiedlichen Size-Einstellungen  
+  
+<a name="dependencyPropertyInfo_Size"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.ArcSegment.SizeProperty>|  
+|Festgelegte Metadateneigenschaften **"true"**|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SizeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SizeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SizeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.ArcSegment.SizeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.ArcSegment.Size" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SweepDirection">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.SweepDirection SweepDirection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.SweepDirection SweepDirection" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.ArcSegment.SweepDirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.SweepDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Bogen, in gezeichnet wird der <see cref="F:System.Windows.Media.SweepDirection.Clockwise" /> oder <see cref="F:System.Windows.Media.SweepDirection.Counterclockwise" /> Richtung.</summary>
+        <value>Ein Wert, der die Richtung angibt, in der der Bogen gezeichnet wird. Der Standardwert ist <see cref="F:System.Windows.Media.SweepDirection.Counterclockwise" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für eine <xref:System.Windows.Media.ArcSegment> mit einer bestimmten <xref:System.Windows.Media.ArcSegment.Size%2A>, <xref:System.Windows.Media.ArcSegment.RotationAngle%2A>, der den Ausgangspunkt und beenden <xref:System.Windows.Media.ArcSegment.Point%2A>, vier unterschiedliche Bögen sind möglich. Angeben der <xref:System.Windows.Media.ArcSegment.IsLargeArc%2A> Eigenschaft reduziert die Anzahl der möglichen Bögen auf zwei: einen Bogen gezeichnet wird bis zum Ende aus den Ausgangspunkt <xref:System.Windows.Media.ArcSegment.Point%2A> in einem <xref:System.Windows.Media.SweepDirection.Clockwise> Richtung und einen Bogen gezeichnet wird von den Startpunkt und den Endpunkt in eine <xref:System.Windows.Media.SweepDirection.Counterclockwise> Richtung.  
+  
+ Die folgende Abbildung zeigt zwei elliptischen Bogens, die identisch sind ihre <xref:System.Windows.Media.ArcSegment.SweepDirection%2A> Einstellungen.  
+  
+ ![ArcSegments mit unterschiedlichen SweepDirection-Einstellungen](~/add/media/arcsegment-sweepdirection.png "ArcSegments mit unterschiedlichen SweepDirection-Einstellungen")  
+ArcSegment Objekte mit unterschiedlichen SweepDirection-Einstellungen  
+  
+<a name="dependencyPropertyInfo_SweepDirection"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Media.ArcSegment.SweepDirectionProperty>|  
+|Festgelegte Metadateneigenschaften **"true"**|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SweepDirectionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SweepDirectionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SweepDirectionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.ArcSegment.SweepDirectionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.ArcSegment.SweepDirection" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

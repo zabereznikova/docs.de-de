@@ -1,0 +1,1045 @@
+<Type Name="UIntPtr" FullName="System.UIntPtr">
+  <TypeSignature Language="C#" Value="public struct UIntPtr : System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit native unsigned int extends System.ValueType implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.UIntPtr" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.CLSCompliant(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ein plattformabhängiger Typ zur Darstellung von Zeigern und Handles.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.UIntPtr> ist eine ganze Zahl sein, dessen Größe plattformspezifisch ist, ausgelegt. D. h. muss eine Instanz dieses Typs werden 32-Bit unter 32-Bit-Hardware und Betriebssystemen und 64-Bit unter 64-Bit-Hardware und Betriebssystemen.  
+  
+> [!IMPORTANT]
+>  Die <xref:System.IntPtr> Typ CLS-kompatibel ist während der <xref:System.UIntPtr> ist keine. Nur die <xref:System.IntPtr> Typ wird in der common Language Runtime verwendet. Die <xref:System.UIntPtr> Typ dient hauptsächlich architektonische Einheitlichkeit mit verwalten die <xref:System.IntPtr> Typ.  
+  
+ Die <xref:System.UIntPtr> -Typ kann von Sprachen, die Zeiger unterstützen, und als allgemeine Mittel zum Verweisen auf Daten zwischen Sprachen, die und unterstützen keine Zeiger verwendet werden. <xref:System.UIntPtr>Objekte können auch verwendet werden, um Handles zu speichern.  
+  
+ Dieser Typ implementiert die <xref:System.Runtime.Serialization.ISerializable> Schnittstelle.  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Dieser Typ ist threadsicher.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UIntPtr (uint value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UIntPtr.#ctor(System.UInt32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Zeiger oder Handle enthalten sind, in eine 32-Bit-Ganzzahl ohne Vorzeichen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.UIntPtr" /> -Struktur unter Verwendung der angegebenen 32-Bit-Zeiger oder Handle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UIntPtr (ulong value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UIntPtr.#ctor(System.UInt64)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.UInt64" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Zeiger oder Handle enthalten sind, in eine 64-Bit-Ganzzahl ohne Vorzeichen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.UIntPtr" /> mithilfe der angegebenen 64-Bit-Zeiger oder Handle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Ausnahme wird nur ausgelöst, wenn der Wert der `value` erfordert mehr Bits als die aktuelle Plattform unterstützt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.OverflowException">Auf einer 32-Bit-Plattform <paramref name="value" /> ist zu groß für die Darstellung als eine <see cref="T:System.UIntPtr" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UIntPtr (void* value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(void* value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UIntPtr.#ctor(System.Void*)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="value" Type="System.Void*" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Zeiger auf einen nicht angegebenen Typ.</param>
+        <summary>Initialisiert eine neue Instanz von <see cref="T:System.UIntPtr" /> mit dem angegebenen Zeiger auf einen nicht angegebenen Typ.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public static UIntPtr Add (UIntPtr pointer, int offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig native unsigned int Add(native unsigned int pointer, int32 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UIntPtr.Add(System.UIntPtr,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UIntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pointer" Type="System.UIntPtr" />
+        <Parameter Name="offset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pointer">Der Zeiger ohne Vorzeichen, die der Offset addiert werden soll.</param>
+        <param name="offset">Der Offset, der addiert werden soll.</param>
+        <summary>Addiert einen Offset zum Wert ein Zeiger ohne Vorzeichen.</summary>
+        <returns>Ein neuer Zeiger ohne Vorzeichen, die das Hinzufügen von wiedergibt <paramref name="offset" /> auf <paramref name="pointer" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IntPtr.Add%2A> Methode löst keine Ausnahme aus, wenn das Ergebnis zu groß, um als Zeiger auf den angegebenen Plattformen dargestellt wird. Stattdessen wird die Additionsoperation in einem nicht geprüften Kontext ausgeführt.  
+  
+ Sprachen, die Überladen von Operatoren oder benutzerdefinierten Operatoren nicht unterstützt werden, können diese Methode verwenden, hinzuzufügende einen Offset zum Wert ein Zeiger ohne Vorzeichen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel instanziiert einen <xref:System.UIntPtr> -Objekt, das auf den Anfang des ein Array mit 10 Elementen verweist, und ruft dann die <xref:System.UIntPtr.Add%2A> Methode, um die Elemente im Array durchlaufen.  
+  
+ [!code-csharp[System.UIntPtr.Add#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.uintptr.add/cs/add1.cs#1)]
+ [!code-vb[System.UIntPtr.Add#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.uintptr.add/vb/add1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UIntPtr.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Ein Objekt, das mit dieser Instanz verglichen werden soll, oder <see langword="null" />.</param>
+        <summary>Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einem angegebenen Objekt ist.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="obj" /> eine Instanz von <see cref="T:System.UIntPtr" /> ist, deren Wert gleich dem Wert dieser Instanz ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UIntPtr.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt den Hashcode für diese Instanz zurück.</summary>
+        <returns>Ein 32-Bit-Hashcode als ganze Zahl mit Vorzeichen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Addition">
+      <MemberSignature Language="C#" Value="public static UIntPtr operator + (UIntPtr pointer, int offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname native unsigned int op_Addition(native unsigned int pointer, int32 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UIntPtr.op_Addition(System.UIntPtr,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UIntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pointer" Type="System.UIntPtr" />
+        <Parameter Name="offset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pointer">Der Zeiger ohne Vorzeichen, die der Offset addiert werden soll.</param>
+        <param name="offset">Der Offset, der addiert werden soll.</param>
+        <summary>Addiert einen Offset zum Wert ein Zeiger ohne Vorzeichen.</summary>
+        <returns>Ein neuer Zeiger ohne Vorzeichen, die das Hinzufügen von wiedergibt <paramref name="offset" /> auf <paramref name="pointer" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.UIntPtr.op_Addition%2A> Methode definiert die Additionsoperation für <xref:System.UIntPtr> Objekte. Dadurch wird dem folgenden Code.  
+  
+ [!code-csharp[System.UIntPtr.op_Addition#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.uintptr.op_addition/cs/op_addition1.cs#1)]
+ [!code-vb[System.UIntPtr.op_Addition#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.uintptr.op_addition/vb/op_addition1.vb#1)]  
+  
+ Sprachen, die keine benutzerdefinierte Operatoren unterstützen können Aufrufen der <xref:System.UIntPtr.Add%2A> Methode stattdessen.  
+  
+ Die Additionsoperation wird keine Ausnahme auslöst, wenn das Ergebnis zu groß, um als Zeiger auf den angegebenen Plattformen darstellen. Stattdessen wird es in einem nicht geprüften Kontext ausgeführt.  
+  
+ Die entsprechende Methode für diesen Operator ist <xref:System.UIntPtr.Add%28System.UIntPtr%2CSystem.Int32%29?displayProperty=nameWithType>. ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (UIntPtr value1, UIntPtr value2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(native unsigned int value1, native unsigned int value2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UIntPtr.op_Equality(System.UIntPtr,System.UIntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value1" Type="System.UIntPtr" />
+        <Parameter Name="value2" Type="System.UIntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="value1">Der erste Zeiger bzw. das erste Handle für den Vergleich.</param>
+        <param name="value2">Der zweite Zeiger bzw. das zweite Handle für den Vergleich.</param>
+        <summary>Bestimmt, ob zwei angegebene Instanzen von <see cref="T:System.UIntPtr" /> gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="value1" /> gleich <paramref name="value2" /> ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.UIntPtr.Equals%28System.Object%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator UIntPtr (uint value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname native unsigned int op_Explicit(unsigned int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UIntPtr.op_Explicit(System.UInt32)~System.UIntPtr" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UIntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine 32-Bit-Ganzzahl ohne Vorzeichen. </param>
+        <summary>Konvertiert den Wert einer 32-Bit-Ganzzahl ohne Vorzeichen in eine <see cref="T:System.UIntPtr" />.</summary>
+        <returns>Eine neue, mit <see cref="T:System.UIntPtr" /> initialisierte Instanz von <paramref name="value" />.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator UIntPtr (ulong value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname native unsigned int op_Explicit(unsigned int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UIntPtr.op_Explicit(System.UInt64)~System.UIntPtr" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UIntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.UInt64" />
+      </Parameters>
+      <Docs>
+        <param name="value">Eine 64-Bit-Ganzzahl ohne Vorzeichen.</param>
+        <summary>Konvertiert den Wert einer 64-Bit-Ganzzahl ohne Vorzeichen in eine <see cref="T:System.UIntPtr" />.</summary>
+        <returns>Eine neue, mit <see cref="T:System.UIntPtr" /> initialisierte Instanz von <paramref name="value" />.</returns>
+        <remarks>
+        </remarks>
+        <exception cref="T:System.OverflowException">Auf einer 32-Bit-Plattform <paramref name="value" /> ist zu groß für die Darstellung als eine <see cref="T:System.UIntPtr" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator uint (UIntPtr value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname unsigned int32 op_Explicit(native unsigned int value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UIntPtr.op_Explicit(System.UIntPtr)~System.UInt32" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.UIntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Zeiger bzw. das zu konvertierende Handle.</param>
+        <summary>Konvertiert den Wert des angegebenen <see cref="T:System.UIntPtr" /> in eine 32-Bit-Ganzzahl ohne Vorzeichen.</summary>
+        <returns>Der Inhalt von <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Ausnahme wird nur ausgelöst, wenn der Wert der `value` erfordert mehr Bits als die aktuelle Plattform unterstützt.
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.OverflowException">Auf einer 64-Bit-Plattform den Wert des <paramref name="value" /> ist zu groß für die Darstellung als eine 32-Bit-Ganzzahl ohne Vorzeichen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator ulong (UIntPtr value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname unsigned int64 op_Explicit(native unsigned int value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UIntPtr.op_Explicit(System.UIntPtr)~System.UInt64" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.UIntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Zeiger bzw. das zu konvertierende Handle.</param>
+        <summary>Konvertiert den Wert des angegebenen <see cref="T:System.UIntPtr" /> in eine 64-Bit-Ganzzahl ohne Vorzeichen.</summary>
+        <returns>Der Inhalt von <paramref name="value" />.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator void* (UIntPtr value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname void* op_Explicit(native unsigned int value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UIntPtr.op_Explicit(System.UIntPtr)~System.Void*" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void*</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.UIntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der zu konvertierende Zeiger bzw. das zu konvertierende Handle.</param>
+        <summary>Konvertiert den Wert des angegebenen <see cref="T:System.UIntPtr" /> in einen Zeiger auf einen nicht angegebenen Typ.  
+  
+ Diese API ist nicht CLS-kompatibel.</summary>
+        <returns>Der Inhalt von <paramref name="value" />.</returns>
+        <remarks>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator UIntPtr (void* value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname native unsigned int op_Explicit(void* value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UIntPtr.op_Explicit(System.Void*)~System.UIntPtr" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UIntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Void*" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Zeiger auf einen nicht angegebenen Typ.</param>
+        <summary>Konvertiert den angegebenen Zeiger auf einen nicht angegebenen Typ in einen <see cref="T:System.UIntPtr" />.  
+  
+ Diese API ist nicht CLS-kompatibel.</summary>
+        <returns>Eine neue, mit <see cref="T:System.UIntPtr" /> initialisierte Instanz von <paramref name="value" />.</returns>
+        <remarks>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (UIntPtr value1, UIntPtr value2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(native unsigned int value1, native unsigned int value2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UIntPtr.op_Inequality(System.UIntPtr,System.UIntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value1" Type="System.UIntPtr" />
+        <Parameter Name="value2" Type="System.UIntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="value1">Der erste Zeiger bzw. das erste Handle für den Vergleich.</param>
+        <param name="value2">Der zweite Zeiger bzw. das zweite Handle für den Vergleich.</param>
+        <summary>Bestimmt, ob zwei angegebene Instanzen von <see cref="T:System.UIntPtr" /> nicht gleich sind.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="value1" /> ungleich <paramref name="value2" /> ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[Die entsprechende Methode für diesen Operator ist.<xref:System.UIntPtr.Equals%28System.Object%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Subtraction">
+      <MemberSignature Language="C#" Value="public static UIntPtr operator - (UIntPtr pointer, int offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname native unsigned int op_Subtraction(native unsigned int pointer, int32 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UIntPtr.op_Subtraction(System.UIntPtr,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UIntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pointer" Type="System.UIntPtr" />
+        <Parameter Name="offset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pointer">Der Zeiger ohne Vorzeichen, die der Offset subtrahiert werden soll.</param>
+        <param name="offset">Der Offset, der subtrahiert werden soll.</param>
+        <summary>Subtrahiert einen Offset vom Wert der ein Zeiger ohne Vorzeichen.</summary>
+        <returns>Ein neuer Zeiger ohne Vorzeichen, der die Subtraktion von <paramref name="offset" /> aus <paramref name="pointer" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.UIntPtr.op_Subtraction%2A> Methode definiert, dem der Subtraktionsvorgang für <xref:System.UIntPtr> Objekte. Dadurch wird dem folgenden Code.  
+  
+ [!code-csharp[System.UIntPtr.op_Addition#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.uintptr.op_addition/cs/op_subtraction1.cs#2)]
+ [!code-vb[System.UIntPtr.op_Addition#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.uintptr.op_addition/vb/op_subtraction1.vb#2)]  
+  
+ Sprachen, die keine benutzerdefinierte Operatoren unterstützen können Aufrufen der <xref:System.UIntPtr.Subtract%2A> Methode stattdessen.  
+  
+ Die Operation der Mengensubtraktion wird keine Ausnahme auslöst, wenn das Ergebnis zu klein, um als Zeiger auf den angegebenen Plattformen darstellen. Stattdessen wird es in einem nicht geprüften Kontext ausgeführt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public static int Size { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 Size" />
+      <MemberSignature Language="DocId" Value="P:System.UIntPtr.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Größe dieser Instanz ab.</summary>
+        <value>Die Größe eines Zeigers bzw. Handles auf dieser Plattform, gemessen in Bytes. Der Wert dieser Eigenschaft ist auf einer 32-Bit-Plattform 4 und 8 unter einer 64-Bit-Plattform.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subtract">
+      <MemberSignature Language="C#" Value="public static UIntPtr Subtract (UIntPtr pointer, int offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig native unsigned int Subtract(native unsigned int pointer, int32 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UIntPtr.Subtract(System.UIntPtr,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UIntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pointer" Type="System.UIntPtr" />
+        <Parameter Name="offset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pointer">Der Zeiger ohne Vorzeichen, die der Offset subtrahiert werden soll.</param>
+        <param name="offset">Der Offset, der subtrahiert werden soll.</param>
+        <summary>Subtrahiert einen Offset vom Wert der ein Zeiger ohne Vorzeichen.</summary>
+        <returns>Ein neuer Zeiger ohne Vorzeichen, der die Subtraktion von <paramref name="offset" /> aus <paramref name="pointer" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.IntPtr.Subtract%2A> Methode löst keine Ausnahme aus, wenn das Ergebnis zu klein, um als Zeiger auf den angegebenen Plattformen dargestellt wird. Stattdessen wird die Operation der Mengensubtraktion in einem nicht geprüften Kontext ausgeführt.  
+  
+ Sprachen, die Überladen von Operatoren oder benutzerdefinierten Operatoren nicht unterstützen, können diese Methode verwenden, subtrahiert einen Offset vom Wert der ein Zeiger ohne Vorzeichen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird ein <xref:System.IntPtr> -Objekt, das am Ende ein Array mit 10 Elementen verweist, und ruft dann die <xref:System.IntPtr.Subtract%2A> Methode, um die Elemente im Array in umgekehrter Reihenfolge zu durchlaufen.  
+  
+ [!code-csharp[System.UIntPtr.Subtract#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.uintptr.subtract/cs/subtract1.cs#1)]
+ [!code-vb[System.UIntPtr.Subtract#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.uintptr.subtract/vb/subtract1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IEquatable&lt;System.UIntPtr&gt;.Equals">
+      <MemberSignature Language="C#" Value="bool IEquatable&lt;UIntPtr&gt;.Equals (UIntPtr other);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.IEquatable&lt;System.UIntPtr&gt;.Equals(native unsigned int other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UIntPtr.System#IEquatable&lt;System#UIntPtr&gt;#Equals(System.UIntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.UIntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UIntPtr.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Das mit Daten aufzufüllende <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Objekt.</param>
+        <param name="context">Das Ziel dieser Serialisierung. (Dieser Parameter wird nicht verwendet, geben Sie <see langword="null" /> an.)</param>
+        <summary>Füllt ein <see cref="T:System.Runtime.Serialization.SerializationInfo" />-Objekt mit den für das Serialisieren des aktuellen <see cref="T:System.UIntPtr" />-Objekts erforderlichen Daten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode füllt die `info` Parameter mit dem Wert des aktuellen <xref:System.UIntPtr> Objekt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="info" /> ist <see langword="null" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">erfordert volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann nicht von teilweise vertrauenswürdigem oder transparentem Code verwendet werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ToPointer">
+      <MemberSignature Language="C#" Value="public void* ToPointer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void* ToPointer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UIntPtr.ToPointer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void*</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert den Wert dieser Instanz in einen Zeiger auf einen nicht angegebenen Typ.</summary>
+        <returns>Ein Zeiger auf <see cref="T:System.Void" />, d. h. ein Zeiger auf Speicher, der Daten eines nicht angegebenen Typs enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UIntPtr.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert den Wert dieser Instanz in die entsprechende Zeichenfolgendarstellung.</summary>
+        <returns>Die Zeichenfolgendarstellung des Werts dieser Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Wert der <xref:System.IntPtr.Size%2A> Eigenschaft für diese Instanz ist 4, und klicken Sie dann diese Methode entspricht <xref:System.UInt32.ToString%2A>ist, andernfalls dieser Methode entspricht <xref:System.UInt64.ToString%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToUInt32">
+      <MemberSignature Language="C#" Value="public uint ToUInt32 ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int32 ToUInt32() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UIntPtr.ToUInt32" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert den Wert dieser Instanz in eine 32-Bit-Ganzzahl ohne Vorzeichen.</summary>
+        <returns>Eine 32-Bit-Ganzzahl ohne Vorzeichen, die gleich dem Wert dieser Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Ausnahme wird nur ausgelöst, wenn der Wert der `value` erfordert mehr Bits als die aktuelle Plattform unterstützt.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.OverflowException">Auf einer 64-Bit-Plattform ist der Wert dieser Instanz zu groß für die Darstellung als eine 32-Bit-Ganzzahl ohne Vorzeichen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToUInt64">
+      <MemberSignature Language="C#" Value="public ulong ToUInt64 ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int64 ToUInt64() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UIntPtr.ToUInt64" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt64</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Konvertiert den Wert dieser Instanz in eine 64-Bit-Ganzzahl ohne Vorzeichen.</summary>
+        <returns>Eine 64-Bit-Ganzzahl ohne Vorzeichen, die gleich dem Wert dieser Instanz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Zero">
+      <MemberSignature Language="C#" Value="public static readonly UIntPtr Zero;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly native unsigned int Zero" />
+      <MemberSignature Language="DocId" Value="F:System.UIntPtr.Zero" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UIntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ein schreibgeschütztes Feld, das einen mit 0 (null) initialisierten Zeiger oder ein Handle darstellt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieses Felds ist nicht gleichbedeutend mit `null`. Mit diesem Feld können Sie um effizient zu ermitteln, ob eine Instanz von <xref:System.UIntPtr> auf einen anderen Wert als 0 (null) festgelegt wurde.  
+  
+ Nehmen wir beispielsweise an, die Variable Uip, ist eine Instanz der <xref:System.UIntPtr>. Sie können feststellen, ob er festgelegt wurde, indem sie z. B. von einem Konstruktor zurückgegebenen Wert vergleichen: " `if uip != new UIntPtr(0)...` ". Allerdings ist das Aufrufen eines Konstruktors zum Abrufen einer nicht initialisierten Zeigers ineffizient. Es ist besser, entweder " `if uip != UIntPtr.Zero...` ", oder " `if !UIntPtr.Zero.Equals(uip)...` ".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

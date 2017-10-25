@@ -1,0 +1,105 @@
+<Type Name="VisualStateChangedEventArgs" FullName="System.Windows.VisualStateChangedEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class VisualStateChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit VisualStateChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.VisualStateChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.VisualStateGroup.CurrentStateChanging" />-Ereignis und das <see cref="E:System.Windows.VisualStateGroup.CurrentStateChanged" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.Windows.VisualStateGroup> , löst das Ereignis auf festgelegt ist die <xref:System.Windows.Controls.ControlTemplate> eines Steuerelements, die <xref:System.Windows.VisualStateChangedEventArgs.Control%2A> Eigenschaft ist für das Steuerelement, besitzt die <xref:System.Windows.Controls.ControlTemplate>. Wenn der <xref:System.Windows.VisualStateGroup> wird festgelegt, eine <xref:System.Windows.FrameworkElement> , die sich nicht in eine <xref:System.Windows.Controls.ControlTemplate>, die <xref:System.Windows.VisualStateChangedEventArgs.Control%2A> Eigenschaft ist `null` und Sie sollten mit der <xref:System.Windows.VisualStateChangedEventArgs.StateGroupsRoot%2A> Eigenschaft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Control">
+      <MemberSignature Language="C#" Value="public System.Windows.FrameworkElement Control { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.FrameworkElement Control" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.VisualStateChangedEventArgs.Control" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FrameworkElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Element, das Status übergeht.</summary>
+        <value>Das Element, das Zustand wechselt, wenn die <see cref="T:System.Windows.VisualStateGroup" /> befindet sich in einem <see cref="T:System.Windows.Controls.ControlTemplate" />ist, andernfalls <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der <xref:System.Windows.VisualStateGroup> wird festgelegt, eine <xref:System.Windows.FrameworkElement> , die sich nicht in eine <xref:System.Windows.Controls.ControlTemplate>, die <xref:System.Windows.VisualStateChangedEventArgs.Control%2A> Eigenschaft ist `null` und Sie sollten mit der <xref:System.Windows.VisualStateChangedEventArgs.StateGroupsRoot%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewState">
+      <MemberSignature Language="C#" Value="public System.Windows.VisualState NewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.VisualState NewState" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.VisualStateChangedEventArgs.NewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.VisualState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zustand, den das Element wechselt oder gewechselt hat.</summary>
+        <value>Der Zustand, den das Element wechselt oder gewechselt hat.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OldState">
+      <MemberSignature Language="C#" Value="public System.Windows.VisualState OldState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.VisualState OldState" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.VisualStateChangedEventArgs.OldState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.VisualState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zustand, den das Element wechselt oder gewechselt hat.</summary>
+        <value>Der Zustand, den das Element wechselt oder gewechselt hat.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StateGroupsRoot">
+      <MemberSignature Language="C#" Value="public System.Windows.FrameworkElement StateGroupsRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.FrameworkElement StateGroupsRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.VisualStateChangedEventArgs.StateGroupsRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FrameworkElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Stammelement, enthält die <see cref="T:System.Windows.VisualStateManager" />.</summary>
+        <value>Das Stammelement, enthält die <see cref="T:System.Windows.VisualStateManager" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

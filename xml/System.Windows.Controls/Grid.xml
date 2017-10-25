@@ -1,0 +1,774 @@
+<Type Name="Grid" FullName="System.Windows.Controls.Grid">
+  <TypeSignature Language="C#" Value="public class Grid : System.Windows.Controls.Panel, System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi Grid extends System.Windows.Controls.Panel implements class System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Grid" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Panel</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Markup.IAddChild</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Definiert einen flexiblen Rasterbereich mit Spalten und Zeilen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Controls.Grid> enthält eine Auflistung von <xref:System.Windows.UIElement> Objekte, die in der <xref:System.Windows.Controls.Panel.Children%2A> Eigenschaft.  
+  
+ Spalten und Zeilen, die innerhalb einer <xref:System.Windows.Controls.Grid> nutzen <xref:System.Windows.GridUnitType.Star> Größe an die verbleibenden Platz proportional zu verteilen. Wenn <xref:System.Windows.GridUnitType.Star> ausgewählt ist, als die Höhe oder Breite einer Zeile oder Spalte, dass Spalten- oder gewichtete Proportion des verbleibenden Platz erhält. Dies steht im Gegensatz zur <xref:System.Windows.GridUnitType.Auto>, die gleichmäßig auf die Größe des Inhalts, der innerhalb einer Spalte oder Zeile wird anhand der Speicherplatz verteilt. Dieser Wert wird als `*` oder `2*` bei Verwendung von [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)]. Im ersten Fall die Zeile oder Spalte erhielten eine Häufigkeit den verfügbaren Speicherplatz, während im zweiten Fall die Zeile oder Spalte erhalten Sie zwei Mal den verfügbaren Platz würde, und so weiter. Durch die Kombination dieser Technik Speicherplatz mit proportional zu verteilen einer <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> und <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> Wert `Stretch`, es ist möglich, Layout partitionsspeicherplatz um Prozentsatz der Bildschirmbereich. <xref:System.Windows.Controls.Grid>ist die einzige LayoutPanel-Element, die Leerzeichen auf diese Weise verteilen können.  
+  
+ Standardmäßig dauern Zeilen und Spalten die geringste Menge des Speicherplatzes erforderlich, um den größten Inhalt innerhalb einer Zelle in einer bestimmten Zeile oder Spalte aufzunehmen. Wenn eine Spalte eine Zelle mit einem langen Wort enthält wie "Meerschweinchen", aber alle anderen Zellen in der Spalte enthaltenen kleinere Wörtern wie "Dog" verwenden, wird die Breite der Spalte z. B. die Breite der größten Word (Meerschweinchen) sein.  
+  
+ Sie können die untergeordneten Elemente des exakt positionieren eine <xref:System.Windows.Controls.Grid> mithilfe einer Kombination der <xref:System.Windows.FrameworkElement.Margin%2A> -Eigenschaft und die Eigenschaften für die Ausrichtung.  
+  
+ Untergeordnete Elemente von einem <xref:System.Windows.Controls.Grid> gezeichnet werden, in der Reihenfolge, in dem sie im Markup oder-Code angezeigt werden. Daher kann überlappende Reihenfolge (auch bekannt als Z-Reihenfolge) erreicht werden, wenn Elemente dieselben Koordinaten aufweisen.  
+  
+ <xref:System.Windows.Controls.Grid>und <xref:System.Windows.Documents.Table> haben einige allgemeine Funktionen gemeinsam, aber in unterschiedlichen Situationen besser verwenden, die integrierten Funktionen genutzt werden. <xref:System.Windows.Controls.Grid>Fügt Elemente basierend auf einer Zeile und Spalte Index an; <xref:System.Windows.Documents.Table> hingegen nicht. Die <xref:System.Windows.Controls.Grid> -Element ermöglicht Objektebenen Inhalt, wobei kann mehr als ein Element innerhalb einer einzelnen Zelle vorhanden. <xref:System.Windows.Documents.Table>Ebenenstruktur unterstützt nicht. Untergeordnete Elemente von einem <xref:System.Windows.Controls.Grid> relativ zur linken oberen Ecke Umrisslinien "Zelle" absolut positioniert werden kann. <xref:System.Windows.Documents.Table>Dieses Feature wird nicht unterstützt werden. <xref:System.Windows.Controls.Grid>bietet auch flexibleres Größenanpassungsverhalten als <xref:System.Windows.Documents.Table>.  
+  
+ <xref:System.Windows.Controls.Grid>verwendet die <xref:System.Windows.GridLength> Objekt, das die größenanpassung Eigenschaften definieren einen <xref:System.Windows.Controls.RowDefinition> oder <xref:System.Windows.Controls.ColumnDefinition>. Eine Definition der einzelnen Einheit, finden Sie unter <xref:System.Windows.GridUnitType>.  
+  
+ Wenn ein untergeordnetes Element, auf eine Spalte in hinzugefügt wird eine <xref:System.Windows.Controls.Grid>, und die Spalte hat seine <xref:System.Windows.Controls.ColumnDefinition.Width%2A> -Eigenschaftensatz auf `Auto`, das untergeordnete Element wird ohne jede Einschränkung gemessen werden. Dieses Verhalten kann verhindern, dass horizontale Bildlaufleisten angezeigt, wenn eine <xref:System.Windows.Controls.ScrollViewer> verwendet wird, wie das untergeordnete Element gemessen wird als unbegrenzt. Bei der Anzeige wird das untergeordnete Element abgeschnitten, anstatt ein Bildlauf durchgeführt.  
+  
+ Panel-Elementen erhalten standardmäßig nicht den Fokus. Um benutzerbestätigung durch ein Bereichselement den Fokus erhalten, legen Sie die <xref:System.Windows.UIElement.Focusable%2A> Eigenschaft `true`.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie ein Raster erstellen. In diesem Fall das Raster definiert drei <xref:System.Windows.Controls.ColumnDefinition> Elemente und vier <xref:System.Windows.Controls.RowDefinition> Elemente, die sich untergeordneter Inhalt hosten.  
+  
+ [!code-csharp[Grid#3](~/samples/snippets/csharp/VS_Snippets_Wpf/Grid/CSharp/Grid_Code.cs#3)]
+ [!code-vb[Grid#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Grid/VisualBasic/grid_vb.vb#3)]
+ [!code-xaml[Grid#3](~/samples/snippets/xaml/VS_Snippets_Wpf/Grid/XAML/default.xaml#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Grid ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Grid.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz von <see cref="T:System.Windows.Controls.Grid" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrangeOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size ArrangeOverride (System.Windows.Size arrangeSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size ArrangeOverride(valuetype System.Windows.Size arrangeSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Grid.ArrangeOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arrangeSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="arrangeSize">Gibt die Größe dieser <see cref="T:System.Windows.Controls.Grid" /> Element sollte verwenden, um die untergeordneten Elemente anzuordnen.</param>
+        <summary>Ordnet den Inhalt einer <see cref="T:System.Windows.Controls.Grid" /> Element.</summary>
+        <returns>
+          <see cref="T:System.Windows.Size" />die die angeordnete Größe dieses Grid-Elements und seiner untergeordneten Elemente darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnDefinitions">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.ColumnDefinitionCollection ColumnDefinitions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.ColumnDefinitionCollection ColumnDefinitions" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Grid.ColumnDefinitions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ColumnDefinitionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Controls.ColumnDefinitionCollection" /> ab, die für diese Instanz von <see cref="T:System.Windows.Controls.Grid" /> definiert ist.</summary>
+        <value>Eine <see cref="T:System.Windows.Controls.ColumnDefinitionCollection" />, die für diese Instanz von <see cref="T:System.Windows.Controls.Grid" /> definiert ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlPropertyElementUsage_ColumnDefinitions"></a>   
+## <a name="xaml-property-element-usage"></a>Verwendung von XAML-Eigenschaftenelementen  
+  
+```  
+<object>  
+  <object.ColumnDefinitions>  
+    OneOrMoreColumnDefinitions  
+  </object.ColumnDefinitions>  
+</object>  
+  
+```  
+  
+<a name="xamlValues_ColumnDefinitions"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *OneOrMoreColumnDefinitions*  
+ Eine oder mehrere <xref:System.Windows.Controls.ColumnDefinition> Elemente. Alle diese <xref:System.Windows.Controls.ColumnDefinition> ein Platzhalter für das eine Spalte im endgültigen Rasterlayout dargestellt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ColumnProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ColumnProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Grid.ColumnProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Controls.Grid.Column" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnSpanProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ColumnSpanProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ColumnSpanProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Grid.ColumnSpanProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Controls.Grid.ColumnSpan" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetColumn">
+      <MemberSignature Language="C#" Value="public static int GetColumn (System.Windows.UIElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 GetColumn(class System.Windows.UIElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Grid.GetColumn(System.Windows.UIElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForChildren</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, aus dem der Eigenschaftswert gelesen werden soll.</param>
+        <summary>Ruft den Wert der <see cref="P:System.Windows.Controls.Grid.Column" /> angefügte Eigenschaft aus einer angegebenen <see cref="T:System.Windows.UIElement" />.</summary>
+        <returns>Der Wert, der die <see cref="P:System.Windows.Controls.Grid.Column" /> -Eigenschaft.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetColumnSpan">
+      <MemberSignature Language="C#" Value="public static int GetColumnSpan (System.Windows.UIElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 GetColumnSpan(class System.Windows.UIElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Grid.GetColumnSpan(System.Windows.UIElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForChildren</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, aus dem der Eigenschaftswert gelesen werden soll.</param>
+        <summary>Ruft den Wert der <see cref="P:System.Windows.Controls.Grid.ColumnSpan" /> angefügte Eigenschaft aus einer angegebenen <see cref="T:System.Windows.UIElement" />.</summary>
+        <returns>Der Wert, der die <see cref="P:System.Windows.Controls.Grid.ColumnSpan" /> -Eigenschaft.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIsSharedSizeScope">
+      <MemberSignature Language="C#" Value="public static bool GetIsSharedSizeScope (System.Windows.UIElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool GetIsSharedSizeScope(class System.Windows.UIElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Grid.GetIsSharedSizeScope(System.Windows.UIElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, aus dem der Eigenschaftswert gelesen werden soll.</param>
+        <summary>Ruft den Wert der <see cref="P:System.Windows.Controls.Grid.IsSharedSizeScope" /> angefügte Eigenschaft aus einer angegebenen <see cref="T:System.Windows.UIElement" />.</summary>
+        <returns>Der Wert, der die <see cref="P:System.Windows.Controls.Grid.IsSharedSizeScope" /> -Eigenschaft.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRow">
+      <MemberSignature Language="C#" Value="public static int GetRow (System.Windows.UIElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 GetRow(class System.Windows.UIElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Grid.GetRow(System.Windows.UIElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForChildren</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, aus dem der Eigenschaftswert gelesen werden soll.</param>
+        <summary>Ruft den Wert der <see cref="P:System.Windows.Controls.Grid.Row" /> angefügte Eigenschaft aus einer angegebenen <see cref="T:System.Windows.UIElement" />.</summary>
+        <returns>Der Wert, der die <see cref="P:System.Windows.Controls.Grid.Row" /> -Eigenschaft.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRowSpan">
+      <MemberSignature Language="C#" Value="public static int GetRowSpan (System.Windows.UIElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 GetRowSpan(class System.Windows.UIElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Grid.GetRowSpan(System.Windows.UIElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForChildren</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, aus dem der Eigenschaftswert gelesen werden soll.</param>
+        <summary>Ruft den Wert der <see cref="P:System.Windows.Controls.Grid.RowSpan" /> angefügte Eigenschaft aus einer angegebenen <see cref="T:System.Windows.UIElement" />.</summary>
+        <returns>Der Wert, der die <see cref="P:System.Windows.Controls.Grid.RowSpan" /> -Eigenschaft.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVisualChild">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Media.Visual GetVisualChild (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Media.Visual GetVisualChild(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Grid.GetVisualChild(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Visual</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die nullbasierte Indexposition des gewünschten <see cref="T:System.Windows.Media.Visual" />.</param>
+        <summary>Ruft das untergeordnete Element <see cref="T:System.Windows.Media.Visual" /> an der angegebenen <paramref name="index" /> Position.</summary>
+        <returns>Das untergeordnete Element <see cref="T:System.Windows.Media.Visual" /> an der angegebenen <paramref name="index" /> Position.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die visuelle Struktur muss nicht geändert werden, während diese Methode aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSharedSizeScopeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsSharedSizeScopeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsSharedSizeScopeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Grid.IsSharedSizeScopeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Controls.Grid.IsSharedSizeScope" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogicalChildren">
+      <MemberSignature Language="C#" Value="protected override System.Collections.IEnumerator LogicalChildren { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerator LogicalChildren" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Grid.LogicalChildren" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der die logischen untergeordneten Elemente dieses durchlaufen kann <see cref="T:System.Windows.Controls.Grid" />.</summary>
+        <value>Eine <see cref="T:System.Collections.IEnumerator" />. Diese Eigenschaft hat keinen Standardwert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size MeasureOverride (System.Windows.Size constraint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size MeasureOverride(valuetype System.Windows.Size constraint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Grid.MeasureOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constraint" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="constraint">Gibt eine Obergrenze für Größe, die nicht überschritten werden sollte.</param>
+        <summary>Misst die untergeordneten Elemente ein <see cref="T:System.Windows.Controls.Grid" /> in Vorwegnahme ihrer Anordnung während der <see cref="M:System.Windows.Controls.Grid.ArrangeOverride(System.Windows.Size)" /> übergeben.</summary>
+        <returns>
+          <see cref="T:System.Windows.Size" />die die erforderliche Größe zum Anordnen des untergeordneten Inhalts darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnVisualChildrenChanged">
+      <MemberSignature Language="C#" Value="protected override void OnVisualChildrenChanged (System.Windows.DependencyObject visualAdded, System.Windows.DependencyObject visualRemoved);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnVisualChildrenChanged(class System.Windows.DependencyObject visualAdded, class System.Windows.DependencyObject visualRemoved) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Grid.OnVisualChildrenChanged(System.Windows.DependencyObject,System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visualAdded" Type="System.Windows.DependencyObject" />
+        <Parameter Name="visualRemoved" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="visualAdded">Gibt die untergeordneten visuelle, die hinzugefügt wird.</param>
+        <param name="visualRemoved">Gibt die untergeordneten visuelle, die entfernt wird.</param>
+        <summary>Wird aufgerufen, wenn der untergeordneten visuellen Elemente einer <see cref="T:System.Windows.Controls.Grid" /> Element ändern.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowDefinitions">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.RowDefinitionCollection RowDefinitions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.RowDefinitionCollection RowDefinitions" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Grid.RowDefinitions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.RowDefinitionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Windows.Controls.RowDefinitionCollection" /> ab, die für diese Instanz von <see cref="T:System.Windows.Controls.Grid" /> definiert ist.</summary>
+        <value>Ein <see cref="T:System.Windows.Controls.RowDefinitionCollection" /> für diese Instanz definiert <see cref="T:System.Windows.Controls.Grid" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlPropertyElementUsage_RowDefinitions"></a>   
+## <a name="xaml-property-element-usage"></a>Verwendung von XAML-Eigenschaftenelementen  
+  
+```  
+<object>  
+  <object.RowDefinitions>  
+    OneOrMoreRowDefinitions  
+  </object.RowDefinitions>  
+</object>  
+```  
+  
+<a name="xamlValues_RowDefinitions"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *OneOrMoreRowDefinitions*  
+ Eine oder mehrere <xref:System.Windows.Controls.RowDefinition> Elemente. Alle diese <xref:System.Windows.Controls.RowDefinition> wird ein Platzhalter, der eine Zeile im endgültigen Rasterlayout darstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty RowProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty RowProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Grid.RowProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Controls.Grid.Row" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowSpanProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty RowSpanProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty RowSpanProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Grid.RowSpanProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die angefügte <see cref="P:System.Windows.Controls.Grid.RowSpan" />-Eigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetColumn">
+      <MemberSignature Language="C#" Value="public static void SetColumn (System.Windows.UIElement element, int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetColumn(class System.Windows.UIElement element, int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Grid.SetColumn(System.Windows.UIElement,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, für das Festlegen der <see cref="P:System.Windows.Controls.Grid.Column" /> -Eigenschaft.</param>
+        <param name="value">Der festzulegende Eigenschaftswert.</param>
+        <summary>Legt den Wert des der <see cref="P:System.Windows.Controls.Grid.Column" /> -Eigenschaft auf einen bestimmten <see cref="T:System.Windows.UIElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetColumnSpan">
+      <MemberSignature Language="C#" Value="public static void SetColumnSpan (System.Windows.UIElement element, int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetColumnSpan(class System.Windows.UIElement element, int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Grid.SetColumnSpan(System.Windows.UIElement,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, für das Festlegen der <see cref="P:System.Windows.Controls.Grid.ColumnSpan" /> -Eigenschaft.</param>
+        <param name="value">Der festzulegende Eigenschaftswert.</param>
+        <summary>Legt den Wert des der <see cref="P:System.Windows.Controls.Grid.ColumnSpan" /> -Eigenschaft auf einen bestimmten <see cref="T:System.Windows.UIElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetIsSharedSizeScope">
+      <MemberSignature Language="C#" Value="public static void SetIsSharedSizeScope (System.Windows.UIElement element, bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetIsSharedSizeScope(class System.Windows.UIElement element, bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Grid.SetIsSharedSizeScope(System.Windows.UIElement,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, für das Festlegen der <see cref="P:System.Windows.Controls.Grid.IsSharedSizeScope" /> -Eigenschaft.</param>
+        <param name="value">Der festzulegende Eigenschaftswert.</param>
+        <summary>Legt den Wert des der <see cref="P:System.Windows.Controls.Grid.IsSharedSizeScope" /> -Eigenschaft auf einen bestimmten <see cref="T:System.Windows.UIElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetRow">
+      <MemberSignature Language="C#" Value="public static void SetRow (System.Windows.UIElement element, int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetRow(class System.Windows.UIElement element, int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Grid.SetRow(System.Windows.UIElement,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, für das der Wert der angefügten Eigenschaft festgelegt wird.</param>
+        <param name="value">Der festzulegende Eigenschaftswert.</param>
+        <summary>Legt den Wert des der <see cref="P:System.Windows.Controls.Grid.Row" /> -Eigenschaft auf einen bestimmten <see cref="T:System.Windows.UIElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetRowSpan">
+      <MemberSignature Language="C#" Value="public static void SetRowSpan (System.Windows.UIElement element, int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetRowSpan(class System.Windows.UIElement element, int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Grid.SetRowSpan(System.Windows.UIElement,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.UIElement" />
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="element">Das Element, für das Festlegen der <see cref="P:System.Windows.Controls.Grid.RowSpan" /> -Eigenschaft.</param>
+        <param name="value">Der festzulegende Eigenschaftswert.</param>
+        <summary>Legt den Wert des der <see cref="P:System.Windows.Controls.Grid.RowSpan" /> -Eigenschaft auf einen bestimmten <see cref="T:System.Windows.UIElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeColumnDefinitions">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeColumnDefinitions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeColumnDefinitions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Grid.ShouldSerializeColumnDefinitions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt "true" zurück, wenn <see cref="T:System.Windows.Controls.ColumnDefinitionCollection" /> dieser Instanz zugeordnete <see cref="T:System.Windows.Controls.Grid" /> ist nicht leer.</summary>
+        <returns>True, wenn <see cref="T:System.Windows.Controls.ColumnDefinitionCollection" /> dieser Instanz zugeordnete <see cref="T:System.Windows.Controls.Grid" /> ist nicht leer ist, andernfalls "false".</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeRowDefinitions">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeRowDefinitions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeRowDefinitions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Grid.ShouldSerializeRowDefinitions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt "true" zurück, wenn <see cref="T:System.Windows.Controls.RowDefinitionCollection" /> dieser Instanz zugeordnete <see cref="T:System.Windows.Controls.Grid" /> ist nicht leer.</summary>
+        <returns>True, wenn <see cref="T:System.Windows.Controls.RowDefinitionCollection" /> dieser Instanz zugeordnete <see cref="T:System.Windows.Controls.Grid" /> ist nicht leer ist, andernfalls "false".</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowGridLines">
+      <MemberSignature Language="C#" Value="public bool ShowGridLines { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowGridLines" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Grid.ShowGridLines" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob Rasterlinien in dieser sichtbar sind <see cref="T:System.Windows.Controls.Grid" />.</summary>
+        <value>
+          <see langword="true" />Wenn Rasterlinien sichtbar sind; andernfalls <see langword="false" />. Der Standardwert ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aktivieren der Rasterlinien erstellt gepunktete Linien um alle Elemente innerhalb einer <xref:System.Windows.Controls.Grid>. Nur die gepunkteten Linien sind verfügbar, weil diese Eigenschaft dient als einem Entwurfstool Layoutprobleme Debuggen und nicht zur Verwendung in Produktionscode-Qualität dient. Wenn Sie Zeilen innerhalb möchten einer <xref:System.Windows.Controls.Grid>, formatieren Sie die Elemente innerhalb der <xref:System.Windows.Controls.Grid> mit Rahmen.  
+  
+<a name="dependencyPropertyInfo_ShowGridLines"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:System.Windows.Controls.Grid.ShowGridLinesProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|Keine|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowGridLinesProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ShowGridLinesProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ShowGridLinesProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Grid.ShowGridLinesProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Controls.Grid.ShowGridLines" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddChild">
+      <MemberSignature Language="C#" Value="void IAddChild.AddChild (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddChild(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Grid.System#Windows#Markup#IAddChild#AddChild(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Ein Objekt, das als untergeordnetes Element hinzufügen.</param>
+        <summary>Dieser Typ oder Member unterstützt die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddText">
+      <MemberSignature Language="C#" Value="void IAddChild.AddText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Grid.System#Windows#Markup#IAddChild#AddText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Eine Zeichenfolge, die das Objekt hinzugefügt werden soll.</param>
+        <summary>Dieser Typ oder Member unterstützt die [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisualChildrenCount">
+      <MemberSignature Language="C#" Value="protected override int VisualChildrenCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 VisualChildrenCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Grid.VisualChildrenCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der die Gesamtzahl der <see cref="T:System.Windows.Media.Visual" /> untergeordnete Elemente innerhalb dieser Instanz des <see cref="T:System.Windows.Controls.Grid" />.</summary>
+        <value>
+          <see cref="T:System.Int32" />der die Gesamtzahl der untergeordneten darstellt <see cref="T:System.Windows.Media.Visual" /> Objekte. Der Standardwert ist 0 (null).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die visuelle Struktur muss bei einem Aufruf dieser Methode nicht geändert werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

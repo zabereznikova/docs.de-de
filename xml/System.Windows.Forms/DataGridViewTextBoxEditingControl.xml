@@ -1,0 +1,370 @@
+<Type Name="DataGridViewTextBoxEditingControl" FullName="System.Windows.Forms.DataGridViewTextBoxEditingControl">
+  <TypeSignature Language="C#" Value="public class DataGridViewTextBoxEditingControl : System.Windows.Forms.TextBox, System.Windows.Forms.IDataGridViewEditingControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridViewTextBoxEditingControl extends System.Windows.Forms.TextBox implements class System.Windows.Forms.IDataGridViewEditingControl" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewTextBoxEditingControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.TextBox</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Forms.IDataGridViewEditingControl</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt ein Textfeld-Steuerelement, das in gehostet werden, kann eine <see cref="T:System.Windows.Forms.DataGridViewTextBoxCell" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataGridViewTextBoxEditingControl> Klasse ist ein spezialisierter Typ von <xref:System.Windows.Forms.TextBox> -Steuerelement, implementiert die <xref:System.Windows.Forms.IDataGridViewEditingControl> -Schnittstelle, wodurch in gehostet werden eine <xref:System.Windows.Forms.DataGridViewTextBoxCell> Wenn ist die Zelle im Bearbeitungsmodus befindet.  
+  
+ Behandeln der <xref:System.Windows.Forms.DataGridView.EditingControlShowing> Ereignis, um eine benutzerdefinierte Initialisierung des Bearbeitungssteuerelements auszuführen, wenn eine Zelle den Bearbeitungsmodus wechselt. Um die Anzeigeeigenschaften des Steuerelements anzupassen, legen Sie die Eigenschaften des Objekts zurückgegeben wird, indem Sie die <xref:System.Windows.Forms.DataGridViewEditingControlShowingEventArgs.CellStyle%2A?displayProperty=nameWithType> Eigenschaft anstatt die Eigenschaften des Steuerelements zurückgegebene der <xref:System.Windows.Forms.DataGridViewEditingControlShowingEventArgs.Control%2A?displayProperty=nameWithType> Eigenschaft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridViewTextBoxEditingControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewTextBoxEditingControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.DataGridViewTextBoxEditingControl" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Standardkonstruktor legt die <xref:System.Windows.Forms.Control.TabStop%2A> Eigenschaft `false`.  
+  
+ Anwendungscode in der Regel wird nicht explizit erstellen Instanzen dieser Klasse, da dies automatisch beim ausgeführt wird, die mit <xref:System.Windows.Forms.DataGridViewTextBoxCell> oder <xref:System.Windows.Forms.DataGridViewTextBoxColumn> wird erstellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyCellStyleToEditingControl">
+      <MemberSignature Language="C#" Value="public virtual void ApplyCellStyleToEditingControl (System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ApplyCellStyleToEditingControl(class System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewTextBoxEditingControl.ApplyCellStyleToEditingControl(System.Windows.Forms.DataGridViewCellStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataGridViewCellStyle" Type="System.Windows.Forms.DataGridViewCellStyle" />
+      </Parameters>
+      <Docs>
+        <param name="dataGridViewCellStyle">Die <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> als Modell für die Benutzeroberfläche verwendet.</param>
+        <summary>Das Steuerelement-Benutzeroberfläche (UI), mit der angegebenen Zellenstil konsistent geändert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditingControlDataGridView">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.DataGridView EditingControlDataGridView { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataGridView EditingControlDataGridView" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewTextBoxEditingControl.EditingControlDataGridView" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridView</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:System.Windows.Forms.DataGridView" /> , die das Textfeld-Steuerelement enthält.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.DataGridView" /> , enthält die <see cref="T:System.Windows.Forms.DataGridViewTextBoxCell" /> , die dieses Steuerelement enthält, andernfalls <see langword="null" /> Wenn es keine zugeordnete ist <see cref="T:System.Windows.Forms.DataGridView" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird automatisch festgelegt, wenn eine <xref:System.Windows.Forms.DataGridViewTextBoxColumn> oder <xref:System.Windows.Forms.DataGridViewTextBoxCell> erstellt innerhalb einer <xref:System.Windows.Forms.DataGridView> oder hinzugefügt eine <xref:System.Windows.Forms.DataGridView>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditingControlFormattedValue">
+      <MemberSignature Language="C#" Value="public virtual object EditingControlFormattedValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object EditingControlFormattedValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewTextBoxEditingControl.EditingControlFormattedValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die formatierte Darstellung des aktuellen Werts des Textfeld-Steuerelement.</summary>
+        <value>Ein Objekt, das den aktuellen Wert dieses Steuerelements darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.TextBox.Text%2A> Eigenschaft enthält die eigentlichen Daten, die vom Steuerelement enthalten. Die Daten enthalten die Zeichenfolge in das Textfeld des Steuerelements angezeigt. Im Gegensatz dazu die <xref:System.Windows.Forms.IDataGridViewEditingControl.EditingControlFormattedValue%2A> Eigenschaft ist für die formatierte Darstellung dieser Zeichenfolge. Da ein Textfeld, das nur-Text-Zeichenfolgen verwendet werden, sind diese beiden Eigenschaften im Wesentlichen identisch.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditingControlRowIndex">
+      <MemberSignature Language="C#" Value="public virtual int EditingControlRowIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EditingControlRowIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewTextBoxEditingControl.EditingControlRowIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Index der übergeordneten Zeile der besitzenden Zelle fest.</summary>
+        <value>Der Index der Zeile, die die besitzende Zelle enthält. 1, wenn keine übergeordnete Zeile vorhanden ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Zeilenindex für die Spaltenheaderzeile ist-1.  
+  
+ Der Zeilenindex für eine freigegebene Zeile ist auch-1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditingControlValueChanged">
+      <MemberSignature Language="C#" Value="public virtual bool EditingControlValueChanged { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EditingControlValueChanged" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewTextBoxEditingControl.EditingControlValueChanged" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der aktuelle Wert des Textfeld-Steuerelements geändert wurde.</summary>
+        <value>
+          <see langword="true" />Wenn der Wert des Steuerelements geändert wurde. andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.DataGridViewTextBoxEditingControl.EditingControlValueChanged%2A> -Eigenschaftensatz auf `true` um anzugeben, dass die besitzende Zellwert geändert wurde, und die Zelle möglicherweise aktualisiert werden, damit diese Änderung in Werten angezeigt müssen. Die besitzende Zelle bzw. Tabelle wird diese Eigenschaft auf zurückgesetzt `false` , nachdem sie aktualisiert wurde.  
+  
+ Wenn das Steuerelement initialisiert ist, wird diese Eigenschaft festgelegt, um `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditingControlWantsInputKey">
+      <MemberSignature Language="C#" Value="public virtual bool EditingControlWantsInputKey (System.Windows.Forms.Keys keyData, bool dataGridViewWantsInputKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool EditingControlWantsInputKey(valuetype System.Windows.Forms.Keys keyData, bool dataGridViewWantsInputKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewTextBoxEditingControl.EditingControlWantsInputKey(System.Windows.Forms.Keys,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyData" Type="System.Windows.Forms.Keys" />
+        <Parameter Name="dataGridViewWantsInputKey" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="keyData">Ein <see cref="T:System.Windows.Forms.Keys" /> , die die gedrückte Taste darstellt.</param>
+        <param name="dataGridViewWantsInputKey">
+          <see langword="true" />Wenn die <see cref="T:System.Windows.Forms.DataGridView" /> verarbeiten möchte die <c>KeyData</c>ist, andernfalls <see langword="false" />.</param>
+        <summary>Bestimmt, ob der angegebene Schlüssel ist ein regulärer Eingabeschlüssel, die das Bearbeitungssteuerelement verarbeiten soll, oder ein speziellen Schlüssel, die <see cref="T:System.Windows.Forms.DataGridView" /> verarbeiten sollen.</summary>
+        <returns>
+          <see langword="true" />Wenn der angegebene Schlüssel ein regulärer Eingabeschlüssel, der durch das Bearbeitungssteuerelement behandelt werden soll ist. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditingPanelCursor">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.Cursor EditingPanelCursor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Cursor EditingPanelCursor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewTextBoxEditingControl.EditingPanelCursor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Cursor verwendet, wenn der Mauszeiger über die <see cref="P:System.Windows.Forms.DataGridView.EditingPanel" /> , jedoch nicht über das Bearbeitungssteuerelement.</summary>
+        <value>Ein <see cref="T:System.Windows.Forms.Cursor" /> , das der Mauszeiger die Form des Bearbeitungsbereichs zum darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEditingControlFormattedValue">
+      <MemberSignature Language="C#" Value="public virtual object GetEditingControlFormattedValue (System.Windows.Forms.DataGridViewDataErrorContexts context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetEditingControlFormattedValue(valuetype System.Windows.Forms.DataGridViewDataErrorContexts context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewTextBoxEditingControl.GetEditingControlFormattedValue(System.Windows.Forms.DataGridViewDataErrorContexts)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Windows.Forms.DataGridViewDataErrorContexts" />
+      </Parameters>
+      <Docs>
+        <param name="context">Eines der <see cref="T:System.Windows.Forms.DataGridViewDataErrorContexts" /> Werten, die den Datenkontext für den Fehler angibt.</param>
+        <summary>Ruft den formatierten Wert der Zelle ab.</summary>
+        <returns>Ein <see cref="T:System.Object" /> , das die formatierte Version des Zelleninhalts darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseWheel">
+      <MemberSignature Language="C#" Value="protected override void OnMouseWheel (System.Windows.Forms.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseWheel(class System.Windows.Forms.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewTextBoxEditingControl.OnMouseWheel(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.Windows.Forms.MouseEventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.MouseWheel" />-Ereignis aus.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTextChanged">
+      <MemberSignature Language="C#" Value="protected override void OnTextChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnTextChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewTextBoxEditingControl.OnTextChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Die Ereignisdaten.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.Control.TextChanged" /> Ereignis und benachrichtigt die <see cref="T:System.Windows.Forms.DataGridView" /> der textänderung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrepareEditingControlForEdit">
+      <MemberSignature Language="C#" Value="public virtual void PrepareEditingControlForEdit (bool selectAll);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PrepareEditingControlForEdit(bool selectAll) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewTextBoxEditingControl.PrepareEditingControlForEdit(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="selectAll" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="selectAll">
+          <see langword="true" />der Inhalt der Zelle auswählen; andernfalls <see langword="false" />.</param>
+        <summary>Bereitet die derzeit ausgewählte Zelle für die Bearbeitung vor.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessKeyEventArgs">
+      <MemberSignature Language="C#" Value="protected override bool ProcessKeyEventArgs (ref System.Windows.Forms.Message m);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ProcessKeyEventArgs(valuetype System.Windows.Forms.Message&amp; m) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewTextBoxEditingControl.ProcessKeyEventArgs(System.Windows.Forms.Message@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="m" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="m">Ein <see cref="T:System.Windows.Forms.Message" /> , der angibt, die die gedrückte Taste.</param>
+        <summary>Tastaturereignisse für Prozesse.</summary>
+        <returns>
+          <see langword="true" />Wenn das Key-Ereignis von Bearbeitungssteuerelements übernommen wurde; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird sichergestellt, dass die EINGABETASTE ignoriert wird, sodass Carriage return, Wagenrücklauf und Zeilenvorschub in der Wert der Zelle gespeichert sind. Diese Methode ermöglicht auch den Inhalt von Zellen ausgewählt werden, wenn STRG + A gedrückt wird.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den unmittelbaren Aufrufer dieser Methode. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />. Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="RepositionEditingControlOnValueChange">
+      <MemberSignature Language="C#" Value="public virtual bool RepositionEditingControlOnValueChange { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RepositionEditingControlOnValueChange" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewTextBoxEditingControl.RepositionEditingControlOnValueChange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Zelleninhalt neu angeordnet werden, wenn der Wert geändert werden müssen.</summary>
+        <value>
+          <see langword="true" />Wenn der Zelle <see cref="P:System.Windows.Forms.DataGridViewCellStyle.WrapMode" /> festgelegt ist, um <see langword="true" /> und die Ausrichtungseigenschaft nicht festgelegt ist, auf einen der der <see cref="T:System.Windows.Forms.DataGridViewContentAlignment" /> Werte, die den Inhalt nach oben; richtet, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

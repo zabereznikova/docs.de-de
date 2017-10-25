@@ -1,0 +1,102 @@
+<Type Name="NonSerializedAttribute" FullName="System.NonSerializedAttribute">
+  <TypeSignature Language="C#" Value="public sealed class NonSerializedAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit NonSerializedAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.NonSerializedAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Field, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, dass ein Feld einer serialisierbaren Klasse nicht serialisiert werden sollen. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei Verwendung der <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> oder <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> Klassen zum Serialisieren eines Objekts verwenden den <xref:System.NonSerializedAttribute> Attribut, um zu verhindern, dass ein Feld, das serialisiert wird. Beispielsweise können Sie dieses Attribut verwenden, um die Serialisierung von sensiblen Daten zu verhindern.  
+  
+ Das Ziel von Objekten für die <xref:System.NonSerializedAttribute> Attribut werden die öffentlichen und privaten Felder einer serialisierbaren Klasse. Standardmäßig sind Klassen nicht serialisierbar, wenn sie mit markiert sind <xref:System.SerializableAttribute>. Alle öffentlichen und privaten Felder einer Klasse werden während des Serialisierungsprozesses standardmäßig serialisiert. Felder mit <xref:System.NonSerializedAttribute> während der Serialisierung ausgeschlossen werden. Bei Verwendung der <xref:System.Xml.Serialization.XmlSerializer> Klasse ein Objekt serialisieren, verwenden Sie die <xref:System.Xml.Serialization.XmlIgnoreAttribute> Klasse, um die gleiche Funktionalität zu erhalten. Implementieren Sie alternativ die <xref:System.Runtime.Serialization.ISerializable> Schnittstelle explizit steuern des Serialisierungsprozesses. Beachten Sie, die Klassen implementiert, <xref:System.Runtime.Serialization.ISerializable> müssen immer noch mit markiert werden <xref:System.SerializableAttribute>.  
+  
+ Anwenden der <xref:System.NonSerializedAttribute> Klasse auf ein Ereignis, legen Sie die Attributpfad Feld, wie im folgenden C#-Code dargestellt.  
+  
+```  
+[field:NonSerializedAttribute()]   
+public event ChangedEventHandler Changed;  
+```  
+  
+ Wenn ein Feld wird nicht serialisiert, aber dennoch benötigt einen Standardwert, der nach der Deserialisierung angegeben werden muss, können Sie erstellen eine Methode, die das Feld mit einem Wert bereitstellt, und Anwenden der <xref:System.Runtime.Serialization.OnDeserializedAttribute> an die Methode.  
+  
+ Weitere Informationen zum Verwenden von Attributen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht die Serialisierung eines Objekts mit markiert die <xref:System.SerializableAttribute> Attribut und das Verhalten eines Felds mit markiert die <xref:System.NonSerializedAttribute> in das serialisierte Objekt.  
+  
+> [!NOTE]
+>  Der Code verwendet die <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> Klasse zum Serialisieren des Objekts. Die Klasse wird in der system.runtime.serialization.formatters.soap.dll gefunden, die nicht standardmäßig in ein Projekt geladen wird. Um den Code auszuführen, müssen Sie dem Projekt einen Verweis auf die DLL hinzufügen.  
+  
+ [!code-cpp[SerializationAttributes#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SerializationAttributes/CPP/s.cpp#1)]
+ [!code-csharp[SerializationAttributes#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SerializationAttributes/CS/s.cs#1)]
+ [!code-vb[SerializationAttributes#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SerializationAttributes/VB/s.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NonSerializedAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.NonSerializedAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.NonSerializedAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

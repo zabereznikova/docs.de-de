@@ -1,0 +1,942 @@
+<Type Name="NavigationCommands" FullName="System.Windows.Input.NavigationCommands">
+  <TypeSignature Language="C#" Value="public static class NavigationCommands" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit NavigationCommands extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.NavigationCommands" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet einen Standardsatz von Navigation-bezogenen Befehlen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Input.NavigationCommands> Klasse stellt einen Standardsatz von Navigation-bezogenen Befehlen, einschließlich Browser- und Navigation.  
+  
+ Weitere Informationen über Befehle und die Befehle finden Sie unter [Befehle (Übersicht)](~/docs/framework/wpf/advanced/commanding-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BrowseBack">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand BrowseBack { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand BrowseBack" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.NavigationCommands.BrowseBack" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der <see langword="Browse Back" /> Befehl.</summary>
+        <value>Der weitergeleitete [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>ALT + NACH-LINKS  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Zurück  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt die Absicht an, navigieren Sie zurück zur vorherigen Seite im Journal.  
+  
+ <xref:System.Windows.Controls.Frame>und <xref:System.Windows.Navigation.NavigationWindow> implementieren die Unterstützung für die Reaktion auf die <xref:System.Windows.Input.NavigationCommands.BrowseBack%2A>, obwohl Sie sind nicht erforderlich, ihn zu verwenden; in vielen Fällen liegt die Implementierung als Antwort auf den Befehl in der Verantwortung der Autor der Anwendung.  
+  
+<a name="xamlAttributeUsage_BrowseBack"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="NavigationCommands.BrowseBack"/>  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie <xref:System.Windows.Input.NavigationCommands.BrowseBack%2A> in Verbindung mit einem <xref:System.Windows.Controls.Frame>. Die <xref:System.Windows.Controls.Frame> stellt eine Implementierung, die auf reagiert die <xref:System.Windows.Input.NavigationCommands.BrowseBack%2A> Befehl durch Navigieren in der <xref:System.Windows.Controls.Frame> zurück, wenn Journaleinträge vorhanden, auf dem Stapel zurück sind.  
+  
+ [!code-xaml[NavigationCommandsSnippets#BrowseBackMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/BrowseBack.xaml#browsebackmarkup1)]  
+[!code-xaml[NavigationCommandsSnippets#BrowseBackMARKUP2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/BrowseBack.xaml#browsebackmarkup2)]  
+[!code-xaml[NavigationCommandsSnippets#BrowseBackMARKUP3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/BrowseBack.xaml#browsebackmarkup3)]  
+[!code-xaml[NavigationCommandsSnippets#BrowseBackMARKUP4](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/BrowseBack.xaml#browsebackmarkup4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BrowseForward">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand BrowseForward { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand BrowseForward" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.NavigationCommands.BrowseForward" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der <see langword="Browse Forward" /> Befehl.</summary>
+        <value>Der weitergeleitete [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>ALT + NACH-RECHTS  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Forward  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass die nächste Seite in der Erfassung Vorwärts navigieren.  
+  
+ <xref:System.Windows.Controls.Frame>und <xref:System.Windows.Navigation.NavigationWindow> implementieren die Unterstützung für die Reaktion auf die <xref:System.Windows.Input.NavigationCommands.BrowseForward%2A> Befehl, obwohl Sie nicht erforderlich sind, verwenden; in vielen Fällen liegt die Implementierung als Antwort auf den Befehl in der Verantwortung der Autor der Anwendung.  
+  
+<a name="xamlAttributeUsage_BrowseForward"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="NavigationCommands.BrowseForward"/>  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie <xref:System.Windows.Input.NavigationCommands.BrowseForward%2A> in Verbindung mit einem <xref:System.Windows.Controls.Frame>. Die <xref:System.Windows.Controls.Frame> stellt eine Implementierung, die auf reagiert die <xref:System.Windows.Input.NavigationCommands.BrowseForward%2A> Befehl durch Navigieren der <xref:System.Windows.Controls.Frame> weitergeleitet wird, wenn Journaleinträge vorhanden, auf dem Stapel weiterleiten sind.  
+  
+ [!code-xaml[NavigationCommandsSnippets#BrowseForwardMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/BrowseForward.xaml#browseforwardmarkup1)]  
+[!code-xaml[NavigationCommandsSnippets#BrowseForwardMARKUP2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/BrowseForward.xaml#browseforwardmarkup2)]  
+[!code-xaml[NavigationCommandsSnippets#BrowseForwardMARKUP3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/BrowseForward.xaml#browseforwardmarkup3)]  
+[!code-xaml[NavigationCommandsSnippets#BrowseForwardMARKUP4](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/BrowseForward.xaml#browseforwardmarkup4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BrowseHome">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand BrowseHome { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand BrowseHome" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.NavigationCommands.BrowseHome" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der <see langword="Browse Home" /> Befehl.</summary>
+        <value>Der weitergeleitete [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>ALT + POS1  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Startseite  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt die Absicht an die Startseite zu navigieren.  
+  
+ Es ist keine Implementierung für die Reaktion auf die <xref:System.Windows.Input.NavigationCommands.BrowseHome%2A> Befehl auf einem gegebenen [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] Klasse. Daher müssen Sie eine geeignete Implementierung bereitstellen, die im Beispiel gezeigt wird.  
+  
+<a name="xamlAttributeUsage_BrowseHome"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="NavigationCommands.BrowseHome"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie Code implementiert wird, auf die reagiert die <xref:System.Windows.Input.NavigationCommands.BrowseHome%2A> -Befehl in Verbindung mit einem <xref:System.Windows.Controls.Frame>.  
+  
+ [!code-xaml[NavigationCommandsSnippets#BrowseHomeMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/BrowseHome.xaml#browsehomemarkup1)]  
+[!code-xaml[NavigationCommandsSnippets#BrowseHomeMARKUP2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/BrowseHome.xaml#browsehomemarkup2)]  
+[!code-xaml[NavigationCommandsSnippets#BrowseHomeMARKUP3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/BrowseHome.xaml#browsehomemarkup3)]  
+[!code-xaml[NavigationCommandsSnippets#BrowseHomeMARKUP4](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/BrowseHome.xaml#browsehomemarkup4)]  
+  
+ [!code-csharp[NavigationCommandsSnippets#BrowseHomeCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/BrowseHome.xaml.cs#browsehomecodebehind)]
+ [!code-vb[NavigationCommandsSnippets#BrowseHomeCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationCommandsSnippets/visualbasic/browsehome.xaml.vb#browsehomecodebehind)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BrowseStop">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand BrowseStop { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand BrowseStop" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.NavigationCommands.BrowseStop" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der <see langword="Browse Stop" /> Befehl.</summary>
+        <value>Der weitergeleitete [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>ALT + ESC  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Beenden  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass das Laden des Browsers zu beenden.  
+  
+ <xref:System.Windows.Controls.Frame>und <xref:System.Windows.Navigation.NavigationWindow> implementieren die Unterstützung für die Reaktion auf die <xref:System.Windows.Input.NavigationCommands.BrowseStop%2A> Befehl, obwohl Sie nicht erforderlich sind, verwenden; in vielen Fällen liegt die Implementierung als Antwort auf den Befehl in der Verantwortung der Autor der Anwendung.  
+  
+<a name="xamlAttributeUsage_BrowseStop"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="NavigationCommands.BrowseStop"/>  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie <xref:System.Windows.Input.NavigationCommands.BrowseStop%2A> in Verbindung mit einem <xref:System.Windows.Controls.Frame>. Die <xref:System.Windows.Controls.Frame> stellt eine Implementierung, die auf reagiert die <xref:System.Windows.Input.NavigationCommands.BrowseStop%2A> Befehl durch das Beenden des aktuellen <xref:System.Windows.Controls.Frame> Navigation.  
+  
+ [!code-xaml[NavigationCommandsSnippets#BrowseStopMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/BrowseStop.xaml#browsestopmarkup1)]  
+[!code-xaml[NavigationCommandsSnippets#BrowseStopMARKUP2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/BrowseStop.xaml#browsestopmarkup2)]  
+[!code-xaml[NavigationCommandsSnippets#BrowseStopMARKUP3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/BrowseStop.xaml#browsestopmarkup3)]  
+[!code-xaml[NavigationCommandsSnippets#BrowseStopMARKUP4](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/BrowseStop.xaml#browsestopmarkup4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecreaseZoom">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand DecreaseZoom { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand DecreaseZoom" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.NavigationCommands.DecreaseZoom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der <see langword="Decrease Zoom" /> Befehl.</summary>
+        <value>Der weitergeleitete [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>N/V  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Verkleinern  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt die Absicht an, verringern Sie den Zoom an.  
+  
+ <xref:System.Windows.Controls.DocumentViewer>, <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentScrollViewer>, und <xref:System.Windows.Controls.FlowDocumentPageViewer> implementieren die Unterstützung für die Reaktion auf die <xref:System.Windows.Input.NavigationCommands.DecreaseZoom%2A> Befehl, obwohl Sie nicht erforderlich sind, verwenden; in vielen Fällen die Implementierung als Antwort auf diesen Befehl wird die Verantwortung der Anwendung Writer-Objekt.  
+  
+<a name="xamlAttributeUsage_DecreaseZoom"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="NavigationCommands.DecreaseZoom"/>  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie <xref:System.Windows.Input.NavigationCommands.DecreaseZoom%2A> in Verbindung mit einem <xref:System.Windows.Controls.FlowDocumentPageViewer>. Die <xref:System.Windows.Controls.FlowDocumentPageViewer> stellt eine Implementierung, die auf reagiert die <xref:System.Windows.Input.NavigationCommands.DecreaseZoom%2A> verringert werden, da der Zoomprozentsatz Befehl.  
+  
+ [!code-xaml[NavigationCommandsSnippets#DecreaseZoomMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/DecreaseZoom.xaml#decreasezoommarkup1)]  
+[!code-xaml[NavigationCommandsSnippets#DecreaseZoomMARKUP2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/DecreaseZoom.xaml#decreasezoommarkup2)]  
+[!code-xaml[NavigationCommandsSnippets#DecreaseZoomMARKUP3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/DecreaseZoom.xaml#decreasezoommarkup3)]  
+[!code-xaml[NavigationCommandsSnippets#DecreaseZoomMARKUP4](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/DecreaseZoom.xaml#decreasezoommarkup4)]  
+[!code-xaml[NavigationCommandsSnippets#DecreaseZoomMARKUP5](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/DecreaseZoom.xaml#decreasezoommarkup5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Favorites">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Favorites { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Favorites" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.NavigationCommands.Favorites" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der <see langword="Favorites" /> Befehl.</summary>
+        <value>Der weitergeleitete [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>STRG + I  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Favoriten  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt die Absicht an, zu verwalten, und navigieren Sie zu den Favoriten hinzuzufügen.  
+  
+ Es ist keine Implementierung für die Reaktion auf die <xref:System.Windows.Input.NavigationCommands.Favorites%2A> Befehl auf einem gegebenen [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] Klasse. Daher müssen Sie eine geeignete Implementierung bereitstellen, die im Beispiel gezeigt wird.  
+  
+<a name="xamlAttributeUsage_Favorites"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="NavigationCommands.Favorites"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie Code implementiert wird, auf die reagiert die <xref:System.Windows.Input.NavigationCommands.Favorites%2A> -Befehl in Verbindung mit einem <xref:System.Windows.Controls.Frame>.  
+  
+ [!code-xaml[NavigationCommandsSnippets#FavoritesMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/Favorites.xaml#favoritesmarkup1)]  
+[!code-xaml[NavigationCommandsSnippets#FavoritesMARKUP2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/Favorites.xaml#favoritesmarkup2)]  
+[!code-xaml[NavigationCommandsSnippets#FavoritesMARKUP3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/Favorites.xaml#favoritesmarkup3)]  
+[!code-xaml[NavigationCommandsSnippets#FavoritesMARKUP4](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/Favorites.xaml#favoritesmarkup4)]  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstPage">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand FirstPage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand FirstPage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.NavigationCommands.FirstPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der <see langword="First Page" /> Befehl.</summary>
+        <value>Der weitergeleitete [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>N/V  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Erste Seite  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt die Absicht an, wechseln zur ersten Seite.  
+  
+ <xref:System.Windows.Controls.DocumentViewer>, <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentScrollViewer>, und <xref:System.Windows.Controls.FlowDocumentPageViewer> implementieren die Unterstützung für die Reaktion auf die <xref:System.Windows.Input.NavigationCommands.FirstPage%2A> Befehl, obwohl Sie nicht erforderlich sind, verwenden; in vielen Fällen die Implementierung als Antwort auf diesen Befehl wird die Verantwortung der Anwendung Writer-Objekt.  
+  
+<a name="xamlAttributeUsage_FirstPage"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="NavigationCommands.FirstPage"/>  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie <xref:System.Windows.Input.NavigationCommands.FirstPage%2A> in Verbindung mit einem <xref:System.Windows.Controls.FlowDocumentPageViewer>. Die <xref:System.Windows.Controls.FlowDocumentPageViewer> stellt eine Implementierung, die auf reagiert die <xref:System.Windows.Input.NavigationCommands.FirstPage%2A> Befehl, indem Sie auf der ersten Seite.  
+  
+ [!code-xaml[NavigationCommandsSnippets#FirstPageMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/FirstPage.xaml#firstpagemarkup1)]  
+[!code-xaml[NavigationCommandsSnippets#FirstPageMARKUP2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/FirstPage.xaml#firstpagemarkup2)]  
+[!code-xaml[NavigationCommandsSnippets#FirstPageMARKUP3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/FirstPage.xaml#firstpagemarkup3)]  
+[!code-xaml[NavigationCommandsSnippets#FirstPageMARKUP4](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/FirstPage.xaml#firstpagemarkup4)]  
+[!code-xaml[NavigationCommandsSnippets#FirstPageMARKUP5](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/FirstPage.xaml#firstpagemarkup5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GoToPage">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand GoToPage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand GoToPage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.NavigationCommands.GoToPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der <see langword="Go To Page" /> Befehl.</summary>
+        <value>Der weitergeleitete [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>N/V  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Wechseln Sie zur Seite  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt die Absicht an, für den Zoomfaktor ändern.  
+  
+ <xref:System.Windows.Controls.DocumentViewer>und <xref:System.Windows.Controls.FlowDocumentPageViewer> implementieren die Unterstützung für die Reaktion auf die <xref:System.Windows.Input.NavigationCommands.GoToPage%2A> Befehl, obwohl Sie nicht erforderlich sind, verwenden; in vielen Fällen liegt die Implementierung als Antwort auf den Befehl in der Verantwortung der Autor der Anwendung.  
+  
+<a name="xamlAttributeUsage_GoToPage"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="NavigationCommands.GoToPage"/>  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie die <xref:System.Windows.Input.NavigationCommands.GoToPage%2A> -Befehl in Verbindung mit einem <xref:System.Windows.Controls.FlowDocumentPageViewer>. Die <xref:System.Windows.Controls.FlowDocumentPageViewer> stellt eine Implementierung, die auf reagiert die <xref:System.Windows.Input.NavigationCommands.GoToPage%2A> gehen Sie auf der Seite durch den Textwert des angegebenen Befehls eine <xref:System.Windows.Controls.TextBox> Steuerelement.  
+  
+ [!code-xaml[NavigationCommandsSnippets#GoToPageMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/GoToPage.xaml#gotopagemarkup1)]  
+[!code-xaml[NavigationCommandsSnippets#GoToPageMARKUP2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/GoToPage.xaml#gotopagemarkup2)]  
+[!code-xaml[NavigationCommandsSnippets#GoToPageMARKUP3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/GoToPage.xaml#gotopagemarkup3)]  
+[!code-xaml[NavigationCommandsSnippets#GoToPageMARKUP4](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/GoToPage.xaml#gotopagemarkup4)]  
+[!code-xaml[NavigationCommandsSnippets#GoToPageMARKUP5](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/GoToPage.xaml#gotopagemarkup5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncreaseZoom">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand IncreaseZoom { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand IncreaseZoom" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.NavigationCommands.IncreaseZoom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der <see langword="Increase Zoom" /> Befehl.</summary>
+        <value>Der weitergeleitete [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>N/V  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Vergrößern  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt die Absicht an, erhöhen Sie den Zoom an.  
+  
+ <xref:System.Windows.Controls.DocumentViewer>, <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentScrollViewer>, und <xref:System.Windows.Controls.FlowDocumentPageViewer> implementieren die Unterstützung für die Reaktion auf die <xref:System.Windows.Input.NavigationCommands.IncreaseZoom%2A> Befehl, obwohl Sie nicht erforderlich sind, verwenden; in vielen Fällen die Implementierung als Antwort auf diesen Befehl wird die Verantwortung der Anwendung Writer-Objekt.  
+  
+<a name="xamlAttributeUsage_IncreaseZoom"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="NavigationCommands.IncreaseZoom"/>  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie <xref:System.Windows.Input.NavigationCommands.IncreaseZoom%2A> in Verbindung mit einem <xref:System.Windows.Controls.FlowDocumentPageViewer>. Die <xref:System.Windows.Controls.FlowDocumentPageViewer> stellt eine Implementierung, die auf reagiert die <xref:System.Windows.Input.NavigationCommands.IncreaseZoom%2A> verringert werden, da der Zoomprozentsatz Befehl.  
+  
+ [!code-xaml[NavigationCommandsSnippets#IncreaseZoomMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/IncreaseZoom.xaml#increasezoommarkup1)]  
+[!code-xaml[NavigationCommandsSnippets#IncreaseZoomMARKUP2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/IncreaseZoom.xaml#increasezoommarkup2)]  
+[!code-xaml[NavigationCommandsSnippets#IncreaseZoomMARKUP3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/IncreaseZoom.xaml#increasezoommarkup3)]  
+[!code-xaml[NavigationCommandsSnippets#IncreaseZoomMARKUP4](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/IncreaseZoom.xaml#increasezoommarkup4)]  
+[!code-xaml[NavigationCommandsSnippets#IncreaseZoomMARKUP5](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/IncreaseZoom.xaml#increasezoommarkup5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastPage">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand LastPage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand LastPage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.NavigationCommands.LastPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der <see langword="Last Page" /> Befehl.</summary>
+        <value>Der weitergeleitete [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>N/V  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Letzte Seite  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt die Absicht an, auf die letzte Seite zu wechseln.  
+  
+ <xref:System.Windows.Controls.DocumentViewer>, <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentScrollViewer>, und <xref:System.Windows.Controls.FlowDocumentPageViewer> implementieren die Unterstützung für die Reaktion auf die <xref:System.Windows.Input.NavigationCommands.LastPage%2A> Befehl, obwohl Sie nicht erforderlich sind, verwenden; in vielen Fällen die Implementierung als Antwort auf diesen Befehl wird die Verantwortung der Anwendung Writer-Objekt.  
+  
+<a name="xamlAttributeUsage_LastPage"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="NavigationCommands.LastPage"/>  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie <xref:System.Windows.Input.NavigationCommands.LastPage%2A> in Verbindung mit einem <xref:System.Windows.Controls.FlowDocumentPageViewer>. Die <xref:System.Windows.Controls.FlowDocumentPageViewer> stellt eine Implementierung, die auf reagiert die <xref:System.Windows.Input.NavigationCommands.LastPage%2A> Befehl durch Aufrufen der letzten Seite.  
+  
+ [!code-xaml[NavigationCommandsSnippets#LastPageMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/LastPage.xaml#lastpagemarkup1)]  
+[!code-xaml[NavigationCommandsSnippets#LastPageMARKUP2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/LastPage.xaml#lastpagemarkup2)]  
+[!code-xaml[NavigationCommandsSnippets#LastPageMARKUP3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/LastPage.xaml#lastpagemarkup3)]  
+[!code-xaml[NavigationCommandsSnippets#LastPageMARKUP4](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/LastPage.xaml#lastpagemarkup4)]  
+[!code-xaml[NavigationCommandsSnippets#LastPageMARKUP5](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/LastPage.xaml#lastpagemarkup5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NavigateJournal">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand NavigateJournal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand NavigateJournal" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.NavigationCommands.NavigateJournal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der <see langword="Navigate Journal" /> Befehl.</summary>
+        <value>Der weitergeleitete [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>N/V  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Navigation Journal  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass die Erfassung zu navigieren.  
+  
+ <xref:System.Windows.Controls.Frame>und <xref:System.Windows.Navigation.NavigationWindow> implementieren die Unterstützung für die Reaktion auf die <xref:System.Windows.Input.NavigationCommands.NavigateJournal%2A> Befehl, obwohl Sie nicht erforderlich sind, verwenden; in vielen Fällen liegt die Implementierung als Antwort auf den Befehl in der Verantwortung der Autor der Anwendung.  
+  
+<a name="xamlAttributeUsage_NavigateJournal"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="NavigationCommands.NavigateJournal"/>  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie <xref:System.Windows.Input.NavigationCommands.NavigateJournal%2A> in Verbindung mit einem <xref:System.Windows.Controls.Frame>. Die <xref:System.Windows.Controls.Frame> stellt eine Implementierung, die auf reagiert die <xref:System.Windows.Input.NavigationCommands.NavigateJournal%2A> durch Navigieren zum angegebenen Journaleintrags auf den vorwärts- oder Rückwärtspfeil Stapeln der Befehl die <xref:System.Windows.Controls.Frame>. Die Einträge werden bereitgestellt, durch die <xref:System.Windows.Navigation.JournalEntryUnifiedViewConverter> auf der obersten Ebene `Navigate Journal` <xref:System.Windows.Controls.MenuItem>. Jede Journaleintrags an ein untergeordnetes Element gebunden ist <xref:System.Windows.Controls.MenuItem> , verwendet die <xref:System.Windows.Input.NavigationCommands.NavigateJournal%2A> Befehl.  
+  
+ [!code-xaml[NavigationCommandsSnippets#NavigateJournalMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/NavigateJournal.xaml#navigatejournalmarkup1)]  
+[!code-xaml[NavigationCommandsSnippets#NavigateJournalMARKUP2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/NavigateJournal.xaml#navigatejournalmarkup2)]  
+[!code-xaml[NavigationCommandsSnippets#NavigateJournalMARKUP3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/NavigateJournal.xaml#navigatejournalmarkup3)]  
+[!code-xaml[NavigationCommandsSnippets#NavigateJournalMARKUP4](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/NavigateJournal.xaml#navigatejournalmarkup4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextPage">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand NextPage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand NextPage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.NavigationCommands.NextPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der <see langword="Next Page" /> Befehl.</summary>
+        <value>Der weitergeleitete [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>N/V  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Nächste Seite  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass zur nächsten Seite wechseln.  
+  
+ <xref:System.Windows.Controls.DocumentViewer>, <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentScrollViewer>, und <xref:System.Windows.Controls.FlowDocumentPageViewer> implementieren die Unterstützung für die Reaktion auf die <xref:System.Windows.Input.NavigationCommands.NextPage%2A> Befehl, obwohl Sie nicht erforderlich sind, verwenden; in vielen Fällen die Implementierung als Antwort auf diesen Befehl wird die Verantwortung der Anwendung Writer-Objekt.  
+  
+<a name="xamlAttributeUsage_NextPage"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="NavigationCommands.NextPage"/>  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie <xref:System.Windows.Input.NavigationCommands.NextPage%2A> in Verbindung mit einem <xref:System.Windows.Controls.FlowDocumentPageViewer>. Die <xref:System.Windows.Controls.FlowDocumentPageViewer> stellt eine Implementierung, die auf reagiert die <xref:System.Windows.Input.NavigationCommands.NextPage%2A> Befehl, indem Sie zur nächsten Seite wechseln.  
+  
+ [!code-xaml[NavigationCommandsSnippets#NextPageMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/NextPage.xaml#nextpagemarkup1)]  
+[!code-xaml[NavigationCommandsSnippets#NextPageMARKUP2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/NextPage.xaml#nextpagemarkup2)]  
+[!code-xaml[NavigationCommandsSnippets#NextPageMARKUP3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/NextPage.xaml#nextpagemarkup3)]  
+[!code-xaml[NavigationCommandsSnippets#NextPageMARKUP4](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/NextPage.xaml#nextpagemarkup4)]  
+[!code-xaml[NavigationCommandsSnippets#NextPageMARKUP5](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/NextPage.xaml#nextpagemarkup5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousPage">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand PreviousPage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand PreviousPage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.NavigationCommands.PreviousPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der <see langword="Previous Page" /> Befehl.</summary>
+        <value>Der weitergeleitete [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>N/V  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Vorherige Seite  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt die Absicht an, zur vorherigen Seite wechseln.  
+  
+ <xref:System.Windows.Controls.DocumentViewer>, <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentScrollViewer>, und <xref:System.Windows.Controls.FlowDocumentPageViewer> implementieren die Unterstützung für die Reaktion auf die <xref:System.Windows.Input.NavigationCommands.PreviousPage%2A> Befehl, obwohl Sie nicht erforderlich sind, verwenden; in vielen Fällen die Implementierung als Antwort auf diesen Befehl wird die Verantwortung der Anwendung Writer-Objekt.  
+  
+<a name="xamlAttributeUsage_PreviousPage"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="NavigationCommands.PreviousPage"/>  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie <xref:System.Windows.Input.NavigationCommands.PreviousPage%2A> in Verbindung mit einem <xref:System.Windows.Controls.FlowDocumentPageViewer>. Die <xref:System.Windows.Controls.FlowDocumentPageViewer> stellt eine Implementierung, die auf reagiert die <xref:System.Windows.Input.NavigationCommands.PreviousPage%2A> Befehl, indem Sie zur vorherigen Seite wechseln.  
+  
+ [!code-xaml[NavigationCommandsSnippets#PreviousPageMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/PreviousPage.xaml#previouspagemarkup1)]  
+[!code-xaml[NavigationCommandsSnippets#PreviousPageMARKUP2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/PreviousPage.xaml#previouspagemarkup2)]  
+[!code-xaml[NavigationCommandsSnippets#PreviousPageMARKUP3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/PreviousPage.xaml#previouspagemarkup3)]  
+[!code-xaml[NavigationCommandsSnippets#PreviousPageMARKUP4](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/PreviousPage.xaml#previouspagemarkup4)]  
+[!code-xaml[NavigationCommandsSnippets#PreviousPageMARKUP5](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/PreviousPage.xaml#previouspagemarkup5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Refresh">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Refresh { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Refresh" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.NavigationCommands.Refresh" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der <see langword="Refresh" /> Befehl.</summary>
+        <value>Der weitergeleitete [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>F5  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Aktualisieren  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt an, dass die aktuelle Seite zu aktualisieren.  
+  
+ <xref:System.Windows.Controls.Frame>und <xref:System.Windows.Navigation.NavigationWindow> implementieren die Unterstützung für die Reaktion auf die <xref:System.Windows.Input.NavigationCommands.Refresh%2A> Befehl, obwohl Sie nicht erforderlich sind, verwenden; in vielen Fällen liegt die Implementierung als Antwort auf den Befehl in der Verantwortung der Autor der Anwendung.  
+  
+<a name="xamlAttributeUsage_Refresh"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="NavigationCommands.Refresh"/>  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie <xref:System.Windows.Input.NavigationCommands.Refresh%2A> in Verbindung mit einem <xref:System.Windows.Controls.Frame>. Die <xref:System.Windows.Controls.Frame> stellt eine Implementierung, die auf reagiert die <xref:System.Windows.Input.NavigationCommands.Refresh%2A> Befehl durch das aktuelle Neuladen <xref:System.Windows.Controls.Frame> Inhalt.  
+  
+ [!code-xaml[NavigationCommandsSnippets#RefreshMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/Refresh.xaml#refreshmarkup1)]  
+[!code-xaml[NavigationCommandsSnippets#RefreshMARKUP2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/Refresh.xaml#refreshmarkup2)]  
+[!code-xaml[NavigationCommandsSnippets#RefreshMARKUP3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/Refresh.xaml#refreshmarkup3)]  
+[!code-xaml[NavigationCommandsSnippets#RefreshMARKUP4](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/Refresh.xaml#refreshmarkup4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Search">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Search { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Search" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.NavigationCommands.Search" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der <see langword="Search" /> Befehl.</summary>
+        <value>Der weitergeleitete [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>F3  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Suche  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt die Absicht, gesucht werden soll.  
+  
+ Es ist keine Implementierung für die Reaktion auf die <xref:System.Windows.Input.NavigationCommands.Search%2A> Befehl auf einem gegebenen [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] Klasse. Daher müssen Sie eine geeignete Implementierung bereitstellen, die im Beispiel gezeigt wird.  
+  
+<a name="xamlAttributeUsage_Search"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="NavigationCommands.Search"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie Code implementiert wird, auf die reagiert die <xref:System.Windows.Input.NavigationCommands.Search%2A> -Befehl in Verbindung mit einem <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
+  
+ [!code-xaml[NavigationCommandsSnippets#SearchMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/Search.xaml#searchmarkup1)]  
+[!code-xaml[NavigationCommandsSnippets#SearchMARKUP2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/Search.xaml#searchmarkup2)]  
+[!code-xaml[NavigationCommandsSnippets#SearchMARKUP3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/Search.xaml#searchmarkup3)]  
+[!code-xaml[NavigationCommandsSnippets#SearchMARKUP4](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/Search.xaml#searchmarkup4)]  
+[!code-xaml[NavigationCommandsSnippets#SearchMARKUP5](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/Search.xaml#searchmarkup5)]  
+  
+ [!code-csharp[NavigationCommandsSnippets#SearchCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/Search.xaml.cs#searchcodebehind)]
+ [!code-vb[NavigationCommandsSnippets#SearchCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationCommandsSnippets/visualbasic/search.xaml.vb#searchcodebehind)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Zoom">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Zoom { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Zoom" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.NavigationCommands.Zoom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert der <see langword="Zoom" /> Befehl.</summary>
+        <value>Der weitergeleitete [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] Befehl.  
+  
+ <list type="table"><listheader><term>Standardwerte  
+  
+ </term><description></description></listheader><item><term>Tastenkombination  
+  
+ </term><description>N/V  
+  
+ </description></item><item><term>Der Benutzeroberflächentext  
+  
+ </term><description>Zoom  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Befehl gibt die Absicht an, die Zoomstufe festzulegen.  
+  
+ Es ist keine Implementierung für die Reaktion auf die <xref:System.Windows.Input.NavigationCommands.Zoom%2A> Befehl auf einem gegebenen [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] Klasse. Daher müssen Sie eine geeignete Implementierung bereitstellen, die im Beispiel gezeigt wird.  
+  
+<a name="xamlAttributeUsage_Zoom"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object property="NavigationCommands.Zoom"/>  
+```  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie Code implementiert wird, auf die reagiert die <xref:System.Windows.Input.NavigationCommands.Zoom%2A> -Befehl in Verbindung mit einem <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
+  
+ [!code-xaml[NavigationCommandsSnippets#ZoomMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/Zoom.xaml#zoommarkup1)]  
+[!code-xaml[NavigationCommandsSnippets#ZoomMARKUP2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/Zoom.xaml#zoommarkup2)]  
+[!code-xaml[NavigationCommandsSnippets#ZoomMARKUP3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/Zoom.xaml#zoommarkup3)]  
+[!code-xaml[NavigationCommandsSnippets#ZoomMARKUP4](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationCommandsSnippets/CSharp/Zoom.xaml#zoommarkup4)]  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,199 @@
+<Type Name="IXmlSerializable" FullName="System.Xml.Serialization.IXmlSerializable">
+  <TypeSignature Language="C#" Value="public interface IXmlSerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IXmlSerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.IXmlSerializable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine benutzerdefinierte Formatierung für die XML-Serialisierung und -Deserialisierung bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es gibt zwei Gründe für die diese Schnittstelle implementieren. Die erste besteht darin zu steuern, wie das Objekt serialisiert oder deserialisiert, indem die <xref:System.Xml.Serialization.XmlSerializer>. Sie können z. B. Daten in Bytes anstelle von Pufferung von großen Datasets aufteilen und vermeiden Sie auch die wiederverwendungen, die auftritt, wenn die Daten mithilfe der Base64-Codierung codiert werden. Implementieren Sie zum Steuern der Serialisierung die <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> und <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> Methoden steuern die <xref:System.Xml.XmlReader> und <xref:System.Xml.XmlWriter> Klassen zum Lesen und Schreiben von XML. Ein Beispiel hierfür finden Sie unter [Vorgehensweise: Block serialisiert Daten](~/docs/standard/serialization/how-to-chunk-serialized-data.md).  
+  
+ Der zweite Grund ist, um das Schema zu steuern zu können. Um dies zu ermöglichen, müssen Sie anwenden der <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> auf den serialisierbaren geben, und geben Sie den Namen des statischen Members, der das Schema zurückgibt. Finden Sie unter der <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> ein Beispiel.  
+  
+ Eine Klasse, die die Schnittstelle implementiert, muss einen parameterlosen Konstruktor haben. Dies ist eine Voraussetzung für die <xref:System.Xml.Serialization.XmlSerializer> Klasse.  
+  
+   
+  
+## Examples  
+ Der folgende Beispielcode zeigt eine Implementierung der <xref:System.Xml.Serialization.IXmlSerializable> -Schnittstelle, die ein privates Feld serialisiert.  
+  
+ [!code-cpp[XmlSerialization_IXmlSerializable#0](~/samples/snippets/cpp/VS_Snippets_Remoting/XmlSerialization_IXmlSerializable/CPP/person.cpp#0)]
+ [!code-csharp[XmlSerialization_IXmlSerializable#0](~/samples/snippets/csharp/VS_Snippets_Remoting/XmlSerialization_IXmlSerializable/CS/person.cs#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetSchema">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchema GetSchema ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.Schema.XmlSchema GetSchema() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.IXmlSerializable.GetSchema" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchema</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Diese Methode ist reserviert und sollte nicht verwendet werden. Bei der Implementierung der <see langword="IXmlSerializable" /> -Schnittstelle, die Sie zurückgeben sollte <see langword="null" /> (<see langword="Nothing" /> in Visual Basic) aus dieser Methode und stattdessen anwenden, wenn Sie angeben, ein benutzerdefiniertes Schema ist erforderlich, die <see cref="T:System.Xml.Serialization.XmlSchemaProviderAttribute" /> auf die Klasse.</summary>
+        <returns>Ein <see cref="T:System.Xml.Schema.XmlSchema" /> zur Beschreibung der XML-Darstellung des Objekts, das von der <see cref="M:System.Xml.Serialization.IXmlSerializable.WriteXml(System.Xml.XmlWriter)" />-Methode erstellt und von der <see cref="M:System.Xml.Serialization.IXmlSerializable.ReadXml(System.Xml.XmlReader)" />-Methode verwendet wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Serialisierung oder Deserialisierung eines Objekts die <xref:System.Xml.Serialization.XmlSerializer> Klasse führt keine XML-Überprüfung. Aus diesem Grund ist es häufig, um Schemainformationen zu unterdrücken, indem Sie eine einfache Implementierung dieser Methode z. B. bereitstellen, wird durch zurückgeben sicher `null` (`Nothing` in Visual Basic).  
+  
+ Wenn Schemainformationen bereitgestellt erforderlich ist, sollten Sie verwenden die <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> Attribut. Die `GetSchema` -Methode zurückgeben sollte `null` (oder `Nothing`).  
+  
+ Einige [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Typen als auch für ältere benutzerdefinierte Typen implementieren die `IXmlSerializable` Schnittstelle verwendet möglicherweise `GetSchema` anstelle von `XmlSchemaProvider`. In diesem Fall gibt die Methode ein genaues XML-Schema, das die XML-Darstellung des Objekts, indem generiert beschreibt die <xref:System.Data.DataSet.WriteXml%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadXml">
+      <MemberSignature Language="C#" Value="public void ReadXml (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReadXml(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.IXmlSerializable.ReadXml(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Die <see cref="T:System.Xml.XmlReader" /> stream, aus dem das Objekt deserialisiert wird.</param>
+        <summary>Generiert ein Objekt aus seiner XML-Darstellung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> Methode muss das Objekt, das mit den Informationen, die vom geschrieben wurde Wiederherstellen der <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> Methode.  
+  
+ Wenn diese Methode aufgerufen wird, wird der Reader auf dem Starttag positioniert, das die Informationen für den Typ umschließt. D. h. gibt, die direkt auf dem Starttag den Anfang eines serialisierten Objekts. Bei der Rückgabe dieser Methode muss das ganze Element von Anfang bis Ende, gelesen haben z. B. seinen gesamten Inhalt. Im Gegensatz zu den <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> der Framework-Methode behandelt das Wrapperelement nicht automatisch. Ihre Implementierung muss dies tun. Wegen eines Fehlers beim beobachten von diesen Regeln für die Positionierung kann dazu führen, dass Code zum Generieren von unerwarteten Laufzeitausnahmen oder beschädigte Daten beeinflusst werden.  
+  
+ Wenn Sie diese Methode implementieren, sollten Sie die Möglichkeit, dass ein böswilliger Benutzer eine wohlgeformte, aber ungültige XML-Darstellung um deaktivieren oder anderer Hinsicht ändern das Verhalten der Anwendung bereitstellen kann.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine Implementierung der <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> Methode.  
+  
+ [!code-cpp[XmlSerialization_IXmlSerializable#2](~/samples/snippets/cpp/VS_Snippets_Remoting/XmlSerialization_IXmlSerializable/CPP/person.cpp#2)]
+ [!code-csharp[XmlSerialization_IXmlSerializable#2](~/samples/snippets/csharp/VS_Snippets_Remoting/XmlSerialization_IXmlSerializable/CS/person.cs#2)]  
+  
+ Das folgende Beispiel veranschaulicht die Verwendung der <xref:System.Xml.Serialization.XmlSerializer> Klasse zum Deserialisieren dieses Objekts.  
+  
+ [!code-cpp[XmlSerialization_IXmlSerializable#20](~/samples/snippets/cpp/VS_Snippets_Remoting/XmlSerialization_IXmlSerializable/CPP/reader.cpp#20)]
+ [!code-csharp[XmlSerialization_IXmlSerializable#20](~/samples/snippets/csharp/VS_Snippets_Remoting/XmlSerialization_IXmlSerializable/CS/reader.cs#20)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteXml">
+      <MemberSignature Language="C#" Value="public void WriteXml (System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteXml(class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.IXmlSerializable.WriteXml(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Xml.XmlWriter" />-Stream, in den das Objekt serialisiert wird.</param>
+        <summary>Konvertiert ein Objekt in seine XML-Darstellung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> Implementierung, die Sie bereitstellen, sollten die XML-Darstellung des Objekts schreiben. Das Framework schreibt ein Wrapperelement ein und platziert den XML-Writer nach dem Start. Ihre Implementierung kann seinen Inhalt, einschließlich der untergeordneten Elemente schreiben. Das Framework schließt dann das Wrapperelement.  
+  
+ Schreiben Sie ausreichende Informationen auf der <xref:System.Xml.XmlWriter> Stream, damit die <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> Methode, um das Objekt wieder zusammenzusetzen.  
+  
+ Beispielsweise enthält der Objektzustand eine Arrayvariable, achten Sie darauf, dass Sie die Länge des Arrays zu schreiben, oder Verwenden eines übergeordneten Elements enthalten die Elemente, die die Arraywerte beschreiben, damit Sie wissen, wie viele Werte zu lesen, wenn das Objekt wiederhergestellt wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine Implementierung der <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> Methode.  
+  
+ [!code-cpp[XmlSerialization_IXmlSerializable#1](~/samples/snippets/cpp/VS_Snippets_Remoting/XmlSerialization_IXmlSerializable/CPP/person.cpp#1)]
+ [!code-csharp[XmlSerialization_IXmlSerializable#1](~/samples/snippets/csharp/VS_Snippets_Remoting/XmlSerialization_IXmlSerializable/CS/person.cs#1)]  
+  
+ Das folgende Beispiel veranschaulicht die Verwendung der <xref:System.Xml.Serialization.XmlSerializer> Klasse zum Deserialisieren dieses Objekts.  
+  
+ [!code-cpp[XmlSerialization_IXmlSerializable#10](~/samples/snippets/cpp/VS_Snippets_Remoting/XmlSerialization_IXmlSerializable/CPP/writer.cpp#10)]
+ [!code-csharp[XmlSerialization_IXmlSerializable#10](~/samples/snippets/csharp/VS_Snippets_Remoting/XmlSerialization_IXmlSerializable/CS/writer.cs#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

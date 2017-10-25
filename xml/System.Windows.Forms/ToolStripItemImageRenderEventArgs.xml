@@ -1,0 +1,137 @@
+<Type Name="ToolStripItemImageRenderEventArgs" FullName="System.Windows.Forms.ToolStripItemImageRenderEventArgs">
+  <TypeSignature Language="C#" Value="public class ToolStripItemImageRenderEventArgs : System.Windows.Forms.ToolStripItemRenderEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ToolStripItemImageRenderEventArgs extends System.Windows.Forms.ToolStripItemRenderEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolStripItemImageRenderEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.ToolStripItemRenderEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Windows.Forms.ToolStripRenderer.RenderItemImage" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Typs. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ToolStripRenderer.RenderItemImage> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz eines Typs, die enthält von erben <xref:System.Windows.Forms.ToolStripRenderer>, z. B. eine <xref:System.Windows.Forms.ToolStripSystemRenderer> oder <xref:System.Windows.Forms.ToolStripProfessionalRenderer>. Geben Sie den Namen der Instanz `ToolStripRenderer1` und stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ToolStripRenderer.RenderItemImage> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#593](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#593)]
+ [!code-vb[System.Windows.Forms.EventExamples#593](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#593)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolStripItemImageRenderEventArgs (System.Drawing.Graphics g, System.Windows.Forms.ToolStripItem item, System.Drawing.Rectangle imageRectangle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Graphics g, class System.Windows.Forms.ToolStripItem item, valuetype System.Drawing.Rectangle imageRectangle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripItemImageRenderEventArgs.#ctor(System.Drawing.Graphics,System.Windows.Forms.ToolStripItem,System.Drawing.Rectangle)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="item" Type="System.Windows.Forms.ToolStripItem" />
+        <Parameter Name="imageRectangle" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="g">Die <see cref="T:System.Drawing.Graphics" /> zum Zeichnen des Bilds verwendet.</param>
+        <param name="item">Die <see cref="T:System.Windows.Forms.ToolStripItem" />.</param>
+        <param name="imageRectangle">Der umgebenden Bereich des Bilds.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.ToolStripItemImageRenderEventArgs" /> -Klasse für den angegebenen <see cref="T:System.Windows.Forms.ToolStripItem" /> innerhalb des angegebenen Leerraums, die die angegebenen Eigenschaften aufweist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolStripItemImageRenderEventArgs (System.Drawing.Graphics g, System.Windows.Forms.ToolStripItem item, System.Drawing.Image image, System.Drawing.Rectangle imageRectangle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Graphics g, class System.Windows.Forms.ToolStripItem item, class System.Drawing.Image image, valuetype System.Drawing.Rectangle imageRectangle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripItemImageRenderEventArgs.#ctor(System.Drawing.Graphics,System.Windows.Forms.ToolStripItem,System.Drawing.Image,System.Drawing.Rectangle)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="item" Type="System.Windows.Forms.ToolStripItem" />
+        <Parameter Name="image" Type="System.Drawing.Image" />
+        <Parameter Name="imageRectangle" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="g">Die <see cref="T:System.Drawing.Graphics" /> zum Zeichnen des Bilds verwendet.</param>
+        <param name="item">Die <see cref="T:System.Windows.Forms.ToolStripItem" />, auf der das Bild gezeichnet werden soll.</param>
+        <param name="image">Die <see cref="T:System.Drawing.Image" /> Paint-Ereignis.</param>
+        <param name="imageRectangle">Der umgebenden Bereich des Bilds.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.ToolStripItemImageRenderEventArgs" /> -Klasse für den angegebenen <see cref="T:System.Windows.Forms.ToolStripItem" /> , ein Bild im angegebenen Bereich anzeigt und die angegebenen Eigenschaften aufweist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Image">
+      <MemberSignature Language="C#" Value="public System.Drawing.Image Image { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Image Image" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripItemImageRenderEventArgs.Image" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Bild gezeichnet wird, auf die <see cref="T:System.Windows.Forms.ToolStrip" />.</summary>
+        <value>Die <see cref="T:System.Drawing.Image" /> gezeichnet wird, auf die <see cref="T:System.Windows.Forms.ToolStrip" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ToolStripRenderer.RenderItemImage?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz eines Typs, die enthält von erben <xref:System.Windows.Forms.ToolStripRenderer>, z. B. eine <xref:System.Windows.Forms.ToolStripSystemRenderer> oder <xref:System.Windows.Forms.ToolStripProfessionalRenderer>. Geben Sie den Namen der Instanz `ToolStripRenderer1` und stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ToolStripRenderer.RenderItemImage?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#593](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#593)]
+ [!code-vb[System.Windows.Forms.EventExamples#593](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#593)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageRectangle">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle ImageRectangle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle ImageRectangle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripItemImageRenderEventArgs.ImageRectangle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Rechteck, das den umgebenden Bereich des Bilds darstellt.</summary>
+        <value>Ein <see cref="T:System.Drawing.Rectangle" /> , die den umgebenden Bereich des Bilds darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.ToolStripRenderer.RenderItemImage?displayProperty=nameWithType> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz eines Typs, die enthält von erben <xref:System.Windows.Forms.ToolStripRenderer>, z. B. eine <xref:System.Windows.Forms.ToolStripSystemRenderer> oder <xref:System.Windows.Forms.ToolStripProfessionalRenderer>. Geben Sie den Namen der Instanz `ToolStripRenderer1` und stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.ToolStripRenderer.RenderItemImage?displayProperty=nameWithType> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#593](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#593)]
+ [!code-vb[System.Windows.Forms.EventExamples#593](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#593)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

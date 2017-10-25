@@ -1,0 +1,98 @@
+<Type Name="EventTask" FullName="System.Diagnostics.Eventing.Reader.EventTask">
+  <TypeSignature Language="C#" Value="public sealed class EventTask" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EventTask extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Eventing.Reader.EventTask" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Eine Ereignisaufgabe enthält, die in einem Ereignisanbieter definiert ist. Der Task identifiziert, einen Teil einer Anwendung oder eine Komponente, die ein Ereignis veröffentlicht wird. Ein Task ist ein 16-Bit-Wert mit der ersten 16 Werte reserviert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse kann nicht instanziiert werden. Ein <xref:System.Diagnostics.Eventing.Reader.ProviderMetadata> -Objekt definiert eine Liste von <xref:System.Diagnostics.Eventing.Reader.EventTask> Objekten, eines für jede Aufgabe in der Anbieter definiert. Der Standardkatalog Werte und ihre Bedeutungen werden definiert, der <xref:System.Diagnostics.Eventing.Reader.StandardEventLevel> Enumeration.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public string DisplayName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventTask.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den lokalisierten Namen für den Task des Ereignisses ab.</summary>
+        <value>Gibt eine Zeichenfolge, die den lokalisierten Namen für den Ereignis-Task enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventGuid">
+      <MemberSignature Language="C#" Value="public Guid EventGuid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid EventGuid" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventTask.EventGuid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Ereignis globally unique Identifier (GUID) für diese Aufgabe ab.</summary>
+        <value>Ein GUID-Wert zurückgegeben.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventTask.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den nicht lokalisierten Namen des Tasks "Ereignis".</summary>
+        <value>Gibt eine Zeichenfolge, die den nicht lokalisierten Namen des Tasks "Ereignis" enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public int Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Value" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventTask.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den numerischen Wert für diese Aufgabe ab.</summary>
+        <value>Gibt einen Ganzzahlwert zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

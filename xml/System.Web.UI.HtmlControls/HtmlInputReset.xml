@@ -1,0 +1,216 @@
+<Type Name="HtmlInputReset" FullName="System.Web.UI.HtmlControls.HtmlInputReset">
+  <TypeSignature Language="C#" Value="public class HtmlInputReset : System.Web.UI.HtmlControls.HtmlInputButton" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HtmlInputReset extends System.Web.UI.HtmlControls.HtmlInputButton" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.HtmlControls.HtmlInputReset" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.HtmlControls.HtmlInputButton</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.SupportsEventValidation</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht den programmgesteuerten Zugriff auf das HTML-Element <see langword="&lt;input type=reset&gt;" /> auf dem Server.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlInputReset> abgeleitete Klasse wird von der <xref:System.Web.UI.HtmlControls.HtmlInputButton> -Klasse und wird verwendet, um ein Schaltflächen-Steuerelement auf einer Webseite zu erstellen, die Formularsteuerelemente auf ihre ursprünglichen Werte zurückgesetzt. Die <xref:System.Web.UI.HtmlControls.HtmlInputReset> Steuerelement wird häufig verwendet, mit der <xref:System.Web.UI.HtmlControls.HtmlInputSubmit> Steuerelement, das verwendet wird, um ein Schaltflächen-Steuerelement zu erstellen, die das Formular sendet.  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.HtmlControls.HtmlInputReset>, finden Sie unter der <xref:System.Web.UI.HtmlControls.HtmlInputReset.%23ctor%2A> Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlInputReset> Steuerelement, um die Werte eines Formulars auf einer Webseite zurückzusetzen.  
+  
+ [!code-aspx-csharp[System.Web.UI.HtmlControls.HtmlInputReset#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlInputReset/CS/htmlinputresetcs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.HtmlControls.HtmlInputReset#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlInputReset/VB/htmlinputresetvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HtmlInputReset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlInputReset.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.HtmlControls.HtmlInputReset" />-Klasse mit Standardwerten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle zeigt die anfängliche Eigenschaftswert für eine Instanz von <xref:System.Web.UI.HtmlControls.HtmlInputReset>.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Web.UI.HtmlControls.HtmlControl.TagName%2A?displayProperty=nameWithType>|Das Zeichenfolgenliteral "Zurücksetzen".|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlInputReset> Steuerelement, um die Werte eines Formulars Webseite zurückzusetzen.  
+  
+ [!code-aspx-csharp[System.Web.UI.HtmlControls.HtmlInputReset#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlInputReset/CS/htmlinputresetcs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.HtmlControls.HtmlInputReset#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlInputReset/VB/htmlinputresetvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HtmlInputReset (string type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlInputReset.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ der Eingabe.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.HtmlControls.HtmlInputReset" /> -Klasse unter Verwendung des angegebenen Typs der Eingabe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgende Tabelle zeigt die anfängliche Eigenschaftswert für eine Instanz von <xref:System.Web.UI.HtmlControls.HtmlInputReset>.  
+  
+|Eigenschaft|Wert|  
+|--------------|-----------|  
+|<xref:System.Web.UI.HtmlControls.HtmlControl.TagName%2A?displayProperty=nameWithType>|Der Wert des `type`-Parameters.|  
+  
+ Festlegen der `type` Parameter auf einen Wert, der nicht als gültige HTML-erkannt `<input>` Element in einer standardmäßigen HTML führt `<input>` Element als ein Eingabefeld einzeiligen Textfeld.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlInputReset> Steuerelement, um die Werte eines Formulars Webseite zurückzusetzen.  
+  
+ [!code-aspx-csharp[System.Web.UI.HtmlControls.HtmlInputReset#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlInputReset/CS/htmlinputresetcs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.HtmlControls.HtmlInputReset#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlInputReset/VB/htmlinputresetvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CausesValidation">
+      <MemberSignature Language="C#" Value="public override bool CausesValidation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CausesValidation" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlInputReset.CausesValidation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die Validierung durchgeführt wird, wenn die <see cref="T:System.Web.UI.HtmlControls.HtmlInputReset" /> Steuerelement geklickt wird.</summary>
+        <value>
+          <see langword="true" />, wenn beim Klicken auf das <see cref="T:System.Web.UI.HtmlControls.HtmlInputReset" />-Steuerelement eine Validierung durchgeführt wird, andernfalls <see langword="false" />. Der Standardwert ist <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlInputReset.CausesValidation%2A> Eigenschaft sollte nicht direkt aus Ihrem Code verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerClick">
+      <MemberSignature Language="C#" Value="public event EventHandler ServerClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ServerClick" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.HtmlControls.HtmlInputReset.ServerClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt auf, wenn ein <see cref="T:System.Web.UI.HtmlControls.HtmlInputReset" /> Steuerelement geklickt wird, auf der Webseite.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlInputReset.ServerClick> Ereignis sollen nicht direkt aus Ihrem Code verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationGroup">
+      <MemberSignature Language="C#" Value="public override string ValidationGroup { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ValidationGroup" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlInputReset.ValidationGroup" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt Sie die Gruppe von Steuerelementen für die die <see cref="T:System.Web.UI.HtmlControls.HtmlInputReset" /> -Steuerelement eine Validierung auslöst, wenn es an den Server zurückgesendet.</summary>
+        <value>Die Gruppe von Steuerelementen, für die die <see cref="T:System.Web.UI.HtmlControls.HtmlInputReset" /> -Steuerelement eine Validierung auslöst, wenn es an den Server zurückgesendet. Der Standardwert ist eine leere Zeichenfolge (""), die angibt, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlInputReset.ValidationGroup%2A> Eigenschaft sollte nicht direkt aus Ihrem Code verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

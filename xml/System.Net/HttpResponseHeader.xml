@@ -1,0 +1,815 @@
+<Type Name="HttpResponseHeader" FullName="System.Net.HttpResponseHeader">
+  <TypeSignature Language="C#" Value="public enum HttpResponseHeader" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HttpResponseHeader extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.HttpResponseHeader" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Die HTTP-Header, die in einer Serverantwort angegeben werden können.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der entsprechende Inhalt verschiedener Header werden in der HTTP/1.1-Spezifikation im Detail beschrieben.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AcceptRanges">
+      <MemberSignature Language="C#" Value="AcceptRanges" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpResponseHeader AcceptRanges = int32(20)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpResponseHeader.AcceptRanges" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpResponseHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Accept-Ranges-Header, der den Bereich angibt, der vom Server akzeptiert wird.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Age">
+      <MemberSignature Language="C#" Value="Age" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpResponseHeader Age = int32(21)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpResponseHeader.Age" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpResponseHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die ALTER-Header gibt die Zeit in Sekunden an, da die Antwort von dem ursprünglichen Server generiert wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Allow">
+      <MemberSignature Language="C#" Value="Allow" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpResponseHeader Allow = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpResponseHeader.Allow" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpResponseHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Allow-Header, der den Satz von HTTP-Methoden angibt, die unterstützt werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheControl">
+      <MemberSignature Language="C#" Value="CacheControl" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpResponseHeader CacheControl = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpResponseHeader.CacheControl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpResponseHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Cache-Control-Header, der Zwischenspeichern Direktiven angibt, die von allen Cachemechanismus in der Anforderungs-/antwortkette antwortkette befolgt werden müssen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Connection">
+      <MemberSignature Language="C#" Value="Connection" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpResponseHeader Connection = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpResponseHeader.Connection" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpResponseHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Connection-Header, der Optionen angibt, die für eine bestimmte Verbindung gewünscht sind.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentEncoding">
+      <MemberSignature Language="C#" Value="ContentEncoding" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpResponseHeader ContentEncoding = int32(13)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpResponseHeader.ContentEncoding" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpResponseHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Content-Encoding-Header, der die auf die zugehörigen Textdaten angewendeten Codierungen angibt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentLanguage">
+      <MemberSignature Language="C#" Value="ContentLanguage" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpResponseHeader ContentLanguage = int32(14)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpResponseHeader.ContentLanguage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpResponseHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Content-Language-Header, die die natürliche Sprache oder Sprachen der zugehörigen Textdaten angibt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentLength">
+      <MemberSignature Language="C#" Value="ContentLength" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpResponseHeader ContentLength = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpResponseHeader.ContentLength" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpResponseHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Content-Length-Header, der die Länge der zugehörigen Textdaten in Bytes angibt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentLocation">
+      <MemberSignature Language="C#" Value="ContentLocation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpResponseHeader ContentLocation = int32(15)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpResponseHeader.ContentLocation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpResponseHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Content-Location-Header, einen URI an, von dem die zugehörige Textdaten abgerufen werden kann.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentMd5">
+      <MemberSignature Language="C#" Value="ContentMd5" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpResponseHeader ContentMd5 = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpResponseHeader.ContentMd5" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpResponseHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Content-MD5-Header, der den MD5-Hashwert der zugehörigen Textdaten zum Bereitstellen einer Integritätsprüfung für End-to-End-Nachrichten angibt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentRange">
+      <MemberSignature Language="C#" Value="ContentRange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpResponseHeader ContentRange = int32(17)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpResponseHeader.ContentRange" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpResponseHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Range-Header, der angibt, die Teilbereiche der Antwort, die die Clientanforderungen anstelle der gesamten Antwort zurückgegeben werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentType">
+      <MemberSignature Language="C#" Value="ContentType" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpResponseHeader ContentType = int32(12)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpResponseHeader.ContentType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpResponseHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Content-Type-Header, der den MIME-Typ der zugehörigen Textdaten angibt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Date">
+      <MemberSignature Language="C#" Value="Date" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpResponseHeader Date = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpResponseHeader.Date" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpResponseHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Date-Header, der angibt, das Datum und Uhrzeit, an dem die Antwort ausgelöst wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ETag">
+      <MemberSignature Language="C#" Value="ETag" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpResponseHeader ETag = int32(22)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpResponseHeader.ETag" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpResponseHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Etag-Header, der den aktuellen Wert für die angeforderte Variante angibt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Expires">
+      <MemberSignature Language="C#" Value="Expires" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpResponseHeader Expires = int32(18)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpResponseHeader.Expires" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpResponseHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Expires-Header, der das Datum und die Uhrzeit angibt, nach der die zugehörigen Textdaten als veraltet angesehen werden sollen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="KeepAlive">
+      <MemberSignature Language="C#" Value="KeepAlive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpResponseHeader KeepAlive = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpResponseHeader.KeepAlive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpResponseHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Keep-Alive-Header, der einen Parameter verwendet werden, um eine permanente Verbindung beizubehalten angibt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LastModified">
+      <MemberSignature Language="C#" Value="LastModified" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpResponseHeader LastModified = int32(19)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpResponseHeader.LastModified" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpResponseHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Last-Modified-Header, der das Datum und die Uhrzeit angibt, zu der die zugehörigen Textdaten zuletzt geändert wurden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="Location" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpResponseHeader Location = int32(23)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpResponseHeader.Location" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpResponseHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Location-Header, einen URI an, zu der der Client umgeleitet wird, um die angeforderte Ressource zu erhalten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Pragma">
+      <MemberSignature Language="C#" Value="Pragma" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpResponseHeader Pragma = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpResponseHeader.Pragma" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpResponseHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Pragma-Header, der implementierungsspezifische Anweisungen angibt, die möglicherweise auf einen beliebigen Agent in der Anforderungs-/Antwortkette angewendet werden können.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ProxyAuthenticate">
+      <MemberSignature Language="C#" Value="ProxyAuthenticate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpResponseHeader ProxyAuthenticate = int32(24)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpResponseHeader.ProxyAuthenticate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpResponseHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Proxy-Authenticate-Header, der angibt, dass der Client sich auf einen Proxy authentifizieren muss.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RetryAfter">
+      <MemberSignature Language="C#" Value="RetryAfter" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpResponseHeader RetryAfter = int32(25)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpResponseHeader.RetryAfter" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpResponseHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Retry-After Header, der angibt, eine Zeit (in Sekunden), oder Datum und Uhrzeit, nach dem der Client die Anforderung wiederholen kann.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Server">
+      <MemberSignature Language="C#" Value="Server" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpResponseHeader Server = int32(26)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpResponseHeader.Server" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpResponseHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Server-Header, Informationen zu den ursprünglichen Server-Agent an.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCookie">
+      <MemberSignature Language="C#" Value="SetCookie" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpResponseHeader SetCookie = int32(27)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpResponseHeader.SetCookie" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpResponseHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Set-Cookie-Header, die Cookiedaten angibt, die an dem Client dargestellt werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Trailer">
+      <MemberSignature Language="C#" Value="Trailer" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpResponseHeader Trailer = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpResponseHeader.Trailer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpResponseHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Trailer-Header, der angibt, dass die angezeigte Headerfelder in der Nachspann einer Nachricht vorhanden sind, die mit aufgeteilte übertragungscodierung codiert ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TransferEncoding">
+      <MemberSignature Language="C#" Value="TransferEncoding" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpResponseHeader TransferEncoding = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpResponseHeader.TransferEncoding" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpResponseHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Transfer-Encoding-Header, der was (sofern vorhanden) gibt an, der Typ der Transformation auf den Nachrichtentext angewendet wurde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Upgrade">
+      <MemberSignature Language="C#" Value="Upgrade" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpResponseHeader Upgrade = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpResponseHeader.Upgrade" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpResponseHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Upgrade-Header, der zusätzliche Kommunikationsprotokolle angibt, die vom Client unterstützt werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Vary">
+      <MemberSignature Language="C#" Value="Vary" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpResponseHeader Vary = int32(28)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpResponseHeader.Vary" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpResponseHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Vary-Header, der angibt, die Anforderungsheader, die verwendet werden, um festzustellen, ob eine zwischengespeicherte Antwort aktuell ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Via">
+      <MemberSignature Language="C#" Value="Via" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpResponseHeader Via = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpResponseHeader.Via" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpResponseHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Via-Header, der Zwischenprotokolle angibt, die von Gateway- und Proxyagents verwendet werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Warning">
+      <MemberSignature Language="C#" Value="Warning" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpResponseHeader Warning = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpResponseHeader.Warning" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpResponseHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Warning-Header, der zusätzliche Informationen zum Status oder zur Transformation einer Nachricht angibt, die in der Nachricht möglicherweise nicht widergespiegelt werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WwwAuthenticate">
+      <MemberSignature Language="C#" Value="WwwAuthenticate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpResponseHeader WwwAuthenticate = int32(29)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpResponseHeader.WwwAuthenticate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebHeaderCollection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpResponseHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der WWW-Authenticate-Header, der angibt, dass der Client sich an den Server authentifizieren muss.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

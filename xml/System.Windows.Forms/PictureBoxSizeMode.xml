@@ -1,0 +1,113 @@
+<Type Name="PictureBoxSizeMode" FullName="System.Windows.Forms.PictureBoxSizeMode">
+  <TypeSignature Language="C#" Value="public enum PictureBoxSizeMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PictureBoxSizeMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.PictureBoxSizeMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wie ein Bild im positioniert wird eine <see cref="T:System.Windows.Forms.PictureBox" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die Member dieser Enumeration zum Festlegen des Werts, der die <xref:System.Windows.Forms.PictureBox.SizeMode%2A> Eigenschaft von der <xref:System.Windows.Forms.PictureBox>.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Windows.Forms.PictureBox.SizeMode%2A> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie den folgenden Code in einem Windows Form, und rufen die `InitializePictureBoxAndButton` Methode vom Konstruktor des Formulars oder eine laden-Ereignisbehandlung-Methode.  
+  
+ [!code-csharp[System.Windows.Forms.PictureBox.SizeMode#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.SizeMode/CS/Form1.cs#10)]
+ [!code-vb[System.Windows.Forms.PictureBox.SizeMode#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.SizeMode/VB/Form1.vb#10)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AutoSize">
+      <MemberSignature Language="C#" Value="AutoSize" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.PictureBoxSizeMode AutoSize = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.PictureBoxSizeMode.AutoSize" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.PictureBoxSizeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die <see cref="T:System.Windows.Forms.PictureBox" /> ist gleich der Größe des Bilds an die darin enthaltenen Größe.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CenterImage">
+      <MemberSignature Language="C#" Value="CenterImage" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.PictureBoxSizeMode CenterImage = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.PictureBoxSizeMode.CenterImage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.PictureBoxSizeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Bild wird in der Mitte angezeigt, wenn die <see cref="T:System.Windows.Forms.PictureBox" /> ist größer als das Bild. Wenn das Bild größer ist die <see cref="T:System.Windows.Forms.PictureBox" />, das Bild wird in der Mitte der platziert die <see cref="T:System.Windows.Forms.PictureBox" /> und die äußeren Kanten werden abgeschnitten.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.PictureBoxSizeMode Normal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.PictureBoxSizeMode.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.PictureBoxSizeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Bild wird in der oberen linken Ecke des platziert die <see cref="T:System.Windows.Forms.PictureBox" />. Das Bild wird geschnitten, wenn er größer als die <see cref="T:System.Windows.Forms.PictureBox" /> in enthalten ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="StretchImage">
+      <MemberSignature Language="C#" Value="StretchImage" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.PictureBoxSizeMode StretchImage = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.PictureBoxSizeMode.StretchImage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.PictureBoxSizeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Bild innerhalb der <see cref="T:System.Windows.Forms.PictureBox" /> wird gestreckt oder verkleinert werden, um die Größe des an die <see cref="T:System.Windows.Forms.PictureBox" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Zoom">
+      <MemberSignature Language="C#" Value="Zoom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.PictureBoxSizeMode Zoom = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.PictureBoxSizeMode.Zoom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.PictureBoxSizeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Größe des Bilds erhöht oder verringert wird, das Größenverhältnis verwalten.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

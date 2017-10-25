@@ -1,0 +1,588 @@
+<Type Name="CharUnicodeInfo" FullName="System.Globalization.CharUnicodeInfo">
+  <TypeSignature Language="C#" Value="public static class CharUnicodeInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit CharUnicodeInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Globalization.CharUnicodeInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Globalization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ruft Informationen zu einem Unicode-Zeichen ab. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die [Unicode-Standard](http://go.microsoft.com/fwlink/?linkid=37123) definiert eine Reihe von Unicode-Zeichenkategorien. Beispielsweise kann ein Zeichen als Großbuchstabe, Kleinbuchstabe, eine dezimale Ziffer, einen Buchstaben, einer Zahl, einen Absatzseparator, ein mathematisches Symbol oder ein Währungssymbol kategorisiert werden. Ihre Anwendung kann Kategorie der verwenden, um zu steuern, zeichenfolgenbasierte Vorgänge, z. B. Analyse oder Teilzeichenfolge mit regulären Ausdrücken zu extrahieren. Die <xref:System.Globalization.UnicodeCategory> -Enumeration definiert die möglichen Zeichenkategorien.  
+  
+ Verwenden Sie die <xref:System.Globalization.CharUnicodeInfo> Klasse zum Abrufen der <xref:System.Globalization.UnicodeCategory> Wert für ein bestimmtes Zeichen. Die <xref:System.Globalization.CharUnicodeInfo> -Klasse definiert Methoden, die die folgenden Unicode-Zeichenwerte zurückgeben:  
+  
+-   Die spezifische Kategorie eines Zeichens oder Ersatzzeichenpaars Paars gehört. Der zurückgegebene Wert ist ein Mitglied der <xref:System.Globalization.UnicodeCategory> Enumeration.  
+  
+-   Ein numerischer Wert. Gilt nur für numerische Zeichen, einschließlich Brüche, Indizes, hoch-, römische Ziffern, Währung Zähler, eingekreisten Zahlen und Ziffern.  
+  
+-   Ziffernwert. Gilt für numerische Zeichen, die mit anderen numerischen Zeichen, um eine ganze Zahl in einem Zahlensystem darzustellen kombiniert werden können.  
+  
+-   Dezimale Ziffer-Wert. Gilt nur für Zeichen, die Dezimalziffern im System Dezimalzahl (Basis 10) darstellen. Eine Dezimalzahl kann einer der zehn Ziffern von 0 bis 9 sein. Diese Zeichen sind Mitglied der <xref:System.Globalization.UnicodeCategory?displayProperty=nameWithType> Kategorie.  
+  
+ Darüber hinaus die <xref:System.Globalization.CharUnicodeInfo> Klasse wird intern verwendet, um eine Anzahl von anderen .NET Framework-Typen und Methoden, die auf zeichenklassifizierung basieren. Dazu gehören:  
+  
+-   Die <xref:System.Globalization.StringInfo> Klasse, die mit Textelemente statt einzelne Zeichen in einer Zeichenfolge verwendet.  
+  
+-   Die Überladungen der <xref:System.Char.GetUnicodeCategory%2A?displayProperty=nameWithType> -Methode, die die Kategorie zu bestimmen, zu dem ein paar Zeichens oder Ersatzzeichenpaars gehört.  
+  
+-   Die [Zeichenklassen](~/docs/standard/base-types/character-classes-in-regular-expressions.md) von erkannten <xref:System.Text.RegularExpressions.Regex>, die .NET Framework-Modul für reguläre Ausdrücke.  
+  
+ Wenn Sie diese Klasse in Ihren Anwendungen verwenden, behalten Beachten Sie Folgendes programmierüberlegungen in Bezug auf mit der <xref:System.Char> Typ. Der Typ kann schwierig zu verwenden, und Zeichenfolgen werden im Allgemeinen zum Darstellen von sprachlichen vorzuziehen.  
+  
+-   Ein <xref:System.Char> Objekt entspricht nicht immer in ein einzelnes Zeichen. Obwohl die <xref:System.Char> Typ stellt einen einzelnen 16-Bit-Wert, der einige Zeichen (z. B. graphemgruppen und Ersatzpaare) bestehen aus zwei oder mehr UTF-16-Codeeinheiten. Weitere Informationen finden Sie unter "Char-Objekte und Unicode-Zeichen" in der <xref:System.String> Klasse.  
+  
+-   Das Konzept einer "Character" ist auch flexibler. Ein Zeichen wird häufig als Symbol betrachtet, aber viele Symbole erfordern mehrere Codepunkte. Z. B. "ä" kann entweder durch zwei dargestellt Codepunkte ("A" und U + 0308, die die Kombination von Diärese ist), oder durch einen einzigen Codepunkt ("Ä" oder U + 00 a 4). Für einige Sprachen haben viele Buchstaben, Zeichen und Symbole, die mehrere Codepunkte benötigt wird, die in die sprachspezifische Darstellung des Inhalts zu Verwirrung führen kann. Beispielsweise besteht ein ΰ (U + 03B0, griechischen Kleinbuchstaben Ypsilon mit Trennpunkte und Betonungszeichen), aber es ist keine entsprechende Großbuchstabe. Solche Werte Großbuchstaben ruft einfach den ursprünglichen Wert ab.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Werte, die von jeder Methode für verschiedene Arten von Zeichen zurückgegeben.  
+  
+ [!code-cpp[System.Globalization.CharUnicodeInfo_Char#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.CharUnicodeInfo_Char/CPP/charunicodeinfo_char.cpp#1)]
+ [!code-csharp[System.Globalization.CharUnicodeInfo_Char#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.CharUnicodeInfo_Char/CS/charunicodeinfo_char.cs#1)]
+ [!code-vb[System.Globalization.CharUnicodeInfo_Char#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.CharUnicodeInfo_Char/VB/charunicodeinfo_char.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="usage">
+      <para>Erkannte Zeichen und die einzelnen Kategorien, zu denen sie gehören, werden durch den Unicode-Standard definiert und können von einer Version von Unicode-Standard zu einem anderen ändern. Die Kategorisierung von Zeichen in einer bestimmten Version von .NET Framework basiert auf eine einzelne Version im Unicode-Standard unabhängig vom zugrunde liegenden Betriebssystem, auf dem .NET Framework ausgeführt wird. Die folgende Tabelle listet die Versionen von .NET Framework seit der [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] und die Versionen von Unicode-Standard verwendet, um Zeichen zu klassifizieren.  
+  
+ <list type="table"><listheader><term>.NET Framework-version  
+  
+ </term><description>Version des Unicode-Standards  
+  
+ </description></listheader><item><term> [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)]  
+  
+ </term><description>[Der Unicode-Standard, Version 5.0.0](http://www.unicode.org/versions/Unicode5.0.0/)  
+  
+ </description></item><item><term> [!INCLUDE[net_v45](~/includes/net-v45-md.md)]  
+  
+ </term><description>[Der Unicode-Standard, Version 5.0.0](http://www.unicode.org/versions/Unicode5.0.0/)  
+  
+ </description></item><item><term> [!INCLUDE[net_v451](~/includes/net-v451-md.md)]  
+  
+ </term><description>[Der Unicode-Standard, Version 5.0.0](http://www.unicode.org/versions/Unicode5.0.0/)  
+  
+ </description></item><item><term> [!INCLUDE[net_v452](~/includes/net-v452-md.md)]  
+  
+ </term><description>[Der Unicode-Standard, Version 5.0.0](http://www.unicode.org/versions/Unicode5.0.0/)  
+  
+ </description></item><item><term> [!INCLUDE[net_v46](~/includes/net-v46-md.md)]  
+  
+ </term><description>[Der Unicode-Standard, Version 6.3.0](http://www.unicode.org/versions/Unicode6.3.0/)  
+  
+ </description></item><item><term> [!INCLUDE[net_v461](~/includes/net-v461-md.md)]  
+  
+ </term><description>[Der Unicode-Standard, Version 6.3.0](http://www.unicode.org/versions/Unicode6.3.0/)  
+  
+ </description></item><item><term> [!INCLUDE[net_v462](~/includes/net-v462-md.md)]  
+  
+ </term><description>[Der Unicode-Standard, Version 8.0.0](http://www.unicode.org/versions/Unicode8.0.0/)  
+  
+ </description></item></list>  
+  
+ Jede Version des Unicode-standard umfasst Informationen zu Änderungen an der Datenbank der Unicode-Zeichen, seit der letzten Version. Die Datenbank der Unicode-Zeichen wird verwendet, durch die <see cref="T:System.Globalization.CharUnicodeInfo" /> Klasse zum Kategorisieren von Zeichen.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="GetDecimalDigitValue">
+      <MemberSignature Language="C#" Value="public static int GetDecimalDigitValue (char ch);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 GetDecimalDigitValue(char ch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.CharUnicodeInfo.GetDecimalDigitValue(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ch" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="ch">Das Unicode-Zeichen für den die Dezimalziffernwert abgerufen werden soll.</param>
+        <summary>Ruft den Dezimalziffer-Wert des angegebenen numerischen Zeichens.</summary>
+        <returns>Die Dezimalzahl-Wert des angegebenen numerischen Zeichens.  
+  
+ - oder -   
+  
+ 1, wenn der angegebene Zeichenwert eine dezimale Ziffer nicht ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode konvertiert Zeichen, die Dezimalziffern in die entsprechenden ganzzahligen Werte darstellen. Dezimalstellen werden Zeichen in der <xref:System.Globalization.UnicodeCategory.DecimalDigitNumber> Kategorie aus, die eine von zehn Ziffern als der Zahlensystem von 0 bis 9 Dezimalzahl (Basis 10) darstellen kann. Es enthält Zeichen, z. B. U + 0030 (Ziffer Null) bis U + 0039 (Ziffer 9), U + 0660 (Arabisch-INDISCHE Ziffern 0 (null)) bis U + 0669 (Arabisch-INDISCHE Ziffern neun), U + 07 C 0 (NKO Ziffer Null) bis U + 07C 9 (NKO Ziffer 9) und U + 1040 (MYANMAR Ziffer 0 (null)) bis U + 1049 ( MYANMAR ZIFFER 9).  
+  
+ Weitere Informationen zu Unicode-Zeichen, finden Sie unter der [Unicode-Standard](http://go.microsoft.com/fwlink/?linkid=37123).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Werte, die von jeder Methode für verschiedene Arten von Zeichen zurückgegeben.  
+  
+ [!code-cpp[System.Globalization.CharUnicodeInfo_Char#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.CharUnicodeInfo_Char/CPP/charunicodeinfo_char.cpp#1)]
+ [!code-csharp[System.Globalization.CharUnicodeInfo_Char#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.CharUnicodeInfo_Char/CS/charunicodeinfo_char.cs#1)]
+ [!code-vb[System.Globalization.CharUnicodeInfo_Char#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.CharUnicodeInfo_Char/VB/charunicodeinfo_char.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDecimalDigitValue">
+      <MemberSignature Language="C#" Value="public static int GetDecimalDigitValue (string s, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 GetDecimalDigitValue(string s, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.CharUnicodeInfo.GetDecimalDigitValue(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die <see cref="T:System.String" /> mit Unicode-Zeichen, die die Dezimalziffernwert abgerufen.</param>
+        <param name="index">Der Index des Unicode-Zeichens, für das den Dezimalzahl Wert abgerufen werden soll.</param>
+        <summary>Ruft die Dezimalziffer-Wert, der das numerische Zeichen am angegebenen Index der angegebenen Zeichenfolge ab.</summary>
+        <returns>Der Dezimalzahl-Wert, der das numerische Zeichen am angegebenen Index der angegebenen Zeichenfolge.  
+  
+ - oder -   
+  
+ 1, wenn das Zeichen am angegebenen Index der angegebenen Zeichenfolge keine Dezimale Ziffer ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode konvertiert Zeichen, die Dezimalziffern in die entsprechenden ganzzahligen Werte darstellen. Dezimalstellen werden Zeichen in der <xref:System.Globalization.UnicodeCategory.DecimalDigitNumber> Kategorie aus, die eine von zehn Ziffern als der Zahlensystem von 0 bis 9 Dezimalzahl (Basis 10) darstellen kann. Es enthält Zeichen, z. B. U + 0030 (Ziffer Null) bis U + 0039 (Ziffer 9), U + 0660 (Arabisch-INDISCHE Ziffern 0 (null)) bis U + 0669 (Arabisch-INDISCHE Ziffern neun), U + 07 C 0 (NKO Ziffer Null) bis U + 07C 9 (NKO Ziffer 9) und U + 1040 (MYANMAR Ziffer 0 (null)) bis U + 1049 ( MYANMAR ZIFFER 9).  
+  
+ Weitere Informationen zu Unicode-Zeichen, finden Sie unter der [Unicode-Standard](http://go.microsoft.com/fwlink/?linkid=37123).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Werte, die von jeder Methode für verschiedene Arten von Zeichen zurückgegeben.  
+  
+ [!code-cpp[System.Globalization.CharUnicodeInfo_String#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.CharUnicodeInfo_String/CPP/charunicodeinfo_string.cpp#1)]
+ [!code-csharp[System.Globalization.CharUnicodeInfo_String#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.CharUnicodeInfo_String/CS/charunicodeinfo_string.cs#1)]
+ [!code-vb[System.Globalization.CharUnicodeInfo_String#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.CharUnicodeInfo_String/VB/charunicodeinfo_string.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="s" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" />liegt außerhalb des Bereichs der gültigen Indizes für <paramref name="s" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDigitValue">
+      <MemberSignature Language="C#" Value="public static int GetDigitValue (char ch);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 GetDigitValue(char ch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.CharUnicodeInfo.GetDigitValue(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ch" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="ch">Das Unicode-Zeichen für den Ziffernwert abgerufen.</param>
+        <summary>Ruft den Ziffernwert des angegebenen numerischen Zeichens ab.</summary>
+        <returns>Der Ziffernwert des angegebenen numerischen Zeichens.  
+  
+ - oder -   
+  
+ 1, wenn das angegebene Zeichen keine Ziffer ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ziffernwert ist eine Eigenschaft, die nur für numerische Zeichen gilt, die als Ziffern verwendet werden kann. Eine Ziffer ist ein numerisches Zeichen, das mit anderen Ziffern, um eine ganze Zahl in einem Zahlensystem darzustellen kombiniert werden können.  
+  
+ Weitere Informationen zu Unicode-Zeichen, finden Sie unter der [Unicode-Standard](http://go.microsoft.com/fwlink/?linkid=37123).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Werte, die von jeder Methode für verschiedene Arten von Zeichen zurückgegeben.  
+  
+ [!code-cpp[System.Globalization.CharUnicodeInfo_Char#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.CharUnicodeInfo_Char/CPP/charunicodeinfo_char.cpp#1)]
+ [!code-csharp[System.Globalization.CharUnicodeInfo_Char#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.CharUnicodeInfo_Char/CS/charunicodeinfo_char.cs#1)]
+ [!code-vb[System.Globalization.CharUnicodeInfo_Char#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.CharUnicodeInfo_Char/VB/charunicodeinfo_char.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDigitValue">
+      <MemberSignature Language="C#" Value="public static int GetDigitValue (string s, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 GetDigitValue(string s, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.CharUnicodeInfo.GetDigitValue(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die <see cref="T:System.String" /> , enthält das Unicode-Zeichen für den Ziffernwert abgerufen.</param>
+        <param name="index">Der Index des Unicode-Zeichens Ziffernwert abgerufen werden soll.</param>
+        <summary>Ruft den Ziffernwert numerisches Zeichen am angegebenen Index der angegebenen Zeichenfolge ab.</summary>
+        <returns>Der Ziffernwert des numerischen Zeichens am angegebenen Index der angegebenen Zeichenfolge.  
+  
+ - oder -   
+  
+ 1, wenn das Zeichen am angegebenen Index der angegebenen Zeichenfolge keine Ziffer ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ziffernwert ist eine Eigenschaft, die nur für numerische Zeichen gilt, die als Ziffern verwendet werden kann. Eine Ziffer ist ein numerisches Zeichen, das mit anderen Ziffern, um eine ganze Zahl in einem Zahlensystem darzustellen kombiniert werden können.  
+  
+ Weitere Informationen zu Unicode-Zeichen, finden Sie unter der [Unicode-Standard](http://go.microsoft.com/fwlink/?linkid=37123).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Werte, die von jeder Methode für verschiedene Arten von Zeichen zurückgegeben.  
+  
+ [!code-cpp[System.Globalization.CharUnicodeInfo_String#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.CharUnicodeInfo_String/CPP/charunicodeinfo_string.cpp#1)]
+ [!code-csharp[System.Globalization.CharUnicodeInfo_String#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.CharUnicodeInfo_String/CS/charunicodeinfo_string.cs#1)]
+ [!code-vb[System.Globalization.CharUnicodeInfo_String#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.CharUnicodeInfo_String/VB/charunicodeinfo_string.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="s" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" />liegt außerhalb des Bereichs der gültigen Indizes für <paramref name="s" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNumericValue">
+      <MemberSignature Language="C#" Value="public static double GetNumericValue (char ch);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 GetNumericValue(char ch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.CharUnicodeInfo.GetNumericValue(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ch" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="ch">Das Unicode-Zeichen für den numerischen Wert abgerufen werden soll.</param>
+        <summary>Ruft den numerischen Wert, der das angegebene Zeichen zugeordnet.</summary>
+        <returns>Der numerische Wert, der das angegebene Zeichen zugeordnet ist.  
+  
+ - oder -   
+  
+ 1, wenn das angegebene Zeichen nicht um ein numerisches Zeichen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Numerische Wert ist eine Unicode-Zeichen-Eigenschaft, die nur für numerische Zeichen, werden soll angewendet, Brüche, Indizes, hoch-, römische Ziffern, Währung Zähler, eingekreisten Zahlen und Ziffern enthalten. Weitere Informationen zu Unicode-Zeichen, finden Sie unter der [Unicode-Standard](http://go.microsoft.com/fwlink/?linkid=37123).  
+  
+ Die <xref:System.Globalization.CharUnicodeInfo.GetNumericValue%28System.Char%29> Methode setzt voraus, dass `ch` in ein einzelnes linguistischen Zeichen entspricht, und überprüft, ob dieses Zeichen in eine dezimale Ziffer konvertiert werden kann. Einige Zahlen in den Unicode-Standard werden jedoch durch zwei dargestellt <xref:System.Char> Objekte, die ein Ersatzzeichenpaar bilden. Zum Beispiel besteht die ägäische Zahlensystem Codepunkte U + 10107 bis U + 10133. Im folgenden Beispiel wird die <xref:System.Char.ConvertFromUtf32%2A> Methode, um eine Zeichenfolge zu instanziieren, das diesen Nummer eins darstellt. Wie die Ausgabe im Beispiel gezeigt die <xref:System.Globalization.CharUnicodeInfo.GetNumericValue%28System.Char%29> Methode gibt-1 zurück, wenn sie ein hohes Ersatzzeichen oder ein niedriges Ersatzzeichen dieses Zeichens übergeben wird.  
+  
+ [!code-csharp[System.Globalization.CharUnicodeInfo.GetNumericValue#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.charunicodeinfo.getnumericvalue/cs/getnumericvalue1.cs#2)]
+ [!code-vb[System.Globalization.CharUnicodeInfo.GetNumericValue#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.charunicodeinfo.getnumericvalue/vb/getnumericvalue1.vb#2)]  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Werte, die von jeder Methode für verschiedene Arten von Zeichen zurückgegeben.  
+  
+ [!code-cpp[System.Globalization.CharUnicodeInfo_Char#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.CharUnicodeInfo_Char/CPP/charunicodeinfo_char.cpp#1)]
+ [!code-csharp[System.Globalization.CharUnicodeInfo_Char#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.CharUnicodeInfo_Char/CS/charunicodeinfo_char.cs#1)]
+ [!code-vb[System.Globalization.CharUnicodeInfo_Char#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.CharUnicodeInfo_Char/VB/charunicodeinfo_char.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNumericValue">
+      <MemberSignature Language="C#" Value="public static double GetNumericValue (string s, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 GetNumericValue(string s, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.CharUnicodeInfo.GetNumericValue(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die <see cref="T:System.String" /> , enthält das Unicode-Zeichen für den numerischen Wert abgerufen.</param>
+        <param name="index">Der Index des Unicode-Zeichens, für das Abrufen des numerischen Werts.</param>
+        <summary>Ruft den numerischen Wert, der das Zeichen am angegebenen Index der angegebenen Zeichenfolge zugeordnet.</summary>
+        <returns>Der numerische Wert, der das Zeichen am angegebenen Index der angegebenen Zeichenfolge zugeordnet ist.  
+  
+ - oder -   
+  
+ 1, wenn das Zeichen am angegebenen Index der angegebenen Zeichenfolge nicht über ein numerisches Zeichen ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Numerische Wert ist eine Unicode-Zeichen-Eigenschaft, die nur für numerische Zeichen, werden soll angewendet, Brüche, Indizes, hoch-, römische Ziffern, Währung Zähler, eingekreisten Zahlen und Ziffern enthalten. Weitere Informationen zu Unicode-Zeichen, finden Sie unter der [Unicode-Standard](http://go.microsoft.com/fwlink/?linkid=37123).  
+  
+ Wenn die <xref:System.Char> Objekt an der Position `index` ist das erste Zeichen eines gültigen Ersatzzeichenpaars die <xref:System.Globalization.CharUnicodeInfo.GetNumericValue%28System.String%2CSystem.Int32%29> Methode bestimmt, ob das Ersatzzeichenpaar eine Ziffer bildet und, wenn dies der Fall ist, den numerischen Wert zurückgibt. Zum Beispiel besteht die ägäische Zahlensystem Codepunkte U + 10107 bis U + 10133. Im folgenden Beispiel wird die <xref:System.Char.ConvertFromUtf32%2A> Methode, um eine Zeichenfolge instanziiert, die jede diesen Zahl darstellt. Wie die Ausgabe im Beispiel gezeigt die <xref:System.Globalization.CharUnicodeInfo.GetNumericValue%28System.String%2CSystem.Int32%29> -Methode gibt den richtigen numerischen Wert zurück, wenn sie das hohe Ersatzzeichen einer diesen Anzahl übergeben wird. Jedoch, wenn sie das niedrige Ersatzzeichen übergeben wird, es nur das niedrige Ersatzzeichen isoliert betrachtet und gibt-1 zurück.  
+  
+ [!code-csharp[System.Globalization.CharUnicodeInfo.GetNumericValue#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.charunicodeinfo.getnumericvalue/cs/getnumericvalue1.cs#3)]
+ [!code-vb[System.Globalization.CharUnicodeInfo.GetNumericValue#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.charunicodeinfo.getnumericvalue/vb/getnumericvalue1.vb#3)]  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Werte, die von jeder Methode für verschiedene Arten von Zeichen zurückgegeben.  
+  
+ [!code-cpp[System.Globalization.CharUnicodeInfo_String#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.CharUnicodeInfo_String/CPP/charunicodeinfo_string.cpp#1)]
+ [!code-csharp[System.Globalization.CharUnicodeInfo_String#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.CharUnicodeInfo_String/CS/charunicodeinfo_string.cs#1)]
+ [!code-vb[System.Globalization.CharUnicodeInfo_String#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.CharUnicodeInfo_String/VB/charunicodeinfo_string.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="s" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" />liegt außerhalb des Bereichs der gültigen Indizes für <paramref name="s" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUnicodeCategory">
+      <MemberSignature Language="C#" Value="public static System.Globalization.UnicodeCategory GetUnicodeCategory (char ch);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Globalization.UnicodeCategory GetUnicodeCategory(char ch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.CharUnicodeInfo.GetUnicodeCategory(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.UnicodeCategory</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ch" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="ch">Das Unicode-Zeichen, für das die Unicode-Kategorie abgerufen werden soll.</param>
+        <summary>Ruft die Unicode-Kategorie des angegebenen Zeichens.</summary>
+        <returns>Ein <see cref="T:System.Globalization.UnicodeCategory" /> Wert, der angibt, der Kategorie des angegebenen Zeichens.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Unicode-Zeichen sind in Kategorien unterteilt. Die Kategorie eines Zeichens ist eine seiner Eigenschaften. Beispielsweise kann ein Zeichen ein Großbuchstabe, Kleinbuchstabe, eine dezimale Ziffer, einen Buchstaben, einer Zahl, eine verbinderzeichensetzung, ein mathematisches Symbol oder ein Währungssymbol sein. Die <xref:System.Globalization.UnicodeCategory> Klasse gibt die Kategorie eines Unicode-Zeichens zurück. Weitere Informationen zu Unicode-Zeichen, finden Sie unter der [Unicode-Standard](http://go.microsoft.com/fwlink/?linkid=37123).  
+  
+ Die <xref:System.Globalization.CharUnicodeInfo.GetUnicodeCategory%2A> Methode setzt voraus, dass `ch` entspricht einem einzelnen linguistischen Zeichen und gibt seine Kategorie zurück. Dies bedeutet, dass für Ersatzzeichenpaare, gibt es <xref:System.Globalization.UnicodeCategory?displayProperty=nameWithType> anstelle der Kategorie, zu der das Ersatzzeichen gehört. Beispielsweise nimmt ugaritischen Alphabets Codepunkte U + 10380 bis U + 1039F ein. Im folgenden Beispiel wird die <xref:System.Char.ConvertFromUtf32%2A> Methode, um eine Zeichenfolge zu instanziieren, der der erste Buchstabe des Alphabets ugaritischen ist UGARITIC LETTER ALPA (U + 10380) darstellt. Wie die Ausgabe im Beispiel gezeigt die <xref:System.Char.IsNumber%28System.Char%29> -Methode zurückkehrt `false` , wenn sie das hohe Ersatzzeichen oder das niedrige Ersatzzeichen dieses Zeichens übergeben wird.  
+  
+ [!code-csharp[System.Globalization.CharUnicodeInfo.GetUnicodeCategory#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.charunicodeinfo.getunicodecategory/cs/getunicodecategory1.cs#1)]
+ [!code-vb[System.Globalization.CharUnicodeInfo.GetUnicodeCategory#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.charunicodeinfo.getunicodecategory/vb/getunicodecategory1.vb#1)]  
+  
+ Beachten Sie, dass <xref:System.Globalization.CharUnicodeInfo.GetUnicodeCategory%2A?displayProperty=nameWithType> nicht immer zurück identisch <xref:System.Globalization.UnicodeCategory> als Wert der <xref:System.Char.GetUnicodeCategory%2A?displayProperty=nameWithType> Methode, wenn ein bestimmtes Zeichen als Parameter übergeben. Die <xref:System.Globalization.CharUnicodeInfo.GetUnicodeCategory%2A?displayProperty=nameWithType> -Methode entwickelt, um die aktuelle Version des Unicode-Standard entsprechen. Im Gegensatz dazu zwar die <xref:System.Char.GetUnicodeCategory%2A?displayProperty=nameWithType> Methode wird in der Regel die aktuelle Version des Unicode-Standards wiedergibt, die Kategorie eines Zeichens basierend auf einer früheren Version des Standards zurückgeben oder eine Kategorie, die unterscheidet sich vom aktuellen Standard, zurückgeben Abwärtskompatibilität zu erhalten.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Werte, die von jeder Methode für verschiedene Arten von Zeichen zurückgegeben.  
+  
+ [!code-cpp[System.Globalization.CharUnicodeInfo_Char#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.CharUnicodeInfo_Char/CPP/charunicodeinfo_char.cpp#1)]
+ [!code-csharp[System.Globalization.CharUnicodeInfo_Char#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.CharUnicodeInfo_Char/CS/charunicodeinfo_char.cs#1)]
+ [!code-vb[System.Globalization.CharUnicodeInfo_Char#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.CharUnicodeInfo_Char/VB/charunicodeinfo_char.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUnicodeCategory">
+      <MemberSignature Language="C#" Value="public static System.Globalization.UnicodeCategory GetUnicodeCategory (string s, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Globalization.UnicodeCategory GetUnicodeCategory(string s, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.CharUnicodeInfo.GetUnicodeCategory(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.UnicodeCategory</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="s">Die <see cref="T:System.String" /> , enthält das Unicode-Zeichen für den Unicode-Kategorie abgerufen.</param>
+        <param name="index">Der Index des Unicode-Zeichens, für das die Unicode-Kategorie abgerufen.</param>
+        <summary>Ruft die Unicode-Kategorie des Zeichens am angegebenen Index der angegebenen Zeichenfolge ab.</summary>
+        <returns>Ein <see cref="T:System.Globalization.UnicodeCategory" /> Wert, der die Kategorie des Zeichens am angegebenen Index der angegebenen Zeichenfolge angibt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Unicode-Zeichen sind in Kategorien unterteilt. Die Kategorie eines Zeichens ist eine seiner Eigenschaften. Beispielsweise kann ein Zeichen ein Großbuchstabe, Kleinbuchstabe, eine dezimale Ziffer, einen Buchstaben, einer Zahl, eine verbinderzeichensetzung, ein mathematisches Symbol oder ein Währungssymbol sein. Die <xref:System.Globalization.UnicodeCategory> Klasse gibt die Kategorie eines Unicode-Zeichens zurück. Weitere Informationen zu Unicode-Zeichen, finden Sie unter der [Unicode-Standard](http://go.microsoft.com/fwlink/?linkid=37123).  
+  
+ Wenn die <xref:System.Char> Objekt an der Position `index` ist das erste Zeichen eines gültigen Ersatzzeichenpaars der <xref:System.Globalization.CharUnicodeInfo.GetUnicodeCategory%28System.String%2CSystem.Int32%29> Methodenrückgabe die Unicode-Kategorie des Ersatzzeichenpaars anstatt <xref:System.Globalization.UnicodeCategory?displayProperty=nameWithType>. Beispielsweise nimmt ugaritischen Alphabets Codepunkte U + 10380 bis U + 1039F ein. Im folgenden Beispiel wird die <xref:System.Char.ConvertFromUtf32%2A> Methode, um eine Zeichenfolge zu instanziieren, der der erste Buchstabe des Alphabets ugaritischen ist UGARITIC LETTER ALPA (U + 10380) darstellt. Wie die Ausgabe im Beispiel gezeigt die <xref:System.Globalization.CharUnicodeInfo.GetUnicodeCategory%28System.String%2CSystem.Int32%29> -Methode zurückkehrt <xref:System.Globalization.UnicodeCategory?displayProperty=nameWithType> , wenn sie das hohe Ersatzzeichen dieses Zeichens übergeben wird, gibt an, dass es für das Ersatzzeichenpaar hält. Jedoch wenn sie das niedrige Ersatzzeichen übergeben wird, es nur das niedrige Ersatzzeichen isoliert betrachtet und gibt <xref:System.Globalization.UnicodeCategory?displayProperty=nameWithType>.  
+  
+ [!code-csharp[System.Globalization.CharUnicodeInfo.GetUnicodeCategory#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.charunicodeinfo.getunicodecategory/cs/getunicodecategory1.cs#2)]
+ [!code-vb[System.Globalization.CharUnicodeInfo.GetUnicodeCategory#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.charunicodeinfo.getunicodecategory/vb/getunicodecategory1.vb#2)]  
+  
+ Beachten Sie, dass <xref:System.Globalization.CharUnicodeInfo.GetUnicodeCategory%2A?displayProperty=nameWithType> Methode ist nicht stets die gleiche <xref:System.Globalization.UnicodeCategory> als Wert der <xref:System.Char.GetUnicodeCategory%2A?displayProperty=nameWithType> Methode, wenn ein bestimmtes Zeichen als Parameter übergeben. Die <xref:System.Globalization.CharUnicodeInfo.GetUnicodeCategory%2A?displayProperty=nameWithType> -Methode entwickelt, um die aktuelle Version des Unicode-Standard entsprechen. Im Gegensatz dazu zwar die <xref:System.Char.GetUnicodeCategory%2A?displayProperty=nameWithType> Methode wird in der Regel die aktuelle Version des Unicode-Standards wiedergibt, die Kategorie eines Zeichens basierend auf einer früheren Version des Standards zurückgeben oder eine Kategorie, die unterscheidet sich vom aktuellen Standard, zurückgeben Abwärtskompatibilität zu erhalten.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die Werte, die von jeder Methode für verschiedene Arten von Zeichen zurückgegeben.  
+  
+ [!code-cpp[System.Globalization.CharUnicodeInfo_String#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.CharUnicodeInfo_String/CPP/charunicodeinfo_string.cpp#1)]
+ [!code-csharp[System.Globalization.CharUnicodeInfo_String#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.CharUnicodeInfo_String/CS/charunicodeinfo_string.cs#1)]
+ [!code-vb[System.Globalization.CharUnicodeInfo_String#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.CharUnicodeInfo_String/VB/charunicodeinfo_string.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="s" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" />liegt außerhalb des Bereichs der gültigen Indizes für <paramref name="s" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

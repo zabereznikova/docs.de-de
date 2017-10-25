@@ -1,0 +1,105 @@
+<Type Name="ManipulationPivot" FullName="System.Windows.Input.ManipulationPivot">
+  <TypeSignature Language="C#" Value="public class ManipulationPivot" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ManipulationPivot extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.ManipulationPivot" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt an, wie eine Drehung mit einem Punkt der Benutzereingabe auftritt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Input.ManipulationStartingEventArgs.Pivot%2A?displayProperty=nameWithType> Eigenschaft ist ein <xref:System.Windows.Input.ManipulationPivot>. Bei Festlegung <xref:System.Windows.Input.ManipulationStartingEventArgs.Pivot%2A> in einem Ereignishandler für das <xref:System.Windows.UIElement.ManipulationStarting> -Ereignis die Manipulation wird Drehung Daten enthalten, wenn der Benutzer einen Finger während eines Bearbeitungsvorgangs verwendet.  Dies ist realen Situationen zu simulieren, in dem Sie einen Finger zum Drehen eines Objekts, z. B. einem Blatt Papier für eine Tabelle verwenden können.  Wenn die <xref:System.Windows.Input.ManipulationStartingEventArgs.Pivot%2A> ist `null`, der Benutzer muss zwei Finger verwendet, um die Rotation verursachen.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt einen Ereignishandler für das <xref:System.Windows.UIElement.ManipulationStarting> Ereignis und legt die <xref:System.Windows.Input.ManipulationStartingEventArgs.Pivot%2A?displayProperty=nameWithType> Eigenschaft. Zum Testen dieses Beispiels die Schritte in [Exemplarische Vorgehensweise: Erstellen Ihrer ersten Touch Application](~/docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md) und Ersetzen Sie den Code in Schritt 4 durch den folgenden Code.  
+  
+ [!code-csharp[BasicManipulation#ManipulationPivot](~/samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/reportboundaryfeedbackexample.xaml.cs#manipulationpivot)]
+ [!code-vb[BasicManipulation#ManipulationPivot](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/reportboundaryfeedbackexample.xaml.vb#manipulationpivot)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManipulationPivot ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.ManipulationPivot.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Input.ManipulationPivot" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManipulationPivot (System.Windows.Point center, double radius);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Point center, float64 radius) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.ManipulationPivot.#ctor(System.Windows.Point,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="center" Type="System.Windows.Point" />
+        <Parameter Name="radius" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="center">Die Mitte einer Single-Point-Bearbeitung.</param>
+        <param name="radius">Die Fläche um die PivotTable, die verwendet wird, um zu bestimmen, wie viel Drehung und Übersetzung tritt auf, wenn ein einziger Fehlerpunkt wenden Sie sich an der Manipulation initiiert.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Input.ManipulationPivot" /> Klasse mit dem angegebenen Punkt einer Single-Point-Bearbeitung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Center">
+      <MemberSignature Language="C#" Value="public System.Windows.Point Center { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Point Center" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ManipulationPivot.Center" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder festlegen die Mitte einer Single-Point-Bearbeitung.</summary>
+        <value>Die Mitte einer Single-Point-Bearbeitung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Radius">
+      <MemberSignature Language="C#" Value="public double Radius { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Radius" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ManipulationPivot.Radius" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Bereich um das Pivot, das verwendet wird, um zu bestimmen, wie viel Drehung und Verschiebung tritt auf, wenn ein einziger Fehlerpunkt wenden Sie sich an der Manipulation initiiert.</summary>
+        <value>Die Fläche um die PivotTable, die verwendet wird, um zu bestimmen, wie viel Drehung und Übersetzung tritt auf, wenn ein einziger Fehlerpunkt wenden Sie sich an der Manipulation initiiert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

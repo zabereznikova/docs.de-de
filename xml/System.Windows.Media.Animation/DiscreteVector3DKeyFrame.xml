@@ -1,0 +1,126 @@
+<Type Name="DiscreteVector3DKeyFrame" FullName="System.Windows.Media.Animation.DiscreteVector3DKeyFrame">
+  <TypeSignature Language="C#" Value="public class DiscreteVector3DKeyFrame : System.Windows.Media.Animation.Vector3DKeyFrame" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DiscreteVector3DKeyFrame extends System.Windows.Media.Animation.Vector3DKeyFrame" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.DiscreteVector3DKeyFrame" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.Vector3DKeyFrame</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Erstellt mithilfe diskreter Interpolation eine Animation vom <see cref="T:System.Windows.Media.Media3D.Vector3D" />-Wert des vorherigen Keyframes bis zum eigenen <see cref="P:System.Windows.Media.Animation.Vector3DKeyFrame.Value" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse dient als Teil einer <xref:System.Windows.Media.Animation.Vector3DKeyFrameCollection> in Verbindung mit einem <xref:System.Windows.Media.Animation.Vector3DAnimationUsingKeyFrames> zu animierende eine <xref:System.Windows.Media.Media3D.Vector3D> Eigenschaftswert für einen Satz von Keyframes.  
+  
+ Ein Keyframe definiert einen Zeitabschnitt der <xref:System.Windows.Media.Animation.Vector3DAnimationUsingKeyFrames> zu der er gehört. Jedem Keyframe hat ein Ziel <xref:System.Windows.Media.Animation.Vector3DKeyFrame.Value%2A> und ein <xref:System.Windows.Media.Animation.Vector3DKeyFrame.KeyTime%2A>. Die <xref:System.Windows.Media.Animation.Vector3DKeyFrame.KeyTime%2A> gibt an, der Zeitpunkt des Keyframes <xref:System.Windows.Media.Animation.Vector3DKeyFrame.Value%2A> erreicht werden soll. Ein Keyframe erstellt eine Animation über den Zielwert des vorherigen Keyframes auf einem eigenen Zielwert aus. Es beginnt, wenn die vorherige Keyframes beendet und beendet, wenn eine eigene Schlüsselzeit erreicht ist.  
+  
+ Diskrete Keyframes wie <xref:System.Windows.Media.Animation.DiscreteVector3DKeyFrame> plötzlichen "Sprünge" zwischen Werten (keine Interpolation). Das heißt, ändert sich die animierte Eigenschaft nicht, bis die Schlüsselzeit für den Keyframe erreicht wird, an welchem Punkt die animierte Eigenschaft plötzlich den Zielwert wechselt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DiscreteVector3DKeyFrame ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DiscreteVector3DKeyFrame.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.DiscreteVector3DKeyFrame" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DiscreteVector3DKeyFrame (System.Windows.Media.Media3D.Vector3D value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Media.Media3D.Vector3D value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DiscreteVector3DKeyFrame.#ctor(System.Windows.Media.Media3D.Vector3D)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Media.Media3D.Vector3D" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Endwert (auch als „Zielwert“ bezeichnet) für den Keyframe.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.DiscreteVector3DKeyFrame" />-Klasse mit dem angegebenen Endwert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DiscreteVector3DKeyFrame (System.Windows.Media.Media3D.Vector3D value, System.Windows.Media.Animation.KeyTime keyTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Media.Media3D.Vector3D value, valuetype System.Windows.Media.Animation.KeyTime keyTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DiscreteVector3DKeyFrame.#ctor(System.Windows.Media.Media3D.Vector3D,System.Windows.Media.Animation.KeyTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Media.Media3D.Vector3D" />
+        <Parameter Name="keyTime" Type="System.Windows.Media.Animation.KeyTime" />
+      </Parameters>
+      <Docs>
+        <param name="value">Der Endwert (auch als „Zielwert“ bezeichnet) für den Keyframe.</param>
+        <param name="keyTime">Die Schlüsselzeit für den Keyframe. Die Schlüsselzeit bestimmt, wann der Zielwert erreicht wird, was auch dem Ende des Keyframes entspricht.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.DiscreteVector3DKeyFrame" />-Klasse mit dem angegebenen Endwert und der Schlüsselzeit.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DiscreteVector3DKeyFrame.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz von <see cref="T:System.Windows.Media.Animation.DiscreteVector3DKeyFrame" />.</summary>
+        <returns>Eine neue Instanz von <see cref="T:System.Windows.Media.Animation.DiscreteVector3DKeyFrame" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterpolateValueCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Media.Media3D.Vector3D InterpolateValueCore (System.Windows.Media.Media3D.Vector3D baseValue, double keyFrameProgress);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Media.Media3D.Vector3D InterpolateValueCore(valuetype System.Windows.Media.Media3D.Vector3D baseValue, float64 keyFrameProgress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DiscreteVector3DKeyFrame.InterpolateValueCore(System.Windows.Media.Media3D.Vector3D,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Vector3D</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseValue" Type="System.Windows.Media.Media3D.Vector3D" />
+        <Parameter Name="keyFrameProgress" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="baseValue">Der Wert, von dem animiert werden soll.</param>
+        <param name="keyFrameProgress">Ein Wert von 0,0 bis 1,0, der den Prozentsatz der verstrichenen Zeit für diesen Keyframe angibt.</param>
+        <summary>Verwendet diskrete Interpolation für den Übergang zwischen dem vorherigen Keyframewert und dem Wert des aktuellen Keyframes.</summary>
+        <returns>Der Ausgabewert dieses Keyframes unter Verwendung des angegebenen Basiswerts und Fortschritts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

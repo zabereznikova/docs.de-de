@@ -1,0 +1,292 @@
+<Type Name="SessionParameter" FullName="System.Web.UI.WebControls.SessionParameter">
+  <TypeSignature Language="C#" Value="public class SessionParameter : System.Web.UI.WebControls.Parameter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SessionParameter extends System.Web.UI.WebControls.Parameter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.SessionParameter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.Parameter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("SessionField")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bindet den Wert einer Sitzungsvariablen an ein Parameterobjekt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein `SessionParameter` Objekt wird normalerweise verwendet, um den Wert des enthalten ein <xref:System.Web.SessionState.HttpSessionState> -Variable in der `Where` -Klausel einer Datenbankabfrage. Die <xref:System.Web.UI.WebControls.SessionParameter.SessionField%2A> Eigenschaft identifiziert die Sitzungsvariablen, aus der die <xref:System.Web.UI.WebControls.SessionParameter> Ruft einen Wert ab.  
+  
+> [!NOTE]
+>  Steuerelemente, die Daten an einen Parameter Binden einer <xref:System.Web.UI.WebControls.SessionParameter> Objekt möglicherweise eine Ausnahme auslösen, wenn die angegebene Sitzungsvariable nicht festgelegt ist. Um diesen Fehler zu vermeiden, (falls zutreffend), legen die <xref:System.Web.UI.WebControls.Parameter.DefaultValue%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie ein <xref:System.Web.UI.WebControls.SessionParameter> Objekt. Im Beispiel wird davon ausgegangen, dass eine andere Seite einen Mitarbeiter-ID-Wert in einer Sitzungsvariablen mit dem Namen gespeichert hat `empid`. Beispielseite "verwendet die `empid` Sitzungsvariablen in der `Where` -Klausel einer Abfrage und zeigt das Ergebnis der Abfrage in einem <xref:System.Web.UI.WebControls.GridView> Steuerelement. Da die <xref:System.Web.UI.WebControls.Parameter.DefaultValue%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.SessionParameter> Objektsatz auf 5, Daten für den Datensatz mit der `employeeID` Abstand von 5 weiterhin angezeigt, wenn keine Sitzungsvariable mit dem Namen `empid` festgelegt ist, bevor Sie das Beispiel ausführen.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.SessionParameter_1_decl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.SessionParameter_1_decl/CS/webform21cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.SessionParameter_1_decl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.SessionParameter_1_decl/VB/webform21vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SessionParameter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SessionParameter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue unbenannte Instanz, der die <see cref="T:System.Web.UI.WebControls.SessionParameter" /> Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Web.UI.WebControls.SessionParameter> Objekt erstellt, mit der <xref:System.Web.UI.WebControls.SessionParameter.%23ctor%2A> Konstruktor mit Standardwerten für alle seine Eigenschaften initialisiert wird. Die <xref:System.Web.UI.WebControls.SessionParameter.SessionField%2A>-Eigenschaft wird mit <xref:System.String.Empty?displayProperty=nameWithType> initialisiert. Darüber hinaus die <xref:System.Web.UI.WebControls.Parameter.Name%2A> -Eigenschaft wird mit initialisiert <xref:System.String.Empty?displayProperty=nameWithType>, die <xref:System.Web.UI.WebControls.Parameter.Type%2A> -Eigenschaft wird mit initialisiert <xref:System.TypeCode?displayProperty=nameWithType>, die <xref:System.Web.UI.WebControls.Parameter.Direction%2A> -Eigenschaft wird mit initialisiert <xref:System.Data.ParameterDirection?displayProperty=nameWithType>, und die <xref:System.Web.UI.WebControls.Parameter.DefaultValue%2A> -Eigenschaft wird initialisiert um `null`.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer Standardinstanz von die <xref:System.Web.UI.WebControls.SessionParameter> -Klasse mit der <xref:System.Web.UI.WebControls.SessionParameter.%23ctor%2A> Konstruktor.  
+  
+ [!code-csharp[System.Web.UI.WebControls.SessionParameter_2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.SessionParameter_2/CS/sessionparam2cs.aspx.cs#1)]
+ [!code-vb[System.Web.UI.WebControls.SessionParameter_2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.SessionParameter_2/VB/sessionparam2vb.aspx.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SessionParameter (System.Web.UI.WebControls.SessionParameter original);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.SessionParameter original) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SessionParameter.#ctor(System.Web.UI.WebControls.SessionParameter)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="original" Type="System.Web.UI.WebControls.SessionParameter" />
+      </Parameters>
+      <Docs>
+        <param name="original">Ein <see cref="T:System.Web.UI.WebControls.SessionParameter" /> aus dem die aktuelle Instanz initialisiert wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.SessionParameter" /> -Klasse mit den Werten der Instanz, die gemäß der <paramref name="original" /> Parameter.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.SessionParameter.%23ctor%28System.Web.UI.WebControls.SessionParameter%29> Konstruktor ist ein `Protected` Kopierkonstruktor verwendet, um das Klonen einer <xref:System.Web.UI.WebControls.SessionParameter> Instanz. Die Werte der <xref:System.Web.UI.WebControls.SessionParameter> Objekts, einschließlich der <xref:System.Web.UI.WebControls.SessionParameter.SessionField%2A>, <xref:System.Web.UI.WebControls.Parameter.Name%2A>, und <xref:System.Web.UI.WebControls.Parameter.Type%2A> Eigenschaften werden auf die neue Instanz übertragen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SessionParameter (string name, string sessionField);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string sessionField) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SessionParameter.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="sessionField" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Parameters.</param>
+        <param name="sessionField">Der Name des der <see cref="T:System.Web.SessionState.HttpSessionState" /> Name/Wert-Paar, das an das Parameterobjekt gebunden ist. Die Standardeinstellung ist <see cref="F:System.String.Empty" />.</param>
+        <summary>Initialisiert eine neue benannte Instanz von der <see cref="T:System.Web.UI.WebControls.SessionParameter" /> -Klasse unter Verwendung der angegebenen Zeichenfolge zur Identifizierung der Sitzung Status/Wert-Paare zum Binden an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Parameter.Type%2A> und <xref:System.Web.UI.WebControls.Parameter.Direction%2A> Eigenschaften werden mit Standardwerten initialisiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SessionParameter (string name, System.Data.DbType dbType, string sessionField);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Data.DbType dbType, string sessionField) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SessionParameter.#ctor(System.String,System.Data.DbType,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="dbType" Type="System.Data.DbType" />
+        <Parameter Name="sessionField" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Parameters.</param>
+        <param name="dbType">Der Datenbanktyp, den den Parameter darstellt.</param>
+        <param name="sessionField">Der Name des der <see cref="T:System.Web.SessionState.HttpSessionState" /> Name/Wert-Paar, das an das Parameterobjekt gebunden ist. Die Standardeinstellung ist <see cref="F:System.String.Empty" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.UI.WebControls.SessionParameter" /> Klasse, mit dem angegebenen Namen und Typ und die Parameter an die angegebene Sitzung Zustand Name/Wert-Paar binden. Dieser Konstruktor ist für Datenbanktypen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Parameter.Direction%2A> und <xref:System.Web.UI.WebControls.Parameter.ConvertEmptyStringToNull%2A> Eigenschaften werden mit Standardwerten initialisiert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SessionParameter (string name, TypeCode type, string sessionField);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.TypeCode type, string sessionField) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SessionParameter.#ctor(System.String,System.TypeCode,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="type" Type="System.TypeCode" />
+        <Parameter Name="sessionField" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Parameters.</param>
+        <param name="type">Der Typ, den den Parameter darstellt. Die Standardeinstellung ist <see cref="F:System.TypeCode.Object" />.</param>
+        <param name="sessionField">Der Name des der <see cref="T:System.Web.SessionState.HttpSessionState" /> Name/Wert-Paar, das an das Parameterobjekt gebunden ist. Die Standardeinstellung ist <see cref="F:System.String.Empty" />.</param>
+        <summary>Initialisiert eine neue benannte und stark typisierte Instanz von der <see cref="T:System.Web.UI.WebControls.SessionParameter" /> -Klasse unter Verwendung der angegebenen Zeichenfolge zur Identifizierung der Sitzung Status/Wert-Paare zum Binden an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.Parameter.Direction%2A> und <xref:System.Web.UI.WebControls.Parameter.ConvertEmptyStringToNull%2A> Eigenschaften werden mit Standardwerten initialisiert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.SessionParameter.%23ctor%2A> Konstruktor zum Erstellen einer <xref:System.Web.UI.WebControls.SessionParameter> Objekt, und verwenden Sie es mit einer <xref:System.Web.UI.WebControls.SqlDataSource> -Steuerelement zum Anzeigen von Daten in eine <xref:System.Web.UI.WebControls.DataGrid> Steuerelement.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.SessionParameter_3#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.SessionParameter_3/CS/webform41cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.SessionParameter_3#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.SessionParameter_3/VB/webform41vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.WebControls.Parameter Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.WebControls.Parameter Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SessionParameter.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Parameter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt ein Duplikat des aktuellen <see cref="T:System.Web.UI.WebControls.SessionParameter" /> Instanz.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.SessionParameter" /> , ist ein exaktes Duplikat der aktuellen Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.SessionParameter.Clone%2A> Methodenaufrufe der <xref:System.Web.UI.WebControls.SessionParameter.%23ctor%28System.Web.UI.WebControls.SessionParameter%29> Copy-Konstruktor initialisiert eine neue Instanz der dem <xref:System.Web.UI.WebControls.SessionParameter> -Klasse mit den Werten der aktuellen Instanz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Evaluate">
+      <MemberSignature Language="C#" Value="protected override object Evaluate (System.Web.HttpContext context, System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance object Evaluate(class System.Web.HttpContext context, class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SessionParameter.Evaluate(System.Web.HttpContext,System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="context">Die aktuelle <see cref="T:System.Web.HttpContext" /> der Anforderung.</param>
+        <param name="control">Ein <see cref="T:System.Web.UI.Control" /> , Web Forms-Seite zugeordnet ist, in dem die <see cref="T:System.Web.UI.WebControls.SessionParameter" /> verwendet wird.</param>
+        <summary>Aktualisiert und gibt den Wert der <see cref="T:System.Web.UI.WebControls.SessionParameter" /> Objekt.</summary>
+        <returns>Ein Objekt, das die aktualisierten und den aktuellen Wert des Parameters darstellt. Wenn der Kontext oder die Anforderung ist <see langword="null" />, <see cref="M:System.Web.UI.WebControls.SessionParameter.Evaluate(System.Web.HttpContext,System.Web.UI.Control)" /> -Methode zurückkehrt <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.SessionParameter> -Objekts versucht, auf den Wert der Sitzungsvariablen binden Sie jedes Mal die <xref:System.Web.UI.WebControls.SessionParameter.Evaluate%2A> -Methode aufgerufen wird.  
+  
+ Die `context` Parameter wird verwendet, durch die <xref:System.Web.UI.WebControls.SessionParameter.Evaluate%2A> Koppeln Sie Methode, um die Name-Wert abzurufen, die die <xref:System.Web.UI.WebControls.SessionParameter> -Objekt gebunden wird. Die `control` Parameter wird ignoriert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionField">
+      <MemberSignature Language="C#" Value="public string SessionField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SessionField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.SessionParameter.SessionField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen der Sitzungsvariablen, die den Parameter gebunden wird.</summary>
+        <value>Eine Zeichenfolge, identifiziert die <see cref="T:System.Web.SessionState.HttpSessionState" /> , die die Parameter bindet an.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.SessionParameter.SessionField%2A> Eigenschaft identifiziert ein Name/Wert-Paar, das in der aktuellen Sitzung-Objekt, das die Webbrowser zugeordnet gespeichert wird. Während der <xref:System.Web.UI.WebControls.SessionParameter.SessionField%2A> Eigenschaft identifiziert den Namen des Paares, das <xref:System.Web.UI.WebControls.SessionParameter> an den entsprechenden Wert zur Laufzeit gebunden. Wenn das erwartete Sitzung Zeichenfolge Name/Wert-Paar in der Sitzung nicht gefunden wird die <xref:System.Web.UI.WebControls.SessionParameter.Evaluate%2A> Methode bindet den Parameter auf den Wert von der <xref:System.Web.UI.WebControls.Parameter.DefaultValue%2A> Eigenschaft, wenn sie festgelegt ist. Wenn die <xref:System.Web.UI.WebControls.Parameter.DefaultValue%2A> Eigenschaft nicht festgelegt ist, die <xref:System.Web.UI.WebControls.SessionParameter.Evaluate%2A> Methode keine Entsprechung für den Parameter auf einen Wert zu binden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie deklarativ erstellt eine <xref:System.Web.UI.WebControls.SessionParameter> -Objekt, legen Sie seine <xref:System.Web.UI.WebControls.Parameter.Name%2A>, <xref:System.Web.UI.WebControls.SessionParameter.SessionField%2A> und <xref:System.Web.UI.WebControls.Parameter.DefaultValue%2A> Eigenschaften, und fügen Sie diese der <xref:System.Web.UI.WebControls.SqlDataSource.SelectParameters%2A> Auflistung von einer <xref:System.Web.UI.WebControls.SqlDataSource> Steuerelement. Ein <xref:System.Web.UI.WebControls.GridView> -Steuerelement zeigt die Ergebnisse der SQL-Abfrage, die vom übermittelt die <xref:System.Web.UI.WebControls.SqlDataSource> Steuerelement.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.SessionParameter_1_decl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.SessionParameter_1_decl/CS/webform21cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.SessionParameter_1_decl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.SessionParameter_1_decl/VB/webform21vb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie programmgesteuert festlegen der <xref:System.Web.UI.WebControls.SessionParameter.SessionField%2A> Eigenschaft von einem <xref:System.Web.UI.WebControls.SessionParameter> Objekt.  
+  
+ [!code-csharp[System.Web.UI.WebControls.SessionParameter_2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.SessionParameter_2/CS/sessionparam2cs.aspx.cs#1)]
+ [!code-vb[System.Web.UI.WebControls.SessionParameter_2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.SessionParameter_2/VB/sessionparam2vb.aspx.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

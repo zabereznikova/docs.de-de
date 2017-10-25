@@ -1,0 +1,41 @@
+<Type Name="PropertyValueSource" FullName="System.Activities.Presentation.PropertyEditing.PropertyValueSource">
+  <TypeSignature Language="C#" Value="public abstract class PropertyValueSource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PropertyValueSource extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.PropertyEditing.PropertyValueSource" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt den Ursprung eines Eigenschaftswerts dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Zu Beispielen für Quellen von Eigenschaftswerten gehören geerbte Werte, übergeordnete Vorlagenwerte, Standardwerte, implizite Formatverweise, triggerbasierte Werte und andere.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PropertyValueSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.PropertyEditing.PropertyValueSource.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyValueSource" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

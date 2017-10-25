@@ -1,0 +1,835 @@
+<Type Name="FieldBuilder" FullName="System.Reflection.Emit.FieldBuilder">
+  <TypeSignature Language="C#" Value="public sealed class FieldBuilder : System.Reflection.FieldInfo, System.Runtime.InteropServices._FieldBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit FieldBuilder extends System.Reflection.FieldInfo implements class System.Runtime.InteropServices._FieldBuilder" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.Emit.FieldBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection.Emit</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Reflection.FieldInfo</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.InteropServices._FieldBuilder</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComDefaultInterface(typeof(System.Runtime.InteropServices._FieldBuilder))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert, und ein Feld dar. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie eine Instanz des `FieldBuilder` durch Aufrufen von <xref:System.Reflection.Emit.TypeBuilder.DefineField%2A>, <xref:System.Reflection.Emit.ModuleBuilder.DefineInitializedData%2A>, oder <xref:System.Reflection.Emit.ModuleBuilder.DefineUninitializedData%2A>.  
+  
+> [!NOTE]
+>  Die <xref:System.Reflection.Emit.FieldBuilder.SetValue%2A> Methode wird derzeit nicht unterstützt. Dieses Problem zu umgehen, Abrufen der <xref:System.Reflection.FieldInfo> durch reflektieren die fertigen und rufen <xref:System.Reflection.FieldInfo.SetValue%2A> zum Festlegen des Werts des Felds.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von `FieldBuilder`.  
+  
+ [!code-cpp[FieldBuilder_Class_Name#1](~/samples/snippets/cpp/VS_Snippets_CLR/FieldBuilder_Class_Name/CPP/fieldbuilder_name.cpp#1)]
+ [!code-csharp[FieldBuilder_Class_Name#1](~/samples/snippets/csharp/VS_Snippets_CLR/FieldBuilder_Class_Name/CS/fieldbuilder_name.cs#1)]
+ [!code-vb[FieldBuilder_Class_Name#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FieldBuilder_Class_Name/VB/fieldbuilder_name.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected FieldBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.FieldBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public override System.Reflection.FieldAttributes Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.FieldAttributes Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.FieldBuilder.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.FieldAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Attribute dieses Felds an. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <value>Die Attribute dieses Felds.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von `Attributes`.  
+  
+ [!code-cpp[FieldBuilder_ReflectedType#1](~/samples/snippets/cpp/VS_Snippets_CLR/FieldBuilder_ReflectedType/CPP/fieldbuilder_reflectedtype.cpp#1)]
+ [!code-csharp[FieldBuilder_ReflectedType#1](~/samples/snippets/csharp/VS_Snippets_CLR/FieldBuilder_ReflectedType/CS/fieldbuilder_reflectedtype.cs#1)]
+ [!code-vb[FieldBuilder_ReflectedType#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FieldBuilder_ReflectedType/VB/fieldbuilder_reflectedtype.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeclaringType">
+      <MemberSignature Language="C#" Value="public override Type DeclaringType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type DeclaringType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.FieldBuilder.DeclaringType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt einen Verweis auf die <see cref="T:System.Type" /> -Objekt für den Typ, der dieses Feld deklariert. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <value>Ein Verweis auf die <see cref="T:System.Type" /> -Objekt für den Typ, der dieses Feld deklariert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FieldHandle">
+      <MemberSignature Language="C#" Value="public override RuntimeFieldHandle FieldHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.RuntimeFieldHandle FieldHandle" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.FieldBuilder.FieldHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.RuntimeFieldHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das internen Metadatentyp-Handle für dieses Feld an. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <value>Das interne Metadatentyp-Handle für dieses Feld.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FieldType">
+      <MemberSignature Language="C#" Value="public override Type FieldType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type FieldType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.FieldBuilder.FieldType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, die <see cref="T:System.Type" /> -Objekt, das den Typ dieses Felds darstellt. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <value>Die <see cref="T:System.Type" /> -Objekt, das den Typ dieses Felds darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public override object[] GetCustomAttributes (bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object[] GetCustomAttributes(bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.FieldBuilder.GetCustomAttributes(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="inherit">Steuert die Vererbung benutzerdefinierter Attribute aus Basisklassen.</param>
+        <summary>Gibt alle für dieses Feld definierten benutzerdefinierten Attribute zurück.</summary>
+        <returns>Ein Array vom Typ <see cref="T:System.Object" /> , das alle benutzerdefinierten Attribute des Konstruktors dargestellt, die von diesem darstellt <see cref="T:System.Reflection.Emit.FieldBuilder" /> Instanz.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public override object[] GetCustomAttributes (Type attributeType, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object[] GetCustomAttributes(class System.Type attributeType, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.FieldBuilder.GetCustomAttributes(System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeType" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="attributeType">Der benutzerdefinierte Attributtyp.</param>
+        <param name="inherit">Steuert die Vererbung benutzerdefinierter Attribute aus Basisklassen.</param>
+        <summary>Gibt alle für dieses Feld identifiziert, die durch den angegebenen Typ definierten benutzerdefinierten Attribute zurück.</summary>
+        <returns>Ein Array vom Typ <see cref="T:System.Object" /> , das alle benutzerdefinierten Attribute des Konstruktors dargestellt, die von diesem darstellt <see cref="T:System.Reflection.Emit.FieldBuilder" /> Instanz.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetToken">
+      <MemberSignature Language="C#" Value="public System.Reflection.Emit.FieldToken GetToken ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Reflection.Emit.FieldToken GetToken() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.FieldBuilder.GetToken" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.FieldToken</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt das Token zurück, das dieses Feld darstellt.</summary>
+        <returns>Gibt die <see cref="T:System.Reflection.Emit.FieldToken" /> -Objekt, das das Token für dieses Feld darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public override object GetValue (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetValue(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.FieldBuilder.GetValue(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das Feld zugreifen.</param>
+        <summary>Ruft den Wert des Felds durch das angegebene Objekt unterstützt.</summary>
+        <returns>Ein <see cref="T:System.Object" /> mit dem Wert des Felds der von dieser Instanz reflektiert wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Feld `static`die `obj` Parameter wird ignoriert. Für nicht statische Felder `obj` muss eine Instanz einer Klasse, die das Feld deklariert oder erbt.  
+  
+ Der Rückgabetyp der <xref:System.Reflection.Emit.FieldBuilder.GetValue%2A> ist <xref:System.Object>. Z. B. wenn das Feld einen boolescher Wert primitiven enthält-Wert, eine Instanz von <xref:System.Object> mit dem entsprechenden booleschen Wert zurückgegeben wird. Vor der Rückgabe des Werts <xref:System.Reflection.Emit.FieldBuilder.GetValue%2A> prüft, ob der Benutzer über Zugriffsberechtigungen verfügt.  
+  
+ Zugriffseinschränkungen werden bei vollständig vertrauenswürdigem Code ignoriert. `Private`Konstruktoren, Methoden, Felder und Eigenschaften zugegriffen werden können, und mithilfe von Reflektion ist bei vollständig vertrauenswürdigem Code aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefined">
+      <MemberSignature Language="C#" Value="public override bool IsDefined (Type attributeType, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefined(class System.Type attributeType, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.FieldBuilder.IsDefined(System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeType" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="attributeType">Der Typ des Attributs.</param>
+        <param name="inherit">Steuert die Vererbung benutzerdefinierter Attribute aus Basisklassen.</param>
+        <summary>Gibt an, ob ein Attribut mit dem angegebenen Typ für ein Feld definiert ist.</summary>
+        <returns>
+          <see langword="true" />Wenn eine oder mehrere Instanzen von <paramref name="attributeType" /> für dieses Feld definiert ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird zurzeit nicht unterstützt. Rufen Sie das Feld mithilfe <see cref="M:System.Type.GetField(System.String,System.Reflection.BindingFlags)" /> , und rufen Sie <see cref="M:System.Reflection.MemberInfo.IsDefined(System.Type,System.Boolean)" /> für das zurückgegebene <see cref="T:System.Reflection.FieldInfo" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Module">
+      <MemberSignature Language="C#" Value="public override System.Reflection.Module Module { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.Module Module" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.FieldBuilder.Module" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Module</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Modul, in dem der Typ, der dieses Feld enthält, definiert wird.</summary>
+        <value>Ein <see cref="T:System.Reflection.Module" /> , die das dynamische Modul, in dem dieses Feld definiert wird, darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.FieldBuilder.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Namen dieses Felds. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <value>Ein <see cref="T:System.String" /> mit dem Namen dieses Felds.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von `Name`.  
+  
+ [!code-cpp[FieldBuilder_Class_Name#1](~/samples/snippets/cpp/VS_Snippets_CLR/FieldBuilder_Class_Name/CPP/fieldbuilder_name.cpp#1)]
+ [!code-csharp[FieldBuilder_Class_Name#1](~/samples/snippets/csharp/VS_Snippets_CLR/FieldBuilder_Class_Name/CS/fieldbuilder_name.cs#1)]
+ [!code-vb[FieldBuilder_Class_Name#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FieldBuilder_Class_Name/VB/fieldbuilder_name.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReflectedType">
+      <MemberSignature Language="C#" Value="public override Type ReflectedType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ReflectedType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.FieldBuilder.ReflectedType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Verweis auf die <see cref="T:System.Type" /> -Objekt aus dem dieses Objekt abgerufen wurde. Diese Eigenschaft ist schreibgeschützt.</summary>
+        <value>Ein Verweis auf die <see cref="T:System.Type" /> -Objekt aus dem diese Instanz abgerufen wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Reflection.Emit.FieldBuilder> Objekt stellt ein Feld einer bestimmten Klasse dar. Um erhalten eine <xref:System.Reflection.Emit.FieldBuilder> -Objekt, das <xref:System.Type> Objekt, das die Klasse darstellt, die das Feld unterstützt abgefragt wird. Diese Eigenschaft enthält einen Verweis auf dieses <xref:System.Type> Objekt.  
+  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von `ReflectedType`.  
+  
+ [!code-cpp[FieldBuilder_ReflectedType#1](~/samples/snippets/cpp/VS_Snippets_CLR/FieldBuilder_ReflectedType/CPP/fieldbuilder_reflectedtype.cpp#1)]
+ [!code-csharp[FieldBuilder_ReflectedType#1](~/samples/snippets/csharp/VS_Snippets_CLR/FieldBuilder_ReflectedType/CS/fieldbuilder_reflectedtype.cs#1)]
+ [!code-vb[FieldBuilder_ReflectedType#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FieldBuilder_ReflectedType/VB/fieldbuilder_reflectedtype.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetConstant">
+      <MemberSignature Language="C#" Value="public void SetConstant (object defaultValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetConstant(object defaultValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.FieldBuilder.SetConstant(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="defaultValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="defaultValue">Der neue Standardwert für dieses Feld.</param>
+        <summary>Legt den Standardwert für dieses Feld fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `defaultValue`beschränkt auf die folgenden Typen: `Boolean`, `SByte`, `Int16`, `Int32`, `Int64`, `Byte`, `UInt16`, `UInt32`, `UInt64`, `Single`, `Double`, `DateTime` , `Char`, `String`, und `Enum`. Wenn der Typ des Felds ein Verweistyp ist, CLS-Kompatibilität erfordert `defaultValue` werden `null`. Aber beginnend mit der [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], `defaultValue` kann nicht Null sein, für einen Verweistyp als der Wert dieser Verweistyp zugewiesen werden kann. Angenommen, ein `Int32` Wert zugewiesen werden kann, auf ein Feld vom Typ <xref:System.Object>. Dies ist nicht CLS-kompatibel, aber es kann in Interop-Szenarien nützlich sein.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der enthaltende Typ wurde mithilfe von <see cref="M:System.Reflection.Emit.TypeBuilder.CreateType" /> erstellt.</exception>
+        <exception cref="T:System.ArgumentException">Das Feld ist nicht mit einer der unterstützten Typen.  
+  
+ - oder -   
+  
+ Der Typ des <paramref name="defaultValue" /> entspricht nicht dem Typ des Felds.  
+  
+ - oder -   
+  
+ Das Feld ist vom Typ <see cref="T:System.Object" /> oder anderen Verweistyp <paramref name="defaultValue" /> nicht <see langword="null" />, und der Wert nicht dem Referenztyp zugewiesen werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCustomAttribute">
+      <MemberSignature Language="C#" Value="public void SetCustomAttribute (System.Reflection.Emit.CustomAttributeBuilder customBuilder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCustomAttribute(class System.Reflection.Emit.CustomAttributeBuilder customBuilder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.FieldBuilder.SetCustomAttribute(System.Reflection.Emit.CustomAttributeBuilder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="customBuilder" Type="System.Reflection.Emit.CustomAttributeBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="customBuilder">Eine Instanz einer Hilfsklasse zum Definieren des benutzerdefinierten Attributs.</param>
+        <summary>Legt ein benutzerdefiniertes Attribut mithilfe eines benutzerdefinierten Attribut-Generators fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von `SetCustomAttribute` im Kontext des <xref:System.Reflection.Emit.FieldBuilder>unter Verwendung einer <xref:System.Reflection.Emit.CustomAttributeBuilder>.  
+  
+ [!code-cpp[FieldBuilder_SetCustomAttributes#1](~/samples/snippets/cpp/VS_Snippets_CLR/FieldBuilder_SetCustomAttributes/CPP/fieldbuilder_setcustomattributes.cpp#1)]
+ [!code-csharp[FieldBuilder_SetCustomAttributes#1](~/samples/snippets/csharp/VS_Snippets_CLR/FieldBuilder_SetCustomAttributes/CS/fieldbuilder_setcustomattributes.cs#1)]
+ [!code-vb[FieldBuilder_SetCustomAttributes#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FieldBuilder_SetCustomAttributes/VB/fieldbuilder_setcustomattributes.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="con" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Der übergeordnete Typ dieses Felds ist abgeschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCustomAttribute">
+      <MemberSignature Language="C#" Value="public void SetCustomAttribute (System.Reflection.ConstructorInfo con, byte[] binaryAttribute);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCustomAttribute(class System.Reflection.ConstructorInfo con, unsigned int8[] binaryAttribute) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.FieldBuilder.SetCustomAttribute(System.Reflection.ConstructorInfo,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="con" Type="System.Reflection.ConstructorInfo" />
+        <Parameter Name="binaryAttribute" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="con">Der Konstruktor für das benutzerdefinierte Attribut.</param>
+        <param name="binaryAttribute">Ein Byte-BLOB, das die Attribute darstellt.</param>
+        <summary>Legt ein benutzerdefiniertes Attribut mithilfe eines angegebenen benutzerdefinierten Attribut-BLOBs fest.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Metadatenspezifikation in der ECMA Partition II-Dokumentation weitere Informationen zum format finden Sie unter `binaryAttribute`. Die Dokumentation ist online verfügbar. Sie finden sie unter [ECMA C# and Common Language Infrastructure Standards (Standards von ECMA C# und Common Language Infrastructure)](http://go.microsoft.com/fwlink/?LinkID=99212) auf MSDN und [Standard ECMA-335 - Common Language Infrastructure (CLI) (Standard ECMA-335 – Common Language Infrastructure (CLI))](http://go.microsoft.com/fwlink/?LinkID=65552) auf der Ecma International-Website.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von `SetCustomAttribute` im Kontext des <xref:System.Reflection.Emit.FieldBuilder>, mit der ein Byte-Blob.  
+  
+ [!code-cpp[FieldBuilder_SetCustomAttributes#1](~/samples/snippets/cpp/VS_Snippets_CLR/FieldBuilder_SetCustomAttributes/CPP/fieldbuilder_setcustomattributes.cpp#1)]
+ [!code-csharp[FieldBuilder_SetCustomAttributes#1](~/samples/snippets/csharp/VS_Snippets_CLR/FieldBuilder_SetCustomAttributes/CS/fieldbuilder_setcustomattributes.cs#1)]
+ [!code-vb[FieldBuilder_SetCustomAttributes#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FieldBuilder_SetCustomAttributes/VB/fieldbuilder_setcustomattributes.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="con" /> oder <paramref name="binaryAttribute" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Der übergeordnete Typ dieses Felds ist abgeschlossen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMarshal">
+      <MemberSignature Language="C#" Value="public void SetMarshal (System.Reflection.Emit.UnmanagedMarshal unmanagedMarshal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetMarshal(class System.Reflection.Emit.UnmanagedMarshal unmanagedMarshal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.FieldBuilder.SetMarshal(System.Reflection.Emit.UnmanagedMarshal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("An alternate API is available: Emit the MarshalAs custom attribute instead.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="unmanagedMarshal" Type="System.Reflection.Emit.UnmanagedMarshal" />
+      </Parameters>
+      <Docs>
+        <param name="unmanagedMarshal">Ein Deskriptor, der das native marshalling dieses Felds angeben.</param>
+        <summary>Beschreibt das native Marshalling des Felds.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von `SetMarshal`.  
+  
+ [!code-cpp[FieldBuilder_SetOffset#1](~/samples/snippets/cpp/VS_Snippets_CLR/FieldBuilder_SetOffset/CPP/fieldbuilder_setoffset.cpp#1)]
+ [!code-csharp[FieldBuilder_SetOffset#1](~/samples/snippets/csharp/VS_Snippets_CLR/FieldBuilder_SetOffset/CS/fieldbuilder_setoffset.cs#1)]
+ [!code-vb[FieldBuilder_SetOffset#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FieldBuilder_SetOffset/VB/fieldbuilder_setoffset.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="unmanagedMarshal" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Der enthaltende Typ wurde mithilfe von <see cref="M:System.Reflection.Emit.TypeBuilder.CreateType" /> erstellt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetOffset">
+      <MemberSignature Language="C#" Value="public void SetOffset (int iOffset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetOffset(int32 iOffset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.FieldBuilder.SetOffset(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="iOffset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="iOffset">Der Offset des Felds in den Typ, der dieses Feld enthält.</param>
+        <summary>Gibt das Feldlayout.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von `SetOffset`.  
+  
+ [!code-cpp[FieldBuilder_SetOffset#1](~/samples/snippets/cpp/VS_Snippets_CLR/FieldBuilder_SetOffset/CPP/fieldbuilder_setoffset.cpp#1)]
+ [!code-csharp[FieldBuilder_SetOffset#1](~/samples/snippets/csharp/VS_Snippets_CLR/FieldBuilder_SetOffset/CS/fieldbuilder_setoffset.cs#1)]
+ [!code-vb[FieldBuilder_SetOffset#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FieldBuilder_SetOffset/VB/fieldbuilder_setoffset.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der enthaltende Typ wurde mithilfe von <see cref="M:System.Reflection.Emit.TypeBuilder.CreateType" /> erstellt.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="iOffset" /> ist kleiner als Null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public override void SetValue (object obj, object val, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetValue(object obj, object val, valuetype System.Reflection.BindingFlags invokeAttr, class System.Reflection.Binder binder, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.FieldBuilder.SetValue(System.Object,System.Object,System.Reflection.BindingFlags,System.Reflection.Binder,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="val" Type="System.Object" />
+        <Parameter Name="invokeAttr" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="binder" Type="System.Reflection.Binder" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Das Objekt, das Feld zugreifen.</param>
+        <param name="val">Der Wert, der dem Feld zugewiesen werden soll.</param>
+        <param name="invokeAttr">Ein Mitglied <see langword="IBinder" /> , die den Typ der Bindung, die gewünscht wird (z. B. IBinder.CreateInstance, IBinder.ExactBinding) angibt.</param>
+        <param name="binder">Ein Satz von Eigenschaften und die Bindung, die Umwandlung von Argumenttypen und das Aufrufen von Membern mittels Reflektion aktivieren. Wenn der Binder null ist, wird die IBinder.DefaultBinding verwendet.</param>
+        <param name="culture">Einstellungen für die Software von einer bestimmten Kultur.</param>
+        <summary>Legt den Wert des Felds fest, das durch das angegebene Objekt unterstützt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode weist die `val` Parameter für das Feld von dieser Instanz reflektiert auf <xref:System.Object> `obj`. Wenn das Feld statisch ist `obj` werden ignoriert. Für nicht statische Felder `obj` muss eine Instanz einer Klasse, die das Feld deklariert oder erbt.  
+  
+ Der neue Wert wird als übergeben ein <xref:System.Object>. Beispielsweise ist der Typ des Felds Boolesch, eine Instanz von <xref:System.Object> mit dem entsprechenden booleschen Wert übergeben wird. Vor dem Festlegen des Werts <xref:System.Reflection.Emit.FieldBuilder.SetValue%2A> prüft, ob der Benutzer über Zugriffsberechtigungen verfügt.  
+  
+ Zugriffseinschränkungen werden bei vollständig vertrauenswürdigem Code ignoriert. `Private`Konstruktoren, Methoden, Felder und Eigenschaften zugegriffen werden können, und mithilfe von Reflektion ist bei vollständig vertrauenswürdigem Code aufgerufen.  
+  
+> [!NOTE]
+>  Diese Methode wird derzeit nicht unterstützt. Dieses Problem zu umgehen, Abrufen der <xref:System.Reflection.FieldInfo> durch reflektieren die fertigen und rufen <xref:System.Reflection.FieldInfo.SetValue%2A> zum Festlegen des Werts des Felds.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Diese Methode wird nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._FieldBuilder.GetIDsOfNames">
+      <MemberSignature Language="C#" Value="void _FieldBuilder.GetIDsOfNames (ref Guid riid, IntPtr rgszNames, uint cNames, uint lcid, IntPtr rgDispId);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._FieldBuilder.GetIDsOfNames([in]valuetype System.Guid&amp; riid, native int rgszNames, unsigned int32 cNames, unsigned int32 lcid, native int rgDispId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.FieldBuilder.System#Runtime#InteropServices#_FieldBuilder#GetIDsOfNames(System.Guid@,System.IntPtr,System.UInt32,System.UInt32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="rgszNames" Type="System.IntPtr" />
+        <Parameter Name="cNames" Type="System.UInt32" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="rgDispId" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="riid">Für zukünftige Verwendung reserviert. Muss IID_NULL sein.</param>
+        <param name="rgszNames">Das übergebene Array von zuzuordnenden Namen.</param>
+        <param name="cNames">Die Anzahl der zuzuordnenden Namen.</param>
+        <param name="lcid">Der Gebietsschemakontext, in dem die Namen interpretiert werden sollen.</param>
+        <param name="rgDispId">Das vom Aufrufer zugewiesene Array, das die IDs entsprechend den Namen empfängt.</param>
+        <summary>Ordnet eine Reihe von Namen einer entsprechenden Reihe von Dispatchbezeichnern zu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::GetIDsOfNames`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Die Methode wird spät gebundenem Zugriff aufgerufen unter Verwendung des COM <c>IDispatch</c> Schnittstelle.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._FieldBuilder.GetTypeInfo">
+      <MemberSignature Language="C#" Value="void _FieldBuilder.GetTypeInfo (uint iTInfo, uint lcid, IntPtr ppTInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._FieldBuilder.GetTypeInfo(unsigned int32 iTInfo, unsigned int32 lcid, native int ppTInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.FieldBuilder.System#Runtime#InteropServices#_FieldBuilder#GetTypeInfo(System.UInt32,System.UInt32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="iTInfo" Type="System.UInt32" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="ppTInfo" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="iTInfo">Die zurückzugebenden Typinformationen.</param>
+        <param name="lcid">Der Gebietsschemabezeichner für die Typinformationen.</param>
+        <param name="ppTInfo">Empfängt einen Zeiger auf das angeforderte Objekt mit den Typinformationen.</param>
+        <summary>Ruft die Typinformationen für ein Objekt ab, die dann zum Abrufen der Typinformationen für eine Schnittstelle verwendet werden können.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::GetTypeInfo`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Die Methode wird spät gebundenem Zugriff aufgerufen unter Verwendung des COM <c>IDispatch</c> Schnittstelle.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._FieldBuilder.GetTypeInfoCount">
+      <MemberSignature Language="C#" Value="void _FieldBuilder.GetTypeInfoCount (out uint pcTInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._FieldBuilder.GetTypeInfoCount([out] unsigned int32&amp; pcTInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.FieldBuilder.System#Runtime#InteropServices#_FieldBuilder#GetTypeInfoCount(System.UInt32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pcTInfo" Type="System.UInt32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pcTInfo">Zeigt auf einen Speicherort, der die Anzahl der Schnittstellen mit Typinformationen empfängt, die vom Objekt bereitgestellt werden.</param>
+        <summary>Ruft die Anzahl der Schnittstellen mit Typinformationen ab, die von einem Objekt bereitgestellt werden (0 oder 1).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::GetTypeInfoCount`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Die Methode wird spät gebundenem Zugriff aufgerufen unter Verwendung des COM <c>IDispatch</c> Schnittstelle.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._FieldBuilder.Invoke">
+      <MemberSignature Language="C#" Value="void _FieldBuilder.Invoke (uint dispIdMember, ref Guid riid, uint lcid, short wFlags, IntPtr pDispParams, IntPtr pVarResult, IntPtr pExcepInfo, IntPtr puArgErr);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._FieldBuilder.Invoke(unsigned int32 dispIdMember, [in]valuetype System.Guid&amp; riid, unsigned int32 lcid, int16 wFlags, native int pDispParams, native int pVarResult, native int pExcepInfo, native int puArgErr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.FieldBuilder.System#Runtime#InteropServices#_FieldBuilder#Invoke(System.UInt32,System.Guid@,System.UInt32,System.Int16,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dispIdMember" Type="System.UInt32" />
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="wFlags" Type="System.Int16" />
+        <Parameter Name="pDispParams" Type="System.IntPtr" />
+        <Parameter Name="pVarResult" Type="System.IntPtr" />
+        <Parameter Name="pExcepInfo" Type="System.IntPtr" />
+        <Parameter Name="puArgErr" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="dispIdMember">Bezeichnet den Member.</param>
+        <param name="riid">Für zukünftige Verwendung reserviert. Muss IID_NULL sein.</param>
+        <param name="lcid">Der Gebietsschemakontext, in dem Argumente interpretiert werden sollen.</param>
+        <param name="wFlags">Flags, die den Kontext des Aufrufs beschreiben.</param>
+        <param name="pDispParams">Ein Zeiger auf eine Struktur, die ein Array von Argumenten und ein Array von Argument-DISPIDs für benannte Argumente sowie Zähler für die Anzahl der Elemente in jedem Array enthält.</param>
+        <param name="pVarResult">Ein Verweis auf den Speicherort, an dem das Ergebnis gespeichert werden soll.</param>
+        <param name="pExcepInfo">Ein Zeiger auf eine Struktur mit Ausnahmeinformationen.</param>
+        <param name="puArgErr">Der Index des ersten Arguments mit einem Fehler.</param>
+        <summary>Stellt den Zugriff auf von einem Objekt verfügbar gemachte Eigenschaften und Methoden bereit.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ist für den Zugriff auf verwaltete Klassen aus nicht verwaltetem Code und sollte nicht von verwaltetem Code aufgerufen werden. Weitere Informationen zu `IDispatch::Invoke`, finden Sie in der MSDN Library.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Die Methode wird spät gebundenem Zugriff aufgerufen unter Verwendung des COM <c>IDispatch</c> Schnittstelle.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,682 @@
+<Type Name="DSA" FullName="System.Security.Cryptography.DSA">
+  <TypeSignature Language="C#" Value="public abstract class DSA : System.Security.Cryptography.AsymmetricAlgorithm" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DSA extends System.Security.Cryptography.AsymmetricAlgorithm" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.DSA" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.AsymmetricAlgorithm</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die abstrakte Basisklasse dar, von der alle Implementierungen des digitalen Signaturalgorithmus (<see cref="T:System.Security.Cryptography.DSA" />) erben müssen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können die <xref:System.Security.Cryptography.DSA> Klasse und abgeleitete Klassen zum Erstellen digitaler Signaturen, mit deren Hilfe die Integrität Ihrer Daten zu schützen.  Die <xref:System.Security.Cryptography.DSACryptoServiceProvider> stellt eine Implementierung dieser Klasse bereit.  
+  
+ Um ein System öffentlichem Schlüssel zum digitalen Signieren eine Nachricht zu verwenden, wendet der Absender zunächst eine Hashfunktion auf die Nachricht an einen Nachrichtenhash zu erstellen. Der Absender verschlüsselt klicken Sie dann den Message Digest mit dem privaten Schlüssel des Absenders, zum Erstellen des Absenders persönliche Signatur. Nach dem Empfang der Nachricht und der Signatur wird der Empfänger entschlüsselt die Signatur mit der öffentlichen Schlüssel des Absenders, Message Digest wiederherzustellen und die Nachricht mithilfe des gleichen Hashalgorithmus, den der Absender verwendet. Wenn der Message-Digest, dass der Empfänger genau Übereinstimmungen berechnet Message Digest vom Absender empfangen wurde, kann der Empfänger davon ausgehen, dass die Nachricht bei der Übertragung nicht geändert wurde. Beachten Sie, dass eine Signatur von jedem überprüft werden kann, da der öffentliche Schlüssel des Absenders allgemein bekannt ist.  
+  
+ Neuere asymmetrische Algorithmen sind verfügbar. Erwägen Sie die <xref:System.Security.Cryptography.RSA> -Klasse, die <xref:System.Security.Cryptography.ECDsa> -Klasse, oder die <xref:System.Security.Cryptography.ECDiffieHellman> -Klasse statt der <xref:System.Security.Cryptography.DSA> Klasse. Verwendung <xref:System.Security.Cryptography.DSA> nur für Kompatibilität mit älteren Anwendungen und Daten.  
+  
+ Dieser Algorithmus unterstützt Schlüssellängen von 512, 1024 Bits in Schritten von 64 Bits.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DSA ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DSA.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Cryptography.DSA" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.DSA Create ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.DSA Create() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DSA.Create" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.DSA</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt die Standardkryptografieobjekt zum Ausführen des asymmetrischen Algorithmus.</summary>
+        <returns>Ein Kryptografieobjekt zum Ausführen des asymmetrischen Algorithmus.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.DSA Create (int keySizeInBits);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.DSA Create(int32 keySizeInBits) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DSA.Create(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.DSA</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keySizeInBits" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="keySizeInBits">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.DSA Create (System.Security.Cryptography.DSAParameters parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.DSA Create(valuetype System.Security.Cryptography.DSAParameters parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DSA.Create(System.Security.Cryptography.DSAParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.DSA</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.Security.Cryptography.DSAParameters" />
+      </Parameters>
+      <Docs>
+        <param name="parameters">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.DSA Create (string algName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.DSA Create(string algName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DSA.Create(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.DSA</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algName">Der Name der spezifischen Implementierung des <see cref="T:System.Security.Cryptography.DSA" /> verwenden.</param>
+        <summary>Erstellt das angegebene Kryptografieobjekt zum Ausführen des asymmetrischen Algorithmus.</summary>
+        <returns>Ein Kryptografieobjekt zum Ausführen des asymmetrischen Algorithmus.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für <xref:System.Security.Cryptography.DSA>, verwenden Sie den Namen System.Security.Cryptography.DSA.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSignature">
+      <MemberSignature Language="C#" Value="public abstract byte[] CreateSignature (byte[] rgbHash);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] CreateSignature(unsigned int8[] rgbHash) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DSA.CreateSignature(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rgbHash" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="rgbHash">Die zu signierenden Daten.</param>
+        <summary>Erstellt beim Überschreiben in einer abgeleiteten Klasse die <see cref="T:System.Security.Cryptography.DSA" /> Signatur für die angegebenen Daten.</summary>
+        <returns>Die digitale Signatur für die angegebenen Daten.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportParameters">
+      <MemberSignature Language="C#" Value="public abstract System.Security.Cryptography.DSAParameters ExportParameters (bool includePrivateParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Security.Cryptography.DSAParameters ExportParameters(bool includePrivateParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DSA.ExportParameters(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.DSAParameters</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="includePrivateParameters" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="includePrivateParameters">
+          <see langword="true" />, wenn private Parameter angegeben werden sollen, andernfalls <see langword="false" />.</param>
+        <summary>Exportiert beim Überschreiben in einer abgeleiteten Klasse die <see cref="T:System.Security.Cryptography.DSAParameters" />.</summary>
+        <returns>Die Parameter für <see cref="T:System.Security.Cryptography.DSA" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXmlString">
+      <MemberSignature Language="C#" Value="public override void FromXmlString (string xmlString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void FromXmlString(string xmlString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DSA.FromXmlString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xmlString">Die XML-Zeichenfolge zur Wiederherstellung des <see cref="T:System.Security.Cryptography.DSA" />-Objekts.</param>
+        <summary>Rekonstruiert ein <see cref="T:System.Security.Cryptography.DSA" /> Objekt aus einer XML-Zeichenfolge.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Der <paramref name="xmlString" />-Parameter ist <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Das Format der <paramref name="xmlString" /> -Parameter ist ungültig.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HashData">
+      <MemberSignature Language="C#" Value="protected virtual byte[] HashData (System.IO.Stream data, System.Security.Cryptography.HashAlgorithmName hashAlgorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance unsigned int8[] HashData(class System.IO.Stream data, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DSA.HashData(System.IO.Stream,System.Security.Cryptography.HashAlgorithmName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.IO.Stream" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+      </Parameters>
+      <Docs>
+        <param name="data">Der binäre Datenstrom, für den der Hashwert berechnet werden soll.</param>
+        <param name="hashAlgorithm">Der Algorithmus, der zum Bestimmen des Hashwerts der Daten verwendet werden soll.</param>
+        <summary>Berechnet, falls in einer abgeleiteten Klasse überschrieben, den Hashwert eines angegebenen Binärdatenstroms mithilfe eines angegebenen Hashalgorithmus.</summary>
+        <returns>Die Daten, für die der Hashwert berechnet wurde.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Eine abgeleitete Klasse muss diese Methode überschreiben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HashData">
+      <MemberSignature Language="C#" Value="protected virtual byte[] HashData (byte[] data, int offset, int count, System.Security.Cryptography.HashAlgorithmName hashAlgorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance unsigned int8[] HashData(unsigned int8[] data, int32 offset, int32 count, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DSA.HashData(System.Byte[],System.Int32,System.Int32,System.Security.Cryptography.HashAlgorithmName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+      </Parameters>
+      <Docs>
+        <param name="data">Die Daten, für die der Hashwert berechnet werden soll.</param>
+        <param name="offset">Der Index des ersten Bytes im <c>Daten</c> das heißt, der Hashwert berechnet werden soll.</param>
+        <param name="count">Die Anzahl der Bytes, für die der Hashwert berechnet werden soll.</param>
+        <param name="hashAlgorithm">Der Algorithmus, der zum Bestimmen des Hashwerts der Daten verwendet werden soll.</param>
+        <summary>Berechnet, falls in einer abgeleiteten Klasse überschrieben, den Hashwert eines angegebenen Teils eines Bytearrays mithilfe eines angegebenen Hashalgorithmus.</summary>
+        <returns>Die Daten, für die der Hashwert berechnet wurde.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Eine abgeleitete Klasse muss diese Methode überschreiben.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportParameters">
+      <MemberSignature Language="C#" Value="public abstract void ImportParameters (System.Security.Cryptography.DSAParameters parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ImportParameters(valuetype System.Security.Cryptography.DSAParameters parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DSA.ImportParameters(System.Security.Cryptography.DSAParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.Security.Cryptography.DSAParameters" />
+      </Parameters>
+      <Docs>
+        <param name="parameters">Die Parameter für <see cref="T:System.Security.Cryptography.DSA" />.</param>
+        <summary>Importiert beim Überschreiben in einer abgeleiteten Klasse die angegebenen <see cref="T:System.Security.Cryptography.DSAParameters" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignData">
+      <MemberSignature Language="C#" Value="public byte[] SignData (byte[] data, System.Security.Cryptography.HashAlgorithmName hashAlgorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] SignData(unsigned int8[] data, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DSA.SignData(System.Byte[],System.Security.Cryptography.HashAlgorithmName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+      </Parameters>
+      <Docs>
+        <param name="data">Die Eingabedaten, für die der Hashwert berechnet werden soll.</param>
+        <param name="hashAlgorithm">Der zum Erstellen des Hashwerts zu verwendende Hashalgorithmus.</param>
+        <summary>Berechnet den Hashwert des angegebenen Bytearrays mithilfe des angegebenen Hashalgorithmus und signiert den resultierenden Hashwert.</summary>
+        <returns>Die DSA-Signatur für die angegebenen Daten.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="hashAlgorithm" />.<see cref="P:System.Security.Cryptography.HashAlgorithmName.Name" /> ist <see langword="null" /> oder <see cref="F:System.String.Empty" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SignData">
+      <MemberSignature Language="C#" Value="public virtual byte[] SignData (System.IO.Stream data, System.Security.Cryptography.HashAlgorithmName hashAlgorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] SignData(class System.IO.Stream data, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DSA.SignData(System.IO.Stream,System.Security.Cryptography.HashAlgorithmName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.IO.Stream" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+      </Parameters>
+      <Docs>
+        <param name="data">Der Eingabedatenstrom, für den der Hashwert berechnet werden soll.</param>
+        <param name="hashAlgorithm">Der zum Erstellen des Hashwerts zu verwendende Hashalgorithmus.</param>
+        <summary>Berechnet den Hashwert des angegebenen Datenstroms mithilfe des angegebenen Hashalgorithmus und signiert den resultierenden Hashwert.</summary>
+        <returns>Die DSA-Signatur für die angegebenen Daten.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="hashAlgorithm" />.<see cref="P:System.Security.Cryptography.HashAlgorithmName.Name" /> ist <see langword="null" /> oder <see cref="F:System.String.Empty" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SignData">
+      <MemberSignature Language="C#" Value="public virtual byte[] SignData (byte[] data, int offset, int count, System.Security.Cryptography.HashAlgorithmName hashAlgorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] SignData(unsigned int8[] data, int32 offset, int32 count, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DSA.SignData(System.Byte[],System.Int32,System.Int32,System.Security.Cryptography.HashAlgorithmName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+      </Parameters>
+      <Docs>
+        <param name="data">Die Eingabedaten, für die der Hashwert berechnet werden soll.</param>
+        <param name="offset">Der Offset im Array, ab dem Daten verwendet werden sollen.</param>
+        <param name="count">Die Anzahl der Bytes im Array, die als Daten verwendet werden sollen.</param>
+        <param name="hashAlgorithm">Der zum Erstellen des Hashwerts zu verwendende Hashalgorithmus.</param>
+        <summary>Berechnet den Hashwert eines Teils des angegebenen Bytearrays mithilfe des angegebenen Hashalgorithmus und signiert den sich ergebenden Hashwert.</summary>
+        <returns>Die DSA-Signatur für die angegebenen Daten.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="hashAlgorithm" />.<see cref="P:System.Security.Cryptography.HashAlgorithmName.Name" /> ist <see langword="null" /> oder <see cref="F:System.String.Empty" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ <paramref name="count" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ <paramref name="offset" /> + <paramref name="count" />– 1 Ergebnisse in einem Index, der größer als die Obergrenze von <paramref name="data" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXmlString">
+      <MemberSignature Language="C#" Value="public override string ToXmlString (bool includePrivateParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToXmlString(bool includePrivateParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DSA.ToXmlString(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="includePrivateParameters" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="includePrivateParameters">
+          <see langword="true" />, wenn private Parameter angegeben werden sollen, andernfalls <see langword="false" />.</param>
+        <summary>Erstellt und gibt eine XML-Darstellung des aktuellen <see cref="T:System.Security.Cryptography.DSA" /> Objekt.</summary>
+        <returns>Eine XML-Zeichenfolgencodierung des aktuellen <see cref="T:System.Security.Cryptography.DSA" />-Objekts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyData">
+      <MemberSignature Language="C#" Value="public bool VerifyData (byte[] data, byte[] signature, System.Security.Cryptography.HashAlgorithmName hashAlgorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool VerifyData(unsigned int8[] data, unsigned int8[] signature, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DSA.VerifyData(System.Byte[],System.Byte[],System.Security.Cryptography.HashAlgorithmName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+        <Parameter Name="signature" Type="System.Byte[]" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+      </Parameters>
+      <Docs>
+        <param name="data">Die signierten Daten.</param>
+        <param name="signature">Die zu überprüfenden Signaturdaten.</param>
+        <param name="hashAlgorithm">Der Hashalgorithmus, der zum Erstellen des Hashwerts der Daten verwendet wird.</param>
+        <summary>Überprüft, ob eine digitale Signatur gültig ist, indem der Hashwert der angegebenen Daten unter Verwendung des angegebenen Hashalgorithmus und durch Vergleichen mit der angegebenen Signatur berechnet wird.</summary>
+        <returns>
+          <see langword="true" />, wenn die digitale Signatur gültig ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="signature" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="hashAlgorithm" />.<see cref="P:System.Security.Cryptography.HashAlgorithmName.Name" /> ist <see langword="null" /> oder <see cref="F:System.String.Empty" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyData">
+      <MemberSignature Language="C#" Value="public virtual bool VerifyData (System.IO.Stream data, byte[] signature, System.Security.Cryptography.HashAlgorithmName hashAlgorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool VerifyData(class System.IO.Stream data, unsigned int8[] signature, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DSA.VerifyData(System.IO.Stream,System.Byte[],System.Security.Cryptography.HashAlgorithmName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.IO.Stream" />
+        <Parameter Name="signature" Type="System.Byte[]" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+      </Parameters>
+      <Docs>
+        <param name="data">Die signierten Daten.</param>
+        <param name="signature">Die zu überprüfenden Signaturdaten.</param>
+        <param name="hashAlgorithm">Der Hashalgorithmus, der zum Erstellen des Hashwerts der Daten verwendet wird.</param>
+        <summary>Überprüft, ob eine digitale Signatur gültig ist, indem der Hashwert des angegebenen Datenstroms unter Verwendung des angegebenen Hashalgorithmus und durch Vergleichen mit der angegebenen Signatur berechnet wird.</summary>
+        <returns>
+          <see langword="true" />, wenn die digitale Signatur gültig ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="signature" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="hashAlgorithm" />.<see cref="P:System.Security.Cryptography.HashAlgorithmName.Name" /> ist <see langword="null" /> oder <see cref="F:System.String.Empty" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyData">
+      <MemberSignature Language="C#" Value="public virtual bool VerifyData (byte[] data, int offset, int count, byte[] signature, System.Security.Cryptography.HashAlgorithmName hashAlgorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool VerifyData(unsigned int8[] data, int32 offset, int32 count, unsigned int8[] signature, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DSA.VerifyData(System.Byte[],System.Int32,System.Int32,System.Byte[],System.Security.Cryptography.HashAlgorithmName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="signature" Type="System.Byte[]" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+      </Parameters>
+      <Docs>
+        <param name="data">Die signierten Daten.</param>
+        <param name="offset">Der Startindex, an dem der Hashwert berechnet werden soll.</param>
+        <param name="count">Die Anzahl der Bytes, für die der Hashwert berechnet werden soll.</param>
+        <param name="signature">Die zu überprüfenden Signaturdaten.</param>
+        <param name="hashAlgorithm">Der Hashalgorithmus, der zum Erstellen des Hashwerts der Daten verwendet wird.</param>
+        <summary>Überprüft, ob eine digitale Signatur gültig ist, indem der Hashwert der Daten in einem Teil eines Bytearrays unter Verwendung des angegebenen Hashalgorithmus und durch Vergleichen mit der angegebenen Signatur berechnet wird.</summary>
+        <returns>
+          <see langword="true" />, wenn die digitale Signatur gültig ist; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> ist <see langword="null" />.  
+  
+ - oder -   
+  
+ <paramref name="signature" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="hashAlgorithm" />.<see cref="P:System.Security.Cryptography.HashAlgorithmName.Name" /> ist <see langword="null" /> oder <see cref="F:System.String.Empty" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ <paramref name="count" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ <paramref name="offset" /> + <paramref name="count" />– 1 Ergebnisse in einem Index, der größer als die Obergrenze von <paramref name="data" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifySignature">
+      <MemberSignature Language="C#" Value="public abstract bool VerifySignature (byte[] rgbHash, byte[] rgbSignature);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool VerifySignature(unsigned int8[] rgbHash, unsigned int8[] rgbSignature) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DSA.VerifySignature(System.Byte[],System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rgbHash" Type="System.Byte[]" />
+        <Parameter Name="rgbSignature" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="rgbHash">Der Hash der Daten mit signiert <c>RgbSignature</c>.</param>
+        <param name="rgbSignature">Die Signatur für zu überprüfende <c>RgbData</c>.</param>
+        <summary>Überprüft beim Überschreiben in einer abgeleiteten Klasse die <see cref="T:System.Security.Cryptography.DSA" /> Signatur für die angegebenen Daten.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="rgbSignature" /> der Signatur entspricht, mit dem angegebenen Hashalgorithmus und Schlüssel für berechnete <paramref name="rgbHash" />ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

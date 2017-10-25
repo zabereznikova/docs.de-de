@@ -1,0 +1,490 @@
+<Type Name="Receive" FullName="System.ServiceModel.Activities.Receive">
+  <TypeSignature Language="C#" Value="public sealed class Receive : System.Activities.Activity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Receive extends System.Activities.Activity" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activities.Receive" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.Activity</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Content")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Eine Aktivität, die eine Meldung empfängt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.Activities.Receive>-Aktivität kann abhängig vom Typ des verwendeten Empfangsinhalts ein einzelnes Element oder mehrere Elemente empfangen.  
+  
+> [!WARNING]
+>  Wenn ein Workflow mehrere <xref:System.ServiceModel.Activities.Receive>-Aktivitäten mit demselben Vorgangsnamen enthält, muss die <xref:System.ServiceModel.Activities.Receive.CorrelatesOn%2A>-Eigenschaft auf denselben Satz von Korrelationsabfragen festgelegt werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird gezeigt, wie eine <xref:System.ServiceModel.Activities.Receive>-Aktivität erstellt und einem Workflow in Code hinzugefügt wird.  
+  
+ [!code-csharp[SendReceiveParameters#0](~/samples/snippets/csharp/VS_Snippets_CFX/sendreceiveparameters/cs/echoworkflowservice/program.cs#0)]  
+  
+ Im folgenden Beispiel wird gezeigt, wie eine <xref:System.ServiceModel.Activities.Receive>-Aktivität erstellt und einem Workflowdienst in XAML hinzugefügt wird.  
+  
+```xaml  
+<WorkflowService mc:Ignorable="sap" ConfigurationName="Service1" Name="Service1" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mv="clr-namespace:Microsoft.VisualBasic;assembly=System" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:s1="clr-namespace:System;assembly=System" xmlns:s2="clr-namespace:System;assembly=System.Xml" xmlns:s3="clr-namespace:System;assembly=System.Core" xmlns:sad="clr-namespace:System.Activities.Debugger;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System" xmlns:scg1="clr-namespace:System.Collections.Generic;assembly=System.ServiceModel" xmlns:scg2="clr-namespace:System.Collections.Generic;assembly=System.Core" xmlns:scg3="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:sl="clr-namespace:System.Linq;assembly=System.Core" xmlns:ssa="clr-namespace:System.ServiceModel.Activities;assembly=System.ServiceModel.Activities" xmlns:st="clr-namespace:System.Text;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">  
+  <p:Sequence sad:XamlDebuggerXmlReader.FileName="c:\Projects\WFServiceSnippets\WFServiceSnippets\Service1.xamlx" sap:VirtualizedContainerService.HintSize="277,644" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">  
+    <p:Sequence.Variables>  
+      <p:Variable x:TypeArguments="CorrelationHandle" Name="__handle1" />  
+      <p:Variable x:TypeArguments="x:String" Name="Message" />  
+      <p:Variable x:TypeArguments="x:String" Name="Echo" />  
+    </p:Sequence.Variables>  
+    <sap:WorkflowViewStateService.ViewState>  
+      <scg3:Dictionary x:TypeArguments="x:String, x:Object">  
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>  
+      </scg3:Dictionary>  
+    </sap:WorkflowViewStateService.ViewState>  
+    <Receive x:Name="__ReferenceID0" CanCreateInstance="True" DisplayName="ReceiveString" sap:VirtualizedContainerService.HintSize="255,90" OperationName="Echo" ServiceContractName="Echo">  
+      <Receive.CorrelationInitializers>  
+        <RequestReplyCorrelationInitializer CorrelationHandle="[__handle1]" />  
+      </Receive.CorrelationInitializers>  
+      <ReceiveParametersContent>  
+        <p:OutArgument x:TypeArguments="x:String" x:Key="message">[Message]</p:OutArgument>  
+      </ReceiveParametersContent>  
+    </Receive>  
+    <p:WriteLine sap:VirtualizedContainerService.HintSize="255,61" Text="[&quot;Message received: &quot; + Message]" />  
+    <p:Assign sap:VirtualizedContainerService.HintSize="255,58">  
+      <p:Assign.To>  
+        <p:OutArgument x:TypeArguments="x:String">[Echo]</p:OutArgument>  
+      </p:Assign.To>  
+      <p:Assign.Value>  
+        <p:InArgument x:TypeArguments="x:String">["&lt;echo&gt; " + Message]</p:InArgument>  
+      </p:Assign.Value>  
+    </p:Assign>  
+    <SendReply Request="{x:Reference __ReferenceID0}" DisplayName="SendReply" sap:VirtualizedContainerService.HintSize="255,90">  
+      <SendParametersContent>  
+        <p:InArgument x:TypeArguments="x:String" x:Key="echo">[Echo]</p:InArgument>  
+      </SendParametersContent>  
+    </SendReply>  
+    <p:WriteLine sap:VirtualizedContainerService.HintSize="255,61" Text="[&quot;Message sent: &quot; + Echo]" />  
+  </p:Sequence>  
+</WorkflowService>  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Receive ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.Receive.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Activities.Receive" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die Verwendung dieses Konstruktors veranschaulicht.  
+  
+ [!code-csharp[SendReceiveParameters#1](~/samples/snippets/csharp/VS_Snippets_CFX/sendreceiveparameters/cs/echoworkflowservice/program.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public string Action { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Action" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.Receive.Action" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Wert des Aktionsheaders der Meldung ab oder legt ihn fest.</summary>
+        <value>Der Aktions-URI der Meldung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.ServiceModel.Activities.Receive.Action%2A>-Eigenschaft nicht explizit festgelegt ist, wird der Wert `https://tempuri.org/{service contract namespace}/{service contract name}/{operation name}` als Standardwert verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheMetadata">
+      <MemberSignature Language="C#" Value="protected override void CacheMetadata (System.Activities.ActivityMetadata metadata);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CacheMetadata(valuetype System.Activities.ActivityMetadata metadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.Receive.CacheMetadata(System.Activities.ActivityMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.Activities.ActivityMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanCreateInstance">
+      <MemberSignature Language="C#" Value="public bool CanCreateInstance { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanCreateInstance" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.Receive.CanCreateInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob eine neue Workflowinstanz zur Verarbeitung der Meldung erstellt wird, wenn die Meldung einer vorhandenen Workflowinstanz nicht entspricht, oder legt ihn fest.</summary>
+        <value>
+          <see langword="true" />Wenn eine neue Workflowinstanz erstellt wird, um die Nachricht zu verarbeiten, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `true`, eine neue Workflowinstanz wird erstellt, um die Nachricht zu verarbeiten, wenn die Nachricht nicht mit vorhandenen Workflowinstanz entspricht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Content">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Activities.ReceiveContent Content { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Activities.ReceiveContent Content" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.Receive.Content" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Activities.ReceiveContent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die zu empfangenen Daten ab oder legt diese fest. Der Inhalt kann entweder ein <see cref="T:System.ServiceModel.Activities.ReceiveMessageContent" /> oder ein <see cref="T:System.ServiceModel.Activities.ReceiveParametersContent" /> sein.</summary>
+        <value>Die zu empfangenen Daten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CorrelatesOn">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.MessageQuerySet CorrelatesOn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.MessageQuerySet CorrelatesOn" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.Receive.CorrelatesOn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.MessageQuerySet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.ServiceModel.MessageQuerySet" /> ab, der für die Abfrage der Meldung zur Extraktion der Korrelationsdaten verwendet wird, oder legt diesen fest.</summary>
+        <value>Ein Satz von Meldungsabfragen, der verwendet wird, um Korrelationsdaten aus der eingehenden Meldung zu extrahieren.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CorrelatesWith">
+      <MemberSignature Language="C#" Value="public System.Activities.InArgument&lt;System.ServiceModel.Activities.CorrelationHandle&gt; CorrelatesWith { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.InArgument`1&lt;class System.ServiceModel.Activities.CorrelationHandle&gt; CorrelatesWith" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.Receive.CorrelatesWith" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.InArgument&lt;System.ServiceModel.Activities.CorrelationHandle&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Korrelationshandle ab, mit dem die Meldung an die entsprechende Workflowinstanz weitergeleitet wird, oder legt es fest.</summary>
+        <value>Das Korrelationshandle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CorrelationInitializers">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Activities.CorrelationInitializer&gt; CorrelationInitializers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Activities.CorrelationInitializer&gt; CorrelationInitializers" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.Receive.CorrelationInitializers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Activities.CorrelationInitializer&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Korrelationsinitialisierern ab, die abfragebasierte Korrelationen, Kontextkorrelationen, Rückrufkontextkorrelationen oder Anforderung/Antwort-Korrelationen mit ausgeführter <see cref="T:System.ServiceModel.Activities.Send" />-Aktivität initialisieren.</summary>
+        <value>Eine Auflistung von Korrelationsinitialisierern.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromOperationDescription">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Activities.Receive FromOperationDescription (System.ServiceModel.Description.OperationDescription operation);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Activities.Receive FromOperationDescription(class System.ServiceModel.Description.OperationDescription operation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.Receive.FromOperationDescription(System.ServiceModel.Description.OperationDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Activities.Receive</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operation" Type="System.ServiceModel.Description.OperationDescription" />
+      </Parameters>
+      <Docs>
+        <param name="operation">Die Beschreibung des Vertrags-Vorgang.</param>
+        <summary>Gibt die Receive-Aktivität aus der angegebenen vertragsbeschreibung für den Vorgang zurück.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.Activities.Receive" /> Objekt aus der angegebenen vertragsbeschreibung für den Vorgang.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KnownTypes">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Type&gt; KnownTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Type&gt; KnownTypes" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.Receive.KnownTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Type&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung bekannter Typen für den Vorgang ab.</summary>
+        <value>Eine Auflistung bekannter Typen.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft muss in Verbindung mit der <xref:System.Runtime.Serialization.DataContractSerializer>-Eigenschaft verwendet werden. Sie wird ignoriert, wenn der <xref:System.Xml.Serialization.XmlSerializer> verwendet wird. [!INCLUDE[crabout](~/includes/crabout-md.md)]bekannten Typen finden Sie unter [Datenvertragstypen bezeichnet](~/docs/framework/wcf/feature-details/data-contract-known-types.md). Die in dieser Eigenschaft angegebenen bekannten Typen werden der <xref:System.ServiceModel.Description.OperationDescription.KnownTypes%2A>-Auflistung der entsprechenden <xref:System.ServiceModel.Description.OperationDescription> für diesen Vorgang hinzugefügt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateDynamicUpdateMap">
+      <MemberSignature Language="C#" Value="protected override void OnCreateDynamicUpdateMap (System.Activities.DynamicUpdate.UpdateMapMetadata metadata, System.Activities.Activity originalActivity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnCreateDynamicUpdateMap(class System.Activities.DynamicUpdate.UpdateMapMetadata metadata, class System.Activities.Activity originalActivity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.Receive.OnCreateDynamicUpdateMap(System.Activities.DynamicUpdate.UpdateMapMetadata,System.Activities.Activity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.Activities.DynamicUpdate.UpdateMapMetadata" />
+        <Parameter Name="originalActivity" Type="System.Activities.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">To be added.</param>
+        <param name="originalActivity">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OperationName">
+      <MemberSignature Language="C#" Value="public string OperationName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OperationName" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.Receive.OperationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des von <see cref="T:System.ServiceModel.Activities.Receive" /> implementierten Vorgangs ab oder legt diesen fest.</summary>
+        <value>Der Name des Vorgangs.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die <xref:System.ServiceModel.Activities.Receive.OperationName%2A>-Eigenschaft nicht festlegt wird, wird eine Ausnahme ausgelöst. Der Vorgangsname wird verwendet, um den Standardwert für die <xref:System.ServiceModel.Activities.Receive.Action%2A>-Eigenschaft festzulegen, wenn die <xref:System.ServiceModel.Activities.Receive.Action%2A>-Eigenschaft nicht ausdrücklich festgelegt wurde. <xref:System.ServiceModel.Activities.Receive.OperationName%2A> ist der <xref:System.ServiceModel.Description.OperationDescription.Name%2A> der <xref:System.ServiceModel.Description.OperationDescription> für diesen Vorgang.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtectionLevel">
+      <MemberSignature Language="C#" Value="public Nullable&lt;System.Net.Security.ProtectionLevel&gt; ProtectionLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.Net.Security.ProtectionLevel&gt; ProtectionLevel" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.Receive.ProtectionLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Net.Security.ProtectionLevel&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der die Schutzebene für den Vorgang angibt, oder legt diesen fest.</summary>
+        <value>Die Schutzebene für den Vorgang.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird auf einen der <xref:System.Net.Security.ProtectionLevel>-Enumerationswerte festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializerOption">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Activities.SerializerOption SerializerOption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.Activities.SerializerOption SerializerOption" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.Receive.SerializerOption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Activities.SerializerOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der das Serialisierungsprogramm angibt, das für diesen Vorgang verwendet werden soll, oder legt ihn fest.</summary>
+        <value>Das zu verwendende Serialisierungsprogramm.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Standardserialisierungsprogramm ist <xref:System.Runtime.Serialization.DataContractSerializer>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceContractName">
+      <MemberSignature Language="C#" Value="public System.Xml.Linq.XName ServiceContractName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Linq.XName ServiceContractName" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.Receive.ServiceContractName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ServiceModel.XamlIntegration.ServiceXNameTypeConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Linq.XName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Dienstvertrags ab oder legt diesen fest.</summary>
+        <value>Dienstvertragsname.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft wird verwendet, um Dienstvorgänge in einzelne Dienstverträge zu gruppieren. Alle <xref:System.ServiceModel.Activities.Receive>-Aktivitäten, die über den gleichen <xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A> verfügen, werden in den gleichen Dienstvertrag (WSDL PortType) gruppiert. Der Standardwert dieser Eigenschaft ist der Name des Workflowdienstes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeCorrelatesOn">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeCorrelatesOn ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeCorrelatesOn() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.Receive.ShouldSerializeCorrelatesOn" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert zurück, der angibt, ob die <see cref="P:System.ServiceModel.Activities.Receive.CorrelatesOn" />-Eigenschaft ihren Standardwert geändert hat und serialisiert werden soll.</summary>
+        <returns>
+          <see langword="true" />, wenn der <see cref="P:System.ServiceModel.Activities.Receive.CorrelatesOn" />-Eigenschaftswert serialisiert werden soll, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

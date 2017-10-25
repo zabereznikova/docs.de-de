@@ -1,0 +1,72 @@
+<Type Name="ExtensibleClassFactory" FullName="System.Runtime.InteropServices.ExtensibleClassFactory">
+  <TypeSignature Language="C#" Value="public sealed class ExtensibleClassFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ExtensibleClassFactory extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ExtensibleClassFactory" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht die Anpassung von verwalteten Objekten, die während der Erstellung von nicht verwalteten Objekten zu erweitern.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `ExtensibleClassFactory` ermöglicht Benutzern das Angeben einer `delegate` , die während der Erstellung der einen Runtime callable Wrapper (RCW), die eine Instanz des zugrunde liegenden COM-Objekts aufgerufen wird. Der Rückruf fungiert als das Klassenfactory für die von der RCW umschlossenes COM-Objekt. Ohne den Rückruf erstellt die common Language Runtime das zugrunde liegende COM-Objekt durch Aufrufen von `CoCreateInstance`. Dieser Rückruf stellt eine alternative Möglichkeit, aktivieren das zugrunde liegende Objekt, z. B. mit einem COM-Moniker oder durch Bereitstellen einer Singleton-Objekt. Die <xref:System.Runtime.InteropServices.ExtensibleClassFactory.RegisterObjectCreationCallback%2A> -Methode muss aufgerufen werden, der `static` Initialisierung der Klasse, die den RCW erweitert wird. Rückruf für die nur ein Objekt ist pro Objekttyp zulässig. Wenn das erweiterbare RCW aktiviert ist, wird der Rückruf registriert. Wenn das zugrunde liegende COM-Objekt erstellt werden muss, wird der Rückruf aufgerufen, um einen Verweis auf das Objekt bereitzustellen. Der Rückruf zurückgeben muss ein `IUnknown` Schnittstellenzeiger für das Basisobjekt.  
+  
+   
+  
+## Examples  
+ Registriert eine `delegate` , die aufgerufen wird, wenn eine Instanz eines verwalteten Typs, der von einem nicht verwalteten Typ erweitert das aggregierte nicht verwaltete Objekt zugewiesen werden muss. Dies `delegate` wird erwartet, die nicht verwaltete Objekt reservieren und aggregieren und wird anstelle des Namens einer `CoCreateInstance`. Diese Routine muss aufgerufen werden, im Rahmen der `static` Initialisierer für die Klasse, die für die die Rückrufe vorgenommen werden.  
+  
+ [!code-cpp[Classic ExtensibleClassFactory Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ExtensibleClassFactory Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ExtensibleClassFactory Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ExtensibleClassFactory Example/CS/source.cs#1)]
+ [!code-vb[Classic ExtensibleClassFactory Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ExtensibleClassFactory Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="RegisterObjectCreationCallback">
+      <MemberSignature Language="C#" Value="public static void RegisterObjectCreationCallback (System.Runtime.InteropServices.ObjectCreationDelegate callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterObjectCreationCallback(class System.Runtime.InteropServices.ObjectCreationDelegate callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ExtensibleClassFactory.RegisterObjectCreationCallback(System.Runtime.InteropServices.ObjectCreationDelegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Runtime.InteropServices.ObjectCreationDelegate" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Ein <see langword="delegate" /> , heißt anstelle von <see langword="CoCreateInstance" />.</param>
+        <summary>Registriert eine <see langword="delegate" /> , die aufgerufen wird, wenn eine Instanz eines verwalteten Typs, der von einem nicht verwalteten Typ erweitert wird, das aggregierte nicht verwaltete Objekt zugewiesen werden muss.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies `delegate` reserviert und aggregiert das nicht verwaltete Objekt und wird anstelle des Namens `CoCreateInstance`. Dies `delegate` muss registriert werden, im Rahmen der `static` Klasseninitialisierer für die die Rückrufe vorgenommen werden.  
+  
+ Es sollten nur eine Klasse in einer Hierarchie Registrieren einer `delegate` Rückruf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

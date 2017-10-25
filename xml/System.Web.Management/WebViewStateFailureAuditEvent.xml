@@ -1,0 +1,170 @@
+<Type Name="WebViewStateFailureAuditEvent" FullName="System.Web.Management.WebViewStateFailureAuditEvent">
+  <TypeSignature Language="C#" Value="public class WebViewStateFailureAuditEvent : System.Web.Management.WebFailureAuditEvent" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebViewStateFailureAuditEvent extends System.Web.Management.WebFailureAuditEvent" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Management.WebViewStateFailureAuditEvent" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Management.WebFailureAuditEvent</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Informationen für Webanwendung Ansicht Zustand verbundenen Fehler.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET-Systemüberwachung kann Produktions- und Vorgänge Mitarbeiter bereitgestellte Webanwendungen verwalten. Die <xref:System.Web.Management?displayProperty=nameWithType> Namespace enthält die integritätsereignis Typen, die verantwortlich für das Verpacken Integritätsstatus Anwendungsdaten und die Anbietertypen, die für die Verarbeitung dieser Daten verantwortlich. Darüber hinaus wird die unterstützende Typen, mit denen bei der Verwaltung von integritätsereignisse enthält.  
+  
+ ASP.NET löst Ereignisse vom Typ <xref:System.Web.Management.WebViewStateFailureAuditEvent> tritt ein Fehler Ansichtszustand. Dieser Fehler gibt entweder einen Versuch, den Ansichtszustand zu manipulieren oder die Wiederverwendung von einem anderen Computer mit einem anderen Schlüssel. Der Ereigniscode verwandte Audit ist <xref:System.Web.Management.WebEventCodes.AuditInvalidViewStateFailure>.  
+  
+> [!NOTE]
+>  In den meisten Fällen werden Sie die ASP.NET Systemüberwachung Typen verwenden, wie implementiert, und Sie werden das System Systemüberwachung steuern, durch Angeben von Werten in der `healthMonitoring` Konfigurationsabschnitt. Sie können auch aus den Typen Systemüberwachung, erstellen Sie eine eigene benutzerdefinierte Ereignisse und Anbieter ableiten.  
+  
+   
+  
+## Examples  
+ Im folgenden ist ein Auszug aus einer Konfigurationsdatei zum Konfigurieren der <xref:System.Web.Management.EventLogWebEventProvider> Ansichtszustand Fehler zu erfassen. Aus Gründen der Vollständigkeit zeigen wir das Setup für die `provider` und `eventMappings` Abschnitte. Sie sind bereits standardmäßig festgelegt. Das einzige, was Sie tun müssen, geben Sie das Setup für ist das `rules` Abschnitt. Weitere Informationen finden Sie unter `healthMonitoring`.  
+  
+ Um einen Fehler Ansichtszustand zu generieren, geben Sie eine URL in Ihrem Browser mit die folgende Abfragezeichenfolge angewendet:  
+  
+```  
+?__VIEWSTATEFIELDCOUNT=1&__VIEWSTATE=bogus  
+```  
+  
+ Der Windows-Anwendung im Ereignisprotokoll wird ein Ansichtszustand auftritt, erfasst, wenn Sie die folgenden Konfigurationseinstellungen eingeben.  
+  
+```  
+<healthMonitoring  
+  enabled="true"  
+  heartBeatInterval="0">  
+  <providers>  
+    // Configure the provider to process   
+    // the health events.  
+    <add name="EventLogProvider"  
+       type="System.Web.Management.EventLogWebEventProvider,  
+       System.Web,Version=2.0.3600.0,Culture=neutral,  
+       PublicKeyToken=b03f5f7f11d50a3a"/>  
+  </providers>  
+  
+  <eventMappings>  
+    <clear />  
+    // Configure the WebFailureAuditEvent   
+    // object to handle the Viewstate failures.   
+    <add name="Failure Audits"  
+      type="System.Web.Management.WebFailureAuditEvent,  
+      System.Web,Version=2.0.3600.0,Culture=neutral,  
+      PublicKeyToken=b03f5f7f11d50a3a" />  
+  </eventMappings>  
+  
+  <rules>  
+    <clear/>  
+    // Configure the connection between the   
+    // application lifetime event object   
+    // and the provider that must process it.  
+      <add name="Viewstate Failure Events "  
+        eventName="Failure Events"  
+        provider="EventLogProvider"  
+        profile="Default"  
+        minInterval="00:01:00" />  
+  </rules>  
+</healthMonitoring>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WebViewStateFailureAuditEvent (string message, object eventSource, int eventCode, System.Web.UI.ViewStateException viewStateException);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(string message, object eventSource, int32 eventCode, class System.Web.UI.ViewStateException viewStateException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WebViewStateFailureAuditEvent.#ctor(System.String,System.Object,System.Int32,System.Web.UI.ViewStateException)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="eventSource" Type="System.Object" />
+        <Parameter Name="eventCode" Type="System.Int32" />
+        <Parameter Name="viewStateException" Type="System.Web.UI.ViewStateException" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Beschreibung des Ereignisses.</param>
+        <param name="eventSource">Das Objekt, das die Quelle des Ereignisses ist.</param>
+        <param name="eventCode">Der Code, der dem Ereignis zugeordnet wird. Wenn Sie ein benutzerdefiniertes Ereignis implementieren, der Ereigniscode muss größer sein als <see cref="F:System.Web.Management.WebEventCodes.WebExtendedBase" />.</param>
+        <param name="viewStateException">Die <see cref="T:System.Web.UI.ViewStateException" /> durch einen Fehler verursacht hat.</param>
+        <summary>Initialisiert die <see cref="T:System.Web.Management.WebViewStateFailureAuditEvent" /> -Klasse mit den angegebenen Parametern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird intern vom ASP.NET Systemüberwachung System verwendet. Sie werden nie verwendet, um Instanziieren einer <xref:System.Web.Management.WebViewStateFailureAuditEvent> -Objekt, aber Sie können diesen Konstruktor beim Aufrufen eine eigene-Ereignis des Typs implementieren, die von dieser Klasse erbt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WebViewStateFailureAuditEvent (string message, object eventSource, int eventCode, int eventDetailCode, System.Web.UI.ViewStateException viewStateException);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(string message, object eventSource, int32 eventCode, int32 eventDetailCode, class System.Web.UI.ViewStateException viewStateException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WebViewStateFailureAuditEvent.#ctor(System.String,System.Object,System.Int32,System.Int32,System.Web.UI.ViewStateException)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="eventSource" Type="System.Object" />
+        <Parameter Name="eventCode" Type="System.Int32" />
+        <Parameter Name="eventDetailCode" Type="System.Int32" />
+        <Parameter Name="viewStateException" Type="System.Web.UI.ViewStateException" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die Beschreibung des Ereignisses.</param>
+        <param name="eventSource">Das Objekt, das die Quelle des Ereignisses ist.</param>
+        <param name="eventCode">Der Code, der dem Ereignis zugeordnet wird. Wenn Sie ein benutzerdefiniertes Ereignis implementieren, der Ereigniscode muss größer sein als <see cref="F:System.Web.Management.WebEventCodes.WebExtendedBase" />.</param>
+        <param name="eventDetailCode">Die <see cref="T:System.Web.Management.WebEventCodes" /> Wert, der den ausführlichen Bezeichner für das Ereignis angibt.</param>
+        <param name="viewStateException">Die <see cref="T:System.Web.UI.ViewStateException" /> durch einen Fehler verursacht hat.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Management.WebViewStateFailureAuditEvent" /> -Klasse mit den angegebenen Parametern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird intern vom ASP.NET Systemüberwachung System verwendet. Sie werden nie verwendet, um Instanziieren einer <xref:System.Web.Management.WebViewStateFailureAuditEvent> -Objekt, aber Sie können diesen Konstruktor beim Aufrufen eine eigene-Ereignis des Typs implementieren, die von dieser Klasse erbt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewStateException">
+      <MemberSignature Language="C#" Value="public System.Web.UI.ViewStateException ViewStateException { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ViewStateException ViewStateException" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.WebViewStateFailureAuditEvent.ViewStateException" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ViewStateException</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Ausnahme, die durch einen Fehler verursacht hat.</summary>
+        <value>Die <see cref="T:System.Web.UI.ViewStateException" /> durch einen Fehler verursacht hat.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.ViewStateException> gibt entweder einen Versuch, den Ansichtszustand zu manipulieren oder die Wiederverwendung von einem anderen Computer mit einem anderen Schlüssel.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

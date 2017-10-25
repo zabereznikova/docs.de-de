@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Markup.Primitives">
+  <Docs>
+    <summary>Enthält Klassen, die die Extensible Application Markup Language (XAML) in Windows Presentation Foundation (WPF) unterstützen.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

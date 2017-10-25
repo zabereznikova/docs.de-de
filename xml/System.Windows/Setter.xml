@@ -1,0 +1,395 @@
+<Type Name="Setter" FullName="System.Windows.Setter">
+  <TypeSignature Language="C#" Value="public class Setter : System.Windows.SetterBase, System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Setter extends System.Windows.SetterBase implements class System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Setter" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.SetterBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ISupportInitialize</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.XamlSetMarkupExtension("ReceiveMarkupExtension")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.XamlSetTypeConverter("ReceiveTypeConverter")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Setter, der einen Eigenschaftenwert gilt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Style>s und den verschiedenen Typen von Triggern (Klassen, die von erben <xref:System.Windows.TriggerBase>) verwenden <xref:System.Windows.Setter>s Eigenschaftswerte anwenden.  
+  
+ Beachten Sie, dass Sie beide angeben können, müssen die <xref:System.Windows.Setter.Property%2A> und <xref:System.Windows.Setter.Value%2A> Eigenschaften auf eine <xref:System.Windows.Setter> für den Setter sinnvoll ist. Wenn eine oder beide Eigenschaften nicht festgelegt werden, wird eine Ausnahme ausgelöst.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel definiert eine <xref:System.Windows.Style> , gelten in jedem <xref:System.Windows.Controls.TextBlock> Element. Dies <xref:System.Windows.Style> mehrere Werte betrifft <xref:System.Windows.Controls.TextBlock> Eigenschaften mit der Verwendung von <xref:System.Windows.Setter>s.  
+  
+ [!code-xaml[PhotoStoreDemoStyled#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PhotoStoreDemoStyled/CS/window1.xaml#1)]   
+  
+ Das folgende Beispiel zeigt eine benannte <xref:System.Windows.Style> zur <xref:System.Windows.Controls.Button> Steuerelemente. Die <xref:System.Windows.Style> definiert eine <xref:System.Windows.Trigger> Element, das ändert die <xref:System.Windows.Controls.Control.Foreground%2A> Eigenschaft einer Schaltfläche bei der <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A> Eigenschaft ist `true`.  
+  
+ [!code-xaml[BtnStyles#2](~/samples/snippets/csharp/VS_Snippets_Wpf/BtnStyles/CS/app.xaml#2)]  
+  
+ ]]></format>
+    </remarks>
+    <exception cref="T:System.ArgumentNullException">Die <see cref="P:System.Windows.Setter.Property" /> Eigenschaft darf nicht null sein.</exception>
+    <exception cref="T:System.ArgumentException">Wenn das angegebene <see cref="P:System.Windows.Setter.Value" /> festgelegt ist, um <see cref="F:System.Windows.DependencyProperty.UnsetValue" />.</exception>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Setter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Setter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Setter" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Setter (System.Windows.DependencyProperty property, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.DependencyProperty property, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Setter.#ctor(System.Windows.DependencyProperty,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="property" Type="System.Windows.DependencyProperty" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="property">Die <see cref="T:System.Windows.DependencyProperty" /> Anwenden der <see cref="P:System.Windows.Setter.Value" /> an.</param>
+        <param name="value">Der Wert der Eigenschaft anwenden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Setter" /> Klasse mit der angegebenen Eigenschaft und Wert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Setter (System.Windows.DependencyProperty property, object value, string targetName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.DependencyProperty property, object value, string targetName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Setter.#ctor(System.Windows.DependencyProperty,System.Object,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="property" Type="System.Windows.DependencyProperty" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="targetName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="property">Die <see cref="T:System.Windows.DependencyProperty" /> Anwenden der <see cref="P:System.Windows.Setter.Value" /> an.</param>
+        <param name="value">Der Wert der Eigenschaft anwenden.</param>
+        <param name="targetName">Der Name des untergeordneten Knotens dies <see cref="T:System.Windows.Setter" /> richtet.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Setter" /> Klasse mit der angegebenen Eigenschaft, der Wert und der Zielname.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Property">
+      <MemberSignature Language="C#" Value="public System.Windows.DependencyProperty Property { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DependencyProperty Property" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Setter.Property" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Modifiability=System.Windows.Modifiability.Unmodifiable, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.Ambient</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Eigenschaft auf dem die <see cref="P:System.Windows.Setter.Value" /> angewendet werden.</summary>
+        <value>Ein <see cref="T:System.Windows.DependencyProperty" /> , der die <see cref="P:System.Windows.Setter.Value" /> angewendet werden. Der Standardwert ist NULL.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beachten Sie, dass Sie beide angeben können, müssen die <xref:System.Windows.Setter.Property%2A> und <xref:System.Windows.Setter.Value%2A> Eigenschaften auf eine <xref:System.Windows.Setter> oder eine Ausnahme ausgelöst.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel definiert einen Stil, die allen angewendet werden <xref:System.Windows.Controls.TextBlock> Element.  
+  
+ [!code-xaml[PhotoStoreDemoStyled#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PhotoStoreDemoStyled/CS/window1.xaml#1)]   
+  
+ Das folgende Beispiel zeigt eine Formatvorlage-Deklaration, die gelten die <xref:System.Windows.Controls.Control.Background%2A> Eigenschaft eine <xref:System.Windows.Controls.Control>. Beachten Sie diese Eigenschaft in diesem Beispiel wird mit dem Namen der Klasse qualifiziert (<xref:System.Windows.Controls.Control>) da die <xref:System.Windows.Style> gibt keine <xref:System.Windows.Style.TargetType%2A>.  
+  
+ [!code-xaml[StyleOvw01#StyleSimple](~/samples/snippets/csharp/VS_Snippets_Wpf/StyleOvw01/CS/Page1.xaml#stylesimple)]   
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Die <see cref="P:System.Windows.Setter.Property" /> Eigenschaft darf nicht sein <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Das angegebene <see cref="P:System.Windows.Setter.Property" /> Eigenschaft darf nicht schreibgeschützt sein.</exception>
+        <exception cref="T:System.InvalidOperationException">Wenn das angegebene <see cref="P:System.Windows.Setter.Value" /> gilt nicht für den Typ des angegebenen <see cref="P:System.Windows.Setter.Property" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveMarkupExtension">
+      <MemberSignature Language="C#" Value="public static void ReceiveMarkupExtension (object targetObject, System.Windows.Markup.XamlSetMarkupExtensionEventArgs eventArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ReceiveMarkupExtension(object targetObject, class System.Windows.Markup.XamlSetMarkupExtensionEventArgs eventArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Setter.ReceiveMarkupExtension(System.Object,System.Windows.Markup.XamlSetMarkupExtensionEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetObject" Type="System.Object" />
+        <Parameter Name="eventArgs" Type="System.Windows.Markup.XamlSetMarkupExtensionEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="targetObject">Das Objekt, in dem die Markuperweiterung den Wert festlegt.</param>
+        <param name="eventArgs">Daten, die für die Verarbeitung von Markup Extension relevant ist.</param>
+        <summary>Behandelt Fälle, in denen eine Markuperweiterung einen Wert für eine Eigenschaft bereitstellt <see cref="T:System.Windows.Setter" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist die Methode verweist ein angewendeten <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute> Attribute auf Klassenebene, was bedeutet, dass diese Methode alle Versuche zum Festlegen von Werten von verarbeitet <xref:System.Windows.Setter> mit eine Markuperweiterung. In der Regel wird diese Methode nicht direkt aufrufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveTypeConverter">
+      <MemberSignature Language="C#" Value="public static void ReceiveTypeConverter (object targetObject, System.Windows.Markup.XamlSetTypeConverterEventArgs eventArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ReceiveTypeConverter(object targetObject, class System.Windows.Markup.XamlSetTypeConverterEventArgs eventArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Setter.ReceiveTypeConverter(System.Object,System.Windows.Markup.XamlSetTypeConverterEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetObject" Type="System.Object" />
+        <Parameter Name="eventArgs" Type="System.Windows.Markup.XamlSetTypeConverterEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="targetObject">Das Objekt, in dem der Typkonverter für den Wert festlegt.</param>
+        <param name="eventArgs">Daten, die für die Verarbeitung der Typ-Konverter relevant ist.</param>
+        <summary>Behandelt Fälle, in denen stellt ein Typkonverter einen Wert für eine Eigenschaft, einer <see cref="T:System.Windows.Setter" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist die Methode verweist ein angewendeten <xref:System.Windows.Markup.XamlSetTypeConverterAttribute> Attribute auf Klassenebene, was bedeutet, dass diese Methode alle Versuche zum Festlegen von Werten von verarbeitet <xref:System.Windows.Setter> mit einem Typkonverter. In der Regel wird diese Methode nicht direkt aufrufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ISupportInitialize.BeginInit">
+      <MemberSignature Language="C#" Value="void ISupportInitialize.BeginInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.ISupportInitialize.BeginInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Setter.System#ComponentModel#ISupportInitialize#BeginInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Signalisiert dem Objekt den Start der Initialisierung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Setter>-Instanz in eine <xref:System.ComponentModel.ISupportInitialize>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ISupportInitialize.EndInit">
+      <MemberSignature Language="C#" Value="void ISupportInitialize.EndInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.ISupportInitialize.EndInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Setter.System#ComponentModel#ISupportInitialize#EndInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Signalisiert dem Objekt den Abschluss der Initialisierung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei diesem Member handelt es sich um eine explizite Schnittstellenmember-Implementierung. Er kann nur verwendet werden, wenn die <xref:System.Windows.Setter>-Instanz in eine <xref:System.ComponentModel.ISupportInitialize>-Schnittstelle umgewandelt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetName">
+      <MemberSignature Language="C#" Value="public string TargetName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Setter.TargetName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.Ambient</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Namen des Objekts dies <see cref="T:System.Windows.Setter" /> richtet.</summary>
+        <value>Der Standardwert ist <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Legen Sie diese Eigenschaft auf den Namen eines Elements innerhalb des Bereichs, in dem die Setter-Auflistung (die Auflistung, die diese Setter gehört) angewendet wird. Dies ist normalerweise ein benanntes Element, das in der Vorlage, die diesen Setter enthält.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel die <xref:System.Windows.Setter.TargetName%2A> wird verwendet, für den Trigger <xref:System.Windows.Setter> angeben, dass die <xref:System.Windows.Setter> richtet sich die <xref:System.Windows.Shapes.Ellipse> mit dem Namen `ThumbCover` innerhalb der <xref:System.Windows.Controls.ControlTemplate>.  
+  
+ [!code-xaml[ColorPicker_snip#StyleTargetNameRef](~/samples/snippets/csharp/VS_Snippets_Wpf/ColorPicker_snip/CSharp/ColorPickerApp/MyApp.xaml#styletargetnameref)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Setter.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Markup.SetterTriggerConditionValueConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.DependsOn("Property")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.DependsOn("TargetName")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Wert der Eigenschaft anwenden, die von dieser angegeben ist <see cref="T:System.Windows.Setter" />.</summary>
+        <value>Der Standardwert ist <see cref="F:System.Windows.DependencyProperty.UnsetValue" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlAttributeUsage_Value"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object Value="value"/>  
+```  
+  
+<a name="xamlPropertyElementUsage_Value"></a>   
+## <a name="xaml-property-element-usage"></a>Verwendung von XAML-Eigenschaftenelementen  
+  
+```  
+<object>  
+  <object.Value>  
+    value  
+  </object.Value>  
+</object>  
+```  
+  
+<a name="xamlValues_Value"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *value*  
+ Ein Objekt oder eine Markuperweiterung. Finden Sie unter [StaticResource Markuperweiterung](~/docs/framework/wpf/advanced/staticresource-markup-extension.md).  
+  
+ Beachten Sie, dass Sie beide angeben können, müssen die <xref:System.Windows.Setter.Property%2A> und <xref:System.Windows.Setter.Value%2A> Eigenschaften auf eine <xref:System.Windows.Setter> oder eine Ausnahme ausgelöst.  
+  
+ Datenbindung und dynamische Ressourcen innerhalb des Objekts wird unterstützt, wenn der angegebene Wert ist ein <xref:System.Windows.Freezable> Objekt. Finden Sie unter [Markup Bindungserweiterung](~/docs/framework/wpf/advanced/binding-markup-extension.md) und [DynamicResource Markuperweiterung](~/docs/framework/wpf/advanced/dynamicresource-markup-extension.md).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel definiert eine <xref:System.Windows.Style> , gelten in jedem <xref:System.Windows.Controls.TextBlock> Element. Das vollständige Beispiel finden Sie unter [Einführung zum Erstellen von Formaten und Datenvorlagen-Beispiel](http://go.microsoft.com/fwlink/?LinkID=160010).  
+  
+ [!code-xaml[PhotoStoreDemoStyled#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PhotoStoreDemoStyled/CS/window1.xaml#1)]   
+  
+ Das folgende Beispiel definiert eine <xref:System.Windows.Style> mit <xref:System.Windows.Setter>s, die Systemressourcen zu verweisen.  
+  
+ [!code-xaml[BtnStyles#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BtnStyles/CS/app.xaml#1)]  
+  
+ Das folgende Beispiel definiert eine <xref:System.Windows.Style> für die <xref:System.Windows.Controls.Primitives.RepeatButton>.  
+  
+ [!code-xaml[ColorPicker_snip#StyleTargetNameRef](~/samples/snippets/csharp/VS_Snippets_Wpf/ColorPicker_snip/CSharp/ColorPickerApp/MyApp.xaml#styletargetnameref)]  
+  
+ Das folgende Beispiel zeigt eine <xref:System.Windows.Setter.Value%2A> Eigenschaft, verwendet die <xref:System.Windows.Data.Binding> Deklaration. Das vollständige Beispiel finden Sie unter [Beispiel für Bindungsvalidierung](http://go.microsoft.com/fwlink/?LinkID=159972).  
+  
+ [!code-xaml[bindvalidation#5](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Wenn das angegebene <see cref="P:System.Windows.Setter.Value" /> festgelegt ist, um <see cref="F:System.Windows.DependencyProperty.UnsetValue" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

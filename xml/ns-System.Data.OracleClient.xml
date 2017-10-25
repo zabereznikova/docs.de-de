@@ -1,0 +1,22 @@
+<Namespace Name="System.Data.OracleClient">
+  <Docs>
+    <summary>Die <see cref="N:System.Data.OracleClient" /> -Namespace ist der .NET Framework-Datenanbieter für Oracle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Typen in <xref:System.Data.OracleClient> sind veraltet und wird in einer zukünftigen Version von .NET Framework entfernt. Weitere Informationen finden Sie unter [Oracle und ADO.NET](~/docs/framework/data/adonet/oracle-and-adonet.md).  
+  
+ Die .NET Framework-Datenanbieter für Oracle beschreibt eine Auflistung von Klassen für den Zugriff auf eine Oracle-Datenquelle im verwalteten Bereich an. Mithilfe der <xref:System.Data.OracleClient.OracleDataAdapter> -Klasse, Sie können ggf. eine speicherresidente <xref:System.Data.DataSet>, Abfragen und zum Aktualisieren der Datenquelle verwenden.  
+  
+ Weitere Informationen zum Verwenden dieses Namespace finden Sie unter der <xref:System.Data.OracleClient.OracleDataReader>, <xref:System.Data.OracleClient.OracleCommand>, und <xref:System.Data.OracleClient.OracleConnection> Klassen.  
+  
+> [!NOTE]
+>  Konzeptionelle Informationen zum Verwenden dieses Namespaces beim Programmieren mit .NET Framework finden Sie unter [Oracle und ADO.NET](~/docs/framework/data/adonet/oracle-and-adonet.md).  
+  
+ Die .NET Framework-Datenanbieter für Oracle unterstützt eine Reihe von Oracle-Datentypen, einschließlich der `BFILE`, `LOB`, und `REF CURSOR` -Datentypen. Informationen zur Verwendung von Oracle-Datentypen in Parametern finden Sie unter <xref:System.Data.OracleClient.OracleType>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

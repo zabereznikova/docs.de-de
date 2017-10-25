@@ -1,0 +1,114 @@
+<Type Name="SerializeAbsoluteContext" FullName="System.ComponentModel.Design.Serialization.SerializeAbsoluteContext">
+  <TypeSignature Language="C#" Value="public sealed class SerializeAbsoluteContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SerializeAbsoluteContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Serialization.SerializeAbsoluteContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt an, dass Serialisierungsprogramme Standardwerte verarbeiten soll. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.Serialization.ComponentSerializationService> absolute Serialisierung unterstützt. Dies bedeutet, dass anstelle von serialisieren nur die Werte, die von einem Objekt Standardwerten unterscheiden, alle Werte serialisiert werden, Zulassen von Werten auf ihre Standardwerte für Objekte zurückgesetzt werden sollen, die möglicherweise bereits initialisiert wurde. Wenn ein Komponentenserialisierungsdienst an, dass dieses Verhalten <xref:System.ComponentModel.Design.Serialization.CodeDomSerializer> Objekte aufweist, platziert er ein <xref:System.ComponentModel.Design.Serialization.SerializeAbsoluteContext> kontextstapels-Objekt. Das Element in diesem Kontext möglicherweise `null`, um anzugeben, dass alle Elemente serialisiert werden soll, oder sie kann kennzeichnen, dass zu diesem Zeitpunkt nur ein bestimmtes Element serialisiert wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SerializeAbsoluteContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.SerializeAbsoluteContext.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Design.Serialization.SerializeAbsoluteContext" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dem Standardkonstruktor gibt an, dass dieser Kontext für alle Elemente verwendet werden soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SerializeAbsoluteContext (System.ComponentModel.MemberDescriptor member);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.MemberDescriptor member) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.SerializeAbsoluteContext.#ctor(System.ComponentModel.MemberDescriptor)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="member" Type="System.ComponentModel.MemberDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="member">Das Element an dem diesem Kontext gebunden ist. Kann <see langword="null" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.Design.Serialization.SerializeAbsoluteContext" /> Klasse mit der Option der Bindung auf ein bestimmtes Element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn `member` ist `null`, dieser Kontext wird für alle Elemente verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Member">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.MemberDescriptor Member { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.MemberDescriptor Member" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.SerializeAbsoluteContext.Member" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.MemberDescriptor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Element an dem diesem Kontext gebunden ist.</summary>
+        <value>Das Element an die diesem Kontext gebunden ist, oder <see langword="null" /> , wenn der Kontext auf alle Elemente eines Objekts gebunden ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerialize">
+      <MemberSignature Language="C#" Value="public bool ShouldSerialize (System.ComponentModel.MemberDescriptor member);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerialize(class System.ComponentModel.MemberDescriptor member) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.SerializeAbsoluteContext.ShouldSerialize(System.ComponentModel.MemberDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="member" Type="System.ComponentModel.MemberDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="member">Das Element für die Serialisierung untersucht werden.</param>
+        <summary>Ruft einen Wert, der angibt, ob das angegebene Element in diesem Kontext serialisiert werden soll.</summary>
+        <returns>
+          <see langword="true" />Wenn das angegebene Element in diesem Kontext serialisiert werden soll; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

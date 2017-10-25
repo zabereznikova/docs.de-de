@@ -1,0 +1,50 @@
+<Type Name="DetailsViewPageEventHandler" FullName="System.Web.UI.WebControls.DetailsViewPageEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void DetailsViewPageEventHandler(object sender, DetailsViewPageEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DetailsViewPageEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DetailsViewPageEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Web.UI.WebControls.DetailsViewPageEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Web.UI.WebControls.DetailsViewPageEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode, verarbeitet die <see cref="E:System.Web.UI.WebControls.DetailsView.PageIndexChanging" /> -Ereignis für ein <see cref="T:System.Web.UI.WebControls.DetailsView" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.DetailsView> -Steuerelement löst die <xref:System.Web.UI.WebControls.DetailsView.PageIndexChanging> Ereignis aus, wenn eine Pagerschaltfläche (eine Schaltfläche mit seiner `CommandName` -Eigenschaft auf "Seite" festgelegt) innerhalb des Steuerelements geklickt wird, jedoch bevor die <xref:System.Web.UI.WebControls.DetailsView> Steuerelement behandelt den Pagingvorgang. Dadurch können Sie einen Ereignishandler bereitstellen, der eine benutzerdefinierte Routine ausführt, z. B. den Pagingvorgang Abbrechen, wenn dieses Ereignis tritt auf.  
+  
+> [!NOTE]
+>  Pagerschaltflächen befinden sich in der Regel in der Pagerzeile eine <xref:System.Web.UI.WebControls.DetailsView> Steuerelement.  
+  
+ Beim Erstellen eines <xref:System.Web.UI.WebControls.DetailsViewPageEventHandler>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen über Delegaten für Ereignishandler finden Sie unter [NIB: Ereignisse und Delegaten](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie programmgesteuert hinzufügen eine <xref:System.Web.UI.WebControls.DetailsViewPageEventHandler> zum Delegieren der <xref:System.Web.UI.WebControls.DetailsView.PageIndexChanging> -Ereignis für ein <xref:System.Web.UI.WebControls.DetailsView> Steuerelement.  
+  
+ [!code-aspx-csharp[DetailsViewPageEventHandlerDynamic#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewPageEventHandlerDynamic/CS/detailsviewpageeventhandlerdynamiccs.aspx#1)]
+ [!code-aspx-vb[DetailsViewPageEventHandlerDynamic#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewPageEventHandlerDynamic/VB/detailsviewpageeventhandlerdynamicvb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie deklarativ hinzufügen, eine <xref:System.Web.UI.WebControls.DetailsViewPageEventHandler> zum Delegieren der <xref:System.Web.UI.WebControls.DetailsView.PageIndexChanging> -Ereignis für eine <xref:System.Web.UI.WebControls.DetailsView> Steuerelement.  
+  
+ [!code-aspx-csharp[DetailsViewPageEventHandlerDeclarative#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewPageEventHandlerDeclarative/CS/detailsviewpageeventhandlerdeclarativecs.aspx#1)]
+ [!code-aspx-vb[DetailsViewPageEventHandlerDeclarative#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewPageEventHandlerDeclarative/VB/detailsviewpageeventhandlerdeclarativevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

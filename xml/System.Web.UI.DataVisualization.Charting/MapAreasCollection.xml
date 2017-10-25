@@ -1,0 +1,54 @@
+<Type Name="MapAreasCollection" FullName="System.Web.UI.DataVisualization.Charting.MapAreasCollection">
+  <TypeSignature Language="C#" Value="public class MapAreasCollection : System.Web.UI.DataVisualization.Charting.ChartElementCollection&lt;System.Web.UI.DataVisualization.Charting.MapArea&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MapAreasCollection extends System.Web.UI.DataVisualization.Charting.ChartElementCollection`1&lt;class System.Web.UI.DataVisualization.Charting.MapArea&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.MapAreasCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.DataVisualization.Charting.ChartElementCollection&lt;System.Web.UI.DataVisualization.Charting.MapArea&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="T">System.Web.UI.DataVisualization.Charting.MapArea</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Auflistung von<see cref="T:System.Web.UI.DataVisualization.Charting.MapArea" />-Objekten dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataVisualization.Charting.MapAreasCollection> Klasse stellt eine Auflistung von <xref:System.Web.UI.DataVisualization.Charting.MapArea> Objekte, die wiederum Zuordnungsbereiche einer clientseitigen Imagemap, z. B. HTML darstellen \<Bereich > RFID-Transponder.  
+  
+ Diese Klasse wird auf zwei Arten verwendet:  
+  
+-   Als die <xref:System.Web.UI.DataVisualization.Charting.Chart.MapAreas%2A> Eigenschaft des Stamms <xref:System.Web.UI.DataVisualization.Charting.Chart> -Objekt, das für benutzerdefinierte Zuordnungsbereiche verwendet wird. Diese benutzerdefinierten Zuordnungsbereiche haben eine benutzerdefinierte Form und Koordinaten und können hinzugefügt werden, entweder zur Entwurfszeit oder zur Laufzeit mithilfe der überladenen `M:System.Web.UI.DataVisualization.MapAreasCollection.Add` oder `M:System.Web.UI.DataVisualization.MapAreasCollection.Insert` Methoden.  
+  
+-   In der <xref:System.Web.UI.DataVisualization.Charting.Chart.CustomizeMapAreas> Ereignis, als die <xref:System.Web.UI.DataVisualization.Charting.CustomizeMapAreasEventArgs.MapAreaItems%2A> Eigenschaft von der `CustomizeMapAreasEventArgs` Parameter. Dies <xref:System.Web.UI.DataVisualization.Charting.CustomizeMapAreasEventArgs.MapAreaItems%2A> Eigenschaftenspeicher <xref:System.Web.UI.DataVisualization.Charting.MapArea> Objekte, die automatisch für ein Diagrammobjekt erstellt wurden (Zuordnungsbereiche werden automatisch erstellt, wenn ein anwendbaren Diagrammelement, z. B. ein Datenpunkt, Reihen, Legend-Element oder Stripline-Objekt, hat eine nicht leere `ToolTip`, `Url` oder `MapAreaAttributes` Eigenschaft). In diesem Fall werden die Abmessungen und Position eines Bereichs für die Zuordnung durch das Diagrammelement bestimmt. Die <xref:System.Web.UI.DataVisualization.Charting.CustomizeMapAreasEventArgs.MapAreaItems%2A> -Eigenschaft ermöglicht es Ihnen, löschen oder ändern diese automatisch generierten Zuordnungsbereiche, und können auch verwendet werden, um benutzerdefinierte Zuordnungsbereiche hinzuzufügen.  
+  
+ Eine clientseitige Imagemap wird nur zur Laufzeit erstellt werden, wenn die <xref:System.Web.UI.DataVisualization.Charting.Chart.IsMapEnabled%2A> Eigenschaft des Stamms <xref:System.Web.UI.DataVisualization.Charting.Chart> Objekt `true`. Dies ist die Standardeinstellung.  
+  
+ **Wichtige** zum Erstellen einer Imagemaps mithilfe der zuvor beschriebenen <xref:System.Web.UI.DataVisualization.Charting.MapArea> Objekte, die <xref:System.Web.UI.DataVisualization.Charting.Chart.RenderType%2A> Eigenschaft der <xref:System.Web.UI.DataVisualization.Charting.Chart> Objekt muss festgelegt werden, um <xref:System.Web.UI.DataVisualization.Charting.RenderType.ImageTag>. Es ist möglich, eine Imagemap zu erstellen, wenn binäres streaming verwenden, jedoch muss eine spezielle Technik verwendet werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MapAreasCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.MapAreasCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.DataVisualization.Charting.MapAreasCollection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

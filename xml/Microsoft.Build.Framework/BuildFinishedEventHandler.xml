@@ -1,0 +1,25 @@
+<Type Name="BuildFinishedEventHandler" FullName="Microsoft.Build.Framework.BuildFinishedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void BuildFinishedEventHandler(object sender, BuildFinishedEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BuildFinishedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.BuildFinishedEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="Microsoft.Build.Framework.BuildFinishedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:Microsoft.Build.Framework.BuildFinishedEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode für die Behandlung der <see cref="E:Microsoft.Build.Framework.IEventSource.BuildFinished" /> Ereignis eines Builds.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

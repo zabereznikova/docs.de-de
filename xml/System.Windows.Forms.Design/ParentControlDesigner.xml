@@ -1,0 +1,1024 @@
+<Type Name="ParentControlDesigner" FullName="System.Windows.Forms.Design.ParentControlDesigner">
+  <TypeSignature Language="C#" Value="public class ParentControlDesigner : System.Windows.Forms.Design.ControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ParentControlDesigner extends System.Windows.Forms.Design.ControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Design.ParentControlDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Design.ControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Erweitert das Entwurfsmodusverhalten einer <see cref="T:System.Windows.Forms.Control" /> , das geschachtelte Steuerelemente unterstützt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.Design.ParentControlDesigner>Stellt eine Basisklasse für Designer von Steuerelementen, die untergeordnete Steuerelemente enthalten kann. Zusätzlich zu den Methoden und Funktionen von geerbt der <xref:System.Windows.Forms.Design.ControlDesigner> und <xref:System.ComponentModel.Design.ComponentDesigner> Klassen <xref:System.Windows.Forms.Design.ParentControlDesigner> ermöglicht untergeordnete Steuerelemente hinzugefügt werden können, daraus, dass in ausgewählt und im Steuerelement, dessen Verhalten, die zur Entwurfszeit erweitert angeordnet Zeit.  
+  
+ Sie können einen Designer Zuordnen eines Typs unter Verwendung einer <xref:System.ComponentModel.DesignerAttribute>. Einen Überblick über das Anpassen des Verhaltens der Design-Time finden Sie unter [Erweitern der Entwurfszeitunterstützung](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2).  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Implementieren eines benutzerdefinierten <xref:System.Windows.Forms.Design.ParentControlDesigner>. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Drawing.Design.IToolboxUser> Schnittstelle.  
+  
+ [!code-cpp[IToolboxUserExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IToolboxUserExample/CPP/samplecontrol.cpp#1)]
+ [!code-csharp[IToolboxUserExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/IToolboxUserExample/CS/samplecontrol.cs#1)]
+ [!code-vb[IToolboxUserExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IToolboxUserExample/VB/samplecontrol.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ParentControlDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ParentControlDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Forms.Design.ParentControlDesigner" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPaddingSnapLines">
+      <MemberSignature Language="C#" Value="protected void AddPaddingSnapLines (ref System.Collections.ArrayList snapLines);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void AddPaddingSnapLines(class System.Collections.ArrayList&amp; snapLines) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ParentControlDesigner.AddPaddingSnapLines(System.Collections.ArrayList@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="snapLines" Type="System.Collections.ArrayList&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="snapLines">Ein <see cref="T:System.Collections.ArrayList" /> enthält <see cref="T:System.Windows.Forms.Design.Behavior.SnapLine" /> Objekte.</param>
+        <summary>Fügt Leerstellen Ausrichtungslinien an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowControlLasso">
+      <MemberSignature Language="C#" Value="protected virtual bool AllowControlLasso { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowControlLasso" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.ParentControlDesigner.AllowControlLasso" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die ausgewählten Steuerelemente wieder untergeordnet werden.</summary>
+        <value>
+          <see langword="true" />Wenn die Steuerelemente, die mit einem Auswahlrahmen auf der Oberfläche des Designers ausgewählt wurden auf diesem Designer Steuerelement untergeordnet werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Design.ParentControlDesigner.AllowControlLasso%2A> Methode wird aufgerufen, nachdem der Benutzer ein Toolboxelements ausgewählt, die verfügt über eine <xref:System.Windows.Forms.Design.ParentControlDesigner> zugeordnet. Es zeichnet ein umkehrbare Rechteck auf der Oberfläche des Designers.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowGenericDragBox">
+      <MemberSignature Language="C#" Value="protected virtual bool AllowGenericDragBox { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowGenericDragBox" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.ParentControlDesigner.AllowGenericDragBox" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob ein generisches Feld gezeichnet werden soll, wenn ein Toolboxelement über die Designeroberfläche gezogen.</summary>
+        <value>
+          <see langword="true" />Wenn eine generische ziehen sollte Feld gezeichnet werden soll, wenn ein Toolboxelement über die Designeroberfläche gezogen; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowSetChildIndexOnDrop">
+      <MemberSignature Language="C#" Value="protected virtual bool AllowSetChildIndexOnDrop { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowSetChildIndexOnDrop" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.ParentControlDesigner.AllowSetChildIndexOnDrop" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Z-Reihenfolge von gezogenen Steuerelementen beibehalten werden soll, wenn auf abgelegt eine <see cref="T:System.Windows.Forms.Design.ParentControlDesigner" />.</summary>
+        <value>
+          <see langword="true" />Wenn die Z-Reihenfolge von gezogenen Steuerelementen beibehalten werden soll, wenn auf abgelegt eine <see cref="T:System.Windows.Forms.Design.ParentControlDesigner" />ist, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Standardmäßig wird die Z-Reihenfolge von gezogenen Steuerelementen beim Ablegen auf verwaltet eine <xref:System.Windows.Forms.Design.ParentControlDesigner>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanAddComponent">
+      <MemberSignature Language="C#" Value="protected virtual bool CanAddComponent (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool CanAddComponent(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ParentControlDesigner.CanAddComponent(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die Komponente zur Prüfung auf Fehler.</param>
+        <summary>Wird aufgerufen, wenn der übergeordnete Container eine Komponente hinzugefügt wird.</summary>
+        <returns>
+          <see langword="true" />Wenn <paramref name="component" /> hinzugefügt wurde, andernfalls kann <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ähnlich wie die IsDropOK-Methode, ermöglicht aber für bestimmte Fehlermeldungen. Diese Methode bietet eine Möglichkeit, den gleichen Fehler anzuzeigen, wie zur Laufzeit angezeigt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanParent">
+      <MemberSignature Language="C#" Value="public virtual bool CanParent (System.Windows.Forms.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanParent(class System.Windows.Forms.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ParentControlDesigner.CanParent(System.Windows.Forms.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="control">Der zu überprüfende <see cref="T:System.Windows.Forms.Control" />.</param>
+        <summary>Gibt an, ob das angegebene Steuerelement ein untergeordnetes Element des Steuerelements, das von diesem Designer verwaltet werden kann.</summary>
+        <returns>
+          <see langword="true" />Wenn das angegebene Steuerelement ein untergeordnetes Element des Steuerelements, das von diesem Designer verwaltet werden kann; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt an, ob das vom Designer verwaltete Steuerelement dem angegebenen übergeordneten kann <xref:System.Windows.Forms.Design.ControlDesigner>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanParent">
+      <MemberSignature Language="C#" Value="public virtual bool CanParent (System.Windows.Forms.Design.ControlDesigner controlDesigner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanParent(class System.Windows.Forms.Design.ControlDesigner controlDesigner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ParentControlDesigner.CanParent(System.Windows.Forms.Design.ControlDesigner)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controlDesigner" Type="System.Windows.Forms.Design.ControlDesigner" />
+      </Parameters>
+      <Docs>
+        <param name="controlDesigner">Der Designer für das Steuerelement zu testen.</param>
+        <summary>Gibt an, ob das vom angegebenen Designer verwaltete Steuerelement ein untergeordnetes Element des Steuerelements, das von diesem Designer verwaltet werden kann.</summary>
+        <returns>
+          <see langword="true" />Wenn das vom angegebenen Designer verwaltete Steuerelement ein untergeordnetes Element des Steuerelements, das von diesem Designer verwaltet werden kann; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt an, ob das Steuerelement, das von diesem Designer verwaltet das Steuerelement des angegebenen übergeordneten kann <xref:System.Windows.Forms.Design.ControlDesigner>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTool">
+      <MemberSignature Language="C#" Value="protected void CreateTool (System.Drawing.Design.ToolboxItem tool);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CreateTool(class System.Drawing.Design.ToolboxItem tool) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ParentControlDesigner.CreateTool(System.Drawing.Design.ToolboxItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tool" Type="System.Drawing.Design.ToolboxItem" />
+      </Parameters>
+      <Docs>
+        <param name="tool">Die <see cref="T:System.Drawing.Design.ToolboxItem" /> zum Erstellen einer Komponente aus.</param>
+        <summary>Erstellt eine Komponente oder ein Steuerelement aus dem angegebenen Tool und fügt es in das aktuelle Design-Dokument hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die neue Komponente oder das Steuerelement wird in der Mitte des aktuell ausgewählten Steuerelements positioniert. Diese Methode verwendet die Standardgröße für das Tool an, wenn das Tool eine Standardgröße angegeben wurde.  
+  
+ Um einen Speicherort oder den Speicherort und die Größe für die Komponente oder ein Steuerelement anzugeben, verwenden Sie eine der anderen überladenen <xref:System.Windows.Forms.Design.ParentControlDesigner.CreateTool%2A> Methoden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTool">
+      <MemberSignature Language="C#" Value="protected void CreateTool (System.Drawing.Design.ToolboxItem tool, System.Drawing.Point location);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CreateTool(class System.Drawing.Design.ToolboxItem tool, valuetype System.Drawing.Point location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ParentControlDesigner.CreateTool(System.Drawing.Design.ToolboxItem,System.Drawing.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tool" Type="System.Drawing.Design.ToolboxItem" />
+        <Parameter Name="location" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="tool">Die <see cref="T:System.Drawing.Design.ToolboxItem" /> zum Erstellen einer Komponente aus.</param>
+        <param name="location">Die <see cref="T:System.Drawing.Point" />, in Bildschirmkoordinaten Entwurfszeitansicht, an dem die Komponente zu zentrieren.</param>
+        <summary>Erstellt eine Komponente oder ein Steuerelement aus dem angegebenen Tool und fügt es in das aktuelle Design-Dokument am angegebenen Speicherort.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die neue Komponente oder ein Steuerelement positioniert ist, um die vom angegebenen Speicherort der `location` Parameter. Diese Methode verwendet die Standardgröße für das Tool-Komponente, wenn die Komponente eine Standardgröße verfügt.  
+  
+ Um einen Speicherort und die Größe für die Komponente oder ein Steuerelement anzugeben, verwenden Sie die entsprechende überladen <xref:System.Windows.Forms.Design.ParentControlDesigner.CreateTool%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTool">
+      <MemberSignature Language="C#" Value="protected void CreateTool (System.Drawing.Design.ToolboxItem tool, System.Drawing.Rectangle bounds);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CreateTool(class System.Drawing.Design.ToolboxItem tool, valuetype System.Drawing.Rectangle bounds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ParentControlDesigner.CreateTool(System.Drawing.Design.ToolboxItem,System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tool" Type="System.Drawing.Design.ToolboxItem" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="tool">Die <see cref="T:System.Drawing.Design.ToolboxItem" /> zum Erstellen einer Komponente aus.</param>
+        <param name="bounds">Ein <see cref="T:System.Drawing.Rectangle" /> , der angibt, die Position und Größe für die Komponente aus dem Tool erstellt. Die <see cref="P:System.Drawing.Rectangle.X" /> und <see cref="P:System.Drawing.Rectangle.Y" /> Werte von der <see cref="T:System.Drawing.Rectangle" /> geben die Entwurfszeitansicht Bildschirmkoordinaten der linken oberen Ecke der Komponente.</param>
+        <summary>Erstellt eine Komponente oder ein Steuerelement aus dem angegebenen Tool und fügt es in das aktuelle Design Dokument innerhalb der Grenzen des angegebenen Rechtecks.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Neue Komponente oder des Steuerelements positioniert ist, mit der linken oberen Ecke an der Position, die gemäß der <xref:System.Drawing.Rectangle.X%2A> und <xref:System.Drawing.Rectangle.Y%2A> Werte von der `bounds` Parameter. Die Größe der neuen Komponente oder des Steuerelements wird an die angegebenen Werte festgelegt werden die <xref:System.Drawing.Rectangle.Height%2A> und <xref:System.Drawing.Rectangle.Width%2A> Eigenschaften der `bounds` Parameter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateToolCore">
+      <MemberSignature Language="C#" Value="protected virtual System.ComponentModel.IComponent[] CreateToolCore (System.Drawing.Design.ToolboxItem tool, int x, int y, int width, int height, bool hasLocation, bool hasSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.ComponentModel.IComponent[] CreateToolCore(class System.Drawing.Design.ToolboxItem tool, int32 x, int32 y, int32 width, int32 height, bool hasLocation, bool hasSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ParentControlDesigner.CreateToolCore(System.Drawing.Design.ToolboxItem,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IComponent[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tool" Type="System.Drawing.Design.ToolboxItem" />
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+        <Parameter Name="hasLocation" Type="System.Boolean" />
+        <Parameter Name="hasSize" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="tool">Die <see cref="T:System.Drawing.Design.ToolboxItem" /> zum Erstellen einer Komponente aus.</param>
+        <param name="x">Die horizontale Position in der Entwurfszeitansicht-Koordinaten der Position des linken Rands des Tools, wenn eine Größe angegeben wird; die horizontale Position des Mittelpunkts der Tools, wenn keine Größe angegeben wird.</param>
+        <param name="y">Die vertikale Position in der Entwurfszeitansicht-Koordinaten der Position des oberen Rands des Tools, wenn eine Größe angegeben wird; die vertikale Position des Mittelpunkts der Tools, wenn keine Größe angegeben wird.</param>
+        <param name="width">Die Breite des Tools. Dieser Parameter wird ignoriert, wenn die <c>HasSize</c> Parametersatz auf <see langword="false" />.</param>
+        <param name="height">Die Höhe des Tools. Dieser Parameter wird ignoriert, wenn die <c>HasSize</c> Parametersatz auf <see langword="false" />.</param>
+        <param name="hasLocation">
+          <see langword="true" />Wenn auf einen Speicherort für ist die Komponente angegeben. <see langword="false" /> , wenn die Komponente in der Mitte des aktuell ausgewählten Steuerelements positioniert wird.</param>
+        <param name="hasSize">
+          <see langword="true" />Wenn eine Größe für ist die Komponente angegeben. <see langword="false" /> Wenn die Standardwerte Höhe und Breite für die Komponente verwendet werden.</param>
+        <summary>Stellt eine grundlegende Funktionen für die <see cref="M:System.Windows.Forms.Design.ParentControlDesigner.CreateTool(System.Drawing.Design.ToolboxItem)" /> Methoden.</summary>
+        <returns>Ein Array von Komponenten, die aus dem Tool erstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist die einzige <xref:System.Windows.Forms.Design.ParentControlDesigner.CreateTool%2A> Methode, die überschrieben werden kann.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultControlLocation">
+      <MemberSignature Language="C#" Value="protected virtual System.Drawing.Point DefaultControlLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Point DefaultControlLocation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.ParentControlDesigner.DefaultControlLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Standardspeicherort für ein Steuerelement, das dem Designer hinzugefügt.</summary>
+        <value>Ein <see cref="T:System.Drawing.Point" /> , der angibt, dass des Standardspeicherort für ein Steuerelement, das dem Designer hinzugefügt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Standardspeicherort ist in der Regel (0,0). Der Standardspeicherort wird normalerweise geändert werden, wenn der Container spezielle Rahmen aufweist, oder andere Gründe vorliegen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ParentControlDesigner.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.Windows.Forms.Design.ParentControlDesigner" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, der öffentlich `Dispose()` Methode und die <xref:System.Object.Finalize%2A> Methode. `Dispose()`Ruft die geschützte `Dispose(Boolean)` Methode mit dem `disposing` Parametersatz auf `true`. <xref:System.Object.Finalize%2A>Ruft `Dispose` mit `disposing` festgelegt `false`.  
+  
+ Wenn die `disposing` Parameter ist "true", gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte, die von diesem <xref:System.Windows.Forms.Design.ParentControlDesigner> Verweise. Diese Methode ruft die `Dispose()`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Zum Überschreiben <see langword="Dispose(Boolean)" /> Achten Sie darauf, dass Sie nicht auf Objekte verweisen, die einen früheren Aufruf freigegeben wurden <see langword="Dispose" />. Weitere Informationen zum Implementieren <see langword="Dispose(Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see langword="Dispose" /> und <see cref="M:System.Object.Finalize" />, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md) und [Überschreiben der Finalize-Methode](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawGrid">
+      <MemberSignature Language="C#" Value="protected virtual bool DrawGrid { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DrawGrid" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.ParentControlDesigner.DrawGrid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob ein Raster für diesen Designer auf das Steuerelement gezeichnet werden soll.</summary>
+        <value>
+          <see langword="true" />Wenn ein Raster für das Steuerelement im Designer gezeichnet werden soll; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableDragRect">
+      <MemberSignature Language="C#" Value="protected override bool EnableDragRect { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableDragRect" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.ParentControlDesigner.EnableDragRect" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob vom Designer Rechtecke gezeichnet werden.</summary>
+        <value>
+          <see langword="true" />Wenn Rechtecke gezeichnet werden; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetControl">
+      <MemberSignature Language="C#" Value="protected System.Windows.Forms.Control GetControl (object component);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Windows.Forms.Control GetControl(object component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ParentControlDesigner.GetControl(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Control</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die Komponente, die das Steuerelement abgerufen.</param>
+        <summary>Ruft das Steuerelement aus der Designer der angegebenen Komponente ab.</summary>
+        <returns>Die <see cref="T:System.Windows.Forms.Control" /> , zu der die angegebene Komponente gehört.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetControlGlyph">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.Design.Behavior.ControlBodyGlyph GetControlGlyph (System.Windows.Forms.Design.Behavior.GlyphSelectionType selectionType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Forms.Design.Behavior.ControlBodyGlyph GetControlGlyph(valuetype System.Windows.Forms.Design.Behavior.GlyphSelectionType selectionType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ParentControlDesigner.GetControlGlyph(System.Windows.Forms.Design.Behavior.GlyphSelectionType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.Behavior.ControlBodyGlyph</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="selectionType" Type="System.Windows.Forms.Design.Behavior.GlyphSelectionType" />
+      </Parameters>
+      <Docs>
+        <param name="selectionType">Ein <see cref="T:System.Windows.Forms.Design.Behavior.GlyphSelectionType" /> Wert, der den Auswahlzustand angibt.</param>
+        <summary>Ruft eine Textsymbol, das die Begrenzungen des Steuerelements darstellt.</summary>
+        <returns>Ein Textsymbol, das die Begrenzungen des Steuerelements darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die *Textsymbol* ist verantwortlich für Treffertests der Steuerelement-Designer und Weiterleiten von Nachrichten direkt in den Designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGlyphs">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.Design.Behavior.GlyphCollection GetGlyphs (System.Windows.Forms.Design.Behavior.GlyphSelectionType selectionType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Windows.Forms.Design.Behavior.GlyphCollection GetGlyphs(valuetype System.Windows.Forms.Design.Behavior.GlyphSelectionType selectionType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ParentControlDesigner.GetGlyphs(System.Windows.Forms.Design.Behavior.GlyphSelectionType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.Behavior.GlyphCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="selectionType" Type="System.Windows.Forms.Design.Behavior.GlyphSelectionType" />
+      </Parameters>
+      <Docs>
+        <param name="selectionType">Ein <see cref="T:System.Windows.Forms.Design.Behavior.GlyphSelectionType" /> Wert, der den Auswahlzustand angibt.</param>
+        <summary>Ruft eine Auflistung von <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" /> Objekte, die die Markierungsrahmen und Ziehpunkte für ein standard-Steuerelement darstellt.</summary>
+        <returns>Eine Auflistung von <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" />-Objekten.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Design.ParentControlDesigner.GetGlyphs%2A> Methode fügt einen Containerselektor <xref:System.Windows.Forms.Design.Behavior.Glyph> auf die Auswahl Glyphen-Auflistung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParentForComponent">
+      <MemberSignature Language="C#" Value="protected virtual System.Windows.Forms.Control GetParentForComponent (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Windows.Forms.Control GetParentForComponent(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ParentControlDesigner.GetParentForComponent(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Control</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Die Komponente für die das übergeordnete Element abzurufen <see cref="T:System.Windows.Forms.Control" />.</param>
+        <summary>Durch Ableiten von Klassen verwendet werden, um zu bestimmen, ob das Steuerelement entworfen oder eines anderen zurückgegeben <see cref="T:System.ComponentModel.Container" /> während eine Komponente hinzugefügt.</summary>
+        <returns>Das übergeordnete Element <see cref="T:System.Windows.Forms.Control" /> für die Komponente.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUpdatedRect">
+      <MemberSignature Language="C#" Value="protected System.Drawing.Rectangle GetUpdatedRect (System.Drawing.Rectangle originalRect, System.Drawing.Rectangle dragRect, bool updateSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance valuetype System.Drawing.Rectangle GetUpdatedRect(valuetype System.Drawing.Rectangle originalRect, valuetype System.Drawing.Rectangle dragRect, bool updateSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ParentControlDesigner.GetUpdatedRect(System.Drawing.Rectangle,System.Drawing.Rectangle,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="originalRect" Type="System.Drawing.Rectangle" />
+        <Parameter Name="dragRect" Type="System.Drawing.Rectangle" />
+        <Parameter Name="updateSize" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="originalRect">Ein <see cref="T:System.Drawing.Rectangle" /> , der angibt, der Anfangsposition der Komponente aktualisiert wird.</param>
+        <param name="dragRect">Ein <see cref="T:System.Drawing.Rectangle" /> , der angibt, der neuen Position der Komponente.</param>
+        <param name="updateSize">
+          <see langword="true" />Aktualisieren Sie die Größe des Rechtecks aus, wenn eine Änderung stattgefunden hat; andernfalls <see langword="false" />.</param>
+        <summary>Aktualisiert die Position des angegebenen Rechtecks am Raster ausgerichtet anpassen, wenn Rastermodus für die Ausrichtung aktiviert ist.</summary>
+        <returns>Ein Rechteck, das die Position der Komponente in der Entwurfszeitansicht Bildschirmkoordinaten angibt. Wenn keine Änderungen vorgenommen wurden, gibt diese Methode das ursprüngliche Rechteck zurück.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode richtet das angegebene Rechteck am Raster aus, wenn das Raster aktiviert ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GridSize">
+      <MemberSignature Language="C#" Value="protected System.Drawing.Size GridSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size GridSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.ParentControlDesigner.GridSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Größe der einzelnen Quadrats des Rasters, die gezeichnet wird, wenn der Designer im Raster Zeichnen-Befehl-Modus befindet.</summary>
+        <value>Ein <see cref="T:System.Drawing.Size" /> , die die Größe der einzelnen Quadrats des Rasters auf einem Formular oder das Benutzersteuerelement gezeichnet darstellt.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <see cref="T:System.Drawing.Size" />liegt außerhalb des zulässigen Bereichs für <see cref="P:System.Windows.Forms.Design.ParentControlDesigner.GridSize" />. Der standardmäßige Mindestwert beträgt 2 und der maximale Standardwert ist 200.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ParentControlDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Das dem Designer zuzuordnende <see cref="T:System.ComponentModel.IComponent" />.</param>
+        <summary>Initialisiert den Designer mit der angegebenen Komponente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, um den Designer mit der angegebenen primären Komponente zu initialisieren.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeNewComponent">
+      <MemberSignature Language="C#" Value="public override void InitializeNewComponent (System.Collections.IDictionary defaultValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void InitializeNewComponent(class System.Collections.IDictionary defaultValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ParentControlDesigner.InitializeNewComponent(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="defaultValues" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="defaultValues">Ein Name/Wert-Wörterbuch mit Standardwerten, die auf Eigenschaften angewendet werden können. Möglicherweise <see langword="null" /> , wenn keine Standardwerte angegeben werden.</param>
+        <summary>Initialisiert eine neu erstellte Komponente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeCreateTool">
+      <MemberSignature Language="C#" Value="protected static void InvokeCreateTool (System.Windows.Forms.Design.ParentControlDesigner toInvoke, System.Drawing.Design.ToolboxItem tool);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig void InvokeCreateTool(class System.Windows.Forms.Design.ParentControlDesigner toInvoke, class System.Drawing.Design.ToolboxItem tool) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ParentControlDesigner.InvokeCreateTool(System.Windows.Forms.Design.ParentControlDesigner,System.Drawing.Design.ToolboxItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toInvoke" Type="System.Windows.Forms.Design.ParentControlDesigner" />
+        <Parameter Name="tool" Type="System.Drawing.Design.ToolboxItem" />
+      </Parameters>
+      <Docs>
+        <param name="toInvoke">Die <see cref="T:System.Windows.Forms.Design.ParentControlDesigner" /> , die das Tool ist mit verwendet werden soll.</param>
+        <param name="tool">Die <see cref="T:System.Drawing.Design.ToolboxItem" /> So erstellen ein Tool aus.</param>
+        <summary>Erstellt ein Tool aus dem angegebenen <see cref="T:System.Drawing.Design.ToolboxItem" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseDragTool">
+      <MemberSignature Language="C#" Value="protected System.Drawing.Design.ToolboxItem MouseDragTool { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Design.ToolboxItem MouseDragTool" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.ParentControlDesigner.MouseDragTool" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.ToolboxItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Designer während eines Ziehvorgangs über ein gültiges Tool verfügt.</summary>
+        <value>Das Tool, das gezogen wird, wenn eine Komponente erstellen oder <see langword="null" /> , wenn kein Tool vorhanden ist.</value>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Diese Eigenschaft wird von abgeleiteten Klassen verwendet, um festzustellen, ob der Designer während eines Ziehvorgangs über ein gültiges Tool verfügt.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDragComplete">
+      <MemberSignature Language="C#" Value="protected override void OnDragComplete (System.Windows.Forms.DragEventArgs de);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDragComplete(class System.Windows.Forms.DragEventArgs de) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ParentControlDesigner.OnDragComplete(System.Windows.Forms.DragEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="de" Type="System.Windows.Forms.DragEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="de">Ein <see cref="T:System.Windows.Forms.DragEventArgs" />, das Daten für das Ereignis bereitstellt.</param>
+        <summary>Wird aufgerufen, um einen Drag-and-Drop-Vorgang zu bereinigen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.Design.ParentControlDesigner.OnDragComplete%2A>Dient zum Bereinigen von alle Vorgänge, die am Anfang eines Drag-and-Drop-Vorgangs ausgeführt wurden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDragDrop">
+      <MemberSignature Language="C#" Value="protected override void OnDragDrop (System.Windows.Forms.DragEventArgs de);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDragDrop(class System.Windows.Forms.DragEventArgs de) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ParentControlDesigner.OnDragDrop(System.Windows.Forms.DragEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="de" Type="System.Windows.Forms.DragEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="de">Ein <see cref="T:System.Windows.Forms.DragEventArgs" />, das Daten für das Ereignis bereitstellt.</param>
+        <summary>Wird aufgerufen, wenn ein Drag &amp; Drop-Objekt die Steuerelement-Designer abgelegt wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überprüft alle übergeordneten Steuerelement für einen Drag-and-Drop-Handler, der den Vorgang stattdessen verarbeiten kann. Wenn eine vorhanden ist, wird diese Methode übergibt der <xref:System.Windows.Forms.DragEventArgs> die Methode und gibt. Wenn kein übergeordneter Drag-and-Drop-Handler vorhanden ist, versucht diese Methode, ein Tool zu erstellen, wenn ein Toolboxelement auf das Steuerelement-Designer gelöscht wurde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDragEnter">
+      <MemberSignature Language="C#" Value="protected override void OnDragEnter (System.Windows.Forms.DragEventArgs de);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDragEnter(class System.Windows.Forms.DragEventArgs de) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ParentControlDesigner.OnDragEnter(System.Windows.Forms.DragEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="de" Type="System.Windows.Forms.DragEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="de">Ein <see cref="T:System.Windows.Forms.DragEventArgs" />, das Daten für das Ereignis bereitstellt.</param>
+        <summary>Wird aufgerufen, wenn ein Drag &amp; Drop-Vorgang die Designer Steuerelementansicht eingibt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDragLeave">
+      <MemberSignature Language="C#" Value="protected override void OnDragLeave (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDragLeave(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ParentControlDesigner.OnDragLeave(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" /> , das Daten für das Ereignis bereitstellt.</param>
+        <summary>Wird aufgerufen, wenn ein Drag &amp; Drop-Vorgang aus dem Steuerelement-Designer gezogen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDragOver">
+      <MemberSignature Language="C#" Value="protected override void OnDragOver (System.Windows.Forms.DragEventArgs de);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDragOver(class System.Windows.Forms.DragEventArgs de) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ParentControlDesigner.OnDragOver(System.Windows.Forms.DragEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="de" Type="System.Windows.Forms.DragEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="de">Ein <see cref="T:System.Windows.Forms.DragEventArgs" />, das Daten für das Ereignis bereitstellt.</param>
+        <summary>Wird aufgerufen, wenn ein Drag &amp; Drop-Objekt über die Steuerelement-Designer gezogen wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseDragBegin">
+      <MemberSignature Language="C#" Value="protected override void OnMouseDragBegin (int x, int y);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseDragBegin(int32 x, int32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ParentControlDesigner.OnMouseDragBegin(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die X-Koordinate der Maus in Bildschirmkoordinaten.</param>
+        <param name="y">Die y-Koordinate der Maus in Bildschirmkoordinaten.</param>
+        <summary>Als Antwort auf die linke Maustaste Schaltfläche wird gedrückt gehalten wird, während er sich über die Komponente aufgerufen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird als Antwort auf die linke Maustaste gedrückt wird, für eine Komponente aufgerufen. Der Designer überschreibt Basisformulars von dieser Methode, um eine "Lasso" Auswahlmechanismus für Komponenten innerhalb des Steuerelements bereitzustellen.  
+  
+> [!NOTE]
+>  Sie können einen Punkt in Bildschirmkoordinaten um übergeben der <xref:System.Windows.Forms.Control.PointToClient%2A> Methode der <xref:System.Windows.Forms.Control> Klasse, um die Koordinaten des Punkts relativ zur linken oberen Ecke des Steuerelements abzurufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseDragEnd">
+      <MemberSignature Language="C#" Value="protected override void OnMouseDragEnd (bool cancel);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseDragEnd(bool cancel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ParentControlDesigner.OnMouseDragEnd(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancel" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="cancel">
+          <see langword="true" />um den Ziehvorgang abzubrechen; <see langword="false" /> um es verbindlich.</param>
+        <summary>Wird aufgerufen, am Ende eines Drag-and-Drop-Vorgangs abgeschlossen, oder brechen den Vorgang.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird am Ende eines Ziehvorgangs aufgerufen. Diese Methode ist entweder ein Commit ausgeführt wird oder bricht den Drag &-Vorgang ab.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseDragMove">
+      <MemberSignature Language="C#" Value="protected override void OnMouseDragMove (int x, int y);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseDragMove(int32 x, int32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ParentControlDesigner.OnMouseDragMove(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="x">Die X-Koordinate der Maus in Bildschirmkoordinaten.</param>
+        <param name="y">Die y-Koordinate der Maus in Bildschirmkoordinaten.</param>
+        <summary>Wird für jede Bewegung der Maus während eines Drag &amp; Drop-Vorgangs aufgerufen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird zu Beginn eines Drag-and-Drop-Vorgangs aufgerufen.  
+  
+> [!NOTE]
+>  Sie können einen Punkt in Bildschirmkoordinaten um übergeben der <xref:System.Windows.Forms.Control.PointToClient%2A> Methode der <xref:System.Windows.Forms.Control> Klasse, um die Koordinaten des Punkts relativ zur linken oberen Ecke des Steuerelements abzurufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaintAdornments">
+      <MemberSignature Language="C#" Value="protected override void OnPaintAdornments (System.Windows.Forms.PaintEventArgs pe);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPaintAdornments(class System.Windows.Forms.PaintEventArgs pe) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ParentControlDesigner.OnPaintAdornments(System.Windows.Forms.PaintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pe" Type="System.Windows.Forms.PaintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="pe">Ein <see cref="T:System.Windows.Forms.PaintEventArgs" />, das Daten für das Ereignis bereitstellt.</param>
+        <summary>Wird aufgerufen, wenn das Steuerelement, das der Designer verwaltet Oberfläche gezeichnet wurde, damit der Designer die Darstellung des Steuerelements bearbeiten kann.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSetCursor">
+      <MemberSignature Language="C#" Value="protected override void OnSetCursor ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnSetCursor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ParentControlDesigner.OnSetCursor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bietet die Möglichkeit den aktuelle Mauszeiger ändern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode legt den Cursor nach den folgenden Regeln: Wenn der Toolboxdienst ein Tool ausgewählt ist, kann der Toolboxdienst zum Festlegen des Cursors. Andernfalls wird der Mauszeiger auf den Standard-Mauszeiger festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreFilterProperties">
+      <MemberSignature Language="C#" Value="protected override void PreFilterProperties (System.Collections.IDictionary properties);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PreFilterProperties(class System.Collections.IDictionary properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ParentControlDesigner.PreFilterProperties(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Eine <see cref="T:System.Collections.IDictionary" /> , die die Eigenschaften für die Klasse der Komponente enthält.</param>
+        <summary>Passt die Gruppe von Eigenschaften der Komponente verfügbar, über gemacht wird eine <see cref="T:System.ComponentModel.TypeDescriptor" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies <xref:System.ComponentModel.Design.IDesignerFilter> -Schnittstellenmethode fügt einen Satz von Eigenschaften des Designers-Steuerelement, das einem Benutzer ermöglichen, legen Sie die Optionen in Zusammenhang mit der Ausrichtung Raster anzeigen und die untergeordneten Steuerelemente. Diese Methode fügt die folgenden durchsuchbaren Eigenschaften: `DrawGrid`, `SnapToGrid`, und `GridSize`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SnapLines">
+      <MemberSignature Language="C#" Value="public override System.Collections.IList SnapLines { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IList SnapLines" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.ParentControlDesigner.SnapLines" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste der <see cref="T:System.Windows.Forms.Design.Behavior.SnapLine" /> Objekte, die signifikante Ausrichtungspunkte für dieses Steuerelement darstellt.</summary>
+        <value>Eine Liste der <see cref="T:System.Windows.Forms.Design.Behavior.SnapLine" /> Objekte, die signifikante Ausrichtungspunkte für dieses Steuerelement darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

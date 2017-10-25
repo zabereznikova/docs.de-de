@@ -1,0 +1,87 @@
+<Type Name="StoryBreak" FullName="System.Windows.Documents.DocumentStructures.StoryBreak">
+  <TypeSignature Language="C#" Value="public class StoryBreak : System.Windows.Documents.DocumentStructures.BlockElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StoryBreak extends System.Windows.Documents.DocumentStructures.BlockElement" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.DocumentStructures.StoryBreak" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Documents.DocumentStructures.BlockElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Kennzeichnet den Anfang oder Ende des Textabschnitts besteht eine oder mehrere <see cref="T:System.Windows.Documents.DocumentStructures.StoryFragment" /> Elemente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Windows.Documents.DocumentStructures.StoryBreak> kann nur ein untergeordnetes Element von einem <xref:System.Windows.Documents.DocumentStructures.StoryFragment>.  Darüber hinaus eine <xref:System.Windows.Documents.DocumentStructures.StoryBreak> kann nur das erste untergeordnete Element, letzte untergeordnete Element oder beide der erste und letzte untergeordnete Elemente in einem <xref:System.Windows.Documents.DocumentStructures.StoryFragment>.  Der Speicherort des der <xref:System.Windows.Documents.DocumentStructures.StoryBreak> Element in einer <xref:System.Windows.Documents.DocumentStructures.StoryFragment> gibt an, ob der Textabschnitt in weiteren Fragmenten enthalten ist und wenn zusätzliche Fragmente entweder vor oder nach der aktuellen Fragment.  
+  
+ Ein <xref:System.Windows.Documents.DocumentStructures.StoryBreak> als erstes Element in einem <xref:System.Windows.Documents.DocumentStructures.StoryFragment> gibt den Start einer Story.  
+  
+```  
+<!-- Fragment 1 -->  
+<StoryFragment>  
+  <StoryBreak />   <!-- Identifies the start of a story when          -->  
+                   <!-- immediately after an opening <StoryFragment>. -->  
+  <ParagraphStructure>  
+    <NamedElement NameReference="a" />  
+    <NamedElement NameReference="b" />  
+  </ParagraphStructure>  
+</StoryFragment>   <!-- Story continues in the next <StoryFragment>.  -->  
+```  
+  
+ Ein <xref:System.Windows.Documents.DocumentStructures.StoryBreak> als das letzte Element in einem <xref:System.Windows.Documents.DocumentStructures.StoryFragment> gibt das Ende einer Story.  
+  
+```  
+<!-- Fragment 2 -->  
+<StoryFragment>    <!-- Story continued from prior <StoryFragment>.    -->  
+  <ParagraphStructure>    
+    <NamedElement NameReference="c" />  
+  </ParagraphStructure>  
+  <StoryBreak />   <!-- Identifies the end of a story when             -->  
+                   <!-- immediately before a closing </StoryFragment>. -->  
+</StoryFragment>  
+```  
+  
+ Eine Story, die in einer einzelnen befindet <xref:System.Windows.Documents.DocumentStructures.StoryFragment> verfügen über zwei <xref:System.Windows.Documents.DocumentStructures.StoryBreak> Elemente wie die erste und letzte untergeordnete Elemente des Fragments.  
+  
+```  
+<!-- Fragments 1 and 2 Merged -->  
+<ParagraphStructure>  
+  <NamedElement NameReference="a" />  
+  <NamedElement NameReference="b" />  
+  <NamedElement NameReference="c" />  
+</ParagraphStructure>  
+```  
+  
+ <xref:System.Windows.Documents.DocumentStructures.StoryFragment>Elemente, die vollständig auf einer Seite befinden, beginnen und enden mit werden <xref:System.Windows.Documents.DocumentStructures.StoryBreak> Elemente, da der Inhalt vollständig in einem einzigen Fragment enthalten ist.  
+  
+ Die Position des <xref:System.Windows.Documents.DocumentStructures.StoryBreak> Elemente in einem <xref:System.Windows.Documents.DocumentStructures.StoryFragment> ist nützlich, wenn Sie Inhalte in entweder Forward- oder Reversenamen Richtung an, in das Dokument zugreifen möchten. Beispielsweise beim Zusammenführen von Fragmenten in normaler Reihenfolge eine <xref:System.Windows.Documents.DocumentStructures.StoryFragment> endet mit einem <xref:System.Windows.Documents.DocumentStructures.StoryBreak> gibt an, das Ende der Story "und", es gibt keine weitere Fragmente, die zusammengeführt.  Auf ähnliche Weise beim Zusammenführen von Story Fragmente in umgekehrter Reihenfolge eine <xref:System.Windows.Documents.DocumentStructures.StoryFragment> , beginnt mit einem <xref:System.Windows.Documents.DocumentStructures.StoryBreak> zeigt an, der Anfang der Story "und", es gibt keine vorherige Fragmente, die zusammengeführt.  
+  
+ Die Möglichkeit zum Verarbeiten von Story Fragmente in entweder Forward- oder Reversenamen Richtungen ist wichtig für viele Verwendungszwecke der Anwendung.  Z. B. ein Absatz, die Seitenumbrüche umfasst in mehrere Story Fragmente unterteilt ist ein Fragment für jede Seite.  Eine Benutzeroberfläche, die bietet eine Triple-Click-Funktion aktivieren und einen gesamten Absatz in die Zwischenablage kopieren muss möglicherweise mehrere Story Fragmente zusammenführen, wenn ein Absatz über mehrere Seiten erstreckt.  Außerdem Wenn die Benutzer-Teil eines Absatzes, die auf der ersten Seite beginnt, muss die Anwendung erkennen, die die <xref:System.Windows.Documents.DocumentStructures.StoryFragment> beginnt mit einer <xref:System.Windows.Documents.DocumentStructures.StoryBreak> jedoch endet nicht mit einer <xref:System.Windows.Documents.DocumentStructures.StoryBreak>.  Dies würde angeben, die die <xref:System.Windows.Documents.DocumentStructures.StoryFragment> befindet, auf der nächsten Seite geladen und am Ende des aktuellen Fragments hinzugefügt werden muss.  Auf ähnliche Weise, wenn der Benutzer Triple-Teil des Absatzes befindet sich auf der letzten Seite, die Anwendung muss erkennen, die die <xref:System.Windows.Documents.DocumentStructures.StoryFragment> endet mit einem <xref:System.Windows.Documents.DocumentStructures.StoryBreak> jedoch nicht mit beginnt ein <xref:System.Windows.Documents.DocumentStructures.StoryBreak>.  Dies würde angeben, die die <xref:System.Windows.Documents.DocumentStructures.StoryFragment> also vorhergehenden Seite geladen und auf den Anfang des aktuellen Fragments hinzugefügt werden muss.  Die Anwendung sollte auch in der Lage, sowohl die Forward- und Reversenamen erfahren Sie, wie im Fall von großen Absätze zu verarbeiten, die drei oder mehr Seiten erstrecken, und zeigen Sie die Auswahl des Benutzers, in dem eine innere Seite verwendet.  
+  
+ Da eine <xref:System.Windows.Documents.DocumentStructures.StoryFragment> ist beschränkt auf eine einzelne Seite, die Verwendung von <xref:System.Windows.Documents.DocumentStructures.StoryBreak> Elemente können jeweils <xref:System.Windows.Documents.DocumentStructures.StoryFragment> wohlgeformten XML-Code enthalten, jedoch weiterhin eine hierarchische Struktur im gesamten Dokument bestehen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StoryBreak ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DocumentStructures.StoryBreak.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Documents.DocumentStructures.StoryBreak" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

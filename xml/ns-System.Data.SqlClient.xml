@@ -1,0 +1,16 @@
+<Namespace Name="System.Data.SqlClient">
+  <Docs>
+    <summary>Der <see cref="N:System.Data.SqlClient" />-Namespace ist der .NET Framework-Datenanbieter für SQL Server.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ .NET Framework-Datenanbieter für SQL Server beschreibt eine Auflistung von Klassen, die Zugriff auf eine SQL Server-Datenbank im verwalteten Bereich verwendet. Mithilfe der <xref:System.Data.SqlClient.SqlDataAdapter>, Sie können ggf. eine speicherresidente <xref:System.Data.DataSet> , dass Sie zum Abfragen und Aktualisieren der Datenbank verwenden können.  
+  
+> [!NOTE]
+>  Konzeptionelle Informationen zum Verwenden dieses Namespaces beim Programmieren mit .NET Framework finden Sie unter [SQL Server und ADO.NET](http://msdn.microsoft.com/library/c18b1fb1-2af1-4de7-80a4-95e56fd976cb).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

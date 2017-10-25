@@ -1,0 +1,82 @@
+<Type Name="ServiceDomain" FullName="System.EnterpriseServices.ServiceDomain">
+  <TypeSignature Language="C#" Value="public sealed class ServiceDomain" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ServiceDomain extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.ServiceDomain" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht ein Codesegment identifizierten <see cref="M:System.EnterpriseServices.ServiceDomain.Enter(System.EnterpriseServices.ServiceConfig)" /> und <see cref="M:System.EnterpriseServices.ServiceDomain.Leave" /> im eigenen Kontext ausgeführt und so, als ob sie eine Methode wäre, die für ein Objekt erstellt, die im Kontext aufgerufen wird. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.EnterpriseServices.ServiceDomain.Enter%2A> und <xref:System.EnterpriseServices.ServiceDomain.Leave%2A> Methoden werden paarweise verwendet, um Code zu umgeben, die dann COM+-Dienste verwenden können. Code, der zwischen den Aufrufen eingeschlossen ist <xref:System.EnterpriseServices.ServiceDomain.Enter%2A> und <xref:System.EnterpriseServices.ServiceDomain.Leave%2A> im eigenen Kontext ausgeführt und verhält sich wie eine Methode, die für ein Objekt erstellt, die im Kontext aufgerufen wird. Die <xref:System.EnterpriseServices.ServiceDomain.Enter%2A> und <xref:System.EnterpriseServices.ServiceDomain.Leave%2A> Paare können geschachtelt sein. Es liegt im Ermessen der Benutzer sicherstellen, dass paarweiser von aufrufen, damit jeder Aufruf <xref:System.EnterpriseServices.ServiceDomain.Leave%2A> entspricht einen vorherigen Aufruf von <xref:System.EnterpriseServices.ServiceDomain.Enter%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Enter">
+      <MemberSignature Language="C#" Value="public static void Enter (System.EnterpriseServices.ServiceConfig cfg);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Enter(class System.EnterpriseServices.ServiceConfig cfg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.ServiceDomain.Enter(System.EnterpriseServices.ServiceConfig)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cfg" Type="System.EnterpriseServices.ServiceConfig" />
+      </Parameters>
+      <Docs>
+        <param name="cfg">Ein <see cref="T:System.EnterpriseServices.ServiceConfig" /> , enthält die Konfigurationsinformationen für die Dienste in das eingeschlossene Code verwendet werden.</param>
+        <summary>Erstellt den Kontext, der gemäß den <see cref="T:System.EnterpriseServices.ServiceConfig" /> -Objekt und auf den Kontext des aktuellen Kontexts wird bearbeitungsstapel verschoben wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.EnterpriseServices.ServiceDomain.Enter%2A>erstellt zunächst einen Kontext, konfiguriert gemäß der <xref:System.EnterpriseServices.ServiceConfig> -Objekt, das als übergeben wird, die `cfg` Parameter. Richtlinien auf dem Client und Server Seiten werden dann ausgelöst, als ob ein Methodenaufruf stattgefunden hat. Der neue Kontext wird auf einen Kontextstapel abgelegt und wird von den aktuellen Kontext. Aufgrund ihrer effiziente Designs und da keine Marshallingvorgänge mit beteiligt ist, <xref:System.EnterpriseServices.ServiceDomain.Enter%2A> und <xref:System.EnterpriseServices.ServiceDomain.Leave%2A> umfasst erheblich weniger Aufwand als ein Methodenaufruf entspricht.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.PlatformNotSupportedException">
+          <see cref="T:System.EnterpriseServices.ServiceConfig" />wird auf der aktuellen Plattform nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Leave">
+      <MemberSignature Language="C#" Value="public static System.EnterpriseServices.TransactionStatus Leave ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.EnterpriseServices.TransactionStatus Leave() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.ServiceDomain.Leave" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.TransactionStatus</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird der Server, und klicken Sie dann die clientseitigen Richtlinien ausgelöst, als ob ein Methodenaufruf zurückgegeben wurden. Der aktuelle Kontext wird dann vom kontextstapels und den Kontext, bei dem wurde, geholt <see cref="M:System.EnterpriseServices.ServiceDomain.Enter(System.EnterpriseServices.ServiceConfig)" /> wurde aufgerufen, wird der aktuelle Kontext.</summary>
+        <returns>Einer der <see cref="T:System.EnterpriseServices.TransactionStatus" />-Werte.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.PlatformNotSupportedException">
+          <see cref="T:System.EnterpriseServices.ServiceConfig" />wird auf der aktuellen Plattform nicht unterstützt.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

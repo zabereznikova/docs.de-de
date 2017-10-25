@@ -1,0 +1,123 @@
+<Type Name="MessageQueueAccessControlEntry" FullName="System.Messaging.MessageQueueAccessControlEntry">
+  <TypeSignature Language="C#" Value="public class MessageQueueAccessControlEntry : System.Messaging.AccessControlEntry" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MessageQueueAccessControlEntry extends System.Messaging.AccessControlEntry" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.MessageQueueAccessControlEntry" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Messaging.AccessControlEntry</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt an, auf die Zugriffsrechte für einen Vertrauensnehmer (Benutzer, Gruppe oder Computer), Message Queuing-Aufgaben ausführen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Messaging.MessageQueueAccessControlEntry> Klasse Rechte zuweisen, die ein Vertrauensnehmer angeben. Diese Rechte sind, einsehen, empfangen oder Senden von Nachrichten: Anzeigen oder Ändern von Eigenschaften für eine Warteschlange oder Berechtigungen; und Löschen von Warteschlangen. Die <xref:System.Messaging.MessageQueue> Klasse <xref:System.Messaging.MessageQueue.SetPermissions%2A> -Methode stellt Überladungen für eine Instanz dieser Klasse direkt an die Methode übergeben und das Hinzufügen zu einer Instanz von <xref:System.Messaging.AccessControlList> , damit Sie Rechte für mehrere Vertrauensnehmer zu einem Zeitpunkt hinzugefügt werden können. Am Ende der Warteschlange besitzerverwaltete Zugriffssteuerungsliste (DACL), die identifiziert, die Benutzer und Gruppen, die die Warteschlange zugreifen können, wird das neue Zugriffsrecht angefügt.  
+  
+ Es gibt einige Ausnahmen von dieser Generalisierung zu, wo der neue Rechte hinzugefügt wird und seine Auswirkungen. Weitere Informationen finden Sie unter <xref:System.Messaging>.  
+  
+ Eine Überladung der <xref:System.Messaging.MessageQueueAccessControlEntry.%23ctor%2A> Konstruktor können Sie angeben, eine <xref:System.Messaging.AccessControlEntryType> Member, um anzugeben, ob die Rechte, die dem Vertrauensnehmer gewährt oder verweigert. Die Reihenfolge, in der Rechte gestattet oder verweigert die Ressource DACL, wirkt sich auf, ob die angegebenen Berechtigungen, der Vertrauensnehmer verfügt. Z. B. wenn Rights bereits den Vertrauensnehmer gewährt wurden und Sie später einen Eintrag hinzufügen, die verweigert werden, findet das System zunächst die gewährten Rechte, damit der Benutzer die Rechte gewährt wird eigentlich verweigert werden. Sie können zwei Arten dieses Verhalten außer Kraft setzen: `Set` und `Revoke`. Weitere Informationen zum Steuern der Möglichkeit, in denen der Zugriff Rechte bestimmt sind, finden Sie unter der <xref:System.Messaging.AccessControlEntryType> Enumerationsthema.  
+  
+ Die <xref:System.Messaging.MessageQueueAccessControlEntry> Klasse mit Sicherheit, die anhand von Zugriffssteuerungslisten (ACLs), die Sie verwenden können, erhalten Benutzer Zugriff auf das Message Queuing-System selbst zugeordnet ist. Dies unterscheidet sich von der Codezugriffssicherheit, die durch implementiert wird die <xref:System.Messaging.MessageQueuePermission> und verknüpften Klassen. Message Queuing-Codezugriffssicherheit definiert Warteschlange-spezifische Vorgänge oder Warteschlange zugreifen, die eine Anwendung möglicherweise die vektoroperationen der Sicherheitskontrolle ist; Es stellt ein Recht für die Anwendung diese Vorgänge durchführen oder erhalten Zugriff in und von sich selbst dar. Finden Sie im Thema [&#91;\< Topic://cpconcodeaccesssecurity > &#93; ](http://msdn.microsoft.com/en-us/23a20143-241d-4fe5-9d9f-3933fd594c03) für Weitere Informationen zur Codezugriffssicherheit.  
+  
+ Um Berechtigungen für Meldungswarteschlangen für einen Vertrauensnehmer festzulegen, erstellen Sie eine neue Instanz der der <xref:System.Messaging.AccessControlEntry.Trustee%2A> Klasse, und übergeben Sie ihn an eine Überladung der <xref:System.Messaging.MessageQueueAccessControlEntry.%23ctor%2A> Konstruktor. Geben Sie die Nachricht Warteschlange Zugriffsrechte entweder durch Übergabe einer Instanz von <xref:System.Messaging.MessageQueueAccessRights> an den Konstruktor oder durch Festlegen der <xref:System.Messaging.MessageQueueAccessControlEntry.MessageQueueAccessRights%2A> -Eigenschaft für ein vorhandenes <xref:System.Messaging.MessageQueueAccessControlEntry> Instanz.  
+  
+ Sie können dann übergeben der <xref:System.Messaging.MessageQueueAccessControlEntry> Instanz direkt an die <xref:System.Messaging.MessageQueue.SetPermissions%2A?displayProperty=nameWithType> -Methode, oder fügen Sie den Eintrag klicken Sie alternativ mit einer Instanz von <xref:System.Messaging.AccessControlList> vor dem Aufruf <xref:System.Messaging.MessageQueue.SetPermissions%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageQueueAccessControlEntry (System.Messaging.Trustee trustee, System.Messaging.MessageQueueAccessRights rights);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Messaging.Trustee trustee, valuetype System.Messaging.MessageQueueAccessRights rights) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueAccessControlEntry.#ctor(System.Messaging.Trustee,System.Messaging.MessageQueueAccessRights)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="trustee" Type="System.Messaging.Trustee" />
+        <Parameter Name="rights" Type="System.Messaging.MessageQueueAccessRights" />
+      </Parameters>
+      <Docs>
+        <param name="trustee">Ein <see cref="T:System.Messaging.Trustee" /> , Benutzer, Gruppen, Computer, Domänen oder Alias angibt.</param>
+        <param name="rights">Eine bitweise Kombination der <see cref="T:System.Messaging.MessageQueueAccessRights" /> Werte, die die Kombination der Rechte zu gewähren, die dem Vertrauensnehmer definiert werden.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Messaging.MessageQueueAccessControlEntry" /> -Klasse, die angegebene Message Queuing-Zugriffsrechte erteilt, die dem angegebenen Vertrauensnehmer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Überladung des Konstruktors, die angegebene Vertrauensnehmer Rechte zu gewähren. Die Rechte, die Sie, in angeben der `rights` Parameter sind eine bitweise Kombination von Membern der <xref:System.Messaging.MessageQueueAccessRights> Bitflags, die solche Rechte wie empfangen von Nachrichten, das Löschen von Warteschlangen und das Festlegen von Eigenschaften für eine Warteschlange enthält. Der Konstruktor verwendet, die Rechte, die Sie übergeben diese Instanz festlegen <xref:System.Messaging.MessageQueueAccessControlEntry.MessageQueueAccessRights%2A> Eigenschaft.  
+  
+ Übergeben Sie diese Instanz des <xref:System.Messaging.MessageQueueAccessControlEntry> direkt an eine Überladung der der <xref:System.Messaging.MessageQueue.SetPermissions%2A> Methode, um nur diese Vertrauensnehmer Rechte zu gewähren, oder fügen diese Instanz mit einer <xref:System.Messaging.AccessControlList> vor dem Aufruf <xref:System.Messaging.MessageQueue.SetPermissions%2A> gewähren oder Verweigern von Berechtigungen für mehrere Vertrauensnehmer gleichzeitig.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageQueueAccessControlEntry (System.Messaging.Trustee trustee, System.Messaging.MessageQueueAccessRights rights, System.Messaging.AccessControlEntryType entryType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Messaging.Trustee trustee, valuetype System.Messaging.MessageQueueAccessRights rights, valuetype System.Messaging.AccessControlEntryType entryType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueAccessControlEntry.#ctor(System.Messaging.Trustee,System.Messaging.MessageQueueAccessRights,System.Messaging.AccessControlEntryType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="trustee" Type="System.Messaging.Trustee" />
+        <Parameter Name="rights" Type="System.Messaging.MessageQueueAccessRights" />
+        <Parameter Name="entryType" Type="System.Messaging.AccessControlEntryType" />
+      </Parameters>
+      <Docs>
+        <param name="trustee">Ein <see cref="T:System.Messaging.Trustee" /> , Benutzer, Gruppen, Computer, Domänen oder Alias angibt.</param>
+        <param name="rights">Eine bitweise Kombination der <see cref="T:System.Messaging.MessageQueueAccessRights" /> Werte, die die Kombination der Rechte zu gewähren, die dem Vertrauensnehmer definiert werden.</param>
+        <param name="entryType">Eines der <see cref="T:System.Messaging.AccessControlEntryType" /> Werte, der angibt, ob zulassen, verweigern, festlegen oder die angegebenen Berechtigungen zu widerrufen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Messaging.MessageQueueAccessControlEntry" /> -Klasse, mit dem angegebenen Vertrauensnehmer und Message Queuing-Zugriffsrechte. Der Typ des Zugriffs (z. B. <see langword="Allow" /> oder <see langword="Deny" />) wird durch den übergebenen Eintragstyp definiert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Überladung des Konstruktors gewähren oder Verweigern von Berechtigungen für den angegebenen Vertrauensnehmer. Die Rechte, die Sie, in angeben der `rights` Parameter sind eine bitweise Kombination von Membern der <xref:System.Messaging.MessageQueueAccessRights> Bitflags, die solche Rechte wie empfangen von Nachrichten, das Löschen von Warteschlangen und das Festlegen von Eigenschaften für eine Warteschlange enthält. Der Konstruktor verwendet, die Rechte, die Sie übergeben diese Instanz festlegen <xref:System.Messaging.MessageQueueAccessControlEntry.MessageQueueAccessRights%2A> Eigenschaft.  
+  
+ Weitere Informationen über das gewähren oder Verweigern von Berechtigungen finden Sie unter der <xref:System.Messaging.AccessControlEntryType> Thema. Bei beiden Elementen `Allow` und `Deny`, möglicherweise bereits vorhandenen und möglicherweise widersprüchlich Zugriffsrechte, sodass die Reihenfolge, in der die Berechtigungen angezeigt, in die Warteschlange besitzverwalteten Zugriffssteuerungsliste (DACL werden) beeinflusst, ob das Recht letztlich gewährt wird . Zwei andere Member `Set` und `Revoke`, überschreiben alle vorhandenen Rechte. Verwenden Sie das Element, dessen Verhalten kann auf die Anwendung angewendet werden.  
+  
+ Übergeben Sie diese Instanz des <xref:System.Messaging.MessageQueueAccessControlEntry> direkt an eine Überladung der der <xref:System.Messaging.MessageQueue.SetPermissions%2A> Methode erteilen oder Verweigern von Berechtigungen nur diesem Vertrauensnehmer oder fügen diese Instanz mit einer <xref:System.Messaging.AccessControlList> vor dem Aufruf <xref:System.Messaging.MessageQueue.SetPermissions%2A> gewähren oder Verweigern von Berechtigungen für mehrere Vertrauensnehmer gleichzeitig.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageQueueAccessRights">
+      <MemberSignature Language="C#" Value="public System.Messaging.MessageQueueAccessRights MessageQueueAccessRights { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Messaging.MessageQueueAccessRights MessageQueueAccessRights" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueAccessControlEntry.MessageQueueAccessRights" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueueAccessRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt sie fest von Message Queuing-spezifische Berechtigungen, die dem Vertrauensnehmer angewendet.</summary>
+        <value>Eine bitweise Kombination der <see cref="T:System.Messaging.MessageQueueAccessRights" /> Elemente. Die Standardeinstellung ist definiert, durch die <paramref name="rights" /> Parameter an den Konstruktor übergeben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Messaging.MessageQueueAccessControlEntry.MessageQueueAccessRights%2A> Eigenschaft ermöglicht Ihnen die Angabe von Message Queuing objektspezifischen Rechte wie z. B. empfangen, einsehen, oder Schreiben von Nachrichten oder Festlegen der Eigenschaften für eine Warteschlange. Der Wert dieser Eigenschaft wird festgelegt, durch die <xref:System.Messaging.MessageQueueAccessControlEntry.%23ctor%2A> Konstruktor, aber Sie können ändern, es zu einem beliebigen Zeitpunkt vor der Verwendung dieser Instanz von <xref:System.Messaging.MessageQueueAccessControlEntry> in einem Aufruf von <xref:System.Messaging.MessageQueue.SetPermissions%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

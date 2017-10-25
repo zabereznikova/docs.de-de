@@ -1,0 +1,81 @@
+<Type Name="ObjectListViewMode" FullName="System.Web.UI.MobileControls.ObjectListViewMode">
+  <TypeSignature Language="C#" Value="public enum ObjectListViewMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ObjectListViewMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.ObjectListViewMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt den Anzeigemodus der Objektliste an. Diese Klasse kann nicht vererbt werden. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Anzeigemodus kann über die <xref:System.Web.UI.MobileControls.ObjectList.ViewMode%2A> Eigenschaft. Diese Enumeration ermöglicht dem Benutzer, die den aktuellen Anzeigemodus der Festlegen der <xref:System.Web.UI.MobileControls.ObjectList> Steuerelement. Ist ein <xref:System.Web.UI.MobileControls.ObjectList> mit einer Elementvorlage, versehen Sie jedes Element eine Schaltfläche, behandelt das Click-Ereignis auf die Schaltfläche "" und legen Sie den Ansichtsmodus auf die `Details` anzeigen, um die Details anzuzeigen.  
+  
+> [!NOTE]
+>  Sie müssen zuerst ein Element auswählen, vor dem Festlegen dieser Enumeration auf `Commands` oder `Details` anzeigen. Fehler beim Festlegen der Enumeration vor dem Auswählen eines Elements löst eine Ausnahme aus.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Commands">
+      <MemberSignature Language="C#" Value="Commands" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.MobileControls.ObjectListViewMode Commands = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.ObjectListViewMode.Commands" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.ObjectListViewMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ansicht WML Befehl. Dies ist die Standardansicht angezeigt, wenn die Seite mit der Objektliste zum ersten Mal gerendert wird. Es umfasst entweder die Beschriftung der Elemente oder (wenn TableFields nicht leer ist) eine Tabelle mit Spalten, die die Tabellenfelder und Zeilen, die Elementen entsprechen. Wenn weitere Informationen stehen in der <see langword="Details" /> anzeigen, einen Link für jedes Element anzeigen der <see langword="Details" /> Ansicht gerendert wird, von der Standardeinstellung lesen <see langword="More" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Details">
+      <MemberSignature Language="C#" Value="Details" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.MobileControls.ObjectListViewMode Details = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.ObjectListViewMode.Details" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.ObjectListViewMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Detailansicht. In dieser Ansicht werden nur für WML-Geräten wird separat dargestellt. Es besteht ein Menü mit Befehlen, die %ObjectList, zusammen mit einem Menüelement zum Anzeigen der <see langword="Details" /> anzeigen. In dieser Ansicht wird für HTML-Geräte mit kombiniert die <see langword="Details" /> Ansicht mit den Befehlen, die als Links unterhalb der Details angezeigt werden. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="List">
+      <MemberSignature Language="C#" Value="List" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.MobileControls.ObjectListViewMode List = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.ObjectListViewMode.List" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.ObjectListViewMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Listenansicht "-". Diese Ansicht zeigt jedes Feld des Elements, einschließlich Titel und Wert. In dieser Ansicht wird im HTML-Code mit kombiniert die <see langword="Commands" /> Ansicht mit den Befehlen, die als Links unterhalb der Details angezeigt werden. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,65 @@
+<Type Name="DataServiceHostFactory" FullName="System.Data.Services.DataServiceHostFactory">
+  <TypeSignature Language="C#" Value="public class DataServiceHostFactory : System.ServiceModel.Activation.ServiceHostFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataServiceHostFactory extends System.ServiceModel.Activation.ServiceHostFactory" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.DataServiceHostFactory" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Activation.ServiceHostFactory</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Klasse, die von der Infrastruktur von WCF Data Services verwendet werden, die Verbindung zu Windows Communication Foundation (WCF).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse ermöglicht es [!INCLUDE[ssAstoria](~/includes/ssastoria-md.md)], in WCF als unformatierter HTTP-Handler eingebunden zu werden. Nicht empfohlen zur Verwendung durch Drittanbieter.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataServiceHostFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.DataServiceHostFactory.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Data.Services.DataServiceHostFactory" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateServiceHost">
+      <MemberSignature Language="C#" Value="protected override System.ServiceModel.ServiceHost CreateServiceHost (Type serviceType, Uri[] baseAddresses);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.ServiceModel.ServiceHost CreateServiceHost(class System.Type serviceType, class System.Uri[] baseAddresses) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.DataServiceHostFactory.CreateServiceHost(System.Type,System.Uri[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ServiceHost</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+        <Parameter Name="baseAddresses" Type="System.Uri[]" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">Gibt den Typ des WCF-Dienst zum Hosten.</param>
+        <param name="baseAddresses">Ein Array von Basisadressen für den Dienst.</param>
+        <summary>Erstellt einen neuen <see cref="T:System.Data.Services.DataServiceHost" /> aus dem URI.</summary>
+        <returns>Das erstellte <see cref="T:System.Data.Services.DataServiceHost" />-Objekt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

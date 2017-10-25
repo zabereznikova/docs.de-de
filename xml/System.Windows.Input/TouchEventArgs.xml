@@ -1,0 +1,190 @@
+<Type Name="TouchEventArgs" FullName="System.Windows.Input.TouchEventArgs">
+  <TypeSignature Language="C#" Value="public class TouchEventArgs : System.Windows.Input.InputEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TouchEventArgs extends System.Windows.Input.InputEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.TouchEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Input.InputEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für die Fingereingabe Eingabeereignisse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die folgenden Ereignisse <xref:System.Windows.Input.TouchEventArgs>.  
+  
+-   <xref:System.Windows.UIElement.TouchUp?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.UIElement.TouchDown?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.UIElement.TouchEnter?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.UIElement.TouchLeave?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.UIElement.TouchMove?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.UIElement3D.TouchUp?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.UIElement3D.TouchDown?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.UIElement3D.TouchEnter?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.UIElement3D.TouchLeave?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.UIElement3D.TouchMove?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.TouchUp?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.TouchDown?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.TouchEnter?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.TouchLeave?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.TouchMove?displayProperty=nameWithType>  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel verarbeitet die <xref:System.Windows.UIElement.TouchUp> Ereignisse eine <xref:System.Windows.Controls.Canvas>. Er überprüft die <xref:System.Windows.Input.TouchDevice.Captured%2A> Eigenschaft, um sicherzustellen, dass das Gerät, das das Ereignis ausgelöst hat, erfasst wird die <xref:System.Windows.Controls.Canvas>. Wenn dies der Fall, die <xref:System.Windows.Input.TouchDevice> freigegeben wird.  
+  
+ In diesem Beispiel ist Teil eines umfangreicheren Beispiels, das in verfügbar ist die <xref:System.Windows.Input.TouchDevice> -Klassenübersicht.  
+  
+ [!code-csharp[TouchEventsSample#130](~/samples/snippets/csharp/VS_Snippets_Wpf/toucheventssample/cs/mainwindow.xaml.cs#130)]
+ [!code-vb[TouchEventsSample#130](~/samples/snippets/visualbasic/VS_Snippets_Wpf/toucheventssample/vb/mainwindow.xaml.vb#130)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TouchEventArgs (System.Windows.Input.TouchDevice touchDevice, int timestamp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Input.TouchDevice touchDevice, int32 timestamp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.TouchEventArgs.#ctor(System.Windows.Input.TouchDevice,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="touchDevice" Type="System.Windows.Input.TouchDevice" />
+        <Parameter Name="timestamp" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="touchDevice">Das Eingabegerät, dieses Ereignis zugeordnet werden soll.</param>
+        <param name="timestamp">Der Zeitpunkt des Auftretens die Eingabe.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Input.TouchEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIntermediateTouchPoints">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.TouchPointCollection GetIntermediateTouchPoints (System.Windows.IInputElement relativeTo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Input.TouchPointCollection GetIntermediateTouchPoints(class System.Windows.IInputElement relativeTo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.TouchEventArgs.GetIntermediateTouchPoints(System.Windows.IInputElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.TouchPointCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relativeTo" Type="System.Windows.IInputElement" />
+      </Parameters>
+      <Docs>
+        <param name="relativeTo">Das Element, das den Koordinatenbereich definiert.</param>
+        <summary>Gibt alle Berührungspunkte zwischen dem aktuellen und vorherigen gesammelten Berührungsereignisse.</summary>
+        <returns>Alle Berührungspunkte, die zwischen dem aktuellen und vorherigen erfasst wurden Berührungsereignisse.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTouchPoint">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.TouchPoint GetTouchPoint (System.Windows.IInputElement relativeTo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Input.TouchPoint GetTouchPoint(class System.Windows.IInputElement relativeTo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.TouchEventArgs.GetTouchPoint(System.Windows.IInputElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.TouchPoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relativeTo" Type="System.Windows.IInputElement" />
+      </Parameters>
+      <Docs>
+        <param name="relativeTo">Das Element, das den Koordinatenbereich definiert.</param>
+        <summary>Gibt die aktuelle Position des Geräts Touch relativ zum angegebenen Element zurück.</summary>
+        <returns>Die aktuelle Position des Geräts Touch relativ zum angegebenen Element.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeEventHandler">
+      <MemberSignature Language="C#" Value="protected override void InvokeEventHandler (Delegate genericHandler, object genericTarget);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InvokeEventHandler(class System.Delegate genericHandler, object genericTarget) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.TouchEventArgs.InvokeEventHandler(System.Delegate,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="genericHandler" Type="System.Delegate" />
+        <Parameter Name="genericTarget" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="genericHandler">Der generische Handler auf eine Weise typspezifische aufrufen.</param>
+        <param name="genericTarget">Das Ziel, auf dem den Handler aufgerufen werden soll.</param>
+        <summary>-Ereignishandler aufgerufen werden typspezifische versehen, Ereignis-System-Effizienz steigern können.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Implementierung wandelt den generischen Handler als ein <xref:System.EventHandler%601> des Typs <xref:System.Windows.Input.TouchEventArgs> und ruft ihn dann auf. Weitere Informationen zu diesem Implementierungsmuster und die Gründe dafür, finden Sie unter <xref:System.Windows.RoutedEventArgs.InvokeEventHandler%2A> und [Ereignisübersicht weitergeleitet](~/docs/framework/wpf/advanced/routed-events-overview.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TouchDevice">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.TouchDevice TouchDevice { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.TouchDevice TouchDevice" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.TouchEventArgs.TouchDevice" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.TouchDevice</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Fingereingabe, die das Ereignis generiert hat.</summary>
+        <value>Die Fingereingabe, die das Ereignis generiert hat.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel verarbeitet die <xref:System.Windows.UIElement.TouchUp> Ereignisse eine <xref:System.Windows.Controls.Canvas>. Er überprüft die <xref:System.Windows.Input.TouchDevice.Captured%2A> Eigenschaft, um sicherzustellen, dass das Gerät, das das Ereignis ausgelöst hat, erfasst wird die <xref:System.Windows.Controls.Canvas>. Wenn dies der Fall, die <xref:System.Windows.Input.TouchDevice> freigegeben wird.  
+  
+ In diesem Beispiel ist Teil eines umfangreicheren Beispiels, das in verfügbar ist die <xref:System.Windows.Input.TouchDevice> -Klassenübersicht.  
+  
+ [!code-csharp[TouchEventsSample#130](~/samples/snippets/csharp/VS_Snippets_Wpf/toucheventssample/cs/mainwindow.xaml.cs#130)]
+ [!code-vb[TouchEventsSample#130](~/samples/snippets/visualbasic/VS_Snippets_Wpf/toucheventssample/vb/mainwindow.xaml.vb#130)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

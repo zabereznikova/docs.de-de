@@ -1,0 +1,6 @@
+<Namespace Name="System.Deployment.Internal">
+  <Docs>
+    <summary>Die <see cref="N:System.Deployment.Internal" /> -Namespace enthält Hilfsklassen für den Zugriff auf die internen Member des <see cref="T:System.ActivationContext" /> und <see cref="T:System.ApplicationIdentity" /> Objekte.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

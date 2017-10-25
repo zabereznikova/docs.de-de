@@ -1,0 +1,18 @@
+<Namespace Name="System.Xml.Schema">
+  <Docs>
+    <summary>Die <see cref="N:System.Xml.Schema" /> -Namespace enthält die XML-Klassen, die standardisierte Unterstützung für XML Schemadefinition Language (XSD)-Schemas bereitstellen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  -   Verwenden Sie keine Schemata aus unbekannten oder nicht vertrauenswürdigen Quellen oder Speicherorte. Auf diese Weise gefährdet die Sicherheit des Codes.  
+> -   XML-Schemas (auch Inlineschemas) sind von Natur aus anfällig für DOS-Angriffe. Akzeptieren Sie diese nicht in nicht vertrauenswürdigen Szenarien.  
+> -   Schema-Validation-Fehlermeldungen und Ausnahmen möglicherweise vertrauliche Informationen zu den Inhaltsmodell oder die Pfade der URI der Schemadatei verfügbar machen. Achten Sie darauf, dass Sie nicht diese Informationen nicht vertrauenswürdige Aufrufer verfügbar zu machen.  
+> -   Weitere Überlegungen zur Sicherheit finden Sie im Abschnitt "Hinweise" der APIs in diesem Namespace.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

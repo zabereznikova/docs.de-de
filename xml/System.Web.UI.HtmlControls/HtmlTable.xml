@@ -1,0 +1,697 @@
+<Type Name="HtmlTable" FullName="System.Web.UI.HtmlControls.HtmlTable">
+  <TypeSignature Language="C#" Value="public class HtmlTable : System.Web.UI.HtmlControls.HtmlContainerControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HtmlTable extends System.Web.UI.HtmlControls.HtmlContainerControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.HtmlControls.HtmlTable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.HtmlControls.HtmlContainerControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(true, "Rows")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht den programmgesteuerten Zugriff auf dem Server, auf das HTML <see langword="&lt;table&gt;" /> Element.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.HtmlControls.HtmlTable> steuern, programmgesteuert HTML `<table>` Element auf dem Server. Dies ermöglicht Ihnen die Erstellung eine Tabelle auf einer Webseite.  
+  
+ Sie können die Darstellung der dynamisch ändern die `<table>` Element durch Festlegen der <xref:System.Web.UI.HtmlControls.HtmlTable.BgColor%2A>, <xref:System.Web.UI.HtmlControls.HtmlTable.Border%2A>, <xref:System.Web.UI.HtmlControls.HtmlTable.BorderColor%2A>, <xref:System.Web.UI.HtmlControls.HtmlTable.Height%2A>, und <xref:System.Web.UI.HtmlControls.HtmlTable.Width%2A> Eigenschaften. Sie können auch steuern, wie der Inhalt einer Zelle angezeigt wird, durch Festlegen der <xref:System.Web.UI.HtmlControls.HtmlTable.Align%2A>, <xref:System.Web.UI.HtmlControls.HtmlTable.CellPadding%2A>, und <xref:System.Web.UI.HtmlControls.HtmlTable.CellSpacing%2A> Eigenschaften.  
+  
+ Die Zeilen der <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement werden gespeichert, der <xref:System.Web.UI.HtmlControls.HtmlTable.Rows%2A> Eigenschaft des Steuerelements. Dadurch können Sie programmgesteuert auf die einzelnen Zeilen der Tabelle zugreifen.  
+  
+> [!NOTE]
+>  Ein komplexes Tabellenmodell wird nicht unterstützt. Sie sind kein <xref:System.Web.UI.HtmlControls.HtmlTable> -Steuerelement mit geschachtelten `<caption>`, `<col>`, `<colgroup>`, `<tbody>`, `<thead>`, oder `<tfoot>` Elemente. Diese Elemente werden entfernt, ohne Warnung und werden nicht in der HTML-Ausgabe angezeigt. Eine Ausnahme wird ausgelöst, wenn Sie versuchen, programmgesteuert diese Tabelle Modell zum Hinzufügen von Elementen der <xref:System.Web.UI.Control.Controls%2A?displayProperty=nameWithType> Auflistung von der <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement.  
+  
+ Eine Liste der anfänglichen Eigenschaftenwerte für eine Instanz von <xref:System.Web.UI.HtmlControls.HtmlTable>, finden Sie unter der <xref:System.Web.UI.HtmlControls.HtmlTable.%23ctor%2A> Konstruktor.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie ein <xref:System.Web.UI.HtmlControls.HtmlTable> -Steuerelement zum Anzeigen von Informationen in einer Tabelle.  
+  
+ [!code-aspx-csharp[HtmlTableAppearance#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlTableAppearance/CS/htmltablebgcolorcs.aspx#1)]
+ [!code-aspx-vb[HtmlTableAppearance#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlTableAppearance/VB/htmltablebgcolorvb.aspx#1)]  
+  
+ Im folgenden Codebeispiel wird veranschaulicht, wie dynamisch erstellen eine <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement.  
+  
+ [!code-aspx-csharp[HtmlTable#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlTable/CS/htmltablecs.aspx#1)]
+ [!code-aspx-vb[HtmlTable#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlTable/VB/htmltablevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HtmlTable ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlTable.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.HtmlControls.HtmlTable" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor erstellt und initialisiert eine neue Instanz der dem <xref:System.Web.UI.HtmlControls.HtmlTable> Klasse.  
+  
+ Die folgende Tabelle zeigt die anfängliche Eigenschaftswert für eine Instanz von <xref:System.Web.UI.HtmlControls.HtmlTable>.  
+  
+|Eigenschaft|Anfangswert|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.HtmlControls.HtmlControl.TagName%2A>|Das Zeichenfolgenliteral "Table".|  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine neue Instanz der programmgesteuerten Erstellung einer <xref:System.Web.UI.HtmlControls.HtmlTable> steuern und platzieren Sie es auf der Webseite.  
+  
+ [!code-aspx-csharp[HtmlTableCtor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlTableCtor/CS/htmltablectorcs.aspx#1)]
+ [!code-aspx-vb[HtmlTableCtor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlTableCtor/VB/htmltablectorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Align">
+      <MemberSignature Language="C#" Value="public string Align { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Align" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlTable.Align" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Ausrichtung der <see cref="T:System.Web.UI.HtmlControls.HtmlTable" /> Steuerelement in Bezug auf andere Elemente auf der Webseite.</summary>
+        <value>Die Ausrichtung der <see cref="T:System.Web.UI.HtmlControls.HtmlTable" /> Steuerelement in Bezug auf andere Elemente auf der Webseite. Der Standardwert ist <see cref="F:System.String.Empty" />, was bedeutet, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.HtmlControls.HtmlTable.Align%2A> Eigenschaft zum Angeben der Ausrichtung des der <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement in Bezug auf andere Elemente auf der Webseite.  
+  
+> [!NOTE]
+>  Diese Eigenschaft steuert nicht die Ausrichtung des Inhalts der Zellen in der <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement. Verwenden Sie zum Steuern der Ausrichtung des Inhalts einer einzelnen Zelle der <xref:System.Web.UI.HtmlControls.HtmlTableCell.Align%2A> und <xref:System.Web.UI.HtmlControls.HtmlTableCell.VAlign%2A> Eigenschaften der <xref:System.Web.UI.HtmlControls.HtmlTableCell> Klasse. Sie können die Ausrichtung des Inhalts der Zellen in eine ganze Zeile auch steuern, indem Sie mit der <xref:System.Web.UI.HtmlControls.HtmlTableRow.Align%2A> und <xref:System.Web.UI.HtmlControls.HtmlTableRow.VAlign%2A> Eigenschaften der <xref:System.Web.UI.HtmlControls.HtmlTableRow> Klasse.  
+  
+ Die folgende Tabelle enthält die Werte, die für diese Eigenschaft verwendet werden können.  
+  
+|Wert|Beschreibung|  
+|-----------|-----------------|  
+|`Left`|Richtet die <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement am linken Rand der Webseite.|  
+|`Center`|Richtet die <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement in der Mitte der Webseite.|  
+|`Right`|Richtet die <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement auf dem rechten Rand der Webseite.|  
+  
+> [!NOTE]
+>  Bei Angabe von `Left` oder `Right` Ausrichtung, die Elemente auf der Webseite werden nach rechts oder links von umschließen die <xref:System.Web.UI.HtmlControls.HtmlTable> bzw. zu steuern. Bei Angabe von `Center` Ausrichtung, erfolgt kein Umbruch und andere Elemente unterhalb des Steuerelements angezeigt werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlTable.Align%2A> Eigenschaft zum Angeben der Ausrichtung des der <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement in Bezug auf andere Elemente auf der Webseite.  
+  
+ [!code-aspx-csharp[HtmlTableLayout#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlTableLayout/CS/htmltablealigncs.aspx#1)]
+ [!code-aspx-vb[HtmlTableLayout#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlTableLayout/VB/htmltablealignvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BgColor">
+      <MemberSignature Language="C#" Value="public string BgColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BgColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlTable.BgColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Hintergrundfarbe der <see cref="T:System.Web.UI.HtmlControls.HtmlTable" /> Steuerelement.</summary>
+        <value>Die Hintergrundfarbe der <see cref="T:System.Web.UI.HtmlControls.HtmlTable" /> Steuerelement. Der Standardwert ist <see cref="F:System.String.Empty" />, was bedeutet, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.HtmlControls.HtmlTable.BgColor%2A> -Eigenschaft die Farbe des Hintergrunds des an die <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement. Sie können eine Farbe angeben, nach Namen oder einen hexadezimalen Wert, der das erste Zeichen vorangestellt (#), in der Form #RRGGBB. RR, GG und BB stellen hexadezimale Werten von 0 bis 255, die jeweils, die Rot-, Grün- und blauen-Komponenten eine Farbe angeben dar. Der Wert #0000FF stellt beispielsweise die Farbe Blau. Es gibt den minimalen Wert (00) für die Komponenten roten, grünen, beim Festlegen des maximalen Wert (FF) für die blaue Komponente.  
+  
+ Die folgende Tabelle zeigt die sechzehn vordefinierten HTML-Farbnamen und entsprechenden Hexadezimalwerte, die für verwendet werden, können die <xref:System.Web.UI.HtmlControls.HtmlTable.BgColor%2A> Eigenschaft. Weitere Informationen über HTML-Farben finden Sie unter der [Website des World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/?linkid=37125).  
+  
+|Name der Farbe|Hexadezimalwert|  
+|----------------|-----------------------|  
+|Aqua|#00FFFF|  
+|Schwarz|#000000|  
+|Blau|#0000FF|  
+|Fuchsie|#FF00FF|  
+|Grau|#808080|  
+|Grün|#008000|  
+|Lime|#00FF00|  
+|Kastanienbraun|#800000|  
+|Dunkelblaue|#000080|  
+|Olivenöl|#808000|  
+|Violette|#800080|  
+|Rot|#FF0000|  
+|Silber|#C0C0C0|  
+|Blaugrün|#008080|  
+|Weiß|#FFFFFF|  
+|Gelb|#FFFF00|  
+  
+ Die verfügbaren Farben für die Verwendung mit der <xref:System.Web.UI.HtmlControls.HtmlTable.BgColor%2A> -Eigenschaft bestimmt werden kann, aus der <xref:System.Drawing.KnownColor> Enumeration.  
+  
+ Farbnamen Groß-/Kleinschreibung unterschieden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlTable.BgColor%2A> Eigenschaft, um die Hintergrundfarbe des programmgesteuert steuern die <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement.  
+  
+ [!code-aspx-csharp[HtmlTableAppearance#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlTableAppearance/CS/htmltablebgcolorcs.aspx#1)]
+ [!code-aspx-vb[HtmlTableAppearance#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlTableAppearance/VB/htmltablebgcolorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Border">
+      <MemberSignature Language="C#" Value="public int Border { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Border" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlTable.Border" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(-1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Breite (in Pixel) des Rahmens, der die <see cref="T:System.Web.UI.HtmlControls.HtmlTable" /> Steuerelement.</summary>
+        <value>Die Breite (in Pixel) des Rahmens des ein <see cref="T:System.Web.UI.HtmlControls.HtmlTable" /> Steuerelement. Der Standardwert ist-1 und bedeutet, dass die Rahmenbreite nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.HtmlControls.HtmlTable.Border%2A> Eigenschaft, um die Breite des Rahmens anzugeben. Wenn Sie nicht, um einen Rahmen für anzuzeigen möchten die <xref:System.Web.UI.HtmlControls.HtmlTable> steuern, legen Sie diese Eigenschaft auf 0 (keine Rahmenbreite) oder-1 (Rahmenbreite nicht festgelegt ist).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlTable.Border%2A> Eigenschaft, um die Rahmenbreite des programmgesteuert steuern die <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement.  
+  
+ [!code-aspx-csharp[HtmlTableAppearance#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlTableAppearance/CS/htmltablebgcolorcs.aspx#1)]
+ [!code-aspx-vb[HtmlTableAppearance#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlTableAppearance/VB/htmltablebgcolorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderColor">
+      <MemberSignature Language="C#" Value="public string BorderColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BorderColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlTable.BorderColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Farbe des Rahmens, der die <see cref="T:System.Web.UI.HtmlControls.HtmlTable" /> Steuerelement.</summary>
+        <value>Farbe des Rahmens, der die <see cref="T:System.Web.UI.HtmlControls.HtmlTable" /> Steuerelement. Der Standardwert ist <see cref="F:System.String.Empty" />, was bedeutet, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.HtmlControls.HtmlTable.BorderColor%2A> -Eigenschaft die Farbe des Rahmens des an die <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement. Sie können eine Farbe angeben, nach Namen oder einen hexadezimalen Wert, der das erste Zeichen vorangestellt (#), in der Form #RRGGBB. RR, GG und BB stellen hexadezimale Werten von 0 bis 255, die jeweils, die Rot-, Grün- und blauen-Komponenten eine Farbe angeben dar. Der Wert #0000FF stellt beispielsweise die Farbe Blau. Es gibt den minimalen Wert (00) für die Komponenten roten, grünen, beim Festlegen des maximalen Wert (FF) für die blaue Komponente.  
+  
+ Die folgende Tabelle zeigt die sechzehn vordefinierten HTML-Farbnamen und entsprechenden Hexadezimalwerte, die für verwendet werden, können die <xref:System.Web.UI.HtmlControls.HtmlTable.BorderColor%2A> Eigenschaft. Weitere Informationen über HTML-Farben finden Sie unter der [Website des World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/?linkid=37125).  
+  
+|Name der Farbe|Hexadezimalwert|  
+|----------------|-----------------------|  
+|Aqua|#00FFFF|  
+|Schwarz|#000000|  
+|Blau|#0000FF|  
+|Fuchsie|#FF00FF|  
+|Grau|#808080|  
+|Grün|#008000|  
+|Lime|#00FF00|  
+|Kastanienbraun|#800000|  
+|Dunkelblaue|#000080|  
+|Olivenöl|#808000|  
+|Violette|#800080|  
+|Rot|#FF0000|  
+|Silber|#C0C0C0|  
+|Blaugrün|#008080|  
+|Weiß|#FFFFFF|  
+|Gelb|#FFFF00|  
+  
+ Die verfügbaren Farben für die Verwendung mit der <xref:System.Web.UI.HtmlControls.HtmlTable.BorderColor%2A> -Eigenschaft bestimmt werden kann, aus der <xref:System.Drawing.KnownColor> Enumeration.  
+  
+ Farbnamen Groß-/Kleinschreibung unterschieden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlTable.BorderColor%2A> Eigenschaft, um die Farbe des Rahmens des programmgesteuert steuern die <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement.  
+  
+ [!code-aspx-csharp[HtmlTableAppearance#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlTableAppearance/CS/htmltablebgcolorcs.aspx#1)]
+ [!code-aspx-vb[HtmlTableAppearance#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlTableAppearance/VB/htmltablebgcolorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CellPadding">
+      <MemberSignature Language="C#" Value="public int CellPadding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CellPadding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlTable.CellPadding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Größe des Speicherplatzes (in Pixel) zwischen dem Inhalt einer Zelle und dem Zellenrahmen in die <see cref="T:System.Web.UI.HtmlControls.HtmlTable" /> Steuerelement.</summary>
+        <value>Die Menge des Speicherplatzes (in Pixel) zwischen dem Inhalt einer Zelle und dem Zellenrahmen in die <see cref="T:System.Web.UI.HtmlControls.HtmlTable" /> Steuerelement. Der Standardwert ist-1 und bedeutet, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.HtmlControls.HtmlTable.CellPadding%2A> Eigenschaft, um den Abstand zwischen dem Inhalt einer Zelle und dem Zellenrahmen steuern. Der angegebene Leerraum wird allen vier Seiten der Zelle hinzugefügt. Alle Zellen in einer Spalte teilen die gleiche Zellenbreite. aus diesem Grund wird der Abstand der breitesten Zelle in der Spalte angewendet. Auf ähnliche Weise freigeben, alle Zellen in der gleichen Zeile dieselbe Höhe. Der Abstand wird auf die höchste Zelle in der Zeile angewendet. Größe der einzelnen Zelle können nicht angegeben werden.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlTable.CellPadding%2A> Eigenschaft, um den Abstand zwischen dem Inhalt der Zelle und dem Zellenrahmen in programmgesteuert zu steuern die <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement.  
+  
+ [!code-aspx-csharp[HtmlTableLayout#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlTableLayout/CS/htmltablealigncs.aspx#1)]
+ [!code-aspx-vb[HtmlTableLayout#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlTableLayout/VB/htmltablealignvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CellSpacing">
+      <MemberSignature Language="C#" Value="public int CellSpacing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CellSpacing" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlTable.CellSpacing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Größe des Speicherplatzes (in Pixel) zwischen angrenzenden Zellen in der <see cref="T:System.Web.UI.HtmlControls.HtmlTable" /> Steuerelement.</summary>
+        <value>Die Menge des Speicherplatzes (in Pixel) zwischen angrenzenden Zellen in der <see cref="T:System.Web.UI.HtmlControls.HtmlTable" /> Steuerelement. Der Standardwert ist-1 und bedeutet, dass diese Eigenschaft nicht festgelegt ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.HtmlControls.HtmlTable.CellSpacing%2A> Eigenschaft, um den Abstand zwischen den einzelnen Zellen in steuern die <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement. Dieser Abstand wird vertikal und horizontal angewendet.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlTable.CellSpacing%2A> Eigenschaft, um den Abstand von Zellen in programmgesteuert zu steuern die <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement.  
+  
+ [!code-aspx-csharp[HtmlTableLayout#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlTableLayout/CS/htmltablealigncs.aspx#1)]
+ [!code-aspx-vb[HtmlTableLayout#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlTableLayout/VB/htmltablealignvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateControlCollection">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.ControlCollection CreateControlCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.ControlCollection CreateControlCollection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlTable.CreateControlCollection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues <see cref="T:System.Web.UI.ControlCollection" /> -Objekt für die <see cref="T:System.Web.UI.HtmlControls.HtmlTable" /> Steuerelement.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.ControlCollection" /> , enthält die <see cref="T:System.Web.UI.HtmlControls.HtmlTable" /> untergeordneten Steuerelemente des Steuerelements.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlTable.CreateControlCollection%2A> Methode erstellt eine <xref:System.Web.UI.ControlCollection> -Objekt, das zum Aufnehmen von Tabellenzeilen verwendet wird.  
+  
+ Die <xref:System.Web.UI.HtmlControls.HtmlTable.CreateControlCollection%2A> Methode wird hauptsächlich von Steuerelemententwicklern zum Erweitern der Funktionalität von Interesse der <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public string Height { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Height" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlTable.Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Höhe der <see cref="T:System.Web.UI.HtmlControls.HtmlTable" /> Steuerelement.</summary>
+        <value>Die Höhe der <see cref="T:System.Web.UI.HtmlControls.HtmlTable" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.HtmlControls.HtmlTable.Height%2A> Eigenschaft, um die Höhe des steuern die <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement. Die Höhe wird normalerweise in Pixel angegeben werden. Allerdings können Sie auch einen Prozentsatz der Höhe des Browserfensters durch Anfügen von einem Prozentzeichen (%) auf den Wert angeben. Beispielsweise den Wert `100%` gibt die Höhe der Tabelle, die die vollständige Höhe des Browserfensters an. Die Tabelle wird automatisch erweitert und schrumpft mit der Benutzer die Größe des Fensters ändert.  
+  
+> [!NOTE]
+>  Wenn Sie einen Wert angeben, die kleiner ist als ist erforderlich, um die Anzeige der Inhalte des der <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement, diese Eigenschaft wird ignoriert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlTable.Height%2A> Eigenschaft, um die Höhe des programmgesteuert steuern die <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement.  
+  
+ [!code-aspx-csharp[HtmlTableAppearance#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlTableAppearance/CS/htmltablebgcolorcs.aspx#1)]
+ [!code-aspx-vb[HtmlTableAppearance#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlTableAppearance/VB/htmltablebgcolorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerHtml">
+      <MemberSignature Language="C#" Value="public override string InnerHtml { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InnerHtml" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlTable.InnerHtml" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder Festlegen von Inhalt zwischen die Start- und Endtag des Steuerelements, ohne automatischen Konvertierung von Sonderzeichen in ihre entsprechenden HTML-Entitäten. Diese Eigenschaft ist für das genannte Steuerelement nicht unterstützt.</summary>
+        <value>Der Inhalt zwischen dem Start- und Endtag des Steuerelements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  Lesen aus nicht, oder diese Eigenschaft einen Wert zuweisen. Andernfalls wird eine <xref:System.NotSupportedException?displayProperty=nameWithType>-Ausnahme ausgelöst. Diese Eigenschaft wird geerbt, aus der <xref:System.Web.UI.HtmlControls.HtmlContainerControl> Klasse und gilt nicht für die <xref:System.Web.UI.HtmlControls.HtmlTable> Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Es wurde versucht, zu lesen oder diese Eigenschaft einen Wert zuweisen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerText">
+      <MemberSignature Language="C#" Value="public override string InnerText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InnerText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlTable.InnerText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Inhalt zwischen dem Start- und Endtag des Steuerelements mit automatische Konvertierung von Sonderzeichen in ihre entsprechenden HTML-Entitäten. Diese Eigenschaft ist für das genannte Steuerelement nicht unterstützt.</summary>
+        <value>Der Inhalt zwischen dem Start- und Endtag des Steuerelements.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  Lesen aus nicht, oder diese Eigenschaft einen Wert zuweisen. Andernfalls wird eine <xref:System.NotSupportedException?displayProperty=nameWithType>-Ausnahme ausgelöst. Diese Eigenschaft wird geerbt, aus der <xref:System.Web.UI.HtmlControls.HtmlContainerControl> Klasse und gilt nicht für die <xref:System.Web.UI.HtmlControls.HtmlTable> Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Es wurde versucht, zu lesen oder diese Eigenschaft einen Wert zuweisen.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderChildren">
+      <MemberSignature Language="C#" Value="protected override void RenderChildren (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void RenderChildren(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlTable.RenderChildren(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Web.UI.HtmlTextWriter" />, der den gerenderten Inhalt empfängt.</param>
+        <summary>Rendert die <see cref="T:System.Web.UI.HtmlControls.HtmlTable" /> die untergeordneten Steuerelemente des Steuerelements, mit dem angegebenen <see cref="T:System.Web.UI.HtmlTextWriter" /> Objekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlTable.RenderChildren%2A> Methode bietet zusätzliche Formatierung vor und nach dem Aufruf der Basisklasse <xref:System.Web.UI.Control.RenderChildren%2A?displayProperty=nameWithType> Methode. Die zusätzliche Formatierung macht gerenderten HTML-Code von der <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement einfacher zu lesen, die durch Einfügen einer Zeile zurück und Einrücken von vor dem Rendern der <xref:System.Web.UI.HtmlControls.HtmlTable> untergeordneten Steuerelemente des Steuerelements.  
+  
+ Die <xref:System.Web.UI.HtmlControls.HtmlTable.RenderChildren%2A> Methode wird hauptsächlich von Steuerelemententwicklern zum Erweitern der Funktionalität des verwendet die <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.HtmlControls.HtmlTable.RenderChildren%2A> Methode in einem benutzerdefinierten steuern, sodass eine neue Tabellenzeile angefügt wird die <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement.  
+  
+ [!code-aspx-csharp[CustomHtmlTableRenderChildren#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomHtmlTableRenderChildren/CS/custom_htmltable_renderchildrencs.aspx#1)]
+ [!code-aspx-vb[CustomHtmlTableRenderChildren#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomHtmlTableRenderChildren/VB/custom_htmltable_renderchildrenvb.aspx#1)]  
+  
+ [!code-csharp[CustomHtmlTableRenderChildren#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomHtmlTableRenderChildren/CS/custom_htmltable_renderchildren.cs#2)]
+ [!code-vb[CustomHtmlTableRenderChildren#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomHtmlTableRenderChildren/VB/custom_htmltable_renderchildren.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderEndTag">
+      <MemberSignature Language="C#" Value="protected override void RenderEndTag (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RenderEndTag(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlTable.RenderEndTag(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Der <see cref="T:System.Web.UI.HtmlTextWriter" />, der den gerenderten Inhalt empfängt.</param>
+        <summary>Rendert das Endtag des <see cref="T:System.Web.UI.HtmlControls.HtmlTable" />-Steuerelements.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.HtmlControls.HtmlTable.RenderEndTag%2A> Methode bietet zusätzliche Formatierungsinformationen nach dem Aufruf der Basisklasse <xref:System.Web.UI.HtmlControls.HtmlContainerControl.RenderEndTag%2A?displayProperty=nameWithType> Methode. Die zusätzliche Formatierung macht gerenderten HTML-Code von der <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement einfacher zu lesen, die durch Einfügen einer Zeile zurück, nach dem schließenden `<table>` Tag.  
+  
+ Die <xref:System.Web.UI.HtmlControls.HtmlTable.RenderChildren%2A> Methode wird hauptsächlich von Steuerelemententwicklern zum Erweitern der Funktionalität des verwendet die <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Überschreiben der <xref:System.Web.UI.HtmlControls.HtmlTable.RenderEndTag%2A> Methode so, dass die It stets ein Endtag und eine neue Zeile in einem benutzerdefinierten schreibt <xref:System.Web.UI.HtmlControls.HtmlTable> Serversteuerelement.  
+  
+ [!code-aspx-csharp[CustomHtmlTableRenderEndTag#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomHtmlTableRenderEndTag/CS/custom_htmltable_renderendtagcs.aspx#1)]
+ [!code-aspx-vb[CustomHtmlTableRenderEndTag#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomHtmlTableRenderEndTag/VB/custom_htmltable_renderendtagvb.aspx#1)]  
+  
+ [!code-csharp[CustomHtmlTableRenderEndTag#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomHtmlTableRenderEndTag/CS/custom_htmltable_renderendtag.cs#2)]
+ [!code-vb[CustomHtmlTableRenderEndTag#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomHtmlTableRenderEndTag/VB/custom_htmltable_renderendtag.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rows">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.HtmlControls.HtmlTableRowCollection Rows { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.HtmlControls.HtmlTableRowCollection Rows" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlTable.Rows" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlControls.HtmlTableRowCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Web.UI.HtmlControls.HtmlTableRowCollection" /> -Auflistung, die alle Zeilen in der <see cref="T:System.Web.UI.HtmlControls.HtmlTable" /> Steuerelement.</summary>
+        <value>Ein <see cref="T:System.Web.UI.HtmlControls.HtmlTableRowCollection" /> , enthält alle Zeilen in der <see cref="T:System.Web.UI.HtmlControls.HtmlTable" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.HtmlControls.HtmlTable.Rows%2A> -Auflistung, um die Zeilen in programmgesteuerten Zugriff auf die <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement. Sie können programmgesteuert Zeilen, um Zeilen aus oder Einfügen von Zeilen in der Auflistung hinzufügen.  
+  
+> [!NOTE]
+>  Wenn stehen keine `<tr>` aufgeführten Elemente der <xref:System.Web.UI.HtmlControls.HtmlTable> zu steuern, eine leere <xref:System.Web.UI.HtmlControls.HtmlTableRowCollection> Objekt wird zurückgegeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlTable.Rows%2A> Auflistung programmgesteuert hinzufügen eine Zeile auf die <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement.  
+  
+ [!code-aspx-csharp[HtmlTable#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlTable/CS/htmltablecs.aspx#1)]
+ [!code-aspx-vb[HtmlTable#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlTable/VB/htmltablevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public string Width { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Width" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlTable.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Breite der <see cref="T:System.Web.UI.HtmlControls.HtmlTable" /> Steuerelement.</summary>
+        <value>Die Breite der <see cref="T:System.Web.UI.HtmlControls.HtmlTable" /> Steuerelement.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.HtmlControls.HtmlTable.Width%2A> Eigenschaft, um die Breite des steuern die <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement. Die Breite wird normalerweise in Pixel angegeben werden. Allerdings können Sie einen Prozentsatz der Breite des Browserfensters angeben, durch ein Prozentzeichen (%) auf den Wert anfügen. Beispielsweise den Wert `100%` gibt eine Breite für die Tabelle, die die gesamte Breite des Browserfensters an. Die Tabelle wird automatisch erweitert und schrumpft mit der Benutzer die Größe des Fensters ändert.  
+  
+> [!NOTE]
+>  Wenn Sie einen Wert angeben, die kleiner ist als ist erforderlich, um die Anzeige der Inhalte des der <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement, diese Eigenschaft wird ignoriert.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.HtmlControls.HtmlTable.Width%2A> Eigenschaft, um die Breite des programmgesteuert steuern die <xref:System.Web.UI.HtmlControls.HtmlTable> Steuerelement.  
+  
+ [!code-aspx-csharp[HtmlTableAppearance#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlTableAppearance/CS/htmltablebgcolorcs.aspx#1)]
+ [!code-aspx-vb[HtmlTableAppearance#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlTableAppearance/VB/htmltablebgcolorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

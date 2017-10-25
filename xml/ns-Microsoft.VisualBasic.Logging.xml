@@ -1,0 +1,13 @@
+<Namespace Name="Microsoft.VisualBasic.Logging">
+  <Docs>
+    <summary>Die <see cref="N:Microsoft.VisualBasic.Logging" /> -Namespace enthält Typen, die die <see langword="My" /> Protokollierung Objekte in Visual Basic und bietet einen einfachen Protokolllistener, die Protokollausgabe an eine Datei weiterleitet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu den `My` Protokollierungsobjekte, finden Sie unter <xref:Microsoft.VisualBasic.Logging.Log>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

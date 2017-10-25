@@ -1,0 +1,217 @@
+<Type Name="AttributeProviderAttribute" FullName="System.ComponentModel.AttributeProviderAttribute">
+  <TypeSignature Language="C#" Value="public class AttributeProviderAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AttributeProviderAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.AttributeProviderAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ermöglicht die Umleitung von Attributen. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Es gibt einige Fälle im Objektmodell von .NET Framework, in denen eine Eigenschaft absichtlich typisiert ist. Z. B. die <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType> Eigenschaft typisiert ist, als `object`. Der Grund dafür ist, dass diese Eigenschaft auf mehrere Arten von Eingaben annehmen kann. Leider stehen zur Verfügung, keine allgemeine Möglichkeit zum Hinzufügen von Metadaten, um die Merkmale der Eigenschaft beschreiben. Jede `DataSource` -Eigenschaft in der gesamten .NET Framework muss über identische Metadaten für den Einsatz von Typkonvertern, UI-Typ-Editoren und andere Dienste, die Metadaten erfordern verfügen. Die <xref:System.ComponentModel.AttributeProviderAttribute> behebt diese Probleme.  
+  
+ Sobald dieses Attribut wird in einer Eigenschaft platziert werden, die Regeln für das Abrufen von Attribute, für des Eigenschaftendeskriptors <xref:System.ComponentModel.MemberDescriptor.Attributes%2A?displayProperty=nameWithType> Auflistung unterscheiden. In der Regel der Eigenschaftendeskriptor sammelt lokale Attribute und führt diese Attribute aus den Eigenschaftentyp dann zusammen. Die Attribute in diesem Fall stammen aus der Rückgabetyp der <xref:System.ComponentModel.AttributeProviderAttribute>und nicht von der tatsächlichen Eigenschaftstyp. Dieses Attribut wird verwendet, auf <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType> zeigen die <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType> bestimmten Typs des Objekts <xref:System.ComponentModel.IListSource>, und die entsprechende Metadaten befindet sich auf <xref:System.ComponentModel.IListSource> um die Datenbindung zu ermöglichen. Dabei können externe Parteien problemlos Metadaten für alle Datenquellen hinzufügen.  
+  
+ Attribute, die abgerufen, die von einem Typ deklariert wird, der <xref:System.ComponentModel.AttributeProviderAttribute> haben Sie eine Priorität zwischen dem Typ der Eigenschaft und den Attributen in der Eigenschaft. Die folgende Liste zeigt in Reihenfolge ihrer Priorität, den vollständigen Satz der verfügbaren zusammengeführten Attribute:  
+  
+-   Eigenschaftenattribute  
+  
+-   Attribut-Anbieter-Attribute  
+  
+-   Eigenschaftenattribute-Typ  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung <xref:System.ComponentModel.AttributeProviderAttribute> zum Markieren einer `DataSource` Eigenschaft mit einer bestimmten Art von <xref:System.ComponentModel.IListSource>. Eine vollständige Codebeispiel finden Sie unter [wie: Anwenden von Attributen auf Windows Forms-Steuerelementen](~/docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
+  
+ [!code-csharp[System.ComponentModel.AttributesDemoControl#25](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#25)]
+ [!code-vb[System.ComponentModel.AttributesDemoControl#25](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#25)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AttributeProviderAttribute (string typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.AttributeProviderAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">Der Name des Typs angeben.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.AttributeProviderAttribute" /> Klasse mit dem angegebenen Typnamen.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="typeName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AttributeProviderAttribute (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.AttributeProviderAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typ an.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.AttributeProviderAttribute" /> Klasse mit dem angegebenen Typ.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung <xref:System.ComponentModel.AttributeProviderAttribute> zum Markieren einer `DataSource` Eigenschaft mit einer bestimmten Art von <xref:System.ComponentModel.IListSource>. Eine vollständige Codebeispiel finden Sie unter [wie: Anwenden von Attributen auf Windows Forms-Steuerelementen](~/docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
+  
+ [!code-csharp[System.ComponentModel.AttributesDemoControl#25](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#25)]
+ [!code-vb[System.ComponentModel.AttributesDemoControl#25](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#25)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AttributeProviderAttribute (string typeName, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string typeName, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.AttributeProviderAttribute.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">Der Name des Typs angeben.</param>
+        <param name="propertyName">Der Name der Eigenschaft für die Attribute abgerufen werden sollen.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ComponentModel.AttributeProviderAttribute" /> Klasse mit dem angegebenen Typnamen und den Eigenschaftsnamen.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="propertyName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyName">
+      <MemberSignature Language="C#" Value="public string PropertyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PropertyName" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.AttributeProviderAttribute.PropertyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Eigenschaft für die Attribute abgerufen werden sollen.</summary>
+        <value>Der Name der Eigenschaft für die Attribute abgerufen werden sollen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeName">
+      <MemberSignature Language="C#" Value="public string TypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TypeName" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.AttributeProviderAttribute.TypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Assembly qualifizierten Typnamen an den Konstruktor übergeben.</summary>
+        <value>Die Assembly qualifizierte Name des Typs im Konstruktor angegeben.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

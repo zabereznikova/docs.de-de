@@ -1,0 +1,281 @@
+<Type Name="SourceSwitch" FullName="System.Diagnostics.SourceSwitch">
+  <TypeSignature Language="C#" Value="public class SourceSwitch : System.Diagnostics.Switch" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SourceSwitch extends System.Diagnostics.Switch" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.SourceSwitch" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Diagnostics.Switch</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen mit mehreren Ebenen Switch für die Steuerelement-Ablaufverfolgung und Debug-Ausgabe ohne erneute Kompilierung von Code bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.TraceSource.Switch%2A> Eigenschaft von der <xref:System.Diagnostics.TraceSource> Klasse ist eine <xref:System.Diagnostics.SourceSwitch> Objekt. Die <xref:System.Diagnostics.SourceSwitch> Klasse bietet einen <xref:System.Diagnostics.SourceSwitch.Level%2A> Eigenschaft so testen Sie die Ereignisebene des Schalters. Die <xref:System.Diagnostics.SourceSwitch.Level%2A> Eigenschaft ruft ab oder legt des Switches <xref:System.Diagnostics.TraceLevel> Wert.  
+  
+ Sie können das Ereignis festlegen, der eine <xref:System.Diagnostics.SourceSwitch> über die Anwendungskonfigurationsdatei und dann mit den konfigurierten <xref:System.Diagnostics.SourceSwitch> Ebene in der Anwendung. Alternativ können Sie erstellen eine <xref:System.Diagnostics.SourceSwitch> in Ihren Code und die Menge der Ebene direkt zu einen bestimmten Abschnitt des Codes zu instrumentieren.  
+  
+ So konfigurieren Sie eine <xref:System.Diagnostics.SourceSwitch>, bearbeiten Sie die Konfigurationsdatei, die den Namen der Anwendung entspricht. In dieser Datei können Sie Wert eines Schalters festlegen bzw. deaktivieren alle Switches, die zuvor von der Anwendung festgelegt. Die Konfigurationsdatei sollen wie im folgenden Beispiel gezeigt formatiert werden.  
+  
+```  
+<switches>  
+  <add name="SourceSwitch" value="Verbose"></add>  
+</switches>  
+```  
+  
+ Der Schalter wird verwendet, um zu überprüfen, ob eine Ablaufverfolgung weitergegeben oder ignoriert werden soll. Jede <xref:System.Diagnostics.TraceSource> Methodenaufrufe verfolgen die <xref:System.Diagnostics.SourceSwitch.ShouldTrace%2A> -Methode vor dem Aufrufen der Listener. Wenn die <xref:System.Diagnostics.SourceSwitch.ShouldTrace%2A> -Methode zurückkehrt `false`, die Ablaufverfolgung wird ignoriert, und die Trace-Methode beendet wird. Wenn die <xref:System.Diagnostics.SourceSwitch.ShouldTrace%2A> -Methode zurückkehrt `true`, die Ablaufverfolgung an die Listener übergeben wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SourceSwitch (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SourceSwitch.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Quelle.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.SourceSwitch" /> Klasse, die den Namen der Quelle angeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `name` -Parameter zum Festlegen des Werts der <xref:System.Diagnostics.Switch.DisplayName%2A> Eigenschaft.  
+  
+ Das Maß an festlegen Ihrer <xref:System.Diagnostics.SourceSwitch>, bearbeiten Sie die Konfigurationsdatei, die den Namen der Anwendung entspricht. In dieser Datei können Sie einen Switch hinzufügen, und legen Sie dessen Wert, einen Schalter entfernen oder deaktivieren alles, was die zuvor von der Anwendung festgelegt werden. Um ein Quellschalter hinzuzufügen, sollte die Konfigurationsdatei formatiert werden, wie im folgenden Beispiel gezeigt.  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <switches>  
+      <add name="SourceSwitch" value="Verbose" ></add>  
+    </switches>  
+  </system.diagnostics>  
+</configuration>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SourceSwitch (string displayName, string defaultSwitchValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string displayName, string defaultSwitchValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SourceSwitch.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="displayName" Type="System.String" />
+        <Parameter Name="defaultSwitchValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="displayName">Der Name des Quellschalters.</param>
+        <param name="defaultSwitchValue">Der Standardwert für den Switch.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Diagnostics.SourceSwitch" /> -Klasse und gibt den Anzeigenamen und der Standardwert für den Quellschalter.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `displayName` -Parameter zum Festlegen des Werts der <xref:System.Diagnostics.Switch.DisplayName%2A> Eigenschaft; das `defaultSwitchValue` Parameter als Feld gespeichert und zur Initialisierung der <xref:System.Diagnostics.Switch.Value%2A> Eigenschaft beim ersten Verweis.  
+  
+> [!NOTE]
+>  Wenn der Schalter in einer Konfigurationsdatei definiert ist und die `value` -Attribut angegeben ist, den Wert aus der Konfigurationsdatei hat Vorrang vor und die `defaultSwitchValue` wird ignoriert.  
+  
+ Das Maß an festlegen Ihrer <xref:System.Diagnostics.SourceSwitch>, bearbeiten Sie die Konfigurationsdatei, die den Namen der Anwendung entspricht. In dieser Datei können Sie einen Switch hinzufügen, und legen Sie dessen Wert, einen Schalter entfernen oder deaktivieren alles, was die zuvor von der Anwendung festgelegt werden. Um ein Quellschalter hinzuzufügen, sollte die Konfigurationsdatei formatiert werden, wie im folgenden Beispiel gezeigt.  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <switches>  
+      <add name="SourceSwitch" value="Verbose" ></add>  
+    </switches>  
+  </system.diagnostics>  
+</configuration>  
+```  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Diagnostics.SourceSwitch> mit dem Namen "SourceSwitch" und den Standardwert <xref:System.Diagnostics.SourceLevels.Verbose>. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.TraceSource> Klasse.  
+  
+ [!code-csharp[System.Diagnostics.TraceSource#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource/CS/program.cs#7)]
+ [!code-vb[System.Diagnostics.TraceSource#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource/VB/program.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Level">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.SourceLevels Level { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.SourceLevels Level" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.SourceSwitch.Level" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SourceLevels</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Ebene des Schalters.</summary>
+        <value>Eines der <see cref="T:System.Diagnostics.SourceLevels" /> Werte, die die Ereignisebene des Schalters darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ruft den Wert aus der <xref:System.Diagnostics.Switch.SwitchSetting%2A> Eigenschaft. Durch Festlegen dieser Eigenschaft auch ändert die <xref:System.Diagnostics.Switch.SwitchSetting%2A> Eigenschaft.  
+  
+> [!NOTE]
+>  Für die Erweiterbarkeit der <xref:System.Diagnostics.SourceSwitch.Level%2A> Eigenschaft kann festgelegt werden, um eine beliebige ganze Zahl, anstatt Sie zu einem <xref:System.Diagnostics.SourceLevels> Enumerationswert.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt den Wert, der die <xref:System.Diagnostics.SourceSwitch.Level%2A> -Eigenschaft für ein Quellschalter. Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Diagnostics.TraceSource> Klasse.  
+  
+ [!code-csharp[System.Diagnostics.TraceSource#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource/CS/program.cs#8)]
+ [!code-vb[System.Diagnostics.TraceSource#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource/VB/program.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">für den Betrieb mit nicht verwaltetem Code. "Demand" Wert <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Zugeordnete Enumeration: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OnValueChanged">
+      <MemberSignature Language="C#" Value="protected override void OnValueChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnValueChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SourceSwitch.OnValueChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Wird aufgerufen, wenn der Wert der <see cref="P:System.Diagnostics.Switch.Value" /> -Eigenschaft ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Diagnostics.SourceSwitch.OnValueChanged%2A> -Methode konvertiert den neuen Wert des der <xref:System.Diagnostics.Switch.Value%2A> Eigenschaft, um die ganzzahlige Darstellung des entsprechenden Felds in der <xref:System.Diagnostics.SourceLevels> -Enumeration, und verwendet dann diese ganze Zahl Festlegen der <xref:System.Diagnostics.Switch.SwitchSetting%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Der neue Wert des <see cref="P:System.Diagnostics.Switch.Value" /> ist keines der <see cref="T:System.Diagnostics.SourceLevels" /> Werte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldTrace">
+      <MemberSignature Language="C#" Value="public bool ShouldTrace (System.Diagnostics.TraceEventType eventType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldTrace(valuetype System.Diagnostics.TraceEventType eventType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SourceSwitch.ShouldTrace(System.Diagnostics.TraceEventType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+      </Parameters>
+      <Docs>
+        <param name="eventType">Einer der <see cref="T:System.Diagnostics.TraceEventType" />-Werte.</param>
+        <summary>Bestimmt, ob der Ablaufverfolgungslistener aufgerufen werden soll, basierend auf den Typ des Ablaufverfolgungsereignisses.</summary>
+        <returns>
+          <see langword="True" />Wenn der Ablaufverfolgungslistener aufgerufen werden soll. andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, indem Sie die `Trace` Methoden in der <xref:System.Diagnostics.TraceSource> Klasse, um zu bestimmen, ob der Listener aufgerufen werden sollte, um eine Ablaufverfolgung geschrieben werden soll.  
+  
+> [!NOTE]
+>  Diese Methode sollte nicht von Anwendungscode aufgerufen werden. Es sollte nur mit Methoden im aufgerufen werden der <xref:System.Diagnostics.TraceSource> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

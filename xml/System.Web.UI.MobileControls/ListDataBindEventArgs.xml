@@ -1,0 +1,98 @@
+<Type Name="ListDataBindEventArgs" FullName="System.Web.UI.MobileControls.ListDataBindEventArgs">
+  <TypeSignature Language="C#" Value="public class ListDataBindEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ListDataBindEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.ListDataBindEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Parameter für ein <see cref="E:System.Web.UI.MobileControls.List.ItemDataBind" /> Ereignis. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Web.UI.MobileControls.List.ItemDataBind> Ereignis, um die Summen beginnen von statuseinstellungen für die Liste zu erhalten. Dieser Code ist Teil eines umfangreicheren Beispiels für die <xref:System.Web.UI.MobileControls.List> (Übersicht).  
+  
+ [!code-csharp[MobileListSample#4](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileListSample/cs/Default.aspx#4)]
+ [!code-vb[MobileListSample#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileListSample/vb/Default.aspx#4)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListDataBindEventArgs (System.Web.UI.MobileControls.MobileListItem item, object dataItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.MobileControls.MobileListItem item, object dataItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ListDataBindEventArgs.#ctor(System.Web.UI.MobileControls.MobileListItem,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="item" Type="System.Web.UI.MobileControls.MobileListItem" />
+        <Parameter Name="dataItem" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">Initialisiert <see cref="P:System.Web.UI.MobileControls.ListDataBindEventArgs.ListItem" />.</param>
+        <param name="dataItem">Initialisiert <see cref="P:System.Web.UI.MobileControls.ListDataBindEventArgs.DataItem" />.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.MobileControls.ListDataBindEventArgs" />-Klasse. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt ein neues <xref:System.Web.UI.MobileControls.ListDataBindEventArgs> Objekt. Der Konstruktor initialisiert die <xref:System.Web.UI.MobileControls.ListDataBindEventArgs.ListItem%2A> und <xref:System.Web.UI.MobileControls.ListDataBindEventArgs.DataItem%2A> Eigenschaften mit den Werten der `listItem` und `dataItem`zugeordnet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataItem">
+      <MemberSignature Language="C#" Value="public object DataItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DataItem" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ListDataBindEventArgs.DataItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das angegebenen Datenobjekt des Listenelements, das gebunden wird. Diese Eigenschaft ist nur für eine Anforderung verfügbar sind, in dem das Listenelement datengebunden ist; Bei nachfolgenden Postbacks ist es immer <see langword="null" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die angegebenen Datenobjekt, das für das Element der Liste, das gebunden wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListItem">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.MobileListItem ListItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.MobileListItem ListItem" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ListDataBindEventArgs.ListItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.MobileListItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das aktuelle <see cref="T:System.Web.UI.WebControls.ListItem" /> , gebunden wird. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die <see cref="T:System.Web.UI.WebControls.ListItem" /> gebunden wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

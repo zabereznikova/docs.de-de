@@ -1,0 +1,390 @@
+<Type Name="MainMenu" FullName="System.Windows.Forms.MainMenu">
+  <TypeSignature Language="C#" Value="public class MainMenu : System.Windows.Forms.Menu" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MainMenu extends System.Windows.Forms.Menu" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.MainMenu" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Menu</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItemFilter("System.Windows.Forms.MainMenu")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Menüstruktur eines Formulars dar. Obwohl <see cref="T:System.Windows.Forms.MenuStrip" /> ersetzt und funktionell erweitert, um die <see cref="T:System.Windows.Forms.MainMenu" /> -Steuerelement früherer Versionen <see cref="T:System.Windows.Forms.MainMenu" /> wird für Abwärtskompatibilität und für zukünftige Verwendung beibehalten, falls gewünscht.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.MainMenu> Steuerelement darstellt, das zum Container für die Menüstruktur eines Formulars. Ein Menü besteht <xref:System.Windows.Forms.MenuItem> Objekte, die die einzelnen Menübefehle in der Menüstruktur darstellen. Jede <xref:System.Windows.Forms.MenuItem> kann ein Befehl für Ihre Anwendung oder einem übergeordneten Menü für andere Untermenüelemente sein. Binden der <xref:System.Windows.Forms.MainMenu> auf die <xref:System.Windows.Forms.Form> , der angezeigt wird, weisen Sie der <xref:System.Windows.Forms.MainMenu> auf die <xref:System.Windows.Forms.Form.Menu%2A> Eigenschaft der <xref:System.Windows.Forms.Form>.  
+  
+ Für Anwendungen, für die Unterstützung mehrerer Sprachen, können Sie die <xref:System.Windows.Forms.MainMenu.RightToLeft%2A> Eigenschaft, um den Text des Menüs von rechts nach Links zur Unterstützung von Sprachen wie Arabisch anzuzeigen.  
+  
+ Sie können verschiedene erstellen <xref:System.Windows.Forms.MainMenu> -Objekten zur Darstellung von anderen Menüstrukturen für Ihr Formular. Wenn Sie die Menüstruktur in einer bestimmten enthaltenen wiederverwenden möchten, <xref:System.Windows.Forms.MainMenu>, können Sie die <xref:System.Windows.Forms.MainMenu.CloneMenu%2A> Methode, um eine Kopie zu erstellen. Nachdem Sie eine Kopie der Menüstruktur haben, können Sie die entsprechenden Änderungen für Ihre neue Menüstruktur vornehmen.  
+  
+> [!NOTE]
+>  Ausschneiden und Einfügen von Elementen aus einer Form in eine andere in den Designer möglicherweise nicht funktioniert wie erwartet, wenn das Formular, dem Sie, in Einfügen keine Menüelemente definiert wurde.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.MainMenu>, weist zwei <xref:System.Windows.Forms.MenuItem> -Objekte und die <xref:System.Windows.Forms.MainMenu> und bindet sie an ein Formular. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.Form> erstellte mit der Bezeichnung `Form1`.  
+  
+ [!code-cpp[Classic MainMenu.MainMenu Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic MainMenu.MainMenu Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MainMenu.MainMenu Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic MainMenu.MainMenu Example/CS/source.cs#1)]
+ [!code-vb[Classic MainMenu.MainMenu Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic MainMenu.MainMenu Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MainMenu ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MainMenu.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.MainMenu" /> Klasse, ohne dass ein Menüelemente angegeben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Version des Konstruktors erstellt eine <xref:System.Windows.Forms.MainMenu> ohne angegebene <xref:System.Windows.Forms.MenuItem> Objekte. Hinzufügen von Menüelementen an das Steuerelement verwenden, die andere Version dieses Konstruktors, die ein Array von akzeptiert <xref:System.Windows.Forms.MenuItem> Objekte, die die Parameter, oder verwenden die <xref:System.Windows.Forms.Menu.MenuItemCollection.Add%2A> Methode der <xref:System.Windows.Forms.Menu.MenuItems%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.MainMenu>, weist zwei <xref:System.Windows.Forms.MenuItem> -Objekte und die <xref:System.Windows.Forms.MainMenu> und bindet sie an ein Formular. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.Form> erstellte mit der Bezeichnung `Form1`.  
+  
+ [!code-cpp[Classic MainMenu.MainMenu Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic MainMenu.MainMenu Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MainMenu.MainMenu Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic MainMenu.MainMenu Example/CS/source.cs#1)]
+ [!code-vb[Classic MainMenu.MainMenu Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic MainMenu.MainMenu Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MainMenu (System.ComponentModel.IContainer container);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.IContainer container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MainMenu.#ctor(System.ComponentModel.IContainer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="container" Type="System.ComponentModel.IContainer" />
+      </Parameters>
+      <Docs>
+        <param name="container">Ein <see cref="T:System.ComponentModel.IContainer" /> , das den Container darstellt der <see cref="T:System.Windows.Forms.MainMenu" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.MainMenu" /> Klasse mit dem angegebenen Container.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MainMenu (System.Windows.Forms.MenuItem[] items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.MenuItem[] items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MainMenu.#ctor(System.Windows.Forms.MenuItem[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="items" Type="System.Windows.Forms.MenuItem[]" />
+      </Parameters>
+      <Docs>
+        <param name="items">Ein Array von <see cref="T:System.Windows.Forms.MenuItem" /> Objekte, die hinzugefügt werden, die <see cref="T:System.Windows.Forms.MainMenu" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Windows.Forms.MainMenu" /> mit einem angegebenen Satz von <see cref="T:System.Windows.Forms.MenuItem" /> Objekte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diesen Konstruktor, um ein Array von zuweisen <xref:System.Windows.Forms.MenuItem> -Objekte und die <xref:System.Windows.Forms.MainMenu> zum Zeitpunkt seiner Erstellung. Nach der <xref:System.Windows.Forms.MainMenu> erstellt wurde können Sie zusätzliche hinzufügen <xref:System.Windows.Forms.MenuItem> Datenbankobjekte in der <xref:System.Windows.Forms.MainMenu> mithilfe der <xref:System.Windows.Forms.Menu.MenuItemCollection.Add%2A> Methode der <xref:System.Windows.Forms.Menu.MenuItems%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel erstellt eine <xref:System.Windows.Forms.MainMenu>, und weist zwei <xref:System.Windows.Forms.MenuItem> -Objekte und die <xref:System.Windows.Forms.MainMenu> mit dieser Version des Konstruktors. Klicken Sie dann im Beispiel bindet der <xref:System.Windows.Forms.MainMenu> zu einem <xref:System.Windows.Forms.Form>. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.Form> erstellte mit der Bezeichnung `Form1`.  
+  
+ [!code-cpp[Classic MainMenu.MainMenu1 Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic MainMenu.MainMenu1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MainMenu.MainMenu1 Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic MainMenu.MainMenu1 Example/CS/source.cs#1)]
+ [!code-vb[Classic MainMenu.MainMenu1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic MainMenu.MainMenu1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneMenu">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.MainMenu CloneMenu ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.MainMenu CloneMenu() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MainMenu.CloneMenu" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MainMenu</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues <see cref="T:System.Windows.Forms.MainMenu" /> also ein Duplikat des aktuellen <see cref="T:System.Windows.Forms.MainMenu" />.</summary>
+        <returns>Ein <see cref="T:System.Windows.Forms.MainMenu" /> , das die geklonte Menü darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Methode verwenden, erstellen Sie eine Kopie der Menüstruktur gespeichert einer <xref:System.Windows.Forms.MainMenu>. Verwenden Sie diese Methode, die Menüstruktur in gespeicherten Wiederverwenden einer <xref:System.Windows.Forms.MainMenu> als Grundlage für einen neuen <xref:System.Windows.Forms.MainMenu>. Z. B. Wenn Sie eine Menüstruktur erstellen möchten, die verfügt über die gleichen Menüelemente, wie ein vorhandenes <xref:System.Windows.Forms.MainMenu> jedoch auch zusätzliche <xref:System.Windows.Forms.MenuItem> Objekte hinzugefügt werden, können Sie die <xref:System.Windows.Forms.MainMenu.CloneMenu%2A> Methode zum Erstellen einer Kopie des Originals <xref:System.Windows.Forms.MainMenu> und Fügen Sie der neuen <xref:System.Windows.Forms.MenuItem> -Objekten, das die geklonte <xref:System.Windows.Forms.MainMenu>.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.MainMenu.GetForm%2A> Methode, um festzustellen, wo eine <xref:System.Windows.Forms.MainMenu> derzeit dem Formular übergeordnet ist. Wenn der Aufruf im Beispiel um code <xref:System.Windows.Forms.MainMenu.GetForm%2A> keinen zurückgibt `null`, klont der Code die Menüstruktur der <xref:System.Windows.Forms.MainMenu> mithilfe der <xref:System.Windows.Forms.MainMenu.CloneMenu%2A> Methode. Der Code legt dann die <xref:System.Windows.Forms.MainMenu.RightToLeft%2A> Eigenschaft auf "true", auf die neue Kopie des der <xref:System.Windows.Forms.MainMenu> zum Erstellen einer <xref:System.Windows.Forms.MainMenu> für Sprachen, die Unterstützung von rechts nach links verwendet werden kann. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.MainMenu> erstellte mit der Bezeichnung `mainMenu1`.  
+  
+ [!code-cpp[Classic MainMenu.GetForm Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic MainMenu.GetForm Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MainMenu.GetForm Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic MainMenu.GetForm Example/CS/source.cs#1)]
+ [!code-vb[Classic MainMenu.GetForm Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic MainMenu.GetForm Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Collapse">
+      <MemberSignature Language="C#" Value="public event EventHandler Collapse;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Collapse" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.MainMenu.Collapse" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn das Hauptmenü ausgeblendet wird.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung dieses Elements. Im Beispiel meldet ein Ereignishandler für das Vorkommen der <xref:System.Windows.Forms.MainMenu.Collapse> Ereignis. Dieser Bericht hilft Ihnen, um zu erfahren, wann das Ereignis tritt auf, und unterstützen Sie beim Debuggen. Um den Bericht über mehrere Ereignisse oder Ereignisse, die häufig auftreten, sollten Sie ersetzen <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> mit <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> oder die Nachricht anfügen, um ein mehrzeiliges <xref:System.Windows.Forms.TextBox>.  
+  
+ Um den Beispielcode auszuführen, fügen Sie ihn in ein Projekt, das eine Instanz des Typs enthält <xref:System.Windows.Forms.MainMenu> mit dem Namen `MainMenu1`. Stellen Sie sicher, dass der Ereignishandler zugeordnet ist die <xref:System.Windows.Forms.MainMenu.Collapse> Ereignis.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#483](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#483)]
+ [!code-vb[System.Windows.Forms.EventExamples#483](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#483)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMenuHandle">
+      <MemberSignature Language="C#" Value="protected override IntPtr CreateMenuHandle ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance native int CreateMenuHandle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MainMenu.CreateMenuHandle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein neues Handle für das Menü.</summary>
+        <returns>Ein Handle für das Menü, wenn die Methode erfolgreich ausgeführt wird, andernfalls <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MainMenu.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt mit Ausnahme des Speichers die von der <see cref="T:System.Windows.Forms.MainMenu" />-Klasse verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie <xref:System.Windows.Forms.MainMenu.Dispose%2A> auf, wenn Sie <xref:System.Windows.Forms.MainMenu> nicht mehr benötigen. Die <xref:System.Windows.Forms.MainMenu.Dispose%2A>-Methode bewirkt, dass <xref:System.Windows.Forms.MainMenu> nicht mehr verwendet werden kann. Nach dem Aufruf <xref:System.Windows.Forms.MainMenu.Dispose%2A>, müssen Sie alle Verweise auf Freigeben der <xref:System.Windows.Forms.MainMenu> , damit der belegte Arbeitsspeicher von der Garbagecollection wieder zugänglich gemacht werden kann.  
+  
+> [!NOTE]
+>  Rufen Sie immer <xref:System.Windows.Forms.MainMenu.Dispose%2A> auf, bevor Sie den letzten Verweis auf das <xref:System.Windows.Forms.MainMenu> freigeben. Andernfalls, die Ressourcen der <xref:System.Windows.Forms.MainMenu> ist mit bleiben reserviert, bis die Garbage Collection-Aufrufe der <xref:System.Windows.Forms.MainMenu> Destruktor des Objekts.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetForm">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Form GetForm ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.Form GetForm() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MainMenu.GetForm" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Form</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Forms.Form" /> , die dieses Steuerelement enthält.</summary>
+        <returns>Ein <see cref="T:System.Windows.Forms.Form" /> , der der Container für dieses Steuerelement. Gibt <see langword="null" /> Wenn die <see cref="T:System.Windows.Forms.MainMenu" /> derzeit nicht in einem Formular gehostet wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dieser Eigenschaft können Sie bestimmen, ob ein bestimmter <xref:System.Windows.Forms.MainMenu> zu einem Formular übergeordnet ist. Diese Eigenschaft wird normalerweise verwendet, wenn mehrere <xref:System.Windows.Forms.MainMenu> Objekte in einem Formular verwendet werden, und Sie müssen bestimmen, welche zurzeit von einem Formular verwendet wird.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.MainMenu.GetForm%2A> Methode, um festzustellen, wo eine <xref:System.Windows.Forms.MainMenu> derzeit dem Formular übergeordnet ist. Wenn der Aufruf im Beispiel um code <xref:System.Windows.Forms.MainMenu.GetForm%2A> keinen zurückgibt `null`, klont der Code die Menüstruktur der <xref:System.Windows.Forms.MainMenu> mithilfe der <xref:System.Windows.Forms.MainMenu.CloneMenu%2A> Methode. Der Code legt dann die <xref:System.Windows.Forms.MainMenu.RightToLeft%2A> Eigenschaft auf "true", auf die neue Kopie des der <xref:System.Windows.Forms.MainMenu> zum Erstellen einer <xref:System.Windows.Forms.MainMenu> für Sprachen, die Unterstützung von rechts nach links verwendet werden kann. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.MainMenu> erstellte mit der Bezeichnung `mainMenu1`.  
+  
+ [!code-cpp[Classic MainMenu.GetForm Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic MainMenu.GetForm Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MainMenu.GetForm Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic MainMenu.GetForm Example/CS/source.cs#1)]
+ [!code-vb[Classic MainMenu.GetForm Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic MainMenu.GetForm Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCollapse">
+      <MemberSignature Language="C#" Value="protected virtual void OnCollapse (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void OnCollapse(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MainMenu.OnCollapse(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Ein <see cref="T:System.EventArgs" />, das die Ereignisdaten enthält.</param>
+        <summary>Löst das <see cref="E:System.Windows.Forms.MainMenu.Collapse" />-Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durch das Auslösen eines Ereignisses wird der Ereignishandler über einen Delegaten aufgerufen. Weitere Informationen finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Mit der <xref:System.Windows.Forms.MainMenu.OnCollapse%2A>-Methode können auch abgeleitete Klassen das Ereignis ohne Anfügen eines Delegaten behandeln. Dies ist das bevorzugte Verfahren für die Behandlung des Ereignisses in einer abgeleiteten Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Zum Überschreiben <see cref="M:System.Windows.Forms.MainMenu.OnCollapse(System.EventArgs)" /> werden Sie in einer abgeleiteten Klasse der Basisklasse aufrufen <see cref="M:System.Windows.Forms.MainMenu.OnCollapse(System.EventArgs)" /> Methode, damit registrierte Delegaten das Ereignis empfangen.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RightToLeft">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.RightToLeft RightToLeft { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.RightToLeft RightToLeft" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MainMenu.RightToLeft" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.AmbientValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.RightToLeft</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob der vom Steuerelement angezeigte Text von rechts nach links angezeigt wird.</summary>
+        <value>Einer der <see cref="T:System.Windows.Forms.RightToLeft" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Eigenschaft ermöglicht die Menüs Sprachen unterstützen, die von rechts nach links geschrieben werden. Wenn diese Eigenschaft festgelegt wird, um `RightToLeft.Yes`, der Menüelementtext wird von rechts nach links anstelle des Standardwerts von links nach rechts angezeigt werden.  
+  
+> [!NOTE]
+>  Weitere Informationen dazu, wie Windows Forms-Steuerelemente Ausrichtung von rechts nach Links zu aktivieren auswirkt, finden Sie unter der <xref:System.Windows.Forms.Control.RightToLeft%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.MainMenu.GetForm%2A> Methode, um festzustellen, wo eine <xref:System.Windows.Forms.MainMenu> derzeit dem Formular übergeordnet ist. Wenn der Aufruf im Beispiel um code <xref:System.Windows.Forms.MainMenu.GetForm%2A> keinen zurückgibt `null`, klont der Code die Menüstruktur der <xref:System.Windows.Forms.MainMenu> mithilfe der <xref:System.Windows.Forms.MainMenu.CloneMenu%2A> Methode. Der Beispielcode legt dann die <xref:System.Windows.Forms.MainMenu.RightToLeft%2A> Eigenschaft, um `RightToLeft.Yes` auf die neue Kopie des der <xref:System.Windows.Forms.MainMenu> zum Erstellen einer <xref:System.Windows.Forms.MainMenu> für Sprachen, die Unterstützung von rechts nach links verwendet werden kann. Dieses Beispiel benötigen Sie ein <xref:System.Windows.Forms.MainMenu> erstellte mit der Bezeichnung `mainMenu1`.  
+  
+ [!code-cpp[Classic MainMenu.RightToLeft Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic MainMenu.RightToLeft Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MainMenu.RightToLeft Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic MainMenu.RightToLeft Example/CS/source.cs#1)]
+ [!code-vb[Classic MainMenu.RightToLeft Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic MainMenu.RightToLeft Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Der Wert der Eigenschaft zugewiesen ist nicht als gültiges Element der der <see cref="T:System.Windows.Forms.RightToLeft" /> Enumeration.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MainMenu.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Zeichenfolge, die stellt die <see cref="T:System.Windows.Forms.MainMenu" />.</summary>
+        <returns>Eine Zeichenfolge, die das aktuelle <see cref="T:System.Windows.Forms.MainMenu" /> darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die zurückgegebene Zeichenfolge enthält den Typ und die zurückgegebene Zeichenfolge den <xref:System.Windows.Forms.Form.ToString%2A> Methode Wenn die <xref:System.Windows.Forms.MainMenu> zu einem Formular zugeordnet ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

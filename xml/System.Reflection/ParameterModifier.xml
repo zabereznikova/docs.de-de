@@ -1,0 +1,129 @@
+<Type Name="ParameterModifier" FullName="System.Reflection.ParameterModifier">
+  <TypeSignature Language="C#" Value="public struct ParameterModifier" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit ParameterModifier extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.ParameterModifier" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fügt einen Parametermodifizierer an, sodass die Bindung mit Parametersignaturen durchgeführt werden kann, in denen die Typen geändert wurden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Reflection.ParameterModifier> -Struktur wird verwendet, mit der <xref:System.Type.InvokeMember%28System.String%2CSystem.Reflection.BindingFlags%2CSystem.Reflection.Binder%2CSystem.Object%2CSystem.Object%5B%5D%2CSystem.Reflection.ParameterModifier%5B%5D%2CSystem.Globalization.CultureInfo%2CSystem.String%5B%5D%29?displayProperty=nameWithType> -methodenüberladung beim Übergeben von Parametern nach Verweis an eine COM-Komponente, die spät gebundene zugegriffen wird. Die Parameter, die als Verweis übergeben werden sollen, werden über einen einzelnen angegeben <xref:System.Reflection.ParameterModifier> -Struktur, die in einem Array mit einem einzelnen Element übergeben werden muss. Die einzelnen <xref:System.Reflection.ParameterModifier> Struktur in diesem Array initialisiert werden muss, mit der Anzahl von Parametern in das Element, das aufgerufen werden soll. Um anzugeben, welcher dieser Parameter als Verweis übergeben wird, legen Sie den Wert von der <xref:System.Reflection.ParameterModifier.Item%2A> -Eigenschaft (Indexer in c#) auf `true` für die Indexnummer, die die nullbasierte Position des Parameters entspricht.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt dies für ein Element, das drei Zeichenfolgenargumenten, das erste und dritte, von denen, die als Verweis übergeben werden. Angenommen, eine Variable namens `obj` enthält einen Verweis auf das COM-Objekt.  
+  
+ [!code-cpp[System.Reflection.ParameterModifier#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.reflection.parametermodifier/cpp/source.cpp#1)]
+ [!code-csharp[System.Reflection.ParameterModifier#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.reflection.parametermodifier/cs/source.cs#1)]
+ [!code-vb[System.Reflection.ParameterModifier#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflection.parametermodifier/vb/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ParameterModifier (int parameterCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 parameterCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.ParameterModifier.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="parameterCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="parameterCount">Die Anzahl der Parameter.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Reflection.ParameterModifier" />-Struktur, die die angegebene Anzahl von Parametern darstellt.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="parameterCount" /> ist ein negativer Wert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public bool this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.ParameterModifier.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Die Indexposition des Parameters, dessen Änderungsstatus überprüft oder festgelegt wird.</param>
+        <summary>Ruft einen Wert ab, der angibt, ob der Parameter an der angegebenen Indexposition durch den aktuellen <see cref="T:System.Reflection.ParameterModifier" /> geändert werden soll, oder legt diesen Wert fest.</summary>
+        <value>
+          <see langword="true" />, wenn der Parameter an dieser Indexposition durch diesen <see cref="T:System.Reflection.ParameterModifier" /> geändert werden soll; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Indexer ermöglichen eine Standardeigenschaft für einen Typ, als wäre der Typ ein Array indiziert zu werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

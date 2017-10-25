@@ -1,0 +1,92 @@
+<Type Name="IDesignerDataSchema" FullName="System.ComponentModel.Design.Data.IDesignerDataSchema">
+  <TypeSignature Language="C#" Value="public interface IDesignerDataSchema" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDesignerDataSchema" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Data.IDesignerDataSchema" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert Methoden zum Abrufen von Schemainformationen Datenspeicher.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Klassen, in denen die <xref:System.ComponentModel.Design.Data.IDesignerDataSchema> Schnittstelle abrufen von Schemainformationen aus einem Datenspeicher und Zurückgeben der Benutzeroberfläche in der Regel um Benutzeroberflächenelemente aufzufüllen, die dem Benutzer ermöglichen, den Datenspeicher Objekt angegeben werden, die sie verwenden möchten.  
+  
+ Die <xref:System.ComponentModel.Design.Data.IDesignerDataSchema> Schnittstelle bietet zwei Methoden: die <xref:System.ComponentModel.Design.Data.IDesignerDataSchema.GetSchemaItems%2A> Methode, die die angeforderten Schemaobjekte zurückgibt, und die <xref:System.ComponentModel.Design.Data.IDesignerDataSchema.SupportsSchemaClass%2A> Methode, die angibt, ob ein Objekt des angegebenen Datenschema vom Datenspeicher unterstützt wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetSchemaItems">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection GetSchemaItems (System.ComponentModel.Design.Data.DesignerDataSchemaClass schemaClass);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.ICollection GetSchemaItems(class System.ComponentModel.Design.Data.DesignerDataSchemaClass schemaClass) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Data.IDesignerDataSchema.GetSchemaItems(System.ComponentModel.Design.Data.DesignerDataSchemaClass)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schemaClass" Type="System.ComponentModel.Design.Data.DesignerDataSchemaClass" />
+      </Parameters>
+      <Docs>
+        <param name="schemaClass">Die Schemaobjekte zurückgegeben werden soll.</param>
+        <summary>Ruft eine Auflistung von Elementen des angegebenen Schemas ab.</summary>
+        <returns>Eine Auflistung von Schemaobjekten vom angegebenen Typ.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.Data.IDesignerDataSchema.GetSchemaItems%2A> -Methode gibt eine Auflistung aller angegebenen Schema Objekte im Datenspeicher.  
+  
+ Finden Sie unter der <xref:System.ComponentModel.Design.Data.DesignerDataSchemaClass> Klasse eine Liste von Schemaobjekten von .NET Framework unterstützt. Zusätzliche Schemaobjekte hinzugefügt werden können die <xref:System.ComponentModel.Design.Data.DesignerDataSchemaClass> Klasse durch Erstellen eines abgeleiteten Typs.  
+  
+ Wenn der Datenspeicher das angeforderte Schemaobjekt nicht unterstützt die <xref:System.ComponentModel.Design.Data.IDesignerDataSchema.GetSchemaItems%2A> -Methode zurückgeben sollte `null`. Können Sie die <xref:System.ComponentModel.Design.Data.IDesignerDataSchema.SupportsSchemaClass%2A> Methode, um zu bestimmen, ob ein Datenspeicher, jedoch stattdessen das angeforderte Schema vor dem Aufruf unterstützt der <xref:System.ComponentModel.Design.Data.IDesignerDataSchema.GetSchemaItems%2A> Methode, zur Vermeidung zurückgeben `null` für Ihre Anwendung.  
+  
+ Wenn der Datenspeicher des angeforderten Objekts unterstützt, aber keine Instanzen enthält der <xref:System.ComponentModel.Design.Data.IDesignerDataSchema.GetSchemaItems%2A> Methode sollte eine leere Auflistung zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsSchemaClass">
+      <MemberSignature Language="C#" Value="public bool SupportsSchemaClass (System.ComponentModel.Design.Data.DesignerDataSchemaClass schemaClass);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SupportsSchemaClass(class System.ComponentModel.Design.Data.DesignerDataSchemaClass schemaClass) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Data.IDesignerDataSchema.SupportsSchemaClass(System.ComponentModel.Design.Data.DesignerDataSchemaClass)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schemaClass" Type="System.ComponentModel.Design.Data.DesignerDataSchemaClass" />
+      </Parameters>
+      <Docs>
+        <param name="schemaClass">Die Schemaobjekte zurückgegeben werden soll.</param>
+        <summary>Gibt einen Wert, der angibt, ob der Datenspeicher den angegebenen Daten und Schema-Objekt enthält.</summary>
+        <returns>
+          <see langword="true" />Wenn der Datenspeicher unterstützt den angegebenen Daten und Schema-Objekt; andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.Data.IDesignerDataSchema.SupportsSchemaClass%2A> Methode gibt an, ob der Datenspeicher ein Objekt des angegebenen Data-Schema unterstützt. Wenn der Datenspeicher das angegebene Objekt nicht unterstützt die <xref:System.ComponentModel.Design.Data.IDesignerDataSchema.SupportsSchemaClass%2A> -Methode zurückgeben sollte `false`.  
+  
+ Sie können die Tests auf zusätzliche Daten und Schema-Objekte hinzufügen, durch Ableiten von der <xref:System.ComponentModel.Design.Data.DesignerDataSchemaClass> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

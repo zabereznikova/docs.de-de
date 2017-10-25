@@ -1,0 +1,134 @@
+<Type Name="ItemPager" FullName="System.Web.UI.MobileControls.ItemPager">
+  <TypeSignature Language="C#" Value="public class ItemPager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ItemPager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.ItemPager" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Dies hilft dabei, in einem Formular paginieren. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für jedes Steuerelement, das interne Paginierung unterstützt ein <xref:System.Web.UI.MobileControls.ItemPager> Objekt erstellt und verwendet, um den Inhalt des Steuerelements paginiert werden soll.  
+  
+ Diese Klasse wird verwendet, mit der <xref:System.Web.UI.MobileControls.PagedControl> Klasse für Steuerelemente, die Länge der langen Text, wie z. B. eine <xref:System.Web.UI.WebControls.ListControl>, <xref:System.Web.UI.MobileControls.LiteralText>, oder <xref:System.Web.UI.MobileControls.ObjectList>.  
+  
+ Normalerweise würden Sie nicht erben, und ändern diese Klasse aus, es sei denn, eine eigene benutzerdefinierte Paginierung erstellt werden soll. In der Regel, erben von der <xref:System.Web.UI.MobileControls.PagedControl> Klasse, und erweitern Sie Ihre eigenen benutzerdefinierten Eigenschaften und Methoden.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ItemPager ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ItemPager.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.MobileControls.ItemPager" />-Klasse. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erstellt ein neues ItemPager-Objekt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ItemPager (System.Web.UI.MobileControls.ControlPager pager, System.Web.UI.MobileControls.MobileControl control, int itemCount, int itemsPerPage, int itemWeight);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.MobileControls.ControlPager pager, class System.Web.UI.MobileControls.MobileControl control, int32 itemCount, int32 itemsPerPage, int32 itemWeight) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ItemPager.#ctor(System.Web.UI.MobileControls.ControlPager,System.Web.UI.MobileControls.MobileControl,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pager" Type="System.Web.UI.MobileControls.ControlPager" />
+        <Parameter Name="control" Type="System.Web.UI.MobileControls.MobileControl" />
+        <Parameter Name="itemCount" Type="System.Int32" />
+        <Parameter Name="itemsPerPage" Type="System.Int32" />
+        <Parameter Name="itemWeight" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pager">Die Pager-Steuerelement des Steuerelements paginiert werden.</param>
+        <param name="control">Das Steuerelement, das paginiert.</param>
+        <param name="itemCount">Die Gesamtanzahl der Elemente im Steuerelement paginiert werden.</param>
+        <param name="itemsPerPage">Die maximale Anzahl von Elementen pro Seite angezeigt werden.</param>
+        <param name="itemWeight">Die Gewichtung pro Element zugewiesen werden soll. Dieser Wert sollte niedrig sein, wenn ein Steuerelement ein Zeichen als Element behandelt, Wenn ein Steuerelement eine Textzeile als Element behandelt, sollte dieser Wert größer sein.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.MobileControls.ItemPager" />-Klasse. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erstellt ein neues <xref:System.Web.UI.MobileControls.ItemPager> -Objekt und initialisiert die <xref:System.Web.UI.MobileControls.ControlPager> und <xref:System.Web.UI.MobileControls.MobileControl> Objekte und die <xref:System.Web.UI.MobileControls.ItemPager.ItemCount%2A>, <xref:System.Web.UI.MobileControls.PagedControl.ItemsPerPage%2A>, und <xref:System.Web.UI.MobileControls.PagedControl.ItemWeight%2A> mit den Werten der Eigenschaften der `pager`, `control`, `itemCount`, `itemsPerPage`, und `itemWeight` Parameter bzw..  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemCount">
+      <MemberSignature Language="C#" Value="public int ItemCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ItemCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ItemPager.ItemCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Elemente auf der aktuellen Seite angezeigt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Die Anzahl der Elemente, die auf der aktuellen Seite angezeigt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET mobile-Steuerelemente, die internen Paginierung unterstützen stellen außerdem eine benutzerdefinierte Paginierung. Solche Steuerelemente müssen in der Regel alle Daten bereitstellen, die sie anzeigen können. Entwickler angeben, die Gesamtanzahl der Elemente, die in der Liste sind die <xref:System.Web.UI.MobileControls.ItemPager.ItemCount%2A> Eigenschaft. Die <xref:System.Web.UI.MobileControls.PagedControl.ItemsPerPage%2A> Eigenschaft gibt an, wie viele Elemente die Steuerelement pro Seite anzeigt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemIndex">
+      <MemberSignature Language="C#" Value="public int ItemIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ItemIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ItemPager.ItemIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Index des ersten sichtbaren Elements auf der aktuellen Seite ab. Gibt einen Wert von-1 zurück, wenn keine Elemente sichtbar sind. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <value>Der Index des ersten sichtbaren Elements auf der aktuellen Seite.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

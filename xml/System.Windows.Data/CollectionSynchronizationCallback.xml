@@ -1,0 +1,30 @@
+<Type Name="CollectionSynchronizationCallback" FullName="System.Windows.Data.CollectionSynchronizationCallback">
+  <TypeSignature Language="C#" Value="public delegate void CollectionSynchronizationCallback(IEnumerable collection, object context, Action accessMethod, bool writeAccess);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CollectionSynchronizationCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Data.CollectionSynchronizationCallback" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="collection" Type="System.Collections.IEnumerable" />
+    <Parameter Name="context" Type="System.Object" />
+    <Parameter Name="accessMethod" Type="System.Action" />
+    <Parameter Name="writeAccess" Type="System.Boolean" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="collection">Die Auflistung zum Zugriff auf in einem anderen Thread als dem, der Sie erstellt.</param>
+    <param name="context">Ein Objekt, mit dem die Auflistung synchronisiert wird.</param>
+    <param name="accessMethod">Ein Delegat, der die Methode, die den Vorgang in der Auflistung ausführt.</param>
+    <param name="writeAccess">
+      <see langword="true" />Wenn <c>AccessMethod</c> schreibt in der Auflistung befindet, andernfalls <see langword="false" />.</param>
+    <summary>Darstellen Sie die Methode, die eine Auflistung für threadübergreifenden Zugriff synchronisiert.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

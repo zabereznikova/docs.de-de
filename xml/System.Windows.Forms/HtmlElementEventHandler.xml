@@ -1,0 +1,43 @@
+<Type Name="HtmlElementEventHandler" FullName="System.Windows.Forms.HtmlElementEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void HtmlElementEventHandler(object sender, HtmlElementEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HtmlElementEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.HtmlElementEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Forms.HtmlElementEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="e">Ein <see cref="T:System.Windows.Forms.HtmlElementEventArgs" />, das die Ereignisdaten enthält.</param>
+    <summary>Stellt die Methode für die Behandlung der <see langword="Click" />, <see langword="MouseDown" /> und verknüpfte Ereignisse in <see cref="T:System.Windows.Forms.HtmlDocument" />, <see cref="T:System.Windows.Forms.HtmlElement" />, und <see cref="T:System.Windows.Forms.HtmlWindow" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erstellen eines <xref:System.Windows.Forms.HtmlElementEventHandler>-Delegaten bestimmen Sie die Methode für die Ereignisbehandlung. Um dem Ereignishandler das Ereignis zuzuordnen, fügen Sie dem Ereignis eine Instanz des Delegaten hinzu. Der Ereignishandler wird bei jedem Eintreten des Ereignisses aufgerufen, sofern der Delegat nicht entfernt wird. Weitere Informationen zu Ereignishandlerdelegaten, finden Sie unter [Ereignisse](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Sie müssen warten, bis ein HTML-Dokument vollständig geladen wird, um einen Ereignishandler an das Dokument angefügt hat. Wenn Sie versuchen, einen Handler anfügen, bevor der Ladevorgang abgeschlossen ist, kann das Anhängen fehlschlagen. Die beste Möglichkeit zum Anfügen von Ereignishandlern in ein neues Dokument befindet sich in der <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> -Ereignishandler für das <xref:System.Windows.Forms.WebBrowser> Steuerelement.  
+  
+   
+  
+## Examples  
+ Der folgende Code fügt der Ereignishandler für das <xref:System.Windows.Forms.HtmlDocument.MouseDown>, <xref:System.Windows.Forms.HtmlDocument.MouseMove>, und <xref:System.Windows.Forms.HtmlDocument.MouseUp> Ereignisse auf <xref:System.Windows.Forms.HtmlDocument>. In diesem Codebeispiel wird davon ausgegangen, das Projekt enthält eine Instanz des der <xref:System.Windows.Forms.WebBrowser> Steuerelement namens `WebBrowser1`.  
+  
+ [!code-cpp[HtmlElementEventHandler#1](~/samples/snippets/cpp/VS_Snippets_Winforms/HtmlElementEventHandler/CPP/form1.cpp#1)]
+ [!code-csharp[HtmlElementEventHandler#1](~/samples/snippets/csharp/VS_Snippets_Winforms/HtmlElementEventHandler/CS/form1.cs#1)]
+ [!code-vb[HtmlElementEventHandler#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/HtmlElementEventHandler/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,549 @@
+<Type Name="BindingContext" FullName="System.ServiceModel.Channels.BindingContext">
+  <TypeSignature Language="C#" Value="public class BindingContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BindingContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.BindingContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Informationen über Adressen, Bindungen, Bindungselemente und Bindungsparameter bereit, die zur Erstellung von Kanallistener und Kanalfactorys erforderlich sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit den Kanallistenern und den Kanalfactorys werden dann Kanalstapel zur Verarbeitung eingehender und ausgehender Nachrichten erstellt. Der Bindungskontext stellt auch die Verknüpfung zu den inneren Kanalfactorys und den inneren Kanallistenern bereit, die zum Erstellen der Kanalstapel und der Listenerstapel verwendet werden. Im Bindungskontext werden im Grunde genommen alle dynamischen Informationen gespeichert, die bei der Erstellung des Kanalstapels benötigt werden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BindingContext (System.ServiceModel.Channels.CustomBinding binding, System.ServiceModel.Channels.BindingParameterCollection parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Channels.CustomBinding binding, class System.ServiceModel.Channels.BindingParameterCollection parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.BindingContext.#ctor(System.ServiceModel.Channels.CustomBinding,System.ServiceModel.Channels.BindingParameterCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.CustomBinding" />
+        <Parameter Name="parameters" Type="System.ServiceModel.Channels.BindingParameterCollection" />
+      </Parameters>
+      <Docs>
+        <param name="binding">Der <see cref="T:System.ServiceModel.Channels.CustomBinding" /> für den Kanal.</param>
+        <param name="parameters">Der <see cref="T:System.ServiceModel.Channels.BindingParameterCollection" /> für den Kanal.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.BindingContext" />-Klasse für eine angegebene Bindung und für eine angegebene Auflistung von Bindungsparametern.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert von <xref:System.ServiceModel.Description.ListenUriMode> wird von diesem Konstruktor auf <xref:System.ServiceModel.Description.ListenUriMode.Explicit> festgelegt, die relative Adresse wird auf <xref:System.String.Empty> festgelegt, und die Basisadresse wird auf `null` festgelegt.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_BindingContext#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_bindingcontext/cs/program.cs#1)]
+ [!code-vb[S_UE_BindingContext#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_bindingcontext/vb/program.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="binding" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BindingContext (System.ServiceModel.Channels.CustomBinding binding, System.ServiceModel.Channels.BindingParameterCollection parameters, Uri listenUriBaseAddress, string listenUriRelativeAddress, System.ServiceModel.Description.ListenUriMode listenUriMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Channels.CustomBinding binding, class System.ServiceModel.Channels.BindingParameterCollection parameters, class System.Uri listenUriBaseAddress, string listenUriRelativeAddress, valuetype System.ServiceModel.Description.ListenUriMode listenUriMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.BindingContext.#ctor(System.ServiceModel.Channels.CustomBinding,System.ServiceModel.Channels.BindingParameterCollection,System.Uri,System.String,System.ServiceModel.Description.ListenUriMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.CustomBinding" />
+        <Parameter Name="parameters" Type="System.ServiceModel.Channels.BindingParameterCollection" />
+        <Parameter Name="listenUriBaseAddress" Type="System.Uri" />
+        <Parameter Name="listenUriRelativeAddress" Type="System.String" />
+        <Parameter Name="listenUriMode" Type="System.ServiceModel.Description.ListenUriMode" />
+      </Parameters>
+      <Docs>
+        <param name="binding">Der <see cref="T:System.ServiceModel.Channels.CustomBinding" /> für den Kanal.</param>
+        <param name="parameters">Der <see cref="T:System.ServiceModel.Channels.BindingParameterCollection" /> für den Kanal.</param>
+        <param name="listenUriBaseAddress">Der <see cref="T:System.Uri" />, der vom Endpunkt des Diensts abgehört wird.</param>
+        <param name="listenUriRelativeAddress">Die relative Adresse, die vom Endpunkt des Diensts überwacht wird.</param>
+        <param name="listenUriMode">Der <see cref="T:System.ServiceModel.Description.ListenUriMode" />, der angibt, ob vom Transport sichergestellt werden muss, dass der URI für den Dienst, an dem gelauscht werden soll, eindeutig ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Channels.BindingContext" />-Klasse für eine angegebene Bindung, eine angegebene Auflistung von Bindungsparametern und eine angegebene Adresse für den Endpunkt, an dem der Dienst lauscht.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_UE_BindingContext#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_bindingcontext/cs/program.cs#2)]
+ [!code-vb[S_UE_BindingContext#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_bindingcontext/vb/program.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="binding" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Der <see cref="T:System.ServiceModel.Description.ListenUriMode" /> ist nicht definiert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Binding">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.CustomBinding Binding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.CustomBinding Binding" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.BindingContext.Binding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.CustomBinding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Bindung für den Kanal ab, der im aktuellen Kontext erstellt wird.</summary>
+        <value>Die <see cref="T:System.ServiceModel.Channels.CustomBinding" /> für den Kanal, der im aktuellen Kontext erstellt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_UE_BindingContext#3](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_bindingcontext/cs/program.cs#3)]
+ [!code-vb[S_UE_BindingContext#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_bindingcontext/vb/program.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingParameters">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.BindingParameterCollection BindingParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.BindingParameterCollection BindingParameters" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.BindingContext.BindingParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingParameterCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Auflistung von Bindungsparametern für den Kanal ab, der im aktuellen Kontext erstellt wird.</summary>
+        <value>Die <see cref="T:System.ServiceModel.Channels.BindingParameterCollection" /> für den Kanal, der im aktuellen Kontext erstellt wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Auflistung enthält die Einstellungen, die beim Erstellen des Kanalstapels aus den Bindungen vorlagen. Einstellungen, die während der Erstellung im Kanalstapel nach unten verschoben werden müssen, werden in die Auflistung eingefügt, bis sie von einem weiter unten liegenden Kanal im Stapel benötigt werden.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_BindingContext#4](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_bindingcontext/cs/program.cs#4)]
+ [!code-vb[S_UE_BindingContext#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_bindingcontext/vb/program.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildInnerChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt; BuildInnerChannelFactory&lt;TChannel&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Channels.IChannelFactory`1&lt;!!TChannel&gt; BuildInnerChannelFactory&lt;TChannel&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.BindingContext.BuildInnerChannelFactory``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="TChannel">Der <see cref="T:System.ServiceModel.Channels.IChannel" />-Objekttyp, der von der inneren Kanalfactory erzeugt wird.</typeparam>
+        <summary>Erstellt die innere Kanalfactory für Kanäle eines angegebenen Typs unter der aktuellen Kanalfactory.</summary>
+        <returns>Die <see cref="T:System.ServiceModel.Channels.IChannelFactory`1" /> vom Typ <see cref="T:System.ServiceModel.Channels.IChannel" />, die die innere Kanalfactory der aktuellen Kanalfactory darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_UE_BindingContext#9](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_bindingcontext/cs/program.cs#9)]
+ [!code-vb[S_UE_BindingContext#9](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_bindingcontext/vb/program.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildInnerChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt; BuildInnerChannelListener&lt;TChannel&gt; () where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Channels.IChannelListener`1&lt;!!TChannel&gt; BuildInnerChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.BindingContext.BuildInnerChannelListener``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="TChannel">Der <see cref="T:System.ServiceModel.Channels.IChannel" />-Objekttyp, nach dem der innere Kanallistener lauscht.</typeparam>
+        <summary>Erstellt einen inneren Kanallistener, der einen angegebenen Kanaltyp überwacht.</summary>
+        <returns>Die <see cref="T:System.ServiceModel.Channels.IChannelListener`1" /> vom Typ <see cref="T:System.ServiceModel.Channels.IChannel" />, die den inneren Kanallistener der aktuellen Kanalfactory darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_UE_BindingContext#10](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_bindingcontext/cs/program.cs#10)]
+ [!code-vb[S_UE_BindingContext#10](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_bindingcontext/vb/program.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBuildInnerChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public bool CanBuildInnerChannelFactory&lt;TChannel&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool CanBuildInnerChannelFactory&lt;TChannel&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.BindingContext.CanBuildInnerChannelFactory``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="TChannel">Der <see cref="T:System.ServiceModel.Channels.IChannel" />-Objekttyp, der von der inneren Kanalfactory erzeugt wird.</typeparam>
+        <summary>Gibt einen Wert zurück, der angibt, ob von der inneren Kanalfactory ein angegebener Kanaltyp erzeugt werden kann.</summary>
+        <returns>
+          <see langword="true" />, wenn der angegebene <paramref name="TChannel" /> von der inneren Kanalfactory erzeugt werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_UE_BindingContext#11](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_bindingcontext/cs/program.cs#11)]
+ [!code-vb[S_UE_BindingContext#11](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_bindingcontext/vb/program.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBuildInnerChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public bool CanBuildInnerChannelListener&lt;TChannel&gt; () where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool CanBuildInnerChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.BindingContext.CanBuildInnerChannelListener``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="TChannel">Der <see cref="T:System.ServiceModel.Channels.IChannel" />-Objekttyp, nach dem der innere Kanallistener lauscht.</typeparam>
+        <summary>Gibt einen Wert zurück, der angibt, ob mit dem inneren Kanallistener nach einem angegebenen Kanaltyp gelauscht werden kann.</summary>
+        <returns>
+          <see langword="true" />, wenn nach dem angegebenen <paramref name="TChannel" /> mit dem inneren Kanallistener gelauscht werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_UE_BindingContext#12](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_bindingcontext/cs/program.cs#12)]
+ [!code-vb[S_UE_BindingContext#12](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_bindingcontext/vb/program.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.BindingContext Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Channels.BindingContext Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.BindingContext.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingContext</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt eine Kopie des aktuellen Kontexts für die Kanalerstellung zurück.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.Channels.BindingContext" />-Objekt, das eine Kopie des aktuellen Kontexts für die Kanalerstellung darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode gibt eine Kopie zurück, die ein tiefer Klon des Bindungskontexts ist. Mit einem tiefen Klon eines Objekts wird neben der Kopie des Objekts eine Kopie aller Elemente erstellt, auf die das betreffende Objekt direkt oder indirekt verweist. (Dieser Vorgang wird auch als Kopieren des gesamten Objektdiagramms bezeichnet.) Ein flacher Klon eines Objekts stellt im Gegensatz dazu nur eine Kopie des Objekts dar. Wenn das Objekt Verweise auf andere Objekte enthält, werden von der flachen Kopie keine Kopien der Objekte erstellt, auf die verwiesen wird. Stattdessen werden nur die Verweise auf die ursprünglichen Objekte kopiert.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_BindingContext#13](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_bindingcontext/cs/program.cs#13)]
+ [!code-vb[S_UE_BindingContext#13](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_bindingcontext/vb/program.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInnerProperty&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T GetInnerProperty&lt;T&gt; () where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T GetInnerProperty&lt;class T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.BindingContext.GetInnerProperty``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">Das typisierte Objekt, das von der Methode abgefragt wird.</typeparam>
+        <summary>Gibt ggf. ein angefordertes typisiertes Objekt von der entsprechenden Ebene im Bindungsstapel zurück.</summary>
+        <returns>Das von <paramref name="T" /> angeforderte typisierte Objekt, oder <see langword="null" />, falls das Objekt nicht vorhanden ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Klont den Bindungskontext und ruft <xref:System.ServiceModel.Channels.BindingElement.GetProperty%60%601%28System.ServiceModel.Channels.BindingContext%29> für das nächste Bindungselement im Bindungskontext auf.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_BindingContext#14](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_bindingcontext/cs/program.cs#14)]
+ [!code-vb[S_UE_BindingContext#14](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_bindingcontext/vb/program.vb#14)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListenUriBaseAddress">
+      <MemberSignature Language="C#" Value="public Uri ListenUriBaseAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri ListenUriBaseAddress" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.BindingContext.ListenUriBaseAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den URI ab, der die Basisadresse bereitstellt, die vom Endpunkt des Diensts überwacht wird, oder legt diesen fest.</summary>
+        <value>Der <see cref="T:System.Uri" />, der vom Endpunkt des Diensts abgehört wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Adresse des Endpunkts, die von einem Dienst überwacht wird, wird durch Anfügen der <xref:System.ServiceModel.Channels.BindingContext.ListenUriRelativeAddress%2A> an die <xref:System.ServiceModel.Channels.BindingContext.ListenUriBaseAddress%2A> ermittelt. Die absolute Adresse kann mit der <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A>-Eigenschaft festgelegt werden.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_BindingContext#5](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_bindingcontext/cs/program.cs#5)]
+ [!code-vb[S_UE_BindingContext#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_bindingcontext/vb/program.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListenUriMode">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ListenUriMode ListenUriMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.Description.ListenUriMode ListenUriMode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.BindingContext.ListenUriMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ListenUriMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob durch den Transport sichergestellt werden muss, dass der URI für den Dienst, der überwacht werden soll, eindeutig ist, oder legt diesen fest.</summary>
+        <value>Der <see cref="T:System.ServiceModel.Description.ListenUriMode" />, der angibt, ob vom Transport sichergestellt werden muss, dass der URI für den Dienst, an dem gelauscht werden soll, eindeutig ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_UE_BindingContext#6](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_bindingcontext/cs/program.cs#6)]
+ [!code-vb[S_UE_BindingContext#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_bindingcontext/vb/program.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListenUriRelativeAddress">
+      <MemberSignature Language="C#" Value="public string ListenUriRelativeAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ListenUriRelativeAddress" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.BindingContext.ListenUriRelativeAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den URI ab, der die relative Adresse bereitstellt, die vom Endpunkt des Diensts überwacht wird, oder legt diesen fest.</summary>
+        <value>Die relative Adresse, die vom Endpunkt des Diensts überwacht wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Adresse des Endpunkts, die von einem Dienst überwacht wird, wird durch Anfügen der <xref:System.ServiceModel.Channels.BindingContext.ListenUriRelativeAddress%2A> an die <xref:System.ServiceModel.Channels.BindingContext.ListenUriBaseAddress%2A> ermittelt. Die absolute Adresse kann mit der <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A>-Eigenschaft festgelegt werden.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_BindingContext#7](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_bindingcontext/cs/program.cs#7)]
+ [!code-vb[S_UE_BindingContext#7](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_bindingcontext/vb/program.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemainingBindingElements">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.BindingElementCollection RemainingBindingElements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.BindingElementCollection RemainingBindingElements" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.BindingContext.RemainingBindingElements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingElementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Bindungselemente ab, die von anderen Bindungselementen verwendet werden, um den Kanalstapel zu erstellen.</summary>
+        <value>Die <see cref="T:System.ServiceModel.Channels.BindingElementCollection" /> mit den Bindungselementen, die von anderen Bindungselementen zum Erstellen des Kanalstapels verwendet werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die in diese Auflistung eingefügten Bindungselemente entsprechen nicht direkt einem Listener oder einer Factory in einem der Kanalstapel. Das Bindungselement des Encoders wird beispielsweise in diese Auflistung eingefügt und anschließend vom Transportkanal zum Erstellen eines Nachrichtenencoders verwendet.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_BindingContext#8](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_bindingcontext/cs/program.cs#8)]
+ [!code-vb[S_UE_BindingContext#8](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_bindingcontext/vb/program.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

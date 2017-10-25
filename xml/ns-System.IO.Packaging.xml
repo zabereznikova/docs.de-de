@@ -1,0 +1,47 @@
+<Namespace Name="System.IO.Packaging">
+  <Docs>
+    <summary>Enthält Klassen, die Speicherung von mehrere Datenobjekte in einem einzelnen Container zu unterstützen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging.Package>ist eine abstrakte Klasse, die zum Organisieren von Objekten in einer einzelnen Entität mit einem definierten physischen Format für Portabilität und effizienten Zugriff verwendet werden kann.  
+  
+ Eine ZIP-Datei ist das primäre physische Format für die <xref:System.IO.Packaging.Package>.  Andere <xref:System.IO.Packaging.Package> Implementierungen möglicherweise verwenden Sie andere physische Formate wie z. B. ein XML-Dokument, eine Datenbank oder einen Webdienst.  
+  
+ Wie ein Dateisystem Elemente einem <xref:System.IO.Packaging.Package> in eine hierarchische Organisation von Dateien und Ordnern verwiesen wird.  
+  
+ Obwohl <xref:System.IO.Packaging.Package> ist eine abstrakte Klasse, die <xref:System.IO.Packaging.ZipPackage> abgeleiteten Klasse wird als standardmäßig verwendet die <xref:System.IO.Packaging.Package.Open%2A?displayProperty=nameWithType> Methode.  
+  
+ Ein <xref:System.IO.Packaging.PackagePart> ("Teil") ist die abstrakte Klasse, die ein Objekt darstellt, die in gespeichert ist eine <xref:System.IO.Packaging.Package>.  
+  
+ Ein <xref:System.IO.Packaging.PackageRelationship> ("Beziehung") definiert eine Zuordnung zwischen einer Quelle <xref:System.IO.Packaging.Package> oder <xref:System.IO.Packaging.PackagePart> und einem Zielobjekt.  Ein <xref:System.IO.Packaging.PackageRelationship> kann eine von zwei Typen, von denen jeder eine von zwei Formen kann:  
+  
+-   Beziehung auf Paketebene (erstellt durch <xref:System.IO.Packaging.Package.CreateRelationship%2A?displayProperty=nameWithType>)  
+  
+    -   Zwischen einem <xref:System.IO.Packaging.Package> und ein Ziel-Webpart im Paket.  
+  
+    -   Zwischen einem <xref:System.IO.Packaging.Package> und einer Zielressource außerhalb des Pakets.  
+  
+-   Beziehung Teil-Ebene (erstellt durch <xref:System.IO.Packaging.PackagePart.CreateRelationship%2A?displayProperty=nameWithType>)  
+  
+    -   Zwischen einem <xref:System.IO.Packaging.PackagePart> und einem anderen Zielteil des Pakets.  
+  
+    -   Zwischen einem <xref:System.IO.Packaging.PackagePart> und einer Zielressource außerhalb des Pakets.  
+  
+ Die Beziehung Quelle <xref:System.IO.Packaging.Package> oder Quelle <xref:System.IO.Packaging.PackagePart> gilt, dass der "Besitzer" der Beziehung.  Wenn das Quellobjekt, das gelöscht wird, werden alle Beziehungen, die das Quellobjekt, das im Besitz ebenfalls gelöscht.  Der Prozess zum Erstellen oder Löschen einer Beziehung werden nicht physisch entweder am Quell- oder Zielspeicherort Objekte in keiner Weise geändert werden.  
+  
+ Ein <xref:System.IO.Packaging.PackageDigitalSignature> ("digitale Signatur") ist eine Zusammenstellung von Teile und Beziehungen, die eine digitale Signatur enthaltene darstellt eine <xref:System.IO.Packaging.Package>.  Die digitale Signatur der Absender identifiziert und überprüft, dass die signierten Teile und Beziehungen in enthalten die <xref:System.IO.Packaging.Package> nicht geändert wurden.  
+  
+ Pakete unterstützen auch Digital Rights Management (DRM), wodurch Inhaltselemente in einem <xref:System.IO.Packaging.Package> mit bestimmten Zugriffsrechten auf autorisierte Benutzer verschlüsselt werden.  
+  
+ Basierend auf den <xref:System.IO.Packaging.Package> Architektur, eine <xref:System.Windows.Xps.Packaging.XpsDocument> ist ein Paket zum Speichern von Dokumenten, die basierend auf der Open entwickelt [XML Paper Specification (XPS)](http://go.microsoft.com/fwlink/?LinkID=65761).  
+  
+ [!INCLUDE[TLA#tla_wpf](~/includes/tlasharptla-wpf-md.md)]verwendet Pakete zum Speichern von Inhalt, Ressourcen und Beziehungen für Seiten und Dokumente mithilfe einer standard-ZIP-Datei in der Standardeinstellung. Wie bei jeder ZIP-Datei die Anwendung die <xref:System.IO.Packaging> Klassen zum Speichern und optional alle Typ oder die Anzahl der Dateien in einem einzelnen Container Zugriff zu schützen.  
+  
+ Weitere Informationen finden Sie unter der Spezifikation (Open Packaging Conventions, OPC), zum Download verfügbar unter im Abschnitt XPS [Windows Hardware Developer Central](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

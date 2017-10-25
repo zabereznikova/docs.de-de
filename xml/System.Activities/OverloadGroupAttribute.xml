@@ -1,0 +1,106 @@
+<Type Name="OverloadGroupAttribute" FullName="System.Activities.OverloadGroupAttribute">
+  <TypeSignature Language="C#" Value="public sealed class OverloadGroupAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OverloadGroupAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.OverloadGroupAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property, AllowMultiple=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Methode bereit, mit der angezeigt werden kann, welche Argumentkombinationen in einer Aktivität gültig sind.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Argumente können gruppiert werden, um gültige Überladungsgruppen zu bilden. Eine Überladungsgruppe darf keine Teilmenge bzw. kein äquivalenter Satz einer anderen Überladungsgruppe sein. Die einzige Ausnahme dieser Regel ist eine Teilmenge, die nur Argumente enthält, wobei <xref:System.Activities.RuntimeArgument.IsRequired%2A> auf `false` festgelegt ist. Überladungsgruppen können sich überschneiden. Dabei tritt jedoch ein Fehler auf, wenn die Schnittmenge der Gruppen alle erforderlichen Argumente einer oder beider Überladungsgruppen enthält.  
+  
+ Eine Überladungsgruppe wird als gebunden angesehen, wenn alle <xref:System.Activities.RuntimeArgument.IsRequired%2A>-Argumente in der Gruppe gebunden sind. Wenn eine Gruppe über 0 <xref:System.Activities.RuntimeArgument.IsRequired%2A>-Argumente verfügt und mindestens ein Argument gebunden ist, wird die Gruppe als gebunden betrachtet. Es tritt ein Fehler auf, wenn keine der Gruppen gebunden ist, es sei denn eine Überladungsgruppe enthält keine <xref:System.Activities.RuntimeArgument.IsRequired%2A>-Argumente. Das Binden von <xref:System.Activities.RuntimeArgument.IsRequired%2A>-Argumenten aus mehr als einer Überladungsgruppe ist nicht zulässig. Es tritt ein Fehler auf, wenn mehr als eine Überladungsgruppe gebunden ist, d. h., wenn alle erforderlichen Argumente in einer Überladungsgruppe gebunden sind und zusätzlich ein weiteres Argument in einer anderen Überladungsgruppe gebunden ist.  
+  
+ Jede Verletzung der vorangehenden Regeln führt dazu, dass eine <xref:System.Activities.InvalidWorkflowException> ausgelöst wird, wenn die enthaltende Aktivität für die Ausführung vorbereitet wird.  
+  
+ Die <xref:System.Activities.RuntimeArgument.IsRequired%2A?displayProperty=nameWithType> festgelegt ist, um `true` Wenn die <xref:System.Activities.RequiredArgumentAttribute?displayProperty=nameWithType> an einem Argument angewendet wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OverloadGroupAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.OverloadGroupAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Activities.OverloadGroupAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OverloadGroupAttribute (string groupName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string groupName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.OverloadGroupAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="groupName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="groupName">Der Name der Gruppe mit Argumenten.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Activities.OverloadGroupAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GroupName">
+      <MemberSignature Language="C#" Value="public string GroupName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string GroupName" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.OverloadGroupAttribute.GroupName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der <see cref="T:System.Activities.OverloadGroupAttribute" /> ab.</summary>
+        <value>Der Name der Gruppe mit den verwandten Argumenten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeId">
+      <MemberSignature Language="C#" Value="public override object TypeId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object TypeId" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.OverloadGroupAttribute.TypeId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen eindeutigen Bezeichner für dieses Attribut ab.</summary>
+        <value>Ein eindeutiger Bezeichner für dieses Attribut.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

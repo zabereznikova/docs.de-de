@@ -1,0 +1,58 @@
+<Type Name="IContributeServerContextSink" FullName="System.Runtime.Remoting.Contexts.IContributeServerContextSink">
+  <TypeSignature Language="C#" Value="public interface IContributeServerContextSink" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IContributeServerContextSink" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Contexts.IContributeServerContextSink" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bei eine abfangen Senke an der Kontextgrenze auf dem Server von einem Remotingaufruf einbezogen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Remoting.Contexts.IContributeServerContextSink> Schnittstelle wird implementiert von Kontexteigenschaften in einer <xref:System.Runtime.Remoting.Contexts.Context> -Klasse, die ein abfangen an der Kontextgrenze auf dem Server von einem Remotingaufruf Senke werden soll.  
+  
+ Die Kontextkette besteht aus den Eigenschaften im Serverkontext, die implementieren <xref:System.Runtime.Remoting.Contexts.IContributeServerContextSink> und die Senke beitragen, mithilfe der <xref:System.Runtime.Remoting.Contexts.IContributeServerContextSink.GetServerContextSink%2A> -Methodenaufruf.  
+  
+ Serialisierung ist ein Beispiel für eine solche Kontexteigenschaft. In diesem Fall würde die Senke Nachricht das Synchronisierungssperre primitive vor der Verarbeitung eines Aufrufs eine weitere dauert.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="GetServerContextSink">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Messaging.IMessageSink GetServerContextSink (System.Runtime.Remoting.Messaging.IMessageSink nextSink);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Runtime.Remoting.Messaging.IMessageSink GetServerContextSink(class System.Runtime.Remoting.Messaging.IMessageSink nextSink) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.IContributeServerContextSink.GetServerContextSink(System.Runtime.Remoting.Messaging.IMessageSink)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Messaging.IMessageSink</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nextSink" Type="System.Runtime.Remoting.Messaging.IMessageSink" />
+      </Parameters>
+      <Docs>
+        <param name="nextSink">Die Kette der senken bisher zusammengesetzt.</param>
+        <summary>Akzeptiert die erste Senke in der Kette der senken, die bisher zusammengesetzt, und klicken Sie dann die Senke Nachricht vor der Senkenkette verkettet.</summary>
+        <returns>Die zusammengesetzte Senkenkette.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

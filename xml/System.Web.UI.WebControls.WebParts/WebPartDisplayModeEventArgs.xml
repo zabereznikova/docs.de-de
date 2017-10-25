@@ -1,0 +1,62 @@
+<Type Name="WebPartDisplayModeEventArgs" FullName="System.Web.UI.WebControls.WebParts.WebPartDisplayModeEventArgs">
+  <TypeSignature Language="C#" Value="public class WebPartDisplayModeEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebPartDisplayModeEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebPartDisplayModeEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Web.UI.WebControls.WebParts.WebPartManager.DisplayModeChanged" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeEventArgs> -Klasse enthält Informationen für die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.DisplayModeChanged> Ereignis. Die <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeEventArgs> Klasse ermöglicht den Zugriff auf den Anzeigemodus, die auf dem Webparts-Steuerelementsatz vor angewendet wurde die <xref:System.Web.UI.WebControls.WebParts.WebPartManager.DisplayModeChanged> Ereignis. Die frühere Anzeigemodus erfolgt über die <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeEventArgs.OldDisplayMode%2A> Eigenschaft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartDisplayModeEventArgs (System.Web.UI.WebControls.WebParts.WebPartDisplayMode oldDisplayMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.WebParts.WebPartDisplayMode oldDisplayMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartDisplayModeEventArgs.#ctor(System.Web.UI.WebControls.WebParts.WebPartDisplayMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="oldDisplayMode" Type="System.Web.UI.WebControls.WebParts.WebPartDisplayMode" />
+      </Parameters>
+      <Docs>
+        <param name="oldDisplayMode">Die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDisplayMode" /> auf dem Webparts-Steuerelementsatz angewendet, bevor der Anzeigemodus geändert wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDisplayModeEventArgs" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OldDisplayMode">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.WebPartDisplayMode OldDisplayMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartDisplayMode OldDisplayMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartDisplayModeEventArgs.OldDisplayMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartDisplayMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abrufen oder festlegen den frühere Anzeigemodus für ein Webpart-Steuerelement.</summary>
+        <value>Die <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDisplayMode" /> angewendet, die auf einer Webparts-Steuerelement vor dem <see cref="E:System.Web.UI.WebControls.WebParts.WebPartManager.DisplayModeChanged" /> Ereignis.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

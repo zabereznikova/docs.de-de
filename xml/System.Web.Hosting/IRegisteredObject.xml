@@ -1,0 +1,62 @@
+<Type Name="IRegisteredObject" FullName="System.Web.Hosting.IRegisteredObject">
+  <TypeSignature Language="C#" Value="public interface IRegisteredObject" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRegisteredObject" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Hosting.IRegisteredObject" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert Methoden für Objekte, die von der hostumgebung verwaltet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Objekten implementieren muss, die <xref:System.Web.Hosting.IRegisteredObject> Schnittstelle, um mit der hosting-Umgebung zu registrieren und ihre Lebensdauer von der hostumgebung verwaltet werden.  
+  
+ Erstellen Sie eine Instanz eines registrierten-Objekts, durch Aufrufen der <xref:System.Web.Hosting.ApplicationManager.CreateObject%2A?displayProperty=nameWithType> -Methode für den Anwendungs-Manager. Die Anwendungs-Manager gibt das neu erstellte Objekt an den Aufrufer, der dann eine typspezifische-Methode für das Objekt aufrufen können. Während des Starts der registrierte-Objekt aufrufen sollten die <xref:System.Web.Hosting.HostingEnvironment.RegisterObject%2A?displayProperty=nameWithType> Methode, um die Registrierung des Objekts abzuschließen.  
+  
+ Wenn die Anwendungs-Manager einen registrierten-Objekt beendet werden muss, er ruft die <xref:System.Web.Hosting.IRegisteredObject.Stop%2A> Methode.  
+  
+ Anwendungen können nur eine Instanz eines registrierten Typs verfügen. Um mehrere Instanzen eines registrierten Typs zu erstellen, verwenden Sie die Diensthostfactory-Muster, um ein Objekt-Manager zu erstellen, die mit der Anwendung registriert ist, und klicken Sie dann verwaltet mehrere Instanzen. Ein Beispiel für ein Objekt das Diensthostfactory-Muster implementieren, finden Sie im Beispiel für die <xref:System.Web.Hosting.ApplicationManager> Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public void Stop (bool immediate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Stop(bool immediate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.IRegisteredObject.Stop(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="immediate" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="immediate">
+          <see langword="true" />an, dass das registrierte Objekt sollte die Hostingumgebung aufheben vor der Rückgabe; andernfalls <see langword="false" />.</param>
+        <summary>Fordert ein registriertes Objekt aufgehoben werden.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Anwendungs-Manager Ruft die <xref:System.Web.Hosting.IRegisteredObject.Stop%2A> Methode, um ein registriertes Objekt beim Aufheben der Registrierung zu bitten. Bei der Verarbeitung der <xref:System.Web.Hosting.IRegisteredObject.Stop%2A> -Methode, mit dem registrierten muss aufgerufen die <xref:System.Web.Hosting.HostingEnvironment.UnregisterObject%2A?displayProperty=nameWithType> Methode.  
+  
+ Die <xref:System.Web.Hosting.IRegisteredObject.Stop%2A> -Methode zuerst aufgerufen wird, und die `immediate` Parametersatz auf `false`. Das Objekt kann entweder vollständige Verarbeitung rufen die <xref:System.Web.Hosting.HostingEnvironment.UnregisterObject%2A> -Methode, und klicken Sie dann zurück, oder es sofort zurückgegeben und Verarbeitung asynchron vor dem Aufruf abschließen kann die <xref:System.Web.Hosting.HostingEnvironment.UnregisterObject%2A> Methode.  
+  
+ Sollte das registrierte Objekt nicht Verarbeitungsvorgänge abgeschlossen werden, bevor die Anwendungs-Manager-Timeoutzeitraum abgelaufen ist, die <xref:System.Web.Hosting.IRegisteredObject.Stop%2A> -Methode erneut aufgerufen wird, und die `immediate` Parametersatz auf `true`. Wenn die `immediate` Parameter ist `true`, registrierte Objekt aufrufen, muss die <xref:System.Web.Hosting.HostingEnvironment.UnregisterObject%2A> Methode vor der Rückgabe hingegen wird ihre Registrierung durch die Anwendungs-Manager entfernt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

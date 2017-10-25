@@ -1,0 +1,225 @@
+<Type Name="OperationalStatus" FullName="System.Net.NetworkInformation.OperationalStatus">
+  <TypeSignature Language="C#" Value="public enum OperationalStatus" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed OperationalStatus extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.NetworkInformation.OperationalStatus" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Betriebszustand einer Netzwerkschnittstelle an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration definiert die gültigen Werte für die <xref:System.Net.NetworkInformation.NetworkInterface.OperationalStatus%2A> Eigenschaft.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel zeigt eine Zusammenfassung für alle Schnittstellen auf dem lokalen Computer.  
+  
+ [!code-cpp[NCLNetInfoReport#16](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfoReport/CPP/netinfo.cpp#16)]
+ [!code-csharp[NCLNetInfoReport#16](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfoReport/CS/netinfo.cs#16)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Dormant">
+      <MemberSignature Language="C#" Value="Dormant" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.OperationalStatus Dormant = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.OperationalStatus.Dormant" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.OperationalStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Netzwerkschnittstelle ist nicht in einer Bedingung Datenpakete zu übertragen; Diese ist für ein externes Ereignis wartet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Down">
+      <MemberSignature Language="C#" Value="Down" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.OperationalStatus Down = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.OperationalStatus.Down" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.OperationalStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Netzwerkschnittstelle ist keine Datenpakete zu übertragen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LowerLayerDown">
+      <MemberSignature Language="C#" Value="LowerLayerDown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.OperationalStatus LowerLayerDown = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.OperationalStatus.LowerLayerDown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.OperationalStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Netzwerkschnittstelle ist nicht Datenpakete zu übertragen, da sie über eine oder mehrere Schnittstellen ausgeführt wird und mindestens einer dieser Schnittstellen "unterer Ebene" nicht verfügbar ist.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotPresent">
+      <MemberSignature Language="C#" Value="NotPresent" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.OperationalStatus NotPresent = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.OperationalStatus.NotPresent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.OperationalStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Netzwerkschnittstelle kann aufgrund von fehlt eine Komponente, in der Regel eine Hardwarekomponente Datenpakete zu übertragen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Testing">
+      <MemberSignature Language="C#" Value="Testing" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.OperationalStatus Testing = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.OperationalStatus.Testing" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.OperationalStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Netzwerkschnittstelle werden Tests ausgeführt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.OperationalStatus Unknown = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.OperationalStatus.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.OperationalStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Status der Netzwerkschnittstelle ist nicht bekannt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Up">
+      <MemberSignature Language="C#" Value="Up" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.OperationalStatus Up = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.OperationalStatus.Up" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.OperationalStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Netzwerkschnittstelle ist. Sie können Datenpakete zu übertragen.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,352 @@
+<Type Name="XmlResolver" FullName="System.Xml.XmlResolver">
+  <TypeSignature Language="C#" Value="public abstract class XmlResolver" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit XmlResolver extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.XmlResolver" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Löst externe XML-Ressourcen auf, die durch einen URI (Uniform Resource Identifier) benannt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Xml.XmlResolver> wird zum Auflösen externer XML-Ressourcen, z. B. Entitäten, Dokumenttypdefinitionen (DTDs) oder Schemas verwendet. Es wird auch verwendet, um Prozess enthalten, und Importieren von Elementen in der Extensible Stylesheet Language (XSL)-Stylesheets oder Schemas für XML Schema Definition Language (XSD).  
+  
+ <xref:System.Xml.XmlResolver>behandelt alle Aspekte beim Aushandeln der Verbindungs auf die Ressourcen, einschließlich Behandlung von Sicherheitsanmeldeinformationen, öffnen die Verbindung mit der Datenquelle und die Ressource in Form von einem Stream oder ein anderer Objekttyp zurückgibt. Das Objekt, das Aufrufe <xref:System.Xml.XmlResolver> verfügt die Aufgabe der Interpretation des Streams.  
+  
+ Die <xref:System.Xml> Namespace beinhaltet zwei konkrete Implementierungen der <xref:System.Xml.XmlResolver> Klasse:  
+  
+-   <xref:System.Xml.XmlUrlResolver>ist der Standardresolver für alle Klassen in der <xref:System.Xml> Namespace. Sie unterstützt das `file://`-Protokoll und das `http://`-Protokoll und Anforderungen von der <xref:System.Net.WebRequest?displayProperty=nameWithType>-Klasse. Beispiele für die Erweiterung der Klasse zur Verbesserung der Leistung, finden Sie unter der <xref:System.Xml.XmlUrlResolver> Referenzseite.  
+  
+-   <xref:System.Xml.XmlSecureResolver>unterstützt secure eine andere <xref:System.Xml.XmlResolver> Objekt durch Umschließen der Object-Objekt und das Einschränken der Ressourcen, die darauf zugreifen kann. Z. B. die <xref:System.Xml.XmlSecureResolver> Zugriff auf bestimmte Internetsites oder Zonen zu untersagen.  
+  
+ Sie können erstellt, und geben Sie Ihren eigenen Konfliktlöser. Wenn Sie einen Konfliktlöser angeben, wird der Reader verwendet den Standardwert <xref:System.Xml.XmlUrlResolver> mit keine Anmeldeinformationen des Benutzers.  
+  
+ Sie geben den zu verwendenden <xref:System.Xml.XmlResolver> an, indem Sie die <xref:System.Xml.XmlReaderSettings.XmlResolver%2A?displayProperty=nameWithType>-Eigenschaft festlegen und das <xref:System.Xml.XmlReaderSettings>-Objekt an die <xref:System.Xml.XmlReader.Create%2A>-Methode übergeben.  
+  
+ Wenn die Ressource auf einem System, die eine Authentifizierung erfordert gespeichert ist, verwenden Sie die <xref:System.Xml.XmlResolver.Credentials%2A?displayProperty=nameWithType> Eigenschaft, um die erforderlichen Anmeldeinformationen angeben.  
+  
+## <a name="supplying-authentication-credentials"></a>Angeben von Anmeldeinformationen für die Authentifizierung  
+ Die Datei, die zu lesenden XML-Daten enthält, möglicherweise eine eingeschränkte Zugriffsrichtlinie. Wenn für den Zugriff auf eine Netzwerkressource eine Authentifizierung erforderlich ist, geben Sie die erforderlichen Anmeldeinformationen mithilfe der <xref:System.Xml.XmlResolver.Credentials%2A>-Eigenschaft an. Wenn die <xref:System.Xml.XmlResolver.Credentials%2A> Eigenschaft nicht festgelegt ist, werden die Anmeldeinformationen auf festgelegt `null`.  
+  
+ Nehmen wir beispielsweise an, dass Anmeldeinformationen beim Anfordern von Daten aus dem Web zu Authentifizierungszwecken erforderlich sind. Wenn das virtuelle Webverzeichnis anonymen Zugriff zulässt, müssen Sie festlegen der <xref:System.Xml.XmlResolver.Credentials%2A> Eigenschaft, um Anmeldeinformationen einzugeben. Das folgende Beispiel erstellt eine <xref:System.Xml.XmlReader> -Objekt, das verwendet ein <xref:System.Xml.XmlUrlResolver> mit Standardanmeldeinformationen für die http://localhost/bookstore/inventory.xml-Website zugreifen.  
+  
+ [!code-cpp[XmlReaderSettings.cctor#2](~/samples/snippets/cpp/VS_Snippets_Data/XmlReaderSettings.cctor/CPP/XmlReaderSettings.cctor.cpp#2)]
+ [!code-csharp[XmlReaderSettings.cctor#2](~/samples/snippets/csharp/VS_Snippets_Data/XmlReaderSettings.cctor/CS/factory_rdr_cctor2.cs#2)]
+ [!code-vb[XmlReaderSettings.cctor#2](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlReaderSettings.cctor/VB/factory_rdr_cctor2.vb#2)]  
+  
+ Sie können unterschiedliche Anmeldeinformationen für unterschiedliche URIs angeben und Sie einen Cache hinzugefügt. Anhand dieser Anmeldeinformationen wird die Authentifizierung für die unterschiedlichen URIs überprüft, ungeachtet der ursprünglichen Quelle des XML-Codes. Das folgende Beispiel zeigt, wie Anmeldeinformationen zu einem Cache hinzufügen.  
+  
+ [!code-csharp[XslCompiledTransform.Load#11](~/samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Load/CS/Xslt_Load_v2.cs#11)]
+ [!code-vb[XslCompiledTransform.Load#11](~/samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Load/VB/Xslt_Load_v2.vb#11)]  
+  
+## <a name="security-considerations"></a>Sicherheitsüberlegungen  
+ Betrachten Sie die folgenden Elemente bei der Arbeit mit der <xref:System.Xml.XmlResolver> Klasse.  
+  
+-   <xref:System.Xml.XmlResolver>-Objekte können vertrauliche Informationen (z. B. Anmeldeinformationen des Benutzers) enthalten. Sollten Sie vorsichtig beim Zwischenspeichern von sein <xref:System.Xml.XmlResolver> Objekte, und übergeben Sie die <xref:System.Xml.XmlResolver> Objekt, das eine nicht vertrauenswürdige Komponente.  
+  
+-   Wenn Sie eine Klasseneigenschaft entwerfen, die die <xref:System.Xml.XmlResolver>-Klasse verwendet, sollte die Eigenschaft als eine Nur-Schreiben-Eigenschaft (d. h. als lesegeschützt) definiert sein. Mithilfe der Eigenschaft können Sie den zu verwendenden <xref:System.Xml.XmlResolver> angeben. Sie können die Eigenschaft jedoch nicht zur Rückgabe eines <xref:System.Xml.XmlResolver>-Objekts verwenden.  
+  
+-   Wenn die Anwendung akzeptiert <xref:System.Xml.XmlResolver> -Objekte aus nicht vertrauenswürdigen Code, Sie können nicht davon ausgehen, dass der URI übergeben der <xref:System.Xml.XmlResolver.GetEntity%2A> Methode identisch, die zurückgegeben werden die <xref:System.Xml.XmlResolver.ResolveUri%2A> Methode. Von der <xref:System.Xml.XmlResolver>-Klasse abgeleitete Klassen können die <xref:System.Xml.XmlResolver.GetEntity%2A>-Methode überschreiben und Daten zurückgeben, die sich von den Daten unterscheiden, die im ursprünglichen URI enthalten waren.  
+  
+-   Ihre Anwendung kann Speicher DOS-Angriffen zu verringern die <xref:System.Xml.XmlResolver.GetEntity%2A> Methode durch die Implementierung einer <xref:System.Runtime.InteropServices.ComTypes.IStream> , beschränkt die Anzahl der gelesenen Bytes. Erraten Situationen, in denen bösartiger Code versucht, einen unendlichen Streams von Bytes, die übergeben, werden dadurch die <xref:System.Xml.XmlResolver.GetEntity%2A> Methode.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine <xref:System.Xml.XmlUrlResolver> mit Standardanmeldeinformationen. Ein <xref:System.Xml.XmlReader> zum Lesen und Anzeigen des resultierende Datenstroms verwendet wird.  
+  
+ [!code-csharp[XmlResolver_ex#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlResolver_ex/CS/XmlResolver_ex.cs#1)]
+ [!code-vb[XmlResolver_ex#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlResolver_ex/VB/XmlResolver_ex.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XmlResolver ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlResolver.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.XmlResolver" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird von abgeleiteten Klassenkonstruktoren Zustand bei dieser Art initialisiert aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Credentials">
+      <MemberSignature Language="C#" Value="public virtual System.Net.ICredentials Credentials { set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.ICredentials Credentials" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlResolver.Credentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.ICredentials</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Legt beim Überschreiben in einer abgeleiteten Klasse die zum Authentifizieren von Webanforderungen verwendeten Anmeldeinformationen fest.</summary>
+        <value>Die Anmeldeinformationen zum Authentifizieren von Webanforderungen. Wenn diese Eigenschaft nicht festgelegt ist, wird als Standardwert <see langword="null" /> verwendet, was bedeutet, dass <see langword="XmlResolver" /> über keine Benutzeranmeldeinformationen verfügt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das virtuelle Verzeichnis keine Authentifizierung erforderlich ist, muss diese Eigenschaft nicht festgelegt werden. Andernfalls müssen die Anmeldeinformationen des Benutzers angegeben werden.  
+  
+ Der folgende C#-Code legt die Anmeldeinformationen für die <xref:System.Xml.XmlResolver> Objekt.  
+  
+```  
+NetworkCredential nc = new NetWorkCredential(UserName,SecurelyStoredPassword,Domain);  
+XmlUrlResolver resolver = new XmlUrlResolver();  
+resolver.Credentials = nc;  
+```  
+  
+ Sie können unterschiedliche URIs unterschiedliche Anmeldeinformationen zuordnen und einen Cache hinzugefügt. Klicken Sie dann können die Anmeldeinformationen um Authentifizierung für unterschiedliche URIs unabhängig von der ursprünglichen Quelle des XML zu überprüfen.  
+  
+```  
+NetworkCredential myCred = new NetworkCredential(UserName,SecurelyStoredPassword,Domain);   
+CredentialCache myCache = new CredentialCache();   
+myCache.Add(new Uri("http://www.contoso.com/"), "Basic", myCred);   
+myCache.Add(new Uri("http://app.contoso.com/"), "Basic", myCred);  
+XmlUrlResolver resolver = new XmlUrlResolver();  
+resolver.Credentials = myCache;  
+```  
+  
+   
+  
+## Examples  
+ Finden Sie unter <xref:System.Xml.XmlUrlResolver.Credentials%2A?displayProperty=nameWithType> ein Beispiel für die diese Eigenschaft verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEntity">
+      <MemberSignature Language="C#" Value="public abstract object GetEntity (Uri absoluteUri, string role, Type ofObjectToReturn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetEntity(class System.Uri absoluteUri, string role, class System.Type ofObjectToReturn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlResolver.GetEntity(System.Uri,System.String,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="absoluteUri" Type="System.Uri" />
+        <Parameter Name="role" Type="System.String" />
+        <Parameter Name="ofObjectToReturn" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="absoluteUri">Der von <see cref="M:System.Xml.XmlResolver.ResolveUri(System.Uri,System.String)" /> zurückgegebene URI.</param>
+        <param name="role">Derzeit nicht verwendet.</param>
+        <param name="ofObjectToReturn">Der Typ des zurückzugebenden Objekts. Die aktuelle Version gibt nur System.IO.Stream-Objekte zurück.</param>
+        <summary>Weist beim Überschreiben in einer abgeleiteten Klasse einen URI einem Objekt zu, das die eigentliche Ressource enthält.</summary>
+        <returns>Ein Streamobjekt oder <see langword="null" />, wenn ein anderer Typ als Stream angegeben ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird verwendet, wenn die vom Aufrufer das Objekt, das die eigentliche Ressource, die für der URI enthält einen angegebenen URI zugeordnet. Der Typ des zurückgegebenen Objekts ist negotiable; die Implementierung muss jedoch immer unterstützen <xref:System.IO.Stream?displayProperty=nameWithType>.  
+  
+ Die asynchrone Version dieser Methode finden Sie <xref:System.Xml.XmlResolver.GetEntityAsync%2A>.  
+  
+> [!IMPORTANT]
+>  Ihre Anwendung kann Speicher DOS-Angriffen zu verringern die <xref:System.Xml.XmlResolver.GetEntity%2A> Methode durch die Implementierung einer <xref:System.Runtime.InteropServices.ComTypes.IStream> , beschränkt die Anzahl der gelesenen Bytes. Erraten Situationen, in denen bösartiger Code versucht, einen unendlichen Streams von Bytes, die übergeben, werden dadurch die <xref:System.Xml.XmlResolver.GetEntity%2A> Methode.  
+  
+   
+  
+## Examples  
+ Finden Sie unter <xref:System.Xml.XmlUrlResolver.GetEntity%2A?displayProperty=nameWithType> für ein Beispiel für die Verwendung dieser Methode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.XmlException">
+          <paramref name="ofObjectToReturn" />ist eine <see langword="Stream" /> Typ.</exception>
+        <exception cref="T:System.UriFormatException">Der angegebene URI ist ein absoluter URI.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="absoluteUri" /> ist <see langword="null" />.</exception>
+        <exception cref="T:System.Exception">Es wird ein Laufzeitfehler auftreten (z. B. eine unterbrochene Serververbindung).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEntityAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;object&gt; GetEntityAsync (Uri absoluteUri, string role, Type ofObjectToReturn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;object&gt; GetEntityAsync(class System.Uri absoluteUri, string role, class System.Type ofObjectToReturn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlResolver.GetEntityAsync(System.Uri,System.String,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="absoluteUri" Type="System.Uri" />
+        <Parameter Name="role" Type="System.String" />
+        <Parameter Name="ofObjectToReturn" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="absoluteUri">Der von <see cref="M:System.Xml.XmlResolver.ResolveUri(System.Uri,System.String)" /> zurückgegebene URI.</param>
+        <param name="role">Derzeit nicht verwendet.</param>
+        <param name="ofObjectToReturn">Der Typ des zurückzugebenden Objekts. Die aktuelle Version gibt nur <see cref="T:System.IO.Stream" />-Objekte zurück.</param>
+        <summary>Ordnet einem Objekt, das die eigentliche Ressource enthält, asynchron einen URI zu.</summary>
+        <returns>Ein Streamobjekt oder <see langword="null" />, wenn ein anderer Typ als Stream angegeben ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dies ist die asynchrone Version von <xref:System.Xml.XmlResolver.GetEntity%2A>, mit der gleichen Funktionalität. Wenn diese Methode verwenden möchten, müssen Sie festlegen der <xref:System.Xml.XmlReaderSettings.Async%2A> flag `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveUri">
+      <MemberSignature Language="C#" Value="public virtual Uri ResolveUri (Uri baseUri, string relativeUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Uri ResolveUri(class System.Uri baseUri, string relativeUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlResolver.ResolveUri(System.Uri,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseUri" Type="System.Uri" />
+        <Parameter Name="relativeUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="baseUri">Der Basis-URI, der zum Auflösen des relativen URIs verwendet wird.</param>
+        <param name="relativeUri">Der aufzulösende URI. Der URI kann absolut oder relativ sein. Wenn der URI absolut ist, ersetzt dieser Wert effektiv den <c>BaseUri</c> Wert. Wenn Sie relativ ist, es mit kombiniert die <c>BaseUri</c> auf einen absoluten URI.</param>
+        <summary>Löst beim Überschreiben in einer abgeleiteten Klasse den absoluten URI der Basis sowie relative URIs auf.</summary>
+        <returns>Der absolute URI oder <see langword="null" /> Wenn der relative URI nicht aufgelöst werden kann.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der absolute URI kann als Basis-URI für alle nachfolgenden Anforderungen für Entitäten verwendet werden, die relativ zu dieser URI sind.  
+  
+   
+  
+## Examples  
+ Finden Sie unter <xref:System.Xml.XmlUrlResolver.GetEntity%2A?displayProperty=nameWithType> für ein Beispiel, das diese Methode verwendet.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="relativeUri" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsType">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsType (Uri absoluteUri, Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SupportsType(class System.Uri absoluteUri, class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlResolver.SupportsType(System.Uri,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="absoluteUri" Type="System.Uri" />
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="absoluteUri">Die URI.</param>
+        <param name="type">Der Typ, der zurückgegeben wird.</param>
+        <summary>Ermöglicht den Konfliktlöser andere Rückgabetypen als <see cref="T:System.IO.Stream" />.</summary>
+        <returns>
+          <see langword="true" />Wenn die <paramref name="type" /> unterstützt wird, andernfalls, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

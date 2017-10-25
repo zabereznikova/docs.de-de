@@ -1,0 +1,190 @@
+<Type Name="PowerEase" FullName="System.Windows.Media.Animation.PowerEase">
+  <TypeSignature Language="C#" Value="public class PowerEase : System.Windows.Media.Animation.EasingFunctionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PowerEase extends System.Windows.Media.Animation.EasingFunctionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.PowerEase" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.EasingFunctionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Beschleunigungsfunktion, die eine Animation erstellt beschleunigt und/oder verlangsamt wird anhand der Formel *f*(*t*) = *t*<sup>p</sup> wobei p ist gleich der <see cref="P:System.Windows.Media.Animation.PowerEase.Power" /> Eigenschaft.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können steuern, ob die Animation beschleunigt verlangsamt wird, oder beidem durch Angabe der <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>. Das folgende Diagramm veranschaulicht die unterschiedlichen Werte von <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>, wobei *f*(*t*) den Animationsstatus und *t* Uhrzeit darstellt.  
+  
+ ![CubicEase EasingMode-Diagramme. ] (~/add/media/cubicease-graph.png "CubicEase EasingMode-Diagramme.")  
+  
+ Mithilfe der <xref:System.Windows.Media.Animation.PowerEase> -Funktion können Sie angeben, wie schnell Beschleunigung/Verlangsamung durch Angabe erfolgt die <xref:System.Windows.Media.Animation.PowerEase.Power%2A> Eigenschaft:  
+  
+ *f*(*t*) = *t*<sup>p</sup> , in denen `p` ist gleich der <xref:System.Windows.Media.Animation.PowerEase.Power%2A> Eigenschaft.  
+  
+ Aus diesem Grund die <xref:System.Windows.Media.Animation.PowerEase> Funktion ersetzt werden kann, für <xref:System.Windows.Media.Animation.QuadraticEase> (*f*(*t*) = *t*<sup>2</sup>), <xref:System.Windows.Media.Animation.CubicEase>(*f*(*t*) = *t*<sup>3</sup>), <xref:System.Windows.Media.Animation.QuarticEase> (*f*(*t *) = *t*<sup>4</sup>), und <xref:System.Windows.Media.Animation.QuinticEase> (*f*(*t*) = *t* <sup>5</sup>). Beispielsweise mussten Sie zum Verwenden einer <xref:System.Windows.Media.Animation.PowerEase> Funktion so erstellen das gleiche Verhalten wie eine <xref:System.Windows.Media.Animation.QuadraticEase> Funktion (*f*(*t*) = *t*<sup>2</sup>), geben Sie einen <xref:System.Windows.Media.Animation.PowerEase.Power%2A> Eigenschaftswert von 2.  
+  
+ Es gibt mehrere andere Beschleunigungsfunktionen neben <xref:System.Windows.Media.Animation.PowerEase> die Sie mit dem folgenden Silverlight-Beispiel untersuchen können.  
+  
+ [Dieses Beispiel ausführen](http://go.microsoft.com/fwlink/?LinkId=139798&sref=easing_functions_gallery)  
+  
+ Zusätzlich zur Verwendung der in der Laufzeit enthaltenen Beschleunigungsfunktionen, können Sie eigene benutzerdefinierten Beschleunigungsfunktionen erstellen, durch Vererben von <xref:System.Windows.Media.Animation.EasingFunctionBase>.  
+  
+<a name="xamlObjectElementUsage_PowerEase"></a>   
+## <a name="xaml-object-element-usage"></a>Verwendung von XAML-Objektelementen  
+  
+```  
+<PowerEase .../>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine <xref:System.Windows.Media.Animation.PowerEase> Beschleunigungsfunktionen-Funktion mit einer <xref:System.Windows.Media.Animation.PowerEase.Power%2A> Eigenschaftswert des `20` auf eine <xref:System.Windows.Media.Animation.DoubleAnimation> zum Erstellen einer Animation verlangsamt wird. Da die <xref:System.Windows.Media.Animation.PowerEase.Power%2A> Wert ist hoch, das die Verlangsamung ist im Vergleich zu, wenn Sie einen niedrigeren Wert verwendet.  
+  
+ [!code-xaml[PowerEase#PowerEase](~/samples/snippets/csharp/VS_Snippets_Wpf/powerease/CS/window1.xaml#powerease)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PowerEase ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.PowerEase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Media.Animation.PowerEase" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.PowerEase.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der aus <see cref="T:System.Windows.Freezable" /> abgeleiteten Klasse. Beim Erstellen einer abgeleiteten Klasse muss diese Methode überschrieben werden.</summary>
+        <returns>Die neue Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Animation-Klassen erben indirekt von <xref:System.Windows.Freezable>. Aus diesem Grund müssen Sie überschreiben die <xref:System.Windows.Media.Animation.BackEase.CreateInstanceCore%2A> Methode zum Erstellen einer benutzerdefinierten Animation-Objekt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel zeigt eine typische Implementierung der <xref:System.Windows.Freezable.CreateInstanceCore%2A>.  
+  
+ [!code-csharp[freezablesample_procedural#CreateInstanceCoreExample](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#createinstancecoreexample)]
+ [!code-vb[freezablesample_procedural#CreateInstanceCoreExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#createinstancecoreexample)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseInCore">
+      <MemberSignature Language="C#" Value="protected override double EaseInCore (double normalizedTime);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance float64 EaseInCore(float64 normalizedTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.PowerEase.EaseInCore(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="normalizedTime" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="normalizedTime">Die normalisierte Zeit (Fortschritt) der Animation.</param>
+        <summary>Stellt die Logik der Beschleunigungsfunktion bereit, die überschrieben werden kann, um den <see cref="F:System.Windows.Media.Animation.EasingMode.EaseIn" />-Modus der benutzerdefinierten Beschleunigungsfunktion zu erzeugen.</summary>
+        <returns>Ein Double-Wert, der den transformierten Fortschritt darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode transformiert die normalisierte Zeit zu steuern, der die Geschwindigkeit der Animation für die <xref:System.Windows.Media.Animation.EasingMode.EaseIn> der Groß-/Kleinschreibung <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>.  
+  
+ Müssen nur die Beschleunigungsfunktion für angeben der <xref:System.Windows.Media.Animation.EasingMode.EaseIn> Fall, da die Implementierung der <xref:System.Windows.Media.Animation.EasingFunctionBase.Ease%2A> Methode Transformationen `normalizedTime` für die <xref:System.Windows.Media.Animation.EasingMode.EaseOut> und <xref:System.Windows.Media.Animation.EasingMode.EaseInOut> Fällen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Power">
+      <MemberSignature Language="C#" Value="public double Power { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Power" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.PowerEase.Power" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Potenz der Animation Interpolation. Ein Wert von 7 erstellt z. B. eine Animation Interpolationskurve, die die Formel folgt *f*(*t*) = *t*<sup>7</sup>.</summary>
+        <value>Die Potenz der Animation Interpolation. Dieser Wert muss größer oder gleich 0 sein. Der Standard ist 2.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[DP_ID_field_label](~/includes/dp-id-field-label-md.md)] <xref:System.Windows.Media.Animation.PowerEase.PowerProperty>  
+  
+<a name="xamlAttributeUsage_Power"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object Power="double" .../>  
+```  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird eine <xref:System.Windows.Media.Animation.PowerEase> Beschleunigungsfunktionen-Funktion mit einer <xref:System.Windows.Media.Animation.PowerEase.Power%2A> Eigenschaftswert des `20` auf eine <xref:System.Windows.Media.Animation.DoubleAnimation> zum Erstellen einer Animation verlangsamt wird. Da die <xref:System.Windows.Media.Animation.PowerEase.Power%2A> Wert ist hoch, das die Verlangsamung ist im Vergleich zu, wenn Sie einen niedrigeren Wert verwendet.  
+  
+ [!code-xaml[PowerEase#PowerEase](~/samples/snippets/csharp/VS_Snippets_Wpf/powerease/CS/window1.xaml#powerease)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PowerProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PowerProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PowerProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.PowerEase.PowerProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:System.Windows.Media.Animation.PowerEase.Power" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

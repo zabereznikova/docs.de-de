@@ -1,0 +1,182 @@
+<Type Name="MetadataItemCollectionFactory" FullName="System.Data.Entity.Design.MetadataItemCollectionFactory">
+  <TypeSignature Language="C#" Value="public static class MetadataItemCollectionFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit MetadataItemCollectionFactory extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Entity.Design.MetadataItemCollectionFactory" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.CLSCompliant(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt einen Satz von Methoden für das Erstellen von <see cref="T:System.Data.Metadata.Edm.ItemCollection" />-Instanzen für Metadaten dar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateEdmItemCollection">
+      <MemberSignature Language="C#" Value="public static System.Data.Metadata.Edm.EdmItemCollection CreateEdmItemCollection (System.Collections.Generic.IEnumerable&lt;System.Xml.XmlReader&gt; readers, out System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt; errors);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.Metadata.Edm.EdmItemCollection CreateEdmItemCollection(class System.Collections.Generic.IEnumerable`1&lt;class System.Xml.XmlReader&gt; readers, [out] class System.Collections.Generic.IList`1&lt;class System.Data.Metadata.Edm.EdmSchemaError&gt;&amp; errors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Entity.Design.MetadataItemCollectionFactory.CreateEdmItemCollection(System.Collections.Generic.IEnumerable{System.Xml.XmlReader},System.Collections.Generic.IList{System.Data.Metadata.Edm.EdmSchemaError}@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.EdmItemCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="readers" Type="System.Collections.Generic.IEnumerable&lt;System.Xml.XmlReader&gt;" />
+        <Parameter Name="errors" Type="System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt;&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="readers">Ein <see cref="T:System.Collections.IEnumerable" /> von <see cref="T:System.Xml.XmlReader" />, das die Metadatendateien enthält.</param>
+        <param name="errors">Eine <see cref="T:System.Collections.IList" /> von <see cref="T:System.Data.Metadata.Edm.EdmSchemaError" />. Sämtliche während des Erstellens der <see cref="T:System.Data.Metadata.Edm.EdmItemCollection" /> erzeugten Fehler werden der Liste hinzugefügt.</param>
+        <summary>Erstellt eine <see cref="T:System.Data.Metadata.Edm.EdmItemCollection" /> und lädt die Metadaten im <see cref="T:System.Collections.IEnumerable" /> von <see cref="T:System.Xml.XmlReader" />.</summary>
+        <returns>Eine <see cref="T:System.Data.Metadata.Edm.EdmItemCollection" />, die die angegebenen Metadaten enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateEdmItemCollection">
+      <MemberSignature Language="C#" Value="public static System.Data.Metadata.Edm.EdmItemCollection CreateEdmItemCollection (System.Collections.Generic.IEnumerable&lt;System.Xml.XmlReader&gt; readers, Version targetEntityFrameworkVersion, out System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt; errors);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.Metadata.Edm.EdmItemCollection CreateEdmItemCollection(class System.Collections.Generic.IEnumerable`1&lt;class System.Xml.XmlReader&gt; readers, class System.Version targetEntityFrameworkVersion, [out] class System.Collections.Generic.IList`1&lt;class System.Data.Metadata.Edm.EdmSchemaError&gt;&amp; errors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Entity.Design.MetadataItemCollectionFactory.CreateEdmItemCollection(System.Collections.Generic.IEnumerable{System.Xml.XmlReader},System.Version,System.Collections.Generic.IList{System.Data.Metadata.Edm.EdmSchemaError}@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.EdmItemCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="readers" Type="System.Collections.Generic.IEnumerable&lt;System.Xml.XmlReader&gt;" />
+        <Parameter Name="targetEntityFrameworkVersion" Type="System.Version" />
+        <Parameter Name="errors" Type="System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt;&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="readers">Ein <see cref="T:System.Collections.IEnumerable" /> von <see cref="T:System.Xml.XmlReader" />, das die Metadatendateien enthält.</param>
+        <param name="targetEntityFrameworkVersion">Die Eigenschaft des <see cref="T:System.Data.Entity.Design.EntityFrameworkVersions" /> , die die Zielversion des Entity Framework entspricht.</param>
+        <param name="errors">Eine <see cref="T:System.Collections.IList" /> von <see cref="T:System.Data.Metadata.Edm.EdmSchemaError" />. Sämtliche während des Erstellens der <see cref="T:System.Data.Metadata.Edm.EdmItemCollection" /> erzeugten Fehler werden der Liste hinzugefügt.</param>
+        <summary>Erstellt eine <see cref="T:System.Data.Metadata.Edm.EdmItemCollection" /> und lädt die Metadaten im <see cref="T:System.Collections.IEnumerable" /> von <see cref="T:System.Xml.XmlReader" />.</summary>
+        <returns>Eine <see cref="T:System.Data.Metadata.Edm.EdmItemCollection" />, die die angegebenen Metadaten enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateStorageMappingItemCollection">
+      <MemberSignature Language="C#" Value="public static System.Data.Mapping.StorageMappingItemCollection CreateStorageMappingItemCollection (System.Data.Metadata.Edm.EdmItemCollection edmCollection, System.Data.Metadata.Edm.StoreItemCollection storeCollection, System.Collections.Generic.IEnumerable&lt;System.Xml.XmlReader&gt; readers, out System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt; errors);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.Mapping.StorageMappingItemCollection CreateStorageMappingItemCollection(class System.Data.Metadata.Edm.EdmItemCollection edmCollection, class System.Data.Metadata.Edm.StoreItemCollection storeCollection, class System.Collections.Generic.IEnumerable`1&lt;class System.Xml.XmlReader&gt; readers, [out] class System.Collections.Generic.IList`1&lt;class System.Data.Metadata.Edm.EdmSchemaError&gt;&amp; errors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Entity.Design.MetadataItemCollectionFactory.CreateStorageMappingItemCollection(System.Data.Metadata.Edm.EdmItemCollection,System.Data.Metadata.Edm.StoreItemCollection,System.Collections.Generic.IEnumerable{System.Xml.XmlReader},System.Collections.Generic.IList{System.Data.Metadata.Edm.EdmSchemaError}@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Mapping.StorageMappingItemCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="edmCollection" Type="System.Data.Metadata.Edm.EdmItemCollection" />
+        <Parameter Name="storeCollection" Type="System.Data.Metadata.Edm.StoreItemCollection" />
+        <Parameter Name="readers" Type="System.Collections.Generic.IEnumerable&lt;System.Xml.XmlReader&gt;" />
+        <Parameter Name="errors" Type="System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt;&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="edmCollection">Ein <see cref="T:System.Data.Metadata.Edm.EdmItemCollection" />-Objekt.</param>
+        <param name="storeCollection">Ein <see cref="T:System.Data.Metadata.Edm.StoreItemCollection" />-Objekt.</param>
+        <param name="readers">Ein <see cref="T:System.Collections.IEnumerable" /> von <see cref="T:System.Xml.XmlReader" />, das die Metadatendateien enthält.</param>
+        <param name="errors">Eine <see cref="T:System.Collections.IList" /> von <see cref="T:System.Data.Metadata.Edm.EdmSchemaError" />. Alle Fehler bei der <see cref="T:System.Data.Mapping.StorageMappingItemCollection" /> Erstellung der Liste hinzugefügt werden.</param>
+        <summary>Erstellt eine <see cref="T:System.Data.Mapping.StorageMappingItemCollection" /> und lädt die Metadaten in der angegebenen <see cref="T:System.Data.Metadata.Edm.EdmItemCollection" />, der angegebenen <see cref="T:System.Data.Metadata.Edm.StoreItemCollection" /> und der angegebenen Auflistung von <see cref="T:System.Xml.XmlReader" />-Objekten.</summary>
+        <returns>Eine <see cref="T:System.Data.Mapping.StorageMappingItemCollection" />, die die angegebenen Metadaten enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateStorageMappingItemCollection">
+      <MemberSignature Language="C#" Value="public static System.Data.Mapping.StorageMappingItemCollection CreateStorageMappingItemCollection (System.Data.Metadata.Edm.EdmItemCollection edmCollection, System.Data.Metadata.Edm.StoreItemCollection storeCollection, System.Collections.Generic.IEnumerable&lt;System.Xml.XmlReader&gt; readers, Version targetEntityFrameworkVersion, out System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt; errors);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.Mapping.StorageMappingItemCollection CreateStorageMappingItemCollection(class System.Data.Metadata.Edm.EdmItemCollection edmCollection, class System.Data.Metadata.Edm.StoreItemCollection storeCollection, class System.Collections.Generic.IEnumerable`1&lt;class System.Xml.XmlReader&gt; readers, class System.Version targetEntityFrameworkVersion, [out] class System.Collections.Generic.IList`1&lt;class System.Data.Metadata.Edm.EdmSchemaError&gt;&amp; errors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Entity.Design.MetadataItemCollectionFactory.CreateStorageMappingItemCollection(System.Data.Metadata.Edm.EdmItemCollection,System.Data.Metadata.Edm.StoreItemCollection,System.Collections.Generic.IEnumerable{System.Xml.XmlReader},System.Version,System.Collections.Generic.IList{System.Data.Metadata.Edm.EdmSchemaError}@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Mapping.StorageMappingItemCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="edmCollection" Type="System.Data.Metadata.Edm.EdmItemCollection" />
+        <Parameter Name="storeCollection" Type="System.Data.Metadata.Edm.StoreItemCollection" />
+        <Parameter Name="readers" Type="System.Collections.Generic.IEnumerable&lt;System.Xml.XmlReader&gt;" />
+        <Parameter Name="targetEntityFrameworkVersion" Type="System.Version" />
+        <Parameter Name="errors" Type="System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt;&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="edmCollection">Ein <see cref="T:System.Data.Metadata.Edm.EdmItemCollection" />-Objekt.</param>
+        <param name="storeCollection">Ein <see cref="T:System.Data.Metadata.Edm.StoreItemCollection" />-Objekt.</param>
+        <param name="readers">Ein <see cref="T:System.Collections.IEnumerable" /> von <see cref="T:System.Xml.XmlReader" />, das die Metadatendateien enthält.</param>
+        <param name="targetEntityFrameworkVersion">Die Eigenschaft des <see cref="T:System.Data.Entity.Design.EntityFrameworkVersions" /> , die die Zielversion des Entity Framework entspricht.</param>
+        <param name="errors">Eine <see cref="T:System.Collections.IList" /> von <see cref="T:System.Data.Metadata.Edm.EdmSchemaError" />. Alle Fehler bei der <see cref="T:System.Data.Mapping.StorageMappingItemCollection" /> Erstellung der Liste hinzugefügt werden.</param>
+        <summary>Erstellt eine <see cref="T:System.Data.Mapping.StorageMappingItemCollection" /> aus der Mappinginformationen der <see cref="T:System.Xml.XmlReader" /> Objekte und die Metadaten in der angegebenen <see cref="T:System.Data.Metadata.Edm.EdmItemCollection" /> und <see cref="T:System.Data.Metadata.Edm.StoreItemCollection" /> Objekte.</summary>
+        <returns>Eine <see cref="T:System.Data.Mapping.StorageMappingItemCollection" />, die die angegebenen Metadaten enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateStoreItemCollection">
+      <MemberSignature Language="C#" Value="public static System.Data.Metadata.Edm.StoreItemCollection CreateStoreItemCollection (System.Collections.Generic.IEnumerable&lt;System.Xml.XmlReader&gt; readers, out System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt; errors);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.Metadata.Edm.StoreItemCollection CreateStoreItemCollection(class System.Collections.Generic.IEnumerable`1&lt;class System.Xml.XmlReader&gt; readers, [out] class System.Collections.Generic.IList`1&lt;class System.Data.Metadata.Edm.EdmSchemaError&gt;&amp; errors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Entity.Design.MetadataItemCollectionFactory.CreateStoreItemCollection(System.Collections.Generic.IEnumerable{System.Xml.XmlReader},System.Collections.Generic.IList{System.Data.Metadata.Edm.EdmSchemaError}@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.StoreItemCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="readers" Type="System.Collections.Generic.IEnumerable&lt;System.Xml.XmlReader&gt;" />
+        <Parameter Name="errors" Type="System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt;&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="readers">Eine Auflistung von <see cref="T:System.Xml.XmlReader" />-Objekten, die jeweils in einer Speichermodelldatei lesen. Die Speichermodelldatei wird in der Datenspeicherschema-Definitionssprache (SSDL) geschrieben.</param>
+        <param name="errors">Eine Liste von beim Laden der SSDL-Metadaten aufgetretenen Fehlern.</param>
+        <summary>Erstellt eine <see cref="T:System.Data.Metadata.Edm.StoreItemCollection" /> und enthält eine Liste von Fehlern und Warnungen.</summary>
+        <returns>Ein <see cref="T:System.Data.Metadata.Edm.StoreItemCollection" /> , der eine Liste von Fehlern und Warnungen bereitstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateStoreItemCollection">
+      <MemberSignature Language="C#" Value="public static System.Data.Metadata.Edm.StoreItemCollection CreateStoreItemCollection (System.Collections.Generic.IEnumerable&lt;System.Xml.XmlReader&gt; readers, Version targetEntityFrameworkVersion, out System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt; errors);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.Metadata.Edm.StoreItemCollection CreateStoreItemCollection(class System.Collections.Generic.IEnumerable`1&lt;class System.Xml.XmlReader&gt; readers, class System.Version targetEntityFrameworkVersion, [out] class System.Collections.Generic.IList`1&lt;class System.Data.Metadata.Edm.EdmSchemaError&gt;&amp; errors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Entity.Design.MetadataItemCollectionFactory.CreateStoreItemCollection(System.Collections.Generic.IEnumerable{System.Xml.XmlReader},System.Version,System.Collections.Generic.IList{System.Data.Metadata.Edm.EdmSchemaError}@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.StoreItemCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="readers" Type="System.Collections.Generic.IEnumerable&lt;System.Xml.XmlReader&gt;" />
+        <Parameter Name="targetEntityFrameworkVersion" Type="System.Version" />
+        <Parameter Name="errors" Type="System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt;&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="readers">Eine Auflistung von <see cref="T:System.Xml.XmlReader" />-Objekten, die jeweils in einer Speichermodelldatei lesen. Die Speichermodelldatei wird in der Datenspeicherschema-Definitionssprache (SSDL) geschrieben.</param>
+        <param name="targetEntityFrameworkVersion">Die Eigenschaft des <see cref="T:System.Data.Entity.Design.EntityFrameworkVersions" /> , die die Zielversion des Entity Framework entspricht.</param>
+        <param name="errors">Eine Liste von beim Laden der SSDL-Metadaten aufgetretenen Fehlern.</param>
+        <summary>Erstellt eine <see cref="T:System.Data.Metadata.Edm.StoreItemCollection" /> und enthält eine Liste von Fehlern und Warnungen.</summary>
+        <returns>Ein <see cref="T:System.Data.Metadata.Edm.StoreItemCollection" /> , der eine Liste von Fehlern und Warnungen bereitstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

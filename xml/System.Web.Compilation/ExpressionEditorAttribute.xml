@@ -1,0 +1,178 @@
+<Type Name="ExpressionEditorAttribute" FullName="System.Web.Compilation.ExpressionEditorAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ExpressionEditorAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ExpressionEditorAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Compilation.ExpressionEditorAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt an, die während der Entwurfszeit-Editor im Ausdrucks-Generator. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Compilation.ExpressionEditorAttribute> Klasse gibt an, die während der Entwurfszeit-Ausdrucks-Editor für die Ausdrücke, die von behandelt werden eine <xref:System.Web.Compilation.ExpressionBuilder> Klasse.  
+  
+ Wenn Sie eine Steuerelementeigenschaft zu bearbeiten, können Sie den Wert der Eigenschaft auf einen Ausdruck mithilfe eines Editors für den Ausdruck festlegen.  
+  
+ Beim Entwickeln eines Ausdrucks-Generators können Sie den Generator mit kennzeichnen die <xref:System.Web.Compilation.ExpressionEditorAttribute> Attribut zum Festlegen des Werts der Editor-Typ.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Compilation.ExpressionEditorAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.UI.Design.ExpressionEditor.%23ctor%2A> Konstruktor initialisiert eine leere Instanz der <xref:System.Web.Compilation.ExpressionEditorAttribute> Klasse. Zum Initialisieren der <xref:System.Web.Compilation.ExpressionEditorAttribute> Klasse ein Objekt vom Typ verwenden, verwenden Sie die <xref:System.Web.Compilation.ExpressionEditorAttribute.%23ctor%2A> Konstruktor. Zum Initialisieren der <xref:System.Web.Compilation.ExpressionEditorAttribute> Klasse eines Typnamens, verwenden Sie die <xref:System.Web.Compilation.ExpressionEditorAttribute.%23ctor%2A> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExpressionEditorAttribute (string typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ExpressionEditorAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">Der Name des Typs zugeordnet werden soll die <see cref="T:System.Web.UI.Design.ExpressionEditor" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Compilation.ExpressionEditorAttribute" /> -Klasse unter Verwendung des angegebenen Typs.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.Compilation.ExpressionEditorAttribute.%23ctor%2A> Konstruktor zur Initialisierung einer Instanz der <xref:System.Web.Compilation.ExpressionEditorAttribute> -Klasse mit einem Typnamen. Zum Initialisieren der <xref:System.Web.Compilation.ExpressionEditorAttribute> Klasse ein Objekt vom Typ verwenden, verwenden Sie die <xref:System.Web.Compilation.ExpressionEditorAttribute.%23ctor%2A> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="typeName" />ist <see langword="null" /> (<see langword="Nothing" /> in Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExpressionEditorAttribute (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ExpressionEditorAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Der Typverweis zuordnen zu den <see cref="T:System.Web.UI.Design.ExpressionEditor" />.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Web.Compilation.ExpressionEditorAttribute" /> -Klasse mit dem angegebenen Typobjekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.Compilation.ExpressionEditorAttribute.%23ctor%2A> Konstruktor zur Initialisierung einer Instanz der <xref:System.Web.Compilation.ExpressionEditorAttribute> -Klasse mit der ein Objekt vom Typ. Zum Initialisieren der <xref:System.Web.Compilation.ExpressionEditorAttribute> Klasse eines Typnamens, verwenden Sie die <xref:System.Web.Compilation.ExpressionEditorAttribute.%23ctor%2A> Konstruktor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditorTypeName">
+      <MemberSignature Language="C#" Value="public string EditorTypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EditorTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.ExpressionEditorAttribute.EditorTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Durch einen Ausdrucks-Editor verwendet, um den Namen des Editortyps abzurufen.</summary>
+        <value>Der Name des Editor-Typs.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden der <xref:System.Web.Compilation.ExpressionEditorAttribute.EditorTypeName%2A> Eigenschaft, um den Namen des Typs des Editors abzurufen, die dieser Instanz zugeordnet ist die <xref:System.Web.Compilation.ExpressionEditorAttribute> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ExpressionEditorAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Eine Instanz von der <see cref="T:System.Web.Compilation.ExpressionEditorAttribute" /> Klasse oder eine Klasse, die sich daraus ableitet.</param>
+        <summary>Gibt an, ob diese Instanz die <see cref="T:System.Web.Compilation.ExpressionEditorAttribute" /> Klasse und ein angegebenes Objekt gleich sind.</summary>
+        <returns>
+          <see langword="true" />Falls der Wert nicht <see langword="null" /> und <see cref="P:System.Web.Compilation.ExpressionEditorAttribute.EditorTypeName" /> ist gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ExpressionEditorAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Hashcode für den Wert dieses <see cref="T:System.Web.Compilation.ExpressionEditorAttribute" /> Attribut.</summary>
+        <returns>Der Hashcode des Werts dieses <see cref="T:System.Web.Compilation.ExpressionEditorAttribute" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert des ein <xref:System.Web.Compilation.ExpressionEditorAttribute> Attribut ist der Wert des seine <xref:System.Web.Compilation.ExpressionEditorAttribute.EditorTypeName%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

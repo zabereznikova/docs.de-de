@@ -1,0 +1,117 @@
+<Type Name="TableCaptionAlign" FullName="System.Web.UI.WebControls.TableCaptionAlign">
+  <TypeSignature Language="C#" Value="public enum TableCaptionAlign" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TableCaptionAlign extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.TableCaptionAlign" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die horizontale oder vertikale Position des Texts als HTML-Caption-Element gerendert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.TableCaptionAlign> Enumeration stellt die horizontale oder vertikale Platzierung der HTML-Beschriftungselement für Steuerelemente, die als Tabellen, z. B. gerendert werden kann <xref:System.Web.UI.WebControls.Table>, <xref:System.Web.UI.WebControls.GridView>, <xref:System.Web.UI.WebControls.DetailsView>, oder <xref:System.Web.UI.WebControls.Calendar>. Z. B. die <xref:System.Web.UI.WebControls.Table.CaptionAlign%2A> Eigenschaft diese Enumerationswerte verwendet, um die Ausrichtung der Beschriftung festzulegen, in einem <xref:System.Web.UI.WebControls.Table> Steuerelement.  
+  
+ Bei Angabe von NotSet bestimmt der Browser, in dem das Steuerelement gerendert wird, wo Sie die Ausrichtung der Beschriftung an.  
+  
+ Die <xref:System.Web.UI.WebControls.Table.CaptionAlign%2A> Eigenschaft gibt die Position der Caption-Element in Bezug auf die Steuerelemente, die gerendert werden kann, wie Tabellen. Die <xref:System.Web.UI.WebControls.Table.Caption%2A> Eigenschaft gibt den Text in das Caption-Element angezeigt. Hilfstechnologien, die Geräte können die von bereitgestellte Beschreibung der <xref:System.Web.UI.WebControls.Table.Caption%2A> Eigenschaft, um das Steuerelement leichter zugänglich machen. Beispielsweise kann ein Bildschirmlesegerät die Beschriftung für dem Benutzer zur Angabe von Anmeldeinformationen mit einer Beschreibung der Tabelle lesen.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird veranschaulicht, wie die <xref:System.Web.UI.WebControls.TableCaptionAlign> Enumeration zum Festlegen der <xref:System.Web.UI.WebControls.GridView.CaptionAlign%2A> Eigenschaft in einem <xref:System.Web.UI.WebControls.Table> Steuerelement. Die <xref:System.Web.UI.WebControls.Table> Steuerelement enthält <xref:System.Web.UI.WebControls.TableRow> Objekte, die Werte für Stadt und die Postleitzahl angezeigt.  
+  
+ [!code-aspx-csharp[TableCaptionAlignEnumeration#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TableCaptionAlignEnumeration/CS/tablecaptionaligncs.aspx#1)]
+ [!code-aspx-vb[TableCaptionAlignEnumeration#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TableCaptionAlignEnumeration/VB/tablecaptionalignvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Bottom">
+      <MemberSignature Language="C#" Value="Bottom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.TableCaptionAlign Bottom = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.TableCaptionAlign.Bottom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableCaptionAlign</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Caption-Element wird am unteren Rand der Tabelle ausgerichtet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="Left" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.TableCaptionAlign Left = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.TableCaptionAlign.Left" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableCaptionAlign</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Caption-Element wird mit der linken Seite der Tabelle ausgerichtet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotSet">
+      <MemberSignature Language="C#" Value="NotSet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.TableCaptionAlign NotSet = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.TableCaptionAlign.NotSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableCaptionAlign</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Ausrichtung der Beschriftung ist nicht festgelegt. Der Browser, der die Beschriftung rendert bestimmt die Ausrichtung die Beschriftung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="Right" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.TableCaptionAlign Right = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.TableCaptionAlign.Right" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableCaptionAlign</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Caption-Element wird rechts neben der Tabelle ausgerichtet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Top">
+      <MemberSignature Language="C#" Value="Top" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.TableCaptionAlign Top = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.TableCaptionAlign.Top" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableCaptionAlign</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Caption-Element wird am oberen Rand der Tabelle ausgerichtet.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,181 @@
+<Type Name="IRemoteArgumentArrayListContract" FullName="System.AddIn.Contract.Collections.IRemoteArgumentArrayListContract">
+  <TypeSignature Language="C#" Value="public interface IRemoteArgumentArrayListContract : System.AddIn.Contract.Collections.IRemoteArgumentArrayContract" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRemoteArgumentArrayListContract implements class System.AddIn.Contract.Collections.IRemoteArgumentArrayContract, class System.AddIn.Contract.Collections.IRemoteArgumentCollectionContract, class System.AddIn.Contract.Collections.IRemoteArgumentEnumerableContract, class System.AddIn.Contract.IContract" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Contract.Collections.IRemoteArgumentArrayListContract" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn.Contract</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.AddIn.Contract.Collections.IRemoteArgumentArrayContract</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt ein Array von <see cref="T:System.AddIn.Contract.RemoteArgument" /> Objekte, die nach Bedarf dynamisch ändert.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.AddIn.Contract.RemoteArgument newItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(valuetype System.AddIn.Contract.RemoteArgument newItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Collections.IRemoteArgumentArrayListContract.Add(System.AddIn.Contract.RemoteArgument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newItem" Type="System.AddIn.Contract.RemoteArgument" />
+      </Parameters>
+      <Docs>
+        <param name="newItem">Das <see cref="T:System.AddIn.Contract.RemoteArgument" />, das am Ende der <see cref="T:System.AddIn.Contract.Collections.IRemoteArgumentArrayListContract" />-Auflistung hinzugefügt werden soll.</param>
+        <summary>Fügt eine <see cref="T:System.AddIn.Contract.RemoteArgument" /> bis zum Ende der <see cref="T:System.AddIn.Contract.Collections.IRemoteArgumentArrayListContract" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Collections.IRemoteArgumentArrayListContract.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Elemente aus der <see cref="T:System.AddIn.Contract.Collections.IRemoteArgumentArrayListContract" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.AddIn.Contract.RemoteArgument item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(valuetype System.AddIn.Contract.RemoteArgument item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Collections.IRemoteArgumentArrayListContract.Contains(System.AddIn.Contract.RemoteArgument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.AddIn.Contract.RemoteArgument" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das <see cref="T:System.AddIn.Contract.RemoteArgument" />, das in der <see cref="T:System.AddIn.Contract.Collections.IRemoteArgumentArrayListContract" /> gesucht werden soll.</param>
+        <summary>Gibt an, ob ein angegebener <see cref="T:System.AddIn.Contract.RemoteArgument" /> befindet sich in der <see cref="T:System.AddIn.Contract.Collections.IRemoteArgumentArrayListContract" />.</summary>
+        <returns>
+          <see langword="true" />, wenn das <paramref name="item" /> in der <see cref="T:System.AddIn.Contract.Collections.IRemoteArgumentArrayListContract" /> gefunden wird, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.AddIn.Contract.RemoteArgument item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOf(valuetype System.AddIn.Contract.RemoteArgument item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Collections.IRemoteArgumentArrayListContract.IndexOf(System.AddIn.Contract.RemoteArgument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.AddIn.Contract.RemoteArgument" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das <see cref="T:System.AddIn.Contract.RemoteArgument" />, das in der <see cref="T:System.AddIn.Contract.Collections.IRemoteArgumentArrayListContract" /> gesucht werden soll.</param>
+        <summary>Gibt den nullbasierten Index des ersten Vorkommens eines angegebenen <see cref="T:System.AddIn.Contract.RemoteArgument" /> in der <see cref="T:System.AddIn.Contract.Collections.IRemoteArgumentArrayListContract" />.</summary>
+        <returns>Der nullbasierte Index des ersten Vorkommens des <paramref name="item" /> in die <see cref="T:System.AddIn.Contract.Collections.IRemoteArgumentArrayListContract" />, sofern gefunden, andernfalls -1.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.AddIn.Contract.RemoteArgument item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Insert(int32 index, valuetype System.AddIn.Contract.RemoteArgument item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Collections.IRemoteArgumentArrayListContract.Insert(System.Int32,System.AddIn.Contract.RemoteArgument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.AddIn.Contract.RemoteArgument" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem einzufügende <c>Element</c>.</param>
+        <param name="item">Der einzufügende <see cref="T:System.AddIn.Contract.RemoteArgument" />.</param>
+        <summary>Fügt am angegebenen Index ein <see cref="T:System.AddIn.Contract.RemoteArgument" />-Element in die <see cref="T:System.AddIn.Contract.Collections.IRemoteArgumentArrayListContract" /> ein.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException">
+          <paramref name="index" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ <paramref name="index" />ist gleich oder größer als der Rückgabewert der <see cref="M:System.AddIn.Contract.Collections.IRemoteArgumentCollectionContract.GetCount" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.AddIn.Contract.RemoteArgument item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(valuetype System.AddIn.Contract.RemoteArgument item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Collections.IRemoteArgumentArrayListContract.Remove(System.AddIn.Contract.RemoteArgument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.AddIn.Contract.RemoteArgument" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das zu entfernende <see cref="T:System.AddIn.Contract.RemoteArgument" />-Element.</param>
+        <summary>Entfernt das erste Vorkommen eines angegebenen <see cref="T:System.AddIn.Contract.RemoteArgument" /> aus der <see cref="T:System.AddIn.Contract.Collections.IRemoteArgumentArrayListContract" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Collections.IRemoteArgumentArrayListContract.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des zu entfernenden Elements.</param>
+        <summary>Entfernt das Element am angegebenen Index aus der <see cref="T:System.AddIn.Contract.Collections.IRemoteArgumentArrayListContract" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException">
+          <paramref name="index" /> ist kleiner als Null.  
+  
+ - oder -   
+  
+ <paramref name="index" />ist gleich oder größer als der Rückgabewert der <see cref="M:System.AddIn.Contract.Collections.IRemoteArgumentCollectionContract.GetCount" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

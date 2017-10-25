@@ -1,0 +1,109 @@
+<Type Name="SecurityRuleSet" FullName="System.Security.SecurityRuleSet">
+  <TypeSignature Language="C#" Value="public enum SecurityRuleSet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SecurityRuleSet extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.SecurityRuleSet" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt den Satz von Sicherheitsregeln die common Language Runtime für eine Assembly erzwingen soll.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration gibt an, welcher Satz von Sicherheitsregeln an, die die common Language Runtime für eine Assembly erzwingen soll. Z. B. eine Assembly, die mit `[SecurityRules(SecurityRuleSet.Level1)]` verwendet die .NET Framework Version 2.0-Transparenzregeln, in dem öffentliche sicherheitskritische Typen und Member als sicherheitsrelevant und sicher zugänglich außerhalb der Assembly behandelt. Dies erfordert sicherheitskritische Typen und Member, um einen Linkaufruf für volle Vertrauenswürdigkeit auszuführen als sicherheitskritisch Verhalten zu erzwingen, wenn sie externe aufrufende Prozesse zugänglich sind. Regeln der Ebene 1 nur aus Kompatibilitätsgründen, z. B. in der Regel für .NET Framework 2.0-Assemblys vorgesehen. Standardmäßig werden Assemblys von .NET Framework 2.0 Assemblys der Ebene 2, wenn sie für neu kompiliert werden, die [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)]. Um diese Assemblys als Ebene 1 zu kompilieren, müssen Sie sie explizit als Ebene 1 markieren. Weitere Informationen zum Verhalten der Ebene 1 finden Sie unter [Sicherheitstransparenter Code, Ebene 1](~/docs/framework/misc/security-transparent-code-level-1.md). Informationen zum Verhalten der Ebene 2 finden Sie unter [Sicherheitstransparenter Code, Ebene 2](~/docs/framework/misc/security-transparent-code-level-2.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Level1">
+      <MemberSignature Language="C#" Value="Level1" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.SecurityRuleSet Level1 = unsigned int8(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.SecurityRuleSet.Level1" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityRuleSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Common Language Runtime die Transparenzregeln für Ebene 1 (.NET Framework Version 2.0) erzwungen werden.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Level2">
+      <MemberSignature Language="C#" Value="Level2" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.SecurityRuleSet Level2 = unsigned int8(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.SecurityRuleSet.Level2" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityRuleSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass die Laufzeit Regeln für die Transparenz der Ebene 2 erzwingt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.SecurityRuleSet None = unsigned int8(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.SecurityRuleSet.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityRuleSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nicht unterstützt. Die Verwendung dieses Werts führt zu einem <see cref="T:System.IO.FileLoadException" /> ausgelöst wird.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

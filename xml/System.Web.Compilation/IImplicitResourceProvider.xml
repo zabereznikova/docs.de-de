@@ -1,0 +1,87 @@
+<Type Name="IImplicitResourceProvider" FullName="System.Web.Compilation.IImplicitResourceProvider">
+  <TypeSignature Language="C#" Value="public interface IImplicitResourceProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IImplicitResourceProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Compilation.IImplicitResourceProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Definiert Methoden, die von die eine Klasse zur Verwendung als eine implizit Ressourcenanbieter implementiert.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ressourcen können innerhalb einer Seite explizit oder implizit deklariert werden. Implizite Ressourcen ermöglichen es den Entwickler, die eine Auflistung von Ressourcenwerten an ein Steuerelement in einer Anweisung statt einzeln Zuweisen von jedem Wert zuweisen. Wenn der Parser trifft eine implizite Ressource in Form von `meta:resourcekey="WelcomeLabel"`, weist er alle Werte mit den `WelcomeLabel` Ressourcenschlüsselpräfix auf die entsprechenden Werte im Steuerelement. Angenommen, eine Ressourcendatei Werte für definiert `WelcomeLabel.Text` und `WelcomeLabel.ToolTip`, diese Werte zugewiesen werden eine `Label` -Steuerelement mit einen impliziten Verweis auf `WelcomeLabel`.  
+  
+ Die <xref:System.Web.Compilation.IImplicitResourceProvider> Schnittstelle definiert die Methoden, die ein Ressourcenanbieter implementiert, um implizite Ressourcen zuzugreifen. Sie erhalten einen bestimmten Wert mithilfe der <xref:System.Web.Compilation.IImplicitResourceProvider.GetObject%2A> Methode.  
+  
+ Wenn Sie einen benutzerdefinierten Ressourcenanbieter erstellen, müssen Sie keine implizite Ressource Lokalisierung angepasste unterstützen. Implizite Lokalisierung funktioniert mit dem Ressourcenanbieter.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetImplicitResourceKeys">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection GetImplicitResourceKeys (string keyPrefix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.ICollection GetImplicitResourceKeys(string keyPrefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.IImplicitResourceProvider.GetImplicitResourceKeys(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyPrefix" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="keyPrefix">Das Präfix des impliziten Ressourcenschlüssel gesammelt werden.</param>
+        <summary>Ruft eine Auflistung von impliziten Ressourcenschlüssel gemäß das Präfix ab.</summary>
+        <returns>Ein <see cref="T:System.Collections.ICollection" /> impliziter Ressourcenschlüssel.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Implementierung gibt die Methode eine Auflistung von impliziten Ressourcenschlüssel für ein bestimmtes Präfix zurück. Beispielsweise `WelcomeLabel` ist als das Präfix im Ausdruck angegeben `meta:resourcekey="WelcomeLabel"`. Alle Eigenschaften in einer lokalen Ressourcendatei mit `WelcomeLabel` als ein Präfix mit dieser Methode zurückgegeben werden soll.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObject">
+      <MemberSignature Language="C#" Value="public object GetObject (System.Web.Compilation.ImplicitResourceKey key, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetObject(class System.Web.Compilation.ImplicitResourceKey key, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.IImplicitResourceProvider.GetObject(System.Web.Compilation.ImplicitResourceKey,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Web.Compilation.ImplicitResourceKey" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="key">Der Ressourcenschlüssel, mit dem Präfix, der Filter und der Eigenschaft.</param>
+        <param name="culture">Die <see cref="T:System.Globalization.CultureInfo" /> , die für die die Ressource lokalisiert wird Kultur darstellt.</param>
+        <summary>Ruft ein Objekt, das den Wert der angegebenen Ressourcenschlüssels darstellt.</summary>
+        <returns>Eine <see cref="T:System.Object" /> , die den lokalisierten Wert von einer impliziten Ressourcenschlüssel darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bei der Implementierung gibt die Methode das Objekt für den Wert von der impliziten Ressourcenschlüssel dargestellt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

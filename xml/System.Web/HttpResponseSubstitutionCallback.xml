@@ -1,0 +1,43 @@
+<Type Name="HttpResponseSubstitutionCallback" FullName="System.Web.HttpResponseSubstitutionCallback">
+  <TypeSignature Language="C#" Value="public delegate string HttpResponseSubstitutionCallback(HttpContext context);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HttpResponseSubstitutionCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpResponseSubstitutionCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="context" Type="System.Web.HttpContext" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.String</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="context">Die <see cref="T:System.Web.HttpContext" /> , enthält die HTTP-Anforderungsinformationen für die Seite mit dem Steuerelement, das nach der Zwischenspeicher erfordert.</param>
+    <summary>Stellt die Methode, die nach der Zwischenspeicher behandelt.</summary>
+    <returns>Der Inhalt in die zwischengespeicherte Antwort eingefügt werden, bevor Sie an den Client gesendet werden.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.HttpResponseSubstitutionCallback> -Delegaten in Kombination mit der <xref:System.Web.HttpResponse.WriteSubstitution%2A> -Methode wird zum Rendern von Inhalt nach dem Zwischenspeichern für die <xref:System.Web.UI.WebControls.Substitution> und <xref:System.Web.UI.WebControls.AdRotator> Steuerelemente.  
+  
+ Für die <xref:System.Web.UI.WebControls.Substitution> steuern, verwenden Sie die <xref:System.Web.UI.WebControls.Substitution.MethodName%2A> -Eigenschaft an den Namen der Rückrufmethode darstellt, die beim Aufrufen der <xref:System.Web.UI.WebControls.Substitution> -Steuerelement ausgeführt wird. Die Rückrufmethode, die Sie angeben, muss eine statische Methode oder auf der Seite auf das Benutzersteuerelement, enthält die <xref:System.Web.UI.WebControls.Substitution> Steuerelement. Die Signatur für die Rückrufmethode übereinstimmen die Signatur für ein <xref:System.Web.HttpResponseSubstitutionCallback> Delegaten, die akzeptiert ein <xref:System.Web.HttpContext> Parameter und gibt eine Zeichenfolge zurück.  
+  
+ Für die <xref:System.Web.UI.WebControls.AdRotator> -Steuerelement, das Rendering erfolgt unabhängig von der Seite zwischenspeichern, wenn ein Ereignishandler bereitgestellt wird die <xref:System.Web.UI.WebControls.AdRotator.AdCreated> Ereignis. Wenn kein <xref:System.Web.UI.WebControls.AdRotator.AdCreated> -Ereignishandler vorhanden ist, nach der Zwischenspeicher wird verwendet, um das Rendern der <xref:System.Web.UI.WebControls.AdRotator> Inhalt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht das Hinzufügen einer <xref:System.Web.UI.WebControls.Substitution> Steuerelement programmgesteuert zu einer Webseite Ausgabe zwischengespeichert. Beim Laden der Seite werden das aktuelle Datum und die Uhrzeit für den Benutzer in einer Bezeichnung angezeigt. Dieser Abschnitt der Seite zwischengespeichert und alle 60 Sekunden aktualisiert. Wenn die <xref:System.Web.UI.WebControls.Substitution> -Steuerelement ausgeführt wird, ruft er die `GetCurrentDateTime` -Methode, die der Signatur für übereinstimmen muss die <xref:System.Web.HttpResponseSubstitutionCallback> delegieren. Die Zeichenfolge, die von zurückgegeben wird die `GetCurrentDateTime` Methode wird dem Benutzer angezeigt. Dieser Abschnitt der Seite wird nicht zwischengespeichert und wird jedes Mal aktualisiert, die Seite aktualisiert wird. Die <xref:System.Web.UI.WebControls.Substitution.MethodName%2A> Eigenschaft von der <xref:System.Web.UI.WebControls.Substitution> Steuerelement ruft ab oder legt den Namen der Rückrufmethode darstellt.  
+  
+ [!code-aspx-csharp[SubstitutionCstr#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SubstitutionCstr/CS/substitutioncstrcs.aspx#1)]
+ [!code-aspx-vb[SubstitutionCstr#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SubstitutionCstr/VB/substitutioncstrvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

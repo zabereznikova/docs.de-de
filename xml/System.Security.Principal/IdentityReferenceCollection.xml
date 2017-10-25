@@ -1,0 +1,446 @@
+<Type Name="IdentityReferenceCollection" FullName="System.Security.Principal.IdentityReferenceCollection">
+  <TypeSignature Language="C#" Value="public class IdentityReferenceCollection : System.Collections.Generic.ICollection&lt;System.Security.Principal.IdentityReference&gt;, System.Collections.Generic.IEnumerable&lt;System.Security.Principal.IdentityReference&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit IdentityReferenceCollection extends System.Object implements class System.Collections.Generic.ICollection`1&lt;class System.Security.Principal.IdentityReference&gt;, class System.Collections.Generic.IEnumerable`1&lt;class System.Security.Principal.IdentityReference&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Principal.IdentityReferenceCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;System.Security.Principal.IdentityReference&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Security.Principal.IdentityReference&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Auflistung von <see cref="T:System.Security.Principal.IdentityReference" />-Objekten dar und stellt ein Verfahren bereit, mit dem Gruppen von aus <see cref="T:System.Security.Principal.IdentityReference" /> abgeleiteten Objekten in von <see cref="T:System.Security.Principal.IdentityReference" /> abgeleitete Typen konvertiert werden können.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IdentityReferenceCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Principal.IdentityReferenceCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Principal.IdentityReferenceCollection" />-Klasse mit 0 (null) Elementen in der Auflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IdentityReferenceCollection (int capacity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 capacity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Principal.IdentityReferenceCollection.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="capacity" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="capacity">Die anfängliche Anzahl der Elemente in der Auflistung. Der Wert der <c>Kapazität</c> ist ein Hinweis; er stimmt nicht unbedingt die maximale Anzahl von Elementen erstellt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.Principal.IdentityReferenceCollection" />-Klasse unter Verwendung der angegebenen Anfangsgröße.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Security.Principal.IdentityReference identity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(class System.Security.Principal.IdentityReference identity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Principal.IdentityReferenceCollection.Add(System.Security.Principal.IdentityReference)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Das <see cref="T:System.Security.Principal.IdentityReference" />-Objekt, das zur Auflistung hinzugefügt werden soll.</param>
+        <summary>Fügt der <see cref="T:System.Security.Principal.IdentityReferenceCollection" />-Auflistung ein <see cref="T:System.Security.Principal.IdentityReference" />-Objekt hinzu.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="identity" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Principal.IdentityReferenceCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht alle <see cref="T:System.Security.Principal.IdentityReference" />-Objekte aus der <see cref="T:System.Security.Principal.IdentityReferenceCollection" />-Auflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Security.Principal.IdentityReference identity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(class System.Security.Principal.IdentityReference identity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Principal.IdentityReferenceCollection.Contains(System.Security.Principal.IdentityReference)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Das <see cref="T:System.Security.Principal.IdentityReference" />-Objekt, für das eine Überprüfung erfolgen soll.</param>
+        <summary>Gibt an, ob die <see cref="T:System.Security.Principal.IdentityReferenceCollection" />-Auflistung das angegebene <see cref="T:System.Security.Principal.IdentityReference" />-Objekt enthält.</summary>
+        <returns>
+          <see langword="true" />, wenn die Auflistung das angegebene Objekt enthält.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="identity" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Security.Principal.IdentityReference[] array, int offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Security.Principal.IdentityReference[] array, int32 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Principal.IdentityReferenceCollection.CopyTo(System.Security.Principal.IdentityReference[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Security.Principal.IdentityReference[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Ein <see cref="T:System.Security.Principal.IdentityReferenceCollection" />-Arrayobjekt, in das die <see cref="T:System.Security.Principal.IdentityReferenceCollection" />-Auflistung kopiert werden soll.</param>
+        <param name="offset">Der nullbasierte Index im <c>Array</c> , in dem die <see cref="T:System.Security.Principal.IdentityReferenceCollection" /> Auflistung ist, kopiert werden soll.</param>
+        <summary>Kopiert die <see cref="T:System.Security.Principal.IdentityReferenceCollection" />-Auflistung in ein <see cref="T:System.Security.Principal.IdentityReferenceCollection" />-Array, wobei am angegebenen Index begonnen wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Principal.IdentityReferenceCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Elemente in der <see cref="T:System.Security.Principal.IdentityReferenceCollection" />-Auflistung ab.</summary>
+        <value>Die Anzahl der <see cref="T:System.Security.Principal.IdentityReference" />-Objekte in der <see cref="T:System.Security.Principal.IdentityReferenceCollection" />-Auflistung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerator&lt;System.Security.Principal.IdentityReference&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;class System.Security.Principal.IdentityReference&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Principal.IdentityReferenceCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Security.Principal.IdentityReference&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Enumerator ab, mit dem die <see cref="T:System.Security.Principal.IdentityReferenceCollection" />-Auflistung durchlaufen werden kann.</summary>
+        <returns>Ein Enumerator für die <see cref="T:System.Security.Principal.IdentityReferenceCollection" />-Auflistung.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Principal.IdentityReferenceCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die <see cref="T:System.Security.Principal.IdentityReferenceCollection" />-Auflistung schreibgeschützt ist.</summary>
+        <value>Gibt immer <see langword="false" /> zurück.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Security.Principal.IdentityReference this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Principal.IdentityReference Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Principal.IdentityReferenceCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.IdentityReference</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index in der <see cref="T:System.Security.Principal.IdentityReferenceCollection" />-Auflistung.</param>
+        <summary>Ruft den Knoten am angegebenen Index der <see cref="T:System.Security.Principal.IdentityReferenceCollection" />-Auflistung ab oder legt diesen fest.</summary>
+        <value>Die <see cref="T:System.Security.Principal.IdentityReference" /> am angegebenen Index in der Auflistung. Wenn <paramref name="index" /> größer als die Anzahl oder gleich der Anzahl der Knoten in der Auflistung ist, ist der Rückgabewert <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (System.Security.Principal.IdentityReference identity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(class System.Security.Principal.IdentityReference identity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Principal.IdentityReferenceCollection.Remove(System.Security.Principal.IdentityReference)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Das zu entfernende <see cref="T:System.Security.Principal.IdentityReference" />-Objekt.</param>
+        <summary>Entfernt das angegebene <see cref="T:System.Security.Principal.IdentityReference" />-Objekt aus der Auflistung.</summary>
+        <returns>
+          <see langword="true" />, wenn das angegebene Objekt aus der Auflistung entfernt wurde.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="identity" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;System.Security.Principal.IdentityReference&gt;.IsReadOnly">
+      <MemberSignature Language="C#" Value="bool System.Collections.Generic.ICollection&lt;System.Security.Principal.IdentityReference&gt;.IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.Generic.ICollection&lt;System.Security.Principal.IdentityReference&gt;.IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Principal.IdentityReferenceCollection.System#Collections#Generic#ICollection&lt;System#Security#Principal#IdentityReference&gt;#IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Principal.IdentityReferenceCollection.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft einen Enumerator ab, mit dem die <see cref="T:System.Security.Principal.IdentityReferenceCollection" />-Auflistung durchlaufen werden kann.</summary>
+        <returns>Ein Enumerator für die <see cref="T:System.Security.Principal.IdentityReferenceCollection" />-Auflistung.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Translate">
+      <MemberSignature Language="C#" Value="public System.Security.Principal.IdentityReferenceCollection Translate (Type targetType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.Principal.IdentityReferenceCollection Translate(class System.Type targetType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Principal.IdentityReferenceCollection.Translate(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.IdentityReferenceCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="targetType">Den Typ, in den Elemente in der Auflistung konvertiert werden.</param>
+        <summary>Konvertiert die Objekte in der Auflistung in den angegebenen Typ. Der Aufruf dieser Methode entspricht dem Aufruf von <see cref="M:System.Security.Principal.IdentityReferenceCollection.Translate(System.Type,System.Boolean)" />, wobei der zweite Parameter auf <see langword="false" /> festgelegt wird. Das bedeutet, dass für Elemente, die nicht konvertiert werden können, keine Ausnahme ausgelöst wird.</summary>
+        <returns>Eine <see cref="T:System.Security.Principal.IdentityReferenceCollection" />-Auflistung, die den konvertierten Inhalt der ursprünglichen Auflistung darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Reihenfolge wird in der zurückgegebenen Auflistung wird beibehalten, das erste Element in der zurückgegebenen Auflistung entspricht, auf das erste Element in der quellauflistung usw., für jedes Element in der Auflistung.  
+  
+ Die Elemente in der quellauflistung müssen nicht den gleichen Typ aufweisen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Translate">
+      <MemberSignature Language="C#" Value="public System.Security.Principal.IdentityReferenceCollection Translate (Type targetType, bool forceSuccess);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.Principal.IdentityReferenceCollection Translate(class System.Type targetType, bool forceSuccess) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Principal.IdentityReferenceCollection.Translate(System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.IdentityReferenceCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetType" Type="System.Type" />
+        <Parameter Name="forceSuccess" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="targetType">Den Typ, in den Elemente in der Auflistung konvertiert werden.</param>
+        <param name="forceSuccess">Ein boolescher Wert, der bestimmt, wie Konvertierungsfehler behandelt werden.  
+  
+ Wenn <c>ForceSuccess</c> ist <see langword="true" />, Konvertierungsfehler aufgrund einer fehlenden Zuordnung wird nicht für die Verschiebung dazu eine fehlerhafte Konvertierung gefunden und Ausnahmen werden ausgelöst.  
+  
+ Wenn <c>ForceSuccess</c> ist <see langword="false" />, Typen, die Fehler beim Konvertieren von aufgrund einer fehlenden Zuordnung für die Übersetzung nicht gefunden wird, werden ohne Konvertierung in die zurückgegebene Auflistung kopiert.</param>
+        <summary>Konvertiert die Objekte in der Auflistung in den angegebenen Typ und verwendet die angegebene Fehlertoleranz, um Fehler zu bearbeiten oder zu ignorieren, die einem Typ zugeordnet sind, der keine Konvertierungszuordnung besitzt.</summary>
+        <returns>Eine <see cref="T:System.Security.Principal.IdentityReferenceCollection" />-Auflistung, die den konvertierten Inhalt der ursprünglichen Auflistung darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Reihenfolge wird in der zurückgegebenen Auflistung wird beibehalten, das erste Element in der zurückgegebenen Auflistung entspricht, auf das erste Element in der quellauflistung usw., für jedes Element in der Auflistung.  
+  
+ Die Elemente in der quellauflistung müssen nicht den gleichen Typ aufweisen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

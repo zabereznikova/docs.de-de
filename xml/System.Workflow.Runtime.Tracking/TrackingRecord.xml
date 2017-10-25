@@ -1,0 +1,150 @@
+<Type Name="TrackingRecord" FullName="System.Workflow.Runtime.Tracking.TrackingRecord">
+  <TypeSignature Language="C#" Value="public abstract class TrackingRecord" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TrackingRecord extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Tracking.TrackingRecord" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Die <see langword="abstract" /> Basisklasse, von der <see cref="T:System.Workflow.Runtime.Tracking.ActivityTrackingRecord" />, <see cref="T:System.Workflow.Runtime.Tracking.UserTrackingRecord" /> und <see cref="T:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord" /> abgeleitet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Bei der Ausführung gibt eine Workflowinstanz drei Arten von Verfolgungsereignissen an die Laufzeitverfolgungsinfrastruktur aus: Aktivitätsstatusereignisse, Benutzerereignisse und Arbeitsstatusereignisse. Die Laufzeitverfolgungsinfrastruktur versucht, diese Ereignisse mit Verfolgungspunkten in einem <xref:System.Workflow.Runtime.Tracking.TrackingProfile> abzugleichen. Die Laufzeitverfolgungsinfrastruktur sendet bei jedem Abgleich eines Verfolgungspunkts einen Verfolgungsdatensatz mit dem Verfolgungspunkt und dem Verfolgungsereignis zugeordneten Daten an den Überwachungsdienst. Es gibt drei Arten von Verfolgungsdatensätzen, die die Laufzeitverfolgungsinfrastruktur senden kann: <xref:System.Workflow.Runtime.Tracking.ActivityTrackingRecord>, <xref:System.Workflow.Runtime.Tracking.UserTrackingRecord> und <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord>. Jede Art von Verfolgungsdatensätzen wird von der <xref:System.Workflow.Runtime.Tracking.TrackingRecord>-Klasse abgeleitet und entspricht einer der drei Arten von Verfolgungspunkten, die die Laufzeitverfolgungsinfrastruktur abgleichen kann: <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint>, <xref:System.Workflow.Runtime.Tracking.UserTrackPoint> oder <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TrackingRecord ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.TrackingRecord.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert beim Implementieren in einer abgeleiteten Klasse eine neue Instanz der <see cref="T:System.Workflow.Runtime.Tracking.TrackingRecord" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Annotations">
+      <MemberSignature Language="C#" Value="public abstract System.Workflow.Runtime.Tracking.TrackingAnnotationCollection Annotations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Runtime.Tracking.TrackingAnnotationCollection Annotations" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.TrackingRecord.Annotations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.TrackingAnnotationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse die Auflistung der Anmerkungen ab, die dem Verfolgungspunkt zugeordnet sind.</summary>
+        <value><see cref="T:System.Workflow.Runtime.Tracking.TrackingAnnotationCollection" /> mit den Anmerkungen, die dem Verfolgungspunkt zugeordnet sind, dem dieser <see cref="T:System.Workflow.Runtime.Tracking.TrackingRecord" /> entspricht.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können Anmerkungen angeben, die <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint>, <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint> oder <xref:System.Workflow.Runtime.Tracking.UserTrackPoint> in <xref:System.Workflow.Runtime.Tracking.TrackingProfile> zugeordnet werden sollen. Die Laufzeitverfolgungsinfrastruktur speichert diese Anmerkungen und gibt sie beim Abgleich des Verfolgungspunkts in <xref:System.Workflow.Runtime.Tracking.TrackingRecord.Annotations%2A> zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventArgs">
+      <MemberSignature Language="C#" Value="public abstract EventArgs EventArgs { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.EventArgs EventArgs" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.TrackingRecord.EventArgs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventArgs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse die Ereignisdaten (sofern vorhanden) ab, die dem Verfolgungsereignis zugeordnet sind, aufgrund dessen der Verfolgungsdatensatzes gesendet wurde, oder legt die Daten fest.</summary>
+        <value>Eine <see cref="T:System.EventArgs" />-Klasse, die die Ereignisdaten (sofern vorhanden) darstellt, die dem Verfolgungsereignis zugeordnet sind, aufgrund dessen der Verfolgungsdatensatzes gesendet wurde.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bestimmten Arten von Verfolgungsereignissen, die von einer Workflowinstanz ausgegeben werden, sind Ereignisdaten zugeordnet. Wenn einem Überwachungsdienst Ereignisdaten zugeordnet sind, speichert die Laufzeitverfolgungsinfrastruktur diese Daten in der <xref:System.Workflow.Runtime.Tracking.TrackingRecord.EventArgs%2A>-Eigenschaft der abgeleiteten Klasse. Wenn beispielsweise eine Workflowinstanz beendet wird, sendet die Laufzeitverfolgungsinfrastruktur <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord>, wobei <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord.EventArgs%2A?displayProperty=nameWithType> auf <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowTerminatedEventArgs> festgelegt ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventDateTime">
+      <MemberSignature Language="C#" Value="public abstract DateTime EventDateTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime EventDateTime" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.TrackingRecord.EventDateTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse Uhrzeit und Datum des Verfolgungsereignisses ab, das dem Verfolgungsdatensatz zugeordnet ist, oder legt Uhrzeit und Datum fest.</summary>
+        <value><see cref="T:System.DateTime" /> mit der Angabe des Datums und der Uhrzeit des Verfolgungsereignisses.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.DateTime> bezieht sich auf Coordinated Universal Time (UTC).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventOrder">
+      <MemberSignature Language="C#" Value="public abstract int EventOrder { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EventOrder" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.TrackingRecord.EventOrder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse einen Wert ab, der die Reihenfolge des Verfolgungsereignisses, das dem Verfolgungsdatensatz zugeordnet ist, im Verhältnis zu den anderen von der Workflowinstanz ausgegebenen Verfolgungsereignissen angibt, oder legt diesen Wert fest.</summary>
+        <value>Ein Wert, der die Reihenfolge des Verfolgungsereignisses im Verhältnis zu den anderen von der Workflowinstanz ausgegebenen Verfolgungsereignissen angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.Tracking.TrackingRecord.EventOrder%2A> gibt die relative Reihenfolge des Verfolgungsereignisses in der Workflowinstanz an. <xref:System.Workflow.Runtime.Tracking.TrackingRecord.EventOrder%2A>  ist in einer Workflowinstanz eindeutig, jedoch nicht notwendigerweise sequenziell.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

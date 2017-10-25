@@ -1,0 +1,759 @@
+<Type Name="WorkflowTheme" FullName="System.Workflow.ComponentModel.Design.WorkflowTheme">
+  <TypeSignature Language="C#" Value="public sealed class WorkflowTheme : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WorkflowTheme extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Design.WorkflowTheme" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Eigenschaftseinstellungen für Aussehen und Verhalten eines Workflows in einer Entwurfszeitumgebung bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Workflowdesigns definieren Aussehen und Verhalten einer Workflowentwurfsoberfläche. Dies umfasst Hintergrundformate, Vordergrundformate, Schriftarten und Symbole, die für den Workflow definiert sind.  
+  
+ Ein <xref:System.Workflow.ComponentModel.Design.WorkflowTheme> ist ein für einen bestimmten Workflow definiertes Design. Die <xref:System.Workflow.ComponentModel.Design.AmbientTheme>-Klasse kann für Standardeigenschaften verwendet werden, wenn ein bestimmtes Workflowdesign nicht gewünscht wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowTheme ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowTheme.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Workflow.ComponentModel.Design.WorkflowTheme" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AmbientTheme">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.Design.AmbientTheme AmbientTheme { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.ComponentModel.Design.AmbientTheme AmbientTheme" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.WorkflowTheme.AmbientTheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.AmbientTheme</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den <see cref="T:System.Workflow.ComponentModel.Design.AmbientTheme" /> ab, der dem <see cref="T:System.Workflow.ComponentModel.Design.WorkflowTheme" /> zugeordnet ist.</summary>
+        <value>Ein <see cref="T:System.Workflow.ComponentModel.Design.AmbientTheme" />, das Standardwerte für das Aussehen und Verhalten von <see cref="T:System.Workflow.ComponentModel.Design.WorkflowTheme" /> beschreibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das <xref:System.Workflow.ComponentModel.Design.AmbientTheme> beschreibt das Aussehen und Verhalten einer Workflowentwurfsoberfläche. Dies schließt die für die Workflowentwurfsoberfläche definierten Hintergrundformate, Vordergrundformate, Schriftarten und Symbole ein.  
+  
+   
+  
+## Examples  
+ Im folgenden Beispiel wird der Zugriff auf die `AmbientTheme`-Eigenschaft veranschaulicht. Dieses Beispiel stammt aus dem Tracking Profile Designer SDK-Beispiel. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Tracking Profile Designer Beispiel](http://msdn.microsoft.com/en-us/a280199c-3000-4148-ac63-cb5aaeac07c8).  
+  
+ [!code-csharp[Wf_samples#124](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#124)]
+ [!code-vb[Wf_samples#124](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#124)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.Design.WorkflowTheme Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Workflow.ComponentModel.Design.WorkflowTheme Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowTheme.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.WorkflowTheme</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt ein doppeltes Design.</summary>
+        <returns>Ein Objekt, das das neu geklonte Design darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie `Clone` zum Erstellen eines duplizierten Designs mit Eigenschaftseinstellungen, die mit dem geklonten Design übereinstimmen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainingFileDirectory">
+      <MemberSignature Language="C#" Value="public string ContainingFileDirectory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContainingFileDirectory" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.WorkflowTheme.ContainingFileDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Verzeichnisteil von <see cref="P:System.Workflow.ComponentModel.Design.WorkflowTheme.FilePath" /> ab.</summary>
+        <value>Der Verzeichnisteil von <see cref="P:System.Workflow.ComponentModel.Design.WorkflowTheme.FilePath" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie <xref:System.Workflow.ComponentModel.Design.WorkflowTheme.ContainingFileDirectory%2A>, um den Verzeichnisteil von <xref:System.Workflow.ComponentModel.Design.WorkflowTheme.FilePath%2A> abzurufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateStandardTheme">
+      <MemberSignature Language="C#" Value="public static System.Workflow.ComponentModel.Design.WorkflowTheme CreateStandardTheme (System.Workflow.ComponentModel.Design.ThemeType standardThemeType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Workflow.ComponentModel.Design.WorkflowTheme CreateStandardTheme(valuetype System.Workflow.ComponentModel.Design.ThemeType standardThemeType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowTheme.CreateStandardTheme(System.Workflow.ComponentModel.Design.ThemeType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.WorkflowTheme</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="standardThemeType" Type="System.Workflow.ComponentModel.Design.ThemeType" />
+      </Parameters>
+      <Docs>
+        <param name="standardThemeType">Der <see cref="T:System.Workflow.ComponentModel.Design.ThemeType" /> des zu erstellenden Standarddesigns.</param>
+        <summary>Erstellt ein Standarddesign.</summary>
+        <returns>Der neu erstellte <see cref="T:System.Workflow.ComponentModel.Design.WorkflowTheme" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie <xref:System.Workflow.ComponentModel.Design.WorkflowTheme.CreateStandardTheme%2A> zum Erstellen eines neuen Designs für jeden Benutzer, der den Workflow-Designer verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentTheme">
+      <MemberSignature Language="C#" Value="public static System.Workflow.ComponentModel.Design.WorkflowTheme CurrentTheme { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Workflow.ComponentModel.Design.WorkflowTheme CurrentTheme" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.WorkflowTheme.CurrentTheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.WorkflowTheme</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das aktuelle Design ab oder legt es fest.</summary>
+        <value>Ein <see cref="T:System.Workflow.ComponentModel.Design.WorkflowTheme" />, das für Anzeigeeinstellungen verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie <xref:System.Workflow.ComponentModel.Design.WorkflowTheme.CurrentTheme%2A> zum Vornehmen von Änderungen am Design, das zum Anzeigen des Workflows verwendet wird.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel beschreibt die Verwendung der <xref:System.Workflow.ComponentModel.Design.WorkflowTheme.CurrentTheme%2A>-Eigenschaft zum Zugreifen auf ein einem Workflow zugeordneten <xref:System.Workflow.ComponentModel.Design.AmbientTheme>.  
+  
+ Dieses Codebeispiel ist ein Teil des Workflow Monitor SDK-Beispiels der Datei DesignerGlyphProvider.cs. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Workflow-Monitor](http://msdn.microsoft.com/en-us/4f70c1c5-f82d-4d5f-8b7d-943b9f99f8e2).  
+  
+ [!code-csharp[WF_Samples#133](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#133)]
+ [!code-vb[WF_Samples#133](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#133)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.WorkflowTheme.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Beschreibung des Designs ab oder legt sie fest.</summary>
+        <value>Die Beschreibung des Designs.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Der Eigenschaftswert kann nicht festgelegt werden, da das Workflowdesign schreibgeschützt ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerThemes">
+      <MemberSignature Language="C#" Value="public System.Collections.IList DesignerThemes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IList DesignerThemes" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.WorkflowTheme.DesignerThemes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Liste mit dem Workflow zugeordneten Designerdesigns ab.</summary>
+        <value>Eine Liste mit dem Workflow zugeordneten Designerdesigns.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie <xref:System.Workflow.ComponentModel.Design.WorkflowTheme.DesignerThemes%2A> zum Abrufen einer Liste von Designerdesigns, die dem Workflow zugeordnet sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableChangeNotification">
+      <MemberSignature Language="C#" Value="public static bool EnableChangeNotification { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool EnableChangeNotification" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.WorkflowTheme.EnableChangeNotification" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Änderungsbenachrichtigung aktiviert werden soll, oder legt ihn fest.</summary>
+        <value>
+          <see langword="true" /> zum Aktivieren der Änderungsbenachrichtigung, andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aktivieren der Änderungsbenachrichtigung treten durch geänderte Designs ausgelöste Ereignisse ein, wenn Änderungen am Design vorgenommen werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilePath">
+      <MemberSignature Language="C#" Value="public string FilePath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FilePath" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.WorkflowTheme.FilePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Dateipfad des Designs ab oder legt ihn fest.</summary>
+        <value>Der Dateipfad für das Design.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der <xref:System.Workflow.ComponentModel.Design.WorkflowTheme.FilePath%2A> bezeichnet den Pfad zur Datei, in der die Designeinstellungen gespeichert sind.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Eigenschaftswert kann nicht festgelegt werden, da das Workflowdesign schreibgeschützt ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~WorkflowTheme ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowTheme.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erlaubt beim Überschreiben in einer abgeleiteten Klasse einem Objekt, alle Ressourcen deterministisch zu bereinigen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode bereinigt Ressourcen durch Aufrufen von <xref:System.Workflow.ComponentModel.Design.WorkflowTheme.System%23IDisposable%23Dispose%2A>(`false`). Überschreiben Sie <xref:System.Workflow.ComponentModel.Design.WorkflowTheme.System%23IDisposable%23Dispose%2A>, um die Bereinigung anzupassen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateThemeFilePath">
+      <MemberSignature Language="C#" Value="public static string GenerateThemeFilePath ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GenerateThemeFilePath() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowTheme.GenerateThemeFilePath" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Generiert einen Dateipfad für das Design.</summary>
+        <returns>Ein neuer, eindeutiger Dateipfad für das Design.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie <xref:System.Workflow.ComponentModel.Design.WorkflowTheme.GenerateThemeFilePath%2A> zum Erstellen eines eindeutigen Dateipfads für das Design.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignerTheme">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.Design.ActivityDesignerTheme GetDesignerTheme (System.Workflow.ComponentModel.Design.ActivityDesigner designer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Workflow.ComponentModel.Design.ActivityDesignerTheme GetDesignerTheme(class System.Workflow.ComponentModel.Design.ActivityDesigner designer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowTheme.GetDesignerTheme(System.Workflow.ComponentModel.Design.ActivityDesigner)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.ActivityDesignerTheme</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="designer" Type="System.Workflow.ComponentModel.Design.ActivityDesigner" />
+      </Parameters>
+      <Docs>
+        <param name="designer">Der Aktivitätsdesigner, von dem das Design abgerufen wird.</param>
+        <summary>Ruft das Design für den angegebenen <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" /> ab.</summary>
+        <returns>Die <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesignerTheme" />, die dem angegebenen <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" /> zugeordnet ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie <xref:System.Workflow.ComponentModel.Design.WorkflowTheme.GetDesignerTheme%2A> zum Abrufen eines dem angegebenen Aktivitätsdesigner zugeordneten Designs.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public static System.Workflow.ComponentModel.Design.WorkflowTheme Load (string themeFilePath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Workflow.ComponentModel.Design.WorkflowTheme Load(string themeFilePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowTheme.Load(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.WorkflowTheme</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="themeFilePath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="themeFilePath">Der Dateipfad für das Design.</param>
+        <summary>Lädt das Design vom angegebenen Dateipfad.</summary>
+        <returns>Ein neues <see cref="T:System.Workflow.ComponentModel.Design.WorkflowTheme" /> wurde aus dem angegebenen Dateinamen geladen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public static System.Workflow.ComponentModel.Design.WorkflowTheme Load (System.ComponentModel.Design.Serialization.IDesignerSerializationManager serializationManager, string themeFilePath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Workflow.ComponentModel.Design.WorkflowTheme Load(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager serializationManager, string themeFilePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowTheme.Load(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.WorkflowTheme</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationManager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="themeFilePath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="serializationManager">Der zum Laden des Designs verwendete Serialisierungs-Manager.</param>
+        <param name="themeFilePath">Der Dateipfad, von dem aus das Design geladen wird.</param>
+        <summary>Lädt mithilfe eines Serialisierungs-Managers ein neues Design vom angegebenen Pfad.</summary>
+        <returns>Ein neues <see cref="T:System.Workflow.ComponentModel.Design.WorkflowTheme" /> wurde mithilfe des Serialisierungs-Managers vom angegebenen Dateipfad geladen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Erfordert das Design eine benutzerdefinierte Serialisierung, verwenden Sie diese Methode zum Laden der Methode mithilfe des benutzerdefinierten Serialisierungs-Managers.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadThemeSettingFromRegistry">
+      <MemberSignature Language="C#" Value="public static System.Workflow.ComponentModel.Design.WorkflowTheme LoadThemeSettingFromRegistry ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Workflow.ComponentModel.Design.WorkflowTheme LoadThemeSettingFromRegistry() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowTheme.LoadThemeSettingFromRegistry" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.WorkflowTheme</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lädt ein Design aus der Registrierung.</summary>
+        <returns>Ein <see cref="T:System.Workflow.ComponentModel.Design.WorkflowTheme" /> wurde aus der Registrierung geladen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `LoadThemeSettingFromRegistry` lädt  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupPath">
+      <MemberSignature Language="C#" Value="public static string LookupPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string LookupPath" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.WorkflowTheme.LookupPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Dateipfad aus der Registrierung ab.</summary>
+        <value>Der Dateipfad von der Registrierung zum Design.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der `FilePath` bezeichnet den Pfad zur Datei, in der die Designeinstellungen gespeichert sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.WorkflowTheme.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Designs ab oder legt diesen fest.</summary>
+        <value>Der Name des Designs.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie den Namen, um das Design unter anderen Designs eindeutig zu identifizieren.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Eigenschaftswert kann nicht festgelegt werden, da das Workflowdesign schreibgeschützt ist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnly">
+      <MemberSignature Language="C#" Value="public bool ReadOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.WorkflowTheme.ReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob dieses Workflowdesign schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" />, wenn das Workflowdesign schreibgeschützt ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ In folgendem Beispiel wird das Aktivieren und Deaktivieren der `ReadOnly`-Eigenschaft zum Zweck der Festlegung der <xref:System.Workflow.ComponentModel.Design.WorkflowTheme.AmbientTheme%2A>-Eigenschaft erläutert. Dieses Beispiel stammt aus dem Tracking Profile Designer SDK-Beispiel. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Tracking Profile Designer Beispiel](http://msdn.microsoft.com/en-us/a280199c-3000-4148-ac63-cb5aaeac07c8).  
+  
+ [!code-csharp[Wf_samples#124](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#124)]
+ [!code-vb[Wf_samples#124](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#124)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegistryKeyPath">
+      <MemberSignature Language="C#" Value="public static string RegistryKeyPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string RegistryKeyPath" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.WorkflowTheme.RegistryKeyPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Registrierungsschlüsselpfad für das Design ab.</summary>
+        <value>Der Registrierungsschlüsselpfad für das Design.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dem Registrierungsschlüssel können Sie eine eindeutige Stelle in der Windows-Registrierung bereitstellen, um Designinformationen zu speichern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (string themeFilePath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(string themeFilePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowTheme.Save(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="themeFilePath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="themeFilePath">Die Datei, in der <see langword="WorkflowTheme" /> gespeichert werden soll.</param>
+        <summary>Speichert ein Design in einer Datei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie <xref:System.Workflow.ComponentModel.Design.WorkflowTheme.Save%2A>, um ein Design in einer Datei zu erhalten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveThemeSettingToRegistry">
+      <MemberSignature Language="C#" Value="public static void SaveThemeSettingToRegistry ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SaveThemeSettingToRegistry() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowTheme.SaveThemeSettingToRegistry" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert ein Design in der Registrierung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie <xref:System.Workflow.ComponentModel.Design.WorkflowTheme.SaveThemeSettingToRegistry%2A>, um das Design mit der von <xref:System.Workflow.ComponentModel.Design.WorkflowTheme.RegistryKeyPath%2A> angegebenen Taste in der Registrierung zu speichern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StandardThemes">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IDictionary&lt;System.Workflow.ComponentModel.Design.ThemeType,string[]&gt; StandardThemes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Collections.Generic.IDictionary`2&lt;valuetype System.Workflow.ComponentModel.Design.ThemeType, string[]&gt; StandardThemes" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.WorkflowTheme.StandardThemes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Workflow.ComponentModel.Design.ThemeType,System.String[]&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Liste der Standarddesigns ab.</summary>
+        <value>Eine Liste verfügbarer Designs.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IDisposable.Dispose">
+      <MemberSignature Language="C#" Value="void IDisposable.Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.IDisposable.Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowTheme.System#IDisposable#Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt die von <see cref="T:System.Workflow.ComponentModel.Design.WorkflowTheme" /> verwendeten verwalteten Ressourcen frei.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThemeChanged">
+      <MemberSignature Language="C#" Value="public static event EventHandler ThemeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ThemeChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Workflow.ComponentModel.Design.WorkflowTheme.ThemeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tritt ein, wenn sich ein Design ändert.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.Design.WorkflowTheme.ThemeChanged> tritt ein, wenn Eigenschaften des Designs geändert werden oder ein Design geladen wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.Design.ThemeType Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Workflow.ComponentModel.Design.ThemeType Type" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.WorkflowTheme.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.ThemeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ des Designs ab.</summary>
+        <value>Der <see cref="T:System.Workflow.ComponentModel.Design.ThemeType" /> des Designs. Mögliche Werte sind <see langword="Default" />, <see langword="System" /> und <see langword="UserDefined" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public string Version { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Version" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.WorkflowTheme.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Version des Designs ab oder legt sie fest.</summary>
+        <value>Die Versionsinformationen für das Design.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die Versionsinformationen, um sukzessive Verbesserungen zu einem bestimmten Design anzugeben.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Der Eigenschaftswert kann nicht festgelegt werden, da das Workflowdesign schreibgeschützt ist.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

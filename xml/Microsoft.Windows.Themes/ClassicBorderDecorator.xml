@@ -1,0 +1,357 @@
+<Type Name="ClassicBorderDecorator" FullName="Microsoft.Windows.Themes.ClassicBorderDecorator">
+  <TypeSignature Language="C#" Value="public sealed class ClassicBorderDecorator : System.Windows.Controls.Decorator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ClassicBorderDecorator extends System.Windows.Controls.Decorator" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Windows.Themes.ClassicBorderDecorator" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework.Classic</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Decorator</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Erstellt das Design-spezifische Aussehen für <see cref="T:System.Windows.Controls.Decorator" /> Typen, für die Verwendung mit dem klassischen-Design.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um die Classic-Darstellung zu erreichen, geben Sie <xref:Microsoft.Windows.Themes.ClassicBorderDecorator.ClassicBorderBrush%2A> als die <xref:System.Windows.Controls.Control.BorderBrush%2A>. Alle anderen Pinsel entfernen die Classic-Darstellung und Rendern ein Rahmens des <xref:System.Windows.Controls.Border.BorderThickness%2A>, außer im Fall von <xref:System.Windows.Controls.TabControl> Elemente, die gerendert werden immer in der klassischen suchen.  
+  
+<a name="xamlObjectElementUsage_CBD"></a>   
+## <a name="xaml-object-element-usage"></a>Verwendung von XAML-Objektelementen  
+  
+```  
+<theme:ClassicBorderDecorator ...>  
+  singleChild  
+</theme:ClassicBorderDecorator>  
+```  
+  
+<a name="xamlValues_CBD"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ `theme:`  
+ Ein Präfix "Xmlns" für die <xref:Microsoft.Windows.Themes> CLR-Namespace. Xmlns-Präfixe und Zuordnungen werden in der Regel in einer XAML-Stammelement (nicht dargestellt) definiert.  
+  
+ *singleChild*  
+ Ein einzelnes Objekt untergeordnetes Element, das Objekt, dem der Rahmen, um gezeichnet wird darstellt. Dieses Objekt muss eine <xref:System.Windows.UIElement>. Typische untergeordneten Elemente sind entweder eine feste <xref:System.Windows.UIElement> (z. B. eine <xref:System.Windows.Shapes.Path>) Referent oder einem anderen Decorator-Element in der Zusammensetzung sind.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClassicBorderDecorator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Windows.Themes.ClassicBorderDecorator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework.Classic</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:Microsoft.Windows.Themes.ClassicBorderDecorator" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrangeOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size ArrangeOverride (System.Windows.Size finalSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size ArrangeOverride(valuetype System.Windows.Size finalSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Windows.Themes.ClassicBorderDecorator.ArrangeOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework.Classic</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="finalSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="finalSize">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Background">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush Background { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush Background" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Windows.Themes.ClassicBorderDecorator.Background" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework.Classic</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Pinsel, der zum Ausfüllen des Elements verwendet.</summary>
+        <value>Der Pinsel, der zum Ausfüllen des Elements verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Background"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:Microsoft.Windows.Themes.ClassicBorderDecorator.BackgroundProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.SubPropertiesDoNotAffectRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Journal%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BackgroundProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BackgroundProperty" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Windows.Themes.ClassicBorderDecorator.BackgroundProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework.Classic</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:Microsoft.Windows.Themes.ClassicBorderDecorator.Background" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderBrush">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush BorderBrush { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush BorderBrush" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Windows.Themes.ClassicBorderDecorator.BorderBrush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework.Classic</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Pinsel verwendet, um den äußeren Rahmen des Elements gezeichnet werden soll.</summary>
+        <value>Der Pinsel verwendet, um den äußeren Rahmen des Elements gezeichnet werden soll.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_BorderBrush"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:Microsoft.Windows.Themes.ClassicBorderDecorator.BorderBrushProperty>|  
+|Festgelegte Metadateneigenschaften **"true"**|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.SubPropertiesDoNotAffectRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Journal%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderBrushProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BorderBrushProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BorderBrushProperty" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Windows.Themes.ClassicBorderDecorator.BorderBrushProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework.Classic</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:Microsoft.Windows.Themes.ClassicBorderDecorator.BorderBrush" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderStyle">
+      <MemberSignature Language="C#" Value="public Microsoft.Windows.Themes.ClassicBorderStyle BorderStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Windows.Themes.ClassicBorderStyle BorderStyle" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Windows.Themes.ClassicBorderDecorator.BorderStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework.Classic</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Windows.Themes.ClassicBorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <see cref="T:Microsoft.Windows.Themes.ClassicBorderStyle" /> zum Zeichnen des Rahmens des Elements verwendet.</summary>
+        <value>Die <see cref="T:Microsoft.Windows.Themes.ClassicBorderStyle" /> zum Zeichnen des Rahmens des Elements verwendet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um die Classic-Darstellung zu erreichen, geben Sie <xref:Microsoft.Windows.Themes.ClassicBorderDecorator.ClassicBorderBrush%2A> als die <xref:Microsoft.Windows.Themes.ClassicBorderDecorator.BorderStyle%2A>. Alle anderen Pinsel entfernen die Classic-Darstellung und Rendern ein Rahmens des <xref:System.Windows.Controls.Border.BorderThickness%2A>, außer im Fall von <xref:System.Windows.Controls.TabControl> Elemente, die gerendert werden immer in der klassischen suchen.  
+  
+<a name="dependencyPropertyInfo_BorderStyle"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:Microsoft.Windows.Themes.ClassicBorderDecorator.BorderStyleProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderStyleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BorderStyleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BorderStyleProperty" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Windows.Themes.ClassicBorderDecorator.BorderStyleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework.Classic</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:Microsoft.Windows.Themes.ClassicBorderDecorator.BorderStyle" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderThickness">
+      <MemberSignature Language="C#" Value="public System.Windows.Thickness BorderThickness { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Thickness BorderThickness" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Windows.Themes.ClassicBorderDecorator.BorderThickness" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework.Classic</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Thickness</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Breite des Rahmens fest.</summary>
+        <value>Die Breite des Rahmens.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_BorderThickness"></a>   
+## <a name="dependency-property-information"></a>Informationen zur Abhängigkeitseigenschaft  
+  
+|||  
+|-|-|  
+|Bezeichnerfeld|<xref:Microsoft.Windows.Themes.ClassicBorderDecorator.BorderThicknessProperty>|  
+|Metadaten-Eigenschaften festgelegt auf.`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderThicknessProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BorderThicknessProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BorderThicknessProperty" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Windows.Themes.ClassicBorderDecorator.BorderThicknessProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework.Classic</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bezeichnet die <see cref="P:Microsoft.Windows.Themes.ClassicBorderDecorator.BorderThickness" />-Abhängigkeitseigenschaft.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClassicBorderBrush">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Brush ClassicBorderBrush { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Media.Brush ClassicBorderBrush" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Windows.Themes.ClassicBorderDecorator.ClassicBorderBrush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework.Classic</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Pinsel ab, die zum Zeichnen des Rahmens ab.</summary>
+        <value>Der Pinsel, der zum Zeichnen des Rahmens verwendet wird.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Pinsel wird verwendet, um feststellen <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> zum Zeichnen des Rahmens gemäß der <xref:Microsoft.Windows.Themes.ClassicBorderDecorator.BorderStyle%2A>. Wenn <xref:Microsoft.Windows.Themes.ClassicBorderDecorator.BorderBrush%2A> nicht festgelegt ist, um <xref:Microsoft.Windows.Themes.ClassicBorderDecorator.ClassicBorderBrush%2A>, flach gezeichnet wird.  
+  
+<a name="xamlAttributeUsage_ClassicBorderBrush"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+ `<`*-Objekteigenschaft*`="{x:Static theme:ClassicBorderDecorator.ClassicBorderBrush}"/>`  
+  
+<a name="xamlValues_ClassicBorderBrush"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *X: Static*  
+ Die [X: Static-Markuperweiterung](~/docs/framework/xaml-services/x-static-markup-extension.md).  
+  
+ *Design*  
+ Eine Xmlns-Präfix-Zuordnung zu den <xref:Microsoft.Windows.Themes> [!INCLUDE[TLA#tla_clr](~/includes/tlasharptla-clr-md.md)] Namespace in einer bestimmten Assembly.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size MeasureOverride (System.Windows.Size availableSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size MeasureOverride(valuetype System.Windows.Size availableSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Windows.Themes.ClassicBorderDecorator.MeasureOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework.Classic</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="availableSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="availableSize">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRender">
+      <MemberSignature Language="C#" Value="protected override void OnRender (System.Windows.Media.DrawingContext drawingContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRender(class System.Windows.Media.DrawingContext drawingContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Windows.Themes.ClassicBorderDecorator.OnRender(System.Windows.Media.DrawingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework.Classic</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="drawingContext" Type="System.Windows.Media.DrawingContext" />
+      </Parameters>
+      <Docs>
+        <param name="drawingContext">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

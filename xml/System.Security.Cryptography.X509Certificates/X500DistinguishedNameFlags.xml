@@ -1,0 +1,322 @@
+<Type Name="X500DistinguishedNameFlags" FullName="System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags">
+  <TypeSignature Language="C#" Value="public enum X500DistinguishedNameFlags" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed X500DistinguishedNameFlags extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gibt die Eigenschaften des X.500-Distinguished Name an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Enumeration wird zusammen mit der <xref:System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags> Klasse an, dass Sonderzeichen in den definierten Namen enthalten.  
+  
+ Mehrere Werte sind sich gegenseitig ausschließende in dieser Enumeration. Verwenden Sie nur einen der folgenden Werte an, um die speziellen Merkmale eines x. 500-distinguished Name zu definieren. Geben Sie z. B. nur eine der UseCommas UseNewLines und UseSemicolons-Werte. Sie würden auch UseT61Encoding oder UseUTF8Encoding angeben.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags.UseCommas> Enumeration.  
+  
+ [!code-cpp[Cryptography.X509Certificates.X500DistinguishedName#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.X509Certificates.X500DistinguishedName/CPP/x500.cpp#1)]
+ [!code-csharp[Cryptography.X509Certificates.X500DistinguishedName#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.X509Certificates.X500DistinguishedName/CS/x500.cs#1)]
+ [!code-vb[Cryptography.X509Certificates.X500DistinguishedName#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.X509Certificates.X500DistinguishedName/VB/x500.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DoNotUsePlusSign">
+      <MemberSignature Language="C#" Value="DoNotUsePlusSign" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags DoNotUsePlusSign = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags.DoNotUsePlusSign" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Distinguished Name verwendet kein Pluszeichen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DoNotUseQuotes">
+      <MemberSignature Language="C#" Value="DoNotUseQuotes" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags DoNotUseQuotes = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags.DoNotUseQuotes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Distinguished Name verwendet keine Anführungszeichen.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ForceUTF8Encoding">
+      <MemberSignature Language="C#" Value="ForceUTF8Encoding" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags ForceUTF8Encoding = int32(16384)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags.ForceUTF8Encoding" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Erzwingt den Distinguished Name, um den spezifischen X.500-Schlüssel als UTF-8-Zeichenfolgen anstelle von druckbaren Unicode-Zeichenfolgen zu codieren. Weitere Informationen und die Liste der betroffenen x. 500-Schlüssel finden Sie in der [X500NameFlags Enumeration](http://msdn.microsoft.com/library/windows/desktop/aa379394.aspx).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Distinguished Name verfügt über keine besonderen Eigenschaften.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Reversed">
+      <MemberSignature Language="C#" Value="Reversed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags Reversed = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags.Reversed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Distinguished Name wird umgekehrt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UseCommas">
+      <MemberSignature Language="C#" Value="UseCommas" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags UseCommas = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags.UseCommas" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Distinguished Name verwendet Kommas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UseNewLines">
+      <MemberSignature Language="C#" Value="UseNewLines" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags UseNewLines = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags.UseNewLines" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Distinguished Name verwendet das Zeichen für eine neue Zeile.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UseSemicolons">
+      <MemberSignature Language="C#" Value="UseSemicolons" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags UseSemicolons = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags.UseSemicolons" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Distinguished Name verwendet Semikolons.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UseT61Encoding">
+      <MemberSignature Language="C#" Value="UseT61Encoding" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags UseT61Encoding = int32(8192)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags.UseT61Encoding" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Distinguished Name verwendet T61-Codierung.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UseUTF8Encoding">
+      <MemberSignature Language="C#" Value="UseUTF8Encoding" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags UseUTF8Encoding = int32(4096)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags.UseUTF8Encoding" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Distinguished Name verwendet die UTF8-Codierung anstelle der Unicode-Zeichencodierung.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

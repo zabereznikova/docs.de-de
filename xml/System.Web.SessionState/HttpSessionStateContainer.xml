@@ -1,0 +1,658 @@
+<Type Name="HttpSessionStateContainer" FullName="System.Web.SessionState.HttpSessionStateContainer">
+  <TypeSignature Language="C#" Value="public class HttpSessionStateContainer : System.Web.SessionState.IHttpSessionState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HttpSessionStateContainer extends System.Object implements class System.Web.SessionState.IHttpSessionState" />
+  <TypeSignature Language="DocId" Value="T:System.Web.SessionState.HttpSessionStateContainer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.SessionState.IHttpSessionState</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Enthält sitzungsstatuswerte sowie Einstellungen auf Sitzungsebene, für die aktuelle Anforderung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET bietet Sitzungsstatus Management und ermöglicht das Speichern von Informationen, die eine eindeutige Browsersitzung für mehrere Anforderungen zugeordnet. Sie können eine Auflistung von Werten, die durch einen Schlüsselnamen oder numerischen Index verwiesen speichern. Zugriff auf Sitzungswerte und Funktionalität kann über die <xref:System.Web.SessionState.HttpSessionState> -Klasse, die über den möglich ist die <xref:System.Web.HttpContext.Session%2A> Eigenschaft des aktuellen <xref:System.Web.HttpContext> oder die <xref:System.Web.UI.Page.Session%2A> Eigenschaft von der <xref:System.Web.UI.Page>. Die <xref:System.Web.SessionState.HttpSessionState> Klasse greift auf Sitzungszustandswerte und Einstellungen auf Sitzungsebene durch Verweisen auf einen Container Sitzungszustands die ist eine Implementierung von der <xref:System.Web.SessionState.IHttpSessionState> -Schnittstelle, die mit Sitzungszustandsdaten aufgefüllt und die hinzugefügtwurde<xref:System.Web.HttpContext>der aktuellen Anforderung vom Sitzungsstatus Modul für die <xref:System.Web.HttpApplication>.  
+  
+ Die <xref:System.Web.SessionState.HttpSessionState> -Klasse ruft die <xref:System.Web.SessionState.HttpSessionStateContainer> Klasse, die die Einstellungen und Werte im Arbeitsspeicher verwaltet.  
+  
+ Die <xref:System.Web.SessionState.HttpSessionStateContainer> Klasse wird von der Implementierung von ASP.NET die <xref:System.Web.SessionState.IHttpSessionState> Schnittstelle. Die <xref:System.Web.SessionState.HttpSessionStateContainer> Klasse sollte nicht von Anwendungscode aufgerufen werden. Wenn Sie ersetzen die <xref:System.Web.SessionState.SessionStateModule> mit einem benutzerdefinierten Sitzungsstatus Modul können Sie der <xref:System.Web.SessionState.HttpSessionStateContainer> Klasse, oder geben Sie Ihre eigene Implementierung der der <xref:System.Web.SessionState.IHttpSessionState> Schnittstelle.  
+  
+   
+  
+## Examples  
+ Ein Beispiel für eine benutzerdefinierte Sitzungsstatus Modul, verwendet der <xref:System.Web.SessionState.HttpSessionStateContainer> als Container für die aktuelle Anforderung Sitzungsstatus Klasse, finden Sie unter der <xref:System.Web.SessionState.SessionStateUtility> Übersicht über die Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpSessionStateContainer (string id, System.Web.SessionState.ISessionStateItemCollection sessionItems, System.Web.HttpStaticObjectsCollection staticObjects, int timeout, bool newSession, System.Web.HttpCookieMode cookieMode, System.Web.SessionState.SessionStateMode mode, bool isReadonly);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string id, class System.Web.SessionState.ISessionStateItemCollection sessionItems, class System.Web.HttpStaticObjectsCollection staticObjects, int32 timeout, bool newSession, valuetype System.Web.HttpCookieMode cookieMode, valuetype System.Web.SessionState.SessionStateMode mode, bool isReadonly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.HttpSessionStateContainer.#ctor(System.String,System.Web.SessionState.ISessionStateItemCollection,System.Web.HttpStaticObjectsCollection,System.Int32,System.Boolean,System.Web.HttpCookieMode,System.Web.SessionState.SessionStateMode,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="sessionItems" Type="System.Web.SessionState.ISessionStateItemCollection" />
+        <Parameter Name="staticObjects" Type="System.Web.HttpStaticObjectsCollection" />
+        <Parameter Name="timeout" Type="System.Int32" />
+        <Parameter Name="newSession" Type="System.Boolean" />
+        <Parameter Name="cookieMode" Type="System.Web.HttpCookieMode" />
+        <Parameter Name="mode" Type="System.Web.SessionState.SessionStateMode" />
+        <Parameter Name="isReadonly" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="id">Eine Sitzungs-ID für die neue Sitzung. Wenn <see langword="null" />, wird eine <see cref="T:System.ArgumentException" /> ausgelöst wird.</param>
+        <param name="sessionItems">Eine <see cref="T:System.Web.SessionState.ISessionStateItemCollection" /> , die die Sitzungswerte für die neue Sitzungsstatusanbieter enthält.</param>
+        <param name="staticObjects">Ein <see cref="T:System.Web.HttpStaticObjectsCollection" /> , angibt, dass die Objekte deklariert, indem <see langword="&lt;object Runat=&quot;Server&quot; Scope=&quot;Session&quot;/&gt;" /> Tags in der Datei "Global.asax" der ASP.NET-Anwendung.</param>
+        <param name="timeout">Die Zeitspanne, in Minuten zwischen den Anforderungen, bevor der Sitzungsstatusanbieter die Sitzung beendet wird.</param>
+        <param name="newSession">
+          <see langword="true" />Geben die Sitzung mit der aktuellen Anforderung erstellt wurde; andernfalls <see langword="false" />.</param>
+        <param name="cookieMode">Die <see cref="P:System.Web.SessionState.HttpSessionStateContainer.CookieMode" /> für die neue Sitzungsstatusanbieter.</param>
+        <param name="mode">Eines der <see cref="T:System.Web.SessionState.SessionStateMode" /> Werte, der den aktuellen Sitzungszustandsmodus angibt.</param>
+        <param name="isReadonly">
+          <see langword="true" />um anzugeben, die Sitzung schreibgeschützt ist; andernfalls <see langword="false" />.</param>
+        <summary>Erstellt ein neues <see cref="T:System.Web.SessionState.HttpSessionStateContainer" /> -Objekt und initialisiert sie mit der angegebenen Einstellungen und Werte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel zeigt die <xref:System.Web.HttpApplication.AcquireRequestState> -Ereignishandler für ein benutzerdefiniertes Sitzungszustands-Modul, das ein neues füllt <xref:System.Web.SessionState.HttpSessionStateContainer> mit neuen oder vorhandenen Sitzungsinformationen-Objekt und fügt es der <xref:System.Web.HttpContext> des die aktuelle Anforderung mit der <xref:System.Web.SessionState.SessionStateUtility.AddHttpSessionStateToContext%2A>Methode. Ein vollständiges Codebeispiel für ein benutzerdefiniertes Sitzungsstatus Modul, finden Sie unter der <xref:System.Web.SessionState.SessionStateUtility> -Klassenübersicht.  
+  
+ [!code-csharp[System.Web.SessionState.SessionStateUtility#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SessionState.SessionStateUtility/CS/mysessionstatemodule.cs#4)]
+ [!code-vb[System.Web.SessionState.SessionStateUtility#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SessionState.SessionStateUtility/VB/mysessionstatemodule.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="id" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Abandon">
+      <MemberSignature Language="C#" Value="public void Abandon ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Abandon() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.HttpSessionStateContainer.Abandon" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Markiert die aktuelle Sitzung als abgebrochen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.SessionState.HttpSessionStateContainer.Abandon%2A> Methode der <xref:System.Web.SessionState.HttpSessionStateContainer> markiert die <xref:System.Web.SessionState.HttpSessionStateContainer.IsAbandoned%2A> Eigenschaft als `true`. Einer benutzerdefinierten-Sitzung-Modul kann dann Abfragen, die <xref:System.Web.SessionState.HttpSessionStateContainer.IsAbandoned%2A> Eigenschaft und die Sitzungsinformationen entfernen, wenn die <xref:System.Web.SessionState.HttpSessionStateContainer.IsAbandoned%2A> Eigenschaft ist `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string name, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(string name, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.HttpSessionStateContainer.Add(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Elements, das der Sitzungsstatusauflistung hinzugefügt werden soll.</param>
+        <param name="value">Der Wert des Elements, das der Sitzungsstatusauflistung hinzugefügt werden soll.</param>
+        <summary>Der sitzungsstatusauflistung hinzugefügt ein neues Element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die `name` Parameter verweist auf ein vorhandenes Sitzungsstatus Element, das vorhandene Element wird überschrieben, mit dem angegebenen `value`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.HttpSessionStateContainer.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Entfernt alle Werte und Schlüssel aus der sitzungszustandsauflistung.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CodePage">
+      <MemberSignature Language="C#" Value="public int CodePage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CodePage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.HttpSessionStateContainer.CodePage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Zeichensatzbezeichner für die aktuelle Sitzung ab oder legt diesen fest.</summary>
+        <value>Der Zeichensatzbezeichner für die aktuelle Sitzung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Zeichensatz (Codepage) Dient zum Interpretieren von Mehrbyte-Zeichendaten, Bestimmen der Zeichenwert, und daher die Sortierreihenfolge. Codepage Einstellungen gelten nur für Multibytezeichendaten enthalten, nicht mit Unicode-Daten.  
+  
+ Dies <xref:System.Web.SessionState.HttpSessionStateContainer.CodePage%2A> Eigenschaft wird bereitgestellt, um die Kompatibilität mit früheren Versionen von ASP. Wenn Sie nicht benötigen, um die Abwärtskompatibilität mit ASP-Seiten zu gewährleisten, verwenden Sie die <xref:System.Web.HttpResponse.ContentEncoding%2A> Eigenschaft stattdessen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CookieMode">
+      <MemberSignature Language="C#" Value="public System.Web.HttpCookieMode CookieMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.HttpCookieMode CookieMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.HttpSessionStateContainer.CookieMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpCookieMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert ab, der angibt, ob die Anwendung für Sitzungen ohne Cookies konfiguriert ist.</summary>
+        <value>Eines der <see cref="T:System.Web.HttpCookieMode" /> Werte, der angibt, ob die Anwendung für Sitzungen ohne Cookies konfiguriert ist. Die Standardeinstellung ist <see cref="F:System.Web.HttpCookieMode.UseCookies" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn <xref:System.Web.SessionState.HttpSessionState.IsCookieless%2A> ist `true`, die <xref:System.Web.SessionState.HttpSessionState.CookieMode%2A> -Eigenschaft gibt <xref:System.Web.HttpCookieMode.UseUri>ist, andernfalls der <xref:System.Web.SessionState.HttpSessionState.CookieMode%2A> -Eigenschaft gibt <xref:System.Web.HttpCookieMode.UseCookies>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.HttpSessionStateContainer.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Die <see cref="T:System.Array" /> , die die Sitzungswerte empfängt.</param>
+        <param name="index">Der nullbasierte Index im <c>Array</c> aus dem kopiert wird.</param>
+        <summary>Kopiert die Auflistung der Sitzungsstatuswerte in ein eindimensionales Array, wobei am angegebenen Index im Array begonnen wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.HttpSessionStateContainer.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Anzahl der Elemente in der Sitzungsstatusauflistung ab.</summary>
+        <value>Die Anzahl der Elemente in der Auflistung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.HttpSessionStateContainer.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, mit dem alle Namen der Sitzungszustandsvariablen in der aktuellen Sitzung gelesen werden können.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" /> , der die Variablennamen in der sitzungsstatusauflistung durchlaufen kann.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAbandoned">
+      <MemberSignature Language="C#" Value="public bool IsAbandoned { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAbandoned" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.HttpSessionStateContainer.IsAbandoned" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die aktuelle Sitzung abgebrochen wurde.</summary>
+        <value>
+          <see langword="true" />Wenn die aktuelle Sitzung wurde abgebrochen wurde; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCookieless">
+      <MemberSignature Language="C#" Value="public bool IsCookieless { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCookieless" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.HttpSessionStateContainer.IsCookieless" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Sitzungs-ID in die URL eingebettet ist oder in einem HTTP-Cookie gespeichert.</summary>
+        <value>
+          <see langword="true" />Wenn die Sitzung in die URL eingebettet ist andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine Erläuterung der Sitzungen ohne Cookies, finden Sie unter der <xref:System.Web.SessionState.HttpSessionState.IsCookieless%2A> Eigenschaft von der <xref:System.Web.SessionState.HttpSessionState> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNewSession">
+      <MemberSignature Language="C#" Value="public bool IsNewSession { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNewSession" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.HttpSessionStateContainer.IsNewSession" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Sitzung mit der aktuellen Anforderung erstellt wurde.</summary>
+        <value>
+          <see langword="true" />Wenn die Sitzung mit der aktuellen Anforderung erstellt wurde. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.HttpSessionStateContainer.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die Sitzung schreibgeschützt ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Sitzung schreibgeschützt ist. andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.HttpSessionStateContainer.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Zugriff auf die Auflistung von Werten des Sitzungszustands synchronisiert (threadsicher).</summary>
+        <value>Immer <see langword="false" />, da threadsichere <see cref="T:System.Web.SessionState.HttpSessionStateContainer" /> Objekte werden nicht unterstützt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anwendungscode verwendet diese Eigenschaft normalerweise nicht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.HttpSessionStateContainer.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der numerische Index des Sitzungswerts.</param>
+        <summary>Ruft ab oder legt einen Sitzungswert über einen numerischen Index.</summary>
+        <value>Am angegebenen Index gespeicherte Sitzungszustandswert.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[string name] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.HttpSessionStateContainer.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Schlüsselname des Sitzungswerts.</param>
+        <summary>Ruft ab oder legt einen Sitzungswert anhand des Namens.</summary>
+        <value>Der sitzungsstatuswert mit dem angegebenen Namen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.NameObjectCollectionBase.KeysCollection Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.NameObjectCollectionBase/KeysCollection Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.HttpSessionStateContainer.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameObjectCollectionBase+KeysCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung der Schlüssel für alle Werte in der sitzungsstatusauflistung gespeichert.</summary>
+        <value>Die <see cref="T:System.Collections.Specialized.NameObjectCollectionBase.KeysCollection" /> , enthält die Sitzungsschlüssel.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LCID">
+      <MemberSignature Language="C#" Value="public int LCID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LCID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.HttpSessionStateContainer.LCID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Gebietsschemabezeichner (Locale Identifier, LCID) der aktuellen Sitzung ab oder legt ihn fest.</summary>
+        <value>Ein <see cref="T:System.Globalization.CultureInfo" /> -Instanz, die Kultur der aktuellen Sitzung angibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.SessionState.HttpSessionStateContainer.LCID%2A> Eigenschaft wird bereitgestellt, um die Kompatibilität mit früheren Versionen von ASP. Wenn Sie nicht benötigen, um die Abwärtskompatibilität mit ASP-Seiten zu gewährleisten, verwenden Sie die <xref:System.Globalization.CultureInfo.LCID%2A> Eigenschaft stattdessen.  
+  
+ ASP.NET nicht die Gebietsschema-ID im Sitzungszustand gespeichert. Die <xref:System.Web.SessionState.HttpSessionStateContainer.LCID%2A> Eigenschaft greift auf die <xref:System.Globalization.CultureInfo.LCID%2A> Eigenschaft zum Abrufen und Festlegen des Bezeichners.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public System.Web.SessionState.SessionStateMode Mode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.SessionState.SessionStateMode Mode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.HttpSessionStateContainer.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SessionState.SessionStateMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den aktuellen Sitzungszustandsmodus ab.</summary>
+        <value>Einer der <see cref="T:System.Web.SessionState.SessionStateMode" />-Werte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Informationen zum Konfigurieren Ihres Servers für <xref:System.Web.SessionState.SessionStateMode.StateServer> oder <xref:System.Web.SessionState.SessionStateMode.SQLServer> sitzungszustandspeicherung-Modus finden Sie unter [ASP.NET Session State Overview](http://msdn.microsoft.com/library/6d60d381-6521-4e1d-9089-da6464f2a9bc).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.HttpSessionStateContainer.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des Elements, das aus der Sitzungszustandsauflistung gelöscht werden soll.</param>
+        <summary>Löscht ein Element aus der Sitzungszustandsauflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Sitzungsstatus Auflistung ein Element mit dem angegebenen keinen enthält `name`, die Auflistung unverändert ist. Es werden keine Ausnahmen ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAll">
+      <MemberSignature Language="C#" Value="public void RemoveAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.HttpSessionStateContainer.RemoveAll" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Löscht alle Sitzungszustandswerte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.SessionState.HttpSessionStateContainer.RemoveAll%2A>führt die gleiche Funktion wie <xref:System.Web.SessionState.HttpSessionStateContainer.Clear%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.HttpSessionStateContainer.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der Index des aus der Sitzungsstatusauflistung zu entfernenden Elements.</param>
+        <summary>Löscht ein Element am angegebenen Index aus der sitzungszustandsauflistung.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ist kleiner als Null.  
+  
+ \- oder –  
+  
+ <paramref name="index" /> ist größer oder gleich <see cref="P:System.Web.SessionState.HttpSessionStateContainer.Count" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionID">
+      <MemberSignature Language="C#" Value="public string SessionID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SessionID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.HttpSessionStateContainer.SessionID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den eindeutigen Bezeichner für die Sitzung ab.</summary>
+        <value>Der eindeutige Sitzungsbezeichner.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StaticObjects">
+      <MemberSignature Language="C#" Value="public System.Web.HttpStaticObjectsCollection StaticObjects { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpStaticObjectsCollection StaticObjects" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.HttpSessionStateContainer.StaticObjects" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpStaticObjectsCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung von Objekten, die deklariert, indem <see langword="&lt;object Runat=&quot;Server&quot; Scope=&quot;Session&quot;/&gt;" /> Tags in der Datei "Global.asax" der ASP.NET-Anwendung.</summary>
+        <value>Ein <see cref="T:System.Web.HttpStaticObjectsCollection" /> mit Objekten, die in der Datei "Global.asax" deklariert werden.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn ein Objekt auf einer Seite Serialisierung nicht unterstützt und <xref:System.Web.SessionState.HttpSessionStateContainer.Mode%2A> ist die Out-of-Process (<xref:System.Web.SessionState.SessionStateMode.SQLServer> oder <xref:System.Web.SessionState.SessionStateMode.StateServer>), das Objekt nicht erstellt werden und wird nicht zu dieser Auflistung hinzugefügt werden.  
+  
+ <xref:System.Web.SessionState.HttpSessionStateContainer.StaticObjects%2A> wird bereitgestellt, um die Kompatibilität mit früheren Versionen von ASP zu gewährleisten.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.HttpSessionStateContainer.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt ab, mit dem der Zugriff auf die Auflistung von Sitzungszustandswerten synchronisiert werden kann.</summary>
+        <value>Ein Objekt, mit dem der Zugriff auf die Auflistung synchronisiert werden kann.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Timeout">
+      <MemberSignature Language="C#" Value="public int Timeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Timeout" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.HttpSessionStateContainer.Timeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt und definiert die Zeitspanne in Minuten zwischen den Anforderungen, bevor der Sitzungsstatusanbieter die Sitzung beendet wird.</summary>
+        <value>Der Timeoutzeitraum in Minuten.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Es wurde versucht, Festlegen der <see cref="P:System.Web.SessionState.HttpSessionStateContainer.Timeout" /> Wert in eine ganze Zahl kleiner als 1.  
+  
+ \- oder –  
+  
+ Es wurde versucht, Festlegen der <see cref="P:System.Web.SessionState.HttpSessionStateContainer.Timeout" /> Wert in einen ganzzahligen Wert größer als die maximal zulässig, wenn <see cref="P:System.Web.SessionState.HttpSessionState.Mode" /> festgelegt ist, um <see cref="F:System.Web.SessionState.SessionStateMode.InProc" /> oder <see cref="F:System.Web.SessionState.SessionStateMode.StateServer" />. Die maximal zulässige Anzahl ist 525.600 (ein Jahr).</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

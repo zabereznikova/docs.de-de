@@ -1,0 +1,52 @@
+<Type Name="ResolveEventHandler" FullName="System.ResolveEventHandler">
+  <TypeSignature Language="C#" Value="public delegate System.Reflection.Assembly ResolveEventHandler(object sender, ResolveEventArgs args);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed ResolveEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.ResolveEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="args" Type="System.ResolveEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Reflection.Assembly</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Die Quelle des Ereignisses.</param>
+    <param name="args">Die Ereignisdaten.</param>
+    <summary>Stellt eine Methode, behandelt der <see cref="E:System.AppDomain.TypeResolve" />, <see cref="E:System.AppDomain.ResourceResolve" />, oder <see cref="E:System.AppDomain.AssemblyResolve" /> -Ereignis für ein <see cref="T:System.AppDomain" />.</summary>
+    <returns>Die Assembly, die den Typ, Assembly oder Ressource löst; oder <see langword="null" /> Wenn die Assembly aufgelöst werden kann.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Klassenladeprogramm der Common Language Runtime einen Verweis auf eine Assembly, Typ oder eine Ressource nicht auflösen kann, werden die entsprechenden Ereignisse ausgelöst, um dem Rückruf zu ermöglichen, der Common Language Runtime mitteilen, welche Assembly ist in der Assembly verwiesen wird, den Typ oder die Ressource befindet. Es liegt in der Verantwortung des der <xref:System.ResolveEventHandler> die Assembly zurückgegeben, der den Typ, Assembly oder Ressource aufgelöst wird, oder null zurück, wenn die Assembly nicht erkannt wird. Weitere Informationen finden Sie unter [auflösen beim Laden von Assemblys](~/docs/framework/app-domains/resolve-assembly-loads.md) und <xref:System.AppDomain.ResourceResolve?displayProperty=nameWithType>, <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>, und <xref:System.AppDomain.ReflectionOnlyAssemblyResolve?displayProperty=nameWithType> Ereignisse.  
+  
+> [!IMPORTANT]
+>  Beginnend mit der [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)]die <xref:System.ResolveEventHandler?displayProperty=nameWithType> Ereignis wird für alle Assemblys, einschließlich Ressourcenassemblys. In früheren Versionen wurde das Ereignis nicht für Ressourcenassemblys ausgelöst. Wenn das Betriebssystem lokalisiert wird, der Handler kann mehrfach aufgerufen werden: einmal für jede Kultur in der Kette fallback.  
+  
+ Alle abgeleiteten Klassen von <xref:System.Delegate> und <xref:System.MulticastDelegate> verfügt über einen Konstruktor und eine `Invoke` Methode. Finden Sie im C++-Codebeispiel in der Beschreibung für die <xref:System.Delegate> Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

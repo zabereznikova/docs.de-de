@@ -1,0 +1,45 @@
+<Type Name="ISecuritySession" FullName="System.ServiceModel.Security.ISecuritySession">
+  <TypeSignature Language="C#" Value="public interface ISecuritySession : System.ServiceModel.Channels.ISession" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISecuritySession implements class System.ServiceModel.Channels.ISession" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.ISecuritySession" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Channels.ISession</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Stellt eine Art von <see langword="ISession" /> dar, die die Anforderung erzwingt, dass alle Nachrichten in der Sitzung zwischen den Parteien ausgetauscht werden müssen, die die Sitzung eingerichtet haben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.Security.ISecuritySession>-Instanzen werden von Kanälen für die Nachrichtensicherheit (die WS-SecureConversation verwenden) und von sicheren TC-Transportkanälen bereitgestellt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="RemoteIdentity">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.EndpointIdentity RemoteIdentity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.EndpointIdentity RemoteIdentity" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.ISecuritySession.RemoteIdentity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EndpointIdentity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Identität des Remoteprinzipals ab.</summary>
+        <value><see cref="T:System.ServiceModel.EndpointIdentity" /> des Remoteprinzipals.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

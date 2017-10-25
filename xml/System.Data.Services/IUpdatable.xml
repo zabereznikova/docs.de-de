@@ -1,0 +1,348 @@
+<Type Name="IUpdatable" FullName="System.Data.Services.IUpdatable">
+  <TypeSignature Language="C#" Value="public interface IUpdatable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IUpdatable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.IUpdatable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Eine Schnittstelle, die von der HTTP-POST-Methode zum Einfügen oder Aktualisieren einer Ressource verwendet wird.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Services.IUpdatable> Schnittstelle ist unabhängige Ressource. Die Methoden, die Objekten, die Ressourcen darstellen zurückgeben, können nichts zurück.  
+  
+ Das zurückgegebene Objekt ist ein nicht transparenter-Objekt, das die Ressource darstellt. Um den Verweis zum Lesen oder aktualisieren einen Wert verwenden, nicht transparente dasselbe Objekt übergeben wird, zurück an <xref:System.Data.Services.IUpdatable>.  
+  
+ Implementierung von <xref:System.Data.Services.IUpdatable> muss die Zuordnung zwischen dem nicht transparenten Objekt und das Objekt dar, nachverfolgen. Wenn die Ressource serialisiert wird und eine common Language Runtime (CLR)-Instanz des richtigen Typs erforderlich ist, die ResolveResource-Methode auf <xref:System.Data.Services.IUpdatable> mit nicht transparenten Objekt aufgerufen wird.  
+  
+ Um das Objekt zu serialisieren, rufen Sie die <xref:System.Data.Services.IUpdatable.ResolveResource%2A> Methode auf <xref:System.Data.Services.IUpdatable>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddReferenceToCollection">
+      <MemberSignature Language="C#" Value="public void AddReferenceToCollection (object targetResource, string propertyName, object resourceToBeAdded);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddReferenceToCollection(object targetResource, string propertyName, object resourceToBeAdded) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.IUpdatable.AddReferenceToCollection(System.Object,System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetResource" Type="System.Object" />
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="resourceToBeAdded" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="targetResource">Zielobjekt, das die Eigenschaft definiert.</param>
+        <param name="propertyName">Der Name der Auflistungseigenschaft, die die Ressource hinzugefügt werden soll...</param>
+        <param name="resourceToBeAdded">Das nicht transparente Objekt, das die Ressource hinzugefügt werden darstellt.</param>
+        <summary>Fügt der Auflistung den angegebenen Wert hinzu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearChanges">
+      <MemberSignature Language="C#" Value="public void ClearChanges ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ClearChanges() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.IUpdatable.ClearChanges" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bricht eine Änderung an den Daten ab.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateResource">
+      <MemberSignature Language="C#" Value="public object CreateResource (string containerName, string fullTypeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object CreateResource(string containerName, string fullTypeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.IUpdatable.CreateResource(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="containerName" Type="System.String" />
+        <Parameter Name="fullTypeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="containerName">Der Name der Entität festgelegt, zu dem die Ressource gehört.</param>
+        <param name="fullTypeName">Der vollständige Namespace qualifizierter Typname der Ressource.</param>
+        <summary>Erstellt die Ressource des angegebenen Typ und dem angegebenen Container gehört.</summary>
+        <returns>Das Objekt, eine Ressource des angegebenen Typs darstellt und den angegebenen Container gehört.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Services.IUpdatable.CreateResource%2A>wird aufgerufen, um eine neue Ressource einfügen durch die HTTP-POST-Methode. Der erste Parameter verweist auf den Container, dem die Ressource angehört und der zweite Parameter ist der Namespace qualifizierten Namen des Ressourcentyps, der erstellt werden muss.  
+  
+ Der zweite Parameter ist besonders hilfreich, wenn Vererbung verwendet. Der Rückgabetyp muss nicht die tatsächliche CLR-Instanz der Ressource sein. Es kann, z. B. ein Cookie sein, die die Implementierung erforderlich sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteResource">
+      <MemberSignature Language="C#" Value="public void DeleteResource (object targetResource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DeleteResource(object targetResource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.IUpdatable.DeleteResource(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetResource" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="targetResource">Die Ressource gelöscht werden soll.</param>
+        <summary>Löscht die angegebene Ressource.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `targetResource` ist das nicht transparente Objekt zurückgegebene <xref:System.Data.Services.IUpdatable.GetResource%2A> oder <xref:System.Data.Services.IUpdatable.CreateResource%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResource">
+      <MemberSignature Language="C#" Value="public object GetResource (System.Linq.IQueryable query, string fullTypeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetResource(class System.Linq.IQueryable query, string fullTypeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.IUpdatable.GetResource(System.Linq.IQueryable,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="query" Type="System.Linq.IQueryable" />
+        <Parameter Name="fullTypeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="query">Language-integrated Query (LINQ) verweist auf eine bestimmte Ressource.</param>
+        <param name="fullTypeName">Der vollqualifizierte Typname der Ressource.</param>
+        <summary>Ruft die Ressource des angegebenen Typs durch eine Abfrage und einen Typnamen identifiziert.</summary>
+        <returns>Ein nicht transparenter-Objekt, das eine Ressource des angegebenen Typs, der angegebenen Abfrage referenzierten darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public object GetValue (object targetResource, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetValue(object targetResource, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.IUpdatable.GetValue(System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetResource" Type="System.Object" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetResource">Ein nicht transparenter-Objekt, das eine Ressource darstellt.</param>
+        <param name="propertyName">Der Name der Eigenschaft, deren Wert abgerufen werden soll.</param>
+        <summary>Ruft den Wert der angegebenen Eigenschaft für das Zielobjekt ab.</summary>
+        <returns>Der Wert des Objekts.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird für skalare Eigenschaften oder komplexe Eigenschaften, die aufgerufen werden. Für eine skalare Eigenschaft muss das zurückgegebene Objekt der tatsächliche Wert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveReferenceFromCollection">
+      <MemberSignature Language="C#" Value="public void RemoveReferenceFromCollection (object targetResource, string propertyName, object resourceToBeRemoved);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveReferenceFromCollection(object targetResource, string propertyName, object resourceToBeRemoved) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.IUpdatable.RemoveReferenceFromCollection(System.Object,System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetResource" Type="System.Object" />
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="resourceToBeRemoved" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="targetResource">Das Zielobjekt, das die Eigenschaft definiert.</param>
+        <param name="propertyName">Der Name der Eigenschaft, deren Wert aktualisiert werden muss.</param>
+        <param name="resourceToBeRemoved">Der Wert der Eigenschaft, der entfernt werden muss.</param>
+        <summary>Entfernt den angegebenen Wert aus der Auflistung.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entfernt die angegebene Ressource aus der Auflistung, die von einer Navigationseigenschaft auf das Zielobjekt identifiziert. Dieser Vorgang löscht die Beziehung zwischen den beiden Ressourcenobjekten-Beziehung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetResource">
+      <MemberSignature Language="C#" Value="public object ResetResource (object resource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object ResetResource(object resource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.IUpdatable.ResetResource(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resource" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="resource">Die Ressource aktualisiert werden.</param>
+        <summary>Setzt die durch den Parameter identifizierte Ressource <paramref name="resource" /> auf seinen Standardwert.</summary>
+        <returns>Die Ressource mit dem Wert, der auf den Standardwert zurückgesetzt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveResource">
+      <MemberSignature Language="C#" Value="public object ResolveResource (object resource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object ResolveResource(object resource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.IUpdatable.ResolveResource(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resource" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="resource">Das Objekt, das die Ressource, deren Instanz abgerufen werden muss, darstellt.</param>
+        <summary>Gibt die Instanz der Ressource, die vom Objekt angegebene Ressource dargestellt wird.</summary>
+        <returns>Gibt die Instanz der Ressource, die vom Objekt angegebene Ressource dargestellt wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode wird aufgerufen, um die nicht transparenten von zurückgegebene Objekt zu beheben der <xref:System.Data.Services.IUpdatable.CreateResource%2A> oder <xref:System.Data.Services.IUpdatable.GetResource%2A> API in der CLR-Instanz. Dies wird normalerweise aufgerufen, nachdem <xref:System.Data.Services.IUpdatable.SaveChanges%2A> zum Serialisieren der Ressource für die POST-Methoden.  
+  
+ Diese Methode wird auch aufgerufen, wenn Update-Interceptors aufgerufen, mit der common Language Runtime (CLR) Ressourceninstanzen vorhanden sind. Kann verwendet werden, wenn der Anbieter optimistische Parallelität unterstützt und der Ressourcentyp wurde durch definierten parallelitätstoken <xref:System.Data.Services.ETagAttribute> in einem CLR-basierten Anbieter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveChanges">
+      <MemberSignature Language="C#" Value="public void SaveChanges ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SaveChanges() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.IUpdatable.SaveChanges" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Speichert alle Änderungen, die mit vorgenommen wurden die <see cref="T:System.Data.Services.IUpdatable" /> APIs.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Data.Services.IUpdatable> Implementierung muss alle Änderungen erst überwacht <xref:System.Data.Services.IUpdatable.SaveChanges%2A> wird aufgerufen, und klicken Sie dann speichern Sie alle geändert, wenn <xref:System.Data.Services.IUpdatable.SaveChanges%2A> aufgerufen wird. Die <xref:System.Data.Services.IUpdatable> -Implementierung wird erwartet, um alle Änderungen zu speichern oder um alle Änderungen zusammen ablehnen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetReference">
+      <MemberSignature Language="C#" Value="public void SetReference (object targetResource, string propertyName, object propertyValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetReference(object targetResource, string propertyName, object propertyValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.IUpdatable.SetReference(System.Object,System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetResource" Type="System.Object" />
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="propertyValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="targetResource">Das Zielobjekt, das die Eigenschaft definiert.</param>
+        <param name="propertyName">Der Name der Eigenschaft, deren Wert aktualisiert werden muss.</param>
+        <param name="propertyValue">Der Eigenschaftswert aktualisiert werden.</param>
+        <summary>Legt den Wert der Eigenschaft angegebenen Verweis auf das Zielobjekt fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public void SetValue (object targetResource, string propertyName, object propertyValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetValue(object targetResource, string propertyName, object propertyValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.IUpdatable.SetValue(System.Object,System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetResource" Type="System.Object" />
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="propertyValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="targetResource">Das Zielobjekt, das die Eigenschaft definiert.</param>
+        <param name="propertyName">Der Name der Eigenschaft, deren Wert aktualisiert werden muss.</param>
+        <param name="propertyValue">Der Eigenschaftswert für das Update.</param>
+        <summary>Legt den Wert der Eigenschaft mit dem angegebenen Namen für die Zielressource an den angegebenen Eigenschaftswert fest.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

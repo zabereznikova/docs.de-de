@@ -1,0 +1,6 @@
+<Namespace Name="System.AddIn.Pipeline">
+  <Docs>
+    <summary>Die <see cref="N:System.AddIn.Pipeline" /> Namespace bietet Klassen zum Erstellen der Kommunikationspipeline zwischen einer hostanwendung und einem Add-in.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

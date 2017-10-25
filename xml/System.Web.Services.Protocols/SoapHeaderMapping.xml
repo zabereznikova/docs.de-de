@@ -1,0 +1,117 @@
+<Type Name="SoapHeaderMapping" FullName="System.Web.Services.Protocols.SoapHeaderMapping">
+  <TypeSignature Language="C#" Value="public sealed class SoapHeaderMapping" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SoapHeaderMapping extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.SoapHeaderMapping" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Die <see cref="T:System.Web.Services.Protocols.SoapHeaderMapping" /> Klasse stellt eine SOAP-Header-Zuordnung.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Custom">
+      <MemberSignature Language="C#" Value="public bool Custom { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Custom" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapHeaderMapping.Custom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Boolean" /> Wert, der angibt, ob die SOAP-Header-Zuordnung benutzerdefinierte definiert ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Zuordnung der SOAP-Header benutzerdefiniertes ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Direction">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Protocols.SoapHeaderDirection Direction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Services.Protocols.SoapHeaderDirection Direction" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapHeaderMapping.Direction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.SoapHeaderDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Web.Services.Protocols.SoapHeaderDirection" /> Wert, der die Richtung der SOAP-Header Zuordnung angibt.</summary>
+        <value>Ein <see cref="T:System.Web.Services.Protocols.SoapHeaderDirection" /> Wert, der die Richtung der SOAP-Header Zuordnung angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderType">
+      <MemberSignature Language="C#" Value="public Type HeaderType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type HeaderType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapHeaderMapping.HeaderType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Type" /> , die den Typ der SOAP-Header Zuordnung darstellt.</summary>
+        <value>Ein <see cref="T:System.Type" /> , der den Typ der SOAP-Header Zuordnung darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberInfo">
+      <MemberSignature Language="C#" Value="public System.Reflection.MemberInfo MemberInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MemberInfo MemberInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapHeaderMapping.MemberInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MemberInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Reflection.MemberInfo" /> die SOAP-Header-Zuordnung zugeordnet.</summary>
+        <value>Die <see cref="T:System.Reflection.MemberInfo" /> die SOAP-Header-Zuordnung zugeordnet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Repeats">
+      <MemberSignature Language="C#" Value="public bool Repeats { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Repeats" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapHeaderMapping.Repeats" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Boolean" /> Wert, der angibt, ob die SOAP-Header-Zuordnung wird wiederholt.</summary>
+        <value>
+          <see langword="true" />Wenn die Zuordnung der SOAP-Header wiederholt; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

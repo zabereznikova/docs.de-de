@@ -1,0 +1,1812 @@
+<Type Name="ControlPaint" FullName="System.Windows.Forms.ControlPaint">
+  <TypeSignature Language="C#" Value="public sealed class ControlPaint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ControlPaint extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ControlPaint" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Methoden zum Zeichnen des allgemeinen Windows-Steuerelemente und deren Elemente verwendet wird. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Methoden in der <xref:System.Windows.Forms.ControlPaint> Klasse ermöglichen es Ihnen, eigene Steuerelemente oder Elemente von Steuerelementen zu zeichnen. Sie können das Zeichnen von eigene Steuerelemente steuern, wenn die <xref:System.Windows.Forms.ControlStyles.UserPaint> Bit ist gesetzt, um `true` für das Steuerelement. Sie können abrufen oder Festlegen von Stilbits durch Aufrufen der <xref:System.Windows.Forms.Control.GetStyle%2A> oder <xref:System.Windows.Forms.Control.SetStyle%2A> Methoden. Sie können mehrere Stilbits für jedes Steuerelement festlegen. Die <xref:System.Windows.Forms.ControlStyles> Enumerationsmember mit bitweise Operationen kombiniert werden können.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird mithilfe eines der <xref:System.Windows.Forms.ControlPaint> Konstruktoren zum Zeichnen einer flachen <xref:System.Windows.Forms.Button> Steuerelement.  
+  
+ [!code-cpp[ButtonState#2](~/samples/snippets/cpp/VS_Snippets_Winforms/ButtonState/CPP/buttonstate1.cpp#2)]
+ [!code-csharp[ButtonState#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ButtonState/CS/buttonstate1.cs#2)]
+ [!code-vb[ButtonState#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ButtonState/VB/buttonstate1.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ContrastControlDark">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Color ContrastControlDark { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Drawing.Color ContrastControlDark" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ControlPaint.ContrastControlDark" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Farbe, die als verwendet die <see cref="P:System.Drawing.SystemColors.ControlDark" /> Farbe.</summary>
+        <value>Die <see cref="T:System.Drawing.Color" /> als verwendet die <see cref="P:System.Drawing.SystemColors.ControlDark" /> Farbe.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Benutzer aktiviert hat die <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> Modus, diese Eigenschaft wird festgelegt, um <xref:System.Drawing.SystemColors.WindowFrame%2A?displayProperty=nameWithType>ist, andernfalls wird festgelegt <xref:System.Drawing.SystemColors.ControlDark%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHBitmap16Bit">
+      <MemberSignature Language="C#" Value="public static IntPtr CreateHBitmap16Bit (System.Drawing.Bitmap bitmap, System.Drawing.Color background);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig native int CreateHBitmap16Bit(class System.Drawing.Bitmap bitmap, valuetype System.Drawing.Color background) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.CreateHBitmap16Bit(System.Drawing.Bitmap,System.Drawing.Color)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bitmap" Type="System.Drawing.Bitmap" />
+        <Parameter Name="background" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="bitmap">Die zu erstellende <see cref="T:System.Drawing.Bitmap" />.</param>
+        <param name="background">Die <see cref="T:System.Drawing.Color" /> des Hintergrunds.</param>
+        <summary>Erstellt eine 16-Bit-Farben-Bitmap.</summary>
+        <returns>Ein <see cref="T:System.IntPtr" /> , der das Handle für die Bitmap darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHBitmapColorMask">
+      <MemberSignature Language="C#" Value="public static IntPtr CreateHBitmapColorMask (System.Drawing.Bitmap bitmap, IntPtr monochromeMask);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig native int CreateHBitmapColorMask(class System.Drawing.Bitmap bitmap, native int monochromeMask) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.CreateHBitmapColorMask(System.Drawing.Bitmap,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bitmap" Type="System.Drawing.Bitmap" />
+        <Parameter Name="monochromeMask" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="bitmap">Die zu erstellende <see cref="T:System.Drawing.Bitmap" />.</param>
+        <param name="monochromeMask">Ein Zeiger auf die monochrome Maske.</param>
+        <summary>Erstellt eine Win32- <see langword="HBITMAP" /> außerhalb des Bilds.</summary>
+        <returns>Ein <see cref="T:System.IntPtr" /> , der das Handle für die Bitmap darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie sind verantwortlich für die Zuordnung der `HBITMAP`. Wenn das Bild Transparenz verwendet wird, wird der Hintergrund mit der angegebenen Farbe ausgefüllt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHBitmapTransparencyMask">
+      <MemberSignature Language="C#" Value="public static IntPtr CreateHBitmapTransparencyMask (System.Drawing.Bitmap bitmap);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig native int CreateHBitmapTransparencyMask(class System.Drawing.Bitmap bitmap) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.CreateHBitmapTransparencyMask(System.Drawing.Bitmap)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bitmap" Type="System.Drawing.Bitmap" />
+      </Parameters>
+      <Docs>
+        <param name="bitmap">Die <see cref="T:System.Drawing.Bitmap" /> zum Erstellen der Transparenzmaske für.</param>
+        <summary>Erstellt eine Farbe-Maske für die angegebene Bitmap, die angibt, welche Farbe angezeigt werden soll als transparent.</summary>
+        <returns>Das Handle für die <see cref="T:System.Drawing.Bitmap" /> Maske.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie sind verantwortlich für die Zuordnung der Bitmap.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dark">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Color Dark (System.Drawing.Color baseColor);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Color Dark(valuetype System.Drawing.Color baseColor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.Dark(System.Drawing.Color)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseColor" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="baseColor">Die <see cref="T:System.Drawing.Color" /> auf dunkler werden.</param>
+        <summary>Erstellt ein neues Objekt dunkle Farbe für das Steuerelement aus der angegebenen Farbe.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Color" /> , die die dunkle Farbe für das Steuerelement darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das angegebene <xref:System.Drawing.Color> ist eines der der <xref:System.Drawing.SystemColors>, konvertiert die Farbe einer <xref:System.Drawing.SystemColors.ControlDark%2A?displayProperty=nameWithType> Farbe; andernfalls wird die Farbe der Helligkeitswert verringert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dark">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Color Dark (System.Drawing.Color baseColor, float percOfDarkDark);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Color Dark(valuetype System.Drawing.Color baseColor, float32 percOfDarkDark) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.Dark(System.Drawing.Color,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseColor" Type="System.Drawing.Color" />
+        <Parameter Name="percOfDarkDark" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="baseColor">Die <see cref="T:System.Drawing.Color" /> auf dunkler werden.</param>
+        <param name="percOfDarkDark">Der Prozentsatz, um den angegebenen dunkler <see cref="T:System.Drawing.Color" />.</param>
+        <summary>Erstellt ein neues Objekt dunkle Farbe für das Steuerelement aus der angegebenen Farbe und ihn durch den angegebenen Prozentsatz dunkler.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Color" /> , die die dunkle Farbe für das Steuerelement darstellen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das angegebene <xref:System.Drawing.Color> ist eines der der <xref:System.Drawing.SystemColors>, konvertiert die Farbe einer <xref:System.Drawing.SystemColors.ControlDark%2A?displayProperty=nameWithType> Farbe; andernfalls wird die Farbe der Helligkeitswert verringert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DarkDark">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Color DarkDark (System.Drawing.Color baseColor);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Color DarkDark(valuetype System.Drawing.Color baseColor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DarkDark(System.Drawing.Color)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseColor" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="baseColor">Die <see cref="T:System.Drawing.Color" /> auf dunkler werden.</param>
+        <summary>Erstellt ein neues Objekt dunkle Farbe für das Steuerelement aus der angegebenen Farbe.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Color" /> , die die dunkle Farbe für das Steuerelement darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das angegebene <xref:System.Drawing.Color> ist eines der der <xref:System.Drawing.SystemColors>, konvertiert die Farbe der <xref:System.Drawing.SystemColors.ControlDarkDark%2A?displayProperty=nameWithType> Farbe; andernfalls wird die Farbe der Helligkeitswert erhöht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawBorder">
+      <MemberSignature Language="C#" Value="public static void DrawBorder (System.Drawing.Graphics graphics, System.Drawing.Rectangle bounds, System.Drawing.Color color, System.Windows.Forms.ButtonBorderStyle style);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawBorder(class System.Drawing.Graphics graphics, valuetype System.Drawing.Rectangle bounds, valuetype System.Drawing.Color color, valuetype System.Windows.Forms.ButtonBorderStyle style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawBorder(System.Drawing.Graphics,System.Drawing.Rectangle,System.Drawing.Color,System.Windows.Forms.ButtonBorderStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="color" Type="System.Drawing.Color" />
+        <Parameter Name="style" Type="System.Windows.Forms.ButtonBorderStyle" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="bounds">Die <see cref="T:System.Drawing.Rectangle" /> , die die Dimensionen des Rahmens darstellt.</param>
+        <param name="color">Die <see cref="T:System.Drawing.Color" /> des Rahmens.</param>
+        <param name="style">Eines der <see cref="T:System.Windows.Forms.ButtonBorderStyle" /> Werten, die die Art des Rahmens angibt.</param>
+        <summary>Zeichnet einen Rahmen mit dem angegebenen Stil und Farbe an, auf der Oberfläche des angegebenen Grafiken und innerhalb der angegebenen Grenzen auf einem Schaltflächen-Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung eines der <xref:System.Windows.Forms.ControlPaint.DrawBorder3D%2A> Methoden. Um dieses Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular, importiert der <xref:System.Windows.Forms> und <xref:System.Drawing> Namespaces. Stellen Sie sicher des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis in diesem Beispiel wird der Ereignishandler zugeordnet ist.  
+  
+ [!code-cpp[System.Windows.Forms.ControlPaintMembers#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ControlPaintMembers/CPP/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.ControlPaintMembers#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ControlPaintMembers/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.ControlPaintMembers#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ControlPaintMembers/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawBorder">
+      <MemberSignature Language="C#" Value="public static void DrawBorder (System.Drawing.Graphics graphics, System.Drawing.Rectangle bounds, System.Drawing.Color leftColor, int leftWidth, System.Windows.Forms.ButtonBorderStyle leftStyle, System.Drawing.Color topColor, int topWidth, System.Windows.Forms.ButtonBorderStyle topStyle, System.Drawing.Color rightColor, int rightWidth, System.Windows.Forms.ButtonBorderStyle rightStyle, System.Drawing.Color bottomColor, int bottomWidth, System.Windows.Forms.ButtonBorderStyle bottomStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawBorder(class System.Drawing.Graphics graphics, valuetype System.Drawing.Rectangle bounds, valuetype System.Drawing.Color leftColor, int32 leftWidth, valuetype System.Windows.Forms.ButtonBorderStyle leftStyle, valuetype System.Drawing.Color topColor, int32 topWidth, valuetype System.Windows.Forms.ButtonBorderStyle topStyle, valuetype System.Drawing.Color rightColor, int32 rightWidth, valuetype System.Windows.Forms.ButtonBorderStyle rightStyle, valuetype System.Drawing.Color bottomColor, int32 bottomWidth, valuetype System.Windows.Forms.ButtonBorderStyle bottomStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawBorder(System.Drawing.Graphics,System.Drawing.Rectangle,System.Drawing.Color,System.Int32,System.Windows.Forms.ButtonBorderStyle,System.Drawing.Color,System.Int32,System.Windows.Forms.ButtonBorderStyle,System.Drawing.Color,System.Int32,System.Windows.Forms.ButtonBorderStyle,System.Drawing.Color,System.Int32,System.Windows.Forms.ButtonBorderStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="leftColor" Type="System.Drawing.Color" />
+        <Parameter Name="leftWidth" Type="System.Int32" />
+        <Parameter Name="leftStyle" Type="System.Windows.Forms.ButtonBorderStyle" />
+        <Parameter Name="topColor" Type="System.Drawing.Color" />
+        <Parameter Name="topWidth" Type="System.Int32" />
+        <Parameter Name="topStyle" Type="System.Windows.Forms.ButtonBorderStyle" />
+        <Parameter Name="rightColor" Type="System.Drawing.Color" />
+        <Parameter Name="rightWidth" Type="System.Int32" />
+        <Parameter Name="rightStyle" Type="System.Windows.Forms.ButtonBorderStyle" />
+        <Parameter Name="bottomColor" Type="System.Drawing.Color" />
+        <Parameter Name="bottomWidth" Type="System.Int32" />
+        <Parameter Name="bottomStyle" Type="System.Windows.Forms.ButtonBorderStyle" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="bounds">Die <see cref="T:System.Drawing.Rectangle" /> , die die Dimensionen des Rahmens darstellt.</param>
+        <param name="leftColor">Die <see cref="T:System.Drawing.Color" /> von der linken Seite des Rahmens.</param>
+        <param name="leftWidth">Die Breite des linken Rahmens.</param>
+        <param name="leftStyle">Eines der <see cref="T:System.Windows.Forms.ButtonBorderStyle" /> Werten, die die Art des linken Rahmens angibt.</param>
+        <param name="topColor">Die <see cref="T:System.Drawing.Color" /> des oberen Rands des Rahmens.</param>
+        <param name="topWidth">Die Breite des oberen Rahmens.</param>
+        <param name="topStyle">Eines der <see cref="T:System.Windows.Forms.ButtonBorderStyle" /> Werten, die das Format des oberen Rahmens angibt.</param>
+        <param name="rightColor">Die <see cref="T:System.Drawing.Color" /> von der rechten Seite des Rahmens.</param>
+        <param name="rightWidth">Die Breite des rechten Rahmens.</param>
+        <param name="rightStyle">Eines der <see cref="T:System.Windows.Forms.ButtonBorderStyle" /> Werten, die das Format des rechten Rahmens angibt.</param>
+        <param name="bottomColor">Die <see cref="T:System.Drawing.Color" /> des unteren Rands des Rahmens.</param>
+        <param name="bottomWidth">Die Breite des unteren Rahmens.</param>
+        <param name="bottomStyle">Eines der <see cref="T:System.Windows.Forms.ButtonBorderStyle" /> Werten, die das Format des unteren Rahmens angibt.</param>
+        <summary>Zeichnet einen Rahmen auf einem Schaltflächen-Steuerelement mit der angegebenen Formate, Farben und Rahmenbreiten; auf der Oberfläche des angegebenen Grafiken; und innerhalb der angegebenen Begrenzungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung eines der <xref:System.Windows.Forms.ControlPaint.DrawBorder3D%2A> Methoden. Um dieses Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular, importiert der <xref:System.Windows.Forms> und <xref:System.Drawing> Namespaces. Stellen Sie sicher des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis in diesem Beispiel wird der Ereignishandler zugeordnet ist.  
+  
+ [!code-cpp[System.Windows.Forms.ControlPaintMembers#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ControlPaintMembers/CPP/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.ControlPaintMembers#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ControlPaintMembers/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.ControlPaintMembers#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ControlPaintMembers/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawBorder3D">
+      <MemberSignature Language="C#" Value="public static void DrawBorder3D (System.Drawing.Graphics graphics, System.Drawing.Rectangle rectangle);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawBorder3D(class System.Drawing.Graphics graphics, valuetype System.Drawing.Rectangle rectangle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawBorder3D(System.Drawing.Graphics,System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="rectangle" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="rectangle">Die <see cref="T:System.Drawing.Rectangle" /> , die die Dimensionen des Rahmens darstellt.</param>
+        <summary>Zeichnet einen dreidimensionalen Rahmen auf der Oberfläche des angegebenen Grafiken und innerhalb der angegebenen Grenzen auf ein Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Border3DStyle?displayProperty=nameWithType> Stil dient standardmäßig zum Zeichnen des Rahmens.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung eines der <xref:System.Windows.Forms.ControlPaint.DrawBorder3D%2A> Methoden. Um dieses Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular, importiert der <xref:System.Windows.Forms> und <xref:System.Drawing> Namespaces. Stellen Sie sicher des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis in diesem Beispiel wird der Ereignishandler zugeordnet ist.  
+  
+ [!code-cpp[System.Windows.Forms.ControlPaintMembers#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ControlPaintMembers/CPP/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.ControlPaintMembers#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ControlPaintMembers/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.ControlPaintMembers#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ControlPaintMembers/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawBorder3D">
+      <MemberSignature Language="C#" Value="public static void DrawBorder3D (System.Drawing.Graphics graphics, System.Drawing.Rectangle rectangle, System.Windows.Forms.Border3DStyle style);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawBorder3D(class System.Drawing.Graphics graphics, valuetype System.Drawing.Rectangle rectangle, valuetype System.Windows.Forms.Border3DStyle style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawBorder3D(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.Border3DStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="rectangle" Type="System.Drawing.Rectangle" />
+        <Parameter Name="style" Type="System.Windows.Forms.Border3DStyle" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="rectangle">Die <see cref="T:System.Drawing.Rectangle" /> , die die Dimensionen des Rahmens darstellt.</param>
+        <param name="style">Eines der <see cref="T:System.Windows.Forms.Border3DStyle" /> Werten, die die Art des Rahmens angibt.</param>
+        <summary>Zeichnet einen dreidimensionalen Rahmen in dem angegebenen Format an, auf der Oberfläche des angegebenen Grafiken und innerhalb der angegebenen Grenzen eines Steuerelements.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung eines der <xref:System.Windows.Forms.ControlPaint.DrawBorder3D%2A> Methoden. Um dieses Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular, importiert der <xref:System.Windows.Forms> und <xref:System.Drawing> Namespaces. Stellen Sie sicher des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis in diesem Beispiel wird der Ereignishandler zugeordnet ist.  
+  
+ [!code-cpp[System.Windows.Forms.ControlPaintMembers#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ControlPaintMembers/CPP/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.ControlPaintMembers#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ControlPaintMembers/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.ControlPaintMembers#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ControlPaintMembers/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawBorder3D">
+      <MemberSignature Language="C#" Value="public static void DrawBorder3D (System.Drawing.Graphics graphics, System.Drawing.Rectangle rectangle, System.Windows.Forms.Border3DStyle style, System.Windows.Forms.Border3DSide sides);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawBorder3D(class System.Drawing.Graphics graphics, valuetype System.Drawing.Rectangle rectangle, valuetype System.Windows.Forms.Border3DStyle style, valuetype System.Windows.Forms.Border3DSide sides) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawBorder3D(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.Border3DStyle,System.Windows.Forms.Border3DSide)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="rectangle" Type="System.Drawing.Rectangle" />
+        <Parameter Name="style" Type="System.Windows.Forms.Border3DStyle" />
+        <Parameter Name="sides" Type="System.Windows.Forms.Border3DSide" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="rectangle">Die <see cref="T:System.Drawing.Rectangle" /> , die die Dimensionen des Rahmens darstellt.</param>
+        <param name="style">Eines der <see cref="T:System.Windows.Forms.Border3DStyle" /> Werten, die die Art des Rahmens angibt.</param>
+        <param name="sides">Eines der <see cref="T:System.Windows.Forms.Border3DSide" /> Werte, der angibt, der Seite des Rechtecks, das auf den Rahmen gezeichnet.</param>
+        <summary>Zeichnet einen Rahmen dreidimensionalen anhand des angegebenen Formats, auf den angegebenen Grafikoberfläche und die Seiten und innerhalb der angegebenen Grenzen eines Steuerelements.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung eines der <xref:System.Windows.Forms.ControlPaint.DrawBorder3D%2A> Methoden. Um dieses Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular, importiert der <xref:System.Windows.Forms> und <xref:System.Drawing> Namespaces. Stellen Sie sicher des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis in diesem Beispiel wird der Ereignishandler zugeordnet ist.  
+  
+ [!code-cpp[System.Windows.Forms.ControlPaintMembers#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ControlPaintMembers/CPP/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.ControlPaintMembers#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ControlPaintMembers/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.ControlPaintMembers#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ControlPaintMembers/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawBorder3D">
+      <MemberSignature Language="C#" Value="public static void DrawBorder3D (System.Drawing.Graphics graphics, int x, int y, int width, int height);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawBorder3D(class System.Drawing.Graphics graphics, int32 x, int32 y, int32 width, int32 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawBorder3D(System.Drawing.Graphics,System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="x">Die X-Koordinate der oberen linken Seite des Rahmenrechtecks.</param>
+        <param name="y">Die y-Koordinate der oberen linken Seite des Rahmenrechtecks.</param>
+        <param name="width">Die Breite des Rahmenrechtecks.</param>
+        <param name="height">Die Höhe des Rahmenrechtecks.</param>
+        <summary>Zeichnet einen dreidimensionalen Rahmen auf der Oberfläche des angegebenen Grafiken und innerhalb der angegebenen Grenzen auf ein Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Forms.Border3DStyle?displayProperty=nameWithType> Stil dient standardmäßig zum Zeichnen des Rahmens.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung eines der <xref:System.Windows.Forms.ControlPaint.DrawBorder3D%2A> Methoden. Um dieses Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular, importiert der <xref:System.Windows.Forms> und <xref:System.Drawing> Namespaces. Stellen Sie sicher des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis in diesem Beispiel wird der Ereignishandler zugeordnet ist.  
+  
+ [!code-cpp[System.Windows.Forms.ControlPaintMembers#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ControlPaintMembers/CPP/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.ControlPaintMembers#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ControlPaintMembers/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.ControlPaintMembers#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ControlPaintMembers/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawBorder3D">
+      <MemberSignature Language="C#" Value="public static void DrawBorder3D (System.Drawing.Graphics graphics, int x, int y, int width, int height, System.Windows.Forms.Border3DStyle style);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawBorder3D(class System.Drawing.Graphics graphics, int32 x, int32 y, int32 width, int32 height, valuetype System.Windows.Forms.Border3DStyle style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawBorder3D(System.Drawing.Graphics,System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.Border3DStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+        <Parameter Name="style" Type="System.Windows.Forms.Border3DStyle" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="x">Die X-Koordinate der oberen linken Seite des Rahmenrechtecks.</param>
+        <param name="y">Die y-Koordinate der oberen linken Seite des Rahmenrechtecks.</param>
+        <param name="width">Die Breite des Rahmenrechtecks.</param>
+        <param name="height">Die Höhe des Rahmenrechtecks.</param>
+        <param name="style">Eines der <see cref="T:System.Windows.Forms.Border3DStyle" /> Werten, die die Art des Rahmens angibt.</param>
+        <summary>Zeichnet einen dreidimensionalen Rahmen in dem angegebenen Format an, auf der Oberfläche des angegebenen Grafiken und innerhalb der angegebenen Grenzen eines Steuerelements.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung eines der <xref:System.Windows.Forms.ControlPaint.DrawBorder3D%2A> Methoden. Um dieses Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular, importiert der <xref:System.Windows.Forms> und <xref:System.Drawing> Namespaces. Stellen Sie sicher des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis in diesem Beispiel wird der Ereignishandler zugeordnet ist.  
+  
+ [!code-cpp[System.Windows.Forms.ControlPaintMembers#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ControlPaintMembers/CPP/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.ControlPaintMembers#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ControlPaintMembers/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.ControlPaintMembers#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ControlPaintMembers/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawBorder3D">
+      <MemberSignature Language="C#" Value="public static void DrawBorder3D (System.Drawing.Graphics graphics, int x, int y, int width, int height, System.Windows.Forms.Border3DStyle style, System.Windows.Forms.Border3DSide sides);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawBorder3D(class System.Drawing.Graphics graphics, int32 x, int32 y, int32 width, int32 height, valuetype System.Windows.Forms.Border3DStyle style, valuetype System.Windows.Forms.Border3DSide sides) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawBorder3D(System.Drawing.Graphics,System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.Border3DStyle,System.Windows.Forms.Border3DSide)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+        <Parameter Name="style" Type="System.Windows.Forms.Border3DStyle" />
+        <Parameter Name="sides" Type="System.Windows.Forms.Border3DSide" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="x">Die X-Koordinate der oberen linken Seite des Rahmenrechtecks.</param>
+        <param name="y">Die y-Koordinate der oberen linken Seite des Rahmenrechtecks.</param>
+        <param name="width">Die Breite des Rahmenrechtecks.</param>
+        <param name="height">Die Höhe des Rahmenrechtecks.</param>
+        <param name="style">Eines der <see cref="T:System.Windows.Forms.Border3DStyle" /> Werten, die die Art des Rahmens angibt.</param>
+        <param name="sides">Die <see cref="T:System.Windows.Forms.Border3DSide" /> des Rechtecks auf den Rahmen gezeichnet.</param>
+        <summary>Zeichnet einen Rahmen dreidimensionalen anhand des angegebenen Formats, auf den angegebenen Grafikoberfläche und die Seite, und innerhalb der angegebenen Grenzen eines Steuerelements.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung eines der <xref:System.Windows.Forms.ControlPaint.DrawBorder3D%2A> Methoden. Um dieses Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular, importiert der <xref:System.Windows.Forms> und <xref:System.Drawing> Namespaces. Stellen Sie sicher des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis in diesem Beispiel wird der Ereignishandler zugeordnet ist.  
+  
+ [!code-cpp[System.Windows.Forms.ControlPaintMembers#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ControlPaintMembers/CPP/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.ControlPaintMembers#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ControlPaintMembers/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.ControlPaintMembers#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ControlPaintMembers/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawButton">
+      <MemberSignature Language="C#" Value="public static void DrawButton (System.Drawing.Graphics graphics, System.Drawing.Rectangle rectangle, System.Windows.Forms.ButtonState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawButton(class System.Drawing.Graphics graphics, valuetype System.Drawing.Rectangle rectangle, valuetype System.Windows.Forms.ButtonState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawButton(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.ButtonState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="rectangle" Type="System.Drawing.Rectangle" />
+        <Parameter Name="state" Type="System.Windows.Forms.ButtonState" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="rectangle">Die <see cref="T:System.Drawing.Rectangle" /> , die die Dimensionen der Schaltfläche darstellt.</param>
+        <param name="state">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.ButtonState" /> Werte, die den Status der Schaltfläche gezeichnet werden soll, im angibt.</param>
+        <summary>Zeichnet ein Schaltflächen-Steuerelement im angegebenen Status, auf der Oberfläche des angegebenen Grafiken und innerhalb der angegebenen Grenzen an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawButton">
+      <MemberSignature Language="C#" Value="public static void DrawButton (System.Drawing.Graphics graphics, int x, int y, int width, int height, System.Windows.Forms.ButtonState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawButton(class System.Drawing.Graphics graphics, int32 x, int32 y, int32 width, int32 height, valuetype System.Windows.Forms.ButtonState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawButton(System.Drawing.Graphics,System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.ButtonState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+        <Parameter Name="state" Type="System.Windows.Forms.ButtonState" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="x">Die X-Koordinate der oberen linken Ecke des Rechtecks zeichnen.</param>
+        <param name="y">Die y-Koordinate der oberen linken Ecke des Rechtecks zeichnen.</param>
+        <param name="width">Die Breite der Schaltfläche.</param>
+        <param name="height">Die Höhe der Schaltfläche.</param>
+        <param name="state">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.ButtonState" /> Werte, die den Status der Schaltfläche gezeichnet werden soll, im angibt.</param>
+        <summary>Zeichnet ein Schaltflächen-Steuerelement im angegebenen Status, auf der Oberfläche des angegebenen Grafiken und innerhalb der angegebenen Grenzen an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[ButtonState#2](~/samples/snippets/cpp/VS_Snippets_Winforms/ButtonState/CPP/buttonstate1.cpp#2)]
+ [!code-csharp[ButtonState#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ButtonState/CS/buttonstate1.cs#2)]
+ [!code-vb[ButtonState#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ButtonState/VB/buttonstate1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawCaptionButton">
+      <MemberSignature Language="C#" Value="public static void DrawCaptionButton (System.Drawing.Graphics graphics, System.Drawing.Rectangle rectangle, System.Windows.Forms.CaptionButton button, System.Windows.Forms.ButtonState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawCaptionButton(class System.Drawing.Graphics graphics, valuetype System.Drawing.Rectangle rectangle, valuetype System.Windows.Forms.CaptionButton button, valuetype System.Windows.Forms.ButtonState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawCaptionButton(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.CaptionButton,System.Windows.Forms.ButtonState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="rectangle" Type="System.Drawing.Rectangle" />
+        <Parameter Name="button" Type="System.Windows.Forms.CaptionButton" />
+        <Parameter Name="state" Type="System.Windows.Forms.ButtonState" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="rectangle">Die <see cref="T:System.Drawing.Rectangle" /> , die die Dimensionen einer Titelleistenschaltfläche darstellt.</param>
+        <param name="button">Eines der <see cref="T:System.Windows.Forms.CaptionButton" /> Werte, der angibt, den Typ der Beschriftung Schaltfläche gezeichnet werden soll.</param>
+        <param name="state">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.ButtonState" /> Werte, die den Status der Schaltfläche gezeichnet werden soll, im angibt.</param>
+        <summary>Zeichnet die angegebene Beschriftung Button-Steuerelement im angegebenen Status, auf der Oberfläche des angegebenen Grafiken und innerhalb der angegebenen Grenzen an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Windows.Forms.ControlPaint.DrawCaptionButton%2A?displayProperty=nameWithType> Methode und die <xref:System.Windows.Forms.CaptionButton> Enumeration. Um dieses Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular mit einer Schaltfläche mit dem Namen `Button1`. Das Formular importieren sollte die <xref:System.Windows.Forms> und <xref:System.Drawing> Namespaces. Gewährleisten Sie der Schaltfläche <xref:System.Windows.Forms.Control.Paint> Ereignis in diesem Beispiel wird der Ereignishandler zugeordnet ist.  
+  
+ [!code-cpp[System.Windows.Forms.ControlPaintMembers#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ControlPaintMembers/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ControlPaintMembers#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ControlPaintMembers/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ControlPaintMembers#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ControlPaintMembers/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawCaptionButton">
+      <MemberSignature Language="C#" Value="public static void DrawCaptionButton (System.Drawing.Graphics graphics, int x, int y, int width, int height, System.Windows.Forms.CaptionButton button, System.Windows.Forms.ButtonState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawCaptionButton(class System.Drawing.Graphics graphics, int32 x, int32 y, int32 width, int32 height, valuetype System.Windows.Forms.CaptionButton button, valuetype System.Windows.Forms.ButtonState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawCaptionButton(System.Drawing.Graphics,System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.CaptionButton,System.Windows.Forms.ButtonState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+        <Parameter Name="button" Type="System.Windows.Forms.CaptionButton" />
+        <Parameter Name="state" Type="System.Windows.Forms.ButtonState" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="x">Die X-Koordinate der oberen linken Seite des Rechtecks zeichnen.</param>
+        <param name="y">Die y-Koordinate der oberen linken Seite des Rechtecks zeichnen.</param>
+        <param name="width">Die Breite des Rechtecks zeichnen.</param>
+        <param name="height">Die Höhe des Rechtecks zeichnen.</param>
+        <param name="button">Eines der <see cref="T:System.Windows.Forms.CaptionButton" /> Werte, der angibt, den Typ der Beschriftung Schaltfläche gezeichnet werden soll.</param>
+        <param name="state">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.ButtonState" /> Werte, die den Status der Schaltfläche gezeichnet werden soll, im angibt.</param>
+        <summary>Zeichnet die angegebene Beschriftung Button-Steuerelement im angegebenen Status, auf der Oberfläche des angegebenen Grafiken und innerhalb der angegebenen Grenzen an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.Windows.Forms.ControlPaint.DrawCaptionButton%2A> Methode und die <xref:System.Windows.Forms.CaptionButton> Enumeration. Um dieses Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular mit einem <xref:System.Windows.Forms.Button> mit dem Namen `Button1`. Das Formular importieren sollte die <xref:System.Windows.Forms> und <xref:System.Drawing> Namespaces. Gewährleisten Sie der Schaltfläche <xref:System.Windows.Forms.Control.Paint> Ereignis in diesem Beispiel wird der Ereignishandler zugeordnet ist.  
+  
+ [!code-cpp[System.Windows.Forms.ControlPaintMembers#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ControlPaintMembers/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ControlPaintMembers#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ControlPaintMembers/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ControlPaintMembers#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ControlPaintMembers/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawCheckBox">
+      <MemberSignature Language="C#" Value="public static void DrawCheckBox (System.Drawing.Graphics graphics, System.Drawing.Rectangle rectangle, System.Windows.Forms.ButtonState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawCheckBox(class System.Drawing.Graphics graphics, valuetype System.Drawing.Rectangle rectangle, valuetype System.Windows.Forms.ButtonState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawCheckBox(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.ButtonState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="rectangle" Type="System.Drawing.Rectangle" />
+        <Parameter Name="state" Type="System.Windows.Forms.ButtonState" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="rectangle">Die <see cref="T:System.Drawing.Rectangle" /> , die die Dimensionen des Kontrollkästchens darstellt.</param>
+        <param name="state">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.ButtonState" /> Werten, die den Zustand für das Zeichnen Sie das Kontrollkästchen angibt.</param>
+        <summary>Zeichnet ein Kontrollkästchen-Steuerelement im angegebenen Status, auf der Oberfläche des angegebenen Grafiken und innerhalb der angegebenen Grenzen an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawCheckBox">
+      <MemberSignature Language="C#" Value="public static void DrawCheckBox (System.Drawing.Graphics graphics, int x, int y, int width, int height, System.Windows.Forms.ButtonState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawCheckBox(class System.Drawing.Graphics graphics, int32 x, int32 y, int32 width, int32 height, valuetype System.Windows.Forms.ButtonState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawCheckBox(System.Drawing.Graphics,System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.ButtonState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+        <Parameter Name="state" Type="System.Windows.Forms.ButtonState" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="x">Die X-Koordinate der oberen linken Ecke des Rechtecks zeichnen.</param>
+        <param name="y">Die y-Koordinate der oberen linken Ecke des Rechtecks zeichnen.</param>
+        <param name="width">Die Breite des Kontrollkästchens.</param>
+        <param name="height">Die Höhe des Kontrollkästchens.</param>
+        <param name="state">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.ButtonState" /> Werten, die den Zustand für das Zeichnen Sie das Kontrollkästchen angibt.</param>
+        <summary>Zeichnet ein Kontrollkästchen-Steuerelement im angegebenen Status, auf der Oberfläche des angegebenen Grafiken und innerhalb der angegebenen Grenzen an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawComboButton">
+      <MemberSignature Language="C#" Value="public static void DrawComboButton (System.Drawing.Graphics graphics, System.Drawing.Rectangle rectangle, System.Windows.Forms.ButtonState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawComboButton(class System.Drawing.Graphics graphics, valuetype System.Drawing.Rectangle rectangle, valuetype System.Windows.Forms.ButtonState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawComboButton(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.ButtonState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="rectangle" Type="System.Drawing.Rectangle" />
+        <Parameter Name="state" Type="System.Windows.Forms.ButtonState" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="rectangle">Die <see cref="T:System.Drawing.Rectangle" /> , die die Dimensionen des Kombinationsfelds darstellt.</param>
+        <param name="state">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.ButtonState" /> Werte, die den Zustand für das Zeichnen des Kombinationsfelds angibt, die Sie im Dialogfeld.</param>
+        <summary>Zeichnet eine Dropdown-Schaltfläche in einem Kombinationsfeld-Steuerelement im angegebenen Status auf der Oberfläche des angegebenen Grafiken und innerhalb der angegebenen Grenzen an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawComboButton">
+      <MemberSignature Language="C#" Value="public static void DrawComboButton (System.Drawing.Graphics graphics, int x, int y, int width, int height, System.Windows.Forms.ButtonState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawComboButton(class System.Drawing.Graphics graphics, int32 x, int32 y, int32 width, int32 height, valuetype System.Windows.Forms.ButtonState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawComboButton(System.Drawing.Graphics,System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.ButtonState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+        <Parameter Name="state" Type="System.Windows.Forms.ButtonState" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="x">Die X-Koordinate der oberen linken Seite des Rahmenrechtecks.</param>
+        <param name="y">Die y-Koordinate der oberen linken Seite des Rahmenrechtecks.</param>
+        <param name="width">Die Breite des Kombinationsfelds.</param>
+        <param name="height">Die Höhe des Kombinationsfelds.</param>
+        <param name="state">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.ButtonState" /> Werte, die den Zustand für das Zeichnen des Kombinationsfelds angibt, die Sie im Dialogfeld.</param>
+        <summary>Zeichnet eine Dropdown-Schaltfläche in einem Kombinationsfeld-Steuerelement im angegebenen Status auf der Oberfläche des angegebenen Grafiken und innerhalb der angegebenen Grenzen an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawContainerGrabHandle">
+      <MemberSignature Language="C#" Value="public static void DrawContainerGrabHandle (System.Drawing.Graphics graphics, System.Drawing.Rectangle bounds);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawContainerGrabHandle(class System.Drawing.Graphics graphics, valuetype System.Drawing.Rectangle bounds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawContainerGrabHandle(System.Drawing.Graphics,System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="bounds">Die <see cref="T:System.Drawing.Rectangle" /> , die die Dimensionen des Symbols für das Bildschirmfoto Handle darstellt.</param>
+        <summary>Zeichnet ein Container-Steuerelement Ziehpunkte Handle Symbol an, auf der Oberfläche des angegebenen Grafiken und innerhalb der angegebenen Begrenzungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ziehpunkte werden von Containern verwendet, um zu verdeutlichen, dass der Benutzer die Container direkt bearbeiten kann. Die Bearbeitung kann Aktionen wie das Ändern der Größe und verschieben bestehen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawFocusRectangle">
+      <MemberSignature Language="C#" Value="public static void DrawFocusRectangle (System.Drawing.Graphics graphics, System.Drawing.Rectangle rectangle);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawFocusRectangle(class System.Drawing.Graphics graphics, valuetype System.Drawing.Rectangle rectangle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawFocusRectangle(System.Drawing.Graphics,System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="rectangle" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="rectangle">Die <see cref="T:System.Drawing.Rectangle" /> , die die Dimensionen des Symbols für das Bildschirmfoto Handle darstellt.</param>
+        <summary>Zeichnet ein Fokusrechteck an, auf der Oberfläche des angegebenen Grafiken und innerhalb der angegebenen Begrenzungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Fokusrechteck ist ein gepunktetes Rechteck, das von Windows verwendet, um anzugeben, welches Steuerelement den aktuellen Tastaturfokus aufweist.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.ControlPaint.DrawFocusRectangle%2A> Methode und die <xref:System.Windows.Forms.Control.Handle%2A?displayProperty=nameWithType> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular aus. Fügen Sie zwei Schaltflächen, die mit dem Namen `Button1` und `Button2` in das Formular und vergewissern Sie sich an ihren Ereignishandler alle Ereignisse verbunden sind.  
+  
+ [!code-cpp[System.Windows.Forms.ControlPaint1#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ControlPaint1/CPP/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.ControlPaint1#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ControlPaint1/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.ControlPaint1#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ControlPaint1/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawFocusRectangle">
+      <MemberSignature Language="C#" Value="public static void DrawFocusRectangle (System.Drawing.Graphics graphics, System.Drawing.Rectangle rectangle, System.Drawing.Color foreColor, System.Drawing.Color backColor);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawFocusRectangle(class System.Drawing.Graphics graphics, valuetype System.Drawing.Rectangle rectangle, valuetype System.Drawing.Color foreColor, valuetype System.Drawing.Color backColor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawFocusRectangle(System.Drawing.Graphics,System.Drawing.Rectangle,System.Drawing.Color,System.Drawing.Color)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="rectangle" Type="System.Drawing.Rectangle" />
+        <Parameter Name="foreColor" Type="System.Drawing.Color" />
+        <Parameter Name="backColor" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="rectangle">Die <see cref="T:System.Drawing.Rectangle" /> , die die Dimensionen des Symbols für das Bildschirmfoto Handle darstellt.</param>
+        <param name="foreColor">Die <see cref="T:System.Drawing.Color" /> also die Vordergrundfarbe des Objekts auf Fokusrechtecks gezeichnet werden soll.</param>
+        <param name="backColor">Die <see cref="T:System.Drawing.Color" /> also die Hintergrundfarbe des Objekts auf Fokusrechtecks gezeichnet werden soll.</param>
+        <summary>Zeichnet ein Fokusrechteck an, auf der Oberfläche des angegebenen Grafiken und innerhalb der angegebenen Begrenzungen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Fokusrechteck ist ein gepunktetes Rechteck, das von Windows verwendet, um anzugeben, welches Steuerelement den aktuellen Tastaturfokus aufweist.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.ControlPaint.DrawFocusRectangle%2A> Methode und die <xref:System.Windows.Forms.Control.Handle%2A?displayProperty=nameWithType> Eigenschaft. Um dieses Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular aus. Fügen Sie zwei Schaltflächen, die mit dem Namen `Button1` und Button2 in das Formular und vergewissern Sie sich an ihren Ereignishandler alle Ereignisse verbunden sind.  
+  
+ [!code-cpp[System.Windows.Forms.ControlPaint1#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ControlPaint1/CPP/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.ControlPaint1#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ControlPaint1/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.ControlPaint1#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ControlPaint1/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawGrabHandle">
+      <MemberSignature Language="C#" Value="public static void DrawGrabHandle (System.Drawing.Graphics graphics, System.Drawing.Rectangle rectangle, bool primary, bool enabled);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawGrabHandle(class System.Drawing.Graphics graphics, valuetype System.Drawing.Rectangle rectangle, bool primary, bool enabled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawGrabHandle(System.Drawing.Graphics,System.Drawing.Rectangle,System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="rectangle" Type="System.Drawing.Rectangle" />
+        <Parameter Name="primary" Type="System.Boolean" />
+        <Parameter Name="enabled" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="rectangle">Die <see cref="T:System.Drawing.Rectangle" /> , die die Dimensionen des Symbols für das Bildschirmfoto Handle darstellt.</param>
+        <param name="primary">
+          <see langword="true" />Das Handle als primären Ziehpunkt gezeichnet werden soll; andernfalls <see langword="false" />.</param>
+        <param name="enabled">
+          <see langword="true" />Das Handle in einem aktivierten Status gezeichnet werden soll; andernfalls <see langword="false" />.</param>
+        <summary>Zeichnet ein standard ausgewählte kinderleicht Handle-Symbol in der angegebenen Grafiken angezeigt, die innerhalb der angegebenen Grenzen und im angegebenen Zustand und Stil.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ziehpunkte werden von Objekten verwendet, um zu verdeutlichen, dass der Benutzer das Objekt direkt bearbeiten kann. Die Bearbeitung kann Aktionen wie das Ändern der Größe und verschieben bestehen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawGrid">
+      <MemberSignature Language="C#" Value="public static void DrawGrid (System.Drawing.Graphics graphics, System.Drawing.Rectangle area, System.Drawing.Size pixelsBetweenDots, System.Drawing.Color backColor);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawGrid(class System.Drawing.Graphics graphics, valuetype System.Drawing.Rectangle area, valuetype System.Drawing.Size pixelsBetweenDots, valuetype System.Drawing.Color backColor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawGrid(System.Drawing.Graphics,System.Drawing.Rectangle,System.Drawing.Size,System.Drawing.Color)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="area" Type="System.Drawing.Rectangle" />
+        <Parameter Name="pixelsBetweenDots" Type="System.Drawing.Size" />
+        <Parameter Name="backColor" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="area">Die <see cref="T:System.Drawing.Rectangle" /> , die die Dimensionen des Datenblatts darstellt.</param>
+        <param name="pixelsBetweenDots">Die <see cref="T:System.Drawing.Size" /> , die die Höhe und Breite zwischen den Punkten des Rasters angegeben.</param>
+        <param name="backColor">Die <see cref="T:System.Drawing.Color" /> des Hintergrunds hinter dem Datenblatt.</param>
+        <summary>Zeichnet ein Raster mit einem Pixel Punkte mit den angegebenen Abstand innerhalb der angegebenen Grenzen an, auf den angegebenen Grafiken-Oberfläche, und klicken Sie in der angegebenen Farbe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `backColor` Parameter wird verwendet, um die Füllfarbe der Punkte berechnet, sodass das Datenblatt immer vor dem Hintergrund angezeigt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawImageDisabled">
+      <MemberSignature Language="C#" Value="public static void DrawImageDisabled (System.Drawing.Graphics graphics, System.Drawing.Image image, int x, int y, System.Drawing.Color background);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawImageDisabled(class System.Drawing.Graphics graphics, class System.Drawing.Image image, int32 x, int32 y, valuetype System.Drawing.Color background) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawImageDisabled(System.Drawing.Graphics,System.Drawing.Image,System.Int32,System.Int32,System.Drawing.Color)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="image" Type="System.Drawing.Image" />
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="background" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="image">Das zu zeichnende <see cref="T:System.Drawing.Image" />.</param>
+        <param name="x">Die X-Koordinate der oberen linken Seite des Rahmenbildes.</param>
+        <param name="y">Die y-Koordinate der oberen linken Seite des Rahmenbildes.</param>
+        <param name="background">Die <see cref="T:System.Drawing.Color" /> des Hintergrunds hinter dem Bild.</param>
+        <summary>Zeichnet das angegebene Bild in einem deaktivierten Zustand.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `background` Parameter wird verwendet, um die Füllfarbe des deaktivierten Bilds berechnet, sodass es immer vor dem Hintergrund angezeigt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawLockedFrame">
+      <MemberSignature Language="C#" Value="public static void DrawLockedFrame (System.Drawing.Graphics graphics, System.Drawing.Rectangle rectangle, bool primary);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawLockedFrame(class System.Drawing.Graphics graphics, valuetype System.Drawing.Rectangle rectangle, bool primary) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawLockedFrame(System.Drawing.Graphics,System.Drawing.Rectangle,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="rectangle" Type="System.Drawing.Rectangle" />
+        <Parameter Name="primary" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="rectangle">Die <see cref="T:System.Drawing.Rectangle" /> , die die Dimensionen des Rahmens darstellt.</param>
+        <param name="primary">
+          <see langword="true" />zu diesem Frame mit der für die primäre Auswahl verwendeten Farben zeichnen. andernfalls <see langword="false" />.</param>
+        <summary>Zeichnet einen gesperrten Auswahlrahmen auf der Oberfläche des angegebenen Grafiken auf dem Bildschirm innerhalb der angegebenen Begrenzungen. Gibt an, ob der Frame mit der primären ausgewählten Farben zeichnen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawMenuGlyph">
+      <MemberSignature Language="C#" Value="public static void DrawMenuGlyph (System.Drawing.Graphics graphics, System.Drawing.Rectangle rectangle, System.Windows.Forms.MenuGlyph glyph);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawMenuGlyph(class System.Drawing.Graphics graphics, valuetype System.Drawing.Rectangle rectangle, valuetype System.Windows.Forms.MenuGlyph glyph) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawMenuGlyph(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.MenuGlyph)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="rectangle" Type="System.Drawing.Rectangle" />
+        <Parameter Name="glyph" Type="System.Windows.Forms.MenuGlyph" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="rectangle">Die <see cref="T:System.Drawing.Rectangle" /> , die die Dimensionen des Symbols darstellt.</param>
+        <param name="glyph">Eines der <see cref="T:System.Windows.Forms.MenuGlyph" /> Werten, die zu zeichnenden Bilds angibt.</param>
+        <summary>Zeichnet das angegebene Menü-Symbol, und auf der angegebenen Oberfläche innerhalb der angegebenen Grenzen einem MenuItem-Steuerelement.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Ownerdrawing- <xref:System.Windows.Forms.MenuItem> Steuerelemente müssen beim Überprüfen der Eigenschaftswerte, um zu bestimmen, das richtige Symbol gezeichnet werden soll, oder entfernen. Z. B., wenn die <xref:System.Windows.Forms.MenuItem.Checked%2A?displayProperty=nameWithType> -Eigenschaftensatz auf `true`, rufen Sie die <xref:System.Windows.Forms.MenuGlyph.Checkmark> Wert <xref:System.Windows.Forms.MenuGlyph> ein Häkchen gezeichnet werden soll, auf die <xref:System.Windows.Forms.MenuItem>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawMenuGlyph">
+      <MemberSignature Language="C#" Value="public static void DrawMenuGlyph (System.Drawing.Graphics graphics, System.Drawing.Rectangle rectangle, System.Windows.Forms.MenuGlyph glyph, System.Drawing.Color foreColor, System.Drawing.Color backColor);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawMenuGlyph(class System.Drawing.Graphics graphics, valuetype System.Drawing.Rectangle rectangle, valuetype System.Windows.Forms.MenuGlyph glyph, valuetype System.Drawing.Color foreColor, valuetype System.Drawing.Color backColor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawMenuGlyph(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.MenuGlyph,System.Drawing.Color,System.Drawing.Color)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="rectangle" Type="System.Drawing.Rectangle" />
+        <Parameter Name="glyph" Type="System.Windows.Forms.MenuGlyph" />
+        <Parameter Name="foreColor" Type="System.Drawing.Color" />
+        <Parameter Name="backColor" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="rectangle">Die <see cref="T:System.Drawing.Rectangle" /> , die die Dimensionen des Symbols darstellt.</param>
+        <param name="glyph">Eines der <see cref="T:System.Windows.Forms.MenuGlyph" /> Werten, die zu zeichnenden Bilds angibt.</param>
+        <param name="foreColor">Die Farbe, ersetzt <see cref="P:System.Drawing.Color.White" /> als Vordergrundfarbe.</param>
+        <param name="backColor">Die Farbe, ersetzt <see cref="P:System.Drawing.Color.Black" /> als die Farbe des Hintergrunds.</param>
+        <summary>Zeichnet das angegebene Menü-Symbol auf ein MenuItem-Steuerelement innerhalb der angegebenen Grenzen und der angegebenen Oberfläche ersetzen <see cref="P:System.Drawing.Color.White" /> mit die angegebene Farbe der <paramref name="backColor" /> Parameter und Ersetzen von <see cref="P:System.Drawing.Color.Black" /> mit der Farbe, die in der angegeben<paramref name="foreColor" /> Parameter.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Ownerdrawing- <xref:System.Windows.Forms.MenuItem> Steuerelemente müssen beim Überprüfen der Eigenschaftswerte, um zu bestimmen, das richtige Symbol gezeichnet werden soll, oder entfernen. Z. B., wenn die <xref:System.Windows.Forms.MenuItem.Checked%2A?displayProperty=nameWithType> -Eigenschaftensatz auf `true`, rufen Sie die <xref:System.Windows.Forms.MenuGlyph.Checkmark> Wert <xref:System.Windows.Forms.MenuGlyph> ein Häkchen gezeichnet werden soll, auf die <xref:System.Windows.Forms.MenuItem>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawMenuGlyph">
+      <MemberSignature Language="C#" Value="public static void DrawMenuGlyph (System.Drawing.Graphics graphics, int x, int y, int width, int height, System.Windows.Forms.MenuGlyph glyph);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawMenuGlyph(class System.Drawing.Graphics graphics, int32 x, int32 y, int32 width, int32 height, valuetype System.Windows.Forms.MenuGlyph glyph) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawMenuGlyph(System.Drawing.Graphics,System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.MenuGlyph)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+        <Parameter Name="glyph" Type="System.Windows.Forms.MenuGlyph" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="x">Die X-Koordinate der oberen linken Ecke des Rechtecks zeichnen.</param>
+        <param name="y">Die y-Koordinate der oberen linken Ecke des Rechtecks zeichnen.</param>
+        <param name="width">Die Breite des Menüsymbols für das.</param>
+        <param name="height">Die Höhe des Menüsymbols für das.</param>
+        <param name="glyph">Eines der <see cref="T:System.Windows.Forms.MenuGlyph" /> Werten, die zu zeichnenden Bilds angibt.</param>
+        <summary>Zeichnet das angegebene Menü-Symbol auf der angegebenen Oberfläche auf eine MenuItem-Steuerelement mit der angegebenen Grenzen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Ownerdrawing- <xref:System.Windows.Forms.MenuItem> Steuerelemente müssen beim Überprüfen der Eigenschaftswerte, um zu bestimmen, das richtige Symbol gezeichnet werden soll, oder entfernen. Z. B., wenn die <xref:System.Windows.Forms.MenuItem.Checked%2A?displayProperty=nameWithType> -Eigenschaftensatz auf "true", rufen Sie die <xref:System.Windows.Forms.MenuGlyph.Checkmark> Wert <xref:System.Windows.Forms.MenuGlyph> ein Häkchen gezeichnet werden soll, auf die <xref:System.Windows.Forms.MenuItem>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawMenuGlyph">
+      <MemberSignature Language="C#" Value="public static void DrawMenuGlyph (System.Drawing.Graphics graphics, int x, int y, int width, int height, System.Windows.Forms.MenuGlyph glyph, System.Drawing.Color foreColor, System.Drawing.Color backColor);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawMenuGlyph(class System.Drawing.Graphics graphics, int32 x, int32 y, int32 width, int32 height, valuetype System.Windows.Forms.MenuGlyph glyph, valuetype System.Drawing.Color foreColor, valuetype System.Drawing.Color backColor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawMenuGlyph(System.Drawing.Graphics,System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.MenuGlyph,System.Drawing.Color,System.Drawing.Color)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+        <Parameter Name="glyph" Type="System.Windows.Forms.MenuGlyph" />
+        <Parameter Name="foreColor" Type="System.Drawing.Color" />
+        <Parameter Name="backColor" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="x">Die X-Koordinate der oberen linken Ecke des Rechtecks zeichnen.</param>
+        <param name="y">Die y-Koordinate der oberen linken Ecke des Rechtecks zeichnen.</param>
+        <param name="width">Die Breite des Menüsymbols für das.</param>
+        <param name="height">Die Höhe des Menüsymbols für das.</param>
+        <param name="glyph">Eines der <see cref="T:System.Windows.Forms.MenuGlyph" /> Werten, die zu zeichnenden Bilds angibt.</param>
+        <param name="foreColor">Die Farbe, ersetzt <see cref="P:System.Drawing.Color.White" /> als Vordergrundfarbe.</param>
+        <param name="backColor">Die Farbe, ersetzt <see cref="P:System.Drawing.Color.Black" /> als die Farbe des Hintergrunds.</param>
+        <summary>Das angegebene Menü-Symbol auf ein MenuItem-Steuerelement in den angegebenen Koordinaten, Höhe und Breite auf der angegebenen Oberfläche gezeichnet ersetzen <see cref="P:System.Drawing.Color.White" /> mit die angegebene Farbe der <paramref name="backColor" /> Parameter und Ersetzen von <see cref="P:System.Drawing.Color.Black" /> mit der Farbe im angegebenen der <paramref name="foreColor" /> Parameter.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn Ownerdrawing- <xref:System.Windows.Forms.MenuItem> Steuerelemente müssen beim Überprüfen der Eigenschaftswerte, um zu bestimmen, das richtige Symbol gezeichnet werden soll, oder entfernen. Z. B., wenn die <xref:System.Windows.Forms.MenuItem.Checked%2A?displayProperty=nameWithType> -Eigenschaftensatz auf `true`, rufen Sie die <xref:System.Windows.Forms.MenuGlyph.Checkmark> Wert <xref:System.Windows.Forms.MenuGlyph> ein Häkchen gezeichnet werden soll, auf die <xref:System.Windows.Forms.MenuItem>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawMixedCheckBox">
+      <MemberSignature Language="C#" Value="public static void DrawMixedCheckBox (System.Drawing.Graphics graphics, System.Drawing.Rectangle rectangle, System.Windows.Forms.ButtonState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawMixedCheckBox(class System.Drawing.Graphics graphics, valuetype System.Drawing.Rectangle rectangle, valuetype System.Windows.Forms.ButtonState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawMixedCheckBox(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.ButtonState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="rectangle" Type="System.Drawing.Rectangle" />
+        <Parameter Name="state" Type="System.Windows.Forms.ButtonState" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="rectangle">Die <see cref="T:System.Drawing.Rectangle" /> , die die Dimensionen des Kontrollkästchens darstellt.</param>
+        <param name="state">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.ButtonState" /> Werten, die den Zustand für das Zeichnen Sie das Kontrollkästchen angibt.</param>
+        <summary>Zeichnet eine drei-Status-Kontrollkästchen-Steuerelement im angegebenen Status, auf der Oberfläche des angegebenen Grafiken und innerhalb der angegebenen Grenzen an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawMixedCheckBox">
+      <MemberSignature Language="C#" Value="public static void DrawMixedCheckBox (System.Drawing.Graphics graphics, int x, int y, int width, int height, System.Windows.Forms.ButtonState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawMixedCheckBox(class System.Drawing.Graphics graphics, int32 x, int32 y, int32 width, int32 height, valuetype System.Windows.Forms.ButtonState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawMixedCheckBox(System.Drawing.Graphics,System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.ButtonState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+        <Parameter Name="state" Type="System.Windows.Forms.ButtonState" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="x">Die X-Koordinate der oberen linken Ecke des Rechtecks zeichnen.</param>
+        <param name="y">Die y-Koordinate der oberen linken Ecke des Rechtecks zeichnen.</param>
+        <param name="width">Die Breite des Kontrollkästchens.</param>
+        <param name="height">Die Höhe des Kontrollkästchens.</param>
+        <param name="state">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.ButtonState" /> Werten, die den Zustand für das Zeichnen Sie das Kontrollkästchen angibt.</param>
+        <summary>Zeichnet eine drei-Status-Kontrollkästchen-Steuerelement im angegebenen Status, auf der Oberfläche des angegebenen Grafiken und innerhalb der angegebenen Grenzen an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawRadioButton">
+      <MemberSignature Language="C#" Value="public static void DrawRadioButton (System.Drawing.Graphics graphics, System.Drawing.Rectangle rectangle, System.Windows.Forms.ButtonState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawRadioButton(class System.Drawing.Graphics graphics, valuetype System.Drawing.Rectangle rectangle, valuetype System.Windows.Forms.ButtonState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawRadioButton(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.ButtonState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="rectangle" Type="System.Drawing.Rectangle" />
+        <Parameter Name="state" Type="System.Windows.Forms.ButtonState" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="rectangle">Die <see cref="T:System.Drawing.Rectangle" /> , die die Dimensionen des Optionsfelds darstellt.</param>
+        <param name="state">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.ButtonState" /> Werten, die den Zustand für das Optionsfeld zeichnen angibt.</param>
+        <summary>Zeichnet ein Optionsfeld-Steuerelement im angegebenen Status, auf der Oberfläche des angegebenen Grafiken und innerhalb der angegebenen Grenzen an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawRadioButton">
+      <MemberSignature Language="C#" Value="public static void DrawRadioButton (System.Drawing.Graphics graphics, int x, int y, int width, int height, System.Windows.Forms.ButtonState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawRadioButton(class System.Drawing.Graphics graphics, int32 x, int32 y, int32 width, int32 height, valuetype System.Windows.Forms.ButtonState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawRadioButton(System.Drawing.Graphics,System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.ButtonState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+        <Parameter Name="state" Type="System.Windows.Forms.ButtonState" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="x">Die X-Koordinate der oberen linken Ecke des Rechtecks zeichnen.</param>
+        <param name="y">Die y-Koordinate der oberen linken Ecke des Rechtecks zeichnen.</param>
+        <param name="width">Die Breite des Optionsfelds.</param>
+        <param name="height">Die Höhe des Optionsfelds.</param>
+        <param name="state">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.ButtonState" /> Werten, die den Zustand für das Optionsfeld zeichnen angibt.</param>
+        <summary>Zeichnet ein Optionsfeld-Steuerelement im angegebenen Status, auf der Oberfläche des angegebenen Grafiken und innerhalb der angegebenen Grenzen an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawReversibleFrame">
+      <MemberSignature Language="C#" Value="public static void DrawReversibleFrame (System.Drawing.Rectangle rectangle, System.Drawing.Color backColor, System.Windows.Forms.FrameStyle style);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawReversibleFrame(valuetype System.Drawing.Rectangle rectangle, valuetype System.Drawing.Color backColor, valuetype System.Windows.Forms.FrameStyle style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawReversibleFrame(System.Drawing.Rectangle,System.Drawing.Color,System.Windows.Forms.FrameStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rectangle" Type="System.Drawing.Rectangle" />
+        <Parameter Name="backColor" Type="System.Drawing.Color" />
+        <Parameter Name="style" Type="System.Windows.Forms.FrameStyle" />
+      </Parameters>
+      <Docs>
+        <param name="rectangle">Die <see cref="T:System.Drawing.Rectangle" /> , die die Abmessungen des Rechtecks Zeichnen in Bildschirmkoordinaten darstellt.</param>
+        <param name="backColor">Die <see cref="T:System.Drawing.Color" /> des Hintergrunds hinter dem Rahmen.</param>
+        <param name="style">Eines der <see cref="T:System.Windows.Forms.FrameStyle" /> Werte, der den Stil des Rahmens angibt.</param>
+        <summary>Zeichnet einen umkehrbaren Rahmen auf dem Bildschirm innerhalb der angegebenen Grenzen, mit der angegebenen Hintergrundfarbe und im angegebenen Status.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `backColor` Parameter wird verwendet, um die Füllfarbe des Frames zu berechnen, sodass es immer vor dem Hintergrund angezeigt wird.  
+  
+ Die Ergebnisse dieser Methode können rückgängig gemacht werden, indem desselben Frames erneut gezeichnet wird. Zeichnen eines Frames verwenden diese Methode ähnelt invertieren einen Bereich des Bildschirms, außer dass sie eine bessere Leistung für eine größere Bandbreite von Farben bereitstellt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.Control.RectangleToScreen%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.Control.PointToScreen%2A?displayProperty=nameWithType>, und die <xref:System.Windows.Forms.ControlPaint.DrawReversibleFrame%2A> Elemente. Um das Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular namens `Form1` mehrere Steuerelemente enthält. Dieses Beispiel benötigen Sie, dass die Ereignishandler, die im Beispiel definiert Mausereignisse verbunden sind.  
+  
+ [!code-cpp[System.Windows.Forms.RectangleToScreen#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.RectangleToScreen/CPP/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.RectangleToScreen#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.RectangleToScreen/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.RectangleToScreen#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.RectangleToScreen/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawReversibleLine">
+      <MemberSignature Language="C#" Value="public static void DrawReversibleLine (System.Drawing.Point start, System.Drawing.Point end, System.Drawing.Color backColor);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawReversibleLine(valuetype System.Drawing.Point start, valuetype System.Drawing.Point end, valuetype System.Drawing.Color backColor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawReversibleLine(System.Drawing.Point,System.Drawing.Point,System.Drawing.Color)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="start" Type="System.Drawing.Point" />
+        <Parameter Name="end" Type="System.Drawing.Point" />
+        <Parameter Name="backColor" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="start">Das Starten <see cref="T:System.Drawing.Point" /> der Zeile, in Bildschirmkoordinaten.</param>
+        <param name="end">Die Endung <see cref="T:System.Drawing.Point" /> der Zeile, in Bildschirmkoordinaten.</param>
+        <param name="backColor">Die <see cref="T:System.Drawing.Color" /> des Hintergrunds hinter der Linie.</param>
+        <summary>Zeichnet eine umkehrbare Linie auf dem Bildschirm innerhalb der angegebenen Start- und Endpunkt und mit der angegebenen Hintergrundfarbe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `backColor` Parameter wird verwendet, um die Füllfarbe der Linie berechnet, sodass es immer vor dem Hintergrund angezeigt wird.  
+  
+ Die Ergebnisse dieser Methode können rückgängig gemacht werden, von der gleichen Zeile erneut gezeichnet wird. Zeichnen einer Linie, die mit dieser Methode ähnelt dem Umkehren eines Bereichs des Bildschirms, außer dass sie eine bessere Leistung für eine größere Bandbreite von Farben bereitstellt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.ControlPaint.DrawReversibleLine%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.Control.PointToScreen%2A?displayProperty=nameWithType> Methoden. Um das Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular. Fügen Sie eine Schaltfläche mit dem Namen `Button3` in das Formular und vergewissern Sie sich an ihren Ereignishandler alle Ereignisse verbunden sind.  
+  
+ [!code-cpp[System.Windows.Forms.ControlPaint1#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ControlPaint1/CPP/form1.cpp#3)]
+ [!code-csharp[System.Windows.Forms.ControlPaint1#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ControlPaint1/CS/form1.cs#3)]
+ [!code-vb[System.Windows.Forms.ControlPaint1#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ControlPaint1/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawScrollButton">
+      <MemberSignature Language="C#" Value="public static void DrawScrollButton (System.Drawing.Graphics graphics, System.Drawing.Rectangle rectangle, System.Windows.Forms.ScrollButton button, System.Windows.Forms.ButtonState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawScrollButton(class System.Drawing.Graphics graphics, valuetype System.Drawing.Rectangle rectangle, valuetype System.Windows.Forms.ScrollButton button, valuetype System.Windows.Forms.ButtonState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawScrollButton(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.ScrollButton,System.Windows.Forms.ButtonState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="rectangle" Type="System.Drawing.Rectangle" />
+        <Parameter Name="button" Type="System.Windows.Forms.ScrollButton" />
+        <Parameter Name="state" Type="System.Windows.Forms.ButtonState" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="rectangle">Die <see cref="T:System.Drawing.Rectangle" /> , die die Dimensionen des Symbols darstellt.</param>
+        <param name="button">Eines der <see cref="T:System.Windows.Forms.ScrollButton" /> Werte, der angibt, den Typ des Bildlaufpfeils gezeichnet werden soll.</param>
+        <param name="state">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.ButtonState" /> Werte, die den Zustand für das Zeichnen der Bildlaufschaltfläche angibt.</param>
+        <summary>Zeichnet die angegebene Bildlaufschaltfläche auf ein Bildlaufleisten-Steuerelement im angegebenen Status auf der Oberfläche des angegebenen Grafiken und innerhalb der angegebenen Grenzen an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawScrollButton">
+      <MemberSignature Language="C#" Value="public static void DrawScrollButton (System.Drawing.Graphics graphics, int x, int y, int width, int height, System.Windows.Forms.ScrollButton button, System.Windows.Forms.ButtonState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawScrollButton(class System.Drawing.Graphics graphics, int32 x, int32 y, int32 width, int32 height, valuetype System.Windows.Forms.ScrollButton button, valuetype System.Windows.Forms.ButtonState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawScrollButton(System.Drawing.Graphics,System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.ScrollButton,System.Windows.Forms.ButtonState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+        <Parameter Name="button" Type="System.Windows.Forms.ScrollButton" />
+        <Parameter Name="state" Type="System.Windows.Forms.ButtonState" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="x">Die X-Koordinate der oberen linken Ecke des Rechtecks zeichnen.</param>
+        <param name="y">Die y-Koordinate der oberen linken Ecke des Rechtecks zeichnen.</param>
+        <param name="width">Die Breite der Bildlaufschaltfläche.</param>
+        <param name="height">Die Höhe der Bildlaufschaltfläche.</param>
+        <param name="button">Eines der <see cref="T:System.Windows.Forms.ScrollButton" /> Werte, der angibt, den Typ des Bildlaufpfeils gezeichnet werden soll.</param>
+        <param name="state">Eine bitweise Kombination der <see cref="T:System.Windows.Forms.ButtonState" /> Werte, die den Zustand für das Zeichnen der Bildlaufschaltfläche angibt.</param>
+        <summary>Zeichnet die angegebene Bildlaufschaltfläche auf ein Bildlaufleisten-Steuerelement im angegebenen Status auf der Oberfläche des angegebenen Grafiken und innerhalb der angegebenen Grenzen an.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawSelectionFrame">
+      <MemberSignature Language="C#" Value="public static void DrawSelectionFrame (System.Drawing.Graphics graphics, bool active, System.Drawing.Rectangle outsideRect, System.Drawing.Rectangle insideRect, System.Drawing.Color backColor);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawSelectionFrame(class System.Drawing.Graphics graphics, bool active, valuetype System.Drawing.Rectangle outsideRect, valuetype System.Drawing.Rectangle insideRect, valuetype System.Drawing.Color backColor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawSelectionFrame(System.Drawing.Graphics,System.Boolean,System.Drawing.Rectangle,System.Drawing.Rectangle,System.Drawing.Color)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="active" Type="System.Boolean" />
+        <Parameter Name="outsideRect" Type="System.Drawing.Rectangle" />
+        <Parameter Name="insideRect" Type="System.Drawing.Rectangle" />
+        <Parameter Name="backColor" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="active">
+          <see langword="true" />um den Auswahlrahmen im Zustand "aktiv" zu zeichnen. andernfalls <see langword="false" />.</param>
+        <param name="outsideRect">Die <see cref="T:System.Drawing.Rectangle" /> , die die äußeren Begrenzung den Auswahlrahmen darstellt.</param>
+        <param name="insideRect">Die <see cref="T:System.Drawing.Rectangle" /> , das die innere Begrenzung den Auswahlrahmen darstellt.</param>
+        <param name="backColor">Die <see cref="T:System.Drawing.Color" /> des Hintergrunds hinter dem Rahmen.</param>
+        <summary>Zeichnet einen Rahmen für die standardmäßige Auswahl im angegebenen Status, in der angegebenen Grafiken angezeigt, mit der angegebenen inneren und äußeren Dimensionen, und klicken Sie mit der angegebenen Hintergrundfarbe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Auswahl Frame handelt es sich um einen Rahmen, der um eine ausgewählte Komponente zur Entwurfszeit gezeichnet wird.  
+  
+ Die `backColor` Parameter wird verwendet, um die Füllfarbe des Frames zu berechnen, sodass es immer vor dem Hintergrund angezeigt wird.  
+  
+ Wenn die `active` Parametersatz auf `true`, der Auswahlrahmen wird gezeichnet, als eine Reihe von Schraffur Markierungen gibt an, dass die Komponente aktiviert wurde; andernfalls der Auswahlrahmen gezeichnet wird, mit einer gepunkteten Muster oder nichts, abhängig von der Implementierung .  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawSizeGrip">
+      <MemberSignature Language="C#" Value="public static void DrawSizeGrip (System.Drawing.Graphics graphics, System.Drawing.Color backColor, System.Drawing.Rectangle bounds);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawSizeGrip(class System.Drawing.Graphics graphics, valuetype System.Drawing.Color backColor, valuetype System.Drawing.Rectangle bounds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawSizeGrip(System.Drawing.Graphics,System.Drawing.Color,System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="backColor" Type="System.Drawing.Color" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="backColor">Die <see cref="T:System.Drawing.Color" /> des Hintergrunds verwendet, um die Farben des Größenziehpunkts zu bestimmen.</param>
+        <param name="bounds">Die <see cref="T:System.Drawing.Rectangle" /> , die die Dimensionen des Größenziehpunkts darstellt.</param>
+        <summary>Zeichnet einen Größenziehpunkt auf der Oberfläche des angegebenen Grafiken in einem Formular mit dem angegebenen Grenzen und Hintergrundfarbe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `backColor` Parameter wird verwendet, um die Farbe des Größenziehpunkts berechnet, sodass es immer vor dem Hintergrund angezeigt wird.  
+  
+ Wenn Sie ein beträchtliche Anzahl an Fenster definieren, können Sie einen Größenziehpunkt einschließen. Ein Größenziehpunkt handelt es sich um eine spezielle-Handle, das dem Benutzer ermöglicht, ändern Sie die Größe eines Fensters.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawSizeGrip">
+      <MemberSignature Language="C#" Value="public static void DrawSizeGrip (System.Drawing.Graphics graphics, System.Drawing.Color backColor, int x, int y, int width, int height);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawSizeGrip(class System.Drawing.Graphics graphics, valuetype System.Drawing.Color backColor, int32 x, int32 y, int32 width, int32 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawSizeGrip(System.Drawing.Graphics,System.Drawing.Color,System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="backColor" Type="System.Drawing.Color" />
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="backColor">Die <see cref="T:System.Drawing.Color" /> des Hintergrunds verwendet, um die Farben des Größenziehpunkts zu bestimmen.</param>
+        <param name="x">Die X-Koordinate der oberen linken Ecke des Größenziehpunkts.</param>
+        <param name="y">Die y-Koordinate der oberen linken Ecke des Größenziehpunkts.</param>
+        <param name="width">Die Breite des Größenziehpunkts.</param>
+        <param name="height">Die Höhe des Größenziehpunkts.</param>
+        <summary>Zeichnet einen Größenziehpunkt auf der Oberfläche des angegebenen Grafiken in einem Formular mit dem angegebenen Grenzen und Hintergrundfarbe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `backColor` Parameter wird verwendet, um die Farbe des Größenziehpunkts berechnet, sodass es immer vor dem Hintergrund angezeigt wird.  
+  
+ Wenn Sie ein beträchtliche Anzahl an Fenster definieren, können Sie einen Größenziehpunkt einschließen. Ein Größenziehpunkt handelt es sich um eine spezielle-Handle, das dem Benutzer ermöglicht, ändern Sie die Größe eines Fensters.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawStringDisabled">
+      <MemberSignature Language="C#" Value="public static void DrawStringDisabled (System.Drawing.Graphics graphics, string s, System.Drawing.Font font, System.Drawing.Color color, System.Drawing.RectangleF layoutRectangle, System.Drawing.StringFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawStringDisabled(class System.Drawing.Graphics graphics, string s, class System.Drawing.Font font, valuetype System.Drawing.Color color, valuetype System.Drawing.RectangleF layoutRectangle, class System.Drawing.StringFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawStringDisabled(System.Drawing.Graphics,System.String,System.Drawing.Font,System.Drawing.Color,System.Drawing.RectangleF,System.Drawing.StringFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="s" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="color" Type="System.Drawing.Color" />
+        <Parameter Name="layoutRectangle" Type="System.Drawing.RectangleF" />
+        <Parameter Name="format" Type="System.Drawing.StringFormat" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="s">Das zu zeichnende Zeichenfolge.</param>
+        <param name="font">Die <see cref="T:System.Drawing.Font" /> die Zeichenfolge mit gezeichnet werden soll.</param>
+        <param name="color">Die <see cref="T:System.Drawing.Color" /> des Hintergrunds hinter der Zeichenfolge.</param>
+        <param name="layoutRectangle">Die <see cref="T:System.Drawing.RectangleF" /> , die die Dimensionen der Zeichenfolge darstellt.</param>
+        <param name="format">Die <see cref="T:System.Drawing.StringFormat" /> Zuweisen der Zeichenfolge.</param>
+        <summary>Zeichnet die angegebene Zeichenfolge in einem deaktivierten Zustand auf den angegebenen Grafikoberfläche; innerhalb der angegebenen Grenzen; und in der angegebenen Schriftart, Farbe und Format.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawStringDisabled">
+      <MemberSignature Language="C#" Value="public static void DrawStringDisabled (System.Drawing.IDeviceContext dc, string s, System.Drawing.Font font, System.Drawing.Color color, System.Drawing.Rectangle layoutRectangle, System.Windows.Forms.TextFormatFlags format);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawStringDisabled(class System.Drawing.IDeviceContext dc, string s, class System.Drawing.Font font, valuetype System.Drawing.Color color, valuetype System.Drawing.Rectangle layoutRectangle, valuetype System.Windows.Forms.TextFormatFlags format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawStringDisabled(System.Drawing.IDeviceContext,System.String,System.Drawing.Font,System.Drawing.Color,System.Drawing.Rectangle,System.Windows.Forms.TextFormatFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dc" Type="System.Drawing.IDeviceContext" />
+        <Parameter Name="s" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="color" Type="System.Drawing.Color" />
+        <Parameter Name="layoutRectangle" Type="System.Drawing.Rectangle" />
+        <Parameter Name="format" Type="System.Windows.Forms.TextFormatFlags" />
+      </Parameters>
+      <Docs>
+        <param name="dc">GDI-basierten <see cref="T:System.Windows.Forms.TextRenderer" />.</param>
+        <param name="s">Das zu zeichnende Zeichenfolge.</param>
+        <param name="font">Die <see cref="T:System.Drawing.Font" /> die Zeichenfolge mit gezeichnet werden soll.</param>
+        <param name="color">Die <see cref="T:System.Drawing.Color" /> des Hintergrunds hinter der Zeichenfolge.</param>
+        <param name="layoutRectangle">Die <see cref="T:System.Drawing.RectangleF" /> , die die Dimensionen der Zeichenfolge darstellt.</param>
+        <param name="format">Die <see cref="T:System.Drawing.StringFormat" /> Zuweisen der Zeichenfolge.</param>
+        <summary>Zeichnet die angegebene Zeichenfolge in einem deaktivierten Status in der angegebenen Grafiken angezeigt, die innerhalb der angegebenen Grenzen, und klicken Sie in der angegebenen Schriftart, Farbe und Format, mit dem angegebenen GDI-basierten <see cref="T:System.Windows.Forms.TextRenderer" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawVisualStyleBorder">
+      <MemberSignature Language="C#" Value="public static void DrawVisualStyleBorder (System.Drawing.Graphics graphics, System.Drawing.Rectangle bounds);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawVisualStyleBorder(class System.Drawing.Graphics graphics, valuetype System.Drawing.Rectangle bounds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.DrawVisualStyleBorder(System.Drawing.Graphics,System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">Die <see cref="T:System.Drawing.Graphics" /> auf gezeichnet werden soll.</param>
+        <param name="bounds">Die <see cref="T:System.Drawing.Rectangle" /> , die die Dimensionen des Rahmens darstellt.</param>
+        <summary>Zeichnet einen Rahmen im Stil für deaktivierte Elemente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillReversibleRectangle">
+      <MemberSignature Language="C#" Value="public static void FillReversibleRectangle (System.Drawing.Rectangle rectangle, System.Drawing.Color backColor);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void FillReversibleRectangle(valuetype System.Drawing.Rectangle rectangle, valuetype System.Drawing.Color backColor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.FillReversibleRectangle(System.Drawing.Rectangle,System.Drawing.Color)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rectangle" Type="System.Drawing.Rectangle" />
+        <Parameter Name="backColor" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="rectangle">Die <see cref="T:System.Drawing.Rectangle" /> , die die Abmessungen des Rechtecks ausfüllen, in Bildschirmkoordinaten darstellt.</param>
+        <param name="backColor">Die <see cref="T:System.Drawing.Color" /> des Hintergrunds hinter der Füllung.</param>
+        <summary>Zeichnet ein ausgefülltes Rechteck umkehrbare auf dem Bildschirm an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `backColor` Parameter wird verwendet, um die Füllfarbe des Rechtecks berechnet, sodass es immer vor dem Hintergrund angezeigt wird.  
+  
+ Die Ergebnisse dieser Methode können rückgängig gemacht werden, indem das gleiche Rechteck erneut gezeichnet wird. Zeichnen ein Rechteck, das mit dieser Methode ähnelt dem Umkehren eines Bereichs des Bildschirms, außer dass sie eine bessere Leistung für eine größere Bandbreite von Farben bereitstellt.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.ControlPaint.FillReversibleRectangle%2A> Methode. Um das Beispiel auszuführen, fügen Sie den folgenden Code in ein Formular. Fügen Sie eine Schaltfläche mit dem Namen `Button2` in das Formular und vergewissern Sie sich an ihren Ereignishandler alle Ereignisse verbunden sind.  
+  
+ [!code-cpp[System.Windows.Forms.ControlPaint1#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ControlPaint1/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ControlPaint1#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ControlPaint1/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ControlPaint1#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ControlPaint1/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Light">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Color Light (System.Drawing.Color baseColor);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Color Light(valuetype System.Drawing.Color baseColor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.Light(System.Drawing.Color)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseColor" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="baseColor">Die <see cref="T:System.Drawing.Color" /> aufzuhellende.</param>
+        <summary>Erstellt ein neues Objekt für die helle Farbe für das Steuerelement aus der angegebenen Farbe.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Color" /> , die die helle Farbe für das Steuerelement darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das angegebene <xref:System.Drawing.Color> ist eines der der <xref:System.Drawing.SystemColors>, konvertiert die Farbe einer <xref:System.Drawing.SystemColors.ControlLight%2A?displayProperty=nameWithType> Farbe; andernfalls wird die Farbe der Helligkeitswert verringert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Light">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Color Light (System.Drawing.Color baseColor, float percOfLightLight);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Color Light(valuetype System.Drawing.Color baseColor, float32 percOfLightLight) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.Light(System.Drawing.Color,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseColor" Type="System.Drawing.Color" />
+        <Parameter Name="percOfLightLight" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="baseColor">Die <see cref="T:System.Drawing.Color" /> aufzuhellende.</param>
+        <param name="percOfLightLight">Der Prozentsatz, um den angegebenen crashes <see cref="T:System.Drawing.Color" />.</param>
+        <summary>Erstellt ein neues Objekt für die helle Farbe für das Steuerelement aus der angegebenen Farbe und ihn durch den angegebenen Prozentsatz heller.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Color" /> , die die helle Farbe für das Steuerelement darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das angegebene <xref:System.Drawing.Color> ist eines der der <xref:System.Drawing.SystemColors>, konvertiert die Farbe einer <xref:System.Drawing.SystemColors.ControlLight%2A?displayProperty=nameWithType> Farbe; andernfalls wird die Farbe der Helligkeitswert verringert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LightLight">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Color LightLight (System.Drawing.Color baseColor);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Color LightLight(valuetype System.Drawing.Color baseColor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlPaint.LightLight(System.Drawing.Color)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseColor" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="baseColor">Die <see cref="T:System.Drawing.Color" /> aufzuhellende.</param>
+        <summary>Erstellt ein neues Objekt für die helle Farbe für das Steuerelement aus der angegebenen Farbe.</summary>
+        <returns>Ein <see cref="T:System.Drawing.Color" /> , die die helle Farbe für das Steuerelement darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das angegebene <xref:System.Drawing.Color> ist eines der der <xref:System.Drawing.SystemColors>, konvertiert die Farbe der <xref:System.Drawing.SystemColors.ControlLightLight%2A?displayProperty=nameWithType> Farbe; andernfalls wird die Farbe der Helligkeitswert erhöht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

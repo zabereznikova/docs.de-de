@@ -1,0 +1,404 @@
+<Type Name="FontStretch" FullName="System.Windows.FontStretch">
+  <TypeSignature Language="C#" Value="public struct FontStretch : IFormattable" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit FontStretch extends System.ValueType implements class System.IFormattable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.FontStretch" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IFormattable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.FontStretchConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Beschreibt den Grad, zu dem eine Schriftart gestreckt wurde, im Vergleich zu der normale Größenverhältnis diese Schriftart.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein Font-Stretch beschreibt den Grad, zu dem Form einer Schriftart aus der normale Größenverhältnis verzerrt wird also in der ursprünglichen Breite zu Höhenverhältnis für die Symbole in der Schriftart angegeben.  
+  
+ Die <xref:System.Windows.FontStretches> Werte entsprechen den `usWidthClass` -Definition in der [!INCLUDE[TLA2#tla_opentype](~/includes/tla2sharptla-opentype-md.md)] Spezifikation. Die `usWidthClass` stellt eine ganze Zahl zwischen 1 und 9 – niedrigere Werte geben geringere Schriftbreiten; höhere Werte geben größeren Breite.  
+  
+|Font-stretch|usWidthClass|% Normal|  
+|------------------|------------------|-----------------|  
+|<xref:System.Windows.FontStretches.UltraCondensed%2A>|1|50.0%|  
+|<xref:System.Windows.FontStretches.ExtraCondensed%2A>|2|62.5%|  
+|<xref:System.Windows.FontStretches.Condensed%2A>|3|75.0%|  
+|<xref:System.Windows.FontStretches.SemiCondensed%2A>|4|87.5%|  
+|<xref:System.Windows.FontStretches.Medium%2A>|5|100.0%|  
+|<xref:System.Windows.FontStretches.SemiExpanded%2A>|6|112.5%|  
+|<xref:System.Windows.FontStretches.Expanded%2A>|7|125.0%|  
+|<xref:System.Windows.FontStretches.ExtraExpanded%2A>|8|150.0%|  
+|<xref:System.Windows.FontStretches.UltraExpanded%2A>|9|200.0%|  
+  
+ Weitere Informationen zu den [!INCLUDE[TLA#tla_opentype](~/includes/tlasharptla-opentype-md.md)] `usWidthClass` Wert, finden Sie unter der ["Schriftart Dateitabellen"](http://www.microsoft.com/typography/otspec/otff.htm) im Abschnitt der [!INCLUDE[TLA2#tla_opentype](~/includes/tla2sharptla-opentype-md.md)] Spezifikation.  
+  
+<a name="xamlAttributeUsage_FontWeight"></a>   
+## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
+  
+```  
+<object fontStretchesProperty="fontStretchesValue"/>  
+```  
+  
+<a name="xamlValues_FontWeight"></a>   
+## <a name="xaml-values"></a>XAML-Werte  
+ *fontStretchesValue*  
+ Ein <xref:System.Windows.FontStretches> Wert als die Namenszeichenfolge, z. B. "Schmal", "Normal" oder "Erweitert".  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Compare">
+      <MemberSignature Language="C#" Value="public static int Compare (System.Windows.FontStretch left, System.Windows.FontStretch right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 Compare(valuetype System.Windows.FontStretch left, valuetype System.Windows.FontStretch right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontStretch.Compare(System.Windows.FontStretch,System.Windows.FontStretch)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Windows.FontStretch" />
+        <Parameter Name="right" Type="System.Windows.FontStretch" />
+      </Parameters>
+      <Docs>
+        <param name="left">Das erste zu vergleichende <see cref="T:System.Windows.FontStretch" />-Objekt.</param>
+        <param name="right">Das zweite zu vergleichende <see cref="T:System.Windows.FontStretch" />-Objekt.</param>
+        <summary>Vergleicht zwei Instanzen von <see cref="T:System.Windows.FontStretch" /> Objekte.</summary>
+        <returns>Ein <see cref="T:System.Int32" /> -Wert, der die Beziehung zwischen den beiden Instanzen des <see cref="T:System.Windows.FontStretch" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn der Rückgabewert ist kleiner als 0 (null), `left` ist kleiner als `right`. Wenn dieser Wert 0 (null) ist, gibt es an, dass beide Operanden gleich sind. Wenn der Wert größer als 0 (null) ist, bedeutet dies, dass `left` ist größer als `right`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontStretch.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Die Instanz von der <see cref="T:System.Object" /> auf Gleichheit verglichen werden soll.</param>
+        <summary>Vergleicht eine <see cref="T:System.Object" /> mit dem aktuellen <see cref="T:System.Windows.FontStretch" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />Wenn zwei Instanzen gleich sind. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Windows.FontStretch obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(valuetype System.Windows.FontStretch obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontStretch.Equals(System.Windows.FontStretch)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Windows.FontStretch" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Die Instanz von der <see cref="T:System.Windows.FontStretch" /> Objekt auf Gleichheit verglichen werden soll.</param>
+        <summary>Vergleicht eine <see cref="T:System.Windows.FontStretch" /> Objekt mit dem aktuellen <see cref="T:System.Windows.FontStretch" /> Objekt.</summary>
+        <returns>
+          <see langword="true" />Wenn zwei Instanzen gleich sind. andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromOpenTypeStretch">
+      <MemberSignature Language="C#" Value="public static System.Windows.FontStretch FromOpenTypeStretch (int stretchValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.FontStretch FromOpenTypeStretch(int32 stretchValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontStretch.FromOpenTypeStretch(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontStretch</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stretchValue" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="stretchValue">Eine ganze Zahl zwischen 1 und 9, die in der UsStretchValue-Definition entspricht der [!INCLUDE[TLA2#tla_opentype](~/includes/tla2sharptla-opentype-md.md)] Spezifikation.</param>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Windows.FontStretch" /> , entspricht die [!INCLUDE[TLA#tla_opentype](~/includes/tlasharptla-opentype-md.md)] UsStretchClass-Wert.</summary>
+        <returns>Eine neue Instanz von <see cref="T:System.Windows.FontStretch" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontStretch.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Hashcode für dieses Objekt ab.</summary>
+        <returns>Ein <see cref="T:System.Int32" /> Wert, der den Hashcode für das Objekt darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.FontStretch left, System.Windows.FontStretch right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Windows.FontStretch left, valuetype System.Windows.FontStretch right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontStretch.op_Equality(System.Windows.FontStretch,System.Windows.FontStretch)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Windows.FontStretch" />
+        <Parameter Name="right" Type="System.Windows.FontStretch" />
+      </Parameters>
+      <Docs>
+        <param name="left">Erste Instanz des <see cref="T:System.Windows.FontStretch" /> , verglichen werden soll.</param>
+        <param name="right">Zweite Instanz von <see cref="T:System.Windows.FontStretch" /> , verglichen werden soll.</param>
+        <summary>Vergleicht zwei Instanzen von <see cref="T:System.Windows.FontStretch" /> auf Gleichheit.</summary>
+        <returns>
+          <see langword="true" />Wenn das angegebene <see cref="T:System.Windows.FontStretch" /> Objekte sind gleich sind, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_GreaterThan">
+      <MemberSignature Language="C#" Value="public static bool operator &gt; (System.Windows.FontStretch left, System.Windows.FontStretch right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_GreaterThan(valuetype System.Windows.FontStretch left, valuetype System.Windows.FontStretch right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontStretch.op_GreaterThan(System.Windows.FontStretch,System.Windows.FontStretch)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Windows.FontStretch" />
+        <Parameter Name="right" Type="System.Windows.FontStretch" />
+      </Parameters>
+      <Docs>
+        <param name="left">Erste Instanz des <see cref="T:System.Windows.FontStretch" /> , verglichen werden soll.</param>
+        <param name="right">Zweite Instanz von <see cref="T:System.Windows.FontStretch" /> , verglichen werden soll.</param>
+        <summary>Wertet zwei Instanzen von <see cref="T:System.Windows.FontStretch" /> zu bestimmen, ob eine Instanz größer als das andere ist.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="left" /> größer als <paramref name="right" /> ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_GreaterThanOrEqual">
+      <MemberSignature Language="C#" Value="public static bool operator &gt;= (System.Windows.FontStretch left, System.Windows.FontStretch right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_GreaterThanOrEqual(valuetype System.Windows.FontStretch left, valuetype System.Windows.FontStretch right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontStretch.op_GreaterThanOrEqual(System.Windows.FontStretch,System.Windows.FontStretch)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Windows.FontStretch" />
+        <Parameter Name="right" Type="System.Windows.FontStretch" />
+      </Parameters>
+      <Docs>
+        <param name="left">Die erste zu vergleichende Instanz von <see cref="T:System.Windows.FontStretch" />.</param>
+        <param name="right">Die zweite zu vergleichende Instanz von <see cref="T:System.Windows.FontStretch" />.</param>
+        <summary>Wertet zwei Instanzen von <see cref="T:System.Windows.FontStretch" /> zu bestimmen, ob eine Instanz größer als oder gleich dem anderem ist.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="left" /> größer oder gleich <paramref name="right" /> ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.FontStretch left, System.Windows.FontStretch right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Windows.FontStretch left, valuetype System.Windows.FontStretch right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontStretch.op_Inequality(System.Windows.FontStretch,System.Windows.FontStretch)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Windows.FontStretch" />
+        <Parameter Name="right" Type="System.Windows.FontStretch" />
+      </Parameters>
+      <Docs>
+        <param name="left">Die erste zu vergleichende Instanz von <see cref="T:System.Windows.FontStretch" />.</param>
+        <param name="right">Die zweite zu vergleichende Instanz von <see cref="T:System.Windows.FontStretch" />.</param>
+        <summary>Wertet zwei Instanzen von <see cref="T:System.Windows.FontStretch" /> Ungleichheit zu bestimmen.</summary>
+        <returns>
+          <see langword="false" />, wenn <paramref name="left" /> und <paramref name="right" /> gleich sind, andernfalls <see langword="true" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_LessThan">
+      <MemberSignature Language="C#" Value="public static bool operator &lt; (System.Windows.FontStretch left, System.Windows.FontStretch right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_LessThan(valuetype System.Windows.FontStretch left, valuetype System.Windows.FontStretch right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontStretch.op_LessThan(System.Windows.FontStretch,System.Windows.FontStretch)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Windows.FontStretch" />
+        <Parameter Name="right" Type="System.Windows.FontStretch" />
+      </Parameters>
+      <Docs>
+        <param name="left">Die erste zu vergleichende Instanz von <see cref="T:System.Windows.FontStretch" />.</param>
+        <param name="right">Die zweite zu vergleichende Instanz von <see cref="T:System.Windows.FontStretch" />.</param>
+        <summary>Wertet zwei Instanzen von <see cref="T:System.Windows.FontStretch" /> zu bestimmen, ob eine Instanz, die kleiner als das andere ist.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="left" /> kleiner als <paramref name="right" /> ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_LessThanOrEqual">
+      <MemberSignature Language="C#" Value="public static bool operator &lt;= (System.Windows.FontStretch left, System.Windows.FontStretch right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_LessThanOrEqual(valuetype System.Windows.FontStretch left, valuetype System.Windows.FontStretch right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontStretch.op_LessThanOrEqual(System.Windows.FontStretch,System.Windows.FontStretch)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Windows.FontStretch" />
+        <Parameter Name="right" Type="System.Windows.FontStretch" />
+      </Parameters>
+      <Docs>
+        <param name="left">Die erste zu vergleichende Instanz von <see cref="T:System.Windows.FontStretch" />.</param>
+        <param name="right">Die zweite zu vergleichende Instanz von <see cref="T:System.Windows.FontStretch" />.</param>
+        <summary>Wertet zwei Instanzen von <see cref="T:System.Windows.FontStretch" /> zu bestimmen, ob eine Instanz kleiner oder gleich dem anderen ist.</summary>
+        <returns>
+          <see langword="true" />, wenn <paramref name="left" /> kleiner oder gleich <paramref name="right" /> ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IFormattable.ToString">
+      <MemberSignature Language="C#" Value="string IFormattable.ToString (string format, IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.IFormattable.ToString(string format, class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontStretch.System#IFormattable#ToString(System.String,System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="format">Die <see cref="T:System.String" /> das zu verwendende Format angeben.  
+  
+ - oder -   
+  
+ <see langword="null" />Verwenden Sie das Standardformat für den Typ des definiert die <see cref="T:System.IFormattable" /> Implementierung.</param>
+        <param name="provider">Die <see cref="T:System.IFormatProvider" /> zum Formatieren des Werts verwenden.  
+  
+ - oder -   
+  
+ <see langword="null" />um die Zahlenformatinformationen aus dem aktuellen Gebietsschema des Betriebssystems abzurufen.</param>
+        <summary>Eine Beschreibung dieses Elements finden Sie unter <see cref="M:System.IFormattable.ToString(System.String,System.IFormatProvider)" />.</summary>
+        <returns>Ein <see cref="T:System.String" /> mit dem Wert der aktuellen Instanz im angegebenen Format.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToOpenTypeStretch">
+      <MemberSignature Language="C#" Value="public int ToOpenTypeStretch ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 ToOpenTypeStretch() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontStretch.ToOpenTypeStretch" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Wert darstellt, die die [!INCLUDE[TLA#tla_opentype](~/includes/tlasharptla-opentype-md.md)] <c>UsStretchClass</c> dafür <see cref="T:System.Windows.FontStretch" /> Objekt.</summary>
+        <returns>Eine ganze Zahl zwischen 1 und 999, die entspricht der <c>UsStretchClass</c> -Definition in der [!INCLUDE[TLA2#tla_opentype](~/includes/tla2sharptla-opentype-md.md)] Spezifikation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontStretch.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine <see cref="T:System.String" /> Darstellung des aktuellen <see cref="T:System.Windows.FontStretch" /> -Objekt auf Grundlage der aktuellen Kultur.</summary>
+        <returns>Ein <see cref="T:System.String" /> Wert Darstellung des Objekts.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

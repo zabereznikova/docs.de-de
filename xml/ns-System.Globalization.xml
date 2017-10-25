@@ -1,0 +1,19 @@
+<Namespace Name="System.Globalization">
+  <Docs>
+    <summary>Der <see cref="N:System.Globalization" />-Namespace enthält Klassen, mit denen kulturbezogene Informationen definiert werden. Hierzu zählen die Sprache, das Land/die Region, die verwendeten Kalender, das Formatierungsmuster für Datumsangaben, Währungen und Zahlen sowie die Sortierreihenfolge für Zeichenfolgen. Diese Klassen sind hilfreich beim Schreiben globalisierter (internationalisierter) Anwendungen. Klassen wie <see cref="T:System.Globalization.StringInfo" /> und <see cref="T:System.Globalization.TextInfo" /> bieten fortgeschrittene Globalisierungsfunktionen, beispielsweise Unterstützung von Ersatzzeichen und Verarbeitung von Textelementen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die folgenden MSDN-Blogs enthalten Diskussionen zu den <xref:System.Globalization> Namespace sowie entsprechende Klassen:  
+  
+-   [http://Blogs.msdn.com/shawnste/](http://go.microsoft.com/fwlink/?LinkId=160948)  
+  
+-   [http://Blogs.msdn.com/kierans/](http://go.microsoft.com/fwlink/?LinkId=160951)  
+  
+ Beachten Sie, dass zwei Typen in diesem Namespace <xref:System.Globalization.CultureAndRegionInfoBuilder> und <xref:System.Globalization.CultureAndRegionModifiers>, befinden sich in einer Assembly namens sysglobl.dll. Erfolgreich Kompilieren von Code, diese Typen verwendet, erfordert, dass Sie einen Verweis auf sysglobl.dll hinzufügen.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

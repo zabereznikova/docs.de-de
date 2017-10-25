@@ -1,0 +1,1228 @@
+<Type Name="SR" FullName="System.Web.UI.MobileControls.Adapters.SR">
+  <TypeSignature Language="C#" Value="public class SR" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SR extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.Adapters.SR" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine automatisch generierte Ressourcenklasse dar. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SR ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.SR.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.MobileControls.Adapters.SR" />-Klasse. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalendarAdapterFirstPrompt">
+      <MemberSignature Language="C#" Value="public const string CalendarAdapterFirstPrompt;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string CalendarAdapterFirstPrompt" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.SR.CalendarAdapterFirstPrompt" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zeichenfolge, die den Text für die erste Aufforderung enthält. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Zeichenfolge ist "Kalender".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalendarAdapterOptionChooseDate">
+      <MemberSignature Language="C#" Value="public const string CalendarAdapterOptionChooseDate;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string CalendarAdapterOptionChooseDate" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.SR.CalendarAdapterOptionChooseDate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zeichenfolge, die den Text, der den Benutzer auffordert enthält, ein Datum auswählen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Zeichenfolge ist "Wählen Sie ein Datum".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalendarAdapterOptionChooseMonth">
+      <MemberSignature Language="C#" Value="public const string CalendarAdapterOptionChooseMonth;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string CalendarAdapterOptionChooseMonth" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.SR.CalendarAdapterOptionChooseMonth" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zeichenfolge, die den Text, der den Benutzer auffordert enthält, einen Monat auswählen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Zeichenfolge ist "Choose a Month".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalendarAdapterOptionChooseWeek">
+      <MemberSignature Language="C#" Value="public const string CalendarAdapterOptionChooseWeek;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string CalendarAdapterOptionChooseWeek" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.SR.CalendarAdapterOptionChooseWeek" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zeichenfolge, die den Text enthält fordert den Benutzer zur Auswahl einer Woche. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Zeichenfolge ist "Choose Woche".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalendarAdapterOptionEra">
+      <MemberSignature Language="C#" Value="public const string CalendarAdapterOptionEra;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string CalendarAdapterOptionEra" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.SR.CalendarAdapterOptionEra" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zeichenfolge, die den Text enthält fordert den Benutzer um einen Zeitraum auszuwählen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Zeichenfolge ist "Wählen Sie einen Zeitraum:".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalendarAdapterOptionPrompt">
+      <MemberSignature Language="C#" Value="public const string CalendarAdapterOptionPrompt;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string CalendarAdapterOptionPrompt" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.SR.CalendarAdapterOptionPrompt" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zeichenfolge, die den Text enthält fordert den Benutzer eine Option auswählen. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Zeichenfolge ist "Wählen Sie eine Option:".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalendarAdapterOptionType">
+      <MemberSignature Language="C#" Value="public const string CalendarAdapterOptionType;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string CalendarAdapterOptionType" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.SR.CalendarAdapterOptionType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zeichenfolge, die den Text enthält fordert den Benutzer ein Datum eingeben. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Zeichenfolge ist "Type ein Datum".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalendarAdapterTextBoxErrorMessage">
+      <MemberSignature Language="C#" Value="public const string CalendarAdapterTextBoxErrorMessage;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string CalendarAdapterTextBoxErrorMessage" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.SR.CalendarAdapterTextBoxErrorMessage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zeichenfolge, die als eine Fehlermeldung verwendet werden soll, wenn das eingegebene Datum nicht korrekt war. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Zeichenfolge ist "das eingegebene Datum war falsch".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChtmlImageAdapterDecimalCodeExpectedAfterGroupChar">
+      <MemberSignature Language="C#" Value="public const string ChtmlImageAdapterDecimalCodeExpectedAfterGroupChar;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ChtmlImageAdapterDecimalCodeExpectedAfterGroupChar" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.SR.ChtmlImageAdapterDecimalCodeExpectedAfterGroupChar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zeichenfolge, die als eine Fehlermeldung verwendet werden soll, wenn der erwartete Dezimalcode nicht vorhanden ist. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Zeichenfolge ist "Dezimalcode nach der Gruppe Bild Klammer erwartet wird".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChtmlPageAdapterRedirectLinkLabel">
+      <MemberSignature Language="C#" Value="public const string ChtmlPageAdapterRedirectLinkLabel;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ChtmlPageAdapterRedirectLinkLabel" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.SR.ChtmlPageAdapterRedirectLinkLabel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zeichenfolge, die den Text für die Bezeichnung des Umleitungslinks bereitstellt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Zeichenfolge ist "Continue".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChtmlPageAdapterRedirectPageContent">
+      <MemberSignature Language="C#" Value="public const string ChtmlPageAdapterRedirectPageContent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ChtmlPageAdapterRedirectPageContent" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.SR.ChtmlPageAdapterRedirectPageContent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zeichenfolge, enthält die Meldung angezeigt wird, vor einem Link, der den Browser zu einer anderen Seite umleitet. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Zeichenfolge ist "den folgenden Link, um den Vorgang fortzusetzen klicken Sie auf".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlAdapterBasePagePropertyShouldNotBeSet">
+      <MemberSignature Language="C#" Value="public const string ControlAdapterBasePagePropertyShouldNotBeSet;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ControlAdapterBasePagePropertyShouldNotBeSet" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.SR.ControlAdapterBasePagePropertyShouldNotBeSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zeichenfolge, die als eine Fehlermeldung verwendet werden soll, wenn versucht wird, legen Sie die <see cref="P:System.Web.UI.MobileControls.Adapters.ControlAdapter.Page" /> Eigenschaft von einem <see cref="T:System.Web.UI.MobileControls.Adapters.ControlAdapter" /> Objekt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Zeichenfolge ist "Set-Methode der Seite"-Eigenschaft nicht erwartet wird, direkt aufgerufen werden.  Sie sollten von Unterklassen überschrieben werden".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormAdapterMultiControlsAttemptSecondaryUI">
+      <MemberSignature Language="C#" Value="public const string FormAdapterMultiControlsAttemptSecondaryUI;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string FormAdapterMultiControlsAttemptSecondaryUI" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.SR.FormAdapterMultiControlsAttemptSecondaryUI" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zeichenfolge, die als eine Fehlermeldung verwendet werden soll, wenn mehrere Steuerelemente festgelegt werden, für die Anzeige einer <see cref="T:System.Web.UI.MobileControls.MobilePage" /> sekundären Seiten des Objekts. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Zeichenfolge ist "Mehrere Steuerelemente, die versuchen, eine sekundäre Benutzeroberfläche".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBoolean">
+      <MemberSignature Language="C#" Value="public static bool GetBoolean (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool GetBoolean(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.SR.GetBoolean(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des der <see cref="T:System.String" /> zurückgegeben werden.</param>
+        <summary>Gibt den Namen des angegebenen <see cref="T:System.String" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Der Wert, der die <see cref="T:System.String" /> verweist auf die <paramref name="name" /> Parameter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBoolean">
+      <MemberSignature Language="C#" Value="public static bool GetBoolean (System.Globalization.CultureInfo culture, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool GetBoolean(class System.Globalization.CultureInfo culture, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.SR.GetBoolean(System.Globalization.CultureInfo,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="culture">Ein <see cref="T:System.Globalization.CultureInfo" /> , enthält die relevante kulturelle Informationen verwendet, um den Rückgabewert zu formatieren.</param>
+        <param name="name">Der Name des der <see cref="T:System.String" /> zurückgegeben werden.</param>
+        <summary>Gibt den Namen des angegebenen <see cref="T:System.String" />, in Bezug auf die angegebene Kultur formatiert. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Der Wert des der <see cref="T:System.String" /> verweist auf die <paramref name="name" /> -Parameter in Bezug auf die Informationen zur Kultur enthalten sind, der <see cref="T:System.Globalization.CultureInfo" /> verweist auf die <paramref name="culture" /> Parameter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetByte">
+      <MemberSignature Language="C#" Value="public static byte GetByte (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8 GetByte(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.SR.GetByte(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des der <see cref="T:System.String" /> Objekt zurückgegeben werden.</param>
+        <summary>Gibt den Namen des angegebenen <see cref="T:System.String" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Der Wert, der die <see cref="T:System.String" /> verweist auf die <paramref name="name" /> Parameter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetByte">
+      <MemberSignature Language="C#" Value="public static byte GetByte (System.Globalization.CultureInfo culture, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8 GetByte(class System.Globalization.CultureInfo culture, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.SR.GetByte(System.Globalization.CultureInfo,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="culture">Ein <see cref="T:System.Globalization.CultureInfo" /> , enthält die relevante kulturelle Informationen verwendet, um den Rückgabewert zu formatieren.</param>
+        <param name="name">Der Name des der <see cref="T:System.String" /> zurückgegeben werden.</param>
+        <summary>Gibt den Namen des angegebenen <see cref="T:System.String" />, in Bezug auf die angegebene Kultur formatiert. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Der Wert des der <see cref="T:System.String" /> verweist auf die <paramref name="name" /> -Parameter in Bezug auf die Informationen zur Kultur enthalten sind, der <see cref="T:System.Globalization.CultureInfo" /> verweist auf die <paramref name="culture" /> Parameter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChar">
+      <MemberSignature Language="C#" Value="public static char GetChar (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig char GetChar(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.SR.GetChar(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des der <see cref="T:System.String" /> zurückgegeben werden.</param>
+        <summary>Gibt den Namen des angegebenen <see cref="T:System.String" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Der Wert, der die <see cref="T:System.String" /> verweist auf die <paramref name="name" /> Parameter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChar">
+      <MemberSignature Language="C#" Value="public static char GetChar (System.Globalization.CultureInfo culture, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig char GetChar(class System.Globalization.CultureInfo culture, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.SR.GetChar(System.Globalization.CultureInfo,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="culture">Ein <see cref="T:System.Globalization.CultureInfo" /> , enthält die relevante kulturelle Informationen verwendet, um den Rückgabewert zu formatieren.</param>
+        <param name="name">Der Name des der <see cref="T:System.String" /> zurückgegeben werden.</param>
+        <summary>Gibt den Namen des angegebenen <see cref="T:System.String" />, in Bezug auf die angegebene Kultur formatiert. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Der Wert des der <see cref="T:System.String" /> verweist auf die <paramref name="name" /> -Parameter in Bezug auf die Informationen zur Kultur enthalten sind, der <see cref="T:System.Globalization.CultureInfo" /> verweist auf die <paramref name="culture" /> Parameter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDouble">
+      <MemberSignature Language="C#" Value="public static double GetDouble (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 GetDouble(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.SR.GetDouble(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des der <see cref="T:System.String" /> zurückgegeben werden.</param>
+        <summary>Gibt den Namen des angegebenen <see cref="T:System.String" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Der Wert, der die <see cref="T:System.String" /> verweist auf die <paramref name="name" /> Parameter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDouble">
+      <MemberSignature Language="C#" Value="public static double GetDouble (System.Globalization.CultureInfo culture, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 GetDouble(class System.Globalization.CultureInfo culture, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.SR.GetDouble(System.Globalization.CultureInfo,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="culture">Ein <see cref="T:System.Globalization.CultureInfo" /> , enthält die relevante kulturelle Informationen verwendet, um den Rückgabewert zu formatieren.</param>
+        <param name="name">Der Name des der <see cref="T:System.String" /> zurückgegeben werden.</param>
+        <summary>Gibt den Namen des angegebenen <see cref="T:System.String" />, in Bezug auf die angegebene Kultur formatiert. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Der Wert des der <see cref="T:System.String" /> verweist auf die <paramref name="name" /> -Parameter in Bezug auf die Informationen zur Kultur enthalten sind, der <see cref="T:System.Globalization.CultureInfo" /> verweist auf die <paramref name="culture" /> Parameter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFloat">
+      <MemberSignature Language="C#" Value="public static float GetFloat (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 GetFloat(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.SR.GetFloat(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des der <see cref="T:System.String" /> zurückgegeben werden.</param>
+        <summary>Gibt den Namen des angegebenen <see cref="T:System.String" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Der Wert, der die <see cref="T:System.String" /> verweist auf die <paramref name="name" /> Parameter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFloat">
+      <MemberSignature Language="C#" Value="public static float GetFloat (System.Globalization.CultureInfo culture, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 GetFloat(class System.Globalization.CultureInfo culture, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.SR.GetFloat(System.Globalization.CultureInfo,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="culture">Ein <see cref="T:System.Globalization.CultureInfo" /> , enthält die relevante kulturelle Informationen verwendet, um den Rückgabewert zu formatieren.</param>
+        <param name="name">Der Name des der <see cref="T:System.String" /> zurückgegeben werden.</param>
+        <summary>Gibt den Namen des angegebenen <see cref="T:System.String" />, im Format in Bezug auf die Informationen, die gemäß der <paramref name="culture" /> Parameter. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Der Wert des der <see cref="T:System.String" /> verweist auf die <paramref name="name" /> Parameter formatiert in Bezug auf die Informationen zur Kultur enthalten sind, der <see cref="T:System.Globalization.CultureInfo" /> verweist auf die <paramref name="culture" /> Parameter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInt">
+      <MemberSignature Language="C#" Value="public static int GetInt (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 GetInt(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.SR.GetInt(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des der <see cref="T:System.String" /> zurückgegeben werden.</param>
+        <summary>Gibt den Namen des angegebenen <see cref="T:System.String" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Der Wert, der die <see cref="T:System.String" /> verweist auf die <paramref name="name" /> Parameter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInt">
+      <MemberSignature Language="C#" Value="public static int GetInt (System.Globalization.CultureInfo culture, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 GetInt(class System.Globalization.CultureInfo culture, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.SR.GetInt(System.Globalization.CultureInfo,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="culture">Ein <see cref="T:System.Globalization.CultureInfo" /> , enthält die relevante kulturelle Informationen verwendet, um den Rückgabewert zu formatieren.</param>
+        <param name="name">Der Name des der <see cref="T:System.String" /> zurückgegeben werden.</param>
+        <summary>Gibt den Namen des angegebenen <see cref="T:System.String" />, im Format in Bezug auf die Informationen, die gemäß der <paramref name="culture" /> Parameter. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Der Wert des der <see cref="T:System.String" /> verweist auf die <paramref name="name" /> -Parameter in Bezug auf die Informationen zur Kultur enthalten sind, der <see cref="T:System.Globalization.CultureInfo" /> Objekt verweist auf die <paramref name="culture" /> Parameter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLong">
+      <MemberSignature Language="C#" Value="public static long GetLong (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int64 GetLong(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.SR.GetLong(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des der <see cref="T:System.String" /> zurückgegeben werden.</param>
+        <summary>Gibt den Namen des angegebenen <see cref="T:System.String" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Der Wert, der die <see cref="T:System.String" /> verweist auf die <paramref name="name" /> Parameter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLong">
+      <MemberSignature Language="C#" Value="public static long GetLong (System.Globalization.CultureInfo culture, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int64 GetLong(class System.Globalization.CultureInfo culture, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.SR.GetLong(System.Globalization.CultureInfo,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="culture">Ein <see cref="T:System.Globalization.CultureInfo" /> , enthält die relevante kulturelle Informationen verwendet, um den Rückgabewert zu formatieren.</param>
+        <param name="name">Der Name des der <see cref="T:System.String" /> zurückgegeben werden.</param>
+        <summary>Gibt den Namen des angegebenen <see cref="T:System.String" />, im Format in Bezug auf die Informationen, die gemäß der <paramref name="culture" /> Parameter. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Der Wert des der <see cref="T:System.String" /> verweist auf die <paramref name="name" /> -Parameter in Bezug auf die Informationen zur Kultur enthalten sind, der <see cref="T:System.Globalization.CultureInfo" /> Objekt verweist auf die <paramref name="culture" /> Parameter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObject">
+      <MemberSignature Language="C#" Value="public static object GetObject (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetObject(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.SR.GetObject(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des der <see cref="T:System.String" /> zurückgegeben werden.</param>
+        <summary>Gibt den Namen des angegebenen <see cref="T:System.String" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Der Wert, der die <see cref="T:System.String" /> verweist auf die <paramref name="name" /> Parameter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObject">
+      <MemberSignature Language="C#" Value="public static object GetObject (System.Globalization.CultureInfo culture, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetObject(class System.Globalization.CultureInfo culture, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.SR.GetObject(System.Globalization.CultureInfo,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="culture">Ein <see cref="T:System.Globalization.CultureInfo" /> Objekt, das die relevante kulturelle Informationen zum Formatieren des Rückgabewerts enthält.</param>
+        <param name="name">Der Name des der <see cref="T:System.String" /> Objekt zurückgegeben werden.</param>
+        <summary>Gibt den Namen des angegebenen <see cref="T:System.String" />, im Format in Bezug auf die Informationen, die gemäß der <paramref name="culture" /> Parameter. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Der Wert des der <see cref="T:System.String" /> verweist auf die <paramref name="name" /> -Parameter in Bezug auf die Informationen zur Kultur enthalten sind, der <see cref="T:System.Globalization.CultureInfo" /> Objekt verweist auf die <paramref name="culture" /> Parameter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetShort">
+      <MemberSignature Language="C#" Value="public static short GetShort (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int16 GetShort(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.SR.GetShort(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des der <see cref="T:System.String" /> zurückgegeben werden.</param>
+        <summary>Gibt den Namen des angegebenen <see cref="T:System.String" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Der Wert, der die <see cref="T:System.String" /> verweist auf die <paramref name="name" /> Parameter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetShort">
+      <MemberSignature Language="C#" Value="public static short GetShort (System.Globalization.CultureInfo culture, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int16 GetShort(class System.Globalization.CultureInfo culture, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.SR.GetShort(System.Globalization.CultureInfo,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="culture">Ein <see cref="T:System.Globalization.CultureInfo" /> , enthält die relevante kulturelle Informationen verwendet, um den Rückgabewert zu formatieren.</param>
+        <param name="name">Der Name des der <see cref="T:System.String" /> zurückgegeben werden.</param>
+        <summary>Gibt den Namen des angegebenen <see cref="T:System.String" />, im Format in Bezug auf die Informationen, die gemäß der <paramref name="culture" /> Parameter. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Der Wert des der <see cref="T:System.String" /> verweist auf die <paramref name="name" /> -Parameter in Bezug auf die Informationen zur Kultur enthalten sind, der <see cref="T:System.Globalization.CultureInfo" /> Objekt verweist auf die <paramref name="culture" /> Parameter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetString">
+      <MemberSignature Language="C#" Value="public static string GetString (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetString(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.SR.GetString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des der <see cref="T:System.String" /> zurückgegeben werden.</param>
+        <summary>Gibt den Namen des angegebenen <see cref="T:System.String" />. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Der Wert, der die <see cref="T:System.String" /> verweist auf die <paramref name="name" /> Parameter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetString">
+      <MemberSignature Language="C#" Value="public static string GetString (System.Globalization.CultureInfo culture, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetString(class System.Globalization.CultureInfo culture, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.SR.GetString(System.Globalization.CultureInfo,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="culture">Ein <see cref="T:System.Globalization.CultureInfo" /> , enthält die relevante kulturelle Informationen verwendet, um den Rückgabewert zu formatieren.</param>
+        <param name="name">Der Name des der <see cref="T:System.String" /> zurückgegeben werden.</param>
+        <summary>Gibt den Namen des angegebenen <see cref="T:System.String" />, im Format in Bezug auf die Informationen, die gemäß der <paramref name="culture" /> Parameter. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Der Wert des der <see cref="T:System.String" /> verweist auf die <paramref name="name" /> -Parameter in Bezug auf die Informationen zur Kultur enthalten sind, der <see cref="T:System.Globalization.CultureInfo" /> Objekt verweist auf die <paramref name="culture" /> Parameter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetString">
+      <MemberSignature Language="C#" Value="public static string GetString (string name, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetString(string name, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.SR.GetString(System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des der <see cref="T:System.String" /> zurückgegeben werden.</param>
+        <param name="args">Ein Array von Argumenten, die bei der Formatierung des Rückgabewerts verwendet werden.</param>
+        <summary>Gibt den Namen des angegebenen <see cref="T:System.String" />, im Format in Bezug auf die Argumente. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Der Wert von der <see cref="T:System.String" /> verweist auf die <paramref name="name" /> -Parameter in Bezug auf den Argumenten aufgeführt sind, der <paramref name="args" /> Parameter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetString">
+      <MemberSignature Language="C#" Value="public static string GetString (System.Globalization.CultureInfo culture, string name, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetString(class System.Globalization.CultureInfo culture, string name, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.SR.GetString(System.Globalization.CultureInfo,System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="culture">Ein <see cref="T:System.Globalization.CultureInfo" /> , enthält die relevante kulturelle Informationen verwendet, um den Rückgabewert zu formatieren.</param>
+        <param name="name">Der Name des der <see cref="T:System.String" /> zurückgegeben werden.</param>
+        <param name="args">Ein Array von Argumenten, die bei der Formatierung des Rückgabewerts verwendet werden.</param>
+        <summary>Gibt den Namen des angegebenen <see cref="T:System.String" />, in Bezug auf das angegebene Argumentarray und der angegebenen Kultur formatiert. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <returns>Der Wert des der <see cref="T:System.String" /> verweist auf die <paramref name="name" /> -Parameter in Bezug auf die Informationen zur Kultur enthalten sind, der <see cref="T:System.Globalization.CultureInfo" /> Objekt verweist auf die <paramref name="culture" /> Parameter und Argumente verweist auf die <paramref name="args" /> Parameter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MobileTextWriterNotMultiPart">
+      <MemberSignature Language="C#" Value="public const string MobileTextWriterNotMultiPart;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string MobileTextWriterNotMultiPart" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.SR.MobileTextWriterNotMultiPart" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zeichenfolge, die als eine Fehlermeldung verwendet werden sollen, wenn der Versuch zum Schreiben eines mehrteiligen Dokuments erfolgt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Zeichenfolge ist "Target mehrteiligen Dokumente nicht unterstützt".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectListAdapter_InvalidPostedData">
+      <MemberSignature Language="C#" Value="public const string ObjectListAdapter_InvalidPostedData;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ObjectListAdapter_InvalidPostedData" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.SR.ObjectListAdapter_InvalidPostedData" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zeichenfolge, die als eine Fehlermeldung verwendet werden soll, wenn ungültige Daten für die aktuelle gebucht wurde <see cref="T:System.Web.UI.MobileControls.ObjectList" /> des Steuerelements <see cref="P:System.Web.UI.MobileControls.ObjectList.ViewMode" /> Eigenschaft. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Zeichenfolge ist "bereitgestellte Daten für aktuellen ObjectList ViewMode ungültig.  (Die %ObjectList datengebundenen beim Postback während Page_Load, den Ansichtsmodus zurückgesetzt wurden.  Rufen Sie DataBind in Page_Load nur, wenn IsPostBack "false" ist.)"  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WmlMobileTextWriterBackLabel">
+      <MemberSignature Language="C#" Value="public const string WmlMobileTextWriterBackLabel;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string WmlMobileTextWriterBackLabel" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.SR.WmlMobileTextWriterBackLabel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zeichenfolge, die den Text für die **wieder** Bezeichnung. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Zeichenfolge ist "Zurück".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WmlMobileTextWriterGoLabel">
+      <MemberSignature Language="C#" Value="public const string WmlMobileTextWriterGoLabel;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string WmlMobileTextWriterGoLabel" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.SR.WmlMobileTextWriterGoLabel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zeichenfolge, die den Text für die **Go** Bezeichnung. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Zeichenfolge ist "Go".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WmlMobileTextWriterOKLabel">
+      <MemberSignature Language="C#" Value="public const string WmlMobileTextWriterOKLabel;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string WmlMobileTextWriterOKLabel" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.SR.WmlMobileTextWriterOKLabel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zeichenfolge, die den Text für die **OK** Bezeichnung. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Zeichenfolge ist "OK".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WmlObjectListAdapterDetails">
+      <MemberSignature Language="C#" Value="public const string WmlObjectListAdapterDetails;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string WmlObjectListAdapterDetails" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.SR.WmlObjectListAdapterDetails" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zeichenfolge, die einen Titel für Informationen bereitstellt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Zeichenfolge ist "Details".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WmlPageAdapterMethod">
+      <MemberSignature Language="C#" Value="public const string WmlPageAdapterMethod;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string WmlPageAdapterMethod" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.SR.WmlPageAdapterMethod" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zeichenfolge, die einen Titel für Methoden bereitstellt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Zeichenfolge ist "Methode:".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WmlPageAdapterPartialStackTrace">
+      <MemberSignature Language="C#" Value="public const string WmlPageAdapterPartialStackTrace;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string WmlPageAdapterPartialStackTrace" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.SR.WmlPageAdapterPartialStackTrace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zeichenfolge, die einen Titel für die partielle stapelüberwachung bereitstellt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Zeichenfolge ist "Partial Stapelüberwachung:".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WmlPageAdapterServerError">
+      <MemberSignature Language="C#" Value="public const string WmlPageAdapterServerError;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string WmlPageAdapterServerError" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.SR.WmlPageAdapterServerError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zeichenfolge, die einen gemeinsamen Satz für die Ankündigung Fehler bereitstellt. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Zeichenfolge ist "Serverfehler in {0}".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WmlPageAdapterStackTrace">
+      <MemberSignature Language="C#" Value="public const string WmlPageAdapterStackTrace;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string WmlPageAdapterStackTrace" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.SR.WmlPageAdapterStackTrace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zeichenfolge mit dem Titel der stapelüberwachung. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Zeichenfolge ist "Stapelüberwachung:".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XhtmlCssHandler_IdNotPresent">
+      <MemberSignature Language="C#" Value="public const string XhtmlCssHandler_IdNotPresent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string XhtmlCssHandler_IdNotPresent" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.SR.XhtmlCssHandler_IdNotPresent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zeichenfolge, die als eine Fehlermeldung verwendet werden soll, wenn es keine Stylesheet-ID in der Abfragezeichenfolge vorhanden ist. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Zeichenfolge ist "Stylesheet-Id in der Abfragezeichenfolge nicht vorhanden".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XhtmlCssHandler_StylesheetNotFound">
+      <MemberSignature Language="C#" Value="public const string XhtmlCssHandler_StylesheetNotFound;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string XhtmlCssHandler_StylesheetNotFound" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.SR.XhtmlCssHandler_StylesheetNotFound" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zeichenfolge, die als eine Fehlermeldung verwendet werden soll, wenn ein Stylesheet wurde nicht gefunden. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Zeichenfolge ist "Stylesheet-Id in der Abfragezeichenfolge nicht vorhanden".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XhtmlMobileTextWriter_CacheKeyNotSet">
+      <MemberSignature Language="C#" Value="public const string XhtmlMobileTextWriter_CacheKeyNotSet;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string XhtmlMobileTextWriter_CacheKeyNotSet" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.SR.XhtmlMobileTextWriter_CacheKeyNotSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zeichenfolge, mit der advise-Aufruf die <see cref="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SetCacheKey(System.Web.Caching.Cache)" /> Methode vor dem Abrufen der <see cref="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.CacheKey" /> Eigenschaft. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Zeichenfolge ist "Sie SetCacheKey aufrufen müssen vor dem CacheKey".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XhtmlMobileTextWriter_SessionKeyNotSet">
+      <MemberSignature Language="C#" Value="public const string XhtmlMobileTextWriter_SessionKeyNotSet;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string XhtmlMobileTextWriter_SessionKeyNotSet" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.SR.XhtmlMobileTextWriter_SessionKeyNotSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zeichenfolge, mit der advise-Aufruf die <see cref="M:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SetSessionKey(System.Web.SessionState.HttpSessionState)" /> Methode vor dem Abrufen der <see cref="P:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlMobileTextWriter.SessionKey" /> Eigenschaft. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Zeichenfolge ist "Sie SetSessionKey aufrufen müssen vor dem SessionKey".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XhtmlObjectListAdapter_InvalidPostedData">
+      <MemberSignature Language="C#" Value="public const string XhtmlObjectListAdapter_InvalidPostedData;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string XhtmlObjectListAdapter_InvalidPostedData" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Adapters.SR.XhtmlObjectListAdapter_InvalidPostedData" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Zeichenfolge, die als eine Fehlermeldung verwendet werden soll, wenn ungültige Daten für die aktuelle gebucht wurde <see cref="T:System.Web.UI.MobileControls.ObjectList" /> des Steuerelements <see cref="P:System.Web.UI.MobileControls.ObjectList.ViewMode" /> Eigenschaft. Diese API ist veraltet. Weitere Informationen zum Entwickeln mobiler ASP.NET-Anwendungen finden Sie unter der [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) Website.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert dieser Zeichenfolge ist "bereitgestellte Daten für aktuellen ObjectList ViewMode ungültig.  (Die %ObjectList datengebundenen beim Postback während Page_Load, den Ansichtsmodus zurückgesetzt wurden.  Rufen Sie DataBind in Page_Load nur, wenn IsPostBack "false" ist.)"  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

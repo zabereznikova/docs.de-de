@@ -1,0 +1,133 @@
+<Type Name="ChannelCacheSettings" FullName="System.ServiceModel.Activities.ChannelCacheSettings">
+  <TypeSignature Language="C#" Value="public class ChannelCacheSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ChannelCacheSettings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activities.ChannelCacheSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Einstellungen dar, die betriebsbereite Eigenschaften eines Channelcaches definieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Erstellen einer <xref:System.ServiceModel.Activities.ChannelCacheSettings>-Instanz.  
+  
+ [!code-csharp[ChannelCache#0](~/samples/snippets/csharp/VS_Snippets_CFX/channelcache/cs/client.cs#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ChannelCacheSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.ChannelCacheSettings.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.ServiceModel.Activities.ChannelCacheSettings" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel veranschaulicht das Erstellen einer <xref:System.ServiceModel.Activities.ChannelCacheSettings>-Instanz.  
+  
+ [!code-csharp[ChannelCache#0](~/samples/snippets/csharp/VS_Snippets_CFX/channelcache/cs/client.cs#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IdleTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan IdleTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan IdleTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.ChannelCacheSettings.IdleTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das maximale Zeitintervall ab, für das das Objekt im Cache vor dem Verwerfen im Leerlauf verbleiben kann, oder legt es fest.</summary>
+        <value>Ein Zeitintervall.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird das Festlegen der <xref:System.ServiceModel.Activities.ChannelCacheSettings.IdleTimeout%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[ChannelCache#0](~/samples/snippets/csharp/VS_Snippets_CFX/channelcache/cs/client.cs#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LeaseTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan LeaseTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan LeaseTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.ChannelCacheSettings.LeaseTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Zeitintervall ab, nach dem ein Objekt aus dem Cache entfernt wird.</summary>
+        <value>Ein Zeitintervall.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird das Festlegen der <xref:System.ServiceModel.Activities.ChannelCacheSettings.LeaseTimeout%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[ChannelCache#0](~/samples/snippets/csharp/VS_Snippets_CFX/channelcache/cs/client.cs#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxItemsInCache">
+      <MemberSignature Language="C#" Value="public int MaxItemsInCache { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxItemsInCache" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.ChannelCacheSettings.MaxItemsInCache" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die maximale Anzahl von Objekten ab, die sich im Cache befinden können.</summary>
+        <value>Eine maximale Anzahl von Objekten.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird das Festlegen der <xref:System.ServiceModel.Activities.ChannelCacheSettings.MaxItemsInCache%2A>-Eigenschaft veranschaulicht.  
+  
+ [!code-csharp[ChannelCache#0](~/samples/snippets/csharp/VS_Snippets_CFX/channelcache/cs/client.cs#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

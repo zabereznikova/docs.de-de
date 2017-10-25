@@ -1,0 +1,508 @@
+<Type Name="ImmutableSortedDictionary" FullName="System.Collections.Immutable.ImmutableSortedDictionary">
+  <TypeSignature Language="C#" Value="public static class ImmutableSortedDictionary" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ImmutableSortedDictionary extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Immutable.ImmutableSortedDictionary" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections.Immutable</AssemblyName>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <AssemblyVersion>1.2.1.0</AssemblyVersion>
+    <AssemblyVersion>1.2.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Reihe von Initialisierungsmethoden für Instanzen der <see cref="T:System.Collections.Immutable.ImmutableSortedDictionary`2" /> Klasse bereit.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]</summary>
+    <remarks>To be added.</remarks>
+    <threadsafe>Dieser Typ ist threadsicher.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="Create&lt;TKey,TValue&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableSortedDictionary&lt;TKey,TValue&gt; Create&lt;TKey,TValue&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Immutable.ImmutableSortedDictionary`2&lt;!!TKey, !!TValue&gt; Create&lt;TKey, TValue&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedDictionary.Create``2" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableSortedDictionary&lt;TKey,TValue&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TKey" />
+        <TypeParameter Name="TValue" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="TKey">Der Typ der Schlüssel, die vom Wörterbuch gespeichert werden.</typeparam>
+        <typeparam name="TValue">Der Typ der Werte, die vom Wörterbuch gespeichert werden.</typeparam>
+        <summary>Erstellt ein leeres unveränderliches sortiertes Wörterbuch.</summary>
+        <returns>Ein leeres unveränderliches sortiertes Wörterbuch.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;TKey,TValue&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableSortedDictionary&lt;TKey,TValue&gt; Create&lt;TKey,TValue&gt; (System.Collections.Generic.IComparer&lt;TKey&gt; keyComparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Immutable.ImmutableSortedDictionary`2&lt;!!TKey, !!TValue&gt; Create&lt;TKey, TValue&gt;(class System.Collections.Generic.IComparer`1&lt;!!TKey&gt; keyComparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedDictionary.Create``2(System.Collections.Generic.IComparer{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableSortedDictionary&lt;TKey,TValue&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TKey" />
+        <TypeParameter Name="TValue" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="keyComparer" Type="System.Collections.Generic.IComparer&lt;TKey&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TKey">Der Typ der Schlüssel, die vom Wörterbuch gespeichert werden.</typeparam>
+        <typeparam name="TValue">Der Typ der Werte, die vom Wörterbuch gespeichert werden.</typeparam>
+        <param name="keyComparer">Die Implementierung zum Bestimmen der Gleichheit der Schlüssel im Wörterbuch.</param>
+        <summary>Erstellt ein leeres unveränderliches sortiertes Wörterbuch, das den angegebenen Schlüsselvergleich verwendet.</summary>
+        <returns>Ein leeres unveränderliches sortiertes Wörterbuch.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;TKey,TValue&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableSortedDictionary&lt;TKey,TValue&gt; Create&lt;TKey,TValue&gt; (System.Collections.Generic.IComparer&lt;TKey&gt; keyComparer, System.Collections.Generic.IEqualityComparer&lt;TValue&gt; valueComparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Immutable.ImmutableSortedDictionary`2&lt;!!TKey, !!TValue&gt; Create&lt;TKey, TValue&gt;(class System.Collections.Generic.IComparer`1&lt;!!TKey&gt; keyComparer, class System.Collections.Generic.IEqualityComparer`1&lt;!!TValue&gt; valueComparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedDictionary.Create``2(System.Collections.Generic.IComparer{``0},System.Collections.Generic.IEqualityComparer{``1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableSortedDictionary&lt;TKey,TValue&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TKey" />
+        <TypeParameter Name="TValue" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="keyComparer" Type="System.Collections.Generic.IComparer&lt;TKey&gt;" />
+        <Parameter Name="valueComparer" Type="System.Collections.Generic.IEqualityComparer&lt;TValue&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TKey">Der Typ der Schlüssel, die vom Wörterbuch gespeichert werden.</typeparam>
+        <typeparam name="TValue">Der Typ der Werte, die vom Wörterbuch gespeichert werden.</typeparam>
+        <param name="keyComparer">Die Implementierung zum Bestimmen der Gleichheit der Schlüssel im Wörterbuch.</param>
+        <param name="valueComparer">Die Implementierung zum Bestimmen der Gleichheit der Werte im Wörterbuch.</param>
+        <summary>Erstellt ein leeres unveränderliches sortiertes Wörterbuch, das den angegebenen Schlüssel- und Wertevergleich verwendet.</summary>
+        <returns>Ein leeres unveränderliches sortiertes Wörterbuch.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBuilder&lt;TKey,TValue&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableSortedDictionary&lt;TKey,TValue&gt;.Builder CreateBuilder&lt;TKey,TValue&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Immutable.ImmutableSortedDictionary`2/Builder&lt;!!TKey, !!TValue&gt; CreateBuilder&lt;TKey, TValue&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedDictionary.CreateBuilder``2" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableSortedDictionary&lt;TKey,TValue&gt;+Builder</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TKey" />
+        <TypeParameter Name="TValue" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="TKey">Der Typ der Schlüssel, die vom Wörterbuch gespeichert werden.</typeparam>
+        <typeparam name="TValue">Der Typ der Werte, die vom Wörterbuch gespeichert werden.</typeparam>
+        <summary>Erstellt einen Generator für ein neues unveränderliches sortiertes Wörterbuch.</summary>
+        <returns>Der Generator für unveränderliche Auflistungen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBuilder&lt;TKey,TValue&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableSortedDictionary&lt;TKey,TValue&gt;.Builder CreateBuilder&lt;TKey,TValue&gt; (System.Collections.Generic.IComparer&lt;TKey&gt; keyComparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Immutable.ImmutableSortedDictionary`2/Builder&lt;!!TKey, !!TValue&gt; CreateBuilder&lt;TKey, TValue&gt;(class System.Collections.Generic.IComparer`1&lt;!!TKey&gt; keyComparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedDictionary.CreateBuilder``2(System.Collections.Generic.IComparer{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableSortedDictionary&lt;TKey,TValue&gt;+Builder</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TKey" />
+        <TypeParameter Name="TValue" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="keyComparer" Type="System.Collections.Generic.IComparer&lt;TKey&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TKey">Der Typ der Schlüssel, die vom Wörterbuch gespeichert werden.</typeparam>
+        <typeparam name="TValue">Der Typ der Werte, die vom Wörterbuch gespeichert werden.</typeparam>
+        <param name="keyComparer">Der Schlüsselvergleich.</param>
+        <summary>Erstellt einen Generator für ein neues unveränderliches sortiertes Wörterbuch.</summary>
+        <returns>Der Generator für unveränderliche Auflistungen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBuilder&lt;TKey,TValue&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableSortedDictionary&lt;TKey,TValue&gt;.Builder CreateBuilder&lt;TKey,TValue&gt; (System.Collections.Generic.IComparer&lt;TKey&gt; keyComparer, System.Collections.Generic.IEqualityComparer&lt;TValue&gt; valueComparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Immutable.ImmutableSortedDictionary`2/Builder&lt;!!TKey, !!TValue&gt; CreateBuilder&lt;TKey, TValue&gt;(class System.Collections.Generic.IComparer`1&lt;!!TKey&gt; keyComparer, class System.Collections.Generic.IEqualityComparer`1&lt;!!TValue&gt; valueComparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedDictionary.CreateBuilder``2(System.Collections.Generic.IComparer{``0},System.Collections.Generic.IEqualityComparer{``1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableSortedDictionary&lt;TKey,TValue&gt;+Builder</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TKey" />
+        <TypeParameter Name="TValue" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="keyComparer" Type="System.Collections.Generic.IComparer&lt;TKey&gt;" />
+        <Parameter Name="valueComparer" Type="System.Collections.Generic.IEqualityComparer&lt;TValue&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TKey">Der Typ der Schlüssel, die vom Wörterbuch gespeichert werden.</typeparam>
+        <typeparam name="TValue">Der Typ der Werte, die vom Wörterbuch gespeichert werden.</typeparam>
+        <param name="keyComparer">Der Schlüsselvergleich.</param>
+        <param name="valueComparer">Der Wertevergleich.</param>
+        <summary>Erstellt einen Generator für ein neues unveränderliches sortiertes Wörterbuch.</summary>
+        <returns>Der Generator für unveränderliche Auflistungen.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateRange&lt;TKey,TValue&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableSortedDictionary&lt;TKey,TValue&gt; CreateRange&lt;TKey,TValue&gt; (System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt; items);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Immutable.ImmutableSortedDictionary`2&lt;!!TKey, !!TValue&gt; CreateRange&lt;TKey, TValue&gt;(class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;!!TKey, !!TValue&gt;&gt; items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedDictionary.CreateRange``2(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableSortedDictionary&lt;TKey,TValue&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TKey" />
+        <TypeParameter Name="TValue" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="items" Type="System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TKey">Der Typ der im Wörterbuch gespeicherten Schlüssel.</typeparam>
+        <typeparam name="TValue">Der Typ der im Wörterbuch gespeicherten Werte.</typeparam>
+        <param name="items">Die Elemente, die dem sortierten Wörterbuch hinzugefügt werden, bevor es unveränderlich wird.</param>
+        <summary>Erstellt ein unveränderliches sortiertes Wörterbuch, das die angegebenen Elemente enthält und den Standardvergleich verwendet.</summary>
+        <returns>Ein unveränderliches sortiertes Wörterbuch, das die angegebenen Elemente enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateRange&lt;TKey,TValue&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableSortedDictionary&lt;TKey,TValue&gt; CreateRange&lt;TKey,TValue&gt; (System.Collections.Generic.IComparer&lt;TKey&gt; keyComparer, System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt; items);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Immutable.ImmutableSortedDictionary`2&lt;!!TKey, !!TValue&gt; CreateRange&lt;TKey, TValue&gt;(class System.Collections.Generic.IComparer`1&lt;!!TKey&gt; keyComparer, class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;!!TKey, !!TValue&gt;&gt; items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedDictionary.CreateRange``2(System.Collections.Generic.IComparer{``0},System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableSortedDictionary&lt;TKey,TValue&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TKey" />
+        <TypeParameter Name="TValue" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="keyComparer" Type="System.Collections.Generic.IComparer&lt;TKey&gt;" />
+        <Parameter Name="items" Type="System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TKey">Der Typ der im Wörterbuch gespeicherten Schlüssel.</typeparam>
+        <typeparam name="TValue">Der Typ der im Wörterbuch gespeicherten Werte.</typeparam>
+        <param name="keyComparer">Die Vergleichsimplementierung, die zum Auswerten von Schlüsseln auf Gleichheit und Sortierreihenfolge verwendet wird.</param>
+        <param name="items">Die Elemente, die dem sortierten Wörterbuch hinzugefügt werden.</param>
+        <summary>Erstellt ein neues unveränderliches sortiertes Wörterbuch aus dem angegebenen Bereich von Elementen mit dem angegebenen Schlüsselvergleich.</summary>
+        <returns>Das neue unveränderliche sortierte Wörterbuch, das die angegebenen Elemente enthält und den angegebenen Schlüsselvergleich verwendet.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateRange&lt;TKey,TValue&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableSortedDictionary&lt;TKey,TValue&gt; CreateRange&lt;TKey,TValue&gt; (System.Collections.Generic.IComparer&lt;TKey&gt; keyComparer, System.Collections.Generic.IEqualityComparer&lt;TValue&gt; valueComparer, System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt; items);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Immutable.ImmutableSortedDictionary`2&lt;!!TKey, !!TValue&gt; CreateRange&lt;TKey, TValue&gt;(class System.Collections.Generic.IComparer`1&lt;!!TKey&gt; keyComparer, class System.Collections.Generic.IEqualityComparer`1&lt;!!TValue&gt; valueComparer, class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;!!TKey, !!TValue&gt;&gt; items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedDictionary.CreateRange``2(System.Collections.Generic.IComparer{``0},System.Collections.Generic.IEqualityComparer{``1},System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableSortedDictionary&lt;TKey,TValue&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TKey" />
+        <TypeParameter Name="TValue" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="keyComparer" Type="System.Collections.Generic.IComparer&lt;TKey&gt;" />
+        <Parameter Name="valueComparer" Type="System.Collections.Generic.IEqualityComparer&lt;TValue&gt;" />
+        <Parameter Name="items" Type="System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TKey">Der Typ der im Wörterbuch gespeicherten Schlüssel.</typeparam>
+        <typeparam name="TValue">Der Typ der im Wörterbuch gespeicherten Werte.</typeparam>
+        <param name="keyComparer">Die Vergleichsimplementierung, die zum Vergleichen von Schlüsseln auf Gleichheit und Sortierreihenfolge verwendet wird.</param>
+        <param name="valueComparer">Die Vergleichsimplementierung, die zum Vergleichen von Werten auf Gleichheit und Sortierreihenfolge verwendet wird.</param>
+        <param name="items">Die Elemente, die dem sortierten Wörterbuch hinzugefügt werden, bevor es unveränderlich wird.</param>
+        <summary>Erstellt ein neues unveränderliches sortiertes Wörterbuch aus dem angegebenen Bereich von Elementen mit dem angegebenen Schlüssel- und Wertevergleich.</summary>
+        <returns>Ein unveränderliches sortiertes Wörterbuch, das die angegebenen Elemente enthält und die angegebenen Vergleiche verwendet.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToImmutableSortedDictionary&lt;TKey,TValue&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableSortedDictionary&lt;TKey,TValue&gt; ToImmutableSortedDictionary&lt;TKey,TValue&gt; (this System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt; source);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Immutable.ImmutableSortedDictionary`2&lt;!!TKey, !!TValue&gt; ToImmutableSortedDictionary&lt;TKey, TValue&gt;(class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;!!TKey, !!TValue&gt;&gt; source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedDictionary.ToImmutableSortedDictionary``2(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableSortedDictionary&lt;TKey,TValue&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TKey" />
+        <TypeParameter Name="TValue" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;" RefType="this" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TKey">Der Typ der Schlüssel im Wörterbuch.</typeparam>
+        <typeparam name="TValue">Der Typ der Werte im Wörterbuch.</typeparam>
+        <param name="source">Die Sequenz von aufzulistenden Schlüssel-Wert-Paaren.</param>
+        <summary>Listet eine Sequenz von Schlüssel-Wert-Paaren auf und erzeugt ein unveränderliches sortiertes Wörterbuch ihrer Inhalte.</summary>
+        <returns>Ein unveränderliches sortiertes Wörterbuch, das die Schlüssel-Wert-Paare in der angegebenen Sequenz enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToImmutableSortedDictionary&lt;TKey,TValue&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableSortedDictionary&lt;TKey,TValue&gt; ToImmutableSortedDictionary&lt;TKey,TValue&gt; (this System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt; source, System.Collections.Generic.IComparer&lt;TKey&gt; keyComparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Immutable.ImmutableSortedDictionary`2&lt;!!TKey, !!TValue&gt; ToImmutableSortedDictionary&lt;TKey, TValue&gt;(class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;!!TKey, !!TValue&gt;&gt; source, class System.Collections.Generic.IComparer`1&lt;!!TKey&gt; keyComparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedDictionary.ToImmutableSortedDictionary``2(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}},System.Collections.Generic.IComparer{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableSortedDictionary&lt;TKey,TValue&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TKey" />
+        <TypeParameter Name="TValue" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;" RefType="this" />
+        <Parameter Name="keyComparer" Type="System.Collections.Generic.IComparer&lt;TKey&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TKey">Der Typ der Schlüssel im Wörterbuch.</typeparam>
+        <typeparam name="TValue">Der Typ der Werte im Wörterbuch.</typeparam>
+        <param name="source">Die Sequenz von aufzulistenden Schlüssel-Wert-Paaren.</param>
+        <param name="keyComparer">Der Schlüsselvergleich, der beim Erstellen des unveränderlichen Wörterbuchs verwendet wird.</param>
+        <summary>Listet eine Sequenz von Schlüssel-Wert-Paaren auf und erzeugt mithilfe des angegebenen Schlüsselvergleichs ein unveränderliches Wörterbuch ihrer Inhalte.</summary>
+        <returns>Ein unveränderliches sortiertes Wörterbuch, das die Schlüssel-Wert-Paare in der angegebenen Sequenz enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToImmutableSortedDictionary&lt;TKey,TValue&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableSortedDictionary&lt;TKey,TValue&gt; ToImmutableSortedDictionary&lt;TKey,TValue&gt; (this System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt; source, System.Collections.Generic.IComparer&lt;TKey&gt; keyComparer, System.Collections.Generic.IEqualityComparer&lt;TValue&gt; valueComparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Immutable.ImmutableSortedDictionary`2&lt;!!TKey, !!TValue&gt; ToImmutableSortedDictionary&lt;TKey, TValue&gt;(class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;!!TKey, !!TValue&gt;&gt; source, class System.Collections.Generic.IComparer`1&lt;!!TKey&gt; keyComparer, class System.Collections.Generic.IEqualityComparer`1&lt;!!TValue&gt; valueComparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedDictionary.ToImmutableSortedDictionary``2(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}},System.Collections.Generic.IComparer{``0},System.Collections.Generic.IEqualityComparer{``1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableSortedDictionary&lt;TKey,TValue&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TKey" />
+        <TypeParameter Name="TValue" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;" RefType="this" />
+        <Parameter Name="keyComparer" Type="System.Collections.Generic.IComparer&lt;TKey&gt;" />
+        <Parameter Name="valueComparer" Type="System.Collections.Generic.IEqualityComparer&lt;TValue&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TKey">Der Typ der Schlüssel im Wörterbuch.</typeparam>
+        <typeparam name="TValue">Der Typ der Werte im Wörterbuch.</typeparam>
+        <param name="source">Die Sequenz von aufzulistenden Schlüssel-Wert-Paaren.</param>
+        <param name="keyComparer">Der Schlüsselvergleich, der beim Erstellen des unveränderlichen Wörterbuchs verwendet wird.</param>
+        <param name="valueComparer">Der Wertevergleich für die Verwendung des unveränderlichen Wörterbuchs.</param>
+        <summary>Listet eine Sequenz von Schlüssel-Wert-Paaren auf und erzeugt mithilfe des angegebenen Schlüssel- und Wertevergleichs ein unveränderliches sortiertes Wörterbuch ihrer Inhalte.</summary>
+        <returns>Ein unveränderliches sortiertes Wörterbuch, das die Schlüssel-Wert-Paare in der angegebenen Sequenz enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToImmutableSortedDictionary&lt;TSource,TKey,TValue&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableSortedDictionary&lt;TKey,TValue&gt; ToImmutableSortedDictionary&lt;TSource,TKey,TValue&gt; (this System.Collections.Generic.IEnumerable&lt;TSource&gt; source, Func&lt;TSource,TKey&gt; keySelector, Func&lt;TSource,TValue&gt; elementSelector);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Immutable.ImmutableSortedDictionary`2&lt;!!TKey, !!TValue&gt; ToImmutableSortedDictionary&lt;TSource, TKey, TValue&gt;(class System.Collections.Generic.IEnumerable`1&lt;!!TSource&gt; source, class System.Func`2&lt;!!TSource, !!TKey&gt; keySelector, class System.Func`2&lt;!!TSource, !!TValue&gt; elementSelector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedDictionary.ToImmutableSortedDictionary``3(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Func{``0,``2})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableSortedDictionary&lt;TKey,TValue&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+        <TypeParameter Name="TKey" />
+        <TypeParameter Name="TValue" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Collections.Generic.IEnumerable&lt;TSource&gt;" RefType="this" />
+        <Parameter Name="keySelector" Type="System.Func&lt;TSource,TKey&gt;" />
+        <Parameter Name="elementSelector" Type="System.Func&lt;TSource,TValue&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">Der Typ der Elemente in der Sequenz.</typeparam>
+        <typeparam name="TKey">Der Typ der Schlüssel im resultierenden Wörterbuch.</typeparam>
+        <typeparam name="TValue">Der Typ der Werte im resultierenden Wörterbuch.</typeparam>
+        <param name="source">Die Sequenz, die aufgelistet werden soll, um das Wörterbuch zu generieren.</param>
+        <param name="keySelector">Die Funktion, die den Schlüssel für das Wörterbuch aus jedem Sequenzelement erzeugt.</param>
+        <param name="elementSelector">Die Funktion, die den Wert für das Wörterbuch aus jedem Sequenzelement erzeugt.</param>
+        <summary>Listet eine Sequenz auf, transformiert sie und erzeugt ein unveränderliches sortiertes Wörterbuch ihrer Inhalte.</summary>
+        <returns>Ein unveränderliches sortiertes Wörterbuch, das die Elemente in der angegebenen Sequenz enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToImmutableSortedDictionary&lt;TSource,TKey,TValue&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableSortedDictionary&lt;TKey,TValue&gt; ToImmutableSortedDictionary&lt;TSource,TKey,TValue&gt; (this System.Collections.Generic.IEnumerable&lt;TSource&gt; source, Func&lt;TSource,TKey&gt; keySelector, Func&lt;TSource,TValue&gt; elementSelector, System.Collections.Generic.IComparer&lt;TKey&gt; keyComparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Immutable.ImmutableSortedDictionary`2&lt;!!TKey, !!TValue&gt; ToImmutableSortedDictionary&lt;TSource, TKey, TValue&gt;(class System.Collections.Generic.IEnumerable`1&lt;!!TSource&gt; source, class System.Func`2&lt;!!TSource, !!TKey&gt; keySelector, class System.Func`2&lt;!!TSource, !!TValue&gt; elementSelector, class System.Collections.Generic.IComparer`1&lt;!!TKey&gt; keyComparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedDictionary.ToImmutableSortedDictionary``3(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Func{``0,``2},System.Collections.Generic.IComparer{``1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableSortedDictionary&lt;TKey,TValue&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+        <TypeParameter Name="TKey" />
+        <TypeParameter Name="TValue" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Collections.Generic.IEnumerable&lt;TSource&gt;" RefType="this" />
+        <Parameter Name="keySelector" Type="System.Func&lt;TSource,TKey&gt;" />
+        <Parameter Name="elementSelector" Type="System.Func&lt;TSource,TValue&gt;" />
+        <Parameter Name="keyComparer" Type="System.Collections.Generic.IComparer&lt;TKey&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">Der Typ der Elemente in der Sequenz.</typeparam>
+        <typeparam name="TKey">Der Typ der Schlüssel im resultierenden Wörterbuch.</typeparam>
+        <typeparam name="TValue">Der Typ der Werte im resultierenden Wörterbuch.</typeparam>
+        <param name="source">Die Sequenz, die aufgelistet werden soll, um das Wörterbuch zu generieren.</param>
+        <param name="keySelector">Die Funktion, die den Schlüssel für das Wörterbuch aus jedem Sequenzelement erzeugt.</param>
+        <param name="elementSelector">Die Funktion, die den Wert für das Wörterbuch aus jedem Sequenzelement erzeugt.</param>
+        <param name="keyComparer">Der Schlüsselvergleich, der für das Wörterbuch verwendet werden soll.</param>
+        <summary>Listet eine Sequenz auf, transformiert sie und erzeugt mithilfe des angegebenen Schlüsselvergleichs ein unveränderliches sortiertes Wörterbuch ihrer Inhalte.</summary>
+        <returns>Ein unveränderliches Wörterbuch, das die Elemente in der angegebenen Sequenz enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToImmutableSortedDictionary&lt;TSource,TKey,TValue&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableSortedDictionary&lt;TKey,TValue&gt; ToImmutableSortedDictionary&lt;TSource,TKey,TValue&gt; (this System.Collections.Generic.IEnumerable&lt;TSource&gt; source, Func&lt;TSource,TKey&gt; keySelector, Func&lt;TSource,TValue&gt; elementSelector, System.Collections.Generic.IComparer&lt;TKey&gt; keyComparer, System.Collections.Generic.IEqualityComparer&lt;TValue&gt; valueComparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Immutable.ImmutableSortedDictionary`2&lt;!!TKey, !!TValue&gt; ToImmutableSortedDictionary&lt;TSource, TKey, TValue&gt;(class System.Collections.Generic.IEnumerable`1&lt;!!TSource&gt; source, class System.Func`2&lt;!!TSource, !!TKey&gt; keySelector, class System.Func`2&lt;!!TSource, !!TValue&gt; elementSelector, class System.Collections.Generic.IComparer`1&lt;!!TKey&gt; keyComparer, class System.Collections.Generic.IEqualityComparer`1&lt;!!TValue&gt; valueComparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableSortedDictionary.ToImmutableSortedDictionary``3(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Func{``0,``2},System.Collections.Generic.IComparer{``1},System.Collections.Generic.IEqualityComparer{``2})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableSortedDictionary&lt;TKey,TValue&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+        <TypeParameter Name="TKey" />
+        <TypeParameter Name="TValue" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Collections.Generic.IEnumerable&lt;TSource&gt;" RefType="this" />
+        <Parameter Name="keySelector" Type="System.Func&lt;TSource,TKey&gt;" />
+        <Parameter Name="elementSelector" Type="System.Func&lt;TSource,TValue&gt;" />
+        <Parameter Name="keyComparer" Type="System.Collections.Generic.IComparer&lt;TKey&gt;" />
+        <Parameter Name="valueComparer" Type="System.Collections.Generic.IEqualityComparer&lt;TValue&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">Der Typ der Elemente in der Sequenz.</typeparam>
+        <typeparam name="TKey">Der Typ der Schlüssel im resultierenden Wörterbuch.</typeparam>
+        <typeparam name="TValue">Der Typ der Werte im resultierenden Wörterbuch.</typeparam>
+        <param name="source">Die Sequenz, die aufgelistet werden soll, um das Wörterbuch zu generieren.</param>
+        <param name="keySelector">Die Funktion, die den Schlüssel für das Wörterbuch aus jedem Sequenzelement erzeugt.</param>
+        <param name="elementSelector">Die Funktion, die den Wert für das Wörterbuch aus jedem Sequenzelement erzeugt.</param>
+        <param name="keyComparer">Der Schlüsselvergleich, der für das Wörterbuch verwendet werden soll.</param>
+        <param name="valueComparer">Der Wertevergleich für die Verwendung des Wörterbuchs.</param>
+        <summary>Listet eine Sequenz auf, transformiert sie und erzeugt mithilfe des angegebenen Schlüssel- und Wertevergleichs ein unveränderliches sortiertes Wörterbuch ihrer Inhalte.</summary>
+        <returns>Ein unveränderliches sortiertes Wörterbuch, das die Elemente in der angegebenen Sequenz enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

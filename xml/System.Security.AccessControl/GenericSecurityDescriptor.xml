@@ -1,0 +1,251 @@
+<Type Name="GenericSecurityDescriptor" FullName="System.Security.AccessControl.GenericSecurityDescriptor">
+  <TypeSignature Language="C#" Value="public abstract class GenericSecurityDescriptor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit GenericSecurityDescriptor extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.AccessControl.GenericSecurityDescriptor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.AccessControl</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Sicherheitsbeschreibung dar. Eine Sicherheitsbeschreibung umfasst einen Besitzer, eine primäre Gruppe, eine freigegebene Zugriffssteuerungsliste (Discretionary Access Control List, DACL) und eine System-Zugriffssteuerungsliste (System Access Control List, SACL).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected GenericSecurityDescriptor ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.GenericSecurityDescriptor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Security.AccessControl.GenericSecurityDescriptor" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BinaryLength">
+      <MemberSignature Language="C#" Value="public int BinaryLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BinaryLength" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.GenericSecurityDescriptor.BinaryLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Länge der binären Darstellung des aktuellen <see cref="T:System.Security.AccessControl.GenericSecurityDescriptor" />-Objekts (in Bytes) ab. Diese Länge muss vor dem Marshallen der ACL in ein binäres Array mit der <see cref="M:System.Security.AccessControl.GenericSecurityDescriptor.GetBinaryForm(System.Byte[],System.Int32)" />-Methode verwendet werden.</summary>
+        <value>Die Länge der binären Darstellung des aktuellen <see cref="T:System.Security.AccessControl.GenericSecurityDescriptor" />-Objekts (in Bytes).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlFlags">
+      <MemberSignature Language="C#" Value="public abstract System.Security.AccessControl.ControlFlags ControlFlags { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.AccessControl.ControlFlags ControlFlags" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.GenericSecurityDescriptor.ControlFlags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.ControlFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft Werte ab, die das Verhalten des <see cref="T:System.Security.AccessControl.GenericSecurityDescriptor" />-Objekts angeben.</summary>
+        <value>Mindestens ein Wert der <see cref="T:System.Security.AccessControl.ControlFlags" />-Enumeration kombiniert mit einer logischen OR-Operation.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBinaryForm">
+      <MemberSignature Language="C#" Value="public void GetBinaryForm (byte[] binaryForm, int offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void GetBinaryForm(unsigned int8[] binaryForm, int32 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.GenericSecurityDescriptor.GetBinaryForm(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binaryForm" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="binaryForm">Das Bytearray, in das der Inhalt von <see cref="T:System.Security.AccessControl.GenericSecurityDescriptor" /> gemarshallt wird.</param>
+        <param name="offset">Der Offset, bei dem das Marshallen begonnen werden soll.</param>
+        <summary>Gibt ein Array von Bytewerten zurück, die den Informationen entsprechen, die in diesem <see cref="T:System.Security.AccessControl.GenericSecurityDescriptor" />-Objekt enthalten sind.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> ist negativ oder zu hoch, um den gesamten <see cref="T:System.Security.AccessControl.GenericSecurityDescriptor" /> in <paramref name="array" /> zu kopieren.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSddlForm">
+      <MemberSignature Language="C#" Value="public string GetSddlForm (System.Security.AccessControl.AccessControlSections includeSections);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetSddlForm(valuetype System.Security.AccessControl.AccessControlSections includeSections) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.GenericSecurityDescriptor.GetSddlForm(System.Security.AccessControl.AccessControlSections)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="includeSections" Type="System.Security.AccessControl.AccessControlSections" />
+      </Parameters>
+      <Docs>
+        <param name="includeSections">Gibt an, welche Abschnitte (Zugriffsregeln, Überwachungsregeln, primäre Gruppe, Besitzer) der Sicherheitsbeschreibung abgerufen werden sollen.</param>
+        <summary>Gibt die SDDL-Darstellung (Security Descriptor Definition Language) der angegebenen Abschnitte der Sicherheitsbeschreibung zurück, die dieses <see cref="T:System.Security.AccessControl.GenericSecurityDescriptor" />-Objekt darstellt.</summary>
+        <returns>Die SDDL-Darstellung der angegebenen Abschnitte der Sicherheitsbeschreibung, die diesem <see cref="T:System.Security.AccessControl.GenericSecurityDescriptor" />-Objekt zugeordnet ist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Group">
+      <MemberSignature Language="C#" Value="public abstract System.Security.Principal.SecurityIdentifier Group { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Principal.SecurityIdentifier Group" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.GenericSecurityDescriptor.Group" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.SecurityIdentifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die primäre Gruppe für dieses <see cref="T:System.Security.AccessControl.GenericSecurityDescriptor" />-Objekt ab, oder legt diese fest.</summary>
+        <value>Die primäre Gruppe für dieses <see cref="T:System.Security.AccessControl.GenericSecurityDescriptor" />-Objekt ab.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSddlConversionSupported">
+      <MemberSignature Language="C#" Value="public static bool IsSddlConversionSupported ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsSddlConversionSupported() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.GenericSecurityDescriptor.IsSddlConversionSupported" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen booleschen Wert zurück, der angibt, ob die diesem <see cref="T:System.Security.AccessControl.GenericSecurityDescriptor" />-Objekt zugeordnete Sicherheitsbeschreibung in das SDDL-Format (Security Descriptor Definition Language) konvertiert werden kann.</summary>
+        <returns>
+          <see langword="true" />, wenn die diesem <see cref="T:System.Security.AccessControl.GenericSecurityDescriptor" />-Objekt zugeordnete Sicherheitsbeschreibung in das SDDL-Format (Security Descriptor Definition Language) konvertiert werden kann, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Owner">
+      <MemberSignature Language="C#" Value="public abstract System.Security.Principal.SecurityIdentifier Owner { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Principal.SecurityIdentifier Owner" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.GenericSecurityDescriptor.Owner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.SecurityIdentifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Besitzer des Objekts ab, das diesem <see cref="T:System.Security.AccessControl.GenericSecurityDescriptor" />-Objekt zugeordnet ist, oder legt ihn fest.</summary>
+        <value>Der Besitzer des Objekts, das diesem <see cref="T:System.Security.AccessControl.GenericSecurityDescriptor" />-Objekt zugeordnet ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Revision">
+      <MemberSignature Language="C#" Value="public static byte Revision { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property unsigned int8 Revision" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.GenericSecurityDescriptor.Revision" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Revisionsebene des <see cref="T:System.Security.AccessControl.GenericSecurityDescriptor" />-Objekts ab.</summary>
+        <value>Ein Bytewert, der die Revisionsebene der <see cref="T:System.Security.AccessControl.GenericSecurityDescriptor" /> angibt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,213 @@
+<Type Name="InternalTypeHelper" FullName="System.Windows.Markup.InternalTypeHelper">
+  <TypeSignature Language="C#" Value="public abstract class InternalTypeHelper" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit InternalTypeHelper extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.InternalTypeHelper" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Abstrakte Klasse, die von der WPF XAML-Compiler intern verwendet wird, um die Verwendung von internen Typen unterstützt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Markup.InternalTypeHelper> Klasse ist nicht für die Verwendung von etwas anderes als der WPF XAML-Markupcompiler vorgesehen.  
+  
+ Beim Kompilieren einer XAML-Datei können Sie öffentliche Typen, aber Sie können auch interne Typen unterliegen den gleichen Einschränkungen, die vorhanden sind für den Codezugriff auf interne Typen. <xref:System.Windows.Markup.InternalTypeHelper>Hiermit wird die Unterstützung der internen Ebene-Zugriffstypen für Markup. Dies schließt den Compiler erstellt eine generierte Klasse, die abgeleitet <xref:System.Windows.Markup.InternalTypeHelper> und ihre Member implementiert. Die generierte Klasse ist in einem Kontext Sicherheit und Zugriff vorhanden, so, dass nur der gleichen Assembly oder andere Assemblys, die speziell für interne SAS attributiert der generierten Klasse und somit die internen Typen verweisen können.  
+  
+<a name="xamlTextUsage_InternalTypeHelper"></a>   
+## <a name="xaml-text-usage"></a>Verwendung von XAML-Text  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected InternalTypeHelper ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.InternalTypeHelper.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Windows.Markup.InternalTypeHelper" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddEventHandler">
+      <MemberSignature Language="C#" Value="protected abstract void AddEventHandler (System.Reflection.EventInfo eventInfo, object target, Delegate handler);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void AddEventHandler(class System.Reflection.EventInfo eventInfo, object target, class System.Delegate handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.InternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventInfo" Type="System.Reflection.EventInfo" />
+        <Parameter Name="target" Type="System.Object" />
+        <Parameter Name="handler" Type="System.Delegate" />
+      </Parameters>
+      <Docs>
+        <param name="eventInfo">Die Ereignisinformationen für das Ereignis (CLR Reflektionsinformationen).</param>
+        <param name="target">Das Ziel, wobei der Handler angefügt ist.</param>
+        <param name="handler">Der Ereignishandler.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse (generierten) Fügt einem eventhandlerdelegaten an ein internes Ereignis aus.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Markup.InternalTypeHelper> Klasse ist nicht für die Verwendung von etwas anderes als der WPF XAML-Markupcompiler vorgesehen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDelegate">
+      <MemberSignature Language="C#" Value="protected abstract Delegate CreateDelegate (Type delegateType, object target, string handler);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.Delegate CreateDelegate(class System.Type delegateType, object target, string handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.InternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Delegate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="delegateType" Type="System.Type" />
+        <Parameter Name="target" Type="System.Object" />
+        <Parameter Name="handler" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="delegateType">Die <see cref="T:System.Type" /> des Delegaten.</param>
+        <param name="target">Das Ziel, wobei der Handler angefügt ist.</param>
+        <param name="handler">Der Name der die Handlerimplementierung.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse (generierten) erstellt einen Ereignisdelegaten, der auf eine nicht öffentliche Handlermethode verweist.</summary>
+        <returns>Der Delegatverweis.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Markup.InternalTypeHelper> Klasse ist nicht für die Verwendung von etwas anderes als der WPF XAML-Markupcompiler vorgesehen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstance">
+      <MemberSignature Language="C#" Value="protected abstract object CreateInstance (Type type, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance object CreateInstance(class System.Type type, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.InternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="type">Die zu erstellende <see cref="T:System.Type" />.</param>
+        <param name="culture">Kulturabhängige Informationen.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse (generierten) erstellt eine Instanz eines internen Typs.</summary>
+        <returns>Die erstellte Instanz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Markup.InternalTypeHelper> Klasse ist nicht für die Verwendung von etwas anderes als der WPF XAML-Markupcompiler vorgesehen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyValue">
+      <MemberSignature Language="C#" Value="protected abstract object GetPropertyValue (System.Reflection.PropertyInfo propertyInfo, object target, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance object GetPropertyValue(class System.Reflection.PropertyInfo propertyInfo, object target, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.InternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyInfo" Type="System.Reflection.PropertyInfo" />
+        <Parameter Name="target" Type="System.Object" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="propertyInfo">Eigenschafteninformationen für die abzurufende Eigenschaft.</param>
+        <param name="target">Das Objekt, das den gewünschten Eigenschaftswert enthält.</param>
+        <param name="culture">Kulturabhängige Informationen.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse (generierten), ruft den Wert einer internen Eigenschaft für das Zielobjekt ab.</summary>
+        <returns>Der Wert der Eigenschaft.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Markup.InternalTypeHelper> Klasse ist nicht für die Verwendung von etwas anderes als der WPF XAML-Markupcompiler vorgesehen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPropertyValue">
+      <MemberSignature Language="C#" Value="protected abstract void SetPropertyValue (System.Reflection.PropertyInfo propertyInfo, object target, object value, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void SetPropertyValue(class System.Reflection.PropertyInfo propertyInfo, object target, object value, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.InternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyInfo" Type="System.Reflection.PropertyInfo" />
+        <Parameter Name="target" Type="System.Object" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="propertyInfo">Eigenschafteninformationen für die festzulegende Eigenschaft.</param>
+        <param name="target">Das Objekt, das den gewünschten Eigenschaftswert enthält.</param>
+        <param name="value">Der festzulegende Wert.</param>
+        <param name="culture">Kulturabhängige Informationen.</param>
+        <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse (generierten) legt den Wert auf eine interne Eigenschaft für das Zielobjekt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Windows.Markup.InternalTypeHelper> Klasse ist nicht für die Verwendung von etwas anderes als der WPF XAML-Markupcompiler vorgesehen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,233 @@
+<Type Name="WorkflowApplicationInstance" FullName="System.Activities.WorkflowApplicationInstance">
+  <TypeSignature Language="C#" Value="public class WorkflowApplicationInstance" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WorkflowApplicationInstance extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.WorkflowApplicationInstance" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gibt Informationen zu einer Workflowinstanz für die Anwendung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse unterstützt die Versionskontrolle und die dynamische Updatefunktionalität von Windows Workflow Foundation. [!INCLUDE[crabout](~/includes/crabout-md.md)]workflowversionsverwaltung workflowidentität und dynamische Updates finden Sie unter den folgenden Themen.  
+  
+ [Workflowversionsverwaltung](http://go.microsoft.com/fwlink/?LinkID=271561)  
+ Beschreibt den Workflow Versioning Funktionen, eingeführt in [!INCLUDE[net_v45](~/includes/net-v45-md.md)].  
+  
+ [Dynamisches Update](http://go.microsoft.com/fwlink/?LinkId=271563)  
+ Beschreibt, wie die Workflowdefinition einer persistenten Workflowinstanz zu aktualisieren, indem Sie die Verwendung des dynamischen Updates.  
+  
+ [Verwenden von WorkflowApplication-Identität und-versionsverwaltung](http://go.microsoft.com/fwlink/?LinkId=271564)  
+ Beschreibt, wie <xref:System.Activities.WorkflowIdentity> zum parallelen Hosten mehrerer Workflowversionen verwendet wird.  
+  
+ [Parallele Versionsverwaltung in WorkflowServiceHost](http://go.microsoft.com/fwlink/?LinkId=271565)  
+ Beschreibt, wie mehrere Versionen eines Workflows für einen einzelnen Endpunkt zu hosten.  
+  
+ [Vorgehensweise: Paralleles Hosten mehrerer Workflowversionen](http://go.microsoft.com/fwlink/?LinkId=271566)  
+ Dieser Schritt der [Lernprogramm für erste Schritte](http://go.microsoft.com/fwlink/?LinkId=271570) Aktualisieren einer Workflowdefinition und Hosten von Workflows mithilfe der alten und neuen Definition gleichzeitig veranschaulicht.  
+  
+ [Vorgehensweise: Aktualisieren der Definition einer ausgeführten Workflowinstanz](http://go.microsoft.com/fwlink/?LinkId=271567)  
+ Dieser Schritt der [Lernprogramm für erste Schritte](http://go.microsoft.com/fwlink/?LinkId=271570) demonstriert das Aktualisieren der persistenten Workflowinstanzen, um eine neue Workflowdefinition verwenden.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Abandon">
+      <MemberSignature Language="C#" Value="public void Abandon ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Abandon() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowApplicationInstance.Abandon" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bewirkt, dass der Statuscomputer in den Abgebrochen-Zustand übergeht.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Abandon">
+      <MemberSignature Language="C#" Value="public void Abandon (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Abandon(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowApplicationInstance.Abandon(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Das Timeout für den Abschluss des Abbruchvorgangs.</param>
+        <summary>Bewirkt, dass der Statuscomputer mit dem angegebenen Timeoutwert in den Abgebrochen-Zustand übergeht.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginAbandon">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginAbandon (AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginAbandon(class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowApplicationInstance.BeginAbandon(System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Der asynchrone Rückrufdelegat, der die Benachrichtigung über den Abschluss des asynchronen Vorgangs empfängt.</param>
+        <param name="state">Die benutzerdefinierten Zustandsdaten.</param>
+        <summary>Startet einen asynchronen Abbruchvorgang.</summary>
+        <returns>Einen asynchronen Abbruchvorgang.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginAbandon">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginAbandon (TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginAbandon(valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowApplicationInstance.BeginAbandon(System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Das Timeout, das den Grund für den Abbruchvorgang enthält.</param>
+        <param name="callback">Der asynchrone Rückrufdelegat, der die Benachrichtigung über den Abschluss des asynchronen Vorgangs empfängt.</param>
+        <param name="state">Die benutzerdefinierten Zustandsdaten.</param>
+        <summary>Startet einen asynchronen Abbruchvorgang.</summary>
+        <returns>Einen asynchronen Abbruchvorgang.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanApplyUpdate">
+      <MemberSignature Language="C#" Value="public bool CanApplyUpdate (System.Activities.DynamicUpdate.DynamicUpdateMap updateMap, out System.Collections.Generic.IList&lt;System.Activities.DynamicUpdate.ActivityBlockingUpdate&gt; activitiesBlockingUpdate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool CanApplyUpdate(class System.Activities.DynamicUpdate.DynamicUpdateMap updateMap, [out] class System.Collections.Generic.IList`1&lt;class System.Activities.DynamicUpdate.ActivityBlockingUpdate&gt;&amp; activitiesBlockingUpdate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowApplicationInstance.CanApplyUpdate(System.Activities.DynamicUpdate.DynamicUpdateMap,System.Collections.Generic.IList{System.Activities.DynamicUpdate.ActivityBlockingUpdate}@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="updateMap" Type="System.Activities.DynamicUpdate.DynamicUpdateMap" />
+        <Parameter Name="activitiesBlockingUpdate" Type="System.Collections.Generic.IList&lt;System.Activities.DynamicUpdate.ActivityBlockingUpdate&gt;&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="updateMap">Aktualisiert eine Zuordnung.</param>
+        <param name="activitiesBlockingUpdate">Die blockierende Aktivitäten aktualisieren.</param>
+        <summary>Gibt einen Wert, der angibt, ob die WorkflowApplicationInstance Update angewendet werden kann.</summary>
+        <returns>
+          <see langword="True" />Wenn die WorkflowApplicationInstance Update angewendet werden kann; andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefinitionIdentity">
+      <MemberSignature Language="C#" Value="public System.Activities.WorkflowIdentity DefinitionIdentity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.WorkflowIdentity DefinitionIdentity" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.WorkflowApplicationInstance.DefinitionIdentity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.WorkflowIdentity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Identität der Definition des Workflows.</summary>
+        <value>Die Identität der Definition des Workflows.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndAbandon">
+      <MemberSignature Language="C#" Value="public void EndAbandon (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndAbandon(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowApplicationInstance.EndAbandon(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">Das "IAsyncResult" durch einen Aufruf einer der Methoden BeginAbandon zurückgegeben.</param>
+        <summary>Schließt einen asynchronen Abbruchvorgang ab.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceId">
+      <MemberSignature Language="C#" Value="public Guid InstanceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid InstanceId" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.WorkflowApplicationInstance.InstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den eindeutigen Bezeichner der Workflowinstanz ab.</summary>
+        <value>Der eindeutige Bezeichner der Workflowinstanz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceStore">
+      <MemberSignature Language="C#" Value="public System.Runtime.DurableInstancing.InstanceStore InstanceStore { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.DurableInstancing.InstanceStore InstanceStore" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.WorkflowApplicationInstance.InstanceStore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.DurableInstancing.InstanceStore</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ein Objekt ab, das Zugriff auf den Persistenzstatus der aktuellen Instanz der Workflowanwendung bereitstellt, bzw. legt es fest.</summary>
+        <value>Ein Objekt, das Zugriff auf den persistenzstatus der aktuellen Instanz der workflowanwendung bereitstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,171 @@
+<Type Name="ScriptingProfileServiceSection" FullName="System.Web.Configuration.ScriptingProfileServiceSection">
+  <TypeSignature Language="C#" Value="public sealed class ScriptingProfileServiceSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ScriptingProfileServiceSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.ScriptingProfileServiceSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt den Konfigurationsabschnitt für die Profil-diensteinstellungen. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Configuration.ScriptingProfileServiceSection> Klasse ermöglicht den programmgesteuerten Zugriff auf und Ändern der `profileService` Element des Konfigurationsabschnitts für ASP.NET-Anwendungen, die AJAX-Funktionen verwenden.  
+  
+ Profildienst dient zum Abrufen und Festlegen der Eigenschaften des Profils für die Identität des Benutzers, die die aktuelle Anforderung zugeordnet ist. Dies bedeutet, dass der Profildienst für authentifizierte Benutzer funktioniert. Es kann auch für anonyme Benutzer, wenn die anonyme Identifikation-Funktion aktiviert (oder verfügbar) ist in der Konfigurationsdatei.  
+  
+   
+  
+## Examples  
+ Im folgende Beispiel wird gezeigt, wie Werte für Eigenschaften des deklarativ angeben, die <xref:System.Web.Configuration.ScriptingProfileServiceSection> Klasse in einer Konfigurationsdatei.  
+  
+```  
+<system.web.extensions>  
+  <scripting>  
+    <webServices>  
+      <profileService enabled="true"   
+        readAccessProperties="FirstName,LastName"   
+        writeAccessProperties="FirstName,LastName" />  
+    </webServices>  
+  </scripting>  
+</system.web.extensions>  
+```  
+  
+ Das folgende Beispiel veranschaulicht den Zugriff auf die <xref:System.Web.Configuration.ScriptingProfileServiceSection> programmgesteuert Abschnitt.  
+  
+ [!code-csharp[System.Web.Configuration#2](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.Configuration/CS/App_Code/ConfigSectionSample.cs#2)]
+ [!code-vb[System.Web.Configuration#2](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.Configuration/VB/App_Code/ConfigSectionSample.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScriptingProfileServiceSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ScriptingProfileServiceSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Configuration.ScriptingProfileServiceSection" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ScriptingProfileServiceSection.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("enabled", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob der Profildienst in der AJAX-aktivierten ASP.NET-Anwendung verfügbar ist.</summary>
+        <value>
+          <see langword="true" />Wenn die Profildienst aktiviert ist; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ScriptingProfileServiceSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadAccessProperties">
+      <MemberSignature Language="C#" Value="public string[] ReadAccessProperties { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] ReadAccessProperties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ScriptingProfileServiceSection.ReadAccessProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("readAccessProperties", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ermittelt oder definiert die Profileigenschaften Lesezugriff.</summary>
+        <value>Ein Array, das die Namen der Lesezugriff Profileigenschaften enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um Lesezugriff Profileigenschaften in AJAX-aktivierte Anwendungen zu verwenden, fügen Sie mindestens ein Profileigenschaftennamen, die die <xref:System.Web.Configuration.ScriptingProfileServiceSection.ReadAccessProperties%2A> Eigenschaft.  
+  
+ Sie können festlegen, <xref:System.Web.Configuration.ScriptingProfileServiceSection.ReadAccessProperties%2A> auf ein leeres Zeichenfolgenarray. Dies bedeutet, dass keine Profileigenschaften von Clientskripts gelesen werden dürfen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAccessProperties">
+      <MemberSignature Language="C#" Value="public string[] WriteAccessProperties { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] WriteAccessProperties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ScriptingProfileServiceSection.WriteAccessProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("writeAccessProperties", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt den Schreibzugriff Profileigenschaften.</summary>
+        <value>Ein Array, das die Namen der Profileigenschaften Schreibzugriff enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um Schreibzugriff Profileigenschaften in AJAX-aktivierte Anwendungen zu verwenden, fügen Sie mindestens ein Profileigenschaftennamen, die die <xref:System.Web.Configuration.ScriptingProfileServiceSection.WriteAccessProperties%2A> Eigenschaft.  
+  
+ Sie können festlegen, <xref:System.Web.Configuration.ScriptingProfileServiceSection.WriteAccessProperties%2A> auf ein leeres Zeichenfolgenarray. Dies bedeutet, dass keine Profileigenschaften zulässig sind, von Clientskripts festgelegt werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,97 @@
+<Type Name="ValidationPropertyAttribute" FullName="System.Web.UI.ValidationPropertyAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ValidationPropertyAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ValidationPropertyAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ValidationPropertyAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Definiert das Metadatenattribut, dass ASP.NET Serversteuerelemente zu verwenden, um eine Validierungseigenschaft zu identifizieren. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieses Attribut wird normalerweise für formularbasierte Eingabesteuerelemente verwendet.  
+  
+ Weitere Informationen zu Attributen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Web.UI.ValidationPropertyAttribute> Klasse bei der ein benutzerdefiniertes Steuerelement zu erstellen.  
+  
+ [!code-csharp[ValidationPropertyAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ValidationPropertyAttribute/CS/validationpropertyattribute1.cs#1)]
+ [!code-vb[ValidationPropertyAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ValidationPropertyAttribute/VB/validationpropertyattribute1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidationPropertyAttribute (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ValidationPropertyAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Validierungseigenschaft.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.ValidationPropertyAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Web.UI.ValidationPropertyAttribute> Klasse bei der ein benutzerdefiniertes Steuerelement zu erstellen.  
+  
+ [!code-csharp[ValidationPropertyAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ValidationPropertyAttribute/CS/validationpropertyattribute1.cs#1)]
+ [!code-vb[ValidationPropertyAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ValidationPropertyAttribute/VB/validationpropertyattribute1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ValidationPropertyAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der ASP.NET-Serversteuerelement Validierungseigenschaft ab.</summary>
+        <value>Der Name der Validierungseigenschaft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Web.UI.ValidationPropertyAttribute> Klasse bei der ein benutzerdefiniertes Steuerelement zu erstellen.  
+  
+ [!code-csharp[ValidationPropertyAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ValidationPropertyAttribute/CS/validationpropertyattribute1.cs#1)]
+ [!code-vb[ValidationPropertyAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ValidationPropertyAttribute/VB/validationpropertyattribute1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

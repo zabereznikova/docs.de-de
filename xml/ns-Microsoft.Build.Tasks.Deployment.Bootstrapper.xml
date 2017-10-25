@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.Build.Tasks.Deployment.Bootstrapper">
+  <Docs>
+    <summary>Die <see cref="N:Microsoft.Build.Tasks.Deployment.Bootstrapper" /> -Namespace enthält Klassen, die intern von MSBuild verwendet.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

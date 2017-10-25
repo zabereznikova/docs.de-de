@@ -1,0 +1,222 @@
+<Type Name="MSG" FullName="System.Windows.Interop.MSG">
+  <TypeSignature Language="C#" Value="public struct MSG" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit MSG extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Interop.MSG" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Enthält Informationen aus der Nachrichtenwarteschlange eines Threads an.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Typ bietet ähnliche Informationen wie die nicht verwaltete [!INCLUDE[TLA#tla_win32](~/includes/tlasharptla-win32-md.md)] [MSG](http://msdn2.microsoft.com/en-gb/library/ms644958.aspx) Struktur.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="hwnd">
+      <MemberSignature Language="C#" Value="public IntPtr hwnd { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int hwnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.MSG.hwnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Fensterhandle (HWND) an das Fenster, dessen Fensterprozedur die Nachricht empfängt.</summary>
+        <value>Das Fensterhandle (HWND).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Interop.MSG.hwnd%2A>ist `null` Wenn die Nachricht ist eine Thread-Nachricht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="lParam">
+      <MemberSignature Language="C#" Value="public IntPtr lParam { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int lParam" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.MSG.lParam" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <paramref name="lParam" /> Wert, der zusätzliche Informationen über die Meldung angibt. Die genaue Bedeutung hängt vom Wert von der <see cref="P:System.Windows.Interop.MSG.message" /> Member.</summary>
+        <value>Die <paramref name="lParam" /> Wert für die Nachricht.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="message">
+      <MemberSignature Language="C#" Value="public int message { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 message" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.MSG.message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Nachrichten-ID.</summary>
+        <value>Der Meldungsbezeichner.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anwendungen können nur das niedrige Word verwenden. das hohe Word wird durch das System reserviert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="pt_x">
+      <MemberSignature Language="C#" Value="public int pt_x { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 pt_x" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.MSG.pt_x" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die X-Koordinate der Position des Mauszeigers auf dem Bildschirm, wenn die Nachricht bereitgestellt wurde.</summary>
+        <value>Die X-Koordinate der Cursorposition.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="pt_y">
+      <MemberSignature Language="C#" Value="public int pt_y { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 pt_y" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.MSG.pt_y" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die y-Koordinate der Position des Mauszeigers auf dem Bildschirm, wenn die Nachricht bereitgestellt wurde.</summary>
+        <value>Die y-Koordinate der Cursorposition.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="time">
+      <MemberSignature Language="C#" Value="public int time { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 time" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.MSG.time" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Zeit, an der die Nachricht gesendet wurde.</summary>
+        <value>Die Zeit, die die Nachricht gesendet wurde.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="wParam">
+      <MemberSignature Language="C#" Value="public IntPtr wParam { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int wParam" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.MSG.wParam" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die <paramref name="wParam" /> Wert für die Nachricht, die zusätzliche Informationen über die Meldung angibt. Die genaue Bedeutung hängt vom Wert der Nachricht ab.</summary>
+        <value>Die <paramref name="wParam" /> Wert für die Nachricht.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

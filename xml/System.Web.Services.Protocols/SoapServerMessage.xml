@@ -1,0 +1,259 @@
+<Type Name="SoapServerMessage" FullName="System.Web.Services.Protocols.SoapServerMessage">
+  <TypeSignature Language="C#" Value="public sealed class SoapServerMessage : System.Web.Services.Protocols.SoapMessage" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SoapServerMessage extends System.Web.Services.Protocols.SoapMessage" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.SoapServerMessage" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Services.Protocols.SoapMessage</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Daten in eine SOAP-Anforderung empfangen oder SOAP-Antwort gesendet, indem Sie eine XML-Webdienstmethode in einem bestimmten <see cref="T:System.Web.Services.Protocols.SoapMessageStage" />. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codefragment ist Teil einer SOAP-Erweiterung, die die SOAP-Nachrichten von einer XML-Webdienstmethode gesendet und empfangen protokolliert. Dieses bestimmte Fragment verarbeitet die <xref:System.Web.Services.Protocols.SoapServerMessage> übergebenen der <xref:System.Web.Services.Protocols.SoapExtension.ProcessMessage%2A?displayProperty=nameWithType> -Methode der SOAP-Erweiterung durch Schreiben von Eigenschaften von der <xref:System.Web.Services.Protocols.SoapServerMessage> in die Protokolldatei.  
+  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public override string Action { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Action" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapServerMessage.Action" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den SOAPAction-HTTP-Anforderungsheaderfeld für die SOAP-Anforderung oder SOAP-Antwort ab.</summary>
+        <value>Der SOAPAction-HTTP-Anforderungsheaderfeld für die SOAP-Anforderung oder SOAP-Antwort.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Services.Protocols.SoapServerMessage.Action%2A> Eigenschaft zugegriffen werden kann, während eines <xref:System.Web.Services.Protocols.SoapMessageStage>.  
+  
+   
+  
+## Examples  
+ Das folgende Codefragment ist Teil einer SOAP-Erweiterung, die die SOAP-Nachrichten von einem XML-Webdienst gesendet und empfangen protokolliert. Dieses Fragment gibt in die Protokolldatei den Wert von der `SOAPAction` HTTP-Anforderungsheaderfeld.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureInStage">
+      <MemberSignature Language="C#" Value="protected override void EnsureInStage ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void EnsureInStage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapServerMessage.EnsureInStage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureOutStage">
+      <MemberSignature Language="C#" Value="protected override void EnsureOutStage ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void EnsureOutStage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapServerMessage.EnsureOutStage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodInfo">
+      <MemberSignature Language="C#" Value="public override System.Web.Services.Protocols.LogicalMethodInfo MethodInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Protocols.LogicalMethodInfo MethodInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapServerMessage.MethodInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.LogicalMethodInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Darstellung des Methodenprototyps für die XML-Webdienstmethode für die SOAP-Anforderung vorgesehen ist.</summary>
+        <value>Ein <see cref="T:System.Web.Services.Protocols.LogicalMethodInfo" /> , das die XML-Webdienstmethode für den SOAP-Anforderung bestimmt ist darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Obwohl die <xref:System.Web.Services.Protocols.SoapServerMessage.MethodInfo%2A> -Eigenschaft jeder Phase zugegriffen werden kann, die Informationen zur Methode ist nur verfügbar, während der <xref:System.Web.Services.Protocols.SoapMessageStage.AfterDeserialize> und <xref:System.Web.Services.Protocols.SoapMessageStage.BeforeSerialize>.  
+  
+   
+  
+## Examples  
+ Das folgende Codefragment ist Teil einer SOAP-Erweiterung, die die SOAP-Nachrichten von einem XML-Webdienst gesendet und empfangen protokolliert. Dieses Fragment gibt den Namen der angeforderten XML-Webdienstmethode in die Protokolldatei aus.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OneWay">
+      <MemberSignature Language="C#" Value="public override bool OneWay { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OneWay" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapServerMessage.OneWay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob der Client für den Server zum Abschließen der Verarbeitung einer XML-Webdienstmethode wartet.</summary>
+        <value>
+          <see langword="true" />Wenn der Client auf dem Server eine Methode vollständig verarbeitet wartet; andernfalls <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute> oder <xref:System.Web.Services.Protocols.SoapRpcMethodAttribute> angewendet, um eine XML-Webdienstmethode Dienstmethode oder XML-Webdienstclient kann angeben, ob die XML-Webdienstmethode eine Möglichkeit, oder es wird nicht durch Festlegen der <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute.OneWay%2A> -Eigenschaft des Attributs.  
+  
+ Die <xref:System.Web.Services.Protocols.SoapServerMessage.OneWay%2A> Eigenschaft zugegriffen werden kann, während eines <xref:System.Web.Services.Protocols.SoapMessageStage>.  
+  
+   
+  
+## Examples  
+ Das folgende Codefragment ist Teil einer SOAP-Erweiterung, die die SOAP-Nachrichten von einem XML-Webdienst gesendet und empfangen protokolliert. Dieses Fragment gibt in die Protokolldatei ein Ausdruck mit dem Hinweis der XML-Webdienstmethode unidirektional ist, wenn die <xref:System.Web.Services.Protocols.SoapServerMessage.OneWay%2A> Eigenschaft ist `true`.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Server">
+      <MemberSignature Language="C#" Value="public object Server { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Server" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapServerMessage.Server" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Instanz der Klasse, die den Methodenaufruf auf dem Webserver behandeln.</summary>
+        <value>Die Instanz der Klasse, die XML-Webdienst implementiert.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Services.Protocols.SoapServerMessage.Server%2A> Eigenschaft ist eine Instanz der Klasse, die den XML-Webdienst implementiert. Wenn eine SOAP-Erweiterung voraus den Typ der Klasse wussten, konnte er umgewandelt <xref:System.Web.Services.Protocols.SoapServerMessage.Server%2A> zum Typ und Access-Eigenschaften und Methoden der Klasse, die den XML-Webdienst implementiert. Die <xref:System.Web.Services.Protocols.SoapServerMessage.Server%2A> Eigenschaft zugegriffen werden kann, während der <xref:System.Web.Services.Protocols.SoapMessageStage.AfterDeserialize> oder <xref:System.Web.Services.Protocols.SoapMessageStage.BeforeSerialize>.  
+  
+   
+  
+## Examples  
+ Das folgende Codefragment ist Teil einer SOAP-Erweiterung, die die SOAP-Nachrichten von einem XML-Webdienst gesendet und empfangen protokolliert. Dieses Fragment gibt in die Protokolldatei den Typ des XML-Webdiensts, ist er `MathSvc`.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="T:System.Web.Services.Protocols.SoapMessageStage" /> ist nicht <see cref="F:System.Web.Services.Protocols.SoapMessageStage.AfterDeserialize" /> oder <see cref="F:System.Web.Services.Protocols.SoapMessageStage.BeforeSerialize" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SoapVersion">
+      <MemberSignature Language="C#" Value="public override System.Web.Services.Protocols.SoapProtocolVersion SoapVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Services.Protocols.SoapProtocolVersion SoapVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapServerMessage.SoapVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.SoapProtocolVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Version des für die Kommunikation mit den XML-Webdienst verwendet SOAP-Protokolls ab.</summary>
+        <value>Einer der <see cref="T:System.Web.Services.Protocols.SoapProtocolVersion" />-Werte. Die Standardeinstellung ist <see cref="F:System.Web.Services.Protocols.SoapProtocolVersion.Default" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Services.Protocols.SoapServerMessage.SoapVersion%2A> Eigenschaft ist garantiert gültig, nachdem die <xref:System.Web.Services.Protocols.SoapMessageStage.BeforeDeserialize> Phase. In der <xref:System.Web.Services.Protocols.SoapMessageStage.BeforeDeserialize> Phase die Eigenschaft ist verfügbar, aber die SOAP-Nachricht wurde nicht vollständig verarbeitet und SOAP-Erweiterungen, die den Inhalt des SOAP-Nachricht zu ändern, können nicht mehr ausgeführt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Url">
+      <MemberSignature Language="C#" Value="public override string Url { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Url" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapServerMessage.Url" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Basis-URL des XML-Webdiensts ab.</summary>
+        <value>Die Basis-URL des XML-Webdiensts.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.Services.Protocols.SoapServerMessage.Url%2A> Eigenschaft zugegriffen werden kann, während eines <xref:System.Web.Services.Protocols.SoapMessageStage>.  
+  
+   
+  
+## Examples  
+ Das folgende Codefragment ist Teil einer SOAP-Erweiterung, die die SOAP-Nachrichten von einem XML-Webdienst gesendet und empfangen protokolliert. Dieses Fragment gibt die URL des XML-Webdiensts in die Protokolldatei aus.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

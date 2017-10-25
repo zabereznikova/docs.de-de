@@ -1,0 +1,333 @@
+<Type Name="SrgsOneOf" FullName="System.Speech.Recognition.SrgsGrammar.SrgsOneOf">
+  <TypeSignature Language="C#" Value="public class SrgsOneOf : System.Speech.Recognition.SrgsGrammar.SrgsElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit SrgsOneOf extends System.Speech.Recognition.SrgsGrammar.SrgsElement" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.SrgsGrammar.SrgsOneOf" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Speech.Recognition.SrgsGrammar.SrgsElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("{DebuggerDisplayString ()}")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerTypeProxy(typeof(System.Speech.Recognition.SrgsGrammar.SrgsOneOf/OneOfDebugDisplay))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine Liste von alternativen Wörtern oder Ausdrücken, die wird entsprechend der Spracheingabe verwendet werden kann.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:System.Speech.Recognition.SrgsGrammar.SrgsOneOf> Objekt enthält eine Liste von alternativen Wörtern oder Ausdrücken, von denen eine erkannt werden, kann Wenn gesprochen. Sie können Listen von alternativen von Arrays von erstellen <xref:System.Speech.Recognition.SrgsGrammar.SrgsItem> Objekte oder Arrays von <xref:System.String> Objekte. Verwenden der <xref:System.Speech.Recognition.SrgsGrammar.SrgsOneOf.Items%2A> Eigenschaft, die Zugriff auf die alternativen Elemente in der Liste.  
+  
+ Die <xref:System.Speech.Recognition.SrgsGrammar.SrgsOneOf> -Klasse stellt die `one-of` Element aus der World Wide Web Consortium (W3C) [Speech Recognition Grammatik Specification (SRGS) Version 1.0](http://go.microsoft.com/fwlink/?LinkId=201761). Informationen zu den SRGS `one-of` Element und Details über die Unterstützung von System.Speech, finden Sie unter [eine-Elements](http://msdn.microsoft.com/en-us/643cee6b-5082-46ea-9fc1-9f3646a95801).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Erstellt eine neue Instanz der <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsOneOf" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Konstruieren Sie eine Instanz von der <xref:System.Speech.Recognition.SrgsGrammar.SrgsOneOf> Klasse aus einem Array von <xref:System.String> Objekte aus einem Array von <xref:System.Speech.Recognition.SrgsGrammar.SrgsItem> Objekte, oder als eine leere Liste. Mit <xref:System.Speech.Recognition.SrgsGrammar.SrgsItem> Objekte anstelle von <xref:System.String> Objekte in einer Liste von alternativen können Sie die Eigenschaften eines gelten <xref:System.Speech.Recognition.SrgsGrammar.SrgsItem> auf jedes Element in der Liste, z. B. <xref:System.Speech.Recognition.SrgsGrammar.SrgsItem.MinRepeat%2A>, <xref:System.Speech.Recognition.SrgsGrammar.SrgsItem.MaxRepeat%2A>, <xref:System.Speech.Recognition.SrgsGrammar.SrgsItem.RepeatProbability%2A>, und <xref:System.Speech.Recognition.SrgsGrammar.SrgsItem.Weight%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SrgsOneOf ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SrgsGrammar.SrgsOneOf.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsOneOf" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Beispiel wird die <xref:System.Speech.Recognition.SrgsGrammar.SrgsOneOf> Element zum Erstellen von listet <xref:System.Speech.Recognition.SrgsGrammar.SrgsItem> Elemente, die Country-Namen enthält, eine von denen möglicherweise verwendet werden, um das enthaltende erkennen einen Ausdruck. Im Beispiel fügt dann eine der resultierenden <xref:System.Speech.Recognition.SrgsGrammar.SrgsOneOf> Objekte auf den entsprechenden Regeln für europäischen Ländern und Südamerika Ländern. Weitere, im Beispiel wird die <xref:System.Speech.Recognition.SrgsGrammar.SrgsOneOf> Objekt Gruppe Regel Verweise auf `ruleEurope` und `ruleSAmerica` in eine Liste von zwei Möglichkeiten, einen der gesprochenen Eingabe erkennen verwendet werden kann.  
+  
+```  
+public void WorldSoccerWinners ()  
+{  
+  
+  // Create an SrgsDocument, create a new rule  
+  // and set its scope to public.  
+  SrgsDocument document = new SrgsDocument();  
+  SrgsRule winnerRule = new SrgsRule("WorldCupWinner");  
+  winnerRule.Scope = SrgsRuleScope.Public;  
+  
+  // Add the introduction.  
+  winnerRule.Elements.Add(new SrgsItem("A nation that has won the world cup is: "));  
+  
+  // Create the rule for the European nations.  
+  SrgsOneOf oneOfEurope = new SrgsOneOf(new SrgsItem[] {new SrgsItem("England"),   
+    new SrgsItem("France"), new SrgsItem("Germany"), new SrgsItem("Italy")});  
+  SrgsRule ruleEurope = (new SrgsRule("EuropeanNations", new SrgsElement[] {oneOfEurope}));  
+  
+  // Create the rule for the South American nations.  
+  SrgsOneOf oneOfSAmerica = new SrgsOneOf(new SrgsItem[] {new SrgsItem("Argentina"),   
+    new SrgsItem("Brazil"), new SrgsItem("Uruguay")});  
+  SrgsRule ruleSAmerica = (new SrgsRule("SouthAmericanNations", new SrgsElement[] {oneOfSAmerica}));  
+  
+  // Add references to winnerRule for ruleEurope and ruleSAmerica.  
+  winnerRule.Elements.Add(new SrgsOneOf(new SrgsItem[] {(new SrgsItem   
+    (new SrgsRuleRef(ruleEurope))), new SrgsItem(new SrgsRuleRef(ruleSAmerica))}));  
+  
+  // Add all the rules to the document and make winnerRule   
+  // the root rule of the document.  
+  document.Rules.Add(new SrgsRule[] {winnerRule, ruleEurope, ruleSAmerica});  
+  document.Root = winnerRule;  
+}  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SrgsOneOf (params System.Speech.Recognition.SrgsGrammar.SrgsItem[] items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Speech.Recognition.SrgsGrammar.SrgsItem[] items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SrgsGrammar.SrgsOneOf.#ctor(System.Speech.Recognition.SrgsGrammar.SrgsItem[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="items" Type="System.Speech.Recognition.SrgsGrammar.SrgsItem[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="items">Die alternative Elemente hinzufügen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsOneOf" />-Klasse aus einem Array von <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsItem" />-Objekten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine Grammatik, die den Ausdruck erkennt "ein, die die WM gewonnen hat Nation ist" gefolgt vom Namen des ein Land, die die WM gewonnen hat. Erstellt eine öffentliche Regel namens `WorldCupWinner`. Klicken Sie dann erstellt zwei <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> -Objekte mit <xref:System.Speech.Recognition.SrgsGrammar.SrgsOneOf> Objekte, Arrays von neuen enthalten <xref:System.Speech.Recognition.SrgsGrammar.SrgsItem> Objekte. Die Grammatik, die in diesem Beispiel generiert, finden Sie unter <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule.%23ctor%2A>.  
+  
+```csharp  
+ public void WorldSoccerWinners ()  
+{  
+  
+  // Create an SrgsDocument, create a new rule  
+  // and set its scope to public.  
+  SrgsDocument document = new SrgsDocument();  
+  SrgsRule winnerRule = new SrgsRule("WorldCupWinner");  
+  winnerRule.Scope = SrgsRuleScope.Public;  
+  
+  // Add the introduction.  
+  winnerRule.Elements.Add(new SrgsItem("A nation that has won the world cup is: "));  
+  
+  // Create the rule for the European nations.  
+  SrgsOneOf oneOfEurope = new SrgsOneOf(new SrgsItem[] {new SrgsItem("England"), new SrgsItem("France"), new SrgsItem("Germany"), new SrgsItem("Italy")});  
+  SrgsRule ruleEurope = (new SrgsRule("EuropeanNations", new SrgsElement[] {oneOfEurope}));  
+  
+  // Create the rule for the South American nations.  
+  SrgsOneOf oneOfSAmerica = new SrgsOneOf(new SrgsItem[] {new SrgsItem("Argentina"), new SrgsItem("Brazil"), new SrgsItem("Uruguay")});  
+  SrgsRule ruleSAmerica = (new SrgsRule("SouthAmericanNations", new SrgsElement[] {oneOfSAmerica}));  
+  
+  // Add references to winnerRule for ruleEurope and ruleSAmerica.  
+  winnerRule.Elements.Add(new SrgsOneOf(new SrgsItem[] {(new SrgsItem   
+    (new SrgsRuleRef(ruleEurope))), new SrgsItem(new SrgsRuleRef(ruleSAmerica))}));  
+  
+  // Add all the rules to the document and make winnerRule   
+  // the root rule of the document.  
+  document.Rules.Add(new SrgsRule[] {winnerRule, ruleEurope, ruleSAmerica});  
+  document.Root = winnerRule;  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="items" /> ist <see langword="null" />.  
+  
+ Jedes Element in der <paramref name="items" /> Array ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SrgsOneOf (params string[] items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string[] items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SrgsGrammar.SrgsOneOf.#ctor(System.String[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="items" Type="System.String[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="items">Die alternative Elemente hinzufügen.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsOneOf" />-Klasse aus einem Array von <see cref="T:System.String" />-Objekten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine Grammatik, die den Ausdruck erkennt "ein, die die WM gewonnen hat Nation ist" gefolgt vom Namen des ein Land, die die WM gewonnen hat. Im Beispiel wird die <xref:System.Speech.Recognition.SrgsGrammar.SrgsOneOf> Element zum Erstellen von Listen mit zulässigen Ländernamen aus einem Array von <xref:System.String> Objekte. Im Beispiel fügt dann eine der resultierenden <xref:System.Speech.Recognition.SrgsGrammar.SrgsOneOf> Objekte auf den entsprechenden Regeln für europäischen Ländern und Südamerika Ländern.  
+  
+```  
+public void WorldSoccerWinners ()  
+{  
+    // Create a grammar from an SRGSDocument, create a new rule  
+  // and set its scope to public.  
+  SrgsDocument srgsGrammar = new SrgsDocument ();  
+  SrgsRule winnerRule = new SrgsRule ("WorldCupWinner");  
+  winnerRule.Scope = SrgsRuleScope.Public;  
+  
+  // Add the introduction.  
+  winnerRule.Elements.Add (new SrgsItem ("A nation that has won the world cup is"));  
+  
+  // Create the rule for the European nations.  
+  SrgsOneOf oneOfEurope = new SrgsOneOf (new string[] {"England","France","Germany","Italy"});  
+  SrgsRule ruleEurope = (new SrgsRule("EuropeanNations", new SrgsElement[] {oneOfEurope}));  
+  
+  // Create the rule for the South American nations.  
+  SrgsOneOf oneOfSAmerica = new SrgsOneOf (new string[] {"Argentina","Brazil","Uruguay"});  
+  SrgsRule ruleSAmerica = (new SrgsRule("SouthAmericanNations", new SrgsElement[] {oneOfSAmerica}));  
+  
+  // Add references to winnerRule for ruleEurope and ruleSAmerica.  
+  winnerRule.Elements.Add(new SrgsOneOf(new SrgsItem[] {(new SrgsItem   
+    (new SrgsRuleRef(ruleEurope))), new SrgsItem(new SrgsRuleRef(ruleSAmerica))}));  
+  
+  // Add all the rules to the grammar and make winnerRule  
+  // the root rule of the grammar.  
+  srgsGrammar.Rules.Add (new SrgsRule[] {winnerRule, ruleEurope, ruleSAmerica});  
+  srgsGrammar.Root = winnerRule;  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="items" /> ist <see langword="null" />.  
+  
+ Jedes Element in der <paramref name="items" /> Array ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Speech.Recognition.SrgsGrammar.SrgsItem item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Speech.Recognition.SrgsGrammar.SrgsItem item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SrgsGrammar.SrgsOneOf.Add(System.Speech.Recognition.SrgsGrammar.SrgsItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Speech.Recognition.SrgsGrammar.SrgsItem" />
+      </Parameters>
+      <Docs>
+        <param name="item">Das Element, das die Liste der alternativen hinzugefügt werden soll.</param>
+        <summary>Fügt eine <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsItem" /> , enthält ein Wort oder einen Ausdruck, um die Liste von alternativen an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel erstellt eine Grammatik, die den Ausdruck erkennt "ein, die die WM gewonnen hat Nation ist" gefolgt vom Namen des ein Land, die die WM gewonnen hat. Im Beispiel wird die <xref:System.Speech.Recognition.SrgsGrammar.SrgsOneOf> Objekt zum Erstellen von Listen mit zulässigen Ländernamen aus einem Array von <xref:System.Speech.Recognition.SrgsGrammar.SrgsItem> Objekte. Mithilfe der <xref:System.Speech.Recognition.SrgsGrammar.SrgsOneOf.Add%2A> -Methode, die im Beispiel fügt eine <xref:System.Speech.Recognition.SrgsGrammar.SrgsItem> , enthält die Zeichenfolge "Italy", um die <xref:System.Speech.Recognition.SrgsGrammar.SrgsOneOf> Objekt `oneOfEurope`.  
+  
+```  
+public void WorldSoccerWinners ()  
+{  
+  
+  // Create an SrgsDocument, create a new rule  
+  // and set its scope to public.  
+  SrgsDocument document = new SrgsDocument();  
+  SrgsRule winnerRule = new SrgsRule("WorldCupWinner");  
+  winnerRule.Scope = SrgsRuleScope.Public;  
+  
+  // Add the introduction.  
+  winnerRule.Elements.Add(new SrgsItem("A nation that has won the world cup is: "));  
+  
+  // Create the rule for the European nations.  
+  SrgsOneOf oneOfEurope = new SrgsOneOf(new SrgsItem[] {new SrgsItem("England"),   
+    new SrgsItem("France"), new SrgsItem("Germany")});  
+  oneOfEurope.Add(new SrgsItem("Italy"));  
+  SrgsRule ruleEurope = (new SrgsRule("EuropeanNations", new SrgsElement[] {oneOfEurope}));  
+  
+  // Create the rule for the South American nations.  
+  SrgsOneOf oneOfSAmerica = new SrgsOneOf(new SrgsItem[] {new SrgsItem("Argentina"),   
+    new SrgsItem("Brazil"), new SrgsItem("Uruguay")});  
+  SrgsRule ruleSAmerica = (new SrgsRule("SouthAmericanNations", new SrgsElement[] {oneOfSAmerica}));  
+  
+  // Add references to winnerRule for ruleEurope and ruleSAmerica.  
+  winnerRule.Elements.Add(new SrgsOneOf(new SrgsItem[] {(new SrgsItem   
+    (new SrgsRuleRef(ruleEurope))), new SrgsItem(new SrgsRuleRef(ruleSAmerica))}));  
+  
+  // Add all the rules to the document and make winnerRule   
+  // the root rule of the document.  
+  document.Rules.Add(new SrgsRule[] {winnerRule, ruleEurope, ruleSAmerica});  
+  document.Root = winnerRule;  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="item" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Items">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Speech.Recognition.SrgsGrammar.SrgsItem&gt; Items { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Speech.Recognition.SrgsGrammar.SrgsItem&gt; Items" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SrgsGrammar.SrgsOneOf.Items" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Speech.Recognition.SrgsGrammar.SrgsItem&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Liste aller in enthaltenen alternativen der <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsOneOf" /> Element.</summary>
+        <value>Gibt die Liste von Alternativen zur Verfügung.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die alternative Wörter und Ausdrücke, die von dieser Eigenschaft zurückgegebene möglicherweise wurde die <xref:System.Speech.Recognition.SrgsGrammar.SrgsOneOf> als <xref:System.Speech.Recognition.SrgsGrammar.SrgsItem> oder <xref:System.String> Objekte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

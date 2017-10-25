@@ -1,0 +1,129 @@
+<Type Name="ServiceDescriptionFormatExtension" FullName="System.Web.Services.Description.ServiceDescriptionFormatExtension">
+  <TypeSignature Language="C#" Value="public abstract class ServiceDescriptionFormatExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ServiceDescriptionFormatExtension extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Description.ServiceDescriptionFormatExtension" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein Erweiterbarkeitselement, das einen XML-Webdienst hinzugefügt.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ In einer abgeleiteten Klasse die `ServiceDescriptionFormatExtension` -Klasse ermöglicht Benutzern, die zusätzlich zu den in der Web Services Description Language (WSDL)-Spezifikation definierten Erweiterbarkeitselemente definieren. Erweiterbarkeit-Elemente hinzugefügt werden können, um eine <xref:System.Web.Services.Description.ServiceDescription> auf einer mehrere Ebenen innerhalb der Hierarchie von Klassen. Daher viele Klassen abgeleitet der <xref:System.Web.Services.Description.DocumentableItem> Klasse (einschließlich der <xref:System.Web.Services.Description.ServiceDescription> Klasse) haben eine `Extensions` -Eigenschaft, die zurückgibt, eine <xref:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ServiceDescriptionFormatExtension ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionFormatExtension.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtension" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Handled">
+      <MemberSignature Language="C#" Value="public bool Handled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Handled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ServiceDescriptionFormatExtension.Handled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtension" /> wird durch den Importvorgang zu verwendet, wenn das Erweiterbarkeitselement importiert wird.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtension" /> verwendet, durch den Importvorgang wird; andernfalls, <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine abgeleitete Klasse, die auf einen XML-Webdienst hinzugefügt Erweiterbarkeitselement darstellt angefügt werden kann, um eine <xref:System.Web.Services.Description.ServiceDescription> mithilfe der <xref:System.Web.Services.Description.ServiceDescriptionImporter.Import%2A> -Methode (die vom Tool wsdl.exe verwendet wird). Sie können auch eine benutzerdefinierte Klasse abgeleitet wurde. die <xref:System.Web.Services.Description.SoapExtensionImporter> Klasse, um den Import zum Behandeln benutzerdefinierte Erweiterbarkeitselemente zu erweitern.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public object Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Parent" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ServiceDescriptionFormatExtension.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das übergeordnete Element von <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtension" /> ab.</summary>
+        <value>Das übergeordnete Element des <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtension" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ruft beim Überschreiben in einer abgeleiteten Klasse werden die von dieser Eigenschaft zurückgegebene Klasse in einer abgeleiteten Klasse die <xref:System.Web.Services.Description> Namespace anstelle der Base <xref:System.Object> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Required">
+      <MemberSignature Language="C#" Value="public bool Required { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Required" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ServiceDescriptionFormatExtension.Required" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("required", Namespace="http://schemas.xmlsoap.org/wsdl/")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob die <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtension" /> ist notwendig, damit die Aktion, die auf die es verweist.</summary>
+        <value>
+          <see langword="true" />Wenn die <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtension" /> erforderlich ist, andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

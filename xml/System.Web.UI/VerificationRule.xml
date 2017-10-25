@@ -1,0 +1,75 @@
+<Type Name="VerificationRule" FullName="System.Web.UI.VerificationRule">
+  <TypeSignature Language="C#" Value="public enum VerificationRule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed VerificationRule extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.VerificationRule" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, wie bedingte Ausdrücke, die definiert, indem ein <see cref="T:System.Web.UI.VerificationAttribute" /> Instanz bei der Überprüfung verwendet werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Erweitern einer Klasse, Member oder einen Indexer mit einer <xref:System.Web.UI.VerificationAttribute>, können Sie definieren wie der bedingte Ausdruck definiert, indem Sie die <xref:System.Web.UI.VerificationAttribute.ConditionalProperty%2A> und <xref:System.Web.UI.VerificationAttribute.ConditionalValue%2A> Eigenschaften, wird durch Angabe einer verwendet die <xref:System.Web.UI.VerificationRule> Werte. Sofern es sich um die Erstellung der <xref:System.Web.UI.VerificationAttribute> keine <xref:System.Web.UI.VerificationRule> angegeben wird, der Standardwert ist erforderlich, verwendet.  
+  
+ Die linke Seite des bedingten Ausdrucks die <xref:System.Web.UI.VerificationAttribute.ConditionalProperty%2A> und die rechte Seite ist die <xref:System.Web.UI.VerificationAttribute.ConditionalValue%2A>. Die <xref:System.Web.UI.VerificationConditionalOperator> gibt an, wie die <xref:System.Web.UI.VerificationAttribute.ConditionalProperty%2A> , verglichen werden soll die <xref:System.Web.UI.VerificationAttribute.ConditionalValue%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="NotEmptyString">
+      <MemberSignature Language="C#" Value="NotEmptyString" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.VerificationRule NotEmptyString = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.VerificationRule.NotEmptyString" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.VerificationRule</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der bedingte Ausdruck, der im angegebenen ein <see cref="T:System.Web.UI.VerificationAttribute" /> Instanz benötigen einen linken, die nicht auf eine leere Zeichenfolge ist ("").</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Prohibited">
+      <MemberSignature Language="C#" Value="Prohibited" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.VerificationRule Prohibited = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.VerificationRule.Prohibited" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.VerificationRule</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der bedingte Ausdruck, der im angegebenen ein <see cref="T:System.Web.UI.VerificationAttribute" /> Instanz ist nicht zulässig.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Required">
+      <MemberSignature Language="C#" Value="Required" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.VerificationRule Required = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.VerificationRule.Required" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.VerificationRule</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der bedingte Ausdruck, der im angegebenen ein <see cref="T:System.Web.UI.VerificationAttribute" /> Instanz ist erforderlich.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,97 @@
+<Type Name="ImageUrlEditor" FullName="System.Web.UI.Design.ImageUrlEditor">
+  <TypeSignature Language="C#" Value="public class ImageUrlEditor : System.Web.UI.Design.UrlEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ImageUrlEditor extends System.Web.UI.Design.UrlEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.ImageUrlEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.UrlEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Bietet eine Benutzeroberfläche zum Auswählen einer URL, die auf ein Bild verweist.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.UI.Design.ImageUrlEditor>ist eine <xref:System.Drawing.Design.UITypeEditor> , ein Dialogfeld zum Auswählen einer URL-Eigenschaft, die auf ein Bild verweist bereitstellt.  
+  
+   
+  
+## Examples  
+ [!code-cpp[WebUITypeEditorsExample#5](~/samples/snippets/cpp/VS_Snippets_WebNet/WebUITypeEditorsExample/CPP/webcustomcontrol1.cpp#5)]
+ [!code-csharp[WebUITypeEditorsExample#5](~/samples/snippets/csharp/VS_Snippets_WebNet/WebUITypeEditorsExample/CS/webcustomcontrol1.cs#5)]
+ [!code-vb[WebUITypeEditorsExample#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebUITypeEditorsExample/VB/webcustomcontrol1.vb#5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImageUrlEditor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ImageUrlEditor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.Design.ImageUrlEditor" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Caption">
+      <MemberSignature Language="C#" Value="protected override string Caption { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Caption" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ImageUrlEditor.Caption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Beschriftung ein, auf das Auswahldialogfeld angezeigt werden sollen.</summary>
+        <value>Die Beschriftung ein, auf das Auswahldialogfeld angezeigt werden sollen.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filter">
+      <MemberSignature Language="C#" Value="protected override string Filter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Filter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ImageUrlEditor.Filter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Filterzeichenfolge für Dateinamen für den Editor ab. Diese Zeichenfolge wird verwendet, um die Elemente zu bestimmen, die in der Liste der Dateien im Dialogfeld angezeigt werden.</summary>
+        <value>Der Filterzeichenfolge, die zum Filtern der Dateiliste im Dialogfeld verwendet werden kann.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.Design.ImageUrlEditor.Filter%2A> Eigenschaft gibt eine Filterzeichenfolge mit zwei Filteroptionen: eines für allgemeine bilderweiterungen-Datei (*.gif,.jpg, *.JPEG, *.bmp, *.WMF, *.PNG) und einer für alle Dateien (\*.\*).  
+  
+ Eine Filterzeichenfolge enthält eine oder mehrere Filteroptionen an. Jede Filteroption enthält eine Beschreibung des Filters, gefolgt von der senkrechte Strich (&#124;) und das Filtermuster. Die Zeichenfolgen für die verschiedenen Filteroptionen werden durch den senkrechten Strich getrennt.  
+  
+ Im folgenden ist ein Beispiel für eine Filterzeichenfolge an, die zwei Filteroptionen enthält: "`Bitmap Files (*.bmp)|*.bmp|All Files (*.*)|*.*`".  
+  
+ Sie können mehrere Filtermuster in einer Filteroption angeben, durch das Filtermuster durch Semikolons trennen. Im folgenden ist ein Beispiel für eine Filterzeichenfolge an, in dem die erste Filteroption drei Filtermuster angibt: "`Image Files(*.bmp;*.jpg;*.gif)|*.bmp;*.jpg;*.gif|All Files (*.*)|*.*`".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

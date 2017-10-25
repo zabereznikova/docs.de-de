@@ -1,0 +1,19 @@
+<Namespace Name="Microsoft.SqlServer.Server">
+  <Docs>
+    <summary>Die <see cref="N:Microsoft.SqlServer.Server" /> -Namespace enthält Klassen, Schnittstellen und Enumerationen, die für die Integration der Microsoft .NET Framework common Language Runtime (CLR) in Microsoft SQL Server und die Ausführung des SQL Server-Datenbank-Engine-Prozesses spezifisch sind Umgebung.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mit dem Attribut von Klassen in der <xref:Microsoft.SqlServer.Server> -Namespace können gespeicherte Prozeduren, Trigger, benutzerdefinierte Typen, benutzerdefinierte Funktionen (Skalar- und Tabellenwertfunktionen) und benutzerdefinierte Aggregatfunktionen in einer beliebigen unterstützten .NET Framework Sprache. Sie können auch in SQL Server registrieren.  
+  
+ Abfrage der <xref:Microsoft.SqlServer.Server.SqlContext> Klasse, um zu bestimmen, ob der aktuell ausgeführte Code in den Prozess des SQL Server-Datenbankmoduls ausgeführt wird. Dies bietet auch den Kontext des Aufrufers, wenn ein Benutzer auf dem Server eine verwaltete gespeicherte Prozedur oder Funktion aufruft, oder wenn eine Aktion des Benutzers einen Trigger in verwaltetem Code ausgelöst wird.  
+  
+ Die <xref:Microsoft.SqlServer.Server.SqlContext> Klasse bietet einen <xref:Microsoft.SqlServer.Server.SqlPipe> Objekt, das über die Ergebnisse an den Client von einer gespeicherten Prozedur zurückgegeben werden eine <xref:Microsoft.SqlServer.Server.SqlTriggerContext> -Objekt, das Informationen über den Vorgang, die einen Trigger ausgelöst werden, verursacht hat bereitstellt, und ein <xref:System.Security.Principal.WindowsIdentity> ein Objekt, das verwendet werden kann, um die Identität des aufrufenden Clients zu bestimmen, wenn der Client die integrierten Sicherheit für die Authentifizierung verwendet.  
+  
+ Weitere Informationen zu SQL Server-CLR-Integration und die APIs in der <xref:Microsoft.SqlServer.Server> -Namespace finden Sie in SQL Server-Onlinedokumentation.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

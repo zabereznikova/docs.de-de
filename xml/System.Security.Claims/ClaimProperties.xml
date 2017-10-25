@@ -1,0 +1,138 @@
+<Type Name="ClaimProperties" FullName="System.Security.Claims.ClaimProperties">
+  <TypeSignature Language="C#" Value="public static class ClaimProperties" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ClaimProperties extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Claims.ClaimProperties" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Der Schlüssel für Eigenschaften, die in enthaltenen definiert die <see cref="P:System.Security.Claims.Claim.Properties" /> Eigenschaft.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public const string Namespace;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string Namespace" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Claims.ClaimProperties.Namespace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Namespace des Anspruchs-Eigenschaften.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SamlAttributeDisplayName">
+      <MemberSignature Language="C#" Value="public const string SamlAttributeDisplayName;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string SamlAttributeDisplayName" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Claims.ClaimProperties.SamlAttributeDisplayName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Namensattribut des SAML anzeigen.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SamlAttributeNameFormat">
+      <MemberSignature Language="C#" Value="public const string SamlAttributeNameFormat;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string SamlAttributeNameFormat" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Claims.ClaimProperties.SamlAttributeNameFormat" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Das Formatattribut der SAML-Name.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SamlNameIdentifierFormat">
+      <MemberSignature Language="C#" Value="public const string SamlNameIdentifierFormat;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string SamlNameIdentifierFormat" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Claims.ClaimProperties.SamlNameIdentifierFormat" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die SAML-namensbezeichnerformat.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SamlNameIdentifierNameQualifier">
+      <MemberSignature Language="C#" Value="public const string SamlNameIdentifierNameQualifier;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string SamlNameIdentifierNameQualifier" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Claims.ClaimProperties.SamlNameIdentifierNameQualifier" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Konstante, die den Schlüssel für das SAML zu definiert <see langword="NameQualifier" /> -Attribut des SAML- <see langword="&lt;NameID&gt;" /> Element. Die <see langword="NameQualifier" /> Attribut gibt an, die Sicherheit oder die Domäne, der den Namen qualifiziert.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SamlNameIdentifierSPNameQualifier">
+      <MemberSignature Language="C#" Value="public const string SamlNameIdentifierSPNameQualifier;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string SamlNameIdentifierSPNameQualifier" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Claims.ClaimProperties.SamlNameIdentifierSPNameQualifier" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Konstante, die den Schlüssel für das <see langword="SPNameQualifier" />-Attribut des SAML-<see langword="&lt;NameID&gt;" />-Elements definiert. Das <see langword="SPNameQualifier" />-Attribut gibt den Namen eines Dienstanbieters oder einer Zuordnung von Anbietern zurück, die zur genaueren Bestimmung eines Namens verwendet wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SamlNameIdentifierSPProvidedId">
+      <MemberSignature Language="C#" Value="public const string SamlNameIdentifierSPProvidedId;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string SamlNameIdentifierSPProvidedId" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Claims.ClaimProperties.SamlNameIdentifierSPProvidedId" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eine Konstante, die den Schlüssel für das <see langword="SPProvidedId" />-Attribut des SAML-<see langword="&lt;NameID&gt;" />-Elements definiert. Das <see langword="SPProvidedId" />-Attribut gibt einen Namensbezeichner an, der von einem Dienstanbieter oder einer Zuordnung von Anbietern für die Entität eingerichtet wurde, wenn er sich vom primären Namensbezeichner unterscheidet.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

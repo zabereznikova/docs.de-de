@@ -1,0 +1,92 @@
+<Type Name="IComponentConnector" FullName="System.Windows.Markup.IComponentConnector">
+  <TypeSignature Language="C#" Value="public interface IComponentConnector" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IComponentConnector" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.IComponentConnector" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Bietet Unterstützung für die Markupkompilierung und für Tools für benannte XAML-Elemente sowie zum Anfügen von Ereignishandlern an diese Elemente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Schnittstelle wird intern von verwendet <xref:System.Windows.Baml2006.Baml2006Reader>.  
+  
+ Implementierungen von <xref:System.Windows.Markup.IComponentConnector.InitializeComponent%2A> werden häufig als Teil der Infrastruktur des Frameworks gebotenen Observable-Objekt oder Technologien, die XAML verwenden, die mit Anwendungs- und Programmiermodelle kombiniert. Beispielsweise, wenn Sie sich die generierten Klassen für die Verwendung von XAML-Stammelemente in WPF-Seiten und Anwendungen ansehen, sehen Sie <xref:System.Windows.Markup.IComponentConnector.InitializeComponent%2A> in der Ausgabe definiert. Diese Methode auch in der kompilierten Assembly vorhanden ist und spielt eine Rolle in der WPF-Anwendungsmodell Laden des UI XAML-Inhalts zum Zeitpunkt der Verwendung von XAML-Analyse. Weitere Informationen über die WPF-Integration des der `InitializeComponent` Konzept, finden Sie unter [Application Management Overview](~/docs/framework/wpf/app-development/application-management-overview.md) oder [Code-Behind-XAML in WPF](~/docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md).  
+  
+ In früheren Versionen von .NET Framework war diese Schnittstelle in der WPF-spezifischen Assembly WindowsBase. In [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], <xref:System.Windows.Markup.IComponentConnector> befindet sich in der System.Xaml-Assembly. . Weitere Informationen finden Sie unter [aus WPF zu System.Xaml migrierte Typen](~/docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md).  
+  
+> [!TIP]
+>  Ein Fehler beim Auflösen <xref:System.Windows.Markup.IComponentConnector> während eines versuchten Builds ist oft ein Indikator, dass Sie das WPF-Projekt nicht ordnungsgemäß aktualisiert haben. Insbesondere das Projekt ist nicht verweisen auf die Assembly "System.xaml" für ein Projekt, das als Ziel verwendet [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]. Führen Sie die `devenv /upgrade` option für das Projekt, oder passen Sie die Projektverweise für die Assembly an, dass sich "System.xaml" in der Verweisliste.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Connect">
+      <MemberSignature Language="C#" Value="public void Connect (int connectionId, object target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Connect(int32 connectionId, object target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionId" Type="System.Int32" />
+        <Parameter Name="target" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="connectionId">Ein Bezeichnertoken zur Unterscheidung von Aufrufen.</param>
+        <param name="target">Das Ziel, mit dem Ereignisse und Namen verbunden werden sollen.</param>
+        <summary>Fügt Ereignisse und Namen an kompilierten Inhalt an.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Markup.IComponentConnector>wird intern von verwendet <xref:System.Windows.Baml2006.Baml2006Reader>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeComponent">
+      <MemberSignature Language="C#" Value="public void InitializeComponent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void InitializeComponent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.IComponentConnector.InitializeComponent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lädt die kompilierte Seite einer Komponente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Markup.IComponentConnector>wird intern von verwendet <xref:System.Windows.Baml2006.Baml2006Reader>.  
+  
+ Implementierungen von <xref:System.Windows.Markup.IComponentConnector.InitializeComponent%2A> werden häufig als Teil der Infrastruktur des Frameworks gebotenen Observable-Objekt oder Technologien, die XAML verwenden, die mit Anwendungs- und Programmiermodelle kombiniert. Beispielsweise, wenn Sie sich die generierten Klassen für die Verwendung von XAML-Stammelemente in WPF-Seiten und Anwendungen ansehen, sehen Sie <xref:System.Windows.Markup.IComponentConnector.InitializeComponent%2A> in der Ausgabe definiert. Diese Methode auch in der kompilierten Assembly vorhanden ist und spielt eine Rolle in der WPF-Anwendungsmodell Laden des UI XAML-Inhalts zum Zeitpunkt der Verwendung von XAML-Analyse. Weitere Informationen über die WPF-Integration des der `InitializeComponent` Konzept, finden Sie unter [Application Management Overview](~/docs/framework/wpf/app-development/application-management-overview.md) oder [Code-Behind-XAML in WPF](~/docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

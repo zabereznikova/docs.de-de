@@ -1,0 +1,111 @@
+<Type Name="StringConstructor" FullName="Microsoft.JScript.StringConstructor">
+  <TypeSignature Language="C#" Value="public class StringConstructor : Microsoft.JScript.ScriptFunction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StringConstructor extends Microsoft.JScript.ScriptFunction" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.StringConstructor" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.JScript.ScriptFunction</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt ein prototypbasierten-Objekt, das von einer Konstruktorfunktion definiert wird. Diese Klasse gehört zu "Modell" integrierten Objekt.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="CreateInstance">
+      <MemberSignature Language="C#" Value="public Microsoft.JScript.StringObject CreateInstance (params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.JScript.StringObject CreateInstance(object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.StringConstructor.CreateInstance(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasVarArgs)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.StringObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="args">Die an den Konstruktor zu übergebenden Argumente.</param>
+        <summary>Erstellt eine Instanz des prototypbasierten Objekts in den angegebenen Argumenten übergeben.</summary>
+        <returns>Eine Instanz des Objekts.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="fromCharCode">
+      <MemberSignature Language="C#" Value="public static string fromCharCode (params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string fromCharCode(object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.StringConstructor.fromCharCode(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasVarArgs, Microsoft.JScript.JSBuiltin.String_fromCharCode)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="args">Die Elemente in eine Zeichenfolge konvertiert.</param>
+        <summary>Jedes Element des angegebenen Arrays in ein Zeichen konvertiert und verkettet.</summary>
+        <returns>Eine Zeichenfolgendarstellung von <paramref name="arg" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public string Invoke (object arg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string Invoke(object arg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.StringConstructor.Invoke(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arg" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="arg">Das Objekt in eine Zeichenfolge konvertiert.</param>
+        <summary>Konvertiert das angegebene Objekt in eine Zeichenfolge.</summary>
+        <returns>Eine Zeichenfolgendarstellung von <paramref name="arg" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

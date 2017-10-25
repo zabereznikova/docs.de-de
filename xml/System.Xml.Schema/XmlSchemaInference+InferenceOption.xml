@@ -1,0 +1,84 @@
+<Type Name="XmlSchemaInference+InferenceOption" FullName="System.Xml.Schema.XmlSchemaInference+InferenceOption">
+  <TypeSignature Language="C#" Value="public enum XmlSchemaInference.InferenceOption" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed XmlSchemaInference/InferenceOption extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Schema.XmlSchemaInference.InferenceOption" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Wirkt sich auf vorkommen und geben Informationen abgeleitet werden, indem die <see cref="T:System.Xml.Schema.XmlSchemaInference" /> Klasse für Elemente und Attribute in einem XML-Dokument.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Ein Beispiel für die <xref:System.Xml.Schema.XmlSchemaInference.InferenceOption> -Enumeration, finden Sie unter der <xref:System.Xml.Schema.XmlSchemaInference> Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Relaxed">
+      <MemberSignature Language="C#" Value="Relaxed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.Schema.XmlSchemaInference/InferenceOption Relaxed = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Schema.XmlSchemaInference.InferenceOption.Relaxed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaInference+InferenceOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass eine weniger restriktive Schemadeklaration für ein bestimmtes Element oder Attribut abgeleitet werden soll.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Restricted">
+      <MemberSignature Language="C#" Value="Restricted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.Schema.XmlSchemaInference/InferenceOption Restricted = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Schema.XmlSchemaInference.InferenceOption.Restricted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaInference+InferenceOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt an, dass eine restriktivere Schemadeklaration für ein bestimmtes Element oder Attribut abgeleitet werden soll.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

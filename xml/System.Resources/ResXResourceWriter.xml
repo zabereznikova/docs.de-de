@@ -1,0 +1,728 @@
+<Type Name="ResXResourceWriter" FullName="System.Resources.ResXResourceWriter">
+  <TypeSignature Language="C#" Value="public class ResXResourceWriter : System.Resources.IResourceWriter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ResXResourceWriter extends System.Object implements class System.IDisposable, class System.Resources.IResourceWriter" />
+  <TypeSignature Language="DocId" Value="T:System.Resources.ResXResourceWriter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Resources.IResourceWriter</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Schreibt Ressourcen in eine XML-Ressourcendatei (.resx) oder in einen Ausgabestream.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Resources.ResXResourceWriter> Ressourcen im XML-Format schreibt. Verwenden Sie zum Schreiben einer binären Ressourcendatei <xref:System.Resources.ResourceWriter>.  
+  
+ Ressourcen werden angegeben, als Name/Wert-Paare, die mithilfe der <xref:System.Resources.ResXResourceWriter.AddResource%2A> Methode. Ressourcennamen sind Groß-/Kleinschreibung beachtet, wenn für die Suche verwendet. aber das leichter Erstellungstools unterstützen und zum Beheben von Problemen <xref:System.Resources.ResXResourceWriter> lässt sich nicht auf die RESX-Dateien zu Namen haben, die nur Großschreibung voneinander abweichen.  
+  
+ RESX-Datei erstellen, erstellen Sie eine <xref:System.Resources.ResXResourceWriter> rufen Sie mit einem eindeutigen Dateinamen <xref:System.Resources.ResXResourceWriter.AddResource%2A> mindestens einmal aufrufen <xref:System.Resources.ResXResourceWriter.Generate%2A> die Resources-Datei auf dem Datenträger festgeschrieben, und rufen Sie anschließend <xref:System.Resources.ResXResourceWriter.Close%2A> , die Datei zu schließen. Aufrufen von <xref:System.Resources.ResXResourceWriter.Close%2A> wird implizit <xref:System.Resources.ResXResourceWriter.Generate%2A> der Datei, falls erforderlich.  
+  
+ Die Ressourcen werden nicht unbedingt in der gleichen Reihenfolge geschrieben, die sie hinzugefügt wurden.  
+  
+ Weitere Informationen zum Format von RESX-Dateien finden Sie unter [arbeiten mit RESX-Dateien programmgesteuert](~/docs/framework/resources/working-with-resx-files-programmatically.md).  
+  
+> [!NOTE]
+>  Diese Klasse enthält einen Linkaufruf und einer vererbungsanforderung auf Klassenebene, die für alle Member gilt. Ein <xref:System.Security.SecurityException> wird ausgelöst, wenn nicht für den unmittelbaren Aufrufer oder die abgeleitete Klasse volle Vertrauenswürdigkeit verfügt.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine RESX-Datei mit dem Namen `CarResources.resx` zur Speicherung der sechs Zeichenfolgen, ein Symbol und zwei anwendungsdefinierte Objekte (zwei `Automobile` Objekte). Beachten Sie, dass die Klasse `Automobile`, die im Beispiel definiert und instanziiert wird, mit dem <xref:System.SerializableAttribute>-Attribut gekennzeichnet ist.  
+  
+ [!code-csharp[conceptual.resources.resx#1](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resx/cs/create1.cs#1)]
+ [!code-vb[conceptual.resources.resx#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resx/vb/create1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+    <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für erben. Dieser Member kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResXResourceWriter (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceWriter.#ctor(System.IO.Stream)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der Ausgabestream.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Resources.ResXResourceWriter" />-Klasse, die die Ressourcen in das angegebene Streamobjekt schreibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Resources.ResXResourceWriter.Close%2A> Methode schließt den Stream, die Sie als Parameter angeben. Um die Ressource ohne Schließen des Streams in den Stream zu schreiben, verwenden Sie die <xref:System.Resources.ResXResourceWriter.Generate%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für erben. Dieser Member kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResXResourceWriter (System.IO.TextWriter textWriter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.TextWriter textWriter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceWriter.#ctor(System.IO.TextWriter)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="textWriter" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="textWriter">Das <see cref="T:System.IO.TextWriter" />-Objekt, an das die Ausgabe gesendet wird.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Resources.ResXResourceWriter" />-Klasse, die in das angegebene <see cref="T:System.IO.TextWriter" />-Objekt schreibt.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für erben. Dieser Member kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResXResourceWriter (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceWriter.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Der Name der Ausgabedatei.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Resources.ResXResourceWriter" />-Klasse, die die Ressourcen in die angegebene Datei schreibt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor erstellt `filename` , wenn er nicht vorhanden ist und überschrieben, wenn dies der Fall ist. Wenn `filename` einen Verzeichnispfad aufweist, der vollständige Pfad muss vorhanden sein oder des Konstruktors löst eine <xref:System.IO.DirectoryNotFoundException> Ausnahme.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Das in <paramref name="filename" /> angegebene Verzeichnis ist nicht vorhanden.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">für volle Vertrauenswürdigkeit für den unmittelbaren Aufrufer. Dieser Member kann von nur teilweise vertrauenswürdigem Code nicht verwendet werden.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">für volle Vertrauenswürdigkeit für erben. Dieser Member kann nicht von teilweise vertrauenswürdigem Code nicht vererbt werden.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResXResourceWriter (System.IO.Stream stream, Func&lt;Type,string&gt; typeNameConverter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, class System.Func`2&lt;class System.Type, string&gt; typeNameConverter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceWriter.#ctor(System.IO.Stream,System.Func{System.Type,System.String})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="typeNameConverter" Type="System.Func&lt;System.Type,System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Der Stream, an den die Ausgabe gesendet werden soll.</param>
+        <param name="typeNameConverter">Der Delegat, der frühere Versionen von .NET Framework als Zielplattform verwendet.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Resources.ResXResourceWriter" />-Klasse, die die Ressourcen in ein angegebenes Streamobjekt schreibt und einen Konverterdelegaten festlegt. Dieser Delegat ermöglicht, die auf geschrieben werden Versionen von .NET Framework vor der [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] mit qualifizierten Assemblynamen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visual Studio und MSBuild verwenden Sie diesen Konstruktor, wenn Sie Ressourcen für eine Anwendung, die gezielt Versionen von .NET Framework vor dem Erstellen der [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResXResourceWriter (System.IO.TextWriter textWriter, Func&lt;Type,string&gt; typeNameConverter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.TextWriter textWriter, class System.Func`2&lt;class System.Type, string&gt; typeNameConverter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceWriter.#ctor(System.IO.TextWriter,System.Func{System.Type,System.String})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="textWriter" Type="System.IO.TextWriter" />
+        <Parameter Name="typeNameConverter" Type="System.Func&lt;System.Type,System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="textWriter">Das Objekt, an das die Ausgabe gesendet werden soll.</param>
+        <param name="typeNameConverter">Der Delegat, der frühere Versionen von .NET Framework als Zielplattform verwendet.</param>
+        <summary>Initialisiert eine neue Instanz der der <see cref="T:System.Resources.ResXResourceWriter" /> -Klasse, die die Ressourcen in einem angegebenen schreibt <see cref="T:System.IO.TextWriter" /> -Objekt und stellt ein Delegat, der ermöglicht, die geschrieben werden auf Versionen von .NET Framework vor der [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] mit qualifizierten Assemblynamen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visual Studio und MSBuild verwenden Sie diesen Konstruktor, wenn Sie Ressourcen für eine Anwendung, die gezielt Versionen von .NET Framework vor dem Erstellen der [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResXResourceWriter (string fileName, Func&lt;Type,string&gt; typeNameConverter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, class System.Func`2&lt;class System.Type, string&gt; typeNameConverter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceWriter.#ctor(System.String,System.Func{System.Type,System.String})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="typeNameConverter" Type="System.Func&lt;System.Type,System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Die Datei, an die die Ausgabe gesendet werden soll.</param>
+        <param name="typeNameConverter">Der Delegat, der frühere Versionen von .NET Framework als Zielplattform verwendet.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.Resources.ResXResourceWriter" /> -Klasse, die die Ressourcen in einer angegebenen Datei und legt ein Delegaten, die es ermöglicht, die geschrieben werden Versionen von .NET Framework vor der schreibt die [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] mithilfe der qualifizierten Assembly Namen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Visual Studio und MSBuild verwenden Sie diesen Konstruktor, wenn Sie Ressourcen für eine Anwendung, die gezielt Versionen von .NET Framework vor dem Erstellen der [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)].  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Das in <paramref name="filename" /> angegebene Verzeichnis ist nicht vorhanden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAlias">
+      <MemberSignature Language="C#" Value="public virtual void AddAlias (string aliasName, System.Reflection.AssemblyName assemblyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddAlias(string aliasName, class System.Reflection.AssemblyName assemblyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceWriter.AddAlias(System.String,System.Reflection.AssemblyName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="aliasName" Type="System.String" />
+        <Parameter Name="assemblyName" Type="System.Reflection.AssemblyName" />
+      </Parameters>
+      <Docs>
+        <param name="aliasName">Der Name des Alias.</param>
+        <param name="assemblyName">Der Name der Assembly dargestellte <c>AliasName</c>.</param>
+        <summary>Fügt den angegebenen Alias einer Liste mit Aliasnamen hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ressourcen, deren Werte aus einer Assembly mit einem Alias versehen sind, werden automatisch zur Liste der Aliase hinzugefügt. Die Ressource ist erst dann geschrieben <xref:System.Resources.ResXResourceWriter.Generate%2A> aufgerufen wird.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="assemblyName" /> ist <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddMetadata">
+      <MemberSignature Language="C#" Value="public void AddMetadata (string name, byte[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddMetadata(string name, unsigned int8[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceWriter.AddMetadata(System.String,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name einer Eigenschaft.</param>
+        <param name="value">Ein Bytearray mit dem Wert der hinzuzufügenden Eigenschaft.</param>
+        <summary>Fügt der Liste der zu schreibenden Ressourcen eine Entwurfszeiteigenschaft hinzu, deren Wert als Bytearray angegeben ist.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Durch die angegebene Ressource der <paramref name="name" /> Parameter wurde bereits hinzugefügt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddMetadata">
+      <MemberSignature Language="C#" Value="public void AddMetadata (string name, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddMetadata(string name, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceWriter.AddMetadata(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name einer Eigenschaft.</param>
+        <param name="value">Ein Objekt, das der Wert der hinzuzufügenden Eigenschaft ist.</param>
+        <summary>Fügt der Liste der zu schreibenden Ressourcen eine Entwurfszeiteigenschaft hinzu, deren Wert als ein Objekt angegeben ist.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Durch die angegebene Ressource der <paramref name="name" /> Parameter wurde bereits hinzugefügt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddMetadata">
+      <MemberSignature Language="C#" Value="public void AddMetadata (string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddMetadata(string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceWriter.AddMetadata(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name einer Eigenschaft.</param>
+        <param name="value">Eine Zeichenfolge, die der Wert der hinzuzufügenden Eigenschaft ist.</param>
+        <summary>Fügt der Liste der zu schreibenden Ressourcen eine Entwurfszeiteigenschaft hinzu, deren Wert als eine Zeichenfolge angegeben ist.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Durch die angegebene Ressource der <paramref name="name" /> Eigenschaft wurde bereits hinzugefügt.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddResource">
+      <MemberSignature Language="C#" Value="public void AddResource (System.Resources.ResXDataNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddResource(class System.Resources.ResXDataNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceWriter.AddResource(System.Resources.ResXDataNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Resources.ResXDataNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">Ein <see cref="T:System.Resources.ResXDataNode" />-Objekt, das ein Name-Wert-Paar für eine Ressource enthält.</param>
+        <summary>Fügt der Liste der zu schreibenden Ressourcen eine benannte Ressource hinzu, die in einem <see cref="T:System.Resources.ResXDataNode" />-Objekt angegeben ist.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddResource">
+      <MemberSignature Language="C#" Value="public void AddResource (string name, byte[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddResource(string name, unsigned int8[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceWriter.AddResource(System.String,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Ressource.</param>
+        <param name="value">Der Wert der hinzuzufügenden Ressource als Array von 8-Bit-Ganzzahlen ohne Vorzeichen.</param>
+        <summary>Fügt der Liste der zu schreibenden Ressourcen eine benannte Ressource hinzu, die als Bytearray angegeben ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Ressource ist erst dann geschrieben <xref:System.Resources.ResXResourceWriter.Generate%2A> aufgerufen wird.  
+  
+ Die Ressource wird serialisiert und in einem binären Format gespeichert.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddResource">
+      <MemberSignature Language="C#" Value="public void AddResource (string name, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddResource(string name, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceWriter.AddResource(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Ressource.</param>
+        <param name="value">Der Wert der Ressource.</param>
+        <summary>Fügt der Liste der zu schreibenden Ressourcen eine benannte Ressource hinzu, die als Objekt angegeben ist.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Ressource ist erst dann geschrieben <xref:System.Resources.ResXResourceWriter.Generate%2A> aufgerufen wird. Das hinzugefügte Ressource muss serialisierbar sein.  
+  
+ Wenn die hinzugefügte Ressource eine Zeichenfolge ist, wird er als Zeichenfolge geschrieben; Andernfalls wird die Ressource serialisiert und in einem binären Format gespeichert.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine RESX-Datei mit dem Namen `CarResources.resx` zur Speicherung der sechs Zeichenfolgen, ein Symbol und zwei anwendungsdefinierte Objekte (zwei `Automobile` Objekte). Speichern Sie das Symbol und die `Automobile` Objekte aufweist, ruft er die <xref:System.Resources.ResXResourceWriter.AddResource%28System.String%2CSystem.Object%29> Methode. Beachten Sie, dass die Klasse `Automobile`, die im Beispiel definiert und instanziiert wird, mit dem <xref:System.SerializableAttribute>-Attribut gekennzeichnet ist.  
+  
+ [!code-csharp[conceptual.resources.resx#1](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resx/cs/create1.cs#1)]
+ [!code-vb[conceptual.resources.resx#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resx/vb/create1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddResource">
+      <MemberSignature Language="C#" Value="public void AddResource (string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddResource(string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceWriter.AddResource(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Ressource.</param>
+        <param name="value">Der Wert der Ressource.</param>
+        <summary>Fügt den Ressourcen eine Zeichenfolgenressource hinzu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Ressource ist erst dann geschrieben <xref:System.Resources.ResXResourceWriter.Generate%2A> aufgerufen wird.  
+  
+   
+  
+## Examples  
+ Das folgende Beispiel erstellt eine RESX-Datei mit dem Namen `CarResources.resx` zur Speicherung der sechs Zeichenfolgen, ein Symbol und zwei anwendungsdefinierte Objekte (zwei `Automobile` Objekte). Zum Speichern von Zeichenfolgen, ruft er die <xref:System.Resources.ResXResourceWriter.AddResource%28System.String%2CSystem.String%29> Methode.  
+  
+ [!code-csharp[conceptual.resources.resx#1](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resx/cs/create1.cs#1)]
+ [!code-vb[conceptual.resources.resx#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resx/vb/create1.vb#1)]  
+  
+ Beachten Sie, dass die Klasse `Automobile`, die im Beispiel definiert und instanziiert wird, mit dem <xref:System.SerializableAttribute>-Attribut gekennzeichnet ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BasePath">
+      <MemberSignature Language="C#" Value="public string BasePath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BasePath" />
+      <MemberSignature Language="DocId" Value="P:System.Resources.ResXResourceWriter.BasePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Basispfad für den in einem <see cref="T:System.Resources.ResXFileRef" />-Objekt angegebenen relativen Pfad ab oder legt diesen fest.</summary>
+        <value>Ein Pfad, mit dem der absolute Pfad zu einer XML-Ressourcendatei gebildet werden kann, wenn er dem in einem <see cref="T:System.Resources.ResXFileRef" />-Objekt angegebenen relativen Dateipfad vorangestellt wird.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BinSerializedObjectMimeType">
+      <MemberSignature Language="C#" Value="public static readonly string BinSerializedObjectMimeType;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string BinSerializedObjectMimeType" />
+      <MemberSignature Language="DocId" Value="F:System.Resources.ResXResourceWriter.BinSerializedObjectMimeType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Standardinhaltstyp für ein binäres Objekt an. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ByteArraySerializedObjectMimeType">
+      <MemberSignature Language="C#" Value="public static readonly string ByteArraySerializedObjectMimeType;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string ByteArraySerializedObjectMimeType" />
+      <MemberSignature Language="DocId" Value="F:System.Resources.ResXResourceWriter.ByteArraySerializedObjectMimeType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Standardinhaltstyp für ein Bytearrayobjekt an. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceWriter.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle vom <see cref="T:System.Resources.ResXResourceWriter" /> verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Beim Aufrufen dieser Methode ist das Äquivalent eines Aufrufs <xref:System.Resources.ResXResourceWriter.Dispose%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSerializedObjectMimeType">
+      <MemberSignature Language="C#" Value="public static readonly string DefaultSerializedObjectMimeType;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string DefaultSerializedObjectMimeType" />
+      <MemberSignature Language="DocId" Value="F:System.Resources.ResXResourceWriter.DefaultSerializedObjectMimeType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Standardinhaltstyp für ein Objekt an. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public virtual void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceWriter.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt alle vom <see cref="T:System.Resources.ResXResourceWriter" /> verwendeten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Resources.ResXResourceWriter.Dispose%2A> Methodenaufrufe der <xref:System.Resources.ResXResourceWriter.Generate%2A> -Methode, falls erforderlich, bevor die verwaltete und nicht verwaltete Ressourcen freigegeben.  
+  
+ Aufrufen von <xref:System.Resources.ResXResourceWriter.Dispose%2A> können die Systemressourcen verwendet, durch die <xref:System.Resources.ResXResourceWriter> neu für andere Zwecke reserviert werden. Weitere Informationen zu <xref:System.Resources.ResXResourceWriter.Dispose%2A>, finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](~/docs/standard/garbage-collection/unmanaged.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceWriter.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />, um sowohl verwaltete als auch nicht verwaltete Ressourcen freizugeben, <see langword="false" />, um ausschließlich nicht verwaltete Ressourcen freizugeben.</param>
+        <summary>Gibt die von <see cref="T:System.Resources.ResXResourceWriter" /> verwendeten nicht verwalteten Ressourcen und optional die verwalteten Ressourcen frei.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Resources.ResXResourceWriter.Dispose%2A> Methodenaufrufe der <xref:System.Resources.ResXResourceWriter.Generate%2A> -Methode, falls erforderlich, bevor die verwaltete und nicht verwaltete Ressourcen freigegeben.  
+  
+ Diese Methode wird aufgerufen, der öffentlich <xref:System.Resources.ResXResourceWriter.Dispose%2A> Methode und die <xref:System.Object.Finalize%2A> Methode. `Dispose()`Ruft die geschützte `Dispose(Boolean)` Methode mit dem `disposing` Parametersatz auf `true`. <xref:System.Object.Finalize%2A>Ruft `Dispose` mit `disposing` festgelegt `false`.  
+  
+ Wenn der `disposing`-Parameter `true` ist, gibt diese Methode sämtliche Ressourcen frei, die für verwaltete Objekte reserviert sind, auf die dieser <xref:System.Resources.ResXResourceWriter> verweist. Diese Methode ruft die `Dispose()`-Methode aller Objekte auf, auf die verwiesen wird.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> kann von anderen Objekten mehrmals aufgerufen werden. Beim Überschreiben von <see langword="Dispose(Boolean)" /> müssen Sie darauf achten, nicht auf Objekte zu verweisen, die durch einen früheren Aufruf von <see langword="Dispose" /> freigegeben wurden. Weitere Informationen zum Implementieren <see langword="Dispose(Boolean)" />, finden Sie unter [Implementieren einer Dispose-Methode](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Weitere Informationen zu <see langword="Dispose" /> und <see cref="M:System.Object.Finalize" />, finden Sie unter und.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~ResXResourceWriter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceWriter.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dieser Member überschreibt die <see cref="M:System.Object.Finalize" />-Methode.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Generate">
+      <MemberSignature Language="C#" Value="public void Generate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Generate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceWriter.Generate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Schreibt alle von der <see cref="M:System.Resources.ResXResourceWriter.AddResource(System.String,System.Byte[])" />-Methode hinzugefügten Ressourcen in die Ausgabedatei oder den Ausgabestream.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Resources.ResXResourceWriter.Generate%2A> Methode, um die Ressourcen in die Ausgabedatei oder den Stream schreibt. Wenn Sie die Ressourcen nicht so gut wie nah die Ausgabedatei oder den Stream schreiben möchten, rufen Sie die <xref:System.Resources.ResXResourceWriter.Close%2A> Methode.  
+  
+ Die <xref:System.Resources.ResXResourceWriter.Generate%2A> Methode kann nur einmal aufgerufen werden. Nach dem Aufruf der <xref:System.Resources.ResXResourceWriter.Generate%2A> -Methode, alle <xref:System.Resources.IResourceWriter> Methoden außer <xref:System.Resources.ResXResourceWriter.Close%2A> wird eine Ausnahme ausgelöst.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die Ressource wurde bereits gespeichert.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResMimeType">
+      <MemberSignature Language="C#" Value="public static readonly string ResMimeType;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string ResMimeType" />
+      <MemberSignature Language="DocId" Value="F:System.Resources.ResXResourceWriter.ResMimeType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Inhaltstyp einer XML-Ressource an. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResourceSchema">
+      <MemberSignature Language="C#" Value="public static readonly string ResourceSchema;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string ResourceSchema" />
+      <MemberSignature Language="DocId" Value="F:System.Resources.ResXResourceWriter.ResourceSchema" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt das Schema für das Schreiben der XML-Datei an. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Schema enthält Details zum Codieren der Ressourcen basierend auf den Typ der Ressource, die geschrieben wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SoapSerializedObjectMimeType">
+      <MemberSignature Language="C#" Value="public static readonly string SoapSerializedObjectMimeType;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string SoapSerializedObjectMimeType" />
+      <MemberSignature Language="DocId" Value="F:System.Resources.ResXResourceWriter.SoapSerializedObjectMimeType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt den Inhaltstyp für ein SOAP-Objekt an. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public static readonly string Version;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string Version" />
+      <MemberSignature Language="DocId" Value="F:System.Resources.ResXResourceWriter.Version" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gibt die Version des Schemas an, dem die XML-Ausgabe entspricht. Dieses Feld ist schreibgeschützt.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

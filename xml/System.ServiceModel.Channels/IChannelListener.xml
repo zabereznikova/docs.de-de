@@ -1,0 +1,160 @@
+<Type Name="IChannelListener" FullName="System.ServiceModel.Channels.IChannelListener">
+  <TypeSignature Language="C#" Value="public interface IChannelListener : System.ServiceModel.ICommunicationObject" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IChannelListener implements class System.ServiceModel.ICommunicationObject" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.IChannelListener" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.ICommunicationObject</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Definiert die Schnittstelle, die von einem Kanallistener implementiert werden muss, um Kanäle zu akzeptieren.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ServiceModel.Channels.IChannelListener>-Schnittstelle stellt die Basisschnittstelle für Kanallistener dar.  
+  
+ Kanallistener und ihre zugeordneten Kanäle werden im Allgemeinen von Diensten verwendet, die von Clients initiierte Kommunikationen empfangen. Im Gegensatz dazu stellen Kanalfactorys, die die <xref:System.ServiceModel.Channels.IChannelFactory>-Schnittstelle implementieren, die Mechanismen bereit, die verwendet werden, um die Kanäle zu erstellen, über die eine Kommunikation mit einem Dienst initiiert wird.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginWaitForChannel">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginWaitForChannel (TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginWaitForChannel(valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IChannelListener.BeginWaitForChannel(System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Der <see cref="T:System.TimeSpan" />, der angibt, wie lange auf den Kanalvorgang gewartet werden muss, bevor ein Timeout durchgeführt wird.</param>
+        <param name="callback">Der <see cref="T:System.AsyncCallback" />-Delegat, der die Benachrichtigung über den asynchronen Abschluss des Wartens auf den Kanalvorgang empfängt.</param>
+        <param name="state">Ein von der Anwendung spezifiziertes Objekt, das Zustandsinformationen enthält, die dem asynchronen Vorgang des Wartens auf den Kanal zugeordnet sind.</param>
+        <summary>Startet einen asynchronen Vorgang, um auf die Ankunft eines Kanals zu warten, die innerhalb eines spezifischen Zeitintervalls abgeschlossen sein muss.</summary>
+        <returns>Der <see cref="T:System.IAsyncResult" />, der auf den asynchronen Vorgang des Wartens auf den Kanal verweist.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndWaitForChannel">
+      <MemberSignature Language="C#" Value="public bool EndWaitForChannel (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool EndWaitForChannel(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IChannelListener.EndWaitForChannel(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Das <see cref="T:System.IAsyncResult" />, das durch einen Aufruf der <see cref="M:System.ServiceModel.Channels.IChannelListener.EndWaitForChannel(System.IAsyncResult)" />-Methode zurückgegeben wurde.</param>
+        <summary>Schließt einen asynchronen Vorgang des Wartens auf die Ankunft von Kanälen ab.</summary>
+        <returns>
+          <see langword="true" />, wenn eine Nachricht angekommen ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T GetProperty&lt;T&gt; () where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !!T GetProperty&lt;class T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IChannelListener.GetProperty``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">Das typisierte Objekt, das von der Methode abgefragt wird.</typeparam>
+        <summary>Gibt ggf. ein angefordertes typisiertes Objekt von der entsprechenden Ebene im Kanalstapel zurück.</summary>
+        <returns>Das typisierte angefragte Objekt <paramref name="T" />, wenn es anwesend ist, oder <see langword="null" />, wenn es nicht anwesend ist.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, um ein typisiertes Objekt, wie z. B. eine Schnittstelle für Einstellungseigenschaften oder eine Statusabfrage, aus der entsprechenden Ebene im Kanalstapel abzufragen. Wenn eine Ebene das Zurückgeben des angeforderten Objekts unterstützt, wird der Vorgang ausgeführt. Andernfalls wird der Aufruf an die nächst tiefere Ebene im Stapel delegiert. Wenn die letzte Ebene erreicht ist und das angeforderte Objekt von keiner Kanalebene unterstützt wird, gibt die Methode `null` zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public Uri Uri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Uri" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.IChannelListener.Uri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den URI ab, auf dem die Listener, die von der Factory generiert werden, abhören.</summary>
+        <value>Der <see cref="T:System.Uri" />, auf dem die Listener, die von der Factory generiert werden, abhören.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser URI stellt die Transportadresse dar, auf der der <xref:System.ServiceModel.Channels.IChannelListener> Nachrichten abhört.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitForChannel">
+      <MemberSignature Language="C#" Value="public bool WaitForChannel (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool WaitForChannel(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IChannelListener.WaitForChannel(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Der <see cref="T:System.TimeSpan" />, der angibt, wie lange auf den Kanalvorgang gewartet werden muss, bevor ein Timeout durchgeführt wird.</param>
+        <summary>Wartet auf die Ankunft eines Kanals.</summary>
+        <returns>
+          <see langword="true" />, wenn ein Kanal vor dem vom <paramref name="timeout" /> angegebenen Zeitintervall angekommen ist, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

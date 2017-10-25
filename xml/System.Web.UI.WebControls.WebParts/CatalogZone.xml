@@ -1,0 +1,210 @@
+<Type Name="CatalogZone" FullName="System.Web.UI.WebControls.WebParts.CatalogZone">
+  <TypeSignature Language="C#" Value="public class CatalogZone : System.Web.UI.WebControls.WebParts.CatalogZoneBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CatalogZone extends System.Web.UI.WebControls.WebParts.CatalogZoneBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.CatalogZone" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebParts.CatalogZoneBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.WebParts.CatalogZoneDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.SupportsEventValidation</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Dient als primäres Steuerelement im Webparts-Steuerelementsatz zum Hosten von <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" />-Steuerelementen auf einer Webseite.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Innerhalb der Webparts-Steuerelementsatz ist eine Zone eine Region auf einer Webseite, die Webparts-Steuerelemente enthält. Webparts-Zone wird erstellt, indem ein Zonensteuerelement, einem Typ von <xref:System.Web.UI.WebControls.CompositeControl> entwickelt, um andere Steuerelemente enthalten. Hauptfunktionen einer Zone sind, um das Layout der Steuerelemente darin enthaltenen und eine gemeinsame Benutzeroberfläche (UI) für diese Steuerelemente bereitstellen. Allgemeine Informationen zu Zonen und wie sie in einer Webparts-Anwendungen verwendet werden, finden Sie unter der Base <xref:System.Web.UI.WebControls.WebParts.WebZone> -Klasse, und [Web Parts Control Set Overview](http://msdn.microsoft.com/library/ff0149e4-695a-401a-8cda-53df6d7d2668).  
+  
+ Ein wichtiges Feature von Webparts-Steuerelemente ist, dass sie zulassen, Endbenutzer dass auf Webseiten ändern (oder personalisieren) nach ihren Bedürfnissen und ihrer personalisierten Einstellungen für zukünftige Browsersitzungen speichern. Ein Aspekt der Webparts-Seiten ändern bietet die Möglichkeit zum Hinzufügen <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente oder andere Serversteuerelemente zu einer Webparts-Seite. Die <xref:System.Web.UI.WebControls.WebParts.CatalogZone> Steuerelement stellt eine Liste oder einen Katalog von Steuerelementen, die Benutzer zu einer Seite hinzufügen können.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.CatalogZone> Steuerelement ist eines der grundlegenden Steuerelemente im Webparts-Steuerelementsatz. Er leitet sich von der <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> -Klasse, und die meisten seines Verhaltens wird von dieser Klasse geerbt. Die <xref:System.Web.UI.WebControls.WebParts.CatalogZone> Klasse fügt im Wesentlichen auf die Basisklasse eine Zonenvorlage, die eine Implementierung wird von der <xref:System.Web.UI.ITemplate> Schnittstelle. Die Vorlage für die Zone ermöglicht Entwicklern das deklarativ hinzufügen <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente einer Zone auf der Seite Persistenzformat.  
+  
+> [!IMPORTANT]
+>  Ein <xref:System.Web.UI.WebControls.WebParts.CatalogZone> Zone darf nur <xref:System.Web.UI.WebControls.WebParts.CatalogPart> -Steuerelemente und umgekehrt <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente können nur in Zonen, die davon Herleiten befinden sich die <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> Klasse, z. B. <xref:System.Web.UI.WebControls.WebParts.CatalogZone>.  
+  
+ Ein <xref:System.Web.UI.WebControls.WebParts.CatalogZone> Steuerelement wird nur wenn ein Benutzer eine Webseite in den Kataloganzeigemodus wechselt, sichtbar (<xref:System.Web.UI.WebControls.WebParts.WebPartManager.CatalogDisplayMode>). Ein Katalog kann mehrere Typen von enthalten <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente. Jede <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelement ist ein Container, der die Steuerelemente enthält, können Benutzer auf der Seite hinzufügen. Die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente sind je nach der darin enthaltenen Serversteuerelemente Herkunft unterschiedlich. Die folgende Tabelle enthält die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> steuert verfügbar mit den Webparts-Steuerelementsatzes und für jedes Steuerelement, welche Art von Server Steuersoftware enthält.  
+  
+|Steuerelement|Beschreibung|  
+|-------------|-----------------|  
+|<xref:System.Web.UI.WebControls.WebParts.PageCatalogPart>|Verwaltet Verweise auf Steuerelemente, die auf einer Seite geschlossen wurden. Diese Steuerelemente können (wieder in der Seite ") von Benutzern erneut geöffnet werden.|  
+|<xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart>|Enthält Verweise auf Steuerelemente, die in einer Webparts-Katalog im Markup einer Webseite deklariert werden. Diese Steuerelemente können von Benutzern zu einer Webseite hinzugefügt werden.|  
+|<xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart>|Stellt die Benutzeroberfläche für einen Benutzer zum Hochladen einer Definitionsdatei (einer XML-Datei mit ein. Webpart und einem angegebenen Format, das enthält Statusinformationen) für ein Steuerelement mit einem Katalog, damit das Steuerelement zu einer Webseite hinzugefügt werden kann.|  
+  
+ Da die <xref:System.Web.UI.WebControls.WebParts.CatalogZone> Klasse wird das Verhalten ihrer Basisklasse nur eine Vorlage für die Zone hinzugefügt, er verfügt über einige Member. Die <xref:System.Web.UI.WebControls.WebParts.CatalogZone.%23ctor%2A> Konstruktor ist ein Standardkonstruktor; mithilfe dieser Option können Sie eine neue Instanz der Initialisieren der <xref:System.Web.UI.WebControls.WebParts.CatalogZone> Klasse. Die <xref:System.Web.UI.WebControls.WebParts.CatalogZone.ZoneTemplate%2A> Eigenschaft ruft ab oder legt einen Verweis auf die <xref:System.Web.UI.ITemplate> Objekt, das die Steuerelemente für die Zone enthält. Die <xref:System.Web.UI.WebControls.WebParts.CatalogZone.CreateCatalogParts%2A> Methode ist kritisch. Es überschreibt die Basismethode zum Erstellen der Auflistung aller <xref:System.Web.UI.WebControls.WebParts.CatalogPart> in der Vorlage der Zone enthaltenen Steuerelemente.  
+  
+> [!NOTE]
+>  Die Schaltflächen in der <xref:System.Web.UI.WebControls.WebParts.CatalogZone> UI erfordern clientseitige Skripts, um ordnungsgemäß zu funktionieren. Wenn Skripts im Browser deaktiviert ist, der Benutzer ist nicht möglich für Aktionen über die <xref:System.Web.UI.WebControls.WebParts.CatalogZone> UI.  
+  
+## <a name="accessibility"></a>Barrierefreiheit  
+ Das Markup gerendert wird, wird standardmäßig für dieses Steuerelement kann nicht Accessibility Standards wie die Web Content Accessibility Guidelines 1.0 (WCAG) Priorität 1-Richtlinien entsprechen. Ausführliche Informationen zu Accessibility-Unterstützung für das genannte Steuerelement finden Sie unter [ASP.NET-Steuerelemente und Barrierefreiheit](http://msdn.microsoft.com/library/847a37e3-ce20-41da-b0d3-7dfb0fdae9a0).  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht deklarative und die programmgesteuerte Verwendung von der <xref:System.Web.UI.WebControls.WebParts.CatalogZone> Steuerelement. Das Codebeispiel besteht aus vier Teilen:  
+  
+-   Ein Benutzersteuerelement, die Ihnen ermöglicht, die Anzeigemodi auf der Webseite zu ändern.  
+  
+-   Eine Datei mit dem Quellcode für ein benutzerdefiniertes <xref:System.Web.UI.WebControls.WebParts.CatalogZone> -Steuerelement und ein benutzerdefiniertes <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement, das dem Katalog importiert und auf der Webseite hinzugefügt wird.  
+  
+-   Eine Webseite, die das Benutzersteuerelement, und die benutzerdefinierte deklariert <xref:System.Web.UI.WebControls.WebParts.CatalogZone> Steuerelement.  
+  
+-   Eine Erläuterung zum Ausführen des Beispiels.  
+  
+ Der erste Teil dieses Codebeispiel ist das Benutzersteuerelement, das Benutzern ermöglicht, Anzeigemodi auf einer Webseite zu ändern. Informationen zu Modi und eine Beschreibung des Quellcodes in diesem Steuerelement finden Sie unter [Exemplarische Vorgehensweise: Ändern des Anzeigemodus auf einer Webparts-Seite](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_CatalogZone_Overview#7](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogZone_Overview/CS/displaymodemenucs.ascx#7)]
+ [!code-aspx-vb[WebParts_CatalogZone_Overview#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogZone_Overview/VB/displaymodemenuvb.ascx#7)]  
+  
+ Der zweite Teil des Codebeispiels enthält den Code für das benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.CatalogZone> und <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente. Der Code für die <xref:System.Web.UI.WebControls.WebParts.CatalogZone> Steuerelement veranschaulicht das Vererben der <xref:System.Web.UI.WebControls.WebParts.CatalogZone> Klasse und ihre Eigenschaften anpassen, indem Sie im Konstruktor einige Standardwerte festzulegen. Der Quellcode auch veranschaulicht, wie eine benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPart> Klasse mit dem Namen `TextDisplayWebPart`. Dies ist das zugeordnete Steuerelement die. WebPart-Beschreibungsdatei, die Sie als Teil dieses Codebeispiels importieren. Nach dem Importieren der Description-Datei mithilfe der <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> Steuerelement auf der Webseite Sie Lage Hinzufügen der `TextDisplayWebPart` Steuerelement auf der Seite, die vollständig vorkonfiguriert entsprechend den Angaben in der Description-Datei.  
+  
+ Für das Codebeispiel ausführen müssen Sie diesen Quellcode kompilieren. Sie können es explizit kompilieren und legen Sie die resultierende Assembly im Bin-Ordner der Website oder dem globalen Assemblycache. Alternativ können Sie den Quellcode im Ordner "App_Code" des Standorts, ablegen, wo er zur Laufzeit dynamisch kompiliert wird. Dieses Codebeispiel verwendet die dynamische Kompilierung daher, wenn Sie das Beispiel auf diese Weise ausführen möchten, benennen Sie die Quellcodedatei Unterordner App_Code des Stammverzeichnisses für Ihre Webanwendung hinzugefügt. Eine exemplarische Vorgehensweise, die beide Methoden der Kompilierung veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Entwickeln und Verwenden eines benutzerdefinierten Webserver-Steuerelements](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_CatalogZone_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogZone_Overview/CS/catalogSamples.cs#1)]
+ [!code-vb[WebParts_CatalogZone_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogZone_Overview/VB/catalogSamples.vb#1)]  
+  
+ Der dritte Teil des Codebeispiels wird die Webseite, die die Steuerelemente enthält. Er enthält eine `Register` -Direktive für das Benutzersteuerelement und ein anderes für die Quelldatei mit den benutzerdefinierten Steuerelementen. Beachten Sie, dass in der zweiten Anweisung nicht die Assembly benennt da im Beispiel wird eine Assembly nicht verwendet werden, verwendet er die dynamische Kompilierung mit dem Quellcode im Unterordner "App_Code" platziert. Die Webseite deklariert eine <xref:System.Web.UI.WebControls.WebParts.WebPartZone> -Steuerelement, und innerhalb dessen untergeordnetem `<zonetemplate>` Element deklariert eine <xref:System.Web.UI.WebControls.BulletedList> Steuerelement. Obgleich dies ein Standardsteuerelement ASP.NET ist, muss volle Webparts-Funktionalität zur Laufzeit, da die <xref:System.Web.UI.WebControls.WebParts.WebPartManager> steuern umschließt, die alle Serversteuerelement platziert werden, in eine <xref:System.Web.UI.WebControls.WebParts.WebPartZone> mit einem <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> Objekt, sodass andere Serversteuerelemente Web beteiligt sein können Webparts-Anwendungen. In dieser Zone auch deklariert wird die benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement namens `TextDisplayWebPart`. Beachten Sie, dass dieses Steuerelement ein Attribut des besitzt `ExportMode="All"` deklariert ist. Dies ermöglicht es Ihnen so exportieren Sie ein. WebPart-Beschreibungsdatei, die die Eigenschaftswerte des Steuerelements enthält, die von anderen Benutzern an das Steuerelement vorkonfiguriert, dass andere Webseiten hinzufügen importiert werden können.  
+  
+> [!NOTE]
+>  Von Benutzern einer Webparts-Anwendung so exportieren Sie eine Beschreibungsdatei für aktiviert <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelemente, die Exportfunktion in der Web-Anwendung muss zusätzlich aktiviert werden, durch Hinzufügen einer `enableExport="true"` -Attribut auf die `<webParts>` Element (ist ein untergeordnetes Element von der `<system.web>`Element) in der Datei "Web.config". Export ist standardmäßig deaktiviert, daher, wenn Sie noch nicht Export für Ihre Anwendung aktiviert haben, bearbeiten Sie die Datei "Web.config" jetzt.  
+  
+ Die Webseite deklariert zudem das benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.CatalogZone> Steuerelement und darin, eine `<zonetemplate>` -Element, enthält ein <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> Steuerelement. Der Benutzer wird dieses Steuerelement zur Laufzeit verwendet, um das Importieren der. WebPart-Beschreibungsdatei für das benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.WebPart> Steuerelement.  
+  
+ [!code-aspx-csharp[WebParts_CatalogZone_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogZone_Overview/CS/catalogzonecs.aspx#2)]
+ [!code-aspx-vb[WebParts_CatalogZone_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogZone_Overview/VB/catalogzonevb.aspx#2)]  
+  
+ Führen Sie jetzt das Codebeispiel. Laden Sie die Webseite in einem Browser. Der erste Schritt ist so exportieren Sie ein. WebPart-Beschreibungsdatei für die `TextDisplayWebPart` Steuerelement. Klicken Sie auf die im Verbenmenü auf das benutzerdefinierte Steuerelement (dargestellt durch den Pfeil nach unten in der Titelleiste), und klicken Sie auf **exportieren**. Führen Sie die Anweisungen, um eine Beschreibungsdatei für das Steuerelement zu speichern. Öffnen der. WebPart-Beschreibung in einem Editor-Datei, und bearbeiten Sie den Wert des Titeltexts-Eigenschaft. Suchen der `<property>` Element mit dem Attribut `name="Title"`, und bearbeiten Sie den Titeltext, die zwischen den öffnenden und schließenden befindet `<property>` Tags. Jetzt schließen Sie auf der Webseite zu, und bearbeiten Sie die Seitenquelle in einem Editor. Löschen Sie die `<aspSample:TextDisplayWebPart>` Deklaration-Steuerelement, und klicken Sie dann speichern und schließen Sie die Datei.  
+  
+ Die Webseite in einem Browser erneut zu laden. Die `TextDisplayWebPart` Steuerelement sollte nicht angezeigt werden, da Sie ihn entfernt. Verwenden der **Anzeigemodus** Dropdownlisten-Steuerelement, und wählen **Katalog** auf der Seite ", Katalogmodus zu wechseln. Beachten Sie, dass die benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.CatalogZone> Steuerelement angezeigt wird, zusammen mit den <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> Steuerelement. Klicken Sie auf die **Durchsuchen** Schaltfläche zum Suchen der. WebPart-Beschreibungsdatei, die Sie exportiert haben, für die `TextDisplayWebPart` Steuerelement. Klicken Sie auf **hochladen**, wählen Sie das Kontrollkästchen neben dem importierten Steuerelement, und klicken Sie auf **hinzufügen** auf der Seite hinzugefügt. Klicken Sie auf **Katalog schließen** in den normalen Durchsuchen-Modus zurück. Das importierte Steuerelement sollte jetzt angezeigt werden, auf der Seite und der Titel, der in der Titelleiste des Steuerelements angezeigt wird, muss den Titeltext, der Sie hinzugefügt der. WebPart-Beschreibungsdatei.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">für den Betrieb in einer gehosteten Umgebung. "Demand"-Wert: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Berechtigungswert: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+    <block subset="none" type="overrides">
+      <para>Sie können benutzerdefinierte erstellen <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZone" /> Klassen, wenn Sie mehr Kontrolle über die Darstellung und das Verhalten der Benutzeroberfläche des Katalogs werden soll. Wenn Sie nicht benötigen, geben Sie die Benutzer des Steuerelements mit der Fähigkeit zum Hinzufügen <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> steuert deklarativ, dann können Sie direkt von erben die <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZoneBase" /> Klasse. Wenn Sie Steuerelemente deklarativ hinzuzufügenden aktivieren möchten, ist der Ansatz deklaratives das erben die <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZone" /> Klasse, da es sich um die wichtige Zonenvorlage bereitstellt.  
+  
+ Erben von der <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZone" /> -Klasse, die Sie überschreiben die <see cref="M:System.Web.UI.WebControls.WebParts.CatalogZone.CreateCatalogParts" /> -Methode, und verwenden Sie die Methode zum Hinzufügen benutzerdefinierter <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> -Steuerelementen an eine <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPartCollection" />, wenn Sie größere programmgesteuerte Kontrolle über das Hinzufügen von benutzerdefinierten möchten <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> Steuerelemente, die relevante Zeitzone .</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CatalogZone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogZone.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZone" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da die <xref:System.Web.UI.WebControls.WebParts.CatalogZone> Steuerelement implementiert eine Vorlage für die Zone, in der Regel deklarativ verwendet und Sie müssen nur selten erstellen Sie eine neue Instanz der Klasse unter Verwendung der <xref:System.Web.UI.WebControls.WebParts.CatalogZone.%23ctor%2A> Konstruktor. Allerdings erben von der <xref:System.Web.UI.WebControls.WebParts.CatalogZone> Klasse, um eine benutzerdefinierte Zone erstellen möchten Sie eventuell den Konstruktor verwenden, um einige ihrer Eigenschaftswerte zu initialisieren und dessen Darstellung angepasst.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, die programmgesteuerte Verwendung der <xref:System.Web.UI.WebControls.WebParts.CatalogZone.%23ctor%2A> Konstruktor in einem benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.CatalogZone> Steuerelement. Der Konstruktor wird verwendet, um einige Standardeigenschaftswerte für das Steuerelement zu initialisieren. Der folgende Code zeigt die benutzerdefinierte <xref:System.Web.UI.WebControls.WebParts.CatalogZone> Klasse mit dem Konstruktor, der im oberen Bereich deklariert. Der vollständige Code und die Anweisungen zum Einrichten und Ausführen des Beispiels erforderlich finden Sie im Abschnitt "Beispiel" in der <xref:System.Web.UI.WebControls.WebParts.CatalogZone> -Klassenübersicht.  
+  
+ [!code-csharp[WebParts_CatalogZone_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogZone_Overview/CS/catalogSamples.cs#1)]
+ [!code-vb[WebParts_CatalogZone_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogZone_Overview/VB/catalogSamples.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCatalogParts">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.WebControls.WebParts.CatalogPartCollection CreateCatalogParts ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.WebControls.WebParts.CatalogPartCollection CreateCatalogParts() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogZone.CreateCatalogParts" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.CatalogPartCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Erstellt eine Instanz von jeder <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> Typ, in der Zone deklariert ist.</summary>
+        <returns>Ein <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPartCollection" /> mit Verweisen auf alle die <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> Steuerelemente in der Zone.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.CatalogZone.CreateCatalogParts%2A> Methode ist eine wichtige Methode, wenn ein Benutzer eine Seite in den Kataloganzeigemodus wechselt, diese Methode alle erstellt die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente, die den Katalog Webparts bilden.  
+  
+ Die <xref:System.Web.UI.WebControls.WebParts.CatalogZone.CreateCatalogParts%2A> Methode in der <xref:System.Web.UI.WebControls.WebParts.CatalogZone> -Klasse bereitgestellten mit den Webparts-Steuerelementsatzes jedes Serversteuerelement erstellen kann, die von erbt die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Klasse. Wenn Sie beim Erstellen eines benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.CatalogPart> steuern und deklarieren Sie ihn auf einer Seite innerhalb eine <xref:System.Web.UI.WebControls.WebParts.CatalogZone> Steuerelement diese Methode erstellt das Steuerelement, wenn ein Benutzer die Seite in den Katalogmodus wechselt.  
+  
+ Jedoch aus verschiedenen Gründen empfiehlt Kontrolle über die <xref:System.Web.UI.WebControls.WebParts.CatalogZone.CreateCatalogParts%2A> Methode. Sie sollten nur bestimmten erstellen <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente. Nehmen wir beispielsweise an, die Sie erstellen einen Satz von benutzerdefinierten <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente, die eine konsistente Darstellung eines einzelnen Produkts oder einer Organisation angehören. Wenn Entwickler von Seiten auf diese benutzerdefinierten Steuerelemente in einem Katalog mit beschränkt werden sollen, sollten Sie erben von der <xref:System.Web.UI.WebControls.WebParts.CatalogZone> -Klasse außer Kraft, indem die <xref:System.Web.UI.WebControls.WebParts.CatalogZone.CreateCatalogParts%2A> -Methode, und lassen Sie die Methode, die nur die Steuerelemente des gleichen Typs wie der benutzerdefinierten Steuerelemente zu erstellen.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Die aktuelle <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> Steuerelement verfügt nicht über eine ID ein.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ZoneTemplate">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.ITemplate ZoneTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ITemplate ZoneTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.CatalogZone.ZoneTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.TemplateContainer(typeof(System.Web.UI.WebControls.WebParts.CatalogZone))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.TemplateInstance(System.Web.UI.TemplateInstance.Single)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt eine Vorlage auf den untergeordneten Steuerelementen in einem <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZone" /> Steuerelement in einem persistenten Format.</summary>
+        <value>Ein <see cref="T:System.Web.UI.ITemplate" /> , fungiert als Container für untergeordnete Steuerelemente in der Zone.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.WebControls.WebParts.CatalogZone.ZoneTemplate%2A> -Eigenschaft verweist auf eine Vorlage vom Typ <xref:System.Web.UI.ITemplate> wird, enthalten die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente in der Zone. Die Vorlage für die Zone ermöglicht Entwicklern deklarieren die <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente, die sie im Format die Persistenz, anstatt alle Steuerelemente programmgesteuert erstellen verwendet werden soll.  
+  
+ Der Set-Accessor für die <xref:System.Web.UI.WebControls.WebParts.CatalogZone.ZoneTemplate%2A> -Eigenschaft ruft die <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.InvalidateCatalogParts%2A> -Methode, die die Auflistung der erzwingt <xref:System.Web.UI.WebControls.WebParts.CatalogPart> Steuerelemente, die in der Vorlage der Zone auf der Seite zu aktualisierende deklariert werden. Dadurch wird sichergestellt, dass die Auflistung der Steuerelemente auf die Zone verweist aktualisiert wird bleibt, wenn ein Benutzer die Steuerelemente, die tatsächlich in der Vorlage deklariert, auf der Seite ändert.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Wenn Sie eine benutzerdefinierte erstellen möchten <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZone" /> Zone, aber Sie erstellen möchten die <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> Steuerelemente programmgesteuert anstatt es Seitenentwicklern ermöglicht, sie zu deklarieren, Sie keine müssen vorlagenunterstützung Zone, und Sie können die erben direkt von der <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZoneBase" /> -Klasse.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

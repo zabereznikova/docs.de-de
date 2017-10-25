@@ -1,0 +1,110 @@
+<Type Name="SafeSerializationEventArgs" FullName="System.Runtime.Serialization.SafeSerializationEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class SafeSerializationEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SafeSerializationEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.SafeSerializationEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt Daten für das <see cref="E:System.Exception.SerializeObjectState" />-Ereignis bereit.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Das Ereignis tritt auf, wenn eine Ausnahme zu serialisieren, die benutzerdefinierte Daten in sicherheitstransparentem Code enthält.  
+  
+ Weitere Informationen und ein Beispiel finden Sie unter der <xref:System.Runtime.Serialization.ISafeSerializationData> Klasse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddSerializedState">
+      <MemberSignature Language="C#" Value="public void AddSerializedState (System.Runtime.Serialization.ISafeSerializationData serializedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddSerializedState(class System.Runtime.Serialization.ISafeSerializationData serializedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SafeSerializationEventArgs.AddSerializedState(System.Runtime.Serialization.ISafeSerializationData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializedState" Type="System.Runtime.Serialization.ISafeSerializationData" />
+      </Parameters>
+      <Docs>
+        <param name="serializedState">Ein Zustandsobjekt, das mit der Instanz serialisiert wird.</param>
+        <summary>Speichert den Zustand der Ausnahme.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Klasse oder Struktur, implementiert die <xref:System.Runtime.Serialization.ISafeSerializationData> ermöglicht es Ihnen, benutzerdefinierte Daten in sicherheitstransparentem Code zu serialisieren.  
+  
+ Weitere Informationen und ein Beispiel finden Sie unter der <xref:System.Runtime.Serialization.ISafeSerializationData> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StreamingContext">
+      <MemberSignature Language="C#" Value="public System.Runtime.Serialization.StreamingContext StreamingContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.Serialization.StreamingContext StreamingContext" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.SafeSerializationEventArgs.StreamingContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.StreamingContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt ein Objekt, das die Quelle und das Ziel eines serialisierten Datenstroms beschreibt.</summary>
+        <value>Ein Objekt, das die Quelle und das Ziel eines serialisierten Datenstroms beschreibt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen und ein Beispiel finden Sie unter der <xref:System.Runtime.Serialization.ISafeSerializationData> Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

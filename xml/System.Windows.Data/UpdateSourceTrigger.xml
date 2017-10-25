@@ -1,0 +1,97 @@
+<Type Name="UpdateSourceTrigger" FullName="System.Windows.Data.UpdateSourceTrigger">
+  <TypeSignature Language="C#" Value="public enum UpdateSourceTrigger" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed UpdateSourceTrigger extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Data.UpdateSourceTrigger" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Beschreibt die zeitliche Steuerung von Bindungsquellenaktualisierungen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen finden Sie unter <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Data.UpdateSourceTrigger Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Data.UpdateSourceTrigger.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.UpdateSourceTrigger</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Standardeinstellung <see cref="T:System.Windows.Data.UpdateSourceTrigger" /> -Standardwert der Bindungszieleigenschaft. Der Standardwert für die meisten Abhängigkeitseigenschaften ist <see cref="F:System.Windows.Data.UpdateSourceTrigger.PropertyChanged" />, während die <see cref="P:System.Windows.Controls.TextBox.Text" /> Eigenschaft hat den Standardwert <see cref="F:System.Windows.Data.UpdateSourceTrigger.LostFocus" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eine programmgesteuerte Methode zum Bestimmen des standardmäßigen <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> Wert einer Abhängigkeitseigenschaft ist das die Metadaten der Eigenschaft mit abrufen <xref:System.Windows.DependencyProperty.GetMetadata%2A> und überprüfen Sie den Wert der <xref:System.Windows.FrameworkPropertyMetadata.DefaultUpdateSourceTrigger%2A> Eigenschaft.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Explicit">
+      <MemberSignature Language="C#" Value="Explicit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Data.UpdateSourceTrigger Explicit = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Data.UpdateSourceTrigger.Explicit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.UpdateSourceTrigger</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Aktualisiert die Bindungsquelle nur bei Aufruf der <see cref="M:System.Windows.Data.BindingExpression.UpdateSource" /> Methode.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LostFocus">
+      <MemberSignature Language="C#" Value="LostFocus" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Data.UpdateSourceTrigger LostFocus = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Data.UpdateSourceTrigger.LostFocus" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.UpdateSourceTrigger</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Aktualisiert die Bindungsquelle, sobald das Bindungszielelement den Fokus verliert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyChanged">
+      <MemberSignature Language="C#" Value="PropertyChanged" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Data.UpdateSourceTrigger PropertyChanged = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Data.UpdateSourceTrigger.PropertyChanged" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.UpdateSourceTrigger</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Aktualisiert die Bindungsquelle sofort, sobald sich die Bindungszieleigenschaft ändert.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

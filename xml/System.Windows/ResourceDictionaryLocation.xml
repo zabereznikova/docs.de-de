@@ -1,0 +1,74 @@
+<Type Name="ResourceDictionaryLocation" FullName="System.Windows.ResourceDictionaryLocation">
+  <TypeSignature Language="C#" Value="public enum ResourceDictionaryLocation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ResourceDictionaryLocation extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.ResourceDictionaryLocation" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt die Speicherorte, auf dem Design Ressourcenwörterbücher befinden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ExternalAssembly">
+      <MemberSignature Language="C#" Value="ExternalAssembly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.ResourceDictionaryLocation ExternalAssembly = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.ResourceDictionaryLocation.ExternalAssembly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.ResourceDictionaryLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Designwörterbücher, die in Assemblys, die außerhalb des Definieren der Typen mit Designs vorhanden sein.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Wörterbücher heißen basiert auf der ursprünglichen Assembly und der Name des Designs angefügt ist. Beispiel: PresentationFramework.Luna.dll. Diese Wörterbücher verwenden die gleiche Version und Schlüssel wie die ursprüngliche Assembly an.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.ResourceDictionaryLocation None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.ResourceDictionaryLocation.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.ResourceDictionaryLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Keine Designwörterbücher vorhanden sein.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceAssembly">
+      <MemberSignature Language="C#" Value="SourceAssembly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.ResourceDictionaryLocation SourceAssembly = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.ResourceDictionaryLocation.SourceAssembly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.ResourceDictionaryLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Designwörterbücher vorhanden sein, in der Assembly, die die Typen mit Designs definiert.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

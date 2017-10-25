@@ -1,0 +1,162 @@
+<Type Name="BindingCollectionElement" FullName="System.ServiceModel.Configuration.BindingCollectionElement">
+  <TypeSignature Language="C#" Value="public abstract class BindingCollectionElement : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BindingCollectionElement extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.BindingCollectionElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Konfigurationsabschnitt dar, der eine Sammlung bindender Elemente enthält, die einzelne Aspekte der Kommunikation eines Endpunkts mit anderen Endpunkten beschreiben, die konsistent in eine Kanalfactory auf dem Client und einem Kanallistener auf dem Dienst integriert werden.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BindingCollectionElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.BindingCollectionElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ServiceModel.Configuration.BindingCollectionElement" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingName">
+      <MemberSignature Language="C#" Value="public string BindingName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BindingName" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.BindingCollectionElement.BindingName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Bindung ab.</summary>
+        <value>Der eindeutige Name der Bindung.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Der aktuelle Konfigurationsauflistungsname wurde nicht gefunden.  
+  
+ - oder -   
+  
+ Der Konfigurationsabschnittsname wurde nicht gefunden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingType">
+      <MemberSignature Language="C#" Value="public abstract Type BindingType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type BindingType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.BindingCollectionElement.BindingType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Typ der Bindung ab.</summary>
+        <value>Ein <see cref="T:System.Type" />, der den Typ der Bindung enthält.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfiguredBindings">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.ObjectModel.ReadOnlyCollection&lt;System.ServiceModel.Configuration.IBindingConfigurationElement&gt; ConfiguredBindings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.ServiceModel.Configuration.IBindingConfigurationElement&gt; ConfiguredBindings" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.BindingCollectionElement.ConfiguredBindings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.ServiceModel.Configuration.IBindingConfigurationElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft alle Bindungskonfigurationselemente in dieser Auflistung ab.</summary>
+        <value>Alle Bindungskonfigurationselemente in dieser Sammlung.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsKey">
+      <MemberSignature Language="C#" Value="public abstract bool ContainsKey (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ContainsKey(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.BindingCollectionElement.ContainsKey(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der zu suchenden Bindung.</param>
+        <summary>Bestimmt, ob eine Bindung in der Auflistung mit dem angegebenen Namen vorhanden ist.</summary>
+        <returns>
+          <see langword="true" />, wenn die Sammlung die Bindung mit dem angegebenen <paramref name="name" /> enthält, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDefault">
+      <MemberSignature Language="C#" Value="protected abstract System.ServiceModel.Channels.Binding GetDefault ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.ServiceModel.Channels.Binding GetDefault() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.BindingCollectionElement.GetDefault" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Binding</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft die verwendete Standardbindung ab.</summary>
+        <returns>Ein <see cref="T:System.ServiceModel.Channels.Binding" />-Objekt, das die Standardbindung darstellt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryAdd">
+      <MemberSignature Language="C#" Value="protected abstract bool TryAdd (string name, System.ServiceModel.Channels.Binding binding, System.Configuration.Configuration config);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool TryAdd(string name, class System.ServiceModel.Channels.Binding binding, class System.Configuration.Configuration config) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.BindingCollectionElement.TryAdd(System.String,System.ServiceModel.Channels.Binding,System.Configuration.Configuration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+        <Parameter Name="config" Type="System.Configuration.Configuration" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der hinzuzufügenden Bindung.</param>
+        <param name="binding">Ein <see cref="T:System.ServiceModel.Channels.Binding" />-Objekt, das die hinzuzufügende Bindung darstellt.</param>
+        <param name="config">Die Konfigurationseinstellungen dieser Bindung.</param>
+        <summary>Fügt der Auflistung die angegebene Bindung hinzu.</summary>
+        <returns>
+          <see langword="true" />, wenn der Vorgang erfolgreich abgeschlossen wurde, andernfalls <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

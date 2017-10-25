@@ -1,0 +1,229 @@
+<Type Name="Target" FullName="Microsoft.Build.BuildEngine.Target">
+  <TypeSignature Language="C#" Value="public class Target : System.Collections.IEnumerable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Target extends System.Object implements class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.BuildEngine.Target" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Target (Name = { Name }, Condition = { Condition })")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt eine einzelne [Ziel](http://msdn.microsoft.com/library/350f6fc2-86b3-45f2-a31e-ece0e6bd4dca) Element in einem MSBuild-Projekt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddNewTask">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.BuildEngine.BuildTask AddNewTask (string taskName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.BuildEngine.BuildTask AddNewTask(string taskName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Target.AddNewTask(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.BuildEngine.BuildTask</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="taskName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="taskName">Das <see cref="T:Microsoft.Build.BuildEngine.BuildTask" />-Objekt, das das <see langword="Task" />-Element darstellt, das dem <see langword="Target" />-Element hinzugefügt werden soll.</param>
+        <summary>Fügt das angegebene [Aufgabe](http://msdn.microsoft.com/library/d82e2485-e5f0-4936-a357-745bacccc299) Element an der [Ziel](http://msdn.microsoft.com/library/350f6fc2-86b3-45f2-a31e-ece0e6bd4dca) Element.</summary>
+        <returns>Ein <see cref="T:Microsoft.Build.BuildEngine.BuildTask" /> Objekt darstellt, ein untergeordnetes Element <c>Aufgabe</c> Element von der <c>Ziel</c> Element.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Condition">
+      <MemberSignature Language="C#" Value="public string Condition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Condition" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Target.Condition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <c>Bedingung</c> -Attributwert der [Ziel](http://msdn.microsoft.com/library/350f6fc2-86b3-45f2-a31e-ece0e6bd4dca) Element.</summary>
+        <value>Die <c>Bedingung</c> -Attributwert der <c>Ziel</c> Element.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DependsOnTargets">
+      <MemberSignature Language="C#" Value="public string DependsOnTargets { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DependsOnTargets" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Target.DependsOnTargets" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <c>DependsOnTargets</c> -Attributwert der [Ziel](http://msdn.microsoft.com/library/350f6fc2-86b3-45f2-a31e-ece0e6bd4dca) Element, das eine durch Semikolons getrennte Liste ist.</summary>
+        <value>Die <c>DependsOnTargets</c> -Attributwert der <c>Ziel</c> Element.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Target.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gibt einen Enumerator zurück, der durchläuft die <see cref="T:Microsoft.Build.BuildEngine.BuildTask" /> Objekte in der <see cref="T:Microsoft.Build.BuildEngine.Target" />.</summary>
+        <returns>Ein <see cref="T:System.Collections.IEnumerator" /> für die <see cref="T:Microsoft.Build.BuildEngine.BuildTask" /> Objekte in der <see cref="T:Microsoft.Build.BuildEngine.Target" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode ermöglicht den Aufrufer die Verwendung der `foreach` -Anweisung der Programmiersprache c# (`for each` in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]) zum Durchlaufen der einzelnen <xref:Microsoft.Build.BuildEngine.BuildTask> Objekte in der <xref:Microsoft.Build.BuildEngine.Target>.  
+  
+ Ein <xref:Microsoft.Build.BuildEngine.BuildTask> Objekt darstellt, ein untergeordnetes Element von der `Target` Element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Inputs">
+      <MemberSignature Language="C#" Value="public string Inputs { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Inputs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Target.Inputs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die Elemente, die in diesem Ziel eingegeben werden.</summary>
+        <value>Eine Zeichenfolge, die die Elemente darstellt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Elemente in diesem Zielattribut werden als Eingaben in der Analyse der Abhängigkeit der obersten Ebene verwendet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsImported">
+      <MemberSignature Language="C#" Value="public bool IsImported { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsImported" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Target.IsImported" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Wert, der angibt, ob die [Ziel](http://msdn.microsoft.com/library/350f6fc2-86b3-45f2-a31e-ece0e6bd4dca) Element in das Projekt importiert wurde.</summary>
+        <value>
+          <see langword="true" />Wenn die <c>Ziel</c> Element wurde in das Projekt importiert wurde, andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Target.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <c>Namen</c> -Attributwert der [Ziel](http://msdn.microsoft.com/library/350f6fc2-86b3-45f2-a31e-ece0e6bd4dca) Element.</summary>
+        <value>Die <c>Namen</c> -Attributwert der <c>Ziel</c> Element.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Outputs">
+      <MemberSignature Language="C#" Value="public string Outputs { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Outputs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.Target.Outputs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt die erwarteten Ausgaben des Ziels.</summary>
+        <value>Eine Zeichenfolge, die Ausgaben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sie können diese Target-Attribut, um einen Satz von Eingabeelementen in einen Satz von Ausgabeelemente transformieren Transformationen anwenden. Dieses Attribut wird nicht nur für die Analyse der Abhängigkeit der obersten Ebene, sondern auch für die Zwecke der Definition dieser Ziele Ausgaben verwendet werden.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveTask">
+      <MemberSignature Language="C#" Value="public void RemoveTask (Microsoft.Build.BuildEngine.BuildTask taskElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveTask(class Microsoft.Build.BuildEngine.BuildTask taskElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.Target.RemoveTask(Microsoft.Build.BuildEngine.BuildTask)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="taskElement" Type="Microsoft.Build.BuildEngine.BuildTask" />
+      </Parameters>
+      <Docs>
+        <param name="taskElement">Das <see cref="T:Microsoft.Build.BuildEngine.BuildTask" />-Objekt, das das <see langword="Task" />-Element darstellt, das aus dem <see langword="Target" />-Element entfernt werden soll.</param>
+        <summary>Entfernt das angegebene [Aufgabe](http://msdn.microsoft.com/library/d82e2485-e5f0-4936-a357-745bacccc299) Element aus der [Ziel](http://msdn.microsoft.com/library/350f6fc2-86b3-45f2-a31e-ece0e6bd4dca) Element.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ein <xref:Microsoft.Build.BuildEngine.BuildTask>-Objekt ist ein untergeordnetes `Task`-Element des `Target`-Elements.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

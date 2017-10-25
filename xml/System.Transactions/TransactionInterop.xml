@@ -1,0 +1,358 @@
+<Type Name="TransactionInterop" FullName="System.Transactions.TransactionInterop">
+  <TypeSignature Language="C#" Value="public static class TransactionInterop" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit TransactionInterop extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Transactions.TransactionInterop" />
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions.Local</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Erleichtert die Interaktion zwischen <see cref="N:System.Transactions" /> und Komponenten, die geschrieben wurden, um mit MSDTC, COM+ oder <see cref="N:System.EnterpriseServices" /> zu interagieren. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Klasse stellt Methoden für die Transaktionsweitergabe. Weitere Informationen zur Funktionsweise von diesem Prozess finden Sie unter [Transaktionsverteilung](http://msdn.microsoft.com/library/default.asp?url=/library/cossdk/html/b09541e6-4baf-4e37-b879-62884fbb0969.asp).  
+  
+ Von dieser Klasse bereitgestellten Methoden verwenden, können Sie in zwei Arten von Transaktionsweitergaben, Export/Import (Push-Modell) und Sender/Empfänger (Pull-Modell) erfassen.  
+  
+ Die Weitergabe Export/Import (Push-Modell) umfasst die folgenden Schritte,  
+  
+1.  Auf dem Remotecomputer Abrufen der "Aufenthaltsort" des Transaktions-Managers dieses Computers durch Aufrufen der <xref:System.Transactions.TransactionInterop.GetWhereabouts%2A> Methode. Sie können dann diese Information auf dem Clientcomputer für die zukünftige Verwendung zwischenspeichern.  
+  
+2.  Senden Sie die Daten, die den Verbleib auf den Clientcomputer mit einer bevorzugten Methode enthält.  
+  
+3.  Verwenden Sie auf dem Clientcomputer den Verbleib "Exportieren" die Transaktion an den Remotecomputer und generieren eine Transaktion "Cookie" ein.  Dies erfolgt durch Aufrufen von <xref:System.Transactions.TransactionInterop.GetExportCookie%2A> und dem Remotecomputer Verbleib übergeben.  
+  
+4.  Senden Sie die Daten, die mit der Transaktion "Cookie" an den Remotecomputer mit einer bevorzugten Methode  
+  
+5.  Auf dem Remotecomputer, mit der die Transaktion "Cookie" erhalten einen Klon der Clienttransaktion durch Aufrufen der <xref:System.Transactions.TransactionInterop.GetTransactionFromExportCookie%2A> Methode.  
+  
+6.  Verwenden Sie auf dem Remotecomputer die Klontransaktion eintragen den Ressourcen-Manager mit der <xref:System.Transactions.Transaction.EnlistVolatile%2A> oder <xref:System.Transactions.Transaction.EnlistDurable%2A> Methoden die <xref:System.Transactions.Transaction> Klasse.  
+  
+ Die Weitergabe der Sender/Empfänger (Pull-Modell) umfasst die folgenden Schritte,  
+  
+-   Auf dem Clientcomputer generiert bei Verwendung der Transaktion ein entsprechendes "Weitergabetoken" durch Aufrufen<xref:System.Transactions.TransactionInterop.GetTransmitterPropagationToken%2A>  
+  
+-   Senden Sie die Daten, die das "Weitergabetoken" der Transaktion an den Remotecomputer mit einer bevorzugten Methode enthält.  
+  
+-   Verwenden Sie auf dem Remotecomputer "Propagierungstoken" um einen Klon der Clienttransaktion durch den Aufruf erhalten<xref:System.Transactions.TransactionInterop.GetTransactionFromTransmitterPropagationToken%2A>  
+  
+ Der Sender/Empfänger-Modell bietet eine bessere Leistung in Szenarien, in dem das Transaktionstoken auf einem Remotecomputer gesendet wurde, aber der Remotecomputer dürfen nicht verwenden, um die Transaktion zu erhalten.  Dies ist, da die Transaktion nicht, bis weitergegeben wird <xref:System.Transactions.TransactionInterop.GetTransactionFromTransmitterPropagationToken%2A> aufgerufen wird. Ein weiterer Vorteil ist, der das Weitergabetoken an einen Remotecomputer gesendet werden kann, während das Export-Cookie nur auf dem Computer verwendet werden kann, die den Verbleib bereitgestellt.  
+  
+ Allerdings sollten Sie beachten Sie, dass der Verbleib des remote-Transaktions-Manager in allen Weitergabe Token gekapselt sind somit größer als die entsprechende Transaktionscookies aus dem Export/Import-Modell.  
+  
+ **Hinweis** dieses Typs verwendet <xref:System.Security.Permissions.SecurityAction.LinkDemand> aufgerufen aus nicht vertrauenswürdigen Code wird verhindert jedoch nur der unmittelbaren Aufrufer zum; besitzen die `FullTrust` Berechtigungssatz.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetDtcTransaction">
+      <MemberSignature Language="C#" Value="public static System.Transactions.IDtcTransaction GetDtcTransaction (System.Transactions.Transaction transaction);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Transactions.IDtcTransaction GetDtcTransaction(class System.Transactions.Transaction transaction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.TransactionInterop.GetDtcTransaction(System.Transactions.Transaction)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.IDtcTransaction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transaction" Type="System.Transactions.Transaction" />
+      </Parameters>
+      <Docs>
+        <param name="transaction">Eine <see cref="T:System.Transactions.Transaction" />-Instanz, die gemarshallt werden soll.</param>
+        <summary>Ruft eine <see cref="T:System.Transactions.IDtcTransaction" />-Instanz ab, die eine <see cref="T:System.Transactions.Transaction" /> darstellt.</summary>
+        <returns>Ruft eine <see cref="T:System.Transactions.IDtcTransaction" />-Instanz ab, die eine <see cref="T:System.Transactions.Transaction" /> darstellt.  Die <see cref="T:System.Transactions.IDtcTransaction" /> ist kompatibel mit dem nicht verwalteten Form der [ITransaction](http://msdn.microsoft.com/library/default.asp?url=/library/cossdk/html/d40264be-f9b2-4044-aac6-84b43e5be666.asp) verwendet MSDTC und mit dem verwalteten Formular von <see cref="T:System.EnterpriseServices.ITransaction" /> verwendeten <see cref="N:System.EnterpriseServices" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExportCookie">
+      <MemberSignature Language="C#" Value="public static byte[] GetExportCookie (System.Transactions.Transaction transaction, byte[] exportCookie);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] GetExportCookie(class System.Transactions.Transaction transaction, unsigned int8[] exportCookie) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.TransactionInterop.GetExportCookie(System.Transactions.Transaction,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transaction" Type="System.Transactions.Transaction" />
+        <Parameter Name="whereabouts" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="transaction">Das zu marshallende <see cref="T:System.Transactions.Transaction" />-Objekt.</param>
+        <param name="exportCookie">To be added.</param>
+        <summary>Transformiert ein Transaktionsobjekt in ein Exporttransaktionscookie um.</summary>
+        <returns>Ein Exporttransaktionscookie, das das angegebene <see cref="T:System.Transactions.Transaction" />-Objekt darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rufen Sie diese Methode, wenn Sie eine Transaktion exportieren möchten. Die `transaction` übergebenen zusammen in einer Transaktionscookie gemarshallt wird. Sie können dann das Transaktionscookie an den Zielprozess senden. Dies wird als Weitergabe der Transaktion zwischen Prozessen oder Systemen bezeichnet. Die Weitergabe gilt ein Push-Modell, in dem die lokale Transaktion in die Zieldatenbank übertragen wird.  Aus diesem Grund enthalten die Informationen `whereabouts` Zieltransaktions-Managers müssen beschreiben.  
+  
+ Weitere Informationen zu anderen Propagierungsmodellen finden Sie im Abschnitt mit den Hinweisen zur <xref:System.Transactions.TransactionInterop>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTransactionFromDtcTransaction">
+      <MemberSignature Language="C#" Value="public static System.Transactions.Transaction GetTransactionFromDtcTransaction (System.Transactions.IDtcTransaction dtc);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Transactions.Transaction GetTransactionFromDtcTransaction(class System.Transactions.IDtcTransaction dtc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.TransactionInterop.GetTransactionFromDtcTransaction(System.Transactions.IDtcTransaction)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.Transaction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transactionNative" Type="System.Transactions.IDtcTransaction" />
+      </Parameters>
+      <Docs>
+        <param name="dtc">To be added.</param>
+        <summary>Generiert eine <see cref="T:System.Transactions.Transaction" /> aus einer angegebenen <see cref="T:System.Transactions.IDtcTransaction" />.</summary>
+        <returns>Eine <see cref="T:System.Transactions.Transaction" />-Instanz, die die angegebene <see cref="T:System.Transactions.IDtcTransaction" /> darstellt.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die `transactionNative` ist kompatibel mit dem nicht verwalteten Form der [ITransaction](http://msdn.microsoft.com/library/default.asp?url=/library/cossdk/html/d40264be-f9b2-4044-aac6-84b43e5be666.asp) verwendet MSDTC und mit dem verwalteten Formular von <xref:System.EnterpriseServices.ITransaction> verwendeten <xref:System.EnterpriseServices>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTransactionFromExportCookie">
+      <MemberSignature Language="C#" Value="public static System.Transactions.Transaction GetTransactionFromExportCookie (byte[] exportCookie);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Transactions.Transaction GetTransactionFromExportCookie(unsigned int8[] exportCookie) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.TransactionInterop.GetTransactionFromExportCookie(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.Transaction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cookie" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="exportCookie">To be added.</param>
+        <summary>Generiert eine <see cref="T:System.Transactions.Transaction" /> aus dem angegebenen Exportcookie.</summary>
+        <returns>Eine <see cref="T:System.Transactions.Transaction" /> aus dem angegebenen Exportcookie.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu anderen Propagierungsmodellen finden Sie im Abschnitt mit den Hinweisen zur <xref:System.Transactions.TransactionInterop>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTransactionFromTransmitterPropagationToken">
+      <MemberSignature Language="C#" Value="public static System.Transactions.Transaction GetTransactionFromTransmitterPropagationToken (byte[] token);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Transactions.Transaction GetTransactionFromTransmitterPropagationToken(unsigned int8[] token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.TransactionInterop.GetTransactionFromTransmitterPropagationToken(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.Transaction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propagationToken" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="token">To be added.</param>
+        <summary>Generiert eine <see cref="T:System.Transactions.Transaction" />-Instanz aus dem angegebenen Senderpropagierungstoken.</summary>
+        <returns>Eine <see cref="T:System.Transactions.Transaction" /> vom angegebenen Senderpropagierungstoken.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode, die zusammen mit der <xref:System.Transactions.TransactionInterop.GetTransmitterPropagationToken%2A> Methode Funktionen zur "Pull" Propagierung bereit, in dem die Transaktion "gezogen" vom Remotecomputer beim Aufrufen dieser Methode zum Aufheben des Marshallens der Transaktion.  
+  
+ Weitere Informationen zu anderen Propagierungsmodellen finden Sie im Abschnitt mit den Hinweisen zur <xref:System.Transactions.TransactionInterop>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Transactions.TransactionManagerCommunicationException">Die Deserialisierung von einer Transaktion schlägt fehl, weil der Transaktions-Manager kein Kontakt hergestellt werden kann. Dies kann durch Firewall oder Netzwerkeinstellungen verursacht werden.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTransmitterPropagationToken">
+      <MemberSignature Language="C#" Value="public static byte[] GetTransmitterPropagationToken (System.Transactions.Transaction transaction);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] GetTransmitterPropagationToken(class System.Transactions.Transaction transaction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.TransactionInterop.GetTransmitterPropagationToken(System.Transactions.Transaction)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transaction" Type="System.Transactions.Transaction" />
+      </Parameters>
+      <Docs>
+        <param name="transaction">Eine Transaktion, die in ein Propagierungstoken gemarshallt werden soll.</param>
+        <summary>Generiert ein Propagierungstoken für die angegebene <see cref="T:System.Transactions.Transaction" />.</summary>
+        <returns>Gemeinsam mit der <see cref="M:System.Transactions.TransactionInterop.GetTransactionFromTransmitterPropagationToken(System.Byte[])" />-Methode stellt diese Methode Funktionen zur Sender/Empfänger-Propagierung bereit, in der die Transaktion vom Remotecomputer "gezogen" wird, wenn sie zum Aufheben des Marshallens der Transaktion aufgerufen wird.  
+  
+ Weitere Informationen zu anderen propagierungsmodellen finden Sie unter <see cref="T:System.Transactions.TransactionInterop" /> Klasse.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWhereabouts">
+      <MemberSignature Language="C#" Value="public static byte[] GetWhereabouts ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] GetWhereabouts() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.TransactionInterop.GetWhereabouts" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ruft den Verbleib des verteilten Transaktions-Managers ab, der für <see cref="N:System.Transactions" /> verwendet wird.</summary>
+        <returns>Der Verbleib des verteilten Transaktions-Managers, der für <see cref="N:System.Transactions" /> verwendet wird.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Verbleib enthält eine Adresse, die den Speicherort des Transaktions-Managers beschreibt. Damit können zwei Transaktions-Manager miteinander kommunizieren und so eine Transaktion von einem System zum anderen weitergeben. Die von dieser Methode zurückgegebene Informationen kann verwendet werden, Speicherort für die Pushinstallation Modell Transaktionsweitergabe mit Anmeldeinformationen der <xref:System.Transactions.TransactionInterop.GetExportCookie%2A> Methode.  
+  
+ Weitere Informationen zu anderen Propagierungsmodellen finden Sie im Abschnitt mit den Hinweisen zur <xref:System.Transactions.TransactionInterop>-Klasse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PromoterTypeDtc">
+      <MemberSignature Language="C#" Value="public static readonly Guid PromoterTypeDtc;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid PromoterTypeDtc" />
+      <MemberSignature Language="DocId" Value="F:System.Transactions.TransactionInterop.PromoterTypeDtc" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Der Typ des Prozessors der verteilten Transaktion.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Wert wird verwendet, für die `Transaction.PromoterType` Eigenschaft, wenn die Transaktion ist, oder von MSDTC höher gestuft werden wird und die `Transaction.GetPromotedToken` Methodenrückgabewert ein Propagierungstoken des MSDTC-Transaktion für die `byte[]` Ergebnis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

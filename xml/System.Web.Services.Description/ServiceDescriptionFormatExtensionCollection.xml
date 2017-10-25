@@ -1,0 +1,566 @@
+<Type Name="ServiceDescriptionFormatExtensionCollection" FullName="System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection">
+  <TypeSignature Language="C#" Value="public sealed class ServiceDescriptionFormatExtensionCollection : System.Web.Services.Description.ServiceDescriptionBaseCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ServiceDescriptionFormatExtensionCollection extends System.Web.Services.Description.ServiceDescriptionBaseCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Services.Description.ServiceDescriptionBaseCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Auflistung der Erweiterbarkeitselemente dar, die vom XML-Webdienst verwendet werden. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Sammlung kann entweder enthalten Instanzen von Klassen ableiten von <xref:System.Web.Services.Description.ServiceDescriptionFormatExtension>, oder Instanzen von der <xref:System.Xml.XmlElement> Klasse. In einer abgeleiteten Klasse <xref:System.Web.Services.Description.ServiceDescriptionFormatExtension> -Klasse ermöglicht Benutzern, die zusätzlich zu den in der Web Services Description Language (WSDL)-Spezifikation definierten Erweiterbarkeitselemente definieren. Verwenden Sie diese in Ihrer <xref:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection> , wenn Sie den Typ des Elements Erweiterbarkeit im Voraus wissen machen möchten. Verwenden einer <xref:System.Xml.XmlElement> Wenn Sie nicht wissen, das Format eines Elements im voraus.  
+  
+   
+  
+## Examples  
+ [!code-cpp[ServiceDescriptionFormatExtension_13#1](~/samples/snippets/cpp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/CPP/servicedescriptionformatextension_13.cpp#1)]
+ [!code-csharp[ServiceDescriptionFormatExtension_13#1](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/CS/servicedescriptionformatextension_13.cs#1)]
+ [!code-vb[ServiceDescriptionFormatExtension_13#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/VB/servicedescriptionformatextension_13.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceDescriptionFormatExtensionCollection (object parent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object parent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="parent">Das Objekt, das Mitglied dieser Sammlung ist.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da viele der Klassen in der <xref:System.Web.Services.Description> Namespace verfügbar machen eine `Extensions` Eigenschaft darstellt ein <xref:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection>, der Konstruktor weist ein übergeordnetes Objekt für die Ebene innerhalb der Hierarchie Web Services Description Language (WSDL), in dem die aktuelle `ServiceDescriptionFormatExtensionCollection` geschachtelt ist. Weitere Informationen zu WDSL finden Sie in der Spezifikation unter http://www.w3.org/TR/wsdl/.  
+  
+   
+  
+## Examples  
+ [!code-cpp[ServiceDescriptionFormatExtension_13#2](~/samples/snippets/cpp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/CPP/servicedescriptionformatextension_13.cpp#2)]
+ [!code-csharp[ServiceDescriptionFormatExtension_13#2](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/CS/servicedescriptionformatextension_13.cs#2)]
+ [!code-vb[ServiceDescriptionFormatExtension_13#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/VB/servicedescriptionformatextension_13.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (object extension);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(object extension) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection.Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="extension" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="extension">Die <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtension" />, übergeben als Verweis zum Hinzufügen der <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection" />.</param>
+        <summary>Fügt das angegebene <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtension" /> bis zum Ende der <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection" />.</summary>
+        <returns>Der nullbasierte Index, in dem die <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtension" /> hinzugefügt wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[ServiceDescriptionFormatExtension_13#3](~/samples/snippets/cpp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/CPP/servicedescriptionformatextension_13.cpp#3)]
+ [!code-csharp[ServiceDescriptionFormatExtension_13#3](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/CS/servicedescriptionformatextension_13.cs#3)]
+ [!code-vb[ServiceDescriptionFormatExtension_13#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/VB/servicedescriptionformatextension_13.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (object extension);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(object extension) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection.Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="extension" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="extension">Die <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtension" /> für die Sammlungsmitgliedschaft zu überprüfen.</param>
+        <summary>Gibt einen Wert, der angibt, ob das angegebene <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtension" /> ist ein Mitglied der <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection" />.</summary>
+        <returns>
+          <see langword="true" />Wenn die <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtension" /> ist ein Member der Auflistung ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[ServiceDescriptionFormatExtension_13#10](~/samples/snippets/cpp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/CPP/servicedescriptionformatextension_13.cpp#10)]
+ [!code-csharp[ServiceDescriptionFormatExtension_13#10](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/CS/servicedescriptionformatextension_13.cs#10)]
+ [!code-vb[ServiceDescriptionFormatExtension_13#10](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/VB/servicedescriptionformatextension_13.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (object[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(object[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection.CopyTo(System.Object[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Object[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Ein Array vom Typ <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtension" /> als Ziel für den Kopiervorgang fungiert.</param>
+        <param name="index">Der nullbasierte Index, bei dem das Platzieren der kopierten Auflistung begonnen werden soll.</param>
+        <summary>Kopiert die gesamte <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection" /> in ein eindimensionales Array vom Typ <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtension" />, beginnend am angegebenen nullbasierten Index des Zielarrays.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[ServiceDescriptionFormatExtension_13#9](~/samples/snippets/cpp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/CPP/servicedescriptionformatextension_13.cpp#9)]
+ [!code-csharp[ServiceDescriptionFormatExtension_13#9](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/CS/servicedescriptionformatextension_13.cs#9)]
+ [!code-vb[ServiceDescriptionFormatExtension_13#9](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/VB/servicedescriptionformatextension_13.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Find">
+      <MemberSignature Language="C#" Value="public object Find (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Find(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection.Find(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Ein <see cref="T:System.Type" /> für die Auflistung gesucht werden soll.</param>
+        <summary>Sucht die <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection" /> und gibt das erste Element des angegebenen abgeleiteten <see cref="T:System.Type" />.</summary>
+        <returns>Wenn die Suche erfolgreich ist, wird ein Objekt des angegebenen <see cref="T:System.Type" />ist, andernfalls <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode sucht in der Auflistung in der Indexreihenfolge und gibt nur das entsprechende Element mit der niedrigsten Nummer Index zurück.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Find">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlElement Find (string name, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XmlElement Find(string name, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection.Find(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name des der <see cref="T:System.Xml.XmlElement" /> gefunden werden.</param>
+        <param name="ns">Der XML-Namespace-URI von der <see cref="T:System.Xml.XmlElement" /> gefunden werden.</param>
+        <summary>Sucht die <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection" /> für ein Element mit dem angegebenen Namen und Namespace-URI.</summary>
+        <returns>Wenn die Suche erfolgreich ist, ist ein <see cref="T:System.Xml.XmlElement" />ist, andernfalls <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode sucht in der Auflistung in der Indexreihenfolge und gibt das erste <xref:System.Xml.XmlElement> , erfüllt die Kriterien der zwei Parameter.  
+  
+   
+  
+## Examples  
+ [!code-cpp[ServiceDescriptionFormatExtension_13#5](~/samples/snippets/cpp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/CPP/servicedescriptionformatextension_13.cpp#5)]
+ [!code-csharp[ServiceDescriptionFormatExtension_13#5](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/CS/servicedescriptionformatextension_13.cs#5)]
+ [!code-vb[ServiceDescriptionFormatExtension_13#5](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/VB/servicedescriptionformatextension_13.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAll">
+      <MemberSignature Language="C#" Value="public object[] FindAll (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object[] FindAll(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection.FindAll(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Ein <see cref="T:System.Type" /> für die Auflistung gesucht werden soll.</param>
+        <summary>Sucht die <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection" /> und gibt ein Array aller Elemente des angegebenen <see cref="T:System.Type" />.</summary>
+        <returns>Ein Array von <see cref="T:System.Object" /> Instanzen, die alle Member der Auflistung des angegebenen Typs darstellen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Das zurückgegebene Array ist leer, wenn die Suche fehlgeschlagen ist.  
+  
+   
+  
+## Examples  
+ [!code-cpp[ServiceDescriptionFormatExtension_13#6](~/samples/snippets/cpp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/CPP/servicedescriptionformatextension_13.cpp#6)]
+ [!code-csharp[ServiceDescriptionFormatExtension_13#6](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/CS/servicedescriptionformatextension_13.cs#6)]
+ [!code-vb[ServiceDescriptionFormatExtension_13#6](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/VB/servicedescriptionformatextension_13.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAll">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlElement[] FindAll (string name, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XmlElement[] FindAll(string name, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection.FindAll(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Das XML-Name-Attribut von der <see cref="T:System.Xml.XmlElement" /> Objekte gefunden werden.</param>
+        <param name="ns">Das XML-Namespace-URI-Attribut von der <see cref="T:System.Xml.XmlElement" /> Objekte gefunden werden.</param>
+        <summary>Sucht die <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection" /> und gibt ein Array mit dem angegebenen Namen und Namespace-URI aller Elemente zurück.</summary>
+        <returns>Ein Array von <see cref="T:System.Xml.XmlElement" /> Instanzen.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Das zurückgegebene Array ist leer, wenn die Suche fehlgeschlagen ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (object extension);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(object extension) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection.IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="extension" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="extension">Die <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtension" /> für die in der Auflistung gesucht werden soll.</param>
+        <summary>Sucht nach dem angegebenen <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtension" /> und gibt den nullbasierten Index des ersten Instanz in der Auflistung zurück.</summary>
+        <returns>Der nullbasierte Index des angegebenen <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtension" />, oder -1, wenn das Element nicht in der Auflistung gefunden wurde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[ServiceDescriptionFormatExtension_13#11](~/samples/snippets/cpp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/CPP/servicedescriptionformatextension_13.cpp#11)]
+ [!code-csharp[ServiceDescriptionFormatExtension_13#11](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/CS/servicedescriptionformatextension_13.cs#11)]
+ [!code-vb[ServiceDescriptionFormatExtension_13#11](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/VB/servicedescriptionformatextension_13.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, object extension);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, object extension) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection.Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="extension" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index, an dem Einfügen der <c>Erweiterung</c> Parameter.</param>
+        <param name="extension">Der der Auflistung hinzuzufügende <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtension" />.</param>
+        <summary>Fügt das angegebene <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtension" /> auf die <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection" /> am angegebenen nullbasierten Index.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn die Anzahl der Elemente in der Auflistung bereits der Kapazität der Auflistung entspricht, wird die Kapazität von automatisch des internen Arrays erneut zugewiesen werden, bevor das neue Element eingefügt wird verdoppelt.  
+  
+ Wenn die `index` -Parameters <xref:System.Collections.CollectionBase.Count%2A>, die `extension` Parameter wird hinzugefügt, bis zum Ende der <xref:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection>.  
+  
+ Die Elemente hinter der Einfügemarke nach unten, um das neue Element aufzunehmen.  
+  
+   
+  
+## Examples  
+ [!code-cpp[ServiceDescriptionFormatExtension_13#13](~/samples/snippets/cpp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/CPP/servicedescriptionformatextension_13.cpp#13)]
+ [!code-csharp[ServiceDescriptionFormatExtension_13#13](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/CS/servicedescriptionformatextension_13.cs#13)]
+ [!code-vb[ServiceDescriptionFormatExtension_13#13](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/VB/servicedescriptionformatextension_13.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Die <paramref name="index" /> Parameter ist kleiner als 0 (null).  
+  
+ \- oder –  
+  
+ Die <paramref name="index" /> -Parameters ist größer als <see cref="P:System.Collections.CollectionBase.Count" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsHandled">
+      <MemberSignature Language="C#" Value="public bool IsHandled (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsHandled(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection.IsHandled(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">Ein Objekt, das entweder vom Typ <see cref="T:System.Xml.XmlElement" /> oder <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtension" /> für die Verwendung durch den Importvorgang zu überprüfen.</param>
+        <summary>Gibt einen Wert, der angibt, ob das angegebene Objekt durch den Importvorgang verwendet wird, wenn die Erweiterbarkeitselement in der XML-Webdienst importiert werden.</summary>
+        <returns>
+          <see langword="true" />Wenn die <paramref name="item" /> Parameter verwendet wird; andernfalls, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diese Methode überprüft, ob die `item` Parameter ist ein <xref:System.Xml.XmlElement> oder ein <xref:System.Web.Services.Description.ServiceDescriptionFormatExtension> (oder einer abgeleiteten Klasse) bevor festgestellt wird, ob sie von der XML-Webdienst unterstützt wird.  
+  
+   
+  
+## Examples  
+ [!code-cpp[ServiceDescriptionFormatExtension_13#7](~/samples/snippets/cpp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/CPP/servicedescriptionformatextension_13.cpp#7)]
+ [!code-csharp[ServiceDescriptionFormatExtension_13#7](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/CS/servicedescriptionformatextension_13.cs#7)]
+ [!code-vb[ServiceDescriptionFormatExtension_13#7](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/VB/servicedescriptionformatextension_13.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRequired">
+      <MemberSignature Language="C#" Value="public bool IsRequired (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsRequired(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection.IsRequired(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">Ein Objekt, das entweder vom Typ <see cref="T:System.Xml.XmlElement" /> oder <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtension" />, zu überprüfen, ob es erforderlich ist.</param>
+        <summary>Gibt einen Wert, der angibt, ob das angegebene Objekt für den Vorgang des XML-Webdiensts erforderlich ist.</summary>
+        <returns>
+          <see langword="true" />Wenn die <paramref name="item" /> Parameter ist erforderlich ist, andernfalls <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[ServiceDescriptionFormatExtension_13#8](~/samples/snippets/cpp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/CPP/servicedescriptionformatextension_13.cpp#8)]
+ [!code-csharp[ServiceDescriptionFormatExtension_13#8](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/CS/servicedescriptionformatextension_13.cs#8)]
+ [!code-vb[ServiceDescriptionFormatExtension_13#8](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/VB/servicedescriptionformatextension_13.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Der nullbasierte Index des Elements, dessen Wert geändert oder zurückgegeben wird.</param>
+        <summary>Ruft ab oder legt den Wert für ein Mitglied der <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection" />.</summary>
+        <value>Der Wert von <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtension" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[ServiceDescriptionFormatExtension_13#4](~/samples/snippets/cpp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/CPP/servicedescriptionformatextension_13.cpp#4)]
+ [!code-csharp[ServiceDescriptionFormatExtension_13#4](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/CS/servicedescriptionformatextension_13.cs#4)]
+ [!code-vb[ServiceDescriptionFormatExtension_13#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/VB/servicedescriptionformatextension_13.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnValidate">
+      <MemberSignature Language="C#" Value="protected override void OnValidate (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnValidate(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection.OnValidate(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (object extension);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(object extension) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection.Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="extension" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="extension">Der <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtension" />, der aus der <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection" /> entfernt werden soll.</param>
+        <summary>Entfernt das erste Vorkommen des angegebenen <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtension" /> aus der <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[ServiceDescriptionFormatExtension_13#12](~/samples/snippets/cpp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/CPP/servicedescriptionformatextension_13.cpp#12)]
+ [!code-csharp[ServiceDescriptionFormatExtension_13#12](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/CS/servicedescriptionformatextension_13.cs#12)]
+ [!code-vb[ServiceDescriptionFormatExtension_13#12](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionFormatExtension_13/VB/servicedescriptionformatextension_13.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetParent">
+      <MemberSignature Language="C#" Value="protected override void SetParent (object value, object parent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetParent(object value, object parent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection.SetParent(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="parent" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <param name="parent">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

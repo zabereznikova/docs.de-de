@@ -1,0 +1,95 @@
+<Type Name="ShowPropertyInOutlineViewAttribute" FullName="System.Activities.Presentation.View.OutlineView.ShowPropertyInOutlineViewAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ShowPropertyInOutlineViewAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ShowPropertyInOutlineViewAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.View.OutlineView.ShowPropertyInOutlineViewAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property, AllowMultiple=false, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt die Attribute dar, wenn die Eigenschaft in der Gliederungsansicht angezeigt.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ShowPropertyInOutlineViewAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.View.OutlineView.ShowPropertyInOutlineViewAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Activities.Presentation.View.OutlineView.ShowPropertyInOutlineViewAttribute" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChildNodePrefix">
+      <MemberSignature Language="C#" Value="public string ChildNodePrefix { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ChildNodePrefix" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.View.OutlineView.ShowPropertyInOutlineViewAttribute.ChildNodePrefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt das Präfix für den untergeordneten Knoten fest.</summary>
+        <value>Das Präfix für den untergeordneten Knoten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentPropertyVisible">
+      <MemberSignature Language="C#" Value="public bool CurrentPropertyVisible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CurrentPropertyVisible" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.View.OutlineView.ShowPropertyInOutlineViewAttribute.CurrentPropertyVisible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob der aktuelle Eigenschaftenwert angezeigt wird.</summary>
+        <value>
+          <see langword="True" />Wenn der aktuelle Eigenschaftenwert sichtbar ist; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DuplicatedChildNodesVisible">
+      <MemberSignature Language="C#" Value="public bool DuplicatedChildNodesVisible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DuplicatedChildNodesVisible" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.View.OutlineView.ShowPropertyInOutlineViewAttribute.DuplicatedChildNodesVisible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt fest, ob die doppelt vorhandenen untergeordneten Knoten sichtbar sind.</summary>
+        <value>
+          <see langword="True" />Wenn die doppelt vorhandenen untergeordneten Knoten sichtbar sind; andernfalls <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

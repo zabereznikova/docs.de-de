@@ -1,0 +1,249 @@
+<Type Name="WebPageTraceListener" FullName="System.Web.WebPageTraceListener">
+  <TypeSignature Language="C#" Value="public class WebPageTraceListener : System.Diagnostics.TraceListener" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebPageTraceListener extends System.Diagnostics.TraceListener" />
+  <TypeSignature Language="DocId" Value="T:System.Web.WebPageTraceListener" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Diagnostics.TraceListener</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt einen Listener, die weiterleitet <see cref="T:System.Diagnostics.Trace" /> Nachrichten an ASP.NET Web Seite Ausgaben.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Die <xref:System.Security.Permissions.HostProtectionAttribute> auf diese Klasse angewendete Attribut verfügt über die folgenden <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> Eigenschaftswert: <xref:System.Security.Permissions.HostProtectionResource.Synchronization>. Das <xref:System.Security.Permissions.HostProtectionAttribute> hat keine Auswirkungen auf Desktopanwendungen (die normalerweise durch Doppelklicken auf ein Symbol, Eingeben eines Befehls oder einer URL in einem Browser gestartet werden). Weitere Informationen finden Sie unter der <xref:System.Security.Permissions.HostProtectionAttribute> Klasse oder [SQL Server-Programmierung und Hostschutzattribute](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+ Die <xref:System.Web.WebPageTraceListener> Klasse leitet Ablaufverfolgungsmeldungen in die geschrieben werden die <xref:System.Diagnostics.Trace> in ASP.NET Web Seite Ausgabekanäle protokollieren. Sie können die Trace-Weiterleitung aktivieren, durch Hinzufügen von eine <xref:System.Web.WebPageTraceListener> Objekt, das die Datei "Web.config" als Listener die [Trace-Element ((ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/05f08d15-1e2c-4c56-84d1-b1d7ba039af6) -Unterabschnitt des der [ &lt;system.diagnostics&gt; ](~/docs/framework/configure-apps/file-schema/trace-debug/system-diagnostics-element.md) Abschnitt. Sie können auch Hinzufügen einer <xref:System.Web.WebPageTraceListener> zur Auflistung Listener programmgesteuert. In der Regel wird dies durch Hinzufügen einer <xref:System.Web.WebPageTraceListener> auf die Auflistung während der Start der Anwendung mithilfe der `Application_Start` Methode in der Datei "Global.asax".  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Weiterleiten <xref:System.Diagnostics.Trace> Nachrichten Web form Ausgabe. Das Codebeispiel zeigt eine typische Web Form mit einem <xref:System.Web.UI.WebControls.BulletedList> und <xref:System.Web.UI.WebControls.AccessDataSource> Steuerelement. Ablaufverfolgung auf das Web Form aktiviert, und Ablaufverfolgungsausgabe wird auf das Web Form angefügt, wenn er gerendert wird. Sie können überprüfen, die Ablaufverfolgungsmeldungen in die **Ablaufverfolgungsinformationen** Tabelle der Ablaufverfolgungsausgabe. Wenn Sie aktiviert haben die <xref:System.Web.WebPageTraceListener> ordnungsgemäß in der Konfigurationsdatei finden Sie beide Ablaufverfolgungsmeldungen für die Kategorie `"Trace Test"`. Jedoch, wenn Sie nicht aktiviert haben die <xref:System.Web.WebPageTraceListener>, Sie sehen nur die Trace-Meldung, die geschrieben wird die <xref:System.Web.TraceContext> Objekt.  
+  
+ [!code-aspx-csharp[System.Web.Trace_2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Trace_2/CS/form2cs.aspx#1)]
+ [!code-aspx-vb[System.Web.Trace_2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Trace_2/VB/form2vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPageTraceListener ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.WebPageTraceListener.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.Web.WebPageTraceListener" />-Klasse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceEvent">
+      <MemberSignature Language="C#" Value="public override void TraceEvent (System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType severity, int id, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TraceEvent(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType severity, int32 id, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.WebPageTraceListener.TraceEvent(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="severity" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Ein <see cref="T:System.Diagnostics.TraceEventCache" /> enthält den aktuellen Prozess und thread-ID und Stapelüberwachungsinformationen.</param>
+        <param name="source">Ein Kategoriename für die Anordnung der Ausgabe.</param>
+        <param name="severity">Einer der <see cref="T:System.Diagnostics.TraceEventType" />-Werte.</param>
+        <param name="id">Ein numerischer Bezeichner für das Ereignis.</param>
+        <param name="message">Eine zu schreibende Meldung.</param>
+        <summary>Schreibt eine Meldung an, zu einer Webseite oder auf ASP.NET Trace Viewer mit dem angegebenen System und Ereignisdaten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.WebPageTraceListener.TraceEvent%2A> Methode schreibt die ereignismeldung an den <xref:System.Web.TraceContext> -Objekt mit `source` als Kategorie und `message` wie die Nachricht.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceEvent">
+      <MemberSignature Language="C#" Value="public override void TraceEvent (System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType severity, int id, string format, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TraceEvent(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType severity, int32 id, string format, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.WebPageTraceListener.TraceEvent(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="severity" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Ein <see cref="T:System.Diagnostics.TraceEventCache" /> enthält den aktuellen Prozess und thread-ID und Stapelüberwachungsinformationen.</param>
+        <param name="source">Ein Kategoriename für die Anordnung der Ausgabe.</param>
+        <param name="severity">Einer der <see cref="T:System.Diagnostics.TraceEventType" />-Werte.</param>
+        <param name="id">Ein numerischer Bezeichner für das Ereignis.</param>
+        <param name="format">Eine Formatzeichenfolge, die NULL oder mehr Formatelementen, die Objekten im entsprechen <c>Args</c>.</param>
+        <param name="args">Ein Array von NULL oder mehr zu formatierenden Objekten.</param>
+        <summary>Schreibt eine Meldung eines lokalisierten an, zu einer Webseite oder auf ASP.NET Trace Viewer mit dem angegebenen System und Ereignisdaten.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.WebPageTraceListener.TraceEvent%2A> Methodenaufrufe der <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29> -Methode auf und übergibt `format` und `args` und verwenden die <xref:System.Globalization.CultureInfo.InvariantCulture%2A> Eigenschaft zur Formatierung der Zeichenfolge als die in der Ablaufverfolgungs-Viewer oder einer Webseite zu schreibende Meldung.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.WebPageTraceListener.Write(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die zu schreibende Meldung.</param>
+        <summary>Schreibt eine Meldung an, zu einer Webseite oder auf ASP.NET Trace Viewer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.WebPageTraceListener.Write%2A> schreiben Methode nicht auf die <xref:System.Diagnostics.Trace> Objekt ausgegeben, auch wenn sie in der Konfigurationsdatei aktiviert ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (string message, string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(string message, string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.WebPageTraceListener.Write(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die zu schreibende Meldung.</param>
+        <param name="category">Ein Kategoriename für die Anordnung der Ausgabe.</param>
+        <summary>Schreibt einen Kategorienamen und eine Meldung an, zu einer Webseite oder auf ASP.NET Trace Viewer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.WebPageTraceListener.Write%2A> schreiben Methode nicht auf die <xref:System.Diagnostics.Trace> Objekt ausgegeben, auch wenn sie in der Konfigurationsdatei aktiviert ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.WebPageTraceListener.WriteLine(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die zu schreibende Meldung.</param>
+        <summary>Schreibt eine Meldung an, zu einer Webseite oder auf ASP.NET Trace Viewer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.WebPageTraceListener.WriteLine%2A> schreiben Methode nicht auf die <xref:System.Diagnostics.Trace> Objekt ausgegeben, auch wenn sie in der Konfigurationsdatei aktiviert ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine (string message, string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(string message, string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.WebPageTraceListener.WriteLine(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Die zu schreibende Meldung.</param>
+        <param name="category">Ein Kategoriename für die Anordnung der Ausgabe.</param>
+        <summary>Schreibt einen Kategorienamen und eine Meldung an, zu einer Webseite oder auf ASP.NET Trace Viewer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.WebPageTraceListener.WriteLine%2A> schreiben Methode nicht auf die <xref:System.Diagnostics.Trace> Objekt ausgegeben, auch wenn sie in der Konfigurationsdatei aktiviert ist.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

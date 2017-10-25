@@ -1,0 +1,185 @@
+<Type Name="ResolveEventArgs" FullName="System.ResolveEventArgs">
+  <TypeSignature Language="C#" Value="public class ResolveEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ResolveEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.ResolveEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Stellt Daten für das Ladeprogramm Auflösung-Ereignisse, wie z. B. die <see cref="E:System.AppDomain.TypeResolve" />, <see cref="E:System.AppDomain.ResourceResolve" />, <see cref="E:System.AppDomain.ReflectionOnlyAssemblyResolve" />, und <see cref="E:System.AppDomain.AssemblyResolve" /> Ereignisse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Wenn das Ladeprogramm darf keinen Assemblyverweis aufzulösen und ein Handler wurde, sofern für das entsprechende Ladeprogramm Auflösung-Ereignis, das Ereignis ausgelöst wird und die <xref:System.ResolveEventArgs> enthält Informationen über das Element, das aufgelöst werden.  
+  
+-   Die <xref:System.ResolveEventArgs.Name%2A> -Eigenschaft enthält den Namen des Elements, das aufgelöst werden.  
+  
+-   Beginnend mit der [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)]die <xref:System.ResolveEventArgs.RequestingAssembly%2A> Eigenschaft enthält die Assembly, die eine Assembly angefordert, der den Namen des Elements bereitstellen kann. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.ResolveEventArgs.RequestingAssembly%2A>-Eigenschaft.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResolveEventArgs (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ResolveEventArgs.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name eines Elements zu beheben.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ResolveEventArgs" /> -Klasse und gibt den Namen des Elements, zu beheben.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dieser Konstruktor wird normalerweise nur durch die common Language Runtime aufgerufen.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResolveEventArgs (string name, System.Reflection.Assembly requestingAssembly);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Reflection.Assembly requestingAssembly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ResolveEventArgs.#ctor(System.String,System.Reflection.Assembly)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="requestingAssembly" Type="System.Reflection.Assembly" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name eines Elements zu beheben.</param>
+        <param name="requestingAssembly">Die Assembly, deren Abhängigkeit aufgelöst wird.</param>
+        <summary>Initialisiert eine neue Instanz der dem <see cref="T:System.ResolveEventArgs" /> -Klasse und gibt den Namen des Elements zu beheben und die Assembly, deren Abhängigkeit aufgelöst wird.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ResolveEventArgs.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen des Elements, zu beheben.</summary>
+        <value>Der Name des Elements, zu beheben.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Für die <xref:System.AppDomain.AssemblyResolve> Ereignis <xref:System.ResolveEventArgs.Name%2A> ist der Name der Assembly, bevor die Richtlinie angewendet wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestingAssembly">
+      <MemberSignature Language="C#" Value="public System.Reflection.Assembly RequestingAssembly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.Assembly RequestingAssembly" />
+      <MemberSignature Language="DocId" Value="P:System.ResolveEventArgs.RequestingAssembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Assembly</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Assembly, deren Abhängigkeit aufgelöst wird.</summary>
+        <value>Die Assembly, die das Element vom angegebenen angefordert der <see cref="P:System.ResolveEventArgs.Name" /> Eigenschaft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die Assembly, die von dieser Eigenschaft zurückgegeben wird, ist einer Assembly, die zum Auflösen von angegebenen Elements konnte nicht die <xref:System.ResolveEventArgs.Name%2A> -Eigenschaft, da das Element in dieser Assembly nicht vorhanden war in allen abhängigen Elemente geladen oder in Abhängigkeiten das Ladeprogramm gefunden durch Überprüfung.  
+  
+ Nehmen wir beispielsweise an der aktuellen Assembly verwendet die <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType> -Methode zum Laden von Assembly A aus einem Verzeichnis außerhalb der Überprüfungspfad um Klasse CA zu verwenden. Angenommen, das weitere Klasse CA Klasse CB verwendet wird, befindet sich in Assembly B und Assembly A einen Kompilierzeit-Verweis auf Assembly B hat auch außerhalb der Überprüfungspfad. Wenn die aktuelle Assembly versucht, die Zertifizierungsstelle zu instanziieren, versucht das Ladeprogramm den Verweis auf Assembly b aufzulösen. Allerdings da Assembly A, mithilfe geladen wurde der <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType> -Methode, das Ladeprogramm die Abhängigkeit kann nicht aufgelöst werden. Wenn es ein Handler für ist das <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> Ereignis, das Ereignis wird ausgelöst, und die <xref:System.ResolveEventArgs.RequestingAssembly%2A> -Eigenschaft des resultierenden <xref:System.ResolveEventArgs> Objekt enthält Assembly A, da Assembly A die Assembly ist, der eine Abhängigkeit fehlt.  
+  
+ Die Semantik der <xref:System.ResolveEventArgs.RequestingAssembly%2A> -Eigenschaft variieren, je nachdem, wie die anfordernde Assembly geladen wurde:  
+  
+-   Load-Kontext: der Wert der Eigenschaft möglicherweise `null`. Der Load-Kontext Ladereihenfolge unabhängig ist, und die Identität der anfordernden Assembly ist nicht unbedingt sinnvoll. Ein nicht-Null-Beispiel tritt auf, wenn die <xref:System.Type.GetType%2A?displayProperty=nameWithType> Methode wird aufgerufen, und der angegebene Typ an die anfordernde Assembly oder eine seiner Abhängigkeiten nicht bekannt ist.  
+  
+-   LoadFrom-Kontext: die Eigenschaft kann als Rückschlüsse auf eventuelle Hinweis verwendet werden, aber der Ereignishandler sollten nicht mehr als eine Anforderung für einen angegebenen Assemblynamen abrufen.  
+  
+-   Kein Kontext (, also die anfordernde Assembly geladen wurde, mithilfe der <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType> -Methode, oder als Bytedatenstrom oder im gemischten Modus): der Handler können die <xref:System.ResolveEventArgs.RequestingAssembly%2A> zu andere Implementierungen der gleichen Assembly zu ladende Eigenschaft auf Basis der Identität des der fordert die Assembly an.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

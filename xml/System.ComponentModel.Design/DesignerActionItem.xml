@@ -1,0 +1,237 @@
+<Type Name="DesignerActionItem" FullName="System.ComponentModel.Design.DesignerActionItem">
+  <TypeSignature Language="C#" Value="public abstract class DesignerActionItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DesignerActionItem extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.DesignerActionItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt die Basisklasse für Typen, die ein Systemsteuerungselement auf einen Smarttagbereich darstellen.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.DesignerActionItem> Klasse dient als abstrakte Basisklasse für Klassen, die einzelne Systemsteuerungselemente in einen Smarttagbereich darstellen, eine Menü-ähnliche-Benutzeroberfläche (UI) für Smarttags dar. Die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] stellt abgeleitete Klassen, die die verschiedenen gemeinsamen Einträge in einen Smarttagbereich, einschließlich nur-Text, Headertext, Eigenschaften und Methoden des zugeordneten darstellen <xref:System.ComponentModel.Design.DesignerActionList> Klasse und Designerverben.  
+  
+ In der Regel Ihre `DesignerAction` Funktion wird in einer vom Programmierer bereitgestellten Klasse abgeleitet definiert <xref:System.ComponentModel.Design.DesignerActionList>, enthält eine <xref:System.ComponentModel.Design.DesignerActionList.GetSortedActionItems%2A> -Methode, die einzelne Elemente zum Bilden des Smarttagbereich gruppiert. Die <xref:System.ComponentModel.Design.DesignerActionPropertyItem> und <xref:System.ComponentModel.Design.DesignerActionMethodItem> Typen sind Member der Klasse abgeleitet zugeordnet <xref:System.ComponentModel.Design.DesignerActionList>, und <xref:System.ComponentModel.Design.DesignerActionMethodItem> Objekte werden aktiviert, wenn ihr Bereichseintrag zugeordneten vom Benutzer ausgewählt wird.  
+  
+> [!NOTE]
+>  Formularen und Dialogfeldern können von einem Mitglied der abgeleiteten Klasse angezeigt werden <xref:System.ComponentModel.Design.DesignerActionList>. Standardmäßig wird das übergeordnete Element dieser Fenster Containerfenster für den Smarttagbereich sein. Explizit übergeordnet diese untergeordnete Fenster in einem anderen Dienst oder das Fenster möglicherweise dazu führen, dass Elemente nicht ordnungsgemäß angezeigt.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer Sammlung von <xref:System.ComponentModel.Design.DesignerActionItem> Objekte.  
+  
+ Ein vollständiges Beispiel Smarttags implementieren, finden Sie unter [wie: Anfügen von Smarttags auf eine Komponente in Windows Forms](http://msdn.microsoft.com/library/42cc4a0c-9ab3-47e1-93b8-03b6a6ccf233).  
+  
+ [!code-csharp[System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent/CS/smarttags.cs#7)]
+ [!code-vb[System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent/VB/smarttags.vb#7)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerActionItem (string displayName, string category, string description);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string displayName, string category, string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionItem.#ctor(System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="displayName" Type="System.String" />
+        <Parameter Name="category" Type="System.String" />
+        <Parameter Name="description" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="displayName">Der Bereichstext für dieses Element.</param>
+        <param name="category">Die Groß-/Kleinschreibung <see cref="T:System.String" /> , definiert die Gruppierungen von Bereich Einträge.</param>
+        <param name="description">Ergänzender Text für dieses Element möglicherweise ein, die in QuickInfos oder in der Statusleiste angezeigt.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Design.DesignerActionItem" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da <xref:System.ComponentModel.Design.DesignerActionItem> ist eine abstrakte Klasse, die <xref:System.ComponentModel.Design.DesignerActionItem.%23ctor%2A> Konstruktor sollte ausschließlich von abgeleiteten Klassen aufgerufen werden.  
+  
+ Weitere Informationen darüber, wie die `category` Parameter dient zum Gruppieren von Elementen in einem Bereich finden Sie unter der <xref:System.ComponentModel.Design.DesignerActionList.GetSortedActionItems%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowAssociate">
+      <MemberSignature Language="C#" Value="public bool AllowAssociate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowAssociate" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.DesignerActionItem.AllowAssociate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob dieses Element in eine Gruppe von Elementen platziert werden, die dieselbe <see cref="P:System.ComponentModel.Design.DesignerActionItem.Category" /> Eigenschaftswert.</summary>
+        <value>
+          <see langword="true" />Wenn das Element gruppiert werden kann; andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Da mehrere <xref:System.ComponentModel.Design.DesignerActionList> Objekte können kombiniert werden, um einen einzelnen Smarttagbereich bilden die <xref:System.ComponentModel.Design.DesignerActionItem.AllowAssociate%2A> Eigenschaft gibt an, ob das aktuelle Element nach Kategorie angeordnet werden kann.  
+  
+ Die <xref:System.ComponentModel.Design.DesignerActionItem.AllowAssociate%2A> Eigenschaft dient in Verbindung mit der <xref:System.ComponentModel.Design.DesignerActionMethodItem.RelatedComponent%2A> Eigenschaft auf die <xref:System.ComponentModel.Design.DesignerActionMethodItem> und <xref:System.ComponentModel.Design.DesignerActionPropertyItem> Typen.  
+  
+ ASP.NET verwendet, z. B. ein datengebundenes Steuerelement wie <xref:System.Web.UI.WebControls.GridView> zur Verbindung mit einem Datenquellensteuerelement wie <xref:System.Web.UI.WebControls.SqlDataSource>. Beide verfügen über eine <xref:System.ComponentModel.Design.DesignerActionList> mit einer eigenen Gruppe von <xref:System.ComponentModel.Design.DesignerActionItem> Objekte. Die <xref:System.Web.UI.WebControls.GridView> Steuerelement verfügt über Elemente wie <xref:System.Web.UI.WebControls.BaseDataBoundControl.DataSourceID%2A>, `Edit Fields`, und `AutoFormat`. Die <xref:System.Web.UI.WebControls.SqlDataSource> -Klasse verfügt über `Configure` und `Refresh Items`, wofür <xref:System.ComponentModel.Design.DesignerActionItem.AllowAssociate%2A> festgelegt `true`.  
+  
+ Die <xref:System.Web.UI.WebControls.GridView> des Steuerelements <xref:System.Web.UI.WebControls.BaseDataBoundControl.DataSourceID%2A> Element weist eine zugehörige Komponente, also die <xref:System.Web.UI.WebControls.SqlDataSource> Objekt. Alle der <xref:System.Web.UI.WebControls.SqlDataSource> objektspezifischen Elemente mit <xref:System.ComponentModel.Design.DesignerActionItem.AllowAssociate%2A> festgelegt `true` ist automatisch in enthalten die <xref:System.Web.UI.WebControls.GridView> Aktionsliste des Steuerelements. Die folgende Tabelle zeigt, wie die beiden Listen zusammengeführt werden, in der <xref:System.Web.UI.WebControls.GridView> Designer Aktionsliste des Steuerelements.  
+  
+|GridView-Elemente|SqlDataSource-Elemente|  
+|--------------------|-------------------------|  
+|-   `DataSourceID`(zugehörige Komponente = `SqlDataSource`)<br />-Felder bearbeiten<br />-AutoFormat|– Konfigurieren (`AllowAssociate` = `true`)<br />-Aktualisieren (`AllowAssociate` = `true`)|  
+  
+|Intelligente Aufgabenfenster zusammengeführten GridView-Steuerelements|  
+|-------------------------------------------------|  
+|-DataSourceID<br />– Konfigurieren<br />-Aktualisierung<br />-Felder bearbeiten<br />-AutoFormat|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Category">
+      <MemberSignature Language="C#" Value="public virtual string Category { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Category" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.DesignerActionItem.Category" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der für ein Element ab.</summary>
+        <value>Eine Zeichenfolge, die die Gruppe darstellt, der das Element gehört.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Elementkategorien werden durch ihre Namen definiert, die Groß-/Kleinschreibung beachtet werden.  
+  
+ Weitere Informationen dazu, wie Elemente nach Kategorie gruppiert sind, finden Sie unter der <xref:System.ComponentModel.Design.DesignerActionList.GetSortedActionItems%2A> Methode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public virtual string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.DesignerActionItem.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den zusätzlichen Text für das Element ab.</summary>
+        <value>Ein <see cref="T:System.String" /> , die den beschreibenden Text für das Element enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.DesignerActionItem.Description%2A> Eigenschaft wird verwendet, wenn eine nur-Text-Beschreibung des Elements (z. B. in QuickInfos und die Statusleiste) erforderlich ist.  
+  
+ Der Wert dieser Eigenschaft wird im Konstruktor für diese Klasse festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public virtual string DisplayName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.DesignerActionItem.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Text für dieses Element ab.</summary>
+        <value>Ein <see cref="T:System.String" /> , die den Anzeigetext für das Element enthält.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Der Wert, der die <xref:System.ComponentModel.Design.DesignerActionItem.DisplayName%2A> Eigenschaft wird im Konstruktor für diese Klasse festgelegt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionary Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.DesignerActionItem.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft einen Verweis auf eine Auflistung, die zum Speichern der Programmierer definierte Schlüssel/Wert-Paaren verwendet werden kann.</summary>
+        <value>Eine Auflistung mit Implementierung <see cref="T:System.Collections.IDictionary" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.ComponentModel.Design.DesignerActionItem.Properties%2A> -Eigenschaft ermöglicht es den Programmierer, beliebige Daten in einem Element zu speichern. Die Standardeigenschaften für diese Klasse, z. B. <xref:System.ComponentModel.Design.DesignerActionItem.Category%2A> und <xref:System.ComponentModel.Design.DesignerActionItem.DisplayName%2A>, nicht in dieser Auflistung gespeichert werden.  
+  
+ Der Typ dieser Eigenschaft handelt es sich tatsächlich <xref:System.Collections.Specialized.HybridDictionary?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowInSourceView">
+      <MemberSignature Language="C#" Value="public bool ShowInSourceView { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowInSourceView" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.DesignerActionItem.ShowInSourceView" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft ab oder legt einen Wert, der angibt, ob dieses Element in der Quellansicht-Code angezeigt wird.</summary>
+        <value>
+          <see langword="true" />Wenn dieses Element in der Quellansicht-Code wird angezeigt. andernfalls <see langword="false" />. Die Standardeinstellung ist <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

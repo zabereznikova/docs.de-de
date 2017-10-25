@@ -1,0 +1,95 @@
+<Type Name="ExceptionClassAttribute" FullName="System.EnterpriseServices.ExceptionClassAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ExceptionClassAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ExceptionClassAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.ExceptionClassAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, Inherited=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Legt die queuing Ausnahmeklasse für die Klasse in der Warteschlange. Diese Klasse kann nicht vererbt werden.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zum Verwenden von Attributen finden Sie unter [Attribute](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von der <xref:System.EnterpriseServices.ExceptionClassAttribute> Typ.  
+  
+ [!code-csharp[EnterpriseServicesExceptionClassAttribute#0](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServicesExceptionClassAttribute/CS/class1.cs#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExceptionClassAttribute (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.ExceptionClassAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Der Name der Exception-Klasse, bis der Spieler zum Aktivieren und wiedergeben, bevor die Nachricht wird an die Dead Letter-Warteschlange weitergeleitet.</param>
+        <summary>Initialisiert eine neue Instanz der <see cref="T:System.EnterpriseServices.ExceptionClassAttribute" />-Klasse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Codebeispiel erstellt ein neues <xref:System.EnterpriseServices.ExceptionClassAttribute>.  
+  
+ [!code-csharp[EnterpriseServicesExceptionClassAttribute#1](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServicesExceptionClassAttribute/CS/class1.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ExceptionClassAttribute.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den Namen der Exception-Klasse, bis der Spieler zu aktivieren und Wiedergeben von zurück, bevor die Nachricht an die Dead Letter-Warteschlange weitergeleitet wird.</summary>
+        <value>Der Name der Exception-Klasse, bis der Spieler zum Aktivieren und wiedergeben, bevor die Nachricht wird an die Dead Letter-Warteschlange weitergeleitet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Im folgenden Codebeispiel ruft den Wert des einem `ExceptionClass` des Attributs <xref:System.EnterpriseServices.ExceptionClassAttribute.Value%2A> Eigenschaft.  
+  
+ [!code-csharp[EnterpriseServicesExceptionClassAttribute#2](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServicesExceptionClassAttribute/CS/class1.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

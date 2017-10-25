@@ -1,0 +1,341 @@
+<Type Name="IXpsFixedPageReader" FullName="System.Windows.Xps.Packaging.IXpsFixedPageReader">
+  <TypeSignature Language="C#" Value="public interface IXpsFixedPageReader : System.Windows.Xps.Packaging.IStoryFragmentProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IXpsFixedPageReader implements class System.Windows.Xps.Packaging.IStoryFragmentProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Xps.Packaging.IXpsFixedPageReader" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Xps.Packaging.IStoryFragmentProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Definiert Methoden zum Lesen der Bestandteile einer <see cref="T:System.Windows.Documents.FixedPage" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Das folgende Beispiel zeigt, wie Sie erhalten eine <xref:System.Windows.Xps.Packaging.IXpsFixedPageReader> Sammlung aus einer <xref:System.Windows.Xps.Packaging.IXpsFixedDocumentReader>. Im Beispiel wird auch gezeigt, wie auf den Seite-Reader verwenden Sie zum Hinzufügen einer neuen <xref:System.Windows.Documents.DocumentStructures.StoryFragment> , der die Dokumentstruktur der Seite definiert.  
+  
+ [!code-csharp[DocumentStructure#DocStrucFixedDoc](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentStructure/CSharp/Window1.xaml.cs#docstrucfixeddoc)]
+ [!code-vb[DocumentStructure#DocStrucFixedDoc](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DocumentStructure/visualbasic/window1.xaml.vb#docstrucfixeddoc)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ColorContexts">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;System.Windows.Xps.Packaging.XpsColorContext&gt; ColorContexts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class System.Windows.Xps.Packaging.XpsColorContext&gt; ColorContexts" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.IXpsFixedPageReader.ColorContexts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Windows.Xps.Packaging.XpsColorContext&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung aller Kontexte der Farbe auf der Seite ab.</summary>
+        <value>Ein <see cref="T:System.Collections.Generic.ICollection`1" /> , enthält jede <see cref="T:System.Windows.Xps.Packaging.XpsColorContext" /> , die auf der Seite ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fonts">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;System.Windows.Xps.Packaging.XpsFont&gt; Fonts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class System.Windows.Xps.Packaging.XpsFont&gt; Fonts" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.IXpsFixedPageReader.Fonts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Windows.Xps.Packaging.XpsFont&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung aller Schriftarten, die auf der Seite verwendet werden.</summary>
+        <value>Ein <see cref="T:System.Collections.Generic.ICollection`1" /> , enthält jede <see cref="T:System.Windows.Xps.Packaging.XpsFont" /> , die auf der Seite ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetColorContext">
+      <MemberSignature Language="C#" Value="public System.Windows.Xps.Packaging.XpsColorContext GetColorContext (Uri uri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Xps.Packaging.XpsColorContext GetColorContext(class System.Uri uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.IXpsFixedPageReader.GetColorContext(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.XpsColorContext</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="uri">Die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] der Ressource.</param>
+        <summary>Ruft den Kontext für die Farbe für die Ressource mit dem angegebenen [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)].</summary>
+        <returns>Eine <see cref="T:System.Windows.Xps.Packaging.XpsColorContext" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFont">
+      <MemberSignature Language="C#" Value="public System.Windows.Xps.Packaging.XpsFont GetFont (Uri uri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Xps.Packaging.XpsFont GetFont(class System.Uri uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.IXpsFixedPageReader.GetFont(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.XpsFont</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="uri">Die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] der Schriftart.</param>
+        <summary>Ruft die Schriftart, die dem angegebenen [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)].</summary>
+        <returns>Die Schriftart, die den angegebenen Uri enthält.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetImage">
+      <MemberSignature Language="C#" Value="public System.Windows.Xps.Packaging.XpsImage GetImage (Uri uri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Xps.Packaging.XpsImage GetImage(class System.Uri uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.IXpsFixedPageReader.GetImage(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.XpsImage</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="uri">Die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] des Bilds.</param>
+        <summary>Ruft das Bild mit dem angegebenen [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)].</summary>
+        <returns>Das Bild, das den angegebenen Uri verfügt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResource">
+      <MemberSignature Language="C#" Value="public System.Windows.Xps.Packaging.XpsResource GetResource (Uri resourceUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Xps.Packaging.XpsResource GetResource(class System.Uri resourceUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.IXpsFixedPageReader.GetResource(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.XpsResource</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="resourceUri">Die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] der Ressource.</param>
+        <summary>Ruft die Ressource mit dem angegebenen [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)].</summary>
+        <returns>Die Ressource mit dem angegebenen Uri.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie diese Methode, wenn Sie nicht, dass die spezifischen Typ der Ressource mit dem angegebenen wissen [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)]. Wenn Sie den Typ kennen, verwenden Sie eine typspezifische-Methoden, die von dieser Klasse bereitgestellt wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResourceDictionary">
+      <MemberSignature Language="C#" Value="public System.Windows.Xps.Packaging.XpsResourceDictionary GetResourceDictionary (Uri uri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Xps.Packaging.XpsResourceDictionary GetResourceDictionary(class System.Uri uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.IXpsFixedPageReader.GetResourceDictionary(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.XpsResourceDictionary</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="uri">Die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] des Ressourcenwörterbuchs.</param>
+        <summary>Ruft das Ressourcenwörterbuch mit dem angegebenen [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)].</summary>
+        <returns>Das Ressourcenwörterbuch, das den angegebenen Uri verfügt.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Images">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;System.Windows.Xps.Packaging.XpsImage&gt; Images { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class System.Windows.Xps.Packaging.XpsImage&gt; Images" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.IXpsFixedPageReader.Images" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Windows.Xps.Packaging.XpsImage&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung aller Images auf der Seite ab.</summary>
+        <value>Ein <see cref="T:System.Collections.Generic.ICollection`1" /> , enthält jede <see cref="T:System.Windows.Xps.Packaging.XpsImage" /> , die auf der Seite ist.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageNumber">
+      <MemberSignature Language="C#" Value="public int PageNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PageNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.IXpsFixedPageReader.PageNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die Seitenzahl ab.</summary>
+        <value>Eine <see cref="T:System.Int32" /> , die die Seitenzahl darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrintTicket">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintTicket PrintTicket { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Printing.PrintTicket PrintTicket" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.IXpsFixedPageReader.PrintTicket" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintTicket</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Printing.PrintTicket" />, wenn ein Ticket vorhanden, die zugeordnet ist ist, die <see cref="T:System.Windows.Documents.FixedPage" />.</summary>
+        <value>Ein <see cref="T:System.Printing.PrintTicket" /> , enthält die Standard-Druckoptionen für die Seite oder <see langword="null" /> kein <see cref="T:System.Printing.PrintTicket" /> für die Seite vorhanden ist.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu der <xref:System.Printing.PrintTicket> Teil ein [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] Seite, finden Sie im Kapitel 2 die [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] -Spezifikation, die Sie, am erhalten können [XPS: Spezifikation und License Downloads](http://www.microsoft.com/whdc/xps/downloads.mspx).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResourceDictionaries">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;System.Windows.Xps.Packaging.XpsResourceDictionary&gt; ResourceDictionaries { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class System.Windows.Xps.Packaging.XpsResourceDictionary&gt; ResourceDictionaries" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.IXpsFixedPageReader.ResourceDictionaries" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Windows.Xps.Packaging.XpsResourceDictionary&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine Auflistung aller Ressourcenwörterbücher für die Seite ab.</summary>
+        <value>Eine <see cref="T:System.Collections.Generic.ICollection`1" /> von <see cref="T:System.Windows.Xps.Packaging.XpsResourceDictionary" />-Objekten.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StoryFragment">
+      <MemberSignature Language="C#" Value="public System.Windows.Xps.Packaging.XpsStructure StoryFragment { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Xps.Packaging.XpsStructure StoryFragment" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.IXpsFixedPageReader.StoryFragment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.XpsStructure</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft die <see cref="T:System.Windows.Documents.DocumentStructures.StoryFragments" /> das Markup der Teil einer [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] Paket.</summary>
+        <value>Ein <see cref="T:System.Windows.Xps.Packaging.XpsStructure" /> darstellt, die eine <see cref="T:System.Windows.Documents.DocumentStructures.StoryFragments" /> Element in einem [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] Paket.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Weitere Informationen zu der <xref:System.Windows.Documents.DocumentStructures.StoryFragments> Element des ein [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] Verpacken, finden Sie in Kapitel 9 der [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] -Spezifikation, die Sie, am erhalten können [XPS: Spezifikation und License Downloads](http://www.microsoft.com/whdc/xps/downloads.mspx).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Thumbnail">
+      <MemberSignature Language="C#" Value="public System.Windows.Xps.Packaging.XpsThumbnail Thumbnail { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Xps.Packaging.XpsThumbnail Thumbnail" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.IXpsFixedPageReader.Thumbnail" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.XpsThumbnail</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft das Miniaturbild ab, wenn eine Miniaturansicht vorhanden, die zugeordnet ist ist, die <see cref="T:System.Windows.Documents.FixedPage" />.</summary>
+        <value>Ein <see cref="T:System.Windows.Xps.Packaging.XpsThumbnail" /> , der Bild darstellt.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public Uri Uri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Uri" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.IXpsFixedPageReader.Uri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft den [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] von <see cref="T:System.Windows.Documents.FixedPage" /> ab.</summary>
+        <value>Ein <see cref="T:System.Uri" /> darstellt, die die [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] für die Seite.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlReader">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlReader XmlReader { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlReader XmlReader" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.IXpsFixedPageReader.XmlReader" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlReader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ruft eine <see cref="T:System.Xml.XmlReader" /> für die Seite.</summary>
+        <value>Ein <see cref="T:System.Xml.XmlReader" /> für die Seite.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

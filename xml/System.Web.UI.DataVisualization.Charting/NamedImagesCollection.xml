@@ -1,0 +1,34 @@
+<Type Name="NamedImagesCollection" FullName="System.Web.UI.DataVisualization.Charting.NamedImagesCollection">
+  <TypeSignature Language="C#" Value="public class NamedImagesCollection : System.Web.UI.DataVisualization.Charting.ChartNamedElementCollection&lt;System.Web.UI.DataVisualization.Charting.NamedImage&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NamedImagesCollection extends System.Web.UI.DataVisualization.Charting.ChartNamedElementCollection`1&lt;class System.Web.UI.DataVisualization.Charting.NamedImage&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.NamedImagesCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.DataVisualization.Charting.ChartNamedElementCollection&lt;System.Web.UI.DataVisualization.Charting.NamedImage&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="T">System.Web.UI.DataVisualization.Charting.NamedImage</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Stellt eine Auflistung von<see cref="T:System.Web.UI.DataVisualization.Charting.NamedImage" />-Objekten dar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Web.UI.DataVisualization.Charting.NamedImagesCollection> Klasse stellt eine Auflistung von <xref:System.Web.UI.DataVisualization.Charting.NamedImage> Objekte, die Objekte sind, die über ein zugeordnetes Bild und einen eindeutigen Namen für die Sammlung verfügen.  
+  
+ Diese Klasse wird verfügbar gemacht, als die <xref:System.Web.UI.DataVisualization.Charting.Chart.Images%2A> Auflistungseigenschaft des Stamms <xref:System.Web.UI.DataVisualization.Charting.Chart> -Objekt und ist nur zur Laufzeit verfügbar.  
+  
+ Ein Bild kann jedes Objekt, das von .NET Framework abgeleitet sein <xref:System.Drawing.Image> Klasse, z. B. <xref:System.Drawing.Bitmap>, die dynamisch erstellt wird. Das Bild in dieser Auflistung gespeichert, und klicken Sie dann zu einem späteren Zeitpunkt auf die Bildeigenschaft im zugeordnet werden kann die <xref:System.Web.UI.DataVisualization.Charting.Chart> steuern, wie z. B. <xref:System.Web.UI.DataVisualization.Charting.Chart.BackImage%2A>.  
+  
+ Wenn eine Image-Eigenschaft in der <xref:System.Web.UI.DataVisualization.Charting.Chart> Steuerelement festgelegt, indem eine `string` Wert, der <xref:System.Web.UI.DataVisualization.Charting.Chart.Images%2A> Auflistungseigenschaft vom Typ <xref:System.Web.UI.DataVisualization.Charting.NamedImagesCollection>, wird zuerst überprüft werden, um festzustellen, ob ein Bild mit diesem Namen vorhanden ist. Wenn kein übereinstimmendes <xref:System.Web.UI.DataVisualization.Charting.NamedImage> Objekt gefunden wird, wird dieses Image verwendet wird. Wenn kein übereinstimmendes <xref:System.Web.UI.DataVisualization.Charting.NamedImage> Objekt befindet sich nicht, der Ausdruck wird als eine URL, Bildressourcenname oder Pfadname behandelt.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

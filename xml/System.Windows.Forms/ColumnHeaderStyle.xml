@@ -1,0 +1,82 @@
+<Type Name="ColumnHeaderStyle" FullName="System.Windows.Forms.ColumnHeaderStyle">
+  <TypeSignature Language="C#" Value="public enum ColumnHeaderStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ColumnHeaderStyle extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ColumnHeaderStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Gibt an, die Formatvorlagen der angegebenen Spalte in einem <see cref="T:System.Windows.Forms.ListView" /> Steuerelement.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verwenden Sie die Member dieser Enumeration zum Festlegen des Werts, der die <xref:System.Windows.Forms.ListView.HeaderStyle%2A> Eigenschaft von der <xref:System.Windows.Forms.ListView> Steuerelement.  
+  
+   
+  
+## Examples  
+ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.ColumnHeaderStyle> Enumeration zum Festlegen der <xref:System.Windows.Forms.ListView.HeaderStyle%2A?displayProperty=nameWithType> Eigenschaft ein <xref:System.Windows.Forms.ListView> Steuerelement. Zum Ausführen dieses Beispiels fügen Sie folgenden code in ein Formular, und rufen die `InitializeListView` Methode aus den Konstruktor des Formulars oder <xref:System.Windows.Forms.Form.Load> -Ereignishandler.  
+  
+ [!code-cpp[System.Windows.Forms.ListView1#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView1/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ListView1#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView1/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ListView1#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView1/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Clickable">
+      <MemberSignature Language="C#" Value="Clickable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ColumnHeaderStyle Clickable = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ColumnHeaderStyle.Clickable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ColumnHeaderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Spalte Header-Funktion wie Schaltflächen und führen Sie eine Aktion, z. B. beim Sortieren können.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Nonclickable">
+      <MemberSignature Language="C#" Value="Nonclickable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ColumnHeaderStyle Nonclickable = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ColumnHeaderStyle.Nonclickable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ColumnHeaderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Spaltenüberschriften reagieren nicht auf einem Mausklick.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ColumnHeaderStyle None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ColumnHeaderStyle.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ColumnHeaderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Die Kopfzeile der Spalte wird nicht in der Berichtsansicht angezeigt.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

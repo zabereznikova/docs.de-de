@@ -1,0 +1,250 @@
+<Type Name="IOperationBehavior" FullName="System.ServiceModel.Description.IOperationBehavior">
+  <TypeSignature Language="C#" Value="public interface IOperationBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IOperationBehavior" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.IOperationBehavior" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Implementiert Methoden, die verwendet werden können, um das Laufzeitverhalten eines Vorgangs in einer Dienst- oder Clientanwendung zu erweitern.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementiert die <xref:System.ServiceModel.Description.IOperationBehavior>-Schnittstelle, um Aspekte der vorgangsweiten Ausführung auf Anwendungsebene für Client- oder Dienstanwendungen zu ändern, zu überprüfen oder zu erweitern.  
+  
+-   Verwenden Sie die <xref:System.ServiceModel.Description.IOperationBehavior.AddBindingParameters%2A>-Methode, um benutzerdefinierte Daten zur Laufzeit zu übergeben, die bewirken, dass Bindungen benutzerdefiniertes Verhalten unterstützen.  
+  
+-   Verwenden Sie die <xref:System.ServiceModel.Description.IOperationBehavior.ApplyClientBehavior%2A>-Methode, um in einer Clientanwendung Erweiterungen in einem Clientverteiler zu ändern, zu überprüfen oder hinzuzufügen.  
+  
+-   Verwenden Sie die <xref:System.ServiceModel.Description.IOperationBehavior.ApplyDispatchBehavior%2A>-Methode, um in einer Dienstanwendung Erweiterungen einer vorgangsweiten Ausführung zu ändern oder zu überprüfen oder hinzuzufügen.  
+  
+-   Verwenden Sie die <xref:System.ServiceModel.Description.IOperationBehavior.Validate%2A>-Methode, um zu prüfen, ob <xref:System.ServiceModel.Description.OperationDescription> bestimmte Anforderungen erfüllt. Dies kann zur Prüfung verwendet werden, ob für einen Vorgang eine bestimmte Konfigurationseinstellung aktiviert wurde und ob er bestimmte Funktionen und andere Anforderungen unterstützt.  
+  
+ <xref:System.ServiceModel.Description.IOperationBehavior>-Objekte können jede dieser Methoden nutzen, jedoch ist häufig nur eine Methode von Bedeutung; in einem solchen Fall geben die nicht verwendeten Methoden Werte ohne Durchführung einer Aktion zurück.  
+  
+> [!NOTE]
+>  Alle <xref:System.ServiceModel.Description.IOperationBehavior>-Methoden übergeben ein <xref:System.ServiceModel.Description.OperationDescription>-Objekt als Parameter. Dieser Parameter dient nur für die Prüfung; wenn Sie das <xref:System.ServiceModel.Description.OperationDescription>-Objekt ändern, ist das Ausführungsverhalten nicht definiert.  
+  
+ <xref:System.ServiceModel.Description.IOperationBehavior>-Objekte werden in der Regel verwendet, um auf die verschiedenen Eigenschaften der <xref:System.ServiceModel.Dispatcher.DispatchOperation?displayProperty=nameWithType>-Objekte in einer Dienstanwendung und <xref:System.ServiceModel.Dispatcher.ClientOperation?displayProperty=nameWithType>-Objekte in einer Clientanwendung zuzugreifen.  
+  
+ In der Regel prüft der Entwickler zunächst die Erweiterungspunkte, um zu ermitteln, welche Anpassungsoption am besten für das Anwendungsszenario geeignet ist, und implementiert dann die Anpassung im entsprechenden Bereich. <xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=nameWithType>-Objekte können beispielsweise Anpassungen für alle Nachrichten in einem Dienst einfügen, und <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>-Objekte können Anpassungen für alle Nachrichten in einem bestimmen Vertrag einfügen und so weiter. Eine Beschreibung der verschiedenen Eigenschaften und verfügbaren Anpassungen finden Sie unter [Erweitern von ServiceHost und der Dienstmodellebene](~/docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
+  
+ Nachdem über eine Anpassung entschieden wurde (und die Anpassungsschnittstelle falls notwendig implementiert wurde) und festgelegt wurde, dass <xref:System.ServiceModel.Description.IOperationBehavior> der geeignete Bereich für die Anpassung ist, muss die Anpassung in die [!INCLUDE[indigo1](~/includes/indigo1-md.md)]-Laufzeit durch Implementierung von <xref:System.ServiceModel.Description.IOperationBehavior> und Hinzufügen des Vorgangsverhaltens eingefügt werden.  
+  
+ Es gibt zwei Möglichkeiten, <xref:System.ServiceModel.Description.IOperationBehavior> der Laufzeit hinzuzufügen:  
+  
+-   Fügen Sie das benutzerdefinierte Vorgangsverhalten den <xref:System.ServiceModel.Description.OperationDescription.Behaviors%2A?displayProperty=nameWithType>-Eigenschaften vor dem Öffnen des Diensthosts (in einer Dienstanwendung) bzw. der Kanalfactory (in einer Clientanwendung) hinzu.  
+  
+-   Fügen Sie das Verhalten mit einem benutzerdefinierten Attribut hinzu.  
+  
+ Um eine Dienstanpassungsaufgabe auszuführen, muss das entsprechende <xref:System.ServiceModel.Description.IOperationBehavior>-Objekt der <xref:System.ServiceModel.Description.OperationDescription.Behaviors%2A?displayProperty=nameWithType>-Eigenschaft vor der Erstellung der Dienstlaufzeit hinzugefügt werden, was erfolgt, wenn die <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType>-Methode für <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> aufgerufen wird. Um eine Clientanpassungsaufgabe auszuführen, muss das <xref:System.ServiceModel.Description.IOperationBehavior>-Objekt der <xref:System.ServiceModel.Description.OperationDescription.Behaviors%2A?displayProperty=nameWithType>-Eigenschaft hinzugefügt werden, bevor die <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>-Methode bzw. die <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType>-Methode für <xref:System.ServiceModel.ChannelFactory%601> aufgerufen wird.  
+  
+ Obwohl das Vorgangsverhalten so konzipiert ist, dass im Rahmen eines einzelnes Vorgangs einfach auf die Laufzeit zugegriffen werden kann, haben Sie durch Zugriff auf das übergeordnete Laufzeitobjekt auch die Möglichkeit, in einem größeren Rahmen auf die Laufzeit zugreifen.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine Implementierung von <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType> veranschaulicht, mit der in die Konsole geschrieben werden kann, wenn der Inspektor bei einem Vorgang aufgerufen wird. Diese Anpassung kann nur an den <xref:System.ServiceModel.Dispatcher.DispatchOperation?displayProperty=nameWithType> oder <xref:System.ServiceModel.Dispatcher.ClientOperation?displayProperty=nameWithType> angefügt werden und wird daher in der Regel durch ein Vorgangsverhalten eingefügt.  
+  
+ [!code-csharp[Interceptors#4](~/samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/interceptors.cs#4)]
+ [!code-vb[Interceptors#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/interceptors.vb#4)]  
+  
+ Das folgende Codebeispiel zeigt, wie der Parameterinspektor durch das Vorgangsverhalten an die Laufzeit angefügt wird.  
+  
+ [!code-csharp[Interceptors#6](~/samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/insertingbehaviors.cs#6)]
+ [!code-vb[Interceptors#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/insertingbehaviors.vb#6)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddBindingParameters">
+      <MemberSignature Language="C#" Value="public void AddBindingParameters (System.ServiceModel.Description.OperationDescription operationDescription, System.ServiceModel.Channels.BindingParameterCollection bindingParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddBindingParameters(class System.ServiceModel.Description.OperationDescription operationDescription, class System.ServiceModel.Channels.BindingParameterCollection bindingParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.IOperationBehavior.AddBindingParameters(System.ServiceModel.Description.OperationDescription,System.ServiceModel.Channels.BindingParameterCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operationDescription" Type="System.ServiceModel.Description.OperationDescription" />
+        <Parameter Name="bindingParameters" Type="System.ServiceModel.Channels.BindingParameterCollection" />
+      </Parameters>
+      <Docs>
+        <param name="operationDescription">Der Vorgang, der überprüft wird. Nur zu Prüfungszwecken zu verwenden. Wenn die Vorgangsbeschreibung geändert wird, sind die Ergebnisse nicht definiert.</param>
+        <param name="bindingParameters">Die Auflistung von Objekten, die von Bindungselementen angefordert werden, um das Verhalten zu unterstützen.</param>
+        <summary>Wird implementiert, um Daten zur Laufzeit an Bindungen zu übergeben und damit benutzerdefiniertes Verhalten zu unterstützen.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementieren Sie die <xref:System.ServiceModel.Description.IOperationBehavior.AddBindingParameters%2A>-Methode, um den Bindungselementen zusätzliche Objekte bereitzustellen, die sie zur Unterstützung des Vorgangsverhaltens benötigen. Wenn hier Bindungsparameter hinzugefügt werden, können diese Objekte beim Erstellen des Kanallisteners oder der Kanalfactory von der Bindung gefunden und verarbeitet werden. In der Regel implementieren Sie die <xref:System.ServiceModel.Description.IOperationBehavior.AddBindingParameters%2A>-Methode, um Informationen zum Vorgang an ein benutzerdefiniertes Bindungselement zu übergeben, damit ein unterstützender Kanal korrekt erstellt werden kann. Geben Sie keinen Wert zurück, wenn keine Änderungen erforderlich sind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyClientBehavior">
+      <MemberSignature Language="C#" Value="public void ApplyClientBehavior (System.ServiceModel.Description.OperationDescription operationDescription, System.ServiceModel.Dispatcher.ClientOperation clientOperation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ApplyClientBehavior(class System.ServiceModel.Description.OperationDescription operationDescription, class System.ServiceModel.Dispatcher.ClientOperation clientOperation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.IOperationBehavior.ApplyClientBehavior(System.ServiceModel.Description.OperationDescription,System.ServiceModel.Dispatcher.ClientOperation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operationDescription" Type="System.ServiceModel.Description.OperationDescription" />
+        <Parameter Name="clientOperation" Type="System.ServiceModel.Dispatcher.ClientOperation" />
+      </Parameters>
+      <Docs>
+        <param name="operationDescription">Der Vorgang, der überprüft wird. Nur zu Prüfungszwecken zu verwenden. Wenn die Vorgangsbeschreibung geändert wird, sind die Ergebnisse nicht definiert.</param>
+        <param name="clientOperation">Das Laufzeitobjekt, das Anpassungseigenschaften für den durch beschriebenen Vorgang verfügbar macht <c>OperationDescription</c>.</param>
+        <summary>Implementiert eine Änderung oder Erweiterung des Clients für einen Vorgang.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementieren Sie die <xref:System.ServiceModel.Description.IOperationBehavior.ApplyClientBehavior%2A>-Methode, um in allen Nachrichten, die mit einem bestimmten Vorgang verwendet werden, eine benutzerdefinierte Erweiterung anzuzeigen, zu ändern oder hinzuzufügen. Ausführliche Informationen über Anpassungsmöglichkeiten bei Clientlaufzeitobjekten finden Sie unter <xref:System.ServiceModel.Dispatcher.ClientRuntime> und <xref:System.ServiceModel.Dispatcher.ClientOperation>.  
+  
+ Die <xref:System.ServiceModel.Description.IOperationBehavior.ApplyClientBehavior%2A>-Methode sollte <xref:System.NotImplementedException> auslösen, wenn das Verhalten nur zur Verwendung in einer Dienstanwendung vorgesehen ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine Implementierung von <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType> veranschaulicht, mit der in die Konsole geschrieben werden kann, wenn der Inspektor bei einem Vorgang aufgerufen wird. Diese Anpassung kann nur an den <xref:System.ServiceModel.Dispatcher.DispatchOperation?displayProperty=nameWithType> oder <xref:System.ServiceModel.Dispatcher.ClientOperation?displayProperty=nameWithType> angefügt werden und wird daher in der Regel durch ein Vorgangsverhalten eingefügt.  
+  
+ [!code-csharp[Interceptors#4](~/samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/interceptors.cs#4)]
+ [!code-vb[Interceptors#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/interceptors.vb#4)]  
+  
+ Das folgende Codebeispiel zeigt, wie der Parameterinspektor durch das Vorgangsverhalten an die Laufzeit angefügt wird.  
+  
+ [!code-csharp[Interceptors#6](~/samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/insertingbehaviors.cs#6)]
+ [!code-vb[Interceptors#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/insertingbehaviors.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyDispatchBehavior">
+      <MemberSignature Language="C#" Value="public void ApplyDispatchBehavior (System.ServiceModel.Description.OperationDescription operationDescription, System.ServiceModel.Dispatcher.DispatchOperation dispatchOperation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ApplyDispatchBehavior(class System.ServiceModel.Description.OperationDescription operationDescription, class System.ServiceModel.Dispatcher.DispatchOperation dispatchOperation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.IOperationBehavior.ApplyDispatchBehavior(System.ServiceModel.Description.OperationDescription,System.ServiceModel.Dispatcher.DispatchOperation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operationDescription" Type="System.ServiceModel.Description.OperationDescription" />
+        <Parameter Name="dispatchOperation" Type="System.ServiceModel.Dispatcher.DispatchOperation" />
+      </Parameters>
+      <Docs>
+        <param name="operationDescription">Der Vorgang, der überprüft wird. Nur zu Prüfungszwecken zu verwenden. Wenn die Vorgangsbeschreibung geändert wird, sind die Ergebnisse nicht definiert.</param>
+        <param name="dispatchOperation">Das Laufzeitobjekt, das Anpassungseigenschaften für den durch beschriebenen Vorgang verfügbar macht <c>OperationDescription</c>.</param>
+        <summary>Implementiert eine Änderung oder Erweiterung des Diensts für einen Vorgang.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementieren Sie die <xref:System.ServiceModel.Description.IOperationBehavior.ApplyDispatchBehavior%2A>-Methode, um die Dienstlaufzeit für alle Nachrichten oder einen bestimmten Vorgang anzuzeigen, zu ändern oder zu erweitern. Ausführliche Informationen über Anpassungsmöglichkeiten in Dienstanwendungen finden Sie unter <xref:System.ServiceModel.Dispatcher.DispatchRuntime?displayProperty=nameWithType> und <xref:System.ServiceModel.Dispatcher.DispatchOperation?displayProperty=nameWithType>.  
+  
+ Die <xref:System.ServiceModel.Description.IOperationBehavior.ApplyDispatchBehavior%2A>-Methode sollte eine <xref:System.NotImplementedException>-Ausnahme auslösen, wenn das Verhalten nur zur Verwendung in einer Clientanwendung vorgesehen ist.  
+  
+   
+  
+## Examples  
+ Im folgenden Codebeispiel wird eine Implementierung von <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType> veranschaulicht, mit der in die Konsole geschrieben werden kann, wenn der Inspektor bei einem Vorgang aufgerufen wird. Diese Anpassung kann nur an den <xref:System.ServiceModel.Dispatcher.DispatchOperation?displayProperty=nameWithType> oder <xref:System.ServiceModel.Dispatcher.ClientOperation?displayProperty=nameWithType> angefügt werden und wird daher in der Regel durch ein Vorgangsverhalten eingefügt.  
+  
+ [!code-csharp[Interceptors#4](~/samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/interceptors.cs#4)]
+ [!code-vb[Interceptors#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/interceptors.vb#4)]  
+  
+ Das folgende Codebeispiel zeigt, wie der Parameterinspektor durch das Vorgangsverhalten an die Laufzeit angefügt wird.  
+  
+ [!code-csharp[Interceptors#6](~/samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/insertingbehaviors.cs#6)]
+ [!code-vb[Interceptors#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/insertingbehaviors.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public void Validate (System.ServiceModel.Description.OperationDescription operationDescription);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Validate(class System.ServiceModel.Description.OperationDescription operationDescription) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.IOperationBehavior.Validate(System.ServiceModel.Description.OperationDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operationDescription" Type="System.ServiceModel.Description.OperationDescription" />
+      </Parameters>
+      <Docs>
+        <param name="operationDescription">Der Vorgang, der überprüft wird. Nur zu Prüfungszwecken zu verwenden. Wenn die Vorgangsbeschreibung geändert wird, sind die Ergebnisse nicht definiert.</param>
+        <summary>Implementieren Sie dies, um zu prüfen, ob der Vorgang bestimmte Kriterien erfüllt.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementieren Sie die <xref:System.ServiceModel.Description.IOperationBehavior.Validate%2A>-Methode, um die Struktur zu untersuchen, mit der Kriterien überprüft werden. Es ist nicht erforderlich, Anpassungen in <xref:System.ServiceModel.Description.IOperationBehavior.ApplyClientBehavior%2A> oder <xref:System.ServiceModel.Description.IOperationBehavior.ApplyDispatchBehavior%2A> durchzuführen, um diese Methode zu verwenden. Wenn die Überprüfung des Vorgangs erfolgreich ist, werden Werte zurückgegeben, andernfalls wird eine Ausnahme ausgelöst.  
+  
+ Zum Beispiel kann die <xref:System.ServiceModel.Description.IOperationBehavior.Validate%2A>-Methode verwendet werden, um sicherzustellen, dass ein Vorgang autorisiert wird.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

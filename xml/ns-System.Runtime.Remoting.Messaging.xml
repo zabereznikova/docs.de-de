@@ -1,0 +1,17 @@
+<Namespace Name="System.Runtime.Remoting.Messaging">
+  <Docs>
+    <summary>Die <see cref="N:System.Runtime.Remoting.Messaging" /> -Namespace enthält Klassen, die zum Erstellen und Übermitteln von Nachrichten verwendet. Infrastruktur für den Remotezugriff verwendet Nachrichten, die um mit remote-Objekten zu kommunizieren. Nachrichten werden verwendet, um Remotemethodenaufrufe, Remoteobjekte zu aktivieren und zur Übermittlung von Informationen zu übertragen. Ein Nachrichtenobjekt birgt eine Reihe von benannten Eigenschaften, einschließlich u. a. Aktionsbezeichner Envoy-Informationen und Parameter. Einige der wichtigsten Klassen von der <see cref="N:System.Runtime.Remoting.Messaging" /> Namespace dienen der <see cref="T:System.Runtime.Remoting.Messaging.AsyncResult" /> -Klasse, die <see cref="T:System.Runtime.Remoting.Messaging.RemotingSurrogateSelector" /> -Klasse, und die <see cref="T:System.Runtime.Remoting.Messaging.ReturnMessage" /> Klasse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Die <xref:System.Runtime.Remoting.Messaging.AsyncResult> -Klasse speichert und die Ergebnisse eines Aufrufs der asynchronen Methode zurückgegeben werden. <xref:System.Runtime.Remoting.Messaging.AsyncResult>Instanzen enthalten die `return` Wert, Aufrufstatus für den Aufruf und die weiteren Informationen zum Aufruf asynchronen Methode verwendeten Delegaten.  
+  
+ Die <xref:System.Runtime.Remoting.Messaging.RemotingSurrogateSelector> Klasse kann verwendet werden, um die Serialisierung von Objekten zu steuern, die erweitern <xref:System.MarshalByRefObject>. Ein <xref:System.Runtime.Remoting.Messaging.RemotingSurrogateSelector> wählt das Ersatzzeichen, Serialisierung und Deserialisierung von solchen Objekten verwendet. Ein Ersatzzeichen ist ein Objekt, das Serialisierung oder Deserialisierung eines Objekts steuern kann.  
+  
+ Die <xref:System.Runtime.Remoting.Messaging.ReturnMessage> Klasse enthält Informationen, die nach dem Aufruf einer remote-Methode zurückgegeben. Ein <xref:System.Runtime.Remoting.Messaging.ReturnMessage> enthält die `return` Wert und alle `out` oder `ref` Parameter, die von der remote-Methodenaufruf geführt haben.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>
